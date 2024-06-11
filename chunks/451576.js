@@ -1,14 +1,14 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return a
+    return s
   }
 });
-var i = l("399606"),
-  n = l("592125");
+var a = n("399606"),
+  l = n("592125");
 
-function a(e) {
+function s(e) {
   var t;
-  let l = (0, i.useStateFromStores)([n.default], () => n.default.getChannel(e));
-  return null !== (t = null == l ? void 0 : l.isPrivate()) && void 0 !== t && t
+  let n = (0, a.useStateFromStores)([l.default], () => l.default.getChannel(e));
+  return null !== (t = null == n ? void 0 : n.isPrivate()) && void 0 !== t && t
 }

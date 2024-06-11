@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return l
+    return i
   }
 });
 var a = s("969943"),
   n = s("689938");
 
-function l(e) {
+function i(e) {
   switch (e) {
     case a.SettingsOverrideReasonKeys.REDUCED_MOTION:
       return n.default.Messages.ACCESSIBILITY_REDUCED_MOTION_SETTINGS_OVERRIDE.format();

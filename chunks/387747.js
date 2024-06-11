@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("735250");
 s("470079");
 var n = s("410575"),
-  l = s("100527"),
-  i = s("211242"),
+  i = s("100527"),
+  l = s("211242"),
   r = s("89057"),
   o = s("223639"),
   d = s("347475"),
@@ -33,13 +33,13 @@ function f() {
     }, {
       autoTrackExposure: !0
     }),
-    s = (0, i.useBlockedPaymentsConfig)();
+    s = (0, l.useBlockedPaymentsConfig)();
   return (0, a.jsxs)(a.Fragment, {
     children: [!s && (0, a.jsxs)(a.Fragment, {
       children: [t && (0, a.jsx)(S.Subsetting, {
         setting: _.WebSetting.GIFT_NITRO,
         children: (0, a.jsx)(d.default, {
-          location: l.default.USER_SETTINGS_GIFT_INVENTORY,
+          location: i.default.USER_SETTINGS_GIFT_INVENTORY,
           className: g.giftNitro,
           imageClassName: g.giftNitroImage,
           textContainerOverrideStyles: {

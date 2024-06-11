@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useContextIndexState: function() {
-    return Q
+    return X
   },
   useDiscoveryState: function() {
     return $
@@ -98,7 +98,7 @@ function Y(e) {
 function j(e, t) {
   let n, i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     r = Y(e),
-    s = X.indices[r];
+    s = Q.indices[r];
   return null != s ? ("fetchState" in t && s.fetchState.fetching && s.fetchState.abort.abort(), n = {
     ...s,
     ...t
@@ -108,18 +108,18 @@ function j(e, t) {
       fetching: !1
     },
     ...t
-  }), void 0 !== n && (X.indices[r] = n, "application" === e.type && (X.applicationIndices.set(r, n), X.applicationIndicesVersion = X.applicationIndicesVersion + 1)), s
+  }), void 0 !== n && (Q.indices[r] = n, "application" === e.type && (Q.applicationIndices.set(r, n), Q.applicationIndicesVersion = Q.applicationIndicesVersion + 1)), s
 }
 
 function W(e) {
   let t = Y(e),
-    n = X.indices[t];
-  (null == n ? void 0 : n.fetchState.fetching) && n.fetchState.abort.abort(), delete X.indices[t]
+    n = Q.indices[t];
+  (null == n ? void 0 : n.fetchState.fetching) && n.fetchState.abort.abort(), delete Q.indices[t]
 }
 
 function K() {
-  for (let e of Object.values(X.indices)) e.fetchState.fetching && e.fetchState.abort.abort();
-  X.indices = {}
+  for (let e of Object.values(Q.indices)) e.fetchState.fetching && e.fetchState.abort.abort();
+  Q.indices = {}
 }
 
 function z() {
@@ -134,10 +134,10 @@ class Z extends(i = d.default.Store) {
     this.waitFor(f.default), this.syncWith([f.default], () => {
       ! function() {
         let e = f.default.locale;
-        e !== X.oldLocale && (K(), X.collator = new Intl.Collator(e, {
+        e !== Q.oldLocale && (K(), Q.collator = new Intl.Collator(e, {
           sensitivity: "accent",
           numeric: !0
-        }), X.oldLocale = e)
+        }), Q.oldLocale = e)
       }()
     })
   }
@@ -180,7 +180,7 @@ class Z extends(i = d.default.Store) {
       u = !1;
     n.allowFetch && (l && ei(e) && (N.default.track(P.AnalyticEvents.APPLICATION_COMMAND_CACHE_FETCH, {
       miss: null == i.result,
-      size: Object.keys(X.indices).length
+      size: Object.keys(Q.indices).length
     }), er(i) && (null != e.guild_id ? (0, R.requestApplicationCommandIndex)({
       type: "guild",
       guildId: e.guild_id
@@ -235,10 +235,10 @@ class Z extends(i = d.default.Store) {
   }
 }
 b(Z, "displayName", "ApplicationCommandIndexStore");
-let X = new Z(_.default, {
+let Q = new Z(_.default, {
   LOGOUT: K,
   CONNECTION_OPEN: function() {
-    for (let e of Object.values(X.indices)) e.serverVersion = k
+    for (let e of Object.values(Q.indices)) e.serverVersion = k
   },
   APPLICATION_COMMAND_INDEX_FETCH_REQUEST: function(e) {
     var t;
@@ -247,7 +247,7 @@ let X = new Z(_.default, {
       start: i,
       canFetch: r
     } = e;
-    if (er(null !== (t = X.indices[Y(n)]) && void 0 !== t ? t : F)) {
+    if (er(null !== (t = Q.indices[Y(n)]) && void 0 !== t ? t : F)) {
       let e = new AbortController;
       j(n, {
         fetchState: {
@@ -340,7 +340,7 @@ let X = new Z(_.default, {
       channelId: n,
       guildId: i
     } = e;
-    X.hasContextStateApplication(t, n, i) && j(null != i ? {
+    Q.hasContextStateApplication(t, n, i) && j(null != i ? {
       type: "guild",
       guildId: i
     } : {
@@ -348,11 +348,11 @@ let X = new Z(_.default, {
       channelId: n
     }, {
       serverVersion: k
-    }), X.hasUserStateApplication(t) && j({
+    }), Q.hasUserStateApplication(t) && j({
       type: "user"
     }, {
       serverVersion: k
-    }), X.hasApplicationState(t) && j({
+    }), Q.hasApplicationState(t) && j({
       type: "application",
       applicationId: t
     }, {
@@ -411,7 +411,7 @@ let X = new Z(_.default, {
           type: "guild",
           guildId: e
         }),
-        r = null === (n = X.indices[i]) || void 0 === n ? void 0 : n.result;
+        r = null === (n = Q.indices[i]) || void 0 === n ? void 0 : n.result;
       if (null == r) return !1;
       let s = !1;
       return t.forEach(e => {
@@ -437,12 +437,12 @@ let X = new Z(_.default, {
   }
 });
 
-function Q(e, t, n) {
-  let [i, r] = a.useState(!0), s = (0, d.useStateFromStoresObject)([X], () => X.getContextState(e));
+function X(e, t, n) {
+  let [i, r] = a.useState(!0), s = (0, d.useStateFromStoresObject)([Q], () => Q.getContextState(e));
   return a.useEffect(() => {
     i && null != e && (n && t && ei(e) && (N.default.track(P.AnalyticEvents.APPLICATION_COMMAND_CACHE_FETCH, {
       miss: null == s.result,
-      size: Object.keys(X.indices).length
+      size: Object.keys(Q.indices).length
     }), er(s) && (null != e.guild_id ? (0, R.requestApplicationCommandIndex)({
       type: "guild",
       guildId: e.guild_id
@@ -454,14 +454,14 @@ function Q(e, t, n) {
 }
 
 function q(e, t) {
-  let [n, i] = a.useState(!0), r = (0, d.useStateFromStoresObject)([X], () => {
+  let [n, i] = a.useState(!0), r = (0, d.useStateFromStoresObject)([Q], () => {
     var t;
-    return null !== (t = X.indices[e]) && void 0 !== t ? t : F
+    return null !== (t = Q.indices[e]) && void 0 !== t ? t : F
   });
   return a.useEffect(() => {
     n && null != e && (t && (N.default.track(P.AnalyticEvents.APPLICATION_COMMAND_CACHE_FETCH, {
       miss: null == r.result,
-      size: Object.keys(X.indices).length
+      size: Object.keys(Q.indices).length
     }), er(r) && (0, R.requestApplicationCommandIndex)({
       type: "guild",
       guildId: e
@@ -470,14 +470,14 @@ function q(e, t) {
 }
 
 function J(e, t) {
-  let [n, i] = a.useState(!0), r = (0, d.useStateFromStoresObject)([X], () => X.getUserState());
+  let [n, i] = a.useState(!0), r = (0, d.useStateFromStoresObject)([Q], () => Q.getUserState());
   return a.useEffect(() => {
     n && (t && er(r) && e && (0, R.requestApplicationCommandIndex)({
       type: "user"
     }), i(!1))
   }, [r, t, e, n]), r
 }
-t.default = X;
+t.default = Q;
 
 function $(e, t, n, i) {
   let {
@@ -488,10 +488,10 @@ function $(e, t, n, i) {
   } = function(e, t, n) {
     let i = (0, D.usePermissionContext)(e, t.commandType),
       r = !1 !== t.applicationCommands && i.hasBaseAccessPermissions,
-      s = Q(e, r, n.allowFetch),
+      s = X(e, r, n.allowFetch),
       o = J(r, n.allowFetch),
-      l = (0, d.useStateFromStores)([X], () => X.getApplicationStates()),
-      u = (0, d.useStateFromStores)([X], () => X.applicationIndicesVersion);
+      l = (0, d.useStateFromStores)([Q], () => Q.getApplicationStates()),
+      u = (0, d.useStateFromStores)([Q], () => Q.applicationIndicesVersion);
     return a.useMemo(() => et({
       permissionContext: i,
       text: t.text,
@@ -792,5 +792,5 @@ function eo(e, t) {
 }(s = r || (r = {}))[s.COMMAND_NAME_STARTS_WITH = 0] = "COMMAND_NAME_STARTS_WITH", s[s.STARTS_WITH_COMMAND_NAME = 1] = "STARTS_WITH_COMMAND_NAME", s[s.COMMAND_NAME_CONTAINS = 2] = "COMMAND_NAME_CONTAINS", s[s.STARTS_WITH_COMMAND_OPTION_NAME_OR_OPTION_NAME = 3] = "STARTS_WITH_COMMAND_OPTION_NAME_OR_OPTION_NAME", s[s.OPTION_NAME_CONTAINS = 4] = "OPTION_NAME_CONTAINS", s[s.SECTION_NAME_STARTS_WITH = 5] = "SECTION_NAME_STARTS_WITH", s[s.SECTION_NAME_CONTAINS = 6] = "SECTION_NAME_CONTAINS", s[s.COMMAND_DESCRIPTION_CONTAINS = 7] = "COMMAND_DESCRIPTION_CONTAINS", s[s.SECTION_DESCRIPTION_CONTAINS = 8] = "SECTION_DESCRIPTION_CONTAINS";
 
 function el(e, t) {
-  return X.collator.compare(e, t)
+  return Q.collator.compare(e, t)
 }

@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return J
   },
   GuildDetails: function() {
-    return X
+    return Q
   },
   MessageCustomEmojiPopout: function() {
-    return Q
+    return X
   },
   MessageStandardEmojiPopout: function() {
     return Z
@@ -102,7 +102,7 @@ let z = () => ({
       })
     })
   },
-  X = e => {
+  Q = e => {
     let {
       expressionSourceGuild: t,
       hasJoinedExpressionSourceGuild: n,
@@ -199,7 +199,7 @@ let z = () => ({
       })]
     })
   },
-  Q = e => {
+  X = e => {
     let {
       node: t,
       closePopout: n,
@@ -239,8 +239,8 @@ let z = () => ({
       guildEmoji: y,
       demoMode: P = !1,
       nonce: G
-    } = e, k = (0, l.useStateFromStores)([D.default], () => D.default.getCurrentUser()), B = (0, l.useStateFromStores)([v.default], () => v.default.getGuildId()), Z = V.default.isPremium(k), Q = null != B && (B === (null == S ? void 0 : S.id) || B === (null == O ? void 0 : O.id)), q = null != O, $ = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
-    P && (Z = !0, $ = !0, q = !1, Q = !1);
+    } = e, k = (0, l.useStateFromStores)([D.default], () => D.default.getCurrentUser()), B = (0, l.useStateFromStores)([v.default], () => v.default.getGuildId()), Z = V.default.isPremium(k), X = null != B && (B === (null == S ? void 0 : S.id) || B === (null == O ? void 0 : O.id)), q = null != O, $ = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
+    P && (Z = !0, $ = !0, q = !1, X = !1);
     let ee = z(),
       {
         isRoleSubscriptionEmoji: et,
@@ -277,7 +277,7 @@ let z = () => ({
         isRoleSubscriptionEmoji: et,
         isUnusableRoleSubscriptionEmoji: en,
         userIsRoleSubscriber: ei,
-        emojiComesFromCurrentGuild: Q,
+        emojiComesFromCurrentGuild: X,
         isDiscoverable: $,
         shouldHideRoleSubscriptionCTA: er,
         onOpenPremiumSettings: () => {
@@ -300,7 +300,7 @@ let z = () => ({
       e_ = eo.type === x.EmojiPopoutType.JOIN_GUILD,
       ec = eo.type === x.EmojiPopoutType.GET_PREMIUM,
       [eE, eI] = r.useState(!1),
-      eT = $ || q && !Q || null != S;
+      eT = $ || q && !X || null != S;
     return (0, i.jsxs)(F.MessagePopoutContent, {
       className: K.popoutContent,
       children: [(() => {
@@ -371,7 +371,7 @@ let z = () => ({
           children: [(0, i.jsx)(d.FormTitle, {
             className: K.guildTitle,
             children: q ? W.default.Messages.EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION : W.default.Messages.EMOJI_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION
-          }), (0, i.jsx)(X, {
+          }), (0, i.jsx)(Q, {
             expressionSourceGuild: null != S ? S : h.default.createFromGuildRecord(O),
             hasJoinedExpressionSourceGuild: q,
             isDisplayingJoinGuildButtonInPopout: e_

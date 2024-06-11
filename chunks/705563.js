@@ -43,7 +43,7 @@ function g(e) {
   }), x = (0, l.useStateFromStores)([r.default], () => null != I ? r.default.getMemberCount(I) : 0), v = null != A && (null != x ? x : 0) >= A, {
     approveRequest: N,
     rejectRequest: M,
-    submitting: R
+    submitting: y
   } = (0, m.useJoinRequestButtonActions)(null == _ ? void 0 : _.guildId, null == _ ? void 0 : _.userId);
   return null != _ && _.applicationStatus === h.GuildJoinRequestApplicationStatuses.SUBMITTED && T ? (0, a.jsxs)("div", {
     className: C.buttons,
@@ -53,7 +53,7 @@ function g(e) {
       children: e => (0, a.jsx)(s.Button, {
         ...e,
         color: s.Button.Colors.GREEN,
-        submitting: R,
+        submitting: y,
         onClick: N,
         size: s.ButtonSizes.SMALL,
         disabled: v,
@@ -63,7 +63,7 @@ function g(e) {
       color: s.Button.Colors.RED,
       onClick: M,
       size: s.ButtonSizes.SMALL,
-      disabled: R || _.applicationStatus !== h.GuildJoinRequestApplicationStatuses.SUBMITTED,
+      disabled: y || _.applicationStatus !== h.GuildJoinRequestApplicationStatuses.SUBMITTED,
       children: E.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
     }), n && (0, a.jsx)(s.Button, {
       color: s.Button.Colors.TRANSPARENT,

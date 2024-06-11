@@ -1,6 +1,6 @@
 "use strict";
 s.r(t), s("47120");
-var a, n, l, i, r = s("442837"),
+var a, n, i, l, r = s("442837"),
   o = s("570140");
 let d = [];
 
@@ -12,12 +12,12 @@ class c extends(a = r.default.Store) {
     return d
   }
 }
-i = "AuthSessionsStore", (l = "displayName") in(n = c) ? Object.defineProperty(n, l, {
-  value: i,
+l = "AuthSessionsStore", (i = "displayName") in(n = c) ? Object.defineProperty(n, i, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : n[l] = i, t.default = new c(o.default, {
+}) : n[i] = l, t.default = new c(o.default, {
   LOGOUT: u,
   LOGIN_SUCCESS: u,
   FETCH_AUTH_SESSIONS_SUCCESS: function(e) {

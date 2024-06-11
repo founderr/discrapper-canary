@@ -42,14 +42,14 @@ function A(e) {
   l.useEffect(() => {
     (0, o.trackWithMetadata)(g.AnalyticEvents.GDM_STARTER_APPS_VIEWED)
   }, []);
-  let R = e => {
+  let y = e => {
       var t;
       (0, f.default)(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "", null == e ? void 0 : e.getAvatarURL(void 0, 80), {
         dispatchWait: !0
       })
     },
-    y = (e, t) => {
-      I.has(e.key) && R(t)
+    R = (e, t) => {
+      I.has(e.key) && y(t)
     },
     L = l.useCallback(e => {
       let {
@@ -140,8 +140,8 @@ function A(e) {
                 bot: o
               } = e;
             return null != o ? (0, a.jsx)(r.ClickableContainer, {
-              onMouseDown: () => R(o),
-              onKeyDown: e => y(e, o),
+              onMouseDown: () => y(o),
+              onKeyDown: e => R(e, o),
               className: _.applicationRow,
               onClick: () => {
                 (0, h.openUserProfileModal)({

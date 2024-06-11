@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("47120");
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("512722"),
   o = s.n(r),
   d = s("442837"),
@@ -22,15 +22,15 @@ var a = s("735250"),
   g = s("144114"),
   f = s("918505"),
   m = s("332473"),
-  C = s("921801"),
-  A = s("290421"),
+  A = s("921801"),
+  C = s("290421"),
   O = s("318661"),
   h = s("80132"),
-  p = s("735336"),
-  R = s("204197"),
+  R = s("735336"),
+  p = s("204197"),
   M = s("25990"),
-  x = s("594174"),
-  D = s("808268"),
+  D = s("594174"),
+  x = s("808268"),
   L = s("759231"),
   P = s("572004"),
   b = s("51144"),
@@ -47,19 +47,19 @@ var a = s("735250"),
 let k = v.default.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
 
 function w(e) {
-  var t, l;
+  var t, i;
   let {
     className: r,
     user: o
-  } = e, d = n.useRef(null), S = (0, f.usePomeloEligibility)(), E = (0, m.useIsEligibleForPomelo)(), T = (0, N.useGuildAutomodProfileQuarantineErrors)(), _ = null !== (l = null == T ? void 0 : null === (t = T.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null, [I, g] = n.useState(!1);
+  } = e, d = n.useRef(null), S = (0, f.usePomeloEligibility)(), E = (0, m.useIsEligibleForPomelo)(), T = (0, N.useGuildAutomodProfileQuarantineErrors)(), _ = null !== (i = null == T ? void 0 : null === (t = T.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== i ? i : null, [I, g] = n.useState(!1);
   n.useEffect(() => {
     g(null != d.current && d.current.scrollWidth > d.current.clientWidth)
   }, [o.username]);
-  let C = !o.isClaimed(),
-    A = S && !o.isPomelo() && !o.hasVerifiedEmailOrPhone() || C,
-    O = A ? H.default.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
+  let A = !o.isClaimed(),
+    C = S && !o.isPomelo() && !o.hasVerifiedEmailOrPhone() || A,
+    O = C ? H.default.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
   return (0, a.jsxs)("div", {
-    className: i()(Y.field, r),
+    className: l()(Y.field, r),
     children: [(0, a.jsx)("div", {
       className: Y.constrainedRow,
       children: (0, a.jsxs)("div", {
@@ -106,7 +106,7 @@ function w(e) {
       text: O,
       children: e => (0, a.jsx)(c.Button, {
         ...e,
-        disabled: A,
+        disabled: C,
         size: c.Button.Sizes.SMALL,
         className: Y.fieldButton,
         color: c.Button.Colors.PRIMARY,
@@ -138,13 +138,13 @@ function w(e) {
 function W(e) {
   var t, s;
   let {
-    user: l,
+    user: i,
     className: r
-  } = e, o = (0, N.useGuildAutomodProfileQuarantineErrors)(), d = null !== (s = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, S = b.default.getGlobalName(l), E = n.useRef(null), [T, _] = n.useState(!1);
+  } = e, o = (0, N.useGuildAutomodProfileQuarantineErrors)(), d = null !== (s = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, S = b.default.getGlobalName(i), E = n.useRef(null), [T, _] = n.useState(!1);
   return n.useEffect(() => {
     _(null != E.current && E.current.scrollWidth > E.current.clientWidth)
   }, [S]), (0, a.jsxs)("div", {
-    className: i()(Y.field, r),
+    className: l()(Y.field, r),
     children: [(0, a.jsx)("div", {
       className: Y.constrainedRow,
       children: (0, a.jsxs)("div", {
@@ -188,28 +188,28 @@ function K(e) {
   let {
     text: t,
     censor: s,
-    revealLabel: l,
-    hideLabel: i
+    revealLabel: i,
+    hideLabel: l
   } = e, [r, o] = n.useState(!1), d = r ? t : s(t);
   return (0, a.jsxs)(a.Fragment, {
     children: [d, (0, a.jsx)(c.Button, {
       look: c.Button.Looks.LINK,
       size: c.Button.Sizes.MIN,
       color: c.Button.Colors.LINK,
-      "aria-label": r ? i : l,
+      "aria-label": r ? l : i,
       onClick: () => o(!r),
       children: r ? H.default.Messages.HIDE : H.default.Messages.REVEAL
     })]
   })
 }
 
-function z(e) {
+function Q(e) {
   let t, {
     className: n,
-    user: l
+    user: i
   } = e;
-  if (l.isClaimed()) {
-    if (null == l.email) t = {
+  if (i.isClaimed()) {
+    if (null == i.email) t = {
       buttonText: H.default.Messages.ADD,
       buttonAriaLabel: H.default.Messages.USER_SETTINGS_ACCOUNT_ADD_EMAIL_A11Y_LABEL,
       buttonColor: c.Button.Colors.PRIMARY,
@@ -226,7 +226,7 @@ function z(e) {
     else {
       let {
         email: e
-      } = l;
+      } = i;
       t = {
         buttonText: H.default.Messages.EDIT,
         buttonAriaLabel: H.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_EMAIL_A11Y_LABEL,
@@ -255,7 +255,7 @@ function z(e) {
     handleClick: () => _.default.openClaimAccountModal()
   };
   return (0, a.jsxs)("div", {
-    className: i()(Y.field, n),
+    className: l()(Y.field, n),
     children: [(0, a.jsx)("div", {
       className: Y.constrainedRow,
       children: (0, a.jsxs)("div", {
@@ -282,23 +282,23 @@ function z(e) {
   })
 }
 
-function Q(e) {
+function z(e) {
   let t, {
     className: n,
-    user: l
+    user: i
   } = e;
-  if (!l.isClaimed()) return null;
+  if (!i.isClaimed()) return null;
   let {
     phone: r,
     email: o
-  } = l, d = null != r;
+  } = i, d = null != r;
   return t = d ? (0, a.jsx)(K, {
     text: r,
     censor: j.censorPhone,
     revealLabel: H.default.Messages.USER_SETTINGS_ACCOUNT_REVEAL_PHONE_A11Y_LABEL,
     hideLabel: H.default.Messages.USER_SETTINGS_ACCOUNT_HIDE_PHONE_A11Y_LABEL
   }) : H.default.Messages.USER_SETTINGS_NO_PHONE_PLACEHOLDER, (0, a.jsxs)("div", {
-    className: i()(Y.field, n),
+    className: l()(Y.field, n),
     children: [(0, a.jsx)("div", {
       className: Y.constrainedRow,
       children: (0, a.jsxs)("div", {
@@ -317,7 +317,7 @@ function Q(e) {
     }), (0, a.jsxs)("div", {
       className: Y.fieldButtonList,
       children: [d && null != o ? (0, a.jsx)(c.Button, {
-        className: i()(Y.fieldButton, Y.removeButton),
+        className: l()(Y.fieldButton, Y.removeButton),
         size: c.Button.Sizes.SMALL,
         look: c.Button.Looks.LINK,
         color: c.Button.Colors.PRIMARY,
@@ -326,7 +326,7 @@ function Q(e) {
           (0, c.openModal)(e => (0, a.jsx)(T.default, {
             ...e,
             title: H.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_NUMBER_TITLE,
-            children: l.hasFlag(F.UserFlags.MFA_SMS) ? H.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_SMS_BACKUP_WARNING : void 0,
+            children: i.hasFlag(F.UserFlags.MFA_SMS) ? H.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_SMS_BACKUP_WARNING : void 0,
             actionText: H.default.Messages.REMOVE,
             handleSubmit: e => g.default.removePhone(e, g.ChangePhoneReason.USER_SETTINGS_UPDATE)
           }))
@@ -380,7 +380,7 @@ function X(e) {
       ...e,
       className: Y.overflowMenuButton,
       "aria-label": H.default.Messages.ACTIONS,
-      children: (0, a.jsx)(D.default, {
+      children: (0, a.jsx)(x.default, {
         className: Y.overflowMenuIcon,
         height: 24,
         width: 24
@@ -395,25 +395,25 @@ function q() {
 
 function Z() {
   var e;
-  let t = (0, d.useStateFromStores)([x.default], () => {
-      let e = x.default.getCurrentUser();
+  let t = (0, d.useStateFromStores)([D.default], () => {
+      let e = D.default.getCurrentUser();
       return o()(null != e, "UserSettingsAccountProfileCard: currentUser cannot be undefined"), e
     }),
     s = (0, O.default)(t.id),
-    n = (0, A.default)(s),
-    l = U.StatusSetting.useSetting(),
-    i = (0, d.useStateFromStores)([M.default], () => M.default.getErrors()),
-    r = null == i ? void 0 : null === (e = i.avatar) || void 0 === e ? void 0 : e[0],
+    n = (0, C.default)(s),
+    i = U.StatusSetting.useSetting(),
+    l = (0, d.useStateFromStores)([M.default], () => M.default.getErrors()),
+    r = null == l ? void 0 : null === (e = l.avatar) || void 0 === e ? void 0 : e[0],
     {
       avatarSrc: u,
       avatarDecorationSrc: S
-    } = (0, R.default)({
+    } = (0, p.default)({
       user: t,
       size: c.AvatarSizes.SIZE_80
     });
   return (0, a.jsxs)("div", {
     className: Y.accountProfileCard,
-    children: [(0, a.jsx)(p.default, {
+    children: [(0, a.jsx)(R.default, {
       displayProfile: s,
       user: t,
       allowEdit: !1,
@@ -425,7 +425,7 @@ function Z() {
         className: Y.avatar,
         src: u,
         avatarDecoration: S,
-        status: l,
+        status: i,
         size: c.AvatarSizes.SIZE_80,
         "aria-label": t.username
       }), (0, a.jsxs)("div", {
@@ -457,26 +457,26 @@ function Z() {
         children: r
       }) : null, (0, a.jsxs)("div", {
         className: Y.fieldList,
-        children: [(0, a.jsx)(C.Subsetting, {
+        children: [(0, a.jsx)(A.Subsetting, {
           setting: G.WebSetting.ACCOUNT_DISPLAY_NAME,
           children: (0, a.jsx)(W, {
             className: Y.fieldSpacerBottom,
             user: t
           })
-        }), (0, a.jsx)(C.Subsetting, {
+        }), (0, a.jsx)(A.Subsetting, {
           setting: G.WebSetting.ACCOUNT_USERNAME,
           children: (0, a.jsx)(w, {
             user: t
           })
-        }), (0, a.jsx)(C.Subsetting, {
+        }), (0, a.jsx)(A.Subsetting, {
           setting: G.WebSetting.ACCOUNT_EMAIL,
-          children: (0, a.jsx)(z, {
+          children: (0, a.jsx)(Q, {
             className: Y.fieldSpacer,
             user: t
           })
-        }), (0, a.jsx)(C.Subsetting, {
+        }), (0, a.jsx)(A.Subsetting, {
           setting: G.WebSetting.ACCOUNT_PHONE_NUMBER,
-          children: (0, a.jsx)(Q, {
+          children: (0, a.jsx)(z, {
             className: Y.fieldSpacer,
             user: t
           })

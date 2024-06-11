@@ -85,7 +85,7 @@ t.default = a.memo(function(e) {
     onSelectSticker: o,
     stickerIconVisible: _ = !1,
     submitButtonVisible: c = !1
-  } = e, p = a.useContext(f.default), [O, L] = a.useState(null), [b, G] = a.useState(!1), [V, x] = a.useState(null), F = (0, S.useExpressionPickerStore)(e => null != e.activeView), H = a.useRef(null), [Y, j] = a.useState(""), [W, K] = a.useState(""), [z, Z] = a.useState(!1), [X, Q] = a.useState(!1), q = (0, D.useStickerSuggestionResults)(Y, b, i), {
+  } = e, p = a.useContext(f.default), [O, L] = a.useState(null), [b, G] = a.useState(!1), [V, x] = a.useState(null), F = (0, S.useExpressionPickerStore)(e => null != e.activeView), H = a.useRef(null), [Y, j] = a.useState(""), [W, K] = a.useState(""), [z, Z] = a.useState(!1), [Q, X] = a.useState(!1), q = (0, D.useStickerSuggestionResults)(Y, b, i), {
     analyticsLocations: J
   } = (0, T.default)(I.default.EXPRESSION_SUGGESTIONS), {
     handleTextChange: $,
@@ -93,7 +93,7 @@ t.default = a.memo(function(e) {
   } = (0, D.useTextChangeHandler)({
     setTextInputValue: j,
     setHasDismissed: G,
-    setHasSelection: Q,
+    setHasSelection: X,
     setFocusedSuggestionType: L
   });
   a.useEffect(() => {
@@ -102,7 +102,7 @@ t.default = a.memo(function(e) {
       },
       t = e => {
         let t = "" !== e && null != e;
-        if (Q(t), t) {
+        if (X(t), t) {
           var i;
           L(null), null === (i = n.current) || void 0 === i || i.focus()
         }
@@ -121,7 +121,7 @@ t.default = a.memo(function(e) {
     })
   }, [r]);
   let ei = q.length > 0,
-    er = et && !F && !z && !b && !X && ei,
+    er = et && !F && !z && !b && !Q && ei,
     {
       stickersNavigator: es
     } = function(e) {

@@ -25,8 +25,8 @@ var a = n("735250"),
   v = n("793319"),
   N = n("560688"),
   M = n("390322"),
-  R = n("871499"),
-  y = n("386000"),
+  y = n("871499"),
+  R = n("386000"),
   L = n("25827"),
   j = n("314897"),
   O = n("131951"),
@@ -78,7 +78,7 @@ function eu(e) {
     channel: l
   } = e, s = (0, en.default)(l.id), [i, o] = (0, el.default)(l), u = (0, r.useStateFromStores)([P.default], () => P.default.can(es.Permissions.REQUEST_TO_SPEAK, l));
   if (s) return null;
-  return (0, a.jsx)(R.CenterControlButton, {
+  return (0, a.jsx)(y.CenterControlButton, {
     isActive: i,
     label: (t = i, n = u, t ? ei.default.Messages.AUDIENCE_LOWER_HAND : n ? ei.default.Messages.AUDIENCE_RAISE_HAND_CTA : ei.default.Messages.AUDIENCE_RAISE_HAND_NO_PERMISSION),
     iconComponent: () => (0, a.jsx)(G.default, {
@@ -168,7 +168,7 @@ function ef(e) {
       } = e, {
         isShown: i
       } = n;
-      return (0, a.jsx)(R.CenterControlButton, {
+      return (0, a.jsx)(y.CenterControlButton, {
         className: er.buttonSpacing,
         label: ei.default.Messages.EXIT_EVENT_STAGE_OPTIONS_LABEL,
         color: "red",
@@ -204,7 +204,7 @@ function ef(e) {
         children: ei.default.Messages.AUDIENCE_DISCONNECT
       })]
     })
-  }) : (0, a.jsx)(R.CenterControlButton, {
+  }) : (0, a.jsx)(y.CenterControlButton, {
     className: er.buttonSpacing,
     label: ei.default.Messages.EXIT_EVENT_STAGE_OPTIONS_LABEL,
     color: "red",
@@ -267,7 +267,7 @@ function em(e) {
   let {
     channelId: t
   } = e, n = (0, r.useStateFromStores)([ee.default], () => ee.default.isMuted()), l = (0, $.useShowStageMusicMuteButton)(t), s = (0, r.useStateFromStores)([ee.default], () => ee.default.shouldPlay());
-  return l ? (0, a.jsx)(R.CenterControlButton, {
+  return l ? (0, a.jsx)(y.CenterControlButton, {
     isActive: n,
     className: er.buttonSpacing,
     label: n ? ei.default.Messages.STAGE_MUSIC_UNMUTE : ei.default.Messages.STAGE_MUSIC_MUTE,
@@ -279,7 +279,7 @@ function em(e) {
       width: 24
     }),
     onClick: () => (0, Q.updateStageMusicMuted)(!n)
-  }) : (0, a.jsx)(R.CenterControlButton, {
+  }) : (0, a.jsx)(y.CenterControlButton, {
     isActive: s,
     className: er.buttonSpacing,
     label: s ? ei.default.Messages.STAGE_MUSIC_MUTE : ei.default.Messages.STAGE_MUSIC_UNMUTE,
@@ -305,8 +305,8 @@ let ep = l.memo(function(e) {
     enabled: g
   } = (0, T.default)(), S = (0, A.default)(t), {
     limit: _,
-    reachedLimit: R
-  } = (0, I.default)(t), j = (0, r.useStateFromStores)([b.default], () => b.default.getCurrentUser()), P = (0, r.useStateFromStores)([O.default], () => (0, E.default)(O.default)), U = (0, r.useStateFromStores)([D.default], () => D.default.getVoiceChannelId() === t.id, [t.id]), F = (0, r.useStateFromStores)([c.default], () => c.default.getStreamParticipants(t.id)[0], [t.id]), w = (0, J.useStageHasMedia)(t.id), k = _ > 0, H = R && !w || null != F && F.user.id !== (null == j ? void 0 : j.id);
+    reachedLimit: y
+  } = (0, I.default)(t), j = (0, r.useStateFromStores)([b.default], () => b.default.getCurrentUser()), P = (0, r.useStateFromStores)([O.default], () => (0, E.default)(O.default)), U = (0, r.useStateFromStores)([D.default], () => D.default.getVoiceChannelId() === t.id, [t.id]), F = (0, r.useStateFromStores)([c.default], () => c.default.getStreamParticipants(t.id)[0], [t.id]), w = (0, J.useStageHasMedia)(t.id), k = _ > 0, H = y && !w || null != F && F.user.id !== (null == j ? void 0 : j.id);
   if (null == j) return null;
   let G = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(o.Popout, {
@@ -336,7 +336,7 @@ let ep = l.memo(function(e) {
           cameraUnavailable: C,
           onChange: v.handleToggleVideo,
           onCameraUnavailable: N.default,
-          channelLimitReached: R,
+          channelLimitReached: y,
           channelLimit: _,
           popoutOpen: l,
           onPopoutClick: n
@@ -381,7 +381,7 @@ let ep = l.memo(function(e) {
           } = e, {
             isShown: r
           } = t;
-          return (0, a.jsx)(y.default, {
+          return (0, a.jsx)(R.default, {
             centerButton: !0,
             onPopoutClick: i,
             selfMute: l,

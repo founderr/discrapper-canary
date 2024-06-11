@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return C
+    return g
   }
 }), l("47120");
 var a = l("735250"),
@@ -19,46 +19,46 @@ var a = l("735250"),
   E = l("981631"),
   _ = l("689938"),
   h = l("492626");
-let N = async () => {
+let C = async () => {
   let {
     default: e
   } = await l.e("21812").then(l.t.bind(l, "741855", 19));
   return e
 };
 
-function C(e) {
+function g(e) {
   let {
     selectedGuildId: t,
     selectedChannelId: l,
     glow: s,
-    playIntroTransition: C,
-    onUnlocked: g
-  } = e, [p, A] = n.useState(!1), x = (0, u.useStateFromStores)([d.default], () => d.default.useReducedMotion), {
-    hqStreamingState: I
-  } = (0, c.usePerksDemo)(r.EntitlementFeatureNames.STREAM_HIGH_QUALITY), R = n.useCallback(() => {
-    (0, f.hqStreamingUnlockAnimationPlayed)(!0), g()
-  }, [g]);
+    playIntroTransition: g,
+    onUnlocked: N
+  } = e, [I, p] = n.useState(!1), x = (0, u.useStateFromStores)([d.default], () => d.default.useReducedMotion), {
+    hqStreamingState: A
+  } = (0, c.usePerksDemo)(r.EntitlementFeatureNames.STREAM_HIGH_QUALITY), T = n.useCallback(() => {
+    (0, f.hqStreamingUnlockAnimationPlayed)(!0), N()
+  }, [N]);
   return n.useEffect(() => {
-    if (I.hqStreamingUnlockAnimationPlayed) return;
+    if (A.hqStreamingUnlockAnimationPlayed) return;
     let e = setTimeout(() => {
-      A(!0)
+      p(!0)
     }, 1150);
     return () => {
-      clearTimeout(e), A(!1)
+      clearTimeout(e), p(!1)
     }
-  }, [R, I, x]), n.useEffect(() => {
-    if (I.hqStreamingUnlockAnimationPlayed) return;
+  }, [T, A, x]), n.useEffect(() => {
+    if (A.hqStreamingUnlockAnimationPlayed) return;
     if (x) {
-      R();
+      T();
       return
     }
     let e = setTimeout(() => {
-      R()
+      T()
     }, 250);
     return () => {
       clearTimeout(e)
     }
-  }, [g, R, , I, x]), n.useEffect(() => {
+  }, [N, T, , A, x]), n.useEffect(() => {
     S.default.track(E.AnalyticEvents.PERK_DEMO_OFFER_VIEWED, {
       guild_id: t,
       channel_id: l,
@@ -71,11 +71,11 @@ function C(e) {
     children: (0, a.jsxs)("div", {
       className: h.content,
       children: [(0, a.jsx)(m.default, {
-        importData: N,
+        importData: C,
         shouldAnimate: !x,
         pauseAtFrame: 90,
         className: i()(h.animation, {
-          [h.animationEndState]: p || !C || x
+          [h.animationEndState]: I || !g || x
         }),
         loop: !1
       }), (0, a.jsx)("div", {

@@ -1,11 +1,11 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return R
+    return p
   }
 }), s("47120"), s("411104");
-var a, n, l = s("735250"),
-  i = s("470079"),
+var a, n, i = s("735250"),
+  l = s("470079"),
   r = s("512722"),
   o = s.n(r),
   d = s("442837"),
@@ -20,8 +20,8 @@ var a, n, l = s("735250"),
   g = s("78839"),
   f = s("285952"),
   m = s("74538"),
-  C = s("689938"),
-  A = s("625699");
+  A = s("689938"),
+  C = s("625699");
 async function O(e, t, s, a) {
   await (0, E.uncancelGuildBoostSlot)(s), await (0, S.updateSubscription)(e, {
     items: (0, m.getItemsFromNewAdditionalPlans)(e, t)
@@ -34,24 +34,24 @@ function h(e) {
     guildBoostSlotId: s,
     onNext: a,
     onClose: n
-  } = e, [r, S] = i.useState(!1), E = (0, d.useStateFromStores)([N.default], () => N.default.theme), {
+  } = e, [r, S] = l.useState(!1), E = (0, d.useStateFromStores)([N.default], () => N.default.theme), {
     analyticsLocations: T
   } = (0, _.default)();
-  return (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsxs)(c.ModalHeader, {
+  return (0, i.jsxs)(i.Fragment, {
+    children: [(0, i.jsxs)(c.ModalHeader, {
       separator: !1,
-      children: [(0, l.jsx)(c.FormTitle, {
+      children: [(0, i.jsx)(c.FormTitle, {
         tag: c.FormTitleTags.H4,
-        children: C.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_TITLE
-      }), (0, l.jsx)(c.ModalCloseButton, {
+        children: A.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_TITLE
+      }), (0, i.jsx)(c.ModalCloseButton, {
         onClick: n
       })]
-    }), (0, l.jsx)(c.ModalContent, {
-      className: A.body,
-      children: C.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_DESCRIPTION
-    }), (0, l.jsxs)(c.ModalFooter, {
+    }), (0, i.jsx)(c.ModalContent, {
+      className: C.body,
+      children: A.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_DESCRIPTION
+    }), (0, i.jsxs)(c.ModalFooter, {
       justify: f.default.Justify.START,
-      children: [(0, l.jsx)(c.Button, {
+      children: [(0, i.jsx)(c.Button, {
         onClick: async () => {
           try {
             S(!0);
@@ -62,48 +62,48 @@ function h(e) {
           }
         },
         submitting: r,
-        children: C.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_BUTTON
-      }), (0, l.jsx)(c.Button, {
+        children: A.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_BUTTON
+      }), (0, i.jsx)(c.Button, {
         look: c.Button.Looks.LINK,
         color: (0, u.isThemeLight)(E) ? c.Button.Colors.PRIMARY : c.Button.Colors.WHITE,
         onClick: n,
         disabled: r,
-        children: C.default.Messages.NEVERMIND
+        children: A.default.Messages.NEVERMIND
       })]
-    })]
-  })
-}
-
-function p(e) {
-  let {
-    onClose: t
-  } = e;
-  return (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsxs)(c.ModalHeader, {
-      separator: !1,
-      children: [(0, l.jsx)(c.FormTitle, {
-        tag: c.FormTitleTags.H4,
-        children: C.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_CONFIRM_TITLE
-      }), (0, l.jsx)(c.ModalCloseButton, {
-        onClick: t
-      })]
-    }), (0, l.jsxs)(c.ModalContent, {
-      className: A.body,
-      children: [(0, l.jsx)("div", {
-        className: A.uncancelImage
-      }), (0, l.jsx)("div", {
-        children: C.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_CONFIRM_DESCRIPTION
-      })]
-    }), (0, l.jsx)(c.ModalFooter, {
-      children: (0, l.jsx)(c.Button, {
-        onClick: t,
-        children: C.default.Messages.OKAY
-      })
     })]
   })
 }
 
 function R(e) {
+  let {
+    onClose: t
+  } = e;
+  return (0, i.jsxs)(i.Fragment, {
+    children: [(0, i.jsxs)(c.ModalHeader, {
+      separator: !1,
+      children: [(0, i.jsx)(c.FormTitle, {
+        tag: c.FormTitleTags.H4,
+        children: A.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_CONFIRM_TITLE
+      }), (0, i.jsx)(c.ModalCloseButton, {
+        onClick: t
+      })]
+    }), (0, i.jsxs)(c.ModalContent, {
+      className: C.body,
+      children: [(0, i.jsx)("div", {
+        className: C.uncancelImage
+      }), (0, i.jsx)("div", {
+        children: A.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_CONFIRM_DESCRIPTION
+      })]
+    }), (0, i.jsx)(c.ModalFooter, {
+      children: (0, i.jsx)(c.Button, {
+        onClick: t,
+        children: A.default.Messages.OKAY
+      })
+    })]
+  })
+}
+
+function p(e) {
   let t, {
       guildBoostSlotId: s,
       transitionState: a,
@@ -112,17 +112,17 @@ function R(e) {
     {
       analyticsLocations: r
     } = (0, _.default)(T.default.GUILD_BOOST_UNCANCELLATION_MODAL);
-  i.useEffect(() => {
+  l.useEffect(() => {
     !g.default.hasFetchedSubscriptions() && (0, S.fetchSubscriptions)()
   }, []);
   let o = (0, d.useStateFromStores)([g.default], () => g.default.getPremiumTypeSubscription()),
-    [u, E] = i.useState(1);
-  if (null == o) t = (0, l.jsx)(c.ModalContent, {
-    children: (0, l.jsx)(c.Spinner, {})
+    [u, E] = l.useState(1);
+  if (null == o) t = (0, i.jsx)(c.ModalContent, {
+    children: (0, i.jsx)(c.Spinner, {})
   });
   else switch (u) {
     case 1:
-      t = (0, l.jsx)(h, {
+      t = (0, i.jsx)(h, {
         premiumSubscription: o,
         guildBoostSlotId: s,
         onNext: () => E(2),
@@ -130,16 +130,16 @@ function R(e) {
       });
       break;
     case 2:
-      t = (0, l.jsx)(p, {
+      t = (0, i.jsx)(R, {
         onClose: n
       });
       break;
     default:
       throw Error("Unexpected step: ".concat(u))
   }
-  return (0, l.jsx)(_.AnalyticsLocationProvider, {
+  return (0, i.jsx)(_.AnalyticsLocationProvider, {
     value: r,
-    children: (0, l.jsx)(c.ModalRoot, {
+    children: (0, i.jsx)(c.ModalRoot, {
       transitionState: a,
       children: t
     })

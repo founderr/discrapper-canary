@@ -20,19 +20,19 @@ var s, a = n("735250"),
   _ = n("743142"),
   p = n("379760"),
   T = n("100159"),
-  I = n("473855"),
-  S = n("124860"),
-  A = n("86779"),
+  S = n("473855"),
+  A = n("124860"),
+  I = n("86779"),
   N = n("726745"),
   R = n("913583"),
   C = n("144114"),
   O = n("541692"),
   v = n("952802"),
   L = n("108427"),
-  x = n("365007"),
-  M = n("843512"),
-  b = n("314897"),
-  y = n("117240"),
+  M = n("365007"),
+  x = n("843512"),
+  y = n("314897"),
+  b = n("117240"),
   D = n("896797"),
   U = n("285952"),
   P = n("819570"),
@@ -40,8 +40,8 @@ var s, a = n("735250"),
   w = n("626135"),
   j = n("585483"),
   F = n("358085"),
-  k = n("481153"),
-  B = n("588705"),
+  B = n("481153"),
+  k = n("588705"),
   H = n("494526"),
   V = n("163671"),
   W = n("981631"),
@@ -90,7 +90,7 @@ class J extends(s = i.PureComponent) {
     }, {
       flush: !0
     }), null == m.default && this.props.hasPasswordlessExperiment && null != window.PublicKeyCredential && null != PublicKeyCredential.isConditionalMediationAvailable && PublicKeyCredential.isConditionalMediationAvailable().then(e => {
-      e && (0, x.fetchWebAuthnConditionalChallenge)().then(e => {
+      e && (0, M.fetchWebAuthnConditionalChallenge)().then(e => {
         let {
           challenge: t,
           ticket: n
@@ -165,7 +165,7 @@ class J extends(s = i.PureComponent) {
       let e = window.location.protocol + window.GLOBAL_ENV.API_ENDPOINT + W.Endpoints.SSO,
         t = {
           ...a,
-          token: b.default.getToken()
+          token: y.default.getToken()
         };
       window.location = "".concat(e, "?").concat((0, u.stringify)(t))
     }
@@ -261,7 +261,7 @@ class J extends(s = i.PureComponent) {
     } = this.props;
     return (0, a.jsxs)(P.default, {
       className: e,
-      children: [(0, a.jsx)(B.InviteResolvingHeader, {}), (0, a.jsxs)(P.Block, {
+      children: [(0, a.jsx)(k.InviteResolvingHeader, {}), (0, a.jsxs)(P.Block, {
         className: q.marginTop20,
         children: [(0, a.jsx)(v.default, {
           className: q.marginBottom20,
@@ -323,7 +323,7 @@ class J extends(s = i.PureComponent) {
       showMobileWebHandoff: u,
       disableAutofocusOnDefaultForm: d
     } = this.props, c = !this.hasError("email") && this.hasError("password"), h = (null == s ? void 0 : s.stage_instance) != null;
-    return n = null == s || h ? null != i ? (0, a.jsx)(k.default, {
+    return n = null == s || h ? null != i ? (0, a.jsx)(B.default, {
       giftCode: i
     }) : (0, a.jsxs)("div", {
       className: z.header,
@@ -333,7 +333,7 @@ class J extends(s = i.PureComponent) {
       }, "title"), !1 === (0, F.isAndroidWeb)() ? (0, a.jsx)(P.SubTitle, {
         children: K.default.Messages.AUTH_LOGIN_BODY
       }, "subtitle") : null]
-    }) : (0, a.jsx)(B.default, {
+    }) : (0, a.jsx)(k.default, {
       invite: s
     }), (0, a.jsxs)(U.default, {
       direction: U.default.Direction.HORIZONTAL,
@@ -445,7 +445,7 @@ class J extends(s = i.PureComponent) {
         className: e,
         expanded: !0,
         children: this.renderDefaultForm(!0)
-      }), t && (0, a.jsx)(A.default, {})]
+      }), t && (0, a.jsx)(I.default, {})]
     })
   }
   renderGuildTemplate(e) {
@@ -453,7 +453,7 @@ class J extends(s = i.PureComponent) {
       onSubmit: this.handleLogin,
       tag: "form",
       className: o()(this.props.authBoxClassName, z.horizontalAuthBox),
-      children: () => [(0, a.jsx)(I.default, {
+      children: () => [(0, a.jsx)(S.default, {
         guildTemplate: e
       }, "template"), this.renderDefaultForm(!1)]
     })
@@ -467,7 +467,7 @@ class J extends(s = i.PureComponent) {
       style: {
         padding: 0
       },
-      children: (0, a.jsx)(S.MFASlides, {
+      children: (0, a.jsx)(A.MFASlides, {
         mfaFinish: this.handleTokenSubmitMFA,
         request: e,
         onEarlyClose: () => {
@@ -738,21 +738,21 @@ Z(J, "defaultProps", {
   transitionTo: e => n.g.location.assign(e)
 });
 t.default = function(e) {
-  let t = (0, c.useStateFromStoresObject)([y.default, D.default, b.default, N.default, O.default], () => ({
-      authenticated: b.default.isAuthenticated(),
-      handoffAvailable: y.default.isHandoffAvailable(),
-      user: y.default.user,
-      loginStatus: b.default.getLoginStatus(),
-      mfaTicket: b.default.getMFATicket(),
-      mfaSMS: b.default.getMFASMS(),
-      mfaMethods: b.default.getMFAMethods(),
-      maskedPhone: b.default.getMaskedPhone(),
-      errors: b.default.getErrors(),
+  let t = (0, c.useStateFromStoresObject)([b.default, D.default, y.default, N.default, O.default], () => ({
+      authenticated: y.default.isAuthenticated(),
+      handoffAvailable: b.default.isHandoffAvailable(),
+      user: b.default.user,
+      loginStatus: y.default.getLoginStatus(),
+      mfaTicket: y.default.getMFATicket(),
+      mfaSMS: y.default.getMFASMS(),
+      mfaMethods: y.default.getMFAMethods(),
+      maskedPhone: y.default.getMaskedPhone(),
+      errors: y.default.getErrors(),
       defaultRoute: D.default.defaultRoute,
       country: O.default.getCountryCode(),
       hasLoggedInAccounts: N.default.getHasLoggedInAccounts()
     })),
-    n = M.default.useExperiment({
+    n = x.default.useExperiment({
       location: "login"
     }).enabled;
   return (0, a.jsx)(J, {

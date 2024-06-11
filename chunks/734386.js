@@ -29,8 +29,8 @@ var a = n("735250"),
   v = n("183156"),
   N = n("52736"),
   M = n("700785"),
-  R = n("51144"),
-  y = n("396769"),
+  y = n("51144"),
+  R = n("396769"),
   L = n("967128"),
   j = n("318374"),
   O = n("981631"),
@@ -94,14 +94,14 @@ function b(e) {
       })
     }), G ? (0, a.jsxs)("div", {
       className: D.channelSettingButtons,
-      children: [(0, a.jsx)(y.default, {
+      children: [(0, a.jsx)(R.default, {
         label: P.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE,
         onClick: () => s(!0),
         icon: (0, a.jsx)(x.default, {
           width: 16,
           height: 16
         })
-      }), (0, a.jsx)(y.default, {
+      }), (0, a.jsx)(R.default, {
         label: P.default.Messages.EDIT_CHANNEL,
         onClick: B,
         icon: (0, a.jsx)(A.default, {
@@ -119,7 +119,7 @@ function b(e) {
           users: H
         });
         let e = H[0],
-          n = R.default.getName(e);
+          n = y.default.getName(e);
         return (0, a.jsxs)("div", {
           className: D.avatars,
           children: [(0, a.jsx)(f.Avatar, {

@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("735250");
 s("470079");
 var n = s("120356"),
-  l = s.n(n),
-  i = s("442837"),
+  i = s.n(n),
+  l = s("442837"),
   r = s("481060"),
   o = s("223245"),
   d = s("230711"),
@@ -27,14 +27,14 @@ function f() {
   let {
     enabled: f,
     autoToggle: m,
-    hideInstantInvites: C,
-    hidePersonalInformation: A,
+    hideInstantInvites: A,
+    hidePersonalInformation: C,
     disableSounds: O,
     disableNotifications: h,
-    enableContentProtection: p
-  } = (0, i.useStateFromStoresObject)([S.default], () => ({
+    enableContentProtection: R
+  } = (0, l.useStateFromStoresObject)([S.default], () => ({
     ...S.default.getSettings()
-  })), R = (e, t) => {
+  })), p = (e, t) => {
     o.default.update({
       [e]: t
     })
@@ -64,7 +64,7 @@ function f() {
       setting: T.WebSetting.STREAMER_MODE_ENABLE,
       children: [(0, a.jsx)(r.FormSwitch, {
         value: f,
-        onChange: e => R("enabled", e),
+        onChange: e => p("enabled", e),
         note: I.default.Messages.ENABLE_STREAMER_MODE_DESCRIPTION.format({
           onClick: () => {
             d.default.setSection(_.UserSettingsSections.KEYBINDS)
@@ -74,28 +74,28 @@ function f() {
       }), (() => {
         if (E.isPlatformEmbedded) return (0, a.jsx)(r.FormSwitch, {
           value: m,
-          onChange: e => R("autoToggle", e),
+          onChange: e => p("autoToggle", e),
           note: I.default.Messages.AUTO_TOGGLE_STREAMER_MODE_DESCRIPTION,
           children: I.default.Messages.AUTO_TOGGLE_STREAMER_MODE_LABEL
         })
       })()]
     }), (0, a.jsxs)("div", {
       children: [(0, a.jsx)(r.FormTitle, {
-        className: l()(g.marginTop40, g.marginBottom8, N.sectionLabel),
+        className: i()(g.marginTop40, g.marginBottom8, N.sectionLabel),
         children: I.default.Messages.OPTIONS
       }), (0, a.jsx)(c.Subsetting, {
         setting: T.WebSetting.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
         children: (0, a.jsx)(r.FormSwitch, {
-          value: A,
-          onChange: e => R("hidePersonalInformation", e),
+          value: C,
+          onChange: e => p("hidePersonalInformation", e),
           note: I.default.Messages.HIDE_PERSONAL_INFORMATION_DESCRIPTION,
           children: I.default.Messages.HIDE_PERSONAL_INFORMATION_LABEL
         })
       }), (0, a.jsx)(c.Subsetting, {
         setting: T.WebSetting.STREAMER_MODE_HIDE_INVITE_LINKS,
         children: (0, a.jsx)(r.FormSwitch, {
-          value: C,
-          onChange: e => R("hideInstantInvites", e),
+          value: A,
+          onChange: e => p("hideInstantInvites", e),
           note: I.default.Messages.HIDE_INSTANT_INVITES_DESCRIPTION,
           children: I.default.Messages.HIDE_INSTANT_INVITES_LABEL
         })
@@ -103,7 +103,7 @@ function f() {
         setting: T.WebSetting.STREAMER_MODE_DISABLE_SOUNDS,
         children: (0, a.jsx)(r.FormSwitch, {
           value: O,
-          onChange: e => R("disableSounds", e),
+          onChange: e => p("disableSounds", e),
           note: I.default.Messages.DISABLE_SOUNDS_DESCRIPTION,
           children: I.default.Messages.DISABLE_SOUNDS_LABEL
         })
@@ -111,15 +111,15 @@ function f() {
         setting: T.WebSetting.STREAMER_MODE_DISABLE_NOTIFICATIONS,
         children: (0, a.jsx)(r.FormSwitch, {
           value: h,
-          onChange: e => R("disableNotifications", e),
+          onChange: e => p("disableNotifications", e),
           note: I.default.Messages.DISABLE_NOTIFICATIONS_DESCRIPTION,
           children: I.default.Messages.DISABLE_NOTIFICATIONS_LABEL
         })
       }), M && (0, a.jsx)(c.Subsetting, {
         setting: T.WebSetting.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE,
         children: (0, a.jsx)(r.FormSwitch, {
-          value: p,
-          onChange: e => R("enableContentProtection", e),
+          value: R,
+          onChange: e => p("enableContentProtection", e),
           note: I.default.Messages.HIDE_WINDOW_FROM_STREAM_DESCRIPTION,
           children: I.default.Messages.HIDE_WINDOW_FROM_STREAM_LABEL
         })

@@ -43,15 +43,15 @@ function m(e) {
     password: _,
     guildTemplateCode: p,
     birthday: T,
-    invite: I = null,
-    giftCodeSKUId: S = null,
-    multiStep: A = !1,
+    invite: S = null,
+    giftCodeSKUId: A = null,
+    multiStep: I = !1,
     promoEmailConsent: N = null,
     usedUsernameSuggestion: R = null
   } = e;
   return l.default.dispatch({
     type: "REGISTER",
-    birthday: A ? T : null
+    birthday: I ? T : null
   }), null != T && ((0, f.default)(T, h.AnalyticsSections.REGISTER), d.default.track(h.AnalyticEvents.AGE_GATE_ACTION, {
     source: E.AgeGateSource.REGISTER,
     action: E.AgeGateAnalyticAction.AGE_GATE_SUBMITTED
@@ -69,18 +69,18 @@ function m(e) {
       username: s,
       global_name: g,
       password: _,
-      invite: I,
+      invite: S,
       consent: m,
       phone_token: n,
       date_of_birth: null == T ? void 0 : T.format("YYYY-MM-DD"),
-      gift_code_sku_id: S,
+      gift_code_sku_id: A,
       guild_template_code: p,
       promotional_email_opt_in: null == N ? void 0 : N.checked
     },
     trackedActionData: {
       event: i.NetworkActionNames.USER_REGISTER,
       properties: {
-        invite_code: I,
+        invite_code: S,
         used_username_suggestion: R,
         promotional_email_opt_in: null == N ? void 0 : N.checked,
         promotional_email_pre_checked: null == N ? void 0 : N.preChecked,

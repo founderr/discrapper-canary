@@ -40,8 +40,8 @@ var o, l, u, d = n("512722"),
   K = n("636458"),
   z = n("441167"),
   Z = n("338336"),
-  X = n("751571"),
-  Q = n("815016"),
+  Q = n("751571"),
+  X = n("815016"),
   q = n("725380"),
   J = n("581883"),
   $ = n("626135"),
@@ -160,14 +160,14 @@ let eR = (0, S.initializeMediaEngine)((0, S.determineMediaEngine)()),
   eK = !1,
   ez = !1,
   eZ = !1,
-  eX = !1,
-  eQ = null,
+  eQ = !1,
+  eX = null,
   eq = !1,
   eJ = !1,
   e$ = !1;
-X.default.hasPermission(eT.NativePermissionTypes.AUDIO, {
+Q.default.hasPermission(eT.NativePermissionTypes.AUDIO, {
   showAuthorizationError: !1
-}), X.default.hasPermission(eT.NativePermissionTypes.CAMERA, {
+}), Q.default.hasPermission(eT.NativePermissionTypes.CAMERA, {
   showAuthorizationError: !1
 });
 let e0 = new Set,
@@ -189,7 +189,7 @@ function e5(e) {
     vadThreshold: t.modeOptions.threshold,
     vadAutoThreshold: t.modeOptions.autoThreshold,
     vadUseKrisp: t.modeOptions.vadUseKrisp && function() {
-      return eX || !1
+      return eQ || !1
     }(),
     vadLeading: t.modeOptions.vadLeading,
     vadTrailing: t.modeOptions.vadTrailing,
@@ -205,7 +205,7 @@ function e8(e) {
 function e9(e) {
   let t = e7(e.context),
     i = !ev || t.mute || t.deaf;
-  e.context === eS.MediaEngineContextTypes.DEFAULT ? i = i || eb || eG || ew || !X.default.didHavePermission(eT.NativePermissionTypes.AUDIO) : e.context === eS.MediaEngineContextTypes.STREAM && (i = !0), e.setSelfMute(i), e.setSelfDeaf(t.deaf),
+  e.context === eS.MediaEngineContextTypes.DEFAULT ? i = i || eb || eG || ew || !Q.default.didHavePermission(eT.NativePermissionTypes.AUDIO) : e.context === eS.MediaEngineContextTypes.STREAM && (i = !0), e.setSelfMute(i), e.setSelfDeaf(t.deaf),
     function(e) {
       Promise.resolve().then(n.bind(n, "44744")).then(t => {
         let {
@@ -467,11 +467,11 @@ function tS() {
 }
 
 function th() {
-  return eX || !1
+  return eQ || !1
 }
 async function tA() {
   try {
-    await er.default.ensureModule("discord_krisp"), er.default.requireModule("discord_krisp"), eX = !0, i.emitChange()
+    await er.default.ensureModule("discord_krisp"), er.default.requireModule("discord_krisp"), eQ = !0, i.emitChange()
   } catch (t) {
     em.warn("Failed to load Krisp module: ".concat(t.message)), ei.default.captureException(t);
     let e = eS.NoiseCancellerError.INITIALIZED;
@@ -802,13 +802,13 @@ class tN extends(l = f.default.Store) {
           let e = e7();
           eR.setAudioInputDevice(e.inputDeviceId), eR.setAudioOutputDevice(e.outputDeviceId), te(), eR.setInputVolume(e.inputVolume), eR.setOutputVolume(e.outputVolume), eR.setH264Enabled(e.openH264), eR.setAv1Enabled(e.hardwareH264), eR.setH265Enabled(e.hardwareH264), eR.setAecDump(e.aecDumpEnabled)
         }()
-    }(), ((0, en.isWindows)() || (0, en.isLinux)() || (0, en.isMac)() && T().satisfies(null === N.default || void 0 === N.default ? void 0 : N.default.os.release, ">=21.0.0")) && !__OVERLAY__ && !eZ && !eX ? (eZ = !0, tA()) : (0, en.isWeb)() && eR.supports(eS.Features.NOISE_CANCELLATION) ? (eX = !0, i.emitChange()) : (0, en.isWeb)() && to({
+    }(), ((0, en.isWindows)() || (0, en.isLinux)() || (0, en.isMac)() && T().satisfies(null === N.default || void 0 === N.default ? void 0 : N.default.os.release, ">=21.0.0")) && !__OVERLAY__ && !eZ && !eQ ? (eZ = !0, tA()) : (0, en.isWeb)() && eR.supports(eS.Features.NOISE_CANCELLATION) ? (eQ = !0, i.emitChange()) : (0, en.isWeb)() && to({
       noiseCancellation: !1
     }), tT(), e3 = {
       [eS.Features.VIDEO]: eR.supports(eS.Features.VIDEO),
       [eS.Features.DESKTOP_CAPTURE]: eR.supports(eS.Features.DESKTOP_CAPTURE),
       [eS.Features.HYBRID_VIDEO]: eR.supports(eS.Features.HYBRID_VIDEO)
-    }, this.waitFor(ea.default, el.default, eu.default, ed.default, e_.default, M.default, X.default.storage, J.default, v.default, C.default)
+    }, this.waitFor(ea.default, el.default, eu.default, ed.default, e_.default, M.default, Q.default.storage, J.default, v.default, C.default)
   }
   supports(e) {
     return eR.supports(e)
@@ -826,7 +826,7 @@ class tN extends(l = f.default.Store) {
     return eR.supports(eS.Features.NOISE_SUPPRESSION)
   }
   isNoiseCancellationSupported() {
-    return eX || !1
+    return eQ || !1
   }
   isNoiseCancellationError() {
     return eq
@@ -835,7 +835,7 @@ class tN extends(l = f.default.Store) {
     return eR.supports(eS.Features.AUTOMATIC_GAIN_CONTROL)
   }
   isAdvancedVoiceActivitySupported() {
-    return eX || !1
+    return eQ || !1
   }
   isAecDumpSupported() {
     return eR.supports(eS.Features.AEC_DUMP)
@@ -873,7 +873,7 @@ class tN extends(l = f.default.Store) {
   }
   isSelfMute() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eS.MediaEngineContextTypes.DEFAULT;
-    return !this.isEnabled() || e7(e).mute || !X.default.didHavePermission(eT.NativePermissionTypes.AUDIO) || this.isSelfDeaf(e) || e === eS.MediaEngineContextTypes.DEFAULT && ew
+    return !this.isEnabled() || e7(e).mute || !Q.default.didHavePermission(eT.NativePermissionTypes.AUDIO) || this.isSelfDeaf(e) || e === eS.MediaEngineContextTypes.DEFAULT && ew
   }
   shouldSkipMuteUnmuteSound() {
     let {
@@ -1066,7 +1066,7 @@ class tN extends(l = f.default.Store) {
       inputDevices: ey,
       outputDevices: eP,
       appSupported: e3,
-      krispModuleLoaded: eX,
+      krispModuleLoaded: eQ,
       goLiveSource: s,
       goLiveContext: eM
     }
@@ -1164,10 +1164,10 @@ eA(tN, "displayName", "MediaEngineStore"), i = new tN(m.default, {
     let {
       voiceStates: t
     } = e;
-    return t.reduce((e, t) => r === t.sessionId ? (eb = t.mute || t.suppress, ek = t.deaf, eR.eachConnection(e9), te(!(null != t.guildId && null != t.channelId && null != eQ && eQ !== t.channelId) && eB), eQ = t.channelId, !0) : (!__OVERLAY__ && t.userId === ea.default.getId() && null == e_.default.getChannelId() && te(!1, null), e), !1)
+    return t.reduce((e, t) => r === t.sessionId ? (eb = t.mute || t.suppress, ek = t.deaf, eR.eachConnection(e9), te(!(null != t.guildId && null != t.channelId && null != eX && eX !== t.channelId) && eB), eX = t.channelId, !0) : (!__OVERLAY__ && t.userId === ea.default.getId() && null == e_.default.getChannelId() && te(!1, null), e), !1)
   },
   CONNECTION_OPEN: function(e) {
-    r = e.sessionId, eb = !1, ek = !1, (0, Q.shouldReadWriteAudioSettings)() && tc()
+    r = e.sessionId, eb = !1, ek = !1, (0, X.shouldReadWriteAudioSettings)() && tc()
   },
   CONNECTION_CLOSED: function() {
     r = null
@@ -1213,7 +1213,7 @@ eA(tN, "displayName", "MediaEngineStore"), i = new tN(m.default, {
       mute: i,
       deaf: r
     } = e7(t);
-    if (t === eS.MediaEngineContextTypes.DEFAULT && (X.default.requestPermission(eT.NativePermissionTypes.AUDIO), ew)) return !1;
+    if (t === eS.MediaEngineContextTypes.DEFAULT && (Q.default.requestPermission(eT.NativePermissionTypes.AUDIO), ew)) return !1;
     !(i = !r && !i) && (r = !1), n && (ex = !0), to({
       mute: i,
       deaf: r
@@ -1493,7 +1493,7 @@ eA(tN, "displayName", "MediaEngineStore"), i = new tN(m.default, {
     let {
       enabled: t
     } = e;
-    X.default.requestPermission(eT.NativePermissionTypes.CAMERA), te(t)
+    Q.default.requestPermission(eT.NativePermissionTypes.CAMERA), te(t)
   },
   MEDIA_ENGINE_PERMISSION: function(e) {
     let {
@@ -1603,7 +1603,7 @@ eA(tN, "displayName", "MediaEngineStore"), i = new tN(m.default, {
     let {
       mediaEngineState: t
     } = e;
-    eg = t.settingsByContext, ey = t.inputDevices, eP = t.outputDevices, e3 = t.appSupported, eX = t.krispModuleLoaded, eM = t.goLiveContext
+    eg = t.settingsByContext, ey = t.inputDevices, eP = t.outputDevices, e3 = t.appSupported, eQ = t.krispModuleLoaded, eM = t.goLiveContext
   },
   MEDIA_ENGINE_SET_OPEN_H264: function(e) {
     let {
@@ -1698,7 +1698,7 @@ eA(tN, "displayName", "MediaEngineStore"), i = new tN(m.default, {
       local: n,
       wasSaved: i
     } = e;
-    if (!(0, Q.shouldReadWriteAudioSettings)() || t !== ef.UserSettingsTypes.PRELOADED_USER_SETTINGS || n || null != i) return !1;
+    if (!(0, X.shouldReadWriteAudioSettings)() || t !== ef.UserSettingsTypes.PRELOADED_USER_SETTINGS || n || null != i) return !1;
     tc(!0)
   },
   CLIPS_INIT: function(e) {

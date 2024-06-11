@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return ee
   },
   AM_HARMONY_PRD_APPLICATION_ID: function() {
-    return X
+    return Q
   },
   AM_HARMONY_STG_APPLICATION_ID: function() {
     return Z
@@ -112,7 +112,7 @@ n.r(t), n.d(t, {
     return es
   },
   TUNE_IN_APPLICATION_ID: function() {
-    return Q
+    return X
   },
   WATCH_YOUTUBE_PROD_APP_ID: function() {
     return w
@@ -153,8 +153,8 @@ let R = 160,
   K = "945737671223947305",
   z = "1011683823555199066",
   Z = "1234546995360694434",
-  X = "1214629548377768066",
-  Q = "1196535986226745437",
+  Q = "1214629548377768066",
+  X = "1196535986226745437",
   q = "https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu",
   J = {
     SMALL: 64,

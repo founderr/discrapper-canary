@@ -13,7 +13,7 @@ s.r(t), s.d(t, {
     return u
   },
   speedTestRate: function() {
-    return i
+    return l
   },
   speedTestSummary: function() {
     return c
@@ -21,9 +21,9 @@ s.r(t), s.d(t, {
 }), s("47120"), s("518263"), s("970173"), s("520712"), s("268111"), s("941497"), s("32026"), s("480839"), s("744285"), s("492257"), s("873817"), s("863942");
 var a = s("250683"),
   n = s("909766"),
-  l = s("369541");
+  i = s("369541");
 
-function i(e) {
+function l(e) {
   return 8 * e.clusterSize * 1e3 / e.clusterIntervalMs
 }
 
@@ -32,7 +32,7 @@ function r(e) {
 }
 
 function o(e) {
-  return e.direction === l.SpeedTestDirections.CLIENT_TO_SERVER ? "Client -> Server" : e.direction === l.SpeedTestDirections.SERVER_TO_CLIENT ? "Server -> Client" : e.direction
+  return e.direction === i.SpeedTestDirections.CLIENT_TO_SERVER ? "Client -> Server" : e.direction === i.SpeedTestDirections.SERVER_TO_CLIENT ? "Server -> Client" : e.direction
 }
 
 function d(e) {
@@ -52,8 +52,8 @@ function u(e) {
 }
 
 function c(e, t, s) {
-  let l = Uint8Array.from(a.toByteArray(e)),
-    i = new DataView(l.buffer),
+  let i = Uint8Array.from(a.toByteArray(e)),
+    l = new DataView(i.buffer),
     r = 16,
     o = Math.ceil(t.clusterSize / 1200),
     d = t.numClusters * o,
@@ -65,31 +65,31 @@ function c(e, t, s) {
     _ = null,
     I = null,
     N = null;
-  for (let e = 0; e < i.byteLength / r; e++) {
-    let t = i.getUint32(4 * (4 * e + 0)),
-      a = i.getUint32(4 * (4 * e + 1)),
-      n = i.getUint32(4 * (4 * e + 2)),
-      l = i.getUint32(4 * (4 * e + 3));
-    u++, c += a, S += a + s, null == T && (T = l), _ = l, null == E && (E = n), null == I && (I = t);
-    let r = l - (n - E);
+  for (let e = 0; e < l.byteLength / r; e++) {
+    let t = l.getUint32(4 * (4 * e + 0)),
+      a = l.getUint32(4 * (4 * e + 1)),
+      n = l.getUint32(4 * (4 * e + 2)),
+      i = l.getUint32(4 * (4 * e + 3));
+    u++, c += a, S += a + s, null == T && (T = i), _ = i, null == E && (E = n), null == I && (I = t);
+    let r = i - (n - E);
     null == N && (N = r), r < N && (N = r)
   }
   let g = new n.Histogram,
     f = null;
-  for (let e = 0; e < i.byteLength / r; e++) {
-    let t = i.getUint32(4 * (4 * e + 2)),
-      s = (i.getUint32(4 * (4 * e + 3)) - (t - E) - N) / 1e3;
+  for (let e = 0; e < l.byteLength / r; e++) {
+    let t = l.getUint32(4 * (4 * e + 2)),
+      s = (l.getUint32(4 * (4 * e + 3)) - (t - E) - N) / 1e3;
     g.addSample(s), null == f && (f = s), s > f && (f = s)
   }
   let m = null != T && null != _ ? (_ - T) / 1e3 : 0,
-    C = 1 - u / d,
-    A = 8 * c / m,
+    A = 1 - u / d,
+    C = 8 * c / m,
     O = 8 * S / m,
     h = g.getReport([50, 95, 99]);
   return {
-    payloadBandwidth: A,
+    payloadBandwidth: C,
     networkBandwidth: O,
-    loss: C,
+    loss: A,
     iatP50: h.percentiles[50],
     iatP95: h.percentiles[95],
     iatP99: h.percentiles[99],

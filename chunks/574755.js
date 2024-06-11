@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("735250"),
   n = s("470079"),
-  l = s("442837"),
-  i = s("704215"),
+  i = s("442837"),
+  l = s("704215"),
   r = s("481060"),
   o = s("906732"),
   d = s("605236"),
@@ -22,8 +22,8 @@ var a = s("735250"),
   g = s("491758"),
   f = s("183632"),
   m = s("689938"),
-  C = s("477716"),
-  A = s("151501"),
+  A = s("477716"),
+  C = s("151501"),
   O = s("611273");
 
 function h(e) {
@@ -31,25 +31,25 @@ function h(e) {
     className: t,
     showHeader: s = !0
   } = e, h = c.ClipsAllowVoiceRecording.useSetting(), {
-    enableViewerClipping: p
+    enableViewerClipping: R
   } = u.default.useExperiment({
     location: "Clips Settings"
   }, {
     autoTrackExposure: !1
   }), {
-    analyticsLocations: R
+    analyticsLocations: p
   } = (0, o.default)(), M = (0, E.useEnableClips)(), {
-    viewerClipsEnabled: x
-  } = (0, l.useStateFromStoresObject)([T.default], () => T.default.getSettings()), D = (0, _.default)(S.default);
+    viewerClipsEnabled: D
+  } = (0, i.useStateFromStoresObject)([T.default], () => T.default.getSettings()), x = (0, _.default)(S.default);
   return n.useEffect(() => {
-    (0, d.markDismissibleContentAsDismissed)(i.DismissibleContent.CLIPS_SETTINGS_BETA_TAG)
+    (0, d.markDismissibleContentAsDismissed)(l.DismissibleContent.CLIPS_SETTINGS_BETA_TAG)
   }), (0, a.jsxs)(o.AnalyticsLocationProvider, {
-    value: R,
+    value: p,
     children: [(M || s) && (0, a.jsx)(r.FormSection, {
       className: t,
       tag: r.FormTitleTags.H1,
       title: s ? (0, a.jsxs)("div", {
-        className: C.headerContainer,
+        className: A.headerContainer,
         children: [m.default.Messages.CLIPS, (0, a.jsx)(N.default, {})]
       }) : null,
       children: M && (0, a.jsxs)("form", {
@@ -60,17 +60,17 @@ function h(e) {
       className: s || M ? O.marginTop20 : t,
       children: [(0, a.jsx)(r.FormSwitch, {
         hideBorder: !0,
-        className: A.formItem,
+        className: C.formItem,
         value: h,
         note: m.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
         onChange: e => I.updateAllowVoiceRecording({
           allowVoiceRecording: e
         }),
         children: m.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
-      }), p && D && (0, a.jsx)(r.FormSwitch, {
+      }), R && x && (0, a.jsx)(r.FormSwitch, {
         hideBorder: !0,
-        className: A.formItem,
-        value: x,
+        className: C.formItem,
+        value: D,
         note: m.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
         onChange: e => I.updateViewerClipsEnabled({
           enabled: e,

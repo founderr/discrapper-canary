@@ -135,21 +135,21 @@ t.default = l.memo(function(e) {
       config: r.config.stiff,
       immediate: E
     }),
-    R = l.useMemo(() => null != v ? v : {
+    y = l.useMemo(() => null != v ? v : {
       value: 0,
       multiplier: 1
     }, [v]),
-    y = l.useRef(R);
+    R = l.useRef(y);
   l.useEffect(() => {
-    (R.multiplier > 1 || R.value > 0) && (y.current = R)
-  }, [R]);
+    (y.multiplier > 1 || y.value > 0) && (R.current = y)
+  }, [y]);
   let {
     multiplier: L,
     value: j
   } = l.useMemo(() => ({
-    value: N ? R.value : y.current.value,
-    multiplier: N ? R.multiplier : y.current.multiplier
-  }), [N, R, y]);
+    value: N ? y.value : R.current.value,
+    multiplier: N ? y.multiplier : R.current.multiplier
+  }), [N, y, R]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(A, {
       channelId: t,

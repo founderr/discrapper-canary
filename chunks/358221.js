@@ -46,7 +46,7 @@ function Y(e) {
   return t.reduce((t, n) => e(H(n)) ? (function(e) {
     let t = H(e);
     if (0 === t.size()) return;
-    let n = er(e) || X(t) ? v.ChannelModes.VIDEO : v.ChannelModes.VOICE;
+    let n = er(e) || Q(t) ? v.ChannelModes.VIDEO : v.ChannelModes.VOICE;
     n === v.ChannelModes.VOICE ? (delete G[e], delete w[e]) : G[e] = n
   }(n), function(e) {
     let t = h.default.getId(),
@@ -117,11 +117,11 @@ function Z(e, t) {
   null == t ? delete U[e] : U[e] = t, n !== K(e) && b[e].toggleCount++
 }
 
-function X(e) {
+function Q(e) {
   return e.size(g.ChannelRTCParticipantsIndexes.STREAM) > 0 || e.size(g.ChannelRTCParticipantsIndexes.VIDEO) > 0 || e.hasEmbeddedActivity()
 }
 
-function Q(e) {
+function X(e) {
   delete P[e], delete U[e], delete G[e], delete w[e]
 }
 
@@ -134,7 +134,7 @@ function q() {
     null != n && !e.includes(n) && e.push(n);
     let i = T.default.getRemoteSessionId(),
       r = R.default.getVoiceStateForSession(h.default.getId(), i);
-    (null == r ? void 0 : r.channelId) != null && e.push(null == r ? void 0 : r.channelId), d().difference(y, e).forEach(Q);
+    (null == r ? void 0 : r.channelId) != null && e.push(null == r ? void 0 : r.channelId), d().difference(y, e).forEach(X);
     let s = d().difference(e, y);
     return y = e, s
   }())
@@ -171,7 +171,7 @@ function en(e) {
       id: t
     }
   } = e;
-  return delete V[t], delete x[t], Q(t)
+  return delete V[t], delete x[t], X(t)
 }
 
 function ei(e) {
@@ -340,7 +340,7 @@ a = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
     let {
       channelId: t
     } = e;
-    return Q(t)
+    return X(t)
   },
   CHANNEL_RTC_SELECT_PARTICIPANT: function(e) {
     let {
@@ -359,7 +359,7 @@ a = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
         e === h.default.getId() && j(e, [t])
       } catch (e) {
         D.warn("INVALID STREAM KEY FORMAT ".concat(n), e)
-      }!X(i) && (k[t] = !1)
+      }!Q(i) && (k[t] = !1)
     }
   },
   CHANNEL_RTC_UPDATE_LAYOUT: function(e) {
@@ -472,6 +472,6 @@ a = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
         let i = m.default.getChannel(e);
         (null == i || i.getGuildId() === t.id) && n.push(e)
       }), 0 === n.length) return !1;
-    d().forEach(n, e => Q(e))
+    d().forEach(n, e => X(e))
   }
 })

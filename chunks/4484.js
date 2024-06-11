@@ -50,8 +50,8 @@ t.default = r.forwardRef(function(e, t) {
     onTab: K,
     onEnter: z,
     onSubmit: Z,
-    maybeShowAutocomplete: X,
-    hideAutocomplete: Q,
+    maybeShowAutocomplete: Q,
+    hideAutocomplete: X,
     moveSelection: q,
     spellcheckEnabled: J,
     canUseCommands: $,
@@ -170,18 +170,18 @@ t.default = r.forwardRef(function(e, t) {
     onEnter: z,
     allowNewLines: ei,
     submit: eO,
-    hideAutocomplete: Q,
+    hideAutocomplete: X,
     moveSelection: q
   }), {
     handlePaste: eg,
     handleGlobalPaste: eL
   } = (0, O.default)(eN, eS, x), ev = r.useCallback(e => {
-    null == X || X()
-  }, [X]), eD = r.useCallback(e => {
+    null == Q || Q()
+  }, [Q]), eD = r.useCallback(e => {
     e !== eI.current ? ef.current && (null == V || V(null, (0, f.toTextValue)(e, {
       mode: "raw"
-    }), e)) : ef.current && X()
-  }, [X, V]);
+    }), e)) : ef.current && Q()
+  }, [Q, V]);
   r.useLayoutEffect(() => {
     eT.current && (eI.current = n, eh(eN, "parent", {
       value: n

@@ -63,8 +63,8 @@ let U = r.forwardRef(function(e, t) {
     onSearchChange: K,
     renderOptionPrefix: z = () => null,
     renderOptionSuffix: Z = () => null,
-    "aria-describedby": X,
-    "aria-invalid": Q,
+    "aria-describedby": Q,
+    "aria-invalid": X,
     "aria-labelledby": q,
     "aria-required": J,
     inputClassNames: $,
@@ -273,12 +273,12 @@ let U = r.forwardRef(function(e, t) {
   }, [em]), r.useEffect(() => {
     !eL && ep && null !== em && requestAnimationFrame(() => eH.focusFirstVisibleItem())
   }, [eL, ep, em]);
-  let eX = I ? F : x,
-    eQ = r.useRef(null),
+  let eQ = I ? F : x,
+    eX = r.useRef(null),
     {
       focusPreviousItem: eq,
       focusNextItem: eJ
-    } = w(eQ, eT, eD);
+    } = w(eX, eT, eD);
   return (0, i.jsxs)(u.ListNavigatorProvider, {
     navigator: eH,
     children: [(0, i.jsx)(f.Popout, {
@@ -360,7 +360,7 @@ let U = r.forwardRef(function(e, t) {
                 className: a()(M.value, {
                   [M.multi]: I
                 }),
-                children: (0, i.jsx)(eX, {
+                children: (0, i.jsx)(eQ, {
                   query: em,
                   selectedOptions: eD,
                   loading: eL,
@@ -369,9 +369,9 @@ let U = r.forwardRef(function(e, t) {
                   isDisabled: U,
                   isEditing: ep,
                   inputRef: eT,
-                  "aria-describedby": null != X ? X : e_,
+                  "aria-describedby": null != Q ? Q : e_,
                   "aria-required": J,
-                  "aria-invalid": null != Q ? Q : null != ec,
+                  "aria-invalid": null != X ? X : null != ec,
                   "aria-labelledby": null != q ? q : ed,
                   "aria-expanded": n,
                   setInputRef: e => {
@@ -435,7 +435,7 @@ let U = r.forwardRef(function(e, t) {
       }
     }), eD.length > 0 && null != es && (0, i.jsx)("div", {
       children: (0, i.jsx)(k, {
-        listRef: eQ,
+        listRef: eX,
         selectedOptions: eD,
         selectValue: function(e) {
           let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];

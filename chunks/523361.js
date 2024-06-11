@@ -4,16 +4,16 @@ n.r(t), n.d(t, {
     return o
   },
   getJoinButtonLabels: function() {
-    return l
+    return i
   },
   getRenewButtonLabels: function() {
     return s
   }
 });
 var r = n("373228"),
-  i = n("689938");
-let l = () => [i.default.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL1, i.default.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL2],
-  s = () => [i.default.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL1, i.default.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL2],
+  a = n("689938");
+let i = () => [a.default.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL1, a.default.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL2],
+  s = () => [a.default.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL1, a.default.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL2],
   o = [{
     id: "781323471249604648",
     format_type: r.StickerFormat.APNG,

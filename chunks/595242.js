@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return C
+    return A
   }
 });
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("442837"),
   o = s("481060"),
   d = s("570140"),
@@ -23,7 +23,7 @@ var a = s("735250"),
   f = s("981631"),
   m = s("220439");
 
-function C() {
+function A() {
   n.useEffect(() => {
     d.default.wait(() => {
       u.fetchSubscriptions(), u.fetchPaymentSources(), (0, c.fetchGuildBoostSlots)(), (0, S.fetchPremiumSubscriptionPlans)(null, null, f.RevenueSurfaces.DISCOVERY), (0, c.fetchAppliedGuildBoostsForUser)(!0)
@@ -35,8 +35,8 @@ function C() {
   } = (0, r.useStateFromStoresObject)([N.default], () => ({
     hasFetchedSubscriptions: N.default.hasFetchedSubscriptions(),
     premiumSubscription: N.default.getPremiumTypeSubscription()
-  })), s = (0, E.useSubscriptionPlansLoaded)(), l = (0, r.useStateFromStores)([I.default], () => I.default.hasFetchedPaymentSources), C = (0, r.useStateFromStores)([_.default], () => _.default.isFetchingCurrentUserAppliedBoosts);
-  return ((0, T.useFetchEntitlementsForTenureReward)(), e && s && l && !C) ? (0, a.jsxs)("div", {
+  })), s = (0, E.useSubscriptionPlansLoaded)(), i = (0, r.useStateFromStores)([I.default], () => I.default.hasFetchedPaymentSources), A = (0, r.useStateFromStores)([_.default], () => _.default.isFetchingCurrentUserAppliedBoosts);
+  return ((0, T.useFetchEntitlementsForTenureReward)(), e && s && i && !A) ? (0, a.jsxs)("div", {
     className: m.container,
     children: [(0, a.jsx)("div", {
       className: m.background
@@ -47,7 +47,7 @@ function C() {
       })
     })]
   }) : (0, a.jsx)("div", {
-    className: i()(m.container, m.loading),
+    className: l()(m.container, m.loading),
     children: (0, a.jsx)(o.Spinner, {})
   })
 }

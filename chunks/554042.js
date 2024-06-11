@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("47120");
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("442837"),
   o = s("433517"),
   d = s("481060"),
@@ -22,7 +22,7 @@ var a = s("735250"),
   g = s("981631"),
   f = s("689938"),
   m = s("307723");
-let C = [{
+let A = [{
   label: "Latin alphabet",
   value: "aBcDeFgHiJkLmNoPqRsTuVwXyZ"
 }, {
@@ -45,7 +45,7 @@ let C = [{
   value: "custom"
 }];
 
-function A(e, t) {
+function C(e, t) {
   let [s, a] = n.useState(() => {
     let s = o.Storage.get(e);
     return null != s ? s : t
@@ -58,11 +58,11 @@ function A(e, t) {
 function O() {
   let [e, t] = n.useState(Math.round(window.outerWidth / window.innerWidth * 100)), {
     platformZoom: s,
-    theme: l
+    theme: i
   } = (0, r.useStateFromStoresObject)([N.default, E.default], () => ({
     theme: N.default.theme,
     platformZoom: E.default.zoom
-  })), [o, O] = n.useState("upright"), h = ["normal", "medium", "semibold", "bold", "extrabold"], p = new Map([
+  })), [o, O] = n.useState("upright"), h = ["normal", "medium", "semibold", "bold", "extrabold"], R = new Map([
     ["normal", 400],
     ["medium", 500],
     ["semibold", 600],
@@ -74,22 +74,22 @@ function O() {
       t(Math.round(window.outerWidth / window.innerWidth * 100))
     })
   }, []);
-  let R = I.isPlatformEmbedded ? s : e,
+  let p = I.isPlatformEmbedded ? s : e,
     M = (0, r.useStateFromStores)([T.default], () => {
       var e, t;
       return (0, _.probablyHasBuildOverride)() ? null === (t = T.default.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
-    [x, D] = A("playground-overrideText", null),
-    [L, P] = A("playground-defaultText", C[0].value),
+    [D, x] = C("playground-overrideText", null),
+    [L, P] = C("playground-defaultText", A[0].value),
     b = n.useCallback(e => {
-      let t = C.find(t => {
+      let t = A.find(t => {
         let {
           value: s
         } = t;
         return s === e
       });
-      "" === e || null == e ? (P(C[0].value), D(null)) : null != t ? P(t.value) : (P("custom"), D(e))
-    }, [D, P]);
+      "" === e || null == e ? (P(A[0].value), x(null)) : null != t ? P(t.value) : (P("custom"), x(e))
+    }, [x, P]);
   return (0, a.jsx)("div", {
     className: m.fullscreen,
     style: {
@@ -107,7 +107,7 @@ function O() {
             style: {
               display: "inline-block"
             },
-            children: ["Zoom: ", R, "%"]
+            children: ["Zoom: ", p, "%"]
           }), null != M ? (0, a.jsxs)(d.Text, {
             tag: "div",
             variant: "heading-lg/bold",
@@ -121,7 +121,7 @@ function O() {
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)(d.SingleSelect, {
             className: m.select,
-            options: C,
+            options: A,
             onChange: e => b(e),
             value: L
           })
@@ -130,7 +130,7 @@ function O() {
             className: m.input,
             children: (0, a.jsx)(d.TextInput, {
               placeholder: "Enter custom input...",
-              value: null != x ? x : "",
+              value: null != D ? D : "",
               onChange: b
             })
           })
@@ -151,7 +151,7 @@ function O() {
                 theme: e.value
               })
             },
-            value: l
+            value: i
           })
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)(d.RadioGroup, {
@@ -191,24 +191,24 @@ function O() {
             children: [(0, a.jsxs)(d.Heading, {
               variant: "eyebrow",
               children: [e, "px"]
-            }), 100 !== R ? (0, a.jsxs)(d.Heading, {
+            }), 100 !== p ? (0, a.jsxs)(d.Heading, {
               variant: "eyebrow",
               color: "text-muted",
-              children: ["(", e * R / 100, ")"]
+              children: ["(", e * p / 100, ")"]
             }) : null]
           }, e), h.map(t => {
             var s;
-            let n = null !== (s = "custom" === L ? x : L) && void 0 !== s ? s : "";
+            let n = null !== (s = "custom" === L ? D : L) && void 0 !== s ? s : "";
             return (0, a.jsx)("div", {
               className: m.textSample,
               children: (0, a.jsxs)("div", {
                 title: "".concat(e, "px at ").concat(t),
-                className: i()(m.text, {
+                className: l()(m.text, {
                   [m.breakAnywhere]: !n.includes(" ")
                 }),
                 style: {
                   fontSize: e,
-                  fontWeight: p.get(t)
+                  fontWeight: R.get(t)
                 },
                 children: [(0, a.jsx)("p", {
                   children: n

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return X
+    return Q
   }
 }), n("47120");
 var i = n("735250"),
@@ -90,7 +90,7 @@ function Z(e) {
   })
 }
 
-function X(e) {
+function Q(e) {
   var t, n;
   let {
     cardData: s,
@@ -98,15 +98,15 @@ function X(e) {
     cardIndex: O
   } = e, {
     category: M
-  } = s, [y, U] = r.useState(!1), B = M === H.CardCategory.HANGOUT && s.streamUserIds.length > 0, x = (0, l.useStateFromStores)([S.default], () => B ? S.default.getPreviewURL(d, s.channelId, s.streamUserIds[0]) : null), F = (0, l.useStateFromStores)([S.default], () => M === H.CardCategory.HANGOUT ? S.default.getIsPreviewLoading(d, s.channelId, s.streamUserIds[0]) : null), X = M === H.CardCategory.HANGOUT && s.streamUserIds.length > 0 && null == x && !F, Q = (0, l.useStateFromStores)([h.default], () => {
+  } = s, [y, U] = r.useState(!1), B = M === H.CardCategory.HANGOUT && s.streamUserIds.length > 0, x = (0, l.useStateFromStores)([S.default], () => B ? S.default.getPreviewURL(d, s.channelId, s.streamUserIds[0]) : null), F = (0, l.useStateFromStores)([S.default], () => M === H.CardCategory.HANGOUT ? S.default.getIsPreviewLoading(d, s.channelId, s.streamUserIds[0]) : null), Q = M === H.CardCategory.HANGOUT && s.streamUserIds.length > 0 && null == x && !F, X = (0, l.useStateFromStores)([h.default], () => {
     let e = M === H.CardCategory.HANGOUT || M === H.CardCategory.GAMING ? s.channelId : M === H.CardCategory.EVENT ? s.event.channel_id : M === H.CardCategory.EMBEDDED_ACTIVITY ? s.embeddedActivities[0].channelId : null;
     return h.default.getChannel(e)
-  }), q = (0, l.useStateFromStores)([c.default], () => c.default.getActiveEventByChannel(null == Q ? void 0 : Q.id)), {
+  }), q = (0, l.useStateFromStores)([c.default], () => c.default.getActiveEventByChannel(null == X ? void 0 : X.id)), {
     usersToShow: J,
     othersCount: $
-  } = (0, w.useVoiceChannelUsers)(null !== (n = null == Q ? void 0 : Q.id) && void 0 !== n ? n : "", d), {
+  } = (0, w.useVoiceChannelUsers)(null !== (n = null == X ? void 0 : X.id) && void 0 !== n ? n : "", d), {
     usersToShow: ee
-  } = (0, w.useGetEventCardUsers)(Q), et = (0, w.useGetOrFetchEmbeddedActivityApplication)(s), en = function(e, t, n, r) {
+  } = (0, w.useGetEventCardUsers)(X), et = (0, w.useGetOrFetchEmbeddedActivityApplication)(s), en = function(e, t, n, r) {
     let {
       category: s
     } = e, a = (0, b.default)(e), {
@@ -442,7 +442,7 @@ function X(e) {
     })
   }(s, d, O), {
     hasChannelStatus: el
-  } = (0, w.useChannelStatus)(Q), eu = z(s), ed = M === H.CardCategory.HANGOUT && el && null == x, e_ = (null != q || !!(null == Q ? void 0 : Q.isGuildStageVoice())) && ee.length > 0, ec = M === H.CardCategory.HANGOUT && (0 === s.streamUserIds.length || X) && !(null == Q ? void 0 : Q.isGuildStageVoice()), eE = M === H.CardCategory.EMBEDDED_ACTIVITY && s.streamersCount > 0 ? (0, i.jsxs)("div", {
+  } = (0, w.useChannelStatus)(X), eu = z(s), ed = M === H.CardCategory.HANGOUT && el && null == x, e_ = (null != q || !!(null == X ? void 0 : X.isGuildStageVoice())) && ee.length > 0, ec = M === H.CardCategory.HANGOUT && (0 === s.streamUserIds.length || Q) && !(null == X ? void 0 : X.isGuildStageVoice()), eE = M === H.CardCategory.EMBEDDED_ACTIVITY && s.streamersCount > 0 ? (0, i.jsxs)("div", {
     className: K.pill,
     children: [(0, i.jsx)(D.default, {
       className: K.pillIcon
@@ -460,7 +460,7 @@ function X(e) {
     onMouseLeave: () => U(!1),
     children: [(0, i.jsx)("div", {
       className: a()(K.image, {
-        [K.streamContainer]: B && !X && !(null == Q ? void 0 : Q.isGuildStageVoice())
+        [K.streamContainer]: B && !Q && !(null == X ? void 0 : X.isGuildStageVoice())
       }),
       children: en
     }), (0, i.jsxs)("div", {
@@ -475,7 +475,7 @@ function X(e) {
         color: "text-secondary",
         className: K.subtitle,
         children: er
-      }), !(e_ || ec) && !(null == Q ? void 0 : Q.isGuildStageVoice()) && J.length > 0 && (0, i.jsx)(Z, {
+      }), !(e_ || ec) && !(null == X ? void 0 : X.isGuildStageVoice()) && J.length > 0 && (0, i.jsx)(Z, {
         users: J,
         othersCount: $,
         extraPill: eE

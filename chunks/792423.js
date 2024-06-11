@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("47120");
 var a = s("735250"),
   n = s("470079"),
-  l = s("481060"),
-  i = s("401190"),
+  i = s("481060"),
+  l = s("401190"),
   r = s("689938"),
   o = s("331210");
 
@@ -37,14 +37,14 @@ class u extends n.PureComponent {
     } = this.props;
     return t ? (0, a.jsxs)("div", {
       className: o.leaveActionWrapper,
-      children: [this.renderErrorMessage(), (0, a.jsxs)(l.Text, {
+      children: [this.renderErrorMessage(), (0, a.jsxs)(i.Text, {
         variant: "text-sm/normal",
-        children: [r.default.Messages.HYPESQUAD_LEAVE_PROMPT, (0, a.jsx)(l.Button, {
+        children: [r.default.Messages.HYPESQUAD_LEAVE_PROMPT, (0, a.jsx)(i.Button, {
           className: o.leaveButton,
-          color: l.Button.Colors.LINK,
-          look: l.Button.Looks.LINK,
+          color: i.Button.Colors.LINK,
+          look: i.Button.Looks.LINK,
           onClick: this.handleLeaveHypeSquadClick,
-          size: l.Button.Sizes.NONE,
+          size: i.Button.Sizes.NONE,
           submitting: e,
           children: r.default.Messages.HYPESQUAD_LEAVE_ACTION
         })]
@@ -63,7 +63,7 @@ class u extends n.PureComponent {
       this.setState({
         isRequestPending: !0
       }, () => {
-        i.default.leaveHypeSquadOnline().then(() => {
+        l.default.leaveHypeSquadOnline().then(() => {
           this.setState({
             isRequestPending: !1
           })

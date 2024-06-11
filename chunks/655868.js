@@ -2,8 +2,8 @@
 s.r(t), s("47120"), s("757143");
 var a = s("735250"),
   n = s("470079"),
-  l = s("481060"),
-  i = s("218872");
+  i = s("481060"),
+  l = s("218872");
 
 function r(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -20,7 +20,7 @@ class d extends n.PureComponent {
     e.value !== this.props.value && null != t && t.setSelectionRange(this.selectionStart, this.selectionStart)
   }
   render() {
-    return (0, a.jsx)(l.TextInput, {
+    return (0, a.jsx)(i.TextInput, {
       ...this.props,
       inputMode: "numeric",
       onChange: this.handleChange,
@@ -39,9 +39,9 @@ class d extends n.PureComponent {
         onChange: a
       } = this.props, n = this._inputRef;
       if (e === s || null == n || null == s) return;
-      let l = (0, i.formatExpiration)(e),
+      let i = (0, l.formatExpiration)(e),
         r = n.selectionStart;
-      l === s && l.length <= 3 && s.includes("/") && !e.includes("/") ? l = l.replace(o, "") : l === s && e.includes("/") && !s.includes("/") && (l += "/"), l.length > e.length && (r += l.length - e.length), this.selectionStart = r, null != a && a(l, t)
+      i === s && i.length <= 3 && s.includes("/") && !e.includes("/") ? i = i.replace(o, "") : i === s && e.includes("/") && !s.includes("/") && (i += "/"), i.length > e.length && (r += i.length - e.length), this.selectionStart = r, null != a && a(i, t)
     })
   }
 }

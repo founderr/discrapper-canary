@@ -22,30 +22,30 @@ var a = s("735250"),
   g = s("466111"),
   f = s("632184"),
   m = s("63063"),
-  C = s("581883"),
-  A = s("918257"),
+  A = s("581883"),
+  C = s("918257"),
   O = s("726985"),
   h = s("981631"),
-  p = s("710111"),
-  R = s("689938"),
+  R = s("710111"),
+  p = s("689938"),
   M = s("976130"),
-  x = s("611273");
+  D = s("611273");
 
-function D(e) {
+function x(e) {
   return (0, i.useStateFromStores)([E.default], () => {
     if (null == e) return null;
     let {
       guildId: t,
       soundId: s
     } = e;
-    return E.default.getSound(t === p.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID ? p.DEFAULT_SOUND_GUILD_ID : t, s)
+    return E.default.getSound(t === R.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID ? R.DEFAULT_SOUND_GUILD_ID : t, s)
   })
 }
 
 function L() {
   let {
     analyticsLocations: e
-  } = (0, o.default)(), [t, s] = n.useState(p.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, _.useCustomJoinSound)(t), f = D(r), C = (0, i.useStateFromStores)([E.default], () => E.default.hasFetchedAllSounds()), L = (null == r ? void 0 : r.type) === _.CustomSoundType.GLOBAL, b = C && null != r && null == f;
+  } = (0, o.default)(), [t, s] = n.useState(R.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, _.useCustomJoinSound)(t), f = x(r), A = (0, i.useStateFromStores)([E.default], () => E.default.hasFetchedAllSounds()), L = (null == r ? void 0 : r.type) === _.CustomSoundType.GLOBAL, b = A && null != r && null == f;
   n.useEffect(() => {
     b && (0, T.trackCustomCallSoundExternallyDeleted)({
       location: e
@@ -64,11 +64,11 @@ function L() {
   return (0, a.jsxs)(l.FormSection, {
     className: M.container,
     tag: l.FormTitleTags.H1,
-    titleClassName: x.__invalid_marginBottom16,
-    title: R.default.Messages.SOUNDBOARD,
+    titleClassName: D.__invalid_marginBottom16,
+    title: p.default.Messages.SOUNDBOARD,
     children: [(0, a.jsx)(c.Subsetting, {
       setting: O.WebSetting.VOICE_AND_VIDEO_SOUNDBOARD,
-      children: (0, a.jsx)(A.default, {})
+      children: (0, a.jsx)(C.default, {})
     }), (0, a.jsxs)(c.Subsetting, {
       setting: O.WebSetting.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
       children: [(0, a.jsx)(l.FormDivider, {
@@ -77,26 +77,26 @@ function L() {
         variant: "text-md/medium",
         color: "header-primary",
         className: M.callSoundsTitle,
-        children: R.default.Messages.CALL_SOUNDS_SETTINGS
+        children: p.default.Messages.CALL_SOUNDS_SETTINGS
       }), (0, a.jsx)(l.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: R.default.Messages.CALL_SOUNDS_SETTINGS_DESCRIPTION_2.format({
+        children: p.default.Messages.CALL_SOUNDS_SETTINGS_DESCRIPTION_2.format({
           helpdeskArticle: m.default.getArticleURL(h.HelpdeskArticles.SOUNDBOARD)
         })
       }), (0, a.jsx)(d.default, {
         guildId: t,
         className: M.guildSelector,
         globalOption: {
-          label: R.default.Messages.CALL_SOUNDS_SETTINGS_GLOBAL_GUILD_SEARCH,
-          value: p.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID
+          label: p.default.Messages.CALL_SOUNDS_SETTINGS_GLOBAL_GUILD_SEARCH,
+          value: R.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID
         },
-        onChange: e => s(null == e ? p.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID : e.id),
+        onChange: e => s(null == e ? R.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID : e.id),
         renderOptionSuffix: v,
         hideDivider: !0
       }), (0, a.jsxs)(u.default, {
-        className: x.marginTop20,
-        title: R.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND.format({
+        className: D.marginTop20,
+        title: p.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND.format({
           nitroWheelHook: () => (0, a.jsx)(g.default, {
             className: M.nitroWheel
           })
@@ -111,7 +111,7 @@ function L() {
         }), b && (0, a.jsx)(N.default, {
           className: M.notice,
           messageType: N.HelpMessageTypes.WARNING,
-          children: R.default.Messages.CALL_SOUNDS_SETTINGS_SOUND_REMOVED
+          children: p.default.Messages.CALL_SOUNDS_SETTINGS_SOUND_REMOVED
         })]
       })]
     })]
@@ -121,10 +121,10 @@ function L() {
 function P(e) {
   let {
     guildId: t
-  } = e, s = (0, i.useStateFromStores)([C.default], () => {
+  } = e, s = (0, i.useStateFromStores)([A.default], () => {
     var e, s, a;
-    return null === (a = C.default.settings.guilds) || void 0 === a ? void 0 : null === (s = a.guilds) || void 0 === s ? void 0 : null === (e = s[t]) || void 0 === e ? void 0 : e.joinSound
-  }), n = D(s);
+    return null === (a = A.default.settings.guilds) || void 0 === a ? void 0 : null === (s = a.guilds) || void 0 === s ? void 0 : null === (e = s[t]) || void 0 === e ? void 0 : e.joinSound
+  }), n = x(s);
   if (null == s || null == n) return null;
   let {
     emojiId: o,

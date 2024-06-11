@@ -29,8 +29,8 @@ var a = n("735250"),
   v = n("592125"),
   N = n("703558"),
   M = n("375954"),
-  R = n("496675"),
-  y = n("117530"),
+  y = n("496675"),
+  R = n("117530"),
   L = n("153124"),
   j = n("465670"),
   O = n("663949"),
@@ -163,7 +163,7 @@ function X(e) {
       messageError: d,
       submit: l.useCallback(async (e, l, s) => {
         var r, o, d;
-        null == e && (e = i.textValue), e = e.trim(), (null == l || 0 === l.length) && (l = null === (r = I.default.getStickerPreview(t.id, K.drafts.type)) || void 0 === r ? void 0 : r.map(e => e.id)), (null == s || 0 === s.length) && (s = y.default.getUploads(t.id, N.DraftType.FirstThreadMessage));
+        null == e && (e = i.textValue), e = e.trim(), (null == l || 0 === l.length) && (l = null === (r = I.default.getStickerPreview(t.id, K.drafts.type)) || void 0 === r ? void 0 : r.map(e => e.id)), (null == s || 0 === s.length) && (s = R.default.getUploads(t.id, N.DraftType.FirstThreadMessage));
         let h = null !== (o = a.name) && void 0 !== o ? o : "",
           m = null == n && 0 === h.length,
           p = "" === e && (null == l || 0 === l.length) && 0 === s.length;
@@ -207,7 +207,7 @@ function X(e) {
     privateThreadMode: T,
     textAreaState: g,
     location: s
-  }), R = (0, k.getIsPrivate)(m, T) ? O.default : P.default;
+  }), y = (0, k.getIsPrivate)(m, T) ? O.default : P.default;
   return (0, a.jsx)("div", {
     className: Y.chat,
     onMouseDown: f,
@@ -228,7 +228,7 @@ function X(e) {
               channelId: "create-thread-null",
               children: [(0, a.jsx)("div", {
                 className: z.iconWrapper,
-                children: (0, a.jsx)(R, {
+                children: (0, a.jsx)(y, {
                   className: z.icon
                 })
               }), (0, a.jsx)(J, {
@@ -368,7 +368,7 @@ function Q(e) {
     event: V.ComponentActions.TEXTAREA_BLUR,
     handler: E
   });
-  let T = (0, r.useStateFromStores)([R.default], () => R.default.can(V.Permissions.ATTACH_FILES, t)),
+  let T = (0, r.useStateFromStores)([y.default], () => y.default.can(V.Permissions.ATTACH_FILES, t)),
     I = (0, w.renderError)(f, {
       content: n.textValue
     });

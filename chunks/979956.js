@@ -1,36 +1,36 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   filesExceedUploadLimits: function() {
-    return d
+    return u
   },
   getErrorHelp: function() {
-    return r
+    return o
   },
   getWebUploadFiles: function() {
-    return u
+    return d
   }
-}), i("724458"), i("653041");
-var l = i("476326"),
-  a = i("403182"),
-  s = i("74538"),
-  n = i("474936"),
-  o = i("689938");
+}), n("724458"), n("653041");
+var a = n("476326"),
+  l = n("403182"),
+  s = n("74538"),
+  i = n("474936"),
+  r = n("689938");
 
-function r(e, t) {
-  let i = a.sizeString(a.maxFileSize(t));
-  return s.default.isPremium(e, n.PremiumTypes.TIER_2) ? o.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
-    maxSize: i
-  }) : s.default.isPremium(e, n.PremiumTypes.TIER_1) ? o.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP_PREMIUM_TIER_1.format({
-    maxSize: i
-  }) : o.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
-    maxSize: i
+function o(e, t) {
+  let n = l.sizeString(l.maxFileSize(t));
+  return s.default.isPremium(e, i.PremiumTypes.TIER_2) ? r.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
+    maxSize: n
+  }) : s.default.isPremium(e, i.PremiumTypes.TIER_1) ? r.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP_PREMIUM_TIER_1.format({
+    maxSize: n
+  }) : r.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
+    maxSize: n
   })
 }
 
-function d(e, t) {
-  return a.anyFileTooLarge(e, t) || a.uploadSumTooLarge(e)
+function u(e, t) {
+  return l.anyFileTooLarge(e, t) || l.uploadSumTooLarge(e)
 }
 
-function u(e) {
-  return e.reduce((e, t) => (t.item.platform === l.UploadPlatform.WEB && e.push(t.item.file), e), [])
+function d(e) {
+  return e.reduce((e, t) => (t.item.platform === a.UploadPlatform.WEB && e.push(t.item.file), e), [])
 }

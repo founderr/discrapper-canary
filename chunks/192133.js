@@ -54,7 +54,7 @@ function w(e) {
     hideNote: K = !1,
     showCopiableUsername: z = !1,
     analyticsParams: Z
-  } = e, X = (0, o.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), Q = (0, o.useStateFromStores)([f.default], () => {
+  } = e, Q = (0, o.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), X = (0, o.useStateFromStores)([f.default], () => {
     var e;
     return null === (e = f.default.getUserProfile(B.id)) || void 0 === e ? void 0 : e.application
   }), q = (0, o.useStateFromStores)([_.default], () => _.default.getChannel(H)), {
@@ -129,7 +129,7 @@ function w(e) {
           isUsingGuildBio: null !== (n = null == V ? void 0 : V.isUsingGuildMemberBio()) && void 0 !== n && n,
           bio: null == V ? void 0 : V.bio,
           guild: x,
-          hidePersonalInformation: X
+          hidePersonalInformation: Q
         }), ea && (0, i.jsx)(h.default, {
           className: G.profileMutuals,
           user: B,
@@ -144,9 +144,9 @@ function w(e) {
           channelId: H,
           onClose: Y,
           analyticsParams: (null == Z ? void 0 : Z.location) != null ? Z : el
-        }), (null == Q ? void 0 : Q.popularApplicationCommandIds) != null && null != q ? (0, i.jsx)(M.default, {
-          applicationId: Q.id,
-          commandIds: Q.popularApplicationCommandIds,
+        }), (null == X ? void 0 : X.popularApplicationCommandIds) != null && null != q ? (0, i.jsx)(M.default, {
+          applicationId: X.id,
+          commandIds: X.popularApplicationCommandIds,
           channel: q,
           guildId: null == x ? void 0 : x.id,
           onClick: Y
@@ -164,10 +164,10 @@ function w(e) {
           guild: x,
           onClose: Y,
           theme: J
-        }), null != Q && void 0 !== H && (0, i.jsx)(y.default, {
+        }), null != X && void 0 !== H && (0, i.jsx)(y.default, {
           channelId: H,
-          applicationId: Q.id
-        }), !X && !K && (0, i.jsx)(D.default, {
+          applicationId: X.id
+        }), !Q && !K && (0, i.jsx)(D.default, {
           user: B,
           setNote: j,
           autoFocus: !W,

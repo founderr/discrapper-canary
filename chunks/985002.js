@@ -26,7 +26,7 @@ function o(e) {
         u(!1)
       }
     }
-  }, [I, t, s]), R = a.useCallback(async e => {
+  }, [I, t, s]), v = a.useCallback(async e => {
     if (!I) {
       c(!0);
       try {
@@ -38,7 +38,7 @@ function o(e) {
         c(!1)
       }
     }
-  }, [I, t, s]), v = a.useCallback(async e => {
+  }, [I, t, s]), R = a.useCallback(async e => {
     if (!I) {
       _(!0);
       try {
@@ -62,7 +62,7 @@ function o(e) {
         h(!1)
       }
     }
-  }, [I, t, s]), L = a.useCallback(async () => {
+  }, [I, t, s]), O = a.useCallback(async () => {
     if (!m) {
       C(!0);
       try {
@@ -74,7 +74,7 @@ function o(e) {
         C(!1)
       }
     }
-  }, [m, t, s]), O = a.useCallback(async e => {
+  }, [m, t, s]), L = a.useCallback(async e => {
     if (!A) {
       p(!0);
       try {
@@ -101,11 +101,11 @@ function o(e) {
   }, [T, t, s]);
   return {
     acceptLinkRequest: x,
-    declineLinkRequest: R,
-    disconnectLinkRequest: v,
+    declineLinkRequest: v,
+    disconnectLinkRequest: R,
     cancelLinkRequest: M,
-    selectTeenUser: O,
-    getLinkCode: L,
+    selectTeenUser: L,
+    getLinkCode: O,
     requestLink: y,
     loadMore: a.useCallback(async e => {
       let s = i.default.getActionsForDisplayType(e),

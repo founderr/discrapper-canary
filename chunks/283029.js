@@ -3,8 +3,8 @@ s.r(t);
 var a = s("735250");
 s("470079");
 var n = s("120356"),
-  l = s.n(n),
-  i = s("455399");
+  i = s.n(n),
+  l = s("455399");
 t.default = function(e) {
   let {
     className: t,
@@ -13,12 +13,12 @@ t.default = function(e) {
     useReducedMotion: o
   } = e;
   return (0, a.jsx)("div", {
-    className: l()(i.imageWrapper, t, {
-      [i.cooldown]: r
+    className: i()(l.imageWrapper, t, {
+      [l.cooldown]: r
     }),
     children: (0, a.jsx)("img", {
-      className: l()(i.image, n, {
-        [i.cooldownImage]: r
+      className: i()(l.image, n, {
+        [l.cooldownImage]: r
       }),
       src: r ? s("971149") : o ? s("908635") : s("83957"),
       alt: ""

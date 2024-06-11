@@ -3,7 +3,7 @@ n.r(t), n("47120"), n("653041");
 var i, a = n("442837"),
   s = n("570140");
 
-function l(e, t, n) {
+function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -11,10 +11,10 @@ function l(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let r = () => ({
+let l = () => ({
     itemImpressions: []
   }),
-  u = r(),
+  u = l(),
   o = new Set,
   d = new Set,
   c = 0,
@@ -36,10 +36,10 @@ function _() {
   let i = E ? 1e3 : 576e5,
     a = new Set,
     s = new Set,
-    l = Date.now() - i,
-    r = null;
-  for (let [e, t] of u.itemImpressions) t < l ? a.add(e) : null == r && (r = t + i), s.add(e);
-  o = a, d = s, c = null != r ? r : 1 / 0, f = !0
+    r = Date.now() - i,
+    l = null;
+  for (let [e, t] of u.itemImpressions) t < r ? a.add(e) : null == l && (l = t + i), s.add(e);
+  o = a, d = s, c = null != l ? l : 1 / 0, f = !0
 }
 class T extends(i = a.default.PersistedStore) {
   initialize(e) {
@@ -58,10 +58,10 @@ class T extends(i = a.default.PersistedStore) {
     return E
   }
   reset() {
-    u = r()
+    u = l()
   }
 }
-l(T, "displayName", "ContentInventoryPersistedStore"), l(T, "persistKey", "ContentInventoryPersistedStore"), t.default = new T(s.default, {
+r(T, "displayName", "ContentInventoryPersistedStore"), r(T, "persistKey", "ContentInventoryPersistedStore"), t.default = new T(s.default, {
   CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS: function(e) {
     let {
       itemIds: t

@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("735250");
 s("470079");
 var n = s("481060"),
-  l = s("37234"),
-  i = s("703656"),
+  i = s("37234"),
+  l = s("703656"),
   r = s("981631"),
   o = s("689938"),
   d = s("672129"),
@@ -34,7 +34,7 @@ function c() {
     }), (0, a.jsx)(n.Button, {
       color: n.Button.Colors.PRIMARY,
       onClick: () => {
-        (0, i.transitionTo)(r.Routes.GUILD_DISCOVERY), (0, l.popLayer)()
+        (0, l.transitionTo)(r.Routes.GUILD_DISCOVERY), (0, i.popLayer)()
       },
       size: n.Button.Sizes.LARGE,
       children: o.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PUBLIC_SERVER_CTA

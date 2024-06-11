@@ -17,20 +17,20 @@ var s, a, i, l, r = n("735250"),
   _ = n("710845"),
   p = n("314897"),
   T = n("277390"),
-  I = n("819570"),
-  S = n("585483"),
-  A = n("358085"),
+  S = n("819570"),
+  A = n("585483"),
+  I = n("358085"),
   N = n("172517"),
   R = n("51144"),
   C = n("998502"),
   O = n("981631"),
   v = n("231338"),
   L = n("689938"),
-  x = n("531690"),
-  M = n("611273");
+  M = n("531690"),
+  x = n("611273");
 (i = s || (s = {}))[i.INITIALIZING = 0] = "INITIALIZING", i[i.PENDING_REMOTE_INIT = 1] = "PENDING_REMOTE_INIT", i[i.PENDING_FINISH = 2] = "PENDING_FINISH", i[i.PENDING_TICKET = 3] = "PENDING_TICKET", i[i.PENDING_LOGIN = 4] = "PENDING_LOGIN", i[i.FINISH = 5] = "FINISH", (l = a || (a = {}))[l.QR_CODE = 0] = "QR_CODE", l[l.CONFIRM = 1] = "CONFIRM";
-let b = n("515695"),
-  y = new _.default("LoginQRSocket");
+let y = n("515695"),
+  b = new _.default("LoginQRSocket");
 
 function D(e) {
   let {
@@ -38,29 +38,29 @@ function D(e) {
   } = e, [n, s] = o.useState(!1);
   return o.useEffect(() => {
     let e = new Image;
-    e.src = b, e.onload = () => s(!0), e.onerror = () => s(!0)
-  }, [b]), o.useEffect(() => {
+    e.src = y, e.onload = () => s(!0), e.onerror = () => s(!0)
+  }, [y]), o.useEffect(() => {
     n && h.AccessibilityAnnouncer.announce(L.default.Messages.LOGIN_WITH_QR_LOADING_FINISHED_LABEL)
   }, [n]), (0, r.jsx)("div", {
-    className: x.qrCodeContainer,
+    className: M.qrCodeContainer,
     children: "" !== t && n ? (0, r.jsxs)(r.Fragment, {
       children: [(0, r.jsx)(T.default, {
-        className: x.qrCode,
+        className: M.qrCode,
         size: 160,
         text: t
       }), (0, r.jsx)("div", {
-        className: x.qrCodeOverlay,
+        className: M.qrCodeOverlay,
         children: (0, r.jsx)("img", {
-          src: b,
+          src: y,
           alt: ""
         })
       })]
     }) : (0, r.jsx)("div", {
-      className: x.qrCodeOverlay,
+      className: M.qrCodeOverlay,
       "aria-label": L.default.Messages.LOGIN_WITH_QR_LOADING_LABEL,
       "aria-busy": !0,
       children: (0, r.jsx)(h.Spinner, {
-        className: x.qrCode,
+        className: M.qrCode,
         type: h.Spinner.Type.WANDERING_CUBES,
         "aria-hidden": !0
       })
@@ -95,12 +95,12 @@ function P(e) {
       return (0, r.jsxs)(r.Fragment, {
         children: [(0, r.jsx)(D, {
           text: 1 === t.step ? "https://discord.com/ra/".concat(t.fingerprint) : ""
-        }), (0, r.jsx)(I.Title, {
-          className: M.marginBottom8,
+        }), (0, r.jsx)(S.Title, {
+          className: x.marginBottom8,
           children: L.default.Messages.LOGIN_WITH_QR
         }), null != s ? (0, r.jsx)(U, {
           children: s
-        }) : (0, r.jsx)(I.SubTitle, {
+        }) : (0, r.jsx)(S.SubTitle, {
           children: L.default.Messages.LOGIN_WITH_QR_DESCRIPTION.format()
         }), a && (0, r.jsx)(h.Button, {
           size: h.ButtonSizes.LARGE,
@@ -108,7 +108,7 @@ function P(e) {
           color: h.ButtonColors.LINK,
           disabled: l,
           onClick: () => (function(e) {
-            let t = A.isPlatformEmbedded && C.default.supportsFeature(O.NativeFeatures.WEBAUTHN) ? C.default.webAuthnAuthenticate : e => {
+            let t = I.isPlatformEmbedded && C.default.supportsFeature(O.NativeFeatures.WEBAUTHN) ? C.default.webAuthnAuthenticate : e => {
               let t = (0, u.parseRequestOptionsFromJSON)(JSON.parse(e));
               return (0, u.get)(t).then(e => JSON.stringify(e))
             };
@@ -127,15 +127,15 @@ function P(e) {
       } = t;
       return (0, r.jsxs)(r.Fragment, {
         children: [(0, r.jsx)(g.default, {
-          className: x.qrAvatar,
+          className: M.qrAvatar,
           user: e,
           size: h.AvatarSizes.SIZE_120,
           isMobile: !0,
           status: v.StatusTypes.ONLINE
-        }), (0, r.jsx)(I.Title, {
-          className: M.marginBottom8,
+        }), (0, r.jsx)(S.Title, {
+          className: x.marginBottom8,
           children: L.default.Messages.CONFIRM_QR_CHECK_YOUR_PHONE
-        }), (0, r.jsx)(I.SubTitle, {
+        }), (0, r.jsx)(S.SubTitle, {
           children: L.default.Messages.LOGIN_AS.format({
             username: "".concat(R.default.getUserTag(e))
           })
@@ -144,7 +144,7 @@ function P(e) {
           color: h.Button.Colors.LINK,
           size: h.Button.Sizes.MIN,
           onClick: n,
-          className: x.startOverButton,
+          className: M.startOverButton,
           children: L.default.Messages.QR_CODE_LOGIN_START_OVER
         })]
       })
@@ -174,7 +174,7 @@ function G(e) {
     h.current = o.useCallback(() => {
       l({
         step: 0
-      }), c ? n(e => e + 1) : (y.info("document is not visible, will defer reconnection when document becomes visible."), a(!0))
+      }), c ? n(e => e + 1) : (b.info("document is not visible, will defer reconnection when document becomes visible."), a(!0))
     }, [c]);
     let E = o.useCallback(() => {
         (function(e) {
@@ -186,19 +186,19 @@ function G(e) {
         })(h)()
       }, [h]),
       g = o.useCallback(() => {
-        y.error("Could not complete QR code login, trying to restart with a new QR code."), l({
+        b.error("Could not complete QR code login, trying to restart with a new QR code."), l({
           step: 0
         }), !f.pending && f.fail(E)
       }, [E, f]);
     return o.useEffect(() => {
-      c && s && 0 === i.step && (y.info("reconnecting, now that document is visible"), a(!1), n(e => e + 1))
+      c && s && 0 === i.step && (b.info("reconnecting, now that document is visible"), a(!1), n(e => e + 1))
     }, [i, c, s, a]), o.useEffect(() => {
       let t = Date.now(),
         n = () => "".concat(Date.now() - t, "ms"),
         s = "wss:".concat(window.GLOBAL_ENV.REMOTE_AUTH_ENDPOINT, "/?v=2"),
         a = new WebSocket(s);
-      y.info("[0ms] connecting to ".concat(s));
-      let i = e => y.info("[".concat(n(), "] ").concat(e)),
+      b.info("[0ms] connecting to ".concat(s));
+      let i = e => b.info("[".concat(n(), "] ").concat(e)),
         r = null,
         o = null,
         d = null,
@@ -229,7 +229,7 @@ function G(e) {
             return
           }
           case "pending_remote_init": {
-            f.succeed(), S.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE);
+            f.succeed(), A.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE);
             let e = await (0, N.publicKeyFingerprint)(m());
             if (e !== s.fingerprint) throw Error("bad fingerprint ".concat(e, " !== ").concat(s.fingerprint));
             i("handshake complete awaiting remote auth."), l({
@@ -247,7 +247,7 @@ function G(e) {
             return
           }
           case "pending_ticket": {
-            S.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE), i("remote auth handshake started, awaiting ticket/cancel.");
+            A.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE), i("remote auth handshake started, awaiting ticket/cancel.");
             let e = s.encrypted_user_payload;
             l({
               step: 3,
@@ -256,7 +256,7 @@ function G(e) {
             return
           }
           case "pending_finish": {
-            S.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE), i("remote auth handshake started, awaiting finish/cancel.");
+            A.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE), i("remote auth handshake started, awaiting finish/cancel.");
             let e = s.encrypted_user_payload;
             l({
               step: 2,
@@ -265,7 +265,7 @@ function G(e) {
             return
           }
           case "finish": {
-            S.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE), i("remote auth handshake finished.");
+            A.ComponentDispatch.dispatch(O.ComponentActions.WAVE_EMPHASIZE), i("remote auth handshake finished.");
             let t = s.encrypted_token;
             l({
               step: 5
@@ -337,14 +337,14 @@ function G(e) {
     })
   }, [i, t, l, E]), (0, r.jsxs)(r.Fragment, {
     children: [(0, r.jsx)("div", {
-      className: x.verticalSeparator
+      className: M.verticalSeparator
     }), (0, r.jsx)(h.Sequencer, {
       fillParent: !0,
-      className: x.qrLogin,
+      className: M.qrLogin,
       step: g,
       steps: [0, 1],
       children: (0, r.jsx)("div", {
-        className: x.qrLoginInner,
+        className: M.qrLoginInner,
         children: (0, r.jsx)(P, {
           state: i,
           cancel: u,

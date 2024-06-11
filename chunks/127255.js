@@ -1,40 +1,40 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return f
+    return c
   }
-}), l("789020"), l("47120"), l("653041");
-var i = l("470079"),
-  n = l("442837"),
-  a = l("630388"),
-  u = l("115130"),
-  d = l("844797"),
-  r = l("694312"),
-  o = l("405625"),
-  s = l("664097"),
-  c = l("981631");
+}), n("789020"), n("47120"), n("653041");
+var i = n("470079"),
+  r = n("442837"),
+  s = n("630388"),
+  a = n("115130"),
+  o = n("844797"),
+  l = n("694312"),
+  u = n("405625"),
+  d = n("664097"),
+  _ = n("981631");
 
-function f(e) {
+function c(e) {
   let {
     guildId: t,
-    enableFilter: l = !1,
-    channel: f
+    enableFilter: n = !1,
+    channel: c
   } = e, {
-    filter: p
-  } = (0, n.useStateFromStoresObject)([u.default], () => ({
-    filter: u.default.getFilter()
-  })), v = (0, r.useActivityShelfData)(t), E = (0, o.default)(v), A = (0, s.useDeveloperActivityShelfItems)(), m = (0, d.useIsActivityInTextChannel)(f);
+    filter: E
+  } = (0, r.useStateFromStoresObject)([a.default], () => ({
+    filter: a.default.getFilter()
+  })), I = (0, l.useActivityShelfData)(t), T = (0, u.default)(I), f = (0, d.useDeveloperActivityShelfItems)(), S = (0, o.useIsActivityInTextChannel)(c);
   return i.useMemo(() => {
     function e(e) {
-      return !!(!l || "" === p || e.application.name.toLowerCase().includes(p.toLowerCase())) || !1
+      return !!(!n || "" === E || e.application.name.toLowerCase().includes(E.toLowerCase())) || !1
     }
 
     function t(e) {
-      return !m || (0, a.hasFlag)(e.application.flags, c.ApplicationFlags.EMBEDDED_RELEASED)
+      return !S || (0, s.hasFlag)(e.application.flags, _.ApplicationFlags.EMBEDDED_RELEASED)
     }
-    let i = [...A].filter(e).filter(t),
-      n = new Set(i.map(e => e.application.id));
-    for (let l of E) !n.has(l.application.id) && e(l) && t(l) && i.push(l);
+    let i = [...f].filter(e).filter(t),
+      r = new Set(i.map(e => e.application.id));
+    for (let n of T) !r.has(n.application.id) && e(n) && t(n) && i.push(n);
     return i
-  }, [A, l, p, E, m])
+  }, [f, n, E, T, S])
 }

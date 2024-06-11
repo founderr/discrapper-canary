@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("895070"),
   n = s("785511"),
-  l = s("194632"),
-  i = s("683692"),
+  i = s("194632"),
+  l = s("683692"),
   r = s("358085"),
   o = s("394644"),
   d = s("295545"),
@@ -35,13 +35,13 @@ function T() {
     }, {
       id: S.GameSettingsTab.OVERLAY,
       title: E.default.Messages.SETTINGS_GAMES_OVERLAY,
-      icon: i.ScreenSystemRequirementsIcon,
+      icon: l.ScreenSystemRequirementsIcon,
       predicate: () => !o,
       setting: c.WebSetting.GAMES_OVERLAY
     }, {
       id: S.GameSettingsTab.ACTIVITY_PRIVACY,
       title: E.default.Messages.ACTIVITY_PRIVACY,
-      icon: l.FlashIcon,
+      icon: i.FlashIcon,
       setting: c.WebSetting.GAMES_ACTIVITY_PRIVACY
     }]).filter(e => null == e.predicate || !e.predicate());
     if (t && null != s && s.size > 0) {

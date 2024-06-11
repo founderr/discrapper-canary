@@ -55,8 +55,8 @@ function H(e) {
     ButtonComponent: z = B.default,
     ...Z
   } = e, {
-    analyticsLocations: X
-  } = (0, _.default)(), [Q, q] = r.useState(!1), J = (0, s.useStateFromStores)([p.default], () => p.default.getCurrentUser()), $ = j.id === (null == J ? void 0 : J.id), ee = null !== (t = null == Y ? void 0 : Y.applicationId) && void 0 !== t ? t : null == H ? void 0 : H.application_id, et = (0, P.default)({
+    analyticsLocations: Q
+  } = (0, _.default)(), [X, q] = r.useState(!1), J = (0, s.useStateFromStores)([p.default], () => p.default.getCurrentUser()), $ = j.id === (null == J ? void 0 : J.id), ee = null !== (t = null == Y ? void 0 : Y.applicationId) && void 0 !== t ? t : null == H ? void 0 : H.application_id, et = (0, P.default)({
     channelId: null == Y ? void 0 : Y.channelId,
     userId: j.id,
     activity: H
@@ -94,7 +94,7 @@ function H(e) {
   }) : void 0), el = (0, s.useStateFromStores)([D.default], () => Array.from(D.default.getSelfEmbeddedActivities().values()).some(e => e.applicationId === (null == Y ? void 0 : Y.applicationId) && e.channelId === (null == Y ? void 0 : Y.channelId))), eu = (0, w.default)(), ed = (0, d.useAnalyticsContext)(), e_ = !g.isPlatformEmbedded;
   if (!((0, b.default)(H, x.ActivityFlags.JOIN) || K) || null == ee) return null;
   let ec = !$ || K && !el,
-    eE = ec && (e_ || en) && !Q && !ei && (!K || eo),
+    eE = ec && (e_ || en) && !X && !ei && (!K || eo),
     eI = null;
   ec ? !e_ && !en && null != H && (eI = F.default.Messages.USER_ACTIVITY_NOT_DETECTED.format({
     name: H.name
@@ -116,7 +116,7 @@ function H(e) {
         applicationId: ee,
         partyId: null != t ? null == t ? void 0 : null === (n = t.party) || void 0 === n ? void 0 : n.id : "",
         locationObject: ed.location,
-        analyticsLocations: X
+        analyticsLocations: Q
       }))
     }, eS = async () => {
       let e = !1;
@@ -128,7 +128,7 @@ function H(e) {
           activityChannelId: et,
           locationObject: ed.location,
           embeddedActivitiesManager: k.default,
-          analyticsLocations: X
+          analyticsLocations: Q
         })
       }
       if (!e) {

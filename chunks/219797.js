@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return M
   },
   ImageComponentForMessageAttachment: function() {
-    return h
+    return A
   },
   MosaicItemFooterForMessageAttachment: function() {
     return P
@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return S
   },
   VideoComponentForMessageAttachment: function() {
-    return A
+    return h
   },
   VoiceMessageAudioComponentForMessageAttachment: function() {
     return I
@@ -39,7 +39,7 @@ var r = n("735250"),
   C = n("689938"),
   E = n("978577");
 
-function h(e) {
+function A(e) {
   let t = e.item.originalItem;
   return (0, g.renderImageComponent)({
     ...e,
@@ -54,7 +54,7 @@ function h(e) {
   })
 }
 
-function A(e) {
+function h(e) {
   let t = e.item.originalItem,
     n = i.useCallback(() => {
       var e;
@@ -141,14 +141,14 @@ function M(e) {
 }
 
 function P(e) {
-  if ("CLIP" === e.item.type) return (0, r.jsx)(k, {
+  if ("CLIP" === e.item.type) return (0, r.jsx)(F, {
     attachment: e.item.originalItem,
     message: e.message
   });
   return null
 }
 
-function k(e) {
+function F(e) {
   var t;
   let {
     attachment: n,

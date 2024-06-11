@@ -53,8 +53,8 @@ t.default = function(e) {
     quest: N,
     location: g.QuestContent.MEMBERS_LIST
   }), H = (0, R.useIsQuestExpired)(N), Y = (null == N ? void 0 : null === (t = N.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, j = (null == N ? void 0 : null === (S = N.userStatus) || void 0 === S ? void 0 : S.enrolledAt) != null, W = (null == N ? void 0 : null === (h = N.userStatus) || void 0 === h ? void 0 : h.completedAt) != null, K = (0, l.useStateFromStores)([A.default], () => A.default.getState().theme), z = (0, u.isThemeDark)(K) ? P.ThemeTypes.DARK : P.ThemeTypes.LIGHT, Z = (0, l.useStateFromStores)([f.default], () => f.default.useReducedMotion), {
-    ref: X,
-    height: Q
+    ref: Q,
+    height: X
   } = (0, I.default)(), [q, J] = r.useState(Z), $ = (0, T.useWindowDispatch)(), ee = (0, a.useListContainerScrollerRef)();
   r.useEffect(() => {
     let e = ee.current;
@@ -77,7 +77,7 @@ t.default = function(e) {
       from: {
         height: 0
       },
-      height: null != Q ? Q : 0,
+      height: null != X ? X : 0,
       config: {
         tension: 450,
         friction: 45
@@ -178,7 +178,7 @@ t.default = function(e) {
         },
         children: (0, i.jsxs)("div", {
           ref: e => {
-            X.current = e
+            Q.current = e
           },
           className: b.container,
           style: {

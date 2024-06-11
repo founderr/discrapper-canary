@@ -39,8 +39,8 @@ function v(e) {
   } = (0, S.useUserProfileThemeContext)(), {
     analyticsLocations: M
   } = (0, d.default)(u.default.AVATAR), {
-    trackUserProfileAction: R
-  } = (0, p.useUserProfileAnalyticsContext)(), y = null == n ? void 0 : n.canUsePremiumProfileCustomization, {
+    trackUserProfileAction: y
+  } = (0, p.useUserProfileAnalyticsContext)(), R = null == n ? void 0 : n.canUsePremiumProfileCustomization, {
     avatarSrc: L,
     eventHandlers: j,
     avatarDecorationSrc: O
@@ -82,7 +82,7 @@ function v(e) {
       ...j,
       className: I.clickable,
       onClick: () => {
-        R({
+        y({
           action: "PRESS_VIEW_PROFILE",
           analyticsLocations: M
         }), null == v || v()
@@ -93,7 +93,7 @@ function v(e) {
         size: x,
         imageClassName: I.overlay,
         status: P ? r.StatusTypes.UNKNOWN : D,
-        statusBackdropColor: y && !P ? (0, r.getStatusBackdropColor)(N) : void 0,
+        statusBackdropColor: R && !P ? (0, r.getStatusBackdropColor)(N) : void 0,
         "aria-label": t.username,
         isMobile: U,
         statusTooltip: !0,

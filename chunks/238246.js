@@ -24,8 +24,8 @@ var a, l = n("735250"),
   v = n("587061"),
   N = n("392358"),
   M = n("892254"),
-  R = n("706454"),
-  y = n("210887"),
+  y = n("706454"),
+  R = n("210887"),
   L = n("740492"),
   j = n("451478"),
   O = n("153850"),
@@ -216,9 +216,9 @@ let W = s.forwardRef(function(e, t) {
     {
       locale: i,
       theme: r
-    } = (0, c.useStateFromStoresObject)([y.default, R.default], () => ({
-      locale: R.default.locale,
-      theme: y.default.theme
+    } = (0, c.useStateFromStoresObject)([R.default, y.default], () => ({
+      locale: y.default.locale,
+      theme: R.default.theme
     })),
     o = (0, c.useStateFromStores)([p.default], () => p.default.useForcedColors ? "yes" : "no"),
     {

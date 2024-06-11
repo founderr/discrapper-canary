@@ -54,8 +54,8 @@ function L(e) {
     subscriptionTier: K = p.PremiumSubscriptionSKUs.TIER_2,
     isLoading: z = !1,
     hideBackButton: Z,
-    backButtonText: X,
-    showEnhancedUpsell: Q,
+    backButtonText: Q,
+    showEnhancedUpsell: X,
     children: q,
     ...J
   } = e, $ = null != D, ee = (0, S.usePremiumTrialOffer)(), et = (0, f.usePremiumDiscountOffer)(), en = ((null == ee ? void 0 : null === (t = ee.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === K || (0, f.discountOfferHasTier)(et, K)) && !$, {
@@ -105,7 +105,7 @@ function L(e) {
         alt: "",
         src: g
       }) : null]
-    }), Q ? (0, i.jsx)(l.ModalCloseButton, {
+    }), X ? (0, i.jsx)(l.ModalCloseButton, {
       onClick: V,
       className: R.closeButton
     }) : null, (0, i.jsx)(l.ModalContent, {
@@ -127,7 +127,7 @@ function L(e) {
         }) : (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)(l.Heading, {
             className: a()(R.header, {
-              [R.enhancedHeader]: Q
+              [R.enhancedHeader]: X
             }),
             variant: "heading-xl/bold",
             children: L
@@ -142,19 +142,19 @@ function L(e) {
       })
     }), (0, i.jsxs)(l.ModalFooter, {
       className: a()(R.footer, {
-        [R.enhancedFooter]: Q
+        [R.enhancedFooter]: X
       }),
       children: [(0, i.jsxs)("div", {
         className: a()(R.primaryActions, {
-          [R.enhancedPrimaryActions]: Q
+          [R.enhancedPrimaryActions]: X
         }),
         children: [null != H ? (0, i.jsx)(l.Button, {
           className: a()(R.secondaryAction, {
-            [R.enhancedSecondaryAction]: Q
+            [R.enhancedSecondaryAction]: X
           }),
           onClick: F,
           size: l.Button.Sizes.SMALL,
-          color: Q ? l.Button.Colors.CUSTOM : l.Button.Colors.PRIMARY,
+          color: X ? l.Button.Colors.CUSTOM : l.Button.Colors.PRIMARY,
           look: l.Button.Looks.LINK,
           children: H
         }) : null, (() => {
@@ -164,7 +164,7 @@ function L(e) {
             guild: D.guild,
             onClose: V
           });
-          let t = Q ? C.default.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
+          let t = X ? C.default.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
           if (en) {
             if (null != ee) {
               var n, r;
@@ -177,24 +177,24 @@ function L(e) {
             }))
           }
           return (0, i.jsx)(A.default, {
-            showGradient: Q,
+            showGradient: X,
             premiumModalAnalyticsLocation: y,
             subscriptionTier: K,
             trialId: e,
             size: l.Button.Sizes.SMALL,
-            color: Q ? l.Button.Colors.CUSTOM : l.Button.Colors.GREEN,
+            color: X ? l.Button.Colors.CUSTOM : l.Button.Colors.GREEN,
             onClick: () => {
               null == x || x(), V()
             },
             buttonText: null != Y ? Y : t
           })
         })()]
-      }), !Z && !Q && (0, i.jsx)(l.Button, {
+      }), !Z && !X && (0, i.jsx)(l.Button, {
         onClick: V,
         size: l.Button.Sizes.SMALL,
         color: l.Button.Colors.PRIMARY,
         look: l.Button.Looks.LINK,
-        children: null != X ? X : C.default.Messages.BACK
+        children: null != Q ? Q : C.default.Messages.BACK
       })]
     })]
   })

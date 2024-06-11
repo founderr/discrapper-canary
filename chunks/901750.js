@@ -3,8 +3,8 @@ s.r(t);
 var a = s("735250");
 s("470079");
 var n = s("481060"),
-  l = s("689938"),
-  i = s("460103");
+  i = s("689938"),
+  l = s("460103");
 t.default = function(e) {
   let {
     hasGuildBoostSlots: t,
@@ -13,19 +13,19 @@ t.default = function(e) {
     subscriptionIsPausedOrPausePending: d
   } = e;
   return (0, a.jsxs)("div", {
-    className: i.wrapper,
+    className: l.wrapper,
     children: [(0, a.jsx)("div", {
-      className: i.guildBoostGemWrapper,
+      className: l.guildBoostGemWrapper,
       children: (0, a.jsx)("img", {
         alt: "",
-        className: i.guildBoostGem,
+        className: l.guildBoostGem,
         src: s("908635")
       })
     }), (0, a.jsxs)("div", {
-      className: i.gradient,
+      className: l.gradient,
       children: [(0, a.jsx)(n.Heading, {
         variant: "display-md",
-        className: i.heading,
+        className: l.heading,
         children: function(e) {
           let {
             hasGuildBoostSlots: t,
@@ -33,7 +33,7 @@ t.default = function(e) {
             isUserPremiumTier2: a,
             subscriptionIsPausedOrPausePending: n
           } = e;
-          return n ? l.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_YOUR_GUILD_BOOSTS.format() : t ? a && !s ? l.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_HAS_UNAPPLIED_FREE_GUILD_BOOSTS.format() : l.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_YOUR_GUILD_BOOSTS.format() : l.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_NO_GUILD_BOOSTS
+          return n ? i.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_YOUR_GUILD_BOOSTS.format() : t ? a && !s ? i.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_HAS_UNAPPLIED_FREE_GUILD_BOOSTS.format() : i.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_YOUR_GUILD_BOOSTS.format() : i.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_NO_GUILD_BOOSTS
         }({
           hasGuildBoostSlots: t,
           isUserPremiumTier2: o,
@@ -42,7 +42,7 @@ t.default = function(e) {
         })
       }), (0, a.jsx)("svg", {
         viewBox: "0 0 660 210",
-        className: i.wave,
+        className: l.wave,
         children: (0, a.jsx)("path", {
           d: "M101.3,45.5C57.5,45.9,15.9,82.2,0,99.5V210h660V53.5c-164-137-265.2,32.4-385.8,33.6  C177.7,88.1,158.1,45,101.3,45.5z"
         })

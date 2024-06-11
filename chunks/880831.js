@@ -32,8 +32,8 @@ var a = n("735250"),
   v = n("823379"),
   N = n("792125"),
   M = n("981631"),
-  R = n("768760"),
-  y = n("588233");
+  y = n("768760"),
+  R = n("588233");
 let L = 10 * x.default.Millis.SECOND;
 
 function j(e) {
@@ -54,18 +54,18 @@ function j(e) {
     renderedContent: L,
     trailingIcon: j,
     leadingIcon: O
-  } = (0, I.renderSingleLineMessage)(n, N, s, y.messageContent, {
-    trailingIconClass: y.messageContentTrailingIcon,
-    leadingIconClass: y.messageContentLeadingIcon,
-    iconSize: R.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
+  } = (0, I.renderSingleLineMessage)(n, N, s, R.messageContent, {
+    trailingIconClass: R.messageContentTrailingIcon,
+    leadingIconClass: R.messageContentLeadingIcon,
+    iconSize: y.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
   }), P = (0, g.getMessageStickers)(n), D = P.length > 0 ? P.map(e => (0, a.jsx)(S.default, {
-    className: y.sticker,
+    className: R.sticker,
     size: 128,
     sticker: e,
     isInteracting: c
   }, e.id)) : null;
   return (0, a.jsxs)(d.Clickable, {
-    className: y.toast,
+    className: R.toast,
     onMouseEnter: () => {
       _(!0)
     },
@@ -74,8 +74,8 @@ function j(e) {
     },
     onClick: v,
     children: [(0, a.jsxs)("div", {
-      className: i()(y.messageContentWrapper, {
-        [y.mentioned]: n.mentioned
+      className: i()(R.messageContentWrapper, {
+        [R.mentioned]: n.mentioned
       }),
       children: [null != D ? null : O, null !== (t = null != L ? L : D) && void 0 !== t ? t : (0, a.jsx)("span", {
         children: M
@@ -87,7 +87,7 @@ function j(e) {
         userId: n.author.id,
         avatar: r.guildMemberAvatar
       }) : n.author.getAvatarURL(o, 32),
-      className: y.avatar
+      className: R.avatar
     })]
   })
 }
@@ -199,7 +199,7 @@ function O(e) {
     },
     children: S((e, t) => (0, a.jsx)(o.animated.div, {
       ref: e => C(t.message.id, null != e ? e.offsetHeight : null),
-      className: y.toastWrapper,
+      className: R.toastWrapper,
       style: e,
       children: (0, a.jsx)(j, {
         message: t.message

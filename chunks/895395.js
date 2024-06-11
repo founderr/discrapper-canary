@@ -19,9 +19,9 @@ var i = l("735250"),
   v = l("906732"),
   f = l("703656"),
   I = l("430824"),
-  h = l("594174"),
+  E = l("594174"),
   m = l("792125"),
-  E = l("867176"),
+  h = l("867176"),
   T = l("115130"),
   x = l("566620"),
   C = l("851191"),
@@ -36,8 +36,8 @@ var i = l("735250"),
   y = l("497263"),
   L = l("398885");
 let M = (0, r.cssValueToNumber)(o.default.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
-  V = (0, r.cssValueToNumber)(o.default.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
-  b = (0, r.cssValueToNumber)(o.default.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
+  b = (0, r.cssValueToNumber)(o.default.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
+  V = (0, r.cssValueToNumber)(o.default.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
 
 function O(e) {
   let {
@@ -51,7 +51,7 @@ function O(e) {
     guildId: l,
     enableFilter: !0,
     channel: t
-  }), H = (0, d.useStateFromStores)([h.default], () => h.default.getCurrentUser()), Y = (0, d.useStateFromStores)([I.default], () => I.default.getGuild(l), [l]), {
+  }), H = (0, d.useStateFromStores)([E.default], () => E.default.getCurrentUser()), Y = (0, d.useStateFromStores)([I.default], () => I.default.getGuild(l), [l]), {
     analyticsLocations: k
   } = (0, v.default)(u.default.ACTIVITY_DIRECTORY), P = (0, A.default)(null == t ? void 0 : t.id), {
     enableTuneInShelfPromoBanner: w
@@ -59,7 +59,7 @@ function O(e) {
     location: "ActivitiesShelf"
   }, {
     autoTrackExposure: !0
-  }), U = (0, E.useIsActivitiesInTextShelfPosterEnabled)(null == t ? void 0 : t.id, "ActivityShelfSlideActivityDirectory"), {
+  }), U = (0, h.useIsActivitiesInTextShelfPosterEnabled)(null == t ? void 0 : t.id, "ActivityShelfSlideActivityDirectory"), {
     isDeveloperActivityShelfEnabled: G,
     filter: W
   } = (0, d.useStateFromStoresObject)([T.default], () => ({
@@ -101,7 +101,7 @@ function O(e) {
           style: {
             height: (e => {
               let t = 1 === e.length;
-              return M + Math.ceil(e.length / 2) * (t ? b : V)
+              return M + Math.ceil(e.length / 2) * (t ? V : b)
             })(F)
           }
         })

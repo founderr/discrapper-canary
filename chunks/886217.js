@@ -43,7 +43,7 @@ t.default = e => {
   } = n.extra.media, A = n.extra.artist.name, x = (0, i.useStateFromStores)([r.default], () => r.default.getUser(n.author_id)), {
     primaryColor: v,
     secondaryColor: N
-  } = (0, f.default)(I), M = (0, d.getAggregateRange)(n), R = l.useCallback(() => {
+  } = (0, f.default)(I), M = (0, d.getAggregateRange)(n), y = l.useCallback(() => {
     if (null == x || !(0, o.isIn)(M, h.ALLOWED_RANGES)) return;
     let e = g(n, t, x, M);
     return (0, c.generateListenContentImage)({
@@ -78,7 +78,7 @@ t.default = e => {
         closePopout: u,
         user: x,
         channel: t,
-        generateReactionImage: R,
+        generateReactionImage: y,
         reactionImageAltText: S(n, x),
         entry: n,
         requestId: s

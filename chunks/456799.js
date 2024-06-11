@@ -3,17 +3,17 @@ s.r(t);
 var a = s("735250");
 s("470079");
 var n = s("120356"),
-  l = s.n(n),
-  i = s("481060"),
+  i = s.n(n),
+  l = s("481060"),
   r = s("975266");
 t.default = function(e) {
   let {
     children: t,
     withBorder: s = !1
   } = e;
-  return (0, a.jsx)(i.FocusBlock, {
-    children: (0, a.jsx)(i.Card, {
-      className: l()(r.componentPreviewWrapper, {
+  return (0, a.jsx)(l.FocusBlock, {
+    children: (0, a.jsx)(l.Card, {
+      className: i()(r.componentPreviewWrapper, {
         [r.componentPreviewWrapperBordered]: s
       }),
       outline: s,

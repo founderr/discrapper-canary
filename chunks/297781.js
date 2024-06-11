@@ -72,8 +72,8 @@ var a, l, s = n("735250"),
   v = n("277758"),
   N = n("690172"),
   M = n("481060"),
-  R = n("70956"),
-  y = n("709054"),
+  y = n("70956"),
+  R = n("709054"),
   L = n("719247"),
   j = n("22211"),
   O = n("561308"),
@@ -294,7 +294,7 @@ function Z(e) {
     Icon: x.TrophyIcon,
     text: (0, s.jsxs)(s.Fragment, {
       children: [b.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, l ? " — " : ": ", i.format({
-        hours: Math.round(a / R.default.Seconds.HOUR)
+        hours: Math.round(a / y.default.Seconds.HOUR)
       })]
     })
   })
@@ -332,7 +332,7 @@ function q(e) {
 function J(e) {
   let {
     entry: t
-  } = e, n = y.default.extractTimestamp(t.extra.application_id);
+  } = e, n = R.default.extractTimestamp(t.extra.application_id);
   return d()().diff(d()(n), "days") > 7 ? null : (0, s.jsx)(k, {
     Icon: h.CircleExclamationPointIcon,
     text: "New Release"

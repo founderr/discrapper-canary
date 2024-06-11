@@ -3,8 +3,8 @@ s.r(t);
 var a = s("735250");
 s("470079");
 var n = s("481060"),
-  l = s("723359"),
-  i = s("231338");
+  i = s("723359"),
+  l = s("231338");
 t.default = {
   openNewUserAgeGateModal: e => {
     (0, n.openModalLazy)(async () => {
@@ -15,8 +15,8 @@ t.default = {
         ...t
       })
     }, {
-      modalKey: l.NEW_USER_AGE_GATE_MODAL_KEY,
-      onCloseRequest: i.NOOP,
+      modalKey: i.NEW_USER_AGE_GATE_MODAL_KEY,
+      onCloseRequest: l.NOOP,
       onCloseCallback: e
     })
   },
@@ -32,7 +32,7 @@ t.default = {
         ...s
       })
     }, {
-      onCloseRequest: e ? i.NOOP : null,
+      onCloseRequest: e ? l.NOOP : null,
       onCloseCallback: t
     })
   }

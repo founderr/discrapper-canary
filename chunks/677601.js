@@ -25,8 +25,8 @@ var a = n("735250"),
   v = n("317381"),
   N = n("596040"),
   M = n("296797"),
-  R = n("349619"),
-  y = n("100527"),
+  y = n("349619"),
+  R = n("100527"),
   L = n("367907"),
   j = n("906732"),
   O = n("211644"),
@@ -79,8 +79,8 @@ var a = n("735250"),
   ev = n("909820"),
   eN = n("493010"),
   eM = n("742603"),
-  eR = n("221888"),
-  ey = n("900211"),
+  ey = n("221888"),
+  eR = n("900211"),
   eL = n("18759"),
   ej = n("878752"),
   eO = n("354459"),
@@ -297,7 +297,7 @@ class ek extends l.PureComponent {
           timeout: 2e3,
           children: e => this.renderContent(e)
         })
-      }), h && (0, a.jsx)(ey.default, {
+      }), h && (0, a.jsx)(eR.default, {
         minHeight: 230,
         maxHeight: u,
         resizableNode: this._wrapperRef,
@@ -441,7 +441,7 @@ class ek extends l.PureComponent {
         let t = e.getGuildId();
         null != t && (0, H.transitionTo)((0, eE.previousTextChannelRouteForGuild)(t)), w.openChannelCallPopout(e)
       };
-      t ? (0, R.default)(n) : n()
+      t ? (0, y.default)(n) : n()
     }), eU(this, "handleStayOnTop", e => {
       w.setAlwaysOnTop(eP.PopoutWindowKeys.CHANNEL_CALL_POPOUT, e)
     }), eU(this, "handleClosePopout", () => {
@@ -530,7 +530,7 @@ class ek extends l.PureComponent {
             count: t
           }) : null]
         }) : null, (null == r ? void 0 : r.type) !== eO.ParticipantTypes.STREAM && (null == r ? void 0 : r.type) !== eO.ParticipantTypes.ACTIVITY || o ? null : (0, a.jsx)(z.default, {
-          children: (0, a.jsx)(eR.default, {
+          children: (0, a.jsx)(ey.default, {
             className: i()(eb.leftTrayIcon, eb.viewersButton),
             participant: r,
             maxVisibleUsers: 4,
@@ -668,10 +668,10 @@ t.default = function(e) {
     ref: p
   } = (0, T.default)(), {
     ref: E
-  } = (0, T.default)(), C = (0, A.useAppContext)(), S = (0, D.default)(), R = (0, u.useStateFromStores)([ed.default], () => {
+  } = (0, T.default)(), C = (0, A.useAppContext)(), S = (0, D.default)(), y = (0, u.useStateFromStores)([ed.default], () => {
     var e;
     return (null !== (e = null == S ? void 0 : S.channelId) && void 0 !== e ? e : ed.default.getVoiceChannelId()) === n.id
-  }), L = (0, I.default)(R), {
+  }), L = (0, I.default)(y), {
     participants: b,
     filteredParticipants: U,
     participantsVersion: F,
@@ -715,23 +715,23 @@ t.default = function(e) {
   }, [em, ep]);
   let eE = (0, u.useStateFromStores)([v.default], () => v.default.getSelfEmbeddedActivityForChannel(n.id), [n]);
   l.useEffect(() => {
-    R && !L && null != eE && m.default.selectParticipant(n.id, eE.applicationId)
-  }, [R, L, eE, n.id]), l.useEffect(() => {
+    y && !L && null != eE && m.default.selectParticipant(n.id, eE.applicationId)
+  }, [y, L, eE, n.id]), l.useEffect(() => {
     let e = !1,
       t = null;
     return (async () => {
-      R && w === eP.ChannelModes.VIDEO && (t = await e_.default.blockDisplaySleep(), e && null != t && e_.default.unblockDisplaySleep(t))
+      y && w === eP.ChannelModes.VIDEO && (t = await e_.default.blockDisplaySleep(), e && null != t && e_.default.unblockDisplaySleep(t))
     })(), () => {
       null != t ? e_.default.unblockDisplaySleep(t) : e = !0
     }
-  }, [R, w]), (0, M.default)({
+  }, [y, w]), (0, M.default)({
     onTransition: void 0
   });
   let eC = (0, ex.default)(n, !0),
     eg = (0, O.useIsContentShown)(d.DismissibleContent.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
     {
       analyticsLocations: eS
-    } = (0, j.default)(y.default.CHANNEL_CALL),
+    } = (0, j.default)(R.default.CHANNEL_CALL),
     eT = v.default.getEmbeddedActivitiesForChannel(n.id);
   return (0, a.jsx)(j.AnalyticsLocationProvider, {
     value: eS,
@@ -752,7 +752,7 @@ t.default = function(e) {
             mentionCount: X,
             selectedStream: z,
             mode: w,
-            inCall: R,
+            inCall: y,
             participants: b,
             filteredParticipants: U,
             participantsVersion: F,

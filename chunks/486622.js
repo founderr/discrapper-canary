@@ -25,8 +25,8 @@ function C(e) {
     onAcceptSuccess: n,
     onRejectSuccess: l,
     onError: C
-  } = e, g = (0, m.default)(), [S, _] = a.useState(!1), [T, I] = a.useState(!1), [A, x] = a.useState(!1), [v, N] = a.useState(!1), [M, R] = a.useState(!1), y = S || T || A, L = a.useCallback(async e => {
-    if (!y) {
+  } = e, g = (0, m.default)(), [S, _] = a.useState(!1), [T, I] = a.useState(!1), [A, x] = a.useState(!1), [v, N] = a.useState(!1), [M, y] = a.useState(!1), R = S || T || A, L = a.useCallback(async e => {
+    if (!R) {
       _(!0);
       try {
         await (0, f.acceptMessageRequest)(e), N(!0), null == n || n()
@@ -37,11 +37,11 @@ function C(e) {
         _(!1)
       }
     }
-  }, [y, n, C]), j = a.useCallback(async e => {
-    if (!y) {
+  }, [R, n, C]), j = a.useCallback(async e => {
+    if (!R) {
       I(!0);
       try {
-        await (0, f.rejectMessageRequest)(e), R(!0), null == l || l()
+        await (0, f.rejectMessageRequest)(e), y(!0), null == l || l()
       } catch (t) {
         let e = new i.APIError(t);
         null == C || C(e)
@@ -49,21 +49,21 @@ function C(e) {
         I(!1)
       }
     }
-  }, [y, l, C]), O = a.useCallback(async e => {
-    if (y) return;
+  }, [R, l, C]), O = a.useCallback(async e => {
+    if (R) return;
     I(!0);
     let t = s()(e, p.BATCH_REJECT_LIMIT);
     try {
       for (let e of t) await (0, f.rejectMessageRequestBatch)(e);
-      R(!0), null == l || l()
+      y(!0), null == l || l()
     } catch (t) {
       let e = new i.APIError(t);
       null == C || C(e)
     } finally {
       I(!1)
     }
-  }, [y, l, C]), P = a.useCallback(async e => {
-    if (y) return;
+  }, [R, l, C]), P = a.useCallback(async e => {
+    if (R) return;
     if (null != t && null == o.default.getMutualGuilds(t.id)) {
       x(!0);
       try {
@@ -99,7 +99,7 @@ function C(e) {
         })
       }
     })
-  }, [L, y, t]), D = a.useCallback((e, t, n) => {
+  }, [L, R, t]), D = a.useCallback((e, t, n) => {
     let a = (a, l) => {
         l && d.NonSpamRetrainingOptIn.updateSetting(a), a && null != t && (0, r.submitHamReportForFirstDM)(t), L(e.id), c.default.track(E.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
           action: p.MessageRequestAnalyticsAction.ACCEPT_HAM_CONFIRMATION_PROMPT,

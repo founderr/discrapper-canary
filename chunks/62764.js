@@ -29,8 +29,8 @@ var a = n("735250"),
   v = n("757698"),
   N = n("934415"),
   M = n("456269"),
-  R = n("109590"),
-  y = n("228392"),
+  y = n("109590"),
+  R = n("228392"),
   L = n("981631"),
   j = n("689938"),
   O = n("269516"),
@@ -47,7 +47,7 @@ function D(e) {
     width: U
   } = (0, d.default)(), [F, w] = l.useState(3), [k, H] = l.useState(!n), [G, B] = (0, c.default)(!1, 2e3), V = (0, o.useStateFromStores)([I.default], () => I.default.getChannel(t), [t]), {
     firstMessage: W
-  } = (0, R.useFirstForumPostMessage)(V), Y = (0, o.useStateFromStores)([_.default], () => _.default.hasJoined(t)), {
+  } = (0, y.useFirstForumPostMessage)(V), Y = (0, o.useStateFromStores)([_.default], () => _.default.hasJoined(t)), {
     disableReactionUpdates: z,
     disableReactionCreates: K,
     isLurking: Z,
@@ -80,7 +80,7 @@ function D(e) {
       Y ? T.default.leaveThread(V, "Forum Toolbar") : T.default.joinThread(V, "Forum Toolbar")
     },
     es = () => {
-      (0, y.trackForumPostLinkCopied)({
+      (0, R.trackForumPostLinkCopied)({
         postId: V.id,
         location: {
           section: L.AnalyticsSections.CHANNEL_HEADER

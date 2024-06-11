@@ -50,7 +50,7 @@ function _(e) {
   let N = l.useRef(A),
     {
       currentDocument: M,
-      rootNode: R
+      rootNode: y
     } = l.useMemo(() => {
       let e = null != d && T ? d.document : document,
         t = _.document.getElementById("app-mount");
@@ -60,38 +60,38 @@ function _(e) {
         rootNode: t
       }
     }, [d, T, _]),
-    y = i && !T,
-    L = x === C.ChannelModes.VIDEO && v && !y,
+    R = i && !T,
+    L = x === C.ChannelModes.VIDEO && v && !R,
     j = l.useCallback((e, a) => {
       a !== e && (r.default.updateLayout(t.id, a, n), a === C.ChannelLayouts.FULL_SCREEN && t.isPrivate() && m.ComponentDispatch.dispatch(C.ComponentActions.TEXTAREA_BLUR))
     }, [n, t]),
     O = l.useCallback(e => {
-      if (null != R) e === C.ChannelLayouts.FULL_SCREEN && (j(e, N.current), (0, E.exitFullScreen)(e => {
+      if (null != y) e === C.ChannelLayouts.FULL_SCREEN && (j(e, N.current), (0, E.exitFullScreen)(e => {
         N.current = e
       }, M))
-    }, [M, j, R]),
+    }, [M, j, y]),
     P = l.useCallback(e => () => {
-      null != R && (e !== C.ChannelLayouts.FULL_SCREEN ? (N.current = e, j(e, C.ChannelLayouts.FULL_SCREEN), (0, E.requestFullScreen)(R)) : O(e))
-    }, [j, O, R]);
+      null != y && (e !== C.ChannelLayouts.FULL_SCREEN ? (N.current = e, j(e, C.ChannelLayouts.FULL_SCREEN), (0, E.requestFullScreen)(y)) : O(e))
+    }, [j, O, y]);
   return (l.useEffect(() => {
     let e = () => {
-      null != R && !(0, E.isFullScreen)(R, M) && A === C.ChannelLayouts.FULL_SCREEN && P(A)()
+      null != y && !(0, E.isFullScreen)(y, M) && A === C.ChannelLayouts.FULL_SCREEN && P(A)()
     };
     return M.addEventListener(E.FULLSCREEN_CHANGE_EVENT, e), () => {
       M.removeEventListener(E.FULLSCREEN_CHANGE_EVENT, e)
     }
-  }, [M, A, P, R]), l.useEffect(() => (h.default.track(C.AnalyticEvents.VIDEO_LAYOUT_TOGGLED, {
+  }, [M, A, P, y]), l.useEffect(() => (h.default.track(C.AnalyticEvents.VIDEO_LAYOUT_TOGGLED, {
     video_layout: T ? "popout" : A,
     ...(0, o.collectVoiceAnalyticsMetadata)(t.id)
   }), () => {
     !(T && (0, p.isMac)()) && O(A)
   }), [A, T]), l.useEffect(() => {
-    null != R && I.current === C.ChannelModes.VIDEO && x === C.ChannelModes.VOICE && (0, E.exitFullScreen)(R, M)
-  }, [M, x, I, R]), l.useEffect(() => {
+    null != y && I.current === C.ChannelModes.VIDEO && x === C.ChannelModes.VOICE && (0, E.exitFullScreen)(y, M)
+  }, [M, x, I, y]), l.useEffect(() => {
     !v && T && S()
   }, [v, T]), L) ? (0, a.jsx)(c.default, {
     themeable: !1,
-    node: R,
+    node: y,
     guestWindow: d,
     className: g.rightTrayIcon,
     onClick: P(A)

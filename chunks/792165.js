@@ -8,8 +8,8 @@ var i = n("735250");
 n("470079");
 var a = n("442837"),
   s = n("693789"),
-  l = n("260034"),
-  r = n("993365"),
+  r = n("260034"),
+  l = n("993365"),
   u = n("481060"),
   o = n("230711"),
   d = n("197115"),
@@ -32,7 +32,7 @@ function v(e) {
     markAsDismissed: v
   } = e, g = (0, a.useStateFromStores)([f.default], () => f.default.getCurrentUser());
   let p = (t = null == g ? void 0 : g.premiumType) === C.PremiumTypes.TIER_2 ? N.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_TIER_2 : null == t ? N.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB : N.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_TIER_2,
-    L = T.default.canUseCustomCallSounds(g);
+    h = T.default.canUseCustomCallSounds(g);
   return (0, i.jsxs)(c.default, {
     isShown: !0,
     type: c.FeatureBorderTypes.PREMIUM,
@@ -53,14 +53,14 @@ function v(e) {
         className: R.nitroWheel,
         width: 18,
         height: 18
-      }), (0, i.jsx)(l.Heading, {
+      }), (0, i.jsx)(r.Heading, {
         variant: "heading-sm/bold",
         children: N.default.Messages.CALL_SOUNDS_UPSELL_TITLE_NON_SUB
       })]
-    }), (0, i.jsx)(r.Text, {
+    }), (0, i.jsx)(l.Text, {
       variant: "text-sm/normal",
       children: p
-    }), L ? (0, i.jsx)(s.Button, {
+    }), h ? (0, i.jsx)(s.Button, {
       onClick: function() {
         o.default.open(I.UserSettingsSections.VOICE, m.SOUNDBOARD_SUBSECTION), null == n || n(), null == v || v(S.ContentDismissActionType.PRIMARY)
       },

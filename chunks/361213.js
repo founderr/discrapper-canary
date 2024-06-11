@@ -1,14 +1,14 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return n
+    return r
   }
 });
-var i = l("981631");
+var i = n("981631");
 
-function n(e, t) {
-  let l;
-  let n = window.GLOBAL_ENV.CDN_HOST,
-    a = window.GLOBAL_ENV.API_ENDPOINT;
-  return l = null != n ? "".concat(location.protocol, "//").concat(n, "/app-assets/").concat(e, "/store/").concat(t, ".mp4") : "".concat(location.protocol).concat(a).concat(i.Endpoints.STORE_ASSET(e, t, "mp4"))
+function r(e, t) {
+  let n;
+  let r = window.GLOBAL_ENV.CDN_HOST,
+    s = window.GLOBAL_ENV.API_ENDPOINT;
+  return n = null != r ? "".concat(location.protocol, "//").concat(r, "/app-assets/").concat(e, "/store/").concat(t, ".mp4") : "".concat(location.protocol).concat(s).concat(i.Endpoints.STORE_ASSET(e, t, "mp4"))
 }

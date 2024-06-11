@@ -1,9 +1,9 @@
 "use strict";
 s.r(t), s("47120");
 var a, n = s("735250"),
-  l = s("470079"),
-  i = s("392711"),
-  r = s.n(i),
+  i = s("470079"),
+  l = s("392711"),
+  r = s.n(l),
   o = s("481060"),
   d = s("355467"),
   u = s("976255"),
@@ -25,15 +25,15 @@ function m(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class C extends(a = l.PureComponent) {
+class A extends(a = i.PureComponent) {
   render() {
     let {
       paymentSource: e,
       isDefault: t,
       isEditing: s,
       index: a,
-      hideDivider: l,
-      isForSubscription: i,
+      hideDivider: i,
+      isForSubscription: l,
       locale: r,
       removing: d,
       submitting: u,
@@ -47,13 +47,13 @@ class C extends(a = l.PureComponent) {
       removing: d,
       submitting: u,
       locale: r,
-      isForSubscription: i,
+      isForSubscription: l,
       onSubmit: S,
       onCancel: E,
       onDelete: T
     }) : (0, n.jsxs)("div", {
       className: f.__invalid_paymentSourceItem,
-      children: [a > 0 && !l ? (0, n.jsx)(o.FormDivider, {
+      children: [a > 0 && !i ? (0, n.jsx)(o.FormDivider, {
         className: f.__invalid_sourceDivider
       }) : null, (0, n.jsxs)(c.default, {
         align: c.default.Align.CENTER,
@@ -62,7 +62,7 @@ class C extends(a = l.PureComponent) {
         children: [(0, n.jsx)(I.default, {
           paymentSource: e,
           isDefault: t,
-          isForSubscription: i,
+          isForSubscription: l,
           locale: r,
           showSubtext: !0,
           showLabels: !0,
@@ -82,12 +82,12 @@ class C extends(a = l.PureComponent) {
     })
   }
 }
-m(C, "defaultProps", {
+m(A, "defaultProps", {
   isEditing: !1,
   hideDivider: !1,
   onEditClick: () => {}
 });
-class A extends l.PureComponent {
+class C extends i.PureComponent {
   renderFooter() {
     let {
       paymentSources: e
@@ -115,19 +115,19 @@ class A extends l.PureComponent {
       paymentSources: t,
       locale: s,
       removing: a,
-      submitting: l,
-      premiumSubscriptionPaymentSourceId: i
-    } = this.props, d = r().values(t).sort((t, s) => t.id === e ? -1 : s.id === e ? 1 : T.default.compare(t.id, s.id)), u = this.state.editingPayment, E = d.findIndex(e => e.id === u), _ = d.map((t, r) => (0, n.jsx)(C, {
+      submitting: i,
+      premiumSubscriptionPaymentSourceId: l
+    } = this.props, d = r().values(t).sort((t, s) => t.id === e ? -1 : s.id === e ? 1 : T.default.compare(t.id, s.id)), u = this.state.editingPayment, E = d.findIndex(e => e.id === u), _ = d.map((t, r) => (0, n.jsx)(A, {
       locale: s,
       paymentSource: t,
       isDefault: e === t.id,
       onCancel: this.handleCancel,
       onDelete: this.handleDelete,
-      isForSubscription: t.id === i,
+      isForSubscription: t.id === l,
       hideDivider: E === r - 1,
       onSubmit: this.handleSubmit,
       index: r,
-      submitting: l,
+      submitting: i,
       removing: a,
       isEditing: u === t.id,
       onEditClick: this.handleEditClick
@@ -194,4 +194,4 @@ class A extends l.PureComponent {
     })
   }
 }
-t.default = A
+t.default = C

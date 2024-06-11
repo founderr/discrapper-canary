@@ -46,8 +46,8 @@ var i = n("735250"),
   K = n("995292");
 let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
   Z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_RIGHT),
-  X = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_BOTTOM),
-  Q = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_SEARCH_RESULTS_PADDING_TOP),
+  Q = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_BOTTOM),
+  X = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_SEARCH_RESULTS_PADDING_TOP),
   q = (0, U.cssValueToNumber)(E.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
   J = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_SECTION_MARGIN_BOTTOM),
   $ = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_PREMIUM_UPSELL_HEIGHT) + (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_PREMIUM_UPSELL_MARGIN_TOP),
@@ -199,7 +199,7 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         var n;
         return e === E.length - 1 || t.has(null === (n = E[e]) || void 0 === n ? void 0 : n.sectionId) || et(e) || ee(e) ? 0 : J
       }, [t, E, et, ee]),
-      e_ = r.useMemo(() => ["" !== d ? Q : z, Z, X, 0], [d]);
+      e_ = r.useMemo(() => ["" !== d ? X : z, Z, Q, 0], [d]);
     return {
       listPadding: e_,
       renderRow: es,
@@ -231,9 +231,9 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       isBurstReaction: k,
       listHeaderClassName: B
     } = e, V = r.useRef(!1), x = A.EmojiPickerStore.useStore(e => e.activeCategoryIndex), F = (0, m.useExpressionPickerStore)(e => e.searchQuery), Y = L.AnimateEmoji.useSetting(), z = (0, _.useStateFromStores)([v.default], () => v.default.getCurrentUser()), Z = (0, P.isPremium)(z), {
-      location: X
+      location: Q
     } = (0, f.useAnalyticsContext)(), {
-      analyticsLocations: Q
+      analyticsLocations: X
     } = (0, h.default)(), [q, J] = r.useState(0), [$, ee] = r.useState(!1), [ei, er] = r.useState(0), es = (0, _.useStateFromStores)([S.default], () => S.default.useReducedMotion), ea = (0, u.useSpring)({
       transform: $ ? "translateY(0%)" : "translateY(120%)",
       opacity: $ ? 1 : 0,
@@ -307,10 +307,10 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
     return r.useEffect(() => {
       $ && y.default.track(H.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
         type: j.PremiumUpsellTypes.EMOJI_PICKER_FLOATING_UPSELL,
-        location: X,
-        location_stack: Q
+        location: Q,
+        location_stack: X
       })
-    }, [X, Q, $]), r.useEffect(() => {
+    }, [Q, X, $]), r.useEffect(() => {
       "" !== F && (er(0), ee(!1))
     }, [F]), (0, i.jsxs)("div", {
       className: K.listWrapper,

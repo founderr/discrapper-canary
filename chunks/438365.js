@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("470079"),
   n = s("442837"),
-  l = s("430824"),
-  i = s("594174"),
+  i = s("430824"),
+  l = s("594174"),
   r = s("645896"),
   o = s("353093");
 
@@ -15,9 +15,9 @@ function d(e) {
   var t, s;
   let {
     userId: d
-  } = e, u = (0, n.useStateFromStores)([i.default], () => {
+  } = e, u = (0, n.useStateFromStores)([l.default], () => {
     var e;
-    return null === (e = i.default.getUser(d)) || void 0 === e ? void 0 : e.clan
+    return null === (e = l.default.getUser(d)) || void 0 === e ? void 0 : e.clan
   }), {
     tag: c,
     badge: S,
@@ -27,7 +27,7 @@ function d(e) {
     (0, r.fetchClanInfo)(E)
   }, [E]);
   let T = (0, r.useClanInfo)(null == u ? void 0 : u.identityGuildId),
-    _ = (0, n.useStateFromStores)([l.default], () => l.default.getGuild(null == u ? void 0 : u.identityGuildId));
+    _ = (0, n.useStateFromStores)([i.default], () => i.default.getGuild(null == u ? void 0 : u.identityGuildId));
   return {
     userClanTag: c,
     userClanBadge: S,

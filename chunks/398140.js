@@ -7,10 +7,10 @@ s.r(t), s.d(t, {
 var a = s("735250");
 s("470079");
 var n = s("442837"),
-  l = s("778825"),
-  i = s("905027"),
+  i = s("778825"),
+  l = s("905027"),
   r = s("954756");
 
 function o() {
-  return (0, n.useStateFromStores)([l.default], () => l.default.showNotice()) ? (0, a.jsx)(i.default, {}) : (0, a.jsx)(r.default, {})
+  return (0, n.useStateFromStores)([i.default], () => i.default.showNotice()) ? (0, a.jsx)(l.default, {}) : (0, a.jsx)(r.default, {})
 }

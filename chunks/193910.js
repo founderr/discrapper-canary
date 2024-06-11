@@ -29,8 +29,8 @@ var a = n("735250"),
   v = n("981631"),
   N = n("921944"),
   M = n("489887"),
-  R = n("689938"),
-  y = n("525187");
+  y = n("689938"),
+  R = n("525187");
 
 function L(e, t, l, s) {
   (0, o.openModalLazy)(async () => {
@@ -66,7 +66,7 @@ function O() {
         visibleContent: t
       } = e;
       return t === r.DismissibleContent.ACTIVITIES_CHAT_MENU_NEW_BADGE ? (0, a.jsx)(g.TextBadge, {
-        text: R.default.Messages.NEW,
+        text: y.default.Messages.NEW,
         color: s.default.BUTTON_DANGER_BACKGROUND
       }) : null
     }
@@ -160,19 +160,19 @@ function P(e) {
     onSelect: p,
     navId: "channel-attach",
     onClose: m,
-    "aria-label": R.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-    className: y.menu,
+    "aria-label": y.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+    className: R.menu,
     children: i.map(function(e) {
       var n;
       let l = (0, a.jsxs)("div", {
-        className: y.optionLabel,
+        className: R.optionLabel,
         children: [(0, a.jsx)(e.icon, {
-          className: y.optionIcon
+          className: R.optionIcon
         }), (0, a.jsx)("div", {
-          className: y.optionName,
+          className: R.optionName,
           children: e.display
         }), null != e.badgeVal && e.badgeVal > 0 && (0, a.jsx)(g.NumberBadge, {
-          className: y.badge,
+          className: R.badge,
           color: null !== (n = e.badgeColor) && void 0 !== n ? n : s.default.STATUS_DANGER,
           count: e.badgeVal
         })]

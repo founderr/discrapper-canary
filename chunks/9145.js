@@ -29,8 +29,8 @@ var a = n("735250"),
   v = n("792125"),
   N = n("51144"),
   M = n("566620"),
-  R = n("317381"),
-  y = n("619915"),
+  y = n("317381"),
+  R = n("619915"),
   L = n("952561"),
   j = n("563218"),
   O = n("719296"),
@@ -51,9 +51,9 @@ function H(e) {
     maxHeight: s,
     connectedChannelId: H,
     renderExternalHeader: G
-  } = e, B = (0, L.default)(), V = (0, r.useStateFromStoresArray)([R.default], () => null != H ? R.default.getEmbeddedActivitiesForChannel(H) : [], [H]), W = (0, r.useStateFromStores)([g.default], () => g.default.getChannel(H)), Y = (0, y.useEmbeddedApps)(V), z = (0, y.useEmbeddedAppsWithPresence)(Y), K = l.useCallback(() => {
+  } = e, B = (0, L.default)(), V = (0, r.useStateFromStoresArray)([y.default], () => null != H ? y.default.getEmbeddedActivitiesForChannel(H) : [], [H]), W = (0, r.useStateFromStores)([g.default], () => g.default.getChannel(H)), Y = (0, R.useEmbeddedApps)(V), z = (0, R.useEmbeddedAppsWithPresence)(Y), K = l.useCallback(() => {
     (0, M.updateActivityPanelMode)(D.ActivityPanelModes.PIP)
-  }, []), Z = l.useRef(null), X = (0, r.useStateFromStores)([R.default], () => R.default.getFocusedLayout()), q = X !== D.FocusedActivityLayouts.NO_CHAT, [J, Q] = l.useState(null !== (t = p.default.activityPanelHeight) && void 0 !== t ? t : s), $ = l.useCallback(e => {
+  }, []), Z = l.useRef(null), X = (0, r.useStateFromStores)([y.default], () => y.default.getFocusedLayout()), q = X !== D.FocusedActivityLayouts.NO_CHAT, [J, Q] = l.useState(null !== (t = p.default.activityPanelHeight) && void 0 !== t ? t : s), $ = l.useCallback(e => {
     d.default.updatedUnsyncedSettings({
       activityPanelHeight: e
     })

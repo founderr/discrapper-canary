@@ -81,7 +81,7 @@ function Z(e) {
   return (0, m.default)(t) && (n = x.PlatformTypes.SPOTIFY), null != t.platform && [x.ActivityGamePlatforms.PS4, x.ActivityGamePlatforms.PS5].includes(t.platform) && (n = x.PlatformTypes.PLAYSTATION), n
 }
 
-function X(e) {
+function Q(e) {
   let {
     activity: t
   } = e, n = (0, T.default)(), i = Z({
@@ -95,7 +95,7 @@ function X(e) {
     className: Y.platformIcon
   })
 }
-class Q extends(r = o.PureComponent) {
+class X extends(r = o.PureComponent) {
   get activity() {
     let {
       activity: e,
@@ -512,7 +512,7 @@ class Q extends(r = o.PureComponent) {
             children: A
           }) : null]
         })
-      }), l ? m : null, l || c ? A : null, (0, a.jsx)(X, {
+      }), l ? m : null, l || c ? A : null, (0, a.jsx)(Q, {
         activity: o
       })]
     })
@@ -541,4 +541,4 @@ class Q extends(r = o.PureComponent) {
     })
   }
 }
-j(Q, "Types", i), t.default = Q
+j(X, "Types", i), t.default = X

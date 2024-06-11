@@ -214,7 +214,7 @@ z.Basic = e => {
   a.useEffect(() => {
     (b === U.BACKGROUND_GRADIENT_PRESETS.length - (H ? 2 : 3) && "EDITOR" === u || g === _.BackgroundGradientPresetId.EASTER_EGG) && D(!0)
   }, [b, u, g, H]);
-  let X = (e, t) => {
+  let Q = (e, t) => {
     (0, M.updateBackgroundGradientPreset)(e.id), j({
       isPersisted: !O,
       analyticsLocations: S,
@@ -270,7 +270,7 @@ z.Basic = e => {
       }).map((e, t) => (0, s.jsx)(P.GradientThemeSelection, {
         preset: e,
         isSelected: g === e.id,
-        onSelect: () => X(e, t),
+        onSelect: () => Q(e, t),
         disabled: l,
         tabIndex: 0 !== t || l ? void 0 : 0,
         showBadge: Z(e)
@@ -289,7 +289,7 @@ z.Basic = e => {
           children: [(0, s.jsx)(P.GradientThemeSelection, {
             preset: e,
             isSelected: g === _.BackgroundGradientPresetId.EASTER_EGG,
-            onSelect: () => X(e)
+            onSelect: () => Q(e)
           }), (0, s.jsx)(L.default, {
             importData: t,
             shouldAnimate: !V,

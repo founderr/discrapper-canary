@@ -22,15 +22,15 @@ var i = n("470079"),
   C = n("592125"),
   T = n("58468"),
   S = n("77498"),
-  I = n("496675"),
-  f = n("306680"),
+  f = n("496675"),
+  I = n("306680"),
   O = n("944486"),
   N = n("9156"),
   p = n("823379"),
   R = n("540126"),
   L = n("647086"),
   D = n("231338");
-let h = [u.default, s.default, r.default, E.default, c.default, A.default, C.default, S.default, I.default, f.default, O.default, N.default];
+let h = [u.default, s.default, r.default, E.default, c.default, A.default, C.default, S.default, f.default, I.default, O.default, N.default];
 
 function g() {
   let [e, t] = i.useState(() => b());
@@ -66,7 +66,7 @@ function b() {
     } = a;
     return l()(n).map(n => {
       var d;
-      if (!n.isPrivate() && !I.default.can(D.Permissions.VIEW_CHANNEL, n)) return null;
+      if (!n.isPrivate() && !f.default.can(D.Permissions.VIEW_CHANNEL, n)) return null;
       let r = null != i && (i.id === n.id || o === n.id),
         c = null != i && i.isThread() && i.parent_id === n.id,
         A = null !== (d = r || c || !u ? E.default.getActiveJoinedRelevantThreadsForParent(n.guild_id, n.id) : E.default.getActiveJoinedUnreadThreadsForParent(n.guild_id, n.id)) && void 0 !== d ? d : {},
@@ -85,7 +85,7 @@ function b() {
           isFirstVoiceChannel: !1,
           subtitle: (0, R.computeSubtitle)(n, S, !1)
         };
-      return r || c || f.default.getMentionCount(n.id) > 0 ? p : t && O || u && (O || s || (0, _.isVoiceChannel)(n.type) || (0, _.isGuildReadableType)(n.type) && !1 === f.default.hasUnread(n.id)) ? null : p
+      return r || c || I.default.getMentionCount(n.id) > 0 ? p : t && O || u && (O || s || (0, _.isVoiceChannel)(n.type) || (0, _.isGuildReadableType)(n.type) && !1 === I.default.hasUnread(n.id)) ? null : p
     }).filter(p.isNotNullish).sortBy(e => {
       let {
         record: t

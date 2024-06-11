@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   UserSettingsAppearanceInAppIcon: function() {
-    return C
+    return A
   }
 });
 var a = s("735250"),
   n = s("470079"),
-  l = s("442837"),
-  i = s("481060"),
+  i = s("442837"),
+  l = s("481060"),
   r = s("570140"),
   o = s("37234"),
   d = s("100527"),
@@ -26,10 +26,10 @@ let m = () => {
       type: "APP_ICON_EDITOR_OPEN"
     }), (0, o.popLayer)()
   },
-  C = () => {
+  A = () => {
     let {
       analyticsLocations: e
-    } = (0, u.default)(d.default.USER_SETTINGS), t = (0, l.useStateFromStores)([c.default], () => c.default.isUpsellPreview);
+    } = (0, u.default)(d.default.USER_SETTINGS), t = (0, i.useStateFromStores)([c.default], () => c.default.isUpsellPreview);
     return n.useEffect(() => {
       t && T.default.track(_.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
         type: I.PremiumUpsellTypes.APP_ICON_UPSELL,
@@ -41,8 +41,8 @@ let m = () => {
         disabled: t,
         renderCTAButtons: () => (0, a.jsxs)("div", {
           className: g.tryItOutButtons,
-          children: [(0, a.jsx)(i.Button, {
-            color: t ? i.Button.Colors.PRIMARY : i.Button.Colors.BRAND,
+          children: [(0, a.jsx)(l.Button, {
+            color: t ? l.Button.Colors.PRIMARY : l.Button.Colors.BRAND,
             onClick: () => m(),
             children: N.default.Messages.APP_ICON_PREVIEW_TITLE
           }), t ? (0, a.jsx)(E.default, {
@@ -50,7 +50,7 @@ let m = () => {
             buttonText: N.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
           }) : null]
         })
-      }), (0, a.jsx)(i.FormDivider, {
+      }), (0, a.jsx)(l.FormDivider, {
         className: f.marginTop20
       })]
     })

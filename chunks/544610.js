@@ -22,11 +22,11 @@ let T = !1,
   N = new Set,
   M = null;
 
-function R() {
+function y() {
   I = "", A = 0, x = [], N = new Set, T = !1, M = null
 }
 
-function y(e) {
+function R(e) {
   I = e, A = 0, L()
 }
 
@@ -94,7 +94,7 @@ function D() {
 
 function b(e) {
   if (e.key !== _.NEW_GROUP_DM_POPOUT_ID) return !1;
-  T = !0, j(), a = D(), M = null, y("")
+  T = !0, j(), a = D(), M = null, R("")
 }
 
 function U(e) {
@@ -103,7 +103,7 @@ function U(e) {
 }
 
 function F() {
-  null != a && (a.destroy(), a = null), R()
+  null != a && (a.destroy(), a = null), y()
 }
 class w extends(l = d.default.Store) {
   initialize() {
@@ -139,7 +139,7 @@ r = "PrivateChannelRecipientsInviteStore", (i = "displayName") in(s = w) ? Objec
 }) : s[i] = r;
 let k = new w(c.default, {
   CONNECTION_OPEN: function() {
-    R()
+    y()
   },
   CHANNEL_SELECT: function(e) {
     let {
@@ -148,18 +148,18 @@ let k = new w(c.default, {
     } = e;
     if (null != t) return !1;
     let a = T;
-    return R(), T = a, M = n, L()
+    return y(), T = a, M = n, L()
   },
   MODAL_PUSH: b,
   SHOW_ACTION_SHEET: b,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function(e) {
-    T = !0, j(), a = D(), M = e.channelId, y("")
+    T = !0, j(), a = D(), M = e.channelId, R("")
   },
   MODAL_POP: U,
   HIDE_ACTION_SHEET: U,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: F,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function(e) {
-    M = e.channelId, y(e.query)
+    M = e.channelId, R(e.query)
   },
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function(e) {
     A = e.row

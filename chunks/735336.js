@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return X
+    return Q
   }
 }), n("47120");
 var i = n("735250"),
@@ -156,7 +156,7 @@ function Z(e) {
   })
 }
 
-function X(e) {
+function Q(e) {
   var t, n, s;
   let {
     user: _,
@@ -169,7 +169,7 @@ function X(e) {
     allowEdit: M = !0,
     showPremiumBadgeUpsell: y = !0,
     hasProfileEffect: W = !1
-  } = e, K = (0, l.useStateFromStores)([N.default], () => N.default.getGuild(O)), X = (0, l.useStateFromStores)([A.default], () => A.default.getId()) === _.id && M, Q = U.default.isPremiumAtLeast(null == c ? void 0 : c.premiumType, H.PremiumTypes.TIER_2), {
+  } = e, K = (0, l.useStateFromStores)([N.default], () => N.default.getGuild(O)), Q = (0, l.useStateFromStores)([A.default], () => A.default.getId()) === _.id && M, X = U.default.isPremiumAtLeast(null == c ? void 0 : c.premiumType, H.PremiumTypes.TIER_2), {
     trackUserProfileAction: q
   } = (0, b.useUserProfileAnalyticsContext)(), [J, $] = r.useState(!1), ee = (0, l.useStateFromStores)([C.default], () => C.default.isFocused()), et = h.GifAutoPlay.getSetting(), {
     bannerSrc: en,
@@ -190,7 +190,7 @@ function X(e) {
     }
   });
   return (0, i.jsx)(k.default, {
-    isPremium: Q,
+    isPremium: X,
     hasThemeColors: null !== (s = null == c ? void 0 : c.canEditThemes) && void 0 !== s && s,
     profileType: L,
     hasBanner: null != en,
@@ -200,7 +200,7 @@ function X(e) {
         profileType: L,
         user: {
           hasBanner: null != en,
-          isPremium: Q,
+          isPremium: X,
           hasProfileEffect: W
         }
       }), {
@@ -212,7 +212,7 @@ function X(e) {
         backgroundImage: null != en ? "url(".concat(en, ")") : void 0,
         backgroundColor: ei !== w.BannerLoadingStatus.COMPLETE ? u.default.unsafe_rawColors.PRIMARY_800.css : eo
       },
-      children: [X ? null == K ? (0, i.jsx)(Z, {
+      children: [Q ? null == K ? (0, i.jsx)(Z, {
         darkenOnHover: W && v,
         profileType: L,
         profileLabel: Y.default.Messages.EDIT_PROFILE,

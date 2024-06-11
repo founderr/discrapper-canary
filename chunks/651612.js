@@ -56,11 +56,11 @@ function _(e) {
     handler: N
   });
   let M = I ? g.default.Messages.HIDE_CHAT : g.default.Messages.SHOW_CHAT,
-    R = [M];
-  v > 0 && R.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
+    y = [M];
+  v > 0 && y.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
     mentionCount: v
-  })), x > 0 && R.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
-  let y = (0, i.useStateFromStores)([p.default], () => p.default.getFocusedLayout()),
+  })), x > 0 && y.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
+  let R = (0, i.useStateFromStores)([p.default], () => p.default.getFocusedLayout()),
     L = v > 0 ? v : x,
     j = L > 0;
   return (0, a.jsxs)("div", {
@@ -69,9 +69,9 @@ function _(e) {
       buttonRef: T,
       onClick: A,
       label: M,
-      "aria-label": R.join(", "),
+      "aria-label": y.join(", "),
       tooltipPosition: "top",
-      iconComponent: y === E.FocusedActivityLayouts.NO_CHAT ? o.ChevronLargeUpIcon : r.ChevronLargeDownIcon,
+      iconComponent: R === E.FocusedActivityLayouts.NO_CHAT ? o.ChevronLargeUpIcon : r.ChevronLargeDownIcon,
       themeable: !0,
       className: n,
       ..._

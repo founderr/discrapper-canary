@@ -30,8 +30,8 @@ var l = n("120356"),
   v = n("754424"),
   N = n("877410"),
   M = n("572004"),
-  R = n("5192"),
-  y = n("51144"),
+  y = n("5192"),
+  R = n("51144"),
   L = n("991570"),
   j = n("981631"),
   O = n("689938"),
@@ -64,7 +64,7 @@ function D(e) {
         children: (0, a.jsx)(r.Text, {
           variant: "text-lg/medium",
           children: (0, a.jsx)(r.NameWithRole, {
-            name: R.default.getName(l, null, t),
+            name: y.default.getName(l, null, t),
             color: r.tokens.colors.HEADER_PRIMARY.css
           })
         })
@@ -73,7 +73,7 @@ function D(e) {
         children: (0, a.jsx)(r.Text, {
           variant: "text-md/medium",
           color: "text-normal",
-          children: y.default.getUserTag(t)
+          children: R.default.getUserTag(t)
         })
       })]
     }), (0, a.jsx)("div", {
@@ -127,13 +127,13 @@ function U(e) {
     canKickUser: null != p && C.default.canManageUser(j.Permissions.KICK_MEMBERS, l, p),
     canBanUser: null != p && C.default.canManageUser(j.Permissions.BAN_MEMBERS, l, p),
     canModerateMembers: null != p && (0, f.canToggleCommunicationDisableOnUser)(p.id, l.id, [_.default, E.default, C.default])
-  }), [l, p]), R = (0, d.isMemberCommunicationDisabled)(s), {
-    analyticsLocations: y,
+  }), [l, p]), y = (0, d.isMemberCommunicationDisabled)(s), {
+    analyticsLocations: R,
     newestAnalyticsLocation: L
   } = (0, u.default)(), D = (0, h.useTrackModerationAction)(m, {
     targetUserId: l.id,
     location: L,
-    locations: y
+    locations: R
   });
   return (0, a.jsxs)("div", {
     className: P.bottomRow,
@@ -216,7 +216,7 @@ function U(e) {
         backgroundColor: t
       },
       onClick: () => {
-        R ? (0, c.openEnableCommunication)(s.guildId, s.userId, y) : (0, c.openDisableCommunication)(s.guildId, s.userId, y)
+        y ? (0, c.openEnableCommunication)(s.guildId, s.userId, R) : (0, c.openDisableCommunication)(s.guildId, s.userId, R)
       },
       children: [(0, a.jsx)(A.default, {
         width: 22,
@@ -225,7 +225,7 @@ function U(e) {
       }), (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: R ? O.default.Messages.REMOVE : O.default.Messages.TIMEOUT_USER
+        children: y ? O.default.Messages.REMOVE : O.default.Messages.TIMEOUT_USER
       })]
     }), (0, a.jsxs)(b, {
       "aria-label": O.default.Messages.COPY_ID,

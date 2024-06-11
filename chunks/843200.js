@@ -2,8 +2,8 @@
 s.r(t);
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("512722"),
   o = s.n(r),
   d = s("442837"),
@@ -82,7 +82,7 @@ class I extends n.Component {
       isVerified: s
     } = this.props;
     return t && s ? null : (0, a.jsx)(u.Card, {
-      className: i()(_.wrapper, e),
+      className: l()(_.wrapper, e),
       children: (0, a.jsxs)(S.default, {
         align: S.default.Align.CENTER,
         children: [(0, a.jsx)(S.default.Child, {

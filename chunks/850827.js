@@ -51,13 +51,13 @@ t.default = (0, d.default)(e => {
   }), F = k === S.Types.PROFILE || k === S.Types.PROFILE_V2 || k === S.Types.SIMPLIFIED_PROFILE, H = k === S.Types.STREAM_PREVIEW || null != a, Y = k === S.Types.SIMPLIFIED_PROFILE || k === S.Types.BITE_SIZE_POPOUT, j = (0, h.default)(t), W = F ? f.default.Align.END : f.default.Align.STRETCH, K = j || H ? f.default.Direction.HORIZONTAL : f.default.Direction.VERTICAL, z = (null == t ? void 0 : t.type) === M.ActivityTypes.HANG_STATUS, Z = (0, l.useStateFromStores)([T.default, E.default], () => {
     var e;
     return z ? E.default.getChannel(null === (e = T.default.getVoiceStateForUser(r.id)) || void 0 === e ? void 0 : e.channelId) : null
-  }), X = K === f.default.Direction.VERTICAL;
+  }), Q = K === f.default.Direction.VERTICAL;
   return (0, i.jsx)(f.default, {
     grow: 0,
     align: W,
     direction: K,
-    wrap: X ? f.default.Wrap.WRAP : f.default.Wrap.NO_WRAP,
-    className: s()(d, y.buttonsWrapper, X ? y.vertical : y.horizontal),
+    wrap: Q ? f.default.Wrap.WRAP : f.default.Wrap.NO_WRAP,
+    className: s()(d, y.buttonsWrapper, Q ? y.vertical : y.horizontal),
     children: (() => {
       if ((0, A.default)(t)) return (0, i.jsx)(m.default, {
         platform: _.default.get(M.PlatformTypes.XBOX),

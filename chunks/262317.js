@@ -31,8 +31,8 @@ var a, l = n("735250"),
   v = n("314897"),
   N = n("430824"),
   M = n("496675"),
-  R = n("979651"),
-  y = n("242315"),
+  y = n("979651"),
+  R = n("242315"),
   L = n("805009"),
   j = n("981631"),
   O = n("927923"),
@@ -76,7 +76,7 @@ function w(e) {
     }),
     children: [(0, l.jsx)("div", {
       className: b.audienceIconContainer,
-      children: (0, l.jsx)(y.default, {
+      children: (0, l.jsx)(R.default, {
         className: b.audienceIcon
       })
     }), (0, l.jsx)(u.Text, {
@@ -92,7 +92,7 @@ class k extends(a = s.PureComponent) {
       channel: e,
       isStreaming: t
     } = this.props;
-    return t && (0, S.canWatchStream)(e, R.default, N.default, M.default, E.default)[0]
+    return t && (0, S.canWatchStream)(e, y.default, N.default, M.default, E.default)[0]
   }
   render() {
     let {
@@ -261,8 +261,8 @@ class k extends(a = s.PureComponent) {
         channel: v,
         hangStatusActivity: N,
         showHangStatus: M,
-        isSelf: R,
-        application: y
+        isSelf: y,
+        application: R
       } = this.props, {
         userPopoutOpen: j,
         isHoveringHangStatus: P
@@ -297,8 +297,8 @@ class k extends(a = s.PureComponent) {
         guildId: v.guild_id,
         hangStatusActivity: N,
         showHangStatus: M,
-        isSelf: R,
-        application: y,
+        isSelf: y,
+        application: R,
         channelId: v.id
       };
       if (t) {

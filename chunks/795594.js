@@ -2,8 +2,8 @@
 s.r(t), s("653041"), s("47120");
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("658722"),
   o = s.n(r),
   d = s("243814"),
@@ -18,15 +18,15 @@ var a = s("735250"),
   g = s("230711"),
   f = s("497321"),
   m = s("468026"),
-  C = s("566620"),
-  A = s("317381"),
+  A = s("566620"),
+  C = s("317381"),
   O = s("979200"),
   h = s("713938"),
-  p = s("881998"),
-  R = s("246946"),
+  R = s("881998"),
+  p = s("246946"),
   M = s("186095"),
-  x = s("285952"),
-  D = s("6048"),
+  D = s("285952"),
+  x = s("6048"),
   L = s("950463"),
   P = s("507893"),
   b = s("768581"),
@@ -86,7 +86,7 @@ let k = e => {
       scopes: t,
       application: s,
       onDelete: n,
-      disclosures: l
+      disclosures: i
     } = e, r = () => {
       let e = B.default.Messages.DELETE_APP_CONFIRM_MSG;
       return (0, j.default)(s.id) && (e = (0, a.jsxs)(a.Fragment, {
@@ -116,7 +116,7 @@ let k = e => {
       })
     }, c = (0, j.useShouldWarnAuthorizedAppTwoWay)(s.id);
     return (0, a.jsx)(I.Card, {
-      className: i()(y.authedApp, V.marginBottom8),
+      className: l()(y.authedApp, V.marginBottom8),
       outline: !0,
       children: (0, a.jsxs)(I.HeadingLevel, {
         component: (() => {
@@ -124,7 +124,7 @@ let k = e => {
               id: s.id,
               icon: s.icon
             }),
-            t = null != e ? (0, a.jsx)(x.default.Child, {
+            t = null != e ? (0, a.jsx)(D.default.Child, {
               className: y.appAvatar,
               grow: 0,
               children: (0, a.jsx)("img", {
@@ -132,17 +132,17 @@ let k = e => {
                 alt: ""
               })
             }) : null;
-          return (0, a.jsxs)(x.default, {
-            className: i()(y.__invalid_header, V.marginBottom20),
-            children: [(0, a.jsxs)(x.default, {
+          return (0, a.jsxs)(D.default, {
+            className: l()(y.__invalid_header, V.marginBottom20),
+            children: [(0, a.jsxs)(D.default, {
               className: y.headerInfo,
-              children: [t, (0, a.jsx)(x.default.Child, {
+              children: [t, (0, a.jsx)(D.default.Child, {
                 children: (0, a.jsx)(I.Heading, {
                   variant: "text-sm/semibold",
                   children: s.name
                 })
               })]
-            }), (0, a.jsx)(x.default.Child, {
+            }), (0, a.jsx)(D.default.Child, {
               wrap: !0,
               grow: 0,
               children: (0, a.jsx)(I.Button, {
@@ -199,22 +199,22 @@ let k = e => {
         })(), (() => {
           let e = [];
           for (let s of t) e.push((0, h.getScopeName)(s, t)), s === d.OAuth2Scopes.APPLICATIONS_COMMANDS && e.push(B.default.Messages.SCOPE_DM_YOU);
-          if (e.length > 0 || null != l && l.length > 0) return (0, a.jsx)(I.FormItem, {
+          if (e.length > 0 || null != i && i.length > 0) return (0, a.jsx)(I.FormItem, {
             faded: !0,
             title: B.default.Messages.PERMISSIONS,
             className: V.marginTop20,
             children: (0, a.jsxs)("ul", {
               children: [e.map((e, t) => (0, a.jsxs)("li", {
-                className: i()(y.permission, V.marginTop8),
+                className: l()(y.permission, V.marginTop8),
                 children: [(0, a.jsx)("i", {
                   className: y.permissionCheckmark
                 }), (0, a.jsx)(I.FormText, {
                   children: e
                 })]
-              }, t)), null == l ? void 0 : l.map((t, s) => {
+              }, t)), null == i ? void 0 : i.map((t, s) => {
                 let n = (0, O.getTextForDisclosure)(t);
                 return null != n ? (0, a.jsxs)("li", {
-                  className: i()(y.permission, V.marginTop8),
+                  className: l()(y.permission, V.marginTop8),
                   children: [(0, a.jsx)(k, {
                     disclosure: t
                   }), (0, a.jsx)(I.FormText, {
@@ -231,20 +231,20 @@ let k = e => {
     })
   };
 t.default = () => {
-  let e = (0, u.useStateFromStores)([R.default], () => R.default.hidePersonalInformation),
-    t = (0, u.useStateFromStores)([p.default], () => p.default.getApps()),
-    l = (0, u.useStateFromStores)([A.default], () => A.default.getSelfEmbeddedActivities());
+  let e = (0, u.useStateFromStores)([p.default], () => p.default.hidePersonalInformation),
+    t = (0, u.useStateFromStores)([R.default], () => R.default.getApps()),
+    i = (0, u.useStateFromStores)([C.default], () => C.default.getSelfEmbeddedActivities());
   n.useEffect(() => {
     N.default.fetch()
   }, []);
-  let i = e => {
+  let l = e => {
       let {
         id: t,
         application: s
       } = e;
       N.default.delete(t);
-      let a = l.get(s.id);
-      null != a && (0, C.stopEmbeddedActivity)({
+      let a = i.get(s.id);
+      null != a && (0, A.stopEmbeddedActivity)({
         channelId: a.channelId,
         applicationId: s.id
       })
@@ -258,8 +258,8 @@ t.default = () => {
     },
     E = () => (0, a.jsx)("div", {
       className: y.searchContainer,
-      children: (0, a.jsx)(D.default, {
-        size: D.default.Sizes.MEDIUM,
+      children: (0, a.jsx)(x.default, {
+        size: x.default.Sizes.MEDIUM,
         query: r,
         onChange: c,
         onClear: S,
@@ -300,7 +300,7 @@ t.default = () => {
         children: [E(), T(null, B.default.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
       }) : (0, a.jsxs)(a.Fragment, {
         children: [E(), _.sort((e, t) => e.application.name.localeCompare(t.application.name)).map(e => (0, a.jsx)(w, {
-          onDelete: () => i(e),
+          onDelete: () => l(e),
           ...e
         }, e.id))]
       })

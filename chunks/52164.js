@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("735250");
 s("470079");
 var n = s("512722"),
-  l = s.n(n),
-  i = s("481060"),
+  i = s.n(n),
+  l = s("481060"),
   r = s("100527"),
   o = s("906732"),
   d = s("509545"),
@@ -42,27 +42,27 @@ function N(e) {
     });
   if (null == f) return null;
   let m = f.subscriptionPlanId,
-    C = d.default.get(m);
-  l()(null != C, "Missing plan");
-  let A = (0, c.formatPrice)(N.total, N.currency),
+    A = d.default.get(m);
+  i()(null != A, "Missing plan");
+  let C = (0, c.formatPrice)(N.total, N.currency),
     O = "";
-  return C.interval === E.SubscriptionIntervalTypes.YEAR ? O = _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
-    price: A,
+  return A.interval === E.SubscriptionIntervalTypes.YEAR ? O = _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
+    price: C,
     termsUrl: T.MarketingURLs.TERMS,
     paidURL: T.MarketingURLs.PAID_TERMS,
     privacyUrl: T.MarketingURLs.PRIVACY
-  }) : C.interval === E.SubscriptionIntervalTypes.MONTH && (O = 1 === C.intervalCount ? _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
-    price: A,
+  }) : A.interval === E.SubscriptionIntervalTypes.MONTH && (O = 1 === A.intervalCount ? _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
+    price: C,
     termsUrl: T.MarketingURLs.TERMS,
     paidURL: T.MarketingURLs.PAID_TERMS,
     privacyUrl: T.MarketingURLs.PRIVACY
   }) : _.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MULTI_MONTH.format({
-    price: A,
+    price: C,
     termsUrl: T.MarketingURLs.TERMS,
     paidURL: T.MarketingURLs.PAID_TERMS,
     privacyUrl: T.MarketingURLs.PRIVACY,
-    intervalCount: C.intervalCount
-  })), (0, a.jsx)(i.Text, {
+    intervalCount: A.intervalCount
+  })), (0, a.jsx)(l.Text, {
     color: "text-muted",
     className: g,
     variant: "text-xs/normal",

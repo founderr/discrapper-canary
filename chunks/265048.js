@@ -45,8 +45,8 @@ let h = (0, s.default)(f),
       v = null !== (p = null === (s = S.assets) || void 0 === s ? void 0 : s.large_text) && void 0 !== p ? p : void 0,
       N = null !== (E = S.name) && void 0 !== E ? E : e.extra.game_name,
       M = S.details,
-      R = S.state,
-      y = S.party,
+      y = S.state,
+      R = S.party,
       L = null != S.timestamps ? (0, a.jsx)(h, {
         timestamps: S.timestamps
       }) : (0, a.jsx)(f, {
@@ -58,9 +58,9 @@ let h = (0, s.default)(f),
       iconTitle: v,
       user: g,
       activity: S,
-      state: R,
+      state: y,
       details: M,
-      party: y,
+      party: R,
       gameTitle: N,
       gameTime: L,
       inExperiment: I

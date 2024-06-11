@@ -57,7 +57,7 @@ function E(e) {
     N = (0, d.normalizeCoordinate)(E.x, g),
     M = (0, d.normalizeCoordinate)(E.y, S),
     {
-      outlineColor: R
+      outlineColor: y
     } = (0, d.getUserColors)(E.userId, T, I, _);
   if (p(E, e => {
       var t, n;
@@ -86,7 +86,7 @@ function E(e) {
         }
         return a.particles[e.id] = u, a.lastSpawned[e.id] = Date.now(), a
       })
-    }(E, N, M), (0, c.renderAvatarCursorOutline)(C, N, M, R, f.OUTLINE_WIDTH), (0, c.renderAvatarCursor)(C, N, M, E.userId), p(E, e => (function(e, t, n) {
+    }(E, N, M), (0, c.renderAvatarCursorOutline)(C, N, M, y, f.OUTLINE_WIDTH), (0, c.renderAvatarCursor)(C, N, M, E.userId), p(E, e => (function(e, t, n) {
       if (null == t) return;
       let a = n.size * window.devicePixelRatio,
         l = n.x - a / 2 * window.devicePixelRatio,

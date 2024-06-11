@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return R
   }
 });
 var a = n("735250"),
@@ -29,13 +29,13 @@ var a = n("735250"),
   v = n("124368"),
   N = n("981631"),
   M = n("689938"),
-  R = n("899091");
+  y = n("899091");
 
-function y(e) {
+function R(e) {
   let {
     channelId: t,
     baseChannelId: s,
-    channelViewSource: y = "Split View"
+    channelViewSource: R = "Split View"
   } = e, L = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(t)), j = (0, r.useStateFromStores)([T.default], () => T.default.getGuild(null == L ? void 0 : L.getGuildId())), O = (0, m.default)(L);
   (function(e) {
     let t = (0, r.useStateFromStores)([I.default], () => null != e && !i().isEmpty(I.default.getVoiceStatesForChannel(e.id)));
@@ -54,11 +54,11 @@ function y(e) {
       (0, c.trackWithMetadata)(N.AnalyticEvents.CHANNEL_OPENED, {
         ...e,
         ...(0, c.getChannelOpenedMetadata)(L.id),
-        channel_view: y
+        channel_view: R
       }), (0, h.trackClickstream)(N.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM, {
         channelId: L.id
       })
-    }, [L, y]), null == L || null == j) return null;
+    }, [L, R]), null == L || null == j) return null;
   let D = (0, a.jsx)(x.default, {
     channel: L,
     baseChannelId: s
@@ -79,7 +79,7 @@ function y(e) {
           (0, u.openContextMenuLazy)(e, async () => {
             let {
               default: e
-            } = await n.e("78650").then(n.bind(n, "422200"));
+            } = await n.e("40157").then(n.bind(n, "422200"));
             return t => (0, a.jsx)(e, {
               ...t,
               channel: L
@@ -91,7 +91,7 @@ function y(e) {
         }
       })
     }), (0, a.jsx)("div", {
-      className: R.chat,
+      className: y.chat,
       children: (0, a.jsx)(p.default, {
         channel: L,
         guild: j,

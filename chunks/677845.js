@@ -34,8 +34,8 @@ function v(e) {
     onDoubleClick: v,
     onContextMenu: N,
     channel: M,
-    className: R,
-    inCall: y,
+    className: y,
+    inCall: R,
     totalNumberOfParticipants: L,
     paused: j = !1
   } = e, O = (0, o.useAppContext)() === A.AppContext.POPOUT, P = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(M.guild_id), [M.guild_id]), {
@@ -65,7 +65,7 @@ function v(e) {
       onClick: n,
       onDoubleClick: v,
       onContextMenu: N,
-      inCall: y,
+      inCall: R,
       width: t,
       inPopout: O
     }, e.id));
@@ -105,7 +105,7 @@ function v(e) {
     return null !== (n = null === (t = U[e]) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : "empty-tile"
   }, [U]);
   return (0, a.jsx)(g.default, {
-    className: R,
+    className: y,
     keyExtractor: z,
     paddingTop: 64,
     paddingBottom: 64,

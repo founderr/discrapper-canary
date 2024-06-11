@@ -2,8 +2,8 @@
 s.r(t);
 var a = s("735250"),
   n = s("470079"),
-  l = s("512722"),
-  i = s.n(l),
+  i = s("512722"),
+  l = s.n(i),
   r = s("442837"),
   o = s("481060"),
   d = s("346951"),
@@ -62,7 +62,7 @@ class f extends n.PureComponent {
 }
 t.default = r.default.connectStores([E.default, S.default], () => {
   let e = E.default.getCurrentUser();
-  return i()(null != e, "UserSettingsHypeSquad: currentUser cannot be undefined"), {
+  return l()(null != e, "UserSettingsHypeSquad: currentUser cannot be undefined"), {
     houseMembership: S.default.getHouseMembership(),
     isClaimed: e.isClaimed(),
     isVerified: e.verified

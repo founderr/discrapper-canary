@@ -99,10 +99,10 @@ let Z = {
     delay: 300,
     position: "top"
   },
-  X = e => t => {
+  Q = e => t => {
     null == e || e(t), (0, x.setVolume)(t)
   },
-  Q = e => t => {
+  X = e => t => {
     null == e || e(t), (0, x.setMuted)(t)
   };
 
@@ -116,7 +116,7 @@ function q(e) {
     renderAdjacentContent: l,
     renderOverlayContent: u,
     ...d
-  } = e, _ = X(t), c = Q(n);
+  } = e, _ = Q(t), c = X(n);
   return i = null == i ? x.getVolume : i, r = null == r ? x.getMuted : r, (0, s.jsxs)(a.Fragment, {
     children: [(0, s.jsx)(M.default, {
       ...d,
@@ -140,7 +140,7 @@ function J(e) {
     onVolumeHide: o,
     renderAdjacentContent: l,
     ...u
-  } = e, d = X(t), _ = Q(i);
+  } = e, d = Q(t), _ = X(i);
   return n = null == n ? x.getVolume : n, (0, s.jsxs)(a.Fragment, {
     children: [(0, s.jsx)(D.default, {
       ...u,
@@ -161,7 +161,7 @@ function $(e) {
     volume: n,
     onMute: i,
     ...r
-  } = e, a = X(t), o = Q(i);
+  } = e, a = Q(t), o = X(i);
   return n = null == n ? x.getVolume : n, (0, s.jsx)(R.default, {
     ...r,
     onVolumeChange: a,
@@ -439,14 +439,14 @@ function eo(e) {
       var t;
       C(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
     }, 64), [C]),
-    X = a.useMemo(() => d().throttle(() => {
+    Q = a.useMemo(() => d().throttle(() => {
       (0, N.setHighlightedSummary)(null)
     }, 1200, {
       trailing: !1
     }), []),
-    Q = a.useCallback(e => {
-      X(), Z(e)
-    }, [Z, X]),
+    X = a.useCallback(e => {
+      Q(), Z(e)
+    }, [Z, Q]),
     [q, J] = a.useState(!1),
     $ = a.useCallback(() => {
       B.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
@@ -468,10 +468,10 @@ function eo(e) {
       (0, N.setSelectedSummary)(r.id, n.id), (0, N.setHighlightedSummary)(r.id, n.id);
       let i = () => {
         u.removeScrollCompleteCallback(i), setTimeout(() => {
-          u.addAutomaticAnchorCallback(Q, !1)
+          u.addAutomaticAnchorCallback(X, !1)
         }, 100)
       };
-      u.removeAutomaticAnchorCallback(Q), u.addScrollCompleteCallback(i), B.default.track(H.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
+      u.removeAutomaticAnchorCallback(X), u.addScrollCompleteCallback(i), B.default.track(H.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
         source: t,
         message_id: n.startId,
         guild_id: r.guild_id,
@@ -485,7 +485,7 @@ function eo(e) {
         jumpType: h.JumpTypes.ANIMATED,
         context: "Summary Jump"
       })
-    }, [y, r, Q, u]),
+    }, [y, r, X, u]),
     et = a.useCallback(e => {
       var t;
       J(e);
@@ -514,9 +514,9 @@ function eo(e) {
       channel_type: r.type
     }), et(!1))
   }, [q, y, r, et]);
-  a.useEffect(() => (u.addAutomaticAnchorCallback(Q), () => {
-    u.removeAutomaticAnchorCallback(Q)
-  }), [u, Q]), a.useEffect(() => {
+  a.useEffect(() => (u.addAutomaticAnchorCallback(X), () => {
+    u.removeAutomaticAnchorCallback(X)
+  }), [u, X]), a.useEffect(() => {
     (0, N.fetchSummaries)(r.id)
   }, [r.id]), a.useEffect(() => (document.addEventListener("mousedown", en), () => {
     document.removeEventListener("mousedown", en)
@@ -680,8 +680,8 @@ function eu(e) {
     W = a.useCallback(e => {
       Y(), F(e)
     }, [F, Y]),
-    [Z, X] = a.useState(!1),
-    Q = a.useCallback(() => {
+    [Z, Q] = a.useState(!1),
+    X = a.useCallback(() => {
       B.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
         topics_dropdown_open: !Z,
         num_summaries: v.length,
@@ -692,8 +692,8 @@ function eu(e) {
         guild_id: r.guild_id,
         channel_id: r.id,
         channel_type: r.type
-      }), X(!Z)
-    }, [Z, v, X, r]),
+      }), Q(!Z)
+    }, [Z, v, Q, r]),
     q = a.useCallback(function(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : j.SummariesTopicClickedSource.PILL_DROPDOWN,
         n = v[e];
@@ -727,7 +727,7 @@ function eu(e) {
     }, [y, q]),
     ee = a.useCallback(e => {
       var t;
-      X(e);
+      Q(e);
       let n = null === (t = g.current) || void 0 === t ? void 0 : t.scrollTop;
       null != n && R(n)
     }, []);
@@ -777,7 +777,7 @@ function eu(e) {
       children: [(0, s.jsx)(E.Clickable, {
         className: z.topicsPillText,
         "aria-label": K.default.Messages.SUMMARY_PILL,
-        onClick: Q,
+        onClick: X,
         children: (0, s.jsxs)("div", {
           className: l()({
             [z.topicsPillTextUnselected]: !Z,
@@ -844,7 +844,7 @@ function eu(e) {
           })]
         }), (0, s.jsx)(E.Clickable, {
           "aria-label": K.default.Messages.CLOSE,
-          onClick: Q,
+          onClick: X,
           className: z.topicsDropdownClose,
           children: (0, s.jsx)(w.default, {})
         })]

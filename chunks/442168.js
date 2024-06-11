@@ -67,7 +67,7 @@ function g(e) {
       }
     },
     M = (0, l.useRef)(null),
-    R = (0, s.useTransition)(A, {
+    y = (0, s.useTransition)(A, {
       keys: e => e.timestamp,
       ref: M,
       from: {
@@ -78,9 +78,9 @@ function g(e) {
       },
       config: p
     }),
-    y = (0, l.useRef)(null),
+    R = (0, l.useRef)(null),
     L = (0, s.useTransition)(A, {
-      ref: y,
+      ref: R,
       keys: e => e.timestamp,
       from: e => ({
         position: "fixed",
@@ -111,11 +111,11 @@ function g(e) {
         null != t.item && null != A.find(e => e.timestamp === t.item.timestamp) && (0, u.dismissSaveClipAnimation)(T, t.item.timestamp)
       }
     });
-  return (0, s.useChain)([M, y], [0, .1], 3e3), (0, a.jsxs)(a.Fragment, {
+  return (0, s.useChain)([M, R], [0, .1], 3e3), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       className: h.hidden,
       ref: S
-    }), R((e, t) => null != t && (0, a.jsx)(s.animated.div, {
+    }), y((e, t) => null != t && (0, a.jsx)(s.animated.div, {
       className: h.whiteFlash,
       style: e
     })), (0, a.jsx)(f.default, {

@@ -151,28 +151,28 @@ t.default = e => {
       children: e.map(z)
     });
   if (U !== A.EmojiCategoryTypes.TOP_GUILD_EMOJI) return Z(t);
-  let X = t.filter(e => !!B && e.type === S.EmojiGridItemTypes.CREATE_EMOJI || e.subCategory === A.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
-    Q = t.filter(e => e.subCategory === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
-  return 0 === Q.length ? Z(t) : (0, i.jsxs)("div", {
+  let Q = t.filter(e => !!B && e.type === S.EmojiGridItemTypes.CREATE_EMOJI || e.subCategory === A.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
+    X = t.filter(e => e.subCategory === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
+  return 0 === X.length ? Z(t) : (0, i.jsxs)("div", {
     className: p.topEmojiSectionContainer,
     children: [(0, i.jsx)("div", {
       className: a()(p.topEmojiContainer, {
-        [p.noEmojis]: 0 === X.length
+        [p.noEmojis]: 0 === Q.length
       }),
-      children: Z(X)
+      children: Z(Q)
     }), (0, i.jsxs)("div", {
       className: p.newlyAddedHighlightContainer,
       children: [(0, i.jsx)("div", {
         className: a()(p.newlyAddedHighlight, {
-          [p.oneItem]: 1 === Q.length,
-          [p.alignRight]: X.length > 0
+          [p.oneItem]: 1 === X.length,
+          [p.alignRight]: Q.length > 0
         }),
-        children: Z(Q)
+        children: Z(X)
       }), (0, i.jsxs)("div", {
         className: a()(p.newlyAddedBadge, {
           [p.newlyAddedBadgeLarge]: W,
           [p.newlyAddedBadgeMedium]: K,
-          [p.alignRight]: X.length > 0
+          [p.alignRight]: Q.length > 0
         }),
         children: [(0, i.jsx)(T.default, {
           foreground: p.newlyAddedBadgeStar

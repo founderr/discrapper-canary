@@ -213,7 +213,7 @@ function K(e) {
     hideTimestamp: j,
     className: K,
     channel: z
-  } = e, Z = r.useMemo(() => null != h ? e => h(e, t) : void 0, [h, t]), [, X] = (0, E.default)(t.author.id, e.guildId), Q = (0, l.useStateFromStores)([R.default], () => R.default.getGuild(e.guildId), [e.guildId]), q = null != t.author && null != Q && g.default.canManageUser(k.Permissions.MODERATE_MEMBERS, t.author, Q), J = X && q, $ = function(e) {
+  } = e, Z = r.useMemo(() => null != h ? e => h(e, t) : void 0, [h, t]), [, Q] = (0, E.default)(t.author.id, e.guildId), X = (0, l.useStateFromStores)([R.default], () => R.default.getGuild(e.guildId), [e.guildId]), q = null != t.author && null != X && g.default.canManageUser(k.Permissions.MODERATE_MEMBERS, t.author, X), J = Q && q, $ = function(e) {
     var t, n;
     let {
       props: s,
@@ -313,7 +313,7 @@ function K(e) {
   }), ee = (0, l.useStateFromStores)([C.default], () => {
     var t;
     return null !== (t = e.displayCompactAvatars) && void 0 !== t ? t : C.default.displayCompactAvatars
-  }), et = (!s || ee) && null != b && null != Q ? (0, i.jsx)(u.Popout, {
+  }), et = (!s || ee) && null != b && null != X ? (0, i.jsx)(u.Popout, {
     animation: u.Popout.Animation.TRANSLATE,
     align: "center",
     autoInvert: !0,
@@ -321,7 +321,7 @@ function K(e) {
     position: "right",
     renderPopout: () => (0, i.jsx)(S.default, {
       roleIcon: b,
-      guild: Q
+      guild: X
     }),
     children: e => {
       let {
@@ -346,11 +346,11 @@ function K(e) {
   (0, T.shouldShowNitroBadge)(null != b, "Message Username") && es && !s && !eo && ei.push((0, i.jsx)(W, {
     currentUserIsPremium: ea,
     author: t.author
-  }, "nitro-author")), null != et && ei.push(et), null != Q && ei.push((0, i.jsx)(I.default, {
-    guild: Q,
+  }, "nitro-author")), null != et && ei.push(et), null != X && ei.push((0, i.jsx)(I.default, {
+    guild: X,
     message: t
-  }, "new-member")), null != z && null != Q && ei.push((0, i.jsx)(c.default, {
-    guild: Q,
+  }, "new-member")), null != z && null != X && ei.push((0, i.jsx)(c.default, {
+    guild: X,
     channel: z,
     userId: t.author.id,
     messageId: t.id

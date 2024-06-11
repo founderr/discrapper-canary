@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return R
   }
 }), s("653041"), s("47120");
 var a = s("735250"),
   n = s("470079"),
-  l = s("442837"),
-  i = s("481060"),
+  i = s("442837"),
+  l = s("481060"),
   r = s("660216"),
   o = s("40908"),
   d = s("592125"),
@@ -29,7 +29,7 @@ function m(e) {
   }), e.setLimit(1 / 0)
 }
 
-function C(e) {
+function A(e) {
   let {
     height: t
   } = e;
@@ -40,14 +40,14 @@ function C(e) {
   })
 }
 
-function A() {
-  return (0, a.jsx)(C, {
+function C() {
+  return (0, a.jsx)(A, {
     height: 16
   }, "footer")
 }
 
 function O() {
-  return (0, a.jsx)(C, {
+  return (0, a.jsx)(A, {
     height: 8
   }, "header")
 }
@@ -55,7 +55,7 @@ function O() {
 function h() {
   return (0, a.jsx)("div", {
     className: N.voiceListSearchEmpty,
-    children: (0, a.jsx)(i.Text, {
+    children: (0, a.jsx)(l.Text, {
       variant: "text-md/medium",
       color: "text-muted",
       className: N.noVoiceChannelSelected,
@@ -64,14 +64,14 @@ function h() {
   })
 }
 
-function p(e) {
+function R(e) {
   var t, s;
   let {
-    keybind: l
-  } = e, o = n.useRef(l);
-  n.useEffect(() => void(o.current = l));
-  let [d, u] = n.useState(null !== (s = null === (t = l.params) || void 0 === t ? void 0 : t.channelId) && void 0 !== s ? s : void 0), c = n.useCallback(() => {
-    (0, i.openModalLazy)(async () => e => (0, a.jsx)(R, {
+    keybind: i
+  } = e, o = n.useRef(i);
+  n.useEffect(() => void(o.current = i));
+  let [d, u] = n.useState(null !== (s = null === (t = i.params) || void 0 === t ? void 0 : t.channelId) && void 0 !== s ? s : void 0), c = n.useCallback(() => {
+    (0, l.openModalLazy)(async () => e => (0, a.jsx)(p, {
       ...e,
       onSelect: e => {
         u(e), r.default.setKeybind({
@@ -83,7 +83,7 @@ function p(e) {
       }
     }))
   }, []);
-  return (0, a.jsx)(i.FormSection, {
+  return (0, a.jsx)(l.FormSection, {
     title: I.default.Messages.USER_SETTINGS_KEYBIND_SWITCH_SERVER_SETTINGS_SECTION,
     className: N.channelIdSection,
     children: (0, a.jsxs)(E.default, {
@@ -96,7 +96,7 @@ function p(e) {
       }), (0, a.jsx)(E.default.Child, {
         grow: 0,
         shrink: 0,
-        children: (0, a.jsx)(i.Button, {
+        children: (0, a.jsx)(l.Button, {
           onClick: c,
           children: I.default.Messages.USER_SETTINGS_KEYBINDS_SELECT_VOICE_CHANNEL
         })
@@ -105,15 +105,15 @@ function p(e) {
   })
 }
 
-function R(e) {
+function p(e) {
   let {
     transitionState: t,
     onClose: s,
     onSelect: r
   } = e, E = n.useId(), g = n.useRef(null), {
-    mouseFocusEnabled: C,
-    enableMouseFocus: p,
-    disableMouseFocus: R
+    mouseFocusEnabled: A,
+    enableMouseFocus: R,
+    disableMouseFocus: p
   } = function() {
     let e = n.useRef(!1),
       t = n.useCallback(() => {
@@ -129,15 +129,15 @@ function R(e) {
     }
   }(), {
     query: M,
-    updateQuery: x,
-    queryResults: D
+    updateQuery: D,
+    queryResults: x
   } = (0, o.default)({
     visible: !0,
     autocompleterResultTypes: f,
     autocompleterBeforeCreateSearchContext: m
   }), L = function(e) {
     let t = "" !== e,
-      s = (0, l.useStateFromStoresArray)([u.default, d.default, S.default], () => {
+      s = (0, i.useStateFromStoresArray)([u.default, d.default, S.default], () => {
         let e = S.default.getGuildId();
         if (t || null == e) return [];
         let s = [];
@@ -167,29 +167,29 @@ function R(e) {
       row: P
     })
   }, [P]);
-  let v = null != L ? L.length : D.length,
+  let v = null != L ? L.length : x.length,
     U = (() => {
       if (null != L) {
         var e;
         return null === (e = L[P]) || void 0 === e ? void 0 : e.id
       }
-      let t = D[P];
+      let t = x[P];
       if ((null == t ? void 0 : t.type) === _.AutocompleterResultTypes.VOICE_CHANNEL) return t.record.id
     })();
   return (0, a.jsx)("div", {
     className: N.voiceModalContainer,
-    onMouseMove: p,
-    children: (0, a.jsxs)(i.ModalRoot, {
+    onMouseMove: R,
+    children: (0, a.jsxs)(l.ModalRoot, {
       transitionState: t,
-      size: i.ModalSize.MEDIUM,
+      size: l.ModalSize.MEDIUM,
       className: N.voiceModalRootContainer,
       children: [(0, a.jsx)("div", {
         className: N.inputWrapper,
-        children: (0, a.jsx)(i.TextInput, {
+        children: (0, a.jsx)(l.TextInput, {
           value: M,
-          onChange: x,
+          onChange: D,
           onKeyDown: function(e) {
-            R();
+            p();
             let t = e.key.toLowerCase();
             if ("arrowdown" === t || "arrowup" === t || "enter" === t || "escape" === t) switch (e.preventDefault(), t) {
               case "escape":
@@ -198,7 +198,7 @@ function R(e) {
               case "enter": {
                 let e = (() => {
                   if (null != L) return L[P];
-                  let e = D[P];
+                  let e = x[P];
                   if ((null == e ? void 0 : e.type) === _.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
                 })();
                 null == e ? r(void 0) : r(e.id), s();
@@ -219,7 +219,7 @@ function R(e) {
           "aria-autocomplete": "list",
           spellCheck: !1
         })
-      }), 0 === v && "" !== M && (0, a.jsx)(h, {}), (v > 0 || "" === M) && (0, a.jsx)(i.ListThin, {
+      }), 0 === v && "" !== M && (0, a.jsx)(h, {}), (v > 0 || "" === M) && (0, a.jsx)(l.ListThin, {
         innerId: E,
         innerRole: "listbox",
         "aria-label": I.default.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
@@ -230,30 +230,30 @@ function R(e) {
             row: t
           } = e, n = (() => {
             if (null != L) return L[t];
-            let e = D[t];
+            let e = x[t];
             if ((null == e ? void 0 : e.type) === _.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
           })();
           if (null == n) return null;
-          let l = null != n.parent_id ? d.default.getChannel(n.parent_id) : void 0,
-            i = c.default.getGuild(n.guild_id);
+          let i = null != n.parent_id ? d.default.getChannel(n.parent_id) : void 0,
+            l = c.default.getGuild(n.guild_id);
           return (0, a.jsx)(T.Channel, {
             id: n.id,
             channel: n,
-            category: l,
+            category: i,
             focused: P === t,
-            onMouseEnter: () => C.current && b(t),
+            onMouseEnter: () => A.current && b(t),
             onClick: () => {
               r(n.id), s()
             },
             onFocus: () => b(t),
-            children: null != i ? (0, a.jsx)("div", {
+            children: null != l ? (0, a.jsx)("div", {
               className: N.guildName,
-              children: i.name
+              children: l.name
             }) : null
           }, n.id)
         },
         renderListHeader: O,
-        renderFooter: A,
+        renderFooter: C,
         sectionHeight: 0,
         rowHeight: 34,
         className: N.voiceChannelList,
@@ -271,7 +271,7 @@ function M(e) {
     channel: s,
     category: n,
     guild: r
-  } = (0, l.useStateFromStoresObject)([d.default, c.default], () => {
+  } = (0, i.useStateFromStoresObject)([d.default, c.default], () => {
     let e = null != t ? d.default.getChannel(t) : void 0;
     return null != e ? {
       channel: e,
@@ -283,7 +283,7 @@ function M(e) {
       guild: void 0
     }
   });
-  return null == s ? (0, a.jsx)(i.Text, {
+  return null == s ? (0, a.jsx)(l.Text, {
     variant: "text-md/medium",
     color: "text-muted",
     className: N.noVoiceChannelSelected,

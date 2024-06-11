@@ -4,16 +4,16 @@ s.r(t), s.d(t, {
     return r
   },
   watchCandidateGames: function() {
-    return i
+    return l
   }
 }), s("411104");
 var a = s("570140"),
   n = s("358085"),
-  l = s("998502");
+  i = s("998502");
 
-function i() {
+function l() {
   if (!(0, n.isDesktop)()) throw Error("Attempted to observe candidate games on a non-desktop platform");
-  l.default.setCandidateGamesCallback(e => {
+  i.default.setCandidateGamesCallback(e => {
     a.default.dispatch({
       type: "CANDIDATE_GAMES_CHANGE",
       games: e
@@ -25,7 +25,7 @@ function i() {
 
 function r() {
   if (!(0, n.isDesktop)()) throw Error("Attempted to stop observing candidate games on a non-desktop platform");
-  l.default.clearCandidateGamesCallback(), a.default.dispatch({
+  i.default.clearCandidateGamesCallback(), a.default.dispatch({
     type: "GAME_DETECTION_WATCH_CANDIDATE_GAMES_STOP"
   })
 }

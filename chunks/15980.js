@@ -1,6 +1,6 @@
 "use strict";
 s.r(t), s("47120");
-var a, n, l, i, r = s("442837"),
+var a, n, i, l, r = s("442837"),
   o = s("570140"),
   d = s("911969");
 let u = !1,
@@ -13,12 +13,12 @@ class S extends(a = r.default.Store) {
     return c
   }
 }
-i = "WebAuthnStore", (l = "displayName") in(n = S) ? Object.defineProperty(n, l, {
-  value: i,
+l = "WebAuthnStore", (i = "displayName") in(n = S) ? Object.defineProperty(n, i, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : n[l] = i, t.default = new S(o.default, {
+}) : n[i] = l, t.default = new S(o.default, {
   LOGOUT: function() {
     c = [], u = !1
   },

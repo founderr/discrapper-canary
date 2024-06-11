@@ -49,7 +49,7 @@ t.default = function(e) {
     ...j
   } = e, W = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), K = (0, a.useStateFromStores)([f.default], () => f.default.isFocused()), z = (0, a.useStateFromStores)([T.default], () => T.default.getPremiumTypeSubscription()), {
     analyticsLocations: Z
-  } = (0, u.default)(), X = e => {
+  } = (0, u.default)(), Q = e => {
     if (e.preventDefault(), null == W) {
       (0, c.transitionTo)(p.Routes.LOGIN);
       return
@@ -143,7 +143,7 @@ t.default = function(e) {
     className: L,
     innerClassName: C.premiumSubscribeButton,
     color: o.Button.Colors.BRAND_INVERTED,
-    onClick: null != H ? H : X,
+    onClick: null != H ? H : Q,
     ...j,
     children: [w && (0, i.jsx)(A.default, {
       className: C.premiumIcon
@@ -157,7 +157,7 @@ t.default = function(e) {
     className: L,
     innerClassName: C.giftButton,
     color: o.Button.Colors.PRIMARY,
-    onClick: null != H ? H : X,
+    onClick: null != H ? H : Q,
     ...j,
     children: [(0, i.jsx)(h.default, {
       className: C.giftIcon
@@ -166,11 +166,11 @@ t.default = function(e) {
       children: null != M ? M : O.default.Messages.PREMIUM_GIFTING_BUTTON
     })]
   });
-  let Q = O.default.Messages.APPLICATION_STORE_GET_PREMIUM,
+  let X = O.default.Messages.APPLICATION_STORE_GET_PREMIUM,
     q = null != z ? (0, m.getPremiumPlanItem)(z) : null,
     J = null != q ? m.default.getPremiumType(q.planId) : null == W ? void 0 : W.premiumType,
     $ = r === N.PremiumSubscriptionSKUs.TIER_2 && null != J && [N.PremiumTypes.TIER_0, N.PremiumTypes.TIER_1].includes(J);
-  $ && (Q = O.default.Messages.BILLING_SWITCH_PLAN_UPGRADE);
+  $ && (X = O.default.Messages.BILLING_SWITCH_PLAN_UPGRADE);
   let ee = null != z && z.status !== p.SubscriptionStatusTypes.ACCOUNT_HOLD && !(0, E.isNoneSubscription)(z.planId) && !$,
     et = ee ? null != x ? x : function(e) {
       let {
@@ -197,7 +197,7 @@ t.default = function(e) {
     var t, n;
     return (0, i.jsxs)(S.default, {
       disabled: ee,
-      onClick: null != H ? H : X,
+      onClick: null != H ? H : Q,
       innerClassName: C.premiumSubscribeButton,
       color: r === N.PremiumSubscriptionSKUs.TIER_1 ? o.Button.Colors.PRIMARY : o.Button.Colors.GREEN,
       size: g,
@@ -213,7 +213,7 @@ t.default = function(e) {
         className: s()(C.premiumIcon, P)
       }), (0, i.jsx)("span", {
         className: s()(C.buttonText, y),
-        children: null !== (n = null !== (t = null == et ? void 0 : et.disabledButtonText) && void 0 !== t ? t : M) && void 0 !== n ? n : Q
+        children: null !== (n = null !== (t = null == et ? void 0 : et.disabledButtonText) && void 0 !== t ? t : M) && void 0 !== n ? n : X
       })]
     })
   }

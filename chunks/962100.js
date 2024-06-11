@@ -1,14 +1,14 @@
 "use strict";
 s.r(t), s.d(t, {
   openDownloadAppsModal: function() {
-    return l
+    return i
   }
 });
 var a = s("735250");
 s("470079");
 var n = s("481060");
 
-function l(e) {
+function i(e) {
   (0, n.openModalLazy)(async () => {
     let {
       default: t

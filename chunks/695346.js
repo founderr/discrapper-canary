@@ -58,7 +58,7 @@ n.r(t), n.d(t, {
     return eh
   },
   DisableGamesTab: function() {
-    return Q
+    return X
   },
   DisableHomeAutoNav: function() {
     return ev
@@ -199,7 +199,7 @@ n.r(t), n.d(t, {
     return C
   },
   ViewNsfwCommands: function() {
-    return X
+    return Q
   },
   ViewNsfwGuilds: function() {
     return Z
@@ -394,7 +394,7 @@ let W = (0, o.defineProtoSetting)("privacy", "dropsOptedOut", e => {
   }, e => s.BoolValue.create({
     value: e
   })),
-  X = (0, o.defineProtoSetting)("textAndImages", "viewNsfwCommands", e => {
+  Q = (0, o.defineProtoSetting)("textAndImages", "viewNsfwCommands", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
   }, e => s.BoolValue.create({
@@ -406,7 +406,7 @@ let W = (0, o.defineProtoSetting)("privacy", "dropsOptedOut", e => {
 }, e => s.BoolValue.create({
   value: e
 }));
-let Q = (0, o.defineProtoSetting)("gameLibrary", "disableGamesTab", e => {
+let X = (0, o.defineProtoSetting)("gameLibrary", "disableGamesTab", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
   }, e => s.BoolValue.create({

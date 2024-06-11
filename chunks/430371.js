@@ -34,8 +34,8 @@ function x(e) {
       participants: v,
       filteredParticipants: N,
       popoutWindow: M,
-      inCall: R,
-      channel: y,
+      inCall: y,
+      channel: R,
       selectedParticipant: L,
       showParticipants: j = !0,
       className: O,
@@ -166,7 +166,7 @@ function x(e) {
                 children: (0, a.jsx)(m.default, {
                   focused: !0,
                   noBorder: el >= D || ea >= b,
-                  channel: y,
+                  channel: R,
                   className: _.focusedVideo,
                   videoComponent: k,
                   paused: P,
@@ -176,7 +176,7 @@ function x(e) {
                   onDoubleClick: x,
                   onContextMenu: s,
                   onVideoResize: ef,
-                  inCall: R,
+                  inCall: y,
                   inPopout: w
                 })
               }, i) : null
@@ -190,7 +190,7 @@ function x(e) {
             bottom: ed.value
           },
           children: (0, a.jsx)(u.default, {
-            channelId: y.id,
+            channelId: R.id,
             isParticipantsOpen: j,
             isVertical: !0
           })
@@ -203,14 +203,14 @@ function x(e) {
           visibility: er.value.to(e => 0 === e ? "hidden" : "visible")
         },
         children: (0, a.jsx)(C.default, {
-          channel: y,
+          channel: R,
           onClick: n,
           onContextMenu: s,
           onDoubleClick: x,
           participants: em,
           participantTileWidth: ep,
           selectedParticipantId: L.id,
-          inCall: R,
+          inCall: y,
           paused: P || Y || !j,
           popoutWindow: M
         })
@@ -219,7 +219,7 @@ function x(e) {
       onContextMenuParticipant: s,
       width: D,
       height: b,
-      channel: y,
+      channel: R,
       participants: eh
     }) : null]
   })

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return R
   }
 });
 var a = n("735250"),
@@ -29,15 +29,15 @@ var a = n("735250"),
   v = n("689938"),
   N = n("61707");
 let M = o.AvatarSizes.SIZE_80,
-  R = o.AvatarSizes.SIZE_40;
+  y = o.AvatarSizes.SIZE_40;
 
-function y(e) {
+function R(e) {
   let {
     participant: t,
     channel: n,
     inCall: s,
     width: o,
-    paused: y,
+    paused: R,
     selected: L,
     fit: j,
     onVideoResize: O,
@@ -48,7 +48,7 @@ function y(e) {
     user: w,
     streamId: k,
     speaking: H
-  } = t, G = w.id === F, B = (0, I.default)(t), V = (0, r.useStateFromStores)([g.default], () => g.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(A.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([C.default], () => null != w.id && C.default.isLocalVideoDisabled(w.id, (0, f.default)(t.type)), [w.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, w.id)), K = T.default.getName(n.getGuildId(), n.id, w) + (z ? " ".concat(v.default.Messages.GUEST_NAME_SUFFIX) : ""), Z = H && (W || V), X = o < 124 ? R : M, {
+  } = t, G = w.id === F, B = (0, I.default)(t), V = (0, r.useStateFromStores)([g.default], () => g.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(A.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([C.default], () => null != w.id && C.default.isLocalVideoDisabled(w.id, (0, f.default)(t.type)), [w.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, w.id)), K = T.default.getName(n.getGuildId(), n.id, w) + (z ? " ".concat(v.default.Messages.GUEST_NAME_SUFFIX) : ""), Z = H && (W || V), X = o < 124 ? y : M, {
     avatarSrc: q,
     avatarDecorationSrc: J
   } = (0, m.default)({
@@ -67,7 +67,7 @@ function y(e) {
     streamId: k,
     videoComponent: U,
     fit: j,
-    paused: y,
+    paused: R,
     videoSpinnerContext: w.id === F ? d.VideoSpinnerContext.SELF_VIDEO : d.VideoSpinnerContext.REMOTE_VIDEO,
     userId: w.id
   }, k) : (0, a.jsx)("div", {

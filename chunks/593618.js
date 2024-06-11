@@ -53,8 +53,8 @@ var i = n("735250"),
   K = n("981631"),
   z = n("689938"),
   Z = n("952972"),
-  X = n("81311");
-let Q = (0, F.cssValueToNumber)(d.default.GUILD_TOOLTIP_ICON_SIZE),
+  Q = n("81311");
+let X = (0, F.cssValueToNumber)(d.default.GUILD_TOOLTIP_ICON_SIZE),
   q = (0, F.cssValueToNumber)(d.default.GUILD_TOOLTIP_ICON_SIZE_V_2);
 
 function J(e) {
@@ -243,7 +243,7 @@ function ei(e) {
         className: Z.rowIconV2
       }) : (0, i.jsx)(P.default, {
         guild: t,
-        size: Q,
+        size: X,
         className: Z.rowIcon
       }), (0, i.jsx)("span", {
         className: a()(Z.guildNameText, {
@@ -319,7 +319,7 @@ function er(e) {
       includeActivity: o && !d
     }),
     "aria-label": s,
-    tooltipClassName: X.listItemTooltip,
+    tooltipClassName: Q.listItemTooltip,
     children: e => {
       let {
         onFocus: t,

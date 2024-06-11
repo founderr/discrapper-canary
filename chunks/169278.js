@@ -4,17 +4,17 @@ var i = n("735250");
 n("470079");
 var a = n("960259"),
   s = n("718671"),
-  l = n("325767");
+  r = n("325767");
 t.default = (0, a.replaceIcon)(function(e) {
   let {
     width: t = 24,
     height: n = 24,
     color: a = "currentColor",
     foreground: s,
-    ...r
+    ...l
   } = e;
   return (0, i.jsx)("svg", {
-    ...(0, l.default)(r),
+    ...(0, r.default)(l),
     width: t,
     height: n,
     viewBox: "0 0 24 24",

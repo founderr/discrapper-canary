@@ -29,8 +29,8 @@ var a = n("735250"),
   v = n("607187"),
   N = n("981631"),
   M = n("701488"),
-  R = n("689938"),
-  y = n("906964"),
+  y = n("689938"),
+  R = n("906964"),
   L = n("334732");
 
 function j(e) {
@@ -84,7 +84,7 @@ function O(e) {
     value: s,
     children: (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(u.Tooltip, {
-        text: R.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY,
+        text: y.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY,
         children: e => {
           let {
             onClick: t,
@@ -92,14 +92,14 @@ function O(e) {
           } = e;
           return (0, a.jsx)(u.Clickable, {
             ...n,
-            className: y.clickableTile,
+            className: R.clickableTile,
             onClick: () => {
               null == t || t(), f()
             },
             children: (0, a.jsx)(v.default, {
-              className: y.root,
+              className: R.root,
               children: (0, a.jsx)("div", {
-                className: y.iconContainer,
+                className: R.iconContainer,
                 children: (0, a.jsx)(I.default, {
                   width: 40,
                   height: 40
@@ -110,11 +110,11 @@ function O(e) {
         }
       }), (0, a.jsx)(u.Clickable, {
         onClick: l,
-        className: i()((0, x.getThemeClass)(N.ThemeTypes.DARK), y.shelfButtonCloseButton),
+        className: i()((0, x.getThemeClass)(N.ThemeTypes.DARK), R.shelfButtonCloseButton),
         children: (0, a.jsx)(S.default, {
           width: 24,
           height: 24,
-          className: y.closeButtonIcon,
+          className: R.closeButtonIcon,
           backgroundColor: c
         })
       })]
@@ -142,22 +142,22 @@ function P(e) {
   return (0, a.jsx)(p.AnalyticsLocationProvider, {
     value: c,
     children: (0, a.jsxs)(v.default, {
-      className: y.root,
+      className: R.root,
       children: [r > 400 ? (0, a.jsx)("img", {
         src: L,
-        className: y.art,
-        alt: R.default.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT
+        className: R.art,
+        alt: y.default.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT
       }) : null, (0, a.jsx)(u.Text, {
-        className: y.heading,
+        className: R.heading,
         variant: "text-md/semibold",
-        children: R.default.Messages.EMBEDDED_ACTIVITIES_VC_TILE_ENTRY_POINT_INVITE
+        children: y.default.Messages.EMBEDDED_ACTIVITIES_VC_TILE_ENTRY_POINT_INVITE
       }), (0, a.jsxs)("div", {
-        className: y.buttonContainer,
+        className: R.buttonContainer,
         children: [(0, a.jsxs)(u.Button, {
           size: u.Button.Sizes.LARGE,
           color: u.Button.Colors.PRIMARY,
-          className: y.button,
-          innerClassName: y.buttonContents,
+          className: R.button,
+          innerClassName: R.buttonContents,
           onClick: function() {
             (0, u.openModalLazy)(async () => {
               let {
@@ -178,12 +178,12 @@ function P(e) {
             height: 16
           }), (0, a.jsx)(u.Text, {
             variant: "text-sm/medium",
-            children: R.default.Messages.INVITE_FRIENDS
+            children: y.default.Messages.INVITE_FRIENDS
           })]
         }), (0, a.jsxs)(u.Button, {
           size: u.Button.Sizes.LARGE,
-          className: y.button,
-          innerClassName: y.buttonContents,
+          className: R.button,
+          innerClassName: R.buttonContents,
           onClick: function() {
             (0, h.default)({
               channel: t,
@@ -198,7 +198,7 @@ function P(e) {
             height: 16
           }), (0, a.jsx)(u.Text, {
             variant: "text-sm/medium",
-            children: R.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_ENTRY_POINT_TILE_CHOOSE_AN_ACTIVITY
+            children: y.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_ENTRY_POINT_TILE_CHOOSE_AN_ACTIVITY
           })]
         })]
       })]
@@ -250,27 +250,27 @@ function b(e) {
   return (0, a.jsx)(p.AnalyticsLocationProvider, {
     value: h,
     children: (0, a.jsxs)(v.default, {
-      className: y.root,
+      className: R.root,
       children: [o > 480 ? (0, a.jsx)("img", {
-        className: y.art,
+        className: R.art,
         src: L,
-        alt: R.default.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT
+        alt: y.default.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT
       }) : null, o > 300 ? (0, a.jsx)(u.Text, {
-        className: y.heading,
+        className: R.heading,
         variant: o > 550 ? "text-md/semibold" : "text-sm/semibold",
-        children: R.default.Messages.EMBEDDED_ACTIVITIES_VC_TILE_ENTRY_POINT_TITLE
+        children: y.default.Messages.EMBEDDED_ACTIVITIES_VC_TILE_ENTRY_POINT_TITLE
       }) : null, (0, a.jsx)("div", {
-        className: i()(y.activitiesContainer, {
-          [y.activitiesContainerSmol]: o <= 300
+        className: i()(R.activitiesContainer, {
+          [R.activitiesContainerSmol]: o <= 300
         }),
         children: c.map(e => (0, a.jsx)(f.ActivitySuggestion, {
           channel: t,
           activityItem: e,
           aspectRatio: f.ActivitySuggestion.AspectRatio.SIXTEEN_BY_NINE,
-          animatedDivClass: y.activitySuggestion
+          animatedDivClass: R.activitySuggestion
         }, e.application.id))
       }), (0, a.jsxs)(u.Clickable, {
-        className: y.checkboxContainer,
+        className: R.checkboxContainer,
         onClick: function() {
           A.default.track(N.AnalyticEvents.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
             tile_type: "activity suggestion",
@@ -280,10 +280,10 @@ function b(e) {
         },
         children: [(0, a.jsx)(C.default, {}), (0, a.jsx)(u.Text, {
           variant: "text-sm/medium",
-          children: R.default.Messages.DONT_SHOW_AGAIN
+          children: y.default.Messages.DONT_SHOW_AGAIN
         })]
       }), (0, a.jsx)(u.Clickable, {
-        className: y.closeButtonContainer,
+        className: R.closeButtonContainer,
         onClick: function() {
           A.default.track(N.AnalyticEvents.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
             tile_type: "activity suggestion",
@@ -292,7 +292,7 @@ function b(e) {
           }), s()
         },
         children: (0, a.jsx)(g.default, {
-          className: y.closeButton
+          className: R.closeButton
         })
       })]
     })

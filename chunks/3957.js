@@ -1,16 +1,16 @@
 "use strict";
 s.r(t), s.d(t, {
   useScrollToSetting: function() {
-    return i
+    return l
   }
 });
 var a = s("470079"),
   n = s("996073");
-let l = {
+let i = {
   block: "center"
 };
 
-function i(e) {
+function l(e) {
   let t = a.useRef(null);
-  return (0, n.default)(t, e, l, 400), t
+  return (0, n.default)(t, e, i, 400), t
 }

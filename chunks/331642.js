@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("47120");
 var a = s("735250"),
   n = s("470079"),
-  l = s("442837"),
-  i = s("692547"),
+  i = s("442837"),
+  l = s("692547"),
   r = s("481060"),
   o = s("596454"),
   d = s("594174"),
@@ -23,18 +23,18 @@ var a = s("735250"),
   f = s("689938"),
   m = s("152951");
 
-function C(e) {
+function A(e) {
   let {
     onSelect: t
-  } = e, [s, i] = n.useState(!1), o = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()), c = E.default.canUseCustomCallSounds(o);
+  } = e, [s, l] = n.useState(!1), o = (0, i.useStateFromStores)([d.default], () => d.default.getCurrentUser()), c = E.default.canUseCustomCallSounds(o);
 
   function S(e) {
-    c && (i(!1), null == t || t(e))
+    c && (l(!1), null == t || t(e))
   }
   return (0, a.jsx)(r.Popout, {
     shouldShow: s,
     position: "left",
-    onRequestClose: () => i(!1),
+    onRequestClose: () => l(!1),
     renderPopout: e => {
       let {
         closePopout: t
@@ -55,7 +55,7 @@ function C(e) {
     children: e => (0, a.jsx)(N.SecondaryActionButton, {
       ...e,
       onClick: () => {
-        i(!s)
+        l(!s)
       },
       text: f.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_CHANGE,
       children: (0, a.jsx)(u.default, {
@@ -65,7 +65,7 @@ function C(e) {
   })
 }
 
-function A(e) {
+function C(e) {
   let {
     sound: t
   } = e, {
@@ -88,7 +88,7 @@ function O(e) {
     sound: t,
     isGlobal: s,
     onSelect: n
-  } = e, l = null != t, d = null == t ? void 0 : t.emojiId, u = null == t ? void 0 : t.emojiName, E = l && (null != u || null != d), T = e => (0, a.jsx)(r.Text, {
+  } = e, i = null != t, d = null == t ? void 0 : t.emojiId, u = null == t ? void 0 : t.emojiName, E = i && (null != u || null != d), T = e => (0, a.jsx)(r.Text, {
     variant: "text-xs/medium",
     color: "header-secondary",
     tag: "span",
@@ -110,20 +110,20 @@ function O(e) {
           soundName: t.name,
           subtextHook: T
         }) : t.name
-      }), l ? (0, a.jsx)(A, {
+      }), i ? (0, a.jsx)(C, {
         sound: t
       }) : (0, a.jsx)(c.default, {
         className: m.secondaryIconDisabled
       })]
     }), (0, a.jsxs)("div", {
       className: m.container,
-      children: [(0, a.jsx)(C, {
+      children: [(0, a.jsx)(A, {
         onSelect: n
-      }), l && !s && (0, a.jsx)(N.SecondaryActionButton, {
+      }), i && !s && (0, a.jsx)(N.SecondaryActionButton, {
         onClick: () => n(null),
         text: f.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_REMOVE,
         children: (0, a.jsx)(S.default, {
-          color: i.default.unsafe_rawColors.RED_400.css,
+          color: l.default.unsafe_rawColors.RED_400.css,
           className: m.secondaryIcon
         })
       })]

@@ -32,7 +32,7 @@ function x(e) {
     channel: n
   } = e, {
     analyticsLocations: x
-  } = (0, u.default)(o.default.PROFILE_PANEL), v = (0, f.default)(t.id), N = (0, r.default)(), M = l.useRef(null), R = (0, i.default)(M), y = () => {
+  } = (0, u.default)(o.default.PROFILE_PANEL), v = (0, f.default)(t.id), N = (0, r.default)(), M = l.useRef(null), y = (0, i.default)(M), R = () => {
     (0, C.openUserProfileModal)({
       sourceAnalyticsLocations: x,
       userId: t.id,
@@ -66,14 +66,14 @@ function x(e) {
             user: t,
             displayProfile: v,
             channel: n,
-            isHovering: R,
-            onOpenProfile: y
+            isHovering: y,
+            onOpenProfile: R
           }), (0, a.jsx)(g.default, {
             user: t,
             displayProfile: v,
             channelId: n.id,
-            isHovering: R,
-            onOpenProfile: y
+            isHovering: y,
+            onOpenProfile: R
           }), (0, a.jsx)(T.default, {
             user: t,
             channelId: n.id
@@ -83,7 +83,7 @@ function x(e) {
           channelId: n.id
         }), (null == v ? void 0 : v.profileEffectId) != null && (0, a.jsx)(d.default, {
           profileEffectId: null == v ? void 0 : v.profileEffectId,
-          isHovering: R
+          isHovering: y
         })]
       })
     })

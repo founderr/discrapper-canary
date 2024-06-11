@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("735250");
 s("470079");
 var n = s("120356"),
-  l = s.n(n),
-  i = s("481060"),
+  i = s.n(n),
+  l = s("481060"),
   r = s("976644"),
   o = s("654904"),
   d = s("993413"),
@@ -28,7 +28,7 @@ function E(e) {
     isTryItOutFlow: N = !1,
     forcedDivider: g,
     withHighlight: f = !1
-  } = e, m = f ? r.default : i.Button;
+  } = e, m = f ? r.default : l.Button;
   return (0, a.jsx)(d.default, {
     className: T,
     title: c.default.Messages.USER_SETTINGS_PROFILE_BANNER,
@@ -39,17 +39,17 @@ function E(e) {
     children: (0, a.jsxs)("div", {
       className: S.buttonsContainer,
       children: [(0, a.jsx)(m, {
-        className: l()({
+        className: i()({
           [S.buttonHighlighted]: f
         }),
-        size: i.Button.Sizes.SMALL,
+        size: l.Button.Sizes.SMALL,
         onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.BANNER, E, N, void 0),
         children: c.default.Messages.CHANGE_BANNER
-      }), t && (0, a.jsx)(i.Button, {
+      }), t && (0, a.jsx)(l.Button, {
         className: S.removeButton,
-        color: i.Button.Colors.PRIMARY,
-        look: i.Button.Looks.LINK,
-        size: i.Button.Sizes.SMALL,
+        color: l.Button.Colors.PRIMARY,
+        look: l.Button.Looks.LINK,
+        size: l.Button.Sizes.SMALL,
         onClick: () => n(null),
         children: null != E ? c.default.Messages.USER_SETTINGS_RESET_BANNER : c.default.Messages.USER_SETTINGS_REMOVE_BANNER
       })]

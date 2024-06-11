@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return z
   },
   DEFAULT_CALL_MAX_BITRATE: function() {
-    return X
+    return Q
   },
   DEFAULT_CALL_MIN_BITRATE: function() {
     return Z
@@ -79,7 +79,7 @@ n.r(t), n.d(t, {
     return B
   },
   PING_INTERVAL: function() {
-    return Q
+    return X
   },
   ResolutionTypes: function() {
     return G
@@ -129,8 +129,8 @@ let x = 100,
   K = .1,
   z = 6e5,
   Z = 15e4,
-  X = 1e7,
-  Q = 5e3,
+  Q = 1e7,
+  X = 5e3,
   q = 15e3,
   J = 30,
   $ = 20,

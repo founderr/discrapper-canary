@@ -29,8 +29,8 @@ var a = n("735250"),
   v = n("979264"),
   N = n("981631"),
   M = n("921944"),
-  R = n("689938"),
-  y = n("838373");
+  y = n("689938"),
+  R = n("838373");
 
 function L(e) {
   var t;
@@ -85,15 +85,15 @@ function L(e) {
       delay: 200
     }),
     U = (0, I.isGuildAdoptedUserClanIdentityChanged)(n, O),
-    F = U ? R.default.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_TITLE.format({
+    F = U ? y.default.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_TITLE.format({
       guildName: n.name
-    }) : R.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_TITLE.format({
+    }) : y.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_TITLE.format({
       guildName: n.name
     }),
-    w = U ? R.default.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_DESCRIPTION : R.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_DESCRIPTION,
-    k = U ? R.default.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_ARIA_LABEL.format({
+    w = U ? y.default.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_DESCRIPTION : y.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_DESCRIPTION,
+    k = U ? y.default.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_ARIA_LABEL.format({
       guildName: n.name
-    }) : R.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_ARIA_LABEL.format({
+    }) : y.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_ARIA_LABEL.format({
       guildName: n.name
     });
   return b((e, t) => {
@@ -101,7 +101,7 @@ function L(e) {
     return t && (0, a.jsx)(r.animated.div, {
       onMouseEnter: () => E(!0),
       onMouseLeave: () => E(!1),
-      className: i()(y.wrapper),
+      className: i()(R.wrapper),
       style: {
         ...e,
         ...j
@@ -111,20 +111,20 @@ function L(e) {
         "aria-label": k,
         onClick: D,
         children: (0, a.jsxs)("div", {
-          className: i()(y.toastContainerInner, p ? y.hovered : null),
+          className: i()(R.toastContainerInner, p ? R.hovered : null),
           children: [(0, a.jsxs)("div", {
-            className: y.guildIconContainer,
+            className: R.guildIconContainer,
             children: [(0, a.jsx)(x.default, {
               guild: n,
               iconSize: 64,
-              className: y.icon
+              className: R.icon
             }), (0, a.jsx)("div", {
-              className: y.guildTagContainer,
+              className: R.guildTagContainer,
               children: (0, a.jsx)(v.BaseClanTagChiplet, {
                 guildId: n.id,
                 clanTag: null === (l = n.clan) || void 0 === l ? void 0 : l.tag,
                 clanBadge: null === (s = n.clan) || void 0 === s ? void 0 : s.badge,
-                className: y.guildClanTag
+                className: R.guildClanTag
               })
             })]
           }), (0, a.jsxs)("div", {
@@ -143,7 +143,7 @@ function L(e) {
             })]
           }), (0, a.jsx)("div", {
             children: (0, a.jsx)(d.Clickable, {
-              className: y.toastButton,
+              className: R.toastButton,
               onClick: P,
               children: (0, a.jsx)(u.CloseSmallBoldIcon, {
                 width: 20,

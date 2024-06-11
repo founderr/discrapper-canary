@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("47120"), s("653041");
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("442837"),
   o = s("481060"),
   d = s("570140"),
@@ -17,26 +17,26 @@ var a = s("735250"),
   E = s("369541"),
   T = s("611273");
 class _ extends n.Component {
-  renderTestCase(e, t, s, n, l) {
+  renderTestCase(e, t, s, n, i) {
     let r = null == t ? void 0 : t.summary;
     return (0, a.jsxs)(o.FormText, {
       className: T.marginBottom20,
-      children: [!0 === n ? "✅" : !0 === l ? "❌" : !0 === s ? "\uD83C\uDFCE️" : "", "speed test, bitrate = ", ((0, S.speedTestRate)(e) / 1e3).toFixed(0), " kbps, framerate =", " ", (0, S.speedTestFps)(e).toFixed(0), " fps, duration = ", (0, S.speedTestDuration)(e).toFixed(1), "s, direction =", " ", (0, S.speedTestDirection)(e), void 0 !== r && (0, a.jsxs)("div", {
+      children: [!0 === n ? "✅" : !0 === i ? "❌" : !0 === s ? "\uD83C\uDFCE️" : "", "speed test, bitrate = ", ((0, S.speedTestRate)(e) / 1e3).toFixed(0), " kbps, framerate =", " ", (0, S.speedTestFps)(e).toFixed(0), " fps, duration = ", (0, S.speedTestDuration)(e).toFixed(1), "s, direction =", " ", (0, S.speedTestDirection)(e), void 0 !== r && (0, a.jsxs)("div", {
         children: [(0, a.jsxs)("div", {
-          className: i()(T.marginTop8, T.marginBottom8),
+          className: l()(T.marginTop8, T.marginBottom8),
           children: ["Loss ", 100 * r.loss.toFixed(2), "%, Payload Bandwidth ", r.payloadBandwidth.toFixed(0), " kbps, Network Bandwidth ", r.networkBandwidth.toFixed(0), " kbps"]
         }), (0, a.jsxs)("div", {
-          className: i()(T.marginTop8, T.marginBottom8),
+          className: l()(T.marginTop8, T.marginBottom8),
           children: ["IAT p50=", r.iatP50.toFixed(2), "ms, p95=", r.iatP95.toFixed(2), "ms, max=", r.iatMax.toFixed(2), "ms"]
         })]
-      }), !1 === n && !0 === s && !1 === l && (0, a.jsx)("div", {
+      }), !1 === n && !0 === s && !1 === i && (0, a.jsx)("div", {
         children: (0, a.jsx)("div", {
-          className: i()(T.marginTop8, T.marginBottom8),
+          className: l()(T.marginTop8, T.marginBottom8),
           children: "Test in progress. Results will appear when test completes."
         })
-      }), !1 === n && !0 === l && (0, a.jsx)("div", {
+      }), !1 === n && !0 === i && (0, a.jsx)("div", {
         children: (0, a.jsx)("div", {
-          className: i()(T.marginTop8, T.marginBottom8),
+          className: l()(T.marginTop8, T.marginBottom8),
           children: "Test skipped."
         })
       })]
@@ -44,13 +44,13 @@ class _ extends n.Component {
   }
   renderTestCases(e, t, s, a, n) {
     if (!1 === e) return;
-    let l = [];
-    for (let [e, i] of s.entries()) {
+    let i = [];
+    for (let [e, l] of s.entries()) {
       let s = e === n,
         r = null != n && e < n;
-      l.push(this.renderTestCase(i, a[e], s, r, t))
+      i.push(this.renderTestCase(l, a[e], s, r, t))
     }
-    return l
+    return i
   }
   renderPing(e, t, s) {
     if (!1 === e) return;
@@ -58,7 +58,7 @@ class _ extends n.Component {
     return (0, a.jsxs)(o.FormText, {
       className: T.marginBottom20,
       children: [t > E.SpeedTestLifecycles.PINGING ? "✅" : t === E.SpeedTestLifecycles.PINGING ? "\uD83C\uDFCE️" : "", "Ping endpoint", null !== n && (0, a.jsxs)("div", {
-        className: i()(T.marginTop8, T.marginBottom8),
+        className: l()(T.marginTop8, T.marginBottom8),
         children: ["Pinged ", n.count, " time(s), min=", n.min, "ms, p50=", n.p50, "ms, max=", n.max, "ms"]
       })]
     })
@@ -106,13 +106,13 @@ class _ extends n.Component {
       t = this.props.active,
       s = this.props.failed,
       n = this.props.endpoint,
-      l = this.props.lifecycle,
-      i = this.props.testCases,
+      i = this.props.lifecycle,
+      l = this.props.testCases,
       r = this.props.currentTest,
       d = this.props.testResults,
       c = this.props.pings,
       S = t ? u.default.stopSpeedTest : u.default.startSpeedTest,
-      _ = l >= E.SpeedTestLifecycles.AWAITING_ENDPOINT;
+      _ = i >= E.SpeedTestLifecycles.AWAITING_ENDPOINT;
     return !1 === e ? (0, a.jsx)(o.FormSection, {
       tag: o.FormTitleTags.H1,
       title: "Speed Test",
@@ -131,7 +131,7 @@ class _ extends n.Component {
             children: t ? "Stop Speed Test" : "Start Speed Test"
           })
         })
-      }), this.renderAwaitingEndpoint(_, l), this.renderConnect(_, l, n), this.renderPing(_, l, c), this.renderTestCases(_, s, i, d, r), this.renderUpload(_, l), this.renderComplete(_, l)]
+      }), this.renderAwaitingEndpoint(_, i), this.renderConnect(_, i, n), this.renderPing(_, i, c), this.renderTestCases(_, s, l, d, r), this.renderUpload(_, i), this.renderComplete(_, i)]
     })
   }
   constructor(...e) {
@@ -161,13 +161,13 @@ function I() {
       notes: c.default.getNotes()
     })),
     [t, s] = n.useState(0),
-    l = n.useCallback(e => {
+    i = n.useCallback(e => {
       let {} = e;
       s(t + 1)
     }, [t]);
-  return n.useEffect(() => (d.default.subscribe("RTC_SPEED_TEST_STATE_UPDATE", l), () => {
-    d.default.unsubscribe("RTC_SPEED_TEST_STATE_UPDATE", l)
-  }), [l]), (0, a.jsx)(_, {
+  return n.useEffect(() => (d.default.subscribe("RTC_SPEED_TEST_STATE_UPDATE", i), () => {
+    d.default.unsubscribe("RTC_SPEED_TEST_STATE_UPDATE", i)
+  }), [i]), (0, a.jsx)(_, {
     ...e
   })
 }

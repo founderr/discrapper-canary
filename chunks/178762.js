@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   DEFAULT_CONTENT_ROW_HEIGHT: function() {
-    return R
+    return y
   },
   getContentRowHeight: function() {
-    return y
+    return R
   }
 }), n("47120");
 var a = n("735250"),
@@ -32,10 +32,10 @@ var a = n("735250"),
   v = n("335326"),
   N = n("268010"),
   M = n("206583");
-let R = 72;
+let y = 72;
 
-function y(e) {
-  return (null == e ? void 0 : e.type) === h.MemberListRowTypes.CONTENT_INVENTORY ? R : 0
+function R(e) {
+  return (null == e ? void 0 : e.type) === h.MemberListRowTypes.CONTENT_INVENTORY ? y : 0
 }
 let L = i().throttle(e => {
     (0, E.trackInteraction)(M.ContentInventoryInteractionTypes.CARD_HOVER, e)
@@ -127,10 +127,10 @@ t.default = l.memo(e => {
     openOnHover: _
   } = (0, p.useMemberListHoverInteractions)({
     location: "MemberListContentRow"
-  }), T = l.useRef(!1), [I, A] = l.useState(!1), [x, v] = l.useState(!1), [N, R] = l.useState(!1), y = (0, u.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled);
+  }), T = l.useRef(!1), [I, A] = l.useState(!1), [x, v] = l.useState(!1), [N, y] = l.useState(!1), R = (0, u.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled);
   l.useEffect(() => {
-    I && y && R(!0)
-  }, [I, y]);
+    I && R && y(!0)
+  }, [I, R]);
   let P = l.useCallback(e => {
       g && (0, c.openContextMenuLazy)(e, async () => {
         let {
@@ -147,7 +147,7 @@ t.default = l.memo(e => {
     }, []),
     b = () => {
       T.current = !1, setTimeout(() => {
-        !T.current && (A(!1), R(y))
+        !T.current && (A(!1), y(R))
       }, 100)
     };
   return (0, a.jsx)("div", {

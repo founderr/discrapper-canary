@@ -33,16 +33,16 @@ t.default = e => {
   } = g.HangStatusExperiment.useExperiment({
     guildId: v.guild_id,
     location: "HangStatusPopout"
-  }), R = (0, r.useStateFromStores)([c.default], () => c.default.getId()), y = (0, r.useStateFromStores)([p.default], () => p.default.getUser(s)), L = (0, r.useStateFromStores)([m.default], () => m.default.getChannelId() === v.id), j = (0, r.useStateFromStores)([h.default], () => h.default.can(I.Permissions.CONNECT, v)), O = (0, r.useStateFromStores)([f.default], () => null != v.guild_id && null != y ? f.default.getMember(v.guild_id, s) : null), P = l.useMemo(() => null != y ? (0, d.getPreviewAvatar)(void 0, O, y, {
+  }), y = (0, r.useStateFromStores)([c.default], () => c.default.getId()), R = (0, r.useStateFromStores)([p.default], () => p.default.getUser(s)), L = (0, r.useStateFromStores)([m.default], () => m.default.getChannelId() === v.id), j = (0, r.useStateFromStores)([h.default], () => h.default.can(I.Permissions.CONNECT, v)), O = (0, r.useStateFromStores)([f.default], () => null != v.guild_id && null != R ? f.default.getMember(v.guild_id, s) : null), P = l.useMemo(() => null != R ? (0, d.getPreviewAvatar)(void 0, O, R, {
     size: 40
-  }) : void 0, [O, y]);
+  }) : void 0, [O, R]);
   return (l.useEffect(() => {
-    M && null != t && N && null != y && R !== s && E.default.track(I.AnalyticEvents.VIEW_HANG_STATUS, {
+    M && null != t && N && null != R && y !== s && E.default.track(I.AnalyticEvents.VIEW_HANG_STATUS, {
       source: "HangStatusPopout",
       guild_id: v.guild_id,
       channel_id: v.id
     })
-  }, [M, t, N, y, R, s, v]), M && null != y) ? R === s ? (0, a.jsx)("div", {
+  }, [M, t, N, R, y, s, v]), M && null != R) ? y === s ? (0, a.jsx)("div", {
     className: i()(x.popoutWrapper, {
       [x.mounted]: N
     }),

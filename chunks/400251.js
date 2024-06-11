@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   AddEntryCard: function() {
-    return R
+    return y
   }
 }), n("47120");
 var a = n("735250"),
@@ -29,7 +29,7 @@ var a = n("735250"),
   v = n("689938"),
   N = n("604623"),
   M = n("883760");
-let R = e => {
+let y = e => {
   let {
     onClick: t
   } = e;
@@ -48,7 +48,7 @@ let R = e => {
   })
 };
 
-function y(e) {
+function R(e) {
   let {
     entry: t
   } = e, [s, r] = l.useState(!1), {
@@ -235,7 +235,7 @@ t.default = e => {
         onClick: _,
         children: M
       })]
-    }), (0, a.jsx)(y, {
+    }), (0, a.jsx)(R, {
       entry: s
     })]
   })

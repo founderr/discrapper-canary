@@ -131,7 +131,7 @@ function g(e) {
     }), z]
   });
   let Z = null != G ? G[0] : null,
-    X = null != G ? G[1] : null;
+    Q = null != G ? G[1] : null;
   return (0, s.jsxs)(I.AnalyticsLocationProvider, {
     value: B,
     children: [null != Z && g ? (0, s.jsxs)(s.Fragment, {
@@ -150,8 +150,8 @@ function g(e) {
       }), (0, s.jsx)(p.default, {
         message: r
       })]
-    }), null != X ? (0, s.jsx)(s.Fragment, {
-      children: X
+    }), null != Q ? (0, s.jsx)(s.Fragment, {
+      children: Q
     }) : null, null == Z || g ? null : Z, null != r && (0, S.isRemix)(r) && j && b ? (0, s.jsx)(R, {}) : null]
   })
 }(i = r || (r = {}))[i.SYSTEM_TAG = 0] = "SYSTEM_TAG", i[i.BADGES = 1] = "BADGES"

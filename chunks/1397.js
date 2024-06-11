@@ -29,8 +29,8 @@ var a = n("735250"),
   v = n("657352"),
   N = n("33154"),
   M = n("144114"),
-  R = n("703656"),
-  y = n("210887"),
+  y = n("703656"),
+  R = n("210887"),
   L = n("237904"),
   j = n("271383"),
   O = n("430824"),
@@ -255,7 +255,7 @@ class V extends l.PureComponent {
     }), B(this, "handleGoBack", () => {
       this.setState({
         submitting: !0
-      }), (0, R.getHistory)().goBack()
+      }), (0, y.getHistory)().goBack()
     }), B(this, "handleFollowAnnouncement", () => {
       let {
         channel: e
@@ -318,7 +318,7 @@ function W(e) {
   } = e, o = s.getGuildId(), u = (0, r.useStateFromStores)([O.default], () => O.default.getGuild(o)), d = (0, r.useStateFromStores)([P.default], () => P.default.getCheck(o)), c = s.type === w.ChannelTypes.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(w.GuildFeatures.NEWS), h = (0, r.useStateFromStores)([L.default], () => c ? L.default.getFollowerStatsForChannel(s.id) : null), E = (0, r.useStateFromStores)([x.default], () => x.default.isLurking(o)), C = (0, r.useStateFromStores)([b.default], () => b.default.getCurrentUser()), S = null !== (t = null == C ? void 0 : C.isStaff()) && void 0 !== t && t, I = (0, r.useStateFromStores)([j.default], () => {
     var e, t;
     return null != C && null !== (t = null === (e = j.default.getMember(o, C.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t
-  }), v = !!(null == u ? void 0 : u.hasVerificationGate()), N = (I || d.notClaimed) && v, M = (0, r.useStateFromStores)([A.default], () => A.default.shouldShowPopout(o)), R = (0, r.useStateFromStores)([D.default], () => D.default.can(w.Permissions.SEND_MESSAGES, s)), F = (0, r.useStateFromStores)([T.default], () => T.default.getRequest(o)), [k, H] = (0, m.useFetchClanInfo)(o), G = (0, m.useClanInfo)(o), B = (null == F ? void 0 : F.applicationStatus) === _.GuildJoinRequestApplicationStatuses.APPROVED;
+  }), v = !!(null == u ? void 0 : u.hasVerificationGate()), N = (I || d.notClaimed) && v, M = (0, r.useStateFromStores)([A.default], () => A.default.shouldShowPopout(o)), y = (0, r.useStateFromStores)([D.default], () => D.default.can(w.Permissions.SEND_MESSAGES, s)), F = (0, r.useStateFromStores)([T.default], () => T.default.getRequest(o)), [k, H] = (0, m.useFetchClanInfo)(o), G = (0, m.useClanInfo)(o), B = (null == F ? void 0 : F.applicationStatus) === _.GuildJoinRequestApplicationStatuses.APPROVED;
   l.useEffect(() => {
     if (!(!(0, p.isGuildAClan)(u) || !B || (0, g.isApprovedAndAcked)(F))) null == G && H()
   }, [u, B, F, G]);
@@ -329,8 +329,8 @@ function W(e) {
     isFollowable: c,
     shouldShowLurkerModeSuccessPopout: M,
     showLurkerModeUpsellPopout: E && null != u && U.canEveryoneRole(w.Permissions.SEND_MESSAGES, s),
-    theme: y.default.theme,
-    canSendMessages: R,
+    theme: R.default.theme,
+    canSendMessages: y,
     channelFollowingUsersSeen: null != h ? h.usersSeenEver : null,
     hasVerificationGate: v,
     showMemberVerificationModal: N,

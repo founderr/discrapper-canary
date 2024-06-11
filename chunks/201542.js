@@ -55,7 +55,7 @@ t.default = r.memo(function(e) {
     [Y, j] = r.useState(!1),
     [W, K] = r.useState(!1),
     [z, Z] = r.useState(!1),
-    [X, Q] = r.useState(!1),
+    [Q, X] = r.useState(!1),
     [q, J] = r.useState("none"),
     [$, ee] = r.useState(() => "function" == typeof v ? v() : v),
     et = r.useRef(void 0),
@@ -71,7 +71,7 @@ t.default = r.memo(function(e) {
     }, []),
     es = r.useCallback(() => {
       K(!1), null == et.current && (et.current = setTimeout(() => {
-        Q(!1), et.current = void 0
+        X(!1), et.current = void 0
       }, 500))
     }, []),
     ea = r.useCallback(() => {
@@ -100,14 +100,14 @@ t.default = r.memo(function(e) {
       let t = B.current;
       if (null == F || null == t) return;
       let n = e * F;
-      x(n), t.currentTime = n, Q(!0), clearTimeout(et.current), et.current = void 0
+      x(n), t.currentTime = n, X(!0), clearTimeout(et.current), et.current = void 0
     }, [F]);
   r.useEffect(() => {
-    !X && W && Q(!0)
-  }, [W, X]);
+    !Q && W && X(!0)
+  }, [W, Q]);
   let eE = r.useRef(null);
   r.useEffect(() => {
-    if (X || W) {
+    if (Q || W) {
       if (W) {
         var e, t;
         eE.current = performance.now(), null == G || G(!1, V, (null !== (t = null === (e = B.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * f.default.Millis.SECOND)
@@ -202,12 +202,12 @@ t.default = r.memo(function(e) {
       currentTime: V,
       duration: null != F ? F : 1,
       playing: W,
-      played: X,
+      played: Q,
       onDrag: ec,
       onDragStart: ed,
       onDragEnd: e_
     }), (0, i.jsx)(O, {
-      played: X,
+      played: Q,
       currentTime: V,
       duration: F
     }), (0, i.jsx)(c.default, {

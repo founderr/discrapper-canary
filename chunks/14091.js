@@ -76,7 +76,7 @@ class M extends l.Component {
     })
   }
 }
-let R = e => {
+let y = e => {
   let {
     children: t
   } = e;
@@ -88,7 +88,7 @@ let R = e => {
     })
   })
 };
-class y extends l.PureComponent {
+class R extends l.PureComponent {
   componentDidMount() {
     S.ComponentDispatch.subscribe(A.ComponentActions.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose)
   }
@@ -221,7 +221,7 @@ class y extends l.PureComponent {
       })
     }), N(this, "renderIndexing", () => {
       let e = E.default.getSearchType(this.props.searchId) === A.SearchTypes.GUILD ? x.default.Messages.SEARCH_GUILD_STILL_INDEXING : x.default.Messages.SEARCH_DM_STILL_INDEXING;
-      return (0, a.jsxs)(R, {
+      return (0, a.jsxs)(y, {
         children: [(0, a.jsx)(g.default, {}), (0, a.jsx)("div", {
           className: (v.emptyResultsText, v.stillIndexing),
           children: e
@@ -231,7 +231,7 @@ class y extends l.PureComponent {
       let {
         showNoResultsAlt: e
       } = this.props.search, t = e ? x.default.Messages.SEARCH_NO_RESULTS_ALT : x.default.Messages.SEARCH_NO_RESULTS;
-      return (0, a.jsxs)(R, {
+      return (0, a.jsxs)(y, {
         children: [(0, a.jsx)("div", {
           className: i()(v.noResultsImage, {
             [v.alt]: e
@@ -243,7 +243,7 @@ class y extends l.PureComponent {
           children: t
         })]
       })
-    }), N(this, "renderError", () => (0, a.jsxs)(R, {
+    }), N(this, "renderError", () => (0, a.jsxs)(y, {
       children: [(0, a.jsx)("div", {
         className: v.errorImage
       }), (0, a.jsx)("div", {
@@ -276,7 +276,7 @@ function L(e) {
   let {
     searchId: t
   } = e, n = (0, u.useStateFromStoresObject)([E.default], () => E.default.getResultsState(t), [t]);
-  return (0, a.jsx)(y, {
+  return (0, a.jsx)(R, {
     searchId: t,
     search: n,
     ...(0, u.useStateFromStoresObject)([E.default], () => ({

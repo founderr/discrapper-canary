@@ -41,9 +41,9 @@ let g = e => {
       role: v,
       "aria-label": R,
       "aria-hidden": N,
-      "aria-checked": O,
+      "aria-checked": M,
       "aria-expanded": b,
-      "aria-haspopup": M
+      "aria-haspopup": O
     } = e, A = (0, r.jsx)(g, {
       x: 0,
       y: 0,
@@ -53,8 +53,8 @@ let g = e => {
       foreground: null != d ? d : void 0,
       background: null != f ? f : void 0,
       color: c
-    }), L = R;
-    return null == L && "string" == typeof _ && (L = _), (0, r.jsx)(a.Tooltip, {
+    }), x = R;
+    return null == x && "string" == typeof _ && (x = _), (0, r.jsx)(a.Tooltip, {
       text: _,
       color: C,
       position: I,
@@ -98,10 +98,10 @@ let g = e => {
             [p.selected]: l
           }),
           role: v,
-          "aria-label": L,
+          "aria-label": x,
           "aria-hidden": N,
-          "aria-checked": O,
-          "aria-haspopup": M,
+          "aria-checked": M,
+          "aria-haspopup": O,
           "aria-expanded": b,
           tabIndex: o || null == h ? -1 : 0,
           children: [u ? (0, r.jsx)(S.default, {

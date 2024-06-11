@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("735250");
 s("470079");
 var n = s("481060"),
-  l = s("993413"),
-  i = s("689938");
+  i = s("993413"),
+  l = s("689938");
 
 function r(e) {
   let {
@@ -20,12 +20,12 @@ function r(e) {
     currentPronouns: u,
     disabled: c = !1
   } = e;
-  return (0, a.jsx)(l.default, {
+  return (0, a.jsx)(i.default, {
     title: t,
     errors: s,
     disabled: c,
     children: (0, a.jsx)(n.TextInput, {
-      placeholder: null != d ? d : i.default.Messages.PROFILE_CUSTOMIZATION_PRONOUNS_PLACEHOLDER,
+      placeholder: null != d ? d : l.default.Messages.PROFILE_CUSTOMIZATION_PRONOUNS_PLACEHOLDER,
       maxLength: 40,
       value: null != o ? o : u,
       onChange: function(e) {

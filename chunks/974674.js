@@ -458,12 +458,12 @@ function L(e) {
     config: A,
     from: k,
     to: B
-  }), K = (0, I.getAvatarSize)(S), z = (0, I.getAvatarSpecs)(S), Z = z.status * I.TYPING_WIDTH_RATIO, X = z.status * I.MOBILE_HEIGHT_RATIO, Q = null != g ? (z.status * I.TYPING_WIDTH_RATIO - z.status) / 2 : 0, q = z.size - z.status - Q - z.offset, J = z.size - X - z.offset, $ = z.size + Math.ceil(Q);
+  }), K = (0, I.getAvatarSize)(S), z = (0, I.getAvatarSpecs)(S), Z = z.status * I.TYPING_WIDTH_RATIO, Q = z.status * I.MOBILE_HEIGHT_RATIO, X = null != g ? (z.status * I.TYPING_WIDTH_RATIO - z.status) / 2 : 0, q = z.size - z.status - X - z.offset, J = z.size - Q - z.offset, $ = z.size + Math.ceil(X);
   return (0, i.jsx)(C, {
     ...e,
     ariaLabel: P,
     ariaHidden: y,
-    typingOffset: Q,
+    typingOffset: X,
     specs: z,
     children: (0, i.jsxs)("svg", {
       width: $,
@@ -515,19 +515,19 @@ function L(e) {
             x: q,
             y: J,
             width: Z,
-            height: X,
-            viewBox: "0 0 ".concat(Z, " ").concat(X),
+            height: Q,
+            viewBox: "0 0 ".concat(Z, " ").concat(Q),
             className: v ? h.cursorDefault : void 0,
             children: [(0, d.renderStatusMask)(W, z.status, w), (0, i.jsx)(o.animated.rect, {
               fill: j,
               width: Z,
-              height: X,
+              height: Q,
               mask: "url(#".concat(w, ")")
             }), (0, i.jsx)(u.Dots, {
               ref: T,
               dotRadius: z.status / 4,
               x: .15 * Z,
-              y: .5 * X,
+              y: .5 * Q,
               hide: !c
             })]
           }), (0, i.jsx)(m, {

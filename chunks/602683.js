@@ -2,25 +2,25 @@
 s.r(t), s("47120");
 var a = s("735250"),
   n = s("470079"),
-  l = s("481060");
+  i = s("481060");
 t.default = function(e) {
   let {
     assetKey: t,
     initialValue: s,
-    onMessageChange: i,
+    onMessageChange: l,
     title: r
   } = e, [o, d] = n.useState("");
   return n.useEffect(() => {
     d(null != s ? s : "")
-  }, [s]), (0, a.jsxs)(l.FormItem, {
-    children: [(0, a.jsx)(l.FormTitle, {
-      tag: l.FormTitleTags.H5,
+  }, [s]), (0, a.jsxs)(i.FormItem, {
+    children: [(0, a.jsx)(i.FormTitle, {
+      tag: i.FormTitleTags.H5,
       children: r
-    }), (0, a.jsx)(l.FormText, {
-      children: (0, a.jsx)(l.TextInput, {
+    }), (0, a.jsx)(i.FormText, {
+      children: (0, a.jsx)(i.TextInput, {
         value: o,
         onChange: function(e) {
-          d(e), i(t, e)
+          d(e), l(t, e)
         }
       })
     })]

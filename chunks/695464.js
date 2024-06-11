@@ -263,7 +263,7 @@ let u = r.memo(r.forwardRef((e, t) => {
       visibleItems: i,
       listOffset: n
     }
-  }, [w, B, k, V, u, d, _, E, c, v, j, p, I, G, M]), X = r.useMemo(() => {
+  }, [w, B, k, V, u, d, _, E, c, v, j, p, I, G, M]), Q = r.useMemo(() => {
     var e, t, n;
     return {
       top: Z,
@@ -271,7 +271,7 @@ let u = r.memo(r.forwardRef((e, t) => {
       bottom: null !== (t = null == u ? void 0 : u[2]) && void 0 !== t ? t : 0,
       left: null !== (n = null == u ? void 0 : u[3]) && void 0 !== n ? n : 0
     }
-  }, [Z, u]), Q = r.useMemo(() => ({
+  }, [Z, u]), X = r.useMemo(() => ({
     height: H
   }), [H]), q = C ? o.AdvancedScrollerNone : o.AdvancedScrollerThin;
   return (0, i.jsxs)(q, {
@@ -282,11 +282,11 @@ let u = r.memo(r.forwardRef((e, t) => {
     children: [(0, i.jsx)("div", {
       role: L,
       className: l.listItems,
-      style: X,
+      style: Q,
       children: z
     }), (0, i.jsx)("div", {
       className: l.listHeight,
-      style: Q
+      style: X
     })]
   })
 }));

@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return D
   },
   getResurrectedEntryLastPlayTime: function() {
-    return h
+    return L
   },
   getStreakCount: function() {
     return M
@@ -40,7 +40,7 @@ n.r(t), n.d(t, {
     return m
   },
   getTrendingType: function() {
-    return j
+    return y
   },
   isEntryActive: function() {
     return N
@@ -49,7 +49,7 @@ n.r(t), n.d(t, {
     return v
   },
   isEntryMarathon: function() {
-    return L
+    return h
   },
   isEntryNew: function() {
     return R
@@ -61,14 +61,14 @@ n.r(t), n.d(t, {
     return x
   },
   useEntryActivityAndApplication: function() {
-    return y
+    return j
   }
 }), n("47120");
 var i = n("283398"),
   a = n("913527"),
   s = n.n(a),
-  l = n("884439"),
-  r = n("442837"),
+  r = n("884439"),
+  l = n("442837"),
   u = n("876215"),
   o = n("835473"),
   d = n("70956"),
@@ -79,11 +79,11 @@ let _ = e => {
     let {
       start: t,
       now: n
-    } = e, i = Math.abs((n - t) / d.default.Millis.SECOND), a = Math.floor(i) % d.default.Seconds.MINUTE, s = Math.floor(i / d.default.Seconds.MINUTE) % d.default.Seconds.MINUTE, l = Math.floor(i / d.default.Seconds.HOUR);
+    } = e, i = Math.abs((n - t) / d.default.Millis.SECOND), a = Math.floor(i) % d.default.Seconds.MINUTE, s = Math.floor(i / d.default.Seconds.MINUTE) % d.default.Seconds.MINUTE, r = Math.floor(i / d.default.Seconds.HOUR);
     return {
       seconds: a,
       minutes: s,
-      hours: l,
+      hours: r,
       days: Math.floor(i / d.default.Seconds.DAY)
     }
   },
@@ -135,9 +135,9 @@ let _ = e => {
       weekday: "short",
       hour: "numeric"
     });
-    let l = Math.round(a / (7 * d.default.Seconds.DAY));
+    let r = Math.round(a / (7 * d.default.Seconds.DAY));
     return E.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO.format({
-      count: l
+      count: r
     })
   },
   C = (e, t) => N(e) ? I(e, Date.now()) : S(e, t);
@@ -148,12 +148,12 @@ function m(e, t) {
 
 function N(e) {
   var t, n;
-  return null !== (n = null === (t = m(e, l.ContentInventoryTraitType.IS_LIVE)) || void 0 === t ? void 0 : t.is_live) && void 0 !== n && n
+  return null !== (n = null === (t = m(e, r.ContentInventoryTraitType.IS_LIVE)) || void 0 === t ? void 0 : t.is_live) && void 0 !== n && n
 }
 
 function R(e) {
   var t, n;
-  return null !== (n = null === (t = m(e, l.ContentInventoryTraitType.FIRST_TIME)) || void 0 === t ? void 0 : t.first_time) && void 0 !== n && n
+  return null !== (n = null === (t = m(e, r.ContentInventoryTraitType.FIRST_TIME)) || void 0 === t ? void 0 : t.first_time) && void 0 !== n && n
 }
 
 function v(e) {
@@ -162,21 +162,21 @@ function v(e) {
 
 function g(e) {
   var t;
-  return null === (t = m(e, l.ContentInventoryTraitType.DURATION_SECONDS)) || void 0 === t ? void 0 : t.duration_seconds
+  return null === (t = m(e, r.ContentInventoryTraitType.DURATION_SECONDS)) || void 0 === t ? void 0 : t.duration_seconds
 }
 
 function p(e) {
   var t;
-  return null === (t = m(e, l.ContentInventoryTraitType.AGGREGATE_RANGE)) || void 0 === t ? void 0 : t.range
-}
-
-function L(e) {
-  var t;
-  return null === (t = m(e, l.ContentInventoryTraitType.MARATHON)) || void 0 === t ? void 0 : t.marathon
+  return null === (t = m(e, r.ContentInventoryTraitType.AGGREGATE_RANGE)) || void 0 === t ? void 0 : t.range
 }
 
 function h(e) {
-  let t = m(e, l.ContentInventoryTraitType.RESURRECTED);
+  var t;
+  return null === (t = m(e, r.ContentInventoryTraitType.MARATHON)) || void 0 === t ? void 0 : t.marathon
+}
+
+function L(e) {
+  let t = m(e, r.ContentInventoryTraitType.RESURRECTED);
   return (null == t ? void 0 : t.resurrected_last_played) != null ? new Date(t.resurrected_last_played) : void 0
 }
 
@@ -202,7 +202,7 @@ function O(e) {
 
 function M(e) {
   var t;
-  return null === (t = m(e, l.ContentInventoryTraitType.STREAK_DAYS)) || void 0 === t ? void 0 : t.streak_count_days
+  return null === (t = m(e, r.ContentInventoryTraitType.STREAK_DAYS)) || void 0 === t ? void 0 : t.streak_count_days
 }
 
 function x(e) {
@@ -233,13 +233,13 @@ function P(e) {
   return null == t ? n : "".concat(n, " — ").concat(t)
 }
 
-function j(e) {
+function y(e) {
   var t;
-  return null === (t = m(e, l.ContentInventoryTraitType.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending
+  return null === (t = m(e, r.ContentInventoryTraitType.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending
 }
 
-function y(e) {
-  let t = (0, r.useStateFromStores)([f.default], () => f.default.getMatchingActivity(e)),
+function j(e) {
+  let t = (0, l.useStateFromStores)([f.default], () => f.default.getMatchingActivity(e)),
     [n, i] = (0, o.default)([null == t ? void 0 : t.application_id, e.extra.application_id]);
   return {
     activity: t,

@@ -29,8 +29,8 @@ var a = n("735250"),
   v = n("178762"),
   N = n("868671"),
   M = n("623624"),
-  R = n("518738"),
-  y = n("280234"),
+  y = n("518738"),
+  R = n("280234"),
   L = n("480384"),
   j = n("155409"),
   O = n("484459"),
@@ -202,7 +202,7 @@ let $ = l.memo(e => {
       return null != t ? null === (e = b.default.getRole(s.guild_id, t)) || void 0 === e ? void 0 : e.name : void 0
     }, [s, t]);
     return l.useEffect(() => {
-      r === Y.StatusTypes.OFFLINE && o && y.default.trackExposure({
+      r === Y.StatusTypes.OFFLINE && o && R.default.trackExposure({
         location: "guild_member_list"
       })
     }, [o, r]), (0, a.jsx)(Q, {
@@ -219,7 +219,7 @@ let $ = l.memo(e => {
       title: n,
       count: l,
       guildId: s
-    } = e, i = (0, R.useRoleIcon)({
+    } = e, i = (0, y.useRoleIcon)({
       roleId: t,
       guildId: s,
       size: 16

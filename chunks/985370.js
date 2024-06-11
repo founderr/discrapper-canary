@@ -29,11 +29,11 @@ t.default = e => {
     if ("focus" !== e.type) !_ && !v && C()
   }, [_, v, C]), M = l.useCallback(() => {
     !_ && g()
-  }, [g, _]), R = l.useCallback((e, t) => {
+  }, [g, _]), y = l.useCallback((e, t) => {
     S(), T(!_), (!s || _) && (null == t || t(e))
-  }, [S, _, s]), y = s || _;
+  }, [S, _, s]), R = s || _;
   return (0, a.jsx)(o.Popout, {
-    shouldShow: y,
+    shouldShow: R,
     animationPosition: "bottom",
     position: "bottom",
     align: "center",
@@ -46,7 +46,7 @@ t.default = e => {
         closePopout: n
       } = e;
       return (0, a.jsx)(h.default, {
-        isHovered: y,
+        isHovered: R,
         channel: t,
         closePopout: n,
         onMouseEnter: C,
@@ -66,14 +66,14 @@ t.default = e => {
         className: i()(p.controlButton, n),
         onKeyDown: e => {
           var t, n;
-          return t = e, n = l, void(t.keyCode === m.KeyboardKeys.ENTER && t.keyCode === m.KeyboardKeys.SPACE && R(t, n))
+          return t = e, n = l, void(t.keyCode === m.KeyboardKeys.ENTER && t.keyCode === m.KeyboardKeys.SPACE && y(t, n))
         },
         onClick: e => {
-          R(e, t)
+          y(e, t)
         },
         onMouseEnter: N,
         onMouseLeave: M,
-        isActive: y
+        isActive: R
       })
     }
   })

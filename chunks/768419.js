@@ -56,8 +56,8 @@ let j = {
   K = new A.default("Spotify"),
   z = new I.Timeout,
   Z = new I.Timeout,
-  X = new I.Timeout,
   Q = new I.Timeout,
+  X = new I.Timeout,
   q = new I.Timeout,
   J = {},
   $ = {},
@@ -380,10 +380,10 @@ class eh extends(o = c.default.Store) {
       let {
         userId: e
       } = r, t = es(e);
-      if (null == t) return X.start(V, () => {
+      if (null == t) return Q.start(V, () => {
         null != r && r.userId === e && (0, h.default)()
       }), !1;
-      X.stop();
+      Q.stop();
       let {
         sync_id: n,
         timestamps: i,
@@ -555,7 +555,7 @@ let eA = new eh(T.default, {
       S = null != l && null != r && 0 === o && !n;
     !S && (ee[t] = f);
     let A = i;
-    if (i = d().values(ee).find(e => null != e), eT(N.default.getId()), null == a || S ? Q.stop() : Q.start(a.duration - o + x, () => er(c.id)), null != r && (!n && o > 0 || null == l || null != f && r.trackId !== f.track.id) ? (K.info("Listen along active but playback stopped or track changed. Stopping listen along in ".concat(x, "ms")), q.start(x, () => {
+    if (i = d().values(ee).find(e => null != e), eT(N.default.getId()), null == a || S ? X.stop() : X.start(a.duration - o + x, () => er(c.id)), null != r && (!n && o > 0 || null == l || null != f && r.trackId !== f.track.id) ? (K.info("Listen along active but playback stopped or track changed. Stopping listen along in ".concat(x, "ms")), q.start(x, () => {
         K.info("Stopping listening along"), (0, h.default)(), er(c.id)
       })) : q.isStarted() && (K.info("Listen along stop cancelled as playback of track resumed"), q.stop()), A === i || null == I && null == f || null != I && null != f && I.track.id === f.track.id && I.startTime === f.startTime) return _;
     null != a && (T.default.dispatch({

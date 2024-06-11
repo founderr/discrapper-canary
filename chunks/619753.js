@@ -29,8 +29,8 @@ var a = n("735250"),
   v = n("944486"),
   N = n("594174"),
   M = n("68588"),
-  R = n("93879"),
-  y = n("101695"),
+  y = n("93879"),
+  R = n("101695"),
   L = n("683101"),
   j = n("981631"),
   O = n("689938"),
@@ -70,7 +70,7 @@ function D(e) {
         search_id: x.default.getAnalyticsId(f)
       }), (0, C.transitionTo)(j.Routes.CHANNEL(n, e.channel_id, e.id))
     }
-  }, [f]), R = l.useMemo(() => {
+  }, [f]), y = l.useMemo(() => {
     let e;
     if (null == p) return [];
     let t = 0;
@@ -84,7 +84,7 @@ function D(e) {
         startIndex: t
       }), t += 1, n[n.length - 1].results.push(a), e = null == s ? void 0 : s.id, n)
     }, [])
-  }, [p, v]), L = l.useRef([]), D = R.reduce((e, t) => e + 1 + t.results.length, 0), U = l.useCallback((e, t) => {
+  }, [p, v]), L = l.useRef([]), D = y.reduce((e, t) => e + 1 + t.results.length, 0), U = l.useCallback((e, t) => {
     if (!c.default.keyboardModeEnabled) return;
     let n = L.current,
       a = null != t ? n[t] : void 0;
@@ -103,7 +103,7 @@ function D(e) {
     focusedIndex: 0,
     setFocus: U,
     onSelect: F
-  }), k = x.default.getQuery(f), H = x.default.getSearchType(f) === j.SearchTypes.FAVORITES, G = (0, d.createASTHighlighter)(null !== (t = null == k ? void 0 : k.content) && void 0 !== t ? t : ""), B = R.map(e => {
+  }), k = x.default.getQuery(f), H = x.default.getSearchType(f) === j.SearchTypes.FAVORITES, G = (0, d.createASTHighlighter)(null !== (t = null == k ? void 0 : k.content) && void 0 !== t ? t : ""), B = y.map(e => {
     let {
       channel: t,
       results: n,
@@ -153,7 +153,7 @@ function D(e) {
           count: E
         })
       })]
-    }) : null, !I && !H && (0, a.jsx)(y.default, {
+    }) : null, !I && !H && (0, a.jsx)(R.default, {
       changePage: N,
       offset: S,
       totalResults: T,
@@ -173,7 +173,7 @@ function b(e) {
     totalResults: c,
     scrollTo: C,
     searchId: x,
-    renderEmbeds: y,
+    renderEmbeds: R,
     offset: O,
     jumpToMessage: D,
     listNavigator: b,
@@ -182,7 +182,7 @@ function b(e) {
     if (e === v.default.getChannelId()) return;
     let t = _.default.getChannel(e);
     if (null != t) I.default.can(j.Permissions.VIEW_CHANNEL, t) && (0, g.transitionToChannel)(t.id)
-  }, []), H = null != s ? (0, f.computeChannelName)(s, N.default, A.default, !1) : "???", G = U && null != s.guild_id ? null === (t = T.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, B = (null == s ? void 0 : s.parent_id) != null ? _.default.getChannel(s.parent_id) : null, V = null != B ? B.name : null, W = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : R.default, Y = null != B ? (0, h.default)(B) : null, z = I.default.can(j.Permissions.MANAGE_MESSAGES, s), {
+  }, []), H = null != s ? (0, f.computeChannelName)(s, N.default, A.default, !1) : "???", G = U && null != s.guild_id ? null === (t = T.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, B = (null == s ? void 0 : s.parent_id) != null ? _.default.getChannel(s.parent_id) : null, V = null != B ? B.name : null, W = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : y.default, Y = null != B ? (0, h.default)(B) : null, z = I.default.can(j.Permissions.MANAGE_MESSAGES, s), {
     content: K
   } = (0, E.default)({
     content: H,
@@ -243,7 +243,7 @@ function b(e) {
           totalResults: c,
           scrollTo: C,
           searchId: x,
-          renderEmbeds: y,
+          renderEmbeds: R,
           searchOffset: O,
           pageResultsLength: r.length,
           result: e,

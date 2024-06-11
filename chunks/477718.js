@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return y
   }
 });
 var a = n("735250"),
@@ -38,7 +38,7 @@ function M(e) {
     analyticsLocations: r
   } = (0, f.default)(), c = h.getSimpleAuditLogTitleFromChange(t), E = h.getSimpleAuditLogTitleContextFromChange(t), S = h.getStringForBanReason(t), _ = h.getSimpleAuditLogChangeDetails(t), I = (0, m.useAuditLogDate)(t.id), N = (0, u.useStateFromStores)([g.default], () => null != t.userId ? g.default.getMember(n.guildId, t.userId) : null, [n.guildId, t.userId]), M = l.useCallback(e => t => {
     t.preventDefault(), t.stopPropagation(), null != e && (0, p.openMemberProfile)(e, r)
-  }, [r]), R = l.useCallback(() => null == t.user ? null : (0, a.jsx)(d.Tooltip, {
+  }, [r]), y = l.useCallback(() => null == t.user ? null : (0, a.jsx)(d.Tooltip, {
     text: A.default.Messages.GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER,
     children: e => {
       var l;
@@ -91,7 +91,7 @@ function M(e) {
       className: x.auditLogSecondaryContainer,
       children: (0, a.jsxs)("div", {
         className: x.auditLogReason,
-        children: [R, (0, a.jsx)(d.Text, {
+        children: [y, (0, a.jsx)(d.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
           tag: "span",
@@ -102,7 +102,7 @@ function M(e) {
       className: x.auditLogSecondaryContainer,
       children: (0, a.jsxs)("div", {
         className: x.auditLogSecondary,
-        children: [R, (0, a.jsx)(d.Text, {
+        children: [y, (0, a.jsx)(d.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
           tag: "span",
@@ -129,7 +129,7 @@ function M(e) {
   })
 }
 
-function R(e) {
+function y(e) {
   let {
     member: t
   } = e, n = (0, u.useStateFromStores)([S.default], () => S.default.getGuild(t.guildId), [t.guildId]), s = (0, u.useStateFromStores)([E.default], () => {

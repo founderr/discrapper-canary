@@ -25,8 +25,8 @@ var a = n("735250"),
   v = n("695346"),
   N = n("433355"),
   M = n("819640"),
-  R = n("375954"),
-  y = n("496675"),
+  y = n("375954"),
+  R = n("496675"),
   L = n("885110"),
   j = n("151785"),
   O = n("627553"),
@@ -73,7 +73,7 @@ t.default = l.memo(function(e) {
     [ed, ec] = l.useState(null),
     ef = (0, C.useEnableClips)() && (et || eu),
     eh = K.isPrivate(),
-    em = (0, r.useStateFromStores)([y.default], () => eh || y.default.can(H.Permissions.ATTACH_FILES, K) && y.default.can(H.Permissions.SEND_MESSAGES, K)),
+    em = (0, r.useStateFromStores)([R.default], () => eh || R.default.can(H.Permissions.ATTACH_FILES, K) && R.default.can(H.Permissions.SEND_MESSAGES, K)),
     ep = (0, f.default)(en);
   (null == ep ? void 0 : ep.newClipIds.length) !== (null == en ? void 0 : en.newClipIds.length) && (null !== (t = null == en ? void 0 : en.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ed && ei && el && !er && !es && !eo && ec("recentClips");
   let eE = (e, t, n) => {
@@ -82,7 +82,7 @@ t.default = l.memo(function(e) {
         showLargeMessageDialog: n
       }), D.ComponentDispatch.dispatchToLastSubscribed(H.ComponentActions.TEXTAREA_FOCUS)
     },
-    eC = (0, r.useStateFromStores)([R.default], () => R.default.hasCurrentUserSentMessageSinceAppStart());
+    eC = (0, r.useStateFromStores)([y.default], () => y.default.hasCurrentUserSentMessageSinceAppStart());
 
   function eg() {
     (0, d.openModalLazy)(async () => {
@@ -109,7 +109,7 @@ t.default = l.memo(function(e) {
   let eS = (0, x.useCanStartPublicThread)(K),
     e_ = (0, x.useCanStartPrivateThread)(K),
     eT = !v.UseLegacyChatInput.useSetting() && !(0, b.isAndroidWeb)() && null != window.ResizeObserver,
-    eI = (0, r.useStateFromStores)([y.default, A.default], () => (0, E.canUseApplicationCommands)(y.default, A.default, J, K)),
+    eI = (0, r.useStateFromStores)([R.default, A.default], () => (0, E.canUseApplicationCommands)(R.default, A.default, J, K)),
     eA = (0, I.useCanPostPollsInChannel)(null != K ? K : void 0),
     ex = (0, d.useRedesignIconContext)().enabled,
     ev = (0, m.useShowActivitiesInOmniButtonMenu)(K.id, "ChannelAttachButton"),
@@ -128,12 +128,12 @@ t.default = l.memo(function(e) {
       appContext: Q
     });
   if (0 === eM.length) return null;
-  let eR = ee.some(e => (0, p.default)(e, H.ActivityFlags.SYNC)),
-    ey = ee.some(e => (0, p.default)(e, H.ActivityFlags.JOIN) && !(0, p.default)(e, H.ActivityFlags.EMBEDDED)) || eR;
+  let ey = ee.some(e => (0, p.default)(e, H.ActivityFlags.SYNC)),
+    eR = ee.some(e => (0, p.default)(e, H.ActivityFlags.JOIN) && !(0, p.default)(e, H.ActivityFlags.EMBEDDED)) || ey;
   Y = ex ? (0, a.jsx)(u.CirclePlusIcon, {
     className: W.__invalid_attachButtonIcon,
     colorClass: W.attachButtonPlus
-  }) : ey ? (0, a.jsx)(P.default, {
+  }) : eR ? (0, a.jsx)(P.default, {
     className: W.__invalid_attachButtonIcon,
     foreground: W.attachButtonPlay,
     background: W.attachButtonPlus,

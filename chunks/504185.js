@@ -29,8 +29,8 @@ var a = n("735250"),
   v = n("73563"),
   N = n("800965"),
   M = n("107169"),
-  R = n("891551"),
-  y = n("314897"),
+  y = n("891551"),
+  R = n("314897"),
   L = n("979696"),
   j = n("430824"),
   O = n("496675"),
@@ -75,7 +75,7 @@ function el(e) {
     popoutWindow: i,
     popoutWindowAlwaysOnTop: r,
     selectedParticipant: u
-  } = e, d = t.getGuildId(), c = (0, o.useStateFromStores)([P.default], () => P.default.getMostRecentSelectedTextChannelId(d), [d]), f = y.default.getId(), h = !(0, o.useStateFromStores)([E.default], () => E.default.isFullscreenInContext(n)) && (!D.isPlatformEmbedded || D.isPlatformEmbedded && U.default.supportsFeature(q.NativeFeatures.POPOUT_WINDOWS)), m = null != u && u.type !== J.ParticipantTypes.ACTIVITY && u.user.id !== f, p = l.useMemo(() => {
+  } = e, d = t.getGuildId(), c = (0, o.useStateFromStores)([P.default], () => P.default.getMostRecentSelectedTextChannelId(d), [d]), f = R.default.getId(), h = !(0, o.useStateFromStores)([E.default], () => E.default.isFullscreenInContext(n)) && (!D.isPlatformEmbedded || D.isPlatformEmbedded && U.default.supportsFeature(q.NativeFeatures.POPOUT_WINDOWS)), m = null != u && u.type !== J.ParticipantTypes.ACTIVITY && u.user.id !== f, p = l.useMemo(() => {
     var e;
     return null !== (e = null == i ? void 0 : i.window) && void 0 !== e ? e : window
   }, [i]), g = (0, Z.default)({
@@ -86,7 +86,7 @@ function el(e) {
     currentWindow: p
   }), S = n === q.AppContext.POPOUT && D.isPlatformEmbedded && U.default.supportsFeature(q.NativeFeatures.POPOUT_WINDOWS);
   return (0, a.jsxs)(a.Fragment, {
-    children: [m ? (0, a.jsx)(R.default, {
+    children: [m ? (0, a.jsx)(y.default, {
       context: (0, C.default)(u.type),
       userId: u.user.id,
       currentWindow: p,
@@ -137,8 +137,8 @@ function ei(e) {
       isOnStartStageScreen: M
     } = (0, G.default)();
   (0, G.useUpdateIsOnStartStageScreenEffect)(n);
-  let R = (0, o.useStateFromStores)([L.default], () => L.default.getToastsEnabled(n.id)),
-    y = (0, X.default)(n) ? null != T ? "84px" : "124px" : null != T ? "0px" : "48px";
+  let y = (0, o.useStateFromStores)([L.default], () => L.default.getToastsEnabled(n.id)),
+    R = (0, X.default)(n) ? null != T ? "84px" : "124px" : null != T ? "0px" : "48px";
   return t = M ? (0, a.jsx)(K.default, {
     channel: n,
     onContinueClick: () => {
@@ -160,8 +160,8 @@ function ei(e) {
     hasConnectPermission: S
   }), (0, a.jsx)(v.default, {
     style: {
-      height: "calc(100% - ".concat(y, ")"),
-      paddingTop: y
+      height: "calc(100% - ".concat(R, ")"),
+      paddingTop: R
     },
     disableGradients: 0 === A && v.DisableGradient.TOP,
     renderBottomLeft: () => (0, a.jsx)(es, {
@@ -185,7 +185,7 @@ function ei(e) {
       showRequestToSpeakSidebar: u,
       channel: n
     }),
-    renderChatToasts: () => !R || m || I ? null : (0, a.jsx)(g.default, {
+    renderChatToasts: () => !y || m || I ? null : (0, a.jsx)(g.default, {
       children: (0, a.jsx)(x.default, {
         className: i()($.chatToasts, {
           [$.rtsSidebarOpen]: u
@@ -231,14 +231,14 @@ function er(e) {
   }, []);
   let {
     width: M = 0,
-    ref: R
+    ref: y
   } = (0, f.default)();
   return (0, a.jsx)(p.AnalyticsLocationProvider, {
     value: A,
     children: (0, a.jsxs)(g.ChannelCallChatLayerProvider, {
       children: [(0, a.jsxs)("div", {
         className: $.container,
-        ref: R,
+        ref: y,
         children: [(0, a.jsx)("div", {
           className: i()($.callContainer, (0, b.getThemeClass)(q.ThemeTypes.DARK), {
             [$.sidebarVisible]: s,

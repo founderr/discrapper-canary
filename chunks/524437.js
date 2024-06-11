@@ -1023,7 +1023,7 @@ class z extends N.MessageType {
   }
 }
 let Z = new z;
-class X extends N.MessageType {
+class Q extends N.MessageType {
   create(e) {
     let t = {};
     return globalThis.Object.defineProperty(t, N.MESSAGE_TYPE, {
@@ -1079,7 +1079,7 @@ class X extends N.MessageType {
     }])
   }
 }
-let Q = new X;
+let X = new Q;
 class q extends N.MessageType {
   create(e) {
     let t = {
@@ -1184,7 +1184,7 @@ class q extends N.MessageType {
           r.explicitContentSettings = Z.internalBinaryRead(e, e.uint32(), n, r.explicitContentSettings);
           break;
         case 30:
-          r.keywordFilterSettings = Q.internalBinaryRead(e, e.uint32(), n, r.keywordFilterSettings);
+          r.keywordFilterSettings = X.internalBinaryRead(e, e.uint32(), n, r.keywordFilterSettings);
           break;
         default:
           let s = n.readUnknownField;
@@ -1201,7 +1201,7 @@ class q extends N.MessageType {
     for (let n = 0; n < e.stickerPickerCollapsedSections.length; n++) t.tag(6, N.WireType.LengthDelimited).string(e.stickerPickerCollapsedSections[n]);
     e.viewImageDescriptions && p.BoolValue.internalBinaryWrite(e.viewImageDescriptions, t.tag(7, N.WireType.LengthDelimited).fork(), n).join(), e.showCommandSuggestions && p.BoolValue.internalBinaryWrite(e.showCommandSuggestions, t.tag(8, N.WireType.LengthDelimited).fork(), n).join(), e.inlineAttachmentMedia && p.BoolValue.internalBinaryWrite(e.inlineAttachmentMedia, t.tag(9, N.WireType.LengthDelimited).fork(), n).join(), e.inlineEmbedMedia && p.BoolValue.internalBinaryWrite(e.inlineEmbedMedia, t.tag(10, N.WireType.LengthDelimited).fork(), n).join(), e.gifAutoPlay && p.BoolValue.internalBinaryWrite(e.gifAutoPlay, t.tag(11, N.WireType.LengthDelimited).fork(), n).join(), e.renderEmbeds && p.BoolValue.internalBinaryWrite(e.renderEmbeds, t.tag(12, N.WireType.LengthDelimited).fork(), n).join(), e.renderReactions && p.BoolValue.internalBinaryWrite(e.renderReactions, t.tag(13, N.WireType.LengthDelimited).fork(), n).join(), e.animateEmoji && p.BoolValue.internalBinaryWrite(e.animateEmoji, t.tag(14, N.WireType.LengthDelimited).fork(), n).join(), e.animateStickers && p.UInt32Value.internalBinaryWrite(e.animateStickers, t.tag(15, N.WireType.LengthDelimited).fork(), n).join(), e.enableTtsCommand && p.BoolValue.internalBinaryWrite(e.enableTtsCommand, t.tag(16, N.WireType.LengthDelimited).fork(), n).join(), e.messageDisplayCompact && p.BoolValue.internalBinaryWrite(e.messageDisplayCompact, t.tag(17, N.WireType.LengthDelimited).fork(), n).join(), e.explicitContentFilter && p.UInt32Value.internalBinaryWrite(e.explicitContentFilter, t.tag(19, N.WireType.LengthDelimited).fork(), n).join(), e.viewNsfwGuilds && p.BoolValue.internalBinaryWrite(e.viewNsfwGuilds, t.tag(20, N.WireType.LengthDelimited).fork(), n).join(), e.convertEmoticons && p.BoolValue.internalBinaryWrite(e.convertEmoticons, t.tag(21, N.WireType.LengthDelimited).fork(), n).join(), e.expressionSuggestionsEnabled && p.BoolValue.internalBinaryWrite(e.expressionSuggestionsEnabled, t.tag(22, N.WireType.LengthDelimited).fork(), n).join(), e.viewNsfwCommands && p.BoolValue.internalBinaryWrite(e.viewNsfwCommands, t.tag(23, N.WireType.LengthDelimited).fork(), n).join(), e.useLegacyChatInput && p.BoolValue.internalBinaryWrite(e.useLegacyChatInput, t.tag(24, N.WireType.LengthDelimited).fork(), n).join();
     for (let n = 0; n < e.soundboardPickerCollapsedSections.length; n++) t.tag(25, N.WireType.LengthDelimited).string(e.soundboardPickerCollapsedSections[n]);
-    e.dmSpamFilter && p.UInt32Value.internalBinaryWrite(e.dmSpamFilter, t.tag(26, N.WireType.LengthDelimited).fork(), n).join(), 0 !== e.dmSpamFilterV2 && t.tag(27, N.WireType.Varint).int32(e.dmSpamFilterV2), e.includeStickersInAutocomplete && p.BoolValue.internalBinaryWrite(e.includeStickersInAutocomplete, t.tag(28, N.WireType.LengthDelimited).fork(), n).join(), e.explicitContentSettings && Z.internalBinaryWrite(e.explicitContentSettings, t.tag(29, N.WireType.LengthDelimited).fork(), n).join(), e.keywordFilterSettings && Q.internalBinaryWrite(e.keywordFilterSettings, t.tag(30, N.WireType.LengthDelimited).fork(), n).join();
+    e.dmSpamFilter && p.UInt32Value.internalBinaryWrite(e.dmSpamFilter, t.tag(26, N.WireType.LengthDelimited).fork(), n).join(), 0 !== e.dmSpamFilterV2 && t.tag(27, N.WireType.Varint).int32(e.dmSpamFilterV2), e.includeStickersInAutocomplete && p.BoolValue.internalBinaryWrite(e.includeStickersInAutocomplete, t.tag(28, N.WireType.LengthDelimited).fork(), n).join(), e.explicitContentSettings && Z.internalBinaryWrite(e.explicitContentSettings, t.tag(29, N.WireType.LengthDelimited).fork(), n).join(), e.keywordFilterSettings && X.internalBinaryWrite(e.keywordFilterSettings, t.tag(30, N.WireType.LengthDelimited).fork(), n).join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? N.UnknownFieldHandler.onWrite : i)(this.typeName, e, t), t
   }
@@ -1353,7 +1353,7 @@ class q extends N.MessageType {
       no: 30,
       name: "keyword_filter_settings",
       kind: "message",
-      T: () => Q
+      T: () => X
     }])
   }
 }

@@ -1,48 +1,48 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   useActivityShelfData: function() {
-    return f
+    return c
   }
-}), l("47120");
-var i = l("470079"),
-  n = l("442837"),
-  a = l("835473"),
-  u = l("594174"),
-  d = l("695103"),
-  r = l("823379"),
-  o = l("358085"),
-  s = l("317381"),
-  c = l("761122");
+}), n("47120");
+var i = n("470079"),
+  r = n("442837"),
+  s = n("835473"),
+  a = n("594174"),
+  o = n("695103"),
+  l = n("823379"),
+  u = n("358085"),
+  d = n("317381"),
+  _ = n("761122");
 
-function f(e) {
-  let t = (0, n.useStateFromStores)([u.default], u.default.getCurrentUser),
-    l = (0, n.useStateFromStoresArray)([s.default], () => s.default.getShelfActivities(e)),
-    f = (0, n.useStateFromStores)([d.default], () => d.default.testModeEmbeddedApplicationId),
-    p = l.map(e => e.application_id),
-    v = null != f ? [f, ...p] : p,
-    E = (0, a.default)(v),
-    A = i.useMemo(() => E.filter(r.isNotNullish), [E]),
-    m = i.useMemo(() => null != f && A.length > 0 && A[0].id === f && null != A[0].embeddedActivityConfig ? [{
-      activity: A[0].embeddedActivityConfig,
-      application: A[0]
-    }] : [], [A, f]),
-    y = i.useMemo(() => l.map(e => {
-      let t = A.find(t => t.id === e.application_id);
+function c(e) {
+  let t = (0, r.useStateFromStores)([a.default], a.default.getCurrentUser),
+    n = (0, r.useStateFromStoresArray)([d.default], () => d.default.getShelfActivities(e)),
+    c = (0, r.useStateFromStores)([o.default], () => o.default.testModeEmbeddedApplicationId),
+    E = n.map(e => e.application_id),
+    I = null != c ? [c, ...E] : E,
+    T = (0, s.default)(I),
+    f = i.useMemo(() => T.filter(l.isNotNullish), [T]),
+    S = i.useMemo(() => null != c && f.length > 0 && f[0].id === c && null != f[0].embeddedActivityConfig ? [{
+      activity: f[0].embeddedActivityConfig,
+      application: f[0]
+    }] : [], [f, c]),
+    h = i.useMemo(() => n.map(e => {
+      let t = f.find(t => t.id === e.application_id);
       return null == t ? null : {
         activity: e,
         application: t
       }
-    }).filter(r.isNotNullish), [l, A]);
-  return i.useMemo(() => [...m, ...y].filter(e => {
+    }).filter(l.isNotNullish), [n, f]);
+  return i.useMemo(() => [...S, ...h].filter(e => {
     var t;
     let {
-      activity: l
+      activity: n
     } = e;
-    return (null !== (t = l.supported_platforms) && void 0 !== t ? t : []).includes((0, c.default)((0, o.getOS)()))
+    return (null !== (t = n.supported_platforms) && void 0 !== t ? t : []).includes((0, _.default)((0, u.getOS)()))
   }).filter(e => {
     let {
-      activity: l
+      activity: n
     } = e;
-    return !l.requires_age_gate || (null == t ? void 0 : t.nsfwAllowed) === !0 || (null == t ? void 0 : t.nsfwAllowed) == null
-  }), [null == t ? void 0 : t.nsfwAllowed, y, m])
+    return !n.requires_age_gate || (null == t ? void 0 : t.nsfwAllowed) === !0 || (null == t ? void 0 : t.nsfwAllowed) == null
+  }), [null == t ? void 0 : t.nsfwAllowed, h, S])
 }

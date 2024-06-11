@@ -17,9 +17,9 @@ var s = n("735250"),
   _ = n("296848"),
   p = n("981631"),
   T = n("474936"),
-  I = n("689938"),
-  S = n("354052"),
-  A = n("961047"),
+  S = n("689938"),
+  A = n("354052"),
+  I = n("961047"),
   N = n("611273");
 t.default = r.default.connectStores([E.default, u.default, h.default, f.default], e => {
   let {
@@ -41,24 +41,24 @@ t.default = r.default.connectStores([E.default, u.default, h.default, f.default]
     sku: r,
     application: u,
     subscriptionPlan: f
-  } = e, h = null == i ? I.default.Messages.GIFT_CODE_AUTH_GIFTED : I.default.Messages.GIFT_CODE_AUTH_GIFTED_BY.format({
+  } = e, h = null == i ? S.default.Messages.GIFT_CODE_AUTH_GIFTED : S.default.Messages.GIFT_CODE_AUTH_GIFTED_BY.format({
     username: i.username
   }), E = r.name;
-  return null != f && (E = (f.interval === T.SubscriptionIntervalTypes.MONTH ? I.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_MONTHLY : I.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_YEARLY).format({
+  return null != f && (E = (f.interval === T.SubscriptionIntervalTypes.MONTH ? S.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_MONTHLY : S.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_YEARLY).format({
     skuName: r.name,
     intervalCount: f.intervalCount
   })), (0, s.jsxs)(a.Fragment, {
     children: [null != n.giftStyle ? (0, s.jsx)(c.default, {
       defaultAnimationState: d.AnimationState.LOOP,
       giftStyle: n.giftStyle,
-      className: S.seasonalIcon
+      className: A.seasonalIcon
     }) : (0, s.jsx)(m.Avatar, {
       src: null != i ? i.getAvatarURL(void 0, 100) : null,
       size: o.AvatarSizes.DEPRECATED_SIZE_100,
       className: N.marginBottom20
     }), null != t ? (0, s.jsxs)(a.Fragment, {
       children: [(0, s.jsx)(m.SubTitle, {
-        children: I.default.Messages.INVITE_MODAL_ERROR_TITLE
+        children: S.default.Messages.INVITE_MODAL_ERROR_TITLE
       }), (0, s.jsx)(m.Title, {
         children: t
       })]
@@ -66,10 +66,10 @@ t.default = r.default.connectStores([E.default, u.default, h.default, f.default]
       children: [(0, s.jsx)(m.SubTitle, {
         children: h
       }), (0, s.jsxs)(m.Title, {
-        className: l()(N.marginTop8, A.flexCenter),
+        className: l()(N.marginTop8, I.flexCenter),
         children: [r.productLine !== p.SKUProductLines.COLLECTIBLES && (0, s.jsx)(g.default, {
           size: g.default.Sizes.MEDIUM,
-          className: S.applicationIcon,
+          className: A.applicationIcon,
           game: u,
           skuId: r.id
         }), E]

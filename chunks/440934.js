@@ -27,10 +27,10 @@ function f(e) {
   } = e, {
     components: h,
     applicationIconURL: m,
-    applicationName: S,
-    submissionState: g,
-    error: I,
-    validators: v,
+    applicationName: g,
+    submissionState: S,
+    error: v,
+    validators: I,
     onSubmit: C
   } = (0, u.useModalState)(e, n);
   return (0, i.jsx)("form", {
@@ -44,7 +44,7 @@ function f(e) {
         children: [(0, i.jsx)(l.Avatar, {
           src: m,
           size: l.AvatarSizes.SIZE_24,
-          "aria-label": S,
+          "aria-label": g,
           className: p.applicationIcon
         }), (0, i.jsx)(a.default, {
           color: a.default.Colors.HEADER_PRIMARY,
@@ -55,20 +55,20 @@ function f(e) {
           className: p.closeButton
         })]
       }), (0, i.jsxs)(l.ModalContent, {
-        children: [null != I && "" !== I ? (0, i.jsx)(r.default, {
+        children: [null != v && "" !== v ? (0, i.jsx)(r.default, {
           messageType: r.HelpMessageTypes.ERROR,
           className: p.submissionWarning,
-          children: I
+          children: v
         }) : null, (0, i.jsx)(r.default, {
           messageType: r.HelpMessageTypes.WARNING,
           className: p.submissionWarning,
           children: c.default.Messages.INTERACTION_FORM_SUBMISSION_APPLICATION.format({
-            applicationName: S
+            applicationName: g
           })
         }), (0, i.jsx)(l.FormSection, {
           children: (0, i.jsx)(o.ComponentStateContextProvider, {
             modal: e,
-            validators: v,
+            validators: I,
             children: (0, d.renderComponents)(h)
           })
         })]
@@ -77,7 +77,7 @@ function f(e) {
           type: "submit",
           color: l.Button.Colors.BRAND,
           size: l.Button.Sizes.MEDIUM,
-          submitting: g === s.InteractionModalState.IN_FLIGHT,
+          submitting: S === s.InteractionModalState.IN_FLIGHT,
           children: c.default.Messages.SUBMIT
         }), (0, i.jsx)(l.Button, {
           look: l.Button.Looks.LINK,

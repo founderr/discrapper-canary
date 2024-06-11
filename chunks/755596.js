@@ -3,8 +3,8 @@ s.r(t);
 var a = s("735250");
 s("470079");
 var n = s("481060"),
-  l = s("86813"),
-  i = s("861559");
+  i = s("86813"),
+  l = s("861559");
 t.default = e => {
   let {
     label: t,
@@ -13,18 +13,18 @@ t.default = e => {
   } = e;
   return (0, a.jsx)(n.Clickable, {
     onClick: r ? void 0 : s,
-    className: i.button,
+    className: l.button,
     children: (0, a.jsxs)("div", {
-      className: i.contentContainer,
+      className: l.contentContainer,
       children: [r ? (0, a.jsx)(n.Spinner, {
         type: n.Spinner.Type.PULSING_ELLIPSIS,
-        className: i.__invalid_spinner
+        className: l.__invalid_spinner
       }) : (0, a.jsx)(n.Text, {
         variant: "text-md/medium",
-        className: i.label,
+        className: l.label,
         children: t
-      }), (0, a.jsx)(l.default, {
-        className: i.arrow
+      }), (0, a.jsx)(i.default, {
+        className: l.arrow
       })]
     })
   })

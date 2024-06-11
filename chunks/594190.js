@@ -134,8 +134,8 @@ let b = new S.default("RunningGameStore"),
   },
   z = function() {},
   Z = {},
-  X = 0,
-  Q = null,
+  Q = 0,
+  X = null,
   q = null,
   J = {};
 
@@ -361,9 +361,9 @@ function ec() {
       return n === e.name
     }) || (n.push(e), !1)));
     let s = n.filter(et).length;
-    s !== X && (X = s, I.default.dispatch({
+    s !== Q && (Q = s, I.default.dispatch({
       type: "RUNNING_STREAMER_TOOLS_CHANGE",
-      count: X
+      count: Q
     })), F = e, Y = n, i = r, en()
   }), ed()
 });
@@ -420,7 +420,7 @@ class eE extends(r = c.default.Store) {
     }
   }
   shouldElevateProcessForPID(e) {
-    return null != Q && Q === e
+    return null != X && X === e
   }
   shouldContinueWithoutElevatedProcessForPID(e) {
     return null != q && q === e
@@ -487,16 +487,16 @@ o = "RunningGameStore", (a = "displayName") in(s = eE) ? Object.defineProperty(s
     let {
       pid: t
     } = e;
-    Q = t, q = null
+    X = t, q = null
   },
   PERMISSION_CLEAR_ELEVATED_PROCESS: function() {
-    Q = null
+    X = null
   },
   PERMISSION_CONTINUE_NONELEVATED_PROCESS: function(e) {
     let {
       pid: t
     } = e;
-    q = t, Q = null
+    q = t, X = null
   },
   RUNNING_GAME_ADD_OVERRIDE: function(e) {
     let t;

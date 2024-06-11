@@ -191,7 +191,7 @@ function z(e, t) {
 function Z() {
   H(R.FAVORITES)
 }
-class X extends(i = d.default.Store) {
+class Q extends(i = d.default.Store) {
   initialize() {
     this.waitFor(N.default, m.default, A.default, p.default, h.default, c.default, I.default), this.syncWith([I.default], Z)
   }
@@ -267,12 +267,12 @@ class X extends(i = d.default.Store) {
     return null != e && null !== (t = y[e]) && void 0 !== t ? t : B
   }
 }
-a = "GuildChannelStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, s, {
+a = "GuildChannelStore", (s = "displayName") in(r = Q) ? Object.defineProperty(r, s, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new X(_.default, {
+}) : r[s] = a, t.default = new Q(_.default, {
   BACKGROUND_SYNC: F,
   CHANNEL_SELECT: function(e) {
     let {

@@ -34,7 +34,7 @@ function g(e) {
     collapseWhenChecked: x = !0,
     onClick: v,
     disabled: N
-  } = e, M = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [R, y] = l.useState(!1), L = (0, c.default)(), j = (0, o.isThemeDark)(L) || t ? C : E, {
+  } = e, M = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [y, R] = l.useState(!1), L = (0, c.default)(), j = (0, o.isThemeDark)(L) || t ? C : E, {
     width: O = 0,
     ref: P
   } = (0, d.default)(), {
@@ -57,7 +57,7 @@ function g(e) {
       onChange: function() {
         if (g) {
           let e = !t;
-          y(!0), null == _ || _(e)
+          R(!0), null == _ || _(e)
         }
         "function" == typeof v && v()
       },
@@ -67,7 +67,7 @@ function g(e) {
     }), (0, a.jsxs)("label", {
       htmlFor: A,
       className: i()(p.label, I, {
-        [p.transition]: R,
+        [p.transition]: y,
         [p.labelChecked]: t,
         [p.labelUnchecked]: !t && !g
       }),

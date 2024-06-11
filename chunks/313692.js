@@ -34,8 +34,8 @@ function v(e) {
     guildId: v,
     location: N,
     className: M,
-    onNavigate: R
-  } = e, y = l.useRef(null), L = (0, o.useStateFromStores)([p.default], () => p.default.getGuildSidebarState(v), [v]), j = l.useRef(0), [O, P] = l.useState(null !== (t = null == L ? void 0 : L.details.additionalSearchQuery) && void 0 !== t ? t : {}), D = (0, S.useServerMessageHistoryForUser)(s, v, {
+    onNavigate: y
+  } = e, R = l.useRef(null), L = (0, o.useStateFromStores)([p.default], () => p.default.getGuildSidebarState(v), [v]), j = l.useRef(0), [O, P] = l.useState(null !== (t = null == L ? void 0 : L.details.additionalSearchQuery) && void 0 !== t ? t : {}), D = (0, S.useServerMessageHistoryForUser)(s, v, {
     addtionalQuery: O,
     shouldDispatch: !0
   }), b = (0, o.useStateFromStores)([C.default], () => C.default.getUser(s), [s]), U = (0, o.useStateFromStores)([E.default], () => E.default.getMember(v, s), [v, s]), F = (0, T.useProfileThemedPanelBackground)(s, v);
@@ -43,7 +43,7 @@ function v(e) {
     let e = null == L ? void 0 : L.details.scrollOffset;
     if (null != e) {
       var t;
-      null === (t = y.current) || void 0 === t || t.scrollTo({
+      null === (t = R.current) || void 0 === t || t.scrollTo({
         to: e,
         animate: !1
       })
@@ -121,10 +121,10 @@ function v(e) {
     children: [(0, a.jsx)(_.default, {
       guildId: v,
       userId: s,
-      onNavigate: R
+      onNavigate: y
     }), (0, a.jsx)(u.AdvancedScroller, {
       className: i()(x.innerContainer),
-      ref: y,
+      ref: R,
       onScroll: k,
       children: (0, a.jsx)(m.default, {
         searchResults: B,

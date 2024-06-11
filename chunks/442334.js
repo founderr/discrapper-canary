@@ -9,8 +9,8 @@ s.r(t), s.d(t, {
 });
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("481060"),
   o = s("387454");
 
@@ -19,11 +19,11 @@ function d(e) {
     title: t,
     note: s,
     children: n,
-    className: l,
+    className: i,
     id: d
   } = e;
   return (0, a.jsxs)("div", {
-    className: i()(o.inputItem, l),
+    className: l()(o.inputItem, i),
     children: [(0, a.jsxs)("div", {
       className: o.inputItemText,
       children: [(0, a.jsx)(r.Text, {
@@ -45,7 +45,7 @@ function u(e) {
   let {
     options: t,
     value: s,
-    select: l,
+    select: i,
     selectClassName: u,
     ...c
   } = e, S = n.useId();
@@ -54,10 +54,10 @@ function u(e) {
     id: S,
     children: (0, a.jsx)(r.Select, {
       "aria-labelledby": S,
-      className: i()(o.selectControl, u),
+      className: l()(o.selectControl, u),
       options: t,
       isSelected: e => e === s,
-      select: l,
+      select: i,
       serialize: e => String(e)
     })
   })

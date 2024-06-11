@@ -35,16 +35,16 @@ function v(e) {
     className: v,
     infoPanelClassName: N,
     style: M
-  } = e, R = (0, _.useCanAccessGuildMemberModView)(n), y = (0, r.useStateFromStores)([S.default], () => S.default.getUser(t), [t]), L = (0, r.useStateFromStores)([g.default], () => g.default.getMember(n, t), [n, t]), [j, O] = l.useState(null == y || null == L), P = (0, d.default)(L), D = l.useRef(null), {
+  } = e, y = (0, _.useCanAccessGuildMemberModView)(n), R = (0, r.useStateFromStores)([S.default], () => S.default.getUser(t), [t]), L = (0, r.useStateFromStores)([g.default], () => g.default.getMember(n, t), [n, t]), [j, O] = l.useState(null == R || null == L), P = (0, d.default)(L), D = l.useRef(null), {
     analyticsLocations: b
   } = (0, h.default)(f.default.GUILD_MEMBER_MOD_VIEW), U = (0, E.default)(t, n);
   return (l.useEffect(() => {
-    !R && s()
-  }, [R, s]), l.useEffect(() => {
+    !y && s()
+  }, [y, s]), l.useEffect(() => {
     null != P && null == L && !j && s()
   }, [j, L, s, P]), l.useEffect(() => {
-    null != y && null != L && O(!1)
-  }, [y, L]), l.useEffect(() => {
+    null != R && null != L && O(!1)
+  }, [R, L]), l.useEffect(() => {
     let e = null == L;
     return !j && e && (D.current = window.setTimeout(s, 500)), () => {
       null != D.current && window.clearTimeout(D.current)
@@ -59,7 +59,7 @@ function v(e) {
       })];
       await Promise.all(e), O(!1)
     })()
-  }, [n, t]), R) ? j || null == y || null == L ? (0, a.jsx)("div", {
+  }, [n, t]), y) ? j || null == R || null == L ? (0, a.jsx)("div", {
     className: i()(x.sidebarContianer, x.loadingContainer, v),
     style: M,
     children: (0, a.jsx)(o.Spinner, {
@@ -72,7 +72,7 @@ function v(e) {
       className: i()(x.sidebarContianer, v),
       style: M,
       children: (0, a.jsx)(C.default, {
-        user: y,
+        user: R,
         displayProfile: U,
         profileType: A.UserProfileTypes.MODAL,
         forceShowPremium: !0,

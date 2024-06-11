@@ -3,8 +3,8 @@ s.r(t);
 var a = s("735250");
 s("470079");
 var n = s("481060"),
-  l = s("230711"),
-  i = s("63063"),
+  i = s("230711"),
+  l = s("63063"),
   r = s("74538"),
   o = s("937615"),
   d = s("981631"),
@@ -29,7 +29,7 @@ t.default = function(e) {
     } = e;
     if (n) return {
       flavor: c.default.Messages.GUILD_BOOSTING_DISABLED_FOR_PAUSED_SUBSCRIPTION_WITH_LINK.format({
-        onClick: () => l.default.open(d.UserSettingsSections.SUBSCRIPTIONS)
+        onClick: () => i.default.open(d.UserSettingsSections.SUBSCRIPTIONS)
       })
     };
     if (!a) return {
@@ -38,7 +38,7 @@ t.default = function(e) {
     if (t) return {
       subtitle: c.default.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_ACTIVE_BOOSTS,
       flavor: c.default.Messages.GUILD_BOOSTING_USER_SETTINGS_SUBTITLE_ACTIVE_BOOSTS_FLAVOR.format({
-        helpdeskArticle: i.default.getArticleURL(d.HelpdeskArticles.GUILD_SUBSCRIPTIONS)
+        helpdeskArticle: l.default.getArticleURL(d.HelpdeskArticles.GUILD_SUBSCRIPTIONS)
       })
     };
     let S = u.SubscriptionPlanInfo[u.SubscriptionPlans.PREMIUM_MONTH_GUILD],

@@ -2,7 +2,7 @@
 let i;
 n.r(t), n.d(t, {
   default: function() {
-    return X
+    return Q
   },
   getActiveAnalyticsSessionIDs: function() {
     return Z
@@ -230,7 +230,7 @@ function z(e) {
 function Z(e) {
   return V[e]
 }
-class X extends d.default {
+class Q extends d.default {
   _initialize() {
     A.default.addChangeListener(this.handleSelectedChannelUpdate), p.ComponentDispatch.subscribe(w.ComponentActions.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), l.default.subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), l.default.subscribe("EMBEDDED_ACTIVITY_OPEN", H), l.default.subscribe("EMBEDDED_ACTIVITY_CLOSE", Y), l.default.subscribe("EMBEDDED_ACTIVITY_UPDATE", j), l.default.subscribe("EMBEDDED_ACTIVITY_UPDATE_V2", W), l.default.subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), l.default.subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), l.default.subscribe("MEDIA_SESSION_JOINED", z), l.default.subscribe("CALL_DELETE", this.handleCallDelete), l.default.subscribe("RTC_CONNECTION_STATE", this.handleRTCConnectionState)
   }

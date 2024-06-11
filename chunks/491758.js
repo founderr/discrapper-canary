@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("735250"),
   n = s("470079"),
-  l = s("512722"),
-  i = s.n(l),
+  i = s("512722"),
+  l = s.n(i),
   r = s("442837"),
   o = s("481060"),
   d = s("660216"),
@@ -22,15 +22,15 @@ var a = s("735250"),
   g = s("435064"),
   f = s("894694"),
   m = s("779618"),
-  C = s("39604"),
-  A = s("442334"),
+  A = s("39604"),
+  C = s("442334"),
   O = s("356659"),
   h = s("981631"),
-  p = s("37113"),
-  R = s("526761"),
+  R = s("37113"),
+  p = s("526761"),
   M = s("689938"),
-  x = s("487325"),
-  D = s("151501"),
+  D = s("487325"),
+  x = s("151501"),
   L = s("611273");
 
 function P() {
@@ -38,7 +38,7 @@ function P() {
     {
       clipsEnabled: t,
       remindersEnabled: s,
-      decoupledClipsEnabled: l,
+      decoupledClipsEnabled: i,
       clipsLength: P,
       clipsQuality: b
     } = (0, r.useStateFromStoresObject)([g.default], () => g.default.getSettings()),
@@ -59,7 +59,7 @@ function P() {
     }, {
       autoTrackExposure: !1
     });
-  i()(null != U, "Save clip keybind unset");
+  l()(null != U, "Save clip keybind unset");
   let B = (0, r.useStateFromStores)([E.default], () => E.default.locale),
     y = n.useMemo(() => [{
       value: O.ClipsLengthSettings.SECONDS_30,
@@ -78,43 +78,43 @@ function P() {
       })
     }], [B]),
     V = n.useMemo(() => [{
-      value: p.ApplicationStreamResolutions.RESOLUTION_480,
+      value: R.ApplicationStreamResolutions.RESOLUTION_480,
       label: M.default.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
-        resolution: p.ApplicationStreamResolutions.RESOLUTION_480
+        resolution: R.ApplicationStreamResolutions.RESOLUTION_480
       })
     }, {
-      value: p.ApplicationStreamResolutions.RESOLUTION_720,
+      value: R.ApplicationStreamResolutions.RESOLUTION_720,
       label: M.default.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
-        resolution: p.ApplicationStreamResolutions.RESOLUTION_720
+        resolution: R.ApplicationStreamResolutions.RESOLUTION_720
       })
     }, {
-      value: p.ApplicationStreamResolutions.RESOLUTION_1080,
+      value: R.ApplicationStreamResolutions.RESOLUTION_1080,
       label: M.default.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
-        resolution: p.ApplicationStreamResolutions.RESOLUTION_1080
+        resolution: R.ApplicationStreamResolutions.RESOLUTION_1080
       })
     }, {
-      value: p.ApplicationStreamResolutions.RESOLUTION_1440,
+      value: R.ApplicationStreamResolutions.RESOLUTION_1440,
       label: M.default.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
-        resolution: p.ApplicationStreamResolutions.RESOLUTION_1440
+        resolution: R.ApplicationStreamResolutions.RESOLUTION_1440
       })
     }, {
-      value: p.ApplicationStreamResolutions.RESOLUTION_SOURCE,
+      value: R.ApplicationStreamResolutions.RESOLUTION_SOURCE,
       label: M.default.Messages.SCREENSHARE_SOURCE
     }], [B]),
     H = n.useMemo(() => [{
-      value: p.ApplicationStreamFPS.FPS_15,
+      value: R.ApplicationStreamFPS.FPS_15,
       label: M.default.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
-        fps: p.ApplicationStreamFPS.FPS_15
+        fps: R.ApplicationStreamFPS.FPS_15
       })
     }, {
-      value: p.ApplicationStreamFPS.FPS_30,
+      value: R.ApplicationStreamFPS.FPS_30,
       label: M.default.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
-        fps: p.ApplicationStreamFPS.FPS_30
+        fps: R.ApplicationStreamFPS.FPS_30
       })
     }, {
-      value: p.ApplicationStreamFPS.FPS_60,
+      value: R.ApplicationStreamFPS.FPS_60,
       label: M.default.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
-        fps: p.ApplicationStreamFPS.FPS_60
+        fps: R.ApplicationStreamFPS.FPS_60
       })
     }], [B]),
     Y = n.useCallback(e => {
@@ -128,29 +128,29 @@ function P() {
       disabled: !e,
       children: [!e && (0, a.jsx)(T.default, {
         look: T.InfoBoxLooks.WARNING,
-        className: D.formItem,
+        className: x.formItem,
         children: M.default.Messages.CLIPS_SETTINGS_HW_ENCODING_MUST_BE_ENABLED_INFOBOX.format({
           onClick: () => u.default.open(h.UserSettingsSections.VOICE, null, {
-            scrollPosition: R.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION
+            scrollPosition: p.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION
           })
         })
       }), v === f.ClipsHardwareClassification.BELOW_MINIMUM ? (0, a.jsx)(T.default, {
         look: T.InfoBoxLooks.WARNING,
-        className: D.formItem,
+        className: x.formItem,
         children: M.default.Messages.CLIPS_SETTINGS_UNDER_MIN_SPECS
       }) : null, (0, a.jsx)(o.FormSwitch, {
         hideBorder: !0,
         disabled: !e,
-        className: D.formItem,
+        className: x.formItem,
         value: t,
         note: M.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS_HELP,
-        onChange: e => C.updateClipsEnabled({
+        onChange: e => A.updateClipsEnabled({
           clipsEnabled: e,
           trackAnalytics: !0
         }),
         children: M.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
       }), e && (0, a.jsx)(T.default, {
-        className: D.formItem,
+        className: x.formItem,
         children: M.default.Messages.CLIPS_SETTINGS_QUALITY_INFOBOX
       })]
     }), j && G && (0, a.jsxs)(a.Fragment, {
@@ -160,10 +160,10 @@ function P() {
         children: (0, a.jsx)(o.FormSwitch, {
           hideBorder: !0,
           disabled: !e,
-          className: D.formItem,
-          value: l,
+          className: x.formItem,
+          value: i,
           note: M.default.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS_HELP,
-          onChange: e => C.updateDecoupledClipsEnabled({
+          onChange: e => A.updateDecoupledClipsEnabled({
             enabled: e,
             trackAnalytics: !0
           }),
@@ -175,25 +175,25 @@ function P() {
         className: L.marginTop20,
         children: (0, a.jsx)(o.FormSwitch, {
           hideBorder: !0,
-          className: D.formItem,
+          className: x.formItem,
           value: s,
           note: M.default.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS_HELP,
-          onChange: e => C.updateRemindersEnabled(e),
+          onChange: e => A.updateRemindersEnabled(e),
           children: M.default.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS
         })
       })]
     }), (0, a.jsx)(o.FormDivider, {}), (0, a.jsxs)(o.FormSection, {
       className: L.marginTop20,
-      children: [(0, a.jsx)(A.SelectItem, {
-        className: D.formItem,
-        select: C.updateClipsLength,
+      children: [(0, a.jsx)(C.SelectItem, {
+        className: x.formItem,
+        select: A.updateClipsLength,
         title: M.default.Messages.CLIPS_SETTINGS_LENGTH,
         note: M.default.Messages.CLIPS_SETTINGS_LENGTH_HELP,
         value: P,
         options: y
-      }), (0, a.jsx)(A.SelectItem, {
-        className: D.formItem,
-        select: e => C.updateClipsQuality({
+      }), (0, a.jsx)(C.SelectItem, {
+        className: x.formItem,
+        select: e => A.updateClipsQuality({
           resolution: e,
           frameRate: b.frameRate
         }),
@@ -201,9 +201,9 @@ function P() {
         note: M.default.Messages.CLIPS_SETTINGS_RESOLUTION_NOTE,
         value: b.resolution,
         options: V
-      }), (0, a.jsx)(A.SelectItem, {
-        className: D.formItem,
-        select: e => C.updateClipsQuality({
+      }), (0, a.jsx)(C.SelectItem, {
+        className: x.formItem,
+        select: e => A.updateClipsQuality({
           resolution: b.resolution,
           frameRate: e
         }),
@@ -211,12 +211,12 @@ function P() {
         note: M.default.Messages.CLIPS_SETTINGS_FRAMERATE_NOTE,
         value: b.frameRate,
         options: H
-      }), (0, a.jsx)(A.InputItem, {
-        className: D.formItem,
+      }), (0, a.jsx)(C.InputItem, {
+        className: x.formItem,
         title: M.default.Messages.CLIPS_SETTINGS_KEYBIND,
         note: M.default.Messages.CLIPS_SETTINGS_KEYBIND_HELP,
         children: (0, a.jsx)("div", {
-          className: x.keyRecorder,
+          className: D.keyRecorder,
           children: (0, a.jsx)(c.default, {
             defaultValue: U.shortcut,
             onChange: Y

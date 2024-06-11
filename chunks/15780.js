@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("481060"),
   o = s("630388"),
   d = s("88658"),
@@ -26,7 +26,7 @@ function T() {
       title: S.default.Messages.FRIEND_PERMITTED_SOURCE,
       className: E.marginBottom40,
       children: [(0, a.jsx)(r.FormSwitch, {
-        className: i()(E.marginTop8, E.marginBottom20),
+        className: l()(E.marginTop8, E.marginBottom20),
         value: t.all,
         onChange: e => u.FriendSourceFlagsSetting.updateSetting(e ? c.AllFriendSourceFlags : c.AllFriendSourceFlags & ~c.FriendSourceFlags.NO_RELATION),
         children: S.default.Messages.FRIEND_PERMITTED_SOURCE_ALL

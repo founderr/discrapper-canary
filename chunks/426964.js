@@ -51,7 +51,7 @@ t.default = r.memo(function(e) {
       location: l.default.CLAN_GUILD_PROFILE
     })
   }, [G, Z, b]);
-  let X = r.useCallback(() => {
+  let Q = r.useCallback(() => {
       !j && ((0, m.trackClanApplyWaitlist)({
         originGuildId: null == b ? void 0 : b.guildId,
         tagGuildId: G,
@@ -60,7 +60,7 @@ t.default = r.memo(function(e) {
         location: l.default.CLAN_GUILD_PROFILE
       }), (0, a.showToast)((0, a.createToast)(D.default.Messages.CLAN_USER_WAITLIST_TOAST_SUCCESS, a.ToastType.SUCCESS)))
     }, [G, j, b]),
-    Q = r.useCallback(e => {
+    X = r.useCallback(e => {
       null != G && (e.stopPropagation(), e.preventDefault(), null == U || U(), (0, p.openAdoptClanIdentityModal)(G))
     }, [G, U]),
     q = r.useCallback(e => {
@@ -96,7 +96,7 @@ t.default = r.memo(function(e) {
           return null;
         case !K && !B && !j:
           return (0, i.jsx)(a.Button, {
-            onClick: X,
+            onClick: Q,
             color: a.Button.Colors.PRIMARY,
             size: a.Button.Sizes.SMALL,
             fullWidth: !0,
@@ -125,7 +125,7 @@ t.default = r.memo(function(e) {
           });
         case K && !z:
           return (0, i.jsx)(g.default, {
-            onClick: Q,
+            onClick: X,
             ...et,
             children: D.default.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA
           });
@@ -138,7 +138,7 @@ t.default = r.memo(function(e) {
         default:
           return null
       }
-    }, [et, Q, q, $, ee, Z, z, B, j, X, J, V, K]),
+    }, [et, X, q, $, ee, Z, z, B, j, Q, J, V, K]),
     ei = r.useMemo(() => ({
       className: M.container,
       onClick: y

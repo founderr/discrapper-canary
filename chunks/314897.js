@@ -41,8 +41,8 @@ let y = n("952265").hasModalOpen,
   K = [],
   z = "",
   Z = !1,
-  X = null,
-  Q = !1,
+  Q = null,
+  X = !1,
   q = !1,
   J = "",
   $ = !1,
@@ -144,7 +144,7 @@ function ef(e) {
   !(null !== (t = null == e ? void 0 : e.isSwitchingAccount) && void 0 !== t && t) && (n && ec(), ed()), E.default.PersistedStore.clearAll({
     omit: ["InstallationManagerStore", "AgeGateStore", "NativePermissionsStore", "MultiAccountStore", "DraftStore", "OverlayStoreV2", "StreamerModeStore", "LoginRequiredActionStore"],
     type: (null == e ? void 0 : e.isSwitchingAccount) ? "user-data-only" : "all"
-  }), v.default.clearAll(), m.clear(), g.default.clearUser(), T.Storage.remove(G), w = null, Y = (null == e ? void 0 : e.isSwitchingAccount) ? D.LoginStates.LOGGING_IN : D.LoginStates.NONE, j = D.RegistrationStates.NONE, z = "", J = "", X = null, Z = !1, $ = !1, ee = !1, et = {}, en = {}, eo = !1
+  }), v.default.clearAll(), m.clear(), g.default.clearUser(), T.Storage.remove(G), w = null, Y = (null == e ? void 0 : e.isSwitchingAccount) ? D.LoginStates.LOGGING_IN : D.LoginStates.NONE, j = D.RegistrationStates.NONE, z = "", J = "", Q = null, Z = !1, $ = !1, ee = !1, et = {}, en = {}, eo = !1
 }
 class eS extends(s = E.default.Store) {
   initialize() {
@@ -202,20 +202,20 @@ class eS extends(s = E.default.Store) {
     return Z
   }
   getMFATotp() {
-    return Q
+    return X
   }
   getMFABackup() {
     return q
   }
   getMFAWebAuthn() {
-    return X
+    return Q
   }
   getMFAMethods() {
     let e = [];
-    return null != X && e.push({
+    return null != Q && e.push({
       type: "webauthn",
-      challenge: X
-    }), Q && e.push({
+      challenge: Q
+    }), X && e.push({
       type: "totp",
       backup_codes_allowed: q
     }), q && e.push({
@@ -250,7 +250,7 @@ class eS extends(s = E.default.Store) {
     return !W
   }
   getWebAuthnChallenge() {
-    return X
+    return Q
   }
   getSuspendedUserToken() {
     return ea
@@ -313,13 +313,13 @@ l = "AuthenticationStore", (o = "displayName") in(a = eS) ? Object.definePropert
     let {
       token: t
     } = e;
-    Y = D.LoginStates.NONE, eE(t), ec(), z = "", Z = !1, X = null, eo = !1, J = ""
+    Y = D.LoginStates.NONE, eE(t), ec(), z = "", Z = !1, Q = null, eo = !1, J = ""
   },
   LOGIN_FAILURE: function(e) {
     let {
       error: t
     } = e;
-    z = "", Z = !1, X = null, Y = null != (en = function(e) {
+    z = "", Z = !1, Q = null, Y = null != (en = function(e) {
       if (Object.keys(e.fields).length > 0) return e.fields;
       let t = {
         message: e.message
@@ -335,7 +335,7 @@ l = "AuthenticationStore", (o = "displayName") in(a = eS) ? Object.definePropert
       backup: r,
       totp: s
     } = e;
-    null != t && (z = t, Z = n, J = "", X = null != i ? i : null, q = r, Q = s), en = {}, Y = D.LoginStates.MFA_STEP
+    null != t && (z = t, Z = n, J = "", Q = null != i ? i : null, q = r, X = s), en = {}, Y = D.LoginStates.MFA_STEP
   },
   LOGIN_MFA: function() {
     Y = D.LoginStates.LOGGING_IN_MFA
@@ -381,7 +381,7 @@ l = "AuthenticationStore", (o = "displayName") in(a = eS) ? Object.definePropert
     let {
       isMultiAccount: t
     } = e;
-    en = {}, Y = D.LoginStates.NONE, z = "", Z = !1, X = null, r = null, i = null, !t && (eI(), ed(!1))
+    en = {}, Y = D.LoginStates.NONE, z = "", Z = !1, Q = null, r = null, i = null, !t && (eI(), ed(!1))
   },
   LOGIN_STATUS_RESET: function() {
     Y = D.LoginStates.NONE
@@ -484,7 +484,7 @@ l = "AuthenticationStore", (o = "displayName") in(a = eS) ? Object.definePropert
     let {
       error: t
     } = e;
-    z = "", Z = !1, X = null, eo = !1, Y = null != (en = el(t)).date_of_birth ? D.LoginStates.LOGIN_AGE_GATE : D.LoginStates.NONE
+    z = "", Z = !1, Q = null, eo = !1, Y = null != (en = el(t)).date_of_birth ? D.LoginStates.LOGIN_AGE_GATE : D.LoginStates.NONE
   },
   PASSWORDLESS_START: function() {
     en = {}, eo = !0

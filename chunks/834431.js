@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   useIsWindowFocused: function() {
-    return i
+    return n
   }
 });
-var r = n("506071");
+var s = a("506071");
 
-function i() {
-  return (0, r.useIsWindowFocused)()
+function n() {
+  return (0, s.useIsWindowFocused)()
 }

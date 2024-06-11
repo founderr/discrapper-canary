@@ -66,8 +66,8 @@ var i, r, s = n("735250"),
   K = n("397394"),
   z = n("574384"),
   Z = n("981631"),
-  X = n("689938"),
-  Q = n("884103");
+  Q = n("689938"),
+  X = n("884103");
 let q = "oauth2-authorize-header-id";
 
 function J() {
@@ -109,21 +109,21 @@ function ee(e) {
     appDetails: u
   } = et(n), d = (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsxs)("div", {
-      className: Q.content,
+      className: X.content,
       children: [i, r, null == o ? u : null]
     }), a]
   });
   return t ? (0, s.jsx)("div", {
-    className: l()(Q.authorize, {
-      [Q.inApp]: n.inApp
+    className: l()(X.authorize, {
+      [X.inApp]: n.inApp
     }),
     children: (0, s.jsx)(S.ScrollerThin, {
       orientation: "auto",
       children: d
     })
   }) : (0, s.jsx)("div", {
-    className: l()(Q.authorize, {
-      [Q.inApp]: n.inApp
+    className: l()(X.authorize, {
+      [X.inApp]: n.inApp
     }),
     children: (0, s.jsx)("div", {
       children: d
@@ -188,18 +188,18 @@ function et(e) {
         accountScopes: n
       }
     }, [null == eK ? void 0 : eK.scopes, ea, eY]),
-    eX = a.useMemo(() => {
+    eQ = a.useMemo(() => {
       var e;
       let t = eY ? E.deserialize(null !== (e = null == eK ? void 0 : eK.permissions) && void 0 !== e ? e : 0) : eo;
       return null != t ? t : y.NONE
     }, [null == eK ? void 0 : eK.permissions, eo, eY]),
-    eQ = a.useRef(!1),
+    eX = a.useRef(!1),
     [eq, eJ] = a.useState(null != em ? em : []),
     [e$, e0] = a.useState(null != em && em.length > 0);
   a.useEffect(() => {
-    if (eQ.current) return;
+    if (eX.current) return;
     let e = async () => {
-      eQ.current = !0;
+      eX.current = !0;
       try {
         let {
           disclosures: e,
@@ -217,7 +217,7 @@ function et(e) {
         }
         eD(Error(null != t.message ? t.message : "".concat(Object.keys(t)[0], ": ").concat(Object.values(t)[0])))
       } finally {
-        eQ.current = !1
+        eX.current = !1
       }
     };
     if (null == em) {
@@ -257,7 +257,7 @@ function et(e) {
           state: en,
           nonce: ei,
           integrationType: eF,
-          permissions: E.remove(eX, ek),
+          permissions: E.remove(eQ, ek),
           guildId: eF === _.ApplicationIntegrationType.GUILD_INSTALL && null != eU ? eU : void 0,
           channelId: eF === _.ApplicationIntegrationType.GUILD_INSTALL && null != eG ? eG : void 0
         });
@@ -282,14 +282,14 @@ function et(e) {
         let e = t.body;
         (null == e ? void 0 : e.message) != null && "" !== e.message ? eD(Error(e.message)) : eD(e), eL(1), ey(!1)
       }
-    }, [eh, eE, eS, null == eC ? void 0 : eC.application, ex, eA, W, ez, J, $, ee, et, en, ei, eX, ek, eU, eF, eG, eq]),
+    }, [eh, eE, eS, null == eC ? void 0 : eC.application, ex, eA, W, ez, J, $, ee, et, en, ei, eQ, ek, eU, eF, eG, eq]),
     e2 = a.useRef(!1),
     e3 = a.useCallback(async () => {
       if (!M.default.isAuthenticated()) {
         (0, b.logoutWithRedirect)(ep);
         return
       }
-      if (!eQ.current) {
+      if (!eX.current) {
         if (!e2.current) {
           e2.current = !0;
           try {
@@ -344,8 +344,8 @@ function et(e) {
       if (null == eF || null != eC || null != ev) return;
       eF === _.ApplicationIntegrationType.USER_INSTALL && (eb(null), ew(null));
       let e = ez.filter(e => !k.ValidScopes.includes(e));
-      0 === ez.length ? eD(Error("No scopes were provided.")) : e.length > 0 ? eD(Error("Invalid scope: ".concat(e[0]))) : (0, w.containsDisallowedPermission)(eX) ? eD(Error("Invalid permission(s) provided.")) : e3()
-    }, [e$, e3, ez, eX, eF, eC, ev]), ev instanceof Error) return {
+      0 === ez.length ? eD(Error("No scopes were provided.")) : e.length > 0 ? eD(Error("Invalid scope: ".concat(e[0]))) : (0, w.containsDisallowedPermission)(eQ) ? eD(Error("Invalid permission(s) provided.")) : e3()
+    }, [e$, e3, ez, eQ, eF, eC, ev]), ev instanceof Error) return {
     body: (0, s.jsx)(K.OAuth2Error, {
       message: ev.message
     })
@@ -399,7 +399,7 @@ function et(e) {
           selectedGuildId: eU,
           onChannelChange: ew
         }) : null]
-      }), ez.includes(c.OAuth2Scopes.BOT) && !E.equals(eX, y.NONE) && (S = 2), e4.length > 1 && (f = 0), e6 = tn && null == ex || tt && null == eG;
+      }), ez.includes(c.OAuth2Scopes.BOT) && !E.equals(eQ, y.NONE) && (S = 2), e4.length > 1 && (f = 0), e6 = tn && null == ex || tt && null == eG;
       break;
     case 2:
       if (null == eC) return {
@@ -407,7 +407,7 @@ function et(e) {
       };
       l = (0, s.jsx)(F.default, {
         application: eC.application,
-        permissions: eX,
+        permissions: eQ,
         deniedPermissions: ek,
         onPermissionsChange: (e, t) => {
           eB(n => e ? E.remove(n, t) : E.add(n, t))
@@ -436,26 +436,26 @@ function et(e) {
     location: ep,
     isTrustedName: eI
   })), e8 && (g = (0, s.jsxs)("div", {
-    className: Q.footer,
+    className: X.footer,
     children: [null != f ? (0, s.jsx)(T.Button, {
       look: T.Button.Looks.LINK,
       color: T.Button.Colors.PRIMARY,
       onClick: () => eL(f),
-      children: X.default.Messages.BACK
+      children: Q.default.Messages.BACK
     }) : (0, s.jsx)(T.Button, {
       look: T.Button.Looks.LINK,
       color: T.Button.Colors.PRIMARY,
       onClick: () => e1(!1),
-      children: X.default.Messages.CANCEL
+      children: Q.default.Messages.CANCEL
     }), 0 !== eg ? null != S ? (0, s.jsx)(T.Button, {
       onClick: () => eL(S),
       disabled: e6,
-      children: X.default.Messages.CONTINUE
+      children: Q.default.Messages.CONTINUE
     }) : (0, s.jsx)(T.Button, {
       onClick: () => e1(!0),
       disabled: e6,
       submitting: eM,
-      children: X.default.Messages.AUTHORIZE
+      children: Q.default.Messages.AUTHORIZE
     }) : null]
   })), {
     header: C,
@@ -484,7 +484,7 @@ function en(e, t) {
     })
   }));
   else if (a && (null == i ? void 0 : i.startsWith(Z.Routes.OAUTH2_ERROR)))(0, f.openModal)(e => {
-    let t = r.error_description || r.error || X.default.Messages.OAUTH2_UNKNOWN_ERROR;
+    let t = r.error_description || r.error || Q.default.Messages.OAUTH2_UNKNOWN_ERROR;
     return Array.isArray(t) && (t = t[0]), (0, s.jsx)(W.OAuth2Modal, {
       ...e,
       "aria-labelledby": q,

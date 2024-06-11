@@ -20,19 +20,19 @@ var s, a = n("735250"),
   _ = n("13430"),
   p = n("213609"),
   T = n("882037"),
-  I = n("201207"),
-  S = n("481230"),
-  A = n("853268"),
+  S = n("201207"),
+  A = n("481230"),
+  I = n("853268"),
   N = n("639946"),
   R = n("616952"),
   C = n("792766"),
   O = n("692483"),
   v = n("100159"),
   L = n("473855"),
-  x = n("726745"),
-  M = n("929809"),
-  b = n("541692"),
-  y = n("986197"),
+  M = n("726745"),
+  x = n("929809"),
+  y = n("541692"),
+  b = n("986197"),
   D = n("135200"),
   U = n("219496"),
   P = n("794099"),
@@ -40,8 +40,8 @@ var s, a = n("735250"),
   w = n("180529"),
   j = n("108427"),
   F = n("314897"),
-  k = n("480294"),
-  B = n("896797"),
+  B = n("480294"),
+  k = n("896797"),
   H = n("819570"),
   V = n("292937"),
   W = n("626135"),
@@ -96,7 +96,7 @@ class eo extends(s = i.PureComponent) {
     return null != e && t
   }
   componentDidMount() {
-    this.redirectIfAuthenticated(), I.default.trackExposure({
+    this.redirectIfAuthenticated(), S.default.trackExposure({
       location: "0ba758_1"
     });
     let {
@@ -143,7 +143,7 @@ class eo extends(s = i.PureComponent) {
       this.setState({
         isRateLimited: !1
       })
-    }))), s && !e.authenticated && ((0, M.setNewUser)(ee.NewUserTypes.ORGANIC_REGISTERED), this.redirectIfAuthenticated());
+    }))), s && !e.authenticated && ((0, x.setNewUser)(ee.NewUserTypes.ORGANIC_REGISTERED), this.redirectIfAuthenticated());
     let o = X.RegistrationSteps.FULL;
     a || this.hasError("date_of_birth") ? o = X.RegistrationSteps.AGE_GATE : null != i && (null != i.guild || null != i.channel) && (o = X.RegistrationSteps.INVITE), l(o)
   }
@@ -153,7 +153,7 @@ class eo extends(s = i.PureComponent) {
       transitionTo: t,
       redirectTo: n
     } = this.props;
-    e && t(null != n ? n : B.default.defaultRoute)
+    e && t(null != n ? n : k.default.defaultRoute)
   }
   async handleRegister() {
     let {
@@ -173,7 +173,7 @@ class eo extends(s = i.PureComponent) {
     } = this.props, f = null != l ? l.code : null, h = null != o ? o.skuId : null, E = T.usePromoEmailConsentStore.getState(), g = (0, z.isNullOrEmpty)(d) ? null : t === d, m = $.CONFERENCE_MODE_ENABLED ? await (0, O.formatUsername)(t) : t, _ = $.CONFERENCE_MODE_ENABLED ? await (0, O.formatUsername)(n) : n;
     Y.ComponentDispatch.dispatch(J.ComponentActions.WAVE_EMPHASIZE);
     try {
-      c || null == l ? await (0, S.registerFull)({
+      c || null == l ? await (0, A.registerFull)({
         email: e,
         username: m,
         globalName: _,
@@ -185,7 +185,7 @@ class eo extends(s = i.PureComponent) {
         giftCodeSKUId: h,
         birthday: i,
         promoEmailConsent: E.required ? E : null
-      }) : await (0, S.default)({
+      }) : await (0, A.default)({
         consent: a,
         invite: f,
         giftCodeSKUId: h,
@@ -207,7 +207,7 @@ class eo extends(s = i.PureComponent) {
         hasProminentCopy: s
       }
     } = this.props, i = null, l = null;
-    return t ? l = (0, a.jsx)(A.default, {
+    return t ? l = (0, a.jsx)(I.default, {
       value: e,
       onChange: e => this.setState({
         consent: e
@@ -421,11 +421,11 @@ class eo extends(s = i.PureComponent) {
     } = this.state, {
       registering: p,
       consentRequired: T,
-      isMobileWebInviteRegistration: I,
+      isMobileWebInviteRegistration: S,
       uniqueUsernameRegistrationConfig: {
-        suggestions: S
+        suggestions: A
       },
-      authBoxClassName: A,
+      authBoxClassName: I,
       apiErrors: {
         email: N,
         username: C,
@@ -433,12 +433,12 @@ class eo extends(s = i.PureComponent) {
         password: v,
         date_of_birth: L
       } = {},
-      hasLoggedInAccounts: x,
+      hasLoggedInAccounts: M,
       registrationCopyExperimentConfig: {
-        hasCopyAboveButton: M
+        hasCopyAboveButton: x
       }
     } = this.props, {
-      subText: b,
+      subText: y,
       consentText: U
     } = this.renderConsentComponents(), P = this.renderErrorMessage(), G = (0, a.jsx)(h.Tooltip, {
       text: !u && T ? en.default.Messages.TERMS_PRIVACY_OPT_IN_TOOLTIP : null,
@@ -455,12 +455,12 @@ class eo extends(s = i.PureComponent) {
     }), j = async () => {
       this.setState({
         usernameFocused: !0
-      }), S && l.length > 0 && !D.default.wasRegistrationSuggestionFetched(l) && await y.default.fetchSuggestionsRegistration(l)
+      }), A && l.length > 0 && !D.default.wasRegistrationSuggestionFetched(l) && await b.default.fetchSuggestionsRegistration(l)
     }, F = null != e ? (0, a.jsx)(i.Fragment, {
       children: e()
     }, "custom-header") : (0, a.jsx)(H.Title, {
       children: en.default.Messages.REGISTER_TITLE
-    }, "title"), k = (0, a.jsxs)(H.Block, {
+    }, "title"), B = (0, a.jsxs)(H.Block, {
       className: ea.marginTop20,
       children: [(0, a.jsx)(H.Input, {
         autoFocus: !0,
@@ -552,9 +552,9 @@ class eo extends(s = i.PureComponent) {
         error: null != m ? m : er(L),
         value: d,
         required: !0
-      }), M && b, (0, a.jsx)(R.default, {}), G, P, U, !M && b, $.CONFERENCE_MODE_ENABLED ? null : (0, a.jsx)(H.Button, {
-        look: I ? H.Button.Looks.FILLED : H.Button.Looks.LINK,
-        color: I ? H.Button.Colors.PRIMARY : H.Button.Colors.LINK,
+      }), x && y, (0, a.jsx)(R.default, {}), G, P, U, !x && y, $.CONFERENCE_MODE_ENABLED ? null : (0, a.jsx)(H.Button, {
+        look: S ? H.Button.Looks.FILLED : H.Button.Looks.LINK,
+        color: S ? H.Button.Colors.PRIMARY : H.Button.Colors.LINK,
         onClick: this.handleGotoLogin,
         className: ea.marginTop20,
         children: en.default.Messages.ALREADY_HAVE_ACCOUNT
@@ -563,19 +563,19 @@ class eo extends(s = i.PureComponent) {
     return t ? (0, a.jsx)(Q.default, {
       onSubmit: this.handleSubmit,
       tag: "form",
-      className: r()(A, es.horizontalAuthBox),
+      className: r()(I, es.horizontalAuthBox),
       children: () => [F, (0, a.jsxs)("div", {
         className: es.flex,
         children: [(0, a.jsx)(H.Title, {
           className: es.createAccountTemplateHeader,
           children: en.default.Messages.REGISTER_TITLE
-        }), k]
+        }), B]
       }, "register-title")]
     }) : (0, a.jsxs)(H.default, {
       onSubmit: this.handleSubmit,
       tag: "form",
-      className: A,
-      children: [x && !I ? (0, a.jsx)(H.Button, {
+      className: I,
+      children: [M && !S ? (0, a.jsx)(H.Button, {
         onClick: this.handleGotoLogin,
         look: H.Button.Looks.LINK,
         color: H.Button.Colors.PRIMARY,
@@ -591,7 +591,7 @@ class eo extends(s = i.PureComponent) {
             children: en.default.Messages.AGE_GATE_GO_BACK
           })]
         })
-      }) : null, F, k]
+      }) : null, F, B]
     })
   }
   render() {
@@ -717,14 +717,14 @@ class eo extends(s = i.PureComponent) {
 }
 
 function eu(e) {
-  let t = (0, c.useStateFromStoresObject)([k.default, F.default, g.default, b.default, x.default], () => ({
-      consentRequired: k.default.getAuthenticationConsentRequired(),
+  let t = (0, c.useStateFromStoresObject)([B.default, F.default, g.default, y.default, M.default], () => ({
+      consentRequired: B.default.getAuthenticationConsentRequired(),
       registering: F.default.getRegisterStatus() === J.RegistrationStates.REGISTERING,
       apiErrors: F.default.getErrors(),
       authenticated: F.default.isAuthenticated(),
       isUnderage: g.default.isUnderageAnonymous(),
-      country: b.default.getCountryCode(),
-      hasLoggedInAccounts: x.default.getHasLoggedInAccounts()
+      country: y.default.getCountryCode(),
+      hasLoggedInAccounts: M.default.getHasLoggedInAccounts()
     })),
     n = (0, P.useUURegistrationExperiment)(),
     s = (0, c.useStateFromStores)([D.default], () => D.default.registrationUsernameSuggestion()),
@@ -738,7 +738,7 @@ function eu(e) {
     }
   }, {}, [l]), (0, a.jsx)(eo, {
     onChangeStep: e => r(e),
-    registrationCopyExperimentConfig: I.default.getCurrentConfig({
+    registrationCopyExperimentConfig: S.default.getCurrentConfig({
       location: "0ba758_2"
     }, {
       autoTrackExposure: !1

@@ -50,8 +50,8 @@ var P = n("736871"),
   K = n("437263"),
   z = n("423343"),
   Z = n("685756"),
-  X = n("655306"),
-  Q = n("583794"),
+  Q = n("655306"),
+  X = n("583794"),
   q = n("824096"),
   J = n("53114"),
   $ = n("174532"),
@@ -980,12 +980,12 @@ class eo extends _.default {
     let _ = G.default.supports(ei.Features.FIRST_FRAME_CALLBACK) && G.default.supports(ei.Features.REMOTE_USER_MULTI_STREAM);
     if (r === ei.MediaEngineContextTypes.DEFAULT) {
       let t = (null === (l = b.default.getChannel(this.channelId)) || void 0 === l ? void 0 : l.type) === et.ChannelTypes.GUILD_STAGE_VOICE;
-      this._localMediaSinkWantsManager = new X.default(e, t, _), this._localMediaSinkWantsManager.on(X.RTCMediaSinkWantsManagerEvent.Update, e => {
+      this._localMediaSinkWantsManager = new Q.default(e, t, _), this._localMediaSinkWantsManager.on(Q.RTCMediaSinkWantsManagerEvent.Update, e => {
         if (this.state === et.RTCConnectionStates.RTC_CONNECTED && null != this._socket) {
           var t;
           this.logger.info("Media sink wants: ".concat(JSON.stringify(e))), this._socket.mediaSinkWants(e), null === (t = this._connection) || void 0 === t || t.setLocalVideoSinkWants(e)
         }
-      }), this._localMediaSinkWantsManager.on(X.RTCMediaSinkWantsManagerEvent.UserSSRCUpdate, (e, t, n) => {
+      }), this._localMediaSinkWantsManager.on(Q.RTCMediaSinkWantsManagerEvent.UserSSRCUpdate, (e, t, n) => {
         var i;
         null === (i = this._connection) || void 0 === i || i.createUser(e, t, n)
       })
@@ -998,7 +998,7 @@ class eo extends _.default {
         this.logger.info("Go Live Media sink wants: ".concat(JSON.stringify(e))), this._socket.mediaSinkWants(e), null === (t = this._connection) || void 0 === t || t.setLocalVideoSinkWants(e)
       }
     }));
-    this._remoteVideoSinkWants = X.DEFAULT_WANTS_FULL, k.default.shouldRecordNextConnection() ? (this._recordingEnabled = !0, f.setShouldRecordNextConnection(!1)) : this._recordingEnabled = !1, this._soundshareStats = new Q.default, F.default.addOnlineCallback(this._handleNetworkOnline), F.default.addOfflineCallback(this._handleNetworkOffline), (0, H.isDesktop)() && (this.powerMonitorListener = j.default.remotePowerMonitor.on("resume", this._handlePowerResume)), this._supportedBandwidthEstimationExperiments = [], this._bandwidthEstimationExperiment = null, G.default.getMediaEngine().getSupportedBandwidthEstimationExperiments(e => {
+    this._remoteVideoSinkWants = Q.DEFAULT_WANTS_FULL, k.default.shouldRecordNextConnection() ? (this._recordingEnabled = !0, f.setShouldRecordNextConnection(!1)) : this._recordingEnabled = !1, this._soundshareStats = new X.default, F.default.addOnlineCallback(this._handleNetworkOnline), F.default.addOfflineCallback(this._handleNetworkOffline), (0, H.isDesktop)() && (this.powerMonitorListener = j.default.remotePowerMonitor.on("resume", this._handlePowerResume)), this._supportedBandwidthEstimationExperiments = [], this._bandwidthEstimationExperiment = null, G.default.getMediaEngine().getSupportedBandwidthEstimationExperiments(e => {
       this._supportedBandwidthEstimationExperiments = e
     }), this._mlsFailures = {}
   }

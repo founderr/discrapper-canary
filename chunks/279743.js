@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("47120");
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("920906"),
   o = s("748780"),
   d = s("481060"),
@@ -20,7 +20,7 @@ function T(e) {
   let {
     children: t,
     className: s,
-    onFlashEnd: l,
+    onFlashEnd: i,
     animationDelay: S = 500
   } = e, T = d.tokens.colors.TEXT_LINK, _ = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), I = (0, d.useToken)(T).spring({
     opacity: 0
@@ -31,8 +31,8 @@ function T(e) {
   }), f = (0, d.useToken)(T).spring({
     opacity: 1
   }), m = e => {
-    e.finished && (null == l || l())
-  }, [C, A] = (0, r.useSpring)(() => ({
+    e.finished && (null == i || i())
+  }, [A, C] = (0, r.useSpring)(() => ({
     immediate: !0,
     from: {
       backgroundColor: I,
@@ -40,7 +40,7 @@ function T(e) {
     }
   })), O = S + 200 + 200, h = _ ? 0 : 200;
   return n.useEffect(() => {
-    A({
+    C({
       reset: !0,
       immediate: !1,
       to: {
@@ -51,7 +51,7 @@ function T(e) {
         duration: h,
         easing: o.default.Easing.ease
       }
-    }), A({
+    }), C({
       delay: S,
       immediate: _,
       to: [{
@@ -62,7 +62,7 @@ function T(e) {
         duration: h,
         easing: o.default.Easing.ease
       }
-    }), A({
+    }), C({
       delay: O,
       immediate: _,
       to: [{
@@ -75,9 +75,9 @@ function T(e) {
       },
       onRest: m
     })
-  }, [A]), (0, a.jsx)(r.animated.div, {
-    style: C,
-    className: i()(E.settingsItemHighlight, s),
+  }, [C]), (0, a.jsx)(r.animated.div, {
+    style: A,
+    className: l()(E.settingsItemHighlight, s),
     children: t
   })
 }
@@ -86,12 +86,12 @@ function _(e) {
   let {
     children: t,
     scrollPosition: s,
-    animationDelay: l
-  } = e, i = (0, u.useStateFromStores)([S.default], () => S.default.getScrollPosition() === s), [r, o] = n.useState(!1);
+    animationDelay: i
+  } = e, l = (0, u.useStateFromStores)([S.default], () => S.default.getScrollPosition() === s), [r, o] = n.useState(!1);
   return (n.useEffect(() => {
-    i && o(!0)
-  }, [i]), r) ? (0, a.jsx)(T, {
-    animationDelay: l,
+    l && o(!0)
+  }, [l]), r) ? (0, a.jsx)(T, {
+    animationDelay: i,
     onFlashEnd: () => o(!1),
     children: t
   }) : (0, a.jsx)(a.Fragment, {

@@ -25,8 +25,8 @@ var a = n("735250"),
   v = n("342656"),
   N = n("785717"),
   M = n("221292"),
-  R = n("318661"),
-  y = n("57048"),
+  y = n("318661"),
+  R = n("57048"),
   L = n("726059"),
   j = n("162267"),
   O = n("502762"),
@@ -58,7 +58,7 @@ t.default = e => {
     channel: s
   } = e, [ee, et] = l.useState(!1), en = l.useRef(0), {
     analyticsLocations: ea
-  } = (0, c.default)(d.default.PROFILE_PANEL), el = null == n ? void 0 : n.isNonUserBot(), es = (0, R.default)(n.id), {
+  } = (0, c.default)(d.default.PROFILE_PANEL), el = null == n ? void 0 : n.isNonUserBot(), es = (0, y.default)(n.id), {
     installedIntegrations: ei,
     fetched: er,
     appsInGDMEnabled: eo,
@@ -116,11 +116,11 @@ t.default = e => {
   } = (0, j.default)(n.id, !n.bot), ev = !n.bot && null != eT && eT.length > 0, eN = !n.bot && null != eA && eA.length > 0, eM = (0, z.useShouldShowUserPopoutCollectiblesUpsell)({
     popoutUser: n,
     source: w.UserPopoutUpsellSource.PROFILE_PANEL
-  }), eR = (0, u.default)();
+  }), ey = (0, u.default)();
   l.useEffect(() => {
     en.current = Date.now()
   }, []), l.useEffect(() => {
-    null != es && (0, y.trackProfilePanelViewed)({
+    null != es && (0, R.trackProfilePanelViewed)({
       displayProfile: es,
       isMobile: ep,
       loadDurationMs: Date.now() - en.current,
@@ -129,7 +129,7 @@ t.default = e => {
       status: eE
     })
   }, [es, ep, ef, eh, eE]);
-  let ey = null == eA ? void 0 : eA.map(e => {
+  let eR = null == eA ? void 0 : eA.map(e => {
       let {
         guild: t,
         nick: l
@@ -138,7 +138,7 @@ t.default = e => {
         user: n,
         guild: t,
         nick: l,
-        theme: eR,
+        theme: ey,
         onSelect: () => (0, p.transitionToGuild)(t.id)
       }, t.id)
     }),
@@ -193,7 +193,7 @@ t.default = e => {
           user: n,
           displayProfile: es,
           profileType: q.UserProfileTypes.PANEL,
-          themeOverride: eR,
+          themeOverride: ey,
           children: [eM.shouldShow && (0, a.jsx)(F.default, {
             user: n,
             upsellSource: w.UserPopoutUpsellSource.PROFILE_PANEL,
@@ -266,7 +266,7 @@ t.default = e => {
                     analyticsLocations: ea
                   })
                 },
-                children: ey
+                children: eR
               }) : null, ev ? (0, a.jsx)(Z.default, {
                 className: i()($.mutualFriendsList, {
                   [$.mutualFriendsDivider]: eN

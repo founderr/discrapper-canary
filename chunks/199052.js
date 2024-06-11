@@ -84,11 +84,11 @@ function f(e) {
       rows: a,
       columns: l
     }
-  })(S, _, T), [S, _, T]), N = v + 1, M = N * A + (N - 1) * 8 <= C, R = Math.floor(A / u) + 8, y = Math.max(0, T - R * x) / 2;
+  })(S, _, T), [S, _, T]), N = v + 1, M = N * A + (N - 1) * 8 <= C, y = Math.floor(A / u) + 8, R = Math.max(0, T - y * x) / 2;
   return (0, a.jsx)(r.default, {
     fade: !0,
     className: n,
-    listPadding: [h + y, 0, m + y - 8, 8],
+    listPadding: [h + R, 0, m + R - 8, 8],
     renderRow: function(e) {
       var t;
       let n = e * v;
@@ -114,7 +114,7 @@ function f(e) {
     },
     rowCount: x,
     rowCountBySection: [x],
-    rowHeight: R,
+    rowHeight: y,
     onResize: E
   })
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return R
   }
 }), n("47120");
 var a = n("735250"),
@@ -29,7 +29,7 @@ var a = n("735250"),
   v = n("981631"),
   N = n("689938"),
   M = n("526755");
-class R extends l.PureComponent {
+class y extends l.PureComponent {
   componentDidMount() {
     let {
       user: e,
@@ -116,7 +116,7 @@ class R extends l.PureComponent {
   }
 }
 
-function y(e) {
+function R(e) {
   let {
     user: t,
     channel: n,
@@ -124,7 +124,7 @@ function y(e) {
   } = e, [i, o] = (0, r.useStateFromStoresArray)([g.default, p.default, E.default, f.default], () => (0, T.canWatchStream)(n, g.default, p.default, E.default, f.default)), u = (0, r.useStateFromStores)([h.default], () => h.default.getStreamForUser(t.id, n.getGuildId())), c = (0, r.useStateFromStores)([h.default], () => h.default.getActiveStreamForApplicationStream(u)), S = (0, r.useStateFromStores)([m.default], () => m.default.getId()), _ = (0, I.useGetStreamApplication)(u), A = (0, r.useStateFromStores)([C.default], () => (0, I.getStreamerActivity)(u, C.default)), x = l.useMemo(() => ({
     [n.guild_id]: [t.id]
   }), [n.guild_id, t.id]);
-  return (0, d.useSubscribeGuildMembers)(x), (0, a.jsx)(R, {
+  return (0, d.useSubscribeGuildMembers)(x), (0, a.jsx)(y, {
     ...s,
     canWatch: i,
     unavailableReason: o,

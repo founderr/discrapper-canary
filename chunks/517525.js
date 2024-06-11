@@ -25,8 +25,8 @@ var a = n("735250"),
   v = n("474936"),
   N = n("689938"),
   M = n("909143");
-let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
-  y = {
+let y = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
+  R = {
     opacity: 0,
     transform: "translate3d(100%, 0, 0)"
   },
@@ -41,10 +41,10 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
     opacity: 1
   },
   P = {
-    borderRadius: "".concat(R, "px ").concat(R, "px ").concat(R, "px ").concat(R, "px")
+    borderRadius: "".concat(y, "px ").concat(y, "px ").concat(y, "px ").concat(y, "px")
   },
   D = {
-    borderRadius: "0px ".concat(R, "px ").concat(R, "px 0px")
+    borderRadius: "0px ".concat(y, "px ").concat(y, "px 0px")
   },
   b = {
     mass: 1,
@@ -58,8 +58,8 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         isUpsellEnabled: o,
         shape: c,
         size: p,
-        didTrackUpsellViewed: R,
-        setDidTrackUpsellViewed: y,
+        didTrackUpsellViewed: y,
+        setDidTrackUpsellViewed: R,
         className: L,
         premiumIndicator: j
       } = e,
@@ -88,7 +88,7 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         w && b && (0, f.openModalLazy)(async () => {
           let {
             default: e
-          } = await n.e("41549").then(n.bind(n, "78865"));
+          } = await n.e("28479").then(n.bind(n, "78865"));
           return t => (0, a.jsx)(e, {
             ...t,
             analyticsSource: U
@@ -96,13 +96,13 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         })
       }, [w, b, U]);
     if (l.useEffect(() => {
-        !R && b && (_.default.track(x.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+        !y && b && (_.default.track(x.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
           type: v.PremiumUpsellTypes.STREAM_QUALITY_INDICATOR,
           has_premium_stream_fps: t,
           has_premium_stream_resolution: s,
           location_stack: P
-        }), y(!0))
-      }, [t, s, b, R, y, P]), null == O) return null;
+        }), R(!0))
+      }, [t, s, b, y, R, P]), null == O) return null;
     let H = (0, a.jsx)(f.Tooltip, {
       text: D ? N.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : b ? N.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : N.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
       position: "bottom",
@@ -150,10 +150,10 @@ t.default = e => {
   }, [t]);
   let _ = (0, r.useTransition)(C, {
       enter: {
-        from: E.enabled ? j : y,
+        from: E.enabled ? j : R,
         to: E.enabled ? O : L
       },
-      leave: E.enabled ? j : y,
+      leave: E.enabled ? j : R,
       config: b
     }),
     T = (0, r.useSpring)({

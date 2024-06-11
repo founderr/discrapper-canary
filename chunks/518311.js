@@ -28,8 +28,8 @@ var a, l = n("735250"),
   v = n("40851"),
   N = n("367907"),
   M = n("762914"),
-  R = n("43267"),
-  y = n("933557"),
+  y = n("43267"),
+  R = n("933557"),
   L = n("366980"),
   j = n("703656"),
   O = n("131704"),
@@ -90,7 +90,7 @@ let eo = e => {
     let {
       channel: n,
       onClose: a
-    } = e, s = null !== (t = (0, y.default)(n)) && void 0 !== t ? t : "", i = (0, h.useStateFromStores)([F.default], () => {
+    } = e, s = null !== (t = (0, R.default)(n)) && void 0 !== t ? t : "", i = (0, h.useStateFromStores)([F.default], () => {
       var e;
       return null !== (e = F.default.lastMessageId(n.id)) && void 0 !== e ? e : n.id
     });
@@ -101,7 +101,7 @@ let eo = e => {
       children: (0, l.jsxs)("div", {
         className: et.confirmChannelItemContainer,
         children: [(0, l.jsx)(p.Avatar, {
-          src: (0, R.getChannelIconURL)(n),
+          src: (0, y.getChannelIconURL)(n),
           size: p.AvatarSizes.SIZE_24,
           "aria-label": s
         }), (0, l.jsx)("span", {

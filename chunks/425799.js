@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("47120"), s("315314"), s("610138"), s("216116"), s("78328"), s("815648");
 var a = s("735250"),
   n = s("470079"),
-  l = s("979554"),
-  i = s("442837"),
+  i = s("979554"),
+  l = s("442837"),
   r = s("780384"),
   o = s("481060"),
   d = s("53281"),
@@ -21,29 +21,29 @@ var a = s("735250"),
   N = s("844593");
 
 function g() {
-  let e = (0, i.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
+  let e = (0, l.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
     [t, s] = n.useState(!0),
     [g, f] = n.useState([]),
     m = n.useRef(null),
-    [C, A] = n.useState(!1),
+    [A, C] = n.useState(!1),
     [O, h] = n.useState(!1),
-    [p, R] = n.useState(!1),
+    [R, p] = n.useState(!1),
     M = (0, r.isThemeDark)((0, u.default)());
   return null == e ? (0, a.jsx)("div", {}) : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: _.root,
       children: [(0, a.jsx)("img", {
-        src: C ? I : N,
+        src: A ? I : N,
         alt: "",
         width: 450
       }), t && (0, a.jsx)(S.ProfileEffect, {
         profileEffectConfig: {
-          type: l.CollectiblesItemType.PROFILE_EFFECT,
+          type: i.CollectiblesItemType.PROFILE_EFFECT,
           title: "debug",
           description: "debug",
           accessibilityLabel: "debug",
           reducedMotionSrc: "",
-          effects: p ? (0, T.patchAndroid)(g) : g,
+          effects: R ? (0, T.patchAndroid)(g) : g,
           animationType: 0
         },
         profileEffectId: "debug"
@@ -61,12 +61,12 @@ function g() {
         isTryItOutFlow: !0
       }), (0, a.jsx)(S.ProfileEffect, {
         profileEffectConfig: {
-          type: l.CollectiblesItemType.PROFILE_EFFECT,
+          type: i.CollectiblesItemType.PROFILE_EFFECT,
           title: "debug",
           description: "debug",
           accessibilityLabel: "debug",
           reducedMotionSrc: "",
-          effects: p ? (0, T.patchAndroid)(g) : g,
+          effects: R ? (0, T.patchAndroid)(g) : g,
           animationType: 0
         },
         profileEffectId: "debug"
@@ -78,10 +78,10 @@ function g() {
         children: "Dark Theme"
       }), (0, a.jsx)("input", {
         type: "checkbox",
-        checked: C,
+        checked: A,
         className: _.checkBox,
         onChange: () => {
-          A(!C)
+          C(!A)
         }
       }), (0, a.jsx)(o.Text, {
         variant: "text-md/normal",
@@ -98,10 +98,10 @@ function g() {
         children: "Simulate Android"
       }), (0, a.jsx)("input", {
         type: "checkbox",
-        checked: p,
+        checked: R,
         className: _.checkBox,
         onChange: () => {
-          R(!p)
+          p(!R)
         }
       })]
     }), (0, a.jsxs)("div", {

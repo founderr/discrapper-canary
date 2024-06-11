@@ -9,14 +9,14 @@ s.r(t), s.d(t, {
 }), s("47120");
 var a = s("470079"),
   n = s("913527"),
-  l = s.n(n),
-  i = s("442837"),
+  i = s.n(n),
+  l = s("442837"),
   r = s("314897"),
   o = s("673096"),
   d = s("689938");
 
 function u() {
-  let e = (0, i.useStateFromStoresObject)([o.default], () => o.default.getSessions());
+  let e = (0, l.useStateFromStoresObject)([o.default], () => o.default.getSessions());
   return a.useMemo(() => {
     let t = [...e],
       s = null,
@@ -33,5 +33,5 @@ function u() {
 }
 
 function c(e) {
-  return (Date.now() - e.valueOf()) / 1e3 / 60 / 60 < 1 ? d.default.Messages.AUTH_SESSIONS_ACTIVE_RECENTLY : l()(e).fromNow()
+  return (Date.now() - e.valueOf()) / 1e3 / 60 / 60 < 1 ? d.default.Messages.AUTH_SESSIONS_ACTIVE_RECENTLY : i()(e).fromNow()
 }

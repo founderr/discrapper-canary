@@ -46,8 +46,8 @@ let V = (0, p.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
   K = (0, p.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
   z = j + 2 * K,
   Z = W + 2 * K,
-  X = a()(R.trackStickerSearchEmpty, 200),
-  Q = a()(R.trackStickerSearchResultsViewed, 200),
+  Q = a()(R.trackStickerSearchEmpty, 200),
+  X = a()(R.trackStickerSearchResultsViewed, 200),
   q = r.forwardRef(function(e, t) {
     var s;
     let {
@@ -163,7 +163,7 @@ let V = (0, p.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
     r.useEffect(() => {
       "" === er.current && "" !== en && (0, R.trackStickerSearchStart)(), er.current = en
     }, [en]), r.useEffect(() => {
-      0 === eS ? X(en) : Q(en, eS, ei)
+      0 === eS ? Q(en) : X(en, eS, ei)
     }, [en, eS, ei]), r.useLayoutEffect(() => {
       var e;
       null === (e = ee.current) || void 0 === e || e.focus()

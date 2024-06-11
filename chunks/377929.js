@@ -74,7 +74,7 @@ function M(e) {
   } = e, s = (0, u.default)(t), I = (0, m.default)(t), A = (0, C.default)(t.id), N = (0, E.default)(t), M = (0, S.default)({
     id: t.id,
     label: v.default.Messages.COPY_ID_THREAD
-  }), R = (0, d.default)(t), y = (0, c.default)(t), L = (0, f.default)(t, "Toolbar Overflow"), j = (0, p.default)(t), O = (0, h.default)(t), P = (0, g.default)(t), D = _.UseThreadSidebar.useSetting(), b = (0, r.useStateFromStores)([T.default], () => !i().isEmpty(T.default.getVoiceStatesForChannel(t.id)));
+  }), y = (0, d.default)(t), R = (0, c.default)(t), L = (0, f.default)(t, "Toolbar Overflow"), j = (0, p.default)(t), O = (0, h.default)(t), P = (0, g.default)(t), D = _.UseThreadSidebar.useSetting(), b = (0, r.useStateFromStores)([T.default], () => !i().isEmpty(T.default.getVoiceStatesForChannel(t.id)));
   return (0, a.jsxs)(o.Menu, {
     navId: "thread-context",
     onClose: n,
@@ -91,9 +91,9 @@ function M(e) {
         }
       }) : null]
     }), (0, a.jsxs)(o.MenuGroup, {
-      children: [P, s, I, y]
+      children: [P, s, I, R]
     }), (0, a.jsxs)(o.MenuGroup, {
-      children: [R, M]
+      children: [y, M]
     })]
   })
 }

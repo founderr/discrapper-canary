@@ -87,7 +87,7 @@ function B(e, t) {
     };
   v.clearTimer(e), s().forEach(r, e => {
     D.clearTimer(e.channel_id)
-  }), V(e, o), O[e] = o, P[e] = X(O[e]);
+  }), V(e, o), O[e] = o, P[e] = Q(O[e]);
   let l = s().filter(o.channel_overrides, e => {
     var t;
     return E.hasFlag(null !== (t = e.flags) && void 0 !== t ? t : 0, N.ChannelNotificationSettingsFlags.OPT_IN_ENABLED)
@@ -202,11 +202,11 @@ function Z(e) {
   R = E.hasFlag(e.flags, A.AccountNotificationFlags.USE_NEW_NOTIFICATIONS), g = E.hasFlag(e.flags, A.AccountNotificationFlags.MENTION_ON_ALL_MESSAGES), L = e
 }
 
-function X(e) {
+function Q(e) {
   return new Set(null != e.channel_overrides ? s()(e.channel_overrides).filter(e => (0, l.computeIsMuted)(e)).map(e => e.channel_id).value() : null)
 }
 
-function Q() {
+function X() {
   return !0
 }
 
@@ -222,7 +222,7 @@ class J extends(i = a.default.PersistedStore) {
     if (this.waitFor(S.default, f.default, u.default, _.default), null != e) {
       var t, n;
       R = null !== (t = e.useNewNotifications) && void 0 !== t && t, "userGuildSettings" in e && (O = e.userGuildSettings, U = s().mapValues(null !== (n = e.optedInChannelsByGuild) && void 0 !== n ? n : {}, e => new Set(e)), s().forEach(O, (e, t) => {
-        P[t] = X(e)
+        P[t] = Q(e)
       }))
     }
   }
@@ -513,8 +513,8 @@ let $ = new J(o.default, {
       U[e] = new Set(r[e])
     })
   },
-  GUILD_CREATE: Q,
-  GUILD_UPDATE: Q,
+  GUILD_CREATE: X,
+  GUILD_UPDATE: X,
   GUILD_TOGGLE_COLLAPSE_MUTED: function(e) {
     let {
       guildId: t
@@ -525,8 +525,8 @@ let $ = new J(o.default, {
       hide_muted_channels: !0 !== n.hide_muted_channels
     }
   },
-  IMPERSONATE_UPDATE: Q,
-  IMPERSONATE_STOP: Q,
+  IMPERSONATE_UPDATE: X,
+  IMPERSONATE_STOP: X,
   USER_GUILD_SETTINGS_REMOVE_PENDING_CHANNEL_UPDATES: function(e) {
     let {
       guildId: t,

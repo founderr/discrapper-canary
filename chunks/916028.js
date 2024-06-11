@@ -3,19 +3,19 @@ s.r(t), s("47120");
 var a = s("735250");
 s("470079");
 var n = s("481060"),
-  l = s("113434");
+  i = s("113434");
 t.default = function(e) {
   let {
     onSelect: t,
     quest: s
   } = e, {
-    quests: i
-  } = (0, l.useQuests)({
+    quests: l
+  } = (0, i.useQuests)({
     fetchPolicy: "cache-and-network"
   }), r = [{
     label: "NONE",
     value: null
-  }, ...i.map(e => ({
+  }, ...l.map(e => ({
     label: e.config.messages.questName,
     value: e
   }))];

@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("735250");
 s("470079");
 var n = s("442837"),
-  l = s("481060"),
-  i = s("230711"),
+  i = s("481060"),
+  l = s("230711"),
   r = s("574755"),
   o = s("663389"),
   d = s("309739"),
@@ -25,20 +25,20 @@ function N() {
     t = (0, n.useStateFromStores)([o.default], () => o.default.getSubsection()),
     s = null != t && e.some(e => e.id === t) ? t : e[0].id;
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(l.Heading, {
+    children: [(0, a.jsx)(i.Heading, {
       className: I.heading,
       variant: "heading-xl/semibold",
       children: _.default.Messages.GAMES
-    }), (0, a.jsx)(l.TabBar, {
+    }), (0, a.jsx)(i.TabBar, {
       className: I.tabBar,
       selectedItem: s,
       onItemSelect: e => {
-        i.default.setSection(T.UserSettingsSections.GAMES, e)
+        l.default.setSection(T.UserSettingsSections.GAMES, e)
       },
       orientation: "horizontal",
       type: "top",
       look: "brand",
-      children: e.map(e => (0, a.jsxs)(l.TabBar.Item, {
+      children: e.map(e => (0, a.jsxs)(i.TabBar.Item, {
         className: I.tab,
         id: e.id,
         "aria-label": e.title,

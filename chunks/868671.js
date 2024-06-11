@@ -37,9 +37,9 @@ function S(e) {
     requestId: A,
     entries: x,
     impressionCappedEntryIds: v
-  } = (0, f.default)(S), N = (0, l.useStateFromStores)([c.default], () => c.default.hidden), M = (0, l.useStateFromStores)([o.default], () => o.default.isFocused()), R = (0, l.useStateFromStores)([r.default], () => r.default.getChannel(S)), y = (null == R ? void 0 : R.isForumChannel()) === !1, [L, j, O, P] = a.useMemo(() => {
+  } = (0, f.default)(S), N = (0, l.useStateFromStores)([c.default], () => c.default.hidden), M = (0, l.useStateFromStores)([o.default], () => o.default.isFocused()), y = (0, l.useStateFromStores)([r.default], () => r.default.getChannel(S)), R = (null == y ? void 0 : y.isForumChannel()) === !1, [L, j, O, P] = a.useMemo(() => {
     let e;
-    if (null == x || 0 === x.length || null == A || !y) return [t, n, g];
+    if (null == x || 0 === x.length || null == A || !R) return [t, n, g];
     let a = T ? x.length : 3,
       l = x.slice(0, a);
     e = N ? [{
@@ -73,7 +73,7 @@ function S(e) {
       r = [s, ...t],
       o = [...n, s, ...e];
     return [r, o, Math.random(), e]
-  }, [S, x, T, t, _, A, n, g, N, y]), D = a.useRef(0), b = a.useRef(x), U = a.useRef(), F = a.useRef({
+  }, [S, x, T, t, _, A, n, g, N, R]), D = a.useRef(0), b = a.useRef(x), U = a.useRef(), F = a.useRef({
     impressionCappedEntryIds: v
   }), w = a.useCallback(e => {
     var t;
@@ -92,7 +92,7 @@ function S(e) {
     if (null == A || null == U.current || Date.now() - U.current < 3e3) return;
     let n = null !== (t = null === (e = b.current) || void 0 === e ? void 0 : e.map(e => e.id)) && void 0 !== t ? t : [],
       a = n.slice(0, D.current);
-    !N && M && y && (u.default.track(E.AnalyticEvents.RANKING_ITEMS_SEEN, {
+    !N && M && R && (u.default.track(E.AnalyticEvents.RANKING_ITEMS_SEEN, {
       request_id: A,
       first_shown_at: U.current,
       item_ids: a,
@@ -105,7 +105,7 @@ function S(e) {
       type: "CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS",
       itemIds: a
     }))
-  }), [A, S, _, N, M, y]), {
+  }), [A, S, _, N, M, R]), {
     groups: L,
     rows: j,
     version: O,

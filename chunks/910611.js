@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return N
   },
   renderTopic: function() {
-    return R
+    return y
   }
 });
 var a = n("735250"),
@@ -48,7 +48,7 @@ function N(e) {
     renderFollowButton: _
   } = e, N = (0, d.default)(t, r), {
     prefix: M,
-    level: R
+    level: y
   } = function(e, t) {
     var n, a;
     switch (e) {
@@ -92,7 +92,7 @@ function N(e) {
   switch (t.type) {
     case A.ChannelTypes.DM:
       return (0, a.jsx)(I.default, {
-        level: R,
+        level: y,
         channel: t,
         handleClick: m,
         handleContextMenu: E
@@ -120,8 +120,8 @@ function N(e) {
     case A.ChannelTypes.GUILD_FORUM:
     case A.ChannelTypes.GUILD_MEDIA:
       return (0, a.jsxs)(l.Fragment, {
-        children: [y(N, t.type === A.ChannelTypes.GUILD_ANNOUNCEMENT ? x.default.Messages.NEWS_CHANNEL : x.default.Messages.TEXT_CHANNEL), (0, a.jsx)(T.default.Title, {
-          level: R,
+        children: [R(N, t.type === A.ChannelTypes.GUILD_ANNOUNCEMENT ? x.default.Messages.NEWS_CHANNEL : x.default.Messages.TEXT_CHANNEL), (0, a.jsx)(T.default.Title, {
+          level: y,
           onContextMenu: E,
           onClick: m,
           children: L
@@ -129,8 +129,8 @@ function N(e) {
       });
     case A.ChannelTypes.GUILD_VOICE:
       return (0, a.jsxs)(l.Fragment, {
-        children: [y(N, x.default.Messages.VOICE_CHANNEL), (0, a.jsx)(T.default.Title, {
-          level: R,
+        children: [R(N, x.default.Messages.VOICE_CHANNEL), (0, a.jsx)(T.default.Title, {
+          level: y,
           onContextMenu: E,
           onClick: m,
           children: L
@@ -138,8 +138,8 @@ function N(e) {
       });
     case A.ChannelTypes.GUILD_STAGE_VOICE:
       return (0, a.jsxs)(l.Fragment, {
-        children: [y(N, x.default.Messages.STAGE_CHANNEL), (0, a.jsx)(T.default.Title, {
-          level: R,
+        children: [R(N, x.default.Messages.STAGE_CHANNEL), (0, a.jsx)(T.default.Title, {
+          level: y,
           onContextMenu: E,
           onClick: m,
           children: L
@@ -152,8 +152,8 @@ function N(e) {
       if (!f && null != s) {
         let e = (0, d.default)(s, r);
         j = (0, a.jsxs)(l.Fragment, {
-          children: [y(e, x.default.Messages.TEXT_CHANNEL), (0, a.jsx)(T.default.Title, {
-            level: R,
+          children: [R(e, x.default.Messages.TEXT_CHANNEL), (0, a.jsx)(T.default.Title, {
+            level: y,
             onContextMenu: g,
             onClick: C,
             className: i()(v.parentChannelName, v.cursorPointer),
@@ -163,8 +163,8 @@ function N(e) {
       }
       let O = (null == s ? void 0 : s.type) != null && A.ChannelTypesSets.GUILD_THREADS_ONLY.has(s.type);
       return (0, a.jsxs)(l.Fragment, {
-        children: [j, y(O ? null : N, x.default.Messages.THREAD), (0, a.jsx)(T.default.Title, {
-          level: R,
+        children: [j, R(O ? null : N, x.default.Messages.THREAD), (0, a.jsx)(T.default.Title, {
+          level: y,
           onContextMenu: E,
           onClick: m,
           className: i()({
@@ -184,7 +184,7 @@ function N(e) {
           icon: N,
           "aria-hidden": !0
         }) : null, (0, a.jsxs)(T.default.Title, {
-          level: R,
+          level: y,
           onContextMenu: E,
           onClick: m,
           children: [null != M ? (0, a.jsxs)(o.HiddenVisually, {
@@ -205,7 +205,7 @@ let M = e => {
   }) : null
 };
 
-function R(e, t) {
+function y(e, t) {
   switch (e.type) {
     case A.ChannelTypes.DM:
       return (0, a.jsxs)(a.Fragment, {
@@ -229,7 +229,7 @@ function R(e, t) {
   }
 }
 
-function y(e, t) {
+function R(e, t) {
   return (0, a.jsxs)(a.Fragment, {
     children: [null !== e && (0, a.jsx)(T.default.Icon, {
       iconClassName: v.__invalid_icon,

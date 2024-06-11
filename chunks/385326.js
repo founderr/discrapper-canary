@@ -56,7 +56,7 @@ function w(e) {
     activityParticipant: null != B ? I.default.getParticipant(s.id, B.applicationId) : null,
     selectedParticipant: I.default.getSelectedParticipant(s.id),
     participantsOpen: I.default.getParticipantsOpen(s.id)
-  })), X = H || null != W, Q = (0, R.default)(s.id), q = Q && (null == z ? void 0 : z.type) !== P.ParticipantTypes.ACTIVITY, J = !Q && V === M.ActivityPanelModes.PIP, $ = (!X || X && (q || J) && null == Y) && !j, ee = $ && null != A.default.pipVideoWindow && null != A.default.pipActivityWindow;
+  })), Q = H || null != W, X = (0, R.default)(s.id), q = X && (null == z ? void 0 : z.type) !== P.ParticipantTypes.ACTIVITY, J = !X && V === M.ActivityPanelModes.PIP, $ = (!Q || Q && (q || J) && null == Y) && !j, ee = $ && null != A.default.pipVideoWindow && null != A.default.pipActivityWindow;
 
   function et() {
     var e;

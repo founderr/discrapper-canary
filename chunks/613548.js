@@ -29,8 +29,8 @@ var a = n("735250"),
   v = n("961048"),
   N = n("179424"),
   M = n("786915"),
-  R = n("975146"),
-  y = n("991617"),
+  y = n("975146"),
+  R = n("991617"),
   L = n("606304"),
   j = n("594174"),
   O = n("502568"),
@@ -133,7 +133,7 @@ function W(e) {
       let {
         isShown: n
       } = t;
-      return (0, l.createElement)(R.default, {
+      return (0, l.createElement)(y.default, {
         ...e,
         isActive: n,
         count: G,
@@ -144,7 +144,7 @@ function W(e) {
   }, "call-members-popout")), i && ee.push(null != P ? (0, a.jsx)(N.default, {
     className: B.button,
     channelId: _
-  }, "deselect-participant") : (0, a.jsx)(y.default, {
+  }, "deselect-participant") : (0, a.jsx)(R.default, {
     className: B.button,
     channelId: _,
     isHorizontal: !0

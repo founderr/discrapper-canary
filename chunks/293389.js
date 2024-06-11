@@ -2,8 +2,8 @@
 s.r(t), s("47120");
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("442837"),
   o = s("692547"),
   d = s("481060"),
@@ -18,48 +18,48 @@ var a = s("735250"),
   g = s("546591"),
   f = s("794358"),
   m = s("880008"),
-  C = s("795295"),
-  A = s("169278"),
+  A = s("795295"),
+  C = s("169278"),
   O = s("931003"),
   h = s("507957"),
-  p = s("626135"),
-  R = s("251625"),
+  R = s("626135"),
+  p = s("251625"),
   M = s("358085"),
-  x = s("210887"),
-  D = s("981631"),
+  D = s("210887"),
+  x = s("981631"),
   L = s("689938"),
   P = s("159618"),
   b = s("661781"),
   v = s("961047"),
   U = s("164149"),
   j = s("611273");
-let G = r.default.connectStores([x.default], () => ({
-    theme: x.default.theme
+let G = r.default.connectStores([D.default], () => ({
+    theme: D.default.theme
   }))(I.default),
   F = (0, M.isWindows)();
 
 function B(e) {
   let {
     onClose: t
-  } = e, s = (0, r.useStateFromStores)([S.default], () => S.default.getCandidateGames()), [l, o] = n.useState(null), c = s.map(e => ({
+  } = e, s = (0, r.useStateFromStores)([S.default], () => S.default.getCandidateGames()), [i, o] = n.useState(null), c = s.map(e => ({
     key: e.pid,
     value: e,
     label: null != e.name ? e.name : ""
   }));
   return (0, a.jsxs)(d.Dialog, {
-    className: i()(P.addGamePopout, b.elevationBorderHigh),
+    className: l()(P.addGamePopout, b.elevationBorderHigh),
     "aria-label": L.default.Messages.SETTINGS_GAMES_ADD_NEW_GAME,
     children: [(0, a.jsx)(d.SearchableSelect, {
       placeholder: L.default.Messages.SELECT,
-      value: l,
+      value: i,
       options: c,
       onChange: function(e) {
         o(e)
       }
     }), (0, a.jsx)(d.FormDivider, {
-      className: i()(j.marginTop8, j.marginBottom8)
+      className: l()(j.marginTop8, j.marginBottom8)
     }), (0, a.jsxs)("div", {
-      className: i()(P.actions, v.horizontal),
+      className: l()(P.actions, v.horizontal),
       children: [(0, a.jsx)(d.Button, {
         className: P.cancelButton,
         look: d.ButtonLooks.LINK,
@@ -67,9 +67,9 @@ function B(e) {
         onClick: t,
         children: L.default.Messages.CANCEL
       }), (0, a.jsx)(d.Button, {
-        disabled: null == l,
+        disabled: null == i,
         onClick: function() {
-          null != l && (u.default.addGame(l.pid, l.name), t())
+          null != i && (u.default.addGame(i.pid, i.name), t())
         },
         children: L.default.Messages.SETTINGS_GAMES_ADD_NEW_GAME
       })]
@@ -81,13 +81,13 @@ function y(e) {
   var t;
   let {
     rawGame: s,
-    nowPlaying: l = !1,
+    nowPlaying: i = !1,
     isOverride: E
-  } = e, I = (0, r.useStateFromStoresObject)([T.default, S.default, _.default], () => (0, S.transformForGameSettings)(s)), [R, M] = n.useState(!1), [x, b] = n.useState(null !== (t = I.name) && void 0 !== t ? t : "???"), j = i()(v.flexCenter, {
-    [P.game]: !l,
-    [P.activeGame]: l,
-    [U.card]: !l,
-    [P.nowPlaying]: null != I && l
+  } = e, I = (0, r.useStateFromStoresObject)([T.default, S.default, _.default], () => (0, S.transformForGameSettings)(s)), [p, M] = n.useState(!1), [D, b] = n.useState(null !== (t = I.name) && void 0 !== t ? t : "???"), j = l()(v.flexCenter, {
+    [P.game]: !i,
+    [P.activeGame]: i,
+    [U.card]: !i,
+    [P.nowPlaying]: null != I && i
   });
 
   function G() {
@@ -95,7 +95,7 @@ function y(e) {
   }
 
   function B() {
-    I.name !== x && u.default.editName(I, x)
+    I.name !== D && u.default.editName(I, D)
   }
 
   function y(e) {
@@ -107,9 +107,9 @@ function y(e) {
   }
 
   function H() {
-    if (R) return;
+    if (p) return;
     let e = null != I.id ? T.default.getDetectableGame(I.id) : null;
-    p.default.track(D.AnalyticEvents.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
+    R.default.track(x.AnalyticEvents.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
       application_id: null == e ? void 0 : e.id,
       game_name: I.name
     }), (0, d.showToast)((0, d.createToast)(L.default.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION_CONFIRMATION.format({
@@ -119,7 +119,7 @@ function y(e) {
   return (0, a.jsxs)("div", {
     className: j,
     children: [(0, a.jsxs)("div", {
-      className: i()(P.gameNameLastPlayed, v.vertical),
+      className: l()(P.gameNameLastPlayed, v.vertical),
       children: [I.verified && !E ? (0, a.jsxs)("div", {
         className: P.detectedApplication,
         children: [(0, a.jsx)("div", {
@@ -140,10 +140,10 @@ function y(e) {
           })
         })]
       }) : (0, a.jsx)("input", {
-        className: i()(P.gameName, P.gameNameInput),
+        className: l()(P.gameName, P.gameNameInput),
         type: "text",
         maxLength: 128,
-        value: x,
+        value: D,
         onBlur: B,
         onKeyDown: y,
         onChange: e => b(e.target.value)
@@ -153,7 +153,7 @@ function y(e) {
           played: t,
           exePath: s
         } = I;
-        return l ? e = L.default.Messages.SETTINGS_GAMES_NOW_PLAYING_STATE : null != t && "" !== t && (e = L.default.Messages.SETTINGS_GAMES_LAST_PLAYED.format({
+        return i ? e = L.default.Messages.SETTINGS_GAMES_NOW_PLAYING_STATE : null != t && "" !== t && (e = L.default.Messages.SETTINGS_GAMES_LAST_PLAYED.format({
           when: t
         })), (0, a.jsx)("div", {
           className: P.lastPlayed,
@@ -163,8 +163,8 @@ function y(e) {
           })
         })
       }()]
-    }), E ? null : R ? null : (0, a.jsx)("div", {
-      className: i()(v.flexCenter, v.noWrap, v.justifyBetween, P.toggleContainer),
+    }), E ? null : p ? null : (0, a.jsx)("div", {
+      className: l()(v.flexCenter, v.noWrap, v.justifyBetween, P.toggleContainer),
       children: (0, a.jsx)(d.Tooltip, {
         text: L.default.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION,
         children: e => {
@@ -178,7 +178,7 @@ function y(e) {
             onClick: H,
             onMouseEnter: t,
             onMouseLeave: s,
-            children: (0, a.jsx)(C.default, {
+            children: (0, a.jsx)(A.default, {
               className: P.toggleIconOn,
               foreground: P.fill,
               width: 24,
@@ -203,7 +203,7 @@ function y(e) {
         height: 24
       });
       return (0, a.jsx)("div", {
-        className: i()(v.flexCenter, v.noWrap, v.justifyBetween, P.toggleContainer),
+        className: l()(v.flexCenter, v.noWrap, v.justifyBetween, P.toggleContainer),
         children: (0, a.jsx)(d.Tooltip, {
           text: L.default.Messages.SETTINGS_GAMES_TOGGLE_DETECTION,
           children: e => {
@@ -227,7 +227,7 @@ function y(e) {
       let {
         overlay: e,
         overlayWarn: t
-      } = I, s = e ? (0, a.jsx)(A.default, {
+      } = I, s = e ? (0, a.jsx)(C.default, {
         className: P.toggleIconOn,
         foreground: P.fill
       }) : (0, a.jsx)(O.default, {
@@ -241,13 +241,13 @@ function y(e) {
         })
       }) : null;
       return (0, a.jsxs)("div", {
-        className: i()(v.flexCenter, v.noWrap, v.justifyBetween, P.toggleContainer),
+        className: l()(v.flexCenter, v.noWrap, v.justifyBetween, P.toggleContainer),
         children: [n, (0, a.jsx)(d.Tooltip, {
           text: L.default.Messages.SETTINGS_GAMES_TOGGLE_OVERLAY,
           children: t => {
             let {
               onMouseEnter: n,
-              onMouseLeave: l
+              onMouseLeave: i
             } = t;
             return (0, a.jsx)(d.Clickable, {
               "aria-label": L.default.Messages.SETTINGS_GAMES_TOGGLE_OVERLAY,
@@ -257,13 +257,13 @@ function y(e) {
                 return t = !e, void u.default.toggleOverlay(I, t)
               },
               onMouseEnter: n,
-              onMouseLeave: l,
+              onMouseLeave: i,
               children: s
             })
           }
         })]
       })
-    }(), !l || E ? (0, a.jsx)(c.default, {
+    }(), !i || E ? (0, a.jsx)(c.default, {
       className: P.removeGame,
       onClick: G
     }) : null]
@@ -272,9 +272,9 @@ function y(e) {
 
 function V() {
   return (0, a.jsx)("div", {
-    className: i()(v.flexCenter, P.notDetected, P.activeGame),
+    className: l()(v.flexCenter, P.notDetected, P.activeGame),
     children: (0, a.jsxs)("div", {
-      className: i()(P.gameNameLastPlayed, v.vertical),
+      className: l()(P.gameNameLastPlayed, v.vertical),
       children: [(0, a.jsx)("div", {
         className: P.gameName,
         children: L.default.Messages.SETTINGS_GAMES_NO_GAME_DETECTED
@@ -300,7 +300,7 @@ function H(e) {
     }), t]
   })
 }
-let Y = (0, R.cachedFunction)(function() {
+let Y = (0, p.cachedFunction)(function() {
   for (var e = arguments.length, t = Array(e), s = 0; s < e; s++) t[s] = arguments[s];
   return new Set(t.map(e => e.exePath))
 });
@@ -308,7 +308,7 @@ t.default = function(e) {
   let {
     className: t,
     showHeader: s = !0
-  } = e, l = (0, r.useStateFromStoresArray)([S.default], () => S.default.getGamesSeen(!0)), {
+  } = e, i = (0, r.useStateFromStoresArray)([S.default], () => S.default.getGamesSeen(!0)), {
     runningGame: o,
     overrideExePaths: u
   } = (0, r.useStateFromStoresObject)([S.default], () => ({
@@ -324,7 +324,7 @@ t.default = function(e) {
       isOverride: u.has(o.exePath),
       nowPlaying: !0
     }, (0, S.gameKey)(o)) : (0, a.jsx)(V, {}), (0, a.jsxs)("div", {
-      className: i()(P.nowPlayingAdd, j.marginReset, j.marginTop8, j.marginBottom20),
+      className: l()(P.nowPlayingAdd, j.marginReset, j.marginTop8, j.marginBottom20),
       children: [(0, a.jsx)("span", {
         children: L.default.Messages.SETTINGS_GAMES_NOT_SEEING_GAME
       }), (0, a.jsx)(d.Popout, {
@@ -346,7 +346,7 @@ t.default = function(e) {
           children: L.default.Messages.SETTINGS_GAMES_ADD_GAME
         })
       })]
-    }), 0 === l.length ? (0, a.jsx)(H, {
+    }), 0 === i.length ? (0, a.jsx)(H, {
       children: (0, a.jsx)(I.EmptyStateText, {
         children: L.default.Messages.SETTINGS_GAMES_NO_GAMES_HEADER
       })
@@ -360,7 +360,7 @@ t.default = function(e) {
         children: L.default.Messages.SETTINGS_GAMES_IGDB_ATTRIBUTION.format({
           igdbLink: "https://www.igdb.com/about"
         })
-      }), l.map(e => (0, a.jsx)(y, {
+      }), i.map(e => (0, a.jsx)(y, {
         rawGame: e,
         isOverride: u.has(e.exePath)
       }, (0, S.gameKey)(e)))]

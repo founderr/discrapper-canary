@@ -2,8 +2,8 @@
 s.r(t), s("47120"), s("411104");
 var a = s("735250"),
   n = s("470079"),
-  l = s("913527"),
-  i = s.n(l),
+  i = s("913527"),
+  l = s.n(i),
   r = s("442837"),
   o = s("846519"),
   d = s("481060"),
@@ -18,16 +18,16 @@ var a = s("735250"),
   g = s("15887"),
   f = s("581874"),
   m = s("285952"),
-  C = s("366695"),
-  A = s("259580"),
+  A = s("366695"),
+  C = s("259580"),
   O = s("572004"),
   h = s("669079"),
-  p = s("296848"),
-  R = s("474936"),
+  R = s("296848"),
+  p = s("474936"),
   M = s("689938"),
-  x = s("449256");
+  D = s("449256");
 
-function D(e, t, s) {
+function x(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -61,9 +61,9 @@ class L extends n.PureComponent {
     } = this.state;
     return (0, a.jsxs)(m.default, {
       direction: m.default.Direction.VERTICAL,
-      className: x.giftCodeRow,
+      className: D.giftCodeRow,
       children: [(0, a.jsx)(f.default, {
-        className: x.codeText,
+        className: D.codeText,
         value: (0, h.getGiftCodeURL)(t.code),
         text: this.copyButtonText,
         mode: s,
@@ -73,10 +73,10 @@ class L extends n.PureComponent {
         buttonColor: f.default.ButtonColors.BRAND,
         buttonLook: f.default.ButtonLooks.FILLED
       }), (0, a.jsxs)("div", {
-        className: x.subTextRow,
+        className: D.subTextRow,
         children: [null != t.expiresAt ? (0, a.jsxs)(n.Fragment, {
           children: [M.default.Messages.GIFT_INVENTORY_EXPIRES_IN.format({
-            hours: t.expiresAt.diff(i()(), "h")
+            hours: t.expiresAt.diff(l()(), "h")
           }), " ", "—\xa0"]
         }) : null, (0, a.jsx)(d.Clickable, {
           tag: "a",
@@ -87,9 +87,9 @@ class L extends n.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), D(this, "_copyModeTimeout", new o.Timeout), D(this, "state", {
+    super(...e), x(this, "_copyModeTimeout", new o.Timeout), x(this, "state", {
       copyMode: f.CopyInputModes.DEFAULT
-    }), D(this, "handleCopy", e => {
+    }), x(this, "handleCopy", e => {
       let {
         giftCode: t,
         sku: s
@@ -123,14 +123,14 @@ class P extends n.PureComponent {
       subscriptionPlan: s,
       giftCodeBatchId: n
     } = this.props;
-    return e = n === R.BLACK_FRIDAY_2020_GIFT_CODE_BATCH_ID ? M.default.Messages.BLACK_FRIDAY_PROMOTION_GIFT_INVENTORY_TITLE : n === R.STICKERS_GIFT_CODE_BATCH_ID && null != s ? (s.interval === R.SubscriptionIntervalTypes.MONTH ? M.default.Messages.STICKERS_GIFT_INVENTORY_TITLE_MONTH : M.default.Messages.STICKERS_GIFT_INVENTORY_TITLE_YEAR).format({
+    return e = n === p.BLACK_FRIDAY_2020_GIFT_CODE_BATCH_ID ? M.default.Messages.BLACK_FRIDAY_PROMOTION_GIFT_INVENTORY_TITLE : n === p.STICKERS_GIFT_CODE_BATCH_ID && null != s ? (s.interval === p.SubscriptionIntervalTypes.MONTH ? M.default.Messages.STICKERS_GIFT_INVENTORY_TITLE_MONTH : M.default.Messages.STICKERS_GIFT_INVENTORY_TITLE_YEAR).format({
       skuName: t.name,
       intervalCount: s.intervalCount
-    }) : null == s ? t.name : (s.interval === R.SubscriptionIntervalTypes.MONTH ? M.default.Messages.GIFT_INVENTORY_SUBSCRIPTION_MONTHS : M.default.Messages.GIFT_INVENTORY_SUBSCRIPTION_YEARS).format({
+    }) : null == s ? t.name : (s.interval === p.SubscriptionIntervalTypes.MONTH ? M.default.Messages.GIFT_INVENTORY_SUBSCRIPTION_MONTHS : M.default.Messages.GIFT_INVENTORY_SUBSCRIPTION_YEARS).format({
       skuName: t.name,
       intervalCount: s.intervalCount
     }), (0, a.jsx)("div", {
-      className: x.gameName,
+      className: D.gameName,
       children: e
     })
   }
@@ -138,9 +138,9 @@ class P extends n.PureComponent {
     return (0, a.jsxs)(m.default, {
       justify: m.default.Justify.BETWEEN,
       align: m.default.Align.CENTER,
-      className: x.generateCodeRow,
+      className: D.generateCodeRow,
       children: [(0, a.jsx)("div", {
-        className: x.codeText,
+        className: D.codeText,
         children: M.default.Messages.GIFT_INVENTORY_GENERATE_HELP
       }), (0, a.jsx)(d.Button, {
         submitting: this.state.isCreating,
@@ -161,8 +161,8 @@ class P extends n.PureComponent {
       entitlements: e,
       application: t,
       giftCodes: s,
-      className: l,
-      sku: i,
+      className: i,
+      sku: l,
       isFetching: r,
       hideCodes: o,
       giftStyle: u
@@ -170,48 +170,48 @@ class P extends n.PureComponent {
       isOpen: c
     } = this.state;
     return (0, a.jsxs)(g.default, {
-      className: l,
+      className: i,
       children: [(0, a.jsx)(d.Clickable, {
         onClick: this.handleToggleOpen,
-        className: x.card,
+        className: D.card,
         onMouseEnter: () => this.setIsHovered(!0),
         onMouseLeave: () => this.setIsHovered(!1),
         children: (0, a.jsx)(g.default.Header, {
           splashArtURL: t.getSplashURL(512),
           children: (0, a.jsxs)("div", {
-            className: x.cardHeader,
+            className: D.cardHeader,
             children: [(0, a.jsxs)(m.default, {
               align: m.default.Align.CENTER,
               children: [null != u ? (0, a.jsx)(S.default, {
                 giftStyle: u,
-                className: x.seasonalGiftBox,
+                className: D.seasonalGiftBox,
                 shouldAnimate: this.state.isHovered
-              }) : (0, a.jsx)(C.default, {
+              }) : (0, a.jsx)(A.default, {
                 game: t,
-                size: C.default.Sizes.MEDIUM,
-                skuId: i.id
+                size: A.default.Sizes.MEDIUM,
+                skuId: l.id
               }), (0, a.jsxs)("div", {
-                className: x.headerText,
+                className: D.headerText,
                 children: [this.renderTitle(), (0, a.jsx)("div", {
-                  className: x.subTextHeader,
+                  className: D.subTextHeader,
                   children: M.default.Messages.GIFT_INVENTORY_COPIES.format({
                     copies: e.length
                   })
                 })]
               })]
-            }), (0, a.jsx)(A.default, {
-              direction: c ? A.default.Directions.UP : A.default.Directions.DOWN,
-              className: x.expandIcon
+            }), (0, a.jsx)(C.default, {
+              direction: c ? C.default.Directions.UP : C.default.Directions.DOWN,
+              className: D.expandIcon
             })]
           })
         })
       }), c ? (0, a.jsx)(g.default.Body, {
         children: r ? (0, a.jsx)(d.Spinner, {
-          className: x.spinner
+          className: D.spinner
         }) : (0, a.jsxs)(n.Fragment, {
           children: [s.length < e.length ? this.renderGenerateGiftCodeRow() : null, s.map(e => (0, a.jsx)(L, {
             giftCode: e,
-            sku: i,
+            sku: l,
             hideCode: o
           }, e.code))]
         })
@@ -219,11 +219,11 @@ class P extends n.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), D(this, "_loadedAt", null), D(this, "state", {
+    super(...e), x(this, "_loadedAt", null), x(this, "state", {
       isOpen: !1,
       isCreating: !1,
       isHovered: !1
-    }), D(this, "handleGenerateGiftCode", async e => {
+    }), x(this, "handleGenerateGiftCode", async e => {
       e.stopPropagation();
       let {
         skuId: t,
@@ -236,7 +236,7 @@ class P extends n.PureComponent {
         isCreating: !1,
         isOpen: !0
       })
-    }), D(this, "handleToggleOpen", () => {
+    }), x(this, "handleToggleOpen", () => {
       let {
         skuId: e,
         subscriptionPlanId: t,
@@ -255,14 +255,14 @@ t.default = r.default.connectStores([N.default, _.default, T.default, c.default,
     giftStyle: a
   } = e, n = N.default.get(t);
   if (null == n) throw Error("SKU was unavailable while rendering gift.");
-  let l = T.default.getForGifterSKUAndPlan(E.default.getId(), t, s).filter(e => !e.isClaimed).filter(e => e.giftStyle === a);
+  let i = T.default.getForGifterSKUAndPlan(E.default.getId(), t, s).filter(e => !e.isClaimed).filter(e => e.giftStyle === a);
   return {
     sku: n,
     hideCodes: _.default.enabled,
     isFetching: T.default.getUserGiftCodesFetchingForSKUAndPlan(t, s),
     loadedAt: T.default.getUserGiftCodesLoadedAtForSKUAndPlan(t, s),
     application: c.default.getApplication(n.applicationId),
-    subscriptionPlan: null != s ? (0, p.getOrFetchSubscriptionPlan)(s) : null,
-    giftCodes: l
+    subscriptionPlan: null != s ? (0, R.getOrFetchSubscriptionPlan)(s) : null,
+    giftCodes: i
   }
 })(P)

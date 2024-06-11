@@ -173,9 +173,9 @@ function y(e) {
     height: z
   } = (0, E.default)(), Z = r.useCallback(e => {
     Y !== e && !o && (j(e), e ? null == R || R() : null == C || C())
-  }, [o, C, R, Y]), X = r.useCallback(e => {
+  }, [o, C, R, Y]), Q = r.useCallback(e => {
     Y && !e && Z(!1)
-  }, [Z, Y]), Q = (0, I.useIsVisible)(X), q = r.useCallback(e => {
+  }, [Z, Y]), X = (0, I.useIsVisible)(Q), q = r.useCallback(e => {
     if (w(e), G) {
       var t;
       null === (t = W.current) || void 0 === t || t.focus()
@@ -238,7 +238,7 @@ function y(e) {
         role: "button",
         "aria-disabled": o,
         innerRef: e => {
-          W.current = e, Q.current = e
+          W.current = e, X.current = e
         },
         onClick: o ? void 0 : e => {
           r(e), Z(!Y)

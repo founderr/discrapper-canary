@@ -27,8 +27,8 @@ var a, l, s = n("735250"),
   v = n("471253"),
   N = n("431328"),
   M = n("145834"),
-  R = n("590415"),
-  y = n("614173"),
+  y = n("590415"),
+  R = n("614173"),
   L = n("618896"),
   j = n("231338"),
   O = n("689938"),
@@ -75,11 +75,11 @@ let D = i.memo(function(e) {
     } = (0, c.useStateFromStoresObject)([_.default], () => ({
       isMobile: _.default.isMobileOnline(a.user.id),
       status: _.default.getStatus(a.user.id, S)
-    })), N = (0, c.useStateFromStores)([g.default], () => g.default.getMember(S, a.user.id)), y = i.useMemo(() => ({
+    })), N = (0, c.useStateFromStores)([g.default], () => g.default.getMember(S, a.user.id)), R = i.useMemo(() => ({
       [S]: [a.user.id]
     }), [S, a.user.id]);
-    (0, p.useSubscribeGuildMembers)(y);
-    let L = a.rtsState === R.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+    (0, p.useSubscribeGuildMembers)(R);
+    let L = a.rtsState === y.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 
     function j() {
       (0, v.setUserSuppress)(t, a.user.id, !1)
@@ -177,7 +177,7 @@ let D = i.memo(function(e) {
   U = i.memo(function(e) {
     let {
       channel: t
-    } = e, [n, a] = (0, y.useRequestToSpeakPermission)(t.id);
+    } = e, [n, a] = (0, R.useRequestToSpeakPermission)(t.id);
     return (0, s.jsx)(f.FormSwitch, {
       className: P.toggle,
       onChange: a,

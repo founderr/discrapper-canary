@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return ei
   },
   getVoiceChannelUsers: function() {
-    return Q
+    return X
   },
   trackClick: function() {
     return er
@@ -87,7 +87,7 @@ var i, r, s = n("470079"),
   K = n("981631"),
   z = n("765305"),
   Z = n("689938");
-let X = {
+let Q = {
   Event: 7,
   Game: 6,
   EmbeddedActivity: 5,
@@ -97,7 +97,7 @@ let X = {
   Base: 1
 };
 
-function Q(e, t) {
+function X(e, t) {
   let n = B.default.getVoiceStatesForChannelAlt(e, t).map(e => {
       let {
         user: t
@@ -416,7 +416,7 @@ function er(e, t, n, i) {
   let a = {},
     o = null !== (s = (0, j.getChannelIdFromCardData)(e)) && void 0 !== s ? s : "";
   a.source = i, a.card_type = e.category, a.card_position = n, a.channel_id = o, a.channel_type = null === (r = v.default.getChannel(o)) || void 0 === r ? void 0 : r.type;
-  let l = Q(o, t);
+  let l = X(o, t);
   a.card_affinity_users_count = Math.min(l.length, 6), a.card_total_users_count = l.length, a.card_affinity_user_ids = l.slice(0, 6).map(e => e.id), a.card_max_affinity_user_id = l.length > 0 ? l[0].id : "0", a.card_user_affinity_scores = l.slice(0, 6).map(e => {
     var t, n;
     return null !== (n = null === (t = G.default.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0

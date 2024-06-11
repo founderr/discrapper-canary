@@ -7,7 +7,7 @@ s.r(t), s.d(t, {
     return b
   },
   useGenerateUserSettingsSections: function() {
-    return D
+    return x
   },
   useSearchUserSettingsSections: function() {
     return v
@@ -34,73 +34,73 @@ var a = s("470079"),
   g = s("663389"),
   f = s("594174"),
   m = s("202527"),
-  C = s("620163"),
-  A = s("295545"),
+  A = s("620163"),
+  C = s("295545"),
   O = s("168308"),
   h = s("839469"),
-  p = s("726985"),
-  R = s("46140"),
+  R = s("726985"),
+  p = s("46140"),
   M = s("689938");
 
-function x(e) {
+function D(e) {
   let t = [{
       header: M.default.Messages.USER_SETTINGS,
-      settings: [p.WebSetting.SEARCH_BAR, p.WebSetting.ACCOUNT, p.WebSetting.GAMES, p.WebSetting.PROFILE_CUSTOMIZATION, p.WebSetting.PRIVACY_AND_SAFETY, p.WebSetting.PRIVACY_FAMILY_CENTER, p.WebSetting.AUTHORIZED_APPS, p.WebSetting.SESSIONS, p.WebSetting.CONNECTIONS, p.WebSetting.CLIPS, p.WebSetting.FRIEND_REQUESTS]
+      settings: [R.WebSetting.SEARCH_BAR, R.WebSetting.ACCOUNT, R.WebSetting.GAMES, R.WebSetting.PROFILE_CUSTOMIZATION, R.WebSetting.PRIVACY_AND_SAFETY, R.WebSetting.PRIVACY_FAMILY_CENTER, R.WebSetting.AUTHORIZED_APPS, R.WebSetting.SESSIONS, R.WebSetting.CONNECTIONS, R.WebSetting.CLIPS, R.WebSetting.FRIEND_REQUESTS]
     }, {
       header: M.default.Messages.BILLING_SETTINGS,
       divider: !0,
-      settings: [p.WebSetting.PREMIUM, p.WebSetting.GUILD_BOOSTING, p.WebSetting.SUBSCRIPTIONS, p.WebSetting.GIFT_INVENTORY, p.WebSetting.BILLING]
+      settings: [R.WebSetting.PREMIUM, R.WebSetting.GUILD_BOOSTING, R.WebSetting.SUBSCRIPTIONS, R.WebSetting.GIFT_INVENTORY, R.WebSetting.BILLING]
     }, {
       header: M.default.Messages.APP_SETTINGS,
       divider: !0,
-      settings: [p.WebSetting.APPEARANCE, p.WebSetting.ACCESSIBILITY, p.WebSetting.VOICE_AND_VIDEO, p.WebSetting.POGGERMODE, p.WebSetting.CHAT, p.WebSetting.NOTIFICATIONS, p.WebSetting.KEYBINDS, p.WebSetting.LANGUAGE, p.WebSetting.WINDOW_SETTINGS, p.WebSetting.LINUX_SETTINGS, p.WebSetting.STREAMER_MODE, p.WebSetting.SPEED_TEST, p.WebSetting.SETTINGS_ADVANCED]
+      settings: [R.WebSetting.APPEARANCE, R.WebSetting.ACCESSIBILITY, R.WebSetting.VOICE_AND_VIDEO, R.WebSetting.POGGERMODE, R.WebSetting.CHAT, R.WebSetting.NOTIFICATIONS, R.WebSetting.KEYBINDS, R.WebSetting.LANGUAGE, R.WebSetting.WINDOW_SETTINGS, R.WebSetting.LINUX_SETTINGS, R.WebSetting.STREAMER_MODE, R.WebSetting.SPEED_TEST, R.WebSetting.SETTINGS_ADVANCED]
     }, {
       divider: !0,
-      settings: [p.WebSetting.CHANGELOG, p.WebSetting.MERCHANDISE, p.WebSetting.HYPESQUAD, p.WebSetting.EXPERIMENTS, p.WebSetting.DEVELOPER_OPTIONS, p.WebSetting.HOTSPOT_OPTIONS, p.WebSetting.DISMISSIBLE_CONTENT_OPTIONS, p.WebSetting.PAYMENT_FLOW_MODALS, p.WebSetting.DESIGN_SYSTEMS, p.WebSetting.TEXT_PLAYGROUND, p.WebSetting.TEXT_COMPONENTS, p.WebSetting.PROFILE_EFFECTS_PREVIEW_TOOL, p.WebSetting.QUEST_PREVIEW_TOOL]
+      settings: [R.WebSetting.CHANGELOG, R.WebSetting.MERCHANDISE, R.WebSetting.HYPESQUAD, R.WebSetting.EXPERIMENTS, R.WebSetting.DEVELOPER_OPTIONS, R.WebSetting.HOTSPOT_OPTIONS, R.WebSetting.DISMISSIBLE_CONTENT_OPTIONS, R.WebSetting.PAYMENT_FLOW_MODALS, R.WebSetting.DESIGN_SYSTEMS, R.WebSetting.TEXT_PLAYGROUND, R.WebSetting.TEXT_COMPONENTS, R.WebSetting.PROFILE_EFFECTS_PREVIEW_TOOL, R.WebSetting.QUEST_PREVIEW_TOOL]
     }, {
       divider: !0,
-      settings: [p.WebSetting.LOGOUT]
+      settings: [R.WebSetting.LOGOUT]
     }, {
       divider: !0,
-      settings: [p.WebSetting.SOCIAL_LINKS, p.WebSetting.CLIENT_DEBUG_INFO]
+      settings: [R.WebSetting.SOCIAL_LINKS, R.WebSetting.CLIENT_DEBUG_INFO]
     }],
     s = {
       header: M.default.Messages.ACTIVITY_SETTINGS,
       divider: !0,
-      settings: [p.WebSetting.ACTIVITY_PRIVACY, p.WebSetting.REGISTERED_GAMES, p.WebSetting.OVERLAY]
+      settings: [R.WebSetting.ACTIVITY_PRIVACY, R.WebSetting.REGISTERED_GAMES, R.WebSetting.OVERLAY]
     };
   return e ? t : t.toSpliced(3, 0, s)
 }
 
-function D() {
+function x() {
   var e, t;
   let s = (0, _.useUnseenOutboundPromotions)().length,
     a = (0, T.useIsPrepaidPaymentPastDue)(),
     l = (0, n.useStateFromStores)([g.default], () => g.default.getProps().impressionSource),
     h = (0, S.usePendingRequestCount)(),
-    p = (0, O.useShouldShowOverlaySettings)(),
+    R = (0, O.useShouldShowOverlaySettings)(),
     M = (0, d.useEnableClips)(),
-    [x] = (0, u.useGetDismissibleContent)(M ? [i.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
-    D = "useGenerateUserSettingsSections";
+    [D] = (0, u.useGetDismissibleContent)(M ? [i.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
+    x = "useGenerateUserSettingsSections";
   (0, r.useTriggerDebuggingAA)({
-    location: D + " auto on",
+    location: x + " auto on",
     autoTrackExposure: !0
   }), (0, r.useTriggerDebuggingAA)({
-    location: D + " auto off",
+    location: x + " auto off",
     autoTrackExposure: !1
   });
   let {
     shouldMergeGameSettings: L
   } = m.GameSettingsMergeExperiment.useExperiment({
     location: "settings"
-  }), P = (0, A.useIsEligibleForUserSettingsSearchDesktop)({
+  }), P = (0, C.useIsEligibleForUserSettingsSearchDesktop)({
     location: "settings"
   }), b = (0, c.useIsEligibleForKeywordFiltering)({
     location: "settings"
   }), v = null !== (t = null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t, U = (0, N.useIsEligibleForInappropriateConversationWarning)({
     location: "settings"
   }), j = (0, o.useBlockedPaymentsConfig)(), G = (0, I.useIsEligibleForQuests)({
-    location: R.QuestsExperimentLocations.USER_SETTINGS_SEARCH_GIFT_INVENTORY
+    location: p.QuestsExperimentLocations.USER_SETTINGS_SEARCH_GIFT_INVENTORY
   }), {
     enabled: F
   } = E.default.useExperiment({
@@ -108,13 +108,13 @@ function D() {
   }, {
     autoTrackExposure: !0
   });
-  return (0, C.getConfig)({
+  return (0, A.getConfig)({
     unseenGiftCount: s,
     showPrepaidPaymentPastDueWarning: a,
     impressionSource: l,
     numOfPendingFamilyRequests: h,
-    isOverlaySupported: p,
-    isClipsBetaTagShowing: x === i.DismissibleContent.CLIPS_SETTINGS_BETA_TAG,
+    isOverlaySupported: R,
+    isClipsBetaTagShowing: D === i.DismissibleContent.CLIPS_SETTINGS_BETA_TAG,
     shouldMergeGameSettings: L,
     isUserSettingsSearchEnabled: P,
     isKeywordFilteringEnabled: b,
@@ -129,8 +129,8 @@ function D() {
 function L(e) {
   let {
     searchResults: t
-  } = (0, h.useSettingSearchResults)(), s = D();
-  if (!(0, A.useIsEligibleForUserSettingsSearchDesktop)({
+  } = (0, h.useSettingSearchResults)(), s = x();
+  if (!(0, C.useIsEligibleForUserSettingsSearchDesktop)({
       location: "settings"
     })) return new Set;
   let a = s[e],
@@ -205,7 +205,7 @@ function P(e, t) {
         ...t[e],
         tabPredicate: () => {
           var t, s, n;
-          return null == a || (t = e, s = a, n = r, t === p.WebSetting.SEARCH_BAR || t === p.WebSetting.SEARCH_NO_RESULTS && 0 === s.size || n.has(t) || s.has(t))
+          return null == a || (t = e, s = a, n = r, t === R.WebSetting.SEARCH_BAR || t === R.WebSetting.SEARCH_NO_RESULTS && 0 === s.size || n.has(t) || s.has(t))
         },
         searchFilterCount: !s || (null == a ? void 0 : a.has(e)) ? void 0 : r.get(e)
       })
@@ -214,24 +214,24 @@ function P(e, t) {
 }
 
 function b() {
-  let e = D(),
+  let e = x(),
     {
       shouldMergeGameSettings: t
     } = m.GameSettingsMergeExperiment.useExperiment({
       location: "settings"
     }),
-    s = a.useMemo(() => x(t), [t]);
+    s = a.useMemo(() => D(t), [t]);
   return a.useMemo(() => P(s, e), [s, e])
 }
 
 function v(e) {
-  let t = D(),
+  let t = x(),
     s = function() {
       let {
         shouldMergeGameSettings: e
       } = m.GameSettingsMergeExperiment.useExperiment({
         location: "settings"
-      }), t = x(e);
+      }), t = D(e);
       return a.useMemo(() => [{
         header: M.default.Messages.USER_SETTINGS,
         settings: [...t.map(e => {
@@ -239,10 +239,10 @@ function v(e) {
             settings: t
           } = e;
           return t
-        }).flat(1), p.WebSetting.SEARCH_NO_RESULTS]
+        }).flat(1), R.WebSetting.SEARCH_NO_RESULTS]
       }], [t])
     }(),
-    n = (0, A.useIsEligibleForUserSettingsSearchDesktopWithCount)({
+    n = (0, C.useIsEligibleForUserSettingsSearchDesktopWithCount)({
       location: "settings"
     });
   return a.useMemo(() => P(s, t, n, new Set(e)), [s, t, n, e])

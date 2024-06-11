@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   HangStatusPopout: function() {
-    return R
+    return y
   }
 }), n("47120");
 var a = n("735250"),
@@ -45,10 +45,10 @@ let M = e => {
       })
     })
   },
-  R = e => {
+  y = e => {
     let {
       currentStatus: t
-    } = e, s = l.useRef(_.default.getRecentCustomStatuses()), r = l.useRef((0, h.isDismissibleContentDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)).current, R = (0, T.getHangStatusOptions)(), [y, L] = l.useState(null != t ? t : null), j = (0, u.useStateFromStores)([m.default], () => m.default.getCurrentUser()), O = () => {
+    } = e, s = l.useRef(_.default.getRecentCustomStatuses()), r = l.useRef((0, h.isDismissibleContentDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)).current, y = (0, T.getHangStatusOptions)(), [R, L] = l.useState(null != t ? t : null), j = (0, u.useStateFromStores)([m.default], () => m.default.getCurrentUser()), O = () => {
       !r && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)
     }, P = (e, t) => {
       e.stopPropagation(), (0, S.updateHangStatus)(t, !0), O()
@@ -117,7 +117,7 @@ let M = e => {
               })]
             }), (0, a.jsx)(I.default, {
               className: N.statusIcon,
-              hangStatusActivity: y
+              hangStatusActivity: R
             })]
           })]
         })]
@@ -125,7 +125,7 @@ let M = e => {
         className: N.options,
         children: [(0, a.jsxs)("div", {
           className: N.iconsContainer,
-          children: [Object.entries(R).map(e => {
+          children: [Object.entries(y).map(e => {
             let [n, l] = e;
             return (0, a.jsx)(c.Clickable, {
               "aria-label": l.title,

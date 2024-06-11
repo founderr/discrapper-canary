@@ -31,8 +31,8 @@ function v(e) {
   let {
     channel: t
   } = e, n = (0, s.useStateFromStores)([d.default], () => d.default.isLaunchingActivity()), v = (0, h.useEmbeddedActivityLaunchability)(t.id), N = (0, h.getEmbeddedActivityLaunchabilityLabel)(v), M = v !== h.EmbeddedActivityLaunchability.CAN_LAUNCH || n, {
-    isHovered: R,
-    setIsHovered: y,
+    isHovered: y,
+    setIsHovered: R,
     onMouseEnter: L,
     onMouseLeave: j
   } = (0, _.default)(200, 300), O = (0, f.useShowActivityIndicator)(), P = (0, c.default)({
@@ -59,13 +59,13 @@ function v(e) {
       } = e;
       return (0, a.jsx)(r.Popout, {
         fixed: !0,
-        shouldShow: R,
+        shouldShow: y,
         animationPosition: "bottom",
         position: "bottom",
         align: "center",
         spacing: 16,
         onRequestClose: () => {
-          y(!1)
+          R(!1)
         },
         renderPopout: e => {
           let {
@@ -78,7 +78,7 @@ function v(e) {
             closePopout: n,
             onMouseEnter: L,
             onMouseLeave: j,
-            isHovered: R,
+            isHovered: y,
             onClick: () => l(A.ContentDismissActionType.UNKNOWN)
           }) : (0, a.jsx)(a.Fragment, {})
         },
@@ -87,7 +87,7 @@ function v(e) {
             disabled: M,
             "aria-label": N,
             label: D ? void 0 : N,
-            isActivityActive: P || R,
+            isActivityActive: P || y,
             className: x.controlButton,
             onClick: () => {
               k(), (n === i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES || n === i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && l(A.ContentDismissActionType.UNKNOWN)

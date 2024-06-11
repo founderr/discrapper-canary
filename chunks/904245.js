@@ -48,8 +48,8 @@ var V = n("869765"),
 n("323873");
 var z = n("701190"),
   Z = n("375954"),
-  X = n("496675"),
-  Q = n("158776"),
+  Q = n("496675"),
+  X = n("158776"),
   q = n("306680"),
   J = n("944486"),
   $ = n("914010"),
@@ -106,7 +106,7 @@ function eh(e) {
       let i = j.default.getLastActiveStream();
       if (null != i && i.channelId === t.id) {
         e = ed.LoggingInviteTypes.STREAM, n.destination_user_id = i.ownerId;
-        let t = (0, m.getStreamerApplication)(i, Q.default);
+        let t = (0, m.getStreamerApplication)(i, X.default);
         n.application_id = null != t ? t.id : null
       }
     }
@@ -672,11 +672,11 @@ let eA = {
         let t, n;
         ef = !0;
         let i = et.default.getCurrentUser();
-        c.some(e => e.animated) && !eo.default.canUseAnimatedEmojis(i) ? (t = eE.default.Messages.INVALID_ANIMATED_EMOJI_BODY_UPGRADE, n = "INVALID_ANIMATED_EMOJI_BODY") : X.default.canWithPartialContext(ed.Permissions.USE_EXTERNAL_EMOJIS, {
+        c.some(e => e.animated) && !eo.default.canUseAnimatedEmojis(i) ? (t = eE.default.Messages.INVALID_ANIMATED_EMOJI_BODY_UPGRADE, n = "INVALID_ANIMATED_EMOJI_BODY") : Q.default.canWithPartialContext(ed.Permissions.USE_EXTERNAL_EMOJIS, {
           channelId: e
         }) ? (t = eE.default.Messages.INVALID_EXTERNAL_EMOJI_BODY_UPGRADE, n = "INVALID_EXTERNAL_EMOJI_BODY_UPGRADE") : (t = eE.default.Messages.INVALID_EXTERNAL_EMOJI_BODY, n = "INVALID_EXTERNAL_EMOJI_BODY"), em.sendBotMessage(e, t, n)
       }
-      let Q = {
+      let X = {
         type: u.MessageDataType.SEND,
         message: {
           channelId: e,
@@ -698,14 +698,14 @@ let eA = {
             {
               activity: n
             } = h;
-          null != n.party && null != n.party.id && (t.party_id = n.party.id), Q.message.application_id = n.application_id, Q.message.activity = t
+          null != n.party && null != n.party.id && (t.party_id = n.party.id), X.message.application_id = n.application_id, X.message.activity = t
         }
       }
-      return null != U && (Q.message.poll = U), null != C && (Q.message.sticker_ids = C), G.default.isEnabled() && (Q.message.has_poggermode_enabled = !0), new Promise((t, i) => {
+      return null != U && (X.message.poll = U), null != C && (X.message.sticker_ids = C), G.default.isEnabled() && (X.message.has_poggermode_enabled = !0), new Promise((t, i) => {
         let s = Date.now(),
           a = u.default.length,
           l = Math.floor(1e4 * Math.random());
-        eT.info("Queueing message to be sent LogId:".concat(l)), u.default.enqueue(Q, l => {
+        eT.info("Queueing message to be sent LogId:".concat(l)), u.default.enqueue(X, l => {
           let c = Date.now() - s;
           if (l.ok) {
             D.default.donateSentMessage(_, e), em.receiveMessage(e, l.body, !0, {
@@ -840,7 +840,7 @@ let eA = {
                 })
               } else N.AUTOMOD_ERROR_CODES.has(l.body.code) ? o.default.dispatch({
                 type: "MESSAGE_SEND_FAILED_AUTOMOD",
-                messageData: Q,
+                messageData: X,
                 errorResponseBody: {
                   code: l.body.code,
                   message: l.body.message

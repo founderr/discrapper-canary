@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return r
   },
   fetchAuthSessions: function() {
-    return i
+    return l
   },
   logOutSessions: function() {
     return o
@@ -12,11 +12,11 @@ s.r(t), s.d(t, {
 });
 var a = s("544891"),
   n = s("570140"),
-  l = s("981631");
-async function i() {
+  i = s("981631");
+async function l() {
   var e;
   let t = await a.HTTP.get({
-    url: l.Endpoints.AUTH_SESSIONS
+    url: i.Endpoints.AUTH_SESSIONS
   });
   return (null == t ? void 0 : t.ok) && (null === (e = t.body) || void 0 === e ? void 0 : e.user_sessions) != null && n.default.dispatch({
     type: "FETCH_AUTH_SESSIONS_SUCCESS",
@@ -35,7 +35,7 @@ async function o(e) {
     if (0 === e.length) return
   } else e = [e];
   let t = await a.HTTP.post({
-    url: l.Endpoints.AUTH_SESSIONS_LOGOUT,
+    url: i.Endpoints.AUTH_SESSIONS_LOGOUT,
     body: {
       session_id_hashes: e
     }

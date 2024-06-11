@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return O
+    return P
   }
 }), r("47120"), r("724458"), r("757143"), r("390547"), r("653041");
 var a = r("735250"),
@@ -23,9 +23,9 @@ var a = r("735250"),
   x = r("6048"),
   k = r("465670"),
   v = r("246992"),
-  T = r("277513");
+  S = r("277513");
 
-function S(e, t) {
+function T(e, t) {
   return !t && (t = e.slice(0)), Object.freeze(Object.defineProperties(e, {
     raw: {
       value: Object.freeze(t)
@@ -34,14 +34,14 @@ function S(e, t) {
 }
 
 function j() {
-  let e = S(["\n    import {defineColorTokens, themedToken} from '../tools/define';\n\n    const semanticTokenValues = {\n      ", "\n    };\n\n    export const semanticTokens = defineColorTokens(() => semanticTokenValues);\n    export type SemanticTokenValue = typeof semanticTokenValues;\n  "]);
+  let e = T(["\n    import {defineColorTokens, themedToken} from '../tools/define';\n\n    const semanticTokenValues = {\n      ", "\n    };\n\n    export const semanticTokens = defineColorTokens(() => semanticTokenValues);\n    export type SemanticTokenValue = typeof semanticTokenValues;\n  "]);
   return j = function() {
     return e
   }, e
 }
 
 function w() {
-  let e = S(["\n      export const rawPalette = {\n        ", "\n      } as const;\n    "]);
+  let e = T(["\n      export const rawPalette = {\n        ", "\n      } as const;\n    "]);
   return w = function() {
     return e
   }, e
@@ -87,7 +87,7 @@ function R(e) {
   }), t
 }
 
-function P(e, t) {
+function O(e, t) {
   let [r, a] = i.useState(() => {
     let r = h.Storage.get(e);
     return null != r ? r : t
@@ -97,13 +97,13 @@ function P(e, t) {
   }, [e, r]), [r, a]
 }
 
-function O() {
+function P() {
   let e = (0, b.useTheme)(),
     [{
       rawPalette: t,
       semanticTokens: r
     }, n, o, s, h, p] = function(e, t) {
-      let [r, a] = P("".concat(e, "-states"), [t]), [n, l] = P("".concat(e, "-index"), 0), o = r[n], c = i.useCallback(e => {
+      let [r, a] = O("".concat(e, "-states"), [t]), [n, l] = O("".concat(e, "-index"), 0), o = r[n], c = i.useCallback(e => {
         a([e, ...r].slice(0, 20)), l(0)
       }, [l, a, r]), s = i.useCallback(() => {
         l(Math.min(r.length - 1, n + 1))
@@ -116,13 +116,13 @@ function O() {
       semanticTokens: N
     }),
     [g, f] = i.useState(""),
-    [S, E] = i.useState({}),
+    [T, E] = i.useState({}),
     [_, I] = i.useState({}),
     R = i.useMemo(() => Object.keys(t).reduce((e, t) => [...e, {
       value: t,
       label: t
     }], []), [t]),
-    O = i.useCallback((e, a, i, l) => {
+    P = i.useCallback((e, a, i, l) => {
       let o = d().cloneDeep(r);
       o[e][a] = {
         color: i,
@@ -157,8 +157,8 @@ function O() {
           }(r), o = d().kebabCase(e);
           return ["--".concat(o, "-hsl: ").concat(a, " calc(var(--saturation-factor, 1) * ").concat(i, "%) ").concat(n, "% !important;"), "--".concat(o, ": hsl(var(--").concat(o, "-hsl)) !important;")]
         });
-      return "\n      .theme-".concat(e, " {\n        ").concat(a.join("\n"), "\n\n        ").concat(Object.keys(S).filter(e => S[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n\n        ").concat(Object.keys(_).filter(e => _[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n      }\n\n      html {\n        ").concat(i.join("\n"), "\n      }\n    ")
-    }, [e, r, t, S, _]),
+      return "\n      .theme-".concat(e, " {\n        ").concat(a.join("\n"), "\n\n        ").concat(Object.keys(T).filter(e => T[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n\n        ").concat(Object.keys(_).filter(e => _[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n      }\n\n      html {\n        ").concat(i.join("\n"), "\n      }\n    ")
+    }, [e, r, t, T, _]),
     L = i.useCallback(e => {
       let t = "",
         r = "",
@@ -201,19 +201,19 @@ function O() {
       })
     }, [r, n]);
   return (0, a.jsxs)("div", {
-    className: T.panel,
+    className: S.panel,
     style: {
       display: "flex",
       flexDirection: "column"
     },
     children: [(0, a.jsxs)("div", {
-      className: T.toolbar,
+      className: S.toolbar,
       style: {
         flex: "0 0 34px",
         padding: "0 4px"
       },
       children: [(0, a.jsxs)("div", {
-        className: T.toolbarGroup,
+        className: S.toolbarGroup,
         children: [(0, a.jsx)(y.Button, {
           onClick: o,
           disabled: !h,
@@ -226,11 +226,11 @@ function O() {
           children: "Redo"
         })]
       }), (0, a.jsx)("div", {
-        className: T.toolbarDivider
+        className: S.toolbarDivider
       }), (0, a.jsxs)("div", {
-        className: T.toolbarGroup,
+        className: S.toolbarGroup,
         children: [(0, a.jsx)("span", {
-          className: T.toolbarGroupLabel,
+          className: S.toolbarGroupLabel,
           children: "Raw"
         }), (0, a.jsx)(y.Button, {
           size: y.Button.Sizes.MIN,
@@ -248,11 +248,11 @@ function O() {
           children: "Export"
         })]
       }), (0, a.jsx)("div", {
-        className: T.toolbarDivider
+        className: S.toolbarDivider
       }), (0, a.jsxs)("div", {
-        className: T.toolbarGroup,
+        className: S.toolbarGroup,
         children: [(0, a.jsx)("span", {
-          className: T.toolbarGroupLabel,
+          className: S.toolbarGroupLabel,
           children: "Semantic"
         }), (0, a.jsx)(y.Button, {
           size: y.Button.Sizes.MIN,
@@ -262,9 +262,9 @@ function O() {
           children: "Export"
         })]
       }), (0, a.jsx)("div", {
-        className: T.toolbarDivider
+        className: S.toolbarDivider
       }), (0, a.jsx)("div", {
-        className: T.toolbarGroup,
+        className: S.toolbarGroup,
         children: (0, a.jsx)(y.Button, {
           size: y.Button.Sizes.MIN,
           type: "reset",
@@ -278,9 +278,9 @@ function O() {
           children: "Reset all"
         })
       }), (0, a.jsx)("div", {
-        className: T.toolbarDivider
+        className: S.toolbarDivider
       }), (0, a.jsxs)("div", {
-        className: T.toolbarGroup,
+        className: S.toolbarGroup,
         style: {
           flexGrow: 1
         },
@@ -324,7 +324,7 @@ function O() {
                 }))
               },
               children: (0, a.jsx)(y.Checkbox, {
-                value: S[t],
+                value: T[t],
                 onChange: () => {
                   E(e => ({
                     ...e,
@@ -338,7 +338,7 @@ function O() {
               value: o.color,
               options: R,
               onChange: r => {
-                O(t, e, r, o.opacity)
+                P(t, e, r, o.opacity)
               },
               renderOptionPrefix: t => null == t ? null : (0, a.jsx)("div", {
                 style: {
@@ -357,7 +357,7 @@ function O() {
               },
               value: null === (n = o.opacity) || void 0 === n ? void 0 : n.toString(),
               onChange: r => {
-                "" !== r && O(t, e, o.color, parseFloat(r))
+                "" !== r && P(t, e, o.color, parseFloat(r))
               }
             }), (0, a.jsx)(y.Clickable, {
               style: c ? {} : {
@@ -366,7 +366,7 @@ function O() {
               },
               onClick: () => {
                 var r;
-                c && O(t, e, l.color, null !== (r = l.opacity) && void 0 !== r ? r : 1)
+                c && P(t, e, l.color, null !== (r = l.opacity) && void 0 !== r ? r : 1)
               },
               children: (0, a.jsx)(k.default, {
                 width: 16,

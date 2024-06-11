@@ -1,9 +1,9 @@
 "use strict";
 s.r(t);
 var a, n = s("735250"),
-  l = s("470079"),
-  i = s("120356"),
-  r = s.n(i),
+  i = s("470079"),
+  l = s("120356"),
+  r = s.n(l),
   o = s("285952"),
   d = s("533730");
 
@@ -15,7 +15,7 @@ function u(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class c extends(a = l.PureComponent) {
+class c extends(a = i.PureComponent) {
   render() {
     let {
       children: e,

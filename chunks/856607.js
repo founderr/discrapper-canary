@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("735250");
 s("470079");
 var n = s("481060"),
-  l = s("37234"),
-  i = s("703656"),
+  i = s("37234"),
+  l = s("703656"),
   r = s("981631"),
   o = s("689938"),
   d = s("42205"),
@@ -32,7 +32,7 @@ function c() {
     }), (0, a.jsx)(n.Button, {
       className: d.topSpacing,
       onClick: () => {
-        (0, i.transitionTo)(r.Routes.GUILD_DISCOVERY), l.popLayer()
+        (0, l.transitionTo)(r.Routes.GUILD_DISCOVERY), i.popLayer()
       },
       children: o.default.Messages.GUILD_IDENTITY_SETTINGS_EMPTY_STATE_CTA
     })]

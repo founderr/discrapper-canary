@@ -37,7 +37,7 @@ function A(e) {
     v = (0, r.useStateFromStores)([p.default], () => p.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
     N = null !== (t = C.default.useName(v)) && void 0 !== t ? t : _.default.Messages.WAVE_DEFAULT_RECIPIENT,
     M = (0, r.useStateFromStores)([c.default], () => c.default.getStickerById(I)),
-    R = l.useCallback(async () => {
+    y = l.useCallback(async () => {
       if (null == s || "" === s) try {
         await u.default.sendGreetMessage(n.id, I), E.default.track(S.AnalyticEvents.DM_EMPTY_ACTION, {
           channel_id: n.id,
@@ -49,7 +49,7 @@ function A(e) {
         !e.ok && 429 === e.status && A(_.default.Messages.RATE_LIMITED)
       }
     }, [n.id, n.type, s]),
-    y = _.default.Messages.WAVE_TO.format({
+    R = _.default.Messages.WAVE_TO.format({
       username: N
     }),
     L = null != s && "" !== s ? (0, a.jsx)(o.Text, {
@@ -63,14 +63,14 @@ function A(e) {
     children: [(0, a.jsxs)(o.Clickable, {
       className: null != s && "" !== s ? T.compactButtonDisabled : T.compactButton,
       "aria-label": _.default.Messages.SEND_WAVE,
-      onClick: R,
+      onClick: y,
       children: [(0, a.jsx)(f.default, {
         sticker: M,
         size: 24
       }), (0, a.jsx)(o.Text, {
         className: T.text,
         variant: "text-md/medium",
-        children: y
+        children: R
       })]
     }), L]
   }) : (0, a.jsxs)("div", {
@@ -80,9 +80,9 @@ function A(e) {
       size: 160
     }), (0, a.jsx)(o.Button, {
       className: T.button,
-      onClick: R,
+      onClick: y,
       disabled: !!s,
-      children: y
+      children: R
     }), L]
   })
 }

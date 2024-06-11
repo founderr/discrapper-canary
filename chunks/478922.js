@@ -68,7 +68,7 @@ function _(e, t, n) {
       visibleSections: K,
       totalHeight: z,
       forceUpdate: Z,
-      masonryComputer: X
+      masonryComputer: Q
     } = (0, u.useVirtualizedMasonryState)({
       sections: f,
       columns: S,
@@ -85,10 +85,10 @@ function _(e, t, n) {
       getScrollerState: H,
       dir: T,
       maxBufferWidth: b
-    }), Q = (0, r.useCallback)(function() {
+    }), X = (0, r.useCallback)(function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
       e > F.current.dirty && (F.current.dirty = e, 2 === e ? Z() : Y(1))
-    }, [Y, F, Z]), q = (0, u.useScrollSpring)(x), J = (0, r.useCallback)(() => X.itemGrid, [X]), $ = (0, r.useCallback)(() => X.coordsMap, [X]), ee = s().useCallback(() => Q(), [Q]);
+    }, [Y, F, Z]), q = (0, u.useScrollSpring)(x), J = (0, r.useCallback)(() => Q.itemGrid, [Q]), $ = (0, r.useCallback)(() => Q.coordsMap, [Q]), ee = s().useCallback(() => X(), [X]);
     (0, u.useResizeObserverSubscription)({
       ref: x,
       key: "container",
@@ -103,10 +103,10 @@ function _(e, t, n) {
       ...(0, u.getAnimatedScrollHelpers)(x, H, q)
     }), [x, H, J, q, $]);
     let et = (0, r.useCallback)(e => {
-      Q(1), null == w.current ? V(!0) : clearTimeout(w.current), w.current = setTimeout(() => {
+      X(1), null == w.current ? V(!0) : clearTimeout(w.current), w.current = setTimeout(() => {
         w.current = null, V(!1)
       }, 200), null != I && I(e)
-    }, [I, Q]);
+    }, [I, X]);
     return (0, i.jsx)("div", {
       ref: x,
       onScroll: et,

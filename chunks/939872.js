@@ -8,8 +8,8 @@ var i = n("735250");
 n("470079");
 var a = n("442837"),
   s = n("481060"),
-  l = n("17894"),
-  r = n("430824"),
+  r = n("17894"),
+  l = n("430824"),
   u = n("313550"),
   o = n("689938"),
   d = n("684351");
@@ -18,7 +18,7 @@ let c = e => {
     onClose: t,
     listing: n,
     guildId: c
-  } = e, f = (0, a.useStateFromStores)([r.default], () => r.default.getGuild(c), [c]), E = (0, u.default)({
+  } = e, f = (0, a.useStateFromStores)([l.default], () => l.default.getGuild(c), [c]), E = (0, u.default)({
     listing: n,
     guildId: c
   });
@@ -40,7 +40,7 @@ let c = e => {
       })
     }), (0, i.jsx)(s.Button, {
       className: d.openDiscordButton,
-      onClick: () => (0, l.default)("role_sub_mweb_success_modal"),
+      onClick: () => (0, r.default)("role_sub_mweb_success_modal"),
       children: o.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_OPEN_DISCORD_BUTTON
     }), (0, i.jsx)(s.Button, {
       className: d.doneButton,

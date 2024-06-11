@@ -1,14 +1,14 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return R
   }
 });
 var a = s("735250");
 s("470079");
 var n = s("120356"),
-  l = s.n(n),
-  i = s("442837"),
+  i = s.n(n),
+  l = s("442837"),
   r = s("481060"),
   o = s("846027"),
   d = s("230711"),
@@ -23,9 +23,9 @@ var n = s("120356"),
   g = s("917439"),
   f = s("611273");
 let m = !T.isPlatformEmbedded,
-  C = (0, E.uid)();
+  A = (0, E.uid)();
 
-function A(e) {
+function C(e) {
   let {
     value: t
   } = e;
@@ -55,16 +55,16 @@ function h(e) {
     {
       shortcut: n,
       delay: E
-    } = (0, i.useStateFromStoresObject)([c.default], () => c.default.getModeOptions());
+    } = (0, l.useStateFromStoresObject)([c.default], () => c.default.getModeOptions());
   return t = T.isPlatformEmbedded || s !== I.InputModes.PUSH_TO_TALK ? (0, a.jsx)(r.FormText, {
     type: r.FormText.Types.DESCRIPTION,
-    className: l()(g.pttToolsMessage, f.marginBottom8),
+    className: i()(g.pttToolsMessage, f.marginBottom8),
     children: N.default.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({
       onClick: () => d.default.setSection(I.UserSettingsSections.KEYBINDS)
     })
   }) : (0, a.jsx)(r.FormText, {
     type: r.FormText.Types.DESCRIPTION,
-    className: l()(g.pttToolsMessage, g.pttToolsWarning, f.marginBottom8),
+    className: i()(g.pttToolsMessage, g.pttToolsWarning, f.marginBottom8),
     children: N.default.Messages.PTT_LIMITED_WARNING.format({
       onDownloadClick: () => (0, _.openDownloadAppsModal)("Help Text PTT")
     })
@@ -86,7 +86,7 @@ function h(e) {
         basis: "50%",
         children: (0, a.jsxs)(r.FormItem, {
           children: [(0, a.jsx)(r.FormTitle, {
-            id: C,
+            id: A,
             tag: r.FormTitleTags.H5,
             className: f.marginBottom8,
             children: N.default.Messages.INPUT_MODE_PTT_RELEASE_DELAY
@@ -97,7 +97,7 @@ function h(e) {
             }),
             onValueRender: O,
             maxValue: I.MAX_PTT_RELEASE_DELAY,
-            "aria-labelledby": C
+            "aria-labelledby": A
           })]
         })
       })]
@@ -105,8 +105,8 @@ function h(e) {
   })
 }
 
-function p() {
-  let e = (0, i.useStateFromStores)([c.default], () => c.default.getMode()),
+function R() {
+  let e = (0, l.useStateFromStores)([c.default], () => c.default.getMode()),
     t = [{
       value: I.InputModes.VOICE_ACTIVITY,
       name: N.default.Messages.INPUT_MODE_VAD
@@ -119,7 +119,7 @@ function p() {
       title: N.default.Messages.FORM_LABEL_INPUT_MODE,
       className: f.marginBottom20,
       children: (0, a.jsx)(r.RadioGroup, {
-        onChange: A,
+        onChange: C,
         options: t,
         value: e
       })

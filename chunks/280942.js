@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("735250");
 s("470079");
 var n = s("178346"),
-  l = s("481060"),
-  i = s("230711"),
+  i = s("481060"),
+  l = s("230711"),
   r = s("267642"),
   o = s("760558"),
   d = s("981631"),
@@ -47,30 +47,30 @@ function S(e) {
     case d.SubscriptionStatusTypes.PAUSED:
       I.transfer.disabled = !0, I.transfer.subtext = u.default.Messages.GUILD_BOOSTING_TRANSFER_DISABLED_FOR_PAUSED_SUBSCRIPTION, I.cancel.disabled = !0, I.cancel.subtext = u.default.Messages.GUILD_BOOSTING_CANCEL_DISABLED_FOR_PAUSED_SUBSCRIPTION, I.uncancel.disabled = !0
   }
-  return (0, a.jsxs)(l.Menu, {
+  return (0, a.jsxs)(i.Menu, {
     onSelect: _,
     navId: "subscription-context",
     variant: "fixed",
     "aria-label": u.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
     onClose: S,
-    children: [(0, a.jsx)(l.MenuItem, {
+    children: [(0, a.jsx)(i.MenuItem, {
       id: "apply",
       label: I.transfer.label,
       subtext: I.transfer.subtext,
       action: function() {
-        (0, l.openModalLazy)(async () => e => (0, a.jsx)(o.default, {
+        (0, i.openModalLazy)(async () => e => (0, a.jsx)(o.default, {
           ...e,
           guildBoostSlots: [t],
           locationSection: d.AnalyticsSections.SETTINGS_PREMIUM
         }))
       },
       disabled: I.transfer.disabled
-    }), (0, r.isGuildBoostSlotCanceled)(t) ? (0, a.jsx)(l.MenuItem, {
+    }), (0, r.isGuildBoostSlotCanceled)(t) ? (0, a.jsx)(i.MenuItem, {
       id: "uncancel",
       label: I.uncancel.label,
       subtext: I.uncancel.subtext,
       action: function() {
-        (0, l.openModalLazy)(async () => {
+        (0, i.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.resolve().then(s.bind(s, "450468"));
@@ -81,12 +81,12 @@ function S(e) {
         })
       },
       disabled: I.uncancel.disabled
-    }) : (0, a.jsx)(l.MenuItem, {
+    }) : (0, a.jsx)(i.MenuItem, {
       id: "cancel",
       label: I.cancel.label,
       subtext: I.cancel.subtext,
       action: function() {
-        (0, l.openModalLazy)(async () => {
+        (0, i.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.resolve().then(s.bind(s, "401786"));
@@ -98,10 +98,10 @@ function S(e) {
       },
       disabled: I.cancel.disabled,
       color: "danger"
-    }), T.isPausedOrPausePending ? (0, a.jsx)(l.MenuItem, {
+    }), T.isPausedOrPausePending ? (0, a.jsx)(i.MenuItem, {
       id: "manage-subscription",
       label: u.default.Messages.BILLING_MANAGE_SUBSCRIPTION,
-      action: () => i.default.open(d.UserSettingsSections.SUBSCRIPTIONS),
+      action: () => l.default.open(d.UserSettingsSections.SUBSCRIPTIONS),
       icon: n.LightbulbIcon,
       showIconFirst: !0,
       className: c.manageSubscription

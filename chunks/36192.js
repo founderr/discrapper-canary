@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("47120");
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("442837"),
   o = s("544891"),
   d = s("704215"),
@@ -22,19 +22,19 @@ var a = s("735250"),
   g = s("460562"),
   f = s("465670"),
   m = s("736921"),
-  C = s("169278"),
-  A = s("823379"),
+  A = s("169278"),
+  C = s("823379"),
   O = s("981631"),
   h = s("921944"),
-  p = s("689938"),
-  R = s("663563");
+  R = s("689938"),
+  p = s("663563");
 
 function M() {
   let e;
   let {
     currentSession: t,
     otherSessions: s
-  } = (0, T.useAuthSessions)(), l = (0, r.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), i = (0, r.useStateFromStores)([N.default], () => N.default.getCurrentUser()), [c, g] = n.useState(!1);
+  } = (0, T.useAuthSessions)(), i = (0, r.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), l = (0, r.useStateFromStores)([N.default], () => N.default.getCurrentUser()), [c, g] = n.useState(!1);
   n.useEffect(() => {
     (0, _.markDismissibleContentAsDismissed)(d.DismissibleContent.AUTH_SESSIONS_NEW, {
       dismissAction: h.ContentDismissActionType.AUTO
@@ -49,70 +49,70 @@ function M() {
         url: O.Endpoints.AUTH_SESSION_NOTIFICATIONS_DEBUG
       })
     },
-    [m, C] = n.useState(new Set);
-  return l ? (0, a.jsx)(S.default, {}) : (e = null == t && 0 === s.length ? c ? (0, a.jsx)("div", {
-    className: R.loading,
+    [m, A] = n.useState(new Set);
+  return i ? (0, a.jsx)(S.default, {}) : (e = null == t && 0 === s.length ? c ? (0, a.jsx)("div", {
+    className: p.loading,
     children: (0, a.jsx)(u.Spinner, {})
   }) : null : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: R.sessions,
+      className: p.sessions,
       children: [(0, a.jsx)(u.FormSection, {
         tag: u.FormTitleTags.H5,
-        title: p.default.Messages.AUTH_SESSIONS_CURRENT,
-        titleClassName: R.groupTitle,
-        children: null != t ? (0, a.jsx)(x, {
+        title: R.default.Messages.AUTH_SESSIONS_CURRENT,
+        titleClassName: p.groupTitle,
+        children: null != t ? (0, a.jsx)(D, {
           session: t,
           current: !0
         }) : null
-      }), !(s.length > 0) && (null == i ? void 0 : i.mfaEnabled) ? null : (0, a.jsxs)(u.FormSection, {
+      }), !(s.length > 0) && (null == l ? void 0 : l.mfaEnabled) ? null : (0, a.jsxs)(u.FormSection, {
         tag: u.FormTitleTags.H5,
-        title: p.default.Messages.AUTH_SESSIONS_OTHERS,
-        titleClassName: R.groupTitle,
-        className: R.otherSessions,
-        children: [s.map(e => (0, a.jsx)(x, {
+        title: R.default.Messages.AUTH_SESSIONS_OTHERS,
+        titleClassName: p.groupTitle,
+        className: p.otherSessions,
+        children: [s.map(e => (0, a.jsx)(D, {
           session: e,
           useChecks: m.size > 0,
           checked: m.has(e.id_hash),
           setChecked: t => {
             let s = new Set(m);
-            t ? s.add(e.id_hash) : s.delete(e.id_hash), C(s)
+            t ? s.add(e.id_hash) : s.delete(e.id_hash), A(s)
           }
-        }, e.id_hash)), (null == i ? void 0 : i.mfaEnabled) ? null : (0, a.jsx)(D, {})]
+        }, e.id_hash)), (null == l ? void 0 : l.mfaEnabled) ? null : (0, a.jsx)(x, {})]
       })]
     }), s.length > 0 ? (0, a.jsxs)(u.FormSection, {
       tag: u.FormTitleTags.H5,
-      title: m.size > 0 ? p.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_TITLE : p.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_TITLE,
+      title: m.size > 0 ? R.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_TITLE : R.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_TITLE,
       children: [(0, a.jsx)(u.FormText, {
         type: u.FormTextTypes.DESCRIPTION,
-        children: p.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_DESCRIPTION
+        children: R.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_DESCRIPTION
       }), (0, a.jsx)(u.Button, {
         look: u.Button.Looks.OUTLINED,
         color: u.Button.Colors.RED,
         size: u.Button.Sizes.SMALL,
-        className: R.logOutAllButton,
+        className: p.logOutAllButton,
         onClick: () => {
           m.size > 0 ? (0, E.logOutSessions)(Array.from(m)) : (0, E.logOutSessions)(s.map(e => e.id_hash))
         },
-        children: m.size > 0 ? p.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_ACTION.format({
+        children: m.size > 0 ? R.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_ACTION.format({
           count: m.size
-        }) : p.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_ACTION
+        }) : R.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_ACTION
       })]
     }) : null]
   }), (0, a.jsxs)(u.FormSection, {
     tag: u.FormTitleTags.H1,
-    title: p.default.Messages.AUTH_SESSIONS,
+    title: R.default.Messages.AUTH_SESSIONS,
     children: [(0, a.jsx)(u.FormText, {
       type: u.FormTextTypes.DESCRIPTION,
-      className: R.description,
-      children: p.default.Messages.AUTH_SESSIONS_DESCRIPTION
-    }), (null == i ? void 0 : i.isStaff()) ? (0, a.jsxs)("div", {
-      className: R.tools,
+      className: p.description,
+      children: R.default.Messages.AUTH_SESSIONS_DESCRIPTION
+    }), (null == l ? void 0 : l.isStaff()) ? (0, a.jsxs)("div", {
+      className: p.tools,
       children: [(0, a.jsx)(u.Text, {
-        className: R.toolsTitle,
+        className: p.toolsTitle,
         variant: "text-md/bold",
         children: "DEV TOOLS"
       }), (0, a.jsx)(u.Text, {
-        className: R.toolsTitle,
+        className: p.toolsTitle,
         variant: "text-sm/normal",
         color: "text-danger",
         children: "These tools are only shown to staff users."
@@ -137,8 +137,8 @@ function M() {
   }))
 }
 
-function x(e) {
-  var t, s, n, l, r;
+function D(e) {
+  var t, s, n, i, r;
   let {
     session: o,
     current: d,
@@ -154,7 +154,7 @@ function x(e) {
       case void 0:
       case "":
         return {
-          text: p.default.Messages.AUTH_SESSIONS_OS_UNKNOWN, icon: C.default
+          text: R.default.Messages.AUTH_SESSIONS_OS_UNKNOWN, icon: A.default
         };
       case "ios":
       case "android":
@@ -163,23 +163,23 @@ function x(e) {
         };
       default:
         return {
-          text: e, icon: C.default
+          text: e, icon: A.default
         }
     }
-  }(null === (l = o.client_info) || void 0 === l ? void 0 : l.os), h = d ? null : (0, T.formatDate)(o.approx_last_used_time), M = [g, N].filter(A.isNotNullish), x = [I, h].filter(A.isNotNullish), D = (0, u.useRedesignIconContext)().enabled ? 24 : 32;
+  }(null === (i = o.client_info) || void 0 === i ? void 0 : i.os), h = d ? null : (0, T.formatDate)(o.approx_last_used_time), M = [g, N].filter(C.isNotNullish), D = [I, h].filter(C.isNotNullish), x = (0, u.useRedesignIconContext)().enabled ? 24 : 32;
   return (0, a.jsxs)("div", {
-    className: i()(R.session, d ? R.currentSession : null),
+    className: l()(p.session, d ? p.currentSession : null),
     children: [(0, a.jsx)("div", {
-      className: R.sessionIcon,
+      className: p.sessionIcon,
       children: (0, a.jsx)(O, {
-        width: D,
-        height: D
+        width: x,
+        height: x
       })
     }), (0, a.jsxs)("div", {
-      className: R.sessionInfo,
+      className: p.sessionInfo,
       children: [(0, a.jsxs)(u.Text, {
         variant: "eyebrow",
-        className: R.sessionInfoRow,
+        className: p.sessionInfoRow,
         children: [(0, a.jsx)("span", {
           children: M[0]
         }), M.length > 1 && (0, a.jsxs)(a.Fragment, {
@@ -191,19 +191,19 @@ function x(e) {
         })]
       }), (0, a.jsxs)(u.Text, {
         variant: "text-sm/medium",
-        className: R.sessionInfoRow,
+        className: p.sessionInfoRow,
         children: [(0, a.jsx)("span", {
-          children: x[0]
-        }), x.length > 1 && (0, a.jsxs)(a.Fragment, {
+          children: D[0]
+        }), D.length > 1 && (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)("span", {
             children: "\xb7"
           }), (0, a.jsx)("span", {
-            children: x[1]
+            children: D[1]
           })]
         })]
       })]
     }), d ? null : _ ? (0, a.jsx)("div", {
-      className: R.sessionCheckbox,
+      className: p.sessionCheckbox,
       children: (0, a.jsx)(u.Checkbox, {
         onChange: (e, t) => {
           null == c || c(t)
@@ -211,40 +211,40 @@ function x(e) {
         value: S
       })
     }) : (0, a.jsx)(u.Clickable, {
-      className: R.sessionMoreButton,
+      className: p.sessionMoreButton,
       onClick: e => {
         e.shiftKey ? null == c || c(!0) : (0, E.logOutSessions)(o.id_hash)
       },
-      "aria-label": p.default.Messages.AUTH_SESSIONS_SESSION_LOG_OUT,
+      "aria-label": R.default.Messages.AUTH_SESSIONS_SESSION_LOG_OUT,
       children: (0, a.jsx)(f.default, {})
     })]
   }, o.id_hash)
 }
 
-function D() {
+function x() {
   return (0, a.jsxs)("div", {
-    className: i()(R.session, R.legacySession),
+    className: l()(p.session, p.legacySession),
     children: [(0, a.jsx)("div", {
-      className: R.sessionIcon,
+      className: p.sessionIcon,
       children: (0, a.jsx)(g.default, {
         width: "32",
         height: "32"
       })
     }), (0, a.jsxs)("div", {
-      className: R.sessionInfo,
+      className: p.sessionInfo,
       children: [(0, a.jsx)(u.Text, {
         variant: "eyebrow",
-        className: R.sessionInfoRow,
+        className: p.sessionInfoRow,
         color: "text-muted",
         children: (0, a.jsx)("span", {
-          children: p.default.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY
+          children: R.default.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY
         })
       }), (0, a.jsx)(u.Text, {
         variant: "text-sm/medium",
-        className: R.sessionInfoRow,
+        className: p.sessionInfoRow,
         color: "text-muted",
         children: (0, a.jsx)("span", {
-          children: p.default.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY_LOG_OUT.format({
+          children: R.default.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY_LOG_OUT.format({
             onClick: () => c.default.setSection(O.UserSettingsSections.ACCOUNT)
           })
         })

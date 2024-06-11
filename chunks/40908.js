@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("47120");
 var a = s("470079"),
   n = s("304445"),
-  l = s("997383");
-let i = [];
+  i = s("997383");
+let l = [];
 
 function r(e) {
   let {
@@ -15,13 +15,13 @@ function r(e) {
     autocompleterResultTypes: s,
     autocompleterOptions: r,
     autocompleterBeforeCreateSearchContext: o
-  } = e, [d, u] = a.useState(""), [c, S] = a.useState(i), E = a.useCallback((e, t) => {
-    "" === (t = t.trim()).trim() ? S(i) : S(e)
+  } = e, [d, u] = a.useState(""), [c, S] = a.useState(l), E = a.useCallback((e, t) => {
+    "" === (t = t.trim()).trim() ? S(l) : S(e)
   }, []);
   a.useEffect(() => n.default.addRouteChangeListener(() => {
     u("")
   }), []);
-  let [T] = a.useState(() => new l.default(E, s, void 0, r));
+  let [T] = a.useState(() => new i.default(E, s, void 0, r));
   return a.useEffect(() => {
     t ? (null == o || o(T), T.createSearchContext()) : (T.clean(), u(""))
   }, [t, T, o]), {

@@ -30,8 +30,8 @@ var a, l, s = n("735250"),
   v = n("757454"),
   N = n("158631"),
   M = n("709369"),
-  R = n("552740"),
-  y = n("358221"),
+  y = n("552740"),
+  R = n("358221"),
   L = n("887012"),
   j = n("659580"),
   O = n("793865"),
@@ -101,14 +101,14 @@ function ex(e) {
   } = (0, W.usePerksDemo)(f.EntitlementFeatureNames.STREAM_HIGH_QUALITY), g = null != d && c && p, _ = i.useRef(null), T = t.getGuildId(), I = i.useCallback(() => {
     if (null == a || a(), !l) return (0, eC.default)();
     (0, eg.default)(T, t.id, e_.AnalyticsPages.GUILD_CHANNEL)
-  }, [T, t.id, l, a]), A = (0, h.useStateFromStores)([U.default, er.default], () => (0, k.default)(U.default, er.default)), M = (0, N.default)(), y = (0, v.default)() && null != A, L = () => {
-    y && (null == d ? (0, C.createBroadcastChannelOrStartStream)({
+  }, [T, t.id, l, a]), A = (0, h.useStateFromStores)([U.default, er.default], () => (0, k.default)(U.default, er.default)), M = (0, N.default)(), R = (0, v.default)() && null != A, L = () => {
+    R && (null == d ? (0, C.createBroadcastChannelOrStartStream)({
       channelId: t.id,
       pid: null == A ? void 0 : A.pid
     }) : (0, x.startBroadcastForStream)((0, F.encodeStreamKey)(d), null == A ? void 0 : A.pid))
   }, j = () => {
-    if (y) {
-      (0, R.openStartBroadcastConfirmModal)(L);
+    if (R) {
+      (0, y.openStartBroadcastConfirmModal)(L);
       return
     }
     if (l) {
@@ -117,7 +117,7 @@ function ex(e) {
     }(0, eC.default)()
   }, O = () => {
     if (M) {
-      (0, R.openStopBroadcastConfirmModal)(() => (0, H.default)(d));
+      (0, y.openStopBroadcastConfirmModal)(() => (0, H.default)(d));
       return
     }(0, H.default)(d)
   }, P = (e, t) => {
@@ -204,7 +204,7 @@ let eN = i.memo(function(e) {
     currentUser: n,
     onDisconnectCall: a,
     channel: l
-  } = e, r = (0, h.useStateFromStores)([y.default], () => y.default.getSelectedParticipant(l.id)), {
+  } = e, r = (0, h.useStateFromStores)([R.default], () => R.default.getSelectedParticipant(l.id)), {
     reducedMotion: o
   } = i.useContext(m.AccessibilityPreferencesContext), [u, d] = i.useState(!1), f = null == r ? void 0 : r.id, p = (0, h.useStateFromStores)([en.default], () => null != f ? en.default.getActiveStreamForStreamKey(f) : null, [f]), g = (null == r ? void 0 : r.type) === eT.ParticipantTypes.STREAM && null != p && p.ownerId !== (null == n ? void 0 : n.id), S = (0, h.useStateFromStoresArray)([en.default], () => en.default.getAllActiveStreamsForChannel(l.id).filter(e => {
     let {
@@ -233,7 +233,7 @@ let eN = i.memo(function(e) {
   i.useEffect(() => {
     I() !== A && d(!0)
   }, [A, I]);
-  let R = i.useCallback(() => {
+  let y = i.useCallback(() => {
       if (null != p)(0, C.stopStream)((0, F.encodeStreamKey)(p));
       else
         for (let e of S)(0, C.stopStream)((0, F.encodeStreamKey)(e))
@@ -260,7 +260,7 @@ let eN = i.memo(function(e) {
             hasPermission: !0,
             streamActive: !0,
             color: "red",
-            onClick: R,
+            onClick: y,
             onPopoutClick: S.length > 1 ? t : null,
             isSelfStream: !1
           });
@@ -385,8 +385,8 @@ t.default = function(e) {
     let e = _.default.getSelfEmbeddedActivityForChannel(t.id);
     return null != e ? e.applicationId : null
   }), {
-    reachedLimit: R,
-    limit: y
+    reachedLimit: y,
+    limit: R
   } = (0, ed.default)(t), {
     analyticsLocations: U
   } = (0, A.default)(I.default.VOICE_CONTROL_TRAY);
@@ -443,8 +443,8 @@ t.default = function(e) {
               cameraUnavailable: r,
               onChange: eA,
               onCameraUnavailable: eE.default,
-              channelLimitReached: R,
-              channelLimit: y,
+              channelLimitReached: y,
+              channelLimit: R,
               popoutOpen: a,
               onPopoutClick: n
             })

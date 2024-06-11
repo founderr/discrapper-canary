@@ -32,8 +32,8 @@ var a = n("735250"),
   v = n("167580"),
   N = n("368666"),
   M = n("685203"),
-  R = n("112560"),
-  y = n("442168"),
+  y = n("112560"),
+  R = n("442168"),
   L = n("822296"),
   j = n("916771"),
   O = n("792517"),
@@ -129,9 +129,9 @@ function V(e) {
       videoSpinnerContext: Q ? c.VideoSpinnerContext.SELF_STREAM : c.VideoSpinnerContext.REMOTE_STREAM,
       userId: z.id
     }, K), null != ee ? (0, a.jsx)(g.default, {
-      size: (0, R.getSizeForWidth)(D),
+      size: (0, y.getSizeForWidth)(D),
       ...ee
-    }) : null, (0, a.jsx)(y.default, {
+    }) : null, (0, a.jsx)(R.default, {
       stream: Y,
       inPopout: N
     })]

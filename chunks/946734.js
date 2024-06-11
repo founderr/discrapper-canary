@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return R
   }
 }), n("47120");
 var a = n("735250"),
@@ -37,7 +37,7 @@ function M(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class R {
+class y {
   updateData(e) {
     let {
       userId: t,
@@ -106,7 +106,7 @@ class R {
   }
 }
 
-function y(e) {
+function R(e) {
   let {
     channel: t
   } = e, n = t.getRecipientId(), s = (0, c.useAvatarsWithGuilds)(n), i = Array(s.length).fill(null), {
@@ -116,7 +116,7 @@ function y(e) {
       userId: t,
       channelId: n,
       analyticsLocations: a
-    } = e, s = (0, r.useStateFromStores)([p.default], () => p.default.getUser(t), [t]), [i] = l.useState(() => new R({
+    } = e, s = (0, r.useStateFromStores)([p.default], () => p.default.getUser(t), [t]), [i] = l.useState(() => new y({
       user: s,
       userId: t,
       channelId: n,

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   shouldShowRegisteredGamesSettings: function() {
-    return i
+    return l
   },
   useShouldShowOverlaySettings: function() {
     return r
@@ -9,10 +9,10 @@ s.r(t), s.d(t, {
 });
 var a = s("442837"),
   n = s("808506"),
-  l = s("358085");
+  i = s("358085");
 
-function i() {
-  return l.isPlatformEmbedded
+function l() {
+  return i.isPlatformEmbedded
 }
 
 function r() {

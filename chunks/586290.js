@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return C
+    return g
   }
 }), l("724458"), l("47120");
 var a = l("735250"),
@@ -19,9 +19,9 @@ var a = l("735250"),
   E = l("689938"),
   _ = l("378873"),
   h = l("555066"),
-  N = l("611273");
+  C = l("611273");
 
-function C(e) {
+function g(e) {
   let {
     selectedSource: t,
     onChangeVideoDeviceSource: l,
@@ -29,21 +29,21 @@ function C(e) {
   } = e;
   i()(null != t, "Camera capture device cannot be null");
   let r = (0, S.default)(),
-    C = (0, d.useStateFromStores)([f.default], () => f.default.getInputDevices()),
-    [g, p] = n.useState(function(e, t, l) {
+    g = (0, d.useStateFromStores)([f.default], () => f.default.getInputDevices()),
+    [N, I] = n.useState(function(e, t, l) {
       if (null != t && null != l) {
         let a = t.find(t => t.id === e);
         if (null == a) return;
         let n = u().reduce(l, (e, t) => (0, o.stringSimilarity)(a.name, t.name) > (0, o.stringSimilarity)(a.name, e.name) ? t : e);
         if (null != n) return n.id
       }
-    }(t.id, r, C));
-  return null != g && s(g), (0, a.jsx)(n.Fragment, {
+    }(t.id, r, g));
+  return null != N && s(N), (0, a.jsx)(n.Fragment, {
     children: (0, a.jsxs)(c.FormItem, {
       title: "Capture Device",
       className: h.modalContent,
       children: [(0, a.jsx)(c.FormItem, {
-        className: N.marginTop8,
+        className: C.marginTop8,
         children: (0, a.jsxs)(m.default, {
           children: [(0, a.jsx)("span", {
             className: _.ellipsisText,
@@ -57,15 +57,15 @@ function C(e) {
           })]
         })
       }), (0, a.jsx)(c.FormItem, {
-        className: N.marginTop8,
+        className: C.marginTop8,
         title: E.default.Messages.GO_LIVE_FORM_LABEL_AUDIO_DEVICE,
         children: (0, a.jsx)(c.SingleSelect, {
-          value: g,
-          className: N.__invalid_marginaTop8,
+          value: N,
+          className: C.__invalid_marginaTop8,
           onChange: e => {
-            p(e), s(e)
+            I(e), s(e)
           },
-          options: u().map(C, e => {
+          options: u().map(g, e => {
             let {
               id: t,
               name: l

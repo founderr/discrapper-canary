@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return M
   },
   default: function() {
-    return y
+    return R
   }
 }), n("47120");
 var a = n("735250"),
@@ -79,7 +79,7 @@ function M(e) {
   })
 }
 
-function R(e) {
+function y(e) {
   let {
     otherAccessories: t,
     isEmojiPickerExpanded: n,
@@ -101,7 +101,7 @@ function R(e) {
   })
 }
 
-function y(e) {
+function R(e) {
   let {
     channel: t,
     title: n,
@@ -113,7 +113,7 @@ function y(e) {
     emojiSearchProps: E,
     recentlyUsedEmojis: g,
     analyticsOverride: _
-  } = e, y = (0, C.useUID)(), [L, j] = l.useState(!1), O = (0, f.useFrequentlyUsedEmojis)(t.guild_id), P = (0, r.uniqBy)([...O, ...N], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
+  } = e, R = (0, C.useUID)(), [L, j] = l.useState(!1), O = (0, f.useFrequentlyUsedEmojis)(t.guild_id), P = (0, r.uniqBy)([...O, ...N], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: t,
     intention: v
@@ -131,12 +131,12 @@ function y(e) {
       D(!t), t && p.EmojiPickerStore.setSearchPlaceholder(null)
     };
   return (0, a.jsxs)(u.Dialog, {
-    "aria-labelledby": y,
+    "aria-labelledby": R,
     children: [(0, a.jsx)(u.HeadingLevel, {
       forceLevel: 2,
       children: (0, a.jsx)(u.HiddenVisually, {
         children: (0, a.jsx)(u.H, {
-          id: y,
+          id: R,
           children: n
         })
       })
@@ -158,7 +158,7 @@ function y(e) {
         pickerIntention: v,
         searchProps: {
           ...E,
-          accessory: (0, a.jsx)(R, {
+          accessory: (0, a.jsx)(y, {
             otherAccessories: null == E ? void 0 : E.accessory,
             isEmojiPickerExpanded: L,
             onSetExpanded: D,

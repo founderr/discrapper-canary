@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("735250");
 s("470079");
 var n = s("481060"),
-  l = s("299379"),
-  i = s("662435"),
+  i = s("299379"),
+  l = s("662435"),
   r = s("464198"),
   o = s("447293"),
   d = s("985806"),
@@ -29,7 +29,7 @@ function T() {
       tabIndex: -1,
       rel: "author",
       title: "Twitter",
-      href: (0, l.default)(c.LocalizedLinks.TWITTER),
+      href: (0, i.default)(c.LocalizedLinks.TWITTER),
       className: S.link,
       focusProps: E,
       children: (0, a.jsx)(d.default, {
@@ -60,7 +60,7 @@ function T() {
       href: c.SOCIAL_LINKS.FACEBOOK_URL,
       className: S.link,
       focusProps: E,
-      children: (0, a.jsx)(i.default, {
+      children: (0, a.jsx)(l.default, {
         width: 16,
         height: 16,
         foreground: S.foreground,

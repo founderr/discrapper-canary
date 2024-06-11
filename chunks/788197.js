@@ -59,7 +59,7 @@ function V(e) {
     newAnalyticsLocations: z = []
   } = e, {
     analyticsLocations: Z
-  } = (0, I.default)([...z, E.default.PROFILE_POPOUT]), X = r.useRef(null), Q = (0, g.default)(t.id, n), q = (0, l.default)(X), J = (0, s.useStateFromStores)([C.default], () => {
+  } = (0, I.default)([...z, E.default.PROFILE_POPOUT]), Q = r.useRef(null), X = (0, g.default)(t.id, n), q = (0, l.default)(Q), J = (0, s.useStateFromStores)([C.default], () => {
     var e;
     return null === (e = C.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
   }), $ = (0, s.useStateFromStores)([A.default], () => null != n ? A.default.getGuild(n) : null), ee = (0, s.useStateFromStores)([h.default], () => null != n ? h.default.getMember(n, t.id) : null), et = t.isNonUserBot(), {
@@ -101,8 +101,8 @@ function V(e) {
   (0, u.default)(() => eE(!0), e_.shouldShow ? 250 : null);
   let eI = (0, f.useGetOrFetchApplication)(null == en ? void 0 : en.application_id);
   return r.useEffect(() => {
-    null == j || j(null == X ? void 0 : X.current)
-  }, [X, j]), r.useEffect(() => {
+    null == j || j(null == Q ? void 0 : Q.current)
+  }, [Q, j]), r.useEffect(() => {
     if (!eo)((null == en ? void 0 : en.application_id) == null || null != eI) && (null == n || (null == ee ? void 0 : ee.fullProfileLoadedTimestamp) != null) && (function() {
       var e;
       let i, r, s;
@@ -112,8 +112,8 @@ function V(e) {
       let o = null != ee ? {
           has_nickname: !!(null == ee ? void 0 : ee.nick),
           has_guild_member_avatar: !!(null == ee ? void 0 : ee.avatar),
-          has_guild_member_banner: !!(null == Q ? void 0 : Q.isUsingGuildMemberBanner()),
-          has_guild_member_bio: !!(null == Q ? void 0 : Q.isUsingGuildMemberBio())
+          has_guild_member_banner: !!(null == X ? void 0 : X.isUsingGuildMemberBanner()),
+          has_guild_member_bio: !!(null == X ? void 0 : X.isUsingGuildMemberBio())
         } : {},
         l = null != J ? {
           other_application_id: null == J ? void 0 : J.id,
@@ -137,10 +137,10 @@ function V(e) {
         is_streaming: ea,
         has_custom_status: null != ei,
         has_avatar_decoration: null != t.avatarDecoration,
-        has_profile_effect: (null == Q ? void 0 : Q.profileEffectId) != null,
-        profile_has_nitro_customization: null != Q && (null == Q ? void 0 : Q.hasPremiumCustomization()),
-        profile_has_theme_color_customized: null != Q && Q.hasThemeColors(),
-        profile_has_theme_animation: (null == Q ? void 0 : Q.popoutAnimationParticleType) != null,
+        has_profile_effect: (null == X ? void 0 : X.profileEffectId) != null,
+        profile_has_nitro_customization: null != X && (null == X ? void 0 : X.hasPremiumCustomization()),
+        profile_has_theme_color_customized: null != X && X.hasThemeColors(),
+        profile_has_theme_animation: (null == X ? void 0 : X.popoutAnimationParticleType) != null,
         ...o,
         ...l,
         ...K
@@ -159,7 +159,7 @@ function V(e) {
       children: (0, i.jsx)(o.default, {
         section: G.AnalyticsSections.PROFILE_POPOUT,
         children: (0, i.jsx)(a.Dialog, {
-          ref: X,
+          ref: Q,
           "aria-label": t.username,
           onClick: B,
           onContextMenu: B,
@@ -168,13 +168,13 @@ function V(e) {
           } : void 0,
           children: (0, i.jsxs)(v.default, {
             user: t,
-            displayProfile: Q,
+            displayProfile: X,
             profileType: b.UserProfileTypes.POPOUT,
             className: e_.shouldShow ? k.hasCollectiblesUpsell : void 0,
             showOutOfBoundaryComponents: ec,
             children: [(0, i.jsx)(P.default, {
               user: t,
-              displayProfile: Q,
+              displayProfile: X,
               guildId: n,
               channelId: V,
               onClose: () => null == Y ? void 0 : Y(),
@@ -186,7 +186,7 @@ function V(e) {
               upsell: e_.shouldShow ? (0, i.jsx)(M.default, {
                 user: t,
                 upsellSource: y.UserPopoutUpsellSource.USER_POPOUT,
-                displayProfile: Q,
+                displayProfile: X,
                 onClose: Y,
                 ...e_
               }) : void 0
@@ -196,7 +196,7 @@ function V(e) {
               }), (0, i.jsx)(D.default, {
                 activity: en,
                 customStatusActivity: ei,
-                displayProfile: Q,
+                displayProfile: X,
                 user: t,
                 guild: $,
                 guildMember: ee,

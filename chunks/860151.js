@@ -4,8 +4,8 @@ var i = n("735250");
 n("470079");
 var a = n("120356"),
   s = n.n(a),
-  l = n("481060"),
-  r = n("918701"),
+  r = n("481060"),
+  l = n("918701"),
   u = n("644646"),
   o = n("456030");
 t.default = function(e) {
@@ -15,7 +15,7 @@ t.default = function(e) {
     quest: a,
     questContent: d,
     questExperimentLocation: c
-  } = e, f = (0, r.getQuestsInstructionsToWinReward)({
+  } = e, f = (0, l.getQuestsInstructionsToWinReward)({
     quest: a,
     location: c
   });
@@ -29,7 +29,7 @@ t.default = function(e) {
       className: o.rewardTile,
       quest: a,
       questContent: d
-    }), (0, i.jsx)(l.Text, {
+    }), (0, i.jsx)(r.Text, {
       className: o.instructions,
       variant: "text-sm/normal",
       color: "text-normal",

@@ -29,8 +29,8 @@ t.default = e => {
   } = e, {
     currentCategoryId: N,
     directoryEntries: M,
-    categoryCounts: R,
-    allEntriesCount: y,
+    categoryCounts: y,
+    allEntriesCount: R,
     isLoading: L
   } = (0, s.useStateFromStoresObject)([p.default], () => {
     let e = p.default.getCurrentCategoryId(x.id),
@@ -141,8 +141,8 @@ t.default = e => {
       h.selectDirectoryCategory(x.id, e)
     },
     directoryEntries: j,
-    categoryCounts: R,
-    allEntriesCount: y,
+    categoryCounts: y,
+    allEntriesCount: R,
     isLoading: L
   })
 }

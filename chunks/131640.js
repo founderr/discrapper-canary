@@ -100,8 +100,8 @@ function V(e) {
     roleId: K
   } = (0, p.useUserProfileAnalyticsContext)(), z = S || t.isClyde(), {
     avatarDecorationSrc: Z,
-    avatarSrc: X,
-    eventHandlers: Q
+    avatarSrc: Q,
+    eventHandlers: X
   } = (0, C.default)({
     user: t,
     guildId: E,
@@ -109,9 +109,9 @@ function V(e) {
     animateOnHover: O
   }), q = (0, i.jsx)("div", {
     className: b.avatarHoverTarget,
-    ...Q,
+    ...X,
     children: (0, i.jsx)(B, {
-      src: null != s ? s : X,
+      src: null != s ? s : Q,
       avatarDecoration: Z,
       size: G,
       "aria-label": t.username,

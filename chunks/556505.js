@@ -1,41 +1,41 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return s
+    return d
   }
-}), l("47120");
-var i = l("735250"),
-  n = l("470079"),
-  a = l("481060"),
-  u = l("911969"),
-  d = l("26290"),
-  r = l("689938"),
-  o = l("530438");
+}), n("47120");
+var a = n("735250"),
+  l = n("470079"),
+  s = n("481060"),
+  i = n("911969"),
+  r = n("26290"),
+  o = n("689938"),
+  u = n("530438");
 
-function s(e) {
+function d(e) {
   let {
     name: t,
-    labelType: l,
-    collapsed: s = !1,
+    labelType: n,
+    collapsed: d = !1,
     showTooltip: c = !1
-  } = e, f = l === u.EmbeddedActivityLabelTypes.NEW ? r.default.Messages.NEW : r.default.Messages.UPDATED, p = l === u.EmbeddedActivityLabelTypes.NEW ? o.activityNewBadge : o.activityUpdatedBadge, [v, E] = n.useState(s ? "" : f);
-  if (n.useEffect(() => {
-      s ? E("") : l === u.EmbeddedActivityLabelTypes.NEW ? E(r.default.Messages.NEW) : l === u.EmbeddedActivityLabelTypes.UPDATED && E(r.default.Messages.UPDATED)
-    }, [s, l]), l === u.EmbeddedActivityLabelTypes.NONE) return null;
-  let A = (0, i.jsx)(d.TextBadge, {
-    className: p,
+  } = e, f = n === i.EmbeddedActivityLabelTypes.NEW ? o.default.Messages.NEW : o.default.Messages.UPDATED, h = n === i.EmbeddedActivityLabelTypes.NEW ? u.activityNewBadge : u.activityUpdatedBadge, [m, p] = l.useState(d ? "" : f);
+  if (l.useEffect(() => {
+      d ? p("") : n === i.EmbeddedActivityLabelTypes.NEW ? p(o.default.Messages.NEW) : n === i.EmbeddedActivityLabelTypes.UPDATED && p(o.default.Messages.UPDATED)
+    }, [d, n]), n === i.EmbeddedActivityLabelTypes.NONE) return null;
+  let E = (0, a.jsx)(r.TextBadge, {
+    className: h,
     disableColor: !0,
-    text: (0, i.jsx)("span", {
-      children: v
+    text: (0, a.jsx)("span", {
+      children: m
     })
   });
-  if (!c) return A;
-  let m = r.default.Messages.EMBEDDED_ACTIVITIES_FREE_PREVIEW_TOOLTIP.format({
+  if (!c) return E;
+  let C = o.default.Messages.EMBEDDED_ACTIVITIES_FREE_PREVIEW_TOOLTIP.format({
     activity: t
   });
-  return (0, i.jsx)(a.TooltipContainer, {
-    text: m,
-    tooltipContentClassName: o.tooltip,
-    children: A
+  return (0, a.jsx)(s.TooltipContainer, {
+    text: C,
+    tooltipContentClassName: u.tooltip,
+    children: E
   })
 }

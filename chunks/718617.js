@@ -40,9 +40,9 @@ function S(e) {
     className: A
   } = e, x = (0, i.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(_), [_]), v = null !== (t = null == x ? void 0 : x.details.modViewPanel) && void 0 !== t ? t : E.ModViewPanel.INFO, N = (0, o.default)(S);
   let M = null == (n = v) ? null : n === E.ModViewPanel.INFO ? "backwards" : "forwards",
-    R = (0, c.default)(M),
+    y = (0, c.default)(M),
     {
-      reducedMotion: y
+      reducedMotion: R
     } = l.useContext(r.AccessibilityPreferencesContext),
     L = l.useCallback(e => {
       null != x && (0, f.openGuildMemberModViewSidebar)(_, S, x.baseChannelId, {
@@ -93,11 +93,11 @@ function S(e) {
           backfaceVisibility: "hidden",
           width: "100%",
           height: "100%",
-          ...y.enabled ? {
+          ...R.enabled ? {
             opacity: null === (l = e.value) || void 0 === l ? void 0 : l.to(e => 1 - Math.abs(e))
           } : {
-            left: null === (i = e.value) || void 0 === i ? void 0 : i.to(g("left", R)),
-            right: null === (r = e.value) || void 0 === r ? void 0 : r.to(g("right", R))
+            left: null === (i = e.value) || void 0 === i ? void 0 : i.to(g("left", y)),
+            right: null === (r = e.value) || void 0 === r ? void 0 : r.to(g("right", y))
           }
         },
         children: function(e) {

@@ -8,8 +8,8 @@ var i = n("735250");
 n("470079");
 var a = n("481060"),
   s = n("765400"),
-  l = n("86813"),
-  r = n("826026"),
+  r = n("86813"),
+  l = n("826026"),
   u = n("937615"),
   o = n("817460"),
   d = n("290348"),
@@ -47,9 +47,9 @@ let T = e => {
       })]
     }), (0, i.jsx)(a.Clickable, {
       onClick: I,
-      children: T ? (0, i.jsx)(r.default, {
+      children: T ? (0, i.jsx)(l.default, {
         className: _.toggleButton
-      }) : (0, i.jsx)(l.default, {
+      }) : (0, i.jsx)(r.default, {
         className: _.toggleButton
       })
     })]

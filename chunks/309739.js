@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("735250");
 s("470079");
 var n = s("481060"),
-  l = s("770471"),
-  i = s("787740"),
+  i = s("770471"),
+  l = s("787740"),
   r = s("134598"),
   o = s("921801"),
   d = s("430824"),
@@ -26,7 +26,7 @@ function f() {
   let e = E.ShowCurrentGame.useSetting(),
     t = E.DefaultGuildsActivityRestricted.useSetting(),
     s = c.isPlatformEmbedded ? I.default.Messages.SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED : I.default.Messages.SHOW_CURRENT_ACTIVITY_DESC,
-    l = e => {
+    i = e => {
       E.DefaultGuildsActivityRestricted.updateSetting(e), ! function(e) {
         let t = () => {
           E.ActivityRestrictedGuilds.updateSetting(e ? S.default.keys(d.default.getGuilds()) : [])
@@ -63,7 +63,7 @@ function f() {
         note: I.default.Messages.ACTIVITY_RESTRICTION_DEFAULT_NOTE.format({
           helpdeskArticle: u.default.getArticleURL(_.HelpdeskArticles.ACTIVITY_STATUS_SETTINGS)
         }),
-        onChange: e => l(!e),
+        onChange: e => i(!e),
         children: I.default.Messages.ACTIVITY_RESTRICTION_DEFAULT
       })]
     })
@@ -96,13 +96,13 @@ function m() {
   })
 }
 
-function C() {
+function A() {
   return (0, a.jsxs)(n.FormSection, {
     className: g.marginBottom40,
     children: [(0, a.jsxs)(n.FormTitle, {
       tag: n.FormTitleTags.H5,
       className: g.marginBottom8,
-      children: [I.default.Messages.BROADCASTING_SETTINGS, (0, a.jsx)(i.default, {
+      children: [I.default.Messages.BROADCASTING_SETTINGS, (0, a.jsx)(l.default, {
         className: N.betaTag
       })]
     }), (0, a.jsx)(n.FormText, {
@@ -119,7 +119,7 @@ function C() {
   })
 }
 
-function A() {
+function C() {
   return (0, a.jsx)(n.FormSection, {
     className: g.marginBottom40,
     children: (0, a.jsx)(n.FormNotice, {
@@ -137,8 +137,8 @@ function O(e) {
     className: t,
     showHeader: s = !0
   } = e, {
-    canBroadcast: i
-  } = l.default.useExperiment({
+    canBroadcast: l
+  } = i.default.useExperiment({
     location: "user_settings_activity_privacy"
   }, {
     autoTrackExposure: !0
@@ -147,6 +147,6 @@ function O(e) {
     className: t,
     tag: n.FormTitleTags.H1,
     title: s ? I.default.Messages.ACTIVITY_PRIVACY : null,
-    children: [(0, a.jsx)(f, {}), (0, a.jsx)(m, {}), i && (0, a.jsx)(C, {}), (0, a.jsx)(A, {})]
+    children: [(0, a.jsx)(f, {}), (0, a.jsx)(m, {}), l && (0, a.jsx)(A, {}), (0, a.jsx)(C, {})]
   })
 }

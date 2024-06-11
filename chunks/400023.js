@@ -25,8 +25,8 @@ var a = n("735250"),
   v = n("594174"),
   N = n("68588"),
   M = n("459273"),
-  R = n("255269"),
-  y = n("47481"),
+  y = n("255269"),
+  R = n("47481"),
   L = n("977391"),
   j = n("73274"),
   O = n("419388"),
@@ -51,8 +51,8 @@ let F = l.memo(function(e) {
     editingMessageId: x,
     fontSize: v,
     keyboardModeEnabled: N,
-    filterAfterTimestamp: R,
-    showingQuarantineBanner: y,
+    filterAfterTimestamp: y,
+    showingQuarantineBanner: R,
     hideSummaries: F = !1
   } = e, [w, k] = l.useState(!1), H = l.useMemo(() => S ? (0, L.generateMessageSpecs)({
     compact: !0,
@@ -75,7 +75,7 @@ let F = l.memo(function(e) {
     hasUnreads: A,
     focusId: x,
     placeholderHeight: H.totalHeight,
-    canLoadMore: null == R,
+    canLoadMore: null == y,
     handleScrollToBottom: l.useCallback(() => k(!0), [k]),
     handleScrollFromBottom: l.useCallback(() => k(!1), [k])
   }), B = (0, j.default)({
@@ -102,8 +102,8 @@ let F = l.memo(function(e) {
       loadMore: G.loadMore,
       scrollManager: G,
       specs: H,
-      filterAfterTimestamp: null != R ? R : V,
-      showingQuarantineBanner: y,
+      filterAfterTimestamp: null != y ? y : V,
+      showingQuarantineBanner: R,
       hideSummaries: F,
       isAtBottom: w,
       jumpToPresent: () => {
@@ -181,7 +181,7 @@ let F = l.memo(function(e) {
             children: b.default.Messages.CHANNEL_MESSAGES_A11Y_DESCRIPTION
           }), W, (0, a.jsx)("div", {
             className: i()({
-              [U.scrollerSpacer]: !y,
+              [U.scrollerSpacer]: !R,
               [U.empty]: 0 === E.length && !E.loadingMore,
               [U.emptyForum]: 1 === E.length && !E.loadingMore && m.isForumPost() && (null === (t = E.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(m))
             })
@@ -277,7 +277,7 @@ t.default = l.memo(function(e) {
         return u && d && null !== (t = E.default.summaries(e.id)) && void 0 !== t ? t : []
       }, [u, e.id, d]),
       p = (0, o.useStateFromStores)([E.default], () => u ? E.default.selectedSummary(e.id) : null, [u, e.id]),
-      C = l.useMemo(() => (0, y.default)({
+      C = l.useMemo(() => (0, R.default)({
         channel: e,
         messages: a,
         oldestUnreadMessageId: s,
@@ -296,7 +296,7 @@ t.default = l.memo(function(e) {
     }
   }(t);
   return (0, a.jsx)(N.ObscuredDisplayContext.Provider, {
-    value: (0, R.default)(P, d),
+    value: (0, y.default)(P, d),
     children: (0, a.jsx)(F, {
       ...u,
       messageGroupSpacing: L,

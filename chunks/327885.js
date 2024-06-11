@@ -1,15 +1,15 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return x
+    return D
   }
 });
 var a = s("735250");
 s("470079");
 var n = s("512722"),
-  l = s.n(n),
-  i = s("392711"),
-  r = s.n(i),
+  i = s.n(n),
+  l = s("392711"),
+  r = s.n(l),
   o = s("442837"),
   d = s("481060"),
   u = s("660216"),
@@ -24,25 +24,25 @@ var n = s("512722"),
   f = s("739563"),
   m = s("626135");
 s("63063");
-var C = s("13140"),
-  A = s("981631"),
+var A = s("13140"),
+  C = s("981631"),
   O = s("689938"),
   h = s("867541");
-let p = R(null);
+let R = p(null);
 
-function R(e) {
+function p(e) {
   var t;
   let s = g.default.getNotificationPositionMode(),
-    a = s !== A.OverlayNotificationPositions.DISABLED,
+    a = s !== C.OverlayNotificationPositions.DISABLED,
     n = I.default.getOverlayKeybind(),
-    l = I.default.getOverlayChatKeybind();
+    i = I.default.getOverlayChatKeybind();
   return {
     enabled: N.default.enabled,
     notifications_enabled: a,
     notifications_position: a ? s : null,
     text_notifications_mode: g.default.getTextChatNotificationMode(),
-    hotkey: null != n ? (0, C.toString)(n.shortcut) : null,
-    text_activation_hotkey: null != l ? (0, C.toString)(l.shortcut) : null,
+    hotkey: null != n ? (0, A.toString)(n.shortcut) : null,
+    text_activation_hotkey: null != i ? (0, A.toString)(i.shortcut) : null,
     text_opacity_slider: g.default.getTextWidgetOpacity(),
     old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : N.default.enabled
   }
@@ -60,20 +60,20 @@ function M(e) {
   })
 }
 
-function x(e) {
+function D(e) {
   let {
     className: t,
     showHeader: s = !0
   } = e, {
     enabled: n,
-    legacyEnabled: i
+    legacyEnabled: l
   } = (0, o.useStateFromStoresObject)([N.default], () => ({
     enabled: N.default.enabled,
     legacyEnabled: N.default.legacyEnabled
   })), {
-    avatarSizeMode: C,
-    displayNameMode: x,
-    displayUserMode: D,
+    avatarSizeMode: A,
+    displayNameMode: D,
+    displayUserMode: x,
     notificationPositionMode: L,
     textChatNotificationMode: P,
     shouldShowKeybindIndicators: b
@@ -91,21 +91,21 @@ function x(e) {
   }), j = (0, E.isHookModuleTooOld)();
 
   function G(e) {
-    c.default.setEnabled(e, i), m.default.track(A.AnalyticEvents.OVERLAY_TOGGLED, {
+    c.default.setEnabled(e, l), m.default.track(C.AnalyticEvents.OVERLAY_TOGGLED, {
       enabled: e,
       setting_type: "overlay toggled - global"
     })
   }
 
   function F(e) {
-    c.default.setEnabled(n, e), m.default.track(A.AnalyticEvents.OVERLAY_TOGGLED, {
+    c.default.setEnabled(n, e), m.default.track(C.AnalyticEvents.OVERLAY_TOGGLED, {
       enabled: e,
       setting_type: "overlay toggled - legacy"
     })
   }
   return ! function() {
-    let e = R(p);
-    !r().isEqual(e, p) && (m.default.track(A.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, e), p = e)
+    let e = p(R);
+    !r().isEqual(e, R) && (m.default.track(C.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, e), R = e)
   }(), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(d.FormSection, {
       className: t,
@@ -124,7 +124,7 @@ function x(e) {
             children: O.default.Messages.ENABLE_INGAME_OVERLAY
           }), (0, a.jsx)(d.FormSwitch, {
             className: h.enableSwitch,
-            value: i,
+            value: l,
             disabled: j || !n,
             note: j ? O.default.Messages.OVERLAY_DISABLED_OLD_CLIENT : null,
             hideBorder: !0,
@@ -150,7 +150,7 @@ function x(e) {
             disabled: !n,
             defaultValue: null != v ? v.shortcut : [],
             onChange: function(e) {
-              l()(null != v, "Keybind should never be undefined"), u.default.setKeybind({
+              i()(null != v, "Keybind should never be undefined"), u.default.setKeybind({
                 ...v,
                 shortcut: e
               })
@@ -162,10 +162,10 @@ function x(e) {
         children: (0, a.jsx)(d.RadioGroup, {
           options: [{
             name: O.default.Messages.AVATAR_SIZE_OPTION_LARGE,
-            value: A.OverlayAvatarSizes.LARGE
+            value: C.OverlayAvatarSizes.LARGE
           }, {
             name: O.default.Messages.AVATAR_SIZE_OPTION_SMALL,
-            value: A.OverlayAvatarSizes.SMALL
+            value: C.OverlayAvatarSizes.SMALL
           }],
           onChange: e => {
             let {
@@ -173,20 +173,20 @@ function x(e) {
             } = e;
             return c.default.setAvatarSizeMode(t)
           },
-          value: C
+          value: A
         })
       }), (0, a.jsx)(M, {
         title: O.default.Messages.FORM_LABEL_DISPLAY_NAMES,
         children: (0, a.jsx)(d.RadioGroup, {
           options: [{
             name: O.default.Messages.DISPLAY_OPTION_ALWAYS,
-            value: A.OverlayDisplayNames.ALWAYS
+            value: C.OverlayDisplayNames.ALWAYS
           }, {
             name: O.default.Messages.DISPLAY_OPTION_ONLY_WHILE_SPEAKING,
-            value: A.OverlayDisplayNames.ONLY_WHILE_SPEAKING
+            value: C.OverlayDisplayNames.ONLY_WHILE_SPEAKING
           }, {
             name: O.default.Messages.DISPLAY_OPTION_NEVER,
-            value: A.OverlayDisplayNames.NEVER
+            value: C.OverlayDisplayNames.NEVER
           }],
           onChange: e => {
             let {
@@ -194,17 +194,17 @@ function x(e) {
             } = e;
             return c.default.setDisplayNameMode(t)
           },
-          value: x
+          value: D
         })
       }), (0, a.jsx)(M, {
         title: O.default.Messages.FORM_LABEL_DISPLAY_USERS,
         children: (0, a.jsx)(d.RadioGroup, {
           options: [{
             name: O.default.Messages.DISPLAY_OPTION_ALWAYS,
-            value: A.OverlayDisplayUsers.ALWAYS
+            value: C.OverlayDisplayUsers.ALWAYS
           }, {
             name: O.default.Messages.DISPLAY_OPTION_ONLY_WHILE_SPEAKING,
-            value: A.OverlayDisplayUsers.ONLY_WHILE_SPEAKING
+            value: C.OverlayDisplayUsers.ONLY_WHILE_SPEAKING
           }],
           onChange: e => {
             let {
@@ -212,7 +212,7 @@ function x(e) {
             } = e;
             return c.default.setDisplayUserMode(t)
           },
-          value: D
+          value: x
         })
       }), U && (0, a.jsx)(M, {
         children: (0, a.jsx)(d.FormSwitch, {
@@ -237,13 +237,13 @@ function x(e) {
         })
       }), (0, a.jsx)(M, {
         children: (0, a.jsx)(d.FormSwitch, {
-          value: L !== A.OverlayNotificationPositions.DISABLED && P === A.OverlayNotificationTextChatTypes.ENABLED,
-          disabled: L === A.OverlayNotificationPositions.DISABLED,
+          value: L !== C.OverlayNotificationPositions.DISABLED && P === C.OverlayNotificationTextChatTypes.ENABLED,
+          disabled: L === C.OverlayNotificationPositions.DISABLED,
           onChange: function() {
             let {
               ENABLED: e,
               DISABLED: t
-            } = A.OverlayNotificationTextChatTypes;
+            } = C.OverlayNotificationTextChatTypes;
             c.default.setTextChatNotificationMode(P === e ? t : e)
           },
           hideBorder: !0,

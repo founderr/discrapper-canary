@@ -19,8 +19,8 @@ var i = n("374470"),
   C = n("433355"),
   T = n("592125"),
   S = n("703558"),
-  I = n("323873"),
-  f = n("375954"),
+  f = n("323873"),
+  I = n("375954"),
   O = n("306680"),
   N = n("944486"),
   p = n("914010"),
@@ -58,7 +58,7 @@ let g = {
 
 function b(e) {
   if (null != e) {
-    if (I.default.isEditingAny(e)) return l.default.endEditMessage(e), !1;
+    if (f.default.isEditingAny(e)) return l.default.endEditMessage(e), !1;
     if (null != r.default.getPendingReply(e)) return (0, d.deletePendingReply)(e), !1;
     if (null != _.default.getStickerPreview(e, S.DraftType.ChannelMessage)) return (0, A.clearStickerPreview)(e, S.DraftType.ChannelMessage), !1
   }
@@ -67,5 +67,5 @@ function b(e) {
 function G(e) {
   if (null == e) return !1;
   let t = !1;
-  return f.default.getMessages(e).hasMoreAfter && (l.default.jumpToPresent(e, h.MAX_MESSAGES_PER_CHANNEL), t = !0), O.default.hasUnread(e) && ((0, a.ack)(e), t = !0), (0, a.localAck)(e), t
+  return I.default.getMessages(e).hasMoreAfter && (l.default.jumpToPresent(e, h.MAX_MESSAGES_PER_CHANNEL), t = !0), O.default.hasUnread(e) && ((0, a.ack)(e), t = !0), (0, a.localAck)(e), t
 }

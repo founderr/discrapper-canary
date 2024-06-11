@@ -2,8 +2,8 @@
 s.r(t), s("47120");
 var a = s("735250"),
   n = s("470079"),
-  l = s("882485"),
-  i = s("481060"),
+  i = s("882485"),
+  l = s("481060"),
   r = s("763610"),
   o = s("975266");
 t.default = function(e) {
@@ -15,14 +15,14 @@ t.default = function(e) {
     onFileChange: S,
     title: E
   } = e, [T, _] = n.useState(null), [I, N] = n.useState(!1);
-  return (0, a.jsxs)(i.FormItem, {
-    children: [(0, a.jsx)(i.FormTitle, {
-      tag: i.FormTitleTags.H5,
+  return (0, a.jsxs)(l.FormItem, {
+    children: [(0, a.jsx)(l.FormTitle, {
+      tag: l.FormTitleTags.H5,
       children: (0, a.jsxs)("div", {
         className: o.headingWithTooltip,
-        children: [E, (0, a.jsx)(i.Tooltip, {
+        children: [E, (0, a.jsx)(l.Tooltip, {
           text: "Supported asset formats: ".concat(u.join(", ")),
-          children: e => (0, a.jsx)(l.CircleInformationIcon, {
+          children: e => (0, a.jsx)(i.CircleInformationIcon, {
             ...e,
             height: 16,
             width: 16

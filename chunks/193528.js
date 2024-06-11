@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("47120");
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("153832"),
   o = s("866442"),
   d = s("692547"),
@@ -25,24 +25,24 @@ function f(e) {
   let {
     onChange: t,
     onClose: s,
-    color: l,
+    color: i,
     suggestedColors: f,
     disabled: m,
-    label: C,
-    colorPickerMiddle: A,
+    label: A,
+    colorPickerMiddle: C,
     colorPickerFooter: O,
     showEyeDropper: h
-  } = e, p = n.useRef(null), R = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), M = d.default.colors.BACKGROUND_ACCENT.css, x = (0, _.isColorDark)(l), D = (0, o.int2hex)(l), L = D === R ? M : D, P = (0, S.getColor)(x ? I.Color.WHITE_500 : I.Color.PRIMARY_530), b = (0, c.default)(A), v = (0, c.default)(O), [U, j] = n.useState((0, r.v4)());
+  } = e, R = n.useRef(null), p = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), M = d.default.colors.BACKGROUND_ACCENT.css, D = (0, _.isColorDark)(i), x = (0, o.int2hex)(i), L = x === p ? M : x, P = (0, S.getColor)(D ? I.Color.WHITE_500 : I.Color.PRIMARY_530), b = (0, c.default)(C), v = (0, c.default)(O), [U, j] = n.useState((0, r.v4)());
   return n.useEffect(() => {
-    (b !== A || v !== O) && j((0, r.v4)())
-  }, [O, A, v, b]), (0, a.jsx)(u.Popout, {
+    (b !== C || v !== O) && j((0, r.v4)())
+  }, [O, C, v, b]), (0, a.jsx)(u.Popout, {
     positionKey: U,
     renderPopout: e => (0, a.jsx)(E.CustomColorPicker, {
       ...e,
-      value: l,
+      value: i,
       onChange: t,
       suggestedColors: f,
-      middle: A,
+      middle: C,
       footer: O,
       showEyeDropper: h
     }),
@@ -53,8 +53,8 @@ function f(e) {
         ...s
       } = e;
       return (0, a.jsxs)("div", {
-        ref: p,
-        className: i()(g.colorSwatch, {
+        ref: R,
+        className: l()(g.colorSwatch, {
           [g.disabled]: m
         }),
         children: [(0, a.jsx)(u.Clickable, {
@@ -62,13 +62,13 @@ function f(e) {
           tabIndex: m ? -1 : 0,
           onClick: m ? I.NOOP : t,
           style: {
-            backgroundColor: D,
+            backgroundColor: x,
             borderColor: L
           },
           className: g.swatch,
           "aria-label": N.default.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
           focusProps: {
-            ringTarget: p
+            ringTarget: R
           },
           children: (0, a.jsx)(T.default, {
             className: g.editPencilIcon,
@@ -76,7 +76,7 @@ function f(e) {
             height: 14,
             color: P
           })
-        }), C]
+        }), A]
       })
     }
   })

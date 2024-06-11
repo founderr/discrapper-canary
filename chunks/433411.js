@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("481060"),
   o = s("906732"),
   d = s("864106"),
@@ -24,25 +24,25 @@ function g(e) {
   let {
     user: t,
     guild: s,
-    className: l,
+    className: i,
     sectionTitle: E,
     forcedDivider: g = !1,
     withTutorial: m = !1,
-    isTryItOutFlow: C = !1
+    isTryItOutFlow: A = !1
   } = e, {
-    analyticsLocations: A
+    analyticsLocations: C
   } = (0, o.default)(), O = null != s, {
     userAvatarDecoration: h,
-    guildAvatarDecoration: p,
-    pendingAvatarDecoration: R,
+    guildAvatarDecoration: R,
+    pendingAvatarDecoration: p,
     pendingErrors: M
-  } = (0, T.useGuildMemberAndUserPendingAvatarDecoration)(t, s), x = (0, c.default)("enable_avatar_decoration_uploads"), D = n.useCallback(() => (0, u.openAvatarDecorationModal)({
-    analyticsLocations: A,
-    isTryItOutFlow: C,
+  } = (0, T.useGuildMemberAndUserPendingAvatarDecoration)(t, s), D = (0, c.default)("enable_avatar_decoration_uploads"), x = n.useCallback(() => (0, u.openAvatarDecorationModal)({
+    analyticsLocations: C,
+    isTryItOutFlow: A,
     guild: s
-  }), [A, C, s]), L = C || void 0 !== R ? null != R : (O ? p : h) != null, P = m ? S.default : r.Button;
+  }), [C, A, s]), L = A || void 0 !== p ? null != p : (O ? R : h) != null, P = m ? S.default : r.Button;
   return (0, a.jsxs)(_.default, {
-    className: l,
+    className: i,
     forcedDivider: g,
     hasBackground: !0,
     title: E,
@@ -51,8 +51,8 @@ function g(e) {
       className: N.buttonsContainer,
       children: [(0, a.jsx)(P, {
         size: r.Button.Sizes.SMALL,
-        onClick: D,
-        className: i()({
+        onClick: x,
+        className: l()({
           [N.buttonHighlighted]: m
         }),
         children: I.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
@@ -66,7 +66,7 @@ function g(e) {
         },
         children: (0, d.hasGlobalDefaultAvatarDecoration)(t, s) ? I.default.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : I.default.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
       })]
-    }), t.isStaff() && x && (0, a.jsx)(f, {
+    }), t.isStaff() && D && (0, a.jsx)(f, {
       user: t
     })]
   })

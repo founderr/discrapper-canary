@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return x
+    return A
   }
 });
 var s = l("735250"),
@@ -19,29 +19,29 @@ var s = l("735250"),
   I = l("588822"),
   m = l("900927"),
   _ = l("652853"),
-  p = l("335191"),
-  v = l("988246"),
+  v = l("335191"),
+  p = l("988246"),
   T = l("689938"),
   g = l("921152");
 
-function x(e) {
+function A(e) {
   var t;
   let {
     user: l,
-    displayProfile: x,
-    autoFocusNote: A = !1,
-    scrollToConnections: C = !1
+    displayProfile: A,
+    autoFocusNote: x = !1,
+    scrollToConnections: N = !1
   } = e, {
-    trackUserProfileAction: N
+    trackUserProfileAction: C
   } = (0, S.useUserProfileAnalyticsContext)(), U = (0, a.useStateFromStores)([f.default], () => f.default.hidePersonalInformation), {
-    theme: R
-  } = (0, _.useUserProfileThemeContext)(), h = (0, a.useStateFromStores)([c.default], () => c.default.locale), P = (0, u.default)("user_profile"), M = (null == x ? void 0 : x.bio) != null && (null == x ? void 0 : x.bio) !== "" || (0, r.default)(l.id), y = (0, E.default)(l.id), j = i.useRef(null);
+    theme: h
+  } = (0, _.useUserProfileThemeContext)(), P = (0, a.useStateFromStores)([c.default], () => c.default.locale), R = (0, u.default)("user_profile"), M = (null == A ? void 0 : A.bio) != null && (null == A ? void 0 : A.bio) !== "" || (0, r.default)(l.id), j = (0, E.default)(l.id), y = i.useRef(null);
   return (i.useLayoutEffect(() => {
-    if (C) {
+    if (N) {
       var e;
-      null == j || null === (e = j.current) || void 0 === e || e.scrollIntoView()
+      null == y || null === (e = y.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [C]), U) ? (0, s.jsx)(v.default, {}) : (0, s.jsxs)(n.ScrollerThin, {
+  }, [N]), U) ? (0, s.jsx)(p.default, {}) : (0, s.jsxs)(n.ScrollerThin, {
     fade: !0,
     className: g.infoScroller,
     children: [(0, s.jsxs)("div", {
@@ -53,7 +53,7 @@ function x(e) {
           children: T.default.Messages.USER_PROFILE_ABOUT_ME
         }), (0, s.jsx)(I.default, {
           className: g.userInfoText,
-          userBio: null !== (t = null == x ? void 0 : x.bio) && void 0 !== t ? t : "",
+          userBio: null !== (t = null == A ? void 0 : A.bio) && void 0 !== t ? t : "",
           userId: l.id
         })]
       }), (0, s.jsxs)("div", {
@@ -65,7 +65,7 @@ function x(e) {
           userId: l.id,
           textClassName: g.userInfoText
         })]
-      }), P && (0, s.jsx)("div", {
+      }), R && (0, s.jsx)("div", {
         className: g.clans,
         children: (0, s.jsx)("div", {
           className: g.userInfoText,
@@ -80,18 +80,18 @@ function x(e) {
           children: T.default.Messages.NOTE
         }), (0, s.jsx)(o.default, {
           userId: l.id,
-          autoFocus: A,
+          autoFocus: x,
           className: g.note,
-          onUpdate: () => N({
+          onUpdate: () => C({
             action: "SET_NOTE"
           })
         })]
       })]
-    }), (0, s.jsx)(p.ConnectedUserAccounts, {
-      ref: j,
-      connectedAccounts: y,
-      theme: R,
-      locale: h,
+    }), (0, s.jsx)(v.ConnectedUserAccounts, {
+      ref: y,
+      connectedAccounts: j,
+      theme: h,
+      locale: P,
       className: g.userInfoSection,
       userId: l.id
     })]

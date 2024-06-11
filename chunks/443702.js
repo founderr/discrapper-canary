@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return x
+    return D
   }
 });
 var a = s("735250"),
   n = s("470079"),
-  l = s("512722"),
-  i = s.n(l),
+  i = s("512722"),
+  l = s.n(i),
   r = s("442837"),
   o = s("481060"),
   d = s("570140"),
@@ -22,12 +22,12 @@ var a = s("735250"),
   g = s("594174"),
   f = s("351402"),
   m = s("853872"),
-  C = s("78839"),
-  A = s("706454"),
+  A = s("78839"),
+  C = s("706454"),
   O = s("726985"),
   h = s("981631"),
-  p = s("689938"),
-  R = s("499937");
+  R = s("689938"),
+  p = s("499937");
 class M extends n.PureComponent {
   componentDidMount() {
     d.default.wait(() => {
@@ -43,44 +43,44 @@ class M extends n.PureComponent {
       hide: t,
       paymentSources: s,
       defaultPaymentSourceId: n,
-      locale: l,
-      premiumSubscription: i,
+      locale: i,
+      premiumSubscription: l,
       isRemovingPaymentSource: r,
       isUpdatingPaymentSource: d
     } = this.props;
     return t ? (0, a.jsx)(S.default, {}) : (0, a.jsxs)("div", {
-      className: R.__invalid_userSettingsBilling,
+      className: p.__invalid_userSettingsBilling,
       children: [e && 0 === Object.keys(s).length ? (0, a.jsx)("div", {
-        className: R.syncing,
+        className: p.syncing,
         children: (0, a.jsx)(o.Spinner, {})
       }) : (0, a.jsx)(I.Subsetting, {
         setting: O.WebSetting.BILLING_PAYMENT_METHODS,
         children: (0, a.jsx)(T.default, {
           paymentSources: s,
           defaultPaymentSourceId: n,
-          premiumSubscriptionPaymentSourceId: null != i && i.status !== h.SubscriptionStatusTypes.CANCELED ? i.paymentSourceId : null,
-          locale: l,
+          premiumSubscriptionPaymentSourceId: null != l && l.status !== h.SubscriptionStatusTypes.CANCELED ? l.paymentSourceId : null,
+          locale: i,
           removing: r,
           submitting: d
         })
       }), (0, a.jsx)(I.Subsetting, {
         setting: O.WebSetting.BILLING_TRANSACTION_HISTORY,
         children: (0, a.jsx)("div", {
-          className: R.paymentHistory,
+          className: p.paymentHistory,
           children: (0, a.jsxs)(o.HeadingLevel, {
             component: (0, a.jsx)(o.FormTitle, {
               tag: "h1",
-              children: p.default.Messages.BILLING_PAYMENT_HISTORY
+              children: R.default.Messages.BILLING_PAYMENT_HISTORY
             }),
             children: [(0, a.jsx)(_.BlockedPaymentsWarning, {}), (0, a.jsx)(E.default, {
-              locale: l
+              locale: i
             })]
           })
         })
       }), (0, a.jsx)(o.Card, {
-        className: R.codeRedemptionRedirect,
+        className: p.codeRedemptionRedirect,
         type: o.Card.Types.CUSTOM,
-        children: p.default.Messages.BILLING_CODE_REDEMPTION_REDIRECT.format({
+        children: R.default.Messages.BILLING_CODE_REDEMPTION_REDIRECT.format({
           onClick: this.handleRedemptionRedirect
         })
       })]
@@ -88,12 +88,12 @@ class M extends n.PureComponent {
   }
 }
 
-function x() {
-  let e = (0, r.useStateFromStoresObject)([A.default, f.default, m.default, g.default, N.default, C.default], () => {
-    let e = C.default.getPremiumTypeSubscription(),
+function D() {
+  let e = (0, r.useStateFromStoresObject)([C.default, f.default, m.default, g.default, N.default, A.default], () => {
+    let e = A.default.getPremiumTypeSubscription(),
       t = g.default.getCurrentUser();
-    return i()(null != t, "UserSettingsBilling: currentUser cannot be undefined"), {
-      locale: A.default.locale,
+    return l()(null != t, "UserSettingsBilling: currentUser cannot be undefined"), {
+      locale: C.default.locale,
       hide: N.default.enabled,
       isClaimed: t.isClaimed(),
       isVerified: t.verified,

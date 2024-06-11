@@ -1,31 +1,31 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var l = n("442837"),
-  s = n("481060"),
-  i = n("594174"),
-  r = n("429239");
+a.r(t);
+var i = a("735250");
+a("470079");
+var s = a("442837"),
+  n = a("481060"),
+  l = a("594174"),
+  r = a("429239");
 t.default = function(e) {
   let {
     recipients: t,
-    size: n,
-    status: o,
+    size: a,
+    status: d,
     isTyping: u,
-    className: d,
+    className: o,
     ...c
-  } = e, f = s.AvatarSizeSpecs[n], h = (0, l.useStateFromStoresArray)([i.default], () => t.slice(0, 2).map(e => {
-    let t = i.default.getUser(e);
-    if (null != t) return t.getAvatarURL(void 0, f.size, !1)
-  }), [t, f.size]);
-  return (0, a.jsx)(r.default, {
+  } = e, I = n.AvatarSizeSpecs[a], A = (0, s.useStateFromStoresArray)([l.default], () => t.slice(0, 2).map(e => {
+    let t = l.default.getUser(e);
+    if (null != t) return t.getAvatarURL(void 0, I.size, !1)
+  }), [t, I.size]);
+  return (0, i.jsx)(r.default, {
     "aria-label": c["aria-label"],
     "aria-hidden": c["aria-hidden"],
-    backSrc: h[0],
-    frontSrc: h[1],
-    size: n,
-    status: o,
+    backSrc: A[0],
+    frontSrc: A[1],
+    size: a,
+    status: d,
     isTyping: null != u && u,
-    className: d
+    className: o
   })
 }

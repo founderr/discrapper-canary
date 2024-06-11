@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return f
   }
 }), n("47120"), n("733860");
 var i = n("718528"),
@@ -26,7 +26,7 @@ function S(e, t) {
   (0, _.transitionToChannel)(e, t)
 }
 
-function I() {
+function f() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
     t = u.default.getState().guildId;
   null == t ? ! function(e) {

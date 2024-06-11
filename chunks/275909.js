@@ -3,8 +3,8 @@ s.r(t);
 var a = s("735250");
 s("470079");
 var n = s("120356"),
-  l = s.n(n),
-  i = s("283029"),
+  i = s.n(n),
+  l = s("283029"),
   r = s("981874");
 t.default = function(e) {
   let {
@@ -14,12 +14,12 @@ t.default = function(e) {
     useReducedMotion: d
   } = e;
   return (0, a.jsxs)("div", {
-    className: l()(r.boostIconContainer, t),
+    className: i()(r.boostIconContainer, t),
     children: [o ? (0, a.jsx)("img", {
-      className: l()(r.boostIcon, r.boostIconCanceled),
+      className: i()(r.boostIcon, r.boostIconCanceled),
       src: s("457026"),
       alt: ""
-    }) : (0, a.jsx)(i.default, {
+    }) : (0, a.jsx)(l.default, {
       className: r.boostIcon,
       boostInCooldown: n,
       useReducedMotion: d

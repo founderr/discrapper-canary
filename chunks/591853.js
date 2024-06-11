@@ -45,8 +45,8 @@ var u = n("194048"),
   v = n("607070"),
   N = n("220779"),
   M = n("201133"),
-  R = n("605236"),
-  y = n("543241"),
+  y = n("605236"),
+  R = n("543241"),
   L = n("318374"),
   j = n("258609"),
   O = n("102172"),
@@ -140,7 +140,7 @@ function ef(e) {
     entry: A,
     requestId: x,
     buttons: v = [],
-    header: y
+    header: R
   } = e, [L, j] = l.useState(!1), [O, P] = l.useState(null), b = (0, d.useStateFromStores)([w.default], () => w.default.can(es.Permissions.SEND_MESSAGES, t)), G = (0, Q.useIsEligibleForMemberlistOneClickReply)({
     location: "PopoutReactor"
   }), [W, z] = l.useState(!1), [Z, q] = l.useState(!1), {
@@ -272,7 +272,7 @@ function ef(e) {
           guild_id: t.guild_id
         }), G) {
         let l;
-        if ((0, R.markDismissibleContentAsDismissed)(c.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), z(!0), q(!1), L) l = t;
+        if ((0, y.markDismissibleContentAsDismissed)(c.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), z(!0), q(!1), L) l = t;
         else {
           var a;
           let e = await T.default.getOrEnsurePrivateChannel(n.id);
@@ -293,7 +293,7 @@ function ef(e) {
     }
   }, eS = async e => {
     let a;
-    if (G && (0, R.markDismissibleContentAsDismissed)(c.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), L) a = t;
+    if (G && (0, y.markDismissibleContentAsDismissed)(c.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), L) a = t;
     else {
       let e = await T.default.openPrivateChannel(n.id, !1, !1),
         t = U.default.getChannel(e);
@@ -335,7 +335,7 @@ function ef(e) {
       destinationChannelId: l.id,
       destinationGuildId: l.guild_id
     }), null == r || r()
-  }, eT = null != y ? y : null != ee ? ee : void 0;
+  }, eT = null != R ? R : null != ee ? ee : void 0;
   return (0, a.jsxs)("div", {
     style: {
       pointerEvents: W ? "none" : "all"
@@ -427,7 +427,7 @@ let eh = e => {
     i(!0)
   }, []);
   let r = !!v.default.keyboardModeEnabled && !s,
-    o = (0, y.useFrequentlyUsedEmojis)(t.guild_id).slice(0, 5).map(e => null == e.id ? {
+    o = (0, R.useFrequentlyUsedEmojis)(t.guild_id).slice(0, 5).map(e => null == e.id ? {
       emoji: e,
       url: e.url
     } : {

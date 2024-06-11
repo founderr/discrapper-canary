@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("442837"),
   o = s("780384"),
   d = s("481060"),
@@ -22,16 +22,16 @@ var a = s("735250"),
   g = s("689938"),
   f = s("611273");
 let m = s("651714"),
-  C = s("297166");
+  A = s("297166");
 
-function A() {
+function C() {
   let {
     experimentalEncoders: e
   } = (0, r.useStateFromStoresObject)([c.default], () => ({
     experimentalEncoders: c.default.getExperimentalEncoders()
   }));
   return "stable" !== E.default.releaseChannel && c.default.isExperimentalEncodersSupported() ? (0, a.jsx)(d.FormSwitch, {
-    className: i()(f.marginTop8, f.marginBottom20),
+    className: l()(f.marginTop8, f.marginBottom20),
     value: e,
     onChange: e => u.default.setExperimentalEncoders(e),
     disabled: !1,
@@ -44,7 +44,7 @@ function O() {
     {
       openH264: t,
       hardwareH264: s,
-      supportsOpenH264: l
+      supportsOpenH264: i
     } = (0, r.useStateFromStoresObject)([c.default], () => ({
       openH264: c.default.getOpenH264(),
       hardwareH264: c.default.getHardwareH264(),
@@ -59,18 +59,18 @@ function O() {
         className: f.marginBottom20,
         type: d.FormNoticeTypes.PRIMARY,
         imageData: {
-          src: (0, o.isThemeLight)(e) ? m : C,
+          src: (0, o.isThemeLight)(e) ? m : A,
           width: 70,
           height: 40
         },
         align: S.default.Align.CENTER,
         body: g.default.Messages.USER_SETTINGS_VOICE_CODEC_DESCRIPTION
       })
-    }), l && (0, a.jsxs)(d.FormSection, {
+    }), i && (0, a.jsxs)(d.FormSection, {
       className: f.marginBottom20,
       title: g.default.Messages.USER_SETTINGS_VOICE_VIDEO_CODEC_TITLE,
       children: [(0, a.jsx)(d.FormSwitch, {
-        className: i()(f.marginTop8, f.marginBottom20),
+        className: l()(f.marginTop8, f.marginBottom20),
         value: t,
         onChange: e => u.default.setOpenH264(e),
         disabled: !1,
@@ -82,12 +82,12 @@ function O() {
         },
         ref: E
       }), (0, a.jsx)(d.FormSwitch, {
-        className: i()(f.marginTop8, f.marginBottom20),
+        className: l()(f.marginTop8, f.marginBottom20),
         value: s,
         onChange: e => u.default.setHardwareH264(e),
         note: g.default.Messages.FORM_HELP_HARDWARE_H264,
         children: g.default.Messages.USER_SETTINGS_VOICE_HARDWARE_H264
-      }), (0, a.jsx)(A, {})]
+      }), (0, a.jsx)(C, {})]
     })]
   })
 }

@@ -33,8 +33,8 @@ function C(e) {
     ...A
   } = e, x = null == g ? void 0 : g.getGuildId(), v = null == g ? void 0 : g.id, N = (0, o.useStateFromStores)([f.default], () => null != x ? f.default.getGuild(x) : null, [x]), M = (0, o.useStateFromStores)([d.default], () => d.default.getActiveEventByChannel(v), [v]);
   if (t = N, l = g, !(null != t && null != l && h.default.can(m.Permissions.CREATE_INSTANT_INVITE, l))) return null;
-  let R = p.default.Messages.INSTANT_INVITE;
-  return null != i ? R = p.default.Messages.INVITE_STREAM_HEADER : null != C && (R = p.default.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY), (0, a.jsxs)(a.Fragment, {
+  let y = p.default.Messages.INSTANT_INVITE;
+  return null != i ? y = p.default.Messages.INVITE_STREAM_HEADER : null != C && (y = p.default.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(u.Button, {
       size: u.Button.Sizes.SMALL,
       color: E.buttonColor,
@@ -81,7 +81,7 @@ function C(e) {
       },
       className: s()(I, E.textButton),
       ...A,
-      children: R
+      children: y
     }), (0, a.jsx)(c.default, {
       channel: g,
       stream: i,

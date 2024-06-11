@@ -70,10 +70,10 @@ let T = a.forwardRef(function(e, t) {
     onPopulated: h,
     error: m,
     autoFocus: T,
-    required: I
+    required: S
   } = e, {
-    day: S,
-    setDay: A,
+    day: A,
+    setDay: I,
     month: N,
     setMonth: R,
     year: C,
@@ -92,13 +92,13 @@ let T = a.forwardRef(function(e, t) {
       year: u,
       setYear: d
     }
-  }(n), v = a.useMemo(() => null != S && null != N && null != C ? o()("".concat(S, "/").concat(N, "/").concat(C), "DD/MM/YYYY") : null, [S, N, C]);
+  }(n), v = a.useMemo(() => null != A && null != N && null != C ? o()("".concat(A, "/").concat(N, "/").concat(C), "DD/MM/YYYY") : null, [A, N, C]);
   a.useEffect(() => {
     r((null == v ? void 0 : v.isValid()) ? v : null)
   }, [v, r]);
   let L = m;
   null != v && !v.isValid() && (L = c.default.Messages.AGE_GATE_INVALID_BIRTHDAY);
-  let x = function() {
+  let M = function() {
       let e = new Date().getFullYear(),
         t = a.useRef(Array.from(Array(150).keys()).map(t => ({
           value: e - t - 3,
@@ -111,16 +111,16 @@ let T = a.forwardRef(function(e, t) {
         }))
       }, [e]), t.current
     }(),
-    [M, b] = a.useState(T ? 0 : -1),
-    y = a.useRef(null),
+    [x, y] = a.useState(T ? 0 : -1),
+    b = a.useRef(null),
     D = a.useRef(null),
     U = a.useRef(null),
     P = a.useMemo(p, []),
     G = a.useCallback(() => {
       var e, t, n, s;
-      switch (null === (e = P[M]) || void 0 === e ? void 0 : e.type) {
+      switch (null === (e = P[x]) || void 0 === e ? void 0 : e.type) {
         case "day":
-          null === (t = y.current) || void 0 === t || t.focus();
+          null === (t = b.current) || void 0 === t || t.focus();
           break;
         case "month":
           null === (n = D.current) || void 0 === n || n.focus();
@@ -128,16 +128,16 @@ let T = a.forwardRef(function(e, t) {
         case "year":
           null === (s = U.current) || void 0 === s || s.focus()
       }
-    }, [M, y, D, U, P]);
+    }, [x, b, D, U, P]);
   a.useEffect(() => {
     setTimeout(G, 500)
   }, []), a.useEffect(() => {
-    if (M >= P.length) {
+    if (x >= P.length) {
       null == h || h();
       return
     }
     G()
-  }, [M, G]);
+  }, [x, G]);
   let w = [];
   for (let e = 0; e < 3; e++) {
     let {
@@ -149,9 +149,9 @@ let T = a.forwardRef(function(e, t) {
           key: "day",
           input: (0, s.jsx)(_, {
             options: E,
-            selectOption: A,
+            selectOption: I,
             children: (0, s.jsx)(d.default, {
-              ref: y,
+              ref: b,
               className: f.__invalid_inputDay,
               "aria-label": c.default.Messages.AGE_GATE_DOB_DAY,
               menuPlacement: d.default.MenuPlacements.TOP,
@@ -160,12 +160,12 @@ let T = a.forwardRef(function(e, t) {
                 children: c.default.Messages.AGE_GATE_DOB_DAY
               }),
               options: E,
-              value: S,
+              value: A,
               onChange: t => {
                 let {
                   value: n
                 } = t;
-                A(n), b(e + 1)
+                I(n), y(e + 1)
               },
               maxMenuHeight: 215
             })
@@ -193,7 +193,7 @@ let T = a.forwardRef(function(e, t) {
                 let {
                   value: n
                 } = t;
-                R(n), b(e + 1)
+                R(n), y(e + 1)
               },
               maxMenuHeight: 215
             })
@@ -204,7 +204,7 @@ let T = a.forwardRef(function(e, t) {
         w.push({
           key: "year",
           input: (0, s.jsx)(_, {
-            options: x,
+            options: M,
             selectOption: O,
             children: (0, s.jsx)(d.default, {
               ref: U,
@@ -215,13 +215,13 @@ let T = a.forwardRef(function(e, t) {
                 "aria-hidden": !0,
                 children: c.default.Messages.AGE_GATE_DOB_YEAR
               }),
-              options: x,
+              options: M,
               value: C,
               onChange: t => {
                 let {
                   value: n
                 } = t;
-                O(n), b(e + 1)
+                O(n), y(e + 1)
               },
               maxMenuHeight: 215
             })
@@ -233,7 +233,7 @@ let T = a.forwardRef(function(e, t) {
     className: l()(f.container, i),
     children: [(0, s.jsx)(u.FormTitle, {
       tag: "legend",
-      required: I,
+      required: S,
       error: L,
       children: c.default.Messages.AGE_GATE_DATE_OF_BIRTH
     }), (0, s.jsx)("div", {

@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("735250");
 s("470079");
 var n = s("120356"),
-  l = s.n(n),
-  i = s("873546"),
+  i = s.n(n),
+  l = s("873546"),
   r = s("481060"),
   o = s("993413"),
   d = s("689938"),
@@ -30,9 +30,9 @@ function c(e) {
     className: s,
     children: (0, a.jsxs)(r.FormSection, {
       className: u.profileCustomizationSection,
-      children: [i.isMobile && E(), (0, a.jsxs)("div", {
-        className: l()(u.baseLayout, n),
-        children: [t, !i.isMobile && E()]
+      children: [l.isMobile && E(), (0, a.jsxs)("div", {
+        className: i()(u.baseLayout, n),
+        children: [t, !l.isMobile && E()]
       })]
     })
   })

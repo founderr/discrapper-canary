@@ -24,8 +24,8 @@ var a = r("735250"),
   k = r("432877");
 r("381996");
 var v = r("392750"),
-  T = r("926976"),
-  S = r("592197"),
+  S = r("926976"),
+  T = r("592197"),
   j = r("860337"),
   w = r("789654"),
   E = r("691867"),
@@ -34,19 +34,19 @@ var v = r("392750"),
   _ = r("246992"),
   I = r("442954"),
   R = r("702904"),
-  P = r("248526"),
-  O = r("958328"),
+  O = r("248526"),
+  P = r("958328"),
   A = r("514866"),
   L = r("678639"),
   D = r("351930"),
   M = r("771751"),
-  B = r("596768"),
-  F = r("621060"),
+  F = r("596768"),
+  B = r("621060"),
   H = r("689938"),
   U = r("770131"),
-  z = r("277513");
+  G = r("277513");
 
-function G(e) {
+function z(e) {
   let {
     resizableNode: t,
     onResize: r,
@@ -70,11 +70,11 @@ function V() {
       let e = [{
         id: "analytics",
         name: "Analytics",
-        render: () => (0, a.jsx)(T.default, {})
+        render: () => (0, a.jsx)(S.default, {})
       }, {
         id: "triggers",
         name: "Triggers",
-        render: () => (0, a.jsx)(B.default, {})
+        render: () => (0, a.jsx)(F.default, {})
       }, {
         id: "stores",
         name: "Stores",
@@ -91,7 +91,7 @@ function V() {
       }), e.push({
         id: "perks_demos",
         name: "Perks Demos",
-        render: () => (0, a.jsx)(P.default, {})
+        render: () => (0, a.jsx)(O.default, {})
       })), p.default.isDeveloper && e.push({
         id: "clans",
         name: "Clans",
@@ -119,7 +119,7 @@ function V() {
       }), e.push({
         id: "permissions",
         name: "Permissions",
-        render: () => (0, a.jsx)(O.default, {})
+        render: () => (0, a.jsx)(P.default, {})
       }), e.push({
         id: "modals",
         name: "Modals",
@@ -147,14 +147,14 @@ function V() {
       }), e.push({
         id: "billing",
         name: "Billing",
-        render: () => (0, a.jsx)(S.default, {})
+        render: () => (0, a.jsx)(T.default, {})
       })), e
     }, []),
     {
       TabBar: r,
       renderSelectedTab: n,
       selectedTabId: l
-    } = (0, F.default)({
+    } = (0, B.default)({
       tabs: t,
       initialSelectedTabId: null !== (e = x.default.lastOpenTabId) && void 0 !== e ? e : void 0,
       onChangeTab: e => {
@@ -171,7 +171,7 @@ function V() {
     }
   }), (0, a.jsxs)(_.DevToolsLayerProvider, {
     children: [(0, a.jsxs)(y.default, {
-      className: z.headerBar,
+      className: G.headerBar,
       toolbar: (0, a.jsx)(y.default.Icon, {
         icon: m.default,
         tooltip: H.default.Messages.CLOSE,
@@ -205,7 +205,7 @@ function K() {
       minWidth: x.DEVTOOLS_SIDEBAR_MIN_WIDTH,
       width: r
     },
-    children: [(0, a.jsx)(G, {
+    children: [(0, a.jsx)(z, {
       resizableNode: e,
       onResize: n,
       onResizeEnd: o
@@ -229,7 +229,7 @@ function W() {
     children: (0, a.jsx)(s.Clickable, {
       onClick: b.toggleDisplayDevTools,
       children: (0, a.jsxs)(y.default, {
-        className: l()(z.headerBar, U.mobileHeaderCollapsed),
+        className: l()(G.headerBar, U.mobileHeaderCollapsed),
         toolbar: (0, a.jsx)(g.default, {
           direction: g.default.Directions.UP
         }),

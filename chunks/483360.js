@@ -50,8 +50,8 @@ var r = n("658722"),
   K = n("689938");
 let z = new c.default("AutocompleteUtils"),
   Z = () => !0,
-  X = /(\t|\s)/,
-  Q = [],
+  Q = /(\t|\s)/,
+  X = [],
   q = (i = n("786074").default).MENTION_EVERYONE,
   J = i.MENTION_HERE,
   $ = i.LAUNCHABLE_APPLICATIONS;
@@ -747,9 +747,9 @@ t.default = {
         }))
       })
     }
-    return 0 === (l = o()(l).sortBy(e => -1 * e.score).value()).length && (l = Q), l
+    return 0 === (l = o()(l).sortBy(e => -1 * e.score).value()).length && (l = X), l
   },
-  matchSentinel: (e, t, n) => !X.test(t) && e === n,
+  matchSentinel: (e, t, n) => !Q.test(t) && e === n,
   hasSameRoleAsUsername(e, t) {
     if (!t.isPomelo()) return !1;
     let n = L.default.getGuild(e.getGuildId());

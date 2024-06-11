@@ -100,7 +100,7 @@ n.r(t), n.d(t, {
     return b
   },
   ensureUserClanData: function() {
-    return Q
+    return X
   },
   getPlaystyleOptions: function() {
     return y
@@ -112,7 +112,7 @@ n.r(t), n.d(t, {
     return j
   },
   getRandomClanBrandPreset: function() {
-    return X
+    return Q
   },
   getSortedTraits: function() {
     return H
@@ -254,11 +254,11 @@ let W = [{
     secondary: e.secondary
   }]));
 
-function X() {
+function Q() {
   return W[Math.floor(Math.random() * W.length)]
 }
 
-function Q(e) {
+function X(e) {
   return null == e ? null : "identityGuildId" in e ? e : {
     identityGuildId: e.identity_guild_id,
     identityEnabled: e.identity_enabled,

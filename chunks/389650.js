@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("47120"), s("653041");
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("392711"),
   o = s.n(r),
   d = s("442837"),
@@ -22,15 +22,15 @@ var a = s("735250"),
   g = s("924557"),
   f = s("74299"),
   m = s("131951"),
-  C = s("556296"),
-  A = s("808506"),
+  A = s("556296"),
+  C = s("808506"),
   O = s("186095"),
   h = s("285952"),
-  p = s("474333"),
-  R = s("63063"),
+  R = s("474333"),
+  p = s("63063"),
   M = s("358085"),
-  x = s("13140"),
-  D = s("210887"),
+  D = s("13140"),
+  x = s("210887"),
   L = s("659947"),
   P = s("981631"),
   b = s("420212"),
@@ -55,14 +55,14 @@ function B(e) {
   return t([I.KeybindGroup.MESSAGE, I.KeybindGroup.NAVIGATION, I.KeybindGroup.DND, I.KeybindGroup.CHAT, I.KeybindGroup.VOICE_AND_VIDEO, I.KeybindGroup.MISCELLANEOUS])
 }
 let y = o()((0, I.getDefaultLayoutContent)()).filter(e => e.description !== v.default.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG).groupBy(e => e.group).value(),
-  V = d.default.connectStores([D.default], () => ({
-    theme: D.default.theme
+  V = d.default.connectStores([x.default], () => ({
+    theme: x.default.theme
   }))(O.default);
 class H extends n.PureComponent {
   renderMessage() {
     let {
       keybind: e
-    } = this.props, t = x.toString(e.shortcut);
+    } = this.props, t = D.toString(e.shortcut);
     return N.default.hasBind(t) ? (0, a.jsx)(c.FormText, {
       className: U.keybindMessage,
       type: c.FormTextTypes.DESCRIPTION,
@@ -77,7 +77,7 @@ class H extends n.PureComponent {
         color: u.default.unsafe_rawColors.RED_400.css
       },
       children: v.default.Messages.KEYBIND_NAVIGATION_CONFLICT.format({
-        keyboardNavArticle: R.default.getArticleURL(P.HelpdeskArticles.KEYBOARD_NAVIGATION)
+        keyboardNavArticle: p.default.getArticleURL(P.HelpdeskArticles.KEYBOARD_NAVIGATION)
       })
     }) : (0, a.jsx)(c.FormText, {
       className: U.keybindMessage,
@@ -92,7 +92,7 @@ class H extends n.PureComponent {
     } = this.props.keybind;
     return (0, a.jsxs)(h.default, {
       direction: h.default.Direction.VERTICAL,
-      className: i()(U.keybindGroup, j.card),
+      className: l()(U.keybindGroup, j.card),
       children: [!e && (0, a.jsx)(E.default, {
         "aria-label": v.default.Messages.REMOVE_KEYBIND,
         className: U.removeKeybind,
@@ -300,8 +300,8 @@ class Y extends n.PureComponent {
             className: G.marginBottom20,
             children: [(0, a.jsx)(h.default.Child, {
               grow: 0,
-              children: (0, a.jsx)(p.default, {
-                messageType: p.HelpMessageTypes.WARNING,
+              children: (0, a.jsx)(R.default, {
+                messageType: R.HelpMessageTypes.WARNING,
                 children: v.default.Messages.ADD_KEYBIND_WARNING
               })
             }), (0, a.jsx)(h.default.Child, {
@@ -316,8 +316,8 @@ class Y extends n.PureComponent {
           }), (0, a.jsx)(c.FormDivider, {}), (0, a.jsxs)(c.FormSection, {
             children: [this.renderKeybinds(t), this.renderEmpty(t)]
           })]
-        }) : (0, a.jsx)(p.default, {
-          messageType: p.HelpMessageTypes.INFO,
+        }) : (0, a.jsx)(R.default, {
+          messageType: R.HelpMessageTypes.INFO,
           textVariant: "text-lg/medium",
           className: U.browserNotice,
           children: v.default.Messages.KEYBIND_IN_BROSWER_NOTICE.format({
@@ -344,21 +344,21 @@ class Y extends n.PureComponent {
           children: e => (0, a.jsx)(a.Fragment, {
             children: e.map((e, t) => {
               let s = (0, I.getNameForKeybindGroup)(e),
-                l = (0, I.getDescriptionForKeybindGroup)(e),
+                i = (0, I.getDescriptionForKeybindGroup)(e),
                 r = y[e];
               return (0, a.jsxs)("div", {
                 className: U.defaultKeybindGroup,
                 children: [(0, a.jsx)(c.Heading, {
                   variant: "heading-deprecated-12/semibold",
-                  className: i()(U.defaultKeybindGroupHeader, {
-                    [U.defaultKeybindGroupWithDescription]: null != l
+                  className: l()(U.defaultKeybindGroupHeader, {
+                    [U.defaultKeybindGroupWithDescription]: null != i
                   }),
                   children: s
-                }), null != l && (0, a.jsx)(c.Text, {
+                }), null != i && (0, a.jsx)(c.Text, {
                   color: "header-secondary",
                   className: U.defaultKeybindGroupDescription,
                   variant: "text-sm/normal",
-                  children: l
+                  children: i
                 }), (0, a.jsx)(c.FormDivider, {}), r.map(e => (0, a.jsxs)(n.Fragment, {
                   children: [(0, a.jsxs)("div", {
                     className: U.defaultKeybind,
@@ -388,9 +388,9 @@ class Y extends n.PureComponent {
 }
 
 function k() {
-  let e = (0, d.useStateFromStores)([C.default], () => C.default.getState()),
+  let e = (0, d.useStateFromStores)([A.default], () => A.default.getState()),
     t = (0, d.useStateFromStores)([m.default], () => (0, f.default)(m.default)),
-    s = (0, d.useStateFromStores)([A.default], () => A.default.isSupported()),
+    s = (0, d.useStateFromStores)([C.default], () => C.default.isSupported()),
     n = (0, g.useEnableClips)();
   return (0, a.jsx)(Y, {
     keybinds: e,

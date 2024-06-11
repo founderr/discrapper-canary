@@ -46,8 +46,8 @@ var i = n("735250"),
   K = n("700785"),
   z = n("358085"),
   Z = n("746877"),
-  X = n("541716"),
-  Q = n("667829"),
+  Q = n("541716"),
+  X = n("667829"),
   q = n("562267"),
   J = n("376918"),
   $ = n("760196"),
@@ -91,8 +91,8 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     canMentionRoles: eK,
     canMentionChannels: ez,
     maxCharacterCount: eZ,
-    showRemainingCharsAfterCount: eX,
-    allowNewLines: eQ = !0,
+    showRemainingCharsAfterCount: eQ,
+    allowNewLines: eX = !0,
     characterCountClassName: eq,
     "aria-describedby": eJ,
     "aria-labelledby": e$,
@@ -160,7 +160,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
         ...o
       }
     }(ey, eP, ti, ev),
-    t_ = eP.toolbarType === X.SlateToolbarTypes.STATIC,
+    t_ = eP.toolbarType === Q.SlateToolbarTypes.STATIC,
     tc = !B.UseLegacyChatInput.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver,
     tE = !tc || !(null === (s = eP.commands) || void 0 === s ? void 0 : s.enabled) || !eU || eN !== ea.COMMAND_SENTINEL,
     tI = (0, P.default)(),
@@ -223,7 +223,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
         l(!1), (0, I.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("99387"), n.e("23755"), n.e("41947"), n.e("29042"), n.e("80374")]).then(n.bind(n, "273602"));
+          } = await Promise.all([n.e("99387"), n.e("23755"), n.e("90508"), n.e("41947"), n.e("53289")]).then(n.bind(n, "273602"));
           return t => (0, i.jsx)(e, {
             ...t,
             threadId: a,
@@ -285,7 +285,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
   }();
   let tg = (ef = tN, eS = eP, eh = e9, r.useCallback(e => {
     var t, n;
-    eS === X.ChatInputTypes.CREATE_FORUM_POST ? null === (n = eh.current) || void 0 === n || n.insertGIF(e) : ef(e.url, void 0, void 0, !0), (0, L.closeExpressionPicker)(), null === (t = eh.current) || void 0 === t || t.focus()
+    eS === Q.ChatInputTypes.CREATE_FORUM_POST ? null === (n = eh.current) || void 0 === n || n.insertGIF(e) : ef(e.url, void 0, void 0, !0), (0, L.closeExpressionPicker)(), null === (t = eh.current) || void 0 === t || t.focus()
   }, [eh, ef, eS]));
   let tL = (eA = e9, r.useCallback(function(e, t) {
       let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -406,7 +406,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     ref: tn
   })));
   let tK = tc && null != ep && !to && eP.showCharacterCount && null == ti,
-    tz = tc && !__OVERLAY__ && null != ep && null == ti && eP.toolbarType !== X.SlateToolbarTypes.NONE,
+    tz = tc && !__OVERLAY__ && null != ep && null == ti && eP.toolbarType !== Q.SlateToolbarTypes.NONE,
     tZ = function(e, t, n, i) {
       var r, s;
       let a = B.ExpressionSuggestionsEnabled.useSetting(),
@@ -414,8 +414,8 @@ t.default = r.memo(r.forwardRef(function(e, t) {
         l = null != o && o.length > 0;
       return a && (null === (r = t.stickers) || void 0 === r ? void 0 : r.autoSuggest) && !l && (null === (s = i.current) || void 0 === s ? void 0 : s.isVisible()) !== !0 && !__OVERLAY__ && null != n
     }(ey, eP, ep, tO),
-    tX = (0, C.useShouldShowPTONotice)(ey),
-    tQ = null != ti || null != ek || tX,
+    tQ = (0, C.useShouldShowPTONotice)(ey),
+    tX = null != ti || null != ek || tQ,
     tq = !!(null === (eu = eP.emojis) || void 0 === eu ? void 0 : eu.button) && ty <= 44;
   return (0, i.jsx)(g.EventEmitterProvider, {
     value: th,
@@ -452,7 +452,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
             className: a()(eC, {
               [el.scrollableContainer]: !0,
               [el.themedBackground]: !e3,
-              [el.hasConnectedBar]: tQ
+              [el.hasConnectedBar]: tX
             }),
             children: [(0, i.jsx)(q.default, {
               channelId: ey.id,
@@ -464,14 +464,14 @@ t.default = r.memo(r.forwardRef(function(e, t) {
             }), (0, i.jsxs)("div", {
               className: a()(el.inner, {
                 [el.innerDisabled]: tY,
-                [el.sansAttachButton]: eP !== X.ChatInputTypes.EDIT && (null != tj || tY && null == tj || ts),
-                [el.sansAttachButtonCreateThread]: eP === X.ChatInputTypes.THREAD_CREATION,
-                [el.sansAttachButtonCreatePost]: eP === X.ChatInputTypes.CREATE_FORUM_POST
+                [el.sansAttachButton]: eP !== Q.ChatInputTypes.EDIT && (null != tj || tY && null == tj || ts),
+                [el.sansAttachButtonCreateThread]: eP === Q.ChatInputTypes.THREAD_CREATION,
+                [el.sansAttachButtonCreatePost]: eP === Q.ChatInputTypes.CREATE_FORUM_POST
               }),
               children: [tj, (0, i.jsx)(I.FocusRing, {
                 ringTarget: e5,
                 ringClassName: el.focusRing,
-                children: (0, i.jsx)(Q.default, {
+                children: (0, i.jsx)(X.default, {
                   ref: e9,
                   id: eg,
                   focused: eU,
@@ -488,7 +488,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
                   canPasteFiles: tl,
                   uploadPromptCharacterCount: es.MAX_MESSAGE_LENGTH_PREMIUM,
                   maxCharacterCount: null != eZ ? eZ : tI,
-                  allowNewLines: eQ,
+                  allowNewLines: eX,
                   "aria-describedby": eJ,
                   onChange: eB,
                   onResize: tP,
@@ -507,8 +507,8 @@ t.default = r.memo(r.forwardRef(function(e, t) {
                   spellcheckEnabled: tS,
                   canOnlyUseTextCommands: tH,
                   className: a()({
-                    [el.textAreaThreadCreation]: eP === X.ChatInputTypes.THREAD_CREATION,
-                    [el.profileBioInput]: eP === X.ChatInputTypes.PROFILE_BIO_INPUT
+                    [el.textAreaThreadCreation]: eP === Q.ChatInputTypes.THREAD_CREATION,
+                    [el.profileBioInput]: eP === Q.ChatInputTypes.PROFILE_BIO_INPUT
                   }, eR),
                   "aria-labelledby": e$
                 })
@@ -554,7 +554,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
               [el.indentCharacterCount]: tq
             }),
             maxCharacterCount: eZ,
-            showRemainingCharsAfterCount: eX
+            showRemainingCharsAfterCount: eQ
           }) : null, tZ ? (0, i.jsx)(D.default, {
             editorRef: e9,
             channel: ey,

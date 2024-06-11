@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   setIsSettingSearchActive: function() {
-    return l
+    return i
   },
   setSettingSearchQuery: function() {
     return n
   },
   useSettingSearchQuery: function() {
-    return i
+    return l
   }
 });
 let a = (0, s("652874").default)(() => ({
@@ -22,12 +22,12 @@ function n(e) {
   })
 }
 
-function l(e) {
+function i(e) {
   a.setState({
     isActive: e
   })
 }
 
-function i() {
+function l() {
   return a().query
 }

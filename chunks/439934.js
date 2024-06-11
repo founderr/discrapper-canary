@@ -16,9 +16,9 @@ var i = l("735250"),
   v = l("695346"),
   f = l("594174"),
   I = l("695103"),
-  h = l("880448"),
+  E = l("880448"),
   m = l("602623"),
-  E = l("810090"),
+  h = l("810090"),
   T = l("823379"),
   x = l("5192"),
   C = l("624138"),
@@ -34,7 +34,7 @@ var i = l("735250"),
   L = l("640608"),
   M = l("969728");
 
-function V(e) {
+function b(e) {
   let {
     value: t,
     icon: l
@@ -50,7 +50,7 @@ function V(e) {
   })
 }
 
-function b(e) {
+function V(e) {
   let {
     activity: t,
     application: l,
@@ -167,7 +167,7 @@ function O(e) {
           [L.videoFadeOut]: !W
         }),
         onAnimationEnd: () => W ? null : q(!1),
-        children: (0, i.jsx)(E.default, {
+        children: (0, i.jsx)(h.default, {
           className: L.activityVideo,
           src: R,
           loop: !0,
@@ -191,7 +191,7 @@ function O(e) {
         children: e => (0, i.jsx)("div", {
           className: L.devShelfBadge,
           ...e,
-          children: (0, i.jsx)(h.default, {
+          children: (0, i.jsx)(E.default, {
             className: L.devShelfIcon
           })
         })
@@ -221,7 +221,7 @@ function O(e) {
             ...e
           })
         }) : null]
-      }), (0, i.jsx)(b, {
+      }), (0, i.jsx)(V, {
         activity: null == F ? void 0 : F.embeddedActivity,
         application: w,
         channel: n,
@@ -229,7 +229,7 @@ function O(e) {
         large: C
       }), (0, i.jsx)("div", {
         className: L.activityTagsContainer,
-        children: w.tags.slice(0, 3).map(e => (0, i.jsx)(V, {
+        children: w.tags.slice(0, 3).map(e => (0, i.jsx)(b, {
           value: e
         }, "activity-tag-".concat(w.id, "-").concat(e)))
       })]

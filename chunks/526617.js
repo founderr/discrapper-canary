@@ -190,10 +190,10 @@ function K(e) {
     defaultSoundsOnly: P = !1
   } = e, {
     analyticsLocations: U
-  } = (0, c.default)(), [K, z] = r.useState(null), Z = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), X = (0, o.useStateFromStores)([A.default], () => {
+  } = (0, c.default)(), [K, z] = r.useState(null), Z = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), Q = (0, o.useStateFromStores)([A.default], () => {
     var e;
     return A.default.getVoiceState(t, null !== (e = null == Z ? void 0 : Z.id) && void 0 !== e ? e : B.EMPTY_STRING_SNOWFLAKE_ID)
-  }), Q = (null == X ? void 0 : X.selfDeaf) || (null == X ? void 0 : X.mute) || (null == X ? void 0 : X.suppress), q = (0, T.useExpressionPickerStore)(e => e.searchQuery), J = (0, m.useUID)(), {
+  }), X = (null == Q ? void 0 : Q.selfDeaf) || (null == Q ? void 0 : Q.mute) || (null == Q ? void 0 : Q.suppress), q = (0, T.useExpressionPickerStore)(e => e.searchQuery), J = (0, m.useUID)(), {
     categories: $
   } = (0, y.default)(s, void 0, P), [ee, et] = r.useState([]), en = (0, y.useSearchCategories)($, ee, q), ei = S.SoundboardPickerCollapsedSections.useSetting(), er = r.useMemo(() => new Set(ei), [ei]), es = null == s, ea = L.default.canUseCustomCallSounds(Z), eo = r.useCallback(e => {
     er.has(e) ? er.delete(e) : er.add(e), S.SoundboardPickerCollapsedSections.updateSetting(Array.from(er))
@@ -223,12 +223,12 @@ function K(e) {
     onSelectItem: eu,
     soundButtonProps: {
       channel: s,
-      interactive: es ? ea : !Q,
+      interactive: es ? ea : !X,
       forceSecondaryActions: es,
       analyticsLocations: U
     },
     buttonOverlay: O
-  }, "row-".concat(t["aria-rowindex"])), [eu, s, Q, E, U, es, ea, O]), e_ = r.useCallback((e, t) => {
+  }, "row-".concat(t["aria-rowindex"])), [eu, s, X, E, U, es, ea, O]), e_ = r.useCallback((e, t) => {
     let n = "".concat(e.key);
     return (0, i.jsx)(Y, {
       categoryInfo: e.categoryInfo,

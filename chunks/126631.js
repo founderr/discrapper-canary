@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("47120");
 var a = s("735250"),
   n = s("470079"),
-  l = s("481060"),
-  i = s("541716"),
+  i = s("481060"),
+  l = s("541716"),
   r = s("752305"),
   o = s("893718"),
   d = s("131704"),
@@ -32,11 +32,11 @@ function g(e) {
     placeholder: g,
     currentBio: f,
     disabled: m = !1
-  } = e, [C, A] = n.useState(null != u ? u : f), [O, h] = n.useState((0, r.toRichValue)(C)), p = n.useRef(!1);
+  } = e, [A, C] = n.useState(null != u ? u : f), [O, h] = n.useState((0, r.toRichValue)(A)), R = n.useRef(!1);
   return n.useEffect(() => {
     if (void 0 === u) {
       let e = (0, r.toRichValue)(f);
-      A(f), h(e)
+      C(f), h(e)
     }
   }, [u, f]), (0, a.jsxs)(c.default, {
     title: t,
@@ -50,20 +50,20 @@ function g(e) {
       innerClassName: T.bioTextArea,
       maxCharacterCount: S.BIO_MAX_LENGTH,
       onChange: function(e, t, s) {
-        t !== C && (A(t), h(s), d(t))
+        t !== A && (C(t), h(s), d(t))
       },
       placeholder: g,
       channel: I,
-      textValue: C,
+      textValue: A,
       richValue: O,
-      type: i.ChatInputTypes.PROFILE_BIO_INPUT,
+      type: l.ChatInputTypes.PROFILE_BIO_INPUT,
       onBlur: () => {
-        p.current = !1
+        R.current = !1
       },
       onFocus: () => {
-        p.current = !0
+        R.current = !0
       },
-      focused: p.current,
+      focused: R.current,
       onSubmit: function() {
         return new Promise(e => {
           e({
@@ -72,7 +72,7 @@ function g(e) {
           })
         })
       }
-    }), (0, a.jsx)(l.HiddenVisually, {
+    }), (0, a.jsx)(i.HiddenVisually, {
       id: N,
       children: E.default.Messages.MAXIMUM_LENGTH.format({
         maxLength: S.BIO_MAX_LENGTH

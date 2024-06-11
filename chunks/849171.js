@@ -30,8 +30,8 @@ var a, l, s = n("735250"),
   v = n("906732"),
   N = n("835473"),
   M = n("522474"),
-  R = n("314897"),
-  y = n("819640"),
+  y = n("314897"),
+  R = n("819640"),
   L = n("594174"),
   j = n("602623"),
   O = n("823379"),
@@ -79,9 +79,9 @@ function w(e) {
     width: g
   } = e;
   let S = (a = g) > 400 ? 2 : a > 300 ? 1 : 0;
-  let [T] = (l = g) > 400 ? [d.AvatarSizes.SIZE_56, 56] : l > 300 ? [d.AvatarSizes.SIZE_32, 32] : [d.AvatarSizes.SIZE_24, 24], I = (0, u.useStateFromStoresArray)([L.default, R.default], () => Array.from(i).map(e => (0, m.isActivityParticipantCurrentUserCurrentSession)(e, R.default) ? null : L.default.getUser(e.userId)).filter(O.isNotNullish)), A = (0, u.useStateFromStores)([f.default], () => f.default.getEmbeddedActivitiesForChannel(C.id).find(e => e.applicationId === r.id)), {
+  let [T] = (l = g) > 400 ? [d.AvatarSizes.SIZE_56, 56] : l > 300 ? [d.AvatarSizes.SIZE_32, 32] : [d.AvatarSizes.SIZE_24, 24], I = (0, u.useStateFromStoresArray)([L.default, y.default], () => Array.from(i).map(e => (0, m.isActivityParticipantCurrentUserCurrentSession)(e, y.default) ? null : L.default.getUser(e.userId)).filter(O.isNotNullish)), A = (0, u.useStateFromStores)([f.default], () => f.default.getEmbeddedActivitiesForChannel(C.id).find(e => e.applicationId === r.id)), {
     analyticsLocations: x
-  } = (0, v.default)(), N = (0, c.useAnalyticsContext)(), M = P.default.getName(C.getGuildId(), C.id, null == I ? void 0 : I[0]), y = (0, p.useEmbeddedActivityJoinability)({
+  } = (0, v.default)(), N = (0, c.useAnalyticsContext)(), M = P.default.getName(C.getGuildId(), C.id, null == I ? void 0 : I[0]), R = (0, p.useEmbeddedActivityJoinability)({
     userId: null === (t = L.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
     channelId: C.id,
     application: r
@@ -114,7 +114,7 @@ function w(e) {
       children: r.name
     }), (0, s.jsx)("div", {
       className: b.buttons,
-      children: y ? (0, s.jsx)(d.Button, {
+      children: R ? (0, s.jsx)(d.Button, {
         onClick: function(e) {
           e.stopPropagation(), null != A && (0, h.default)({
             applicationId: A.applicationId,
@@ -160,8 +160,8 @@ function k(e) {
     applicationId: d,
     names: U,
     size: 1024
-  }), _ = !a && f, R = !f, L = !f && !a, j = (0, u.useStateFromStores)([y.default, M.default], () => (0, A.default)({
-    LayerStore: y.default,
+  }), _ = !a && f, y = !f, L = !f && !a, j = (0, u.useStateFromStores)([R.default, M.default], () => (0, A.default)({
+    LayerStore: R.default,
     PopoutWindowStore: M.default
   }));
   return i.useEffect(() => {
@@ -177,7 +177,7 @@ function k(e) {
         children: [_ && (0, s.jsx)(S.default, {
           className: b.iframe,
           embedId: (0, I.default)(r.id, d)
-        }), R && null != m && null != p && "" !== p ? (0, s.jsx)("img", {
+        }), y && null != m && null != p && "" !== p ? (0, s.jsx)("img", {
           className: b.splashImage,
           alt: m.name,
           src: p
@@ -187,7 +187,7 @@ function k(e) {
           participants: t.participants,
           application: m,
           currentEmbeddedApplication: h
-        }), l || R ? null : (0, s.jsx)("div", {
+        }), l || y ? null : (0, s.jsx)("div", {
           className: b.clickShield
         })]
       })

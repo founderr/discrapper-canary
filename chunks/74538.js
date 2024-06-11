@@ -37,7 +37,7 @@ n.r(t), n.d(t, {
     return Z
   },
   getDisplayNameFromSku: function() {
-    return X
+    return Q
   },
   getDisplayPremiumType: function() {
     return q
@@ -109,7 +109,7 @@ n.r(t), n.d(t, {
     return H
   },
   getTierDisplayName: function() {
-    return Q
+    return X
   },
   hasPremiumSubscriptionToDisplay: function() {
     return eR
@@ -433,7 +433,7 @@ function Z(e) {
   }), r
 }
 
-function X(e) {
+function Q(e) {
   switch (e) {
     case U.PremiumSubscriptionSKUs.TIER_0:
       return G.default.Messages.PREMIUM_TIER_0;
@@ -450,7 +450,7 @@ function X(e) {
   }), t
 }
 
-function Q(e) {
+function X(e) {
   switch (e) {
     case U.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
     case U.SubscriptionPlans.PREMIUM_YEAR_TIER_0:

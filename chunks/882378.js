@@ -46,7 +46,7 @@ t.default = l.memo(function(e) {
     let e = x();
     null != e && M(e)
   }, [_, T, x]);
-  let R = l.useCallback(() => {
+  let y = l.useCallback(() => {
     null != T && (0, o.dismissChannelSafetyWarnings)(t.id, [T.id]), null != S && ((0, r.openModalLazy)(async () => {
       let {
         default: e
@@ -85,7 +85,7 @@ t.default = l.memo(function(e) {
     tooltipContentClassName: g.tooltipContent,
     children: () => (0, a.jsx)(p.default.Icon, {
       icon: m.default,
-      onClick: R,
+      onClick: y,
       tooltip: C.default.Messages.SAFETY_TOOLS_BUTTON_LABEL,
       tooltipDisabled: null != T
     })

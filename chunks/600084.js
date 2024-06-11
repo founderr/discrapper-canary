@@ -29,8 +29,8 @@ var a = n("735250"),
   v = n("184279"),
   N = n("438306"),
   M = n("544142"),
-  R = n("128557"),
-  y = n("981631"),
+  y = n("128557"),
+  R = n("981631"),
   L = n("176505"),
   j = n("689938"),
   O = n("611273");
@@ -47,7 +47,7 @@ function P(e) {
   if (m.THREAD_CHANNEL_TYPES.has(n.type)) return (0, a.jsx)(M.default, {
     channel: n
   });
-  else if (i) return (0, a.jsx)(R.default, {
+  else if (i) return (0, a.jsx)(y.default, {
     channel: n
   });
   else if (l) return (0, a.jsx)(x.default, {
@@ -69,26 +69,26 @@ function D(e) {
     canManageRoles: x,
     canReadMessageHistory: N
   } = (0, s.useStateFromStoresObject)([E.default], () => ({
-    canManageRoles: E.default.can(y.Permissions.MANAGE_ROLES, n),
-    canReadMessageHistory: E.default.can(y.Permissions.READ_MESSAGE_HISTORY, n)
-  })), M = (0, s.useStateFromStores)([f.default], () => m === y.ChannelTypes.DM ? f.default.getMutualGuilds(n.getRecipientId()) : null, [n, m]), {
-    systemDMRedesignEnabled: R
+    canManageRoles: E.default.can(R.Permissions.MANAGE_ROLES, n),
+    canReadMessageHistory: E.default.can(R.Permissions.READ_MESSAGE_HISTORY, n)
+  })), M = (0, s.useStateFromStores)([f.default], () => m === R.ChannelTypes.DM ? f.default.getMutualGuilds(n.getRecipientId()) : null, [n, m]), {
+    systemDMRedesignEnabled: y
   } = c.default.useExperiment({
     location: "bf1a4f_1"
   }, {
     autoTrackExposure: null !== (t = n.isSystemDM()) && void 0 !== t && t
   });
   if (l.useEffect(() => {
-      m === y.ChannelTypes.DM && null == M && null != p && r.default.wait(() => (0, h.default)(n.getRecipientId(), p.getAvatarURL(null, 80), {
+      m === R.ChannelTypes.DM && null == M && null != p && r.default.wait(() => (0, h.default)(n.getRecipientId(), p.getAvatarURL(null, 80), {
         withMutualGuilds: !0
       }))
-    }, [M, m, n, p]), n.isSystemDM()) return R ? (0, a.jsx)(v.default, {
+    }, [M, m, n, p]), n.isSystemDM()) return y ? (0, a.jsx)(v.default, {
     channel: n
   }) : (0, a.jsx)(A.default, {
     channel: n,
     children: j.default.Messages.SYSTEM_DM_EMPTY_MESSAGE
   });
-  if (m === y.ChannelTypes.DM) return (0, a.jsxs)(A.default, {
+  if (m === R.ChannelTypes.DM) return (0, a.jsxs)(A.default, {
     channel: n,
     user: p,
     children: [null != p && (0, a.jsx)(i.Heading, {

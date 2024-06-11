@@ -61,8 +61,8 @@ function d(e) {
     itemNodeMargin: y
   }), {
     getItemProps: Z,
-    getRowProps: X,
-    gridContainerProps: Q,
+    getRowProps: Q,
+    gridContainerProps: X,
     handleGridContainerKeyDown: q,
     isUsingKeyboardNavigation: J
   } = (0, a.useKeyboardNavigation)({
@@ -72,11 +72,11 @@ function d(e) {
     onSelectItem: c,
     store: _,
     gridNavigatorId: U
-  }), $ = r.useCallback(e => h(Y[e], X(e), {
+  }), $ = r.useCallback(e => h(Y[e], Q(e), {
     isUsingKeyboardNavigation: J.current,
     gutterWidth: z,
     rowIndex: e
-  }, t => Z(e, t), t => _.setInspectedExpressionPosition(t, e)), [Y, Z, X, z, J, h, _]), ee = r.useCallback(e => null == A ? void 0 : A(t[e]), [t, A]), et = r.useCallback(e => null == m ? void 0 : m(t[e], e), [t, m]), en = r.useCallback(e => null == N ? void 0 : N(t[e]), [t, N]), ei = r.useCallback(() => {
+  }, t => Z(e, t), t => _.setInspectedExpressionPosition(t, e)), [Y, Z, Q, z, J, h, _]), ee = r.useCallback(e => null == A ? void 0 : A(t[e]), [t, A]), et = r.useCallback(e => null == m ? void 0 : m(t[e], e), [t, m]), en = r.useCallback(e => null == N ? void 0 : N(t[e]), [t, N]), ei = r.useCallback(() => {
     var e;
     return null == p ? void 0 : p(null == Y ? void 0 : null === (e = Y[F.rowIndex]) || void 0 === e ? void 0 : e[F.columnIndex])
   }, [Y, F.columnIndex, F.rowIndex, p]);
@@ -110,7 +110,7 @@ function d(e) {
         ref: w,
         className: u.listWrapper,
         id: U,
-        ...Q,
+        ...X,
         children: null != H ? (0, i.jsx)(o.default, {
           ref: k,
           store: _,

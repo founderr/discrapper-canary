@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("735250");
 s("470079");
 var n = s("481060"),
-  l = s("921801"),
-  i = s("726985"),
+  i = s("921801"),
+  l = s("726985"),
   r = s("689938"),
   o = s("200173");
 
@@ -19,8 +19,8 @@ function d(e) {
     handleDisableAccount: d,
     handleDeleteAccount: u
   } = e, c = s.isClaimed();
-  return (0, a.jsx)(l.Subsetting, {
-    setting: i.WebSetting.ACCOUNT_DISABLE_ACCOUNT,
+  return (0, a.jsx)(i.Subsetting, {
+    setting: l.WebSetting.ACCOUNT_DISABLE_ACCOUNT,
     children: (0, a.jsxs)(n.FormSection, {
       className: t,
       title: r.default.Messages.USER_SETTINGS_ACCOUNT_REMOVAL_SECTION,
@@ -37,8 +37,8 @@ function d(e) {
           size: n.ButtonSizes.SMALL,
           onClick: d,
           children: r.default.Messages.DISABLE_ACCOUNT
-        }) : null, (0, a.jsx)(l.Subsetting, {
-          setting: i.WebSetting.ACCOUNT_DELETE_ACCOUNT,
+        }) : null, (0, a.jsx)(i.Subsetting, {
+          setting: l.WebSetting.ACCOUNT_DELETE_ACCOUNT,
           children: (0, a.jsx)(n.Button, {
             look: n.ButtonLooks.OUTLINED,
             color: n.ButtonColors.RED,

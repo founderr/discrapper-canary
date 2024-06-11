@@ -78,7 +78,7 @@ t.default = l.memo(function(e) {
     children: p,
     content: E,
     onUpdate: C
-  } = e, _ = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(), N = l.useRef(!1), M = (0, u.useStateFromStores)([h.default], () => h.default.getMessage(d.id), [d.id]), R = l.useCallback(() => {
+  } = e, _ = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(), N = l.useRef(!1), M = (0, u.useStateFromStores)([h.default], () => h.default.getMessage(d.id), [d.id]), y = l.useCallback(() => {
     (null == M ? void 0 : M.isBlockedEdit) ? (0, f.removeAutomodMessageNotice)(d.id) : c.default.deleteMessage(d.channel_id, d.id, !0)
   }, [d, M]);
   return l.useLayoutEffect(() => {
@@ -105,7 +105,7 @@ t.default = l.memo(function(e) {
       notice: null !== (n = null == M ? void 0 : M.errorMessage) && void 0 !== n ? n : T.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE,
       message: d,
       compact: r,
-      onDismiss: R
+      onDismiss: y
     })]
   })
 }, g.memoizeMessageProps)

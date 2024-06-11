@@ -35,7 +35,7 @@ t.default = i.memo(function(e) {
     signHintPosition: v = "left",
     className: N,
     fullHeight: M
-  } = e, R = i.useRef(null), [y, L] = i.useState(!1), j = i.useCallback(e => {
+  } = e, y = i.useRef(null), [R, L] = i.useState(!1), j = i.useCallback(e => {
     e.preventDefault(), e.stopPropagation(), null == r || r(), L(!0)
   }, [r]), [O, P] = i.useState(!1), [D, b] = i.useState(!1), U = i.useRef(null), F = i.useCallback(e => {
     e && (U.current = setTimeout(() => {
@@ -54,7 +54,7 @@ t.default = i.memo(function(e) {
     opacity: 0,
     top: -24,
     onRest: () => {
-      y && P(!0)
+      R && P(!0)
     }
   }));
   i.useEffect(() => {
@@ -70,11 +70,11 @@ t.default = i.memo(function(e) {
       opacity: 1,
       top: -24
     });
-    D && y && W({
+    D && R && W({
       opacity: 0,
       top: 0
     })
-  }, [D, y, v]), i.useEffect(() => () => {
+  }, [D, R, v]), i.useEffect(() => () => {
     null != U.current && clearTimeout(U.current)
   }, []);
   let Y = o()(T.signHintAnimationContainer, O && T.noDisplay, "left" === v ? T.signTextLeft : T.signTextRight),
@@ -123,7 +123,7 @@ t.default = i.memo(function(e) {
                 [T.clickable]: null != r
               }),
               children: [(0, s.jsx)("div", {
-                ref: R,
+                ref: y,
                 className: T.signHintContainer,
                 children: (0, s.jsxs)(u.animated.div, {
                   className: Y,
@@ -139,7 +139,7 @@ t.default = i.memo(function(e) {
                       size: c.Button.Sizes.SMALL,
                       onClick: e => {
                         var t;
-                        null === (t = R.current) || void 0 === t || t.scrollIntoView({
+                        null === (t = y.current) || void 0 === t || t.scrollIntoView({
                           behavior: "smooth"
                         }), j(e)
                       },
@@ -163,7 +163,7 @@ t.default = i.memo(function(e) {
                 variant: "text-md/normal",
                 color: "none",
                 children: "x"
-              }), y ? (0, s.jsx)(c.Text, {
+              }), R ? (0, s.jsx)(c.Text, {
                 variant: "text-lg/normal",
                 color: "header-primary",
                 className: T.signatureText,

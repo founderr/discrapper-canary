@@ -65,7 +65,7 @@ t.default = e => {
     multiSelect: V,
     reportId: x,
     textInput: F
-  } = e, H = U(t, "checkbox"), Y = U(t, "text_line_resource"), j = b(t, "external_link"), W = b(t, "free_text"), K = b(t, "dropdown"), [z, Z] = r.useState(!1), [X, Q] = r.useState(!1), [q, J] = r.useState(""), [$, ee] = r.useState(() => ({})), [et, en] = r.useState(() => ({})), [ei, er] = r.useState((0, o.areRequiredElementsUnfilled)(W, K, H, F, V)), es = function(e, t) {
+  } = e, H = U(t, "checkbox"), Y = U(t, "text_line_resource"), j = b(t, "external_link"), W = b(t, "free_text"), K = b(t, "dropdown"), [z, Z] = r.useState(!1), [Q, X] = r.useState(!1), [q, J] = r.useState(""), [$, ee] = r.useState(() => ({})), [et, en] = r.useState(() => ({})), [ei, er] = r.useState((0, o.areRequiredElementsUnfilled)(W, K, H, F, V)), es = function(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
       i = {
         ...et
@@ -104,11 +104,11 @@ t.default = e => {
       Z(!1)
     });
   return r.useEffect(() => {
-    t.is_auto_submit && !X && (Q(!0), B({
+    t.is_auto_submit && !Q && (X(!0), B({
       nodeRef: t.id,
       destination: ["", t.id]
     }))
-  }, [t.is_auto_submit, X, B, t.id]), (0, i.jsxs)("div", {
+  }, [t.is_auto_submit, Q, B, t.id]), (0, i.jsxs)("div", {
     className: P.container,
     children: [(0, i.jsxs)(s.ModalHeader, {
       separator: !1,

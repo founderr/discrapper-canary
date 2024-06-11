@@ -6,10 +6,10 @@ s.r(t), s.d(t, {
 });
 var a = s("470079"),
   n = s("913527"),
-  l = s.n(n),
-  i = s("55935");
-let r = l().duration(30, "days");
+  i = s.n(n),
+  l = s("55935");
+let r = i().duration(30, "days");
 
 function o(e, t) {
-  return a.useMemo(() => (0, i.dateFormat)(t ? null != e.outboundRedemptionEndDate ? l()(e.outboundRedemptionEndDate) : l()(e.endDate).add(r) : l()(e.endDate), "LL"), [e, t])
+  return a.useMemo(() => (0, l.dateFormat)(t ? null != e.outboundRedemptionEndDate ? i()(e.outboundRedemptionEndDate) : i()(e.endDate).add(r) : i()(e.endDate), "LL"), [e, t])
 }

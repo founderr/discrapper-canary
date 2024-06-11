@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return y
   }
 }), n("47120");
 var a = n("735250"),
@@ -74,20 +74,20 @@ function M(e) {
   } = e, {
     channelAction: E,
     completed: T
-  } = (0, _.useMemberActionsForChannel)(f, h), I = (0, _.useNextMemberAction)(f, null == E ? void 0 : E.channelId), M = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), R = (null == E ? void 0 : E.actionType) === S.NewMemberActionTypes.VIEW, y = (0, u.useToken)(u.tokens.colors.WHITE), [L, j] = l.useState(!1), [O] = l.useState(new r.default.Value(0)), [P] = l.useState(new r.default.Value(0));
+  } = (0, _.useMemberActionsForChannel)(f, h), I = (0, _.useNextMemberAction)(f, null == E ? void 0 : E.channelId), M = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), y = (null == E ? void 0 : E.actionType) === S.NewMemberActionTypes.VIEW, R = (0, u.useToken)(u.tokens.colors.WHITE), [L, j] = l.useState(!1), [O] = l.useState(new r.default.Value(0)), [P] = l.useState(new r.default.Value(0));
   l.useEffect(() => {
     T ? r.default.timing(O, {
       toValue: 0,
       duration: M ? 1 : 350,
       easing: r.default.Easing.quad,
-      delay: R ? 0 : 500
+      delay: y ? 0 : 500
     }).start(() => j(!0)) : r.default.timing(O, {
       toValue: 1,
       duration: M ? 1 : 350,
       easing: r.default.Easing.quad,
       delay: 400
     }).start()
-  }, [T, O, R, M]), l.useEffect(() => {
+  }, [T, O, y, M]), l.useEffect(() => {
     T && L && r.default.timing(P, {
       toValue: 1,
       duration: M ? 0 : 350,
@@ -98,7 +98,7 @@ function M(e) {
   let D = l.useCallback(() => {
     null != I && (0, g.selectNewMemberActionChannel)(f, I.channelId)
   }, [f, I]);
-  return null == E || R && !L ? null : (0, a.jsx)("div", {
+  return null == E || y && !L ? null : (0, a.jsx)("div", {
     className: i()(x.container, m),
     children: L && null != I ? (0, a.jsx)(r.default.div, {
       style: {
@@ -130,7 +130,7 @@ function M(e) {
           children: (0, a.jsx)(p.default, {
             width: 16,
             height: 16,
-            color: y.hex(),
+            color: R.hex(),
             className: x.nextIcon
           })
         })]
@@ -160,7 +160,7 @@ function M(e) {
         })]
       }), T ? (0, a.jsx)(C.default, {
         className: x.completed,
-        backgroundColor: y.hex(),
+        backgroundColor: R.hex(),
         width: 20,
         height: 20
       }) : null]
@@ -168,7 +168,7 @@ function M(e) {
   })
 }
 
-function R(e) {
+function y(e) {
   let {
     guildId: t,
     channel: n,

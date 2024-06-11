@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   UserProfileClanContainer: function() {
-    return p
+    return R
   },
   UserProfileClanRow: function() {
     return O
@@ -9,8 +9,8 @@ s.r(t), s.d(t, {
 }), s("47120");
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("442837"),
   o = s("481060"),
   d = s("100527");
@@ -26,14 +26,14 @@ var u = s("594174"),
   g = s("979264"),
   f = s("308083"),
   m = s("981631"),
-  C = s("689938"),
-  A = s("407020");
+  A = s("689938"),
+  C = s("407020");
 
 function O(e) {
   let {
     className: t,
     clanTag: s,
-    clanBadge: l,
+    clanBadge: i,
     onTagClick: r,
     guildId: d,
     guildName: u,
@@ -45,18 +45,18 @@ function O(e) {
     let e = T.current;
     null != e && null != e.offsetWidth && null != e.scrollWidth && m(e.offsetWidth < e.scrollWidth)
   }, []), (0, a.jsxs)("div", {
-    className: i()(A.container, t),
+    className: l()(C.container, t),
     children: [(0, a.jsxs)("div", {
-      className: A.guildPrefixContainer,
+      className: C.guildPrefixContainer,
       children: [(0, a.jsx)(I.ClanGuildIconSimple, {
         guildId: d,
         guildName: u,
         guildIcon: c,
         iconSize: S,
-        className: A.guildPrefixIcon,
+        className: C.guildPrefixIcon,
         animate: !1
       }), (0, a.jsxs)("div", {
-        className: A.details,
+        className: C.details,
         children: [(0, a.jsx)(o.Tooltip, {
           text: u,
           color: o.Tooltip.Colors.PRIMARY,
@@ -64,7 +64,7 @@ function O(e) {
           children: e => (0, a.jsx)("span", {
             ref: T,
             ...e,
-            className: A.guildName,
+            className: C.guildName,
             children: u
           })
         }), null != E && (0, a.jsx)(N.default, {
@@ -72,17 +72,17 @@ function O(e) {
         })]
       })]
     }), (0, a.jsx)("div", {
-      className: A.tagContainer,
+      className: C.tagContainer,
       children: (0, a.jsx)(g.BaseClanTagChiplet, {
         guildId: d,
-        className: A.tag,
+        className: C.tag,
         clanTag: s,
-        clanBadge: l,
+        clanBadge: i,
         onClick: r,
         badgeSize: f.ClanTagBadgeSize.SIZE_16,
         textColor: "interactive-normal",
         textVariant: "text-sm/medium",
-        badgeClassName: A.badge
+        badgeClassName: C.badge
       })
     })]
   })
@@ -92,8 +92,8 @@ function h(e) {
   let {
     userClanTag: t,
     userClanBadge: s,
-    guildId: l,
-    guildName: i,
+    guildId: i,
+    guildName: l,
     guildIcon: _,
     clan: I,
     userId: N
@@ -101,46 +101,46 @@ function h(e) {
     var e;
     return (0, E.getUserClanData)(null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId
   }), h = n.useMemo(() => {
-    if (l !== f) {
-      if (g.has(l)) return () => {
+    if (i !== f) {
+      if (g.has(i)) return () => {
         (0, o.openModal)(e => (0, a.jsx)(o.ConfirmModal, {
           ...e,
-          header: C.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_CTA,
-          confirmText: C.default.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA,
+          header: A.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_CTA,
+          confirmText: A.default.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA,
           confirmButtonColor: o.Button.Colors.BRAND,
-          cancelText: C.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_CANCEL,
+          cancelText: A.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_CANCEL,
           onConfirm: async () => {
-            await (0, c.adoptClanIdentity)(l, !0, d.default.PROFILE_POPOUT)
+            await (0, c.adoptClanIdentity)(i, !0, d.default.PROFILE_POPOUT)
           },
           children: (0, a.jsx)(o.Text, {
             variant: "text-sm/normal",
-            children: C.default.Messages.CLAN_USER_PROFILE_USE_CLAN_TAG.format({
-              guildName: i
+            children: A.default.Messages.CLAN_USER_PROFILE_USE_CLAN_TAG.format({
+              guildName: l
             })
           })
         }))
       };
       if (null != I) return () => {
-        (0, S.openClanApplyFlow)(l, I, {
+        (0, S.openClanApplyFlow)(i, I, {
           source: m.AnalyticsSections.USER_PROFILE,
           location: d.default.CLAN_TAG,
           tagUserId: N
         })
       }
     }
-  }, [g, I, f, l, i, N]);
+  }, [g, I, f, i, l, N]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(o.Heading, {
-      className: A.header,
+      className: C.header,
       variant: "eyebrow",
-      children: C.default.Messages.CLAN_USER_PROFILE_PRIMARY_CLAN
+      children: A.default.Messages.CLAN_USER_PROFILE_PRIMARY_CLAN
     }), (0, a.jsx)(O, {
-      className: A.profileContainer,
+      className: C.profileContainer,
       clanTag: t,
       clanBadge: s,
       onTagClick: h,
-      guildName: i,
-      guildId: l,
+      guildName: l,
+      guildId: i,
       guildIcon: _,
       guildIconSize: 40,
       memberCount: null == I ? void 0 : I.memberCount
@@ -148,25 +148,25 @@ function h(e) {
   })
 }
 
-function p(e) {
+function R(e) {
   let {
     userId: t,
     wrapChildren: s
   } = e, {
     userClanTag: n,
-    userClanBadge: l,
-    guildId: i,
+    userClanBadge: i,
+    guildId: l,
     guildName: r,
     guildIcon: o,
     clan: d
   } = (0, _.useUserSelectedClan)({
     userId: t
   });
-  if (null == n || null == i || null == r) return null;
+  if (null == n || null == l || null == r) return null;
   let u = (0, a.jsx)(h, {
     userClanTag: n,
-    userClanBadge: l,
-    guildId: i,
+    userClanBadge: i,
+    guildId: l,
     guildName: r,
     guildIcon: o,
     clan: d,

@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("390547"), s("47120");
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("971809"),
   o = s("481060"),
   d = s("359420");
@@ -29,10 +29,10 @@ function S() {
     }), (0, a.jsxs)("div", {
       className: d.buttons,
       children: [(0, a.jsx)("div", {
-        className: i()("theme-dark", d.section),
+        className: l()("theme-dark", d.section),
         children: e
       }), (0, a.jsx)("div", {
-        className: i()("theme-light", d.section),
+        className: l()("theme-light", d.section),
         children: e
       })]
     }), (0, a.jsx)(E, {})]
@@ -40,7 +40,7 @@ function S() {
 }
 
 function E() {
-  let [e, t] = n.useState(null), [s, l] = n.useState(null), [i, u] = n.useState([]), [c, S] = n.useState([]), [E, T] = n.useState([]);
+  let [e, t] = n.useState(null), [s, i] = n.useState(null), [l, u] = n.useState([]), [c, S] = n.useState([]), [E, T] = n.useState([]);
   return (0, a.jsxs)("div", {
     className: d.searchableSelectExamples,
     children: [(0, a.jsx)(o.Heading, {
@@ -55,12 +55,12 @@ function E() {
       placeholder: "Single select (clearable)",
       clearable: !0,
       value: s,
-      onChange: e => l(e),
+      onChange: e => i(e),
       options: r.States
     }), (0, a.jsx)(o.SearchableSelect, {
       placeholder: "Multi select",
       multi: !0,
-      value: i,
+      value: l,
       onChange: e => u(e),
       options: r.States
     }), (0, a.jsx)(o.SearchableSelect, {

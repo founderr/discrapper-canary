@@ -7,13 +7,13 @@ s.r(t), s.d(t, {
     return n
   },
   setNewPendingGuildIdentityPronouns: function() {
-    return l
+    return i
   },
   setNewPendingGuildIdentityThemeColors: function() {
     return r
   },
   setNewPendingNickname: function() {
-    return i
+    return l
   }
 });
 var a = s("18438");
@@ -22,11 +22,11 @@ function n(e, t) {
   (0, a.setPendingBio)(e === t ? void 0 : e)
 }
 
-function l(e, t) {
+function i(e, t) {
   (0, a.setPendingPronouns)(e === t ? void 0 : e)
 }
 
-function i(e, t) {
+function l(e, t) {
   (0, a.setPendingNickname)(e === t || "" === e && null === t ? void 0 : e)
 }
 

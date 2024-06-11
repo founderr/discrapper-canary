@@ -28,8 +28,8 @@ t.default = l().throttle(function(e, t) {
   let u, {
       channelPredicate: c = (e, t) => !0,
       guildPredicate: T = e => !0,
-      guildFeaturePredicate: I = (e, t) => !1,
-      withVoiceChannels: f = !1
+      guildFeaturePredicate: f = (e, t) => !1,
+      withVoiceChannels: I = !1
     } = t,
     O = null !== (o = s.default.getState().guildId) && void 0 !== o ? o : C.ME,
     N = s.default.getState().channelId,
@@ -39,14 +39,14 @@ t.default = l().throttle(function(e, t) {
       return t > 0 ? n.slice(i).concat(n.slice(0, i), e) : (n.splice(i, 0, e), n.slice(i + 1).concat(n.slice(0, i + 1)))
     }(O, e),
     R = e > 0 ? 0 : p.length - 1,
-    L = S(O, f),
+    L = S(O, I),
     D = L.indexOf(N) + e;
   for (; null != O && "" !== O;) {
     if (u = L[D], T(O))
       for (; null != u && "" !== u;) {
         if ("string" == typeof u) {
-          if (c(O, u)) return (0, A.transitionToChannel)(O, u, !1, f)
-        } else if ("object" == typeof u && I(u.resourceId, u.type)) return O !== r.default.getGuildId() && (0, A.transitionToChannel)(O, null === (l = d.default.getDefaultChannel(O)) || void 0 === l ? void 0 : l.id), (0, a.openModalLazy)(async () => {
+          if (c(O, u)) return (0, A.transitionToChannel)(O, u, !1, I)
+        } else if ("object" == typeof u && f(u.resourceId, u.type)) return O !== r.default.getGuildId() && (0, A.transitionToChannel)(O, null === (l = d.default.getDefaultChannel(O)) || void 0 === l ? void 0 : l.id), (0, a.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([n.e("99387"), n.e("14262"), n.e("22347"), n.e("56236"), n.e("94633")]).then(n.bind(n, "17671"));
@@ -58,7 +58,7 @@ t.default = l().throttle(function(e, t) {
         D += e, u = L[D]
       }
     if (R += e, null == (O = p[R]) || "" === O) break;
-    L = S(O, f), D = e < 0 ? L.length - 1 : 0
+    L = S(O, I), D = e < 0 ? L.length - 1 : 0
   }
   _.ComponentDispatch.dispatch(C.ComponentActions.SHAKE_APP, {
     duration: 200,

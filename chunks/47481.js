@@ -45,13 +45,13 @@ function d(e) {
         }
       }
     }
-    let R = (0, s.dateFormat)(e.timestamp, "LL");
-    R !== t && null == _ && (C.push({
+    let y = (0, s.dateFormat)(e.timestamp, "LL");
+    y !== t && null == _ && (C.push({
       type: u.ChannelStreamTypes.DIVIDER,
-      content: R,
-      contentKey: R
-    }), t = R);
-    let y = C[C.length - 1],
+      content: y,
+      contentKey: y
+    }), t = y);
+    let R = C[C.length - 1],
       L = null,
       j = (0, o.isSpam)(e);
     g = g || j;
@@ -64,14 +64,14 @@ function d(e) {
     if (null !== O) {
       ;
       let t, n;
-      [L, y] = (T = C, I = e, A = O, n = x = y, null == x || x.type !== A ? (t = {
+      [L, R] = (T = C, I = e, A = O, n = x = R, null == x || x.type !== A ? (t = {
         type: A,
         content: [],
         key: I.id
       }, T.push(t)) : n = (t = x).content[t.content.length - 1], [t, n])
     }
     if (h === e.id && null != S) {
-      if (null != y && y.type === u.ChannelStreamTypes.DIVIDER) y.unreadId = e.id, S = null;
+      if (null != R && R.type === u.ChannelStreamTypes.DIVIDER) R.unreadId = e.id, S = null;
       else if (null !== L) {
         ;
         v = L, N = c, (M = e).isFirstMessageInForumPost(N) || v.content.push({
@@ -86,7 +86,7 @@ function d(e) {
       type: u.ChannelStreamTypes.DIVIDER,
       unreadId: e.id
     }), S = null);
-    let P = (null == y ? void 0 : y.type) === u.ChannelStreamTypes.MESSAGE ? d : y;
+    let P = (null == R ? void 0 : R.type) === u.ChannelStreamTypes.MESSAGE ? d : R;
     (0, r.isNewGroupItem)(c, P, e) && (n = e.id);
     let D = {
       type: e.type === u.MessageTypes.THREAD_STARTER_MESSAGE ? u.ChannelStreamTypes.THREAD_STARTER_MESSAGE : u.ChannelStreamTypes.MESSAGE,

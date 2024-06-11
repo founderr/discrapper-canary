@@ -2,8 +2,8 @@
 s.r(t);
 var a = s("735250"),
   n = s("470079"),
-  l = s("481060"),
-  i = s("906732"),
+  i = s("481060"),
+  l = s("906732"),
   r = s("879892"),
   o = s("709586"),
   d = s("267642"),
@@ -14,10 +14,10 @@ t.default = function() {
   let e = n.useRef(null),
     {
       analyticsLocations: t
-    } = (0, i.default)();
+    } = (0, l.default)();
 
   function E(s) {
-    null != e.current && (0, l.closeModal)(e.current), (0, r.addAppliedGuildBoosts)({
+    null != e.current && (0, i.closeModal)(e.current), (0, r.addAppliedGuildBoosts)({
       analyticsLocation: {
         page: u.AnalyticsPages.GUILD_BOOSTING_USER_SETTINGS,
         section: u.AnalyticsSections.GUILD_BOOSTING_BOOST_ANY_GUILD_CTA,
@@ -29,7 +29,7 @@ t.default = function() {
     })
   }
   async function T() {
-    e.current = await (0, l.openModalLazy)(async () => {
+    e.current = await (0, i.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.resolve().then(s.bind(s, "719228"));
@@ -39,7 +39,7 @@ t.default = function() {
       })
     }, {
       onCloseRequest: () => {
-        null != e.current && (0, l.closeModal)(e.current)
+        null != e.current && (0, i.closeModal)(e.current)
       }
     })
   }
@@ -50,22 +50,22 @@ t.default = function() {
       className: S.boostIcon,
       width: 16,
       height: 16
-    }), (0, a.jsx)(l.Text, {
+    }), (0, a.jsx)(i.Text, {
       className: S.copy,
       color: "header-secondary",
       variant: "text-sm/medium",
       children: c.default.Messages.GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_GUILD_CTA.format({
         boostAnyGuildHook: (e, t) => {
           let s = null != _,
-            n = (0, a.jsx)(l.Button, {
+            n = (0, a.jsx)(i.Button, {
               className: S.cta,
               disabled: s,
-              color: l.Button.Colors.LINK,
-              look: l.Button.Looks.LINK,
+              color: i.Button.Colors.LINK,
+              look: i.Button.Looks.LINK,
               onClick: s ? void 0 : T,
               children: e
             }, t);
-          return s ? (0, a.jsx)(l.Tooltip, {
+          return s ? (0, a.jsx)(i.Tooltip, {
             text: _,
             children: e => (0, a.jsx)("span", {
               ...e,

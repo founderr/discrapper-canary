@@ -29,8 +29,8 @@ var a = n("735250"),
   v = n("981631"),
   N = n("616922"),
   M = n("689938"),
-  R = n("417094"),
-  y = n("936183");
+  y = n("417094"),
+  R = n("936183");
 let L = (e, t, n) => {
   let {
     artist: a,
@@ -69,13 +69,13 @@ function j(e) {
     }
   }, [t, s]);
   return null == r ? null : (0, a.jsxs)("div", {
-    className: R.listeningTimeline,
+    className: y.listeningTimeline,
     children: [(0, a.jsx)(A.ActiveTimestamp, {
       entry: n
     }), (0, a.jsx)("div", {
-      className: R.seekBarContainer,
+      className: y.seekBarContainer,
       children: (0, a.jsx)("div", {
-        className: R.seekBarFill,
+        className: y.seekBarFill,
         style: r
       })
     }), (0, a.jsx)(u.Text, {
@@ -89,7 +89,7 @@ function j(e) {
 
 function O(e) {
   var t, n, u;
-  let A, R, O, {
+  let A, y, O, {
       channel: P,
       entry: D,
       requestId: b,
@@ -144,11 +144,11 @@ function O(e) {
     K = (0, a.jsx)(E.default, {
       artists: k,
       canOpen: null != F.sync_id,
-      linkClassName: y.popoutTextSecondary,
+      linkClassName: R.popoutTextSecondary,
       onOpenSpotifyArtist: e => {
         (0, d.openArtist)(F, B.id, e)
       }
-    }), R = () => {
+    }), y = () => {
       (0, d.openTrack)(F)
     }, O = (0, f.default)(Y, N.SpotifyActionTypes.USER_ACTIVITY_SYNC, null != P ? C.default.getNickname(P.guild_id, P.id, B) : void 0)
   }
@@ -163,7 +163,7 @@ function O(e) {
     }),
     userDescription: (0, g.isEntryActive)(D) ? M.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING : M.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
     title: G,
-    onClickTitle: R,
+    onClickTitle: y,
     subtitle: K,
     badges: null,
     children: (null === (t = F.timestamps) || void 0 === t ? void 0 : t.start) != null && (0, a.jsx)(j, {

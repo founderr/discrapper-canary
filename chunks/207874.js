@@ -6,27 +6,27 @@ s.r(t), s.d(t, {
 });
 var a = s("735250"),
   n = s("470079"),
-  l = s("461745"),
-  i = s("128277"),
+  i = s("461745"),
+  l = s("128277"),
   r = s("689938");
 
 function o() {
-  let e = (0, i.useSettingSearchQuery)(),
+  let e = (0, l.useSettingSearchQuery)(),
     t = n.useCallback((e, t) => {
-      t.stopPropagation(), t.preventDefault(), (0, i.setIsSettingSearchActive)(e)
+      t.stopPropagation(), t.preventDefault(), (0, l.setIsSettingSearchActive)(e)
     }, []),
     s = n.useCallback(() => {
-      (0, i.setIsSettingSearchActive)(!1), (0, i.setSettingSearchQuery)("")
+      (0, l.setIsSettingSearchActive)(!1), (0, l.setSettingSearchQuery)("")
     }, []);
   return (0, a.jsx)("div", {
     style: {
       marginBottom: "8px"
     },
-    children: (0, a.jsx)(l.default, {
-      size: l.default.Sizes.MEDIUM,
+    children: (0, a.jsx)(i.default, {
+      size: i.default.Sizes.MEDIUM,
       query: e,
       onClear: s,
-      onQueryChange: i.setSettingSearchQuery,
+      onQueryChange: l.setSettingSearchQuery,
       placeholder: r.default.Messages.SEARCH,
       inputProps: {
         "aria-label": r.default.Messages.USER_SETTINGS_SEARCH_BAR,

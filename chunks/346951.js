@@ -2,8 +2,8 @@
 s.r(t);
 var a = s("735250"),
   n = s("470079"),
-  l = s("481060"),
-  i = s("707558"),
+  i = s("481060"),
+  l = s("707558"),
   r = s("577720"),
   o = s("689938"),
   d = s("96181");
@@ -27,11 +27,11 @@ class c extends n.Component {
       children: [(0, a.jsx)(r.default, {
         className: d.video,
         videoID: "SWzB1mx2o5k"
-      }), (0, a.jsx)(l.Heading, {
+      }), (0, a.jsx)(i.Heading, {
         className: d.perksHeading,
         variant: "heading-sm/semibold",
         children: o.default.Messages.HYPESQUAD_PERKS_HEADING
-      }), (0, a.jsx)(i.default, {
+      }), (0, a.jsx)(l.default, {
         features: u()
       })]
     })

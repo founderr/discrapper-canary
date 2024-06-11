@@ -47,18 +47,18 @@ function A(e) {
     autoTrackExposure: !1
   }), M = (0, r.default)(f.default);
   if (null == t || null != x) return null;
-  let R = (0, c.default)(t),
-    y = m.can({
+  let y = (0, c.default)(t),
+    R = m.can({
       permission: T.Permissions.ADD_REACTIONS,
       user: A,
       context: t
     });
   return (0, a.jsxs)("div", {
     className: I.voiceEffectsActionBar,
-    children: [R && (0, a.jsx)(S.default, {
+    children: [y && (0, a.jsx)(S.default, {
       channel: t,
       themeable: l
-    }), y && (0, a.jsx)(g.default, {
+    }), R && (0, a.jsx)(g.default, {
       channel: t
     }), N && M && (0, a.jsx)(p.default, {
       channel: t

@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("735250"),
   n = s("470079"),
-  l = s("442837"),
-  i = s("692547"),
+  i = s("442837"),
+  l = s("692547"),
   r = s("481060"),
   o = s("996753"),
   d = s("783539"),
@@ -21,7 +21,7 @@ var a = s("735250"),
 function I(e) {
   let {
     onBackClick: t
-  } = e, s = (0, l.useStateFromStores)([c.default], () => c.default.getAllUnlockedAchievements()), I = n.useMemo(() => Object.values(s).sort((e, t) => t.dateUnlocked - e.dateUnlocked), [s]), N = n.useMemo(() => Object.values(S.ACHIEVEMENT_LIST).filter(u.isNotNullish).filter(e => null == s[e.id]).sort((e, t) => e.rarity - t.rarity), [s]);
+  } = e, s = (0, i.useStateFromStores)([c.default], () => c.default.getAllUnlockedAchievements()), I = n.useMemo(() => Object.values(s).sort((e, t) => t.dateUnlocked - e.dateUnlocked), [s]), N = n.useMemo(() => Object.values(S.ACHIEVEMENT_LIST).filter(u.isNotNullish).filter(e => null == s[e.id]).sort((e, t) => e.rarity - t.rarity), [s]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(r.FormSection, {
       children: (0, a.jsxs)(r.Clickable, {
@@ -52,7 +52,7 @@ function I(e) {
       }), (0, a.jsx)("div", {
         className: _.headerIcon,
         children: (0, a.jsx)(d.default, {
-          color: i.default.unsafe_rawColors.ORANGE_345.css,
+          color: l.default.unsafe_rawColors.ORANGE_345.css,
           width: 40,
           height: 40
         })

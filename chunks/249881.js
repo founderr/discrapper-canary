@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("735250"),
   n = s("470079"),
-  l = s("481060"),
-  i = s("243778"),
+  i = s("481060"),
+  l = s("243778"),
   r = s("26290"),
   o = s("921944"),
   d = s("689938"),
@@ -35,7 +35,7 @@ let c = e => {
         className: u.textContainer,
         children: [(0, a.jsxs)("div", {
           className: u.headerText,
-          children: [(0, a.jsx)(i.default, {
+          children: [(0, a.jsx)(l.default, {
             contentTypes: [r],
             children: e => {
               let {
@@ -46,16 +46,16 @@ let c = e => {
                 markAsDismissed: s
               }) : null
             }
-          }), (0, a.jsx)(l.Text, {
+          }), (0, a.jsx)(i.Text, {
             variant: "text-md/semibold",
             children: t
           })]
-        }), (0, a.jsx)(l.Text, {
+        }), (0, a.jsx)(i.Text, {
           variant: "text-xs/normal",
           children: s
         })]
-      }), (0, a.jsx)(l.Button, {
-        size: l.ButtonSizes.MEDIUM,
+      }), (0, a.jsx)(i.Button, {
+        size: i.ButtonSizes.MEDIUM,
         onClick: o,
         className: u.reconnectButton,
         children: d.default.Messages.RECONNECT

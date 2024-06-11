@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
 var i = n("735250"),
   a = n("470079"),
   s = n("442837"),
-  l = n("846519"),
-  r = n("481060"),
+  r = n("846519"),
+  l = n("481060"),
   u = n("706454"),
   o = n("506071"),
   d = n("561308"),
@@ -25,7 +25,7 @@ function f(e) {
     return n > 0 ? 3e5 : 1e3
   }, [e, t]);
   return a.useEffect(() => {
-    let e = new l.Interval;
+    let e = new r.Interval;
     return e.start(s, () => {
       n(Date.now())
     }), !i && e.stop(), () => e.stop()
@@ -36,8 +36,8 @@ let E = e => {
     entry: t,
     inline: n = !1,
     textColor: s
-  } = e, l = f(t), u = a.useMemo(() => (0, d.formatActiveTimestamp)(t, l), [t, l]);
-  return (0, i.jsx)(r.Text, {
+  } = e, r = f(t), u = a.useMemo(() => (0, d.formatActiveTimestamp)(t, r), [t, r]);
+  return (0, i.jsx)(l.Text, {
     className: n ? c.inlineTimestamp : void 0,
     variant: "text-xs/normal",
     tabularNumbers: !0,
@@ -49,14 +49,14 @@ t.default = e => {
   let {
     entry: t,
     textColor: n
-  } = e, a = (0, d.isEntryActive)(t), l = (0, s.useStateFromStores)([u.default], () => u.default.locale);
+  } = e, a = (0, d.isEntryActive)(t), r = (0, s.useStateFromStores)([u.default], () => u.default.locale);
   return a ? (0, i.jsx)(E, {
     entry: t,
     textColor: n
-  }) : (0, i.jsx)(r.Text, {
+  }) : (0, i.jsx)(l.Text, {
     variant: "text-xs/normal",
     color: n,
     lineClamp: 1,
-    children: (0, d.formatEndedTimestamp)(t, l)
+    children: (0, d.formatEndedTimestamp)(t, r)
   })
 }

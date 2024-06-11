@@ -23,11 +23,11 @@ var a = s("735250"),
   S = s("792258"),
   I = s("657825"),
   x = s("198952"),
-  R = s("329242"),
-  v = s("895328"),
+  v = s("329242"),
+  R = s("895328"),
   M = s("292352"),
-  L = s("981631"),
-  O = s("689938"),
+  O = s("981631"),
+  L = s("689938"),
   y = s("334611");
 
 function D() {
@@ -56,7 +56,7 @@ function b(e) {
   let {
     displayType: t
   } = e, s = n.useCallback(() => {
-    (0, o.showToast)((0, o.createToast)(O.default.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE))
+    (0, o.showToast)((0, o.createToast)(L.default.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE))
   }, []), l = (0, A.default)(), r = (0, T.useActionsForDisplayType)(t), u = (0, T.useActionTotalsForDisplayType)(t), {
     loadMore: d,
     isMoreLoading: c
@@ -69,7 +69,7 @@ function b(e) {
   }, [t, d]);
   i()(_, "No text for action type");
   let x = _.sectionHeader(u),
-    R = n.useCallback(e => {
+    v = n.useCallback(e => {
       let {
         row: t
       } = e, s = r[t];
@@ -81,7 +81,7 @@ function b(e) {
         guildId: s.entity_id
       }, s.event_id) : void 0
     }, [r, _.timestampFormatter]),
-    v = n.useCallback(() => (0, a.jsxs)(a.Fragment, {
+    R = n.useCallback(() => (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(o.Text, {
         className: y.sectionHeader,
         variant: "eyebrow",
@@ -95,18 +95,18 @@ function b(e) {
       }) : null]
     }), [x, _, l, p]);
   if (0 === r.length) return null;
-  let L = r.slice(0, m);
+  let O = r.slice(0, m);
   return (0, a.jsxs)("div", {
     className: y.actionSection,
-    children: [v(), (0, a.jsx)("div", {
+    children: [R(), (0, a.jsx)("div", {
       className: y.actions,
       style: {
-        maxHeight: 65 * L.length
+        maxHeight: 65 * O.length
       },
-      children: L.map((e, t) => R({
+      children: O.map((e, t) => v({
         row: t
       }))
-    }), L.length !== u ? (0, a.jsx)(o.Clickable, {
+    }), O.length !== u ? (0, a.jsx)(o.Clickable, {
       className: y.loadMoreBar,
       onClick: N,
       role: "button",
@@ -116,8 +116,8 @@ function b(e) {
       }) : (0, a.jsx)(o.Text, {
         className: y.loadMore,
         variant: "text-sm/bold",
-        children: O.default.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
-          pageSize: Math.min(u - L.length, M.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS)
+        children: L.default.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
+          pageSize: Math.min(u - O.length, M.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS)
         })
       })
     }) : null]
@@ -126,9 +126,9 @@ function b(e) {
 let j = () => {
     let e = (0, A.default)(),
       t = (0, p.useUserForLinkStatus)(M.UserLinkStatus.ACTIVE),
-      s = (0, m.useAgeSpecificText)(O.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
+      s = (0, m.useAgeSpecificText)(L.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
         activeLinks: t.length
-      }), O.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
+      }), L.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
       n = (0, f.getActivityWindowTimestampFormatter)(!!e),
       l = (0, p.useActivityWindowTimeStamp)(n);
     return e && t.length > 1 ? (0, a.jsx)(o.Text, {
@@ -156,7 +156,7 @@ let j = () => {
         avatarSize: n
       }), (0, a.jsxs)("div", {
         className: y.headerText,
-        children: [(0, a.jsx)(R.default, {
+        children: [(0, a.jsx)(v.default, {
           user: l
         }), void 0 !== s ? (0, a.jsx)(o.Text, {
           variant: "text-sm/medium",
@@ -189,7 +189,7 @@ let j = () => {
       },
       serialize: e => e,
       select: e => {
-        s(e), c.default.track(L.AnalyticEvents.FAMILY_CENTER_ACTION, {
+        s(e), c.default.track(O.AnalyticEvents.FAMILY_CENTER_ACTION, {
           action: M.FamilyCenterAction.SelectTeen
         })
       },
@@ -240,7 +240,7 @@ t.default = e => {
             return (0, a.jsx)(b, {
               displayType: t
             }, "".concat(t, "-list"))
-          }) : (0, a.jsx)(v.default, {
+          }) : (0, a.jsx)(R.default, {
             className: y.emptyActivity,
             text: null != i ? i : ""
           })

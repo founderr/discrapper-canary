@@ -2,8 +2,8 @@
 s.r(t);
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("481060"),
   o = s("358085"),
   d = s("998502"),
@@ -45,13 +45,13 @@ class E extends n.PureComponent {
         children: u.default.Messages.USER_SETTINGS_OPEN_ON_STARTUP_LABEL
       }), (0, o.isWindows)() ? (0, a.jsx)(r.FormSwitch, {
         disabled: !e,
-        className: i()(c.marginTop8, c.marginBottom20),
+        className: l()(c.marginTop8, c.marginBottom20),
         value: !!e && t,
         note: u.default.Messages.USER_SETTINGS_START_MINIMIZED_BODY,
         onChange: this.handleToggleStartMinimized,
         children: u.default.Messages.USER_SETTINGS_START_MINIMIZED_LABEL
       }) : null, (0, a.jsx)(r.FormTitle, {
-        className: i()(c.marginTop20, c.marginBottom8),
+        className: l()(c.marginTop20, c.marginBottom8),
         children: u.default.Messages.USER_SETTINGS_CLOSE_BUTTON
       }), (0, a.jsx)(r.FormSwitch, {
         className: c.marginBottom20,

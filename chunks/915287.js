@@ -60,7 +60,7 @@ function c(e, t, n, s) {
       innerClassName: j,
       innerTag: W = "div",
       ...K
-    } = s, z = r.useRef(null), Z = r.useRef(null), [X, Q] = r.useState(!1), {
+    } = s, z = r.useRef(null), Z = r.useRef(null), [Q, X] = r.useState(!1), {
       scrollerRef: q,
       scrollerState: J,
       getScrollerState: $
@@ -147,8 +147,8 @@ function c(e, t, n, s) {
       ...(0, d.getAnimatedListScrollHelpers)(q, $, er, eo)
     }), [q, $, eE, ec, er, eo]);
     let eI = r.useCallback(e => {
-      ed(1), null == z.current ? Q(!0) : clearTimeout(z.current), z.current = setTimeout(() => {
-        z.current = null, Q(!1)
+      ed(1), null == z.current ? X(!0) : clearTimeout(z.current), z.current = setTimeout(() => {
+        z.current = null, X(!1)
       }, 200), null != f && f(e)
     }, [f, ed]);
     return r.useLayoutEffect(() => {
@@ -167,7 +167,7 @@ function c(e, t, n, s) {
         [e]: !0,
         [t]: G,
         [n]: w,
-        [_.scrolling]: X
+        [_.scrolling]: Q
       }),
       style: (0, d.getMergedOrientationStyles)(B),
       ...K,

@@ -25,8 +25,8 @@ var a = n("735250"),
   v = n("91140"),
   N = n("297781"),
   M = n("591853"),
-  R = n("265048"),
-  y = n("981631"),
+  y = n("265048"),
+  R = n("981631"),
   L = n("689938");
 let j = {
   [s.PlatformType.DESKTOP]: null,
@@ -46,7 +46,7 @@ t.default = e => {
     details: D,
     gameTitle: b,
     activity: U
-  } = (0, R.useGamingContentData)(n), {
+  } = (0, y.useGamingContentData)(n), {
     primaryColor: F,
     secondaryColor: w
   } = (0, x.default)(C), k = (0, o.useStateFromStores)([p.default], () => p.default.locale), {
@@ -106,7 +106,7 @@ t.default = e => {
       entry: n,
       stream: G
     }),
-    J = (0, d.default)(U, y.ActivityFlags.JOIN) || (0, c.default)(U) ? (0, a.jsx)(h.default, {
+    J = (0, d.default)(U, R.ActivityFlags.JOIN) || (0, c.default)(U) ? (0, a.jsx)(h.default, {
       activity: U,
       user: P,
       ButtonComponent: e => (0, a.jsx)(M.PrimaryActionButton, {

@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("47120"), s("653041");
 var a = s("735250"),
   n = s("470079"),
-  l = s("392711"),
-  i = s.n(l),
+  i = s("392711"),
+  l = s.n(i),
   r = s("442837"),
   o = s("481060"),
   d = s("492435"),
@@ -29,17 +29,17 @@ function N(e, t) {
 function g() {
   let e = (0, r.useStateFromStoresObject)([u.default], () => u.default.getAllExperimentOverrideDescriptors()),
     t = (0, r.useStateFromStoresObject)([u.default], () => u.default.getRegisteredExperiments()),
-    [s, l] = n.useState(""),
-    i = (0, T.getBestMatches)((0, T.sortEntries)((0, T.getEntries)(t), e), s);
+    [s, i] = n.useState(""),
+    l = (0, T.getBestMatches)((0, T.sortEntries)((0, T.getEntries)(t), e), s);
   return (0, a.jsxs)(o.FormSection, {
     tag: o.FormTitleTags.H1,
     title: "Experiments",
     children: [(0, a.jsx)(S.default, {
       size: S.default.Sizes.LARGE,
       query: s,
-      onChange: l,
-      onClear: () => l("")
-    }), i.length > 0 ? i.map(t => {
+      onChange: i,
+      onClear: () => i("")
+    }), l.length > 0 ? l.map(t => {
       let s = t.experiment.type === _.ExperimentTypes.GUILD ? m : f;
       return (0, a.jsx)(s, {
         experiment: t.experiment,
@@ -60,11 +60,11 @@ function f(e) {
   var t;
   let {
     experiment: s,
-    experimentId: l,
+    experimentId: i,
     overrideDescriptor: c
   } = e, [S, E] = n.useState(null != c), [T, g] = n.useState(!1), f = n.useCallback(() => {
     E(e => !e)
-  }, []), m = (0, r.useStateFromStores)([u.default], () => u.default.getUserExperimentDescriptor(l)), C = (0, r.useStateFromStores)([u.default], () => u.default.getLoadedUserExperiment(l)), A = (0, r.useStateFromStores)([u.default], () => i().sortBy(u.default.getRecentExposures(_.ExperimentTypes.USER, l), e => {
+  }, []), m = (0, r.useStateFromStores)([u.default], () => u.default.getUserExperimentDescriptor(i)), A = (0, r.useStateFromStores)([u.default], () => u.default.getLoadedUserExperiment(i)), C = (0, r.useStateFromStores)([u.default], () => l().sortBy(u.default.getRecentExposures(_.ExperimentTypes.USER, i), e => {
     let [t, s] = e;
     return -s
   }).map(e => {
@@ -81,7 +81,7 @@ function f(e) {
         }), (0, a.jsx)(o.Text, {
           color: "text-muted",
           variant: "text-sm/normal",
-          children: l
+          children: i
         })]
       }), (0, a.jsx)("span", {
         className: I.experimentDate,
@@ -100,7 +100,7 @@ function f(e) {
             clearable: null != c,
             options: N(s.buckets, s.description),
             onChange: e => {
-              (0, d.overrideBucket)(l, e)
+              (0, d.overrideBucket)(i, e)
             }
           })
         }), "string" == typeof s.description ? (0, a.jsx)("div", {
@@ -115,7 +115,7 @@ function f(e) {
         children: [(0, a.jsxs)(o.FormText, {
           type: o.FormTextTypes.DESCRIPTION,
           children: ["Current assigned to bucket ", null !== (t = null == m ? void 0 : m.bucket) && void 0 !== t ? t : _.ExperimentBuckets.NOT_ELIGIBLE]
-        }), null == C ? (0, a.jsx)(o.FormText, {
+        }), null == A ? (0, a.jsx)(o.FormText, {
           type: o.FormTextTypes.DESCRIPTION,
           children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
         }) : null]
@@ -127,7 +127,7 @@ function f(e) {
         }), (0, a.jsx)(o.Text, {
           variant: "code",
           className: I.pre,
-          children: null == C ? "None" : JSON.stringify(C, void 0, 2)
+          children: null == A ? "None" : JSON.stringify(A, void 0, 2)
         }), (0, a.jsx)(o.FormTitle, {
           tag: "h5",
           className: I.debugTitle,
@@ -143,7 +143,7 @@ function f(e) {
         }), (0, a.jsx)(o.Text, {
           variant: "code",
           className: I.pre,
-          children: 0 === A.length ? "None" : A.join("\n")
+          children: 0 === C.length ? "None" : C.join("\n")
         })]
       }) : (0, a.jsx)(o.Button, {
         className: I.debugButton,
@@ -167,26 +167,26 @@ function m(e) {
   let {
     experiment: t,
     experimentId: s,
-    overrideDescriptor: l
-  } = e, [S, E] = n.useState(null != l), [T, g] = n.useState(!1), f = n.useCallback(() => {
+    overrideDescriptor: i
+  } = e, [S, E] = n.useState(null != i), [T, g] = n.useState(!1), f = n.useCallback(() => {
     E(e => !e)
-  }, []), m = (0, r.useStateFromStores)([u.default], () => u.default.getLoadedGuildExperiment(s)), C = (0, r.useStateFromStores)([u.default], () => i().sortBy(u.default.getRecentExposures(_.ExperimentTypes.GUILD, s), e => {
+  }, []), m = (0, r.useStateFromStores)([u.default], () => u.default.getLoadedGuildExperiment(s)), A = (0, r.useStateFromStores)([u.default], () => l().sortBy(u.default.getRecentExposures(_.ExperimentTypes.GUILD, s), e => {
     let [t, s] = e;
     return -s
   }).map(e => {
     let [t, s] = e;
     return "".concat(new Date(s).toLocaleString(), " (").concat(t, ")")
-  })), [A, O] = (0, r.useStateFromStoresArray)([c.default, u.default], () => {
-    let e = i().sortBy(i().values(c.default.getGuilds()), e => e.name.toLowerCase()),
+  })), [C, O] = (0, r.useStateFromStoresArray)([c.default, u.default], () => {
+    let e = l().sortBy(l().values(c.default.getGuilds()), e => e.name.toLowerCase()),
       t = {},
       a = [];
-    for (let l of e) {
+    for (let i of e) {
       var n;
-      let e = u.default.getGuildExperimentDescriptor(s, l.id),
-        i = null !== (n = null == e ? void 0 : e.bucket) && void 0 !== n ? n : _.ExperimentBuckets.NOT_ELIGIBLE;
-      !(i in t) && (t[i] = 0), t[i]++, a.push("".concat(l.name, ": ").concat(i))
+      let e = u.default.getGuildExperimentDescriptor(s, i.id),
+        l = null !== (n = null == e ? void 0 : e.bucket) && void 0 !== n ? n : _.ExperimentBuckets.NOT_ELIGIBLE;
+      !(l in t) && (t[l] = 0), t[l]++, a.push("".concat(i.name, ": ").concat(l))
     }
-    return [a, i()(t).keys().map(Number).sort().map(e => "".concat(t[e], " guilds in bucket ").concat(e)).join(", ")]
+    return [a, l()(t).keys().map(Number).sort().map(e => "".concat(t[e], " guilds in bucket ").concat(e)).join(", ")]
   }), h = (0, a.jsx)(o.Clickable, {
     onClick: f,
     children: (0, a.jsxs)(o.FormTitle, {
@@ -213,8 +213,8 @@ function m(e) {
         children: [(0, a.jsx)(o.FormItem, {
           title: "Bucket Override",
           children: (0, a.jsx)(o.SingleSelect, {
-            value: null != l ? l.bucket : null,
-            clearable: null != l,
+            value: null != i ? i.bucket : null,
+            clearable: null != i,
             options: N(t.buckets, t.description),
             onChange: e => {
               (0, d.overrideBucket)(s, e)
@@ -244,7 +244,7 @@ function m(e) {
         }), (0, a.jsx)(o.Text, {
           variant: "code",
           className: I.pre,
-          children: A.join("\n")
+          children: C.join("\n")
         }), (0, a.jsx)(o.FormTitle, {
           tag: "h5",
           className: I.debugTitle,
@@ -260,7 +260,7 @@ function m(e) {
         }), (0, a.jsx)(o.Text, {
           variant: "code",
           className: I.pre,
-          children: null == l ? "None" : JSON.stringify(l, void 0, 2)
+          children: null == i ? "None" : JSON.stringify(i, void 0, 2)
         }), (0, a.jsx)(o.FormTitle, {
           tag: "h5",
           className: I.debugTitle,
@@ -268,7 +268,7 @@ function m(e) {
         }), (0, a.jsx)(o.Text, {
           variant: "code",
           className: I.pre,
-          children: 0 === C.length ? "None" : C.join("\n")
+          children: 0 === A.length ? "None" : A.join("\n")
         })]
       }) : (0, a.jsx)(o.Button, {
         className: I.debugButton,

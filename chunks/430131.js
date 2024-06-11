@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("735250");
 s("470079");
 var n = s("442837"),
-  l = s("481060"),
-  i = s("993413"),
+  i = s("481060"),
+  l = s("993413"),
   r = s("496675"),
   o = s("52597"),
   d = s("981631"),
@@ -23,10 +23,10 @@ function S(e) {
     username: E,
     guild: T
   } = e, _ = null != s ? s : S, I = (0, n.useStateFromStores)([r.default], () => r.default.can(d.Permissions.CHANGE_NICKNAME, T) || r.default.can(d.Permissions.MANAGE_NICKNAMES, T));
-  return (0, a.jsxs)(i.default, {
+  return (0, a.jsxs)(l.default, {
     title: u.default.Messages.SERVER_NICKNAME,
     errors: t,
-    children: [(0, a.jsx)(l.TextInput, {
+    children: [(0, a.jsx)(i.TextInput, {
       value: null != _ ? _ : "",
       placeholder: E,
       maxLength: d.USERNAME_MAX_LENGTH,
@@ -34,9 +34,9 @@ function S(e) {
         (0, o.setNewPendingNickname)(e, S)
       },
       disabled: !I
-    }), !I && (0, a.jsx)(l.FormText, {
+    }), !I && (0, a.jsx)(i.FormText, {
       className: c.nicknameDisabled,
-      type: l.FormText.Types.DESCRIPTION,
+      type: i.FormText.Types.DESCRIPTION,
       children: u.default.Messages.CHANGE_IDENTITY_NICKNAME_PERMISSIONS_DISABLED
     })]
   })

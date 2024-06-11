@@ -326,16 +326,16 @@ function Z(e) {
     of t) null != e && e.forEach(e => g(e));
   return !1
 }
-let X = ["username", "avatar", "global_name", "discriminator", "bot", "clan"];
+let Q = ["username", "avatar", "global_name", "discriminator", "bot", "clan"];
 
-function Q(e) {
+function X(e) {
   let {
     updates: t
   } = e;
   return t.map(e => {
     let t = A[e.user.id];
     if (null == t) return !1;
-    let n = X.reduce((n, i) => {
+    let n = Q.reduce((n, i) => {
       if (e.user.hasOwnProperty(i)) {
         let r = t.set((0, s.camelCase)(i), e.user[i]);
         n = n || r !== t, t = r
@@ -665,7 +665,7 @@ class eg extends I.default {
       CACHE_LOADED: e => this.handleLoadCache(e),
       USER_UPDATE: b,
       CURRENT_USER_UPDATE: G,
-      PRESENCE_UPDATES: Q,
+      PRESENCE_UPDATES: X,
       SEARCH_FINISH: V,
       MOD_VIEW_SEARCH_FINISH: V,
       LOAD_MESSAGES_SUCCESS: k,

@@ -30,7 +30,7 @@ function N(e) {
 t.default = function(e, t, n) {
   let M = a.useRef(n);
   return M.current = n, a.useCallback(n => {
-    var a, R, y, L, j;
+    var a, y, R, L, j;
     if (!M.current || n.target !== n.currentTarget) return;
     let O = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
       P = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
@@ -51,7 +51,7 @@ t.default = function(e, t, n) {
       case "e":
         if (O) {
           ;
-          if (a = k, R = w, y = F, !R.isSystemDM() && (0, T.default)(y, a)) n.preventDefault(), (0, x.editMessage)(w, F)
+          if (a = k, y = w, R = F, !y.isSystemDM() && (0, T.default)(R, a)) n.preventDefault(), (0, x.editMessage)(w, F)
         }
         break;
       case "p":

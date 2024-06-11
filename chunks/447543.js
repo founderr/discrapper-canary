@@ -50,8 +50,8 @@ var i = n("525654"),
   K = n("176505"),
   z = n("70722"),
   Z = n("245335"),
-  X = n("157925");
-let Q = "invite",
+  Q = n("157925");
+let X = "invite",
   q = null;
 
 function J(e) {
@@ -117,7 +117,7 @@ function $(e) {
     } = null != t ? t : {}, a = n === W.ChannelTypes.GUILD_STAGE_VOICE, o = {
       navigationReplace: !0
     };
-    return null != r && (o.welcomeModalChannelId = r), a && (o.state = X.STAGE_INVITE_STATE_KEY), null != s && (o.guildScheduledEventId = s.id), e => null != i ? i(e, o, g.default.INVITE_ACCEPT) : (0, L.transitionTo)(e, o, g.default.INVITE_ACCEPT)
+    return null != r && (o.welcomeModalChannelId = r), a && (o.state = Q.STAGE_INVITE_STATE_KEY), null != s && (o.guildScheduledEventId = s.id), e => null != i ? i(e, o, g.default.INVITE_ACCEPT) : (0, L.transitionTo)(e, o, g.default.INVITE_ACCEPT)
   })(i, r)(T)
 }
 let ee = function(e, t) {
@@ -443,7 +443,7 @@ t.default = {
       let e = null != I ? (0, a.getInviteDynamicLinkTemplate)(I) : (0, a.getDefaultDynamicLinkTemplate)(),
         t = (0, o.generateAttemptId)();
       c = (0, o.default)(e, {
-        utmSource: 2 === s ? "friend_invite" : Q,
+        utmSource: 2 === s ? "friend_invite" : X,
         fingerprint: n,
         username: i,
         attemptId: t,
@@ -452,7 +452,7 @@ t.default = {
       }), V.default.track(W.AnalyticEvents.DEEP_LINK_CLICKED, {
         fingerprint: (0, l.maybeExtractId)(n),
         attempt_id: t,
-        source: Q,
+        source: X,
         invite_code: I
       })
     } else "#" === (c = null != t ? W.Routes.INVITE_PROXY(t) : "")[0] && (c = c.slice(1)), c = "discord://".concat(c);

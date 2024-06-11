@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("735250");
 s("470079");
 var n = s("120356"),
-  l = s.n(n),
-  i = s("481060"),
+  i = s.n(n),
+  l = s("481060"),
   r = s("208049"),
   o = s("242291"),
   d = s("153124"),
@@ -22,14 +22,14 @@ let _ = (0, d.uid)();
 function I() {
   let e = (0, o.getAmplitudinalSoundboardVolume)();
   return (0, a.jsxs)("div", {
-    className: l()(T.soundboardRow),
+    className: i()(T.soundboardRow),
     children: [(0, a.jsxs)("div", {
-      className: l()(T.soundboardColumn, T.leftColumn),
-      children: [(0, a.jsx)(i.FormTitle, {
-        tag: i.FormTitleTags.H5,
+      className: i()(T.soundboardColumn, T.leftColumn),
+      children: [(0, a.jsx)(l.FormTitle, {
+        tag: l.FormTitleTags.H5,
         className: T.soundboardTitle,
         children: E.default.Messages.USER_SETTINGS_SOUNDBOARD
-      }), (0, a.jsx)(i.Text, {
+      }), (0, a.jsx)(l.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
         children: E.default.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME_DESCRIPTION_WITH_LINK.format({
@@ -37,13 +37,13 @@ function I() {
         })
       })]
     }), (0, a.jsxs)("div", {
-      className: l()(T.soundboardColumn, T.__invalid_rightColumn),
-      children: [(0, a.jsx)(i.FormTitle, {
+      className: i()(T.soundboardColumn, T.__invalid_rightColumn),
+      children: [(0, a.jsx)(l.FormTitle, {
         id: _,
-        tag: i.FormTitleTags.H5,
+        tag: l.FormTitleTags.H5,
         className: T.soundboardSubtitle,
         children: E.default.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME
-      }), (0, a.jsx)(i.Slider, {
+      }), (0, a.jsx)(l.Slider, {
         initialValue: (0, c.amplitudeToPerceptual)(e),
         maxValue: 100,
         onValueRender: e => "".concat(e.toFixed(0), "%"),

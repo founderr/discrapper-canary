@@ -9,8 +9,8 @@ s.r(t), s.d(t, {
 }), s("47120");
 var a = s("735250"),
   n = s("470079"),
-  l = s("442837"),
-  i = s("481060"),
+  i = s("442837"),
+  l = s("481060"),
   r = s("570140"),
   o = s("782568"),
   d = s("153124"),
@@ -25,42 +25,42 @@ function _(e) {
     onClose: t,
     code: s,
     copyInputTitle: n,
-    bodyText: l
+    bodyText: i
   } = e;
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsxs)(i.ModalHeader, {
+    children: [(0, a.jsxs)(l.ModalHeader, {
       separator: !1,
       className: T.headerContainer,
       children: [(0, a.jsx)("div", {
         className: T.dropArt
-      }), (0, a.jsx)(i.Heading, {
+      }), (0, a.jsx)(l.Heading, {
         variant: "heading-xl/semibold",
         children: E.default.Messages.OUTBOUND_PROMOTION_REDEMPTION_MODAL_TITLE
       })]
-    }), (0, a.jsxs)(i.ModalContent, {
+    }), (0, a.jsxs)(l.ModalContent, {
       className: T.modalContent,
-      children: [(0, a.jsx)(i.Text, {
+      children: [(0, a.jsx)(l.Text, {
         variant: "text-md/normal",
         className: T.codeBodyText,
-        children: l
-      }), (0, a.jsx)(i.FormDivider, {
+        children: i
+      }), (0, a.jsx)(l.FormDivider, {
         className: T.formDivider
-      }), (0, a.jsx)(i.FormSection, {
+      }), (0, a.jsx)(l.FormSection, {
         title: n,
         className: T.formSection,
-        children: (0, a.jsx)(i.Button, {
+        children: (0, a.jsx)(l.Button, {
           onClick: () => (0, o.default)(s),
-          color: i.Button.Colors.BRAND,
-          look: i.Button.Looks.FILLED,
+          color: l.Button.Colors.BRAND,
+          look: l.Button.Looks.FILLED,
           children: E.default.Messages.GIFT_EMBED_BUTTON_CLAIM
         })
       })]
-    }), (0, a.jsx)(i.ModalFooter, {
+    }), (0, a.jsx)(l.ModalFooter, {
       className: T.modalFooter,
-      children: (0, a.jsx)(i.Button, {
+      children: (0, a.jsx)(l.Button, {
         className: T.closeButton,
         onClick: t,
-        look: i.Button.Looks.LINK,
+        look: l.Button.Looks.LINK,
         color: T.closeButton,
         children: E.default.Messages.CLOSE
       })
@@ -77,27 +77,27 @@ function I(e) {
     260001: E.default.Messages.DROPS_QUEST_NOT_COMPLETED_ERROR,
     260002: E.default.Messages.DROPS_NO_CODE_AVAILABLE_ERROR,
     260003: E.default.Messages.DROPS_CODE_ALREADY_CLAIMED_ERROR
-  }, l = E.default.Messages.GENERIC_ERROR_BODY;
-  return null != n[s] && (l = n[s]), (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsxs)(i.ModalHeader, {
+  }, i = E.default.Messages.GENERIC_ERROR_BODY;
+  return null != n[s] && (i = n[s]), (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsxs)(l.ModalHeader, {
       separator: !1,
       className: T.errorHeader,
       children: [(0, a.jsx)("div", {
         className: T.errorArt
-      }), (0, a.jsx)(i.Heading, {
+      }), (0, a.jsx)(l.Heading, {
         variant: "heading-xl/semibold",
         children: E.default.Messages.GENERIC_ERROR_TITLE
       })]
-    }), (0, a.jsx)(i.ModalContent, {
+    }), (0, a.jsx)(l.ModalContent, {
       className: T.errorBody,
-      children: (0, a.jsx)(i.Text, {
+      children: (0, a.jsx)(l.Text, {
         variant: "text-md/normal",
         className: T.bodyText,
-        children: l
+        children: i
       })
-    }), (0, a.jsx)(i.ModalFooter, {
-      children: (0, a.jsx)(i.Button, {
-        color: i.Button.Colors.BRAND,
+    }), (0, a.jsx)(l.ModalFooter, {
+      children: (0, a.jsx)(l.Button, {
+        color: l.Button.Colors.BRAND,
         onClick: t,
         children: E.default.Messages.CLOSE
       })
@@ -111,14 +111,14 @@ t.default = function(e) {
     drop: I,
     platform: N,
     transitionState: g
-  } = e, f = (0, d.useUID)(), [m, C] = n.useState();
+  } = e, f = (0, d.useUID)(), [m, A] = n.useState();
   n.useEffect(() => {
     null == o && r.default.wait(async () => {
       await (0, u.fetchCodePlatformAvailability)(I.dropsQuestId)
     })
   }, [I.dropsQuestId, o]);
-  let A = (0, l.useStateFromStores)([c.default], () => c.default.platformAvailability);
-  return (0, a.jsx)(i.ModalRoot, {
+  let C = (0, i.useStateFromStores)([c.default], () => c.default.platformAvailability);
+  return (0, a.jsx)(l.ModalRoot, {
     transitionState: g,
     "aria-labelledby": f,
     children: (0, a.jsx)(a.Fragment, {
@@ -132,63 +132,63 @@ t.default = function(e) {
           code: o
         });
         {
-          if (null === A) return (0, a.jsx)("div", {
+          if (null === C) return (0, a.jsx)("div", {
             className: T.spinnerContainer,
-            children: (0, a.jsx)(i.Spinner, {})
+            children: (0, a.jsx)(l.Spinner, {})
           });
-          let e = A.length > 0,
-            n = 1 === A.length;
+          let e = C.length > 0,
+            n = 1 === C.length;
           return (0, a.jsxs)(a.Fragment, {
-            children: [(0, a.jsxs)(i.ModalHeader, {
+            children: [(0, a.jsxs)(l.ModalHeader, {
               separator: !1,
               className: T.headerContainer,
               children: [(0, a.jsx)("div", {
                 className: T.dropArt
-              }), (0, a.jsx)(i.Heading, {
+              }), (0, a.jsx)(l.Heading, {
                 variant: "heading-lg/semibold",
                 children: E.default.Messages.OUTBOUND_PROMOTION_REDEMPTION_MODAL_TITLE
               })]
-            }), (0, a.jsxs)(i.ModalContent, {
-              children: [(0, a.jsx)(i.Text, {
+            }), (0, a.jsxs)(l.ModalContent, {
+              children: [(0, a.jsx)(l.Text, {
                 variant: "text-md/normal",
                 className: T.dropBodyText,
                 children: n ? E.default.Messages.DROPS_MODAL_CHOOSE_SINGLE_PLATFORM.format({
-                  platform: (0, S.getPlatformLabel)(A[0])
+                  platform: (0, S.getPlatformLabel)(C[0])
                 }) : E.default.Messages.DROPS_MODAL_CHOOSE_PLATFORM.format({
                   title: I.title
                 })
-              }), (0, a.jsx)(i.FormDivider, {
+              }), (0, a.jsx)(l.FormDivider, {
                 className: T.formDivider
-              }), (0, a.jsxs)(i.FormSection, {
+              }), (0, a.jsxs)(l.FormSection, {
                 className: T.dropFormSection,
-                children: [(0, a.jsx)(i.SingleSelect, {
-                  onChange: C,
-                  options: A.map(e => ({
+                children: [(0, a.jsx)(l.SingleSelect, {
+                  onChange: A,
+                  options: C.map(e => ({
                     value: e,
                     label: (0, S.getPlatformLabel)(e)
                   })),
-                  value: n ? A[0] : m,
+                  value: n ? C[0] : m,
                   isDisabled: !e,
                   className: e ? "" : T.selectDangerBorder,
-                  look: e ? i.SelectLooks.FILLED : i.SelectLooks.CUSTOM
-                }), !e && (0, a.jsx)(i.Text, {
+                  look: e ? l.SelectLooks.FILLED : l.SelectLooks.CUSTOM
+                }), !e && (0, a.jsx)(l.Text, {
                   variant: "text-sm/medium",
                   color: "text-danger",
                   className: T.errorCodesText,
                   children: E.default.Messages.DROPS_CODES_RAN_OUT
                 })]
               })]
-            }), (0, a.jsxs)(i.ModalFooter, {
-              children: [e && (0, a.jsx)(i.Button, {
-                color: i.Button.Colors.BRAND,
+            }), (0, a.jsxs)(l.ModalFooter, {
+              children: [e && (0, a.jsx)(l.Button, {
+                color: l.Button.Colors.BRAND,
                 onClick: () => {
-                  (0, i.openModalLazy)(async () => {
+                  (0, l.openModalLazy)(async () => {
                     let {
                       default: e
                     } = await Promise.all([s.e("99387"), s.e("5004")]).then(s.bind(s, "233070"));
                     return s => (void 0 !== m || n) && (0, a.jsx)(e, {
                       ...s,
-                      platform: void 0 === m ? A[0] : m,
+                      platform: void 0 === m ? C[0] : m,
                       code: o,
                       dropsQuestId: I.dropsQuestId,
                       closeParentModal: t,
@@ -198,14 +198,14 @@ t.default = function(e) {
                 },
                 disabled: void 0 === m && !n,
                 children: E.default.Messages.UNLOCK_CODE
-              }), e ? (0, a.jsx)(i.Button, {
+              }), e ? (0, a.jsx)(l.Button, {
                 onClick: t,
-                look: i.Button.Looks.LINK,
+                look: l.Button.Looks.LINK,
                 color: T.maybeLaterButton,
                 children: E.default.Messages.MAYBE_LATER
-              }) : (0, a.jsx)(i.Button, {
+              }) : (0, a.jsx)(l.Button, {
                 onClick: t,
-                look: i.Button.Looks.LINK,
+                look: l.Button.Looks.LINK,
                 color: T.closeButton,
                 children: E.default.Messages.CLOSE
               })]

@@ -183,7 +183,7 @@ function K(e, t) {
       let e = B[b];
       null != e && e.type === d.AutocompleterResultTypes.HEADER && (b = (0, d.findNextSelectedResult)(d.FindResultDirections.DOWN, b, B))
     }
-    X.emitChange()
+    Q.emitChange()
   }(e, t))
 }
 
@@ -232,7 +232,7 @@ class Z extends(r = o.default.PersistedStore) {
   }
 }
 y(Z, "displayName", "QuickSwitcherStore"), y(Z, "persistKey", "QuickSwitcherStore");
-let X = new Z(u.default, {
+let Q = new Z(u.default, {
   CONNECTION_OPEN: Y,
   CONNECTION_OPEN_SUPPLEMENTAL: Y,
   QUICKSWITCHER_SHOW: W,
@@ -280,4 +280,4 @@ let X = new Z(u.default, {
     (H = H.filter(e => e !== t)).unshift(t), H.length > 4 && (H.length = 4)
   }
 });
-t.default = X
+t.default = Q

@@ -78,7 +78,7 @@ function I(e) {
     {
       isShowing: N,
       unreadCount: M,
-      mentionCount: R
+      mentionCount: y
     } = function(e) {
       let {
         unreadCount: t,
@@ -99,7 +99,7 @@ function I(e) {
         mentionCount: n
       }
     }(n),
-    y = l.useCallback(() => {
+    R = l.useCallback(() => {
       null == c || c(), !v && h && (null == E || E()), u.default.updateChatOpen(n, !v)
     }, [n, v, c, h, E]),
     L = l.useCallback(e => {
@@ -134,11 +134,11 @@ function I(e) {
     }
   }, [O]);
   let b = [t = f && A ? S.default.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : v ? S.default.Messages.VIDEO_CALL_HIDE_CHAT : S.default.Messages.VIDEO_CALL_SHOW_CHAT];
-  return R > 0 && b.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
-    mentionCount: R
+  return y > 0 && b.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
+    mentionCount: y
   })), M > 0 && b.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, a.jsx)(C.default, {
     buttonRef: x,
-    onClick: y,
+    onClick: R,
     label: t,
     "aria-label": b.join(", "),
     iconComponent: L,

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   createLayer: function() {
-    return i
+    return l
   },
   exportConfig: function() {
     return o
@@ -12,14 +12,14 @@ s.r(t), s.d(t, {
 });
 var a = s("392711"),
   n = s("423891"),
-  l = s.n(n);
-let i = async (e, t, s) => {
+  i = s.n(n);
+let l = async (e, t, s) => {
   var a;
   return {
     src: e,
     loop: !1,
     loopDelay: 0,
-    duration: (a = await t.arrayBuffer(), l().decode(a).frames.length * 80),
+    duration: (a = await t.arrayBuffer(), i().decode(a).frames.length * 80),
     start: 0,
     position: {
       x: 0,

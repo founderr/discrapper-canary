@@ -46,8 +46,8 @@ var i = n("735250"),
   K = n("806519"),
   z = n("358085"),
   Z = n("74538"),
-  X = n("663993"),
-  Q = n("823453"),
+  Q = n("663993"),
+  X = n("823453"),
   q = n("628123"),
   J = n("962745"),
   $ = n("151851"),
@@ -58,14 +58,14 @@ n("792295"), Promise.resolve().then(n.bind(n, "62883")).then(e => {
   z.isPlatformEmbedded ? window.addEventListener("contextmenu", e.contextMenuCallbackNative, !1) : window.addEventListener("contextmenu", e.contextMenuCallbackWeb, !1)
 }), (0, E.setDesignConfig)({
   getDefaultLinkInterceptor: A.default
-}), (0, X.makeLazy)({
+}), (0, Q.makeLazy)({
   createPromise: () => Promise.all([n.e("99387"), n.e("40326"), n.e("80451"), n.e("30634"), n.e("54343")]).then(n.bind(n, "849493")),
   webpackId: "849493"
-}), (0, X.makeLazy)({
+}), (0, Q.makeLazy)({
   createPromise: () => Promise.all([n.e("40326"), n.e("80451"), n.e("30634"), n.e("81811")]).then(n.bind(n, "80753")),
   webpackId: "80753"
 });
-let ei = (0, X.makeLazy)({
+let ei = (0, Q.makeLazy)({
     createPromise: () => Promise.all([n.e("99387"), n.e("46369")]).then(n.bind(n, "177741")),
     webpackId: "177741"
   }),
@@ -82,7 +82,7 @@ t.default = function(e) {
     skipsSettingDefaultPageTitle: n
   } = e, {
     pathname: s
-  } = (0, u.useLocation)(), E = (0, z.getPlatform)(), A = d.isMobile || d.isTablet, x = (0, _.useStateFromStores)([k.default], () => k.default.darkSidebar ? ee.ThemeTypes.DARK : void 0), X = (0, _.useStateFromStores)([N.default], () => N.default.useForcedColors ? "yes" : "no"), [$, es] = (0, _.useStateFromStoresArray)([D.default], () => [D.default.isEditorOpen, D.default.isCoachmark]), ea = (0, _.useStateFromStores)([R.default], () => R.default.isEditorOpen), {
+  } = (0, u.useLocation)(), E = (0, z.getPlatform)(), A = d.isMobile || d.isTablet, x = (0, _.useStateFromStores)([k.default], () => k.default.darkSidebar ? ee.ThemeTypes.DARK : void 0), Q = (0, _.useStateFromStores)([N.default], () => N.default.useForcedColors ? "yes" : "no"), [$, es] = (0, _.useStateFromStoresArray)([D.default], () => [D.default.isEditorOpen, D.default.isCoachmark]), ea = (0, _.useStateFromStores)([R.default], () => R.default.isEditorOpen), {
     enabled: eo
   } = G.default.useExperiment({
     location: "client_themes_coachmark_reintro"
@@ -110,7 +110,7 @@ t.default = function(e) {
   return (0, i.jsx)(w.default, {
     children: (0, i.jsx)(p.default, {
       children: (0, i.jsxs)(I.RedesignIconContextProvider, {
-        children: [(0, i.jsx)(Q.default, {
+        children: [(0, i.jsx)(X.default, {
           skipsSettingDefaultPageTitle: n
         }), (0, i.jsx)(J.default, {
           children: (0, i.jsx)(q.default, {
@@ -164,5 +164,5 @@ t.default = function(e) {
         })]
       })
     })
-  }, X)
+  }, Q)
 }

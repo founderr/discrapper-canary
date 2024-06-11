@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return x
+    return D
   }
 });
 var a = s("735250"),
   n = s("470079"),
-  l = s("512722"),
-  i = s.n(l),
+  i = s("512722"),
+  l = s.n(i),
   r = s("442837"),
   o = s("570140"),
   d = s("232567"),
@@ -22,42 +22,42 @@ var a = s("735250"),
   g = s("296810"),
   f = s("935147"),
   m = s("350327"),
-  C = s("246946"),
-  A = s("25990"),
+  A = s("246946"),
+  C = s("25990"),
   O = s("594174"),
   h = s("74538"),
-  p = s("695346"),
-  R = s("265159"),
+  R = s("695346"),
+  p = s("265159"),
   M = s("532495");
 
-function x() {
+function D() {
   let e = (0, r.useStateFromStores)([O.default], () => {
     let e = O.default.getCurrentUser();
-    return i()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e
+    return l()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e
   });
   n.useEffect(() => {
     (0, d.fetchProfile)(e.id)
   }, [e.id]);
-  let t = (0, r.useStateFromStores)([C.default], () => C.default.hidePersonalInformation),
+  let t = (0, r.useStateFromStores)([A.default], () => A.default.hidePersonalInformation),
     {
       pendingAvatar: s,
-      pendingBanner: l,
-      pendingBio: x,
-      pendingPronouns: D,
+      pendingBanner: i,
+      pendingBio: D,
+      pendingPronouns: x,
       pendingGlobalName: L,
       pendingAccentColor: P,
       pendingAvatarDecoration: b,
       pendingThemeColors: v,
       pendingProfileEffectId: U
-    } = (0, r.useStateFromStoresObject)([A.default], () => {
-      let e = A.default.getAllPending(),
-        t = A.default.getErrors();
+    } = (0, r.useStateFromStoresObject)([C.default], () => {
+      let e = C.default.getAllPending(),
+        t = C.default.getErrors();
       return {
         ...e,
         errors: t
       }
     }),
-    j = p.UseLegacyChatInput.useSetting() && null != x ? I.default.parse(void 0, x).content : x,
+    j = R.UseLegacyChatInput.useSetting() && null != D ? I.default.parse(void 0, D).content : D,
     G = h.default.canUsePremiumProfileCustomization(e),
     {
       analyticsLocations: F
@@ -65,12 +65,12 @@ function x() {
     B = {
       user: e,
       canUsePremiumCustomization: G,
-      onUpsellClick: R.default,
+      onUpsellClick: p.default,
       onAvatarChange: u.setPendingAvatar,
       onBannerChange: m.setPendingBanner,
-      pendingBanner: l,
+      pendingBanner: i,
       pendingBio: j,
-      pendingPronouns: D,
+      pendingPronouns: x,
       pendingAvatar: s,
       pendingGlobalName: L,
       pendingAvatarDecoration: b,

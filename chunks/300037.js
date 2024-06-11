@@ -3,8 +3,8 @@ s.r(t);
 var a = s("735250");
 s("470079");
 var n = s("120356"),
-  l = s.n(n),
-  i = s("399606"),
+  i = s.n(n),
+  l = s("399606"),
   r = s("481060"),
   o = s("623624"),
   d = s("678558"),
@@ -20,9 +20,9 @@ t.default = function(e) {
     className: t,
     guildId: s,
     boostingVariant: n
-  } = e, N = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(s), [s]);
+  } = e, N = (0, l.useStateFromStores)([u.default], () => u.default.getGuild(s), [s]);
   return null == N ? (0, a.jsx)("div", {
-    className: l()(t, I.guildContainer),
+    className: i()(t, I.guildContainer),
     children: (0, a.jsx)("div", {
       className: I.guildInfoContainer,
       children: (0, a.jsx)(r.Text, {
@@ -31,7 +31,7 @@ t.default = function(e) {
       })
     })
   }) : (0, a.jsxs)("div", {
-    className: l()(t, I.guildContainer),
+    className: i()(t, I.guildContainer),
     children: [(0, a.jsx)(c.default, {
       className: I.__invalid_guildIcon,
       guild: N,

@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("735250"),
   n = s("470079"),
-  l = s("512722"),
-  i = s.n(l),
+  i = s("512722"),
+  l = s.n(i),
   r = s("442837"),
   o = s("481060"),
   d = s("570140"),
@@ -22,22 +22,22 @@ var a = s("735250"),
   g = s("621853"),
   f = s("246946"),
   m = s("594174"),
-  C = s("626135"),
-  A = s("63063"),
+  A = s("626135"),
+  C = s("63063"),
   O = s("74538"),
   h = s("18438"),
-  p = s("778825"),
-  R = s("856607"),
+  R = s("778825"),
+  p = s("856607"),
   M = s("594496"),
-  x = s("856768"),
-  D = s("981631"),
+  D = s("856768"),
+  x = s("981631"),
   L = s("689938");
 
 function P() {
-  C.default.track(D.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
-    location_page: D.AnalyticsPages.GUILD_MEMBER_PROFILE_SETTINGS,
-    location_object: D.AnalyticsObjects.BADGE
-  }), (0, h.closeGuildIdentitySettings)(), u.default.open(D.UserSettingsSections.PREMIUM)
+  A.default.track(x.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+    location_page: x.AnalyticsPages.GUILD_MEMBER_PROFILE_SETTINGS,
+    location_object: x.AnalyticsObjects.BADGE
+  }), (0, h.closeGuildIdentitySettings)(), u.default.open(x.UserSettingsSections.PREMIUM)
 }
 
 function b(e) {
@@ -48,7 +48,7 @@ function b(e) {
     return s => (0, a.jsx)(t, {
       source: {
         ...e,
-        page: D.AnalyticsPages.GUILD_MEMBER_PROFILE_SETTINGS
+        page: x.AnalyticsPages.GUILD_MEMBER_PROFILE_SETTINGS
       },
       ...s
     })
@@ -60,10 +60,10 @@ function v(e) {
     selectedGuild: t
   } = e, {
     analyticsLocations: s
-  } = (0, T.default)(S.default.GUILD_PROFILE), l = (0, r.useStateFromStores)([m.default], () => {
+  } = (0, T.default)(S.default.GUILD_PROFILE), i = (0, r.useStateFromStores)([m.default], () => {
     let e = m.default.getCurrentUser();
-    return i()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e
-  }), u = (0, r.useStateFromStores)([g.default], () => !g.default.isFetchingProfile(l.id)), C = (0, r.useStateFromStores)([f.default], () => f.default.hidePersonalInformation), {
+    return l()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e
+  }), u = (0, r.useStateFromStores)([g.default], () => !g.default.isFetchingProfile(i.id)), A = (0, r.useStateFromStores)([f.default], () => f.default.hidePersonalInformation), {
     pendingAvatar: v,
     pendingAvatarDecoration: U,
     pendingProfileEffectId: j,
@@ -73,21 +73,21 @@ function v(e) {
     pendingPronouns: y,
     pendingThemeColors: V,
     source: H
-  } = (0, r.useStateFromStoresObject)([p.default], () => ({
-    ...p.default.getAllPending(),
-    source: p.default.getSource()
+  } = (0, r.useStateFromStoresObject)([R.default], () => ({
+    ...R.default.getAllPending(),
+    source: R.default.getSource()
   }));
   if (n.useEffect(() => () => d.default.wait(h.resetAllPending), []), n.useEffect(() => {
-      null != H && E.default.trackWithMetadata(D.AnalyticEvents.SETTINGS_PANE_VIEWED, {
+      null != H && E.default.trackWithMetadata(x.AnalyticEvents.SETTINGS_PANE_VIEWED, {
         settings_type: "guild",
-        destination_pane: D.AnalyticsSections.SETTINGS_CUSTOMIZE_PROFILE,
+        destination_pane: x.AnalyticsSections.SETTINGS_CUSTOMIZE_PROFILE,
         source: H
       })
-    }, [H]), C) return (0, a.jsx)(c.default, {});
+    }, [H]), A) return (0, a.jsx)(c.default, {});
   if (!u) return (0, a.jsx)(o.Spinner, {});
-  let Y = O.default.canUsePremiumProfileCustomization(l),
+  let Y = O.default.canUsePremiumProfileCustomization(i),
     k = {
-      user: l,
+      user: i,
       guild: t,
       canUsePremiumCustomization: Y,
       onAvatarChange: h.setPendingAvatar,
@@ -109,10 +109,10 @@ function v(e) {
     children: [(0, a.jsx)(o.Text, {
       variant: "text-sm/normal",
       children: L.default.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({
-        helpCenterLink: A.default.getArticleURL(D.HelpdeskArticles.GUILD_PROFILES)
+        helpCenterLink: C.default.getArticleURL(x.HelpdeskArticles.GUILD_PROFILES)
       })
     }), null != t ? (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(x.default, {
+      children: [(0, a.jsx)(D.default, {
         guildId: t.id,
         onChange: e => {
           null != e && (0, h.setCurrentGuild)(e)
@@ -128,6 +128,6 @@ function v(e) {
         }),
         children: (0, a.jsx)(M.default, {})
       })]
-    }) : (0, a.jsx)(R.default, {})]
+    }) : (0, a.jsx)(p.default, {})]
   })
 }

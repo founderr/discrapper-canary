@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("724458");
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("442837"),
   o = s("481060"),
   d = s("921801"),
@@ -25,12 +25,12 @@ function g(e) {
     label: t,
     onChange: s,
     enabled: n,
-    subLabel: l
+    subLabel: i
   } = e;
   return (0, a.jsx)(o.FormSwitch, {
     value: !!n,
     onChange: s,
-    note: l,
+    note: i,
     children: t
   })
 }
@@ -40,15 +40,15 @@ function f() {
     t = n.createRef(),
     {
       categories: s,
-      initialized: l
+      initialized: i
     } = (0, r.useStateFromStoresObject)([S.default], () => S.default.getEmailSettings());
   n.useEffect(() => {
-    if (null == l)(0, c.fetchEmailSettings)();
+    if (null == i)(0, c.fetchEmailSettings)();
     else if (e === E.EMAILS_SUBSECTION.toUpperCase()) {
       var s;
       null == t || null === (s = t.current) || void 0 === s || s.scrollIntoView(!0)
     }
-  }, [l, t, e]);
+  }, [i, t, e]);
   let f = E.MarketingEmailCategories.reduce((e, t) => e || !!s[t], !1),
     m = {
       [E.EmailCategories.COMMUNICATION]: T.WebSetting.NOTIFICATIONS_EMAILS_COMMUNICATION,
@@ -57,30 +57,30 @@ function f() {
       [E.EmailCategories.TIPS]: T.WebSetting.NOTIFICATIONS_EMAILS_TIPS,
       [E.EmailCategories.RECOMMENDATIONS_AND_EVENTS]: T.WebSetting.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS
     };
-  return l ? (0, a.jsxs)(d.Subsetting, {
+  return i ? (0, a.jsxs)(d.Subsetting, {
     setting: T.WebSetting.NOTIFICATIONS_EMAILS,
     children: [(0, a.jsx)("div", {
       ref: t
     }), (0, a.jsxs)(o.FormSection, {
-      className: i()(N.marginTop40),
+      className: l()(N.marginTop40),
       tag: o.FormTitleTags.H1,
       title: _.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS,
       children: [E.EmailCategoriesList.map(e => {
         let {
           category: t,
           label: n,
-          subLabel: l
-        } = e, i = m[t], r = (0, a.jsx)(g, {
+          subLabel: i
+        } = e, l = m[t], r = (0, a.jsx)(g, {
           label: n(),
-          subLabel: l(),
+          subLabel: i(),
           enabled: s[t],
           onChange: e => {
             var s, a;
             return s = t, a = e, void(0, c.updateEmailSetting)(s, a)
           }
         }, n());
-        return null != i ? (0, a.jsx)(d.Subsetting, {
-          setting: i,
+        return null != l ? (0, a.jsx)(d.Subsetting, {
+          setting: l,
           children: r
         }, n()) : r
       }), (0, a.jsxs)(d.Subsetting, {
@@ -96,7 +96,7 @@ function f() {
           type: o.FormTextTypes.DESCRIPTION,
           children: _.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS_UNSUB_MARKETING_DESCRIPTION
         }), (0, a.jsx)(o.FormDivider, {
-          className: i()(N.marginTop40, N.marginBottom40)
+          className: l()(N.marginTop40, N.marginBottom40)
         })]
       })]
     })]

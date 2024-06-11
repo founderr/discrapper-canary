@@ -264,7 +264,7 @@ function Z(e) {
   return t
 }
 
-function X(e) {
+function Q(e) {
   let {
     serializedExperimentStore: t,
     user: n
@@ -272,7 +272,7 @@ function X(e) {
   !P && k(n) && (P = !0), p = t.hasLoadedExperiments, O = t.trackedExposureExperiments, L = t.loadedUserExperiments, M = t.userExperimentOverrides, y = t.guildExperimentOverrides, v = Z(t.loadedGuildExperiments), D = {}
 }
 
-function Q() {
+function X() {
   p = !0
 }
 
@@ -586,9 +586,9 @@ class er extends _.default {
       LOGIN_SUCCESS: J,
       CONNECTION_OPEN: W,
       EXPERIMENTS_FETCH_SUCCESS: W,
-      OVERLAY_INITIALIZE: X,
+      OVERLAY_INITIALIZE: Q,
       CACHE_LOADED: () => this.loadCache(),
-      EXPERIMENTS_FETCH_FAILURE: Q,
+      EXPERIMENTS_FETCH_FAILURE: X,
       EXPERIMENT_OVERRIDE_BUCKET: en,
       GUILD_CREATE: ei,
       GUILD_UPDATE: ei

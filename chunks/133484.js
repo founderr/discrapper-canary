@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("735250"),
   n = s("470079"),
-  l = s("481060"),
-  i = s("410030"),
+  i = s("481060"),
+  l = s("410030"),
   r = s("100527"),
   o = s("906732"),
   d = s("197115"),
@@ -25,7 +25,7 @@ function g(e) {
     user: t,
     showOverlay: s,
     children: g
-  } = e, f = (0, i.default)(), {
+  } = e, f = (0, l.default)(), {
     analyticsLocations: m
   } = (0, o.default)(r.default.PREMIUM_UPSELL_OVERLAY);
   return (n.useEffect(() => {
@@ -52,18 +52,18 @@ function g(e) {
         }(f)
       }), (0, a.jsxs)("div", {
         className: _.upsellTextContainer,
-        children: [(0, a.jsx)(l.Text, {
+        children: [(0, a.jsx)(i.Text, {
           variant: "text-lg/semibold",
           color: "always-white",
           children: T.default.Messages.GUILD_IDENTITY_UPSELL_OVERLAY_TITLE
-        }), (0, a.jsx)(l.Text, {
+        }), (0, a.jsx)(i.Text, {
           variant: "text-sm/normal",
           color: "always-white",
           children: T.default.Messages.GUILD_IDENTITY_UPSELL_OVERLAY_DESCRIPTION_THEMES
         })]
       }), (0, a.jsx)(d.default, {
-        size: l.Button.Sizes.LARGE,
-        color: l.Button.Colors.GREEN,
+        size: i.Button.Sizes.LARGE,
+        color: i.Button.Colors.GREEN,
         buttonText: c.default.isPremium(t) ? T.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : T.default.Messages.CHANGE_IDENTITY_UPSELL,
         subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2
       })]

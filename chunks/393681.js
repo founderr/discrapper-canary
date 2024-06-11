@@ -2,8 +2,8 @@
 s.r(t), s("47120");
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("512722"),
   o = s.n(r),
   d = s("442837"),
@@ -18,15 +18,15 @@ var a = s("735250"),
   g = s("347649"),
   f = s("332473"),
   m = s("303172"),
-  C = s("921801"),
-  A = s("484459"),
+  A = s("921801"),
+  C = s("484459"),
   O = s("430824"),
   h = s("325067"),
-  p = s("246946"),
-  R = s("594174"),
+  R = s("246946"),
+  p = s("594174"),
   M = s("285952"),
-  x = s("474333"),
-  D = s("499150"),
+  D = s("474333"),
+  x = s("499150"),
   L = s("709054"),
   P = s("706454"),
   b = s("210887"),
@@ -47,7 +47,7 @@ class W extends n.PureComponent {
     let {
       currentUser: e
     } = this.props;
-    (0, A.default)(e.id, e.getAvatarURL(void 0, 80))
+    (0, C.default)(e.id, e.getAvatarURL(void 0, 80))
   }
   componentWillUnmount() {
     S.default.clearBackupCodes(), (0, E.accountDetailsClose)()
@@ -106,12 +106,12 @@ class W extends n.PureComponent {
     }
   }
   renderPomeloWarning() {
-    return this.props.shouldRenderPomeloWarning ? (0, a.jsxs)(x.default, {
+    return this.props.shouldRenderPomeloWarning ? (0, a.jsxs)(D.default, {
       className: k.accountWarningBodyText,
-      messageType: x.HelpMessageTypes.WARNING,
+      messageType: D.HelpMessageTypes.WARNING,
       children: [this.props.forceMigrationExperiment ? Y.default.Messages.POMELO_ACTION_NEEDED_FORCE.format({
         date: (0, N.getLocalizedForcedUUDate)(this.props.locale)
-      }) : Y.default.Messages.POMELO_ACTION_NEEDED.format(), " ", "", (0, a.jsx)(D.default, {
+      }) : Y.default.Messages.POMELO_ACTION_NEEDED.format(), " ", "", (0, a.jsx)(x.default, {
         className: k.noticeTextButton,
         onClick: () => (0, m.default)(H.PomeloEntrypoints.USER_SETTINGS),
         children: Y.default.Messages.GET_STARTED
@@ -131,21 +131,21 @@ class W extends n.PureComponent {
       backupCodes: e,
       currentUser: t,
       theme: n
-    } = this.props, l = (0, u.isThemeDark)(n) ? s("555702") : s("610802");
+    } = this.props, i = (0, u.isThemeDark)(n) ? s("555702") : s("610802");
     return (0, a.jsxs)(c.FormSection, {
-      className: i()(k.userSettingsSecurity, w.marginTop40),
+      className: l()(k.userSettingsSecurity, w.marginTop40),
       title: Y.default.Messages.USER_SETTINGS_ACCOUNT_PASSWORD_AND_AUTHENTICATION,
       tag: "h1",
       children: [t.mfaEnabled ? (0, a.jsx)(c.FormSection, {
         children: (0, a.jsxs)(c.FormTitle, {
-          className: i()(k.isEnabled, w.marginBottom20),
+          className: l()(k.isEnabled, w.marginBottom20),
           children: [(0, a.jsx)("img", {
             alt: "",
-            className: i()(k.lockIcon),
+            className: l()(k.lockIcon),
             src: s("511391")
           }), Y.default.Messages.TWO_FA_ENABLED]
         })
-      }) : null, (0, a.jsx)(C.Subsetting, {
+      }) : null, (0, a.jsx)(A.Subsetting, {
         setting: y.WebSetting.ACCOUNT_CHANGE_PASSWORD,
         children: (0, a.jsx)("div", {
           children: (0, a.jsx)(c.Button, {
@@ -158,7 +158,7 @@ class W extends n.PureComponent {
             children: Y.default.Messages.CHANGE_PASSWORD
           })
         })
-      }), (0, a.jsx)(C.Subsetting, {
+      }), (0, a.jsx)(A.Subsetting, {
         setting: y.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
         children: (0, a.jsxs)(M.default, {
           align: M.default.Align.STRETCH,
@@ -172,7 +172,7 @@ class W extends n.PureComponent {
             basis: "323px",
             grow: 0,
             children: (0, a.jsx)("img", {
-              src: l,
+              src: i,
               className: k.userSettingsSecurityImage,
               alt: ""
             })
@@ -255,13 +255,13 @@ class W extends n.PureComponent {
   }
   render() {
     return this.props.hide ? (0, a.jsx)(T.default, {}) : (0, a.jsxs)("div", {
-      children: [this.renderConfirmModals(), (0, a.jsx)(C.Subsetting, {
+      children: [this.renderConfirmModals(), (0, a.jsx)(A.Subsetting, {
         setting: y.WebSetting.ACCOUNT_PROFILE,
         children: this.renderAccountSettings()
-      }), (0, a.jsx)(C.Subsetting, {
+      }), (0, a.jsx)(A.Subsetting, {
         setting: y.WebSetting.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
         children: this.renderSecuritySettings()
-      }), (0, a.jsx)(C.Subsetting, {
+      }), (0, a.jsx)(A.Subsetting, {
         setting: y.WebSetting.ACCOUNT_REMOVAL,
         children: this.renderAccountRemovalSettings()
       })]
@@ -309,28 +309,28 @@ class W extends n.PureComponent {
   }
 }
 t.default = () => {
-  let e = (0, d.useStateFromStores)([R.default], () => {
-      let e = R.default.getCurrentUser();
+  let e = (0, d.useStateFromStores)([p.default], () => {
+      let e = p.default.getCurrentUser();
       return o()(null != e, "ConnectedUserAccountSettings: currentUser cannot be undefined"), e
     }),
     t = (0, d.useStateFromStores)([h.default], () => h.default.getBackupCodes()),
-    s = (0, d.useStateFromStores)([p.default], () => p.default.hidePersonalInformation),
+    s = (0, d.useStateFromStores)([R.default], () => R.default.hidePersonalInformation),
     {
       hasSearchResults: n,
-      searchResults: l
+      searchResults: i
     } = (0, B.useSettingSearchResults)(),
-    i = (0, d.useStateFromStores)([b.default], () => b.default.theme),
+    l = (0, d.useStateFromStores)([b.default], () => b.default.theme),
     r = (0, f.useIsEligibleForPomelo)(),
     u = (0, g.useForceMigration)(),
     c = (0, d.useStateFromStores)([P.default], () => P.default.locale);
   return (0, a.jsx)(W, {
-    theme: i,
+    theme: l,
     currentUser: e,
     backupCodes: t,
     hide: s,
     shouldRenderPomeloWarning: r,
     forceMigrationExperiment: u,
     locale: c,
-    searchFilter: n && !l.includes(y.WebSetting.ACCOUNT) ? l : void 0
+    searchFilter: n && !i.includes(y.WebSetting.ACCOUNT) ? i : void 0
   })
 }

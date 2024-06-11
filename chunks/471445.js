@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   getChannelIconComponent: function() {
-    return X
+    return Q
   },
   getChannelIconTooltipText: function() {
     return Z
   },
   getSimpleChannelIconComponent: function() {
-    return Q
+    return X
   }
 });
 var i = n("281956"),
@@ -103,13 +103,13 @@ function Z(e, t, n, i) {
   }
 }
 
-function X(e, t) {
+function Q(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
     {
       locked: z = !1,
       video: Z = !1,
-      stream: X = !1,
-      hasActiveThreads: Q = !1,
+      stream: Q = !1,
+      hasActiveThreads: X = !1,
       textFocused: q = !1
     } = n;
   if (null == e) return null;
@@ -118,7 +118,7 @@ function X(e, t) {
   if ((null == e ? void 0 : e.id) === (null == t ? void 0 : t.rulesChannelId)) return T.default;
   switch (e.type) {
     case K.ChannelTypes.GUILD_ANNOUNCEMENT:
-      if (Q) {
+      if (X) {
         if (e.isNSFW()) return y.default;
         if ((0, j.default)(e)) return U.default;
         else return l.default
@@ -139,7 +139,7 @@ function X(e, t) {
       if (e.isForumPost()) return O.default;
       else return Y.default;
     case K.ChannelTypes.GUILD_TEXT:
-      if (Q) {
+      if (X) {
         if (e.isNSFW()) return P.default;
         if ((0, j.default)(e)) return b.default;
         else return Y.default
@@ -164,7 +164,7 @@ function X(e, t) {
     case K.ChannelTypes.GUILD_VOICE:
       if (q) return A.default;
       if (e.isNSFW()) return B.default;
-      if (X) return H.default;
+      if (Q) return H.default;
       if (J) {
         if ((0, j.default)(e)) return C.default;
         return Z ? _.default : k.default
@@ -185,7 +185,7 @@ function X(e, t) {
   }
 }
 
-function Q(e) {
+function X(e) {
   switch (e) {
     case K.ChannelTypes.GUILD_ANNOUNCEMENT:
       return v.default;

@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("47120");
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("481060"),
   o = s("285952"),
   d = s("490529"),
@@ -47,7 +47,7 @@ class N extends n.Component {
         houseName: (0, d.getHouseNameFromHouseID)(e)
       });
       return (0, a.jsx)("div", {
-        className: i()(S.membershipDialog, E[e]),
+        className: l()(S.membershipDialog, E[e]),
         children: (0, a.jsxs)("div", {
           className: S.membershipDialogContent,
           children: [(0, a.jsxs)(o.default, {
@@ -73,7 +73,7 @@ class N extends n.Component {
               shrink: 0,
               wrap: !0,
               children: (0, a.jsx)("img", {
-                className: i()(S.houseLogo, T[e]),
+                className: l()(S.houseLogo, T[e]),
                 src: _[e],
                 alt: t
               })
@@ -121,8 +121,8 @@ class N extends n.Component {
     })
   }
   constructor(...e) {
-    var t, n, l;
-    super(...e), t = this, n = "handleJoinHypeSquadClick", l = () => {
+    var t, n, i;
+    super(...e), t = this, n = "handleJoinHypeSquadClick", i = () => {
       (0, r.openModalLazy)(async () => {
         let {
           default: e
@@ -132,10 +132,10 @@ class N extends n.Component {
         })
       })
     }, n in t ? Object.defineProperty(t, n, {
-      value: l,
+      value: i,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : t[n] = l
+    }) : t[n] = i
   }
 }

@@ -7,9 +7,9 @@ s.r(t), s.d(t, {
 var a = s("735250");
 s("470079");
 var n = s("120356"),
-  l = s.n(n),
-  i = s("913527"),
-  r = s.n(i),
+  i = s.n(n),
+  l = s("913527"),
+  r = s.n(l),
   o = s("481060"),
   d = s("55935"),
   u = s("955204"),
@@ -22,30 +22,30 @@ function E(e) {
     dateUnlocked: s
   } = e, n = (0, u.getPoggermodeAchievementData)(t);
   if (null == n) return null;
-  let i = null != s,
+  let l = null != s,
     {
       name: E,
       description: T,
       hideDescriptionUntilUnlock: _,
       onAction: I
     } = n,
-    N = _ && !i,
-    g = i ? "header-primary" : "text-muted",
-    f = i ? "header-secondary" : "text-muted",
+    N = _ && !l,
+    g = l ? "header-primary" : "text-muted",
+    f = l ? "header-secondary" : "text-muted",
     m = r()(s),
-    C = null != I && i,
-    A = C ? o.Clickable : "div";
-  return (0, a.jsxs)(A, {
-    className: l()(S.container, C && S.actionable),
+    A = null != I && l,
+    C = A ? o.Clickable : "div";
+  return (0, a.jsxs)(C, {
+    className: i()(S.container, A && S.actionable),
     onClick: () => {
-      C && I()
+      A && I()
     },
     children: [(0, a.jsx)("div", {
       className: S.iconContainer,
       children: (0, a.jsx)(c.default, {
         achievementId: t,
         size: c.default.Sizes.SIZE_40,
-        unlocked: i
+        unlocked: l
       })
     }), (0, a.jsxs)("div", {
       className: S.nameContainer,

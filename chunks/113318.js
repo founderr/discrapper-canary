@@ -7,14 +7,14 @@ n.r(t), n.d(t, {
 var i = n("442837"),
   a = n("201895"),
   s = n("557135"),
-  l = n("703656"),
-  r = n("592125"),
+  r = n("703656"),
+  l = n("592125"),
   u = n("979651"),
   o = n("66999"),
   d = n("981631");
 
 function c(e, t) {
-  let n = (0, i.useStateFromStores)([r.default], () => r.default.getChannel(t)),
+  let n = (0, i.useStateFromStores)([l.default], () => l.default.getChannel(t)),
     {
       needSubscriptionToAccess: c
     } = (0, o.default)(null == n ? void 0 : n.id);
@@ -30,7 +30,7 @@ function c(e, t) {
         connected: u.default.isInChannel(n.id),
         needSubscriptionToAccess: !1,
         routeDirectlyToChannel: !0
-      }) : (0, l.transitionTo)(d.Routes.CHANNEL(e, n.id))
+      }) : (0, r.transitionTo)(d.Routes.CHANNEL(e, n.id))
     },
     ariaLabel: E
   }

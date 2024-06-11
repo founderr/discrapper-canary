@@ -29,8 +29,8 @@ var a = n("735250"),
   v = n("127255"),
   N = n("5200"),
   M = n("558317"),
-  R = n("403404"),
-  y = n("701488"),
+  y = n("403404"),
+  R = n("701488"),
   L = n("981631"),
   j = n("689938"),
   O = n("492880"),
@@ -90,7 +90,7 @@ let U = "vc-activities-".concat((0, o.v4)()),
     }, []);
     let $ = l.useCallback(() => {
         var e;
-        (0, R.default)({
+        (0, y.default)({
           channel: n,
           guildId: null !== (e = n.getGuildId()) && void 0 !== e ? e : void 0,
           locationObject: J.location,
@@ -116,7 +116,7 @@ let U = "vc-activities-".concat((0, o.v4)()),
       }) : B ? (0, a.jsxs)(d.Clickable, {
         className: O.clickableBanner,
         onClick: () => {
-          k(), o(), (0, E.transitionTo)(L.Routes.ACTIVITY_DETAILS(y.TUNE_IN_APPLICATION_ID), void 0, void 0, X)
+          k(), o(), (0, E.transitionTo)(L.Routes.ACTIVITY_DETAILS(R.TUNE_IN_APPLICATION_ID), void 0, void 0, X)
         },
         children: [(0, a.jsx)("img", {
           alt: j.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TUNE_IN_POSTER_ALT,

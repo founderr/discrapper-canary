@@ -31,8 +31,8 @@ t.default = (0, r.default)(e => {
     hasConnectPermission: v,
     className: N,
     inCall: M,
-    showParticipants: R = !0,
-    paused: y = !1,
+    showParticipants: y = !0,
+    paused: R = !1,
     width: L,
     height: j,
     idle: O,
@@ -75,7 +75,7 @@ t.default = (0, r.default)(e => {
       onClick: T,
       onDoubleClick: A,
       onContextMenu: I,
-      paused: y,
+      paused: R,
       inCall: M
     })
   });
@@ -94,6 +94,6 @@ t.default = (0, r.default)(e => {
     layout: _,
     inCall: M,
     channel: x,
-    showParticipants: R
+    showParticipants: y
   })
 })

@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("735250");
 s("470079");
 var n = s("866442"),
-  l = s("692547"),
-  i = s("481060"),
+  i = s("692547"),
+  l = s("481060"),
   r = s("220082"),
   o = s("193528"),
   d = s("993413"),
@@ -21,7 +21,7 @@ function c(e) {
     savedUserColor: c,
     pendingColor: S,
     setPendingAccentColor: E
-  } = e, T = s.getAvatarURL(null, 80), _ = (0, i.useToken)(l.default.unsafe_rawColors.PRIMARY_530).hex(), I = (0, r.useAvatarColors)(T, _, !1), N = (0, n.hex2int)(I[0]);
+  } = e, T = s.getAvatarURL(null, 80), _ = (0, l.useToken)(i.default.unsafe_rawColors.PRIMARY_530).hex(), I = (0, r.useAvatarColors)(T, _, !1), N = (0, n.hex2int)(I[0]);
   return (0, a.jsx)(d.default, {
     title: u.default.Messages.USER_SETTINGS_BANNER_COLOR_TITLE,
     children: (0, a.jsx)(o.default, {

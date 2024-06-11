@@ -3,9 +3,9 @@ n.r(t);
 var i = n("735250"),
   a = n("470079"),
   s = n("512722"),
-  l = n.n(s),
-  r = n("913527"),
-  u = n.n(r),
+  r = n.n(s),
+  l = n("913527"),
+  u = n.n(l),
   o = n("442837"),
   d = n("570140"),
   c = n("821849"),
@@ -22,28 +22,28 @@ var i = n("735250"),
   v = n("817460"),
   g = n("584825"),
   p = n("697227"),
-  L = n("934826"),
-  h = n("896083"),
+  h = n("934826"),
+  L = n("896083"),
   A = n("939872"),
   O = n("265985"),
   M = n("293810"),
   x = n("981631"),
   U = n("689938");
 t.default = (e, t, n, s) => {
-  let r;
+  let l;
   let D = (0, o.useStateFromStores)([C.default], () => C.default.isLurking(t)),
     P = (0, S.useShowMemberVerificationGate)(t),
-    j = (0, o.useStateFromStores)([I.default], () => null != t ? I.default.getRequest(t) : null),
-    y = (null == j ? void 0 : j.applicationStatus) === T.GuildJoinRequestApplicationStatuses.SUBMITTED,
+    y = (0, o.useStateFromStores)([I.default], () => null != t ? I.default.getRequest(t) : null),
+    j = (null == y ? void 0 : y.applicationStatus) === T.GuildJoinRequestApplicationStatuses.SUBMITTED,
     B = null == e ? void 0 : e.subscription_plans[0],
     b = null == B ? void 0 : B.id,
-    G = (null == e ? void 0 : e.published) === !0,
-    F = null == B ? void 0 : B.sku_id,
+    F = (null == e ? void 0 : e.published) === !0,
+    G = null == B ? void 0 : B.sku_id,
     H = (0, o.useStateFromStores)([N.default], () => null != b ? N.default.get(b) : null),
     {
       activeSubscription: w,
       activeSubscriptionPlanFromStore: k
-    } = (0, L.default)(n),
+    } = (0, h.default)(n),
     Q = null == w || null != k,
     V = (0, g.useSubscriptionListingsForGroup)(n, {
       includeSoftDeleted: !0
@@ -54,28 +54,28 @@ t.default = (e, t, n, s) => {
     {
       loading: Z,
       getTrialPurchaseEligibility: z
-    } = (0, h.useGetTrialPurchaseEligibility)(),
+    } = (0, L.useGetTrialPurchaseEligibility)(),
     K = (0, g.useSubscriptionTrial)(null == e ? void 0 : e.id),
     {
       analyticsLocations: J
     } = (0, E.default)(),
     X = (null == w ? void 0 : w.paymentGateway) === x.PaymentGateways.APPLE_PARTNER;
-  y ? r = U.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : D && !P ? r = U.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : W === b ? r = U.default.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({
+  j ? l = U.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : D && !P ? l = U.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : W === b ? l = U.default.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({
     changeDate: null != w ? u()(w.currentPeriodEnd).format("MMM DD, YYYY") : ""
-  }) : Y ? r = U.default.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION : q ? r = U.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL : X && (r = U.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
+  }) : Y ? l = U.default.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION : q ? l = U.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL : X && (l = U.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
   let $ = (0, f.default)(M.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY);
   a.useEffect(() => {
-    G && null != F && d.default.wait(() => {
-      (0, c.fetchSubscriptionPlansForSKU)(F)
+    F && null != G && d.default.wait(() => {
+      (0, c.fetchSubscriptionPlansForSKU)(G)
     })
-  }, [G, F]);
+  }, [F, G]);
   let ee = a.useCallback(async () => {
       let n, a;
-      if (l()(null != e, "No subscription listing"), l()(null != B, "No subscription plan"), l()(G, "Cannot purchase this unpublished plan"), (null == K ? void 0 : K.active_trial) != null) {
+      if (r()(null != e, "No subscription listing"), r()(null != B, "No subscription plan"), r()(F, "Cannot purchase this unpublished plan"), (null == K ? void 0 : K.active_trial) != null) {
         let i = await z(t, e.id, K.active_trial.id);
         if ((null == i ? void 0 : i.is_eligible) === !0) {
-          var r;
-          n = null == K ? void 0 : null === (r = K.active_trial) || void 0 === r ? void 0 : r.id
+          var l;
+          n = null == K ? void 0 : null === (l = K.active_trial) || void 0 === l ? void 0 : l.id
         } else a = U.default.Messages.GUILD_ROLE_SUBSCRIPTION_INELIGIBLE_TRIAL_DISCLAIMER
       }(0, m.default)({
         activeSubscription: w,
@@ -113,14 +113,14 @@ t.default = (e, t, n, s) => {
         }),
         reviewWarningMessage: a
       })
-    }, [G, e, B, w, V, t, J, s, z, K, $]),
+    }, [F, e, B, w, V, t, J, s, z, K, $]),
     et = a.useCallback(() => {
       (0, _.openMemberVerificationModal)(t)
     }, [t]);
   return {
     openModal: P ? et : ee,
-    canOpenModal: !D && null != H && Q && !y && !Y && !q && !X,
-    cannotOpenReason: r,
+    canOpenModal: !D && null != H && Q && !j && !Y && !q && !X,
+    cannotOpenReason: l,
     isCheckingTrialEligibility: Z
   }
 }

@@ -55,7 +55,7 @@ function x(e) {
   })
 }
 
-function R() {
+function v() {
   return (0, a.jsxs)("div", {
     className: i()(N.box, N.linkingBanner, N.linkingBannerParent),
     children: [(0, a.jsxs)("div", {
@@ -98,7 +98,7 @@ function R() {
   })
 }
 
-function v() {
+function R() {
   let e = (0, f.useHasMaxConnections)();
   return (0, a.jsxs)("div", {
     className: i()(N.box, N.linkingBanner),
@@ -186,7 +186,7 @@ function M(e) {
     })
   })
 }
-let L = () => {
+let O = () => {
     let e = (0, _.default)(),
       t = (0, f.useUserForLinkStatus)(A.UserLinkStatus.ACTIVE),
       s = e ? A.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : A.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
@@ -216,7 +216,7 @@ let L = () => {
       })
     })
   },
-  O = () => {
+  L = () => {
     let e = (0, f.useHasMaxConnections)(),
       t = (0, _.default)() ? A.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : A.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
       s = (0, c.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({
@@ -266,6 +266,6 @@ t.default = () => {
   let e = (0, _.default)();
   return (0, a.jsxs)("div", {
     className: N.container,
-    children: [e ? (0, a.jsx)(R, {}) : (0, a.jsx)(v, {}), (0, a.jsx)(L, {}), (0, a.jsx)(D, {}), (0, a.jsx)(O, {}), (0, a.jsx)(y, {})]
+    children: [e ? (0, a.jsx)(v, {}) : (0, a.jsx)(R, {}), (0, a.jsx)(O, {}), (0, a.jsx)(D, {}), (0, a.jsx)(L, {}), (0, a.jsx)(y, {})]
   })
 }

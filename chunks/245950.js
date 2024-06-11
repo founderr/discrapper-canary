@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("47120");
 var a = s("470079"),
   n = s("913527"),
-  l = s.n(n),
-  i = s("442837"),
+  i = s.n(n),
+  l = s("442837"),
   r = s("430824"),
   o = s("937615"),
   d = s("584825"),
@@ -18,9 +18,9 @@ var a = s("470079"),
 
 function T(e) {
   let t = (0, c.getRoleSubscriptionPlanId)(e),
-    s = (0, i.useStateFromStores)([u.default], () => u.default.getSubscriptionListingForPlan(t)),
-    n = (0, i.useStateFromStores)([u.default], () => null != s ? u.default.getSubscriptionGroupListingForSubscriptionListing(s.id) : null),
-    T = (0, i.useStateFromStores)([r.default], () => r.default.getGuild(null == n ? void 0 : n.guild_id)),
+    s = (0, l.useStateFromStores)([u.default], () => u.default.getSubscriptionListingForPlan(t)),
+    n = (0, l.useStateFromStores)([u.default], () => null != s ? u.default.getSubscriptionGroupListingForSubscriptionListing(s.id) : null),
+    T = (0, l.useStateFromStores)([r.default], () => r.default.getGuild(null == n ? void 0 : n.guild_id)),
     [_, I] = a.useState(!1),
     {
       fetchSubscriptionsSettings: N
@@ -31,13 +31,13 @@ function T(e) {
   let g = null == s ? void 0 : function(e) {
     let {
       subscription: t
-    } = e, s = l()(t.currentPeriodEnd).format("M/D/YY"), a = null != t.price ? (0, o.formatPrice)(t.price, t.currency) : "", n = l()(t.createdAt).format("M/D/YY"), i = t.status === S.SubscriptionStatusTypes.CANCELED, r = t.status === S.SubscriptionStatusTypes.PAST_DUE, d = null != t.trialId;
+    } = e, s = i()(t.currentPeriodEnd).format("M/D/YY"), a = null != t.price ? (0, o.formatPrice)(t.price, t.currency) : "", n = i()(t.createdAt).format("M/D/YY"), l = t.status === S.SubscriptionStatusTypes.CANCELED, r = t.status === S.SubscriptionStatusTypes.PAST_DUE, d = null != t.trialId;
     return {
       memberSince: n,
       nextRenewalDate: s,
-      nextRenewalLabel: i ? E.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_INFO_MEMBERSHIP_ENDS : E.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_INFO_NEXT_RENEWAL,
+      nextRenewalLabel: l ? E.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_INFO_MEMBERSHIP_ENDS : E.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_INFO_NEXT_RENEWAL,
       subscriptionPrice: a,
-      isCancelled: i,
+      isCancelled: l,
       isPastDue: r,
       isTrial: d
     }

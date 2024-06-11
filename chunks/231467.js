@@ -190,11 +190,11 @@ function B(e) {
     count: n.memberCount
   }), z = null != T ? T : (0, S.getClanBannerUrl)(n.id, D), Z = null == s && null == z ? {
     background: "linear-gradient(90deg, ".concat(R, ", ").concat(g, ")")
-  } : void 0, X = null != s ? s : null != z ? (0, i.jsx)("img", {
+  } : void 0, Q = null != s ? s : null != z ? (0, i.jsx)("img", {
     alt: P.default.Messages.CLAN_LOOK_BANNER,
     src: z,
     className: U.bannerImage
-  }) : null, Q = r.useMemo(() => (0, y.getSortedTraits)(n.traits, u), [n.traits, u]);
+  }) : null, X = r.useMemo(() => (0, y.getSortedTraits)(n.traits, u), [n.traits, u]);
   return r.useEffect(() => {
     let e = F.current;
     null != e && null != e.offsetWidth && null != e.scrollWidth && Y(e.offsetWidth < e.scrollWidth)
@@ -207,7 +207,7 @@ function B(e) {
     children: [(0, i.jsxs)("div", {
       className: U.cardBrandingHeader,
       style: Z,
-      children: [X, (0, i.jsx)(k, {
+      children: [Q, (0, i.jsx)(k, {
         hasPendingJoinRequest: m,
         atMaxMemberCapacity: p,
         isGuildMember: l
@@ -295,7 +295,7 @@ function B(e) {
         description: n.description,
         expanded: o
       }), (0, i.jsx)(w, {
-        traits: Q,
+        traits: X,
         traitsToHighlight: u
       })]
     }), (0, i.jsxs)("div", {

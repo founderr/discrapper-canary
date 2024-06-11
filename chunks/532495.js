@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("735250");
 s("470079");
 var n = s("512722"),
-  l = s.n(n),
-  i = s("442837"),
+  i = s.n(n),
+  l = s("442837"),
   r = s("809206"),
   o = s("634894"),
   d = s("954138"),
@@ -23,25 +23,25 @@ var n = s("512722"),
   g = s("872736"),
   f = s("134795"),
   m = s("610966"),
-  C = s("513901"),
-  A = s("451392"),
+  A = s("513901"),
+  C = s("451392"),
   O = s("906364"),
   h = s("350327"),
-  p = s("621853"),
-  R = s("318661"),
+  R = s("621853"),
+  p = s("318661"),
   M = s("25990"),
-  x = s("594174"),
-  D = s("74538"),
+  D = s("594174"),
+  x = s("74538"),
   L = s("689938"),
   P = s("741129");
 
 function b() {
   var e, t, s, n, b, v, U, j;
-  let G = (0, i.useStateFromStores)([x.default], () => {
-      let e = x.default.getCurrentUser();
-      return l()(null != e, "DefaultCustomizationSections: user cannot be undefined"), e
+  let G = (0, l.useStateFromStores)([D.default], () => {
+      let e = D.default.getCurrentUser();
+      return i()(null != e, "DefaultCustomizationSections: user cannot be undefined"), e
     }),
-    F = (0, i.useStateFromStores)([p.default], () => p.default.getUserProfile(G.id)),
+    F = (0, l.useStateFromStores)([R.default], () => R.default.getUserProfile(G.id)),
     {
       pendingAvatar: B,
       pendingGlobalName: y,
@@ -51,7 +51,7 @@ function b() {
       pendingAccentColor: k,
       pendingThemeColors: w,
       errors: W
-    } = (0, i.useStateFromStoresObject)([M.default], () => {
+    } = (0, l.useStateFromStoresObject)([M.default], () => {
       let e = M.default.getAllPending(),
         t = M.default.getErrors();
       return {
@@ -60,8 +60,8 @@ function b() {
       }
     }),
     K = (0, S.useGuildAutomodProfileQuarantineErrors)(),
-    z = D.default.canUsePremiumProfileCustomization(G),
-    Q = (0, E.showRemoveAvatar)(B, G.avatar),
+    Q = x.default.canUsePremiumProfileCustomization(G),
+    z = (0, E.showRemoveAvatar)(B, G.avatar),
     X = (0, E.showRemoveBanner)(V, null == F ? void 0 : F.banner),
     q = "DefaultCustomizationSections";
   (0, o.useTriggerDebuggingAA)({
@@ -71,7 +71,7 @@ function b() {
     location: q + " auto off",
     autoTrackExposure: !1
   });
-  let Z = (0, R.default)(G.id),
+  let Z = (0, p.default)(G.id),
     J = null == Z ? void 0 : Z.getLegacyUsername(),
     $ = (null !== (s = null === (e = W.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0) > 0 ? W.global_name : null !== (n = null == K ? void 0 : K.nick) && void 0 !== n ? n : [],
     ee = (null !== (b = null === (t = W.bio) || void 0 === t ? void 0 : t.length) && void 0 !== b ? b : 0) > 0 ? W.bio : null !== (v = null == K ? void 0 : K.bio) && void 0 !== v ? v : [],
@@ -93,23 +93,23 @@ function b() {
       currentPronouns: null !== (U = null == F ? void 0 : F.pronouns) && void 0 !== U ? U : ""
     }, "pronouns"), (0, a.jsx)(I.default, {
       onAvatarChange: r.setPendingAvatar,
-      showRemoveAvatarButton: Q,
+      showRemoveAvatarButton: z,
       errors: W.avatar,
       sectionTitle: L.default.Messages.USER_SETTINGS_AVATAR,
       forcedDivider: !0
     }, "avatar"), (0, a.jsx)(_.default, {
       user: G,
       sectionTitle: L.default.Messages.USER_SETTINGS_AVATAR_DECORATION
-    }, "decoration"), (0, a.jsx)(C.default, {
+    }, "decoration"), (0, a.jsx)(A.default, {
       user: G,
       sectionTitle: L.default.Messages.USER_SETTINGS_PROFILE_EFFECT
-    }, "effect"), z ? (0, a.jsxs)(a.Fragment, {
+    }, "effect"), Q ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(f.default, {
         showRemoveBannerButton: X,
         errors: W.banner,
         onBannerChange: h.setPendingBanner,
         forcedDivider: !0
-      }, "banner"), (0, a.jsx)(A.default, {
+      }, "banner"), (0, a.jsx)(C.default, {
         user: G,
         pendingAvatar: B,
         pendingColors: w,

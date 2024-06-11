@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("735250");
 s("470079");
 var n = s("120356"),
-  l = s.n(n),
-  i = s("481060"),
+  i = s.n(n),
+  l = s("481060"),
   r = s("976644"),
   o = s("654904"),
   d = s("993413"),
@@ -32,8 +32,8 @@ function T(e) {
     disabled: g = !1,
     isTryItOutFlow: f = !1,
     forcedDivider: m,
-    withHighlight: C = !1
-  } = e, A = C ? r.default : i.Button;
+    withHighlight: A = !1
+  } = e, C = A ? r.default : l.Button;
   return (0, a.jsx)(d.default, {
     className: N,
     title: T,
@@ -42,18 +42,18 @@ function T(e) {
     forcedDivider: m,
     children: (0, a.jsxs)("div", {
       className: S.buttonsContainer,
-      children: [(0, a.jsx)(A, {
-        className: l()({
-          [S.buttonHighlighted]: C
+      children: [(0, a.jsx)(C, {
+        className: i()({
+          [S.buttonHighlighted]: A
         }),
-        size: i.Button.Sizes.SMALL,
+        size: l.Button.Sizes.SMALL,
         onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.AVATAR, I, f, f ? E : void 0),
         children: null != _ ? _ : c.default.Messages.USER_SETTINGS_CHANGE_AVATAR
-      }), t && (0, a.jsx)(i.Button, {
+      }), t && (0, a.jsx)(l.Button, {
         className: S.removeButton,
-        color: i.Button.Colors.PRIMARY,
-        look: i.Button.Looks.LINK,
-        size: i.Button.Sizes.SMALL,
+        color: l.Button.Colors.PRIMARY,
+        look: l.Button.Looks.LINK,
+        size: l.Button.Sizes.SMALL,
         onClick: () => n(null),
         children: null != I ? c.default.Messages.USER_SETTINGS_RESET_AVATAR : c.default.Messages.USER_SETTINGS_REMOVE_AVATAR
       })]

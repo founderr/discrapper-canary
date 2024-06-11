@@ -2,8 +2,8 @@
 s.r(t), s("627341");
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("278074"),
   o = s("481060"),
   d = s("100527"),
@@ -67,7 +67,7 @@ t.default = () => {
     })
   }, [e]), (0, a.jsxs)("div", {
     ref: t,
-    className: i()(N.container),
+    className: l()(N.container),
     style: {
       backgroundImage: "url(".concat(g, ")")
     },

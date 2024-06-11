@@ -22,15 +22,15 @@ var a = s("735250"),
   g = s("894939"),
   f = s("321499"),
   m = s("710808"),
-  C = s("625205"),
-  A = s("325808"),
+  A = s("625205"),
+  C = s("325808"),
   O = s("823087"),
   h = s("546997"),
-  p = s("167540"),
-  R = s("803567"),
+  R = s("167540"),
+  p = s("803567"),
   M = s("269876"),
-  x = s("976758"),
-  D = s("526761"),
+  D = s("976758"),
+  x = s("526761"),
   L = s("726985"),
   P = s("981631"),
   b = s("65154"),
@@ -82,7 +82,7 @@ function B() {
     attenuationSupported: E.default.supports(b.Features.ATTENUATION)
   })), k = (0, r.useStateFromStores)([T.default], () => T.default.getSubsection()), w = n.createRef(), W = N.isPlatformEmbedded && B && null != c.default.fileManager.readLogFiles;
   return n.useEffect(() => {
-    if (k === D.SOUNDBOARD_SUBSECTION) {
+    if (k === x.SOUNDBOARD_SUBSECTION) {
       var e;
       null == w || null === (e = w.current) || void 0 === e || e.scrollIntoView(), u.default.clearSubsection()
     }
@@ -91,10 +91,10 @@ function B() {
     title: v.default.Messages.VOICE_SETTINGS,
     children: [(0, a.jsx)(S.Subsetting, {
       setting: L.WebSetting.VOICE_AND_VIDEO_DEVICES,
-      children: (0, a.jsx)(C.default, {})
+      children: (0, a.jsx)(A.default, {})
     }), (0, a.jsx)(S.Subsetting, {
       setting: L.WebSetting.VOICE_AND_VIDEO_VOLUME_CONTROLS,
-      children: (0, a.jsx)(x.default, {})
+      children: (0, a.jsx)(D.default, {})
     }), (0, a.jsx)(S.Subsetting, {
       setting: L.WebSetting.VOICE_AND_VIDEO_MIC_TEST,
       children: (0, a.jsx)(O.default, {})
@@ -111,7 +111,7 @@ function B() {
       })]
     }), (0, a.jsx)(S.Subsetting, {
       setting: L.WebSetting.VOICE_AND_VIDEO_INPUT_MODE,
-      children: (0, a.jsx)(A.default, {})
+      children: (0, a.jsx)(C.default, {})
     }), (0, a.jsxs)(S.Subsetting, {
       setting: L.WebSetting.VOICE_AND_VIDEO_SENSITIVITY,
       children: [e === b.InputModes.VOICE_ACTIVITY && (0, a.jsx)(M.default, {}), (0, a.jsx)(o.FormDivider, {
@@ -130,7 +130,7 @@ function B() {
       children: (0, a.jsx)(g.default, {})
     }), (0, a.jsx)(S.Subsetting, {
       setting: L.WebSetting.VOICE_AND_VIDEO_VIDEO,
-      children: (0, a.jsx)(p.default, {})
+      children: (0, a.jsx)(R.default, {})
     }), (0, a.jsx)(S.Subsetting, {
       setting: L.WebSetting.VOICE_AND_VIDEO_ADVANCED,
       children: (0, a.jsxs)(o.HeadingLevel, {
@@ -144,7 +144,7 @@ function B() {
           children: (0, a.jsx)(f.default, {})
         }), (0, a.jsx)(S.Subsetting, {
           setting: L.WebSetting.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
-          children: (0, a.jsx)(R.default, {})
+          children: (0, a.jsx)(p.default, {})
         }), H && (0, a.jsx)(S.Subsetting, {
           setting: L.WebSetting.VOICE_AND_VIDEO_ADVANCED_QOS,
           children: (0, a.jsx)(o.FormSection, {

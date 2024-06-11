@@ -29,14 +29,14 @@ var a = n("735250"),
   v = n("768581"),
   N = n("585483"),
   M = n("233870"),
-  R = n("51144"),
-  y = n("998502"),
+  y = n("51144"),
+  R = n("998502"),
   L = n("276264"),
   j = n("981631"),
   O = n("689938"),
   P = n("895294"),
   D = n("67431");
-let b = y.default.getEnableHardwareAcceleration();
+let b = R.default.getEnableHardwareAcceleration();
 
 function U(e) {
   let {
@@ -70,7 +70,7 @@ function U(e) {
     position: s.isMobile ? "window_center" : "left",
     spacing: 16,
     onShiftClick: () => {
-      let e = "@".concat(R.default.getUserTag(t, {
+      let e = "@".concat(y.default.getUserTag(t, {
           decoration: "never"
         })),
         n = "<@".concat(t.id, ">");
@@ -233,8 +233,8 @@ function w(e) {
   let {
     installedIntegrations: v,
     applicationsShelf: N,
-    fetched: R,
-    appsInGDMEnabled: y,
+    fetched: y,
+    appsInGDMEnabled: R,
     availableApplications: L
   } = (0, f.usePrivateChannelIntegrationState)({
     channelId: t.id
@@ -272,7 +272,7 @@ function w(e) {
           activities: e.activities,
           lastOnlineTimestamp: e.lastOnlineTimestamp,
           channel: t
-        }, e.user.id)), y && (v.length > 0 || R && N.length > 0) && (0, a.jsxs)(a.Fragment, {
+        }, e.user.id)), R && (v.length > 0 || y && N.length > 0) && (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(A.default, {
             className: D.membersGroup,
             children: "".concat(O.default.Messages.APPS, "—").concat(v.length)
