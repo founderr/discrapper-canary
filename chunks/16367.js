@@ -9,6 +9,7 @@ e.exports = {
   connectedAccountIcon: "connectedAccountIcon_e85011",
   connectedAccountName: "connectedAccountName__0a3ec",
   connectedAccountNameContainer: "connectedAccountNameContainer__59a05",
+  connectedAccountNameContainerClickable: "connectedAccountNameContainerClickable__81a12",
   connectedAccountNameText: "connectedAccountNameText__7abc2",
   connectedAccountNameTextContainer: "connectedAccountNameTextContainer_e6ac0d",
   connectedAccountOpenIcon: "connectedAccountOpenIcon__23b1a",

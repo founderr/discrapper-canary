@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return P
+    return h
   }
 }), l("653041"), l("627341"), l("47120");
 var s = l("735250"),
@@ -25,8 +25,8 @@ var s = l("735250"),
   g = l("834534"),
   A = l("228168"),
   x = l("981631"),
-  N = l("689938"),
-  C = l("773386");
+  C = l("689938"),
+  N = l("773386");
 let U = e => {
   var t, l;
   let {
@@ -39,25 +39,25 @@ let U = e => {
     return t !== x.ActivityTypes.CUSTOM_STATUS
   })), c = null === (t = (0, I.default)(s.id, s.id !== (null == i ? void 0 : i.id)).mutualFriends) || void 0 === t ? void 0 : t.length, f = null === (l = (0, m.default)(s.id, s.id !== (null == i ? void 0 : i.id)).mutualGuilds) || void 0 === l ? void 0 : l.length, S = [{
     section: A.UserProfileSections.USER_INFO,
-    text: N.default.Messages.USER_PROFILE_ABOUT_ME
+    text: C.default.Messages.USER_PROFILE_ABOUT_ME
   }];
   return (null != o || null != r) && S.push({
     section: A.UserProfileSections.ACTIVITY,
-    text: N.default.Messages.USER_PROFILE_ACTIVITY
+    text: C.default.Messages.USER_PROFILE_ACTIVITY
   }), s.id !== (null == i ? void 0 : i.id) && (S.push({
     section: A.UserProfileSections.MUTUAL_FRIENDS,
-    text: (0, a.match)(c).with(void 0, () => N.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER).with(0, () => N.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS).otherwise(e => N.default.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
+    text: (0, a.match)(c).with(void 0, () => C.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER).with(0, () => C.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS).otherwise(e => C.default.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
       count: e
     }))
   }), S.push({
     section: A.UserProfileSections.MUTUAL_GUILDS,
-    text: (0, a.match)(f).with(void 0, () => N.default.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => N.default.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => N.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
+    text: (0, a.match)(f).with(void 0, () => C.default.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => C.default.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => C.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
       count: e
     }))
   })), S
 };
 
-function h(e) {
+function P(e) {
   let {
     section: t,
     user: l,
@@ -80,11 +80,12 @@ function h(e) {
     user: l,
     currentUser: i,
     displayProfile: a,
-    autoFocusNote: n
+    autoFocusNote: n,
+    onClose: o
   })
 }
 
-function P(e) {
+function h(e) {
   var t, l;
   let {
     user: a,
@@ -97,7 +98,7 @@ function P(e) {
   } = (0, E.useUserProfileAnalyticsContext)(), _ = (0, n.useStateFromStores)([f.default], () => f.default.getCurrentUser()), v = (0, n.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), p = U({
     user: a,
     currentUser: _
-  }), [g, x] = i.useState(S), [N, P] = i.useState(null !== (l = null === (t = p.find(e => {
+  }), [g, x] = i.useState(S), [C, h] = i.useState(null !== (l = null === (t = p.find(e => {
     let {
       section: t
     } = e;
@@ -106,17 +107,17 @@ function P(e) {
     m({
       action: "PRESS_SECTION",
       section: e
-    }), P(e), x(!1)
-  }, [m, P]);
+    }), h(e), x(!1)
+  }, [m, h]);
   return null == _ ? null : v ? (0, s.jsx)("div", {
-    className: C.container,
+    className: N.container,
     children: (0, s.jsx)(T.default, {})
   }) : (0, s.jsxs)("div", {
-    className: C.container,
+    className: N.container,
     children: [(0, s.jsx)(o.TabBar, {
-      className: C.tabBar,
+      className: N.tabBar,
       type: "top",
-      selectedItem: N,
+      selectedItem: C,
       onItemSelect: R,
       children: p.map(e => {
         let {
@@ -124,7 +125,7 @@ function P(e) {
           text: l
         } = e;
         return (0, s.jsx)(o.TabBar.Item, {
-          className: C.tabBarItem,
+          className: N.tabBarItem,
           id: t,
           "aria-label": l,
           children: (0, s.jsx)(r.Text, {
@@ -133,8 +134,8 @@ function P(e) {
           })
         }, t)
       })
-    }), (0, s.jsx)(h, {
-      section: N,
+    }), (0, s.jsx)(P, {
+      section: C,
       user: a,
       currentUser: _,
       displayProfile: u,

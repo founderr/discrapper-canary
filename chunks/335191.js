@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   ConnectedApplicationUserRoleAccount: function() {
-    return g
+    return v
   },
   ConnectedUserAccount: function() {
-    return R
+    return L
   },
   ConnectedUserAccounts: function() {
-    return L
+    return D
   }
 }), n("653041");
 var i = n("735250"),
@@ -20,175 +20,190 @@ var i = n("735250"),
   d = n("99690"),
   _ = n("726542"),
   c = n("367907"),
-  E = n("122021"),
-  I = n("275759"),
-  T = n("323588"),
-  f = n("753194"),
-  S = n("598077"),
-  h = n("671533"),
-  A = n("880008"),
-  m = n("49012"),
-  N = n("981631"),
-  p = n("856651"),
-  O = n("689938"),
-  C = n("16367");
+  E = n("132871"),
+  I = n("147890"),
+  T = n("122021"),
+  f = n("275759"),
+  S = n("323588"),
+  h = n("753194"),
+  A = n("598077"),
+  m = n("671533"),
+  N = n("880008"),
+  p = n("49012"),
+  O = n("981631"),
+  C = n("856651"),
+  R = n("689938"),
+  g = n("16367");
 
-function R(e) {
+function L(e) {
   var t, n;
   let r, s, d, {
-    connectedAccount: S,
-    theme: R,
-    locale: g,
+    connectedAccount: E,
+    theme: I,
+    locale: A,
     userId: L,
     className: v,
     showMetadata: D,
     showInvisibleIcon: M
   } = e;
   null == D && (D = !0);
-  let y = null !== (n = S.metadata) && void 0 !== n ? n : {},
-    P = D ? (0, I.getCreatedAtDate)(y[p.MetadataFields.CREATED_AT], g) : null,
+  let y = null !== (n = E.metadata) && void 0 !== n ? n : {},
+    P = D ? (0, f.getCreatedAtDate)(y[C.MetadataFields.CREATED_AT], A) : null,
     U = (0, u.useToken)(o.default.unsafe_rawColors.TWITTER).hex(),
-    b = O.default.Messages.CONNECTION_VERIFIED;
-  if (D) switch (S.type) {
-    case N.PlatformTypes.REDDIT:
-      r = (0, T.generateRedditMetadataItems)(y);
+    b = R.default.Messages.CONNECTION_VERIFIED;
+  if (D) switch (E.type) {
+    case O.PlatformTypes.REDDIT:
+      r = (0, S.generateRedditMetadataItems)(y);
       break;
-    case N.PlatformTypes.STEAM:
-      r = (0, T.generateSteamMetadataItems)(y);
+    case O.PlatformTypes.STEAM:
+      r = (0, S.generateSteamMetadataItems)(y);
       break;
-    case N.PlatformTypes.TWITTER:
-      r = (0, T.generateTwitterMetadataItems)(y), "1" === y[p.MetadataFields.TWITTER_VERIFIED] && (s = U, b = O.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
+    case O.PlatformTypes.TWITTER:
+      r = (0, S.generateTwitterMetadataItems)(y), "1" === y[C.MetadataFields.TWITTER_VERIFIED] && (s = U, b = R.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
       break;
-    case N.PlatformTypes.PAYPAL:
-      r = (0, T.generatePaypalMetadataItems)(y);
+    case O.PlatformTypes.PAYPAL:
+      r = (0, S.generatePaypalMetadataItems)(y);
       break;
-    case N.PlatformTypes.EBAY:
-      r = (0, T.generateEbayMetadataItems)(y);
+    case O.PlatformTypes.EBAY:
+      r = (0, S.generateEbayMetadataItems)(y);
       break;
-    case N.PlatformTypes.TIKTOK:
-      r = (0, T.generateTikTokMetadataItems)(y)
+    case O.PlatformTypes.TIKTOK:
+      r = (0, S.generateTikTokMetadataItems)(y)
   }
-  let G = _.default.get((0, E.useLegacyPlatformType)(S.type)),
-    w = null == G ? void 0 : null === (t = G.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(G, S);
-  null != M && M ? d = (0, i.jsx)(A.default, {
-    className: a()(C.__invalid_connectedAccountOpenIconContainer, C.connectedAccountHideIcon),
+  let G = _.default.get((0, T.useLegacyPlatformType)(E.type)),
+    w = null == G ? void 0 : null === (t = G.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(G, E);
+  null != M && M ? d = (0, i.jsx)(N.default, {
+    className: a()(g.__invalid_connectedAccountOpenIconContainer, g.connectedAccountHideIcon),
     foregroundColor: "currentColor"
   }) : null != w && (d = (0, i.jsx)(u.Anchor, {
     href: w,
     onClick: e => {
       var t, n;
-      t = S.type, n = L, (0, c.trackWithMetadata)(N.AnalyticEvents.CONNECTED_ACCOUNT_VIEWED, {
+      t = E.type, n = L, (0, c.trackWithMetadata)(O.AnalyticEvents.CONNECTED_ACCOUNT_VIEWED, {
         platform_type: t,
         other_user_id: n
-      }), (0, m.handleClick)({
+      }), (0, p.handleClick)({
         href: w,
-        trusted: (null == G ? void 0 : G.type) !== N.PlatformTypes.DOMAIN
+        trusted: (null == G ? void 0 : G.type) !== O.PlatformTypes.DOMAIN
       }, e)
     },
-    children: (0, i.jsx)(h.default, {
-      className: C.connectedAccountOpenIcon,
-      direction: h.default.Directions.RIGHT
+    children: (0, i.jsx)(m.default, {
+      className: g.connectedAccountOpenIcon,
+      direction: m.default.Directions.RIGHT
     })
   }));
   let k = (0, u.useToken)(o.default.colors.INTERACTIVE_MUTED).hex(),
     B = (0, u.useToken)(o.default.colors.INTERACTIVE_ACTIVE).hex(),
-    V = S.verified ? (0, i.jsx)(f.default, {
-      className: C.connectedAccountVerifiedIcon,
+    x = E.verified ? (0, i.jsx)(h.default, {
+      className: g.connectedAccountVerifiedIcon,
       color: null != s ? s : k,
       forcedIconColor: B,
       size: 16,
       tooltipText: b
     }) : null;
   return (0, i.jsxs)("div", {
-    className: a()(C.connectedAccountContainer, null != r && r.length > 0 || null != P ? C.connectedAccountContainerWithMetadata : null, v),
+    className: a()(g.connectedAccountContainer, null != r && r.length > 0 || null != P ? g.connectedAccountContainerWithMetadata : null, v),
     children: [(0, i.jsxs)("div", {
-      className: C.connectedAccount,
+      className: g.connectedAccount,
       children: [(0, i.jsx)(u.Tooltip, {
         text: null == G ? void 0 : G.name,
         children: e => (0, i.jsx)("img", {
           ...e,
-          alt: O.default.Messages.IMG_ALT_LOGO.format({
+          alt: R.default.Messages.IMG_ALT_LOGO.format({
             name: null == G ? void 0 : G.name
           }),
-          className: C.connectedAccountIcon,
-          src: (0, l.isThemeDark)(R) ? null == G ? void 0 : G.icon.darkSVG : null == G ? void 0 : G.icon.lightSVG
+          className: g.connectedAccountIcon,
+          src: (0, l.isThemeDark)(I) ? null == G ? void 0 : G.icon.darkSVG : null == G ? void 0 : G.icon.lightSVG
         })
       }), (0, i.jsxs)("div", {
-        className: C.connectedAccountNameContainer,
+        className: g.connectedAccountNameContainer,
         children: [(0, i.jsxs)("div", {
-          className: C.connectedAccountName,
+          className: g.connectedAccountName,
           children: [(0, i.jsxs)("div", {
-            className: C.connectedAccountNameTextContainer,
+            className: g.connectedAccountNameTextContainer,
             children: [(0, i.jsx)(u.Tooltip, {
               overflowOnly: !0,
-              text: S.name,
+              text: E.name,
               children: e => (0, i.jsx)(u.Text, {
                 ...e,
                 variant: "text-md/semibold",
                 color: "interactive-active",
-                className: C.connectedAccountNameText,
-                children: S.name
+                className: g.connectedAccountNameText,
+                children: E.name
               })
-            }), V]
+            }), x]
           }), d]
         }), null != P ? (0, i.jsx)(u.Text, {
           variant: "text-xs/normal",
           color: "header-secondary",
-          children: O.default.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({
+          children: R.default.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({
             date: P
           })
         }) : null]
       })]
     }), null != r && r.length > 0 ? (0, i.jsx)("div", {
-      className: C.connectedAccountChildren,
+      className: g.connectedAccountChildren,
       children: r
     }) : null]
   })
 }
 
-function g(e) {
+function v(e) {
   let {
     applicationRoleConnection: t,
     className: n,
-    locale: r
-  } = e, s = (0, T.generateRoleConnectionMetadataItems)(t, void 0, r);
+    locale: r,
+    onApplicationClicked: s,
+    selectedGuildId: o
+  } = e, l = (0, S.generateRoleConnectionMetadataItems)(t, void 0, r), _ = () => {
+    null == s || s(), (0, I.goToAppDirectory)({
+      view: E.ApplicationDirectoryViews.APPLICATION,
+      applicationId: t.application.id,
+      guildId: o,
+      entrypoint: {
+        name: E.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_URL
+      }
+    })
+  };
   return (0, i.jsxs)("div", {
-    className: a()(C.connectedAccountContainer, null != s && s.length > 0 ? C.connectedAccountContainerWithMetadata : null, n),
+    className: a()(g.connectedAccountContainer, null != l && l.length > 0 ? g.connectedAccountContainerWithMetadata : null, n),
     children: [(0, i.jsx)("div", {
-      className: C.connectedAccount,
-      children: (0, i.jsxs)("div", {
-        className: C.connectedAccountNameContainer,
+      className: g.connectedAccount,
+      children: (0, i.jsxs)(u.Clickable, {
+        className: a()(g.connectedAccountNameContainer, g.connectedAccountNameContainerClickable),
+        onClick: _,
         children: [null != t.platform_name ? (0, i.jsx)(u.Text, {
           variant: "eyebrow",
           color: "interactive-normal",
           children: t.platform_name
         }) : null, null != t.platform_username ? (0, i.jsx)("div", {
-          className: C.connectedAccountName,
+          className: g.connectedAccountName,
           children: (0, i.jsx)("div", {
-            className: C.connectedAccountNameTextContainer,
+            className: g.connectedAccountNameTextContainer,
             children: (0, i.jsx)(u.Text, {
               variant: "text-md/semibold",
               color: "interactive-active",
-              className: C.connectedAccountNameText,
+              className: g.connectedAccountNameText,
               children: t.platform_username
             })
           })
         }) : null]
       })
-    }), null != s && s.length > 0 ? (0, i.jsx)("div", {
-      className: a()(C.connectedAccountChildren, C.connectedAccountChildrenNoIcon),
-      children: s
+    }), null != l && l.length > 0 ? (0, i.jsx)("div", {
+      className: a()(g.connectedAccountChildren, g.connectedAccountChildrenNoIcon),
+      children: l
     }) : null, (0, i.jsx)("div", {
-      children: (0, i.jsx)("div", {
-        className: C.connectedAccountPoweredBy,
+      children: (0, i.jsx)(u.Clickable, {
+        className: g.connectedAccountPoweredBy,
+        onClick: _,
         children: (0, i.jsx)(u.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
-          children: O.default.Messages.CONNECTIONS_PROFILE_POWERED_BY.format({
+          children: R.default.Messages.CONNECTIONS_PROFILE_POWERED_BY.format({
             applicationHook: () => (0, i.jsxs)("div", {
-              className: C.connectedAccountPoweredByText,
+              className: g.connectedAccountPoweredByText,
               children: [null != t.application.bot ? (0, i.jsx)(d.default, {
-                user: new S.default(t.application.bot),
+                user: new A.default(t.application.bot),
                 size: u.AvatarSizes.SIZE_16
               }) : null, (0, i.jsx)(u.Text, {
                 variant: "text-xs/normal",
@@ -202,7 +217,7 @@ function g(e) {
     })]
   })
 }
-let L = r.forwardRef(function(e, t) {
+let D = r.forwardRef(function(e, t) {
   let {
     connectedAccounts: n,
     theme: r,
@@ -211,7 +226,7 @@ let L = r.forwardRef(function(e, t) {
     userId: l
   } = e;
   if (null == n || 0 === n.length) return null;
-  let u = n.filter(e => _.default.isSupported(e.type)).map(e => (0, i.jsx)(R, {
+  let u = n.filter(e => _.default.isSupported(e.type)).map(e => (0, i.jsx)(L, {
       connectedAccount: e,
       theme: r,
       locale: s,
@@ -225,12 +240,12 @@ let L = r.forwardRef(function(e, t) {
   }
   return (0, i.jsxs)("div", {
     ref: t,
-    className: a()(C.connectedAccounts, o),
+    className: a()(g.connectedAccounts, o),
     children: [(0, i.jsx)("div", {
-      className: C.connectedAccountsColumn,
+      className: g.connectedAccountsColumn,
       children: d
     }), (0, i.jsx)("div", {
-      className: C.connectedAccountsColumn,
+      className: g.connectedAccountsColumn,
       children: c
     })]
   })

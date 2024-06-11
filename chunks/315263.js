@@ -76,7 +76,7 @@ function D(e) {
       device_platform: r.isMobile ? "mobile_web" : "desktop_web",
       guild_id: s,
       channel_id: m.default.getChannelId()
-    }), n.e("56630").then(n.bind(n, "147890")).then(e => {
+    }), Promise.resolve().then(n.bind(n, "147890")).then(e => {
       let {
         goToAppDirectory: t
       } = e, {
@@ -124,7 +124,7 @@ function D(e) {
         device_platform: r.isMobile ? "mobile_web" : "desktop_web",
         guild_id: d,
         channel_id: m.default.getChannelId()
-      })), n.e("56630").then(n.bind(n, "147890")).then(e => {
+      })), Promise.resolve().then(n.bind(n, "147890")).then(e => {
         let {
           goToAppDirectory: n
         } = e;

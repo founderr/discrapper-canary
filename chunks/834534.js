@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return x
+    return C
   }
 });
 var s = l("735250");
@@ -13,70 +13,79 @@ var i = l("120356"),
   r = l("666520"),
   u = l("706454"),
   d = l("430824"),
-  c = l("785717"),
-  f = l("532776"),
-  S = l("648067"),
-  E = l("588822"),
-  I = l("900927"),
-  m = l("678738"),
-  _ = l("652853"),
-  v = l("335191"),
-  p = l("351707"),
-  T = l("228168"),
-  g = l("689938"),
-  A = l("363175");
+  c = l("914010"),
+  f = l("785717"),
+  S = l("532776"),
+  E = l("648067"),
+  I = l("588822"),
+  m = l("900927"),
+  _ = l("678738"),
+  v = l("652853"),
+  p = l("335191"),
+  T = l("351707"),
+  g = l("228168"),
+  A = l("689938"),
+  x = l("363175");
 
-function x(e) {
+function C(e) {
   let {
     user: t,
     currentUser: l,
     displayProfile: i,
-    autoFocusNote: x,
-    className: N
+    autoFocusNote: C,
+    className: N,
+    onClose: U
   } = e, {
-    theme: C
-  } = (0, _.useUserProfileThemeContext)(), {
-    trackUserProfileAction: U
-  } = (0, c.useUserProfileAnalyticsContext)(), h = null == i ? void 0 : i.guildId, P = (0, n.useStateFromStores)([d.default], () => null != h ? d.default.getGuild(h) : null), R = (0, n.useStateFromStores)([u.default], () => u.default.locale), M = (0, S.default)(t.id), j = (0, f.default)(t.id);
+    theme: P
+  } = (0, v.useUserProfileThemeContext)(), {
+    trackUserProfileAction: h
+  } = (0, f.useUserProfileAnalyticsContext)(), R = null == i ? void 0 : i.guildId, M = (0, n.useStateFromStores)([d.default], () => null != R ? d.default.getGuild(R) : null), j = (0, n.useStateFromStores)([c.default], () => c.default.getGuildId()), y = (0, n.useStateFromStores)([u.default], () => u.default.locale), L = (0, E.default)(t.id), O = (0, S.default)(t.id);
   return (0, s.jsxs)(o.ScrollerThin, {
     fade: !0,
-    className: a()(A.scroller, N),
-    children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, s.jsx)(E.default, {
+    className: a()(x.scroller, N),
+    children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, s.jsx)(I.default, {
       userBio: i.bio,
       setLineClamp: !1
-    }), null != P && (0, s.jsx)(p.default, {
+    }), null != M && (0, s.jsx)(T.default, {
       user: t,
       currentUser: l,
-      guild: P
-    }), (0, s.jsx)(m.default, {
-      title: g.default.Messages.USER_PROFILE_MEMBER_SINCE,
-      children: (0, s.jsx)(I.default, {
+      guild: M
+    }), (0, s.jsx)(_.default, {
+      title: A.default.Messages.USER_PROFILE_MEMBER_SINCE,
+      children: (0, s.jsx)(m.default, {
         userId: t.id,
         guildId: null == i ? void 0 : i.guildId,
-        tooltipDelay: T.USER_PROFILE_TOOLTIP_DELAY
+        tooltipDelay: g.USER_PROFILE_TOOLTIP_DELAY
       })
-    }), M.length > 0 && (0, s.jsx)(m.default, {
-      title: g.default.Messages.CONNECTIONS,
-      children: (0, s.jsx)(v.ConnectedUserAccounts, {
-        connectedAccounts: M,
-        className: A.connections,
+    }), L.length > 0 && (0, s.jsx)(_.default, {
+      title: A.default.Messages.CONNECTIONS,
+      children: (0, s.jsx)(p.ConnectedUserAccounts, {
+        connectedAccounts: L,
+        className: x.connections,
         userId: t.id,
-        theme: C,
-        locale: R
+        theme: P,
+        locale: y
       })
-    }), j.length > 0 && (0, s.jsx)(m.default, {
-      title: g.default.Messages.APPS,
-      children: j.map(e => (0, s.jsx)(v.ConnectedApplicationUserRoleAccount, {
+    }), O.length > 0 && (0, s.jsx)(_.default, {
+      title: A.default.Messages.APPS,
+      children: O.map(e => (0, s.jsx)(p.ConnectedApplicationUserRoleAccount, {
+        className: x.appsConnections,
         applicationRoleConnection: e,
-        locale: R
+        locale: y,
+        onApplicationClicked: () => {
+          h({
+            action: "PRESS_APP_CONNECTION"
+          }), U()
+        },
+        selectedGuildId: null != j ? j : void 0
       }, e.application.id))
-    }), (0, s.jsx)(m.default, {
-      title: g.default.Messages.NOTE,
+    }), (0, s.jsx)(_.default, {
+      title: A.default.Messages.NOTE,
       children: (0, s.jsx)(r.default, {
         userId: t.id,
-        className: A.note,
-        autoFocus: x,
-        onUpdate: () => U({
+        className: x.note,
+        autoFocus: C,
+        onUpdate: () => h({
           action: "SET_NOTE"
         })
       })
