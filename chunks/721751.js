@@ -10,65 +10,53 @@ var a = n("735250"),
   d = n("481060"),
   c = n("980591"),
   f = n("605782"),
-  h = n("566010"),
-  E = n("353926"),
-  g = n("703656"),
-  m = n("980483"),
-  _ = n("612744"),
-  p = n("624138"),
-  T = n("830064"),
-  I = n("981631"),
-  S = n("734541");
-let A = n("407025"),
-  N = n("2984"),
-  R = (0, p.cssValueToNumber)(S.responsiveWidthMobile),
-  C = [I.Routes.LOGIN, I.Routes.LOGIN_HANDOFF, I.Routes.REGISTER, I.Routes.INVITE(""), I.Routes.GIFT_CODE(""), I.Routes.GUILD_TEMPLATE_LOGIN(""), I.Routes.GUILD_TEMPLATE(""), I.Routes.DISABLE_EMAIL_NOTIFICATIONS, I.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, I.Routes.BILLING_PREMIUM_SUBSCRIBE, I.Routes.BILLING_PAYMENT_SOURCES_CREATE, I.Routes.BILLING_PAYMENTS, I.Routes.BILLING_PREMIUM_SWITCH_PLAN, I.Routes.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, I.Routes.VERIFY, I.Routes.VERIFY_HUB_EMAIL, I.Routes.REJECT_IP, I.Routes.REJECT_MFA, I.Routes.AUTHORIZE_IP, I.Routes.AUTHORIZE_PAYMENT, I.Routes.RESET, I.Routes.HANDOFF, I.Routes.REPORT, I.Routes.REPORT_SECOND_LOOK];
+  h = n("353926"),
+  E = n("703656"),
+  g = n("980483"),
+  m = n("612744"),
+  _ = n("624138"),
+  p = n("981631"),
+  T = n("734541");
+let S = n("575703"),
+  A = n("2984"),
+  I = (0, _.cssValueToNumber)(T.responsiveWidthMobile),
+  N = [p.Routes.LOGIN, p.Routes.LOGIN_HANDOFF, p.Routes.REGISTER, p.Routes.INVITE(""), p.Routes.GIFT_CODE(""), p.Routes.GUILD_TEMPLATE_LOGIN(""), p.Routes.GUILD_TEMPLATE(""), p.Routes.DISABLE_EMAIL_NOTIFICATIONS, p.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, p.Routes.BILLING_PREMIUM_SUBSCRIBE, p.Routes.BILLING_PAYMENT_SOURCES_CREATE, p.Routes.BILLING_PAYMENTS, p.Routes.BILLING_PREMIUM_SWITCH_PLAN, p.Routes.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, p.Routes.VERIFY, p.Routes.VERIFY_HUB_EMAIL, p.Routes.REJECT_IP, p.Routes.REJECT_MFA, p.Routes.AUTHORIZE_IP, p.Routes.AUTHORIZE_PAYMENT, p.Routes.RESET, p.Routes.HANDOFF, p.Routes.REPORT, p.Routes.REPORT_SECOND_LOOK];
+
+function R(e) {
+  return N.some(t => e.startsWith(t))
+}
+let C = e => (s = e, e);
 
 function O(e) {
-  return C.some(t => e.startsWith(t))
-}
-let v = e => (s = e, e);
-
-function L(e) {
   let {
     children: t
   } = e;
   switch (function() {
-      let [e, t] = i.useState(!1), [n, a] = i.useState(!1), l = h.default.useExperiment({
-        location: "authWrapper"
-      }, {
-        autoTrackExposure: !1
-      }), r = (0, u.useStateFromStores)([E.default], () => E.default.hasLoadedExperiments);
-      return ((0, c.default)(() => {
-        !r && a(!0)
-      }, 300), void 0 !== s) ? s : !n && r ? (!e && (h.default.trackExposure({
-        location: "authWrapper"
-      }), t(!0)), v(l.isWelcomeRefreshEnabled ? "refresh" : "legacy")) : n ? v("legacy") : "loading"
+      let [e, t] = i.useState(!1), [n, a] = i.useState(true), l = function() {
+        return null
+      }(), r = (0, u.useStateFromStores)([h.default], () => h.default.hasLoadedExperiments);
+      return ((0, c.default)(() => {}, 300), void 0 !== s) ? s : !n && r ? (!e && t(!0), C(function(e) {
+        return "default"
+      }(l))) : n ? C("default") : "loading"
     }()) {
-    case "refresh":
+    case "default":
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)("img", {
-          className: S.artwork,
-          src: A,
+          className: T.artwork,
+          src: S,
           alt: ""
         }), (0, a.jsx)("img", {
-          className: S.logoWithText,
-          src: N,
+          className: T.logoWithText,
+          src: A,
           alt: ""
         }), t]
       });
-    case "legacy":
-      return (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(T.default, {
-          className: S.artwork,
-          preserveAspectRatio: "xMinYMin slice"
-        }), t]
-      });
+    case "experimental":
     case "loading":
       return null
   }
 }
-class x extends i.Component {
+class v extends i.Component {
   componentDidMount() {
     window.addEventListener("resize", this.handleResize)
   }
@@ -76,14 +64,14 @@ class x extends i.Component {
     window.removeEventListener("resize", this.handleResize)
   }
   mobileTransitionTo(e, t) {
-    if (O(e))(0, g.transitionTo)(e, t);
+    if (R(e))(0, E.transitionTo)(e, t);
     else {
       let n = null != t && null != t.search ? t.search : null;
       window.location = null == n ? e : "".concat(e, "?").concat(n)
     }
   }
   mobileReplaceWith(e) {
-    O(e) ? (0, g.replaceWith)(e) : window.location = e
+    R(e) ? (0, E.replaceWith)(e) : window.location = e
   }
   renderDefault() {
     let {
@@ -91,23 +79,23 @@ class x extends i.Component {
     } = this.props, t = (0, a.jsx)(f.default, {
       component: i.Fragment,
       children: i.Children.map(this.props.children, e => i.cloneElement(e, {
-        transitionTo: g.transitionTo,
-        replaceWith: g.replaceWith
+        transitionTo: E.transitionTo,
+        replaceWith: E.replaceWith
       }))
     });
     return (0, a.jsx)("div", {
-      className: S.characterBackground,
+      className: T.characterBackground,
       children: (0, a.jsx)(d.HeadingLevel, {
         forceLevel: 1,
         children: null != e ? (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(m.default, {
+          children: [(0, a.jsx)(g.default, {
             show: !0,
-            className: r()(S.logo)
-          }), (0, a.jsx)(_.Splash, {
+            className: r()(T.logo)
+          }), (0, a.jsx)(m.Splash, {
             splash: e,
             children: t
           })]
-        }) : (0, a.jsx)(L, {
+        }) : (0, a.jsx)(O, {
           children: t
         })
       })
@@ -132,7 +120,7 @@ class x extends i.Component {
     var t, n, s;
     super(e), t = this, n = "handleResize", s = () => {
       this.setState({
-        isMobileWidth: window.innerWidth <= R
+        isMobileWidth: window.innerWidth <= I
       })
     }, n in t ? Object.defineProperty(t, n, {
       value: s,
@@ -140,8 +128,8 @@ class x extends i.Component {
       configurable: !0,
       writable: !0
     }) : t[n] = s, this.state = {
-      isMobileWidth: window.innerWidth <= R
+      isMobileWidth: window.innerWidth <= I
     }
   }
 }
-t.default = x
+t.default = v
