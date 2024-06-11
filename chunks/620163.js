@@ -1082,14 +1082,14 @@ let eG = () => {
         predicate: () => !eH
       },
       [eL.WebSetting.ACTIVITY_PRIVACY_STATUS]: {
-        section: eP.UserSettingsSections.ACTIVITY_PRIVACY,
+        section: eH ? eP.UserSettingsSections.GAMES : eP.UserSettingsSections.ACTIVITY_PRIVACY,
         searchableTitle: eU.default.Messages.ACTIVITY_STATUS,
-        parent: eL.WebSetting.ACTIVITY_PRIVACY
+        parent: eH ? eL.WebSetting.GAMES : eL.WebSetting.ACTIVITY_PRIVACY
       },
       [eL.WebSetting.ACTIVITY_PRIVACY_RICH_PRESENCE]: {
-        section: eP.UserSettingsSections.ACTIVITY_PRIVACY,
+        section: eH ? eP.UserSettingsSections.GAMES : eP.UserSettingsSections.ACTIVITY_PRIVACY,
         searchableTitle: eU.default.Messages.ACTIVITY_PARTY_PRIVACY,
-        parent: eL.WebSetting.ACTIVITY_PRIVACY
+        parent: eH ? eL.WebSetting.GAMES : eL.WebSetting.ACTIVITY_PRIVACY
       },
       [eL.WebSetting.REGISTERED_GAMES]: {
         section: eP.UserSettingsSections.REGISTERED_GAMES,
