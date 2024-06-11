@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return b
+    return U
   }
 }), l("47120");
 var a = l("735250"),
@@ -22,8 +22,8 @@ var a = l("735250"),
   C = l("594174"),
   g = l("746124"),
   N = l("285952"),
-  I = l("466111"),
-  p = l("74538"),
+  p = l("466111"),
+  I = l("74538"),
   x = l("451467"),
   A = l("200445"),
   T = l("122186"),
@@ -43,7 +43,7 @@ function P(e) {
   (0, c.openModalLazy)(async () => {
     let {
       default: e
-    } = await l.e("28479").then(l.bind(l, "78865"));
+    } = await Promise.all([l.e("99387"), l.e("28479")]).then(l.bind(l, "78865"));
     return l => (0, a.jsx)(e, {
       ...l,
       onCloseParent: n,
@@ -55,17 +55,17 @@ function P(e) {
 function G() {
   return (0, a.jsxs)("div", {
     className: j.toolTipTextContainer,
-    children: [(0, a.jsx)(I.default, {
+    children: [(0, a.jsx)(p.default, {
       className: i()(j.premiumIcon)
     }), (0, a.jsx)(c.Text, {
       className: j.upsellText,
       variant: "text-sm/medium",
-      children: M.default.Messages.STREAM_QUALITY_DISCORD_NITRO_UNLOCK
+      children: M.default.Messages.UNLOCK_WITH_NITRO
     })]
   })
 }
 
-function U(e) {
+function b(e) {
   let t, l, {
       type: n,
       selected: s,
@@ -95,7 +95,7 @@ function U(e) {
   }), l = () => f(E)) : r ? (t = (0, a.jsx)(c.TooltipContainer, {
     tooltipClassName: j.tooltip,
     spacing: 6,
-    "aria-label": M.default.Messages.STREAM_QUALITY_DISCORD_NITRO_UNLOCK,
+    "aria-label": M.default.Messages.UNLOCK_WITH_NITRO,
     text: (0, a.jsx)(G, {}),
     children: (0, a.jsx)("div", {
       className: j.textContainer,
@@ -130,27 +130,27 @@ function U(e) {
   }
 }
 
-function b(e) {
+function U(e) {
   let {
     selectedGuildId: t,
     selectedChannelId: l,
     onClose: s,
     selectedPreset: i,
     selectedResolution: r,
-    selectedFPS: I,
+    selectedFPS: p,
     onResolutionChange: G,
-    onFPSChange: b,
+    onFPSChange: U,
     onPresetChange: y,
     targetGuildPremiumTier: F,
     captureDeviceSelected: k
   } = e, w = (0, d.useStateFromStores)([C.default], () => {
     let e = C.default.getCurrentUser();
     return u()(null != e, "StreamSettings: user cannot be undefined"), e
-  }), H = p.default.canStreamQuality(p.StreamQuality.MID, w), {
+  }), H = I.default.canStreamQuality(I.StreamQuality.MID, w), {
     location: V
   } = (0, m.useAnalyticsContext)(), B = (0, S.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
     autoTrackExposure: !1
-  }), W = (0, p.isPremium)(w, L.PremiumTypes.TIER_1), {
+  }), W = (0, I.isPremium)(w, L.PremiumTypes.TIER_1), {
     inPerksDemosExperiment: K
   } = E.default.useExperiment({
     location: "Go Live Modal"
@@ -177,18 +177,18 @@ function b(e) {
     }
   }, [z, Y.hqStreamingUnlockAnimationPlayed]);
   let $ = n.useCallback(() => {
-      G(R.ApplicationStreamResolutions.RESOLUTION_1080), b(R.ApplicationStreamFPS.FPS_60)
-    }, [G, b]),
+      G(R.ApplicationStreamResolutions.RESOLUTION_1080), U(R.ApplicationStreamFPS.FPS_60)
+    }, [G, U]),
     ee = k ? R.GoLiveDeviceResolutionButtons : R.ApplicationStreamResolutionButtons,
     et = {
       ...V,
       section: v.AnalyticsSections.STREAM_SETTINGS
     },
     el = (0, a.jsx)(g.default, {
-      buttons: ee.map(e => U({
+      buttons: ee.map(e => b({
         type: e,
         selected: e.value === r,
-        needsPremium: !(0, x.default)(i, e.value, I, w, F),
+        needsPremium: !(0, x.default)(i, e.value, p, w, F),
         needsDemo: z && e.value !== R.ApplicationStreamResolutions.RESOLUTION_720,
         analyticsLocation: et,
         useGradient: !0,
@@ -198,14 +198,14 @@ function b(e) {
       }))
     }),
     ea = (0, a.jsx)(g.default, {
-      buttons: R.ApplicationStreamFPSButtons.map(e => U({
+      buttons: R.ApplicationStreamFPSButtons.map(e => b({
         type: e,
-        selected: e.value === I,
+        selected: e.value === p,
         needsPremium: !(0, x.default)(i, r, e.value, w, F),
         needsDemo: z && e.value === R.ApplicationStreamFPS.FPS_60,
         analyticsLocation: et,
         useGradient: !0,
-        onClick: () => b(e.value),
+        onClick: () => U(e.value),
         onClose: s,
         setIsHovering: Z
       }))
@@ -229,7 +229,7 @@ function b(e) {
           children: (0, a.jsx)(c.Text, {
             variant: "text-xs/normal",
             children: M.default.Messages.STREAM_PRESET_DOCUMENTS_DESCRIPTION_NITRO.format({
-              fps: I
+              fps: p
             })
           })
         })

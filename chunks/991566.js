@@ -6,6 +6,7 @@ e.exports = {
   closeButton: "closeButton__5e970",
   content: "content__6d646",
   context: "context_e4de9b",
+  enhancedContent: "enhancedContent__4f94a",
   enhancedFooter: "enhancedFooter_da231d",
   enhancedHeader: "enhancedHeader__84b43",
   enhancedPrimaryActions: "enhancedPrimaryActions_db2d14",
