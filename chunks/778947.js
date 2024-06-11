@@ -236,7 +236,7 @@ function K(e) {
     } = (0, _.default)(d.default.AVATAR), P = (0, l.useStateFromStores)([C.default], () => {
       var e;
       return null !== (e = s.displayCompactAvatars) && void 0 !== e ? e : C.default.displayCompactAvatars
-    }), U = null != T.messageReference && null != T.webhookId, b = T.author, {
+    }), U = null != T.messageReference && null != T.webhookId && T.hasFlag(k.MessageFlags.IS_CROSSPOST), b = T.author, {
       id: G
     } = b, w = S ? 32 : 80, {
       avatarSrc: B,

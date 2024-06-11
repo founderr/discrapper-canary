@@ -67,7 +67,7 @@ function g(e) {
       colorString: V,
       colorRoleName: F
     } = i,
-    H = null != r.messageReference && null != r.webhookId,
+    H = null != r.messageReference && null != r.webhookId && r.hasFlag(O.MessageFlags.IS_CROSSPOST),
     Y = (0, d.useStateFromStores)([c.default], () => c.default.roleStyle),
     j = (0, h.useCanSeeRemixBadge)(),
     W = a.useMemo(() => ({
