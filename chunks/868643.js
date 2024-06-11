@@ -16,11 +16,12 @@ let d = u.MessageFlags.CROSSPOSTED | u.MessageFlags.FAILED_TO_MENTION_SOME_ROLES
 function c(e) {
   let t = (0, a.useStateFromStores)([l.default, r.default], () => {
     var t;
+    if (null == e) return !1;
     let n = null === (t = r.default.getChannel(e.channel_id)) || void 0 === t ? void 0 : t.guild_id;
     return null != n && l.default.isChannelGated(n, e.channel_id)
   });
   return s.useMemo(() => {
     var t;
-    return t = e, !!u.MessageTypesSets.FORWARDABLE.has(t.type) && null == t.poll && !(t.components.length > 0) && null == t.activity && null == t.call && null == t.interaction && 0 === (0, o.removeFlag)(t.flags, d) && !((0, i.getMessageStickers)(t).length > 0) && !0
+    return null != e && (t = e, !!u.MessageTypesSets.FORWARDABLE.has(t.type) && null == t.poll && !(t.components.length > 0) && null == t.activity && null == t.call && null == t.interaction && 0 === (0, o.removeFlag)(t.flags, d) && !((0, i.getMessageStickers)(t).length > 0) && !0)
   }, [e]) && !t
 }
