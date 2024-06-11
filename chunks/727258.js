@@ -121,15 +121,15 @@ function _(e, t) {
   }
 }
 
-function c(e, t) {
-  var n, i, r;
+function c(e, t, n) {
+  var i, r, s;
   return {
     type: "folder",
     id: e.folderId,
     parentId: t,
-    name: null !== (n = e.folderName) && void 0 !== n ? n : void 0,
-    color: null !== (i = e.folderColor) && void 0 !== i ? i : void 0,
-    expanded: null !== (r = e.expanded) && void 0 !== r && r,
+    name: null !== (i = e.folderName) && void 0 !== i ? i : void 0,
+    color: null !== (r = e.folderColor) && void 0 !== r ? r : void 0,
+    expanded: null != n ? n : null !== (s = e.expanded) && void 0 !== s && s,
     children: []
   }
 }
