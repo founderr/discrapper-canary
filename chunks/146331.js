@@ -54,7 +54,11 @@ function S(e) {
     })
   }), R = (0, l.default)({
     id: t.id,
-    label: f.default.Messages.COPY_ID_USER
+    label: f.default.Messages.COPY_ID_USER,
+    onSuccess: () => m({
+      action: "COPY_USER_ID",
+      analyticsLocations: N
+    })
   });
   if (A && n !== T.UserProfileTypes.FULL_SIZE) return null;
   let g = [];

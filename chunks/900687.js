@@ -1,164 +1,92 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return _
+    return S
   }
 });
 var s = l("735250");
 l("470079");
 var i = l("481060"),
-  a = l("493683"),
-  n = l("239091"),
-  o = l("194359"),
-  r = l("906732"),
-  u = l("726521"),
-  d = l("621113"),
-  c = l("705556"),
-  f = l("30556"),
-  S = l("225714"),
-  E = l("228168"),
-  I = l("981631"),
-  m = l("590106");
+  a = l("239091"),
+  n = l("621113"),
+  o = l("785717"),
+  r = l("705556"),
+  u = l("30556"),
+  d = l("225714"),
+  c = l("228168"),
+  f = l("590106");
 
-function _(e) {
+function S(e) {
   let {
     user: t,
-    isCurrentUser: _,
-    guildId: p,
-    friendToken: v,
-    canDM: T,
-    relationshipType: g,
-    originalFriendingEnabled: x = !1,
-    improvedFriendingEnabled: A = !1,
-    trackUserProfileAction: C,
-    viewProfileItem: N,
-    onClose: U
+    isCurrentUser: S,
+    guildId: E,
+    friendToken: I,
+    canDM: m,
+    relationshipType: _,
+    originalFriendingEnabled: v = !1,
+    improvedFriendingEnabled: p = !1,
+    viewProfileItem: T,
+    onClose: g
   } = e, {
-    newestAnalyticsLocation: R
-  } = (0, r.default)();
+    trackUserProfileAction: A
+  } = (0, o.useUserProfileAnalyticsContext)();
 
-  function h(e) {
-    C({
-      action: "SEND_MESSAGE"
-    }), a.default.openPrivateChannel(t.id, !1, !1, e), U()
-  }
-
-  function P(e) {
-    C({
+  function x(e) {
+    A({
       action: "PRESS_OPTIONS"
-    }), (0, n.openContextMenuLazy)(e, async () => {
+    }), (0, a.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await l.e("29136").then(l.bind(l, "193646"));
       return l => (0, s.jsx)(e, {
         ...l,
-        originalFriendingEnabled: x,
-        relationshipType: g,
-        onRemoveFriend: M,
-        onBlock: F,
-        onReport: O,
-        onCopyId: () => C({
-          action: "COPY_USER_ID"
-        }),
-        onMessage: () => h("User Profile Modal Header Buttons - Context Menu"),
-        viewProfileItem: N,
+        originalFriendingEnabled: v,
+        relationshipType: _,
+        viewProfileItem: T,
         user: t,
-        isCurrentUser: _,
-        guildId: p
+        isCurrentUser: S,
+        guildId: E,
+        trackUserProfileAction: A,
+        onClose: g
       })
     })
-  }
-
-  function M() {
-    C({
-      action: "REMOVE_FRIEND"
-    }), o.default.removeFriend(t.id, {
-      location: R
-    })
-  }
-
-  function y() {
-    try {
-      C({
-        action: "SEND_FRIEND_REQUEST"
-      }), o.default.addRelationship({
-        userId: t.id,
-        context: {
-          location: R
-        },
-        type: void 0,
-        friendToken: v
-      })
-    } catch (e) {
-      U()
-    }
-  }
-
-  function j() {
-    C({
-      action: "IGNORE_FRIEND_REQUEST"
-    }), o.default.cancelFriendRequest(t.id, {
-      location: R
-    })
-  }
-
-  function F() {
-    try {
-      C({
-        action: "BLOCK"
-      }), o.default.addRelationship({
-        userId: t.id,
-        context: {
-          location: R
-        },
-        type: I.RelationshipTypes.BLOCKED
-      })
-    } catch (e) {
-      U()
-    }
-  }
-
-  function O() {
-    C({
-      action: "REPORT"
-    }), (0, u.showReportModalForUser)(t, "@me" === p ? void 0 : p)
   }
   return (0, s.jsxs)("div", {
-    className: m.buttons,
-    children: [(x || A) && (0, s.jsxs)(s.Fragment, {
-      children: [(0, s.jsx)(S.default, {
+    className: f.buttons,
+    children: [(v || p) && (0, s.jsxs)(s.Fragment, {
+      children: [(0, s.jsx)(d.default, {
         user: t,
-        isCurrentUser: _,
-        relationshipType: g,
-        onAddFriend: y,
-        onIgnoreFriend: j,
-        onSendMessage: () => h("User Profile Modal Header Buttons - Send Message Button"),
-        originalFriendingEnabled: x,
-        improvedFriendingEnabled: A
-      }), _ && (0, s.jsx)(c.default, {
+        isCurrentUser: S,
+        relationshipType: _,
+        originalFriendingEnabled: v,
+        improvedFriendingEnabled: p,
+        friendToken: I,
+        onClose: g
+      }), S && (0, s.jsx)(r.default, {
         user: t,
-        guildId: p,
-        profileType: E.UserProfileTypes.FULL_SIZE,
-        onClose: U
-      }), !t.isNonUserBot() && x ? (0, s.jsx)(i.Clickable, {
+        guildId: E,
+        profileType: c.UserProfileTypes.FULL_SIZE,
+        onClose: g
+      }), !t.isNonUserBot() && v ? (0, s.jsx)(i.Clickable, {
         focusProps: {
           offset: {
             left: 8
           }
         },
-        onClick: P,
-        children: (0, s.jsx)(d.default, {
-          className: m.additionalActionsIcon
+        onClick: x,
+        children: (0, s.jsx)(n.default, {
+          className: f.additionalActionsIcon
         })
       }) : null]
-    }), !x && !A && (T ? (0, s.jsx)(f.default, {
+    }), !v && !p && (m ? (0, s.jsx)(u.default, {
       user: t,
-      onClose: U
-    }) : (0, s.jsx)(c.default, {
+      onClose: g
+    }) : (0, s.jsx)(r.default, {
       user: t,
-      guildId: p,
-      profileType: E.UserProfileTypes.FULL_SIZE,
-      onClose: U
+      guildId: E,
+      profileType: c.UserProfileTypes.FULL_SIZE,
+      onClose: g
     }))]
   })
 }
