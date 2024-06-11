@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return r
   },
   useConnectedAccounts: function() {
-    return w
+    return k
   },
   useDismissNewQuestBadge: function() {
-    return P
+    return U
   },
   useExpiredQuestsMap: function() {
     return L
@@ -19,25 +19,28 @@ n.r(t), n.d(t, {
     return v
   },
   useQuestCollectibles: function() {
-    return b
+    return G
   },
   useQuestFormattedDate: function() {
     return D
   },
   useQuestFromActivities: function() {
-    return U
+    return b
   },
   useQuestInstructionTitle: function() {
-    return M
+    return y
   },
   useQuestPreviewActions: function() {
-    return G
+    return w
+  },
+  useQuestTaskDetails: function() {
+    return M
   },
   useQuests: function() {
     return C
   },
   useQuestsForSettingsBadge: function() {
-    return y
+    return P
   }
 }), n("47120"), n("653041");
 var i, r, s, a, o = n("470079"),
@@ -187,27 +190,38 @@ function D(e) {
     },
     n = (0, u.useStateFromStores)([_.default], () => _.default.locale);
   return o.useMemo(() => null == e ? "" : new Date(e).toLocaleDateString(n, t), [e, t, n])
-}
+}(a = r || (r = {})).UNCLAIMED = "unclaimed", a.CLAIMED = "claimed";
+let M = e => {
+  let {
+    quest: t,
+    location: n
+  } = e;
+  return o.useMemo(() => (0, f.getQuestTaskDetails)({
+    quest: t,
+    location: n
+  }), [t, n])
+};
 
-function M(e, t) {
+function y(e, t) {
   let n = (0, S.useIsEligibleForQuestPlaytime)({
       location: t
     }),
-    i = O.default.Messages.QUESTS_STREAM_TASK;
-  (0, f.hasVariant)(e, N.QuestVariants.IN_HOUSE_CONSOLE_QUEST) ? i = O.default.Messages.QUESTS_IN_HOUSE_TASK: n && (0, f.hasPlayOnDesktopTask)({
+    {
+      targetMinutes: i
+    } = M({
+      quest: e,
+      location: t
+    }),
+    r = O.default.Messages.QUESTS_STREAM_TASK;
+  return (0, f.hasVariant)(e, N.QuestVariants.IN_HOUSE_CONSOLE_QUEST) ? r = O.default.Messages.QUESTS_IN_HOUSE_TASK : n && (0, f.hasPlayOnDesktopTask)({
     quest: e
-  }) && (i = O.default.Messages.QUESTS_PLAY_TASK);
-  let r = (0, f.getQuestTaskDetails)({
-    quest: e,
-    location: t
-  }).targetMinutes;
-  return i.format({
-    minutes: r,
+  }) && (r = O.default.Messages.QUESTS_PLAY_TASK), r.format({
+    minutes: i,
     gameTitle: e.config.messages.gameTitle
   })
 }
 
-function y() {
+function P() {
   let {
     quests: e,
     isFetchingCurrentQuests: t
@@ -235,14 +249,14 @@ function y() {
   }, [e, n, t])
 }
 
-function P() {
-  let e = y();
+function U() {
+  let e = P();
   o.useEffect(() => {
     for (let t of e)(0, E.dismissQuestContent)(t.id, T.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE)
   }, [e])
 }
 
-function U(e) {
+function b(e) {
   let t = (0, A.useIsEligibleForMembersListQuestEntrypoint)({
       location: N.QuestsExperimentLocations.MEMBERS_LIST
     }),
@@ -251,7 +265,7 @@ function U(e) {
   return v(i) ? null : i
 }
 
-function b(e) {
+function G(e) {
   var t;
   let n = (0, f.hasCollectiblesQuestReward)(e),
     {
@@ -265,7 +279,7 @@ function b(e) {
   }
 }
 
-function G(e) {
+function w(e) {
   return {
     handleComplete: () => (0, E.completeQuestPreview)(e),
     handleResetStatusClick: () => (0, E.resetQuestPreviewStatus)(e),
@@ -274,7 +288,7 @@ function G(e) {
   }
 }
 
-function w() {
+function k() {
   let {
     fetching: e,
     accounts: t
@@ -302,4 +316,4 @@ function w() {
     playstationAccounts: i,
     xboxAndPlaystationAccounts: r
   }
-}(a = r || (r = {})).UNCLAIMED = "unclaimed", a.CLAIMED = "claimed"
+}

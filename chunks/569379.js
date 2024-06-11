@@ -28,7 +28,9 @@ var a = s("470079"),
 function f(e) {
   var t, s;
   let a = (0, l.useStateFromStores)([r.default], () => r.default.locale),
-    n = (0, d.calculatePercentComplete)({
+    {
+      percentComplete: n
+    } = (0, u.useQuestTaskDetails)({
       quest: e,
       location: E.QuestsExperimentLocations.QUESTS_BAR
     });
@@ -41,25 +43,26 @@ function f(e) {
       percent: e
     })
   }
-  return _.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
+  return (0, d.isConsoleQuest)(e) ? _.default.Messages.QUEST_BAR_TITLE_START_PLAYING : _.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
 }
 
 function h(e, t) {
   var s;
-  let n = (0, u.useQuestFormattedDate)(c.SharedQuestFields.build(e.config).rewardsExpireAt),
-    l = a.useMemo(() => (0, d.calculatePercentComplete)({
+  let a = (0, u.useQuestFormattedDate)(c.SharedQuestFields.build(e.config).rewardsExpireAt),
+    n = (0, u.useQuestTaskDetails)({
       quest: e,
       location: E.QuestsExperimentLocations.QUESTS_BAR
-    }), [e]);
+    });
   return (null === (s = e.userStatus) || void 0 === s ? void 0 : s.completedAt) != null ? _.default.Messages.QUESTS_CLAIM_BY_DATE.format({
-    expirationDate: n
+    expirationDate: a
   }) : t ? (0, d.getQuestsInstructionsToWinReward)({
     quest: e,
     location: E.QuestsExperimentLocations.QUESTS_BAR,
-    useV2Variants: !0
-  }) : l > 0 ? (0, d.getContextualEntrypointHeading)({
+    useV2Variants: !0,
+    taskDetails: n
+  }) : n.percentComplete > 0 ? (0, d.getContextualEntrypointHeading)({
     quest: e,
-    location: E.QuestsExperimentLocations.QUESTS_BAR
+    taskDetails: n
   }) : _.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED_SUBTITLE
 }
 

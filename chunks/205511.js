@@ -9,46 +9,44 @@ var a = s("735250"),
   u = s("461920"),
   d = s("207532"),
   c = s("481060"),
-  E = s("230711"),
-  _ = s("393238"),
-  f = s("110924"),
-  h = s("607070"),
-  m = s("869472"),
-  C = s("759231"),
-  T = s("272008"),
-  g = s("113434"),
-  A = s("918701"),
-  p = s("566078"),
-  N = s("46140"),
-  S = s("981631"),
-  I = s("689938"),
-  x = s("700898");
+  E = s("393238"),
+  _ = s("110924"),
+  f = s("607070"),
+  h = s("869472"),
+  m = s("759231"),
+  C = s("272008"),
+  T = s("113434"),
+  g = s("918701"),
+  A = s("566078"),
+  p = s("46140"),
+  N = s("689938"),
+  S = s("700898");
 
-function R(e) {
+function I(e) {
   let {
     children: t,
     isComplete: s,
     hasNextStep: n
   } = e;
   return (0, a.jsxs)("li", {
-    className: i()(x.stepWrapper, {
-      [x.stepWrapperComplete]: s
+    className: i()(S.stepWrapper, {
+      [S.stepWrapperComplete]: s
     }, {
-      [x.stepWrapperWithNextStep]: n
+      [S.stepWrapperWithNextStep]: n
     }),
     children: [(0, a.jsxs)("div", {
-      className: x.stepIndicator,
+      className: S.stepIndicator,
       children: [(0, a.jsx)("div", {
-        className: x.stepIconWrapper,
+        className: S.stepIconWrapper,
         children: s && (0, a.jsx)(u.CheckmarkBoldIcon, {
-          className: x.stepIcon,
+          className: S.stepIcon,
           color: c.tokens.colors.WHITE
         })
       }), n && (0, a.jsx)("div", {
-        className: x.stepConnector
+        className: S.stepConnector
       })]
     }), (0, a.jsx)(c.Text, {
-      className: x.stepContent,
+      className: S.stepContent,
       color: "text-muted",
       variant: "text-xs/medium",
       children: t
@@ -56,12 +54,12 @@ function R(e) {
   })
 }
 
-function v(e) {
+function x(e) {
   let [t, s] = (0, r.useSpring)(() => ({})), l = n.useRef(!1), i = async () => {
-    l.current = !0, await (0, T.manuallyStartConsoleQuest)(e.quest.id), l.current = !1
-  }, o = (0, r.animated)(m.default);
+    l.current = !0, await (0, C.manuallyStartConsoleQuest)(e.quest.id), l.current = !1
+  }, o = (0, r.animated)(h.default);
   return (0, a.jsx)(c.Clickable, {
-    className: x.microphoneUnitRefreshIconWrapper,
+    className: S.microphoneUnitRefreshIconWrapper,
     onClick: () => {
       i(), s({
         from: {
@@ -80,7 +78,7 @@ function v(e) {
       })
     },
     children: (0, a.jsx)(o, {
-      className: x.microphoneUnitRefreshIcon,
+      className: S.microphoneUnitRefreshIcon,
       style: e.useReducedMotion ? void 0 : t,
       height: 16,
       width: 16
@@ -88,27 +86,27 @@ function v(e) {
   })
 }
 
-function M(e) {
+function v(e) {
   return (0, a.jsxs)("div", {
-    className: x.microphoneUnit,
+    className: S.microphoneUnit,
     children: [(0, a.jsxs)("div", {
-      className: x.microphoneUnitHeader,
-      children: [(0, a.jsx)(C.default, {
-        className: x.warningCircle,
+      className: S.microphoneUnitHeader,
+      children: [(0, a.jsx)(m.default, {
+        className: S.warningCircle,
         width: 16,
         height: 16
       }), (0, a.jsx)(c.Text, {
         variant: "text-xs/medium",
-        children: I.default.Messages.QUESTS_MICROPHONE_UNIT_HEADER
-      }), (0, a.jsx)(v, {
+        children: N.default.Messages.QUESTS_MICROPHONE_UNIT_HEADER
+      }), (0, a.jsx)(x, {
         ...e
       })]
     }), (0, a.jsx)(c.Text, {
-      className: x.microphoneUnitBodyText,
+      className: S.microphoneUnitBodyText,
       color: "text-muted",
       variant: "text-xxs/normal",
-      children: (0, A.hasVariant)(e.quest, N.QuestVariants.IN_HOUSE_CONSOLE_QUEST) ? I.default.Messages.QUESTS_MICROPHONE_UNIT_BODY_ANY_GAME : I.default.Messages.QUESTS_MICROPHONE_UNIT_BODY.format({
-        gameTitle: p.SharedQuestFields.build(e.quest.config).application.name
+      children: (0, g.hasVariant)(e.quest, p.QuestVariants.IN_HOUSE_CONSOLE_QUEST) ? N.default.Messages.QUESTS_MICROPHONE_UNIT_BODY_ANY_GAME : N.default.Messages.QUESTS_MICROPHONE_UNIT_BODY.format({
+        gameTitle: A.SharedQuestFields.build(e.quest.config).application.name
       })
     })]
   })
@@ -117,42 +115,47 @@ t.default = function(e) {
   let {
     onContentHeightChange: t,
     quest: s
-  } = e, [l, i] = n.useState(!1), u = (0, o.useStateFromStores)([h.default], () => h.default.useReducedMotion), {
+  } = e, [l, i] = n.useState(!1), u = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), h = (0, T.useQuestTaskDetails)({
+    quest: s,
+    location: p.QuestsExperimentLocations.QUESTS_BAR
+  }), {
     xboxAndPlaystationAccounts: m
-  } = (0, g.useConnectedAccounts)(), {
+  } = (0, T.useConnectedAccounts)(), {
     steps: C,
-    hasConnectedAccounts: T,
-    isProgressingQuestForLaunchedGame: p
+    hasConnectedAccounts: x,
+    isProgressingQuestForLaunchedGame: R,
+    isQuestComplete: M
   } = n.useMemo(() => {
-    let e = (0, A.getQuestTaskDetails)({
-        quest: s,
-        location: N.QuestsExperimentLocations.QUESTS_BAR
-      }),
-      t = m.length > 0,
-      a = t && (0, A.isQuestProgressingOnConsole)(s),
-      n = a && e.progressSeconds >= e.targetSeconds;
+    var e;
+    let t = m.length > 0,
+      a = t && (0, g.isQuestProgressingOnConsole)(s),
+      n = (0, g.hasVariant)(s, p.QuestVariants.IN_HOUSE_CONSOLE_QUEST),
+      l = A.SharedQuestFields.build(s.config).application.name,
+      i = (null === (e = s.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
     return {
       steps: [{
-        content: I.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CONNECT_ACCOUNT,
-        isComplete: t
+        content: N.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CONNECT_ACCOUNT,
+        isComplete: t || a || i
       }, {
-        content: I.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_GAME,
-        isComplete: a
-      }, {
-        content: I.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_PLAYTIME.format({
-          numMinutes: e.targetMinutes
+        content: n ? N.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_ANY_GAME : N.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_GAME.format({
+          gameTitle: l
         }),
-        isComplete: n
+        isComplete: a || i
+      }, {
+        content: N.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_PLAYTIME.format({
+          numMinutes: h.targetMinutes
+        }),
+        isComplete: i
       }],
       hasConnectedAccounts: t,
       isProgressingQuestForLaunchedGame: a,
-      isPlaytimeComplete: n
+      isQuestComplete: i
     }
-  }, [m, s]), {
-    ref: v,
+  }, [m, s, h]), {
+    ref: O,
     height: L = 0
-  } = (0, _.default)(), O = (0, f.default)(L), {
-    expansionSpring: y
+  } = (0, E.default)(), y = (0, _.default)(L), {
+    expansionSpring: D
   } = (0, r.useSpring)({
     to: {
       expansionSpring: l ? 1 : 0
@@ -163,59 +166,49 @@ t.default = function(e) {
       clamp: !0
     },
     immediate: !0
-  }), D = L - (null != O ? O : 0);
+  }), b = L - (null != y ? y : 0);
   return n.useLayoutEffect(() => {
-    l && 0 !== D && t(D)
-  }, [l, D, t]), (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsxs)("div", {
-      className: x.wrapper,
-      children: [(0, a.jsxs)(c.Clickable, {
-        className: x.headingWrapper,
-        onClick: () => {
-          t(l ? -1 * L : L), i(!l)
-        },
-        children: [(0, a.jsx)(c.Heading, {
-          className: x.heading,
-          variant: "text-xs/medium",
-          children: I.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_HEADING
-        }), (0, a.jsx)(d.ChevronLargeDownIcon, {
-          className: x.headingChevron,
-          style: {
-            transform: "rotate(".concat(l ? 180 : 0, "deg)")
-          }
-        })]
-      }), (0, a.jsx)(r.animated.div, {
-        className: x.stepsWrapperAnimated,
+    l && 0 !== b && t(b)
+  }, [l, b, t]), (0, a.jsxs)("div", {
+    className: S.wrapper,
+    children: [(0, a.jsxs)(c.Clickable, {
+      className: S.headingWrapper,
+      onClick: () => {
+        t(l ? -1 * L : L), i(!l)
+      },
+      children: [(0, a.jsx)(c.Heading, {
+        className: S.heading,
+        variant: "text-xs/medium",
+        children: N.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_HEADING
+      }), (0, a.jsx)(d.ChevronLargeDownIcon, {
+        className: S.headingChevron,
         style: {
-          height: y.to({
-            range: [0, 1],
-            output: [0, L]
-          })
-        },
-        children: (0, a.jsx)("div", {
-          ref: v,
-          children: (0, a.jsxs)("div", {
-            className: x.stepsWrapperStatic,
-            children: [(0, a.jsx)("ul", {
-              children: C.map((e, t) => (0, a.jsx)(R, {
-                isComplete: e.isComplete,
-                hasNextStep: t < C.length - 1,
-                children: e.content
-              }, t))
-            }), T && !p && (0, a.jsx)(M, {
-              useReducedMotion: u,
-              quest: s
-            })]
-          })
-        })
+          transform: "rotate(".concat(l ? 180 : 0, "deg)")
+        }
       })]
-    }), 0 === m.length && (0, a.jsx)("div", {
-      className: x.ctaWrapper,
-      children: (0, a.jsx)(c.Button, {
-        fullWidth: !0,
-        onClick: () => E.default.open(S.UserSettingsSections.CONNECTIONS),
-        size: c.Button.Sizes.SMALL,
-        children: I.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CTA
+    }), (0, a.jsx)(r.animated.div, {
+      className: S.stepsWrapperAnimated,
+      style: {
+        height: D.to({
+          range: [0, 1],
+          output: [0, L]
+        })
+      },
+      children: (0, a.jsx)("div", {
+        ref: O,
+        children: (0, a.jsxs)("div", {
+          className: S.stepsWrapperStatic,
+          children: [(0, a.jsx)("ul", {
+            children: C.map((e, t) => (0, a.jsx)(I, {
+              isComplete: e.isComplete,
+              hasNextStep: t < C.length - 1,
+              children: e.content
+            }, t))
+          }), x && !R && !M && (0, a.jsx)(v, {
+            useReducedMotion: u,
+            quest: s
+          })]
+        })
       })
     })]
   })

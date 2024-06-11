@@ -2,8 +2,8 @@
 s.r(t), s("47120"), s("724458");
 var a = s("735250"),
   n = s("470079"),
-  l = s("844099"),
-  i = s("481060"),
+  i = s("844099"),
+  l = s("481060"),
   r = s("63063"),
   o = s("686777"),
   d = s("113434"),
@@ -42,25 +42,29 @@ t.default = () => {
       } = function(e) {
         let t = new Map(e.map(e => [e.id, e])),
           s = e.sort((e, t) => {
-            var s, a, n, l, i, r;
+            var s, a, n, i, l, r;
             let o = (null === (s = e.userStatus) || void 0 === s ? void 0 : s.completedAt) != null,
               d = (null === (a = e.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null,
               S = (null === (n = t.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-              T = (null === (l = t.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
+              T = (null === (i = t.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null;
             if (o && !d && S && !T) return 0;
             if (o && !d) return -1;
             if (S && !T) return 1;
-            let _ = (null === (i = e.userStatus) || void 0 === i ? void 0 : i.enrolledAt) != null,
+            let _ = (null === (l = e.userStatus) || void 0 === l ? void 0 : l.enrolledAt) != null,
               I = (null === (r = t.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null;
             if (_ && !o && I && !S) {
-              let s = (0, c.calculatePercentComplete)({
+              let {
+                percentComplete: s
+              } = (0, c.getQuestTaskDetails)({
                 quest: e,
                 location: E.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
-              });
-              return (0, c.calculatePercentComplete)({
+              }), {
+                percentComplete: a
+              } = (0, c.getQuestTaskDetails)({
                 quest: t,
                 location: E.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
-              }) - s
+              });
+              return a - s
             }
             if (_ && !o) return -1;
             if (I && !S) return 1;
@@ -105,20 +109,20 @@ t.default = () => {
     } = e;
     return t.length > 0
   });
-  return t || "sorted" !== p ? (0, a.jsx)(i.Spinner, {
+  return t || "sorted" !== p ? (0, a.jsx)(l.Spinner, {
     className: I.spinner
-  }) : 0 === C.length ? null : (0, a.jsx)(i.FormSection, {
+  }) : 0 === C.length ? null : (0, a.jsx)(l.FormSection, {
     className: I.questsContainer,
-    children: (0, a.jsxs)(i.HeadingLevel, {
+    children: (0, a.jsxs)(l.HeadingLevel, {
       component: (0, a.jsxs)("div", {
         className: I.questsHeading,
-        children: [g && (0, a.jsx)(l.QuestsIcon, {
+        children: [g && (0, a.jsx)(i.QuestsIcon, {
           className: I.questsIcon
-        }), (0, a.jsx)(i.Heading, {
+        }), (0, a.jsx)(l.Heading, {
           variant: "heading-md/semibold",
           className: I.questsHeading,
           children: _.default.Messages.QUESTS
-        }), (0, a.jsx)(i.Text, {
+        }), (0, a.jsx)(l.Text, {
           variant: "text-xs/normal",
           className: I.questsHeadingLearnMore,
           children: _.default.Messages.QUESTS_LEARN_MORE_LINK.format({
@@ -126,15 +130,15 @@ t.default = () => {
           })
         })]
       }),
-      children: [(0, a.jsx)(i.FormDivider, {
+      children: [(0, a.jsx)(l.FormDivider, {
         className: I.divider
       }), g ? O.map((e, t, s) => {
         let {
           location: n,
-          questIds: l,
+          questIds: i,
           title: r
         } = e;
-        if (0 === l.length) return null;
+        if (0 === i.length) return null;
         let o = 0 === t ? 0 : s.slice(0, t).reduce((e, t) => {
           let {
             questIds: s
@@ -143,12 +147,12 @@ t.default = () => {
         }, 0);
         return (0, a.jsxs)("section", {
           className: I.questsListContainer,
-          children: [R && (0, a.jsx)(i.Text, {
+          children: [R && (0, a.jsx)(l.Text, {
             variant: "text-xs/semibold",
             color: "header-secondary",
             className: I.sectionHeader,
             children: r
-          }), l.map((e, t) => (0, a.jsx)(S.QuestsCardWrapper, {
+          }), i.map((e, t) => (0, a.jsx)(S.QuestsCardWrapper, {
             questId: e,
             location: n,
             contentPosition: t + o,

@@ -1,6 +1,5 @@
 "use strict";
 e.exports = {
-  ctaWrapper: "ctaWrapper__16b61",
   heading: "heading__5c363",
   headingChevron: "headingChevron_a9d95d",
   headingWrapper: "headingWrapper_dfde31",

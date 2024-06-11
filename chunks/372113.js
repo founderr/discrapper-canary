@@ -99,14 +99,14 @@ t.default = e => {
     var t, n, s;
     let a = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
       l = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-      r = (null === (s = e.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
-      o = i.useMemo(() => (0, g.calculatePercentComplete)({
+      i = (null === (s = e.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
+      r = (0, N.useQuestTaskDetails)({
         quest: e,
         location: L.QuestsExperimentLocations.QUESTS_CARD
-      }) > 0, [e]);
-    if (r) return 4;
+      }).percentComplete > 0;
+    if (i) return 4;
     if (l) return 3;
-    if (o) return 2;
+    if (r) return 2;
     else if (a) return 1;
     else return 0
   }(t), k = G >= 1, w = G >= 3, H = G >= 4, V = (0, g.hasCollectiblesQuestReward)(t.config), Y = (0, g.hasVariant)(t, L.QuestVariants.IN_HOUSE_CONSOLE_QUEST), K = (0, O.isQuestCardInGiftInventory)(n), W = n === C.QuestContent.QUESTS_EMBED, z = m || F, Q = (0, N.useQuestInstructionTitle)(t, L.QuestsExperimentLocations.QUESTS_CARD), q = k && !H && K, X = (0, u.useStateFromStores)([E.default], () => E.default.useReducedMotion), Z = function(e, t, n, s) {

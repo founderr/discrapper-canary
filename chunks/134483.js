@@ -124,12 +124,16 @@ t.default = function(e) {
   });
   let eC = null != w && (null === (s = X.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null;
   if (!eC && (eT || ef || eS) || !eC && !ea) return null;
-  let em = (0, i.jsx)(U.default, {
-    className: F.rewardTile,
-    autoplay: Q,
-    quest: X,
-    questContent: g.QuestContent.QUEST_LIVE_STREAM
-  });
+  let em = (0, p.getQuestTaskDetails)({
+      quest: X,
+      location: y.QuestsExperimentLocations.QUEST_CHANNEL_CALL_HEADER
+    }),
+    eN = (0, i.jsx)(U.default, {
+      className: F.rewardTile,
+      autoplay: Q,
+      quest: X,
+      questContent: g.QuestContent.QUEST_LIVE_STREAM
+    });
   return (0, i.jsx)(O.QuestContentImpressionTrackerWeb, {
     questOrQuests: X,
     overrideVisibility: !q,
@@ -146,7 +150,7 @@ t.default = function(e) {
         onMouseLeave: Y,
         children: [!eE && (0, i.jsxs)("div", {
           className: F.rewardTileWrapper,
-          children: [em, (0, i.jsx)(x.default, {
+          children: [eN, (0, i.jsx)(x.default, {
             bgOpacity: .32,
             className: F.promotedTag
           })]
@@ -154,7 +158,7 @@ t.default = function(e) {
           className: F.content,
           children: [(0, i.jsxs)("div", {
             className: F.heading,
-            children: [eE && en ? em : (0, i.jsx)("img", {
+            children: [eE && en ? eN : (0, i.jsx)("img", {
               className: F.gameTile,
               alt: X.config.messages.gameTitle,
               src: (0, p.getGameTileAssetUrl)(X, K)
@@ -168,7 +172,7 @@ t.default = function(e) {
                   color: "header-primary",
                   children: en ? (0, p.getContextualEntrypointHeading)({
                     quest: X,
-                    location: y.QuestsExperimentLocations.QUEST_CHANNEL_CALL_HEADER
+                    taskDetails: em
                   }) : G.default.Messages.QUESTS_TITLE.format({
                     questName: X.config.messages.questName
                   })

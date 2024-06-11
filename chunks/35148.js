@@ -6,8 +6,8 @@ var n = s("120356"),
   l = s.n(n),
   i = s("920906"),
   r = s("481060"),
-  o = s("497505"),
-  u = s("918701"),
+  o = s("113434"),
+  u = s("497505"),
   d = s("685613"),
   c = s("340100"),
   E = s("644646"),
@@ -24,7 +24,9 @@ t.default = function(e) {
     isExpansionAnimationComplete: T,
     quest: g,
     useReducedMotion: A
-  } = e, p = (null === (t = g.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, N = (0, u.calculatePercentComplete)({
+  } = e, p = (null === (t = g.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, {
+    percentComplete: N
+  } = (0, o.useQuestTaskDetails)({
     quest: g,
     location: f.QuestsExperimentLocations.QUESTS_BAR
   });
@@ -50,7 +52,7 @@ t.default = function(e) {
         children: [(0, a.jsx)(E.default, {
           className: m.questProgressRewardTile,
           quest: g,
-          questContent: o.QuestContent.QUEST_BAR,
+          questContent: u.QuestContent.QUEST_BAR,
           autoplay: !1
         }), N > 0 ? (0, a.jsx)(c.default, {
           className: m.questProgressBar,

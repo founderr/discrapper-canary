@@ -1,20 +1,17 @@
 "use strict";
 let i;
 n.r(t), n.d(t, {
-  calculatePercentComplete: function() {
-    return W
-  },
   captureQuestsException: function() {
-    return J
+    return q
   },
   copyShareLink: function() {
-    return eE
+    return ec
   },
   getCollectiblesQuestReward: function() {
-    return X
+    return Z
   },
   getContextualEntrypointHeading: function() {
-    return K
+    return W
   },
   getGameLogotypeAssetUrl: function() {
     return x
@@ -47,43 +44,43 @@ n.r(t), n.d(t, {
     return F
   },
   getQuestsFromActivities: function() {
-    return $
+    return J
   },
   getQuestsInstructionsToWinReward: function() {
-    return e_
+    return ed
   },
   getRewardAsset: function() {
     return w
   },
   getRewardCodeQuestReward: function() {
-    return ed
+    return eu
   },
   getVideoAssetMimeType: function() {
-    return ei
+    return en
   },
   hasCollectiblesQuestReward: function() {
     return Q
   },
   hasPlayOnDesktopTask: function() {
-    return ea
+    return es
   },
   hasVariant: function() {
-    return eu
+    return el
   },
   includesTarget: function() {
-    return q
+    return X
   },
   isAssetAnimated: function() {
-    return ee
+    return $
   },
   isConsoleQuest: function() {
     return eA
   },
   isDismissed: function() {
-    return Z
+    return z
   },
   isDismissible: function() {
-    return z
+    return K
   },
   isQuestExpired: function() {
     return D
@@ -98,10 +95,10 @@ n.r(t), n.d(t, {
     return Y
   },
   isTieredRewardCodeQuest: function() {
-    return er
+    return ei
   },
   openGameLink: function() {
-    return ec
+    return e_
   },
   questUserStatusFromServer: function() {
     return M
@@ -116,10 +113,10 @@ n.r(t), n.d(t, {
     return P
   },
   shouldShowSocialEntrypoints: function() {
-    return el
+    return eo
   },
   shouldUsePlayOnDesktopTask: function() {
-    return eo
+    return ea
   }
 }), n("627341"), n("47120"), n("411104");
 var r = n("278074"),
@@ -172,7 +169,7 @@ function L(e, t) {
 }
 
 function v(e, t) {
-  return Array.from(e.values()).find(e => g(t, e) && !D(e) && ea({
+  return Array.from(e.values()).find(e => g(t, e) && !D(e) && es({
     quest: e
   }))
 }
@@ -325,7 +322,7 @@ function G(e, t) {
 }
 let w = e => {
     var t, n;
-    let i = ed({
+    let i = eu({
         quest: e,
         idx: null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedTier
       }),
@@ -367,34 +364,16 @@ let j = e => {
 };
 
 function W(e) {
-  let {
-    quest: t,
-    location: n
-  } = e;
-  if (null == t.userStatus) return 0;
-  if (null != t.userStatus.completedAt) return 1;
-  let {
-    progressSeconds: i,
-    targetSeconds: r
-  } = eS({
-    quest: t,
-    location: n
-  });
-  return r <= 0 ? 0 : Math.min(i / r, 1)
-}
-
-function K(e) {
   var t, n;
   let {
     quest: i,
-    location: r
+    taskDetails: r
   } = e;
   if ((null === (t = i.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return O.default.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE;
   if ((null === (n = i.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null) {
-    let e = W({
-      quest: i,
-      location: r
-    });
+    let {
+      percentComplete: e
+    } = r;
     return e >= .75 ? O.default.Messages.QUESTS_COMPLETION_PROGRESS_ALMOST_COMPLETE : e >= .45 && e <= .55 ? O.default.Messages.QUESTS_COMPLETION_PROGRESS_HALFWAY : e > 0 ? O.default.Messages.QUESTS_COMPLETION_PROGRESS_STARTED : O.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
   }
   return O.default.Messages.QUESTS_TITLE.format({
@@ -402,17 +381,17 @@ function K(e) {
   })
 }
 
-function z(e) {
+function K(e) {
   return Object.keys(p.DismissibleQuestContentFlags).includes(h.QuestContent[e])
 }
 
-function Z(e, t) {
-  if (!z(t)) return !1;
+function z(e, t) {
+  if (!K(t)) return !1;
   let n = h.QuestContent[t];
   return (0, c.hasFlag)(e.dismissedQuestContent, p.DismissibleQuestContentFlags[n])
 }
 
-function X(e) {
+function Z(e) {
   return (0, r.match)(e).with({
     configVersion: 1
   }, e => {
@@ -427,14 +406,14 @@ function X(e) {
 }
 
 function Q(e) {
-  return null != X(e)
+  return null != Z(e)
 }
 
-function q(e, t) {
+function X(e, t) {
   return e.targetedContent.includes(t)
 }
 
-function J(e, t) {
+function q(e, t) {
   T.default.captureException(e, {
     ...t,
     tags: {
@@ -444,7 +423,7 @@ function J(e, t) {
   })
 }
 
-function $(e, t) {
+function J(e, t) {
   if (null == t || null == e) return null;
   for (let n of t) {
     if (null == n.application_id) continue;
@@ -454,15 +433,15 @@ function $(e, t) {
   return null
 }
 
-function ee(e) {
+function $(e) {
   return e.endsWith(".webm") || e.endsWith(".mp4") || e.startsWith("data:video")
 }
-let et = /\.([a-zA-Z0-9]+)$/,
-  en = /^data:video\/([a-zA-Z0-9]+)\;/;
+let ee = /\.([a-zA-Z0-9]+)$/,
+  et = /^data:video\/([a-zA-Z0-9]+)\;/;
 
-function ei(e) {
+function en(e) {
   var t, n, i, r, s;
-  switch (null !== (s = null === (n = et.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== s ? s : null === (r = en.exec(e)) || void 0 === r ? void 0 : null === (i = r[1]) || void 0 === i ? void 0 : i.toLowerCase()) {
+  switch (null !== (s = null === (n = ee.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== s ? s : null === (r = et.exec(e)) || void 0 === r ? void 0 : null === (i = r[1]) || void 0 === i ? void 0 : i.toLowerCase()) {
     case "webm":
       return "video/webm";
     case "mp4":
@@ -472,7 +451,7 @@ function ei(e) {
   }
 }
 
-function er(e) {
+function ei(e) {
   let {
     quest: {
       config: t
@@ -490,42 +469,42 @@ function er(e) {
     return t.assignmentMethod === a.QuestRewardAssignmentMethods.TIERED && t.rewards.length > 0 && t.rewards.every(e => e.type === o.QuestRewardTypes.REWARD_CODE)
   }).exhaustive()
 }
-let es = e => (0, r.match)(e.taskConfig).with({
+let er = e => (0, r.match)(e.taskConfig).with({
   type: l.QuestTaskConfigTypes.FIRST_PARTY
 }, e => null != e.tasks[s.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP]).otherwise(() => !1);
 
-function ea(e) {
+function es(e) {
   let {
     quest: t
   } = e;
   return (0, r.match)(t.config).with({
     configVersion: 1
-  }, e => eu(t, p.QuestVariants.PLAYTIME_TASK)).with({
+  }, e => el(t, p.QuestVariants.PLAYTIME_TASK)).with({
     configVersion: 2
-  }, e => eu(t, p.QuestVariants.PLAYTIME_TASK) || es(e)).exhaustive()
+  }, e => el(t, p.QuestVariants.PLAYTIME_TASK) || er(e)).exhaustive()
 }
 
-function eo(e) {
+function ea(e) {
   let {
     quest: t,
     location: n
   } = e;
-  return null != t && ea({
+  return null != t && es({
     quest: t
   }) && (0, A.isEligibleForQuestPlaytime)({
     location: n
   })
 }
 
-function el(e) {
-  return !eu(e, p.QuestVariants.IN_HOUSE_CONSOLE_QUEST)
+function eo(e) {
+  return !el(e, p.QuestVariants.IN_HOUSE_CONSOLE_QUEST)
 }
 
-function eu(e, t) {
+function el(e, t) {
   return m.SharedQuestFields.build(e.config).features.has(t)
 }
 
-function ed(e) {
+function eu(e) {
   let {
     quest: t,
     idx: n
@@ -539,35 +518,44 @@ function ed(e) {
   }, e => e).otherwise(() => null)
 }
 
-function e_(e) {
+function ed(e) {
   let {
     quest: t,
     location: n,
-    useV2Variants: i = !1
-  } = e, r = t.config.messages.gameTitle, s = m.SharedQuestFields.build(t.config).defaultReward, a = eS({
+    useV2Variants: i = !1,
+    taskDetails: r
+  } = e, s = t.config.messages.gameTitle, a = m.SharedQuestFields.build(t.config).defaultReward.messages.nameWithArticle, {
+    targetMinutes: o
+  } = null != r ? r : eS({
     quest: t,
     location: n
-  }).targetMinutes;
-  return eo({
-    quest: t,
-    location: n
-  }) ? O.default.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD.format({
-    gameTitle: r,
-    questReward: s.messages.nameWithArticle,
-    streamingDurationRequirement: a
-  }) : er({
-    quest: t
-  }) ? (i ? O.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED_V2 : O.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED).format({
-    gameTitle: r,
-    streamingDurationRequirement: a
-  }) : (i ? O.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_V2 : O.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD).format({
-    gameTitle: r,
-    questReward: s.messages.nameWithArticle,
-    streamingDurationRequirement: a
+  });
+  if (el(t, p.QuestVariants.IN_HOUSE_CONSOLE_QUEST)) return O.default.Messages.QUEST_BAR_SUBTITLE_PLAY_ANY_GAME.format({
+    targetMinutes: o,
+    rewardNameWithArticle: a
+  });
+  if (ea({
+      quest: t,
+      location: n
+    })) return O.default.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD.format({
+    gameTitle: s,
+    questReward: a,
+    streamingDurationRequirement: o
+  });
+  if (ei({
+      quest: t
+    })) return (i ? O.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED_V2 : O.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED).format({
+    gameTitle: s,
+    streamingDurationRequirement: o
+  });
+  return (i ? O.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_V2 : O.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD).format({
+    gameTitle: s,
+    questReward: a,
+    streamingDurationRequirement: o
   })
 }
 
-function ec(e, t) {
+function e_(e, t) {
   let n = m.SharedQuestFields.build(e.config).application.link;
   (0, I.handleClick)({
     href: n,
@@ -581,7 +569,7 @@ function ec(e, t) {
     }
   })
 }
-let eE = (e, t) => {
+let ec = (e, t) => {
     (0, f.trackQuestContentClicked)({
       questId: e,
       questContent: t.content,
@@ -589,6 +577,7 @@ let eE = (e, t) => {
       questContentPosition: t.position
     }), (0, d.copy)(F(e))
   },
+  eE = (e, t) => e > 0 ? Math.min(t / e, 1) : 0,
   eI = e => {
     var t, n, i, r, a, o, u, d;
     let {
@@ -599,11 +588,13 @@ let eE = (e, t) => {
     let T = null != E ? E : null === (t = Object.values(I.tasks)[0]) || void 0 === t ? void 0 : t.eventName,
       f = null !== (o = I.tasks[T]) && void 0 !== o ? o : I.tasks[s.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
     if (null == f) throw Error("No task with type ".concat(E, " found for quest ").concat(c.id, "!"));
-    let S = f.target;
+    let S = f.target,
+      h = null !== (d = null !== (u = null === (r = c.userStatus) || void 0 === r ? void 0 : null === (i = r.progress) || void 0 === i ? void 0 : null === (n = i[T]) || void 0 === n ? void 0 : n.value) && void 0 !== u ? u : null === (a = c.userStatus) || void 0 === a ? void 0 : a.streamProgressSeconds) && void 0 !== d ? d : 0;
     return {
-      progressSeconds: null !== (d = null !== (u = null === (r = c.userStatus) || void 0 === r ? void 0 : null === (i = r.progress) || void 0 === i ? void 0 : null === (n = i[T]) || void 0 === n ? void 0 : n.value) && void 0 !== u ? u : null === (a = c.userStatus) || void 0 === a ? void 0 : a.streamProgressSeconds) && void 0 !== d ? d : 0,
+      progressSeconds: h,
       targetSeconds: S,
       targetMinutes: Math.round(S / _.default.Seconds.MINUTE),
+      percentComplete: eE(S, h),
       taskType: T
     }
   },
@@ -635,10 +626,13 @@ let eE = (e, t) => {
       }
     }, e => {
       var t, n;
+      let i = null !== (n = null === (t = e.userStatus) || void 0 === t ? void 0 : t.streamProgressSeconds) && void 0 !== n ? n : 0,
+        r = Math.round(e.config.streamDurationRequirementMinutes * _.default.Seconds.MINUTE);
       return {
-        progressSeconds: null !== (n = null === (t = e.userStatus) || void 0 === t ? void 0 : t.streamProgressSeconds) && void 0 !== n ? n : 0,
-        targetSeconds: Math.round(e.config.streamDurationRequirementMinutes * _.default.Seconds.MINUTE),
+        progressSeconds: i,
+        targetSeconds: r,
         targetMinutes: e.config.streamDurationRequirementMinutes,
+        percentComplete: eE(r, i),
         taskType: s.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP
       }
     }).with({
@@ -649,10 +643,11 @@ let eE = (e, t) => {
       progressSeconds: 0,
       targetSeconds: 1,
       targetMinutes: 1,
+      percentComplete: 0,
       taskType: s.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP
     } : eh(e) ? ef({
       quest: e
-    }) : eo({
+    }) : ea({
       quest: e,
       location: n
     }) ? eI({
