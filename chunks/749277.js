@@ -261,11 +261,14 @@ let U = e => {
               onClick: () => g(O.ContentDismissActionType.UNKNOWN),
               noticeType: U
             }), P.default.Messages.CHECKOUT_RECOVERY_NAGBAR_CONTENT, (0, s.jsx)(M.PrimaryCTANoticeButton, {
-              onClick: () => (0, T.default)({
-                subscriptionTier: D.PremiumSubscriptionSKUs.TIER_2,
-                analyticsLocations: [d.default.CHECKOUT_RECOVERY_NAGBAR],
-                onClose: () => g(O.ContentDismissActionType.UNKNOWN)
-              }),
+              onClick: () => {
+                (0, T.default)({
+                  subscriptionTier: D.PremiumSubscriptionSKUs.TIER_2,
+                  analyticsLocations: [d.default.CHECKOUT_RECOVERY_NAGBAR],
+                  analyticsLocation: x.AnalyticsLocations.CHECKOUT_RECOVERY_NAGBAR,
+                  onClose: () => g(O.ContentDismissActionType.UNKNOWN)
+                })
+              },
               noticeType: U,
               children: P.default.Messages.CHECKOUT_RECOVERY_NAGBAR_CTA
             })]

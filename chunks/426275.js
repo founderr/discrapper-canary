@@ -1,27 +1,47 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return f
   }
 });
-var i = n("735250"),
-  s = n("692547"),
-  a = n("138270"),
+var s = n("735250"),
+  a = n("470079"),
+  l = n("692547"),
+  i = n("138270"),
+  r = n("375954"),
   o = n("836946"),
-  l = n("689938");
+  u = n("876338"),
+  d = n("912332"),
+  c = n("689938");
 
-function r(e) {
+function f(e) {
   let {
-    onClick: t
-  } = e;
-  return (0, i.jsx)(o.default, {
-    tooltip: l.default.Messages.MESSAGE_ACTION_FORWARD,
+    channelId: t,
+    messageId: n,
+    targetKind: f,
+    embedIndex: E
+  } = e, _ = a.useCallback(() => {
+    let e = r.default.getMessage(t, n);
+    if (null == e) return;
+    let s = (0, u.getInlineForwardOptions)(e, {
+      targetKind: f,
+      embedIndex: E
+    });
+    (0, d.openForwardModal)({
+      channelId: t,
+      messageId: n,
+      source: "message-actions",
+      forwardOptions: s
+    })
+  }, [t, E, n, f]);
+  return (0, s.jsx)(o.default, {
+    tooltip: c.default.Messages.MESSAGE_ACTION_FORWARD,
     color: o.CircleIconButtonColors.SECONDARY,
-    icon: (0, i.jsx)(a.ArrowAngleRightUpIcon, {
+    icon: (0, s.jsx)(i.ArrowAngleRightUpIcon, {
       width: 16,
       height: 16,
-      color: s.default.colors.INTERACTIVE_NORMAL
+      color: l.default.colors.INTERACTIVE_NORMAL
     }),
-    onClick: t
+    onClick: _
   })
 }

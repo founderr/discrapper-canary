@@ -1,5 +1,8 @@
 "use strict";
 l.r(t), l.d(t, {
+  getQuickSwitcherOptions: function() {
+    return O
+  },
   hide: function() {
     return N
   },
@@ -33,8 +36,8 @@ var n = l("570140"),
   A = l("626135"),
   C = l("777754"),
   f = l("823385"),
-  m = l("981631"),
-  h = l("176505");
+  h = l("981631"),
+  m = l("176505");
 let y = () => Promise.resolve();
 y = l("346329").playApplication;
 let S = Object.freeze({
@@ -62,9 +65,9 @@ function L(e, t) {
     queryMode: n,
     query: s,
     maxQueryLength: u
-  } = f.default.getProps(), a = R.default.getGuildId(), o = E.default.getChannelId(a), c = l[(0, i.findNextSelectedResult)(i.FindResultDirections.DOWN, -1, l)], r = C.default.isEmail(s), d = C.default.isPhoneNumber(s), T = C.default.isUserTagLike(s), m = null != o && (0, h.isStaticChannelRoute)(o), y = {
-    current_channel_id: m ? void 0 : o,
-    current_channel_static_route: m ? o : void 0,
+  } = f.default.getProps(), a = R.default.getGuildId(), o = E.default.getChannelId(a), c = l[(0, i.findNextSelectedResult)(i.FindResultDirections.DOWN, -1, l)], r = C.default.isEmail(s), d = C.default.isPhoneNumber(s), T = C.default.isUserTagLike(s), h = null != o && (0, m.isStaticChannelRoute)(o), y = {
+    current_channel_id: h ? void 0 : o,
+    current_channel_static_route: h ? o : void 0,
     current_guild_id: a,
     query_mode: null != n ? n : "GENERAL",
     query_length: s.length,
@@ -128,7 +131,7 @@ function H() {
       let e = p.default.getChannel(n);
       t = null != e ? e.type : null
     }
-    A.default.track(m.AnalyticEvents.QUICKSWITCHER_OPENED, {
+    A.default.track(h.AnalyticEvents.QUICKSWITCHER_OPENED, {
       source: e,
       current_guild_id: l,
       current_channel_id: n,
@@ -141,7 +144,7 @@ function H() {
 }
 
 function N() {
-  L(m.AnalyticEvents.QUICKSWITCHER_CLOSED), g()
+  L(h.AnalyticEvents.QUICKSWITCHER_CLOSED), g()
 }
 
 function U(e) {
@@ -160,12 +163,12 @@ function b(e) {
 
 function K(e) {
   let t, l = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  g(), L(m.AnalyticEvents.QUICKSWITCHER_RESULT_SELECTED, e);
+  g(), L(h.AnalyticEvents.QUICKSWITCHER_RESULT_SELECTED, e);
   let {
     type: _,
     record: E
   } = e, R = {
-    page: m.AnalyticsPages.QUICK_SWITCHER
+    page: h.AnalyticsPages.QUICK_SWITCHER
   };
   switch (_) {
     case i.AutocompleterResultTypes.GUILD:
@@ -190,19 +193,19 @@ function K(e) {
       }));
       break;
     case i.AutocompleterResultTypes.USER:
-      s.default.openPrivateChannel([E.id], !1, !1, "Quickswitcher"), a.default.channelListScrollTo(m.ME, p.default.getDMFromUserId(E.id));
+      s.default.openPrivateChannel([E.id], !1, !1, "Quickswitcher"), a.default.channelListScrollTo(h.ME, p.default.getDMFromUserId(E.id));
       break;
     case i.AutocompleterResultTypes.GROUP_DM:
       (0, r.transitionToChannel)(E.id, {
         navigationReplace: !0
-      }), a.default.channelListScrollTo(m.ME, E.id);
+      }), a.default.channelListScrollTo(h.ME, E.id);
       break;
     case i.AutocompleterResultTypes.APPLICATION:
       let A = T.default.getActiveLibraryApplication(E.id);
       y(E.id, A, {
         analyticsParams: {
-          source: m.AnalyticsLocations.QUICK_SWITCHER,
-          location: m.AnalyticsLocations.QUICK_SWITCHER
+          source: h.AnalyticsLocations.QUICK_SWITCHER,
+          location: h.AnalyticsLocations.QUICK_SWITCHER
         }
       });
       break;

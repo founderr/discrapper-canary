@@ -1,29 +1,31 @@
 "use strict";
 n.r(t), n.d(t, {
   Toast: function() {
-    return I
+    return f
   },
   createToast: function() {
-    return E
+    return T
   }
 });
 var i = n("735250"),
   r = n("470079"),
   s = n("153832"),
-  a = n("993365"),
-  o = n("481060"),
-  l = n("529653"),
-  u = n("502283"),
-  d = n("525241"),
-  _ = n("561466"),
-  c = n("140139");
+  a = n("59262"),
+  o = n("632140"),
+  l = n("993365"),
+  u = n("481060"),
+  d = n("529653"),
+  _ = n("502283"),
+  c = n("525241"),
+  E = n("561466"),
+  I = n("140139");
 
-function E(e, t) {
-  let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.TOAST_DEFAULT_OPTIONS,
+function T(e, t) {
+  let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E.TOAST_DEFAULT_OPTIONS,
     {
-      position: i = _.TOAST_DEFAULT_OPTIONS.position,
-      component: r = _.TOAST_DEFAULT_OPTIONS.component,
-      duration: a = _.TOAST_DEFAULT_OPTIONS.duration
+      position: i = E.TOAST_DEFAULT_OPTIONS.position,
+      component: r = E.TOAST_DEFAULT_OPTIONS.component,
+      duration: a = E.TOAST_DEFAULT_OPTIONS.duration
     } = n;
   return {
     message: e,
@@ -36,42 +38,52 @@ function E(e, t) {
     }
   }
 }
-let I = r.memo(function(e) {
+let f = r.memo(function(e) {
   let {
     message: t,
     type: n,
     id: r,
     options: {
-      component: s = _.TOAST_DEFAULT_OPTIONS.component
-    } = _.TOAST_DEFAULT_OPTIONS
+      component: s = E.TOAST_DEFAULT_OPTIONS.component
+    } = E.TOAST_DEFAULT_OPTIONS
   } = e;
   return null != s ? (0, i.jsx)(i.Fragment, {
     children: s
   }) : (0, i.jsxs)("div", {
     id: r,
-    className: c.toast,
+    className: I.toast,
     children: [function(e) {
       switch (e) {
-        case _.ToastType.SUCCESS:
+        case E.ToastType.SUCCESS:
+          return (0, i.jsx)(c.default, {
+            className: I.icon,
+            color: u.tokens.colors.STATUS_POSITIVE.css
+          });
+        case E.ToastType.FAILURE:
+          return (0, i.jsx)(_.default, {
+            className: I.icon,
+            color: u.tokens.colors.STATUS_DANGER.css
+          });
+        case E.ToastType.CLIP:
           return (0, i.jsx)(d.default, {
-            className: c.icon,
-            color: o.tokens.colors.STATUS_POSITIVE.css
+            className: I.clipIcon,
+            color: u.tokens.colors.HEADER_PRIMARY.css
           });
-        case _.ToastType.FAILURE:
-          return (0, i.jsx)(u.default, {
-            className: c.icon,
-            color: o.tokens.colors.STATUS_DANGER.css
+        case E.ToastType.LINK:
+          return (0, i.jsx)(o.LinkIcon, {
+            className: I.icon,
+            color: u.tokens.colors.HEADER_PRIMARY.css
           });
-        case _.ToastType.CLIP:
-          return (0, i.jsx)(l.default, {
-            className: c.clipIcon,
-            color: o.tokens.colors.HEADER_PRIMARY.css
+        case E.ToastType.FORWARD:
+          return (0, i.jsx)(a.ArrowAngleRightUpIcon, {
+            className: I.icon,
+            color: u.tokens.colors.STATUS_POSITIVE.css
           });
         default:
           return null
       }
-    }(n), (0, i.jsx)(a.Text, {
-      className: c.__invalid_content,
+    }(n), (0, i.jsx)(l.Text, {
+      className: I.__invalid_content,
       color: "header-primary",
       variant: "text-md/normal",
       children: t

@@ -2,7 +2,6 @@
 e.exports = {
   acronym: "acronym__02df1",
   basicChannelRowLink: "basicChannelRowLink__3b042",
-  channelGuildIcon: "channelGuildIcon__17b87",
   children: "children__563f2",
   favoritesSuggestion: "favoritesSuggestion__5ecd4",
   icon: "icon__67ab4",

@@ -1,72 +1,49 @@
 "use strict";
-o.r(a), o.d(a, {
+s.r(e), s.d(e, {
   default: function() {
     return E
   }
 });
-var t = o("735250");
-o("470079");
-var n = o("174609"),
-  l = o("98278"),
-  i = o("193878"),
-  s = o("223468"),
-  r = o("790527"),
-  c = o("703656"),
-  d = o("626135"),
-  u = o("981631"),
-  _ = o("474936"),
-  A = o("689938");
-let p = o("279360");
+var n = s("735250");
+s("470079");
+var a = s("174609"),
+  c = s("790527"),
+  o = s("703656"),
+  i = s("626135"),
+  l = s("981631"),
+  _ = s("474936"),
+  u = s("689938");
+let A = s("279360");
 
-function E(e) {
+function E(t) {
   let {
-    onClose: a,
-    onCloseParent: o,
+    onClose: e,
+    onCloseParent: s,
     analyticsSource: E,
-    ...R
-  } = e, {
-    enabled: w,
-    variant: M
-  } = i.default.useExperiment({
-    location: "StreamUpsellModal"
-  }, {
-    autoTrackExposure: !1
-  }), {
-    showNewRoadblockCopy: b,
-    showNewRoadblockRoute: f
-  } = s.PremiumHDStreamingUpsellCopyExperiment.useExperiment({
-    location: "StreamUpsellModal"
-  }, {
-    autoTrackExposure: !0
-  });
-
-  function S() {
-    (0, n.default)(), a(), null == o || o(), d.default.track(u.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
-      location_section: u.AnalyticsSections.STREAM_UPSELL_MODAL,
-      location_object: u.AnalyticsObjects.NAVIGATION_LINK
-    }), f ? (0, c.transitionTo)(u.Routes.APPLICATION_STORE) : (0, l.navigateToPremiumMarketingPage)()
-  }
-  let N = w ? b ? A.default.Messages.STREAM_PREMIUM_UPSELL_BODY_V3 : A.default.Messages.STREAM_PREMIUM_UPSELL_BODY_V2 : __OVERLAY__ ? A.default.Messages.STREAM_PREMIUM_UPSELL_BODY_NO_CTA : A.default.Messages.STREAM_PREMIUM_UPSELL_BODY.format({
-      onPressMore: S
-    }),
-    T = w && i.GradientVariants.includes(M);
-  return (0, t.jsx)(r.default, {
-    title: w ? A.default.Messages.STREAM_PREMIUM_UPSELL_HEADER_V2 : A.default.Messages.STREAM_PREMIUM_UPSELL_HEADER,
-    glowUp: N,
-    body: N,
-    artURL: p,
+    ...r
+  } = t, d = u.default.Messages.STREAM_PREMIUM_UPSELL_BODY_V2;
+  return (0, n.jsx)(c.default, {
+    title: u.default.Messages.STREAM_PREMIUM_UPSELL_HEADER_V2,
+    glowUp: d,
+    body: d,
+    artURL: A,
     type: _.PremiumUpsellTypes.STREAM_QUALITY_UPSELL,
     analyticsLocation: {
-      section: u.AnalyticsSections.STREAM_UPSELL_MODAL,
-      object: u.AnalyticsObjects.BUTTON_CTA
+      section: l.AnalyticsSections.STREAM_UPSELL_MODAL,
+      object: l.AnalyticsObjects.BUTTON_CTA
     },
     analyticsSource: E,
-    onClose: a,
-    onSubscribeClick: n.default,
-    secondaryCTA: w ? A.default.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA : void 0,
-    onSecondaryClick: w ? S : void 0,
-    showEnhancedUpsell: T,
+    onClose: e,
+    onSubscribeClick: a.default,
+    secondaryCTA: u.default.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA,
+    onSecondaryClick: function() {
+      (0, a.default)(), e(), null == s || s(), i.default.track(l.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+        location_section: l.AnalyticsSections.STREAM_UPSELL_MODAL,
+        location_object: l.AnalyticsObjects.NAVIGATION_LINK
+      }), (0, o.transitionTo)(l.Routes.APPLICATION_STORE)
+    },
+    showEnhancedUpsell: !0,
     enableArtBoxShadow: !1,
-    ...R
+    ...r
   })
 }

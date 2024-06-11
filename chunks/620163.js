@@ -349,7 +349,6 @@ let eG = () => {
       },
       [eL.WebSetting.PRIVACY_TERMS_POLICY]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
-        searchableTitle: eU.default.Messages.USER_SETTINGS_PRIVACY_TERMS_SEARCHABLE,
         parent: eL.WebSetting.PRIVACY_USER_SETTINGS
       },
       [eL.WebSetting.PRIVACY_SAFETY_ALERTS]: {

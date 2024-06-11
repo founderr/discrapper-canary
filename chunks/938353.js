@@ -346,70 +346,75 @@ class eX extends(s = l.Component) {
       return (0, eC.getObscureReasonForAttachment)(e.originalItem, t)
     }
     let p = r.map(t => {
-      let n = (0, w.messageAttachmentToUnfurledMediaItem)(t),
-        a = {
-          message: e,
-          item: (0, eE.messageAttachmentToMosaicMediaItem)(t, d),
-          autoPlayGif: o,
-          canRemoveItem: u && (r.length > 1 || "" !== e.content),
-          onRemoveItem: this.handleRemoveAttachment,
-          className: eH.embedWrapper,
-          getObscureReason: I,
-          onContextMenu: null != c ? e => {
-            e.stopPropagation(), e.preventDefault(), c(e, n)
-          } : void 0,
-          renderAudioComponent: T ? eD.VoiceMessageAudioComponentForMessageAttachment : eD.AudioComponentForMessageAttachment,
-          renderImageComponent: eD.ImageComponentForMessageAttachment,
-          renderVideoComponent: eD.VideoComponentForMessageAttachment,
-          renderPlaintextFilePreview: eD.PlaintextFilePreviewForMessageAttachment,
-          renderGenericFileComponent: eD.GenericFileComponentForMessageAttachment,
-          renderMosaicItemFooter: eD.MosaicItemFooterForMessageAttachment,
-          onPlay: (e, n, a) => {
-            em.default.track(eG.AnalyticEvents.MEDIA_ATTACHMENT_PLAYBACK_STARTED, {
-              guild_id: s.guild_id,
-              channel_id: s.id,
-              channel_type: s.type,
-              type: t.content_type,
-              flags: t.flags,
-              size: t.size,
-              duration: a
-            })
+        let n = (0, w.messageAttachmentToUnfurledMediaItem)(t),
+          a = {
+            message: e,
+            item: (0, eE.messageAttachmentToMosaicMediaItem)(t, d),
+            autoPlayGif: o,
+            canRemoveItem: u && (r.length > 1 || "" !== e.content),
+            onRemoveItem: this.handleRemoveAttachment,
+            className: eH.embedWrapper,
+            getObscureReason: I,
+            onContextMenu: null != c ? e => {
+              e.stopPropagation(), e.preventDefault(), c(e, n)
+            } : void 0,
+            renderAudioComponent: T ? eD.VoiceMessageAudioComponentForMessageAttachment : eD.AudioComponentForMessageAttachment,
+            renderImageComponent: eD.ImageComponentForMessageAttachment,
+            renderVideoComponent: eD.VideoComponentForMessageAttachment,
+            renderPlaintextFilePreview: eD.PlaintextFilePreviewForMessageAttachment,
+            renderGenericFileComponent: eD.GenericFileComponentForMessageAttachment,
+            renderMosaicItemFooter: eD.MosaicItemFooterForMessageAttachment,
+            onPlay: (e, n, a) => {
+              em.default.track(eG.AnalyticEvents.MEDIA_ATTACHMENT_PLAYBACK_STARTED, {
+                guild_id: s.guild_id,
+                channel_id: s.id,
+                channel_type: s.type,
+                type: t.content_type,
+                flags: t.flags,
+                size: t.size,
+                duration: a
+              })
+            },
+            gifFavoriteButton: eq(n)
           },
-          gifFavoriteButton: eq(n)
-        },
-        l = (0, ed.getBestEffortSrcUrl)({
-          proxyURL: t.proxy_url,
-          url: t.url
-        });
-      return l in m && (a.onClick = m[l]), a
-    });
+          l = (0, ed.getBestEffortSrcUrl)({
+            proxyURL: t.proxy_url,
+            url: t.url
+          });
+        return l in m && (a.onClick = m[l]), a
+      }),
+      h = i ? (0, a.jsx)(L.default, {
+        messageId: e.id,
+        channelId: s.id,
+        targetKind: "media"
+      }) : void 0;
     return (0, a.jsx)(ef.default, {
       items: p,
-      hasInlineForwardButton: i
+      inlineForwardButton: h
     })
   }
   renderEmbeds(e) {
     let {
       renderEmbeds: t
     } = this.props;
-    return 0 !== e.embeds.length && t ? e.embeds.map(t => {
+    return 0 !== e.embeds.length && t ? e.embeds.map((t, n) => {
       if (eB.EMBED_TYPES_WITH_SPECIAL_RENDERER.has(t.type) || (0, eI.isServerShopArticleEmbed)(t)) return null;
-      let n = {
+      let s = {
         renderImageComponent: ej.renderImageComponent,
         renderVideoComponent: ej.renderVideoComponent,
         renderLinkComponent: ej.renderMaskedLinkComponent
       };
       if (t.type === eG.MessageEmbedTypes.ARTICLE && null != t.url && /^https?:\/\/(?:canary|ptb|www)?\.discord(?:app)?\.com\/store\/skus\/(?:[0-9]+)/.test(t.url) && null != t.provider && "Discord" === t.provider.name) {
-        let s = eS.default.safeParseWithQuery(t.url);
-        if (null != s && null != s.pathname) {
-          let l = s.pathname.split("/")[3];
-          if (null != l) return (0, a.jsx)(m.default, {
-            skuId: l,
-            renderFallback: () => this.renderEmbed(t, n, e.id, e.channel_id)
+        let l = eS.default.safeParseWithQuery(t.url);
+        if (null != l && null != l.pathname) {
+          let i = l.pathname.split("/")[3];
+          if (null != i) return (0, a.jsx)(m.default, {
+            skuId: i,
+            renderFallback: () => this.renderEmbed(t, n, s, e.id, e.channel_id)
           }, t.id)
         }
       }
-      return this.renderEmbed(t, n, e.id, e.channel_id)
+      return this.renderEmbed(t, n, s, e.id, e.channel_id)
     }) : null
   }
   renderComponentAccessories(e) {
@@ -651,38 +656,41 @@ class eX extends(s = l.Component) {
         location_channel_type: t.type,
         location_message_id: n.id
       }
-    }), eY(this, "renderEmbed", (e, t, n, s) => {
+    }), eY(this, "renderEmbed", (e, t, n, s, l) => {
       let {
-        gifAutoPlay: l,
-        inlineEmbedMedia: i,
-        canSuppressEmbeds: r,
-        hasSpoilerEmbeds: o,
-        shouldRedactExplicitContent: u,
-        hasInlineForwardButton: d
-      } = this.props, c = (0, eC.getObscureReasonForEmbed)(e, s, n, o, u);
+        gifAutoPlay: i,
+        inlineEmbedMedia: r,
+        canSuppressEmbeds: o,
+        hasSpoilerEmbeds: u,
+        shouldRedactExplicitContent: d,
+        hasInlineForwardButton: c
+      } = this.props, f = (0, eC.getObscureReasonForEmbed)(e, l, s, u, d);
       if (e.type === eG.MessageEmbedTypes.GIFT) return null;
-      let f = (0, a.jsx)(eu.GIFAccessoryContext.Provider, {
+      let E = (0, a.jsx)(eu.GIFAccessoryContext.Provider, {
         value: eQ(e.url, e.image, e.video),
         children: (0, a.jsx)(er.default, {
           className: eH.embedWrapper,
           embed: e,
-          obscureReason: null != c ? c : void 0,
-          autoPlayGif: l,
-          hideMedia: !i,
-          onSuppressEmbed: r ? this.handleEmbedSuppressed : void 0,
+          obscureReason: null != f ? f : void 0,
+          autoPlayGif: i,
+          hideMedia: !r,
+          onSuppressEmbed: o ? this.handleEmbedSuppressed : void 0,
           renderTitle: this.renderEmbedTitle,
           renderDescription: this.renderEmbedDescription,
-          messageId: n,
-          channelId: s,
-          ...t
+          messageId: s,
+          channelId: l,
+          ...n
         })
       }, e.id);
-      return d ? (0, a.jsxs)("div", {
+      return c ? (0, a.jsxs)("div", {
         className: eH.embedContainer,
-        children: [f, (0, a.jsx)(L.default, {
-          onClick: () => {}
+        children: [E, (0, a.jsx)(L.default, {
+          messageId: s,
+          channelId: l,
+          targetKind: "embed",
+          embedIndex: t
         })]
-      }) : f
+      }) : E
     }), eY(this, "renderEmbedTitle", (e, t) => e.type === eG.MessageEmbedTypes.RICH ? k.default.parseEmbedTitle(t, !0, {
       channelId: this.props.channel.id
     }) : t), eY(this, "renderEmbedDescription", (e, t, n) => e.type === eG.MessageEmbedTypes.RICH ? k.default.parse(t, !0, {

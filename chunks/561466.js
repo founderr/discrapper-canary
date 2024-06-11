@@ -11,7 +11,7 @@ n.r(t), n.d(t, {
     return i
   }
 });
-(s = i || (i = {}))[s.MESSAGE = 0] = "MESSAGE", s[s.SUCCESS = 1] = "SUCCESS", s[s.FAILURE = 2] = "FAILURE", s[s.CUSTOM = 3] = "CUSTOM", s[s.CLIP = 4] = "CLIP", (a = r || (r = {}))[a.TOP = 0] = "TOP", a[a.BOTTOM = 1] = "BOTTOM";
+(s = i || (i = {}))[s.MESSAGE = 0] = "MESSAGE", s[s.SUCCESS = 1] = "SUCCESS", s[s.FAILURE = 2] = "FAILURE", s[s.CUSTOM = 3] = "CUSTOM", s[s.CLIP = 4] = "CLIP", s[s.LINK = 5] = "LINK", s[s.FORWARD = 6] = "FORWARD", (a = r || (r = {}))[a.TOP = 0] = "TOP", a[a.BOTTOM = 1] = "BOTTOM";
 let o = {
   position: 0,
   component: null,
