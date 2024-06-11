@@ -18,8 +18,11 @@ let A = 0,
     f.forEach(e => {
       t[e.id] = (0, c.isAndroid)() ? (0, E.applyPatches)(e) : e
     }), S = t
+  },
+  N = () => {
+    T = !1, m(I), h = null, r = void 0
   };
-class N extends(l = d.default.Store) {
+class p extends(l = d.default.Store) {
   get isFetching() {
     return T
   }
@@ -42,12 +45,12 @@ class N extends(l = d.default.Store) {
     return null != e ? S[e] : void 0
   }
 }
-o = "ProfileEffectStore", (a = "displayName") in(s = N) ? Object.defineProperty(s, a, {
+o = "ProfileEffectStore", (a = "displayName") in(s = p) ? Object.defineProperty(s, a, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = o, t.default = new N(_.default, {
+}) : s[a] = o, t.default = new p(_.default, {
   USER_PROFILE_EFFECTS_FETCH: () => {
     T = !0
   },
@@ -70,6 +73,6 @@ o = "ProfileEffectStore", (a = "displayName") in(s = N) ? Object.defineProperty(
     h = t
   },
   LOGOUT: e => {
-    T = !1, m(I), h = null
+    N()
   }
 })
