@@ -28,7 +28,7 @@ var u = function() {
     }
   }() : u,
   l = n("322499")(),
-  d = n("429804")(),
+  d = n("79536")(),
   f = Object.getPrototypeOf || (d ? function(e) {
     return e.__proto__
   } : null),
@@ -176,7 +176,7 @@ var _ = function e(t) {
     "%WeakSetPrototype%": ["WeakSet", "prototype"]
   },
   v = n("390976"),
-  y = n("643494"),
+  y = n("706165"),
   E = v.call(Function.call, Array.prototype.concat),
   S = v.call(Function.apply, Array.prototype.splice),
   x = v.call(Function.call, String.prototype.replace),
