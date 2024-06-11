@@ -3,7 +3,7 @@ n.r(t), n.d(t, {
   default: function() {
     return R
   }
-}), n("47120"), n("653041");
+}), n("47120");
 var i = n("735250"),
   r = n("470079"),
   s = n("512722"),
@@ -45,38 +45,41 @@ let C = (0, c.default)(function(e) {
       null != t ? g.current[e] = t : delete g.current[e]
     },
     v = (0, u.useStateFromStores)([T.default], () => T.default.getRoles(s.id)),
-    D = r.useMemo(() => Object.values(v).filter(e => c.includes(e.id)).sort((e, t) => {
-      var n, i;
-      let r = (null === (n = e.tags) || void 0 === n ? void 0 : n.guild_connections) !== null,
-        s = (null === (i = t.tags) || void 0 === i ? void 0 : i.guild_connections) !== null;
-      return r && !s ? 1 : !r && s ? -1 : 0
-    }), [v, c]),
-    [M, y] = r.useState(D),
+    [D, M] = r.useState(null),
+    y = r.useMemo(() => {
+      let e = Object.values(v).filter(e => c.includes(e.id)).sort((e, t) => {
+        var n, i;
+        let r = (null === (n = e.tags) || void 0 === n ? void 0 : n.guild_connections) !== null,
+          s = (null === (i = t.tags) || void 0 === i ? void 0 : i.guild_connections) !== null;
+        return r && !s ? 1 : !r && s ? -1 : 0
+      });
+      return null != D ? e.slice(0, D) : e
+    }, [v, c, D]),
     [P, U] = r.useState(f),
-    b = M.length < D.length,
+    b = c.length > y.length,
     G = I && null != _,
     w = r.useRef(null),
     k = r.useRef(null);
   r.useLayoutEffect(() => {
-    var e, t, n, i, r, s;
-    let a = null !== (r = null === (t = w.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.width) && void 0 !== r ? r : 0,
-      o = null !== (s = null === (i = k.current) || void 0 === i ? void 0 : null === (n = i.getBoundingClientRect()) || void 0 === n ? void 0 : n.width) && void 0 !== s ? s : 0,
-      l = f - (a > 0 ? a + 4 : 0) - (o > 0 ? o + 4 : 0),
-      u = [];
+    var e, t, n, i, r, s, a, o;
+    let l = null !== (r = null === (t = w.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.width) && void 0 !== r ? r : 0,
+      u = null !== (s = null === (i = k.current) || void 0 === i ? void 0 : null === (n = i.getBoundingClientRect()) || void 0 === n ? void 0 : n.width) && void 0 !== s ? s : 0,
+      d = f - (l > 0 ? l + 4 : 0) - (u > 0 ? u + 4 : 0),
+      _ = 0;
     for (let e = 0; e < 2; e++) {
       let t = 1 === e,
         n = 0;
-      for (let e = u.length; e < D.length; e++) {
-        let i = D[e],
+      for (let e = _; e < y.length; e++) {
+        let i = y[e],
           r = g.current[i.id];
-        if (null != r) {
-          if (n > 0 && !t && n + r.offsetWidth > f || n > 0 && t && n + r.offsetWidth > l) break;
-          n += r.offsetWidth + 4, u.push(i)
-        }
+        if (null == r) continue;
+        let s = null !== (o = null === (a = r.getBoundingClientRect()) || void 0 === a ? void 0 : a.width) && void 0 !== o ? o : 0;
+        if (n > 0 && !t && n + s > f || n > 0 && t && n + s > d) break;
+        n += s + 4, _++
       }
     }
-    U(l), y(e => e.length !== u.length ? u : e)
-  }, [f, D, M]);
+    M(_ === c.length ? null : _), U(d)
+  }, [f, y, c]);
   let B = r.useMemo(() => "roles-".concat((0, o.v4)()), []),
     V = (0, l.default)({
       id: B,
@@ -85,17 +88,16 @@ let C = (0, c.default)(function(e) {
       scrollToEnd: N.NOOP_PROMISE,
       wrap: !0
     }),
-    x = D.length,
-    F = 0 === x ? p.default.Messages.ROLE_LIST_EMPTY : p.default.Messages.ROLES_LIST.format({
-      numRoles: x
+    x = 0 === c.length ? p.default.Messages.ROLE_LIST_EMPTY : p.default.Messages.ROLES_LIST.format({
+      numRoles: c.length
     }),
-    H = M.map((e, r) => {
+    F = y.map((e, r) => {
       var a;
       return (0, i.jsx)(A.default, {
         role: e,
         guildId: s.id,
         style: {
-          maxWidth: r === M.length - 1 ? P : f
+          maxWidth: r === y.length - 1 ? P : f
         },
         disableBorderColor: !0,
         ref: t => L(e.id, t),
@@ -113,16 +115,16 @@ let C = (0, c.default)(function(e) {
         } = e;
         return (0, i.jsxs)("div", {
           className: O.root,
-          "aria-label": F,
+          "aria-label": x,
           ref: t,
           ...n,
-          children: [H, b && (0, i.jsx)(d.Clickable, {
+          children: [F, b && (0, i.jsx)(d.Clickable, {
             innerRef: w,
             onClick: R,
             className: O.showMoreButton,
             children: (0, i.jsx)(d.Text, {
               variant: "text-xs/medium",
-              children: "+".concat(D.length - M.length)
+              children: "+".concat(c.length - y.length)
             })
           }), G && (0, i.jsx)(m.default, {
             buttonRef: k,
@@ -130,7 +132,7 @@ let C = (0, c.default)(function(e) {
             guildMember: _,
             highestRole: E,
             onAddRole: h,
-            compact: D.length > 0
+            compact: c.length > 0
           })]
         })
       }
