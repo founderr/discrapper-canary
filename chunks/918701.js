@@ -534,6 +534,11 @@ function ed(e) {
     targetMinutes: o,
     rewardNameWithArticle: a
   });
+  if (eA(t)) return O.default.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME.format({
+    gameTitle: s,
+    targetMinutes: o,
+    rewardNameWithArticle: a
+  });
   if (ea({
       quest: t,
       location: n
@@ -542,7 +547,7 @@ function ed(e) {
     questReward: a,
     streamingDurationRequirement: o
   });
-  if (ei({
+  else if (ei({
       quest: t
     })) return (i ? O.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED_V2 : O.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED).format({
     gameTitle: s,
