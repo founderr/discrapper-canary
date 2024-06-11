@@ -27,7 +27,8 @@ t.default = {
       channelId: o,
       parsedUserId: l,
       roleId: u,
-      roleName: d
+      roleName: d,
+      viewingChannelId: _
     } = e;
     return null == r && (null != u || "@everyone" === d || "@here" === d) ? (0, i.jsx)(s.default, {
       inlinePreview: n.formatInline,
@@ -37,6 +38,7 @@ t.default = {
       className: "mention",
       userId: r,
       channelId: o,
+      viewingChannelId: _,
       parsedUserId: l,
       content: t(e.content, n),
       inlinePreview: n.noStyleAndInteraction

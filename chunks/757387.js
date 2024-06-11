@@ -2,110 +2,113 @@
 a.r(t);
 var l = a("735250");
 a("470079");
-var u = a("481060"),
-  d = a("239091"),
-  s = a("883385"),
-  n = a("108843"),
-  i = a("911969"),
-  o = a("947440"),
-  r = a("100527"),
-  f = a("441061"),
-  c = a("167675"),
-  E = a("737013"),
-  S = a("299206"),
-  M = a("976192"),
-  _ = a("819403"),
-  g = a("286694"),
-  A = a("777658"),
-  T = a("858488"),
-  N = a("185457"),
-  m = a("933409"),
-  C = a("570870"),
-  U = a("389052"),
-  I = a("24311"),
-  L = a("332576"),
-  O = a("710631"),
-  v = a("297047"),
-  p = a("88966"),
-  b = a("712301"),
-  x = a("991307"),
-  h = a("725119"),
-  D = a("931617"),
-  R = a("700994"),
-  j = a("332031"),
-  F = a("981631"),
-  V = a("689938");
-t.default = (0, n.default)((0, s.default)(function(e) {
+var u = a("442837"),
+  d = a("481060"),
+  s = a("239091"),
+  n = a("883385"),
+  i = a("108843"),
+  o = a("911969"),
+  r = a("947440"),
+  f = a("100527"),
+  c = a("441061"),
+  E = a("167675"),
+  S = a("737013"),
+  M = a("299206"),
+  _ = a("976192"),
+  g = a("819403"),
+  A = a("286694"),
+  T = a("592125"),
+  N = a("777658"),
+  m = a("858488"),
+  C = a("185457"),
+  U = a("933409"),
+  I = a("570870"),
+  L = a("389052"),
+  O = a("24311"),
+  v = a("332576"),
+  h = a("710631"),
+  p = a("297047"),
+  b = a("88966"),
+  x = a("712301"),
+  D = a("991307"),
+  R = a("725119"),
+  j = a("931617"),
+  F = a("700994"),
+  V = a("332031"),
+  k = a("981631"),
+  G = a("689938");
+t.default = (0, i.default)((0, n.default)(function(e) {
   let {
     user: t,
     guildId: a,
-    channel: s,
-    showMediaItems: n = !1,
-    showChatItems: r = !0,
-    showChannelCallItems: k = !1,
-    showModalItems: G = !0,
-    showStageChannelItems: P = !1,
-    context: y,
-    onSelect: B,
-    onHeightUpdate: H
-  } = e, w = {
-    page: F.AnalyticsPages.GUILD_CHANNEL,
-    section: F.AnalyticsSections.CHAT_USERNAME,
-    object: F.AnalyticsObjects.CONTEXT_MENU_ITEM
-  }, K = (0, h.default)(t.id, a, s.id), Y = (0, v.default)(t, a, y), q = (0, p.default)(t.id, y), W = (0, j.default)(t.id), X = (0, I.default)(t, y), Q = (0, N.default)({
+    channel: n,
+    showMediaItems: i = !1,
+    showChatItems: f = !0,
+    showChannelCallItems: P = !1,
+    showModalItems: y = !0,
+    showStageChannelItems: B = !1,
+    context: H,
+    onSelect: w,
+    onHeightUpdate: K,
+    viewingChannelId: Y
+  } = e, q = {
+    page: k.AnalyticsPages.GUILD_CHANNEL,
+    section: k.AnalyticsSections.CHAT_USERNAME,
+    object: k.AnalyticsObjects.CONTEXT_MENU_ITEM
+  }, W = (0, R.default)(t.id, a, n.id), X = (0, p.default)(t, a, H), Q = (0, b.default)(t.id, H), z = (0, V.default)(t.id), J = (0, O.default)(t, H), Z = (0, C.default)({
     user: t,
     guildId: a,
-    context: y
-  }), z = (0, T.default)({
+    context: H
+  }), $ = (0, m.default)({
     user: t
-  }), J = (0, R.default)(t.id), Z = (0, x.default)(t.id), $ = (0, M.default)({
+  }), ee = (0, F.default)(t.id), et = (0, D.default)(t.id), ea = (0, _.default)({
     guildId: a,
     userId: t.id,
-    analyticsLocation: w,
-    context: y
-  }), ee = (0, O.default)({
+    analyticsLocation: q,
+    context: H
+  }), el = (0, h.default)({
     user: t,
     guildId: a
-  }), et = (0, o.default)(null, t), ea = (0, A.default)(t), el = (0, U.default)({
+  }), eu = (0, r.default)(null, t), ed = (0, N.default)(t), es = (0, L.default)({
     user: t
-  }), eu = (0, m.default)(t, a, s.id), ed = (0, D.default)(t.id, a), es = (0, b.default)(t, a), en = (0, S.default)({
+  }), en = (0, U.default)(t, a, n.id), ei = (0, j.default)(t.id, a), eo = (0, x.default)(t, a), er = (0, M.default)({
     id: t.id,
-    label: V.default.Messages.COPY_ID_USER
-  }), ei = (0, L.default)(t.id, s.id), eo = (0, c.default)(t.id), er = (0, f.default)(s.id), ef = (0, _.default)(t), ec = (0, g.default)(t, a, s.id), eE = (0, C.default)({
-    commandType: i.ApplicationCommandType.USER,
+    label: G.default.Messages.COPY_ID_USER
+  }), ef = (0, v.default)(t.id, n.id), ec = (0, E.default)(t.id), eE = (0, c.default)(n.id), eS = (0, g.default)(t), eM = (0, A.default)(t, a, n.id), e_ = (0, u.useStateFromStores)([T.default], () => null != Y ? T.default.getChannel(Y) : null), eg = (0, I.default)({
+    commandType: o.ApplicationCommandType.USER,
     commandTargetId: t.id,
-    channel: s,
+    channel: null != e_ ? e_ : n,
     guildId: a,
-    onHeightUpdate: H,
-    context: y
-  }), eS = (0, E.default)(t.id), eM = t.isNonUserBot();
-  return (0, l.jsxs)(u.Menu, {
+    onHeightUpdate: K,
+    context: H
+  }), eA = (0, S.default)(t.id), eT = t.isNonUserBot();
+  return (0, l.jsxs)(d.Menu, {
     navId: "user-context",
-    onClose: d.closeContextMenu,
-    "aria-label": V.default.Messages.USER_ACTIONS_MENU_LABEL,
-    onSelect: B,
-    children: [!eM && (0, l.jsxs)(l.Fragment, {
-      children: [(0, l.jsxs)(u.MenuGroup, {
-        children: [ef, P && ec]
-      }), (0, l.jsxs)(u.MenuGroup, {
-        children: [G && K, r && Y, q, X, G && Q, G && z, W]
-      }), n && (0, l.jsx)(u.MenuGroup, {
-        children: J
-      }), (0, l.jsx)(u.MenuGroup, {
-        children: G && et
-      }), (0, l.jsxs)(u.MenuGroup, {
-        children: [n && Z, n && ei, G && $, eE, G && ee, ea, G && el, k && eS]
-      }), (0, l.jsx)(u.MenuGroup, {
-        children: eu
-      }), (0, l.jsxs)(u.MenuGroup, {
-        children: [ed, es]
-      }), k && (0, l.jsxs)(u.MenuGroup, {
-        children: [er, eo]
+    onClose: s.closeContextMenu,
+    "aria-label": G.default.Messages.USER_ACTIONS_MENU_LABEL,
+    onSelect: w,
+    children: [!eT && (0, l.jsxs)(l.Fragment, {
+      children: [(0, l.jsxs)(d.MenuGroup, {
+        children: [eS, B && eM]
+      }), (0, l.jsxs)(d.MenuGroup, {
+        children: [y && W, f && X, Q, J, y && Z, y && $, z]
+      }), i && (0, l.jsx)(d.MenuGroup, {
+        children: ee
+      }), (0, l.jsx)(d.MenuGroup, {
+        children: y && eu
+      }), (0, l.jsxs)(d.MenuGroup, {
+        children: [i && et, i && ef, y && ea, eg, y && el, ed, y && es, P && eA]
+      }), (0, l.jsx)(d.MenuGroup, {
+        children: en
+      }), (0, l.jsxs)(d.MenuGroup, {
+        children: [ei, eo]
+      }), P && (0, l.jsxs)(d.MenuGroup, {
+        children: [eE, ec]
       })]
-    }), (0, l.jsx)(u.MenuGroup, {
-      children: en
+    }), (0, l.jsx)(d.MenuGroup, {
+      children: er
     })]
   })
 }, {
-  object: F.AnalyticsObjects.CONTEXT_MENU
-}), [r.default.CONTEXT_MENU, r.default.GUILD_CHANNEL_USER_MENU])
+  object: k.AnalyticsObjects.CONTEXT_MENU
+}), [f.default.CONTEXT_MENU, f.default.GUILD_CHANNEL_USER_MENU])

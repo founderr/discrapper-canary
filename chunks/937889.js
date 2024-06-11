@@ -62,7 +62,8 @@ function c(e) {
     disableAutoBlockNewlines: !0,
     mentionChannels: [],
     muted: !1,
-    unknownUserMentionPlaceholder: !0
+    unknownUserMentionPlaceholder: !0,
+    viewingChannelId: i.viewingChannelId
   }
 }
 

@@ -24,8 +24,9 @@ function _(e, t) {
     allowLinks: f = !1,
     allowDevLinks: S = !1,
     allowSubtext: h = !1,
-    previewLinkTarget: A = !1
-  } = t, m = (0, r.useActiveKeywordFiltersCacheKey)();
+    previewLinkTarget: A = !1,
+    viewingChannelId: m
+  } = t, N = (0, r.useActiveKeywordFiltersCacheKey)();
   return i.useMemo(() => null != e.customRenderedContent ? e.customRenderedContent : e.isUnsupported ? {
     content: u.default.Messages.MESSAGE_UNSUPPORTED,
     hasSpoilerEmbeds: !1
@@ -44,6 +45,7 @@ function _(e, t) {
     allowSubtext: h,
     allowDevLinks: S,
     previewLinkTarget: A,
-    shouldFilterKeywords: null != m
-  }), [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, n, _, c, E, I, T, f, A, h, m])
+    shouldFilterKeywords: null != N,
+    viewingChannelId: m
+  }), [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, n, _, c, E, I, T, f, A, h, N])
 }

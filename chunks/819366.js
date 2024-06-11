@@ -63,53 +63,55 @@ function L(e) {
     channelId: s,
     parsedUserId: I,
     content: L,
-    inlinePreview: v = !1
+    inlinePreview: v = !1,
+    viewingChannelId: D
   } = e, {
-    analyticsLocations: D
-  } = (0, c.default)(_.default.USER_MENTION), M = (0, l.useStateFromStores)([N.default], () => N.default.getUser(r)), y = (0, l.useStateFromStores)([S.default], () => S.default.getChannel(s)), P = null != y ? y.getGuildId() : null, U = v || null == M || null == P || null == s ? void 0 : e => {
-    null != y && (0, d.openContextMenuLazy)(e, async () => {
+    analyticsLocations: M
+  } = (0, c.default)(_.default.USER_MENTION), y = (0, l.useStateFromStores)([N.default], () => N.default.getUser(r)), P = (0, l.useStateFromStores)([S.default], () => S.default.getChannel(s)), U = null != P ? P.getGuildId() : null, b = v || null == y || null == U || null == s ? void 0 : e => {
+    null != P && (0, d.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("36441"), n.e("82882"), n.e("12435"), n.e("7717"), n.e("80869")]).then(n.bind(n, "757387"));
       return t => (0, i.jsx)(e, {
         ...t,
-        user: M,
-        channel: y,
-        guildId: P
+        viewingChannelId: D,
+        user: y,
+        channel: P,
+        guildId: U
       })
     })
-  }, b = C.default.useName(M), G = (0, l.useStateFromStores)([S.default, h.default, m.default], () => O.default.getNickname(P, s, M)), w = A.default.getGuild(P), k = (0, E.useClydeEnabled)(w, y) && r === R.CLYDE_AI_USER_ID ? R.CLYDE_AI_MENTION_COLOR : null;
-  if (null == M) return (0, i.jsx)(g, {
+  }, G = C.default.useName(y), w = (0, l.useStateFromStores)([S.default, h.default, m.default], () => O.default.getNickname(U, s, y)), k = A.default.getGuild(U), B = (0, E.useClydeEnabled)(k, P) && r === R.CLYDE_AI_USER_ID ? R.CLYDE_AI_MENTION_COLOR : null;
+  if (null == y) return (0, i.jsx)(g, {
     userId: I,
     className: t,
     children: L
   });
-  let B = e => (0, i.jsx)(p.default, {
+  let V = e => (0, i.jsx)(p.default, {
     className: t,
-    onContextMenu: U,
-    color: k,
+    onContextMenu: b,
+    color: B,
     ...e,
-    children: "@".concat(null != G ? G : b)
+    children: "@".concat(null != w ? w : G)
   });
   return v ? (0, i.jsx)(c.AnalyticsLocationProvider, {
-    value: D,
-    children: B()
+    value: M,
+    children: V()
   }) : (0, i.jsx)(c.AnalyticsLocationProvider, {
-    value: D,
+    value: M,
     children: (0, i.jsx)(u.Popout, {
-      preload: null == M ? void 0 : () => (0, T.maybeFetchUserProfileForPopout)(M.id, M.getAvatarURL(P, 80), {
-        guildId: null != P ? P : void 0,
+      preload: null == y ? void 0 : () => (0, T.maybeFetchUserProfileForPopout)(y.id, y.getAvatarURL(U, 80), {
+        guildId: null != U ? U : void 0,
         channelId: null != s ? s : void 0
       }),
-      renderPopout: e => (a()(null != M, "Unexpected missing user"), (0, i.jsx)(f.default, {
+      renderPopout: e => (a()(null != y, "Unexpected missing user"), (0, i.jsx)(f.default, {
         location: "UserMention",
-        userId: M.id,
-        guildId: null != P ? P : void 0,
+        userId: y.id,
+        guildId: null != U ? U : void 0,
         channelId: s,
         ...e
       })),
       position: o.isMobile ? "top" : "right",
-      children: e => B(e)
+      children: e => V(e)
     })
   })
 }

@@ -218,6 +218,7 @@ let b = e => {
         return {
           userId: r,
           channelId: n.channelId,
+          viewingChannelId: n.viewingChannelId,
           guildId: null == a ? void 0 : a.getGuildId(),
           parsedUserId: _ ? u : null,
           roleName: e[2],
