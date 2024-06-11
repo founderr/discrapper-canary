@@ -645,7 +645,12 @@ let eE = (e, t) => {
       config: {
         configVersion: 2
       }
-    }, e => eh(e) ? ef({
+    }, e => e.config.taskConfig.type !== l.QuestTaskConfigTypes.FIRST_PARTY ? {
+      progressSeconds: 0,
+      targetSeconds: 1,
+      targetMinutes: 1,
+      taskType: s.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP
+    } : eh(e) ? ef({
       quest: e
     }) : eo({
       quest: e,
