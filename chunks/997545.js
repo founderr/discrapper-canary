@@ -91,12 +91,12 @@ class L extends E.default {
     }, ...this.videoStreamParameters];
     let n = (0, A.getVoiceEngine)(),
       i = null != n.getCodecCapabilities ? n.getCodecCapabilities : n.getSupportedVideoCodecs;
-    if (null != n.createOwnStreamConnectionWithOptions) s = this.context === O.MediaEngineContextTypes.STREAM && this.streamUserId === this.userId ? n.createOwnStreamConnectionWithOptions : n.createVoiceConnectionWithOptions;
+    if (null != n.createOwnStreamConnectionWithOptions) a = this.context === O.MediaEngineContextTypes.STREAM && this.streamUserId === this.userId ? n.createOwnStreamConnectionWithOptions : n.createVoiceConnectionWithOptions;
     else if (null != n.createOwnStreamConnection) {
-      var r, s, a = this.context === O.MediaEngineContextTypes.STREAM && this.streamUserId === this.userId ? n.createOwnStreamConnection : n.createVoiceConnection;
-      s = (e, t, n) => a(t.ssrc, this.userId, t.address, t.port, n, t.experiments, t.streamParameters)
-    } else s = (e, t, i) => new n.VoiceConnection(t.ssrc, e, t.address, t.port, i, t.experiments, t.streamParameters);
-    null === (r = (t = this.conn = s(this.userId, e, (r, s) => {
+      var r, s, a, o = this.context === O.MediaEngineContextTypes.STREAM && this.streamUserId === this.userId ? n.createOwnStreamConnection : n.createVoiceConnection;
+      a = (e, t, n) => o(t.ssrc, this.userId, t.address, t.port, n, t.experiments, t.streamParameters)
+    } else a = (e, t, i) => new n.VoiceConnection(t.ssrc, e, t.address, t.port, i, t.experiments, t.streamParameters);
+    null === (r = (t = this.conn = a(this.userId, e, (r, s) => {
       if (this.destroyed) return;
       if (null != r && "" !== r) {
         this.setConnectionState(O.ConnectionStates.NO_ROUTE), this.emit(f.BaseConnectionEvent.Error, r);
@@ -147,7 +147,9 @@ class L extends E.default {
             }), t.mergeUsers(m), this.emit(f.BaseConnectionEvent.RemoteStreamsReady, m.length), Object.keys(this.localSpeakingFlags))) e !== this.userId && this.setSpeakingFlags(e, this.localSpeakingFlags[e])
         })
       })
-    })).setDesktopSourceStatusCallback) || void 0 === r || r.call(t, e => {
+    })).setSecureFramesStateUpdateCallback) || void 0 === r || r.call(t, e => {
+      this.logger.info("Secure frames state update: ".concat(JSON.stringify(e)))
+    }), null === (s = t.setDesktopSourceStatusCallback) || void 0 === s || s.call(t, e => {
       if ("videohook_start" === e.type) this.emit(f.BaseConnectionEvent.VideoHookStart);
       else if ("videohook_stop" === e.type) this.emit(f.BaseConnectionEvent.VideoHookStop);
       else if ("videohook_initialize" === e.type) this.emit(f.BaseConnectionEvent.VideoHookInitialize, e.backend, e.format, e.framebufferFormat, e.sampleCount, e.success, e.reinitialization);
