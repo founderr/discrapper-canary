@@ -163,48 +163,48 @@ let eG = () => {
         parent: eL.WebSetting.ACCOUNT_PROFILE
       },
       [eL.WebSetting.ACCOUNT_PASSWORD_AND_AUTHENTICATION]: {
-        section: eL.WebSetting.ACCOUNT,
+        section: eP.UserSettingsSections.ACCOUNT,
         parent: eL.WebSetting.ACCOUNT,
         searchableTitle: eU.default.Messages.USER_SETTINGS_ACCOUNT_PASSWORD_AND_AUTHENTICATION
       },
       [eL.WebSetting.ACCOUNT_CHANGE_PASSWORD]: {
         searchableTitle: eU.default.Messages.CHANGE_PASSWORD,
-        section: eL.WebSetting.ACCOUNT,
+        section: eP.UserSettingsSections.ACCOUNT,
         parent: eL.WebSetting.ACCOUNT_PASSWORD_AND_AUTHENTICATION
       },
       [eL.WebSetting.ACCOUNT_CONFIRM_PASSWORD]: {
         searchableTitle: eU.default.Messages.FORM_LABEL_CONFIRM_PASSWORD,
-        section: eL.WebSetting.ACCOUNT,
+        section: eP.UserSettingsSections.ACCOUNT,
         parent: eL.WebSetting.ACCOUNT_PASSWORD_AND_AUTHENTICATION
       },
       [eL.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION]: {
         searchableTitle: eU.default.Messages.SETTINGS_TWO_FA,
-        section: eL.WebSetting.ACCOUNT,
+        section: eP.UserSettingsSections.ACCOUNT,
         parent: eL.WebSetting.ACCOUNT_PASSWORD_AND_AUTHENTICATION
       },
       [eL.WebSetting.ACCOUNT_ENABLE_2FA]: {
         searchableTitle: eU.default.Messages.TWO_FA_ENABLE,
-        section: eL.WebSetting.ACCOUNT,
+        section: eP.UserSettingsSections.ACCOUNT,
         parent: eL.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
       },
       [eL.WebSetting.ACCOUNT_REMOVE_2FA]: {
         searchableTitle: eU.default.Messages.TWO_FA_REMOVE,
-        section: eL.WebSetting.ACCOUNT,
+        section: eP.UserSettingsSections.ACCOUNT,
         parent: eL.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
       },
       [eL.WebSetting.ACCOUNT_VIEW_BACKUP_CODES]: {
         searchableTitle: eU.default.Messages.TWO_FA_BACKUP_CODE,
-        section: eL.WebSetting.ACCOUNT,
+        section: eP.UserSettingsSections.ACCOUNT,
         parent: eL.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
       },
       [eL.WebSetting.ACCOUNT_SMS_BACKUP]: {
         searchableTitle: eU.default.Messages.MFA_SMS_AUTH,
-        section: eL.WebSetting.ACCOUNT,
+        section: eP.UserSettingsSections.ACCOUNT,
         parent: eL.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
       },
       [eL.WebSetting.ACCOUNT_SECURITY_KEYS]: {
         searchableTitle: eU.default.Messages.TWO_FA_WEBAUTHN_REGISTER,
-        section: eL.WebSetting.ACCOUNT,
+        section: eP.UserSettingsSections.ACCOUNT,
         parent: eL.WebSetting.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
       },
       [eL.WebSetting.ACCOUNT_REMOVAL]: {
@@ -288,6 +288,7 @@ let eG = () => {
       [eL.WebSetting.PRIVACY_AND_SAFETY]: {
         section: eP.UserSettingsSections.PRIVACY_AND_SAFETY,
         label: eU.default.Messages.PRIVACY_AND_SAFETY,
+        searchableTitle: eU.default.Messages.PRIVACY_AND_SAFETY,
         ariaLabel: eU.default.Messages.PRIVACY_AND_SAFETY,
         element: eg.default
       },
