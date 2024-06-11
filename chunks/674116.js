@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("653041");
 var a = s("735250"),
   n = s("470079"),
-  l = s("120356"),
-  i = s.n(l),
+  i = s("120356"),
+  l = s.n(i),
   r = s("442837"),
   o = s("481060"),
   d = s("846027"),
@@ -58,7 +58,7 @@ function B() {
     inputMode: e,
     qosEnabled: t,
     attenuation: s,
-    attenuateWhileSpeakingSelf: l,
+    attenuateWhileSpeakingSelf: i,
     attenuateWhileSpeakingOthers: _,
     audioSubsystem: I,
     silenceWarning: P,
@@ -107,7 +107,7 @@ function B() {
           guideURL: G
         })
       }), (0, a.jsx)(o.FormDivider, {
-        className: i()(U.marginBottom20)
+        className: l()(U.marginBottom20)
       })]
     }), (0, a.jsx)(S.Subsetting, {
       setting: L.WebSetting.VOICE_AND_VIDEO_INPUT_MODE,
@@ -126,7 +126,7 @@ function B() {
         ref: w
       })
     }), (0, a.jsx)(S.Subsetting, {
-      setting: L.WebSetting.VOICE_AND_VIDEO_CALL_SOUNDS,
+      setting: L.WebSetting.VOICE_AND_VIDEO_SOUNDS,
       children: (0, a.jsx)(g.default, {})
     }), (0, a.jsx)(S.Subsetting, {
       setting: L.WebSetting.VOICE_AND_VIDEO_VIDEO,
@@ -169,7 +169,7 @@ function B() {
             }), (0, a.jsx)(o.Slider, {
               initialValue: s,
               onValueChange: e => {
-                d.default.setAttenuation(e, l, _)
+                d.default.setAttenuation(e, i, _)
               },
               "aria-labelledby": j
             }), (0, a.jsx)(o.FormText, {
@@ -179,12 +179,12 @@ function B() {
             }), (0, a.jsx)(o.FormDivider, {
               className: U.marginBottom20
             }), (0, a.jsx)(o.FormSwitch, {
-              value: l,
+              value: i,
               onChange: e => d.default.setAttenuation(s, e, _),
               children: v.default.Messages.ATTENUATE_WHILE_SPEAKING_SELF
             }), (0, a.jsx)(o.FormSwitch, {
               value: _,
-              onChange: e => d.default.setAttenuation(s, l, e),
+              onChange: e => d.default.setAttenuation(s, i, e),
               children: v.default.Messages.ATTENUATE_WHILE_SPEAKING_OTHERS
             })]
           })
