@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   canReplyToMessage: function() {
-    return E
+    return M
   },
   useCanReplyToMessage: function() {
-    return M
+    return E
   }
 }), n("47120");
 var a = n("275726"),
   i = n("442837"),
   l = n("71619"),
   s = n("665906"),
-  r = n("496675"),
-  u = n("594174"),
+  u = n("496675"),
+  r = n("594174"),
   o = n("981631"),
   d = n("231338");
 
@@ -24,23 +24,23 @@ function c(e, t, n) {
 function f(e, t, n, a, i) {
   let l = t.hasFlag(o.MessageFlags.EPHEMERAL),
     s = t.state === o.MessageStates.SENT,
-    r = !e.isArchivedThread() || i;
-  return n && s && !l && !a && r
-}
-
-function M(e, t) {
-  var n;
-  let a = (0, s.useCanUnarchiveThread)(e),
-    [, u] = (0, l.useCurrentUserCommunicationDisabled)(null !== (n = null == e ? void 0 : e.getGuildId()) && void 0 !== n ? n : void 0),
-    o = (0, i.useStateFromStores)([r.default], () => null != e && null != t && c(e, t, r.default));
-  return null != e && null != t && f(e, t, o, u, a)
+    u = !e.isArchivedThread() || i;
+  return n && s && !l && !a && u
 }
 
 function E(e, t) {
   var n;
+  let a = (0, s.useCanUnarchiveThread)(e),
+    [, r] = (0, l.useCurrentUserCommunicationDisabled)(null !== (n = null == e ? void 0 : e.getGuildId()) && void 0 !== n ? n : void 0),
+    o = (0, i.useStateFromStores)([u.default], () => null != e && null != t && c(e, t, u.default));
+  return null != e && null != t && f(e, t, o, r, a)
+}
+
+function M(e, t) {
+  var n;
   let a = (0, s.canUnarchiveThread)(e),
-    i = c(e, t, r.default),
-    o = u.default.getCurrentUser(),
+    i = c(e, t, u.default),
+    o = r.default.getCurrentUser(),
     [, d] = (0, l.userCommunicationDisabled)(null == o ? void 0 : o.id, null !== (n = e.getGuildId()) && void 0 !== n ? n : void 0);
   return f(e, t, i, d, a)
 }

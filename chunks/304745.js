@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("451576"),
   p = n("526846"),
   E = n("938655"),
-  C = n("403404"),
-  g = n("906732"),
+  g = n("403404"),
+  C = n("906732"),
   S = n("243778"),
   _ = n("579185"),
   T = n("301076"),
@@ -41,8 +41,8 @@ function x(e) {
     "focus" !== e.type && L()
   }, [L]), U = (0, o.useAnalyticsContext)(), F = (0, u.useAppContext)() === I.AppContext.POPOUT, {
     analyticsLocations: w
-  } = (0, g.default)(), k = l.useCallback(() => {
-    (0, C.default)({
+  } = (0, C.default)(), k = l.useCallback(() => {
+    (0, g.default)({
       channel: t,
       guildId: t.guild_id,
       locationObject: U.location,

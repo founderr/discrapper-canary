@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return C
   }
 });
 var a = n("735250");
@@ -19,14 +19,14 @@ var l = n("410030"),
   m = n("470900"),
   p = n("772056"),
   E = n("689938"),
-  C = n("178756");
+  g = n("178756");
 
-function g(e) {
+function C(e) {
   let {
     user: t,
     channelId: n
   } = e, {
-    analyticsLocations: g
+    analyticsLocations: C
   } = (0, s.default)(), {
     trackUserProfileAction: S
   } = (0, r.useUserProfileAnalyticsContext)(), _ = (0, l.default)(), {
@@ -37,9 +37,9 @@ function g(e) {
     isFetching: v
   } = (0, u.default)(t.id, !t.bot), x = !t.bot && null != T && T.length > 0, N = !t.bot && null != A && A.length > 0;
   return x || N ? (0, a.jsxs)(c.default.Overlay, {
-    className: C.overlay,
+    className: g.overlay,
     children: [N && (0, a.jsx)(p.default, {
-      className: C.list,
+      className: g.list,
       header: E.default.Messages.MUTUAL_GUILDS_COUNT.format({
         count: A.length
       }),
@@ -64,9 +64,9 @@ function g(e) {
         }, n.id)
       })
     }), N && x && (0, a.jsx)(d.default, {
-      className: C.divider
+      className: g.divider
     }), x && (0, a.jsx)(p.default, {
-      className: C.list,
+      className: g.list,
       header: E.default.Messages.MUTUAL_FRIENDS_COUNT.format({
         count: T.length
       }),
@@ -88,7 +88,7 @@ function g(e) {
           status: s,
           onSelect: () => {
             (0, f.openUserProfileModal)({
-              sourceAnalyticsLocations: g,
+              sourceAnalyticsLocations: C,
               userId: l.id,
               channelId: n
             })

@@ -46,22 +46,22 @@ function d(e) {
     isActive: m = !1,
     isCenterButton: p = !1,
     ...E
-  } = e, C = n > 0, g = (0, l.useSpring)({
+  } = e, g = n > 0, C = (0, l.useSpring)({
     percentComplete: 0 !== n ? (t - n) / t : 0,
     config: {
       ...l.config.molasses,
       duration: 1e3
     }
-  }), S = C ? r.default.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({
+  }), S = g ? r.default.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({
     seconds: n
   }) : void 0, _ = p ? i.CenterControlButton : i.default;
   return (0, a.jsxs)("div", {
     className: o.container,
-    children: [C ? (0, a.jsx)(u, {
-      percentComplete: g.percentComplete
+    children: [g ? (0, a.jsx)(u, {
+      percentComplete: C.percentComplete
     }) : null, (0, a.jsx)(_, {
       ...E,
-      disabled: C,
+      disabled: g,
       label: S,
       iconComponent: s.default,
       onClick: d,

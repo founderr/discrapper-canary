@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("100527"),
   p = n("906732"),
   E = n("605236"),
-  C = n("448239"),
-  g = n("465670"),
+  g = n("448239"),
+  C = n("465670"),
   S = n("696202"),
   _ = n("988951"),
   T = n("944581"),
@@ -278,7 +278,7 @@ function b(e) {
             n_participants: d
           }), (0, E.markDismissibleContentAsDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT)
         },
-        children: [(0, a.jsx)(C.default, {}), (0, a.jsx)(u.Text, {
+        children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(u.Text, {
           variant: "text-sm/medium",
           children: y.default.Messages.DONT_SHOW_AGAIN
         })]
@@ -291,7 +291,7 @@ function b(e) {
             n_participants: d
           }), s()
         },
-        children: (0, a.jsx)(g.default, {
+        children: (0, a.jsx)(C.default, {
           className: R.closeButton
         })
       })]

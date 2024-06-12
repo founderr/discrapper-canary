@@ -74,9 +74,9 @@ function _(e) {
     description: _,
     rarity: f,
     hideDescriptionUntilUnlock: h,
-    onAction: m
+    onAction: C
   } = t, {
-    color: C
+    color: m
   } = (0, o.getAchievementStyles)(f);
   n.useEffect(() => {
     let e = setTimeout(() => {
@@ -86,12 +86,12 @@ function _(e) {
       clearTimeout(e)
     }
   }, []);
-  let T = null != m && s,
+  let T = null != C && s,
     g = T ? r.Clickable : "div";
   return (0, a.jsxs)(g, {
     className: i()(c.container, T && c.actionable),
     onClick: () => {
-      T && m()
+      T && C()
     },
     children: [(0, a.jsx)("div", {
       className: c.iconContainer,
@@ -114,7 +114,7 @@ function _(e) {
     }), (0, a.jsx)("div", {
       className: c.flair,
       children: (0, a.jsx)(E, {
-        color: C
+        color: m
       })
     })]
   })

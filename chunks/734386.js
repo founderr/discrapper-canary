@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("911969"),
   p = n("933557"),
   E = n("605436"),
-  C = n("185413"),
-  g = n("434404"),
+  g = n("185413"),
+  C = n("434404"),
   S = n("454585"),
   _ = n("430824"),
   T = n("496675"),
@@ -151,7 +151,7 @@ function b(e) {
           disabled: !G,
           verified: o,
           onClick: () => {
-            g.default.open(t.guild_id, j.GuildSettingsSections.MEMBERS), g.default.selectRole(e.id)
+            C.default.open(t.guild_id, j.GuildSettingsSections.MEMBERS), C.default.selectRole(e.id)
           }
         }, e.id) : (0, a.jsx)(N.default, {
           className: i()(D.role, {
@@ -163,7 +163,7 @@ function b(e) {
         }, e.id)
       })]
     }), n ? (0, a.jsx)(f.Modal, {
-      renderModal: e => (0, a.jsx)(C.default, {
+      renderModal: e => (0, a.jsx)(g.default, {
         ...e,
         onClose: () => (V(), e.onClose()),
         channelId: t.id

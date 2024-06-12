@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("239091"),
   p = n("941028"),
   E = n("144144"),
-  C = n("276264"),
-  g = n("607070"),
+  g = n("276264"),
+  C = n("607070"),
   S = n("100527"),
   _ = n("367907"),
   T = n("906732"),
@@ -59,7 +59,7 @@ function Z(e, t, n) {
   }) : e[t] = n, e
 }
 let X = W.default.getEnableHardwareAcceleration(),
-  q = 44 + C.AVATAR_DECORATION_PADDING,
+  q = 44 + g.AVATAR_DECORATION_PADDING,
   J = {
     origin: {
       x: 38,
@@ -92,9 +92,9 @@ class Q extends l.Component {
       isTyping: m,
       isMobileOnline: p,
       lastOnlineTimestamp: E,
-      premiumSince: g,
+      premiumSince: C,
       ...S
-    } = this.props, _ = null != g ? new Date(g) : null;
+    } = this.props, _ = null != C ? new Date(C) : null;
     return (0, a.jsx)(h.Popout, {
       preload: () => (0, j.maybeFetchUserProfileForPopout)(s, {
         channelId: c.id,
@@ -106,9 +106,9 @@ class Q extends l.Component {
       onShiftClick: this.handleShiftClick,
       children: (d, h) => {
         let {
-          isShown: g
+          isShown: C
         } = h;
-        return (0, a.jsx)(C.default, {
+        return (0, a.jsx)(g.default, {
           className: K.member,
           onContextMenu: this.renderUserContextMenu,
           shouldAnimateStatus: X,
@@ -127,7 +127,7 @@ class Q extends l.Component {
           guildId: f,
           isMobile: p,
           onClickPremiumGuildIcon: this.openGuildSubscriptionModal,
-          selected: g,
+          selected: C,
           itemProps: S,
           lastOnlineTimestamp: E,
           ...d
@@ -250,7 +250,7 @@ function et(e) {
   let {
     index: t
   } = e, n = (0, u.useListItem)("".concat(t));
-  return (0, a.jsx)(C.default, {
+  return (0, a.jsx)(g.default, {
     itemProps: n
   })
 }
@@ -520,7 +520,7 @@ function ea(e) {
     className: n
   } = e, {
     analyticsLocations: s
-  } = (0, T.default)(S.default.MEMBER_LIST), r = (0, c.useStateFromStores)([g.default], () => g.default.keyboardModeEnabled), o = (0, c.useStateFromStoresObject)([D.default], () => D.default.getProps(t.guild_id, t.id)), {
+  } = (0, T.default)(S.default.MEMBER_LIST), r = (0, c.useStateFromStores)([C.default], () => C.default.keyboardModeEnabled), o = (0, c.useStateFromStoresObject)([D.default], () => D.default.getProps(t.guild_id, t.id)), {
     rows: d,
     groups: f,
     version: h,
@@ -548,7 +548,7 @@ function ea(e) {
         })
       }
     })
-  }, []), C = l.useCallback(() => new Promise(e => {
+  }, []), g = l.useCallback(() => new Promise(e => {
     let t = p.current;
     if (null == t) return e();
     t.scrollToTop({
@@ -566,7 +566,7 @@ function ea(e) {
     id: "members-".concat(t.id),
     setFocus: E,
     isEnabled: r,
-    scrollToStart: C,
+    scrollToStart: g,
     scrollToEnd: _
   }), A = (0, c.useStateFromStores)([L.default], () => L.default.getPriorityGuilds().includes(t.guild_id));
   return (0, a.jsx)(T.AnalyticsLocationProvider, {

@@ -13,8 +13,8 @@ var a = s("570140"),
   _ = s("981631");
 let f = (0, d.createSoundForPack)("poggermode_applause", l.default.getSoundpack()),
   h = !1,
-  m = !1,
-  C = [],
+  C = !1,
+  m = [],
   T = null,
   g = () => {
     !h && (f.loop(), h = !0)
@@ -28,18 +28,18 @@ let f = (0, d.createSoundForPack)("poggermode_applause", l.default.getSoundpack(
     return !!e && !!t && null != o.default.getChannelId() || !1
   },
   N = () => {
-    if (0 === C.length || !p() || m) return;
-    m = !0;
-    let [e, t] = C[C.length - 1];
+    if (0 === m.length || !p() || C) return;
+    C = !0;
+    let [e, t] = m[m.length - 1];
     (0, d.playSound)(e, t), T = setTimeout(S, 1e3)
   },
   S = () => {
-    C.pop(), m = !1, N()
+    m.pop(), C = !1, N()
   },
   I = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
       s = r.default.isConnected();
-    C.push([e, t * (s ? .1 : 1)]), N()
+    m.push([e, t * (s ? .1 : 1)]), N()
   };
 class x extends n.default {
   _initialize() {

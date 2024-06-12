@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("703180"),
   p = n("809017"),
   E = n("981631"),
-  C = n("689938"),
-  g = n("664059"),
+  g = n("689938"),
+  C = n("664059"),
   S = n("67431");
 
 function _(e) {
@@ -46,7 +46,7 @@ t.default = l.memo(function(e) {
   return (0, a.jsxs)(c.default, {
     className: S.membersGroup,
     children: [(0, a.jsx)(u.HiddenVisually, {
-      children: C.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
+      children: g.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
         title: p,
         count: I
       })
@@ -57,22 +57,22 @@ t.default = l.memo(function(e) {
       onContextMenu: v,
       tag: "span",
       "aria-hidden": !0,
-      className: g.headerContainer,
+      className: C.headerContainer,
       children: [(0, a.jsxs)("div", {
-        className: g.header,
+        className: C.header,
         children: [(0, a.jsxs)("span", {
           children: [p, " — ", I]
         }), (0, a.jsx)(m.default, {})]
       }), I <= 3 && !A ? null : (t = A ? (0, a.jsx)(o.ChevronSmallUpIcon, {
-        className: g.toggleExpandIcon
+        className: C.toggleExpandIcon
       }) : T ? (0, a.jsx)(i.ChevronSmallDownIcon, {
-        className: g.toggleExpandIcon
+        className: C.toggleExpandIcon
       }) : (0, a.jsx)(r.ChevronSmallRightIcon, {
-        className: g.toggleExpandIcon
+        className: C.toggleExpandIcon
       }), (0, a.jsx)(u.FocusRing, {
         children: (0, a.jsx)("div", {
           tabIndex: 0,
-          className: g.toggleExpandIcon,
+          className: C.toggleExpandIcon,
           children: t
         })
       }))]

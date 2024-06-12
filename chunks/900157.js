@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("933557"),
   p = n("287746"),
   E = n("541716"),
-  C = n("910611"),
-  g = n("359110"),
+  g = n("910611"),
+  C = n("359110"),
   S = n("592125"),
   _ = n("703558"),
   T = n("430824"),
@@ -43,7 +43,7 @@ function R(e) {
       t && null != e && (o.default.dispatch({
         type: "SIDEBAR_CLOSE",
         baseChannelId: e.parent_id
-      }), (0, g.transitionToThread)(e, x.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN))
+      }), (0, C.transitionToThread)(e, x.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN))
     }, [t, e])
   })(L);
   let P = l.useRef(!1);
@@ -70,7 +70,7 @@ function R(e) {
     }), (0, a.jsx)(A.default, {
       toolbar: D,
       "aria-label": M.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
-      children: (0, C.renderTitle)({
+      children: (0, g.renderTitle)({
         channel: L,
         channelName: j,
         guild: O,
@@ -87,7 +87,7 @@ function R(e) {
           })
         },
         handleClick: function() {
-          null != L && (0, g.transitionToChannel)(L.id)
+          null != L && (0, C.transitionToChannel)(L.id)
         }
       })
     }), (0, a.jsx)("div", {

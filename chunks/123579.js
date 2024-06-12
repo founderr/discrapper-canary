@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("422677"),
   p = n("769654"),
   E = n("199902"),
-  C = n("314897"),
-  g = n("592125"),
+  g = n("314897"),
+  C = n("592125"),
   S = n("496675"),
   _ = n("158776"),
   T = n("246946"),
@@ -65,9 +65,9 @@ t.default = e => {
     availableApplications: eu
   } = (0, h.usePrivateChannelIntegrationState)({
     channelId: s.id
-  }), ed = (0, r.useStateFromStores)([I.default, g.default], () => {
+  }), ed = (0, r.useStateFromStores)([I.default, C.default], () => {
     var e;
-    return null != n ? g.default.getChannel(null === (e = I.default.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId) : null
+    return null != n ? C.default.getChannel(null === (e = I.default.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId) : null
   }), {
     enableHangStatus: ec
   } = f.HangStatusExperiment.useExperiment({
@@ -81,7 +81,7 @@ t.default = e => {
     isApplicationStreaming: em,
     isMobile: ep,
     status: eE,
-    hangStatusActivity: eC
+    hangStatusActivity: eg
   } = (0, r.useStateFromStoresObject)([E.default, _.default, S.default], () => {
     let e = null != E.default.getAnyStreamForUser(n.id);
     return {
@@ -107,7 +107,7 @@ t.default = e => {
         return t === J.ActivityTypes.HANG_STATUS
       }) : null
     }
-  }), eg = null != ef || null != eC || em, eS = null !== (t = A.default.getNickname(null, s.id, n)) && void 0 !== t ? t : v.default.getName(n), e_ = (0, r.useStateFromStores)([T.default], () => T.default.hidePersonalInformation), {
+  }), eC = null != ef || null != eg || em, eS = null !== (t = A.default.getNickname(null, s.id, n)) && void 0 !== t ? t : v.default.getName(n), e_ = (0, r.useStateFromStores)([T.default], () => T.default.hidePersonalInformation), {
     mutualFriends: eT,
     isFetching: eI
   } = (0, L.default)(n.id, !n.bot), {
@@ -169,7 +169,7 @@ t.default = e => {
     }, e.application.id)),
     ej = l.useCallback(() => et(!0), []),
     eP = l.useCallback(() => et(!1), []),
-    eD = (0, r.useStateFromStores)([C.default], () => C.default.getId()),
+    eD = (0, r.useStateFromStores)([g.default], () => g.default.getId()),
     eb = n.id === eD,
     eU = n.bot || eb,
     {
@@ -233,10 +233,10 @@ t.default = e => {
                 user: n,
                 setNote: !1
               })]
-            }), eg ? (0, a.jsx)(j.default.Overlay, {
+            }), eC ? (0, a.jsx)(j.default.Overlay, {
               className: $.overlay,
               children: (0, a.jsx)(H.default, {
-                activity: null != ef || em ? ef : eC,
+                activity: null != ef || em ? ef : eg,
                 user: n,
                 channelId: s.id,
                 analyticsParams: {

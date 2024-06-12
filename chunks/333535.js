@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("158222"),
   p = n("410992"),
   E = n("981631"),
-  C = n("689938"),
-  g = n("250420");
+  g = n("689938"),
+  C = n("250420");
 
 function S(e) {
   let {
@@ -30,24 +30,24 @@ function S(e) {
     }), (0, s.copy)((0, f.getChannelLinkToCopy)(n, S)))
   }, [n, S]);
   return (0, a.jsxs)("div", {
-    className: g.sharePromptContainer,
+    className: C.sharePromptContainer,
     children: [(0, a.jsx)(p.default, {}), (0, a.jsxs)("div", {
-      className: g.sharePromptContent,
+      className: C.sharePromptContent,
       children: [(0, a.jsx)(r.Text, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: C.default.Messages.MEDIA_POST_SHARE_PROMPT_TITLE
+        children: g.default.Messages.MEDIA_POST_SHARE_PROMPT_TITLE
       }), (0, a.jsx)(r.Text, {
         variant: "text-sm/medium",
         color: "text-normal",
-        children: C.default.Messages.MEDIA_POST_SHARE_PROMPT_SUBTITLE.format({
+        children: g.default.Messages.MEDIA_POST_SHARE_PROMPT_SUBTITLE.format({
           helpArticleUrl: h.default.getCreatorSupportArticleURL(E.HelpdeskArticles.MEDIA_CHANNEL)
         })
       }), (0, a.jsx)(r.Spacer, {
         size: 4
       }), (0, a.jsxs)(r.Button, {
-        className: g.sharePromptCta,
-        innerClassName: g.ctaContent,
+        className: C.sharePromptCta,
+        innerClassName: C.ctaContent,
         onClick: _,
         children: [(0, a.jsx)(c.default, {
           height: "16px",
@@ -55,15 +55,15 @@ function S(e) {
         }), (0, a.jsx)(r.Text, {
           variant: "text-sm/medium",
           color: "always-white",
-          children: C.default.Messages.MEDIA_POST_SHARE_PROMPT_CTA
+          children: g.default.Messages.MEDIA_POST_SHARE_PROMPT_CTA
         })]
       })]
     }), (0, a.jsx)(r.Clickable, {
-      className: g.closeButton,
+      className: C.closeButton,
       onClick: () => {
         (0, m.dismissMediaPostSharePrompt)(t)
       },
-      "aria-label": C.default.Messages.REMOVE_MESSAGE_ATTACHMENT,
+      "aria-label": g.default.Messages.REMOVE_MESSAGE_ATTACHMENT,
       children: (0, a.jsx)(d.default, {
         height: "15px",
         width: "15px"

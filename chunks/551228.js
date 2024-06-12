@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useListenedSessionData: function() {
-    return C
+    return g
   }
 }), n("47120");
 var a = n("735250"),
@@ -19,7 +19,7 @@ var a = n("735250"),
   p = n("571425");
 let E = [c.ListenTimestampBadge];
 
-function C(e) {
+function g(e) {
   var t, n, a, l, s, i, c;
   let f = (0, r.useStateFromStores)([d.default], () => d.default.getMatchingActivity(e)),
     h = (0, r.useStateFromStores)([u.default], () => u.default.getUser(e.author_id));
@@ -27,13 +27,13 @@ function C(e) {
   let m = e.extra.entries[0],
     p = null !== (l = null !== (a = (0, o.default)(f)) && void 0 !== a ? a : null === (t = f.assets) || void 0 === t ? void 0 : t.small_image) && void 0 !== l ? l : m.media.image_url,
     E = null !== (i = null !== (s = f.state) && void 0 !== s ? s : null === (n = m.media.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== i ? i : m.media.title,
-    C = null !== (c = f.details) && void 0 !== c ? c : m.media.title;
+    g = null !== (c = f.details) && void 0 !== c ? c : m.media.title;
   return {
     activity: f,
     artist: E,
     currentEntry: m,
     imageUrl: p,
-    title: C,
+    title: g,
     user: h
   }
 }
@@ -46,7 +46,7 @@ t.default = l.memo(function(e) {
     activity: s,
     artist: r,
     imageUrl: o
-  } = C(t);
+  } = g(t);
   return i()(null != s, "There must be a matching live Activity for LISTENED_SESSION"), (0, a.jsxs)(f.Card, {
     selected: l,
     children: [(0, a.jsxs)(f.CardInfoSection, {

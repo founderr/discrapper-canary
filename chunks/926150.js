@@ -19,8 +19,8 @@ var l = n("442837"),
   m = n("678738"),
   p = n("502762"),
   E = n("530"),
-  C = n("580512"),
-  g = n("228168"),
+  g = n("580512"),
+  C = n("228168"),
   S = n("689938"),
   _ = n("181456");
 
@@ -38,18 +38,18 @@ function T(e) {
     className: _.body,
     children: [(0, a.jsx)(E.default, {
       user: t,
-      profileType: g.UserProfileTypes.PANEL,
+      profileType: C.UserProfileTypes.PANEL,
       nickname: r.default.getName(null, T, t),
       pronouns: null == n ? void 0 : n.pronouns,
       onOpenProfile: A,
       tags: (0, a.jsx)(u.default, {
         displayProfile: n,
-        profileType: g.UserProfileTypes.PANEL
+        profileType: C.UserProfileTypes.PANEL
       }),
       nicknameIcons: (0, a.jsx)(f.default, {
         userId: t.id
       })
-    }), (0, a.jsx)(C.default, {
+    }), (0, a.jsx)(g.default, {
       user: t,
       channelId: T
     }), (0, a.jsxs)(p.default.Overlay, {

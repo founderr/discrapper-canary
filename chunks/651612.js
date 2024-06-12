@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("566620"),
   p = n("317381"),
   E = n("918559"),
-  C = n("981631"),
-  g = n("689938"),
+  g = n("981631"),
+  C = n("689938"),
   S = n("368234");
 
 function _(e) {
@@ -52,14 +52,14 @@ function _(e) {
     null === (e = T.current) || void 0 === e || e.focus()
   }, []);
   (0, h.useComponentAction)({
-    event: C.ComponentActions.FOCUS_CHAT_BUTTON,
+    event: g.ComponentActions.FOCUS_CHAT_BUTTON,
     handler: N
   });
-  let M = I ? g.default.Messages.HIDE_CHAT : g.default.Messages.SHOW_CHAT,
+  let M = I ? C.default.Messages.HIDE_CHAT : C.default.Messages.SHOW_CHAT,
     y = [M];
-  x > 0 && y.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
+  x > 0 && y.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
     mentionCount: x
-  })), v > 0 && y.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
+  })), v > 0 && y.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
   let R = (0, i.useStateFromStores)([p.default], () => p.default.getFocusedLayout()),
     L = x > 0 ? x : v,
     O = L > 0;

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   FriendRow: function() {
-    return C
+    return g
   },
   default: function() {
-    return g
+    return C
   }
 });
 var a = n("735250");
@@ -23,7 +23,7 @@ var l = n("442837"),
   p = n("305944");
 let E = (0, s.getAvatarSize)(s.AvatarSizes.SIZE_40);
 
-function C(e) {
+function g(e) {
   let {
     user: t,
     status: o,
@@ -58,7 +58,7 @@ function C(e) {
   })
 }
 
-function g(e) {
+function C(e) {
   let {
     user: t,
     onClose: n
@@ -70,14 +70,14 @@ function g(e) {
     guildId: r,
     channelId: u,
     messageId: E,
-    roleId: g
+    roleId: C
   } = (0, d.useUserProfileAnalyticsContext)(), S = e => {
     n(), (0, f.openUserProfileModal)({
       userId: e,
       guildId: r,
       channelId: u,
       messageId: E,
-      roleId: g,
+      roleId: C,
       sourceAnalyticsLocations: i,
       analyticsLocation: {
         section: h.AnalyticsSections.USER_PROFILE_MUTUAL_FRIENDS
@@ -104,7 +104,7 @@ function g(e) {
         user: n,
         status: l
       } = e;
-      return (0, a.jsx)(C, {
+      return (0, a.jsx)(g, {
         user: n,
         status: l,
         onSelect: () => S(n.id)

@@ -9,55 +9,55 @@ n("470079");
 var i = n("120356"),
   l = n.n(i),
   s = n("442837"),
-  r = n("481060"),
-  u = n("543241"),
+  u = n("481060"),
+  r = n("543241"),
   o = n("222677"),
   d = n("995774"),
   c = n("665906"),
   f = n("695346"),
-  M = n("496675"),
-  E = n("768581"),
-  m = n("176354"),
-  g = n("981631"),
+  E = n("496675"),
+  M = n("768581"),
+  g = n("176354"),
+  m = n("981631"),
   v = n("185923"),
-  I = n("689938"),
-  h = n("982581");
-let p = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
+  p = n("689938"),
+  S = n("982581");
+let h = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
 
-function S(e) {
+function I(e) {
   var t;
   let {
     emoji: n,
     isFocused: i
   } = e, {
     animated: s,
-    src: u,
+    src: r,
     surrogates: o
   } = n;
-  return null == u && null != n.id ? u = E.default.getEmojiURL({
+  return null == r && null != n.id ? r = M.default.getEmojiURL({
     id: n.id,
     animated: !!s,
     size: 20
-  }) : null == u && (u = m.default.getURL(o)), (0, a.jsx)(r.Tooltip, {
+  }) : null == r && (r = g.default.getURL(o)), (0, a.jsx)(u.Tooltip, {
     text: n.allNamesString,
     hideOnClick: !0,
     spacing: 16,
     forceOpen: i,
     children: e => (0, a.jsx)("div", {
-      "aria-label": I.default.Messages.ADD_REACTION_NAMED.format({
+      "aria-label": p.default.Messages.ADD_REACTION_NAMED.format({
         emojiName: n.name
       }),
-      className: l()(h.button, {
-        [h.focused]: i
+      className: l()(S.button, {
+        [S.focused]: i
       }),
       ...e,
-      children: null == u || "" === u.trim() ? (0, a.jsx)("span", {
-        className: l()("emoji", "emoji-text", h.icon),
+      children: null == r || "" === r.trim() ? (0, a.jsx)("span", {
+        className: l()("emoji", "emoji-text", S.icon),
         ...e,
         children: o
       }) : (0, a.jsx)("img", {
-        className: h.icon,
-        src: u,
+        className: S.icon,
+        src: r,
         alt: ""
       })
     })
@@ -65,9 +65,9 @@ function S(e) {
 }
 
 function A(e, t) {
-  let n = (0, u.useEmojiInPriorityOrder)(t.guild_id).filter(e => {
+  let n = (0, r.useEmojiInPriorityOrder)(t.guild_id).filter(e => {
     var n;
-    return !(e.useSpriteSheet && p.indexOf(null !== (n = e.uniqueName) && void 0 !== n ? n : "") >= 0) && !m.default.isEmojiPremiumLocked({
+    return !(e.useSpriteSheet && h.indexOf(null !== (n = e.uniqueName) && void 0 !== n ? n : "") >= 0) && !g.default.isEmojiPremiumLocked({
       emoji: e,
       channel: t,
       intention: v.EmojiIntention.REACTION
@@ -76,26 +76,26 @@ function A(e, t) {
   n.length > 4 && (n.length = 4);
   let i = f.RenderReactions.useSetting(),
     l = (0, c.useIsActiveChannelOrUnarchivableThread)(t),
-    E = (0, s.useStateFromStores)([M.default], () => i && l && (t.isPrivate() || M.default.can(g.Permissions.ADD_REACTIONS, t)), [t, l, i]),
-    I = n => {
+    M = (0, s.useStateFromStores)([E.default], () => i && l && (t.isPrivate() || E.default.can(m.Permissions.ADD_REACTIONS, t)), [t, l, i]),
+    p = n => {
       (0, o.addReaction)(t.id, e.id, (0, d.toReactionEmoji)(n), void 0)
     };
-  return E && n.length > 0 ? (0, a.jsx)(r.MenuGroup, {
-    className: h.wrapper,
+  return M && n.length > 0 ? (0, a.jsx)(u.MenuGroup, {
+    className: S.wrapper,
     children: n.map((e, t) => {
       var n;
-      return (0, a.jsx)(r.MenuItem, {
+      return (0, a.jsx)(u.MenuItem, {
         id: "quickreact-".concat(null !== (n = e.id) && void 0 !== n ? n : t),
         render: t => {
           let {
             isFocused: n
           } = t;
-          return (0, a.jsx)(S, {
+          return (0, a.jsx)(I, {
             emoji: e,
             isFocused: n
           })
         },
-        action: () => I(e),
+        action: () => p(e),
         dontCloseOnActionIfHoldingShiftKey: !0
       }, t)
     })

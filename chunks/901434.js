@@ -14,16 +14,16 @@ var a = n("735250"),
   m = n("501655"),
   p = n("689938"),
   E = n("266152");
-let C = (e, t) => h.default.getName(e.getGuildId(), e.id, t.user);
+let g = (e, t) => h.default.getName(e.getGuildId(), e.id, t.user);
 t.default = function(e) {
   var t, n;
   let {
     participants: h,
-    channel: g,
+    channel: C,
     hasConnectPermission: S
-  } = e, _ = (0, d.useShowMemberVerificationGate)(g.guild_id), T = l.useCallback(() => {
-    _ ? (0, u.openMemberVerificationModal)(g.guild_id, () => r.default.selectVoiceChannel(g.id)) : r.default.selectVoiceChannel(g.id)
-  }, [g.id, g.guild_id, _]), I = h.filter(e => e.type === m.StageChannelParticipantTypes.VOICE), A = 4 === I.length ? 2 : 3, v = (0, s.useStateFromStoresArray)([o.default], () => I.map(e => o.default.getParticipant(g.id, e.id)).filter(f.isNotNullish), [g.id, I]);
+  } = e, _ = (0, d.useShowMemberVerificationGate)(C.guild_id), T = l.useCallback(() => {
+    _ ? (0, u.openMemberVerificationModal)(C.guild_id, () => r.default.selectVoiceChannel(C.id)) : r.default.selectVoiceChannel(C.id)
+  }, [C.id, C.guild_id, _]), I = h.filter(e => e.type === m.StageChannelParticipantTypes.VOICE), A = 4 === I.length ? 2 : 3, v = (0, s.useStateFromStoresArray)([o.default], () => I.map(e => o.default.getParticipant(C.id, e.id)).filter(f.isNotNullish), [C.id, I]);
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsx)("div", {
@@ -33,7 +33,7 @@ t.default = function(e) {
       },
       children: v.slice(0, 5).map(e => (0, a.jsx)(c.default, {
         participant: e,
-        channel: g,
+        channel: C,
         className: E.tile,
         paused: !0,
         inCall: !0,
@@ -44,20 +44,20 @@ t.default = function(e) {
     }), (0, a.jsx)(i.Heading, {
       className: E.channelName,
       variant: "heading-xxl/semibold",
-      children: g.name
+      children: C.name
     }), (0, a.jsx)("div", {
       className: E.participantsRow,
       children: (0, a.jsx)(i.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: (t = g, 0 === (n = I).length ? p.default.Messages.CURRENTLY_IN_STAGE_EMPTY : 1 === n.length ? p.default.Messages.CURRENTLY_IN_STAGE_1.format({
-          a: C(t, n[0])
+        children: (t = C, 0 === (n = I).length ? p.default.Messages.CURRENTLY_IN_STAGE_EMPTY : 1 === n.length ? p.default.Messages.CURRENTLY_IN_STAGE_1.format({
+          a: g(t, n[0])
         }) : 2 === n.length ? p.default.Messages.CURRENTLY_IN_STAGE_2.format({
-          a: C(t, n[0]),
-          b: C(t, n[1])
+          a: g(t, n[0]),
+          b: g(t, n[1])
         }) : n.length > 2 ? p.default.Messages.CURRENTLY_IN_STAGE_2_N.format({
-          a: C(t, n[0]),
-          b: C(t, n[1]),
+          a: g(t, n[0]),
+          b: g(t, n[1]),
           n: n.length - 2
         }) : void 0)
       })

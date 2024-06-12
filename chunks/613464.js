@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("527379"),
   p = n("484459"),
   E = n("318661"),
-  C = n("502762"),
-  g = n("271383"),
+  g = n("502762"),
+  C = n("271383"),
   S = n("594174"),
   _ = n("189357"),
   T = n("718617"),
@@ -35,7 +35,7 @@ function x(e) {
     className: x,
     infoPanelClassName: N,
     style: M
-  } = e, y = (0, _.useCanAccessGuildMemberModView)(n), R = (0, r.useStateFromStores)([S.default], () => S.default.getUser(t), [t]), L = (0, r.useStateFromStores)([g.default], () => g.default.getMember(n, t), [n, t]), [O, j] = l.useState(null == R || null == L), P = (0, d.default)(L), D = l.useRef(null), {
+  } = e, y = (0, _.useCanAccessGuildMemberModView)(n), R = (0, r.useStateFromStores)([S.default], () => S.default.getUser(t), [t]), L = (0, r.useStateFromStores)([C.default], () => C.default.getMember(n, t), [n, t]), [O, j] = l.useState(null == R || null == L), P = (0, d.default)(L), D = l.useRef(null), {
     analyticsLocations: b
   } = (0, h.default)(f.default.GUILD_MEMBER_MOD_VIEW), U = (0, E.default)(t, n);
   return (l.useEffect(() => {
@@ -71,7 +71,7 @@ function x(e) {
     children: (0, a.jsx)("div", {
       className: i()(v.sidebarContianer, x),
       style: M,
-      children: (0, a.jsx)(C.default, {
+      children: (0, a.jsx)(g.default, {
         user: R,
         displayProfile: U,
         profileType: A.UserProfileTypes.MODAL,

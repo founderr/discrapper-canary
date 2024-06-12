@@ -10,9 +10,9 @@ let h = {},
   m = {},
   p = !0,
   E = {},
-  C = !1;
+  g = !1;
 
-function g() {
+function C() {
   return c.default
 }
 
@@ -30,7 +30,7 @@ class _ extends(a = o.default.Store) {
   }
   shouldShow(e) {
     var t;
-    return !(!C || p || f.CONFERENCE_MODE_ENABLED || (t = e, r.isMobile && ["writing-messages", "organize-by-topic"].includes(t))) && (E[e] || !1)
+    return !(!g || p || f.CONFERENCE_MODE_ENABLED || (t = e, r.isMobile && ["writing-messages", "organize-by-topic"].includes(t))) && (E[e] || !1)
   }
   shouldShowAnyIndicators() {
     return !p
@@ -56,10 +56,10 @@ i = "TutorialIndicatorStore", (s = "displayName") in(l = _) ? Object.definePrope
     let {
       tutorial: t
     } = e;
-    C = !0, p = !0, h = {}, null != t && (p = t.indicators_suppressed, t.indicators_confirmed.forEach(e => h[e] = !1)), S()
+    g = !0, p = !0, h = {}, null != t && (p = t.indicators_suppressed, t.indicators_confirmed.forEach(e => h[e] = !1)), S()
   },
   CONNECTION_CLOSED: function() {
-    C = !1
+    g = !1
   },
   TUTORIAL_INDICATOR_DISMISS: function(e) {
     h = {

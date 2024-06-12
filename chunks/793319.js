@@ -19,8 +19,8 @@ var a, l, s = n("735250"),
   m = n("481060"),
   p = n("846027"),
   E = n("287734"),
-  C = n("872810"),
-  g = n("410575"),
+  g = n("872810"),
+  C = n("410575"),
   S = n("40851"),
   _ = n("317381"),
   T = n("596040"),
@@ -73,8 +73,8 @@ var a, l, s = n("735250"),
   em = n("985370"),
   ep = n("544384"),
   eE = n("560688"),
-  eC = n("127608"),
-  eg = n("76021"),
+  eg = n("127608"),
+  eC = n("76021"),
   eS = n("173507"),
   e_ = n("981631"),
   eT = n("354459"),
@@ -98,11 +98,11 @@ function ev(e) {
     available: c,
     activated: p,
     hqStreamingState: E
-  } = (0, W.usePerksDemo)(f.EntitlementFeatureNames.STREAM_HIGH_QUALITY), g = null != d && c && p, _ = i.useRef(null), T = t.getGuildId(), I = i.useCallback(() => {
-    if (null == a || a(), !l) return (0, eC.default)();
-    (0, eg.default)(T, t.id, e_.AnalyticsPages.GUILD_CHANNEL)
+  } = (0, W.usePerksDemo)(f.EntitlementFeatureNames.STREAM_HIGH_QUALITY), C = null != d && c && p, _ = i.useRef(null), T = t.getGuildId(), I = i.useCallback(() => {
+    if (null == a || a(), !l) return (0, eg.default)();
+    (0, eC.default)(T, t.id, e_.AnalyticsPages.GUILD_CHANNEL)
   }, [T, t.id, l, a]), A = (0, h.useStateFromStores)([U.default, er.default], () => (0, k.default)(U.default, er.default)), M = (0, N.default)(), R = (0, x.default)() && null != A, L = () => {
-    R && (null == d ? (0, C.createBroadcastChannelOrStartStream)({
+    R && (null == d ? (0, g.createBroadcastChannelOrStartStream)({
       channelId: t.id,
       pid: null == A ? void 0 : A.pid
     }) : (0, v.startBroadcastForStream)((0, F.encodeStreamKey)(d), null == A ? void 0 : A.pid))
@@ -114,7 +114,7 @@ function ev(e) {
     if (l) {
       I();
       return
-    }(0, eC.default)()
+    }(0, eg.default)()
   }, j = () => {
     if (M) {
       (0, y.openStopBroadcastConfirmModal)(() => (0, H.default)(d));
@@ -140,13 +140,13 @@ function ev(e) {
       } : null,
       popoutOpen: t,
       shouldShowTooltip: !t,
-      premiumGlow: g && E.hqStreamingIsEnabled,
+      premiumGlow: C && E.hqStreamingIsEnabled,
       buttonRef: _,
       onClick: null != d ? j : O
     })
   };
   return M ? P() : (0, s.jsxs)(s.Fragment, {
-    children: [g && E.hqStreamingIsEnabled ? (0, s.jsx)(z.StreamButtonDemoPopout, {
+    children: [C && E.hqStreamingIsEnabled ? (0, s.jsx)(z.StreamButtonDemoPopout, {
       buttonRef: _,
       dismissed: E.hqStreamingPopoutDismissed,
       onDismiss: () => {
@@ -206,17 +206,17 @@ let eN = i.memo(function(e) {
     channel: l
   } = e, r = (0, h.useStateFromStores)([R.default], () => R.default.getSelectedParticipant(l.id)), {
     reducedMotion: o
-  } = i.useContext(m.AccessibilityPreferencesContext), [u, d] = i.useState(!1), f = null == r ? void 0 : r.id, p = (0, h.useStateFromStores)([en.default], () => null != f ? en.default.getActiveStreamForStreamKey(f) : null, [f]), g = (null == r ? void 0 : r.type) === eT.ParticipantTypes.STREAM && null != p && p.ownerId !== (null == n ? void 0 : n.id), S = (0, h.useStateFromStoresArray)([en.default], () => en.default.getAllActiveStreamsForChannel(l.id).filter(e => {
+  } = i.useContext(m.AccessibilityPreferencesContext), [u, d] = i.useState(!1), f = null == r ? void 0 : r.id, p = (0, h.useStateFromStores)([en.default], () => null != f ? en.default.getActiveStreamForStreamKey(f) : null, [f]), C = (null == r ? void 0 : r.type) === eT.ParticipantTypes.STREAM && null != p && p.ownerId !== (null == n ? void 0 : n.id), S = (0, h.useStateFromStoresArray)([en.default], () => en.default.getAllActiveStreamsForChannel(l.id).filter(e => {
     let {
       ownerId: t
     } = e;
     return t !== (null == n ? void 0 : n.id)
   })), _ = (0, G.useActiveEvent)(l.id), T = (0, N.useIsBroadcastingInChannel)(l.id), I = i.useCallback(() => {
     if ((null == r ? void 0 : r.type) === eT.ParticipantTypes.ACTIVITY && r.id === t) return "ACTIVITY";
-    if (g) return "STREAM";
+    if (C) return "STREAM";
     if (null != _) return "EVENT";
     return "CALL"
-  }, [r, t, g, _]), [A, v] = i.useState(I()), x = (0, c.useSpring)({
+  }, [r, t, C, _]), [A, v] = i.useState(I()), x = (0, c.useSpring)({
     opacity: u ? .2 : 1,
     transform: u && !o.enabled ? "scale(0.7)" : "scale(1)",
     config: {
@@ -234,9 +234,9 @@ let eN = i.memo(function(e) {
     I() !== A && d(!0)
   }, [A, I]);
   let y = i.useCallback(() => {
-      if (null != p)(0, C.stopStream)((0, F.encodeStreamKey)(p));
+      if (null != p)(0, g.stopStream)((0, F.encodeStreamKey)(p));
       else
-        for (let e of S)(0, C.stopStream)((0, F.encodeStreamKey)(e))
+        for (let e of S)(0, g.stopStream)((0, F.encodeStreamKey)(e))
     }, [S, p]),
     L = (e, t) => {
       let i = {
@@ -375,7 +375,7 @@ t.default = function(e) {
     selfMute: p,
     mute: E
   } = (0, ef.default)(t), {
-    canGoLive: C
+    canGoLive: g
   } = (0, h.useStateFromStoresObject)([el.default], () => ({
     canGoLive: (0, w.default)(el.default)
   })), S = (0, b.default)(), T = (0, h.useStateFromStores)([D.default], () => null != D.default.getAwaitingRemoteSessionInfo()), v = null != S, x = (0, h.useStateFromStores)([es.default], () => {
@@ -406,7 +406,7 @@ t.default = function(e) {
   }) && !t.isPrivate() && !N;
   return (0, s.jsx)(A.AnalyticsLocationProvider, {
     value: U,
-    children: (0, s.jsxs)(g.default, {
+    children: (0, s.jsxs)(C.default, {
       section: e_.AnalyticsSections.VOICE_CONTROL_TRAY,
       children: [(0, s.jsx)("div", {
         className: eI.eventPromptsContainer,
@@ -455,7 +455,7 @@ t.default = function(e) {
           channel: t,
           currentUser: i,
           exitFullScreen: l,
-          canGoLive: C,
+          canGoLive: g,
           hasPermission: c
         }), (0, s.jsx)(m.Popout, {
           renderPopout: e => {

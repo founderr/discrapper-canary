@@ -9,13 +9,13 @@ n("470079");
 var i = n("481060"),
   l = n("726521"),
   s = n("795295"),
-  r = n("970257"),
-  u = n("689938");
+  u = n("970257"),
+  r = n("689938");
 
 function o(e) {
-  return (0, r.canReportMessage)(e) ? (0, a.jsx)(i.MenuItem, {
+  return (0, u.canReportMessage)(e) ? (0, a.jsx)(i.MenuItem, {
     id: "report",
-    label: u.default.Messages.REPORT_MESSAGE_MENU_OPTION,
+    label: r.default.Messages.REPORT_MESSAGE_MENU_OPTION,
     action: () => (0, l.showReportModalForMessage)(e, "web_message_context_menu"),
     icon: s.default,
     color: "danger"

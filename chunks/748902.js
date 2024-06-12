@@ -23,7 +23,7 @@ function E(e, t) {
     message: a
   }
 }
-class C extends(a = r.default.Store) {
+class g extends(a = r.default.Store) {
   initialize() {
     this.waitFor(c.default, f.default, d.default)
   }
@@ -38,12 +38,12 @@ class C extends(a = r.default.Store) {
     }), h[e]
   }
 }
-i = "MessageRequestPreviewStore", (s = "displayName") in(l = C) ? Object.defineProperty(l, s, {
+i = "MessageRequestPreviewStore", (s = "displayName") in(l = g) ? Object.defineProperty(l, s, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[s] = i, t.default = new C(o.default, {
+}) : l[s] = i, t.default = new g(o.default, {
   CONNECTION_OPEN: function() {
     h = {}, m.clear()
   },

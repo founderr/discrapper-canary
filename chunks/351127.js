@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return E
   },
   useUserPermissionsAndRoles: function() {
-    return C
+    return g
   }
 }), n("47120"), n("411104"), n("653041");
 var a = n("149765"),
@@ -38,7 +38,7 @@ function E(e, t) {
   return e === t
 }
 
-function C(e, t, n) {
+function g(e, t, n) {
   let d = (0, l.useStateFromStores)([i.default], () => i.default.getGuild(t), [t]);
   return (0, l.useStateFromStores)([s.default, r.default, i.default], () => {
     let l = {},

@@ -17,8 +17,8 @@ var a = s("735250"),
   _ = s("113434"),
   f = s("569984"),
   h = s("497505"),
-  m = s("918701"),
-  C = s("988303"),
+  C = s("918701"),
+  m = s("988303"),
   T = s("977156"),
   g = s("5881"),
   A = s("602667"),
@@ -37,13 +37,13 @@ function v(e) {
     location: S.QuestsExperimentLocations.QUESTS_BAR
   }), R = (0, T.useIsEligibleForQuests)({
     location: S.QuestsExperimentLocations.QUESTS_BAR
-  }), M = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), L = (0, o.useStateFromStores)([c.default], () => c.default.hasLayers()), O = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, y = (0, u.default)(O), D = (null === (s = f.userStatus) || void 0 === s ? void 0 : s.completedAt) != null, b = (0, u.default)(D), j = (null === (l = f.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, U = null != f.userStatus && (0, m.isDismissed)(f.userStatus, h.QuestContent.QUEST_BAR), P = (0, _.useIsQuestExpired)(f), {
+  }), O = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), L = (0, o.useStateFromStores)([c.default], () => c.default.hasLayers()), M = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, y = (0, u.default)(M), D = (null === (s = f.userStatus) || void 0 === s ? void 0 : s.completedAt) != null, b = (0, u.default)(D), j = (null === (l = f.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, U = null != f.userStatus && (0, C.isDismissed)(f.userStatus, h.QuestContent.QUEST_BAR), P = (0, _.useIsQuestExpired)(f), {
     hasError: G,
     isLoading: V
   } = (0, p.useQuestsAssetsLoadState)(), B = R && !U && !j && !P && !V, H = n.useRef(B), {
     primaryVariant: F,
     progressVariant: k
-  } = C.QuestBarExperiment.useExperiment({
+  } = m.QuestBarExperiment.useExperiment({
     location: S.QuestsExperimentLocations.QUESTS_BAR
   }, {
     autoTrackExposure: B && !G
@@ -81,10 +81,10 @@ function v(e) {
   n.useLayoutEffect(() => {
     D && w.shouldExpandOnQuestComplete && en()
   }, [en, D, w.shouldExpandOnQuestComplete]), n.useLayoutEffect(() => {
-    O && !y && Y.current && en()
-  }, [en, O, y]), n.useLayoutEffect(() => {
-    !D && O && !y && !Y.current && Z(!1)
-  }, [O, D, y]), n.useLayoutEffect(() => {
+    M && !y && Y.current && en()
+  }, [en, M, y]), n.useLayoutEffect(() => {
+    !D && M && !y && !Y.current && Z(!1)
+  }, [M, D, y]), n.useLayoutEffect(() => {
     B !== H.current && $(!1), H.current = B
   }, [B]);
   let {
@@ -93,7 +93,7 @@ function v(e) {
     to: {
       expansionSpring: z ? 1 : 0
     },
-    config: O ? {
+    config: M ? {
       tension: 900,
       friction: 45,
       clamp: !0
@@ -102,7 +102,7 @@ function v(e) {
       friction: 30,
       clamp: !0
     },
-    immediate: M,
+    immediate: O,
     onRest: () => {
       X(!0)
     },
@@ -123,7 +123,7 @@ function v(e) {
       friction: 10,
       clamp: !0
     },
-    immediate: M,
+    immediate: O,
     onRest: () => {
       $(!0)
     },
@@ -159,11 +159,11 @@ function v(e) {
           onBlur: eu,
           className: i()(x.contentWrapper, {
             [x.contentWrapperExpanded]: z,
-            [x.contentWrapperAccepted]: O
+            [x.contentWrapperAccepted]: M
           }),
           style: {
             backgroundColor: w.preEnrollmentBackgroundColor,
-            backgroundImage: O ? w.postEnrollmentBackgroundImage : void 0,
+            backgroundImage: M ? w.postEnrollmentBackgroundImage : void 0,
             height: e_.to({
               range: [0, 1],
               output: [w.collapsedHeight, ee]
@@ -183,7 +183,7 @@ function v(e) {
             onCtxMenuSelection: er,
             onContentHeightChange: eE,
             quest: f,
-            useReducedMotion: M
+            useReducedMotion: O
           })
         })
       })
@@ -195,7 +195,7 @@ t.default = function(e) {
     overrideQuest: t
   } = e, s = (0, o.useStateFromStores)([f.default], () => {
     var e;
-    return null !== (e = null != t ? t : f.default.questDeliveryOverride) && void 0 !== e ? e : (0, m.getQuestForTargetedContent)(f.default.quests, h.QuestContent.QUEST_BAR)
+    return null !== (e = null != t ? t : f.default.questDeliveryOverride) && void 0 !== e ? e : (0, C.getQuestForTargetedContent)(f.default.quests, h.QuestContent.QUEST_BAR)
   });
   return null == s ? null : (0, a.jsx)(p.QuestsAssetContextProvider, {
     sentrySource: S.QuestsExperimentLocations.QUESTS_BAR,

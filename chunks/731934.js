@@ -13,8 +13,8 @@ var a = s("735250"),
   _ = s("880257"),
   f = s("631885"),
   h = s("895328"),
-  m = s("568671"),
-  C = s("419821"),
+  C = s("568671"),
+  m = s("419821"),
   T = s("367515"),
   g = s("250285"),
   A = s("292352"),
@@ -116,7 +116,7 @@ function R() {
         children: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_DESCRIPTION_TEEN.format({
           link: "https://support.discord.com/hc/articles/14155060633623"
         })
-      }), e ? null : (0, a.jsx)(m.default, {})]
+      }), e ? null : (0, a.jsx)(C.default, {})]
     }), (0, a.jsx)("img", {
       className: N.bannerArt,
       src: I,
@@ -125,7 +125,7 @@ function R() {
   })
 }
 
-function M(e) {
+function O(e) {
   let {
     sectionType: t,
     sectionTitle: s,
@@ -138,7 +138,7 @@ function M(e) {
     return null == i ? null : (0, a.jsx)(g.default, {
       userId: i.id,
       isLast: r,
-      children: () => t === A.UserLinkStatus.ACTIVE ? (0, a.jsx)(C.UserLinkAcceptedRequestRow, {
+      children: () => t === A.UserLinkStatus.ACTIVE ? (0, a.jsx)(m.UserLinkAcceptedRequestRow, {
         user: i
       }) : (0, a.jsx)(T.UserLinkPendingRequestRow, {
         user: i
@@ -196,7 +196,7 @@ let L = () => {
       },
       l = (0, c.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(n), p.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(n));
     return (0, a.jsx)(a.Fragment, {
-      children: t.length > 0 ? (0, a.jsx)(M, {
+      children: t.length > 0 ? (0, a.jsx)(O, {
         sectionType: A.UserLinkStatus.ACTIVE,
         sectionTitle: l,
         requests: t
@@ -216,7 +216,7 @@ let L = () => {
       })
     })
   },
-  O = () => {
+  M = () => {
     let e = (0, f.useHasMaxConnections)(),
       t = (0, _.default)() ? A.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : A.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
       s = (0, c.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({
@@ -256,7 +256,7 @@ let L = () => {
       }), p.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({
         count: e.length
       }));
-    return 0 === e.length ? null : (0, a.jsx)(M, {
+    return 0 === e.length ? null : (0, a.jsx)(O, {
       sectionType: A.UserLinkStatus.PENDING,
       sectionTitle: t,
       requests: e
@@ -266,6 +266,6 @@ t.default = () => {
   let e = (0, _.default)();
   return (0, a.jsxs)("div", {
     className: N.container,
-    children: [e ? (0, a.jsx)(v, {}) : (0, a.jsx)(R, {}), (0, a.jsx)(L, {}), (0, a.jsx)(D, {}), (0, a.jsx)(O, {}), (0, a.jsx)(y, {})]
+    children: [e ? (0, a.jsx)(v, {}) : (0, a.jsx)(R, {}), (0, a.jsx)(L, {}), (0, a.jsx)(D, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {})]
   })
 }

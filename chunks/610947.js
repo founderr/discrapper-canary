@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return g
   }
 }), n("653041");
 var a = n("470079"),
@@ -19,8 +19,8 @@ var a = n("470079"),
   p = n("813900");
 let E = 1e3 / 60;
 
-function C(e, t, n, C) {
-  let g = (0, i.useToken)(s.default.unsafe_rawColors.BRAND_500).hex(),
+function g(e, t, n, g) {
+  let C = (0, i.useToken)(s.default.unsafe_rawColors.BRAND_500).hex(),
     S = (0, i.useToken)(s.default.unsafe_rawColors.BLACK_500).hex(),
     _ = (0, i.useToken)(s.default.unsafe_rawColors.WHITE_500).hex(),
     T = a.useRef({}),
@@ -45,11 +45,11 @@ function C(e, t, n, C) {
         if (null == p) return;
         let {
           width: E,
-          height: C
-        } = f.getBoundingClientRect(), g = [];
+          height: g
+        } = f.getBoundingClientRect(), C = [];
         n.forEach(e => {
           if (!(null != o.default.getVoiceStateForChannel(i, e.userId))) {
-            g.push(e);
+            C.push(e);
             return
           }! function(e) {
             let {
@@ -94,26 +94,26 @@ function C(e, t, n, C) {
             drawable: e,
             context: p,
             canvasWidth: E,
-            canvasHeight: C,
+            canvasHeight: g,
             fallbackColor: a,
             outlineColorDark: r,
             outlineColorLight: d,
             linesDrawnAt: l,
-            deadDrawables: g,
+            deadDrawables: C,
             streamerId: s
           })
-        }), g.length > 0 && (0, u.clearDrawables)(g, s)
+        }), C.length > 0 && (0, u.clearDrawables)(C, s)
       }({
         canvasRef: e,
         drawables: n,
-        fallbackColor: g,
+        fallbackColor: C,
         linesDrawnAt: T,
         streamerId: t,
         outlineColorDark: S,
         outlineColorLight: _,
-        channelId: C
+        channelId: g
       })
-    }, [e, C, g, S, _]);
+    }, [e, g, C, S, _]);
   a.useEffect(() => {
     let t = new ResizeObserver(() => {
       let t = e.current;

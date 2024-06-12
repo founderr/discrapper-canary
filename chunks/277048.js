@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("453687"),
   p = n("833571"),
   E = n("63063"),
-  C = n("727779"),
-  g = n("113039"),
+  g = n("727779"),
+  C = n("113039"),
   S = n("534761"),
   _ = n("981631"),
   T = n("689938"),
@@ -53,7 +53,7 @@ let x = l.memo(function(e) {
       className: i()(I.ephemeralAccessories, {
         [I.compact]: l
       }),
-      children: (0, a.jsx)(C.default, {
+      children: (0, a.jsx)(g.default, {
         message: t,
         onDeleteMessage: s,
         children: (0, a.jsx)(d.Text, {
@@ -77,13 +77,13 @@ t.default = l.memo(function(e) {
     message: d,
     children: p,
     content: E,
-    onUpdate: C
+    onUpdate: g
   } = e, _ = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(), N = l.useRef(!1), M = (0, u.useStateFromStores)([h.default], () => h.default.getMessage(d.id), [d.id]), y = l.useCallback(() => {
     (null == M ? void 0 : M.isBlockedEdit) ? (0, f.removeAutomodMessageNotice)(d.id) : c.default.deleteMessage(d.channel_id, d.id, !0)
   }, [d, M]);
   return l.useLayoutEffect(() => {
-    N.current ? null != C && C() : N.current = !0
-  }, [C, d.content, E, _, p]), (0, a.jsxs)("div", {
+    N.current ? null != g && g() : N.current = !0
+  }, [g, d.content, E, _, p]), (0, a.jsxs)("div", {
     id: (0, m.getMessageContentId)(d),
     className: i()(s, A.markup, {
       [v.messageContent]: !0,
@@ -91,7 +91,7 @@ t.default = l.memo(function(e) {
       [I.blockedEdit]: null == M ? void 0 : M.isBlockedEdit,
       [I.blockedSend]: !(null == M ? void 0 : M.isBlockedEdit)
     }),
-    children: [null != p ? p : (0, g.getContent)(d, E), (null == M ? void 0 : M.isBlockedEdit) && null != d.timestamp && (0, a.jsxs)(a.Fragment, {
+    children: [null != p ? p : (0, C.getContent)(d, E), (null == M ? void 0 : M.isBlockedEdit) && null != d.timestamp && (0, a.jsxs)(a.Fragment, {
       children: [" ", (0, a.jsx)(S.default, {
         timestamp: d.timestamp,
         isEdited: !0,
@@ -108,4 +108,4 @@ t.default = l.memo(function(e) {
       onDismiss: y
     })]
   })
-}, g.memoizeMessageProps)
+}, C.memoizeMessageProps)

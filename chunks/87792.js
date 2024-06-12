@@ -13,8 +13,8 @@ var a = s("735250"),
   _ = s("914788"),
   f = s("546791"),
   h = s("259756"),
-  m = s("785681"),
-  C = s("985002"),
+  C = s("785681"),
+  m = s("985002"),
   T = s("858719"),
   g = s("780985"),
   A = s("880257"),
@@ -25,9 +25,9 @@ var a = s("735250"),
   x = s("198952"),
   v = s("329242"),
   R = s("895328"),
-  M = s("292352"),
+  O = s("292352"),
   L = s("981631"),
-  O = s("689938"),
+  M = s("689938"),
   y = s("334611");
 
 function D() {
@@ -56,16 +56,16 @@ function b(e) {
   let {
     displayType: t
   } = e, s = n.useCallback(() => {
-    (0, o.showToast)((0, o.createToast)(O.default.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE))
+    (0, o.showToast)((0, o.createToast)(M.default.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE))
   }, []), l = (0, A.default)(), r = (0, T.useActionsForDisplayType)(t), u = (0, T.useActionTotalsForDisplayType)(t), {
     loadMore: d,
     isMoreLoading: c
-  } = (0, C.useFamilyCenterActions)({
+  } = (0, m.useFamilyCenterActions)({
     onError: s
-  }), _ = M.ACTION_TO_TEXT.get(t), [m, g] = n.useState(M.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), p = (0, h.useIsEligibleForFamilyCenterVCJoin)({
+  }), _ = O.ACTION_TO_TEXT.get(t), [C, g] = n.useState(O.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), p = (0, h.useIsEligibleForFamilyCenterVCJoin)({
     location: "family_center_activity_section_web"
   }), N = n.useCallback(() => {
-    g(e => e + M.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
+    g(e => e + O.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
   }, [t, d]);
   i()(_, "No text for action type");
   let x = _.sectionHeader(u),
@@ -95,7 +95,7 @@ function b(e) {
       }) : null]
     }), [x, _, l, p]);
   if (0 === r.length) return null;
-  let L = r.slice(0, m);
+  let L = r.slice(0, C);
   return (0, a.jsxs)("div", {
     className: y.actionSection,
     children: [R(), (0, a.jsx)("div", {
@@ -116,8 +116,8 @@ function b(e) {
       }) : (0, a.jsx)(o.Text, {
         className: y.loadMore,
         variant: "text-sm/bold",
-        children: O.default.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
-          pageSize: Math.min(u - L.length, M.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS)
+        children: M.default.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
+          pageSize: Math.min(u - L.length, O.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS)
         })
       })
     }) : null]
@@ -125,10 +125,10 @@ function b(e) {
 }
 let j = () => {
     let e = (0, A.default)(),
-      t = (0, p.useUserForLinkStatus)(M.UserLinkStatus.ACTIVE),
-      s = (0, m.useAgeSpecificText)(O.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
+      t = (0, p.useUserForLinkStatus)(O.UserLinkStatus.ACTIVE),
+      s = (0, C.useAgeSpecificText)(M.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
         activeLinks: t.length
-      }), O.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
+      }), M.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
       n = (0, f.getActivityWindowTimestampFormatter)(!!e),
       l = (0, p.useActivityWindowTimeStamp)(n);
     return e && t.length > 1 ? (0, a.jsx)(o.Text, {
@@ -167,11 +167,11 @@ let j = () => {
     })
   },
   P = () => {
-    let e = (0, p.useUserForLinkStatus)(M.UserLinkStatus.ACTIVE),
+    let e = (0, p.useUserForLinkStatus)(O.UserLinkStatus.ACTIVE),
       t = (0, r.useStateFromStores)([_.default], () => _.default.getSelectedTeenId()),
       {
         selectTeenUser: s
-      } = (0, C.useFamilyCenterActions)({}),
+      } = (0, m.useFamilyCenterActions)({}),
       l = e.map(e => ({
         label: e.id,
         value: e.id
@@ -190,7 +190,7 @@ let j = () => {
       serialize: e => e,
       select: e => {
         s(e), c.default.track(L.AnalyticEvents.FAMILY_CENTER_ACTION, {
-          action: M.FamilyCenterAction.SelectTeen
+          action: O.FamilyCenterAction.SelectTeen
         })
       },
       isSelected: e => e === t,
@@ -200,7 +200,7 @@ let j = () => {
   G = e => {
     let {
       userId: t
-    } = e, s = (0, A.default)(), n = (0, p.useUserForLinkStatus)(M.UserLinkStatus.ACTIVE), l = (0, f.getActivityWindowTimestampFormatter)(!!s), i = (0, p.useActivityWindowTimeStamp)(l);
+    } = e, s = (0, A.default)(), n = (0, p.useUserForLinkStatus)(O.UserLinkStatus.ACTIVE), l = (0, f.getActivityWindowTimestampFormatter)(!!s), i = (0, p.useActivityWindowTimeStamp)(l);
     return s && 1 !== n.length ? (0, a.jsx)(P, {}) : (0, a.jsx)(U, {
       userId: t,
       subText: i
@@ -209,7 +209,7 @@ let j = () => {
 t.default = e => {
   let {
     user: t
-  } = e, s = Array.from(M.ACTION_TO_TEXT.entries()), n = (0, T.useHasActionForAnyDisplayType)(), l = (0, f.getEmptyActivityFormatter)(), i = (0, p.useActivityWindowTimeStamp)(l);
+  } = e, s = Array.from(O.ACTION_TO_TEXT.entries()), n = (0, T.useHasActionForAnyDisplayType)(), l = (0, f.getEmptyActivityFormatter)(), i = (0, p.useActivityWindowTimeStamp)(l);
   return (0, a.jsxs)("div", {
     className: y.container,
     children: [(0, a.jsxs)("div", {

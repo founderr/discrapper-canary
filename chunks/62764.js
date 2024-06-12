@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("566006"),
   p = n("443877"),
   E = n("60174"),
-  C = n("216337"),
-  g = n("920888"),
+  g = n("216337"),
+  C = n("920888"),
   S = n("287151"),
   _ = n("569471"),
   T = n("346479"),
@@ -115,7 +115,7 @@ function D(e) {
             burst_count: 0,
             me_burst: !1
           })
-        }), (0, a.jsx)(g.default, {
+        }), (0, a.jsx)(C.default, {
           message: W,
           channel: V,
           disableReactionCreates: !0,
@@ -176,7 +176,7 @@ function D(e) {
       })]
     }), $ && (0, a.jsx)(h.default, {
       threadId: t
-    }), (0, a.jsx)(C.default, {
+    }), (0, a.jsx)(g.default, {
       channel: V,
       isLastItem: s
     })]

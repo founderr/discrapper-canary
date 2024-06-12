@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("706140"),
   p = n("243778"),
   E = n("488131"),
-  C = n("375954"),
-  g = n("626135"),
+  g = n("375954"),
+  C = n("626135"),
   S = n("585483"),
   _ = n("403182"),
   T = n("127654"),
@@ -50,7 +50,7 @@ function R(e, t, l, s) {
 let L = /(.*)```(\w+)\n(.*)```(.*)/s;
 
 function O() {
-  let e = (0, i.useStateFromStores)([C.default], () => C.default.hasCurrentUserSentMessageSinceAppStart()),
+  let e = (0, i.useStateFromStores)([g.default], () => g.default.hasCurrentUserSentMessageSinceAppStart()),
     t = [];
   e && t.push(r.DismissibleContent.ACTIVITIES_CHAT_MENU_NEW_BADGE);
   let [n] = (0, m.useGetDismissibleContent)(t);
@@ -79,7 +79,7 @@ function j(e) {
     onFileUpload: u,
     onClose: m,
     onSelect: p,
-    draftType: C,
+    draftType: g,
     editorTextContent: j,
     setValue: P,
     openClips: D
@@ -87,7 +87,7 @@ function j(e) {
     analyticsLocations: b
   } = (0, f.default)();
   l.useEffect(() => {
-    g.default.track(v.AnalyticEvents.OPEN_POPOUT, {
+    C.default.track(v.AnalyticEvents.OPEN_POPOUT, {
       type: "Send Attachment",
       channel_id: t.id,
       guild_id: t.guild_id
@@ -99,7 +99,7 @@ function j(e) {
   }
 
   function F() {
-    g.default.track(v.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), P("/", (0, I.toRichValue)("/"))
+    C.default.track(v.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), P("/", (0, I.toRichValue)("/"))
   }
 
   function w() {
@@ -123,7 +123,7 @@ function j(e) {
   }
 
   function H() {
-    g.default.track(v.AnalyticEvents.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+    C.default.track(v.AnalyticEvents.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
       channel_type: t.type,
       channel_id: t.id,
       guild_id: t.guild_id
@@ -151,7 +151,7 @@ function j(e) {
       l = j.match(L);
     null != l && (a = l[1], n = l[2], e = l[3], a += l[4]), (0, T.promptToUpload)([(0, _.makeFile)(new Blob([e], {
       type: "text/plain"
-    }), "message.".concat(n))], t, C), S.ComponentDispatch.dispatchToLastSubscribed(v.ComponentActions.CLEAR_TEXT), "" !== a && S.ComponentDispatch.dispatchToLastSubscribed(v.ComponentActions.INSERT_TEXT, {
+    }), "message.".concat(n))], t, g), S.ComponentDispatch.dispatchToLastSubscribed(v.ComponentActions.CLEAR_TEXT), "" !== a && S.ComponentDispatch.dispatchToLastSubscribed(v.ComponentActions.INSERT_TEXT, {
       plainText: a
     })
   }
@@ -208,7 +208,7 @@ function j(e) {
             label: l,
             action: () => {
               var n;
-              return n = e.activity, void(g.default.track(v.AnalyticEvents.OPEN_MODAL, {
+              return n = e.activity, void(C.default.track(v.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Join Invite",
                 application_id: n.application_id,
                 location: v.AnalyticsSections.CHANNEL_TEXT_AREA
@@ -221,7 +221,7 @@ function j(e) {
             label: l,
             action: () => {
               var n;
-              return n = e.activity, void(g.default.track(v.AnalyticEvents.OPEN_MODAL, {
+              return n = e.activity, void(C.default.track(v.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Listen Invite",
                 location: v.AnalyticsSections.CHANNEL_TEXT_AREA
               }), R(n, t, v.ActivityActionTypes.LISTEN, b))
@@ -233,7 +233,7 @@ function j(e) {
             label: l,
             action: () => {
               var n;
-              return n = e.activity, void(g.default.track(v.AnalyticEvents.OPEN_MODAL, {
+              return n = e.activity, void(C.default.track(v.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Watch Invite",
                 location: v.AnalyticsSections.CHANNEL_TEXT_AREA
               }), R(n, t, v.ActivityActionTypes.WATCH, b))

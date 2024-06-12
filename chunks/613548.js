@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("569545"),
   p = n("517525"),
   E = n("6242"),
-  C = n("757692"),
-  g = n("386542"),
+  g = n("757692"),
+  C = n("386542"),
   S = n("141321"),
   _ = n("44136"),
   T = n("651183"),
@@ -91,7 +91,7 @@ function W(e) {
     available: z,
     activated: K,
     hqStreamingState: Z
-  } = (0, g.usePerksDemo)(u.EntitlementFeatureNames.STREAM_HIGH_QUALITY), X = z && K && Z.hqStreamingIsEnabled, q = (0, C.canStreamParticipantSetting)(P, W), J = (0, E.useHDStreamingViewerExperiment)("CallHeader", !0, W, q), {
+  } = (0, C.usePerksDemo)(u.EntitlementFeatureNames.STREAM_HIGH_QUALITY), X = z && K && Z.hqStreamingIsEnabled, q = (0, g.canStreamParticipantSetting)(P, W), J = (0, E.useHDStreamingViewerExperiment)("CallHeader", !0, W, q), {
     preventIdle: Q,
     allowIdle: $
   } = (0, I.usePreventIdle)("popup"), ee = [];

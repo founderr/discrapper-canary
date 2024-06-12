@@ -4,11 +4,11 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var r = n("470079"),
+var i = n("470079"),
   a = n("365943");
 
 function s() {
-  r.useEffect(() => {
+  i.useEffect(() => {
     (0, a.fetchUserProfileEffects)()
   }, [])
 }

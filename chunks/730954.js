@@ -15,18 +15,18 @@ function l(e, t, n) {
   }
   let {
     content: s,
-    tts: r,
-    flags: u,
+    tts: u,
+    flags: r,
     nonce: o
   } = t;
   a.default.sendMessage(e.id, {
     content: s,
-    tts: r,
+    tts: u,
     invalidEmojis: [],
     validNonShortcutEmojis: []
   }, void 0, {
     nonce: o,
-    flags: u,
+    flags: r,
     ...l
   })
 }

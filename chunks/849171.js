@@ -19,8 +19,8 @@ var a, l, s = n("735250"),
   m = n("613611"),
   p = n("527805"),
   E = n("716600"),
-  C = n("952561"),
-  g = n("778569"),
+  g = n("952561"),
+  C = n("778569"),
   S = n("563218"),
   _ = n("513202"),
   T = n("318891"),
@@ -75,23 +75,23 @@ function w(e) {
     participants: i,
     application: r,
     currentEmbeddedApplication: E,
-    channel: C,
-    width: g
+    channel: g,
+    width: C
   } = e;
-  let S = (a = g) > 400 ? 2 : a > 300 ? 1 : 0;
-  let [T] = (l = g) > 400 ? [d.AvatarSizes.SIZE_56, 56] : l > 300 ? [d.AvatarSizes.SIZE_32, 32] : [d.AvatarSizes.SIZE_24, 24], I = (0, u.useStateFromStoresArray)([L.default, y.default], () => Array.from(i).map(e => (0, m.isActivityParticipantCurrentUserCurrentSession)(e, y.default) ? null : L.default.getUser(e.userId)).filter(j.isNotNullish)), A = (0, u.useStateFromStores)([f.default], () => f.default.getEmbeddedActivitiesForChannel(C.id).find(e => e.applicationId === r.id)), {
+  let S = (a = C) > 400 ? 2 : a > 300 ? 1 : 0;
+  let [T] = (l = C) > 400 ? [d.AvatarSizes.SIZE_56, 56] : l > 300 ? [d.AvatarSizes.SIZE_32, 32] : [d.AvatarSizes.SIZE_24, 24], I = (0, u.useStateFromStoresArray)([L.default, y.default], () => Array.from(i).map(e => (0, m.isActivityParticipantCurrentUserCurrentSession)(e, y.default) ? null : L.default.getUser(e.userId)).filter(j.isNotNullish)), A = (0, u.useStateFromStores)([f.default], () => f.default.getEmbeddedActivitiesForChannel(g.id).find(e => e.applicationId === r.id)), {
     analyticsLocations: v
-  } = (0, x.default)(), N = (0, c.useAnalyticsContext)(), M = P.default.getName(C.getGuildId(), C.id, null == I ? void 0 : I[0]), R = (0, p.useEmbeddedActivityJoinability)({
+  } = (0, x.default)(), N = (0, c.useAnalyticsContext)(), M = P.default.getName(g.getGuildId(), g.id, null == I ? void 0 : I[0]), R = (0, p.useEmbeddedActivityJoinability)({
     userId: null === (t = L.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
-    channelId: C.id,
+    channelId: g.id,
     application: r
-  }) === p.EmbeddedActivityJoinability.CAN_JOIN, O = null !== (n = C.getGuildId()) && void 0 !== n ? n : void 0;
+  }) === p.EmbeddedActivityJoinability.CAN_JOIN, O = null !== (n = g.getGuildId()) && void 0 !== n ? n : void 0;
   return (0, s.jsxs)("div", {
     className: b.splash,
     children: [(0, s.jsx)(F, {
       avatarSize: T,
       guildId: O,
-      channelId: C.id,
+      channelId: g.id,
       users: I
     }), (0, s.jsx)(d.Text, {
       className: o()(b.subheader, {
@@ -119,7 +119,7 @@ function w(e) {
           e.stopPropagation(), null != A && (0, h.default)({
             applicationId: A.applicationId,
             currentEmbeddedApplication: E,
-            activityChannelId: C.id,
+            activityChannelId: g.id,
             locationObject: N.location,
             embeddedActivitiesManager: _.default,
             analyticsLocations: v
@@ -154,9 +154,9 @@ function k(e) {
     analyticsLocations: o
   } = (0, x.default)(v.default.ACTIVITY_TILE), {
     id: d
-  } = t, c = (0, E.default)(), f = (null == c ? void 0 : c.channelId) === r.id && c.applicationId === d, h = (0, C.default)(), [m] = (0, N.default)([d]), {
+  } = t, c = (0, E.default)(), f = (null == c ? void 0 : c.channelId) === r.id && c.applicationId === d, h = (0, g.default)(), [m] = (0, N.default)([d]), {
     url: p
-  } = (0, g.default)({
+  } = (0, C.default)({
     applicationId: d,
     names: U,
     size: 1024

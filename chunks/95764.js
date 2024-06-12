@@ -19,8 +19,8 @@ var l = n("442837"),
   m = n("482241"),
   p = n("389303"),
   E = n("554747"),
-  C = n("689938"),
-  g = n("60614");
+  g = n("689938"),
+  C = n("60614");
 
 function S(e) {
   let {
@@ -49,13 +49,13 @@ function S(e) {
         children: (0, a.jsx)(s.Menu, {
           navId: "exit-options",
           onSelect: () => {},
-          "aria-label": C.default.Messages.DISCONNECT_MENU,
+          "aria-label": g.default.Messages.DISCONNECT_MENU,
           onClose: t,
           children: (0, a.jsx)(s.MenuItem, {
             id: "end-voice-event",
             color: "danger",
             action: x,
-            label: C.default.Messages.END_EVENT,
+            label: g.default.Messages.END_EVENT,
             icon: f.default
           })
         })
@@ -69,17 +69,17 @@ function S(e) {
         onClick: t
       } = e;
       return (0, a.jsx)(u.CenterControlButton, {
-        label: C.default.Messages.DISCONNECT_SELF,
+        label: g.default.Messages.DISCONNECT_SELF,
         color: "red",
         iconComponent: c.default,
         onClick: v,
         onPopoutClick: t,
-        className: g.buttonSpacing
+        className: C.buttonSpacing
       })
     }
   }) : (0, a.jsx)(u.CenterControlButton, {
-    className: g.buttonSpacing,
-    label: C.default.Messages.DISCONNECT_SELF,
+    className: C.buttonSpacing,
+    label: g.default.Messages.DISCONNECT_SELF,
     color: "red",
     iconComponent: c.default,
     onClick: n

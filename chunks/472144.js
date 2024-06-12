@@ -15,14 +15,14 @@ t.default = e => {
   } = e, d = (0, n.useProgressBarColors)(s > 0), c = i / 2, E = i / 2 - r / 2, _ = 2 * Math.PI * E, f = _ - s * _, h = {
     strokeDasharray: "".concat(_, " ").concat(_),
     strokeDashoffset: f
-  }, m = {
+  }, C = {
     boxShadow: "0 0 30px 0px ".concat(d.glow)
   };
   return (0, a.jsxs)("div", {
     className: l.outer,
     children: [(0, a.jsx)("div", {
       className: l.inner,
-      style: m,
+      style: C,
       ref: t,
       children: u
     }), (0, a.jsxs)("svg", {

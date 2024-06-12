@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return g
   }
 });
 var a = n("735250"),
@@ -19,10 +19,10 @@ var a = n("735250"),
   p = n("689938"),
   E = n("930422");
 
-function C(e) {
+function g(e) {
   let {
     channel: t
-  } = e, n = (0, s.useStateFromStores)([h.default], () => h.default.getSelectedParticipant(t.id)), C = (null == n ? void 0 : n.type) === m.ParticipantTypes.STREAM, g = (0, s.useStateFromStores)([c.default], () => C ? c.default.getActiveStreamForStreamKey(n.id) : null), {
+  } = e, n = (0, s.useStateFromStores)([h.default], () => h.default.getSelectedParticipant(t.id)), g = (null == n ? void 0 : n.type) === m.ParticipantTypes.STREAM, C = (0, s.useStateFromStores)([c.default], () => g ? c.default.getActiveStreamForStreamKey(n.id) : null), {
     ignoreSenderPreference: S
   } = u.default.useExperiment({
     location: "ActionBarClipsButton"
@@ -32,9 +32,9 @@ function C(e) {
     viewerClippingAllowed: _,
     isAtMaxSavingClipOperations: T
   } = (0, s.useStateFromStoresObject)([r.default], () => ({
-    viewerClippingAllowed: null != g && (r.default.isViewerClippingAllowedForUser(g.ownerId) || S),
+    viewerClippingAllowed: null != C && (r.default.isViewerClippingAllowedForUser(C.ownerId) || S),
     isAtMaxSavingClipOperations: r.default.getIsAtMaxSaveClipOperations()
-  })), I = r.default.getSettings().clipsEnabled, A = (null == g ? void 0 : g.ownerId) === f.default.getId(), v = !I || !(A || _) || T || null == n, x = l.useCallback(e => (0, a.jsx)(i.CameraIcon, {
+  })), I = r.default.getSettings().clipsEnabled, A = (null == C ? void 0 : C.ownerId) === f.default.getId(), v = !I || !(A || _) || T || null == n, x = l.useCallback(e => (0, a.jsx)(i.CameraIcon, {
     ...e,
     color: "currentColor"
   }), []);
@@ -45,7 +45,7 @@ function C(e) {
     },
     disabled: v,
     iconComponent: x,
-    label: null == g ? p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_FOCUS_TOOLTIP : A || _ ? I ? T ? void 0 : p.default.Messages.CLIPS_SAVE : p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP : p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_DISABLED_TOOLTIP,
+    label: null == C ? p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_FOCUS_TOOLTIP : A || _ ? I ? T ? void 0 : p.default.Messages.CLIPS_SAVE : p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP : p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_DISABLED_TOOLTIP,
     grow: !1
   })
 }

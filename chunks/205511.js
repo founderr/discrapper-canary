@@ -13,8 +13,8 @@ var a = s("735250"),
   _ = s("110924"),
   f = s("607070"),
   h = s("869472"),
-  m = s("759231"),
-  C = s("272008"),
+  C = s("759231"),
+  m = s("272008"),
   T = s("113434"),
   g = s("918701"),
   A = s("566078"),
@@ -56,7 +56,7 @@ function I(e) {
 
 function x(e) {
   let [t, s] = (0, r.useSpring)(() => ({})), l = n.useRef(!1), i = async () => {
-    l.current = !0, await (0, C.manuallyStartConsoleQuest)(e.quest.id), l.current = !1
+    l.current = !0, await (0, m.manuallyStartConsoleQuest)(e.quest.id), l.current = !1
   }, o = (0, r.animated)(h.default);
   return (0, a.jsx)(c.Clickable, {
     className: S.microphoneUnitRefreshIconWrapper,
@@ -91,7 +91,7 @@ function v(e) {
     className: S.microphoneUnit,
     children: [(0, a.jsxs)("div", {
       className: S.microphoneUnitHeader,
-      children: [(0, a.jsx)(m.default, {
+      children: [(0, a.jsx)(C.default, {
         className: S.warningCircle,
         width: 16,
         height: 16
@@ -119,15 +119,15 @@ t.default = function(e) {
     quest: s,
     location: p.QuestsExperimentLocations.QUESTS_BAR
   }), {
-    xboxAndPlaystationAccounts: m
+    xboxAndPlaystationAccounts: C
   } = (0, T.useConnectedAccounts)(), {
-    steps: C,
+    steps: m,
     hasConnectedAccounts: x,
     isProgressingQuestForLaunchedGame: R,
-    isQuestComplete: M
+    isQuestComplete: O
   } = n.useMemo(() => {
     var e;
-    let t = m.length > 0,
+    let t = C.length > 0,
       a = t && (0, g.isQuestProgressingOnConsole)(s),
       n = (0, g.hasVariant)(s, p.QuestVariants.IN_HOUSE_CONSOLE_QUEST),
       l = A.SharedQuestFields.build(s.config).application.name,
@@ -151,10 +151,10 @@ t.default = function(e) {
       isProgressingQuestForLaunchedGame: a,
       isQuestComplete: i
     }
-  }, [m, s, h]), {
+  }, [C, s, h]), {
     ref: L,
-    height: O = 0
-  } = (0, E.default)(), y = (0, _.default)(O), {
+    height: M = 0
+  } = (0, E.default)(), y = (0, _.default)(M), {
     expansionSpring: D
   } = (0, r.useSpring)({
     to: {
@@ -166,7 +166,7 @@ t.default = function(e) {
       clamp: !0
     },
     immediate: !0
-  }), b = O - (null != y ? y : 0);
+  }), b = M - (null != y ? y : 0);
   return n.useLayoutEffect(() => {
     l && 0 !== b && t(b)
   }, [l, b, t]), (0, a.jsxs)("div", {
@@ -174,7 +174,7 @@ t.default = function(e) {
     children: [(0, a.jsxs)(c.Clickable, {
       className: S.headingWrapper,
       onClick: () => {
-        t(l ? -1 * O : O), i(!l)
+        t(l ? -1 * M : M), i(!l)
       },
       children: [(0, a.jsx)(c.Heading, {
         className: S.heading,
@@ -191,7 +191,7 @@ t.default = function(e) {
       style: {
         height: D.to({
           range: [0, 1],
-          output: [0, O]
+          output: [0, M]
         })
       },
       children: (0, a.jsx)("div", {
@@ -199,12 +199,12 @@ t.default = function(e) {
         children: (0, a.jsxs)("div", {
           className: S.stepsWrapperStatic,
           children: [(0, a.jsx)("ul", {
-            children: C.map((e, t) => (0, a.jsx)(I, {
+            children: m.map((e, t) => (0, a.jsx)(I, {
               isComplete: e.isComplete,
-              hasNextStep: t < C.length - 1,
+              hasNextStep: t < m.length - 1,
               children: e.content
             }, t))
-          }), x && !R && !M && (0, a.jsx)(v, {
+          }), x && !R && !O && (0, a.jsx)(v, {
             useReducedMotion: u,
             quest: s
           })]

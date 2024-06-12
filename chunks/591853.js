@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return ed
   },
   PrimaryActionButton: function() {
-    return eC
+    return eg
   },
   Reactor: function() {
     return ec
@@ -34,8 +34,8 @@ var u = n("194048"),
   m = n("176743"),
   p = n("465270"),
   E = n("788698"),
-  C = n("718671"),
-  g = n("352903"),
+  g = n("718671"),
+  C = n("352903"),
   S = n("690172"),
   _ = n("481060"),
   T = n("493683"),
@@ -177,19 +177,19 @@ function ec(e) {
           destinationGuildId: r.guild_id
         })
       },
-      g = h ? es.default.Messages.MEMBER_LIST_CONTENT_POPOUT_BLOCKED_USER_WARNING : es.default.Messages.MEMBER_LIST_CONTENT_POPOUT_PREVIEW_VOICE_CHANNEL,
+      C = h ? es.default.Messages.MEMBER_LIST_CONTENT_POPOUT_BLOCKED_USER_WARNING : es.default.Messages.MEMBER_LIST_CONTENT_POPOUT_PREVIEW_VOICE_CHANNEL,
       T = e => {
         let {
           children: t
         } = e;
         return (0, a.jsx)(_.Tooltip, {
-          "aria-label": g,
+          "aria-label": C,
           text: (0, a.jsxs)(a.Fragment, {
             children: [h && (0, a.jsx)(u.WarningIcon, {
               width: 13,
               height: 13,
               className: ei.popoutBlockedWarningIcon
-            }), g]
+            }), C]
           }),
           shouldShow: !0,
           children: t
@@ -250,11 +250,11 @@ function ec(e) {
     return {
       voiceBar: A,
       joinVoiceButton: (0, a.jsx)(T, {
-        children: e => (0, a.jsx)(eC, {
+        children: e => (0, a.jsx)(eg, {
           ...e,
           color: _.Button.Colors.GREEN,
           onClick: E,
-          IconComponent: m ? C.ScreenIcon : S.VoiceNormalIcon,
+          IconComponent: m ? g.ScreenIcon : S.VoiceNormalIcon,
           children: es.default.Messages.PREVIEW
         })
       })
@@ -263,7 +263,7 @@ function ec(e) {
     channel: t,
     entry: A,
     requestId: v
-  }), eo = null != er && 0 === x.length ? [er] : x, eu = eo.length > 0, ed = eo.length >= 2, [ec, eh] = l.useState(!eu), em = "#".concat(t.name), ep = Z.default.getName(t.guild_id, t.id, n), eE = L ? es.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : es.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, eg = async e => {
+  }), eo = null != er && 0 === x.length ? [er] : x, eu = eo.length > 0, ed = eo.length >= 2, [ec, eh] = l.useState(!eu), em = "#".concat(t.name), ep = Z.default.getName(t.guild_id, t.id, n), eE = L ? es.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : es.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, eC = async e => {
     if (null != e) {
       if (z.default.track(el.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
           surface_type: ea.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
@@ -348,16 +348,16 @@ function ec(e) {
         className: ei.emojiHotrailShareToChannel,
         children: [(0, a.jsx)(ef, {
           channel: t,
-          onClickSuggestion: eg
+          onClickSuggestion: eC
         }), (0, a.jsx)(N.ReactionPickerButton, {
-          onSelectEmoji: eg
+          onSelectEmoji: eC
         })]
       })
     }) : (0, a.jsx)("div", {
       className: ei.emojiHotrailShareToChannel,
       children: (0, a.jsx)(ef, {
         channel: t,
-        onClickSuggestion: eg
+        onClickSuggestion: eC
       })
     }), (0, a.jsxs)("div", {
       className: ec ? ei.inputContainerShareToChannel : ei.hiddenButRenderedInputField,
@@ -385,7 +385,7 @@ function ec(e) {
               ...e,
               className: ei.shareToChannelButton,
               onClick: () => O(e => !e),
-              children: L ? (0, a.jsx)(g.TextIcon, {
+              children: L ? (0, a.jsx)(C.TextIcon, {
                 width: 20,
                 height: 20
               }) : (0, a.jsx)(h.AtIcon, {
@@ -630,7 +630,7 @@ function eE(e) {
   })
 }
 
-function eC(e) {
+function eg(e) {
   let {
     IconComponent: t,
     children: n,

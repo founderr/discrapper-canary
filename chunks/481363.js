@@ -27,11 +27,11 @@ function u(e) {
       groupId: m,
       compact: p = !1
     }
-  } = e, E = f.state === r.MessageStates.SENDING, C = f.id === m, g = (0, l.hasFlag)(f.flags, r.MessageFlags.EPHEMERAL), S = f.state === r.MessageStates.SEND_FAILED;
-  return E || g && !S ? null : (0, a.jsx)(i.default, {
+  } = e, E = f.state === r.MessageStates.SENDING, g = f.id === m, C = (0, l.hasFlag)(f.flags, r.MessageFlags.EPHEMERAL), S = f.state === r.MessageStates.SEND_FAILED;
+  return E || C && !S ? null : (0, a.jsx)(i.default, {
     className: o.buttons,
     innerClassName: o.buttonsInner,
-    isHeader: !p && C && !(0, s.default)(f),
+    isHeader: !p && g && !(0, s.default)(f),
     channel: h,
     message: f,
     setPopout: t,

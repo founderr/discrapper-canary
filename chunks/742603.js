@@ -19,8 +19,8 @@ var l = n("120356"),
   m = n("995123"),
   p = n("554747"),
   E = n("854698"),
-  C = n("897669"),
-  g = n("984370"),
+  g = n("897669"),
+  C = n("984370"),
   S = n("910611"),
   _ = n("454585"),
   T = n("134483"),
@@ -124,7 +124,7 @@ function B(e) {
         focusedParticipant: l
       })]
     })
-  } else c && (t = (0, a.jsx)(C.default, {
+  } else c && (t = (0, a.jsx)(g.default, {
     guildEvent: o,
     recurrenceId: u
   }));
@@ -147,7 +147,7 @@ function V(e) {
   } = (0, i.useStateFromStoresObject)([y.default], () => ({
     focusedParticipant: y.default.getSelectedParticipant(t.id),
     participantsOpen: y.default.getParticipantsOpen(t.id)
-  }), [t.id]), C = (0, h.default)(t), I = (0, m.default)(t), [A] = (0, c.default)((null == E ? void 0 : E.type) === D.ParticipantTypes.ACTIVITY ? [E.id] : []), v = F.default.Messages.VOICE_CHANNEL;
+  }), [t.id]), g = (0, h.default)(t), I = (0, m.default)(t), [A] = (0, c.default)((null == E ? void 0 : E.type) === D.ParticipantTypes.ACTIVITY ? [E.id] : []), v = F.default.Messages.VOICE_CHANNEL;
   t.isDM() ? v = F.default.Messages.DM : t.isGroupDM() && (v = F.default.Messages.GROUP_DM);
   let L = (0, i.useStateFromStores)([f.default], () => f.default.getChannelStatus(t)),
     j = t.isGuildVoice() && u && null != L && L.length > 0,
@@ -195,7 +195,7 @@ function V(e) {
   return (0, a.jsxs)("div", {
     className: w.subtitleContainer,
     children: [(0, a.jsxs)(N.default, {
-      onDoubleClick: g.handleDoubleClick,
+      onDoubleClick: C.handleDoubleClick,
       transparent: !0,
       className: (0, M.getThemeClass)(U.ThemeTypes.DARK),
       childrenBottom: G,
@@ -212,7 +212,7 @@ function V(e) {
         disabled: !0,
         "aria-label": v
       }) : null, (0, a.jsx)(N.default.Title, {
-        children: C
+        children: g
       }), (0, a.jsx)(S.HeaderGuildBreadcrumb, {
         channel: t,
         guild: l

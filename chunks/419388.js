@@ -18,8 +18,8 @@ var a = n("470079"),
   m = n("796974"),
   p = n("709054"),
   E = n("534469"),
-  C = n("173033"),
-  g = n("959517"),
+  g = n("173033"),
+  C = n("959517"),
   S = n("981631");
 
 function _(e, t, n) {
@@ -102,7 +102,7 @@ class A {
       scrollHeight: t,
       offsetHeight: n
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.getScrollerState();
-    return e >= t - n - g.MESSAGE_PADDING && !this.props.messages.hasMoreAfter
+    return e >= t - n - C.MESSAGE_PADDING && !this.props.messages.hasMoreAfter
   }
   mergePropsAndUpdate(e) {
     this.mergePropsAndUpdate_(e), this.props.messages.ready && this.enableAutomaticAck()
@@ -160,7 +160,7 @@ class A {
         var u;
         null === (u = this.ref.current) || void 0 === u || u.scrollIntoViewNode({
           node: e,
-          padding: g.MESSAGE_PADDING,
+          padding: C.MESSAGE_PADDING,
           callback: this.handleScroll
         });
         return
@@ -175,7 +175,7 @@ class A {
     if (!(0, i.isElement)(l) || null == s) return null;
     let {
       offsetHeight: r
-    } = l, o = (0, C.default)(l, s), u = o - t;
+    } = l, o = (0, g.default)(l, s), u = o - t;
     return null != n && (u = Math.max(-r, Math.min(n, u))), {
       id: e,
       offsetFromTop: u,
@@ -188,7 +188,7 @@ class A {
     this.setAutomaticAnchor(null)
   }
   newMessageBarBuffer() {
-    return this.props.channel.isForumPost() ? g.NEW_MESSAGE_BAR_BUFFER_LARGE : g.NEW_MESSAGE_BAR_BUFFER
+    return this.props.channel.isForumPost() ? C.NEW_MESSAGE_BAR_BUFFER_LARGE : C.NEW_MESSAGE_BAR_BUFFER
   }
   findAnchor() {
     let {
@@ -257,7 +257,7 @@ class A {
       var a;
       this.isPinned() ? this.scrollTo(Number.MAX_SAFE_INTEGER, !1, this.handleScroll) : this.mergeTo(n, this.handleScroll), null === (a = this.ref.current) || void 0 === a || a.scrollIntoViewNode({
         node: t,
-        padding: g.MESSAGE_PADDING,
+        padding: C.MESSAGE_PADDING,
         callback: this.handleScroll
       })
     } else this.mergeTo(n, this.handleScroll);
@@ -358,7 +358,7 @@ class A {
       let n = T(e);
       if (null == n) return;
       let a = this.getElementFromMessageId(n);
-      (0, i.isElement)(a) ? this.scrollTo(this.getOffsetOrientationFromNode(a, "middle", t ? this.newMessageBarBuffer() : g.MESSAGE_PADDING), !0): this.scrollToNewMessages(!0, "middle")
+      (0, i.isElement)(a) ? this.scrollTo(this.getOffsetOrientationFromNode(a, "middle", t ? this.newMessageBarBuffer() : C.MESSAGE_PADDING), !0): this.scrollToNewMessages(!0, "middle")
     } else this.scrollTo(Number.MAX_SAFE_INTEGER, !0)
   }
   scrollToNewMessages() {
@@ -366,7 +366,7 @@ class A {
     let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
       n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "top",
       a = arguments.length > 2 ? arguments[2] : void 0,
-      l = null === (e = this.getDocument()) || void 0 === e ? void 0 : e.getElementById(g.NEW_MESSAGE_BAR_ID),
+      l = null === (e = this.getDocument()) || void 0 === e ? void 0 : e.getElementById(C.NEW_MESSAGE_BAR_ID),
       s = () => {
         this.jumping = !1, this.setAutomaticAnchor(this.findAnchor()), null != a && a(), this.handleScroll()
       };
@@ -378,7 +378,7 @@ class A {
       l = null === (n = this.ref.current) || void 0 === n ? void 0 : n.getScrollerNode();
     if (null == l) return 0;
     let s = this.getScrollerState(),
-      i = (0, C.default)(e, l);
+      i = (0, g.default)(e, l);
     return "middle" === t ? Math.min(i - .5 * s.offsetHeight + .5 * e.offsetHeight + -8, i - a) : i - a
   }
   restoreScroll() {
@@ -467,7 +467,7 @@ class A {
         preventScroll: !0
       }), this.scrollCounter = 0, this.handleScroll(), this._scrollCompleteCallbacks.forEach(e => e())
     };
-    (0, i.isElement)(a) ? this.scrollTo(this.getOffsetOrientationFromNode(a, "middle", this.props.hasUnreads ? this.newMessageBarBuffer() : g.MESSAGE_PADDING), t, l): this.scrollToNewMessages(t, "middle", l)
+    (0, i.isElement)(a) ? this.scrollTo(this.getOffsetOrientationFromNode(a, "middle", this.props.hasUnreads ? this.newMessageBarBuffer() : C.MESSAGE_PADDING), t, l): this.scrollToNewMessages(t, "middle", l)
   }
   getOffsetToTriggerLoading(e, t) {
     let {
@@ -478,7 +478,7 @@ class A {
       hasUnreads: s,
       placeholderHeight: i
     } = this.props;
-    if ("top" === e) return l.hasMoreBefore ? s ? i - g.PLACEHOLDER_BUFFER - 2 : i + 500 : 0;
+    if ("top" === e) return l.hasMoreBefore ? s ? i - C.PLACEHOLDER_BUFFER - 2 : i + 500 : 0;
     return l.hasMoreAfter ? n - a - i - 500 : n - a
   }
   getOffsetToPreventLoading(e) {

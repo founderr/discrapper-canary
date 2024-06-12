@@ -61,8 +61,8 @@ var a, l, s = n("735250"),
   m = n("388469"),
   p = n("442837"),
   E = n("213602"),
-  C = n("149020"),
-  g = n("781511"),
+  g = n("149020"),
+  C = n("781511"),
   S = n("434559"),
   _ = n("533883"),
   T = n("324992"),
@@ -143,7 +143,7 @@ function G(e) {
   } = w(), i = 0 === l, r = (0, j.isEntryActive)(t), o = i && r ? M.tokens.colors.STATUS_POSITIVE : a, u = i && r ? "text-positive" : n;
   return (0, s.jsxs)("div", {
     className: U.badgeContainer,
-    children: [(0, s.jsx)(C.GameControllerIcon, {
+    children: [(0, s.jsx)(g.GameControllerIcon, {
       width: 12,
       height: 12,
       color: o
@@ -324,7 +324,7 @@ function q(e) {
     entry: t
   } = e, n = (0, j.getTrendingType)(t);
   return null == n || n === f.TrendingType.TRENDING_TYPE_UNSPECIFIED ? null : (0, s.jsx)(k, {
-    Icon: g.GlobeEarthIcon,
+    Icon: C.GlobeEarthIcon,
     text: b.default.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
   })
 }

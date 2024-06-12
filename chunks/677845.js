@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("159300"),
   p = n("470956"),
   E = n("430824"),
-  C = n("496675"),
-  g = n("199052"),
+  g = n("496675"),
+  C = n("199052"),
   S = n("434488"),
   _ = n("27457"),
   T = n("251564"),
@@ -50,7 +50,7 @@ function x(e) {
       dismissedActivityEntryPointTileChannel: null
     })
   }, [M.id, D]);
-  let w = (0, i.useStateFromStores)([C.default], () => M.isPrivate() || (0, m.canViewInviteModal)(C.default, P, M), [P, M]),
+  let w = (0, i.useStateFromStores)([g.default], () => M.isPrivate() || (0, m.canViewInviteModal)(g.default, P, M), [P, M]),
     k = (null == P ? void 0 : P.afkChannelId) === M.id,
     H = M.userLimit <= 0 || M.userLimit > 1,
     G = (0, i.useStateFromStores)([u.default], () => u.default.getEmbeddedActivitiesForChannel(M.id).length <= 0),
@@ -104,7 +104,7 @@ function x(e) {
     var t, n;
     return null !== (n = null === (t = U[e]) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : "empty-tile"
   }, [U]);
-  return (0, a.jsx)(g.default, {
+  return (0, a.jsx)(C.default, {
     className: y,
     keyExtractor: z,
     paddingTop: 64,

@@ -17,20 +17,20 @@ t.default = e => {
     children: s,
     isLast: l,
     className: f
-  } = e, [h, m] = n.useState(!1), {
-    analyticsLocations: C
+  } = e, [h, C] = n.useState(!1), {
+    analyticsLocations: m
   } = (0, d.default)(), T = n.useCallback(() => {
     (0, c.openUserProfileModal)({
       userId: t,
-      sourceAnalyticsLocations: C,
+      sourceAnalyticsLocations: m,
       analyticsLocation: {
         section: E.AnalyticsSections.FAMILY_CENTER
       }
     })
-  }, [t, C]), g = () => {
-    m(!0)
+  }, [t, m]), g = () => {
+    C(!0)
   }, A = () => {
-    m(!1)
+    C(!1)
   };
   return (0, a.jsx)(u.ListNavigatorItem, {
     id: t,

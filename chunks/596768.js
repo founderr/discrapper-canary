@@ -27,8 +27,8 @@ var a = r("735250"),
   T = r("621060"),
   j = r("689938"),
   w = r("457501"),
-  N = r("277513");
-let C = [{
+  E = r("277513");
+let N = [{
     key: "id",
     cellClassName: w.eventColumn,
     render(e) {
@@ -56,7 +56,7 @@ let C = [{
       return t.toLocaleString()
     }
   }],
-  E = [{
+  C = [{
     id: "details",
     name: "Details",
     render: e => {
@@ -73,7 +73,7 @@ let C = [{
       } = e, u = d()(o);
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsxs)(f.default, {
-          className: l()(N.headerBar, w.subPanelHeaderBar),
+          className: l()(E.headerBar, w.subPanelHeaderBar),
           children: [(0, a.jsx)(f.default.Icon, {
             icon: g.default,
             tooltip: t
@@ -140,7 +140,7 @@ function _() {
     TabBar: f,
     renderSelectedTab: y
   } = (0, T.default)({
-    tabs: E
+    tabs: C
   }, []), k = (0, u.useStateFromStores)([b.default], () => b.default.trackTriggers), _ = i.useCallback(e => {
     p.default.dispatch({
       type: "SET_TRACK_TRIGGERS",
@@ -149,7 +149,7 @@ function _() {
   }, []);
   return (0, a.jsxs)("div", {
     ref: r,
-    className: l()(N.panel, w.panel),
+    className: l()(E.panel, w.panel),
     children: [(0, a.jsxs)("div", {
       className: w.toolbar,
       children: [(0, a.jsx)("div", {
@@ -181,7 +181,7 @@ function _() {
     }), (0, a.jsx)(h.ScrollerThin, {
       className: w.tableContainer,
       children: (0, a.jsx)(S.default, {
-        columns: C,
+        columns: N,
         data: o,
         selectedRowKey: s,
         onClickRow: d

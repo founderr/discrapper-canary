@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("866112"),
   p = n("273387"),
   E = n("683818"),
-  C = n("102888"),
-  g = n("65839"),
+  g = n("102888"),
+  C = n("65839"),
   S = n("453879"),
   _ = n("408310"),
   T = n("486527"),
@@ -125,11 +125,11 @@ t.default = e => {
     })
   }) : (null == O ? void 0 : O.length) === 0 && null == N ? (0, a.jsx)("div", {
     className: A.pageContainer,
-    children: (0, a.jsx)(C.default, {
+    children: (0, a.jsx)(g.default, {
       guild: x,
       onAddGuild: k
     })
-  }) : (0, a.jsx)(g.default, {
+  }) : (0, a.jsx)(C.default, {
     channel: v,
     searchQuery: b,
     setSearchQuery: U,

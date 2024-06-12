@@ -25,21 +25,21 @@ function o(e) {
     E = d ? i.CenterControlButton : i.default;
   t = o ? u ? r.default.Messages.STOP_STREAMING : r.default.Messages.STOP_WATCHING : n ? r.default.Messages.SHARE_YOUR_SCREEN : r.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE;
   let {
-    Component: C,
-    events: g,
+    Component: g,
+    events: C,
     play: S
   } = (0, s.useScreenshareLottie)(o ? "disable" : "enable");
   return l.useEffect(() => () => S(), [o, S]), (0, a.jsx)(E, {
     buttonRef: m,
     label: t,
     disabled: !n,
-    iconComponent: C,
+    iconComponent: g,
     isActive: o,
     onMouseEnter: e => {
-      null == c || c(e), g.onMouseEnter()
+      null == c || c(e), C.onMouseEnter()
     },
     onMouseLeave: e => {
-      null == f || f(e), g.onMouseLeave()
+      null == f || f(e), C.onMouseLeave()
     },
     premiumGlow: h,
     ...p

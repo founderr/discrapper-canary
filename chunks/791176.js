@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("233608"),
   p = n("776767"),
   E = n("351127"),
-  C = n("50493"),
-  g = n("981631"),
+  g = n("50493"),
+  C = n("981631"),
   S = n("689938"),
   _ = n("9760");
 
@@ -26,7 +26,7 @@ function T(e) {
     roleIds: s,
     guild: o,
     specMap: m
-  } = e, p = g.Permissions[l], C = null !== (n = null === (t = m[p.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, f.getPermissionName)(p), T = E.ELEVATED_PERMISSIONS.has(p), I = (0, r.useStateFromStores)([h.default], () => h.default.getRoles(o.id));
+  } = e, p = C.Permissions[l], g = null !== (n = null === (t = m[p.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, f.getPermissionName)(p), T = E.ELEVATED_PERMISSIONS.has(p), I = (0, r.useStateFromStores)([h.default], () => h.default.getRoles(o.id));
   return (0, a.jsx)(d.Tooltip, {
     "aria-label": S.default.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL,
     tooltipClassName: _.roleTooltipContainer,
@@ -62,7 +62,7 @@ function T(e) {
         }), (0, a.jsx)(d.Text, {
           variant: "text-xs/medium",
           color: "interactive-normal",
-          children: C
+          children: g
         })]
       })
     }
@@ -86,7 +86,7 @@ t.default = l.memo(function(e) {
     return null == v || v.forEach(t => {
       t.permissions.forEach(t => {
         let n = t.flag,
-          l = E.ALL_PERMISSIONS.find(e => g.Permissions[e] === n);
+          l = E.ALL_PERMISSIONS.find(e => C.Permissions[e] === n);
         if (null == l) return;
         let i = u[l];
         null != i && e.push((0, a.jsx)(T, {
@@ -107,7 +107,7 @@ t.default = l.memo(function(e) {
         children: S.default.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE
       }), (0, a.jsxs)(d.Clickable, {
         className: _.viewAllPermissions,
-        onClick: () => n(C.ModViewPanel.PERMISSIONS),
+        onClick: () => n(g.ModViewPanel.PERMISSIONS),
         children: [(0, a.jsx)(d.Text, {
           variant: "eyebrow",
           color: "interactive-normal",

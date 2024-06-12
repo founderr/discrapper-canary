@@ -13,8 +13,8 @@ var a = s("735250"),
   _ = s("272008"),
   f = s("113434"),
   h = s("569984"),
-  m = s("497505"),
-  C = s("918701"),
+  C = s("497505"),
+  m = s("918701"),
   T = s("988303"),
   g = s("685613"),
   A = s("644646"),
@@ -25,9 +25,9 @@ var a = s("735250"),
   x = s("759853"),
   v = s("205511"),
   R = s("95985"),
-  M = s("658590"),
+  O = s("658590"),
   L = s("46140"),
-  O = s("689938"),
+  M = s("689938"),
   y = s("263094");
 let D = n.forwardRef(function(e, t) {
   var s;
@@ -41,19 +41,19 @@ let D = n.forwardRef(function(e, t) {
     onContentHeightChange: G,
     quest: V,
     useReducedMotion: B
-  } = e, H = n.useRef(null), F = (0, r.useStateFromStores)([h.default], () => h.default.isEnrolling(V.id), [V]), k = (0, f.useQuestFormattedDate)(V.config.expiresAt), w = n.useMemo(() => (0, C.isAssetAnimated)(V.config.assets.questBarHero), [V]), Q = n.useCallback(() => {
+  } = e, H = n.useRef(null), F = (0, r.useStateFromStores)([h.default], () => h.default.isEnrolling(V.id), [V]), k = (0, f.useQuestFormattedDate)(V.config.expiresAt), w = n.useMemo(() => (0, m.isAssetAnimated)(V.config.assets.questBarHero), [V]), Q = n.useCallback(() => {
     (0, _.enrollInQuest)(V.id, {
-      questContent: m.QuestContent.QUEST_BAR,
+      questContent: C.QuestContent.QUEST_BAR,
       questContentCTA: E.QuestContentCTA.ACCEPT_QUEST
     })
   }, [V]), Y = n.useCallback(() => {
-    (0, C.openGameLink)(V, {
-      content: m.QuestContent.QUEST_BAR,
+    (0, m.openGameLink)(V, {
+      content: C.QuestContent.QUEST_BAR,
       ctaContent: E.QuestContentCTA.OPEN_GAME_LINK
     })
   }, [V]), q = n.useCallback(() => {
     (0, S.openDisclosureModal)(V, {
-      content: m.QuestContent.QUEST_BAR,
+      content: C.QuestContent.QUEST_BAR,
       ctaContent: E.QuestContentCTA.OPEN_DISCLOSURE
     })
   }, [V]), {
@@ -65,10 +65,10 @@ let D = n.forwardRef(function(e, t) {
   }), z = (null === (s = V.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null, Z = (0, f.useQuestTaskDetails)({
     quest: V,
     location: L.QuestsExperimentLocations.QUESTS_BAR
-  }), K = Z.percentComplete > 0, X = D && b, J = n.useMemo(() => (0, C.isConsoleQuest)(V), [V]), $ = (0, C.getQuestBarHeroAssetUrl)(V), ee = (0, C.getQuestsInstructionsToWinReward)({
+  }), K = Z.percentComplete > 0, X = D && b, J = n.useMemo(() => (0, m.isConsoleQuest)(V), [V]), $ = (0, m.getQuestBarHeroAssetUrl)(V), ee = (0, m.getQuestsInstructionsToWinReward)({
     quest: V,
     location: L.QuestsExperimentLocations.QUESTS_BAR,
-    useV2Variants: W === T.QuestBarExperimentVariants.V2 || (0, M.shouldForceQuestBarV2)(V),
+    useV2Variants: W === T.QuestBarExperimentVariants.V2 || (0, O.shouldForceQuestBarV2)(V),
     taskDetails: Z
   });
   return (0, a.jsx)("div", {
@@ -85,21 +85,21 @@ let D = n.forwardRef(function(e, t) {
         children: [(0, a.jsx)(u.Text, {
           variant: "text-xxs/medium",
           className: i()(y.flex, y.headerText),
-          children: O.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
+          children: M.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
             expirationDate: k
           })
         }), (0, a.jsx)(N.QuestsEntryContextMenuPopout, {
           onOpen: j,
           onClose: U,
           onSelect: P,
-          questContent: m.QuestContent.QUEST_BAR,
+          questContent: C.QuestContent.QUEST_BAR,
           quest: V,
           shouldShowDisclosure: !1,
           showShareLink: !0,
           children: e => (0, a.jsx)(u.Clickable, {
             ...e,
             className: y.submenuWrapper,
-            "aria-label": O.default.Messages.ACTIONS,
+            "aria-label": M.default.Messages.ACTIONS,
             children: (0, a.jsx)(d.default, {
               className: i()(y.submenuIcon, y.interactiveNormal)
             })
@@ -145,7 +145,7 @@ let D = n.forwardRef(function(e, t) {
               children: [(0, a.jsx)(u.Text, {
                 color: "always-white",
                 variant: "text-xs/normal",
-                children: O.default.Messages.QUESTS_PROMOTED
+                children: M.default.Messages.QUESTS_PROMOTED
               }), (0, a.jsx)(o.CircleQuestionIcon, {
                 color: u.tokens.colors.WHITE,
                 className: y.promotedBadgeIcon
@@ -155,14 +155,14 @@ let D = n.forwardRef(function(e, t) {
             onOpen: j,
             onClose: U,
             onSelect: P,
-            questContent: m.QuestContent.QUEST_BAR,
+            questContent: C.QuestContent.QUEST_BAR,
             quest: V,
             shouldShowDisclosure: !0,
             showShareLink: !0,
             children: e => (0, a.jsx)(u.Clickable, {
               ...e,
               className: y.submenuWrapper,
-              "aria-label": O.default.Messages.ACTIONS,
+              "aria-label": M.default.Messages.ACTIONS,
               children: (0, a.jsx)(d.default, {
                 className: i()(y.submenuIcon, y.white)
               })
@@ -174,11 +174,11 @@ let D = n.forwardRef(function(e, t) {
             className: y.rewardTile,
             learnMoreStyle: "text",
             quest: V,
-            questContent: m.QuestContent.QUEST_BAR
+            questContent: C.QuestContent.QUEST_BAR
           }), (0, a.jsx)(u.Heading, {
             className: y.title,
             variant: "heading-md/medium",
-            children: O.default.Messages.QUESTS_TITLE.format({
+            children: M.default.Messages.QUESTS_TITLE.format({
               questName: V.config.messages.questName
             })
           }), (0, a.jsx)(u.Text, {
@@ -193,7 +193,7 @@ let D = n.forwardRef(function(e, t) {
           onClick: X ? Q : void 0,
           size: u.Button.Sizes.SMALL,
           submitting: F,
-          children: O.default.Messages.QUESTS_ACCEPT_QUEST
+          children: M.default.Messages.QUESTS_ACCEPT_QUEST
         })]
       }), (0, a.jsx)("div", {
         className: y.heroAssetWrapper,
@@ -209,7 +209,7 @@ let D = n.forwardRef(function(e, t) {
             controls: !1,
             children: (0, a.jsx)("source", {
               src: $,
-              type: (0, C.getVideoAssetMimeType)($)
+              type: (0, m.getVideoAssetMimeType)($)
             })
           })
         }) : (0, a.jsx)(p.QuestsAsset, {

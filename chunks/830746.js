@@ -14,8 +14,8 @@ var n = s("399606"),
   _ = s("552045"),
   f = s("87792"),
   h = s("302289"),
-  m = s("946690"),
-  C = s("456771"),
+  C = s("946690"),
+  m = s("456771"),
   T = s("292352"),
   g = s("689938"),
   A = s("234789");
@@ -34,17 +34,17 @@ t.default = () => {
       children: (0, a.jsx)(_.default, {})
     }), (0, a.jsxs)("div", {
       className: A.featureCards,
-      children: [(0, a.jsx)(m.default, {
+      children: [(0, a.jsx)(C.default, {
         iconClassName: A.chatCheckIcon,
         icon: o.default,
         header: g.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_HEADER,
         description: p
-      }), (0, a.jsx)(m.default, {
+      }), (0, a.jsx)(C.default, {
         icon: u.default,
         header: g.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_HEADER,
         description: N
-      }), (0, a.jsx)(m.default, {
-        icon: I ? l.QrCodeCameraIcon : C.default,
+      }), (0, a.jsx)(C.default, {
+        icon: I ? l.QrCodeCameraIcon : m.default,
         header: g.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_HEADER,
         description: S
       })]

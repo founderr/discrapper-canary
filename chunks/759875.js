@@ -9,12 +9,12 @@ n("470079");
 var i = n("138270"),
   l = n("481060"),
   s = n("346610"),
-  r = n("868643"),
-  u = n("996861"),
+  u = n("868643"),
+  r = n("996861"),
   o = n("689938");
 
 function d(e, t) {
-  let n = (0, r.useCanForwardMessage)(e),
+  let n = (0, u.useCanForwardMessage)(e),
     {
       canForwardMessages: d
     } = s.MessageForwardingExperiment.useExperiment({
@@ -25,7 +25,7 @@ function d(e, t) {
     label: o.default.Messages.MESSAGE_ACTION_FORWARD,
     icon: i.ArrowAngleRightUpIcon,
     action: () => {
-      (0, u.forwardMessage)(t, e)
+      (0, r.forwardMessage)(t, e)
     }
   }) : null
 }

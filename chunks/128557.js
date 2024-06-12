@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("812206"),
   p = n("644914"),
   E = n("434404"),
-  C = n("330010"),
-  g = n("314897"),
+  g = n("330010"),
+  C = n("314897"),
   S = n("430824"),
   _ = n("594174"),
   T = n("259580"),
@@ -77,7 +77,7 @@ function j(e) {
 function P(e) {
   let {
     channel: t
-  } = e, s = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != s && N.default.extractTimestamp(s.id) < Date.now() - y.WELCOME_OLD_GUILD_AGE_THRESHOLD, T = (0, u.useStateFromStores)([g.default], () => (null == s ? void 0 : s.ownerId) === g.default.getId(), [s]), {
+  } = e, s = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != s && N.default.extractTimestamp(s.id) < Date.now() - y.WELCOME_OLD_GUILD_AGE_THRESHOLD, T = (0, u.useStateFromStores)([C.default], () => (null == s ? void 0 : s.ownerId) === C.default.getId(), [s]), {
     canInvite: I,
     canManageGuild: P,
     canMessage: D
@@ -210,7 +210,7 @@ function P(e) {
   }(W), K = (0, u.useStateFromStores)([m.default], () => m.default.getGuildApplicationIds(null == s ? void 0 : s.id)).length > 0;
   if (l.useEffect(() => {
       var e;
-      (0, C.fetchGuildIntegrationsApplications)(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : y.EMPTY_STRING_SNOWFLAKE_ID)
+      (0, g.fetchGuildIntegrationsApplications)(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : y.EMPTY_STRING_SNOWFLAKE_ID)
     }, [s]), null == s) return null;
   let Z = [];
   !f && (I && Z.push((0, a.jsx)(o.default.div, {

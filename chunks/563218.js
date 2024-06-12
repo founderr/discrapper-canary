@@ -29,9 +29,9 @@ function E(e) {
       style: r
     } = e,
     E = (0, s.useStateFromStores)([o.default], () => o.default.getWindow(m.PopoutWindowKeys.CHANNEL_CALL_POPOUT)),
-    C = (0, f.default)(),
-    g = (0, s.useStateFromStores)([d.default], () => d.default.getActivityPanelMode());
-  if (null != C && !(0, c.default)(C.channelId) && g === h.ActivityPanelModes.PANEL) t = window;
+    g = (0, f.default)(),
+    C = (0, s.useStateFromStores)([d.default], () => d.default.getActivityPanelMode());
+  if (null != g && !(0, c.default)(g.channelId) && C === h.ActivityPanelModes.PANEL) t = window;
   else {
     var S;
     t = null !== (S = null == E ? void 0 : E.window) && void 0 !== S ? S : window

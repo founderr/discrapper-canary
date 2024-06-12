@@ -26,8 +26,8 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let m = new Set([l.ContentInventoryEntryType.LISTENED_SESSION]),
-  C = new Map;
+let C = new Set([l.ContentInventoryEntryType.LISTENED_SESSION]),
+  m = new Map;
 
 function N(e) {
   return "".concat(e.author_id, ":").concat(e.id)
@@ -52,7 +52,7 @@ function R(e) {
     }(i.content);
     if (void 0 !== e) {
       let a = N(i.content);
-      n.add(a), e !== C.get(a) && (t.add(a), C.set(a, e))
+      n.add(a), e !== m.get(a) && (t.add(a), m.set(a, e))
     }
   }
   return {
@@ -61,9 +61,9 @@ function R(e) {
   }
 }
 
-function p() {
+function v() {
   let e = !1,
-    t = Array.from(C.keys()),
+    t = Array.from(m.keys()),
     n = new Set,
     i = new Set;
   for (let t of f.default.getFeeds().values()) {
@@ -75,23 +75,23 @@ function p() {
     for (let e of s) i.add(e);
     e = e || a.size > 0
   }
-  for (let n of s().difference(t, [...i])) C.delete(n), e = !0;
+  for (let n of s().difference(t, [...i])) m.delete(n), e = !0;
   return e
 }
 class g extends(i = o.default.Store) {
   initialize() {
-    this.waitFor(f.default, c.default), this.syncWith([c.default], p)
+    this.waitFor(f.default, c.default), this.syncWith([c.default], v)
   }
   getMatchingActivity(e) {
-    return (0, _.isEntryExpired)(e) ? null : C.get(N(e))
+    return (0, _.isEntryExpired)(e) ? null : m.get(N(e))
   }
   constructor(...e) {
-    super(...e), S(this, "canRenderContent", e => !(0, _.isEntryExpired)(e) && (!m.has(e.content_type) || null != this.getMatchingActivity(e)))
+    super(...e), S(this, "canRenderContent", e => !(0, _.isEntryExpired)(e) && (!C.has(e.content_type) || null != this.getMatchingActivity(e)))
   }
 }
 S(g, "displayName", "ContentInventoryActivityStore"), t.default = new g(d.default, {
   CONNECTION_OPEN: function() {
-    C.clear()
+    m.clear()
   },
   CONTENT_INVENTORY_SET_FEED: function(e) {
     let {

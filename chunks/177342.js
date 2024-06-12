@@ -23,8 +23,8 @@ function h(e) {
     warningType: m,
     header: p,
     description: E,
-    onDismiss: C,
-    buttons: g
+    onDismiss: g,
+    buttons: C
   } = e;
   l.useEffect(() => {
     r.default.increment({
@@ -32,14 +32,14 @@ function h(e) {
     })
   }, []);
   let S = l.useCallback(() => {
-    null == C || C(), (0, u.trackCtaEvent)({
+    null == g || g(), (0, u.trackCtaEvent)({
       channelId: t,
       warningId: n,
       senderId: h,
       warningType: m,
       cta: u.CtaEventTypes.USER_BANNER_DISMISS
     })
-  }, [C, t, n, h, m]);
+  }, [g, t, n, h, m]);
   return (0, a.jsxs)("div", {
     className: c.strangerDangerBanner,
     children: [(0, a.jsxs)("div", {
@@ -61,7 +61,7 @@ function h(e) {
       })]
     }), (0, a.jsx)("div", {
       className: c.buttons,
-      children: null == g ? void 0 : g.map((e, t) => (0, a.jsx)(i.Button, {
+      children: null == C ? void 0 : C.map((e, t) => (0, a.jsx)(i.Button, {
         size: i.Button.Sizes.SMALL,
         color: e.color,
         "aria-label": e.text,

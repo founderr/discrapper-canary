@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CommunicationDisabledBanner: function() {
-    return C
+    return g
   }
 }), n("47120");
 var a = n("735250");
@@ -20,14 +20,14 @@ var l = n("442837"),
   p = n("689938"),
   E = n("26345");
 
-function C(e) {
+function g(e) {
   let {
     guild: t,
     disabledUntil: n
-  } = e, [C, g] = (0, f.useCommunicationDisabledNoticeStore)(t.id), S = (0, l.useStateFromStores)([o.default, r.default], () => o.default.getMember(t.id, r.default.getId()), [t.id]);
+  } = e, [g, C] = (0, f.useCommunicationDisabledNoticeStore)(t.id), S = (0, l.useStateFromStores)([o.default, r.default], () => o.default.getMember(t.id, r.default.getId()), [t.id]);
   return (0, c.useCommunicationDisabledCountdownCleanup)(S), (0, a.jsxs)("div", {
-    children: [C ? (0, a.jsx)(h.default, {
-      onClose: () => g(t.id),
+    children: [g ? (0, a.jsx)(h.default, {
+      onClose: () => C(t.id),
       guildName: t.name
     }) : null, (0, a.jsx)(i.MessageNoticeBanner, {
       bannerIcon: (0, a.jsx)(d.default, {

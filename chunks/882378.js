@@ -14,14 +14,14 @@ var a = n("735250"),
   m = n("288176"),
   p = n("502568"),
   E = n("134612"),
-  C = n("689938"),
-  g = n("53972");
+  g = n("689938"),
+  C = n("53972");
 t.default = l.memo(function(e) {
   let {
     channel: t
-  } = e, S = (0, u.useInappropriateConversationSafetyToolsWarningForChannel)(t.id), _ = (0, d.useShouldShowInitialSafetyToolsButtonTooltip)(t.id), T = (0, c.useSafetyToolsButtonTooltipForChannel)(t.id), I = (0, i.useHasAnyModalOpen)(), A = (0, s.useStateFromStores)([h.default], () => h.default.hasLayers()), v = l.useCallback(() => _ ? C.default.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != T ? C.default.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null, [_, T]), x = l.useMemo(() => (_ || null != T) && !I && !A, [_, T, I, A]), [N, M] = l.useState(v());
+  } = e, S = (0, u.useInappropriateConversationSafetyToolsWarningForChannel)(t.id), _ = (0, d.useShouldShowInitialSafetyToolsButtonTooltip)(t.id), T = (0, c.useSafetyToolsButtonTooltipForChannel)(t.id), I = (0, i.useHasAnyModalOpen)(), A = (0, s.useStateFromStores)([h.default], () => h.default.hasLayers()), v = l.useCallback(() => _ ? g.default.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != T ? g.default.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null, [_, T]), x = l.useMemo(() => (_ || null != T) && !I && !A, [_, T, I, A]), [N, M] = l.useState(v());
   l.useEffect(() => {
-    null != T && null != S && (r.AccessibilityAnnouncer.announce(C.default.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT), setTimeout(() => {
+    null != T && null != S && (r.AccessibilityAnnouncer.announce(g.default.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT), setTimeout(() => {
       (0, o.dismissChannelSafetyWarnings)(t.id, [T.id])
     }, 5e3), (0, f.trackNamedViewEvent)({
       channelId: t.id,
@@ -30,7 +30,7 @@ t.default = l.memo(function(e) {
       warningType: T.type,
       isNudgeWarning: null != T,
       viewName: f.ViewNameTypes.SAFETY_TOOLS_NUDGE_TOOLTIP
-    })), _ && (r.AccessibilityAnnouncer.announce(C.default.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT), setTimeout(() => {
+    })), _ && (r.AccessibilityAnnouncer.announce(g.default.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT), setTimeout(() => {
       (0, o.acknowledgeChannelSafetyWarningTooltip)(t.id)
     }, 5e3))
   }, [t, T, S, _]), l.useEffect(() => {
@@ -81,12 +81,12 @@ t.default = l.memo(function(e) {
     text: N,
     color: r.TooltipColors.BRAND,
     position: "bottom",
-    tooltipClassName: g.tooltip,
-    tooltipContentClassName: g.tooltipContent,
+    tooltipClassName: C.tooltip,
+    tooltipContentClassName: C.tooltipContent,
     children: () => (0, a.jsx)(p.default.Icon, {
       icon: m.default,
       onClick: y,
-      tooltip: C.default.Messages.SAFETY_TOOLS_BUTTON_LABEL,
+      tooltip: g.default.Messages.SAFETY_TOOLS_BUTTON_LABEL,
       tooltipDisabled: null != T
     })
   })

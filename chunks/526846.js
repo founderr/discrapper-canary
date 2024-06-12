@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("100527"),
   p = n("906732"),
   E = n("703656"),
-  C = n("210887"),
-  g = n("390322"),
+  g = n("210887"),
+  C = n("390322"),
   S = n("692437"),
   _ = n("944581"),
   T = n("626135"),
@@ -57,7 +57,7 @@ let U = "vc-activities-".concat((0, o.v4)()),
       location: "ActivitiesMiniShelf"
     }, {
       autoTrackExposure: !0
-    }), V = (0, u.useStateFromStores)([C.default], () => C.default.getState().theme), W = (0, u.useStateFromStores)([h.default], () => h.default.useReducedMotion), {
+    }), V = (0, u.useStateFromStores)([g.default], () => g.default.getState().theme), W = (0, u.useStateFromStores)([h.default], () => h.default.useReducedMotion), {
       id: Y,
       guild_id: z
     } = n;
@@ -128,7 +128,7 @@ let U = "vc-activities-".concat((0, o.v4)()),
       }) : null;
     return (0, a.jsx)(p.AnalyticsLocationProvider, {
       value: Z,
-      children: (0, a.jsx)(g.default, {
+      children: (0, a.jsx)(C.default, {
         children: (0, a.jsxs)(d.Dialog, {
           ref: t,
           "aria-labelledby": U,

@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("200120"),
   p = n("255269"),
   E = n("937889"),
-  C = n("703656"),
-  g = n("359110"),
+  g = n("703656"),
+  C = n("359110"),
   S = n("695346"),
   _ = n("592125"),
   T = n("430824"),
@@ -45,7 +45,7 @@ function D(e) {
     scrollTo: m,
     searchResults: p,
     blockCount: E,
-    onChangePage: g
+    onChangePage: C
   } = e, {
     offset: S,
     totalResults: T,
@@ -54,8 +54,8 @@ function D(e) {
   } = n, N = l.useCallback(e => {
     if (I) return;
     let t = e - 1;
-    null == g || g(t), u.changePage(f, t)
-  }, [f, I, g]), M = l.useCallback(e => {
+    null == C || C(t), u.changePage(f, t)
+  }, [f, I, C]), M = l.useCallback(e => {
     if (e.blocked) r.default.show({
       title: j.default.Messages.UNBLOCK_TO_JUMP_TITLE,
       body: j.default.Messages.UNBLOCK_TO_JUMP_BODY.format({
@@ -68,7 +68,7 @@ function D(e) {
         n = null != t ? t.getGuildId() : null;
       o.default.trackJump(e.channel_id, e.id, "Search Results", {
         search_id: v.default.getAnalyticsId(f)
-      }), (0, C.transitionTo)(O.Routes.CHANNEL(n, e.channel_id, e.id))
+      }), (0, g.transitionTo)(O.Routes.CHANNEL(n, e.channel_id, e.id))
     }
   }, [f]), y = l.useMemo(() => {
     let e;
@@ -171,7 +171,7 @@ function b(e) {
     startIndex: u,
     resultRefs: d,
     totalResults: c,
-    scrollTo: C,
+    scrollTo: g,
     searchId: v,
     renderEmbeds: R,
     offset: j,
@@ -181,7 +181,7 @@ function b(e) {
   } = e, F = S.RenderSpoilers.useSetting(), w = (0, m.useActiveKeywordFiltersCacheKey)(), k = l.useCallback(e => {
     if (e === x.default.getChannelId()) return;
     let t = _.default.getChannel(e);
-    if (null != t) I.default.can(O.Permissions.VIEW_CHANNEL, t) && (0, g.transitionToChannel)(t.id)
+    if (null != t) I.default.can(O.Permissions.VIEW_CHANNEL, t) && (0, C.transitionToChannel)(t.id)
   }, []), H = null != s ? (0, f.computeChannelName)(s, N.default, A.default, !1) : "???", G = U && null != s.guild_id ? null === (t = T.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, B = (null == s ? void 0 : s.parent_id) != null ? _.default.getChannel(s.parent_id) : null, V = null != B ? B.name : null, W = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : y.default, Y = null != B ? (0, h.default)(B) : null, z = I.default.can(O.Permissions.MANAGE_MESSAGES, s), {
     content: K
   } = (0, E.default)({
@@ -241,7 +241,7 @@ function b(e) {
         return (0, a.jsx)(L.default, {
           ref: e => d.current[n] = e,
           totalResults: c,
-          scrollTo: C,
+          scrollTo: g,
           searchId: v,
           renderEmbeds: R,
           searchOffset: j,

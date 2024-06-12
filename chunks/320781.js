@@ -23,13 +23,13 @@ function m(e) {
     channel: n
   } = e, m = (0, r.useAppliedTags)(n), {
     firstMessage: p
-  } = (0, l.useStateFromStoresObject)([o.default], () => o.default.getMessage(n.id)), E = new Set((0, r.useVisibleAppliedForumTags)(n, m)), C = null !== (t = (0, i.default)(n)) && void 0 !== t ? t : d.default;
+  } = (0, l.useStateFromStoresObject)([o.default], () => o.default.getMessage(n.id)), E = new Set((0, r.useVisibleAppliedForumTags)(n, m)), g = null !== (t = (0, i.default)(n)) && void 0 !== t ? t : d.default;
   return (0, a.jsxs)(c.default, {
     channelId: n.id,
     className: h.container,
     children: [(0, a.jsx)("div", {
       className: h.iconWrapper,
-      children: (0, a.jsx)(C, {
+      children: (0, a.jsx)(g, {
         className: h.icon,
         strokeWidth: 1.75
       })

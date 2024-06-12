@@ -14,8 +14,8 @@ var a = n("470079"),
   m = n("607744"),
   p = n("375954"),
   E = n("496675"),
-  C = n("572004"),
-  g = n("585483"),
+  g = n("572004"),
+  C = n("585483"),
   S = n("358085"),
   _ = n("709054"),
   T = n("418476"),
@@ -46,7 +46,7 @@ t.default = function(e, t, n) {
         j && (N(w) || F.canDeleteOwnMessage(k)) && (n.preventDefault(), (0, v.deleteMessage)(w, F, n));
         break;
       case "c":
-        ((0, S.isMac)() ? b : D) && C.SUPPORTS_COPY && (n.preventDefault(), (0, C.copy)(F.content));
+        ((0, S.isMac)() ? b : D) && g.SUPPORTS_COPY && (n.preventDefault(), (0, g.copy)(F.content));
         break;
       case "e":
         if (j) {
@@ -76,7 +76,7 @@ t.default = function(e, t, n) {
               isActiveChannelOrUnarchivableThread: (0, r.getIsActiveChannelOrUnarchivableThread)(e)
             });
           return !a && n
-        }(w) && (n.preventDefault(), g.ComponentDispatch.dispatchKeyed(x.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, F.id, {
+        }(w) && (n.preventDefault(), C.ComponentDispatch.dispatchKeyed(x.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, F.id, {
           emojiPicker: !0
         }));
         break;
@@ -94,7 +94,7 @@ t.default = function(e, t, n) {
         P && (n.preventDefault(), (0, v.markMessageUnread)(w, F));
         break;
       case "escape":
-        f.default.isEditing(w.id, F.id) ? l.default.endEditMessage(w.id) : g.ComponentDispatch.dispatch(x.ComponentActions.TEXTAREA_FOCUS)
+        f.default.isEditing(w.id, F.id) ? l.default.endEditMessage(w.id) : C.ComponentDispatch.dispatch(x.ComponentActions.TEXTAREA_FOCUS)
     }
   }, [e, t])
 }

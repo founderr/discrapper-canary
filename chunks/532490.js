@@ -16,8 +16,8 @@ var a, l, s = n("735250"),
   m = n("607070"),
   p = n("594174"),
   E = n("5192"),
-  C = n("603368"),
-  g = n("856682"),
+  g = n("603368"),
+  C = n("856682"),
   S = n("284019"),
   _ = n("689938"),
   T = n("830430");
@@ -81,7 +81,7 @@ t.default = i.memo(function(e) {
     z = (0, c.useToken)(c.tokens.colors.BG_SURFACE_OVERLAY),
     K = (0, c.useToken)(c.tokens.colors.BG_BRAND),
     Z = null != n ? n : K.hex(),
-    X = (0, C.getClanPrimaryButtonStyles)(Z, z.hex()),
+    X = (0, g.getClanPrimaryButtonStyles)(Z, z.hex()),
     {
       height: q = 87,
       ref: J
@@ -101,7 +101,7 @@ t.default = i.memo(function(e) {
   return (0, s.jsx)("div", {
     className: o()(T.container, N),
     ref: w,
-    children: (0, s.jsx)(g.default, {
+    children: (0, s.jsx)(C.default, {
       fullHeight: M,
       children: (0, s.jsxs)("div", {
         className: o()(T.overviewSidebarWrapper, M && T.fullHeight),

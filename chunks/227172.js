@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("757182"),
   p = n("706454"),
   E = n("374129"),
-  C = n("639351"),
-  g = n("823379"),
+  g = n("639351"),
+  C = n("823379"),
   S = n("192918"),
   _ = n("22211"),
   T = n("561308"),
@@ -30,7 +30,7 @@ var a = n("735250"),
   L = n("689938");
 let O = {
   [s.PlatformType.DESKTOP]: null,
-  [s.PlatformType.XBOX]: C.default,
+  [s.PlatformType.XBOX]: g.default,
   [s.PlatformType.PLAYSTATION]: E.default
 };
 t.default = e => {
@@ -40,7 +40,7 @@ t.default = e => {
     requestId: s,
     closePopout: E
   } = e, {
-    iconUrl: C,
+    iconUrl: g,
     iconTitle: j,
     user: P,
     details: D,
@@ -49,7 +49,7 @@ t.default = e => {
   } = (0, y.useGamingContentData)(n), {
     primaryColor: F,
     secondaryColor: w
-  } = (0, v.default)(C), k = (0, o.useStateFromStores)([p.default], () => p.default.locale), {
+  } = (0, v.default)(g), k = (0, o.useStateFromStores)([p.default], () => p.default.locale), {
     streamPreviewUrl: H,
     stream: G
   } = (0, _.default)(n), {
@@ -58,7 +58,7 @@ t.default = e => {
     participant2: W,
     numOtherParticipants: Y
   } = (0, S.default)(n, 3), z = (0, u.useToken)(u.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY), K = l.useCallback(e => {
-    if (null == C || null == t || null == P) return;
+    if (null == g || null == t || null == P) return;
     let a = Y > 0 ? (0, A.formatGroupCanvasDescription)({
       entry: n,
       channel: t,
@@ -67,14 +67,14 @@ t.default = e => {
     }) : (0, A.formatCanvasDescription)(n, t, P);
     return (0, I.generateGamingContentImage)({
       entry: n,
-      applicationImageSrc: C,
+      applicationImageSrc: g,
       avatarSrcs: B.map(e => e.getAvatarURL(t.guild_id, 128)),
       description: a,
       timestamp: (0, T.formatEntryTimestamp)(n, k),
       colors: [F, w],
       channelId: e
     })
-  }, [C, t, B, n, k, Y, V, W, F, w, P]);
+  }, [g, t, B, n, k, Y, V, W, F, w, P]);
   if (null == P) return null;
   let Z = null != n.extra.platform ? O[n.extra.platform] : null,
     X = (0, a.jsx)(N.BadgesContainer, {
@@ -84,7 +84,7 @@ t.default = e => {
       }, t))
     }),
     q = null == H ? (0, a.jsx)(M.PopoutContent, {
-      thumbnailSrc: C,
+      thumbnailSrc: g,
       thumbnailTitle: j,
       channel: t,
       headerIcons: null != Z ? (0, a.jsx)(Z, {
@@ -120,7 +120,7 @@ t.default = e => {
         IconComponent: i.EyeIcon,
         ...e
       })
-    }) : null].filter(g.isNotNullish);
+    }) : null].filter(C.isNotNullish);
   return (0, a.jsxs)(M.Popout, {
     children: [q, (0, a.jsx)(M.PopoutInteractionsContainer, {
       children: (0, a.jsx)(M.Reactor, {

@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("372900"),
   p = n("200120"),
   E = n("937889"),
-  C = n("739566"),
-  g = n("378233"),
+  g = n("739566"),
+  C = n("378233"),
   S = n("419922"),
   _ = n("375954"),
   T = n("699516"),
@@ -40,7 +40,7 @@ function O(e) {
   var t;
   let {
     message: n
-  } = e, s = (0, u.useStateFromStores)([T.default], () => T.default.isBlocked(n.author.id)), r = (0, C.useNullableMessageAuthor)(n), o = l.useContext(m.default), [c, _] = l.useState(!1), v = (0, p.useActiveKeywordFiltersCacheKey)(), x = l.useCallback(e => {
+  } = e, s = (0, u.useStateFromStores)([T.default], () => T.default.isBlocked(n.author.id)), r = (0, g.useNullableMessageAuthor)(n), o = l.useContext(m.default), [c, _] = l.useState(!1), v = (0, p.useActiveKeywordFiltersCacheKey)(), x = l.useCallback(e => {
     "A" !== e.target.nodeName && (f.default.updateChatOpen(n.channel_id, !0), h.default.jumpToMessage({
       channelId: n.channel_id,
       messageId: n.id,
@@ -58,7 +58,7 @@ function O(e) {
     trailingIconClass: R.messageContentTrailingIcon,
     leadingIconClass: R.messageContentLeadingIcon,
     iconSize: y.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
-  }), P = (0, g.getMessageStickers)(n), D = P.length > 0 ? P.map(e => (0, a.jsx)(S.default, {
+  }), P = (0, C.getMessageStickers)(n), D = P.length > 0 ? P.map(e => (0, a.jsx)(S.default, {
     className: R.sticker,
     size: 128,
     sticker: e,
@@ -138,7 +138,7 @@ function j(e) {
     isFrozen: s,
     count: 3,
     lingerMs: L
-  }), m = l.useRef({}), [p, E] = l.useState({}), C = l.useCallback((e, t) => {
+  }), m = l.useRef({}), [p, E] = l.useState({}), g = l.useCallback((e, t) => {
     null == t ? delete m.current[e] : m.current[e] = t
   }, []);
   l.useLayoutEffect(() => {
@@ -150,12 +150,12 @@ function j(e) {
       e[a.id] = t, t += l + 8
     }!(0, r.isEqual)(e, p) && E(e)
   }, [h]);
-  let g = h.map(e => ({
+  let C = h.map(e => ({
       message: e,
       height: m.current[e.id],
       y: p[e.id]
     })),
-    S = (0, o.useTransition)(g, {
+    S = (0, o.useTransition)(C, {
       keys: e => e.message.id,
       from: () => ({
         opacity: 0
@@ -198,7 +198,7 @@ function j(e) {
       d(!1)
     },
     children: S((e, t) => (0, a.jsx)(o.animated.div, {
-      ref: e => C(t.message.id, null != e ? e.offsetHeight : null),
+      ref: e => g(t.message.id, null != e ? e.offsetHeight : null),
       className: R.toastWrapper,
       style: e,
       children: (0, a.jsx)(O, {

@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("484459"),
   p = n("103575"),
   E = n("158776"),
-  C = n("699516"),
-  g = n("111583"),
+  g = n("699516"),
+  C = n("111583"),
   S = n("594174"),
   _ = n("467679"),
   T = n("729285"),
@@ -45,7 +45,7 @@ function U(e) {
     status: d,
     activities: c,
     lastOnlineTimestamp: f
-  } = e, h = (0, i.useStateFromStores)([g.default], () => null != g.default.getTypingUsers(l.id)[t.id]), _ = (0, i.useStateFromStores)([S.default], () => S.default.getCurrentUser()), T = (0, i.useStateFromStores)([E.default], () => E.default.isMobileOnline(t.id)), I = (0, i.useStateFromStores)([C.default], () => C.default.getNickname(t.id)), A = e => {
+  } = e, h = (0, i.useStateFromStores)([C.default], () => null != C.default.getTypingUsers(l.id)[t.id]), _ = (0, i.useStateFromStores)([S.default], () => S.default.getCurrentUser()), T = (0, i.useStateFromStores)([E.default], () => E.default.isMobileOnline(t.id)), I = (0, i.useStateFromStores)([g.default], () => g.default.getNickname(t.id)), A = e => {
     (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -170,7 +170,7 @@ function w(e) {
     analyticsLocations: u
   } = (0, c.default)(d.default.MEMBER_LIST), {
     shouldTrackRecentlyOnlineExposure: p,
-    listItems: g
+    listItems: C
   } = function(e) {
     let {
       isRecentlyOnlineEnabled: t
@@ -178,11 +178,11 @@ function w(e) {
       location: "n/a"
     }, {
       autoTrackExposure: !1
-    }), n = (0, i.useStateFromStoresArray)([S.default], () => (0, M.getRecipients)(e.recipients, S.default), [e.recipients]), a = l.useRef(!1), s = (0, i.useStateFromStoresObject)([C.default, S.default, E.default], () => {
+    }), n = (0, i.useStateFromStoresArray)([S.default], () => (0, M.getRecipients)(e.recipients, S.default), [e.recipients]), a = l.useRef(!1), s = (0, i.useStateFromStoresObject)([g.default, S.default, E.default], () => {
       let e = {};
       for (let i of n) {
         var t, l, s;
-        if (C.default.isFriend(i.id) || i.id === (null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) {
+        if (g.default.isFriend(i.id) || i.id === (null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) {
           let t = E.default.getLastOnlineTimestamp(i.id),
             {
               isRecentlyOnlineShowable: n,
@@ -241,18 +241,18 @@ function w(e) {
   });
   l.useEffect(() => {
     if (o)
-      for (let e of g)(0, m.maybeFetchUserProfileForPopout)(e.user, {
+      for (let e of C)(0, m.maybeFetchUserProfileForPopout)(e.user, {
         dispatchWait: !0,
         channelId: t.id
       })
-  }, [o, g, t.id]), l.useEffect(() => {
+  }, [o, C, t.id]), l.useEffect(() => {
     v.default.track(O.AnalyticEvents.MEMBER_LIST_VIEWED, {
       channel_id: t.id,
       channel_type: t.type,
       guild_id: t.guild_id
     })
   }, [t.guild_id, t.id, t.type]);
-  let b = o && g.every(e => e.user.isStaff());
+  let b = o && C.every(e => e.user.isStaff());
   return (0, a.jsx)(c.AnalyticsLocationProvider, {
     value: u,
     children: (0, a.jsx)("div", {
@@ -262,11 +262,11 @@ function w(e) {
         fade: !0,
         children: [(0, a.jsxs)(A.default, {
           className: D.membersGroup,
-          children: ["".concat(j.default.Messages.MEMBERS, "—").concat(g.length, " "), b ? (0, a.jsx)(_.default, {
+          children: ["".concat(j.default.Messages.MEMBERS, "—").concat(C.length, " "), b ? (0, a.jsx)(_.default, {
             className: D.__invalid_decorator,
             type: _.default.Types.STAFF_ONLY_DM
           }) : null]
-        }), g.map(e => (0, a.jsx)(U, {
+        }), C.map(e => (0, a.jsx)(U, {
           user: e.user,
           status: e.status,
           activities: e.activities,

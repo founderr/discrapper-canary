@@ -25,8 +25,8 @@ function p(e) {
     hideDiscriminator: l,
     comparator: p,
     selected: E,
-    checked: C,
-    onClick: g,
+    checked: g,
+    onClick: C,
     onMouseEnter: S,
     "aria-setsize": _,
     "aria-posinset": T
@@ -35,14 +35,14 @@ function p(e) {
     id: "user-row-".concat(n),
     className: m.friendWrapper,
     onClick: () => {
-      null != g && g(t.id)
+      null != C && C(t.id)
     },
     onMouseEnter: () => {
       null != S && S(n)
     },
     ...A,
     role: "option",
-    "aria-selected": C,
+    "aria-selected": g,
     "aria-setsize": _,
     "aria-posinset": T,
     children: (0, a.jsxs)(f.default, {
@@ -74,7 +74,7 @@ function p(e) {
       }), (0, a.jsx)(o.Checkbox, {
         displayOnly: !0,
         size: 22,
-        value: C,
+        value: g,
         className: m.checkbox
       })]
     })

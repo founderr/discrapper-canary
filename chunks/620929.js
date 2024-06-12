@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("105671"),
   p = n("532490"),
   E = n("979264"),
-  C = n("570938"),
-  g = n("550271"),
+  g = n("570938"),
+  C = n("550271"),
   S = n("116175"),
   _ = n("308083"),
   T = n("689938"),
@@ -35,7 +35,7 @@ function A(e) {
   } = e;
   return null == n || 0 === n.length ? (0, a.jsx)("div", {
     className: I.placeholderIcon,
-    children: (0, a.jsx)(C.default, {
+    children: (0, a.jsx)(g.default, {
       height: 42,
       width: 42
     })
@@ -46,7 +46,7 @@ function A(e) {
     textVariant: "heading-lg/semibold",
     textColor: "text-normal",
     badgeSize: _.ClanTagBadgeSize.SIZE_24,
-    clanBadge: (0, a.jsx)(g.ClanBadge, {
+    clanBadge: (0, a.jsx)(C.ClanBadge, {
       className: I.charterClanBadge,
       badge: l,
       width: _.ClanTagBadgeSize.SIZE_24,
@@ -90,8 +90,8 @@ t.default = e => {
     playstyle: r,
     interests: m,
     tag: E,
-    badgeKind: C,
-    badgePrimaryColor: g,
+    badgeKind: g,
+    badgePrimaryColor: C,
     badgeSecondaryColor: x
   } = (0, u.useStateFromStoresObject)([f.default], () => {
     var e;
@@ -102,8 +102,8 @@ t.default = e => {
     children: [(0, a.jsx)(A, {
       guildId: t,
       tag: E,
-      badge: C,
-      primaryColor: null != g ? g : S.CLAN_BADGE_PRIMARY_DEFAULT,
+      badge: g,
+      primaryColor: null != C ? C : S.CLAN_BADGE_PRIMARY_DEFAULT,
       secondaryColor: null != x ? x : S.CLAN_BADGE_SECONDARY_DEFAULT
     }), (0, a.jsx)(d.Heading, {
       variant: "heading-xl/normal",

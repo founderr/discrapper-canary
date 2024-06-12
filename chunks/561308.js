@@ -10,16 +10,16 @@ n.r(t), n.d(t, {
     return S
   },
   formatEntryTimestamp: function() {
-    return m
+    return C
   },
   getAggregateRange: function() {
-    return v
+    return p
   },
   getEntryDuration: function() {
     return g
   },
   getFullMarathonDescription: function() {
-    return D
+    return P
   },
   getFullResurrectedBadgeText: function() {
     return A
@@ -28,16 +28,16 @@ n.r(t), n.d(t, {
     return U
   },
   getMarathonName: function() {
-    return P
+    return D
   },
   getResurrectedEntryLastPlayTime: function() {
     return L
   },
   getStreakCount: function() {
-    return O
+    return M
   },
   getTrait: function() {
-    return C
+    return m
   },
   getTrendingType: function() {
     return y
@@ -46,7 +46,7 @@ n.r(t), n.d(t, {
     return N
   },
   isEntryExpired: function() {
-    return p
+    return v
   },
   isEntryMarathon: function() {
     return h
@@ -55,7 +55,7 @@ n.r(t), n.d(t, {
     return R
   },
   isEntryTopGame: function() {
-    return M
+    return O
   },
   isValidStreak: function() {
     return x
@@ -140,43 +140,43 @@ let _ = e => {
       count: r
     })
   },
-  m = (e, t) => N(e) ? I(e, Date.now()) : S(e, t);
+  C = (e, t) => N(e) ? I(e, Date.now()) : S(e, t);
 
-function C(e, t) {
+function m(e, t) {
   return e.traits.find(e => e.type === t)
 }
 
 function N(e) {
   var t, n;
-  return null !== (n = null === (t = C(e, r.ContentInventoryTraitType.IS_LIVE)) || void 0 === t ? void 0 : t.is_live) && void 0 !== n && n
+  return null !== (n = null === (t = m(e, r.ContentInventoryTraitType.IS_LIVE)) || void 0 === t ? void 0 : t.is_live) && void 0 !== n && n
 }
 
 function R(e) {
   var t, n;
-  return null !== (n = null === (t = C(e, r.ContentInventoryTraitType.FIRST_TIME)) || void 0 === t ? void 0 : t.first_time) && void 0 !== n && n
+  return null !== (n = null === (t = m(e, r.ContentInventoryTraitType.FIRST_TIME)) || void 0 === t ? void 0 : t.first_time) && void 0 !== n && n
 }
 
-function p(e) {
+function v(e) {
   return null != e.expires_at && new Date(e.expires_at) < new Date
 }
 
 function g(e) {
   var t;
-  return null === (t = C(e, r.ContentInventoryTraitType.DURATION_SECONDS)) || void 0 === t ? void 0 : t.duration_seconds
+  return null === (t = m(e, r.ContentInventoryTraitType.DURATION_SECONDS)) || void 0 === t ? void 0 : t.duration_seconds
 }
 
-function v(e) {
+function p(e) {
   var t;
-  return null === (t = C(e, r.ContentInventoryTraitType.AGGREGATE_RANGE)) || void 0 === t ? void 0 : t.range
+  return null === (t = m(e, r.ContentInventoryTraitType.AGGREGATE_RANGE)) || void 0 === t ? void 0 : t.range
 }
 
 function h(e) {
   var t;
-  return null === (t = C(e, r.ContentInventoryTraitType.MARATHON)) || void 0 === t ? void 0 : t.marathon
+  return null === (t = m(e, r.ContentInventoryTraitType.MARATHON)) || void 0 === t ? void 0 : t.marathon
 }
 
 function L(e) {
-  let t = C(e, r.ContentInventoryTraitType.RESURRECTED);
+  let t = m(e, r.ContentInventoryTraitType.RESURRECTED);
   return (null == t ? void 0 : t.resurrected_last_played) != null ? new Date(t.resurrected_last_played) : void 0
 }
 
@@ -196,17 +196,17 @@ function A(e) {
   })
 }
 
-function M(e) {
+function O(e) {
   return e.content_type === u.ContentInventoryEntryType.TOP_GAME
 }
 
-function O(e) {
+function M(e) {
   var t;
-  return null === (t = C(e, r.ContentInventoryTraitType.STREAK_DAYS)) || void 0 === t ? void 0 : t.streak_count_days
+  return null === (t = m(e, r.ContentInventoryTraitType.STREAK_DAYS)) || void 0 === t ? void 0 : t.streak_count_days
 }
 
 function x(e) {
-  let t = O(e);
+  let t = M(e);
   if (null == t || t < 3) return !1;
   let n = c.default.extractTimestamp(e.id);
   return !(Date.now() - n > 48 * d.default.Millis.HOUR) && !0
@@ -221,21 +221,21 @@ function U(e) {
   })
 }
 
-function P(e) {
+function D(e) {
   var t;
   let n = null !== (t = g(e)) && void 0 !== t ? t : 0;
   return n > 10 * d.default.Seconds.HOUR ? E.default.Messages.MEMBER_LIST_CONTENT_FEED_EPIC_MARATHON : n > 5 * d.default.Seconds.HOUR ? E.default.Messages.MEMBER_LIST_CONTENT_FEED_ULTRA_MARATHON : E.default.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON
 }
 
-function D(e) {
+function P(e) {
   let t = U(e),
-    n = P(e);
+    n = D(e);
   return null == t ? n : "".concat(n, " — ").concat(t)
 }
 
 function y(e) {
   var t;
-  return null === (t = C(e, r.ContentInventoryTraitType.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending
+  return null === (t = m(e, r.ContentInventoryTraitType.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending
 }
 
 function j(e) {

@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   useProgressBarColors: function() {
-    return C
+    return m
   },
   useQuestBarCompletionAnimation: function() {
-    return m
+    return C
   },
   useQuestBarSubtitle: function() {
     return h
@@ -66,7 +66,7 @@ function h(e, t) {
   }) : _.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED_SUBTITLE
 }
 
-function m() {
+function C() {
   let [{
     spring: e
   }, t] = (0, n.useSpring)(() => ({
@@ -85,7 +85,7 @@ function m() {
   }
 }
 
-function C(e) {
+function m(e) {
   var t;
   let s = null !== (t = (0, i.useThemeIndex)()) && void 0 !== t ? t : 0,
     a = "var(--green-330)",

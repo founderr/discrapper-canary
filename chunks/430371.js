@@ -18,13 +18,13 @@ var a = n("735250"),
   m = n("27457"),
   p = n("111248"),
   E = n("312703"),
-  C = n("796638"),
-  g = n("981631"),
+  g = n("796638"),
+  C = n("981631"),
   S = n("354459"),
   _ = n("825532"),
   T = n("16869");
 let I = 16 / 9,
-  A = 8 + C.PARTICIPANTS_HEIGHT;
+  A = 8 + g.PARTICIPANTS_HEIGHT;
 
 function v(e) {
   let t, {
@@ -57,7 +57,7 @@ function v(e) {
     q = b <= 2 * A + 144,
     J = O && !q,
     Q = (0, o.default)(J),
-    $ = U === g.ChannelLayouts.MINIMUM || U === g.ChannelLayouts.NORMAL,
+    $ = U === C.ChannelLayouts.MINIMUM || U === C.ChannelLayouts.NORMAL,
     ee = !q && (!$ || K),
     et = (0, h.default)(ee, 100),
     en = 0;
@@ -82,9 +82,9 @@ function v(e) {
         clamp: !0
       },
       onStart: () => z(!0),
-      onChange: () => f.ComponentDispatch.dispatch(g.ComponentActions.REMEASURE_TARGET),
+      onChange: () => f.ComponentDispatch.dispatch(C.ComponentActions.REMEASURE_TARGET),
       onRest: () => {
-        z(!1), f.ComponentDispatch.dispatch(g.ComponentActions.REMEASURE_TARGET)
+        z(!1), f.ComponentDispatch.dispatch(C.ComponentActions.REMEASURE_TARGET)
       }
     }),
     eo = (0, r.useSpring)({
@@ -133,7 +133,7 @@ function v(e) {
     {
       visibleParticipants: em,
       participantTileWidth: ep
-    } = (0, C.useVisibleParticipants)(D, N);
+    } = (0, g.useVisibleParticipants)(D, N);
   return (0, a.jsxs)("div", {
     className: i()(T.root, _.flexCenter, j),
     children: [(0, a.jsxs)("div", {
@@ -202,7 +202,7 @@ function v(e) {
           opacity: er.value,
           visibility: er.value.to(e => 0 === e ? "hidden" : "visible")
         },
-        children: (0, a.jsx)(C.default, {
+        children: (0, a.jsx)(g.default, {
           channel: R,
           onClick: n,
           onContextMenu: s,

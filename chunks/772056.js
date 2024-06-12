@@ -24,8 +24,8 @@ t.default = e => {
     loadingContentsCount: m = 0,
     className: p,
     onExpand: E,
-    onHover: C,
-    onFocus: g
+    onHover: g,
+    onFocus: C
   } = e, [S, _] = i.useState(!0), T = (0, s.jsx)("div", {
     className: f.iconWrapper,
     children: (0, s.jsx)(d.default, {
@@ -38,8 +38,8 @@ t.default = e => {
       className: f.collapseBtn,
       innerClassName: f.collapseBtnContent,
       color: u.ButtonColors.CUSTOM,
-      onMouseEnter: C,
-      onFocus: g,
+      onMouseEnter: g,
+      onFocus: C,
       onClick: () => {
         _(!S), S && (null == E || E())
       },

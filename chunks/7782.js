@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("621853"),
   p = n("171368"),
   E = n("433355"),
-  C = n("699516"),
-  g = n("594174"),
+  g = n("699516"),
+  C = n("594174"),
   S = n("806519"),
   _ = n("768581"),
   T = n("525541"),
@@ -86,7 +86,7 @@ let M = e => {
       relationshipType: n,
       userId: l,
       showingBanner: s
-    } = e, i = null === (t = g.default.getUser(l)) || void 0 === t ? void 0 : t.bot, u = () => {
+    } = e, i = null === (t = C.default.getUser(l)) || void 0 === t ? void 0 : t.bot, u = () => {
       o.default.addRelationship({
         userId: l,
         context: {
@@ -197,13 +197,13 @@ let M = e => {
       isAcceptLoading: f,
       isRejectLoading: m,
       isOptimisticAccepted: p,
-      isOptimisticRejected: C
+      isOptimisticRejected: g
     } = (0, d.useMessageRequestActions)({
-      user: g.default.getUser(n),
+      user: C.default.getUser(n),
       onError: s,
       onAcceptSuccess: o,
       onRejectSuccess: i
-    }), S = f || m || p || C;
+    }), S = f || m || p || g;
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(r.Button, {
         className: N.action,
@@ -230,7 +230,7 @@ t.default = e => {
     showingBanner: l
   } = e, {
     channelId: r
-  } = (0, c.useMessageRequestSidebarState)(), o = (0, i.useStateFromStores)([u.default], () => null != r && u.default.isSpam(r), [r]), d = (0, i.useStateFromStores)([C.default], () => C.default.getRelationshipType(t), [t]), h = n.id === r;
+  } = (0, c.useMessageRequestSidebarState)(), o = (0, i.useStateFromStores)([u.default], () => null != r && u.default.isSpam(r), [r]), d = (0, i.useStateFromStores)([g.default], () => g.default.getRelationshipType(t), [t]), h = n.id === r;
   return t === A.CLYDE_AI_USER_ID ? null : o || h ? (0, a.jsxs)("div", {
     className: N.mobileContainer,
     children: [(0, a.jsx)("div", {

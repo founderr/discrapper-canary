@@ -17,7 +17,7 @@ t.default = e => {
     channel: f,
     animateAssets: h,
     forceShowPremiumBadge: m
-  } = e, p = t.isNonUserBot(), [E, C] = (0, l.useStateFromStoresArray)([i.default], () => [p ? null : i.default.getStatus(t.id), i.default.isMobileOnline(t.id)]), g = null == n ? void 0 : n.profileEffectId;
+  } = e, p = t.isNonUserBot(), [E, g] = (0, l.useStateFromStoresArray)([i.default], () => [p ? null : i.default.getStatus(t.id), i.default.isMobileOnline(t.id)]), C = null == n ? void 0 : n.profileEffectId;
   return (0, a.jsxs)("div", {
     children: [(0, a.jsx)(r.default, {
       user: t,
@@ -30,7 +30,7 @@ t.default = e => {
       user: t,
       displayProfile: n,
       status: E,
-      isMobile: C,
+      isMobile: g,
       channelId: f.id,
       disableUserProfileLink: !0,
       hasBanner: (null == n ? void 0 : n.banner) != null,
@@ -43,8 +43,8 @@ t.default = e => {
         user: t,
         size: o.BadgeSizes.SIZE_22
       })
-    }), null != g && (0, a.jsx)(s.default, {
-      profileEffectId: g,
+    }), null != C && (0, a.jsx)(s.default, {
+      profileEffectId: C,
       maxLoops: 0,
       resetOnHover: !0,
       isHovering: m,

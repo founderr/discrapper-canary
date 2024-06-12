@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return g
   }
 }), n("47120");
 var a = n("735250"),
@@ -19,13 +19,13 @@ var a = n("735250"),
   p = n("546240"),
   E = n("952009");
 
-function C(e) {
+function g(e) {
   let {
     checked: t,
     labelText: n,
     tooltipText: s,
-    canToggle: C,
-    iconAltText: g,
+    canToggle: g,
+    iconAltText: C,
     onChange: S,
     tooltipColor: _,
     className: T,
@@ -54,7 +54,7 @@ function C(e) {
       className: m.visuallyHidden,
       checked: t,
       onChange: function() {
-        if (C) {
+        if (g) {
           let e = !t;
           y(!0), null == S || S(e)
         }
@@ -68,7 +68,7 @@ function C(e) {
       className: i()(m.label, T, {
         [m.transition]: M,
         [m.labelChecked]: t,
-        [m.labelUnchecked]: !t && !C
+        [m.labelUnchecked]: !t && !g
       }),
       style: A ? {
         width: t ? O : O + P
@@ -79,7 +79,7 @@ function C(e) {
       }) : null, (0, a.jsx)("img", {
         ref: j,
         src: L,
-        alt: g
+        alt: C
       }), (0, a.jsx)("span", {
         ref: D,
         children: (0, a.jsx)(u.Text, {

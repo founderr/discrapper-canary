@@ -14,7 +14,7 @@ function o(e) {
   let {
     onError: t,
     onSuccess: s
-  } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [E, _] = a.useState(!1), [f, h] = a.useState(!1), [m, C] = a.useState(!1), [T, g] = a.useState(!1), [A, p] = a.useState(!1), [N, S] = a.useState(!1), I = o || d || E || f || T || N, x = a.useCallback(async e => {
+  } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [E, _] = a.useState(!1), [f, h] = a.useState(!1), [C, m] = a.useState(!1), [T, g] = a.useState(!1), [A, p] = a.useState(!1), [N, S] = a.useState(!1), I = o || d || E || f || T || N, x = a.useCallback(async e => {
     if (!I) {
       u(!0);
       try {
@@ -50,7 +50,7 @@ function o(e) {
         _(!1)
       }
     }
-  }, [I, t, s]), M = a.useCallback(async e => {
+  }, [I, t, s]), O = a.useCallback(async e => {
     if (!I) {
       h(!0);
       try {
@@ -63,18 +63,18 @@ function o(e) {
       }
     }
   }, [I, t, s]), L = a.useCallback(async () => {
-    if (!m) {
-      C(!0);
+    if (!C) {
+      m(!0);
       try {
         await (0, l.getLinkCodeForCurrentUser)(), null == s || s()
       } catch (s) {
         let e = new n.APIError(s);
         null == t || t(e)
       } finally {
-        C(!1)
+        m(!1)
       }
     }
-  }, [m, t, s]), O = a.useCallback(async e => {
+  }, [C, t, s]), M = a.useCallback(async e => {
     if (!A) {
       p(!0);
       try {
@@ -103,8 +103,8 @@ function o(e) {
     acceptLinkRequest: x,
     declineLinkRequest: v,
     disconnectLinkRequest: R,
-    cancelLinkRequest: M,
-    selectTeenUser: O,
+    cancelLinkRequest: O,
+    selectTeenUser: M,
     getLinkCode: L,
     requestLink: y,
     loadMore: a.useCallback(async e => {
@@ -128,7 +128,7 @@ function o(e) {
     isDeclineLoading: d,
     isDisconnectLoading: E,
     isCancelLoading: f,
-    isGetLinkCodeLoading: m,
+    isGetLinkCodeLoading: C,
     isSelectTeenUserLoading: A,
     isRequestingLink: T,
     isMoreLoading: N

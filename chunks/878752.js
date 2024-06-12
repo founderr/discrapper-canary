@@ -19,8 +19,8 @@ var l = n("512722"),
   m = n("700785"),
   p = n("213652"),
   E = n("320427"),
-  C = n("145010"),
-  g = n("933686"),
+  g = n("145010"),
+  C = n("933686"),
   S = n("997614"),
   _ = n("159909"),
   T = n("981631"),
@@ -58,11 +58,11 @@ function A(e) {
     children: [y && (0, a.jsx)(S.default, {
       channel: t,
       themeable: l
-    }), R && (0, a.jsx)(g.default, {
+    }), R && (0, a.jsx)(C.default, {
       channel: t
     }), N && M && (0, a.jsx)(p.default, {
       channel: t
-    }), x && n && (0, a.jsx)(E.default, {}), x && n && (0, a.jsx)(C.default, {
+    }), x && n && (0, a.jsx)(E.default, {}), x && n && (0, a.jsx)(g.default, {
       channel: t
     }), x && n && (0, a.jsx)(_.default, {})]
   })

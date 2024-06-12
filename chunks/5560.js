@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("819640"),
   p = n("451478"),
   E = n("486458"),
-  C = n("21825"),
-  g = n("232495"),
+  g = n("21825"),
+  C = n("232495"),
   S = n("10401"),
   _ = n("544947");
 
@@ -82,7 +82,7 @@ class I extends l.PureComponent {
     let {
       tutorialId: e
     } = this.props;
-    return (0, g.getTutorialPopoutText)(e)
+    return (0, C.getTutorialPopoutText)(e)
   }
   render() {
     let {
@@ -90,7 +90,7 @@ class I extends l.PureComponent {
       autoInvert: t,
       focused: n,
       origin: l
-    } = this.props, s = (0, C.getTutorialPopoutAttributes)(e);
+    } = this.props, s = (0, g.getTutorialPopoutAttributes)(e);
     if (null == s) return null;
     let {
       media: r,
@@ -102,10 +102,10 @@ class I extends l.PureComponent {
       popoutPosition: m
     } = s, {
       offsetX: p,
-      offsetY: g
+      offsetY: C
     } = this.state, S = {
       left: null != p ? l.x + p : void 0,
-      top: null != g ? l.y + g : void 0
+      top: null != C ? l.y + C : void 0
     }, T = e => {
       let t = n && !e;
       return !0 !== d ? null : (0, a.jsxs)("div", {

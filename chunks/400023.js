@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("135938"),
   p = n("160404"),
   E = n("765104"),
-  C = n("695346"),
-  g = n("314897"),
+  g = n("695346"),
+  C = n("314897"),
   S = n("323873"),
   _ = n("607744"),
   T = n("375954"),
@@ -42,8 +42,8 @@ let F = l.memo(function(e) {
     scrollerClassName: h,
     channel: m,
     messages: E,
-    unreadCount: C,
-    showNewMessagesBar: g,
+    unreadCount: g,
+    showNewMessagesBar: C,
     messageDisplayCompact: S,
     channelStream: _,
     uploads: T,
@@ -94,8 +94,8 @@ let F = l.memo(function(e) {
     } = (0, P.default)({
       channel: m,
       messages: E,
-      unreadCount: C,
-      showNewMessagesBar: g,
+      unreadCount: g,
+      showNewMessagesBar: C,
       messageDisplayCompact: S,
       channelStream: _,
       uploads: T,
@@ -225,8 +225,8 @@ t.default = l.memo(function(e) {
     renderSpoilers: P,
     keyboardModeEnabled: b
   } = function() {
-    let e = C.MessageDisplayCompact.useSetting(),
-      t = C.RenderSpoilers.useSetting(),
+    let e = g.MessageDisplayCompact.useSetting(),
+      t = g.RenderSpoilers.useSetting(),
       {
         messageGroupSpacing: n,
         fontSize: a,
@@ -269,7 +269,7 @@ t.default = l.memo(function(e) {
       }, {
         autoTrackExposure: !1
       }),
-      r = null !== (n = null === (t = x.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(D.UserFlags.SPAMMER)) && void 0 !== n && n,
+      r = null !== (n = null === (t = x.default.getUser(C.default.getId())) || void 0 === t ? void 0 : t.hasFlag(D.UserFlags.SPAMMER)) && void 0 !== n && n,
       u = (0, c.useChannelSummariesExperiment)(e),
       d = (0, h.default)("use_topic_dividers_in_chat"),
       f = (0, o.useStateFromStoresArray)([E.default], () => {
@@ -277,7 +277,7 @@ t.default = l.memo(function(e) {
         return u && d && null !== (t = E.default.summaries(e.id)) && void 0 !== t ? t : []
       }, [u, e.id, d]),
       p = (0, o.useStateFromStores)([E.default], () => u ? E.default.selectedSummary(e.id) : null, [u, e.id]),
-      C = l.useMemo(() => (0, R.default)({
+      g = l.useMemo(() => (0, R.default)({
         channel: e,
         messages: a,
         oldestUnreadMessageId: s,
@@ -287,7 +287,7 @@ t.default = l.memo(function(e) {
       }), [a, e, s, i, f, p]);
     return {
       messages: a,
-      channelStream: C,
+      channelStream: g,
       oldestUnreadMessageId: s,
       editingMessageId: (0, o.useStateFromStores)([S.default], () => {
         var t;

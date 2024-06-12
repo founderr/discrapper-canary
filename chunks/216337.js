@@ -21,8 +21,8 @@ t.default = l.memo(function(e) {
   let {
     channel: t,
     isLastItem: n
-  } = e, l = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), p = (0, s.useStateFromStores)([d.default], () => d.default.can(c.Permissions.SEND_MESSAGES_IN_THREADS, t)), E = (0, o.useIsNonModInLockedThread)(t), C = (0, s.useStateFromStores)([u.default], () => u.default.getId());
-  return n ? p && !E && t.ownerId !== C ? (0, a.jsxs)("div", {
+  } = e, l = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), p = (0, s.useStateFromStores)([d.default], () => d.default.can(c.Permissions.SEND_MESSAGES_IN_THREADS, t)), E = (0, o.useIsNonModInLockedThread)(t), g = (0, s.useStateFromStores)([u.default], () => u.default.getId());
+  return n ? p && !E && t.ownerId !== g ? (0, a.jsxs)("div", {
     className: h.box,
     children: [(0, a.jsx)(i.LottieAnimation, {
       importData: m,

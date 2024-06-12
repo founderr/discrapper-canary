@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("446226"),
   p = n("937393"),
   E = n("43982"),
-  C = n("721351"),
-  g = n("420529"),
+  g = n("721351"),
+  C = n("420529"),
   S = n("927923"),
   _ = n("981631"),
   T = n("921944"),
@@ -30,7 +30,7 @@ function v(e) {
   let {
     onClose: t,
     channel: n
-  } = e, l = (0, g.default)(n);
+  } = e, l = (0, C.default)(n);
   return (0, a.jsx)(r.Menu, {
     onClose: t,
     onSelect: () => null,
@@ -44,7 +44,7 @@ function x(e) {
   let {
     channel: t,
     showLeftDivider: n = !1,
-    ...g
+    ...C
   } = e, x = (0, m.default)(), N = (0, s.useStateFromStores)([h.default], () => {
     var e, t;
     return null === (e = h.default.getSessionById(null !== (t = null == x ? void 0 : x.sessionId) && void 0 !== t ? t : "")) || void 0 === e ? void 0 : e.clientInfo.os
@@ -92,10 +92,10 @@ function x(e) {
             var t;
             return (0, a.jsx)(c.default, {
               ...e,
-              ...g,
+              ...C,
               onClick: () => D(!0),
               label: null != (t = N) ? t === S.GameConsoleTypes.XBOX ? I.default.Messages.XBOX_REMOTE_CONNECTED_RAW : I.default.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW : I.default.Messages.CONSOLE_TRANSFER,
-              iconComponent: (0, C.default)(N)
+              iconComponent: (0, g.default)(N)
             })
           }
         })]

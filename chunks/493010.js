@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("465670"),
   p = n("502568"),
   E = n("585483"),
-  C = n("909820"),
-  g = n("981631"),
+  g = n("909820"),
+  C = n("981631"),
   S = n("921944"),
   _ = n("689938"),
   T = n("899091");
@@ -31,7 +31,7 @@ t.default = function(e) {
     })
   }, []);
   let A = l.useCallback(() => {
-      i.default.updateChatOpen(t.id, !1), E.ComponentDispatch.safeDispatch(g.ComponentActions.FOCUS_CHAT_BUTTON)
+      i.default.updateChatOpen(t.id, !1), E.ComponentDispatch.safeDispatch(C.ComponentActions.FOCUS_CHAT_BUTTON)
     }, [t.id]),
     v = (0, a.jsx)(p.default.Icon, {
       icon: m.default,
@@ -41,7 +41,7 @@ t.default = function(e) {
   return (0, a.jsxs)(u.default, {
     sidebarType: u.ChatSidebarType.CallChatSidebar,
     maxWidth: I,
-    floatingLayer: C.default,
+    floatingLayer: g.default,
     children: [(0, a.jsx)(r.default, {
       channel: t,
       draftType: f.DraftType.ChannelMessage

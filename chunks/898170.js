@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   QuestBarBackgroundAnimation: function() {
-    return C
+    return m
   }
 }), s("47120"), s("724458");
 var a = s("735250"),
@@ -20,7 +20,7 @@ let f = [0, .5, 1],
     "layers[1].shapes[1].g.k.k": [0, .522, .278, .776, .5, .522, .278, .776, 1, .522, .278, .776],
     "layers[2].shapes[1].g.k.k": [0, .714, .271, .757, .5, .714, .271, .757, 1, .714, .271, .757]
   };
-async function m(e, t) {
+async function C(e, t) {
   let a = (await s.e("30166").then(s.t.bind(s, "235630", 19))).default;
   return function(e, t, s) {
     for (let a in t) {
@@ -35,14 +35,14 @@ async function m(e, t) {
   }(a, h, t), a
 }
 
-function C(e) {
+function m(e) {
   var t;
   let {
     animationClassName: s,
     className: l,
     quest: r,
     useReducedMotion: o
-  } = e, h = (0, u.useStateFromStores)([c.default], () => c.default.isFocused()), C = n.useRef(null), [T, g] = n.useState(!1), A = n.useMemo(() => {
+  } = e, h = (0, u.useStateFromStores)([c.default], () => c.default.isFocused()), m = n.useRef(null), [T, g] = n.useState(!1), A = n.useMemo(() => {
     if (null == r) return null;
     let e = (0, E.hexToRgb)(r.config.colors.primary),
       t = {
@@ -51,11 +51,11 @@ function C(e) {
         b: e.b / 255
       },
       s = f.reduce((e, s) => [...e, s, t.r, t.g, t.b], []);
-    return m(r.id, s)
+    return C(r.id, s)
   }, [r]), p = (null === (t = r.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, N = !o && h;
   n.useEffect(() => {
     var e, t, s, a;
-    h ? N && (null === (a = C.current) || void 0 === a || null === (s = a.animation) || void 0 === s || s.play()) : null === (t = C.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
+    h ? N && (null === (a = m.current) || void 0 === a || null === (s = a.animation) || void 0 === s || s.play()) : null === (t = m.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
   }, [N, h]);
   let S = n.useCallback(() => {
     g(!0)
@@ -68,7 +68,7 @@ function C(e) {
   }) : (0, a.jsx)("div", {
     className: i()(_.lottieAnimationBackgroundWrapper, l),
     children: (0, a.jsx)(d.LottieAnimation, {
-      ref: C,
+      ref: m,
       onComplete: S,
       importData: () => A,
       shouldAnimate: !T && N,

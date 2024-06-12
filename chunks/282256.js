@@ -43,11 +43,11 @@ t.default = l.memo(function(e) {
     m({
       maskImage: "linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) ".concat(i, "px)")
     })
-  }, []), E = (0, o.useResizeObserver)(p), C = (0, u.useShouldDisplayClanTag)(c.userId, s);
+  }, []), E = (0, o.useResizeObserver)(p), g = (0, u.useShouldDisplayClanTag)(c.userId, s);
   l.useEffect(() => {
     null != E.current && p()
-  }, [C]);
-  let g = (0, r.useIsVisible)(p);
+  }, [g]);
+  let C = (0, r.useIsVisible)(p);
   return (0, a.jsxs)("div", {
     className: i()(d.container, n && d.isOverlayContainer),
     ref: E,
@@ -56,9 +56,9 @@ t.default = l.memo(function(e) {
       children: t
     }), (0, a.jsx)("div", {
       className: d.chipletParent,
-      ref: g,
+      ref: C,
       children: (0, a.jsx)("span", {
-        className: i()(d.chipletContainer, !C && n && d.noPadding),
+        className: i()(d.chipletContainer, !g && n && d.noPadding),
         ref: f,
         style: h,
         children: (0, a.jsx)(u.default, {

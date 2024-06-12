@@ -11,10 +11,10 @@ t.default = (0, i.replaceIcon)(function(e) {
     height: n = 24,
     color: i = "currentColor",
     foreground: l,
-    ...r
+    ...u
   } = e;
   return (0, a.jsx)("svg", {
-    ...(0, s.default)(r),
+    ...(0, s.default)(u),
     width: t,
     height: n,
     viewBox: "0 0 24 24",

@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("894344"),
   p = n("314897"),
   E = n("936195"),
-  C = n("5192"),
-  g = n("561308"),
+  g = n("5192"),
+  C = n("561308"),
   S = n("256726"),
   _ = n("206295"),
   T = n("551228"),
@@ -35,7 +35,7 @@ let L = (e, t, n) => {
   let {
     artist: a,
     media: l
-  } = e, s = M.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_LISTENING_TO_MEDIA_ARTIST, i = C.default.getName(t.guild_id, t.id, n);
+  } = e, s = M.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_LISTENING_TO_MEDIA_ARTIST, i = g.default.getName(t.guild_id, t.id, n);
   return s.plainFormat({
     artist: a,
     userName: i,
@@ -63,7 +63,7 @@ function O(e) {
       seekBarStyles: {
         width: "".concat(Math.floor(r / i * 100), "%")
       },
-      durationTimestamp: (0, g.formatActiveTimestamp)({
+      durationTimestamp: (0, C.formatActiveTimestamp)({
         start: a
       }, n)
     }
@@ -112,7 +112,7 @@ function j(e) {
       var e;
       if (null == P || null == B) return;
       let t = null === (e = F.timestamps) || void 0 === e ? void 0 : e.start,
-        n = (0, g.formatActiveTimestamp)(null != t ? {
+        n = (0, C.formatActiveTimestamp)(null != t ? {
           start: t
         } : D, Date.now());
       return (0, S.generateListenContentImage)({
@@ -150,7 +150,7 @@ function j(e) {
       }
     }), y = () => {
       (0, d.openTrack)(F)
-    }, j = (0, f.default)(Y, N.SpotifyActionTypes.USER_ACTIVITY_SYNC, null != P ? C.default.getNickname(P.guild_id, P.id, B) : void 0)
+    }, j = (0, f.default)(Y, N.SpotifyActionTypes.USER_ACTIVITY_SYNC, null != P ? g.default.getNickname(P.guild_id, P.id, B) : void 0)
   }
   let X = (0, a.jsx)(I.PopoutContent, {
     thumbnailSrc: H,
@@ -161,7 +161,7 @@ function j(e) {
       "aria-label": j,
       provider: w.media.provider
     }),
-    userDescription: (0, g.isEntryActive)(D) ? M.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING : M.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
+    userDescription: (0, C.isEntryActive)(D) ? M.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING : M.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
     title: G,
     onClickTitle: y,
     subtitle: K,

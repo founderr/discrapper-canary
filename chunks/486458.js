@@ -19,8 +19,8 @@ var a, l, s, i, r, o = n("735250"),
   m = n("626135"),
   p = n("792125"),
   E = n("285952"),
-  C = n("981631"),
-  g = n("689938"),
+  g = n("981631"),
+  C = n("689938"),
   S = n("168411");
 
 function _(e, t, n) {
@@ -36,12 +36,12 @@ class T extends u.PureComponent {
     let {
       uniqueId: e
     } = this.props;
-    m.default.track(C.AnalyticEvents.SHOW_TUTORIAL, {
+    m.default.track(g.AnalyticEvents.SHOW_TUTORIAL, {
       tutorial: e
     })
   }
   componentWillUnmount() {
-    m.default.track(C.AnalyticEvents.CLOSE_TUTORIAL, {
+    m.default.track(g.AnalyticEvents.CLOSE_TUTORIAL, {
       tutorial: this.props.uniqueId,
       acknowledged: this.state.confirmed
     })
@@ -81,14 +81,14 @@ class T extends u.PureComponent {
         children: [(0, o.jsx)(h.Button, {
           size: h.ButtonSizes.SMALL,
           onClick: this.handleDismiss,
-          children: g.default.Messages.TUTORIAL_CLOSE
+          children: C.default.Messages.TUTORIAL_CLOSE
         }), (0, o.jsx)(h.Button, {
           size: h.ButtonSizes.SMALL,
           look: h.Button.Looks.BLANK,
           onClick: r,
           color: (0, f.isThemeLight)(i) ? h.Button.Colors.PRIMARY : h.Button.Colors.WHITE,
           className: u ? S.buttonSkipLeftAlign : S.buttonSkipCenterAlign,
-          children: g.default.Messages.SKIP_ALL_TIPS
+          children: C.default.Messages.SKIP_ALL_TIPS
         })]
       })]
     })
@@ -138,7 +138,7 @@ class I extends(s = u.PureComponent) {
         onSkipAll: t,
         uniqueId: n
       } = this.props;
-      e(), t(), m.default.track(C.AnalyticEvents.DISMISS_ALL_TUTORIALS, {
+      e(), t(), m.default.track(g.AnalyticEvents.DISMISS_ALL_TUTORIALS, {
         tutorial: n
       })
     }), _(this, "renderPopoutContent", e => {

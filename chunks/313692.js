@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("619753"),
   p = n("433355"),
   E = n("271383"),
-  C = n("594174"),
-  g = n("189432"),
+  g = n("594174"),
+  C = n("189432"),
   S = n("356778"),
   _ = n("370595"),
   T = n("991570"),
@@ -38,7 +38,7 @@ function x(e) {
   } = e, R = l.useRef(null), L = (0, o.useStateFromStores)([p.default], () => p.default.getGuildSidebarState(x), [x]), O = l.useRef(0), [j, P] = l.useState(null !== (t = null == L ? void 0 : L.details.additionalSearchQuery) && void 0 !== t ? t : {}), D = (0, S.useServerMessageHistoryForUser)(s, x, {
     addtionalQuery: j,
     shouldDispatch: !0
-  }), b = (0, o.useStateFromStores)([C.default], () => C.default.getUser(s), [s]), U = (0, o.useStateFromStores)([E.default], () => E.default.getMember(x, s), [x, s]), F = (0, T.useProfileThemedPanelBackground)(s, x);
+  }), b = (0, o.useStateFromStores)([g.default], () => g.default.getUser(s), [s]), U = (0, o.useStateFromStores)([E.default], () => E.default.getMember(x, s), [x, s]), F = (0, T.useProfileThemedPanelBackground)(s, x);
   l.useLayoutEffect(() => {
     let e = null == L ? void 0 : L.details.scrollOffset;
     if (null != e) {
@@ -52,7 +52,7 @@ function x(e) {
   let w = l.useCallback(e => {
       if (null == L) return;
       let t = e.target.scrollTop;
-      O.current = t, (0, g.openGuildMemberModViewSidebar)(x, s, L.baseChannelId, {
+      O.current = t, (0, C.openGuildMemberModViewSidebar)(x, s, L.baseChannelId, {
         modViewPanel: I.ModViewPanel.MESSAGE_HISTORY,
         additionalSearchQuery: j,
         scrollOffset: O.current
@@ -65,7 +65,7 @@ function x(e) {
         ...j,
         offset: 25 * e
       };
-      P(t), (0, g.openGuildMemberModViewSidebar)(x, s, L.baseChannelId, {
+      P(t), (0, C.openGuildMemberModViewSidebar)(x, s, L.baseChannelId, {
         modViewPanel: I.ModViewPanel.MESSAGE_HISTORY,
         additionalSearchQuery: t,
         scrollOffset: O.current

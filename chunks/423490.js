@@ -17,7 +17,7 @@ var a, l, s = n("735250"),
   p = n("921944"),
   E = n("930647");
 
-function C(e) {
+function g(e) {
   let t = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion),
     n = i.useRef(null);
   return i.useEffect(() => {
@@ -34,16 +34,16 @@ function C(e) {
   }, [n, t, e]), n
 }
 
-function g() {
+function C() {
   return (0, s.jsx)("div", {
-    ref: C(a || (a = n.t(h, 2))),
+    ref: g(a || (a = n.t(h, 2))),
     className: E.glow
   })
 }
 
 function S() {
   return (0, s.jsx)("div", {
-    ref: C(l || (l = n.t(m, 2))),
+    ref: g(l || (l = n.t(m, 2))),
     className: E.trinkets
   })
 }
@@ -57,7 +57,7 @@ let _ = e => {
     }), 1e4)
   }, []), (0, s.jsxs)("div", {
     className: E.animation,
-    children: [(0, s.jsx)(g, {}), (0, s.jsx)("div", {
+    children: [(0, s.jsx)(C, {}), (0, s.jsx)("div", {
       className: E.circleLayer
     }), (0, s.jsx)("div", {
       className: E.omniButton,

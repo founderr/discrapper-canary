@@ -22,15 +22,15 @@ function E(e) {
   let {
     channelId: t,
     warningId: E,
-    senderId: C
-  } = e, g = l.useCallback(() => {
+    senderId: g
+  } = e, C = l.useCallback(() => {
     (0, d.dismissChannelSafetyWarnings)(t, [E])
-  }, [t, E]), S = (0, i.useStateFromStores)([u.default], () => u.default.isBlocked(C)), _ = l.useMemo(() => ({
+  }, [t, E]), S = (0, i.useStateFromStores)([u.default], () => u.default.isBlocked(g)), _ = l.useMemo(() => ({
     channelId: t,
     warningId: E,
-    senderId: C,
+    senderId: g,
     warningType: c.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2
-  }), [t, E, C]);
+  }), [t, E, g]);
   l.useEffect(() => {
     (0, f.trackNamedViewEvent)({
       ..._,
@@ -56,7 +56,7 @@ function E(e) {
             onClose: s
           } = n;
           return (0, a.jsx)(e, {
-            otherUserId: C,
+            otherUserId: g,
             channelId: t,
             warningId: E,
             warningType: c.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2,
@@ -67,13 +67,13 @@ function E(e) {
       }, {
         modalKey: m.SAFETY_TOOLS_MODAL_KEY
       }), T(f.CtaEventTypes.USER_BANNER_OPEN_SAFETY_TOOLS)
-    }, [t, C, E, T]),
+    }, [t, g, E, T]),
     A = l.useCallback(() => {
-      g(), T(f.CtaEventTypes.USER_BANNER_BLOCK_CONFIRM)
-    }, [g, T]),
+      C(), T(f.CtaEventTypes.USER_BANNER_BLOCK_CONFIRM)
+    }, [C, T]),
     v = l.useCallback(() => {
-      g(), T(f.CtaEventTypes.USER_BANNER_BLOCK_AND_REPORT_CONFIRM)
-    }, [g, T]),
+      C(), T(f.CtaEventTypes.USER_BANNER_BLOCK_AND_REPORT_CONFIRM)
+    }, [C, T]),
     x = l.useCallback(() => {
       (0, r.openModalLazy)(async () => {
         let {
@@ -92,20 +92,20 @@ function E(e) {
               null == s || s(), T(f.CtaEventTypes.USER_BANNER_BLOCK_CANCEL)
             },
             onClose: s,
-            userId: C,
+            userId: g,
             channelId: t
           })
         }
       })
-    }, [A, v, C, t, T]);
+    }, [A, v, g, t, T]);
   return (0, a.jsx)(h.SafetyWarningBanner, {
     channelId: t,
     warningId: E,
-    senderId: C,
+    senderId: g,
     warningType: c.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2,
     header: p.default.Messages.INAPPROPRIATE_CONVERSATION_BANNER_HEADER,
     description: p.default.Messages.INAPPROPRIATE_CONVERSATION_BANNER_DESCRIPTION,
-    onDismiss: g,
+    onDismiss: C,
     buttons: [{
       text: p.default.Messages.INAPPROPRIATE_CONVERSATION_BANNER_OPEN_SAFETY_TOOLS_BUTTON,
       color: r.Button.Colors.BRAND,

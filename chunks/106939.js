@@ -20,8 +20,8 @@ var a = s("735250"),
   _ = s("758119"),
   f = s("100527"),
   h = s("906732"),
-  m = s("252618"),
-  C = s("605236"),
+  C = s("252618"),
+  m = s("605236"),
   T = s("984370"),
   g = s("797614"),
   A = s("108427"),
@@ -32,9 +32,9 @@ var a = s("735250"),
   x = s("158010"),
   v = s("626135"),
   R = s("792125"),
-  M = s("280570"),
+  O = s("280570"),
   L = s("914788"),
-  O = s("841409"),
+  M = s("841409"),
   y = s("652262"),
   D = s("880257"),
   b = s("631885"),
@@ -133,19 +133,19 @@ function q(e) {
 function W() {
   let e = (0, D.default)(),
     t = (0, b.useAcceptedRequestsCount)(),
-    s = (0, C.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE),
+    s = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE),
     l = (0, u.useStateFromStores)([L.default], () => L.default.getIsInitialized()),
     r = (0, y.useSelectedTeenId)(),
     {
       selectedTab: E,
       handleTabChange: f
-    } = (0, O.default)(),
+    } = (0, M.default)(),
     h = (0, I.useUID)(),
     T = S.default.getCurrentUser(),
     p = null != e,
     N = l && null != T && !p;
   return (n.useEffect(() => {
-    (0, A.trackAppUIViewed)("family-center"), M.default.initialPageLoad(), !s && (0, C.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
+    (0, A.trackAppUIViewed)("family-center"), O.default.initialPageLoad(), !s && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
       dismissAction: H.ContentDismissActionType.AUTO,
       forceTrack: !0
     })
@@ -162,7 +162,7 @@ function W() {
   }, [l, p]), N) ? ((0, _.openAgeGateModal)(B.AgeGateSource.FAMILY_CENTER), null) : (0, a.jsxs)("main", {
     className: i()(k.container),
     "aria-label": F.default.Messages.FAMILY_CENTER_TITLE,
-    children: [(0, a.jsx)(m.AppPageTitle, {
+    children: [(0, a.jsx)(C.AppPageTitle, {
       location: F.default.Messages.FAMILY_CENTER_TITLE
     }), (0, a.jsx)(Y, {
       section: E,
@@ -183,12 +183,12 @@ function W() {
 function z() {
   let {
     analyticsLocations: e
-  } = (0, h.default)(f.default.FAMILY_CENTER), t = (0, D.default)(), s = (0, b.useAcceptedRequestsCount)(), l = (0, C.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([L.default], () => L.default.getIsInitialized()), T = (0, y.useSelectedTeenId)(), x = (0, u.useStateFromStores)([p.default], () => p.default.theme), {
+  } = (0, h.default)(f.default.FAMILY_CENTER), t = (0, D.default)(), s = (0, b.useAcceptedRequestsCount)(), l = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([L.default], () => L.default.getIsInitialized()), T = (0, y.useSelectedTeenId)(), x = (0, u.useStateFromStores)([p.default], () => p.default.theme), {
     selectedTab: R,
     handleTabChange: j
-  } = (0, O.default)(), U = (0, I.useUID)(), P = S.default.getCurrentUser(), w = null != t, Y = r && null != P && !w;
+  } = (0, M.default)(), U = (0, I.useUID)(), P = S.default.getCurrentUser(), w = null != t, Y = r && null != P && !w;
   if (n.useEffect(() => {
-      E.setHomeLink(V.Routes.FAMILY_CENTER), (0, A.trackAppUIViewed)("family-center"), !L.default.isLoading() && L.default.canRefetch() && M.default.initialPageLoad(), !l && (0, C.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
+      E.setHomeLink(V.Routes.FAMILY_CENTER), (0, A.trackAppUIViewed)("family-center"), !L.default.isLoading() && L.default.canRefetch() && O.default.initialPageLoad(), !l && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
         dismissAction: H.ContentDismissActionType.AUTO,
         forceTrack: !0
       })
@@ -213,7 +213,7 @@ function z() {
     children: (0, a.jsxs)("main", {
       className: i()(k.container, k.containerSidenav),
       "aria-label": F.default.Messages.FAMILY_CENTER_TITLE,
-      children: [(0, a.jsx)(m.AppPageTitle, {
+      children: [(0, a.jsx)(C.AppPageTitle, {
         location: F.default.Messages.FAMILY_CENTER_TITLE
       }), (0, a.jsx)(q, {
         theme: x,

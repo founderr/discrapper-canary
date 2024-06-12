@@ -10,7 +10,7 @@ s.r(t), s.d(t, {
     return E
   },
   useLinkTimestampText: function() {
-    return m
+    return C
   },
   usePendingRequestCount: function() {
     return _
@@ -69,7 +69,7 @@ function h(e) {
   return null == s ? null : (0, i.formatUserActivityTimestamp)(new Date(s).getTime(), () => e, 7)
 }
 
-function m(e, t) {
+function C(e, t) {
   let s = (0, a.useStateFromStores)([l.default], () => l.default.getLinkTimestamp(e));
   return null != s ? (0, i.formatLinkTimestamp)(Date.parse(s), t === u.UserLinkStatus.PENDING ? u.PENDING_LINK_REQUEST_TIMESTAMP_FORMATTER : u.ACCEPTED_LINK_REQUEST_TIMESTAMP_FORMATTER) : null
 }

@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("271383"),
   p = n("877453"),
   E = n("93879"),
-  C = n("441674"),
-  g = n("526120"),
+  g = n("441674"),
+  C = n("526120"),
   S = n("734893"),
   _ = n("655359"),
   T = n("931261"),
@@ -96,7 +96,7 @@ function M(e) {
     }).start()
   }, [T, P, L, M]);
   let D = l.useCallback(() => {
-    null != I && (0, g.selectNewMemberActionChannel)(f, I.channelId)
+    null != I && (0, C.selectNewMemberActionChannel)(f, I.channelId)
   }, [f, I]);
   return null == E || y && !L ? null : (0, a.jsx)("div", {
     className: i()(v.container, m),
@@ -158,7 +158,7 @@ function M(e) {
           color: "text-muted",
           children: A.default.Messages.MEMBER_ACTION_CHAT
         })]
-      }), T ? (0, a.jsx)(C.default, {
+      }), T ? (0, a.jsx)(g.default, {
         className: v.completed,
         backgroundColor: R.hex(),
         width: 20,

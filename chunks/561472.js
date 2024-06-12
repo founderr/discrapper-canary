@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("594174"),
   p = n("585483"),
   E = n("127654"),
-  C = n("205822"),
-  g = n("731994"),
+  g = n("205822"),
+  C = n("731994"),
   S = n("981631"),
   _ = n("689938");
 t.default = function(e) {
@@ -30,12 +30,12 @@ t.default = function(e) {
   }), O = (0, s.useStateFromStores)([u.default], () => u.default.didAgree(y)) && !L, j = l.useMemo(() => !x && (T.isPrivate() && !T.isManaged() || null != y && (!T.isNSFW() || O) && N && d.default.canChatInGuild(y)), [N, O, T, y, x]), P = R ? S.ChannelTypesSets.GUILD_THREADS_ONLY.has(T.type) ? _.default.Messages.UPLOAD_TO_NEW_POST : _.default.Messages.UPLOAD_TO_NEW_THREAD : A ? _.default.Messages.UPLOAD_TO.format({
     destination: (0, r.computeChannelName)(T, m.default, h.default, !0)
   }) : _.default.Messages.UPLOAD_AREA_TITLE_NO_CONFIRMATION;
-  return M || !j ? null : (0, a.jsx)(C.default, {
+  return M || !j ? null : (0, a.jsx)(g.default, {
     className: t,
     style: n,
     title: P,
     description: R ? _.default.Messages.UPLOAD_AREA_NEW_THREAD_HELP : _.default.Messages.UPLOAD_AREA_HELP,
-    icons: g.DEFAULT_FILE_UPLOAD_ICONS,
+    icons: C.DEFAULT_FILE_UPLOAD_ICONS,
     onDrop: e => {
       if (M) return !1;
       j && null != T && ((0, E.promptToUpload)(e, T, I, {

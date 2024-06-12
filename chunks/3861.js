@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("677845"),
   p = n("430371"),
   E = n("236564"),
-  C = n("981631"),
-  g = n("354459"),
+  g = n("981631"),
+  C = n("354459"),
   S = n("825532");
 t.default = (0, r.default)(e => {
   let {
@@ -41,9 +41,9 @@ t.default = (0, r.default)(e => {
     awaitingRemoteSessionInfo: b
   } = e;
   l.useEffect(() => {
-    c.ComponentDispatch.dispatch(C.ComponentActions.REMEASURE_TARGET)
+    c.ComponentDispatch.dispatch(g.ComponentActions.REMEASURE_TARGET)
   }, [L, O]);
-  let U = l.useMemo(() => n.filter(e => e.type !== g.ParticipantTypes.ACTIVITY || !e.participants.some(e => (0, o.isActivityParticipantCurrentUserCurrentSession)(e))), [n, r]);
+  let U = l.useMemo(() => n.filter(e => e.type !== C.ParticipantTypes.ACTIVITY || !e.participants.some(e => (0, o.isActivityParticipantCurrentUserCurrentSession)(e))), [n, r]);
   if ((null == b ? void 0 : b.channelId) === v.id) return (0, a.jsx)(h.default, {
     height: O
   });
@@ -52,7 +52,7 @@ t.default = (0, r.default)(e => {
     participants: t,
     hasConnectPermission: x
   });
-  if (P === C.ChannelModes.VOICE) return (0, a.jsx)(u.default, {
+  if (P === g.ChannelModes.VOICE) return (0, a.jsx)(u.default, {
     guildId: v.guild_id,
     width: L,
     className: S.voiceCallWrapper,

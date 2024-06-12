@@ -34,7 +34,7 @@ let p = {
       children: l
     })
   };
-class C extends l.PureComponent {
+class g extends l.PureComponent {
   render() {
     let {
       region: e,
@@ -54,7 +54,7 @@ class C extends l.PureComponent {
     })
   }
 }
-class g extends l.PureComponent {
+class C extends l.PureComponent {
   componentDidMount() {
     null == this.props.regions && u.default.fetchRegions(null)
   }
@@ -84,7 +84,7 @@ class g extends l.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), m(this, "renderOption", (e, t) => (0, a.jsx)(C, {
+    super(...e), m(this, "renderOption", (e, t) => (0, a.jsx)(g, {
       region: e.value,
       selected: t
     }, e.value.id)), m(this, "getSelectedRegion", () => {
@@ -120,4 +120,4 @@ class g extends l.PureComponent {
 }
 t.default = r.default.connectStores([d.default], () => ({
   regions: d.default.getRegions(null)
-}))(g)
+}))(C)

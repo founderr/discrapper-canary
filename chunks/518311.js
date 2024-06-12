@@ -17,8 +17,8 @@ var a, l = n("735250"),
   m = n("115850"),
   p = n("481060"),
   E = n("570140"),
-  C = n("26151"),
-  g = n("493683"),
+  g = n("26151"),
+  C = n("493683"),
   S = n("758059"),
   _ = n("447543"),
   T = n("708690"),
@@ -594,16 +594,16 @@ class ed extends(a = s.PureComponent) {
         separator: !e.isScrolledToTop()
       })
     }), el(this, "createNewDM", e => {
-      g.default.openPrivateChannel(e, !1, !1, "New Group DM")
+      C.default.openPrivateChannel(e, !1, !1, "New Group DM")
     }), el(this, "pushToExistingDM", (e, t) => {
       let n = U.default.getChannelId() === e.id;
-      g.default.addRecipients(e.id, t, $.AnalyticsLocations.ADD_FRIENDS_TO_DM).then(a => {
+      C.default.addRecipients(e.id, t, $.AnalyticsLocations.ADD_FRIENDS_TO_DM).then(a => {
         if (n) {
           if (e.isDM() && a !== e.id) {
-            C.default.call(a, !1, !0);
+            g.default.call(a, !1, !0);
             return
           }
-          C.default.ring(a, t)
+          g.default.ring(a, t)
         }
       })
     }), el(this, "handleInviteUsers", () => {

@@ -24,8 +24,8 @@ var a = n("735250"),
   m = n("914010"),
   p = n("594174"),
   E = n("467679"),
-  C = n("346656"),
-  g = n("946734"),
+  g = n("346656"),
+  C = n("946734"),
   S = n("99843"),
   _ = n("372564"),
   T = n("984370"),
@@ -43,8 +43,8 @@ function N(e) {
     inSidebar: f = !1,
     handleClick: m,
     handleContextMenu: E,
-    handleParentClick: C,
-    handleParentContextMenu: g,
+    handleParentClick: g,
+    handleParentContextMenu: C,
     renderFollowButton: _
   } = e, N = (0, d.default)(t, r), {
     prefix: M,
@@ -154,8 +154,8 @@ function N(e) {
         O = (0, a.jsxs)(l.Fragment, {
           children: [R(e, v.default.Messages.TEXT_CHANNEL), (0, a.jsx)(T.default.Title, {
             level: y,
-            onContextMenu: g,
-            onClick: C,
+            onContextMenu: C,
+            onClick: g,
             className: i()(x.parentChannelName, x.cursorPointer),
             children: (0, u.computeChannelName)(s, p.default, h.default)
           }), (0, a.jsx)(T.default.Caret, {})]
@@ -211,7 +211,7 @@ function y(e, t) {
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(M, {
           channel: e
-        }), (0, a.jsx)(g.default, {
+        }), (0, a.jsx)(C.default, {
           channel: e
         }, e.id)]
       });
@@ -251,9 +251,9 @@ function L(e) {
     className: x.guildBreadcrumbContainer,
     children: ["left" === l && (0, a.jsx)(T.default.Caret, {
       direction: "left"
-    }), (0, a.jsx)(C.default, {
+    }), (0, a.jsx)(g.default, {
       guild: t,
-      size: C.default.Sizes.SMALLER,
+      size: g.default.Sizes.SMALLER,
       className: x.guildBreadcrumbIcon,
       active: !0
     }), (0, a.jsx)(T.default.Title, {

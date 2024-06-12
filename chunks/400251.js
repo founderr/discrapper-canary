@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("430824"),
   p = n("940627"),
   E = n("346656"),
-  C = n("808268"),
-  g = n("185403"),
+  g = n("808268"),
+  C = n("185403"),
   S = n("806519"),
   _ = n("404975"),
   T = n("768581"),
@@ -81,7 +81,7 @@ function R(e) {
               })
             },
             "aria-label": x.default.Messages.HUB_ENTRY_UPDATE,
-            children: (0, a.jsx)(g.default, {
+            children: (0, a.jsx)(C.default, {
               className: N.overflowIcon
             })
           })
@@ -111,7 +111,7 @@ function R(e) {
                   null == l || l(), t(e)
                 },
                 "aria-label": x.default.Messages.MORE,
-                children: (0, a.jsx)(C.default, {
+                children: (0, a.jsx)(g.default, {
                   className: N.overflowIcon
                 })
               })
@@ -126,14 +126,14 @@ t.default = e => {
   var t;
   let {
     entry: s
-  } = e, [i, C] = l.useState(!1), g = null != (0, r.useStateFromStores)([m.default], () => m.default.getGuild(s.guildId)), _ = async () => {
-    C(!0);
+  } = e, [i, g] = l.useState(!1), C = null != (0, r.useStateFromStores)([m.default], () => m.default.getGuild(s.guildId)), _ = async () => {
+    g(!0);
     try {
-      g ? (0, f.transitionToGuild)(s.guildId) : await d.default.joinGuild(s.guildId, {
+      C ? (0, f.transitionToGuild)(s.guildId) : await d.default.joinGuild(s.guildId, {
         source: v.JoinGuildSources.DIRECTORY_ENTRY
       })
     } finally {
-      C(!1)
+      g(!1)
     }
   }, I = T.default.getGuildSplashURL({
     id: s.guildId,
@@ -144,7 +144,7 @@ t.default = e => {
     icon: s.icon,
     size: 40
   })) && void 0 !== t ? t : void 0, M = x.default.Messages.JOIN;
-  return g && (M = x.default.Messages.HUB_DIRECTORY_CARD_JOINED_GUILD_BUTTON), (0, a.jsxs)("div", {
+  return C && (M = x.default.Messages.HUB_DIRECTORY_CARD_JOINED_GUILD_BUTTON), (0, a.jsxs)("div", {
     className: N.card,
     onContextMenu: e => {
       (0, u.openContextMenuLazy)(e, async () => {
@@ -231,7 +231,7 @@ t.default = e => {
       }), (0, a.jsx)(o.Button, {
         submitting: i,
         className: N.joinButton,
-        color: g ? o.Button.Colors.PRIMARY : o.Button.Colors.GREEN,
+        color: C ? o.Button.Colors.PRIMARY : o.Button.Colors.GREEN,
         onClick: _,
         children: M
       })]

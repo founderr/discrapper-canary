@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("612856"),
   p = n("137591"),
   E = n("299206"),
-  C = n("727429"),
-  g = n("359110"),
+  g = n("727429"),
+  C = n("359110"),
   S = n("465670"),
   _ = n("441957"),
   T = n("808268"),
@@ -73,13 +73,13 @@ function R(e) {
     channel: t,
     closePopout: n,
     onSelect: l
-  } = e, C = (0, o.default)(t, "Sidebar Overflow"), S = (0, d.default)(t), T = (0, h.default)(t), I = (0, m.default)(t), v = (0, i.default)(t), x = (0, u.default)(t), y = (0, f.default)(t.id), R = (0, c.default)(t), L = (0, r.default)(t), O = (0, E.default)({
+  } = e, g = (0, o.default)(t, "Sidebar Overflow"), S = (0, d.default)(t), T = (0, h.default)(t), I = (0, m.default)(t), v = (0, i.default)(t), x = (0, u.default)(t), y = (0, f.default)(t.id), R = (0, c.default)(t), L = (0, r.default)(t), O = (0, E.default)({
     id: t.id,
     label: M.default.Messages.COPY_ID_THREAD
   }), j = (0, p.default)(t);
 
   function P() {
-    (0, g.transitionToChannel)(t.id)
+    (0, C.transitionToChannel)(t.id)
   }
   return (0, a.jsxs)(s.Menu, {
     navId: "thread-context",
@@ -87,7 +87,7 @@ function R(e) {
     "aria-label": M.default.Messages.THREAD_ACTIONS_MENU_LABEL,
     onSelect: l,
     children: [(0, a.jsxs)(s.MenuGroup, {
-      children: [C, (0, a.jsx)(s.MenuItem, {
+      children: [g, (0, a.jsx)(s.MenuItem, {
         id: "open",
         label: M.default.Messages.OPEN_IN_FULL_VIEW,
         action: P
@@ -137,7 +137,7 @@ function L(e) {
     }), (0, a.jsx)(I.default.Icon, {
       icon: S.default,
       tooltip: M.default.Messages.CLOSE,
-      onClick: () => (0, x.closeThreadSidebar)((0, C.getGuildIdForGenericRedirect)(t), null != n ? n : t.parent_id)
+      onClick: () => (0, x.closeThreadSidebar)((0, g.getGuildIdForGenericRedirect)(t), null != n ? n : t.parent_id)
     })]
   })
 }

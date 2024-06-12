@@ -1,9 +1,9 @@
 "use strict";
 n.r(t);
-var a, i, l, s, r = n("442837"),
-  u = n("570140");
+var a, i, l, s, u = n("442837"),
+  r = n("570140");
 let o = {};
-class d extends(s = r.default.Store) {
+class d extends(s = u.default.Store) {
   getOptions(e) {
     return o[e]
   }
@@ -13,7 +13,7 @@ l = "SendMessageOptionsStore", (i = "displayName") in(a = d) ? Object.defineProp
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[i] = l, t.default = new d(u.default, {
+}) : a[i] = l, t.default = new d(r.default, {
   MESSAGE_CREATE: function(e) {
     let {
       message: t,

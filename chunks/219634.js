@@ -20,25 +20,25 @@ function m(e) {
   let {
     entries: t,
     channelId: n
-  } = e, m = (0, s.useStateFromStores)([r.default], () => r.default.getChannel(n)), p = null == m ? void 0 : m.guild_id, E = a.useRef(new Set), C = a.useMemo(() => {
+  } = e, m = (0, s.useStateFromStores)([r.default], () => r.default.getChannel(n)), p = null == m ? void 0 : m.guild_id, E = a.useRef(new Set), g = a.useMemo(() => {
     let e = new Set(null == t ? void 0 : t.map(e => e.author_id));
     return !(0, i.areArraysShallowEqual)([...E.current], [...e]) && (E.current = e), E.current
   }, [t]);
   a.useEffect(() => {
-    null != p && Array.from(C).forEach(e => {
+    null != p && Array.from(g).forEach(e => {
       o.default.requestMember(p, e)
     })
-  }, [C, p]);
-  let g = (0, s.useStateFromStoresArray)([u.default], () => {
+  }, [g, p]);
+  let C = (0, s.useStateFromStoresArray)([u.default], () => {
       if (null == p) return f;
       let e = [];
-      for (let t of C) u.default.isMember(p, t) && e.push(t);
+      for (let t of g) u.default.isMember(p, t) && e.push(t);
       return e
-    }, [C, p]),
+    }, [g, p]),
     S = a.useMemo(() => {
-      if (null == m || 0 === g.length) return h;
+      if (null == m || 0 === C.length) return h;
       let e = new Set;
-      for (let t of g) {
+      for (let t of C) {
         let n = d.computePermissions({
           user: t,
           context: m
@@ -46,6 +46,6 @@ function m(e) {
         l.has(n, c.Permissions.VIEW_CHANNEL) && e.add(t)
       }
       return e
-    }, [g, m]);
+    }, [C, m]);
   return a.useMemo(() => null == t ? void 0 : t.filter(e => S.has(e.author_id)), [t, S])
 }

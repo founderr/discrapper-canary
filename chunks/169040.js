@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return s
   },
   applicationImageSize: function() {
-    return g
+    return C
   },
   avatarImageSize: function() {
     return S
@@ -43,7 +43,7 @@ n.r(t), n.d(t, {
     return A
   },
   betaTagHeight: function() {
-    return C
+    return g
   },
   betaTagWidth: function() {
     return E
@@ -84,8 +84,8 @@ let a = "M20.97 4.06c0 .18.08.35.24.43.55.28.9.82 1.04 1.42.3 1.24.75 3.7.75 7.0
   m = 120,
   p = 12,
   E = 34,
-  C = 20,
-  g = 96,
+  g = 20,
+  C = 96,
   S = 32,
   _ = 120,
   T = 260,

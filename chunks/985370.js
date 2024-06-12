@@ -20,16 +20,16 @@ t.default = e => {
   } = e, {
     isHovered: s,
     setIsHovered: E,
-    onMouseEnter: C,
-    onMouseLeave: g,
+    onMouseEnter: g,
+    onMouseLeave: C,
     cancelTimers: S
   } = (0, d.default)(200, 300), [_, T] = l.useState(!1), I = (0, r.useStateFromStores)([f.default], () => f.default.effectCooldownEndTime), A = l.useMemo(() => null != I ? (I.getTime() - Date.now()) / 1e3 : 0, [I]), {
     seconds: v
   } = (0, u.default)(null != I ? I : new Date), x = v > 0, N = l.useCallback(e => {
-    if ("focus" !== e.type) !_ && !x && C()
-  }, [_, x, C]), M = l.useCallback(() => {
-    !_ && g()
-  }, [g, _]), y = l.useCallback((e, t) => {
+    if ("focus" !== e.type) !_ && !x && g()
+  }, [_, x, g]), M = l.useCallback(() => {
+    !_ && C()
+  }, [C, _]), y = l.useCallback((e, t) => {
     S(), T(!_), (!s || _) && (null == t || t(e))
   }, [S, _, s]), R = s || _;
   return (0, a.jsx)(o.Popout, {
@@ -49,7 +49,7 @@ t.default = e => {
         isHovered: R,
         channel: t,
         closePopout: n,
-        onMouseEnter: C,
+        onMouseEnter: g,
         onMouseLeave: M,
         onFocus: () => T(!0)
       })

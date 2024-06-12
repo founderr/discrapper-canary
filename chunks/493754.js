@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return g
   }
 });
 var a = n("735250");
@@ -20,26 +20,26 @@ var l = n("120356"),
   p = n("689938"),
   E = n("210054");
 
-function C(e) {
+function g(e) {
   var t, l;
   let {
     stream: i,
-    applicationId: C,
-    channel: g,
+    applicationId: g,
+    channel: C,
     exitFullScreen: S,
     appContext: _,
     analyticsLocation: T,
     className: I,
     ...A
-  } = e, v = null == g ? void 0 : g.getGuildId(), x = null == g ? void 0 : g.id, N = (0, o.useStateFromStores)([f.default], () => null != v ? f.default.getGuild(v) : null, [v]), M = (0, o.useStateFromStores)([d.default], () => d.default.getActiveEventByChannel(x), [x]);
-  if (t = N, l = g, !(null != t && null != l && h.default.can(m.Permissions.CREATE_INSTANT_INVITE, l))) return null;
+  } = e, v = null == C ? void 0 : C.getGuildId(), x = null == C ? void 0 : C.id, N = (0, o.useStateFromStores)([f.default], () => null != v ? f.default.getGuild(v) : null, [v]), M = (0, o.useStateFromStores)([d.default], () => d.default.getActiveEventByChannel(x), [x]);
+  if (t = N, l = C, !(null != t && null != l && h.default.can(m.Permissions.CREATE_INSTANT_INVITE, l))) return null;
   let y = p.default.Messages.INSTANT_INVITE;
-  return null != i ? y = p.default.Messages.INVITE_STREAM_HEADER : null != C && (y = p.default.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY), (0, a.jsxs)(a.Fragment, {
+  return null != i ? y = p.default.Messages.INVITE_STREAM_HEADER : null != g && (y = p.default.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(u.Button, {
       size: u.Button.Sizes.SMALL,
       color: E.buttonColor,
       onClick: () => {
-        r()(null != N, "guild cannot be null"), r()(null != g, "channel cannot be null"), ! function(e) {
+        r()(null != N, "guild cannot be null"), r()(null != C, "channel cannot be null"), ! function(e) {
           let {
             guild: t,
             channel: l,
@@ -70,9 +70,9 @@ function C(e) {
           })
         }({
           guild: N,
-          channel: g,
+          channel: C,
           streamUserId: null == i ? void 0 : i.ownerId,
-          applicationId: C,
+          applicationId: g,
           appContext: _,
           exitFullScreen: S,
           analyticsLocation: T,
@@ -83,7 +83,7 @@ function C(e) {
       ...A,
       children: y
     }), (0, a.jsx)(c.default, {
-      channel: g,
+      channel: C,
       stream: i,
       appContext: _,
       className: s()(I, E.iconButton),

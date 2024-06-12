@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("868643"),
   p = n("223606"),
   E = n("188597"),
-  C = n("41776"),
-  g = n("641051"),
+  g = n("41776"),
+  C = n("641051"),
   S = n("329461"),
   _ = n("222677"),
   T = n("995774"),
@@ -105,7 +105,7 @@ function eo(e) {
     dangerous: m,
     separator: p,
     sparkle: E,
-    ...C
+    ...g
   } = e;
   return (0, a.jsx)(c.Tooltip, {
     text: null != l ? l : t,
@@ -129,7 +129,7 @@ function eo(e) {
           "aria-label": null != n ? n : t,
           disabled: h,
           dangerous: m,
-          ...C,
+          ...g,
           children: [(0, a.jsx)(i, {
             className: es.icon,
             ...r
@@ -182,7 +182,7 @@ function eu(e) {
     } = (0, u.useStateFromStoresObject)([O.default], () => ({
       canAddNewReactions: I && O.default.can(ea.Permissions.ADD_REACTIONS, t),
       canManageMessages: O.default.can(ea.Permissions.MANAGE_MESSAGES, t)
-    }), [t, I]), P = (0, A.useCanReplyToMessage)(t, n), D = (0, v.useCanStartPublicThread)(t, n), b = (0, v.useCanViewThreadForMessage)(n), U = (0, u.useStateFromStores)([C.default], () => null != t.guild_id && C.default.isLurking(t.guild_id), [t]), F = (0, u.useStateFromStores)([y.default], () => null != t.guild_id && y.default.isCurrentUserGuest(t.guild_id), [t]), w = o.id === c, k = (M || n.canDeleteOwnMessage(c)) && p && !ea.MessageTypesSets.UNDELETABLE.has(n.type);
+    }), [t, I]), P = (0, A.useCanReplyToMessage)(t, n), D = (0, v.useCanStartPublicThread)(t, n), b = (0, v.useCanViewThreadForMessage)(n), U = (0, u.useStateFromStores)([g.default], () => null != t.guild_id && g.default.isLurking(t.guild_id), [t]), F = (0, u.useStateFromStores)([y.default], () => null != t.guild_id && y.default.isCurrentUserGuest(t.guild_id), [t]), w = o.id === c, k = (M || n.canDeleteOwnMessage(c)) && p && !ea.MessageTypesSets.UNDELETABLE.has(n.type);
     n.type === ea.MessageTypes.AUTO_MODERATION_ACTION && (k = k && M);
     let H = (0, X.canReportMessage)(n),
       G = (0, J.default)(n, t, M),
@@ -211,7 +211,7 @@ function eu(e) {
       $ = (0, m.useCanForwardMessage)(n),
       {
         showReminders: ee
-      } = g.default.useExperiment({
+      } = C.default.useExperiment({
         location: "9bfedc_1"
       }, {
         autoTrackExposure: !1
@@ -252,11 +252,11 @@ function eu(e) {
     }), ef({
       moreUtilities: !es
     })
-  }, [es, ef, n]), eC = l.useCallback(() => {
+  }, [es, ef, n]), eg = l.useCallback(() => {
     ef({
       emojiPicker: !ei
     })
-  }, [ei, ef]), eg = (0, v.useIsActiveChannelOrUnarchivableThread)(t), eS = n.hasFlag(ea.MessageFlags.CROSSPOSTED);
+  }, [ei, ef]), eC = (0, v.useIsActiveChannelOrUnarchivableThread)(t), eS = n.hasFlag(ea.MessageFlags.CROSSPOSTED);
   return (0, a.jsxs)(a.Fragment, {
     children: [et ? (0, a.jsxs)(a.Fragment, {
       children: [s && eh ? eo({
@@ -287,7 +287,7 @@ function eu(e) {
         label: ed ? el.default.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : el.default.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
         icon: ed ? j.default : w.default,
         onClick: ed ? $.markMessageRemindersAsComplete : $.markMessageAsReminder
-      }) : null, eg ? eo({
+      }) : null, eC ? eo({
         key: "mark-unread",
         channel: t,
         message: n,
@@ -319,7 +319,7 @@ function eu(e) {
     }) : null, _ && !em ? (0, a.jsx)(ee.default, {
       channel: t,
       message: n,
-      togglePopout: eC,
+      togglePopout: eg,
       renderEmojiPicker: ec,
       shouldShow: ei,
       isFocused: ep

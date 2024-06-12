@@ -24,7 +24,7 @@ let E = (e, t, n, a) => {
       userName: i
     }).replaceAll("*", "")
   },
-  C = (e, t) => p.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+  g = (e, t) => p.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
     username: t.username,
     activity: e.extra.game_name
   });
@@ -35,7 +35,7 @@ t.default = e => {
     requestId: s,
     closePopout: r
   } = e, {
-    iconUrl: g,
+    iconUrl: C,
     iconTitle: S,
     user: _,
     details: T,
@@ -43,10 +43,10 @@ t.default = e => {
   } = (0, m.useGamingContentData)(n), {
     primaryColor: A,
     secondaryColor: v
-  } = (0, d.default)(g), x = (0, o.getEntryDuration)(n), N = (0, o.getAggregateRange)(n), M = l.useCallback(e => {
+  } = (0, d.default)(C), x = (0, o.getEntryDuration)(n), N = (0, o.getAggregateRange)(n), M = l.useCallback(e => {
     if (null != _ && null != x && null != N && (0, c.isAllowedRange)(N)) return (0, u.generateGamingContentImage)({
       entry: n,
-      applicationImageSrc: g,
+      applicationImageSrc: C,
       avatarSrcs: [_.getAvatarURL(t.guild_id, 128)],
       description: E(n, t, _, N),
       timestamp: p.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({
@@ -55,10 +55,10 @@ t.default = e => {
       colors: [A, v],
       channelId: e
     })
-  }, [g, t, x, n, A, N, v, _]);
+  }, [C, t, x, n, A, N, v, _]);
   return null != _ && null != x && null != N && (0, c.isAllowedRange)(N) ? (0, a.jsxs)(h.Popout, {
     children: [(0, a.jsx)(h.PopoutContent, {
-      thumbnailSrc: g,
+      thumbnailSrc: C,
       thumbnailTitle: S,
       channel: t,
       entry: n,
@@ -77,7 +77,7 @@ t.default = e => {
         user: _,
         channel: t,
         generateReactionImage: M,
-        reactionImageAltText: C(n, _),
+        reactionImageAltText: g(n, _),
         entry: n,
         requestId: s
       })

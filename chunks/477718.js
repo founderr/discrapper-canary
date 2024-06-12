@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("376923"),
   p = n("472596"),
   E = n("987707"),
-  C = n("501801"),
-  g = n("271383"),
+  g = n("501801"),
+  C = n("271383"),
   S = n("430824"),
   _ = n("274730"),
   T = n("5192"),
@@ -36,7 +36,7 @@ function M(e) {
     guild: s
   } = e, {
     analyticsLocations: r
-  } = (0, f.default)(), c = h.getSimpleAuditLogTitleFromChange(t), E = h.getSimpleAuditLogTitleContextFromChange(t), S = h.getStringForBanReason(t), _ = h.getSimpleAuditLogChangeDetails(t), I = (0, m.useAuditLogDate)(t.id), N = (0, u.useStateFromStores)([g.default], () => null != t.userId ? g.default.getMember(n.guildId, t.userId) : null, [n.guildId, t.userId]), M = l.useCallback(e => t => {
+  } = (0, f.default)(), c = h.getSimpleAuditLogTitleFromChange(t), E = h.getSimpleAuditLogTitleContextFromChange(t), S = h.getStringForBanReason(t), _ = h.getSimpleAuditLogChangeDetails(t), I = (0, m.useAuditLogDate)(t.id), N = (0, u.useStateFromStores)([C.default], () => null != t.userId ? C.default.getMember(n.guildId, t.userId) : null, [n.guildId, t.userId]), M = l.useCallback(e => t => {
     t.preventDefault(), t.stopPropagation(), null != e && (0, p.openMemberProfile)(e, r)
   }, [r]), y = l.useCallback(() => null == t.user ? null : (0, a.jsx)(d.Tooltip, {
     text: A.default.Messages.GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER,
@@ -117,7 +117,7 @@ function M(e) {
           variant: "text-sm/normal",
           color: "text-muted",
           tag: "span",
-          children: (0, a.jsx)(C.AuditLogExpandedChangeDetails, {
+          children: (0, a.jsx)(g.AuditLogExpandedChangeDetails, {
             log: t,
             guild: s,
             onContentClick: () => {},

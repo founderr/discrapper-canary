@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return C
   }
 });
 var a = s("735250");
@@ -27,15 +27,15 @@ let f = {
     unlocked: E.Color.GREEN_330
   };
 
-function m(e) {
+function C(e) {
   var t;
   let {
     achievementId: s,
     unlocked: E,
-    size: m = l.AvatarSizes.SIZE_40
-  } = e, C = (0, i.default)(), T = (0, c.getPoggermodeAchievementData)(s);
+    size: C = l.AvatarSizes.SIZE_40
+  } = e, m = (0, i.default)(), T = (0, c.getPoggermodeAchievementData)(s);
   if (null == T) return null;
-  let g = (0, l.getAvatarSpecs)(m),
+  let g = (0, l.getAvatarSpecs)(C),
     {
       name: A,
       rarity: p
@@ -43,7 +43,7 @@ function m(e) {
     {
       color: N
     } = (0, c.getAchievementStyles)(p),
-    S = (0, n.isThemeDark)(C) ? f : h,
+    S = (0, n.isThemeDark)(m) ? f : h,
     I = (g.size - g.offset - 2 * g.stroke) * .8,
     x = g.size - g.stroke,
     v = {
@@ -89,4 +89,4 @@ function m(e) {
     })]
   })
 }
-m.Sizes = l.AvatarSizes
+C.Sizes = l.AvatarSizes

@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("421600"),
   p = n("354459"),
   E = n("335640"),
-  C = n("961047"),
-  g = n("139661");
+  g = n("961047"),
+  C = n("139661");
 
 function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -131,14 +131,14 @@ class A extends l.PureComponent {
       children: t,
       className: n
     } = this.props, l = (0, d.isThemeDark)(e), s = i()(E.sprite, {
-      [g.crossWhite]: l,
-      [g.crossGrey]: !l
+      [C.crossWhite]: l,
+      [C.crossGrey]: !l
     });
     return (0, a.jsxs)(r.default.div, {
       className: i()(E.transition, n),
       style: this.getWidthStyle(),
       children: [(0, a.jsx)("div", {
-        className: i()(E.spriteWrapper, C.horizontal, C.justifyCenter, C.alignCenter),
+        className: i()(E.spriteWrapper, g.horizontal, g.justifyCenter, g.alignCenter),
         children: (0, a.jsx)(r.default.div, {
           className: s,
           style: this.getSpriteStyle()
@@ -161,10 +161,10 @@ function v(e) {
     onContextMenu: s,
     className: r,
     onClick: d,
-    width: C,
-    guildId: g
+    width: g,
+    guildId: C
   } = e, S = (0, f.default)();
-  let _ = (t = C, n = l.length, ((0, c.getAvatarSize)(c.AvatarSizes.SIZE_80) + 16) * n > t ? c.AvatarSizes.SIZE_40 : c.AvatarSizes.SIZE_80),
+  let _ = (t = g, n = l.length, ((0, c.getAvatarSize)(c.AvatarSizes.SIZE_80) + 16) * n > t ? c.AvatarSizes.SIZE_40 : c.AvatarSizes.SIZE_80),
     T = (0, o.useStateFromStores)([h.default], () => h.default.isFocused()),
     I = l.map(e => {
       var t, n;
@@ -180,7 +180,7 @@ function v(e) {
         width: (0, c.getAvatarSize)(_),
         theme: S,
         children: (0, a.jsx)(m.default, {
-          src: l.getAvatarURL(g, (0, c.getAvatarSize)(_), r && T),
+          src: l.getAvatarURL(C, (0, c.getAvatarSize)(_), r && T),
           size: _,
           muted: null !== (t = null == i ? void 0 : i.isVoiceMuted()) && void 0 !== t && t,
           deafen: null !== (n = null == i ? void 0 : i.isVoiceDeafened()) && void 0 !== n && n,

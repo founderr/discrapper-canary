@@ -17,15 +17,15 @@ var a = s("735250"),
   _ = s("918701"),
   f = s("667105"),
   h = s("46140"),
-  m = s("981631"),
-  C = s("689938"),
+  C = s("981631"),
+  m = s("689938"),
   T = s("424716");
 let g = e => {
     let {
       quest: t,
       isExpanded: s,
       hidePlayGameButton: o = !1
-    } = e, [c, f] = n.useState(!1), [h, m] = n.useState(!1), g = n.useRef(new i.Timeout), A = n.useRef(new i.Timeout);
+    } = e, [c, f] = n.useState(!1), [h, C] = n.useState(!1), g = n.useRef(new i.Timeout), A = n.useRef(new i.Timeout);
     n.useEffect(() => {
       let e = A.current,
         t = g.current;
@@ -46,7 +46,7 @@ let g = e => {
         (0, _.copyShareLink)(t.id, {
           content: E.QuestContent.QUEST_BAR_V2,
           ctaContent: d.QuestContentCTA.QUEST_BAR_COPY_LINK
-        }), f(!0), m(!0), A.current.start(500, () => m(!1)), g.current.start(600, () => f(!1))
+        }), f(!0), C(!0), A.current.start(500, () => C(!1)), g.current.start(600, () => f(!1))
       };
     return (0, a.jsxs)("div", {
       className: T.ctaContainer,
@@ -57,10 +57,10 @@ let g = e => {
           content: E.QuestContent.QUEST_BAR_V2,
           ctaContent: d.QuestContentCTA.OPEN_GAME_LINK
         }),
-        children: C.default.Messages.QUESTS_PLAY_GAME
+        children: m.default.Messages.QUESTS_PLAY_GAME
       }), (() => {
         let e = c ? r.Tooltip.Colors.GREEN : r.Tooltip.Colors.PRIMARY,
-          t = c ? C.default.Messages.COPY_SUCCESS_1 : C.default.Messages.QUESTS_SHARE_LINK,
+          t = c ? m.default.Messages.COPY_SUCCESS_1 : m.default.Messages.QUESTS_SHARE_LINK,
           n = o && !c;
         return (0, a.jsx)(r.Tooltip, {
           hideOnClick: !1,
@@ -78,7 +78,7 @@ let g = e => {
             children: [o && (0, a.jsx)(r.Text, {
               color: c ? "status-positive" : "text-primary",
               variant: "text-sm/normal",
-              children: C.default.Messages.COPY_LINK
+              children: m.default.Messages.COPY_LINK
             }), p()]
           })
         })
@@ -89,9 +89,9 @@ let g = e => {
     className: T.ctaContainer,
     children: (0, a.jsx)(r.Button, {
       fullWidth: !0,
-      onClick: () => o.default.open(m.UserSettingsSections.CONNECTIONS),
+      onClick: () => o.default.open(C.UserSettingsSections.CONNECTIONS),
       size: r.Button.Sizes.SMALL,
-      children: C.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CTA
+      children: m.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CTA
     })
   }),
   p = e => {
@@ -124,7 +124,7 @@ let g = e => {
         onClick: l,
         pauseAnimation: s || !n,
         buttonShineClassName: T.shine,
-        children: C.default.Messages.QUESTS_CLAIM_REWARD
+        children: m.default.Messages.QUESTS_CLAIM_REWARD
       })
     })
   },

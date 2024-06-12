@@ -23,8 +23,8 @@ function h(e) {
     location: m,
     relevantSubscriptionListingIds: p
   } = e, E = (0, u.useGroupListingsFetchContext)("useTrackRoleSubscriptionUpsellAnalytics"), {
-    activeSubscription: C
-  } = (0, c.default)(h), g = null != C, S = (0, l.useStateFromStoresArray)([d.default], () => (null != p ? p : []).filter(e => {
+    activeSubscription: g
+  } = (0, c.default)(h), C = null != g, S = (0, l.useStateFromStoresArray)([d.default], () => (null != p ? p : []).filter(e => {
     var t;
     return (null === (t = d.default.getSubscriptionListing(e)) || void 0 === t ? void 0 : t.published) === !0
   }), [p]), {
@@ -34,10 +34,10 @@ function h(e) {
     E && null != h && null != S && !T.current && (T.current = !0, o.default.track(f.AnalyticEvents.ROLE_SUBSCRIPTION_LISTING_UPSELL_PAGE_VIEWED, {
       role_subscription_group_listing_id: h,
       role_subscription_listing_ids: S,
-      is_premium_member: g,
+      is_premium_member: C,
       location_stack: _,
       location: m,
       ...(0, s.collectGuildAnalyticsMetadata)(n)
     }))
-  }, [n, h, E, m, S, g, _])
+  }, [n, h, E, m, S, C, _])
 }

@@ -14,13 +14,13 @@ var n = s("120356"),
   _ = s("898170"),
   f = s("46140"),
   h = s("689938"),
-  m = s("743451");
+  C = s("743451");
 t.default = function(e) {
   var t;
   let {
     className: s,
     expansionSpring: n,
-    isExpanded: C,
+    isExpanded: m,
     isExpansionAnimationComplete: T,
     quest: g,
     useReducedMotion: A
@@ -31,10 +31,10 @@ t.default = function(e) {
     location: f.QuestsExperimentLocations.QUESTS_BAR
   });
   return (0, a.jsxs)(i.animated.div, {
-    "aria-hidden": C && T,
-    className: l()(s, m.contentCollapsed, {
-      [m.contentCollapsedExpanded]: C,
-      [m.contentCollapsedAccepted]: p
+    "aria-hidden": m && T,
+    className: l()(s, C.contentCollapsed, {
+      [C.contentCollapsedExpanded]: m,
+      [C.contentCollapsedAccepted]: p
     }),
     style: {
       opacity: n.to({
@@ -46,32 +46,32 @@ t.default = function(e) {
       quest: g,
       useReducedMotion: A
     }), (0, a.jsx)("div", {
-      className: m.contentCollapsedWrapper,
+      className: C.contentCollapsedWrapper,
       children: p ? (0, a.jsxs)("div", {
-        className: m.questProgressWrapper,
+        className: C.questProgressWrapper,
         children: [(0, a.jsx)(E.default, {
-          className: m.questProgressRewardTile,
+          className: C.questProgressRewardTile,
           quest: g,
           questContent: u.QuestContent.QUEST_BAR,
           autoplay: !1
         }), N > 0 ? (0, a.jsx)(c.default, {
-          className: m.questProgressBar,
+          className: C.questProgressBar,
           quest: g
         }) : (0, a.jsx)(r.Text, {
-          className: m.questProgressHint,
+          className: C.questProgressHint,
           color: "always-white",
           variant: "text-sm/semibold",
           children: h.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
         })]
       }) : (0, a.jsxs)("div", {
-        className: m.brandingWrapper,
+        className: C.brandingWrapper,
         children: [(0, a.jsx)(d.default, {
-          className: m.partnerBranding,
+          className: C.partnerBranding,
           quest: g
         }), (0, a.jsx)(r.Heading, {
           color: "always-white",
           variant: "heading-sm/medium",
-          className: m.questName,
+          className: C.questName,
           children: h.default.Messages.QUEST.format({
             questName: g.config.messages.questName
           })

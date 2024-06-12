@@ -45,19 +45,19 @@ function E(e) {
     className: n,
     noText: s = !1
   } = e, o = (0, r.useStateFromStores)([d.default], () => d.default.getBasicChannel(t.channelId)), E = (0, r.useStateFromStores)([c.default], () => null != o && c.default.canBasicChannel(f.BasicPermissions.CONNECT, o)), {
-    url: C,
-    isLoading: g
+    url: g,
+    isLoading: C
   } = (0, r.useStateFromStoresObject)([u.default], () => ({
     url: E ? u.default.getPreviewURL(t.guildId, t.channelId, t.ownerId) : null,
     isLoading: E && u.default.getIsPreviewLoading(t.guildId, t.channelId, t.ownerId)
-  })), S = l.useRef(g ? null : C);
+  })), S = l.useRef(C ? null : g);
   l.useEffect(() => {
-    !g && (S.current = C)
-  }, [C, g]);
-  let _ = null == C || g ? S.current : C;
+    !C && (S.current = g)
+  }, [g, C]);
+  let _ = null == g || C ? S.current : g;
   return null == _ ? (0, a.jsx)(p, {
     className: n,
-    isLoading: g,
+    isLoading: C,
     noText: s,
     previewText: E ? void 0 : h.default.Messages.STREAM_NO_PERMISSION_CTA
   }) : (0, a.jsx)("div", {

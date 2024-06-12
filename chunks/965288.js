@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("484459"),
   p = n("103575"),
   E = n("271383"),
-  C = n("83097"),
-  g = n("709586"),
+  g = n("83097"),
+  C = n("709586"),
   S = n("740624"),
   _ = n("5192"),
   T = n("590415"),
@@ -34,7 +34,7 @@ let A = l.memo(function(e) {
     } = e;
     return (0, a.jsxs)("div", {
       className: I.textContainer,
-      children: [i ? (0, a.jsx)(C.default, {
+      children: [i ? (0, a.jsx)(g.default, {
         className: I.blockedIcon,
         color: d.default.unsafe_rawColors.RED_400.css
       }) : null, (0, a.jsx)(c.Text, {
@@ -42,7 +42,7 @@ let A = l.memo(function(e) {
         variant: "text-sm/normal",
         color: "header-primary",
         children: _.default.getName(t, n, l)
-      }), s ? (0, a.jsx)(g.default, {
+      }), s ? (0, a.jsx)(C.default, {
         className: I.boost,
         color: d.default.unsafe_rawColors.GUILD_BOOSTING_PINK.css
       }) : null]
@@ -94,11 +94,11 @@ t.default = l.memo(function(e) {
   } = e, {
     user: r,
     blocked: d
-  } = t, C = s.getGuildId(), g = (0, h.useAppContext)(), S = (0, u.useStateFromStores)([E.default], () => {
+  } = t, g = s.getGuildId(), C = (0, h.useAppContext)(), S = (0, u.useStateFromStores)([E.default], () => {
     var e;
-    return null != C && (null === (e = E.default.getMember(C, r.id)) || void 0 === e ? void 0 : e.premiumSince) != null
-  }, [C, r.id]);
-  o()(null != C, "Channel cannot be guildless");
+    return null != g && (null === (e = E.default.getMember(g, r.id)) || void 0 === e ? void 0 : e.premiumSince) != null
+  }, [g, r.id]);
+  o()(null != g, "Channel cannot be guildless");
   let _ = l.useCallback(e => {
       (0, f.openContextMenuLazy)(e, async () => {
         let {
@@ -107,23 +107,23 @@ t.default = l.memo(function(e) {
         return t => (0, a.jsx)(e, {
           ...t,
           user: r,
-          guildId: C,
+          guildId: g,
           channel: s,
           showMediaItems: !0,
           showStageChannelItems: !0,
           showChatItems: !1
         })
       }, {
-        context: g
+        context: C
       })
-    }, [r, C, s, g]),
+    }, [r, g, s, C]),
     T = l.useCallback(e => (0, a.jsx)(p.default, {
       ...e,
       location: "AudienceTile",
-      guildId: C,
+      guildId: g,
       channelId: s.id,
       userId: r.id
-    }), [s.id, C, r.id]);
+    }), [s.id, g, r.id]);
   return (0, a.jsx)(c.Popout, {
     preload: () => (0, m.maybeFetchUserProfileForPopout)(r, {
       guildId: s.guild_id,
@@ -141,7 +141,7 @@ t.default = l.memo(function(e) {
       ...e,
       children: (0, a.jsx)(v, {
         participant: t,
-        guildId: C,
+        guildId: g,
         channel: s,
         isPremium: S
       })

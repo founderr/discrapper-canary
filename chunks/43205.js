@@ -19,8 +19,8 @@ function d(e) {
     className: s,
     alt: d = "icon",
     fallbackSrc: c
-  } = e, f = (0, r.default)(), [h, m] = l.useState(!1), [p, E] = l.useState(!1), C = null == c || p;
-  return null == t || h && C ? (0, a.jsx)(o.default, {
+  } = e, f = (0, r.default)(), [h, m] = l.useState(!1), [p, E] = l.useState(!1), g = null == c || p;
+  return null == t || h && g ? (0, a.jsx)(o.default, {
     width: n,
     height: n,
     color: "dark" === f ? "white" : "black",

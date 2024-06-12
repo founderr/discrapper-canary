@@ -143,12 +143,12 @@ function E(e) {
     children: t,
     fullHeight: n = !1
   } = e, [s, E] = l.useState(!1), {
-    height: C,
-    ref: g
+    height: g,
+    ref: C
   } = (0, o.default)(), {
     height: S,
     ref: _
-  } = (0, o.default)(), T = n ? S : 59 + (null != C ? C : 100) + 101, I = (0, r.useSpring)({
+  } = (0, o.default)(), T = n ? S : 59 + (null != g ? g : 100) + 101, I = (0, r.useSpring)({
     from: {
       height: 0
     },
@@ -183,7 +183,7 @@ function E(e) {
         axleColor: M
       }), (0, a.jsx)("div", {
         className: i()(c.content, n && c.fullHeight),
-        ref: g,
+        ref: C,
         children: (0, a.jsx)("div", {
           className: i()(c.innerContent, n && c.fullHeight),
           style: {

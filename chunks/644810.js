@@ -39,9 +39,9 @@ let u = (e, t, n) => ({
       episodeDescription: m,
       colors: p,
       channelId: E
-    } = e, C = n.extra.media_title, g = u(c, t);
+    } = e, g = n.extra.media_title, C = u(c, t);
     return await (0, s.generateImageFromCanvas)({
-      assetsToLoad: g,
+      assetsToLoad: C,
       drawImage: e => {
         let t = p.map((e, t) => ({
           color: e,
@@ -119,7 +119,7 @@ let u = (e, t, n) => ({
       exportConfigs: {
         format: l.DiscordCanvasExporterOutputFormats.CloudUpload,
         quality: 1,
-        fileName: "user-reacting-to-".concat(C, ".png").toLowerCase(),
+        fileName: "user-reacting-to-".concat(g, ".png").toLowerCase(),
         fileType: "png",
         channelId: E
       }

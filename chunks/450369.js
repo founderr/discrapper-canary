@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("258609"),
   p = n("569545"),
   E = n("102172"),
-  C = n("484459"),
-  g = n("103575"),
+  g = n("484459"),
+  C = n("103575"),
   S = n("199902"),
   _ = n("430824"),
   T = n("496675"),
@@ -50,11 +50,11 @@ let L = 16 / 9,
       id: p
     } = t;
     return (0, a.jsx)(o.Popout, {
-      preload: null == n ? void 0 : () => (0, C.maybeFetchUserProfileForPopout)(n.user, {
+      preload: null == n ? void 0 : () => (0, g.maybeFetchUserProfileForPopout)(n.user, {
         guildId: s.guild_id,
         channelId: s.id
       }),
-      renderPopout: e => (0, a.jsx)(g.default, {
+      renderPopout: e => (0, a.jsx)(C.default, {
         ...e,
         location: "StageTile",
         guildId: i,
@@ -90,9 +90,9 @@ let L = 16 / 9,
       width: i,
       isModerator: d,
       onContextMenu: f,
-      inPopout: C
+      inPopout: g
     } = e, {
-      reducedMotion: g
+      reducedMotion: C
     } = l.useContext(o.AccessibilityPreferencesContext), {
       id: v,
       blocked: O
@@ -118,11 +118,11 @@ let L = 16 / 9,
       channel: s,
       className: R.tile,
       inCall: !0,
-      inPopout: C,
+      inPopout: g,
       onClick: b,
       onContextMenu: f,
       paused: !1,
-      pulseSpeakingIndicator: !g.enabled,
+      pulseSpeakingIndicator: !C.enabled,
       width: i,
       children: d && n.type === y.ParticipantTypes.USER && (0, a.jsx)(N.default, {})
     }, v)
@@ -139,7 +139,7 @@ t.default = l.memo(function(e) {
     user: m
   } = l, p = (0, r.useStateFromStores)([h.default], () => h.default.getParticipant(s.id, l.id), [s.id, l.id]), E = (0, r.useStateFromStores)([v.default], () => v.default.isModerator(m.id, s.id), [s.id, m.id]);
   if (null == p || p.type === y.ParticipantTypes.ACTIVITY) return null;
-  let C = (e, t) => {
+  let g = (e, t) => {
       switch (e.type) {
         case y.ParticipantTypes.HIDDEN_STREAM:
         case y.ParticipantTypes.STREAM:
@@ -177,9 +177,9 @@ t.default = l.memo(function(e) {
           })
       }
     },
-    g = p.type === y.ParticipantTypes.USER && !(null === (t = p.voiceState) || void 0 === t ? void 0 : t.selfVideo);
+    C = p.type === y.ParticipantTypes.USER && !(null === (t = p.voiceState) || void 0 === t ? void 0 : t.selfVideo);
   return (0, a.jsx)(a.Fragment, {
-    children: g ? (0, a.jsx)(O, {
+    children: C ? (0, a.jsx)(O, {
       stageParticipant: l,
       rtcParticipant: p,
       channel: s,
@@ -187,7 +187,7 @@ t.default = l.memo(function(e) {
       user: m,
       width: o,
       isModerator: E,
-      onContextMenu: C,
+      onContextMenu: g,
       inPopout: u === M.AppContext.POPOUT
     }) : (0, a.jsx)(j, {
       stageParticipant: l,
@@ -197,7 +197,7 @@ t.default = l.memo(function(e) {
       user: m,
       width: o,
       isModerator: E,
-      onContextMenu: C,
+      onContextMenu: g,
       inPopout: u === M.AppContext.POPOUT
     })
   })

@@ -25,8 +25,8 @@ var a, n, l, i, r = s("278074"),
   _ = s("263660"),
   f = s("22344"),
   h = s("848359"),
-  m = s("782984"),
-  C = s("186077"),
+  C = s("782984"),
+  m = s("186077"),
   T = s("376477"),
   g = s("224941");
 (l = a || (a = {}))[l.NONE = 0] = "NONE", l[l.TOOLTIP = 1] = "TOOLTIP", l[l.COACHTIP = 2] = "COACHTIP", (i = n || (n = {})).NONE = "NONE", i.SHY = "SHY", i.LOFI_VIBES = "LOFI_VIBES", i.GALAXY = "GALAXY", i.RETRO_AND_PIRATES = "RETRO_AND_PIRATES", i.ARCADE = "ARCADE";
@@ -47,7 +47,7 @@ let A = {
       type: 2,
       title: () => d.default.Messages.COLLECTIBLES_LOFI_VIBES_COACHTIP_TITLE,
       body: () => d.default.Messages.COLLECTIBLES_LOFI_VIBES_COACHTIP_DESCRIPTION,
-      imageSrc: m,
+      imageSrc: C,
       assetIds: ["a_49c479e15533fb4c02eb320c9c137433", "a_77b7b6a740a9451e1ef39c0252154ef8", "a_e8c11f139e55dac538cdaafb3caa2317"]
     },
     [u.DismissibleContent.COLLECTIBLES_SHOP_GALAXY_COACHTIP]: {
@@ -77,7 +77,7 @@ let A = {
     backgroundColor: "rgba(255, 70, 85, 1)",
     boxShadow: "0 0 12px 0 rgba(255, 70, 85, 0.5)",
     labelColor: "rgba(15, 25, 35, 1)",
-    iconSrc: C
+    iconSrc: m
   })).otherwise(() => null),
   N = {
     SHY: {

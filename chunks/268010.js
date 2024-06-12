@@ -14,7 +14,7 @@ var a = n("735250"),
   m = n("297781"),
   p = n("591853"),
   E = n("689938");
-let C = (e, t, n) => {
+let g = (e, t, n) => {
     let a = E.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
       l = u.default.getName(t.guild_id, t.id, n),
       s = e.extra.media_title;
@@ -24,7 +24,7 @@ let C = (e, t, n) => {
       episodeDescription: e.extra.media_subtitle
     }).replaceAll("*", "")
   },
-  g = (e, t) => E.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
+  C = (e, t) => E.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
     username: t.username,
     activity: e.extra.media_title
   });
@@ -46,7 +46,7 @@ t.default = e => {
       entry: n,
       mediaImageSrc: T,
       avatarSrc: _.getAvatarURL(t.guild_id, 128),
-      description: C(n, t, _),
+      description: g(n, t, _),
       timestamp: (0, d.formatEntryTimestamp)(n, x),
       episodeDescription: I,
       colors: [A, v],
@@ -78,7 +78,7 @@ t.default = e => {
         user: _,
         channel: t,
         generateReactionImage: N,
-        reactionImageAltText: g(n, _),
+        reactionImageAltText: C(n, _),
         entry: n,
         requestId: u
       })

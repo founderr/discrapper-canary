@@ -18,9 +18,9 @@ var a = n("735250"),
   m = n("313692"),
   p = n("596443"),
   E = n("50493"),
-  C = n("981631");
+  g = n("981631");
 
-function g(e, t) {
+function C(e, t) {
   return n => {
     if (0 === n) return "auto";
     let a = "forwards" === t.current,
@@ -50,7 +50,7 @@ function S(e) {
       })
     }, [v, _, S]),
     O = l.useMemo(() => ({
-      [C.KeybindActions.CLOSE_MODAL]: {
+      [g.KeybindActions.CLOSE_MODAL]: {
         binds: ["esc"],
         comboKeysBindGlobal: !0,
         action() {
@@ -96,8 +96,8 @@ function S(e) {
           ...R.enabled ? {
             opacity: null === (l = e.value) || void 0 === l ? void 0 : l.to(e => 1 - Math.abs(e))
           } : {
-            left: null === (i = e.value) || void 0 === i ? void 0 : i.to(g("left", y)),
-            right: null === (r = e.value) || void 0 === r ? void 0 : r.to(g("right", y))
+            left: null === (i = e.value) || void 0 === i ? void 0 : i.to(C("left", y)),
+            right: null === (r = e.value) || void 0 === r ? void 0 : r.to(C("right", y))
           }
         },
         children: function(e) {

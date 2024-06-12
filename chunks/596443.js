@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("285173"),
   p = n("434404"),
   E = n("422559"),
-  C = n("271383"),
-  g = n("430824"),
+  g = n("271383"),
+  C = n("430824"),
   S = n("496675"),
   _ = n("594174"),
   T = n("233608"),
@@ -35,11 +35,11 @@ function R(e) {
   var t, n, s, r;
   let {
     permission: o,
-    roleIds: C,
+    roleIds: g,
     guild: _,
     specMap: T,
     categoryTitle: I
-  } = e, A = (0, u.useStateFromStores)([g.default], () => g.default.getRoles(_.id)), M = x.Permissions[o], R = null !== (s = null === (t = T[M.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s ? s : (0, E.getPermissionName)(M), L = null !== (r = null === (n = T[M.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : "", O = v.ELEVATED_PERMISSIONS.has(M), j = v.MOD_PERMISSIONS.includes(o), P = C.length, D = (0, u.useStateFromStores)([S.default], () => S.default.can(x.Permissions.MANAGE_ROLES, _), [_]), b = l.useCallback(async e => {
+  } = e, A = (0, u.useStateFromStores)([C.default], () => C.default.getRoles(_.id)), M = x.Permissions[o], R = null !== (s = null === (t = T[M.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s ? s : (0, E.getPermissionName)(M), L = null !== (r = null === (n = T[M.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : "", O = v.ELEVATED_PERMISSIONS.has(M), j = v.MOD_PERMISSIONS.includes(o), P = g.length, D = (0, u.useStateFromStores)([S.default], () => S.default.can(x.Permissions.MANAGE_ROLES, _), [_]), b = l.useCallback(async e => {
     D && (await p.default.open(_.id, x.GuildSettingsSections.ROLES), await p.default.selectRole(e))
   }, [D, _.id]);
   return (0, a.jsxs)("div", {
@@ -114,7 +114,7 @@ function R(e) {
       })
     }), (0, a.jsx)("div", {
       className: y.permissionItemRoleContainer,
-      children: C.map(e => (0, a.jsx)(c.Clickable, {
+      children: g.map(e => (0, a.jsx)(c.Clickable, {
         className: i()(y.roleTooltipItem, {
           [y.editable]: D && !(0, f.isEveryoneRoleId)(_.id, e) && !(0, v.isOwnerRole)(e, _.id)
         }),
@@ -147,7 +147,7 @@ function O(e) {
     location: s,
     className: r,
     onNavigate: d
-  } = e, f = (0, u.useStateFromStores)([_.default], () => _.default.getUser(t), [t]), h = (0, u.useStateFromStores)([g.default], () => g.default.getGuild(n), [n]), m = (0, u.useStateFromStores)([C.default], () => C.default.getMember(n, t), [n, t]), p = (0, A.useProfileThemedPanelBackground)(t, n), S = (0, v.useUserPermissionsAndRoles)(t, n, v.ALL_PERMISSIONS), O = Object.keys(S).length, j = l.useMemo(() => null != h ? T.default.getGuildPermissionSpecMap(h) : null, [h]), P = l.useMemo(() => null != h ? T.default.generateGuildPermissionSpec(h) : null, [h]), [D, b] = l.useState(""), [U, F] = l.useState(""), w = l.useCallback(o()(F, 300), []), k = l.useCallback(e => {
+  } = e, f = (0, u.useStateFromStores)([_.default], () => _.default.getUser(t), [t]), h = (0, u.useStateFromStores)([C.default], () => C.default.getGuild(n), [n]), m = (0, u.useStateFromStores)([g.default], () => g.default.getMember(n, t), [n, t]), p = (0, A.useProfileThemedPanelBackground)(t, n), S = (0, v.useUserPermissionsAndRoles)(t, n, v.ALL_PERMISSIONS), O = Object.keys(S).length, j = l.useMemo(() => null != h ? T.default.getGuildPermissionSpecMap(h) : null, [h]), P = l.useMemo(() => null != h ? T.default.generateGuildPermissionSpec(h) : null, [h]), [D, b] = l.useState(""), [U, F] = l.useState(""), w = l.useCallback(o()(F, 300), []), k = l.useCallback(e => {
     b(e), w(e)
   }, [w]), H = l.useCallback(() => {
     b(""), F("")
@@ -179,9 +179,9 @@ function O(e) {
               h = i ? N.default.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION : f ? N.default.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION : null,
               m = L(U, e),
               p = L(U, n),
-              C = L(U, a),
-              g = null != h && L(U, h);
-            if (!m && !p && !C && !g) return
+              g = L(U, a),
+              C = null != h && L(U, h);
+            if (!m && !p && !g && !C) return
           }
           e.push((0, a.jsx)(R, {
             permission: s,

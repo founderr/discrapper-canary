@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("575175"),
   p = n("258609"),
   E = n("74299"),
-  C = n("924301"),
-  g = n("459502"),
+  g = n("924301"),
+  C = n("459502"),
   S = n("856691"),
   _ = n("889161"),
   T = n("923973"),
@@ -135,9 +135,9 @@ function ef(e) {
     onSelect: n
   } = e, l = (0, d.useAppContext)(), {
     canManageGuildEvent: s
-  } = (0, _.useManageResourcePermissions)(t), u = (0, r.useStateFromStores)([q.default], () => q.default.getStageInstanceByChannel(t.id), [t.id]), c = (0, r.useStateFromStores)([C.default], () => C.default.getGuildScheduledEvent(null == u ? void 0 : u.guild_scheduled_event_id)), f = (0, r.useStateFromStores)([D.default], () => D.default.getVoiceChannelId() === t.id, [t.id]), {
+  } = (0, _.useManageResourcePermissions)(t), u = (0, r.useStateFromStores)([q.default], () => q.default.getStageInstanceByChannel(t.id), [t.id]), c = (0, r.useStateFromStores)([g.default], () => g.default.getGuildScheduledEvent(null == u ? void 0 : u.guild_scheduled_event_id)), f = (0, r.useStateFromStores)([D.default], () => D.default.getVoiceChannelId() === t.id, [t.id]), {
     suppress: h
-  } = (0, v.default)(t), m = O.default.getId(), [p] = (0, el.default)(t), E = X.default.isModerator(m, t.id), g = (0, K.useCanModerateRequestToSpeak)(t.id), S = s(c);
+  } = (0, v.default)(t), m = O.default.getId(), [p] = (0, el.default)(t), E = X.default.isModerator(m, t.id), C = (0, K.useCanModerateRequestToSpeak)(t.id), S = s(c);
   return f ? (E || S) && null != u ? (0, a.jsx)(o.Popout, {
     renderPopout: e => {
       let {
@@ -184,7 +184,7 @@ function ef(e) {
         popoutOpen: i
       })
     }
-  }) : h && !g || p ? (0, a.jsx)(o.Button, {
+  }) : h && !C || p ? (0, a.jsx)(o.Button, {
     size: o.Button.Sizes.MEDIUM,
     color: o.Button.Colors.RED,
     className: i()(er.buttonSpacing, er.buttonWithTextButton),
@@ -301,8 +301,8 @@ let ep = l.memo(function(e) {
     selfMute: l,
     mute: s
   } = (0, v.default)(t), u = (0, K.useCanModerateRequestToSpeak)(t.id), d = (0, r.useStateFromStores)([p.default], () => null != p.default.getAwaitingRemoteSessionInfo()), {
-    cameraUnavailable: C,
-    enabled: g
+    cameraUnavailable: g,
+    enabled: C
   } = (0, T.default)(), S = (0, A.default)(t), {
     limit: _,
     reachedLimit: y
@@ -332,8 +332,8 @@ let ep = l.memo(function(e) {
         return (0, a.jsx)(L.default, {
           centerButton: !0,
           hasPermission: S,
-          enabled: g,
-          cameraUnavailable: C,
+          enabled: C,
+          cameraUnavailable: g,
           onChange: x.handleToggleVideo,
           onCameraUnavailable: N.default,
           channelLimitReached: y,
@@ -427,7 +427,7 @@ t.default = l.memo(function(e) {
     className: er.containerColumn,
     children: [(0, a.jsxs)("div", {
       className: er.eventPrompts,
-      children: [d ? (0, a.jsx)(g.default, {
+      children: [d ? (0, a.jsx)(C.default, {
         channelId: null == t ? void 0 : t.id
       }) : null, (0, a.jsx)("div", {
         className: er.separator

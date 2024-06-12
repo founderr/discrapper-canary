@@ -22,7 +22,7 @@ function f(e, t, s) {
 }
 let h = new n.default("GuildBasicChannels");
 
-function m(e, t) {
+function C(e, t) {
   return null == e || e.type !== t.type || e.parent_id !== t.parent_id || d.default.computeBasicPermissions(e) !== d.default.computeBasicPermissions(t)
 }
 t.default = new class e {
@@ -53,7 +53,7 @@ t.default = new class e {
     null != e.channel.guild_id && this.unsync(e.channel.guild_id, t)
   }
   handleChannelUpdates(e, t) {
-    for (let s of e.channels.filter(e => null != e.guild_id)) m(o.default.getBasicChannel(s.id), s) && this.unsync(s.guild_id, t)
+    for (let s of e.channels.filter(e => null != e.guild_id)) C(o.default.getBasicChannel(s.id), s) && this.unsync(s.guild_id, t)
   }
   handleBackgroundSync(e, t) {
     for (let l of e.guilds) switch (l.data_mode) {
@@ -118,7 +118,7 @@ t.default = new class e {
     this.synced = null
   }
   onGuildUpdate(e, t, s, a) {
-    (s.length > 0 || t.some(e => m(o.default.getBasicChannel(e.id), e))) && this.unsync(e, a)
+    (s.length > 0 || t.some(e => C(o.default.getBasicChannel(e.id), e))) && this.unsync(e, a)
   }
   onGuildSync(e, t) {
     this.unsync(e, t)

@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("998502"),
   p = n("785717"),
   E = n("204197"),
-  C = n("78675"),
-  g = n("438163"),
+  g = n("78675"),
+  C = n("438163"),
   S = n("652853"),
   _ = n("228168"),
   T = n("981631"),
@@ -73,7 +73,7 @@ function x(e) {
   });
   return (0, a.jsxs)("header", {
     className: I.header,
-    children: [(0, a.jsx)(C.default, {
+    children: [(0, a.jsx)(g.default, {
       user: t,
       displayProfile: n,
       profileType: _.UserProfileTypes.PANEL,
@@ -99,7 +99,7 @@ function x(e) {
         statusTooltip: !0,
         statusTooltipDelay: _.USER_PROFILE_TOOLTIP_DELAY
       })
-    }), (0, a.jsx)(g.UserProfileCustomStatusBubble, {
+    }), (0, a.jsx)(C.UserProfileCustomStatusBubble, {
       statusActivity: b,
       profileType: _.UserProfileTypes.PANEL
     })]

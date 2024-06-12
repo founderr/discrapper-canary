@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CONTENT_FEED_SECTION: function() {
-    return g
+    return C
   },
   useInjectContentInventoryFeed: function() {
     return S
@@ -21,15 +21,15 @@ var a = n("470079"),
   m = n("206583"),
   p = n("809017"),
   E = n("981631"),
-  C = n("689938");
-let g = 0;
+  g = n("689938");
+let C = 0;
 
 function S(e) {
   let {
     memberStoreProps: {
       groups: t,
       rows: n,
-      version: g
+      version: C
     },
     channelId: S,
     guildId: _
@@ -39,7 +39,7 @@ function S(e) {
     impressionCappedEntryIds: x
   } = (0, f.default)(S), N = (0, l.useStateFromStores)([c.default], () => c.default.hidden), M = (0, l.useStateFromStores)([o.default], () => o.default.isFocused()), y = (0, l.useStateFromStores)([r.default], () => r.default.getChannel(S)), R = (null == y ? void 0 : y.isForumChannel()) === !1, [L, O, j, P] = a.useMemo(() => {
     let e;
-    if (null == v || 0 === v.length || null == A || !R) return [t, n, g];
+    if (null == v || 0 === v.length || null == A || !R) return [t, n, C];
     let a = T ? v.length : 3,
       l = v.slice(0, a);
     e = N ? [{
@@ -55,7 +55,7 @@ function S(e) {
         key: p.MEMBER_LIST_CONTENT_GROUP_ID,
         count: e.length,
         index: n.length,
-        title: C.default.Messages.CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE,
+        title: g.default.Messages.CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE,
         onToggleExpand: () => {
           I(e => {
             let t = !e;
@@ -73,7 +73,7 @@ function S(e) {
       r = [s, ...t],
       o = [...n, s, ...e];
     return [r, o, Math.random(), e]
-  }, [S, v, T, t, _, A, n, g, N, R]), D = a.useRef(0), b = a.useRef(v), U = a.useRef(), F = a.useRef({
+  }, [S, v, T, t, _, A, n, C, N, R]), D = a.useRef(0), b = a.useRef(v), U = a.useRef(), F = a.useRef({
     impressionCappedEntryIds: x
   }), w = a.useCallback(e => {
     var t;

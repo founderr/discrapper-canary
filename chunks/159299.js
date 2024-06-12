@@ -13,8 +13,8 @@ var a, l = n("392711"),
   m = n("823379"),
   p = n("700785"),
   E = n("709054"),
-  C = n("51144"),
-  g = n("981631");
+  g = n("51144"),
+  C = n("981631");
 
 function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -117,12 +117,12 @@ class T {
       i = h.default.getCurrentUser(),
       r = (null == s ? void 0 : s.id) === (null == i ? void 0 : i.id) ? f.default.getStatus() : c.default.getStatus(e, this.guildId),
       o = null != s && null != t && p.can({
-        permission: g.Permissions.VIEW_CHANNEL,
+        permission: C.Permissions.VIEW_CHANNEL,
         user: s,
         context: t
       }),
-      d = r !== g.StatusTypes.OFFLINE && r !== g.StatusTypes.INVISIBLE && r !== g.StatusTypes.UNKNOWN ? null !== (n = null == l ? void 0 : l.hoistRoleId) && void 0 !== n ? n : "online" : "offline",
-      m = null !== (a = null == l ? void 0 : l.nick) && void 0 !== a ? a : C.default.getName(s);
+      d = r !== C.StatusTypes.OFFLINE && r !== C.StatusTypes.INVISIBLE && r !== C.StatusTypes.UNKNOWN ? null !== (n = null == l ? void 0 : l.hoistRoleId) && void 0 !== n ? n : "online" : "offline",
+      m = null !== (a = null == l ? void 0 : l.nick) && void 0 !== a ? a : g.default.getName(s);
     return [d, null == m ? void 0 : m.toLowerCase(), o]
   }
   constructor(e, t, n) {

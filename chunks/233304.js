@@ -27,7 +27,7 @@ let f = (0, d.cssValueToNumber)(u.default.GRADIENT_PROGRESS_NOTCH_WIDTH),
     BLACK: E.black,
     GRAY: E.gray
   });
-class m extends(a = l.Component) {
+class C extends(a = l.Component) {
   componentDidMount() {
     this.computeBars(), window.addEventListener("resize", this.computeBars)
   }
@@ -96,7 +96,7 @@ class m extends(a = l.Component) {
     })
   }
 }
-_(m, "defaultProps", {
+_(C, "defaultProps", {
   gradientStart: o.default.unsafe_rawColors.YELLOW_260.css,
   gradientEnd: o.default.unsafe_rawColors.GREEN_360.css
-}), t.default = m
+}), t.default = C

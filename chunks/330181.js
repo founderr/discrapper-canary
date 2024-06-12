@@ -42,8 +42,8 @@ function f(e) {
   } = (0, u.default)(o.default.PENDING_PLAN_CHANGE_NOTICE), {
     resetRenewalMutation: f,
     submitting: h,
-    error: m
-  } = _(r), C = (0, d.useSubscriptionListingsForGroup)(t, {
+    error: C
+  } = _(r), m = (0, d.useSubscriptionListingsForGroup)(t, {
     includeSoftDeleted: !0
   }), {
     currentListing: T,
@@ -55,12 +55,12 @@ function f(e) {
     };
     let e = s.items[0].planId,
       t = s.renewalMutations.items[0].planId,
-      a = C.find(t => t.subscription_plans[0].id === e);
+      a = m.find(t => t.subscription_plans[0].id === e);
     return {
       currentListing: a,
-      nextListing: C.find(e => e.subscription_plans[0].id === t)
+      nextListing: m.find(e => e.subscription_plans[0].id === t)
     }
-  }, [s, C]);
+  }, [s, m]);
   if (null == s || null == T || null == g) return null;
   let A = i()(s.currentPeriodEnd).format("MMM DD, YYYY");
   return (0, a.jsx)(c.default, {
@@ -69,7 +69,7 @@ function f(e) {
       nextListing: g.name,
       changeDate: A
     }),
-    error: null == m ? void 0 : m.message,
+    error: null == C ? void 0 : C.message,
     onClick: () => f(s),
     submitting: h,
     ctaMessage: E.default.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_DELETE_MUTATION_CTA,

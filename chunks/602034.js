@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("703558"),
   p = n("403182"),
   E = n("928477"),
-  C = n("981631"),
-  g = n("689938");
+  g = n("981631"),
+  C = n("689938");
 
 function S(e) {
   let {
@@ -80,7 +80,7 @@ function _(e) {
       return new Promise((u, c) => {
         let f = new d.default(e);
         f.on("error", (e, l, s) => {
-          if (l === C.AbortCodes.EXPLICIT_CONTENT) {
+          if (l === g.AbortCodes.EXPLICIT_CONTENT) {
             let e = (0, h.createNonce)();
             null != s && null != s.attachments && s.attachments.length > 0 && (r.default.dispatch({
               type: "MESSAGE_EXPLICIT_CONTENT_FP_CREATE",
@@ -97,18 +97,18 @@ function _(e) {
                 messageId: e
               })
             }))
-          } else if (l === C.AbortCodes.ENTITY_TOO_LARGE) {
+          } else if (l === g.AbortCodes.ENTITY_TOO_LARGE) {
             let e = (0, p.maxFileSize)(t.getGuildId());
             o.default.show({
-              title: g.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-              body: g.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
+              title: C.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+              body: C.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
                 maxSize: (0, p.sizeString)(e)
               })
             })
-          } else l === C.AbortCodes.TOO_MANY_ATTACHMENTS && o.default.show({
-            title: g.default.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
-            body: g.default.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
-              limit: C.MAX_UPLOAD_COUNT
+          } else l === g.AbortCodes.TOO_MANY_ATTACHMENTS && o.default.show({
+            title: C.default.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
+            body: C.default.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
+              limit: g.MAX_UPLOAD_COUNT
             })
           });
           c({

@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("580747"),
   p = n("740492"),
   E = n("871499"),
-  C = n("402113"),
-  g = n("592125"),
+  g = n("402113"),
+  C = n("592125"),
   S = n("271383"),
   _ = n("944486"),
   T = n("594174"),
@@ -51,7 +51,7 @@ function H(e) {
     maxHeight: s,
     connectedChannelId: H,
     renderExternalHeader: G
-  } = e, B = (0, L.default)(), V = (0, r.useStateFromStoresArray)([y.default], () => null != H ? y.default.getEmbeddedActivitiesForChannel(H) : [], [H]), W = (0, r.useStateFromStores)([g.default], () => g.default.getChannel(H)), Y = (0, R.useEmbeddedApps)(V), z = (0, R.useEmbeddedAppsWithPresence)(Y), K = l.useCallback(() => {
+  } = e, B = (0, L.default)(), V = (0, r.useStateFromStoresArray)([y.default], () => null != H ? y.default.getEmbeddedActivitiesForChannel(H) : [], [H]), W = (0, r.useStateFromStores)([C.default], () => C.default.getChannel(H)), Y = (0, R.useEmbeddedApps)(V), z = (0, R.useEmbeddedAppsWithPresence)(Y), K = l.useCallback(() => {
     (0, M.updateActivityPanelMode)(D.ActivityPanelModes.PIP)
   }, []), Z = l.useRef(null), X = (0, r.useStateFromStores)([y.default], () => y.default.getFocusedLayout()), q = X !== D.FocusedActivityLayouts.NO_CHAT, [J, Q] = l.useState(null !== (t = p.default.activityPanelHeight) && void 0 !== t ? t : s), $ = l.useCallback(e => {
     d.default.updatedUnsyncedSettings({
@@ -180,7 +180,7 @@ function H(e) {
             className: F.circularButton
           }), (0, a.jsx)("div", {
             className: F.leaveButtonContainer,
-            children: (0, a.jsx)(C.default, {
+            children: (0, a.jsx)(g.default, {
               applicationId: B.id,
               channelId: H,
               centerButton: !0,

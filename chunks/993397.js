@@ -15,7 +15,7 @@ var a = n("735250"),
   p = n("268283"),
   E = n("373947");
 
-function C(e) {
+function g(e) {
   let {
     expanded: t,
     onClick: n,
@@ -60,7 +60,7 @@ t.default = l.memo(function(e) {
     collapsedReason: u
   } = e, {
     hasJumpTarget: d = !1
-  } = n, [m, g] = l.useState(d), S = l.useCallback(() => g(e => !e), []), _ = n.hasUnread ? n.content.length - 1 : n.content.length;
+  } = n, [m, C] = l.useState(d), S = l.useCallback(() => C(e => !e), []), _ = n.hasUnread ? n.content.length - 1 : n.content.length;
   return (0, a.jsxs)("div", {
     className: i()({
       [E.groupStart]: !0,
@@ -69,7 +69,7 @@ t.default = l.memo(function(e) {
     children: [n.hasUnread && (!m || (null === (t = n.content[0]) || void 0 === t ? void 0 : t.type) === h.ChannelStreamTypes.DIVIDER) ? (0, a.jsx)(f.default, {
       isUnread: !0,
       id: o
-    }, "divider") : null, (0, a.jsx)(C, {
+    }, "divider") : null, (0, a.jsx)(g, {
       count: _,
       compact: r,
       expanded: m,

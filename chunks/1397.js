@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("645896"),
   p = n("353093"),
   E = n("717057"),
-  C = n("693546"),
-  g = n("881952"),
+  g = n("693546"),
+  C = n("881952"),
   S = n("305325"),
   _ = n("246364"),
   T = n("937111"),
@@ -90,8 +90,8 @@ class V extends l.PureComponent {
       children: m,
       canSendMessages: p,
       channelFollowingUsersSeen: E,
-      showLurkerModeUpsellPopout: C,
-      showMemberVerificationModal: g,
+      showLurkerModeUpsellPopout: g,
+      showMemberVerificationModal: C,
       useReducedMotion: S,
       isStaff: T,
       guildJoinRequest: I
@@ -105,8 +105,8 @@ class V extends l.PureComponent {
     if (e && !p) x.message = H.default.Messages.FOLLOW_NEWS_CHAT_INPUT_MESSAGE, null != E && E >= 1e3 && (x.subtitle = H.default.Messages.FOLLOW_NEWS_CHAT_INPUT_SUBTITLE.format({
       count: (1e3 * Math.floor(E / 1e3)).toLocaleString()
     })), x.buttonText = H.default.Messages.FOLLOW, x.onButtonClick = this.handleFollowAnnouncement, x.imageSrc = n("485195"), t && (x.onSecondaryButtonClick = this.handleJoinServer, x.secondaryButtonText = H.default.Messages.LURKER_MODE_CHAT_INPUT_BUTTON);
-    else if (s) x.message = H.default.Messages.GUILD_VERIFICATION_TEXT_NOT_CLAIMED, x.buttonText = H.default.Messages.CLAIM_ACCOUNT, x.onButtonClick = g ? this.handleShowMemberVerification : this.handleClaimAccount, x.imageSrc = n("102811");
-    else if (g) switch (null == I ? void 0 : I.applicationStatus) {
+    else if (s) x.message = H.default.Messages.GUILD_VERIFICATION_TEXT_NOT_CLAIMED, x.buttonText = H.default.Messages.CLAIM_ACCOUNT, x.onButtonClick = C ? this.handleShowMemberVerification : this.handleClaimAccount, x.imageSrc = n("102811");
+    else if (C) switch (null == I ? void 0 : I.applicationStatus) {
       case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
         x.message = H.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, x.subtitle = H.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_SUBTITLE, x.buttonText = H.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, x.onButtonClick = this.handleCancelApplication, x.imageSrc = n("281958");
         break;
@@ -137,7 +137,7 @@ class V extends l.PureComponent {
       children: e => (0, a.jsx)(F.default, {
         ...x,
         children: (0, a.jsxs)(l.Fragment, {
-          children: [this.renderMemberVerificationSuccessModal(), C ? (0, a.jsx)(o.Popout, {
+          children: [this.renderMemberVerificationSuccessModal(), g ? (0, a.jsx)(o.Popout, {
             renderPopout: this.renderLurkerModeUpsellPopout,
             shouldShow: A,
             position: "top",
@@ -175,7 +175,7 @@ class V extends l.PureComponent {
         header: H.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
         confirmText: H.default.Messages.CONFIRM,
         cancelText: H.default.Messages.CANCEL,
-        onConfirm: () => C.default.removeGuildJoinRequest(e.id),
+        onConfirm: () => g.default.removeGuildJoinRequest(e.id),
         confirmButtonColor: o.Button.Colors.BRAND,
         ...t,
         children: (0, a.jsx)(o.Text, {
@@ -287,9 +287,9 @@ class V extends l.PureComponent {
         guild: e,
         guildJoinRequest: t
       } = this.props, n = (null == t ? void 0 : t.applicationStatus) === _.GuildJoinRequestApplicationStatuses.APPROVED;
-      if (null == e || null == t || !n || (0, g.isApprovedAndAcked)(t)) return null;
+      if (null == e || null == t || !n || (0, C.isApprovedAndAcked)(t)) return null;
       let l = () => {
-        C.default.ackUserGuildJoinRequest(e.id, t.joinRequestId)
+        g.default.ackUserGuildJoinRequest(e.id, t.joinRequestId)
       };
       return (0, p.isGuildAClan)(e) ? (0, a.jsx)(o.Modal, {
         renderModal: t => (0, a.jsx)(E.default, {
@@ -315,12 +315,12 @@ function W(e) {
   let {
     channel: s,
     children: i
-  } = e, o = s.getGuildId(), u = (0, r.useStateFromStores)([j.default], () => j.default.getGuild(o)), d = (0, r.useStateFromStores)([P.default], () => P.default.getCheck(o)), c = s.type === w.ChannelTypes.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(w.GuildFeatures.NEWS), h = (0, r.useStateFromStores)([L.default], () => c ? L.default.getFollowerStatsForChannel(s.id) : null), E = (0, r.useStateFromStores)([v.default], () => v.default.isLurking(o)), C = (0, r.useStateFromStores)([b.default], () => b.default.getCurrentUser()), S = null !== (t = null == C ? void 0 : C.isStaff()) && void 0 !== t && t, I = (0, r.useStateFromStores)([O.default], () => {
+  } = e, o = s.getGuildId(), u = (0, r.useStateFromStores)([j.default], () => j.default.getGuild(o)), d = (0, r.useStateFromStores)([P.default], () => P.default.getCheck(o)), c = s.type === w.ChannelTypes.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(w.GuildFeatures.NEWS), h = (0, r.useStateFromStores)([L.default], () => c ? L.default.getFollowerStatsForChannel(s.id) : null), E = (0, r.useStateFromStores)([v.default], () => v.default.isLurking(o)), g = (0, r.useStateFromStores)([b.default], () => b.default.getCurrentUser()), S = null !== (t = null == g ? void 0 : g.isStaff()) && void 0 !== t && t, I = (0, r.useStateFromStores)([O.default], () => {
     var e, t;
-    return null != C && null !== (t = null === (e = O.default.getMember(o, C.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t
+    return null != g && null !== (t = null === (e = O.default.getMember(o, g.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t
   }), x = !!(null == u ? void 0 : u.hasVerificationGate()), N = (I || d.notClaimed) && x, M = (0, r.useStateFromStores)([A.default], () => A.default.shouldShowPopout(o)), y = (0, r.useStateFromStores)([D.default], () => D.default.can(w.Permissions.SEND_MESSAGES, s)), F = (0, r.useStateFromStores)([T.default], () => T.default.getRequest(o)), [k, H] = (0, m.useFetchClanInfo)(o), G = (0, m.useClanInfo)(o), B = (null == F ? void 0 : F.applicationStatus) === _.GuildJoinRequestApplicationStatuses.APPROVED;
   l.useEffect(() => {
-    if (!(!(0, p.isGuildAClan)(u) || !B || (0, g.isApprovedAndAcked)(F))) null == G && H()
+    if (!(!(0, p.isGuildAClan)(u) || !B || (0, C.isApprovedAndAcked)(F))) null == G && H()
   }, [u, B, F, G]);
   let W = {
     ...d,

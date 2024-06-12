@@ -20,12 +20,12 @@ t.default = e => {
   if (void 0 === s) return null;
   let n = s.hasFeature(c.GuildFeatures.VERIFIED) || s.hasFeature(c.GuildFeatures.PARTNERED),
     h = s.toString(),
-    m = s.getIconURL(40, !0),
-    C = null,
+    C = s.getIconURL(40, !0),
+    m = null,
     T = f[f.length - 1];
   if (null == s.icon && null != h) {
     var g;
-    T = null !== (g = f[(C = (0, i.getAcronym)(h)).length - 1]) && void 0 !== g ? g : f[f.length - 1]
+    T = null !== (g = f[(m = (0, i.getAcronym)(h)).length - 1]) && void 0 !== g ? g : f[f.length - 1]
   }
   return (0, a.jsxs)("div", {
     className: _.container,
@@ -33,11 +33,11 @@ t.default = e => {
       style: {
         fontSize: T
       },
-      children: [null != C ? (0, a.jsx)("div", {
+      children: [null != m ? (0, a.jsx)("div", {
         className: l()(_.childWrapper, _.acronym),
         "aria-hidden": !0,
-        children: C
-      }) : null, null != m ? (0, a.jsx)(o.Avatar, {
+        children: m
+      }) : null, null != C ? (0, a.jsx)(o.Avatar, {
         src: s.getIconURL(40, !0),
         size: o.AvatarSizes.SIZE_40,
         "aria-hidden": !0

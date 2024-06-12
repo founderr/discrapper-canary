@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("543241"),
   p = n("633302"),
   E = n("970731"),
-  C = n("594174"),
-  g = n("176354"),
+  g = n("594174"),
+  C = n("176354"),
   S = n("823379"),
   _ = n("74538"),
   T = n("401062"),
@@ -50,7 +50,7 @@ function k(e) {
     channel: n,
     closePopout: p,
     onFocus: S
-  } = e, O = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), k = (0, i.useStateFromStores)([C.default], () => C.default.getCurrentUser()), H = _.default.canUseFancyVoiceChannelReactions(k), G = (0, i.useStateFromStores)([I.default], () => I.default.getState().animationType), B = l.useRef(!1), V = (0, m.useFrequentlyUsedEmojis)(n.guild_id), W = (0, s.uniqBy)([...V, ...w], "name").filter(e => !g.default.isEmojiFilteredOrLocked({
+  } = e, O = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), k = (0, i.useStateFromStores)([g.default], () => g.default.getCurrentUser()), H = _.default.canUseFancyVoiceChannelReactions(k), G = (0, i.useStateFromStores)([I.default], () => I.default.getState().animationType), B = l.useRef(!1), V = (0, m.useFrequentlyUsedEmojis)(n.guild_id), W = (0, s.uniqBy)([...V, ...w], "name").filter(e => !C.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: n,
     intention: U

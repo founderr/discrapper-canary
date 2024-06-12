@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("906732"),
   p = n("484459"),
   E = n("594174"),
-  C = n("466111"),
-  g = n("368666"),
+  g = n("466111"),
+  C = n("368666"),
   S = n("626135"),
   _ = n("74538"),
   T = n("557457"),
@@ -109,10 +109,10 @@ let M = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
       children: e => (0, a.jsxs)(f.Clickable, {
         ...e,
         onClick: w,
-        className: i()(N.qualityIndicator, p, g.LiveIndicatorShapes[c], P ? N.qualityIndicatorLowQuality : N.qualityIndicatorFullQuality, {
+        className: i()(N.qualityIndicator, p, C.LiveIndicatorShapes[c], P ? N.qualityIndicatorLowQuality : N.qualityIndicatorFullQuality, {
           [N.clickable]: F && D
         }),
-        children: [D ? (0, a.jsx)(C.default, {
+        children: [D ? (0, a.jsx)(g.default, {
           className: N.premiumStreamIcon
         }) : null, (0, a.jsx)("span", {
           className: N.qualityResolution,
@@ -141,13 +141,13 @@ t.default = e => {
     premiumIndicator: d
   } = e, [c, h] = l.useState(!1), m = (0, T.getMaxQuality)(t), {
     reducedMotion: E
-  } = l.useContext(f.AccessibilityPreferencesContext), C = n && null != m;
+  } = l.useContext(f.AccessibilityPreferencesContext), g = n && null != m;
   l.useEffect(() => {
     (0, p.default)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), {
       dispatchWait: !0
     })
   }, [t]);
-  let S = (0, r.useTransition)(C, {
+  let S = (0, r.useTransition)(g, {
       enter: {
         from: E.enabled ? L : y,
         to: E.enabled ? O : R
@@ -156,7 +156,7 @@ t.default = e => {
       config: D
     }),
     _ = (0, r.useSpring)({
-      to: C ? P : j,
+      to: g ? P : j,
       config: D
     });
   return (e => {
@@ -182,10 +182,10 @@ t.default = e => {
       }) : null), (0, a.jsx)(r.animated.div, {
         style: _,
         className: N.liveIndicator,
-        children: (0, a.jsx)(g.default, {
-          look: g.LiveIndicatorLooks.RED,
+        children: (0, a.jsx)(C.default, {
+          look: C.LiveIndicatorLooks.RED,
           size: o,
-          shape: C ? f.BadgeShapes.ROUND_RIGHT : f.BadgeShapes.ROUND
+          shape: g ? f.BadgeShapes.ROUND_RIGHT : f.BadgeShapes.ROUND
         })
       })]
     })

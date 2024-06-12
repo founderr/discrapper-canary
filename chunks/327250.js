@@ -19,8 +19,8 @@ var l = n("120356"),
   m = n("314897"),
   p = n("271383"),
   E = n("430824"),
-  C = n("496675"),
-  g = n("158776"),
+  g = n("496675"),
+  C = n("158776"),
   S = n("885110"),
   _ = n("594174"),
   T = n("340149"),
@@ -43,7 +43,7 @@ function D(e) {
     backgroundColor: n,
     guildId: l,
     onClose: s
-  } = e, o = t.id, u = (0, i.useStateFromStores)([S.default, g.default, m.default], () => o === m.default.getId() ? S.default.getStatus() : g.default.getStatus(o, l), [o, l]);
+  } = e, o = t.id, u = (0, i.useStateFromStores)([S.default, C.default, m.default], () => o === m.default.getId() ? S.default.getStatus() : C.default.getStatus(o, l), [o, l]);
   return (0, a.jsxs)("div", {
     className: P.topRow,
     style: {
@@ -120,13 +120,13 @@ function U(e) {
     member: s,
     guildId: m
   } = e, p = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(m)), {
-    canKickUser: g,
+    canKickUser: C,
     canBanUser: S,
     canModerateMembers: v
-  } = (0, i.useStateFromStoresObject)([C.default, _.default, E.default], () => ({
-    canKickUser: null != p && C.default.canManageUser(O.Permissions.KICK_MEMBERS, l, p),
-    canBanUser: null != p && C.default.canManageUser(O.Permissions.BAN_MEMBERS, l, p),
-    canModerateMembers: null != p && (0, f.canToggleCommunicationDisableOnUser)(p.id, l.id, [_.default, E.default, C.default])
+  } = (0, i.useStateFromStoresObject)([g.default, _.default, E.default], () => ({
+    canKickUser: null != p && g.default.canManageUser(O.Permissions.KICK_MEMBERS, l, p),
+    canBanUser: null != p && g.default.canManageUser(O.Permissions.BAN_MEMBERS, l, p),
+    canModerateMembers: null != p && (0, f.canToggleCommunicationDisableOnUser)(p.id, l.id, [_.default, E.default, g.default])
   }), [l, p]), y = (0, d.isMemberCommunicationDisabled)(s), {
     analyticsLocations: R,
     newestAnalyticsLocation: L
@@ -154,7 +154,7 @@ function U(e) {
         children: j.default.Messages.SEND_DM
       })]
     }), (0, a.jsxs)(b, {
-      disabled: !g,
+      disabled: !C,
       "aria-label": j.default.Messages.KICK,
       style: {
         backgroundColor: t

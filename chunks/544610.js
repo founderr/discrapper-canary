@@ -10,8 +10,8 @@ var l, s, i, r, o = n("392711"),
   m = n("624138"),
   p = n("51144"),
   E = n("592125"),
-  C = n("580005"),
-  g = n("699516"),
+  g = n("580005"),
+  C = n("699516"),
   S = n("594174"),
   _ = n("981631");
 let T = !1,
@@ -34,7 +34,7 @@ function L() {
   if (!T) return !1;
   let e = E.default.getChannel(M);
   if (0 === I.trim().length) return null != a && a.clearQuery(), v = function(e) {
-    let t = g.default.getFriendIDs();
+    let t = C.default.getFriendIDs();
     return (null == e ? void 0 : e.isPrivate()) && (t = t.filter(t => !e.recipients.includes(t))), t.reduce((e, t) => {
       let n = S.default.getUser(t);
       return null == n ? e : (e.push({
@@ -46,18 +46,18 @@ function L() {
   return null != a && a.setQuery(I, {
     friends: !0
   }, t, function() {
-    let e = C.default.getFrequentlyWithoutFetchingLatest().filter(e => e instanceof h.PrivateChannelRecord && e.isDM()),
+    let e = g.default.getFrequentlyWithoutFetchingLatest().filter(e => e instanceof h.PrivateChannelRecord && e.isDM()),
       t = Math.max(...e.map(e => {
         let {
           id: t
         } = e;
-        return C.default.getScoreWithoutFetchingLatest(t)
+        return g.default.getScoreWithoutFetchingLatest(t)
       })),
       n = {};
     return e.forEach(e => {
-      let a = C.default.getScoreWithoutFetchingLatest(e.id),
+      let a = g.default.getScoreWithoutFetchingLatest(e.id),
         l = e.getRecipientId(),
-        s = g.default.isFriend(l) ? .2 : 0,
+        s = C.default.isFriend(l) ? .2 : 0,
         i = null != E.default.getDMFromUserId(l) ? .1 : 0;
       n[l] = 1 + a / t + s + i
     }), n
@@ -67,7 +67,7 @@ function L() {
 function O() {
   if (!T) return !1;
   let e = x;
-  return (x = u().some(g.default.getRelationships(), e => e === _.RelationshipTypes.FRIEND)) !== e
+  return (x = u().some(C.default.getRelationships(), e => e === _.RelationshipTypes.FRIEND)) !== e
 }
 
 function j(e, t) {
@@ -107,7 +107,7 @@ function F() {
 }
 class w extends(l = d.default.Store) {
   initialize() {
-    this.waitFor(S.default, E.default, g.default), this.syncWith([S.default, E.default], L), this.syncWith([g.default], O)
+    this.waitFor(S.default, E.default, C.default), this.syncWith([S.default, E.default], L), this.syncWith([C.default], O)
   }
   getResults() {
     return v

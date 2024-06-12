@@ -13,8 +13,8 @@ var a = s("735250"),
   _ = s("898170"),
   f = s("759853"),
   h = s("95985"),
-  m = s("743294"),
-  C = s("689938"),
+  C = s("743294"),
+  m = s("689938"),
   T = s("481900");
 t.default = function(e) {
   var t;
@@ -74,7 +74,7 @@ t.default = function(e) {
     }), x ? (0, a.jsx)("div", {
       className: T.postEnrollmentBackground,
       style: {
-        backgroundImage: "linear-gradient(90deg, ".concat(m.QUEST_BAR_V2_BACKGROUND_GRADIENT_LEFT, ", ").concat(m.QUEST_BAR_V2_BACKGROUND_GRADIENT_RIGHT, ")")
+        backgroundImage: "linear-gradient(90deg, ".concat(C.QUEST_BAR_V2_BACKGROUND_GRADIENT_LEFT, ", ").concat(C.QUEST_BAR_V2_BACKGROUND_GRADIENT_RIGHT, ")")
       }
     }) : (0, a.jsx)(_.QuestBarBackgroundAnimation, {
       className: T.background,
@@ -105,7 +105,7 @@ t.default = function(e) {
           color: "always-white",
           variant: "text-xs/medium",
           className: T.questAvailable,
-          children: C.default.Messages.QUEST_AVAILABLE
+          children: m.default.Messages.QUEST_AVAILABLE
         })]
       })
     })]

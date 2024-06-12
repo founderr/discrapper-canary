@@ -12,8 +12,8 @@ var a, l, s = n("735250"),
   m = n("260979"),
   p = n("766015"),
   E = n("401139"),
-  C = n("12779"),
-  g = n("450369"),
+  g = n("12779"),
+  C = n("450369"),
   S = n("689938"),
   _ = n("919448");
 let T = {
@@ -24,7 +24,7 @@ let T = {
 (l = a || (a = {}))[l.SELECTED = 0] = "SELECTED", l[l.SPEAKER = 1] = "SPEAKER", l[l.AUDIENCE = 2] = "AUDIENCE";
 let I = (e, t) => {
     let n = Math.floor(e / t - 8),
-      a = Math.floor(n / g.SPEAKER_TILE_ASPECT_RATIO);
+      a = Math.floor(n / C.SPEAKER_TILE_ASPECT_RATIO);
     return {
       speakerTileWidth: n,
       speakerTileHeight: a
@@ -64,7 +64,7 @@ t.default = (0, o.default)(e => {
       let {
         section: t
       } = e;
-      if (1 === t) return 0 === y ? null : (0, s.jsx)(C.default, {
+      if (1 === t) return 0 === y ? null : (0, s.jsx)(g.default, {
         participantCount: y,
         label: S.default.Messages.SPEAKER_LABEL,
         className: _.header,
@@ -74,7 +74,7 @@ t.default = (0, o.default)(e => {
         channel: a,
         isStreamLive: P
       }, "speaker-header-".concat(t));
-      if (2 === t) return 0 === R ? null : (0, s.jsx)(C.default, {
+      if (2 === t) return 0 === R ? null : (0, s.jsx)(g.default, {
         participantCount: R,
         label: S.default.Messages.AUDIENCE_LABEL,
         className: _.header,
@@ -96,7 +96,7 @@ t.default = (0, o.default)(e => {
           if (0 === l.length || null == l[0]) return null;
           return (0, s.jsx)("div", {
             className: _.focusedRow,
-            children: (0, s.jsx)(g.default, {
+            children: (0, s.jsx)(C.default, {
               channel: a,
               participant: l[0],
               width: V
@@ -123,7 +123,7 @@ t.default = (0, o.default)(e => {
           return null
       }
     },
-    rowHeight: e => null == k[e][0] ? 0 : 0 === e ? V / g.SPEAKER_TILE_ASPECT_RATIO + 8 : 1 === e ? Y ? 0 : B : K ? 0 : 98,
+    rowHeight: e => null == k[e][0] ? 0 : 0 === e ? V / C.SPEAKER_TILE_ASPECT_RATIO + 8 : 1 === e ? Y ? 0 : B : K ? 0 : 98,
     renderFooter: e => {
       let {
         section: t

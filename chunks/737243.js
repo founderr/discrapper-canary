@@ -20,7 +20,7 @@ let u = l.memo(function(e) {
     interactionAvatarProfile: f,
     interactionData: h,
     setPopout: m
-  } = e, p = (0, s.useStateFromStores)([i.default], () => null != n.interaction && i.default.isBlocked(n.interaction.user.id), [n.interaction]), E = (0, o.useContextMenuUser)(null === (t = n.interaction) || void 0 === t ? void 0 : t.user.id, u.id), C = (0, o.useClickInteractionUserUsername)(n.interaction, u, c, m), g = (0, o.useClickInteractionUserAvatar)(f, m), S = (0, o.useClickInteractionCommandName)(h, m), _ = l.useCallback(() => m({
+  } = e, p = (0, s.useStateFromStores)([i.default], () => null != n.interaction && i.default.isBlocked(n.interaction.user.id), [n.interaction]), E = (0, o.useContextMenuUser)(null === (t = n.interaction) || void 0 === t ? void 0 : t.user.id, u.id), g = (0, o.useClickInteractionUserUsername)(n.interaction, u, c, m), C = (0, o.useClickInteractionUserAvatar)(f, m), S = (0, o.useClickInteractionCommandName)(h, m), _ = l.useCallback(() => m({
     interactionUsernameProfile: !1,
     interactionAvatarProfile: !1,
     interactionData: !1
@@ -33,8 +33,8 @@ let u = l.memo(function(e) {
     showAvatarPopout: f,
     showUsernamePopout: c,
     showDataPopout: h,
-    onClickAvatar: g,
-    onClickUsername: C,
+    onClickAvatar: C,
+    onClickUsername: g,
     onClickCommand: S,
     onUserContextMenu: E,
     onPopoutRequestClose: _

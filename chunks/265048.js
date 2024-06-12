@@ -26,8 +26,8 @@ function f(e) {
 let h = (0, s.default)(f),
   m = e => {
     var t, n, s, m, p, E;
-    let C = (0, l.useStateFromStores)([i.default], () => i.default.locale),
-      g = (0, l.useStateFromStores)([r.default], () => r.default.getUser(e.author_id)),
+    let g = (0, l.useStateFromStores)([i.default], () => i.default.locale),
+      C = (0, l.useStateFromStores)([r.default], () => r.default.getUser(e.author_id)),
       {
         activity: S,
         activityApplication: _,
@@ -38,7 +38,7 @@ let h = (0, s.default)(f),
     if (!I || null == S) return {
       iconUrl: A,
       gameTitle: e.extra.game_name,
-      user: g,
+      user: C,
       inExperiment: I
     };
     let v = null != _ && (null === (n = S.assets) || void 0 === n ? void 0 : n.large_image) != null ? (0, o.getAssetImage)(_.id, S.assets.large_image, [c.ImageSizes.LARGE, c.ImageSizes.LARGE]) : void 0,
@@ -50,13 +50,13 @@ let h = (0, s.default)(f),
       L = null != S.timestamps ? (0, a.jsx)(h, {
         timestamps: S.timestamps
       }) : (0, a.jsx)(f, {
-        message: (0, d.formatEntryTimestamp)(e, C)
+        message: (0, d.formatEntryTimestamp)(e, g)
       });
     return {
       iconUrl: null != v ? v : A,
       iconFallbackUrl: null != v ? A : void 0,
       iconTitle: x,
-      user: g,
+      user: C,
       activity: S,
       state: y,
       details: M,

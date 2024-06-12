@@ -38,9 +38,9 @@ function f(e) {
     width: 0,
     height: 0
   }), {
-    width: C,
-    height: g
-  } = p, S = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0, _ = C - 16, T = g - (h + m), {
+    width: g,
+    height: C
+  } = p, S = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0, _ = g - 16, T = C - (h + m), {
     tileStyle: I,
     tileWidth: A,
     rows: v,
@@ -84,7 +84,7 @@ function f(e) {
       rows: a,
       columns: l
     }
-  })(S, _, T), [S, _, T]), N = x + 1, M = N * A + (N - 1) * 8 <= C, y = Math.floor(A / u) + 8, R = Math.max(0, T - y * v) / 2;
+  })(S, _, T), [S, _, T]), N = x + 1, M = N * A + (N - 1) * 8 <= g, y = Math.floor(A / u) + 8, R = Math.max(0, T - y * v) / 2;
   return (0, a.jsx)(r.default, {
     fade: !0,
     className: n,

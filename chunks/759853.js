@@ -17,17 +17,17 @@ t.default = e => {
   var t;
   let {
     quest: s,
-    progressBarRef: m,
-    isExpanded: C
+    progressBarRef: C,
+    isExpanded: m
   } = e, {
     completionSpring: T,
     startCompletionAnimation: g
-  } = (0, c.useQuestBarCompletionAnimation)(), A = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, p = n.useRef(!1), N = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), S = n.useRef(null), I = (0, r.useStateFromStores)([d.default], () => d.default.hasLayers()), x = (0, o.default)(I), [v, R] = n.useState(null), [M, L] = n.useState(null), O = n.useRef(new l.Environment({
+  } = (0, c.useQuestBarCompletionAnimation)(), A = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, p = n.useRef(!1), N = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), S = n.useRef(null), I = (0, r.useStateFromStores)([d.default], () => d.default.hasLayers()), x = (0, o.default)(I), [v, R] = n.useState(null), [O, L] = n.useState(null), M = n.useRef(new l.Environment({
     gravity: 0,
     wind: 0
-  })), y = (0, l.useConfettiCannon)(v, M), D = n.useCallback(() => {
+  })), y = (0, l.useConfettiCannon)(v, O), D = n.useCallback(() => {
     if (N) return;
-    let e = m.current,
+    let e = C.current,
       t = S.current;
     if (null != t && null != e && y.isReady) {
       var s, a, n, l;
@@ -78,10 +78,10 @@ t.default = e => {
         }
       }), 100)
     }
-  }, [m, S, y, N]), b = (0, o.default)(C);
+  }, [C, S, y, N]), b = (0, o.default)(m);
   return (n.useEffect(() => {
-    A && C && !b && (g(), D())
-  }, [C, A, g, D, b]), n.useEffect(() => {
+    A && m && !b && (g(), D())
+  }, [m, A, g, D, b]), n.useEffect(() => {
     A && !I && x && setTimeout(() => {
       g(), D()
     }, 200)
@@ -99,7 +99,7 @@ t.default = e => {
     }), (0, a.jsx)(l.ConfettiCanvas, {
       ref: R,
       className: _.confetti,
-      environment: O.current
+      environment: M.current
     }), (0, a.jsx)(l.SpriteCanvas, {
       ref: L,
       sprites: [f],

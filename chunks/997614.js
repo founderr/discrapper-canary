@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("871499"),
   p = n("131951"),
   E = n("503705"),
-  C = n("459273"),
-  g = n("304388"),
+  g = n("459273"),
+  C = n("304388"),
   S = n("981631"),
   _ = n("689938");
 
@@ -50,10 +50,10 @@ function T(e) {
       var e;
       null === (e = O.current) || void 0 === e || e.hidePopout()
     }, []);
-  return (0, C.useComponentAction)({
+  return (0, g.useComponentAction)({
     event: S.ComponentActions.TOGGLE_SOUNDBOARD,
     handler: j
-  }), (0, a.jsx)(g.default, {
+  }), (0, a.jsx)(C.default, {
     ref: O,
     renderPopout: e => {
       let {

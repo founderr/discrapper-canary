@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   Header: function() {
-    return p
+    return v
   },
   PurchaseConfirmation: function() {
     return g
@@ -23,17 +23,17 @@ var a = n("120356"),
   T = n("584825"),
   I = n("570533"),
   S = n("629262"),
-  m = n("575460"),
-  C = n("293810"),
+  C = n("575460"),
+  m = n("293810"),
   N = n("689938"),
   R = n("159367");
-let p = e => {
+let v = e => {
     let {
       onClose: t,
       listing: n,
       step: a,
       guildId: r
-    } = e, u = (0, T.useSubscriptionsSettings)(r), c = (0, o.default)(C.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY), _ = (() => {
+    } = e, u = (0, T.useSubscriptionsSettings)(r), c = (0, o.default)(m.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY), _ = (() => {
       var e;
       if (c) return null;
       let t = (null == u ? void 0 : null === (e = u.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null ? (0, E.getAssetURL)(u.cover_image_asset.application_id, u.cover_image_asset, 440) : void 0;
@@ -100,7 +100,7 @@ let p = e => {
           children: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_CHANNEL_PREVIEW
         }), (0, i.jsx)("div", {
           className: R.confirmationBenefits,
-          children: f.map(e => (0, i.jsx)(m.default, {
+          children: f.map(e => (0, i.jsx)(C.default, {
             benefit: e,
             guildId: a,
             onClick: () => t(!0)

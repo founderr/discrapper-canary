@@ -42,11 +42,11 @@ let E = {
     CENTER: u.flexAlignCenter,
     STRETCH: u.flexAlignStretch
   },
-  m = {
+  C = {
     SMALL: d.flexGutterSmall,
     LARGE: d.flexGutterLarge
   };
-class C extends(a = i.PureComponent) {
+class m extends(a = i.PureComponent) {
   render() {
     let {
       children: e,
@@ -80,7 +80,7 @@ class C extends(a = i.PureComponent) {
     })
   }
 }
-c(C, "defaultProps", {
+c(m, "defaultProps", {
   className: d.flexChild,
   style: {},
   wrap: !1
@@ -114,7 +114,7 @@ class T extends(n = i.PureComponent) {
     })
   }
 }
-c(T, "Child", C), c(T, "Direction", E), c(T, "Align", h), c(T, "Justify", _), c(T, "Wrap", f), c(T, "Gutter", m), c(T, "defaultProps", {
+c(T, "Child", m), c(T, "Direction", E), c(T, "Align", h), c(T, "Justify", _), c(T, "Wrap", f), c(T, "Gutter", C), c(T, "defaultProps", {
   direction: E.HORIZONTAL,
   justify: _.START,
   align: h.STRETCH,

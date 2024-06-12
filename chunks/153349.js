@@ -16,8 +16,8 @@ var a, l, s = n("735250"),
   m = n("99690"),
   p = n("58540"),
   E = n("484459"),
-  C = n("103575"),
-  g = n("271383"),
+  g = n("103575"),
+  C = n("271383"),
   S = n("496675"),
   _ = n("158776"),
   T = n("465670"),
@@ -75,7 +75,7 @@ let D = i.memo(function(e) {
     } = (0, c.useStateFromStoresObject)([_.default], () => ({
       isMobile: _.default.isMobileOnline(a.user.id),
       status: _.default.getStatus(a.user.id, S)
-    })), N = (0, c.useStateFromStores)([g.default], () => g.default.getMember(S, a.user.id)), R = i.useMemo(() => ({
+    })), N = (0, c.useStateFromStores)([C.default], () => C.default.getMember(S, a.user.id)), R = i.useMemo(() => ({
       [S]: [a.user.id]
     }), [S, a.user.id]);
     (0, p.useSubscribeGuildMembers)(R);
@@ -109,7 +109,7 @@ let D = i.memo(function(e) {
           guildId: t.guild_id,
           channelId: t.id
         }),
-        renderPopout: e => (0, s.jsx)(C.default, {
+        renderPopout: e => (0, s.jsx)(g.default, {
           ...e,
           location: "RequestToSpeakSidebar",
           userId: a.user.id,

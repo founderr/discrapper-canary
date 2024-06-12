@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   Card: function() {
-    return C
+    return g
   },
   CardInfoSection: function() {
-    return g
+    return C
   },
   CardParticipants: function() {
     return _
@@ -29,7 +29,7 @@ var l = n("120356"),
   p = n("687694"),
   E = n("571425");
 
-function C(e) {
+function g(e) {
   let {
     children: t,
     selected: n
@@ -54,7 +54,7 @@ function C(e) {
   })
 }
 
-function g(e) {
+function C(e) {
   let {
     children: t
   } = e;
@@ -99,13 +99,13 @@ function _(e) {
     maxAvatars: s = 3
   } = e, c = l.author_id, f = (0, i.useStateFromStores)([d.default], () => d.default.getUser(c)), {
     displayParticipants: p,
-    numOtherParticipants: C
-  } = (0, m.default)(l, s), g = (0, i.useStateFromStores)([o.default], () => o.default.getMember(t, c)), _ = (0, i.useStateFromStores)([u.default], () => {
+    numOtherParticipants: g
+  } = (0, m.default)(l, s), C = (0, i.useStateFromStores)([o.default], () => o.default.getMember(t, c)), _ = (0, i.useStateFromStores)([u.default], () => {
     var e;
-    return (null == g ? void 0 : g.colorRoleId) != null ? null === (e = u.default.getRole(t, g.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
-  }, [t, g]);
+    return (null == C ? void 0 : C.colorRoleId) != null ? null === (e = u.default.getRole(t, C.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
+  }, [t, C]);
   if (null == f) return null;
-  let T = null == g ? void 0 : g.colorString,
+  let T = null == C ? void 0 : C.colorString,
     I = h.default.getName(t, n, f);
   return (0, a.jsxs)("div", {
     className: E.userSection,
@@ -117,13 +117,13 @@ function _(e) {
       roleName: _,
       name: I,
       className: E.userName
-    }), C > 0 ? (0, a.jsx)("div", {
+    }), g > 0 ? (0, a.jsx)("div", {
       className: E.additionalParticipantBadge,
       children: (0, a.jsxs)(r.Text, {
         variant: "text-xxs/medium",
         color: "text-normal",
         className: E.additionalParticipantBadgeText,
-        children: ["+", C]
+        children: ["+", g]
       })
     }) : null]
   })

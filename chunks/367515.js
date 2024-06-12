@@ -17,8 +17,8 @@ var a = s("735250"),
   _ = s("631885"),
   f = s("933970"),
   h = s("340453"),
-  m = s("292352"),
-  C = s("689938"),
+  C = s("292352"),
+  m = s("689938"),
   T = s("999593");
 
 function g(e) {
@@ -64,25 +64,25 @@ function g(e) {
       className: T.details,
       children: (0, a.jsx)(h.default, {
         otherUser: t,
-        status: m.UserLinkStatus.PENDING
+        status: C.UserLinkStatus.PENDING
       })
     }), (0, a.jsx)("div", {
       className: T.actions,
       children: l ? (0, a.jsx)(f.default, {
         icon: c.default,
         className: T.__invalid_actionDeny,
-        tooltip: C.default.Messages.FAMILY_CENTER_LINK_ACTION_CANCEL,
+        tooltip: m.default.Messages.FAMILY_CENTER_LINK_ACTION_CANCEL,
         onClick: S
       }) : (0, a.jsxs)(a.Fragment, {
         children: [g ? null : (0, a.jsx)(f.default, {
           icon: d.default,
           className: T.__invalid_actionAccept,
-          tooltip: C.default.Messages.FAMILY_CENTER_LINK_ACTION_ACCEPT,
+          tooltip: m.default.Messages.FAMILY_CENTER_LINK_ACTION_ACCEPT,
           onClick: p
         }), (0, a.jsx)(f.default, {
           icon: c.default,
           className: T.__invalid_actionDeny,
-          tooltip: C.default.Messages.FAMILY_CENTER_LINK_ACTION_DECLINE,
+          tooltip: m.default.Messages.FAMILY_CENTER_LINK_ACTION_DECLINE,
           onClick: N
         })]
       })
