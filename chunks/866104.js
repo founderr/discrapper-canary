@@ -100,7 +100,7 @@ function O(e) {
   }, [l])), {
     isTruncated: O,
     ExpandableTextContainer: x
-  } = (0, N.useExpandableTextContainer)(), L = (null !== (n = null == f ? void 0 : null === (t = f.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [D, P] = a.useState(1), y = (0, u.default)("(max-width: ".concat(M.twoColumnWidth, ")")), {
+  } = (0, N.useExpandableTextContainer)(), L = (null !== (n = null == f ? void 0 : null === (t = f.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [D, P] = a.useState(1), y = (0, u.default)("(max-width: 1439px)"), {
     selectedTab: U,
     isPhantomPreview: j
   } = (0, S.useGuildShopDisplayContext)(), b = U === C.GuildShopTab.GUILD_PRODUCTS_PREVIEW ? A.default.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.default.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, F = L ? (0, s.jsxs)(s.Fragment, {

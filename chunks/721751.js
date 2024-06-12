@@ -14,20 +14,18 @@ var a = n("735250"),
   E = n("703656"),
   g = n("980483"),
   m = n("612744"),
-  _ = n("624138"),
-  p = n("981631"),
-  T = n("734541");
-let S = n("575703"),
-  A = n("2984"),
-  I = (0, _.cssValueToNumber)(T.responsiveWidthMobile),
-  N = [p.Routes.LOGIN, p.Routes.LOGIN_HANDOFF, p.Routes.REGISTER, p.Routes.INVITE(""), p.Routes.GIFT_CODE(""), p.Routes.GUILD_TEMPLATE_LOGIN(""), p.Routes.GUILD_TEMPLATE(""), p.Routes.DISABLE_EMAIL_NOTIFICATIONS, p.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, p.Routes.BILLING_PREMIUM_SUBSCRIBE, p.Routes.BILLING_PAYMENT_SOURCES_CREATE, p.Routes.BILLING_PAYMENTS, p.Routes.BILLING_PREMIUM_SWITCH_PLAN, p.Routes.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, p.Routes.VERIFY, p.Routes.VERIFY_HUB_EMAIL, p.Routes.REJECT_IP, p.Routes.REJECT_MFA, p.Routes.AUTHORIZE_IP, p.Routes.AUTHORIZE_PAYMENT, p.Routes.RESET, p.Routes.HANDOFF, p.Routes.REPORT, p.Routes.REPORT_SECOND_LOOK];
+  _ = n("981631"),
+  p = n("734541");
+let T = n("575703"),
+  S = n("2984"),
+  A = [_.Routes.LOGIN, _.Routes.LOGIN_HANDOFF, _.Routes.REGISTER, _.Routes.INVITE(""), _.Routes.GIFT_CODE(""), _.Routes.GUILD_TEMPLATE_LOGIN(""), _.Routes.GUILD_TEMPLATE(""), _.Routes.DISABLE_EMAIL_NOTIFICATIONS, _.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, _.Routes.BILLING_PREMIUM_SUBSCRIBE, _.Routes.BILLING_PAYMENT_SOURCES_CREATE, _.Routes.BILLING_PAYMENTS, _.Routes.BILLING_PREMIUM_SWITCH_PLAN, _.Routes.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, _.Routes.VERIFY, _.Routes.VERIFY_HUB_EMAIL, _.Routes.REJECT_IP, _.Routes.REJECT_MFA, _.Routes.AUTHORIZE_IP, _.Routes.AUTHORIZE_PAYMENT, _.Routes.RESET, _.Routes.HANDOFF, _.Routes.REPORT, _.Routes.REPORT_SECOND_LOOK];
+
+function I(e) {
+  return A.some(t => e.startsWith(t))
+}
+let N = e => (s = e, e);
 
 function R(e) {
-  return N.some(t => e.startsWith(t))
-}
-let C = e => (s = e, e);
-
-function O(e) {
   let {
     children: t
   } = e;
@@ -35,19 +33,19 @@ function O(e) {
       let [e, t] = i.useState(!1), [n, a] = i.useState(true), l = function() {
         return null
       }(), r = (0, u.useStateFromStores)([h.default], () => h.default.hasLoadedExperiments);
-      return ((0, c.default)(() => {}, 300), void 0 !== s) ? s : !n && r ? (!e && t(!0), C(function(e) {
+      return ((0, c.default)(() => {}, 300), void 0 !== s) ? s : !n && r ? (!e && t(!0), N(function(e) {
         return "default"
-      }(l))) : n ? C("default") : "loading"
+      }(l))) : n ? N("default") : "loading"
     }()) {
     case "default":
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)("img", {
-          className: T.artwork,
-          src: S,
+          className: p.artwork,
+          src: T,
           alt: ""
         }), (0, a.jsx)("img", {
-          className: T.logoWithText,
-          src: A,
+          className: p.logoWithText,
+          src: S,
           alt: ""
         }), t]
       });
@@ -56,7 +54,7 @@ function O(e) {
       return null
   }
 }
-class v extends i.Component {
+class C extends i.Component {
   componentDidMount() {
     window.addEventListener("resize", this.handleResize)
   }
@@ -64,14 +62,14 @@ class v extends i.Component {
     window.removeEventListener("resize", this.handleResize)
   }
   mobileTransitionTo(e, t) {
-    if (R(e))(0, E.transitionTo)(e, t);
+    if (I(e))(0, E.transitionTo)(e, t);
     else {
       let n = null != t && null != t.search ? t.search : null;
       window.location = null == n ? e : "".concat(e, "?").concat(n)
     }
   }
   mobileReplaceWith(e) {
-    R(e) ? (0, E.replaceWith)(e) : window.location = e
+    I(e) ? (0, E.replaceWith)(e) : window.location = e
   }
   renderDefault() {
     let {
@@ -84,18 +82,18 @@ class v extends i.Component {
       }))
     });
     return (0, a.jsx)("div", {
-      className: T.characterBackground,
+      className: p.characterBackground,
       children: (0, a.jsx)(d.HeadingLevel, {
         forceLevel: 1,
         children: null != e ? (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(g.default, {
             show: !0,
-            className: r()(T.logo)
+            className: r()(p.logo)
           }), (0, a.jsx)(m.Splash, {
             splash: e,
             children: t
           })]
-        }) : (0, a.jsx)(O, {
+        }) : (0, a.jsx)(R, {
           children: t
         })
       })
@@ -120,7 +118,7 @@ class v extends i.Component {
     var t, n, s;
     super(e), t = this, n = "handleResize", s = () => {
       this.setState({
-        isMobileWidth: window.innerWidth <= I
+        isMobileWidth: window.innerWidth <= 485
       })
     }, n in t ? Object.defineProperty(t, n, {
       value: s,
@@ -128,8 +126,8 @@ class v extends i.Component {
       configurable: !0,
       writable: !0
     }) : t[n] = s, this.state = {
-      isMobileWidth: window.innerWidth <= I
+      isMobileWidth: window.innerWidth <= 485
     }
   }
 }
-t.default = v
+t.default = C
