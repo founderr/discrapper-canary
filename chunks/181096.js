@@ -14,6 +14,7 @@ e.exports = {
   hangoutChannelStatusContent: "hangoutChannelStatusContent__4a123",
   hangoutStatusOthers: "hangoutStatusOthers_bd698a",
   hangoutStatusTitleContainer: "hangoutStatusTitleContainer__34045",
+  hangoutStatusUsername: "hangoutStatusUsername__87a58",
   image: "image__75373",
   imageIcon: "imageIcon_fdf820",
   inline: "inline__51026",

@@ -48957,6 +48957,10 @@ span.clanTag_f4aadc {
     display: flex
 }
 
+.hangoutStatusUsername__87a58 {
+    max-width: 150px
+}
+
 .hangoutStatusOthers_bd698a {
     flex-shrink: 0;
     margin-left: 4px

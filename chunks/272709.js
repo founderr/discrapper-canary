@@ -192,18 +192,18 @@ function Z(e) {
   }(s, d, x, ee), en = function(e, t) {
     let {
       category: n
-    } = e, r = (0, G.useSortUserIdsByAffinity)(n === F.CardCategory.HANGOUT ? null == e ? void 0 : e.userIds : []), s = (0, G.useSortUserIdsByAffinity)(n === F.CardCategory.HANGOUT ? null == e ? void 0 : e.streamUserIds : []), a = (0, G.useSortUserIdsByAffinity)(n === F.CardCategory.GAMING ? null == e ? void 0 : e.gameUserIds : []), o = (0, U.default)(e), {
-      hasChannelStatus: l
-    } = (0, G.useChannelStatus)(o), {
-      usersToShow: d
-    } = (0, G.useGetEventCardUsers)(o), _ = (0, G.useSortUserIdsByAffinity)(n === F.CardCategory.HANGOUT && e.isStage ? d.map(e => e.id) : []), c = new Set;
+    } = e, r = (0, G.useSortUserIdsByAffinity)(n === F.CardCategory.HANGOUT ? null == e ? void 0 : e.userIds : []), s = (0, G.useSortUserIdsByAffinity)(n === F.CardCategory.HANGOUT ? null == e ? void 0 : e.streamUserIds : []), o = (0, G.useSortUserIdsByAffinity)(n === F.CardCategory.GAMING ? null == e ? void 0 : e.gameUserIds : []), l = (0, U.default)(e), {
+      hasChannelStatus: d
+    } = (0, G.useChannelStatus)(l), {
+      usersToShow: _
+    } = (0, G.useGetEventCardUsers)(l), c = (0, G.useSortUserIdsByAffinity)(n === F.CardCategory.HANGOUT && e.isStage ? _.map(e => e.id) : []), E = new Set;
     n === F.CardCategory.EMBEDDED_ACTIVITY && e.embeddedActivities.forEach(e => {
-      c = new Set([...c, ...e.userIds])
+      E = new Set([...E, ...e.userIds])
     });
-    let E = (0, G.useSortUserIdsByAffinity)(n === F.CardCategory.EMBEDDED_ACTIVITY ? [...c] : []);
+    let I = (0, G.useSortUserIdsByAffinity)(n === F.CardCategory.EMBEDDED_ACTIVITY ? [...E] : []);
     switch (n) {
       case F.CardCategory.HANGOUT: {
-        if (l && 0 === s.length) {
+        if (d && 0 === s.length) {
           let e = (0, G.getUserNameString)(r, t, !0),
             n = r.length - 1;
           return (0, i.jsxs)("div", {
@@ -211,7 +211,7 @@ function Z(e) {
             children: [(0, i.jsx)(u.Heading, {
               color: "header-primary",
               variant: "heading-sm/semibold",
-              className: W.ellipsis,
+              className: a()(W.hangoutStatusUsername, W.ellipsis),
               children: e
             }), n > 0 && (0, i.jsx)(u.Heading, {
               color: "header-primary",
@@ -223,19 +223,19 @@ function Z(e) {
             })]
           })
         }
-        let n = (0, G.getUserNameString)(_.length > 0 ? _ : s.length > 0 ? s : r, t);
+        let n = (0, G.getUserNameString)(c.length > 0 ? c : s.length > 0 ? s : r, t);
         if (e.isStage) {
-          var I, T;
-          return null !== (T = null === (I = f.default.getStageInstanceByChannel(e.channelId)) || void 0 === I ? void 0 : I.topic) && void 0 !== T ? T : n
+          var T, S;
+          return null !== (S = null === (T = f.default.getStageInstanceByChannel(e.channelId)) || void 0 === T ? void 0 : T.topic) && void 0 !== S ? S : n
         }
         return n
       }
       case F.CardCategory.EVENT:
         return e.event.name;
       case F.CardCategory.EMBEDDED_ACTIVITY:
-        return (0, G.getUserNameString)(E, t);
+        return (0, G.getUserNameString)(I, t);
       case F.CardCategory.GAMING:
-        return (0, G.getUserNameString)(a, t);
+        return (0, G.getUserNameString)(o, t);
       default:
         return null
     }
