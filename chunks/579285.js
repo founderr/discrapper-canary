@@ -118,13 +118,16 @@ let C = (0, c.default)(function(e) {
           "aria-label": V,
           ref: t,
           ...n,
-          children: [F, b && (0, i.jsx)(d.Clickable, {
-            innerRef: w,
-            onClick: R,
-            className: O.showMoreButton,
-            children: (0, i.jsx)(d.Text, {
-              variant: "text-xs/medium",
-              children: "+".concat(c.length - y.length)
+          children: [F, b && (0, i.jsx)(d.TooltipContainer, {
+            text: p.default.Messages.VIEW_ALL_ROLES,
+            children: (0, i.jsx)(d.Clickable, {
+              innerRef: w,
+              onClick: R,
+              className: O.showMoreButton,
+              children: (0, i.jsx)(d.Text, {
+                variant: "text-xs/medium",
+                children: "+".concat(c.length - y.length)
+              })
             })
           }), G && (0, i.jsx)(m.default, {
             buttonRef: k,
