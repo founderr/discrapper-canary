@@ -28,13 +28,13 @@ var v = r("392750"),
   T = r("592197"),
   j = r("860337"),
   w = r("789654"),
-  E = r("691867"),
-  N = r("916790"),
-  C = r("912072"),
+  N = r("691867"),
+  C = r("916790"),
+  E = r("912072"),
   _ = r("246992"),
   I = r("442954"),
-  R = r("702904"),
-  O = r("248526"),
+  O = r("702904"),
+  R = r("248526"),
   P = r("958328"),
   A = r("514866"),
   L = r("678639"),
@@ -44,9 +44,9 @@ var v = r("392750"),
   F = r("621060"),
   H = r("689938"),
   U = r("770131"),
-  G = r("277513");
+  z = r("277513");
 
-function z(e) {
+function V(e) {
   let {
     resizableNode: t,
     onResize: r,
@@ -64,7 +64,7 @@ function z(e) {
   })
 }
 
-function V() {
+function G() {
   var e;
   let t = i.useMemo(() => {
       let e = [{
@@ -82,7 +82,7 @@ function V() {
       }, {
         id: "dispatcher",
         name: "Dispatcher",
-        render: () => (0, a.jsx)(N.default, {})
+        render: () => (0, a.jsx)(C.default, {})
       }];
       return p.default.isDeveloper && (e.push({
         id: "quick_actions",
@@ -91,7 +91,7 @@ function V() {
       }), e.push({
         id: "perks_demos",
         name: "Perks Demos",
-        render: () => (0, a.jsx)(O.default, {})
+        render: () => (0, a.jsx)(R.default, {})
       })), p.default.isDeveloper && e.push({
         id: "clans",
         name: "Clans",
@@ -103,17 +103,17 @@ function V() {
       }), e.push({
         id: "design_toggles",
         name: "Design Toggles",
-        render: () => (0, a.jsx)(E.default, {})
+        render: () => (0, a.jsx)(N.default, {})
       }), e.push({
         id: "overlays",
         name: "Dev Overlays",
-        render: () => (0, a.jsx)(C.default, {
+        render: () => (0, a.jsx)(E.default, {
           devSettingsCategory: k.DevSettingsCategory.OVERLAYS
         })
       }), e.push({
         id: "messaging",
         name: "Messaging",
-        render: () => (0, a.jsx)(C.default, {
+        render: () => (0, a.jsx)(E.default, {
           devSettingsCategory: k.DevSettingsCategory.MESSAGING
         })
       }), e.push({
@@ -139,7 +139,7 @@ function V() {
       }), e.push({
         id: "payments",
         name: "Payments",
-        render: () => (0, a.jsx)(R.default, {})
+        render: () => (0, a.jsx)(O.default, {})
       }), e.push({
         id: "subscriptions",
         name: "Subscriptions",
@@ -171,7 +171,7 @@ function V() {
     }
   }), (0, a.jsxs)(_.DevToolsLayerProvider, {
     children: [(0, a.jsxs)(y.default, {
-      className: G.headerBar,
+      className: z.headerBar,
       toolbar: (0, a.jsx)(y.default.Icon, {
         icon: m.default,
         tooltip: H.default.Messages.CLOSE,
@@ -205,13 +205,13 @@ function K() {
       minWidth: x.DEVTOOLS_SIDEBAR_MIN_WIDTH,
       width: r
     },
-    children: [(0, a.jsx)(z, {
+    children: [(0, a.jsx)(V, {
       resizableNode: e,
       onResize: n,
       onResizeEnd: o
     }), (0, a.jsx)("div", {
       className: U.sidebarContent,
-      children: (0, a.jsx)(V, {})
+      children: (0, a.jsx)(G, {})
     })]
   })
 }
@@ -222,14 +222,14 @@ function W() {
     className: l()(U.container, U.mobileContainerExpanded),
     children: (0, a.jsx)("div", {
       className: U.sidebarContent,
-      children: (0, a.jsx)(V, {})
+      children: (0, a.jsx)(G, {})
     })
   }) : (0, a.jsx)("div", {
     className: U.container,
     children: (0, a.jsx)(s.Clickable, {
       onClick: b.toggleDisplayDevTools,
       children: (0, a.jsxs)(y.default, {
-        className: l()(G.headerBar, U.mobileHeaderCollapsed),
+        className: l()(z.headerBar, U.mobileHeaderCollapsed),
         toolbar: (0, a.jsx)(g.default, {
           direction: g.default.Directions.UP
         }),

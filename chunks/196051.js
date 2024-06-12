@@ -1,58 +1,58 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   setSpeechRate: function() {
-    return c
+    return r
   },
   speakMessage: function() {
-    return n
-  },
-  speakText: function() {
     return i
   },
-  speakingMessage: function() {
+  speakText: function() {
     return l
   },
+  speakingMessage: function() {
+    return s
+  },
   stopSpeaking: function() {
-    return o
+    return a
   }
 });
-var a = r("570140");
+var u = n("570140");
 
-function i(e, t, r, i, n) {
-  a.default.dispatch({
+function l(e, t, n, l, i) {
+  u.default.dispatch({
     type: "SPEAK_TEXT",
     text: e,
     interrupt: t,
-    maxLength: r,
-    onStart: i,
-    onEnd: n
+    maxLength: n,
+    onStart: l,
+    onEnd: i
   })
 }
 
-function n(e, t) {
-  a.default.dispatch({
+function i(e, t) {
+  u.default.dispatch({
     type: "SPEAK_MESSAGE",
     channel: e,
     message: t
   })
 }
 
-function l(e, t) {
-  a.default.dispatch({
+function s(e, t) {
+  u.default.dispatch({
     type: "SPEAKING_MESSAGE",
     channelId: e,
     messageId: t
   })
 }
 
-function o() {
-  a.default.dispatch({
+function a() {
+  u.default.dispatch({
     type: "STOP_SPEAKING"
   })
 }
 
-function c(e) {
-  a.default.dispatch({
+function r(e) {
+  u.default.dispatch({
     type: "SET_TTS_SPEECH_RATE",
     speechRate: e
   })

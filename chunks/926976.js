@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return R
+    return O
   }
 }), r("47120");
 var a = r("735250"),
@@ -27,7 +27,7 @@ var a = r("735250"),
   T = r("689938"),
   j = r("457501"),
   w = r("277513");
-let E = [{
+let N = [{
   key: "event",
   cellClassName: j.eventColumn,
   render(e) {
@@ -47,7 +47,7 @@ let E = [{
   }
 }];
 
-function N(e) {
+function C(e) {
   let {
     children: t
   } = e;
@@ -59,7 +59,7 @@ function N(e) {
   })
 }
 
-function C(e) {
+function E(e) {
   let {
     name: t,
     children: r
@@ -115,10 +115,10 @@ let _ = [{
               children: n
             })
           })]
-        }), (0, a.jsx)(N, {
+        }), (0, a.jsx)(C, {
           children: Object.entries(r).map(e => {
             let [t, r] = e;
-            return (0, a.jsx)(C, {
+            return (0, a.jsx)(E, {
               name: "".concat(t, ":"),
               children: null != r ? (0, a.jsx)("code", {
                 children: JSON.stringify(r)
@@ -159,7 +159,7 @@ let _ = [{
     }
   };
 
-function R() {
+function O() {
   let e = i.useRef(null),
     t = (0, s.useStateFromStores)([y.default], () => y.default.loggedEvents),
     [r, n] = i.useState(Object.keys(I)),
@@ -211,7 +211,7 @@ function R() {
     }), (0, a.jsx)(d.ScrollerThin, {
       className: j.tableContainer,
       children: (0, a.jsx)(v.default, {
-        columns: E,
+        columns: N,
         data: o,
         selectedRowKey: c,
         onClickRow: u

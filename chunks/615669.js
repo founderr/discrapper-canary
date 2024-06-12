@@ -4,20 +4,20 @@ n.r(t), n.d(t, {
     return a
   },
   default: function() {
-    return r
+    return u
   }
 }), n("653041");
 var a, i, l = n("442837"),
   s = n("314897");
 (i = a || (a = {}))[i.END_EARLY = 0] = "END_EARLY";
-let u = [];
+let r = [];
 
-function r(e) {
+function u(e) {
   let t = (0, l.useStateFromStores)([s.default], () => s.default.getId()),
     {
       poll: n
     } = e;
-  if (!e.isPoll() || null == n) return u;
+  if (!e.isPoll() || null == n) return r;
   let a = [];
   return !n.expiry.isSameOrBefore(Date.now()) && e.author.id === t && a.push(0), a
 }

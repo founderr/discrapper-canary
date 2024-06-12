@@ -9,12 +9,12 @@ n("470079");
 var i = n("279164"),
   l = n("481060"),
   s = n("203143"),
-  u = n("615669"),
-  r = n("689938");
+  r = n("615669"),
+  u = n("689938");
 let o = {
-  [u.PollMessageContextItemTypes.END_EARLY]: e => (0, a.jsx)(l.MenuItem, {
+  [r.PollMessageContextItemTypes.END_EARLY]: e => (0, a.jsx)(l.MenuItem, {
     id: "end-poll-early",
-    label: r.default.Messages.POLL_END_EARLY,
+    label: u.default.Messages.POLL_END_EARLY,
     icon: i.ClockXIcon,
     action: () => {
       s.default.endPollEarly({
@@ -29,7 +29,7 @@ let o = {
 };
 
 function d(e) {
-  let t = (0, u.default)(e);
+  let t = (0, r.default)(e);
   return 0 === t.length ? null : (0, a.jsx)(a.Fragment, {
     children: t.map(t => o[t](e))
   })

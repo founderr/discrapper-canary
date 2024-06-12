@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return O
+    return R
   }
 }), r("47120"), r("724458"), r("757143"), r("390547"), r("653041");
 var a = r("735250"),
@@ -50,13 +50,13 @@ let w = {
     ...p.componentColorTokens,
     ...g.gradients
   },
-  E = {
+  N = {
     ...I(f.semanticColorTokens),
     ...I(p.componentColorTokens)
   },
-  N = ["100", "130", "160", "200", "230", "260", "300", "330", "345", "360", "400", "430", "460", "500", "530", "560", "600", "630", "645", "660", "700", "730", "760", "800", "830", "860", "900"];
+  C = ["100", "130", "160", "200", "230", "260", "300", "330", "345", "360", "400", "430", "460", "500", "530", "560", "600", "630", "645", "660", "700", "730", "760", "800", "830", "860", "900"];
 
-function C(e) {
+function E(e) {
   var t;
   let r = "string" == typeof e ? 1 : null !== (t = e.opacity) && void 0 !== t ? t : 1;
   return {
@@ -78,15 +78,15 @@ function I(e) {
       return "name" in r ? e(r) : r
     }(a);
     t[r] = {
-      light: C(a.light),
-      dark: C(a.dark),
-      darker: C(null != a.darker ? a.darker : a.dark),
-      midnight: C(null != a.midnight ? a.midnight : a.dark)
+      light: E(a.light),
+      dark: E(a.dark),
+      darker: E(null != a.darker ? a.darker : a.dark),
+      midnight: E(null != a.midnight ? a.midnight : a.dark)
     }
   }), t
 }
 
-function R(e, t) {
+function O(e, t) {
   let [r, a] = i.useState(() => {
     let r = h.Storage.get(e);
     return null != r ? r : t
@@ -96,13 +96,13 @@ function R(e, t) {
   }, [e, r]), [r, a]
 }
 
-function O() {
+function R() {
   let e = (0, b.useTheme)(),
     [{
       rawPalette: t,
       semanticTokens: r
     }, n, o, s, h, p] = function(e, t) {
-      let [r, a] = R("".concat(e, "-states"), [t]), [n, l] = R("".concat(e, "-index"), 0), o = r[n], c = i.useCallback(e => {
+      let [r, a] = O("".concat(e, "-states"), [t]), [n, l] = O("".concat(e, "-index"), 0), o = r[n], c = i.useCallback(e => {
         a([e, ...r].slice(0, 20)), l(0)
       }, [l, a, r]), s = i.useCallback(() => {
         l(Math.min(r.length - 1, n + 1))
@@ -112,16 +112,16 @@ function O() {
       return [o, c, s, d, u, n > 0]
     }("color-override-03-03-23", {
       rawPalette: m.rawPalette,
-      semanticTokens: E
+      semanticTokens: N
     }),
     [g, f] = i.useState(""),
     [S, w] = i.useState({}),
-    [C, _] = i.useState({}),
+    [E, _] = i.useState({}),
     I = i.useMemo(() => Object.keys(t).reduce((e, t) => [...e, {
       value: t,
       label: t
     }], []), [t]),
-    O = i.useCallback((e, a, i, l) => {
+    R = i.useCallback((e, a, i, l) => {
       let o = d().cloneDeep(r);
       o[e][a] = {
         color: i,
@@ -156,8 +156,8 @@ function O() {
           }(r), o = d().kebabCase(e);
           return ["--".concat(o, "-hsl: ").concat(a, " calc(var(--saturation-factor, 1) * ").concat(i, "%) ").concat(n, "% !important;"), "--".concat(o, ": hsl(var(--").concat(o, "-hsl)) !important;")]
         });
-      return "\n      .theme-".concat(e, " {\n        ").concat(a.join("\n"), "\n\n        ").concat(Object.keys(S).filter(e => S[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n\n        ").concat(Object.keys(C).filter(e => C[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n      }\n\n      html {\n        ").concat(i.join("\n"), "\n      }\n    ")
-    }, [e, r, t, S, C]),
+      return "\n      .theme-".concat(e, " {\n        ").concat(a.join("\n"), "\n\n        ").concat(Object.keys(S).filter(e => S[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n\n        ").concat(Object.keys(E).filter(e => E[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n      }\n\n      html {\n        ").concat(i.join("\n"), "\n      }\n    ")
+    }, [e, r, t, S, E]),
     A = i.useCallback(e => {
       let t = "",
         r = "",
@@ -189,7 +189,7 @@ function O() {
       let t = {};
       Object.keys(e).forEach(r => {
         Object.keys(e[r]).map(a => {
-          let i = [...N];
+          let i = [...C];
           "primary" !== r && (i = i.filter(e => "645" !== e)), t["".concat(r, ".").concat(i[+a])] = {
             hex: e[r][a]
           }
@@ -271,7 +271,7 @@ function O() {
           onClick: () => {
             n({
               rawPalette: m.rawPalette,
-              semanticTokens: E
+              semanticTokens: N
             })
           },
           children: "Reset all"
@@ -301,9 +301,9 @@ function O() {
           margin: 8,
           alignItems: "center"
         },
-        children: Object.keys(E).filter(e => "" === g || e.toLowerCase().includes(g)).map(t => {
+        children: Object.keys(N).filter(e => "" === g || e.toLowerCase().includes(g)).map(t => {
           var n;
-          let l = E[t][e],
+          let l = N[t][e],
             o = null == r[t] ? {
               ...l
             } : r[t][e],
@@ -337,7 +337,7 @@ function O() {
               value: o.color,
               options: I,
               onChange: r => {
-                O(t, e, r, o.opacity)
+                R(t, e, r, o.opacity)
               },
               renderOptionPrefix: t => null == t ? null : (0, a.jsx)("div", {
                 style: {
@@ -356,7 +356,7 @@ function O() {
               },
               value: null === (n = o.opacity) || void 0 === n ? void 0 : n.toString(),
               onChange: r => {
-                "" !== r && O(t, e, o.color, parseFloat(r))
+                "" !== r && R(t, e, o.color, parseFloat(r))
               }
             }), (0, a.jsx)(y.Clickable, {
               style: c ? {} : {
@@ -365,7 +365,7 @@ function O() {
               },
               onClick: () => {
                 var r;
-                c && O(t, e, l.color, null !== (r = l.opacity) && void 0 !== r ? r : 1)
+                c && R(t, e, l.color, null !== (r = l.opacity) && void 0 !== r ? r : 1)
               },
               children: (0, a.jsx)(x.default, {
                 width: 16,

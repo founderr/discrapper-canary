@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return C
+    return E
   }
 }), r("47120");
 var a = r("735250"),
@@ -104,7 +104,7 @@ let w = [{
   }
 }];
 
-function E(e) {
+function N(e) {
   let {
     actionLog: t,
     initialHeight: r
@@ -162,7 +162,7 @@ function E(e) {
     })]
   })
 }
-let N = [{
+let C = [{
   key: "action",
   cellClassName: k.actionColumn,
   render(e) {
@@ -186,7 +186,7 @@ let N = [{
   }
 }];
 
-function C() {
+function E() {
   let e = i.useRef(null),
     t = function(e) {
       let [t, r] = i.useState([...e.logs]), a = i.useCallback(() => r([...e.logs]), [e]);
@@ -206,12 +206,12 @@ function C() {
     children: [(0, a.jsx)(s.ScrollerThin, {
       className: k.tableContainer,
       children: (0, a.jsx)(b.default, {
-        columns: N,
+        columns: C,
         data: r,
         selectedRowKey: null == n ? void 0 : n.toString(),
         onClickRow: e => o(Number.parseInt(e, 10))
       })
-    }), null != c && (0, a.jsx)(E, {
+    }), null != c && (0, a.jsx)(N, {
       actionLog: c,
       initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
     })]

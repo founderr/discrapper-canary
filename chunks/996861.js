@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   configureJoin: function() {
-    return _
-  },
-  copyId: function() {
-    return T
-  },
-  copyLink: function() {
     return C
   },
+  copyId: function() {
+    return _
+  },
+  copyLink: function() {
+    return T
+  },
   createThread: function() {
-    return P
+    return D
   },
   deleteMessage: function() {
     return R
@@ -22,10 +22,10 @@ n.r(t), n.d(t, {
     return U
   },
   goToThread: function() {
-    return D
+    return L
   },
   markMessageAsReminder: function() {
-    return L
+    return P
   },
   markMessageRemindersAsComplete: function() {
     return G
@@ -50,38 +50,38 @@ var a = n("332148"),
   i = n("904245"),
   l = n("257559"),
   s = n("143740"),
-  u = n("912332"),
-  r = n("434404");
+  r = n("912332"),
+  u = n("434404");
 n("726521");
 var o = n("822893"),
   d = n("623292"),
   c = n("488131"),
   f = n("314897"),
-  E = n("592125"),
-  M = n("626135"),
-  g = n("934415"),
-  m = n("572004"),
+  M = n("592125"),
+  E = n("626135"),
+  m = n("934415"),
+  g = n("572004"),
   v = n("585483"),
-  p = n("709054"),
-  S = n("111618"),
-  h = n("50284"),
-  I = n("730954"),
+  I = n("709054"),
+  h = n("111618"),
+  p = n("50284"),
+  S = n("730954"),
   A = n("981631");
 
-function _(e) {
+function C(e) {
   let t = e.getGuildId();
-  null != t && r.default.open(t, A.GuildSettingsSections.OVERVIEW)
+  null != t && u.default.open(t, A.GuildSettingsSections.OVERVIEW)
 }
 
-function T(e, t, n) {
-  (0, m.copy)(n.shiftKey ? "".concat(t.channel_id, "-").concat(t.id) : t.id)
+function _(e, t, n) {
+  (0, g.copy)(n.shiftKey ? "".concat(t.channel_id, "-").concat(t.id) : t.id)
 }
 
-function C(e, t) {
-  M.default.track(A.AnalyticEvents.MESSAGE_LINK_COPIED, {
+function T(e, t) {
+  E.default.track(A.AnalyticEvents.MESSAGE_LINK_COPIED, {
     message_id: t.id,
     channel: t.channel_id
-  }), (0, m.copy)((0, g.getChannelPermalink)(e.guild_id, e.id, t.id))
+  }), (0, g.copy)((0, m.getChannelPermalink)(e.guild_id, e.id, t.id))
 }
 
 function R(e, t, n) {
@@ -93,7 +93,7 @@ function O(e, t) {
 }
 
 function x(e, t) {
-  (0, h.default)(e.id, t.id)
+  (0, p.default)(e.id, t.id)
 }
 
 function y(e, t, n) {
@@ -109,7 +109,7 @@ function N(e, t) {
 }
 
 function j(e, t) {
-  (0, I.default)(e, t, void 0, S.default.getOptions(t.id))
+  (0, S.default)(e, t, void 0, h.default.getOptions(t.id))
 }
 
 function b(e, t, n) {
@@ -123,16 +123,16 @@ function b(e, t, n) {
   }), v.ComponentDispatch.dispatchToLastSubscribed(A.ComponentActions.TEXTAREA_FOCUS)
 }
 
-function P(e, t) {
+function D(e, t) {
   (0, c.openThreadSidebarForCreating)(e, t, "Message")
 }
 
-function D(e, t) {
-  let n = E.default.getChannel(p.default.castMessageIdAsChannelId(t.id));
+function L(e, t) {
+  let n = M.default.getChannel(I.default.castMessageIdAsChannelId(t.id));
   null != n && (0, c.openThreadSidebarForViewing)(n)
 }
 
-function L(e, t) {
+function P(e, t) {
   (0, o.addMessageReminders)(t)
 }
 
@@ -141,7 +141,7 @@ function G(e, t) {
 }
 
 function U(e, t) {
-  (0, u.openForwardModal)({
+  (0, r.openForwardModal)({
     channelId: e.id,
     messageId: t.id,
     source: "message-actions"

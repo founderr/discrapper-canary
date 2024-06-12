@@ -9,16 +9,16 @@ n("470079");
 var i = n("481060"),
   l = n("39154"),
   s = n("757206"),
-  u = n("572004"),
-  r = n("689938");
+  r = n("572004"),
+  u = n("689938");
 
 function o(e) {
-  return u.SUPPORTS_COPY ? (0, a.jsx)(i.MenuItem, {
+  return r.SUPPORTS_COPY ? (0, a.jsx)(i.MenuItem, {
     id: "copy-text",
-    label: r.default.Messages.COPY_TEXT,
+    label: u.default.Messages.COPY_TEXT,
     icon: s.default,
     action: () => {
-      e = (0, l.default)(e), (0, u.copy)(e.content)
+      e = (0, l.default)(e), (0, r.copy)(e.content)
     }
   }) : null
 }
