@@ -13,7 +13,7 @@ var i = n("735250"),
   a = n.n(s),
   o = n("913527"),
   l = n.n(o),
-  u = n("138270"),
+  u = n("255025"),
   d = n("304497"),
   _ = n("481060"),
   c = n("100527"),
@@ -97,7 +97,7 @@ function x(e, t, n, r, s) {
     p = c.hasFlag(b.MessageFlags.IS_VOICE_MESSAGE),
     v = c.isPoll(),
     D = c.type === b.MessageTypes.POLL_RESULT;
-  if ((0, I.default)(e) && (_ = (0, i.jsx)(u.ArrowAngleRightUpIcon, {
+  if ((0, I.default)(e) && (_ = (0, i.jsx)(u.ChatArrowRightIcon, {
       className: f,
       width: S,
       height: S

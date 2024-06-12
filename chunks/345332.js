@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
 var i = n("735250"),
   r = n("470079"),
   s = n("153832"),
-  a = n("59262"),
+  a = n("280748"),
   o = n("632140"),
   l = n("993365"),
   u = n("481060"),
@@ -75,7 +75,7 @@ let f = r.memo(function(e) {
             color: u.tokens.colors.HEADER_PRIMARY.css
           });
         case E.ToastType.FORWARD:
-          return (0, i.jsx)(a.ArrowAngleRightUpIcon, {
+          return (0, i.jsx)(a.ChatArrowRightIcon, {
             className: I.icon,
             color: u.tokens.colors.STATUS_POSITIVE.css
           });

@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
 var s = n("735250"),
   a = n("470079"),
   l = n("692547"),
-  i = n("138270"),
+  i = n("255025"),
   r = n("481060"),
   o = n("375954"),
   u = n("876338"),
@@ -39,7 +39,7 @@ function f(e) {
     className: t,
     tooltip: c.default.Messages.MESSAGE_ACTION_FORWARD,
     color: r.CircleIconButtonColors.SECONDARY,
-    icon: (0, s.jsx)(i.ArrowAngleRightUpIcon, {
+    icon: (0, s.jsx)(i.ChatArrowRightIcon, {
       width: 16,
       height: 16,
       color: l.default.colors.INTERACTIVE_NORMAL

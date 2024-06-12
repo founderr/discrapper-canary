@@ -7,7 +7,7 @@ var a = n("735250"),
   r = n("954955"),
   o = n.n(r),
   u = n("442837"),
-  d = n("138270"),
+  d = n("255025"),
   c = n("481060"),
   f = n("607070"),
   h = n("346610"),
@@ -342,7 +342,7 @@ function eu(e) {
       channel: t,
       message: n,
       label: el.default.Messages.MESSAGE_ACTION_FORWARD,
-      icon: d.ArrowAngleRightUpIcon,
+      icon: d.ChatArrowRightIcon,
       onClick: $.forwardMessage
     }) : null, M && !z ? eo({
       key: "thread",
