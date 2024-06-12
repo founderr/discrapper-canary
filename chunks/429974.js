@@ -20,10 +20,10 @@ async function m(e) {
   let {
     userId: S,
     section: p,
-    guildId: I = h.ME,
-    channelId: g,
-    friendToken: T,
-    autoFocusNote: A,
+    subsection: I,
+    guildId: g = h.ME,
+    channelId: T,
+    friendToken: A,
     analyticsLocation: N,
     ...v
   } = e, R = c.default.getUser(S);
@@ -47,18 +47,18 @@ async function m(e) {
     return t => (0, a.jsx)(e, {
       location: "handleOpenUserProfileModal",
       user: R,
-      autoFocusNote: A,
-      guildId: I,
-      friendToken: T,
+      guildId: g,
+      friendToken: A,
       initialSection: p,
-      channelId: g,
+      initialSubsection: I,
+      channelId: T,
       ...t,
       ...v
     })
   }), f.default.track(h.AnalyticEvents.OPEN_MODAL, {
     type: "Profile Modal",
-    guild_id: I !== h.ME ? I : null,
-    channel_id: g,
+    guild_id: g !== h.ME ? g : null,
+    channel_id: T,
     other_user_id: S,
     application_id: null !== (l = null == L ? void 0 : L.application_id) && void 0 !== l ? l : null,
     application_name: null == L ? void 0 : L.name,

@@ -39,8 +39,8 @@ function h(e) {
     roleId: M,
     friendToken: j,
     initialSection: y,
-    autoFocusNote: L,
-    transitionState: O,
+    initialSubsection: O,
+    transitionState: L,
     onClose: F,
     showGuildProfile: D = !0,
     sourceAnalyticsLocations: b = []
@@ -58,8 +58,8 @@ function h(e) {
     messageId: R,
     roleId: M,
     showGuildProfile: D
-  }), Y = (0, I.default)(t.id, D ? B : void 0), H = (0, I.default)(t.id, B), {
-    activity: V,
+  }), Y = (0, I.default)(t.id, D ? B : void 0), V = (0, I.default)(t.id, B), {
+    activity: H,
     customStatusActivity: W
   } = (0, a.useStateFromStoresObject)([c.default], () => ({
     activity: c.default.findActivity(t.id, e => {
@@ -74,7 +74,7 @@ function h(e) {
       } = e;
       return t === N.ActivityTypes.CUSTOM_STATUS
     })
-  })), z = i.createRef(), Z = (0, o.default)(z), Q = () => (null == H ? void 0 : H.guildId) == null ? null : (null == Y ? void 0 : Y.guildId) != null ? (0, s.jsx)(n.MenuItem, {
+  })), z = i.createRef(), Z = (0, o.default)(z), Q = () => (null == V ? void 0 : V.guildId) == null ? null : (null == Y ? void 0 : Y.guildId) != null ? (0, s.jsx)(n.MenuItem, {
     id: "view-main-profile",
     label: U.default.Messages.VIEW_MAIN_PROFILE,
     subtext: U.default.Messages.AKA_DISPLAY_NAME.format({
@@ -128,7 +128,7 @@ function h(e) {
       roleId: M,
       showGuildProfile: D,
       children: (0, s.jsxs)(n.ModalRoot, {
-        transitionState: O,
+        transitionState: L,
         className: P.root,
         hideShadow: !0,
         "aria-label": U.default.Messages.USER_PROFILE_MODAL,
@@ -167,9 +167,9 @@ function h(e) {
             displayProfile: Y,
             guildId: B,
             channelId: h,
-            activity: V,
+            activity: H,
             customStatusActivity: W,
-            transitionState: O,
+            transitionState: L,
             viewProfileItem: Q(),
             onClose: F
           }), (0, s.jsx)(A.default, {
@@ -177,9 +177,9 @@ function h(e) {
             channelId: h,
             displayProfile: Y,
             initialSection: y,
-            autoFocusNote: L,
+            initialSubsection: O,
             friendToken: j,
-            transitionState: O,
+            transitionState: L,
             onClose: F
           })]
         }), (null == Y ? void 0 : Y.profileEffectId) != null && (0, s.jsx)(d.default, {

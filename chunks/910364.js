@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return O
+    return L
   }
 }), l("47120");
 var s = l("735250"),
@@ -35,7 +35,7 @@ var s = l("735250"),
   j = l("689938"),
   y = l("463469");
 
-function L(e) {
+function O(e) {
   var t, l;
   let {
     user: i,
@@ -83,29 +83,29 @@ function L(e) {
   })
 }
 
-function O(e) {
+function L(e) {
   var t, l;
   let {
     user: T,
     guildId: A,
     channelId: x,
-    messageId: O,
+    messageId: L,
     roleId: F,
     friendToken: D,
-    autoFocusNote: b,
-    initialSection: B = R.UserProfileSections.USER_INFO,
+    initialSection: b = R.UserProfileSections.USER_INFO,
+    initialSubsection: B,
     transitionState: G,
     sourceAnalyticsLocations: k = [],
     onClose: w
-  } = e, Y = null !== (t = (0, a.useStateFromStores)([v.default], () => v.default.getUser(T.id))) && void 0 !== t ? t : T, H = (0, g.default)(null !== (l = Y.id) && void 0 !== l ? l : ""), {
-    analyticsLocations: V
+  } = e, Y = null !== (t = (0, a.useStateFromStores)([v.default], () => v.default.getUser(T.id))) && void 0 !== t ? t : T, V = (0, g.default)(null !== (l = Y.id) && void 0 !== l ? l : ""), {
+    analyticsLocations: H
   } = (0, f.default)([...k, c.default.PROFILE_MODAL]), W = (0, p.useTrackUserProfileAction)({
     layout: "MODAL",
     userId: Y.id,
     showGuildProfile: !1,
     guildId: A,
     channelId: x,
-    messageId: O,
+    messageId: L,
     roleId: F
   });
   (0, u.useSubscribeGuildMembers)({
@@ -114,7 +114,7 @@ function O(e) {
   let z = (0, a.useStateFromStores)([I.default], () => null != I.default.getAnyStreamForUser(Y.id)),
     Z = (0, a.useStateFromStores)([_.default], () => _.default.findActivity(Y.id, e => e.type !== M.ActivityTypes.CUSTOM_STATUS)),
     [Q, K] = i.useState(!1),
-    [J, q] = i.useState(!Y.isNonUserBot() || Y.isClyde() || (0, S.default)(Y.id) ? B : R.UserProfileSections.MUTUAL_GUILDS),
+    [J, q] = i.useState(!Y.isNonUserBot() || Y.isClyde() || (0, S.default)(Y.id) ? b : R.UserProfileSections.MUTUAL_GUILDS),
     X = (0, a.useStateFromStores)([m.default], () => m.default.getId() === Y.id),
     $ = null != Z || z,
     ee = !X || $,
@@ -124,18 +124,18 @@ function O(e) {
   let es = i.useCallback(e => {
       W({
         action: "PRESS_SECTION",
-        analyticsLocations: V
+        analyticsLocations: H
       }), K(!0), q(e)
-    }, [W, V]),
-    ei = null == H ? void 0 : H.profileEffectId;
+    }, [W, H]),
+    ei = null == V ? void 0 : V.profileEffectId;
   return (0, s.jsx)(f.AnalyticsLocationProvider, {
-    value: V,
+    value: H,
     children: (0, s.jsx)(p.UserProfileAnalyticsProvider, {
       layout: "MODAL",
       userId: Y.id,
       guildId: A,
       channelId: x,
-      messageId: O,
+      messageId: L,
       roleId: F,
       showGuildProfile: !1,
       children: (0, s.jsx)(o.default, {
@@ -147,12 +147,12 @@ function O(e) {
           "aria-label": j.default.Messages.USER_PROFILE_MODAL,
           children: [(0, s.jsxs)(N.default, {
             user: Y,
-            displayProfile: H,
+            displayProfile: V,
             profileType: R.UserProfileTypes.MODAL,
             ref: et,
             children: [(0, s.jsx)(P.default, {
               className: y.topSection,
-              displayProfile: H,
+              displayProfile: V,
               user: Y,
               friendToken: D,
               onClose: w,
@@ -168,8 +168,8 @@ function O(e) {
                 className: y.body,
                 children: [(0, s.jsx)(h.default, {
                   user: Y,
-                  displayProfile: H
-                }), ee ? (0, s.jsx)(L, {
+                  displayProfile: V
+                }), ee ? (0, s.jsx)(O, {
                   user: Y,
                   section: J === R.UserProfileSections.USER_INFO_CONNECTIONS ? R.UserProfileSections.USER_INFO : J,
                   setSection: es,
@@ -178,9 +178,9 @@ function O(e) {
                 }) : (0, s.jsx)("div", {
                   className: y.divider
                 }), (0, s.jsx)(U.default, {
-                  displayProfile: H,
+                  displayProfile: V,
                   user: Y,
-                  autoFocusNote: b && !Q,
+                  autoFocusNote: B === R.UserProfileSubsections.NOTE && !Q,
                   selectedSection: J,
                   onClose: w
                 })]

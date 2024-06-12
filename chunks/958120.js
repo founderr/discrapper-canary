@@ -57,9 +57,7 @@ function L(e) {
     children: [(0, i.jsx)(h.default, {
       user: t,
       profileType: C.UserProfileTypes.BITE_SIZE,
-      onOpenProfile: () => M({
-        autoFocusNote: !1
-      }),
+      onOpenProfile: M,
       usernameIcon: t.hasAvatarForGuild(null == v ? void 0 : v.id) && (0, i.jsx)(A.default, {
         user: t,
         nickname: w
@@ -78,7 +76,7 @@ function L(e) {
           user: t,
           isHovering: D,
           onOpenProfile: () => M({
-            autoFocusNote: !0
+            subsection: C.UserProfileSubsections.NOTE
           })
         })]
       })
@@ -92,8 +90,7 @@ function L(e) {
     }), t.id !== n.id && (0, i.jsx)(O.default, {
       user: t,
       onOpenProfile: e => M({
-        section: e,
-        autoFocusNote: !1
+        section: e
       })
     }), x && (0, i.jsx)(o.default, {
       userId: t.id,
@@ -114,7 +111,7 @@ function L(e) {
       currentUser: n,
       guild: v,
       onOpenProfile: () => M({
-        autoFocusNote: !1
+        subsection: C.UserProfileSubsections.ROLES
       })
     })]
   })

@@ -60,27 +60,27 @@ let U = e => {
 function P(e) {
   let {
     section: t,
-    user: l,
-    currentUser: i,
-    displayProfile: a,
-    autoFocusNote: n,
+    subsection: l,
+    user: i,
+    currentUser: a,
+    displayProfile: n,
     onClose: o
   } = e;
   return t === A.UserProfileSections.ACTIVITY ? (0, s.jsx)(_.default, {
-    showActions: (null == i ? void 0 : i.id) !== l.id,
-    user: l,
+    showActions: (null == a ? void 0 : a.id) !== i.id,
+    user: i,
     type: S.Types.SIMPLIFIED_PROFILE
   }) : t === A.UserProfileSections.MUTUAL_FRIENDS ? (0, s.jsx)(v.default, {
-    user: l,
+    user: i,
     onClose: o
   }) : t === A.UserProfileSections.MUTUAL_GUILDS ? (0, s.jsx)(p.default, {
-    user: l,
+    user: i,
     onClose: o
   }) : (0, s.jsx)(g.default, {
-    user: l,
-    currentUser: i,
-    displayProfile: a,
-    autoFocusNote: n,
+    user: i,
+    currentUser: a,
+    displayProfile: n,
+    subsection: l,
     onClose: o
   })
 }
@@ -91,24 +91,33 @@ function h(e) {
     user: a,
     displayProfile: u,
     initialSection: d = A.UserProfileSections.USER_INFO,
-    autoFocusNote: S,
+    initialSubsection: S,
     onClose: I
   } = e, {
     trackUserProfileAction: m
   } = (0, E.useUserProfileAnalyticsContext)(), _ = (0, n.useStateFromStores)([f.default], () => f.default.getCurrentUser()), v = (0, n.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), p = U({
     user: a,
     currentUser: _
-  }), [g, x] = i.useState(S), [C, h] = i.useState(null !== (l = null === (t = p.find(e => {
-    let {
-      section: t
-    } = e;
-    return t === d
-  })) || void 0 === t ? void 0 : t.section) && void 0 !== l ? l : A.UserProfileSections.USER_INFO), R = i.useCallback(e => {
+  }), [{
+    section: g,
+    subsection: x
+  }, C] = i.useState({
+    section: null !== (l = null === (t = p.find(e => {
+      let {
+        section: t
+      } = e;
+      return t === d
+    })) || void 0 === t ? void 0 : t.section) && void 0 !== l ? l : A.UserProfileSections.USER_INFO,
+    subsection: S
+  }), h = i.useCallback(e => {
     m({
       action: "PRESS_SECTION",
       section: e
-    }), h(e), x(!1)
-  }, [m, h]);
+    }), C({
+      section: e,
+      subsection: void 0
+    })
+  }, [m, C]);
   return null == _ ? null : v ? (0, s.jsx)("div", {
     className: N.container,
     children: (0, s.jsx)(T.default, {})
@@ -117,8 +126,8 @@ function h(e) {
     children: [(0, s.jsx)(o.TabBar, {
       className: N.tabBar,
       type: "top",
-      selectedItem: C,
-      onItemSelect: R,
+      selectedItem: g,
+      onItemSelect: h,
       children: p.map(e => {
         let {
           section: t,
@@ -135,11 +144,11 @@ function h(e) {
         }, t)
       })
     }), (0, s.jsx)(P, {
-      section: C,
+      section: g,
+      subsection: x,
       user: a,
       currentUser: _,
       displayProfile: u,
-      autoFocusNote: g,
       onClose: I
     })]
   })

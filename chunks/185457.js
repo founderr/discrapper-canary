@@ -37,8 +37,8 @@ function A(e) {
       (0, s.openUserProfileModal)({
         userId: t.id,
         section: I.UserProfileSections.USER_INFO,
+        subsection: I.UserProfileSubsections.NOTE,
         guildId: i,
-        autoFocusNote: !0,
         sourceAnalyticsLocations: m,
         analyticsLocation: E.location
       })

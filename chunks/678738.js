@@ -1,25 +1,38 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return u
   }
 });
-var a = n("735250");
-n("470079");
-var l = n("481060"),
-  s = n("394026");
+var a = n("735250"),
+  l = n("470079"),
+  s = n("442837"),
+  i = n("481060"),
+  r = n("607070"),
+  o = n("394026");
 
-function i(e) {
+function u(e) {
   let {
     title: t,
     children: n,
-    headingColor: i = "header-secondary"
-  } = e;
-  return (0, a.jsxs)("section", {
-    className: s.section,
-    children: [(0, a.jsx)(l.Heading, {
+    scrollIntoView: u = !1,
+    headingColor: d = "header-secondary"
+  } = e, c = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), f = l.useRef(null);
+  return l.useEffect(() => {
+    let e = f.current;
+    if (null == e) return;
+    let t = requestAnimationFrame(() => {
+      e.scrollIntoView({
+        behavior: c ? "auto" : "smooth"
+      })
+    });
+    return () => cancelAnimationFrame(t)
+  }, [c]), (0, a.jsxs)("section", {
+    ref: u ? f : void 0,
+    className: o.section,
+    children: [(0, a.jsx)(i.Heading, {
       variant: "text-xs/semibold",
-      color: i,
+      color: d,
       children: t
     }), n]
   })

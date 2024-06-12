@@ -87,34 +87,36 @@ function A(e) {
   let {
     user: t,
     currentUser: l,
-    guild: a
+    guild: a,
+    scrollIntoView: n
   } = e, {
-    trackUserProfileAction: n
-  } = (0, E.useUserProfileAnalyticsContext)(), c = (0, o.useStateFromStores)([d.default], () => d.default.getMember(a.id, t.id)), I = null == c ? void 0 : c.roles, _ = null == I || 0 === I.length, T = S.getHighestRole(a, l.id), [A] = (0, o.useStateFromStoresArray)([f.default], () => [f.default.can(v.Permissions.MANAGE_ROLES, a), null != a ? f.default.getGuildVersion(a.id) : null]), x = i.useCallback(e => {
+    trackUserProfileAction: c
+  } = (0, E.useUserProfileAnalyticsContext)(), I = (0, o.useStateFromStores)([d.default], () => d.default.getMember(a.id, t.id)), _ = null == I ? void 0 : I.roles, T = null == _ || 0 === _.length, A = S.getHighestRole(a, l.id), [x] = (0, o.useStateFromStoresArray)([f.default], () => [f.default.can(v.Permissions.MANAGE_ROLES, a), null != a ? f.default.getGuildVersion(a.id) : null]), C = i.useCallback(e => {
     var l, s;
-    n({
+    c({
       action: "REMOVE_ROLE"
     });
-    let i = null !== (s = null == I ? void 0 : I.filter(t => t !== e.id)) && void 0 !== s ? s : [];
+    let i = null !== (s = null == _ ? void 0 : _.filter(t => t !== e.id)) && void 0 !== s ? s : [];
     (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) === null ? r.default.unassignGuildRoleConnection(a.id, e.id) : u.default.updateMemberRoles(a.id, t.id, i, [], [e.id])
-  }, [I, a.id, t.id, n]), C = i.useCallback(e => {
-    n({
+  }, [_, a.id, t.id, c]), N = i.useCallback(e => {
+    c({
       action: "ADD_ROLE"
     });
-    let l = null != I ? I : []; - 1 === l.indexOf(e) && (l = l.concat([e])), u.default.updateMemberRoles(a.id, t.id, l, [e], [])
-  }, [I, a.id, t.id, n]);
-  return _ && !A ? null : (0, s.jsx)(m.default, {
+    let l = null != _ ? _ : []; - 1 === l.indexOf(e) && (l = l.concat([e])), u.default.updateMemberRoles(a.id, t.id, l, [e], [])
+  }, [_, a.id, t.id, c]);
+  return T && !x ? null : (0, s.jsx)(m.default, {
     title: p.default.Messages.ROLES,
+    scrollIntoView: n,
     children: (0, s.jsx)(g, {
       user: t,
       currentUser: l,
       guild: a,
-      guildMember: c,
-      userRoles: null != I ? I : [],
-      highestRole: T,
-      canManageRoles: A,
-      onAddRole: C,
-      onRemoveRole: x
+      guildMember: I,
+      userRoles: null != _ ? _ : [],
+      highestRole: A,
+      canManageRoles: x,
+      onAddRole: N,
+      onRemoveRole: C
     })
   })
 }

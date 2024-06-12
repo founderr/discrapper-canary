@@ -19,17 +19,17 @@ var i = n("570140"),
 function _(e) {
   let {
     userId: t,
-    section: n,
-    guildId: _ = d.ME,
-    channelId: c,
-    messageId: E,
-    roleId: I,
-    friendToken: T,
-    autoFocusNote: f,
+    guildId: n = d.ME,
+    channelId: _,
+    messageId: c,
+    roleId: E,
+    section: I,
+    subsection: T,
+    friendToken: f,
     showGuildProfile: S,
     analyticsLocation: h,
     sourceAnalyticsLocations: A
-  } = e, m = s.default.getUser(t), N = null != _ && _ !== d.ME ? _ : void 0, p = (0, l.getSimplifiedProfileFriendingExperimentConfig)({
+  } = e, m = s.default.getUser(t), N = null != n && n !== d.ME ? n : void 0, p = (0, l.getSimplifiedProfileFriendingExperimentConfig)({
     location: "openUserProfileModal",
     autoTrackExposure: !1
   }), O = (0, a.isInProfileMutualsExperiment)().enabled || (0, o.getSimplifiedProfileExperimentConfig)({
@@ -40,18 +40,18 @@ function _(e) {
     guildId: S ? N : void 0,
     withMutualGuilds: !0,
     withMutualFriends: O,
-    friendToken: T
+    friendToken: f
   }).then(() => {
     i.default.dispatch({
       type: "USER_PROFILE_MODAL_OPEN",
       userId: t,
-      section: n,
-      guildId: null != _ ? _ : void 0,
-      channelId: null != c ? c : void 0,
-      messageId: null != E ? E : void 0,
-      roleId: null != I ? I : void 0,
-      friendToken: T,
-      autoFocusNote: f,
+      guildId: null != n ? n : void 0,
+      channelId: null != _ ? _ : void 0,
+      messageId: null != c ? c : void 0,
+      roleId: null != E ? E : void 0,
+      section: I,
+      subsection: T,
+      friendToken: f,
       showGuildProfile: S,
       analyticsLocation: h,
       sourceAnalyticsLocations: A
@@ -61,17 +61,17 @@ function _(e) {
     guildId: S ? N : void 0,
     withMutualGuilds: !0,
     withMutualFriends: O,
-    friendToken: T
+    friendToken: f
   }), i.default.dispatch({
     type: "USER_PROFILE_MODAL_OPEN",
     userId: t,
-    section: n,
-    guildId: null != _ ? _ : void 0,
-    channelId: null != c ? c : void 0,
-    messageId: null != E ? E : void 0,
-    roleId: null != I ? I : void 0,
-    friendToken: T,
-    autoFocusNote: f,
+    guildId: null != n ? n : void 0,
+    channelId: null != _ ? _ : void 0,
+    messageId: null != c ? c : void 0,
+    roleId: null != E ? E : void 0,
+    section: I,
+    subsection: T,
+    friendToken: f,
     showGuildProfile: S,
     analyticsLocation: h,
     sourceAnalyticsLocations: A

@@ -322,9 +322,7 @@ function ei(e) {
               className: en.username,
               profileType: ee.UserProfileTypes.BITE_SIZE,
               nickname: q.default.getName(null, null, t),
-              onOpenProfile: () => ef({
-                autoFocusNote: !1
-              }),
+              onOpenProfile: ef,
               pronouns: null == W ? void 0 : W.pronouns,
               tags: (0, a.jsx)(P.default, {
                 displayProfile: W,

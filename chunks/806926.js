@@ -29,7 +29,7 @@ function p(e) {
     channelId: p,
     displayProfile: T,
     initialSection: g,
-    autoFocusNote: A,
+    initialSubsection: A,
     friendToken: x,
     transitionState: C,
     onClose: N
@@ -71,7 +71,7 @@ function p(e) {
         user: l,
         displayProfile: T,
         initialSection: g,
-        autoFocusNote: A,
+        initialSubsection: A,
         onClose: N
       })]
     })]
