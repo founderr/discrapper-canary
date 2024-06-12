@@ -11,8 +11,8 @@ var s, a, l, i, r = n("392711"),
   m = n("812206"),
   T = n("594190"),
   I = n("594174"),
-  p = n("580130"),
-  h = n("55563"),
+  h = n("580130"),
+  p = n("55563"),
   N = n("981631");
 let S = "DetectedOffPlatformPremiumPerksStore",
   C = {},
@@ -32,12 +32,12 @@ function M() {
       !m.default.isFetchingApplication(n) && !m.default.didFetchingApplicationFail(n) && _.default.fetchApplication(n);
       continue
     }
-    let a = h.default.get(t);
+    let a = p.default.get(t);
     if (null == a) {
-      !h.default.isFetching(t) && !h.default.didFetchingSkuFail(t) && E.fetchPublishedSKU(s.id, t);
+      !p.default.isFetching(t) && !p.default.didFetchingSkuFail(t) && E.fetchPublishedSKU(s.id, t);
       continue
     }
-    p.default.applicationIdsFetching.has(s.id) || p.default.isEntitledToSku(I.default.getCurrentUser(), t, s.id, s.id) || !a.available ? null != C[t] && (delete C[t], e = !0) : (C[t] = {
+    h.default.applicationIdsFetching.has(s.id) || h.default.isEntitledToSku(I.default.getCurrentUser(), t, s.id, s.id) || !a.available ? null != C[t] && (delete C[t], e = !0) : (C[t] = {
       skuId: t,
       applicationId: n
     }, e = !0)
@@ -47,7 +47,7 @@ function M() {
 class R extends(s = u.default.Store) {
   initialize() {
     var e;
-    this.waitFor(T.default, h.default, p.default), A = null !== (e = d.Storage.get(S)) && void 0 !== e ? e : A
+    this.waitFor(T.default, p.default, h.default), A = null !== (e = d.Storage.get(S)) && void 0 !== e ? e : A
   }
   getDetectedOffPlatformPremiumPerks() {
     return o().values(C)
@@ -86,7 +86,7 @@ i = "DetectedOffPlatformPremiumPerksStore", (l = "displayName") in(a = R) ? Obje
             applicationId: s
           }
           of N.OFF_PLATFORM_PREMIUM_PERKS) {
-          if (!(s !== t || A.includes(n))) null == g[n] && (!p.default.applicationIdsFetched.has(s) && !p.default.applicationIdsFetching.has(s) && null == p.default.getForSku(n) && f.fetchUserEntitlementsForApplication(s), g[n] = {
+          if (!(s !== t || A.includes(n))) null == g[n] && (!h.default.applicationIdsFetched.has(s) && !h.default.applicationIdsFetching.has(s) && null == h.default.getForSku(n) && f.fetchUserEntitlementsForApplication(s), g[n] = {
             skuId: n,
             applicationId: s
           }, e = !0)

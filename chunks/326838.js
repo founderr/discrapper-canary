@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return p
   }
 }), n("47120");
 var s = n("735250"),
@@ -19,9 +19,9 @@ var s = n("735250"),
   m = n("507893"),
   T = n("55935"),
   I = n("689938"),
-  p = n("415508");
+  h = n("415508");
 
-function h(e) {
+function p(e) {
   let {
     invite: t,
     expired: n
@@ -32,29 +32,29 @@ function h(e) {
   return a.useEffect(() => {
     !n && (0, E.updateInviteStatus)(t)
   }, [t, n]), (0, s.jsxs)("div", {
-    className: p.container,
+    className: h.container,
     ref: f,
     children: [(0, s.jsxs)("div", {
-      className: p.primaryRow,
+      className: h.primaryRow,
       children: [(0, s.jsx)("img", {
-        className: p.inviteImage,
+        className: h.inviteImage,
         src: t.application_asset,
         alt: "Game Invite"
       }), (0, s.jsx)(u.Text, {
-        className: p.title,
+        className: h.title,
         variant: "text-md/semibold",
         color: "interactive-active",
         children: I.default.Messages.GAME_INVITES_SENT_YOU_AN_INVITE.format({
           username: l
         })
       }), (0, s.jsxs)("div", {
-        className: p.buttonContainer,
+        className: h.buttonContainer,
         children: [(0, s.jsx)(N, {
           expired: n,
           invite: t,
           isHoveringInvite: m
         }), (0, s.jsx)(u.CircleIconButton, {
-          className: p.deleteButton,
+          className: h.deleteButton,
           tooltip: I.default.Messages.DELETE,
           color: u.CircleIconButtonColors.SECONDARY,
           icon: (0, s.jsx)(o.TrashIcon, {
@@ -67,19 +67,19 @@ function h(e) {
         })]
       })]
     }), (0, s.jsx)("div", {
-      className: p.divider
+      className: h.divider
     }), (0, s.jsxs)("div", {
-      className: p.secondaryRow,
+      className: h.secondaryRow,
       children: [(0, s.jsxs)(u.Text, {
         variant: "text-xs/medium",
-        className: p.subtitle,
+        className: h.subtitle,
         color: "text-muted",
         children: [t.application_name, " \xb7 ", c]
       }), n && (0, s.jsx)("div", {
-        className: p.metaContainer,
+        className: h.metaContainer,
         children: (0, s.jsx)(u.Text, {
           variant: "text-xxs/semibold",
-          className: p.__invalid_metaText,
+          className: h.__invalid_metaText,
           color: "text-muted",
           children: I.default.Messages.GAME_INVITES_EXPIRED
         })
@@ -99,7 +99,7 @@ function N(e) {
       await (0, E.launchInviteGame)(n)
     } catch {}
     _(!1)
-  }, [n]), h = a.useCallback(async () => {
+  }, [n]), p = a.useCallback(async () => {
     _(!0);
     try {
       await (0, E.acceptInvite)(n)
@@ -107,7 +107,7 @@ function N(e) {
     _(!1)
   }, [n]);
   if (t) return i && l ? (0, s.jsx)(u.Button, {
-    className: p.primaryButton,
+    className: h.primaryButton,
     color: u.ButtonColors.TRANSPARENT,
     disabled: d,
     size: u.ButtonSizes.SMALL,
@@ -115,14 +115,14 @@ function N(e) {
     children: I.default.Messages.GAME_INVITES_LAUNCH_GAME
   }) : null;
   return i && o ? (0, s.jsx)(u.Button, {
-    className: p.primaryButton,
+    className: h.primaryButton,
     color: u.ButtonColors.GREEN,
     disabled: d,
     size: u.ButtonSizes.SMALL,
-    onClick: h,
+    onClick: p,
     children: I.default.Messages.GAME_INVITES_JOIN_GAME
   }) : null != n.fallback_url ? (0, s.jsx)(u.Button, {
-    className: p.primaryButton,
+    className: h.primaryButton,
     disabled: d,
     size: u.ButtonSizes.SMALL,
     color: u.ButtonColors.TRANSPARENT,
@@ -134,16 +134,16 @@ function N(e) {
     }),
     children: e => (0, s.jsx)(u.Button, {
       ...e,
-      className: p.primaryButton,
+      className: h.primaryButton,
       disabled: !0,
       size: u.ButtonSizes.SMALL,
       color: u.ButtonColors.TRANSPARENT,
       onClick: () => (0, c.default)(n.fallback_url),
       children: (0, s.jsxs)("div", {
-        className: p.launchToJoinContainer,
+        className: h.launchToJoinContainer,
         children: [(0, s.jsx)(u.Text, {
           variant: "text-xxs/medium",
-          className: p.launchToJoinText,
+          className: h.launchToJoinText,
           color: "text-muted",
           children: I.default.Messages.GAME_INVITES_LAUNCH_TO_JOIN
         }), (0, s.jsx)(m.default, {

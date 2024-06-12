@@ -24,13 +24,13 @@ function T(e) {
 }
 async function I(e, t) {
   var n, _, I;
-  let p = t.getGuildId();
-  if (null == p || null == d.default.getGuild(p)) return;
-  let h = c.default.getCurrentUser();
-  if (null == h) return;
+  let h = t.getGuildId();
+  if (null == h || null == d.default.getGuild(h)) return;
+  let p = c.default.getCurrentUser();
+  if (null == p) return;
   await (0, r.fetchStickerPacks)();
   let N = Array.from(o.default.getAllStickersIterator()),
-    S = N.filter(e => e.type === u.MetaStickerType.GUILD).filter(e => T(e.guild_id) && (0, i.isSendableSticker)(e, h, t)).sort((e, t) => -E.default.compare(e.id, t.id));
+    S = N.filter(e => e.type === u.MetaStickerType.GUILD).filter(e => T(e.guild_id) && (0, i.isSendableSticker)(e, p, t)).sort((e, t) => -E.default.compare(e.id, t.id));
   if (S.length > 5) {
     let a = [S[Math.floor(Math.pow(Math.random(), 2) * S.length)].id];
     s.default.sendStickers(t.id, a, "", {
@@ -45,7 +45,7 @@ async function I(e, t) {
   let C = d.default.getGuildIds().filter(T).map(e => a.default.getUsableGuildEmoji(e)).flat().filter(e => null == f.default.getEmojiUnavailableReason({
     emoji: e,
     channel: t,
-    guildId: p,
+    guildId: h,
     intention: m.EmojiIntention.CHAT
   })).sort((e, t) => -E.default.compare(e.id, t.id));
   if (C.length > 10) {

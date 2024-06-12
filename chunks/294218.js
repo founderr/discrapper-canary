@@ -15,8 +15,8 @@ var s = n("735250"),
   m = n("630388"),
   T = n("709054"),
   I = n("900164"),
-  p = n("739566"),
-  h = n("453687"),
+  h = n("739566"),
+  p = n("453687"),
   N = n("25015"),
   S = n("689674"),
   C = n("438075"),
@@ -53,7 +53,7 @@ t.default = a.memo(function(e) {
     allowHeading: w || H,
     allowLinks: !0,
     previewLinkTarget: !0
-  }), K = n.type === O.MessageTypes.REPLY ? n.messageReference : void 0, W = (0, o.useStateFromStores)([c.default], () => c.default.getMessageByReference(K)), z = (0, r.useListItem)(n.id), Q = (0, p.default)(n), q = (0, o.useStateFromStores)([f.default], () => n.hasFlag(O.MessageFlags.HAS_THREAD) && f.default.getChannel(T.default.castMessageIdAsChannelId(n.id))), X = (0, u.useRoleIcon)({
+  }), K = n.type === O.MessageTypes.REPLY ? n.messageReference : void 0, W = (0, o.useStateFromStores)([c.default], () => c.default.getMessageByReference(K)), z = (0, r.useListItem)(n.id), Q = (0, h.default)(n), q = (0, o.useStateFromStores)([f.default], () => n.hasFlag(O.MessageFlags.HAS_THREAD) && f.default.getChannel(T.default.castMessageIdAsChannelId(n.id))), X = (0, u.useRoleIcon)({
     guildId: U.guild_id,
     roleId: Q.iconRoleId
   }), Z = (0, o.useStateFromStores)([E.default], () => E.default.can(O.Permissions.CREATE_INSTANT_INVITE, U)), J = (0, S.default)({
@@ -62,8 +62,8 @@ t.default = a.memo(function(e) {
     enabled: G
   });
   if ((0, I.default)(n, Z)) return null;
-  let $ = (0, h.getMessageAriaLabelledBy)(n),
-    ee = (0, h.getMessageAriaDescribedBy)(n);
+  let $ = (0, p.getMessageAriaLabelledBy)(n),
+    ee = (0, p.getMessageAriaDescribedBy)(n);
   return (0, s.jsx)(_.default, {
     compact: a,
     className: i()(l, {

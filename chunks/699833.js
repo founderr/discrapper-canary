@@ -22,9 +22,9 @@ function E(e) {
   let m = e.message.embeds[0],
     T = null !== (l = null === (t = m.fields) || void 0 === t ? void 0 : t.find(e => e.rawName === u.SafetyHubPolicyNoticeKeys.CLASSIFICATION_ID)) && void 0 !== l ? l : void 0,
     I = null !== (E = null == T ? void 0 : T.rawValue) && void 0 !== E ? E : void 0,
-    p = null !== (_ = null === (a = m.fields) || void 0 === a ? void 0 : a.find(e => e.rawName === u.SafetyHubPolicyNoticeKeys.INCIDENT_TIMESTAMP)) && void 0 !== _ ? _ : void 0,
-    h = null == p || null == p.rawValue ? void 0 : parseFloat(p.rawValue);
-  return null == I || null == h ? null : (0, s.jsxs)(o.Clickable, {
+    h = null !== (_ = null === (a = m.fields) || void 0 === a ? void 0 : a.find(e => e.rawName === u.SafetyHubPolicyNoticeKeys.INCIDENT_TIMESTAMP)) && void 0 !== _ ? _ : void 0,
+    p = null == h || null == h.rawValue ? void 0 : parseFloat(h.rawValue);
+  return null == I || null == p ? null : (0, s.jsxs)(o.Clickable, {
     onClick: () => {
       (0, o.openModalLazy)(async () => {
         let {
@@ -55,7 +55,7 @@ function E(e) {
         children: (0, s.jsx)(o.Text, {
           variant: "text-xs/medium",
           children: d.default.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({
-            daysAgo: f(h)
+            daysAgo: f(p)
           })
         })
       }), (0, s.jsx)("div", {

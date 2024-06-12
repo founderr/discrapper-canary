@@ -15,8 +15,8 @@ var s = n("735250"),
   m = n("153066"),
   T = n("51144"),
   I = n("285952"),
-  p = n("936195"),
-  h = n("409216"),
+  h = n("936195"),
+  p = n("409216"),
   N = n("885442"),
   S = n("981631"),
   C = n("616922"),
@@ -195,7 +195,7 @@ class v extends a.PureComponent {
       className: A.state,
       children: g.default.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
         artists: r.state,
-        artistsHook: (e, t) => null != r.state ? (0, s.jsx)(p.default, {
+        artistsHook: (e, t) => null != r.state ? (0, s.jsx)(h.default, {
           artists: r.state,
           linkClassName: A.textLink,
           canOpen: null != r.sync_id,
@@ -283,7 +283,7 @@ class v extends a.PureComponent {
     });
     let d = Math.min(i, 106);
     for (; o.length < d;) o.push(null);
-    return (0, s.jsx)(h.default, {
+    return (0, s.jsx)(p.default, {
       guildId: a,
       className: A.partyMembers,
       users: o,

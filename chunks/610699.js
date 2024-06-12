@@ -19,8 +19,8 @@ var s = n("735250"),
   m = n("182906"),
   T = n("100527"),
   I = n("906732"),
-  p = n("835473"),
-  h = n("471445"),
+  h = n("835473"),
+  p = n("471445"),
   N = n("601964"),
   S = n("592125"),
   C = n("430824"),
@@ -85,7 +85,7 @@ function B(e) {
     hasEnded: l
   } = e;
   if (null != t && null != n) {
-    let e = (0, h.getChannelIconComponent)(t, n);
+    let e = (0, p.getChannelIconComponent)(t, n);
     return (0, s.jsxs)("div", {
       className: i()(y.channel, {
         [y.stacked]: a,
@@ -126,7 +126,7 @@ function G(e) {
   var t, n;
   let l, r, {
       invite: d,
-      getAcceptInviteContext: h
+      getAcceptInviteContext: p
     } = e,
     {
       approximate_member_count: R,
@@ -150,7 +150,7 @@ function G(e) {
     }
   }, [w, V, K]);
   let W = (0, u.useStateFromStores)([C.default], () => null != d.guild ? C.default.getGuild(d.guild.id) : null, [d]),
-    z = (0, p.default)([k.id])[0],
+    z = (0, h.default)([k.id])[0],
     Q = (0, u.useStateFromStores)([E.default], () => {
       var e;
       return (null == d ? void 0 : d.channel) != null && (null === (e = E.default.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === k.id
@@ -186,7 +186,7 @@ function G(e) {
     el = () => {
       f.default.acceptInviteAndTransitionToInviteChannel({
         inviteKey: d.code,
-        context: h("Invite Button Embed"),
+        context: p("Invite Button Embed"),
         analyticsLocations: J
       })
     };

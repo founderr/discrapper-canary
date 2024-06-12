@@ -14,8 +14,8 @@ var s, a = n("735250"),
   m = n("431583"),
   T = n("592745"),
   I = n("952164"),
-  p = n("768419"),
-  h = n("456432"),
+  h = n("768419"),
+  p = n("456432"),
   N = n("103575"),
   S = n("789407"),
   C = n("598077"),
@@ -167,7 +167,7 @@ class k extends(s = l.PureComponent) {
         channelId: t,
         guildId: n
       } = this.props;
-      return (0, a.jsx)(h.default, {
+      return (0, a.jsx)(p.default, {
         guildId: null != n ? n : void 0,
         channelId: t,
         source: "Invite Embed",
@@ -243,7 +243,7 @@ class k extends(s = l.PureComponent) {
 }
 B(k, "defaultProps", {
   isPreview: !1
-}), t.default = i.default.connectStores([p.default, A.default, v.default, R.default, T.default, L.default, g.default, x.default, O.default, M.default], e => {
+}), t.default = i.default.connectStores([h.default, A.default, v.default, R.default, T.default, L.default, g.default, x.default, O.default, M.default], e => {
   let {
     activity: t,
     analyticsLocations: n,
@@ -268,8 +268,8 @@ B(k, "defaultProps", {
         nick: n
       }
     }),
-    f = null != t && p.default.canPlay(t),
-    E = p.default.getSyncingWith(),
+    f = null != t && h.default.canPlay(t),
+    E = h.default.getSyncingWith(),
     _ = null != E && null != l && E.userId === l;
   return {
     analyticsLocations: n,

@@ -22,7 +22,7 @@ var s = n("735250"),
   m = n("719548"),
   T = n("689938"),
   I = n("920624");
-let p = e => {
+let h = e => {
     let {
       attachment: t
     } = e, {
@@ -34,7 +34,7 @@ let p = e => {
       description: a
     })
   },
-  h = e => {
+  p = e => {
     var t, n, a;
     let {
       embed: l
@@ -123,9 +123,9 @@ function C(e) {
         color: "header-secondary",
         className: I.subheader,
         children: T.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_DESCRIPTION
-      }), null != r && (0, s.jsx)(p, {
+      }), null != r && (0, s.jsx)(h, {
         attachment: r
-      }), null != u && (0, s.jsx)(h, {
+      }), null != u && (0, s.jsx)(p, {
         embed: u
       })]
     }), (0, s.jsxs)(o.ModalFooter, {

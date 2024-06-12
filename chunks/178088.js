@@ -19,8 +19,8 @@ var s = n("735250"),
   m = n("581883"),
   T = n("585483"),
   I = n("153209"),
-  p = n("881591"),
-  h = n("903672"),
+  h = n("881591"),
+  p = n("903672"),
   N = n("946443"),
   S = n("264233"),
   C = n("981631"),
@@ -105,7 +105,7 @@ function A(e) {
             setTab: P,
             badgeState: M,
             closePopout: j
-          }) : D === r.InboxTab.MENTIONS ? (0, s.jsx)(h.default, {
+          }) : D === r.InboxTab.MENTIONS ? (0, s.jsx)(p.default, {
             setTab: P,
             onJump: w,
             badgeState: M,
@@ -114,7 +114,7 @@ function A(e) {
             setTab: P,
             badgeState: M,
             closePopout: j
-          }) : B && D === r.InboxTab.TODOS ? (0, s.jsx)(p.default, {
+          }) : B && D === r.InboxTab.TODOS ? (0, s.jsx)(h.default, {
             setTab: P,
             onJump: w,
             closePopout: j

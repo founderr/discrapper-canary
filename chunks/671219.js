@@ -15,8 +15,8 @@ var s = n("735250"),
   m = n("592125"),
   T = n("430824"),
   I = n("594174"),
-  p = n("797053"),
-  h = n("981631"),
+  h = n("797053"),
+  p = n("981631"),
   N = n("665692"),
   S = n("689938"),
   C = n("486283");
@@ -100,7 +100,7 @@ t.default = a.memo(function(e) {
             t = I.default.getUser(e);
           if (null != t) {
             let e = (0, E.getUserAuthor)(t, v);
-            C = (0, s.jsxs)(p.default, {
+            C = (0, s.jsxs)(h.default, {
               ...A,
               onClick: () => (0, _.openUserProfileModal)({
                 userId: t.id,
@@ -109,7 +109,7 @@ t.default = a.memo(function(e) {
                 messageId: x,
                 sourceAnalyticsLocations: P,
                 analyticsLocation: {
-                  section: h.AnalyticsSections.CHANNEL_TEXT_AREA_AUTOCOMPLETE
+                  section: p.AnalyticsSections.CHANNEL_TEXT_AREA_AUTOCOMPLETE
                 }
               }),
               children: [N.MENTION_SENTINEL, e.nick]
@@ -120,7 +120,7 @@ t.default = a.memo(function(e) {
         case u.ApplicationCommandOptionType.CHANNEL: {
           let e = R.value.toString(),
             t = m.default.getChannel(e);
-          null != t && (C = (0, s.jsxs)(p.default, {
+          null != t && (C = (0, s.jsxs)(h.default, {
             ...A,
             children: [N.CHANNEL_SENTINEL, t.name]
           }));
@@ -129,7 +129,7 @@ t.default = a.memo(function(e) {
         case u.ApplicationCommandOptionType.ROLE: {
           let e = R.value.toString(),
             t = null != O ? T.default.getRole(O.id, e) : void 0;
-          null != t && (C = (0, s.jsxs)(p.default, {
+          null != t && (C = (0, s.jsxs)(h.default, {
             ...A,
             children: [N.MENTION_SENTINEL, t.name]
           }));
@@ -138,20 +138,20 @@ t.default = a.memo(function(e) {
         case u.ApplicationCommandOptionType.MENTIONABLE: {
           let e = R.value.toString(),
             t = null != O ? T.default.getRole(O.id, e) : void 0;
-          if (null != t) C = (0, s.jsxs)(p.default, {
+          if (null != t) C = (0, s.jsxs)(h.default, {
             children: [N.MENTION_SENTINEL, t.name]
           });
           else {
             let t = I.default.getUser(e);
             if (null != t) {
               let e = (0, E.getUserAuthor)(t, v);
-              C = (0, s.jsxs)(p.default, {
+              C = (0, s.jsxs)(h.default, {
                 ...A,
                 onClick: () => (0, _.openUserProfileModal)({
                   userId: t.id,
                   guildId: v.guild_id,
                   analyticsLocation: {
-                    section: h.AnalyticsSections.CHANNEL_TEXT_AREA_AUTOCOMPLETE
+                    section: p.AnalyticsSections.CHANNEL_TEXT_AREA_AUTOCOMPLETE
                   }
                 }),
                 children: [N.MENTION_SENTINEL, e.nick]

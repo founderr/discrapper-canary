@@ -22,8 +22,8 @@ var s = n("735250"),
   m = n("346656"),
   T = n("671533"),
   I = n("810090"),
-  p = n("51144"),
-  h = n("506071"),
+  h = n("51144"),
+  p = n("506071"),
   N = n("696014"),
   S = n("847033"),
   C = n("544978"),
@@ -56,7 +56,7 @@ function v(e) {
   let {
     coverImageAsset: t,
     isPreview: n = !1
-  } = e, a = f.GifAutoPlay.useSetting(), l = (0, h.useIsWindowFocused)() && a, [i, r] = (0, c.default)(t, l), o = l ? (0, s.jsx)(I.default, {
+  } = e, a = f.GifAutoPlay.useSetting(), l = (0, p.useIsWindowFocused)() && a, [i, r] = (0, c.default)(t, l), o = l ? (0, s.jsx)(I.default, {
     autoPlay: !0,
     loop: !0,
     className: M.coverImage,
@@ -87,14 +87,14 @@ function O(e) {
   } = e, T = c.id;
   let {
     nickname: I,
-    nickcolor: h
+    nickcolor: p
   } = (l = T, (0, r.useStateFromStoresObject)([E.default, _.default], () => {
     var e, t;
     let n = _.default.getCurrentUser();
     i()(null != n, "user cannot be null");
     let s = E.default.getMember(l, n.id);
     return {
-      nickname: null !== (e = null == s ? void 0 : s.nick) && void 0 !== e ? e : p.default.getName(n),
+      nickname: null !== (e = null == s ? void 0 : s.nick) && void 0 !== e ? e : h.default.getName(n),
       nickcolor: null !== (t = null == s ? void 0 : s.colorString) && void 0 !== t ? t : void 0
     }
   }, [l])), {
@@ -162,7 +162,7 @@ function O(e) {
               usernameHook: function(e, t) {
                 return (0, s.jsx)("span", {
                   style: {
-                    color: h
+                    color: p
                   },
                   children: e
                 }, t)

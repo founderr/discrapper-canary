@@ -19,8 +19,8 @@ var s = n("735250"),
   m = n("113434"),
   T = n("569984"),
   I = n("918701"),
-  p = n("341907"),
-  h = n("46140"),
+  h = n("341907"),
+  p = n("46140"),
   N = n("981631"),
   S = n("231338"),
   C = n("689938");
@@ -29,7 +29,7 @@ function g(e) {
   var t;
   let n = (0, l.useStateFromStores)([T.default], () => T.default.questDeliveryOverride, []),
     f = (0, I.isDismissible)(e.questContent),
-    g = (0, I.hasVariant)(e.quest, h.QuestVariants.IN_HOUSE_CONSOLE_QUEST),
+    g = (0, I.hasVariant)(e.quest, p.QuestVariants.IN_HOUSE_CONSOLE_QUEST),
     {
       handleComplete: A,
       handleResetDismissibilityClick: M,
@@ -86,7 +86,7 @@ function g(e) {
         id: "display-disclosure",
         label: C.default.Messages.QUESTS_DISCLOSURE_LABEL,
         action: () => {
-          (0, p.openDisclosureModal)(e.quest, {
+          (0, h.openDisclosureModal)(e.quest, {
             content: e.questContent,
             position: e.questContentPosition,
             ctaContent: E.QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE

@@ -23,8 +23,8 @@ function E(e) {
     transitionState: E,
     onClose: _
   } = e, m = (0, a.useStateFromStores)([u.default], () => u.default.getFpMessageInfo(n)), T = m.attachments.map(e => e.id), I = m.attachments.map(e => e.filename), {
-    reportFalsePositive: p,
-    isReportFalsePositiveLoading: h
+    reportFalsePositive: h,
+    isReportFalsePositiveLoading: p
   } = (0, d.useExplicitMediaActions)({
     onSuccess: () => {
       (0, c.handleSuccess)(_), i.default.disableFalsePositiveButton(t, n)
@@ -39,9 +39,9 @@ function E(e) {
   return !(m.attachments.length > 0) && _(), (0, s.jsx)(c.ExplicitMediaFalsePositiveModal, {
     messageId: n,
     channelId: t,
-    isReportFalsePositiveLoading: h,
+    isReportFalsePositiveLoading: p,
     analyticsContext: o.TrackMediaRedactionContext.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW,
-    onConfirmPress: p,
+    onConfirmPress: h,
     transitionState: E,
     onClose: _
   })

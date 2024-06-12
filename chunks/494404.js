@@ -25,8 +25,8 @@ var s = n("735250"),
   m = n("294218"),
   T = n("703656"),
   I = n("210887"),
-  p = n("592125"),
-  h = n("375954"),
+  h = n("592125"),
+  p = n("375954"),
   N = n("496675"),
   S = n("933429"),
   C = n("451478"),
@@ -160,8 +160,8 @@ function b(e) {
     renderHeader: E,
     renderEmptyState: m,
     renderItem: T,
-    getProTip: p,
-    scrollerClassName: h,
+    getProTip: h,
+    scrollerClassName: p,
     className: N,
     listName: A
   } = e, L = a.useRef(null), P = (0, _.default)(A, L), y = (0, d.useStateFromStores)([S.default], () => S.default.hasNotice()), U = (0, d.useStateFromStores)([C.default], () => C.default.windowSize());
@@ -219,7 +219,7 @@ function b(e) {
     className: x.scrollingFooterWrap,
     children: m(I.default.theme)
   }));
-  let G = null == p ? void 0 : p(),
+  let G = null == h ? void 0 : h(),
     k = F && null != G ? (0, s.jsx)("div", {
       className: x.footer,
       children: (0, s.jsx)(g.default, {
@@ -245,7 +245,7 @@ function b(e) {
     children: (0, s.jsxs)(c.HeadingLevel, {
       component: E(),
       children: [(0, s.jsxs)(c.AdvancedScroller, {
-        className: i()(x.messagesPopout, h),
+        className: i()(x.messagesPopout, p),
         onScroll: H ? j : void 0,
         ref: L,
         children: [(0, s.jsx)(u.ListNavigatorProvider, {
@@ -288,8 +288,8 @@ function F(e) {
     className: A,
     onCloseMessage: M,
     listName: R
-  } = e, L = (0, d.useStateFromStores)([h.default], () => {
-    let e = null != l ? h.default.getMessages(l.id) : null;
+  } = e, L = (0, d.useStateFromStores)([p.default], () => {
+    let e = null != l ? p.default.getMessages(l.id) : null;
     return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId)
   });
 
@@ -308,7 +308,7 @@ function F(e) {
       confirmText: O.default.Messages.OKAY
     });
     else if (!L) {
-      let e = p.default.getChannel(i);
+      let e = h.default.getChannel(i);
       null != e && (E.default.trackJump(i, s, t), (0, T.transitionTo)(v.Routes.CHANNEL(e.getGuildId(), i, s))), null == c || c(n)
     }
   }

@@ -19,8 +19,8 @@ var s = n("735250"),
   m = n("995774"),
   T = n("931651"),
   I = n("594174"),
-  p = n("250690"),
-  h = n("506917"),
+  h = n("250690"),
+  p = n("506917"),
   N = n("630388"),
   S = n("74538"),
   C = n("566006"),
@@ -83,11 +83,11 @@ class L extends a.Component {
               [T.active]: l
             }, n),
             children: [u ? (0, s.jsx)(s.Fragment, {
-              children: (0, s.jsx)(h.default, {
+              children: (0, s.jsx)(p.default, {
                 className: T.icon
               })
             }) : (0, s.jsx)(s.Fragment, {
-              children: (0, s.jsx)(p.default, {
+              children: (0, s.jsx)(h.default, {
                 className: T.icon
               })
             }), a]

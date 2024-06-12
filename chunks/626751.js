@@ -22,13 +22,13 @@ function f(e) {
   } = e, _ = null !== (n = null === (t = E.roleSubscriptionData) || void 0 === t ? void 0 : t.is_renewal) && void 0 !== n && n ? (0, d.getRenewButtonLabels)() : (0, d.getJoinButtonLabels)(), m = f.guild_id, T = (0, l.useStateFromStores)([i.default], () => {
     var e;
     return null === (e = i.default.getGuild(m)) || void 0 === e ? void 0 : e.systemChannelFlags
-  }, [m]), I = null != T && (0, o.hasFlag)(T, c.SystemChannelFlags.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES), p = a.useMemo(() => (0, u.getRoleSubscriptionPurchaseSystemMessageEventProperties)(f, E), [f, E]);
+  }, [m]), I = null != T && (0, o.hasFlag)(T, c.SystemChannelFlags.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES), h = a.useMemo(() => (0, u.getRoleSubscriptionPurchaseSystemMessageEventProperties)(f, E), [f, E]);
   return I ? null : (0, s.jsx)(r.default, {
     channel: f,
     message: E,
     buttonLabels: _,
     stickers: d.STICKERS,
     event: c.AnalyticEvents.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CTA_CLICKED,
-    eventProperties: p
+    eventProperties: h
   })
 }

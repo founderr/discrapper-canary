@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return p
   }
 }), n("47120");
 var s = n("735250"),
@@ -19,14 +19,14 @@ var s = n("735250"),
   m = n("823379"),
   T = n("709054"),
   I = n("124368"),
-  p = n("314569");
+  h = n("314569");
 
-function h(e) {
+function p(e) {
   let {
     channel: t,
     channelRecord: n,
     deleteChannel: l
-  } = e, h = (0, r.useStateFromStoresArray)([f.default, _.default], () => i()(f.default.getThreadsForParent(n.guild_id, n.id)).values().filter(e => {
+  } = e, p = (0, r.useStateFromStoresArray)([f.default, _.default], () => i()(f.default.getThreadsForParent(n.guild_id, n.id)).values().filter(e => {
     let {
       id: n
     } = e;
@@ -40,15 +40,15 @@ function h(e) {
     (0, E.openThreadSidebarForViewing)(e, t, I.OpenThreadAnalyticsLocations.INBOX)
   }, []);
   return a.useEffect(() => {
-    null != n && t.isFullyLoaded && !t.hasError && !t.collapsed && 0 === h.length && o.default.wait(() => {
+    null != n && t.isFullyLoaded && !t.hasError && !t.collapsed && 0 === p.length && o.default.wait(() => {
       (0, u.ack)(t.channelId, !0), l(t.channelId)
     })
   }), (0, s.jsx)("div", {
-    className: p.container,
-    children: h.map(e => (0, s.jsx)(c.ForumPostComposerStoreProvider, {
+    className: h.container,
+    children: p.map(e => (0, s.jsx)(c.ForumPostComposerStoreProvider, {
       createStore: () => (0, c.createForumPostComposerStore)(n),
       children: (0, s.jsx)(d.default, {
-        className: p.forumPost,
+        className: h.forumPost,
         threadId: e.id,
         goToThread: N
       })

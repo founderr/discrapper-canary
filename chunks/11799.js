@@ -20,8 +20,8 @@ let f = e => {
       isDesktop: f,
       withMentions: E = !1,
       initialPageSize: _
-    } = e, m = (0, a.useStateFromStores)([d.default], () => d.default.shouldReload()), T = s.useRef(!1), [I, p] = s.useState(!1), {
-      initialized: h,
+    } = e, m = (0, a.useStateFromStores)([d.default], () => d.default.shouldReload()), T = s.useRef(!1), [I, h] = s.useState(!1), {
+      initialized: p,
       loading: N,
       items: S,
       hasMore: C,
@@ -42,22 +42,22 @@ let f = e => {
       roleFilter: r.default.roleFilter
     }));
     s.useEffect(() => ((0, o.setNotificationCenterActive)(!0), () => (0, o.setNotificationCenterActive)(!1)), []), s.useEffect(() => {
-      h && t && (0, l.ackUserFeature)(c.ReadStateTypes.NOTIFICATION_CENTER)
-    }, [t, h]);
+      p && t && (0, l.ackUserFeature)(c.ReadStateTypes.NOTIFICATION_CENTER)
+    }, [t, p]);
     let v = (0, i.default)();
     s.useEffect(() => () => {
       f ? !v() && (A || S.length > 100) && (0, o.resetNotificationCenter)() : n && S.length > 100 && (0, o.resetNotificationCenter)()
     }, [n, S, f, v, A]), s.useEffect(() => {
       let e = m && t;
-      (!h || e) && (0, o.fetchNotificationCenterItems)({
+      (!p || e) && (0, o.fetchNotificationCenterItems)({
         limit: null != _ ? _ : E ? 8 : 20,
         with_mentions: E,
         roles_filter: M,
         everyone_filter: R
       })
-    }, [h, m, t, E, M, R, _]);
+    }, [p, m, t, E, M, R, _]);
     let O = s.useCallback(async e => {
-      !T.current && h && C && null != g && (e || !A) && (T.current = !0, p(!0), await (0, o.fetchNotificationCenterItems)({
+      !T.current && p && C && null != g && (e || !A) && (T.current = !0, h(!0), await (0, o.fetchNotificationCenterItems)({
         after: g,
         with_mentions: E,
         roles_filter: M,
@@ -65,10 +65,10 @@ let f = e => {
         limit: E ? 8 : 20
       }, () => {
         T.current = !1
-      }), p(!1))
-    }, [h, C, g, A, E, M, R]);
+      }), h(!1))
+    }, [p, C, g, A, E, M, R]);
     return {
-      initialized: h,
+      initialized: p,
       loading: N,
       items: S,
       hasMore: C,

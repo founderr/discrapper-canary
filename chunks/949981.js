@@ -25,9 +25,9 @@ function T(e) {
       author: a,
       currentUserId: T,
       onTransitionToInviteChannel: I,
-      onAcceptInstantInvite: p
+      onAcceptInstantInvite: h
     } = e,
-    h = T === a.id,
+    p = T === a.id,
     N = n.state === E.InviteStates.ACCEPTING,
     S = (0, i.useStateFromStores)([o.default], () => null != n.channel ? o.default.getChannel(n.channel.id) : null, [n]);
   l()(null == S || S.isPrivate(), "must be a private channel");
@@ -45,12 +45,12 @@ function T(e) {
   }
   let g = S.name;
   (null == g || "" === g) && (g = t.length > 0 ? t.filter(c.isNotNullish).map(e => e.username).join(", ") : _.default.Messages.UNNAMED);
-  let A = C ? I : p,
+  let A = C ? I : h,
     M = _.default.Messages.JOIN_GUILD,
     R = d.default.Button.Colors.GREEN;
   C && (M = _.default.Messages.JOINED_GUILD, R = d.default.Button.Colors.PRIMARY);
   let v = _.default.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
-  return h && (v = _.default.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, s.jsxs)(d.default, {
+  return p && (v = _.default.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.default.Header, {
       text: v
     }), (0, s.jsxs)(d.default.Body, {

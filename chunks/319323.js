@@ -24,8 +24,8 @@ function _(e) {
   } = e, _ = (0, r.useApplication)(t), {
     listingsLoaded: m
   } = (0, r.useFetchListingsForApplication)(t, null == _ ? void 0 : _.primarySkuId), T = (0, a.useStateFromStores)([o.default], () => o.default.getSubscriptionGroupListingForApplication(t), [t]), I = null != T ? (0, u.getPayableSubscriptionListing)(T) : null, {
-    openModal: p,
-    canOpenModal: h
+    openModal: h,
+    canOpenModal: p
   } = (0, d.default)({
     guildId: n,
     groupListingId: null == T ? void 0 : T.id,
@@ -36,8 +36,8 @@ function _(e) {
   return (0, s.jsx)(i.Button, {
     color: i.Button.Colors.BRAND,
     size: i.Button.Sizes.SMALL,
-    onClick: () => p(),
-    disabled: !h || !m,
+    onClick: () => h(),
+    disabled: !p || !m,
     children: (0, s.jsxs)("div", {
       className: E.button,
       children: [(0, s.jsx)(l.ShopIcon, {

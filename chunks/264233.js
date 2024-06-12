@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return p
   }
 }), n("47120");
 var s = n("735250"),
@@ -19,13 +19,13 @@ var s = n("735250"),
   m = n("791914"),
   T = n("326838"),
   I = n("689938"),
-  p = n("493634");
+  h = n("493634");
 
-function h(e) {
+function p(e) {
   let {
     setTab: t,
     badgeState: l,
-    closePopout: h
+    closePopout: p
   } = e, S = (0, r.useStateFromStoresArray)([f.default], () => f.default.getInvites()), C = (0, r.useStateFromStores)([f.default], () => f.default.getInviteStatuses()), [g, A] = a.useMemo(() => i().partition(S, e => {
     var t;
     return (null === (t = C[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1e3 < e.ttl
@@ -33,14 +33,14 @@ function h(e) {
   return (a.useEffect(() => {
     (0, E.clearUnseenInvites)()
   }), 0 === S.length) ? (0, s.jsxs)("div", {
-    className: p.container,
+    className: h.container,
     children: [(0, s.jsx)(m.default, {
       tab: o.InboxTab.GAME_INVITES,
       setTab: t,
       badgeState: l,
-      closePopout: h
+      closePopout: p
     }), (0, s.jsx)("div", {
-      className: p.__invalid_emptyStateContainer,
+      className: h.__invalid_emptyStateContainer,
       children: (0, s.jsx)(_.default, {
         Icon: u.GameControllerIcon,
         header: I.default.Messages.GAME_INVITES_EMPTY_STATE_TITLE,
@@ -48,14 +48,14 @@ function h(e) {
       })
     })]
   }) : (0, s.jsxs)("div", {
-    className: p.container,
+    className: h.container,
     children: [(0, s.jsx)(m.default, {
       tab: o.InboxTab.GAME_INVITES,
       setTab: t,
       badgeState: l,
-      closePopout: h,
+      closePopout: p,
       children: (0, s.jsx)(c.CircleIconButton, {
-        className: p.__invalid_deleteButton,
+        className: h.__invalid_deleteButton,
         tooltip: I.default.Messages.GAME_INVITES_DELETE_ALL,
         color: c.CircleIconButtonColors.SECONDARY,
         icon: (0, s.jsx)(d.TrashIcon, {
@@ -78,7 +78,7 @@ function h(e) {
       })
     }), (0, s.jsx)(c.AdvancedScrollerThin, {
       children: (0, s.jsxs)("div", {
-        className: p.invitesContainer,
+        className: h.invitesContainer,
         children: [g.length > 0 && (0, s.jsxs)(s.Fragment, {
           children: [(0, s.jsx)(N, {
             title: I.default.Messages.GAME_INVITES_RECENT_HEADER
@@ -108,14 +108,14 @@ function N(e) {
     title: t
   } = e;
   return (0, s.jsxs)("div", {
-    className: p.headerContainer,
+    className: h.headerContainer,
     children: [(0, s.jsx)(c.Text, {
-      className: p.headerTitle,
+      className: h.headerTitle,
       variant: "text-xs/semibold",
       color: "interactive-normal",
       children: t
     }), (0, s.jsx)("div", {
-      className: p.headerDivider
+      className: h.headerDivider
     })]
   })
 }

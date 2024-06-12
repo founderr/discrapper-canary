@@ -54,7 +54,7 @@ function I(e) {
   })
 }
 
-function p(e) {
+function h(e) {
   let {
     buttonLabel: t,
     secondaryLabel: n,
@@ -84,7 +84,7 @@ function p(e) {
   })
 }
 
-function h(e) {
+function p(e) {
   let {
     action: t,
     channelId: n,
@@ -119,7 +119,7 @@ function h(e) {
     onClick: _,
     className: o,
     children: t.label
-  }) : (0, s.jsx)(p, {
+  }) : (0, s.jsx)(h, {
     buttonLabel: t.label,
     secondaryLabel: t.secondaryLabel,
     handleClick: _,
@@ -166,18 +166,18 @@ function N(e) {
         })]
       }), d, (0, s.jsxs)("div", {
         className: m.bottomBar,
-        children: [(0, s.jsx)(h, {
+        children: [(0, s.jsx)(p, {
           channelId: t.getChannelId(),
           messageId: t.id,
           action: n.secondaryAction,
           className: m.secondaryAction,
           isInteractive: n.isInteractive
-        }), (0, s.jsx)(h, {
+        }), (0, s.jsx)(p, {
           channelId: t.getChannelId(),
           messageId: t.id,
           action: n.tertiaryAction,
           className: m.tertiaryAction
-        }), (0, s.jsx)(h, {
+        }), (0, s.jsx)(p, {
           channelId: t.getChannelId(),
           messageId: t.id,
           action: n.primaryAction

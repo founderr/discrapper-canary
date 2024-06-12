@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return h
   }
 }), n("789020");
 var s = n("735250");
@@ -21,9 +21,9 @@ var a = n("533800"),
   T = n("689938"),
   I = n("798719");
 
-function p(e) {
-  var t, p;
-  let h, N, S, {
+function h(e) {
+  var t, h;
+  let p, N, S, {
       onTransitionToInviteChannel: C,
       onAcceptInstantInvite: g,
       guild: A,
@@ -44,7 +44,7 @@ function p(e) {
     b = null != y && y.isGuildVocal(),
     F = null != y && y.isGuildStageVoice(),
     B = (0, d.hasFlag)(null !== (t = M.flags) && void 0 !== t ? t : 0, a.GuildInviteFlags.IS_GUEST_INVITE),
-    G = null !== (p = null == A ? void 0 : A.hasFeature(m.GuildFeatures.HUB)) && void 0 !== p && p;
+    G = null !== (h = null == A ? void 0 : A.hasFeature(m.GuildFeatures.HUB)) && void 0 !== h && h;
   if (null == A) {
     if (null == M.guild) return (0, s.jsx)(_.default, {});
     A = f.fromInviteGuild(M.guild);
@@ -80,7 +80,7 @@ function p(e) {
     })
   })), b ? (N = (0, s.jsx)(o.default.Channel, {
     channel: y
-  }), h = (0, s.jsxs)("span", {
+  }), p = (0, s.jsxs)("span", {
     className: I.infoTitle,
     children: [T.default.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({
       guildName: A.name
@@ -91,10 +91,10 @@ function p(e) {
         isBannerVisible: !1
       })
     })]
-  })) : null != L && L >= 5 || null != D && D > 0 ? h = (0, s.jsx)(o.default.Data, {
+  })) : null != L && L >= 5 || null != D && D > 0 ? p = (0, s.jsx)(o.default.Data, {
     members: L,
     membersOnline: D
-  }) : j && (h = (0, s.jsx)(o.default.Channel, {
+  }) : j && (p = (0, s.jsx)(o.default.Channel, {
     channel: y,
     guild: A
   })), (0, s.jsxs)(o.default, {
@@ -111,7 +111,7 @@ function p(e) {
         }), (0, s.jsx)(o.default.Info, {
           title: N,
           onClick: U ? k : null,
-          children: h
+          children: p
         })]
       }), (0, s.jsx)(o.default.Button, {
         onClick: k,

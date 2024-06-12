@@ -25,8 +25,8 @@ function c(e) {
     tooltipPosition: m,
     onClick: T,
     className: I,
-    source: p,
-    hover: h,
+    source: h,
+    hover: p,
     innerClassName: N
   } = e, S = {
     fullWidth: n,
@@ -36,13 +36,13 @@ function c(e) {
     tooltipPosition: m,
     onClick: T,
     className: I,
-    hover: h,
+    hover: p,
     innerClassName: N
   }, C = (0, a.useStateFromStores)([i.default], () => i.default.getActiveLibraryApplication(t.id)), g = null != C ? C.sku.id : null, A = null != g ? g : t.primarySkuId, M = (0, a.useStateFromStores)([r.default], () => null != A && !r.default.didFetchingSkuFail(A));
   return null != C && (0, o.isUserEntitledToLibraryApplication)(C) ? (0, s.jsx)(d.default, {
     ...S,
     libraryApplication: C,
-    source: p
+    source: h
   }) : M ? (0, s.jsx)("div", {
     children: "deprecated!"
   }) : (0, s.jsx)(u.default, {

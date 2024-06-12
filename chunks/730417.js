@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useActivityPanelDrop: function() {
-    return h
+    return p
   },
   useAnyDropsEnabled: function() {
     return I
@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return m
   },
   useFetchInitialDropProgress: function() {
-    return p
+    return h
   },
   useShowEligibilityEnrollmentTooltip: function() {
     return T
@@ -77,7 +77,7 @@ function I() {
   return null == e ? void 0 : e.config.dropsEnabled
 }
 
-function p(e) {
+function h(e) {
   let t = m(e),
     n = null == t ? void 0 : t.drop,
     l = (0, a.useStateFromStores)([f.default], () => null != n && f.default.serverEligibleByQuestIds[n.dropsQuestId]),
@@ -87,7 +87,7 @@ function p(e) {
   }, [n, l, i])
 }
 
-function h(e, t, n, s) {
+function p(e, t, n, s) {
   var l;
   let i = m(e),
     u = null == i ? void 0 : i.drop,
@@ -96,10 +96,10 @@ function h(e, t, n, s) {
     _ = (0, E.doesGameTitleMatchList)(null == t ? void 0 : t.name, null !== (l = null == u ? void 0 : u.gameSearchTerm) && void 0 !== l ? l : []),
     T = (0, r.useIsAnyContentShown)([n, s]),
     I = (0, o.useIsDismissibleContentDismissed)(s),
-    p = null == u || (0, E.getDropExpired)(u),
-    h = !!(null != u && !p && _ && (null == i ? void 0 : i.config.dropsEnabled) && d);
+    h = null == u || (0, E.getDropExpired)(u),
+    p = !!(null != u && !h && _ && (null == i ? void 0 : i.config.dropsEnabled) && d);
   return {
-    partnerGame: h ? e : null,
+    partnerGame: p ? e : null,
     dropsActivityPanelExperienceBlocked: T,
     showDropsSparkles: !c && !I
   }

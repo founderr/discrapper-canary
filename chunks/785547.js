@@ -16,8 +16,8 @@ var s, a, l, i = n("735250"),
   m = n("173747"),
   T = n("7956"),
   I = n("293245"),
-  p = n("417363"),
-  h = n("941128"),
+  h = n("417363"),
+  p = n("941128"),
   N = n("780570"),
   S = n("358085"),
   C = n("814225"),
@@ -233,7 +233,7 @@ class D extends(a = r.Component) {
 function P(e) {
   let {
     libraryApplication: t
-  } = e, n = (0, f.useAnalyticsContext)(), [s, a] = (0, o.useStateFromStoresArray)([p.default, h.default], () => [(0, T.getDefaultLibraryApplicationAction)(t, p.default, h.default), p.default.getState(t.id, t.branchId)], [t]), l = (0, o.useStateFromStores)([I.default], () => I.default.isSyncing(t.id, t.branchId), [t]), r = (0, o.useStateFromStores)([m.default], () => m.default.hasNoBuild(t.id, t.branchId), [t]);
+  } = e, n = (0, f.useAnalyticsContext)(), [s, a] = (0, o.useStateFromStoresArray)([h.default, p.default], () => [(0, T.getDefaultLibraryApplicationAction)(t, h.default, p.default), h.default.getState(t.id, t.branchId)], [t]), l = (0, o.useStateFromStores)([I.default], () => I.default.isSyncing(t.id, t.branchId), [t]), r = (0, o.useStateFromStores)([m.default], () => m.default.hasNoBuild(t.id, t.branchId), [t]);
   return (0, i.jsx)(D, {
     ...e,
     analyticsContext: n,

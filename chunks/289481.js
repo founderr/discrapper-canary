@@ -15,8 +15,8 @@ var s = n("735250"),
   m = n("592125"),
   T = n("259580"),
   I = n("263704"),
-  p = n("568570"),
-  h = n("617379"),
+  h = n("568570"),
+  p = n("617379"),
   N = n("324081"),
   S = n("305248"),
   C = n("520116"),
@@ -95,7 +95,7 @@ let v = a.memo(function(e) {
         mentionCount: t.mentionCount,
         toggleCollapsed: i,
         channelState: t,
-        children: [(0, s.jsx)(h.default, {
+        children: [(0, s.jsx)(p.default, {
           channel: r
         }), (0, s.jsx)(O, {
           ...e
@@ -127,7 +127,7 @@ function O(e) {
     className: M.markReadButton,
     tooltip: i ? A.default.Messages.MARK_GUILD_AS_READ : A.default.Messages.MARK_AS_READ,
     color: u.CircleIconButtonColors.TERTIARY,
-    icon: i ? (0, s.jsx)(p.default, {
+    icon: i ? (0, s.jsx)(h.default, {
       width: 16,
       height: 16
     }) : (0, s.jsx)(I.default, {

@@ -19,8 +19,8 @@ var s = n("735250"),
   m = n("528011"),
   T = n("666657"),
   I = n("533244"),
-  p = n("981631"),
-  h = n("176505"),
+  h = n("981631"),
+  p = n("176505"),
   N = n("689938"),
   S = n("352370");
 
@@ -32,12 +32,12 @@ function C(e) {
     shouldShowIncidentActions: O,
     incidentData: x,
     isUnderLockdown: L
-  } = (0, m.useGuildIncidentsState)(R), D = (0, r.useCanAccessMemberSafetyPage)(null !== (t = null == v ? void 0 : v.id) && void 0 !== t ? t : p.EMPTY_STRING_SNOWFLAKE_ID), P = a.useCallback(() => null != v && (0, o.goToMemberSafetyDashboard)(v.id), [v]);
+  } = (0, m.useGuildIncidentsState)(R), D = (0, r.useCanAccessMemberSafetyPage)(null !== (t = null == v ? void 0 : v.id) && void 0 !== t ? t : h.EMPTY_STRING_SNOWFLAKE_ID), P = a.useCallback(() => null != v && (0, o.goToMemberSafetyDashboard)(v.id), [v]);
   if (null == v || null == x || !O) return null;
   let y = e => {
-      if (e && D && M !== h.StaticChannelRoute.MEMBER_SAFETY && P()) {
-        _.default.track(p.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
-          notice_type: p.NoticeTypes.GUILD_RAID_NOTIFICATION,
+      if (e && D && M !== p.StaticChannelRoute.MEMBER_SAFETY && P()) {
+        _.default.track(h.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
+          notice_type: h.NoticeTypes.GUILD_RAID_NOTIFICATION,
           guild_id: v.id
         });
         return
@@ -67,7 +67,7 @@ function C(e) {
     color: i.NoticeColors.NEUTRAL,
     children: [(0, s.jsx)(i.NoticeCloseButton, {
       onClick: g,
-      noticeType: p.NoticeTypes.GUILD_RAID_NOTIFICATION
+      noticeType: h.NoticeTypes.GUILD_RAID_NOTIFICATION
     }), U, j, (0, s.jsx)(i.NoticeButton, {
       className: S.actionButton,
       onClick: () => y(!1),
@@ -89,13 +89,13 @@ function C(e) {
     }) : N.default.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({
       guildName: v.name
     }),
-    F = D && M === h.StaticChannelRoute.MEMBER_SAFETY;
+    F = D && M === p.StaticChannelRoute.MEMBER_SAFETY;
   return (0, s.jsxs)(i.Notice, {
     className: S.notice,
     color: i.NoticeColors.WARNING,
     children: [(0, s.jsx)(i.NoticeCloseButton, {
       onClick: g,
-      noticeType: p.NoticeTypes.GUILD_RAID_NOTIFICATION
+      noticeType: h.NoticeTypes.GUILD_RAID_NOTIFICATION
     }), U, b, !F && (0, s.jsx)(i.NoticeButton, {
       className: S.actionButton,
       onClick: () => y(!0),

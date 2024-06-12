@@ -17,8 +17,8 @@ var s, a, l = n("735250"),
   m = n("702346"),
   T = n("809026"),
   I = n("139256"),
-  p = n("489887"),
-  h = n("689938"),
+  h = n("489887"),
+  p = n("689938"),
   N = n("69959");
 
 function S() {
@@ -68,7 +68,7 @@ function g(e) {
         variant: "text-sm/semibold",
         color: "text-normal",
         scaleFontToUserSetting: !0,
-        children: h.default.Messages.POLL_RESULT_NO_VOTERS
+        children: p.default.Messages.POLL_RESULT_NO_VOTERS
       });
       break;
     case "VICTOR":
@@ -94,7 +94,7 @@ function g(e) {
           variant: "text-xs/medium",
           color: "input-placeholder-text",
           scaleFontToUserSetting: !0,
-          children: [h.default.Messages.POLL_RESULT_WINNING, " • ", i, "%"]
+          children: [p.default.Messages.POLL_RESULT_WINNING, " • ", i, "%"]
         })]
       });
       break;
@@ -107,7 +107,7 @@ function g(e) {
           variant: "text-sm/semibold",
           color: "text-normal",
           scaleFontToUserSetting: !0,
-          children: h.default.Messages.POLL_RESULT_TIED
+          children: p.default.Messages.POLL_RESULT_TIED
         }), (0, l.jsxs)(c.Text, {
           variant: "text-xs/medium",
           color: "input-placeholder-text",
@@ -158,7 +158,7 @@ function A(e) {
         variant: "text-sm/medium",
         color: "none",
         scaleFontToUserSetting: !0,
-        children: h.default.Messages.POLL_RESULT_VIEW_POLL
+        children: p.default.Messages.POLL_RESULT_VIEW_POLL
       })
     })]
   })
@@ -169,7 +169,7 @@ function M(e) {
   let {
     message: n,
     compact: s
-  } = e, a = n.embeds[0], r = i.useMemo(() => (0, T.default)(a), [a]), o = (0, u.truncateText)(null !== (t = null == r ? void 0 : r.questionText) && void 0 !== t ? t : "", p.POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS), c = n.messageReference, E = i.useCallback(() => {
+  } = e, a = n.embeds[0], r = i.useMemo(() => (0, T.default)(a), [a]), o = (0, u.truncateText)(null !== (t = null == r ? void 0 : r.questionText) && void 0 !== t ? t : "", h.POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS), c = n.messageReference, E = i.useCallback(() => {
     null != c && f.default.jumpToMessage({
       channelId: c.channel_id,
       messageId: c.message_id,
@@ -185,7 +185,7 @@ function M(e) {
       }),
       timestamp: n.timestamp,
       compact: s,
-      children: h.default.Messages.POLL_RESULT_MESSAGE_HEADER.format({
+      children: p.default.Messages.POLL_RESULT_MESSAGE_HEADER.format({
         title: o,
         titleOnClick: E
       })

@@ -19,9 +19,9 @@ var s = n("735250"),
   m = n("709054"),
   T = n("838440"),
   I = n("981631"),
-  p = n("640656");
+  h = n("640656");
 
-function h(e) {
+function p(e) {
   let {
     assets: t,
     currentUser: n,
@@ -39,11 +39,11 @@ function N(e) {
     stickers: c,
     event: f,
     eventProperties: E
-  } = e, [m, I] = a.useState(!1), N = a.useMemo(() => h({
+  } = e, [m, I] = a.useState(!1), N = a.useMemo(() => p({
     assets: c,
     currentUser: t,
     message: l
-  }), [c, t, l]), S = a.useMemo(() => h({
+  }), [c, t, l]), S = a.useMemo(() => p({
     assets: d,
     currentUser: t,
     message: l
@@ -88,14 +88,14 @@ function N(e) {
     }))
   }, [n, l, N, f, E]);
   return (0, s.jsxs)(i.Button, {
-    className: p.CTAMessageButtonOuter,
-    innerClassName: p.CTAMessageButton,
+    className: h.CTAMessageButtonOuter,
+    innerClassName: h.CTAMessageButton,
     color: i.ButtonColors.PRIMARY,
     onMouseEnter: () => I(!0),
     onMouseLeave: () => I(!1),
     onClick: C,
     children: [(0, s.jsx)(u.default, {
-      className: p.CTAMessageSticker,
+      className: h.CTAMessageSticker,
       isInteracting: m,
       sticker: N,
       size: 28
@@ -133,7 +133,7 @@ function S(e) {
     currentUser: u
   });
   return null != u && _ ? (0, s.jsx)("div", {
-    className: p.CTAMessage,
+    className: h.CTAMessage,
     children: (0, s.jsx)(N, {
       currentUser: u,
       channel: t,

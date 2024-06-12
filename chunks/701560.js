@@ -18,8 +18,8 @@ var s, a = n("735250"),
   m = n("417363"),
   T = n("86813"),
   I = n("358085"),
-  p = n("346329"),
-  h = n("981631"),
+  h = n("346329"),
+  p = n("981631"),
   N = n("689938"),
   S = n("2050");
 
@@ -35,7 +35,7 @@ class g extends(s = l.PureComponent) {
   get analyticsLocation() {
     return {
       ...this.props.analyticsContext.location,
-      object: h.AnalyticsObjects.BUTTON_CTA
+      object: p.AnalyticsObjects.BUTTON_CTA
     }
   }
   renderDropdown() {
@@ -137,7 +137,7 @@ class g extends(s = l.PureComponent) {
         analyticsListSort: n,
         analyticsListIndex: s
       } = this.props;
-      p.playApplication(e, t, {
+      h.playApplication(e, t, {
         analyticsParams: {
           location: this.analyticsLocation,
           list_sort: n,

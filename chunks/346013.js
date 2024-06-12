@@ -19,8 +19,8 @@ var s = n("735250"),
   m = n("367907"),
   T = n("1585"),
   I = n("841762"),
-  p = n("336197"),
-  h = n("118139"),
+  h = n("336197"),
+  p = n("118139"),
   N = n("348238"),
   S = n("38267"),
   C = n("484459"),
@@ -66,7 +66,7 @@ function B(e) {
       channel_id: G.id,
       can_access: k.canAccess,
       is_member: X
-    }), k.canAccess ? (0, p.default)(y.Routes.CHANNEL(k.guildId, k.threadId, k.messageId)) : X ? (0, p.default)(y.Routes.CHANNEL(k.guildId, k.parentChannelId)) : await x.startLurking(k.guildId, {}, {
+    }), k.canAccess ? (0, h.default)(y.Routes.CHANNEL(k.guildId, k.threadId, k.messageId)) : X ? (0, h.default)(y.Routes.CHANNEL(k.guildId, k.parentChannelId)) : await x.startLurking(k.guildId, {}, {
       channelId: k.parentChannelId
     }))
   }, [k, G, X]), ei = a.useCallback(() => (o()((null == k ? void 0 : k.authorId) != null, "Author Id cannot be null when loading user profile"), (0, C.maybeFetchUserProfileForPopout)(k.authorId, k.avatarUrl, {
@@ -94,7 +94,7 @@ function B(e) {
       !ee.enabled && en(e => !e)
     },
     ec = k.coverImage,
-    ef = null != ec && (0, h.isAnimatedImageUrl)(ec);
+    ef = null != ec && (0, p.isAnimatedImageUrl)(ec);
   return (0, s.jsxs)("div", {
     className: b.postPreviewContainer,
     children: [(0, s.jsxs)("div", {

@@ -20,7 +20,7 @@ t.default = e => {
     r.default.dismissPublishBump(n), (0, o.default)(t, n)
   }, [t, n]), I = a.useCallback(() => {
     r.default.dismissPublishBump(n)
-  }, [n]), p = a.useCallback(() => {
+  }, [n]), h = a.useCallback(() => {
     r.default.permanentlyHidePublishBump(t)
   }, [t]);
   return m ? (0, s.jsxs)("div", {
@@ -53,7 +53,7 @@ t.default = e => {
       className: _.hidePermanently,
       variant: "text-sm/normal",
       children: (0, s.jsx)(i.Clickable, {
-        onClick: p,
+        onClick: h,
         children: E.default.Messages.NEWS_CHANNEL_PUBLISH_BUMP_HIDE_PERMANENTLY
       })
     })]

@@ -29,8 +29,8 @@ t.default = function(e) {
       default:
         throw Error("Unsupported subscription tier: ".concat(e))
     }
-  }(m)), I = (0, d.usePremiumTrialOffer)(), p = (0, l.default)(null != I && null != I.expires_at ? Date.parse(I.expires_at) : 0);
-  return null == I || (null === (t = I.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== m || null == I.expires_at || Object.values(p).every(e => 0 === e) ? null : (0, s.jsxs)(a.Notice, {
+  }(m)), I = (0, d.usePremiumTrialOffer)(), h = (0, l.default)(null != I && null != I.expires_at ? Date.parse(I.expires_at) : 0);
+  return null == I || (null === (t = I.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== m || null == I.expires_at || Object.values(h).every(e => 0 === e) ? null : (0, s.jsxs)(a.Notice, {
     color: function(e) {
       switch (e) {
         case c.PremiumSubscriptionSKUs.TIER_0:
@@ -66,7 +66,7 @@ t.default = function(e) {
         default:
           throw Error("Unsupported subscription tier: ".concat(e))
       }
-    }(m, p), (0, s.jsx)(a.NoticeButton, {
+    }(m, h), (0, s.jsx)(a.NoticeButton, {
       onClick: () => {
         (0, o.default)({
           trialId: I.trial_id,

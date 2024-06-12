@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return N
   },
   getShowDropsNoticeBanner: function() {
-    return h
+    return p
   },
   isDropGameDetected: function() {
     return T
@@ -89,14 +89,14 @@ function I(e) {
   return T(e, l.default.getGamesSeen(!1), m())
 }
 
-function p(e, t) {
+function h(e, t) {
   let {
     endDate: n
   } = e, s = a()(), l = a()(n, d.noticeBannerDateFormat), i = a()(s.clone().add(e.dropsNoticeBannerDurationDays, "days").format(d.noticeBannerDateFormat)), r = l.isSameOrBefore(i), o = l.isBefore(s, "minute");
   return r && (t && !o || !t && o)
 }
 
-function h(e) {
+function p(e) {
   var t;
   let n = C(e);
   if (null == n || !(null === (t = f(e)) || void 0 === t ? void 0 : t.getCurrentConfig({
@@ -105,7 +105,7 @@ function h(e) {
       autoTrackExposure: !1
     }).dropsEnabled)) return !1;
   let s = i.DropsOptedOut.getSetting(),
-    a = p(n, !0);
+    a = h(n, !0);
   return !s && a
 }
 
@@ -118,7 +118,7 @@ function N(e) {
       autoTrackExposure: !1
     })) || void 0 === t ? void 0 : t.dropsEnabled)) return !1;
   let a = i.DropsOptedOut.getSetting(),
-    l = p(s, !1);
+    l = h(s, !1);
   return S(s) && !a && l
 }
 

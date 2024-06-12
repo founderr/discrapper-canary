@@ -19,8 +19,8 @@ var s = n("512722"),
   m = n("41776"),
   T = n("566006"),
   I = n("48854"),
-  p = n("869765"),
-  h = n("314897"),
+  h = n("869765"),
+  p = n("314897"),
   N = n("592125"),
   S = n("703558"),
   C = n("607744"),
@@ -126,7 +126,7 @@ async function F(e) {
   } = e, a = b({
     channelId: t,
     messageId: n
-  }), l = i().difference(a, s), r = i().difference(s, a), d = h.default.getId(), c = [...l.map(e => ({
+  }), l = i().difference(a, s), r = i().difference(s, a), d = p.default.getId(), c = [...l.map(e => ({
     type: "MESSAGE_REACTION_REMOVE",
     id: e
   })), ...r.map(e => ({
@@ -348,7 +348,7 @@ async function w(e) {
   try {
     if (null != u && u.length > 0) {
       var _;
-      let e = null !== (_ = h.default.getToken()) && void 0 !== _ ? _ : "";
+      let e = null !== (_ = p.default.getToken()) && void 0 !== _ ? _ : "";
       await R.sendPollMessageWithAttachments({
         channel: t,
         items: u,
@@ -400,7 +400,7 @@ t.default = {
         channelId: t,
         messageId: n
       };
-      let l = p.default.getMessage(t, n);
+      let l = h.default.getMessage(t, n);
       if (null != l.message) return {
         channelId: t,
         messageId: n,

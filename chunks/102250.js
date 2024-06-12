@@ -19,8 +19,8 @@ var s = n("735250"),
   m = n("952826"),
   T = n("481060"),
   I = n("256638"),
-  p = n("528011"),
-  h = n("666657"),
+  h = n("528011"),
+  p = n("666657"),
   N = n("533244"),
   S = n("825829"),
   C = n("226192"),
@@ -232,7 +232,7 @@ function z(e) {
   } = (0, S.extractAutomodNotificationFields)(l), A = (0, f.useStateFromStores)([O.default], () => O.default.getChannel(l.channel_id), [l.channel_id]), R = null !== (t = null == A ? void 0 : A.guild_id) && void 0 !== t ? t : null, {
     incidentData: v,
     shouldShowIncidentActions: x
-  } = (0, p.useGuildIncidentsState)(R), L = (0, M.useContextMenuRaidAlert)(l.author.id, l.channel_id), D = a.useCallback(() => {
+  } = (0, h.useGuildIncidentsState)(R), L = (0, M.useContextMenuRaidAlert)(l.author.id, l.channel_id), D = a.useCallback(() => {
     let e = null == A ? void 0 : A.guild_id;
     null != e && (0, C.openRaidResolveModal)(l.id, e)
   }, [l.id, A]), j = I === c.AutomodRaidAlertTypes.DM_RAID, b = j ? U.default : _.ChatAlertIcon;
@@ -284,7 +284,7 @@ function z(e) {
         onClick: e => {
           if (null != R && x) {
             let e = {
-              source: h.GuildIncidentActionSources.MESSAGE,
+              source: p.GuildIncidentActionSources.MESSAGE,
               messageId: l.id,
               alertType: (0, N.getIncidentAlertType)(v)
             };

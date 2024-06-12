@@ -13,8 +13,8 @@ var s, a, l = n("735250"),
   m = n("706454"),
   T = n("63063"),
   I = n("930153"),
-  p = n("617136"),
-  h = n("272008"),
+  h = n("617136"),
+  p = n("272008"),
   N = n("113434"),
   S = n("569984"),
   C = n("497505"),
@@ -133,9 +133,9 @@ t.default = e => {
     quest: t,
     location: n,
     questContentPosition: B
-  }), en = i.useMemo(() => Y && K && !Z ? 2 === G : k && !w, [Y, K, k, w, G, Z]), es = (0, u.useStateFromStores)([S.default], () => S.default.isEnrolling(t.id)), ea = () => Y && K && 1 === G ? E.default.open(D.UserSettingsSections.CONNECTIONS) : k ? void et() : (0, h.enrollInQuest)(t.id, {
+  }), en = i.useMemo(() => Y && K && !Z ? 2 === G : k && !w, [Y, K, k, w, G, Z]), es = (0, u.useStateFromStores)([S.default], () => S.default.isEnrolling(t.id)), ea = () => Y && K && 1 === G ? E.default.open(D.UserSettingsSections.CONNECTIONS) : k ? void et() : (0, p.enrollInQuest)(t.id, {
     questContent: n,
-    questContentCTA: p.QuestContentCTA.ACCEPT_QUEST,
+    questContentCTA: h.QuestContentCTA.ACCEPT_QUEST,
     questContentPosition: B
   }), el = (0, u.useStateFromStores)([m.default], () => m.default.locale), ei = K && V, er = r && !w, eo = (0, l.jsx)(R.default, {
     autoplay: a,
@@ -197,17 +197,17 @@ t.default = e => {
             locale: d,
             isQuestExpired: c,
             hasConsoleConnection: f
-          } = e, _ = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, m = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, p = m && (null === (s = o.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null, h = (0, g.hasVariant)(o, L.QuestVariants.IN_HOUSE_CONSOLE_QUEST), S = (0, g.hasVariant)(o, L.QuestVariants.MOBILE_CONSOLE_QUEST), C = (0, O.isQuestCardInGiftInventory)(u), M = (0, N.useQuestFormattedDate)(null === (a = o.userStatus) || void 0 === a ? void 0 : a.completedAt, {
+          } = e, _ = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, m = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, h = m && (null === (s = o.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null, p = (0, g.hasVariant)(o, L.QuestVariants.IN_HOUSE_CONSOLE_QUEST), S = (0, g.hasVariant)(o, L.QuestVariants.MOBILE_CONSOLE_QUEST), C = (0, O.isQuestCardInGiftInventory)(u), M = (0, N.useQuestFormattedDate)(null === (a = o.userStatus) || void 0 === a ? void 0 : a.completedAt, {
             year: "numeric",
             month: "long",
             day: "numeric"
           }), R = (0, g.isTieredRewardCodeQuest)({
             quest: o
           }), v = A.SharedQuestFields.build(o.config).defaultReward.messages.nameWithArticle;
-          if (m && h && C) return P.default.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({
+          if (m && p && C) return P.default.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({
             date: M
           });
-          if (p) {
+          if (h) {
             let e = R ? (0, g.getRewardCodeQuestReward)({
                 quest: o,
                 idx: null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedTier
@@ -234,9 +234,9 @@ t.default = e => {
           if (c) return P.default.Messages.QUESTS_EXPIRED_QUEST_CARD_SUBHEADING.format({
             reward: null !== (r = null == x ? void 0 : x.messages.nameWithArticle) && void 0 !== r ? r : v
           });
-          if ((h || S) && C) return _ || f ? P.default.Messages.QUEST_REWARD.format({
+          if ((p || S) && C) return _ || f ? P.default.Messages.QUEST_REWARD.format({
             reward: v
-          }) : h ? P.default.Messages.QUEST_REWARD_IN_HOUSE.format({
+          }) : p ? P.default.Messages.QUEST_REWARD_IN_HOUSE.format({
             reward: v,
             onClick: () => {
               E.default.open(D.UserSettingsSections.CONNECTIONS)
@@ -272,11 +272,11 @@ t.default = e => {
       children: [!K && (0, l.jsx)(j, {
         containerSize: s,
         onClick: () => {
-          E.default.open(D.UserSettingsSections.INVENTORY), (0, p.trackQuestContentClicked)({
+          E.default.open(D.UserSettingsSections.INVENTORY), (0, h.trackQuestContentClicked)({
             questId: t.id,
             questContent: n,
             questContentPosition: B,
-            questContentCTA: p.QuestContentCTA.LEARN_MORE
+            questContentCTA: h.QuestContentCTA.LEARN_MORE
           })
         },
         children: P.default.Messages.QUESTS_LEARN_MORE_V2

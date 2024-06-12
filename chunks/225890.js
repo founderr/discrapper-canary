@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return h
   }
 }), n("47120");
 var s = n("735250"),
@@ -20,17 +20,17 @@ var s = n("735250"),
   T = n("11868"),
   I = n("231338");
 
-function p(e) {
+function h(e) {
   let {
     code: t
-  } = e, [n, p, h] = t.split("-"), {
+  } = e, [n, h, p] = t.split("-"), {
     guildScheduledEvent: N,
     guild: S,
     channel: C,
     isMember: g
   } = (0, l.useStateFromStoresObject)([_.default, c.default, u.default, d.default, f.default], () => {
     var e, t;
-    let s = null !== (t = _.default.getGuildScheduledEvent(p)) && void 0 !== t ? t : void 0,
+    let s = null !== (t = _.default.getGuildScheduledEvent(h)) && void 0 !== t ? t : void 0,
       a = c.default.getGuild(n),
       l = u.default.getChannel(null == s ? void 0 : s.channel_id);
     return {
@@ -39,10 +39,10 @@ function p(e) {
       channel: l,
       isMember: d.default.isMember(n, null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
     }
-  }, [n, p]);
+  }, [n, h]);
   return a.useEffect(() => {
-    (null == N ? void 0 : N.id) == null && m.default.fetchGuildEvent(n, p), E.default.getGuildEventUserCounts(n, p, null != h ? [h] : []), E.default.getGuildEventsForCurrentUser(n)
-  }, [p, n, null == N ? void 0 : N.id, h]), (0, s.jsx)(T.default, {
+    (null == N ? void 0 : N.id) == null && m.default.fetchGuildEvent(n, h), E.default.getGuildEventUserCounts(n, h, null != p ? [p] : []), E.default.getGuildEventsForCurrentUser(n)
+  }, [h, n, null == N ? void 0 : N.id, p]), (0, s.jsx)(T.default, {
     guild: S,
     channel: C,
     guildScheduledEvent: N,
@@ -54,6 +54,6 @@ function p(e) {
         return
       }(null == C ? void 0 : C.isGuildStageVoice()) ? (0, o.connectAndOpen)(C) : (null == C ? void 0 : C.isGuildVoice()) && m.default.joinVoiceEvent(C.guild_id, C.id)
     },
-    recurrenceId: h
+    recurrenceId: p
   })
 }

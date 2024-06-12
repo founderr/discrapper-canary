@@ -19,8 +19,8 @@ var s = n("735250"),
   m = n("626135"),
   T = n("135431"),
   I = n("674588"),
-  p = n("264043"),
-  h = n("132871"),
+  h = n("264043"),
+  p = n("132871"),
   N = n("147890"),
   S = n("981631"),
   C = n("689938"),
@@ -31,7 +31,7 @@ function A(e) {
   let {
     code: A,
     message: M
-  } = e, [R, v, O] = (0, i.useStateFromStoresArray)([p.default], () => [p.default.getApplication(A), p.default.isInvalidApplication(A), p.default.getApplicationFetchState(A)], [A]), x = (0, i.useStateFromStores)([u.default], () => u.default.locale), L = (0, i.useStateFromStores)([c.default], () => {
+  } = e, [R, v, O] = (0, i.useStateFromStoresArray)([h.default], () => [h.default.getApplication(A), h.default.isInvalidApplication(A), h.default.getApplicationFetchState(A)], [A]), x = (0, i.useStateFromStores)([u.default], () => u.default.locale), L = (0, i.useStateFromStores)([c.default], () => {
     var e;
     return null !== (e = c.default.getGuildId()) && void 0 !== e ? e : void 0
   }), D = (0, i.useStateFromStores)([f.default], () => f.default.getCurrentUser()), [P, y] = a.useState(!1), U = a.useCallback(e => {
@@ -40,7 +40,7 @@ function A(e) {
   a.useEffect(() => {
     (0, I.getEmbedApplication)(A)
   }, [A]), a.useEffect(() => {
-    P && O === p.FetchState.FETCHED && m.default.track(S.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
+    P && O === h.FetchState.FETCHED && m.default.track(S.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
       application_id: A,
       device_platform: l.isMobile ? "mobile_web" : "desktop_web",
       sender_user_id: M.author.id,
@@ -63,11 +63,11 @@ function A(e) {
       guild_id: L,
       channel_id: M.channel_id
     }), (0, N.goToAppDirectory)({
-      view: h.ApplicationDirectoryViews.APPLICATION,
+      view: p.ApplicationDirectoryViews.APPLICATION,
       guildId: L,
       applicationId: A,
       entrypoint: {
-        name: h.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_PROFILE_EMBED
+        name: p.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_PROFILE_EMBED
       }
     })
   };
@@ -88,7 +88,7 @@ function A(e) {
       })
     })]
   });
-  if (null == R || O === p.FetchState.FETCHING) return (0, s.jsxs)(E.default, {
+  if (null == R || O === h.FetchState.FETCHING) return (0, s.jsxs)(E.default, {
     containerRef: j,
     children: [(0, s.jsx)(E.default.Header, {
       text: C.default.Messages.APP_DIRECTORY_PROFILE_EMBED_RESOLVING_HEADER

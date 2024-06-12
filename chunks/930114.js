@@ -21,7 +21,7 @@ function f(e) {
     channelContext: f,
     customGiftMessage: E,
     giftInfo: _
-  } = e, m = !1, T = null, I = l.default.getCurrentUser(), p = (0, o.isPremiumAtLeast)(null == I ? void 0 : I.premiumType, d.PremiumTypes.TIER_0);
+  } = e, m = !1, T = null, I = l.default.getCurrentUser(), h = (0, o.isPremiumAtLeast)(null == I ? void 0 : I.premiumType, d.PremiumTypes.TIER_0);
   (0, a.openModalLazy)(async () => {
     let {
       default: e
@@ -43,7 +43,7 @@ function f(e) {
   }, {
     onCloseCallback: () => {
       var e;
-      m && null != T && !p && T.isSubscription && (null == T ? void 0 : null === (e = T.subscriptionPlan) || void 0 === e ? void 0 : e.premiumSubscriptionType) === d.PremiumTypes.TIER_2 && r.ComponentDispatch.dispatch(c.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED)
+      m && null != T && !h && T.isSubscription && (null == T ? void 0 : null === (e = T.subscriptionPlan) || void 0 === e ? void 0 : e.premiumSubscriptionType) === d.PremiumTypes.TIER_2 && r.ComponentDispatch.dispatch(c.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED)
     }
   })
 }

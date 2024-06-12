@@ -23,7 +23,7 @@ function m(e) {
     guild: n,
     channel: m,
     messageData: T
-  } = e, I = u.default.getGuildId(), p = o.default.getChannelId(I), h = a.useCallback(() => {
+  } = e, I = u.default.getGuildId(), h = o.default.getChannelId(I), p = a.useCallback(() => {
     var e;
     c.default.track(f.AnalyticEvents.CHANNEL_LINK_PREVIEW_JOINED, {
       author_id: null === (e = T.author) || void 0 === e ? void 0 : e.id,
@@ -31,9 +31,9 @@ function m(e) {
       link_channel_id: m.id,
       link_channel_type: m.type,
       guild_id: I,
-      channel_id: p
+      channel_id: h
     }), (0, i.transitionToChannel)(n.id, m.id), l.default.selectVoiceChannel(m.id)
-  }, [null === (t = T.author) || void 0 === t ? void 0 : t.id, n.id, m.id, m.type, I, p]), N = (0, s.jsx)(d.default.Channel, {
+  }, [null === (t = T.author) || void 0 === t ? void 0 : t.id, n.id, m.id, m.type, I, h]), N = (0, s.jsx)(d.default.Channel, {
     channel: m
   });
   return (0, s.jsx)(d.default, {
@@ -44,7 +44,7 @@ function m(e) {
           guild: n
         }), (0, s.jsx)(d.default.Info, {
           title: N,
-          onClick: h,
+          onClick: p,
           children: (0, s.jsxs)("span", {
             className: _.infoTitle,
             children: [E.default.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({
@@ -59,7 +59,7 @@ function m(e) {
           })
         })]
       }), (0, s.jsx)(d.default.Button, {
-        onClick: h,
+        onClick: p,
         color: d.default.Button.Colors.GREEN,
         children: m.isGuildStageVoice() ? E.default.Messages.STAGE_CHANNEL_JOIN : E.default.Messages.JOIN_VOICE
       })]

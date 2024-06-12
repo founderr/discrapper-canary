@@ -32,9 +32,9 @@ class _ {
       m = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.default,
       T = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.default,
       I = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : i.default,
-      p = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : a.default,
+      h = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : a.default,
       {
-        snapshotIndex: h,
+        snapshotIndex: p,
         parentMessage: N,
         messageSnapshot: S
       } = this,
@@ -43,11 +43,11 @@ class _ {
       A = E.getChannel(this.parentMessage.channel_id);
     if (null != g && null != A && g.guild_id === A.guild_id) {
       if (!T.can(g.accessPermissions, g)) return {
-        snapshotIndex: h
+        snapshotIndex: p
       };
       let e = (0, s.computeChannelName)(g, _, m, !0);
       return {
-        snapshotIndex: h,
+        snapshotIndex: p,
         footerInfo: {
           originLabel: e,
           timestampLabel: C,
@@ -60,13 +60,13 @@ class _ {
     }
     let M = null === (t = S.guild) || void 0 === t ? void 0 : t.id;
     if (null == M) return {
-      snapshotIndex: h
+      snapshotIndex: p
     };
-    let R = null !== (n = I.getGuild(M)) && void 0 !== n ? n : p.getGuild(M);
+    let R = null !== (n = I.getGuild(M)) && void 0 !== n ? n : h.getGuild(M);
     return null == R ? {
-      snapshotIndex: h
+      snapshotIndex: p
     } : {
-      snapshotIndex: h,
+      snapshotIndex: p,
       footerInfo: {
         originLabel: R.name,
         originIconUrl: d.default.getGuildIconURL({

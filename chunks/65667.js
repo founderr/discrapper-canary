@@ -25,9 +25,9 @@ function T(e) {
     compact: n,
     usernameHook: a
   } = e, T = (0, r.default)(t), I = a(T), {
-    avatarSrc: p,
+    avatarSrc: h,
     eventHandlers: {
-      onMouseEnter: h,
+      onMouseEnter: p,
       onMouseLeave: N
     }
   } = (0, c.useAutomodAvatar)(!0), S = "" !== t.content ? new Date(t.content).toLocaleString(_.default.getLocale(), {
@@ -38,14 +38,14 @@ function T(e) {
     year: "numeric"
   }) : "";
   return (0, s.jsx)("div", {
-    onMouseEnter: h,
+    onMouseEnter: p,
     onMouseLeave: N,
     children: (0, s.jsx)(d.default, {
       className: l()(m.mainContainer, {
         [m.compact]: n
       }),
       iconNode: n ? null : (0, s.jsx)(c.AutomodAvatar, {
-        src: p
+        src: h
       }),
       iconContainerClassName: m.iconContainer,
       compact: n,

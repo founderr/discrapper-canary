@@ -26,13 +26,13 @@ function m(e) {
   } = e, m = (0, r.default)(t), T = a(m), {
     avatarSrc: I,
     eventHandlers: {
-      onMouseEnter: p,
-      onMouseLeave: h
+      onMouseEnter: h,
+      onMouseLeave: p
     }
   } = (0, c.useAutomodAvatar)(!0);
   return (0, s.jsx)("div", {
-    onMouseEnter: p,
-    onMouseLeave: h,
+    onMouseEnter: h,
+    onMouseLeave: p,
     children: (0, s.jsx)(d.default, {
       className: l()(_.mainContainer, {
         [_.compact]: n

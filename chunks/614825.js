@@ -19,8 +19,8 @@ var s = n("735250"),
   m = n("963249"),
   T = n("594174"),
   I = n("78839"),
-  p = n("55935"),
-  h = n("63063"),
+  h = n("55935"),
+  p = n("63063"),
   N = n("74538"),
   S = n("276444"),
   C = n("790368"),
@@ -50,7 +50,7 @@ class O extends a.Component {
       trialOffer: s
     } = this.props;
     return e && !n && void 0 === s.redeemed_at ? R.default.Messages.REFERRAL_PROGRAM_LEARN_MORE_ABOUT_SHARING.format({
-      helpdeskArticle: h.default.getArticleURL(M.HelpdeskArticles.REFERRAL_PROGRAM)
+      helpdeskArticle: p.default.getArticleURL(M.HelpdeskArticles.REFERRAL_PROGRAM)
     }) : t ? null : R.default.Messages.REFERRAL_PROGRAM_EMBED_BODY
   }
   renderActions(e, t, n) {
@@ -93,12 +93,12 @@ class O extends a.Component {
       trialEndsAt: a
     } = this.props;
     if (void 0 !== s.redeemed_at && !n && null !== a) return R.default.Messages.TRIAL_EXPIRES.format({
-      date: (0, p.dateFormat)(o()(a), "LL")
+      date: (0, h.dateFormat)(o()(a), "LL")
     });
     if (e || void 0 === s.expires_at) return null;
     let l = o()(s.expires_at);
     if (t) return R.default.Messages.EXPIRED_DATE.format({
-      date: (0, p.dateFormat)(o()(l), "LL")
+      date: (0, h.dateFormat)(o()(l), "LL")
     });
     let i = l.diff(o()(), "h");
     if (i > 48) {

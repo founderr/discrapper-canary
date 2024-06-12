@@ -20,8 +20,8 @@ var a = n("120356"),
   m = n("430824"),
   T = n("594174"),
   I = n("938475"),
-  p = n("632184"),
-  h = n("622116"),
+  h = n("632184"),
+  p = n("622116"),
   N = n("5192"),
   S = n("981631"),
   C = n("689938"),
@@ -53,11 +53,11 @@ function A(e) {
     username: w.nick
   }), q = null != j && null != b, X = null;
   X = q ? B || Y ? C.default.Messages.YOU_ARE_IN_CHANNEL.format({
-    channelHook: (e, t) => (0, s.jsx)(h.default, {
+    channelHook: (e, t) => (0, s.jsx)(p.default, {
       channel: null != b ? b : void 0
     }, t)
   }) : C.default.Messages.THEY_ARE_IN_CHANNEL.format({
-    channelHook: (e, t) => (0, s.jsx)(h.default, {
+    channelHook: (e, t) => (0, s.jsx)(p.default, {
       channel: null != b ? b : void 0
     }, t)
   }) : C.default.Messages.CANNOT_ACCESS_HANGOUT, 0 === V.length && (X = B ? C.default.Messages.HANGOUT_OVER_SENDER : C.default.Messages.HANGOUT_OVER_RECEIVER);
@@ -108,7 +108,7 @@ function A(e) {
         className: g.button,
         innerClassName: g.buttonInner,
         disabled: Y || !q,
-        children: [(0, s.jsx)(p.default, {}), C.default.Messages.JOIN_HANGOUT]
+        children: [(0, s.jsx)(h.default, {}), C.default.Messages.JOIN_HANGOUT]
       }), (0, s.jsx)(r.Button, {
         color: r.Button.Colors.PRIMARY,
         onClick: () => {

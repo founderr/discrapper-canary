@@ -19,8 +19,8 @@ var s = n("735250"),
   m = n("430824"),
   T = n("701190"),
   I = n("610699"),
-  p = n("313876"),
-  h = n("778333"),
+  h = n("313876"),
+  p = n("778333"),
   N = n("949981"),
   S = n("680668"),
   C = n("143708"),
@@ -95,7 +95,7 @@ function v(e) {
       });
       break;
     case R.InviteStates.ERROR:
-      F = (0, s.jsx)(p.default, {
+      F = (0, s.jsx)(h.default, {
         author: n,
         inviteError: x
       });
@@ -112,7 +112,7 @@ function v(e) {
           });
           break;
         case c.InviteTypes.FRIEND:
-          F = (0, s.jsx)(h.default, {
+          F = (0, s.jsx)(p.default, {
             invite: L,
             author: n,
             getAcceptInviteContext: v

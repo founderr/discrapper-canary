@@ -11,8 +11,8 @@ var s, a, l, i, r = n("392711"),
   m = n("901461"),
   T = n("814082"),
   I = n("23750"),
-  p = n("314897"),
-  h = n("592125"),
+  h = n("314897"),
+  p = n("592125"),
   N = n("375954"),
   S = n("306680"),
   C = n("699516"),
@@ -46,10 +46,10 @@ function B(e) {
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
   if ((0, m.default)(e) && !R.MessageTypesSets.SELF_MENTIONABLE_SYSTEM.has(e.type)) return null;
   null == n && (n = e.channel_id);
-  let s = h.default.getChannel(n);
+  let s = p.default.getChannel(n);
   if (null == s || s.type === R.ChannelTypes.DM || P.guildFilter === R.RecentMentionsFilters.THIS_SERVER && s.getGuildId() !== g.default.getGuildId()) return null;
   let a = null === (t = e.author) || void 0 === t ? void 0 : t.id,
-    l = p.default.getId();
+    l = h.default.getId();
   if (null != a && C.default.isBlocked(a) || (0, T.default)(e, l)) return null;
   e = F(e);
   let i = !P.everyoneFilter,
@@ -115,7 +115,7 @@ function Y(e) {
 }
 class K extends(s = u.default.Store) {
   initialize() {
-    this.waitFor(M.default, h.default, N.default, S.default)
+    this.waitFor(M.default, p.default, N.default, S.default)
   }
   isOpen() {
     return j
@@ -200,7 +200,7 @@ i = "RecentMentionsStore", (l = "displayName") in(a = K) ? Object.defineProperty
       guild: t
     } = e;
     O = o().filter(O, e => {
-      let n = h.default.getChannel(e.channel_id);
+      let n = p.default.getChannel(e.channel_id);
       return null != n && n.getGuildId() !== t.id || (delete x[e.id], !1)
     })
   },

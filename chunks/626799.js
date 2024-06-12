@@ -18,8 +18,8 @@ var s, a = n("735250"),
   m = n("730749"),
   T = n("112724"),
   I = n("812206"),
-  p = n("283595"),
-  h = n("558314"),
+  h = n("283595"),
+  p = n("558314"),
   N = n("55563"),
   S = n("551428"),
   C = n("73346"),
@@ -182,7 +182,7 @@ class v extends(s = l.Component) {
 R(v, "defaultProps", {
   renderFallback: g.NOOP
 });
-let O = [N.default, h.default, p.default, S.default];
+let O = [N.default, p.default, h.default, S.default];
 
 function x(e) {
   let {
@@ -192,9 +192,9 @@ function x(e) {
     sku: n,
     application: s,
     fetchFailed: N.default.didFetchingSkuFail(t),
-    inLibrary: null != n && p.default.hasApplication(n.applicationId, n.applicationId, !0),
+    inLibrary: null != n && h.default.hasApplication(n.applicationId, n.applicationId, !0),
     storeListing: null != n ? S.default.getForSKU(n.id) : null,
-    libraryApplication: null != n ? p.default.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
+    libraryApplication: null != n ? h.default.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
   }
 }
 let L = (0, T.default)((0, m.default)(v));

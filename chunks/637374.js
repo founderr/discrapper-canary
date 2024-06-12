@@ -15,8 +15,8 @@ var s = n("735250"),
   m = n("607070"),
   T = n("884697"),
   I = n("479446"),
-  p = n("930114"),
-  h = n("981632"),
+  h = n("930114"),
+  p = n("981632"),
   N = n("703656"),
   S = n("314897"),
   C = n("82142"),
@@ -309,7 +309,7 @@ class Y extends a.Component {
         }
       });
       let i = a !== F.MessageTypes.CUSTOM_GIFT ? void 0 : s;
-      (0, p.openGiftCodeAcceptModal)({
+      (0, h.openGiftCodeAcceptModal)({
         processedCode: n,
         channelContext: t,
         customGiftMessage: i,
@@ -349,7 +349,7 @@ class Y extends a.Component {
           wind: 5
         }), a && (0, s.jsx)(x.default, {
           className: k.headerIcon
-        }), null != e.giftStyle && (0, s.jsx)(h.default, {
+        }), null != e.giftStyle && (0, s.jsx)(p.default, {
           defaultAnimationState: e.redeemed ? I.AnimationState.LOOP : I.AnimationState.IDLE,
           giftStyle: e.giftStyle,
           className: r

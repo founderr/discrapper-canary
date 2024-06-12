@@ -66,7 +66,7 @@ let a = e => t => {
     [r.UserProfileTypes.POPOUT]: 340,
     [r.UserProfileTypes.PANEL]: 340,
     [r.UserProfileTypes.MODAL]: 600,
-    [r.UserProfileTypes.SETTINGS]: 600,
+    [r.UserProfileTypes.SETTINGS]: 660,
     [r.UserProfileTypes.POMELO_POPOUT]: 432,
     [r.UserProfileTypes.CANCEL_MODAL]: 172,
     [r.UserProfileTypes.BITE_SIZE]: 300,

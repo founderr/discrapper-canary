@@ -15,8 +15,8 @@ var s, a, l, i, r = n("735250"),
   m = n("481060"),
   T = n("230711"),
   I = n("745510"),
-  p = n("739566"),
-  h = n("64078"),
+  h = n("739566"),
+  p = n("64078"),
   N = n("29270"),
   S = n("709586"),
   C = n("482207"),
@@ -146,8 +146,8 @@ function G(e) {
     }
   }()), {
     createMultipleConfettiAt: T,
-    confettiCanvas: p
-  } = o.useContext(I.ConfettiCannonContext), [h, N] = o.useState(null), S = (0, c.useConfettiCannon)(p, h), C = function(e, t) {
+    confettiCanvas: h
+  } = o.useContext(I.ConfettiCannonContext), [p, N] = o.useState(null), S = (0, c.useConfettiCannon)(h, p), C = function(e, t) {
     if (null == e) return "enter";
     switch (e) {
       case "enter":
@@ -311,7 +311,7 @@ function k(e) {
     {
       reducedMotion: x
     } = o.useContext(m.AccessibilityPreferencesContext),
-    L = (0, p.getMessageAuthor)(n),
+    L = (0, h.getMessageAuthor)(n),
     D = L.nick,
     P = l(L);
   t = null == u || null == a ? d > 1 ? R.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_HOOK.format({
@@ -346,7 +346,7 @@ function k(e) {
       _(!1)
     }, []),
     b = o.useCallback(() => {
-      (0, h.updatePoggermodeSettings)({
+      (0, p.updatePoggermodeSettings)({
         settingsVisible: !0
       }), T.default.open(M.UserSettingsSections.POGGERMODE), _(!1)
     }, []),

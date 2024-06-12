@@ -20,8 +20,8 @@ var a = n("120356"),
   m = n("576799"),
   T = n("488131"),
   I = n("981631"),
-  p = n("689938"),
-  h = n("54771");
+  h = n("689938"),
+  p = n("54771");
 
 function N(e) {
   let {
@@ -45,11 +45,11 @@ function S(e) {
     let n = (0, i.useStateFromStores)([E.default], () => E.default.getMostRecentMessage(e.id)),
       a = (0, i.useStateFromStores)([E.default], () => E.default.getCount(e.id)),
       l = (0, _.useLastMessageTimestamp)(e);
-    return (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.archived) ? p.default.Messages.NO_RECENT_THREAD_MESSAGES : null == a || 0 === a ? p.default.Messages.NO_THREAD_MESSAGES : null == n ? (0, s.jsxs)(s.Fragment, {
+    return (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.archived) ? h.default.Messages.NO_RECENT_THREAD_MESSAGES : null == a || 0 === a ? h.default.Messages.NO_THREAD_MESSAGES : null == n ? (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)("span", {
-        children: p.default.Messages.NO_RECENT_THREAD_MESSAGES
+        children: h.default.Messages.NO_RECENT_THREAD_MESSAGES
       }), (0, s.jsx)("span", {
-        className: h.timestamp,
+        className: p.timestamp,
         children: (0, _.getTimestampString)(l)
       })]
     }) : (0, s.jsxs)(s.Fragment, {
@@ -57,16 +57,16 @@ function S(e) {
         message: n,
         channel: e
       }), (0, s.jsx)("span", {
-        className: h.timestamp,
+        className: p.timestamp,
         children: (0, _.getTimestampString)(l)
       })]
     })
   }(t), N = null != d && d > 0;
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)("div", {
-      className: l()(h.spine, {
-        [h.cozy]: !a,
-        [h.systemMessageSpine]: u
+      className: l()(p.spine, {
+        [p.cozy]: !a,
+        [p.systemMessageSpine]: u
       })
     }), (0, s.jsx)(r.Clickable, {
       onClick: function(e) {
@@ -89,26 +89,26 @@ function S(e) {
           })
         })
       },
-      "aria-roledescription": p.default.Messages.THREAD_MESSAGE_ROLE_DESCRIPTION,
-      className: l()(h.container, {
-        [h.systemMessageContainer]: u
+      "aria-roledescription": h.default.Messages.THREAD_MESSAGE_ROLE_DESCRIPTION,
+      className: l()(p.container, {
+        [p.systemMessageContainer]: u
       }),
       children: (0, s.jsxs)(r.BlockInteractions, {
         children: [(0, s.jsxs)("div", {
-          className: h.topLine,
+          className: p.topLine,
           children: [(0, s.jsx)(r.HiddenVisually, {
-            children: p.default.Messages.THREAD
+            children: h.default.Messages.THREAD
           }), (0, s.jsx)("span", {
-            className: h.name,
+            className: p.name,
             children: t.name
           }), (0, s.jsx)("span", {
-            className: h.cta,
+            className: p.cta,
             "aria-hidden": !N,
             children: (0, f.formatMessageCountLabel)(d, t.id)
           })]
         }), (0, s.jsx)("span", {
           "aria-hidden": !0,
-          className: l()(h.bottomLine),
+          className: l()(p.bottomLine),
           children: c
         })]
       })

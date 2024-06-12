@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   PrivateChannelIntegrationAddedSystemMessage: function() {
-    return h
+    return p
   },
   PrivateChannelIntegrationRemovedSystemMessage: function() {
     return N
@@ -23,7 +23,7 @@ var s = n("735250"),
   T = n("693912"),
   I = n("981631");
 
-function p(e, t) {
+function h(e, t) {
   return a.useCallback(a => (r, o) => {
     var f;
     let T = E.default.getApplicationIconURL({
@@ -33,8 +33,8 @@ function p(e, t) {
         botIconFirst: !0
       }),
       I = c.default.getUser(null === (f = a.bot) || void 0 === f ? void 0 : f.id),
-      p = m.default.getIntegration(e.id, a.id),
-      h = e.isPrivate() && null != p ? t => {
+      h = m.default.getIntegration(e.id, a.id),
+      p = e.isPrivate() && null != h ? t => {
         (0, i.openContextMenuLazy)(t, async () => {
           let {
             default: t
@@ -42,7 +42,7 @@ function p(e, t) {
           return n => (0, s.jsx)(t, {
             ...n,
             channel: e,
-            integration: p
+            integration: h
           })
         })
       } : null != I ? t => (0, _.openUserContextMenu)(t, I, e) : void 0,
@@ -65,14 +65,14 @@ function p(e, t) {
       }),
       children: e => (0, s.jsx)(l.Anchor, {
         ...e,
-        onContextMenu: h,
+        onContextMenu: p,
         children: r
       })
     }, o)
   }, [e, t.id])
 }
 
-function h(e) {
+function p(e) {
   let {
     message: t,
     channel: a,
@@ -82,7 +82,7 @@ function h(e) {
     channelId: a.id,
     guildId: a.guild_id,
     messageId: t.id
-  }), c = p(a, t);
+  }), c = h(a, t);
   return (0, s.jsx)(f.default, {
     icon: n("570111"),
     timestamp: t.timestamp,
@@ -106,7 +106,7 @@ function N(e) {
     channelId: a.id,
     guildId: a.guild_id,
     messageId: t.id
-  }), c = p(a, t);
+  }), c = h(a, t);
   return (0, s.jsx)(f.default, {
     icon: n("474019"),
     timestamp: t.timestamp,

@@ -23,12 +23,12 @@ var a = n("512722"),
 function I(e) {
   let t, n, a, {
       invite: I,
-      currentUserId: p,
-      guild: h,
+      currentUserId: h,
+      guild: p,
       onTransitionToInviteChannel: N,
       onAcceptInstantInvite: S
     } = e,
-    C = null == h ? void 0 : h.id,
+    C = null == p ? void 0 : p.id,
     g = (0, i.useStateFromStores)([d.default], () => d.default.getGuildId()),
     A = (0, i.useStateFromStores)([u.default], () => null != I && null != I.target_user ? u.default.getActiveStreamForUser(I.target_user.id, C) : null, [I, C]),
     M = (0, i.useStateFromStores)([u.default], () => null != I && null != I.target_user ? u.default.getStreamForUser(I.target_user.id, C) : null, [I, C]),
@@ -40,12 +40,12 @@ function I(e) {
     target_user: x
   } = I;
   l()(O === _.InviteTargetTypes.STREAM && null != x, "invalid streaming invite");
-  let L = p === x.id,
+  let L = h === x.id,
     D = I.state === E.InviteStates.ACCEPTING,
-    P = null != h;
-  if (null == h) {
+    P = null != p;
+  if (null == p) {
     if (null == I.guild) return (0, s.jsx)(f.default, {});
-    h = new o.default(I.guild)
+    p = new o.default(I.guild)
   }
   let y = null != I.channel ? (0, r.createChannelRecordFromInvite)(I.channel) : null,
     U = R ? N : S;
@@ -54,10 +54,10 @@ function I(e) {
   }) : (t = m.default.Messages.WATCH, n = c.default.Button.Colors.GREEN, R && (t = m.default.Messages.INVITE_BUTTON_STREAM_WATCHING, n = c.default.Button.Colors.PRIMARY), a = L ? m.default.Messages.INVITE_BUTTON_STREAMER : m.default.Messages.INVITE_BUTTON_STREAMING.format({
     name: x.username
   }));
-  let j = g === h.id && null != y ? (0, s.jsx)(c.default.Channel, {
+  let j = g === p.id && null != y ? (0, s.jsx)(c.default.Channel, {
     channel: y
   }) : m.default.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({
-    guildName: h.name
+    guildName: p.name
   });
   return (0, s.jsxs)(c.default, {
     children: [(0, s.jsx)(c.default.Header, {
@@ -66,7 +66,7 @@ function I(e) {
       children: [(0, s.jsxs)("div", {
         className: T.headerLine,
         children: [(0, s.jsx)(c.default.Icon, {
-          guild: h,
+          guild: p,
           onClick: P && v ? U : void 0
         }), (0, s.jsx)(c.default.Info, {
           title: a,

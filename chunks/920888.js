@@ -15,10 +15,10 @@ var s = n("735250"),
   m = n("858313"),
   T = n("601064");
 let I = (e, t) => null == e && null == t || e === t,
-  p = (e, t) => e.findIndex(e => I(e.emoji.id, null == t ? void 0 : t.id) && I(e.emoji.name, null == t ? void 0 : t.name)),
-  h = (e, t) => {
+  h = (e, t) => e.findIndex(e => I(e.emoji.id, null == t ? void 0 : t.id) && I(e.emoji.name, null == t ? void 0 : t.name)),
+  p = (e, t) => {
     if (null == t) return e;
-    let n = p(e, t);
+    let n = h(e, t);
     return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)]
   };
 class N extends a.PureComponent {
@@ -39,8 +39,8 @@ class N extends a.PureComponent {
       isLurking: a,
       isGuest: l,
       isPendingMember: I,
-      isForumToolbar: p,
-      channel: h,
+      isForumToolbar: h,
+      channel: p,
       className: N,
       forceAddReactions: S,
       reactionClassName: C,
@@ -72,12 +72,12 @@ class N extends a.PureComponent {
         isLurking: a,
         isGuest: l,
         isPendingMember: I,
-        isForumToolbar: p,
+        isForumToolbar: h,
         useChatFontScaling: g,
         className: C
       }), M > 0 && (0, s.jsx)(o.Clickable, {
         onClick: t => {
-          t.stopPropagation(), (0, E.showReactionsModal)(h, e)
+          t.stopPropagation(), (0, E.showReactionsModal)(p, e)
         },
         className: i()(x.reaction, C, x.remainingReactions),
         "aria-label": _.default.Messages.ADD_REACTION,
@@ -89,7 +89,7 @@ class N extends a.PureComponent {
       }), !t && !A && (0, s.jsx)(d.ButtonAddReaction, {
         type: u.ReactionTypes.NORMAL,
         message: e,
-        channel: h,
+        channel: p,
         useChatFontScaling: g,
         isHovered: this.state.isHovered,
         className: i()({
@@ -124,7 +124,7 @@ t.default = e => {
     visibleReactionsCount: o
   } = a.useMemo(() => {
     let e = [],
-      s = h(t.reactions, l),
+      s = p(t.reactions, l),
       a = null != n && n < s.length ? s.slice(0, n) : s,
       i = s.length - a.length,
       r = s.length;

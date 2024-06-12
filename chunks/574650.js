@@ -16,8 +16,8 @@ var a = n("120356"),
   m = n("937111"),
   T = n("981631"),
   I = n("176505"),
-  p = n("689938"),
-  h = n("261701"),
+  h = n("689938"),
+  p = n("261701"),
   N = n("988920");
 t.default = () => {
   var e, t;
@@ -31,26 +31,26 @@ t.default = () => {
     R = null,
     v = null,
     O = null,
-    x = [h.notice, N.notice];
+    x = [p.notice, N.notice];
   switch (M) {
     case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
-      R = p.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, v = p.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, O = () => {
+      R = h.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, v = h.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, O = () => {
         (0, u.openModal)(e => (0, s.jsx)(u.ConfirmModal, {
-          header: p.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
-          confirmText: p.default.Messages.CONFIRM,
-          cancelText: p.default.Messages.CANCEL,
+          header: h.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
+          confirmText: h.default.Messages.CONFIRM,
+          cancelText: h.default.Messages.CANCEL,
           onConfirm: () => f.default.removeGuildJoinRequest(S.id),
           confirmButtonColor: u.Button.Colors.BRAND,
           ...e,
           children: (0, s.jsx)(u.Text, {
             variant: "text-md/normal",
-            children: p.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION_SUBTITLE
+            children: h.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION_SUBTITLE
           })
         }))
       };
       break;
     case _.GuildJoinRequestApplicationStatuses.REJECTED:
-      R = p.default.Messages.MEMBER_VERIFICATION_REJECTED_TITLE, v = p.default.Messages.MEMBER_VERIFICATION_LEARN_MORE, O = () => {
+      R = h.default.Messages.MEMBER_VERIFICATION_REJECTED_TITLE, v = h.default.Messages.MEMBER_VERIFICATION_LEARN_MORE, O = () => {
         (0, u.openModalLazy)(async () => {
           let {
             default: e
@@ -60,21 +60,21 @@ t.default = () => {
             ...t
           })
         })
-      }, x.push(h.error);
+      }, x.push(p.error);
       break;
     default:
-      R = p.default.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, v = p.default.Messages.MEMBER_VERIFICATION_NOTICE_CTA, O = () => {
+      R = h.default.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, v = h.default.Messages.MEMBER_VERIFICATION_NOTICE_CTA, O = () => {
         (0, E.openMemberVerificationModal)(S.id)
       }
   }
   return (0, s.jsxs)("div", {
     className: l()(...x),
     children: [(0, s.jsx)(u.Text, {
-      className: h.header,
+      className: p.header,
       variant: "text-sm/normal",
       children: R
     }), (0, s.jsx)(u.Button, {
-      className: h.button,
+      className: p.button,
       look: u.Button.Looks.OUTLINED,
       color: u.Button.Colors.WHITE,
       size: u.Button.Sizes.NONE,

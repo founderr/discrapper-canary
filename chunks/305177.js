@@ -23,7 +23,7 @@ function I(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class p extends a.Component {
+class h extends a.Component {
   renderMedia() {
     let {
       src: e,
@@ -95,7 +95,7 @@ class p extends a.Component {
     })
   }
 }
-class h extends a.Component {
+class p extends a.Component {
   componentWillUnmount() {
     this.videoTimeout.stop()
   }
@@ -123,7 +123,7 @@ class h extends a.Component {
       title: a,
       splashClassName: l
     } = this.props;
-    return null == t ? (0, s.jsx)(p, {
+    return null == t ? (0, s.jsx)(h, {
       className: i()(T.splash, l),
       src: n,
       title: a
@@ -185,7 +185,7 @@ class h extends a.Component {
         muted: u,
         splashClassName: f,
         splashPlaceholderClassName: I,
-        renderMediaOverlay: h
+        renderMediaOverlay: p
       } = this.props, N = u ? _.default : E.default;
       return (0, s.jsxs)(a.Fragment, {
         children: [o.isMobile ? null : (0, s.jsx)(m.default, {
@@ -201,7 +201,7 @@ class h extends a.Component {
             type: "video/mp4"
           })
         }), (0, s.jsx)(d.TransitionGroup, {
-          children: r && e ? null : (0, s.jsx)(p, {
+          children: r && e ? null : (0, s.jsx)(h, {
             className: i()(T.splashPlaceholder, I),
             src: n,
             title: l
@@ -209,7 +209,7 @@ class h extends a.Component {
         }), (0, s.jsx)(c.Clickable, {
           className: i()(T.muteContainer, {
             [T.muteContainerPlaying]: r && e,
-            [T.muteContainerMediaOverlay]: null != h
+            [T.muteContainerMediaOverlay]: null != p
           }),
           onClick: this.handleToggleMute,
           children: r && e ? (0, s.jsx)(N, {
@@ -233,11 +233,11 @@ class h extends a.Component {
       } = this.props, {
         currentIndex: r
       } = this.state;
-      return a ? (0, s.jsx)(p, {
+      return a ? (0, s.jsx)(h, {
         className: i()(T.splash, l),
         src: e[r],
         title: n
-      }, r) : (0, s.jsx)(p, {
+      }, r) : (0, s.jsx)(h, {
         className: i()(T.splash, l),
         src: t,
         title: n
@@ -245,4 +245,4 @@ class h extends a.Component {
     })
   }
 }
-t.default = h
+t.default = p

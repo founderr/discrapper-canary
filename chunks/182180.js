@@ -19,17 +19,17 @@ var s = n("735250"),
   m = n("981631"),
   T = n("176505"),
   I = n("689938"),
-  p = n("920890");
+  h = n("920890");
 
-function h(e) {
+function p(e) {
   let {
     username: t
   } = e;
   return (0, s.jsx)("div", {
-    className: p.welcomeCardText,
+    className: h.welcomeCardText,
     children: (0, s.jsx)(l.Text, {
       tag: "p",
-      className: p.welcomeCardText,
+      className: h.welcomeCardText,
       color: "status-positive-text",
       variant: "heading-xl/medium",
       children: I.default.Messages.ROLE_SUBSCRIPTION_WELCOME_CARD_TEXT.format({
@@ -53,7 +53,7 @@ function N(e) {
     username: a
   } = e;
   return (0, s.jsxs)("div", {
-    className: p.welcomeCard,
+    className: h.welcomeCard,
     role: "img",
     "aria-label": I.default.Messages.ROLE_SUBSCRIPTION_WELCOME_CARD_ARIA_LABEL.format({
       username: a
@@ -61,8 +61,8 @@ function N(e) {
     children: [(0, s.jsx)(_.default, {
       guildId: t,
       user: n,
-      className: p.welcomeCardBadge
-    }), (0, s.jsx)(h, {
+      className: h.welcomeCardBadge
+    }), (0, s.jsx)(p, {
       username: a
     })]
   })
@@ -73,8 +73,8 @@ function S(e) {
   let {
     channel: _,
     message: I,
-    compact: p
-  } = e, h = (0, o.default)(I), S = function(e) {
+    compact: h
+  } = e, p = (0, o.default)(I), S = function(e) {
     let {
       author: t,
       channel: n,
@@ -99,18 +99,18 @@ function S(e) {
   }({
     channel: _,
     message: I,
-    author: h
+    author: p
   }), C = (null === (t = I.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null && (null === (l = I.roleSubscriptionData) || void 0 === l ? void 0 : l.total_months_subscribed) <= 1;
   return null == S ? null : (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(c.default, {
       icon: n("570111"),
       timestamp: I.timestamp,
-      compact: p,
+      compact: h,
       children: S
     }), C && (0, s.jsx)(N, {
       guildId: _.guild_id,
       user: I.author,
-      username: h.nick
+      username: p.nick
     }), (0, s.jsx)(E.default, {
       channel: _,
       message: I

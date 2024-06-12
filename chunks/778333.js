@@ -24,7 +24,7 @@ function I(e) {
   let {
     invite: n,
     getAcceptInviteContext: I
-  } = e, p = (0, l.useStateFromStores)([u.default], () => u.default.getId()), h = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === p, N = n.state === _.InviteStates.ACCEPTING, S = (0, l.useStateFromStores)([c.default], () => {
+  } = e, h = (0, l.useStateFromStores)([u.default], () => u.default.getId()), p = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === h, N = n.state === _.InviteStates.ACCEPTING, S = (0, l.useStateFromStores)([c.default], () => {
     var e;
     return null != n.inviter && c.default.isFriend(null === (e = n.inviter) || void 0 === e ? void 0 : e.id)
   }), C = a.useCallback(() => {
@@ -40,8 +40,8 @@ function I(e) {
   let A = S ? C : g,
     M = m.default.Messages.INVITE_BUTTON_ADD_FRIEND,
     R = f.default.Button.Colors.GREEN;
-  S ? (M = m.default.Messages.INVITE_BUTTON_ALREADY_FRIENDS, R = f.default.Button.Colors.PRIMARY) : h && (M = m.default.Messages.INVITE_BUTTON_ADD_FRIEND, R = f.default.Button.Colors.PRIMARY);
-  let v = h ? m.default.Messages.INVITE_BUTTON_TITLE_INVITER_FRIEND : m.default.Messages.INVITE_BUTTON_TITLE_INVITED_FRIEND,
+  S ? (M = m.default.Messages.INVITE_BUTTON_ALREADY_FRIENDS, R = f.default.Button.Colors.PRIMARY) : p && (M = m.default.Messages.INVITE_BUTTON_ADD_FRIEND, R = f.default.Button.Colors.PRIMARY);
+  let v = p ? m.default.Messages.INVITE_BUTTON_TITLE_INVITER_FRIEND : m.default.Messages.INVITE_BUTTON_TITLE_INVITED_FRIEND,
     O = null != n.inviter ? "".concat(n.inviter.username) : "",
     x = null != n.inviter ? E.default.getUserTag(n.inviter) : "";
   return (0, s.jsxs)(f.default, {
@@ -61,7 +61,7 @@ function I(e) {
       }), (0, s.jsx)(f.default.Button, {
         onClick: A,
         submitting: N,
-        isDisabled: h,
+        isDisabled: p,
         color: R,
         children: M
       })]

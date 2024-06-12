@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   QuestsCard: function() {
-    return h
+    return p
   },
   QuestsCardWrapper: function() {
-    return p
+    return h
   }
 }), n("47120");
 var s = n("735250"),
@@ -23,7 +23,7 @@ var s = n("735250"),
   T = n("46140"),
   I = n("598762");
 
-function p(e) {
+function h(e) {
   let {
     questId: t,
     ...n
@@ -34,19 +34,19 @@ function p(e) {
       quest: a,
       ...n
     };
-    return (0, s.jsx)(h, {
+    return (0, s.jsx)(p, {
       ...e
     })
   }
 }
 
-function h(e) {
+function p(e) {
   let {
     quest: t,
     location: n,
     initiallyExpanded: i,
     contentPosition: u
-  } = e, [p, h] = a.useState(!1), N = a.useCallback(() => h(!0), []), S = a.useCallback(() => h(!1), []), C = (0, o.useIsQuestExpired)(t), {
+  } = e, [h, p] = a.useState(!1), N = a.useCallback(() => p(!0), []), S = a.useCallback(() => p(!1), []), C = (0, o.useIsQuestExpired)(t), {
     containerRef: g,
     size: A,
     height: M
@@ -85,7 +85,7 @@ function h(e) {
         onBlur: S,
         onMouseLeave: S,
         children: [(0, s.jsx)(_.default, {
-          isFocused: p,
+          isFocused: h,
           isQuestExpired: C,
           location: n,
           quest: t,
@@ -101,7 +101,7 @@ function h(e) {
           isQuestExpired: C,
           location: n,
           size: A,
-          isFocused: p,
+          isFocused: h,
           isExpanded: x,
           isAnimating: O,
           contentPosition: u

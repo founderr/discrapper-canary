@@ -19,8 +19,8 @@ var s = n("735250"),
   m = n("626135"),
   T = n("585483"),
   I = n("115610"),
-  p = n("981631"),
-  h = n("689938"),
+  h = n("981631"),
+  p = n("689938"),
   N = n("377705");
 
 function S(e) {
@@ -49,22 +49,22 @@ function S(e) {
           className: i()(N.__invalid_messageContent, {
             [N.compact]: S
           }),
-          children: "" !== t.content ? t.content : h.default.Messages.DEADCHAT_PROMPT_1
+          children: "" !== t.content ? t.content : p.default.Messages.DEADCHAT_PROMPT_1
         })
       })
     }), (0, s.jsxs)("div", {
       className: N.actions,
       children: [(0, s.jsx)(o.TooltipContainer, {
-        text: h.default.Messages.CHANNEL_PROMPT_UPLOAD_IMAGE_CTA,
+        text: p.default.Messages.CHANNEL_PROMPT_UPLOAD_IMAGE_CTA,
         children: (0, s.jsx)(o.Button, {
           color: o.Button.Colors.PRIMARY,
           onClick: () => {
-            m.default.track(p.AnalyticEvents.CHANNEL_PROMPT_ACTION_CLICKED, {
+            m.default.track(h.AnalyticEvents.CHANNEL_PROMPT_ACTION_CLICKED, {
               message_id: t.id,
               channel_id: l.id,
               guild_id: l.guild_id,
               action_type: "upload_file"
-            }), T.ComponentDispatch.dispatch(p.ComponentActions.UPLOAD_FILE), (0, u.createPendingReply)({
+            }), T.ComponentDispatch.dispatch(h.ComponentActions.UPLOAD_FILE), (0, u.createPendingReply)({
               message: t,
               channel: l,
               shouldMention: !0
@@ -73,11 +73,11 @@ function S(e) {
           children: (0, s.jsx)(E.default, {})
         })
       }), (0, s.jsx)(o.TooltipContainer, {
-        text: h.default.Messages.CHANNEL_PROMPT_RANDOM_STICKER_CTA,
+        text: p.default.Messages.CHANNEL_PROMPT_RANDOM_STICKER_CTA,
         children: (0, s.jsx)(o.Button, {
           color: o.Button.Colors.PRIMARY,
           onClick: () => {
-            m.default.track(p.AnalyticEvents.CHANNEL_PROMPT_ACTION_CLICKED, {
+            m.default.track(h.AnalyticEvents.CHANNEL_PROMPT_ACTION_CLICKED, {
               message_id: t.id,
               channel_id: l.id,
               guild_id: l.guild_id,

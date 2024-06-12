@@ -19,8 +19,8 @@ var s = n("735250"),
   m = n("100527"),
   T = n("906732"),
   I = n("739566"),
-  p = n("223021"),
-  h = n("103575"),
+  h = n("223021"),
+  p = n("103575"),
   N = n("582404"),
   S = n("768581"),
   C = n("55935"),
@@ -61,7 +61,7 @@ function x(e) {
     channel: r
   } = e, {
     analyticsLocations: u
-  } = (0, T.default)(m.default.EXECUTED_COMMAND), x = a.useMemo(() => (e, t, n) => (o()(null != r && null != t, "ExecuteCommand: user and channel cannot be undefined"), (0, s.jsx)(h.default, {
+  } = (0, T.default)(m.default.EXECUTED_COMMAND), x = a.useMemo(() => (e, t, n) => (o()(null != r && null != t, "ExecuteCommand: user and channel cannot be undefined"), (0, s.jsx)(p.default, {
     ...e,
     location: "ExecutedCommand",
     channelId: r.id,
@@ -74,7 +74,7 @@ function x(e) {
     channel: r,
     messageId: l.id,
     interactionData: l.interactionData
-  })), [r, l.id, l.interactionData]), D = (0, I.useNullableUserAuthor)(null === (t = l.interaction) || void 0 === t ? void 0 : t.user, r), P = a.useMemo(() => e.compact ? (0, p.default)((0, C.dateFormat)(d()(), "LT")) : null, [e.compact]), y = (0, f.useIsActivitiesInTextEnabled)(r.id, !0, "ExecutedCommand"), U = l.interaction;
+  })), [r, l.id, l.interactionData]), D = (0, I.useNullableUserAuthor)(null === (t = l.interaction) || void 0 === t ? void 0 : t.user, r), P = a.useMemo(() => e.compact ? (0, h.default)((0, C.dateFormat)(d()(), "LT")) : null, [e.compact]), y = (0, f.useIsActivitiesInTextEnabled)(r.id, !0, "ExecutedCommand"), U = l.interaction;
   if (null == U || null == D) return null;
   let j = () => {
     let t = function(e, t) {
@@ -103,7 +103,7 @@ function x(e) {
             guildId: null !== (m = null == r ? void 0 : r.guild_id) && void 0 !== m ? m : ""
           })) && void 0 !== T ? T : void 0
         }
-        let p = () => null != a.interaction && function(e) {
+        let h = () => null != a.interaction && function(e) {
           let {
             user: t,
             guildId: n,
@@ -135,8 +135,8 @@ function x(e) {
           shouldShow: u,
           position: "right",
           onRequestClose: E,
-          children: p
-        }) : p()
+          children: h
+        }) : h()
       }(e, e => x(e, U.user, [m.default.AVATAR])),
       n = function(e, t, n) {
         var a;

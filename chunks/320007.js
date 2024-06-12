@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return p
   }
 });
 var s = n("735250"),
@@ -19,12 +19,12 @@ var s = n("735250"),
   m = n("175470"),
   T = n("203259"),
   I = n("356659"),
-  p = n("689938");
+  h = n("689938");
 
-function h(e) {
+function p(e) {
   let {
     canShowReminder: t = !1,
-    className: h
+    className: p
   } = e, N = (0, _.default)(u.default), {
     showClipsHeaderEntrypoint: S
   } = f.ClipsExperiment.useExperiment({
@@ -68,10 +68,10 @@ function h(e) {
     }), (0, s.jsx)("div", {
       ref: x,
       children: (0, s.jsx)(c.Icon, {
-        className: h,
+        className: p,
         icon: d.default,
         showBadge: g,
-        tooltip: p.default.Messages.CLIPS_GALLERY_TOOLTIP,
+        tooltip: h.default.Messages.CLIPS_GALLERY_TOOLTIP,
         onClick: y
       })
     })]

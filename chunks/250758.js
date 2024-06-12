@@ -11,8 +11,8 @@ var s, a, l, i, r = n("442837"),
   m = n("51144"),
   T = n("271383"),
   I = n("768119"),
-  p = n("246946"),
-  h = n("594174"),
+  h = n("246946"),
+  p = n("594174"),
   N = n("981631");
 let S = {},
   C = {};
@@ -56,7 +56,7 @@ function A(e, t) {
   a.mode.type === N.SearchPopoutModes.FILTER && (r = 10), s.results = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
     return (e = e.reduce((e, t) => {
-      let n = h.default.getUser(t.id);
+      let n = p.default.getUser(t.id);
       return null == n ? e : (e.push({
         id: n.id,
         text: m.default.getUserTag(n),
@@ -113,8 +113,8 @@ function R(e) {
     n = function() {
       let e = (0, c.isInMainTabsExperiment)() && !1;
       return {
-        [N.SearchTokenTypes.FILTER_FROM]: !p.default.hidePersonalInformation,
-        [N.SearchTokenTypes.FILTER_MENTIONS]: !p.default.hidePersonalInformation,
+        [N.SearchTokenTypes.FILTER_FROM]: !h.default.hidePersonalInformation,
+        [N.SearchTokenTypes.FILTER_MENTIONS]: !h.default.hidePersonalInformation,
         [N.SearchTokenTypes.FILTER_HAS]: !0,
         [N.SearchTokenTypes.FILTER_BEFORE]: !0,
         [N.SearchTokenTypes.FILTER_AFTER]: !0,
@@ -138,7 +138,7 @@ function v(e, t) {
     return null != n && "" !== n && ((function(e) {
       let t = I.default.getSearchType(e),
         n = [N.SearchTokenTypes.FILTER_HAS];
-      return !p.default.hidePersonalInformation && (n.push(N.SearchTokenTypes.FILTER_FROM), n.push(N.SearchTokenTypes.FILTER_MENTIONS)), t === N.SearchTypes.GUILD && n.push(N.SearchTokenTypes.FILTER_IN), n
+      return !h.default.hidePersonalInformation && (n.push(N.SearchTokenTypes.FILTER_FROM), n.push(N.SearchTokenTypes.FILTER_MENTIONS)), t === N.SearchTypes.GUILD && n.push(N.SearchTokenTypes.FILTER_IN), n
     })(t).forEach(n => {
       if (null == n) return;
       let a = M(n, e, t, 3);
@@ -157,7 +157,7 @@ function v(e, t) {
       }
     }(e, t))), 5 > (0, _.getTotalResults)(s) && s.push(R(e)), s
   }(t.token, e) : t.type === N.SearchPopoutModes.EMPTY && (n.push(R(t.token)), (0, c.isInMainTabsExperiment)(), n.push(function(e) {
-    if (p.default.hidePersonalInformation) return null;
+    if (h.default.hidePersonalInformation) return null;
     let t = I.default.getHistory(e);
     return null == t ? null : {
       group: N.SearchAutocompleteGroups.HISTORY,
@@ -212,7 +212,7 @@ function L() {
 }
 class D extends(s = r.default.Store) {
   initialize() {
-    this.waitFor(T.default, p.default)
+    this.waitFor(T.default, h.default)
   }
   getState(e) {
     var t;

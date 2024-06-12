@@ -28,8 +28,8 @@ var s = n("278074"),
   m = n("176354"),
   T = n("358085"),
   I = n("798628"),
-  p = n("79390"),
-  h = n("839963"),
+  h = n("79390"),
+  p = n("839963"),
   N = n("897325"),
   S = n("57101"),
   C = n("562293"),
@@ -90,8 +90,8 @@ function x(e, t) {
     m = null == _ && E,
     {
       selectedAnswerIds: T,
-      submitting: p,
-      editing: h,
+      submitting: h,
+      editing: p,
       showResults: N
     } = null !== (a = null != t ? t : (0, I.getPollState)(e.getChannelId(), e.id)) && void 0 !== a ? a : M,
     S = e.reactions,
@@ -102,9 +102,9 @@ function x(e, t) {
   }
   let R = T.size > 0,
     v = S.some(e => !0 === e.me_vote),
-    x = !h && v,
+    x = !p && v,
     L = x || m || N,
-    D = E && A && (!v || h || L),
+    D = E && A && (!v || p || L),
     P = null === (s = d.default.getChannel(e.getChannelId())) || void 0 === s ? void 0 : null === (n = s.getGuildId) || void 0 === n ? void 0 : n.call(s),
     y = null != P ? c.default.getSelfMember(P) : null,
     U = (0, o.hasAutomodQuarantinedProfile)(y),
@@ -114,18 +114,18 @@ function x(e, t) {
     canTapAnswers: D,
     canRemoveVote: x && E && !m,
     canShowVoteCounts: L,
-    canSubmitVote: !p && R && !x && E && !U && !j,
+    canSubmitVote: !h && R && !x && E && !U && !j,
     expirationLabel: _,
     hasSelectedAnswer: R,
     hasVoted: x,
     hasVoteRecorded: v,
-    isEditingVote: h,
+    isEditingVote: p,
     isExpired: m,
     isInteractive: A,
     isSent: E,
     reactions: S,
     selectedAnswerIds: T,
-    submitting: p,
+    submitting: h,
     tapShouldOpenVotersModal: L,
     showResults: N
   }
@@ -168,7 +168,7 @@ function L(e, t) {
     submitting: K,
     tapShouldOpenVotersModal: W,
     showResults: z
-  } = P, Q = (0, p.getTotalVotes)(V), q = A.default.Messages.POLL_VOTES_COUNT.format({
+  } = P, Q = (0, h.getTotalVotes)(V), q = A.default.Messages.POLL_VOTES_COUNT.format({
     count: Q.toLocaleString()
   }), X = Math.max(...L.map(e => {
     var t, n;
@@ -323,13 +323,13 @@ function L(e, t) {
       canSelectMultipleAnswers: en
     }).with({
       tapShouldOpenVotersModal: !0
-    }, () => h.PollChatAnswerInteractionType.LIST).with({
+    }, () => p.PollChatAnswerInteractionType.LIST).with({
       canTapAnswers: !1
-    }, () => h.PollChatAnswerInteractionType.LIST).with({
+    }, () => p.PollChatAnswerInteractionType.LIST).with({
       canSelectMultipleAnswers: !1
-    }, () => h.PollChatAnswerInteractionType.RADIO_BUTTONS).with({
+    }, () => p.PollChatAnswerInteractionType.RADIO_BUTTONS).with({
       canSelectMultipleAnswers: !0
-    }, () => h.PollChatAnswerInteractionType.CHECKBOXES).exhaustive(),
+    }, () => p.PollChatAnswerInteractionType.CHECKBOXES).exhaustive(),
     answerTapAccessibilityLabel: W ? $ : void 0,
     layoutType: D,
     resources: (0, S.default)({

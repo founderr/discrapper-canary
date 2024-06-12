@@ -20,8 +20,8 @@ var a = n("613828"),
   m = n("592125"),
   T = n("594174"),
   I = n("158010"),
-  p = n("602623"),
-  h = n("630388"),
+  h = n("602623"),
+  p = n("630388"),
   N = n("823379"),
   S = n("624138"),
   C = n("317381"),
@@ -85,7 +85,7 @@ function U(e) {
       analyticsLocations: b
     })
   };
-  return null != Y && (0, h.hasFlag)(Y.flags, L.ApplicationFlags.EMBEDDED) ? (0, s.jsx)(c.AnalyticsLocationProvider, {
+  return null != Y && (0, p.hasFlag)(Y.flags, L.ApplicationFlags.EMBEDDED) ? (0, s.jsx)(c.AnalyticsLocationProvider, {
     value: b,
     children: (0, s.jsxs)("div", {
       className: P.container,
@@ -117,7 +117,7 @@ function U(e) {
           className: P.cta,
           children: [q.length > 0 ? (0, s.jsx)("div", {
             className: P.avatars,
-            children: (0, s.jsx)(p.default, {
+            children: (0, s.jsx)(h.default, {
               guildId: k,
               users: q,
               max: 4

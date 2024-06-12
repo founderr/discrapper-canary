@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildProductListingPublicCard: function() {
-    return h
+    return p
   }
 });
 var s = n("735250");
@@ -20,13 +20,13 @@ var a = n("399606"),
   m = n("391181"),
   T = n("964793"),
   I = n("226060"),
-  p = n("981631");
+  h = n("981631");
 
-function h(e) {
+function p(e) {
   let {
     guildProductListing: t,
     guildId: n,
-    location: h,
+    location: p,
     shouldShowFullDescriptionButton: N = !0,
     hideRoleTag: S = !1,
     lineClamp: C = 1,
@@ -37,7 +37,7 @@ function h(e) {
     showOpaqueBackground: v = !1
   } = e, O = (0, a.useStateFromStores)([o.default], () => o.default.getGuild(n), [n]), x = (0, a.useStateFromStores)([o.default], () => {
     var e;
-    return o.default.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : p.EMPTY_STRING_SNOWFLAKE_ID)
+    return o.default.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : h.EMPTY_STRING_SNOWFLAKE_ID)
   }), L = (0, l.useListingThumbnailUrl)(t, 600), D = (0, _.useProductType)(t), P = (0, d.useCanManageGuildProduct)(O), {
     shouldHideGuildPurchaseEntryPoints: y
   } = (0, r.useShouldHideGuildPurchaseEntryPoints)(n), U = (0, _.usePrice)(t);
@@ -45,7 +45,7 @@ function h(e) {
   let j = () => (0, T.openGuildProductInfoModal)({
       guildId: n,
       guildProductListingId: t.id,
-      analyticsLocation: h
+      analyticsLocation: p
     }),
     b = (0, s.jsx)(m.GuildProductListingPopout, {
       product: t,
@@ -80,7 +80,7 @@ function h(e) {
     ctaComponent: (0, s.jsx)(I.default, {
       guildId: n,
       guildProductListingId: t.id,
-      sourceAnalyticsLocations: h
+      sourceAnalyticsLocations: p
     }),
     productType: D,
     shouldShowFullDescriptionButton: N,

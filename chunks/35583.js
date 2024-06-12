@@ -23,7 +23,7 @@ function I(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class p extends a.PureComponent {
+class h extends a.PureComponent {
   static getDerivedStateFromProps(e, t) {
     return e.mode !== t.memoizedMode ? {
       memoizedMode: e.mode,
@@ -79,4 +79,4 @@ class p extends a.PureComponent {
 }
 t.default = l.default.connectStores([u.default], () => ({
   mode: u.default.getState()
-}))(p)
+}))(h)

@@ -15,8 +15,8 @@ var s = n("735250"),
   m = n("825829"),
   T = n("623624"),
   I = n("533694"),
-  p = n("182180"),
-  h = n("924301"),
+  h = n("182180"),
+  p = n("924301"),
   N = n("225890"),
   S = n("434404"),
   C = n("507435"),
@@ -69,8 +69,8 @@ var s = n("735250"),
   em = n("5192"),
   eT = n("960048"),
   eI = n("709054"),
-  ep = n("937889"),
-  eh = n("818570"),
+  eh = n("937889"),
+  ep = n("818570"),
   eN = n("942951"),
   eS = n("981631"),
   eC = n("70722"),
@@ -505,7 +505,7 @@ let ev = Object.freeze({
       usernameHook: l
     })
   },
-  [eS.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE]: p.default,
+  [eS.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE]: h.default,
   [eS.MessageTypes.PURCHASE_NOTIFICATION]: function(e) {
     var t;
     let {
@@ -530,7 +530,7 @@ let ev = Object.freeze({
       channelId: n.id,
       guildId: n.guild_id,
       messageId: t.id
-    }), r = (0, l.useStateFromStores)([h.default], () => h.default.getActiveEventByChannel(n.id), [n.id]);
+    }), r = (0, l.useStateFromStores)([p.default], () => p.default.getActiveEventByChannel(n.id), [n.id]);
     return (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(ei.default, {
         message: t,
@@ -661,7 +661,7 @@ let ev = Object.freeze({
       message: t,
       channel: n
     } = e;
-    return (0, s.jsx)(eh.default, {
+    return (0, s.jsx)(ep.default, {
       message: t,
       channel: n
     })
@@ -681,7 +681,7 @@ t.default = a.memo(function(e) {
   }
   return (0, s.jsx)(H.default, {
     message: t,
-    content: (0, ep.default)(t).content,
+    content: (0, eh.default)(t).content,
     children: (0, s.jsx)(i, {
       message: t,
       channel: n,

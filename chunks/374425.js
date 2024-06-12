@@ -15,12 +15,12 @@ var s = n("735250"),
   m = n("419922"),
   T = n("217588"),
   I = n("981631"),
-  p = n("474936"),
-  h = n("688824");
+  h = n("474936"),
+  p = n("688824");
 let N = (0, f.cssValueToNumber)(l.default.STICKERS_CONSTANTS_STICKER_DIMENSION),
   S = e => {
     null != e && o.default.trackWithMetadata(I.AnalyticEvents.EXPRESSION_TOOLTIP_VIEWED, {
-      type: p.PremiumUpsellTypes.STICKER_IN_MESSAGE_HOVER,
+      type: h.PremiumUpsellTypes.STICKER_IN_MESSAGE_HOVER,
       expression_id: e.id,
       expression_name: e.name,
       is_animated: (0, _.isAnimatedSticker)(e.format_type),
@@ -32,13 +32,13 @@ t.default = e => {
     renderableSticker: t,
     channel: n,
     isInteracting: l
-  } = e, [o, f] = a.useState(!0), [_, I] = a.useState(String(Date.now())), [p] = (0, E.useStickerForRenderableSticker)(t, l), {
+  } = e, [o, f] = a.useState(!0), [_, I] = a.useState(String(Date.now())), [h] = (0, E.useStickerForRenderableSticker)(t, l), {
     analyticsLocations: C
   } = (0, u.default)(r.default.STICKER_MESSAGE), g = (0, s.jsxs)("span", {
-    className: h.stickerName,
+    className: p.stickerName,
     children: [(0, s.jsx)(c.default, {
-      className: h.stickerIcon
-    }), (null != p ? p : t).name]
+      className: p.stickerIcon
+    }), (null != h ? h : t).name]
   });
   return (0, s.jsx)(u.AnalyticsLocationProvider, {
     value: C,
@@ -65,11 +65,11 @@ t.default = e => {
           text: (0, d.renderClickableTooltipNode)(g),
           "aria-label": !1,
           onTooltipShow: () => {
-            S(p)
+            S(h)
           },
           children: e => (0, s.jsx)(i.Clickable, {
             ...e,
-            className: h.clickableSticker,
+            className: p.clickableSticker,
             onClick: e => {
               f(!o), n(e)
             },
@@ -77,7 +77,7 @@ t.default = e => {
             children: (0, s.jsx)(m.default, {
               isInteracting: l,
               size: N,
-              sticker: null != p ? p : t
+              sticker: null != h ? h : t
             })
           })
         })

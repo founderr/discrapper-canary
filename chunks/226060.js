@@ -24,7 +24,7 @@ function T(e) {
     guildId: t,
     guildProductListingId: n,
     sourceAnalyticsLocations: a
-  } = e, T = (0, i.useStateFromStores)([f.default], () => f.default.getGuildProduct(n)), I = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(t), [t]), p = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), h = (0, d.useIsWindowFocused)();
+  } = e, T = (0, i.useStateFromStores)([f.default], () => f.default.getGuildProduct(n)), I = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(t), [t]), h = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), p = (0, d.useIsWindowFocused)();
   if (l()(null != I, "guild cannot be null"), l()(null != T, "guildProductListing cannot be null"), (0, c.useCanManageGuildProduct)(I)) return (0, s.jsx)(r.Tooltip, {
     text: m.default.Messages.GUILD_PRODUCT_PURCHASE_DISABLED_TOOLTIP,
     children: e => (0, s.jsx)(r.Button, {
@@ -36,7 +36,7 @@ function T(e) {
   });
   if (!T.has_entitlement) return (0, s.jsx)(r.ShinyButton, {
     shineSize: r.ShinyButton.ShineSizes.SMALL,
-    pauseAnimation: p || !h,
+    pauseAnimation: h || !p,
     onClick: () => (0, E.openGuildProductPurchaseModal)({
       guildProductListing: T,
       guildId: I.id,

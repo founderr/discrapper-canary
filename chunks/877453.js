@@ -1,13 +1,13 @@
 "use strict";
-a.r(s);
-var t = a("735250");
-a("470079");
-var l = a("960259"),
-  i = a("280389"),
-  n = a("671533");
-s.default = (0, l.replaceIcon)(function(e) {
-  return (0, t.jsx)(n.default, {
+n.r(t);
+var r = n("735250");
+n("470079");
+var i = n("960259"),
+  l = n("280389"),
+  s = n("671533");
+t.default = (0, i.replaceIcon)(function(e) {
+  return (0, r.jsx)(s.default, {
     ...e,
-    direction: n.default.Directions.RIGHT
+    direction: s.default.Directions.RIGHT
   })
-}, i.ArrowSmallRightIcon)
+}, l.ArrowSmallRightIcon)

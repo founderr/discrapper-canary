@@ -20,8 +20,8 @@ var a = n("442837"),
   m = n("33885"),
   T = n("963249"),
   I = n("346585"),
-  p = n("303172"),
-  h = n("463230"),
+  h = n("303172"),
+  p = n("463230"),
   N = n("246965"),
   S = n("703656"),
   C = n("706454"),
@@ -179,7 +179,7 @@ let y = e => {
             })]
           });
         case l.DismissibleContent.NAGBAR_NOTICE_LOCALIZED_PRICING:
-          return (0, s.jsx)(h.default, {
+          return (0, s.jsx)(p.default, {
             notice: U,
             noticeType: y,
             dismissCurrentNotice: () => g(v.ContentDismissActionType.UNKNOWN)
@@ -234,7 +234,7 @@ let y = e => {
               onClick: () => g(v.ContentDismissActionType.UNKNOWN),
               noticeType: y
             }), D.default.Messages.POMELO_ACTION_NEEDED.format(), (0, s.jsx)(i.PrimaryCTANoticeButton, {
-              onClick: () => (0, p.default)(x.PomeloEntrypoints.NOTICE),
+              onClick: () => (0, h.default)(x.PomeloEntrypoints.NOTICE),
               noticeType: y,
               children: D.default.Messages.GET_STARTED
             })]
@@ -248,7 +248,7 @@ let y = e => {
             }), D.default.Messages.POMELO_ACTION_NEEDED_FORCE.format({
               date: (0, I.getLocalizedForcedUUDate)(j)
             }), (0, s.jsx)(i.PrimaryCTANoticeButton, {
-              onClick: () => (0, p.default)(x.PomeloEntrypoints.NOTICE),
+              onClick: () => (0, h.default)(x.PomeloEntrypoints.NOTICE),
               noticeType: y,
               children: D.default.Messages.GET_STARTED
             })]

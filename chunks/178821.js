@@ -28,7 +28,7 @@ function p() {
     let a = () => {
       let i = performance.now(),
         o = i - t.current;
-      t.current = i, n.current -= e.current[c.current], e.current[c.current] = o, n.current += o, l.current < h && (l.current += 1), c.current = (c.current + 1) % h, o > u && (r.current += Math.floor(o / d)), p.current = setTimeout(() => requestAnimationFrame(a), 14)
+      t.current = i, n.current -= e.current[c.current], e.current[c.current] = o, n.current += o, l.current < h && (l.current += 1), c.current = (c.current + 1) % h, o > u && (r.current += Math.floor(o / d)), p.current = setTimeout(() => requestAnimationFrame(a), 12)
     };
     return requestAnimationFrame(a), () => {
       e.current.fill(0), r.current = 0, n.current = 0, l.current = 0, c.current = 0, null != p.current && clearTimeout(p.current)

@@ -32,8 +32,8 @@ var s, a, l = n("735250"),
   m = n("261922"),
   T = n("263704"),
   I = n("441674"),
-  p = n("186523"),
-  h = n("553826"),
+  h = n("186523"),
+  p = n("553826"),
   N = n("506071"),
   S = n("203143"),
   C = n("79390"),
@@ -342,11 +342,11 @@ function w(e) {
     background: O.radioBackground,
     "aria-hidden": !0
   };
-  return t ? (0, l.jsx)(h.default, {
+  return t ? (0, l.jsx)(p.default, {
     ...a,
     foreground: O.radioForeground,
     className: s
-  }) : (0, l.jsx)(p.default, {
+  }) : (0, l.jsx)(h.default, {
     ...a,
     className: s
   })

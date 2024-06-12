@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return T
   },
   clearSearchState: function() {
-    return p
+    return h
   },
   search: function() {
     return o
@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return N
   },
   updateAutocompleteQuery: function() {
-    return h
+    return p
   }
 }), n("724458");
 var s = n("570140"),
@@ -133,7 +133,7 @@ function I(e, t) {
   })
 }
 
-function p(e) {
+function h(e) {
   a.default.trackWithMetadata(r.AnalyticEvents.SEARCH_CLOSED, {
     search_id: l.default.getAnalyticsId(e)
   }), s.default.wait(() => s.default.dispatch({
@@ -142,7 +142,7 @@ function p(e) {
   }))
 }
 
-function h(e, t, n) {
+function p(e, t, n) {
   null != e && s.default.dispatch({
     type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE",
     searchId: e,

@@ -74,7 +74,7 @@ function I(e) {
   }
 }
 
-function p(e) {
+function h(e) {
   let {
     iconType: t
   } = e, n = {
@@ -91,7 +91,7 @@ function p(e) {
   }) : null
 }
 
-function h(e) {
+function p(e) {
   let {
     children: t,
     theme: n
@@ -115,7 +115,7 @@ function N(e) {
       className: E.noticeContent,
       children: [(0, s.jsxs)("div", {
         className: E.headerRow,
-        children: [(0, s.jsx)(p, {
+        children: [(0, s.jsx)(h, {
           iconType: a.icon
         }), (0, s.jsx)(o.Text, {
           variant: "text-md/semibold",
@@ -137,7 +137,7 @@ function N(e) {
           children: a.body
         })
       })]
-    }), (0, s.jsx)(h, {
+    }), (0, s.jsx)(p, {
       theme: a.theme,
       children: null === (t = a.ctas) || void 0 === t ? void 0 : t.map(e => (0, s.jsx)(I, {
         ctaType: e,

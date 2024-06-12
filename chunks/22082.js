@@ -27,7 +27,7 @@ function N(e, t) {
   }
 }
 
-function L(e) {
+function b(e) {
   var t;
   if (null != S[e]) return;
   let n = f.default.getChannels(e)[0, f.GUILD_SELECTABLE_CHANNELS_KEY].map(e => e.channel.id),
@@ -41,7 +41,7 @@ function L(e) {
   })), w[e] = Date.now())
 }
 
-function b() {
+function L() {
   y.default.keys(S).forEach(e => {
     let t = S[e];
     S[e] = new Set([...t].filter(t => !I.default.isChannelOrParentOptedIn(e, t)))
@@ -49,17 +49,17 @@ function b() {
 }
 class T extends(i = r.default.Store) {
   initialize() {
-    this.waitFor(f.default, c.default, g.default, I.default, v.default, u.default), this.syncWith([I.default], b)
+    this.waitFor(f.default, c.default, g.default, I.default, v.default, u.default), this.syncWith([I.default], L)
   }
   getNewChannelIds(e) {
     var t;
-    return null != e && null == S[e] && L(e), null != e && null !== (t = S[e]) && void 0 !== t ? t : _
+    return null != e && null == S[e] && b(e), null != e && null !== (t = S[e]) && void 0 !== t ? t : _
   }
   shouldIndicateNewChannel(e, t) {
     var n;
     if (null == e) return !1;
     let i = p.default.getGuild(e);
-    return !!(null != i && i.hasFeature(m.GuildFeatures.COMMUNITY)) && (null != e && null == S[e] && L(e), (null === (n = S[e]) || void 0 === n ? void 0 : n.has(t)) && null == v.default.getTrackedAckMessageId(t))
+    return !!(null != i && i.hasFeature(m.GuildFeatures.COMMUNITY)) && (null != e && null == S[e] && b(e), (null === (n = S[e]) || void 0 === n ? void 0 : n.has(t)) && null == v.default.getTrackedAckMessageId(t))
   }
 }
 a = "NewChannelsStore", (l = "displayName") in(s = T) ? Object.defineProperty(s, l, {
@@ -82,7 +82,7 @@ a = "NewChannelsStore", (l = "displayName") in(s = T) ? Object.defineProperty(s,
       guildId: t,
       channelId: n
     } = e;
-    return null != t && (null == S[t] || w[t] < Date.now() - E.default.Millis.HOUR ? (L(t), !0) : (null != n && N(t, n), !1))
+    return null != t && (null == S[t] || w[t] < Date.now() - E.default.Millis.HOUR ? (b(t), !0) : (null != n && N(t, n), !1))
   },
   SIDEBAR_VIEW_CHANNEL: function(e) {
     let {

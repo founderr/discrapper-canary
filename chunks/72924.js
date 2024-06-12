@@ -25,22 +25,22 @@ async function I(e) {
     skuId: n,
     initialPlanId: a,
     analyticsLocations: I,
-    analyticsLocationObject: p
-  } = e, h = m.default.get(n);
-  if (null == h) {
+    analyticsLocationObject: h
+  } = e, p = m.default.get(n);
+  if (null == p) {
     let e = (await (0, r.fetchAllStoreListingsForApplication)(t)).find(e => e.sku.id === n);
     l()(null != e, "Could not find store listing for sku"), e.sku.type === T.SKUTypes.SUBSCRIPTION_GROUP && await (0, E.fetchAllSubscriptionListingsDataForApplication)(t, e.id)
   }
-  h = null != h ? h : m.default.get(n), l()(null != h && h.applicationId === t, "SKU must belong to application"), h.type === T.SKUTypes.SUBSCRIPTION && !(0, u.getSubscriptionPlansLoaded)([h.id]) && await (0, o.fetchSubscriptionPlansForSKU)(h.id);
+  p = null != p ? p : m.default.get(n), l()(null != p && p.applicationId === t, "SKU must belong to application"), p.type === T.SKUTypes.SUBSCRIPTION && !(0, u.getSubscriptionPlansLoaded)([p.id]) && await (0, o.fetchSubscriptionPlansForSKU)(p.id);
   let N = function() {
     let e = f.default.getWindow(T.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
     return null == e || e.closed ? i.DEFAULT_MODAL_CONTEXT : i.POPOUT_MODAL_CONTEXT
   }();
-  if (h.type !== T.SKUTypes.SUBSCRIPTION) return new Promise((e, s) => {
+  if (p.type !== T.SKUTypes.SUBSCRIPTION) return new Promise((e, s) => {
     (0, c.default)({
       applicationId: t,
       skuId: n,
-      analyticsLocationObject: p,
+      analyticsLocationObject: h,
       analyticsLocations: I,
       contextKey: N,
       onComplete: t => {
@@ -66,5 +66,5 @@ async function I(e) {
         onClose: () => t(!1)
       })
     })
-  }(t, n, a, p, I)
+  }(t, n, a, h, I)
 }

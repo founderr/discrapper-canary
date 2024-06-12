@@ -15,8 +15,8 @@ var s = n("735250"),
   m = n("592125"),
   T = n("699516"),
   I = n("465670"),
-  p = n("998951"),
-  h = n("702346"),
+  h = n("998951"),
+  p = n("702346"),
   N = n("630388"),
   S = n("709054"),
   C = n("493892"),
@@ -43,11 +43,11 @@ function B(e) {
     compact: a,
     collapsedReason: l
   } = e;
-  return (0, s.jsx)(p.default, {
+  return (0, s.jsx)(h.default, {
     className: t,
     compact: a,
     role: "group",
-    childrenMessageContent: (0, s.jsx)(h.default, {
+    childrenMessageContent: (0, s.jsx)(p.default, {
       compact: a,
       className: b.blockedSystemMessage,
       iconNode: (0, s.jsx)(I.default, {
@@ -68,7 +68,7 @@ t.default = a.memo(function e(t) {
   let {
     channel: l,
     message: I,
-    compact: h = !1,
+    compact: p = !1,
     className: b,
     onContextMenu: G,
     onClick: k,
@@ -98,17 +98,17 @@ t.default = a.memo(function e(t) {
     hasThread: !1
   }) : (T.default.isBlocked(I.author.id) ? a = j.default.Messages.BLOCKED_MESSAGE_COUNT : (0, C.isSpam)(I) && V && (a = j.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== a) ? (0, s.jsx)(B, {
     className: b,
-    compact: h,
+    compact: p,
     count: 1,
     collapsedReason: a
-  }) : (0, s.jsx)(p.default, {
-    compact: h,
+  }) : (0, s.jsx)(h.default, {
+    compact: p,
     className: i()(b, {
       [F.ephemeral]: (0, N.hasFlag)(I.flags, U.MessageFlags.EPHEMERAL),
       [F.disableInteraction]: w,
       [F.groupStart]: t.isGroupStart
     }),
-    childrenRepliedMessage: (0, y.default)(I, l, Y, K, h),
+    childrenRepliedMessage: (0, y.default)(I, l, Y, K, p),
     childrenHeader: (0, L.default)({
       ...t,
       author: en,
@@ -118,7 +118,7 @@ t.default = a.memo(function e(t) {
       channel: l,
       message: I,
       hasSpoilerEmbeds: et,
-      compact: h,
+      compact: p,
       canSuppressEmbeds: !1,
       canDeleteAttachments: !1,
       disableReactionReads: !1,
@@ -138,7 +138,7 @@ t.default = a.memo(function e(t) {
       shouldRenderCtaButton: eo,
       hasInlineForwardButton: !1
     }),
-    childrenExecutedCommand: (0, P.default)(I, l, h),
+    childrenExecutedCommand: (0, P.default)(I, l, p),
     childrenMessageContent: (0, x.default)(t, ee),
     childrenSystemMessage: (0, D.default)(t),
     onContextMenu: G,

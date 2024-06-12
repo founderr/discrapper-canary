@@ -15,8 +15,8 @@ var s = n("735250"),
   m = n("98278"),
   T = n("197115"),
   I = n("430824"),
-  p = n("594174"),
-  h = n("285952"),
+  h = n("594174"),
+  p = n("285952"),
   N = n("514342"),
   S = n("605403"),
   C = n("626135"),
@@ -56,14 +56,14 @@ function F(e) {
     sticker: t,
     description: n
   } = e;
-  return (0, s.jsxs)(h.default, {
+  return (0, s.jsxs)(p.default, {
     children: [(0, s.jsx)(v.default, {
       sticker: t,
       size: 48,
       isInteracting: !0
-    }), (0, s.jsxs)(h.default, {
-      direction: h.default.Direction.VERTICAL,
-      justify: h.default.Justify.CENTER,
+    }), (0, s.jsxs)(p.default, {
+      direction: p.default.Direction.VERTICAL,
+      justify: p.default.Justify.CENTER,
       className: y.truncatingText,
       children: [(0, s.jsx)(o.Text, {
         className: y.__invalid_emojiName,
@@ -141,7 +141,7 @@ let B = e => {
       } = e,
       [A, M] = a.useState(null),
       [R, O] = a.useState(!1),
-      U = p.default.getCurrentUser(),
+      U = h.default.getCurrentUser(),
       j = g.default.canUseCustomStickersEverywhere(U),
       B = (0, r.useStateFromStores)([I.default], () => I.default.getGuild(n.guild_id)),
       G = null != B,
@@ -232,7 +232,7 @@ let B = e => {
                 N(), w(!k)
               },
               className: y.showMoreEmojis,
-              children: (0, s.jsxs)(h.default, {
+              children: (0, s.jsxs)(p.default, {
                 children: [(0, s.jsx)(o.Text, {
                   className: y.__invalid_showMoreEmojisLabel,
                   variant: "text-xs/normal",
@@ -244,10 +244,10 @@ let B = e => {
                   })
                 })]
               })
-            }), k && (0, s.jsx)(h.default, {
-              wrap: h.default.Wrap.WRAP,
-              align: h.default.Align.START,
-              justify: h.default.Justify.START,
+            }), k && (0, s.jsx)(p.default, {
+              wrap: p.default.Wrap.WRAP,
+              align: p.default.Align.START,
+              justify: p.default.Justify.START,
               className: y.otherEmojisContainer,
               children: t.map(e => (0, s.jsx)(o.Tooltip, {
                 text: e.name,

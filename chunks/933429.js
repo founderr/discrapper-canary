@@ -15,8 +15,8 @@ var s, a, l, i, r = n("913527"),
   m = n("726542"),
   T = n("812206"),
   I = n("223892"),
-  p = n("674525"),
-  h = n("605236"),
+  h = n("674525"),
+  p = n("605236"),
   N = n("524347"),
   S = n("853197"),
   C = n("353926"),
@@ -69,8 +69,8 @@ var s, a, l, i, r = n("913527"),
   em = n("979651"),
   eT = n("351402"),
   eI = n("853872"),
-  ep = n("78839"),
-  eh = n("295226"),
+  eh = n("78839"),
+  ep = n("295226"),
   eN = n("580130"),
   eS = n("695103"),
   eC = n("358085"),
@@ -159,7 +159,7 @@ function eH(e) {
     });
     return t ? null : eU[e]
   }(e);
-  if (null != t) return (0, h.isDismissibleContentDismissed)(t);
+  if (null != t) return (0, p.isDismissibleContentDismissed)(t);
   let n = ej[e];
   if (null != n) {
     let t = function(e) {
@@ -413,10 +413,10 @@ let eV = [ev.NoticeTypes.QUARANTINED, ev.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       predicate: () => $.default.isSuggestedAccountType(ev.PlatformTypes.PLAYSTATION) && null == $.default.getAccount(null, ev.PlatformTypes.PLAYSTATION) && !eH(ev.NoticeTypes.CONNECT_PLAYSTATION)
     },
     [ev.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING]: {
-      predicate: () => eh.default.getAlmostExpiringTrialOffers([eL.PremiumSubscriptionSKUs.TIER_2]).length > 0 && !eH(ev.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING)
+      predicate: () => ep.default.getAlmostExpiringTrialOffers([eL.PremiumSubscriptionSKUs.TIER_2]).length > 0 && !eH(ev.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING)
     },
     [ev.NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING]: {
-      predicate: () => eh.default.getAlmostExpiringTrialOffers([eL.PremiumSubscriptionSKUs.TIER_0]).length > 0 && !eH(ev.NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING)
+      predicate: () => ep.default.getAlmostExpiringTrialOffers([eL.PremiumSubscriptionSKUs.TIER_0]).length > 0 && !eH(ev.NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING)
     },
     [ev.NoticeTypes.PREMIUM_UNCANCEL]: {
       predicate: e => {
@@ -563,7 +563,7 @@ let eV = [ev.NoticeTypes.QUARANTINED, ev.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       }
     },
     [ev.NoticeTypes.DROPS_GO_LIVE_BANNER]: {
-      predicate: () => !eH(ev.NoticeTypes.DROPS_GO_LIVE_BANNER) && (0, h.isDismissibleContentDismissed)(c.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, h.isDismissibleContentDismissed)(c.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP) && (0, S.getShowDropsNoticeBanner)(ex.PartnerGame.FORTNITE),
+      predicate: () => !eH(ev.NoticeTypes.DROPS_GO_LIVE_BANNER) && (0, p.isDismissibleContentDismissed)(c.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, p.isDismissibleContentDismissed)(c.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP) && (0, S.getShowDropsNoticeBanner)(ex.PartnerGame.FORTNITE),
       metadata: () => ({
         partnerGame: ex.PartnerGame.FORTNITE
       })
@@ -579,7 +579,7 @@ let eV = [ev.NoticeTypes.QUARANTINED, ev.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       predicate: () => (0, j.isEligibleForPomelo)() && !eH(ev.NoticeTypes.POMELO_ELIGIBLE) && !(0, U.getForceMigration)()
     },
     [ev.NoticeTypes.DROPS_ENDED_INCOMPLETE]: {
-      predicate: () => !eH(ev.NoticeTypes.DROPS_ENDED_INCOMPLETE) && (0, h.isDismissibleContentDismissed)(c.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, h.isDismissibleContentDismissed)(c.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP) && (0, S.getShowDropsEndedIncompleteBanner)(ex.PartnerGame.FORTNITE),
+      predicate: () => !eH(ev.NoticeTypes.DROPS_ENDED_INCOMPLETE) && (0, p.isDismissibleContentDismissed)(c.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, p.isDismissibleContentDismissed)(c.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP) && (0, S.getShowDropsEndedIncompleteBanner)(ex.PartnerGame.FORTNITE),
       metadata: () => ({
         partnerGame: ex.PartnerGame.FORTNITE
       })
@@ -608,7 +608,7 @@ let eV = [ev.NoticeTypes.QUARANTINED, ev.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       }
     },
     [ev.NoticeTypes.ACTIVATE_SERVER_SUBSCRIPTION]: {
-      predicate: () => !eH(ev.NoticeTypes.ACTIVATE_SERVER_SUBSCRIPTION) && 0 !== p.default.getEligibleGuildsForNagActivate().length && (0, I.isCreatorMonetizationNagActivateEnabled)()
+      predicate: () => !eH(ev.NoticeTypes.ACTIVATE_SERVER_SUBSCRIPTION) && 0 !== h.default.getEligibleGuildsForNagActivate().length && (0, I.isCreatorMonetizationNagActivateEnabled)()
     },
     [ev.NoticeTypes.GUILD_ONBOARDING_UPSELL_NAGBAR]: {
       predicate: e => {
@@ -651,7 +651,7 @@ function eW() {
   eG = null;
   let e = e_.default.getCurrentUser();
   if (null == e) return !1;
-  let t = ep.default.getPremiumSubscription(),
+  let t = eh.default.getPremiumSubscription(),
     n = eT.default.isLocalizedPromoEnabled,
     s = eu.default.getGuildId(),
     a = eo.default.getVoiceChannelId(),
@@ -685,7 +685,7 @@ function ez() {
 }
 class eQ extends(s = u.default.Store) {
   initialize() {
-    this.syncWith([ef.default, ei.default, ee.default, eu.default, k.default, eh.default, X.default, $.default, z.default, O.default, V.default, Q.default], eW), this.waitFor(e_.default, ed.default, en.default, et.default, er.default, es.default, ec.default, C.default, eu.default, eE.default, K.default, g.default, ei.default, eA.default, eM.default, eS.default, ea.default, ep.default, eR.default, ee.default, eI.default, el.default, k.default, eN.default, eh.default, $.default, y.default, N.default, p.default, H.default, V.default, Q.default)
+    this.syncWith([ef.default, ei.default, ee.default, eu.default, k.default, ep.default, X.default, $.default, z.default, O.default, V.default, Q.default], eW), this.waitFor(e_.default, ed.default, en.default, et.default, er.default, es.default, ec.default, C.default, eu.default, eE.default, K.default, g.default, ei.default, eA.default, eM.default, eS.default, ea.default, eh.default, eR.default, ee.default, eI.default, el.default, k.default, eN.default, ep.default, $.default, y.default, N.default, h.default, H.default, V.default, Q.default)
   }
   hasNotice() {
     return null != eG && null != eG.type

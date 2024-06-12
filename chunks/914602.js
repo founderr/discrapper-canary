@@ -15,7 +15,7 @@ var s, a = n("735250"),
   T = n("981631"),
   I = n("838674");
 
-function p(e, t, n) {
+function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -23,7 +23,7 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class h extends(s = l.PureComponent) {
+class p extends(s = l.PureComponent) {
   render() {
     let {
       sku: e,
@@ -45,7 +45,7 @@ class h extends(s = l.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), p(this, "renderActions", () => {
+    super(...e), h(this, "renderActions", () => {
       let {
         inLibrary: e,
         sku: t,
@@ -67,7 +67,7 @@ class h extends(s = l.PureComponent) {
           children: "deprecated!"
         }) : null]
       })
-    }), p(this, "renderMedia", () => {
+    }), h(this, "renderMedia", () => {
       let {
         playing: e,
         muted: t,
@@ -104,10 +104,10 @@ class h extends(s = l.PureComponent) {
     })
   }
 }
-p(h, "defaultProps", {
+h(p, "defaultProps", {
   showMediaPlaceholder: !1,
   isMouseOver: !1,
   showBuyInline: !1,
   isHorizontal: !1,
   isEmbed: !1
-}), t.default = h
+}), t.default = p

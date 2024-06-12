@@ -19,8 +19,8 @@ var s = n("735250"),
   m = n("904245"),
   T = n("43267"),
   I = n("933557"),
-  p = n("822893"),
-  h = n("329461"),
+  h = n("822893"),
+  p = n("329461"),
   N = n("831267"),
   S = n("203965"),
   C = n("570907"),
@@ -51,9 +51,9 @@ function k(e) {
   let {
     setTab: t,
     closePopout: n
-  } = e, l = (0, c.useStateFromStores)([h.default], () => h.default.getMessageReminders());
+  } = e, l = (0, c.useStateFromStores)([p.default], () => p.default.getMessageReminders());
   a.useEffect(() => () => {
-    (0, p.cleanupMessageReminders)()
+    (0, h.cleanupMessageReminders)()
   }, []);
   let [i, r] = a.useState(!1), o = a.useMemo(() => l.filter(e => null == e.dueAt || e.dueAt < new Date), [l]), u = i ? l : o, d = u.filter(e => !(0, N.savedMessageHasMetadata)(e));
   return (0, S.useMessageRemindersLoader)(d), (0, s.jsxs)("div", {
@@ -93,7 +93,7 @@ function w(e) {
   let t, {
       messageId: a
     } = e,
-    l = (0, c.useStateFromStores)([h.default], () => h.default.getMessageReminders().find(e => e.messageId === a));
+    l = (0, c.useStateFromStores)([p.default], () => p.default.getMessageReminders().find(e => e.messageId === a));
   o()(null != l, "should not be rendering a to-do message without a to-do message");
   let r = l.complete,
     u = (0, c.useStateFromStores)([O.default], () => O.default.getMessage(l.channelId, l.messageId)),
@@ -171,7 +171,7 @@ function w(e) {
           type: E.Checkbox.Types.INVERTED,
           value: r,
           onChange: (e, t) => {
-            (0, p.toggleMessageReminders)(l.messageId, t)
+            (0, h.toggleMessageReminders)(l.messageId, t)
           }
         })]
       })]
@@ -226,7 +226,7 @@ function w(e) {
 }
 
 function H() {
-  return (0, c.useStateFromStores)([h.default], () => h.default.getMessageReminders().length > 0) ? null : (0, s.jsx)(y.default, {
+  return (0, c.useStateFromStores)([p.default], () => p.default.getMessageReminders().length > 0) ? null : (0, s.jsx)(y.default, {
     Icon: D.default,
     header: b.default.Messages.MESSAGE_REMINDERS_EMPTY,
     tip: b.default.Messages.MESSAGE_REMINDERS_EMPTY_TIP

@@ -23,11 +23,11 @@ function _(e) {
       banned: T
     } = e,
     I = (0, a.useStateFromStores)([i.default], () => i.default.getId()),
-    p = (0, a.useStateFromStores)([r.default], () => r.default.getChannelId()),
-    h = d.default.useName(m),
+    h = (0, a.useStateFromStores)([r.default], () => r.default.getChannelId()),
+    p = d.default.useName(m),
     N = I === m.id;
-  return N ? (t = f.default.Messages.INVITE_BUTTON_INVALID_OWNER, _ = f.default.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID) : (_ = f.default.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID, T ? t = f.default.Messages.INSTANT_INVITE_BANNED_INFO : null != h ? (t = f.default.Messages.INSTANT_INVITE_ASK_USER_FOR_NEW_INVITE.format({
-    username: h
+  return N ? (t = f.default.Messages.INVITE_BUTTON_INVALID_OWNER, _ = f.default.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID) : (_ = f.default.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID, T ? t = f.default.Messages.INSTANT_INVITE_BANNED_INFO : null != p ? (t = f.default.Messages.INSTANT_INVITE_ASK_USER_FOR_NEW_INVITE.format({
+    username: p
   }), n = (0, s.jsx)(o.default.Button, {
     onClick: function() {
       let {
@@ -38,7 +38,7 @@ function _(e) {
       u.ComponentDispatch.dispatchToLastSubscribed(c.ComponentActions.INSERT_TEXT, {
         plainText: t,
         rawText: "<@".concat(e, ">")
-      }), null != p && l.default.startTyping(p)
+      }), null != h && l.default.startTyping(h)
     },
     children: f.default.Messages.MENTION
   })) : t = f.default.Messages.INSTANT_INVITE_ASK_FOR_NEW_INVITE), (0, s.jsxs)(o.default, {

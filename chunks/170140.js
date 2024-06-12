@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useMediaPostEmbedData: function() {
-    return p
+    return h
   }
 });
 var s = n("470079"),
@@ -20,14 +20,14 @@ var s = n("470079"),
   T = n("874748"),
   I = n("981631");
 
-function p(e, t) {
+function h(e, t) {
   let n = (0, _.useEligibleForGuildMediaChannelPostPreviewEmbed)(),
-    p = (0, T.getMediaPostEmbedChannelPath)(e),
-    h = (0, a.useStateFromStores)([u.default, r.default], () => {
+    h = (0, T.getMediaPostEmbedChannelPath)(e),
+    p = (0, a.useStateFromStores)([u.default, r.default], () => {
       let e = r.default.getId();
-      return u.default.isMember(null == p ? void 0 : p.guildId, e)
-    }, [p]),
-    N = (0, a.useStateFromStores)([l.default], () => null != p && (null == p ? void 0 : p.channelId) != null && l.default.isChannelGated(p.guildId, p.channelId), [p]),
+      return u.default.isMember(null == h ? void 0 : h.guildId, e)
+    }, [h]),
+    N = (0, a.useStateFromStores)([l.default], () => null != h && (null == h ? void 0 : h.channelId) != null && l.default.isChannelGated(h.guildId, h.channelId), [h]),
     S = t.hasFlag(I.MessageFlags.IS_CROSSPOST),
     {
       rawMediaPostEmbedData: C,
@@ -38,9 +38,9 @@ function p(e, t) {
       canAccess: v
     } = (0, a.useStateFromStoresObject)([m.default, d.default, o.default, f.default, c.default], () => {
       var e;
-      let t = null === (e = m.default.getMediaPostEmbed(null == p ? void 0 : p.threadId)) || void 0 === e ? void 0 : e.media,
-        n = d.default.getGuild(null == p ? void 0 : p.guildId),
-        s = o.default.getChannel(null == p ? void 0 : p.channelId),
+      let t = null === (e = m.default.getMediaPostEmbed(null == h ? void 0 : h.threadId)) || void 0 === e ? void 0 : e.media,
+        n = d.default.getGuild(null == h ? void 0 : h.guildId),
+        s = o.default.getChannel(null == h ? void 0 : h.channelId),
         a = f.default.getUser(null == t ? void 0 : t.author_id),
         l = c.default.getGuildId(),
         r = null != s && (0, i.canViewChannel)(s);
@@ -52,7 +52,7 @@ function p(e, t) {
         selectedGuildId: l,
         canAccess: r
       }
-    }, [p]),
+    }, [h]),
     O = s.useMemo(() => {
       let e = (0, T.getMediaPostEmbedCommonData)({
         mediaPostEmbedData: C,
@@ -68,9 +68,9 @@ function p(e, t) {
       }
     }, [C, g, A, M, R, v]);
   return s.useEffect(() => {
-    if ((null == p ? void 0 : p.threadId) != null) {
-      let e = m.default.getEmbedFetchState(p.threadId);
-      !0 === n && e === m.FetchState.NOT_FETCHED && (!h || !1 !== N) && (h || !S) && (0, E.fetchMediaPostEmbed)(null == p ? void 0 : p.threadId)
+    if ((null == h ? void 0 : h.threadId) != null) {
+      let e = m.default.getEmbedFetchState(h.threadId);
+      !0 === n && e === m.FetchState.NOT_FETCHED && (!p || !1 !== N) && (p || !S) && (0, E.fetchMediaPostEmbed)(null == h ? void 0 : h.threadId)
     }
-  }, [p, n, h, N, S]), O
+  }, [h, n, p, N, S]), O
 }

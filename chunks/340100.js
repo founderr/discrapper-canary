@@ -21,30 +21,30 @@ t.default = function(e) {
   let {
     className: n,
     color: a = r.default.colors.WHITE,
-    quest: p,
-    isInventory: h
-  } = e, N = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = (0, i.useStateFromStores)([d.default], () => d.default.locale), {
+    quest: h,
+    isInventory: p
+  } = e, N = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = (0, i.useStateFromStores)([d.default], () => d.default.locale), {
     percentComplete: C
   } = (0, _.useQuestTaskDetails)({
-    quest: p,
+    quest: h,
     location: m.QuestsExperimentLocations.QUEST_PROGRESS_BAR
   }), g = 100 * C, A = (0, E.isWeb)() && !N, M = () => (0, s.jsxs)("div", {
     className: I.desktopTooltip,
     style: {
-      marginTop: h ? 8 : 0
+      marginTop: p ? 8 : 0
     },
     children: [(0, s.jsx)(c.default, {
       className: I.infoIcon,
-      height: h ? 16 : 12,
-      width: h ? 16 : 12,
-      color: h ? u.default.TEXT_MUTED : u.default.WHITE
+      height: p ? 16 : 12,
+      width: p ? 16 : 12,
+      color: p ? u.default.TEXT_MUTED : u.default.WHITE
     }), (0, s.jsx)(o.Text, {
-      color: h ? "text-muted" : "always-white",
-      variant: h ? "text-xs/normal" : "text-xxs/normal",
+      color: p ? "text-muted" : "always-white",
+      variant: p ? "text-xs/normal" : "text-xxs/normal",
       children: T.default.Messages.QUESTS_PROGRESS_WEB_TIP
     })]
   });
-  return A && !h ? (0, s.jsx)(M, {}) : (0, s.jsxs)("div", {
+  return A && !p ? (0, s.jsx)(M, {}) : (0, s.jsxs)("div", {
     className: l()(I.wrapper, n),
     style: {
       color: a.css

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return h
   }
 }), n("653041");
 var s = n("544891"),
@@ -27,7 +27,7 @@ let E = 1 * o.default.Millis.HOUR,
   m = 1 * o.default.Millis.DAY,
   T = a.Storage.get("lastNonRequiredUpdateShown", Date.now()),
   I = new r.default("AutoUpdateManager");
-class p {
+class h {
   destroy() {
     clearInterval(this._checkInterval)
   }
@@ -71,7 +71,7 @@ class p {
         },
         oldFormErrors: !0
       }).then(e => {
-        if (null == e.body || "6e6d140ab350918cae02833a8d7c0eb3fd83d323" === e.body.hash) return this._handleUpdateNotAvailable();
+        if (null == e.body || "ead6c29470fbf7f2c0e7ea97ec05532b8d6ab920" === e.body.hash) return this._handleUpdateNotAvailable();
         if (e.body.required || (0, i.probablyHasBuildOverride)()) return this._handleUpdateDownloaded(!1);
         let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? _ : m;
         if (Date.now() - T > t) return a.Storage.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)

@@ -19,8 +19,8 @@ var s = n("735250"),
   m = n("779139"),
   T = n("981631"),
   I = n("689938"),
-  p = n("415710");
-let h = e => {
+  h = n("415710");
+let p = e => {
     let {
       channel: t,
       message: n
@@ -37,16 +37,16 @@ let h = e => {
       })
     }, [t, n, d]);
     return (0, s.jsx)("div", {
-      className: p.welcomeCTA,
+      className: h.welcomeCTA,
       children: (0, s.jsxs)(i.Button, {
-        className: p.welcomeCTAButtonOuter,
-        innerClassName: p.welcomeCTAButton,
+        className: h.welcomeCTAButtonOuter,
+        innerClassName: h.welcomeCTAButton,
         color: i.ButtonColors.PRIMARY,
         onMouseEnter: () => u(!0),
         onMouseLeave: () => u(!1),
         onClick: c,
         children: [(0, s.jsx)(o.default, {
-          className: p.welcomeCTASticker,
+          className: h.welcomeCTASticker,
           isInteracting: l,
           sticker: d,
           size: 28
@@ -69,7 +69,7 @@ let h = e => {
         m = null != _ && (_.systemChannelFlags & T.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
       return i && !l && !r && !o && m
     });
-    return null != a && i ? (0, s.jsx)(h, {
+    return null != a && i ? (0, s.jsx)(p, {
       message: t,
       channel: n
     }) : null

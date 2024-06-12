@@ -19,8 +19,8 @@ var s = n("735250"),
   m = n("906732"),
   T = n("973616"),
   I = n("314897"),
-  p = n("592125"),
-  h = n("158776"),
+  h = n("592125"),
+  p = n("158776"),
   N = n("594174"),
   S = n("602623"),
   C = n("823379"),
@@ -37,7 +37,7 @@ function v(e) {
     guildId: O
   } = e, [x, L] = a.useState(!1), {
     analyticsLocations: D
-  } = (0, m.default)(_.default.ACTIVITY_INSTANCE_EMBED), P = (0, r.useAnalyticsContext)(), y = (0, f.default)(), U = (0, l.useStateFromStores)([p.default], () => p.default.getChannel(v)), j = (null == U ? void 0 : null === (t = U.isThread) || void 0 === t ? void 0 : t.call(U)) ? null == U ? void 0 : U.parent_id : v, b = (0, l.useStateFromStores)([I.default], () => I.default.getId()), {
+  } = (0, m.default)(_.default.ACTIVITY_INSTANCE_EMBED), P = (0, r.useAnalyticsContext)(), y = (0, f.default)(), U = (0, l.useStateFromStores)([h.default], () => h.default.getChannel(v)), j = (null == U ? void 0 : null === (t = U.isThread) || void 0 === t ? void 0 : t.call(U)) ? null == U ? void 0 : U.parent_id : v, b = (0, l.useStateFromStores)([I.default], () => I.default.getId()), {
     embeddedActivity: F,
     currentEmbeddedActivity: B
   } = (0, l.useStateFromStoresObject)([o.default], () => ({
@@ -46,10 +46,10 @@ function v(e) {
   })), G = (0, l.useStateFromStoresArray)([N.default], () => {
     var e;
     return Array.from(null !== (e = null == F ? void 0 : F.userIds) && void 0 !== e ? e : []).map(e => N.default.getUser(e)).filter(C.isNotNullish)
-  }), k = (0, l.useStateFromStores)([h.default], () => {
+  }), k = (0, l.useStateFromStores)([p.default], () => {
     var e;
     let t = null == F ? void 0 : F.userIds.values().next().value;
-    return null == t ? null : null === (e = h.default.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details
+    return null == t ? null : null === (e = p.default.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details
   }), w = a.useMemo(() => {
     let e = new T.default(n);
     return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = A.DEFAULT_EMBEDDED_ACTIVITY_CONFIG), e

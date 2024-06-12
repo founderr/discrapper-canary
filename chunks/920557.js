@@ -19,8 +19,8 @@ var s = n("735250"),
   m = n("79390"),
   T = n("839963"),
   I = n("139256"),
-  p = n("294608"),
-  h = n("689938"),
+  h = n("294608"),
+  p = n("689938"),
   N = n("583522");
 
 function S(e) {
@@ -32,7 +32,7 @@ function S(e) {
   } = e, o = (0, E.useUID)(), {
     channelId: u,
     messageId: d
-  } = (0, p.useMessageIds)(), [T, I] = a.useState(""), [h, S] = a.useState(!1), C = "" !== T && h, g = a.useCallback(() => {
+  } = (0, h.useMessageIds)(), [T, I] = a.useState(""), [p, S] = a.useState(!1), C = "" !== T && p, g = a.useCallback(() => {
     I((0, m.getPollAnswerVotesTooltipText)(d, u, i))
   }, [d, u, i]), A = a.useCallback(() => {
     g(), S(!0)
@@ -46,10 +46,10 @@ function S(e) {
     })
   }, [u, d, i]);
   a.useEffect(() => {
-    if (h) return f.default.addReactChangeListener(g), () => {
+    if (p) return f.default.addReactChangeListener(g), () => {
       f.default.removeReactChangeListener(g)
     }
-  }, [h, g]);
+  }, [p, g]);
   let v = (0, s.jsx)(c.Text, {
     variant: "text-xs/semibold",
     color: "none",
@@ -182,7 +182,7 @@ function A(e) {
         scaleFontToUserSetting: !0,
         children: t.pollMedia.text
       }), t.didSelfVote && (0, s.jsx)(r.VisuallyHidden, {
-        children: h.default.Messages.POLL_ANSWER_VOTED_ARIA
+        children: p.default.Messages.POLL_ANSWER_VOTED_ARIA
       }), l && (0, s.jsx)(S, {
         percentage: t.votesPercentage,
         label: t.votes,

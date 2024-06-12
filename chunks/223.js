@@ -19,8 +19,8 @@ var s = n("735250"),
   m = n("825829"),
   T = n("226192"),
   I = n("36459"),
-  p = n("336197"),
-  h = n("937889"),
+  h = n("336197"),
+  p = n("937889"),
   N = n("739566"),
   S = n("507418"),
   C = n("348238"),
@@ -280,13 +280,13 @@ function $(e) {
     alertActionsExecution: en,
     quarantineType: es,
     interactionUserId: ea
-  } = (0, m.default)(l), el = a.useMemo(() => (0, h.renderAutomodMessageMarkup)(X, W, r.id), [X, W, r]), {
+  } = (0, m.default)(l), el = a.useMemo(() => (0, p.renderAutomodMessageMarkup)(X, W, r.id), [X, W, r]), {
     selected: ei,
     ...er
   } = K(l, r), eo = a.useCallback(() => {
     (0, T.openSubmitFeedback)(l.id, X, H, r)
   }, [l.id, X, H, r]), eu = a.useCallback(e => {
-    null != $ && null != F && (e.stopPropagation(), e.preventDefault(), (0, p.default)(G.Routes.CHANNEL(null == F ? void 0 : F.guild_id, null == F ? void 0 : F.id, $)))
+    null != $ && null != F && (e.stopPropagation(), e.preventDefault(), (0, h.default)(G.Routes.CHANNEL(null == F ? void 0 : F.guild_id, null == F ? void 0 : F.id, $)))
   }, [F, $]), ed = a.useCallback(() => {
     (0, I.executeAlertAction)(l.id, r, _.AutomodAlertActionType.DELETE_USER_MESSAGE)
   }, [r, l.id]), ec = (0, w.getFriendlyDurationString)(Number(ee)), ef = null != et, eE = P && null != $ && (null == en || !en.actions.hasOwnProperty(_.AutomodAlertActionType.DELETE_USER_MESSAGE));

@@ -19,8 +19,8 @@ var s = n("735250"),
   m = n("430824"),
   T = n("346656"),
   I = n("132338"),
-  p = n("626135"),
-  h = n("76535"),
+  h = n("626135"),
+  p = n("76535"),
   N = n("866104"),
   S = n("886176"),
   C = n("981631"),
@@ -34,12 +34,12 @@ function M(e) {
   } = e, l = (0, u.useStateFromStores)([m.default], () => m.default.getGuild(n)), {
     loading: M,
     subscriptionsSettings: R
-  } = (0, h.useMonetizationSettings)(n), {
+  } = (0, p.useMonetizationSettings)(n), {
     listingsLoaded: v
   } = (0, E.useFetchGuildProductListingsForGuild)(n), O = (0, E.useGuildProductsForGuild)(n, {
     publishedOnly: !0
   }), x = a.useCallback(async () => {
-    p.default.track(C.AnalyticEvents.GUILD_SHOP_EMBED_CLICKED, {
+    h.default.track(C.AnalyticEvents.GUILD_SHOP_EMBED_CLICKED, {
       ...(0, c.collectGuildAnalyticsMetadata)(n)
     }), await (0, _.default)(C.Routes.SERVER_SHOP(n))
   }, [n]);

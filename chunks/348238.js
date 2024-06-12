@@ -61,8 +61,8 @@ var s = n("735250"),
   m = n("5967"),
   T = n("630388"),
   I = n("358085"),
-  p = n("51144"),
-  h = n("91047"),
+  h = n("51144"),
+  p = n("91047"),
   N = n("901461"),
   S = n("50284"),
   C = n("981631"),
@@ -84,7 +84,7 @@ function M(e, t, n) {
       n();
       return
     }
-    let l = "@".concat(p.default.getUserTag(a, {
+    let l = "@".concat(h.default.getUserTag(a, {
         decoration: "never"
       })),
       i = "<@".concat(e, ">");
@@ -134,7 +134,7 @@ function y(e, t, l, r) {
   } = t, {
     id: E,
     flags: _
-  } = e, m = (0, T.hasFlag)(_, C.MessageFlags.EPHEMERAL), p = (0, N.default)(e), h = (0, u.useAppContext)();
+  } = e, m = (0, T.hasFlag)(_, C.MessageFlags.EPHEMERAL), h = (0, N.default)(e), p = (0, u.useAppContext)();
   return a.useCallback((e, t) => {
     if (m) return;
     if (!I.isPlatformEmbedded) {
@@ -149,7 +149,7 @@ function y(e, t, l, r) {
     null != a && null != u && !_ && (l({
       contextMenu: !0
     }), (0, i.openContextMenuLazy)(e, async () => {
-      if (p) {
+      if (h) {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("37766"), n.e("6532")]).then(n.bind(n, "240678"));
@@ -175,16 +175,16 @@ function y(e, t, l, r) {
       onClose: () => l({
         contextMenu: !1
       }),
-      context: h
+      context: p
     }))
-  }, [m, o, E, l, h, p, r])
+  }, [m, o, E, l, p, h, r])
 }
 
 function U(e, t) {
   return a.useCallback(n => {
     let s = E.default.getUser(e),
       a = d.default.getChannel(t);
-    null != s && null != a && (n.stopPropagation(), (0, h.openUserContextMenu)(n, s, a))
+    null != s && null != a && (n.stopPropagation(), (0, p.openUserContextMenu)(n, s, a))
   }, [e, t])
 }
 
@@ -192,7 +192,7 @@ function j(e, t, n) {
   return a.useCallback(s => {
     let a = E.default.getUser(e),
       l = d.default.getChannel(t);
-    null != a && null != l && (s.stopPropagation(), (0, h.openModerateUserContextMenu)(s, {
+    null != a && null != l && (s.stopPropagation(), (0, p.openModerateUserContextMenu)(s, {
       user: a,
       channel: l,
       moderationAlertId: n
@@ -204,7 +204,7 @@ function b(e, t) {
   return a.useCallback(n => {
     let s = E.default.getUser(e),
       a = d.default.getChannel(t);
-    null != s && null != a && (n.stopPropagation(), (0, h.openModerationRaidContextMenu)(n, s, a.guild_id))
+    null != s && null != a && (n.stopPropagation(), (0, p.openModerationRaidContextMenu)(n, s, a.guild_id))
   }, [e, t])
 }
 

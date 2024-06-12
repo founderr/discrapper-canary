@@ -15,8 +15,8 @@ var s = n("735250"),
   m = n("481060"),
   T = n("603263"),
   I = n("542051"),
-  p = n("349033"),
-  h = n("999650"),
+  h = n("349033"),
+  p = n("999650"),
   N = n("933557"),
   S = n("471445"),
   C = n("592125"),
@@ -118,10 +118,10 @@ let H = f()("2015-05-15").local(),
       renderResult: I
     } = e;
     if (T) {
-      var p, N;
+      var h, N;
       t = (0, s.jsx)("span", {
         className: k.filter,
-        children: null !== (N = null === (p = h.default[o]) || void 0 === p ? void 0 : p.key) && void 0 !== N ? N : "addme:"
+        children: null !== (N = null === (h = p.default[o]) || void 0 === h ? void 0 : h.key) && void 0 !== N ? N : "addme:"
       })
     }
     return n = null != I ? I(l, o, r) : (0, s.jsx)("strong", {
@@ -208,7 +208,7 @@ let H = f()("2015-05-15").local(),
           ...c
         } = e, f = "", E = a.useMemo(() => {
           var e;
-          return e = l.text, j.tokenizeQuery(e).map((e, t, n) => j.filterHasAnswer(e, n[t + 1]) ? e : new p.Token(e.getFullMatch(), p.NON_TOKEN_TYPE))
+          return e = l.text, j.tokenizeQuery(e).map((e, t, n) => j.filterHasAnswer(e, n[t + 1]) ? e : new h.Token(e.getFullMatch(), h.NON_TOKEN_TYPE))
         }, [l.text]).map(e => {
           let t = e.getFullMatch();
           if ("" === t.trim()) return null;
@@ -328,7 +328,7 @@ class q extends a.PureComponent {
   constructor(...e) {
     var t;
     super(...e), t = this, w(this, "state", {
-      dateHint: (0, h.getRandomDateShortcut)(),
+      dateHint: (0, p.getRandomDateShortcut)(),
       selectedIndex: -1
     }), w(this, "handleDateChange", e => {
       this.setSearchQuery(e.format(B.SEARCH_DATE_FORMAT) + " ", !0)
@@ -381,7 +381,7 @@ class q extends a.PureComponent {
         i = function(e) {
           let t = !0,
             n = e.trim();
-          return d()(h.default).forOwn(e => {
+          return d()(p.default).forOwn(e => {
             "" !== e.key && null != e.key && n === e.key && (t = !1)
           }), t
         }(l);

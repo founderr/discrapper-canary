@@ -66,7 +66,7 @@ function T(e) {
     channelId: i.id,
     guildId: i.guild_id,
     messageId: c.id
-  })(T), p = E.default.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE.format({
+  })(T), h = E.default.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE.format({
     username: T.nick,
     usernameHook: I,
     productName: null !== (l = null === (a = c.purchaseNotification) || void 0 === a ? void 0 : null === (t = a.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) && void 0 !== l ? l : "",
@@ -80,7 +80,7 @@ function T(e) {
       icon: n("570111"),
       timestamp: c.timestamp,
       compact: _,
-      children: p
+      children: h
     }), (0, s.jsx)(m, {
       username: T.nick,
       guildId: i.guild_id,
