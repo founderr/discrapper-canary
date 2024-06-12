@@ -1,113 +1,115 @@
 "use strict";
 t.r(s), t.d(s, {
   default: function() {
-    return E
+    return g
   }
 });
-var a = t("735250");
-t("470079");
-var l = t("499237"),
-  n = t("322282"),
-  r = t("220427"),
+var a = t("735250"),
+  n = t("470079"),
+  l = t("499237"),
+  r = t("322282"),
+  i = t("220427"),
   c = t("481060"),
-  i = t("285952"),
-  o = t("63063"),
-  d = t("497505"),
-  u = t("981631"),
-  S = t("689938"),
-  m = t("163315"),
-  h = t("708901");
+  o = t("285952"),
+  d = t("63063"),
+  u = t("497505"),
+  S = t("918701"),
+  E = t("46140"),
+  m = t("981631"),
+  h = t("689938"),
+  _ = t("163315"),
+  T = t("708901");
 
-function E(e) {
+function g(e) {
   let {
     transitionState: s,
     onClose: t,
     questContent: l,
-    questConfig: n
-  } = e, r = l === d.QuestContent.QUEST_BAR ? S.default.Messages.QUESTS_DISCLOSURE_PUBLISHER_TARGETING.format({
-    gamePublisher: n.messages.gamePublisher
-  }) : S.default.Messages.QUESTS_DISCLOSURE_PUBLISHER_PROMOTING.format({
-    gamePublisher: n.messages.gamePublisher,
-    gameTitle: n.messages.gameTitle
-  });
+    quest: r
+  } = e, i = (0, S.hasVariant)(r, E.QuestVariants.IN_HOUSE_CONSOLE_QUEST), g = n.useMemo(() => i ? l === u.QuestContent.QUEST_BAR ? h.default.Messages.QUESTS_DISCLOSURE_IN_HOUSE_QUEST_BAR : h.default.Messages.QUESTS_DISCLOSURE_IN_HOUSE : l === u.QuestContent.QUEST_BAR ? h.default.Messages.QUESTS_DISCLOSURE_PUBLISHER_TARGETING.format({
+    gamePublisher: i ? "Discord" : r.config.messages.gamePublisher
+  }) : h.default.Messages.QUESTS_DISCLOSURE_PUBLISHER_PROMOTING.format({
+    gamePublisher: r.config.messages.gamePublisher,
+    gameTitle: r.config.messages.gameTitle
+  }), [r, l, i]);
   return (0, a.jsxs)(c.ModalRoot, {
     transitionState: s,
     size: c.ModalSize.DYNAMIC,
-    className: m.modalRoot,
+    className: _.modalRoot,
     children: [(0, a.jsxs)(c.ModalHeader, {
-      direction: i.default.Direction.VERTICAL,
+      direction: o.default.Direction.VERTICAL,
       separator: !1,
-      className: m.modalHeader,
+      className: _.modalHeader,
       children: [(0, a.jsxs)("div", {
-        className: m.modalTop,
+        className: _.modalTop,
         children: [(0, a.jsx)("div", {
-          className: m.iconFrame,
+          className: _.iconFrame,
           children: (0, a.jsx)("img", {
-            className: m.icon,
+            className: _.icon,
             alt: "",
-            src: h
+            src: T
           })
         }), (0, a.jsx)(c.ModalCloseButton, {
-          className: m.closeBtn,
+          className: _.closeBtn,
           onClick: t
         })]
       }), (0, a.jsx)(c.Heading, {
         variant: "heading-xl/bold",
-        children: S.default.Messages.QUESTS_DISCLOSURE_LABEL
+        children: h.default.Messages.QUESTS_DISCLOSURE_LABEL
       })]
     }), (0, a.jsxs)(c.ModalContent, {
-      className: m.modalContent,
+      className: _.modalContent,
       children: [(0, a.jsx)(c.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        className: m.upperBodyText,
-        children: r
-      }), (0, a.jsx)(x, {
+        className: _.upperBodyText,
+        children: g
+      }), (0, a.jsx)(f, {
         questContent: l
       }), (0, a.jsx)(c.Text, {
         variant: "text-xs/medium",
         color: "text-muted",
-        children: S.default.Messages.QUESTS_DISCLOSURE_LEARN_MORE.format({
-          privacySettingsUrl: o.default.getArticleURL(u.HelpdeskArticles.QUESTS_PRIVACY_CONTROLS)
+        children: h.default.Messages.QUESTS_DISCLOSURE_LEARN_MORE.format({
+          privacySettingsUrl: d.default.getArticleURL(m.HelpdeskArticles.QUESTS_PRIVACY_CONTROLS)
         })
       })]
     }), (0, a.jsx)(c.ModalFooter, {
-      className: m.footer,
+      className: _.footer,
       children: (0, a.jsx)(c.Button, {
         onClick: t,
-        children: S.default.Messages.CLOSE
+        children: h.default.Messages.CLOSE
       })
     })]
   })
 }
 
-function x(e) {
+function f(e) {
   let {
     questContent: s
   } = e;
   switch (s) {
-    case d.QuestContent.QUEST_BAR:
+    case u.QuestContent.QUEST_BAR:
       return (0, a.jsxs)("ul", {
-        className: m.targetList,
-        children: [(0, a.jsx)(T, {
-          icon: n.GlobeEarthIcon,
-          children: S.default.Messages.QUESTS_DISCLOSURE_LOCATION
-        }), (0, a.jsx)(T, {
-          icon: r.UserIcon,
-          children: S.default.Messages.QUESTS_DISCLOSURE_AGE
-        }), (0, a.jsx)(T, {
+        className: _.targetList,
+        children: [(0, a.jsx)(C, {
+          icon: r.GlobeEarthIcon,
+          children: h.default.Messages.QUESTS_DISCLOSURE_LOCATION
+        }), (0, a.jsx)(C, {
+          icon: i.UserIcon,
+          children: h.default.Messages.QUESTS_DISCLOSURE_AGE
+        }), (0, a.jsx)(C, {
           icon: l.GameControllerIcon,
-          children: S.default.Messages.QUESTS_DISCLOSURE_ACTIVITY
+          children: h.default.Messages.QUESTS_DISCLOSURE_ACTIVITY
         })]
       });
-    case d.QuestContent.ACTIVITY_PANEL:
-    case d.QuestContent.QUESTS_EMBED:
-    case d.QuestContent.QUEST_LIVE_STREAM:
+    case u.QuestContent.ACTIVITY_PANEL:
+    case u.QuestContent.QUESTS_EMBED:
+    case u.QuestContent.QUEST_LIVE_STREAM:
       return (0, a.jsx)("ul", {
-        className: m.targetList,
-        children: (0, a.jsx)(T, {
+        className: _.targetList,
+        children: (0, a.jsx)(C, {
           icon: l.GameControllerIcon,
-          children: S.default.Messages.QUESTS_DISCLOSURE_ACTIVITY
+          children: h.default.Messages.QUESTS_DISCLOSURE_ACTIVITY
         })
       });
     default:
@@ -115,7 +117,7 @@ function x(e) {
   }
 }
 
-function T(e) {
+function C(e) {
   let {
     icon: s,
     children: t
@@ -123,7 +125,7 @@ function T(e) {
   return (0, a.jsxs)(c.Text, {
     variant: "text-sm/medium",
     tag: "li",
-    className: m.targetItem,
+    className: _.targetItem,
     children: [(0, a.jsx)(s, {
       width: 16,
       height: 16

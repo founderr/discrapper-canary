@@ -17249,6 +17249,8 @@ e.exports = Object.freeze({
   QUESTS_COMPLETION_PROGRESS_COMPLETE_ACTIVITY_PANEL: "You completed a Quest!",
   QUESTS_DISCLOSURE_PUBLISHER_PROMOTING: "{gamePublisher} is promoting {gameTitle} on Discord by partnering with us to offer this Quest. This Quest is available in the gift inventory of all users.",
   QUESTS_DISCLOSURE_PUBLISHER_TARGETING: "{gamePublisher} is trying to reach certain kinds of Discord users. Based on what you’ve told us or other information we’ve collected, the following information was used to tell you about this Quest:",
+  QUESTS_DISCLOSURE_IN_HOUSE: "Discord is offering this Quest, which is available in the gift inventory of all users",
+  QUESTS_DISCLOSURE_IN_HOUSE_QUEST_BAR: "Discord is trying to reach certain kinds of users. Based on what you’ve told us or other information we’ve collected, the following information was used to tell you about this Quest:",
   QUESTS_DISCLOSURE_LEARN_MORE: "Learn more about how to manage your Privacy Settings [here]({privacySettingsUrl}).",
   QUESTS_DISCLOSURE_LOCATION: "Location",
   QUESTS_DISCLOSURE_AGE: "Age",

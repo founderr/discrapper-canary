@@ -44,7 +44,7 @@ function o(e, t) {
     return n => (0, i.jsx)(r, {
       ...n,
       questContent: t.content,
-      questConfig: e.config
+      quest: e
     })
   })
 }

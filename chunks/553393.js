@@ -113,7 +113,7 @@ t.default = function(e) {
         return t => (0, i.jsx)(e, {
           ...t,
           questContent: g.QuestContent.MEMBERS_LIST,
-          questConfig: N.config
+          quest: N
         })
       })
     },
