@@ -15,8 +15,8 @@ var s = n("735250"),
   m = n("210887"),
   T = n("808268"),
   I = n("810090"),
-  p = n("572004"),
-  h = n("617136"),
+  h = n("572004"),
+  p = n("617136"),
   N = n("113434"),
   S = n("497505"),
   C = n("918701"),
@@ -45,12 +45,12 @@ let P = (0, r.animated)(u.ChevronSmallDownIcon),
       }
     }, []);
     let d = () => {
-      (0, h.trackQuestContentClicked)({
+      (0, p.trackQuestContentClicked)({
         questId: t.id,
         questContent: n,
-        questContentCTA: h.QuestContentCTA.COPY_QUEST_URL,
+        questContentCTA: p.QuestContentCTA.COPY_QUEST_URL,
         questContentPosition: l
-      }), (0, p.copy)((0, C.getQuestUrl)(t.id)), o(!0), u.current.start(1e3, () => o(!1))
+      }), (0, h.copy)((0, C.getQuestUrl)(t.id)), o(!0), u.current.start(1e3, () => o(!1))
     };
     return (0, s.jsx)(f.Tooltip, {
       forceOpen: r,
@@ -75,7 +75,7 @@ t.default = e => {
     quest: u,
     location: c,
     size: I,
-    expansionSpring: p,
+    expansionSpring: h,
     isAnimating: j,
     isExpanded: b,
     isInConcurrentQuestExperiment: F,
@@ -97,10 +97,10 @@ t.default = e => {
     month: "long",
     day: "numeric"
   }), et = e => {
-    e.stopPropagation(), e.currentTarget.blur(), G(), (0, h.trackQuestContentClicked)({
+    e.stopPropagation(), e.currentTarget.blur(), G(), (0, p.trackQuestContentClicked)({
       questId: u.id,
       questContent: c,
-      questContentCTA: b ? h.QuestContentCTA.COLLAPSE : h.QuestContentCTA.EXPAND,
+      questContentCTA: b ? p.QuestContentCTA.COLLAPSE : p.QuestContentCTA.EXPAND,
       questContentPosition: B
     })
   };
@@ -120,7 +120,7 @@ t.default = e => {
     },
     children: [(0, s.jsx)(y, {
       style: {
-        opacity: p.to({
+        opacity: h.to({
           range: [0, 1],
           output: [.25, 1]
         })
@@ -145,7 +145,7 @@ t.default = e => {
           [D.headerContentEmbed]: X
         }),
         style: {
-          y: q ? p.to({
+          y: q ? h.to({
             range: [0, 1],
             output: [O.QUESTS_CARD_COLLAPSED_HEIGHT_PX, 0]
           }) : void 0
@@ -153,7 +153,7 @@ t.default = e => {
         children: [q && (0, s.jsx)(r.animated.div, {
           className: D.headerCollapsedContent,
           style: {
-            opacity: p.to({
+            opacity: h.to({
               range: [0, 1],
               output: [1, 0]
             }),
@@ -198,7 +198,7 @@ t.default = e => {
             [D.outerContainerEmbed]: X
           }),
           style: {
-            opacity: p.to({
+            opacity: h.to({
               range: [0, 1],
               output: [0, 1]
             }),
@@ -214,7 +214,7 @@ t.default = e => {
                 gameTileSize: A.GameTileSizes.MEDIUM,
                 quest: u,
                 theme: K
-              }), (0, s.jsx)(M.default, {
+              }), X ? null : (0, s.jsx)(M.default, {
                 color: "always-white"
               })]
             }), (0, s.jsxs)("div", {
@@ -251,7 +251,7 @@ t.default = e => {
       }), (0, s.jsxs)(r.animated.div, {
         className: D.iconsContainer,
         style: {
-          top: q ? p.to({
+          top: q ? h.to({
             range: [0, 1],
             output: [O.QUESTS_CARD_COLLAPSED_HEIGHT_PX / 2 - O.QUESTS_CARD_ICON_SIZE_PX / 2, O.QUESTS_CARD_PADDING_Y_PX]
           }) : O.QUESTS_CARD_PADDING_Y_PX
@@ -265,7 +265,7 @@ t.default = e => {
           showShareLink: !l && X,
           children: e => (0, s.jsx)(r.animated.div, {
             style: {
-              opacity: p,
+              opacity: h,
               visibility: j || b ? "visible" : "hidden"
             },
             "aria-hidden": !j && !b,
@@ -284,7 +284,7 @@ t.default = e => {
           "aria-label": b ? L.default.Messages.COLLAPSE : L.default.Messages.EXPAND,
           children: (0, s.jsx)(P, {
             style: {
-              rotate: p.to({
+              rotate: h.to({
                 range: [0, 1],
                 output: [0, 180]
               })
