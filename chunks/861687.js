@@ -17,7 +17,7 @@ var i, r = n("654861"),
   I = n("570140"),
   T = n("846027"),
   f = n("304680"),
-  S = n("44744"),
+  S = n("547727"),
   h = n("710845"),
   A = n("811660"),
   m = n("42352"),
@@ -477,7 +477,7 @@ class eo extends _.default {
         playSoundEffect: !1
       })
     }), l.on(c.BaseConnectionEvent.NativeMuteChanged, e => {
-      S.default.nativeMuteChanged(this.context, e)
+      this.context === ei.MediaEngineContextTypes.DEFAULT && S.default.nativeMuteChanged(e)
     }), l.on(c.BaseConnectionEvent.Video, (e, t, n, i, r, s) => {
       this._handleVideoStreamId({
         userId: e,
