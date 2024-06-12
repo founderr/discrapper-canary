@@ -18,9 +18,9 @@ var a = s("735250"),
   I = s("481060"),
   T = s("852860"),
   S = s("393238"),
-  f = s("208567"),
-  m = s("153124"),
-  N = s("540086"),
+  f = s("345861"),
+  m = s("208567"),
+  N = s("153124"),
   g = s("93879"),
   h = s("385950"),
   C = s("73346"),
@@ -116,7 +116,7 @@ function b(e) {
     imageCTA: w,
     imageAriaLabel: V,
     setFilename: Y
-  } = (0, O.default)(null == r ? void 0 : r.cover_image_asset), W = (0, m.useUID)(), z = (0, m.useUID)(), K = (0, m.useUID)();
+  } = (0, O.default)(null == r ? void 0 : r.cover_image_asset), W = (0, N.useUID)(), z = (0, N.useUID)(), K = (0, N.useUID)();
 
   function Z(e, t) {
     o()(null != e, "Null value not allowed"), null != t && Y(t.name), R(e)
@@ -204,7 +204,7 @@ function b(e) {
         className: j.formDescription,
         disabled: J,
         children: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_COVER_IMAGE_DESCRIPTION
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(m.default, {
         image: h,
         hint: w,
         showIcon: !0,
@@ -219,7 +219,7 @@ function b(e) {
         disabled: J
       }), (0, a.jsx)(I.Spacer, {
         size: 16
-      }), (0, a.jsx)(N.default, {
+      }), (0, a.jsx)(f.default, {
         onChange: Z,
         buttonCTA: w,
         "aria-label": V,

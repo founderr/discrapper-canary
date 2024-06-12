@@ -8,9 +8,9 @@ var a = s("735250"),
   l = s("470079"),
   n = s("442837"),
   i = s("481060"),
-  r = s("208567"),
-  o = s("153124"),
-  d = s("540086"),
+  r = s("345861"),
+  o = s("208567"),
+  d = s("153124"),
   u = s("937615"),
   c = s("289393"),
   E = s("723047"),
@@ -47,9 +47,9 @@ function h(e) {
     null != t && j(t.name), M(e)
   }
   let P = (0, E.useRoleSubscriptionSettingsDisabled)(),
-    b = (0, o.useUID)(),
-    y = (0, o.useUID)(),
-    B = (0, o.useUID)();
+    b = (0, d.useUID)(),
+    y = (0, d.useUID)(),
+    B = (0, d.useUID)();
   return (0, a.jsxs)(S.default, {
     title: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_BASIC_INFO_SECTION_TITLE,
     intiallyExpanded: !0,
@@ -118,7 +118,7 @@ function h(e) {
           className: N.formDescription,
           disabled: P,
           children: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_SYMBOL_DESCRIPTION
-        }), (0, a.jsx)(d.default, {
+        }), (0, a.jsx)(r.default, {
           onChange: U,
           buttonCTA: D,
           "aria-label": v,
@@ -126,7 +126,7 @@ function h(e) {
           look: i.Button.Looks.OUTLINED,
           color: i.Button.Colors.PRIMARY
         })]
-      }), (0, a.jsx)(r.default, {
+      }), (0, a.jsx)(o.default, {
         image: A,
         hint: D,
         showIcon: !0,
