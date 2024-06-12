@@ -22,6 +22,6 @@ function c(e) {
   });
   return s.useMemo(() => {
     var t;
-    return null != e && (t = e, !!u.MessageTypesSets.FORWARDABLE.has(t.type) && null == t.poll && !(t.components.length > 0) && null == t.activity && null == t.call && null == t.interaction && 0 === (0, o.removeFlag)(t.flags, d) && !((0, i.getMessageStickers)(t).length > 0) && !0)
+    return null != e && (t = e).state !== u.MessageStates.SEND_FAILED && !!u.MessageTypesSets.FORWARDABLE.has(t.type) && null == t.poll && !(t.components.length > 0) && null == t.activity && null == t.call && null == t.interaction && 0 === (0, o.removeFlag)(t.flags, d) && !((0, i.getMessageStickers)(t).length > 0) && !0
   }, [e]) && !t
 }
