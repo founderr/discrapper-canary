@@ -12,18 +12,16 @@ var l = n("544891"),
   o = n("981631");
 async function u() {
   try {
-    var e;
     let {
-      body: t
+      body: e
     } = await l.HTTP.get({
       url: o.Endpoints.CHECKOUT_RECOVERY
-    }), n = (null == t ? void 0 : t.is_eligible) === !0, u = !1;
-    n && (u = (0, r.isUserInCheckoutRecoveryNagbarExperiment)()), n && u && !i.default.hasFetchedPaymentSources && await (0, s.fetchPaymentSources)();
-    let d = null !== (e = i.default.paymentSources) && void 0 !== e ? e : {},
-      c = n && u && 0 !== Object.keys(d).length;
+    }), t = (null == e ? void 0 : e.is_eligible) === !0, n = !1;
+    t && (n = (0, r.isUserInCheckoutRecoveryNagbarExperiment)()), t && n && !i.default.hasFetchedPaymentSources && await (0, s.fetchPaymentSources)();
+    let u = t && n;
     a.default.dispatch({
       type: "CHECKOUT_RECOVERY_STATUS_FETCH",
-      isEligibleForNagbar: c
+      isEligibleForNagbar: u
     })
   } catch (e) {
     a.default.dispatch({

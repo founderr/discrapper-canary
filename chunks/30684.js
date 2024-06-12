@@ -1,42 +1,26 @@
 "use strict";
 n.r(t);
-var s, a = n("442837"),
-  l = n("570140"),
-  i = n("853872");
-
-function r(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: n,
-    enumerable: !0,
-    configurable: !0,
-    writable: !0
-  }) : e[t] = n, e
-}
-let o = {
-    isEligibleForNagbar: !1
-  },
-  u = o;
-class d extends(s = a.default.PersistedStore) {
-  initialize() {
-    u = o
-  }
-  getState() {
-    return u
-  }
+var s, a, l, i, r = n("442837"),
+  o = n("570140"),
+  u = n("853872");
+let d = !1;
+class c extends(i = r.default.Store) {
   isEligibleForNagbar() {
-    return u.isEligibleForNagbar
+    var e;
+    let t = null !== (e = u.default.paymentSources) && void 0 !== e ? e : {};
+    return d && 0 !== Object.keys(t).length
   }
 }
-r(d, "displayName", "CheckoutRecoveryStore"), r(d, "persistKey", "CheckoutRecoveryStore"), t.default = new d(l.default, {
+l = "CheckoutRecoveryStore", (a = "displayName") in(s = c) ? Object.defineProperty(s, a, {
+  value: l,
+  enumerable: !0,
+  configurable: !0,
+  writable: !0
+}) : s[a] = l, t.default = new c(o.default, {
   CHECKOUT_RECOVERY_STATUS_FETCH: function(e) {
-    let {
-      isEligibleForNagbar: t
-    } = e;
-    u.isEligibleForNagbar = t
+    d = e.isEligibleForNagbar
   },
-  BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: function() {
-    var e;
-    let t = null !== (e = i.default.paymentSources) && void 0 !== e ? e : {};
-    u.isEligibleForNagbar = u.isEligibleForNagbar && 0 !== Object.keys(t).length
+  PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: function() {
+    d = !1
   }
 })
