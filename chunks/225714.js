@@ -27,9 +27,9 @@ function v(e) {
     user: l,
     relationshipType: i,
     friendToken: v,
-    onClose: p,
-    originalFriendingEnabled: T = !1,
-    improvedFriendingEnabled: g = !1
+    originalFriendingEnabled: p = !1,
+    improvedFriendingEnabled: T = !1,
+    onClose: g
   } = e, {
     newestAnalyticsLocation: A
   } = (0, f.default)(), {
@@ -39,9 +39,9 @@ function v(e) {
   let C = () => {
     x({
       action: "SEND_MESSAGE"
-    }), d.default.openPrivateChannel(l.id, !1, !1, A), p()
+    }), d.default.openPrivateChannel(l.id, !1, !1, A), g()
   };
-  if (g) return i === I.RelationshipTypes.FRIEND || l.bot ? (0, s.jsx)(E.default, {
+  if (T) return i === I.RelationshipTypes.FRIEND || l.bot ? (0, s.jsx)(E.default, {
     text: m.default.Messages.SEND_DM,
     icon: n.ChatIcon,
     color: a()(u.Button.Colors.PRIMARY, _.color),
@@ -81,11 +81,11 @@ function v(e) {
             location: A
           },
           friendToken: v
-        }), p()
+        })
       }
     })]
   });
-  if (i === I.RelationshipTypes.FRIEND || l.bot) return T ? (0, s.jsx)(E.default, {
+  if (i === I.RelationshipTypes.FRIEND || l.bot) return p ? (0, s.jsx)(E.default, {
     text: m.default.Messages.SEND_DM,
     color: a()(u.Button.Colors.PRIMARY, _.color),
     onClick: C
@@ -99,7 +99,7 @@ function v(e) {
     color: u.Button.Colors.GREEN,
     disabled: !0
   });
-  if (i === I.RelationshipTypes.PENDING_INCOMING) return T ? (0, s.jsx)(E.default, {
+  if (i === I.RelationshipTypes.PENDING_INCOMING) return p ? (0, s.jsx)(E.default, {
     text: m.default.Messages.SEND_DM,
     color: a()(u.Button.Colors.PRIMARY, _.color),
     onClick: C
@@ -117,7 +117,7 @@ function v(e) {
             location: A
           },
           friendToken: v
-        }), p()
+        })
       }
     }), (0, s.jsx)(E.default, {
       text: m.default.Messages.FRIEND_REQUEST_IGNORE,
@@ -144,7 +144,7 @@ function v(e) {
           location: A
         },
         friendToken: v
-      }), p()
+      })
     }
   })
 }

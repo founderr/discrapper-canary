@@ -30,11 +30,9 @@ n.default = (0, u.default)(function(e) {
     user: n,
     color: "danger",
     location: i.default.USER_PROFILE_ACTIONS_MENU,
-    onBlock: () => {
-      h({
-        action: "BLOCK"
-      }), S()
-    },
+    onBlock: () => h({
+      action: "BLOCK"
+    }),
     onUnblock: () => h({
       action: "UNBLOCK"
     })
