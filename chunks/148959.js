@@ -49,7 +49,7 @@ class _ extends o.default {
       let e = this.getQualityConfig();
       if (null === e) return;
       let [i, r, s, a] = e;
-      t[i] = r, n.push(i), this.hasEverReceivedFrame() && this.supportsSeamless && (-1 === this.pendingSSRC || this.pendingSSRC === i ? this.pendingSSRCReceived ? (this.pendingSSRC = -1, this.pendingSSRCReceived = !1) : (t[s] = a, n.push(s), this.pendingSSRC = i) : this.pendingSSRC === s && (this.pendingSSRC = -1))
+      t[i] = r, t[s] = 0, n.push(i), this.hasEverReceivedFrame() && this.supportsSeamless && (-1 === this.pendingSSRC ? (this.pendingSSRC = i, n.push(s), t[s] = a) : this.pendingSSRC === i ? this.pendingSSRCReceived ? (this.pendingSSRC = -1, this.pendingSSRCReceived = !1) : (n.push(s), t[s] = a) : this.pendingSSRC === s && (this.pendingSSRC = -1))
     } else t[this.videoStreams[0].ssrc] = 100, n.push(this.videoStreams[0].ssrc);
     if (!l.default.isIncomingVideoEnabled())
       for (let e in t) "any" !== e && (t[e] = 0);
