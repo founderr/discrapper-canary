@@ -26,7 +26,8 @@ let r = {
     nav_experiment_you_bar_large_buttons: "[NavI] Small buttons in you bar",
     nav_experiment_you_bar_large_messages: "[NavI] Large avatars in messages",
     force_channel_list_v2: "Force channel list V2",
-    shop_include_unpublished: "[Shop] show unpublished items in shop"
+    shop_include_unpublished: "[Shop] show unpublished items in shop",
+    disable_channel_list: "Disable channel list -- for performance testing. You probably don't want to turn this on, lol"
   },
   d = {};
 class o extends(i = s.default.DeviceSettingsStore) {

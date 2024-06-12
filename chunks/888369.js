@@ -480,6 +480,10 @@ class eT extends S.default {
       n += null != t ? t : 0
     }), n)
   }
+  getMentionCountForPrivateChannel(e) {
+    var t, n;
+    return null !== (n = null === (t = R[C]) || void 0 === t ? void 0 : t.mentionCounts[e]) && void 0 !== n ? n : 0
+  }
   getGuildChangeSentinel(e) {
     return D(e).sentinel
   }
