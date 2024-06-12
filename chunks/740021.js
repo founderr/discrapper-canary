@@ -65,11 +65,11 @@ function U(e) {
       displayProfile: l,
       profileType: T.UserProfileTypes.FULL_SIZE,
       hasProfileEffect: (null == l ? void 0 : l.profileEffectId) != null
-    }), (0, s.jsx)("div", {
+    }), (0, s.jsxs)("div", {
       className: C.inner,
-      children: (0, s.jsxs)("div", {
+      children: [(0, s.jsx)("div", {
         ...L,
-        children: [(0, s.jsx)(N, {
+        children: (0, s.jsx)(N, {
           src: O,
           avatarDecoration: F,
           size: g.AvatarSizes.SIZE_120,
@@ -80,22 +80,22 @@ function U(e) {
           isMobile: w,
           statusTooltip: !0,
           statusTooltipDelay: T.USER_PROFILE_TOOLTIP_DELAY
-        }), (0, s.jsx)(p.default, {
-          user: t,
-          isCurrentUser: G,
-          guildId: U,
-          canDM: y,
-          relationshipType: B,
-          originalFriendingEnabled: D,
-          improvedFriendingEnabled: b,
-          viewProfileItem: R,
-          onClose: M
-        }), (0, s.jsx)(_.UserProfileCustomStatusBubble, {
-          statusActivity: f,
-          profileType: T.UserProfileTypes.FULL_SIZE,
-          hasEntered: h === A.ModalTransitionState.ENTERED
-        })]
-      })
+        })
+      }), (0, s.jsx)(p.default, {
+        user: t,
+        isCurrentUser: G,
+        guildId: U,
+        canDM: y,
+        relationshipType: B,
+        originalFriendingEnabled: D,
+        improvedFriendingEnabled: b,
+        viewProfileItem: R,
+        onClose: M
+      }), (0, s.jsx)(_.UserProfileCustomStatusBubble, {
+        statusActivity: f,
+        profileType: T.UserProfileTypes.FULL_SIZE,
+        hasEntered: h === A.ModalTransitionState.ENTERED
+      })]
     })]
   })
 }
