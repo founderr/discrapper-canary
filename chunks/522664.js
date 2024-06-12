@@ -1,8 +1,5 @@
 "use strict";
 n.r(t), n.d(t, {
-  fetchValidContentScanVersion: function() {
-    return u
-  },
   reportFailedSendFalsePositive: function() {
     return a
   },
@@ -62,11 +59,5 @@ function l(e) {
     body: {
       messages: t
     }
-  })
-}
-
-function u() {
-  return i.HTTP.get({
-    url: r.Endpoints.EXPLICIT_MEDIA_GET_VALID_CONTENT_SCAN_VERSION
   })
 }

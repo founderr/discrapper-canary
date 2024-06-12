@@ -324,7 +324,8 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
           notificationSettings: {
             flags: e.notification_settings.flags
           },
-          geoRestrictedGuilds: s
+          geoRestrictedGuilds: s,
+          explicitContentScanVersion: e.explicit_content_scan_version
         })
       }), null != e.auth_token && V({
         type: "UPDATE_TOKEN",
