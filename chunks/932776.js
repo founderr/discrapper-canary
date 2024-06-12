@@ -1,38 +1,43 @@
 "use strict";
 l.r(t), l.d(t, {
   useIntegrationPermissionCommandSearch: function() {
-    return o
+    return d
   }
 }), l("47120");
 var n = l("470079"),
-  a = l("442837"),
-  s = l("911969"),
-  i = l("282923"),
-  r = l("905753");
+  a = l("373793"),
+  s = l("442837"),
+  i = l("911969"),
+  r = l("282923"),
+  o = l("905753");
 
-function o() {
-  let e = (0, a.useStateFromStoresObject)([r.default], () => {
+function d() {
+  let e = (0, s.useStateFromStoresObject)([o.default], () => {
       var e;
-      return Object.values(null !== (e = r.default.getCommands()) && void 0 !== e ? e : {})
+      return Object.values(null !== (e = o.default.getCommands()) && void 0 !== e ? e : {})
     }),
     [t, l] = n.useState(""),
-    o = n.useMemo(() => [...e].sort((e, t) => {
-      let l = s.ApplicationCommandType.CHAT + 1,
+    d = n.useMemo(() => e.filter(e => {
+      var t;
+      return (null == e.integration_types || e.integration_types.includes(a.ApplicationIntegrationType.GUILD_INSTALL)) && (null == e.contexts || (null === (t = e.contexts) || void 0 === t ? void 0 : t.includes(i.InteractionContextType.GUILD)))
+    }), [e]),
+    c = n.useMemo(() => [...d].sort((e, t) => {
+      let l = i.ApplicationCommandType.CHAT + 1,
         n = t.type > l ? l : t.type,
         a = n - (e.type > l ? l : e.type);
       return 0 !== a ? a : e.name.localeCompare(t.name)
-    }), [e]),
-    u = n.useMemo(() => t.startsWith("/") ? o.filter(e => e.type === s.ApplicationCommandType.CHAT) : o, [t, o]),
-    c = n.useMemo(() => t.startsWith("/") ? t.substring(1) : t, [t]);
+    }), [d]),
+    f = n.useMemo(() => t.startsWith("/") ? c.filter(e => e.type === i.ApplicationCommandType.CHAT) : c, [t, c]),
+    I = n.useMemo(() => t.startsWith("/") ? t.substring(1) : t, [t]);
   return {
     query: t,
-    results: n.useMemo(() => (0, i.filterPermissionSearchItems)(u, d, c), [u, c]),
+    results: n.useMemo(() => (0, r.filterPermissionSearchItems)(f, u, I), [f, I]),
     setQuery: l,
     unfilteredCount: e.length
   }
 }
 
-function d(e) {
+function u(e) {
   return {
     id: e.id,
     names: [e.displayName]

@@ -28,8 +28,8 @@ var o, l, u, d = n("512722"),
   b = n("227196"),
   G = n("294473"),
   w = n("706629"),
-  k = n("836157"),
-  B = n("166884"),
+  k = n("926951"),
+  B = n("836157"),
   x = n("924371"),
   V = n("894180"),
   F = n("86614"),
@@ -283,12 +283,8 @@ function ts() {
   return (0, ei.isMac)() && eg.supports(eh.Features.SCREEN_CAPTURE_KIT) && T().satisfies(null === N.default || void 0 === N.default ? void 0 : N.default.os.release, eT.DARWIN_SCKIT_VERSION)
 }
 
-function ta(e) {
-  return B.default.getCurrentConfig({
-    location: "GoLiveSimulcastEnabled"
-  }, {
-    autoTrackExposure: e
-  }).enableGoLiveSimulcast
+function ta() {
+  return k.default.supportsSimulcast()
 }
 let to = new class {
   start() {
@@ -563,7 +559,7 @@ class tp extends(l = f.default.Store) {
           (0, ei.isMac)() && (null === (E = window.DiscordNative) || void 0 === E ? void 0 : E.os.arch) === "arm64" && (n.hardwareH264 ? e.setExperimentFlag(eh.ExperimentFlags.SIGNAL_H265_SUPPORT, !0) : e.setExperimentFlag(eh.ExperimentFlags.SIGNAL_H265_DECODE_SUPPORT, !0))
         }
       }
-      e.context === eh.MediaEngineContextTypes.STREAM && ta(!0) && e.setExperimentFlag(eh.ExperimentFlags.GOLIVE_SIMULCAST, !0);
+      e.context === eh.MediaEngineContextTypes.STREAM && ta() && e.setExperimentFlag(eh.ExperimentFlags.GOLIVE_SIMULCAST, !0);
       let {
         signalAV1Support: I
       } = U.default.getCurrentConfig({
@@ -1108,7 +1104,7 @@ class tp extends(l = f.default.Store) {
         type: e === eh.MediaEngineContextTypes.DEFAULT ? eh.MediaTypes.VIDEO : eh.MediaTypes.SCREEN,
         quality: 100
       }] : [];
-    return this.isSimulcastSupported() && (e === eh.MediaEngineContextTypes.DEFAULT || ta(!1)) && t.push({
+    return this.isSimulcastSupported() && (e === eh.MediaEngineContextTypes.DEFAULT || ta()) && t.push({
       rid: "50",
       type: e === eh.MediaEngineContextTypes.DEFAULT ? eh.MediaTypes.VIDEO : eh.MediaTypes.SCREEN,
       quality: 50
@@ -1701,7 +1697,7 @@ em(tp, "displayName", "MediaEngineStore"), i = new tp(m.default, {
       quality: r
     } = e, {
       enableDecoupledGameClipping: s
-    } = k.default.getCurrentConfig({
+    } = B.default.getCurrentConfig({
       location: "handleClipsInit"
     }, {
       autoTrackExposure: !0
