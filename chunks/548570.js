@@ -3,7 +3,7 @@ n.r(t), n.d(t, {
   default: function() {
     return K
   }
-}), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("47120"), n("177593");
+}), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("47120"), n("653041"), n("177593");
 var i = n("512722"),
   r = n.n(i),
   s = n("457854"),
@@ -162,7 +162,10 @@ class K extends P.default {
             t: s,
             d: a
           } = x.unpack(e);
-        i !== P.Opcode.DISPATCH && o.default.mark("\uD83C\uDF10", "GatewaySocket.onMessage ".concat(i, " ").concat(P.Opcode[i]));
+        if (i !== P.Opcode.DISPATCH && o.default.mark("\uD83C\uDF10", "GatewaySocket.onMessage ".concat(i, " ").concat(P.Opcode[i])), m.default.isLoggingGatewayEvents) {
+          let e = [i];
+          i === P.Opcode.DISPATCH && e.push(s), e.push(a), B.verboseDangerously("<~", ...e)
+        }
         let l = Date.now() - n;
         switch ("READY" === s ? A.default.parseReady.set(n, l) : "READY_SUPPLEMENTAL" === s ? A.default.parseReadySupplemental.set(n, l) : l > 10 && o.default.mark("\uD83C\uDF10", "Parse " + s, l), null != r && (this.seq = r), i) {
           case P.Opcode.HELLO:
@@ -175,7 +178,7 @@ class K extends P.default {
             this._handleInvalidSession(a);
             break;
           case P.Opcode.HEARTBEAT:
-            this._sendHeartbeat();
+            this._handleHeartbeatReceive();
             break;
           case P.Opcode.HEARTBEAT_ACK:
             this._handleHeartbeatAck(a);
@@ -237,6 +240,9 @@ class K extends P.default {
   }
   _getGatewayUrl() {
     return null != this.resumeUrl ? this.resumeUrl : W
+  }
+  _handleHeartbeatReceive() {
+    this._sendHeartbeat(), null != this.heartbeater && null != this.heartbeatInterval && (clearInterval(this.heartbeater), this.heartbeater = setInterval(this._doHeartbeatInterval.bind(this), this.heartbeatInterval))
   }
   _handleHeartbeatAck(e) {
     this.lastHeartbeatAckTime = Date.now(), this.heartbeatAck = !0, null !== this.expeditedHeartbeatTimeout && (clearTimeout(this.expeditedHeartbeatTimeout), this.expeditedHeartbeatTimeout = null, B.verbose("Expedited heartbeat succeeded"))
@@ -313,16 +319,15 @@ class K extends P.default {
     let e = this.lastHeartbeatTime;
     null != e && Date.now() - e > this.heartbeatInterval + 5e3 && this._sendHeartbeat()
   }
+  _doHeartbeatInterval() {
+    this.heartbeatAck ? (this.heartbeatAck = !1, this._sendHeartbeat()) : null === this.expeditedHeartbeatTimeout && this._handleHeartbeatTimeout()
+  }
   _startHeartbeater() {
     let {
       heartbeatInterval: e
     } = this;
-    r()(null != e, "GatewaySocket: Heartbeat interval should never null here."), null !== this.initialHeartbeatTimeout && clearTimeout(this.initialHeartbeatTimeout), null !== this.heartbeater && (clearInterval(this.heartbeater), this.heartbeater = null);
-    let t = () => {
-      this.heartbeatAck ? (this.heartbeatAck = !1, this._sendHeartbeat()) : null === this.expeditedHeartbeatTimeout && this._handleHeartbeatTimeout()
-    };
-    this.initialHeartbeatTimeout = setTimeout(() => {
-      this.initialHeartbeatTimeout = null, this.heartbeatAck = !0, this.heartbeater = setInterval(t, e), t()
+    r()(null != e, "GatewaySocket: Heartbeat interval should never null here."), null !== this.initialHeartbeatTimeout && clearTimeout(this.initialHeartbeatTimeout), null !== this.heartbeater && (clearInterval(this.heartbeater), this.heartbeater = null), this.initialHeartbeatTimeout = setTimeout(() => {
+      this.initialHeartbeatTimeout = null, this.heartbeatAck = !0, this.heartbeater = setInterval(this._doHeartbeatInterval.bind(this), e), this._doHeartbeatInterval()
     }, Math.floor(Math.random() * e))
   }
   _stopHeartbeater() {
