@@ -100,13 +100,13 @@ function _(e) {
           children: function(e, l) {
             let t = e.split(/\[@username\]/g);
             return (0, a.jsx)("span", {
-              children: t.map((e, n) => (0, a.jsxs)(a.Fragment, {
-                children: [e, n < t.length - 1 ? (0, a.jsx)(u.Text, {
+              children: t.map((e, s) => (0, a.jsxs)(n.Fragment, {
+                children: [e, s < t.length - 1 ? (0, a.jsx)(u.Text, {
                   tag: "span",
                   variant: "text-md/semibold",
                   children: "@".concat(l)
                 }) : null]
-              }))
+              }, "username-".concat(s)))
             })
           }(null == t ? void 0 : t.message, null != w ? w : A.username)
         })]
