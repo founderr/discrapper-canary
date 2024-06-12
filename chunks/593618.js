@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildTooltipText: function() {
-    return ei
+    return en
   },
   default: function() {
-    return er
+    return ei
   }
 }), n("390547"), n("47120");
 var i = n("735250"),
@@ -57,68 +57,7 @@ var i = n("735250"),
 let X = (0, F.cssValueToNumber)(d.default.GUILD_TOOLTIP_ICON_SIZE),
   q = (0, F.cssValueToNumber)(d.default.GUILD_TOOLTIP_ICON_SIZE_V_2);
 
-function J(e) {
-  let t = e.id,
-    n = (0, u.useStateFromStoresArray)([g.default, O.default], () => {
-      let e = g.default.getChannels(t)[g.GUILD_VOCAL_CHANNELS_KEY].filter(e => {
-        let {
-          channel: t
-        } = e;
-        return t.type === K.ChannelTypes.GUILD_VOICE
-      }).map(e => {
-        let {
-          channel: t
-        } = e;
-        return t.id
-      });
-      return [...e, ...Object.values(O.default.getThreadsForGuild(t)).flatMap(e => Object.keys(e))]
-    }, [t]),
-    i = (0, p.default)(t),
-    s = r.useMemo(() => i.map(e => e.id), [i]),
-    a = (0, u.useStateFromStores)([y.default], () => y.default.getVoiceStates(t), [t]),
-    o = l().flatMap(n, t => {
-      var n;
-      return t === e.afkChannelId ? [] : (null !== (n = a[t]) && void 0 !== n ? n : []).map(e => {
-        let {
-          user: t
-        } = e;
-        return t
-      })
-    }),
-    d = (0, u.useStateFromStoresArray)([m.default], () => l().flatMap(s, t => t === e.afkChannelId ? [] : m.default.getMutableParticipants(t, N.StageChannelParticipantNamedIndex.SPEAKER).filter(e => e.type === N.StageChannelParticipantTypes.VOICE).map(e => {
-      let {
-        user: t
-      } = e;
-      return t
-    }))),
-    _ = (0, u.useStateFromStores)([m.default], () => {
-      let e = 0;
-      for (let t of s) e += m.default.getParticipantCount(t, N.StageChannelParticipantNamedIndex.AUDIENCE);
-      return e
-    }),
-    E = (0, u.useStateFromStoresArray)([C.default], () => C.default.getAllApplicationStreams().filter(e => e.guildId === t).map(e => e.ownerId), [t]),
-    I = (0, u.useStateFromStoresArray)([v.default, R.default], () => o.filter(e => v.default.getActivities(e.id, t).some(e => (null == e ? void 0 : e.application_id) != null && null != R.default.getDetectableGame(null == e ? void 0 : e.application_id)))),
-    T = (0, H.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1),
-    f = T ? I.map(e => e.id) : [],
-    S = (0, u.useStateFromStoresArray)([c.default], () => c.default.getEmbeddedActivitiesForGuild(t).flatMap(e => Array.from(e.userIds)), [t]),
-    h = (0, u.useStateFromStoresArray)([M.default], () => S.map(e => M.default.getUser(e)), [S]),
-    A = (0, u.useStateFromStoresArray)([M.default], () => E.map(e => M.default.getUser(e)), [E]),
-    L = o.filter(e => !E.includes(e.id) && !S.includes(e.id) && !f.includes(e.id)),
-    D = A.filter(e => null != e && !S.includes(e.id)),
-    P = d.length > 0 || L.length > 0 || D.length > 0 || h.length > 0;
-  return {
-    voiceUsersToShow: L,
-    stageSpeakers: d,
-    numStageListeners: _,
-    streamUsersToShow: D,
-    embeddedActivitiesUsers: h,
-    gameUsers: I,
-    shouldShowGameBadge: T,
-    hasActivity: P
-  }
-}
-
-function $(e, t, n) {
+function J(e, t, n) {
   return 0 === t.length ? null : (0, i.jsxs)("div", {
     className: Z.row,
     children: [(0, i.jsx)(e, {
@@ -131,7 +70,7 @@ function $(e, t, n) {
   })
 }
 
-function ee(e) {
+function $(e) {
   let {
     muteConfig: t,
     className: n
@@ -147,20 +86,79 @@ function ee(e) {
   })
 }
 
-function et(e) {
-  var t, n, r;
+function ee(e) {
+  var t, n, s;
   let {
-    guild: s
-  } = e, o = s.id, {
-    voiceUsersToShow: l,
-    stageSpeakers: d,
-    numStageListeners: c,
-    streamUsersToShow: E,
-    embeddedActivitiesUsers: I,
-    gameUsers: T,
-    shouldShowGameBadge: f
-  } = J(s), S = $(b.default, T, o), h = $(k.default, l, o);
-  let A = (t = o, n = d, r = c, 0 === n.length ? null : (0, i.jsxs)("div", {
+    guild: o
+  } = e, d = o.id, {
+    voiceUsersToShow: E,
+    stageSpeakers: I,
+    numStageListeners: T,
+    streamUsersToShow: f,
+    embeddedActivitiesUsers: S,
+    gameUsers: h,
+    shouldShowGameBadge: A
+  } = function(e) {
+    let t = e.id,
+      n = (0, u.useStateFromStoresArray)([g.default, O.default], () => {
+        let e = g.default.getChannels(t)[g.GUILD_VOCAL_CHANNELS_KEY].filter(e => {
+          let {
+            channel: t
+          } = e;
+          return t.type === K.ChannelTypes.GUILD_VOICE
+        }).map(e => {
+          let {
+            channel: t
+          } = e;
+          return t.id
+        });
+        return [...e, ...Object.values(O.default.getThreadsForGuild(t)).flatMap(e => Object.keys(e))]
+      }, [t]),
+      i = (0, p.default)(t),
+      s = r.useMemo(() => i.map(e => e.id), [i]),
+      a = (0, u.useStateFromStores)([y.default], () => y.default.getVoiceStates(t), [t]),
+      o = l().flatMap(n, t => {
+        var n;
+        return t === e.afkChannelId ? [] : (null !== (n = a[t]) && void 0 !== n ? n : []).map(e => {
+          let {
+            user: t
+          } = e;
+          return t
+        })
+      }),
+      d = (0, u.useStateFromStoresArray)([m.default], () => l().flatMap(s, t => t === e.afkChannelId ? [] : m.default.getMutableParticipants(t, N.StageChannelParticipantNamedIndex.SPEAKER).filter(e => e.type === N.StageChannelParticipantTypes.VOICE).map(e => {
+        let {
+          user: t
+        } = e;
+        return t
+      }))),
+      _ = (0, u.useStateFromStores)([m.default], () => {
+        let e = 0;
+        for (let t of s) e += m.default.getParticipantCount(t, N.StageChannelParticipantNamedIndex.AUDIENCE);
+        return e
+      }),
+      E = (0, u.useStateFromStoresArray)([C.default], () => C.default.getAllApplicationStreams().filter(e => e.guildId === t).map(e => e.ownerId), [t]),
+      I = (0, u.useStateFromStoresArray)([v.default, R.default], () => o.filter(e => v.default.getActivities(e.id, t).some(e => (null == e ? void 0 : e.application_id) != null && null != R.default.getDetectableGame(null == e ? void 0 : e.application_id)))),
+      T = (0, H.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1),
+      f = T ? I.map(e => e.id) : [],
+      S = (0, u.useStateFromStoresArray)([c.default], () => c.default.getEmbeddedActivitiesForGuild(t).flatMap(e => Array.from(e.userIds)), [t]),
+      h = (0, u.useStateFromStoresArray)([M.default], () => S.map(e => M.default.getUser(e)), [S]),
+      A = (0, u.useStateFromStoresArray)([M.default], () => E.map(e => M.default.getUser(e)), [E]),
+      L = o.filter(e => !E.includes(e.id) && !S.includes(e.id) && !f.includes(e.id)),
+      D = A.filter(e => null != e && !S.includes(e.id)),
+      P = d.length > 0 || L.length > 0 || D.length > 0 || h.length > 0;
+    return {
+      voiceUsersToShow: L,
+      stageSpeakers: d,
+      numStageListeners: _,
+      streamUsersToShow: D,
+      embeddedActivitiesUsers: h,
+      gameUsers: I,
+      shouldShowGameBadge: T,
+      hasActivity: P
+    }
+  }(o), L = J(b.default, h, d), P = J(k.default, E, d);
+  let U = (t = d, n = I, s = T, 0 === n.length ? null : (0, i.jsxs)("div", {
       className: Z.row,
       children: [(0, i.jsx)(B.default, {
         className: Z.activityIcon
@@ -177,32 +175,32 @@ function et(e) {
           className: Z.stageListenerCount,
           color: "text-normal",
           variant: "text-xs/normal",
-          children: r
+          children: s
         })]
       })]
     })),
-    m = $(x.default, E, o),
-    N = $(w.default, I, o),
+    F = J(x.default, f, d),
+    Y = J(w.default, S, d),
     {
-      isMuted: p,
-      muteConfig: O
+      isMuted: j,
+      muteConfig: W
     } = (0, u.useStateFromStoresObject)([D.default], () => ({
-      isMuted: D.default.isMuted(o),
-      muteConfig: D.default.getMuteConfig(o)
-    }), [o]);
-  return null != S && H.default.trackExposure({
+      isMuted: D.default.isMuted(d),
+      muteConfig: D.default.getMuteConfig(d)
+    }), [d]);
+  return null != L && H.default.trackExposure({
     location: "Guild Tooltip"
   }), (0, i.jsxs)(i.Fragment, {
-    children: [A, h, m, f && S, N, p ? (0, i.jsx)(ee, {
-      muteConfig: O,
+    children: [U, P, F, A && L, Y, j ? (0, i.jsx)($, {
+      muteConfig: W,
       className: a()(Z.muteText, {
-        [Z.muteTextWithActivity]: null != h || null != m
+        [Z.muteTextWithActivity]: null != P || null != F
       })
     }) : null]
   })
 }
 
-function en(e) {
+function et(e) {
   let {
     guildJoinRequestStatus: t
   } = e;
@@ -225,13 +223,13 @@ function en(e) {
   })
 }
 
-function ei(e) {
+function en(e) {
   let {
     guild: t,
     includeActivity: n = !0
-  } = e, r = (0, E.default)(t), s = (0, T.useCurrentUserGuildBadgeStatus)(t.id), o = null != s ? (0, i.jsx)(en, {
+  } = e, r = (0, E.default)(t), s = (0, T.useCurrentUserGuildBadgeStatus)(t.id), o = null != s ? (0, i.jsx)(et, {
     guildJoinRequestStatus: s
-  }) : null, l = n ? (0, i.jsx)(et, {
+  }) : null, l = n ? (0, i.jsx)(ee, {
     guild: t
   }) : null, d = (0, u.useStateFromStores)([S.default], () => S.default.isViewingRoles(t.id)), c = (0, f.useShouldShowInvitesDisabledNotif)(t);
   return (0, i.jsxs)(i.Fragment, {
@@ -265,7 +263,7 @@ function ei(e) {
   })
 }
 
-function er(e) {
+function ei(e) {
   let {
     guild: t,
     disabled: n = !1,
@@ -274,23 +272,25 @@ function er(e) {
     includeActivity: o = !0,
     isDragging: l
   } = e, d = (0, Y.useCanShowNewGuildTooltip)("guilds_bar", !1), [c, E] = r.useState(!1), I = (0, W.useGuildPopoutCards)(t), {
-    hasActivity: T
-  } = J(t), {
-    isUserLurking: f,
-    isUnverifiedAccount: S
+    isUserLurking: T,
+    isUnverifiedAccount: f
   } = (0, u.useStateFromStoresObject)([h.default, L.default], () => {
     let e = h.default.isLurking(t.id);
     return {
       isUserLurking: e,
       isUnverifiedAccount: !L.default.getCheck(t.id).canChat
     }
-  }), A = r.useMemo(() => !f && !S && d && o && I.length > 0, [f, S, d, o, I.length]);
-  return ((T || A) && Y.default.trackExposure({
-    location: "guild_tooltip"
-  }), A) ? (0, i.jsx)("div", {
-    onMouseEnter: () => E(!0),
+  }), S = r.useMemo(() => !T && !f && o && I.length > 0, [T, f, o, I.length]), A = () => {
+    S && Y.default.trackExposure({
+      location: "guild_tooltip"
+    })
+  }, m = () => {
+    E(!0), A()
+  };
+  return S && d ? (0, i.jsx)("div", {
+    onMouseEnter: m,
     onMouseLeave: () => E(!1),
-    onFocus: () => E(!0),
+    onFocus: m,
     onBlur: () => E(!1),
     children: (0, i.jsx)(_.Popout, {
       position: "right",
@@ -314,11 +314,12 @@ function er(e) {
     hideOnClick: !0,
     spacing: 20,
     position: "right",
-    text: n ? null : (0, i.jsx)(ei, {
+    text: n ? null : (0, i.jsx)(en, {
       guild: t,
-      includeActivity: o && !d
+      includeActivity: o
     }),
     "aria-label": s,
+    onTooltipShow: A,
     tooltipClassName: Q.listItemTooltip,
     children: e => {
       let {
