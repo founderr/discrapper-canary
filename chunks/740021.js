@@ -43,8 +43,8 @@ function U(e) {
   } = e, {
     theme: j
   } = (0, v.useUserProfileThemeContext)(), y = (0, E.default)(t.id, U), {
-    avatarSrc: L,
-    eventHandlers: O,
+    avatarSrc: O,
+    eventHandlers: L,
     avatarDecorationSrc: F
   } = (0, I.default)({
     user: t,
@@ -68,9 +68,9 @@ function U(e) {
     }), (0, s.jsx)("div", {
       className: C.inner,
       children: (0, s.jsxs)("div", {
-        ...O,
+        ...L,
         children: [(0, s.jsx)(N, {
-          src: L,
+          src: O,
           avatarDecoration: F,
           size: g.AvatarSizes.SIZE_120,
           className: C.avatar,

@@ -32,8 +32,8 @@ function I(e) {
     previewAvatarDecoration: T,
     previewTheme: A,
     previewPrimaryColor: E,
-    className: P,
-    disabledInputs: x,
+    className: x,
+    disabledInputs: P,
     isTryItOutFlow: y,
     onUpsellClick: N
   } = e, {
@@ -41,8 +41,8 @@ function I(e) {
   } = (0, u.default)(), C = (0, n.useStateFromStores)([c.default], () => c.default.getStatus(a.id)), U = null == t || (null == i ? void 0 : i.canUsePremiumProfileCustomization) || m, _ = (0, l.jsx)(S, {
     src: I,
     avatarDecoration: T,
-    imageClassName: r()(P, {
-      [g.overlay]: !x
+    imageClassName: r()(x, {
+      [g.overlay]: !P
     }),
     size: o.AvatarSizes.SIZE_80,
     "aria-label": a.username,
@@ -50,7 +50,7 @@ function I(e) {
     statusTooltip: !1,
     statusBackdropColor: null != E ? (0, o.getStatusBackdropColor)(A) : void 0
   });
-  return x ? (0, l.jsx)("div", {
+  return P ? (0, l.jsx)("div", {
     className: g.avatar,
     children: _
   }) : U ? (0, l.jsx)(o.Popout, {

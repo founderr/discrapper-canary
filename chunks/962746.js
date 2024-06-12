@@ -24,8 +24,8 @@ var l = t("735250"),
   T = t("208567"),
   A = t("680295"),
   E = t("168631"),
-  P = t("318661"),
-  x = t("943217"),
+  x = t("318661"),
+  P = t("943217"),
   y = t("793397"),
   N = t("502762"),
   j = t("155916"),
@@ -87,8 +87,8 @@ function el(e) {
     activityCharacter: eT,
     isTryItOutFlow: eA = !1,
     disabledInputs: eE = !1,
-    hideExampleButton: eP = !1,
-    hideFakeActivity: ex = !1,
+    hideExampleButton: ex = !1,
+    hideFakeActivity: eP = !1,
     hideCustomStatus: ey = !1,
     hideBioSection: eN = !1,
     forProfileEffectModal: ej = !1,
@@ -107,12 +107,12 @@ function el(e) {
     avatarOverride: ef,
     size: d.AvatarSizes.SIZE_80,
     showPending: !0
-  }), eL = (0, P.default)(H.id, null == el ? void 0 : el.id), eF = (0, o.useStateFromStores)([v.default], () => v.default.syncProfileThemeWithUserTheme), eD = (0, m.default)(), eG = (0, o.useStateFromStores)([k.default], () => null == el ? null : k.default.getMember(el.id, H.id)), eW = null != el, eZ = null === (a = (0, P.default)(H.id, null)) || void 0 === a ? void 0 : a.profileEffectId, eH = null == eL ? void 0 : eL.profileEffectId, eV = eW && null == eg ? eg !== eH && null !== eg ? eH : eZ : eg, eK = void 0 === ef ? H.getAvatarURL(void 0, 80) : ef, eX = (0, h.default)(eK, (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_530).hsl(), !1), eY = null == eL ? void 0 : eL.getPreviewThemeColors(eh), eq = null !== (r = null == eY ? void 0 : eY[0]) && void 0 !== r ? r : null == eL ? void 0 : eL.primaryColor, eJ = eF ? eD : (0, E.getProfileTheme)(eq), eQ = (0, I.default)(null !== (y = null != eo ? eo : eq) && void 0 !== y ? y : (0, s.hex2int)(eX)).hsl, e$ = (0, o.useStateFromStores)([F.default], () => F.default.isFocused()), e0 = null == eL ? void 0 : eL.getPreviewBanner(eu, eB ? e$ : ew), e1 = null != e0 || null != eV, e4 = eb || null != eV, e6 = (0, K.getPreviewName)({
+  }), eL = (0, x.default)(H.id, null == el ? void 0 : el.id), eF = (0, o.useStateFromStores)([v.default], () => v.default.syncProfileThemeWithUserTheme), eD = (0, m.default)(), eG = (0, o.useStateFromStores)([k.default], () => null == el ? null : k.default.getMember(el.id, H.id)), eW = null != el, eZ = null === (a = (0, x.default)(H.id, null)) || void 0 === a ? void 0 : a.profileEffectId, eH = null == eL ? void 0 : eL.profileEffectId, eV = eW && null == eg ? eg !== eH && null !== eg ? eH : eZ : eg, eK = void 0 === ef ? H.getAvatarURL(void 0, 80) : ef, eX = (0, h.default)(eK, (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_530).hsl(), !1), eY = null == eL ? void 0 : eL.getPreviewThemeColors(eh), eq = null !== (r = null == eY ? void 0 : eY[0]) && void 0 !== r ? r : null == eL ? void 0 : eL.primaryColor, eJ = eF ? eD : (0, E.getProfileTheme)(eq), eQ = (0, I.default)(null !== (y = null != eo ? eo : eq) && void 0 !== y ? y : (0, s.hex2int)(eX)).hsl, e$ = (0, o.useStateFromStores)([F.default], () => F.default.isFocused()), e0 = null == eL ? void 0 : eL.getPreviewBanner(eu, eB ? e$ : ew), e4 = null != e0 || null != eV, e1 = eb || null != eV, e8 = (0, K.getPreviewName)({
     pendingNickname: ev,
     pendingGlobalName: ep,
     user: H,
     guildMember: eG
-  }), [e8, e9] = (0, o.useStateFromStoresArray)([z.default], () => [z.default.findActivity(H.id, e => e.type === Y.ActivityTypes.CUSTOM_STATUS), z.default.getStatus(H.id)]), e7 = (0, d.useStatusFillColor)(e9), e2 = (0, o.useStateFromStores)([L.default], () => L.default.hidePersonalInformation), e5 = (null == eL ? void 0 : eL.canUsePremiumProfileCustomization) || ei, e3 = i.useCallback(() => {
+  }), [e6, e9] = (0, o.useStateFromStoresArray)([z.default], () => [z.default.findActivity(H.id, e => e.type === Y.ActivityTypes.CUSTOM_STATUS), z.default.getStatus(H.id)]), e2 = (0, d.useStatusFillColor)(e9), e7 = (0, o.useStateFromStores)([L.default], () => L.default.hidePersonalInformation), e5 = (null == eL ? void 0 : eL.canUsePremiumProfileCustomization) || ei, e3 = i.useCallback(() => {
     var e, a;
     null === (a = eM.current) || void 0 === a || null === (e = a.inputRef.current) || void 0 === e || e.activateUploadDialogue()
   }, []), ae = i.useCallback((e, a) => {
@@ -171,7 +171,7 @@ function el(e) {
         children: (0, l.jsx)("rect", {
           height: "100%",
           width: "100%",
-          fill: e7,
+          fill: e2,
           mask: "url(#".concat((0, d.getStatusMask)(e9, !1), ")")
         })
       })]
@@ -208,13 +208,13 @@ function el(e) {
     children: [(0, l.jsx)(A.default, {
       profileEffectId: void 0 !== eV ? eV : eH
     }), (0, l.jsxs)(d.HeadingLevel, {
-      children: [(0, l.jsx)(x.default, {
+      children: [(0, l.jsx)(P.default, {
         profileType: J.UserProfileTypes.POPOUT,
-        hasBanner: e1,
+        hasBanner: e4,
         isPremium: ei,
         hasThemeColors: e5,
         overrideBannerWidth: ej ? 280 : void 0,
-        hasProfileEffect: e4,
+        hasProfileEffect: e1,
         children: ei ? (0, l.jsxs)("div", {
           onMouseMove: () => eR(!0),
           onMouseLeave: () => eR(!1),
@@ -228,7 +228,7 @@ function el(e) {
             imageStyle: {
               backgroundColor: eQ
             },
-            imageClassName: n()(e1 ? $.bannerUploaderInnerSquare : $.bannerUploaderInnerSquareEmpty),
+            imageClassName: n()(e4 ? $.bannerUploaderInnerSquare : $.bannerUploaderInnerSquareEmpty),
             hint: Q.default.Messages.CHANGE_BANNER,
             onOpenImageSelectModal: () => (0, K.handleOpenSelectImageModal)(q.UploadTypes.BANNER, null == eG ? void 0 : eG.guildId, eA, void 0),
             hideSize: !0,
@@ -238,7 +238,7 @@ function el(e) {
             className: $.gifTag
           }) : null]
         }) : (0, l.jsx)("div", {
-          className: e4 ? $.bannerUploaderInnerSquare : $.bannerNormal,
+          className: e1 ? $.bannerUploaderInnerSquare : $.bannerNormal,
           style: {
             backgroundColor: eQ
           },
@@ -277,8 +277,8 @@ function el(e) {
         },
         className: n()(et({
           isPremium: ei,
-          hasBanner: e1,
-          hasProfileEffect: e4
+          hasBanner: e4,
+          hasProfileEffect: e1
         }), {
           [$.defaultCursor]: eE
         }),
@@ -310,8 +310,8 @@ function el(e) {
           a = (0, l.jsxs)("div", {
             className: et({
               isPremium: ei,
-              hasBanner: e1,
-              hasProfileEffect: e4
+              hasBanner: e4,
+              hasProfileEffect: e1
             }),
             children: [(0, l.jsx)(T.default, {
               disabled: eE,
@@ -353,32 +353,32 @@ function el(e) {
           children: [(0, l.jsx)(R.default, {
             isTryItOut: eA,
             user: H,
-            nickname: e6,
+            nickname: e8,
             pronouns: null != ec ? ec : null == eL ? void 0 : eL.pronouns,
             usernameIcon: (() => {
               if (!!(null != eG) && null !== ef) {
                 if (!(null == eG.avatar && null == ef)) return (0, l.jsx)(_.default, {
                   user: H,
-                  nickname: e6
+                  nickname: e8
                 })
               }
             })()
           }), !ey && (0, l.jsx)(M.default, {
-            customStatusActivity: e8
+            customStatusActivity: e6
           }), (0, l.jsx)(C.default, {}), !eN && (0, l.jsx)(b.default, {
             isUsingGuildBio: null == e ? void 0 : e.isUsingGuildValue,
             guild: el,
             bio: null == e ? void 0 : e.value,
-            hidePersonalInformation: e2,
-            lastSection: ex,
+            hidePersonalInformation: e7,
+            lastSection: eP,
             lineClamp: ej ? 3 : void 0
           }), !eC && (0, l.jsx)(w.default, {
             userId: H.id,
             guildId: null == el ? void 0 : el.id
-          }), !ex && (0, l.jsx)(V.default, {
+          }), !eP && (0, l.jsx)(V.default, {
             activityName: eI,
             activityCharacter: eT,
-            showExampleButton: null == el && !eP
+            showExampleButton: null == el && !ex
           })]
         })
       }()]

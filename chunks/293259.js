@@ -39,16 +39,16 @@ function M(e) {
     guildId: M,
     channelId: j,
     friendToken: y,
-    className: L,
-    isStreaming: O,
+    className: O,
+    isStreaming: L,
     hasProfileEffect: F,
     onClose: D
   } = e, b = (0, a.useStateFromStores)([f.default], () => f.default.getRelationshipType(I.id)), B = (0, a.useStateFromStores)([c.default], () => c.default.isMobileOnline(I.id)), G = (0, a.useStateFromStores)([c.default], () => c.default.getStatus(I.id)), k = (0, a.useStateFromStores)([_.default], () => _.default.getUserProfile(I.id)), w = (0, a.useStateFromStores)([d.default], () => d.default.getId() === I.id), {
     theme: Y
   } = (0, A.useUserProfileThemeContext)(), {
-    trackUserProfileAction: H
+    trackUserProfileAction: V
   } = (0, m.useUserProfileAnalyticsContext)(), {
-    avatarSrc: V,
+    avatarSrc: H,
     eventHandlers: W,
     avatarDecorationSrc: z
   } = (0, v.default)({
@@ -56,7 +56,7 @@ function M(e) {
     size: h
   }), Z = i.useMemo(() => (0, u.shouldDisableUserPresenceInChannel)(I, j), [I, j]);
   return (0, s.jsxs)("header", {
-    className: L,
+    className: O,
     children: [(0, s.jsx)(p.default, {
       displayProfile: t,
       onClose: D,
@@ -68,11 +68,11 @@ function M(e) {
       children: [(0, s.jsx)("div", {
         ...W,
         children: (0, s.jsx)(R, {
-          src: V,
+          src: H,
           avatarDecoration: z,
           size: h,
           className: P.avatar,
-          status: Z ? N.StatusTypes.UNKNOWN : O ? N.StatusTypes.STREAMING : G,
+          status: Z ? N.StatusTypes.UNKNOWN : L ? N.StatusTypes.STREAMING : G,
           statusBackdropColor: (0, o.getStatusBackdropColor)(Y),
           isMobile: B,
           statusTooltip: !0,
@@ -114,7 +114,7 @@ function M(e) {
               }
             },
             onClick: function(e) {
-              H({
+              V({
                 action: "PRESS_OPTIONS"
               }), (0, r.openContextMenuLazy)(e, async () => {
                 let {
@@ -126,7 +126,7 @@ function M(e) {
                   isCurrentUser: w,
                   guildId: M,
                   relationshipType: b,
-                  trackUserProfileAction: H,
+                  trackUserProfileAction: V,
                   onClose: D
                 })
               })

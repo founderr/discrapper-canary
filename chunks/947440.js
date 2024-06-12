@@ -29,16 +29,16 @@ var n = i("442837"),
   C = i("944486"),
   M = i("885110"),
   g = i("594174"),
-  h = i("979651"),
-  b = i("181106"),
+  b = i("979651"),
+  h = i("181106"),
   O = i("5192"),
   x = i("566620"),
   L = i("317381"),
   F = i("638880"),
   j = i("782769"),
-  R = i("255621"),
-  U = i("527805"),
-  P = i("620662"),
+  U = i("255621"),
+  P = i("527805"),
+  R = i("620662"),
   V = i("841784"),
   D = i("275920"),
   G = i("952561"),
@@ -59,7 +59,7 @@ function K(e, t) {
       } = e;
       return i.has(t.id)
     }) : i
-  }, [t, e]), Q = (0, G.default)(), Z = (0, n.useStateFromStores)([E.default], () => null == e || e.isPrivate() || E.default.can(k.Permissions.SEND_MESSAGES, e), [e]), $ = (0, n.useStateFromStoresArray)([b.default], () => [...W.map(e => null != e.application_id && b.default.getState(e.application_id, k.ActivityActionTypes.JOIN) === k.ActivityActionStates.LOADING), ...q.map(e => b.default.getState(e.applicationId, k.ActivityActionTypes.JOIN) === k.ActivityActionStates.LOADING)], [W, q]), ee = (0, r.default)([...W.filter(e => (null == e ? void 0 : e.application_id) != null).map(e => e.application_id), ...q.map(e => e.applicationId)]), et = null == e ? void 0 : e.id, ei = (0, n.useStateFromStoresArray)([_.default, v.default, y.default, N.default, C.default, h.default, E.default], () => [...W.map(e => (0, R.default)({
+  }, [t, e]), Q = (0, G.default)(), Z = (0, n.useStateFromStores)([E.default], () => null == e || e.isPrivate() || E.default.can(k.Permissions.SEND_MESSAGES, e), [e]), $ = (0, n.useStateFromStoresArray)([h.default], () => [...W.map(e => null != e.application_id && h.default.getState(e.application_id, k.ActivityActionTypes.JOIN) === k.ActivityActionStates.LOADING), ...q.map(e => h.default.getState(e.applicationId, k.ActivityActionTypes.JOIN) === k.ActivityActionStates.LOADING)], [W, q]), ee = (0, r.default)([...W.filter(e => (null == e ? void 0 : e.application_id) != null).map(e => e.application_id), ...q.map(e => e.applicationId)]), et = null == e ? void 0 : e.id, ei = (0, n.useStateFromStoresArray)([_.default, v.default, y.default, N.default, C.default, b.default, E.default], () => [...W.map(e => (0, U.default)({
     user: null != t ? t : H,
     activity: e,
     application: ee.find(t => (null == t ? void 0 : t.id) === e.application_id),
@@ -71,11 +71,11 @@ function K(e, t) {
     GuildMemberCountStore: y.default,
     RelationshipStore: N.default,
     SelectedChannelStore: C.default,
-    VoiceStateStore: h.default,
+    VoiceStateStore: b.default,
     PermissionStore: E.default
   })), ...q.map(e => {
     let i = null != t ? t : H;
-    return null != i && (0, U.default)({
+    return null != i && (0, P.default)({
       userId: i.id,
       application: ee.find(t => (null == t ? void 0 : t.id) === e.applicationId),
       channelId: et,
@@ -83,9 +83,9 @@ function K(e, t) {
       isActivitiesEnabledForCurrentPlatform: (0, j.getIsActivitiesEnabledForCurrentPlatform)(),
       ChannelStore: _.default,
       GuildStore: v.default,
-      VoiceStateStore: h.default,
+      VoiceStateStore: b.default,
       PermissionStore: E.default
-    }) === U.EmbeddedActivityJoinability.CAN_JOIN
+    }) === P.EmbeddedActivityJoinability.CAN_JOIN
   })], [W, ee, et, H, q, t]), ea = (0, n.useStateFromStoresArray)([c.default, S.default], () => W.map(e => e.type === k.ActivityTypes.LISTENING && null != t ? (0, p.default)(c.default, S.default, t, e) : void 0), [t, W]), en = (0, s.useAnalyticsContext)();
   if (!Z) return null;
   let el = (i, a) => {
@@ -143,7 +143,7 @@ function K(e, t) {
         channelId: C.default.getVoiceChannelId(),
         messageId: null,
         intent: J.ActivityIntent.PLAY,
-        embedded: (0, P.default)(e, k.ActivityFlags.EMBEDDED)
+        embedded: (0, R.default)(e, k.ActivityFlags.EMBEDDED)
       }), (0, D.default)({
         type: k.AnalyticsGameOpenTypes.JOIN,
         userId: t.id,
@@ -175,19 +175,19 @@ function K(e, t) {
       }
     }, "self-embedded-".concat(i.applicationId)))
   }), z.forEach((e, t) => {
-    e.type === k.ActivityTypes.PLAYING && (0, P.default)(e, k.ActivityFlags.JOIN) ? eo.push((0, a.jsx)(l.MenuItem, {
+    e.type === k.ActivityTypes.PLAYING && (0, R.default)(e, k.ActivityFlags.JOIN) ? eo.push((0, a.jsx)(l.MenuItem, {
       id: "invite-to-join",
       label: B.default.Messages.USER_ACTIVITY_ACTION_INVITE_TO_JOIN,
       subtext: e.name,
       action: () => el(k.ActivityActionTypes.JOIN, e)
-    }, "self".concat(t))) : e.type === k.ActivityTypes.LISTENING && (0, P.default)(e, k.ActivityFlags.SYNC) && eo.push((0, a.jsx)(l.MenuItem, {
+    }, "self".concat(t))) : e.type === k.ActivityTypes.LISTENING && (0, R.default)(e, k.ActivityFlags.SYNC) && eo.push((0, a.jsx)(l.MenuItem, {
       id: "invite-to-listen",
       label: B.default.Messages.USER_ACTIVITY_ACTION_INVITE_TO_LISTEN_ALONG,
       subtext: e.name,
       action: () => el(k.ActivityActionTypes.LISTEN, e)
     }, "self".concat(t)))
   }), eo.length > 0 && eo.push((0, a.jsx)(l.MenuSeparator, {})), W.forEach((i, n) => {
-    if (i.type === k.ActivityTypes.PLAYING && (0, P.default)(i, k.ActivityFlags.JOIN) && null != i.session_id && null != i.application_id) {
+    if (i.type === k.ActivityTypes.PLAYING && (0, R.default)(i, k.ActivityFlags.JOIN) && null != i.session_id && null != i.application_id) {
       if (ei[n]) {
         let e = $[n];
         eo.push((0, a.jsx)(l.MenuItem, {
@@ -206,7 +206,7 @@ function K(e, t) {
         subtext: i.name,
         action: () => el(k.ActivityActionTypes.JOIN_REQUEST, i)
       }, n))
-    } else if (i.type === k.ActivityTypes.LISTENING && (0, P.default)(i, k.ActivityFlags.SYNC) && null != ea[n]) {
+    } else if (i.type === k.ActivityTypes.LISTENING && (0, R.default)(i, k.ActivityFlags.SYNC) && null != ea[n]) {
       let d = ea[n],
         {
           playDisabled: u,
