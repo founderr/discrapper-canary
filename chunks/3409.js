@@ -345,7 +345,7 @@ function eT(e) {
   function e$(e) {
     eL(e.id), N(eh, e), eg(S, !1)
   }
-  let e0 = W && (0, M.inBrowserAutofillExperiment)();
+  let e0 = W && (0, M.inBrowserAutofillExperiment)().enabled;
   switch (eh) {
     case I.Step.PAYMENT_TYPE:
       t = (0, n.jsx)(eo, {

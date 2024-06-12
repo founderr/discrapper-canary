@@ -1,10 +1,10 @@
 "use strict";
 a.r(t), a.d(t, {
   AwaitingBrowserCheckoutStepBody: function() {
-    return _
+    return N
   },
   AwaitingBrowserCheckoutStepFooter: function() {
-    return N
+    return y
   }
 }), a("315314"), a("610138"), a("216116"), a("78328"), a("815648"), a("47120");
 var n = a("735250"),
@@ -18,37 +18,38 @@ var n = a("735250"),
   d = a("591759"),
   p = a("987209"),
   E = a("598"),
-  m = a("362755"),
-  S = a("981631"),
-  A = a("474936"),
-  f = a("689938"),
-  T = a("42680");
-let _ = e => {
+  m = a("737143"),
+  S = a("362755"),
+  A = a("981631"),
+  f = a("474936"),
+  T = a("689938"),
+  _ = a("42680");
+let N = e => {
     let {
       onPurchaseComplete: t,
       onHandoffFailure: a
     } = e, {
       selectedPlan: u,
       browserCheckoutState: c,
-      browserCheckoutStateLoadId: _,
-      contextMetadata: N
+      browserCheckoutStateLoadId: N,
+      contextMetadata: y
     } = (0, E.usePaymentContext)(), {
-      isGift: y
-    } = (0, p.useGiftContext)(), [C, P] = s.useState(!1), [h, I] = s.useState(3);
+      isGift: C
+    } = (0, p.useGiftContext)(), [P, h] = s.useState(!1), [I, R] = s.useState((0, m.inBrowserAutofillExperiment)().delay ? 3 : 0);
     return s.useEffect(() => {
       var e;
-      if (h > 0) {
+      if (I > 0) {
         let e = setTimeout(() => {
-          I(h - 1)
+          R(I - 1)
         }, 1e3);
         return () => clearTimeout(e)
       }
-      if (!C) P(!0), (0, i.startBrowserCheckout)(N.loadId), ! function(e, t, a, n) {
-        let s = S.Endpoints.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, a),
-          o = new URL(d.default.makeUrl(S.Routes.BILLING_LOGIN_HANDOFF)),
+      if (!P) h(!0), (0, i.startBrowserCheckout)(y.loadId), ! function(e, t, a, n) {
+        let s = A.Endpoints.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, a),
+          o = new URL(d.default.makeUrl(A.Routes.BILLING_LOGIN_HANDOFF)),
           i = (0, r.v4)();
         o.searchParams.append("handoff_key", i), o.searchParams.append("redirect_to", s), l.HTTP.post({
-          url: S.Endpoints.HANDOFF,
+          url: A.Endpoints.HANDOFF,
           body: {
             key: i
           },
@@ -58,24 +59,24 @@ let _ = e => {
         }, () => {
           n()
         })
-      }(null !== (e = null == u ? void 0 : u.id) && void 0 !== e ? e : A.SubscriptionPlans.PREMIUM_MONTH_TIER_2, y, N.loadId, a)
-    }, [u, y, N, a, P, C, I, h]), s.useEffect(() => {
-      _ === N.loadId && c === m.BrowserCheckoutState.DONE && t()
-    }, [c, _, N, t]), (0, n.jsxs)("div", {
-      className: T.body,
+      }(null !== (e = null == u ? void 0 : u.id) && void 0 !== e ? e : f.SubscriptionPlans.PREMIUM_MONTH_TIER_2, C, y.loadId, a)
+    }, [u, C, y, a, h, P, R, I]), s.useEffect(() => {
+      N === y.loadId && c === S.BrowserCheckoutState.DONE && t()
+    }, [c, N, y, t]), (0, n.jsxs)("div", {
+      className: _.body,
       children: [(0, n.jsx)(o.Heading, {
         variant: "heading-xl/bold",
-        children: h > 0 ? f.default.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_MODAL_COUNTDOWN_HEADER.format({
-          countdown: h
-        }) : f.default.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_MODAL_HEADER
+        children: I > 0 ? T.default.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_MODAL_COUNTDOWN_HEADER.format({
+          countdown: I
+        }) : T.default.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_MODAL_HEADER
       }), (0, n.jsx)(o.Text, {
         variant: "text-md/normal",
-        className: T.description,
-        children: f.default.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_MODAL_BODY
+        className: _.description,
+        children: T.default.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_MODAL_BODY
       })]
     })
   },
-  N = e => {
+  y = e => {
     let {
       onPrimaryClick: t,
       onBackClick: a
@@ -86,7 +87,7 @@ let _ = e => {
         align: c.default.Align.CENTER,
         children: [(0, n.jsx)(u.PaymentModalAnchor, {
           onClick: t,
-          children: f.default.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_MODAL_NEXT_BUTTON
+          children: T.default.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_MODAL_NEXT_BUTTON
         }), (0, n.jsx)(u.default, {
           onClick: a
         })]

@@ -15,26 +15,32 @@ let l = (0, n.createExperiment)({
   label: "Checkout Optimization Browser Autofill",
   kind: "user",
   defaultConfig: {
-    enabled: !1
+    enabled: !1,
+    delay: !1
   },
   treatments: [{
     id: 1,
     label: "Enabled",
     config: {
-      enabled: !0
+      enabled: !0,
+      delay: !1
+    }
+  }, {
+    id: 2,
+    label: "Enabled with delay",
+    config: {
+      enabled: !0,
+      delay: !0
     }
   }]
 });
 
 function o() {
-  let {
-    enabled: e
-  } = l.getCurrentConfig({
+  return l.getCurrentConfig({
     location: "5f89bb_3"
   }, {
     autoTrackExposure: !0
-  });
-  return e
+  })
 }
 
 function i(e, t) {
