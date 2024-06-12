@@ -301,6 +301,13 @@ function eu(e) {
         label: n.pinned ? el.default.Messages.UNPIN_MESSAGE : el.default.Messages.PIN_MESSAGE,
         icon: G.default,
         onClick: $.pinMessage
+      }) : null, M && z ? eo({
+        key: "thread",
+        channel: t,
+        message: n,
+        label: el.default.Messages.CREATE_THREAD,
+        icon: W.default,
+        onClick: $.createThread
       }) : null, I && p ? eo({
         key: "reply-self",
         channel: t,
