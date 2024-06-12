@@ -10,7 +10,8 @@ var l = s("120356"),
   u = s("775087");
 let c = () => 4 * Math.random() + 8,
   d = [c(), c(), c()];
-t.default = () => (0, a.jsx)(a.Fragment, {
+t.default = () => (0, a.jsx)("div", {
+  className: r.skeletons,
   children: d.map(e => (0, a.jsxs)("div", {
     className: r.cardsContainer,
     children: [(0, a.jsx)("div", {
