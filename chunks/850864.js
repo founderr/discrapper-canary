@@ -126,8 +126,8 @@ function ee(e) {
   let {
     drag: B,
     dragSourcePosition: F,
-    drop: k,
-    setIsDraggable: w
+    drop: H,
+    setIsDraggable: k
   } = (0, _.default)({
     type: "NEW_MEMBER_ACTION",
     index: S,
@@ -135,9 +135,7 @@ function ee(e) {
     onDragStart: C,
     onDragComplete: R,
     onDragReset: x
-  }), V = l.useCallback((e, t) => {
-    (0, H.updateNewMemberActionIconData)(e.channelId, t)
-  }, []), Y = l.useCallback(() => {
+  }), w = l.useCallback(() => {
     if (null != I) return (0, d.openModalLazy)(async () => {
       let {
         default: e
@@ -146,14 +144,13 @@ function ee(e) {
         ...t,
         guildId: I,
         action: T,
-        onSave: (e, t) => g(S, e, t),
-        onDelete: () => h(S),
-        onIconUpload: V
+        onSave: (e, t, s) => g(S, e, t, s),
+        onDelete: () => h(S)
       })
     })
-  }, [I, T, S, g, h, V]);
+  }, [I, T, S, g, h]);
   if (null == O || null == M) return null;
-  let W = null !== (c = (0, E.getChannelIconComponent)(O)) && void 0 !== c ? c : A.default;
+  let V = null !== (c = (0, E.getChannelIconComponent)(O)) && void 0 !== c ? c : A.default;
   return (0, a.jsxs)("div", {
     className: i()(Z.actionItemContainer),
     children: [(0, a.jsxs)("div", {
@@ -162,11 +159,11 @@ function ee(e) {
         [Z.dropIndicatorAfter]: null != F && S > F,
         [Z.actionItemError]: null != y
       }),
-      ref: e => B(k(e)),
+      ref: e => B(H(e)),
       children: [(0, a.jsx)("div", {
         className: Z.dragContainer,
-        onMouseEnter: () => w(!0),
-        onMouseLeave: () => w(!1),
+        onMouseEnter: () => k(!0),
+        onMouseLeave: () => k(!1),
         children: (0, a.jsx)(v.default, {
           className: Z.dragIcon
         })
@@ -186,7 +183,7 @@ function ee(e) {
           emojiId: null === (o = T.emoji) || void 0 === o ? void 0 : o.id,
           emojiName: null === (u = T.emoji) || void 0 === u ? void 0 : u.name,
           size: N.CTAEmojiSize.MEDIUM,
-          defaultComponent: (0, a.jsx)(W, {})
+          defaultComponent: (0, a.jsx)(V, {})
         })
       }), (0, a.jsxs)("div", {
         className: Z.actionItemText,
@@ -208,7 +205,7 @@ function ee(e) {
           className: Z.actionItemEditButton,
           innerClassName: Z.actionItemEditButtonInner,
           size: d.Button.Sizes.MIN,
-          onClick: Y,
+          onClick: w,
           children: [(0, a.jsx)(j.default, {}), (0, a.jsx)(d.HiddenVisually, {
             children: K.default.Messages.EDIT
           })]
@@ -239,17 +236,15 @@ function et(e) {
     (0, H.saveHomeSettings)(t, a, !0).then(() => {
       null != s && (0, H.updateNewMemberActionIcon)(t, l, s, !0)
     })
-  }, [t]), i = l.useCallback((e, a, l) => {
-    var n;
+  }, [t]), i = l.useCallback((e, a, l, n) => {
+    var i;
     if (null == t) return;
-    let i = null === (n = s[e]) || void 0 === n ? void 0 : n.channelId;
-    if (null == i) return;
-    let r = k.default.getSettings();
+    let r = null === (i = s[e]) || void 0 === i ? void 0 : i.channelId;
     if (null == r) return;
-    let o = k.default.hasActionIconChanged(i);
-    (0, H.updateNewMemberAction)(i, a), (0, H.saveHomeSettings)(t, r, !0).then(() => {
-      (0, H.updateNewMemberActionIcon)(t, i, l, o)
-    })
+    let o = k.default.getSettings();
+    null != o && ((0, H.updateNewMemberAction)(r, a), (0, H.saveHomeSettings)(t, o, !0).then(() => {
+      (0, H.updateNewMemberActionIcon)(t, r, l, n)
+    }))
   }, [s, t]), o = l.useCallback(e => {
     var t;
     let a = null === (t = s[e]) || void 0 === t ? void 0 : t.channelId;
@@ -257,11 +252,16 @@ function et(e) {
   }, [s]), d = s.map(e => ({
     ...e,
     id: e.channelId
-  })), {
-    handleDragStart: u,
-    handleDragReset: c,
-    handleDragComplete: E
-  } = (0, I.default)(d, H.reorderNewMemberActions);
+  })), u = l.useCallback(e => {
+    if (null == t) return;
+    (0, H.reorderNewMemberActions)(e);
+    let s = k.default.getSettings();
+    null != s && (0, H.saveHomeSettings)(t, s, !0)
+  }, [t]), {
+    handleDragStart: c,
+    handleDragReset: E,
+    handleDragComplete: _
+  } = (0, I.default)(d, u);
   return null == t ? null : (0, a.jsxs)("div", {
     className: Z.section,
     children: [s.map((e, s) => (0, a.jsx)(ee, {
@@ -270,9 +270,9 @@ function et(e) {
       actionIndex: s,
       onChange: i,
       onDelete: o,
-      onDragStart: u,
-      onDragReset: c,
-      onDragComplete: E
+      onDragStart: c,
+      onDragReset: E,
+      onDragComplete: _
     }, e.channelId)), (0, a.jsx)(es, {}), s.length < m.NEW_MEMBER_ACTION_MAX && (0, a.jsx)(ea, {
       guildId: t,
       onAddAction: n

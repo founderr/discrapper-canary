@@ -4,46 +4,43 @@ s.r(t), s.d(t, {
     return S
   },
   addResourceChannel: function() {
-    return C
+    return h
   },
   deleteNewMemberAction: function() {
     return m
   },
   deleteResourceChannel: function() {
-    return x
+    return R
   },
   dismissSuggestedChannels: function() {
-    return D
+    return M
   },
   enableHomeSettings: function() {
-    return A
+    return p
   },
   reorderNewMemberActions: function() {
     return N
   },
   reorderResourceChannels: function() {
-    return L
+    return x
   },
   resetHomeSettings: function() {
-    return v
+    return D
   },
   saveHomeSettings: function() {
-    return p
+    return O
   },
   updateNewMemberAction: function() {
     return f
   },
   updateNewMemberActionIcon: function() {
-    return h
-  },
-  updateNewMemberActionIconData: function() {
     return g
   },
   updateResourceChannel: function() {
-    return R
+    return C
   },
   updateResourceChannelIcon: function() {
-    return O
+    return L
   },
   updateWelcomeMessage: function() {
     return T
@@ -97,15 +94,7 @@ function N(e) {
     actions: e
   })
 }
-
-function g(e, t) {
-  i.default.dispatch({
-    type: "GUILD_SETTINGS_ONBOARDING_UPDATE_NEW_MEMBER_ACTION_ICON_DATA",
-    channelId: e,
-    iconData: t
-  })
-}
-async function h(e, t, s, a) {
+async function g(e, t, s, a) {
   if (!a) return Promise.resolve();
   try {
     let a = await n.HTTP.patch({
@@ -133,14 +122,14 @@ async function h(e, t, s, a) {
   }
 }
 
-function C(e) {
+function h(e) {
   i.default.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_ADD_RESOURCE_CHANNEL",
     resourceChannel: e
   })
 }
 
-function R(e, t) {
+function C(e, t) {
   i.default.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_UPDATE_RESOURCE_CHANNEL",
     channelId: e,
@@ -148,20 +137,20 @@ function R(e, t) {
   })
 }
 
-function x(e) {
+function R(e) {
   i.default.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_DELETE_RESOURCE_CHANNEL",
     resourceChannelId: e
   })
 }
 
-function L(e) {
+function x(e) {
   i.default.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_REORDER_RESOURCE_CHANNEL",
     resourceChannels: e
   })
 }
-async function O(e, t, s) {
+async function L(e, t, s) {
   try {
     let a = await n.HTTP.put({
         url: _.Endpoints.RESOURCE_CHANNEL(e, t),
@@ -188,7 +177,7 @@ async function O(e, t, s) {
   }
 }
 
-function p(e, t) {
+function O(e, t) {
   let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   if (!s && !E.default.hasChanges()) return Promise.resolve();
   let {
@@ -197,10 +186,10 @@ function p(e, t) {
   return (!a || o.default.getEnabled(e)) && !(0, d.isSettingsValid)(t) ? (r.default.show({
     title: I.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SAVE_FAILED,
     body: I.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SAVE_FAILED_REASON
-  }), Promise.reject()) : (!a && null != t && (t.enabled = !0), M(e, t))
+  }), Promise.reject()) : (!a && null != t && (t.enabled = !0), A(e, t))
 }
 
-function A(e, t) {
+function p(e, t) {
   let s = o.default.getSettings(e);
   if (t && !(0, d.isSettingsValid)(s)) {
     r.default.show({
@@ -213,12 +202,12 @@ function A(e, t) {
     type: "GUILD_HOME_SETTINGS_TOGGLE_ENABLED",
     guildId: e,
     enabled: t
-  }), M(e, {
+  }), A(e, {
     ...s,
     enabled: t
   })
 }
-async function M(e, t) {
+async function A(e, t) {
   var s, a, o, u, E, T, S, f, m;
   i.default.dispatch({
     type: "GUILD_HOME_SETTINGS_UPDATE_START"
@@ -256,7 +245,7 @@ async function M(e, t) {
   }
 }
 
-function D(e, t) {
+function M(e, t) {
   null != e && i.default.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_DISMISS_RESOURCE_CHANNEL_SUGGESTION",
     guildId: e,
@@ -264,7 +253,7 @@ function D(e, t) {
   })
 }
 
-function v() {
+function D() {
   i.default.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESET"
   })

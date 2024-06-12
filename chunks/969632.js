@@ -21,25 +21,24 @@ let c = {
   E = null,
   _ = Object.assign({}, c),
   I = !1,
-  T = {},
-  S = {};
+  T = {};
 
-function f() {
+function S() {
   (function() {
-    E = null, _ = Object.assign({}, c), I = !1, S = {}
-  })(), E = d.default.getGuildId(), _ = n().cloneDeep(Object.assign({}, o.default.getSettings(E))), S = {}
+    E = null, _ = Object.assign({}, c), I = !1
+  })(), E = d.default.getGuildId(), _ = n().cloneDeep(Object.assign({}, o.default.getSettings(E)))
 }
 
-function m(e, t) {
+function f(e, t) {
   if (null == _.newMemberActions) return !1;
   let s = _.newMemberActions.findIndex(t => t.channelId === e);
   if (s < 0) return !1;
   _.newMemberActions[s] = {
     ...t
-  }, _.newMemberActions = [..._.newMemberActions], delete S[e]
+  }, _.newMemberActions = [..._.newMemberActions]
 }
 
-function N(e, t) {
+function m(e, t) {
   if (null == _.resourceChannels) return !1;
   let s = _.resourceChannels.findIndex(t => t.channelId === e);
   if (s < 0) return !1;
@@ -48,10 +47,10 @@ function N(e, t) {
   }, _.resourceChannels = [..._.resourceChannels]
 }
 
-function g() {
+function N() {
   I = !1, _ = n().cloneDeep(Object.assign({}, o.default.getSettings(E)))
 }
-class h extends(a = i.default.PersistedStore) {
+class g extends(a = i.default.PersistedStore) {
   initialize(e) {
     null != e && (T = e.dismissedSuggestedChannelIdsByGuildId), this.waitFor(d.default, o.default)
   }
@@ -85,41 +84,30 @@ class h extends(a = i.default.PersistedStore) {
     let s = null === (t = _.newMemberActions) || void 0 === t ? void 0 : t.find(t => t.channelId === e);
     return null == s ? null : s
   }
-  getNewMemberActionIconData(e) {
-    var t;
-    return null == e ? null : null !== (t = S[e]) && void 0 !== t ? t : null
-  }
-  hasActionIconChanged(e) {
-    if (null == e) return !1;
-    let t = o.default.getNewMemberAction(E, e);
-    if (null == t) return !1;
-    let s = S[e];
-    return void 0 !== s && (null != s || null != t.icon && null == s)
-  }
 }
-u(h, "displayName", "GuildSettingsOnboardingHomeSettingsStore"), u(h, "persistKey", "GuildSettingsOnboardingHomeSettingsStore"), t.default = new h(r.default, {
-  GUILD_SETTINGS_INIT: f,
-  GUILD_SETTINGS_SET_SECTION: f,
-  GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESET: f,
+u(g, "displayName", "GuildSettingsOnboardingHomeSettingsStore"), u(g, "persistKey", "GuildSettingsOnboardingHomeSettingsStore"), t.default = new g(r.default, {
+  GUILD_SETTINGS_INIT: S,
+  GUILD_SETTINGS_SET_SECTION: S,
+  GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESET: S,
   GUILD_HOME_SETTINGS_FETCH_SUCCESS: function() {
-    _ = n().cloneDeep(Object.assign({}, o.default.getSettings(E))), S = {}
+    _ = n().cloneDeep(Object.assign({}, o.default.getSettings(E)))
   },
   GUILD_HOME_SETTINGS_UPDATE_START: function() {
     I = !0
   },
-  GUILD_HOME_SETTINGS_UPDATE_SUCCESS: g,
-  GUILD_HOME_SETTINGS_UPDATE_FAIL: g,
+  GUILD_HOME_SETTINGS_UPDATE_SUCCESS: N,
+  GUILD_HOME_SETTINGS_UPDATE_FAIL: N,
   GUILD_NEW_MEMBER_ACTION_UPDATE_SUCCESS: function(e) {
     let {
       action: t
     } = e;
-    return m(t.channelId, t)
+    return f(t.channelId, t)
   },
   GUILD_RESOURCE_CHANNEL_UPDATE_SUCCESS: function(e) {
     let {
       resourceChannel: t
     } = e;
-    N(t.channelId, t)
+    m(t.channelId, t)
   },
   GUILD_SETTINGS_ONBOARDING_UPDATE_WELCOME_MESSAGE: function(e) {
     let {
@@ -139,7 +127,7 @@ u(h, "displayName", "GuildSettingsOnboardingHomeSettingsStore"), u(h, "persistKe
       channelId: t,
       action: s
     } = e;
-    return m(t, s)
+    return f(t, s)
   },
   GUILD_SETTINGS_ONBOARDING_ADD_NEW_MEMBER_ACTION: function(e) {
     var t;
@@ -166,7 +154,7 @@ u(h, "displayName", "GuildSettingsOnboardingHomeSettingsStore"), u(h, "persistKe
       channelId: t,
       resourceChannel: s
     } = e;
-    N(t, s)
+    m(t, s)
   },
   GUILD_SETTINGS_ONBOARDING_ADD_RESOURCE_CHANNEL: function(e) {
     var t;
@@ -195,14 +183,5 @@ u(h, "displayName", "GuildSettingsOnboardingHomeSettingsStore"), u(h, "persistKe
       channelIds: a
     } = e;
     T[s] = [...null !== (t = T[s]) && void 0 !== t ? t : [], ...a]
-  },
-  GUILD_SETTINGS_ONBOARDING_UPDATE_NEW_MEMBER_ACTION_ICON_DATA: function(e) {
-    var t;
-    let {
-      channelId: s,
-      iconData: a
-    } = e, l = null === (t = _.newMemberActions) || void 0 === t ? void 0 : t.find(e => e.channelId === s);
-    if (null == l) return !1;
-    S[s] = a, l.icon = null
   }
 })
