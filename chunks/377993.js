@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return w
+    return H
   }
 }), n("47120"), n("653041");
 var a = n("735250"),
@@ -36,9 +36,10 @@ var a = n("735250"),
   j = n("689938"),
   P = n("895294"),
   D = n("67431");
-let b = R.default.getEnableHardwareAcceleration();
+let b = [],
+  U = R.default.getEnableHardwareAcceleration();
 
-function U(e) {
+function F(e) {
   let {
     user: t,
     channel: l,
@@ -84,7 +85,7 @@ function U(e) {
       currentUser: _,
       isOwner: t.id === l.ownerId,
       ownerTooltipText: j.default.Messages.GROUP_OWNER,
-      shouldAnimateStatus: b,
+      shouldAnimateStatus: U,
       isTyping: h,
       status: d,
       activities: c,
@@ -98,7 +99,7 @@ function U(e) {
   })
 }
 
-function F(e) {
+function w(e) {
   var t;
   let {
     integration: i,
@@ -163,7 +164,17 @@ function F(e) {
   }) : null
 }
 
-function w(e) {
+function k(e, t) {
+  if (e.shouldTrackRecentlyOnlineExposure !== t.shouldTrackRecentlyOnlineExposure || e.listItems.length !== t.listItems.length) return !1;
+  for (let n = 0; n < e.listItems.length; n++) {
+    let a = e.listItems[n],
+      l = t.listItems[n];
+    if (a.user !== l.user || a.status !== l.status || a.activities !== l.activities || a.lastOnlineTimestamp !== l.lastOnlineTimestamp) return !1
+  }
+  return !0
+}
+
+function H(e) {
   let {
     channel: t
   } = e, s = S.default.getCurrentUser(), o = null == s ? void 0 : s.isStaff(), {
@@ -178,54 +189,54 @@ function w(e) {
       location: "n/a"
     }, {
       autoTrackExposure: !1
-    }), n = (0, i.useStateFromStoresArray)([S.default], () => (0, M.getRecipients)(e.recipients, S.default), [e.recipients]), a = l.useRef(!1), s = (0, i.useStateFromStoresObject)([g.default, S.default, E.default], () => {
-      let e = {};
-      for (let i of n) {
-        var t, l, s;
-        if (g.default.isFriend(i.id) || i.id === (null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) {
-          let t = E.default.getLastOnlineTimestamp(i.id),
+    });
+    return (0, i.useStateFromStores)([g.default, S.default, E.default], () => {
+      let n = !1,
+        a = (0, M.getRecipients)(e.recipients, S.default),
+        l = {};
+      for (let e of a) {
+        var s, i, r;
+        if (g.default.isFriend(e.id) || e.id === (null === (s = S.default.getCurrentUser()) || void 0 === s ? void 0 : s.id)) {
+          let t = E.default.getLastOnlineTimestamp(e.id),
             {
-              isRecentlyOnlineShowable: n,
-              isRecentlyOnlineTrackable: r
+              isRecentlyOnlineShowable: a,
+              isRecentlyOnlineTrackable: s
             } = (0, h.getRecentlyOnlineStrategy)(t);
-          e[i.id] = {
-            status: null !== (l = E.default.getStatus(i.id)) && void 0 !== l ? l : O.StatusTypes.OFFLINE,
-            activities: null !== (s = E.default.getActivities(i.id)) && void 0 !== s ? s : [],
-            lastOnlineTimestamp: n ? t : void 0
-          }, r && (a.current = !0)
-        } else e[i.id] = {
+          l[e.id] = {
+            status: null !== (i = E.default.getStatus(e.id)) && void 0 !== i ? i : O.StatusTypes.OFFLINE,
+            activities: null !== (r = E.default.getActivities(e.id)) && void 0 !== r ? r : b,
+            lastOnlineTimestamp: a ? t : void 0
+          }, s && (n = !0)
+        } else l[e.id] = {
           status: O.StatusTypes.OFFLINE,
-          activities: []
+          activities: b
         }
       }
-      return e
-    });
-    return l.useMemo(() => {
-      let e = [];
-      for (let t of n) {
-        let n = {
-          user: t,
-          status: s[t.id].status,
-          activities: s[t.id].activities,
-          lastOnlineTimestamp: s[t.id].lastOnlineTimestamp
+      let o = [];
+      for (let e of a) {
+        let t = {
+          user: e,
+          status: l[e.id].status,
+          activities: l[e.id].activities,
+          lastOnlineTimestamp: l[e.id].lastOnlineTimestamp
         };
-        e.push(n)
+        o.push(t)
       }
       if (!t) return {
-        shouldTrackRecentlyOnlineExposure: a.current,
-        listItems: e
+        shouldTrackRecentlyOnlineExposure: n,
+        listItems: o
       };
-      let l = [O.StatusTypes.OFFLINE, O.StatusTypes.INVISIBLE, null, void 0],
-        i = [],
-        r = [],
-        o = [];
-      return e.forEach(e => {
-        l.includes(e.status) ? null != e.lastOnlineTimestamp ? r.push(e) : o.push(e) : i.push(e)
+      let u = [O.StatusTypes.OFFLINE, O.StatusTypes.INVISIBLE, null, void 0],
+        d = [],
+        c = [],
+        f = [];
+      return o.forEach(e => {
+        u.includes(e.status) ? null != e.lastOnlineTimestamp ? c.push(e) : f.push(e) : d.push(e)
       }), {
-        shouldTrackRecentlyOnlineExposure: a.current,
-        listItems: [...i, ...r, ...o]
+        shouldTrackRecentlyOnlineExposure: n,
+        listItems: [...d, ...c, ...f]
       }
-    }, [t, n, s])
+    }, [e, t], k)
   }(t);
   p && h.default.trackExposure({
     location: "private_channel_recipients"
@@ -252,7 +263,7 @@ function w(e) {
       guild_id: t.guild_id
     })
   }, [t.guild_id, t.id, t.type]);
-  let b = o && C.every(e => e.user.isStaff());
+  let U = o && C.every(e => e.user.isStaff());
   return (0, a.jsx)(c.AnalyticsLocationProvider, {
     value: u,
     children: (0, a.jsx)("div", {
@@ -262,11 +273,11 @@ function w(e) {
         fade: !0,
         children: [(0, a.jsxs)(A.default, {
           className: D.membersGroup,
-          children: ["".concat(j.default.Messages.MEMBERS, "—").concat(C.length, " "), b ? (0, a.jsx)(_.default, {
+          children: ["".concat(j.default.Messages.MEMBERS, "—").concat(C.length, " "), U ? (0, a.jsx)(_.default, {
             className: D.__invalid_decorator,
             type: _.default.Types.STAFF_ONLY_DM
           }) : null]
-        }), C.map(e => (0, a.jsx)(U, {
+        }), C.map(e => (0, a.jsx)(F, {
           user: e.user,
           status: e.status,
           activities: e.activities,
@@ -276,7 +287,7 @@ function w(e) {
           children: [(0, a.jsx)(A.default, {
             className: D.membersGroup,
             children: "".concat(j.default.Messages.APPS, "—").concat(x.length)
-          }), x.map(e => (0, a.jsx)(F, {
+          }), x.map(e => (0, a.jsx)(w, {
             integration: e,
             channel: t
           }, e.application.id)), L.length > 0 && (0, a.jsx)(I.default, {
