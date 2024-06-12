@@ -669,7 +669,6 @@ class eg extends l.PureComponent {
           note: el.default.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE.format({
             helpdeskArticle: W.default.getArticleURL(en.HelpdeskArticles.DATA_USED_FOR_RECOMMENDED)
           }),
-          hideBorder: !0,
           onChange: this.handlePersonalizationChange,
           children: el.default.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE
         })
@@ -699,6 +698,8 @@ class eg extends l.PureComponent {
               m.default.setSection(en.UserSettingsSections.ACCOUNT)
             }
           })
+        }), (0, i.jsx)(_.FormDivider, {
+          className: eo.marginBottom20
         })]
       }), (0, i.jsx)(F.Subsetting, {
         setting: ea.WebSetting.PRIVACY_DATA_REQUEST,
@@ -743,9 +744,7 @@ class eg extends l.PureComponent {
     }), r = null), null != r && (r = (0, i.jsx)(Y.default, {
       children: r
     })), (0, i.jsxs)(l.Fragment, {
-      children: [(0, i.jsx)(_.FormDivider, {
-        className: eo.marginBottom20
-      }), (0, i.jsx)(_.FormTitle, {
+      children: [(0, i.jsx)(_.FormTitle, {
         tag: _.FormTitleTags.H3,
         children: el.default.Messages.DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE
       }), (0, i.jsx)(_.FormText, {
