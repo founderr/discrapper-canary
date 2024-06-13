@@ -7,7 +7,7 @@ s.r(t), s.d(t, {
     return T
   },
   getSKUIdFromURL: function() {
-    return c
+    return o
   }
 }), s("757143"), s("47120");
 var n = s("913527"),
@@ -18,12 +18,12 @@ var u = s("981631"),
   i = s("689938");
 let l = {},
   E = {},
-  o = Object.freeze({
+  c = Object.freeze({
     ALL: -1,
     ...u.SKUGenres
   });
 
-function c(e) {
+function o(e) {
   let t = (0, a.matchPath)(e, {
     path: u.Routes.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug")
   });
@@ -162,13 +162,21 @@ function _(e) {
       return i.default.Messages.APPLICATION_STORE_GENRE_PINBALL;
     case u.SKUGenres.TRIVIA_BOARD_GAME:
       return i.default.Messages.APPLICATION_STORE_GENRE_TRIVIA_BOARD_GAME;
+    case u.SKUGenres.TACTICAL:
+      return i.default.Messages.APPLICATION_STORE_GENRE_TACTICAL;
+    case u.SKUGenres.INDIE:
+      return i.default.Messages.APPLICATION_STORE_GENRE_INDIE;
+    case u.SKUGenres.ARCADE:
+      return i.default.Messages.APPLICATION_STORE_GENRE_ARCADE;
+    case u.SKUGenres.POINT_AND_CLICK:
+      return i.default.Messages.APPLICATION_STORE_GENRE_POINT_AND_CLICK;
     default:
       return i.default.Messages.APPLICATION_STORE_GENRE_MISCELLANEOUS
   }
 }
-Object.keys(o).forEach(e => {
+Object.keys(c).forEach(e => {
   let t = e.toLowerCase().replace(/_/g, "-"),
-    s = o[e];
+    s = c[e];
   l[t] = s, E[s] = t
 });
 let d = [
