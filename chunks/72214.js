@@ -43,8 +43,8 @@ function A(e) {
     }
   })(t), [t]), {
     queryMode: T
-  } = m;
-  s.useEffect(() => {
+  } = m, [g, y] = s.useState(null != A ? A : []);
+  s.useLayoutEffect(() => {
     let {
       query: e,
       resultTypes: t
@@ -52,12 +52,8 @@ function A(e) {
     I({
       query: e,
       resultTypes: t
-    })
-  }, [I, m]);
-  let [g, y] = s.useState(null != A ? A : []);
-  s.useEffect(() => {
-    y(null != A ? A : [])
-  }, [S]), (0, u.useFrecencySettings)();
+    }), y(null != A ? A : [])
+  }, [I, m]), (0, u.useFrecencySettings)();
   let C = (0, a.useStateFromStores)([o.default], () => o.default.getFrequentlyWithoutFetchingLatest()),
     N = (0, a.useStateFromStores)([n.default], () => n.default.isConnected()),
     L = "" !== S;
