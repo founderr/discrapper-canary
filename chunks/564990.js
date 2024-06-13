@@ -10,15 +10,18 @@ n.r(t), n.d(t, {
 var i = n("544891"),
   r = n("881052"),
   s = n("981631");
-let a = async () => {
+let a = async e => {
+  let {
+    token: t
+  } = e;
   try {
     let e = (await i.HTTP.get({
-        url: s.Endpoints.MY_CONTENT_INVENTORY
+        url: s.Endpoints.MY_CONTENT_INVENTORY(t)
       })).body,
-      t = e.wait_ms_until_next_fetch;
-    if (null != t) {
-      let n = new Date(Date.now() + t);
-      e.expired_at = n.toISOString()
+      n = e.wait_ms_until_next_fetch;
+    if (null != n) {
+      let t = new Date(Date.now() + n);
+      e.expired_at = t.toISOString()
     }
     return e
   } catch (e) {

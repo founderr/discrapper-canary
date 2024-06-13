@@ -49,26 +49,29 @@ function R() {
   if (C(), !O()) return;
   let e = c.default.getFeed(T);
   if ((null == e ? void 0 : e.refresh_stale_inbox_after_ms) != null && null == A) return;
-  let t = null != A ? A : null == e ? void 0 : e.expired_at,
-    n = null == t ? 0 : new Date(t).getTime() - Date.now();
+  let t = (null == e ? void 0 : e.expired_at) == null ? 0 : new Date(e.expired_at).getTime() - Date.now(),
+    n = Math.max(0, null == A ? 0 : new Date(A).getTime() - Date.now(), t);
   N({
     loading: !1,
     nextFetchDate: new Date(Date.now() + n)
-  }), f = setTimeout(() => g(), Math.max(0, n))
+  }), f = setTimeout(() => g(), n)
 }
 async function g() {
   let {
     force: e = !1
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
   if (O() || e) try {
+    let e = c.default.getFeed(T);
     S = !0, N({
       loading: !0
     });
-    let e = await (0, _.getMyContentInventory)();
+    let t = await (0, _.getMyContentInventory)({
+      token: null == e ? void 0 : e.refresh_token
+    });
     r.default.dispatch({
       type: "CONTENT_INVENTORY_SET_FEED",
       feedId: T,
-      feed: e
+      feed: t
     }), h = 0, S = !1, N({
       loading: !1
     }), A = null, R()
