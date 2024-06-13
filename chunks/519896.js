@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("735250"),
-  r = n("470079"),
-  l = n("269210"),
+  l = n("470079"),
+  r = n("269210"),
   a = n("752843"),
   s = n("368072"),
   o = n("789703"),
@@ -23,47 +23,48 @@ function m(e) {
     groupListingId: n,
     groupListingType: m,
     guildId: h,
-    onClose: v,
-    skuId: T,
-    transitionState: I
-  } = e, _ = (0, o.useGetSubscriptionListing__DO_NOT_USE)(T), g = r.useMemo(() => {
+    onClose: T,
+    skuId: v,
+    transitionState: _,
+    onHeaderTitleClick: I
+  } = e, g = (0, o.useGetSubscriptionListing__DO_NOT_USE)(v), x = l.useMemo(() => {
     var e;
-    return (null == _ ? void 0 : _.image_asset) != null && null !== (e = c.default.toURLSafe((0, d.getAssetURL)(t, _.image_asset, 256))) && void 0 !== e ? e : void 0
-  }, [t, null == _ ? void 0 : _.image_asset]), x = r.useMemo(() => {
+    return (null == g ? void 0 : g.image_asset) != null && null !== (e = c.default.toURLSafe((0, d.getAssetURL)(t, g.image_asset, 256))) && void 0 !== e ? e : void 0
+  }, [t, null == g ? void 0 : g.image_asset]), E = l.useMemo(() => {
     var e;
-    return null == _ ? void 0 : null === (e = _.store_listing_benefits) || void 0 === e ? void 0 : e.map(e => ({
+    return null == g ? void 0 : null === (e = g.store_listing_benefits) || void 0 === e ? void 0 : e.map(e => ({
       id: e.id,
       title: e.name,
       description: e.description,
       icon: (0, u.getBenefitIcon)(t, e.icon)
     }))
-  }, [t, null == _ ? void 0 : _.store_listing_benefits]);
-  if (null == _) return null;
-  let E = _.subscription_plans.length > 0 ? _.subscription_plans[0] : null;
-  return null == E ? null : (0, i.jsx)(f.CardDetailsModal, {
+  }, [t, null == g ? void 0 : g.store_listing_benefits]);
+  if (null == g) return null;
+  let C = g.subscription_plans.length > 0 ? g.subscription_plans[0] : null;
+  return null == C ? null : (0, i.jsx)(f.CardDetailsModal, {
     appId: t,
-    transitionState: I,
-    onHeaderTitleClick: v,
-    onClose: v,
+    transitionState: _,
+    onHeaderTitleClick: null != I ? I : T,
+    onClose: T,
     footer: (0, i.jsx)(S.SubscriptionPurchaseButton, {
       appId: t,
       groupListingId: n,
       groupListingType: m,
       guildId: h,
-      skuId: T,
-      subPlan: E
+      skuId: v,
+      subPlan: C
     }),
     children: (0, i.jsx)(p.TrackedCardDetails, {
       appId: t,
-      skuId: T,
-      benefits: null != x ? x.map(e => (0, i.jsx)(l.SubscriptionCardBenefit, {
+      skuId: v,
+      benefits: null != E ? E.map(e => (0, i.jsx)(r.SubscriptionCardBenefit, {
         name: e.title,
         icon: e.icon,
         description: e.description
       }, e.id)) : void 0,
-      description: _.description,
-      imgSrc: g,
-      title: _.name,
+      description: g.description,
+      imgSrc: x,
+      title: g.name,
       tag: (0, i.jsx)(a.SubscriptionTag, {
         type: m
       }),

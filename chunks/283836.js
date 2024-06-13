@@ -8,10 +8,10 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var i = n("470079"),
-  l = n("442837"),
-  a = n("241159"),
-  r = n("496929"),
-  s = n("558381"),
+  r = n("442837"),
+  l = n("241159"),
+  s = n("496929"),
+  a = n("558381"),
   o = n("270144"),
   u = n("238");
 
@@ -21,20 +21,21 @@ function d(e, t) {
   }, [e]);
   let {
     subscriptionGroupListing: n
-  } = (0, o.useActiveSubscriptionListingForApplication)(e, t), a = null == n ? void 0 : n.subscription_listings;
-  return (0, l.useStateFromStoresObject)([u.default], () => {
+  } = (0, o.useActiveSubscriptionListingForApplication)(e, t), l = null == n ? void 0 : n.subscription_listings;
+  return (0, r.useStateFromStoresObject)([u.default], () => {
     var t;
     let {
-      subscriptions: n,
-      otps: i
-    } = u.default.getStoreLayout(e), l = new Set(n.map(e => e.id));
+      subscriptions: i,
+      otps: r
+    } = u.default.getStoreLayout(e), s = new Set(i.map(e => e.id));
     return {
-      subs: null !== (t = null == a ? void 0 : a.filter(e => l.has(e.id))) && void 0 !== t ? t : [],
-      otps: i
+      subs: null !== (t = null == l ? void 0 : l.filter(e => s.has(e.id))) && void 0 !== t ? t : [],
+      otps: r,
+      subscriptionGroupListing: null != n ? n : void 0
     }
-  }, [e, a])
+  }, [e, l, n])
 }
 
 function c(e) {
-  (0, a.fetchStoreDirectoryLayout)(e), (0, s.fetchAllStoreListingsForApplication)(e), (0, r.fetchUserEntitlementsForApplication)(e, !1)
+  (0, l.fetchStoreDirectoryLayout)(e), (0, a.fetchAllStoreListingsForApplication)(e), (0, s.fetchUserEntitlementsForApplication)(e, !1)
 }

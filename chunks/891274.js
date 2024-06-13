@@ -29,6 +29,8 @@ function u(e) {
     else if (t === a.CodedLinkType.GUILD_PRODUCT);
     else if (t === a.CodedLinkType.SERVER_SHOP);
     else if (t === a.CodedLinkType.QUESTS_EMBED);
+    else if (t === a.CodedLinkType.APP_DIRECTORY_STOREFRONT);
+    else if (t === a.CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU);
     else throw Error("Unknown coded link type: ".concat(t))
   })
 }

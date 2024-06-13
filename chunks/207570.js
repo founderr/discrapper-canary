@@ -41,30 +41,28 @@ function E(e) {
 }
 
 function I(e) {
-  var t;
   let {
-    application: r,
-    user: a,
-    guildId: l
-  } = e, d = null !== (t = (0, u.default)({
-    user: a,
-    guildId: l
-  }).subscriptionGroupListing) && void 0 !== t ? t : void 0;
-  return (0, i.jsx)(o.StorefrontButton, {
-    onClick: () => (function(e, t, r) {
+    application: t,
+    user: r,
+    guildId: a
+  } = e;
+  return (0, u.default)({
+    user: r,
+    guildId: a
+  }), (0, i.jsx)(o.StorefrontButton, {
+    onClick: () => (function(e, t) {
       (0, s.openModalLazy)(async () => {
         let {
-          default: s
-        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("29549"), n.e("31605"), n.e("77172"), n.e("91947"), n.e("98538")]).then(n.bind(n, "7225"));
-        return n => (0, i.jsx)(s, {
+          default: r
+        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("29549"), n.e("31605"), n.e("77172"), n.e("89131"), n.e("88772")]).then(n.bind(n, "7225"));
+        return n => (0, i.jsx)(r, {
           transitionState: n.transitionState,
           onClose: n.onClose,
           appId: e.id,
-          subscriptionGroupListing: t,
-          guildId: r
+          guildId: t
         })
       })
-    })(r, d, l),
+    })(t, a),
     className: c.button,
     size: s.ButtonSizes.SMALL
   })

@@ -797,6 +797,7 @@ let eA = {
                   event: ed.AnalyticEvents.QUEST_LINK_SHARED,
                   trackGuildAndChannelMetadata: !0
                 });
+                else if (t === T.CodedLinkType.APP_DIRECTORY_STOREFRONT || t === T.CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU);
                 else throw Error("Unknown coded link type: ".concat(t))
               })
             }({

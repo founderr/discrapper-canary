@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   ItemDetailsModal: function() {
-    return v
+    return T
   }
 });
 var i = n("735250");
 n("470079");
-var r = n("752843"),
-  l = n("790472"),
+var l = n("752843"),
+  r = n("790472"),
   a = n("442837"),
   s = n("55563"),
   o = n("551428"),
@@ -20,28 +20,29 @@ var r = n("752843"),
   m = n("981631"),
   h = n("689938");
 
-function v(e) {
-  var t, n, v, T;
+function T(e) {
+  var t, n, T, v;
   let {
-    onClose: I,
-    transitionState: _,
+    onClose: _,
+    transitionState: I,
     skuId: g,
-    appId: x
-  } = e, E = (0, a.useStateFromStores)([o.default], () => o.default.getForSKU(g), [g]), N = (0, a.useStateFromStores)([s.default], () => s.default.get(g), [g]), C = (0, c.useHasActiveEntitlement)(g);
-  if (null == N) return null;
-  let j = null !== (n = N.name) && void 0 !== n ? n : "",
-    R = null !== (v = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== v ? v : void 0,
-    L = (null == E ? void 0 : E.headerBackground) != null && null !== (T = d.default.toURLSafe((0, u.getAssetURL)(x, E.headerBackground, 256))) && void 0 !== T ? T : void 0,
-    A = N.type === m.SKUTypes.DURABLE && C,
-    b = N.type === m.SKUTypes.DURABLE ? A ? h.default.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : h.default.Messages.STOREFRONT_DURABLE_AVAILABILITY : void 0,
-    {
-      price: y
-    } = N;
-  return null == y ? null : (0, i.jsx)(f.CardDetailsModal, {
     appId: x,
-    transitionState: _,
-    onHeaderTitleClick: I,
-    onClose: I,
+    onHeaderTitleClick: E
+  } = e, C = (0, a.useStateFromStores)([o.default], () => o.default.getForSKU(g), [g]), N = (0, a.useStateFromStores)([s.default], () => s.default.get(g), [g]), j = (0, c.useHasActiveEntitlement)(g);
+  if (null == N) return null;
+  let R = null !== (n = N.name) && void 0 !== n ? n : "",
+    L = null !== (T = null == C ? void 0 : null === (t = C.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== T ? T : void 0,
+    A = (null == C ? void 0 : C.headerBackground) != null && null !== (v = d.default.toURLSafe((0, u.getAssetURL)(x, C.headerBackground, 256))) && void 0 !== v ? v : void 0,
+    b = N.type === m.SKUTypes.DURABLE && j,
+    y = N.type === m.SKUTypes.DURABLE ? b ? h.default.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : h.default.Messages.STOREFRONT_DURABLE_AVAILABILITY : void 0,
+    {
+      price: O
+    } = N;
+  return null == O ? null : (0, i.jsx)(f.CardDetailsModal, {
+    appId: x,
+    transitionState: I,
+    onHeaderTitleClick: null != E ? E : _,
+    onClose: _,
     footer: (0, i.jsx)(S.ItemPurchaseButton, {
       appId: x,
       sku: N
@@ -49,13 +50,13 @@ function v(e) {
     children: (0, i.jsx)(p.TrackedCardDetails, {
       appId: x,
       skuId: N.id,
-      title: j,
-      description: R,
-      imgSrc: L,
-      tag: null != b ? (0, i.jsx)(r.Tag, {
-        text: b
+      title: R,
+      description: L,
+      imgSrc: A,
+      tag: null != y ? (0, i.jsx)(l.Tag, {
+        text: y
       }) : void 0,
-      FallbackIcon: l.TicketIcon
+      FallbackIcon: r.TicketIcon
     })
   })
 }

@@ -1,19 +1,27 @@
 "use strict";
-n.r(t), n.d(t, {
+i.r(t), i.d(t, {
   fetchStoreDirectoryLayout: function() {
-    return r
+    return s
   }
 });
-var i = n("544891"),
-  l = n("570140"),
-  a = n("981631");
+var n = i("544891"),
+  l = i("570140"),
+  a = i("981631");
 
-function r(e) {
-  return i.HTTP.get({
+function s(e) {
+  return l.default.dispatch({
+    type: "APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING",
+    applicationId: e
+  }), n.HTTP.get({
     url: a.Endpoints.STORE_LAYOUT(e)
   }).then(t => (l.default.dispatch({
     type: "APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS",
     applicationId: e,
     listings: t.body
-  }), t.body))
+  }), t.body)).catch(() => {
+    l.default.dispatch({
+      type: "APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED",
+      applicationId: e
+    })
+  })
 }

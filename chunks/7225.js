@@ -1,90 +1,93 @@
 "use strict";
 s.r(e), s.d(e, {
   default: function() {
-    return L
+    return E
   }
 }), s("47120");
-var l, a, i = s("735250"),
+var a, l, i = s("735250"),
   n = s("470079"),
-  r = s("442837"),
-  o = s("481060"),
-  C = s("728345"),
+  o = s("442837"),
+  r = s("481060"),
+  u = s("728345"),
   d = s("812206"),
-  u = s("886176"),
-  c = s("283836"),
+  c = s("886176"),
+  p = s("270144"),
+  f = s("283836"),
   h = s("507608"),
-  p = s("689938"),
-  f = s("135143");
+  m = s("689938"),
+  N = s("135143");
 
-function L(t) {
+function E(t) {
   let {
     onClose: e,
     transitionState: s,
-    appId: l,
-    guildId: a,
-    subscriptionGroupListing: L
-  } = t, m = (0, r.useStateFromStores)([d.default], () => d.default.getApplication(l), [l]), [x, g] = n.useState(() => d.default.isFetchingApplication(l) ? {
+    appId: a,
+    guildId: l
+  } = t, E = (0, o.useStateFromStores)([d.default], () => d.default.getApplication(a), [a]), [S, R] = n.useState(() => d.default.isFetchingApplication(a) ? {
     status: 1
   } : {
     status: 0
-  }), j = n.useRef(null), [v, N] = n.useState(!0), R = () => {
+  }), g = n.useRef(null), [C, T] = n.useState(!0), j = () => {
     var t;
-    (null === (t = j.current) || void 0 === t ? void 0 : t.isScrolledToBottom()) === !0 ? N(!1) : N(!0)
+    (null === (t = g.current) || void 0 === t ? void 0 : t.isScrolledToBottom()) === !0 ? T(!1) : T(!0)
   };
   n.useEffect(() => {
-    0 === x.status && (g({
+    0 === S.status && (R({
       status: 1
-    }), C.default.fetchApplication(l).then(() => {
-      g({
+    }), u.default.fetchApplication(a).then(() => {
+      R({
         status: 2
       })
     }).catch(t => {
-      g({
+      R({
         status: 3,
         error: t.message
       })
     }))
-  }, [l, x.status]);
+  }, [a, S.status]);
   let {
-    subs: E,
-    otps: H
-  } = (0, c.useRefreshedStorefrontProducts)(l, a);
-  if (null == m) return null;
-  let M = p.default.Messages.STOREFRONT_TITLE.format({
-    appName: m.name
+    subs: x,
+    otps: F,
+    subscriptionGroupListing: v
+  } = (0, f.useRefreshedStorefrontProducts)(a, l);
+  if ((0, p.useFetchListingsForApplication)(a, null == E ? void 0 : E.primarySkuId, {
+      refetchOnMount: !0
+    }), null == E) return null;
+  let M = m.default.Messages.STOREFRONT_TITLE.format({
+    appName: E.name
   });
-  return (0, i.jsxs)(o.ModalRoot, {
+  return (0, i.jsxs)(r.ModalRoot, {
     transitionState: s,
     "aria-label": M,
-    size: o.ModalSize.DYNAMIC,
-    className: f.modal,
-    children: [(0, i.jsxs)(o.ModalHeader, {
-      className: f.modalHeader,
+    size: r.ModalSize.DYNAMIC,
+    className: N.modal,
+    children: [(0, i.jsxs)(r.ModalHeader, {
+      className: N.modalHeader,
       children: [(0, i.jsxs)("div", {
-        className: f.modalTitle,
-        children: [(0, i.jsx)(u.default, {}), (0, i.jsx)(o.Heading, {
+        className: N.modalTitle,
+        children: [(0, i.jsx)(c.default, {}), (0, i.jsx)(r.Heading, {
           variant: "heading-md/semibold",
           children: M
         })]
-      }), (0, i.jsx)(o.ModalCloseButton, {
+      }), (0, i.jsx)(r.ModalCloseButton, {
         onClick: e,
-        className: f.modalCloseBtn
+        className: N.modalCloseBtn
       })]
-    }), (0, i.jsx)(o.ModalContent, {
+    }), (0, i.jsx)(r.ModalContent, {
       scrollerRef: t => {
-        null != t && (j.current = t, R())
+        null != t && (g.current = t, j())
       },
-      onScroll: R,
+      onScroll: j,
       children: (0, i.jsx)(h.AppStorefront, {
-        app: m,
-        subscriptionGroupListing: L,
-        guildId: a,
-        subscriptionListings: E,
-        otpListings: H
+        app: E,
+        subscriptionGroupListing: v,
+        guildId: l,
+        subscriptionListings: x,
+        otpListings: F
       })
     }), (0, i.jsx)("div", {
-      className: f.containerScrollGradient,
-      "data-shown": v
+      className: N.containerScrollGradient,
+      "data-shown": C
     })]
   })
-}(a = l || (l = {}))[a.NONE = 0] = "NONE", a[a.FETCHING = 1] = "FETCHING", a[a.FETCHED = 2] = "FETCHED", a[a.ERROR = 3] = "ERROR"
+}(l = a || (a = {}))[l.NONE = 0] = "NONE", l[l.FETCHING = 1] = "FETCHING", l[l.FETCHED = 2] = "FETCHED", l[l.ERROR = 3] = "ERROR"
