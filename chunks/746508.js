@@ -446,6 +446,7 @@ class eW extends s.PureComponent {
     if (null == t) return null;
     let d = (0, U.computeChannelName)(t, ep.default, eS.default);
     return null != n ? (e = ex.Routes.CHANNEL(n.id, t.id), d = "".concat(d, " / ").concat(n.name)) : e = ex.Routes.CHANNEL(ex.ME, t.id), o && t.isBroadcastChannel() && (d = eU.default.Messages.BROADCASTING), (0, a.jsx)(I.default, {
+      channelId: t.id,
       statusTextClassName: ej.statusWithPopout,
       quality: s,
       state: l,

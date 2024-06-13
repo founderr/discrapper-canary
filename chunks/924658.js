@@ -568,8 +568,15 @@ e.exports = Object.freeze({
   E2EE_VERIFICATION_CODE: "Verification Code",
   E2EE_USER_VERIFY_MODAL_SUBTITLE: "Compare the numbers below with {username}. If they match, mark them as verified.",
   E2EE_VOICE_PRIVACY_CODE: "Voice Privacy Code",
-  E2EE_USER_VERIFY_FOOTER_TEXT: "A new code is generated when either of you join a call or change devices. Learn more about end-to-end encryption.",
+  E2EE_USER_VERIFY_FOOTER_TEXT: "A new code is generated when either of you join a call or change devices. [Learn more about end-to-end encryption.]({helpArticle})",
   E2EE_CLEAR_VERIFICATION: "Clear Verification",
   E2EE_MARK_AS_VERIFIED: "Mark as Verified",
-  E2EE_VIEW_VERIFICATION_CODE: "View Verification Code"
+  E2EE_VIEW_VERIFICATION_CODE: "View Verification Code",
+  E2EE_VOICE_DETAILS: "Voice Details",
+  E2EE_CONNECTION: "Connection",
+  E2EE_PRIVACY: "Privacy",
+  E2EE_RTC_PANEL_CONNECTION: "End-to-end encryption",
+  E2EE_OVERVIEW_TITLE: "End-to-end encrypted",
+  E2EE_OVERVIEW_SUBTITLE: "Only you and your friends on this call can hear you. Nobody else – not even Wumpus – can listen in!",
+  E2EE_OVERVIEW_FOOTER_TEXT: "A new code is generated when people join or leave this call. [Learn more about end-to-end encryption.]({helpArticle})"
 })

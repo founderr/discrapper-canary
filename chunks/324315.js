@@ -4,48 +4,36 @@ var l = n("735250"),
   a = n("470079"),
   s = n("120356"),
   i = n.n(s),
-  r = n("442837"),
-  o = n("761414"),
-  u = n("590739"),
-  d = n("792304"),
-  c = n("319643"),
-  f = n("481060"),
-  h = n("210887"),
-  m = n("19780"),
-  C = n("72416"),
-  p = n("476221"),
-  g = n("236756"),
-  E = n("981631"),
-  S = n("854903");
-let _ = {
-    [E.RTCConnectionQuality.UNKNOWN]: f.Tooltip.Colors.BLACK,
-    [E.RTCConnectionQuality.BAD]: f.Tooltip.Colors.RED,
-    [E.RTCConnectionQuality.AVERAGE]: f.Tooltip.Colors.YELLOW,
-    [E.RTCConnectionQuality.FINE]: f.Tooltip.Colors.GREEN
+  r = n("761414"),
+  o = n("590739"),
+  u = n("792304"),
+  d = n("319643"),
+  c = n("481060"),
+  f = n("873596"),
+  h = n("72416"),
+  m = n("476221"),
+  C = n("981631"),
+  p = n("854903");
+let g = {
+    [C.RTCConnectionQuality.UNKNOWN]: c.Tooltip.Colors.BLACK,
+    [C.RTCConnectionQuality.BAD]: c.Tooltip.Colors.RED,
+    [C.RTCConnectionQuality.AVERAGE]: c.Tooltip.Colors.YELLOW,
+    [C.RTCConnectionQuality.FINE]: c.Tooltip.Colors.GREEN
   },
-  I = {
-    [E.ConnectionStatus.CONNECTED]: S.rtcConnectionStatusConnected,
-    [E.ConnectionStatus.CONNECTING]: S.rtcConnectionStatusConnecting,
-    [E.ConnectionStatus.ERROR]: S.rtcConnectionStatusError
+  E = {
+    [C.ConnectionStatus.CONNECTED]: p.rtcConnectionStatusConnected,
+    [C.ConnectionStatus.CONNECTING]: p.rtcConnectionStatusConnecting,
+    [C.ConnectionStatus.ERROR]: p.rtcConnectionStatusError
   },
-  N = {
-    [E.RTCConnectionQuality.FINE]: S.rtcConnectionQualityFine,
-    [E.RTCConnectionQuality.AVERAGE]: S.rtcConnectionQualityAverage,
-    [E.RTCConnectionQuality.BAD]: S.rtcConnectionQualityBad,
-    [E.RTCConnectionQuality.UNKNOWN]: null
-  },
-  T = r.default.connectStores([m.default, h.default], () => ({
-    theme: h.default.theme,
-    connectionState: m.default.getState(),
-    hostname: m.default.getHostname(),
-    averagePing: m.default.getAveragePing(),
-    lastPing: m.default.getLastPing(),
-    outboundLossRate: m.default.getOutboundLossRate(),
-    pings: m.default.getPings()
-  }))(g.default);
-class A extends a.PureComponent {
+  S = {
+    [C.RTCConnectionQuality.FINE]: p.rtcConnectionQualityFine,
+    [C.RTCConnectionQuality.AVERAGE]: p.rtcConnectionQualityAverage,
+    [C.RTCConnectionQuality.BAD]: p.rtcConnectionQualityBad,
+    [C.RTCConnectionQuality.UNKNOWN]: null
+  };
+class _ extends a.PureComponent {
   renderPopoutTarget(e) {
-    return (0, l.jsx)(f.Popout, {
+    return (0, l.jsx)(c.Popout, {
       renderPopout: this.renderPopout,
       position: "top",
       children: e
@@ -59,15 +47,15 @@ class A extends a.PureComponent {
     } = this.props, {
       connectionStatus: a,
       connectionStatusText: s
-    } = p.default.getStatus(n, t);
+    } = m.default.getStatus(n, t);
     return this.renderPopoutTarget(t => {
       let {
         onClick: n
       } = t;
-      return (0, l.jsx)(f.Button, {
-        look: f.Button.Looks.BLANK,
-        size: f.Button.Sizes.NONE,
-        className: i()(e, I[a]),
+      return (0, l.jsx)(c.Button, {
+        look: c.Button.Looks.BLANK,
+        size: c.Button.Sizes.NONE,
+        className: i()(e, E[a]),
         onClick: n,
         children: s
       })
@@ -83,19 +71,19 @@ class A extends a.PureComponent {
       className: r,
       children: o
     } = this.props;
-    return s === E.RTCConnectionStates.RTC_CONNECTED && (e = (0, l.jsx)(f.Tooltip, {
-      text: t !== E.RTCConnectionQuality.UNKNOWN && null != a ? "".concat(a.toFixed(0), " ms") : null,
-      color: _[t],
-      children: e => (0, l.jsx)(L, {
+    return s === C.RTCConnectionStates.RTC_CONNECTED && (e = (0, l.jsx)(c.Tooltip, {
+      text: t !== C.RTCConnectionQuality.UNKNOWN && null != a ? "".concat(a.toFixed(0), " ms") : null,
+      color: g[t],
+      children: e => (0, l.jsx)(I, {
         quality: t,
         smallPing: n,
         ...e
       })
     })), (0, l.jsxs)("div", {
       children: [(0, l.jsxs)("div", {
-        className: i()(S.rtcConnectionStatus, N[t], r),
+        className: i()(p.rtcConnectionStatus, S[t], r),
         children: [e, (0, l.jsx)("div", {
-          className: S.labelWrapper,
+          className: p.labelWrapper,
           children: this.renderStatus()
         })]
       }), o]
@@ -103,7 +91,8 @@ class A extends a.PureComponent {
   }
   constructor(...e) {
     var t, n, a;
-    super(...e), t = this, n = "renderPopout", a = e => (0, l.jsx)(T, {
+    super(...e), t = this, n = "renderPopout", a = e => (0, l.jsx)(f.default, {
+      channelId: this.props.channelId,
       ...e
     }), n in t ? Object.defineProperty(t, n, {
       value: a,
@@ -114,31 +103,31 @@ class A extends a.PureComponent {
   }
 }
 
-function L(e) {
+function I(e) {
   let {
     quality: t,
     smallPing: n,
     ...a
   } = e;
-  if (!(0, f.useRedesignIconContext)().enabled) return (0, l.jsx)(C.default, {
-    className: i()(S.ping, {
-      [S.smallPing]: n
+  if (!(0, c.useRedesignIconContext)().enabled) return (0, l.jsx)(h.default, {
+    className: i()(p.ping, {
+      [p.smallPing]: n
     }),
-    foreground: S.pingForeground
+    foreground: p.pingForeground
   });
   {
     let e = {
-      [E.RTCConnectionQuality.FINE]: d.ConnectionFineIcon,
-      [E.RTCConnectionQuality.AVERAGE]: o.ConnectionAverageIcon,
-      [E.RTCConnectionQuality.BAD]: u.ConnectionBadIcon,
-      [E.RTCConnectionQuality.UNKNOWN]: c.ConnectionUnknownIcon
+      [C.RTCConnectionQuality.FINE]: u.ConnectionFineIcon,
+      [C.RTCConnectionQuality.AVERAGE]: r.ConnectionAverageIcon,
+      [C.RTCConnectionQuality.BAD]: o.ConnectionBadIcon,
+      [C.RTCConnectionQuality.UNKNOWN]: d.ConnectionUnknownIcon
     } [t];
     return (0, l.jsx)(e, {
-      className: i()(S.ping, {
-        [S.smallPing]: n
+      className: i()(p.ping, {
+        [p.smallPing]: n
       }),
       ...a
     })
   }
 }
-t.default = A
+t.default = _

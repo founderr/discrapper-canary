@@ -21,7 +21,7 @@ var l = n("735250"),
   I = n("981631"),
   N = n("65154"),
   T = n("689938"),
-  A = n("743335");
+  A = n("569421");
 let L = () => {
   h.default.getMediaEngine().once(o.MediaEngineEvent.ConnectionStats, e => {
     let t = Object.values(N.MediaEngineContextTypes).map(t => {
@@ -104,10 +104,11 @@ t.default = function(e) {
       })
     }, [e]),
     {
-      connectionState: i
+      connectionState: i,
+      connectionTypeText: o
     } = e,
-    o = f.DeveloperMode.getSetting(),
-    E = {
+    E = f.DeveloperMode.getSetting(),
+    v = {
       [I.RTCConnectionStates.AWAITING_ENDPOINT]: T.default.Messages.RTC_CONNECTION_STATE_AWAITING_ENDPOINT.format({
         url: I.Links.STATUS
       }),
@@ -127,50 +128,46 @@ t.default = function(e) {
       }),
       [I.RTCConnectionStates.RTC_DISCONNECTED]: T.default.Messages.RTC_CONNECTION_STATE_DISCONNECTED
     } [i];
-  return (0, l.jsx)("div", {
-    className: A.container,
-    children: (0, l.jsxs)("section", {
-      className: A.section,
-      children: ["function" == typeof E ? E() : (0, l.jsx)("p", {
-        className: r()(A.popoutText, A.popoutTextDetails),
-        children: E
-      }), (0, l.jsx)("hr", {
-        className: A.separator
-      }), (0, l.jsxs)("div", {
-        className: A.popoutBottom,
-        children: [(0, l.jsxs)("span", {
-          className: r()(A.secured, A.textWithIcon),
-          children: [(0, l.jsx)(p.default, {
+  return (0, l.jsxs)(l.Fragment, {
+    children: ["function" == typeof v ? v() : (0, l.jsx)("p", {
+      className: r()(A.popoutText, A.popoutTextDetails),
+      children: v
+    }), (0, l.jsx)("hr", {
+      className: A.separator
+    }), (0, l.jsxs)("div", {
+      className: A.popoutBottom,
+      children: [(0, l.jsxs)("span", {
+        className: r()(A.secured, A.textWithIcon),
+        children: [(0, l.jsx)(p.default, {
+          width: 12,
+          height: 12,
+          color: u.tokens.colors.TEXT_POSITIVE.css,
+          className: A.__invalid_icon
+        }), o]
+      }), E && h.default.supports(N.Features.DIAGNOSTICS) && !__OVERLAY__ && (0, l.jsxs)(l.Fragment, {
+        children: [(0, l.jsxs)(u.Anchor, {
+          className: r()(A.debugButton, A.textWithIcon),
+          onClick: t,
+          children: [T.default.Messages.DEBUG, (0, l.jsx)(C.default, {
+            className: A.__invalid_icon,
             width: 12,
-            height: 12,
-            color: u.tokens.colors.TEXT_POSITIVE.css,
-            className: A.__invalid_icon
-          }), T.default.Messages.SECURE_CONNECTION]
-        }), o && h.default.supports(N.Features.DIAGNOSTICS) && !__OVERLAY__ && (0, l.jsxs)(l.Fragment, {
-          children: [(0, l.jsxs)(u.Anchor, {
-            className: r()(A.debugButton, A.textWithIcon),
-            onClick: t,
-            children: [T.default.Messages.DEBUG, (0, l.jsx)(C.default, {
-              className: A.__invalid_icon,
-              width: 12,
-              height: 12
-            })]
-          }), (0, l.jsxs)(u.Anchor, {
-            className: r()(A.copyStatsButton, A.textWithIcon),
-            onClick: L,
-            title: "Copy to clipboard",
-            children: [T.default.Messages.COPY_STATS, (0, l.jsx)(m.default, {
-              className: A.__invalid_icon,
-              width: 12,
-              height: 12
-            })]
+            height: 12
           })]
-        }), !o && !__OVERLAY__ && (0, l.jsx)(u.Anchor, {
-          className: A.debugButton,
-          href: S.default.getArticleURL(I.HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING),
-          children: T.default.Messages.LEARN_MORE
+        }), (0, l.jsxs)(u.Anchor, {
+          className: r()(A.copyStatsButton, A.textWithIcon),
+          onClick: L,
+          title: "Copy to clipboard",
+          children: [T.default.Messages.COPY_STATS, (0, l.jsx)(m.default, {
+            className: A.__invalid_icon,
+            width: 12,
+            height: 12
+          })]
         })]
+      }), !E && !__OVERLAY__ && (0, l.jsx)(u.Anchor, {
+        className: A.debugButton,
+        href: S.default.getArticleURL(I.HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING),
+        children: T.default.Messages.LEARN_MORE
       })]
-    })
+    })]
   })
 }

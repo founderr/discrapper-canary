@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return x
   }
 });
 var s = n("735250"),
@@ -17,22 +17,23 @@ var s = n("735250"),
   E = n("571463"),
   C = n("71328"),
   S = n("498126"),
-  m = n("689938"),
+  m = n("63454"),
+  I = n("689938"),
   h = n("55915");
 
-function I(e) {
+function x(e) {
   let {
     transitionState: t,
     userId: n,
-    channelId: I,
-    onClose: x
-  } = e, T = (0, d.useUID)(), N = (0, l.useStateFromStores)([c.default], () => c.default.getUser(n)), g = (0, l.useStateFromStores)([i.default], () => {
+    channelId: x,
+    onClose: T
+  } = e, N = (0, d.useUID)(), g = (0, l.useStateFromStores)([c.default], () => c.default.getUser(n)), p = (0, l.useStateFromStores)([i.default], () => {
     var e;
-    return null === (e = i.default.getChannel(I)) || void 0 === e ? void 0 : e.getGuildId()
-  }), p = f.default.useName(g, null, N), v = "12345 67890 12345 67890 12345 67890 12345 67890 12345 67890 12345 67890", y = r.useCallback(() => x(), [x]), R = r.useCallback(() => x(), [x]), _ = (0, E.useIsUserSecureFramesVerified)(n, I);
+    return null === (e = i.default.getChannel(x)) || void 0 === e ? void 0 : e.getGuildId()
+  }), R = f.default.useName(p, null, g), _ = "12345 67890 12345 67890 12345 67890 12345 67890 12345 67890 12345 67890", v = r.useCallback(() => T(), [T]), y = r.useCallback(() => T(), [T]), D = (0, E.useIsUserSecureFramesVerified)(n, x);
   return (0, s.jsxs)(o.ModalRoot, {
     transitionState: t,
-    "aria-labelledby": T,
+    "aria-labelledby": N,
     children: [(0, s.jsx)("div", {
       className: h.shieldIconContainer,
       children: (0, s.jsx)("div", {
@@ -49,13 +50,13 @@ function I(e) {
         className: h.title,
         variant: "heading-lg/bold",
         color: "header-primary",
-        children: m.default.Messages.E2EE_VERIFICATION_CODE
+        children: I.default.Messages.E2EE_VERIFICATION_CODE
       }), (0, s.jsx)(o.Text, {
         className: h.subtitle,
         variant: "text-md/normal",
         color: "header-secondary",
-        children: m.default.Messages.E2EE_USER_VERIFY_MODAL_SUBTITLE.format({
-          username: p
+        children: I.default.Messages.E2EE_USER_VERIFY_MODAL_SUBTITLE.format({
+          username: R
         })
       }), (0, s.jsxs)("div", {
         className: h.verification,
@@ -64,39 +65,41 @@ function I(e) {
           children: [(0, s.jsx)(o.Heading, {
             variant: "text-sm/bold",
             color: "header-primary",
-            children: m.default.Messages.E2EE_VOICE_PRIVACY_CODE
+            children: I.default.Messages.E2EE_VOICE_PRIVACY_CODE
           }), (0, s.jsx)(S.SecureFramesCopyIcon, {
             className: h.copyIcon,
-            text: v,
+            text: _,
             color: o.tokens.colors.INTERACTIVE_NORMAL
           }), (0, s.jsx)(o.TextBadge, {
-            text: m.default.Messages.NEW,
+            text: I.default.Messages.NEW,
             color: u.default.STATUS_DANGER
           })]
         }), (0, s.jsx)(C.SecureFramesCode, {
           className: h.code,
-          code: v
+          code: _
         })]
       }), (0, s.jsx)(o.Text, {
         className: h.details,
         variant: "text-sm/normal",
         color: "text-muted",
-        children: m.default.Messages.E2EE_USER_VERIFY_FOOTER_TEXT
+        children: I.default.Messages.E2EE_USER_VERIFY_FOOTER_TEXT.format({
+          helpArticle: m.E2EE_HELPDESK_ARTICLE
+        })
       }), (0, s.jsx)(o.Button, {
         fullWidth: !0,
         className: h.verifiedButton,
-        color: _ ? o.ButtonColors.RED : o.ButtonColors.BRAND,
+        color: D ? o.ButtonColors.RED : o.ButtonColors.BRAND,
         size: o.ButtonSizes.MEDIUM,
         look: o.ButtonLooks.FILLED,
-        onClick: _ ? R : y,
-        children: _ ? m.default.Messages.E2EE_CLEAR_VERIFICATION : m.default.Messages.E2EE_MARK_AS_VERIFIED
+        onClick: D ? y : v,
+        children: D ? I.default.Messages.E2EE_CLEAR_VERIFICATION : I.default.Messages.E2EE_MARK_AS_VERIFIED
       }), (0, s.jsx)(o.Button, {
         fullWidth: !0,
         color: o.ButtonColors.PRIMARY,
         size: o.ButtonSizes.MEDIUM,
         look: o.ButtonLooks.FILLED,
-        onClick: x,
-        children: m.default.Messages.CANCEL
+        onClick: T,
+        children: I.default.Messages.CANCEL
       })]
     })]
   })
