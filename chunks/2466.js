@@ -22,6 +22,7 @@ function s() {
       num: 24
     }),
     [l.PollDurations.THREE_DAYS]: n.default.Messages.CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS,
-    [l.PollDurations.SEVEN_DAYS]: n.default.Messages.CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS
+    [l.PollDurations.SEVEN_DAYS]: n.default.Messages.CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS,
+    [l.PollDurations.FOURTEEN_DAYS]: n.default.Messages.CREATE_POLL_DURATION_OPTION_LABEL_14_DAYS
   })
 }

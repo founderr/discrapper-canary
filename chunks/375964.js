@@ -17106,6 +17106,7 @@ e.exports = Object.freeze({
   CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS: "{num, plural, one {{num} hour} other {{num} hours}}",
   CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 days",
   CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 week",
+  CREATE_POLL_DURATION_OPTION_LABEL_14_DAYS: "2 weeks",
   CREATE_POLL_DURATION_SELECTION_ARIA_LABEL: "Poll will be live for {duration}",
   CREATE_POLL_POLL_DURATION_HEADING: "Poll Duration",
   CREATE_POLL_DURATION_BUTTON_A11Y_HINT: "Tap to change poll duration",
