@@ -95,12 +95,9 @@ function B() {
     }), (0, a.jsx)(S.Subsetting, {
       setting: L.WebSetting.VOICE_AND_VIDEO_VOLUME_CONTROLS,
       children: (0, a.jsx)(D.default, {})
-    }), (0, a.jsx)(S.Subsetting, {
-      setting: L.WebSetting.VOICE_AND_VIDEO_MIC_TEST,
-      children: (0, a.jsx)(O.default, {})
     }), (0, a.jsxs)(S.Subsetting, {
-      setting: L.WebSetting.VOICE_AND_VIDEO_TROUBLESHOOTING,
-      children: [(0, a.jsx)(o.FormText, {
+      setting: L.WebSetting.VOICE_AND_VIDEO_MIC_TEST,
+      children: [(0, a.jsx)(O.default, {}), (0, a.jsx)(o.FormText, {
         className: U.marginBottom20,
         type: o.FormText.Types.DESCRIPTION,
         children: v.default.Messages.FORM_HELP_VOICE_VIDEO_TROUBLESHOOTING_GUIDE.format({
@@ -226,7 +223,10 @@ function B() {
               children: v.default.Messages.DISPLAY_SILENCE_WARNING
             })
           })]
-        }), W && (0, a.jsx)(m.default, {}), (0, a.jsx)(S.Subsetting, {
+        }), W && (0, a.jsx)(S.Subsetting, {
+          setting: L.WebSetting.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
+          children: (0, a.jsx)(m.default, {})
+        }), (0, a.jsx)(S.Subsetting, {
           setting: L.WebSetting.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,
           children: (0, a.jsx)(o.FormItem, {
             children: (0, a.jsx)(o.Button, {
