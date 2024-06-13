@@ -13,7 +13,7 @@ var r = n("120356"),
   l = n("481060"),
   u = n("785717"),
   d = n("702557"),
-  _ = n("537387"),
+  _ = n("993409"),
   c = n("689938"),
   E = n("66073");
 
@@ -32,6 +32,7 @@ function I(e) {
     }), null == r || r()
   };
   return null == T || "" === T ? (0, i.jsx)(_.default, {
+    variant: "icon",
     text: c.default.Messages.ADD_NOTE,
     "aria-label": c.default.Messages.ADD_NOTE,
     icon: o.PaperPlusIcon,
@@ -42,6 +43,7 @@ function I(e) {
       [E.visible]: n
     })
   }) : (0, i.jsx)(_.default, {
+    variant: "icon",
     text: T,
     "aria-label": T,
     icon: a.PaperIcon,

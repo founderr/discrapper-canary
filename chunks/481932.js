@@ -20,7 +20,7 @@ var r = n("442837"),
   T = n("465670"),
   f = n("877485"),
   S = n("785717"),
-  h = n("537387"),
+  h = n("993409"),
   A = n("228168"),
   m = n("981631"),
   N = n("689938");
@@ -37,7 +37,7 @@ function p(e) {
     originalFriendingEnabled: R,
     improvedFriendingEnabled: g
   } = (0, f.useSimplifiedProfileFriendingExperiment)({
-    location: "UserProfileFriendRequestOverlayButtons"
+    location: "UserProfileFriendRequestBannerButtons"
   }), L = (0, r.useStateFromStores)([E.default], () => E.default.getId() === (null == t ? void 0 : t.id)), v = (0, r.useStateFromStores)([I.default], () => null != t ? I.default.getRelationshipType(t.id) : m.RelationshipTypes.NONE), {
     analyticsLocations: D,
     newestAnalyticsLocation: M
@@ -65,17 +65,20 @@ function p(e) {
       })
     },
     children: e => (0, i.jsx)(h.default, {
+      variant: "banner",
       icon: a.UserCheckIcon,
       text: N.default.Messages.FRIENDS,
       ...e
     })
   });
   if (v === m.RelationshipTypes.PENDING_INCOMING) return g && O === A.UserProfileTypes.FULL_SIZE ? null : (g || R) && O !== A.UserProfileTypes.PANEL ? (0, i.jsx)(h.default, {
+    variant: "banner",
     icon: o.UserClockIcon,
     text: N.default.Messages.FRIENDS_SECTION_PENDING,
     disabled: !0
   }) : (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(h.default, {
+      variant: "banner",
       icon: e => (0, i.jsx)(s.CheckmarkLargeIcon, {
         ...e,
         color: null != p ? p : u.tokens.colors.TEXT_BRAND
@@ -93,6 +96,7 @@ function p(e) {
         })
       }
     }), (0, i.jsx)(h.default, {
+      variant: "banner",
       icon: T.default,
       text: N.default.Messages.IGNORE_FRIEND_REQUEST,
       onClick: () => {
@@ -105,10 +109,12 @@ function p(e) {
     })]
   });
   return v === m.RelationshipTypes.PENDING_OUTGOING && (!g || g && O === A.UserProfileTypes.BITE_SIZE) ? (0, i.jsx)(h.default, {
+    variant: "banner",
     icon: o.UserClockIcon,
     text: g || R ? N.default.Messages.FRIENDS_SECTION_PENDING : N.default.Messages.REQUEST_SENT,
     disabled: !0
   }) : !g || g && O === A.UserProfileTypes.BITE_SIZE ? (0, i.jsx)(h.default, {
+    variant: "banner",
     icon: l.UserPlusIcon,
     text: N.default.Messages.ADD_FRIEND,
     onClick: () => {

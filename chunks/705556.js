@@ -33,9 +33,11 @@ function f(e) {
     trackUserProfileAction: N
   } = (0, _.useUserProfileAnalyticsContext)(), p = (0, a.default)(), O = m && f === I.UserProfileTypes.FULL_SIZE ? void 0 : u.default;
   return h ? null == A ? (0, i.jsx)(E.default, {
+    variant: "text",
     icon: O,
     text: T.default.Messages.EDIT_PROFILE,
     autoFocus: !0,
+    fullWidth: !0,
     onClick: () => {
       N({
         action: "EDIT_PROFILE"
@@ -54,9 +56,11 @@ function f(e) {
       })
     },
     children: e => (0, i.jsx)(E.default, {
+      variant: "text",
       icon: O,
       text: T.default.Messages.EDIT_PROFILE,
       autoFocus: !0,
+      fullWidth: !0,
       ...e
     })
   }) : null

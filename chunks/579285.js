@@ -130,12 +130,12 @@ let C = (0, c.default)(function(e) {
               })
             })
           }), G && (0, i.jsx)(m.default, {
+            variant: c.length > 0 ? "icon" : "text",
             buttonRef: k,
             guild: s,
             guildMember: _,
             highestRole: E,
-            onAddRole: h,
-            compact: c.length > 0
+            onAddRole: h
           })]
         })
       }

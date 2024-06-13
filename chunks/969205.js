@@ -9,7 +9,7 @@ n("470079");
 var s = n("300284"),
   l = n("185403"),
   i = n("785717"),
-  r = n("537387"),
+  r = n("993409"),
   o = n("689938");
 
 function u(e) {
@@ -19,6 +19,7 @@ function u(e) {
     trackUserProfileAction: n
   } = (0, i.useUserProfileAnalyticsContext)(), u = (0, s.default)();
   return (0, a.jsx)(r.default, {
+    variant: "banner",
     icon: l.default,
     text: o.default.Messages.EDIT_PROFILE,
     onClick: () => {

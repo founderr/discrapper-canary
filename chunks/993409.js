@@ -14,42 +14,38 @@ var r = n("120356"),
 
 function u(e) {
   let {
-    text: t,
-    icon: n,
-    compact: r,
-    className: u,
-    innerClassName: d,
-    disabled: _ = !1,
-    ...c
-  } = e, E = null != n ? (0, i.jsx)(n, {
-    width: 16,
-    height: 16,
-    color: "currentColor"
-  }) : null;
-  return r ? (0, i.jsx)(o.TooltipContainer, {
-    text: t,
-    "aria-label": c["aria-label"],
-    shouldShow: !_,
-    disableTooltipPointerEvents: _,
-    children: (0, i.jsx)(a.Button, {
-      className: s()(l.compactButton, u),
-      innerClassName: s()(l.compactButtonInner, d),
-      color: s()(a.ButtonColors.PRIMARY, l.color),
+    variant: t,
+    text: n,
+    icon: r,
+    tooltipDelay: u,
+    tooltipClassName: d,
+    className: _,
+    innerClassName: c,
+    ...E
+  } = e, I = {
+    [l.text]: "text" === t,
+    [l.icon]: "icon" === t,
+    [l.banner]: "banner" === t
+  };
+  return (0, i.jsx)(o.TooltipContainer, {
+    text: n,
+    "aria-label": E["aria-label"],
+    delay: u,
+    tooltipClassName: d,
+    shouldShow: "text" !== t,
+    children: (0, i.jsxs)(a.Button, {
+      className: s()(l.button, I, _),
+      innerClassName: s()(l.buttonInner, I, c),
+      color: s()(a.ButtonColors.PRIMARY, l.color, I),
       look: a.Button.Looks.FILLED,
-      size: a.Button.Sizes.NONE,
-      grow: !1,
-      disabled: _,
-      ...c,
-      children: E
+      size: "text" === t ? a.Button.Sizes.SMALL : a.Button.Sizes.NONE,
+      grow: "text" === t,
+      ...E,
+      children: [null != r && (0, i.jsx)(r, {
+        width: 16,
+        height: 16,
+        color: "currentColor"
+      }), "text" === t && n]
     })
-  }) : (0, i.jsxs)(a.Button, {
-    className: u,
-    innerClassName: s()(l.button, d),
-    color: s()(a.ButtonColors.PRIMARY, l.color),
-    look: a.Button.Looks.FILLED,
-    size: a.Button.Sizes.SMALL,
-    disabled: _,
-    ...c,
-    children: [E, t]
   })
 }

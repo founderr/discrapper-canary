@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return A
+    return g
   }
 }), l("47120");
 var s = l("735250"),
@@ -18,12 +18,12 @@ var s = l("735250"),
   E = l("785717"),
   I = l("256226"),
   m = l("678738"),
-  _ = l("314172"),
-  v = l("981631"),
-  p = l("689938"),
-  T = l("323353");
+  v = l("314172"),
+  _ = l("981631"),
+  T = l("689938"),
+  p = l("323353");
 
-function g(e) {
+function x(e) {
   let {
     user: t,
     currentUser: l,
@@ -33,27 +33,27 @@ function g(e) {
     highestRole: f,
     canManageRoles: E,
     onAddRole: m,
-    onRemoveRole: g
-  } = e, A = (0, o.useStateFromStores)([c.default], () => c.default.getRoles(r.id)), C = i.useMemo(() => Object.values(A).filter(e => d.includes(e.id)).sort((e, t) => {
+    onRemoveRole: x
+  } = e, g = (0, o.useStateFromStores)([c.default], () => c.default.getRoles(r.id)), A = i.useMemo(() => Object.values(g).filter(e => d.includes(e.id)).sort((e, t) => {
     var l, s;
     let i = (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) !== null,
       a = (null === (s = t.tags) || void 0 === s ? void 0 : s.guild_connections) !== null;
     return i && !a ? 1 : !i && a ? -1 : 0
-  }), [A, d]), x = E && null != u, N = i.useMemo(() => "roles-".concat((0, a.v4)()), []), U = (0, n.default)({
+  }), [g, d]), C = E && null != u, N = i.useMemo(() => "roles-".concat((0, a.v4)()), []), U = (0, n.default)({
     id: N,
     isEnabled: !0,
-    scrollToStart: v.NOOP_PROMISE,
-    scrollToEnd: v.NOOP_PROMISE,
+    scrollToStart: _.NOOP_PROMISE,
+    scrollToEnd: _.NOOP_PROMISE,
     wrap: !0
-  }), P = C.length, h = 0 === P ? p.default.Messages.ROLE_LIST_EMPTY : p.default.Messages.ROLES_LIST.format({
+  }), P = A.length, h = 0 === P ? T.default.Messages.ROLE_LIST_EMPTY : T.default.Messages.ROLES_LIST.format({
     numRoles: P
-  }), R = C.map(e => {
+  }), R = A.map(e => {
     var i;
     return (0, s.jsx)(I.default, {
       role: e,
       guildId: r.id,
       disableBorderColor: !0,
-      onRemove: () => g(e),
+      onRemove: () => x(e),
       canRemove: E ? S.isRoleHigher(r, l.id, f, e) : (null === (i = e.tags) || void 0 === i ? void 0 : i.guild_connections) === null && t.id === l.id
     }, e.id)
   });
@@ -66,16 +66,16 @@ function g(e) {
           ...l
         } = e;
         return (0, s.jsxs)("div", {
-          className: T.root,
+          className: p.root,
           "aria-label": h,
           ref: t,
           ...l,
-          children: [R, x && (0, s.jsx)(_.default, {
+          children: [R, C && (0, s.jsx)(v.default, {
+            variant: A.length > 0 ? "icon" : "text",
             guild: r,
             guildMember: u,
             highestRole: f,
-            onAddRole: m,
-            compact: C.length > 0
+            onAddRole: m
           })]
         })
       }
@@ -83,7 +83,7 @@ function g(e) {
   })
 }
 
-function A(e) {
+function g(e) {
   let {
     user: t,
     currentUser: l,
@@ -91,32 +91,32 @@ function A(e) {
     scrollIntoView: n
   } = e, {
     trackUserProfileAction: c
-  } = (0, E.useUserProfileAnalyticsContext)(), I = (0, o.useStateFromStores)([d.default], () => d.default.getMember(a.id, t.id)), _ = null == I ? void 0 : I.roles, T = null == _ || 0 === _.length, A = S.getHighestRole(a, l.id), [C] = (0, o.useStateFromStoresArray)([f.default], () => [f.default.can(v.Permissions.MANAGE_ROLES, a), null != a ? f.default.getGuildVersion(a.id) : null]), x = i.useCallback(e => {
+  } = (0, E.useUserProfileAnalyticsContext)(), I = (0, o.useStateFromStores)([d.default], () => d.default.getMember(a.id, t.id)), v = null == I ? void 0 : I.roles, p = null == v || 0 === v.length, g = S.getHighestRole(a, l.id), [A] = (0, o.useStateFromStoresArray)([f.default], () => [f.default.can(_.Permissions.MANAGE_ROLES, a), null != a ? f.default.getGuildVersion(a.id) : null]), C = i.useCallback(e => {
     var l, s;
     c({
       action: "REMOVE_ROLE"
     });
-    let i = null !== (s = null == _ ? void 0 : _.filter(t => t !== e.id)) && void 0 !== s ? s : [];
+    let i = null !== (s = null == v ? void 0 : v.filter(t => t !== e.id)) && void 0 !== s ? s : [];
     (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) === null ? r.default.unassignGuildRoleConnection(a.id, e.id) : u.default.updateMemberRoles(a.id, t.id, i, [], [e.id])
-  }, [_, a.id, t.id, c]), N = i.useCallback(e => {
+  }, [v, a.id, t.id, c]), N = i.useCallback(e => {
     c({
       action: "ADD_ROLE"
     });
-    let l = null != _ ? _ : []; - 1 === l.indexOf(e) && (l = l.concat([e])), u.default.updateMemberRoles(a.id, t.id, l, [e], [])
-  }, [_, a.id, t.id, c]);
-  return T && !C ? null : (0, s.jsx)(m.default, {
-    title: p.default.Messages.ROLES,
+    let l = null != v ? v : []; - 1 === l.indexOf(e) && (l = l.concat([e])), u.default.updateMemberRoles(a.id, t.id, l, [e], [])
+  }, [v, a.id, t.id, c]);
+  return p && !A ? null : (0, s.jsx)(m.default, {
+    title: T.default.Messages.ROLES,
     scrollIntoView: n,
-    children: (0, s.jsx)(g, {
+    children: (0, s.jsx)(x, {
       user: t,
       currentUser: l,
       guild: a,
       guildMember: I,
-      userRoles: null != _ ? _ : [],
-      highestRole: A,
-      canManageRoles: C,
+      userRoles: null != v ? v : [],
+      highestRole: g,
+      canManageRoles: A,
       onAddRole: N,
-      onRemoveRole: x
+      onRemoveRole: C
     })
   })
 }

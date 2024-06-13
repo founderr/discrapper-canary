@@ -15,19 +15,18 @@ var i = l("493683"),
 function u(e) {
   let {
     user: t,
-    compact: l,
-    onClose: u
+    onClose: l
   } = e, {
-    trackUserProfileAction: d
+    trackUserProfileAction: u
   } = (0, n.useUserProfileAnalyticsContext)();
   return (0, s.jsx)(o.default, {
+    variant: "text",
     icon: a.default,
     text: r.default.Messages.USER_PROFILE_MESSAGE,
     onClick: () => {
-      d({
+      u({
         action: "SEND_MESSAGE"
-      }), i.default.openPrivateChannel(t.id), null == u || u()
-    },
-    compact: l
+      }), i.default.openPrivateChannel(t.id), null == l || l()
+    }
   })
 }

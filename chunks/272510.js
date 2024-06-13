@@ -16,7 +16,7 @@ var r = n("442837"),
   _ = n("314897"),
   c = n("808268"),
   E = n("785717"),
-  I = n("537387"),
+  I = n("993409"),
   T = n("228168"),
   f = n("689938");
 
@@ -85,6 +85,7 @@ function S(e) {
           ...n
         } = e;
         return (0, i.jsx)(I.default, {
+          variant: "banner",
           text: f.default.Messages.MORE,
           icon: c.default,
           onClick: e => {

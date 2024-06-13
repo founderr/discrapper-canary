@@ -20,7 +20,9 @@ function o(e) {
   return t ? (0, l.jsx)("footer", {
     className: s.footer,
     children: !o && (0, l.jsx)(i.default, {
-      text: n.default.Messages.USER_SETTINGS_CUSTOMIZE_PROFILE_EXAMPLE_BUTTON
+      variant: "text",
+      text: n.default.Messages.USER_SETTINGS_CUSTOMIZE_PROFILE_EXAMPLE_BUTTON,
+      fullWidth: !0
     })
   }) : (0, l.jsx)("footer", {
     inert: "",

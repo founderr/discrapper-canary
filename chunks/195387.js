@@ -14,7 +14,7 @@ var r = n("442837"),
   u = n("314897"),
   d = n("944486"),
   _ = n("785717"),
-  c = n("537387"),
+  c = n("993409"),
   E = n("176505"),
   I = n("50493"),
   T = n("689938");
@@ -31,6 +31,7 @@ function f(e) {
     newestAnalyticsLocation: A
   } = (0, a.default)(), m = (0, r.useStateFromStores)([u.default], () => u.default.getId() === (null == t ? void 0 : t.id)), N = (0, l.useCanAccessGuildMemberModView)(null != n ? n : null, !0), p = (0, r.useStateFromStores)([d.default], () => null != f ? f : d.default.getChannelId(n, !0), [f, n]);
   return null == n || !N || m ? null : (0, i.jsx)(c.default, {
+    variant: "banner",
     icon: s.ModerationIcon,
     text: T.default.Messages.GUILD_MEMBER_MOD_VIEW_TITLE,
     onClick: () => {
