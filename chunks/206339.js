@@ -159,8 +159,9 @@ t.default = function() {
     Q = m.OutboundPromoDesktopUpsellExperiment.useExperiment({
       location: "EntitlementGifts"
     }, {
-      autoTrackExposure: !0
-    }).enabled && !i && K;
+      autoTrackExposure: !i,
+      disable: i
+    }).enabled && K;
 
   function z() {
     T.default.open(j.UserSettingsSections.PREMIUM)

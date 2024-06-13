@@ -53,16 +53,18 @@ function f() {
         return n.id === e.promotion.id
       }) ? t : [...t, e])
     }, []),
-    O = d.OutboundPromoDesktopUpsellExperiment.useExperiment({
+    O = l.default.isPremium(n),
+    C = d.OutboundPromoDesktopUpsellExperiment.useExperiment({
       location: "useOutboundPromotions"
     }, {
-      autoTrackExposure: !0
-    }).enabled || (0, l.isPremiumExactly)(n, I.PremiumTypes.TIER_2);
+      autoTrackExposure: !O,
+      disable: O
+    }).enabled || l.default.isPremiumExactly(n, I.PremiumTypes.TIER_2);
   i.useEffect(() => {
     s.default.wait(() => {
-      O && null == e && c.default.fetchActiveOutboundPromotions()
+      C && null == e && c.default.fetchActiveOutboundPromotions()
     })
-  }, [e, O]), i.useEffect(() => {
+  }, [e, C]), i.useEffect(() => {
     s.default.wait(() => {
       (0, _.fetchClaimedOutboundPromotionCodes)().then(e => {
         N(e), A(!0)
@@ -71,29 +73,29 @@ function f() {
       })
     })
   }, []);
-  let C = {};
+  let R = {};
   for (let {
       code: e,
       promotion: t
     }
-    of m) C[t.id] = e;
-  let R = new Set(t.map(e => {
+    of m) R[t.id] = e;
+  let g = new Set(t.map(e => {
       let {
         id: t
       } = e;
       return t
     })),
-    g = m.filter(e => {
+    L = m.filter(e => {
       let {
         promotion: t
       } = e;
-      return !R.has(t.id)
+      return !g.has(t.id)
     });
   return {
-    promotionsLoaded: h && (!O || null != e),
-    activeOutboundPromotions: t.filter(e => (0, _.shouldShowOutboundPromotionOnPlatform)(e) && (!(f || S) || (0, _.isTrialUserEligibleToSeeOutboundPromotion)(e, C))),
-    claimedEndedOutboundPromotions: g.filter(e => (0, _.shouldShowOutboundPromotionOnPlatform)(e.promotion)),
-    claimedOutboundPromotionCodeMap: C,
+    promotionsLoaded: h && (!C || null != e),
+    activeOutboundPromotions: t.filter(e => (0, _.shouldShowOutboundPromotionOnPlatform)(e) && (!(f || S) || (0, _.isTrialUserEligibleToSeeOutboundPromotion)(e, R))),
+    claimedEndedOutboundPromotions: L.filter(e => (0, _.shouldShowOutboundPromotionOnPlatform)(e.promotion)),
+    claimedOutboundPromotionCodeMap: R,
     addClaimedOutboundPromotionCode: p
   }
 }
