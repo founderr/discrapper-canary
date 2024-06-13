@@ -50,62 +50,54 @@ function y(e) {
     (0, i.showToast)((0, i.createToast)(m.default.Messages.COPIED_LINK, i.ToastType.LINK)), (0, A.copy)(a)
   }, [t, l]), w = a.useCallback(() => {
     b("")
-  }, [b]), z = a.useRef(null);
-  a.useEffect(() => {
-    if ("" === R) {
-      var e;
-      null === (e = z.current) || void 0 === e || e.focus()
+  }, [b]), z = a.useCallback(e => {
+    O(t => {
+      let l = t.findIndex(t => {
+        let {
+          type: l,
+          id: s
+        } = t;
+        return l === e.type && s === e.id
+      });
+      if (-1 === l) return P ? t : (b(""), [e, ...t]);
+      let s = [...t];
+      return s.splice(l, 1), s
+    })
+  }, [P]), W = a.useCallback(async () => {
+    let e = c.default.getMessage(t, l);
+    if (null == e) {
+      (0, i.showToast)((0, i.createToast)(m.default.Messages.ERROR_GENERIC_TITLE, i.ToastType.FAILURE));
+      return
     }
-  }, [R]);
-  let W = a.useCallback(e => {
-      O(t => {
-        let l = t.findIndex(t => {
-          let {
-            type: l,
-            id: s
-          } = t;
-          return l === e.type && s === e.id
-        });
-        if (-1 === l) return P ? t : (b(""), [e, ...t]);
-        let s = [...t];
-        return s.splice(l, 1), s
-      })
-    }, [P]),
-    Q = a.useCallback(async () => {
-      let e = c.default.getMessage(t, l);
-      if (null == e) {
-        (0, i.showToast)((0, i.createToast)(m.default.Messages.ERROR_GENERIC_TITLE, i.ToastType.FAILURE));
-        return
-      }
-      x(!0);
-      let s = M.map(r.destinationChannel).filter(_.isNotNullish);
-      (0, S.closeForwardModal)(), 1 === s.length && (0, u.transitionToChannel)(s[0]);
-      let a = await E.default.sendForwards(e, s, C);
-      if (a.every(e => {
-          let {
-            status: t
-          } = e;
-          return "fulfilled" === t
-        })) {
-        (0, p.trackForwardSent)(t, l, !1, s.length), (0, i.showToast)((0, i.createToast)(m.default.Messages.MESSAGE_FORWARD_SUCCESS, i.ToastType.FORWARD));
-        return
-      }(0, p.trackForwardSent)(t, l, !0, s.length);
-      let n = M.filter((e, t) => "rejected" === a[t].status);
-      (0, S.showForwardFailedAlertModal)({
-        messageId: l,
-        channelId: t,
-        failedDestinations: n,
-        forwardOptions: C
-      })
-    }, [t, C, l, M]);
+    x(!0);
+    let s = M.map(r.destinationChannel).filter(_.isNotNullish);
+    (0, S.closeForwardModal)(), 1 === s.length && (0, u.transitionToChannel)(s[0]);
+    let a = await E.default.sendForwards(e, s, C);
+    if (a.every(e => {
+        let {
+          status: t
+        } = e;
+        return "fulfilled" === t
+      })) {
+      (0, p.trackForwardSent)(t, l, !1, s.length), (0, i.showToast)((0, i.createToast)(m.default.Messages.MESSAGE_FORWARD_SUCCESS, i.ToastType.FORWARD));
+      return
+    }(0, p.trackForwardSent)(t, l, !0, s.length);
+    let n = M.filter((e, t) => "rejected" === a[t].status);
+    (0, S.showForwardFailedAlertModal)({
+      messageId: l,
+      channelId: t,
+      failedDestinations: n,
+      forwardOptions: C
+    })
+  }, [t, C, l, M]);
   if (null == k || null == G) return null;
-  let Y = U.length > 0 ? (0, s.jsx)(I.DestinationList, {
+  let Q = U.length > 0 ? (0, s.jsx)(I.DestinationList, {
       paddingBottom: 16,
       paddingTop: 16,
       rowData: U,
       message: k,
       originChannel: G,
-      handleToggleDestination: W,
+      handleToggleDestination: z,
       selectedDestinations: M,
       disableSelection: P
     }) : (0, s.jsxs)(i.ModalContent, {
@@ -120,7 +112,7 @@ function y(e) {
         children: m.default.Messages.SEARCH_NO_RESULTS
       })]
     }),
-    K = F <= 1 ? m.default.Messages.SEND : m.default.Messages.MESSAGES_SEND_SEPARATELY.format({
+    Y = F <= 1 ? m.default.Messages.SEND : m.default.Messages.MESSAGES_SEND_SEPARATELY.format({
       count: F
     });
   return (0, s.jsxs)(i.ModalRoot, {
@@ -148,7 +140,6 @@ function y(e) {
           onClick: j
         })]
       }), (0, s.jsx)(i.SearchBar, {
-        ref: z,
         size: i.SearchBar.Sizes.MEDIUM,
         query: R,
         onChange: b,
@@ -157,13 +148,13 @@ function y(e) {
         "aria-label": m.default.Messages.SEARCH,
         autoFocus: !0
       })]
-    }), Y, (0, s.jsxs)(i.ModalFooter, {
+    }), Q, (0, s.jsxs)(i.ModalFooter, {
       className: T.footer,
       children: [(0, s.jsx)(i.Button, {
         submitting: v,
         disabled: 0 === F,
-        onClick: Q,
-        children: K
+        onClick: W,
+        children: Y
       }), (0, s.jsx)(i.Button, {
         onClick: H,
         look: i.Button.Looks.OUTLINED,
