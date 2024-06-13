@@ -95,7 +95,8 @@ let U = "vc-activities-".concat((0, o.v4)()),
           guildId: null !== (e = n.getGuildId()) && void 0 !== e ? e : void 0,
           locationObject: J.location,
           openInPopout: q,
-          analyticsLocations: Z
+          analyticsLocations: Z,
+          opensAppLauncherModal: !0
         }), w(), k()
       }, [J, Z, n, k, w, q]),
       ee = l.useCallback(e => {

@@ -1,29 +1,36 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var s = n("735250");
 n("470079");
 var a = n("481060"),
-  l = n("776862"),
-  i = n("701488"),
-  r = n("981631");
+  l = n("424602"),
+  i = n("776862"),
+  r = n("701488"),
+  o = n("981631");
 
-function o(e) {
+function u(e) {
   let {
     channel: t,
-    guildId: o,
-    locationObject: u,
-    openInPopout: d,
-    initialSelectedApplicationId: c,
-    initialSlide: f = i.ActivityShelfSlides.DIRECTORY,
-    enableSelectedTextChannelInvite: E = !1,
-    analyticsLocations: _
-  } = e;
-  d && (0, l.default)(r.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
-  let m = d ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
+    guildId: u,
+    locationObject: d,
+    openInPopout: c,
+    initialSelectedApplicationId: f,
+    initialSlide: E = r.ActivityShelfSlides.DIRECTORY,
+    enableSelectedTextChannelInvite: _ = !1,
+    analyticsLocations: m,
+    opensAppLauncherModal: T = !1
+  } = e, I = m.length > 0 ? m[m.length - 1] : "open-activity-shelf", {
+    enabled: p
+  } = l.DesktopAppLauncherInActivitiesShelfExperiment.getCurrentConfig({
+    location: I
+  });
+  if (T && p) return;
+  c && (0, i.default)(o.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+  let h = c ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
   return (0, a.openModalLazy)(async () => {
     let {
       default: e
@@ -31,15 +38,15 @@ function o(e) {
     return n => (0, s.jsx)(e, {
       ...n,
       channel: t,
-      guildId: o,
-      locationObject: u,
-      initialSlide: f,
-      initialSelectedApplicationId: c,
-      enableSelectedTextChannelInvite: E,
-      analyticsLocations: _
+      guildId: u,
+      locationObject: d,
+      initialSlide: E,
+      initialSelectedApplicationId: f,
+      enableSelectedTextChannelInvite: _,
+      analyticsLocations: m
     })
   }, {
-    modalKey: i.ACTIVITY_SHELF_WEB_MODAL_KEY,
-    contextKey: m
+    modalKey: r.ACTIVITY_SHELF_WEB_MODAL_KEY,
+    contextKey: h
   })
 }

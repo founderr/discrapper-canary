@@ -71313,6 +71313,7 @@ html .invoiceCancelRow_aa7946 {
 
 .postEnrollmentBackground__79a8d {
     background-color: var(--home-background);
+    border-top: 2px solid var(--bg-mod-subtle);
     border-radius: 8px 8px 0 0;
     position: absolute;
     overflow: hidden;
@@ -71345,7 +71346,8 @@ html .invoiceCancelRow_aa7946 {
 .wreathIcon__15dfd {
     height: 24px;
     margin-right: 4px;
-    width: 24px
+    width: 24px;
+    margin-left: -4px
 }
 
 .questProgressWrapper__88aa7 {

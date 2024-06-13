@@ -47,7 +47,8 @@ function x(e) {
       guildId: t.guild_id,
       locationObject: U.location,
       openInPopout: F,
-      analyticsLocations: w
+      analyticsLocations: w,
+      opensAppLauncherModal: !0
     })
   }, [U.location, w, t, F]), H = [];
   return !M && H.push(i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES), (0, m.default)(t.id) && !M && H.push(i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE), (0, a.jsx)(S.default, {

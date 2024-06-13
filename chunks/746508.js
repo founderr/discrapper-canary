@@ -310,7 +310,8 @@ function eV(e) {
           guildId: t.guild_id,
           locationObject: h.location,
           openInPopout: r,
-          analyticsLocations: l
+          analyticsLocations: l,
+          opensAppLauncherModal: !0
         }), null === (n = e.onClick) || void 0 === n || n.call(e)
       },
       onMouseEnter: () => {
