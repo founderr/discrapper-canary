@@ -178,32 +178,34 @@ t.default = {
       }), n(r)
     })
   })),
-  async getDetectableGamesSupplemental(e) {
+  getDetectableGamesSupplemental(e) {
     let t = e.filter(d.default.canFetch);
-    if (0 !== t.length) {
-      a.default.dispatch({
-        type: "DETECTABLE_GAME_SUPPLEMENTAL_FETCH",
-        applicationIds: t
-      });
+    if (0 === t.length) return;
+    a.default.dispatch({
+      type: "DETECTABLE_GAME_SUPPLEMENTAL_FETCH",
+      applicationIds: t
+    });
+    let n = async e => {
       try {
-        let e = await s.HTTP.get({
+        let t = await s.HTTP.get({
           url: O.Endpoints.APPLICATIONS_GAMES_SUPPLEMENTAL,
           query: {
-            application_ids: t
+            application_ids: e
           }
         });
         a.default.dispatch({
           type: "DETECTABLE_GAME_SUPPLEMENTAL_FETCH_SUCCESS",
-          applicationIds: t,
-          supplementalGameData: e.body.supplemental_game_data
+          applicationIds: e,
+          supplementalGameData: t.body.supplemental_game_data
         })
       } catch {
         a.default.dispatch({
           type: "DETECTABLE_GAME_SUPPLEMENTAL_FETCH_FAILURE",
-          applicationIds: t
+          applicationIds: e
         })
       }
-    }
+    };
+    for (; t.length > 0;) n(t.splice(0, 20))
   },
   getDetectableGames() {
     !E.default.fetching && null == E.default.lastFetched && a.default.wait(() => {

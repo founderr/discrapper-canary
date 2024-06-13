@@ -53,7 +53,7 @@ function _() {
     (0, r.openModalLazy)(async () => {
       let {
         default: t
-      } = await Promise.all([n.e("99387"), n.e("92229")]).then(n.bind(n, "628908"));
+      } = await Promise.all([n.e("49237"), n.e("99387"), n.e("76540"), n.e("95422")]).then(n.bind(n, "628908"));
       return n => (0, a.jsx)(t, {
         ...n,
         isTotp: e
@@ -69,7 +69,7 @@ async function p() {
     (0, r.openModalLazy)(async () => {
       let {
         default: s
-      } = await Promise.resolve().then(n.bind(n, "279837"));
+      } = await Promise.all([n.e("99387"), n.e("24642")]).then(n.bind(n, "279837"));
       return n => (0, a.jsx)(E, {
         ...n,
         onSuccess: e,

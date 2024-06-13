@@ -72,31 +72,33 @@ function p(e) {
     setEditorRef: s,
     showEmojiButton: o = !1,
     renderAttachButton: l,
-    onFocus: u,
-    channel: E,
-    className: I
-  } = e, [T, S] = r.useState(""), [h, N] = r.useState((0, _.toRichValue)("")), p = () => {
-    S(""), N((0, _.toRichValue)(""))
-  }, O = d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT, C = r.useRef(null);
+    autoFocus: u = !0,
+    onFocus: E,
+    channel: I,
+    className: T
+  } = e, [S, h] = r.useState(""), [N, p] = r.useState((0, _.toRichValue)("")), O = () => {
+    h(""), p((0, _.toRichValue)(""))
+  }, C = d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT, R = r.useRef(null);
   return (0, i.jsx)(c.default, {
-    ref: C,
+    ref: R,
     placeholder: t,
-    className: a()(A.replyInput, I),
+    editorClassName: T,
+    className: a()(A.replyInput, T),
     showRemainingCharsAfterCount: -1,
     allowNewLines: !1,
     maxCharacterCount: f.MAX_CHAR_COUNT,
-    channel: null != E ? E : m,
+    channel: null != I ? I : m,
     onChange: (e, t, n) => {
-      S(t), N(n)
+      h(t), p(n)
     },
     type: o ? {
-      ...O,
+      ...C,
       emojis: {
         button: !0
       }
-    } : O,
-    textValue: T,
-    richValue: h,
+    } : C,
+    textValue: S,
+    richValue: N,
     onSubmit: e => {
       let {
         value: t
@@ -104,20 +106,20 @@ function p(e) {
       return t.length > f.MAX_CHAR_COUNT ? Promise.resolve({
         shouldClear: !1,
         shouldRefocus: !0
-      }) : (n(t), p(), Promise.resolve({
+      }) : (n(t), O(), Promise.resolve({
         shouldClear: !0,
         shouldRefocus: !1
       }))
     },
     setEditorRef: s,
-    focused: !0,
-    onFocus: u,
+    focused: u,
+    onFocus: E,
     disableThemedBackground: !0,
     emojiPickerCloseOnModalOuterClick: !0,
     disabled: !1,
     autoCompletePosition: (() => {
-      if (null == C.current) return "top";
-      let e = C.current.getBoundingClientRect(),
+      if (null == R.current) return "top";
+      let e = R.current.getBoundingClientRect(),
         t = window.innerHeight;
       return e.top < t / 2 ? "bottom" : "top"
     })(),

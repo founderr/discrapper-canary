@@ -25,14 +25,15 @@ function p(e) {
   let {
     user: t,
     type: l,
-    showActions: a
-  } = e, p = (0, o.useStateFromStores)([c.default], () => null != c.default.getAnyStreamForUser(t.id)), T = (0, o.useStateFromStores)([f.default], () => f.default.getActivities(t.id)), g = i.useMemo(() => T.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [T]), A = i.useMemo(() => p ? g.find(e => e.type === m.ActivityTypes.PLAYING) : null, [g, p]), x = i.useMemo(() => g.filter(e => e !== A), [A, g]), {
-    analyticsLocations: C,
-    newestAnalyticsLocation: N
+    showActions: a,
+    onClose: p
+  } = e, T = (0, o.useStateFromStores)([c.default], () => null != c.default.getAnyStreamForUser(t.id)), g = (0, o.useStateFromStores)([f.default], () => f.default.getActivities(t.id)), A = i.useMemo(() => g.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [g]), C = i.useMemo(() => T ? A.find(e => e.type === m.ActivityTypes.PLAYING) : null, [A, T]), x = i.useMemo(() => A.filter(e => e !== C), [C, A]), {
+    analyticsLocations: N,
+    newestAnalyticsLocation: U
   } = (0, d.default)(), {
-    trackUserProfileAction: U,
-    ...P
-  } = (0, E.useUserProfileAnalyticsContext)(), h = {
+    trackUserProfileAction: P,
+    ...h
+  } = (0, E.useUserProfileAnalyticsContext)(), R = {
     location: {
       page: m.AnalyticsPages.USER_PROFILE,
       section: m.AnalyticsSections.PROFILE_MODAL
@@ -41,27 +42,28 @@ function p(e) {
   return (0, s.jsxs)(r.ScrollerThin, {
     className: v.listScroller,
     fade: !0,
-    children: [p ? (0, s.jsx)(u.default, {
+    children: [T ? (0, s.jsx)(u.default, {
       type: l,
       user: t,
-      source: N,
+      source: U,
       className: _.userProfileActivity,
       showChannelDetails: l === S.Types.SIMPLIFIED_PROFILE,
-      activity: A,
+      activity: C,
       actionColor: _.actionColor,
-      analyticsParams: h,
+      analyticsParams: R,
       showActions: a,
+      onOpenGameProfile: p,
       onAction: () => {
-        U({
+        P({
           action: "JOIN_ACTIVITY"
         }), (0, I.trackUserProfileActivityJoined)({
           activityType: m.ActivityTypes.STREAMING,
-          activityName: null == A ? void 0 : A.name,
-          activityPlatform: null == A ? void 0 : A.platform,
-          activitySessionId: null == A ? void 0 : A.session_id,
-          applicationId: null == A ? void 0 : A.application_id,
-          analyticsLocations: C,
-          ...P
+          activityName: null == C ? void 0 : C.name,
+          activityPlatform: null == C ? void 0 : C.platform,
+          activitySessionId: null == C ? void 0 : C.session_id,
+          applicationId: null == C ? void 0 : C.application_id,
+          analyticsLocations: N,
+          ...h
         })
       }
     }) : null, x.map(e => (0, s.jsx)(u.default, {
@@ -69,14 +71,15 @@ function p(e) {
       activity: e,
       user: t,
       useStoreStream: !1,
-      source: N,
+      source: U,
       className: n()(_.userProfileActivity, l === S.Types.SIMPLIFIED_PROFILE && _.simplifiedProfileActivity),
       showChannelDetails: l === S.Types.SIMPLIFIED_PROFILE,
       actionColor: _.actionColor,
-      analyticsParams: h,
+      analyticsParams: R,
       showActions: a,
+      onOpenGameProfile: p,
       onAction: () => {
-        U({
+        P({
           action: "JOIN_ACTIVITY"
         }), (0, I.trackUserProfileActivityJoined)({
           activityType: e.type,
@@ -84,8 +87,8 @@ function p(e) {
           activityPlatform: e.platform,
           activitySessionId: e.session_id,
           applicationId: e.application_id,
-          analyticsLocations: C,
-          ...P
+          analyticsLocations: N,
+          ...h
         })
       }
     }, "".concat(e.application_id, "-").concat(e.session_id, "-").concat(e.name)))]

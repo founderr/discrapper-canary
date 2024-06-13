@@ -26,7 +26,8 @@ function c(e) {
     case d.UserProfileSections.ACTIVITY:
       return (0, s.jsx)(a.default, {
         user: l,
-        type: i.Types.PROFILE_V2
+        type: i.Types.PROFILE_V2,
+        onClose: S
       });
     case d.UserProfileSections.MUTUAL_GUILDS:
       return (0, s.jsx)(u.default, {

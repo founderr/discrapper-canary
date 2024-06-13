@@ -12,6 +12,9 @@ class c extends(i = o.default.Store) {
   isFetching(e) {
     return d.has(e)
   }
+  getGame(e) {
+    return u.get(e)
+  }
   getLocalizedName(e) {
     var t;
     return null === (t = u.get(e)) || void 0 === t ? void 0 : t.name
@@ -53,14 +56,22 @@ a = "DetectableGameSupplementalStore", (s = "displayName") in(r = c) ? Object.de
     }), n.forEach(e => {
       let {
         application_id: t,
-        cover_image_url: n,
-        name: i,
-        themes: r
+        name: n,
+        summary: i,
+        themes: r,
+        genres: s,
+        artwork_urls: a,
+        cover_image_url: o,
+        first_release_date: l
       } = e;
       u.set(t, {
+        name: n,
+        summary: i,
         themes: r,
-        coverImageUrl: n,
-        name: i
+        genres: s,
+        artwork: a,
+        coverImageUrl: o,
+        firstReleaseDate: l
       })
     })
   },
