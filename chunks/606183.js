@@ -1,29 +1,40 @@
 "use strict";
-i.r(t), i.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return s
   }
 });
-var l = i("735250");
-i("470079");
-var a = i("481060"),
-  n = i("212208");
+var i = l("735250");
+l("470079");
+var a = l("481060"),
+  n = l("212208");
 
 function s(e) {
   let {
     activeSection: t,
-    setSection: i,
-    shownSections: s
+    setSection: l,
+    sections: s
   } = e;
-  return (0, l.jsx)(a.TabBar, {
+  return (0, i.jsx)(a.TabBar, {
     selectedItem: t,
     type: "top",
-    onItemSelect: i,
+    onItemSelect: l,
     className: n.tabBar,
-    children: s.map(e => (0, l.jsx)(a.TabBar.Item, {
-      id: e.sectionName,
-      className: n.tabBarItem,
-      children: e.sectionText
-    }, e.sectionName))
+    children: s.map(e => {
+      let {
+        name: t,
+        text: l,
+        Icon: s
+      } = e;
+      return (0, i.jsxs)(a.TabBar.Item, {
+        id: t,
+        className: n.tabBarItem,
+        "aria-label": l,
+        children: [(0, i.jsx)(s, {
+          className: n.icon,
+          color: "currentColor"
+        }), l]
+      }, t)
+    })
   })
 }
