@@ -367,6 +367,11 @@ let r = {
   ForwardGuildBreadcrumbManager: {
     actions: ["POST_CONNECTION_OPEN", "MESSAGE_UPDATE", "LOAD_MESSAGES_SUCCESS", "LOAD_MESSAGES_AROUND_SUCCESS", "LOAD_RECENT_MENTIONS_SUCCESS", "LOAD_PINNED_MESSAGES_SUCCESS", "SEARCH_FINISH", "MOD_VIEW_SEARCH_FINISH"],
     inlineRequire: () => n("35260").default
+  },
+  LeagueOfLegendsLifecycleManager: {
+    actions: ["RUNNING_GAMES_CHANGE"],
+    inlineRequire: () => n("182573").default,
+    neverLoadBeforeConnectionOpen: !0
   }
 };
 (0, i.initialize)(r)
