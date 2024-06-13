@@ -28,7 +28,7 @@ function m(e) {
     command: n,
     section: a
   } = e, l = r.useCallback(() => {
-    _.dismissAppLauncherPopup(), o.setActiveCommand({
+    _.dismissAppLauncher(), o.setActiveCommand({
       channelId: t.id,
       command: n,
       section: a,

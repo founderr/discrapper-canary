@@ -4,8 +4,12 @@ n.r(t), n.d(t, {
   APP_LAUNCHER_ELEMENT_CLASSNAME: function() {
     return s
   },
+  APP_LAUNCHER_WEB_MODAL_KEY: function() {
+    return a
+  },
   CommandListSortOrder: function() {
     return i
   }
 }), (r = i || (i = {}))[r.POPULAR = 0] = "POPULAR", r[r.ALPHABETICAL = 1] = "ALPHABETICAL";
-let s = "app-launcher-element"
+let s = "app-launcher-element",
+  a = "app-launcher-modal"

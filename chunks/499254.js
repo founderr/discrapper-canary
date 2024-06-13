@@ -1,22 +1,23 @@
 "use strict";
 n.r(t), n.d(t, {
-  dismissAppLauncherPopup: function() {
+  dismissAppLauncher: function() {
     return s
   },
-  showAppLauncherPopup: function() {
+  showAppLauncher: function() {
     return r
   }
 });
 var i = n("570140");
 
-function r() {
+function r(e) {
   i.default.dispatch({
-    type: "APP_LAUNCHER_SHOW_POPUP"
+    type: "APP_LAUNCHER_SHOW",
+    entrypoint: e
   })
 }
 
 function s() {
   i.default.dispatch({
-    type: "APP_LAUNCHER_DISMISS_POPUP"
+    type: "APP_LAUNCHER_DISMISS"
   })
 }

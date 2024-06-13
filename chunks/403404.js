@@ -1,36 +1,44 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return d
   }
 });
 var s = n("735250");
 n("470079");
 var a = n("481060"),
   l = n("424602"),
-  i = n("776862"),
-  r = n("701488"),
-  o = n("981631");
+  i = n("397698"),
+  r = n("776862"),
+  o = n("701488"),
+  u = n("981631");
 
-function u(e) {
+function d(e) {
   let {
     channel: t,
-    guildId: u,
-    locationObject: d,
-    openInPopout: c,
-    initialSelectedApplicationId: f,
-    initialSlide: E = r.ActivityShelfSlides.DIRECTORY,
-    enableSelectedTextChannelInvite: _ = !1,
-    analyticsLocations: m,
-    opensAppLauncherModal: T = !1
-  } = e, I = m.length > 0 ? m[m.length - 1] : "open-activity-shelf", {
-    enabled: p
+    guildId: d,
+    locationObject: c,
+    openInPopout: f,
+    initialSelectedApplicationId: E,
+    initialSlide: _ = o.ActivityShelfSlides.DIRECTORY,
+    enableSelectedTextChannelInvite: m = !1,
+    analyticsLocations: T,
+    opensAppLauncherModal: I = !1
+  } = e, p = T.length > 0 ? T[T.length - 1] : "open-activity-shelf", {
+    enabled: h
   } = l.DesktopAppLauncherInActivitiesShelfExperiment.getCurrentConfig({
-    location: I
+    location: p
   });
-  if (T && p) return;
-  c && (0, i.default)(o.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
-  let h = c ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
+  if (I && h) {
+    null != t && (0, i.default)({
+      openInPopout: f,
+      channel: t,
+      analyticsLocation: p
+    });
+    return
+  }
+  f && (0, r.default)(u.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+  let N = f ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
   return (0, a.openModalLazy)(async () => {
     let {
       default: e
@@ -38,15 +46,15 @@ function u(e) {
     return n => (0, s.jsx)(e, {
       ...n,
       channel: t,
-      guildId: u,
-      locationObject: d,
-      initialSlide: E,
-      initialSelectedApplicationId: f,
-      enableSelectedTextChannelInvite: _,
-      analyticsLocations: m
+      guildId: d,
+      locationObject: c,
+      initialSlide: _,
+      initialSelectedApplicationId: E,
+      enableSelectedTextChannelInvite: m,
+      analyticsLocations: T
     })
   }, {
-    modalKey: r.ACTIVITY_SHELF_WEB_MODAL_KEY,
-    contextKey: h
+    modalKey: o.ACTIVITY_SHELF_WEB_MODAL_KEY,
+    contextKey: N
   })
 }

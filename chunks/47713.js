@@ -36,7 +36,7 @@ function E(e) {
       let {
         applicationId: t
       } = e;
-      d.dismissAppLauncherPopup(), (0, l.trackWithMetadata)(_.AnalyticEvents.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+      d.dismissAppLauncher(), (0, l.trackWithMetadata)(_.AnalyticEvents.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
         location: u.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW,
         application_id: t,
         section_name: I,

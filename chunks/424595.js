@@ -7,20 +7,21 @@ var a = n("735250"),
   r = n("160620"),
   o = n("499254"),
   u = n("541099"),
-  d = n("752862");
+  d = n("827498"),
+  c = n("752862");
 t.default = l.memo(l.forwardRef(function(e, t) {
   let n = (0, s.useStateFromStores)([u.default], () => u.default.shouldShowPopup()),
-    c = l.useCallback(() => {
-      n ? o.dismissAppLauncherPopup() : o.showAppLauncherPopup()
+    f = l.useCallback(() => {
+      n ? o.dismissAppLauncher() : o.showAppLauncher(d.AppLauncherEntrypoint.TEXT)
     }, [n]);
   return (0, a.jsx)(i.Tooltip, {
     text: "Use an App",
     children: e => (0, a.jsx)("div", {
       ref: t,
       ...e,
-      className: d.buttonContainer,
+      className: c.buttonContainer,
       children: (0, a.jsx)(r.default, {
-        onClick: c,
+        onClick: f,
         tabIndex: 0,
         focusProps: {
           offset: {

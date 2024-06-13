@@ -1,123 +1,51 @@
 "use strict";
-n.r(t), n("47120");
+n.r(t);
 var i = n("735250"),
   r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
-  o = n("374470"),
-  l = n("952265"),
-  u = n("481060"),
-  d = n("410575"),
-  _ = n("40851"),
-  c = n("566860"),
-  E = n("153850"),
-  I = n("585483"),
-  T = n("5967"),
-  f = n("499254"),
-  S = n("695676"),
-  h = n("173790"),
-  A = n("361917"),
-  m = n("314734"),
-  N = n("981631"),
-  p = n("175323");
+  s = n("374470"),
+  a = n("952265"),
+  o = n("481060"),
+  l = n("40851"),
+  u = n("153850"),
+  d = n("585483"),
+  _ = n("5967"),
+  c = n("499254"),
+  E = n("421591"),
+  I = n("314734"),
+  T = n("981631"),
+  f = n("175323");
 
-function O(e) {
-  let t, {
-      channel: n,
-      closeOnModalOuterClick: s = !1,
-      parentModalKey: a
-    } = e,
-    d = c.AppLauncherRecommendationsExperiment.useExperiment({
-      location: "App Launcher Popup"
-    }, {
-      autoTrackExposure: !0
-    }),
-    E = r.useRef(null),
-    {
-      renderWindow: O,
-      windowDispatch: C
-    } = r.useContext(_.default),
-    R = null != a,
-    g = (0, l.useIsModalAtTop)(null != a ? a : ""),
-    L = r.useCallback(e => {
-      var t;
-      if (!R && (0, l.hasAnyModalOpen)() || R && !(g && s)) return;
-      let {
-        target: n
-      } = e;
-      if ((0, o.isElement)(n) && null != n.closest("." + m.APP_LAUNCHER_ELEMENT_CLASSNAME)) return;
-      for (;
-        (0, o.isElement)(n);) {
-        if (n === E.current) return;
-        n = n.parentNode
-      }
-      f.dismissAppLauncherPopup();
-      let i = null === (t = (0, T.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
-      (null == i || "BODY" === i.tagName) && I.ComponentDispatch.dispatchToLastSubscribed(N.ComponentActions.TEXTAREA_FOCUS)
-    }, [s, g, R]);
-  r.useLayoutEffect(() => (O.addEventListener("mousedown", L), O.addEventListener("contextmenu", L), C.subscribe(N.ComponentActions.POPOUT_CLOSE, f.dismissAppLauncherPopup), () => {
-    O.removeEventListener("mousedown", L), O.removeEventListener("contextmenu", L), C.unsubscribe(N.ComponentActions.POPOUT_CLOSE, f.dismissAppLauncherPopup)
-  }), [L, O, C]), (0, u.useFocusLock)(E), r.useEffect(() => {
-    (!R && (0, l.hasAnyModalOpen)() || R && !g) && f.dismissAppLauncherPopup()
-  }, [g, R]);
+function S(e) {
   let {
-    history: v,
-    setHistory: D,
-    currentView: M,
-    pushHistory: y,
-    goBack: P
-  } = function() {
-    let [e, t] = r.useState([{
-      type: S.HistoryItemType.HOME
-    }]), n = e[e.length - 1];
-    return {
-      history: e,
-      setHistory: t,
-      currentView: n,
-      pushHistory: n => {
-        t([...e, n])
-      },
-      goBack: () => {
-        if (0 === e.length) return;
-        let n = [...e];
-        n.pop(), t(n)
-      }
+    channel: t,
+    closeOnModalOuterClick: n = !1,
+    parentModalKey: u
+  } = e, f = r.useRef(null), {
+    renderWindow: S,
+    windowDispatch: h
+  } = r.useContext(l.default), A = null != u, m = (0, a.useIsModalAtTop)(null != u ? u : ""), N = r.useCallback(e => {
+    var t;
+    if (!A && (0, a.hasAnyModalOpen)() || A && !(m && n)) return;
+    let {
+      target: i
+    } = e;
+    if ((0, s.isElement)(i) && null != i.closest("." + I.APP_LAUNCHER_ELEMENT_CLASSNAME)) return;
+    for (;
+      (0, s.isElement)(i);) {
+      if (i === f.current) return;
+      i = i.parentNode
     }
-  }();
-  switch (null == M ? void 0 : M.type) {
-    case S.HistoryItemType.HOME:
-      t = (0, i.jsx)(A.default, {
-        channel: n,
-        enableRecommendations: d.enabled,
-        enableRecents: d.recentsDropdownEnabled
-      });
-      break;
-    case S.HistoryItemType.APPLICATION:
-      t = (0, i.jsx)(h.default, {
-        channel: n,
-        application: M.application,
-        sectionName: M.sectionName
-      });
-      break;
-    default:
-      t = null
-  }
-  return (0, i.jsx)("div", {
-    className: p.drawerSizingWrapper,
-    ref: E,
-    children: (0, i.jsx)("div", {
-      className: p.contentWrapper,
-      children: (0, i.jsx)(S.AppLauncherHistoryContext.Provider, {
-        value: {
-          history: v,
-          setHistory: D,
-          currentView: M,
-          pushHistory: y,
-          goBack: P
-        },
-        children: t
-      })
-    })
+    c.dismissAppLauncher();
+    let r = null === (t = (0, _.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
+    (null == r || "BODY" === r.tagName) && d.ComponentDispatch.dispatchToLastSubscribed(T.ComponentActions.TEXTAREA_FOCUS)
+  }, [n, m, A]);
+  return r.useLayoutEffect(() => (S.addEventListener("mousedown", N), S.addEventListener("contextmenu", N), h.subscribe(T.ComponentActions.POPOUT_CLOSE, c.dismissAppLauncher), () => {
+    S.removeEventListener("mousedown", N), S.removeEventListener("contextmenu", N), h.unsubscribe(T.ComponentActions.POPOUT_CLOSE, c.dismissAppLauncher)
+  }), [N, S, h]), (0, o.useFocusLock)(f), r.useEffect(() => {
+    (!A && (0, a.hasAnyModalOpen)() || A && !m) && c.dismissAppLauncher()
+  }, [m, A]), (0, i.jsx)(E.default, {
+    drawerRef: f,
+    channel: t
   })
 }
 t.default = r.memo(function(e) {
@@ -125,28 +53,25 @@ t.default = r.memo(function(e) {
     positionTargetRef: t,
     ...n
   } = e;
-  return (0, i.jsx)(d.default, {
-    section: N.AnalyticsSections.EXPRESSION_PICKER,
-    children: (0, i.jsx)(E.AppReferencePositionLayer, {
-      className: p.positionLayer,
-      targetRef: t,
-      position: "top",
-      align: "right",
-      spacing: 8,
-      autoInvert: !0,
-      children: e => {
-        let {
-          isPositioned: t
-        } = e;
-        return (0, i.jsx)("section", {
-          className: a()(p.positionContainer),
-          role: "dialog",
-          "aria-label": "Application Launcher",
-          children: t && (0, i.jsx)(O, {
-            ...n
-          })
+  return (0, i.jsx)(u.AppReferencePositionLayer, {
+    className: f.positionLayer,
+    targetRef: t,
+    position: "top",
+    align: "right",
+    spacing: 8,
+    autoInvert: !0,
+    children: e => {
+      let {
+        isPositioned: t
+      } = e;
+      return (0, i.jsx)("section", {
+        className: f.positionContainer,
+        role: "dialog",
+        "aria-label": "Application Launcher",
+        children: t && (0, i.jsx)(S, {
+          ...n
         })
-      }
-    })
+      })
+    }
   })
 })
