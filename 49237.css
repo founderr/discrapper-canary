@@ -19738,7 +19738,7 @@ strong {
     color: var(--interactive-normal)
 }
 
-.embed_cc6dae:hover .embedSuppressButton__5aae1,
+.mouse-mode .embed_cc6dae:hover .embedSuppressButton__5aae1,
 .embed_cc6dae:focus-within .embedSuppressButton__5aae1 {
     opacity: 1
 }
