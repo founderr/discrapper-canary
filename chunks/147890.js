@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return u
   },
   goSearch: function() {
-    return c
+    return E
   },
   goToAppDirectory: function() {
     return l
@@ -15,11 +15,14 @@ n.r(t), n.d(t, {
   goToApplicationSection: function() {
     return _
   },
+  goToApplicationStoreSku: function() {
+    return c
+  },
   goToCategory: function() {
-    return E
+    return I
   },
   replaceAppDirectoryURLWith: function() {
-    return I
+    return T
   }
 }), n("610138"), n("216116"), n("78328"), n("815648"), n("47120");
 var i = n("703656"),
@@ -34,18 +37,18 @@ let l = e => {
       applicationId: i,
       applicationSection: s,
       entrypoint: l
-    } = e, E = {
+    } = e, c = {
       ...l,
       pathname: window.location.pathname
     };
     switch (r.default.track(o.AnalyticEvents.APP_DIRECTORY_OPENED, {
-        source: null == E ? void 0 : E.name
-      }), (0, a.resetApplicationDirectoryHistory)(), (0, a.setEntrypoint)(E), null != n && (0, a.setGuildId)(n), t === a.ApplicationDirectoryViews.APPLICATION && null == i && (t = a.ApplicationDirectoryViews.HOME), t) {
+        source: null == c ? void 0 : c.name
+      }), (0, a.resetApplicationDirectoryHistory)(), (0, a.setEntrypoint)(c), null != n && (0, a.setGuildId)(n), t === a.ApplicationDirectoryViews.APPLICATION && null == i && (t = a.ApplicationDirectoryViews.HOME), t) {
       case a.ApplicationDirectoryViews.HOME:
         u();
         break;
       case a.ApplicationDirectoryViews.SEARCH:
-        c();
+        E();
         break;
       case a.ApplicationDirectoryViews.APPLICATION:
         null != i && (null != s ? _({
@@ -85,7 +88,18 @@ let l = e => {
       state: r
     })
   },
-  c = function() {
+  c = e => {
+    let {
+      applicationId: t,
+      skuId: n
+    } = e, r = {
+      previousView: (0, a.getCurrentView)()
+    };
+    (0, i.transitionTo)(o.Routes.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(t, n), {
+      state: r
+    })
+  },
+  E = function() {
     let {
       query: e,
       categoryId: t,
@@ -98,15 +112,15 @@ let l = e => {
       state: s
     })
   },
-  E = e => {
+  I = e => {
     let {
       categoryId: t
     } = e;
-    c({
+    E({
       categoryId: null != t ? t : s.ALL_CATEGORY_ID
     })
   },
-  I = e => {
+  T = e => {
     let {
       location: {
         state: t

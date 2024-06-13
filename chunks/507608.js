@@ -132,16 +132,17 @@ function j(e) {
     groupListingId: n,
     guildId: a,
     listing: r,
-    groupListingType: o
+    groupListingType: o,
+    onDetails: d
   } = e, {
-    openModal: d
+    openModal: c
   } = (0, v.default)({
     guildId: a,
     groupListingId: n,
     showBenefitsFirst: !1,
     analyticsLocation: O.AnalyticsLocations.APP_STOREFRONT,
     skuId: r.id
-  }), c = l.useMemo(() => {
+  }), p = l.useMemo(() => {
     var e;
     return null === (e = r.store_listing_benefits) || void 0 === e ? void 0 : e.map(e => ({
       id: e.id,
@@ -149,16 +150,16 @@ function j(e) {
       description: e.description,
       icon: (0, g.getBenefitIcon)(t, e.icon)
     }))
-  }, [t, r.store_listing_benefits]), p = l.useMemo(() => {
+  }, [t, r.store_listing_benefits]), f = l.useMemo(() => {
     var e;
     return null != r.image_asset && null !== (e = P.default.toURLSafe((0, A.getAssetURL)(t, r.image_asset, 256))) && void 0 !== e ? e : void 0
-  }, [t, r.image_asset]), f = r.subscription_plans.length > 0 ? r.subscription_plans[0] : null;
-  return null === f ? null : (0, i.jsx)(s.SubscriptionCard, {
+  }, [t, r.image_asset]), S = r.subscription_plans.length > 0 ? r.subscription_plans[0] : null;
+  return null === S ? null : (0, i.jsx)(s.SubscriptionCard, {
     title: r.name,
     description: r.description,
-    imgSrc: p,
+    imgSrc: f,
     subscriptionType: o,
-    onPurchase: d,
+    onPurchase: c,
     PurchaseButton: e => (0, i.jsx)(N.SubscriptionPurchaseButton, {
       ...e,
       appId: t,
@@ -166,26 +167,25 @@ function j(e) {
       groupListingType: o,
       guildId: a,
       skuId: r.id,
-      subPlan: f
+      subPlan: S
     }),
-    benefitItems: null != c ? c.map(e => (0, i.jsx)(s.SubscriptionCardBenefit, {
+    benefitItems: null != p ? p.map(e => (0, i.jsx)(s.SubscriptionCardBenefit, {
       name: e.title,
       icon: e.icon
     }, e.id)) : void 0,
-    onDetails: null != c ? () => {
+    onDetails: null != d ? d : null != p ? () => {
       (0, u.openModal)(e => {
         let {
           onClose: l,
-          transitionState: s
+          transitionState: a
         } = e;
         return (0, i.jsx)(L.SubscriptionDetailsModal, {
           appId: t,
           groupListingId: n,
           groupListingType: o,
-          guildId: a,
           onClose: l,
           skuId: r.id,
-          transitionState: s
+          transitionState: a
         })
       })
     } : void 0
@@ -196,25 +196,26 @@ function E(e) {
   var t, n, l, a;
   let {
     skuId: s,
-    appId: d
+    appId: d,
+    onDetails: S
   } = e, {
-    analyticsLocations: S
-  } = (0, p.default)(c.default.APP_STOREFRONT), g = (0, o.useStateFromStores)([h.default], () => h.default.getForSKU(s), [s]), v = (0, o.useStateFromStores)([m.default], () => m.default.get(s), [s]), I = (0, x.useHasActiveEntitlement)(s);
-  if (null == v) return null;
-  let b = null !== (n = v.name) && void 0 !== n ? n : "",
-    _ = null !== (l = null == g ? void 0 : null === (t = g.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== l ? l : void 0,
-    L = (null == g ? void 0 : g.headerBackground) != null && null !== (a = P.default.toURLSafe((0, A.getAssetURL)(d, g.headerBackground, 256))) && void 0 !== a ? a : void 0,
-    U = v.type === O.SKUTypes.DURABLE && I,
-    C = v.type === O.SKUTypes.DURABLE ? U ? R.default.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : R.default.Messages.STOREFRONT_DURABLE_AVAILABILITY : void 0,
+    analyticsLocations: g
+  } = (0, p.default)(c.default.APP_STOREFRONT), v = (0, o.useStateFromStores)([h.default], () => h.default.getForSKU(s), [s]), I = (0, o.useStateFromStores)([m.default], () => m.default.get(s), [s]), b = (0, x.useHasActiveEntitlement)(s);
+  if (null == I) return null;
+  let _ = null !== (n = I.name) && void 0 !== n ? n : "",
+    L = null !== (l = null == v ? void 0 : null === (t = v.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== l ? l : void 0,
+    U = (null == v ? void 0 : v.headerBackground) != null && null !== (a = P.default.toURLSafe((0, A.getAssetURL)(d, v.headerBackground, 256))) && void 0 !== a ? a : void 0,
+    C = I.type === O.SKUTypes.DURABLE && b,
+    j = I.type === O.SKUTypes.DURABLE ? C ? R.default.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : R.default.Messages.STOREFRONT_DURABLE_AVAILABILITY : void 0,
     {
-      price: j
-    } = v;
-  return null == j ? null : (0, i.jsx)(r.ProductCard, {
-    title: b,
-    description: _,
-    headerImage: L,
-    availabilityLabel: C,
-    onDetails: (0, T.isNullOrEmpty)(_) ? void 0 : () => {
+      price: E
+    } = I;
+  return null == E ? null : (0, i.jsx)(r.ProductCard, {
+    title: _,
+    description: L,
+    headerImage: U,
+    availabilityLabel: j,
+    onDetails: null != S ? S : (0, T.isNullOrEmpty)(L) ? void 0 : () => {
       (0, u.openModal)(e => {
         let {
           onClose: t,
@@ -231,13 +232,13 @@ function E(e) {
     PurchaseButton: e => (0, i.jsx)(N.ItemPurchaseButton, {
       ...e,
       appId: d,
-      sku: v
+      sku: I
     }),
     onPurchase: () => {
       (0, f.default)({
         applicationId: d,
-        skuId: v.id,
-        analyticsLocations: S
+        skuId: I.id,
+        analyticsLocations: g
       })
     }
   })
