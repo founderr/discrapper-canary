@@ -1,13 +1,13 @@
 "use strict";
 l.r(t), l.d(t, {
   carouselAssetFromAttachment: function() {
-    return y
+    return x
   },
   carouselAssetFromImageEmbed: function() {
     return b
   },
   carouselAssetFromMediaItem: function() {
-    return x
+    return y
   },
   createMediaOnClickOverrides: function() {
     return v
@@ -26,8 +26,8 @@ var r = l("374470"),
   m = l("52824"),
   h = l("626135"),
   p = l("591759"),
-  g = l("981631"),
-  f = l("545402");
+  f = l("981631"),
+  g = l("545402");
 
 function b(e) {
   let {
@@ -50,7 +50,7 @@ function b(e) {
   }
 }
 
-function x(e) {
+function y(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     r = function(e) {
@@ -126,17 +126,17 @@ function x(e) {
   return null != s ? s : null
 }
 
-function y(e) {
+function x(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  return x((0, o.messageAttachmentToUnfurledMediaItem)(e), t, l)
+  return y((0, o.messageAttachmentToUnfurledMediaItem)(e), t, l)
 }
 
 function v(e, t) {
   let i = {};
   for (let [a, o] of e.entries()) i[o.src] = i => (function(e, t, i, a) {
-    e.preventDefault(), (0, r.isElement)(e.currentTarget) && e.currentTarget.blur(), null != a && (h.default.track(g.AnalyticEvents.OPEN_MODAL, {
-      type: g.AnalyticsSections.MEDIA_VIEWER,
+    e.preventDefault(), (0, r.isElement)(e.currentTarget) && e.currentTarget.blur(), null != a && (h.default.track(f.AnalyticEvents.OPEN_MODAL, {
+      type: f.AnalyticsSections.MEDIA_VIEWER,
       ...a
     }, {
       throttlePercent: .01
@@ -151,9 +151,9 @@ function v(e, t) {
         return (0, n.jsx)(e, {
           ...r,
           onIndexChange: null != a ? d.incrementSelectedItemChanges : void 0,
-          className: f.zoomedCarouselModalRoot,
+          className: g.zoomedCarouselModalRoot,
           items: t,
-          modalCarouselClassName: f.modalCarouselWrapper,
+          modalCarouselClassName: g.modalCarouselWrapper,
           startingIndex: i
         })
       }

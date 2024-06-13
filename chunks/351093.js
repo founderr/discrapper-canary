@@ -23,14 +23,14 @@ function d(e) {
     className: m,
     alt: h,
     responsive: p
-  } = e, g = r.useRef(null);
+  } = e, f = r.useRef(null);
   return (r.useEffect(() => {
     let {
       current: e
-    } = g;
+    } = f;
     null != e && (c ? e.play() : e.pause())
   }, [c]), d <= a.MAX_VIDEO_WIDTH && u <= a.MAX_VIDEO_HEIGHT || d <= a.MAX_VIDEO_HEIGHT && u <= a.MAX_VIDEO_WIDTH) ? (0, n.jsx)(i.default, {
-    ref: g,
+    ref: f,
     className: m,
     poster: t,
     src: l,
@@ -62,11 +62,11 @@ function u(e) {
     playable: m = !0,
     renderImageComponent: h,
     alt: p = o.default.Messages.GIF,
-    ...g
+    ...f
   } = e;
   return (0, n.jsx)(s.GIFAccessoryContext.Consumer, {
     children: e => h({
-      ...g,
+      ...f,
       alt: p,
       src: l,
       containerClassName: c,

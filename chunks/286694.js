@@ -4,33 +4,33 @@ a.r(t), a.d(t, {
     return S
   }
 });
-var l = a("735250");
+var u = a("735250");
 a("470079");
-var u = a("442837"),
+var l = a("442837"),
   d = a("481060"),
   s = a("592125"),
   n = a("430824"),
   i = a("496675"),
-  o = a("594174"),
-  r = a("471253"),
+  r = a("594174"),
+  o = a("471253"),
   f = a("88751"),
   c = a("981631"),
   E = a("689938");
 
 function S(e, t, a) {
   var S;
-  let M = s.default.getChannel(a),
-    _ = (0, u.useStateFromStores)([n.default], () => n.default.getGuild(t), [t]),
-    g = (0, u.useStateFromStores)([f.default], () => f.default.getPermissionsForUser(e.id, a), [a, e.id]),
-    A = (null === (S = o.default.getCurrentUser()) || void 0 === S ? void 0 : S.id) === e.id,
-    T = (0, u.useStateFromStores)([i.default], () => null != a && i.default.canWithPartialContext(c.Permissions.MUTE_MEMBERS, {
+  let _ = s.default.getChannel(a),
+    M = (0, l.useStateFromStores)([n.default], () => n.default.getGuild(t), [t]),
+    m = (0, l.useStateFromStores)([f.default], () => f.default.getPermissionsForUser(e.id, a), [a, e.id]),
+    g = (null === (S = r.default.getCurrentUser()) || void 0 === S ? void 0 : S.id) === e.id,
+    A = (0, l.useStateFromStores)([i.default], () => null != a && i.default.canWithPartialContext(c.Permissions.MUTE_MEMBERS, {
       channelId: a
     }), [a]);
-  return null != M && null != _ && (T || A) && g.speaker ? (0, l.jsx)(d.MenuItem, {
+  return null != _ && null != M && (A || g) && m.speaker ? (0, u.jsx)(d.MenuItem, {
     id: "audience",
-    label: A ? E.default.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE : E.default.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE_OTHER,
+    label: g ? E.default.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE : E.default.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE_OTHER,
     action: () => {
-      A ? (0, r.moveSelfToAudience)(M) : (0, r.moveUserToAudience)(e, M)
+      g ? (0, o.moveSelfToAudience)(_) : (0, o.moveUserToAudience)(e, _)
     }
   }) : null
 }

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   shouldShowRaidNotificationNagbar: function() {
-    return h
+    return _
   },
   useGuildIncidentsState: function() {
-    return _
+    return E
   }
 }), n("47120");
 var r = n("149765"),
@@ -20,12 +20,12 @@ var r = n("149765"),
   S = n("533244"),
   g = n("487419"),
   p = n("676770"),
-  E = n("981631");
+  h = n("981631");
 
-function _(e) {
+function E(e) {
   let {
     showAlertMode: t
-  } = (0, f.useGuildAlertModeEnabled)(null != e ? e : E.ZERO_STRING_GUILD_ID), n = (0, i.useStateFromStores)([s.default, o.default], () => {
+  } = (0, f.useGuildAlertModeEnabled)(null != e ? e : h.ZERO_STRING_GUILD_ID), n = (0, i.useStateFromStores)([s.default, o.default], () => {
     let t = s.default.getGuild(e);
     if (null == t) return !1;
     let n = o.default.getGuildPermissions(t);
@@ -38,7 +38,7 @@ function _(e) {
   }
 }
 
-function h() {
+function _() {
   var e;
   let t = function(e) {
       let t = a.default.getCurrentUser(),
@@ -58,12 +58,12 @@ function h() {
     }(u.default.getGuildId()),
     {
       showAlertMode: n
-    } = (0, f.getGuildAlertModeEnabled)(null != t ? t : E.ZERO_STRING_GUILD_ID),
+    } = (0, f.getGuildAlertModeEnabled)(null != t ? t : h.ZERO_STRING_GUILD_ID),
     i = null !== (e = l.default.getGuildsProto()) && void 0 !== e ? e : {},
     o = null != t ? i[t] : null,
-    _ = null != o && o.disableRaidAlertNag;
+    E = null != o && o.disableRaidAlertNag;
   return {
-    show: null != t && n && !_,
+    show: null != t && n && !E,
     guildId: t
   }
 }

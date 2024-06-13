@@ -20,9 +20,9 @@ function g(e, t, n) {
   }) : e[t] = n, e
 }
 let p = {},
-  E = 0,
+  h = 0,
+  E = {},
   _ = {},
-  h = {},
   I = (e, t) => {
     let n = (0, s.getFailedMessageId)(e),
       r = {
@@ -31,14 +31,14 @@ let p = {},
         messageData: e,
         errorMessage: (0, d.getAutomodErrorMessage)(e, t)
       };
-    p[n] = r, E++
+    p[n] = r, h++
   },
   C = e => p[e],
-  T = e => {
-    null != p[e] && delete p[e], E++
+  m = e => {
+    null != p[e] && delete p[e], h++
   };
 
-function m(e) {
+function T(e) {
   let {
     messageData: t,
     errorResponseBody: n
@@ -53,7 +53,7 @@ function R(e) {
     messages: r
   } = e, i = null === (t = u.default.getChannel(n)) || void 0 === t ? void 0 : t.getGuildId();
   if (null == i) return !1;
-  let l = h[i],
+  let l = _[i],
     s = r.reduce((e, t) => {
       var n;
       return t.type === S.MessageTypes.AUTO_MODERATION_ACTION && (null === (n = t.embeds) || void 0 === n ? void 0 : n.some(e => {
@@ -63,17 +63,17 @@ function R(e) {
         return t === S.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION
       })) ? null == e || -1 === c.default.compare(e, t.id) ? t.id : void 0 : e
     }, l);
-  return null != s && h[i] !== s && (h[i] = s, !0)
+  return null != s && _[i] !== s && (_[i] = s, !0)
 }
-class N extends(r = i.default.PersistedStore) {
+class v extends(r = i.default.PersistedStore) {
   initialize(e) {
-    this.waitFor(a.default), null != e && (p = e.automodFailedMessages, _ = e.mentionRaidDetectionByGuild)
+    this.waitFor(a.default), null != e && (p = e.automodFailedMessages, E = e.mentionRaidDetectionByGuild)
   }
   getState() {
     return {
       automodFailedMessages: p,
-      mentionRaidDetectionByGuild: _,
-      lastIncidentAlertMessage: h
+      mentionRaidDetectionByGuild: E,
+      lastIncidentAlertMessage: _
     }
   }
   getMessage(e) {
@@ -81,20 +81,20 @@ class N extends(r = i.default.PersistedStore) {
     return null == e ? null : null !== (t = C(e)) && void 0 !== t ? t : null
   }
   getMessagesVersion() {
-    return E
+    return h
   }
   getMentionRaidDetected(e) {
     var t;
-    return null !== (t = _[e]) && void 0 !== t ? t : null
+    return null !== (t = E[e]) && void 0 !== t ? t : null
   }
   getLastIncidentAlertMessage(e) {
     var t;
-    return null !== (t = h[e]) && void 0 !== t ? t : null
+    return null !== (t = _[e]) && void 0 !== t ? t : null
   }
 }
-g(N, "displayName", "GuildAutomodMessageStore"), g(N, "persistKey", "GuildAutomodMessages"), t.default = new N(l.default, {
+g(v, "displayName", "GuildAutomodMessageStore"), g(v, "persistKey", "GuildAutomodMessages"), t.default = new v(l.default, {
   CONNECTION_OPEN: function(e) {
-    return p = {}, E++, !0
+    return p = {}, h++, !0
   },
   LOAD_MESSAGES_SUCCESS: R,
   LOCAL_MESSAGES_LOADED: R,
@@ -105,15 +105,15 @@ g(N, "displayName", "GuildAutomodMessageStore"), g(N, "persistKey", "GuildAutomo
     } = e;
     if (null == t || n.type !== S.MessageTypes.AUTO_MODERATION_ACTION) return !1;
     let r = (0, o.createMessageRecord)(n);
-    return !!(0, f.isAutomodMessageRecord)(r) && !!(0, f.isAutomodNotification)(r) && (h[t] = r.id, !0)
+    return !!(0, f.isAutomodMessageRecord)(r) && !!(0, f.isAutomodNotification)(r) && (_[t] = r.id, !0)
   },
-  MESSAGE_SEND_FAILED_AUTOMOD: m,
-  MESSAGE_EDIT_FAILED_AUTOMOD: m,
+  MESSAGE_SEND_FAILED_AUTOMOD: T,
+  MESSAGE_EDIT_FAILED_AUTOMOD: T,
   REMOVE_AUTOMOD_MESSAGE_NOTICE: function(e) {
     let {
       messageId: t
     } = e;
-    return T(t), !0
+    return m(t), !0
   },
   MESSAGE_END_EDIT: function(e) {
     let {
@@ -122,7 +122,7 @@ g(N, "displayName", "GuildAutomodMessageStore"), g(N, "persistKey", "GuildAutomo
     if ((null == t ? void 0 : t.body) == null || t.body.code === S.AbortCodes.AUTOMOD_MESSAGE_BLOCKED) return !1;
     let n = t.body.id;
     if (null == n) return !1;
-    T(n)
+    m(n)
   },
   AUTO_MODERATION_MENTION_RAID_DETECTION: function(e) {
     let {
@@ -130,7 +130,7 @@ g(N, "displayName", "GuildAutomodMessageStore"), g(N, "persistKey", "GuildAutomo
       decisionId: n,
       suspiciousMentionActivityUntil: r
     } = e;
-    return _[t] = {
+    return E[t] = {
       guildId: t,
       decisionId: n,
       suspiciousMentionActivityUntil: r
@@ -140,6 +140,6 @@ g(N, "displayName", "GuildAutomodMessageStore"), g(N, "persistKey", "GuildAutomo
     let {
       guildId: t
     } = e;
-    return delete _[t], !0
+    return delete E[t], !0
   }
 })

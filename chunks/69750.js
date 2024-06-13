@@ -150,8 +150,8 @@ function D(e) {
     mediaLayoutType: S,
     maxWidth: D,
     maxHeight: F,
-    hasFooter: H,
-    useFullWidth: L,
+    hasFooter: L,
+    useFullWidth: H,
     isVisualMediaType: V,
     onVideoControlsShow: G,
     onVideoControlsHide: P
@@ -174,7 +174,7 @@ function D(e) {
           maxWidth: y.MEDIA_MOSAIC_MAX_WIDTH,
           maxHeight: y.MEDIA_MOSAIC_MAX_HEIGHT
         });
-        if (!L && (e * b < y.MINIMUM_MEDIA_MOSAIC_DIM || e * W < y.MINIMUM_MEDIA_MOSAIC_DIM)) return null
+        if (!H && (e * b < y.MINIMUM_MEDIA_MOSAIC_DIM || e * W < y.MINIMUM_MEDIA_MOSAIC_DIM)) return null
       }
       return !X && (0, n.jsx)(w, {
         downloadURL: e ? i.downloadUrl : void 0,
@@ -197,7 +197,7 @@ function D(e) {
         height: 16
       })
     })
-  }, [S, r, B, R, V, X, i, z, J, b, W, L, u, q]);
+  }, [S, r, B, R, V, X, i, z, J, b, W, H, u, q]);
   switch (R) {
     case "IMAGE":
       return (0, n.jsx)(p.GIFAccessoryContext.Consumer, {
@@ -221,7 +221,7 @@ function D(e) {
           mediaLayoutType: S,
           maxWidth: D,
           maxHeight: F,
-          useFullWidth: L
+          useFullWidth: H
         })
       });
     case "VIDEO":
@@ -237,19 +237,19 @@ function D(e) {
         naturalWidth: b,
         naturalHeight: W,
         className: l()(j, {
-          [E.hasFooter]: H
+          [E.hasFooter]: L
         }),
         playable: O,
         responsive: !0,
         mediaLayoutType: S,
         maxWidth: D,
         maxHeight: F,
-        useFullWidth: L,
+        useFullWidth: H,
         mimeType: z,
         onControlsShow: G,
         onControlsHide: P,
         downloadable: !q,
-        mediaPlayerClassName: H ? E.hasFooter : void 0
+        mediaPlayerClassName: L ? E.hasFooter : void 0
       });
     case "AUDIO":
       return (0, n.jsx)(f, {
@@ -305,12 +305,12 @@ t.default = function(e) {
   let S = "IMAGE" === (t = T) || "VIDEO" === t,
     w = v(T),
     F = I && null != A && (0, r.isExplicitMediaBelowConstraints)(f, C),
-    [H, L] = s.useState(!1),
+    [L, H] = s.useState(!1),
     V = () => {
-      L(!0)
+      H(!0)
     },
     G = () => {
-      L(!1)
+      H(!1)
     },
     P = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -375,7 +375,7 @@ t.default = function(e) {
           }
         }(a, S, h),
         obscurityControlClassName: l()({
-          [E.obscureVideoSpacing]: "VIDEO" === T && I && !j && H
+          [E.obscureVideoSpacing]: "VIDEO" === T && I && !j && L
         }),
         onToggleObscurity: () => N(e => !e),
         children: e => P(e)
