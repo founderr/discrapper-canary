@@ -1,74 +1,213 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return v
   }
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("481060"),
-  a = n("911969"),
-  o = n("127255"),
-  l = n("880308"),
-  u = n("10718"),
-  d = n("148958"),
-  _ = n("237159"),
-  c = n("546600"),
-  E = n("105355"),
-  I = n("689079"),
-  T = n("245199");
+  s = n("392711"),
+  a = n.n(s),
+  o = n("892814"),
+  l = n("79411"),
+  u = n("442837"),
+  d = n("481060"),
+  _ = n("911969"),
+  c = n("867176"),
+  E = n("566620"),
+  I = n("127255"),
+  T = n("880308"),
+  f = n("399654"),
+  S = n("844439"),
+  h = n("10718"),
+  A = n("148958"),
+  m = n("695676"),
+  N = n("805522"),
+  p = n("601053"),
+  O = n("105862"),
+  C = n("689079"),
+  R = n("689938"),
+  g = n("245199");
+let L = [];
 
-function f(e) {
-  var t, n;
+function v(e) {
   let {
-    channel: f
-  } = e, [S, h] = r.useState(""), A = r.useCallback(() => h(""), [h]), {
-    commandsByActiveSection: m,
-    sectionDescriptors: N,
-    filterSection: p
-  } = u.useDiscovery(f, {
-    commandType: a.ApplicationCommandType.CHAT
+    channel: t,
+    enableRecommendations: n,
+    enableRecents: s
+  } = e, a = (0, c.useIsActivitiesInTextEnabled)(t.id, !0, "AppLauncherHomeScreen");
+  return r.useEffect(() => {
+    a && (0, E.fetchShelf)({
+      guildId: t.getGuildId(),
+      force: !0
+    })
+  }, [a, t]), (0, i.jsxs)("div", {
+    className: g.container,
+    children: [(0, i.jsx)(D, {}), (0, i.jsx)(d.Scroller, {
+      className: g.scrollableContent,
+      fade: !0,
+      children: (0, i.jsxs)("div", {
+        children: [s && (0, i.jsx)(M, {}), (0, i.jsx)(y, {
+          channel: t
+        }), n && (0, i.jsx)(P, {
+          channel: t
+        }), (0, i.jsx)(O.default, {})]
+      })
+    })]
+  })
+}
+
+function D() {
+  let [e, t] = r.useState(""), n = r.useMemo(() => a().debounce(e => {}, 400, {
+    leading: !1,
+    trailing: !0
+  }), []), s = r.useCallback(e => {
+    t(e), n(e)
+  }, [t, n]), o = r.useCallback(() => t(""), [t]);
+  return (0, i.jsx)("div", {
+    className: g.searchBarContainer,
+    children: (0, i.jsx)(d.SearchBar, {
+      placeholder: R.default.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER,
+      query: e,
+      onChange: s,
+      onClear: o,
+      size: d.SearchBar.Sizes.MEDIUM
+    })
+  })
+}
+
+function M() {
+  return null
+}
+
+function y(e) {
+  let {
+    channel: t
+  } = e, {
+    pushHistory: n
+  } = (0, m.useAppLauncherHistoryContext)(), {
+    sectionDescriptors: s,
+    filterSection: a
+  } = h.useDiscovery(t, {
+    commandType: _.ApplicationCommandType.CHAT
   }, {
     placeholderCount: 0,
-    limit: I.DISCOVERY_COMMANDS_QUERY_LIMIT,
+    limit: C.DISCOVERY_COMMANDS_QUERY_LIMIT,
     includeFrecency: !0
   });
   r.useEffect(() => {
-    p(I.BuiltInSectionId.FRECENCY)
-  }, [p]);
-  let O = null !== (n = null === (t = m[0]) || void 0 === t ? void 0 : t.data) && void 0 !== n ? n : [],
-    C = N.filter(e => e.id !== I.BuiltInSectionId.FRECENCY && e.id !== I.BuiltInSectionId.BUILT_IN),
-    R = (0, d.useSortApplicationsViaFrecency)(C);
-  (0, l.useFetchDeveloperActivityShelfItems)();
-  let g = (0, o.default)({
-    guildId: f.getGuildId(),
-    channel: f
-  });
-  return (0, i.jsxs)("div", {
-    className: T.container,
-    children: [(0, i.jsx)("div", {
-      className: T.searchBarContainer,
-      children: (0, i.jsx)(s.SearchBar, {
-        placeholder: "Search Apps & Commands",
-        onChange: h,
-        query: S,
-        onClear: A,
-        size: s.SearchBar.Sizes.MEDIUM
+    a(C.BuiltInSectionId.FRECENCY)
+  }, [a]);
+  let o = s.filter(e => e.id !== C.BuiltInSectionId.FRECENCY && e.id !== C.BuiltInSectionId.BUILT_IN),
+    l = (0, A.useSortApplicationsViaFrecency)(o);
+  return (0, i.jsx)(p.default, {
+    title: R.default.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER,
+    children: l.map(e => {
+      let {
+        application: t
+      } = e;
+      return null != t && (0, i.jsx)(N.default, {
+        application: t,
+        look: N.default.Looks.NO_BANNER,
+        onClick: e => {
+          e.stopPropagation(), n({
+            type: m.HistoryItemType.APPLICATION,
+            application: t
+          })
+        }
+      }, t.id)
+    })
+  })
+}
+
+function P(e) {
+  let {
+    channel: t
+  } = e, {
+    pushHistory: n
+  } = (0, m.useAppLauncherHistoryContext)(), s = function(e) {
+    let {
+      channelId: t,
+      location: n
+    } = e;
+    return r.useEffect(() => {
+      (0, f.getRecommendations)({
+        channelId: t,
+        location: n
       })
-    }), (0, i.jsxs)(s.Scroller, {
-      className: T.scrollableContent,
-      fade: !0,
-      children: [(0, i.jsx)(c.default, {
-        channel: f,
-        commands: O,
-        sectionDescriptors: N
-      }), (0, i.jsx)(E.default, {
-        channel: f,
-        applications: R
-      }), (0, i.jsx)(_.default, {
-        channel: f,
-        shelfItems: g
-      })]
-    })]
+    }, [t, n]), (0, u.useStateFromStoresArray)([S.default], () => S.default.getRecommendations({
+      channelId: t,
+      location: n
+    }))
+  }({
+    channelId: t.id,
+    location: o.AppRecommendationsLocation.APP_LAUNCHER_TEXT
+  }), a = function(e) {
+    let {
+      channel: t,
+      recommendations: n
+    } = e;
+    (0, T.useFetchDeveloperActivityShelfItems)();
+    let i = (0, I.default)({
+      guildId: t.getGuildId(),
+      channel: t
+    });
+    return r.useMemo(() => {
+      if (!n.some(e => e.appends_remaining_activities)) return L;
+      let e = new Set;
+      return n.forEach(t => {
+        t.items.forEach(t => {
+          null != t.application && e.add(t.application.id)
+        })
+      }), i.filter(t => !e.has(t.application.id))
+    }, [n, i])
+  }({
+    channel: t,
+    recommendations: s
+  });
+  return (0, i.jsx)(i.Fragment, {
+    children: s.map(e => {
+      let {
+        key: t,
+        type: r,
+        section_title: s,
+        items: o,
+        appends_remaining_activities: u
+      } = e, d = r === l.AppRecommendationsType.BANNER_CARDS ? N.default.Looks.LARGE_BANNER : N.default.Looks.NO_BANNER;
+      return (0, i.jsxs)(p.default, {
+        title: s,
+        children: [o.map(e => {
+          let {
+            application: t,
+            is_partner: r
+          } = e;
+          return (0, i.jsx)(N.default, {
+            application: t,
+            look: d,
+            onClick: e => {
+              e.stopPropagation(), n({
+                type: m.HistoryItemType.APPLICATION,
+                application: t
+              })
+            },
+            isPartner: r
+          }, t.id)
+        }), u && a.map(e => {
+          let {
+            application: t
+          } = e;
+          return (0, i.jsx)(N.default, {
+            application: t,
+            look: d,
+            onClick: e => {
+              e.stopPropagation(), n({
+                type: m.HistoryItemType.APPLICATION,
+                application: t
+              })
+            }
+          }, t.id)
+        })]
+      }, t)
+    })
   })
 }

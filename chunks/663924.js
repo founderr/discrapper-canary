@@ -9,67 +9,73 @@ var i = n("735250"),
   u = n("481060"),
   d = n("410575"),
   _ = n("40851"),
-  c = n("153850"),
-  E = n("585483"),
-  I = n("5967"),
-  T = n("499254"),
-  f = n("695676"),
-  S = n("173790"),
-  h = n("361917"),
-  A = n("314734"),
-  m = n("981631"),
-  N = n("175323");
+  c = n("566860"),
+  E = n("153850"),
+  I = n("585483"),
+  T = n("5967"),
+  f = n("499254"),
+  S = n("695676"),
+  h = n("173790"),
+  A = n("361917"),
+  m = n("314734"),
+  N = n("981631"),
+  p = n("175323");
 t.default = r.memo(function(e) {
   let t, {
       positionTargetRef: n,
       channel: s,
-      closeOnModalOuterClick: p = !1,
-      parentModalKey: O
+      closeOnModalOuterClick: O = !1,
+      parentModalKey: C
     } = e,
-    C = r.useRef(null),
-    R = r.useRef(null),
+    R = c.AppLauncherRecommendationsExperiment.useExperiment({
+      location: "App Launcher Popup"
+    }, {
+      autoTrackExposure: !0
+    }),
+    g = r.useRef(null),
+    L = r.useRef(null),
     {
-      renderWindow: g,
-      windowDispatch: L
+      renderWindow: v,
+      windowDispatch: D
     } = r.useContext(_.default),
-    v = null != O,
-    D = (0, l.useIsModalAtTop)(null != O ? O : ""),
-    M = () => {
-      T.dismissAppLauncherPopup()
+    M = null != C,
+    y = (0, l.useIsModalAtTop)(null != C ? C : ""),
+    P = () => {
+      f.dismissAppLauncherPopup()
     },
-    y = r.useCallback(e => {
+    U = r.useCallback(e => {
       var t;
-      if (!v && (0, l.hasAnyModalOpen)() || v && !(D && p)) return;
+      if (!M && (0, l.hasAnyModalOpen)() || M && !(y && O)) return;
       let {
         target: n
       } = e;
-      if ((0, o.isElement)(n) && null != n.closest("." + A.APP_LAUNCHER_ELEMENT_CLASSNAME)) return;
+      if ((0, o.isElement)(n) && null != n.closest("." + m.APP_LAUNCHER_ELEMENT_CLASSNAME)) return;
       for (;
         (0, o.isElement)(n);) {
-        if (n === R.current) return;
+        if (n === L.current) return;
         n = n.parentNode
       }
-      M();
-      let i = null === (t = (0, I.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
-      (null == i || "BODY" === i.tagName) && E.ComponentDispatch.dispatchToLastSubscribed(m.ComponentActions.TEXTAREA_FOCUS)
-    }, [p, D, v]),
-    P = r.useCallback(() => {
-      M()
+      P();
+      let i = null === (t = (0, T.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
+      (null == i || "BODY" === i.tagName) && I.ComponentDispatch.dispatchToLastSubscribed(N.ComponentActions.TEXTAREA_FOCUS)
+    }, [O, y, M]),
+    b = r.useCallback(() => {
+      P()
     }, []);
-  r.useLayoutEffect(() => (g.addEventListener("mousedown", y), g.addEventListener("contextmenu", y), L.subscribe(m.ComponentActions.POPOUT_CLOSE, P), () => {
-    g.removeEventListener("mousedown", y), g.removeEventListener("contextmenu", y), L.unsubscribe(m.ComponentActions.POPOUT_CLOSE, P)
-  }), [P, y, g, L]), (0, u.useFocusLock)(C), r.useEffect(() => {
-    (!v && (0, l.hasAnyModalOpen)() || v && !D) && M()
-  }, [D, v]);
+  r.useLayoutEffect(() => (v.addEventListener("mousedown", U), v.addEventListener("contextmenu", U), D.subscribe(N.ComponentActions.POPOUT_CLOSE, b), () => {
+    v.removeEventListener("mousedown", U), v.removeEventListener("contextmenu", U), D.unsubscribe(N.ComponentActions.POPOUT_CLOSE, b)
+  }), [b, U, v, D]), (0, u.useFocusLock)(g), r.useEffect(() => {
+    (!M && (0, l.hasAnyModalOpen)() || M && !y) && P()
+  }, [y, M]);
   let {
-    history: U,
-    setHistory: b,
-    currentView: G,
-    pushHistory: w,
-    goBack: k
+    history: G,
+    setHistory: w,
+    currentView: k,
+    pushHistory: B,
+    goBack: x
   } = function() {
     let [e, t] = r.useState([{
-      type: f.HistoryItemType.HOME
+      type: S.HistoryItemType.HOME
     }]), n = e[e.length - 1];
     return {
       history: e,
@@ -85,26 +91,28 @@ t.default = r.memo(function(e) {
       }
     }
   }();
-  switch (null == G ? void 0 : G.type) {
-    case f.HistoryItemType.HOME:
-      t = (0, i.jsx)(h.default, {
-        channel: s
+  switch (null == k ? void 0 : k.type) {
+    case S.HistoryItemType.HOME:
+      t = (0, i.jsx)(A.default, {
+        channel: s,
+        enableRecommendations: R.enabled,
+        enableRecents: R.recentsDropdownEnabled
       });
       break;
-    case f.HistoryItemType.APPLICATION:
-      t = (0, i.jsx)(S.default, {
+    case S.HistoryItemType.APPLICATION:
+      t = (0, i.jsx)(h.default, {
         channel: s,
-        application: G.application,
-        sectionName: G.sectionName
+        application: k.application,
+        sectionName: k.sectionName
       });
       break;
     default:
       t = null
   }
   return (0, i.jsx)(d.default, {
-    section: m.AnalyticsSections.EXPRESSION_PICKER,
-    children: (0, i.jsx)(c.AppReferencePositionLayer, {
-      className: N.positionLayer,
+    section: N.AnalyticsSections.EXPRESSION_PICKER,
+    children: (0, i.jsx)(E.AppReferencePositionLayer, {
+      className: p.positionLayer,
       targetRef: n,
       position: "top",
       align: "right",
@@ -115,24 +123,24 @@ t.default = r.memo(function(e) {
           isPositioned: n
         } = e;
         return (0, i.jsx)("section", {
-          className: a()(N.positionContainer),
-          ref: C,
+          className: a()(p.positionContainer),
+          ref: g,
           role: "dialog",
           "aria-label": "Application Launcher",
           children: n ? (0, i.jsxs)("div", {
-            className: N.drawerSizingWrapper,
-            ref: R,
+            className: p.drawerSizingWrapper,
+            ref: L,
             children: [(0, i.jsx)("div", {
-              className: N.resizeHandle
+              className: p.resizeHandle
             }), (0, i.jsx)("div", {
-              className: N.contentWrapper,
-              children: (0, i.jsx)(f.AppLauncherHistoryContext.Provider, {
+              className: p.contentWrapper,
+              children: (0, i.jsx)(S.AppLauncherHistoryContext.Provider, {
                 value: {
-                  history: U,
-                  setHistory: b,
-                  currentView: G,
-                  pushHistory: w,
-                  goBack: k
+                  history: G,
+                  setHistory: w,
+                  currentView: k,
+                  pushHistory: B,
+                  goBack: x
                 },
                 children: t
               })

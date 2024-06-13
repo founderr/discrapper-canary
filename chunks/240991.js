@@ -2,9 +2,6 @@
 n.r(t), n.d(t, {
   parseBioReact: function() {
     return c
-  },
-  parseBioReactWithoutScrolling: function() {
-    return E
   }
 });
 var i = n("392711"),
@@ -23,9 +20,9 @@ let _ = (0, d.default)([u.default.PROFILE_BIO_RULES, (0, l.default)({
 new(a())({
   max: 2e3
 });
-let c = o.reactParserFor(_),
-  E = o.reactParserFor((0, d.default)([r().omit(_, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]), {
-    emoji: {
-      react: () => null
-    }
-  }]))
+let c = o.reactParserFor(_);
+o.reactParserFor((0, d.default)([r().omit(_, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]), {
+  emoji: {
+    react: () => null
+  }
+}]))
