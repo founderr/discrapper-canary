@@ -16,12 +16,12 @@ var s = n("735250"),
   f = n("542578"),
   E = n("153124"),
   _ = n("203143"),
-  T = n("79390"),
-  m = n("839963"),
+  m = n("79390"),
+  T = n("839963"),
   I = n("139256"),
-  N = n("294608"),
-  p = n("689938"),
-  h = n("583522");
+  p = n("294608"),
+  h = n("689938"),
+  N = n("583522");
 
 function S(e) {
   let {
@@ -32,11 +32,11 @@ function S(e) {
   } = e, o = (0, E.useUID)(), {
     channelId: u,
     messageId: d
-  } = (0, N.useMessageIds)(), [m, I] = a.useState(""), [p, S] = a.useState(!1), C = "" !== m && p, A = a.useCallback(() => {
-    I((0, T.getPollAnswerVotesTooltipText)(d, u, i))
-  }, [d, u, i]), g = a.useCallback(() => {
-    A(), S(!0)
-  }, [A]), M = a.useCallback(() => {
+  } = (0, p.useMessageIds)(), [T, I] = a.useState(""), [h, S] = a.useState(!1), C = "" !== T && h, g = a.useCallback(() => {
+    I((0, m.getPollAnswerVotesTooltipText)(d, u, i))
+  }, [d, u, i]), A = a.useCallback(() => {
+    g(), S(!0)
+  }, [g]), M = a.useCallback(() => {
     S(!1)
   }, []), R = a.useCallback(() => {
     (0, _.handleShowVotesForAnswer)({
@@ -46,48 +46,48 @@ function S(e) {
     })
   }, [u, d, i]);
   a.useEffect(() => {
-    if (p) return f.default.addReactChangeListener(A), () => {
-      f.default.removeReactChangeListener(A)
+    if (h) return f.default.addReactChangeListener(g), () => {
+      f.default.removeReactChangeListener(g)
     }
-  }, [p, A]);
-  let O = (0, s.jsx)(c.Text, {
+  }, [h, g]);
+  let v = (0, s.jsx)(c.Text, {
     variant: "text-xs/semibold",
     color: "none",
-    className: h.voteCount,
+    className: N.voteCount,
     scaleFontToUserSetting: !0,
     children: n
   });
   return (0, s.jsxs)("div", {
-    className: h.votesData,
+    className: N.votesData,
     children: [l ? (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(c.Tooltip, {
         text: (0, s.jsx)(c.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
           scaleFontToUserSetting: !0,
-          children: m
+          children: T
         }),
         forceOpen: C,
         "aria-label": !1,
         children: e => (0, s.jsx)(c.Button, {
           ...e,
-          onMouseEnter: g,
+          onMouseEnter: A,
           onMouseLeave: M,
-          onFocus: g,
+          onFocus: A,
           onBlur: M,
           onClick: R,
-          className: h.voteCountButton,
+          className: N.voteCountButton,
           "aria-describedby": C ? o : void 0,
           look: c.Button.Looks.BLANK,
           size: c.Button.Sizes.NONE,
-          children: O
+          children: v
         })
       }), C && (0, s.jsx)(r.VisuallyHidden, {
         id: o,
-        children: m
+        children: T
       })]
     }) : (0, s.jsx)(s.Fragment, {
-      children: O
+      children: v
     }), (0, s.jsxs)(c.Text, {
       variant: "text-md/bold",
       color: "none",
@@ -114,13 +114,13 @@ function C(e) {
     }
   });
   return (0, s.jsx)(o.animated.span, {
-    className: h.votePercentageBar,
+    className: N.votePercentageBar,
     style: a,
     "aria-hidden": !0
   })
 }
 
-function A(e) {
+function g(e) {
   let {
     answersInteraction: t,
     isSelected: n,
@@ -133,19 +133,19 @@ function A(e) {
     answersInteraction: t,
     didSelfVote: a
   }).with({
-    answersInteraction: m.PollChatAnswerInteractionType.RADIO_BUTTONS
+    answersInteraction: T.PollChatAnswerInteractionType.RADIO_BUTTONS
   }, () => (0, s.jsx)(I.PollAnswerRadioIcon, {
     isSelected: n,
     size: 24,
     className: r
   })).with({
-    answersInteraction: m.PollChatAnswerInteractionType.CHECKBOXES
+    answersInteraction: T.PollChatAnswerInteractionType.CHECKBOXES
   }, () => (0, s.jsx)(I.PollAnswerCheckboxIcon, {
     isSelected: n,
     size: 20,
     className: r
   })).with({
-    answersInteraction: m.PollChatAnswerInteractionType.LIST,
+    answersInteraction: T.PollChatAnswerInteractionType.LIST,
     didSelfVote: !0
   }, () => (0, s.jsx)(I.PollAnswerVotedIcon, {
     isVictor: l,
@@ -155,7 +155,7 @@ function A(e) {
   })).otherwise(() => null)
 }
 
-function g(e) {
+function A(e) {
   let {
     answer: t,
     isExpired: n,
@@ -165,36 +165,36 @@ function g(e) {
   } = e, u = !0 === t.isSelected, d = !0 === t.didSelfVote, f = !0 === t.isVictor, E = t.shouldAnimateTransition;
   return (0, s.jsx)(s.Fragment, {
     children: (0, s.jsxs)("div", {
-      className: i()(h.answerInner, {
-        [h.currentlyVoting]: a !== m.PollChatAnswerInteractionType.LIST,
-        [h.selected]: u
+      className: i()(N.answerInner, {
+        [N.currentlyVoting]: a !== T.PollChatAnswerInteractionType.LIST,
+        [N.selected]: u
       }),
       children: [l ? (0, s.jsx)(C, {
         percentage: t.votesPercentage,
         shouldAnimate: E
       }) : null, null != t.pollMedia.emoji && (0, s.jsx)(I.PollEmojiMediaView, {
-        className: h.emoji,
+        className: N.emoji,
         emoji: t.pollMedia.emoji
       }), (0, s.jsx)(c.Text, {
-        className: h.label,
+        className: N.label,
         variant: "text-sm/semibold",
         color: "none",
         scaleFontToUserSetting: !0,
         children: t.pollMedia.text
       }), t.didSelfVote && (0, s.jsx)(r.VisuallyHidden, {
-        children: p.default.Messages.POLL_ANSWER_VOTED_ARIA
+        children: h.default.Messages.POLL_ANSWER_VOTED_ARIA
       }), l && (0, s.jsx)(S, {
         percentage: t.votesPercentage,
         label: t.votes,
         canShowVoterDetails: o,
         answerId: t.answerId
-      }), (0, s.jsx)(A, {
+      }), (0, s.jsx)(g, {
         answersInteraction: a,
         isSelected: u,
         didSelfVote: d,
         isVictor: f,
         isExpired: n,
-        className: h.answerSelectionIcon
+        className: N.answerSelectionIcon
       })]
     })
   })
@@ -209,11 +209,11 @@ function M(e) {
     ...i
   } = e;
   return (0, s.jsx)(I.PollAnswers, {
-    className: h.answersContainer,
-    answerClassName: h.answer,
+    className: N.answersContainer,
+    answerClassName: N.answer,
     answersInteraction: n,
     canTapAnswers: l,
-    renderAnswerContent: e => (0, s.jsx)(g, {
+    renderAnswerContent: e => (0, s.jsx)(A, {
       answer: e,
       isExpired: t,
       answersInteraction: n,

@@ -21,19 +21,19 @@ function r(e) {
     } = e,
     E = (0, a.default)(r),
     _ = E.nick,
-    T = o(E),
-    m = (0, a.useNullableUserAuthor)(u, f);
-  if (null != m && null != d) {
-    let e = d(m);
+    m = o(E),
+    T = (0, a.useNullableUserAuthor)(u, f);
+  if (null != T && null != d) {
+    let e = d(T);
     t = i.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_HOOK.format({
       username: _,
-      usernameHook: T,
-      otherUsername: m.nick,
+      usernameHook: m,
+      otherUsername: T.nick,
       otherUsernameHook: e
     })
   } else t = i.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_SELF_HOOK.format({
     username: _,
-    usernameHook: T
+    usernameHook: m
   });
   return (0, s.jsx)(l.default, {
     icon: n("474019"),

@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return E
   },
   clearHistory: function() {
-    return m
+    return T
   },
   clearSearchState: function() {
-    return N
+    return p
   },
   search: function() {
     return o
@@ -28,10 +28,10 @@ n.r(t), n.d(t, {
     return I
   },
   setShowBlockedResults: function() {
-    return h
+    return N
   },
   updateAutocompleteQuery: function() {
-    return p
+    return h
   }
 }), n("724458");
 var s = n("570140"),
@@ -101,15 +101,15 @@ function f(e) {
 }
 
 function E(e, t) {
-  return T(e, t * r.SEARCH_PAGE_SIZE)
+  return m(e, t * r.SEARCH_PAGE_SIZE)
 }
 
 function _(e, t) {
   let n = l.default.getOffset(e);
-  return T(e, n + t)
+  return m(e, n + t)
 }
 
-function T(e, t) {
+function m(e, t) {
   let n = l.default.getQuery(e),
     s = l.default.getTotalResults(e);
   if (!(t < 0) && !(t > s)) return o(e, {
@@ -118,7 +118,7 @@ function T(e, t) {
   })
 }
 
-function m(e) {
+function T(e) {
   s.default.dispatch({
     type: "SEARCH_CLEAR_HISTORY",
     searchId: e
@@ -133,7 +133,7 @@ function I(e, t) {
   })
 }
 
-function N(e) {
+function p(e) {
   a.default.trackWithMetadata(r.AnalyticEvents.SEARCH_CLOSED, {
     search_id: l.default.getAnalyticsId(e)
   }), s.default.wait(() => s.default.dispatch({
@@ -142,7 +142,7 @@ function N(e) {
   }))
 }
 
-function p(e, t, n) {
+function h(e, t, n) {
   null != e && s.default.dispatch({
     type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE",
     searchId: e,
@@ -151,7 +151,7 @@ function p(e, t, n) {
   })
 }
 
-function h(e, t) {
+function N(e, t) {
   s.default.dispatch({
     type: "SEARCH_SET_SHOW_BLOCKED_RESULTS",
     searchId: e,

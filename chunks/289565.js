@@ -23,17 +23,17 @@ function c(e) {
     compact: f,
     popoutProps: E,
     hideTimestamp: _ = !1,
-    withFooter: T = !1,
-    ...m
+    withFooter: m = !1,
+    ...T
   } = e, I = (0, i.default)(t);
   return (0, s.jsx)("div", {
     className: l()({
-      [d.withFooter]: T
+      [d.withFooter]: m
     }, d.embedCard, {
       [d.compact]: f
     }, c),
     children: (0, s.jsx)(r.default, {
-      ...m,
+      ...T,
       className: l()(d.messageContainer, {
         [d.compact]: f
       }),

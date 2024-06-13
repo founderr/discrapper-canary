@@ -19,12 +19,12 @@ let f = e => l()().diff(l().unix(e), "days");
 function E(e) {
   var t, a, l, E, _;
   if (null == e.message.embeds || null == e.message.embeds[0].fields) return null;
-  let T = e.message.embeds[0],
-    m = null !== (l = null === (t = T.fields) || void 0 === t ? void 0 : t.find(e => e.rawName === u.SafetyHubPolicyNoticeKeys.CLASSIFICATION_ID)) && void 0 !== l ? l : void 0,
-    I = null !== (E = null == m ? void 0 : m.rawValue) && void 0 !== E ? E : void 0,
-    N = null !== (_ = null === (a = T.fields) || void 0 === a ? void 0 : a.find(e => e.rawName === u.SafetyHubPolicyNoticeKeys.INCIDENT_TIMESTAMP)) && void 0 !== _ ? _ : void 0,
-    p = null == N || null == N.rawValue ? void 0 : parseFloat(N.rawValue);
-  return null == I || null == p ? null : (0, s.jsxs)(o.Clickable, {
+  let m = e.message.embeds[0],
+    T = null !== (l = null === (t = m.fields) || void 0 === t ? void 0 : t.find(e => e.rawName === u.SafetyHubPolicyNoticeKeys.CLASSIFICATION_ID)) && void 0 !== l ? l : void 0,
+    I = null !== (E = null == T ? void 0 : T.rawValue) && void 0 !== E ? E : void 0,
+    p = null !== (_ = null === (a = m.fields) || void 0 === a ? void 0 : a.find(e => e.rawName === u.SafetyHubPolicyNoticeKeys.INCIDENT_TIMESTAMP)) && void 0 !== _ ? _ : void 0,
+    h = null == p || null == p.rawValue ? void 0 : parseFloat(p.rawValue);
+  return null == I || null == h ? null : (0, s.jsxs)(o.Clickable, {
     onClick: () => {
       (0, o.openModalLazy)(async () => {
         let {
@@ -55,7 +55,7 @@ function E(e) {
         children: (0, s.jsx)(o.Text, {
           variant: "text-xs/medium",
           children: d.default.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({
-            daysAgo: f(p)
+            daysAgo: f(h)
           })
         })
       }), (0, s.jsx)("div", {

@@ -1,11 +1,11 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   isGamingLikeEntry: function() {
-    return i
+    return s
   }
 });
 var r = n("876215");
 
-function i(t) {
-  return t.content_type === r.ContentInventoryEntryType.PLAYED_GAME || t.content_type === r.ContentInventoryEntryType.TOP_GAME
+function s(e) {
+  return e.content_type === r.ContentInventoryEntryType.PLAYED_GAME || e.content_type === r.ContentInventoryEntryType.TOP_GAME
 }

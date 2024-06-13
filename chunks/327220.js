@@ -1,29 +1,29 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return a
+    return u
   }
 }), n("47120");
 var r = n("470079"),
-  i = n("442837"),
-  u = n("592125"),
-  o = n("9156");
+  s = n("442837"),
+  a = n("592125"),
+  E = n("9156");
 
-function a(t) {
-  let e = (0, i.useStateFromStores)([u.default], () => u.default.getPrivateChannelsVersion()),
-    n = (0, i.useStateFromStores)([u.default], () => u.default.getMutableDMsByUserIds(), [e]),
-    a = (0, i.useStateFromStores)([o.default], () => o.default.getMutedChannels(null)),
-    l = r.useMemo(() => {
-      let t = new Set;
-      for (let e in n) {
-        let r = n[e];
-        null != r && a.has(r) && t.add(e)
+function u(e) {
+  let t = (0, s.useStateFromStores)([a.default], () => a.default.getPrivateChannelsVersion()),
+    n = (0, s.useStateFromStores)([a.default], () => a.default.getMutableDMsByUserIds(), [t]),
+    u = (0, s.useStateFromStores)([E.default], () => E.default.getMutedChannels(null)),
+    T = r.useMemo(() => {
+      let e = new Set;
+      for (let t in n) {
+        let r = n[t];
+        null != r && u.has(r) && e.add(t)
       }
-      return t
-    }, [n, a]);
-  return r.useMemo(() => null == t ? void 0 : t.filter(t => {
-    for (let e of t.participants)
-      if (l.has(e)) return !1;
+      return e
+    }, [n, u]);
+  return r.useMemo(() => null == e ? void 0 : e.filter(e => {
+    for (let t of e.participants)
+      if (T.has(t)) return !1;
     return !0
-  }), [t, l])
+  }), [e, T])
 }

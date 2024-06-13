@@ -12,16 +12,16 @@ var s = n("735250"),
   f = n("434624"),
   E = n("287151"),
   _ = n("689938"),
-  T = n("858313"),
-  m = n("601064");
+  m = n("858313"),
+  T = n("601064");
 let I = (e, t) => null == e && null == t || e === t,
-  N = (e, t) => e.findIndex(e => I(e.emoji.id, null == t ? void 0 : t.id) && I(e.emoji.name, null == t ? void 0 : t.name)),
-  p = (e, t) => {
+  p = (e, t) => e.findIndex(e => I(e.emoji.id, null == t ? void 0 : t.id) && I(e.emoji.name, null == t ? void 0 : t.name)),
+  h = (e, t) => {
     if (null == t) return e;
-    let n = N(e, t);
+    let n = p(e, t);
     return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)]
   };
-class h extends a.PureComponent {
+class N extends a.PureComponent {
   static getDerivedStateFromProps(e, t) {
     let n = e.message.reactions.length;
     return 0 === t.reactionsCount && n > 0 ? {
@@ -39,23 +39,23 @@ class h extends a.PureComponent {
       isLurking: a,
       isGuest: l,
       isPendingMember: I,
-      isForumToolbar: N,
-      channel: p,
-      className: h,
+      isForumToolbar: p,
+      channel: h,
+      className: N,
       forceAddReactions: S,
       reactionClassName: C,
-      useChatFontScaling: A,
-      forceHideReactionCreates: g,
+      useChatFontScaling: g,
+      forceHideReactionCreates: A,
       remainingReactions: M,
       combinedReactions: R,
-      visibleReactionsCount: O
+      visibleReactionsCount: v
     } = this.props, {
-      disableTransitionAppear: v
-    } = this.state, x = A ? m : T, L = O > 0;
+      disableTransitionAppear: O
+    } = this.state, x = g ? T : m, L = v > 0;
     return L || S ? (0, s.jsxs)(r.TransitionGroup, {
       component: "div",
-      className: i()(x.reactions, h),
-      transitionAppear: !v,
+      className: i()(x.reactions, N),
+      transitionAppear: !O,
       role: "group",
       transitionLeave: !1,
       id: (0, c.getMessageReactionsId)(e),
@@ -72,12 +72,12 @@ class h extends a.PureComponent {
         isLurking: a,
         isGuest: l,
         isPendingMember: I,
-        isForumToolbar: N,
-        useChatFontScaling: A,
+        isForumToolbar: p,
+        useChatFontScaling: g,
         className: C
       }), M > 0 && (0, s.jsx)(o.Clickable, {
         onClick: t => {
-          t.stopPropagation(), (0, E.showReactionsModal)(p, e)
+          t.stopPropagation(), (0, E.showReactionsModal)(h, e)
         },
         className: i()(x.reaction, C, x.remainingReactions),
         "aria-label": _.default.Messages.ADD_REACTION,
@@ -86,11 +86,11 @@ class h extends a.PureComponent {
           variant: "text-sm/normal",
           children: ["+", M]
         })
-      }), !t && !g && (0, s.jsx)(d.ButtonAddReaction, {
+      }), !t && !A && (0, s.jsx)(d.ButtonAddReaction, {
         type: u.ReactionTypes.NORMAL,
         message: e,
-        channel: p,
-        useChatFontScaling: A,
+        channel: h,
+        useChatFontScaling: g,
         isHovered: this.state.isHovered,
         className: i()({
           [x.forceShow]: S && !L,
@@ -124,7 +124,7 @@ t.default = e => {
     visibleReactionsCount: o
   } = a.useMemo(() => {
     let e = [],
-      s = p(t.reactions, l),
+      s = h(t.reactions, l),
       a = null != n && n < s.length ? s.slice(0, n) : s,
       i = s.length - a.length,
       r = s.length;
@@ -142,7 +142,7 @@ t.default = e => {
       remainingReactions: i
     }
   }, [l, n, t.reactions]);
-  return (0, s.jsx)(h, {
+  return (0, s.jsx)(N, {
     ...e,
     visibleReactionsCount: o,
     combinedReactions: i,

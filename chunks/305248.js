@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return h
   }
 }), n("47120");
 var s = n("735250"),
@@ -16,41 +16,41 @@ var s = n("735250"),
   f = n("344185"),
   E = n("488131"),
   _ = n("592125"),
-  T = n("823379"),
-  m = n("709054"),
+  m = n("823379"),
+  T = n("709054"),
   I = n("124368"),
-  N = n("314569");
+  p = n("314569");
 
-function p(e) {
+function h(e) {
   let {
     channel: t,
     channelRecord: n,
     deleteChannel: l
-  } = e, p = (0, r.useStateFromStoresArray)([f.default, _.default], () => i()(f.default.getThreadsForParent(n.guild_id, n.id)).values().filter(e => {
+  } = e, h = (0, r.useStateFromStoresArray)([f.default, _.default], () => i()(f.default.getThreadsForParent(n.guild_id, n.id)).values().filter(e => {
     let {
       id: n
     } = e;
-    return m.default.compare(n, t.oldestReadMessageId) > 0
+    return T.default.compare(n, t.oldestReadMessageId) > 0
   }).map(e => {
     let {
       id: t
     } = e;
     return _.default.getChannel(t)
-  }).filter(T.isNotNullish).sort((e, t) => m.default.compare(e.id, t.id)).value(), [t.oldestReadMessageId, n.guild_id, n.id]), h = a.useCallback((e, t) => {
+  }).filter(m.isNotNullish).sort((e, t) => T.default.compare(e.id, t.id)).value(), [t.oldestReadMessageId, n.guild_id, n.id]), N = a.useCallback((e, t) => {
     (0, E.openThreadSidebarForViewing)(e, t, I.OpenThreadAnalyticsLocations.INBOX)
   }, []);
   return a.useEffect(() => {
-    null != n && t.isFullyLoaded && !t.hasError && !t.collapsed && 0 === p.length && o.default.wait(() => {
+    null != n && t.isFullyLoaded && !t.hasError && !t.collapsed && 0 === h.length && o.default.wait(() => {
       (0, u.ack)(t.channelId, !0), l(t.channelId)
     })
   }), (0, s.jsx)("div", {
-    className: N.container,
-    children: p.map(e => (0, s.jsx)(c.ForumPostComposerStoreProvider, {
+    className: p.container,
+    children: h.map(e => (0, s.jsx)(c.ForumPostComposerStoreProvider, {
       createStore: () => (0, c.createForumPostComposerStore)(n),
       children: (0, s.jsx)(d.default, {
-        className: N.forumPost,
+        className: p.forumPost,
         threadId: e.id,
-        goToThread: h
+        goToThread: N
       })
     }, e.id))
   })

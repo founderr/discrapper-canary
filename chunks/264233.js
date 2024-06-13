@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return h
   }
 }), n("47120");
 var s = n("735250"),
@@ -16,31 +16,31 @@ var s = n("735250"),
   f = n("317632"),
   E = n("174767"),
   _ = n("240126"),
-  T = n("791914"),
-  m = n("326838"),
+  m = n("791914"),
+  T = n("326838"),
   I = n("689938"),
-  N = n("493634");
+  p = n("493634");
 
-function p(e) {
+function h(e) {
   let {
     setTab: t,
     badgeState: l,
-    closePopout: p
-  } = e, S = (0, r.useStateFromStoresArray)([f.default], () => f.default.getInvites()), C = (0, r.useStateFromStores)([f.default], () => f.default.getInviteStatuses()), [A, g] = a.useMemo(() => i().partition(S, e => {
+    closePopout: h
+  } = e, S = (0, r.useStateFromStoresArray)([f.default], () => f.default.getInvites()), C = (0, r.useStateFromStores)([f.default], () => f.default.getInviteStatuses()), [g, A] = a.useMemo(() => i().partition(S, e => {
     var t;
     return (null === (t = C[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1e3 < e.ttl
   }), [S, C]);
   return (a.useEffect(() => {
     (0, E.clearUnseenInvites)()
   }), 0 === S.length) ? (0, s.jsxs)("div", {
-    className: N.container,
-    children: [(0, s.jsx)(T.default, {
+    className: p.container,
+    children: [(0, s.jsx)(m.default, {
       tab: o.InboxTab.GAME_INVITES,
       setTab: t,
       badgeState: l,
-      closePopout: p
+      closePopout: h
     }), (0, s.jsx)("div", {
-      className: N.__invalid_emptyStateContainer,
+      className: p.__invalid_emptyStateContainer,
       children: (0, s.jsx)(_.default, {
         Icon: u.GameControllerIcon,
         header: I.default.Messages.GAME_INVITES_EMPTY_STATE_TITLE,
@@ -48,14 +48,14 @@ function p(e) {
       })
     })]
   }) : (0, s.jsxs)("div", {
-    className: N.container,
-    children: [(0, s.jsx)(T.default, {
+    className: p.container,
+    children: [(0, s.jsx)(m.default, {
       tab: o.InboxTab.GAME_INVITES,
       setTab: t,
       badgeState: l,
-      closePopout: p,
+      closePopout: h,
       children: (0, s.jsx)(c.CircleIconButton, {
-        className: N.__invalid_deleteButton,
+        className: p.__invalid_deleteButton,
         tooltip: I.default.Messages.GAME_INVITES_DELETE_ALL,
         color: c.CircleIconButtonColors.SECONDARY,
         icon: (0, s.jsx)(d.TrashIcon, {
@@ -78,21 +78,21 @@ function p(e) {
       })
     }), (0, s.jsx)(c.AdvancedScrollerThin, {
       children: (0, s.jsxs)("div", {
-        className: N.invitesContainer,
-        children: [A.length > 0 && (0, s.jsxs)(s.Fragment, {
-          children: [(0, s.jsx)(h, {
+        className: p.invitesContainer,
+        children: [g.length > 0 && (0, s.jsxs)(s.Fragment, {
+          children: [(0, s.jsx)(N, {
             title: I.default.Messages.GAME_INVITES_RECENT_HEADER
           }), (0, s.jsx)(s.Fragment, {
-            children: A.map(e => (0, s.jsx)(m.default, {
+            children: g.map(e => (0, s.jsx)(T.default, {
               invite: e,
               expired: !1
             }, e.invite_id))
           })]
-        }), g.length > 0 && (0, s.jsxs)(s.Fragment, {
-          children: [(0, s.jsx)(h, {
+        }), A.length > 0 && (0, s.jsxs)(s.Fragment, {
+          children: [(0, s.jsx)(N, {
             title: I.default.Messages.GAME_INVITES_EXPIRED_HEADER
           }), (0, s.jsx)(s.Fragment, {
-            children: g.map(e => (0, s.jsx)(m.default, {
+            children: A.map(e => (0, s.jsx)(T.default, {
               invite: e,
               expired: !0
             }, e.invite_id))
@@ -103,19 +103,19 @@ function p(e) {
   })
 }
 
-function h(e) {
+function N(e) {
   let {
     title: t
   } = e;
   return (0, s.jsxs)("div", {
-    className: N.headerContainer,
+    className: p.headerContainer,
     children: [(0, s.jsx)(c.Text, {
-      className: N.headerTitle,
+      className: p.headerTitle,
       variant: "text-xs/semibold",
       color: "interactive-normal",
       children: t
     }), (0, s.jsx)("div", {
-      className: N.headerDivider
+      className: p.headerDivider
     })]
   })
 }

@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return C
   },
   getDropByQuestId: function() {
-    return A
+    return g
   },
   getDropExpired: function() {
     return S
@@ -19,25 +19,25 @@ n.r(t), n.d(t, {
     return E
   },
   getDropsPartnerGameNameByQuestId: function() {
-    return g
+    return A
   },
   getEligibilityByRunningGameDetection: function() {
     return I
   },
   getEligibleGameLastSeenStartTimeSeconds: function() {
-    return T
+    return m
   },
   getPlatformLabel: function() {
     return M
   },
   getShowDropsEndedIncompleteBanner: function() {
-    return h
+    return N
   },
   getShowDropsNoticeBanner: function() {
-    return p
+    return h
   },
   isDropGameDetected: function() {
-    return m
+    return T
   }
 });
 var s = n("913527"),
@@ -69,11 +69,11 @@ function _(e, t) {
   })) || !1
 }
 
-function T() {
+function m() {
   return Math.floor(Date.now() / 1e3) - d.DROPS_ELIGIBILITY_SEEN_GAMES_LOOKBACK_SECONDS
 }
 
-function m(e, t, n) {
+function T(e, t, n) {
   var s, a, l, i;
   if (null == C(e)) return !1;
   let r = (s = t, a = d.PartnerGameNameToSearchTermMapping[e], null !== (l = s.find(e => _(e.name, a))) && void 0 !== l ? l : null);
@@ -86,17 +86,17 @@ function m(e, t, n) {
 }
 
 function I(e) {
-  return m(e, l.default.getGamesSeen(!1), T())
+  return T(e, l.default.getGamesSeen(!1), m())
 }
 
-function N(e, t) {
+function p(e, t) {
   let {
     endDate: n
   } = e, s = a()(), l = a()(n, d.noticeBannerDateFormat), i = a()(s.clone().add(e.dropsNoticeBannerDurationDays, "days").format(d.noticeBannerDateFormat)), r = l.isSameOrBefore(i), o = l.isBefore(s, "minute");
   return r && (t && !o || !t && o)
 }
 
-function p(e) {
+function h(e) {
   var t;
   let n = C(e);
   if (null == n || !(null === (t = f(e)) || void 0 === t ? void 0 : t.getCurrentConfig({
@@ -105,11 +105,11 @@ function p(e) {
       autoTrackExposure: !1
     }).dropsEnabled)) return !1;
   let s = i.DropsOptedOut.getSetting(),
-    a = N(n, !0);
+    a = p(n, !0);
   return !s && a
 }
 
-function h(e) {
+function N(e) {
   var t, n;
   let s = C(e);
   if (null == s || !(null === (n = f(e)) || void 0 === n ? void 0 : null === (t = n.getCurrentConfig({
@@ -118,7 +118,7 @@ function h(e) {
       autoTrackExposure: !1
     })) || void 0 === t ? void 0 : t.dropsEnabled)) return !1;
   let a = i.DropsOptedOut.getSetting(),
-    l = N(s, !1);
+    l = p(s, !1);
   return S(s) && !a && l
 }
 
@@ -133,11 +133,11 @@ function C(e) {
   return d.DROPS_GAMES[e]
 }
 
-function A(e) {
+function g(e) {
   return Object.values(d.DROPS_GAMES).find(t => t.dropsQuestId === e)
 }
 
-function g(e) {
+function A(e) {
   return Object.keys(d.DROPS_GAMES).find(t => d.DROPS_GAMES[t].dropsQuestId === e)
 }
 

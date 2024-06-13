@@ -8,18 +8,18 @@ var s, a, l, i, r = n("913527"),
   f = n("594174"),
   E = n("74538");
 let _ = !1;
-class T extends(i = u.default.Store) {
+class m extends(i = u.default.Store) {
   shouldShowReactivateNotice() {
     let e = f.default.getCurrentUser();
     return !(0, E.isPremium)(e) && _
   }
 }
-l = "SubscriptionRemindersStore", (a = "displayName") in(s = T) ? Object.defineProperty(s, a, {
+l = "SubscriptionRemindersStore", (a = "displayName") in(s = m) ? Object.defineProperty(s, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = l, t.default = new T(d.default, {
+}) : s[a] = l, t.default = new m(d.default, {
   BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: function(e) {
     let {
       subscription: t

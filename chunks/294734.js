@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return D
+    return P
   }
 });
 var s = n("735250"),
@@ -16,33 +16,33 @@ var s = n("735250"),
   f = n("356264"),
   E = n("628238"),
   _ = n("25015"),
-  T = n("438075"),
-  m = n("695346"),
+  m = n("438075"),
+  T = n("695346"),
   I = n("592125"),
-  N = n("906467"),
-  p = n("430824"),
-  h = n("496675"),
+  p = n("906467"),
+  h = n("430824"),
+  N = n("496675"),
   S = n("699516"),
   C = n("594174"),
-  A = n("113039"),
-  g = n("100604"),
+  g = n("113039"),
+  A = n("100604"),
   M = n("694784"),
   R = n("39154"),
-  O = n("689938"),
-  v = n("296854");
+  v = n("689938"),
+  O = n("296854");
 
 function x() {
   return (0, s.jsxs)("div", {
-    className: v.headerContainer,
+    className: O.headerContainer,
     children: [(0, s.jsx)(u.ChatArrowRightIcon, {
       width: 16,
       height: 16,
       color: o.default.colors.TEXT_LOW_CONTRAST
     }), (0, s.jsx)(l.Text, {
-      className: v.headerText,
+      className: O.headerText,
       variant: "text-sm/semibold",
       color: "text-low-contrast",
-      children: O.default.Messages.MESSAGE_FORWARDED
+      children: v.default.Messages.MESSAGE_FORWARDED
     })]
   })
 }
@@ -52,18 +52,18 @@ function L(e) {
     message: t,
     snapshot: n,
     index: u
-  } = e, E = a.useMemo(() => new g.MessageForward(t, n, u), [t, n, u]), _ = (0, i.useStateFromStores)([I.default, C.default, S.default, h.default, p.default, f.default], () => E.getForwardInfo(I.default, C.default, S.default, h.default, p.default, f.default).footerInfo, [E], r.default), T = a.useCallback(() => {
+  } = e, E = a.useMemo(() => new A.MessageForward(t, n, u), [t, n, u]), _ = (0, i.useStateFromStores)([I.default, C.default, S.default, N.default, h.default, f.default], () => E.getForwardInfo(I.default, C.default, S.default, N.default, h.default, f.default).footerInfo, [E], r.default), m = a.useCallback(() => {
     (0, M.default)(t, n)
   }, [t, n]);
   return null == _ ? null : (0, s.jsxs)(c.Clickable, {
-    className: v.footerContainer,
-    onClick: T,
+    className: O.footerContainer,
+    onClick: m,
     children: [null != _.originIconUrl ? (0, s.jsx)("img", {
-      className: v.originIcon,
+      className: O.originIcon,
       src: _.originIconUrl,
       alt: ""
     }) : null, (0, s.jsx)(l.Text, {
-      className: v.footerText,
+      className: O.footerText,
       variant: "text-sm/medium",
       color: "none",
       children: "".concat(_.originLabel, "  •  ").concat(_.timestampLabel)
@@ -75,15 +75,15 @@ function L(e) {
   })
 }
 
-function P(e) {
+function D(e) {
   var t;
   let {
     message: n,
     snapshot: l,
     index: r
-  } = e, o = a.useMemo(() => (0, R.default)(n, l), [n, l]), u = m.InlineEmbedMedia.useSetting(), d = m.RenderEmbeds.useSetting(), c = (0, i.useStateFromStores)([N.default], () => N.default.isDeveloper), f = (0, E.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
-    content: p,
-    hasSpoilerEmbeds: h
+  } = e, o = a.useMemo(() => (0, R.default)(n, l), [n, l]), u = T.InlineEmbedMedia.useSetting(), d = T.RenderEmbeds.useSetting(), c = (0, i.useStateFromStores)([p.default], () => p.default.isDeveloper), f = (0, E.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
+    content: h,
+    hasSpoilerEmbeds: N
   } = (0, _.default)(o, {
     hideSimpleEmbedContent: u && d,
     isInteracting: !1,
@@ -93,23 +93,23 @@ function P(e) {
     allowLinks: !0,
     allowDevLinks: c,
     previewLinkTarget: !0
-  }), S = (0, i.useStateFromStores)([I.default], () => I.default.getChannel(n.channel_id)), C = m.MessageDisplayCompact.useSetting();
+  }), S = (0, i.useStateFromStores)([I.default], () => I.default.getChannel(n.channel_id)), C = T.MessageDisplayCompact.useSetting();
   return null == S ? null : (0, s.jsxs)("div", {
-    className: v.container,
+    className: O.container,
     children: [(0, s.jsx)("div", {
-      className: v.quote
+      className: O.quote
     }), (0, s.jsxs)("div", {
-      className: v.content,
-      children: [(0, s.jsx)(x, {}), (0, s.jsx)(A.default, {
+      className: O.content,
+      children: [(0, s.jsx)(x, {}), (0, s.jsx)(g.default, {
         message: o,
-        content: p
-      }), (0, T.default)({
+        content: h
+      }), (0, m.default)({
         channelMessageProps: {
           message: o,
           channel: S,
           compact: C
         },
-        hasSpoilerEmbeds: h,
+        hasSpoilerEmbeds: N,
         isInteracting: !1,
         isMessageSnapshot: !0
       }), (0, s.jsx)(L, {
@@ -121,12 +121,12 @@ function P(e) {
   }, r)
 }
 
-function D(e) {
+function P(e) {
   let {
     message: t
   } = e;
   return (0, s.jsx)(s.Fragment, {
-    children: t.messageSnapshots.map((e, n) => (0, s.jsx)(P, {
+    children: t.messageSnapshots.map((e, n) => (0, s.jsx)(D, {
       message: t,
       snapshot: e,
       index: n

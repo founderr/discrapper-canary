@@ -18,24 +18,24 @@ function f(e) {
   let {
     type: t,
     onClick: n
-  } = e, [f, _] = a.useState(!1), T = (0, i.useInDesktopNotificationCenterExperiment)(), m = () => {
+  } = e, [f, _] = a.useState(!1), m = (0, i.useInDesktopNotificationCenterExperiment)(), T = () => {
     n(), o.default.track(d.AnalyticEvents.INBOX_CHANNEL_ACKED, {
       marked_all_channels_as_read: !0,
       num_unread_channels_remaining: 0
     })
   }, I = e => {
-    e.shiftKey ? m() : _(!0)
+    e.shiftKey ? T() : _(!0)
   };
   return (0, s.jsxs)(s.Fragment, {
     children: [f ? (0, s.jsx)(E, {
-      confirm: m,
+      confirm: T,
       cancel: () => _(!1)
     }) : null, "bottom-floating" === t ? (0, s.jsx)(u.FloatingActionButton, {
       text: c.default.Messages.MARK_ALL_AS_READ,
       icon: r.default,
       onClick: I
     }) : (0, s.jsx)(l.CircleIconButton, {
-      tooltip: T ? c.default.Messages.MARK_ALL_AS_READ : c.default.Messages.UNREADS_MARK_READ,
+      tooltip: m ? c.default.Messages.MARK_ALL_AS_READ : c.default.Messages.UNREADS_MARK_READ,
       color: l.CircleIconButtonColors.SECONDARY,
       icon: (0, s.jsx)(r.default, {}),
       onClick: I

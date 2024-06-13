@@ -22,27 +22,27 @@ function c(e) {
     color: f,
     customDisabledColor: E,
     hideNotLaunchable: _,
-    tooltipPosition: T,
-    onClick: m,
+    tooltipPosition: m,
+    onClick: T,
     className: I,
-    source: N,
-    hover: p,
-    innerClassName: h
+    source: p,
+    hover: h,
+    innerClassName: N
   } = e, S = {
     fullWidth: n,
     size: c,
     color: f,
     customDisabledColor: E,
-    tooltipPosition: T,
-    onClick: m,
+    tooltipPosition: m,
+    onClick: T,
     className: I,
-    hover: p,
-    innerClassName: h
-  }, C = (0, a.useStateFromStores)([i.default], () => i.default.getActiveLibraryApplication(t.id)), A = null != C ? C.sku.id : null, g = null != A ? A : t.primarySkuId, M = (0, a.useStateFromStores)([r.default], () => null != g && !r.default.didFetchingSkuFail(g));
+    hover: h,
+    innerClassName: N
+  }, C = (0, a.useStateFromStores)([i.default], () => i.default.getActiveLibraryApplication(t.id)), g = null != C ? C.sku.id : null, A = null != g ? g : t.primarySkuId, M = (0, a.useStateFromStores)([r.default], () => null != A && !r.default.didFetchingSkuFail(A));
   return null != C && (0, o.isUserEntitledToLibraryApplication)(C) ? (0, s.jsx)(d.default, {
     ...S,
     libraryApplication: C,
-    source: N
+    source: p
   }) : M ? (0, s.jsx)("div", {
     children: "deprecated!"
   }) : (0, s.jsx)(u.default, {

@@ -26,11 +26,11 @@ function _(e, t) {
       muted: null != n ? c.default.isMuted(n) : void 0,
       muteConfig: null != n ? c.default.getMuteConfig(n) : void 0
     }), [n]),
-    T = (0, d.useMutedUntilText)(_);
+    m = (0, d.useMutedUntilText)(_);
   return null == n ? null : a ? (0, s.jsx)(r.MenuItem, {
     id: "unmute-guild",
     label: E.default.Messages.UNMUTE_SERVER,
-    subtext: T,
+    subtext: m,
     action: () => o.default.updateGuildNotificationSettings(n, {
       muted: !1
     }, f.NotificationLabels.Unmuted)

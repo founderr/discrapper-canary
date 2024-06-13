@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return f
   },
   fetchProgress: function() {
-    return T
+    return m
   },
   sendHeartbeat: function() {
     return _
@@ -152,7 +152,7 @@ let r = async e => {
       statusCode: null == t ? void 0 : t.status
     })
   }
-}, T = async e => {
+}, m = async e => {
   try {
     let t = await s.HTTP.get({
       url: i.Endpoints.DROPS_PROGRESS(e)

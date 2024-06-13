@@ -8,7 +8,7 @@ var s, a, l, i, r = n("442837"),
   f = n("699516");
 let E = 180 * u.default.Millis.DAY,
   _ = !1;
-class T extends(i = r.default.Store) {
+class m extends(i = r.default.Store) {
   initialize() {
     this.waitFor(f.default, c.default)
   }
@@ -16,12 +16,12 @@ class T extends(i = r.default.Store) {
     return _
   }
 }
-l = "PremiumPromoStore", (a = "displayName") in(s = T) ? Object.defineProperty(s, a, {
+l = "PremiumPromoStore", (a = "displayName") in(s = m) ? Object.defineProperty(s, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = l, t.default = new T(o.default, {
+}) : s[a] = l, t.default = new m(o.default, {
   CONNECTION_OPEN: function() {
     return _ !== (_ = f.default.getFriendIDs().length >= 10 && d.default.extractTimestamp(c.default.getId()) < Date.now() - E)
   }

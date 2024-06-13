@@ -21,7 +21,7 @@ function f(e) {
     messageId: f,
     targetKind: E,
     embedIndex: _
-  } = e, T = a.useCallback(() => {
+  } = e, m = a.useCallback(() => {
     let e = o.default.getMessage(n, f);
     if (null == e) return;
     let t = (0, u.getInlineForwardOptions)(e, {
@@ -44,6 +44,6 @@ function f(e) {
       height: 16,
       color: l.default.colors.INTERACTIVE_NORMAL
     }),
-    onClick: T
+    onClick: m
   })
 }

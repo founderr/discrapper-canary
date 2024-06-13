@@ -1,13 +1,13 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return o
+    return E
   }
 });
 var r = n("442837"),
-  i = n("719247");
-let u = [];
+  s = n("719247");
+let a = [];
 
-function o(t) {
-  return (0, r.useStateFromStoresArray)([i.default], () => null == t ? u : t.filter(i.default.canRenderContent), [t])
+function E(e) {
+  return (0, r.useStateFromStoresArray)([s.default], () => null == e ? a : e.filter(s.default.canRenderContent), [e])
 }

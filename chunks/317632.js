@@ -9,7 +9,7 @@ let c = [],
   E = null,
   _ = 0;
 
-function T(e) {
+function m(e) {
   let t = null;
   try {
     t = JSON.parse(e.launch_parameters)
@@ -29,7 +29,7 @@ function T(e) {
   }
   return null
 }
-class m extends(s = r.default.Store) {
+class T extends(s = r.default.Store) {
   getInvites() {
     return c
   }
@@ -51,22 +51,22 @@ class m extends(s = r.default.Store) {
     return _
   }
 }
-i = "GameInviteStore", (l = "displayName") in(a = m) ? Object.defineProperty(a, l, {
+i = "GameInviteStore", (l = "displayName") in(a = T) ? Object.defineProperty(a, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = i, t.default = new m(o.default, {
+}) : a[l] = i, t.default = new T(o.default, {
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
     let {
       gameInvites: t
     } = e;
-    c = t.map(T).filter(u.isNotNullish)
+    c = t.map(m).filter(u.isNotNullish)
   },
   GAME_INVITE_CREATE: function(e) {
     let {
       gameInvite: t
-    } = e, n = T(t);
+    } = e, n = m(t);
     null != n && (c = [n, ...c], E = t, _ += 1)
   },
   GAME_INVITE_DELETE: function(e) {

@@ -20,14 +20,14 @@ function _(e) {
   let {
     message: t,
     channel: n
-  } = e, _ = (0, l.useStateFromStores)([d.default], () => d.default.isBlocked(t.author.id)), T = (0, r.useActiveKeywordFiltersCacheKey)(), m = a.useMemo(() => ({
+  } = e, _ = (0, l.useStateFromStores)([d.default], () => d.default.isBlocked(t.author.id)), m = (0, r.useActiveKeywordFiltersCacheKey)(), T = a.useMemo(() => ({
     [n.guild_id]: [t.author.id]
   }), [n.guild_id, t.author.id]);
-  (0, i.useSubscribeGuildMembers)(m);
+  (0, i.useSubscribeGuildMembers)(T);
   let I = a.useMemo(() => null != t.content && "" !== t.content ? (0, o.default)(t, {
     formatInline: !0,
-    shouldFilterKeywords: null != T
-  }).content : null, [t, T]);
+    shouldFilterKeywords: null != m
+  }).content : null, [t, m]);
   return (0, s.jsxs)("div", {
     className: E.threadMessageAccessory,
     children: [(0, s.jsx)("img", {

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return eS
   },
   dismissCurrentNotice: function() {
-    return ep
+    return eh
   }
 });
 var s = n("735250"),
@@ -19,31 +19,31 @@ var s = n("735250"),
   f = n("117266"),
   E = n("37234"),
   _ = n("254854"),
-  T = n("195500"),
-  m = n("287734"),
+  m = n("195500"),
+  T = n("287734"),
   I = n("205355"),
-  N = n("558381"),
-  p = n("223245"),
-  h = n("491428"),
+  p = n("558381"),
+  h = n("223245"),
+  N = n("491428"),
   S = n("401430"),
   C = n("230711"),
-  A = n("726542"),
-  g = n("100527"),
+  g = n("726542"),
+  A = n("100527"),
   M = n("906732"),
   R = n("812206"),
-  O = n("391650"),
-  v = n("605236"),
+  v = n("391650"),
+  O = n("605236"),
   x = n("749277"),
   L = n("492435"),
-  P = n("353926"),
-  D = n("506357"),
+  D = n("353926"),
+  P = n("506357"),
   y = n("36459"),
   U = n("236069"),
   j = n("305325"),
   b = n("281956"),
-  G = n("574650"),
-  F = n("665302"),
-  B = n("434404"),
+  F = n("574650"),
+  B = n("665302"),
+  G = n("434404"),
   k = n("918658"),
   w = n("859428"),
   H = n("963249"),
@@ -73,76 +73,76 @@ var s = n("735250"),
   ef = n("474936"),
   eE = n("610674"),
   e_ = n("65154"),
-  eT = n("689938"),
-  em = n("229647");
+  em = n("689938"),
+  eT = n("229647");
 let eI = () => (0, s.jsxs)(u.Notice, {
     color: u.NoticeColors.DANGER,
     children: [(0, s.jsx)(u.NoticeCloseButton, {
       onClick: () => {
-        ep(), (0, ed.open)()
+        eh(), (0, ed.open)()
       }
-    }), eT.default.Messages.NOTICE_NO_INPUT_DETECTED, (0, s.jsx)(u.NoticeButtonAnchor, {
+    }), em.default.Messages.NOTICE_NO_INPUT_DETECTED, (0, s.jsx)(u.NoticeButtonAnchor, {
       href: er.default.getArticleURL(ec.HelpdeskArticles.NO_INPUT_DETECTED),
-      children: eT.default.Messages.NOTICE_NO_INPUT_DETECTED_HELP_LINK_TEXT
+      children: em.default.Messages.NOTICE_NO_INPUT_DETECTED_HELP_LINK_TEXT
     })]
   }),
-  eN = () => (0, s.jsxs)(u.Notice, {
+  ep = () => (0, s.jsxs)(u.Notice, {
     color: u.NoticeColors.DANGER,
     children: [(0, s.jsx)(u.NoticeCloseButton, {
       onClick: () => {
-        ep(), (0, ed.open)()
+        eh(), (0, ed.open)()
       }
-    }), eT.default.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS, (0, s.jsx)(u.NoticeButton, {
+    }), em.default.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS, (0, s.jsx)(u.NoticeButton, {
       onClick: () => {
         (0, E.pushLayer)(ec.Layers.USER_SETTINGS), C.default.setSection(ec.UserSettingsSections.VOICE)
       },
-      children: eT.default.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS_LINK_TEXT
+      children: em.default.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS_LINK_TEXT
     })]
   });
 
-function ep(e) {
+function eh(e) {
   _.default.dismiss(null != e ? {
     untilAtLeast: i()(e)
   } : void 0)
 }
-let eh = a.memo(function() {
+let eN = a.memo(function() {
   var e, t, l;
   let _ = (0, o.useStateFromStores)([ee.default], () => ee.default.getCurrentUser()),
-    g = (0, o.useStateFromStores)([$.default], () => $.default.getGuildId()),
+    A = (0, o.useStateFromStores)([$.default], () => $.default.getGuildId()),
     ed = (0, o.useStateFromStores)([es.default], () => es.default.getNotice()),
-    eh = (0, o.useStateFromStores)([X.default], () => X.default.getGuild(g)),
+    eN = (0, o.useStateFromStores)([X.default], () => X.default.getGuild(A)),
     {
       analyticsLocations: eS
     } = (0, M.default)(),
     eC = null == ed ? void 0 : ed.type,
-    eA = (0, b.useShowMemberVerificationGate)(g);
+    eg = (0, b.useShowMemberVerificationGate)(A);
   a.useEffect(() => {
     null != eC && ! function(e, t) {
       let n = {
         notice_type: e
       };
       null != t && (n.guild_id = t), ei.default.track(ec.AnalyticEvents.APP_NOTICE_VIEWED, n)
-    }(eC, g)
-  }, [eC, g]), a.useEffect(() => {
+    }(eC, A)
+  }, [eC, A]), a.useEffect(() => {
     if (null != ed && ed.type === ec.NoticeTypes.SURVEY && null != ed.metadata) {
       let {
         metadata: e
-      } = ed, t = P.default.getUserExperimentDescriptor(e.id);
+      } = ed, t = D.default.getUserExperimentDescriptor(e.id);
       null != t && (0, L.trackExposureToExperiment)(e.id, t), (async () => {
         var e, t;
-        (null === (e = ed.metadata) || void 0 === e ? void 0 : e.id) != null && await (0, h.surveySeen)(null === (t = ed.metadata) || void 0 === t ? void 0 : t.id)
+        (null === (e = ed.metadata) || void 0 === e ? void 0 : e.id) != null && await (0, N.surveySeen)(null === (t = ed.metadata) || void 0 === t ? void 0 : t.id)
       })()
     }
   }, [ed]);
-  let eg = function(e) {
+  let eA = function(e) {
     let {
       enabled: t
     } = (0, V.default)(!0, e !== ec.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING);
     return t || null == e ? null : es.typeToDismissibleContent[e]
   }(eC);
   if (null == ed) return null;
-  if (null != eg) return (0, s.jsx)(x.DismissibleContentNotices, {
-    dismissibleContent: eg,
+  if (null != eA) return (0, s.jsx)(x.DismissibleContentNotices, {
+    dismissibleContent: eA,
     noticeType: ed.type
   });
   let eM = null === (e = ed.metadata) || void 0 === e ? void 0 : e.premiumType;
@@ -150,39 +150,39 @@ let eh = a.memo(function() {
     case ec.NoticeTypes.LURKING_GUILD:
       return (0, s.jsx)(w.default, {});
     case ec.NoticeTypes.PENDING_MEMBER:
-      return (0, s.jsx)(G.default, {});
+      return (0, s.jsx)(F.default, {});
     case ec.NoticeTypes.INVITED_TO_SPEAK:
       return (0, s.jsx)(Q.default, {});
     case ec.NoticeTypes.GUILD_RAID_NOTIFICATION:
       let {
         dismissUntil: eR
       } = ed.metadata;
-      return (0, s.jsx)(D.default, {
-        onDismiss: () => ep(eR)
+      return (0, s.jsx)(P.default, {
+        onDismiss: () => eh(eR)
       });
     case ec.NoticeTypes.WIN32_DEPRECATED_MESSAGE:
-      let {
-        dismissUntil: eO
-      } = ed.metadata;
-      return (0, s.jsxs)(u.Notice, {
-        color: u.NoticeColors.WARNING,
-        children: [(0, s.jsx)(u.NoticeCloseButton, {
-          onClick: () => ep(eO),
-          noticeType: ec.NoticeTypes.WIN32_DEPRECATED_MESSAGE
-        }), eT.default.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({
-          helpCenterLink: er.default.getArticleURL(ec.HelpdeskArticles.WIN32_DEPRECATE)
-        })]
-      });
-    case ec.NoticeTypes.WIN7_8_DEPRECATED_MESSAGE:
       let {
         dismissUntil: ev
       } = ed.metadata;
       return (0, s.jsxs)(u.Notice, {
         color: u.NoticeColors.WARNING,
         children: [(0, s.jsx)(u.NoticeCloseButton, {
-          onClick: () => ep(ev),
+          onClick: () => eh(ev),
+          noticeType: ec.NoticeTypes.WIN32_DEPRECATED_MESSAGE
+        }), em.default.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({
+          helpCenterLink: er.default.getArticleURL(ec.HelpdeskArticles.WIN32_DEPRECATE)
+        })]
+      });
+    case ec.NoticeTypes.WIN7_8_DEPRECATED_MESSAGE:
+      let {
+        dismissUntil: eO
+      } = ed.metadata;
+      return (0, s.jsxs)(u.Notice, {
+        color: u.NoticeColors.WARNING,
+        children: [(0, s.jsx)(u.NoticeCloseButton, {
+          onClick: () => eh(eO),
           noticeType: ec.NoticeTypes.WIN7_8_DEPRECATED_MESSAGE
-        }), eT.default.Messages.WINDOWS_7_8_DEPRECATED_WARNING.format({
+        }), em.default.Messages.WINDOWS_7_8_DEPRECATED_WARNING.format({
           helpCenterLink: er.default.getArticleURL(ec.HelpdeskArticles.WIN7_8_DEPRECATE)
         })]
       });
@@ -193,9 +193,9 @@ let eh = a.memo(function() {
       return (0, s.jsxs)(u.Notice, {
         color: u.NoticeColors.WARNING,
         children: [(0, s.jsx)(u.NoticeCloseButton, {
-          onClick: () => ep(ex),
+          onClick: () => eh(ex),
           noticeType: ec.NoticeTypes.MACOS_17_18_DEPRECATED_MESSAGE
-        }), eT.default.Messages.MACOS_DEPRECATED_WARNING.format({
+        }), em.default.Messages.MACOS_DEPRECATED_WARNING.format({
           helpCenterLink: er.default.getArticleURL(ec.HelpdeskArticles.MACOS_17_18_DEPRECATE)
         })]
       });
@@ -203,7 +203,7 @@ let eh = a.memo(function() {
       return (0, s.jsxs)(u.Notice, {
         color: u.NoticeColors.DEFAULT,
         children: [(0, s.jsx)(u.NoticeCloseButton, {
-          onClick: () => ep(),
+          onClick: () => eh(),
           noticeType: ec.NoticeTypes.GENERIC
         }), ed.message, null != ed.buttonText ? (0, s.jsx)(u.PrimaryCTANoticeButton, {
           onClick: ed.callback,
@@ -215,7 +215,7 @@ let eh = a.memo(function() {
       return (0, s.jsxs)(u.Notice, {
         color: u.NoticeColors.DANGER,
         children: [(0, s.jsx)(u.NoticeCloseButton, {
-          onClick: () => ep(),
+          onClick: () => eh(),
           noticeType: ec.NoticeTypes.LAUNCH_GAME_FAILURE
         }), ed.message, null != ed.buttonText ? (0, s.jsx)(u.PrimaryCTANoticeButton, {
           onClick: ed.callback,
@@ -228,16 +228,16 @@ let eh = a.memo(function() {
         color: u.NoticeColors.WARNING,
         children: [(0, s.jsx)(u.NoticeCloseButton, {
           onClick: () => {
-            T.default.clearRemoteDisconnectVoiceChannelId(), ep()
+            m.default.clearRemoteDisconnectVoiceChannelId(), eh()
           },
           noticeType: ec.NoticeTypes.VOICE_DISABLED
-        }), eT.default.Messages.NOTICE_CONNECTION_CONFLICT, (0, s.jsx)(u.PrimaryCTANoticeButton, {
+        }), em.default.Messages.NOTICE_CONNECTION_CONFLICT, (0, s.jsx)(u.PrimaryCTANoticeButton, {
           onClick: () => {
             let e = J.default.getRemoteDisconnectVoiceChannelId();
-            null != e && null != q.default.getChannel(e) && m.default.selectVoiceChannel(e)
+            null != e && null != q.default.getChannel(e) && T.default.selectVoiceChannel(e)
           },
           noticeType: ec.NoticeTypes.VOICE_DISABLED,
-          children: eT.default.Messages.RECONNECT
+          children: em.default.Messages.RECONNECT
         })]
       });
     case ec.NoticeTypes.VOICE_CONNECTED_LAST_SESSION:
@@ -245,65 +245,65 @@ let eh = a.memo(function() {
         color: u.NoticeColors.DEFAULT,
         children: [(0, s.jsx)(u.NoticeCloseButton, {
           onClick: () => {
-            T.default.clearLastSessionVoiceChannelId(), ep()
+            m.default.clearLastSessionVoiceChannelId(), eh()
           },
           noticeType: ec.NoticeTypes.VOICE_CONNECTED_LAST_SESSION
-        }), eT.default.Messages.NOTICE_VOICE_CONNECTED_LAST_SESSION, (0, s.jsx)(u.PrimaryCTANoticeButton, {
+        }), em.default.Messages.NOTICE_VOICE_CONNECTED_LAST_SESSION, (0, s.jsx)(u.PrimaryCTANoticeButton, {
           onClick: () => {
             let e = J.default.getLastSessionVoiceChannelId();
-            null != e && null != q.default.getChannel(e) && m.default.selectVoiceChannel(e)
+            null != e && null != q.default.getChannel(e) && T.default.selectVoiceChannel(e)
           },
           noticeType: ec.NoticeTypes.VOICE_CONNECTED_LAST_SESSION,
-          children: eT.default.Messages.RECONNECT
+          children: em.default.Messages.RECONNECT
         })]
       });
     case ec.NoticeTypes.SPOTIFY_AUTO_PAUSED:
-      let eL = A.default.get(ec.PlatformTypes.SPOTIFY);
+      let eL = g.default.get(ec.PlatformTypes.SPOTIFY);
       return (0, s.jsxs)(u.Notice, {
         color: u.NoticeColors.DANGER,
         children: [(0, s.jsx)(u.NoticeCloseButton, {
-          onClick: () => ep(),
+          onClick: () => eh(),
           noticeType: ec.NoticeTypes.SPOTIFY_AUTO_PAUSED
         }), (0, s.jsx)("img", {
           alt: "",
-          className: em.platformIcon,
+          className: eT.platformIcon,
           src: eL.icon.whiteSVG
-        }), eT.default.Messages.NOTICE_SPOTIFY_AUTO_PAUSED, (0, s.jsx)(u.PrimaryCTANoticeButton, {
+        }), em.default.Messages.NOTICE_SPOTIFY_AUTO_PAUSED, (0, s.jsx)(u.PrimaryCTANoticeButton, {
           onClick: () => C.default.open(ec.UserSettingsSections.VOICE),
           noticeType: ec.NoticeTypes.SPOTIFY_AUTO_PAUSED,
-          children: eT.default.Messages.VOICE_SETTINGS
+          children: em.default.Messages.VOICE_SETTINGS
         }), (0, s.jsx)(u.Anchor, {
-          className: em.textLinkSmall,
+          className: eT.textLinkSmall,
           href: er.default.getArticleURL(ec.HelpdeskArticles.SPOTIFY_AUTO_PAUSED),
           target: "_blank",
-          children: eT.default.Messages.NOTICE_WHATS_THIS
+          children: em.default.Messages.NOTICE_WHATS_THIS
         })]
       });
     case ec.NoticeTypes.UNCLAIMED_ACCOUNT:
       return (0, s.jsxs)(u.Notice, {
         color: u.NoticeColors.DEFAULT,
-        children: [eT.default.Messages.NOTICE_UNCLAIMED_ACCOUNT, (0, s.jsx)(u.PrimaryCTANoticeButton, {
+        children: [em.default.Messages.NOTICE_UNCLAIMED_ACCOUNT, (0, s.jsx)(u.PrimaryCTANoticeButton, {
           noticeType: ec.NoticeTypes.UNCLAIMED_ACCOUNT,
-          onClick: () => eA && null != g ? (0, j.openMemberVerificationModal)(g) : O.openClaimAccountModal(),
-          children: eT.default.Messages.CLAIM_ACCOUNT
+          onClick: () => eg && null != A ? (0, j.openMemberVerificationModal)(A) : v.openClaimAccountModal(),
+          children: em.default.Messages.CLAIM_ACCOUNT
         })]
       });
     case ec.NoticeTypes.UNVERIFIED_ACCOUNT:
       return (0, s.jsxs)(u.Notice, {
         color: u.NoticeColors.DEFAULT,
-        children: [eT.default.Messages.NOTICE_UNVERIFIED_ACCOUNT_UU, (0, s.jsx)(u.PrimaryCTANoticeButton, {
+        children: [em.default.Messages.NOTICE_UNVERIFIED_ACCOUNT_UU, (0, s.jsx)(u.PrimaryCTANoticeButton, {
           noticeType: ec.NoticeTypes.UNVERIFIED_ACCOUNT,
           onClick: () => {
             c.default.verifyResend(), d.default.show({
-              title: eT.default.Messages.VERIFICATION_EMAIL_TITLE,
-              body: eT.default.Messages.VERIFICATION_EMAIL_BODY.format({
+              title: em.default.Messages.VERIFICATION_EMAIL_TITLE,
+              body: em.default.Messages.VERIFICATION_EMAIL_BODY.format({
                 email: null == _ ? void 0 : _.email
               }),
-              secondaryConfirmText: eT.default.Messages.CHANGE_EMAIL,
-              onConfirmSecondary: O.openClaimAccountModal
+              secondaryConfirmText: em.default.Messages.CHANGE_EMAIL,
+              onConfirmSecondary: v.openClaimAccountModal
             })
           },
-          children: eT.default.Messages.RESEND_EMAIL_SHORT
+          children: em.default.Messages.RESEND_EMAIL_SHORT
         })]
       });
     case ec.NoticeTypes.SCHEDULED_MAINTENANCE:
@@ -313,41 +313,41 @@ let eh = a.memo(function() {
         children: [(0, s.jsx)(u.NoticeCloseButton, {
           onClick: () => I.default.ackScheduledMaintenance(),
           noticeType: ec.NoticeTypes.SCHEDULED_MAINTENANCE
-        }), eT.default.Messages.NOTICE_SCHEDULED_MAINTENANCE.format(ed.metadata), (0, s.jsx)(u.NoticeButtonAnchor, {
+        }), em.default.Messages.NOTICE_SCHEDULED_MAINTENANCE.format(ed.metadata), (0, s.jsx)(u.NoticeButtonAnchor, {
           href: "".concat(ec.Links.STATUS, "/incidents/").concat(ed.metadata.id),
-          children: eT.default.Messages.LEARN_MORE
+          children: em.default.Messages.LEARN_MORE
         })]
       });
     case ec.NoticeTypes.NO_INPUT_DETECTED:
       if (!Z.default.supports(e_.Features.LOOPBACK)) return (0, s.jsx)(eI, {});
-      return (0, s.jsx)(eN, {});
+      return (0, s.jsx)(ep, {});
     case ec.NoticeTypes.HARDWARE_MUTE:
       if (null == ed.metadata) return null;
       let {
-        vendor: eP, model: eD
+        vendor: eD, model: eP
       } = ed.metadata;
       return (0, s.jsxs)(u.Notice, {
         color: u.NoticeColors.DANGER,
-        children: [eT.default.Messages.NOTICE_HARDWARE_MUTE.format({
-          vendorName: eP.name,
-          modelName: eD.name
+        children: [em.default.Messages.NOTICE_HARDWARE_MUTE.format({
+          vendorName: eD.name,
+          modelName: eP.name
         }), (0, s.jsx)(u.NoticeButtonAnchor, {
-          href: eD.url,
+          href: eP.url,
           target: "_blank",
           rel: "noreferrer noopener",
-          children: eT.default.Messages.SUPPORT
+          children: em.default.Messages.SUPPORT
         })]
       });
     case ec.NoticeTypes.STREAMER_MODE:
       return (0, s.jsxs)(u.Notice, {
         color: u.NoticeColors.STREAMER_MODE,
         children: [(0, s.jsx)(u.NoticeCloseButton, {
-          onClick: () => ep(),
+          onClick: () => eh(),
           noticeType: ec.NoticeTypes.STREAMER_MODE
-        }), eT.default.Messages.NOTICE_STREAMER_MODE_TEXT, (0, s.jsx)(u.PrimaryCTANoticeButton, {
-          onClick: () => p.default.setEnabled(!1),
+        }), em.default.Messages.NOTICE_STREAMER_MODE_TEXT, (0, s.jsx)(u.PrimaryCTANoticeButton, {
+          onClick: () => h.default.setEnabled(!1),
           noticeType: ec.NoticeTypes.STREAMER_MODE,
-          children: eT.default.Messages.DISABLE
+          children: em.default.Messages.DISABLE
         })]
       });
     case ec.NoticeTypes.H264_DISABLED:
@@ -355,13 +355,13 @@ let eh = a.memo(function() {
         color: u.NoticeColors.DANGER,
         children: [(0, s.jsx)(u.NoticeCloseButton, {
           onClick: () => {
-            ep()
+            eh()
           }
-        }), eT.default.Messages.NOTICE_H264_DISABLED_SETTINGS, (0, s.jsx)(u.NoticeButton, {
+        }), em.default.Messages.NOTICE_H264_DISABLED_SETTINGS, (0, s.jsx)(u.NoticeButton, {
           onClick: () => {
             (0, E.pushLayer)(ec.Layers.USER_SETTINGS), C.default.setSection(ec.UserSettingsSections.VOICE)
           },
-          children: eT.default.Messages.NOTICE_H264_DISABLED_SETTINGS_LINK_TEXT
+          children: em.default.Messages.NOTICE_H264_DISABLED_SETTINGS_LINK_TEXT
         })]
       });
     case ec.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
@@ -370,7 +370,7 @@ let eh = a.memo(function() {
         skuId: ey, applicationId: eU
       } = ed.metadata, ej = et.default.get(ey), eb = R.default.getApplication(eU);
       if (null == ej || null == eb) return null;
-      let eG = {
+      let eF = {
         page: ec.AnalyticsPages.IN_APP
       };
       return (0, s.jsxs)(u.Notice, {
@@ -379,8 +379,8 @@ let eh = a.memo(function() {
           onClick: () => f.dismiss(ej.id),
           noticeType: ec.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK
         }), (0, s.jsx)(el.default, {
-          className: em.premiumIcon
-        }), eT.default.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_MESSAGE.format({
+          className: eT.premiumIcon
+        }), em.default.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_MESSAGE.format({
           applicationName: eb.name,
           skuName: ej.name
         }), (0, s.jsx)(u.PrimaryCTANoticeButton, {
@@ -393,14 +393,14 @@ let eh = a.memo(function() {
                 initialPlanId: null,
                 subscriptionTier: ef.PremiumSubscriptionSKUs.TIER_2,
                 analyticsLocations: eS,
-                analyticsObject: eG
+                analyticsObject: eF
               })
             },
             analyticsLocations: eS,
-            analyticsLocationObject: eG,
+            analyticsLocationObject: eF,
             context: __OVERLAY__ ? ec.AppContext.OVERLAY : ec.AppContext.APP
           }).then(() => f.dismiss(ej.id)),
-          children: eT.default.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_BUTTON
+          children: em.default.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_BUTTON
         })]
       });
     case ec.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL: {
@@ -413,23 +413,23 @@ let eh = a.memo(function() {
       return (0, s.jsxs)(u.Notice, {
         color: u.NoticeColors.PREMIUM_TIER_1,
         children: [(0, s.jsx)(u.NoticeCloseButton, {
-          onClick: () => ep(),
+          onClick: () => eh(),
           noticeType: ec.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL
         }), (0, s.jsx)(el.default, {
-          className: em.premiumIcon
-        }), eT.default.Messages.NOTICE_DETECTED_OFF_PLATFORM_NO_PREMIUM_PERK_MESSAGE.format({
+          className: eT.premiumIcon
+        }), em.default.Messages.NOTICE_DETECTED_OFF_PLATFORM_NO_PREMIUM_PERK_MESSAGE.format({
           applicationName: a.name,
           skuName: n.name
         }), (0, s.jsx)(u.NoticeButton, {
           children: (0, s.jsx)(r.Link, {
-            onClick: () => ep(),
+            onClick: () => eh(),
             to: {
               pathname: ec.Routes.APPLICATION_STORE_LISTING_SKU(n.id),
               state: {
                 scrollRestoration: !1
               }
             },
-            children: eT.default.Messages.LEARN_MORE
+            children: em.default.Messages.LEARN_MORE
           })
         })]
       })
@@ -448,12 +448,12 @@ let eh = a.memo(function() {
         children: [(0, s.jsx)(u.NoticeCloseButton, {
           noticeType: ec.NoticeTypes.SURVEY,
           onClick: () => {
-            (0, h.surveyHide)(t, !0)
+            (0, N.surveyHide)(t, !0)
           }
         }), n, (0, s.jsx)(u.PrimaryCTANoticeButton, {
           noticeType: ec.NoticeTypes.SURVEY,
           onClick: () => {
-            window.open(l, "_blank"), (0, h.surveyHide)(t, !1)
+            window.open(l, "_blank"), (0, N.surveyHide)(t, !1)
           },
           children: a
         })]
@@ -465,37 +465,37 @@ let eh = a.memo(function() {
         children: [(0, s.jsx)(u.NoticeCloseButton, {
           noticeType: ec.NoticeTypes.SERVER_USAGE_SURVEY,
           onClick: () => {
-            ep()
+            eh()
           }
-        }), eT.default.Messages.SERVER_USAGE_SURVEY_BODY.format({
-          guildName: null !== (t = null == eh ? void 0 : eh.name) && void 0 !== t ? t : "this server"
+        }), em.default.Messages.SERVER_USAGE_SURVEY_BODY.format({
+          guildName: null !== (t = null == eN ? void 0 : eN.name) && void 0 !== t ? t : "this server"
         }), (0, s.jsx)(u.PrimaryCTANoticeButton, {
           noticeType: ec.NoticeTypes.SERVER_USAGE_SURVEY,
           onClick: () => {
-            window.open("https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id=".concat(null == _ ? void 0 : _.id, "&guild_id=").concat(null == eh ? void 0 : eh.id), "_blank"), ep()
+            window.open("https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id=".concat(null == _ ? void 0 : _.id, "&guild_id=").concat(null == eN ? void 0 : eN.id), "_blank"), eh()
           },
           additionalTrackingProps: {
-            guild_id: null == eh ? void 0 : eh.id
+            guild_id: null == eN ? void 0 : eN.id
           },
-          children: eT.default.Messages.SERVER_USAGE_SURVEY_CTA
+          children: em.default.Messages.SERVER_USAGE_SURVEY_CTA
         })]
       });
     case ec.NoticeTypes.CORRUPT_INSTALLATION:
       return (0, s.jsxs)(u.Notice, {
         color: u.NoticeColors.DANGER,
-        children: [eT.default.Messages.NOTICE_CORRUPT_INSTALLATION, (0, s.jsx)(u.NoticeButtonAnchor, {
+        children: [em.default.Messages.NOTICE_CORRUPT_INSTALLATION, (0, s.jsx)(u.NoticeButtonAnchor, {
           href: er.default.getArticleURL(ec.HelpdeskArticles.CORRUPT_INSTALLATION),
           target: "_blank",
-          children: eT.default.Messages.NOTICE_CORRUPT_INSTALLATION_HELP_LINK_TEXT
+          children: em.default.Messages.NOTICE_CORRUPT_INSTALLATION_HELP_LINK_TEXT
         })]
       });
     case ec.NoticeTypes.VIDEO_UNSUPPORTED_BROWSER:
       return (0, s.jsxs)(u.Notice, {
         color: u.NoticeColors.WARNING,
         children: [(0, s.jsx)(u.NoticeCloseButton, {
-          onClick: () => ep(),
+          onClick: () => eh(),
           noticeType: ec.NoticeTypes.VIDEO_UNSUPPORTED_BROWSER
-        }), eT.default.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY, (0, s.jsx)(u.PrimaryCTANoticeButton, {
+        }), em.default.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY, (0, s.jsx)(u.PrimaryCTANoticeButton, {
           noticeType: ec.NoticeTypes.VIDEO_UNSUPPORTED_BROWSER,
           onClick: () => {
             (0, u.openModalLazy)(async () => {
@@ -508,20 +508,20 @@ let eh = a.memo(function() {
               })
             })
           },
-          children: eT.default.Messages.DOWNLOAD
+          children: em.default.Messages.DOWNLOAD
         })]
       });
     case ec.NoticeTypes.DISPATCH_ERROR:
       if (null == ed.metadata) return null;
       let {
-        error: eF
+        error: eB
       } = ed.metadata;
       return (0, s.jsxs)(u.Notice, {
         color: u.NoticeColors.DANGER,
         children: [(0, s.jsx)(u.NoticeCloseButton, {
-          onClick: () => ep(),
+          onClick: () => eh(),
           noticeType: ec.NoticeTypes.DISPATCH_ERROR
-        }), null == eF ? void 0 : eF.displayMessage, (0, s.jsx)(u.PrimaryCTANoticeButton, {
+        }), null == eB ? void 0 : eB.displayMessage, (0, s.jsx)(u.PrimaryCTANoticeButton, {
           noticeType: ec.NoticeTypes.DISPATCH_ERROR,
           onClick: () => (0, u.openModalLazy)(async () => {
             let {
@@ -531,31 +531,31 @@ let eh = a.memo(function() {
               ...t
             })
           }),
-          children: eT.default.Messages.LEARN_MORE
+          children: em.default.Messages.LEARN_MORE
         })]
       });
     case ec.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS:
       if (null == ed.metadata) return null;
       let {
-        progress: eB, total: ek, name: ew
+        progress: eG, total: ek, name: ew
       } = ed.metadata;
       return (0, s.jsxs)(u.Notice, {
         color: u.NoticeColors.DEFAULT,
         children: [(0, s.jsx)(u.NoticeCloseButton, {
-          onClick: () => ep(),
+          onClick: () => eh(),
           noticeType: ec.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS
         }), (0, s.jsxs)(ea.default, {
           justify: ea.default.Justify.CENTER,
-          children: [null != ew ? eT.default.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
+          children: [null != ew ? em.default.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
             name: "".concat(ew),
-            progress: "".concat(eB),
+            progress: "".concat(eG),
             total: "".concat(ek)
-          }) : eT.default.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS.format({
-            progress: "".concat(eB),
+          }) : em.default.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS.format({
+            progress: "".concat(eG),
             total: "".concat(ek)
           }), (0, s.jsx)(u.Spinner, {
             type: u.Spinner.Type.PULSING_ELLIPSIS,
-            className: em.ellipsis
+            className: eT.ellipsis
           })]
         })]
       });
@@ -567,7 +567,7 @@ let eh = a.memo(function() {
           justify: ea.default.Justify.CENTER,
           align: ea.default.Align.CENTER,
           children: [(0, s.jsx)("div", {
-            children: eT.default.Messages.NOTICE_EMBEDDED_APPLICATION_TEST_MODE.format({
+            children: em.default.Messages.NOTICE_EMBEDDED_APPLICATION_TEST_MODE.format({
               applicationName: ed.metadata.applicationName
             })
           }), (0, s.jsx)(u.NoticeCloseButton, {
@@ -582,16 +582,16 @@ let eh = a.memo(function() {
           justify: ea.default.Justify.CENTER,
           align: ea.default.Align.CENTER,
           children: [(0, s.jsx)("div", {
-            children: eT.default.Messages.NOTICE_APPLICATION_TEST_MODE.format({
+            children: em.default.Messages.NOTICE_APPLICATION_TEST_MODE.format({
               applicationName: ed.metadata.applicationName
             })
           }), (0, s.jsx)(eu.default, {
             dropdownSize: eu.TestModeSKUButtonEnums.DropdownSizes.SMALL,
-            className: em.testModeSKUSelector,
+            className: eT.testModeSKUSelector,
             color: eu.TestModeSKUButtonEnums.Colors.WHITE,
             look: eu.TestModeSKUButtonEnums.Looks.OUTLINED,
             size: eu.TestModeSKUButtonEnums.Sizes.MIN,
-            onSKUSelect: e => N.goToSKUStoreListing(e.id, {
+            onSKUSelect: e => p.goToSKUStoreListing(e.id, {
               analyticsSource: {
                 page: null,
                 section: ec.AnalyticsSections.NOTIFICATION_BAR,
@@ -599,7 +599,7 @@ let eh = a.memo(function() {
               }
             }),
             applicationId: ed.metadata.applicationId,
-            children: eT.default.Messages.NOTICE_APPLICATION_TEST_MODE_GO_TO_LISTING
+            children: em.default.Messages.NOTICE_APPLICATION_TEST_MODE_GO_TO_LISTING
           }), (0, s.jsx)(u.NoticeCloseButton, {
             onClick: S.reset,
             noticeType: ec.NoticeTypes.APPLICATION_TEST_MODE
@@ -617,21 +617,21 @@ let eh = a.memo(function() {
           noticeType: ec.NoticeTypes.PREMIUM_UNCANCEL,
           onClick: () => {
             var e, t;
-            ep(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
+            eh(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
           }
         }), (0, s.jsx)(el.default, {
-          className: em.premiumIcon
-        }), eM === ef.PremiumTypes.TIER_1 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_TEXT.format({
+          className: eT.premiumIcon
+        }), eM === ef.PremiumTypes.TIER_1 ? em.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_TEXT.format({
           daysLeft: ed.metadata.daysLeft
-        }) : eM === ef.PremiumTypes.TIER_0 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_TEXT.format({
+        }) : eM === ef.PremiumTypes.TIER_0 ? em.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_TEXT.format({
           daysLeft: ed.metadata.daysLeft
-        }) : eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_TEXT.format({
+        }) : em.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_TEXT.format({
           daysLeft: ed.metadata.daysLeft
         }), (0, s.jsx)(u.PrimaryCTANoticeButton, {
           noticeType: ec.NoticeTypes.PREMIUM_UNCANCEL,
           onClick: () => {
             var e, t;
-            ep(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), (0, u.openModalLazy)(async () => {
+            eh(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), (0, u.openModalLazy)(async () => {
               let {
                 default: e
               } = await Promise.all([n.e("49237"), n.e("99387"), n.e("15972"), n.e("6416"), n.e("8016"), n.e("68136"), n.e("80633")]).then(n.bind(n, "561623"));
@@ -644,7 +644,7 @@ let eh = a.memo(function() {
               })
             })
           },
-          children: eM === ef.PremiumTypes.TIER_1 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_BUTTON_TEXT : eM === ef.PremiumTypes.TIER_0 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_BUTTON_TEXT : eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_BUTTON_TEXT
+          children: eM === ef.PremiumTypes.TIER_1 ? em.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_BUTTON_TEXT : eM === ef.PremiumTypes.TIER_0 ? em.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_BUTTON_TEXT : em.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_BUTTON_TEXT
         })]
       });
     case ec.NoticeTypes.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT:
@@ -656,16 +656,16 @@ let eh = a.memo(function() {
         children: [(0, s.jsx)(u.NoticeCloseButton, {
           noticeType: eC,
           onClick: () => {
-            ep(eV)
+            eh(eV)
           }
-        }), eT.default.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT_NO_ACTION.format({
+        }), em.default.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT_NO_ACTION.format({
           daysPastDue: eH
         }), (0, s.jsx)(u.PrimaryCTANoticeButton, {
           noticeType: ec.NoticeTypes.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
           onClick: () => {
-            ep(eV), C.default.open(ec.UserSettingsSections.SUBSCRIPTIONS)
+            eh(eV), C.default.open(ec.UserSettingsSections.SUBSCRIPTIONS)
           },
-          children: eT.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_RENEW_NOW_BUTTON_TEXT
+          children: em.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_RENEW_NOW_BUTTON_TEXT
         })]
       });
     case ec.NoticeTypes.PREMIUM_PAST_DUE_INVALID_PAYMENT:
@@ -675,15 +675,15 @@ let eh = a.memo(function() {
           noticeType: ec.NoticeTypes.PREMIUM_PAST_DUE_INVALID_PAYMENT,
           onClick: () => {
             var e, t;
-            ep(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
+            eh(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
           }
-        }), eT.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_TEXT, (0, s.jsx)(u.PrimaryCTANoticeButton, {
+        }), em.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_TEXT, (0, s.jsx)(u.PrimaryCTANoticeButton, {
           noticeType: ec.NoticeTypes.PREMIUM_PAST_DUE_INVALID_PAYMENT,
           onClick: () => {
             var e, t;
-            ep(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), C.default.open(ec.UserSettingsSections.SUBSCRIPTIONS)
+            eh(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), C.default.open(ec.UserSettingsSections.SUBSCRIPTIONS)
           },
-          children: eT.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_BUTTON_TEXT
+          children: em.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_BUTTON_TEXT
         })]
       });
     case ec.NoticeTypes.PREMIUM_PAST_DUE_MISSING_PAYMENT:
@@ -693,15 +693,15 @@ let eh = a.memo(function() {
           noticeType: ec.NoticeTypes.PREMIUM_PAST_DUE_MISSING_PAYMENT,
           onClick: () => {
             var e, t;
-            ep(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
+            eh(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
           }
-        }), eT.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_TEXT, (0, s.jsx)(u.PrimaryCTANoticeButton, {
+        }), em.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_TEXT, (0, s.jsx)(u.PrimaryCTANoticeButton, {
           noticeType: ec.NoticeTypes.PREMIUM_PAST_DUE_MISSING_PAYMENT,
           onClick: () => {
             var e, t;
-            ep(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), C.default.open(ec.UserSettingsSections.SUBSCRIPTIONS)
+            eh(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), C.default.open(ec.UserSettingsSections.SUBSCRIPTIONS)
           },
-          children: eT.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
+          children: em.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
         })]
       });
     case ec.NoticeTypes.PREMIUM_MISSING_PAYMENT:
@@ -711,28 +711,28 @@ let eh = a.memo(function() {
           noticeType: ec.NoticeTypes.PREMIUM_MISSING_PAYMENT,
           onClick: () => {
             var e, t;
-            ep(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
+            eh(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
           }
-        }), eM === ef.PremiumTypes.TIER_1 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_TEXT.format({
+        }), eM === ef.PremiumTypes.TIER_1 ? em.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_TEXT.format({
           daysLeft: ed.metadata.daysLeft
-        }) : eM === ef.PremiumTypes.TIER_0 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_TEXT.format({
+        }) : eM === ef.PremiumTypes.TIER_0 ? em.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_TEXT.format({
           daysLeft: ed.metadata.daysLeft
-        }) : eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_TEXT.format({
+        }) : em.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_TEXT.format({
           daysLeft: ed.metadata.daysLeft
         }), (0, s.jsx)(u.PrimaryCTANoticeButton, {
           noticeType: ec.NoticeTypes.PREMIUM_MISSING_PAYMENT,
           onClick: () => {
             var e, t;
-            ep(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), C.default.open(ec.UserSettingsSections.SUBSCRIPTIONS)
+            eh(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), C.default.open(ec.UserSettingsSections.SUBSCRIPTIONS)
           },
-          children: eM === ef.PremiumTypes.TIER_1 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_BUTTON_TEXT : eM === ef.PremiumTypes.TIER_0 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_BUTTON_TEXT : eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
+          children: eM === ef.PremiumTypes.TIER_1 ? em.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_BUTTON_TEXT : eM === ef.PremiumTypes.TIER_0 ? em.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_BUTTON_TEXT : em.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
         })]
       });
     case ec.NoticeTypes.BACK_TO_PREVIOUS_SCREEN:
-      return (0, s.jsx)(F.BackToPreviousScreenNotice, {
-        buttonText: null !== (l = ed.buttonText) && void 0 !== l ? l : eT.default.Messages.GO_BACK,
+      return (0, s.jsx)(B.BackToPreviousScreenNotice, {
+        buttonText: null !== (l = ed.buttonText) && void 0 !== l ? l : em.default.Messages.GO_BACK,
         onGoBack: ed.callback,
-        onDismiss: () => ep(),
+        onDismiss: () => eh(),
         showCloseButton: !0
       });
     case ec.NoticeTypes.AUTOMOD_QUARANTINED_USER_PROFILE: {
@@ -740,7 +740,7 @@ let eh = a.memo(function() {
         page: ec.AnalyticsPages.IN_APP
       };
       return (0, s.jsx)(U.default, {
-        guildId: g,
+        guildId: A,
         analyticsLocations: eS,
         analyticsLocation: e
       })
@@ -748,37 +748,37 @@ let eh = a.memo(function() {
     case ec.NoticeTypes.QUARANTINED:
       return (0, s.jsxs)(u.Notice, {
         color: u.NoticeColors.CUSTOM,
-        className: em.quarantineNotice,
-        children: [eT.default.Messages.LIMITED_ACCESS_NAG_BAR_NOTICE, (0, s.jsx)(u.NoticeButtonAnchor, {
+        className: eT.quarantineNotice,
+        children: [em.default.Messages.LIMITED_ACCESS_NAG_BAR_NOTICE, (0, s.jsx)(u.NoticeButtonAnchor, {
           href: eE.QUARANTINE_APPEAL_LINK,
           target: "_blank",
-          children: eT.default.Messages.LIMITED_ACCESS_NAG_BAR_APPEAL
+          children: em.default.Messages.LIMITED_ACCESS_NAG_BAR_APPEAL
         }), (0, s.jsx)(u.Anchor, {
           href: er.default.getArticleURL(ec.HelpdeskArticles.QUARANTINE),
           target: "_blank",
-          className: em.quarantineLearnMoreLink,
-          children: eT.default.Messages.LEARN_MORE
+          className: eT.quarantineLearnMoreLink,
+          children: em.default.Messages.LEARN_MORE
         })]
       });
     case ec.NoticeTypes.BLOCKED_BY_PROXY:
       return (0, s.jsxs)(u.Notice, {
         color: u.NoticeColors.WARNING,
-        children: [eT.default.Messages.BLOCKED_BY_PROXY_NOTICE, (0, s.jsx)(u.NoticeButtonAnchor, {
+        children: [em.default.Messages.BLOCKED_BY_PROXY_NOTICE, (0, s.jsx)(u.NoticeButtonAnchor, {
           href: "".concat(ec.Links.STATUS),
-          children: eT.default.Messages.LEARN_MORE
+          children: em.default.Messages.LEARN_MORE
         }), (0, s.jsx)(u.NoticeCloseButton, {
-          onClick: () => ep(),
+          onClick: () => eh(),
           noticeType: ec.NoticeTypes.BLOCKED_BY_PROXY
         })]
       });
     case ec.NoticeTypes.DROPS_PROGRESS_INTERRUPTION:
       return (0, s.jsxs)(u.Notice, {
         color: u.NoticeColors.DANGER,
-        children: [eT.default.Messages.DROPS_PROGRESS_INTERRUPTION_WARNING.format({
+        children: [em.default.Messages.DROPS_PROGRESS_INTERRUPTION_WARNING.format({
           gameTitle: ed.metadata.gameTitle
         }), (0, s.jsx)(u.NoticeButton, {
           onClick: ed.metadata.reloadCallback,
-          children: eT.default.Messages.ERRORS_RESTART_APP
+          children: em.default.Messages.ERRORS_RESTART_APP
         })]
       });
     case ec.NoticeTypes.AUTO_MODERATION_MENTION_RAID_DETECTION:
@@ -790,18 +790,18 @@ let eh = a.memo(function() {
         children: [(0, s.jsx)(u.NoticeCloseButton, {
           noticeType: ec.NoticeTypes.AUTO_MODERATION_MENTION_RAID_DETECTION,
           onClick: () => {
-            null != g && (0, y.clearMentionRaidDetected)(g), ep(eY)
+            null != A && (0, y.clearMentionRaidDetected)(A), eh(eY)
           }
-        }), eT.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_MESSAGE, (0, s.jsx)(u.NoticeButton, {
+        }), em.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_MESSAGE, (0, s.jsx)(u.NoticeButton, {
           onClick: () => {
-            null != g && (0, y.removeMentionRaidRestrictionWithFeedback)(g, eK, () => {
-              ep(eY), (0, y.clearMentionRaidDetected)(g)
+            null != A && (0, y.removeMentionRaidRestrictionWithFeedback)(A, eK, () => {
+              eh(eY), (0, y.clearMentionRaidDetected)(A)
             })
           },
-          children: eT.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
-        }), null != g ? (0, s.jsx)(u.NoticeButton, {
-          onClick: () => B.default.open(g, ec.GuildSettingsSections.GUILD_AUTOMOD, void 0, ec.GuildSettingsSubsections.AUTOMOD_MENTION_SPAM),
-          children: eT.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_CONFIGURE_SETTINGS
+          children: em.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
+        }), null != A ? (0, s.jsx)(u.NoticeButton, {
+          onClick: () => G.default.open(A, ec.GuildSettingsSections.GUILD_AUTOMOD, void 0, ec.GuildSettingsSubsections.AUTOMOD_MENTION_SPAM),
+          children: em.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_CONFIGURE_SETTINGS
         }) : null]
       });
     case ec.NoticeTypes.SAFETY_USER_SENTIMENT_NAGBAR:
@@ -810,9 +810,9 @@ let eh = a.memo(function() {
         children: [(0, s.jsx)(u.NoticeCloseButton, {
           noticeType: ec.NoticeTypes.SAFETY_USER_SENTIMENT_NAGBAR,
           onClick: () => {
-            z.markNoticeDismissed(), ep()
+            z.markNoticeDismissed(), eh()
           }
-        }), eT.default.Messages.SAFETY_USER_SENTIMENT_NOTICE, (0, s.jsx)(u.PrimaryCTANoticeButton, {
+        }), em.default.Messages.SAFETY_USER_SENTIMENT_NOTICE, (0, s.jsx)(u.PrimaryCTANoticeButton, {
           noticeType: ec.NoticeTypes.SAFETY_USER_SENTIMENT_NAGBAR,
           onClick: () => {
             (0, u.openModalLazy)(async () => {
@@ -822,16 +822,16 @@ let eh = a.memo(function() {
               return t => (0, s.jsx)(e, {
                 ...t
               })
-            }), z.markNoticeDismissed(), ep()
+            }), z.markNoticeDismissed(), eh()
           },
-          children: eT.default.Messages.SAFETY_USER_SENTIMENT_NOTICE_CTA
+          children: em.default.Messages.SAFETY_USER_SENTIMENT_NOTICE_CTA
         })]
       });
     case ec.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING:
       let eW = i()().add(5, "days").toDate();
       return (0, s.jsx)(K.default, {
         dismissCurrentNotice: () => {
-          (0, v.markDismissibleContentAsDismissed)(es.typeToDismissibleContent[ec.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING]), ep(eW)
+          (0, O.markDismissibleContentAsDismissed)(es.typeToDismissibleContent[ec.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING]), eh(eW)
         },
         subscriptionTier: ef.PremiumSubscriptionSKUs.TIER_2
       });
@@ -844,7 +844,7 @@ let eh = a.memo(function() {
             var e;
             (null === (e = ed.metadata) || void 0 === e ? void 0 : e.streamKey) != null && (0, W.dismissProgressTrackingFailureNotice)(ed.metadata.streamKey)
           }
-        }), eT.default.Messages.QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE]
+        }), em.default.Messages.QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE]
       });
     default:
       return null
@@ -854,9 +854,9 @@ let eh = a.memo(function() {
 function eS() {
   let {
     analyticsLocations: e
-  } = (0, M.default)(g.default.NOTICE);
+  } = (0, M.default)(A.default.NOTICE);
   return (0, s.jsx)(M.AnalyticsLocationProvider, {
     value: e,
-    children: (0, s.jsx)(eh, {})
+    children: (0, s.jsx)(eN, {})
   })
 }

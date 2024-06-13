@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildProductListingPublicCard: function() {
-    return p
+    return h
   }
 });
 var s = n("735250");
@@ -17,47 +17,47 @@ var a = n("399606"),
   f = n("676651"),
   E = n("623488"),
   _ = n("942833"),
-  T = n("391181"),
-  m = n("964793"),
+  m = n("391181"),
+  T = n("964793"),
   I = n("226060"),
-  N = n("981631");
+  p = n("981631");
 
-function p(e) {
+function h(e) {
   let {
     guildProductListing: t,
     guildId: n,
-    location: p,
-    shouldShowFullDescriptionButton: h = !0,
+    location: h,
+    shouldShowFullDescriptionButton: N = !0,
     hideRoleTag: S = !1,
     lineClamp: C = 1,
-    cardWidth: A,
-    cardHeight: g,
+    cardWidth: g,
+    cardHeight: A,
     thumbnailHeight: M,
     descriptionTextVariant: R = "text-sm/normal",
-    showOpaqueBackground: O = !1
-  } = e, v = (0, a.useStateFromStores)([o.default], () => o.default.getGuild(n), [n]), x = (0, a.useStateFromStores)([o.default], () => {
+    showOpaqueBackground: v = !1
+  } = e, O = (0, a.useStateFromStores)([o.default], () => o.default.getGuild(n), [n]), x = (0, a.useStateFromStores)([o.default], () => {
     var e;
-    return o.default.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : N.EMPTY_STRING_SNOWFLAKE_ID)
-  }), L = (0, l.useListingThumbnailUrl)(t, 600), P = (0, _.useProductType)(t), D = (0, d.useCanManageGuildProduct)(v), {
+    return o.default.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : p.EMPTY_STRING_SNOWFLAKE_ID)
+  }), L = (0, l.useListingThumbnailUrl)(t, 600), D = (0, _.useProductType)(t), P = (0, d.useCanManageGuildProduct)(O), {
     shouldHideGuildPurchaseEntryPoints: y
   } = (0, r.useShouldHideGuildPurchaseEntryPoints)(n), U = (0, _.usePrice)(t);
-  if (null == v || y) return null;
-  let j = () => (0, m.openGuildProductInfoModal)({
+  if (null == O || y) return null;
+  let j = () => (0, T.openGuildProductInfoModal)({
       guildId: n,
       guildProductListingId: t.id,
-      analyticsLocation: p
+      analyticsLocation: h
     }),
-    b = (0, s.jsx)(T.GuildProductListingPopout, {
+    b = (0, s.jsx)(m.GuildProductListingPopout, {
       product: t,
       guildId: n,
-      showEditProduct: D,
+      showEditProduct: P,
       showUnpublishProduct: !1,
       showCopyLink: !0,
       showTestDownload: !1,
       showDeleteProduct: !1,
       showReportProduct: !0,
-      onEditProduct: D ? () => {
-        f.openModal(v.id, t.id)
+      onEditProduct: P ? () => {
+        f.openModal(O.id, t.id)
       } : () => {},
       onUnpublishProduct: () => {},
       onDeleteProduct: () => {},
@@ -80,18 +80,18 @@ function p(e) {
     ctaComponent: (0, s.jsx)(I.default, {
       guildId: n,
       guildProductListingId: t.id,
-      sourceAnalyticsLocations: p
+      sourceAnalyticsLocations: h
     }),
-    productType: P,
-    shouldShowFullDescriptionButton: h,
+    productType: D,
+    shouldShowFullDescriptionButton: N,
     onShowFullDescription: j,
     onTapCard: j,
     actionMenu: b,
-    showOpaqueBackground: O,
+    showOpaqueBackground: v,
     hideRoleTag: S,
     lineClamp: C,
-    cardWidth: A,
-    cardHeight: g,
+    cardWidth: g,
+    cardHeight: A,
     thumbnailHeight: M,
     descriptionTextVariant: R,
     isDraft: !t.published

@@ -19,21 +19,21 @@ function E(e) {
   let {
     inboxIconRef: t,
     recentsPopoutShown: n
-  } = e, [E, _] = a.useState(!1), T = (0, l.useStateFromStores)([o.default], () => o.default.getLastUnseenInvite()), m = (0, l.useStateFromStores)([d.default], () => null != T ? d.default.getUser(T.inviter_id) : null);
+  } = e, [E, _] = a.useState(!1), m = (0, l.useStateFromStores)([o.default], () => o.default.getLastUnseenInvite()), T = (0, l.useStateFromStores)([d.default], () => null != m ? d.default.getUser(m.inviter_id) : null);
   return (a.useEffect(() => {
     n && _(!1)
   }, [n]), a.useEffect(() => {
-    if (null == T) {
+    if (null == m) {
       _(!1);
       return
-    }(0, u.updateInviteStatus)(T), _(!0);
+    }(0, u.updateInviteStatus)(m), _(!0);
     let e = new i.Timeout;
     return e.start(5e3, () => {
       _(!1)
     }), () => {
       e.stop()
     }
-  }, [T]), E && null != T && null != m) ? (0, s.jsxs)(r.TooltipLayer, {
+  }, [m]), E && null != m && null != T) ? (0, s.jsxs)(r.TooltipLayer, {
     tooltipClassName: f.tooltip,
     tooltipContentClassName: f.tooltipContent,
     targetElementRef: t,
@@ -43,14 +43,14 @@ function E(e) {
       className: f.iconContainer,
       children: [(0, s.jsx)("img", {
         className: f.inviteImage,
-        src: T.application_asset,
+        src: m.application_asset,
         alt: "Game Invite"
       }), (0, s.jsx)("div", {
         className: f.offsetAvatarContainer,
         children: (0, s.jsx)(r.Avatar, {
           "aria-label": "Inviter",
           className: f.inviterImage,
-          src: m.getAvatarURL(null, 24),
+          src: T.getAvatarURL(null, 24),
           size: r.AvatarSizes.SIZE_24
         })
       })]
@@ -60,12 +60,12 @@ function E(e) {
         className: f.__invalid_title,
         variant: "text-xs/semibold",
         children: c.default.Messages.GAME_INVITES_INVITE_FROM.format({
-          username: m.username
+          username: T.username
         })
       }), (0, s.jsx)(r.Text, {
         className: f.__invalid_subtitle,
         variant: "text-xxs/medium",
-        children: T.application_name
+        children: m.application_name
       })]
     })]
   }) : null

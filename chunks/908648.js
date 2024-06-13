@@ -18,16 +18,16 @@ function r(e) {
     actorUsernameHook: u,
     targetUsernameHook: d,
     compact: c
-  } = e, f = (0, a.default)(t), E = (0, a.useNullableUserAuthor)(o, r), _ = u(f), T = d(null != E ? E : void 0), m = i.default.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_ADD.format({
+  } = e, f = (0, a.default)(t), E = (0, a.useNullableUserAuthor)(o, r), _ = u(f), m = d(null != E ? E : void 0), T = i.default.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_ADD.format({
     actorName: f.nick,
     actorHook: _,
     targetName: null == E ? void 0 : E.nick,
-    targetHook: T
+    targetHook: m
   });
   return (0, s.jsx)(l.default, {
     icon: n("570111"),
     timestamp: t.timestamp,
     compact: c,
-    children: m
+    children: T
   })
 }

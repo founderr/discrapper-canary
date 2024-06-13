@@ -8,7 +8,7 @@ let c = "MaintenanceStore",
   f = null,
   E = null,
   _ = null;
-class T extends(i = r.default.Store) {
+class m extends(i = r.default.Store) {
   initialize() {
     _ = o.Storage.get(c)
   }
@@ -19,12 +19,12 @@ class T extends(i = r.default.Store) {
     return null != E && E.id !== _ ? E : null
   }
 }
-l = "MaintenanceStore", (a = "displayName") in(s = T) ? Object.defineProperty(s, a, {
+l = "MaintenanceStore", (a = "displayName") in(s = m) ? Object.defineProperty(s, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = l, t.default = new T(u.default, {
+}) : s[a] = l, t.default = new m(u.default, {
   CONNECTION_OPEN: function() {
     f = null, d.default.checkScheduledMaintenances()
   },

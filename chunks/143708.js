@@ -19,26 +19,26 @@ var a = n("442837"),
 
 function _(e) {
   let t, n, _, {
-      author: T,
-      banned: m
+      author: m,
+      banned: T
     } = e,
     I = (0, a.useStateFromStores)([i.default], () => i.default.getId()),
-    N = (0, a.useStateFromStores)([r.default], () => r.default.getChannelId()),
-    p = d.default.useName(T),
-    h = I === T.id;
-  return h ? (t = f.default.Messages.INVITE_BUTTON_INVALID_OWNER, _ = f.default.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID) : (_ = f.default.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID, m ? t = f.default.Messages.INSTANT_INVITE_BANNED_INFO : null != p ? (t = f.default.Messages.INSTANT_INVITE_ASK_USER_FOR_NEW_INVITE.format({
-    username: p
+    p = (0, a.useStateFromStores)([r.default], () => r.default.getChannelId()),
+    h = d.default.useName(m),
+    N = I === m.id;
+  return N ? (t = f.default.Messages.INVITE_BUTTON_INVALID_OWNER, _ = f.default.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID) : (_ = f.default.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID, T ? t = f.default.Messages.INSTANT_INVITE_BANNED_INFO : null != h ? (t = f.default.Messages.INSTANT_INVITE_ASK_USER_FOR_NEW_INVITE.format({
+    username: h
   }), n = (0, s.jsx)(o.default.Button, {
     onClick: function() {
       let {
         id: e
-      } = T, t = "@".concat(d.default.getUserTag(T, {
+      } = m, t = "@".concat(d.default.getUserTag(m, {
         decoration: "never"
       }));
       u.ComponentDispatch.dispatchToLastSubscribed(c.ComponentActions.INSERT_TEXT, {
         plainText: t,
         rawText: "<@".concat(e, ">")
-      }), null != N && l.default.startTyping(N)
+      }), null != p && l.default.startTyping(p)
     },
     children: f.default.Messages.MENTION
   })) : t = f.default.Messages.INSTANT_INVITE_ASK_FOR_NEW_INVITE), (0, s.jsxs)(o.default, {

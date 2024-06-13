@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   SafetySystemNotification: function() {
-    return h
+    return N
   }
 });
 var s = n("735250");
@@ -18,7 +18,7 @@ var a = n("913527"),
   E = n("975261");
 let _ = e => l()().diff(l().unix(e), "days");
 
-function T(e) {
+function m(e) {
   let {
     classificationId: t
   } = e;
@@ -41,7 +41,7 @@ function T(e) {
   })
 }
 
-function m(e) {
+function T(e) {
   let {
     learnMoreLink: t
   } = e;
@@ -61,12 +61,12 @@ function I(e) {
   switch (t) {
     case c.SafetySystemNotificationCtaType.POLICY_VIOLATION_DETAIL:
       if (null == n) return null;
-      return (0, s.jsx)(T, {
+      return (0, s.jsx)(m, {
         classificationId: n
       });
     case c.SafetySystemNotificationCtaType.LEARN_MORE_LINK:
       if (null == a) return null;
-      return (0, s.jsx)(m, {
+      return (0, s.jsx)(T, {
         learnMoreLink: a
       });
     default:
@@ -74,7 +74,7 @@ function I(e) {
   }
 }
 
-function N(e) {
+function p(e) {
   let {
     iconType: t
   } = e, n = {
@@ -91,7 +91,7 @@ function N(e) {
   }) : null
 }
 
-function p(e) {
+function h(e) {
   let {
     children: t,
     theme: n
@@ -105,7 +105,7 @@ function p(e) {
   })
 }
 
-function h(e) {
+function N(e) {
   var t, n;
   if (null == e.embed || null == e.embed.fields) return null;
   let a = (0, d.parseMessageEmbedForProps)(e.embed);
@@ -115,7 +115,7 @@ function h(e) {
       className: E.noticeContent,
       children: [(0, s.jsxs)("div", {
         className: E.headerRow,
-        children: [(0, s.jsx)(N, {
+        children: [(0, s.jsx)(p, {
           iconType: a.icon
         }), (0, s.jsx)(o.Text, {
           variant: "text-md/semibold",
@@ -137,7 +137,7 @@ function h(e) {
           children: a.body
         })
       })]
-    }), (0, s.jsx)(p, {
+    }), (0, s.jsx)(h, {
       theme: a.theme,
       children: null === (t = a.ctas) || void 0 === t ? void 0 : t.map(e => (0, s.jsx)(I, {
         ctaType: e,

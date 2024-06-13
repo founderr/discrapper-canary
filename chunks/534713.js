@@ -14,8 +14,8 @@
         r = null == e ? void 0 : e.get("redirect_uri"),
         l = null == e ? void 0 : e.get("response_type"),
         s = null !== (t = null == e ? void 0 : e.get("nonce")) && void 0 !== t ? t : void 0,
-        u = null !== (n = null == e ? void 0 : e.get("code_challenge")) && void 0 !== n ? n : void 0,
-        b = null !== (c = null == e ? void 0 : e.get("code_challenge_method")) && void 0 !== c ? c : void 0;
+        b = null !== (n = null == e ? void 0 : e.get("code_challenge")) && void 0 !== n ? n : void 0,
+        u = null !== (c = null == e ? void 0 : e.get("code_challenge_method")) && void 0 !== c ? c : void 0;
       return null == i || null == f || null == o || null == r || null == l || ((0, d.openOAuth2Modal)({
         clientId: i,
         scopes: f,
@@ -23,7 +23,7 @@
         state: o,
         responseType: l,
         nonce: s,
-        codeChallenge: u,
-        codeChallengeMethod: b
+        codeChallenge: b,
+        codeChallengeMethod: u
       }), !0)
     }

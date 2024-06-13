@@ -22,13 +22,13 @@ function _(e) {
     applicationId: t,
     guildId: n
   } = e, _ = (0, r.useApplication)(t), {
-    listingsLoaded: T
-  } = (0, r.useFetchListingsForApplication)(t, null == _ ? void 0 : _.primarySkuId), m = (0, a.useStateFromStores)([o.default], () => o.default.getSubscriptionGroupListingForApplication(t), [t]), I = null != m ? (0, u.getPayableSubscriptionListing)(m) : null, {
-    openModal: N,
-    canOpenModal: p
+    listingsLoaded: m
+  } = (0, r.useFetchListingsForApplication)(t, null == _ ? void 0 : _.primarySkuId), T = (0, a.useStateFromStores)([o.default], () => o.default.getSubscriptionGroupListingForApplication(t), [t]), I = null != T ? (0, u.getPayableSubscriptionListing)(T) : null, {
+    openModal: p,
+    canOpenModal: h
   } = (0, d.default)({
     guildId: n,
-    groupListingId: null == m ? void 0 : m.id,
+    groupListingId: null == T ? void 0 : T.id,
     showBenefitsFirst: !0,
     analyticsLocation: c.AnalyticsLocations.INTERACTION_RESPONSE,
     skuId: null == I ? void 0 : I.id
@@ -36,8 +36,8 @@ function _(e) {
   return (0, s.jsx)(i.Button, {
     color: i.Button.Colors.BRAND,
     size: i.Button.Sizes.SMALL,
-    onClick: () => N(),
-    disabled: !p || !T,
+    onClick: () => p(),
+    disabled: !h || !m,
     children: (0, s.jsxs)("div", {
       className: E.button,
       children: [(0, s.jsx)(l.ShopIcon, {

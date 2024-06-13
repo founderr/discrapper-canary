@@ -29,7 +29,7 @@ let _ = {
   Colors: o.default.Colors,
   Looks: o.default.Looks
 };
-class T extends a.PureComponent {
+class m extends a.PureComponent {
   render() {
     let {
       skus: e,
@@ -87,4 +87,4 @@ t.default = l.default.connectStores([d.default, u.default], e => {
     skus: (null !== (t = d.default.getForApplication(n)) && void 0 !== t ? t : []).sort((e, t) => null != s && e.id === s.id ? -1 : null != s && t.id === s.id ? 1 : e.name >= t.name ? -1 : 1),
     primarySKU: s
   }
-})(T)
+})(m)

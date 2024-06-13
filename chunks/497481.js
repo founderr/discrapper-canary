@@ -21,19 +21,19 @@ function u(e) {
     onJoinStream: c,
     usernameHook: f,
     compact: E
-  } = e, _ = (0, a.default)(n), T = null === (t = n.call) || void 0 === t ? void 0 : t.duration, m = f(_), I = o.default.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
+  } = e, _ = (0, a.default)(n), m = null === (t = n.call) || void 0 === t ? void 0 : t.duration, T = f(_), I = o.default.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
     username: _.nick,
     activityName: null != d ? d.name : "unknown",
     onJoinStream: c,
-    usernameHook: m
+    usernameHook: T
   });
-  return null != T && (I = o.default.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ENDED.format({
+  return null != m && (I = o.default.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ENDED.format({
     username: _.nick,
-    duration: T.humanize(),
+    duration: m.humanize(),
     channelName: u.name,
-    usernameHook: m
+    usernameHook: T
   })), (0, s.jsx)(i.default, {
-    iconNode: null != T ? (0, s.jsx)(l.default, {
+    iconNode: null != m ? (0, s.jsx)(l.default, {
       width: 20,
       height: 20
     }) : (0, s.jsx)(r.default, {

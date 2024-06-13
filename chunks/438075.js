@@ -27,13 +27,13 @@ function i(e) {
     renderThreadAccessory: f,
     renderComponentAccessory: E,
     renderSuppressEmbeds: _,
-    forceAddReactions: T,
-    className: m
+    forceAddReactions: m,
+    className: T
   } = e;
   return d ? null : (0, s.jsx)(a.default, {
     message: t,
     children: (0, s.jsx)(l.default, {
-      className: m,
+      className: T,
       isInteracting: u,
       message: t,
       channel: n,
@@ -44,7 +44,7 @@ function i(e) {
       renderThreadAccessory: f,
       renderComponentAccessory: E,
       renderSuppressEmbeds: _,
-      forceAddReactions: T
+      forceAddReactions: m
     })
   })
 }

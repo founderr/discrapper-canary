@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return p
   }
 }), n("653041");
 var s = n("544891"),
@@ -24,10 +24,10 @@ function f(e, t, n) {
 }
 let E = 1 * o.default.Millis.HOUR,
   _ = 7 * o.default.Millis.DAY,
-  T = 1 * o.default.Millis.DAY,
-  m = a.Storage.get("lastNonRequiredUpdateShown", Date.now()),
+  m = 1 * o.default.Millis.DAY,
+  T = a.Storage.get("lastNonRequiredUpdateShown", Date.now()),
   I = new r.default("AutoUpdateManager");
-class N {
+class p {
   destroy() {
     clearInterval(this._checkInterval)
   }
@@ -71,10 +71,10 @@ class N {
         },
         oldFormErrors: !0
       }).then(e => {
-        if (null == e.body || "89d03db5b37cd4358433803f5f897ee8aeea880f" === e.body.hash) return this._handleUpdateNotAvailable();
+        if (null == e.body || "a32f29a1506f9f7f9df2f014149e5d798fd23402" === e.body.hash) return this._handleUpdateNotAvailable();
         if (e.body.required || (0, i.probablyHasBuildOverride)()) return this._handleUpdateDownloaded(!1);
-        let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? _ : T;
-        if (Date.now() - m > t) return a.Storage.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
+        let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? _ : m;
+        if (Date.now() - T > t) return a.Storage.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
       }, () => this._handleUpdateError())
     }), f(this, "_handleUpdateNotAvailable", () => {
       l.default.dispatch({

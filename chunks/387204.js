@@ -11,7 +11,7 @@ let _ = {
   BLOCK: E.block,
   INLINE: E.inline
 };
-class T extends(i = o.PureComponent) {
+class m extends(i = o.PureComponent) {
   render() {
     let {
       children: e,
@@ -37,9 +37,9 @@ class T extends(i = o.PureComponent) {
     })
   }
 }
-s = T, a = "Types", l = _, a in s ? Object.defineProperty(s, a, {
+s = m, a = "Types", l = _, a in s ? Object.defineProperty(s, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = l, t.default = T
+}) : s[a] = l, t.default = m

@@ -34,7 +34,7 @@ function c(e) {
         })
       }), (0, l.trackGuildInviteNotificationAction)())
     },
-    T = (e, t) => (0, s.jsx)(a.Anchor, {
+    m = (e, t) => (0, s.jsx)(a.Anchor, {
       className: d.inviteLink,
       onClick: _,
       children: e
@@ -42,9 +42,9 @@ function c(e) {
   return t = c ? (0, s.jsx)("div", {
     className: d.inviteContent,
     children: f ? u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER_COMPACT.format({
-      inviteHook: T
+      inviteHook: m
     }) : u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_COMPACT.format({
-      inviteHook: T
+      inviteHook: m
     })
   }) : (0, s.jsxs)("div", {
     className: d.content,

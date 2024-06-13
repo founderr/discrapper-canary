@@ -14,12 +14,12 @@ var s, a, l = n("735250"),
   f = n("904245"),
   E = n("596454"),
   _ = n("377171"),
-  T = n("702346"),
-  m = n("809026"),
+  m = n("702346"),
+  T = n("809026"),
   I = n("139256"),
-  N = n("489887"),
-  p = n("689938"),
-  h = n("69959");
+  p = n("489887"),
+  h = n("689938"),
+  N = n("69959");
 
 function S() {
   return (0, l.jsx)("svg", {
@@ -52,12 +52,12 @@ function C(e) {
     })
   }
   return null != t ? (0, l.jsx)("div", {
-    className: h.imageContainer,
+    className: N.imageContainer,
     children: t
   }) : null
 }(s = a || (a = {})).NO_VOTES = "NO_VOTES", s.VICTOR = "VICTOR", s.TIE = "TIE";
 
-function A(e) {
+function g(e) {
   let t, {
     type: n,
     ...s
@@ -68,7 +68,7 @@ function A(e) {
         variant: "text-sm/semibold",
         color: "text-normal",
         scaleFontToUserSetting: !0,
-        children: p.default.Messages.POLL_RESULT_NO_VOTERS
+        children: h.default.Messages.POLL_RESULT_NO_VOTERS
       });
       break;
     case "VICTOR":
@@ -77,16 +77,16 @@ function A(e) {
       } = s;
       t = (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsxs)("div", {
-          className: h.victorAnswer,
+          className: N.victorAnswer,
           children: [(0, l.jsx)(c.Text, {
             variant: "text-sm/semibold",
             color: "text-normal",
-            className: h.victorAnswerText,
+            className: N.victorAnswerText,
             scaleFontToUserSetting: !0,
             children: a
           }), (0, l.jsx)(I.PollAnswerVotedIcon, {
             size: 16,
-            className: h.victorIcon,
+            className: N.victorIcon,
             isVictor: !0,
             isExpired: !0
           })]
@@ -94,7 +94,7 @@ function A(e) {
           variant: "text-xs/medium",
           color: "input-placeholder-text",
           scaleFontToUserSetting: !0,
-          children: [p.default.Messages.POLL_RESULT_WINNING, " • ", i, "%"]
+          children: [h.default.Messages.POLL_RESULT_WINNING, " • ", i, "%"]
         })]
       });
       break;
@@ -107,7 +107,7 @@ function A(e) {
           variant: "text-sm/semibold",
           color: "text-normal",
           scaleFontToUserSetting: !0,
-          children: p.default.Messages.POLL_RESULT_TIED
+          children: h.default.Messages.POLL_RESULT_TIED
         }), (0, l.jsxs)(c.Text, {
           variant: "text-xs/medium",
           color: "input-placeholder-text",
@@ -117,12 +117,12 @@ function A(e) {
       })
   }
   return (0, l.jsx)("div", {
-    className: h.description,
+    className: N.description,
     children: t
   })
 }
 
-function g(e) {
+function A(e) {
   let {
     className: t,
     data: n,
@@ -143,14 +143,14 @@ function g(e) {
     }
   })(n), [n]);
   return (0, l.jsxs)("div", {
-    className: o()(h.container, t),
+    className: o()(N.container, t),
     children: [(0, l.jsx)(C, {
       hasNoVotes: "NO_VOTES" === a.type,
       victorEmoji: n.victorEmoji
-    }), (0, l.jsx)(A, {
+    }), (0, l.jsx)(g, {
       ...a
     }), (0, l.jsx)(c.Button, {
-      className: h.button,
+      className: N.button,
       size: c.Button.Sizes.TINY,
       onClick: s,
       color: c.Button.Colors.PRIMARY,
@@ -158,7 +158,7 @@ function g(e) {
         variant: "text-sm/medium",
         color: "none",
         scaleFontToUserSetting: !0,
-        children: p.default.Messages.POLL_RESULT_VIEW_POLL
+        children: h.default.Messages.POLL_RESULT_VIEW_POLL
       })
     })]
   })
@@ -169,7 +169,7 @@ function M(e) {
   let {
     message: n,
     compact: s
-  } = e, a = n.embeds[0], r = i.useMemo(() => (0, m.default)(a), [a]), o = (0, u.truncateText)(null !== (t = null == r ? void 0 : r.questionText) && void 0 !== t ? t : "", N.POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS), c = n.messageReference, E = i.useCallback(() => {
+  } = e, a = n.embeds[0], r = i.useMemo(() => (0, T.default)(a), [a]), o = (0, u.truncateText)(null !== (t = null == r ? void 0 : r.questionText) && void 0 !== t ? t : "", p.POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS), c = n.messageReference, E = i.useCallback(() => {
     null != c && f.default.jumpToMessage({
       channelId: c.channel_id,
       messageId: c.message_id,
@@ -178,19 +178,19 @@ function M(e) {
     })
   }, [n.id, c]);
   return null == r ? null : (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)(T.default, {
+    children: [(0, l.jsx)(m.default, {
       iconNode: (0, l.jsx)(d.PollsIcon, {
         width: 16,
         height: 16
       }),
       timestamp: n.timestamp,
       compact: s,
-      children: p.default.Messages.POLL_RESULT_MESSAGE_HEADER.format({
+      children: h.default.Messages.POLL_RESULT_MESSAGE_HEADER.format({
         title: o,
         titleOnClick: E
       })
-    }), (0, l.jsx)(g, {
-      className: h.embed,
+    }), (0, l.jsx)(A, {
+      className: N.embed,
       data: r,
       onClickPollLink: E
     })]

@@ -12,20 +12,20 @@ var s = n("735250"),
   f = n("592125"),
   E = n("496675"),
   _ = n("998951"),
-  T = n("630388"),
-  m = n("709054"),
+  m = n("630388"),
+  T = n("709054"),
   I = n("900164"),
-  N = n("739566"),
-  p = n("453687"),
-  h = n("25015"),
+  p = n("739566"),
+  h = n("453687"),
+  N = n("25015"),
   S = n("689674"),
   C = n("438075"),
-  A = n("963550"),
-  g = n("845080"),
+  g = n("963550"),
+  A = n("845080"),
   M = n("295790"),
   R = n("145807"),
-  O = n("56744"),
-  v = n("981631"),
+  v = n("56744"),
+  O = n("981631"),
   x = n("373947");
 t.default = a.memo(function(e) {
   var t;
@@ -34,58 +34,58 @@ t.default = a.memo(function(e) {
     compact: a = !1,
     className: l,
     onContextMenu: L,
-    onClick: P,
-    disableInteraction: D = !1,
+    onClick: D,
+    disableInteraction: P = !1,
     hideSimpleEmbedContent: y = !0,
     channel: U,
     isGroupStart: j,
     animateAvatar: b,
-    subscribeToComponentDispatch: G,
-    renderThreadAccessory: F,
-    trackAnnouncementViews: B = !1,
+    subscribeToComponentDispatch: F,
+    renderThreadAccessory: B,
+    trackAnnouncementViews: G = !1,
     ...k
   } = e, w = n.isFirstMessageInForumPost(U), H = (0, d.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), {
     content: V,
     hasSpoilerEmbeds: Y
-  } = (0, h.default)(n, {
+  } = (0, N.default)(n, {
     hideSimpleEmbedContent: y,
     allowList: w || H,
     allowHeading: w || H,
     allowLinks: !0,
     previewLinkTarget: !0
-  }), K = n.type === v.MessageTypes.REPLY ? n.messageReference : void 0, W = (0, o.useStateFromStores)([c.default], () => c.default.getMessageByReference(K)), z = (0, r.useListItem)(n.id), Q = (0, N.default)(n), q = (0, o.useStateFromStores)([f.default], () => n.hasFlag(v.MessageFlags.HAS_THREAD) && f.default.getChannel(m.default.castMessageIdAsChannelId(n.id))), X = (0, u.useRoleIcon)({
+  }), K = n.type === O.MessageTypes.REPLY ? n.messageReference : void 0, W = (0, o.useStateFromStores)([c.default], () => c.default.getMessageByReference(K)), z = (0, r.useListItem)(n.id), Q = (0, p.default)(n), q = (0, o.useStateFromStores)([f.default], () => n.hasFlag(O.MessageFlags.HAS_THREAD) && f.default.getChannel(T.default.castMessageIdAsChannelId(n.id))), X = (0, u.useRoleIcon)({
     guildId: U.guild_id,
     roleId: Q.iconRoleId
-  }), Z = (0, o.useStateFromStores)([E.default], () => E.default.can(v.Permissions.CREATE_INSTANT_INVITE, U)), J = (0, S.default)({
+  }), Z = (0, o.useStateFromStores)([E.default], () => E.default.can(O.Permissions.CREATE_INSTANT_INVITE, U)), J = (0, S.default)({
     message: n,
     channel: U,
-    enabled: B
+    enabled: G
   });
   if ((0, I.default)(n, Z)) return null;
-  let $ = (0, p.getMessageAriaLabelledBy)(n),
-    ee = (0, p.getMessageAriaDescribedBy)(n);
+  let $ = (0, h.getMessageAriaLabelledBy)(n),
+    ee = (0, h.getMessageAriaDescribedBy)(n);
   return (0, s.jsx)(_.default, {
     compact: a,
     className: i()(l, {
-      [x.ephemeral]: (0, T.hasFlag)(n.flags, v.MessageFlags.EPHEMERAL),
-      [x.disableInteraction]: D
+      [x.ephemeral]: (0, m.hasFlag)(n.flags, O.MessageFlags.EPHEMERAL),
+      [x.disableInteraction]: P
     }),
-    disableInteraction: D,
-    childrenRepliedMessage: (0, O.default)(n, U, K, W, a),
+    disableInteraction: P,
+    childrenRepliedMessage: (0, v.default)(n, U, K, W, a),
     childrenExecutedCommand: (0, R.default)(n, U, a),
-    childrenHeader: (0, g.default)({
+    childrenHeader: (0, A.default)({
       ...e,
       guildId: U.guild_id,
       author: Q,
       roleIcon: X
     }),
     childrenAccessories: e.hideAccessories ? void 0 : (0, C.renderSimpleAccessories)(e, Y),
-    childrenMessageContent: (0, A.default)(e, V),
+    childrenMessageContent: (0, g.default)(e, V),
     childrenSystemMessage: (0, M.default)(e),
     onContextMenu: L,
-    onClick: P,
-    hasThread: F && null != q && n.hasFlag(v.MessageFlags.HAS_THREAD),
-    hasReply: n.type === v.MessageTypes.REPLY,
+    onClick: D,
+    hasThread: B && null != q && n.hasFlag(O.MessageFlags.HAS_THREAD),
+    hasReply: n.type === O.MessageTypes.REPLY,
     "aria-labelledby": $,
     "aria-describedby": ee,
     messageRef: J,
