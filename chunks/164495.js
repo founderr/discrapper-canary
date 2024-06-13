@@ -57,7 +57,7 @@ let g = e => {
           content: E.QuestContent.QUEST_BAR_V2,
           ctaContent: d.QuestContentCTA.OPEN_GAME_LINK
         }),
-        children: m.default.Messages.QUESTS_PLAY_GAME
+        children: m.default.Messages.QUESTS_GET_THIS_GAME
       }), (() => {
         let e = c ? r.Tooltip.Colors.GREEN : r.Tooltip.Colors.PRIMARY,
           t = c ? m.default.Messages.COPY_SUCCESS_1 : m.default.Messages.QUESTS_SHARE_LINK,
