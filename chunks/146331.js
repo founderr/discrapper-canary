@@ -79,11 +79,22 @@ function S(e) {
           }, t))
         })
       },
-      children: e => (0, i.jsx)(I.default, {
-        text: f.default.Messages.MORE,
-        icon: c.default,
-        ...e
-      })
+      children: e => {
+        let {
+          onClick: t,
+          ...n
+        } = e;
+        return (0, i.jsx)(I.default, {
+          text: f.default.Messages.MORE,
+          icon: c.default,
+          onClick: e => {
+            m({
+              action: "PRESS_OPTIONS"
+            }), t(e)
+          },
+          ...n
+        })
+      }
     })
   })
 }
