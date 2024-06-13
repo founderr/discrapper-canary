@@ -110,32 +110,37 @@ function D(e) {
     hash: M
   } = i.parse(e), y = C.default.isDiscordHostname(p) || C.default.isDiscordLocalhost(g, p);
   if (y && (null == A ? void 0 : A.startsWith("/application-directory"))) {
-    let [, , e, t] = A.split("/"), i = null != e && (0, l.isSnowflake)(e) ? e : void 0;
-    return s => {
-      var a;
-      null == s || s.preventDefault();
+    let e;
+    let t = A.split("/"),
+      [, , i, s] = t;
+    5 === t.length && (e = t[4]);
+    let a = null != i && (0, l.isSnowflake)(i) ? i : void 0;
+    return t => {
+      var o;
+      null == t || t.preventDefault();
       let {
-        ApplicationDirectoryProfileSections: o
+        ApplicationDirectoryProfileSections: l
       } = n("272242"), {
-        ApplicationDirectoryViews: l
-      } = n("132871"), d = null !== (a = N.default.getGuildId()) && void 0 !== a ? a : void 0, _ = l.HOME;
-      return "search" === e && (_ = l.SEARCH), null != i && (_ = l.APPLICATION, O.default.track(R.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
-        application_id: i,
+        ApplicationDirectoryViews: d
+      } = n("132871"), _ = null !== (o = N.default.getGuildId()) && void 0 !== o ? o : void 0, c = d.HOME;
+      return "search" === i && (c = d.SEARCH), null != a && (c = d.APPLICATION, O.default.track(R.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
+        application_id: a,
         device_platform: r.isMobile ? "mobile_web" : "desktop_web",
-        guild_id: d,
+        guild_id: _,
         channel_id: m.default.getChannelId()
-      })), Promise.resolve().then(n.bind(n, "147890")).then(e => {
+      })), Promise.resolve().then(n.bind(n, "147890")).then(t => {
         let {
           goToAppDirectory: n
-        } = e;
+        } = t;
         n({
-          view: _,
-          applicationId: i,
-          guildId: d,
-          applicationSection: (0, I.default)(o, t),
+          view: c,
+          applicationId: a,
+          guildId: _,
+          applicationSection: (0, I.default)(l, s),
           entrypoint: {
             name: u.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_URL
-          }
+          },
+          skuId: e
         })
       }), !0
     }
