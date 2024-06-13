@@ -1,93 +1,90 @@
 "use strict";
-i.r(t), i.d(t, {
+s.r(e), s.d(e, {
   default: function() {
-    return S
+    return L
   }
-}), i("47120");
-var n, l, s = i("735250"),
-  a = i("470079"),
-  r = i("442837"),
-  o = i("481060"),
-  d = i("241159"),
-  u = i("496929"),
-  c = i("558381"),
-  p = i("728345"),
-  f = i("812206"),
-  m = i("886176"),
-  g = i("238"),
-  v = i("507608"),
-  h = i("689938"),
-  C = i("135143");
+}), s("47120");
+var l, a, i = s("735250"),
+  n = s("470079"),
+  r = s("442837"),
+  o = s("481060"),
+  C = s("728345"),
+  d = s("812206"),
+  u = s("886176"),
+  c = s("283836"),
+  h = s("507608"),
+  p = s("689938"),
+  f = s("135143");
 
-function S(e) {
+function L(t) {
   let {
-    onClose: t,
-    transitionState: i,
-    appId: n,
-    guildId: l,
-    subscriptionGroupListing: S
-  } = e, x = (0, r.useStateFromStores)([f.default], () => f.default.getApplication(n), [n]), [T, L] = a.useState(() => f.default.isFetchingApplication(n) ? {
+    onClose: e,
+    transitionState: s,
+    appId: l,
+    guildId: a,
+    subscriptionGroupListing: L
+  } = t, m = (0, r.useStateFromStores)([d.default], () => d.default.getApplication(l), [l]), [x, g] = n.useState(() => d.default.isFetchingApplication(l) ? {
     status: 1
   } : {
     status: 0
-  }), R = a.useRef(null), [j, _] = a.useState(!0), I = () => {
-    var e;
-    (null === (e = R.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? _(!1) : _(!0)
+  }), j = n.useRef(null), [v, N] = n.useState(!0), R = () => {
+    var t;
+    (null === (t = j.current) || void 0 === t ? void 0 : t.isScrolledToBottom()) === !0 ? N(!1) : N(!0)
   };
-  a.useEffect(() => {
-    0 === T.status && (L({
+  n.useEffect(() => {
+    0 === x.status && (g({
       status: 1
-    }), p.default.fetchApplication(n).then(() => {
-      L({
+    }), C.default.fetchApplication(l).then(() => {
+      g({
         status: 2
       })
-    }).catch(e => {
-      L({
+    }).catch(t => {
+      g({
         status: 3,
-        error: e.message
+        error: t.message
       })
     }))
-  }, [n, T.status]);
-  let E = (0, r.useStateFromStores)([g.default], () => g.default.getStoreLayout(n), [n]);
-  if (a.useEffect(() => {
-      (0, d.fetchStoreDirectoryLayout)(n), (0, c.fetchAllStoreListingsForApplication)(n)
-    }, [n]), a.useEffect(() => {
-      (0, u.fetchUserEntitlementsForApplication)(n, !1)
-    }, [n]), null == x) return null;
-  let N = h.default.Messages.STOREFRONT_TITLE.format({
-    appName: x.name
+  }, [l, x.status]);
+  let {
+    subs: E,
+    otps: H
+  } = (0, c.useRefreshedStorefrontProducts)(l, a);
+  if (null == m) return null;
+  let M = p.default.Messages.STOREFRONT_TITLE.format({
+    appName: m.name
   });
-  return (0, s.jsxs)(o.ModalRoot, {
-    transitionState: i,
-    "aria-label": N,
+  return (0, i.jsxs)(o.ModalRoot, {
+    transitionState: s,
+    "aria-label": M,
     size: o.ModalSize.DYNAMIC,
-    className: C.modal,
-    children: [(0, s.jsxs)(o.ModalHeader, {
-      className: C.modalHeader,
-      children: [(0, s.jsxs)("div", {
-        className: C.modalTitle,
-        children: [(0, s.jsx)(m.default, {}), (0, s.jsx)(o.Heading, {
+    className: f.modal,
+    children: [(0, i.jsxs)(o.ModalHeader, {
+      className: f.modalHeader,
+      children: [(0, i.jsxs)("div", {
+        className: f.modalTitle,
+        children: [(0, i.jsx)(u.default, {}), (0, i.jsx)(o.Heading, {
           variant: "heading-md/semibold",
-          children: N
+          children: M
         })]
-      }), (0, s.jsx)(o.ModalCloseButton, {
-        onClick: t,
-        className: C.modalCloseBtn
+      }), (0, i.jsx)(o.ModalCloseButton, {
+        onClick: e,
+        className: f.modalCloseBtn
       })]
-    }), (0, s.jsx)(o.ModalContent, {
-      scrollerRef: e => {
-        null != e && (R.current = e, I())
+    }), (0, i.jsx)(o.ModalContent, {
+      scrollerRef: t => {
+        null != t && (j.current = t, R())
       },
-      onScroll: I,
-      children: (0, s.jsx)(v.default, {
-        app: x,
-        subscriptionGroupListing: S,
-        guildId: l,
-        storeLayout: E
+      onScroll: R,
+      children: (0, i.jsx)(h.AppStorefront, {
+        app: m,
+        subscriptionGroupListing: L,
+        guildId: a,
+        subscriptionListings: E,
+        otpListings: H
       })
-    }), (0, s.jsx)("div", {
-      className: C.containerScrollGradient,
-      "data-shown": j
+    }), (0, i.jsx)("div", {
+      className: f.containerScrollGradient,
+      "data-shown": v
     })]
   })
-}(l = n || (n = {}))[l.NONE = 0] = "NONE", l[l.FETCHING = 1] = "FETCHING", l[l.FETCHED = 2] = "FETCHED", l[l.ERROR = 3] = "ERROR"
+}(a = l || (l = {}))[a.NONE = 0] = "NONE", a[a.FETCHING = 1] = "FETCHING", a[a.FETCHED = 2] = "FETCHED", a[a.ERROR = 3] = "ERROR"

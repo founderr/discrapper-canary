@@ -1,243 +1,243 @@
 "use strict";
-i.r(t), i.d(t, {
-  default: function() {
-    return P
+n.r(t), n.d(t, {
+  AppStorefront: function() {
+    return C
+  },
+  ProductCardContainer: function() {
+    return E
+  },
+  SubscriptionCardContainer: function() {
+    return j
   }
-}), i("47120");
-var n = i("735250"),
-  l = i("470079"),
-  s = i("905322"),
-  a = i("200207"),
-  r = i("269210"),
-  o = i("442837"),
-  d = i("481060"),
-  u = i("607070"),
-  c = i("100527"),
-  p = i("906732"),
-  f = i("87484"),
-  m = i("171246"),
-  g = i("889989"),
-  v = i("696906"),
-  h = i("55563"),
-  C = i("551428"),
-  S = i("626135"),
-  x = i("768581"),
-  T = i("73346"),
-  L = i("624138"),
-  R = i("591759"),
-  j = i("601911"),
-  _ = i("110742"),
-  I = i("147496"),
-  E = i("680005"),
-  N = i("519896"),
-  O = i("981631"),
-  b = i("689938"),
-  A = i("399461");
+}), n("47120");
+var i = n("735250"),
+  l = n("470079"),
+  a = n("905322"),
+  r = n("200207"),
+  s = n("269210"),
+  o = n("442837"),
+  u = n("481060"),
+  d = n("607070"),
+  c = n("100527"),
+  p = n("906732"),
+  f = n("87484"),
+  S = n("171246"),
+  g = n("889989"),
+  v = n("696906"),
+  m = n("55563"),
+  h = n("551428"),
+  I = n("626135"),
+  b = n("768581"),
+  A = n("73346"),
+  T = n("624138"),
+  P = n("591759"),
+  _ = n("601911"),
+  x = n("110742"),
+  y = n("147496"),
+  N = n("680005"),
+  L = n("519896"),
+  O = n("981631"),
+  R = n("689938"),
+  U = n("399461");
 
-function P(e) {
+function C(e) {
   let {
     app: t,
-    subscriptionGroupListing: i,
-    guildId: a,
-    storeLayout: r
-  } = e, {
-    subscriptions: f,
-    otps: g
-  } = r, v = l.useMemo(() => {
-    var e, t;
-    let n = new Set(f.map(e => e.id));
-    return null !== (t = null == i ? void 0 : null === (e = i.subscription_listings) || void 0 === e ? void 0 : e.filter(e => n.has(e.id))) && void 0 !== t ? t : []
-  }, [null == i ? void 0 : i.subscription_listings, f]), h = l.useMemo(() => (0, j.findAppIconSrc)(t, 100), [t]), {
-    bot: C
-  } = t, T = l.useMemo(() => {
+    subscriptionGroupListing: n,
+    guildId: r,
+    subscriptionListings: s,
+    otpListings: f
+  } = e, g = l.useMemo(() => (0, _.findAppIconSrc)(t, 100), [t]), {
+    bot: v
+  } = t, m = l.useMemo(() => {
     var e;
-    if ((null == C ? void 0 : C.banner) == null) return;
-    let t = (0, x.getUserBannerURL)({
-      id: C.id,
-      banner: C.banner,
+    if ((null == v ? void 0 : v.banner) == null) return;
+    let t = (0, b.getUserBannerURL)({
+      id: v.id,
+      banner: v.banner,
       size: 1024,
       canAnimate: !1
     });
-    return null != t && null !== (e = R.default.toURLSafe(t)) && void 0 !== e ? e : void 0
-  }, [C]), L = l.useMemo(() => {
+    return null != t && null !== (e = P.default.toURLSafe(t)) && void 0 !== e ? e : void 0
+  }, [v]), h = l.useMemo(() => {
     var e;
-    if ((null == C ? void 0 : C.banner) == null) return;
-    let t = (0, x.getUserBannerURL)({
-      id: C.id,
-      banner: C.banner,
+    if ((null == v ? void 0 : v.banner) == null) return;
+    let t = (0, b.getUserBannerURL)({
+      id: v.id,
+      banner: v.banner,
       size: 1024,
       canAnimate: !0
     });
-    return null != t && null !== (e = R.default.toURLSafe(t)) && void 0 !== e ? e : void 0
-  }, [C]), _ = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), I = l.useMemo(() => [...v.map(e => e.id), ...g.map(e => e.id)], [v, g]), {
-    analyticsLocations: E
+    return null != t && null !== (e = P.default.toURLSafe(t)) && void 0 !== e ? e : void 0
+  }, [v]), A = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), T = l.useMemo(() => [...s.map(e => e.id), ...f.map(e => e.id)], [s, f]), {
+    analyticsLocations: x
   } = (0, p.default)(c.default.APP_STOREFRONT);
   return l.useEffect(() => {
-    0 !== I.length && S.default.track(O.AnalyticEvents.VIEW_PREMIUM_APP_STOREFRONT, {
+    0 !== T.length && I.default.track(O.AnalyticEvents.VIEW_PREMIUM_APP_STOREFRONT, {
       application_id: t.id,
-      sku_ids: I,
-      location_stack: E
+      sku_ids: T,
+      location_stack: x
     })
-  }, [E, t.id, I]), (0, n.jsxs)("div", {
-    className: A.wrapper,
-    children: [(0, n.jsx)(s.Banner, {
+  }, [x, t.id, T]), (0, i.jsxs)("div", {
+    className: U.wrapper,
+    children: [(0, i.jsx)(a.Banner, {
       title: t.name,
-      iconSrc: h,
-      backgroundSrc: T,
-      animatedBackgroundSrc: L,
-      prefersReducedMotion: _
-    }), v.length > 0 && null != i && (0, n.jsxs)("div", {
-      className: A.productSection,
-      children: [(0, n.jsx)(d.Heading, {
+      iconSrc: g,
+      backgroundSrc: m,
+      animatedBackgroundSrc: h,
+      prefersReducedMotion: A
+    }), s.length > 0 && null != n && (0, i.jsxs)("div", {
+      className: U.productSection,
+      children: [(0, i.jsx)(u.Heading, {
         variant: "heading-lg/semibold",
         color: "header-secondary",
-        children: b.default.Messages.STOREFRONT_APP_SUBSCRIPTIONS
-      }), (0, n.jsx)("div", {
-        className: A.productList,
-        children: v.map(e => (0, n.jsx)(M, {
+        children: R.default.Messages.STOREFRONT_APP_SUBSCRIPTIONS
+      }), (0, i.jsx)("div", {
+        className: U.productList,
+        children: s.map(e => (0, i.jsx)(j, {
           appId: t.id,
-          groupListingId: i.id,
-          guildId: a,
+          groupListingId: n.id,
+          guildId: r,
           listing: e,
-          groupListingType: (0, m.isApplicationUserSubscription)(i.sku_flags) ? "user" : "guild"
+          groupListingType: (0, S.isApplicationUserSubscription)(n.sku_flags) ? "user" : "guild"
         }, e.id))
       })]
-    }), g.length > 0 && (0, n.jsxs)("div", {
-      className: A.productSection,
-      children: [(0, n.jsx)(d.Heading, {
+    }), f.length > 0 && (0, i.jsxs)("div", {
+      className: U.productSection,
+      children: [(0, i.jsx)(u.Heading, {
         variant: "heading-lg/semibold",
         color: "header-secondary",
-        children: b.default.Messages.STOREFRONT_APP_PRODUCTS
-      }), (0, n.jsx)("div", {
-        className: A.productList,
-        children: g.map(e => (0, n.jsx)(y, {
+        children: R.default.Messages.STOREFRONT_APP_PRODUCTS
+      }), (0, i.jsx)("div", {
+        className: U.productList,
+        children: f.map(e => (0, i.jsx)(E, {
           skuId: e.sku.id,
           appId: t.id
         }, e.id))
       })]
-    }), (0, n.jsx)(d.Text, {
+    }), (0, i.jsx)(u.Text, {
       variant: "text-md/normal",
-      className: A.legalText,
-      children: null != t.termsOfServiceUrl && null != t.privacyPolicyUrl ? b.default.Messages.STOREFRONT_VIEW_TOS_PP.format({
+      className: U.legalText,
+      children: null != t.termsOfServiceUrl && null != t.privacyPolicyUrl ? R.default.Messages.STOREFRONT_VIEW_TOS_PP.format({
         tosUrl: t.termsOfServiceUrl,
         ppUrl: t.privacyPolicyUrl
-      }) : b.default.Messages.STOREFRONT_NO_TOS_PP
+      }) : R.default.Messages.STOREFRONT_NO_TOS_PP
     })]
   })
 }
 
-function M(e) {
+function j(e) {
   let {
     appId: t,
-    groupListingId: i,
-    guildId: s,
-    listing: a,
+    groupListingId: n,
+    guildId: a,
+    listing: r,
     groupListingType: o
   } = e, {
-    openModal: u
+    openModal: d
   } = (0, v.default)({
-    guildId: s,
-    groupListingId: i,
+    guildId: a,
+    groupListingId: n,
     showBenefitsFirst: !1,
     analyticsLocation: O.AnalyticsLocations.APP_STOREFRONT,
-    skuId: a.id
+    skuId: r.id
   }), c = l.useMemo(() => {
     var e;
-    return null === (e = a.store_listing_benefits) || void 0 === e ? void 0 : e.map(e => ({
+    return null === (e = r.store_listing_benefits) || void 0 === e ? void 0 : e.map(e => ({
       id: e.id,
       title: e.name,
       description: e.description,
       icon: (0, g.getBenefitIcon)(t, e.icon)
     }))
-  }, [t, a.store_listing_benefits]), p = l.useMemo(() => {
+  }, [t, r.store_listing_benefits]), p = l.useMemo(() => {
     var e;
-    return null != a.image_asset && null !== (e = R.default.toURLSafe((0, T.getAssetURL)(t, a.image_asset, 256))) && void 0 !== e ? e : void 0
-  }, [t, a.image_asset]), f = a.subscription_plans.length > 0 ? a.subscription_plans[0] : null;
-  return null === f ? null : (0, n.jsx)(r.SubscriptionCard, {
-    title: a.name,
-    description: a.description,
+    return null != r.image_asset && null !== (e = P.default.toURLSafe((0, A.getAssetURL)(t, r.image_asset, 256))) && void 0 !== e ? e : void 0
+  }, [t, r.image_asset]), f = r.subscription_plans.length > 0 ? r.subscription_plans[0] : null;
+  return null === f ? null : (0, i.jsx)(s.SubscriptionCard, {
+    title: r.name,
+    description: r.description,
     imgSrc: p,
     subscriptionType: o,
-    onPurchase: u,
-    PurchaseButton: e => (0, n.jsx)(E.SubscriptionPurchaseButton, {
+    onPurchase: d,
+    PurchaseButton: e => (0, i.jsx)(N.SubscriptionPurchaseButton, {
       ...e,
       appId: t,
-      groupListingId: i,
+      groupListingId: n,
       groupListingType: o,
-      guildId: s,
-      skuId: a.id,
+      guildId: a,
+      skuId: r.id,
       subPlan: f
     }),
-    benefitItems: null != c ? c.map(e => (0, n.jsx)(r.SubscriptionCardBenefit, {
+    benefitItems: null != c ? c.map(e => (0, i.jsx)(s.SubscriptionCardBenefit, {
       name: e.title,
       icon: e.icon
     }, e.id)) : void 0,
     onDetails: null != c ? () => {
-      (0, d.openModal)(e => {
+      (0, u.openModal)(e => {
         let {
           onClose: l,
-          transitionState: r
+          transitionState: s
         } = e;
-        return (0, n.jsx)(N.SubscriptionDetailsModal, {
+        return (0, i.jsx)(L.SubscriptionDetailsModal, {
           appId: t,
-          groupListingId: i,
+          groupListingId: n,
           groupListingType: o,
-          guildId: s,
+          guildId: a,
           onClose: l,
-          skuId: a.id,
-          transitionState: r
+          skuId: r.id,
+          transitionState: s
         })
       })
     } : void 0
   })
 }
 
-function y(e) {
-  var t, i, l, s;
+function E(e) {
+  var t, n, l, a;
   let {
-    skuId: r,
-    appId: u
+    skuId: s,
+    appId: d
   } = e, {
-    analyticsLocations: m
-  } = (0, p.default)(c.default.APP_STOREFRONT), g = (0, o.useStateFromStores)([C.default], () => C.default.getForSKU(r), [r]), v = (0, o.useStateFromStores)([h.default], () => h.default.get(r), [r]), S = (0, _.useHasActiveEntitlement)(r);
+    analyticsLocations: S
+  } = (0, p.default)(c.default.APP_STOREFRONT), g = (0, o.useStateFromStores)([h.default], () => h.default.getForSKU(s), [s]), v = (0, o.useStateFromStores)([m.default], () => m.default.get(s), [s]), I = (0, x.useHasActiveEntitlement)(s);
   if (null == v) return null;
-  let x = null !== (i = v.name) && void 0 !== i ? i : "",
-    j = null !== (l = null == g ? void 0 : null === (t = g.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== l ? l : void 0,
-    N = (null == g ? void 0 : g.headerBackground) != null && null !== (s = R.default.toURLSafe((0, T.getAssetURL)(u, g.headerBackground, 256))) && void 0 !== s ? s : void 0,
-    A = v.type === O.SKUTypes.DURABLE && S,
-    P = v.type === O.SKUTypes.DURABLE ? A ? b.default.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : b.default.Messages.STOREFRONT_DURABLE_AVAILABILITY : void 0,
+  let b = null !== (n = v.name) && void 0 !== n ? n : "",
+    _ = null !== (l = null == g ? void 0 : null === (t = g.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== l ? l : void 0,
+    L = (null == g ? void 0 : g.headerBackground) != null && null !== (a = P.default.toURLSafe((0, A.getAssetURL)(d, g.headerBackground, 256))) && void 0 !== a ? a : void 0,
+    U = v.type === O.SKUTypes.DURABLE && I,
+    C = v.type === O.SKUTypes.DURABLE ? U ? R.default.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : R.default.Messages.STOREFRONT_DURABLE_AVAILABILITY : void 0,
     {
-      price: M
+      price: j
     } = v;
-  return null == M ? null : (0, n.jsx)(a.ProductCard, {
-    title: x,
-    description: j,
-    headerImage: N,
-    availabilityLabel: P,
-    onDetails: (0, L.isNullOrEmpty)(j) ? void 0 : () => {
-      (0, d.openModal)(e => {
+  return null == j ? null : (0, i.jsx)(r.ProductCard, {
+    title: b,
+    description: _,
+    headerImage: L,
+    availabilityLabel: C,
+    onDetails: (0, T.isNullOrEmpty)(_) ? void 0 : () => {
+      (0, u.openModal)(e => {
         let {
           onClose: t,
-          transitionState: i
+          transitionState: n
         } = e;
-        return (0, n.jsx)(I.ItemDetailsModal, {
-          appId: u,
-          skuId: r,
+        return (0, i.jsx)(y.ItemDetailsModal, {
+          appId: d,
+          skuId: s,
           onClose: t,
-          transitionState: i
+          transitionState: n
         })
       })
     },
-    PurchaseButton: e => (0, n.jsx)(E.ItemPurchaseButton, {
+    PurchaseButton: e => (0, i.jsx)(N.ItemPurchaseButton, {
       ...e,
-      appId: u,
+      appId: d,
       sku: v
     }),
     onPurchase: () => {
       (0, f.default)({
-        applicationId: u,
+        applicationId: d,
         skuId: v.id,
-        analyticsLocations: m
+        analyticsLocations: S
       })
     }
   })

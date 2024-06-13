@@ -6,10 +6,10 @@ r.r(t), r.d(t, {
 }), r("47120");
 var a = r("399606"),
   n = r("597688"),
-  o = r("223143");
+  o = r("267097");
 
 function l(e) {
-  (0, o.useMaybeFetchCollectiblesCategories)();
+  (0, o.default)();
   let [t, r] = (0, a.useStateFromStoresArray)([n.default], () => [n.default.isFetchingCategories, n.default.getCategoryForProduct(e)]);
   return {
     isFetching: t,
