@@ -16,8 +16,7 @@ e.exports = {
   stepWrapper: "stepWrapper__40c72",
   stepWrapperComplete: "stepWrapperComplete__4da68",
   stepWrapperWithNextStep: "stepWrapperWithNextStep__553d0",
-  stepsWrapperAnimated: "stepsWrapperAnimated_c09c7a",
-  stepsWrapperStatic: "stepsWrapperStatic__454d2",
+  stepsWrapper: "stepsWrapper__5b91f",
   warningCircle: "warningCircle__7f604",
   wrapper: "wrapper__5ce22"
 }
