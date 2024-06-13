@@ -41,7 +41,7 @@ l.default = s.memo(function(e) {
             clanBadge: D,
             clanTag: E,
             badgeSize: C.ClanTagBadgeSize.SIZE_12,
-            textVariant: "text-xs/normal"
+            textVariant: "text-xs/semibold"
           })]
         }), (0, t.jsx)("div", {
           className: A.fakeMessage,

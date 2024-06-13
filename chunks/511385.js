@@ -26,10 +26,10 @@ a.default = e => {
     brandPrimaryColor: p,
     transitionState: E,
     onClose: A
-  } = e, L = (0, S.useUID)(), [M, U] = l.useState(!0), b = (0, n.useStateFromStores)([o.default], () => o.default.getGuild(_)), k = (0, n.useStateFromStores)([u.default], () => u.default.getCurrentUser()), w = (0, n.useStateFromStores)([c.default], () => null != k ? c.default.getMember(_, k.id) : null);
+  } = e, L = (0, S.useUID)(), [M, b] = l.useState(!0), U = (0, n.useStateFromStores)([o.default], () => o.default.getGuild(_)), k = (0, n.useStateFromStores)([u.default], () => u.default.getCurrentUser()), w = (0, n.useStateFromStores)([c.default], () => null != k ? c.default.getMember(_, k.id) : null);
   if (l.useEffect(() => {
       (0, m.trackConvertSuccessModalViewed)(_)
-    }, [_]), null == b || null == k || null == w) return null;
+    }, [_]), null == U || null == k || null == w) return null;
   let z = null != p ? {
     background: "radial-gradient(circle at top, ".concat(d()(p).alpha(.3).hex(), " 0%, transparent 50%)")
   } : void 0;
@@ -44,7 +44,7 @@ a.default = e => {
       children: [(0, t.jsx)(g.BaseClanTagChiplet, {
         guildId: _,
         clanTag: f,
-        clanBadge: null === (a = b.clan) || void 0 === a ? void 0 : a.badge,
+        clanBadge: null === (a = U.clan) || void 0 === a ? void 0 : a.badge,
         className: T.tagPreview,
         textClassName: T.tagText,
         textVariant: "heading-xxl/semibold",
@@ -52,7 +52,7 @@ a.default = e => {
       }), (0, t.jsx)(r.Heading, {
         variant: "heading-xxl/medium",
         children: N.default.Messages.CLAN_SUCCESS_TITLE.format({
-          name: b.name
+          name: U.name
         })
       }), (0, t.jsx)(r.Text, {
         className: T.subtitle,
@@ -76,10 +76,10 @@ a.default = e => {
                 color: null !== (j = w.colorString) && void 0 !== j ? j : void 0
               }), M && (0, t.jsx)(g.BaseClanTagChiplet, {
                 guildId: _,
-                clanBadge: null === (s = b.clan) || void 0 === s ? void 0 : s.badge,
+                clanBadge: null === (s = U.clan) || void 0 === s ? void 0 : s.badge,
                 clanTag: f,
                 badgeSize: h.ClanTagBadgeSize.SIZE_12,
-                textVariant: "text-xs/normal"
+                textVariant: "text-xs/semibold"
               })]
             }), (0, t.jsx)("div", {
               className: T.fakeMessage,
@@ -108,7 +108,7 @@ a.default = e => {
               children: N.default.Messages.CLAN_SUCCESS_USE_TAG_HELP
             })]
           }), (0, t.jsx)(r.Switch, {
-            onChange: () => U(!M),
+            onChange: () => b(!M),
             checked: M
           })]
         })]

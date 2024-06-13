@@ -81,7 +81,7 @@ function O(e) {
         onClick: r,
         badgeSize: f.ClanTagBadgeSize.SIZE_16,
         textColor: "interactive-normal",
-        textVariant: "text-sm/medium",
+        textVariant: "text-sm/semibold",
         badgeClassName: C.badge
       })
     })]
