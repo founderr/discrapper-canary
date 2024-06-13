@@ -30,30 +30,33 @@ function h(e) {
     groupListingType: r,
     guildId: a,
     onClick: s,
-    skuId: u,
-    subPlan: h,
-    icon: T
+    onHasClicked: u,
+    skuId: h,
+    subPlan: T,
+    icon: I
   } = e, {
-    openModal: I
+    openModal: g
   } = (0, o.default)({
     guildId: a,
     groupListingId: l,
     showBenefitsFirst: !1,
     analyticsLocation: f.AnalyticsLocations.APP_STOREFRONT,
-    skuId: u
-  }), g = (0, c.useHasActiveEntitlement)(u);
-  return "guild" !== r && ("user" !== r || g) ? (0, i.jsx)(_, {
+    skuId: h
+  }), x = (0, c.useHasActiveEntitlement)(h);
+  return "guild" !== r && ("user" !== r || x) ? (0, i.jsx)(_, {
     className: n,
     children: p.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
   }) : (0, i.jsx)(v, {
     appId: t,
-    skuId: u,
-    onClick: null != s ? s : I,
+    skuId: h,
+    onClick: e => {
+      (null != s ? s : g)(e), null == u || u()
+    },
     className: n,
     children: (0, i.jsxs)("div", {
       className: m.btnContent,
-      children: [T, p.default.Messages.STOREFRONT_SUBSCRIBE_FOR.format({
-        rate: (0, d.formatRate)((0, d.formatPrice)(h.price, h.currency), S.SubscriptionIntervalTypes.MONTH, 1)
+      children: [I, p.default.Messages.STOREFRONT_SUBSCRIBE_FOR.format({
+        rate: (0, d.formatRate)((0, d.formatPrice)(T.price, T.currency), S.SubscriptionIntervalTypes.MONTH, 1)
       })]
     })
   })
@@ -64,31 +67,34 @@ function T(e) {
     appId: t,
     className: n,
     onClick: l,
-    sku: o,
-    icon: u
+    onHasClicked: o,
+    sku: u,
+    icon: S
   } = e, {
-    analyticsLocations: S
-  } = (0, a.default)(r.default.APP_STOREFRONT), h = (0, c.useHasActiveEntitlement)(o.id), T = o.type === f.SKUTypes.DURABLE && h, {
-    price: I
-  } = o;
-  return null == I ? null : T ? (0, i.jsx)(_, {
+    analyticsLocations: h
+  } = (0, a.default)(r.default.APP_STOREFRONT), T = () => {
+    (0, s.default)({
+      applicationId: t,
+      skuId: u.id,
+      analyticsLocations: h
+    })
+  }, I = (0, c.useHasActiveEntitlement)(u.id), g = u.type === f.SKUTypes.DURABLE && I, {
+    price: x
+  } = u;
+  return null == x ? null : g ? (0, i.jsx)(_, {
     className: n,
     children: p.default.Messages.COLLECTIBLES_ALREADY_OWNED
   }) : (0, i.jsx)(v, {
     appId: t,
-    skuId: o.id,
-    onClick: null != l ? l : () => {
-      (0, s.default)({
-        applicationId: t,
-        skuId: o.id,
-        analyticsLocations: S
-      })
+    skuId: u.id,
+    onClick: e => {
+      (null != l ? l : T)(e), null == o || o()
     },
     className: n,
     children: (0, i.jsxs)("div", {
       className: m.btnContent,
-      children: [u, p.default.Messages.STOREFRONT_PURCHASE_FOR.format({
-        price: (0, d.formatPrice)(I.amount, I.currency)
+      children: [S, p.default.Messages.STOREFRONT_PURCHASE_FOR.format({
+        price: (0, d.formatPrice)(x.amount, x.currency)
       })]
     })
   })
