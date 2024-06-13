@@ -15,6 +15,9 @@ function r(e, t, n) {
   }) : e[t] = n, e
 }
 class s {
+  keys() {
+    return this.cachedKeys(this.version)
+  }
   values() {
     return this.cachedValues(this.version)
   }
@@ -35,6 +38,6 @@ class s {
     0 !== this.data.size && (this.data.clear(), this.version++)
   }
   constructor() {
-    r(this, "version", 0), r(this, "data", new Map), r(this, "cachedValues", void 0), this.cachedValues = (0, i.cachedFunction)(e => Array.from(this.data.values()))
+    r(this, "version", 0), r(this, "data", new Map), r(this, "cachedValues", void 0), r(this, "cachedKeys", void 0), this.cachedValues = (0, i.cachedFunction)(e => Array.from(this.data.values())), this.cachedKeys = (0, i.cachedFunction)(e => Array.from(this.data.keys()))
   }
 }

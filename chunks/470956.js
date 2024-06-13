@@ -5,6 +5,9 @@ n.r(t), n.d(t, {
   },
   useEnsureSyncedChannelVoiceStates: function() {
     return u
+  },
+  useEnsureSyncedUserIds: function() {
+    return c
   }
 }), n("47120");
 var a = n("470079"),
@@ -43,4 +46,13 @@ function d(e, t) {
       n.splice((0, l.sortedIndexBy)(n, e, e => (0, i.sortKey)(e)), 0, e)
     }), n
   })(n, t), [n, t])
+}
+
+function c(e, t) {
+  let n = (0, o.useIsRTCVoiceStateDesyncExperimentEnabled)(),
+    l = (0, s.useStateFromStores)([r.default], () => n ? r.default.getDesyncedUserIds(e) : null);
+  return a.useMemo(() => {
+    let e = new Set;
+    return t.forEach(t => e.add(t)), null == l || l.forEach(t => e.add(t)), e
+  }, [l, t])
 }
