@@ -23,26 +23,28 @@ function i(e) {
     handleContextMenu: o,
     isInteracting: u,
     isAutomodBlockedMessage: d,
-    renderThreadAccessory: c,
-    renderComponentAccessory: f,
-    renderSuppressEmbeds: E,
-    forceAddReactions: _,
-    className: m
+    isMessageSnapshot: c,
+    renderThreadAccessory: f,
+    renderComponentAccessory: E,
+    renderSuppressEmbeds: _,
+    forceAddReactions: m,
+    className: T
   } = e;
   return d ? null : (0, s.jsx)(a.default, {
     message: t,
     children: (0, s.jsx)(l.default, {
-      className: m,
+      className: T,
       isInteracting: u,
       message: t,
       channel: n,
       compact: i,
       hasSpoilerEmbeds: r,
+      isMessageSnapshot: c,
       onMediaItemContextMenu: o,
-      renderThreadAccessory: c,
-      renderComponentAccessory: f,
-      renderSuppressEmbeds: E,
-      forceAddReactions: _
+      renderThreadAccessory: f,
+      renderComponentAccessory: E,
+      renderSuppressEmbeds: _,
+      forceAddReactions: m
     })
   })
 }
