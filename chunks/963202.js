@@ -254,4 +254,18 @@ function p(e) {
   }, {
     autoTrackExposure: t
   })
-}
+}(0, r.createExperiment)({
+  kind: "user",
+  id: "2024-06_clans_mobile_tags",
+  label: "Clans - Mobile",
+  defaultConfig: {
+    clanTagsVisible: !1
+  },
+  treatments: [{
+    id: 1,
+    label: "Show tags on mobile",
+    config: {
+      clanTagsVisible: !0
+    }
+  }]
+})
