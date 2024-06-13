@@ -43,58 +43,58 @@ function y() {
 }
 
 function P(e) {
+  var t;
   let {
-    transitionState: t,
-    onClose: n,
-    quest: a,
-    location: l,
-    reward: d,
-    decoration: c,
-    onUseNow: E
-  } = e, I = r.useRef(null), [f, S] = r.useState(null), h = r.useRef(new s.Environment), A = (0, o.useStateFromStores)([_.default], () => _.default.useReducedMotion), N = (0, o.useStateFromStores)([m.default], () => m.default.getCurrentUser()), R = (0, C.getHeroAssetUrl)(a), [L, D] = r.useState("loading");
+    transitionState: n,
+    onClose: a,
+    quest: l,
+    location: d,
+    reward: c,
+    decoration: E,
+    onUseNow: I
+  } = e, f = r.useRef(null), [S, h] = r.useState(null), A = r.useRef(new s.Environment), N = (0, o.useStateFromStores)([_.default], () => _.default.useReducedMotion), R = (0, o.useStateFromStores)([m.default], () => m.default.getCurrentUser()), L = (0, C.getHeroAssetUrl)(l), D = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, [y, P] = r.useState(D ? "claimed" : "loading");
   r.useEffect(() => {
-    var e;
-    (null === (e = a.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && (0, p.claimQuestReward)(a.id, O.QuestRewardCodePlatforms.CROSS_PLATFORM, l).then(() => D("claimed")).catch(() => D("error"))
-  }, [a, l]);
-  let y = null == N || null == c || "loading" === L;
+    !D && (0, p.claimQuestReward)(l.id, O.QuestRewardCodePlatforms.CROSS_PLATFORM, d).then(() => P("claimed")).catch(() => P("error"))
+  }, [l, d, D]);
+  let b = null == R || null == E || "loading" === y;
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(s.ConfettiCanvas, {
-      ref: S,
+      ref: h,
       className: M.confettiCanvas,
-      environment: h.current
+      environment: A.current
     }), (0, i.jsx)("div", {
-      ref: I,
+      ref: f,
       children: (0, i.jsx)(u.ModalRoot, {
-        transitionState: t,
+        transitionState: n,
         size: u.ModalSize.DYNAMIC,
         className: M.rootContainer,
         hideShadow: !0,
-        children: y ? (0, i.jsx)("div", {
+        children: b ? (0, i.jsx)("div", {
           className: M.spinnerContainer,
           children: (0, i.jsx)(u.Spinner, {
             className: M.spinner,
             type: u.Spinner.Type.SPINNING_CIRCLE
           })
-        }) : "error" === L ? (0, i.jsx)(g.default, {
-          onClose: n
+        }) : "error" === y ? (0, i.jsx)(g.default, {
+          onClose: a
         }) : (0, i.jsx)(U, {
-          quest: a,
-          user: N,
-          primaryColor: a.config.colors.primary,
-          secondaryColor: a.config.colors.secondary,
-          decoration: c,
-          decorationName: d.messages.name,
-          backgroundUrl: R,
-          isSaving: "applying" === L,
-          onClose: n,
+          quest: l,
+          user: R,
+          primaryColor: l.config.colors.primary,
+          secondaryColor: l.config.colors.secondary,
+          decoration: E,
+          decorationName: c.messages.name,
+          backgroundUrl: L,
+          isSaving: "applying" === y,
+          onClose: a,
           onConfirm: () => {
-            D("applying"), E().finally(n)
+            P("applying"), I().finally(a)
           }
         })
       })
-    }), !A && "claimed" === L && (0, i.jsx)(T.default, {
-      confettiTarget: I.current,
-      confettiCanvas: f,
+    }), !N && !D && "claimed" === y && (0, i.jsx)(T.default, {
+      confettiTarget: f.current,
+      confettiCanvas: S,
       sprites: v.COMMON_CONFETTI_SPRITES,
       colors: v.COMMON_CONFETTI_COLORS
     })]
@@ -209,13 +209,9 @@ function b(e) {
     }, [t, n]);
     return [i, () => null == i ? Promise.reject() : ((0, d.setPendingAvatarDecoration)(i), y())]
   }(null !== (n = null == _ ? void 0 : _.skuId) && void 0 !== n ? n : null);
-  return null == _ ? null : (null === (t = s.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null ? (0, i.jsx)(c.default, {
-    transitionState: u,
-    onCloseModal: y,
-    onClose: l,
-    analyticsLocations: [],
-    initialSelectedDecoration: E
-  }) : (0, i.jsx)(P, {
+  if (null == _) return null;
+  let f = (0, C.hasVariant)(s, L.QuestVariants.IN_HOUSE_CONSOLE_QUEST);
+  return (null === (t = s.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null || f ? (0, i.jsx)(P, {
     onClose: l,
     transitionState: u,
     quest: s,
@@ -223,6 +219,12 @@ function b(e) {
     reward: _,
     decoration: E,
     onUseNow: T
+  }) : (0, i.jsx)(c.default, {
+    transitionState: u,
+    onCloseModal: y,
+    onClose: l,
+    analyticsLocations: [],
+    initialSelectedDecoration: E
   })
 }
 
