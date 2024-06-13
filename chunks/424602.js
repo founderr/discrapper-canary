@@ -37,4 +37,19 @@ let r = (0, i.createExperiment)({
         enabled: !0
       }
     }]
-  })
+  });
+(0, i.createExperiment)({
+  kind: "user",
+  id: "2024-06_mobile_app_launcher_in_activities_shelf",
+  label: "[Mobile] App Launcher in Activities Shelf",
+  defaultConfig: {
+    enabled: !1
+  },
+  treatments: [{
+    id: 1,
+    label: "Enable the activities shelf getting replaced by App Launcher on mobile",
+    config: {
+      enabled: !0
+    }
+  }]
+})
