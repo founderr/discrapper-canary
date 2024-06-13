@@ -185,12 +185,11 @@ function O(e) {
 t.default = function(e) {
   let {
     items: t,
-    inlineForwardButton: i,
-    inlineForwardButtonOnHover: a
+    inlineForwardButton: i
   } = e, {
-    groupableVisualMediaItems: l,
-    nonGroupableVisualMediaItems: o,
-    nonVisualMediaItems: r
+    groupableVisualMediaItems: a,
+    nonGroupableVisualMediaItems: l,
+    nonVisualMediaItems: o
   } = function(e) {
     return s.useMemo(() => {
       let [t, i] = d().partition(e, e => (0, c.isVisualMedia)(e.item.type)), [n, s] = d().partition(t, e => (0, c.isGroupableMedia)(e.item.type));
@@ -202,23 +201,20 @@ t.default = function(e) {
     }, [e])
   }(t);
   return (0, n.jsxs)(n.Fragment, {
-    children: [l.length > 0 && (null != i ? (0, n.jsxs)("div", {
+    children: [a.length > 0 && (null != i ? (0, n.jsxs)("div", {
       className: I.mosaicContainer,
       children: [(0, n.jsx)("div", {
         className: I.visualMediaItemContainer,
         children: (0, n.jsx)(g, {
-          visualMediaItems: l
+          visualMediaItems: a
         })
-      }), a ? (0, n.jsx)("div", {
-        className: I.inlineForwardOnHover,
-        children: i
-      }) : i]
+      }), i]
     }) : (0, n.jsx)("div", {
       className: I.visualMediaItemContainer,
       children: (0, n.jsx)(g, {
-        visualMediaItems: l
+        visualMediaItems: a
       })
-    })), o.length > 0 && o.map(e => {
+    })), l.length > 0 && l.map(e => {
       let t = e.renderMosaicItemFooter({
         item: e.item,
         message: e.message
@@ -230,9 +226,9 @@ t.default = function(e) {
           footer: t
         })
       }, e.item.uniqueId)
-    }), r.length > 0 && (0, n.jsx)("div", {
+    }), o.length > 0 && (0, n.jsx)("div", {
       className: I.nonVisualMediaItemContainer,
-      children: r.map(e => (0, n.jsx)("div", {
+      children: o.map(e => (0, n.jsx)("div", {
         className: I.nonVisualMediaItem,
         children: (0, n.jsx)(O, {
           props: e

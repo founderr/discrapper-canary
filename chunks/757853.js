@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   DestinationList: function() {
-    return P
+    return k
   }
 });
 var s = l("735250"),
@@ -77,6 +77,7 @@ function v(e) {
         })]
       })]
     }), !o && (0, s.jsx)(f.Checkbox, {
+      type: f.Checkbox.Types.INVERTED,
       displayOnly: !0,
       size: 24,
       value: r,
@@ -85,7 +86,7 @@ function v(e) {
   })
 }
 
-function F(e) {
+function x(e) {
   let {
     user: t,
     subLabel: l,
@@ -106,7 +107,7 @@ function F(e) {
   })
 }
 
-function x(e) {
+function F(e) {
   let {
     channel: t,
     subLabel: l,
@@ -125,7 +126,7 @@ function x(e) {
   })
 }
 
-function k(e) {
+function P(e) {
   let {
     channel: t,
     subLabel: l,
@@ -172,7 +173,7 @@ function k(e) {
   })
 }
 
-function P(e) {
+function k(e) {
   let {
     rowData: t,
     message: l,
@@ -215,15 +216,15 @@ function P(e) {
         "aria-posinset": i + 1,
         "aria-setsize": t.length
       };
-    if (o === _.AutocompleterResultTypes.USER) return (0, s.jsx)(F, {
+    if (o === _.AutocompleterResultTypes.USER) return (0, s.jsx)(x, {
       user: d,
       ...I
     });
-    if (o === _.AutocompleterResultTypes.GROUP_DM) return (0, s.jsx)(x, {
+    if (o === _.AutocompleterResultTypes.GROUP_DM) return (0, s.jsx)(F, {
       channel: d,
       ...I
     });
-    if (o === _.AutocompleterResultTypes.TEXT_CHANNEL || o === _.AutocompleterResultTypes.VOICE_CHANNEL) return (0, s.jsx)(k, {
+    if (o === _.AutocompleterResultTypes.TEXT_CHANNEL || o === _.AutocompleterResultTypes.VOICE_CHANNEL) return (0, s.jsx)(P, {
       channel: d,
       ...I
     });

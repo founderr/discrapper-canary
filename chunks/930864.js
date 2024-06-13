@@ -36,7 +36,7 @@ function y(e) {
   } = e, [R, b] = a.useState(""), D = a.useMemo(() => ({
     type: "channel",
     id: t
-  }), [t]), [M, O] = a.useState(y), [v, F] = a.useState(!1), x = M.length, k = x >= h.MAX_DESTINATION_COUNT, P = (0, n.useStateFromStores)([c.default], () => c.default.getMessage(t, l), [t, l]), G = (0, n.useStateFromStores)([d.default], () => d.default.getChannel(t), [t]), U = (0, o.useShareSearchResults)({
+  }), [t]), [M, O] = a.useState(y), [v, x] = a.useState(!1), F = M.length, P = F >= h.MAX_DESTINATION_COUNT, k = (0, n.useStateFromStores)([c.default], () => c.default.getMessage(t, l), [t, l]), G = (0, n.useStateFromStores)([d.default], () => d.default.getChannel(t), [t]), U = (0, o.useShareSearchResults)({
     searchText: R,
     selectedDestinations: M,
     originDestination: D
@@ -59,17 +59,17 @@ function y(e) {
         } = t;
         return l === e.type && s === e.id
       });
-      if (-1 === l) return k ? t : (b(""), [e, ...t]);
+      if (-1 === l) return P ? t : (b(""), [e, ...t]);
       let s = [...t];
       return s.splice(l, 1), s
     })
-  }, [k]), W = a.useCallback(async () => {
+  }, [P]), W = a.useCallback(async () => {
     let e = c.default.getMessage(t, l);
     if (null == e) {
       (0, i.showToast)((0, i.createToast)(m.default.Messages.ERROR_GENERIC_TITLE, i.ToastType.FAILURE));
       return
     }
-    F(!0);
+    x(!0);
     let s = M.map(r.destinationChannel).filter(_.isNotNullish);
     (0, S.closeForwardModal)(), 1 === s.length && (0, u.transitionToChannel)(s[0]);
     let a = await E.default.sendForwards(e, s, C);
@@ -90,16 +90,16 @@ function y(e) {
       forwardOptions: C
     })
   }, [t, C, l, M]);
-  if (null == P || null == G) return null;
+  if (null == k || null == G) return null;
   let Q = U.length > 0 ? (0, s.jsx)(I.DestinationList, {
       paddingBottom: 16,
       paddingTop: 16,
       rowData: U,
-      message: P,
+      message: k,
       originChannel: G,
       handleToggleDestination: z,
       selectedDestinations: M,
-      disableSelection: k
+      disableSelection: P
     }) : (0, s.jsxs)(i.ModalContent, {
       className: T.noResults,
       children: [(0, s.jsx)("img", {
@@ -112,8 +112,8 @@ function y(e) {
         children: m.default.Messages.SEARCH_NO_RESULTS
       })]
     }),
-    K = x <= 1 ? m.default.Messages.SEND : m.default.Messages.MESSAGES_SEND_SEPARATELY.format({
-      count: x
+    Y = F <= 1 ? m.default.Messages.SEND : m.default.Messages.MESSAGES_SEND_SEPARATELY.format({
+      count: F
     });
   return (0, s.jsxs)(i.ModalRoot, {
     className: T.modal,
@@ -123,9 +123,18 @@ function y(e) {
       className: T.header,
       children: [(0, s.jsxs)("div", {
         className: T.titleLine,
-        children: [(0, s.jsx)(i.Heading, {
-          variant: "heading-lg/semibold",
-          children: m.default.Messages.MESSAGE_ACTION_FORWARD_TO
+        children: [(0, s.jsxs)("div", {
+          className: T.title,
+          children: [(0, s.jsx)(i.Heading, {
+            variant: "heading-lg/semibold",
+            children: m.default.Messages.MESSAGE_ACTION_FORWARD_TO
+          }), P ? (0, s.jsx)(i.Text, {
+            variant: "text-sm/normal",
+            color: "text-warning",
+            children: m.default.Messages.MESSAGES_FORWARD_MAX_DESTINATION_COUNT.format({
+              count: h.MAX_DESTINATION_COUNT
+            })
+          }) : null]
         }), (0, s.jsx)(i.ModalCloseButton, {
           className: T.closeButton,
           onClick: j
@@ -138,24 +147,18 @@ function y(e) {
         placeholder: m.default.Messages.SEARCH,
         "aria-label": m.default.Messages.SEARCH,
         autoFocus: !0
-      }), k && (0, s.jsx)(i.FormErrorBlock, {
-        backgroundColor: i.FormErrorBlockColors.BACKGROUND_ACCENT,
-        iconClassName: T.warningIcon,
-        children: m.default.Messages.MESSAGES_FORWARD_MAX_DESTINATION_COUNT.format({
-          count: h.MAX_DESTINATION_COUNT
-        })
       })]
     }), Q, (0, s.jsxs)(i.ModalFooter, {
       className: T.footer,
       children: [(0, s.jsx)(i.Button, {
         submitting: v,
-        disabled: 0 === x,
+        disabled: 0 === F,
         onClick: W,
-        children: K
+        children: Y
       }), (0, s.jsx)(i.Button, {
         onClick: H,
         look: i.Button.Looks.OUTLINED,
-        color: i.Button.Colors.WHITE,
+        color: i.Button.Colors.PRIMARY,
         children: m.default.Messages.COPY_LINK
       })]
     })]
