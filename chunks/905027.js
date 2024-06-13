@@ -30,7 +30,7 @@ function E() {
         l = !0;
       if (Object.keys(n).length > 0) {
         let s = await (0, u.saveGuildIdentityChanges)(null == t ? void 0 : t.id, n);
-        l = l && null !== (e = null == s ? void 0 : s.ok) && void 0 !== e && e, (null == s ? void 0 : s.ok) && (0, u.resetPendingMemberChanges)()
+        l = l && null !== (e = null == s ? void 0 : s.ok) && void 0 !== e && e, (null == s ? void 0 : s.ok) ? (0, u.resetPendingMemberChanges)() : (0, d.showGenericGuildProfileUpdateFailureToast)()
       }
       if (Object.keys(i).length > 0) {
         let e = await (0, o.saveProfileChanges)(i, null == t ? void 0 : t.id);
