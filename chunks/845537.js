@@ -147,8 +147,8 @@ function D(e) {
     id: t,
     guildId: n
   } = e, a = (0, r.useStateFromStores)([I.default], () => null != n ? I.default.getRole(n, t) : void 0), o = (0, r.useStateFromStores)([l.default], () => l.default.roleStyle);
-  if (null == a) return (0, i.jsx)("span", {
-    children: "@deleted-role"
+  if (null == a) return (0, i.jsxs)("span", {
+    children: ["@", p.default.Messages.UNKNOWN_ROLE_PLACEHOLDER]
   });
   let u = null != a.color && 0 !== a.color;
   return (0, i.jsxs)(S.default, {
