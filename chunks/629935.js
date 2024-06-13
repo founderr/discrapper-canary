@@ -27,6 +27,9 @@ function s(e) {
     "--custom-theme-mix-base": T.css(),
     "--custom-theme-mix-text": E.css(),
     "--custom-theme-mix-amount-base": "".concat(t ? a : 0, "%"),
-    "--custom-theme-mix-amount-text": "".concat(t ? o : 0, "%")
+    "--custom-theme-mix-amount-text": "".concat(t ? o : 0, "%"),
+    "--bg-overlay-selected": "unset",
+    "--bg-overlay-hover": "unset",
+    "--bg-overlay-active": "unset"
   }
 }

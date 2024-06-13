@@ -26,7 +26,8 @@ function g() {
     s.default.track(m.AnalyticEvents.APP_DIRECTORY_PAGE_VIEWED, {
       current_page: c.ApplicationDirectoryViews.HOME,
       previous_page: null == i ? void 0 : i.type,
-      guild_id: e
+      guild_id: e,
+      referrer: document.referrer
     })
   }, [e, i]), (0, n.jsxs)(o.default, {
     children: [(0, n.jsx)(h.default, {}), null != t && t.length > 0 && (0, n.jsx)(d.default, {

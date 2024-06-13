@@ -21,8 +21,8 @@ var l = i("735250"),
   u = i("873546"),
   p = i("149765"),
   m = i("468194"),
-  _ = i("442837"),
-  f = i("692547"),
+  f = i("442837"),
+  _ = i("692547"),
   h = i("477690"),
   g = i("481060"),
   I = i("995648"),
@@ -75,8 +75,8 @@ var l = i("735250"),
   eu = i("939893"),
   ep = i("430913"),
   em = i("606183"),
-  e_ = i("272242"),
-  ef = i("981631"),
+  ef = i("272242"),
+  e_ = i("981631"),
   eh = i("558921"),
   eg = i("689938"),
   eI = i("798945"),
@@ -86,7 +86,7 @@ let eA = d().parserFor(eu.default),
   eR = (0, m.cssValueToNumber)(h.default.APPLICATION_DIRECTORY_PROFILE_ICON_SIZE),
   ex = "redirect_to_support_server",
   eT = "start_application_install",
-  eC = e => "".concat(location.protocol, "//").concat(location.host).concat(ef.Routes.APPLICATION_DIRECTORY_PROFILE(e)),
+  eC = e => "".concat(location.protocol, "//").concat(location.host).concat(e_.Routes.APPLICATION_DIRECTORY_PROFILE(e)),
   eN = e => {
     if (null == e) return null;
     let t = e.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/);
@@ -99,13 +99,13 @@ function eP(e) {
       match: {
         params: {
           applicationId: m,
-          section: f = e_.ApplicationDirectoryProfileSections.GENERAL
+          section: _ = ef.ApplicationDirectoryProfileSections.GENERAL
         }
       }
     } = e,
     h = (0, en.useApplicationDirectoryHistory)(e => e.guildId),
     E = (0, J.default)(),
-    T = (0, _.useStateFromStores)([q.default], () => q.default.getFetchState({
+    T = (0, f.useStateFromStores)([q.default], () => q.default.getFetchState({
       applicationId: m,
       guildId: h
     }) === q.FetchState.FETCHING),
@@ -116,7 +116,7 @@ function eP(e) {
     {
       similarApplications: G,
       similarLoadId: w
-    } = (0, _.useStateFromStoresObject)([q.default], () => {
+    } = (0, f.useStateFromStoresObject)([q.default], () => {
       let e = {
           applicationId: m,
           guildId: h
@@ -128,27 +128,27 @@ function eP(e) {
       }
     }),
     eu = a.useMemo(() => null == G ? void 0 : G.slice(0, 3), [G]),
-    eN = (0, _.useStateFromStores)([Q.default], () => Q.default.getApplicationFetchState(m)),
+    eN = (0, f.useStateFromStores)([Q.default], () => Q.default.getApplicationFetchState(m)),
     [eP, eL] = a.useState(void 0),
     ey = a.useCallback(e => {
       if (null != m) {
-        if (e === e_.ApplicationDirectoryProfileSections.GENERAL) {
-          (0, es.replaceAppDirectoryURLWith)(ef.Routes.APPLICATION_DIRECTORY_PROFILE(m));
+        if (e === ef.ApplicationDirectoryProfileSections.GENERAL) {
+          (0, es.replaceAppDirectoryURLWith)(e_.Routes.APPLICATION_DIRECTORY_PROFILE(m));
           return
-        }(0, es.replaceAppDirectoryURLWith)(ef.Routes.APPLICATION_DIRECTORY_PROFILE_SECTION(m, e))
+        }(0, es.replaceAppDirectoryURLWith)(e_.Routes.APPLICATION_DIRECTORY_PROFILE_SECTION(m, e))
       }
     }, [m]),
-    eD = (0, _.useStateFromStores)([B.default], () => B.default.isFocused()),
-    eM = (0, _.useStateFromStores)([k.default], () => k.default.locale),
+    eD = (0, f.useStateFromStores)([B.default], () => B.default.isFocused()),
+    eM = (0, f.useStateFromStores)([k.default], () => k.default.locale),
     eb = a.useRef(m),
-    ek = (0, _.useStateFromStores)([Q.default], () => {
+    ek = (0, f.useStateFromStores)([Q.default], () => {
       let e = Q.default.getApplication(m);
       return null == e ? e = Q.default.getApplication(eb.current) : eb.current = m, e
     }),
     eF = (0, er.default)({
       application: ek
     }),
-    eB = (0, _.useStateFromStores)([F.default], () => F.default.getSessionId());
+    eB = (0, f.useStateFromStores)([F.default], () => F.default.getSessionId());
   (0, j.usePageTitle)({
     location: null == ek ? void 0 : ek.name
   });
@@ -157,12 +157,12 @@ function eP(e) {
       var e;
       let t = null == ek ? void 0 : null === (e = ek.guild) || void 0 === e ? void 0 : e.id;
       if (null != t) {
-        (null == ek ? void 0 : ek.id) != null && H.default.track(ef.AnalyticEvents.APP_DIRECTORY_SUPPORT_SERVER_JOINED, {
+        (null == ek ? void 0 : ek.id) != null && H.default.track(e_.AnalyticEvents.APP_DIRECTORY_SUPPORT_SERVER_JOINED, {
           application_id: ek.id,
           guild_id: t
         });
         let e = {
-          page: ef.AnalyticsPages.APPLICATION_DIRECTORY
+          page: e_.AnalyticsPages.APPLICATION_DIRECTORY
         };
         await (0, z.startLurking)(t, e, {
           setsHistorySnapshot: !1
@@ -186,11 +186,11 @@ function eP(e) {
       }))
     }, [ek, E, eU]),
     ew = a.useCallback(() => {
-      (0, es.replaceAppDirectoryURLWith)("".concat(ef.Routes.APPLICATION_DIRECTORY_PROFILE(m)).concat(location.search))
+      (0, es.replaceAppDirectoryURLWith)("".concat(e_.Routes.APPLICATION_DIRECTORY_PROFILE(m)).concat(location.search))
     }, [m]);
   a.useEffect(() => {
-    f === e_.ApplicationDirectoryProfileSections.GENERAL && ew()
-  }, [ew, f]), a.useEffect(() => {
+    _ === ef.ApplicationDirectoryProfileSections.GENERAL && ew()
+  }, [ew, _]), a.useEffect(() => {
     null != m && Z.getApplication(m)
   }, [m]), a.useEffect(() => {
     if ((null == ek ? void 0 : ek.directory_entry) != null) {
@@ -218,12 +218,14 @@ function eP(e) {
     } = (0, $.useInstallApplication)(ek, h),
     eK = null === (t = (0, en.getPreviousView)()) || void 0 === t ? void 0 : t.type;
   a.useEffect(() => {
-    (null == ek ? void 0 : ek.id) != null && H.default.track(ef.AnalyticEvents.APP_DIRECTORY_PAGE_VIEWED, {
+    (null == ek ? void 0 : ek.id) != null && H.default.track(e_.AnalyticEvents.APP_DIRECTORY_PAGE_VIEWED, {
       current_page: "product",
       previous_page: eK,
       application_id: ek.id,
       guild_id: h,
-      shown_mutual_guilds_count: eF.length
+      shown_mutual_guilds_count: eF.length,
+      profile_section: _,
+      referrer: document.referrer
     })
   }, [null == ek ? void 0 : ek.id, h, eF]);
   let ez = a.useMemo(() => {
@@ -232,7 +234,7 @@ function eP(e) {
       if (null != t) return O.OrderedPermissions.filter(e => p.has(p.deserialize(t), e))
     }, [null == ek ? void 0 : null === (n = ek.install_params) || void 0 === n ? void 0 : n.permissions]),
     eZ = a.useCallback(e => {
-      ey(e), (null == ek ? void 0 : ek.id) != null && H.default.track(ef.AnalyticEvents.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
+      ey(e), (null == ek ? void 0 : ek.id) != null && H.default.track(e_.AnalyticEvents.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
         application_id: ek.id,
         guild_id: h,
         tab_name: e
@@ -243,8 +245,8 @@ function eP(e) {
       return null !== (i = (null !== (t = null == ek ? void 0 : null === (e = ek.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== t ? t : []).map(eS).filter(K.isNotNullish)) && void 0 !== i ? i : []
     }, [ek]),
     eq = a.useCallback((e, t) => {
-      if (e.type === ef.CarouselMediaTypes.IMG) {
-        let t = eQ.filter(e => e.type === ef.CarouselMediaTypes.IMG),
+      if (e.type === e_.CarouselMediaTypes.IMG) {
+        let t = eQ.filter(e => e.type === e_.CarouselMediaTypes.IMG),
           a = t.findIndex(t => t === e);
         if (a < 0) return;
         let n = t.map(e => ({
@@ -271,7 +273,7 @@ function eP(e) {
       }
     }, [eQ]),
     eJ = a.useCallback(e => {
-      (null == ek ? void 0 : ek.id) != null && H.default.track(ef.AnalyticEvents.APP_DIRECTORY_CATEGORY_CLICKED, {
+      (null == ek ? void 0 : ek.id) != null && H.default.track(e_.AnalyticEvents.APP_DIRECTORY_CATEGORY_CLICKED, {
         current_page: "product",
         category: e.name,
         category_id: e.id,
@@ -292,7 +294,7 @@ function eP(e) {
         application: t,
         mutualGuilds: i
       } = e;
-      (null == ek ? void 0 : ek.id) != null && H.default.track(ef.AnalyticEvents.APP_DIRECTORY_RECOMMENDATION_CLICKED, {
+      (null == ek ? void 0 : ek.id) != null && H.default.track(e_.AnalyticEvents.APP_DIRECTORY_RECOMMENDATION_CLICKED, {
         current_page: "product",
         application_id: ek.id,
         suggested_application_id: t.id,
@@ -305,7 +307,7 @@ function eP(e) {
     }, [null == ek ? void 0 : ek.id, w, h]),
     e$ = a.useCallback(() => {
       null != ek && (0, x.default)(function(e, t) {
-        let i = "https://".concat(ef.SUPPORT_DOMAIN, "/hc/").concat(e.toLowerCase(), "/requests/new"),
+        let i = "https://".concat(e_.SUPPORT_DOMAIN, "/hc/").concat(e.toLowerCase(), "/requests/new"),
           l = new URLSearchParams;
         return l.append("tf_12275088515223", "field_value_dc_category_report_an_app_bot"), l.append("tf_12276208289431", "field_value_dc_reported_action_app_directory"), l.append("tf_12094971213335", t.id), l.append("ticket_form_id", "12275528604823"), l.append("tf_subject", "App Directory Report ".concat(t.name, " ").concat(t.id)), "".concat(i, "?").concat(l.toString())
       }(eM, ek))
@@ -328,7 +330,7 @@ function eP(e) {
     }), [eH, e$]),
     [e1, e2] = (0, R.default)(!1, 1e3),
     e4 = a.useCallback(() => {
-      null != ek && (H.default.track(ef.AnalyticEvents.APP_SHARE_BUTTON_CLICKED, {
+      null != ek && (H.default.track(e_.AnalyticEvents.APP_SHARE_BUTTON_CLICKED, {
         source: "product_page",
         application_id: ek.id,
         guild_id: h
@@ -343,7 +345,7 @@ function eP(e) {
     }
   }, [E, eW]);
   let e5 = a.useCallback(() => {
-      null != ek && (E ? eW("product_page") : (H.default.track(ef.AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, {
+      null != ek && (E ? eW("product_page") : (H.default.track(e_.AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, {
         application_id: m,
         guild_id: h,
         auth_type: null != ek.custom_install_url ? "custom_url" : "in_app",
@@ -376,8 +378,8 @@ function eP(e) {
   let tr = a.useMemo(() => {
       let e = [],
         t = !0;
-      switch (f) {
-        case e_.ApplicationDirectoryProfileSections.GENERAL: {
+      switch (_) {
+        case ef.ApplicationDirectoryProfileSections.GENERAL: {
           var i, a;
           let n = null == ek ? void 0 : null === (i = ek.directory_entry) || void 0 === i ? void 0 : i.detailed_description;
           null != n && n.length > 0 ? (e.push((0, l.jsxs)(l.Fragment, {
@@ -429,7 +431,7 @@ function eP(e) {
           })), t = !0);
           break
         }
-        case e_.ApplicationDirectoryProfileSections.IMAGES: {
+        case ef.ApplicationDirectoryProfileSections.IMAGES: {
           if (0 === eQ.length) break;
           let t = (0, l.jsxs)(l.Fragment, {
             children: [(0, l.jsx)("img", {
@@ -462,7 +464,7 @@ function eP(e) {
                 src: t,
                 loadTimeMs: i
               } = e;
-              null != i && null != ek && H.default.track(ef.AnalyticEvents.APP_DIRECTORY_CAROUSEL_IMAGE_LOADED, {
+              null != i && null != ek && H.default.track(e_.AnalyticEvents.APP_DIRECTORY_CAROUSEL_IMAGE_LOADED, {
                 application_id: ek.id,
                 load_time_ms: i,
                 src: t
@@ -471,21 +473,21 @@ function eP(e) {
           }));
           break
         }
-        case e_.ApplicationDirectoryProfileSections.STORE:
+        case ef.ApplicationDirectoryProfileSections.STORE:
           ts && null != m && e.push((0, l.jsx)(eo.ApplicationDirectoryStore, {
             appId: m,
             guildId: null != h ? h : void 0
           }));
           break;
-        case e_.ApplicationDirectoryProfileSections.PREMIUM:
+        case ef.ApplicationDirectoryProfileSections.PREMIUM:
           e7 && (null == ek ? void 0 : ek.primary_sku_id) != null && e.push((0, l.jsx)(D.default, {
             applicationId: ek.id,
             applicationPrimarySkuId: null == ek ? void 0 : ek.primary_sku_id,
-            analyticsLocation: ef.AnalyticsLocations.APP_DIRECTORY_PROFILE,
+            analyticsLocation: e_.AnalyticsLocations.APP_DIRECTORY_PROFILE,
             forcesTransitionToGuild: !0
           }));
           break;
-        case e_.ApplicationDirectoryProfileSections.PRIVACY:
+        case ef.ApplicationDirectoryProfileSections.PRIVACY:
           ta && e.push((0, l.jsxs)(l.Fragment, {
             children: [(0, l.jsx)(g.Heading, {
               className: eI.sectionHeader,
@@ -506,27 +508,27 @@ function eP(e) {
             })]
           }))
       }
-      return ti(t), 0 === e.length && f !== e_.ApplicationDirectoryProfileSections.GENERAL && null != ek && ew(), e.map((e, t) => (0, l.jsx)("div", {
+      return ti(t), 0 === e.length && _ !== ef.ApplicationDirectoryProfileSections.GENERAL && null != ek && ew(), e.map((e, t) => (0, l.jsx)("div", {
         className: eI.section,
         children: e
       }, t))
-    }, [f, ew, ek, eP, e3, e9, eQ, eD, eq, ts, m, h, e7, ta, tn, ez]),
+    }, [_, ew, ek, eP, e3, e9, eQ, eD, eq, ts, m, h, e7, ta, tn, ez]),
     to = a.useMemo(() => {
       let e = [{
-        sectionName: e_.ApplicationDirectoryProfileSections.GENERAL,
+        sectionName: ef.ApplicationDirectoryProfileSections.GENERAL,
         sectionText: eg.default.Messages.APP_DIRECTORY_PROFILE_TAB_GENERAL
       }];
       return eQ.length > 0 && e.push({
-        sectionName: e_.ApplicationDirectoryProfileSections.IMAGES,
+        sectionName: ef.ApplicationDirectoryProfileSections.IMAGES,
         sectionText: eg.default.Messages.APP_DIRECTORY_PROFILE_TAB_IMAGES
       }), ts && e.push({
-        sectionName: e_.ApplicationDirectoryProfileSections.STORE,
+        sectionName: ef.ApplicationDirectoryProfileSections.STORE,
         sectionText: eg.default.Messages.APP_DIRECTORY_PROFILE_TAB_STORE
       }), e7 && !ts && e.push({
-        sectionName: e_.ApplicationDirectoryProfileSections.PREMIUM,
+        sectionName: ef.ApplicationDirectoryProfileSections.PREMIUM,
         sectionText: eg.default.Messages.APP_DIRECTORY_PROFILE_TAB_PREMIUM
       }), (ta || tn) && e.push({
-        sectionName: e_.ApplicationDirectoryProfileSections.PRIVACY,
+        sectionName: ef.ApplicationDirectoryProfileSections.PRIVACY,
         sectionText: eg.default.Messages.APP_DIRECTORY_PROFILE_TAB_PRIVACY
       }), e
     }, [eQ.length, e7, ta, tn, ts]);
@@ -624,7 +626,7 @@ function eP(e) {
               })]
             })]
           }), (0, l.jsx)(em.default, {
-            activeSection: f,
+            activeSection: _,
             setSection: eZ,
             shownSections: to
           })]
@@ -671,12 +673,12 @@ function eS(e) {
       var t;
       let i = null !== (t = e.proxy_url) && void 0 !== t ? t : e.url;
       return {
-        type: ef.CarouselMediaTypes.IMG, width: 0, height: 0, src: i
+        type: e_.CarouselMediaTypes.IMG, width: 0, height: 0, src: i
       };
     case E.ApplicationDirectoryEntryCarouselItemType.YOUTUBE:
       let l = eN(e.url);
       if (null != l) return {
-        type: ef.CarouselMediaTypes.YOUTUBE_VIDEO,
+        type: e_.CarouselMediaTypes.YOUTUBE_VIDEO,
         youtubeVideoId: l
       }
   }
@@ -740,9 +742,9 @@ function eO(e) {
   let {
     app: t,
     iconSrc: i
-  } = e, n = (0, S.default)(i, f.default.unsafe_rawColors.PRIMARY_800.css), {
+  } = e, n = (0, S.default)(i, _.default.unsafe_rawColors.PRIMARY_800.css), {
     bot: s
-  } = t, r = (0, _.useStateFromStores)([T.default], () => T.default.useReducedMotion), o = a.useMemo(() => {
+  } = t, r = (0, f.useStateFromStores)([T.default], () => T.default.useReducedMotion), o = a.useMemo(() => {
     let e = {
       backgroundColor: n
     };
