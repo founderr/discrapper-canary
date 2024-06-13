@@ -17,8 +17,8 @@ var a = n("120356"),
   f = n("702346"),
   E = n("787374"),
   _ = n("674563"),
-  m = n("689938"),
-  T = n("807850");
+  T = n("689938"),
+  m = n("807850");
 
 function I(e) {
   var t;
@@ -26,57 +26,57 @@ function I(e) {
     message: n,
     compact: a,
     usernameHook: I,
-    channel: h
-  } = e, p = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(h.guild_id)), N = (0, o.default)(n), S = I(N), {
+    channel: N
+  } = e, p = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(N.guild_id)), h = (0, o.default)(n), S = I(h), {
     avatarSrc: C,
     eventHandlers: {
-      onMouseEnter: g,
-      onMouseLeave: A
+      onMouseEnter: A,
+      onMouseLeave: g
     }
   } = (0, E.useAutomodAvatar)(!0);
   return (0, s.jsx)("div", {
-    onMouseEnter: g,
-    onMouseLeave: A,
+    onMouseEnter: A,
+    onMouseLeave: g,
     children: (0, s.jsx)(f.default, {
-      className: l()(T.mainContainer, {
-        [T.compact]: a
+      className: l()(m.mainContainer, {
+        [m.compact]: a
       }),
       iconNode: a ? null : (0, s.jsx)(E.AutomodAvatar, {
         src: C
       }),
-      iconContainerClassName: T.iconContainer,
+      iconContainerClassName: m.iconContainer,
       compact: a,
       children: (0, s.jsxs)("div", {
-        className: l()(T.content, {
-          [T.compact]: a
+        className: l()(m.content, {
+          [m.compact]: a
         }),
         children: [(0, s.jsx)(c.BaseMessageHeader, {
           message: n,
-          messageClassname: T.spanCorrection,
-          className: l()(T.usernameContainer, T.spanCorrection, {
-            [T.compact]: a
+          messageClassname: m.spanCorrection,
+          className: l()(m.usernameContainer, m.spanCorrection, {
+            [m.compact]: a
           }),
           username: (0, s.jsxs)("div", {
-            className: T.spanCorrection,
+            className: m.spanCorrection,
             children: [(0, s.jsx)(r.Text, {
               variant: "text-md/normal",
               color: "text-brand",
               tag: "span",
-              className: T.username,
-              children: m.default.Messages.GUILD_AUTOMOD_USERNAME
+              className: m.username,
+              children: T.default.Messages.GUILD_AUTOMOD_USERNAME
             }), (0, s.jsx)(d.default, {
               type: _.BotTagTypes.SYSTEM_DM,
-              className: T.systemTag
+              className: m.systemTag
             })]
           }),
           compact: a,
           showTimestamp: !0
         }), (0, s.jsx)("div", {
-          className: l()(T.__invalid_messageContent, {
-            [T.compact]: a
+          className: l()(m.__invalid_messageContent, {
+            [m.compact]: a
           }),
-          children: m.default.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
-            username: N.nick,
+          children: T.default.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
+            username: h.nick,
             usernameHook: S,
             guildName: null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : ""
           })

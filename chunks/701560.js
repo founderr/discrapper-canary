@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return g
   }
 }), n("47120"), n("411104");
 var s, a = n("735250"),
@@ -15,12 +15,12 @@ var s, a = n("735250"),
   f = n("594190"),
   E = n("592745"),
   _ = n("757266"),
-  m = n("417363"),
-  T = n("86813"),
+  T = n("417363"),
+  m = n("86813"),
   I = n("358085"),
-  h = n("346329"),
+  N = n("346329"),
   p = n("981631"),
-  N = n("689938"),
+  h = n("689938"),
   S = n("2050");
 
 function C(e, t, n) {
@@ -31,7 +31,7 @@ function C(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class g extends(s = l.PureComponent) {
+class A extends(s = l.PureComponent) {
   get analyticsLocation() {
     return {
       ...this.props.analyticsContext.location,
@@ -43,12 +43,12 @@ class g extends(s = l.PureComponent) {
       dispatchState: e
     } = this.props;
     return null != e && null != e.launchOptions && Object.keys(e.launchOptions).length > 1 ? (0, a.jsxs)(u.Clickable, {
-      "aria-label": N.default.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_OPTIONS,
+      "aria-label": h.default.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_OPTIONS,
       className: S.dropdownArrowHitbox,
       onClick: this.handleDropdownClick,
       children: [(0, a.jsx)("div", {
         className: S.arrowSeparator
-      }), (0, a.jsx)(T.default, {
+      }), (0, a.jsx)(m.default, {
         className: S.dropdownArrow
       })]
     }) : null
@@ -92,8 +92,8 @@ class g extends(s = l.PureComponent) {
       isShiny: d,
       hideNotLaunchable: c
     } = this.props;
-    if (!l) return c ? null : this.renderDisabledButton(N.default.Messages.GAME_ACTION_BUTTON_PLAY, I.isPlatformEmbedded ? N.default.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : N.default.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
-    if (o) return this.renderDisabledButton(N.default.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
+    if (!l) return c ? null : this.renderDisabledButton(h.default.Messages.GAME_ACTION_BUTTON_PLAY, I.isPlatformEmbedded ? h.default.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : h.default.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
+    if (o) return this.renderDisabledButton(h.default.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
     let f = d ? u.ShinyButton : u.Button;
     return (0, a.jsxs)(f, {
       className: r()(S.playButton, e),
@@ -105,7 +105,7 @@ class g extends(s = l.PureComponent) {
       onClick: this.handleClick,
       children: [(0, a.jsx)("div", {
         className: S.buttonText,
-        children: N.default.Messages.GAME_ACTION_BUTTON_PLAY
+        children: h.default.Messages.GAME_ACTION_BUTTON_PLAY
       }), this.renderDropdown()]
     })
   }
@@ -137,7 +137,7 @@ class g extends(s = l.PureComponent) {
         analyticsListSort: n,
         analyticsListIndex: s
       } = this.props;
-      h.playApplication(e, t, {
+      N.playApplication(e, t, {
         analyticsParams: {
           location: this.analyticsLocation,
           list_sort: n,
@@ -148,12 +148,12 @@ class g extends(s = l.PureComponent) {
   }
 }
 
-function A(e) {
+function g(e) {
   let {
     applicationId: t,
     libraryApplication: n
-  } = e, s = (0, c.useAnalyticsContext)(), [l, i] = (0, o.useStateFromStoresArray)([_.default, E.default, m.default], () => [_.default.isConnected(t) || E.default.isLaunchable(t) || null != n && m.default.isLaunchable(n.id, n.branchId), E.default.launchingGames.has(t)], [t, n]), r = (0, o.useStateFromStores)([f.default], () => new Set(f.default.getRunningVerifiedApplicationIds()).has(t), [t]), u = (0, o.useStateFromStores)([m.default], () => null != n ? m.default.getState(n.id, n.branchId) : null, [n]);
-  return (0, a.jsx)(g, {
+  } = e, s = (0, c.useAnalyticsContext)(), [l, i] = (0, o.useStateFromStoresArray)([_.default, E.default, T.default], () => [_.default.isConnected(t) || E.default.isLaunchable(t) || null != n && T.default.isLaunchable(n.id, n.branchId), E.default.launchingGames.has(t)], [t, n]), r = (0, o.useStateFromStores)([f.default], () => new Set(f.default.getRunningVerifiedApplicationIds()).has(t), [t]), u = (0, o.useStateFromStores)([T.default], () => null != n ? T.default.getState(n.id, n.branchId) : null, [n]);
+  return (0, a.jsx)(A, {
     ...e,
     analyticsContext: s,
     isLaunchable: l,
@@ -162,7 +162,7 @@ function A(e) {
     dispatchState: u
   })
 }
-C(g, "defaultProps", {
+C(A, "defaultProps", {
   fullWidth: !1,
   size: u.Button.Sizes.LARGE,
   tooltipPosition: "top",

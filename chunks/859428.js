@@ -12,35 +12,35 @@ var s = n("735250"),
   f = n("914010"),
   E = n("824717"),
   _ = n("900849"),
-  m = n("41776"),
-  T = n("981631"),
+  T = n("41776"),
+  m = n("981631"),
   I = n("689938"),
-  h = n("254405"),
+  N = n("254405"),
   p = n("988920");
 t.default = () => {
   let e = (0, r.useStateFromStores)([f.default], () => f.default.getGuildId(), []),
     t = (0, r.useStateFromStores)([c.default], () => c.default.getGuild(e), [e]),
-    n = (0, r.useStateFromStores)([m.default], () => m.default.getHistorySnapshot(), []),
-    [l, N] = a.useState(!1);
+    n = (0, r.useStateFromStores)([T.default], () => T.default.getHistorySnapshot(), []),
+    [l, h] = a.useState(!1);
   if (null == t) return null;
   let S = async () => {
-    N(!0);
+    h(!0);
     try {
       _.trackGuildJoinClicked(t.id), await u.default.joinGuild(t.id, {
-        source: T.JoinGuildSources.NOTICE_BAR
+        source: m.JoinGuildSources.NOTICE_BAR
       })
     } catch {
-      N(!1)
+      h(!1)
     }
   };
   return (0, s.jsxs)("div", {
-    className: i()(h.notice, p.notice),
+    className: i()(N.notice, p.notice),
     children: [(0, s.jsxs)(o.Button, {
       look: o.Button.Looks.OUTLINED,
       color: o.Button.Colors.WHITE,
       size: o.Button.Sizes.NONE,
-      className: i()(h.button, h.back),
-      innerClassName: h.iconButton,
+      className: i()(N.button, N.back),
+      innerClassName: N.iconButton,
       onClick: () => {
         let e = (0, d.getHistory)();
         null != n && null != n.location ? (0, d.replaceWith)({
@@ -50,14 +50,14 @@ t.default = () => {
       children: [(0, s.jsx)(E.default, {
         width: 16,
         height: 16,
-        className: h.arrow
+        className: N.arrow
       }), I.default.Messages.BACK]
     }), (0, s.jsx)(o.Text, {
-      className: h.header,
+      className: N.header,
       variant: "text-sm/normal",
       children: I.default.Messages.LURKER_MODE_NAG_BAR_HEADER
     }), (0, s.jsx)(o.Button, {
-      className: h.button,
+      className: N.button,
       look: o.Button.Looks.OUTLINED,
       color: o.Button.Colors.WHITE,
       size: o.Button.Sizes.NONE,

@@ -20,13 +20,13 @@ let f = e => {
       isDesktop: f,
       withMentions: E = !1,
       initialPageSize: _
-    } = e, m = (0, a.useStateFromStores)([d.default], () => d.default.shouldReload()), T = s.useRef(!1), [I, h] = s.useState(!1), {
+    } = e, T = (0, a.useStateFromStores)([d.default], () => d.default.shouldReload()), m = s.useRef(!1), [I, N] = s.useState(!1), {
       initialized: p,
-      loading: N,
+      loading: h,
       items: S,
       hasMore: C,
-      cursor: g,
-      errored: A
+      cursor: A,
+      errored: g
     } = (0, a.useStateFromStoresObject)([u.default], () => ({
       initialized: u.default.initialized,
       loading: u.default.loading,
@@ -44,40 +44,40 @@ let f = e => {
     s.useEffect(() => ((0, o.setNotificationCenterActive)(!0), () => (0, o.setNotificationCenterActive)(!1)), []), s.useEffect(() => {
       p && t && (0, l.ackUserFeature)(c.ReadStateTypes.NOTIFICATION_CENTER)
     }, [t, p]);
-    let v = (0, i.default)();
+    let O = (0, i.default)();
     s.useEffect(() => () => {
-      f ? !v() && (A || S.length > 100) && (0, o.resetNotificationCenter)() : n && S.length > 100 && (0, o.resetNotificationCenter)()
-    }, [n, S, f, v, A]), s.useEffect(() => {
-      let e = m && t;
+      f ? !O() && (g || S.length > 100) && (0, o.resetNotificationCenter)() : n && S.length > 100 && (0, o.resetNotificationCenter)()
+    }, [n, S, f, O, g]), s.useEffect(() => {
+      let e = T && t;
       (!p || e) && (0, o.fetchNotificationCenterItems)({
         limit: null != _ ? _ : E ? 8 : 20,
         with_mentions: E,
         roles_filter: M,
         everyone_filter: R
       })
-    }, [p, m, t, E, M, R, _]);
-    let O = s.useCallback(async e => {
-      !T.current && p && C && null != g && (e || !A) && (T.current = !0, h(!0), await (0, o.fetchNotificationCenterItems)({
-        after: g,
+    }, [p, T, t, E, M, R, _]);
+    let v = s.useCallback(async e => {
+      !m.current && p && C && null != A && (e || !g) && (m.current = !0, N(!0), await (0, o.fetchNotificationCenterItems)({
+        after: A,
         with_mentions: E,
         roles_filter: M,
         everyone_filter: R,
         limit: E ? 8 : 20
       }, () => {
-        T.current = !1
-      }), h(!1))
-    }, [p, C, g, A, E, M, R]);
+        m.current = !1
+      }), N(!1))
+    }, [p, C, A, g, E, M, R]);
     return {
       initialized: p,
-      loading: N,
+      loading: h,
       items: S,
       hasMore: C,
-      loadMore: O,
+      loadMore: v,
       loadingMore: I,
       setReadNotifItemToAcked: e => {
         !e.acked && (e.acked = !0)
       },
-      errored: A
+      errored: g
     }
   },
   E = () => {

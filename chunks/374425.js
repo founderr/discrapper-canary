@@ -12,15 +12,15 @@ var s = n("735250"),
   f = n("624138"),
   E = n("453070"),
   _ = n("373228"),
-  m = n("419922"),
-  T = n("217588"),
+  T = n("419922"),
+  m = n("217588"),
   I = n("981631"),
-  h = n("474936"),
+  N = n("474936"),
   p = n("688824");
-let N = (0, f.cssValueToNumber)(l.default.STICKERS_CONSTANTS_STICKER_DIMENSION),
+let h = (0, f.cssValueToNumber)(l.default.STICKERS_CONSTANTS_STICKER_DIMENSION),
   S = e => {
     null != e && o.default.trackWithMetadata(I.AnalyticEvents.EXPRESSION_TOOLTIP_VIEWED, {
-      type: h.PremiumUpsellTypes.STICKER_IN_MESSAGE_HOVER,
+      type: N.PremiumUpsellTypes.STICKER_IN_MESSAGE_HOVER,
       expression_id: e.id,
       expression_name: e.name,
       is_animated: (0, _.isAnimatedSticker)(e.format_type),
@@ -32,13 +32,13 @@ t.default = e => {
     renderableSticker: t,
     channel: n,
     isInteracting: l
-  } = e, [o, f] = a.useState(!0), [_, I] = a.useState(String(Date.now())), [h] = (0, E.useStickerForRenderableSticker)(t, l), {
+  } = e, [o, f] = a.useState(!0), [_, I] = a.useState(String(Date.now())), [N] = (0, E.useStickerForRenderableSticker)(t, l), {
     analyticsLocations: C
-  } = (0, u.default)(r.default.STICKER_MESSAGE), g = (0, s.jsxs)("span", {
+  } = (0, u.default)(r.default.STICKER_MESSAGE), A = (0, s.jsxs)("span", {
     className: p.stickerName,
     children: [(0, s.jsx)(c.default, {
       className: p.stickerIcon
-    }), (null != h ? h : t).name]
+    }), (null != N ? N : t).name]
   });
   return (0, s.jsx)(u.AnalyticsLocationProvider, {
     value: C,
@@ -49,7 +49,7 @@ t.default = e => {
       onRequestClose: () => {
         f(!0)
       },
-      renderPopout: e => (0, s.jsx)(T.default, {
+      renderPopout: e => (0, s.jsx)(m.default, {
         ...e,
         renderableSticker: t,
         channel: n,
@@ -62,10 +62,10 @@ t.default = e => {
         return (0, s.jsx)(i.Tooltip, {
           ...d.EXPRESSION_TOOLTIP_PROPS,
           shouldShow: o,
-          text: (0, d.renderClickableTooltipNode)(g),
+          text: (0, d.renderClickableTooltipNode)(A),
           "aria-label": !1,
           onTooltipShow: () => {
-            S(h)
+            S(N)
           },
           children: e => (0, s.jsx)(i.Clickable, {
             ...e,
@@ -74,10 +74,10 @@ t.default = e => {
               f(!o), n(e)
             },
             tag: "span",
-            children: (0, s.jsx)(m.default, {
+            children: (0, s.jsx)(T.default, {
               isInteracting: l,
-              size: N,
-              sticker: null != h ? h : t
+              size: h,
+              sticker: null != N ? N : t
             })
           })
         })

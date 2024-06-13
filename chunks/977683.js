@@ -19,10 +19,10 @@ function d(e, t) {
     f = (0, u.default)(null === (n = d.poll) || void 0 === n ? void 0 : n.expiry),
     E = l.AnimateEmoji.useSetting(),
     _ = (0, a.default)(),
-    m = null != t ? t : _;
+    T = null != t ? t : _;
   return s.useMemo(() => (0, o.default)(d, c, {
     animateEmoji: E,
-    theme: m,
+    theme: T,
     formattedExpirationLabel: f
-  }), [E, d, c, f, m])
+  }), [E, d, c, f, T])
 }

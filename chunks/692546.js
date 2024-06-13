@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return C
   }
 }), n("47120");
 var i, a = n("470079"),
@@ -15,9 +15,9 @@ var i, a = n("470079"),
   f = n("671999"),
   h = n("358085"),
   p = n("998502"),
-  g = n("145597");
+  m = n("145597");
 
-function m(e, t, n) {
+function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -47,7 +47,7 @@ function O(e, t) {
     if (null != n && (0, d.default)(n.zone, t.zone)) return;
     0 === y.size && window.addEventListener("mousemove", v), y.set(e, t)
   }
-  h.isPlatformEmbedded && ((0, g.isOutOfProcess)() ? c.default.setClickZones(Array.from(y.values()).map(e => {
+  h.isPlatformEmbedded && ((0, m.isOutOfProcess)() ? c.default.setClickZones(Array.from(y.values()).map(e => {
     let {
       zone: t
     } = e;
@@ -67,14 +67,14 @@ function O(e, t) {
       return t
     })
   }), function() {
-    if (!C) p.default.requireModule("discord_overlay2").setClickZoneCallback((e, t, n) => {
+    if (!T) p.default.requireModule("discord_overlay2").setClickZoneCallback((e, t, n) => {
       let i = y.get(e);
       null != i && (!S && (E.x = t, E.y = n), i.instance.click())
-    }), C = !0
+    }), T = !0
   }()))
 }
-let C = !1;
-class T extends(i = a.PureComponent) {
+let T = !1;
+class C extends(i = a.PureComponent) {
   componentDidMount() {
     this.props.observe ? this.observeZone() : this.updateZone()
   }
@@ -98,7 +98,7 @@ class T extends(i = a.PureComponent) {
     (0, f.dispatchEventToPoint)(e, E.x, E.y)
   }
   constructor(...e) {
-    super(...e), m(this, "zone", s().uniqueId("ClickArea")), m(this, "interval", new u.Interval), m(this, "updateZone", () => {
+    super(...e), g(this, "zone", s().uniqueId("ClickArea")), g(this, "interval", new u.Interval), g(this, "updateZone", () => {
       let e = (0, o.findDOMNode)(this);
       if ((0, r.isElement)(e)) {
         let {
@@ -121,7 +121,7 @@ class T extends(i = a.PureComponent) {
     })
   }
 }
-m(T, "defaultProps", {
+g(C, "defaultProps", {
   observe: !0,
   observeInterval: 1e3
 })

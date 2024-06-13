@@ -1,96 +1,96 @@
 "use strict";
-n.r(t);
-var r = n("392711"),
-  o = n.n(r),
-  i = n("544891"),
+n.r(e);
+var i = n("392711"),
+  a = n.n(i),
+  r = n("544891"),
   u = n("570140"),
-  a = n("981631");
-let l = ["Spidey Bot", "Captain Hook"];
-t.default = {
-  fetchForGuild(e) {
+  o = n("981631");
+let d = ["Spidey Bot", "Captain Hook"];
+e.default = {
+  fetchForGuild(t) {
     u.default.dispatch({
       type: "WEBHOOKS_FETCHING",
-      guildId: e
-    }), i.HTTP.get({
-      url: a.Endpoints.GUILD_WEBHOOKS(e),
+      guildId: t
+    }), r.HTTP.get({
+      url: o.Endpoints.GUILD_WEBHOOKS(t),
       oldFormErrors: !0
-    }).then(t => {
+    }).then(e => {
       let {
         body: n
-      } = t;
+      } = e;
       return u.default.dispatch({
         type: "WEBHOOKS_UPDATE",
-        guildId: e,
+        guildId: t,
         webhooks: n
       })
-    }).catch(t => {
+    }).catch(e => {
       let {
         body: n
-      } = t;
+      } = e;
       u.default.dispatch({
         type: "WEBHOOKS_UPDATE",
-        guildId: e,
+        guildId: t,
         error: n.message
       })
     })
   },
-  fetchForChannel(e, t) {
+  fetchForChannel(t, e) {
     u.default.dispatch({
       type: "WEBHOOKS_FETCHING",
-      guildId: e,
-      channelId: t
-    }), i.HTTP.get({
-      url: a.Endpoints.CHANNEL_WEBHOOKS(t),
+      guildId: t,
+      channelId: e
+    }), r.HTTP.get({
+      url: o.Endpoints.CHANNEL_WEBHOOKS(e),
       oldFormErrors: !0
     }).then(n => {
       let {
-        body: r
+        body: i
       } = n;
       return u.default.dispatch({
         type: "WEBHOOKS_UPDATE",
-        guildId: e,
-        channelId: t,
-        webhooks: r
+        guildId: t,
+        channelId: e,
+        webhooks: i
       })
     })
   },
-  create: (e, t, n) => (null == n && (n = l[o().random(0, l.length - 1)]), i.HTTP.post({
-    url: a.Endpoints.CHANNEL_WEBHOOKS(t),
+  create: (t, e, n) => (null == n && (n = d[a().random(0, d.length - 1)]), r.HTTP.post({
+    url: o.Endpoints.CHANNEL_WEBHOOKS(e),
     body: {
       name: n
     },
     oldFormErrors: !0
-  }).then(t => {
+  }).then(e => {
     let {
       body: n
-    } = t;
+    } = e;
     return u.default.dispatch({
       type: "WEBHOOK_CREATE",
-      guildId: e,
+      guildId: t,
       webhook: n
     }), n
   })),
-  delete: (e, t) => i.HTTP.del({
-    url: a.Endpoints.WEBHOOK(t),
+  delete: (t, e) => r.HTTP.del({
+    url: o.Endpoints.WEBHOOK(e),
     oldFormErrors: !0
   }).then(() => {
     u.default.dispatch({
       type: "WEBHOOK_DELETE",
-      guildId: e,
-      webhookId: t
+      guildId: t,
+      webhookId: e
     })
   }),
-  update: (e, t, n) => i.HTTP.patch({
-    url: a.Endpoints.WEBHOOK(t),
+  update: (t, e, n) => r.HTTP.patch({
+    url: o.Endpoints.WEBHOOK(e),
     body: n,
     oldFormErrors: !0
-  }).then(t => {
+  }).then(e => {
     let {
       body: n
-    } = t;
+    } = e;
     return u.default.dispatch({
       type: "WEBHOOK_UPDATE",
-      guildId: e,
+      guildId: t,
       webhook: n
     }), n
   })

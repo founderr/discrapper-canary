@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return m
   }
 }), n("724458"), n("653041");
 var s = n("735250");
@@ -17,18 +17,18 @@ var a = n("512722"),
   f = n("358595"),
   E = n("981631"),
   _ = n("689938"),
-  m = n("798719");
+  T = n("798719");
 
-function T(e) {
+function m(e) {
   let t, {
       invite: n,
       author: a,
-      currentUserId: T,
+      currentUserId: m,
       onTransitionToInviteChannel: I,
-      onAcceptInstantInvite: h
+      onAcceptInstantInvite: N
     } = e,
-    p = T === a.id,
-    N = n.state === E.InviteStates.ACCEPTING,
+    p = m === a.id,
+    h = n.state === E.InviteStates.ACCEPTING,
     S = (0, i.useStateFromStores)([o.default], () => null != n.channel ? o.default.getChannel(n.channel.id) : null, [n]);
   l()(null == S || S.isPrivate(), "must be a private channel");
   let C = null != S;
@@ -43,32 +43,32 @@ function T(e) {
     let e = u.default.getCurrentUser();
     C && null != e && t.push(e)
   }
-  let g = S.name;
-  (null == g || "" === g) && (g = t.length > 0 ? t.filter(c.isNotNullish).map(e => e.username).join(", ") : _.default.Messages.UNNAMED);
-  let A = C ? I : h,
+  let A = S.name;
+  (null == A || "" === A) && (A = t.length > 0 ? t.filter(c.isNotNullish).map(e => e.username).join(", ") : _.default.Messages.UNNAMED);
+  let g = C ? I : N,
     M = _.default.Messages.JOIN_GUILD,
     R = d.default.Button.Colors.GREEN;
   C && (M = _.default.Messages.JOINED_GUILD, R = d.default.Button.Colors.PRIMARY);
-  let v = _.default.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
-  return p && (v = _.default.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, s.jsxs)(d.default, {
+  let O = _.default.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
+  return p && (O = _.default.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.default.Header, {
-      text: v
+      text: O
     }), (0, s.jsxs)(d.default.Body, {
       children: [(0, s.jsxs)("div", {
-        className: m.headerLine,
+        className: T.headerLine,
         children: [(0, s.jsx)(d.default.Icon, {
           channel: S,
-          onClick: C ? A : void 0
+          onClick: C ? g : void 0
         }), (0, s.jsx)(d.default.Info, {
-          title: g,
-          onClick: C ? A : void 0,
+          title: A,
+          onClick: C ? g : void 0,
           children: (0, s.jsx)(d.default.Data, {
             members: t.length
           })
         })]
       }), (0, s.jsx)(d.default.Button, {
-        onClick: A,
-        submitting: N,
+        onClick: g,
+        submitting: h,
         isDisabled: C,
         color: R,
         children: M

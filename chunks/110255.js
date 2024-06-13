@@ -22,21 +22,21 @@ function E(e) {
     closePopout: n,
     onSelect: E,
     navId: _,
-    label: m,
-    location: T,
+    label: T,
+    location: m,
     includeGuildMute: I
-  } = e, h = (0, r.useChannelNotificationRadioItems)(t), p = (0, o.useChannelNotificationSettingsItemInner)(t), N = (0, a.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id)), S = (0, u.default)(N), C = (0, d.useShouldUseNewNotificationSystem)("ChannelNotificationSettingsPopoutMenu") && c.CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING.has(t.type);
+  } = e, N = (0, r.useChannelNotificationRadioItems)(t), p = (0, o.useChannelNotificationSettingsItemInner)(t), h = (0, a.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id)), S = (0, u.default)(h), C = (0, d.useShouldUseNewNotificationSystem)("ChannelNotificationSettingsPopoutMenu") && c.CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING.has(t.type);
   return (0, s.jsxs)(l.Menu, {
     navId: _,
     onClose: n,
-    "aria-label": m,
+    "aria-label": T,
     onSelect: E,
     children: [(0, s.jsx)(l.MenuGroup, {
-      children: (0, i.default)(t, T)
+      children: (0, i.default)(t, m)
     }), I ? (0, s.jsx)(l.MenuGroup, {
       children: S
     }) : null, C ? p : (0, s.jsx)(l.MenuGroup, {
-      children: h
+      children: N
     })]
   })
 }

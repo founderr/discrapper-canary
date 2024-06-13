@@ -22,17 +22,17 @@ function c(e) {
     usernameHook: f,
     onClickThread: E,
     onClickViewThreads: _,
-    onContextMenuThread: m
-  } = e, T = (0, l.default)(n), I = f(T), h = (0, a.useStateFromStores)([i.default], () => {
+    onContextMenuThread: T
+  } = e, m = (0, l.default)(n), I = f(m), N = (0, a.useStateFromStores)([i.default], () => {
     var e;
     return i.default.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id)
   }), p = u.default.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
-    actorName: T.nick,
+    actorName: m.nick,
     actorHook: I,
-    threadName: null !== (t = null == h ? void 0 : h.name) && void 0 !== t ? t : n.content,
+    threadName: null !== (t = null == N ? void 0 : N.name) && void 0 !== t ? t : n.content,
     threadOnClick: {
       onClick: E,
-      onContextMenu: m
+      onContextMenu: T
     },
     viewThreadsOnClick: _
   });

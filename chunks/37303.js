@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return p
   },
   QuestsCardWrapper: function() {
-    return h
+    return N
   }
 }), n("47120");
 var s = n("735250"),
@@ -19,11 +19,11 @@ var s = n("735250"),
   f = n("87894"),
   E = n("372113"),
   _ = n("206044"),
-  m = n("266843"),
-  T = n("46140"),
+  T = n("266843"),
+  m = n("46140"),
   I = n("598762");
 
-function h(e) {
+function N(e) {
   let {
     questId: t,
     ...n
@@ -46,23 +46,23 @@ function p(e) {
     location: n,
     initiallyExpanded: i,
     contentPosition: u
-  } = e, [h, p] = a.useState(!1), N = a.useCallback(() => p(!0), []), S = a.useCallback(() => p(!1), []), C = (0, o.useIsQuestExpired)(t), {
-    containerRef: g,
-    size: A,
+  } = e, [N, p] = a.useState(!1), h = a.useCallback(() => p(!0), []), S = a.useCallback(() => p(!1), []), C = (0, o.useIsQuestExpired)(t), {
+    containerRef: A,
+    size: g,
     height: M
-  } = (0, m.useQuestCardSize)([t]), R = (0, r.useIsEligibleForConcurrentQuests)({
-    location: T.QuestsExperimentLocations.QUESTS_CARD
+  } = (0, T.useQuestCardSize)([t]), R = (0, r.useIsEligibleForConcurrentQuests)({
+    location: m.QuestsExperimentLocations.QUESTS_CARD
   }), {
-    expansionSpring: v,
-    isAnimating: O,
+    expansionSpring: O,
+    isAnimating: v,
     isExpanded: x,
     toggleExpanded: L
-  } = (0, m.useQuestCardAnimation)({
+  } = (0, T.useQuestCardAnimation)({
     initiallyExpanded: !R || i || (0, f.shouldQuestBeInitiallyExpanded)({
       location: n,
       quest: t
     })
-  }), D = null != M ? M : f.QUESTS_CARD_MAX_HEIGHT_FALLBACK_PX;
+  }), P = null != M ? M : f.QUESTS_CARD_MAX_HEIGHT_FALLBACK_PX;
   return (0, s.jsx)(c.QuestContentImpressionTrackerWeb, {
     questOrQuests: t,
     questContent: n,
@@ -71,27 +71,27 @@ function p(e) {
     children: e => (0, s.jsx)(s.Fragment, {
       children: (0, s.jsxs)(l.animated.div, {
         style: {
-          maxHeight: n === d.QuestContent.QUESTS_EMBED ? void 0 : v.to({
+          maxHeight: n === d.QuestContent.QUESTS_EMBED ? void 0 : O.to({
             range: [0, 1],
-            output: [f.QUESTS_CARD_COLLAPSED_HEIGHT_PX, D]
+            output: [f.QUESTS_CARD_COLLAPSED_HEIGHT_PX, P]
           })
         },
         ref: t => {
-          e.current = t, g.current = t
+          e.current = t, A.current = t
         },
         className: I.questsCard,
-        onFocus: N,
-        onMouseEnter: N,
+        onFocus: h,
+        onMouseEnter: h,
         onBlur: S,
         onMouseLeave: S,
         children: [(0, s.jsx)(_.default, {
-          isFocused: h,
+          isFocused: N,
           isQuestExpired: C,
           location: n,
           quest: t,
-          size: A,
-          expansionSpring: v,
-          isAnimating: O,
+          size: g,
+          expansionSpring: O,
+          isAnimating: v,
           isExpanded: x,
           isInConcurrentQuestExperiment: R,
           contentPosition: u,
@@ -100,10 +100,10 @@ function p(e) {
           quest: t,
           isQuestExpired: C,
           location: n,
-          size: A,
-          isFocused: h,
+          size: g,
+          isFocused: N,
           isExpanded: x,
-          isAnimating: O,
+          isAnimating: v,
           contentPosition: u
         })]
       })

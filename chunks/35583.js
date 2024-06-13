@@ -12,8 +12,8 @@ var s = n("735250"),
   f = n("264674"),
   E = n("502568"),
   _ = n("35818"),
-  m = n("689938"),
-  T = n("504891");
+  T = n("689938"),
+  m = n("504891");
 
 function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function I(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class h extends a.PureComponent {
+class N extends a.PureComponent {
   static getDerivedStateFromProps(e, t) {
     return e.mode !== t.memoizedMode ? {
       memoizedMode: e.mode,
@@ -41,16 +41,16 @@ class h extends a.PureComponent {
       case "UPDATE_AVAILABLE":
         return (0, s.jsx)(E.Icon, {
           hideOnClick: !1,
-          tooltip: m.default.Messages.UPDATE_AVAILABLE,
-          foreground: T.downloadArrow,
-          background: T.cloud,
+          tooltip: T.default.Messages.UPDATE_AVAILABLE,
+          foreground: m.downloadArrow,
+          background: m.cloud,
           icon: f.default
         });
       case "UPDATE_MANUALLY":
       case "UPDATE_DOWNLOADED":
         return (0, s.jsx)(E.Icon, {
-          tooltip: m.default.Messages.UPDATE_DOWNLOADED,
-          foreground: T.updateIconForeground,
+          tooltip: T.default.Messages.UPDATE_DOWNLOADED,
+          foreground: m.updateIconForeground,
           onClick: this.handleInstallDownload,
           icon: c.default
         });
@@ -64,11 +64,11 @@ class h extends a.PureComponent {
       clicked: !1
     }), I(this, "handleInstallDownload", () => {
       d.default.isConnected() ? r.default.show({
-        title: m.default.Messages.UPDATE_DURING_CALL_TITLE,
-        body: m.default.Messages.UPDATE_DURING_CALL_BODY,
+        title: T.default.Messages.UPDATE_DURING_CALL_TITLE,
+        body: T.default.Messages.UPDATE_DURING_CALL_BODY,
         onConfirm: this.doUpdate,
-        cancelText: m.default.Messages.CANCEL,
-        confirmText: m.default.Messages.UPDATE_DURING_CALL_CONTINUE
+        cancelText: T.default.Messages.CANCEL,
+        confirmText: T.default.Messages.UPDATE_DURING_CALL_CONTINUE
       }) : this.doUpdate()
     }), I(this, "doUpdate", () => {
       !this.state.clicked && (this.setState({
@@ -79,4 +79,4 @@ class h extends a.PureComponent {
 }
 t.default = l.default.connectStores([u.default], () => ({
   mode: u.default.getState()
-}))(h)
+}))(N)

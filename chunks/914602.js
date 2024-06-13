@@ -11,11 +11,11 @@ var s, a = n("735250"),
   f = n("305177"),
   E = n("73346"),
   _ = n("568836"),
-  m = n("345898"),
-  T = n("981631"),
+  T = n("345898"),
+  m = n("981631"),
   I = n("838674");
 
-function h(e, t, n) {
+function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -34,7 +34,7 @@ class p extends(s = l.PureComponent) {
       renderCustomTitle: i,
       renderCustomMedia: r,
       isEmbed: o
-    } = this.props, u = o ? _.ResponsiveEmbedTile : m.default;
+    } = this.props, u = o ? _.ResponsiveEmbedTile : T.default;
     return (0, a.jsx)(u, {
       className: s,
       renderMedia: null != r ? r : this.renderMedia,
@@ -45,7 +45,7 @@ class p extends(s = l.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), h(this, "renderActions", () => {
+    super(...e), N(this, "renderActions", () => {
       let {
         inLibrary: e,
         sku: t,
@@ -61,13 +61,13 @@ class p extends(s = l.PureComponent) {
           inLibrary: e,
           className: i && s ? I.tilePriceWithVisibleBuyButton : I.tilePrice
         }), (0, a.jsx)(u.OperatingSystemSection, {
-          systems: [T.OperatingSystems.WINDOWS],
+          systems: [m.OperatingSystems.WINDOWS],
           className: I.platform
         }), i ? (0, a.jsx)("div", {
           children: "deprecated!"
         }) : null]
       })
-    }), h(this, "renderMedia", () => {
+    }), N(this, "renderMedia", () => {
       let {
         playing: e,
         muted: t,
@@ -104,7 +104,7 @@ class p extends(s = l.PureComponent) {
     })
   }
 }
-h(p, "defaultProps", {
+N(p, "defaultProps", {
   showMediaPlaceholder: !1,
   isMouseOver: !1,
   showBuyInline: !1,

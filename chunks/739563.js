@@ -12,7 +12,7 @@ var i = n("735250"),
   f = n("611273");
 let h = 0,
   p = () => "notification-position-selector-".concat(h++),
-  g = e => {
+  m = e => {
     switch (e) {
       case d.OverlayNotificationPositions.TOP_LEFT:
         return u.default.Messages.OVERLAY_NOTIFICATIONS_TOP_LEFT;
@@ -26,14 +26,14 @@ let h = 0,
         return u.default.Messages.OVERLAY_NOTIFICATIONS_DISABLED
     }
   },
-  m = [d.OverlayNotificationPositions.DISABLED, d.OverlayNotificationPositions.TOP_LEFT, d.OverlayNotificationPositions.TOP_RIGHT, d.OverlayNotificationPositions.BOTTOM_LEFT, d.OverlayNotificationPositions.BOTTOM_RIGHT];
+  g = [d.OverlayNotificationPositions.DISABLED, d.OverlayNotificationPositions.TOP_LEFT, d.OverlayNotificationPositions.TOP_RIGHT, d.OverlayNotificationPositions.BOTTOM_LEFT, d.OverlayNotificationPositions.BOTTOM_RIGHT];
 
 function E(e) {
   let {
     position: t,
     onChange: n
   } = e, [l] = a.useState(() => p()), h = t === d.OverlayNotificationPositions.DISABLED ? u.default.Messages.OVERLAY_NOTIFICATION_SETTINGS_DISABLED : u.default.Messages.OVERLAY_NOTIFICATION_SETTINGS_POSITION.format({
-    position: g(t)
+    position: m(t)
   });
   return (0, i.jsxs)("div", {
     children: [(0, i.jsx)(o.FocusRing, {
@@ -43,7 +43,7 @@ function E(e) {
         className: s()(c.wrapper, {
           [c.disabledSelected]: t === d.OverlayNotificationPositions.DISABLED
         }),
-        children: m.map(e => (0, i.jsxs)("label", {
+        children: g.map(e => (0, i.jsxs)("label", {
           className: s()({
             [c.selected]: e === t,
             [c.disabled]: e === d.OverlayNotificationPositions.DISABLED,
@@ -52,7 +52,7 @@ function E(e) {
             [c.bottomRight]: e === d.OverlayNotificationPositions.BOTTOM_RIGHT,
             [c.bottomLeft]: e === d.OverlayNotificationPositions.BOTTOM_LEFT
           }),
-          children: [g(e), e === d.OverlayNotificationPositions.DISABLED ? (0, i.jsx)(r.default, {
+          children: [m(e), e === d.OverlayNotificationPositions.DISABLED ? (0, i.jsx)(r.default, {
             className: c.disabledIcon
           }) : null, (0, i.jsx)("input", {
             type: "radio",

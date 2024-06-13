@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return T
   }
 });
 var s = n("735250"),
@@ -17,24 +17,24 @@ var s = n("735250"),
   E = n("689938"),
   _ = n("798719");
 
-function m(e) {
+function T(e) {
   var t;
   let {
     guild: n,
-    channel: m,
-    messageData: T
-  } = e, I = u.default.getGuildId(), h = o.default.getChannelId(I), p = a.useCallback(() => {
+    channel: T,
+    messageData: m
+  } = e, I = u.default.getGuildId(), N = o.default.getChannelId(I), p = a.useCallback(() => {
     var e;
     c.default.track(f.AnalyticEvents.CHANNEL_LINK_PREVIEW_JOINED, {
-      author_id: null === (e = T.author) || void 0 === e ? void 0 : e.id,
+      author_id: null === (e = m.author) || void 0 === e ? void 0 : e.id,
       link_guild_id: n.id,
-      link_channel_id: m.id,
-      link_channel_type: m.type,
+      link_channel_id: T.id,
+      link_channel_type: T.type,
       guild_id: I,
-      channel_id: h
-    }), (0, i.transitionToChannel)(n.id, m.id), l.default.selectVoiceChannel(m.id)
-  }, [null === (t = T.author) || void 0 === t ? void 0 : t.id, n.id, m.id, m.type, I, h]), N = (0, s.jsx)(d.default.Channel, {
-    channel: m
+      channel_id: N
+    }), (0, i.transitionToChannel)(n.id, T.id), l.default.selectVoiceChannel(T.id)
+  }, [null === (t = m.author) || void 0 === t ? void 0 : t.id, n.id, T.id, T.type, I, N]), h = (0, s.jsx)(d.default.Channel, {
+    channel: T
   });
   return (0, s.jsx)(d.default, {
     children: (0, s.jsxs)(d.default.Body, {
@@ -43,7 +43,7 @@ function m(e) {
         children: [(0, s.jsx)(d.default.Icon, {
           guild: n
         }), (0, s.jsx)(d.default.Info, {
-          title: N,
+          title: h,
           onClick: p,
           children: (0, s.jsxs)("span", {
             className: _.infoTitle,
@@ -61,7 +61,7 @@ function m(e) {
       }), (0, s.jsx)(d.default.Button, {
         onClick: p,
         color: d.default.Button.Colors.GREEN,
-        children: m.isGuildStageVoice() ? E.default.Messages.STAGE_CHANNEL_JOIN : E.default.Messages.JOIN_VOICE
+        children: T.isGuildStageVoice() ? E.default.Messages.STAGE_CHANNEL_JOIN : E.default.Messages.JOIN_VOICE
       })]
     })
   })

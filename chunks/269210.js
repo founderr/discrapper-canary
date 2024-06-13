@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var r = n("557533"),
-  l = n.n(r),
+var l = n("557533"),
+  r = n.n(l),
   a = n("789978"),
   s = n("368072"),
   o = n("777207"),
@@ -23,17 +23,17 @@ function S(e) {
   let {
     description: t,
     imgSrc: n,
-    PurchaseButton: r,
+    PurchaseButton: l,
     onPurchase: S,
     subscriptionType: p,
     title: m,
     onDetails: h,
-    benefitItems: v,
-    benefitsSummary: T
+    benefitItems: T,
+    benefitsSummary: v
   } = e;
   return (0, i.jsx)(a.FocusRing, {
     children: (0, i.jsxs)("div", {
-      className: l()(c.container, f.hoverCard),
+      className: r()(c.container, f.hoverCard),
       tabIndex: 0,
       onClick: () => {
         null != h ? h() : null != S && S()
@@ -58,7 +58,7 @@ function S(e) {
               height: 48,
               width: 48
             })
-          }), null != r && (0, i.jsx)(r, {
+          }), null != l && (0, i.jsx)(l, {
             className: c.purchaseBtn,
             onClick: e => {
               e.stopPropagation(), null == S || S()
@@ -70,16 +70,16 @@ function S(e) {
             children: t
           })]
         })]
-      }), null != T && (0, i.jsx)("div", {
+      }), null != v && (0, i.jsx)("div", {
         className: c.benefitsSummary,
         children: (0, i.jsx)(o.Text, {
           color: "interactive-normal",
           variant: "text-sm/medium",
           children: d.default.Messages.Storefront.BENEFITS_SUMMARY.format({
-            count: T
+            count: v
           })
         })
-      }), null != v && (0, i.jsx)("div", {
+      }), null != T && (0, i.jsx)("div", {
         className: c.benefits,
         children: (0, i.jsx)("div", {
           className: c.benefitsContainer,
@@ -89,15 +89,15 @@ function S(e) {
               color: "header-secondary",
               variant: "eyebrow",
               children: d.default.Messages.Storefront.BENEFITS_TITLE
-            }), v.length > 3 ? (0, i.jsxs)(i.Fragment, {
-              children: [v.slice(0, 3), (0, i.jsx)(o.Text, {
+            }), T.length > 3 ? (0, i.jsxs)(i.Fragment, {
+              children: [T.slice(0, 3), (0, i.jsx)(o.Text, {
                 variant: "text-md/semibold",
                 color: "text-secondary",
                 children: d.default.Messages.Storefront.MORE_BENEFITS.format({
-                  count: v.length - 3
+                  count: T.length - 3
                 })
               })]
-            }) : v]
+            }) : T]
           })
         })
       })]
@@ -109,7 +109,7 @@ function p(e) {
   let {
     icon: t,
     name: n,
-    description: r
+    description: l
   } = e;
   return (0, i.jsxs)("div", {
     className: c.cardBenefit,
@@ -120,10 +120,10 @@ function p(e) {
       children: [(0, i.jsx)(o.Text, {
         variant: "text-md/semibold",
         children: n
-      }), null != r && (0, i.jsx)(o.Text, {
+      }), null != l && (0, i.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "text-muted",
-        children: r
+        children: l
       })]
     })]
   })

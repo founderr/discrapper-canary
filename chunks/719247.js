@@ -1,104 +1,104 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   entryToKey: function() {
-    return c
+    return M
   }
 }), n("47120");
-var r, s = n("392711"),
-  a = n.n(s),
-  E = n("661869"),
-  u = n("876215"),
-  T = n("423875"),
-  _ = n("442837"),
-  A = n("570140"),
-  I = n("158776"),
-  i = n("146282"),
-  l = n("26033"),
-  S = n("561308"),
-  o = n("981631"),
-  R = n("616922");
+var r, i = n("392711"),
+  u = n.n(i),
+  o = n("661869"),
+  a = n("876215"),
+  l = n("423875"),
+  s = n("442837"),
+  E = n("570140"),
+  d = n("158776"),
+  T = n("146282"),
+  c = n("26033"),
+  f = n("561308"),
+  _ = n("981631"),
+  S = n("616922");
 
-function O(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
+function I(t, e, n) {
+  return e in t ? Object.defineProperty(t, e, {
     value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : t[e] = n, t
 }
-let N = new Set([u.ContentInventoryEntryType.LISTENED_SESSION]),
-  d = new Map;
+let A = new Set([a.ContentInventoryEntryType.LISTENED_SESSION]),
+  N = new Map;
 
-function c(e) {
-  return "".concat(e.author_id, ":").concat(e.id)
+function M(t) {
+  return "".concat(t.author_id, ":").concat(t.id)
 }
 
-function f(e) {
-  let t = new Set,
+function v(t) {
+  let e = new Set,
     n = new Set;
-  for (let r of e) {
-    let e = function(e) {
-      return (0, S.isEntryExpired)(e) ? null : (0, S.isEntryActive)(e) && e.author_type === E.ContentInventoryAuthorType.USER ? I.default.getActivities(e.author_id).find(t => {
-        if (t.type === o.ActivityTypes.PLAYING && (0, l.isGamingLikeEntry)(e)) return function(e, t) {
-          let n = e.extra;
-          return null != n && ("application_id" in t && t.application_id === n.application_id || "game_name" in n && t.name === n.game_name)
-        }(e, t);
-        if (t.type === o.ActivityTypes.LISTENING && e.content_type === u.ContentInventoryEntryType.LISTENED_SESSION) {
-          var n, r, s, a, E;
-          return n = e, r = t, (null === (a = n.extra.entries[0]) || void 0 === a ? void 0 : null === (s = a.media) || void 0 === s ? void 0 : s.provider) === T.ContentInventoryListenedMediaProvider.SPOTIFY && (0, R.isSpotifyParty)(null === (E = r.party) || void 0 === E ? void 0 : E.id)
+  for (let r of t) {
+    let t = function(t) {
+      return (0, f.isEntryExpired)(t) ? null : (0, f.isEntryActive)(t) && t.author_type === o.ContentInventoryAuthorType.USER ? d.default.getActivities(t.author_id).find(e => {
+        if (e.type === _.ActivityTypes.PLAYING && (0, c.isGamingLikeEntry)(t)) return function(t, e) {
+          let n = t.extra;
+          return null != n && ("application_id" in e && e.application_id === n.application_id || "game_name" in n && e.name === n.game_name)
+        }(t, e);
+        if (e.type === _.ActivityTypes.LISTENING && t.content_type === a.ContentInventoryEntryType.LISTENED_SESSION) {
+          var n, r, i, u, o;
+          return n = t, r = e, (null === (u = n.extra.entries[0]) || void 0 === u ? void 0 : null === (i = u.media) || void 0 === i ? void 0 : i.provider) === l.ContentInventoryListenedMediaProvider.SPOTIFY && (0, S.isSpotifyParty)(null === (o = r.party) || void 0 === o ? void 0 : o.id)
         }
         return !1
       }) : void 0
     }(r.content);
-    if (void 0 !== e) {
-      let s = c(r.content);
-      n.add(s), e !== d.get(s) && (t.add(s), d.set(s, e))
+    if (void 0 !== t) {
+      let i = M(r.content);
+      n.add(i), t !== N.get(i) && (e.add(i), N.set(i, t))
     }
   }
   return {
-    updatedKeys: t,
+    updatedKeys: e,
     matchedKeys: n
   }
 }
 
-function M() {
-  let e = !1,
-    t = Array.from(d.keys()),
+function y() {
+  let t = !1,
+    e = Array.from(N.keys()),
     n = new Set,
     r = new Set;
-  for (let t of i.default.getFeeds().values()) {
+  for (let e of T.default.getFeeds().values()) {
     let {
-      updatedKeys: s,
-      matchedKeys: a
-    } = f(n.size > 0 ? t.entries.filter(e => !n.has(c(e.content))) : t.entries);
-    for (let e of s) n.add(e);
-    for (let e of a) r.add(e);
-    e = e || s.size > 0
+      updatedKeys: i,
+      matchedKeys: u
+    } = v(n.size > 0 ? e.entries.filter(t => !n.has(M(t.content))) : e.entries);
+    for (let t of i) n.add(t);
+    for (let t of u) r.add(t);
+    t = t || i.size > 0
   }
-  for (let n of a().difference(t, [...r])) d.delete(n), e = !0;
-  return e
+  for (let n of u().difference(e, [...r])) N.delete(n), t = !0;
+  return t
 }
-class G extends(r = _.default.Store) {
+class p extends(r = s.default.Store) {
   initialize() {
-    this.waitFor(i.default, I.default), this.syncWith([I.default], M)
+    this.waitFor(T.default, d.default), this.syncWith([d.default], y)
   }
-  getMatchingActivity(e) {
-    return (0, S.isEntryExpired)(e) ? null : d.get(c(e))
+  getMatchingActivity(t) {
+    return (0, f.isEntryExpired)(t) ? null : N.get(M(t))
   }
-  constructor(...e) {
-    super(...e), O(this, "canRenderContent", e => !(0, S.isEntryExpired)(e) && (!N.has(e.content_type) || null != this.getMatchingActivity(e)))
+  constructor(...t) {
+    super(...t), I(this, "canRenderContent", t => !(0, f.isEntryExpired)(t) && (!A.has(t.content_type) || null != this.getMatchingActivity(t)))
   }
 }
-O(G, "displayName", "ContentInventoryActivityStore"), t.default = new G(A.default, {
+I(p, "displayName", "ContentInventoryActivityStore"), e.default = new p(E.default, {
   CONNECTION_OPEN: function() {
-    d.clear()
+    N.clear()
   },
-  CONTENT_INVENTORY_SET_FEED: function(e) {
+  CONTENT_INVENTORY_SET_FEED: function(t) {
     let {
-      feed: t
-    } = e, {
+      feed: e
+    } = t, {
       updatedKeys: n
-    } = f(t.entries);
+    } = v(e.entries);
     return n.size > 0
   }
 })

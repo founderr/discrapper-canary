@@ -12,16 +12,16 @@ var s = n("735250"),
   f = n("367907"),
   E = n("717680"),
   _ = n("703656"),
-  m = n("592125"),
-  T = n("259580"),
+  T = n("592125"),
+  m = n("259580"),
   I = n("263704"),
-  h = n("568570"),
+  N = n("568570"),
   p = n("617379"),
-  N = n("324081"),
+  h = n("324081"),
   S = n("305248"),
   C = n("520116"),
-  g = n("981631"),
-  A = n("689938"),
+  A = n("981631"),
+  g = n("689938"),
   M = n("623122");
 let R = a.memo(function(e) {
   let {
@@ -60,36 +60,36 @@ let R = a.memo(function(e) {
   return (0, s.jsx)(r.animated.div, {
     ref: l,
     style: E,
-    children: (0, s.jsx)(v, {
+    children: (0, s.jsx)(O, {
       ...e
     })
   })
 });
 t.default = R;
-let v = a.memo(function(e) {
+let O = a.memo(function(e) {
   let {
     channel: t,
     onJump: n,
     deleteChannel: l,
     toggle: i
-  } = e, r = (0, o.useStateFromStores)([m.default], () => m.default.getChannel(t.channelId));
+  } = e, r = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(t.channelId));
   if (a.useEffect(() => {
       null != r && t.isFullyLoaded && !t.hasError && !t.collapsed && "messages" === t.type && 0 === t.messages.length && d.default.wait(() => {
         (0, c.ack)(t.channelId, !0), l(t.channelId)
       })
     }), null == r || !t.hasLoadedAnything) return null;
   let E = (e, s) => {
-    (0, f.trackWithMetadata)(g.AnalyticEvents.INBOX_CHANNEL_CLICKED, {
+    (0, f.trackWithMetadata)(A.AnalyticEvents.INBOX_CHANNEL_CLICKED, {
       channel_id: t.channelId,
       guild_id: t.guildId
     });
     let a = null != s ? s : t.oldestUnreadMessageId;
-    (0, _.transitionTo)(g.Routes.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : a)), n(e)
+    (0, _.transitionTo)(A.Routes.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : a)), n(e)
   };
   return (0, s.jsx)("div", {
     className: M.channel,
     children: (0, s.jsx)(u.HeadingLevel, {
-      component: (0, s.jsxs)(N.default, {
+      component: (0, s.jsxs)(h.default, {
         channel: r,
         gotoChannel: E,
         mentionCount: t.mentionCount,
@@ -97,7 +97,7 @@ let v = a.memo(function(e) {
         channelState: t,
         children: [(0, s.jsx)(p.default, {
           channel: r
-        }), (0, s.jsx)(O, {
+        }), (0, s.jsx)(v, {
           ...e
         }), "nsfw" === t.type ? null : (0, s.jsx)(x, {
           ...e
@@ -116,7 +116,7 @@ let v = a.memo(function(e) {
   })
 });
 
-function O(e) {
+function v(e) {
   let {
     channel: t,
     markChannelRead: n,
@@ -125,9 +125,9 @@ function O(e) {
   } = e, i = (0, E.default)() && null != t.guildId;
   return (0, s.jsx)(u.CircleIconButton, {
     className: M.markReadButton,
-    tooltip: i ? A.default.Messages.MARK_GUILD_AS_READ : A.default.Messages.MARK_AS_READ,
+    tooltip: i ? g.default.Messages.MARK_GUILD_AS_READ : g.default.Messages.MARK_AS_READ,
     color: u.CircleIconButtonColors.TERTIARY,
-    icon: i ? (0, s.jsx)(h.default, {
+    icon: i ? (0, s.jsx)(N.default, {
       width: 16,
       height: 16
     }) : (0, s.jsx)(I.default, {
@@ -135,7 +135,7 @@ function O(e) {
       height: 16
     }),
     onClick: function() {
-      i && null != t.guildId ? a(t.guildId) : n(t), (0, f.trackWithMetadata)(g.AnalyticEvents.INBOX_CHANNEL_ACKED, {
+      i && null != t.guildId ? a(t.guildId) : n(t), (0, f.trackWithMetadata)(A.AnalyticEvents.INBOX_CHANNEL_ACKED, {
         channel_id: t.channelId,
         guild_id: t.guildId,
         marked_all_channels_as_read: !1,
@@ -153,7 +153,7 @@ function x(e) {
   } = e;
 
   function l() {
-    n(t), (0, f.trackWithMetadata)(g.AnalyticEvents.INBOX_CHANNEL_COLLAPSED, {
+    n(t), (0, f.trackWithMetadata)(A.AnalyticEvents.INBOX_CHANNEL_COLLAPSED, {
       channel_id: t.channelId,
       guild_id: t.guildId,
       num_unread_channels_remaining: a(),
@@ -161,14 +161,14 @@ function x(e) {
     })
   }
   return (0, s.jsx)(u.Tooltip, {
-    text: A.default.Messages.COLLAPSE,
+    text: g.default.Messages.COLLAPSE,
     children: e => (0, s.jsx)(u.Clickable, {
       ...e,
       className: i()(M.collapseButton, {
         [M.collapsed]: t.collapsed
       }),
       onClick: l,
-      children: (0, s.jsx)(T.default, {
+      children: (0, s.jsx)(m.default, {
         width: 16,
         height: 16
       })

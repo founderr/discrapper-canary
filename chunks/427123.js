@@ -8,16 +8,16 @@ var s, a, l, i, r = n("392711"),
   f = n("496929"),
   E = n("16084"),
   _ = n("728345"),
-  m = n("812206"),
-  T = n("594190"),
+  T = n("812206"),
+  m = n("594190"),
   I = n("594174"),
-  h = n("580130"),
+  N = n("580130"),
   p = n("55563"),
-  N = n("981631");
+  h = n("981631");
 let S = "DetectedOffPlatformPremiumPerksStore",
   C = {},
-  g = {},
-  A = [];
+  A = {},
+  g = [];
 
 function M() {
   let e = !1;
@@ -25,11 +25,11 @@ function M() {
       skuId: t,
       applicationId: n
     }
-    of o().values(g)) {
-    if (A.includes(t)) continue;
-    let s = m.default.getApplication(n);
+    of o().values(A)) {
+    if (g.includes(t)) continue;
+    let s = T.default.getApplication(n);
     if (null == s) {
-      !m.default.isFetchingApplication(n) && !m.default.didFetchingApplicationFail(n) && _.default.fetchApplication(n);
+      !T.default.isFetchingApplication(n) && !T.default.didFetchingApplicationFail(n) && _.default.fetchApplication(n);
       continue
     }
     let a = p.default.get(t);
@@ -37,7 +37,7 @@ function M() {
       !p.default.isFetching(t) && !p.default.didFetchingSkuFail(t) && E.fetchPublishedSKU(s.id, t);
       continue
     }
-    h.default.applicationIdsFetching.has(s.id) || h.default.isEntitledToSku(I.default.getCurrentUser(), t, s.id, s.id) || !a.available ? null != C[t] && (delete C[t], e = !0) : (C[t] = {
+    N.default.applicationIdsFetching.has(s.id) || N.default.isEntitledToSku(I.default.getCurrentUser(), t, s.id, s.id) || !a.available ? null != C[t] && (delete C[t], e = !0) : (C[t] = {
       skuId: t,
       applicationId: n
     }, e = !0)
@@ -47,7 +47,7 @@ function M() {
 class R extends(s = u.default.Store) {
   initialize() {
     var e;
-    this.waitFor(T.default, p.default, h.default), A = null !== (e = d.Storage.get(S)) && void 0 !== e ? e : A
+    this.waitFor(m.default, p.default, N.default), g = null !== (e = d.Storage.get(S)) && void 0 !== e ? e : g
   }
   getDetectedOffPlatformPremiumPerks() {
     return o().values(C)
@@ -60,7 +60,7 @@ i = "DetectedOffPlatformPremiumPerksStore", (l = "displayName") in(a = R) ? Obje
   writable: !0
 }) : a[l] = i, t.default = new R(c.default, {
   LOGOUT: function() {
-    C = {}, g = {}
+    C = {}, A = {}
   },
   SKU_FETCH_SUCCESS: M,
   ENTITLEMENT_FETCH_APPLICATION_SUCCESS: M,
@@ -70,8 +70,8 @@ i = "DetectedOffPlatformPremiumPerksStore", (l = "displayName") in(a = R) ? Obje
     let {
       skuId: t
     } = e;
-    if (delete C[t], A.includes(t)) return !1;
-    A.push(t), d.Storage.set(S, A)
+    if (delete C[t], g.includes(t)) return !1;
+    g.push(t), d.Storage.set(S, g)
   },
   RUNNING_GAMES_CHANGE: function() {
     let e = !1;
@@ -79,14 +79,14 @@ i = "DetectedOffPlatformPremiumPerksStore", (l = "displayName") in(a = R) ? Obje
         id: t,
         distributor: n
       }
-      of T.default.getRunningGames())
-      if (null != t && n !== N.Distributors.DISCORD)
+      of m.default.getRunningGames())
+      if (null != t && n !== h.Distributors.DISCORD)
         for (let {
             skuId: n,
             applicationId: s
           }
-          of N.OFF_PLATFORM_PREMIUM_PERKS) {
-          if (!(s !== t || A.includes(n))) null == g[n] && (!h.default.applicationIdsFetched.has(s) && !h.default.applicationIdsFetching.has(s) && null == h.default.getForSku(n) && f.fetchUserEntitlementsForApplication(s), g[n] = {
+          of h.OFF_PLATFORM_PREMIUM_PERKS) {
+          if (!(s !== t || g.includes(n))) null == A[n] && (!N.default.applicationIdsFetched.has(s) && !N.default.applicationIdsFetching.has(s) && null == N.default.getForSku(n) && f.fetchUserEntitlementsForApplication(s), A[n] = {
             skuId: n,
             applicationId: s
           }, e = !0)

@@ -13,22 +13,22 @@ var a = n("120356"),
   f = n("930153"),
   E = n("358085"),
   _ = n("113434"),
-  m = n("46140"),
-  T = n("689938"),
+  T = n("46140"),
+  m = n("689938"),
   I = n("333964");
 t.default = function(e) {
   var t;
   let {
     className: n,
     color: a = r.default.colors.WHITE,
-    quest: h,
+    quest: N,
     isInventory: p
-  } = e, N = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = (0, i.useStateFromStores)([d.default], () => d.default.locale), {
+  } = e, h = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = (0, i.useStateFromStores)([d.default], () => d.default.locale), {
     percentComplete: C
   } = (0, _.useQuestTaskDetails)({
-    quest: h,
-    location: m.QuestsExperimentLocations.QUEST_PROGRESS_BAR
-  }), g = 100 * C, A = (0, E.isWeb)() && !N, M = () => (0, s.jsxs)("div", {
+    quest: N,
+    location: T.QuestsExperimentLocations.QUEST_PROGRESS_BAR
+  }), A = 100 * C, g = (0, E.isWeb)() && !h, M = () => (0, s.jsxs)("div", {
     className: I.desktopTooltip,
     style: {
       marginTop: p ? 8 : 0
@@ -41,10 +41,10 @@ t.default = function(e) {
     }), (0, s.jsx)(o.Text, {
       color: p ? "text-muted" : "always-white",
       variant: p ? "text-xs/normal" : "text-xxs/normal",
-      children: T.default.Messages.QUESTS_PROGRESS_WEB_TIP
+      children: m.default.Messages.QUESTS_PROGRESS_WEB_TIP
     })]
   });
-  return A && !p ? (0, s.jsx)(M, {}) : (0, s.jsxs)("div", {
+  return g && !p ? (0, s.jsx)(M, {}) : (0, s.jsxs)("div", {
     className: l()(I.wrapper, n),
     style: {
       color: a.css
@@ -61,19 +61,19 @@ t.default = function(e) {
       }), (0, s.jsx)("div", {
         className: I.percentCompleteLabelOffset,
         style: {
-          width: "".concat(100 - g, "%")
+          width: "".concat(100 - A, "%")
         }
       })]
     }), (0, s.jsx)("div", {
       className: I.progressBar,
       role: "progressbar",
-      "aria-valuenow": g,
+      "aria-valuenow": A,
       children: (0, s.jsx)("div", {
         className: I.progressBarFill,
         style: {
-          width: "".concat(g, "%")
+          width: "".concat(A, "%")
         }
       })
-    }), A && (0, s.jsx)(M, {})]
+    }), g && (0, s.jsx)(M, {})]
   })
 }

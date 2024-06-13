@@ -16,15 +16,15 @@ var s = n("735250"),
   f = n("294608"),
   E = n("65145"),
   _ = n("920557"),
-  m = n("642000");
+  T = n("642000");
 
-function T(e) {
+function m(e) {
   let {
     media: t
   } = e;
   return (0, s.jsx)(u.Heading, {
     variant: "text-md/medium",
-    className: m.question,
+    className: T.question,
     scaleFontToUserSetting: !0,
     children: t.text
   })
@@ -41,7 +41,7 @@ function I(e) {
   } = e;
   return (0, s.jsx)(u.Button, {
     onClick: n,
-    className: i()(m.__invalid_textButton, r),
+    className: i()(T.__invalid_textButton, r),
     look: u.Button.Looks.BLANK,
     size: u.Button.Sizes.NONE,
     buttonRef: o,
@@ -54,7 +54,7 @@ function I(e) {
   })
 }
 
-function h(e) {
+function N(e) {
   let {
     buttonLabel: t,
     secondaryLabel: n,
@@ -63,12 +63,12 @@ function h(e) {
     className: r
   } = e;
   return (0, s.jsxs)("div", {
-    className: i()(m.detailsText, r),
+    className: i()(T.detailsText, r),
     children: [l ? (0, s.jsx)(I, {
       onClick: a,
       variant: "text-sm/normal",
       color: "none",
-      className: i()(m.detailsTextButton, m.interactive),
+      className: i()(T.detailsTextButton, T.interactive),
       children: t
     }) : (0, s.jsx)(u.Text, {
       variant: "text-sm/normal",
@@ -107,7 +107,7 @@ function p(e) {
     disabled: !t.enabled,
     color: "secondaryButton" === t.presentation ? u.Button.Colors.CUSTOM : u.Button.Colors.BRAND,
     size: u.Button.Sizes.SMALL,
-    className: i()(o, m.buttonPresentation, "secondaryButton" === t.presentation && m.secondaryButtonPresentation),
+    className: i()(o, T.buttonPresentation, "secondaryButton" === t.presentation && T.secondaryButtonPresentation),
     children: (0, s.jsx)(u.Text, {
       variant: "text-sm/medium",
       color: "none",
@@ -119,7 +119,7 @@ function p(e) {
     onClick: _,
     className: o,
     children: t.label
-  }) : (0, s.jsx)(h, {
+  }) : (0, s.jsx)(N, {
     buttonLabel: t.label,
     secondaryLabel: t.secondaryLabel,
     handleClick: _,
@@ -128,7 +128,7 @@ function p(e) {
   })
 }
 
-function N(e) {
+function h(e) {
   let {
     message: t,
     poll: n,
@@ -151,32 +151,32 @@ function N(e) {
     })).otherwise(() => null)
   }(0, n);
   return null == d ? null : (0, s.jsx)("div", {
-    className: i()(m.container, l, a),
+    className: i()(T.container, l, a),
     children: (0, s.jsxs)(u.HeadingLevel, {
       children: [(0, s.jsxs)("div", {
-        className: m.header,
-        children: [(0, s.jsx)(T, {
+        className: T.header,
+        children: [(0, s.jsx)(m, {
           media: n.question
         }), null != n.promptLabel && (0, s.jsx)(u.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
-          className: m.prompt,
+          className: T.prompt,
           scaleFontToUserSetting: !0,
           children: n.promptLabel
         })]
       }), d, (0, s.jsxs)("div", {
-        className: m.bottomBar,
+        className: T.bottomBar,
         children: [(0, s.jsx)(p, {
           channelId: t.getChannelId(),
           messageId: t.id,
           action: n.secondaryAction,
-          className: m.secondaryAction,
+          className: T.secondaryAction,
           isInteractive: n.isInteractive
         }), (0, s.jsx)(p, {
           channelId: t.getChannelId(),
           messageId: t.id,
           action: n.tertiaryAction,
-          className: m.tertiaryAction
+          className: T.tertiaryAction
         }), (0, s.jsx)(p, {
           channelId: t.getChannelId(),
           messageId: t.id,
@@ -197,7 +197,7 @@ function S(e) {
     message: t,
     poll: n,
     children: (0, s.jsx)(E.PollFocusManager, {
-      children: (0, s.jsx)(N, {
+      children: (0, s.jsx)(h, {
         message: t,
         poll: n,
         className: a

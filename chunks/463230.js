@@ -17,19 +17,19 @@ t.default = e => {
     notice: t,
     noticeType: n,
     dismissCurrentNotice: _
-  } = e, m = (null == t ? void 0 : t.metadata.premiumSubscription) != null, T = (0, o.useLocalizedPromoQuery)();
-  if ((0, u.useTrackLocalizedPricingPromoImpression)(d.AnalyticsSections.NOTIFICATION_BAR, null == T ? void 0 : T.countryCode), null == T) return null;
-  let I = T.countryCode,
-    h = T.currency,
-    p = T.paymentSourceTypes.length > 0;
+  } = e, T = (null == t ? void 0 : t.metadata.premiumSubscription) != null, m = (0, o.useLocalizedPromoQuery)();
+  if ((0, u.useTrackLocalizedPricingPromoImpression)(d.AnalyticsSections.NOTIFICATION_BAR, null == m ? void 0 : m.countryCode), null == m) return null;
+  let I = m.countryCode,
+    N = m.currency,
+    p = m.paymentSourceTypes.length > 0;
   return (0, s.jsxs)(a.Notice, {
-    color: m ? a.NoticeColors.BRAND : a.NoticeColors.PREMIUM_TIER_2,
+    color: T ? a.NoticeColors.BRAND : a.NoticeColors.PREMIUM_TIER_2,
     children: [(0, s.jsx)(a.NoticeCloseButton, {
       onClick: () => _(c.ContentDismissActionType.UNKNOWN),
       noticeType: n
-    }), !m && (0, s.jsx)(i.default, {
+    }), !T && (0, s.jsx)(i.default, {
       className: E.premiumIcon
-    }), (0, r.getLocalizedPricingNotice)(I, h, p, m), (0, s.jsx)(a.PrimaryCTANoticeButton, {
+    }), (0, r.getLocalizedPricingNotice)(I, N, p, T), (0, s.jsx)(a.PrimaryCTANoticeButton, {
       onClick: () => {
         _(c.ContentDismissActionType.UNKNOWN), l.default.open(d.UserSettingsSections.PREMIUM)
       },

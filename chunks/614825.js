@@ -16,24 +16,24 @@ var s = n("735250"),
   f = n("568836"),
   E = n("100527"),
   _ = n("906732"),
-  m = n("963249"),
-  T = n("594174"),
+  T = n("963249"),
+  m = n("594174"),
   I = n("78839"),
-  h = n("55935"),
+  N = n("55935"),
   p = n("63063"),
-  N = n("74538"),
+  h = n("74538"),
   S = n("276444"),
   C = n("790368"),
-  g = n("786397"),
-  A = n("474936"),
+  A = n("786397"),
+  g = n("474936"),
   M = n("981631"),
   R = n("689938"),
-  v = n("613057");
-class O extends a.Component {
+  O = n("613057");
+class v extends a.Component {
   renderTitle(e, t, n) {
     let {
       trialOffer: s
-    } = this.props, a = T.default.getUser(s.user_id), l = null != a ? a.username : "???", i = T.default.getUser(s.referrer_id), r = null != i ? i.username : "???";
+    } = this.props, a = m.default.getUser(s.user_id), l = null != a ? a.username : "???", i = m.default.getUser(s.referrer_id), r = null != i ? i.username : "???";
     if (e && void 0 === s.redeemed_at) return R.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_DISABLED_HEADER.format({
       username: l
     });
@@ -63,17 +63,17 @@ class O extends a.Component {
         this.handleStartTrial(a, i)
       },
       color: c.Button.Colors.BRAND
-    }, o = l.id !== a.user_id || (0, N.isPremium)(l) || !l.verified || (0, g.hasUserTrialOfferExpired)(a), u = this.renderExpirationDate(e, t, n);
+    }, o = l.id !== a.user_id || (0, h.isPremium)(l) || !l.verified || (0, A.hasUserTrialOfferExpired)(a), u = this.renderExpirationDate(e, t, n);
     return r.disabled = o, (0, s.jsxs)("div", {
-      className: v.buttonContainer,
+      className: O.buttonContainer,
       children: [(0, s.jsx)("div", {
         children: (0, s.jsx)(c.Button, {
           ...r,
           size: c.Button.Sizes.SMALL,
           onClick: () => {
-            (0, m.default)({
+            (0, T.default)({
               initialPlanId: null,
-              subscriptionTier: A.PremiumSubscriptionSKUs.TIER_2,
+              subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
               analyticsLocations: i,
               trialId: a.trial_id,
               referralTrialOfferId: a.id
@@ -82,7 +82,7 @@ class O extends a.Component {
           children: R.default.Messages.START_TRIAL
         })
       }), (0, s.jsx)("div", {
-        className: v.metadata,
+        className: O.metadata,
         children: u
       })]
     })
@@ -93,12 +93,12 @@ class O extends a.Component {
       trialEndsAt: a
     } = this.props;
     if (void 0 !== s.redeemed_at && !n && null !== a) return R.default.Messages.TRIAL_EXPIRES.format({
-      date: (0, h.dateFormat)(o()(a), "LL")
+      date: (0, N.dateFormat)(o()(a), "LL")
     });
     if (e || void 0 === s.expires_at) return null;
     let l = o()(s.expires_at);
     if (t) return R.default.Messages.EXPIRED_DATE.format({
-      date: (0, h.dateFormat)(o()(l), "LL")
+      date: (0, N.dateFormat)(o()(l), "LL")
     });
     let i = l.diff(o()(), "h");
     if (i > 48) {
@@ -118,8 +118,8 @@ class O extends a.Component {
   renderMedia(e) {
     return (0, s.jsx)("div", {
       className: i()({
-        [v.referral]: !e,
-        [v.birthdayReferral]: e
+        [O.referral]: !e,
+        [O.birthdayReferral]: e
       })
     })
   }
@@ -129,22 +129,22 @@ class O extends a.Component {
       currentUser: t,
       recipientHasNitro: n,
       shouldShowBirthdayUX: a
-    } = this.props, l = (0, g.hasUserTrialOfferExpired)(e), r = t.id === e.referrer_id;
+    } = this.props, l = (0, A.hasUserTrialOfferExpired)(e), r = t.id === e.referrer_id;
     return (0, s.jsxs)("div", {
-      className: i()(v.tile, v.container),
+      className: i()(O.tile, O.container),
       children: [(0, s.jsx)("div", {
-        className: v.media,
+        className: O.media,
         children: this.renderMedia(a)
       }), (0, s.jsxs)("div", {
-        className: v.description,
+        className: O.description,
         children: [(0, s.jsx)(c.H, {
-          className: v.title,
+          className: O.title,
           children: this.renderTitle(n, l, r)
         }), (0, s.jsx)("div", {
-          className: v.tagline,
+          className: O.tagline,
           children: this.renderBody(n, l, r)
         }), (0, s.jsx)("div", {
-          className: v.actions,
+          className: O.actions,
           children: this.renderActions(n, l, r)
         })]
       })]
@@ -153,9 +153,9 @@ class O extends a.Component {
   constructor(...e) {
     var t, n, s;
     super(...e), t = this, n = "handleStartTrial", s = (e, t) => {
-      (0, m.default)({
+      (0, T.default)({
         initialPlanId: null,
-        subscriptionTier: A.PremiumSubscriptionSKUs.TIER_2,
+        subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
         analyticsLocations: t,
         trialId: e.trial_id
       })
@@ -178,13 +178,13 @@ function x(e) {
   } = (0, d.useStateFromStoresObject)([S.default], () => ({
     trialOffer: n ? S.default.getRelevantUserTrialOffer(t) : null,
     isResolving: !!n && S.default.isResolving(t)
-  }), [n, t]), i = T.default.getCurrentUser(), r = (0, d.useStateFromStores)([T.default], () => null != a && (0, N.isPremium)(void 0 !== i && a.user_id === i.id ? i : T.default.getUser(a.user_id))), o = (0, d.useStateFromStores)([I.default], () => {
+  }), [n, t]), i = m.default.getCurrentUser(), r = (0, d.useStateFromStores)([m.default], () => null != a && (0, h.isPremium)(void 0 !== i && a.user_id === i.id ? i : m.default.getUser(a.user_id))), o = (0, d.useStateFromStores)([I.default], () => {
     var e;
     return r ? null === (e = I.default.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt : null
   }), {
     analyticsLocations: c
   } = (0, _.default)(E.default.SHARE_NITRO_EMBED), {
-    enabled: m
+    enabled: T
   } = C.default.useExperiment({
     location: "f4ff1d_1"
   }, {
@@ -192,18 +192,18 @@ function x(e) {
   });
   return l ? (0, s.jsx)(f.ResponsiveLoadingEmbedTile, {
     isHorizontal: !u.isMobile
-  }) : n && null != a && void 0 !== i ? (0, s.jsx)(O, {
+  }) : n && null != a && void 0 !== i ? (0, s.jsx)(v, {
     trialOffer: a,
     currentUser: i,
     recipientHasNitro: r,
     trialEndsAt: o,
     analyticsLocations: c,
-    shouldShowBirthdayUX: m,
+    shouldShowBirthdayUX: T,
     ...e
   }) : (0, s.jsx)("div", {
-    className: v.invalidWrapper,
+    className: O.invalidWrapper,
     children: (0, s.jsx)("div", {
-      className: v.invalid
+      className: O.invalid
     })
   })
 }

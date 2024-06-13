@@ -19,17 +19,17 @@ var s = n("735250"),
   f = n("153124"),
   E = n("810090"),
   _ = n("163268"),
-  m = n("719548"),
-  T = n("689938"),
+  T = n("719548"),
+  m = n("689938"),
   I = n("920624");
-let h = e => {
+let N = e => {
     let {
       attachment: t
     } = e, {
       url: n,
       description: a
     } = t;
-    return null == n ? null : (0, s.jsx)(N, {
+    return null == n ? null : (0, s.jsx)(h, {
       url: n,
       description: a
     })
@@ -39,13 +39,13 @@ let h = e => {
     let {
       embed: l
     } = e;
-    if (!m.SUPPORTED_EMBED_TYPES.has(l.type)) return null;
+    if (!T.SUPPORTED_EMBED_TYPES.has(l.type)) return null;
     let i = void 0 !== l.video && l.type !== r.MessageEmbedTypes.GIFV ? l.video.url : null !== (a = null === (t = l.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== a ? a : null === (n = l.image) || void 0 === n ? void 0 : n.url;
-    return null == i ? null : (0, s.jsx)(N, {
+    return null == i ? null : (0, s.jsx)(h, {
       url: i
     })
   },
-  N = e => {
+  h = e => {
     let {
       url: t,
       description: n
@@ -67,7 +67,7 @@ let h = e => {
 function S(e) {
   u.default.pop(), (0, c.showSafetyToast)({
     id: "explicit-media-false-positive-modal",
-    text: T.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS
+    text: m.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS
   }), e()
 }
 
@@ -82,7 +82,7 @@ function C(e) {
     onConfirmPress: d,
     transitionState: c,
     onClose: E
-  } = e, m = (0, f.useUID)(), N = a.useCallback(() => {
+  } = e, T = (0, f.useUID)(), h = a.useCallback(() => {
     (0, _.trackMediaRedactionAction)({
       action: _.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
       channelId: t,
@@ -106,24 +106,24 @@ function C(e) {
     })
   }, [t, n, i]), (0, s.jsxs)(o.ModalRoot, {
     transitionState: c,
-    "aria-labelledby": m,
+    "aria-labelledby": T,
     size: o.ModalSize.SMALL,
     children: [(0, s.jsxs)(o.ModalContent, {
       children: [(0, s.jsx)(o.ModalCloseButton, {
-        onClick: N,
+        onClick: h,
         className: I.closeButton
       }), (0, s.jsx)(o.Heading, {
-        id: m,
+        id: T,
         variant: "heading-lg/semibold",
         color: "header-primary",
         className: I.header,
-        children: T.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER
+        children: m.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER
       }), (0, s.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
         className: I.subheader,
-        children: T.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_DESCRIPTION
-      }), null != r && (0, s.jsx)(h, {
+        children: m.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_DESCRIPTION
+      }), null != r && (0, s.jsx)(N, {
         attachment: r
       }), null != u && (0, s.jsx)(p, {
         embed: u
@@ -136,14 +136,14 @@ function C(e) {
         size: o.Button.Sizes.MEDIUM,
         color: o.Button.Colors.BRAND,
         onClick: S,
-        children: T.default.Messages.CONFIRM
+        children: m.default.Messages.CONFIRM
       }), (0, s.jsx)(o.Button, {
         className: I.button,
         disabled: l,
         color: o.Button.Colors.TRANSPARENT,
         size: o.Button.Sizes.MEDIUM,
-        onClick: N,
-        children: T.default.Messages.CANCEL
+        onClick: h,
+        children: m.default.Messages.CANCEL
       })]
     })]
   })

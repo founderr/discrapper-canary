@@ -13,44 +13,44 @@ var a = n("120356"),
   f = n("693546"),
   E = n("305325"),
   _ = n("246364"),
-  m = n("937111"),
-  T = n("981631"),
+  T = n("937111"),
+  m = n("981631"),
   I = n("176505"),
-  h = n("689938"),
+  N = n("689938"),
   p = n("261701"),
-  N = n("988920");
+  h = n("988920");
 t.default = () => {
   var e, t;
   let a = (0, o.useStateFromStores)([c.default], () => c.default.getGuildId(), []),
     S = (0, o.useStateFromStores)([d.default], () => d.default.getGuild(a), [a]),
-    C = (0, o.useStateFromStores)([m.default], () => null != a ? m.default.getRequest(a) : null, [a]),
-    g = (0, r.useLocation)(),
-    A = (null === (e = (0, i.matchPath)(g.pathname, T.Routes.CHANNEL(null == S ? void 0 : S.id, I.StaticChannelRoute.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
-  if (null == S || !S.hasVerificationGate() || A) return null;
+    C = (0, o.useStateFromStores)([T.default], () => null != a ? T.default.getRequest(a) : null, [a]),
+    A = (0, r.useLocation)(),
+    g = (null === (e = (0, i.matchPath)(A.pathname, m.Routes.CHANNEL(null == S ? void 0 : S.id, I.StaticChannelRoute.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
+  if (null == S || !S.hasVerificationGate() || g) return null;
   let M = null !== (t = null == C ? void 0 : C.applicationStatus) && void 0 !== t ? t : _.GuildJoinRequestApplicationStatuses.STARTED,
     R = null,
-    v = null,
     O = null,
-    x = [p.notice, N.notice];
+    v = null,
+    x = [p.notice, h.notice];
   switch (M) {
     case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
-      R = h.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, v = h.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, O = () => {
+      R = N.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, O = N.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, v = () => {
         (0, u.openModal)(e => (0, s.jsx)(u.ConfirmModal, {
-          header: h.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
-          confirmText: h.default.Messages.CONFIRM,
-          cancelText: h.default.Messages.CANCEL,
+          header: N.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
+          confirmText: N.default.Messages.CONFIRM,
+          cancelText: N.default.Messages.CANCEL,
           onConfirm: () => f.default.removeGuildJoinRequest(S.id),
           confirmButtonColor: u.Button.Colors.BRAND,
           ...e,
           children: (0, s.jsx)(u.Text, {
             variant: "text-md/normal",
-            children: h.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION_SUBTITLE
+            children: N.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION_SUBTITLE
           })
         }))
       };
       break;
     case _.GuildJoinRequestApplicationStatuses.REJECTED:
-      R = h.default.Messages.MEMBER_VERIFICATION_REJECTED_TITLE, v = h.default.Messages.MEMBER_VERIFICATION_LEARN_MORE, O = () => {
+      R = N.default.Messages.MEMBER_VERIFICATION_REJECTED_TITLE, O = N.default.Messages.MEMBER_VERIFICATION_LEARN_MORE, v = () => {
         (0, u.openModalLazy)(async () => {
           let {
             default: e
@@ -63,7 +63,7 @@ t.default = () => {
       }, x.push(p.error);
       break;
     default:
-      R = h.default.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, v = h.default.Messages.MEMBER_VERIFICATION_NOTICE_CTA, O = () => {
+      R = N.default.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, O = N.default.Messages.MEMBER_VERIFICATION_NOTICE_CTA, v = () => {
         (0, E.openMemberVerificationModal)(S.id)
       }
   }
@@ -78,8 +78,8 @@ t.default = () => {
       look: u.Button.Looks.OUTLINED,
       color: u.Button.Colors.WHITE,
       size: u.Button.Sizes.NONE,
-      onClick: O,
-      children: v
+      onClick: v,
+      children: O
     })]
   })
 }

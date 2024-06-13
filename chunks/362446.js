@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n("724458");
-var i, a, l, s, o = n("442837"),
-  r = n("570140"),
-  d = n("981631");
-let u = {};
+var l, a, s, i, r = n("442837"),
+  o = n("570140"),
+  u = n("981631");
+let d = {};
 
 function c(e) {
-  let t = u[e = null != e ? e : "null"];
-  return null == t && (t = u[e] = {
-    state: d.RTCConnectionStates.DISCONNECTED,
-    quality: d.RTCConnectionQuality.UNKNOWN,
+  let t = d[e = null != e ? e : "null"];
+  return null == t && (t = d[e] = {
+    state: u.RTCConnectionStates.DISCONNECTED,
+    quality: u.RTCConnectionQuality.UNKNOWN,
     pings: [],
     hostname: null,
     lossRate: null
@@ -17,17 +17,17 @@ function c(e) {
 }
 
 function f(e, t, n) {
-  let i = u[e = null != e ? e : "null"];
-  return null != i ? t(i) : n
+  let l = d[e = null != e ? e : "null"];
+  return null != l ? t(l) : n
 }
-class h extends(i = o.default.Store) {
+class h extends(l = r.default.Store) {
   getConnectionState(e) {
     return f(e, e => {
       let {
         state: t
       } = e;
       return t
-    }, d.RTCConnectionStates.DISCONNECTED)
+    }, u.RTCConnectionStates.DISCONNECTED)
   }
   getQuality(e) {
     return f(e, e => {
@@ -35,7 +35,7 @@ class h extends(i = o.default.Store) {
         quality: t
       } = e;
       return t
-    }, d.RTCConnectionQuality.UNKNOWN)
+    }, u.RTCConnectionQuality.UNKNOWN)
   }
   getHostname(e) {
     return f(e, e => {
@@ -72,14 +72,14 @@ class h extends(i = o.default.Store) {
     }, null)
   }
 }
-s = "OverlayRTCConnectionStore", (l = "displayName") in(a = h) ? Object.defineProperty(a, l, {
-  value: s,
+i = "OverlayRTCConnectionStore", (s = "displayName") in(a = h) ? Object.defineProperty(a, s, {
+  value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = s, t.default = new h(r.default, {
+}) : a[s] = i, t.default = new h(o.default, {
   OVERLAY_INITIALIZE: function(e) {
-    u = e.rtcConnectionStates
+    d = e.rtcConnectionStates
   },
   RTC_CONNECTION_STATE: function(e) {
     if (null != e.streamKey) return !1;

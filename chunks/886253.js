@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var r = n("442837"),
-  l = n("481060"),
+var l = n("442837"),
+  r = n("481060"),
   a = n("812206"),
   s = n("601911"),
   o = n("689938"),
@@ -22,42 +22,42 @@ function c(e) {
     onHeaderTitleClick: f,
     children: S,
     footer: p
-  } = e, m = (0, r.useStateFromStores)([a.default], () => a.default.getApplication(t), [t]);
+  } = e, m = (0, l.useStateFromStores)([a.default], () => a.default.getApplication(t), [t]);
   if (null == m) return null;
   let h = (0, s.findAppIconSrc)(m, 25),
     {
-      termsOfServiceUrl: v,
-      privacyPolicyUrl: T
+      termsOfServiceUrl: T,
+      privacyPolicyUrl: v
     } = m;
-  return (0, i.jsxs)(l.ModalRoot, {
+  return (0, i.jsxs)(r.ModalRoot, {
     transitionState: n,
-    size: l.ModalSize.DYNAMIC,
+    size: r.ModalSize.DYNAMIC,
     className: d.modal,
-    children: [(0, i.jsxs)(l.ModalHeader, {
+    children: [(0, i.jsxs)(r.ModalHeader, {
       className: u.modalHeader,
-      children: [(0, i.jsxs)(l.Clickable, {
+      children: [(0, i.jsxs)(r.Clickable, {
         className: u.modalTitle,
         onClick: f,
         children: [null != h && (0, i.jsx)("img", {
           src: h.href,
           alt: "",
           className: d.appIcon
-        }), (0, i.jsx)(l.Heading, {
+        }), (0, i.jsx)(r.Heading, {
           variant: "heading-md/semibold",
           children: m.name
         })]
-      }), (0, i.jsx)(l.ModalCloseButton, {
+      }), (0, i.jsx)(r.ModalCloseButton, {
         onClick: c,
         className: u.modalCloseBtn
       })]
-    }), S, (0, i.jsxs)(l.ModalFooter, {
+    }), S, (0, i.jsxs)(r.ModalFooter, {
       className: d.footer,
-      children: [null != v && null != T ? (0, i.jsx)(l.Text, {
+      children: [null != T && null != v ? (0, i.jsx)(r.Text, {
         color: "header-primary",
         variant: "text-sm/normal",
         children: o.default.Messages.STOREFRONT_DETAILS_TOS_AND_PRIVACY.format({
-          tosUrl: v,
-          ppUrl: T
+          tosUrl: T,
+          ppUrl: v
         })
       }) : null, p]
     })]

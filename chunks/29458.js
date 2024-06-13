@@ -19,13 +19,13 @@ t.default = e => {
   if (null == f) return null;
   let _ = (0, r.getDrop)(f);
   if (null == _) return null;
-  let m = "https://survey.alchemer.com/s3/7043057/Drops-NPS?user_id=".concat(null !== (t = null == E ? void 0 : E.id) && void 0 !== t ? t : "");
+  let T = "https://survey.alchemer.com/s3/7043057/Drops-NPS?user_id=".concat(null !== (t = null == E ? void 0 : E.id) && void 0 !== t ? t : "");
   return (0, s.jsxs)(l.Notice, {
     className: d.colorGuildBlue,
     children: [u.default.Messages.DROPS_BANNER_ENDED_INCOMPLETE.format({
       gameTitle: _.title
     }), (0, s.jsx)(l.NoticeButtonAnchor, {
-      href: m,
+      href: T,
       target: "_blank",
       onClick: () => {
         c(o.ContentDismissActionType.PRIMARY)

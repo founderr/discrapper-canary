@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return S
   },
   getRoleSubscriptionPurchaseSystemMessageEventProperties: function() {
-    return h
+    return E
   },
   getRoleSubscriptionPurchaseSystemMessageFormattedContent: function() {
     return a
@@ -151,7 +151,7 @@ function p(e, t, n, i) {
   })
 }
 
-function h(e, t) {
+function E(e, t) {
   var n;
   return {
     guild_id: e.guild_id,

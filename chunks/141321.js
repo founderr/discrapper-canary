@@ -16,35 +16,35 @@ var s = n("735250"),
   f = n("502568"),
   E = n("280763"),
   _ = n("178088"),
-  m = n("222940"),
-  T = n("490897"),
+  T = n("222940"),
+  m = n("490897"),
   I = n("689938"),
-  h = n("75028");
+  N = n("75028");
 
 function p(e) {
   let {
     onOpen: t,
     onClose: n,
     className: p
-  } = e, N = (0, o.useInDesktopNotificationCenterExperiment)(), S = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()), C = a.useRef(null), g = (0, l.useStateFromStores)([u.default], () => !!N && (null == S ? void 0 : S.id) != null && u.default.getMentionCount(S.id, T.ReadStateTypes.NOTIFICATION_CENTER) > 0), {
-    enabled: A
+  } = e, h = (0, o.useInDesktopNotificationCenterExperiment)(), S = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()), C = a.useRef(null), A = (0, l.useStateFromStores)([u.default], () => !!h && (null == S ? void 0 : S.id) != null && u.default.getMentionCount(S.id, m.ReadStateTypes.NOTIFICATION_CENTER) > 0), {
+    enabled: g
   } = r.default.useExperiment({
     location: "RecentsButton"
   }, {
     autoTrackExposure: !1
-  }), M = (0, l.useStateFromStores)([i.default], () => A && i.default.getUnseenInviteCount() > 0);
+  }), M = (0, l.useStateFromStores)([i.default], () => g && i.default.getUnseenInviteCount() > 0);
   return (0, s.jsx)(_.RecentsPopout, {
     onOpen: t,
     onClose: n,
     badgeState: {
-      badgeForYou: g
+      badgeForYou: A
     },
     popoutPosition: "bottom",
     popoutAlign: "right",
     children: (e, t, n) => (0, s.jsxs)("div", {
       ref: C,
-      className: h.recentsIcon,
-      children: [A && (0, s.jsx)(m.default, {
+      className: N.recentsIcon,
+      children: [g && (0, s.jsx)(T.default, {
         inboxIconRef: C,
         recentsPopoutShown: t
       }), (0, s.jsx)(f.Icon, {
@@ -55,9 +55,9 @@ function p(e) {
         "aria-label": I.default.Messages.INBOX,
         tooltip: t ? null : I.default.Messages.INBOX,
         selected: t,
-        showBadge: g || M,
+        showBadge: A || M,
         children: (0, s.jsx)(E.default, {
-          className: h.todoBadge
+          className: N.todoBadge
         })
       })]
     })

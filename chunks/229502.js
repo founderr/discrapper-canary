@@ -1,10 +1,10 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(e), n.d(e, {
   SecureFramesUIExperiment: function() {
-    return u
+    return i
   }
 });
-let u = (0, a("987170").default)({
+let i = (0, n("987170").default)({
   kind: "user",
   id: "2024-05_secure_frames_ui_rollout",
   label: "Secure Frames Rollout",

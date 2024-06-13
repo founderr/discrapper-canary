@@ -1,115 +1,115 @@
 "use strict";
-n.r(t);
-var r = n("570140"),
-  o = n("434404"),
-  i = n("821864"),
+n.r(e);
+var i = n("570140"),
+  a = n("434404"),
+  r = n("821864"),
   u = n("308063");
-t.default = {
+e.default = {
   init() {
-    r.default.dispatch({
+    i.default.dispatch({
       type: "INTEGRATION_SETTINGS_INIT"
     })
   },
-  setSection(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-    r.default.dispatch({
+  setSection(t) {
+    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+    i.default.dispatch({
       type: "INTEGRATION_SETTINGS_SET_SECTION",
-      section: e,
-      sectionId: t
+      section: t,
+      sectionId: e
     })
   },
-  startEditingCommandPermissions(e) {
-    r.default.dispatch({
+  startEditingCommandPermissions(t) {
+    i.default.dispatch({
       type: "INTEGRATION_SETTINGS_START_EDITING_COMMAND",
-      commandId: e
+      commandId: t
     })
   },
-  stopEditingCommandPermissions(e) {
-    r.default.dispatch({
+  stopEditingCommandPermissions(t) {
+    i.default.dispatch({
       type: "INTEGRATION_SETTINGS_STOP_EDITING_COMMAND",
-      commandId: e
+      commandId: t
     })
   },
-  startEditingIntegration(e) {
-    r.default.dispatch({
+  startEditingIntegration(t) {
+    i.default.dispatch({
       type: "INTEGRATION_SETTINGS_START_EDITING_INTEGRATION",
-      integrationId: e
+      integrationId: t
     })
   },
   stopEditingIntegration() {
-    r.default.dispatch({
+    i.default.dispatch({
       type: "INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION"
     })
   },
-  updateIntegration(e) {
-    r.default.dispatch({
+  updateIntegration(t) {
+    i.default.dispatch({
       type: "INTEGRATION_SETTINGS_UPDATE_INTEGRATION",
-      settings: e
+      settings: t
     })
   },
-  startEditingWebhook(e) {
-    r.default.dispatch({
+  startEditingWebhook(t) {
+    i.default.dispatch({
       type: "INTEGRATION_SETTINGS_START_EDITING_WEBHOOK",
-      webhookId: e
+      webhookId: t
     })
   },
   stopEditingWebhook() {
-    r.default.dispatch({
+    i.default.dispatch({
       type: "INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK"
     })
   },
-  updateWebhook(e) {
-    r.default.dispatch({
+  updateWebhook(t) {
+    i.default.dispatch({
       type: "INTEGRATION_SETTINGS_UPDATE_WEBHOOK",
-      settings: e
+      settings: t
     })
   },
-  async saveApplicationPermissions(e, t, n) {
+  async saveApplicationPermissions(t, e, n) {
     try {
-      r.default.dispatch({
+      i.default.dispatch({
         type: "INTEGRATION_SETTINGS_SUBMITTING"
-      }), await i.updateApplicationCommandPermissions({
-        applicationId: e,
-        commandId: e,
+      }), await r.updateApplicationCommandPermissions({
+        applicationId: t,
+        commandId: t,
         defaultEveryoneValue: !0,
         defaultEverywhereValue: !0,
-        guildId: t,
+        guildId: e,
         permissions: n
-      }), r.default.dispatch({
+      }), i.default.dispatch({
         type: "INTEGRATION_SETTINGS_SAVE_SUCCESS"
       })
-    } catch (e) {
-      r.default.dispatch({
+    } catch (t) {
+      i.default.dispatch({
         type: "INTEGRATION_SETTINGS_SAVE_FAILURE",
-        errors: e.body
+        errors: t.body
       })
     }
   },
-  async saveIntegration(e, t) {
+  async saveIntegration(t, e) {
     try {
-      r.default.dispatch({
+      i.default.dispatch({
         type: "INTEGRATION_SETTINGS_SUBMITTING"
-      }), await o.default.updateIntegration(e, t.id, t.expire_behavior, t.expire_grace_period, t.enable_emoticons), r.default.dispatch({
+      }), await a.default.updateIntegration(t, e.id, e.expire_behavior, e.expire_grace_period, e.enable_emoticons), i.default.dispatch({
         type: "INTEGRATION_SETTINGS_SAVE_SUCCESS"
       })
-    } catch (e) {
-      r.default.dispatch({
+    } catch (t) {
+      i.default.dispatch({
         type: "INTEGRATION_SETTINGS_SAVE_FAILURE",
-        errors: e.body
+        errors: t.body
       })
     }
   },
-  async saveWebhook(e, t) {
+  async saveWebhook(t, e) {
     try {
-      r.default.dispatch({
+      i.default.dispatch({
         type: "INTEGRATION_SETTINGS_SUBMITTING"
-      }), await u.default.update(e, t.id, t), r.default.dispatch({
+      }), await u.default.update(t, e.id, e), i.default.dispatch({
         type: "INTEGRATION_SETTINGS_SAVE_SUCCESS"
       })
-    } catch (e) {
-      r.default.dispatch({
+    } catch (t) {
+      i.default.dispatch({
         type: "INTEGRATION_SETTINGS_SAVE_FAILURE",
-        errors: e.body
+        errors: t.body
       })
     }
   }

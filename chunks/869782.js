@@ -16,21 +16,21 @@ var s = n("735250"),
   f = n("496675"),
   E = n("594174"),
   _ = n("626135"),
-  m = n("709054"),
-  T = n("838440"),
+  T = n("709054"),
+  m = n("838440"),
   I = n("981631"),
-  h = n("640656");
+  N = n("640656");
 
 function p(e) {
   let {
     assets: t,
     currentUser: n,
     message: s
-  } = e, a = (m.default.extractTimestamp(n.id) + m.default.extractTimestamp(s.id)) % t.length;
+  } = e, a = (T.default.extractTimestamp(n.id) + T.default.extractTimestamp(s.id)) % t.length;
   return t[a]
 }
 
-function N(e) {
+function h(e) {
   let {
     currentUser: t,
     channel: n,
@@ -39,7 +39,7 @@ function N(e) {
     stickers: c,
     event: f,
     eventProperties: E
-  } = e, [m, I] = a.useState(!1), N = a.useMemo(() => p({
+  } = e, [T, I] = a.useState(!1), h = a.useMemo(() => p({
     assets: c,
     currentUser: t,
     message: l
@@ -50,7 +50,7 @@ function N(e) {
   }), [d, t, l]), C = a.useCallback(async () => {
     let {
       valid: e
-    } = await (0, T.applyChatRestrictions)({
+    } = await (0, m.applyChatRestrictions)({
       type: o.ChatInputTypes.FORM,
       content: "",
       channel: n
@@ -70,7 +70,7 @@ function N(e) {
     }({
       channel: n,
       message: l,
-      sticker: N
+      sticker: h
     }), ! function(e) {
       let {
         sticker: t,
@@ -82,22 +82,22 @@ function N(e) {
         sticker_id: t.id
       })
     }({
-      sticker: N,
+      sticker: h,
       event: f,
       eventProperties: E
     }))
-  }, [n, l, N, f, E]);
+  }, [n, l, h, f, E]);
   return (0, s.jsxs)(i.Button, {
-    className: h.CTAMessageButtonOuter,
-    innerClassName: h.CTAMessageButton,
+    className: N.CTAMessageButtonOuter,
+    innerClassName: N.CTAMessageButton,
     color: i.ButtonColors.PRIMARY,
     onMouseEnter: () => I(!0),
     onMouseLeave: () => I(!1),
     onClick: C,
     children: [(0, s.jsx)(u.default, {
-      className: h.CTAMessageSticker,
-      isInteracting: m,
-      sticker: N,
+      className: N.CTAMessageSticker,
+      isInteracting: T,
+      sticker: h,
       size: 28
     }), S]
   })
@@ -133,8 +133,8 @@ function S(e) {
     currentUser: u
   });
   return null != u && _ ? (0, s.jsx)("div", {
-    className: h.CTAMessage,
-    children: (0, s.jsx)(N, {
+    className: N.CTAMessage,
+    children: (0, s.jsx)(h, {
       currentUser: u,
       channel: t,
       message: n,

@@ -16,16 +16,16 @@ var s = n("735250"),
   f = n("924557"),
   E = n("435064"),
   _ = n("779618"),
-  m = n("175470"),
-  T = n("203259"),
+  T = n("175470"),
+  m = n("203259"),
   I = n("356659"),
-  h = n("689938");
+  N = n("689938");
 
 function p(e) {
   let {
     canShowReminder: t = !1,
     className: p
-  } = e, N = (0, _.default)(u.default), {
+  } = e, h = (0, _.default)(u.default), {
     showClipsHeaderEntrypoint: S
   } = f.ClipsExperiment.useExperiment({
     location: "ClipsButton"
@@ -33,8 +33,8 @@ function p(e) {
     autoTrackExposure: !1
   }), {
     hasClips: C,
-    hasNewClips: g,
-    lastClipsSession: A,
+    hasNewClips: A,
+    lastClipsSession: g,
     remindersEnabled: M,
     hasAnyClipAnimations: R
   } = (0, l.useStateFromStoresObject)([E.default], () => ({
@@ -43,9 +43,9 @@ function p(e) {
     lastClipsSession: E.default.getLastClipsSession(),
     remindersEnabled: E.default.getSettings().remindersEnabled,
     hasAnyClipAnimations: E.default.hasAnyClipAnimations()
-  })), v = null != A && A.newClipIds.length > 0, O = (0, m.useClipsButtonStore)(e => e.clipsButtonRef), x = (0, m.useClipsButtonStore)(e => e.setClipsButtonRef), L = (0, l.useStateFromStores)([o.default], () => o.default.hasLayers()), {
-    preventIdle: D,
-    allowIdle: P
+  })), O = null != g && g.newClipIds.length > 0, v = (0, T.useClipsButtonStore)(e => e.clipsButtonRef), x = (0, T.useClipsButtonStore)(e => e.setClipsButtonRef), L = (0, l.useStateFromStores)([o.default], () => o.default.hasLayers()), {
+    preventIdle: P,
+    allowIdle: D
   } = (0, r.usePreventIdle)("animation");
 
   function y() {
@@ -60,18 +60,18 @@ function p(e) {
       modalKey: I.CLIPS_GALLERY_MODAL_KEY
     })
   }
-  return (a.useEffect(() => (R ? D() : P(), () => P()), [R, D, P]), S && N && C) ? (0, s.jsxs)(s.Fragment, {
-    children: [null != O && t && M && v && !(0, i.hasAnyModalOpen)() && !L && (0, s.jsx)(T.default, {
-      clipIconRef: O,
-      lastClipsSession: A,
+  return (a.useEffect(() => (R ? P() : D(), () => D()), [R, P, D]), S && h && C) ? (0, s.jsxs)(s.Fragment, {
+    children: [null != v && t && M && O && !(0, i.hasAnyModalOpen)() && !L && (0, s.jsx)(m.default, {
+      clipIconRef: v,
+      lastClipsSession: g,
       onOpenClipsGallery: y
     }), (0, s.jsx)("div", {
       ref: x,
       children: (0, s.jsx)(c.Icon, {
         className: p,
         icon: d.default,
-        showBadge: g,
-        tooltip: h.default.Messages.CLIPS_GALLERY_TOOLTIP,
+        showBadge: A,
+        tooltip: N.default.Messages.CLIPS_GALLERY_TOOLTIP,
         onClick: y
       })
     })]

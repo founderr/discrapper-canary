@@ -16,17 +16,17 @@ var i = n("735250"),
   f = n("430742"),
   h = n("904245"),
   p = n("13245"),
-  g = n("144144"),
-  m = n("738619"),
+  m = n("144144"),
+  g = n("738619"),
   E = n("744061"),
   S = n("36311"),
   v = n("655687"),
   y = n("823748"),
   O = n("25007"),
-  C = n("199649"),
-  T = n("1397"),
-  N = n("541716"),
-  I = n("752305"),
+  T = n("199649"),
+  C = n("1397"),
+  I = n("541716"),
+  N = n("752305"),
   _ = n("974251"),
   A = n("893718"),
   x = n("957730"),
@@ -36,8 +36,8 @@ var i = n("735250"),
   D = n("592125"),
   b = n("703558"),
   j = n("731290"),
-  P = n("430824"),
-  k = n("375954"),
+  k = n("430824"),
+  P = n("375954"),
   w = n("944486"),
   V = n("914010"),
   U = n("594174"),
@@ -107,7 +107,7 @@ class ei extends a.Component {
         ...n,
         renderAttachButton: this.renderAttachButton,
         channel: e,
-        type: N.ChatInputTypes.OVERLAY,
+        type: I.ChatInputTypes.OVERLAY,
         onFocus: () => this.setState({
           focused: !0
         }),
@@ -123,10 +123,10 @@ class ei extends a.Component {
         focused: a
       })
     });
-    return e.isPrivate() ? (0, i.jsx)(C.default, {
+    return e.isPrivate() ? (0, i.jsx)(T.default, {
       channel: e,
       children: d
-    }, e.id) : (0, i.jsx)(T.default, {
+    }, e.id) : (0, i.jsx)(C.default, {
       channel: e,
       children: d
     }, e.id)
@@ -139,13 +139,13 @@ class ei extends a.Component {
           textValue: n
         } = t.state,
         i = b.default.getDraft(e.channel.id, b.DraftType.ChannelMessage);
-      n !== i && "" === i && t.setState((0, I.createState)(i))
+      n !== i && "" === i && t.setState((0, N.createState)(i))
     }), et(this, "handleTextareaKeyDown", e => {
       if (e.which === Q.KeyboardKeys.ARROW_UP && !e.shiftKey && !e.altKey && !e.ctrlKey && !e.metaKey && 0 === this.state.textValue.length) {
         e.preventDefault();
         let {
           channel: t
-        } = this.props, n = k.default.getLastEditableMessage(t.id);
+        } = this.props, n = P.default.getLastEditableMessage(t.id);
         null != n && h.default.startEditMessage(t.id, n.id, n.content)
       }
     }), et(this, "handleTextareaChange", (e, t, n) => {
@@ -154,7 +154,7 @@ class ei extends a.Component {
           id: i
         }
       } = this.props;
-      f.default.changeDraft(i, this.state.textValue, b.DraftType.ChannelMessage), "" !== t ? g.default.startTyping(i) : g.default.stopTyping(i), this.setState({
+      f.default.changeDraft(i, this.state.textValue, b.DraftType.ChannelMessage), "" !== t ? m.default.startTyping(i) : m.default.stopTyping(i), this.setState({
         textValue: t,
         richValue: n
       })
@@ -173,7 +173,7 @@ class ei extends a.Component {
         openWarningPopout: e => this.setState({
           contentWarningProps: e
         }),
-        type: N.ChatInputTypes.OVERLAY,
+        type: I.ChatInputTypes.OVERLAY,
         content: t,
         channel: n
       }).then(e => {
@@ -189,7 +189,7 @@ class ei extends a.Component {
           shouldRefocus: !1
         };
         let o = h.default.getSendMessageOptionsForReply(i);
-        return (h.default.sendMessage(n.id, x.default.parse(n, t), !0, o), this.setState((0, I.createEmptyState)()), (0, L.deletePendingReply)(n.id), a) ? (p.default.deactivateAllRegions(), {
+        return (h.default.sendMessage(n.id, x.default.parse(n, t), !0, o), this.setState((0, N.createEmptyState)()), (0, L.deletePendingReply)(n.id), a) ? (p.default.deactivateAllRegions(), {
           shouldClear: !1,
           shouldRefocus: !1
         }) : {
@@ -210,12 +210,12 @@ class ei extends a.Component {
       channel: this.props.channel,
       draftType: b.DraftType.ChannelMessage,
       editorTextContent: this.state.textValue,
-      setValue: e => this.handleTextareaChange(null, e, (0, I.toRichValue)(e)),
+      setValue: e => this.handleTextareaChange(null, e, (0, N.toRichValue)(e)),
       canOnlyUseTextCommands: e
     })), b.default.addChangeListener(this.draftDidChange);
     let n = b.default.getDraft(e.channel.id, b.DraftType.ChannelMessage);
     this.state = {
-      ...(0, I.createState)(n),
+      ...(0, N.createState)(n),
       focused: !1,
       contentWarningProps: null
     }, z.ComponentDispatch.subscribe(Q.ComponentActions.TEXTAREA_FOCUS, this.focusInput), z.ComponentDispatch.subscribe(Q.ComponentActions.TEXTAREA_BLUR, this.blurInput)
@@ -262,22 +262,22 @@ class ea extends a.PureComponent {
       pendingReply: p
     } = this.props;
     if (null == t) return null;
-    let g = r || f,
+    let m = r || f,
       E = !l && null != t && t.isNSFW(),
-      v = !g || d;
+      v = !m || d;
     return e = E && null != o ? (0, i.jsx)(S.default, {
       guild: o
     }) : (0, i.jsx)(R.default, {
       channel: t,
       className: ee.messages,
       forceCompact: c,
-      showNewMessagesBar: !g,
+      showNewMessagesBar: !m,
       scrollerClassName: c ? ee.scroller : void 0,
       showingQuarantineBanner: !1
     }, t.id), (0, i.jsx)(H.MessagesInteractionContext.Provider, {
       value: {
         disableInteractions: c && r && !d,
-        disableAnimations: c && g && !d
+        disableAnimations: c && m && !d
       },
       children: (0, i.jsxs)(a.Fragment, {
         children: [!r && !f && (0, i.jsx)(O.default, {
@@ -304,7 +304,7 @@ class ea extends a.PureComponent {
                 pendingReply: p
               }), (0, i.jsx)("div", {
                 className: ee.typingWrapper,
-                children: (0, i.jsx)(m.default, {
+                children: (0, i.jsx)(g.default, {
                   channel: t,
                   className: ee.typing
                 })
@@ -441,7 +441,7 @@ function el(e) {
   let {
     contained: t = !1,
     ...n
-  } = e, a = (0, d.useStateFromStores)([V.default], () => V.default.getGuildId()), l = (0, d.useStateFromStores)([w.default], () => w.default.getChannelId(a)), s = (0, d.useStateFromStores)([D.default], () => D.default.getChannel(l)), o = (0, d.useStateFromStores)([B.default], () => B.default.getOverlayChatKeybind()), r = null != o ? (0, K.toString)(o.shortcut, !0) : "]", [u, c, f] = (0, d.useStateFromStoresArray)([F.default], () => [F.default.getTextWidgetOpacity(), F.default.getActiveRegions(), !t && F.default.isPreviewingInGame()]), h = (0, d.useStateFromStores)([P.default], () => P.default.getGuild(a)), p = (0, d.useStateFromStores)([j.default], () => null != a && j.default.didAgree(a)), g = null != s && s.isPrivate() ? s.getRecipientId() : null, m = (0, d.useStateFromStores)([M.default], () => null != l ? M.default.getPendingReply(l) : void 0), E = (0, d.useStateFromStores)([U.default], () => null != g ? U.default.getUser(g) : null), {
+  } = e, a = (0, d.useStateFromStores)([V.default], () => V.default.getGuildId()), l = (0, d.useStateFromStores)([w.default], () => w.default.getChannelId(a)), s = (0, d.useStateFromStores)([D.default], () => D.default.getChannel(l)), o = (0, d.useStateFromStores)([B.default], () => B.default.getOverlayChatKeybind()), r = null != o ? (0, K.toString)(o.shortcut, !0) : "]", [u, c, f] = (0, d.useStateFromStoresArray)([F.default], () => [F.default.getTextWidgetOpacity(), F.default.getActiveRegions(), !t && F.default.isPreviewingInGame()]), h = (0, d.useStateFromStores)([k.default], () => k.default.getGuild(a)), p = (0, d.useStateFromStores)([j.default], () => null != a && j.default.didAgree(a)), m = null != s && s.isPrivate() ? s.getRecipientId() : null, g = (0, d.useStateFromStores)([M.default], () => null != l ? M.default.getPendingReply(l) : void 0), E = (0, d.useStateFromStores)([U.default], () => null != m ? U.default.getUser(m) : null), {
     placeholder: S
   } = (0, v.default)(s);
   return null != s && null != h && Q.ChannelTypesSets.GUILD_THREADS_ONLY.has(s.type) ? (0, i.jsx)(y.default, {}) : (0, i.jsx)(ea, {
@@ -453,7 +453,7 @@ function el(e) {
     chatKeybind: r,
     activated: c.has(Q.OverlayActiveRegions.TEXT_WIDGET),
     isPreviewingInGame: f,
-    pendingReply: m,
+    pendingReply: g,
     contained: t,
     placeholder: S,
     widget: Q.OverlayWidgets.TEXT,

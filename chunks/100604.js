@@ -29,23 +29,23 @@ class _ {
     var e, t, n;
     let E = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.default,
       _ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.default,
-      m = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.default,
-      T = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.default,
+      T = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.default,
+      m = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.default,
       I = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : i.default,
-      h = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : a.default,
+      N = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : a.default,
       {
         snapshotIndex: p,
-        parentMessage: N,
+        parentMessage: h,
         messageSnapshot: S
       } = this,
       C = (0, c.calendarFormatCompact)(S.message.timestamp),
-      g = E.getChannel(null === (e = N.messageReference) || void 0 === e ? void 0 : e.channel_id),
-      A = E.getChannel(this.parentMessage.channel_id);
-    if (null != g && null != A && g.guild_id === A.guild_id) {
-      if (!T.can(g.accessPermissions, g)) return {
+      A = E.getChannel(null === (e = h.messageReference) || void 0 === e ? void 0 : e.channel_id),
+      g = E.getChannel(this.parentMessage.channel_id);
+    if (null != A && null != g && A.guild_id === g.guild_id) {
+      if (!m.can(A.accessPermissions, A)) return {
         snapshotIndex: p
       };
-      let e = (0, s.computeChannelName)(g, _, m, !0);
+      let e = (0, s.computeChannelName)(A, _, T, !0);
       return {
         snapshotIndex: p,
         footerInfo: {
@@ -62,7 +62,7 @@ class _ {
     if (null == M) return {
       snapshotIndex: p
     };
-    let R = null !== (n = I.getGuild(M)) && void 0 !== n ? n : h.getGuild(M);
+    let R = null !== (n = I.getGuild(M)) && void 0 !== n ? n : N.getGuild(M);
     return null == R ? {
       snapshotIndex: p
     } : {

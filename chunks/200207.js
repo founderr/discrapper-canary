@@ -6,10 +6,10 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var l = n("557533"),
-  a = n.n(l),
-  r = n("789978"),
-  s = n("790472"),
+var r = n("557533"),
+  l = n.n(r),
+  s = n("789978"),
+  a = n("790472"),
   o = n("777207"),
   u = n("145626"),
   d = n("863885");
@@ -18,25 +18,25 @@ function c(e) {
   let {
     title: t,
     description: n,
-    headerImage: l,
+    headerImage: r,
     onDetails: c,
     onPurchase: p,
-    PurchaseButton: f,
-    availabilityLabel: S
+    PurchaseButton: m,
+    availabilityLabel: f
   } = e;
-  return (0, i.jsx)(r.FocusRing, {
+  return (0, i.jsx)(s.FocusRing, {
     children: (0, i.jsxs)("div", {
-      className: a()(u.wrapper, d.hoverCard),
+      className: l()(u.wrapper, d.hoverCard),
       tabIndex: 0,
       onClick: () => {
         null != c ? c() : null != p && p()
       },
       children: [(0, i.jsx)("div", {
         className: u.cardHeaderImg,
-        style: null != l ? {
-          backgroundImage: null != l ? "url(".concat(l.toString(), ")") : void 0
+        style: null != r ? {
+          backgroundImage: null != r ? "url(".concat(r.toString(), ")") : void 0
         } : void 0,
-        children: null == l && (0, i.jsx)(s.TicketIcon, {
+        children: null == r && (0, i.jsx)(a.TicketIcon, {
           color: "white",
           height: 80,
           width: 80
@@ -53,13 +53,13 @@ function c(e) {
           variant: "text-sm/normal",
           children: n
         })]
-      }), null != f && (0, i.jsxs)("div", {
+      }), null != m && (0, i.jsxs)("div", {
         className: u.footer,
         children: [(0, i.jsx)(o.Text, {
           color: "interactive-normal",
           variant: "text-sm/normal",
-          children: S
-        }), (0, i.jsx)(f, {
+          children: f
+        }), (0, i.jsx)(m, {
           onClick: e => {
             e.stopPropagation(), null == p || p()
           }

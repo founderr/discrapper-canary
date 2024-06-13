@@ -12,8 +12,8 @@ var i = n("735250"),
   f = n("583883"),
   h = n("434529"),
   p = n("145597"),
-  g = n("382790"),
-  m = n("990673"),
+  m = n("382790"),
+  g = n("990673"),
   E = n("906037"),
   S = n("430036"),
   v = n("839434"),
@@ -27,7 +27,7 @@ function O(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let C = {
+let T = {
   [y.OverlayWidgets.TEXT](e) {
     let {
       dragging: t,
@@ -47,7 +47,7 @@ let C = {
       locked: t,
       dragStart: n
     } = e;
-    return (0, i.jsx)(g.default, {
+    return (0, i.jsx)(m.default, {
       dragStart: n,
       locked: t
     })
@@ -75,7 +75,7 @@ let C = {
       locked: n,
       dragStart: a
     } = e;
-    return (0, i.jsx)(m.default, {
+    return (0, i.jsx)(g.default, {
       dragStart: a,
       dragging: t,
       locked: n,
@@ -83,7 +83,7 @@ let C = {
     })
   }
 };
-class T extends a.PureComponent {
+class C extends a.PureComponent {
   componentDidUpdate(e) {
     this.props.locked && !e.locked && null != this.state.lastLayoutUpdate && (o.default.track(y.AnalyticEvents.OVERLAY_LAYOUT_UPDATED, this.state.lastLayoutUpdate), this.setState({
       lastLayoutUpdate: null
@@ -98,7 +98,7 @@ class T extends a.PureComponent {
       state: {
         dragging: l
       }
-    } = this, s = C[e.type];
+    } = this, s = T[e.type];
     if (null == s) throw Error("OverlayLayout: Widget does not exist in WidgetMap");
     return o => s({
       id: e.id,
@@ -127,8 +127,8 @@ class T extends a.PureComponent {
       zIndex: d,
       size: u,
       anchor: c
-    } = e, p = (0, h.getSizeFromLayoutSize)(u, n), g = (0, h.getAnchorCoordsFromLayoutSize)(c, n), {
-      minSize: m,
+    } = e, p = (0, h.getSizeFromLayoutSize)(u, n), m = (0, h.getAnchorCoordsFromLayoutSize)(c, n), {
+      minSize: g,
       resizeX: S,
       resizeY: v,
       dragAnywhere: y
@@ -136,7 +136,7 @@ class T extends a.PureComponent {
       locked: a,
       isPreviewingInGame: l,
       pinned: r
-    }), C = {
+    }), T = {
       minX: 0,
       minY: 0,
       maxX: n.width,
@@ -145,9 +145,9 @@ class T extends a.PureComponent {
     return (0, i.jsx)(f.default, {
       id: o,
       size: p,
-      anchor: g,
-      container: C,
-      minSize: m,
+      anchor: m,
+      container: T,
+      minSize: g,
       hidden: !O,
       resizeX: S,
       resizeY: v,
@@ -160,7 +160,7 @@ class T extends a.PureComponent {
       onClick: this.handleFocus,
       onDragStart: this.handleDragStart,
       onDragEnd: this.handleDragEnd,
-      children: this.renderWidget(e, g, p)
+      children: this.renderWidget(e, m, p)
     })
   }
   constructor(...e) {
@@ -181,7 +181,7 @@ class T extends a.PureComponent {
         u = (0, h.getSizePercentageFromSize)(i, l);
       (0, s.setTopWidget)(t), (0, s.setWidgetLayout)(t, r, u);
       let c = e === f.Operations.MOVE,
-        g = (0, h.getFullCoordsFromAnchorCoords)(n, l.width, l.height, a.width, a.height);
+        m = (0, h.getFullCoordsFromAnchorCoords)(n, l.width, l.height, a.width, a.height);
       this.setState({
         lastLayoutUpdate: {
           was_resized: null != o && o.was_resized || !c,
@@ -191,8 +191,8 @@ class T extends a.PureComponent {
           window_height: l.height,
           widget_width: a.width,
           widget_height: a.height,
-          widget_left: g.left,
-          widget_top: g.top
+          widget_left: m.left,
+          widget_top: m.top
         }
       })
     }), O(this, "handleFocus", e => {
@@ -217,7 +217,7 @@ class T extends a.PureComponent {
     })
   }
 }
-let N = l.default.connectStores([d.default, u.default], e => {
+let I = l.default.connectStores([d.default, u.default], e => {
   let {
     widgetId: t
   } = e, n = d.default.getWidget(t), i = u.default.getActiveRegions();
@@ -228,10 +228,10 @@ let N = l.default.connectStores([d.default, u.default], e => {
     isPreviewingInGame: u.default.isPreviewingInGame(),
     isActiveRegion: null != n && n.type === y.OverlayWidgets.TEXT && i.has(y.OverlayActiveRegions.TEXT_WIDGET)
   }
-})(T);
+})(C);
 
-function I(e, t) {
-  return (0, i.jsx)(N, {
+function N(e, t) {
+  return (0, i.jsx)(I, {
     widgetId: e,
     layoutSize: t
   }, e)
@@ -239,5 +239,5 @@ function I(e, t) {
 t.default = l.default.connectStores([d.default, c.default], () => ({
   layout: d.default.getLayout(p.OVERLAY_LAYOUT_ID),
   layoutSize: c.default.windowSize(),
-  renderWidget: I
+  renderWidget: N
 }))(r.default)

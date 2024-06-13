@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return g
   }
 });
 var s = n("735250");
@@ -17,22 +17,22 @@ var a = n("120356"),
   f = n("471445"),
   E = n("199902"),
   _ = n("592125"),
-  m = n("430824"),
-  T = n("158776"),
+  T = n("430824"),
+  m = n("158776"),
   I = n("594174"),
-  h = n("2093"),
+  N = n("2093"),
   p = n("346656"),
-  N = n("153124"),
+  h = n("153124"),
   S = n("689938"),
   C = n("595497");
-let g = {
+let A = {
   top: 8,
   bottom: 8,
   left: -4,
   right: -4
 };
 
-function A(e) {
+function g(e) {
   let {
     channel: t,
     children: n,
@@ -40,9 +40,9 @@ function A(e) {
     mentionCount: l,
     channelState: r,
     toggleCollapsed: u
-  } = e, d = (0, i.useListItem)("recents-header-".concat(t.id, "-").concat((0, N.useUID)()));
+  } = e, d = (0, i.useListItem)("recents-header-".concat(t.id, "-").concat((0, h.useUID)()));
   return (0, s.jsx)(o.FocusRing, {
-    offset: g,
+    offset: A,
     children: (0, s.jsxs)("div", {
       className: C.channelHeader,
       ...d,
@@ -54,7 +54,7 @@ function A(e) {
       children: [(0, s.jsx)(M, {
         channel: t,
         gotoChannel: a
-      }), (0, s.jsx)(O, {
+      }), (0, s.jsx)(v, {
         channel: t,
         gotoChannel: a,
         mentionCount: l
@@ -71,7 +71,7 @@ function M(e) {
   return t.isPrivate() ? (0, s.jsx)(R, {
     channel: t,
     gotoChannel: n
-  }) : (0, s.jsx)(v, {
+  }) : (0, s.jsx)(O, {
     channel: t,
     gotoChannel: n
   })
@@ -94,11 +94,11 @@ function R(e) {
   })
 }
 
-function v(e) {
+function O(e) {
   let {
     channel: t,
     gotoChannel: n
-  } = e, a = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(t.guild_id));
+  } = e, a = (0, r.useStateFromStores)([T.default], () => T.default.getGuild(t.guild_id));
   return null == a ? null : (0, s.jsx)(p.default, {
     "aria-hidden": !0,
     className: C.guildIcon,
@@ -110,19 +110,19 @@ function v(e) {
   })
 }
 
-function O(e) {
+function v(e) {
   let {
     channel: t,
     gotoChannel: n,
     mentionCount: a
-  } = e, i = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(t.guild_id)), u = (0, r.useStateFromStores)([_.default], () => _.default.getChannel(t.parent_id)), d = (0, f.getChannelIconComponent)(t, i), E = (0, c.default)(t, !1), T = null == u ? null == i ? void 0 : i.name : "".concat(null == i ? void 0 : i.name, " › ").concat(u.name), I = t.isMultiUserDM() ? S.default.Messages.MEMBERS_HEADER.format({
+  } = e, i = (0, r.useStateFromStores)([T.default], () => T.default.getGuild(t.guild_id)), u = (0, r.useStateFromStores)([_.default], () => _.default.getChannel(t.parent_id)), d = (0, f.getChannelIconComponent)(t, i), E = (0, c.default)(t, !1), m = null == u ? null == i ? void 0 : i.name : "".concat(null == i ? void 0 : i.name, " › ").concat(u.name), I = t.isMultiUserDM() ? S.default.Messages.MEMBERS_HEADER.format({
     members: t.recipients.length + 1
   }) : t.isPrivate() ? (0, s.jsx)(x, {
     channel: t
   }) : (0, s.jsx)(o.Clickable, {
     className: l()(C.subtext, C.guildName),
     onClick: n,
-    children: T
+    children: m
   });
   return (0, s.jsxs)("div", {
     className: C.channelNameSection,
@@ -139,7 +139,7 @@ function O(e) {
         }), (0, s.jsx)("span", {
           className: C.channelNameSpan,
           children: E
-        }), null != a && a > 0 ? (0, s.jsx)(h.default, {
+        }), null != a && a > 0 ? (0, s.jsx)(N.default, {
           value: a,
           className: C.badge
         }) : null]
@@ -160,11 +160,11 @@ function x(e) {
     user: n,
     activities: a,
     applicationStream: l
-  } = (0, r.useStateFromStoresObject)([I.default, T.default, E.default], () => {
+  } = (0, r.useStateFromStoresObject)([I.default, m.default, E.default], () => {
     let e = I.default.getUser(t.getRecipientId());
     return {
       user: e,
-      activities: null != e ? T.default.getActivities(e.id) : null,
+      activities: null != e ? m.default.getActivities(e.id) : null,
       applicationStream: null != e ? E.default.getAnyStreamForUser(e.id) : null
     }
   });

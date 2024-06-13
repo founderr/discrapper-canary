@@ -1,16 +1,16 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(e), n.d(e, {
   useIsSecureFramesUIEnabled: function() {
-    return l
+    return a
   }
 });
-var u = a("229502");
+var i = n("229502");
 
-function l(e) {
+function a(t) {
   let {
-    enabled: t
-  } = u.SecureFramesUIExperiment.useExperiment({
+    enabled: e
+  } = i.SecureFramesUIExperiment.useExperiment({
     location: "useIsSecureFramesUIEnabled"
   });
-  return t && !1
+  return e && !1
 }

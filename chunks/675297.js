@@ -17,47 +17,47 @@ var a = n("399606"),
   f = n("676651"),
   E = n("623488"),
   _ = n("942833"),
-  m = n("391181"),
-  T = n("964793"),
+  T = n("391181"),
+  m = n("964793"),
   I = n("226060"),
-  h = n("981631");
+  N = n("981631");
 
 function p(e) {
   let {
     guildProductListing: t,
     guildId: n,
     location: p,
-    shouldShowFullDescriptionButton: N = !0,
+    shouldShowFullDescriptionButton: h = !0,
     hideRoleTag: S = !1,
     lineClamp: C = 1,
-    cardWidth: g,
-    cardHeight: A,
+    cardWidth: A,
+    cardHeight: g,
     thumbnailHeight: M,
     descriptionTextVariant: R = "text-sm/normal",
-    showOpaqueBackground: v = !1
-  } = e, O = (0, a.useStateFromStores)([o.default], () => o.default.getGuild(n), [n]), x = (0, a.useStateFromStores)([o.default], () => {
+    showOpaqueBackground: O = !1
+  } = e, v = (0, a.useStateFromStores)([o.default], () => o.default.getGuild(n), [n]), x = (0, a.useStateFromStores)([o.default], () => {
     var e;
-    return o.default.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : h.EMPTY_STRING_SNOWFLAKE_ID)
-  }), L = (0, l.useListingThumbnailUrl)(t, 600), D = (0, _.useProductType)(t), P = (0, d.useCanManageGuildProduct)(O), {
+    return o.default.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : N.EMPTY_STRING_SNOWFLAKE_ID)
+  }), L = (0, l.useListingThumbnailUrl)(t, 600), P = (0, _.useProductType)(t), D = (0, d.useCanManageGuildProduct)(v), {
     shouldHideGuildPurchaseEntryPoints: y
   } = (0, r.useShouldHideGuildPurchaseEntryPoints)(n), U = (0, _.usePrice)(t);
-  if (null == O || y) return null;
-  let j = () => (0, T.openGuildProductInfoModal)({
+  if (null == v || y) return null;
+  let j = () => (0, m.openGuildProductInfoModal)({
       guildId: n,
       guildProductListingId: t.id,
       analyticsLocation: p
     }),
-    b = (0, s.jsx)(m.GuildProductListingPopout, {
+    b = (0, s.jsx)(T.GuildProductListingPopout, {
       product: t,
       guildId: n,
-      showEditProduct: P,
+      showEditProduct: D,
       showUnpublishProduct: !1,
       showCopyLink: !0,
       showTestDownload: !1,
       showDeleteProduct: !1,
       showReportProduct: !0,
-      onEditProduct: P ? () => {
-        f.openModal(O.id, t.id)
+      onEditProduct: D ? () => {
+        f.openModal(v.id, t.id)
       } : () => {},
       onUnpublishProduct: () => {},
       onDeleteProduct: () => {},
@@ -82,16 +82,16 @@ function p(e) {
       guildProductListingId: t.id,
       sourceAnalyticsLocations: p
     }),
-    productType: D,
-    shouldShowFullDescriptionButton: N,
+    productType: P,
+    shouldShowFullDescriptionButton: h,
     onShowFullDescription: j,
     onTapCard: j,
     actionMenu: b,
-    showOpaqueBackground: v,
+    showOpaqueBackground: O,
     hideRoleTag: S,
     lineClamp: C,
-    cardWidth: g,
-    cardHeight: A,
+    cardWidth: A,
+    cardHeight: g,
     thumbnailHeight: M,
     descriptionTextVariant: R,
     isDraft: !t.published

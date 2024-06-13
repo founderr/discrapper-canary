@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   WelcomeCTAContainer: function() {
-    return N
+    return h
   }
 }), n("47120");
 var s = n("735250"),
@@ -16,15 +16,15 @@ var s = n("735250"),
   f = n("496675"),
   E = n("594174"),
   _ = n("838440"),
-  m = n("779139"),
-  T = n("981631"),
+  T = n("779139"),
+  m = n("981631"),
   I = n("689938"),
-  h = n("415710");
+  N = n("415710");
 let p = e => {
     let {
       channel: t,
       message: n
-    } = e, [l, u] = a.useState(!1), d = (0, m.pickWelcomeSticker)(n.id), c = a.useCallback(() => {
+    } = e, [l, u] = a.useState(!1), d = (0, T.pickWelcomeSticker)(n.id), c = a.useCallback(() => {
       (0, _.applyChatRestrictions)({
         type: r.ChatInputTypes.FORM,
         content: "",
@@ -33,20 +33,20 @@ let p = e => {
         let {
           valid: s
         } = e;
-        s && (0, m.handleWelcomeCtaClicked)(t, n, d.id)
+        s && (0, T.handleWelcomeCtaClicked)(t, n, d.id)
       })
     }, [t, n, d]);
     return (0, s.jsx)("div", {
-      className: h.welcomeCTA,
+      className: N.welcomeCTA,
       children: (0, s.jsxs)(i.Button, {
-        className: h.welcomeCTAButtonOuter,
-        innerClassName: h.welcomeCTAButton,
+        className: N.welcomeCTAButtonOuter,
+        innerClassName: N.welcomeCTAButton,
         color: i.ButtonColors.PRIMARY,
         onMouseEnter: () => u(!0),
         onMouseLeave: () => u(!1),
         onClick: c,
         children: [(0, s.jsx)(o.default, {
-          className: h.welcomeCTASticker,
+          className: N.welcomeCTASticker,
           isInteracting: l,
           sticker: d,
           size: 28
@@ -54,7 +54,7 @@ let p = e => {
       })
     })
   },
-  N = e => {
+  h = e => {
     let {
       message: t,
       channel: n
@@ -62,12 +62,12 @@ let p = e => {
       var e;
       let s = E.default.getCurrentUser(),
         l = (0, u.computeIsReadOnlyThread)(n),
-        i = f.default.can(T.Permissions.SEND_MESSAGES, n),
+        i = f.default.can(m.Permissions.SEND_MESSAGES, n),
         r = null != a && null != s && (null === (e = d.default.getMember(a, s.id)) || void 0 === e ? void 0 : e.isPending),
         o = t.author.bot,
         _ = c.default.getGuild(a),
-        m = null != _ && (_.systemChannelFlags & T.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
-      return i && !l && !r && !o && m
+        T = null != _ && (_.systemChannelFlags & m.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
+      return i && !l && !r && !o && T
     });
     return null != a && i ? (0, s.jsx)(p, {
       message: t,

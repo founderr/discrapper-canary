@@ -11,8 +11,8 @@ var i, a = n("735250"),
   f = n("547881"),
   h = n("178528"),
   p = n("669083"),
-  g = n("483962"),
-  m = n("711553"),
+  m = n("483962"),
+  g = n("711553"),
   E = n("689938"),
   S = n("974285");
 
@@ -42,11 +42,11 @@ class O extends(i = l.PureComponent) {
     } = this.props, i = null != e ? (0, a.jsx)(h.default, {
       guildId: e,
       onDragStart: this.onDragStart
-    }, e) : (0, a.jsx)(m.default, {
+    }, e) : (0, a.jsx)(g.default, {
       title: E.default.Messages.DIRECT_MESSAGES,
       renderSettings: y,
       onDragStart: this.onDragStart,
-      children: (0, a.jsx)(g.default, {})
+      children: (0, a.jsx)(m.default, {})
     }), l = n ? "div" : f.default;
     return (0, a.jsxs)(l, {
       className: o()(S.base, {

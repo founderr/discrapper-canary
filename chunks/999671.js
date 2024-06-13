@@ -24,7 +24,7 @@ function E(e) {
   } = e, u = (0, a.useStateFromStores)([r.default, o.default], () => r.default.getChannel(o.default.getChannelId())), {
     everyoneFilter: E,
     roleFilter: _,
-    guildFilter: m
+    guildFilter: T
   } = (0, a.useStateFromStoresObject)([d.default], () => {
     let {
       everyoneFilter: e,
@@ -65,10 +65,10 @@ function E(e) {
       label: f.default.Messages.RECENT_MENTIONS_FILTER_ALL_SERVERS,
       action: function() {
         i.default.setGuildFilter({
-          guildFilter: m === c.RecentMentionsFilters.THIS_SERVER ? c.RecentMentionsFilters.ALL_SERVERS : c.RecentMentionsFilters.THIS_SERVER
+          guildFilter: T === c.RecentMentionsFilters.THIS_SERVER ? c.RecentMentionsFilters.ALL_SERVERS : c.RecentMentionsFilters.THIS_SERVER
         })
       },
-      checked: m === c.RecentMentionsFilters.ALL_SERVERS
+      checked: T === c.RecentMentionsFilters.ALL_SERVERS
     })]
   })
 }

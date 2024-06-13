@@ -19,11 +19,11 @@ function _(e, t, a) {
   let _ = e.id,
     m = l.useRef();
   null == m.current && (m.current = [(0, d.generateEmptyPollAnswer)(), (0, d.generateEmptyPollAnswer)()]);
-  let [f, L] = l.useState(m.current), [R, C] = l.useState(""), [N, T] = l.useState(n.PollLayoutTypes.DEFAULT), [h, O] = l.useState(!1), [P, I] = l.useState(c.PollDurations.ONE_DAY), [p, g] = l.useState({}), [x, M] = l.useState(!1), S = f.filter(e => (0, d.isAnswerFilled)(e, N)), v = f.filter(e => (0, d.isIncompleteAnswer)(e, N)), j = R.length > 0 && S.length >= c.MIN_NUMBER_OF_ANSWERS_PER_POLL && 0 === v.length, [D, {
+  let [f, L] = l.useState(m.current), [R, C] = l.useState(""), [N, T] = l.useState(n.PollLayoutTypes.DEFAULT), [O, h] = l.useState(!1), [P, I] = l.useState(c.PollDurations.ONE_DAY), [g, p] = l.useState({}), [x, M] = l.useState(!1), S = f.filter(e => (0, d.isAnswerFilled)(e, N)), v = f.filter(e => (0, d.isIncompleteAnswer)(e, N)), j = R.length > 0 && S.length >= c.MIN_NUMBER_OF_ANSWERS_PER_POLL && 0 === v.length, [D, {
     error: b,
-    loading: w
-  }] = (0, s.default)(u.default.createPoll), U = f.length < c.MAX_NUMBER_OF_ANSWERS_PER_POLL, y = f.length > c.MIN_NUMBER_OF_ANSWERS_PER_POLL, k = l.useCallback(e => {
-    g(e => {
+    loading: U
+  }] = (0, s.default)(u.default.createPoll), w = f.length < c.MAX_NUMBER_OF_ANSWERS_PER_POLL, y = f.length > c.MIN_NUMBER_OF_ANSWERS_PER_POLL, k = l.useCallback(e => {
+    p(e => {
       let t = {
         ...e
       };
@@ -35,7 +35,7 @@ function _(e, t, a) {
       index: a,
       localCreationAnswerId: l
     } = e;
-    g(e => {
+    p(e => {
       let t = {
         ...e
       };
@@ -71,13 +71,13 @@ function _(e, t, a) {
     let l = f[t].localCreationAnswerId,
       n = URL.createObjectURL(a);
     H(e, t), F(A(n, o.PollMediaUploadAttachmentStatus.PREPARING), t), i.handlePollMediaAttachmentAdd(e, l, a), F(A(n, o.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD), t)
-  }, [f, F, H]), K = l.useCallback((e, t) => {
+  }, [f, F, H]), Y = l.useCallback((e, t) => {
     H(_, t), F({
       emoji: e,
       stickerId: void 0,
       mediaAttachmentState: void 0
     }, t)
-  }, [_, F, H]), Y = l.useCallback(e => {
+  }, [_, F, H]), K = l.useCallback(e => {
     L(t => {
       let a = [...t];
       return a[e] = {
@@ -86,8 +86,8 @@ function _(e, t, a) {
       }, a
     })
   }, []), V = l.useCallback(() => {
-    U && L(e => [...e, (0, d.generateEmptyPollAnswer)()])
-  }, [U]), z = l.useCallback(e => {
+    w && L(e => [...e, (0, d.generateEmptyPollAnswer)()])
+  }, [w]), z = l.useCallback(e => {
     if (!y) return;
     let t = f.length;
     H(_, e), L(t => {
@@ -106,19 +106,19 @@ function _(e, t, a) {
         t = {};
       return 0 === R.trim().length && (e = !1, t.question = E.default.Messages.CREATE_POLL_QUESTION_REQUIRED), f.filter(e => (0, d.isAnswerFilled)(e, N)).length < c.MIN_NUMBER_OF_ANSWERS_PER_POLL && (e = !1, t["answer-".concat(f[0].localCreationAnswerId)] = E.default.Messages.CREATE_POLL_MINIMUM_ANSWERS_REQUIRED), f.forEach(a => {
         (0, d.isIncompleteAnswer)(a, N) && (e = !1, t["answer-".concat(a.localCreationAnswerId)] = E.default.Messages.CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT)
-      }), g(t), M(!e), e
+      }), p(t), M(!e), e
     }, [f, R, N]),
     q = l.useCallback(async () => {
       await D({
         channel: e,
         question: R,
         answers: S,
-        allowMultiSelect: h,
+        allowMultiSelect: O,
         duration: P,
         layout: N,
         onClose: t
       })
-    }, [R, S, h, P, D, e, N, t]),
+    }, [R, S, O, P, D, e, N, t]),
     J = l.useCallback(() => {
       X() && q()
     }, [q, X]);
@@ -128,25 +128,25 @@ function _(e, t, a) {
     setQuestion: C,
     selectedLayoutType: N,
     setSelectedLayoutType: T,
-    allowMultiSelect: h,
-    setAllowMultiSelect: O,
+    allowMultiSelect: O,
+    setAllowMultiSelect: h,
     duration: P,
     setDuration: I,
     canPost: j,
-    canAddMoreAnswers: U,
+    canAddMoreAnswers: w,
     canRemoveMoreAnswers: y,
     handleQuestionChange: k,
     handleAnswerTextChange: B,
     handleGifSelect: G,
-    handleEmojiSelect: K,
+    handleEmojiSelect: Y,
     handleCustomUpload: W,
     handleAddAnswer: V,
     handleRemoveAnswer: z,
-    handleRemoveAnswerImage: Y,
-    fieldErrors: p,
+    handleRemoveAnswerImage: K,
+    fieldErrors: g,
     createPoll: q,
     handleSubmitPoll: J,
-    submitting: w,
+    submitting: U,
     createPollError: b,
     shouldFocusOnInvalidField: x,
     setShouldFocusOnInvalidField: M

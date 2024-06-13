@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return P
+    return D
   }
 }), n("411104"), n("47120");
 var s, a, l, i = n("735250"),
@@ -13,21 +13,21 @@ var s, a, l, i = n("735250"),
   f = n("2052"),
   E = n("710845"),
   _ = n("703656"),
-  m = n("173747"),
-  T = n("7956"),
+  T = n("173747"),
+  m = n("7956"),
   I = n("293245"),
-  h = n("417363"),
+  N = n("417363"),
   p = n("941128"),
-  N = n("780570"),
+  h = n("780570"),
   S = n("358085"),
   C = n("814225"),
-  g = n("346329"),
-  A = n("701560"),
+  A = n("346329"),
+  g = n("701560"),
   M = n("981631"),
   R = n("689938"),
-  v = n("340514");
+  O = n("340514");
 
-function O(e, t, n) {
+function v(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -44,7 +44,7 @@ let x = Object.freeze({
     [M.LibraryApplicationActions.RESUME]: "paused"
   }),
   L = () => [R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_1, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_2, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_3, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_4, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_5, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_6, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_7, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_8, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_9, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_10];
-class D extends(a = r.Component) {
+class P extends(a = r.Component) {
   get analyticsLocation() {
     return {
       ...this.props.analyticsContext.location,
@@ -101,7 +101,7 @@ class D extends(a = r.Component) {
       analyticsListSort: u,
       analyticsListIndex: d
     } = this.props;
-    return (0, i.jsx)(A.default, {
+    return (0, i.jsx)(g.default, {
       applicationId: e.id,
       libraryApplication: e,
       fullWidth: t,
@@ -124,19 +124,19 @@ class D extends(a = r.Component) {
       tooltipPosition: r
     } = this.props;
     return (0, i.jsxs)("div", {
-      className: v.disabledButtonWrapper,
+      className: O.disabledButtonWrapper,
       children: [(0, i.jsxs)(d.Button, {
         className: n,
         fullWidth: s,
         size: a,
-        color: null != l ? l : v.disabledButtonColor,
+        color: null != l ? l : O.disabledButtonColor,
         disabled: !0,
         children: [this.getText(e), this.renderProgressBar()]
       }), (0, i.jsx)(d.Tooltip, {
         text: t,
         position: r,
         children: e => (0, i.jsx)("div", {
-          className: v.disabledButtonOverlay,
+          className: O.disabledButtonOverlay,
           ...e
         })
       })]
@@ -148,15 +148,15 @@ class D extends(a = r.Component) {
       dispatchState: t
     } = this.props;
     if (e) return null;
-    let n = N.convertToTransitionState(t);
+    let n = h.convertToTransitionState(t);
     if (null == n) return null;
-    let s = n.type === M.LocalDispatchApplicationStates.UNINSTALLING ? d.Progress.INDETERMINATE : N.calculateProgressPercentage(Number(n.progress), Number(n.total));
+    let s = n.type === M.LocalDispatchApplicationStates.UNINSTALLING ? d.Progress.INDETERMINATE : h.calculateProgressPercentage(Number(n.progress), Number(n.total));
     return (0, i.jsx)(d.Progress, {
       percent: s,
       size: d.Progress.Sizes.XSMALL,
       foregroundColor: n.paused ? u.default.unsafe_rawColors.PRIMARY_500.css : u.default.unsafe_rawColors.GREEN_360.css,
       backgroundColor: u.default.unsafe_rawColors.TRANSPARENT.css,
-      className: v.progress
+      className: O.progress
     })
   }
   renderActionButton(e, t) {
@@ -197,7 +197,7 @@ class D extends(a = r.Component) {
     return null == s ? this.renderDisabledButton(n) : this.renderActionButton(n, s)
   }
   constructor(...e) {
-    super(...e), O(this, "_uninstallStringIndex", null), O(this, "handleAddToLibrary", async () => {
+    super(...e), v(this, "_uninstallStringIndex", null), v(this, "handleAddToLibrary", async () => {
       try {
         let {
           libraryApplication: e
@@ -206,22 +206,22 @@ class D extends(a = r.Component) {
       } catch (e) {
         new E.default("LibraryApplicationButton").error(e)
       }
-    }), O(this, "handleInstall", () => {
+    }), v(this, "handleInstall", () => {
       let {
         libraryApplication: e,
         source: t
       } = this.props;
-      g.installApplication(e.id, e.branchId, t)
-    }), O(this, "handleUpdate", () => {
+      A.installApplication(e.id, e.branchId, t)
+    }), v(this, "handleUpdate", () => {
       let {
         libraryApplication: e
       } = this.props;
-      g.updateApplication(e.id, e.branchId)
-    }), O(this, "onClickHandlers", {
+      A.updateApplication(e.id, e.branchId)
+    }), v(this, "onClickHandlers", {
       add_to_library: this.handleAddToLibrary,
       install: this.handleInstall,
       update: this.handleUpdate
-    }), O(this, "handleClick", (e, t) => {
+    }), v(this, "handleClick", (e, t) => {
       let {
         onClick: n
       } = this.props;
@@ -230,11 +230,11 @@ class D extends(a = r.Component) {
   }
 }
 
-function P(e) {
+function D(e) {
   let {
     libraryApplication: t
-  } = e, n = (0, f.useAnalyticsContext)(), [s, a] = (0, o.useStateFromStoresArray)([h.default, p.default], () => [(0, T.getDefaultLibraryApplicationAction)(t, h.default, p.default), h.default.getState(t.id, t.branchId)], [t]), l = (0, o.useStateFromStores)([I.default], () => I.default.isSyncing(t.id, t.branchId), [t]), r = (0, o.useStateFromStores)([m.default], () => m.default.hasNoBuild(t.id, t.branchId), [t]);
-  return (0, i.jsx)(D, {
+  } = e, n = (0, f.useAnalyticsContext)(), [s, a] = (0, o.useStateFromStoresArray)([N.default, p.default], () => [(0, m.getDefaultLibraryApplicationAction)(t, N.default, p.default), N.default.getState(t.id, t.branchId)], [t]), l = (0, o.useStateFromStores)([I.default], () => I.default.isSyncing(t.id, t.branchId), [t]), r = (0, o.useStateFromStores)([T.default], () => T.default.hasNoBuild(t.id, t.branchId), [t]);
+  return (0, i.jsx)(P, {
     ...e,
     analyticsContext: n,
     actionState: s,
@@ -243,10 +243,10 @@ function P(e) {
     hasNoBuild: r
   })
 }
-O(D, "defaultProps", {
+v(P, "defaultProps", {
   fullWidth: !1,
   size: d.Button.Sizes.LARGE,
   hideProgress: !1,
   isPlayShiny: !1,
   tooltipPosition: "top"
-}), O(D, "ButtonStates", s)
+}), v(P, "ButtonStates", s)

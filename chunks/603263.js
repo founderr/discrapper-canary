@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return E
   },
   clearHistory: function() {
-    return T
+    return m
   },
   clearSearchState: function() {
-    return h
+    return N
   },
   search: function() {
     return o
@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return I
   },
   setShowBlockedResults: function() {
-    return N
+    return h
   },
   updateAutocompleteQuery: function() {
     return p
@@ -101,15 +101,15 @@ function f(e) {
 }
 
 function E(e, t) {
-  return m(e, t * r.SEARCH_PAGE_SIZE)
+  return T(e, t * r.SEARCH_PAGE_SIZE)
 }
 
 function _(e, t) {
   let n = l.default.getOffset(e);
-  return m(e, n + t)
+  return T(e, n + t)
 }
 
-function m(e, t) {
+function T(e, t) {
   let n = l.default.getQuery(e),
     s = l.default.getTotalResults(e);
   if (!(t < 0) && !(t > s)) return o(e, {
@@ -118,7 +118,7 @@ function m(e, t) {
   })
 }
 
-function T(e) {
+function m(e) {
   s.default.dispatch({
     type: "SEARCH_CLEAR_HISTORY",
     searchId: e
@@ -133,7 +133,7 @@ function I(e, t) {
   })
 }
 
-function h(e) {
+function N(e) {
   a.default.trackWithMetadata(r.AnalyticEvents.SEARCH_CLOSED, {
     search_id: l.default.getAnalyticsId(e)
   }), s.default.wait(() => s.default.dispatch({
@@ -151,7 +151,7 @@ function p(e, t, n) {
   })
 }
 
-function N(e, t) {
+function h(e, t) {
   s.default.dispatch({
     type: "SEARCH_SET_SHOW_BLOCKED_RESULTS",
     searchId: e,

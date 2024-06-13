@@ -1,39 +1,39 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   openDisableCommunication: function() {
-    return a
+    return r
   },
   openEnableCommunication: function() {
-    return i
+    return u
   }
 });
-var u = n("735250");
+var i = n("735250");
 n("470079");
-var l = n("481060");
+var a = n("481060");
 
-function a(e, t, a) {
-  (0, l.openModalLazy)(async () => {
+function r(t, e, r) {
+  (0, a.openModalLazy)(async () => {
     let {
-      default: l
+      default: a
     } = await Promise.all([n.e("99387"), n.e("72920")]).then(n.bind(n, "109730"));
-    return n => (0, u.jsx)(l, {
-      guildId: e,
-      userId: t,
-      anaylticsLocations: a,
+    return n => (0, i.jsx)(a, {
+      guildId: t,
+      userId: e,
+      anaylticsLocations: r,
       ...n
     })
   })
 }
 
-function i(e, t, a) {
-  (0, l.openModalLazy)(async () => {
+function u(t, e, r) {
+  (0, a.openModalLazy)(async () => {
     let {
-      default: l
+      default: a
     } = await Promise.all([n.e("99387"), n.e("76233")]).then(n.bind(n, "171494"));
-    return n => (0, u.jsx)(l, {
-      guildId: e,
-      userId: t,
-      anaylticsLocations: a,
+    return n => (0, i.jsx)(a, {
+      guildId: t,
+      userId: e,
+      anaylticsLocations: r,
       ...n
     })
   })

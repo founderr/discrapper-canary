@@ -16,20 +16,20 @@ var s = n("735250"),
   f = n("35125"),
   E = n("626751"),
   _ = n("891614"),
-  m = n("981631"),
-  T = n("176505"),
+  T = n("981631"),
+  m = n("176505"),
   I = n("689938"),
-  h = n("920890");
+  N = n("920890");
 
 function p(e) {
   let {
     username: t
   } = e;
   return (0, s.jsx)("div", {
-    className: h.welcomeCardText,
+    className: N.welcomeCardText,
     children: (0, s.jsx)(l.Text, {
       tag: "p",
-      className: h.welcomeCardText,
+      className: N.welcomeCardText,
       color: "status-positive-text",
       variant: "heading-xl/medium",
       children: I.default.Messages.ROLE_SUBSCRIPTION_WELCOME_CARD_TEXT.format({
@@ -46,14 +46,14 @@ function p(e) {
   })
 }
 
-function N(e) {
+function h(e) {
   let {
     guildId: t,
     user: n,
     username: a
   } = e;
   return (0, s.jsxs)("div", {
-    className: h.welcomeCard,
+    className: N.welcomeCard,
     role: "img",
     "aria-label": I.default.Messages.ROLE_SUBSCRIPTION_WELCOME_CARD_ARIA_LABEL.format({
       username: a
@@ -61,7 +61,7 @@ function N(e) {
     children: [(0, s.jsx)(_.default, {
       guildId: t,
       user: n,
-      className: h.welcomeCardBadge
+      className: N.welcomeCardBadge
     }), (0, s.jsx)(p, {
       username: a
     })]
@@ -73,7 +73,7 @@ function S(e) {
   let {
     channel: _,
     message: I,
-    compact: h
+    compact: N
   } = e, p = (0, o.default)(I), S = function(e) {
     let {
       author: t,
@@ -87,7 +87,7 @@ function S(e) {
     })(t), {
       analyticsLocations: c
     } = (0, r.default)(i.default.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE), E = s.roleSubscriptionData, _ = a.useCallback(() => {
-      (0, d.transitionTo)(m.Routes.CHANNEL(l, T.StaticChannelRoute.ROLE_SUBSCRIPTIONS), null, null, c), (null == E ? void 0 : E.role_subscription_listing_id) != null && (0, f.trackRoleSubscriptionPurchaseMessageTierClick)(l, n.id, s.id, E.role_subscription_listing_id)
+      (0, d.transitionTo)(T.Routes.CHANNEL(l, m.StaticChannelRoute.ROLE_SUBSCRIPTIONS), null, null, c), (null == E ? void 0 : E.role_subscription_listing_id) != null && (0, f.trackRoleSubscriptionPurchaseMessageTierClick)(l, n.id, s.id, E.role_subscription_listing_id)
     }, [l, n, s, E, c]);
     return null == E ? null : (0, f.getRoleSubscriptionPurchaseSystemMessageFormattedContent)({
       username: t.nick,
@@ -105,9 +105,9 @@ function S(e) {
     children: [(0, s.jsx)(c.default, {
       icon: n("570111"),
       timestamp: I.timestamp,
-      compact: h,
+      compact: N,
       children: S
-    }), C && (0, s.jsx)(N, {
+    }), C && (0, s.jsx)(h, {
       guildId: _.guild_id,
       user: I.author,
       username: p.nick

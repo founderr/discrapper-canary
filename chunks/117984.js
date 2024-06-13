@@ -4,22 +4,22 @@ n.r(t), n.d(t, {
     return f
   },
   addFavoriteChannel: function() {
-    return T
+    return c
   },
   removeFavoriteCategory: function() {
     return I
   },
   removeFavoriteChannel: function() {
-    return c
+    return T
   },
   setFavoriteChannelNickname: function() {
     return S
   },
   toggleFavoriteServerMuted: function() {
-    return p
+    return N
   },
   updateFavoriteChannelParent: function() {
-    return N
+    return p
   },
   updateFavoriteChannels: function() {
     return _
@@ -56,7 +56,7 @@ function E(e) {
   }
 }
 
-function T(e, t) {
+function c(e, t) {
   !u.default.isFavorite(e) && a.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
     n.favoriteChannels[e] = r.FavoriteChannel.create({
       nickname: "",
@@ -67,7 +67,7 @@ function T(e, t) {
   }, a.UserSettingsDelay.FREQUENT_USER_ACTION)
 }
 
-function c(e) {
+function T(e) {
   let t = u.default.getFavorite(e);
   null != t && a.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
     if (delete n.favoriteChannels[e], t.type === r.FavoriteChannelType.CATEGORY)
@@ -95,7 +95,7 @@ function f(e) {
 }
 
 function I(e) {
-  c(e)
+  T(e)
 }
 
 function _(e) {
@@ -108,13 +108,13 @@ function _(e) {
   }, a.UserSettingsDelay.FREQUENT_USER_ACTION)
 }
 
-function N(e, t) {
+function p(e, t) {
   a.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
     n.favoriteChannels[e].parentId = null != t ? t : "0"
   }, a.UserSettingsDelay.FREQUENT_USER_ACTION)
 }
 
-function p() {
+function N() {
   a.PreloadedUserSettingsActionCreators.updateAsync("favorites", e => {
     e.muted = !e.muted
   }, a.UserSettingsDelay.INFREQUENT_USER_ACTION)

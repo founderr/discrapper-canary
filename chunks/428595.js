@@ -173,7 +173,7 @@ let b = e => {
           a = null != s ? _.default.getRole(s.id, r) : null;
         return null == a ? {
           type: "text",
-          content: "@".concat(v.default.Messages.DELETED_ROLE_PLACEHOLDER)
+          content: "@".concat(v.default.Messages.UNKNOWN_ROLE_PLACEHOLDER)
         } : {
           type: "mention",
           channelId: n.channelId,

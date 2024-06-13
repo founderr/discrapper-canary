@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return p
   },
   PrivateChannelIntegrationRemovedSystemMessage: function() {
-    return N
+    return h
   }
 });
 var s = n("735250"),
@@ -19,22 +19,22 @@ var s = n("735250"),
   f = n("702346"),
   E = n("768581"),
   _ = n("91047"),
-  m = n("628566"),
-  T = n("693912"),
+  T = n("628566"),
+  m = n("693912"),
   I = n("981631");
 
-function h(e, t) {
+function N(e, t) {
   return a.useCallback(a => (r, o) => {
     var f;
-    let T = E.default.getApplicationIconURL({
+    let m = E.default.getApplicationIconURL({
         id: a.id,
         icon: a.icon,
         bot: a.bot,
         botIconFirst: !0
       }),
       I = c.default.getUser(null === (f = a.bot) || void 0 === f ? void 0 : f.id),
-      h = m.default.getIntegration(e.id, a.id),
-      p = e.isPrivate() && null != h ? t => {
+      N = T.default.getIntegration(e.id, a.id),
+      p = e.isPrivate() && null != N ? t => {
         (0, i.openContextMenuLazy)(t, async () => {
           let {
             default: t
@@ -42,23 +42,23 @@ function h(e, t) {
           return n => (0, s.jsx)(t, {
             ...n,
             channel: e,
-            integration: h
+            integration: N
           })
         })
       } : null != I ? t => (0, _.openUserContextMenu)(t, I, e) : void 0,
       {
-        bot: N
+        bot: h
       } = a;
-    return null == N ? r : (0, s.jsx)(l.Popout, {
+    return null == h ? r : (0, s.jsx)(l.Popout, {
       position: "right",
-      preload: () => (0, u.maybeFetchUserProfileForPopout)(N.id, T, {
+      preload: () => (0, u.maybeFetchUserProfileForPopout)(h.id, m, {
         guildId: e.guild_id,
         channelId: e.id
       }),
       renderPopout: n => (0, s.jsx)(d.default, {
         ...n,
         location: "PrivateChannelIntegrationSystemMessage",
-        userId: N.id,
+        userId: h.id,
         guildId: e.guild_id,
         channelId: e.id,
         messageId: t.id
@@ -82,12 +82,12 @@ function p(e) {
     channelId: a.id,
     guildId: a.guild_id,
     messageId: t.id
-  }), c = h(a, t);
+  }), c = N(a, t);
   return (0, s.jsx)(f.default, {
     icon: n("570111"),
     timestamp: t.timestamp,
     compact: l,
-    children: (0, T.getPrivateChannelIntegrationAddedSystemMessageContent)({
+    children: (0, m.getPrivateChannelIntegrationAddedSystemMessageContent)({
       application: u,
       username: i.nick,
       usernameHook: d(i),
@@ -96,7 +96,7 @@ function p(e) {
   })
 }
 
-function N(e) {
+function h(e) {
   let {
     message: t,
     channel: a,
@@ -106,12 +106,12 @@ function N(e) {
     channelId: a.id,
     guildId: a.guild_id,
     messageId: t.id
-  }), c = h(a, t);
+  }), c = N(a, t);
   return (0, s.jsx)(f.default, {
     icon: n("474019"),
     timestamp: t.timestamp,
     compact: l,
-    children: (0, T.getPrivateChannelIntegrationRemovedSystemMessageContent)({
+    children: (0, m.getPrivateChannelIntegrationRemovedSystemMessageContent)({
       application: u,
       username: i.nick,
       usernameHook: d(i),

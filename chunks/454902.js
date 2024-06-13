@@ -19,9 +19,9 @@ var i, a, l, s = n("735250"),
   f = n("465670"),
   h = n("689938"),
   p = n("297505"),
-  g = n("611273");
+  m = n("611273");
 
-function m(e, t, n) {
+function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -54,7 +54,7 @@ let E = e => e.stopPropagation(),
     children: t
   });
 (i = a || (a = {})).PRIMARY = "PRIMARY", i.BRAND = "BRAND", i.DANGER = "DANGER";
-class C extends(l = o.PureComponent) {
+class T extends(l = o.PureComponent) {
   static getDerivedStateFromProps(e, t) {
     let {
       expand: n
@@ -199,7 +199,7 @@ class C extends(l = o.PureComponent) {
           className: p.title,
           children: t
         }), null != e ? (0, s.jsx)("div", {
-          className: d()(p.body, g.marginTop4),
+          className: d()(p.body, m.marginTop4),
           style: {
             WebkitLineClamp: n,
             lineClamp: n
@@ -234,25 +234,25 @@ class C extends(l = o.PureComponent) {
     })
   }
   constructor(e) {
-    super(e), m(this, "handleDismiss", e => {
+    super(e), g(this, "handleDismiss", e => {
       e.stopPropagation();
       let {
         onDismissClick: t
       } = this.props;
       null == t || t(e)
-    }), m(this, "handleConfirmClick", e => {
+    }), g(this, "handleConfirmClick", e => {
       e.stopPropagation();
       let {
         onConfirmClick: t
       } = this.props;
       null == t || t(e)
-    }), m(this, "handleCancelClick", e => {
+    }), g(this, "handleCancelClick", e => {
       e.stopPropagation();
       let {
         onCancelClick: t
       } = this.props;
       null == t || t(e)
-    }), m(this, "handleMouseEnter", () => {
+    }), g(this, "handleMouseEnter", () => {
       !this.props.disabled && this.setState({
         expanded: !0
       })
@@ -265,9 +265,9 @@ class C extends(l = o.PureComponent) {
     }
   }
 }
-m(C, "ColorSchemes", a), m(C, "defaultProps", {
+g(T, "ColorSchemes", a), g(T, "defaultProps", {
   maxBodyLines: void 0,
   colorScheme: "PRIMARY",
   expand: !1,
   disabled: !1
-}), t.default = C
+}), t.default = T

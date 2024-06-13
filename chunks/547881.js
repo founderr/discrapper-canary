@@ -12,8 +12,8 @@ var i, a, l, s, o = n("735250"),
   f = n.n(c),
   h = n("481060"),
   p = n("981631"),
-  g = n("744537"),
-  m = n("961047");
+  m = n("744537"),
+  g = n("961047");
 let E = p.OverlayWidgetTypes.DEFAULT,
   S = 1,
   v = r.createContext({
@@ -34,7 +34,7 @@ let E = p.OverlayWidgetTypes.DEFAULT,
         } = e;
         return (0, o.jsx)(y.Consumer, {
           children: e => (0, o.jsx)("div", {
-            className: u()(n, g.bar, g[f()(a)]),
+            className: u()(n, m.bar, m[f()(a)]),
             style: e,
             ...i,
             children: t
@@ -43,7 +43,7 @@ let E = p.OverlayWidgetTypes.DEFAULT,
       }
     })
   };
-class C extends(i = r.PureComponent) {
+class T extends(i = r.PureComponent) {
   render() {
     let {
       disableScroll: e,
@@ -53,7 +53,7 @@ class C extends(i = r.PureComponent) {
     return (0, o.jsx)(y.Consumer, {
       children: i => (0, o.jsx)(v.Consumer, {
         children: a => {
-          let l = u()(g.body, g[f()(a.type)], n);
+          let l = u()(m.body, m[f()(a.type)], n);
           return e ? (0, o.jsx)("div", {
             className: l,
             style: i,
@@ -70,13 +70,13 @@ class C extends(i = r.PureComponent) {
 }
 s = {
   disableScroll: !1
-}, (l = "defaultProps") in(a = C) ? Object.defineProperty(a, l, {
+}, (l = "defaultProps") in(a = T) ? Object.defineProperty(a, l, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : a[l] = s;
-let T = e => {
+let C = e => {
     let {
       type: t = E,
       width: n,
@@ -92,7 +92,7 @@ let T = e => {
         opacity: s
       },
       children: (0, o.jsx)("div", {
-        className: u()(g.widget, g[f()(t)], l),
+        className: u()(m.widget, m[f()(t)], l),
         style: {
           width: n,
           height: i
@@ -102,7 +102,7 @@ let T = e => {
       })
     })
   },
-  N = e => {
+  I = e => {
     let {
       children: t,
       className: n,
@@ -110,21 +110,21 @@ let T = e => {
     } = e;
     return (0, o.jsx)(y.Consumer, {
       children: e => (0, o.jsx)("div", {
-        className: u()(g.content, n, {
-          [g.staticSize]: !i
+        className: u()(m.content, n, {
+          [m.staticSize]: !i
         }),
         style: e,
         children: t
       })
     })
   };
-T.Background = e => {
+C.Background = e => {
   let {
     children: t,
     opacityOverride: n
   } = e;
   if (null == t) return null;
-  let i = [O, C, N];
+  let i = [O, T, I];
   return (0, o.jsx)(v.Consumer, {
     children: e => {
       let {
@@ -145,7 +145,7 @@ T.Background = e => {
       }
     }
   })
-}, T.Body = C, T.Content = N, T.Icon = e => {
+}, C.Body = T, C.Content = I, C.Icon = e => {
   let {
     icon: t,
     label: n,
@@ -157,7 +157,7 @@ T.Background = e => {
   } = e;
   return (0, o.jsx)(h.Tooltip, {
     text: r ? (0, o.jsx)("div", {
-      className: g.tutorialTip,
+      className: m.tutorialTip,
       children: n
     }) : n,
     "aria-label": n,
@@ -175,10 +175,10 @@ T.Background = e => {
         onClick: i,
         onMouseEnter: l,
         onMouseLeave: r,
-        className: u()(g.icon, {
-          [g.toggledIconOn]: a
+        className: u()(m.icon, {
+          [m.toggledIconOn]: a
         }),
-        innerClassName: m.flexCenter,
+        innerClassName: g.flexCenter,
         "aria-label": n,
         children: (0, o.jsx)(t, {
           width: s,
@@ -188,4 +188,4 @@ T.Background = e => {
       })
     }
   })
-}, T.Bar = O, t.default = T
+}, C.Bar = O, t.default = C

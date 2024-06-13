@@ -4,10 +4,10 @@ i.r(t), i.d(t, {
     return d
   }
 });
-var l = i("735250");
+var n = i("735250");
 i("470079");
 var a = i("120356"),
-  n = i.n(a),
+  l = i.n(a),
   s = i("481060"),
   r = i("377171"),
   o = i("689938"),
@@ -18,10 +18,10 @@ function d(e) {
     className: t,
     ...i
   } = e;
-  return (0, l.jsx)(s.TextBadge, {
+  return (0, n.jsx)(s.TextBadge, {
     ...i,
     text: o.default.Messages.APP_DIRECTORY_PARTNER,
     color: r.default.BACKGROUND_TERTIARY,
-    className: n()(t, c.partnerBadge)
+    className: l()(t, c.partnerBadge)
   })
 }

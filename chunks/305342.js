@@ -26,8 +26,8 @@ var n = s("735250"),
   L = s("570533"),
   R = s("971792"),
   h = s("629262"),
-  v = s("761966"),
-  p = s("893729"),
+  p = s("761966"),
+  v = s("893729"),
   x = s("838940"),
   O = s("882101"),
   A = s("11705"),
@@ -130,7 +130,7 @@ let b = e => {
         }),
         children: [(0, n.jsx)(u.Spacer, {
           size: 8
-        }), (0, n.jsx)(p.default, {
+        }), (0, n.jsx)(v.default, {
           role: c,
           guildId: s,
           className: D.roleMessagePreview
@@ -184,7 +184,7 @@ t.default = e => {
     canOpenModal: L,
     cannotOpenReason: R,
     isCheckingTrialEligibility: h
-  } = (0, M.default)(I, l, f, _), p = (0, r.useStateFromStores)([c.default], () => c.default.isSyncing), {
+  } = (0, M.default)(I, l, f, _), v = (0, r.useStateFromStores)([c.default], () => c.default.isSyncing), {
     activeSubscription: x,
     activeSubscriptionListing: b
   } = (0, N.default)(f), B = (null == b ? void 0 : b.id) === s, F = (null == x ? void 0 : x.status) === j.SubscriptionStatusTypes.CANCELED, [G, k] = i.useState(!1), [w, Q] = i.useState(!1), V = i.useCallback(e => {
@@ -235,10 +235,10 @@ t.default = e => {
           }) : (0, n.jsx)(u.Tooltip, {
             text: L ? null : R,
             "aria-label": null !== (t = L && R) && void 0 !== t && t,
-            children: e => (0, n.jsx)(v.default, {
+            children: e => (0, n.jsx)(p.default, {
               ...e,
               fullWidth: !0,
-              disabled: !L || p,
+              disabled: !L || v,
               submitting: h,
               onClick: m,
               onlyShineOnHover: !0,

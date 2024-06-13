@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return L
   },
   isPollMessageDirectlyInteractive: function() {
-    return O
+    return v
   },
   reactionForId: function() {
     return R
@@ -25,18 +25,18 @@ var s = n("278074"),
   f = n("375954"),
   E = n("594174"),
   _ = n("768581"),
-  m = n("176354"),
-  T = n("358085"),
+  T = n("176354"),
+  m = n("358085"),
   I = n("798628"),
-  h = n("79390"),
+  N = n("79390"),
   p = n("839963"),
-  N = n("897325"),
+  h = n("897325"),
   S = n("57101"),
   C = n("562293"),
-  g = n("981631"),
-  A = n("689938");
+  A = n("981631"),
+  g = n("689938");
 let M = {
-  channelId: g.EMPTY_STRING_SNOWFLAKE_ID,
+  channelId: A.EMPTY_STRING_SNOWFLAKE_ID,
   selectedAnswerIds: new Set,
   submitting: !1,
   editing: !1,
@@ -47,7 +47,7 @@ function R(e, t) {
   for (let n of e)
     if (("number" == typeof n.emoji.id ? "".concat(n.emoji.id) : n.emoji.id) === t) return n
 }
-let v = e => (0, s.match)(e).with({
+let O = e => (0, s.match)(e).with({
   isExpired: !0,
   isLeader: !0,
   didSelfVote: !0
@@ -73,7 +73,7 @@ let v = e => (0, s.match)(e).with({
   showResults: !0
 }, () => "notVoted").otherwise(() => "normalVote");
 
-function O(e) {
+function v(e) {
   return null == e.poll || f.default.getMessage(e.channel_id, e.id) === e && !0
 }
 
@@ -85,49 +85,49 @@ function x(e, t) {
     poll: r
   } = e;
   if (null == r) return;
-  let E = e.state === g.MessageStates.SENT,
+  let E = e.state === A.MessageStates.SENT,
     _ = E ? null != i ? i : (0, C.formatExpirationLabel)(r.expiry) : "",
-    m = null == _ && E,
+    T = null == _ && E,
     {
-      selectedAnswerIds: T,
-      submitting: h,
+      selectedAnswerIds: m,
+      submitting: N,
       editing: p,
-      showResults: N
+      showResults: h
     } = null !== (a = null != t ? t : (0, I.getPollState)(e.getChannelId(), e.id)) && void 0 !== a ? a : M,
     S = e.reactions,
-    A = !0;
-  if (!O(e)) {
+    g = !0;
+  if (!v(e)) {
     let t = f.default.getMessage(e.channel_id, e.id);
-    A = !e.isSearchHit && null != t, S = null !== (l = null == t ? void 0 : t.reactions) && void 0 !== l ? l : S
+    g = !e.isSearchHit && null != t, S = null !== (l = null == t ? void 0 : t.reactions) && void 0 !== l ? l : S
   }
-  let R = T.size > 0,
-    v = S.some(e => !0 === e.me_vote),
-    x = !p && v,
-    L = x || m || N,
-    D = E && A && (!v || p || L),
-    P = null === (s = d.default.getChannel(e.getChannelId())) || void 0 === s ? void 0 : null === (n = s.getGuildId) || void 0 === n ? void 0 : n.call(s),
-    y = null != P ? c.default.getSelfMember(P) : null,
+  let R = m.size > 0,
+    O = S.some(e => !0 === e.me_vote),
+    x = !p && O,
+    L = x || T || h,
+    P = E && g && (!O || p || L),
+    D = null === (s = d.default.getChannel(e.getChannelId())) || void 0 === s ? void 0 : null === (n = s.getGuildId) || void 0 === n ? void 0 : n.call(s),
+    y = null != D ? c.default.getSelfMember(D) : null,
     U = (0, o.hasAutomodQuarantinedProfile)(y),
     j = (0, u.isMemberCommunicationDisabled)(y);
   return {
     poll: r,
-    canTapAnswers: D,
-    canRemoveVote: x && E && !m,
+    canTapAnswers: P,
+    canRemoveVote: x && E && !T,
     canShowVoteCounts: L,
-    canSubmitVote: !h && R && !x && E && !U && !j,
+    canSubmitVote: !N && R && !x && E && !U && !j,
     expirationLabel: _,
     hasSelectedAnswer: R,
     hasVoted: x,
-    hasVoteRecorded: v,
+    hasVoteRecorded: O,
     isEditingVote: p,
-    isExpired: m,
-    isInteractive: A,
+    isExpired: T,
+    isInteractive: g,
     isSent: E,
     reactions: S,
-    selectedAnswerIds: T,
-    submitting: h,
+    selectedAnswerIds: m,
+    submitting: N,
     tapShouldOpenVotersModal: L,
-    showResults: N
+    showResults: h
   }
 }
 
@@ -143,23 +143,23 @@ function L(e, t) {
   if (null == I) return;
   let C = E.default.getCurrentUser();
   if (null == C) return;
-  let g = l.default.useReducedMotion,
+  let A = l.default.useReducedMotion,
     M = null === (o = d.default.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o),
-    O = (0, N.getAvatarUrl)(C, M),
+    v = (0, h.getAvatarUrl)(C, M),
     L = I.answers,
-    D = I.layout_type,
-    P = x(e, t, {
+    P = I.layout_type,
+    D = x(e, t, {
       formattedExpirationLabel: f
     });
-  if (null == P) return;
+  if (null == D) return;
   let {
     canTapAnswers: y,
     canRemoveVote: U,
     canShowVoteCounts: j,
     canSubmitVote: b,
-    expirationLabel: F = A.default.Messages.POLL_EXPIRED,
-    hasSelectedAnswer: B,
-    hasVoted: G,
+    expirationLabel: G = g.default.Messages.POLL_EXPIRED,
+    hasSelectedAnswer: F,
+    hasVoted: B,
     isEditingVote: k,
     isExpired: w,
     isInteractive: H,
@@ -168,7 +168,7 @@ function L(e, t) {
     submitting: K,
     tapShouldOpenVotersModal: W,
     showResults: z
-  } = P, Q = (0, h.getTotalVotes)(V), q = A.default.Messages.POLL_VOTES_COUNT.format({
+  } = D, Q = (0, N.getTotalVotes)(V), q = g.default.Messages.POLL_VOTES_COUNT.format({
     count: Q.toLocaleString()
   }), X = Math.max(...L.map(e => {
     var t, n;
@@ -181,10 +181,10 @@ function L(e, t) {
       c = null !== (n = null == d ? void 0 : null === (t = d.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
       f = Y.has(o),
       E = c >= X && 0 !== c,
-      T = G && null !== (l = null == d ? void 0 : d.me_vote) && void 0 !== l && l,
-      I = v({
-        didSelfVote: T,
-        hasVoted: G,
+      m = B && null !== (l = null == d ? void 0 : d.me_vote) && void 0 !== l && l,
+      I = O({
+        didSelfVote: m,
+        hasVoted: B,
         isExpired: w,
         isSelected: f,
         isLeader: E,
@@ -210,7 +210,7 @@ function L(e, t) {
             id: null == e.id ? null : "".concat(e.id),
             name: e.name,
             displayName: null == e.id ? r.default.convertSurrogateToName(e.name) : e.name,
-            src: null == e.id ? m.default.getURL(e.name) : _.default.getEmojiURL({
+            src: null == e.id ? T.default.getURL(e.name) : _.default.getEmojiURL({
               id: e.id,
               animated: o,
               size: n
@@ -225,18 +225,18 @@ function L(e, t) {
       },
       isSelected: f,
       isVictor: w && E,
-      didSelfVote: T,
+      didSelfVote: m,
       style: I,
-      shouldAnimateTransition: K && !g,
+      shouldAnimateTransition: K && !A,
       votesPercentage: Math.round(100 * (0 === Q ? 0 : c / Q)),
-      votes: (0, s.match)(D).with(a.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(c.toLocaleString(), ")")).otherwise(() => A.default.Messages.POLL_VOTES_COUNT.format({
+      votes: (0, s.match)(P).with(a.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(c.toLocaleString(), ")")).otherwise(() => g.default.Messages.POLL_VOTES_COUNT.format({
         count: c.toLocaleString()
       }))
     }
   }), J = (0, s.match)({
     isExpired: w,
     canSubmitVote: b,
-    hasVoted: G,
+    hasVoted: B,
     isEditingVote: k,
     canRemoveVote: U,
     isInteractive: H,
@@ -248,14 +248,14 @@ function L(e, t) {
   }, () => void 0).with({
     isEditingVote: !0
   }, () => ({
-    label: A.default.Messages.POLL_SUBMIT_VOTE,
+    label: g.default.Messages.POLL_SUBMIT_VOTE,
     presentation: "button",
-    enabled: B,
+    enabled: F,
     type: "submit"
   })).with({
     canRemoveVote: !0
   }, () => ({
-    label: A.default.Messages.POLL_REMOVE_VOTE,
+    label: g.default.Messages.POLL_REMOVE_VOTE,
     presentation: "secondaryButton",
     enabled: !0,
     type: "remove"
@@ -263,16 +263,16 @@ function L(e, t) {
     hasVoted: !1,
     showResults: !0
   }, () => ({
-    label: A.default.Messages.POLL_HIDE_VOTES,
+    label: g.default.Messages.POLL_HIDE_VOTES,
     presentation: "secondaryButton",
     enabled: !0,
     type: "showVotes"
   })).otherwise(() => ({
-    label: A.default.Messages.POLL_SUBMIT_VOTE,
+    label: g.default.Messages.POLL_SUBMIT_VOTE,
     presentation: "button",
     enabled: b,
     type: "submit"
-  })), $ = (0, T.isIOS)() ? A.default.Messages.POLL_TAP_FOR_VOTERS_A11Y_IOS : A.default.Messages.POLL_TAP_FOR_VOTERS_A11Y_ANDROID, ee = (0, s.match)({
+  })), $ = (0, m.isIOS)() ? g.default.Messages.POLL_TAP_FOR_VOTERS_A11Y_IOS : g.default.Messages.POLL_TAP_FOR_VOTERS_A11Y_ANDROID, ee = (0, s.match)({
     isExpired: w,
     isInteractive: H,
     isEditingVote: k
@@ -280,25 +280,25 @@ function L(e, t) {
     isInteractive: !1,
     isExpired: !1
   }, () => ({
-    label: A.default.Messages.POLL_NOT_INTERACTIVE,
+    label: g.default.Messages.POLL_NOT_INTERACTIVE,
     presentation: "text",
     enabled: !1
   })).with({
     isEditingVote: !0
   }, () => ({
-    label: A.default.Messages.CANCEL,
+    label: g.default.Messages.CANCEL,
     presentation: "textButton",
     enabled: !0,
     type: "cancel"
   })).otherwise(() => ({
     label: q,
-    secondaryLabel: F,
+    secondaryLabel: G,
     accessibilityHint: $,
     presentation: "text",
     enabled: !0,
     type: "showVoterDetails"
-  })), et = !H || w || G || z ? void 0 : {
-    label: A.default.Messages.POLL_SHOW_VOTES,
+  })), et = !H || w || B || z ? void 0 : {
+    label: g.default.Messages.POLL_SHOW_VOTES,
     presentation: "textButton",
     enabled: !0,
     type: "showVotes"
@@ -312,7 +312,7 @@ function L(e, t) {
     isExpired: !0
   }, () => void 0).with({
     canSelectMultipleAnswers: !0
-  }, () => A.default.Messages.POLL_SELECT_MULTIPLE_ANSWERS).otherwise(() => A.default.Messages.POLL_SELECT_ONE_ANSWER);
+  }, () => g.default.Messages.POLL_SELECT_MULTIPLE_ANSWERS).otherwise(() => g.default.Messages.POLL_SELECT_ONE_ANSWER);
   return {
     question: I.question,
     promptLabel: es,
@@ -331,21 +331,21 @@ function L(e, t) {
       canSelectMultipleAnswers: !0
     }, () => p.PollChatAnswerInteractionType.CHECKBOXES).exhaustive(),
     answerTapAccessibilityLabel: W ? $ : void 0,
-    layoutType: D,
+    layoutType: P,
     resources: (0, S.default)({
       theme: c,
-      layoutType: D
+      layoutType: P
     }),
     containerStyle: "normal",
     primaryAction: J,
     isInteractive: H,
     canTapAnswers: y,
     canSelectMultipleAnswers: en,
-    hasSelectedAnswer: B,
+    hasSelectedAnswer: F,
     canShowVoteCounts: j,
-    hasVoted: G,
+    hasVoted: B,
     isExpired: w,
-    myAvatarUrl: O,
+    myAvatarUrl: v,
     secondaryAction: ee,
     tertiaryAction: et
   }

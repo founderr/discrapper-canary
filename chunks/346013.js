@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return B
+    return F
   }
 }), n("47120");
 var s = n("735250"),
@@ -16,39 +16,39 @@ var s = n("735250"),
   f = n("481060"),
   E = n("607070"),
   _ = n("100527"),
-  m = n("367907"),
-  T = n("1585"),
+  T = n("367907"),
+  m = n("1585"),
   I = n("841762"),
-  h = n("336197"),
+  N = n("336197"),
   p = n("118139"),
-  N = n("348238"),
+  h = n("348238"),
   S = n("38267"),
   C = n("484459"),
-  g = n("103575"),
-  A = n("695346"),
+  A = n("103575"),
+  g = n("695346"),
   M = n("271383"),
   R = n("594174"),
-  v = n("806361"),
-  O = n("768581"),
+  O = n("806361"),
+  v = n("768581"),
   x = n("900849"),
   L = n("506071"),
-  D = n("495114"),
-  P = n("170140"),
+  P = n("495114"),
+  D = n("170140"),
   y = n("981631"),
   U = n("959517"),
   j = n("689938"),
   b = n("902168"),
-  F = n("527455");
+  G = n("527455");
 
-function B(e) {
+function F(e) {
   var t, n, l;
   let {
     embedUrl: r,
-    message: B,
-    channel: G
-  } = e, k = (0, P.useMediaPostEmbedData)(r, B), {
+    message: F,
+    channel: B
+  } = e, k = (0, D.useMediaPostEmbedData)(r, F), {
     setPopout: w
-  } = (0, S.default)(B.id, U.DEFAULT_POPOUTS), H = (0, N.useContextMenuMessage)(B, G, w, !0), V = A.GifAutoPlay.useSetting(), Y = (0, L.useIsWindowFocused)(), [K, W] = a.useState(!1), [z, Q] = a.useState((null == k ? void 0 : k.coverImage) == null), q = (0, c.useStateFromStores)([E.default], () => E.default.useReducedMotion), X = (0, c.useStateFromStores)([M.default, R.default], () => {
+  } = (0, S.default)(F.id, U.DEFAULT_POPOUTS), H = (0, h.useContextMenuMessage)(F, B, w, !0), V = g.GifAutoPlay.useSetting(), Y = (0, L.useIsWindowFocused)(), [K, W] = a.useState(!1), [z, Q] = a.useState((null == k ? void 0 : k.coverImage) == null), q = (0, c.useStateFromStores)([E.default], () => E.default.useReducedMotion), X = (0, c.useStateFromStores)([M.default, R.default], () => {
     var e;
     return M.default.isMember(null == k ? void 0 : k.guildId, null === (e = R.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
   }, [k]), Z = (0, c.useStateFromStores)([M.default], () => (null == k ? void 0 : k.authorId) != null ? M.default.getMember(k.guildId, k.authorId) : null), [J, $] = a.useMemo(() => {
@@ -61,32 +61,32 @@ function B(e) {
   }, [W]), ea = a.useCallback(() => {
     W(!1)
   }, [W]), el = a.useCallback(async () => {
-    null != k && ((0, m.trackWithMetadata)(y.AnalyticEvents.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
+    null != k && ((0, T.trackWithMetadata)(y.AnalyticEvents.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
       media_post_id: k.threadId,
-      channel_id: G.id,
+      channel_id: B.id,
       can_access: k.canAccess,
       is_member: X
-    }), k.canAccess ? (0, h.default)(y.Routes.CHANNEL(k.guildId, k.threadId, k.messageId)) : X ? (0, h.default)(y.Routes.CHANNEL(k.guildId, k.parentChannelId)) : await x.startLurking(k.guildId, {}, {
+    }), k.canAccess ? (0, N.default)(y.Routes.CHANNEL(k.guildId, k.threadId, k.messageId)) : X ? (0, N.default)(y.Routes.CHANNEL(k.guildId, k.parentChannelId)) : await x.startLurking(k.guildId, {}, {
       channelId: k.parentChannelId
     }))
-  }, [k, G, X]), ei = a.useCallback(() => (o()((null == k ? void 0 : k.authorId) != null, "Author Id cannot be null when loading user profile"), (0, C.maybeFetchUserProfileForPopout)(k.authorId, k.avatarUrl, {
+  }, [k, B, X]), ei = a.useCallback(() => (o()((null == k ? void 0 : k.authorId) != null, "Author Id cannot be null when loading user profile"), (0, C.maybeFetchUserProfileForPopout)(k.authorId, k.avatarUrl, {
     guildId: k.guildId,
-    channelId: G.id
-  })), [k, G]);
+    channelId: B.id
+  })), [k, B]);
   if (null == k) return null;
-  let er = (e, t) => (o()(null != k.authorId, "Author Id cannot be null when rendering user popout"), (0, s.jsx)(g.default, {
+  let er = (e, t) => (o()(null != k.authorId, "Author Id cannot be null when rendering user popout"), (0, s.jsx)(A.default, {
       ...e,
       location: "MediaPostEmbed",
       userId: k.authorId,
       guildId: k.guildId,
-      channelId: G.id,
-      messageId: B.id,
+      channelId: B.id,
+      messageId: F.id,
       roleId: $,
       newAnalyticsLocations: t
     })),
-    eo = (0, O.getAvatarDecorationURL)({
+    eo = (0, v.getAvatarDecorationURL)({
       avatarDecoration: (null == Z ? void 0 : Z.avatarDecoration) != null ? null == Z ? void 0 : Z.avatarDecoration : null === (t = k.user) || void 0 === t ? void 0 : t.avatarDecoration,
-      size: (0, T.getDecorationSizeForAvatarSize)(f.AvatarSizes.SIZE_40),
+      size: (0, m.getDecorationSizeForAvatarSize)(f.AvatarSizes.SIZE_40),
       canAnimate: et
     }),
     eu = null === (n = k.user) || void 0 === n ? void 0 : n.getAvatarURL(k.guildId, 40, et),
@@ -102,7 +102,7 @@ function B(e) {
       onMouseEnter: es,
       onMouseLeave: ea,
       children: [!z && (!0 === k.shouldShowBlurredThumbnailImage ? (0, s.jsx)("img", {
-        src: F,
+        src: G,
         alt: j.default.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
         className: i()(b.thumbnail, {
           [b.spoiler]: k.shouldSpoiler
@@ -126,7 +126,7 @@ function B(e) {
           className: b.thumbnailOverlay,
           children: (0, s.jsxs)("div", {
             className: b.thumbnailOverlayCta,
-            children: [(0, s.jsx)(D.default, {
+            children: [(0, s.jsx)(P.default, {
               color: d.default.WHITE
             }), (0, s.jsx)(f.Text, {
               variant: "text-sm/semibold",
@@ -173,7 +173,7 @@ function B(e) {
           className: b.descriptionFooterContainer,
           children: [(0, s.jsxs)("div", {
             className: b.descriptionFooterChannelName,
-            children: [null != k.channelName && (0, s.jsx)(v.default, {
+            children: [null != k.channelName && (0, s.jsx)(O.default, {
               className: b.mediaChannelIcon
             }), (0, s.jsx)(f.Clickable, {
               onClick: el,

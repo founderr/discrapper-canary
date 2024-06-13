@@ -22,8 +22,8 @@ var n = s("735250"),
   L = s("569984"),
   R = s("497505"),
   h = s("918701"),
-  v = s("242755"),
-  p = s("5881"),
+  p = s("242755"),
+  v = s("5881"),
   x = s("566078"),
   O = s("602667"),
   A = s("340100"),
@@ -56,7 +56,7 @@ t.default = function(e) {
               i = (null == e ? void 0 : e.id) != null ? (0, h.getQuestByApplicationId)(t, e.id) : null;
             if (null != i && (null === (n = i.userStatus) || void 0 === n ? void 0 : n.claimedAt) == null) return i
           }
-          if ((0, v.isEligibleForQuestPlaytime)({
+          if ((0, p.isEligibleForQuestPlaytime)({
               location: b.QuestsExperimentLocations.QUEST_CHANNEL_CALL_HEADER
             }))
             for (let n of e) {
@@ -106,7 +106,7 @@ t.default = function(e) {
   }, [X]), ed = (0, P.useHandleClaimQuestsReward)({
     quest: X,
     location: R.QuestContent.QUEST_LIVE_STREAM
-  }), ec = i.useMemo(() => (0, p.getQuestLogger)({
+  }), ec = i.useMemo(() => (0, v.getQuestLogger)({
     quest: X,
     location: b.QuestsExperimentLocations.QUEST_CHANNEL_CALL_HEADER
   }), [X]), ef = (0, g.useIsQuestExpired)(X);

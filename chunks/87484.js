@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var r = n("153832"),
-  l = n("481060"),
+var l = n("153832"),
+  r = n("481060"),
   a = n("976255"),
   s = n("667"),
   o = n("626135"),
@@ -22,25 +22,25 @@ function d(e) {
     analyticsLocations: S,
     analyticsLocationObject: p,
     contextKey: m
-  } = e, h = !1, v = (0, r.v4)();
-  (0, l.openModalLazy)(async () => {
+  } = e, h = !1, T = (0, l.v4)();
+  (0, r.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("40326"), n.e("23357"), n.e("15972"), n.e("12013"), n.e("6416"), n.e("43906"), n.e("32776"), n.e("95900"), n.e("78085")]).then(n.bind(n, "409600"));
     return n => {
       let {
-        onClose: r,
-        ...l
+        onClose: l,
+        ...r
       } = n;
       return (0, i.jsx)(e, {
-        ...l,
-        loadId: v,
+        ...r,
+        loadId: T,
         applicationId: t,
         skuId: d,
         analyticsLocations: S,
         analyticsLocationObject: p,
         onClose: e => {
-          r(), null == c || c(e)
+          l(), null == c || c(e)
         },
         onComplete: e => {
           h = !0, null == f || f(e)
@@ -51,7 +51,7 @@ function d(e) {
     contextKey: m,
     onCloseCallback: () => {
       !h && o.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-        load_id: v,
+        load_id: T,
         payment_type: u.PurchaseTypeToAnalyticsPaymentType[u.PurchaseTypes.ONE_TIME],
         location: p,
         is_gift: !1,

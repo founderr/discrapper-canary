@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return T
   }
 });
 var s = n("735250");
@@ -18,20 +18,20 @@ var a = n("120356"),
   E = n("689938"),
   _ = n("807850");
 
-function m(e) {
+function T(e) {
   let {
     message: t,
     compact: n,
     usernameHook: a
-  } = e, m = (0, r.default)(t), T = a(m), {
+  } = e, T = (0, r.default)(t), m = a(T), {
     avatarSrc: I,
     eventHandlers: {
-      onMouseEnter: h,
+      onMouseEnter: N,
       onMouseLeave: p
     }
   } = (0, c.useAutomodAvatar)(!0);
   return (0, s.jsx)("div", {
-    onMouseEnter: h,
+    onMouseEnter: N,
     onMouseLeave: p,
     children: (0, s.jsx)(d.default, {
       className: l()(_.mainContainer, {
@@ -72,8 +72,8 @@ function m(e) {
             [_.compact]: n
           }),
           children: E.default.Messages.GUILD_REPORT_FALSE_ALARM_SYSTEM_MESSAGE_SHORT.format({
-            username: m.nick,
-            usernameHook: T
+            username: T.nick,
+            usernameHook: m
           })
         })]
       })

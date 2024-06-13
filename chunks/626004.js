@@ -14,13 +14,13 @@ var l = i("735250"),
   d = i("158010"),
   u = i("284199"),
   p = i("63063"),
-  m = i("49012"),
-  _ = i("981631"),
-  f = i("689938"),
+  f = i("49012"),
+  m = i("981631"),
+  _ = i("689938"),
   h = i("409091");
-let g = p.default.getArticleURL(_.HelpdeskArticles.BOT_DATA_ACCESS);
+let I = p.default.getArticleURL(m.HelpdeskArticles.BOT_DATA_ACCESS);
 
-function I(e) {
+function g(e) {
   let {
     icon: t,
     heading: i,
@@ -60,53 +60,53 @@ function v(e) {
     hasMessageContent: i,
     hasGuildPresences: n,
     hasGuildMembers: p,
-    hasIntents: _
+    hasIntents: m
   } = (0, o.useBotDataAccess)({
     flags: null == t ? void 0 : t.flags
   }), v = a.useCallback(() => {
-    (null == t ? void 0 : t.privacy_policy_url) != null && (0, m.handleClick)({
+    (null == t ? void 0 : t.privacy_policy_url) != null && (0, f.handleClick)({
       href: t.privacy_policy_url
     })
   }, [null == t ? void 0 : t.privacy_policy_url]);
   return (0, l.jsxs)(l.Fragment, {
-    children: [_ && (0, l.jsx)("div", {
+    children: [m && (0, l.jsx)("div", {
       className: h.intentsListHeading,
       children: (0, l.jsx)(r.Text, {
         variant: "text-md/normal",
-        children: f.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_INTENTS_LIST_HEADING
+        children: _.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_INTENTS_LIST_HEADING
       })
     }), (0, l.jsxs)("div", {
       className: h.intentsContainer,
-      children: [_ && (0, l.jsxs)("ul", {
+      children: [m && (0, l.jsxs)("ul", {
         className: h.intentsList,
-        children: [i && (0, l.jsx)(I, {
+        children: [i && (0, l.jsx)(g, {
           icon: c.default,
-          heading: f.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_MESSAGE_CONTENT_HEADING,
-          body: f.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_MESSAGE_CONTENT_BODY
-        }), n && (0, l.jsx)(I, {
+          heading: _.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_MESSAGE_CONTENT_HEADING,
+          body: _.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_MESSAGE_CONTENT_BODY
+        }), n && (0, l.jsx)(g, {
           icon: u.default,
-          heading: f.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_PRESENCES_HEADING,
-          body: f.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_PRESENCES_BODY
-        }), p && (0, l.jsx)(I, {
+          heading: _.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_PRESENCES_HEADING,
+          body: _.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_PRESENCES_BODY
+        }), p && (0, l.jsx)(g, {
           icon: d.default,
-          heading: f.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_MEMBERS_HEADING,
-          body: f.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_MEMBERS_BODY
+          heading: _.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_MEMBERS_HEADING,
+          body: _.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_MEMBERS_BODY
         })]
       }), (0, l.jsxs)("div", {
         className: s()({
-          [h.hasSeparator]: _
+          [h.hasSeparator]: m
         }),
         children: [(0, l.jsx)(r.Text, {
           variant: "text-sm/normal",
           color: "header-secondary",
-          children: f.default.Messages.BOTS_DATA_ACCESS_BASELINE.format({
-            helpCenterUrl: g
+          children: _.default.Messages.BOTS_DATA_ACCESS_BASELINE.format({
+            helpCenterUrl: I
           })
         }), (null == t ? void 0 : t.privacy_policy_url) != null && (0, l.jsx)(r.Text, {
           variant: "text-sm/normal",
           color: "header-secondary",
           className: h.privacyPolicy,
-          children: f.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_PRIVACY_POLICY_V2.format({
+          children: _.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_PRIVACY_POLICY_V2.format({
             onClick: v
           })
         })]

@@ -1,20 +1,20 @@
 "use strict";
-n.r(e), n.d(e, {
+E.r(t), E.d(t, {
   default: function() {
-    return l
+    return A
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("120356"),
-  o = n.n(r),
-  a = n("5507");
+var _ = E("735250");
+E("470079");
+var s = E("120356"),
+  T = E.n(s),
+  a = E("5507");
 
-function l(t) {
+function A(e) {
   let {
-    className: e
-  } = t;
-  return (0, i.jsx)("div", {
-    className: o()(a.image, e)
+    className: t
+  } = e;
+  return (0, _.jsx)("div", {
+    className: T()(a.image, t)
   })
 }

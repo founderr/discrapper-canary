@@ -1,28 +1,28 @@
 "use strict";
 n.r(t), n.d(t, {
   Banner: function() {
-    return s
+    return a
   }
 });
 var i = n("735250"),
-  l = n("470079"),
-  a = n("777207"),
-  r = n("156440");
+  r = n("470079"),
+  l = n("777207"),
+  s = n("156440");
 
-function s(e) {
+function a(e) {
   let {
     title: t,
     subtitle: n,
-    iconSrc: s,
+    iconSrc: a,
     backgroundSrc: o,
     animatedBackgroundSrc: u,
     prefersReducedMotion: d = !0
-  } = e, c = l.useMemo(() => {
-    let e = null != o ? o : s;
+  } = e, c = r.useMemo(() => {
+    let e = null != o ? o : a;
     if (null != e) return {
       "--custom-background-url": "url(".concat(e.toString(), ")")
     }
-  }, [o, s]), p = l.useMemo(() => {
+  }, [o, a]), p = r.useMemo(() => {
     if (null == o) return;
     let e = {
       "--custom-background-static": "url(".concat(o.toString())
@@ -30,30 +30,30 @@ function s(e) {
     return !d && null != u && (e["--custom-background-animated"] = "url(".concat(u.toString(), ")")), e
   }, [u, o, d]);
   return (0, i.jsxs)("div", {
-    className: r.wrapper,
+    className: s.wrapper,
     children: [(0, i.jsx)("div", {
-      className: r.background,
+      className: s.background,
       style: c
     }), (0, i.jsxs)("div", {
-      className: r.content,
-      children: [null != s && (0, i.jsx)("div", {
-        className: r.icon,
+      className: s.content,
+      children: [null != a && (0, i.jsx)("div", {
+        className: s.icon,
         children: (0, i.jsx)("img", {
-          src: s.toString(),
+          src: a.toString(),
           alt: ""
         })
       }), (0, i.jsxs)("div", {
-        children: [(0, i.jsx)(a.Text, {
+        children: [(0, i.jsx)(l.Text, {
           variant: "heading-xl/bold",
           tag: "div",
           children: t
-        }), null != n && (0, i.jsxs)(a.Text, {
+        }), null != n && (0, i.jsxs)(l.Text, {
           variant: "text-sm/normal",
           children: ["“", n, "”"]
         })]
       })]
     }), null != o ? (0, i.jsx)("div", {
-      className: r.image,
+      className: s.image,
       style: p
     }) : null]
   })

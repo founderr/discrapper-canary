@@ -14,15 +14,15 @@ var i, a, l = n("735250"),
   f = n("237997"),
   h = n("285952"),
   p = n("739563"),
-  g = n("998502"),
-  m = n("13140"),
+  m = n("998502"),
+  g = n("13140"),
   E = n("658785"),
   S = n("981631"),
   v = n("689938"),
   y = n("836394"),
   O = n("611273");
 
-function C(e, t, n) {
+function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -30,14 +30,14 @@ function C(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(a = i || (i = {})).GENERAL = "GENERAL", a.VOICE = "VOICE", a.DEVELOPER = "DEVELOPER";
-let T = () => [{
+let C = () => [{
     value: S.OverlayAvatarSizes.LARGE,
     name: v.default.Messages.AVATAR_SIZE_OPTION_LARGE
   }, {
     value: S.OverlayAvatarSizes.SMALL,
     name: v.default.Messages.AVATAR_SIZE_OPTION_SMALL
   }],
-  N = () => [{
+  I = () => [{
     value: S.OverlayDisplayNames.ALWAYS,
     name: v.default.Messages.DISPLAY_OPTION_ALWAYS
   }, {
@@ -47,7 +47,7 @@ let T = () => [{
     value: S.OverlayDisplayNames.NEVER,
     name: v.default.Messages.DISPLAY_OPTION_NEVER
   }],
-  I = () => [{
+  N = () => [{
     value: S.OverlayDisplayUsers.ALWAYS,
     name: v.default.Messages.DISPLAY_OPTION_ALWAYS
   }, {
@@ -66,8 +66,8 @@ function _() {
     notifications_position: t ? e : null,
     text_notifications_mode: f.default.getTextChatNotificationMode(),
     text_opacity_slider: f.default.getTextWidgetOpacity(),
-    hotkey: null != n ? (0, m.toString)(n.shortcut) : null,
-    text_activation_hotkey: null != i ? (0, m.toString)(i.shortcut) : null
+    hotkey: null != n ? (0, g.toString)(n.shortcut) : null,
+    text_activation_hotkey: null != i ? (0, g.toString)(i.shortcut) : null
   })
 }
 class A extends s.PureComponent {
@@ -202,7 +202,7 @@ class A extends s.PureComponent {
         className: O.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeAvatarSizeMode,
-          options: T(),
+          options: C(),
           value: e,
           size: r.RadioGroup.Sizes.SMALL
         })
@@ -211,7 +211,7 @@ class A extends s.PureComponent {
         className: O.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeDisplayNameMode,
-          options: N(),
+          options: I(),
           value: t,
           size: r.RadioGroup.Sizes.SMALL
         })
@@ -220,7 +220,7 @@ class A extends s.PureComponent {
         className: O.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeDisplayUserMode,
-          options: I(),
+          options: N(),
           value: n,
           size: r.RadioGroup.Sizes.SMALL
         })
@@ -253,7 +253,7 @@ class A extends s.PureComponent {
             value: 4,
             label: "Out of Memory"
           }],
-          onChange: e => null != e && g.default.crash(e)
+          onChange: e => null != e && m.default.crash(e)
         })
       })
     })
@@ -266,13 +266,13 @@ class A extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), C(this, "state", {
+    super(...e), T(this, "state", {
       selectedSection: "GENERAL"
-    }), C(this, "handleSelectSection", e => {
+    }), T(this, "handleSelectSection", e => {
       this.setState({
         selectedSection: e
       })
-    }), C(this, "handleToggleTextChatNotifications", () => {
+    }), T(this, "handleToggleTextChatNotifications", () => {
       let {
         ENABLED: e,
         DISABLED: t

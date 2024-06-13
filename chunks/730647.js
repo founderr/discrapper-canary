@@ -33,18 +33,18 @@ function d(e) {
     includeSoftDeleted: d,
     countryCode: f,
     dontFetchWhileTrue: S
-  } = e, g = (0, l.useStateFromStores)([s.default], () => s.default.isConnected()), p = (0, l.useStateFromStores)([u.default], () => null != t ? u.default.getSubscriptionGroupListingsForGuildFetchState(t) : u.FetchState.FETCHED), h = i.useRef(c), E = i.useCallback(() => {
+  } = e, g = (0, l.useStateFromStores)([s.default], () => s.default.isConnected()), p = (0, l.useStateFromStores)([u.default], () => null != t ? u.default.getSubscriptionGroupListingsForGuildFetchState(t) : u.FetchState.FETCHED), E = i.useRef(c), _ = i.useCallback(() => {
     if (null == t || !g || !0 === S) return;
     let e = u.default.getSubscriptionGroupListingsForGuildFetchState(t);
-    (h.current || e === u.FetchState.NOT_FETCHED) && (h.current = !1, o.fetchAllSubscriptionListingsDataForGuild(t, {
+    (E.current || e === u.FetchState.NOT_FETCHED) && (E.current = !1, o.fetchAllSubscriptionListingsDataForGuild(t, {
       includeSoftDeleted: d,
       countryCode: f
     }))
-  }, [g, t, d, f, S]), _ = i.useMemo(() => p === u.FetchState.FETCHED && !0 !== h.current, [p, h]);
+  }, [g, t, d, f, S]), h = i.useMemo(() => p === u.FetchState.FETCHED && !0 !== E.current, [p, E]);
   return (0, r.jsx)(a.Provider, {
     value: {
-      listingsLoaded: _,
-      fetchGroupListingsForGuild: E
+      listingsLoaded: h,
+      fetchGroupListingsForGuild: _
     },
     children: n
   })

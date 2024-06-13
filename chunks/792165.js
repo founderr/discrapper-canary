@@ -32,7 +32,7 @@ function L(e) {
     markAsDismissed: L
   } = e, R = (0, i.useStateFromStores)([f.default], () => f.default.getCurrentUser());
   let h = (t = null == R ? void 0 : R.premiumType) === S.PremiumTypes.TIER_2 ? N.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_TIER_2 : null == t ? N.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB : N.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_TIER_2,
-    v = C.default.canUseCustomCallSounds(R);
+    p = C.default.canUseCustomCallSounds(R);
   return (0, n.jsxs)(c.default, {
     isShown: !0,
     type: c.FeatureBorderTypes.PREMIUM,
@@ -60,7 +60,7 @@ function L(e) {
     }), (0, n.jsx)(r.Text, {
       variant: "text-sm/normal",
       children: h
-    }), v ? (0, n.jsx)(l.Button, {
+    }), p ? (0, n.jsx)(l.Button, {
       onClick: function() {
         o.default.open(m.UserSettingsSections.VOICE, T.SOUNDBOARD_SUBSECTION), null == s || s(), null == L || L(E.ContentDismissActionType.PRIMARY)
       },

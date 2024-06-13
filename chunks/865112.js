@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   FOR_YOU_ICONS: function() {
-    return g
+    return A
   },
   getBackground: function() {
-    return O
+    return v
   },
   getIcon: function() {
     return M
@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return R
   },
   getMask: function() {
-    return v
+    return O
   }
 });
 var s, a, l, i, r = n("692547"),
@@ -24,33 +24,33 @@ var s, a, l, i, r = n("692547"),
   f = n("387661"),
   E = n("659953"),
   _ = n("319707"),
-  m = n("584914"),
-  T = n("334702"),
+  T = n("584914"),
+  m = n("334702"),
   I = n("333722"),
-  h = n("549931"),
+  N = n("549931"),
   p = n("178561"),
-  N = n("39863"),
+  h = n("39863"),
   S = n("130312");
 (s = l || (l = {})).CHECKED = "CHECKED", s.FRIENDS = "FRIENDS", s.SHARE_SCREEN = "SHARE_SCREEN", s.NEW_MESSAGE = "NEW_MESSAGE";
 let C = {
   CHECKED: f,
   FRIENDS: _,
-  SHARE_SCREEN: N,
-  NEW_MESSAGE: h
+  SHARE_SCREEN: h,
+  NEW_MESSAGE: N
 };
 (a = i || (i = {})).MISSED_MESSAGES = "MISSED_MESSAGES", a.FRIEND_REQUEST_REMINDER = "FRIEND_REQUEST_REMINDER", a.SCHEDULED_GUILD_EVENT = "SCHEDULED_GUILD_EVENT", a.TOP_MESSAGES = "TOP_MESSAGES", a.NOTIFICATION_CENTER = "NOTIFICATION_CENTER", a.UPDATE_PROFILE = "UPDATE_PROFILE", a.FIND_FRIENDS = "FIND_FRIENDS", a.ADD_FRIEND = "ADD_FRIEND", a.FIRST_MESSAGE = "FIRST_MESSAGE";
-let g = {
+let A = {
     MISSED_MESSAGES: I,
-    FRIEND_REQUEST_REMINDER: m,
+    FRIEND_REQUEST_REMINDER: T,
     SCHEDULED_GUILD_EVENT: E,
-    TOP_MESSAGES: T,
+    TOP_MESSAGES: m,
     NOTIFICATION_CENTER: c,
     UPDATE_PROFILE: S,
     FIND_FRIENDS: d,
     ADD_FRIEND: d,
     FIRST_MESSAGE: p
   },
-  A = e => {
+  g = e => {
     switch (e.item_enum) {
       case o.ItemEnum.ADD_FRIEND:
         return "ADD_FRIEND";
@@ -67,7 +67,7 @@ let g = {
   M = e => {
     switch (e.type) {
       case "lifecycle_item":
-        return A(e);
+        return g(e);
       case "missed_messages":
         return "MISSED_MESSAGES";
       case "friend_request_reminder":
@@ -84,7 +84,7 @@ let g = {
     if ("icHighlight" === e) return "TOP_MESSAGES";
     return "NOTIFICATION_CENTER"
   },
-  v = e => {
+  O = e => {
     switch (e) {
       case o.NotificationCenterItems.GO_LIVE_PUSH:
         return {
@@ -112,7 +112,7 @@ let g = {
         return null
     }
   },
-  O = e => {
+  v = e => {
     switch (e.item_enum) {
       case o.ItemEnum.UPDATE_PROFILE:
         return u.PROFILE_BACKGROUND;

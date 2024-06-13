@@ -1,16 +1,16 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return E
+    return u
   }
 });
-var n = s("503438"),
-  r = s("802856"),
-  a = s("420660"),
-  u = s("789407"),
-  i = s("630186"),
-  l = s("250889");
+var i = n("503438"),
+  r = n("802856"),
+  s = n("420660"),
+  a = n("789407"),
+  l = n("630186"),
+  o = n("250889");
 
-function E(e) {
-  return (0, r.default)(e) ? l.XBOX_APPLICATION_ID_PREFIX + e.name : (0, n.default)(e) && null != e.party && null != e.party.id ? u.SpotifyApplication.id : (0, a.default)(e) && null != e.url ? i.TWITCH_APPLICATION_ID_PREFIX + e.url : null != e.application_id ? e.application_id : null
+function u(e) {
+  return (0, r.default)(e) ? o.XBOX_APPLICATION_ID_PREFIX + e.name : (0, i.default)(e) && null != e.party && null != e.party.id ? a.SpotifyApplication.id : (0, s.default)(e) && null != e.url ? l.TWITCH_APPLICATION_ID_PREFIX + e.url : null != e.application_id ? e.application_id : null
 }

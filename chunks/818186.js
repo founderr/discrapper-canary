@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return m
   }
 });
 var s = n("735250");
@@ -17,16 +17,16 @@ var a = n("442837"),
   f = n("626135"),
   E = n("981631"),
   _ = n("689938"),
-  m = n("966171");
+  T = n("966171");
 
-function T(e) {
+function m(e) {
   let {
     closePopout: t
   } = e, n = (0, a.useStateFromStores)([d.default], () => d.default.getPendingCount());
   return (0, s.jsx)(l.TooltipContainer, {
     text: _.default.Messages.VIEW_FRIEND_REQUESTS,
     children: (0, s.jsxs)(l.Clickable, {
-      className: m.friendRequestsButton,
+      className: T.friendRequestsButton,
       onClick: () => {
         f.default.track(E.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
           action_type: o.NotificationCenterActionTypes.FRIEND_REQUESTS_BUTTON_CLICK

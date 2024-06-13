@@ -7,16 +7,16 @@ n.r(t), n.d(t, {
     return I
   },
   useDropsExperiment: function() {
-    return m
-  },
-  useFetchInitialDropProgress: function() {
-    return h
-  },
-  useShowEligibilityEnrollmentTooltip: function() {
     return T
   },
-  useTrackDropsImpression: function() {
+  useFetchInitialDropProgress: function() {
     return N
+  },
+  useShowEligibilityEnrollmentTooltip: function() {
+    return m
+  },
+  useTrackDropsImpression: function() {
+    return h
   }
 });
 var s = n("470079"),
@@ -32,7 +32,7 @@ var s = n("470079"),
   E = n("853197"),
   _ = n("702512");
 
-function m(e) {
+function T(e) {
   let t, n;
   let s = c.DropsForGoLiveFortniteExperiment.useExperiment({
     location: "59cc4b_1"
@@ -49,10 +49,10 @@ function m(e) {
   }
 }
 
-function T(e) {
+function m(e) {
   var t;
   let n = (0, a.useStateFromStores)([f.default], () => f.default.serverEligibleByQuestIds),
-    i = m(e),
+    i = T(e),
     r = function(e) {
       let t = (0, a.useStateFromStoresArray)([u.default], () => u.default.getGamesSeen(!1)),
         n = s.useMemo(() => (0, E.getEligibleGameLastSeenStartTimeSeconds)(), []);
@@ -64,21 +64,21 @@ function T(e) {
   });
   let c = null == i ? void 0 : null === (t = i.config) || void 0 === t ? void 0 : t.dropsEnabled,
     _ = null == i ? void 0 : i.drop,
-    T = null == _ || (0, E.getDropExpired)(_);
+    m = null == _ || (0, E.getDropExpired)(_);
   return s.useEffect(() => {
-    c && !T && r && null != _ && l.default.wait(() => {
+    c && !m && r && null != _ && l.default.wait(() => {
       null == o && (0, d.fetchDropsEligibility)(_.dropsQuestId)
     })
-  }, [o, _, c, T, r]), null != _ && !!c && !T && o && r
+  }, [o, _, c, m, r]), null != _ && !!c && !m && o && r
 }
 
 function I() {
-  let e = m(_.PartnerGame.FORTNITE);
+  let e = T(_.PartnerGame.FORTNITE);
   return null == e ? void 0 : e.config.dropsEnabled
 }
 
-function h(e) {
-  let t = m(e),
+function N(e) {
+  let t = T(e),
     n = null == t ? void 0 : t.drop,
     l = (0, a.useStateFromStores)([f.default], () => null != n && f.default.serverEligibleByQuestIds[n.dropsQuestId]),
     i = (0, a.useStateFromStores)([f.default], () => f.default.hasInitialProgressFetched);
@@ -89,23 +89,23 @@ function h(e) {
 
 function p(e, t, n, s) {
   var l;
-  let i = m(e),
+  let i = T(e),
     u = null == i ? void 0 : i.drop,
     d = (0, a.useStateFromStores)([f.default], () => null != u && f.default.serverEligibleByQuestIds[u.dropsQuestId]),
     c = (0, a.useStateFromStores)([f.default], () => f.default.getIsPartnerGameQuestComplete(e)),
     _ = (0, E.doesGameTitleMatchList)(null == t ? void 0 : t.name, null !== (l = null == u ? void 0 : u.gameSearchTerm) && void 0 !== l ? l : []),
-    T = (0, r.useIsAnyContentShown)([n, s]),
+    m = (0, r.useIsAnyContentShown)([n, s]),
     I = (0, o.useIsDismissibleContentDismissed)(s),
-    h = null == u || (0, E.getDropExpired)(u),
-    p = !!(null != u && !h && _ && (null == i ? void 0 : i.config.dropsEnabled) && d);
+    N = null == u || (0, E.getDropExpired)(u),
+    p = !!(null != u && !N && _ && (null == i ? void 0 : i.config.dropsEnabled) && d);
   return {
     partnerGame: p ? e : null,
-    dropsActivityPanelExperienceBlocked: T,
+    dropsActivityPanelExperienceBlocked: m,
     showDropsSparkles: !c && !I
   }
 }
 
-function N(e, t, n) {
+function h(e, t, n) {
   let s = (0, E.getDrop)(e);
   (0, i.default)({
     type: t,

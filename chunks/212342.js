@@ -8,16 +8,16 @@ var s, a, l, i, r = n("442837"),
   f = n("496675"),
   E = n("594174"),
   _ = n("630388"),
-  m = n("981631");
-let T = "ChannelFollowingBumpChannels",
+  T = n("981631");
+let m = "ChannelFollowingBumpChannels",
   I = new Set,
-  h = new Set;
+  N = new Set;
 class p extends(s = r.default.Store) {
   initialize() {
-    this.waitFor(d.default), I = new Set(o.Storage.get(T))
+    this.waitFor(d.default), I = new Set(o.Storage.get(m))
   }
   shouldShowBump(e) {
-    return h.has(e)
+    return N.has(e)
   }
 }
 i = "ChannelFollowingPublishBumpStore", (l = "displayName") in(a = p) ? Object.defineProperty(a, l, {
@@ -36,28 +36,28 @@ i = "ChannelFollowingPublishBumpStore", (l = "displayName") in(a = p) ? Object.d
     if (a || I.has(n)) return !1;
     let l = c.default.getChannel(n),
       i = E.default.getCurrentUser();
-    if (!(null != l && l.type === m.ChannelTypes.GUILD_ANNOUNCEMENT && s.type === m.MessageTypes.DEFAULT && (null != i && (null === (t = s.author) || void 0 === t ? void 0 : t.id) === i.id ? f.default.can(m.Permissions.SEND_MESSAGES, l) : f.default.can(m.Permissions.MANAGE_MESSAGES, l)) && !_.hasFlag(Number(s.flags), m.MessageFlags.CROSSPOSTED))) return !1;
-    h.add(s.id)
+    if (!(null != l && l.type === T.ChannelTypes.GUILD_ANNOUNCEMENT && s.type === T.MessageTypes.DEFAULT && (null != i && (null === (t = s.author) || void 0 === t ? void 0 : t.id) === i.id ? f.default.can(T.Permissions.SEND_MESSAGES, l) : f.default.can(T.Permissions.MANAGE_MESSAGES, l)) && !_.hasFlag(Number(s.flags), T.MessageFlags.CROSSPOSTED))) return !1;
+    N.add(s.id)
   },
   MESSAGE_UPDATE: function(e) {
     let {
       message: t
     } = e;
-    h.has(t.id) && _.hasFlag(Number(t.flags), m.MessageFlags.CROSSPOSTED) && h.delete(t.id)
+    N.has(t.id) && _.hasFlag(Number(t.flags), T.MessageFlags.CROSSPOSTED) && N.delete(t.id)
   },
   CHANNEL_SELECT: function(e) {
-    h.clear()
+    N.clear()
   },
   CHANNEL_FOLLOWING_PUBLISH_BUMP_DISMISSED: function(e) {
     let {
       messageId: t
     } = e;
-    h.delete(t)
+    N.delete(t)
   },
   CHANNEL_FOLLOWING_PUBLISH_BUMP_HIDE_PERMANENTLY: function(e) {
     let {
       channelId: t
     } = e;
-    I.add(t), o.Storage.set(T, I), h.clear()
+    I.add(t), o.Storage.set(m, I), N.clear()
   }
 })

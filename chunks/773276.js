@@ -22,8 +22,8 @@ function E(e) {
     messageId: n,
     transitionState: E,
     onClose: _
-  } = e, m = (0, a.useStateFromStores)([u.default], () => u.default.getFpMessageInfo(n)), T = m.attachments.map(e => e.id), I = m.attachments.map(e => e.filename), {
-    reportFalsePositive: h,
+  } = e, T = (0, a.useStateFromStores)([u.default], () => u.default.getFpMessageInfo(n)), m = T.attachments.map(e => e.id), I = T.attachments.map(e => e.filename), {
+    reportFalsePositive: N,
     isReportFalsePositiveLoading: p
   } = (0, d.useExplicitMediaActions)({
     onSuccess: () => {
@@ -33,15 +33,15 @@ function E(e) {
       (0, l.showToast)((0, l.createToast)(f.default.Messages.ERROR_GENERIC_TITLE, l.ToastType.FAILURE))
     },
     report: () => {
-      (0, r.reportFailedSendFalsePositive)(t, n, T, I)
+      (0, r.reportFailedSendFalsePositive)(t, n, m, I)
     }
   });
-  return !(m.attachments.length > 0) && _(), (0, s.jsx)(c.ExplicitMediaFalsePositiveModal, {
+  return !(T.attachments.length > 0) && _(), (0, s.jsx)(c.ExplicitMediaFalsePositiveModal, {
     messageId: n,
     channelId: t,
     isReportFalsePositiveLoading: p,
     analyticsContext: o.TrackMediaRedactionContext.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW,
-    onConfirmPress: h,
+    onConfirmPress: N,
     transitionState: E,
     onClose: _
   })

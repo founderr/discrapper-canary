@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   StoreEmbedWithoutDimensions: function() {
-    return D
+    return P
   }
 }), n("47120"), n("411104");
 var s, a = n("735250"),
@@ -15,16 +15,16 @@ var s, a = n("735250"),
   f = n("86357"),
   E = n("914602"),
   _ = n("568836"),
-  m = n("730749"),
-  T = n("112724"),
+  T = n("730749"),
+  m = n("112724"),
   I = n("812206"),
-  h = n("283595"),
+  N = n("283595"),
   p = n("558314"),
-  N = n("55563"),
+  h = n("55563"),
   S = n("551428"),
   C = n("73346"),
-  g = n("981631"),
-  A = n("689938"),
+  A = n("981631"),
+  g = n("689938"),
   M = n("422245");
 
 function R(e, t, n) {
@@ -35,7 +35,7 @@ function R(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class v extends(s = l.Component) {
+class O extends(s = l.Component) {
   get analyticsLocation() {
     let {
       analyticsContext: {
@@ -45,8 +45,8 @@ class v extends(s = l.Component) {
     } = this.props;
     return {
       ...e,
-      section: null != t ? t : g.AnalyticsSections.APPLICATION_EMBED,
-      object: g.AnalyticsObjects.CARD
+      section: null != t ? t : A.AnalyticsSections.APPLICATION_EMBED,
+      object: A.AnalyticsObjects.CARD
     }
   }
   componentDidMount() {
@@ -63,7 +63,7 @@ class v extends(s = l.Component) {
       className: M.actionButton,
       color: o.Button.Colors.GREEN,
       size: o.Button.Sizes.SMALL,
-      children: A.default.Messages.GAME_ACTION_BUTTON_VIEW_IN_STORE
+      children: g.default.Messages.GAME_ACTION_BUTTON_VIEW_IN_STORE
     })
   }
   render() {
@@ -77,11 +77,11 @@ class v extends(s = l.Component) {
     if (null == e || null == t) return s ? l() : (0, a.jsx)(_.ResponsiveLoadingEmbedTile, {
       isHorizontal: r
     });
-    return e.productLine === g.SKUProductLines.COLLECTIBLES ? (0, a.jsx)(d.default, {
-      section: g.AnalyticsSections.APPLICATION_EMBED,
+    return e.productLine === A.SKUProductLines.COLLECTIBLES ? (0, a.jsx)(d.default, {
+      section: A.AnalyticsSections.APPLICATION_EMBED,
       children: this.renderApplicationTile(e, t)
     }) : (0, a.jsx)(d.default, {
-      section: g.AnalyticsSections.APPLICATION_EMBED,
+      section: A.AnalyticsSections.APPLICATION_EMBED,
       children: (0, a.jsx)(i.Link, {
         onClick: this.handleLinkClick,
         to: this.getStoreListingLocation(),
@@ -160,7 +160,7 @@ class v extends(s = l.Component) {
       });
       if (null == n) return null;
       let r = null != n && n.primarySkuId === s,
-        u = null != l && l.hasFlag(g.LibraryApplicationFlags.HIDDEN);
+        u = null != l && l.hasFlag(A.LibraryApplicationFlags.HIDDEN);
       return (0, a.jsxs)("div", {
         className: M.tileActions,
         children: [!r || u ? this.renderViewInStoreButton() : (0, a.jsx)(c.default, {
@@ -168,7 +168,7 @@ class v extends(s = l.Component) {
           customDisabledColor: o.Button.Colors.PRIMARY,
           size: o.Button.Sizes.SMALL,
           className: M.actionButton,
-          source: g.AnalyticsLocations.MESSAGE_EMBED,
+          source: A.AnalyticsLocations.MESSAGE_EMBED,
           onClick: this.handleActionButtonClick
         }), t && !u || e.premium ? null : (0, a.jsx)(f.default, {
           type: f.default.Types.EMBED,
@@ -179,24 +179,24 @@ class v extends(s = l.Component) {
     })
   }
 }
-R(v, "defaultProps", {
-  renderFallback: g.NOOP
+R(O, "defaultProps", {
+  renderFallback: A.NOOP
 });
-let O = [N.default, p.default, h.default, S.default];
+let v = [h.default, p.default, N.default, S.default];
 
 function x(e) {
   let {
     skuId: t
-  } = e, n = N.default.get(t), s = null != n ? I.default.getApplication(n.applicationId) : null;
+  } = e, n = h.default.get(t), s = null != n ? I.default.getApplication(n.applicationId) : null;
   return {
     sku: n,
     application: s,
-    fetchFailed: N.default.didFetchingSkuFail(t),
-    inLibrary: null != n && h.default.hasApplication(n.applicationId, n.applicationId, !0),
+    fetchFailed: h.default.didFetchingSkuFail(t),
+    inLibrary: null != n && N.default.hasApplication(n.applicationId, n.applicationId, !0),
     storeListing: null != n ? S.default.getForSKU(n.id) : null,
-    libraryApplication: null != n ? h.default.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
+    libraryApplication: null != n ? N.default.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
   }
 }
-let L = (0, T.default)((0, m.default)(v));
-t.default = r.default.connectStores(O, x)(L);
-let D = (0, m.default)(r.default.connectStores(O, x)(v))
+let L = (0, m.default)((0, T.default)(O));
+t.default = r.default.connectStores(v, x)(L);
+let P = (0, T.default)(r.default.connectStores(v, x)(O))

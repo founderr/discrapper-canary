@@ -16,10 +16,10 @@ var s = n("735250"),
   f = n("344185"),
   E = n("488131"),
   _ = n("592125"),
-  m = n("823379"),
-  T = n("709054"),
+  T = n("823379"),
+  m = n("709054"),
   I = n("124368"),
-  h = n("314569");
+  N = n("314569");
 
 function p(e) {
   let {
@@ -30,13 +30,13 @@ function p(e) {
     let {
       id: n
     } = e;
-    return T.default.compare(n, t.oldestReadMessageId) > 0
+    return m.default.compare(n, t.oldestReadMessageId) > 0
   }).map(e => {
     let {
       id: t
     } = e;
     return _.default.getChannel(t)
-  }).filter(m.isNotNullish).sort((e, t) => T.default.compare(e.id, t.id)).value(), [t.oldestReadMessageId, n.guild_id, n.id]), N = a.useCallback((e, t) => {
+  }).filter(T.isNotNullish).sort((e, t) => m.default.compare(e.id, t.id)).value(), [t.oldestReadMessageId, n.guild_id, n.id]), h = a.useCallback((e, t) => {
     (0, E.openThreadSidebarForViewing)(e, t, I.OpenThreadAnalyticsLocations.INBOX)
   }, []);
   return a.useEffect(() => {
@@ -44,13 +44,13 @@ function p(e) {
       (0, u.ack)(t.channelId, !0), l(t.channelId)
     })
   }), (0, s.jsx)("div", {
-    className: h.container,
+    className: N.container,
     children: p.map(e => (0, s.jsx)(c.ForumPostComposerStoreProvider, {
       createStore: () => (0, c.createForumPostComposerStore)(n),
       children: (0, s.jsx)(d.default, {
-        className: h.forumPost,
+        className: N.forumPost,
         threadId: e.id,
-        goToThread: N
+        goToThread: h
       })
     }, e.id))
   })
