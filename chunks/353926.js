@@ -171,10 +171,10 @@ function W(e) {
   !P && "CONNECTION_OPEN" === e.type && k(e.user) && (P = !0), L = {}, v = {}, D = {};
   let t = "CONNECTION_OPEN" === e.type || null == e.fingerprint || e.fingerprint === d.default.getFingerprint(),
     {
-      experiments: n,
-      guildExperiments: i
+      experiments: i,
+      guildExperiments: r
     } = e;
-  t && K(n, i), p = !0
+  t && K(i, r), n("185745").CTPDeltaVanillaExperiment.trackExposure(), p = !0
 }
 
 function K(e, t) {

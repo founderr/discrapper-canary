@@ -14,6 +14,9 @@ n.r(t), n.d(t, {
   },
   CTPAppOpenVanillaExperiment: function() {
     return s
+  },
+  CTPDeltaVanillaExperiment: function() {
+    return d
   }
 });
 var i = n("987170"),
@@ -96,6 +99,21 @@ let s = (0, i.default)({
       doSomething: !1
     },
     commonTriggerPoint: r.CommonTriggerPoints.POST_CONNECTION_OPEN,
+    treatments: [{
+      id: 1,
+      label: "Treatment",
+      config: {
+        doSomething: !0
+      }
+    }]
+  }),
+  d = (0, i.default)({
+    kind: "user",
+    id: "2024-06_ctp_delta_vanilla",
+    label: "CTP Delta Vanilla - A/A test",
+    defaultConfig: {
+      doSomething: !1
+    },
     treatments: [{
       id: 1,
       label: "Treatment",
