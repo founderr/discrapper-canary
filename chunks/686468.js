@@ -19,8 +19,8 @@ var l = n("442837"),
   m = n("602623"),
   p = n("146085"),
   E = n("979339"),
-  g = n("643632"),
-  C = n("939863"),
+  C = n("643632"),
+  g = n("939863"),
   S = n("689938"),
   _ = n("414349");
 
@@ -85,11 +85,11 @@ function A(e) {
     onContinueClick: n
   } = e, s = (0, l.useStateFromStores)([f.default], () => f.default.can(p.MODERATE_STAGE_CHANNEL_PERMISSIONS, t), [t]), r = t.guild_id, {
     canCreateGuildEvent: m
-  } = (0, c.useManageResourcePermissions)(t), A = (0, g.default)(t.id), {
+  } = (0, c.useManageResourcePermissions)(t), A = (0, C.default)(t.id), {
     usersInSummary: v
   } = (0, E.default)(t.id);
   return (0, a.jsxs)("div", {
-    children: [(0, a.jsx)(C.default, {
+    children: [(0, a.jsx)(g.default, {
       children: (0, a.jsx)("div", {
         className: _.iconBackground,
         children: (0, a.jsx)(h.default, {

@@ -22,8 +22,8 @@ var l = n("120356"),
   m = n("51144"),
   p = n("162267"),
   E = n("228168"),
-  g = n("981631"),
-  C = n("689938"),
+  C = n("981631"),
+  g = n("689938"),
   S = n("305944"),
   _ = n("671794");
 let T = (0, r.getAvatarSize)(r.AvatarSizes.SIZE_16);
@@ -60,7 +60,7 @@ function I(e) {
       guild: l,
       showBadge: !0,
       className: s()(S.listAvatar, null == l.icon ? _.guildAvatarWithoutIcon : null),
-      badgeStrokeColor: (0, c.getColor)((0, i.isThemeDark)(d) ? g.Color.PRIMARY_600 : g.Color.WHITE_500),
+      badgeStrokeColor: (0, c.getColor)((0, i.isThemeDark)(d) ? C.Color.PRIMARY_600 : C.Color.WHITE_500),
       badgeTooltipColor: r.TooltipColors.PRIMARY,
       badgeTooltipDelay: E.USER_PROFILE_TOOLTIP_DELAY,
       size: h.default.Sizes.MEDIUM,
@@ -104,7 +104,7 @@ function A(e) {
         className: S.emptyIconGuilds
       }), (0, a.jsx)("div", {
         className: S.emptyText,
-        children: C.default.Messages.NO_MUTUAL_GUILDS
+        children: g.default.Messages.NO_MUTUAL_GUILDS
       })]
     }) : l.map(e => {
       let {

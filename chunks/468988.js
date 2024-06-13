@@ -1,22 +1,22 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return l
+    return r
   }
 });
-var i = n("689938");
-let a = ["a", "b", "c", "d"],
-  s = e => e;
+var n = s("689938");
+let i = ["a", "b", "c", "d"],
+  l = e => e;
 
-function r(e, t) {
-  let n = {},
-    i = Math.min(e.length, a.length);
-  for (let s = 0; s < i; ++s) n[a[s]] = (n, i) => t(e[s], i);
-  return n
+function a(e, t) {
+  let s = {},
+    n = Math.min(e.length, i.length);
+  for (let l = 0; l < n; ++l) s[i[l]] = (s, n) => t(e[l], n);
+  return s
 }
-class l {
+class r {
   asString() {
-    return this.transformed(s)
+    return this.transformed(l)
   }
   isEmpty() {
     return 0 === this.items.length
@@ -28,20 +28,20 @@ class l {
       case 1:
         return e(this.items[0], "");
       case 2:
-        return i.default.Messages.GENERIC_FORMATTED_LIST_TWO.format(r(this.items, e));
+        return n.default.Messages.GENERIC_FORMATTED_LIST_TWO.format(a(this.items, e));
       case 3:
-        return i.default.Messages.GENERIC_FORMATTED_LIST_THREE.format(r(this.items, e));
+        return n.default.Messages.GENERIC_FORMATTED_LIST_THREE.format(a(this.items, e));
       default:
-        return i.default.Messages.GENERIC_FORMATTED_LIST_FOUR.format(r(this.items, e))
+        return n.default.Messages.GENERIC_FORMATTED_LIST_FOUR.format(a(this.items, e))
     }
   }
   constructor(e) {
-    var t, n, i;
-    t = this, i = void 0, (n = "items") in t ? Object.defineProperty(t, n, {
-      value: i,
+    var t, s, n;
+    t = this, n = void 0, (s = "items") in t ? Object.defineProperty(t, s, {
+      value: n,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : t[n] = i, this.items = e
+    }) : t[s] = n, this.items = e
   }
 }

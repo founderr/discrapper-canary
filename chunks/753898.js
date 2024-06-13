@@ -23,8 +23,8 @@ function f(e) {
     user: h
   } = e, m = (0, l.useStateFromStores)([i.default], () => i.default.useReducedMotion), p = null !== (t = (0, o.default)(n)) && void 0 !== t ? t : "", {
     avatarDecorationSrc: E,
-    eventHandlers: g,
-    isAnimating: C
+    eventHandlers: C,
+    isAnimating: g
   } = (0, d.default)({
     user: h,
     size: s.AvatarSizes.SIZE_80,
@@ -32,9 +32,9 @@ function f(e) {
   });
   return (0, a.jsxs)(c.default, {
     channelId: n.id,
-    ...g,
+    ...C,
     children: [(() => {
-      let e = !m && C;
+      let e = !m && g;
       return n.isMultiUserDM() ? (0, a.jsx)(u.default, {
         channel: n,
         size: s.AvatarSizes.SIZE_80,

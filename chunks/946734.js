@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("430824"),
   p = n("594174"),
   E = n("514342"),
-  g = n("151785"),
-  C = n("502568"),
+  C = n("151785"),
+  g = n("502568"),
   S = n("602623"),
   _ = n("251625"),
   T = n("823379"),
@@ -87,7 +87,7 @@ class M {
       children: (0, a.jsx)(o.Clickable, {
         className: x.moreAvatars,
         onClick: this.handleClick,
-        children: (0, a.jsx)(g.default, {
+        children: (0, a.jsx)(C.default, {
           className: x.plusIcon
         })
       })
@@ -136,7 +136,7 @@ function y(e) {
     className: x.spacer
   }) : (0, a.jsxs)(d.AnalyticsLocationProvider, {
     value: f,
-    children: [(0, a.jsx)(C.Divider, {}), (0, a.jsx)(o.TextBadge, {
+    children: [(0, a.jsx)(g.Divider, {}), (0, a.jsx)(o.TextBadge, {
       text: v.default.Messages.AKA,
       disableColor: !0,
       className: x.akaBadge

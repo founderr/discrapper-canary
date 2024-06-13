@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   getBlockForChannelAlteration: function() {
     return d
   }
 });
-var l = n("526120"),
-  u = n("563534"),
-  i = n("734893"),
-  a = n("931261");
+var s = l("526120"),
+  a = l("563534"),
+  n = l("734893"),
+  r = l("931261");
 async function d(e, t) {
-  if (null == e || !(0, a.canSeeOnboardingHome)(e)) return;
-  let n = u.default.getSettings(e);
-  if (n === u.NO_SETTINGS && (await (0, l.fetchGuildHomeSettings)(e), n = u.default.getSettings(e)), n !== u.NO_SETTINGS && null != n) {
-    if (null != n.newMemberActions && null != n.newMemberActions.find(e => e.channelId === t)) return i.ChannelEditBlockTypes.TODO;
-    if (null != n.resourceChannels && null != n.resourceChannels.find(e => e.channelId === t)) return i.ChannelEditBlockTypes.RESOURCE
+  if (null == e || !(0, r.canSeeOnboardingHome)(e)) return;
+  let l = a.default.getSettings(e);
+  if (l === a.NO_SETTINGS && (await (0, s.fetchGuildHomeSettings)(e), l = a.default.getSettings(e)), l !== a.NO_SETTINGS && null != l) {
+    if (null != l.newMemberActions && null != l.newMemberActions.find(e => e.channelId === t)) return n.ChannelEditBlockTypes.TODO;
+    if (null != l.resourceChannels && null != l.resourceChannels.find(e => e.channelId === t)) return n.ChannelEditBlockTypes.RESOURCE
   }
 }

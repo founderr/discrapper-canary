@@ -24,8 +24,8 @@ var s = l("735250"),
   T = l("520978"),
   g = l("184325"),
   A = l("652853"),
-  x = l("225714"),
-  C = l("228168"),
+  C = l("225714"),
+  x = l("228168"),
   N = l("231338"),
   U = l("689938"),
   P = l("155614");
@@ -61,7 +61,7 @@ function M(e) {
       displayProfile: t,
       onClose: D,
       user: I,
-      profileType: C.UserProfileTypes.MODAL,
+      profileType: x.UserProfileTypes.MODAL,
       hasProfileEffect: F
     }), (0, s.jsxs)("div", {
       className: P.header,
@@ -101,7 +101,7 @@ function M(e) {
           children: [(null == k ? void 0 : k.application) != null && (0, s.jsx)(T.default, {
             className: P.applicationInstallButton,
             application: k.application
-          }), (0, s.jsx)(x.default, {
+          }), (0, s.jsx)(C.default, {
             user: I,
             isCurrentUser: w,
             relationshipType: b,

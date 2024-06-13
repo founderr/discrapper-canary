@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("451576"),
   p = n("526846"),
   E = n("938655"),
-  g = n("403404"),
-  C = n("906732"),
+  C = n("403404"),
+  g = n("906732"),
   S = n("243778"),
   _ = n("579185"),
   T = n("301076"),
@@ -34,15 +34,15 @@ function x(e) {
     isHovered: y,
     setIsHovered: R,
     onMouseEnter: L,
-    onMouseLeave: O
-  } = (0, _.default)(200, 300), j = (0, f.useShowActivityIndicator)(), P = (0, c.default)({
+    onMouseLeave: j
+  } = (0, _.default)(200, 300), O = (0, f.useShowActivityIndicator)(), P = (0, c.default)({
     channelId: t.id
   }), D = !M, b = l.useCallback(e => {
     "focus" !== e.type && L()
   }, [L]), U = (0, o.useAnalyticsContext)(), F = (0, u.useAppContext)() === I.AppContext.POPOUT, {
     analyticsLocations: w
-  } = (0, C.default)(), k = l.useCallback(() => {
-    (0, g.default)({
+  } = (0, g.default)(), k = l.useCallback(() => {
+    (0, C.default)({
       channel: t,
       guildId: t.guild_id,
       locationObject: U.location,
@@ -77,7 +77,7 @@ function x(e) {
             channel: t,
             closePopout: n,
             onMouseEnter: L,
-            onMouseLeave: O,
+            onMouseLeave: j,
             isHovered: y,
             onClick: () => l(A.ContentDismissActionType.UNKNOWN)
           }) : (0, a.jsx)(a.Fragment, {})
@@ -93,8 +93,8 @@ function x(e) {
               k(), (n === i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES || n === i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && l(A.ContentDismissActionType.UNKNOWN)
             },
             onMouseEnter: b,
-            onMouseLeave: O
-          }), j ? (0, a.jsx)(E.FreeActivityIndicatorDot, {
+            onMouseLeave: j
+          }), O ? (0, a.jsx)(E.FreeActivityIndicatorDot, {
             top: 4,
             right: 10,
             size: 12,

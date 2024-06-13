@@ -32,7 +32,7 @@ function S(e) {
     trackUserProfileAction: A
   } = (0, o.useUserProfileAnalyticsContext)();
 
-  function x(e) {
+  function C(e) {
     A({
       action: "PRESS_OPTIONS"
     }), (0, a.openContextMenuLazy)(e, async () => {
@@ -74,7 +74,7 @@ function S(e) {
             left: 8
           }
         },
-        onClick: x,
+        onClick: C,
         children: (0, s.jsx)(n.default, {
           className: f.additionalActionsIcon
         })

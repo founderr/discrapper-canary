@@ -1,37 +1,37 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return c
   }
 });
-var i = n("442837"),
-  a = n("201895"),
-  s = n("557135"),
-  r = n("703656"),
-  l = n("592125"),
-  u = n("979651"),
-  o = n("66999"),
-  d = n("981631");
+var n = s("442837"),
+  i = s("201895"),
+  l = s("557135"),
+  a = s("703656"),
+  r = s("592125"),
+  u = s("979651"),
+  o = s("66999"),
+  d = s("981631");
 
 function c(e, t) {
-  let n = (0, i.useStateFromStores)([l.default], () => l.default.getChannel(t)),
+  let s = (0, n.useStateFromStores)([r.default], () => r.default.getChannel(t)),
     {
       needSubscriptionToAccess: c
-    } = (0, o.default)(null == n ? void 0 : n.id);
-  if (null == n || c) return null;
-  let f = n.isGuildVocal(),
-    E = (0, a.default)({
-      channel: n
+    } = (0, o.default)(null == s ? void 0 : s.id);
+  if (null == s || c) return null;
+  let f = s.isGuildVocal(),
+    _ = (0, i.default)({
+      channel: s
     });
   return {
     navigateToChannel: () => {
-      f ? s.default.handleVoiceConnect({
-        channel: n,
-        connected: u.default.isInChannel(n.id),
+      f ? l.default.handleVoiceConnect({
+        channel: s,
+        connected: u.default.isInChannel(s.id),
         needSubscriptionToAccess: !1,
         routeDirectlyToChannel: !0
-      }) : (0, r.transitionTo)(d.Routes.CHANNEL(e, n.id))
+      }) : (0, a.transitionTo)(d.Routes.CHANNEL(e, s.id))
     },
-    ariaLabel: E
+    ariaLabel: _
   }
 }

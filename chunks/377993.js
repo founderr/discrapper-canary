@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("484459"),
   p = n("103575"),
   E = n("158776"),
-  g = n("699516"),
-  C = n("111583"),
+  C = n("699516"),
+  g = n("111583"),
   S = n("594174"),
   _ = n("467679"),
   T = n("729285"),
@@ -32,8 +32,8 @@ var a = n("735250"),
   y = n("51144"),
   R = n("998502"),
   L = n("276264"),
-  O = n("981631"),
-  j = n("689938"),
+  j = n("981631"),
+  O = n("689938"),
   P = n("895294"),
   D = n("67431");
 let b = [],
@@ -46,7 +46,7 @@ function F(e) {
     status: d,
     activities: c,
     lastOnlineTimestamp: f
-  } = e, h = (0, i.useStateFromStores)([C.default], () => null != C.default.getTypingUsers(l.id)[t.id]), _ = (0, i.useStateFromStores)([S.default], () => S.default.getCurrentUser()), T = (0, i.useStateFromStores)([E.default], () => E.default.isMobileOnline(t.id)), I = (0, i.useStateFromStores)([g.default], () => g.default.getNickname(t.id)), A = e => {
+  } = e, h = (0, i.useStateFromStores)([g.default], () => null != g.default.getTypingUsers(l.id)[t.id]), _ = (0, i.useStateFromStores)([S.default], () => S.default.getCurrentUser()), T = (0, i.useStateFromStores)([E.default], () => E.default.isMobileOnline(t.id)), I = (0, i.useStateFromStores)([C.default], () => C.default.getNickname(t.id)), A = e => {
     (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -75,7 +75,7 @@ function F(e) {
           decoration: "never"
         })),
         n = "<@".concat(t.id, ">");
-      N.ComponentDispatch.dispatchToLastSubscribed(O.ComponentActions.INSERT_TEXT, {
+      N.ComponentDispatch.dispatchToLastSubscribed(j.ComponentActions.INSERT_TEXT, {
         plainText: e,
         rawText: n
       }), u.default.startTyping(l.id)
@@ -84,7 +84,7 @@ function F(e) {
       user: t,
       currentUser: _,
       isOwner: t.id === l.ownerId,
-      ownerTooltipText: j.default.Messages.GROUP_OWNER,
+      ownerTooltipText: O.default.Messages.GROUP_OWNER,
       shouldAnimateStatus: U,
       isTyping: h,
       status: d,
@@ -181,7 +181,7 @@ function H(e) {
     analyticsLocations: u
   } = (0, c.default)(d.default.MEMBER_LIST), {
     shouldTrackRecentlyOnlineExposure: p,
-    listItems: C
+    listItems: g
   } = function(e) {
     let {
       isRecentlyOnlineEnabled: t
@@ -190,25 +190,25 @@ function H(e) {
     }, {
       autoTrackExposure: !1
     });
-    return (0, i.useStateFromStores)([g.default, S.default, E.default], () => {
+    return (0, i.useStateFromStores)([C.default, S.default, E.default], () => {
       let n = !1,
         a = (0, M.getRecipients)(e.recipients, S.default),
         l = {};
       for (let e of a) {
         var s, i, r;
-        if (g.default.isFriend(e.id) || e.id === (null === (s = S.default.getCurrentUser()) || void 0 === s ? void 0 : s.id)) {
+        if (C.default.isFriend(e.id) || e.id === (null === (s = S.default.getCurrentUser()) || void 0 === s ? void 0 : s.id)) {
           let t = E.default.getLastOnlineTimestamp(e.id),
             {
               isRecentlyOnlineShowable: a,
               isRecentlyOnlineTrackable: s
             } = (0, h.getRecentlyOnlineStrategy)(t);
           l[e.id] = {
-            status: null !== (i = E.default.getStatus(e.id)) && void 0 !== i ? i : O.StatusTypes.OFFLINE,
+            status: null !== (i = E.default.getStatus(e.id)) && void 0 !== i ? i : j.StatusTypes.OFFLINE,
             activities: null !== (r = E.default.getActivities(e.id)) && void 0 !== r ? r : b,
             lastOnlineTimestamp: a ? t : void 0
           }, s && (n = !0)
         } else l[e.id] = {
-          status: O.StatusTypes.OFFLINE,
+          status: j.StatusTypes.OFFLINE,
           activities: b
         }
       }
@@ -226,7 +226,7 @@ function H(e) {
         shouldTrackRecentlyOnlineExposure: n,
         listItems: o
       };
-      let u = [O.StatusTypes.OFFLINE, O.StatusTypes.INVISIBLE, null, void 0],
+      let u = [j.StatusTypes.OFFLINE, j.StatusTypes.INVISIBLE, null, void 0],
         d = [],
         c = [],
         f = [];
@@ -252,18 +252,18 @@ function H(e) {
   });
   l.useEffect(() => {
     if (o)
-      for (let e of C)(0, m.maybeFetchUserProfileForPopout)(e.user, {
+      for (let e of g)(0, m.maybeFetchUserProfileForPopout)(e.user, {
         dispatchWait: !0,
         channelId: t.id
       })
-  }, [o, C, t.id]), l.useEffect(() => {
-    v.default.track(O.AnalyticEvents.MEMBER_LIST_VIEWED, {
+  }, [o, g, t.id]), l.useEffect(() => {
+    v.default.track(j.AnalyticEvents.MEMBER_LIST_VIEWED, {
       channel_id: t.id,
       channel_type: t.type,
       guild_id: t.guild_id
     })
   }, [t.guild_id, t.id, t.type]);
-  let U = o && C.every(e => e.user.isStaff());
+  let U = o && g.every(e => e.user.isStaff());
   return (0, a.jsx)(c.AnalyticsLocationProvider, {
     value: u,
     children: (0, a.jsx)("div", {
@@ -273,11 +273,11 @@ function H(e) {
         fade: !0,
         children: [(0, a.jsxs)(A.default, {
           className: D.membersGroup,
-          children: ["".concat(j.default.Messages.MEMBERS, "—").concat(C.length, " "), U ? (0, a.jsx)(_.default, {
+          children: ["".concat(O.default.Messages.MEMBERS, "—").concat(g.length, " "), U ? (0, a.jsx)(_.default, {
             className: D.__invalid_decorator,
             type: _.default.Types.STAFF_ONLY_DM
           }) : null]
-        }), C.map(e => (0, a.jsx)(F, {
+        }), g.map(e => (0, a.jsx)(F, {
           user: e.user,
           status: e.status,
           activities: e.activities,
@@ -286,7 +286,7 @@ function H(e) {
         }, e.user.id)), R && (x.length > 0 || y && N.length > 0) && (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(A.default, {
             className: D.membersGroup,
-            children: "".concat(j.default.Messages.APPS, "—").concat(x.length)
+            children: "".concat(O.default.Messages.APPS, "—").concat(x.length)
           }), x.map(e => (0, a.jsx)(w, {
             integration: e,
             channel: t
@@ -310,7 +310,7 @@ function H(e) {
                 height: 18
               })
             }),
-            name: j.default.Messages.PRIVATE_CHANNEL_ADD_APPS
+            name: O.default.Messages.PRIVATE_CHANNEL_ADD_APPS
           })]
         })]
       })

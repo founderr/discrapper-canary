@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return C
   }
 });
 var a, l, s, i, r = n("735250"),
@@ -96,7 +96,7 @@ class E extends(i = o.Component) {
   }
 }
 
-function g(e) {
+function C(e) {
   let {
     tutorialId: t
   } = e, n = (0, c.useStateFromStores)([p.default], () => p.default.shouldShow(t), [t]), a = (0, c.useStateFromStores)([h.default], () => h.default.isFocused()), l = (0, c.useStateFromStores)([h.default], () => h.default.windowSize(), []);

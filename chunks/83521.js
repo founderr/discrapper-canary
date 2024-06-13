@@ -49,12 +49,12 @@ function N(e) {
     }) : S.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_HEADING.format({
       guildName: h.name
     }),
-    P = B ? S.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_NEW_IDENTITY_DESCRIPTION.format({
+    b = B ? S.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_NEW_IDENTITY_DESCRIPTION.format({
       guildName: h.name
     }) : S.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_DESCRIPTION.format({
       guildName: h.name
     }),
-    b = S.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_CTA;
+    P = S.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_CTA;
   return (0, t.jsxs)(n.ModalRoot, {
     transitionState: T,
     size: n.ModalSize.SMALL,
@@ -77,7 +77,7 @@ function N(e) {
             }), (0, t.jsx)(n.Text, {
               variant: "text-sm/normal",
               color: "text-secondary",
-              children: P
+              children: b
             })]
           })]
         }), (0, t.jsx)(A.default, {
@@ -96,7 +96,7 @@ function N(e) {
           backgroundColor: U,
           color: y
         },
-        children: b
+        children: P
       }), (0, t.jsx)(n.Button, {
         onClick: p,
         color: n.Button.Colors.PRIMARY,

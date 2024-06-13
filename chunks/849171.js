@@ -19,8 +19,8 @@ var a, l, s = n("735250"),
   m = n("613611"),
   p = n("527805"),
   E = n("716600"),
-  g = n("952561"),
-  C = n("778569"),
+  C = n("952561"),
+  g = n("778569"),
   S = n("563218"),
   _ = n("513202"),
   T = n("318891"),
@@ -33,8 +33,8 @@ var a, l, s = n("735250"),
   y = n("314897"),
   R = n("819640"),
   L = n("594174"),
-  O = n("602623"),
-  j = n("823379"),
+  j = n("602623"),
+  O = n("823379"),
   P = n("5192"),
   D = n("689938"),
   b = n("655338");
@@ -48,7 +48,7 @@ function F(e) {
     channelId: a,
     users: l
   } = e, i = null != t ? t : d.AvatarSizes.SIZE_32, r = (0, d.getAvatarSize)(i);
-  return (0, s.jsx)(O.default, {
+  return (0, s.jsx)(j.default, {
     size: r,
     guildId: n,
     users: l,
@@ -75,23 +75,23 @@ function w(e) {
     participants: i,
     application: r,
     currentEmbeddedApplication: E,
-    channel: g,
-    width: C
+    channel: C,
+    width: g
   } = e;
-  let S = (a = C) > 400 ? 2 : a > 300 ? 1 : 0;
-  let [T] = (l = C) > 400 ? [d.AvatarSizes.SIZE_56, 56] : l > 300 ? [d.AvatarSizes.SIZE_32, 32] : [d.AvatarSizes.SIZE_24, 24], I = (0, u.useStateFromStoresArray)([L.default, y.default], () => Array.from(i).map(e => (0, m.isActivityParticipantCurrentUserCurrentSession)(e, y.default) ? null : L.default.getUser(e.userId)).filter(j.isNotNullish)), A = (0, u.useStateFromStores)([f.default], () => f.default.getEmbeddedActivitiesForChannel(g.id).find(e => e.applicationId === r.id)), {
+  let S = (a = g) > 400 ? 2 : a > 300 ? 1 : 0;
+  let [T] = (l = g) > 400 ? [d.AvatarSizes.SIZE_56, 56] : l > 300 ? [d.AvatarSizes.SIZE_32, 32] : [d.AvatarSizes.SIZE_24, 24], I = (0, u.useStateFromStoresArray)([L.default, y.default], () => Array.from(i).map(e => (0, m.isActivityParticipantCurrentUserCurrentSession)(e, y.default) ? null : L.default.getUser(e.userId)).filter(O.isNotNullish)), A = (0, u.useStateFromStores)([f.default], () => f.default.getEmbeddedActivitiesForChannel(C.id).find(e => e.applicationId === r.id)), {
     analyticsLocations: v
-  } = (0, x.default)(), N = (0, c.useAnalyticsContext)(), M = P.default.getName(g.getGuildId(), g.id, null == I ? void 0 : I[0]), R = (0, p.useEmbeddedActivityJoinability)({
+  } = (0, x.default)(), N = (0, c.useAnalyticsContext)(), M = P.default.getName(C.getGuildId(), C.id, null == I ? void 0 : I[0]), R = (0, p.useEmbeddedActivityJoinability)({
     userId: null === (t = L.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
-    channelId: g.id,
+    channelId: C.id,
     application: r
-  }) === p.EmbeddedActivityJoinability.CAN_JOIN, O = null !== (n = g.getGuildId()) && void 0 !== n ? n : void 0;
+  }) === p.EmbeddedActivityJoinability.CAN_JOIN, j = null !== (n = C.getGuildId()) && void 0 !== n ? n : void 0;
   return (0, s.jsxs)("div", {
     className: b.splash,
     children: [(0, s.jsx)(F, {
       avatarSize: T,
-      guildId: O,
-      channelId: g.id,
+      guildId: j,
+      channelId: C.id,
       users: I
     }), (0, s.jsx)(d.Text, {
       className: o()(b.subheader, {
@@ -119,7 +119,7 @@ function w(e) {
           e.stopPropagation(), null != A && (0, h.default)({
             applicationId: A.applicationId,
             currentEmbeddedApplication: E,
-            activityChannelId: g.id,
+            activityChannelId: C.id,
             locationObject: N.location,
             embeddedActivitiesManager: _.default,
             analyticsLocations: v
@@ -154,22 +154,22 @@ function k(e) {
     analyticsLocations: o
   } = (0, x.default)(v.default.ACTIVITY_TILE), {
     id: d
-  } = t, c = (0, E.default)(), f = (null == c ? void 0 : c.channelId) === r.id && c.applicationId === d, h = (0, g.default)(), [m] = (0, N.default)([d]), {
+  } = t, c = (0, E.default)(), f = (null == c ? void 0 : c.channelId) === r.id && c.applicationId === d, h = (0, C.default)(), [m] = (0, N.default)([d]), {
     url: p
-  } = (0, C.default)({
+  } = (0, g.default)({
     applicationId: d,
     names: U,
     size: 1024
-  }), _ = !a && f, y = !f, L = !f && !a, O = (0, u.useStateFromStores)([R.default, M.default], () => (0, A.default)({
+  }), _ = !a && f, y = !f, L = !f && !a, j = (0, u.useStateFromStores)([R.default, M.default], () => (0, A.default)({
     LayerStore: R.default,
     PopoutWindowStore: M.default
   }));
   return i.useEffect(() => {
-    if (_ && null != c && !O) {
+    if (_ && null != c && !j) {
       let e = (0, I.default)(c.channelId, c.applicationId);
       (0, T.showPIPEmbed)(e)
     }
-  }, [_, c, O]), (0, s.jsx)(x.AnalyticsLocationProvider, {
+  }, [_, c, j]), (0, s.jsx)(x.AnalyticsLocationProvider, {
     value: o,
     children: (0, s.jsx)("div", {
       className: b.container,

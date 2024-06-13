@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("863908"),
   p = n("871118"),
   E = n("517525"),
-  g = n("590076"),
-  C = n("507675"),
+  C = n("590076"),
+  g = n("507675"),
   S = n("199902"),
   _ = n("314897"),
   T = n("592125"),
@@ -35,8 +35,8 @@ var a = n("735250"),
   y = n("112560"),
   R = n("442168"),
   L = n("822296"),
-  O = n("916771"),
-  j = n("792517"),
+  j = n("916771"),
+  O = n("792517"),
   P = n("979425"),
   D = n("651183"),
   b = n("623825"),
@@ -100,18 +100,18 @@ function V(e) {
     stream: X,
     width: D
   });
-  if ((null == X ? void 0 : X.state) === U.ApplicationStreamStates.FAILED) return (0, a.jsx)(O.default, {
+  if ((null == X ? void 0 : X.state) === U.ApplicationStreamStates.FAILED) return (0, a.jsx)(j.default, {
     selected: n,
     stream: X,
     width: D
   });
-  else if (t.type === F.ParticipantTypes.HIDDEN_STREAM) return (0, a.jsx)(j.default, {
+  else if (t.type === F.ParticipantTypes.HIDDEN_STREAM) return (0, a.jsx)(O.default, {
     selected: n,
     participant: t,
     width: D
   });
   else if (null != X && !n && null != B && I.default.supports(w.Features.VIDEO)) return (0, a.jsxs)(a.Fragment, {
-    children: [null != Z ? (0, a.jsx)(g.default, {
+    children: [null != Z ? (0, a.jsx)(C.default, {
       focused: b,
       channelId: Z.id,
       guildId: Z.guild_id,
@@ -128,7 +128,7 @@ function V(e) {
       paused: f || $,
       videoSpinnerContext: Q ? c.VideoSpinnerContext.SELF_STREAM : c.VideoSpinnerContext.REMOTE_STREAM,
       userId: z.id
-    }, K), null != ee ? (0, a.jsx)(C.default, {
+    }, K), null != ee ? (0, a.jsx)(g.default, {
       size: (0, y.getSizeForWidth)(D),
       ...ee
     }) : null, (0, a.jsx)(R.default, {

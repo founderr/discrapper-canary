@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("422677"),
   p = n("769654"),
   E = n("199902"),
-  g = n("314897"),
-  C = n("592125"),
+  C = n("314897"),
+  g = n("592125"),
   S = n("496675"),
   _ = n("158776"),
   T = n("246946"),
@@ -28,8 +28,8 @@ var a = n("735250"),
   y = n("318661"),
   R = n("57048"),
   L = n("726059"),
-  O = n("162267"),
-  j = n("502762"),
+  j = n("162267"),
+  O = n("502762"),
   P = n("171368"),
   D = n("944546"),
   b = n("470900"),
@@ -65,9 +65,9 @@ t.default = e => {
     availableApplications: eu
   } = (0, h.usePrivateChannelIntegrationState)({
     channelId: s.id
-  }), ed = (0, r.useStateFromStores)([I.default, C.default], () => {
+  }), ed = (0, r.useStateFromStores)([I.default, g.default], () => {
     var e;
-    return null != n ? C.default.getChannel(null === (e = I.default.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId) : null
+    return null != n ? g.default.getChannel(null === (e = I.default.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId) : null
   }), {
     enableHangStatus: ec
   } = f.HangStatusExperiment.useExperiment({
@@ -81,7 +81,7 @@ t.default = e => {
     isApplicationStreaming: em,
     isMobile: ep,
     status: eE,
-    hangStatusActivity: eg
+    hangStatusActivity: eC
   } = (0, r.useStateFromStoresObject)([E.default, _.default, S.default], () => {
     let e = null != E.default.getAnyStreamForUser(n.id);
     return {
@@ -107,13 +107,13 @@ t.default = e => {
         return t === J.ActivityTypes.HANG_STATUS
       }) : null
     }
-  }), eC = null != ef || null != eg || em, eS = null !== (t = A.default.getNickname(null, s.id, n)) && void 0 !== t ? t : v.default.getName(n), e_ = (0, r.useStateFromStores)([T.default], () => T.default.hidePersonalInformation), {
+  }), eg = null != ef || null != eC || em, eS = null !== (t = A.default.getNickname(null, s.id, n)) && void 0 !== t ? t : v.default.getName(n), e_ = (0, r.useStateFromStores)([T.default], () => T.default.hidePersonalInformation), {
     mutualFriends: eT,
     isFetching: eI
   } = (0, L.default)(n.id, !n.bot), {
     mutualGuilds: eA,
     isFetching: ev
-  } = (0, O.default)(n.id, !n.bot), ex = !n.bot && null != eT && eT.length > 0, eN = !n.bot && null != eA && eA.length > 0, eM = (0, z.useShouldShowUserPopoutCollectiblesUpsell)({
+  } = (0, j.default)(n.id, !n.bot), ex = !n.bot && null != eT && eT.length > 0, eN = !n.bot && null != eA && eA.length > 0, eM = (0, z.useShouldShowUserPopoutCollectiblesUpsell)({
     popoutUser: n,
     source: w.UserPopoutUpsellSource.PROFILE_PANEL
   }), ey = (0, u.default)();
@@ -163,13 +163,13 @@ t.default = e => {
         }
       }, t)
     }),
-    eO = ei.map(e => (0, a.jsx)(K.default, {
+    ej = ei.map(e => (0, a.jsx)(K.default, {
       channel: s,
       integration: e
     }, e.application.id)),
-    ej = l.useCallback(() => et(!0), []),
+    eO = l.useCallback(() => et(!0), []),
     eP = l.useCallback(() => et(!1), []),
-    eD = (0, r.useStateFromStores)([g.default], () => g.default.getId()),
+    eD = (0, r.useStateFromStores)([C.default], () => C.default.getId()),
     eb = n.id === eD,
     eU = n.bot || eb,
     {
@@ -187,9 +187,9 @@ t.default = e => {
       channelId: s.id,
       children: (0, a.jsx)("aside", {
         className: $.profilePanel,
-        onMouseEnter: ej,
+        onMouseEnter: eO,
         onMouseLeave: eP,
-        children: (0, a.jsxs)(j.default, {
+        children: (0, a.jsxs)(O.default, {
           user: n,
           displayProfile: es,
           profileType: q.UserProfileTypes.PANEL,
@@ -207,7 +207,7 @@ t.default = e => {
               channel: s,
               animateAssets: ee,
               forceShowPremiumBadge: ee
-            }), (0, a.jsxs)(j.default.Overlay, {
+            }), (0, a.jsxs)(O.default.Overlay, {
               className: $.overlay,
               children: [(0, a.jsx)(Y.default, {
                 user: n,
@@ -233,10 +233,10 @@ t.default = e => {
                 user: n,
                 setNote: !1
               })]
-            }), eC ? (0, a.jsx)(j.default.Overlay, {
+            }), eg ? (0, a.jsx)(O.default.Overlay, {
               className: $.overlay,
               children: (0, a.jsx)(H.default, {
-                activity: null != ef || em ? ef : eg,
+                activity: null != ef || em ? ef : eC,
                 user: n,
                 channelId: s.id,
                 analyticsParams: {
@@ -246,7 +246,7 @@ t.default = e => {
                   }
                 }
               })
-            }) : null, (eN || ex) && (0, a.jsxs)(j.default.Overlay, {
+            }) : null, (eN || ex) && (0, a.jsxs)(O.default.Overlay, {
               className: $.profilePanelConnections,
               children: [eN ? (0, a.jsx)(Z.default, {
                 className: $.mutualGuildsList,
@@ -289,16 +289,16 @@ t.default = e => {
                 },
                 children: eL
               }) : null]
-            }), eo && (0, a.jsx)(j.default.Overlay, {
+            }), eo && (0, a.jsx)(O.default.Overlay, {
               className: i()($.profilePanelConnections, $.appListThemedContainer),
               children: (0, a.jsxs)(Z.default, {
-                header: eO.length > 0 ? Q.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
-                  count: eO.length
+                header: ej.length > 0 ? Q.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
+                  count: ej.length
                 }) : Q.default.Messages.PRIVATE_CHANNEL_APPS_HEADER,
                 isLoadingContents: !er,
                 isLoadingHeader: !1,
                 itemType: Z.ListType.AppsList,
-                children: [eO, eu.length > 0 && (0, a.jsxs)("div", {
+                children: [ej, eu.length > 0 && (0, a.jsxs)("div", {
                   className: $.appButtonContainer,
                   children: [0 === ei.length && (0, a.jsx)(o.Text, {
                     variant: "text-xs/normal",

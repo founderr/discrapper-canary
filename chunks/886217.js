@@ -14,10 +14,10 @@ var a = n("735250"),
   m = n("297781"),
   p = n("591853"),
   E = n("410441"),
-  g = n("689938");
-let C = (e, t, n, a) => {
+  C = n("689938");
+let g = (e, t, n, a) => {
     let l = function(e) {
-        if (e === s.AggregateRange.WEEK) return g.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_WEEK_POPOUT
+        if (e === s.AggregateRange.WEEK) return C.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_WEEK_POPOUT
       }(a),
       i = u.default.getName(t.guild_id, t.id, n),
       r = e.extra.artist.name;
@@ -26,7 +26,7 @@ let C = (e, t, n, a) => {
       userName: i
     }).replaceAll("*", "")
   },
-  S = (e, t) => g.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_TOP_ARTIST.format({
+  S = (e, t) => C.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_TOP_ARTIST.format({
     username: t.username,
     artist: e.extra.artist.name
   });
@@ -45,7 +45,7 @@ t.default = e => {
     secondaryColor: N
   } = (0, f.default)(I), M = (0, d.getAggregateRange)(n), y = l.useCallback(() => {
     if (null == v || !(0, o.isIn)(M, h.ALLOWED_RANGES)) return;
-    let e = C(n, t, v, M);
+    let e = g(n, t, v, M);
     return (0, c.generateListenContentImage)({
       user: v,
       channel: t,
@@ -64,7 +64,7 @@ t.default = e => {
       headerIcons: (0, a.jsx)(E.default, {
         provider: T
       }),
-      userDescription: g.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
+      userDescription: C.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
       title: _,
       subtitle: A,
       badges: (0, a.jsx)(m.BadgesContainer, {

@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return h
   },
   toggleOverlayCanvas: function() {
-    return g
+    return C
   },
   updateEmojiHose: function() {
     return m
@@ -117,7 +117,7 @@ function E(e) {
   })
 }
 
-function g() {
+function C() {
   s.default.dispatch({
     type: "TOGGLE_OVERLAY_CANVAS"
   })

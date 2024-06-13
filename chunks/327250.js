@@ -19,8 +19,8 @@ var l = n("120356"),
   m = n("314897"),
   p = n("271383"),
   E = n("430824"),
-  g = n("496675"),
-  C = n("158776"),
+  C = n("496675"),
+  g = n("158776"),
   S = n("885110"),
   _ = n("594174"),
   T = n("340149"),
@@ -33,8 +33,8 @@ var l = n("120356"),
   y = n("5192"),
   R = n("51144"),
   L = n("991570"),
-  O = n("981631"),
-  j = n("689938"),
+  j = n("981631"),
+  O = n("689938"),
   P = n("710634");
 
 function D(e) {
@@ -43,7 +43,7 @@ function D(e) {
     backgroundColor: n,
     guildId: l,
     onClose: s
-  } = e, o = t.id, u = (0, i.useStateFromStores)([S.default, C.default, m.default], () => o === m.default.getId() ? S.default.getStatus() : C.default.getStatus(o, l), [o, l]);
+  } = e, o = t.id, u = (0, i.useStateFromStores)([S.default, g.default, m.default], () => o === m.default.getId() ? S.default.getStatus() : g.default.getStatus(o, l), [o, l]);
   return (0, a.jsxs)("div", {
     className: P.topRow,
     style: {
@@ -120,13 +120,13 @@ function U(e) {
     member: s,
     guildId: m
   } = e, p = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(m)), {
-    canKickUser: C,
+    canKickUser: g,
     canBanUser: S,
     canModerateMembers: v
-  } = (0, i.useStateFromStoresObject)([g.default, _.default, E.default], () => ({
-    canKickUser: null != p && g.default.canManageUser(O.Permissions.KICK_MEMBERS, l, p),
-    canBanUser: null != p && g.default.canManageUser(O.Permissions.BAN_MEMBERS, l, p),
-    canModerateMembers: null != p && (0, f.canToggleCommunicationDisableOnUser)(p.id, l.id, [_.default, E.default, g.default])
+  } = (0, i.useStateFromStoresObject)([C.default, _.default, E.default], () => ({
+    canKickUser: null != p && C.default.canManageUser(j.Permissions.KICK_MEMBERS, l, p),
+    canBanUser: null != p && C.default.canManageUser(j.Permissions.BAN_MEMBERS, l, p),
+    canModerateMembers: null != p && (0, f.canToggleCommunicationDisableOnUser)(p.id, l.id, [_.default, E.default, C.default])
   }), [l, p]), y = (0, d.isMemberCommunicationDisabled)(s), {
     analyticsLocations: R,
     newestAnalyticsLocation: L
@@ -138,7 +138,7 @@ function U(e) {
   return (0, a.jsxs)("div", {
     className: P.bottomRow,
     children: [(0, a.jsxs)(b, {
-      "aria-label": j.default.Messages.SEND_DM,
+      "aria-label": O.default.Messages.SEND_DM,
       style: {
         backgroundColor: t
       },
@@ -151,11 +151,11 @@ function U(e) {
       }), (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: j.default.Messages.SEND_DM
+        children: O.default.Messages.SEND_DM
       })]
     }), (0, a.jsxs)(b, {
-      disabled: !C,
-      "aria-label": j.default.Messages.KICK,
+      disabled: !g,
+      "aria-label": O.default.Messages.KICK,
       style: {
         backgroundColor: t
       },
@@ -179,11 +179,11 @@ function U(e) {
       }), (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: j.default.Messages.KICK
+        children: O.default.Messages.KICK
       })]
     }), (0, a.jsxs)(b, {
       disabled: !S,
-      "aria-label": j.default.Messages.BAN,
+      "aria-label": O.default.Messages.BAN,
       style: {
         backgroundColor: t
       },
@@ -207,11 +207,11 @@ function U(e) {
       }), (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: j.default.Messages.BAN
+        children: O.default.Messages.BAN
       })]
     }), (0, a.jsxs)(b, {
       disabled: !v,
-      "aria-label": j.default.Messages.TIMEOUT_USER,
+      "aria-label": O.default.Messages.TIMEOUT_USER,
       style: {
         backgroundColor: t
       },
@@ -225,10 +225,10 @@ function U(e) {
       }), (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: y ? j.default.Messages.REMOVE : j.default.Messages.TIMEOUT_USER
+        children: y ? O.default.Messages.REMOVE : O.default.Messages.TIMEOUT_USER
       })]
     }), (0, a.jsxs)(b, {
-      "aria-label": j.default.Messages.COPY_ID,
+      "aria-label": O.default.Messages.COPY_ID,
       style: {
         backgroundColor: t
       },
@@ -243,7 +243,7 @@ function U(e) {
       }), (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: j.default.Messages.COPY_ID
+        children: O.default.Messages.COPY_ID
       })]
     })]
   })

@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("320007"),
   p = n("236091"),
   E = n("623624"),
-  g = n("984370"),
-  C = n("141321"),
+  C = n("984370"),
+  g = n("141321"),
   S = n("618158"),
   _ = n("390322"),
   T = n("616286"),
@@ -32,8 +32,8 @@ var a = n("735250"),
   y = n("502568"),
   R = n("626135"),
   L = n("792125"),
-  O = n("431328"),
-  j = n("501655"),
+  j = n("431328"),
+  O = n("501655"),
   P = n("200498"),
   D = n("146085"),
   b = n("427679"),
@@ -51,7 +51,7 @@ function V(e) {
     channel: n,
     toggleRequestToSpeakSidebar: s,
     showRequestToSpeakSidebar: o
-  } = e, h = (0, c.useAppContext)(), E = (0, r.useStateFromStores)([f.default], () => f.default.getChatOpen(n.id)), g = (0, P.useCanModerateRequestToSpeak)(n.id), A = (0, O.useStageParticipantsCount)(n.id, j.StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY), {
+  } = e, h = (0, c.useAppContext)(), E = (0, r.useStateFromStores)([f.default], () => f.default.getChatOpen(n.id)), C = (0, P.useCanModerateRequestToSpeak)(n.id), A = (0, j.useStageParticipantsCount)(n.id, O.StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY), {
     preventIdle: v,
     allowIdle: x
   } = (0, S.usePreventIdle)("popup");
@@ -84,11 +84,11 @@ function V(e) {
       }
     }, "more-options-popout"), !t && (0, a.jsx)(m.default, {
       className: B.button
-    }, "clips"), (0, a.jsx)(C.default, {
+    }, "clips"), (0, a.jsx)(g.default, {
       onOpen: v,
       onClose: x,
       className: B.button
-    }, "recents"), !o && g ? (0, a.jsx)("div", {
+    }, "recents"), !o && C ? (0, a.jsx)("div", {
       className: B.button,
       children: (0, a.jsx)(U.default, {
         toggleRequestToSpeakSidebar: () => {
@@ -118,7 +118,7 @@ function W(e) {
     channel: c,
     toggleRequestToSpeakSidebar: f,
     showRequestToSpeakSidebar: m
-  } = e, p = (0, h.default)(c), C = (0, r.useStateFromStores)([b.default], () => b.default.getStageInstanceByChannel(c.id)), S = (0, O.useActualStageSpeakerCount)(c.id), _ = (0, O.useStageParticipantsCount)(c.id, j.StageChannelParticipantNamedIndex.AUDIENCE), T = (0, r.useStateFromStores)([A.default], () => A.default.getGuild(c.guild_id), [c.guild_id]), I = null !== (t = null == T ? void 0 : T.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, P = (null == T ? void 0 : T.isCommunity()) ? I < k.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED : (null == T ? void 0 : T.premiumTier) !== k.BoostedGuildTiers.TIER_3 && I <= k.MAX_STAGE_VIDEO_USER_LIMIT_TIER2, U = (0, w.default)(c), F = (0, r.useStateFromStores)([v.default], () => v.default.can(D.MODERATE_STAGE_CHANNEL_PERMISSIONS, c)), W = () => {
+  } = e, p = (0, h.default)(c), g = (0, r.useStateFromStores)([b.default], () => b.default.getStageInstanceByChannel(c.id)), S = (0, j.useActualStageSpeakerCount)(c.id), _ = (0, j.useStageParticipantsCount)(c.id, O.StageChannelParticipantNamedIndex.AUDIENCE), T = (0, r.useStateFromStores)([A.default], () => A.default.getGuild(c.guild_id), [c.guild_id]), I = null !== (t = null == T ? void 0 : T.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, P = (null == T ? void 0 : T.isCommunity()) ? I < k.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED : (null == T ? void 0 : T.premiumTier) !== k.BoostedGuildTiers.TIER_3 && I <= k.MAX_STAGE_VIDEO_USER_LIMIT_TIER2, U = (0, w.default)(c), F = (0, r.useStateFromStores)([v.default], () => v.default.can(D.MODERATE_STAGE_CHANNEL_PERMISSIONS, c)), W = () => {
     d.default.updateStageVideoLimitBoostUpsellDismissed(c.id, !0), R.default.track(k.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
       guild_id: c.guild_id,
       type: H.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
@@ -141,7 +141,7 @@ function W(e) {
       showRequestToSpeakSidebar: m,
       channel: c
     }),
-    onDoubleClick: g.handleDoubleClick,
+    onDoubleClick: C.handleDoubleClick,
     transparent: !0,
     className: i()((0, L.getThemeClass)(k.ThemeTypes.DARK), B.participants),
     children: [(0, a.jsx)(y.default.Icon, {
@@ -149,11 +149,11 @@ function W(e) {
       disabled: !0,
       "aria-label": G.default.Messages.STAGE_CHANNEL,
       className: B.icon,
-      color: null != C ? o.default.unsafe_rawColors.GREEN_360.css : void 0
+      color: null != g ? o.default.unsafe_rawColors.GREEN_360.css : void 0
     }), (0, a.jsx)(y.default.Title, {
       className: B.channelName,
       wrapperClassName: B.channelNameWrapper,
-      children: null !== (n = null == C ? void 0 : C.topic) && void 0 !== n ? n : p
+      children: null !== (n = null == g ? void 0 : g.topic) && void 0 !== n ? n : p
     }), (0, a.jsx)(y.default.Divider, {
       className: B.divider
     }), (0, a.jsxs)(y.default.Title, {

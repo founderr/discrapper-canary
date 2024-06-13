@@ -18,9 +18,9 @@ t.default = e => {
     handleSearchKeyPress: m,
     handleCreateOrAddGuild: p,
     searchResults: E,
-    searchFetching: g
+    searchFetching: C
   } = e;
-  if (g) t = (0, a.jsx)("div", {
+  if (C) t = (0, a.jsx)("div", {
     className: o.pageContainer,
     children: (0, a.jsx)(l.Spinner, {
       className: o.spinner

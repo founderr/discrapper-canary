@@ -24,8 +24,8 @@ var a = n("735250"),
   m = n("914010"),
   p = n("594174"),
   E = n("467679"),
-  g = n("346656"),
-  C = n("946734"),
+  C = n("346656"),
+  g = n("946734"),
   S = n("99843"),
   _ = n("372564"),
   T = n("984370"),
@@ -43,8 +43,8 @@ function N(e) {
     inSidebar: f = !1,
     handleClick: m,
     handleContextMenu: E,
-    handleParentClick: g,
-    handleParentContextMenu: C,
+    handleParentClick: C,
+    handleParentContextMenu: g,
     renderFollowButton: _
   } = e, N = (0, d.default)(t, r), {
     prefix: M,
@@ -148,28 +148,28 @@ function N(e) {
     case A.ChannelTypes.ANNOUNCEMENT_THREAD:
     case A.ChannelTypes.PUBLIC_THREAD:
     case A.ChannelTypes.PRIVATE_THREAD:
-      let O = null;
+      let j = null;
       if (!f && null != s) {
         let e = (0, d.default)(s, r);
-        O = (0, a.jsxs)(l.Fragment, {
+        j = (0, a.jsxs)(l.Fragment, {
           children: [R(e, v.default.Messages.TEXT_CHANNEL), (0, a.jsx)(T.default.Title, {
             level: y,
-            onContextMenu: C,
-            onClick: g,
+            onContextMenu: g,
+            onClick: C,
             className: i()(x.parentChannelName, x.cursorPointer),
             children: (0, u.computeChannelName)(s, p.default, h.default)
           }), (0, a.jsx)(T.default.Caret, {})]
         })
       }
-      let j = (null == s ? void 0 : s.type) != null && A.ChannelTypesSets.GUILD_THREADS_ONLY.has(s.type);
+      let O = (null == s ? void 0 : s.type) != null && A.ChannelTypesSets.GUILD_THREADS_ONLY.has(s.type);
       return (0, a.jsxs)(l.Fragment, {
-        children: [O, R(j ? null : N, v.default.Messages.THREAD), (0, a.jsx)(T.default.Title, {
+        children: [j, R(O ? null : N, v.default.Messages.THREAD), (0, a.jsx)(T.default.Title, {
           level: y,
           onContextMenu: E,
           onClick: m,
           className: i()({
             [x.cursorPointer]: f,
-            [x.forumPostTitle]: j
+            [x.forumPostTitle]: O
           }),
           children: L
         })]
@@ -211,7 +211,7 @@ function y(e, t) {
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(M, {
           channel: e
-        }), (0, a.jsx)(C.default, {
+        }), (0, a.jsx)(g.default, {
           channel: e
         }, e.id)]
       });
@@ -251,9 +251,9 @@ function L(e) {
     className: x.guildBreadcrumbContainer,
     children: ["left" === l && (0, a.jsx)(T.default.Caret, {
       direction: "left"
-    }), (0, a.jsx)(g.default, {
+    }), (0, a.jsx)(C.default, {
       guild: t,
-      size: g.default.Sizes.SMALLER,
+      size: C.default.Sizes.SMALLER,
       className: x.guildBreadcrumbIcon,
       active: !0
     }), (0, a.jsx)(T.default.Title, {

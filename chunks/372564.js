@@ -15,7 +15,7 @@ var a = n("735250"),
   p = n("689938"),
   E = n("457149");
 
-function g(e, t, n) {
+function C(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -24,7 +24,7 @@ function g(e, t, n) {
   }) : e[t] = n, e
 }
 
-function C(e) {
+function g(e) {
   let {
     channel: t,
     onClose: n,
@@ -82,23 +82,23 @@ class _ extends l.Component {
     })
   }
   constructor(...e) {
-    super(...e), g(this, "_mouseDown", !1), g(this, "_mouseUp", !1), g(this, "handleOpenTopic", e => {
+    super(...e), C(this, "_mouseDown", !1), C(this, "_mouseUp", !1), C(this, "handleOpenTopic", e => {
       let t = e.target;
       if ((0, r.isElement)(t)) {
         if (S(t)) return;
         let e = t.parentNode;
         if ((0, r.isElement)(e) && S(e)) return
-      }(0, o.openModal)(e => (0, a.jsx)(C, {
+      }(0, o.openModal)(e => (0, a.jsx)(g, {
         ...e,
         ...this.props
       }))
-    }), g(this, "onMouseDown", () => {
+    }), C(this, "onMouseDown", () => {
       this._mouseDown = !0
-    }), g(this, "onMouseMove", () => {
+    }), C(this, "onMouseMove", () => {
       this._mouseDown && (this._mouseDown = !1)
-    }), g(this, "onMouseUp", e => {
+    }), C(this, "onMouseUp", e => {
       this._mouseDown && e.button !== m.MouseButtons.SECONDARY && this.handleOpenTopic(e), this._mouseUp = !0, this._mouseDown = !1
-    }), g(this, "handleContextMenu", e => {
+    }), C(this, "handleContextMenu", e => {
       let {
         channel: t,
         guild: l
@@ -114,7 +114,7 @@ class _ extends l.Component {
           includeTopic: !0
         })
       })
-    }), g(this, "handleClick", e => {
+    }), C(this, "handleClick", e => {
       if (this._mouseUp) {
         this._mouseUp = !1;
         return

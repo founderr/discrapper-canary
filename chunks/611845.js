@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   StreamButtonDemoPopout: function() {
-    return g
+    return C
   }
 }), n("47120");
 var a = n("735250"),
@@ -69,7 +69,7 @@ function E(e) {
   })
 }
 
-function g(e) {
+function C(e) {
   let {
     buttonRef: t,
     dismissed: n,

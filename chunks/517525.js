@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("906732"),
   p = n("484459"),
   E = n("594174"),
-  g = n("466111"),
-  C = n("368666"),
+  C = n("466111"),
+  g = n("368666"),
   S = n("626135"),
   _ = n("74538"),
   T = n("557457"),
@@ -36,10 +36,10 @@ let M = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
   L = {
     opacity: 0
   },
-  O = {
+  j = {
     opacity: 1
   },
-  j = {
+  O = {
     borderRadius: "".concat(M, "px ").concat(M, "px ").concat(M, "px ").concat(M, "px")
   },
   P = {
@@ -62,18 +62,18 @@ let M = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         className: R,
         premiumIndicator: L
       } = e,
-      O = (0, T.getMaxQuality)(r),
+      j = (0, T.getMaxQuality)(r),
       {
-        analyticsLocations: j
+        analyticsLocations: O
       } = (0, m.default)(),
       P = null != (0, I.default)(r);
     try {
-      t = (0, T.isPremiumFPS)(O)
+      t = (0, T.isPremiumFPS)(j)
     } catch (e) {
       t = !1
     }
     try {
-      s = (0, T.isPremiumResolution)(O)
+      s = (0, T.isPremiumResolution)(j)
     } catch (e) {
       s = !1
     }
@@ -99,9 +99,9 @@ let M = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
           type: v.PremiumUpsellTypes.STREAM_QUALITY_INDICATOR,
           has_premium_stream_fps: t,
           has_premium_stream_resolution: s,
-          location_stack: j
+          location_stack: O
         }), y(!0))
-      }, [t, s, D, M, y, j]), null == O) return null;
+      }, [t, s, D, M, y, O]), null == j) return null;
     let k = (0, a.jsx)(f.Tooltip, {
       text: P ? x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : D ? x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
       position: "bottom",
@@ -109,16 +109,16 @@ let M = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
       children: e => (0, a.jsxs)(f.Clickable, {
         ...e,
         onClick: w,
-        className: i()(N.qualityIndicator, p, C.LiveIndicatorShapes[c], P ? N.qualityIndicatorLowQuality : N.qualityIndicatorFullQuality, {
+        className: i()(N.qualityIndicator, p, g.LiveIndicatorShapes[c], P ? N.qualityIndicatorLowQuality : N.qualityIndicatorFullQuality, {
           [N.clickable]: F && D
         }),
-        children: [D ? (0, a.jsx)(g.default, {
+        children: [D ? (0, a.jsx)(C.default, {
           className: N.premiumStreamIcon
         }) : null, (0, a.jsx)("span", {
           className: N.qualityResolution,
-          children: (0, T.getResolutionText)(O.maxResolution)
+          children: (0, T.getResolutionText)(j.maxResolution)
         }), (0, a.jsx)("span", {
-          children: (0, T.getFPSText)(O.maxFrameRate)
+          children: (0, T.getFPSText)(j.maxFrameRate)
         })]
       })
     });
@@ -141,22 +141,22 @@ t.default = e => {
     premiumIndicator: d
   } = e, [c, h] = l.useState(!1), m = (0, T.getMaxQuality)(t), {
     reducedMotion: E
-  } = l.useContext(f.AccessibilityPreferencesContext), g = n && null != m;
+  } = l.useContext(f.AccessibilityPreferencesContext), C = n && null != m;
   l.useEffect(() => {
     (0, p.default)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), {
       dispatchWait: !0
     })
   }, [t]);
-  let S = (0, r.useTransition)(g, {
+  let S = (0, r.useTransition)(C, {
       enter: {
         from: E.enabled ? L : y,
-        to: E.enabled ? O : R
+        to: E.enabled ? j : R
       },
       leave: E.enabled ? L : y,
       config: D
     }),
     _ = (0, r.useSpring)({
-      to: g ? P : j,
+      to: C ? P : O,
       config: D
     });
   return (e => {
@@ -182,10 +182,10 @@ t.default = e => {
       }) : null), (0, a.jsx)(r.animated.div, {
         style: _,
         className: N.liveIndicator,
-        children: (0, a.jsx)(C.default, {
-          look: C.LiveIndicatorLooks.RED,
+        children: (0, a.jsx)(g.default, {
+          look: g.LiveIndicatorLooks.RED,
           size: o,
-          shape: g ? f.BadgeShapes.ROUND_RIGHT : f.BadgeShapes.ROUND
+          shape: C ? f.BadgeShapes.ROUND_RIGHT : f.BadgeShapes.ROUND
         })
       })]
     })

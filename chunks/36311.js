@@ -22,7 +22,7 @@ function E(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class g extends l.PureComponent {
+class C extends l.PureComponent {
   componentDidMount() {
     let {
       current: e
@@ -80,4 +80,4 @@ t.default = r.default.connectStores([d.default], () => {
   return {
     nsfwDisallowed: (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1
   }
-})(g)
+})(C)

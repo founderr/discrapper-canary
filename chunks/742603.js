@@ -19,8 +19,8 @@ var l = n("120356"),
   m = n("995123"),
   p = n("554747"),
   E = n("854698"),
-  g = n("897669"),
-  C = n("984370"),
+  C = n("897669"),
+  g = n("984370"),
   S = n("910611"),
   _ = n("454585"),
   T = n("134483"),
@@ -33,8 +33,8 @@ var l = n("120356"),
   y = n("358221"),
   R = n("362721"),
   L = n("887012"),
-  O = n("613548"),
-  j = n("221888"),
+  j = n("613548"),
+  O = n("221888"),
   P = n("339340"),
   D = n("354459"),
   b = n("981631"),
@@ -49,7 +49,7 @@ function H(e) {
     channel: n
   } = e, l = (0, u.useAppContext)(), s = (0, i.useStateFromStores)([y.default], () => y.default.getLayout(n.id, l));
   return (0, a.jsx)(A.default, {
-    children: (0, a.jsx)(j.default, {
+    children: (0, a.jsx)(O.default, {
       className: w.participants,
       participant: t,
       maxVisibleUsers: 5,
@@ -124,7 +124,7 @@ function B(e) {
         focusedParticipant: l
       })]
     })
-  } else c && (t = (0, a.jsx)(g.default, {
+  } else c && (t = (0, a.jsx)(C.default, {
     guildEvent: o,
     recurrenceId: u
   }));
@@ -147,12 +147,12 @@ function V(e) {
   } = (0, i.useStateFromStoresObject)([y.default], () => ({
     focusedParticipant: y.default.getSelectedParticipant(t.id),
     participantsOpen: y.default.getParticipantsOpen(t.id)
-  }), [t.id]), g = (0, h.default)(t), I = (0, m.default)(t), [A] = (0, c.default)((null == E ? void 0 : E.type) === D.ParticipantTypes.ACTIVITY ? [E.id] : []), v = F.default.Messages.VOICE_CHANNEL;
+  }), [t.id]), C = (0, h.default)(t), I = (0, m.default)(t), [A] = (0, c.default)((null == E ? void 0 : E.type) === D.ParticipantTypes.ACTIVITY ? [E.id] : []), v = F.default.Messages.VOICE_CHANNEL;
   t.isDM() ? v = F.default.Messages.DM : t.isGroupDM() && (v = F.default.Messages.GROUP_DM);
   let L = (0, i.useStateFromStores)([f.default], () => f.default.getChannelStatus(t)),
-    j = t.isGuildVoice() && u && null != L && L.length > 0,
+    O = t.isGuildVoice() && u && null != L && L.length > 0,
     H = (0, R.default)(t),
-    G = j ? (0, a.jsx)(r.Tooltip, {
+    G = O ? (0, a.jsx)(r.Tooltip, {
       text: F.default.Messages.VOICE_CHANNEL_SET_STATUS,
       delay: 500,
       position: "bottom",
@@ -195,11 +195,11 @@ function V(e) {
   return (0, a.jsxs)("div", {
     className: w.subtitleContainer,
     children: [(0, a.jsxs)(N.default, {
-      onDoubleClick: C.handleDoubleClick,
+      onDoubleClick: g.handleDoubleClick,
       transparent: !0,
       className: (0, M.getThemeClass)(U.ThemeTypes.DARK),
       childrenBottom: G,
-      toolbar: (0, a.jsx)(O.default, {
+      toolbar: (0, a.jsx)(j.default, {
         inPopout: o === b.AppContext.POPOUT,
         channel: t,
         appContext: o,
@@ -212,7 +212,7 @@ function V(e) {
         disabled: !0,
         "aria-label": v
       }) : null, (0, a.jsx)(N.default.Title, {
-        children: g
+        children: C
       }), (0, a.jsx)(S.HeaderGuildBreadcrumb, {
         channel: t,
         guild: l

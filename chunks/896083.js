@@ -1,22 +1,22 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   useGetTrialPurchaseEligibility: function() {
-    return s
+    return l
   }
-}), n("47120");
-var i = n("470079"),
-  a = n("295141");
-let s = () => {
-  let [e, t] = i.useState(!1), [n, s] = i.useState(null);
+}), s("47120");
+var n = s("470079"),
+  i = s("295141");
+let l = () => {
+  let [e, t] = n.useState(!1), [s, l] = n.useState(null);
   return {
     loading: e,
-    error: n,
-    getTrialPurchaseEligibility: i.useCallback(async (e, n, i) => {
-      t(!0), s(null);
+    error: s,
+    getTrialPurchaseEligibility: n.useCallback(async (e, s, n) => {
+      t(!0), l(null);
       try {
-        return await (0, a.getGuildRoleSubscriptionTrialEligibility)(e, n, i)
+        return await (0, i.getGuildRoleSubscriptionTrialEligibility)(e, s, n)
       } catch (e) {
-        s(e)
+        l(e)
       } finally {
         t(!1)
       }

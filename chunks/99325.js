@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return m
   },
   clearDirectorySearch: function() {
-    return g
+    return C
   },
   fetchDirectoryCounts: function() {
     return h
@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return S
   },
   updateDirectoryEntry: function() {
-    return C
+    return g
   }
 });
 var a = n("954955"),
@@ -144,13 +144,13 @@ let E = l()(async (e, t) => {
       })
     }
   }, 200),
-  g = e => {
+  C = e => {
     r.default.dispatch({
       type: "GUILD_DIRECTORY_SEARCH_CLEAR",
       channelId: e
     })
   },
-  C = async function(e, t, n) {
+  g = async function(e, t, n) {
     let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : d.DirectoryEntryCategories.UNCATEGORIZED,
       l = await i.HTTP.patch({
         url: c.Endpoints.DIRECTORY_CHANNEL_ENTRY(e, t),

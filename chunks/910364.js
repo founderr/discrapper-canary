@@ -24,8 +24,8 @@ var s = l("735250"),
   T = l("621853"),
   g = l("318661"),
   A = l("726059"),
-  x = l("162267"),
-  C = l("484404"),
+  C = l("162267"),
+  x = l("484404"),
   N = l("502762"),
   U = l("62154"),
   P = l("293259"),
@@ -46,7 +46,7 @@ function O(e) {
   } = e, c = (0, a.useStateFromStores)([T.default], () => {
     var e, t;
     return (null === (t = T.default.getUserProfile(i.id)) || void 0 === t ? void 0 : null === (e = t.application) || void 0 === e ? void 0 : e.id) != null
-  }), f = null === (t = (0, A.default)(i.id, !i.bot && !o).mutualFriends) || void 0 === t ? void 0 : t.length, E = null === (l = (0, x.default)(i.id, !i.bot && !o).mutualGuilds) || void 0 === l ? void 0 : l.length;
+  }), f = null === (t = (0, A.default)(i.id, !i.bot && !o).mutualFriends) || void 0 === t ? void 0 : t.length, E = null === (l = (0, C.default)(i.id, !i.bot && !o).mutualGuilds) || void 0 === l ? void 0 : l.length;
   return (0, s.jsx)("div", {
     className: y.tabBarContainer,
     children: (0, s.jsxs)(n.TabBar, {
@@ -88,7 +88,7 @@ function L(e) {
   let {
     user: T,
     guildId: A,
-    channelId: x,
+    channelId: C,
     messageId: L,
     roleId: F,
     friendToken: D,
@@ -104,7 +104,7 @@ function L(e) {
     userId: Y.id,
     showGuildProfile: !1,
     guildId: A,
-    channelId: x,
+    channelId: C,
     messageId: L,
     roleId: F
   });
@@ -134,7 +134,7 @@ function L(e) {
       layout: "MODAL",
       userId: Y.id,
       guildId: A,
-      channelId: x,
+      channelId: C,
       messageId: L,
       roleId: F,
       showGuildProfile: !1,
@@ -158,11 +158,11 @@ function L(e) {
               onClose: w,
               isStreaming: (0, d.default)(Z),
               guildId: A,
-              channelId: x,
+              channelId: C,
               hasProfileEffect: null != ei
             }), (0, s.jsxs)(N.default.Overlay, {
               className: y.overlay,
-              children: [G === n.ModalTransitionState.ENTERED && (0, s.jsx)(C.default, {
+              children: [G === n.ModalTransitionState.ENTERED && (0, s.jsx)(x.default, {
                 onTooltipClose: w
               }), (0, s.jsxs)("div", {
                 className: y.body,

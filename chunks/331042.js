@@ -45,9 +45,9 @@ let M = e => {
     confettiTarget: P,
     confettiCanvas: M,
     hideConfetti: j = !1,
-    analyticsLocations: F
+    analyticsLocations: D
   } = e, {
-    confettiColors: D
+    confettiColors: F
   } = (0, x.default)(o.styles), H = (0, u.useStateFromStores)([E.default], () => {
     let e = E.default.getCurrentUser();
     return s()(null != e, "User cannot be undefined"), e
@@ -59,7 +59,7 @@ let M = e => {
     size: (0, v.getDecorationSizeForAvatarSize)(d.AvatarSizes.SIZE_120)
   }), W = n.useRef(null), {
     analyticsLocations: G
-  } = (0, g.default)([...F, C.default.COLLECTIBLES_COLLECTED_MODAL]), Y = (0, m.default)({
+  } = (0, g.default)([...D, C.default.COLLECTIBLES_COLLECTED_MODAL]), Y = (0, m.default)({
     analyticsLocations: G
   }), Z = n.useCallback(() => {
     if (l(), (0, f.popLayer)(), Y(), o.type === c.CollectiblesItemType.AVATAR_DECORATION) {
@@ -157,7 +157,7 @@ let M = e => {
       confettiTarget: null != P ? P : W.current,
       confettiCanvas: M,
       sprites: (0, _.getConfettiSprites)(o.categorySkuId),
-      colors: null == D ? void 0 : D.map(e => e.toHexString())
+      colors: null == F ? void 0 : F.map(e => e.toHexString())
     })]
   })
 };

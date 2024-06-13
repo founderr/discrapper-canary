@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("166459"),
   p = n("966390"),
   E = n("738619"),
-  g = n("410575"),
-  C = n("744061"),
+  C = n("410575"),
+  g = n("744061"),
   S = n("857595"),
   _ = n("607070"),
   T = n("367907"),
@@ -28,8 +28,8 @@ var a = n("735250"),
   y = n("541716"),
   R = n("752305"),
   L = n("424595"),
-  O = n("516887"),
-  j = n("974251"),
+  j = n("516887"),
+  O = n("974251"),
   P = n("893718"),
   D = n("436660"),
   b = n("603009"),
@@ -68,8 +68,8 @@ var a = n("735250"),
   em = n("626135"),
   ep = n("459273"),
   eE = n("585483"),
-  eg = n("709054"),
-  eC = n("838440"),
+  eC = n("709054"),
+  eg = n("838440"),
   eS = n("228488"),
   e_ = n("127654"),
   eT = n("979956"),
@@ -93,9 +93,9 @@ function eR(e, t, n) {
 function eL(e) {
   e.preventDefault()
 }
-let eO = /^\+(?!\w+):?(?!:)(\w+)?:?$/;
+let ej = /^\+(?!\w+):?(?!:)(\w+)?:?$/;
 
-function ej(e) {
+function eO(e) {
   let {
     isSidebar: t,
     ...n
@@ -217,7 +217,7 @@ class eP extends l.PureComponent {
         let {
           closePopout: t
         } = e;
-        return i()(null != p, "ChannelTextAreaForm > Popout > renderPopout: contentWarningProps cannot be null"), (0, a.jsx)(C.default, {
+        return i()(null != p, "ChannelTextAreaForm > Popout > renderPopout: contentWarningProps cannot be null"), (0, a.jsx)(g.default, {
           onClose: t,
           ...p
         })
@@ -268,7 +268,7 @@ class eP extends l.PureComponent {
             let {
               channel: e
             } = this.props, t = eo.default.getLastCommandMessage(e.id), n = eo.default.getLastEditableMessage(e.id);
-            null != t && null != n ? eg.default.compare(n.id, t.id) > 0 ? this.handleEditLastMessage(n) : this.handleRecallLastCommand(t) : null != t ? this.handleRecallLastCommand(t) : null != n && this.handleEditLastMessage(n)
+            null != t && null != n ? eC.default.compare(n.id, t.id) > 0 ? this.handleEditLastMessage(n) : this.handleRecallLastCommand(t) : null != t ? this.handleRecallLastCommand(t) : null != n && this.handleEditLastMessage(n)
           }
           return;
         case eN.KeyboardKeys.ESCAPE:
@@ -305,7 +305,7 @@ class eP extends l.PureComponent {
       } = this.props;
       c.default.changeDraft(l, t, es.DraftType.ChannelMessage);
       let s = "" !== t && n !== this.state.richValue,
-        i = s && !eO.test(t) && !t.startsWith("/") && (!this.isFirstChange || t !== this.state.textValue);
+        i = s && !ej.test(t) && !t.startsWith("/") && (!this.isFirstChange || t !== this.state.textValue);
       this.isFirstChange = !1, i && this.state.textValue.length < t.length && this.handleIncrementCombo(), i ? h.default.startTyping(l) : "" === t && h.default.stopTyping(l), s && a && (0, S.disableKeyboardMode)(), this.setState({
         textValue: t,
         richValue: n
@@ -351,7 +351,7 @@ class eP extends l.PureComponent {
         });
         null != e && (t = null != e.content && "" !== e.content ? e.content : t, c = !0 === e.tts)
       }
-      return (0, eC.applyChatRestrictions)({
+      return (0, eg.applyChatRestrictions)({
         openWarningPopout: e => this.setState({
           contentWarningProps: e
         }),
@@ -382,8 +382,8 @@ class eP extends l.PureComponent {
         null != h && (null != h.content && (t = h.content), null != h.tts && (c = h.tts));
         let E = Y.default.parse(o, t);
         E.tts = E.tts || c;
-        let g = f.default.getSendMessageOptionsForReply(u);
-        if (i) return f.default.sendMessage(o.id, E, void 0, g), (0, $.deletePendingReply)(o.id), {
+        let C = f.default.getSendMessageOptionsForReply(u);
+        if (i) return f.default.sendMessage(o.id, E, void 0, C), (0, $.deletePendingReply)(o.id), {
           shouldClear: !1,
           shouldRefocus: !0
         };
@@ -399,14 +399,14 @@ class eP extends l.PureComponent {
             draftType: es.DraftType.ChannelMessage,
             parsedMessage: E,
             options: {
-              ...g,
+              ...C,
               stickerIds: a
             }
           }), m.default.clearAll(o.id, es.DraftType.ChannelMessage)
         } else null != a && a.length > 0 ? "" !== t ? f.default.sendMessage(o.id, E, void 0, {
-          ...g,
+          ...C,
           stickerIds: a
-        }) : f.default.sendStickers(o.id, a, t, g, E.tts) : f.default.sendMessage(o.id, E, void 0, g);
+        }) : f.default.sendStickers(o.id, a, t, C, E.tts) : f.default.sendMessage(o.id, E, void 0, C);
         return this.setState((0, R.createEmptyState)()), (0, $.deletePendingReply)(o.id), (0, et.clearStickerPreview)(o.id, d.drafts.type), {
           shouldClear: !0,
           shouldRefocus: !0
@@ -416,7 +416,7 @@ class eP extends l.PureComponent {
       var t, n;
       let a = null === (t = this.editorRef) || void 0 === t ? void 0 : t.getSlateEditor();
       null != a && (D.SlateTransforms.select(a, []), a.insertText(e), null === (n = this.editorRef) || void 0 === n || n.focus())
-    }), eR(this, "renderAttachButton", (e, t) => (0, a.jsx)(j.default, {
+    }), eR(this, "renderAttachButton", (e, t) => (0, a.jsx)(O.default, {
       className: t,
       channel: this.props.channel,
       draftType: es.DraftType.ChannelMessage,
@@ -430,7 +430,7 @@ class eP extends l.PureComponent {
       return (0, a.jsx)(L.default, {
         ref: t
       })
-    }), eR(this, "renderApplicationCommandIcon", (e, t, n) => (0, a.jsx)(O.default, {
+    }), eR(this, "renderApplicationCommandIcon", (e, t, n) => (0, a.jsx)(j.default, {
       className: n,
       command: e,
       section: t,
@@ -474,7 +474,7 @@ class eD extends l.PureComponent {
       showQuarantinedUserBanner: h,
       filterAfterTimestamp: m,
       communicationDisabledUntil: p,
-      shakeIntensity: C,
+      shakeIntensity: g,
       poggermodeEnabled: S,
       isSelectedResourceChannel: _,
       showAutomodUserProfileChatBlocker: T
@@ -501,11 +501,11 @@ class eD extends l.PureComponent {
         chatInputType: u,
         placeholder: c,
         accessibilityLabel: f,
-        shakeIntensity: C,
+        shakeIntensity: g,
         poggermodeEnabled: S
       })
     });
-    return (0, a.jsx)(g.default, {
+    return (0, a.jsx)(C.default, {
       page: this.getAnalyticsPage(),
       children: (0, a.jsx)(eh.ChatLayerProvider, {
         children: (0, a.jsxs)(ep.ComponentDispatchGroupProvider, {
@@ -519,7 +519,7 @@ class eD extends l.PureComponent {
           }), (0, a.jsx)(ep.ComponentAction, {
             event: eN.ComponentActions.OPEN_EXPRESSION_PICKER,
             handler: this.handleOpenExpressionPicker
-          }), (0, a.jsxs)(ej, {
+          }), (0, a.jsxs)(eO, {
             isSidebar: v,
             className: ey.chatContent,
             "aria-label": t.format({
@@ -596,10 +596,10 @@ class eD extends l.PureComponent {
         case eN.ChannelTypes.GUILD_TEXT:
         case eN.ChannelTypes.GUILD_FORUM:
         case eN.ChannelTypes.GUILD_MEDIA:
-          return g.default.Pages.GUILD_CHANNEL;
+          return C.default.Pages.GUILD_CHANNEL;
         case eN.ChannelTypes.GROUP_DM:
         case eN.ChannelTypes.DM:
-          return g.default.Pages.DM_CHANNEL;
+          return C.default.Pages.DM_CHANNEL;
         default:
           return null
       }
@@ -677,7 +677,7 @@ t.default = l.memo(function(e) {
   } = (0, eI.default)(t), o = (0, Q.useShouldBlockDMInputForQuarantinedUser)(ef.default.getCurrentUser(), t), [c] = (0, H.useCurrentUserCommunicationDisabled)(null == n ? void 0 : n.id), f = (0, F.useCurrentUserHasAutomodQuarantinedProfile)(null == n ? void 0 : n.id), h = (0, u.useStateFromStores)([ef.default], () => ef.default.getCurrentUser()), m = (0, u.useStateFromStores)([er.default], () => {
     var e, t, a;
     return null != h && null !== (a = null === (e = er.default.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : eN.EMPTY_STRING_SNOWFLAKE_ID, null == h ? void 0 : h.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== a && a
-  }), p = (0, u.useStateFromStores)([Z.default], () => Z.default.isEnabled()), E = (0, J.default)(t.id), g = (0, B.default)(t.id);
+  }), p = (0, u.useStateFromStores)([Z.default], () => Z.default.isEnabled()), E = (0, J.default)(t.id), C = (0, B.default)(t.id);
   return (0, a.jsx)(eD, {
     channel: t,
     isEditing: null != (0, u.useStateFromStores)([ei.default], () => ei.default.getEditingMessageId(t.id)),
@@ -693,7 +693,7 @@ t.default = l.memo(function(e) {
     communicationDisabledUntil: c,
     shakeIntensity: E,
     poggermodeEnabled: p,
-    isSelectedResourceChannel: g,
+    isSelectedResourceChannel: C,
     showAutomodUserProfileChatBlocker: f && !m
   })
 })

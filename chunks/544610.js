@@ -10,8 +10,8 @@ var l, s, i, r, o = n("392711"),
   m = n("624138"),
   p = n("51144"),
   E = n("592125"),
-  g = n("580005"),
-  C = n("699516"),
+  C = n("580005"),
+  g = n("699516"),
   S = n("594174"),
   _ = n("981631");
 let T = !1,
@@ -34,43 +34,43 @@ function L() {
   if (!T) return !1;
   let e = E.default.getChannel(M);
   if (0 === I.trim().length) return null != a && a.clearQuery(), v = function(e) {
-    let t = C.default.getFriendIDs();
+    let t = g.default.getFriendIDs();
     return (null == e ? void 0 : e.isPrivate()) && (t = t.filter(t => !e.recipients.includes(t))), t.reduce((e, t) => {
       let n = S.default.getUser(t);
       return null == n ? e : (e.push({
         user: n
       }), e)
-    }, []).sort(j)
+    }, []).sort(O)
   }(e), !0;
   let t = null != e ? e.recipients : [];
   return null != a && a.setQuery(I, {
     friends: !0
   }, t, function() {
-    let e = g.default.getFrequentlyWithoutFetchingLatest().filter(e => e instanceof h.PrivateChannelRecord && e.isDM()),
+    let e = C.default.getFrequentlyWithoutFetchingLatest().filter(e => e instanceof h.PrivateChannelRecord && e.isDM()),
       t = Math.max(...e.map(e => {
         let {
           id: t
         } = e;
-        return g.default.getScoreWithoutFetchingLatest(t)
+        return C.default.getScoreWithoutFetchingLatest(t)
       })),
       n = {};
     return e.forEach(e => {
-      let a = g.default.getScoreWithoutFetchingLatest(e.id),
+      let a = C.default.getScoreWithoutFetchingLatest(e.id),
         l = e.getRecipientId(),
-        s = C.default.isFriend(l) ? .2 : 0,
+        s = g.default.isFriend(l) ? .2 : 0,
         i = null != E.default.getDMFromUserId(l) ? .1 : 0;
       n[l] = 1 + a / t + s + i
     }), n
   }()), !1
 }
 
-function O() {
+function j() {
   if (!T) return !1;
   let e = x;
-  return (x = u().some(C.default.getRelationships(), e => e === _.RelationshipTypes.FRIEND)) !== e
+  return (x = u().some(g.default.getRelationships(), e => e === _.RelationshipTypes.FRIEND)) !== e
 }
 
-function j(e, t) {
+function O(e, t) {
   return (0, m.stripDiacritics)(p.default.getName(e.user).toLocaleLowerCase()).localeCompare((0, m.stripDiacritics)(p.default.getName(t.user).toLocaleLowerCase()))
 }
 
@@ -94,7 +94,7 @@ function D() {
 
 function b(e) {
   if (e.key !== _.NEW_GROUP_DM_POPOUT_ID) return !1;
-  T = !0, O(), a = D(), M = null, R("")
+  T = !0, j(), a = D(), M = null, R("")
 }
 
 function U(e) {
@@ -107,7 +107,7 @@ function F() {
 }
 class w extends(l = d.default.Store) {
   initialize() {
-    this.waitFor(S.default, E.default, C.default), this.syncWith([S.default, E.default], L), this.syncWith([C.default], O)
+    this.waitFor(S.default, E.default, g.default), this.syncWith([S.default, E.default], L), this.syncWith([g.default], j)
   }
   getResults() {
     return v
@@ -153,7 +153,7 @@ let k = new w(c.default, {
   MODAL_PUSH: b,
   SHOW_ACTION_SHEET: b,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function(e) {
-    T = !0, O(), a = D(), M = e.channelId, R("")
+    T = !0, j(), a = D(), M = e.channelId, R("")
   },
   MODAL_POP: U,
   HIDE_ACTION_SHEET: U,

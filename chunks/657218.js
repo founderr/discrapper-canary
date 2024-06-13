@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("100527"),
   p = n("906732"),
   E = n("541716"),
-  g = n("752305"),
-  C = n("893718"),
+  C = n("752305"),
+  g = n("893718"),
   S = n("303628"),
   _ = n("967128"),
   T = n("294218"),
@@ -32,8 +32,8 @@ var a = n("735250"),
   y = n("496675"),
   R = n("117530"),
   L = n("153124"),
-  O = n("465670"),
-  j = n("663949"),
+  j = n("465670"),
+  O = n("663949"),
   P = n("934458"),
   D = n("502568"),
   b = n("459273"),
@@ -69,7 +69,7 @@ function Z(e) {
           draftType: N.DraftType.FirstThreadMessage
         }), (0, a.jsxs)(D.default, {
           toolbar: (0, a.jsx)(D.default.Icon, {
-            icon: O.default,
+            icon: j.default,
             tooltip: W.default.Messages.CLOSE,
             onClick: () => (0, G.closeAndClearThreadSidebar)(t)
           }),
@@ -120,15 +120,15 @@ function X(e) {
       updateThreadSettings: s
     }
   }(t, n), {
-    textAreaState: C,
+    textAreaState: g,
     setTextAreaState: S
   } = function(e, t) {
-    let [n, a] = l.useState((0, g.createEmptyState)());
+    let [n, a] = l.useState((0, C.createEmptyState)());
     return l.useEffect(() => {
       function n(n) {
         var l;
         let s = N.default.getDraft(e.id, N.DraftType.FirstThreadMessage);
-        (0 === s.length || !0 === n) && a((0, g.createState)(s)), t(null !== (l = N.default.getThreadSettings(e.id)) && void 0 !== l ? l : {})
+        (0 === s.length || !0 === n) && a((0, C.createState)(s)), t(null !== (l = N.default.getThreadSettings(e.id)) && void 0 !== l ? l : {})
       }
       return n(!0), N.default.addChangeListener(n), () => {
         N.default.removeChangeListener(n)
@@ -205,9 +205,9 @@ function X(e) {
     parentMessageId: n,
     threadSettings: m,
     privateThreadMode: T,
-    textAreaState: C,
+    textAreaState: g,
     location: s
-  }), y = (0, k.getIsPrivate)(m, T) ? j.default : P.default;
+  }), y = (0, k.getIsPrivate)(m, T) ? O.default : P.default;
   return (0, a.jsx)("div", {
     className: Y.chat,
     onMouseDown: f,
@@ -252,7 +252,7 @@ function X(e) {
           className: Y.submitContainer,
           children: [(0, a.jsx)(Q, {
             parentChannel: t,
-            textAreaState: C,
+            textAreaState: g,
             setTextAreaState: S,
             submit: M,
             error: x
@@ -348,7 +348,7 @@ function Q(e) {
     setTextAreaState: s,
     submit: c,
     error: f
-  } = e, [h, m] = l.useState(!0), p = l.useCallback(() => m(!0), []), E = l.useCallback(() => m(!1), []), g = l.useCallback((e, n, a) => {
+  } = e, [h, m] = l.useState(!0), p = l.useCallback(() => m(!0), []), E = l.useCallback(() => m(!1), []), C = l.useCallback((e, n, a) => {
     u.default.saveDraft(t.id, n, N.DraftType.FirstThreadMessage), s(e => ("" !== n && e.textValue !== n ? d.default.startTyping(t.id) : "" === n && d.default.stopTyping(t.id), {
       textValue: n,
       richValue: a
@@ -382,7 +382,7 @@ function Q(e) {
       children: (0, a.jsx)(o.InputError, {
         error: I
       })
-    }), (0, a.jsx)(C.default, {
+    }), (0, a.jsx)(g.default, {
       type: K,
       channel: t,
       placeholder: W.default.Messages.FORM_THREAD_STARTER_MESSAGE_PLACEHOLDER,
@@ -395,7 +395,7 @@ function Q(e) {
       }),
       onFocus: p,
       onBlur: E,
-      onChange: g,
+      onChange: C,
       onSubmit: _,
       promptToUpload: F.promptToUpload
     })]

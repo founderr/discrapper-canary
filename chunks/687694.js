@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useMemberListHoverInteractions: function() {
-    return l
+    return r
   }
 });
 let a = (0, n("818083").createExperiment)({
@@ -35,20 +35,20 @@ let a = (0, n("818083").createExperiment)({
       }
     }]
   }),
-  l = e => {
+  r = e => {
     let {
       location: t,
       autoTrackExposure: n = !0
     } = e, {
-      showReplyIcon: l,
-      openOnHover: s
+      showReplyIcon: r,
+      openOnHover: l
     } = a.useExperiment({
       location: t
     }, {
       autoTrackExposure: n
     });
     return {
-      showReplyIcon: l,
-      openOnHover: s
+      showReplyIcon: r,
+      openOnHover: l
     }
   }

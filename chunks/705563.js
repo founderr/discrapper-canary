@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return g
   }
 });
 var a = n("735250");
@@ -19,13 +19,13 @@ var l = n("442837"),
   m = n("360328"),
   p = n("981631"),
   E = n("689938"),
-  g = n("299669");
+  C = n("299669");
 
-function C(e) {
+function g(e) {
   let {
     channelId: t,
     showProfile: n = !1,
-    showTrailingDivider: C = !1
+    showTrailingDivider: g = !1
   } = e, S = c.default.cast(t), {
     joinRequest: _,
     isModmin: T,
@@ -46,7 +46,7 @@ function C(e) {
     submitting: y
   } = (0, m.useJoinRequestButtonActions)(null == _ ? void 0 : _.guildId, null == _ ? void 0 : _.userId);
   return null != _ && _.applicationStatus === h.GuildJoinRequestApplicationStatuses.SUBMITTED && T ? (0, a.jsxs)("div", {
-    className: g.buttons,
+    className: C.buttons,
     children: [(0, a.jsx)(s.Tooltip, {
       text: E.default.Messages.CLAN_APPLICATION_MAX_MEMBER_LIMIT_TOOLTIP,
       shouldShow: x,
@@ -79,6 +79,6 @@ function C(e) {
       },
       size: s.ButtonSizes.SMALL,
       children: E.default.Messages.VIEW_PROFILE
-    }), C && (0, a.jsx)(d.default.Divider, {})]
+    }), g && (0, a.jsx)(d.default.Divider, {})]
   }) : null
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return j
   }
 }), n("47120");
 var a = n("735250"),
@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("645041"),
   p = n("430824"),
   E = n("914010"),
-  g = n("594174"),
-  C = n("626135"),
+  C = n("594174"),
+  g = n("626135"),
   S = n("645896"),
   _ = n("905362"),
   T = n("603368"),
@@ -39,17 +39,17 @@ function L(e) {
     showToast: s,
     onConfirm: o,
     onDismiss: m
-  } = e, [p, E] = l.useState(!1), C = l.useRef(null), _ = (0, S.useClanInfo)(n.id), A = (0, f.default)(), N = (0, c.useStateFromStores)([h.default], () => h.default.useReducedMotion), M = (0, T.useBrandColor)(null == _ ? void 0 : null === (t = _.branding) || void 0 === t ? void 0 : t.primaryColor, [d.tokens.colors.BG_BRAND, .5]), L = d.tokens.colors.BG_SURFACE_OVERLAY.resolve({
+  } = e, [p, E] = l.useState(!1), g = l.useRef(null), _ = (0, S.useClanInfo)(n.id), A = (0, f.default)(), N = (0, c.useStateFromStores)([h.default], () => h.default.useReducedMotion), M = (0, T.useBrandColor)(null == _ ? void 0 : null === (t = _.branding) || void 0 === t ? void 0 : t.primaryColor, [d.tokens.colors.BG_BRAND, .5]), L = d.tokens.colors.BG_SURFACE_OVERLAY.resolve({
     theme: A,
     saturation: 1
-  }).hex(), O = (0, T.getClanRadialBackgroundStyle)(M, L, "top left", .3, "30%"), j = (0, c.useStateFromStores)([g.default], () => {
+  }).hex(), j = (0, T.getClanRadialBackgroundStyle)(M, L, "top left", .3, "30%"), O = (0, c.useStateFromStores)([C.default], () => {
     var e;
-    return null === (e = g.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan
+    return null === (e = C.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan
   }, []);
   l.useLayoutEffect(() => {
     var e;
-    if (null == C.current) return;
-    let t = null === (e = C.current) || void 0 === e ? void 0 : e.parentNode;
+    if (null == g.current) return;
+    let t = null === (e = g.current) || void 0 === e ? void 0 : e.parentNode;
     return null != t && (t.style.zIndex = "1003"), () => {
       null != t && (t.style.zIndex = "1002")
     }
@@ -84,7 +84,7 @@ function L(e) {
       },
       delay: 200
     }),
-    U = (0, I.isGuildAdoptedUserClanIdentityChanged)(n, j),
+    U = (0, I.isGuildAdoptedUserClanIdentityChanged)(n, O),
     F = U ? y.default.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_TITLE.format({
       guildName: n.name
     }) : y.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_TITLE.format({
@@ -104,9 +104,9 @@ function L(e) {
       className: i()(R.wrapper),
       style: {
         ...e,
-        ...O
+        ...j
       },
-      ref: C,
+      ref: g,
       children: (0, a.jsx)(d.ClickableContainer, {
         "aria-label": k,
         onClick: D,
@@ -157,10 +157,10 @@ function L(e) {
   })
 }
 
-function O(e) {
+function j(e) {
   let {} = e, t = (0, c.useStateFromStores)([E.default], () => E.default.getGuildId()), n = (0, A.useShouldShowUserClanTagUpsell)(t, "clan_tag_upsell_toast"), s = (0, c.useStateFromStores)([p.default], () => p.default.getGuild(t), [t]), [i, r] = l.useState(!1), u = l.useRef(null);
   l.useEffect(() => (n && (u.current = window.setTimeout(() => {
-    r(!0), C.default.track(N.AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN, {
+    r(!0), g.default.track(N.AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN, {
       type: o.DismissibleGuildContent[o.DismissibleGuildContent.ADOPT_CLAN_IDENTITY_NOTICE],
       guild_id: null != t ? t : N.EMPTY_STRING_SNOWFLAKE_ID
     })

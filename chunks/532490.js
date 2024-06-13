@@ -16,8 +16,8 @@ var a, l, s = n("735250"),
   m = n("607070"),
   p = n("594174"),
   E = n("5192"),
-  g = n("603368"),
-  C = n("856682"),
+  C = n("603368"),
+  g = n("856682"),
   S = n("284019"),
   _ = n("689938"),
   T = n("830430");
@@ -35,9 +35,9 @@ t.default = i.memo(function(e) {
     signHintPosition: x = "left",
     className: N,
     fullHeight: M
-  } = e, y = i.useRef(null), [R, L] = i.useState(!1), O = i.useCallback(e => {
+  } = e, y = i.useRef(null), [R, L] = i.useState(!1), j = i.useCallback(e => {
     e.preventDefault(), e.stopPropagation(), null == r || r(), L(!0)
-  }, [r]), [j, P] = i.useState(!1), [D, b] = i.useState(!1), U = i.useRef(null), F = i.useCallback(e => {
+  }, [r]), [O, P] = i.useState(!1), [D, b] = i.useState(!1), U = i.useRef(null), F = i.useCallback(e => {
     e && (U.current = setTimeout(() => {
       b(!0)
     }, I))
@@ -77,11 +77,11 @@ t.default = i.memo(function(e) {
   }, [D, R, x]), i.useEffect(() => () => {
     null != U.current && clearTimeout(U.current)
   }, []);
-  let Y = o()(T.signHintAnimationContainer, j && T.noDisplay, "left" === x ? T.signTextLeft : T.signTextRight),
+  let Y = o()(T.signHintAnimationContainer, O && T.noDisplay, "left" === x ? T.signTextLeft : T.signTextRight),
     z = (0, c.useToken)(c.tokens.colors.BG_SURFACE_OVERLAY),
     K = (0, c.useToken)(c.tokens.colors.BG_BRAND),
     Z = null != n ? n : K.hex(),
-    X = (0, g.getClanPrimaryButtonStyles)(Z, z.hex()),
+    X = (0, C.getClanPrimaryButtonStyles)(Z, z.hex()),
     {
       height: q = 87,
       ref: J
@@ -101,7 +101,7 @@ t.default = i.memo(function(e) {
   return (0, s.jsx)("div", {
     className: o()(T.container, N),
     ref: w,
-    children: (0, s.jsx)(C.default, {
+    children: (0, s.jsx)(g.default, {
       fullHeight: M,
       children: (0, s.jsxs)("div", {
         className: o()(T.overviewSidebarWrapper, M && T.fullHeight),
@@ -118,7 +118,7 @@ t.default = i.memo(function(e) {
           children: (0, s.jsx)("div", {
             ref: J,
             children: (0, s.jsxs)(c.Clickable, {
-              onClick: O,
+              onClick: j,
               className: o()(T.signatureBlock, {
                 [T.clickable]: null != r
               }),
@@ -141,7 +141,7 @@ t.default = i.memo(function(e) {
                         var t;
                         null === (t = y.current) || void 0 === t || t.scrollIntoView({
                           behavior: "smooth"
-                        }), O(e)
+                        }), j(e)
                       },
                       children: [(0, s.jsx)("div", {
                         className: o()(T.signCarot, {

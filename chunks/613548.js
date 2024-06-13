@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("569545"),
   p = n("517525"),
   E = n("6242"),
-  g = n("757692"),
-  C = n("386542"),
+  C = n("757692"),
+  g = n("386542"),
   S = n("141321"),
   _ = n("44136"),
   T = n("651183"),
@@ -32,8 +32,8 @@ var a = n("735250"),
   y = n("975146"),
   R = n("991617"),
   L = n("606304"),
-  O = n("594174"),
-  j = n("502568"),
+  j = n("594174"),
+  O = n("502568"),
   P = n("805009"),
   D = n("368666"),
   b = n("358221"),
@@ -87,11 +87,11 @@ function W(e) {
     selectedParticipant: b.default.getSelectedParticipant(_),
     voiceParticipantsHidden: b.default.getVoiceParticipantsHidden(_),
     userParticipantCount: b.default.getUserParticipantCount(_)
-  }), [_]), W = (0, d.useStateFromStores)([O.default], () => O.default.getCurrentUser()), Y = (0, U.default)(n), {
+  }), [_]), W = (0, d.useStateFromStores)([j.default], () => j.default.getCurrentUser()), Y = (0, U.default)(n), {
     available: z,
     activated: K,
     hqStreamingState: Z
-  } = (0, C.usePerksDemo)(u.EntitlementFeatureNames.STREAM_HIGH_QUALITY), X = z && K && Z.hqStreamingIsEnabled, q = (0, g.canStreamParticipantSetting)(P, W), J = (0, E.useHDStreamingViewerExperiment)("CallHeader", !0, W, q), {
+  } = (0, g.usePerksDemo)(u.EntitlementFeatureNames.STREAM_HIGH_QUALITY), X = z && K && Z.hqStreamingIsEnabled, q = (0, C.canStreamParticipantSetting)(P, W), J = (0, E.useHDStreamingViewerExperiment)("CallHeader", !0, W, q), {
     preventIdle: Q,
     allowIdle: $
   } = (0, I.usePreventIdle)("popup"), ee = [];
@@ -180,7 +180,7 @@ function W(e) {
         className: B.lastButton
       })
     }
-  }, "more-options-popout")), !r && (ee.push((0, a.jsx)(j.default.Divider, {
+  }, "more-options-popout")), !r && (ee.push((0, a.jsx)(O.default.Divider, {
     className: B.divider
   }, "divider")), ee.push((0, a.jsx)(v.ChatButton, {
     channelId: n.id,

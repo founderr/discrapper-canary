@@ -36,10 +36,10 @@ t.default = l.forwardRef(function(e, t) {
     setIsHovered: m,
     onMouseEnter: p,
     onMouseLeave: E,
-    cancelTimers: g
+    cancelTimers: C
   } = (0, i.default)(200, 300);
 
-  function C(e) {
+  function g(e) {
     "focus" !== e.type && !c && p()
   }
 
@@ -48,7 +48,7 @@ t.default = l.forwardRef(function(e, t) {
   }
 
   function _(e) {
-    g(), f(!c), (!h || c) && e()
+    C(), f(!c), (!h || c) && e()
   }
   l.useImperativeHandle(t, () => ({
     hidePopout() {
@@ -86,7 +86,7 @@ t.default = l.forwardRef(function(e, t) {
             return t = e, a = n, void((t.key === r.KeyboardKeysUpdated.ENTER || t.key === r.KeyboardKeysUpdated.SPACE) && _(() => a(t)))
           },
           className: o.actionBarButton,
-          onMouseEnter: C,
+          onMouseEnter: g,
           onMouseLeave: S,
           isActive: T
         })

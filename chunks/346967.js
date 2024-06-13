@@ -28,19 +28,19 @@ function p(e) {
     location: t
   }), E = (0, f.default)();
   (0, o.useFetchProfileEffects)();
-  let [g] = n.recipients, C = (0, r.useStateFromStores)([u.default], () => u.default.getUser(g));
-  return (i()(null != C, "Unexpected missing user"), l.useEffect(() => {
-    (0, c.maybeFetchUserProfileForPopout)(C, {
-      withMutualGuilds: !C.bot,
-      withMutualFriends: !C.bot,
+  let [C] = n.recipients, g = (0, r.useStateFromStores)([u.default], () => u.default.getUser(C));
+  return (i()(null != g, "Unexpected missing user"), l.useEffect(() => {
+    (0, c.maybeFetchUserProfileForPopout)(g, {
+      withMutualGuilds: !g.bot,
+      withMutualFriends: !g.bot,
       channelId: n.id
     })
-  }, [C, n.id]), E) ? null : !p || C.bot || C.isNonUserBot() || C.isClyde() ? (0, a.jsx)(h.default, {
-    user: C,
+  }, [g, n.id]), E) ? null : !p || g.bot || g.isNonUserBot() || g.isClyde() ? (0, a.jsx)(h.default, {
+    user: g,
     channel: n,
     ...s
   }) : (0, a.jsx)(m.default, {
-    user: C,
+    user: g,
     channel: n,
     ...s
   })

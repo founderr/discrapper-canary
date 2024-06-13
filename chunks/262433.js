@@ -43,8 +43,8 @@ function E(e) {
   var t, n, a, i;
   let {
     emojiHose: E,
-    context: g,
-    canvasWidth: C,
+    context: C,
+    canvasWidth: g,
     canvasHeight: S,
     fallbackColor: _,
     outlineColorDark: T,
@@ -52,9 +52,9 @@ function E(e) {
     streamerId: A,
     deadDrawables: v
   } = e;
-  g.save();
+  C.save();
   let x = o.default.getEmojiImage(null !== (n = null !== (t = E.emojiId) && void 0 !== t ? t : E.emojiName) && void 0 !== n ? n : ""),
-    N = (0, d.normalizeCoordinate)(E.x, C),
+    N = (0, d.normalizeCoordinate)(E.x, g),
     M = (0, d.normalizeCoordinate)(E.y, S),
     {
       outlineColor: y
@@ -86,12 +86,12 @@ function E(e) {
         }
         return a.particles[e.id] = u, a.lastSpawned[e.id] = Date.now(), a
       })
-    }(E, N, M), (0, c.renderAvatarCursorOutline)(g, N, M, y, f.OUTLINE_WIDTH), (0, c.renderAvatarCursor)(g, N, M, E.userId), p(E, e => (function(e, t, n) {
+    }(E, N, M), (0, c.renderAvatarCursorOutline)(C, N, M, y, f.OUTLINE_WIDTH), (0, c.renderAvatarCursor)(C, N, M, E.userId), p(E, e => (function(e, t, n) {
       if (null == t) return;
       let a = n.size * window.devicePixelRatio,
         l = n.x - a / 2 * window.devicePixelRatio,
         s = n.y - 1.2 * a * window.devicePixelRatio;
       e.globalAlpha = n.opacity, e.drawImage(t, a / 2 + l, a / 2 + s, a, a)
-    })(g, x, e)), E.lastUpdatedAt + f.EMOJI_HOSE_PING_DELAY < Date.now() && (0, r.stopRenderedEmojiHose)(A, E), E.state === u.EmojiHoseState.STOP && (a = E, !(Object.keys(null !== (i = m.getState().particles[a.id]) && void 0 !== i ? i : {}).length > 0))) v.push(E);
-  g.restore()
+    })(C, x, e)), E.lastUpdatedAt + f.EMOJI_HOSE_PING_DELAY < Date.now() && (0, r.stopRenderedEmojiHose)(A, E), E.state === u.EmojiHoseState.STOP && (a = E, !(Object.keys(null !== (i = m.getState().particles[a.id]) && void 0 !== i ? i : {}).length > 0))) v.push(E);
+  C.restore()
 }

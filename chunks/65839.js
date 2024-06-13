@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("486527"),
   p = n("981631"),
   E = n("689938"),
-  g = n("479133"),
-  C = n("849529"),
+  C = n("479133"),
+  g = n("849529"),
   S = n("584354"),
   _ = n("725060");
 let T = (0, u.default)(e => {
@@ -27,31 +27,31 @@ let T = (0, u.default)(e => {
     width: r
   } = e, u = null != r && r <= 800;
   return (0, a.jsxs)("div", {
-    className: C.header,
+    className: g.header,
     children: [(0, a.jsx)("img", {
       alt: "",
-      className: C.headerImage,
+      className: g.headerImage,
       src: u ? _ : S
     }), (0, a.jsx)("div", {
-      className: C.headerContentWrapper,
+      className: g.headerContentWrapper,
       children: (0, a.jsxs)("div", {
-        className: i()(C.headerContent, {
-          [C.headerContentSmall]: u
+        className: i()(g.headerContent, {
+          [g.headerContentSmall]: u
         }),
         children: [(0, a.jsx)(o.Heading, {
           variant: "heading-xl/semibold",
-          className: C.searchTitle,
+          className: g.searchTitle,
           children: E.default.Messages.HUB_DIRECTORY_SEARCH_TITLE
         }), (0, a.jsx)(o.Text, {
           variant: "text-md/normal",
-          className: C.searchSubtitle,
+          className: g.searchSubtitle,
           children: E.default.Messages.HUB_DIRECTORY_SEARCH_SUBTITLE
         }), (0, a.jsx)(o.SearchBox, {
           searchTerm: t,
-          className: C.searchBox,
-          inputClassName: C.searchBoxInput,
-          closeIconClassName: C.closeIcon,
-          searchIconClassName: C.searchIcon,
+          className: g.searchBox,
+          inputClassName: g.searchBoxInput,
+          closeIconClassName: g.closeIcon,
+          searchIconClassName: g.searchIcon,
           label: E.default.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
           placeholder: E.default.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
           onChange: n,
@@ -82,21 +82,21 @@ function I(e) {
     splash: t.splash
   });
   return (0, a.jsx)("div", {
-    className: g.pageContainer,
+    className: C.pageContainer,
     children: (0, a.jsxs)(o.AdvancedScrollerAuto, {
-      className: g.scroller,
+      className: C.scroller,
       children: [(0, a.jsxs)("div", {
-        className: C.header,
+        className: g.header,
         children: [null != m ? (0, a.jsx)("img", {
           alt: "",
-          className: i()(C.headerImage, C.headerImageSimple),
+          className: i()(g.headerImage, g.headerImageSimple),
           src: m
         }) : null, (0, a.jsx)("div", {
-          className: C.headerImageBG
+          className: g.headerImageBG
         }), (0, a.jsx)("div", {
-          className: C.headerContentWrapper,
+          className: g.headerContentWrapper,
           children: (0, a.jsx)("div", {
-            className: i()(C.headerContent, C.headerContentSmall),
+            className: i()(g.headerContent, g.headerContentSmall),
             children: (0, a.jsx)(o.Heading, {
               variant: "heading-xl/semibold",
               color: "always-white",
@@ -107,9 +107,9 @@ function I(e) {
           })
         })]
       }), s && null == n ? (0, a.jsx)(o.Spinner, {
-        className: g.spinner
+        className: C.spinner
       }) : (0, a.jsxs)("div", {
-        className: g.cardsContainer,
+        className: C.cardsContainer,
         children: [d.map(e => (0, a.jsx)(h.default, {
           entry: e
         }, e.guildId)), u && null != l ? (0, a.jsx)(h.AddEntryCard, {
@@ -140,9 +140,9 @@ t.default = e => {
     handleCreateOrAddGuild: s,
     isLoading: x
   }) : (0, a.jsx)("div", {
-    className: g.pageContainer,
+    className: C.pageContainer,
     children: (0, a.jsxs)(o.AdvancedScrollerAuto, {
-      className: g.scroller,
+      className: C.scroller,
       children: [(0, a.jsx)(T, {
         searchQuery: i,
         setSearchQuery: u,
@@ -151,7 +151,7 @@ t.default = e => {
       }), (0, a.jsx)(o.AdvancedScrollerThin, {
         orientation: "horizontal",
         children: (0, a.jsxs)(o.TabBar, {
-          className: C.tabBar,
+          className: g.tabBar,
           type: "top",
           look: "brand",
           selectedItem: S,
@@ -159,7 +159,7 @@ t.default = e => {
             _(e)
           },
           children: [(0, a.jsx)(o.TabBar.Item, {
-            className: C.tabBarItem,
+            className: g.tabBarItem,
             id: m.DirectoryEntryCategories.ALL,
             children: "".concat(E.default.Messages.DIRECTORY_CATEGORY_ALL, " (").concat(v, ")")
           }, m.DirectoryEntryCategories.ALL), (0, m.getHubCategories)(t.id).map(e => {
@@ -168,21 +168,21 @@ t.default = e => {
               label: n
             } = e;
             return (0, a.jsx)(o.TabBar.Item, {
-              className: C.tabBarItem,
+              className: g.tabBarItem,
               id: t,
               children: "".concat(n, " ").concat(null != A[t] ? "(".concat(A[t], ")") : "")
             }, t)
           })]
         })
       }), x && null == n ? (0, a.jsx)(o.Spinner, {
-        className: g.spinner
+        className: C.spinner
       }) : null == n ? void 0 : n.map((e, t) => (0, a.jsxs)(l.Fragment, {
         children: [void 0 !== e.header ? (0, a.jsx)(o.Text, {
           variant: "text-md/semibold",
-          className: C.sectionHeader,
+          className: g.sectionHeader,
           children: e.header
         }) : null, (0, a.jsxs)("div", {
-          className: g.cardsContainer,
+          className: C.cardsContainer,
           children: [e.entries.map(e => (0, a.jsx)(h.default, {
             entry: e
           }, e.guildId)), e.appendEndCard && null != s ? (0, a.jsx)(h.AddEntryCard, {

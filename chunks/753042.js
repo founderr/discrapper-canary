@@ -19,8 +19,8 @@ var l = n("120356"),
   m = n("16829"),
   p = n("430824"),
   E = n("944486"),
-  g = n("819570"),
-  C = n("68972"),
+  C = n("819570"),
+  g = n("68972"),
   S = n("189432"),
   _ = n("776767"),
   T = n("981631"),
@@ -78,7 +78,7 @@ function v(e) {
             color: f.tokens.colors.INFO_DANGER_FOREGROUND
           })
         }), (0, a.jsx)(_.UserModInfoItem, {
-          icon: (0, a.jsx)(C.default, {
+          icon: (0, a.jsx)(g.default, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX
           }),
@@ -93,9 +93,9 @@ function v(e) {
             children: x
           })
         }), (0, a.jsx)(_.UserModInfoItem, {
-          icon: (0, a.jsx)(g.GuildIcon, {
+          icon: (0, a.jsx)(C.GuildIcon, {
             guild: n,
-            size: g.GuildIcon.Sizes.SMOL,
+            size: C.GuildIcon.Sizes.SMOL,
             animate: !1,
             className: A.guildIcon
           }),

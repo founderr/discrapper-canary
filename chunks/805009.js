@@ -17,8 +17,8 @@ var a, l = n("735250"),
   m = n("434650"),
   p = n("657305"),
   E = n("367907"),
-  g = n("282256"),
-  C = n("833858"),
+  C = n("282256"),
+  g = n("833858"),
   S = n("223135"),
   _ = n("366695"),
   T = n("119828"),
@@ -31,8 +31,8 @@ var a, l = n("735250"),
   y = n("944581"),
   R = n("368666"),
   L = n("630388"),
-  O = n("51144"),
-  j = n("981631"),
+  j = n("51144"),
+  O = n("981631"),
   P = n("354459"),
   D = n("927923"),
   b = n("689938"),
@@ -72,7 +72,7 @@ let w = e => {
       })
     }, "add-status") : (0, l.jsx)(h.TooltipContainer, {
       className: U.iconSpacing,
-      text: (0, C.getHangStatusText)(t),
+      text: (0, g.getHangStatusText)(t),
       children: (0, l.jsx)(S.default, {
         hangStatusActivity: t,
         className: r()(U.hangStatusIcon, n)
@@ -108,12 +108,12 @@ class H extends(a = s.Component) {
     } = this.props;
     return (0, l.jsx)("div", {
       className: r()(a, U.avatar, {
-        [U.avatarLarge]: n === j.OverlayAvatarSizes.LARGE,
-        [U.avatarSmall]: n === j.OverlayAvatarSizes.SMALL,
+        [U.avatarLarge]: n === O.OverlayAvatarSizes.LARGE,
+        [U.avatarSmall]: n === O.OverlayAvatarSizes.SMALL,
         [U.avatarSpeaking]: e
       }),
       style: {
-        backgroundImage: "url(".concat(t.getAvatarURL(s, n === j.OverlayAvatarSizes.LARGE ? 38 : 24), ")")
+        backgroundImage: "url(".concat(t.getAvatarURL(s, n === O.OverlayAvatarSizes.LARGE ? 38 : 24), ")")
       }
     })
   }
@@ -134,7 +134,7 @@ class H extends(a = s.Component) {
         [U.username]: !0,
         [U.usernameSpeaking]: !i && !o && a
       }),
-      children: [null != e ? e : O.default.getName(t), u ? (0, l.jsxs)("span", {
+      children: [null != e ? e : j.default.getName(t), u ? (0, l.jsxs)("span", {
         className: U.guestSuffix,
         children: ["\xa0", b.default.Messages.GUEST_NAME_SUFFIX]
       }) : ""]
@@ -146,12 +146,12 @@ class H extends(a = s.Component) {
       disableTooltip: !0,
       className: r()(U.clanTag, d && U.isOverlay),
       profileViewedAnalytics: {
-        source: d ? j.AnalyticsSections.OVERLAY : j.AnalyticsLocations.VOICE_PANEL,
+        source: d ? O.AnalyticsSections.OVERLAY : O.AnalyticsLocations.VOICE_PANEL,
         tagUserId: t.id
       }
     };
     return !n || d ? (0, l.jsx)(l.Fragment, {
-      children: (0, l.jsx)(g.default, {
+      children: (0, l.jsx)(C.default, {
         ...h,
         children: f
       })
@@ -172,13 +172,13 @@ class H extends(a = s.Component) {
       isWatching: f,
       iconClassName: m,
       embeddedApplication: E,
-      otherClientSessionType: g,
-      voicePlatform: C,
+      otherClientSessionType: C,
+      voicePlatform: g,
       hangStatusActivity: S,
       showHangStatus: _,
       isSelf: v,
       application: x,
-      guildId: O,
+      guildId: j,
       channelId: F,
       user: w,
       handleHoverHangStatus: H,
@@ -213,12 +213,12 @@ class H extends(a = s.Component) {
       children: (0, l.jsx)(y.default, {
         className: r()(U.icon, m)
       })
-    }, "activity")), g === D.GameConsoleTypes.XBOX || C === P.VoicePlatforms.XBOX ? W.push((0, l.jsx)("div", {
+    }, "activity")), C === D.GameConsoleTypes.XBOX || g === P.VoicePlatforms.XBOX ? W.push((0, l.jsx)("div", {
       className: r()(U.iconSpacing),
       children: (0, l.jsx)(M.default, {
         className: r()(U.icon, m)
       })
-    }, "xbox")) : (g === D.GameConsoleTypes.PLAYSTATION || C === P.VoicePlatforms.PLAYSTATION) && W.push((0, l.jsx)("div", {
+    }, "xbox")) : (C === D.GameConsoleTypes.PLAYSTATION || g === P.VoicePlatforms.PLAYSTATION) && W.push((0, l.jsx)("div", {
       className: r()(U.iconSpacing),
       children: (0, l.jsx)(N.default, {
         className: r()(U.icon, m)
@@ -235,7 +235,7 @@ class H extends(a = s.Component) {
         className: r()(U.icon, m)
       })
     }, "watch"));
-    let z = null != x && !(0, L.hasFlag)(x.flags, j.ApplicationFlags.EMBEDDED),
+    let z = null != x && !(0, L.hasFlag)(x.flags, O.ApplicationFlags.EMBEDDED),
       K = null == S && z;
     return 0 !== W.length || null != Y || _ || K ? (0, l.jsxs)("div", {
       className: U.icons,
@@ -251,7 +251,7 @@ class H extends(a = s.Component) {
         children: K ? (0, l.jsx)(G, {
           application: x,
           iconClassName: m,
-          guildId: O,
+          guildId: j,
           channelId: F,
           userId: w.id
         }, "".concat(w.id, "-game")) : (0, l.jsx)(k, {
@@ -281,8 +281,8 @@ class H extends(a = s.Component) {
         [U.overlap]: u,
         [U.selected]: i,
         [U.clickable]: null != e,
-        [U.userSmall]: a === j.OverlayAvatarSizes.SMALL,
-        [U.userLarge]: a === j.OverlayAvatarSizes.LARGE,
+        [U.userSmall]: a === O.OverlayAvatarSizes.SMALL,
+        [U.userLarge]: a === O.OverlayAvatarSizes.LARGE,
         [U.disabled]: !i && o
       }),
       onClick: this.handleClick,
@@ -352,7 +352,7 @@ function G(e) {
     userId: o
   } = e, [u, d] = s.useState(!1), c = (0, m.useIsVisible)(e => d(e));
   return s.useEffect(() => {
-    u && E.default.trackWithMetadata(j.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
+    u && E.default.trackWithMetadata(O.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
       channel_id: i,
       guild_id: a,
       user_id: o
@@ -372,7 +372,7 @@ function G(e) {
         game: t,
         size: _.default.Sizes.XSMALL,
         onMouseEnter: () => {
-          E.default.trackWithMetadata(j.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
+          E.default.trackWithMetadata(O.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
             channel_id: i,
             guild_id: a,
             game_name: t.name,
@@ -443,7 +443,7 @@ function B(e) {
 F(H, "defaultProps", {
   avatarContainerClass: U.avatarContainer,
   userNameClassName: U.usernameFont,
-  size: j.OverlayAvatarSizes.SMALL,
+  size: O.OverlayAvatarSizes.SMALL,
   selected: !1,
   disabled: !1,
   isOverlay: !1

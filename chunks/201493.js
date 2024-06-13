@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("866112"),
   p = n("273387"),
   E = n("683818"),
-  g = n("102888"),
-  C = n("65839"),
+  C = n("102888"),
+  g = n("65839"),
   S = n("453879"),
   _ = n("408310"),
   T = n("486527"),
@@ -51,9 +51,9 @@ t.default = e => {
       (0, o.ack)(v.id, !0, !0, e)
     })
   }, [v.id]);
-  let O = l.useMemo(() => null != M ? (0, S.generateDirectoryRows)(Object.values(M), N) : null, [M, N]),
+  let j = l.useMemo(() => null != M ? (0, S.generateDirectoryRows)(Object.values(M), N) : null, [M, N]),
     {
-      mostRecentQuery: j,
+      mostRecentQuery: O,
       searchFetching: P,
       searchResults: D
     } = (0, s.useStateFromStoresObject)([m.default], () => {
@@ -67,8 +67,8 @@ t.default = e => {
         searchResults: m.default.getSearchResults(v.id, e)
       }
     }),
-    [b, U] = l.useState(j),
-    F = "" !== j,
+    [b, U] = l.useState(O),
+    F = "" !== O,
     {
       showHubEventsList: w
     } = u.default.useExperiment({
@@ -78,7 +78,7 @@ t.default = e => {
       autoTrackExposure: !1
     });
   l.useEffect(() => {
-    h.fetchDirectoryEntries(v.id), h.fetchDirectoryCounts(v.id), w && f.fetchDirectoryEntries(v.id), U(j)
+    h.fetchDirectoryEntries(v.id), h.fetchDirectoryCounts(v.id), w && f.fetchDirectoryEntries(v.id), U(O)
   }, [v.id]), l.useEffect(() => {
     c.default.track(I.AnalyticEvents.GUILD_DIRECTORY_CHANNEL_VIEWED, {
       directory_channel_id: v.id,
@@ -112,24 +112,24 @@ t.default = e => {
   return F ? (0, a.jsx)(_.default, {
     searchQuery: b,
     setSearchQuery: U,
-    mostRecentQuery: j,
+    mostRecentQuery: O,
     handleSearchKeyPress: H,
     handleClearSearch: G,
     handleCreateOrAddGuild: k,
     searchResults: D,
     searchFetching: P
-  }) : null == O && null == N ? (0, a.jsx)("div", {
+  }) : null == j && null == N ? (0, a.jsx)("div", {
     className: A.pageContainer,
     children: (0, a.jsx)(i.Spinner, {
       className: A.spinner
     })
-  }) : (null == O ? void 0 : O.length) === 0 && null == N ? (0, a.jsx)("div", {
+  }) : (null == j ? void 0 : j.length) === 0 && null == N ? (0, a.jsx)("div", {
     className: A.pageContainer,
-    children: (0, a.jsx)(g.default, {
+    children: (0, a.jsx)(C.default, {
       guild: x,
       onAddGuild: k
     })
-  }) : (0, a.jsx)(C.default, {
+  }) : (0, a.jsx)(g.default, {
     channel: v,
     searchQuery: b,
     setSearchQuery: U,
@@ -140,7 +140,7 @@ t.default = e => {
     handleSelectCategory: e => {
       h.selectDirectoryCategory(v.id, e)
     },
-    directoryEntries: O,
+    directoryEntries: j,
     categoryCounts: y,
     allEntriesCount: R,
     isLoading: L

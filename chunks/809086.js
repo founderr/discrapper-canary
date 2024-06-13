@@ -1,45 +1,45 @@
 "use strict";
-a.r(e), a.d(e, {
+a.r(t), a.d(t, {
   MonetizationListingImageAspectStable: function() {
-    return c
+    return o
   },
   default: function() {
-    return o
+    return u
   }
 });
-var n = a("735250");
+var s = a("735250");
 a("470079");
-var s = a("468194"),
+var n = a("468194"),
   i = a("477690"),
   l = a("166081"),
   r = a("841762");
-let u = (0, s.cssValueToNumber)(i.default.ASPECT_STABLE_IMAGE_CONTAINER_PADDING);
+let c = (0, n.cssValueToNumber)(i.default.ASPECT_STABLE_IMAGE_CONTAINER_PADDING);
 
-function o(t) {
+function u(e) {
   let {
-    listing: e,
+    listing: t,
     imageSize: a,
-    alt: s,
+    alt: n,
     ...i
-  } = t, r = (0, l.useListingThumbnailUrl)(e, a);
-  return (0, n.jsx)("img", {
+  } = e, r = (0, l.useListingThumbnailUrl)(t, a);
+  return (0, s.jsx)("img", {
     src: r,
-    alt: s,
+    alt: n,
     ...i
   })
 }
 
-function c(t) {
+function o(e) {
   let {
-    listing: e,
+    listing: t,
     aspectRatio: a = 16 / 9,
-    height: s,
+    height: n,
     ...i
-  } = t, o = (s - 2 * u) * a, c = (0, l.useListingThumbnailUrl)(e, o), d = (0, l.useListingThumbnailUrl)(e, o, {
+  } = e, u = (n - 2 * c) * a, o = (0, l.useListingThumbnailUrl)(t, u), d = (0, l.useListingThumbnailUrl)(t, u, {
     shouldAnimate: !1
   });
-  return (0, n.jsx)(r.default, {
-    src: c,
+  return (0, s.jsx)(r.default, {
+    src: o,
     backgroundSrc: d,
     aspectRatio: a,
     ...i

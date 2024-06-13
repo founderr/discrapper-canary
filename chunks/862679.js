@@ -18,8 +18,8 @@ t.default = l.memo(function(e) {
     buttonSubmitting: m,
     onButtonClick: p,
     imageSrc: E,
-    animationSrc: g,
-    secondaryButtonText: C,
+    animationSrc: C,
+    secondaryButtonText: g,
     onSecondaryButtonClick: S,
     children: _,
     useReducedMotion: T = !1
@@ -33,8 +33,8 @@ t.default = l.memo(function(e) {
     alt: "",
     src: E,
     className: d.image
-  }) : null != g && (A = (0, a.jsx)(r.LottieAnimation, {
-    importData: g,
+  }) : null != C && (A = (0, a.jsx)(r.LottieAnimation, {
+    importData: C,
     shouldAnimate: !T,
     className: d.animation
   })), (0, a.jsxs)("div", {
@@ -55,14 +55,14 @@ t.default = l.memo(function(e) {
       })]
     }), (0, a.jsxs)("div", {
       className: d.buttonContainer,
-      children: [null != C && (0, a.jsx)(r.Button, {
+      children: [null != g && (0, a.jsx)(r.Button, {
         className: d.button,
         size: r.Button.Sizes.SMALL,
         onClick: S,
         look: r.Button.Looks.LINK,
         color: r.Button.Colors.PRIMARY,
         submitting: m,
-        children: C
+        children: g
       }), null != f && (0, a.jsx)(r.Button, {
         className: d.button,
         innerClassName: d.innerButton,

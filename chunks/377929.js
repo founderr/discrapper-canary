@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("193987"),
   p = n("933793"),
   E = n("13736"),
-  g = n("732393"),
-  C = n("137591"),
+  C = n("732393"),
+  g = n("137591"),
   S = n("299206"),
   _ = n("695346"),
   T = n("979651"),
@@ -71,19 +71,19 @@ function M(e) {
     channel: t,
     closePopout: n,
     onSelect: l
-  } = e, s = (0, u.default)(t), I = (0, m.default)(t), A = (0, g.default)(t.id), N = (0, E.default)(t), M = (0, S.default)({
+  } = e, s = (0, u.default)(t), I = (0, m.default)(t), A = (0, C.default)(t.id), N = (0, E.default)(t), M = (0, S.default)({
     id: t.id,
     label: x.default.Messages.COPY_ID_THREAD
-  }), y = (0, d.default)(t), R = (0, c.default)(t), L = (0, f.default)(t, "Toolbar Overflow"), O = (0, p.default)(t), j = (0, h.default)(t), P = (0, C.default)(t), D = _.UseThreadSidebar.useSetting(), b = (0, r.useStateFromStores)([T.default], () => !i().isEmpty(T.default.getVoiceStatesForChannel(t.id)));
+  }), y = (0, d.default)(t), R = (0, c.default)(t), L = (0, f.default)(t, "Toolbar Overflow"), j = (0, p.default)(t), O = (0, h.default)(t), P = (0, g.default)(t), D = _.UseThreadSidebar.useSetting(), b = (0, r.useStateFromStores)([T.default], () => !i().isEmpty(T.default.getVoiceStatesForChannel(t.id)));
   return (0, a.jsxs)(o.Menu, {
     navId: "thread-context",
     onClose: n,
     "aria-label": x.default.Messages.THREAD_ACTIONS_MENU_LABEL,
     onSelect: l,
     children: [(0, a.jsxs)(o.MenuGroup, {
-      children: [L, j]
+      children: [L, O]
     }), (0, a.jsxs)(o.MenuGroup, {
-      children: [N, O, A, D && !b ? (0, a.jsx)(o.MenuItem, {
+      children: [N, j, A, D && !b ? (0, a.jsx)(o.MenuItem, {
         id: "open",
         label: x.default.Messages.OPEN_IN_SPLIT_VIEW,
         action: function() {

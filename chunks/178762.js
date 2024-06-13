@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("594174"),
   p = n("687694"),
   E = n("69259"),
-  g = n("91140"),
-  C = n("227172"),
+  C = n("91140"),
+  g = n("227172"),
   S = n("551228"),
   _ = n("678869"),
   T = n("278399"),
@@ -43,14 +43,14 @@ let L = i().throttle(e => {
     leading: !0,
     trailing: !1
   }),
-  O = e => {
+  j = e => {
     let {
       entry: t,
       ...n
     } = e;
     switch (t.content_type) {
       case o.ContentInventoryEntryType.PLAYED_GAME:
-        return (0, a.jsx)(g.default, {
+        return (0, a.jsx)(C.default, {
           ...n,
           entry: t
         });
@@ -78,14 +78,14 @@ let L = i().throttle(e => {
         return null
     }
   },
-  j = e => {
+  O = e => {
     let {
       entry: t,
       ...n
     } = e;
     switch (t.content_type) {
       case o.ContentInventoryEntryType.PLAYED_GAME:
-        return (0, a.jsx)(C.default, {
+        return (0, a.jsx)(g.default, {
           ...n,
           entry: t
         });
@@ -118,7 +118,7 @@ t.default = l.memo(e => {
   let {
     index: s,
     ...i
-  } = e, [o, h] = l.useState("default"), g = (0, r.useListItem)("".concat(s)), C = null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(), S = {
+  } = e, [o, h] = l.useState("default"), C = (0, r.useListItem)("".concat(s)), g = null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(), S = {
     entry: i.entry,
     channelId: i.channel.id,
     guildId: i.channel.guild_id,
@@ -132,7 +132,7 @@ t.default = l.memo(e => {
     I && R && y(!0)
   }, [I, R]);
   let P = l.useCallback(e => {
-      C && (0, c.openContextMenuLazy)(e, async () => {
+      g && (0, c.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.e("153").then(n.bind(n, "330150"));
@@ -141,7 +141,7 @@ t.default = l.memo(e => {
           requestId: i.requestId
         })
       })
-    }, [i, C]),
+    }, [i, g]),
     D = l.useCallback(() => {
       h(String(Date.now()))
     }, []),
@@ -162,7 +162,7 @@ t.default = l.memo(e => {
         let {
           closePopout: t
         } = e;
-        return (0, a.jsx)(j, {
+        return (0, a.jsx)(O, {
           closePopout: t,
           updatePopoutPosition: D,
           ...i
@@ -193,12 +193,12 @@ t.default = l.memo(e => {
             },
             children: (0, a.jsx)("div", {
               ...e,
-              ...g,
+              ...C,
               onMouseEnter: () => {
                 L(S)
               },
               onContextMenu: P,
-              children: (0, a.jsx)(O, {
+              children: (0, a.jsx)(j, {
                 ...i,
                 selected: n
               })

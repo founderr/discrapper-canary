@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("633302"),
   p = n("806966"),
   E = n("401227"),
-  g = n("153124"),
-  C = n("86813"),
+  C = n("153124"),
+  g = n("86813"),
   S = n("176354"),
   _ = n("823379"),
   T = n("354459"),
@@ -92,7 +92,7 @@ function y(e) {
       onClick: () => {
         l(!n), s()
       },
-      children: (0, a.jsx)(C.default, {
+      children: (0, a.jsx)(g.default, {
         className: i()(v.dropDown, {
           [v.dropDownOpen]: n
         })
@@ -111,16 +111,16 @@ function R(e) {
     onSelectDisabledEmoji: c,
     onExpandedToggle: m,
     emojiSearchProps: E,
-    recentlyUsedEmojis: C,
+    recentlyUsedEmojis: g,
     analyticsOverride: _
-  } = e, R = (0, g.useUID)(), [L, O] = l.useState(!1), j = (0, f.useFrequentlyUsedEmojis)(t.guild_id), P = (0, r.uniqBy)([...j, ...N], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
+  } = e, R = (0, C.useUID)(), [L, j] = l.useState(!1), O = (0, f.useFrequentlyUsedEmojis)(t.guild_id), P = (0, r.uniqBy)([...O, ...N], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: t,
     intention: x
   })).slice(0, T.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT);
-  null != C && C.length > 0 && P.splice(P.length - 1, 1, C[0]);
+  null != g && g.length > 0 && P.splice(P.length - 1, 1, g[0]);
   let D = e => {
-      O(e), null == m || m(e)
+      j(e), null == m || m(e)
     },
     b = (e, t) => {
       if (null == e && t) {

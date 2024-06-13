@@ -41,7 +41,7 @@ let p = {
     lastMessage: null
   },
   E = (0, i.default)(() => new Map),
-  g = (e, t) => {
+  C = (e, t) => {
     E.setState(n => {
       let a = n.get(e);
       return null == a ? n.set(e, {
@@ -53,7 +53,7 @@ let p = {
       }), n
     })
   },
-  C = e => E(t => t.get(e), r.default);
+  g = e => E(t => t.get(e), r.default);
 
 function S(e, t, n) {
   let a = null != n ? n : {};
@@ -82,12 +82,12 @@ function _(e, t, n) {
     let {
       addtionalQuery: l,
       shouldDispatch: i = !1
-    } = a, r = s.useMemo(() => m(e, t, n, l), [e, t, n, l]), E = C(r), _ = (0, u.default)(r), [T, I] = s.useState({});
+    } = a, r = s.useMemo(() => m(e, t, n, l), [e, t, n, l]), E = g(r), _ = (0, u.default)(r), [T, I] = s.useState({});
     return s.useEffect(() => {
       if (_ !== r) {
         let a = S(e, n, l),
           s = new d.default(t, f.SearchTypes.GUILD, a);
-        g(r, {
+        C(r, {
           searchFetcher: s,
           messageCount: h,
           lastMessage: null
@@ -95,7 +95,7 @@ function _(e, t, n) {
           s.fetch(e => {
             let n = e.body,
               a = n.messages[0];
-            if (g(r, {
+            if (C(r, {
                 searchFetcher: s,
                 result: n,
                 messageCount: n.total_results,
@@ -118,7 +118,7 @@ function _(e, t, n) {
               })
             }
           }, e => {}, e => {
-            g(r, {
+            C(r, {
               messageCount: 0,
               lastMessage: null
             }), I({})
@@ -132,7 +132,7 @@ function _(e, t, n) {
 
 function T(e, t, n, a) {
   let l = s.useMemo(() => m(e, t, n, a, !0), [e, t, n, a]),
-    i = C(l),
+    i = g(l),
     r = (0, u.default)(l);
   return {
     key: l,
@@ -152,7 +152,7 @@ function I(e, t, n) {
   } = T(e, t, "links", n), {
     key: m,
     state: p
-  } = T(e, t, "media", n), E = s.useMemo(() => S(e, "all_counts", n), [e, n]), C = s.useMemo(() => ({
+  } = T(e, t, "media", n), E = s.useMemo(() => S(e, "all_counts", n), [e, n]), g = s.useMemo(() => ({
     tabs: {
       messages: S(e, "messages", E),
       links: S(e, "links", E),
@@ -163,7 +163,7 @@ function I(e, t, n) {
     let t = e.messages,
       n = e.links,
       a = e.media;
-    g(r, t), g(u, n), g(m, a)
+    C(r, t), C(u, n), C(m, a)
   }, [u, m, r]), I = s.useCallback(e => {
     _({
       messages: e,
@@ -172,7 +172,7 @@ function I(e, t, n) {
     })
   }, [_]);
   s.useEffect(() => {
-    let e = new d.SearchTabFetcherImpl(t, f.SearchTypes.GUILD, E, C);
+    let e = new d.SearchTabFetcherImpl(t, f.SearchTypes.GUILD, E, g);
     I({
       searchTabFetcher: e,
       messageCount: h,
@@ -215,7 +215,7 @@ function I(e, t, n) {
     return () => {
       e.cancel(), clearTimeout(n)
     }
-  }, [e, t, E, C, I, _]);
+  }, [e, t, E, g, I, _]);
   let [A, v] = s.useState({});
   return {
     messagesCount: null !== (a = null == o ? void 0 : o.messageCount) && void 0 !== a ? a : h,

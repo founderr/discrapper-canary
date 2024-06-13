@@ -24,8 +24,8 @@ function p(e) {
     renderOutputDevices: n = !1,
     renderInputDevices: p = !1,
     renderInputModes: E = !1,
-    renderInputVolume: g = !1,
-    renderOutputVolume: C = !1,
+    renderInputVolume: C = !1,
+    renderOutputVolume: g = !1,
     onSelect: S
   } = e, _ = (0, c.default)(), T = (0, u.default)(), I = (0, d.default)(), A = (0, i.default)(), v = (0, r.default)(), x = (0, o.default)();
   return (0, a.jsx)(s.default, {
@@ -46,7 +46,7 @@ function p(e) {
         label: h.default.Messages.FORM_LABEL_INPUT_MODE,
         children: A
       }) : null, (0, a.jsxs)(l.MenuGroup, {
-        children: [g ? v : null, C ? x : null, _]
+        children: [C ? v : null, g ? x : null, _]
       })]
     })
   })

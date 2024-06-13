@@ -21,9 +21,9 @@ var a = n("735250"),
 function E(e) {
   let {
     channel: t
-  } = e, n = (0, d.useThreadNotificationSetting)(t), [E, g] = l.useState(!1), C = (0, s.useRedesignIconContext)().enabled;
+  } = e, n = (0, d.useThreadNotificationSetting)(t), [E, C] = l.useState(!1), g = (0, s.useRedesignIconContext)().enabled;
   l.useEffect(() => {
-    let e = () => g(!0);
+    let e = () => C(!0);
     return u.ComponentDispatch.subscribe(h.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
       u.ComponentDispatch.unsubscribe(h.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e)
     }
@@ -35,7 +35,7 @@ function E(e) {
     position: "bottom",
     align: "right",
     autoInvert: !1,
-    onRequestClose: () => g(!1),
+    onRequestClose: () => C(!1),
     renderPopout: e => (0, a.jsx)(c.default, {
       ...e,
       channel: t,
@@ -48,10 +48,10 @@ function E(e) {
       } = t;
       return (0, a.jsx)(o.default.Icon, {
         ...e,
-        onClick: () => g(e => !e),
+        onClick: () => C(e => !e),
         tooltip: l ? null : S,
         icon: n === f.ThreadMemberFlags.NO_MESSAGES ? r.default : i.default,
-        foreground: n !== f.ThreadMemberFlags.NO_MESSAGES || C ? null : p.strikethrough,
+        foreground: n !== f.ThreadMemberFlags.NO_MESSAGES || g ? null : p.strikethrough,
         "aria-label": S,
         selected: l
       })

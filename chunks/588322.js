@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("592125"),
   p = n("703558"),
   E = n("430824"),
-  g = n("502568"),
-  C = n("228392"),
+  C = n("502568"),
+  g = n("228392"),
   S = n("689938"),
   _ = n("917193");
 
@@ -28,7 +28,7 @@ function T(e) {
     channelId: t
   } = e, T = (0, s.useStateFromStores)([m.default], () => m.default.getChannel(t)), I = (0, s.useStateFromStores)([m.default], () => m.default.getChannel(null == T ? void 0 : T.parent_id)), A = (0, s.useStateFromStores)([E.default], () => E.default.getGuild(null == T ? void 0 : T.getGuildId())), v = (0, o.default)(T), x = l.useRef(!1);
   if (l.useEffect(() => {
-      null != T && !x.current && (x.current = !0, (0, C.trackForumPostSidebarViewed)(T))
+      null != T && !x.current && (x.current = !0, (0, g.trackForumPostSidebarViewed)(T))
     }, [T]), null == T || null == A) return null;
   let N = (0, a.jsx)(h.default, {
     channel: T
@@ -37,7 +37,7 @@ function T(e) {
     children: [(0, a.jsx)(r.default, {
       channel: T,
       draftType: p.DraftType.ChannelMessage
-    }), (0, a.jsx)(g.default, {
+    }), (0, a.jsx)(C.default, {
       toolbar: N,
       "aria-label": S.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
       children: (0, c.renderTitle)({

@@ -1,16 +1,16 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   fetchStoreDirectoryLayout: function() {
-    return a
+    return r
   }
 });
-var n = i("544891"),
-  l = i("570140"),
-  s = i("981631");
+var i = n("544891"),
+  l = n("570140"),
+  a = n("981631");
 
-function a(e) {
-  return n.HTTP.get({
-    url: s.Endpoints.STORE_LAYOUT(e)
+function r(e) {
+  return i.HTTP.get({
+    url: a.Endpoints.STORE_LAYOUT(e)
   }).then(t => (l.default.dispatch({
     type: "APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS",
     applicationId: e,

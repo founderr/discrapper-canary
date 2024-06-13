@@ -23,8 +23,8 @@ function E(e) {
     channelId: t,
     guildId: n,
     userId: E,
-    containerDimensions: g
-  } = e, C = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), [S, _] = l.useState([]), T = S.length < 50;
+    containerDimensions: C
+  } = e, g = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), [S, _] = l.useState([]), T = S.length < 50;
   l.useEffect(() => {
     function e(e) {
       var a;
@@ -37,7 +37,7 @@ function E(e) {
       } = e;
       if (null != E && E !== i || d.default.getEnabled() && (0, c.default)(null !== (a = null == r ? void 0 : r.name) && void 0 !== a ? a : "")) return;
       let p = null != r && null != o && null != h;
-      if (l === t && !C && T && p) {
+      if (l === t && !g && T && p) {
         let e = (0, f.getEffectUrl)(r),
           a = null != r.id && !r.animated,
           l = {
@@ -57,7 +57,7 @@ function E(e) {
     return r.default.subscribe("VOICE_CHANNEL_EFFECT_SEND", e), () => {
       r.default.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", e)
     }
-  }, [t, n, E, C, T]);
+  }, [t, n, E, g, T]);
   let I = l.useCallback(e => {
     _(t => {
       let n = [...t],
@@ -65,15 +65,15 @@ function E(e) {
       return n.splice(a, 1), n
     })
   }, []);
-  return C ? null : (0, a.jsx)("div", {
+  return g ? null : (0, a.jsx)("div", {
     className: p.effectsWrapper,
     style: {
-      width: g.width
+      width: C.width
     },
     children: (0, a.jsx)("div", {
       className: p.effects,
       children: S.map(e => (0, a.jsx)(h.default, {
-        containerDimensions: g,
+        containerDimensions: C,
         effect: e,
         onComplete: I
       }, e.id))

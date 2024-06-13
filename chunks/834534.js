@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return C
+    return x
   }
 });
 var s = l("735250");
@@ -25,14 +25,14 @@ var i = l("120356"),
   T = l("351707"),
   g = l("228168"),
   A = l("689938"),
-  x = l("363175");
+  C = l("363175");
 
-function C(e) {
+function x(e) {
   let {
     user: t,
     currentUser: l,
     displayProfile: i,
-    subsection: C,
+    subsection: x,
     className: N,
     onClose: U
   } = e, {
@@ -42,7 +42,7 @@ function C(e) {
   } = (0, f.useUserProfileAnalyticsContext)(), R = null == i ? void 0 : i.guildId, M = (0, n.useStateFromStores)([d.default], () => null != R ? d.default.getGuild(R) : null), j = (0, n.useStateFromStores)([c.default], () => c.default.getGuildId()), y = (0, n.useStateFromStores)([u.default], () => u.default.locale), O = (0, E.default)(t.id), L = (0, S.default)(t.id);
   return (0, s.jsxs)(o.ScrollerThin, {
     fade: !0,
-    className: a()(x.scroller, N),
+    className: a()(C.scroller, N),
     children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, s.jsx)(I.default, {
       userBio: i.bio,
       setLineClamp: !1
@@ -50,7 +50,7 @@ function C(e) {
       user: t,
       currentUser: l,
       guild: M,
-      scrollIntoView: C === g.UserProfileSubsections.ROLES
+      scrollIntoView: x === g.UserProfileSubsections.ROLES
     }), (0, s.jsx)(_.default, {
       title: A.default.Messages.USER_PROFILE_MEMBER_SINCE,
       children: (0, s.jsx)(m.default, {
@@ -62,7 +62,7 @@ function C(e) {
       title: A.default.Messages.CONNECTIONS,
       children: (0, s.jsx)(p.ConnectedUserAccounts, {
         connectedAccounts: O,
-        className: x.connections,
+        className: C.connections,
         userId: t.id,
         theme: P,
         locale: y
@@ -70,7 +70,7 @@ function C(e) {
     }), L.length > 0 && (0, s.jsx)(_.default, {
       title: A.default.Messages.APPS,
       children: L.map(e => (0, s.jsx)(p.ConnectedApplicationUserRoleAccount, {
-        className: x.appsConnections,
+        className: C.appsConnections,
         applicationRoleConnection: e,
         locale: y,
         onApplicationClicked: () => {
@@ -82,11 +82,11 @@ function C(e) {
       }, e.application.id))
     }), (0, s.jsx)(_.default, {
       title: A.default.Messages.NOTE,
-      scrollIntoView: C === g.UserProfileSubsections.NOTE,
+      scrollIntoView: x === g.UserProfileSubsections.NOTE,
       children: (0, s.jsx)(r.default, {
         userId: t.id,
-        className: x.note,
-        autoFocus: C === g.UserProfileSubsections.NOTE,
+        className: C.note,
+        autoFocus: x === g.UserProfileSubsections.NOTE,
         onUpdate: () => h({
           action: "SET_NOTE"
         })

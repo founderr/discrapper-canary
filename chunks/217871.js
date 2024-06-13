@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("111583"),
   p = n("889901"),
   E = n("64078"),
-  g = n("351780"),
-  C = n("843693"),
+  C = n("351780"),
+  g = n("843693"),
   S = n("641033"),
   _ = n("989830"),
   T = n("689938"),
@@ -24,7 +24,7 @@ let A = l.memo(function(e) {
     let {
       channelId: t,
       width: n
-    } = e, s = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), i = (0, o.useStateFromStores)([C.default], () => C.default.getMostRecentMessageCombo(t), [t]), [d, f] = l.useState(!1);
+    } = e, s = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), i = (0, o.useStateFromStores)([g.default], () => g.default.getMostRecentMessageCombo(t), [t]), [d, f] = l.useState(!1);
     l.useEffect(() => {
       if (null == i ? void 0 : i.displayed) return;
       f(!1), setImmediate(() => {
@@ -119,7 +119,7 @@ let A = l.memo(function(e) {
 t.default = l.memo(function(e) {
   let {
     channelId: t
-  } = e, n = (0, o.useStateFromStores)([h.default], () => h.default.getId()), s = (0, o.useStateFromStores)([m.default], () => m.default.isTyping(t, n), [t, n]), i = (0, o.useStateFromStores)([g.default], () => g.default.isEnabled()), u = (0, o.useStateFromStores)([C.default], () => C.default.isComboing(n, t), [t, n]), {
+  } = e, n = (0, o.useStateFromStores)([h.default], () => h.default.getId()), s = (0, o.useStateFromStores)([m.default], () => m.default.isTyping(t, n), [t, n]), i = (0, o.useStateFromStores)([C.default], () => C.default.isEnabled()), u = (0, o.useStateFromStores)([g.default], () => g.default.isComboing(n, t), [t, n]), {
     ref: f,
     width: p = 0
   } = (0, d.default)(), E = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [S, T] = l.useState(!1), x = (0, _.default)(t), N = i && u && s;
@@ -145,7 +145,7 @@ t.default = l.memo(function(e) {
   }, [y]);
   let {
     multiplier: L,
-    value: O
+    value: j
   } = l.useMemo(() => ({
     value: N ? y.value : R.current.value,
     multiplier: N ? y.multiplier : R.current.multiplier
@@ -159,7 +159,7 @@ t.default = l.memo(function(e) {
       className: I.combo,
       style: M,
       children: (0, a.jsx)(v, {
-        value: O,
+        value: j,
         multiplier: L
       })
     })]

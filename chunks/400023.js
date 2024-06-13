@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("135938"),
   p = n("160404"),
   E = n("765104"),
-  g = n("695346"),
-  C = n("314897"),
+  C = n("695346"),
+  g = n("314897"),
   S = n("323873"),
   _ = n("607744"),
   T = n("375954"),
@@ -28,8 +28,8 @@ var a = n("735250"),
   y = n("255269"),
   R = n("47481"),
   L = n("977391"),
-  O = n("73274"),
-  j = n("419388"),
+  j = n("73274"),
+  O = n("419388"),
   P = n("406534"),
   D = n("981631"),
   b = n("689938"),
@@ -42,8 +42,8 @@ let F = l.memo(function(e) {
     scrollerClassName: h,
     channel: m,
     messages: E,
-    unreadCount: g,
-    showNewMessagesBar: C,
+    unreadCount: C,
+    showNewMessagesBar: g,
     messageDisplayCompact: S,
     channelStream: _,
     uploads: T,
@@ -68,7 +68,7 @@ let F = l.memo(function(e) {
     attachments: 8,
     fontSize: x,
     groupSpacing: c
-  }), [S, x, c]), G = (0, j.default)({
+  }), [S, x, c]), G = (0, O.default)({
     messages: E,
     channel: m,
     compact: S,
@@ -78,7 +78,7 @@ let F = l.memo(function(e) {
     canLoadMore: null == y,
     handleScrollToBottom: l.useCallback(() => k(!0), [k]),
     handleScrollFromBottom: l.useCallback(() => k(!1), [k])
-  }), B = (0, O.default)({
+  }), B = (0, j.default)({
     scrollerRef: G.ref,
     isEditing: null != v,
     keyboardModeEnabled: N,
@@ -94,8 +94,8 @@ let F = l.memo(function(e) {
     } = (0, P.default)({
       channel: m,
       messages: E,
-      unreadCount: g,
-      showNewMessagesBar: C,
+      unreadCount: C,
+      showNewMessagesBar: g,
       messageDisplayCompact: S,
       channelStream: _,
       uploads: T,
@@ -220,13 +220,13 @@ t.default = l.memo(function(e) {
     }
   }(t), {
     messageGroupSpacing: L,
-    fontSize: O,
-    messageDisplayCompact: j,
+    fontSize: j,
+    messageDisplayCompact: O,
     renderSpoilers: P,
     keyboardModeEnabled: b
   } = function() {
-    let e = g.MessageDisplayCompact.useSetting(),
-      t = g.RenderSpoilers.useSetting(),
+    let e = C.MessageDisplayCompact.useSetting(),
+      t = C.RenderSpoilers.useSetting(),
       {
         messageGroupSpacing: n,
         fontSize: a,
@@ -269,7 +269,7 @@ t.default = l.memo(function(e) {
       }, {
         autoTrackExposure: !1
       }),
-      r = null !== (n = null === (t = x.default.getUser(C.default.getId())) || void 0 === t ? void 0 : t.hasFlag(D.UserFlags.SPAMMER)) && void 0 !== n && n,
+      r = null !== (n = null === (t = x.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(D.UserFlags.SPAMMER)) && void 0 !== n && n,
       u = (0, c.useChannelSummariesExperiment)(e),
       d = (0, h.default)("use_topic_dividers_in_chat"),
       f = (0, o.useStateFromStoresArray)([E.default], () => {
@@ -277,7 +277,7 @@ t.default = l.memo(function(e) {
         return u && d && null !== (t = E.default.summaries(e.id)) && void 0 !== t ? t : []
       }, [u, e.id, d]),
       p = (0, o.useStateFromStores)([E.default], () => u ? E.default.selectedSummary(e.id) : null, [u, e.id]),
-      g = l.useMemo(() => (0, R.default)({
+      C = l.useMemo(() => (0, R.default)({
         channel: e,
         messages: a,
         oldestUnreadMessageId: s,
@@ -287,7 +287,7 @@ t.default = l.memo(function(e) {
       }), [a, e, s, i, f, p]);
     return {
       messages: a,
-      channelStream: g,
+      channelStream: C,
       oldestUnreadMessageId: s,
       editingMessageId: (0, o.useStateFromStores)([S.default], () => {
         var t;
@@ -302,7 +302,7 @@ t.default = l.memo(function(e) {
       messageGroupSpacing: L,
       showNewMessagesBar: !0,
       channel: t,
-      messageDisplayCompact: !r && (i || j),
+      messageDisplayCompact: !r && (i || O),
       messages: U,
       channelStream: w,
       permissionVersion: p,
@@ -311,7 +311,7 @@ t.default = l.memo(function(e) {
       hasUnreads: null != k,
       canChat: M,
       editingMessageId: H,
-      fontSize: O,
+      fontSize: j,
       keyboardModeEnabled: b,
       showingQuarantineBanner: n,
       hideSummaries: s

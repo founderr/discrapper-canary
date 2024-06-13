@@ -10,8 +10,8 @@ let c = Object.freeze({}),
   m = {},
   p = {},
   E = {},
-  g = {};
-class C extends(a = r.default.Store) {
+  C = {};
+class g extends(a = r.default.Store) {
   isFetching() {
     return f
   }
@@ -36,15 +36,15 @@ class C extends(a = r.default.Store) {
     return null !== (t = E[e]) && void 0 !== t ? t : c
   }
   getAdminGuildEntryIds(e) {
-    return g[e]
+    return C[e]
   }
 }
-i = "GuildDirectoryStore", (s = "displayName") in(l = C) ? Object.defineProperty(l, s, {
+i = "GuildDirectoryStore", (s = "displayName") in(l = g) ? Object.defineProperty(l, s, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[s] = i, t.default = new C(o.default, {
+}) : l[s] = i, t.default = new g(o.default, {
   GUILD_DIRECTORY_FETCH_START: function() {
     f = !0
   },
@@ -101,7 +101,7 @@ i = "GuildDirectoryStore", (s = "displayName") in(l = C) ? Object.defineProperty
     if (null == s) return;
     let i = s.primaryCategoryId,
       r = Object.assign({}, h[a]);
-    delete r[l], null === (n = g[a]) || void 0 === n || n.delete(l), g[a] = new Set(g[a]), h[a] = r;
+    delete r[l], null === (n = C[a]) || void 0 === n || n.delete(l), C[a] = new Set(C[a]), h[a] = r;
     let o = Object.assign({}, p[a][i]);
     if (delete o[l], p[a] = {
         ...p[a],
@@ -119,25 +119,25 @@ i = "GuildDirectoryStore", (s = "displayName") in(l = C) ? Object.defineProperty
     let {
       channelId: f,
       entry: m
-    } = e, g = (0, u.guildDirectoryEntryFromServer)(m), C = null === (t = h[f]) || void 0 === t ? void 0 : t[g.guildId];
+    } = e, C = (0, u.guildDirectoryEntryFromServer)(m), g = null === (t = h[f]) || void 0 === t ? void 0 : t[C.guildId];
     h[f] = {
       ...h[f],
-      [g.guildId]: {
-        ...C,
-        ...g
+      [C.guildId]: {
+        ...g,
+        ...C
       }
     };
-    let S = null !== (l = null == C ? void 0 : C.primaryCategoryId) && void 0 !== l ? l : d.DirectoryEntryCategories.UNCATEGORIZED,
-      _ = null !== (s = g.primaryCategoryId) && void 0 !== s ? s : d.DirectoryEntryCategories.UNCATEGORIZED,
+    let S = null !== (l = null == g ? void 0 : g.primaryCategoryId) && void 0 !== l ? l : d.DirectoryEntryCategories.UNCATEGORIZED,
+      _ = null !== (s = C.primaryCategoryId) && void 0 !== s ? s : d.DirectoryEntryCategories.UNCATEGORIZED,
       T = Object.assign({}, null === (n = p[f]) || void 0 === n ? void 0 : n[S]);
-    null != C && S !== _ && delete T[g.guildId], p[f] = {
+    null != g && S !== _ && delete T[C.guildId], p[f] = {
       ...p[f],
       [S]: T,
       [_]: {
         ...null === (a = p[f]) || void 0 === a ? void 0 : a[_],
-        [g.guildId]: {
-          ...C,
-          ...g
+        [C.guildId]: {
+          ...g,
+          ...C
         }
       }
     }, _ !== S && null != E[f] && (E[f] = {
@@ -168,6 +168,6 @@ i = "GuildDirectoryStore", (s = "displayName") in(l = C) ? Object.defineProperty
     n.forEach(e => {
       let t = (0, u.guildDirectoryEntryFromServer)(e);
       a.add(t.guildId)
-    }), g[t] = a
+    }), C[t] = a
   }
 })

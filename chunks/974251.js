@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("867176"),
   p = n("620662"),
   E = n("581364"),
-  g = n("924557"),
-  C = n("435064"),
+  C = n("924557"),
+  g = n("435064"),
   S = n("712114"),
   _ = n("605236"),
   T = n("536442"),
@@ -28,8 +28,8 @@ var a = n("735250"),
   y = n("375954"),
   R = n("496675"),
   L = n("885110"),
-  O = n("151785"),
-  j = n("627553"),
+  j = n("151785"),
+  O = n("627553"),
   P = n("38761"),
   D = n("585483"),
   b = n("358085"),
@@ -55,13 +55,13 @@ t.default = l.memo(function(e) {
     Q = (0, h.useAppContext)(),
     $ = l.useRef(null),
     ee = (0, r.useStateFromStores)([L.default], () => L.default.getActivities()),
-    et = (0, r.useStateFromStores)([C.default], () => C.default.getSettings().clipsEnabled),
-    en = (0, r.useStateFromStores)([C.default], () => C.default.getLastClipsSession()),
-    ea = (0, r.useStateFromStoresArray)([C.default], () => C.default.getNewClipIds()),
+    et = (0, r.useStateFromStores)([g.default], () => g.default.getSettings().clipsEnabled),
+    en = (0, r.useStateFromStores)([g.default], () => g.default.getLastClipsSession()),
+    ea = (0, r.useStateFromStoresArray)([g.default], () => g.default.getNewClipIds()),
     el = (0, r.useStateFromStores)([N.default], () => null == N.default.getCurrentSidebarChannelId(K.id)),
     {
       showClipsHeaderEntrypoint: es
-    } = g.ClipsExperiment.useExperiment({
+    } = C.ClipsExperiment.useExperiment({
       location: "ChannelAttachButton"
     }, {
       autoTrackExposure: !1
@@ -69,9 +69,9 @@ t.default = l.memo(function(e) {
     ei = (0, r.useStateFromStores)([T.HotspotStore], () => T.HotspotStore.hasHotspot(T.HotspotLocations.CLIPS_CHANNEL_ATTACH_REMINDER)),
     er = (0, d.useModalsStore)(e => (0, d.hasModalOpenSelector)(e, G.CLIPS_GALLERY_MODAL_KEY)),
     eo = (0, r.useStateFromStores)([M.default], () => M.default.hasLayers()),
-    eu = (0, r.useStateFromStores)([C.default], () => C.default.hasClips()),
+    eu = (0, r.useStateFromStores)([g.default], () => g.default.hasClips()),
     [ed, ec] = l.useState(null),
-    ef = (0, g.useEnableClips)() && (et || eu),
+    ef = (0, C.useEnableClips)() && (et || eu),
     eh = K.isPrivate(),
     em = (0, r.useStateFromStores)([R.default], () => eh || R.default.can(H.Permissions.ATTACH_FILES, K) && R.default.can(H.Permissions.SEND_MESSAGES, K)),
     ep = (0, f.default)(en);
@@ -82,9 +82,9 @@ t.default = l.memo(function(e) {
         showLargeMessageDialog: n
       }), D.ComponentDispatch.dispatchToLastSubscribed(H.ComponentActions.TEXTAREA_FOCUS)
     },
-    eg = (0, r.useStateFromStores)([y.default], () => y.default.hasCurrentUserSentMessageSinceAppStart());
+    eC = (0, r.useStateFromStores)([y.default], () => y.default.hasCurrentUserSentMessageSinceAppStart());
 
-  function eC() {
+  function eg() {
     (0, d.openModalLazy)(async () => {
       let {
         default: e
@@ -139,13 +139,13 @@ t.default = l.memo(function(e) {
     background: W.attachButtonPlus,
     width: 24,
     height: 24
-  }) : eN > 0 ? (0, a.jsx)(j.default, {
+  }) : eN > 0 ? (0, a.jsx)(O.default, {
     className: W.__invalid_attachButtonIcon,
     foreground: W.attachButtonClip,
     background: W.attachButtonPlus,
     width: 24,
     height: 24
-  }) : (0, a.jsx)(O.default, {
+  }) : (0, a.jsx)(j.default, {
     className: W.__invalid_attachButtonIcon,
     foreground: W.attachButtonPlus,
     width: 24,
@@ -158,12 +158,12 @@ t.default = l.memo(function(e) {
     position: "top",
     positionKey: null != ed ? ed : "null",
     onRequestOpen: () => {
-      eg && (0, _.markDismissibleContentAsDismissed)(o.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX_V2, {
+      eC && (0, _.markDismissibleContentAsDismissed)(o.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX_V2, {
         dismissAction: B.ContentDismissActionType.TAKE_ACTION
       }), ec("attachMenu")
     },
     onRequestClose: () => {
-      !(0, d.hasAnyModalOpen)() && (eg && (0, _.markDismissibleContentAsDismissed)(o.DismissibleContent.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
+      !(0, d.hasAnyModalOpen)() && (eC && (0, _.markDismissibleContentAsDismissed)(o.DismissibleContent.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
         dismissAction: B.ContentDismissActionType.TAKE_ACTION
       }), ec(null))
     },
@@ -172,7 +172,7 @@ t.default = l.memo(function(e) {
         case "recentClips":
           return (0, a.jsx)(S.default, {
             ...e,
-            onOpenClips: eC,
+            onOpenClips: eg,
             lastClipsSession: en
           });
         case "attachMenu":
@@ -188,7 +188,7 @@ t.default = l.memo(function(e) {
             draftType: Z,
             editorTextContent: X,
             setValue: q,
-            openClips: eC
+            openClips: eg
           });
         default:
           throw Error("Invalid popout type provided")

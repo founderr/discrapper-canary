@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return g
   }
 }), n("47120");
 var a = n("735250"),
@@ -18,16 +18,16 @@ var a = n("735250"),
 let m = 6 * c.default.Millis.SECOND,
   p = 2 * c.default.Millis.SECOND,
   E = 2 * c.default.Millis.SECOND,
-  g = e => "scale(".concat(1 - -(e / 120), ") rotate(").concat(e, "deg)");
+  C = e => "scale(".concat(1 - -(e / 120), ") rotate(").concat(e, "deg)");
 
-function C(e) {
+function g(e) {
   let {
     userId: t,
     voiceChannelEffect: n,
     onComplete: s
   } = e, {
     emoji: c,
-    sentAt: C
+    sentAt: g
   } = n, S = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), [_, T] = l.useState(!0), I = !S, A = (0, r.useTransition)(_, {
     from: {
       rotate: -120
@@ -49,12 +49,12 @@ function C(e) {
   });
   return (l.useEffect(() => {
     let e;
-    return Date.now() - C >= E ? (0, f.clearVoiceChannelEffectForUser)(t) : e = setTimeout(() => {
+    return Date.now() - g >= E ? (0, f.clearVoiceChannelEffectForUser)(t) : e = setTimeout(() => {
       T(!1), I && (0, f.clearVoiceChannelEffectForUser)(t)
     }, I ? p : m), () => {
       null != e && clearTimeout(e)
     }
-  }, [C, t, I]), I) ? null : A((e, t) => {
+  }, [g, t, I]), I) ? null : A((e, t) => {
     var n;
     let {
       rotate: l
@@ -62,7 +62,7 @@ function C(e) {
     return t && (0, a.jsx)(r.animated.div, {
       className: h.voiceChannelEffectEmojiContainer,
       style: {
-        transform: l.to(g)
+        transform: l.to(C)
       },
       children: (0, a.jsx)(u.default, {
         className: i()(h.voiceChannelEffectEmoji),

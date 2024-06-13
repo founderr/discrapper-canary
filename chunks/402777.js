@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("564440"),
   p = n("329831"),
   E = n("146331"),
-  g = n("171368"),
-  C = n("926150"),
+  C = n("171368"),
+  g = n("926150"),
   S = n("308829"),
   _ = n("354810"),
   T = n("940885"),
@@ -33,7 +33,7 @@ function v(e) {
   } = e, {
     analyticsLocations: v
   } = (0, u.default)(o.default.PROFILE_PANEL), x = (0, f.default)(t.id), N = (0, r.default)(), M = l.useRef(null), y = (0, i.default)(M), R = () => {
-    (0, g.openUserProfileModal)({
+    (0, C.openUserProfileModal)({
       sourceAnalyticsLocations: v,
       userId: t.id,
       channelId: n.id
@@ -68,7 +68,7 @@ function v(e) {
             channel: n,
             isHovering: y,
             onOpenProfile: R
-          }), (0, a.jsx)(C.default, {
+          }), (0, a.jsx)(g.default, {
             user: t,
             displayProfile: x,
             channelId: n.id,

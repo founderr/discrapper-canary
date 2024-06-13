@@ -23,11 +23,11 @@ function E(e) {
   let {
     channel: s,
     integration: E
-  } = e, g = c.default.getApplicationIconURL({
+  } = e, C = c.default.getApplicationIconURL({
     id: E.application.id,
     icon: E.application.icon,
     size: 40
-  }), C = l.useCallback(e => {
+  }), g = l.useCallback(e => {
     (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -40,12 +40,12 @@ function E(e) {
     })
   }, [E, s]), S = (0, a.jsxs)("div", {
     className: m.listRow,
-    onContextMenu: C,
+    onContextMenu: g,
     children: [(0, a.jsx)("img", {
       className: i()(m.listAvatar, p.icon),
       alt: "",
       "aria-hidden": !0,
-      src: g,
+      src: C,
       width: 40,
       height: 40
     }), (0, a.jsx)("div", {
@@ -63,7 +63,7 @@ function E(e) {
   return null == _ ? (0, a.jsx)("li", {
     children: S
   }) : (0, a.jsx)(o.Popout, {
-    preload: () => (0, f.default)(_.id, g),
+    preload: () => (0, f.default)(_.id, C),
     renderPopout: e => (0, a.jsx)(h.default, {
       location: "AppProfilePanelItem",
       ...e,

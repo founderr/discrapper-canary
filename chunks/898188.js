@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("271383"),
   p = n("877453"),
   E = n("93879"),
-  g = n("441674"),
-  C = n("526120"),
+  C = n("441674"),
+  g = n("526120"),
   S = n("734893"),
   _ = n("655359"),
   T = n("931261"),
@@ -74,20 +74,20 @@ function M(e) {
   } = e, {
     channelAction: E,
     completed: T
-  } = (0, _.useMemberActionsForChannel)(f, h), I = (0, _.useNextMemberAction)(f, null == E ? void 0 : E.channelId), M = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), y = (null == E ? void 0 : E.actionType) === S.NewMemberActionTypes.VIEW, R = (0, u.useToken)(u.tokens.colors.WHITE), [L, O] = l.useState(!1), [j] = l.useState(new r.default.Value(0)), [P] = l.useState(new r.default.Value(0));
+  } = (0, _.useMemberActionsForChannel)(f, h), I = (0, _.useNextMemberAction)(f, null == E ? void 0 : E.channelId), M = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), y = (null == E ? void 0 : E.actionType) === S.NewMemberActionTypes.VIEW, R = (0, u.useToken)(u.tokens.colors.WHITE), [L, j] = l.useState(!1), [O] = l.useState(new r.default.Value(0)), [P] = l.useState(new r.default.Value(0));
   l.useEffect(() => {
-    T ? r.default.timing(j, {
+    T ? r.default.timing(O, {
       toValue: 0,
       duration: M ? 1 : 350,
       easing: r.default.Easing.quad,
       delay: y ? 0 : 500
-    }).start(() => O(!0)) : r.default.timing(j, {
+    }).start(() => j(!0)) : r.default.timing(O, {
       toValue: 1,
       duration: M ? 1 : 350,
       easing: r.default.Easing.quad,
       delay: 400
     }).start()
-  }, [T, j, y, M]), l.useEffect(() => {
+  }, [T, O, y, M]), l.useEffect(() => {
     T && L && r.default.timing(P, {
       toValue: 1,
       duration: M ? 0 : 350,
@@ -96,7 +96,7 @@ function M(e) {
     }).start()
   }, [T, P, L, M]);
   let D = l.useCallback(() => {
-    null != I && (0, C.selectNewMemberActionChannel)(f, I.channelId)
+    null != I && (0, g.selectNewMemberActionChannel)(f, I.channelId)
   }, [f, I]);
   return null == E || y && !L ? null : (0, a.jsx)("div", {
     className: i()(v.container, m),
@@ -138,7 +138,7 @@ function M(e) {
     }) : (0, a.jsxs)(r.default.div, {
       className: v.banner,
       style: {
-        marginBottom: j.interpolate({
+        marginBottom: O.interpolate({
           inputRange: [0, 1],
           outputRange: [-60, 0]
         })
@@ -158,7 +158,7 @@ function M(e) {
           color: "text-muted",
           children: A.default.Messages.MEMBER_ACTION_CHAT
         })]
-      }), T ? (0, a.jsx)(g.default, {
+      }), T ? (0, a.jsx)(C.default, {
         className: v.completed,
         backgroundColor: R.hex(),
         width: 20,

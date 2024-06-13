@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return a
   },
   useAuditLogDate: function() {
-    return C
+    return g
   },
   useGuildMemberJoinedAtDate: function() {
     return S
   },
   useUserAccountAgeDate: function() {
-    return g
+    return C
   },
   useUserAccountVerified: function() {
     return E
@@ -50,14 +50,14 @@ function E(e, t) {
   return a.verified || i || r || s
 }
 
-function g(e) {
+function C(e) {
   return s.useMemo(() => {
     let t = h.default.extractTimestamp(e);
     return r()(new Date(t)).format("MMM DD, YYYY")
   }, [e])
 }
 
-function C(e) {
+function g(e) {
   return s.useMemo(() => {
     let t = h.default.extractTimestamp(e);
     return r()(new Date(t)).format("MM/DD/YYYY")

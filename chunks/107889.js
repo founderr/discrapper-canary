@@ -24,8 +24,8 @@ var s = l("735250"),
   T = l("146331"),
   g = l("171368"),
   A = l("806926"),
-  x = l("740021"),
-  C = l("228168"),
+  C = l("740021"),
+  x = l("228168"),
   N = l("981631"),
   U = l("689938"),
   P = l("61007");
@@ -135,10 +135,10 @@ function h(e) {
         children: [(0, s.jsxs)(m.default, {
           user: t,
           displayProfile: Y,
-          profileType: C.UserProfileTypes.FULL_SIZE,
+          profileType: x.UserProfileTypes.FULL_SIZE,
           ref: z,
           children: [k ? (0, s.jsx)(_.default, {
-            profileType: C.UserProfileTypes.FULL_SIZE,
+            profileType: x.UserProfileTypes.FULL_SIZE,
             children: (0, s.jsx)(p.default, {
               user: t,
               guildId: B,
@@ -146,23 +146,23 @@ function h(e) {
               onClose: F
             })
           }) : (0, s.jsxs)(_.default, {
-            profileType: C.UserProfileTypes.FULL_SIZE,
+            profileType: x.UserProfileTypes.FULL_SIZE,
             children: [(0, s.jsx)(p.default, {
               user: t,
               guildId: B,
               channelId: h,
               onClose: F
             }), (0, s.jsx)(v.default, {
-              profileType: C.UserProfileTypes.FULL_SIZE,
+              profileType: x.UserProfileTypes.FULL_SIZE,
               user: t,
               friendToken: j
             }), (0, s.jsx)(T.default, {
               user: t,
-              profileType: C.UserProfileTypes.FULL_SIZE,
+              profileType: x.UserProfileTypes.FULL_SIZE,
               guildId: B,
               viewProfileItem: Q()
             })]
-          }), (0, s.jsx)(x.default, {
+          }), (0, s.jsx)(C.default, {
             user: t,
             displayProfile: Y,
             guildId: B,

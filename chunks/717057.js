@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return j
   }
 }), n("47120");
 var a = n("735250"),
@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("430824"),
   p = n("594174"),
   E = n("153124"),
-  g = n("709054"),
-  C = n("931240"),
+  C = n("709054"),
+  g = n("931240"),
   S = n("645896"),
   _ = n("603368"),
   T = n("532490"),
@@ -39,7 +39,7 @@ function L(e) {
     clanInfo: s,
     onSignCharter: r
   } = e, u = l.useMemo(() => {
-    let e = g.default.extractTimestamp(n);
+    let e = C.default.extractTimestamp(n);
     return o()(new Date(e)).format("MMMM YYYY")
   }, [n]), d = l.useMemo(() => new Set(s.games), [s.games]);
   return (0, a.jsx)(T.default, {
@@ -89,24 +89,24 @@ function L(e) {
   })
 }
 
-function O(e) {
+function j(e) {
   var t;
   let {
     guildId: n,
     onClose: s,
     onAccept: r,
     ...o
-  } = e, g = (0, E.useUID)(), T = (0, S.useClanInfo)(n), A = (0, S.useIsFetchingClanInfo)(), [v, N] = l.useState(!0), [O, j] = l.useState(!1), P = l.useCallback(() => {
+  } = e, C = (0, E.useUID)(), T = (0, S.useClanInfo)(n), A = (0, S.useIsFetchingClanInfo)(), [v, N] = l.useState(!0), [j, O] = l.useState(!1), P = l.useCallback(() => {
     r(), s()
   }, [r, s]);
   l.useEffect(() => {
     null == T && !A && P()
   }, [T, P, A]);
   let D = l.useCallback(() => {
-      v && (0, C.adoptClanIdentity)(n, v, M.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL), P()
+      v && (0, g.adoptClanIdentity)(n, v, M.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL), P()
     }, [n, P, v]),
     b = l.useCallback(() => {
-      j(!0)
+      O(!0)
     }, []),
     U = (0, d.useStateFromStores)([m.default], () => m.default.getGuild(n)),
     F = (0, d.useStateFromStores)([p.default], () => p.default.getCurrentUser()),
@@ -121,7 +121,7 @@ function O(e) {
   return null == U || null == F || null == w || null == T ? null : (0, a.jsx)(c.ModalRoot, {
     ...o,
     transitionState: o.transitionState,
-    "aria-labelledby": g,
+    "aria-labelledby": C,
     className: R.modal,
     size: c.ModalSize.DYNAMIC,
     children: (0, a.jsxs)(c.ModalContent, {
@@ -161,7 +161,7 @@ function O(e) {
         color: c.Button.Colors.BRAND,
         themeColor: H,
         fullWidth: !1,
-        className: i()(R.ctaButton, O ? R.ctaButtonSigned : null),
+        className: i()(R.ctaButton, j ? R.ctaButtonSigned : null),
         children: (0, a.jsxs)("div", {
           className: R.ctaButtonInner,
           children: [(0, a.jsx)(c.Text, {

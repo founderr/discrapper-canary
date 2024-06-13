@@ -25,8 +25,8 @@ var i = l("442837"),
   T = l("228168"),
   g = l("182294"),
   A = l("602091"),
-  x = l("231338"),
-  C = l("566483");
+  C = l("231338"),
+  x = l("566483");
 let N = f.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
 function U(e) {
@@ -57,7 +57,7 @@ function U(e) {
     location: "SimplifiedUserProfileModalHeader"
   }), B = (0, i.useStateFromStores)([c.default], () => c.default.getRelationshipType(t.id)), G = (0, i.useStateFromStores)([u.default], () => u.default.getId() === t.id), [k, w] = (0, i.useStateFromStoresArray)([d.default], () => {
     let e = d.default.isMobileOnline(t.id);
-    return (0, r.shouldDisableUserPresenceInChannel)(t, P) ? [x.StatusTypes.UNKNOWN, e] : (0, o.default)(a) ? [x.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
+    return (0, r.shouldDisableUserPresenceInChannel)(t, P) ? [C.StatusTypes.UNKNOWN, e] : (0, o.default)(a) ? [C.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
   });
   return (0, s.jsxs)("header", {
     children: [(0, s.jsx)(m.default, {
@@ -66,14 +66,14 @@ function U(e) {
       profileType: T.UserProfileTypes.FULL_SIZE,
       hasProfileEffect: (null == l ? void 0 : l.profileEffectId) != null
     }), (0, s.jsxs)("div", {
-      className: C.inner,
+      className: x.inner,
       children: [(0, s.jsx)("div", {
         ...L,
         children: (0, s.jsx)(N, {
           src: O,
           avatarDecoration: F,
           size: g.AvatarSizes.SIZE_120,
-          className: C.avatar,
+          className: x.avatar,
           status: k,
           statusBackdropColor: (0, n.getStatusBackdropColor)(j),
           "aria-label": t.username,

@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("594174"),
   p = n("783014"),
   E = n("185403"),
-  g = n("768581"),
-  C = n("906605"),
+  C = n("768581"),
+  g = n("906605"),
   S = n("106301"),
   _ = n("833858"),
   T = n("223135"),
@@ -47,14 +47,14 @@ let N = e => {
   M = e => {
     let {
       currentStatus: t
-    } = e, s = l.useRef(S.default.getRecentCustomStatuses()), r = l.useRef((0, h.isDismissibleContentDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)).current, M = (0, _.getHangStatusOptions)(), [y, R] = l.useState(null != t ? t : null), L = (0, u.useStateFromStores)([m.default], () => m.default.getCurrentUser()), O = () => {
+    } = e, s = l.useRef(S.default.getRecentCustomStatuses()), r = l.useRef((0, h.isDismissibleContentDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)).current, M = (0, _.getHangStatusOptions)(), [y, R] = l.useState(null != t ? t : null), L = (0, u.useStateFromStores)([m.default], () => m.default.getCurrentUser()), j = () => {
       !r && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)
-    }, j = (e, t) => {
-      e.stopPropagation(), (0, C.updateHangStatus)(t, !0), O()
+    }, O = (e, t) => {
+      e.stopPropagation(), (0, g.updateHangStatus)(t, !0), j()
     }, P = (e, t) => {
-      e.stopPropagation(), (0, C.updateCustomHangStatus)(t.status, t.emoji, !0), O()
+      e.stopPropagation(), (0, g.updateCustomHangStatus)(t.status, t.emoji, !0), j()
     }, D = l.useCallback(e => {
-      e.stopPropagation(), (0, C.clearHangStatus)(!0)
+      e.stopPropagation(), (0, g.clearHangStatus)(!0)
     }, []), b = e => {
       e.stopPropagation(), (0, c.openModalLazy)(async () => {
         let {
@@ -63,7 +63,7 @@ let N = e => {
         return t => (0, a.jsx)(e, {
           ...t
         })
-      }), O()
+      }), j()
     }, U = l.useCallback(e => {
       R({
         type: I.ActivityTypes.HANG_STATUS,
@@ -109,7 +109,7 @@ let N = e => {
               children: [(0, a.jsx)(c.Avatar, {
                 className: x.avatar,
                 size: c.AvatarSizes.SIZE_40,
-                src: (0, g.getUserAvatarURL)(L),
+                src: (0, C.getUserAvatarURL)(L),
                 "aria-hidden": !0
               }), (0, a.jsx)("div", {
                 className: x.outline
@@ -129,7 +129,7 @@ let N = e => {
             return (0, a.jsx)(c.Clickable, {
               "aria-label": l.title,
               onMouseEnter: () => U(n),
-              onClick: e => j(e, n),
+              onClick: e => O(e, n),
               children: (0, a.jsx)(N, {
                 className: i()(x.iconWidget, {
                   [x.selectedWidget]: n === (null == t ? void 0 : t.state)

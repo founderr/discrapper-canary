@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("699516"),
   p = n("512665"),
   E = n("352736"),
-  g = n("937889"),
-  C = n("739566"),
+  C = n("937889"),
+  g = n("739566"),
   S = n("507418"),
   _ = n("348238"),
   T = n("981631"),
@@ -34,7 +34,7 @@ let A = l.memo(function(e) {
     referencedUsernameProfile: N,
     referencedAvatarProfile: M,
     setPopout: y
-  } = e, R = A.state === h.ReferencedMessageState.LOADED ? A.message : void 0, L = (0, C.useNullableMessageAuthor)(R), O = (0, u.useActiveKeywordFiltersCacheKey)(), j = (0, d.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = l.useMemo(() => {
+  } = e, R = A.state === h.ReferencedMessageState.LOADED ? A.message : void 0, L = (0, g.useNullableMessageAuthor)(R), j = (0, u.useActiveKeywordFiltersCacheKey)(), O = (0, d.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = l.useMemo(() => {
     if (null == R) return null;
     let e = (0, r.default)(R);
     if (e.type === T.MessageTypes.USER_JOIN) {
@@ -66,7 +66,7 @@ let A = l.memo(function(e) {
       let t = {
           formatInline: !0,
           allowLinks: !0,
-          shouldFilterKeywords: null != O
+          shouldFilterKeywords: null != j
         },
         n = e.isFirstMessageInForumPost(v) ? {
           ...t,
@@ -76,16 +76,16 @@ let A = l.memo(function(e) {
         } : {
           ...t,
           formatInline: !0,
-          allowHeading: j,
-          allowList: j
+          allowHeading: O,
+          allowList: O
         };
-      return (0, g.default)(e, n).content
+      return (0, C.default)(e, n).content
     }
     return null
-  }, [R, L, v, j, O]), D = (0, s.useStateFromStores)([m.default], () => null != R && m.default.isBlocked(R.author.id), [R]), b = (0, _.useContextMenuUser)(null == R ? void 0 : R.author.id, v.id), U = (0, _.useClickReply)(n, R, D), F = (0, _.useClickReferencedMessageAuthorUsername)(R, v, N, y), w = (0, _.useClickReferencedMessageAuthorAvatar)(M, y), k = l.useCallback(() => y({
+  }, [R, L, v, O, j]), D = (0, s.useStateFromStores)([m.default], () => null != R && m.default.isBlocked(R.author.id), [R]), b = (0, _.useContextMenuUser)(null == R ? void 0 : R.author.id, v.id), U = (0, _.useClickReply)(n, R, D), F = (0, _.useClickReferencedMessageAuthorUsername)(R, v, N, y), w = (0, _.useClickReferencedMessageAuthorAvatar)(M, y), k = l.useCallback(() => y({
     referencedUsernameProfile: !1,
     referencedAvatarProfile: !1
-  }), [y]), H = (0, C.useNullableMessageAuthor)(n);
+  }), [y]), H = (0, g.useNullableMessageAuthor)(n);
   return (0, a.jsx)(p.default, {
     repliedAuthor: L,
     baseMessage: n,

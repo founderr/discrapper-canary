@@ -19,8 +19,8 @@ var a, l, s = n("620662"),
   m = n("975667"),
   p = n("432247"),
   E = n("603890"),
-  g = n("944581"),
-  C = n("524933"),
+  C = n("944581"),
+  g = n("524933"),
   S = n("411536"),
   _ = n("981631"),
   T = n("689938");
@@ -45,7 +45,7 @@ function I(e) {
     display: T.default.Messages.CHAT_ATTACH_UPLOAD_A_FILE
   }), R.push({
     type: "UPLOAD_TEXT_AS_FILE",
-    icon: C.default,
+    icon: g.default,
     display: T.default.Messages.CHAT_ATTACH_UPLOAD_TEXT_AS_FILE
   })), I && t && y !== _.AppContext.POPOUT && R.push({
     type: "CLIPS",
@@ -67,7 +67,7 @@ function I(e) {
     display: T.default.Messages.CHAT_ATTACH_USE_SLASH_COMMAND
   }), M && R.push({
     type: "ACTIVITY",
-    icon: g.default,
+    icon: C.default,
     display: T.default.Messages.EMBEDDED_ACTIVITIES_START_ACTIVITY_LABEL
   }), v.forEach(e => {
     !(0, s.default)(e, _.ActivityFlags.EMBEDDED) && (e.type === _.ActivityTypes.PLAYING && (0, s.default)(e, _.ActivityFlags.JOIN) && R.push({

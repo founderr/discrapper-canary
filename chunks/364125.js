@@ -21,7 +21,7 @@ function c(e) {
     stream: f,
     focused: h,
     canvas: m
-  } = e, p = a.useRef(!1), E = (0, l.useStateFromStores)([s.default], () => s.default.getDrawMode()), g = (0, o.default)((0, u.default)(t.id, n, c), f), C = (0, o.default)((0, d.default)(t.id, n, c), f), S = a.useCallback((e, t, n) => {
+  } = e, p = a.useRef(!1), E = (0, l.useStateFromStores)([s.default], () => s.default.getDrawMode()), C = (0, o.default)((0, u.default)(t.id, n, c), f), g = (0, o.default)((0, d.default)(t.id, n, c), f), S = a.useCallback((e, t, n) => {
     if (null == m) return;
     let {
       x: a,
@@ -29,11 +29,11 @@ function c(e) {
     } = (0, r.getMouseCoordinatesPercent)(m, n);
     switch (t.type) {
       case i.DrawableType.LINE:
-        return g[e](t, a, l);
+        return C[e](t, a, l);
       case i.DrawableType.EMOJI_HOSE:
-        return C[e](t, a, l)
+        return g[e](t, a, l)
     }
-  }, [m, g, C]), _ = a.useCallback(e => {
+  }, [m, C, g]), _ = a.useCallback(e => {
     h && null != E && (e.stopPropagation(), p.current = !0, S("handleMouseDown", E, e))
   }, [S, E, h]), T = a.useCallback(e => {
     h && null != E && (e.stopPropagation(), p.current && S("handleMouseMove", E, e))

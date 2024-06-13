@@ -19,8 +19,8 @@ var l = n("512722"),
   m = n("218035"),
   p = n("775666"),
   E = n("423589"),
-  g = n("592125"),
-  C = n("496675"),
+  C = n("592125"),
+  g = n("496675"),
   S = n("881824"),
   _ = n("146085"),
   T = n("427679"),
@@ -40,8 +40,8 @@ function v(e) {
     "aria-label": A.default.Messages.CHANNEL_CALL_OVERFLOW_MENU_LABEL,
     onSelect: v,
     children: [function(e) {
-      let t = (0, i.useStateFromStores)([g.default], () => g.default.getChannel(e), [e]),
-        n = (0, i.useStateFromStores)([C.default], () => C.default.can(_.MODERATE_STAGE_CHANNEL_PERMISSIONS, t)),
+      let t = (0, i.useStateFromStores)([C.default], () => C.default.getChannel(e), [e]),
+        n = (0, i.useStateFromStores)([g.default], () => g.default.can(_.MODERATE_STAGE_CHANNEL_PERMISSIONS, t)),
         l = (0, i.useStateFromStores)([T.default], () => T.default.getStageInstanceByChannel(e), [e]),
         s = (0, o.useAppContext)(),
         u = () => null != t && (0, S.openStageChannelSettings)(t, s);
@@ -55,7 +55,7 @@ function v(e) {
         action: u
       }) : null
     }(t), function(e) {
-      let t = (0, i.useStateFromStores)([g.default], () => g.default.getChannel(e), [e]);
+      let t = (0, i.useStateFromStores)([C.default], () => C.default.getChannel(e), [e]);
       s()(null != t, "useNotificationSettingsItem: channel cannot be undefined");
       let n = (0, E.useShouldUseNewNotificationSystem)("StageChannelCallOverflowMenu"),
         a = (0, p.default)(t),

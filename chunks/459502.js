@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return C
   }
 }), n("724458");
 var a = n("735250");
@@ -20,14 +20,14 @@ var l = n("442837"),
   p = n("689938"),
   E = n("683516");
 
-function g(e) {
+function C(e) {
   let {
     channelId: t
-  } = e, g = (0, l.useStateFromStores)([o.default], () => o.default.getChannel(t), [t]), C = (0, f.useImminentUpcomingGuildEvents)(t), S = null != (0, f.useActiveEvent)(t), {
+  } = e, C = (0, l.useStateFromStores)([o.default], () => o.default.getChannel(t), [t]), g = (0, f.useImminentUpcomingGuildEvents)(t), S = null != (0, f.useActiveEvent)(t), {
     canManageGuildEvent: _
-  } = (0, r.useManageResourcePermissions)(g), T = (0, l.useStateFromStoresObject)([c.default], () => C.reduce((e, t) => (e[t.id] = c.default.getUserCount(t.id, (0, h.getNextRecurrenceIdInEvent)(t)), e), {}));
-  return C.length < 1 || S ? null : (0, a.jsx)(a.Fragment, {
-    children: C.map(e => (0, a.jsx)(m.default, {
+  } = (0, r.useManageResourcePermissions)(C), T = (0, l.useStateFromStoresObject)([c.default], () => g.reduce((e, t) => (e[t.id] = c.default.getUserCount(t.id, (0, h.getNextRecurrenceIdInEvent)(t)), e), {}));
+  return g.length < 1 || S ? null : (0, a.jsx)(a.Fragment, {
+    children: g.map(e => (0, a.jsx)(m.default, {
       icon: (0, a.jsx)(u.default, {
         height: 20,
         width: 20

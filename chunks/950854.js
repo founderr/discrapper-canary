@@ -22,11 +22,11 @@ function c(e) {
     headerClassName: u,
     subheaderVariant: p = "text-sm/normal",
     subheader: m,
-    children: f,
-    animatesOnHover: _,
+    children: _,
+    animatesOnHover: f,
     ...h
-  } = e, I = null != a, g = (0, l.jsxs)(l.Fragment, {
-    children: [I && (0, l.jsx)("div", {
+  } = e, g = null != a, I = (0, l.jsxs)(l.Fragment, {
+    children: [g && (0, l.jsx)("div", {
       className: o.imageContainer,
       children: (0, l.jsx)("img", {
         alt: "",
@@ -57,10 +57,10 @@ function c(e) {
             children: m
           })]
         })]
-      }), f]
+      }), _]
     })]
   }), v = n()(t, o.container, {
-    [o.hasImage]: I
+    [o.hasImage]: g
   });
   return null != i ? (0, l.jsx)(s.ClickableContainer, {
     tag: "article",
@@ -69,15 +69,15 @@ function c(e) {
     }),
     onClick: i,
     className: n()(v, o.clickable, {
-      [o.animatesOnHoverContainer]: _
+      [o.animatesOnHoverContainer]: f
     }),
     focusProps: {
       offset: 4
     },
-    children: g
+    children: I
   }) : (0, l.jsx)("article", {
     className: v,
     ...h,
-    children: g
+    children: I
   })
 }

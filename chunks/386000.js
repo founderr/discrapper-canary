@@ -21,13 +21,13 @@ function o(e) {
     onMouseLeave: f,
     ...h
   } = e, m = t || n || o, p = u ? r.CenterControlButton : r.default, E = (0, i.default)(t, n, o, d), {
-    Component: g,
-    play: C,
+    Component: C,
+    play: g,
     events: S
   } = (0, s.useMicrophoneLottie)(m ? "unmute" : "mute");
-  return l.useEffect(() => () => C(), [C, m]), (0, a.jsx)(p, {
+  return l.useEffect(() => () => g(), [g, m]), (0, a.jsx)(p, {
     isActive: !m,
-    iconComponent: g,
+    iconComponent: C,
     label: E,
     onMouseEnter: e => {
       null == c || c(e), S.onMouseEnter()

@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("375954"),
   p = n("594174"),
   E = n("626135"),
-  g = n("51144"),
-  C = n("901461"),
+  C = n("51144"),
+  g = n("901461"),
   S = n("981631"),
   _ = n("689938"),
   T = n("596739");
@@ -33,9 +33,9 @@ function A(e) {
   l.useEffect(() => {
     (0, d.fetchStickerPack)("847199849233514549", !0)
   }, []);
-  let v = (0, r.useStateFromStores)([m.default, h.default], () => !!i()(m.default.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== h.default.getId() && e.state === S.MessageStates.SENT && !(0, C.default)(e))),
+  let v = (0, r.useStateFromStores)([m.default, h.default], () => !!i()(m.default.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== h.default.getId() && e.state === S.MessageStates.SENT && !(0, g.default)(e))),
     x = (0, r.useStateFromStores)([p.default], () => p.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-    N = null !== (t = g.default.useName(x)) && void 0 !== t ? t : _.default.Messages.WAVE_DEFAULT_RECIPIENT,
+    N = null !== (t = C.default.useName(x)) && void 0 !== t ? t : _.default.Messages.WAVE_DEFAULT_RECIPIENT,
     M = (0, r.useStateFromStores)([c.default], () => c.default.getStickerById(I)),
     y = l.useCallback(async () => {
       if (null == s || "" === s) try {

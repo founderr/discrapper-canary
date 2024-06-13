@@ -25,7 +25,7 @@ function p(e) {
     o.default.loadThread(p)
   });
   let E = (0, i.useStateFromStores)([d.default], () => d.default.getGuildId()) === f.FAVORITES,
-    g = (0, i.useStateFromStores)([u.default], () => u.default.theme);
+    C = (0, i.useStateFromStores)([u.default], () => u.default.theme);
   return t = E ? (0, a.jsx)(r.EmptyStateText, {
     note: h.default.Messages.FAVORITES_EMPTY_BODY,
     children: h.default.Messages.FAVORITES_EMPTY_TITLE
@@ -39,7 +39,7 @@ function p(e) {
     children: [s.isMobile && (0, a.jsx)(c.default, {
       children: (0, a.jsx)(l.Fragment, {})
     }), (0, a.jsxs)(r.EmptyState, {
-      theme: g,
+      theme: C,
       children: [(0, a.jsx)(r.EmptyStateImage, {
         darkSrc: E ? n("691270") : n("625065"),
         lightSrc: E ? n("704139") : n("875184"),

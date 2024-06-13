@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("527379"),
   p = n("484459"),
   E = n("318661"),
-  g = n("502762"),
-  C = n("271383"),
+  C = n("502762"),
+  g = n("271383"),
   S = n("594174"),
   _ = n("189357"),
   T = n("718617"),
@@ -35,21 +35,21 @@ function x(e) {
     className: x,
     infoPanelClassName: N,
     style: M
-  } = e, y = (0, _.useCanAccessGuildMemberModView)(n), R = (0, r.useStateFromStores)([S.default], () => S.default.getUser(t), [t]), L = (0, r.useStateFromStores)([C.default], () => C.default.getMember(n, t), [n, t]), [O, j] = l.useState(null == R || null == L), P = (0, d.default)(L), D = l.useRef(null), {
+  } = e, y = (0, _.useCanAccessGuildMemberModView)(n), R = (0, r.useStateFromStores)([S.default], () => S.default.getUser(t), [t]), L = (0, r.useStateFromStores)([g.default], () => g.default.getMember(n, t), [n, t]), [j, O] = l.useState(null == R || null == L), P = (0, d.default)(L), D = l.useRef(null), {
     analyticsLocations: b
   } = (0, h.default)(f.default.GUILD_MEMBER_MOD_VIEW), U = (0, E.default)(t, n);
   return (l.useEffect(() => {
     !y && s()
   }, [y, s]), l.useEffect(() => {
-    null != P && null == L && !O && s()
-  }, [O, L, s, P]), l.useEffect(() => {
-    null != R && null != L && j(!1)
+    null != P && null == L && !j && s()
+  }, [j, L, s, P]), l.useEffect(() => {
+    null != R && null != L && O(!1)
   }, [R, L]), l.useEffect(() => {
     let e = null == L;
-    return !O && e && (D.current = window.setTimeout(s, 500)), () => {
+    return !j && e && (D.current = window.setTimeout(s, 500)), () => {
       null != D.current && window.clearTimeout(D.current)
     }
-  }, [O, L, s]), (0, c.useSubscribeGuildMembers)({
+  }, [j, L, s]), (0, c.useSubscribeGuildMembers)({
     [n]: [t]
   }), l.useEffect(() => {
     (async function e() {
@@ -57,21 +57,21 @@ function x(e) {
         guildId: n,
         dispatchWait: !0
       })];
-      await Promise.all(e), j(!1)
+      await Promise.all(e), O(!1)
     })()
-  }, [n, t]), y) ? O || null == R || null == L ? (0, a.jsx)("div", {
+  }, [n, t]), y) ? j || null == R || null == L ? (0, a.jsx)("div", {
     className: i()(v.sidebarContianer, v.loadingContainer, x),
     style: M,
     children: (0, a.jsx)(o.Spinner, {
       animated: !0,
-      type: O ? o.Spinner.Type.SPINNING_CIRCLE : o.Spinner.Type.CHASING_DOTS
+      type: j ? o.Spinner.Type.SPINNING_CIRCLE : o.Spinner.Type.CHASING_DOTS
     })
   }) : (0, a.jsx)(h.AnalyticsLocationProvider, {
     value: b,
     children: (0, a.jsx)("div", {
       className: i()(v.sidebarContianer, x),
       style: M,
-      children: (0, a.jsx)(g.default, {
+      children: (0, a.jsx)(C.default, {
         user: R,
         displayProfile: U,
         profileType: A.UserProfileTypes.MODAL,

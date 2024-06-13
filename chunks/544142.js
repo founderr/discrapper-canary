@@ -19,8 +19,8 @@ var l = n("120356"),
   m = n("271383"),
   p = n("594174"),
   E = n("934458"),
-  g = n("51144"),
-  C = n("967128"),
+  C = n("51144"),
+  g = n("967128"),
   S = n("981631"),
   _ = n("689938"),
   T = n("26909");
@@ -31,7 +31,7 @@ function I(e) {
     userId: c,
     channel: E
   } = e, {
-    analyticsLocations: C
+    analyticsLocations: g
   } = (0, d.default)(u.default.USERNAME), S = (0, i.useStateFromStores)([p.default], () => p.default.getUser(c)), _ = (0, i.useStateFromStores)([m.default], () => null != c ? m.default.getMember(E.guild_id, c) : null);
 
   function I(e) {
@@ -48,13 +48,13 @@ function I(e) {
       })
     })
   }
-  let A = null !== (l = null !== (t = null == _ ? void 0 : _.nick) && void 0 !== t ? t : g.default.getName(S)) && void 0 !== l ? l : "???",
+  let A = null !== (l = null !== (t = null == _ ? void 0 : _.nick) && void 0 !== t ? t : C.default.getName(S)) && void 0 !== l ? l : "???",
     v = null == _ ? void 0 : _.colorString;
   return null == S ? (0, a.jsx)("span", {
     className: s()(T.threadCreatorName, T.unknownCreatorName),
     children: A
   }) : (0, a.jsx)(d.AnalyticsLocationProvider, {
-    value: C,
+    value: g,
     children: (0, a.jsx)(r.Popout, {
       preload: () => (0, f.maybeFetchUserProfileForPopout)(S, {
         guildId: E.guild_id,
@@ -119,14 +119,14 @@ function v(e) {
   let {
     channel: n
   } = e, l = null !== (t = (0, c.default)(n)) && void 0 !== t ? t : E.default;
-  return (0, a.jsxs)(C.default, {
+  return (0, a.jsxs)(g.default, {
     channelId: n.id,
     children: [(0, a.jsx)("div", {
       className: T.iconWrapper,
       children: (0, a.jsx)(l, {
         className: T.icon
       })
-    }), (0, a.jsx)(C.EmptyMessageHeader, {
+    }), (0, a.jsx)(g.EmptyMessageHeader, {
       children: n.name
     }), (0, a.jsx)(A, {
       channel: n

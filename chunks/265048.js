@@ -6,16 +6,16 @@ n.r(t), n.d(t, {
 });
 var a = n("735250");
 n("470079");
-var l = n("442837"),
-  s = n("438139"),
+var r = n("442837"),
+  l = n("438139"),
   i = n("706454"),
-  r = n("594174"),
-  o = n("81063"),
+  o = n("594174"),
+  s = n("81063"),
   u = n("162461"),
   d = n("561308"),
   c = n("701488");
 
-function f(e) {
+function g(e) {
   let {
     message: t
   } = e;
@@ -23,46 +23,46 @@ function f(e) {
     children: t
   })
 }
-let h = (0, s.default)(f),
+let f = (0, l.default)(g),
   m = e => {
-    var t, n, s, m, p, E;
-    let g = (0, l.useStateFromStores)([i.default], () => i.default.locale),
-      C = (0, l.useStateFromStores)([r.default], () => r.default.getUser(e.author_id)),
+    var t, n, l, m, E, T;
+    let _ = (0, r.useStateFromStores)([i.default], () => i.default.locale),
+      h = (0, r.useStateFromStores)([o.default], () => o.default.getUser(e.author_id)),
       {
-        activity: S,
-        activityApplication: _,
-        fallbackApplication: T
+        activity: v,
+        activityApplication: I,
+        fallbackApplication: N
       } = (0, d.useEntryActivityAndApplication)(e),
-      I = (0, u.useIsEligibleForRichPresenceInventory)("useGamingContentData"),
-      A = null !== (m = null === (t = null != T ? T : _) || void 0 === t ? void 0 : t.getIconURL(c.ImageSizes.LARGE)) && void 0 !== m ? m : void 0;
-    if (!I || null == S) return {
-      iconUrl: A,
+      x = (0, u.useIsEligibleForRichPresenceInventory)("useGamingContentData"),
+      C = null !== (m = null === (t = null != N ? N : I) || void 0 === t ? void 0 : t.getIconURL(c.ImageSizes.LARGE)) && void 0 !== m ? m : void 0;
+    if (!x || null == v) return {
+      iconUrl: C,
       gameTitle: e.extra.game_name,
-      user: C,
-      inExperiment: I
+      user: h,
+      inExperiment: x
     };
-    let v = null != _ && (null === (n = S.assets) || void 0 === n ? void 0 : n.large_image) != null ? (0, o.getAssetImage)(_.id, S.assets.large_image, [c.ImageSizes.LARGE, c.ImageSizes.LARGE]) : void 0,
-      x = null !== (p = null === (s = S.assets) || void 0 === s ? void 0 : s.large_text) && void 0 !== p ? p : void 0,
-      N = null !== (E = S.name) && void 0 !== E ? E : e.extra.game_name,
-      M = S.details,
-      y = S.state,
-      R = S.party,
-      L = null != S.timestamps ? (0, a.jsx)(h, {
-        timestamps: S.timestamps
-      }) : (0, a.jsx)(f, {
-        message: (0, d.formatEntryTimestamp)(e, g)
+    let A = null != I && (null === (n = v.assets) || void 0 === n ? void 0 : n.large_image) != null ? (0, s.getAssetImage)(I.id, v.assets.large_image, [c.ImageSizes.LARGE, c.ImageSizes.LARGE]) : void 0,
+      p = null !== (E = null === (l = v.assets) || void 0 === l ? void 0 : l.large_text) && void 0 !== E ? E : void 0,
+      M = null !== (T = v.name) && void 0 !== T ? T : e.extra.game_name,
+      R = v.details,
+      S = v.state,
+      O = v.party,
+      P = null != v.timestamps ? (0, a.jsx)(f, {
+        timestamps: v.timestamps
+      }) : (0, a.jsx)(g, {
+        message: (0, d.formatEntryTimestamp)(e, _)
       });
     return {
-      iconUrl: null != v ? v : A,
-      iconFallbackUrl: null != v ? A : void 0,
-      iconTitle: x,
-      user: C,
-      activity: S,
-      state: y,
-      details: M,
-      party: R,
-      gameTitle: N,
-      gameTime: L,
-      inExperiment: I
+      iconUrl: null != A ? A : C,
+      iconFallbackUrl: null != A ? C : void 0,
+      iconTitle: p,
+      user: h,
+      activity: v,
+      state: S,
+      details: R,
+      party: O,
+      gameTitle: M,
+      gameTime: P,
+      inExperiment: x
     }
   }

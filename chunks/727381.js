@@ -19,8 +19,8 @@ var l = n("120356"),
   m = n("477718"),
   p = n("791176"),
   E = n("908474"),
-  g = n("467014"),
-  C = n("689938"),
+  C = n("467014"),
+  g = n("689938"),
   S = n("806338");
 
 function _(e) {
@@ -40,7 +40,7 @@ function _(e) {
         height: 16
       }), (0, a.jsx)(r.Heading, {
         variant: "heading-md/semibold",
-        children: C.default.Messages.GUILD_MEMBER_MOD_VIEW_TITLE
+        children: g.default.Messages.GUILD_MEMBER_MOD_VIEW_TITLE
       })]
     }), (0, a.jsx)("div", {
       children: (0, a.jsx)(r.KeyCombo, {
@@ -58,7 +58,7 @@ function T(e) {
     guildId: n,
     location: l,
     className: d,
-    onNavigate: C
+    onNavigate: g
   } = e, T = (0, i.useStateFromStores)([u.default], () => u.default.getUser(t), [t]), I = (0, i.useStateFromStores)([o.default], () => o.default.getMember(n, t), [n, t]), A = (0, c.useProfileThemedPanelBackground)(t, n);
   return null == T || null == I ? null : (0, a.jsxs)(r.Scroller, {
     className: s()(S.container, d),
@@ -72,12 +72,12 @@ function T(e) {
       className: s()(S.innerContainer),
       children: [(0, a.jsx)(E.default, {
         member: I
-      }), (0, a.jsx)(g.default, {
+      }), (0, a.jsx)(C.default, {
         userId: t,
         guildId: n
       }), (0, a.jsx)(p.default, {
         member: I,
-        onNavigate: C
+        onNavigate: g
       }), (0, a.jsx)(h.default, {
         member: I
       }), (0, a.jsx)(f.default, {

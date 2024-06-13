@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return s
+    return l
   }
 });
-var i = n("470079"),
-  a = n("584825");
+var n = s("470079"),
+  i = s("584825");
 
-function s(e, t) {
-  let n = (0, a.useSubscriptionTrial)(t);
-  return i.useMemo(() => {
+function l(e, t) {
+  let s = (0, i.useSubscriptionTrial)(t);
+  return n.useMemo(() => {
     var e;
-    return null != n && (null == n.max_num_active_trial_users || n.max_num_active_trial_users > (null !== (e = n.num_active_trial_users) && void 0 !== e ? e : 0))
-  }, [n])
+    return null != s && (null == s.max_num_active_trial_users || s.max_num_active_trial_users > (null !== (e = s.num_active_trial_users) && void 0 !== e ? e : 0))
+  }, [s])
 }

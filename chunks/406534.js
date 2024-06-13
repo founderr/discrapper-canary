@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("736052"),
   p = n("359110"),
   E = n("359119"),
-  g = n("13279"),
-  C = n("248789"),
+  C = n("13279"),
+  g = n("248789"),
   S = n("88101"),
   _ = n("576954"),
   T = n("765104"),
@@ -32,8 +32,8 @@ var a = n("735250"),
   y = n("594174"),
   R = n("130208"),
   L = n("55935"),
-  O = n("70956"),
-  j = n("709054"),
+  j = n("70956"),
+  O = n("709054"),
   P = n("534091"),
   D = n("900164"),
   b = n("554838"),
@@ -110,16 +110,16 @@ function $(e) {
     eh = (0, o.useChannelSummariesExperiment)(R),
     em = (0, s.useStateFromStores)([T.default], () => T.default.shouldShowTopicsBar() && !eo),
     ep = (0, S.useStrangerDangerWarning)(R.id, X.LOCATION_CONTEXT_WEB),
-    eE = (0, g.useInappropriateConversationBannerForChannel)(R.id, X.LOCATION_CONTEXT_WEB),
-    eg = (0, U.default)(),
-    eC = null != ep ? ep : eE;
-  R.isDM() && null != eC && (n = eC.type === E.SafetyWarningTypes.STRANGER_DANGER ? (0, a.jsx)(_.StrangerDangerWarningBanner, {
+    eE = (0, C.useInappropriateConversationBannerForChannel)(R.id, X.LOCATION_CONTEXT_WEB),
+    eC = (0, U.default)(),
+    eg = null != ep ? ep : eE;
+  R.isDM() && null != eg && (n = eg.type === E.SafetyWarningTypes.STRANGER_DANGER ? (0, a.jsx)(_.StrangerDangerWarningBanner, {
     channelId: R.id,
-    warningId: eC.id,
+    warningId: eg.id,
     senderId: R.getRecipientId()
-  }) : (0, a.jsx)(C.InappropriateConversationWarningBanner, {
+  }) : (0, a.jsx)(g.InappropriateConversationWarningBanner, {
     channelId: R.id,
-    warningId: eC.id,
+    warningId: eg.id,
     senderId: R.getRecipientId()
   }));
   let eS = R.isForumPost() && !ef ? (0, a.jsx)(f.default, {
@@ -161,7 +161,7 @@ function $(e) {
           collapsedReason: t
         }, e.key)
       }
-      if (null != ei && ei > e.content.timestamp.getTime() * O.default.Millis.SECOND) return;
+      if (null != ei && ei > e.content.timestamp.getTime() * j.default.Millis.SECOND) return;
       let s = x.default.can(Z.Permissions.CREATE_INSTANT_INVITE, R);
       if ((0, D.default)(e.content, s)) return;
       e.type === Z.ChannelStreamTypes.MESSAGE && null == eT && (eT = e);
@@ -217,9 +217,9 @@ function $(e) {
     })), $ > 0 && ee && ed()) {
     let e, t;
     let n = N.default.getOldestUnreadTimestamp(R.id),
-      s = 0 !== n ? n : j.default.extractTimestamp(R.id),
+      s = 0 !== n ? n : O.default.extractTimestamp(R.id),
       i = (0, L.isSameDay)(new Date, new Date(s));
-    if (N.default.isEstimated(R.id) ? (e = i ? q.default.Messages.NEW_MESSAGES_ESTIMATED : q.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = i ? q.default.Messages.NEW_MESSAGES : q.default.Messages.NEW_MESSAGES_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_SUMMARIES), eh && (0, o.channelEligibleForSummaries)(R) && eg.includes(z.ChatOverlays.SUMMARIES)) {
+    if (N.default.isEstimated(R.id) ? (e = i ? q.default.Messages.NEW_MESSAGES_ESTIMATED : q.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = i ? q.default.Messages.NEW_MESSAGES : q.default.Messages.NEW_MESSAGES_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_SUMMARIES), eh && (0, o.channelEligibleForSummaries)(R) && eC.includes(z.ChatOverlays.SUMMARIES)) {
       let n = N.default.ackMessageId(R.id),
         i = (0, I.getUnreadTopicsCount)(R.id, N.default.getOldestUnreadMessageId(R.id));
       if ((0, d.trackWithMetadata)(Z.AnalyticEvents.SUMMARIES_UNREAD_BAR_VIEWED, {
@@ -301,7 +301,7 @@ function $(e) {
           })
         }
       }
-    } else eg.includes(z.ChatOverlays.NEW_MESSAGES) && (l = (0, a.jsx)(B.NewMessagesBar, {
+    } else eC.includes(z.ChatOverlays.NEW_MESSAGES) && (l = (0, a.jsx)(B.NewMessagesBar, {
       content: e.format({
         count: $,
         timestamp: s
@@ -309,7 +309,7 @@ function $(e) {
       channelId: R.id
     }))
   }
-  if (null == l && (0, o.canSeeChannelSummaries)(R) && em && eg.includes(z.ChatOverlays.SUMMARIES) && (l = (0, a.jsx)(B.TopicsPill, {
+  if (null == l && (0, o.canSeeChannelSummaries)(R) && em && eC.includes(z.ChatOverlays.SUMMARIES) && (l = (0, a.jsx)(B.TopicsPill, {
       channel: R,
       scrollManager: el
     })), w.error) r = (0, a.jsx)(B.ErrorLoadingBar, {

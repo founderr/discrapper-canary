@@ -1,60 +1,60 @@
 "use strict";
-a.r(e), a.d(e, {
+a.r(t), a.d(t, {
   default: function() {
-    return c
+    return o
   }
 }), a("47120");
-var n = a("735250"),
-  s = a("470079"),
+var s = a("735250"),
+  n = a("470079"),
   i = a("120356"),
   l = a.n(i),
   r = a("481060"),
-  u = a("420019");
+  c = a("420019");
 
-function o(t) {
+function u(e) {
   let {
-    alt: e,
+    alt: t,
     ...a
-  } = t, [i, l] = s.useState(!0);
-  return (0, n.jsxs)(n.Fragment, {
-    children: [i && (0, n.jsx)(r.Spinner, {
+  } = e, [i, l] = n.useState(!0);
+  return (0, s.jsxs)(s.Fragment, {
+    children: [i && (0, s.jsx)(r.Spinner, {
       type: r.Spinner.Type.LOW_MOTION,
-      className: u.loader
-    }), (0, n.jsx)("img", {
+      className: c.loader
+    }), (0, s.jsx)("img", {
       ...a,
-      alt: e,
+      alt: t,
       onLoad: () => l(!1)
     })]
   })
 }
 
-function c(t) {
+function o(e) {
   let {
-    src: e,
+    src: t,
     backgroundSrc: a,
-    alt: s,
+    alt: n,
     aspectRatio: i,
     className: r,
-    imageChildClassName: c,
+    imageChildClassName: o,
     ...d
-  } = t;
-  return (0, n.jsxs)("div", {
-    className: l()(u.container, r),
-    children: [(0, n.jsx)("img", {
+  } = e;
+  return (0, s.jsxs)("div", {
+    className: l()(c.container, r),
+    children: [(0, s.jsx)("img", {
       src: a,
-      alt: s,
-      className: u.backgroundImage
-    }), (0, n.jsx)("div", {
-      className: u.backgroundImageFilter
-    }), (0, n.jsx)("div", {
+      alt: n,
+      className: c.backgroundImage
+    }), (0, s.jsx)("div", {
+      className: c.backgroundImageFilter
+    }), (0, s.jsx)("div", {
       style: {
         aspectRatio: i
       },
-      className: u.imageContainer,
-      children: (0, n.jsx)(o, {
-        src: e,
-        alt: s,
-        className: l()(u.image, c),
+      className: c.imageContainer,
+      children: (0, s.jsx)(u, {
+        src: t,
+        alt: n,
+        className: l()(c.image, o),
         ...d
       })
     })]

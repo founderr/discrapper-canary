@@ -1,26 +1,26 @@
 "use strict";
-R.r(e);
-var I, i, s, r, _ = R("442837"),
-  t = R("570140");
-let n = null;
-class u extends(r = _.default.Store) {
+n.r(t);
+var r, o, s, a, i = n("442837"),
+  l = n("570140");
+let d = null;
+class u extends(a = i.default.Store) {
   hasAction() {
-    return null != n
+    return null != d
   }
   getAction() {
-    return n
+    return d
   }
 }
 
-function A(E) {
-  n = E.requiredAction
+function E(e) {
+  d = e.requiredAction
 }
-s = "UserRequiredActionStore", (i = "displayName") in(I = u) ? Object.defineProperty(I, i, {
+s = "UserRequiredActionStore", (o = "displayName") in(r = u) ? Object.defineProperty(r, o, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : I[i] = s, e.default = new u(t.default, {
-  CONNECTION_OPEN: A,
-  USER_REQUIRED_ACTION_UPDATE: A
+}) : r[o] = s, t.default = new u(l.default, {
+  CONNECTION_OPEN: E,
+  USER_REQUIRED_ACTION_UPDATE: E
 })

@@ -20,8 +20,8 @@ var a, l = n("735250"),
   m = n("872810"),
   p = n("888651"),
   E = n("100527"),
-  g = n("258609"),
-  C = n("257115"),
+  C = n("258609"),
+  g = n("257115"),
   S = n("569545"),
   _ = n("102172"),
   T = n("525925"),
@@ -34,8 +34,8 @@ var a, l = n("735250"),
   y = n("496675"),
   R = n("979651"),
   L = n("242315"),
-  O = n("805009"),
-  j = n("981631"),
+  j = n("805009"),
+  O = n("981631"),
   P = n("927923"),
   D = n("70722"),
   b = n("689938"),
@@ -93,7 +93,7 @@ class H extends(a = s.PureComponent) {
       channel: e,
       isStreaming: t
     } = this.props;
-    return t && (0, _.canWatchStream)(e, R.default, M.default, y.default, g.default)[0]
+    return t && (0, _.canWatchStream)(e, R.default, M.default, y.default, C.default)[0]
   }
   render() {
     let {
@@ -187,7 +187,7 @@ class H extends(a = s.PureComponent) {
         channel: t,
         hidePreview: n
       } = this.props;
-      y.default.can(o.combine(j.Permissions.CONNECT, j.Permissions.VIEW_CHANNEL), t) && (h.default.selectVoiceChannel(t.id), null == n || n(e.id))
+      y.default.can(o.combine(O.Permissions.CONNECT, O.Permissions.VIEW_CHANNEL), t) && (h.default.selectVoiceChannel(t.id), null == n || n(e.id))
     }), F(this, "handleUserContextMenu", e => {
       let {
         channel: t,
@@ -261,7 +261,7 @@ class H extends(a = s.PureComponent) {
         priority: m,
         collapsed: p,
         isStreaming: E,
-        isGuest: g,
+        isGuest: C,
         nick: S,
         video: _,
         serverMute: T,
@@ -275,7 +275,7 @@ class H extends(a = s.PureComponent) {
         application: R
       } = this.props, {
         userPopoutOpen: L,
-        isHoveringHangStatus: j
+        isHoveringHangStatus: O
       } = this.state, D = P.GAME_CONSOLE_SESSIONS.has(null != n ? n : ""), F = {
         user: f,
         speaking: c,
@@ -283,7 +283,7 @@ class H extends(a = s.PureComponent) {
         localMute: o,
         localVideoDisabled: u,
         isStreaming: E,
-        isGuest: g,
+        isGuest: C,
         video: _,
         priority: m,
         deaf: h,
@@ -314,14 +314,14 @@ class H extends(a = s.PureComponent) {
       if (t) {
         var w;
         return (0, l.jsx)(d.Tooltip, {
-          text: null !== (w = (0, C.default)(n)) && void 0 !== w ? w : b.default.Messages.CONNECTED_ON_ANOTHER_CLIENT,
+          text: null !== (w = (0, g.default)(n)) && void 0 !== w ? w : b.default.Messages.CONNECTED_ON_ANOTHER_CLIENT,
           children: e => {
             let {
               onClick: t,
               onContextMenu: n,
               ...a
             } = e;
-            return (0, l.jsx)(O.default, {
+            return (0, l.jsx)(j.default, {
               ...F,
               ...a
             })
@@ -330,11 +330,11 @@ class H extends(a = s.PureComponent) {
       }
       return (0, l.jsx)(d.Popout, {
         position: "right",
-        renderPopout: M && j || !E ? this.renderHangStatusPopout : this.renderStreamPopout,
+        renderPopout: M && O || !E ? this.renderHangStatusPopout : this.renderStreamPopout,
         shouldShow: s && !L,
         onRequestClose: this.handleHidePreview,
         spacing: 0,
-        children: () => (0, l.jsx)(O.default, {
+        children: () => (0, l.jsx)(j.default, {
           ...F,
           onMouseDown: e.onMouseDown,
           onKeyDown: e.onKeyDown,

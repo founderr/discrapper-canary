@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("210887"),
   p = n("695346"),
   E = n("768119"),
-  g = n("944486"),
-  C = n("693580"),
+  C = n("944486"),
+  g = n("693580"),
   S = n("585483"),
   _ = n("251285"),
   T = n("406326"),
@@ -157,7 +157,7 @@ class R extends l.PureComponent {
         callback: n
       })
     }), N(this, "selectChannel", e => {
-      e !== g.default.getChannelId() && c.default.transitionToInviteChannelSync(e)
+      e !== C.default.getChannelId() && c.default.transitionToInviteChannelSync(e)
     }), N(this, "searchPrevious", () => {
       let {
         searchId: e,
@@ -222,7 +222,7 @@ class R extends l.PureComponent {
     }), N(this, "renderIndexing", () => {
       let e = E.default.getSearchType(this.props.searchId) === A.SearchTypes.GUILD ? v.default.Messages.SEARCH_GUILD_STILL_INDEXING : v.default.Messages.SEARCH_DM_STILL_INDEXING;
       return (0, a.jsxs)(y, {
-        children: [(0, a.jsx)(C.default, {}), (0, a.jsx)("div", {
+        children: [(0, a.jsx)(g.default, {}), (0, a.jsx)("div", {
           className: (x.emptyResultsText, x.stillIndexing),
           children: e
         })]

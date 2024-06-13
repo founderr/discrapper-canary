@@ -22,34 +22,34 @@ function E(e) {
   let {
     channelId: t,
     warningId: E,
-    senderId: g
-  } = e, C = l.useCallback(() => {
+    senderId: C
+  } = e, g = l.useCallback(() => {
     (0, u.dismissChannelSafetyWarnings)(t, [E])
   }, [t, E]), S = l.useCallback(e => () => {
     r.default.addRelationship({
-      userId: g,
+      userId: C,
       context: {
         location: h.LOCATION_CONTEXT_WEB
       },
       type: m.RelationshipTypes.BLOCKED
-    }), C(), (0, i.showToast)((0, i.createToast)(p.default.Messages.STRANGER_DANGER_BLOCK_CONFIRM, i.ToastType.SUCCESS)), (0, c.trackCtaEvent)({
+    }), g(), (0, i.showToast)((0, i.createToast)(p.default.Messages.STRANGER_DANGER_BLOCK_CONFIRM, i.ToastType.SUCCESS)), (0, c.trackCtaEvent)({
       channelId: t,
       warningId: E,
-      senderId: g,
+      senderId: C,
       warningType: d.SafetyWarningTypes.STRANGER_DANGER,
       cta: e
     })
-  }, [C, t, E, g]);
+  }, [g, t, E, C]);
   l.useEffect(() => {
     (0, c.trackViewedEvent)(m.AnalyticEvents.SAFETY_WARNING_VIEWED, {
       channelId: t,
       warningId: E,
-      senderId: g,
+      senderId: C,
       warningType: d.SafetyWarningTypes.STRANGER_DANGER
     }), o.default.increment({
       name: s.MetricEvents.SAFETY_WARNING_VIEW
     })
-  }, [t, E, g]);
+  }, [t, E, C]);
   let _ = () => {
       (0, i.openModalLazy)(async () => {
         let {
@@ -65,7 +65,7 @@ function E(e) {
             onClose: s,
             channelId: t,
             warningId: E,
-            senderId: g,
+            senderId: C,
             handleBlock: () => {
               T(c.CtaEventTypes.USER_MODAL_BLOCK_CONFIRM, c.CtaEventTypes.USER_MODAL_BLOCK_CANCEL, _)
             }
@@ -80,13 +80,13 @@ function E(e) {
         } = await n.e("68747").then(n.bind(n, "744373"));
         return n => (0, a.jsx)(i, {
           ...n,
-          userId: g,
+          userId: C,
           confirmBlock: S(e),
           onCancel: () => {
             null == s || s(), (0, c.trackCtaEvent)({
               channelId: t,
               warningId: E,
-              senderId: g,
+              senderId: C,
               warningType: d.SafetyWarningTypes.STRANGER_DANGER,
               cta: l
             })
@@ -97,11 +97,11 @@ function E(e) {
   return (0, a.jsx)(f.SafetyWarningBanner, {
     channelId: t,
     warningId: E,
-    senderId: g,
+    senderId: C,
     warningType: d.SafetyWarningTypes.STRANGER_DANGER,
     header: p.default.Messages.STRANGER_DANGER_BANNER_HEADER,
     description: p.default.Messages.STRANGER_DANGER_BANNER_DESCRIPTION,
-    onDismiss: C,
+    onDismiss: g,
     buttons: [{
       text: p.default.Messages.STRANGER_DANGER_BANNER_MORE_TIPS,
       color: i.Button.Colors.BRAND,
@@ -109,7 +109,7 @@ function E(e) {
         _(), (0, c.trackCtaEvent)({
           channelId: t,
           warningId: E,
-          senderId: g,
+          senderId: C,
           warningType: d.SafetyWarningTypes.STRANGER_DANGER,
           cta: c.CtaEventTypes.OPEN_MORE_TIPS
         })

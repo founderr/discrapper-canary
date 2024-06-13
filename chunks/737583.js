@@ -4,36 +4,36 @@ n.r(t), n.d(t, {
     return i
   },
   drawBadges: function() {
-    return s
+    return l
   }
 }), n("47120");
 var a = n("693824"),
-  l = n("169040");
+  r = n("169040");
 
-function s(e) {
+function l(e) {
   let t, {
     canvas: n,
-    badges: s,
+    badges: l,
     startPosition: i,
-    maxWidth: r
+    maxWidth: o
   } = e;
   for (let {
       iconPath: e,
-      text: o
+      text: s
     }
     of(n.setFont({
       size: 12,
       truncate: a.TextTruncationMethod.None
-    }), s)) {
-    let a = null != t ? t.w + t.x + l.spaceBetweenBadges : i,
-      s = null != t ? t.w + t.x + l.spaceBetweenBadges + l.spaceBetweenBadgeIconAndText : i + l.spaceBetweenBadgeIconAndText;
+    }), l)) {
+    let a = null != t ? t.w + t.x + r.spaceBetweenBadges : i,
+      l = null != t ? t.w + t.x + r.spaceBetweenBadges + r.spaceBetweenBadgeIconAndText : i + r.spaceBetweenBadgeIconAndText;
     n.drawPath(e, {
       x: a,
-      y: l.badgeIconPosition
-    }, !0, .6), t = n.drawText(o, {
-      x: s,
-      y: l.badgeTextPosition,
-      w: r
+      y: r.badgeIconPosition
+    }, !0, .6), t = n.drawText(s, {
+      x: l,
+      y: r.badgeTextPosition,
+      w: o
     }, !0)
   }
 }
@@ -43,19 +43,19 @@ function i(e) {
     canvas: t,
     avatarSrcs: n,
     position: {
-      x: l,
-      y: s
+      x: r,
+      y: l
     },
     avatarImageSize: i
   } = e;
   for (let e = 0; e < n.length; e++) e < n.length - 1 && t.clipRoundedRect({
-    x: l + (e + 1) * (i - 8) - 2,
-    y: s - 1,
+    x: r + (e + 1) * (i - 8) - 2,
+    y: l - 1,
     w: i + 2,
     h: i + 2
   }, i / 2, !0), t.drawRoundedImage(n[e], {
-    x: l + e * (i - 8),
-    y: s
+    x: r + e * (i - 8),
+    y: l
   }, {
     w: i,
     h: i

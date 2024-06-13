@@ -17,8 +17,8 @@ var a, l = n("735250"),
   m = n("115850"),
   p = n("481060"),
   E = n("570140"),
-  g = n("26151"),
-  C = n("493683"),
+  C = n("26151"),
+  g = n("493683"),
   S = n("758059"),
   _ = n("447543"),
   T = n("708690"),
@@ -31,8 +31,8 @@ var a, l = n("735250"),
   y = n("43267"),
   R = n("933557"),
   L = n("366980"),
-  O = n("703656"),
-  j = n("131704"),
+  j = n("703656"),
+  O = n("131704"),
   P = n("592125"),
   D = n("341165"),
   b = n("544610"),
@@ -96,7 +96,7 @@ let eo = e => {
     });
     return (0, l.jsx)(p.Clickable, {
       onClick: () => {
-        (0, O.transitionToGuild)($.ME, n.id), a()
+        (0, j.transitionToGuild)($.ME, n.id), a()
       },
       children: (0, l.jsxs)("div", {
         className: et.confirmChannelItemContainer,
@@ -587,23 +587,23 @@ class ed extends(a = s.PureComponent) {
       } = this.props;
       t.has(e) ? T.default.removeUser(e) : (T.default.addUser(e), n.length > 0 && T.default.clear(null == a ? void 0 : a.id)), this.forceFocus()
     }), el(this, "handleAddFriendNavigation", () => {
-      (0, O.transitionTo)($.Routes.FRIENDS), S.default.setSection($.FriendsSections.ADD_FRIEND), this.props.onClose()
+      (0, j.transitionTo)($.Routes.FRIENDS), S.default.setSection($.FriendsSections.ADD_FRIEND), this.props.onClose()
     }), el(this, "handleScroll", () => {
       let e = this.scrollerRef.current;
       null != e && this.setState({
         separator: !e.isScrolledToTop()
       })
     }), el(this, "createNewDM", e => {
-      C.default.openPrivateChannel(e, !1, !1, "New Group DM")
+      g.default.openPrivateChannel(e, !1, !1, "New Group DM")
     }), el(this, "pushToExistingDM", (e, t) => {
       let n = U.default.getChannelId() === e.id;
-      C.default.addRecipients(e.id, t, $.AnalyticsLocations.ADD_FRIENDS_TO_DM).then(a => {
+      g.default.addRecipients(e.id, t, $.AnalyticsLocations.ADD_FRIENDS_TO_DM).then(a => {
         if (n) {
           if (e.isDM() && a !== e.id) {
-            g.default.call(a, !1, !0);
+            C.default.call(a, !1, !0);
             return
           }
-          g.default.ring(a, t)
+          C.default.ring(a, t)
         }
       })
     }), el(this, "handleInviteUsers", () => {
@@ -700,7 +700,7 @@ function ef(e) {
 
 function eh(e) {
   let t = em(e);
-  return new Set(u()(P.default.getMutablePrivateChannels()).values().filter(e => (0, j.isMultiUserDM)(e.type)).filter(e => em(e.recipients) === t).map(e => e.id).value())
+  return new Set(u()(P.default.getMutablePrivateChannels()).values().filter(e => (0, O.isMultiUserDM)(e.type)).filter(e => em(e.recipients) === t).map(e => e.id).value())
 }
 
 function em(e) {

@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return x
+    return C
   }
 }), i("47120"), i("653041"), i("610138"), i("216116"), i("78328"), i("815648");
 var l = i("735250"),
@@ -15,26 +15,26 @@ var l = i("735250"),
   u = i("726542"),
   p = i("757698"),
   m = i("630641"),
-  f = i("626135"),
-  _ = i("463571"),
+  _ = i("626135"),
+  f = i("463571"),
   h = i("887706"),
-  I = i("214912"),
-  g = i("290247"),
+  g = i("214912"),
+  I = i("290247"),
   v = i("981631"),
   A = i("689938"),
   E = i("789539");
 let R = A.default.getAvailableLocales();
 
-function C(e) {
+function x(e) {
   var t, i, a;
   let {
     onClick: n,
     url: s,
     children: o
-  } = e, c = (0, d.default)(), m = u.default.getByUrl(s), f = (0, r.isThemeDark)(c) ? null == m ? void 0 : null === (t = m.icon) || void 0 === t ? void 0 : t.darkSVG : null == m ? void 0 : null === (i = m.icon) || void 0 === i ? void 0 : i.lightSVG;
-  return (0, l.jsx)(N, {
-    icon: void 0 === f ? p.default : void 0,
-    imageSrc: f,
+  } = e, c = (0, d.default)(), m = u.default.getByUrl(s), _ = (0, r.isThemeDark)(c) ? null == m ? void 0 : null === (t = m.icon) || void 0 === t ? void 0 : t.darkSVG : null == m ? void 0 : null === (i = m.icon) || void 0 === i ? void 0 : i.lightSVG;
+  return (0, l.jsx)(T, {
+    icon: void 0 === _ ? p.default : void 0,
+    imageSrc: _,
     onClick: n,
     url: s,
     type: null !== (a = null == m ? void 0 : m.name) && void 0 !== a ? a : "website",
@@ -42,7 +42,7 @@ function C(e) {
   })
 }
 
-function N(e) {
+function T(e) {
   let {
     icon: t,
     imageSrc: i,
@@ -62,7 +62,7 @@ function N(e) {
     src: i,
     alt: ""
   }));
-  let f = (0, l.jsxs)(l.Fragment, {
+  let _ = (0, l.jsxs)(l.Fragment, {
     children: [m, (0, l.jsx)(o.Text, {
       className: E.listText,
       variant: "text-md/normal",
@@ -76,11 +76,11 @@ function N(e) {
     onClick: () => (u(n, r), !1),
     trusted: !p,
     useDefaultUnderlineStyles: !1,
-    children: f
+    children: _
   })
 }
 
-function x(e) {
+function C(e) {
   var t, i, n;
   let {
     application: r,
@@ -88,16 +88,16 @@ function x(e) {
     className: d,
     onViewCategory: u,
     onClickGuildWidget: h
-  } = e, [x, T] = a.useState(null), P = [], S = null !== (i = null == r ? void 0 : null === (t = r.directory_entry) || void 0 === t ? void 0 : t.external_urls) && void 0 !== i ? i : [];
+  } = e, [C, N] = a.useState(null), P = [], S = null !== (i = null == r ? void 0 : null === (t = r.directory_entry) || void 0 === t ? void 0 : t.external_urls) && void 0 !== i ? i : [];
   a.useEffect(() => {
     var e;
     if ((null === (e = r.directory_entry) || void 0 === e ? void 0 : e.supported_locales) !== void 0) {
       let e = new Set(r.directory_entry.supported_locales);
-      T(R.filter(t => e.has(t.value)).map(e => e.localizedName))
+      N(R.filter(t => e.has(t.value)).map(e => e.localizedName))
     }
   }, [r.directory_entry]);
   let j = (e, t) => {
-    f.default.track(v.AnalyticEvents.APP_DIRECTORY_APPLICATION_EXTERNAL_LINK_CLICKED, {
+    _.default.track(v.AnalyticEvents.APP_DIRECTORY_APPLICATION_EXTERNAL_LINK_CLICKED, {
       application_id: r.id,
       guild_id: c,
       type: t,
@@ -113,7 +113,7 @@ function x(e) {
       className: E.categories,
       children: (null !== (n = r.categories) && void 0 !== n ? n : []).map(e => {
         let t = new URLSearchParams;
-        return t.set("category_id", e.id.toString()), (0, l.jsx)(_.default, {
+        return t.set("category_id", e.id.toString()), (0, l.jsx)(f.default, {
           href: "".concat(v.Routes.APPLICATION_DIRECTORY_SEARCH, "?").concat(t),
           children: (0, l.jsx)(o.Clickable, {
             className: E.category,
@@ -127,30 +127,30 @@ function x(e) {
         }, e.id)
       })
     })]
-  })), null != x && x.length > 0 && P.push((0, l.jsxs)(l.Fragment, {
+  })), null != C && C.length > 0 && P.push((0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(o.Heading, {
       className: E.sectionHeader,
       variant: "eyebrow",
       children: A.default.Messages.APP_DIRECTORY_PROFILE_LANGUAGES_HEADING
-    }), (0, l.jsx)(g.default, {
-      supportedLanguages: x
+    }), (0, l.jsx)(I.default, {
+      supportedLanguages: C
     })]
   })), (null != r.terms_of_service_url || null != r.privacy_policy_url || S.length > 0) && P.push((0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(o.Heading, {
       className: E.sectionHeader,
       variant: "eyebrow",
       children: A.default.Messages.APP_DIRECTORY_PROFILE_LINKS_HEADING
-    }), S.map((e, t) => (0, l.jsx)(C, {
+    }), S.map((e, t) => (0, l.jsx)(x, {
       url: e.url,
       onClick: j,
       children: e.name
-    }, t)), null != r.terms_of_service_url ? (0, l.jsx)(N, {
+    }, t)), null != r.terms_of_service_url ? (0, l.jsx)(T, {
       icon: p.default,
       onClick: j,
       url: r.terms_of_service_url,
       type: "tos",
       children: A.default.Messages.APP_DIRECTORY_PROFILE_TERMS_LINK
-    }) : null, null != r.privacy_policy_url ? (0, l.jsx)(N, {
+    }) : null, null != r.privacy_policy_url ? (0, l.jsx)(T, {
       icon: m.default,
       onClick: j,
       url: r.privacy_policy_url,
@@ -162,7 +162,7 @@ function x(e) {
       className: E.sectionHeader,
       variant: "eyebrow",
       children: A.default.Messages.APP_DIRECTORY_PROFILE_SERVER_HEADING
-    }), (0, l.jsx)(I.default, {
+    }), (0, l.jsx)(g.default, {
       guild: r.guild,
       onClick: h
     })]

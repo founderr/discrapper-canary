@@ -14,8 +14,8 @@ var a = n("735250"),
   m = n("868643"),
   p = n("223606"),
   E = n("188597"),
-  g = n("41776"),
-  C = n("641051"),
+  C = n("41776"),
+  g = n("641051"),
   S = n("329461"),
   _ = n("222677"),
   T = n("995774"),
@@ -28,8 +28,8 @@ var a = n("735250"),
   y = n("271383"),
   R = n("430824"),
   L = n("607744"),
-  O = n("496675"),
-  j = n("448239"),
+  j = n("496675"),
+  O = n("448239"),
   P = n("754424"),
   D = n("885442"),
   b = n("757698"),
@@ -105,7 +105,7 @@ function eo(e) {
     dangerous: m,
     separator: p,
     sparkle: E,
-    ...g
+    ...C
   } = e;
   return (0, a.jsx)(c.Tooltip, {
     text: null != l ? l : t,
@@ -129,7 +129,7 @@ function eo(e) {
           "aria-label": null != n ? n : t,
           disabled: h,
           dangerous: m,
-          ...g,
+          ...C,
           children: [(0, a.jsx)(i, {
             className: es.icon,
             ...r
@@ -178,11 +178,11 @@ function eu(e) {
       author: o
     } = n, d = (0, u.useStateFromStores)([R.default], () => R.default.getGuild(t.guild_id), [t.guild_id]), c = (0, u.useStateFromStores)([N.default], () => N.default.getId()), p = (0, v.useIsActiveChannelOrUnarchivableThread)(t), E = (0, v.useIsNonModInLockedThread)(t), _ = x.RenderReactions.useSetting(), T = x.DeveloperMode.useSetting(), I = (0, u.useStateFromStores)([L.default], () => null == t.guild_id || L.default.canChatInGuild(t.guild_id), [t]), {
       canManageMessages: M,
-      canAddNewReactions: j
-    } = (0, u.useStateFromStoresObject)([O.default], () => ({
-      canAddNewReactions: I && O.default.can(ea.Permissions.ADD_REACTIONS, t),
-      canManageMessages: O.default.can(ea.Permissions.MANAGE_MESSAGES, t)
-    }), [t, I]), P = (0, A.useCanReplyToMessage)(t, n), D = (0, v.useCanStartPublicThread)(t, n), b = (0, v.useCanViewThreadForMessage)(n), U = (0, u.useStateFromStores)([g.default], () => null != t.guild_id && g.default.isLurking(t.guild_id), [t]), F = (0, u.useStateFromStores)([y.default], () => null != t.guild_id && y.default.isCurrentUserGuest(t.guild_id), [t]), w = o.id === c, k = (M || n.canDeleteOwnMessage(c)) && p && !ea.MessageTypesSets.UNDELETABLE.has(n.type);
+      canAddNewReactions: O
+    } = (0, u.useStateFromStoresObject)([j.default], () => ({
+      canAddNewReactions: I && j.default.can(ea.Permissions.ADD_REACTIONS, t),
+      canManageMessages: j.default.can(ea.Permissions.MANAGE_MESSAGES, t)
+    }), [t, I]), P = (0, A.useCanReplyToMessage)(t, n), D = (0, v.useCanStartPublicThread)(t, n), b = (0, v.useCanViewThreadForMessage)(n), U = (0, u.useStateFromStores)([C.default], () => null != t.guild_id && C.default.isLurking(t.guild_id), [t]), F = (0, u.useStateFromStores)([y.default], () => null != t.guild_id && y.default.isCurrentUserGuest(t.guild_id), [t]), w = o.id === c, k = (M || n.canDeleteOwnMessage(c)) && p && !ea.MessageTypesSets.UNDELETABLE.has(n.type);
     n.type === ea.MessageTypes.AUTO_MODERATION_ACTION && (k = k && M);
     let H = (0, X.canReportMessage)(n),
       G = (0, J.default)(n, t, M),
@@ -193,14 +193,14 @@ function eu(e) {
         channel: t,
         canChat: I,
         renderReactions: _,
-        canAddNewReactions: j,
+        canAddNewReactions: O,
         isLurking: U,
         isGuest: F,
         isActiveChannelOrUnarchivableThread: p
       }),
       W = t.type === ea.ChannelTypes.GUILD_ANNOUNCEMENT && null != d && d.hasFeature(ea.GuildFeatures.NEWS) && (w || M) && n.type === ea.MessageTypes.DEFAULT && !n.isPoll(),
       Y = t.getGuildId(),
-      z = null != Y && (n.type === ea.MessageTypes.USER_JOIN || n.type === ea.MessageTypes.GUILD_INVITE_REMINDER) && O.default.canWithPartialContext(ea.Permissions.MANAGE_GUILD, {
+      z = null != Y && (n.type === ea.MessageTypes.USER_JOIN || n.type === ea.MessageTypes.GUILD_INVITE_REMINDER) && j.default.canWithPartialContext(ea.Permissions.MANAGE_GUILD, {
         guildId: Y
       }),
       {
@@ -211,7 +211,7 @@ function eu(e) {
       $ = (0, m.useCanForwardMessage)(n),
       {
         showReminders: ee
-      } = C.default.useExperiment({
+      } = g.default.useExperiment({
         location: "9bfedc_1"
       }, {
         autoTrackExposure: !1
@@ -252,11 +252,11 @@ function eu(e) {
     }), ef({
       moreUtilities: !es
     })
-  }, [es, ef, n]), eg = l.useCallback(() => {
+  }, [es, ef, n]), eC = l.useCallback(() => {
     ef({
       emojiPicker: !ei
     })
-  }, [ei, ef]), eC = (0, v.useIsActiveChannelOrUnarchivableThread)(t), eS = n.hasFlag(ea.MessageFlags.CROSSPOSTED);
+  }, [ei, ef]), eg = (0, v.useIsActiveChannelOrUnarchivableThread)(t), eS = n.hasFlag(ea.MessageFlags.CROSSPOSTED);
   return (0, a.jsxs)(a.Fragment, {
     children: [et ? (0, a.jsxs)(a.Fragment, {
       children: [s && eh ? eo({
@@ -285,9 +285,9 @@ function eu(e) {
         channel: t,
         message: n,
         label: ed ? el.default.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : el.default.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
-        icon: ed ? j.default : w.default,
+        icon: ed ? O.default : w.default,
         onClick: ed ? $.markMessageRemindersAsComplete : $.markMessageAsReminder
-      }) : null, eC ? eo({
+      }) : null, eg ? eo({
         key: "mark-unread",
         channel: t,
         message: n,
@@ -319,7 +319,7 @@ function eu(e) {
     }) : null, _ && !em ? (0, a.jsx)(ee.default, {
       channel: t,
       message: n,
-      togglePopout: eg,
+      togglePopout: eC,
       renderEmojiPicker: ec,
       shouldShow: ei,
       isFocused: ep

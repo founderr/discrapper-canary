@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("131704"),
   p = n("984933"),
   E = n("496675"),
-  g = n("594174"),
-  C = n("51144"),
+  C = n("594174"),
+  g = n("51144"),
   S = n("7782"),
   _ = n("967128"),
   T = n("320781"),
@@ -32,8 +32,8 @@ var a = n("735250"),
   y = n("128557"),
   R = n("981631"),
   L = n("176505"),
-  O = n("689938"),
-  j = n("611273");
+  j = n("689938"),
+  O = n("611273");
 
 function P(e) {
   let {
@@ -65,7 +65,7 @@ function D(e) {
     showingBanner: u
   } = e, d = (0, o.default)(n), {
     type: m
-  } = n, p = (0, s.useStateFromStores)([g.default], () => n.isPrivate() ? g.default.getUser(n.getRecipientId()) : null), T = C.default.useUserTag(p), {
+  } = n, p = (0, s.useStateFromStores)([C.default], () => n.isPrivate() ? C.default.getUser(n.getRecipientId()) : null), T = g.default.useUserTag(p), {
     canManageRoles: v,
     canReadMessageHistory: N
   } = (0, s.useStateFromStoresObject)([E.default], () => ({
@@ -86,16 +86,16 @@ function D(e) {
     channel: n
   }) : (0, a.jsx)(A.default, {
     channel: n,
-    children: O.default.Messages.SYSTEM_DM_EMPTY_MESSAGE
+    children: j.default.Messages.SYSTEM_DM_EMPTY_MESSAGE
   });
   if (m === R.ChannelTypes.DM) return (0, a.jsxs)(A.default, {
     channel: n,
     user: p,
     children: [null != p && (0, a.jsx)(i.Heading, {
       variant: "heading-xl/medium",
-      className: j.marginBottom20,
+      className: O.marginBottom20,
       children: T
-    }), O.default.Messages.BEGINNING_DM.format({
+    }), j.default.Messages.BEGINNING_DM.format({
       username: d
     }), (0, a.jsx)(S.default, {
       userId: n.getRecipientId(),
@@ -106,17 +106,17 @@ function D(e) {
   if (n.isMultiUserDM()) return n.isManaged() ? (0, a.jsxs)(_.default, {
     channelId: n.id,
     children: [(0, a.jsx)(_.EmptyMessageHeader, {
-      children: O.default.Messages.BEGINNING_CHANNEL_WELCOME.format({
+      children: j.default.Messages.BEGINNING_CHANNEL_WELCOME.format({
         channelName: d
       })
     }), (0, a.jsx)(_.EmptyMessageBody, {
-      children: O.default.Messages.BEGINNING_GROUP_DM_MANAGED
+      children: j.default.Messages.BEGINNING_GROUP_DM_MANAGED
     })]
   }) : n.hasFlag(L.ChannelFlags.IS_JOIN_REQUEST_INTERVIEW_CHANNEL) ? (0, a.jsx)(I.default, {
     channel: n
   }) : (0, a.jsx)(A.default, {
     channel: n,
-    children: O.default.Messages.BEGINNING_GROUP_DM.format({
+    children: j.default.Messages.BEGINNING_GROUP_DM.format({
       name: d
     })
   });
@@ -126,7 +126,7 @@ function D(e) {
   }) : (0, a.jsx)(_.default, {
     channelId: n.id,
     children: (0, a.jsx)(_.EmptyMessageBody, {
-      children: O.default.Messages.BEGINNING_CHANNEL_NO_HISTORY.format({
+      children: j.default.Messages.BEGINNING_CHANNEL_NO_HISTORY.format({
         channelName: d
       })
     })

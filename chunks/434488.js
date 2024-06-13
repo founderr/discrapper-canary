@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ActivityEntryPointTile: function() {
-    return O
+    return j
   }
 });
 var a = n("735250"),
@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("100527"),
   p = n("906732"),
   E = n("605236"),
-  g = n("448239"),
-  C = n("465670"),
+  C = n("448239"),
+  g = n("465670"),
   S = n("696202"),
   _ = n("988951"),
   T = n("944581"),
@@ -33,7 +33,7 @@ var a = n("735250"),
   R = n("906964"),
   L = n("334732");
 
-function O(e) {
+function j(e) {
   let {
     channel: t,
     guild: n,
@@ -42,7 +42,7 @@ function O(e) {
     handleClose: i,
     userParticipantCount: r
   } = e;
-  return l < 250 ? (0, a.jsx)(j, {
+  return l < 250 ? (0, a.jsx)(O, {
     channel: t,
     guild: n,
     width: l,
@@ -64,7 +64,7 @@ function O(e) {
   })
 }
 
-function j(e) {
+function O(e) {
   let {
     channel: t,
     inPopout: n,
@@ -278,7 +278,7 @@ function b(e) {
             n_participants: d
           }), (0, E.markDismissibleContentAsDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT)
         },
-        children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(u.Text, {
+        children: [(0, a.jsx)(C.default, {}), (0, a.jsx)(u.Text, {
           variant: "text-sm/medium",
           children: y.default.Messages.DONT_SHOW_AGAIN
         })]
@@ -291,7 +291,7 @@ function b(e) {
             n_participants: d
           }), s()
         },
-        children: (0, a.jsx)(C.default, {
+        children: (0, a.jsx)(g.default, {
           className: R.closeButton
         })
       })]

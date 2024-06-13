@@ -10,8 +10,8 @@ var a, l, s, i, r = n("442837"),
   m = n("813900");
 let p = {},
   E = {},
-  g = {},
-  C = !0,
+  C = {},
+  g = !0,
   S = null;
 
 function _(e) {
@@ -25,7 +25,7 @@ function _(e) {
 }
 class T extends(a = r.default.Store) {
   get visibleOverlayCanvas() {
-    return C
+    return g
   }
   getDrawables(e) {
     return null != p[e] ? p[e] : []
@@ -34,7 +34,7 @@ class T extends(a = r.default.Store) {
     return E[e]
   }
   getEmojiImage(e) {
-    return g[e]
+    return C[e]
   }
   getDrawMode() {
     return S
@@ -90,9 +90,9 @@ let I = new T(o.default, {
       } : p[s].push(r)
     }
     let o = null !== (n = null !== (t = l.emojiId) && void 0 !== t ? t : l.emojiName) && void 0 !== n ? n : "";
-    if (null == g[o]) {
+    if (null == C[o]) {
       let e = null != l.emojiName ? u.default.convertNameToSurrogate(l.emojiName) : null;
-      g[o] = new Image, g[o].src = (0, c.getEmojiUrl)({
+      C[o] = new Image, C[o].src = (0, c.getEmojiUrl)({
         id: l.emojiId,
         name: null !== (a = null != e ? e : l.emojiName) && void 0 !== a ? a : "",
         animated: !1
@@ -118,7 +118,7 @@ let I = new T(o.default, {
   },
   TOGGLE_OVERLAY_CANVAS: function(e) {
     let {} = e;
-    C = !C
+    g = !g
   }
 });
 t.default = I

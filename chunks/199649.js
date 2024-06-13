@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return C
   }
 });
 var a = n("735250");
@@ -20,15 +20,15 @@ var l = n("442837"),
   p = n("596401"),
   E = n("689938");
 
-function g(e) {
+function C(e) {
   let {
     channel: t,
-    children: g
-  } = e, C = (0, l.useStateFromStores)([d.default], () => d.default.isBlocked(t.getRecipientId()));
+    children: C
+  } = e, g = (0, l.useStateFromStores)([d.default], () => d.default.isBlocked(t.getRecipientId()));
   (0, r.default)(t.id);
   let S = (0, o.default)(t.id),
     _ = t.isSystemDM(),
-    T = C && !_ && !t.isMultiUserDM(),
+    T = g && !_ && !t.isMultiUserDM(),
     I = {};
   if (_) {
     let e = S ? (0, a.jsxs)(a.Fragment, {
@@ -53,6 +53,6 @@ function g(e) {
   });
   return (0, a.jsx)(h.default, {
     ...I,
-    children: g
+    children: C
   })
 }

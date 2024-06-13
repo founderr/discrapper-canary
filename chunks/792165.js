@@ -1,79 +1,79 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   CustomCallSoundUpsell: function() {
-    return v
+    return L
   }
 });
-var i = n("735250");
-n("470079");
-var a = n("442837"),
-  s = n("693789"),
-  r = n("260034"),
-  l = n("993365"),
-  u = n("481060"),
-  o = n("230711"),
-  d = n("197115"),
-  c = n("504983"),
-  f = n("594174"),
-  E = n("465670"),
-  _ = n("466111"),
-  T = n("74538"),
-  I = n("981631"),
-  S = n("921944"),
-  C = n("474936"),
-  m = n("526761"),
-  N = n("689938"),
-  R = n("697382");
+var n = s("735250");
+s("470079");
+var i = s("442837"),
+  l = s("693789"),
+  a = s("260034"),
+  r = s("993365"),
+  u = s("481060"),
+  o = s("230711"),
+  d = s("197115"),
+  c = s("504983"),
+  f = s("594174"),
+  _ = s("465670"),
+  I = s("466111"),
+  C = s("74538"),
+  m = s("981631"),
+  E = s("921944"),
+  S = s("474936"),
+  T = s("526761"),
+  N = s("689938"),
+  g = s("697382");
 
-function v(e) {
+function L(e) {
   var t;
   let {
-    onClose: n,
-    markAsDismissed: v
-  } = e, g = (0, a.useStateFromStores)([f.default], () => f.default.getCurrentUser());
-  let p = (t = null == g ? void 0 : g.premiumType) === C.PremiumTypes.TIER_2 ? N.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_TIER_2 : null == t ? N.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB : N.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_TIER_2,
-    h = T.default.canUseCustomCallSounds(g);
-  return (0, i.jsxs)(c.default, {
+    onClose: s,
+    markAsDismissed: L
+  } = e, R = (0, i.useStateFromStores)([f.default], () => f.default.getCurrentUser());
+  let h = (t = null == R ? void 0 : R.premiumType) === S.PremiumTypes.TIER_2 ? N.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_TIER_2 : null == t ? N.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB : N.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_TIER_2,
+    v = C.default.canUseCustomCallSounds(R);
+  return (0, n.jsxs)(c.default, {
     isShown: !0,
     type: c.FeatureBorderTypes.PREMIUM,
-    className: R.upsellOuter,
-    backgroundClassName: R.upsellInner,
-    children: [null != v ? (0, i.jsx)(u.Clickable, {
-      className: R.close,
-      onClick: () => null == v ? void 0 : v(S.ContentDismissActionType.DISMISS),
+    className: g.upsellOuter,
+    backgroundClassName: g.upsellInner,
+    children: [null != L ? (0, n.jsx)(u.Clickable, {
+      className: g.close,
+      onClick: () => null == L ? void 0 : L(E.ContentDismissActionType.DISMISS),
       "aria-label": N.default.Messages.CLOSE,
-      children: (0, i.jsx)(E.default, {
-        className: R.closeIcon,
+      children: (0, n.jsx)(_.default, {
+        className: g.closeIcon,
         width: 16,
         height: 16
       })
-    }) : null, (0, i.jsxs)("div", {
-      className: R.upsellTitle,
-      children: [(0, i.jsx)(_.default, {
-        className: R.nitroWheel,
+    }) : null, (0, n.jsxs)("div", {
+      className: g.upsellTitle,
+      children: [(0, n.jsx)(I.default, {
+        className: g.nitroWheel,
         width: 18,
         height: 18
-      }), (0, i.jsx)(r.Heading, {
+      }), (0, n.jsx)(a.Heading, {
         variant: "heading-sm/bold",
         children: N.default.Messages.CALL_SOUNDS_UPSELL_TITLE_NON_SUB
       })]
-    }), (0, i.jsx)(l.Text, {
+    }), (0, n.jsx)(r.Text, {
       variant: "text-sm/normal",
-      children: p
-    }), h ? (0, i.jsx)(s.Button, {
+      children: h
+    }), v ? (0, n.jsx)(l.Button, {
       onClick: function() {
-        o.default.open(I.UserSettingsSections.VOICE, m.SOUNDBOARD_SUBSECTION), null == n || n(), null == v || v(S.ContentDismissActionType.PRIMARY)
+        o.default.open(m.UserSettingsSections.VOICE, T.SOUNDBOARD_SUBSECTION), null == s || s(), null == L || L(E.ContentDismissActionType.PRIMARY)
       },
       children: N.default.Messages.CHECK_IT_OUT
-    }) : (0, i.jsx)(d.default, {
+    }) : (0, n.jsx)(d.default, {
       buttonText: N.default.Messages.PREMIUM_UPSELL_GET_NITRO,
-      subscriptionTier: C.PremiumSubscriptionSKUs.TIER_2,
+      subscriptionTier: S.PremiumSubscriptionSKUs.TIER_2,
       premiumModalAnalyticsLocation: {
-        section: I.AnalyticsSections.SOUNDBOARD_SOUND_PICKER,
-        object: I.AnalyticsObjects.BUTTON_CTA
+        section: m.AnalyticsSections.SOUNDBOARD_SOUND_PICKER,
+        object: m.AnalyticsObjects.BUTTON_CTA
       },
-      color: s.Button.Colors.GREEN,
-      onSubscribeModalClose: () => null == v ? void 0 : v(S.ContentDismissActionType.PRIMARY)
+      color: l.Button.Colors.GREEN,
+      onSubscribeModalClose: () => null == L ? void 0 : L(E.ContentDismissActionType.PRIMARY)
     })]
   })
 }

@@ -18,8 +18,8 @@ var a = n("735250"),
   m = n("768581"),
   p = n("63063"),
   E = n("591759"),
-  g = n("556084"),
-  C = n("981631"),
+  C = n("556084"),
+  g = n("981631"),
   S = n("689938"),
   _ = n("101135"),
   T = n("367424");
@@ -36,11 +36,11 @@ function A(e) {
     fetched: x,
     applicationsShelf: N,
     installedIntegrations: M
-  } = (0, g.usePrivateChannelIntegrationState)({
+  } = (0, C.usePrivateChannelIntegrationState)({
     channelId: t
   });
   l.useEffect(() => {
-    (0, o.trackWithMetadata)(C.AnalyticEvents.GDM_STARTER_APPS_VIEWED)
+    (0, o.trackWithMetadata)(g.AnalyticEvents.GDM_STARTER_APPS_VIEWED)
   }, []);
   let y = e => {
       var t;
@@ -61,7 +61,7 @@ function A(e) {
         host: a,
         path: l
       } = s.parse(n, !0);
-      return (!!E.default.isDiscordHostname(a) || window.location.host === a) && l === C.Routes.OAUTH2_AUTHORIZED && (null != t && A(), !0)
+      return (!!E.default.isDiscordHostname(a) || window.location.host === a) && l === g.Routes.OAUTH2_AUTHORIZED && (null != t && A(), !0)
     }, [A]);
   return (0, a.jsxs)(r.ModalRoot, {
     transitionState: n,
@@ -84,7 +84,7 @@ function A(e) {
             variant: "text-md/medium",
             className: _.modalHeader,
             children: S.default.Messages.PRIVATE_CHANNEL_INTEGRATION_MORE_APPS_INFO_LINKED.format({
-              helpCenterLink: p.default.getArticleURL(C.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
+              helpCenterLink: p.default.getArticleURL(g.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
             })
           })]
         }), (0, a.jsx)("div", {
@@ -149,7 +149,7 @@ function A(e) {
                   userId: o.id,
                   sourceAnalyticsLocations: v,
                   analyticsLocation: {
-                    section: C.AnalyticsSections.ADD_PRIVATE_CHANNEL_INTEGRATION_MODAL
+                    section: g.AnalyticsSections.ADD_PRIVATE_CHANNEL_INTEGRATION_MODAL
                   }
                 })
               },
