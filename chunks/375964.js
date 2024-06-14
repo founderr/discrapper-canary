@@ -5955,6 +5955,7 @@ e.exports = Object.freeze({
   KEYBIND_DESCRIPTION_MODAL_TOGGLE_HELP: "Get help",
   KEYBIND_DESCRIPTION_MODAL_EASTER_EGG: "Raging Demon",
   KEYBIND_DESCRIPTION_MODAL_SEARCH: "Search",
+  KEYBIND_DESCRIPTION_MODAL_FORWARD_MESSAGE: "Forward Message",
   INVITE_STREAM_HEADER: "Invite to Stream",
   INVITE_SHARE_LINK_TO_STREAM: "Share this link with others to grant access to this server and watch the stream",
   INVITE_STREAM_FOOTER_LINK_HEADER: "Or, send a stream invite link to a friend",

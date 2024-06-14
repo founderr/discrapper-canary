@@ -2,99 +2,113 @@
 n.r(t);
 var a = n("470079"),
   l = n("904245"),
-  s = n("41776"),
-  i = n("280845"),
-  r = n("665906"),
-  o = n("488131"),
-  u = n("695346"),
-  d = n("314897"),
-  c = n("592125"),
-  f = n("323873"),
-  h = n("271383"),
-  m = n("607744"),
-  p = n("375954"),
-  E = n("496675"),
-  C = n("572004"),
-  g = n("585483"),
-  S = n("358085"),
-  _ = n("709054"),
-  T = n("418476"),
-  I = n("901461"),
-  A = n("432376"),
-  v = n("996861"),
-  x = n("981631");
+  s = n("346610"),
+  i = n("868643"),
+  r = n("912332"),
+  o = n("41776"),
+  u = n("280845"),
+  d = n("665906"),
+  c = n("488131"),
+  f = n("695346"),
+  h = n("314897"),
+  m = n("592125"),
+  p = n("323873"),
+  E = n("271383"),
+  C = n("607744"),
+  g = n("375954"),
+  S = n("496675"),
+  _ = n("572004"),
+  T = n("585483"),
+  I = n("358085"),
+  A = n("709054"),
+  v = n("418476"),
+  x = n("901461"),
+  N = n("432376"),
+  M = n("996861"),
+  y = n("981631");
 
-function N(e) {
-  return E.default.can(x.Permissions.MANAGE_MESSAGES, e)
+function R(e) {
+  return S.default.can(y.Permissions.MANAGE_MESSAGES, e)
 }
 t.default = function(e, t, n) {
-  let M = a.useRef(n);
-  return M.current = n, a.useCallback(n => {
-    var a, y, R, L, j;
-    if (!M.current || n.target !== n.currentTarget) return;
-    let O = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
-      P = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
-      D = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
-      b = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
-      U = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
-      F = p.default.getMessage(t, e),
-      w = c.default.getChannel(t);
-    if (null == F || null == w) return;
-    let k = d.default.getId();
+  let L = a.useRef(n);
+  return L.current = n, a.useCallback(n => {
+    var a, j, O, P, D;
+    if (!L.current || n.target !== n.currentTarget) return;
+    let b = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
+      U = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
+      F = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
+      w = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
+      k = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
+      H = g.default.getMessage(t, e),
+      G = m.default.getChannel(t);
+    if (null == H || null == G) return;
+    let B = h.default.getId();
     switch (n.key.toLowerCase()) {
       case "backspace":
-        O && (N(w) || F.canDeleteOwnMessage(k)) && (n.preventDefault(), (0, v.deleteMessage)(w, F, n));
+        b && (R(G) || H.canDeleteOwnMessage(B)) && (n.preventDefault(), (0, M.deleteMessage)(G, H, n));
         break;
       case "c":
-        ((0, S.isMac)() ? b : D) && C.SUPPORTS_COPY && (n.preventDefault(), (0, C.copy)(F.content));
+        ((0, I.isMac)() ? w : F) && _.SUPPORTS_COPY && (n.preventDefault(), (0, _.copy)(H.content));
         break;
       case "e":
-        if (O) {
+        if (b) {
           ;
-          if (a = k, y = w, R = F, !y.isSystemDM() && (0, T.default)(R, a)) n.preventDefault(), (0, v.editMessage)(w, F)
+          if (a = B, j = G, O = H, !j.isSystemDM() && (0, v.default)(O, a)) n.preventDefault(), (0, M.editMessage)(G, H)
         }
         break;
       case "p":
-        if (O || U) {
+        if (b || k) {
           ;
-          if (L = w, j = F, !L.isSystemDM() && !(0, I.default)(j) && (N(L) || L.isPrivate())) n.preventDefault(), (0, v.pinMessage)(w, F, n)
+          if (P = G, D = H, !P.isSystemDM() && !(0, x.default)(D) && (R(P) || P.isPrivate())) n.preventDefault(), (0, M.pinMessage)(G, H, n)
         }
         break;
       case "+":
-        (O || U) && function(e) {
-          let t = null == e.guild_id || m.default.canChatInGuild(e.guild_id),
-            n = u.RenderReactions.getSetting(),
+        (b || k) && function(e) {
+          let t = null == e.guild_id || C.default.canChatInGuild(e.guild_id),
+            n = f.RenderReactions.getSetting(),
             {
               disableReactionCreates: a
-            } = (0, A.default)({
+            } = (0, N.default)({
               channel: e,
               canChat: t,
               renderReactions: n,
-              canAddNewReactions: t && E.default.can(x.Permissions.ADD_REACTIONS, e),
-              isLurking: null != e.guild_id && s.default.isLurking(e.guild_id),
-              isGuest: null != e.guild_id && h.default.isCurrentUserGuest(e.guild_id),
-              isActiveChannelOrUnarchivableThread: (0, r.getIsActiveChannelOrUnarchivableThread)(e)
+              canAddNewReactions: t && S.default.can(y.Permissions.ADD_REACTIONS, e),
+              isLurking: null != e.guild_id && o.default.isLurking(e.guild_id),
+              isGuest: null != e.guild_id && E.default.isCurrentUserGuest(e.guild_id),
+              isActiveChannelOrUnarchivableThread: (0, d.getIsActiveChannelOrUnarchivableThread)(e)
             });
           return !a && n
-        }(w) && (n.preventDefault(), g.ComponentDispatch.dispatchKeyed(x.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, F.id, {
+        }(G) && (n.preventDefault(), T.ComponentDispatch.dispatchKeyed(y.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, H.id, {
           emojiPicker: !0
         }));
         break;
       case "r":
-        (O || U) && (0, i.canReplyToMessage)(w, F) && (n.preventDefault(), (0, v.replyToMessage)(w, F, n));
+        (b || k) && (0, u.canReplyToMessage)(G, H) && (n.preventDefault(), (0, M.replyToMessage)(G, H, n));
+        break;
+      case "f":
+        (b || k) && s.MessageForwardingExperiment.getCurrentConfig({
+          location: "keyboard-shortcut"
+        }, {
+          autoTrackExposure: !1
+        }).canForwardMessages && (0, i.canForwardMessage)(H) && (n.preventDefault(), (0, r.openForwardModal)({
+          messageId: H.id,
+          channelId: G.id,
+          source: "keyboard-shortcut"
+        }));
         break;
       case "t":
-        if (O && (0, r.computeCanStartPublicThread)(w, F)) n.preventDefault(), (0, o.openThreadSidebarForCreating)(w, F, "Message Shortcut");
-        else if (F.hasFlag(x.MessageFlags.HAS_THREAD)) {
-          let e = c.default.getChannel(_.default.castMessageIdAsChannelId(F.id));
-          null != e && (O || U) && (n.preventDefault(), (0, o.openThreadSidebarForViewing)(e, U))
+        if (b && (0, d.computeCanStartPublicThread)(G, H)) n.preventDefault(), (0, c.openThreadSidebarForCreating)(G, H, "Message Shortcut");
+        else if (H.hasFlag(y.MessageFlags.HAS_THREAD)) {
+          let e = m.default.getChannel(A.default.castMessageIdAsChannelId(H.id));
+          null != e && (b || k) && (n.preventDefault(), (0, c.openThreadSidebarForViewing)(e, k))
         }
         break;
       case "enter":
-        P && (n.preventDefault(), (0, v.markMessageUnread)(w, F));
+        U && (n.preventDefault(), (0, M.markMessageUnread)(G, H));
         break;
       case "escape":
-        f.default.isEditing(w.id, F.id) ? l.default.endEditMessage(w.id) : g.ComponentDispatch.dispatch(x.ComponentActions.TEXTAREA_FOCUS)
+        p.default.isEditing(G.id, H.id) ? l.default.endEditMessage(G.id) : T.ComponentDispatch.dispatch(y.ComponentActions.TEXTAREA_FOCUS)
     }
   }, [e, t])
 }

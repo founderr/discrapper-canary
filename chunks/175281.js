@@ -36,14 +36,13 @@ function x(e, t, n) {
   }) : e[t] = n, e
 }(a = l || (l = {})).UP = "UP", a.DOWN = "DOWN", a.LEFT = "LEFT", a.RIGHT = "RIGHT";
 let R = {
-    UP: f().throttle(() => (0, N.playSound)("ddr-up"), 100),
-    DOWN: f().throttle(() => (0, N.playSound)("ddr-down"), 100),
-    LEFT: f().throttle(() => (0, N.playSound)("ddr-left"), 100),
-    RIGHT: f().throttle(() => (0, N.playSound)("ddr-right"), 100)
-  },
-  M = f()((0, g.getDefaultLayoutContent)()).groupBy(e => e.group).value();
+  UP: f().throttle(() => (0, N.playSound)("ddr-up"), 100),
+  DOWN: f().throttle(() => (0, N.playSound)("ddr-down"), 100),
+  LEFT: f().throttle(() => (0, N.playSound)("ddr-left"), 100),
+  RIGHT: f().throttle(() => (0, N.playSound)("ddr-right"), 100)
+};
 
-function y(e) {
+function M(e) {
   switch (e.keyCode) {
     case A.KeyboardKeys.ARROW_UP:
       return "UP";
@@ -57,30 +56,31 @@ function y(e) {
       return null
   }
 }
-let O = 1e3 / 60;
+let y = 1e3 / 60,
+  O = [g.KeybindGroup.MESSAGE, g.KeybindGroup.NAVIGATION, g.KeybindGroup.VOICE_AND_VIDEO, g.KeybindGroup.CHAT, g.KeybindGroup.MISCELLANEOUS];
 
 function b() {
-  let e = [g.KeybindGroup.MESSAGE, g.KeybindGroup.NAVIGATION, g.KeybindGroup.VOICE_AND_VIDEO, g.KeybindGroup.CHAT, g.KeybindGroup.MISCELLANEOUS];
+  let e = i.useMemo(() => f()((0, g.getDefaultLayoutContent)()).groupBy(e => e.group).value(), []);
   return (0, s.jsx)("div", {
     className: v.keyboardShortcutList,
-    children: e.map(e => {
-      let t = M[e],
-        n = (0, g.getNameForKeybindGroup)(e),
-        l = (0, g.getDescriptionForKeybindGroup)(e);
+    children: O.map(t => {
+      let n = e[t],
+        l = (0, g.getNameForKeybindGroup)(t),
+        a = (0, g.getDescriptionForKeybindGroup)(t);
       return (0, s.jsxs)("div", {
         className: v.keyboardShortcutSection,
         children: [(0, s.jsxs)("div", {
           children: [(0, s.jsx)(p.Heading, {
             variant: "heading-lg/semibold",
-            children: n
-          }), null != l && (0, s.jsx)(p.Text, {
+            children: l
+          }), null != a && (0, s.jsx)(p.Text, {
             className: v.keybindGroupDescription,
             variant: "text-sm/normal",
-            children: l
+            children: a
           })]
         }), (0, s.jsx)("div", {
           className: v.keyboardShortcutListGroup,
-          children: t.map((e, t) => {
+          children: n.map((e, t) => {
             var n;
             return (null === (n = e.predicate) || void 0 === n ? void 0 : n.call(e)) === !1 ? null : (0, s.jsxs)("div", {
               className: o()(v.keybindGroup),
@@ -96,8 +96,8 @@ function b() {
               })]
             }, t)
           })
-        }, e)]
-      }, e)
+        }, t)]
+      }, t)
     })
   })
 }
@@ -208,53 +208,53 @@ class D extends i.PureComponent {
         animating: !0
       }), this.state.opacity.setValue(1), this.state.scaleX.setValue(.5), this.state.scaleY.setValue(1), h.default.sequence([h.default.timing(this.state.opacity, {
         toValue: .7,
-        duration: 2 * O
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * O
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         toValue: .7,
-        duration: 2 * O
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * O
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         delay: 300,
         toValue: .7,
-        duration: 2 * O
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * O
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         toValue: .7,
-        duration: 2 * O
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * O
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         toValue: .7,
-        duration: 2 * O
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * O
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         toValue: .7,
-        duration: 2 * O
+        duration: 2 * y
       }), h.default.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * O
+        duration: 2 * y
       }), h.default.timing(this.state.scaleY, {
         delay: 100,
         toValue: .005,
-        duration: 8 * O,
+        duration: 8 * y,
         easing: h.default.Easing.in(h.default.Easing.ease)
       }), h.default.parallel([h.default.timing(this.state.scaleX, {
         toValue: 1,
-        duration: 10 * O,
+        duration: 10 * y,
         easing: h.default.Easing.out(h.default.Easing.ease)
       }), h.default.timing(this.state.opacity, {
         toValue: 0,
-        duration: 12 * O
+        duration: 12 * y
       })])]).start(e)
     }), x(this, "toggleOpacity", () => {
       1 === this.state.opacity._value ? this.state.opacity.setValue(0) : this.state.opacity.setValue(1)
@@ -276,13 +276,13 @@ class D extends i.PureComponent {
       }]
     })), x(this, "handleKeyDown", e => {
       if (this.lastInputedKeys.push(e.keyCode), this.lastInputedKeys = this.lastInputedKeys.slice(-5), this.lastInputedKeys[0] === A.KeyboardKeys.H && this.lastInputedKeys[1] === A.KeyboardKeys.H && this.lastInputedKeys[2] === A.KeyboardKeys.ARROW_RIGHT && this.lastInputedKeys[3] === A.KeyboardKeys.N && this.lastInputedKeys[4] === A.KeyboardKeys.K && this.props.activateRagingDemon(), this.props.keyboardModeEnabled) return;
-      let t = y(e);
+      let t = M(e);
       null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowDown({
         direction: t
       }))
     }), x(this, "handleKeyUp", e => {
       if (this.props.keyboardModeEnabled) return;
-      let t = y(e);
+      let t = M(e);
       null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowUp({
         direction: t
       }))
