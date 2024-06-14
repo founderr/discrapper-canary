@@ -1,13 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   getSimplifiedProfileFriendingExperimentConfig: function() {
-    return r
+    return a
   },
   useSimplifiedProfileFriendingExperiment: function() {
-    return s
+    return o
   }
 });
-let i = (0, n("818083").createExperiment)({
+var i = n("818083"),
+  r = n("447452");
+let s = (0, i.createExperiment)({
     kind: "user",
     id: "2024-05_simplified_profile_friending",
     label: "Simplified Profile Friending Experiment",
@@ -31,29 +33,41 @@ let i = (0, n("818083").createExperiment)({
       }
     }]
   }),
-  r = e => {
+  a = e => {
     let {
       location: t,
       autoTrackExposure: n = !0,
-      trackExposureOptions: r = {}
+      trackExposureOptions: i = {}
     } = e;
-    return i.getCurrentConfig({
+    return s.getCurrentConfig({
       location: t
     }, {
       autoTrackExposure: n,
-      trackExposureOptions: r
+      trackExposureOptions: i
     })
   },
-  s = e => {
+  o = e => {
     let {
       location: t,
       autoTrackExposure: n = !0,
-      trackExposureOptions: r = {}
-    } = e;
-    return i.useExperiment({
+      trackExposureOptions: i = {}
+    } = e, {
+      updatedOnAllSurfaces: a
+    } = (0, r.useSimplifiedProfileExperiment)({
+      location: t,
+      autoTrackExposure: n,
+      trackExposureOptions: i
+    }), {
+      originalFriendingEnabled: o,
+      improvedFriendingEnabled: l
+    } = s.useExperiment({
       location: t
     }, {
       autoTrackExposure: n,
-      trackExposureOptions: r
-    })
+      trackExposureOptions: i
+    });
+    return {
+      originalFriendingEnabled: o,
+      improvedFriendingEnabled: l || !o && a
+    }
   }
