@@ -108,7 +108,7 @@ function O(e) {
         node: n
       })
     }, []),
-    x = (0, o.default)({
+    V = (0, o.default)({
       id: G,
       isEnabled: !0,
       useVirtualFocus: !0,
@@ -116,9 +116,9 @@ function O(e) {
       scrollToEnd: k,
       setFocus: B
     }),
-    V = R ? _.ListThin : _.ListNone;
+    x = R ? _.ListThin : _.ListNone;
   return (0, i.jsx)(o.ListNavigatorProvider, {
-    navigator: x,
+    navigator: V,
     children: (0, i.jsx)(o.ListNavigatorContainer, {
       children: e => {
         let {
@@ -169,7 +169,7 @@ function O(e) {
                 setSelected: l,
                 itemToString: C
               },
-              children: (0, i.jsx)(V, {
+              children: (0, i.jsx)(x, {
                 ...o,
                 style: {
                   maxHeight: 46 * O

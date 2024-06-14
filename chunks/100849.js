@@ -15,8 +15,8 @@ var s = l("735250"),
   c = l("199902"),
   f = l("158776"),
   S = l("543595"),
-  E = l("785717"),
-  I = l("221292"),
+  I = l("785717"),
+  E = l("221292"),
   m = l("981631"),
   v = l("886140"),
   _ = l("305944");
@@ -27,13 +27,13 @@ function T(e) {
     type: l,
     showActions: a,
     onClose: T
-  } = e, p = (0, o.useStateFromStores)([c.default], () => null != c.default.getAnyStreamForUser(t.id)), x = (0, o.useStateFromStores)([f.default], () => f.default.getActivities(t.id)), g = i.useMemo(() => x.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [x]), A = i.useMemo(() => p ? g.find(e => e.type === m.ActivityTypes.PLAYING) : null, [g, p]), C = i.useMemo(() => g.filter(e => e !== A), [A, g]), {
-    analyticsLocations: N,
+  } = e, p = (0, o.useStateFromStores)([c.default], () => null != c.default.getAnyStreamForUser(t.id)), x = (0, o.useStateFromStores)([f.default], () => f.default.getActivities(t.id)), g = i.useMemo(() => x.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [x]), N = i.useMemo(() => p ? g.find(e => e.type === m.ActivityTypes.PLAYING) : null, [g, p]), C = i.useMemo(() => g.filter(e => e !== N), [N, g]), {
+    analyticsLocations: A,
     newestAnalyticsLocation: U
   } = (0, d.default)(), {
     trackUserProfileAction: P,
     ...h
-  } = (0, E.useUserProfileAnalyticsContext)(), R = {
+  } = (0, I.useUserProfileAnalyticsContext)(), R = {
     location: {
       page: m.AnalyticsPages.USER_PROFILE,
       section: m.AnalyticsSections.PROFILE_MODAL
@@ -48,7 +48,7 @@ function T(e) {
       source: U,
       className: v.userProfileActivity,
       showChannelDetails: l === S.Types.SIMPLIFIED_PROFILE,
-      activity: A,
+      activity: N,
       actionColor: v.actionColor,
       analyticsParams: R,
       showActions: a,
@@ -56,13 +56,13 @@ function T(e) {
       onAction: () => {
         P({
           action: "JOIN_ACTIVITY"
-        }), (0, I.trackUserProfileActivityJoined)({
+        }), (0, E.trackUserProfileActivityJoined)({
           activityType: m.ActivityTypes.STREAMING,
-          activityName: null == A ? void 0 : A.name,
-          activityPlatform: null == A ? void 0 : A.platform,
-          activitySessionId: null == A ? void 0 : A.session_id,
-          applicationId: null == A ? void 0 : A.application_id,
-          analyticsLocations: N,
+          activityName: null == N ? void 0 : N.name,
+          activityPlatform: null == N ? void 0 : N.platform,
+          activitySessionId: null == N ? void 0 : N.session_id,
+          applicationId: null == N ? void 0 : N.application_id,
+          analyticsLocations: A,
           ...h
         })
       }
@@ -81,13 +81,13 @@ function T(e) {
       onAction: () => {
         P({
           action: "JOIN_ACTIVITY"
-        }), (0, I.trackUserProfileActivityJoined)({
+        }), (0, E.trackUserProfileActivityJoined)({
           activityType: e.type,
           activityName: e.name,
           activityPlatform: e.platform,
           activitySessionId: e.session_id,
           applicationId: e.application_id,
-          analyticsLocations: N,
+          analyticsLocations: A,
           ...h
         })
       }

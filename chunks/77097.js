@@ -47,8 +47,8 @@ function R(e) {
     G = (0, _.default)(v, g, L),
     [w, k] = r.useState(new Set),
     B = (0, o.useStateFromStores)([f.default], () => f.default.getUserProfile(g)),
-    x = null !== (t = null == B ? void 0 : B.connectedAccounts) && void 0 !== t ? t : [],
-    V = null !== (n = null == B ? void 0 : B.applicationRoleConnections) && void 0 !== n ? n : [],
+    V = null !== (t = null == B ? void 0 : B.connectedAccounts) && void 0 !== t ? t : [],
+    x = null !== (n = null == B ? void 0 : B.applicationRoleConnections) && void 0 !== n ? n : [],
     F = (0, o.useStateFromStores)([E.default], () => E.default.hidePersonalInformation),
     H = (0, o.useStateFromStores)([c.default], () => c.default.locale);
   if (r.useEffect(() => {
@@ -63,7 +63,7 @@ function R(e) {
       })
     }, [null == v ? void 0 : v.id, null == G ? void 0 : G.id]), F || null == G) return null;
   let Y = Array.from(w).map(e => {
-    let t = x.find(t => t.type === e);
+    let t = V.find(t => t.type === e);
     return null == t ? null : (0, i.jsx)(S.ConnectedUserAccount, {
       connectedAccount: t,
       theme: D,
@@ -105,14 +105,14 @@ function R(e) {
         })]
       })]
     })]
-  })), V.length > 0 && (R = (0, i.jsxs)(i.Fragment, {
+  })), x.length > 0 && (R = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(l.Heading, {
       variant: "eyebrow",
       className: C.title,
       children: p.default.Messages.APPS
     }), (0, i.jsx)("div", {
       className: a()(O.connectionsContainer, y),
-      children: V.map(e => (0, i.jsx)(S.ConnectedApplicationUserRoleAccount, {
+      children: x.map(e => (0, i.jsx)(S.ConnectedApplicationUserRoleAccount, {
         applicationRoleConnection: e,
         locale: H
       }, e.application.id))

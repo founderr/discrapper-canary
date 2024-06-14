@@ -46,13 +46,13 @@ n.r(t), n.d(t, {
     return k
   },
   useFavoriteEmojis: function() {
-    return x
+    return V
   },
   useFrequentlyUsedEmojis: function() {
     return B
   },
   useIsFavoriteEmoji: function() {
-    return V
+    return x
   }
 }), n("733860"), n("653041"), n("47120"), n("724458"), n("627341"), n("757143");
 var i = n("470079"),
@@ -85,7 +85,7 @@ let g = function(e, t) {
     (0, u.maybeFetchTopEmojisByGuild)(n);
     let r = (0, p.isExternalEmojiAllowedForIntention)(e),
       s = B(n),
-      o = x(n),
+      o = V(n),
       {
         topEmojis: d,
         newlyAddedEmojis: I
@@ -406,13 +406,13 @@ function B(e) {
   }, []), (0, a.useStateFromStoresArray)([l.default], () => l.default.getDisambiguatedEmojiContext(e).getFrequentlyUsedEmojisWithoutFetchingLatest())
 }
 
-function x(e) {
+function V(e) {
   return i.useEffect(() => {
     d.FrecencyUserSettingsActionCreators.loadIfNecessary()
   }, []), (0, a.useStateFromStoresArray)([l.default], () => l.default.getDisambiguatedEmojiContext(e).favoriteEmojisWithoutFetchingLatest)
 }
 
-function V(e, t) {
+function x(e, t) {
   return i.useEffect(() => {
     d.FrecencyUserSettingsActionCreators.loadIfNecessary()
   }, []), (0, a.useStateFromStores)([l.default], () => null != t && l.default.getDisambiguatedEmojiContext(e).isFavoriteEmojiWithoutFetchingLatest(t))

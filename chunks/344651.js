@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return V
   }
 }), n("653041"), n("47120"), n("789020"), n("411104");
 var i = n("392711"),
@@ -89,11 +89,11 @@ function B(e, t, n) {
   }
 }
 
-function x(e) {
+function V(e) {
   return w[e]
 }
 
-function V(e) {
+function x(e) {
   a.default.dispatch(e).catch(t => M.socket.resetSocketOnDispatchError({
     error: t,
     action: e.type
@@ -114,7 +114,7 @@ function F(e, t, n) {
     communication_disabled_until: I,
     unusual_dm_activity_until: T
   } = n, f = N.default.getMember(e, t.id);
-  (!(null != f && f.nick === a && f.avatar === o && r().isEqual(f.roles, s) && (0, d.isEqualAvatarDecoration)(f.avatarDecoration, l)) || f.premiumSince !== _ || f.isPending !== c || f.joinedAt !== E || f.communicationDisabledUntil !== I || f.flags !== u || (null !== (i = f.unusualDMActivityUntil) && void 0 !== i ? i : null) !== (null != T ? T : null)) && V({
+  (!(null != f && f.nick === a && f.avatar === o && r().isEqual(f.roles, s) && (0, d.isEqualAvatarDecoration)(f.avatarDecoration, l)) || f.premiumSince !== _ || f.isPending !== c || f.joinedAt !== E || f.communicationDisabledUntil !== I || f.flags !== u || (null !== (i = f.unusualDMActivityUntil) && void 0 !== i ? i : null) !== (null != T ? T : null)) && x({
     type: "GUILD_MEMBER_ADD",
     guildId: e,
     user: t,
@@ -182,10 +182,10 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
   T.default.initialGuild.measure(() => {
     s.default.Emitter.batched(() => {
       let t = v.hydrateInitialGuild(e, M.socket.identifyStartTime);
-      null != O.default.getCurrentUser() && (V({
+      null != O.default.getCurrentUser() && (x({
         type: "GUILD_CREATE",
         guild: t
-      }), V({
+      }), x({
         type: "VOICE_STATE_UPDATES",
         voiceStates: t.voice_states.map(e => {
           var n;
@@ -227,7 +227,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
         a = (null !== (t = e.lazy_private_channels) && void 0 !== t ? t : []).map(e => (0, S.createChannelRecordFromServer)(e)),
         o = null !== (n = e.game_invites) && void 0 !== n ? n : [];
       T.default.dispatchReadySupplemental.measure(() => {
-        V({
+        x({
           type: "CONNECTION_OPEN_SUPPLEMENTAL",
           guilds: r,
           presences: s,
@@ -254,13 +254,13 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
             requestToSpeakTimestamp: null !== (n = t.request_to_speak_timestamp) && void 0 !== n ? n : null
           })
         })
-      }), V({
+      }), x({
         type: "VOICE_STATE_UPDATES",
         voiceStates: l,
         initial: !0
       }), M.localVoiceState.update()
     })
-  }), setTimeout(() => V({
+  }), setTimeout(() => x({
     type: "POST_CONNECTION_OPEN"
   }), 2e3)
 }), B(["READY"], e => {
@@ -276,7 +276,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
   })
 }, (e, t, n) => {
   if (e.user.bot) {
-    V({
+    x({
       type: "LOGOUT"
     });
     return
@@ -293,7 +293,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
       let a = null == e.user_settings_proto ? void 0 : (0, f.b64ToPreloadedUserSettingsProto)(e.user_settings_proto);
       T.default.dispatchReady.measure(() => {
         var n;
-        V({
+        x({
           type: "CONNECTION_OPEN",
           sessionId: e.session_id,
           authSessionIdHash: e.auth_session_id_hash,
@@ -327,7 +327,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
           geoRestrictedGuilds: s,
           explicitContentScanVersion: e.explicit_content_scan_version
         })
-      }), null != e.auth_token && V({
+      }), null != e.auth_token && x({
         type: "UPDATE_TOKEN",
         token: e.auth_token,
         userId: e.user.id
@@ -335,23 +335,23 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     })
   })
 }), k(["RESUMED"], () => {
-  M.localPresenceState.forceUpdate(), M.localVoiceState.forceUpdate(), V({
+  M.localPresenceState.forceUpdate(), M.localVoiceState.forceUpdate(), x({
     type: "CONNECTION_RESUMED"
   })
 }), k(["TYPING_START"], e => {
-  null != e.member && F(e.guild_id, e.member.user, e.member), V({
+  null != e.member && F(e.guild_id, e.member.user, e.member), x({
     type: "TYPING_START",
     channelId: e.channel_id,
     userId: e.user_id
   })
 }), k(["ACTIVITY_START"], e => {
-  V({
+  x({
     type: "ACTIVITY_START",
     userId: e.user_id,
     activity: e.activity
   })
 }), k(["ACTIVITY_USER_ACTION"], e => {
-  V({
+  x({
     type: "ACTIVITY_USER_ACTION",
     actionType: e.action_type,
     user: e.user,
@@ -360,7 +360,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     messageId: e.message_id
   })
 }), B(["MESSAGE_CREATE"], e => m.ChannelLoader.loadGuildIds([e.guild_id]), e => {
-  H(e), null != e.author && V({
+  H(e), null != e.author && x({
     type: "MESSAGE_CREATE",
     guildId: e.guild_id,
     channelId: e.channel_id,
@@ -369,27 +369,27 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     isPushNotification: !1
   })
 }), B(["MESSAGE_UPDATE"], e => m.ChannelLoader.loadGuildIds([e.guild_id]), e => {
-  H(e), V({
+  H(e), x({
     type: "MESSAGE_UPDATE",
     guildId: e.guild_id,
     message: e
   })
 }), B(["MESSAGE_DELETE"], e => m.ChannelLoader.loadGuildIds([e.guild_id]), e => {
-  V({
+  x({
     type: "MESSAGE_DELETE",
     guildId: e.guild_id,
     id: e.id,
     channelId: e.channel_id
   })
 }), B(["MESSAGE_DELETE_BULK"], e => m.ChannelLoader.loadGuildIds([e.guild_id]), e => {
-  V({
+  x({
     type: "MESSAGE_DELETE_BULK",
     guildId: e.guild_id,
     ids: e.ids,
     channelId: e.channel_id
   })
 }), B(["MESSAGE_ACK"], e => m.ChannelLoader.loadGuildFromChannelId(e.channel_id), e => {
-  V({
+  x({
     type: "MESSAGE_ACK",
     channelId: e.channel_id,
     messageId: e.message_id,
@@ -398,45 +398,45 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     version: e.version
   })
 }), k(["GUILD_FEATURE_ACK"], e => {
-  V({
+  x({
     type: "GUILD_FEATURE_ACK",
     id: e.resource_id,
     ackType: e.ack_type,
     ackedId: e.entity_id
   })
 }), k(["USER_NON_CHANNEL_ACK"], e => {
-  V({
+  x({
     type: "USER_NON_CHANNEL_ACK",
     ackType: e.ack_type,
     ackedId: e.entity_id
   })
 }), B(["CHANNEL_PINS_ACK"], e => m.ChannelLoader.loadGuildIds([e.guild_id]), e => {
-  V({
+  x({
     type: "CHANNEL_PINS_ACK",
     channelId: e.channel_id,
     timestamp: e.timestamp,
     version: e.version
   })
 }), B(["CHANNEL_PINS_UPDATE"], e => m.ChannelLoader.loadGuildIds([e.guild_id]), e => {
-  V({
+  x({
     type: "CHANNEL_PINS_UPDATE",
     channelId: e.channel_id,
     lastPinTimestamp: e.last_pin_timestamp
   })
 }), B(["CHANNEL_CREATE", "CHANNEL_DELETE"], e => m.ChannelLoader.loadGuildIds([e.guild_id]), (e, t) => {
-  V({
+  x({
     type: t,
     channel: (0, S.createChannelRecordFromServer)(e)
   })
 }), k(["VOICE_CHANNEL_STATUS_UPDATE"], (e, t) => {
-  V({
+  x({
     type: t,
     id: e.id,
     guildId: e.guild_id,
     status: e.status
   })
 }), k(["CHANNEL_STATUSES"], (e, t) => {
-  V({
+  x({
     type: t,
     guildId: e.guild_id,
     channels: e.channels
@@ -448,13 +448,13 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     newly_created: n,
     ...i
   } = e;
-  V({
+  x({
     type: t,
     isNewlyCreated: n,
     channel: (0, S.createChannelRecordFromServer)(i)
   })
 }), B(["THREAD_LIST_SYNC"], e => m.ChannelLoader.loadGuildIds([e.guild_id]), e => {
-  V({
+  x({
     type: "THREAD_LIST_SYNC",
     guildId: e.guild_id,
     threads: e.threads.map(e => {
@@ -466,7 +466,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     channelIds: e.channel_ids
   })
 }), k(["THREAD_MEMBER_UPDATE"], e => {
-  V({
+  x({
     type: "THREAD_MEMBER_UPDATE",
     id: e.id,
     guildId: e.guild_id,
@@ -478,7 +478,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
   })
 }), k(["THREAD_MEMBERS_UPDATE"], e => {
   var t;
-  V({
+  x({
     type: "THREAD_MEMBERS_UPDATE",
     id: e.id,
     guildId: e.guild_id,
@@ -494,7 +494,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     memberIdsPreview: e.member_ids_preview
   })
 }), k(["FORUM_UNREADS"], e => {
-  !e.permission_denied && V({
+  !e.permission_denied && x({
     type: "FORUM_UNREADS",
     channelId: e.channel_id,
     threads: e.threads.map(e => ({
@@ -507,7 +507,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
   U.add(e)
 }), k(["CHANNEL_RECIPIENT_ADD", "CHANNEL_RECIPIENT_REMOVE"], (e, t) => {
   let n = m.default.getBasicChannel(e.channel_id);
-  V({
+  x({
     type: t,
     channelId: e.channel_id,
     user: e.user,
@@ -515,13 +515,13 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     isMember: null != n
   })
 }), B(["GUILD_CREATE"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGuildIds([e.id]), e => {
-  if (e.unavailable) V({
+  if (e.unavailable) x({
     type: "GUILD_UNAVAILABLE",
     guildId: e.id
   });
   else {
     let t = v.hydratePreviouslyUnavailableGuild(e);
-    o.default.createGuild(t), V({
+    o.default.createGuild(t), x({
       type: "VOICE_STATE_UPDATES",
       voiceStates: t.voice_states.map(e => {
         var n;
@@ -543,23 +543,23 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     })
   }
 }), k(["GUILD_UPDATE"], e => {
-  V({
+  x({
     type: "GUILD_UPDATE",
     guild: e
-  }), e.unavailable && V({
+  }), e.unavailable && x({
     type: "GUILD_UNAVAILABLE",
     guildId: e.id
   })
 }), k(["GUILD_DELETE"], e => {
-  V({
+  x({
     type: "GUILD_DELETE",
     guild: e
-  }), e.geo_restricted ? V({
+  }), e.geo_restricted ? x({
     type: "GUILD_GEO_RESTRICTED",
     guildId: e.id,
     icon: e.icon,
     name: e.name
-  }) : e.unavailable && V({
+  }) : e.unavailable && x({
     type: "GUILD_UNAVAILABLE",
     guildId: e.id
   })
@@ -589,7 +589,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
   })
 }), k(["THREAD_MEMBER_LIST_UPDATE"], e => {
   s.default.Emitter.batched(() => {
-    V({
+    x({
       type: "THREAD_MEMBER_LIST_UPDATE",
       guildId: e.guild_id,
       threadId: e.thread_id,
@@ -613,7 +613,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     }), D.default.flush()
   })
 }), k(["GUILD_BAN_ADD", "GUILD_BAN_REMOVE", "GUILD_MEMBER_ADD", "GUILD_MEMBER_UPDATE", "GUILD_MEMBER_REMOVE"], (e, t) => {
-  V({
+  x({
     type: t,
     guildId: e.guild_id,
     user: e.user,
@@ -629,49 +629,49 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     flags: e.flags
   })
 }), B(["GUILD_ROLE_CREATE", "GUILD_ROLE_UPDATE"], e => m.ChannelLoader.loadGuildIds([e.guild_id]), (e, t) => {
-  V({
+  x({
     type: t,
     guildId: e.guild_id,
     role: e.role
   })
 }), B(["GUILD_ROLE_DELETE"], e => m.ChannelLoader.loadGuildIds([e.guild_id]), e => {
-  V({
+  x({
     type: "GUILD_ROLE_DELETE",
     guildId: e.guild_id,
     roleId: e.role_id,
     version: e.version
   })
 }), k(["GUILD_EMOJIS_UPDATE"], e => {
-  V({
+  x({
     type: "GUILD_EMOJIS_UPDATE",
     guildId: e.guild_id,
     emojis: e.emojis
   })
 }), k(["GUILD_STICKERS_UPDATE"], e => {
-  V({
+  x({
     type: "GUILD_STICKERS_UPDATE",
     guildId: e.guild_id,
     stickers: e.stickers
   })
 }), k(["GUILD_INTEGRATIONS_UPDATE"], e => {
-  V({
+  x({
     type: "GUILD_INTEGRATIONS_UPDATE",
     guildId: e.guild_id
   })
 }), k(["INTEGRATION_CREATE"], e => {
-  V({
+  x({
     type: "INTEGRATION_CREATE",
     application: e.application,
     guildId: e.guild_id
   })
 }), k(["INTEGRATION_DELETE"], e => {
-  V({
+  x({
     type: "INTEGRATION_DELETE",
     applicationId: e.application_id,
     guildId: e.guild_id
   })
 }), k(["USER_UPDATE"], e => {
-  V({
+  x({
     type: "CURRENT_USER_UPDATE",
     user: e
   })
@@ -683,7 +683,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
       wire: e.settings.proto,
       type: e.settings.type
     }), Error("UserSettingsProto must not be a string");
-    V({
+    x({
       type: "USER_SETTINGS_PROTO_UPDATE",
       settings: {
         proto: t,
@@ -693,26 +693,26 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     })
   }
 }), k(["USER_GUILD_SETTINGS_UPDATE"], e => {
-  V({
+  x({
     type: "USER_GUILD_SETTINGS_FULL_UPDATE",
     userGuildSettings: [e]
   })
 }), k(["USER_CONNECTIONS_UPDATE"], () => {
-  V({
+  x({
     type: "USER_CONNECTIONS_UPDATE"
   })
 }), k(["USER_REQUIRED_ACTION_UPDATE"], e => {
-  V({
+  x({
     type: "USER_REQUIRED_ACTION_UPDATE",
     requiredAction: e.required_action
   })
 }), k(["USER_NOTE_UPDATE"], e => {
-  V({
+  x({
     type: "USER_NOTE_UPDATE",
     ...e
   })
 }), k(["RELATIONSHIP_ADD"], e => {
-  V({
+  x({
     type: "RELATIONSHIP_ADD",
     relationship: {
       id: e.id,
@@ -724,12 +724,12 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     shouldNotify: !0 === e.should_notify
   })
 }), k(["RELATIONSHIP_REMOVE"], e => {
-  V({
+  x({
     type: "RELATIONSHIP_REMOVE",
     relationship: e
   })
 }), k(["RELATIONSHIP_UPDATE"], e => {
-  V({
+  x({
     type: "RELATIONSHIP_UPDATE",
     relationship: e
   })
@@ -743,18 +743,18 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     broadcast: e.broadcast
   })
 }), k(["PRESENCES_REPLACE"], e => {
-  V({
+  x({
     type: "PRESENCES_REPLACE",
     presences: e
   })
 }), k(["SESSIONS_REPLACE"], e => {
-  V({
+  x({
     type: "SESSIONS_REPLACE",
     sessions: Y(e)
   })
 }), k(["VOICE_STATE_UPDATE"], e => {
   var t;
-  null != e.member && F(e.guild_id, e.member.user, e.member), V({
+  null != e.member && F(e.guild_id, e.member.user, e.member), x({
     type: "VOICE_STATE_UPDATES",
     voiceStates: [{
       userId: e.user_id,
@@ -773,7 +773,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     }]
   })
 }), k(["VOICE_SERVER_UPDATE"], e => {
-  V({
+  x({
     type: "VOICE_SERVER_UPDATE",
     guildId: e.guild_id,
     channelId: e.channel_id,
@@ -781,7 +781,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     token: e.token
   })
 }), k(["CALL_CREATE"], e => {
-  V({
+  x({
     type: "CALL_CREATE",
     channelId: e.channel_id,
     messageId: e.message_id,
@@ -790,7 +790,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     ringing: e.ringing
   });
   let t = e.voice_states;
-  null != t && V({
+  null != t && x({
     type: "VOICE_STATE_UPDATES",
     voiceStates: t.map(e => {
       var t;
@@ -811,7 +811,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     })
   })
 }), k(["CALL_UPDATE"], e => {
-  V({
+  x({
     type: "CALL_UPDATE",
     channelId: e.channel_id,
     messageId: e.message_id,
@@ -819,39 +819,39 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     ringing: e.ringing
   })
 }), k(["CALL_DELETE"], e => {
-  V({
+  x({
     type: "CALL_DELETE",
     channelId: e.channel_id,
     unavailable: e.unavailable
   })
 }), k(["OAUTH2_TOKEN_REVOKE"], e => {
-  V({
+  x({
     type: "OAUTH2_TOKEN_REVOKE",
     accessToken: e.access_token
   })
 }), k(["RECENT_MENTION_DELETE"], e => {
-  V({
+  x({
     type: "RECENT_MENTION_DELETE",
     id: e.message_id
   })
 }), k(["FRIEND_SUGGESTION_CREATE"], e => {
-  V({
+  x({
     type: "FRIEND_SUGGESTION_CREATE",
     suggestion: e
   })
 }), k(["FRIEND_SUGGESTION_DELETE"], e => {
-  V({
+  x({
     type: "FRIEND_SUGGESTION_DELETE",
     suggestedUserId: e.suggested_user_id
   })
 }), k(["WEBHOOKS_UPDATE"], e => {
-  V({
+  x({
     type: "WEBHOOKS_UPDATE",
     guildId: e.guild_id,
     channelId: e.channel_id
   })
 }), k(["MESSAGE_REACTION_ADD", "MESSAGE_REACTION_REMOVE"], (e, t) => {
-  V({
+  x({
     type: t,
     channelId: e.channel_id,
     messageId: e.message_id,
@@ -861,7 +861,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     reactionType: e.type
   })
 }), k(["MESSAGE_POLL_VOTE_ADD", "MESSAGE_POLL_VOTE_REMOVE"], (e, t) => {
-  V({
+  x({
     type: "MESSAGE_POLL_VOTE_ADD" === t ? "MESSAGE_REACTION_ADD" : "MESSAGE_REACTION_REMOVE",
     channelId: e.channel_id,
     messageId: e.message_id,
@@ -873,32 +873,32 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     reactionType: E.ReactionTypes.VOTE
   })
 }), k(["MESSAGE_REACTION_REMOVE_ALL"], e => {
-  V({
+  x({
     type: "MESSAGE_REACTION_REMOVE_ALL",
     channelId: e.channel_id,
     messageId: e.message_id
   })
 }), k(["MESSAGE_REACTION_REMOVE_EMOJI"], e => {
-  V({
+  x({
     type: "MESSAGE_REACTION_REMOVE_EMOJI",
     channelId: e.channel_id,
     messageId: e.message_id,
     emoji: e.emoji
   })
 }), k(["MESSAGE_REACTION_ADD_MANY"], e => {
-  V({
+  x({
     type: "MESSAGE_REACTION_ADD_MANY",
     channelId: e.channel_id,
     messageId: e.message_id,
     reactions: e.reactions
   })
 }), k(["PAYMENT_UPDATE"], e => {
-  V({
+  x({
     type: "PAYMENT_UPDATE",
     payment: e
   })
 }), k(["ENTITLEMENT_CREATE", "ENTITLEMENT_UPDATE", "ENTITLEMENT_DELETE"], (e, t) => {
-  V({
+  x({
     type: t,
     entitlement: e
   })
@@ -907,17 +907,17 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
 }), k(["USER_SUBSCRIPTIONS_UPDATE"], () => {
   u.fetchCurrentUser(), p.default.hasLayers() && n("355467").fetchSubscriptions()
 }), k(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE"], e => {
-  V({
+  x({
     type: "GUILD_BOOST_SLOT_CREATE",
     guildBoostSlot: h.default.createFromServer(e, g.default.getSubscriptionById(e.subscription_id))
   })
 }), k(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_UPDATE"], e => {
-  V({
+  x({
     type: "GUILD_BOOST_SLOT_UPDATE",
     guildBoostSlot: h.default.createFromServer(e, g.default.getSubscriptionById(e.subscription_id))
   })
 }), k(["BILLING_POPUP_BRIDGE_CALLBACK"], e => {
-  V({
+  x({
     type: "BILLING_POPUP_BRIDGE_CALLBACK",
     paymentSourceType: e.payment_source_type,
     state: e.state,
@@ -925,14 +925,14 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     query: e.query
   })
 }), k(["USER_PAYMENT_BROWSER_CHECKOUT_DONE"], e => {
-  V({
+  x({
     type: "USER_PAYMENT_BROWSER_CHECKOUT_DONE",
     loadId: e.load_id
   })
 }), k(["USER_PAYMENT_CLIENT_ADD"], e => {
   (0, L.getPurchaseTokenHash)().then(t => {
     let n = e.purchase_token_hash;
-    n === t && V({
+    n === t && x({
       type: "USER_PAYMENT_CLIENT_ADD",
       purchaseTokenHash: n,
       expiresAt: e.expires_at
@@ -972,7 +972,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
         case "INSERT":
           t(r)
       }
-    }), D.default.flush(), V({
+    }), D.default.flush(), x({
       type: "GUILD_MEMBER_LIST_UPDATE",
       guildId: e.guild_id,
       id: e.id,
@@ -983,28 +983,28 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     })
   })
 }), k(["GIFT_CODE_UPDATE"], e => {
-  V({
+  x({
     type: "GIFT_CODE_UPDATE",
     uses: e.uses,
     code: e.code
   })
 }), k(["GIFT_CODE_CREATE"], e => {
-  V({
+  x({
     type: "GIFT_CODE_CREATE",
     giftCode: e
   })
 }), k(["USER_ACHIEVEMENT_UPDATE"], e => {
-  V({
+  x({
     type: "USER_ACHIEVEMENT_UPDATE",
     userAchievement: e
   })
 }), k(["LIBRARY_APPLICATION_UPDATE"], e => {
-  V({
+  x({
     type: "LIBRARY_APPLICATION_UPDATE",
     libraryApplication: e
   })
 }), k(["STREAM_CREATE"], e => {
-  V({
+  x({
     type: "STREAM_CREATE",
     streamKey: e.stream_key,
     region: e.region,
@@ -1013,14 +1013,14 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     paused: e.paused
   })
 }), k(["STREAM_SERVER_UPDATE"], e => {
-  V({
+  x({
     type: "STREAM_SERVER_UPDATE",
     streamKey: e.stream_key,
     endpoint: e.endpoint,
     token: e.token
   })
 }), k(["STREAM_UPDATE"], e => {
-  V({
+  x({
     type: "STREAM_UPDATE",
     streamKey: e.stream_key,
     region: e.region,
@@ -1028,14 +1028,14 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     paused: e.paused
   })
 }), k(["STREAM_DELETE"], e => {
-  V({
+  x({
     type: "STREAM_DELETE",
     streamKey: e.stream_key,
     unavailable: e.unavailable,
     reason: e.reason
   })
 }), k(["GENERIC_PUSH_NOTIFICATION_SENT"], e => {
-  V({
+  x({
     type: "GENERIC_PUSH_NOTIFICATION_SENT",
     title: e.title,
     body: e.body,
@@ -1045,88 +1045,88 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     tag: e.tag
   })
 }), k(["NOTIFICATION_CENTER_ITEM_CREATE"], e => {
-  V({
+  x({
     type: "NOTIFICATION_CENTER_ITEM_CREATE",
     item: e
   })
 }), k(["NOTIFICATION_CENTER_ITEM_DELETE"], e => {
-  V({
+  x({
     type: "NOTIFICATION_CENTER_ITEM_DELETE",
     id: e.id
   })
 }), k(["NOTIFICATION_CENTER_ITEMS_ACK"], e => {
-  V({
+  x({
     type: "NOTIFICATION_CENTER_ITEMS_ACK",
     ids: [e.id],
     optimistic: !1
   })
 }), k(["NOTIFICATION_CENTER_ITEM_COMPLETED"], e => {
-  V({
+  x({
     type: "NOTIFICATION_CENTER_ITEM_COMPLETED",
     item_enum: e.item_enum
   })
 }), k(["QUESTS_USER_STATUS_UPDATE"], e => {
-  V({
+  x({
     type: "QUESTS_USER_STATUS_UPDATE",
     user_status: e.user_status
   })
 }), k(["APPLICATION_COMMAND_PERMISSIONS_UPDATE"], (e, t) => {
-  V({
+  x({
     type: t,
     guildId: e.guild_id
   })
 }), k(["GUILD_APPLICATION_COMMAND_INDEX_UPDATE"], e => {
-  V({
+  x({
     type: "GUILD_APPLICATION_COMMAND_INDEX_UPDATE",
     guildId: e.guild_id,
     version: e.version
   })
 }), k(["GUILD_JOIN_REQUEST_CREATE"], e => {
-  V({
+  x({
     type: "GUILD_JOIN_REQUEST_CREATE",
     request: e.request,
     status: e.status,
     guildId: e.guild_id
   })
 }), k(["GUILD_JOIN_REQUEST_UPDATE"], e => {
-  V({
+  x({
     type: "GUILD_JOIN_REQUEST_UPDATE",
     request: e.request,
     status: e.status,
     guildId: e.guild_id
   })
 }), k(["GUILD_JOIN_REQUEST_DELETE"], e => {
-  V({
+  x({
     type: "GUILD_JOIN_REQUEST_DELETE",
     id: e.id,
     userId: e.user_id,
     guildId: e.guild_id
   })
 }), k(["INTERACTION_CREATE"], e => {
-  V({
+  x({
     type: "INTERACTION_CREATE",
     interactionId: e.id,
     nonce: e.nonce
   })
 }), k(["INTERACTION_SUCCESS"], e => {
-  V({
+  x({
     type: "INTERACTION_SUCCESS",
     interactionId: e.id,
     nonce: e.nonce
   })
 }), k(["INTERACTION_FAILURE"], e => {
-  V({
+  x({
     type: "INTERACTION_FAILURE",
     nonce: e.nonce
   })
 }), k(["APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE"], e => {
-  V({
+  x({
     type: "APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE",
     choices: e.choices,
     nonce: e.nonce
   })
 }), k(["INTERACTION_MODAL_CREATE"], e => {
-  V({
+  x({
     type: "INTERACTION_MODAL_CREATE",
     id: e.id,
     channelId: e.channel_id,
@@ -1137,7 +1137,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     nonce: e.nonce
   })
 }), k(["INTERACTION_IFRAME_MODAL_CREATE"], e => {
-  V({
+  x({
     type: "INTERACTION_IFRAME_MODAL_CREATE",
     id: e.id,
     channelId: e.channel_id,
@@ -1149,57 +1149,57 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     nonce: e.nonce
   })
 }), k(["STAGE_INSTANCE_CREATE"], e => {
-  V({
+  x({
     type: "STAGE_INSTANCE_CREATE",
     instance: e
   })
 }), k(["STAGE_INSTANCE_UPDATE"], e => {
-  V({
+  x({
     type: "STAGE_INSTANCE_UPDATE",
     instance: e
   })
 }), k(["STAGE_INSTANCE_DELETE"], e => {
-  V({
+  x({
     type: "STAGE_INSTANCE_DELETE",
     instance: e
   })
 }), k(["GUILD_SCHEDULED_EVENT_CREATE"], e => {
-  V({
+  x({
     type: "GUILD_SCHEDULED_EVENT_CREATE",
     guildScheduledEvent: e
   })
 }), k(["GUILD_SCHEDULED_EVENT_UPDATE"], e => {
-  V({
+  x({
     type: "GUILD_SCHEDULED_EVENT_UPDATE",
     guildScheduledEvent: e
   })
 }), k(["GUILD_SCHEDULED_EVENT_DELETE"], e => {
-  V({
+  x({
     type: "GUILD_SCHEDULED_EVENT_DELETE",
     guildScheduledEvent: e
   })
 }), k(["GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE"], e => {
-  V({
+  x({
     type: "GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE",
     eventException: e
   })
 }), k(["GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE"], e => {
-  V({
+  x({
     type: "GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE",
     eventException: e
   })
 }), k(["GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE"], e => {
-  V({
+  x({
     type: "GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE",
     eventException: e
   })
 }), k(["GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE"], e => {
-  V({
+  x({
     type: "GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE",
     eventId: e.event_id
   })
 }), k(["GUILD_SCHEDULED_EVENT_USER_ADD"], e => {
-  V({
+  x({
     type: "GUILD_SCHEDULED_EVENT_USER_ADD",
     userId: e.user_id,
     guildId: e.guild_id,
@@ -1208,7 +1208,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     response: e.response
   })
 }), k(["GUILD_SCHEDULED_EVENT_USER_REMOVE"], e => {
-  V({
+  x({
     type: "GUILD_SCHEDULED_EVENT_USER_REMOVE",
     userId: e.user_id,
     guildId: e.guild_id,
@@ -1217,32 +1217,32 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     response: e.response
   })
 }), k(["GUILD_DIRECTORY_ENTRY_CREATE"], e => {
-  V({
+  x({
     type: "GUILD_DIRECTORY_ENTRY_CREATE",
     channelId: e.directory_channel_id,
     entry: e
   })
 }), k(["GUILD_DIRECTORY_ENTRY_UPDATE"], e => {
-  V({
+  x({
     type: "GUILD_DIRECTORY_ENTRY_UPDATE",
     channelId: e.directory_channel_id,
     entry: e
   })
 }), k(["GUILD_DIRECTORY_ENTRY_DELETE"], e => {
-  V({
+  x({
     type: "GUILD_DIRECTORY_ENTRY_DELETE",
     channelId: e.directory_channel_id,
     guildId: e.entity_id
   })
 }), k(["AUTO_MODERATION_MENTION_RAID_DETECTION"], e => {
-  V({
+  x({
     type: "AUTO_MODERATION_MENTION_RAID_DETECTION",
     guildId: e.guild_id,
     decisionId: e.decision_id,
     suspiciousMentionActivityUntil: e.suspicious_mention_activity_until
   })
 }), k(["VOICE_CHANNEL_EFFECT_SEND"], e => {
-  V({
+  x({
     type: "VOICE_CHANNEL_EFFECT_SEND",
     emoji: e.emoji,
     channelId: e.channel_id,
@@ -1257,7 +1257,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     emojiHose: e.emoji_hose
   })
 }), k(["GUILD_SOUNDBOARD_SOUND_CREATE"], e => {
-  V({
+  x({
     type: "GUILD_SOUNDBOARD_SOUND_CREATE",
     sound: {
       guildId: e.guild_id,
@@ -1272,7 +1272,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     }
   })
 }), k(["GUILD_SOUNDBOARD_SOUND_UPDATE"], e => {
-  V({
+  x({
     type: "GUILD_SOUNDBOARD_SOUND_UPDATE",
     sound: {
       guildId: e.guild_id,
@@ -1287,13 +1287,13 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     }
   })
 }), k(["GUILD_SOUNDBOARD_SOUND_DELETE"], e => {
-  V({
+  x({
     type: "GUILD_SOUNDBOARD_SOUND_DELETE",
     guildId: e.guild_id,
     soundId: e.sound_id
   })
 }), k(["GUILD_SOUNDBOARD_SOUNDS_UPDATE"], e => {
-  V({
+  x({
     type: "GUILD_SOUNDBOARD_SOUNDS_UPDATE",
     guildId: e.guild_id,
     soundboardSounds: e.soundboard_sounds.map(t => ({
@@ -1308,7 +1308,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     }))
   })
 }), B(["EMBEDDED_ACTIVITY_UPDATE"], e => m.ChannelLoader.loadGuildIds([e.guild_id]), e => {
-  V({
+  x({
     type: "EMBEDDED_ACTIVITY_UPDATE",
     guildId: e.guild_id,
     channelId: e.channel_id,
@@ -1317,7 +1317,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     updateCode: e.update_code
   })
 }), B(["EMBEDDED_ACTIVITY_UPDATE_V2"], e => m.ChannelLoader.loadGuildIds([e.guild_id]), e => {
-  V({
+  x({
     type: "EMBEDDED_ACTIVITY_UPDATE_V2",
     applicationId: e.application_id,
     launchId: e.launch_id,
@@ -1326,31 +1326,31 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     participants: e.participants
   })
 }), k(["AUTH_SESSION_CHANGE"], e => {
-  V({
+  x({
     type: "AUTH_SESSION_CHANGE",
     authSessionIdHash: e.auth_session_id_hash
   })
 }), k(["USER_CONNECTIONS_LINK_CALLBACK"], e => {
-  V({
+  x({
     type: "USER_CONNECTIONS_LINK_CALLBACK",
     provider: e.provider,
     callbackCode: e.callback_code,
     callbackState: e.callback_state
   })
 }), k(["DELETED_ENTITY_IDS"], e => {
-  V({
+  x({
     type: "DELETED_ENTITY_IDS",
     ...e
   })
 }), k(["CONSOLE_COMMAND_UPDATE"], e => {
-  V({
+  x({
     type: "CONSOLE_COMMAND_UPDATE",
     id: e.id,
     result: e.result,
     error: e.error
   })
 }), B(["PASSIVE_UPDATE_V2"], e => m.ChannelLoader.loadGuildIds([e.guild_id]), e => {
-  V({
+  x({
     type: "PASSIVE_UPDATE_V2",
     guildId: e.guild_id,
     members: e.updated_members,
@@ -1378,35 +1378,35 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     removedVoiceStateUsers: e.removed_voice_states
   })
 }), k(["PRIVATE_CHANNEL_INTEGRATION_CREATE"], e => {
-  V({
+  x({
     type: "PRIVATE_CHANNEL_INTEGRATION_CREATE",
     integration: e
   })
 }), k(["PRIVATE_CHANNEL_INTEGRATION_UPDATE"], e => {
-  V({
+  x({
     type: "PRIVATE_CHANNEL_INTEGRATION_UPDATE",
     integration: e
   })
 }), k(["PRIVATE_CHANNEL_INTEGRATION_DELETE"], e => {
-  V({
+  x({
     type: "PRIVATE_CHANNEL_INTEGRATION_DELETE",
     channelId: e.channel_id,
     applicationId: e.application_id
   })
 }), k(["CREATOR_MONETIZATION_RESTRICTIONS_UPDATE"], e => {
-  V({
+  x({
     type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS",
     guildId: e.guild_id,
     restrictions: e.restrictions
   })
 }), k(["BILLING_REFERRAL_TRIAL_OFFER_UPDATE"], e => {
-  V({
+  x({
     type: "BILLING_REFERRAL_TRIAL_OFFER_UPDATE",
     userTrialOfferId: e.user_trial_offer_id,
     recipientId: e.recipient_id
   })
 }), k(["SPEED_TEST_CREATE"], e => {
-  V({
+  x({
     type: "SPEED_TEST_CREATE",
     streamKey: e.stream_key,
     region: e.region,
@@ -1415,14 +1415,14 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     paused: e.paused
   })
 }), k(["SPEED_TEST_SERVER_UPDATE"], e => {
-  V({
+  x({
     type: "SPEED_TEST_SERVER_UPDATE",
     streamKey: e.stream_key,
     endpoint: e.endpoint,
     token: e.token
   })
 }), k(["SPEED_TEST_UPDATE"], e => {
-  V({
+  x({
     type: "SPEED_TEST_UPDATE",
     streamKey: e.stream_key,
     region: e.region,
@@ -1430,82 +1430,82 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : m.ChannelLoader.loadGu
     paused: e.paused
   })
 }), k(["SPEED_TEST_DELETE"], e => {
-  V({
+  x({
     type: "SPEED_TEST_DELETE",
     streamKey: e.stream_key,
     unavailable: e.unavailable,
     reason: e.reason
   })
 }), k(["LAST_MESSAGES"], e => {
-  V({
+  x({
     type: "MESSAGE_PREVIEWS_LOADED",
     guildId: e.guild_id,
     messages: e.messages
   })
 }), k(["AUTHENTICATOR_UPDATE"], e => {
-  V({
+  x({
     type: "AUTHENTICATOR_UPDATE",
     credential: e
   })
 }), k(["AUTHENTICATOR_CREATE"], e => {
-  V({
+  x({
     type: "AUTHENTICATOR_CREATE",
     credential: e
   })
 }), k(["AUTHENTICATOR_DELETE"], e => {
-  V({
+  x({
     type: "AUTHENTICATOR_DELETE",
     credential: e
   })
 }), k(["NOTIFICATION_SETTINGS_UPDATE"], e => {
-  V({
+  x({
     type: "NOTIFICATION_SETTINGS_UPDATE",
     settings: {
       flags: e.flags
     }
   })
 }), k(["GAME_INVITE_CREATE"], e => {
-  V({
+  x({
     type: "GAME_INVITE_CREATE",
     gameInvite: e
   })
 }), k(["GAME_INVITE_DELETE"], e => {
-  V({
+  x({
     type: "GAME_INVITE_DELETE",
     inviteId: e.invite_id
   })
 }), k(["GAME_INVITE_DELETE_MANY"], e => {
-  V({
+  x({
     type: "GAME_INVITE_DELETE_MANY",
     inviteIds: e.invite_ids
   })
 }), k(["CONVERSATION_SUMMARY_UPDATE"], e => {
-  V({
+  x({
     type: "CONVERSATION_SUMMARY_UPDATE",
     ...e
   })
 }), k(["PREMIUM_MARKETING_PREVIEW"], e => {
-  V({
+  x({
     type: "PREMIUM_MARKETING_PREVIEW",
     properties: e.properties
   })
 }), k(["USER_APPLICATION_UPDATE"], e => {
-  V({
+  x({
     type: "USER_APPLICATION_UPDATE",
     applicationId: e.application_id
   })
 }), k(["USER_APPLICATION_REMOVE"], e => {
-  V({
+  x({
     type: "USER_APPLICATION_REMOVE",
     applicationId: e.application_id
   })
 }), k(["DM_SETTINGS_UPSELL_SHOW"], e => {
-  V({
+  x({
     type: "DM_SETTINGS_UPSELL_SHOW",
     guildId: e.guild_id
   })
 }), k(["CONTENT_INVENTORY_INBOX_STALE"], e => {
-  V({
+  x({
     type: "CONTENT_INVENTORY_INBOX_STALE",
     refreshAfterMs: e.refresh_after_ms
   })

@@ -52,8 +52,8 @@ function c(e, t, n, s) {
       customTheme: w = !1,
       chunkSize: k,
       style: B,
-      innerId: x,
-      innerRole: V,
+      innerId: V,
+      innerRole: x,
       innerAriaLabel: F,
       innerAriaMultiselectable: H,
       innerAriaOrientation: Y,
@@ -172,8 +172,8 @@ function c(e, t, n, s) {
       style: (0, d.getMergedOrientationStyles)(B),
       ...K,
       children: [r.useMemo(() => (0, i.jsx)(W, {
-        id: x,
-        role: V,
+        id: V,
+        role: x,
         "aria-label": F,
         "aria-multiselectable": H,
         "aria-orientation": Y,
@@ -229,7 +229,7 @@ function c(e, t, n, s) {
             spacerTop: ee
           })
         })
-      }), [x, V, F, H, Y, j, W, et, en, g, L, v, M, y, ee]), r.useMemo(() => (function(e) {
+      }), [V, x, F, H, Y, j, W, et, en, g, L, v, M, y, ee]), r.useMemo(() => (function(e) {
         let {
           renderSidebar: t,
           sidebarHeight: n,

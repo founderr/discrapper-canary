@@ -44,8 +44,8 @@ function L(e) {
     artContainerClassName: w,
     headerClassName: k,
     bodyClassName: B,
-    transitionState: x,
-    onClose: V,
+    transitionState: V,
+    onClose: x,
     onSubscribeClick: F,
     onSecondaryClick: H,
     secondaryCTA: Y,
@@ -92,7 +92,7 @@ function L(e) {
   }) : $.artElement, (0, i.jsxs)(l.ModalRoot, {
     className: a()(R.root, G),
     "aria-label": L,
-    transitionState: x,
+    transitionState: V,
     children: [(0, i.jsxs)("div", {
       className: el,
       children: [eu, W ? (0, i.jsx)("img", {
@@ -101,7 +101,7 @@ function L(e) {
         src: g
       }) : null]
     }), q ? (0, i.jsx)(l.ModalCloseButton, {
-      onClick: V,
+      onClick: x,
       className: R.closeButton
     }) : null, (0, i.jsx)(l.ModalContent, {
       scrollbarType: "none",
@@ -109,7 +109,7 @@ function L(e) {
       children: Z ? (0, i.jsx)(l.Spinner, {}) : (0, i.jsx)(i.Fragment, {
         children: ei ? (0, i.jsx)(i.Fragment, {
           children: (0, i.jsx)(h.default, {
-            onClose: V,
+            onClose: x,
             type: v,
             subscriptionTier: null !== (s = null == et ? void 0 : null === (n = et.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== s ? s : p.PremiumSubscriptionSKUs.TIER_2,
             headingText: L,
@@ -157,7 +157,7 @@ function L(e) {
           if (ee) return (0, i.jsx)(c.default, {
             analyticsLocation: y,
             guild: D.guild,
-            onClose: V
+            onClose: x
           });
           let t = q ? C.default.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
           if (ei) {
@@ -179,13 +179,13 @@ function L(e) {
             size: l.Button.Sizes.SMALL,
             color: q ? l.Button.Colors.CUSTOM : l.Button.Colors.GREEN,
             onClick: () => {
-              null == F || F(), V()
+              null == F || F(), x()
             },
             buttonText: null != j ? j : t
           })
         })()]
       }), !Q && !q && (0, i.jsx)(l.Button, {
-        onClick: V,
+        onClick: x,
         size: l.Button.Sizes.SMALL,
         color: l.Button.Colors.PRIMARY,
         look: l.Button.Looks.LINK,

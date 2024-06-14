@@ -16,8 +16,8 @@ var i = l("120356"),
   c = l("914010"),
   f = l("785717"),
   S = l("532776"),
-  E = l("648067"),
-  I = l("588822"),
+  I = l("648067"),
+  E = l("588822"),
   m = l("900927"),
   v = l("678738"),
   _ = l("652853"),
@@ -25,7 +25,7 @@ var i = l("120356"),
   p = l("351707"),
   x = l("228168"),
   g = l("689938"),
-  A = l("363175");
+  N = l("363175");
 
 function C(e) {
   let {
@@ -33,17 +33,17 @@ function C(e) {
     currentUser: l,
     displayProfile: i,
     subsection: C,
-    className: N,
+    className: A,
     onClose: U
   } = e, {
     theme: P
   } = (0, _.useUserProfileThemeContext)(), {
     trackUserProfileAction: h
-  } = (0, f.useUserProfileAnalyticsContext)(), R = null == i ? void 0 : i.guildId, M = (0, n.useStateFromStores)([d.default], () => null != R ? d.default.getGuild(R) : null), j = (0, n.useStateFromStores)([c.default], () => c.default.getGuildId()), y = (0, n.useStateFromStores)([u.default], () => u.default.locale), O = (0, E.default)(t.id), L = (0, S.default)(t.id);
+  } = (0, f.useUserProfileAnalyticsContext)(), R = null == i ? void 0 : i.guildId, M = (0, n.useStateFromStores)([d.default], () => null != R ? d.default.getGuild(R) : null), j = (0, n.useStateFromStores)([c.default], () => c.default.getGuildId()), y = (0, n.useStateFromStores)([u.default], () => u.default.locale), O = (0, I.default)(t.id), L = (0, S.default)(t.id);
   return (0, s.jsxs)(o.ScrollerThin, {
     fade: !0,
-    className: a()(A.scroller, N),
-    children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, s.jsx)(I.default, {
+    className: a()(N.scroller, A),
+    children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, s.jsx)(E.default, {
       userBio: i.bio,
       setLineClamp: !1
     }), null != M && (0, s.jsx)(p.default, {
@@ -62,7 +62,7 @@ function C(e) {
       title: g.default.Messages.CONNECTIONS,
       children: (0, s.jsx)(T.ConnectedUserAccounts, {
         connectedAccounts: O,
-        className: A.connections,
+        className: N.connections,
         userId: t.id,
         theme: P,
         locale: y
@@ -70,7 +70,7 @@ function C(e) {
     }), L.length > 0 && (0, s.jsx)(v.default, {
       title: g.default.Messages.APPS,
       children: L.map(e => (0, s.jsx)(T.ConnectedApplicationUserRoleAccount, {
-        className: A.appsConnections,
+        className: N.appsConnections,
         applicationRoleConnection: e,
         locale: y,
         onApplicationClicked: () => {
@@ -85,7 +85,7 @@ function C(e) {
       scrollIntoView: C === x.UserProfileSubsections.NOTE,
       children: (0, s.jsx)(r.default, {
         userId: t.id,
-        className: A.note,
+        className: N.note,
         autoFocus: C === x.UserProfileSubsections.NOTE,
         onUpdate: () => h({
           action: "SET_NOTE"

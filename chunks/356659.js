@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return k
   },
   CLIPS_EDUCATION_MAX_DISMISSALS_DISABLED: function() {
-    return x
+    return V
   },
   CLIPS_EDUCATION_MAX_DISMISSALS_ENABLED: function() {
     return B
@@ -123,4 +123,4 @@ let E = "alt+c",
   w = 14 * c.default.Millis.DAY,
   k = 5,
   B = 5,
-  x = 1
+  V = 1

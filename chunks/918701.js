@@ -20,7 +20,7 @@ n.r(t), n.d(t, {
     return F
   },
   getGameTileAssetUrl: function() {
-    return V
+    return x
   },
   getHeroAssetUrl: function() {
     return B
@@ -32,7 +32,7 @@ n.r(t), n.d(t, {
     return D
   },
   getQuestBarHeroAssetUrl: function() {
-    return x
+    return V
   },
   getQuestByApplicationId: function() {
     return v
@@ -338,8 +338,8 @@ let k = e => {
     }
   },
   B = e => w(e.config.assets.hero, "".concat(R).concat(e.id, "/").concat(e.config.assets.hero)),
-  x = e => e.config.assets.questBarHero.startsWith("data") ? e.config.assets.questBarHero : w(e.config.assets.questBarHero, "".concat(R).concat(e.id, "/").concat(e.config.assets.questBarHero)),
-  V = (e, t) => w(e.config.assets.gameTile, "".concat(R).concat(e.id, "/").concat(t, "/").concat(e.config.assets.gameTile)),
+  V = e => e.config.assets.questBarHero.startsWith("data") ? e.config.assets.questBarHero : w(e.config.assets.questBarHero, "".concat(R).concat(e.id, "/").concat(e.config.assets.questBarHero)),
+  x = (e, t) => w(e.config.assets.gameTile, "".concat(R).concat(e.id, "/").concat(t, "/").concat(e.config.assets.gameTile)),
   F = (e, t) => w(e.config.assets.logotype, "".concat(R).concat(e.id, "/").concat(t, "/").concat(e.config.assets.logotype)),
   H = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
 

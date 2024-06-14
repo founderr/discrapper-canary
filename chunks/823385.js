@@ -43,8 +43,8 @@ let P = "seenQSTutorial",
   w = !1,
   k = null,
   B = [],
-  x = null,
-  V = 0,
+  V = null,
+  x = 0,
   F = [],
   H = [];
 
@@ -66,7 +66,7 @@ function W(e) {
   null != s && a.add("guild:".concat(s)), i = null != i ? i : new d.default(K, U, null != r ? 100 : 5, {
     frecencyBoosters: !0,
     blacklist: a
-  }), x = null, V = n.length, k = r, i.search(n)
+  }), V = null, x = n.length, k = r, i.search(n)
 }
 
 function K(e, t) {
@@ -178,7 +178,7 @@ function K(e, t) {
       default:
         B = e
     }
-    if (t !== x) x = t, V = Math.max(t.length, V), b = (0, d.findNextSelectedResult)(d.FindResultDirections.DOWN, -1, B);
+    if (t !== V) V = t, x = Math.max(t.length, x), b = (0, d.findNextSelectedResult)(d.FindResultDirections.DOWN, -1, B);
     else {
       let e = B[b];
       null != e && e.type === d.AutocompleterResultTypes.HEADER && (b = (0, d.findNextSelectedResult)(d.FindResultDirections.DOWN, b, B))
@@ -188,7 +188,7 @@ function K(e, t) {
 }
 
 function z() {
-  x = null, V = 0, F = [], null != i && (i.destroy(), i = null)
+  V = null, x = 0, F = [], null != i && (i.destroy(), i = null)
 }
 class Z extends(r = o.default.PersistedStore) {
   initialize(e) {
@@ -227,7 +227,7 @@ class Z extends(r = o.default.PersistedStore) {
       results: B,
       selectedIndex: b,
       seenTutorial: G,
-      maxQueryLength: V
+      maxQueryLength: x
     }
   }
 }

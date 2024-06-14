@@ -45,8 +45,8 @@ t.default = function(e) {
     applicationStream: O,
     position: k,
     closePopout: B,
-    updatePosition: x
-  } = e, V = (0, l.useStateFromStores)([m.default], () => {
+    updatePosition: V
+  } = e, x = (0, l.useStateFromStores)([m.default], () => {
     var e;
     return null !== (e = m.default.getChannel(null == O ? void 0 : O.channelId)) && void 0 !== e ? e : null
   }), F = (0, M.useHandleClaimQuestsReward)({
@@ -65,14 +65,14 @@ t.default = function(e) {
     let e = ee.current,
       t = p.current;
     if (null == e || null == t) return;
-    let n = new MutationObserver(() => x());
+    let n = new MutationObserver(() => V());
     return n.observe(e, {
       childList: !0,
       subtree: !0
     }), () => {
       n.disconnect()
     }
-  }, [p, ee, x]);
+  }, [p, ee, V]);
   let et = (0, s.useSpring)({
       from: {
         height: 0
@@ -99,7 +99,7 @@ t.default = function(e) {
       $.dispatch(y.ComponentActions.POPOUT_CLOSE)
     },
     er = "top" === k ? "".concat("4px", " ").concat("4px", " 0 0") : "0 0 ".concat("4px", " ").concat("4px");
-  if (null == N || H || Y && !w(O, V)) return null;
+  if (null == N || H || Y && !w(O, x)) return null;
   let es = () => {
       (0, C.trackQuestContentClicked)({
         questId: N.id,
@@ -129,12 +129,12 @@ t.default = function(e) {
       e.stopPropagation(), es()
     },
     el = () => {
-      if (w(O, V) && null != V) return (0, C.trackQuestContentClicked)({
+      if (w(O, x) && null != x) return (0, C.trackQuestContentClicked)({
         questId: N.id,
         questContent: g.QuestContent.MEMBERS_LIST,
         questContentCTA: C.QuestContentCTA.WATCH_STREAM,
         trackGuildAndChannelMetadata: !0
-      }), _.default.selectVoiceChannel(V.id), (0, c.watchStreamAndTransitionToStream)(O);
+      }), _.default.selectVoiceChannel(x.id), (0, c.watchStreamAndTransitionToStream)(O);
       ea()
     },
     eu = W && !Y ? {
@@ -147,7 +147,7 @@ t.default = function(e) {
       ctaText: U.default.Messages.QUESTS_CHECK_PROGRESS,
       handleClickCta: ea,
       tileAssetType: "reward"
-    } : w(O, V) ? {
+    } : w(O, x) ? {
       headerText: U.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
       ctaText: U.default.Messages.QUESTS_JOIN_ME,
       handleClickCta: el,

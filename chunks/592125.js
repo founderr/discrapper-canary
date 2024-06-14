@@ -36,8 +36,8 @@ let g = new S.default("ChannelStore"),
   w = {},
   k = new Set,
   B = {},
-  x = 0,
-  V = {},
+  V = 0,
+  x = {},
   F = 0,
   H = 0;
 class Y {
@@ -54,7 +54,7 @@ class Y {
     if (0 === t.length) return null;
     let n = c.default.database();
     if (null == n || !t.some(e => !k.has(e))) return null;
-    let i = x;
+    let i = V;
     return (0, E.tryLoadOrResetCacheGatewayAsync)("loadChannels", async () => {
       let e = t.map(e => {
           if (k.has(e)) return null;
@@ -71,7 +71,7 @@ class Y {
         r = e.map(e => e.promise);
       try {
         let t = await Promise.all(r);
-        if (x !== i) return g.fileOnly("lastResetTime has changed, skipping loads for " + e.map(e => e.guildId)), null;
+        if (V !== i) return g.fileOnly("lastResetTime has changed, skipping loads for " + e.map(e => e.guildId)), null;
         let n = t.filter(e => !k.has(e.guildId));
         await _.default.dispatch({
           type: "LOAD_CHANNELS",
@@ -122,11 +122,11 @@ function z(e) {
 
 function Z(e) {
   var t, n, i, r;
-  return W(e, 1, "getChannel"), null !== (r = null !== (i = null !== (n = null !== (t = v[e]) && void 0 !== t ? t : M[e]) && void 0 !== n ? n : P[e]) && void 0 !== i ? i : w[e]) && void 0 !== r ? r : V[e]
+  return W(e, 1, "getChannel"), null !== (r = null !== (i = null !== (n = null !== (t = v[e]) && void 0 !== t ? t : M[e]) && void 0 !== n ? n : P[e]) && void 0 !== i ? i : w[e]) && void 0 !== r ? r : x[e]
 }
 
 function Q(e) {
-  e.isPrivate() ? (delete V[e.id], X(e)) : e.isThread() ? q(e) : A.GUILD_CHANNEL_TYPES.has(e.type) && function(e) {
+  e.isPrivate() ? (delete x[e.id], X(e)) : e.isThread() ? q(e) : A.GUILD_CHANNEL_TYPES.has(e.type) && function(e) {
     J(e)
   }(e)
 }
@@ -233,8 +233,8 @@ function es(e) {
   n.forEach(ea), null == i || i.forEach(e => {
     let t = (0, A.createChannelRecordFromServer)(e),
       n = null != Z(e.id),
-      i = null != V[e.id];
-    t.isPrivate() && (!n || i) ? V[t.id] = t : !n && Q(t)
+      i = null != x[e.id];
+    t.isPrivate() && (!n || i) ? x[t.id] = t : !n && Q(t)
   })
 }
 
@@ -389,7 +389,7 @@ a = "ChannelStore", (s = "displayName") in(r = el) ? Object.defineProperty(r, s,
   },
   CONNECTION_OPEN: function(e) {
     let t = D;
-    for (let n of (U = {}, v = {}, D = {}, P = {}, G = {}, V = {}, B = {}, x = Date.now(), y = e.initialPrivateChannels, e.initialPrivateChannels.forEach(X), e.guilds)) "partial" === n.dataMode && (l().forEach(t[n.id], J), g.fileOnly("Restoring guild channels for ".concat(n.id, " #:").concat(eu(n.id)))), $(n);
+    for (let n of (U = {}, v = {}, D = {}, P = {}, G = {}, x = {}, B = {}, V = Date.now(), y = e.initialPrivateChannels, e.initialPrivateChannels.forEach(X), e.guilds)) "partial" === n.dataMode && (l().forEach(t[n.id], J), g.fileOnly("Restoring guild channels for ".concat(n.id, " #:").concat(eu(n.id)))), $(n);
     eo()
   },
   GUILD_CREATE: function(e) {
@@ -412,7 +412,7 @@ a = "ChannelStore", (s = "displayName") in(r = el) ? Object.defineProperty(r, s,
   LOAD_MESSAGES_SUCCESS: er,
   LOAD_THREADS_SUCCESS: et,
   LOGOUT: function() {
-    g.fileOnly("initializeClear()"), U = {}, v = {}, D = {}, G = {}, M = {}, V = {}, P = {}, k = new Set, B = {}, x = Date.now()
+    g.fileOnly("initializeClear()"), U = {}, v = {}, D = {}, G = {}, M = {}, x = {}, P = {}, k = new Set, B = {}, V = Date.now()
   },
   OVERLAY_INITIALIZE: function(e) {
     for (let t of (e.guilds.length, e.channels)) Q((0, f.deserializeChannel)((0, A.castChannelRecord)(t)))

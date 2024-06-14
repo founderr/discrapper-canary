@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return k
   },
   ALL_TRAITS_SET: function() {
-    return x
+    return V
   },
   CLAN_BRAND_PALETTE_PRESETS: function() {
     return W
@@ -61,7 +61,7 @@ n.r(t), n.d(t, {
     return B
   },
   LANGUAGES_SET: function() {
-    return V
+    return x
   },
   MAX_CLAN_MEMBERS: function() {
     return S
@@ -197,11 +197,11 @@ let P = "700136079562375258",
   w = new Set([...b, ...G]),
   k = ["20+", "30+", "40+", "All Ages"],
   B = ["Beginner Friendly", "PUGs", "Inclusive", "Parent Friendly", "Work-life Balance", "Streamers"],
-  x = new Set([...b, ...k, ...B]),
-  V = new Set(["Bulgarian", "Chinese (Simplified)", "Chinese (Traditional)", "Croatian", "Czech", "Danish", "Dutch", "English", "Finnish", "French", "German", "Greek", "Hindi", "Hungarian", "Italian", "Japanese", "Korean", "Lithuanian", "Norwegian", "Polish", "Portuguese", "Romanian", "Russian", "Spanish", "Swedish", "Thai", "Turkish", "Ukrainian", "Vietnamese"]);
+  V = new Set([...b, ...k, ...B]),
+  x = new Set(["Bulgarian", "Chinese (Simplified)", "Chinese (Traditional)", "Croatian", "Czech", "Danish", "Dutch", "English", "Finnish", "French", "German", "Greek", "Hindi", "Hungarian", "Italian", "Japanese", "Korean", "Lithuanian", "Norwegian", "Polish", "Portuguese", "Romanian", "Russian", "Spanish", "Swedish", "Thai", "Turkish", "Ukrainian", "Vietnamese"]);
 
 function F(e) {
-  return !x.has(e) && !Y.has(e) && !V.has(e)
+  return !V.has(e) && !Y.has(e) && !x.has(e)
 }
 
 function H(e, t) {

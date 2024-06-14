@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return Q
   },
   getRandomDateShortcut: function() {
-    return V
+    return x
   },
   refreshSearchTokens: function() {
     return Z
@@ -125,16 +125,16 @@ function B(e) {
   return null != t && "" !== t && (e.setData("has", t), !0)
 }
 
-function x() {
+function V() {
   return [...Array.from(C()), ...Array.from(R()), ...Array.from(g()), ...Object.keys(M())]
 }
 
-function V() {
-  return l().sample(x())
+function x() {
+  return l().sample(V())
 }
 
 function F(e, t, n) {
-  return H(e, t, x()).map(e => ({
+  return H(e, t, V()).map(e => ({
     ...e,
     group: n,
     key: "".concat(n, "-").concat(e.text)

@@ -40,8 +40,8 @@ var i = n("735250"),
   w = n("177963"),
   k = n("835248"),
   B = n("437431"),
-  x = n("874070"),
-  V = n("185885"),
+  V = n("874070"),
+  x = n("185885"),
   F = n("126134"),
   H = n("981631"),
   Y = n("765305"),
@@ -97,7 +97,7 @@ function Z(e) {
     cardIndex: O
   } = e, {
     category: M
-  } = s, [y, P] = r.useState(!1), k = M === F.CardCategory.HANGOUT && s.streamUserIds.length > 0, x = (0, l.useStateFromStores)([S.default], () => k ? S.default.getPreviewURL(d, s.channelId, s.streamUserIds[0]) : null), V = (0, l.useStateFromStores)([S.default], () => M === F.CardCategory.HANGOUT ? S.default.getIsPreviewLoading(d, s.channelId, s.streamUserIds[0]) : null), Z = M === F.CardCategory.HANGOUT && s.streamUserIds.length > 0 && null == x && !V, Q = (0, l.useStateFromStores)([h.default], () => {
+  } = s, [y, P] = r.useState(!1), k = M === F.CardCategory.HANGOUT && s.streamUserIds.length > 0, V = (0, l.useStateFromStores)([S.default], () => k ? S.default.getPreviewURL(d, s.channelId, s.streamUserIds[0]) : null), x = (0, l.useStateFromStores)([S.default], () => M === F.CardCategory.HANGOUT ? S.default.getIsPreviewLoading(d, s.channelId, s.streamUserIds[0]) : null), Z = M === F.CardCategory.HANGOUT && s.streamUserIds.length > 0 && null == V && !x, Q = (0, l.useStateFromStores)([h.default], () => {
     let e = M === F.CardCategory.HANGOUT || M === F.CardCategory.GAMING ? s.channelId : M === F.CardCategory.EVENT ? s.event.channel_id : M === F.CardCategory.EMBEDDED_ACTIVITY ? s.embeddedActivities[0].channelId : null;
     return h.default.getChannel(e)
   }), X = (0, l.useStateFromStores)([c.default], () => c.default.getActiveEventByChannel(null == Q ? void 0 : Q.id)), {
@@ -189,7 +189,7 @@ function Z(e) {
         })
       }
     }
-  }(s, d, x, ee), en = function(e, t) {
+  }(s, d, V, ee), en = function(e, t) {
     let {
       category: n
     } = e, r = (0, G.useSortUserIdsByAffinity)(n === F.CardCategory.HANGOUT ? null == e ? void 0 : e.userIds : []), s = (0, G.useSortUserIdsByAffinity)(n === F.CardCategory.HANGOUT ? null == e ? void 0 : e.streamUserIds : []), o = (0, G.useSortUserIdsByAffinity)(n === F.CardCategory.GAMING ? null == e ? void 0 : e.gameUserIds : []), l = (0, U.default)(e), {
@@ -363,7 +363,7 @@ function Z(e) {
       default:
         return null
     }
-  }(s, ee, x), er = function(e) {
+  }(s, ee, V), er = function(e) {
     let {
       category: t
     } = e, n = (0, U.default)(e), {
@@ -441,7 +441,7 @@ function Z(e) {
     })
   }(s, d, O), {
     hasChannelStatus: eo
-  } = (0, G.useChannelStatus)(Q), el = K(s), eu = M === F.CardCategory.HANGOUT && eo && null == x, ed = (null != X || !!(null == Q ? void 0 : Q.isGuildStageVoice())) && $.length > 0, e_ = M === F.CardCategory.HANGOUT && (0 === s.streamUserIds.length || Z) && !(null == Q ? void 0 : Q.isGuildStageVoice()), ec = M === F.CardCategory.EMBEDDED_ACTIVITY && s.streamersCount > 0 ? (0, i.jsxs)("div", {
+  } = (0, G.useChannelStatus)(Q), el = K(s), eu = M === F.CardCategory.HANGOUT && eo && null == V, ed = (null != X || !!(null == Q ? void 0 : Q.isGuildStageVoice())) && $.length > 0, e_ = M === F.CardCategory.HANGOUT && (0 === s.streamUserIds.length || Z) && !(null == Q ? void 0 : Q.isGuildStageVoice()), ec = M === F.CardCategory.EMBEDDED_ACTIVITY && s.streamersCount > 0 ? (0, i.jsxs)("div", {
     className: W.pill,
     children: [(0, i.jsx)(D.default, {
       className: W.pillIcon

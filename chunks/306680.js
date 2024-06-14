@@ -37,8 +37,8 @@ var r, s, a, o = n("512722"),
   w = n("131704"),
   k = n("386438"),
   B = n("70956"),
-  x = n("630388"),
-  V = n("823379"),
+  V = n("630388"),
+  x = n("823379"),
   F = n("931619"),
   H = n("709054"),
   Y = n("314897"),
@@ -668,7 +668,7 @@ function eU(e) {
     if ((0, w.isReadableType)(e.type)) {
       var t;
       let n = ey.get(e.id);
-      n.lastMessageId = e.last_message_id, n.lastPinTimestamp = eR(e.last_pin_timestamp), n._isResourceChannel = (0, x.hasFlag)(null !== (t = e.flags) && void 0 !== t ? t : 0, es.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL), w.THREAD_CHANNEL_TYPES.has(e.type) && n.syncThreadSettings()
+      n.lastMessageId = e.last_message_id, n.lastPinTimestamp = eR(e.last_pin_timestamp), n._isResourceChannel = (0, V.hasFlag)(null !== (t = e.flags) && void 0 !== t ? t : 0, es.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL), w.THREAD_CHANNEL_TYPES.has(e.type) && n.syncThreadSettings()
     }
   })
 }
@@ -747,11 +747,11 @@ function eB(e) {
   return !1
 }
 
-function ex() {
+function eV() {
   null != eS && clearTimeout(eS)
 }
 
-function eV(e) {
+function ex(e) {
   if (null != e.channelUpdates) {
     var t;
     eP(null === (t = e.channelUpdates) || void 0 === t ? void 0 : t.writes)
@@ -787,7 +787,7 @@ function eY(e) {
       thread: t
     } = e;
     return t
-  }).filter(V.isNotNullish));
+  }).filter(x.isNotNullish));
   eU(n)
 }
 
@@ -995,7 +995,7 @@ let e$ = new eJ(T.default, {
       let r = t[e],
         s = ey.getIfExists(e);
       if (null != s)
-        for (let e of [null === (n = r.new_messages) || void 0 === n ? void 0 : n[0]].concat(null !== (i = r.modified_messages) && void 0 !== i ? i : []).filter(V.isNotNullish)) 1 === H.default.compare(e.id, s.lastMessageId) && (s.lastMessageId = e.id)
+        for (let e of [null === (n = r.new_messages) || void 0 === n ? void 0 : n[0]].concat(null !== (i = r.modified_messages) && void 0 !== i ? i : []).filter(x.isNotNullish)) 1 === H.default.compare(e.id, s.lastMessageId) && (s.lastMessageId = e.id)
     }
   },
   CONNECTION_OPEN: function(e) {
@@ -1033,8 +1033,8 @@ let e$ = new eJ(T.default, {
           let t = new Date(e.since).getTime();
           (null != n.ackMessageId ? H.default.extractTimestamp(n.ackMessageId) : 0) < t && (n.mentionCount++, n.lastMessageId = H.default.fromTimestamp(t))
         })
-      }(r), eP(s), i)) eP(null !== (n = e.channels) && void 0 !== n ? n : []), eV(e), eb(e);
-    ex(), eS = setTimeout(() => (function(e) {
+      }(r), eP(s), i)) eP(null !== (n = e.channels) && void 0 !== n ? n : []), ex(e), eb(e);
+    eV(), eS = setTimeout(() => (function(e) {
       let t = em();
       for (let i of e) {
         var n;
@@ -1050,7 +1050,7 @@ let e$ = new eJ(T.default, {
     } = e;
     eP(t)
   },
-  LOGOUT: ex,
+  LOGOUT: eV,
   OVERLAY_INITIALIZE: function(e) {
     let {
       readStates: t,
@@ -1078,7 +1078,7 @@ let e$ = new eJ(T.default, {
     } = e, i = em();
     ey.forEach(e => {
       e.guildId === n.id && e.shouldDeleteReadState(i) && e.delete(!1)
-    }), eP(null !== (t = n.channels) && void 0 !== t ? t : []), eV(n), eb(n)
+    }), eP(null !== (t = n.channels) && void 0 !== t ? t : []), ex(n), eb(n)
   },
   LOAD_MESSAGES_SUCCESS: function(e) {
     let {
@@ -1088,7 +1088,7 @@ let e$ = new eJ(T.default, {
     } = e, r = ey.get(t);
     r.loadedMessages = !0;
     let s = X.default.getMessages(t);
-    null != s && (i.length > 0 && 1 === H.default.compare(i[0].id, r.ackMessageId) && 0 === r.unreadCount ? r.rebuildChannelState() : s.hasPresent() || s.jumpTargetId === r.ackMessageId ? r.rebuildChannelState() : n && null != r.ackMessageId && s.has(r.ackMessageId, !0) && (r.unreadCount += i.length, null == r.oldestUnreadMessageId && r.rebuildChannelState())), eU(i.map(e => e.thread).filter(V.isNotNullish))
+    null != s && (i.length > 0 && 1 === H.default.compare(i[0].id, r.ackMessageId) && 0 === r.unreadCount ? r.rebuildChannelState() : s.hasPresent() || s.jumpTargetId === r.ackMessageId ? r.rebuildChannelState() : n && null != r.ackMessageId && s.has(r.ackMessageId, !0) && (r.unreadCount += i.length, null == r.oldestUnreadMessageId && r.rebuildChannelState())), eU(i.map(e => e.thread).filter(x.isNotNullish))
   },
   MESSAGE_CREATE: function(e) {
     let t, n, {

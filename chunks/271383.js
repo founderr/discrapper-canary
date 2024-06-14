@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return F
   },
   getUserIdFromCommunicationDisabledUserKey: function() {
-    return V
+    return x
   }
 }), n("47120"), n("789020"), n("653041");
 var i, r, s, a, o, l, u = n("392711"),
@@ -39,14 +39,14 @@ let R = new I.default("GuildMemberStore"),
 
 function G(e, t) {
   if (null == t.communicationDisabledUntil || !(0, T.isMemberCommunicationDisabled)(t)) return w(e, t.userId);
-  let n = x(e, t.userId);
+  let n = V(e, t.userId);
   v[n] !== t.communicationDisabledUntil && (0, T.isMemberCommunicationDisabled)(t) && (v[n] = t.communicationDisabledUntil, k(n))
 }
 
 function w(e, t) {
   if (null != t) {
-    let n = x(e, t);
-    null != v[n] && k(n), B(x(e, t))
+    let n = V(e, t);
+    null != v[n] && k(n), B(V(e, t))
   } else
     for (let t in v) F(t) === e && (k(t), B(t))
 }
@@ -56,15 +56,15 @@ function k(e) {
 }
 
 function B(e) {
-  V(e) === N.default.getId() && (0, f.clearCommunicationDisabledNotice)(F(e)), delete v[e]
+  x(e) === N.default.getId() && (0, f.clearCommunicationDisabledNotice)(F(e)), delete v[e]
 }
 
-function x(e, t) {
+function V(e, t) {
   let n = [];
   return n[0] = e, n[1] = t, n.join("-")
 }
 
-function V(e) {
+function x(e) {
   return e.split("-")[1]
 }
 

@@ -63,8 +63,8 @@ function g(e) {
       analyticsLocations: B
     } = (0, I.default)(E.default.USERNAME),
     {
-      nick: x,
-      colorString: V,
+      nick: V,
+      colorString: x,
       colorRoleName: F
     } = i,
     H = null != r.messageReference && null != r.webhookId && r.hasFlag(O.MessageFlags.IS_CROSSPOST),
@@ -77,13 +77,13 @@ function g(e) {
     }), [r.id, r.author.id]),
     K = {
       className: C.username,
-      style: "username" === Y && null != V ? {
-        color: V
+      style: "username" === Y && null != x ? {
+        color: x
       } : void 0,
       onClick: M,
       onContextMenu: y,
       children: (0, s.jsx)(s.Fragment, {
-        children: (L ? "@" : "") + x
+        children: (L ? "@" : "") + V
       })
     },
     z = a.useMemo(() => g ? (0, s.jsx)(T.default, {
@@ -137,7 +137,7 @@ function g(e) {
     children: [null != Z && g ? (0, s.jsxs)(s.Fragment, {
       children: [" ", Z, " "]
     }) : null, "dot" === Y ? (0, s.jsx)(_.RoleDot, {
-      color: V,
+      color: x,
       name: F,
       className: C.roleDot
     }) : null, n, !g && (0, s.jsxs)(s.Fragment, {

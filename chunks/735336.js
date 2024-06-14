@@ -40,26 +40,26 @@ var i = n("735250"),
   w = n("943217"),
   k = n("793397"),
   B = n("841040"),
-  x = n("228168"),
-  V = n("981631"),
+  V = n("228168"),
+  x = n("981631"),
   F = n("474936"),
   H = n("689938"),
   Y = n("214572");
 let j = {
-    [x.UserProfileTypes.POPOUT]: 18,
-    [x.UserProfileTypes.MODAL]: 24,
-    [x.UserProfileTypes.SETTINGS]: 0,
-    [x.UserProfileTypes.PANEL]: 18,
-    [x.UserProfileTypes.POMELO_POPOUT]: 18,
-    [x.UserProfileTypes.CANCEL_MODAL]: 0
+    [V.UserProfileTypes.POPOUT]: 18,
+    [V.UserProfileTypes.MODAL]: 24,
+    [V.UserProfileTypes.SETTINGS]: 0,
+    [V.UserProfileTypes.PANEL]: 18,
+    [V.UserProfileTypes.POMELO_POPOUT]: 18,
+    [V.UserProfileTypes.CANCEL_MODAL]: 0
   },
   W = {
-    [x.UserProfileTypes.MODAL]: V.AnalyticsPages.USER_PROFILE,
-    [x.UserProfileTypes.POPOUT]: V.AnalyticsPages.USER_POPOUT,
-    [x.UserProfileTypes.SETTINGS]: V.AnalyticsPages.USER_POPOUT,
-    [x.UserProfileTypes.PANEL]: V.AnalyticsPages.DM_CHANNEL,
-    [x.UserProfileTypes.POMELO_POPOUT]: V.AnalyticsPages.POMELO_POPOUT,
-    [x.UserProfileTypes.CANCEL_MODAL]: V.AnalyticsPages.USER_POPOUT
+    [V.UserProfileTypes.MODAL]: x.AnalyticsPages.USER_PROFILE,
+    [V.UserProfileTypes.POPOUT]: x.AnalyticsPages.USER_POPOUT,
+    [V.UserProfileTypes.SETTINGS]: x.AnalyticsPages.USER_POPOUT,
+    [V.UserProfileTypes.PANEL]: x.AnalyticsPages.DM_CHANNEL,
+    [V.UserProfileTypes.POMELO_POPOUT]: x.AnalyticsPages.POMELO_POPOUT,
+    [V.UserProfileTypes.CANCEL_MODAL]: x.AnalyticsPages.USER_POPOUT
   };
 
 function K(e) {
@@ -74,12 +74,12 @@ function K(e) {
     analyticsLocations: T
   } = (0, E.default)(c.default.BADGE);
   return r.useEffect(() => {
-    s && !I.current && (I.current = !0, M.default.track(V.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    s && !I.current && (I.current = !0, M.default.track(x.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: F.PremiumUpsellTypes.CUSTOM_PROFILES_PROFILE_BANNER_SOCIAL_UPSELL,
       location: {
         page: W[t],
-        section: V.AnalyticsSections.NITRO_BANNER,
-        object: V.AnalyticsObjects.NITRO_BADGE
+        section: x.AnalyticsSections.NITRO_BANNER,
+        object: x.AnalyticsObjects.NITRO_BADGE
       },
       location_stack: T
     }))
@@ -104,7 +104,7 @@ function K(e) {
               title: H.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_TITLE,
               description: H.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_DESCRIPTION.format({
                 onAndMoreWithPremiumClick: () => {
-                  r(), _.default.open(V.UserSettingsSections.PREMIUM, null, {
+                  r(), _.default.open(x.UserSettingsSections.PREMIUM, null, {
                     analyticsLocations: e
                   })
                 }
@@ -181,11 +181,11 @@ function Z(e) {
     appsInGDMEnabled: ed,
     availableApplications: e_
   } = (0, f.usePrivateChannelIntegrationState)({
-    channelId: null !== (n = null == eu ? void 0 : eu.id) && void 0 !== n ? n : V.EMPTY_STRING_SNOWFLAKE_ID
+    channelId: null !== (n = null == eu ? void 0 : eu.id) && void 0 !== n ? n : x.EMPTY_STRING_SNOWFLAKE_ID
   }), ec = null == el ? void 0 : el.application, eE = ed && null != e_.find(e => e.id === (null == ec ? void 0 : ec.id)), eI = (0, S.default)({
     analyticsLocation: {
-      page: V.AnalyticsPages.USER_POPOUT,
-      section: V.AnalyticsSections.PROFILE_POPOUT
+      page: x.AnalyticsPages.USER_POPOUT,
+      section: x.AnalyticsSections.PROFILE_POPOUT
     }
   });
   return (0, i.jsx)(w.default, {
@@ -241,7 +241,7 @@ function Z(e) {
           ...e,
           profileType: L
         })
-      }) : j && null != en && L !== x.UserProfileTypes.SETTINGS ? (0, i.jsx)(K, {
+      }) : j && null != en && L !== V.UserProfileTypes.SETTINGS ? (0, i.jsx)(K, {
         type: L,
         shown: void 0 === v ? J : v,
         onClick: () => {
@@ -249,7 +249,7 @@ function Z(e) {
             action: "PRESS_PREMIUM_UPSELL"
           }), null == E || E()
         }
-      }) : null, eE ? L !== x.UserProfileTypes.MODAL ? null : (0, i.jsx)(d.Clickable, {
+      }) : null, eE ? L !== V.UserProfileTypes.MODAL ? null : (0, i.jsx)(d.Clickable, {
         onClick: E,
         "aria-label": H.default.Messages.BACK,
         className: Y.pencilContainer,

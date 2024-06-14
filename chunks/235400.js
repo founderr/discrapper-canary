@@ -58,7 +58,7 @@ function L(e) {
     purchase: U
   } = (0, c.default)(null == M ? void 0 : M.skuId), b = A.default.canUseCollectibles(t), G = r.useRef(null), w = (0, I.default)(a), k = (0, m.isEqualAvatarDecoration)(M, void 0 === L ? D : L), B = () => {
     v(M), u()
-  }, x = r.useCallback(e => {
+  }, V = r.useCallback(e => {
     u(), (0, d.openCollectiblesShop)({
       analyticsLocations: a,
       analyticsSource: l.default.EDIT_AVATAR_DECORATION_MODAL,
@@ -87,7 +87,7 @@ function L(e) {
         onSelect: e => {
           y(e), null != e && w(e)
         },
-        onOpenShop: x
+        onOpenShop: V
       }), (0, i.jsx)(N.default, {
         className: g.modalPreview,
         user: t,
@@ -102,7 +102,7 @@ function L(e) {
         children: R.default.Messages.AVATAR_DECORATION_MODAL_APPLY
       }) : null == U && (b || !(0, _.isPremiumCollectiblesProduct)(P)) ? (0, i.jsx)(o.Button, {
         className: g.modalFooterShopButton,
-        onClick: () => x(null == P ? void 0 : P.skuId),
+        onClick: () => V(null == P ? void 0 : P.skuId),
         children: R.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
       }) : (0, i.jsx)(T.default, {
         subscriptionTier: C.PremiumSubscriptionSKUs.TIER_2,

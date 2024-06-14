@@ -46,7 +46,7 @@ t.default = e => {
     location: "EmojiPicker"
   }, {
     autoTrackExposure: !1
-  }), x = _.EmojiPickerStore.getState(), [V, F] = r.useState(x.inspectedExpressionPosition), [H, Y] = (0, l.default)(null, 300), j = r.useRef(null);
+  }), V = _.EmojiPickerStore.getState(), [x, F] = r.useState(V.inspectedExpressionPosition), [H, Y] = (0, l.default)(null, 300), j = r.useRef(null);
   r.useEffect(() => _.EmojiPickerStore.useStore.subscribe(e => F(e), e => e.inspectedExpressionPosition), []), r.useEffect(() => {
     E.FrecencyUserSettingsActionCreators.loadIfNecessary()
   }, []);
@@ -59,7 +59,7 @@ t.default = e => {
           let {
             visibleRowIndex: n,
             columnIndex: l
-          } = e, u = V.rowIndex === n && V.columnIndex === l, d = t => {
+          } = e, u = x.rowIndex === n && x.columnIndex === l, d = t => {
             t.stopPropagation(), !L.current && !v.current && (s(e, {
               isFinalSelection: !0,
               toggleFavorite: !1
@@ -113,7 +113,7 @@ t.default = e => {
           let {
             columnIndex: r,
             visibleRowIndex: a
-          } = e, o = V.rowIndex === a && V.columnIndex === r;
+          } = e, o = x.rowIndex === a && x.columnIndex === r;
           return (0, i.jsx)(h.default, {
             rowIndex: D,
             descriptor: e,

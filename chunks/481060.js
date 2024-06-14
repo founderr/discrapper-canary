@@ -235,16 +235,16 @@ n.r(t), n.d(t, {
     return B.FormSwitch
   },
   FormText: function() {
-    return x.FormText
+    return V.FormText
   },
   FormTextTypes: function() {
-    return x.FormTextTypes
+    return V.FormTextTypes
   },
   FormTitle: function() {
-    return V.FormTitle
+    return x.FormTitle
   },
   FormTitleTags: function() {
-    return V.FormTitleTags
+    return x.FormTitleTags
   },
   H: function() {
     return Y.H
@@ -562,7 +562,7 @@ n.r(t), n.d(t, {
     return ts.SlideIn
   },
   Slider: function() {
-    return ex.Slider
+    return eV.Slider
   },
   Slides: function() {
     return eB.Slides
@@ -571,10 +571,10 @@ n.r(t), n.d(t, {
     return tr.Spacer
   },
   Spinner: function() {
-    return eV.Spinner
+    return ex.Spinner
   },
   SpinnerTypes: function() {
-    return eV.SpinnerTypes
+    return ex.SpinnerTypes
   },
   StackedProgress: function() {
     return eI.StackedProgress
@@ -883,8 +883,8 @@ var i = n("680732"),
   w = n("383838"),
   k = n("789164"),
   B = n("471141"),
-  x = n("534542"),
-  V = n("512983"),
+  V = n("534542"),
+  x = n("512983"),
   F = n("652334"),
   H = n("260034"),
   Y = n("337033"),
@@ -937,8 +937,8 @@ var i = n("680732"),
   ew = n("503145"),
   ek = n("936621"),
   eB = n("718580"),
-  ex = n("561779"),
-  eV = n("922770"),
+  eV = n("561779"),
+  ex = n("922770"),
   eF = n("696826"),
   eH = n("437337"),
   eY = n("706898"),

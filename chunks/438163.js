@@ -79,7 +79,7 @@ function T(e) {
       [I.statusBubbleShape]: !R && L || !M,
       [I.statusBubbleSingleLineWithTextShape]: M && R
     }),
-    x = a()(I.statusBubble, {
+    V = a()(I.statusBubble, {
       [I.statusBubbleShape]: !R && L || !M,
       [I.statusBubbleSingleLineWithTextShape]: M && R,
       [I.statusBubbleEmojiOnlyPadding]: v,
@@ -93,7 +93,7 @@ function T(e) {
       children: (0, i.jsx)("div", {
         className: B,
         children: (0, i.jsxs)("span", {
-          className: x,
+          className: V,
           children: [(0, i.jsxs)("div", {
             className: a()(I.content, I.clamp, I.placeholderWidth, {
               [I.panel]: n === E.UserProfileTypes.PANEL
@@ -119,7 +119,7 @@ function T(e) {
         onMouseEnter: () => b(!0),
         onMouseLeave: () => b(!1),
         children: (0, i.jsx)("span", {
-          className: x,
+          className: V,
           children: (() => {
             let e = a()(I.content, {
               [I.clamp]: S,

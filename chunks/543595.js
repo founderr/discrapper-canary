@@ -37,8 +37,8 @@ var i, r, s, a = n("735250"),
   w = n("366966"),
   k = n("936195"),
   B = n("692437"),
-  x = n("632184"),
-  V = n("806519"),
+  V = n("632184"),
+  x = n("806519"),
   F = n("981631"),
   H = n("701488"),
   Y = n("689938"),
@@ -220,8 +220,8 @@ class q extends(r = o.PureComponent) {
     else if ((0, L.isStageActivity)(e)) {
       let t = (0, L.unpackStageChannelParty)(e);
       if (null == t) return null;
-      I = (0, a.jsx)(V.default, {
-        mask: V.default.Masks.SQUIRCLE,
+      I = (0, a.jsx)(x.default, {
+        mask: x.default.Masks.SQUIRCLE,
         width: H.ImageSizes.SMALL,
         height: H.ImageSizes.SMALL,
         children: (0, a.jsx)("img", {
@@ -397,7 +397,7 @@ class q extends(r = o.PureComponent) {
         height: 12
       }), (0, a.jsxs)("div", {
         className: j.voiceChannelInfo,
-        children: [(0, a.jsx)(x.default, {
+        children: [(0, a.jsx)(V.default, {
           width: 12,
           height: 12
         }), (0, a.jsx)(E.Text, {

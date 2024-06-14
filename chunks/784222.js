@@ -56,8 +56,8 @@ let G = e => {
   } = e, d = (0, E.useStateFromStores)([T.default], () => T.default.categories), I = (0, E.useStateFromStores)([p.default], () => p.default.getGuild(null == t ? void 0 : t.getGuildId()), [t]), h = null == t ? null : t.getGuildId(), A = (0, E.useStateFromStores)([T.default], () => T.default.getDisambiguatedEmojiContext(h), [h]), G = (0, D.useFavoriteEmojis)(h), w = (0, D.useFrequentlyUsedEmojis)(h), {
     topEmojis: k,
     newlyAddedEmojis: B
-  } = (0, y.default)(h, r), x = (0, E.useStateFromStoresArray)([C.default], () => C.default.getFlattenedGuildIds(), []), {
-    canCreateExpressions: V
+  } = (0, y.default)(h, r), V = (0, E.useStateFromStoresArray)([C.default], () => C.default.getFlattenedGuildIds(), []), {
+    canCreateExpressions: x
   } = (0, m.useManageResourcePermissions)(I), F = (0, E.useStateFromStores)([R.default], () => R.default.getCurrentUser()), H = (0, L.isPremium)(F), Y = A.getCustomEmoji(), j = e => {
     if (e.type === f.EmojiTypes.GUILD) return e.guildId
   }, W = u.useMemo(() => _().groupBy(Y, j), [Y]), {
@@ -67,7 +67,7 @@ let G = e => {
     location: "EmojiPicker"
   }, {
     autoTrackExposure: !0,
-    disable: !V
+    disable: !x
   });
   return u.useMemo(() => {
     let e = [],
@@ -96,7 +96,7 @@ let G = e => {
             C = !p && null != m && N === m.id && S.length < m.getMaxEmojiSlots(),
             R = p && S.length < A && !K,
             L = null != m && p && K && z === v.EmojiPickerUploadTreatment.WITH_TOP_LIST && W[m.id].length < m.getMaxEmojiSlots(),
-            M = i && V && null != m && (C || R || L);
+            M = i && x && null != m && (C || R || L);
           M && L && S.length === A && S.shift();
           let y = K && M && !d,
             U = Math.ceil((M ? S.length + 1 : S.length) / A),
@@ -190,7 +190,7 @@ let G = e => {
               })
             };
             if (null != I && n(I.id), (0, U.isExternalEmojiAllowedForIntention)(r))
-              for (let e of x)(null == I || I.id !== e) && n(e)
+              for (let e of V)(null == I || I.id !== e) && n(e)
           } else if (e === P.EmojiCategories.TOP_GUILD_EMOJI) {
         if (null != I) {
           let {
@@ -251,7 +251,7 @@ let G = e => {
       rowCountBySection: e,
       sectionDescriptors: u
     }
-  }, [A, a, l, o, s, n, t, r, d, I, W, x, B, k, w, G, V, i, H, K, z])
+  }, [A, a, l, o, s, n, t, r, d, I, W, V, B, k, w, G, x, i, H, K, z])
 };
 (l = s || (s = {}))[l.PREMIUM = 0] = "PREMIUM", l[l.ROLE_SUBSCRIPTION = 1] = "ROLE_SUBSCRIPTION";
 let w = e => {

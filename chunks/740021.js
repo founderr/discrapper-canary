@@ -16,8 +16,8 @@ var i = l("442837"),
   c = l("699516"),
   f = l("998502"),
   S = l("877485"),
-  E = l("505737"),
-  I = l("204197"),
+  I = l("505737"),
+  E = l("204197"),
   m = l("78675"),
   v = l("438163"),
   _ = l("652853"),
@@ -25,9 +25,9 @@ var i = l("442837"),
   p = l("228168"),
   x = l("182294"),
   g = l("602091"),
-  A = l("231338"),
+  N = l("231338"),
   C = l("566483");
-let N = f.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
+let A = f.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
 function U(e) {
   let {
@@ -42,11 +42,11 @@ function U(e) {
     onClose: M
   } = e, {
     theme: j
-  } = (0, _.useUserProfileThemeContext)(), y = (0, E.default)(t.id, U), {
+  } = (0, _.useUserProfileThemeContext)(), y = (0, I.default)(t.id, U), {
     avatarSrc: O,
     eventHandlers: L,
     avatarDecorationSrc: F
-  } = (0, I.default)({
+  } = (0, E.default)({
     user: t,
     guildId: null == l ? void 0 : l.guildId,
     size: x.AvatarSizes.SIZE_120
@@ -57,7 +57,7 @@ function U(e) {
     location: "SimplifiedUserProfileModalHeader"
   }), B = (0, i.useStateFromStores)([c.default], () => c.default.getRelationshipType(t.id)), G = (0, i.useStateFromStores)([u.default], () => u.default.getId() === t.id), [k, w] = (0, i.useStateFromStoresArray)([d.default], () => {
     let e = d.default.isMobileOnline(t.id);
-    return (0, r.shouldDisableUserPresenceInChannel)(t, P) ? [A.StatusTypes.UNKNOWN, e] : (0, o.default)(a) ? [A.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
+    return (0, r.shouldDisableUserPresenceInChannel)(t, P) ? [N.StatusTypes.UNKNOWN, e] : (0, o.default)(a) ? [N.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
   });
   return (0, s.jsxs)("header", {
     children: [(0, s.jsx)(m.default, {
@@ -69,7 +69,7 @@ function U(e) {
       className: C.inner,
       children: [(0, s.jsx)("div", {
         ...L,
-        children: (0, s.jsx)(N, {
+        children: (0, s.jsx)(A, {
           src: O,
           avatarDecoration: F,
           size: x.AvatarSizes.SIZE_120,

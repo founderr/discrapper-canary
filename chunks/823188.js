@@ -54,8 +54,8 @@ var c = n("120356"),
   w = n("761374"),
   k = n("363138"),
   B = n("930153"),
-  x = n("74538"),
-  V = n("357355"),
+  V = n("74538"),
+  x = n("357355"),
   F = n("140465"),
   H = n("424082"),
   Y = n("650032"),
@@ -217,7 +217,7 @@ function eo(e) {
   if (!t && null != m && n === m && null != d && null != d.planIdFromItems) {
     let e = null != d.trialEndsAt ? T()(null == d ? void 0 : d.trialEndsAt).diff(T()(), "d") : 0,
       t = q.SubscriptionPlanInfo[d.planIdFromItems],
-      n = x.default.formatPriceString(x.default.getDefaultPrice(t.id), t.interval);
+      n = V.default.formatPriceString(V.default.getDefaultPrice(t.id), t.interval);
     return (0, _.jsx)(_.Fragment, {
       children: (0, _.jsx)(A.Heading, {
         variant: "heading-md/normal",
@@ -243,7 +243,7 @@ function eo(e) {
     })
   }
   if (!t && i) {
-    let e = x.default.formatPriceString(x.default.getDefaultPrice(n === q.PremiumTypes.TIER_0 ? q.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : q.SubscriptionPlans.PREMIUM_MONTH_TIER_2), q.SubscriptionIntervalTypes.MONTH);
+    let e = V.default.formatPriceString(V.default.getDefaultPrice(n === q.PremiumTypes.TIER_0 ? q.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : q.SubscriptionPlans.PREMIUM_MONTH_TIER_2), q.SubscriptionIntervalTypes.MONTH);
     if (0 === r) {
       var C, L, v, D;
       return (0, _.jsx)(A.Heading, {
@@ -251,8 +251,8 @@ function eo(e) {
         color: "always-white",
         className: ee.trialHeader,
         children: $.default.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_BEFORE_REDEMPTION_NEW.format({
-          planName: (0, x.getTierDisplayName)(null !== (L = q.PREMIUM_SKU_TO_MONTHLY_PLAN[null !== (C = null == O ? void 0 : O.sku_id) && void 0 !== C ? C : q.PremiumSubscriptionSKUs.NONE]) && void 0 !== L ? L : q.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
-          duration: (0, x.formatIntervalDuration)({
+          planName: (0, V.getTierDisplayName)(null !== (L = q.PREMIUM_SKU_TO_MONTHLY_PLAN[null !== (C = null == O ? void 0 : O.sku_id) && void 0 !== C ? C : q.PremiumSubscriptionSKUs.NONE]) && void 0 !== L ? L : q.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
+          duration: (0, V.formatIntervalDuration)({
             intervalType: null !== (v = null == O ? void 0 : O.interval) && void 0 !== v ? v : q.SubscriptionIntervalTypes.DAY,
             intervalCount: null !== (D = null == O ? void 0 : O.interval_count) && void 0 !== D ? D : 30,
             capitalize: !1
@@ -305,7 +305,7 @@ function el(e) {
     }), (0, _.jsx)(es, {
       Icon: D.default,
       text: $.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-        maxUploadPremium: (0, x.getMaxFileSizeForPremiumType)(q.PremiumTypes.TIER_0, {
+        maxUploadPremium: (0, V.getMaxFileSizeForPremiumType)(q.PremiumTypes.TIER_0, {
           useSpace: !1
         })
       }),
@@ -321,7 +321,7 @@ function el(e) {
     children: [(0, _.jsx)(es, {
       Icon: k.default,
       text: $.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-        maxUploadPremium: (0, x.getMaxFileSizeForPremiumType)(q.PremiumTypes.TIER_0, {
+        maxUploadPremium: (0, V.getMaxFileSizeForPremiumType)(q.PremiumTypes.TIER_0, {
           useSpace: !1
         })
       })
@@ -426,7 +426,7 @@ function ed(e) {
     featureSet: t = 0,
     isModal: n = !1,
     isGift: i = !1
-  } = e, r = (0, f.useStateFromStores)([C.default], () => C.default.locale), s = (0, f.useStateFromStores)([V.default], () => V.default.affinities), a = n && !i && s.length > 0;
+  } = e, r = (0, f.useStateFromStores)([C.default], () => C.default.locale), s = (0, f.useStateFromStores)([x.default], () => x.default.affinities), a = n && !i && s.length > 0;
   switch (t) {
     case 1:
       return (0, _.jsxs)(_.Fragment, {
@@ -439,7 +439,7 @@ function ed(e) {
         }), (0, _.jsx)(es, {
           Icon: k.default,
           text: $.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-            maxUploadPremium: (0, x.getMaxFileSizeForPremiumType)(q.PremiumTypes.TIER_2, {
+            maxUploadPremium: (0, V.getMaxFileSizeForPremiumType)(q.PremiumTypes.TIER_2, {
               useSpace: !1
             })
           })
@@ -471,7 +471,7 @@ function ed(e) {
         }), (0, _.jsx)(es, {
           Icon: D.default,
           text: $.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-            maxUploadPremium: (0, x.getMaxFileSizeForPremiumType)(q.PremiumTypes.TIER_2, {
+            maxUploadPremium: (0, V.getMaxFileSizeForPremiumType)(q.PremiumTypes.TIER_2, {
               useSpace: !1
             })
           }),
@@ -494,7 +494,7 @@ function ed(e) {
         children: [(0, _.jsx)(es, {
           Icon: k.default,
           text: $.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-            maxUploadPremium: (0, x.getMaxFileSizeForPremiumType)(q.PremiumTypes.TIER_2, {
+            maxUploadPremium: (0, V.getMaxFileSizeForPremiumType)(q.PremiumTypes.TIER_2, {
               useSpace: !1
             })
           })

@@ -40,8 +40,8 @@ var i = n("735250"),
   w = n("952561"),
   k = n("513202"),
   B = n("915863"),
-  x = n("701488"),
-  V = n("981631"),
+  V = n("701488"),
+  x = n("981631"),
   F = n("689938");
 
 function H(e) {
@@ -72,7 +72,7 @@ function H(e) {
       channelId: n
     } = e;
     return (t === (null == H ? void 0 : H.application_id) || t === (null == Y ? void 0 : Y.applicationId)) && n === et
-  })), er = (0, s.useStateFromStores)([C.default], () => null != H && null != H.application_id && C.default.getState(H.application_id, V.ActivityActionTypes.JOIN) === V.ActivityActionStates.LOADING), [es] = (0, c.default)((null == Y ? void 0 : Y.applicationId) != null ? [null == Y ? void 0 : Y.applicationId] : (null == H ? void 0 : H.application_id) != null ? [null == H ? void 0 : H.application_id] : []), ea = (0, U.useEmbeddedActivityJoinability)({
+  })), er = (0, s.useStateFromStores)([C.default], () => null != H && null != H.application_id && C.default.getState(H.application_id, x.ActivityActionTypes.JOIN) === x.ActivityActionStates.LOADING), [es] = (0, c.default)((null == Y ? void 0 : Y.applicationId) != null ? [null == Y ? void 0 : Y.applicationId] : (null == H ? void 0 : H.application_id) != null ? [null == H ? void 0 : H.application_id] : []), ea = (0, U.useEmbeddedActivityJoinability)({
     userId: j.id,
     activity: H,
     channelId: et,
@@ -92,7 +92,7 @@ function H(e) {
     VoiceStateStore: O.default,
     PermissionStore: A.default
   }) : void 0), el = (0, s.useStateFromStores)([D.default], () => Array.from(D.default.getSelfEmbeddedActivities().values()).some(e => e.applicationId === (null == Y ? void 0 : Y.applicationId) && e.channelId === (null == Y ? void 0 : Y.channelId))), eu = (0, w.default)(), ed = (0, d.useAnalyticsContext)(), e_ = !g.isPlatformEmbedded;
-  if (!((0, b.default)(H, V.ActivityFlags.JOIN) || K) || null == ee) return null;
+  if (!((0, b.default)(H, x.ActivityFlags.JOIN) || K) || null == ee) return null;
   let ec = !$ || K && !el,
     eE = ec && (e_ || en) && !X && !ei && (!K || eo),
     eI = null;
@@ -108,10 +108,10 @@ function H(e) {
         applicationId: ee,
         channelId: N.default.getVoiceChannelId(),
         messageId: null,
-        intent: x.ActivityIntent.PLAY,
-        embedded: (0, b.default)(t, V.ActivityFlags.EMBEDDED)
+        intent: V.ActivityIntent.PLAY,
+        embedded: (0, b.default)(t, x.ActivityFlags.EMBEDDED)
       }), (0, G.default)({
-        type: V.AnalyticsGameOpenTypes.JOIN,
+        type: x.AnalyticsGameOpenTypes.JOIN,
         userId: e.id,
         applicationId: ee,
         partyId: null != t ? null == t ? void 0 : null === (n = t.party) || void 0 === n ? void 0 : n.id : "",
@@ -137,12 +137,12 @@ function H(e) {
           channelId: et,
           applicationId: ee,
           userId: j.id,
-          location: V.AnalyticsLocations.PROFILE_POPOUT
+          location: x.AnalyticsLocations.PROFILE_POPOUT
         }) : null != H && (e = await o.default.sendActivityInviteUser({
-          type: V.ActivityActionTypes.JOIN_REQUEST,
+          type: x.ActivityActionTypes.JOIN_REQUEST,
           userId: j.id,
           activity: H,
-          location: V.AnalyticsLocations.PROFILE_POPOUT
+          location: x.AnalyticsLocations.PROFILE_POPOUT
         })), null != e && u.default.selectPrivateChannel(e.id)
       }
     }, eh = eo ? F.default.Messages.JOIN : F.default.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN;

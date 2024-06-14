@@ -41,8 +41,8 @@ var i, r, s = n("735250"),
   w = n("874893"),
   k = n("526761"),
   B = n("231338"),
-  x = n("689938"),
-  V = n("737679");
+  V = n("689938"),
+  x = n("737679");
 (r = i || (i = {})).EDITOR = "EDITOR", r.SETTINGS = "SETTINGS";
 let F = Object.freeze({
     EDITOR: k.UserSettingsDelay.SLOW_USER_ACTION,
@@ -75,18 +75,18 @@ let F = Object.freeze({
       type: "EDITOR",
       isCoachmark: !0,
       isPreview: !0
-    }, () => x.default.Messages.CLIENT_THEMES_EDITOR_PREVIEW_A_THEME_HEADER).with({
+    }, () => V.default.Messages.CLIENT_THEMES_EDITOR_PREVIEW_A_THEME_HEADER).with({
       type: "EDITOR",
       isCoachmark: !0
-    }, () => x.default.Messages.CLIENT_THEMES_EDITOR_PICK_A_THEME_HEADER).otherwise(() => x.default.Messages.USER_SETTINGS_APPEARANCE_GRADIENT_THEME_TITLE);
+    }, () => V.default.Messages.CLIENT_THEMES_EDITOR_PICK_A_THEME_HEADER).otherwise(() => V.default.Messages.USER_SETTINGS_APPEARANCE_GRADIENT_THEME_TITLE);
     return (0, s.jsxs)("div", {
-      className: V.title,
+      className: x.title,
       children: [(0, s.jsx)(c.Heading, {
         "aria-label": r,
         variant: "text-md/medium",
         children: r
       }), (0, s.jsx)(O.default, {
-        className: V.premiumIcon
+        className: x.premiumIcon
       })]
     })
   },
@@ -105,19 +105,19 @@ let F = Object.freeze({
     }).with({
       type: "EDITOR",
       isPreview: !0
-    }, () => x.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
+    }, () => V.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
       onPremiumClick: m.navigateToPremiumMarketingPage
     })).with({
       type: "EDITOR",
       isCoachmark: !0
-    }, () => x.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_COACHMARK).with({
+    }, () => V.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_COACHMARK).with({
       type: "EDITOR",
       isPreview: !1
-    }, () => x.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION).with({
+    }, () => V.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION).with({
       isPreview: !0
-    }, () => x.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format({
+    }, () => V.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format({
       onPremiumClick: m.navigateToPremiumMarketingPage
-    })).otherwise(() => x.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_SETTINGS);
+    })).otherwise(() => V.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_SETTINGS);
     return (0, s.jsx)(c.Heading, {
       variant: "text-sm/normal",
       children: o
@@ -138,7 +138,7 @@ let F = Object.freeze({
       value: o,
       children: (0, s.jsx)("div", {
         ...r,
-        className: V.__invalid_container,
+        className: x.__invalid_container,
         children: n
       })
     })
@@ -160,7 +160,7 @@ K.Basic = e => {
     }, n)
   }, c = (0, S.useIsDesktopVisualRefreshEnabled)("appearance_settings");
   return (0, s.jsxs)("section", {
-    className: l()(V.presets, t),
+    className: l()(x.presets, t),
     children: [(0, s.jsx)(y.DefaultThemeSelection, {
       theme: B.ThemeTypes.LIGHT,
       isSelected: o && !u && r === B.ThemeTypes.LIGHT,
@@ -242,13 +242,13 @@ K.Basic = e => {
     children: ["EDITOR" === u && R && z ? (0, s.jsx)(p.default, {
       type: G.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
       subscriptionTier: G.PremiumSubscriptionSKUs.TIER_2,
-      children: x.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
+      children: V.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
         onPremiumClick: m.navigateToPremiumMarketingPage
       })
     }) : (0, s.jsxs)("div", {
-      className: V.header,
+      className: x.header,
       children: [(0, s.jsxs)("div", {
-        className: V.headings,
+        className: x.headings,
         children: [(0, s.jsx)(j, {
           type: u,
           isPreview: R,
@@ -260,7 +260,7 @@ K.Basic = e => {
         })]
       }), null == o ? void 0 : o()]
     }), (0, s.jsxs)("div", {
-      className: V.presets,
+      className: x.presets,
       children: [P.BACKGROUND_GRADIENT_PRESETS.filter(e => {
         let {
           id: t
@@ -284,7 +284,7 @@ K.Basic = e => {
           return e
         }
         return (0, s.jsxs)("div", {
-          className: V.easterEggSelection,
+          className: x.easterEggSelection,
           children: [(0, s.jsx)(y.GradientThemeSelection, {
             preset: e,
             isSelected: L === _.BackgroundGradientPresetId.EASTER_EGG,
@@ -292,7 +292,7 @@ K.Basic = e => {
           }), (0, s.jsx)(c.LottieAnimation, {
             importData: t,
             shouldAnimate: !F,
-            className: V.sparkles
+            className: x.sparkles
           })]
         })
       })()]

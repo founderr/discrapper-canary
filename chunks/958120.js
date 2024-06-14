@@ -48,7 +48,7 @@ function L(e) {
     improvedFriendingEnabled: G
   } = (0, c.useSimplifiedProfileFriendingExperiment)({
     location: "BiteSizeProfileBody"
-  }), w = d.default.getName(null == v ? void 0 : v.id, y, t), k = (0, s.useStateFromStores)([l.default], () => l.default.getRelationshipType(t.id)), B = (0, s.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), x = (0, a.default)("username"), V = r.useMemo(() => ({
+  }), w = d.default.getName(null == v ? void 0 : v.id, y, t), k = (0, s.useStateFromStores)([l.default], () => l.default.getRelationshipType(t.id)), B = (0, s.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), V = (0, a.default)("username"), x = r.useMemo(() => ({
     source: R.AnalyticsSections.PROFILE_POPOUT,
     tagUserId: t.id
   }), [t.id]);
@@ -92,10 +92,10 @@ function L(e) {
       onOpenProfile: e => M({
         section: e
       })
-    }), x && (0, i.jsx)(o.default, {
+    }), V && (0, i.jsx)(o.default, {
       userId: t.id,
       inline: !1,
-      profileViewedAnalytics: V
+      profileViewedAnalytics: x
     }), (U || b || G) && (0, i.jsx)(N.default, {
       user: t,
       bio: null == L ? void 0 : L.bio,

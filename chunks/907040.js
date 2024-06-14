@@ -36,8 +36,8 @@ var i = n("735250"),
   w = n("543241"),
   k = n("253696"),
   B = n("199257"),
-  x = n("636411"),
-  V = n("380331"),
+  V = n("636411"),
+  x = n("380331"),
   F = n("170762"),
   H = n("22363"),
   Y = n("784222"),
@@ -209,14 +209,14 @@ t.default = r.memo(r.forwardRef(function(e, t) {
   let {
     location: eB
   } = (0, f.useAnalyticsContext)(), {
-    page: ex,
-    section: eV,
+    page: eV,
+    section: ex,
     object: eF,
     openPopoutType: eH
   } = eI, eY = r.useMemo(() => ({
     ...eB,
-    section: null != eV ? eV : Q.AnalyticsSections.EMOJI_PICKER_POPOUT
-  }), [eB, eV]), {
+    section: null != ex ? ex : Q.AnalyticsSections.EMOJI_PICKER_POPOUT
+  }), [eB, ex]), {
     analyticsLocations: ej
   } = (0, h.default)(S.default.EMOJI_PICKER), {
     diversitySurrogate: eW
@@ -279,8 +279,8 @@ t.default = r.memo(r.forwardRef(function(e, t) {
           location: {
             ...eY,
             object: null != eF ? eF : Q.AnalyticsObjects.EMOJI,
-            ...null != ex && {
-              page: ex
+            ...null != eV && {
+              page: eV
             }
           },
           pickerIntention: l,
@@ -353,7 +353,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     onClose: () => eL(null),
     guildId: eg.guildId,
     emojiId: eg.emojiId
-  }) : eb && !ek && (o = (0, i.jsx)(x.default, {
+  }) : eb && !ek && (o = (0, i.jsx)(V.default, {
     onDismiss: () => eG(!1)
   }));
   let ti = (0, i.jsx)(H.default, {
@@ -442,7 +442,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
           pickerIntention: l,
           channel: u
         }), o]
-      }), eS ? null : (0, i.jsx)(V.default, {
+      }), eS ? null : (0, i.jsx)(x.default, {
         className: J.categoryList,
         emojiListRef: ey,
         sectionDescriptors: e$,

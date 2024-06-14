@@ -35,8 +35,8 @@ var i, r = n("392711"),
   w = n("347374"),
   k = n("185923"),
   B = n("981631"),
-  x = n("149203"),
-  V = n("526761");
+  V = n("149203"),
+  x = n("526761");
 
 function F(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -46,7 +46,7 @@ function F(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let H = [x.EmojiCategories.TOP_GUILD_EMOJI.toString(), x.EmojiCategories.FAVORITES.toString(), x.EmojiCategories.RECENT.toString(), x.EmojiCategories.CUSTOM.toString()].concat(U.default.getCategories()),
+let H = [V.EmojiCategories.TOP_GUILD_EMOJI.toString(), V.EmojiCategories.FAVORITES.toString(), V.EmojiCategories.RECENT.toString(), V.EmojiCategories.CUSTOM.toString()].concat(U.default.getCategories()),
   Y = {
     pendingUsages: []
   };
@@ -290,7 +290,7 @@ let ei = new _.default({
     return null !== (t = U.default.getByName(e)) && void 0 !== t ? t : $(e)
   },
   afterCompute: () => {
-    en.resetFrequentlyUsed(), Z = H.slice(0), !s().some(Q, e => e.usableEmojis.length > 0) && Z.splice(H.indexOf(x.EmojiCategories.CUSTOM), 1)
+    en.resetFrequentlyUsed(), Z = H.slice(0), !s().some(Q, e => e.usableEmojis.length > 0) && Z.splice(H.indexOf(V.EmojiCategories.CUSTOM), 1)
   },
   numFrequentlyItems: 42
 });
@@ -323,7 +323,7 @@ function el() {
   ei.overwriteHistory(s().mapValues(a, e => ({
     ...e,
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
-  })), Y.pendingUsages), s().isEmpty(a) && s().isEmpty(Y.pendingUsages) && N.default.hasLoaded(V.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (ei.track("thumbsup"), ei.track("thumbsup"), ei.track("eyes"), ei.track("eyes"), ei.track("laughing"), ei.track("laughing"), ei.track("watermelon"), ei.track("fork_and_knife"), ei.track("yum"), ei.track("weary"), ei.track("tired_face"), ei.track("poop"), ei.track("100"))
+  })), Y.pendingUsages), s().isEmpty(a) && s().isEmpty(Y.pendingUsages) && N.default.hasLoaded(x.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (ei.track("thumbsup"), ei.track("thumbsup"), ei.track("eyes"), ei.track("eyes"), ei.track("laughing"), ei.track("laughing"), ei.track("watermelon"), ei.track("fork_and_knife"), ei.track("yum"), ei.track("weary"), ei.track("tired_face"), ei.track("poop"), ei.track("100"))
 }
 
 function eu(e) {
@@ -552,7 +552,7 @@ F(e_, "displayName", "EmojiStore"), F(e_, "persistKey", "EmojiStoreV2"), t.defau
       },
       wasSaved: n
     } = e;
-    if (T.default.setEmojiLocale(m.default.locale), t !== V.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+    if (T.default.setEmojiLocale(m.default.locale), t !== x.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
     Y.pendingUsages = []
   },
   GUILD_ROLE_CREATE: ed,

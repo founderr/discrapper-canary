@@ -79,11 +79,11 @@ function B() {
   k()
 }
 
-function x() {
+function V() {
   k()
 }
 
-function V(e) {
+function x(e) {
   var t;
   let {
     user: n
@@ -260,12 +260,12 @@ a = "PermissionStore", (s = "displayName") in(r = z) ? Object.defineProperty(r, 
   CONNECTION_CLOSED: function() {
     Z()
   },
-  GUILD_CREATE: x,
-  GUILD_UPDATE: x,
-  GUILD_DELETE: x,
-  GUILD_MEMBER_ADD: V,
-  GUILD_MEMBER_UPDATE: V,
-  CURRENT_USER_UPDATE: V,
+  GUILD_CREATE: V,
+  GUILD_UPDATE: V,
+  GUILD_DELETE: V,
+  GUILD_MEMBER_ADD: x,
+  GUILD_MEMBER_UPDATE: x,
+  CURRENT_USER_UPDATE: x,
   CHANNEL_CREATE: function(e) {
     let {
       channel: {

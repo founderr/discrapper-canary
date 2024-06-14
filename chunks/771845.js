@@ -190,7 +190,7 @@ let G = (0, _.cachedFunction)((e, t) => e.sortedGuildNodes().map(e => e.id)),
     }(e.root), n
   }),
   B = (0, _.cachedFunction)((e, t) => e.root.children.map(p));
-class x extends S.default {
+class V extends S.default {
   initialize() {
     this.waitFor(f.default, h.default, d.default, I.default, u.default, E.default)
   }
@@ -217,7 +217,7 @@ class x extends S.default {
   }
   takeSnapshot() {
     return {
-      version: x.LATEST_SNAPSHOT_VERSION,
+      version: V.LATEST_SNAPSHOT_VERSION,
       data: {
         tree: N.getSnapshot()
       }
@@ -240,11 +240,11 @@ class x extends S.default {
       SET_GUILD_FOLDER_EXPANDED: P,
       GUILD_FOLDER_COLLAPSE: U
     }), m(this, "loadCache", () => {
-      let e = this.readSnapshot(x.LATEST_SNAPSHOT_VERSION),
+      let e = this.readSnapshot(V.LATEST_SNAPSHOT_VERSION),
         t = null == e ? void 0 : e.tree;
       if (null != t)
         for (let e of ((N = new l.GuildsTree).loadSnapshot(t), N.allNodes())) e.type === l.GuildsNodeType.FOLDER && (e.expanded = E.default.isFolderExpanded(e.id))
     })
   }
 }
-m(x, "displayName", "SortedGuildStore"), m(x, "LATEST_SNAPSHOT_VERSION", 1), t.default = new x
+m(V, "displayName", "SortedGuildStore"), m(V, "LATEST_SNAPSHOT_VERSION", 1), t.default = new V

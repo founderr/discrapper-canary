@@ -15,8 +15,8 @@ var s = l("735250"),
   c = l("158776"),
   f = l("699516"),
   S = l("621113"),
-  E = l("759231"),
-  I = l("998502"),
+  I = l("759231"),
+  E = l("998502"),
   m = l("785717"),
   v = l("621853"),
   _ = l("204197"),
@@ -24,18 +24,18 @@ var s = l("735250"),
   p = l("520978"),
   x = l("184325"),
   g = l("652853"),
-  A = l("225714"),
+  N = l("225714"),
   C = l("228168"),
-  N = l("231338"),
+  A = l("231338"),
   U = l("689938"),
   P = l("155614");
 let h = o.AvatarSizes.SIZE_120,
-  R = I.default.getEnableHardwareAcceleration() ? o.AnimatedAvatar : o.Avatar;
+  R = E.default.getEnableHardwareAcceleration() ? o.AnimatedAvatar : o.Avatar;
 
 function M(e) {
   let {
     displayProfile: t,
-    user: I,
+    user: E,
     guildId: M,
     channelId: j,
     friendToken: y,
@@ -43,7 +43,7 @@ function M(e) {
     isStreaming: L,
     hasProfileEffect: F,
     onClose: D
-  } = e, b = (0, a.useStateFromStores)([f.default], () => f.default.getRelationshipType(I.id)), B = (0, a.useStateFromStores)([c.default], () => c.default.isMobileOnline(I.id)), G = (0, a.useStateFromStores)([c.default], () => c.default.getStatus(I.id)), k = (0, a.useStateFromStores)([v.default], () => v.default.getUserProfile(I.id)), w = (0, a.useStateFromStores)([d.default], () => d.default.getId() === I.id), {
+  } = e, b = (0, a.useStateFromStores)([f.default], () => f.default.getRelationshipType(E.id)), B = (0, a.useStateFromStores)([c.default], () => c.default.isMobileOnline(E.id)), G = (0, a.useStateFromStores)([c.default], () => c.default.getStatus(E.id)), k = (0, a.useStateFromStores)([v.default], () => v.default.getUserProfile(E.id)), w = (0, a.useStateFromStores)([d.default], () => d.default.getId() === E.id), {
     theme: Y
   } = (0, g.useUserProfileThemeContext)(), {
     trackUserProfileAction: V
@@ -52,15 +52,15 @@ function M(e) {
     eventHandlers: W,
     avatarDecorationSrc: z
   } = (0, _.default)({
-    user: I,
+    user: E,
     size: h
-  }), Z = i.useMemo(() => (0, u.shouldDisableUserPresenceInChannel)(I, j), [I, j]);
+  }), Z = i.useMemo(() => (0, u.shouldDisableUserPresenceInChannel)(E, j), [E, j]);
   return (0, s.jsxs)("header", {
     className: O,
     children: [(0, s.jsx)(T.default, {
       displayProfile: t,
       onClose: D,
-      user: I,
+      user: E,
       profileType: C.UserProfileTypes.MODAL,
       hasProfileEffect: F
     }), (0, s.jsxs)("div", {
@@ -72,24 +72,24 @@ function M(e) {
           avatarDecoration: z,
           size: h,
           className: P.avatar,
-          status: Z ? N.StatusTypes.UNKNOWN : L ? N.StatusTypes.STREAMING : G,
+          status: Z ? A.StatusTypes.UNKNOWN : L ? A.StatusTypes.STREAMING : G,
           statusBackdropColor: (0, o.getStatusBackdropColor)(Y),
           isMobile: B,
           statusTooltip: !0,
-          "aria-label": I.username
+          "aria-label": E.username
         })
       }), (0, s.jsxs)("div", {
         className: P.headerTop,
-        children: [(null == k ? void 0 : k.profileFetchFailed) && !I.isClyde() ? (0, s.jsx)(o.Tooltip, {
+        children: [(null == k ? void 0 : k.profileFetchFailed) && !E.isClyde() ? (0, s.jsx)(o.Tooltip, {
           text: U.default.Messages.USER_PROFILE_LOAD_ERROR,
           spacing: 20,
-          children: e => (0, s.jsx)(E.default, {
+          children: e => (0, s.jsx)(I.default, {
             ...e,
             className: P.warningCircleIcon,
             color: n.default.unsafe_rawColors.YELLOW_300.css
           })
         }) : (0, s.jsx)(x.default, {
-          user: I,
+          user: E,
           className: P.badgeList,
           guildId: M,
           size: x.BadgeSizes.SIZE_24,
@@ -101,13 +101,13 @@ function M(e) {
           children: [(null == k ? void 0 : k.application) != null && (0, s.jsx)(p.default, {
             className: P.applicationInstallButton,
             application: k.application
-          }), (0, s.jsx)(A.default, {
-            user: I,
+          }), (0, s.jsx)(N.default, {
+            user: E,
             isCurrentUser: w,
             relationshipType: b,
             friendToken: y,
             onClose: D
-          }), w || I.isNonUserBot() ? null : (0, s.jsx)(o.Clickable, {
+          }), w || E.isNonUserBot() ? null : (0, s.jsx)(o.Clickable, {
             focusProps: {
               offset: {
                 left: 8
@@ -122,7 +122,7 @@ function M(e) {
                 } = await l.e("29136").then(l.bind(l, "193646"));
                 return t => (0, s.jsx)(e, {
                   ...t,
-                  user: I,
+                  user: E,
                   isCurrentUser: w,
                   guildId: M,
                   relationshipType: b,

@@ -82,7 +82,7 @@ let P = d.default.RULES,
   w = /^<#(\d+)>/,
   k = /^<a?:(\w+):(\d+)>/,
   B = /(@everyone|@here|@Clyde)\b/,
-  x = {
+  V = {
     link: M(a().defaultRules.link),
     autolink: M(a().defaultRules.autolink),
     url: M(a().defaultRules.url),
@@ -212,7 +212,7 @@ let P = d.default.RULES,
       match: (e, t) => "string" == typeof t.textExclusions && "" !== t.textExclusions ? (0, _.textMarkupPatternWithExclusions)(t.textExclusions).exec(e) : null != U.match ? U.match(e, t, "") : null
     }
   },
-  V = {
+  x = {
     inlineCode: M(P.inlineCode),
     codeBlock: M(P.codeBlock),
     mention: {
@@ -309,12 +309,12 @@ let P = d.default.RULES,
       ...U
     }
   };
-[x, V].forEach(e => {
+[V, x].forEach(e => {
   Object.keys(e).forEach((t, n) => {
     e[t].order = n
   })
 });
-let F = a().parserFor(x),
+let F = a().parserFor(V),
   H = /(?:<a?:\w+:(\d+)>)|:(?:([^\s:]+?)(?:::skin-tone-\d)?:)/g;
 
 function Y(e, t, n, i) {
@@ -449,7 +449,7 @@ t.default = {
     let i = T.default.getChannel(t),
       s = null != i ? i.getGuildId() : null,
       o = null != s ? h.default.getGuild(s) : null,
-      l = n ? V : r().omit(V, ["spoiler", "timestamp"]),
+      l = n ? x : r().omit(x, ["spoiler", "timestamp"]),
       d = n ? W : u.default.translateSurrogatesToInlineEmoji,
       _ = a().parserFor(l),
       c = {

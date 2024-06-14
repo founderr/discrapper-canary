@@ -43,8 +43,8 @@ var i = n("735250"),
   w = n("944581"),
   k = n("632184"),
   B = n("170039"),
-  x = n("761374"),
-  V = n("602623"),
+  V = n("761374"),
+  x = n("602623"),
   F = n("624138"),
   H = n("510601"),
   Y = n("59688"),
@@ -62,7 +62,7 @@ function J(e, t, n) {
     className: Z.row,
     children: [(0, i.jsx)(e, {
       className: Z.activityIcon
-    }), (0, i.jsx)(V.default, {
+    }), (0, i.jsx)(x.default, {
       guildId: n,
       users: t,
       max: 6
@@ -162,7 +162,7 @@ function ee(e) {
       className: Z.row,
       children: [(0, i.jsx)(B.default, {
         className: Z.activityIcon
-      }), (0, i.jsx)(V.default, {
+      }), (0, i.jsx)(x.default, {
         guildId: t,
         users: n,
         max: 3
@@ -179,7 +179,7 @@ function ee(e) {
         })]
       })]
     })),
-    F = J(x.default, f, d),
+    F = J(V.default, f, d),
     Y = J(w.default, S, d),
     {
       isMuted: j,

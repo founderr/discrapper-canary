@@ -20,8 +20,8 @@ function S(e) {
   let {
     user: t,
     isCurrentUser: S,
-    guildId: E,
-    friendToken: I,
+    guildId: I,
+    friendToken: E,
     canDM: m,
     relationshipType: v,
     originalFriendingEnabled: _ = !1,
@@ -32,7 +32,7 @@ function S(e) {
     trackUserProfileAction: g
   } = (0, o.useUserProfileAnalyticsContext)();
 
-  function A(e) {
+  function N(e) {
     g({
       action: "PRESS_OPTIONS"
     }), (0, a.openContextMenuLazy)(e, async () => {
@@ -46,7 +46,7 @@ function S(e) {
         viewProfileItem: p,
         user: t,
         isCurrentUser: S,
-        guildId: E,
+        guildId: I,
         trackUserProfileAction: g,
         onClose: x
       })
@@ -61,11 +61,11 @@ function S(e) {
         relationshipType: v,
         originalFriendingEnabled: _,
         improvedFriendingEnabled: T,
-        friendToken: I,
+        friendToken: E,
         onClose: x
       }), S && (0, s.jsx)(r.default, {
         user: t,
-        guildId: E,
+        guildId: I,
         profileType: c.UserProfileTypes.FULL_SIZE,
         onClose: x
       }), !t.isNonUserBot() && _ ? (0, s.jsx)(i.Clickable, {
@@ -74,7 +74,7 @@ function S(e) {
             left: 8
           }
         },
-        onClick: A,
+        onClick: N,
         children: (0, s.jsx)(n.default, {
           className: f.additionalActionsIcon
         })
@@ -84,7 +84,7 @@ function S(e) {
       onClose: x
     }) : (0, s.jsx)(r.default, {
       user: t,
-      guildId: E,
+      guildId: I,
       profileType: c.UserProfileTypes.FULL_SIZE,
       onClose: x
     }))]

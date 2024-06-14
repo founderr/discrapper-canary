@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return e_
   },
   BoostedGuildFeatures: function() {
-    return eV
+    return ex
   },
   BoostingUpsellAction: function() {
     return A
@@ -235,7 +235,7 @@ n.r(t), n.d(t, {
     return eb
   },
   TotalSoundboardSoundCountsByTier: function() {
-    return ex
+    return eV
   },
   TotalStickerCountsByTier: function() {
     return eB
@@ -250,8 +250,8 @@ n.r(t), n.d(t, {
     return eE
   }
 }), n("47120");
-var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O, C, R, g, L, v, D, M, y, P, U, b, G, w, k, B, x = n("981631"),
-  V = n("185923");
+var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O, C, R, g, L, v, D, M, y, P, U, b, G, w, k, B, V = n("981631"),
+  x = n("185923");
 (N = i || (i = {}))[N.TIER_1 = 1] = "TIER_1", N[N.TIER_2 = 2] = "TIER_2", N[N.TIER_0 = 3] = "TIER_0";
 let F = void 0,
   H = void 0,
@@ -527,78 +527,78 @@ let eG = Object.freeze({
   }),
   ew = 52428800,
   ek = {
-    [x.BoostedGuildTiers.NONE]: 5,
-    [x.BoostedGuildTiers.TIER_1]: 10,
-    [x.BoostedGuildTiers.TIER_2]: 15,
-    [x.BoostedGuildTiers.TIER_3]: 30
+    [V.BoostedGuildTiers.NONE]: 5,
+    [V.BoostedGuildTiers.TIER_1]: 10,
+    [V.BoostedGuildTiers.TIER_2]: 15,
+    [V.BoostedGuildTiers.TIER_3]: 30
   },
   eB = {
-    [x.BoostedGuildTiers.NONE]: ek[x.BoostedGuildTiers.NONE],
-    [x.BoostedGuildTiers.TIER_1]: ek[x.BoostedGuildTiers.NONE] + ek[x.BoostedGuildTiers.TIER_1],
-    [x.BoostedGuildTiers.TIER_2]: ek[x.BoostedGuildTiers.NONE] + ek[x.BoostedGuildTiers.TIER_1] + ek[x.BoostedGuildTiers.TIER_2],
-    [x.BoostedGuildTiers.TIER_3]: ek[x.BoostedGuildTiers.NONE] + ek[x.BoostedGuildTiers.TIER_1] + ek[x.BoostedGuildTiers.TIER_2] + ek[x.BoostedGuildTiers.TIER_3]
+    [V.BoostedGuildTiers.NONE]: ek[V.BoostedGuildTiers.NONE],
+    [V.BoostedGuildTiers.TIER_1]: ek[V.BoostedGuildTiers.NONE] + ek[V.BoostedGuildTiers.TIER_1],
+    [V.BoostedGuildTiers.TIER_2]: ek[V.BoostedGuildTiers.NONE] + ek[V.BoostedGuildTiers.TIER_1] + ek[V.BoostedGuildTiers.TIER_2],
+    [V.BoostedGuildTiers.TIER_3]: ek[V.BoostedGuildTiers.NONE] + ek[V.BoostedGuildTiers.TIER_1] + ek[V.BoostedGuildTiers.TIER_2] + ek[V.BoostedGuildTiers.TIER_3]
   },
-  ex = {
-    [x.BoostedGuildTiers.NONE]: 8,
-    [x.BoostedGuildTiers.TIER_1]: 24,
-    [x.BoostedGuildTiers.TIER_2]: 36,
-    [x.BoostedGuildTiers.TIER_3]: 48
+  eV = {
+    [V.BoostedGuildTiers.NONE]: 8,
+    [V.BoostedGuildTiers.TIER_1]: 24,
+    [V.BoostedGuildTiers.TIER_2]: 36,
+    [V.BoostedGuildTiers.TIER_3]: 48
   },
-  eV = Object.freeze({
-    [x.BoostedGuildTiers.NONE]: {
+  ex = Object.freeze({
+    [V.BoostedGuildTiers.NONE]: {
       features: [],
       limits: {
-        emoji: V.EMOJI_MAX_SLOTS,
-        bitrate: x.BITRATE_MAX,
-        fileSize: x.MAX_ATTACHMENT_SIZE,
+        emoji: x.EMOJI_MAX_SLOTS,
+        bitrate: V.BITRATE_MAX,
+        fileSize: V.MAX_ATTACHMENT_SIZE,
         screenShareQualityFramerate: 30,
         screenShareQualityResolution: "720p",
-        soundboardSounds: ex[x.BoostedGuildTiers.NONE],
+        soundboardSounds: eV[V.BoostedGuildTiers.NONE],
         maxConcurrentActivities: 2,
-        stickers: eB[x.BoostedGuildTiers.NONE],
-        stageVideoUsers: x.MAX_STAGE_VIDEO_USER_LIMIT_TIER01
+        stickers: eB[V.BoostedGuildTiers.NONE],
+        stageVideoUsers: V.MAX_STAGE_VIDEO_USER_LIMIT_TIER01
       }
     },
-    [x.BoostedGuildTiers.TIER_1]: {
-      features: [x.GuildFeatures.INVITE_SPLASH, x.GuildFeatures.ANIMATED_ICON],
+    [V.BoostedGuildTiers.TIER_1]: {
+      features: [V.GuildFeatures.INVITE_SPLASH, V.GuildFeatures.ANIMATED_ICON],
       limits: {
         emoji: 100,
         bitrate: 128e3,
-        fileSize: x.MAX_ATTACHMENT_SIZE,
+        fileSize: V.MAX_ATTACHMENT_SIZE,
         screenShareQualityFramerate: 60,
         screenShareQualityResolution: "720p",
-        soundboardSounds: ex[x.BoostedGuildTiers.TIER_1],
+        soundboardSounds: eV[V.BoostedGuildTiers.TIER_1],
         maxConcurrentActivities: 3,
-        stickers: eB[x.BoostedGuildTiers.TIER_1],
-        stageVideoUsers: x.MAX_STAGE_VIDEO_USER_LIMIT_TIER01
+        stickers: eB[V.BoostedGuildTiers.TIER_1],
+        stageVideoUsers: V.MAX_STAGE_VIDEO_USER_LIMIT_TIER01
       }
     },
-    [x.BoostedGuildTiers.TIER_2]: {
-      features: [x.GuildFeatures.INVITE_SPLASH, x.GuildFeatures.ANIMATED_ICON, x.GuildFeatures.BANNER, x.GuildFeatures.ROLE_ICONS],
+    [V.BoostedGuildTiers.TIER_2]: {
+      features: [V.GuildFeatures.INVITE_SPLASH, V.GuildFeatures.ANIMATED_ICON, V.GuildFeatures.BANNER, V.GuildFeatures.ROLE_ICONS],
       limits: {
         emoji: 150,
         bitrate: 256e3,
         fileSize: 52428800,
         screenShareQualityFramerate: 60,
         screenShareQualityResolution: "1080p",
-        soundboardSounds: ex[x.BoostedGuildTiers.TIER_2],
+        soundboardSounds: eV[V.BoostedGuildTiers.TIER_2],
         maxConcurrentActivities: 5,
-        stickers: eB[x.BoostedGuildTiers.TIER_2],
-        stageVideoUsers: x.MAX_STAGE_VIDEO_USER_LIMIT_TIER2
+        stickers: eB[V.BoostedGuildTiers.TIER_2],
+        stageVideoUsers: V.MAX_STAGE_VIDEO_USER_LIMIT_TIER2
       }
     },
-    [x.BoostedGuildTiers.TIER_3]: {
-      features: [x.GuildFeatures.INVITE_SPLASH, x.GuildFeatures.ANIMATED_ICON, x.GuildFeatures.BANNER, x.GuildFeatures.ANIMATED_BANNER, x.GuildFeatures.VANITY_URL, x.GuildFeatures.ROLE_ICONS],
+    [V.BoostedGuildTiers.TIER_3]: {
+      features: [V.GuildFeatures.INVITE_SPLASH, V.GuildFeatures.ANIMATED_ICON, V.GuildFeatures.BANNER, V.GuildFeatures.ANIMATED_BANNER, V.GuildFeatures.VANITY_URL, V.GuildFeatures.ROLE_ICONS],
       limits: {
         emoji: 250,
         bitrate: 384e3,
         fileSize: 104857600,
         screenShareQualityFramerate: 60,
         screenShareQualityResolution: "1080p",
-        soundboardSounds: ex[x.BoostedGuildTiers.TIER_3],
+        soundboardSounds: eV[V.BoostedGuildTiers.TIER_3],
         maxConcurrentActivities: Number.MAX_SAFE_INTEGER,
-        stickers: eB[x.BoostedGuildTiers.TIER_3],
-        stageVideoUsers: x.MAX_STAGE_VIDEO_USER_LIMIT_TIER3
+        stickers: eB[V.BoostedGuildTiers.TIER_3],
+        stageVideoUsers: V.MAX_STAGE_VIDEO_USER_LIMIT_TIER3
       }
     }
   }),

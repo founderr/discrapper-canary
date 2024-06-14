@@ -94,7 +94,7 @@ n.r(t), n.d(t, {
     return A
   },
   FriendSourceFlagsSetting: function() {
-    return V
+    return x
   },
   GifAutoPlay: function() {
     return em
@@ -157,7 +157,7 @@ n.r(t), n.d(t, {
     return f
   },
   RestrictedGuildIds: function() {
-    return x
+    return V
   },
   RtcPanelShowVoiceStates: function() {
     return F
@@ -332,14 +332,14 @@ let h = (0, o.defineProtoSetting)("notifications", "quietMode", e => {
   value: e
 }));
 let B = (0, o.defineProtoSetting)("privacy", "defaultGuildsRestricted", e => null != e && e, e => e),
-  x = (0, o.defineProtoSetting)("privacy", "restrictedGuildIds", e => null != e ? e : [], e => e);
+  V = (0, o.defineProtoSetting)("privacy", "restrictedGuildIds", e => null != e ? e : [], e => e);
 (0, o.defineProtoSetting)("privacy", "friendDiscoveryFlags", e => {
   var t;
   return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : 0
 }, e => s.UInt32Value.create({
   value: e
 }));
-let V = (0, o.defineProtoSetting)("privacy", "friendSourceFlags", e => {
+let x = (0, o.defineProtoSetting)("privacy", "friendSourceFlags", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : d.AllFriendSourceFlags
   }, e => s.UInt32Value.create({

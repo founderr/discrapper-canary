@@ -43,11 +43,11 @@ let L = "SELECTABLE",
       name: g.default.Messages.UNCATEGORIZED
     })
   },
-  w = x(R.NULL_STRING_GUILD_ID),
+  w = V(R.NULL_STRING_GUILD_ID),
   k = [],
   B = {};
 
-function x(e) {
+function V(e) {
   return {
     id: e,
     [L]: [],
@@ -57,7 +57,7 @@ function x(e) {
   }
 }
 
-function V(e, t) {
+function x(e, t) {
   let {
     comparator: n
   } = e, {
@@ -72,7 +72,7 @@ function F() {
 
 function H(e) {
   var t;
-  let n = x(e);
+  let n = V(e);
   return M[e] = n, b[e] = [], ! function(e) {
       let {
         id: t
@@ -107,7 +107,7 @@ function H(e) {
         let s = (i = r.type, (0, f.isGuildSelectableChannelType)(i) ? L : (0, f.isGuildVocalChannelType)(i) ? v : i);
         r.type === R.ChannelTypes.GUILD_DIRECTORY && (null == b[t] && (b[t] = []), b[t].push(n)), null != e[s] && e[s].push(n)
       })
-    }(n), (t = n)[L].sort(V), t[v].sort(V), t[R.ChannelTypes.GUILD_CATEGORY].sort(V),
+    }(n), (t = n)[L].sort(x), t[v].sort(x), t[R.ChannelTypes.GUILD_CATEGORY].sort(x),
     function(e) {
       let t = y[e.id] = {},
         n = {};

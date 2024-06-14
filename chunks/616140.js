@@ -15,8 +15,8 @@ var s = l("735250"),
   c = l("246946"),
   f = l("594174"),
   S = l("543595"),
-  E = l("785717"),
-  I = l("726059"),
+  I = l("785717"),
+  E = l("726059"),
   m = l("162267"),
   v = l("100849"),
   _ = l("944546"),
@@ -24,9 +24,9 @@ var s = l("735250"),
   p = l("988246"),
   x = l("834534"),
   g = l("228168"),
-  A = l("981631"),
+  N = l("981631"),
   C = l("689938"),
-  N = l("773386");
+  A = l("773386");
 let U = e => {
   var t, l;
   let {
@@ -36,8 +36,8 @@ let U = e => {
     let {
       type: t
     } = e;
-    return t !== A.ActivityTypes.CUSTOM_STATUS
-  })), c = null === (t = (0, I.default)(s.id, s.id !== (null == i ? void 0 : i.id)).mutualFriends) || void 0 === t ? void 0 : t.length, f = null === (l = (0, m.default)(s.id, s.id !== (null == i ? void 0 : i.id)).mutualGuilds) || void 0 === l ? void 0 : l.length, S = [{
+    return t !== N.ActivityTypes.CUSTOM_STATUS
+  })), c = null === (t = (0, E.default)(s.id, s.id !== (null == i ? void 0 : i.id)).mutualFriends) || void 0 === t ? void 0 : t.length, f = null === (l = (0, m.default)(s.id, s.id !== (null == i ? void 0 : i.id)).mutualGuilds) || void 0 === l ? void 0 : l.length, S = [{
     section: g.UserProfileSections.USER_INFO,
     text: C.default.Messages.USER_PROFILE_ABOUT_ME
   }];
@@ -93,15 +93,15 @@ function h(e) {
     displayProfile: u,
     initialSection: d = g.UserProfileSections.USER_INFO,
     initialSubsection: S,
-    onClose: I
+    onClose: E
   } = e, {
     trackUserProfileAction: m
-  } = (0, E.useUserProfileAnalyticsContext)(), v = (0, n.useStateFromStores)([f.default], () => f.default.getCurrentUser()), _ = (0, n.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), T = U({
+  } = (0, I.useUserProfileAnalyticsContext)(), v = (0, n.useStateFromStores)([f.default], () => f.default.getCurrentUser()), _ = (0, n.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), T = U({
     user: a,
     currentUser: v
   }), [{
     section: x,
-    subsection: A
+    subsection: N
   }, C] = i.useState({
     section: null !== (l = null === (t = T.find(e => {
       let {
@@ -120,12 +120,12 @@ function h(e) {
     })
   }, [m, C]);
   return null == v ? null : _ ? (0, s.jsx)("div", {
-    className: N.container,
+    className: A.container,
     children: (0, s.jsx)(p.default, {})
   }) : (0, s.jsxs)("div", {
-    className: N.container,
+    className: A.container,
     children: [(0, s.jsx)(o.TabBar, {
-      className: N.tabBar,
+      className: A.tabBar,
       type: "top",
       selectedItem: x,
       onItemSelect: h,
@@ -135,7 +135,7 @@ function h(e) {
           text: l
         } = e;
         return (0, s.jsx)(o.TabBar.Item, {
-          className: N.tabBarItem,
+          className: A.tabBarItem,
           id: t,
           "aria-label": l,
           children: (0, s.jsx)(r.Text, {
@@ -146,11 +146,11 @@ function h(e) {
       })
     }), (0, s.jsx)(P, {
       section: x,
-      subsection: A,
+      subsection: N,
       user: a,
       currentUser: v,
       displayProfile: u,
-      onClose: I
+      onClose: E
     })]
   })
 }

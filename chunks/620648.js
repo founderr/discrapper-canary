@@ -15,8 +15,8 @@ var s = l("735250"),
   c = l("706454"),
   f = l("246946"),
   S = l("785717"),
-  E = l("648067"),
-  I = l("588822"),
+  I = l("648067"),
+  E = l("588822"),
   m = l("900927"),
   v = l("652853"),
   _ = l("335191"),
@@ -29,13 +29,13 @@ function g(e) {
   let {
     user: l,
     displayProfile: g,
-    autoFocusNote: A = !1,
+    autoFocusNote: N = !1,
     scrollToConnections: C = !1
   } = e, {
-    trackUserProfileAction: N
+    trackUserProfileAction: A
   } = (0, S.useUserProfileAnalyticsContext)(), U = (0, a.useStateFromStores)([f.default], () => f.default.hidePersonalInformation), {
     theme: P
-  } = (0, v.useUserProfileThemeContext)(), h = (0, a.useStateFromStores)([c.default], () => c.default.locale), R = (0, u.default)("user_profile"), M = (null == g ? void 0 : g.bio) != null && (null == g ? void 0 : g.bio) !== "" || (0, r.default)(l.id), j = (0, E.default)(l.id), y = i.useRef(null);
+  } = (0, v.useUserProfileThemeContext)(), h = (0, a.useStateFromStores)([c.default], () => c.default.locale), R = (0, u.default)("user_profile"), M = (null == g ? void 0 : g.bio) != null && (null == g ? void 0 : g.bio) !== "" || (0, r.default)(l.id), j = (0, I.default)(l.id), y = i.useRef(null);
   return (i.useLayoutEffect(() => {
     if (C) {
       var e;
@@ -51,7 +51,7 @@ function g(e) {
           variant: "eyebrow",
           className: x.userInfoSectionHeader,
           children: p.default.Messages.USER_PROFILE_ABOUT_ME
-        }), (0, s.jsx)(I.default, {
+        }), (0, s.jsx)(E.default, {
           className: x.userInfoText,
           userBio: null !== (t = null == g ? void 0 : g.bio) && void 0 !== t ? t : "",
           userId: l.id
@@ -80,9 +80,9 @@ function g(e) {
           children: p.default.Messages.NOTE
         }), (0, s.jsx)(o.default, {
           userId: l.id,
-          autoFocus: A,
+          autoFocus: N,
           className: x.note,
-          onUpdate: () => N({
+          onUpdate: () => A({
             action: "SET_NOTE"
           })
         })]

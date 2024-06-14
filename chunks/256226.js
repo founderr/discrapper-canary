@@ -46,8 +46,8 @@ t.default = r.forwardRef(function(e, t) {
         label: h.default.Messages.COPY_ID_ROLE
       })
     })
-  }, [R.id]), w = (0, _.useToken)(d.default.unsafe_rawColors.PRIMARY_300).hsl(), k = null !== (m = R.colorString) && void 0 !== m ? m : w, B = null !== (N = (0, l.hex2rgb)(k, .6)) && void 0 !== N ? N : void 0, x = d.default.unsafe_rawColors.WHITE_500.css, V = (0, l.hex2int)(k);
-  null != V && .3 > (0, l.getDarkness)(V) && (x = d.default.unsafe_rawColors.PRIMARY_630.css), p = b ? (0, i.jsx)(I.default, {
+  }, [R.id]), w = (0, _.useToken)(d.default.unsafe_rawColors.PRIMARY_300).hsl(), k = null !== (m = R.colorString) && void 0 !== m ? m : w, B = null !== (N = (0, l.hex2rgb)(k, .6)) && void 0 !== N ? N : void 0, V = d.default.unsafe_rawColors.WHITE_500.css, x = (0, l.hex2int)(k);
+  null != x && .3 > (0, l.getDarkness)(x) && (V = d.default.unsafe_rawColors.PRIMARY_630.css), p = b ? (0, i.jsx)(I.default, {
     className: A.roleFlowerStar,
     iconClassName: O ? A.roleVerifiedIcon : void 0,
     color: k,
@@ -92,7 +92,7 @@ t.default = r.forwardRef(function(e, t) {
             roleName: R.name
           }),
           children: [p, (0, i.jsx)(f.default, {
-            color: x,
+            color: V,
             className: A.roleRemoveIcon,
             "aria-hidden": !0
           })]

@@ -52,8 +52,8 @@ var i = n("735250"),
   w = n("626135"),
   k = n("768581"),
   B = n("900849"),
-  x = n("74538"),
-  V = n("886132"),
+  V = n("74538"),
+  x = n("886132"),
   F = n("524444"),
   H = n("981631"),
   Y = n("176505"),
@@ -239,7 +239,7 @@ let z = () => ({
       guildEmoji: y,
       demoMode: P = !1,
       nonce: G
-    } = e, k = (0, l.useStateFromStores)([D.default], () => D.default.getCurrentUser()), B = (0, l.useStateFromStores)([v.default], () => v.default.getGuildId()), Z = x.default.isPremium(k), X = null != B && (B === (null == S ? void 0 : S.id) || B === (null == O ? void 0 : O.id)), q = null != O, $ = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
+    } = e, k = (0, l.useStateFromStores)([D.default], () => D.default.getCurrentUser()), B = (0, l.useStateFromStores)([v.default], () => v.default.getGuildId()), Z = V.default.isPremium(k), X = null != B && (B === (null == S ? void 0 : S.id) || B === (null == O ? void 0 : O.id)), q = null != O, $ = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
     P && (Z = !0, $ = !0, q = !1, X = !1);
     let ee = z(),
       {
@@ -271,7 +271,7 @@ let z = () => ({
       disableTrack: !et
     });
     let ea = v.default.getGuildId(),
-      eo = (0, V.getEmojiPopoutData)({
+      eo = (0, x.getEmojiPopoutData)({
         isPremium: Z,
         hasJoinedEmojiSourceGuild: q,
         isRoleSubscriptionEmoji: et,
@@ -297,8 +297,8 @@ let z = () => ({
         nonce: G,
         demoMode: P
       }),
-      e_ = eo.type === V.EmojiPopoutType.JOIN_GUILD,
-      ec = eo.type === V.EmojiPopoutType.GET_PREMIUM,
+      e_ = eo.type === x.EmojiPopoutType.JOIN_GUILD,
+      ec = eo.type === x.EmojiPopoutType.GET_PREMIUM,
       [eE, eI] = r.useState(!1),
       eT = $ || q && !X || null != S;
     return (0, i.jsxs)(F.MessagePopoutContent, {
@@ -435,7 +435,7 @@ let z = () => ({
           animated: e.animated,
           ...t
         })
-      }, e.id)), !l && (_ === V.EmojiPopoutType.GET_PREMIUM ? (0, i.jsxs)(i.Fragment, {
+      }, e.id)), !l && (_ === x.EmojiPopoutType.GET_PREMIUM ? (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(R.default, {
           subscriptionTier: j.PremiumSubscriptionSKUs.TIER_2,
           buttonText: a.text,
@@ -450,7 +450,7 @@ let z = () => ({
             children: E
           })
         })]
-      }) : _ === V.EmojiPopoutType.JOIN_GUILD ? (0, i.jsx)(d.Button, {
+      }) : _ === x.EmojiPopoutType.JOIN_GUILD ? (0, i.jsx)(d.Button, {
         size: d.Button.Sizes.SMALL,
         className: K.ctaButton,
         color: d.ButtonColors.BRAND,

@@ -39,10 +39,10 @@ t.default = r.memo(function(e) {
     isLoading: P,
     onClose: U,
     profileViewedAnalytics: b
-  } = e, G = null == n ? void 0 : n.identityGuildId, w = (0, N.useClanInfo)(null != G ? G : null), k = null == n ? void 0 : n.tag, B = (0, R.default)("clan_guild_profile"), x = (0, C.default)("base_clan_tag_chiplet"), V = (0, o.useStateFromStores)([T.default], () => T.default.getId()), F = (0, o.useStateFromStores)([f.default], () => null != G ? f.default.getMember(G, V) : null, [G, V]), H = (0, o.useStateFromStores)([c.default], () => {
+  } = e, G = null == n ? void 0 : n.identityGuildId, w = (0, N.useClanInfo)(null != G ? G : null), k = null == n ? void 0 : n.tag, B = (0, R.default)("clan_guild_profile"), V = (0, C.default)("base_clan_tag_chiplet"), x = (0, o.useStateFromStores)([T.default], () => T.default.getId()), F = (0, o.useStateFromStores)([f.default], () => null != G ? f.default.getMember(G, x) : null, [G, x]), H = (0, o.useStateFromStores)([c.default], () => {
     var e;
     return (null == w ? void 0 : w.id) != null && (null === (e = c.default.getRequest(w.id)) || void 0 === e ? void 0 : e.applicationStatus) === _.GuildJoinRequestApplicationStatuses.SUBMITTED
-  }), Y = null != w && w.memberCount >= L.MAX_CLAN_MEMBERS, j = (0, d.useIsDismissibleContentDismissed)(s.DismissibleContent.CLAN_TAG_WAITLIST), W = (0, o.useStateFromStores)([S.default], () => S.default.getUser(V), [V]), K = (null == F ? void 0 : F.joinedAt) != null, z = (0, O.isGuildAdoptedUserClanIdentity)(G, null == W ? void 0 : W.clan), Z = null != (0, E.default)(G);
+  }), Y = null != w && w.memberCount >= L.MAX_CLAN_MEMBERS, j = (0, d.useIsDismissibleContentDismissed)(s.DismissibleContent.CLAN_TAG_WAITLIST), W = (0, o.useStateFromStores)([S.default], () => S.default.getUser(x), [x]), K = (null == F ? void 0 : F.joinedAt) != null, z = (0, O.isGuildAdoptedUserClanIdentity)(G, null == W ? void 0 : W.clan), Z = null != (0, E.default)(G);
   r.useEffect(() => {
     null != G && (0, m.trackClanProfileViewed)({
       guildId: G,
@@ -92,7 +92,7 @@ t.default = r.memo(function(e) {
     }, [null == w ? void 0 : null === (t = w.branding) || void 0 === t ? void 0 : t.primaryColor]),
     en = r.useMemo(() => {
       switch (!0) {
-        case !x:
+        case !V:
           return null;
         case !K && !B && !j:
           return (0, i.jsx)(a.Button, {
@@ -138,7 +138,7 @@ t.default = r.memo(function(e) {
         default:
           return null
       }
-    }, [et, X, q, $, ee, Z, z, B, j, Q, J, x, K]),
+    }, [et, X, q, $, ee, Z, z, B, j, Q, J, V, K]),
     ei = r.useMemo(() => ({
       className: M.container,
       onClick: y

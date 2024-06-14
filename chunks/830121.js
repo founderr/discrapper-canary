@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return Y
   },
   remainingPathFromDiscordHostMatch: function() {
-    return x
+    return V
   }
 }), n("757143"), n("47120"), n("653041");
 var i, r, s, a, o, l, u = n("729594"),
@@ -78,12 +78,12 @@ function B(e, t) {
   return "" === o ? null : o
 }
 
-function x(e) {
+function V(e) {
   var t, n, i, r;
   return null !== (r = null !== (i = null !== (n = null !== (t = B(M, e)) && void 0 !== t ? t : B(y, e)) && void 0 !== n ? n : B(P, e)) && void 0 !== i ? i : B(U, e)) && void 0 !== r ? r : B(b, e)
 }
 
-function V(e) {
+function x(e) {
   var t, n, i, r;
   let s = Y(e);
   if (null == s || null == s.pathname) return {
@@ -117,7 +117,7 @@ function F(e) {
       inviteHostRemainingPath: r,
       templateHostRemainingPath: s,
       primaryHostRemainingPath: a
-    } = V(e);
+    } = x(e);
     if (null == i || null == i.pathname) continue;
     let o = (e, i) => {
       !t.has(i) && (t.add(i), n.push({
@@ -178,7 +178,7 @@ function F(e) {
 
 function H(e) {
   var t, n;
-  let i = V(e),
+  let i = x(e),
     r = null == i ? void 0 : null === (t = i.primaryHostRemainingPath) || void 0 === t ? void 0 : t.match(g);
   return null !== (n = null == r ? void 0 : r[1]) && void 0 !== n ? n : null
 }

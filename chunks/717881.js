@@ -83,10 +83,10 @@ t.default = function(e) {
     location: "UserActivityContainer"
   }, {
     autoTrackExposure: !1
-  }), w = (0, o.useStateFromStores)([N.default], () => s ? N.default.getAnyStreamForUser(n.id) : null), k = G && C.default.can(D.Permissions.CONNECT, b), B = (null == t ? void 0 : t.type) === D.ActivityTypes.HANG_STATUS && k ? b : null, x = (0, o.useStateFromStores)([O.default, R.default, p.default], () => {
+  }), w = (0, o.useStateFromStores)([N.default], () => s ? N.default.getAnyStreamForUser(n.id) : null), k = G && C.default.can(D.Permissions.CONNECT, b), B = (null == t ? void 0 : t.type) === D.ActivityTypes.HANG_STATUS && k ? b : null, V = (0, o.useStateFromStores)([O.default, R.default, p.default], () => {
     var e, i;
     return (0, u.default)(t, D.ActivityFlags.EMBEDDED) ? O.default.getGuild(null === (e = p.default.getChannel(null === (i = R.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != B ? O.default.getGuild(B.getGuildId()) : null
-  }), V = (0, o.useStateFromStores)([O.default], () => null != w ? O.default.getGuild(w.guildId) : null), F = (0, o.useStateFromStores)([c.default], () => {
+  }), x = (0, o.useStateFromStores)([O.default], () => null != w ? O.default.getGuild(w.guildId) : null), F = (0, o.useStateFromStores)([c.default], () => {
     if (null != t) return null != t.application_id ? c.default.getApplication(t.application_id) : c.default.getApplicationByName(t.name);
     return null
   }), H = (0, E.default)(), Y = (0, h.default)(n), j = H && null != t && Y;
@@ -102,7 +102,7 @@ t.default = function(e) {
     user: n,
     application: F,
     hideHeader: d,
-    activityGuild: null != x ? x : V,
+    activityGuild: null != V ? V : x,
     showReactions: j,
     showChannelDetails: _,
     channel: _ ? b : void 0,

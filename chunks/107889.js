@@ -15,8 +15,8 @@ var s = l("735250"),
   c = l("158776"),
   f = l("5192"),
   S = l("877485"),
-  E = l("785717"),
-  I = l("318661"),
+  I = l("785717"),
+  E = l("318661"),
   m = l("502762"),
   v = l("544989"),
   _ = l("481932"),
@@ -24,9 +24,9 @@ var s = l("735250"),
   p = l("272510"),
   x = l("171368"),
   g = l("806926"),
-  A = l("740021"),
+  N = l("740021"),
   C = l("228168"),
-  N = l("981631"),
+  A = l("981631"),
   U = l("689938"),
   P = l("61007");
 
@@ -44,13 +44,13 @@ function h(e) {
     onClose: F,
     showGuildProfile: D = !0,
     sourceAnalyticsLocations: b = []
-  } = e, B = l === N.ME ? void 0 : l, {
+  } = e, B = l === A.ME ? void 0 : l, {
     analyticsLocations: G
   } = (0, u.default)([...b, r.default.SIMPLIFIED_PROFILE_MODAL]), {
     originalFriendingEnabled: k
   } = (0, S.useSimplifiedProfileFriendingExperiment)({
     location: "SimplifiedUserProfileModal"
-  }), w = (0, E.useTrackUserProfileAction)({
+  }), w = (0, I.useTrackUserProfileAction)({
     layout: "SIMPLIFIED_MODAL",
     userId: t.id,
     guildId: B,
@@ -58,7 +58,7 @@ function h(e) {
     messageId: R,
     roleId: M,
     showGuildProfile: D
-  }), Y = (0, I.default)(t.id, D ? B : void 0), V = (0, I.default)(t.id, B), {
+  }), Y = (0, E.default)(t.id, D ? B : void 0), V = (0, E.default)(t.id, B), {
     activity: H,
     customStatusActivity: W
   } = (0, a.useStateFromStoresObject)([c.default], () => ({
@@ -66,13 +66,13 @@ function h(e) {
       let {
         type: t
       } = e;
-      return t !== N.ActivityTypes.CUSTOM_STATUS
+      return t !== A.ActivityTypes.CUSTOM_STATUS
     }),
     customStatusActivity: c.default.findActivity(t.id, e => {
       let {
         type: t
       } = e;
-      return t === N.ActivityTypes.CUSTOM_STATUS
+      return t === A.ActivityTypes.CUSTOM_STATUS
     })
   })), z = i.createRef(), Z = (0, o.default)(z), Q = () => (null == V ? void 0 : V.guildId) == null ? null : (null == Y ? void 0 : Y.guildId) != null ? (0, s.jsx)(n.MenuItem, {
     id: "view-main-profile",
@@ -119,7 +119,7 @@ function h(e) {
   });
   return (0, s.jsx)(u.AnalyticsLocationProvider, {
     value: G,
-    children: (0, s.jsx)(E.UserProfileAnalyticsProvider, {
+    children: (0, s.jsx)(I.UserProfileAnalyticsProvider, {
       layout: "SIMPLIFIED_MODAL",
       userId: t.id,
       guildId: B,
@@ -162,7 +162,7 @@ function h(e) {
               guildId: B,
               viewProfileItem: Q()
             })]
-          }), (0, s.jsx)(A.default, {
+          }), (0, s.jsx)(N.default, {
             user: t,
             displayProfile: Y,
             guildId: B,

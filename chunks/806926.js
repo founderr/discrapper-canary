@@ -16,8 +16,8 @@ var i = l("442837"),
   c = l("91433"),
   f = l("502762"),
   S = l("530"),
-  E = l("616140"),
-  I = l("228168"),
+  I = l("616140"),
+  E = l("228168"),
   m = l("981631"),
   v = l("602091"),
   _ = l("854898");
@@ -30,9 +30,9 @@ function T(e) {
     displayProfile: p,
     initialSection: x,
     initialSubsection: g,
-    friendToken: A,
+    friendToken: N,
     transitionState: C,
-    onClose: N
+    onClose: A
   } = e, U = (0, i.useStateFromStores)([a.default], () => a.default.getRelationshipType(l.id)), {
     originalFriendingEnabled: P,
     improvedFriendingEnabled: h
@@ -43,7 +43,7 @@ function T(e) {
     className: _.container,
     children: [(0, s.jsx)(S.default, {
       user: l,
-      profileType: I.UserProfileTypes.FULL_SIZE,
+      profileType: E.UserProfileTypes.FULL_SIZE,
       nickname: n.default.getName(null == p ? void 0 : p.guildId, T, l),
       pronouns: null == p ? void 0 : p.pronouns,
       nicknameVariant: "heading-xl/bold",
@@ -52,8 +52,8 @@ function T(e) {
       }),
       tags: (0, s.jsx)(r.default, {
         displayProfile: p,
-        profileType: I.UserProfileTypes.FULL_SIZE,
-        onClose: N
+        profileType: E.UserProfileTypes.FULL_SIZE,
+        onClose: A
       })
     }), (h || P) && U === m.RelationshipTypes.PENDING_INCOMING && (0, s.jsx)(f.default.Overlay, {
       className: _.banner,
@@ -61,18 +61,18 @@ function T(e) {
         user: l,
         guildId: null !== (t = null == p ? void 0 : p.guildId) && void 0 !== t ? t : void 0,
         channelId: T,
-        friendToken: A
+        friendToken: N
       })
     }), (0, s.jsxs)(f.default.Overlay, {
       className: _.overlay,
       children: [C === v.ModalTransitionState.ENTERED && (0, s.jsx)(u.default, {
-        onTooltipClose: N
-      }), (0, s.jsx)(E.default, {
+        onTooltipClose: A
+      }), (0, s.jsx)(I.default, {
         user: l,
         displayProfile: p,
         initialSection: x,
         initialSubsection: g,
-        onClose: N
+        onClose: A
       })]
     })]
   })

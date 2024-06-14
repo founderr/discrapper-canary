@@ -182,10 +182,10 @@ function B(e) {
       secondaryColor: g
     },
     bannerHash: D
-  } = n, M = (0, E.default)(n.games), B = (0, h.default)("clan_discovery_card"), [x, V] = r.useState(!1), F = r.useRef(null), [H, Y] = r.useState(!1), j = r.useCallback(() => {
-    V(!0)
+  } = n, M = (0, E.default)(n.games), B = (0, h.default)("clan_discovery_card"), [V, x] = r.useState(!1), F = r.useRef(null), [H, Y] = r.useState(!1), j = r.useCallback(() => {
+    x(!0)
   }, []), W = r.useCallback(() => {
-    V(!1)
+    x(!1)
   }, []), K = P.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
     count: n.memberCount
   }), z = null != T ? T : (0, S.getClanBannerUrl)(n.id, D), Z = null == s && null == z ? {
@@ -230,7 +230,7 @@ function B(e) {
                 guildName: n.name,
                 guildIcon: n.icon,
                 iconSize: 64,
-                animate: !f || x
+                animate: !f || V
               })
             })
           }), (0, i.jsx)("div", {

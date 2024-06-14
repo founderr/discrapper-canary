@@ -48,9 +48,9 @@ async function M(e) {
       poll: null == U ? void 0 : U.poll
     };
   null != P && (k.content = null == P ? void 0 : P.content), null != p.default.getPendingReply(c) && (k.type = v.MessageTypes.REPLY, k.message_reference = U.messageReference, k.allowed_mentions = U.allowedMentions, (0, N.deletePendingReply)(c));
-  let [B, x] = (0, O.default)(k.content);
-  B && (k.content = x, k.flags = (0, g.addFlag)(null !== (t = k.flags) && void 0 !== t ? t : 0, v.MessageFlags.SUPPRESS_NOTIFICATIONS));
-  let V = null !== (n = U.nonce) && void 0 !== n ? n : (0, h.createNonce)(),
+  let [B, V] = (0, O.default)(k.content);
+  B && (k.content = V, k.flags = (0, g.addFlag)(null !== (t = k.flags) && void 0 !== t ? t : 0, v.MessageFlags.SUPPRESS_NOTIFICATIONS));
+  let x = null !== (n = U.nonce) && void 0 !== n ? n : (0, h.createNonce)(),
     F = (0, S.default)({
       channelId: c,
       content: k.content,
@@ -58,10 +58,10 @@ async function M(e) {
       type: k.type,
       messageReference: k.message_reference,
       flags: k.flags,
-      nonce: V,
+      nonce: x,
       poll: (0, m.createPollServerDataFromCreateRequest)(U.poll)
     });
-  return (k.nonce = V, G.on("start", e => {
+  return (k.nonce = x, G.on("start", e => {
     _ = (0, f.createMessageRecord)({
       ...F,
       id: e.id

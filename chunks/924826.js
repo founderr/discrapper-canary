@@ -177,7 +177,7 @@ function _(e) {
         }
       }
     }, [w, k, t, m, c, _, M, h]),
-    x = i.useCallback(e => {
+    V = i.useCallback(e => {
       let n = null != e ? (0, l.createListItemId)(t, e) : null;
       p.current = n
     }, [t]);
@@ -189,7 +189,7 @@ function _(e) {
       tabIndex: P && S ? -1 : 0
     },
     orientation: m,
-    setFocus: x,
+    setFocus: V,
     async focusLastVisibleItem() {
       var e;
       let n = await (0, a.findLastVisibleItem)(null !== (e = C.current) && void 0 !== e ? e : document.body, d(t, C));
@@ -206,6 +206,6 @@ function _(e) {
       let e = p.current;
       return e ? (0, l.getItemId)(e) : null
     }
-  }), [t, B, m, P, S, x, k, w, M])
+  }), [t, B, m, P, S, V, k, w, M])
 }
 n.es(u, t)

@@ -36,9 +36,9 @@ var i = n("278074"),
   w = n("351780"),
   k = n("79390"),
   B = n("643266"),
-  x = n("617136");
+  V = n("617136");
 n("807092");
-var V = n("869765"),
+var x = n("869765"),
   F = n("926491"),
   H = n("467798"),
   Y = n("346479"),
@@ -646,9 +646,9 @@ let eS = {
           allowedMentions: L,
           poll: b
         } = n,
-        V = null !== (r = n.flags) && void 0 !== r ? r : 0,
+        x = null !== (r = n.flags) && void 0 !== r ? r : 0,
         [Y, j] = (0, H.default)(d);
-      Y && (d = j, V = (0, en.addFlag)(V, el.MessageFlags.SUPPRESS_NOTIFICATIONS));
+      Y && (d = j, x = (0, en.addFlag)(x, el.MessageFlags.SUPPRESS_NOTIFICATIONS));
       let W = (null === (i = n.messageReference) || void 0 === i ? void 0 : i.type) === el.MessageReferenceTypes.FORWARD;
       if ("" === d && null == A && null == R && null == b && !W) return Promise.resolve();
       let Z = null != g ? el.MessageTypes.REPLY : el.MessageTypes.DEFAULT,
@@ -661,7 +661,7 @@ let eS = {
           type: Z,
           messageReference: g,
           allowedMentions: L,
-          flags: 0 !== V ? V : void 0,
+          flags: 0 !== x ? x : void 0,
           nonce: Q,
           poll: (0, k.createPollServerDataFromCreateRequest)(b)
         });
@@ -684,7 +684,7 @@ let eS = {
           tts: h,
           message_reference: g,
           allowed_mentions: L,
-          flags: V
+          flags: x
         }
       };
       if (null != A) {
@@ -790,7 +790,7 @@ let eS = {
                 else if (t === f.CodedLinkType.EMBEDDED_ACTIVITY_INVITE);
                 else if (t === f.CodedLinkType.GUILD_PRODUCT);
                 else if (t === f.CodedLinkType.SERVER_SHOP);
-                else if (t === f.CodedLinkType.QUESTS_EMBED)(0, x.trackQuestEvent)({
+                else if (t === f.CodedLinkType.QUESTS_EMBED)(0, V.trackQuestEvent)({
                   questId: o,
                   event: el.AnalyticEvents.QUEST_LINK_SHARED,
                   trackGuildAndChannelMetadata: !0
@@ -900,8 +900,8 @@ let eS = {
       let r = function(e, t) {
           let n = Q.default.getMessage(e, t);
           if (null == n || n.type !== el.MessageTypes.REPLY) return;
-          let i = V.default.getMessageByReference(n.messageReference);
-          if (i.state === V.ReferencedMessageState.LOADED) {
+          let i = x.default.getMessageByReference(n.messageReference);
+          if (i.state === x.ReferencedMessageState.LOADED) {
             if (!n.mentions.includes(i.message.author.id)) return {
               parse: Object.values(el.AllowedMentionTypes),
               replied_user: !1

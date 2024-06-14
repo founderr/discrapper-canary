@@ -112,8 +112,8 @@ function S(e) {
     }
   }), k = (0, E.default)(g), {
     width: B,
-    centered: x = !0
-  } = N, V = o.isMobile ? "100%" : G.width.to(e => Math.round(e)), F = o.isMobile ? "100%" : G.height.to(e => Math.round(e)), H = o.isMobile ? {} : x ? {
+    centered: V = !0
+  } = N, x = o.isMobile ? "100%" : G.width.to(e => Math.round(e)), F = o.isMobile ? "100%" : G.height.to(e => Math.round(e)), H = o.isMobile ? {} : V ? {
     transform: "translate3d(0, -50%, 0) scale(1.0, 1.0)",
     top: "50%"
   } : {
@@ -124,7 +124,7 @@ function S(e) {
   return (0, i.jsx)(s.animated.div, {
     style: {
       position: "relative",
-      width: V,
+      width: x,
       height: F,
       ...Y
     },

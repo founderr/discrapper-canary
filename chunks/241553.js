@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   SeasonalGiftIcon: function() {
-    return V
+    return x
   }
 }), n("47120"), n("653041");
 var i = n("735250"),
@@ -82,9 +82,9 @@ let U = [{
   w = C.default.Millis.DAYS_30,
   k = (0, s.animated)(p.default),
   B = (0, s.animated)(O.default),
-  x = (0, s.animated)(N.default);
+  V = (0, s.animated)(N.default);
 
-function V(e) {
+function x(e) {
   let {
     themeOverride: t,
     hovered: n,
@@ -118,7 +118,7 @@ function V(e) {
       friction: 24
     }
   }), I = a ? c : 0, T = (0, l.isThemeDark)(null != t ? t : u) ? o.dark[I] : o.light[I];
-  return !n && a ? (0, i.jsx)(x, {}) : a && d ? (0, i.jsx)(B, {
+  return !n && a ? (0, i.jsx)(V, {}) : a && d ? (0, i.jsx)(B, {
     isDark: (0, l.isThemeDark)(u),
     style: E
   }) : (0, i.jsx)(k, {
@@ -141,12 +141,12 @@ t.default = r.memo(function(e) {
     autoTrackExposure: C
   }), b = [];
   U && C && b.push(o.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
-  let [G, k] = (0, T.useSelectedDismissibleContent)(b), B = null != G, x = (0, g.useDirectMessageRecipient)(n), F = null != x;
+  let [G, k] = (0, T.useSelectedDismissibleContent)(b), B = null != G, V = (0, g.useDirectMessageRecipient)(n), F = null != V;
   if (t) return null;
   let H = () => {
       (0, f.default)({
         isGift: !0,
-        giftRecipient: null == x ? void 0 : x,
+        giftRecipient: null == V ? void 0 : V,
         initialPlanId: null,
         subscriptionTier: D.PremiumSubscriptionSKUs.TIER_2,
         analyticsLocations: s,
@@ -182,7 +182,7 @@ t.default = r.memo(function(e) {
         },
         children: (0, i.jsx)("div", {
           className: y.noPointerEvents,
-          children: (0, i.jsx)(V, {
+          children: (0, i.jsx)(x, {
             hovered: l,
             isContentDismissed: !B
           })

@@ -36,8 +36,8 @@ var i = n("735250"),
   w = n("883661"),
   k = n("880949"),
   B = n("784222"),
-  x = n("566083"),
-  V = n("172800"),
+  V = n("566083"),
+  x = n("172800"),
   F = n("149203"),
   H = n("981631"),
   Y = n("957825"),
@@ -106,7 +106,7 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
     }, []), er = (0, _.useStateFromStores)([C.HotspotStore], () => C.HotspotStore.hasHotspot(C.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), es = r.useMemo(() => l().memoize((e, t) => {
       let n = s[e],
         r = E[t.sectionIndex];
-      return (0, i.jsx)(V.default, {
+      return (0, i.jsx)(x.default, {
         emojiDescriptors: n,
         emojiSize: o,
         surrogateCodePoint: W,
@@ -187,7 +187,7 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
           glowOpacity: P
         }) : ee(e) ? (0, i.jsx)("div", {
           className: K.nitroBottomDivider
-        }) : null : (0, i.jsx)(x.default, {
+        }) : null : (0, i.jsx)(V.default, {
           className: K.premiumUpsell
         }, "emoji-picker-inline-upsell")
       }, [E, t, P, U, et, ee]),
@@ -230,7 +230,7 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       messageId: w,
       isBurstReaction: k,
       listHeaderClassName: B
-    } = e, x = r.useRef(!1), V = A.EmojiPickerStore.useStore(e => e.activeCategoryIndex), F = (0, m.useExpressionPickerStore)(e => e.searchQuery), Y = L.AnimateEmoji.useSetting(), z = (0, _.useStateFromStores)([v.default], () => v.default.getCurrentUser()), Z = (0, P.isPremium)(z), {
+    } = e, V = r.useRef(!1), x = A.EmojiPickerStore.useStore(e => e.activeCategoryIndex), F = (0, m.useExpressionPickerStore)(e => e.searchQuery), Y = L.AnimateEmoji.useSetting(), z = (0, _.useStateFromStores)([v.default], () => v.default.getCurrentUser()), Z = (0, P.isPremium)(z), {
       location: Q
     } = (0, f.useAnalyticsContext)(), {
       analyticsLocations: X
@@ -268,7 +268,7 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       setCollapsedSections: N,
       getEmojiItemProps: O,
       getEmojiRowProps: C,
-      isScrolling: x,
+      isScrolling: V,
       isUsingKeyboardNavigation: U,
       allowAnimatedEmoji: Y,
       channelGuildId: G,
@@ -285,8 +285,8 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       setUpsellGlowOpacity: er,
       emojiSectionDescriptors: l
     }), eh = (0, p.useSynchronizedActiveCategoryIndexForScrollPosition)({
-      activeCategoryIndex: V,
-      isScrolling: x,
+      activeCategoryIndex: x,
+      isScrolling: V,
       listRef: s,
       onActiveCategoryIndexChange: e => {
         J(e), "" === F && A.EmojiPickerStore.setActiveCategoryIndex(e)
@@ -297,7 +297,7 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
     });
     (0, p.useSynchronizedScrollPositionForActiveCategoryIndex)({
       searchQuery: F,
-      activeCategoryIndex: V,
+      activeCategoryIndex: x,
       listRef: s
     });
     let eA = r.useCallback(e => {

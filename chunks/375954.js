@@ -42,7 +42,7 @@ function B() {
   }), G.clear()
 }
 
-function x() {
+function V() {
   _.default.forEach(e => {
     let {
       channelId: t
@@ -51,7 +51,7 @@ function x() {
   })
 }
 
-function V() {
+function x() {
   _.default.forEach(e => {
     _.default.commit(e.reset(e.map(e => e.set("blocked", M.default.isBlocked(e.author.id)))))
   })
@@ -340,11 +340,11 @@ a = "MessageStore", (s = "displayName") in(r = Y) ? Object.defineProperty(r, s, 
       hasMoreBefore: !1
     }), _.default.commit(n)
   },
-  CHANNEL_DELETE: x,
-  THREAD_DELETE: x,
-  GUILD_DELETE: x,
-  RELATIONSHIP_ADD: V,
-  RELATIONSHIP_REMOVE: V,
+  CHANNEL_DELETE: V,
+  THREAD_DELETE: V,
+  GUILD_DELETE: V,
+  RELATIONSHIP_ADD: x,
+  RELATIONSHIP_REMOVE: x,
   GUILD_MEMBERS_CHUNK_BATCH: function(e) {},
   THREAD_MEMBER_LIST_UPDATE: function(e) {},
   MESSAGE_REACTION_ADD: F,

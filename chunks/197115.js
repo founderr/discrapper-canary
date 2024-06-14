@@ -41,8 +41,8 @@ t.default = function(e) {
     disableShine: w,
     applicationId: k,
     giftMessage: B,
-    overrideDisabledButtonText: x,
-    shinyButtonClassName: V,
+    overrideDisabledButtonText: V,
+    shinyButtonClassName: x,
     onClickOverride: F,
     showGradient: H = !1,
     ...Y
@@ -171,7 +171,7 @@ t.default = function(e) {
     J = r === m.PremiumSubscriptionSKUs.TIER_2 && null != q && [m.PremiumTypes.TIER_0, m.PremiumTypes.TIER_1].includes(q);
   J && (Q = p.default.Messages.BILLING_SWITCH_PLAN_UPGRADE);
   let $ = null != K && K.status !== N.SubscriptionStatusTypes.ACCOUNT_HOLD && !(0, E.isNoneSubscription)(K.planId) && !J,
-    ee = $ ? null != x ? x : function(e) {
+    ee = $ ? null != V ? V : function(e) {
       let {
         ctaSubscriptionSkuId: t,
         currentPremiumType: n
@@ -200,7 +200,7 @@ t.default = function(e) {
       innerClassName: O.premiumSubscribeButton,
       color: r === m.PremiumSubscriptionSKUs.TIER_1 ? o.Button.Colors.PRIMARY : o.Button.Colors.GREEN,
       size: R,
-      className: V,
+      className: x,
       wrapperClassName: s()({
         [O.tier2Gradient]: H && r === m.PremiumSubscriptionSKUs.TIER_2,
         [O.tier1Gradient]: H && r === m.PremiumSubscriptionSKUs.TIER_1

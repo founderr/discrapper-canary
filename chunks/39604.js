@@ -190,7 +190,7 @@ function B(e) {
   })
 }
 
-function x(e, t) {
+function V(e, t) {
   var n, i, r, s, a, o, u, d, _, c;
   let E = new Map;
   for (let e in t.framesEncodedByEncoder) {
@@ -228,7 +228,7 @@ function x(e, t) {
     saved_at: t.savedAt
   }
 }
-async function V(e) {
+async function x(e) {
   let t = O.default.getSettings().storageLocation,
     n = (0, R.default)(e),
     i = "".concat((0, C.default)(n.applicationName.substring(0, 20)), "_").concat(n.id, ".mp4"),
@@ -271,7 +271,7 @@ async function V(e) {
     let {
       duration: e,
       clipStats: t
-    } = await (null != u ? s.saveClipForUser(u, r, l) : s.saveClip(r, l)), i = x(_, t);
+    } = await (null != u ? s.saveClipForUser(u, r, l) : s.saveClip(r, l)), i = V(_, t);
     i.clip_save_time_ms = t.clipSaveTimeMs, i.clip_size_bytes = t.clipSizeBytes, null != t.viewerDecodeFps && (i.decode_fps_during_clip = t.viewerDecodeFps, i.encode_fps_during_clip = t.viewerEncodeFps, i.target_fps = null), m.default.track(M.AnalyticEvents.CLIP_SAVED, i);
     let a = await (0, v.createThumbnailFromVideo)(o.default.clips.getClipProtocolURLFromPath(r), 0);
     return n.thumbnail = a, n.length = e, D.ClipsLogger.info("Clip save succeeded with ".concat(e, "ms and thumbnail ").concat(null !== (c = null == a ? void 0 : a.length) && void 0 !== c ? c : 0, " bytes thumbnail.")), await s.updateClipMetadata(r, JSON.stringify(n)), {
@@ -283,7 +283,7 @@ async function V(e) {
         type: "CLIPS_SAVE_CLIP_PLACEHOLDER_ERROR",
         clipId: n.id
       }), !("errorMessage" in i)) throw m.default.track(M.AnalyticEvents.CLIP_SAVE_FAILURE, _), i;
-    let t = x(_, i);
+    let t = V(_, i);
     throw t.error_at = i.errorAt, t.error_message = i.errorMessage, m.default.track(M.AnalyticEvents.CLIP_SAVE_FAILURE, t), i.errorMessage
   }
 }
@@ -337,7 +337,7 @@ async function F(e) {
   let R = (0, p.playSound)("clip_save", .5),
     g = performance.now();
   try {
-    let e = await V(m);
+    let e = await x(m);
     a.default.dispatch({
       type: "CLIPS_SAVE_CLIP",
       clip: e

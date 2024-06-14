@@ -219,7 +219,7 @@ function B(e) {
   return null == t || t.forEach(e => v(e, !1)), !1
 }
 
-function x(e) {
+function V(e) {
   let {
     messages: t
   } = e;
@@ -228,7 +228,7 @@ function x(e) {
   })), !1
 }
 
-function V(e) {
+function x(e) {
   let {
     firstMessages: t,
     owners: n
@@ -666,8 +666,8 @@ class eg extends I.default {
       USER_UPDATE: b,
       CURRENT_USER_UPDATE: G,
       PRESENCE_UPDATES: X,
-      SEARCH_FINISH: x,
-      MOD_VIEW_SEARCH_FINISH: x,
+      SEARCH_FINISH: V,
+      MOD_VIEW_SEARCH_FINISH: V,
       LOAD_MESSAGES_SUCCESS: k,
       LOAD_MESSAGES_AROUND_SUCCESS: k,
       LOAD_PINNED_MESSAGES_SUCCESS: k,
@@ -700,8 +700,8 @@ class eg extends I.default {
       AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: eE,
       GIFT_CODE_RESOLVE_SUCCESS: eI,
       GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: eT,
-      LOAD_THREADS_SUCCESS: V,
-      LOAD_ARCHIVED_THREADS_SUCCESS: V,
+      LOAD_THREADS_SUCCESS: x,
+      LOAD_ARCHIVED_THREADS_SUCCESS: x,
       LOAD_FORUM_POSTS: F,
       GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: Y,
       LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: j,

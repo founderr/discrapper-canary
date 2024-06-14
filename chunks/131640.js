@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   UserPopoutAvatar: function() {
-    return x
+    return V
   },
   UserPopoutBadgeList: function() {
     return k
   },
   default: function() {
-    return V
+    return x
   }
 }), n("627341");
 var i = n("735250"),
@@ -74,7 +74,7 @@ function k(e) {
 }
 let B = N.default.getEnableHardwareAcceleration() ? d.AnimatedAvatar : d.Avatar;
 
-function x(e) {
+function V(e) {
   let {
     user: t,
     displayProfile: n,
@@ -92,7 +92,7 @@ function x(e) {
     statusTooltipDelay: L
   } = e, {
     theme: k
-  } = (0, v.useUserProfileThemeContext)(), x = r.useContext(A.AnalyticsContext), V = t.isNonUserBot() && !t.isClyde(), F = m.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.PremiumTypes.TIER_2), H = r.useMemo(() => (0, I.shouldDisableUserPresenceInChannel)(t, T), [t, T]), {
+  } = (0, v.useUserProfileThemeContext)(), V = r.useContext(A.AnalyticsContext), x = t.isNonUserBot() && !t.isClyde(), F = m.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.PremiumTypes.TIER_2), H = r.useMemo(() => (0, I.shouldDisableUserPresenceInChannel)(t, T), [t, T]), {
     analyticsLocations: Y
   } = (0, _.default)(), {
     trackUserProfileAction: j,
@@ -134,10 +134,10 @@ function x(e) {
     children: (0, i.jsxs)(d.Clickable, {
       className: a()({
         [b.clickable]: !z,
-        [b.avatarWrapperNonUserBot]: V,
-        [b.avatarWrapperNormal]: !V
+        [b.avatarWrapperNonUserBot]: x,
+        [b.avatarWrapperNormal]: !x
       }, J),
-      onClick: V || z ? void 0 : function() {
+      onClick: x || z ? void 0 : function() {
         j({
           action: "PRESS_VIEW_PROFILE"
         }), (0, D.openUserProfileModal)({
@@ -147,7 +147,7 @@ function x(e) {
           messageId: W,
           roleId: K,
           sourceAnalyticsLocations: Y,
-          analyticsLocation: x.location
+          analyticsLocation: V.location
         }), null == f || f()
       },
       children: [q, !z && function() {
@@ -171,7 +171,7 @@ function x(e) {
   })
 }
 
-function V(e) {
+function x(e) {
   let {
     user: t,
     displayProfile: n,
@@ -200,7 +200,7 @@ function V(e) {
       profileEffectId: null == n ? void 0 : n.profileEffectId,
       bannerAdjustment: 0,
       isHovering: _
-    }), (0, i.jsx)(x, {
+    }), (0, i.jsx)(V, {
       user: t,
       displayProfile: n,
       status: l ? y.StatusTypes.STREAMING : u,

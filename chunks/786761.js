@@ -64,8 +64,8 @@ function p(e) {
     w = null != e.interaction ? u.default.createFromServer(e.interaction) : null,
     k = e.type === A.MessageTypes.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
     B = e.type === A.MessageTypes.PREMIUM_REFERRAL ? e.content : void 0,
-    x = e.content;
-  return e.type === A.MessageTypes.PREMIUM_REFERRAL && (x = ""), O = 0, new d.default({
+    V = e.content;
+  return e.type === A.MessageTypes.PREMIUM_REFERRAL && (V = ""), O = 0, new d.default({
     ...e,
     ...L.toJS(),
     author: b,
@@ -85,7 +85,7 @@ function p(e) {
     }),
     codedLinks: U,
     giftCodes: (0, f.isGiftCodeEmbed)(e) ? (0, f.findGiftCodes)(null == e ? void 0 : e.embeds[0].url) : (0, f.findGiftCodes)(e.content),
-    content: x,
+    content: V,
     referralTrialOfferId: B,
     call: g(e.call, L.timestamp),
     messageSnapshots: function(e) {

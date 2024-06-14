@@ -183,8 +183,8 @@ let k = {
     PAYMENT_SOURCE_MANAGEMENT: "https://play.google.com/store/paymentmethods",
     BILLING_HISTORY: "https://play.google.com/store/account/orderhistory"
   },
-  x = new E.default("PremiumUtils.tsx"),
-  V = {
+  V = new E.default("PremiumUtils.tsx"),
+  x = {
     [b.SubscriptionPlans.NONE_MONTH]: [b.SubscriptionPlans.NONE_YEAR, b.SubscriptionPlans.PREMIUM_YEAR_TIER_2, b.SubscriptionPlans.PREMIUM_MONTH_TIER_2, b.SubscriptionPlans.PREMIUM_YEAR_TIER_1, b.SubscriptionPlans.PREMIUM_MONTH_TIER_1],
     [b.SubscriptionPlans.NONE_YEAR]: [b.SubscriptionPlans.PREMIUM_YEAR_TIER_2, b.SubscriptionPlans.PREMIUM_MONTH_TIER_2, b.SubscriptionPlans.PREMIUM_YEAR_TIER_1, b.SubscriptionPlans.PREMIUM_MONTH_TIER_1],
     [b.SubscriptionPlans.PREMIUM_MONTH_TIER_0]: [b.SubscriptionPlans.PREMIUM_YEAR_TIER_2, b.SubscriptionPlans.PREMIUM_MONTH_TIER_2, b.SubscriptionPlans.PREMIUM_YEAR_TIER_1, b.SubscriptionPlans.PREMIUM_MONTH_TIER_1, b.SubscriptionPlans.PREMIUM_YEAR_TIER_0],
@@ -233,7 +233,7 @@ function Y(e) {
         paymentSourceId: t,
         purchaseType: n
       });
-      return (0 === r.length && x.warn("No prices found for planId: ".concat(e, ", paymentSourceId: ").concat(t, ", purchaseType: ").concat(n)), null != i) ? r.find(e => e.currency === i) : r[0]
+      return (0 === r.length && V.warn("No prices found for planId: ".concat(e, ", paymentSourceId: ").concat(t, ", purchaseType: ").concat(n)), null != i) ? r.find(e => e.currency === i) : r[0]
     }(e, {
       paymentSourceId: r,
       purchaseType: i,
@@ -286,13 +286,13 @@ function j(e) {
     }
     if (null == n.prices) throw Error("No prices returned for ".concat(e, ", is your user in the experiment?"));
     let i = n.prices[t];
-    if (null == i) throw x.info("Purchase types: ".concat(JSON.stringify(Object.keys(n.prices)))), Error("No prices returned for purchase type ".concat(t, " for plan ").concat(e));
+    if (null == i) throw V.info("Purchase types: ".concat(JSON.stringify(Object.keys(n.prices)))), Error("No prices returned for purchase type ".concat(t, " for plan ").concat(e));
     return i
   }(e, n);
   if (null != t) {
     let r = i.paymentSourcePrices[t];
     if (null == r) {
-      x.info("Payment sources IDs: ".concat(JSON.stringify(Object.keys(i.paymentSourcePrices)))), x.info("prices: ".concat(r));
+      V.info("Payment sources IDs: ".concat(JSON.stringify(Object.keys(i.paymentSourcePrices)))), V.info("prices: ".concat(r));
       let s = Error("Missing prices for payment source on subscription plan");
       (0, C.captureBillingException)(s, {
         extra: {
@@ -306,7 +306,7 @@ function j(e) {
     } else if (0 !== r.length) return r
   }
   if (null == i.countryPrices.prices) {
-    x.info("countryPrices: ".concat(JSON.stringify(i.countryPrices)));
+    V.info("countryPrices: ".concat(JSON.stringify(i.countryPrices)));
     let t = Error("Missing prices for country");
     throw (0, C.captureBillingException)(t, {
       tags: {
@@ -803,7 +803,7 @@ function er(e) {
 
 function es(e) {
   var t;
-  return null == e ? V.ALL : null !== (t = V[e]) && void 0 !== t ? t : []
+  return null == e ? x.ALL : null !== (t = x[e]) && void 0 !== t ? t : []
 }
 
 function ea(e) {

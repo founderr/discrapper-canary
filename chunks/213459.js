@@ -54,13 +54,13 @@ let G = new u.Logger("ApplicationCommandIndexStore"),
   w = Symbol("currentUser"),
   k = Symbol("stale"),
   B = Symbol("current"),
-  x = Object.freeze({
+  V = Object.freeze({
     descriptors: [],
     commands: [],
     sectionedCommands: [],
     loading: !0
   }),
-  V = Object.freeze({
+  x = Object.freeze({
     serverVersion: B,
     fetchState: {
       fetching: !1
@@ -143,7 +143,7 @@ class Z extends(i = d.default.Store) {
   }
   getContextState(e) {
     var t, n;
-    return null != e && ei(e) ? null !== (n = this.indices[null !== (t = e.guild_id) && void 0 !== t ? t : e.id]) && void 0 !== n ? n : F : V
+    return null != e && ei(e) ? null !== (n = this.indices[null !== (t = e.guild_id) && void 0 !== t ? t : e.id]) && void 0 !== n ? n : F : x
   }
   hasContextStateApplication(e, t, n) {
     var i, r;
@@ -161,7 +161,7 @@ class Z extends(i = d.default.Store) {
   }
   getApplicationState(e) {
     var t;
-    return null == e ? V : null !== (t = this.indices[e]) && void 0 !== t ? t : F
+    return null == e ? x : null !== (t = this.indices[e]) && void 0 !== t ? t : F
   }
   getApplicationStates() {
     return this.applicationIndices
@@ -170,7 +170,7 @@ class Z extends(i = d.default.Store) {
     return e in this.indices
   }
   query(e, t, n) {
-    if (null == m.default.getCurrentUser()) return x;
+    if (null == m.default.getCurrentUser()) return V;
     let i = this.getContextState(e),
       r = this.getUserState(),
       s = this.getApplicationState(n.applicationId),

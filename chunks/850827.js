@@ -44,8 +44,8 @@ t.default = (0, d.default)(e => {
     look: w = u.Button.Looks.OUTLINED,
     type: k,
     onAction: B,
-    isEmbedded: x = !1
-  } = e, V = (0, l.useStateFromStores)([I.default], () => {
+    isEmbedded: V = !1
+  } = e, x = (0, l.useStateFromStores)([I.default], () => {
     let e = I.default.getCurrentUser();
     return o()(null != e, "UserActivityActions: currentUser cannot be undefined"), e
   }), F = k === S.Types.PROFILE || k === S.Types.PROFILE_V2 || k === S.Types.SIMPLIFIED_PROFILE, H = k === S.Types.STREAM_PREVIEW || null != a, Y = k === S.Types.SIMPLIFIED_PROFILE || k === S.Types.BITE_SIZE_POPOUT, j = (0, h.default)(t), W = F ? f.default.Align.END : f.default.Align.STRETCH, K = j || H ? f.default.Direction.HORIZONTAL : f.default.Direction.VERTICAL, z = (null == t ? void 0 : t.type) === M.ActivityTypes.HANG_STATUS, Z = (0, l.useStateFromStores)([T.default, E.default], () => {
@@ -108,7 +108,7 @@ t.default = (0, d.default)(e => {
         }, e.channelId)
       }
       return H ? (0, i.jsx)(D.default, {
-        isCurrentUser: V.id === r.id,
+        isCurrentUser: x.id === r.id,
         color: G,
         look: w,
         applicationStream: a,
@@ -130,7 +130,7 @@ t.default = (0, d.default)(e => {
           user: r,
           color: G,
           look: w,
-          isEmbedded: x,
+          isEmbedded: V,
           onAction: B
         }, "join-activity-button"), (0, i.jsx)(R.default, {
           activity: t,

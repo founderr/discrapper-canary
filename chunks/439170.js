@@ -280,13 +280,13 @@ function B() {
   })
 }
 
-function x() {
+function V() {
   let e = h.default.getId();
   G.forEach(null, t => t.rebuildMember(e, !0))
 }
-class V extends(r = _.default.Store) {
+class x extends(r = _.default.Store) {
   initialize() {
-    this.waitFor(R.default, p.default, A.default, N.default, O.default, C.default, h.default, m.default, S.default, E.default), this.syncWith([C.default], x), this.syncWith([S.default], B)
+    this.waitFor(R.default, p.default, A.default, N.default, O.default, C.default, h.default, m.default, S.default, E.default), this.syncWith([C.default], V), this.syncWith([S.default], B)
   }
   getProps(e, t) {
     let n = G.get(e, U(t));
@@ -308,7 +308,7 @@ class V extends(r = _.default.Store) {
     return G.get(e, U(t)).rows
   }
 }
-v(V, "displayName", "ChannelMemberStore"), t.default = new V(c.default, {
+v(x, "displayName", "ChannelMemberStore"), t.default = new x(c.default, {
   CONNECTION_OPEN: w,
   OVERLAY_INITIALIZE: w,
   GUILD_MEMBER_LIST_UPDATE: function(e) {

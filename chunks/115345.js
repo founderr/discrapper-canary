@@ -136,7 +136,7 @@ function w() {
       flags: e
     }
   }
-  x(t), m.default.track(M.AnalyticEvents.NOTIFICATION_MIGRATION_COMPLETED, {
+  V(t), m.default.track(M.AnalyticEvents.NOTIFICATION_MIGRATION_COMPLETED, {
     auto_migrated: !0,
     num_unread_guids_after: e.filter(e => f.default.hasUnread(e.id)).length
   })
@@ -208,7 +208,7 @@ async function B(e, t) {
       for (let t of n.actions) null === (r = t.apply) || void 0 === r || r.call(t, s, e);
       t[n.guildId] = s
     }
-    await x(t);
+    await V(t);
     let s = Object.values(e).filter(e => e.actions.some(e => e.needsMarkedAsRead)).map(e => e.guildId);
     if (s.length > 0) {
       let e = setTimeout(n, 5e3);
@@ -226,9 +226,9 @@ async function B(e, t) {
     })
   }
 }
-async function x(e) {
-  await V(() => F()), await V(() => d.default.setAccountFlag(v.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !0));
-  let t = await V(() => c.default.saveUserGuildSettingsBulk(e));
+async function V(e) {
+  await x(() => F()), await x(() => d.default.setAccountFlag(v.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !0));
+  let t = await x(() => c.default.saveUserGuildSettingsBulk(e));
   l.default.dispatch({
     type: "USER_GUILD_SETTINGS_FULL_UPDATE",
     userGuildSettings: t
@@ -236,7 +236,7 @@ async function x(e) {
     type: "RECOMPUTE_READ_STATES"
   })
 }
-async function V(e) {
+async function x(e) {
   for (let t = 0; t < 3; t++) try {
     return await e()
   } catch (e) {
