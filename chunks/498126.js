@@ -1,39 +1,39 @@
 "use strict";
 n.r(t), n.d(t, {
   SecureFramesCopyIcon: function() {
-    return E
+    return f
   }
 }), n("47120");
-var s = n("735250"),
-  r = n("470079"),
+var r = n("735250"),
+  s = n("470079"),
   l = n("120356"),
   a = n.n(l),
-  o = n("903788"),
-  u = n("939298"),
+  u = n("903788"),
+  o = n("939298"),
   i = n("481060"),
   c = n("572004"),
   d = n("689938"),
-  f = n("782836");
+  E = n("782836");
 
-function E(e) {
+function f(e) {
   let {
     text: t,
     className: n,
     ...l
-  } = e, [E, C] = r.useState(!1), S = r.useCallback(() => {
+  } = e, [f, C] = s.useState(!1), S = s.useCallback(() => {
     C(!0), (0, c.copy)(t)
-  }, [t]), m = E ? o.CircleCheckIcon : u.CopyIcon;
-  return (0, s.jsx)(i.Clickable, {
-    className: a()(f.container, n),
+  }, [t]), I = f ? u.CircleCheckIcon : o.CopyIcon;
+  return (0, r.jsx)(i.Clickable, {
+    className: a()(E.container, n),
     onClick: S,
-    children: (0, s.jsx)(i.Tooltip, {
-      text: E ? d.default.Messages.COPIED : d.default.Messages.COPY,
-      children: e => (0, s.jsx)(m, {
+    children: (0, r.jsx)(i.Tooltip, {
+      text: f ? d.default.Messages.COPIED : d.default.Messages.COPY,
+      children: e => (0, r.jsx)(I, {
         ...l,
         ...e,
         height: 12,
         width: 12,
-        color: E ? i.tokens.colors.TEXT_POSITIVE : i.tokens.colors.INTERACTIVE_NORMAL
+        color: f ? i.tokens.colors.TEXT_POSITIVE : i.tokens.colors.INTERACTIVE_NORMAL
       })
     })
   })

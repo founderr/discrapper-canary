@@ -26,20 +26,20 @@ function S(e) {
     _ = (0, u.useStateFromStores)([s.default], () => s.default.getGuild(m), [m]),
     g = (0, u.useStateFromStores)([r.default], () => null != S ? r.default.getVoiceStateForChannel(S, e.id) : null, [S, e.id]),
     R = (null === (t = d.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.id,
-    A = (0, c.default)(),
-    C = (0, u.useStateFromStores)([f.default], () => f.default.getPermissionsForUser(e.id, S), [S, e.id]),
+    C = (0, c.default)(),
+    A = (0, u.useStateFromStores)([f.default], () => f.default.getPermissionsForUser(e.id, S), [S, e.id]),
     N = (0, o.useCanModerateRequestToSpeak)(S);
-  if (null == l || null == _ || null == g || C.speaker) return null;
-  let I = () => {
+  if (null == l || null == _ || null == g || A.speaker) return null;
+  let O = () => {
     R ? (0, i.audienceAckRequestToSpeak)(l, !1) : (0, i.inviteUserToStage)(l, e.id)
   };
   return N ? (0, a.jsx)(n.MenuItem, {
     id: "invite-speaker",
     label: R ? M.default.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER : M.default.Messages.STAGE_CHANNEL_USER_INVITE_TO_SPEAK,
-    action: I
-  }) : A && R ? (0, a.jsx)(n.MenuItem, {
+    action: O
+  }) : C && R ? (0, a.jsx)(n.MenuItem, {
     id: "invite-speaker",
     label: M.default.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER,
-    action: I
+    action: O
   }) : null
 }

@@ -45,8 +45,8 @@ function F(e) {
     user: y
   } = e, {
     reducedMotion: V
-  } = n.useContext(l.AccessibilityPreferencesContext), H = O.default.isPremium(y), {
-    pendingAvatar: Y,
+  } = n.useContext(l.AccessibilityPreferencesContext), Y = O.default.isPremium(y), {
+    pendingAvatar: H,
     pendingBanner: k,
     pendingThemeColors: w,
     pendingPronouns: W,
@@ -115,11 +115,11 @@ function F(e) {
           pendingPronouns: W,
           pendingBio: K,
           pendingBanner: null !== (B = null != X ? X : k) && void 0 !== B ? B : s("466045"),
-          pendingAvatar: null != z ? z : Y,
+          pendingAvatar: null != z ? z : H,
           pendingThemeColors: null != Q ? Q : w,
           pendingAvatarDecoration: J,
           pendingProfileEffectId: $,
-          avatarClassName: null != z || null != Y || V.enabled ? void 0 : G.spinningAvatar,
+          avatarClassName: null != z || null != H || V.enabled ? void 0 : G.spinningAvatar,
           canUsePremiumCustomization: !0,
           isTryItOutFlow: !0,
           hideExampleButton: !0,
@@ -139,7 +139,7 @@ function F(e) {
           }), (0, a.jsx)(P.default, {
             className: G.customizationSection,
             user: y,
-            pendingAvatar: null != z ? z : Y,
+            pendingAvatar: null != z ? z : H,
             pendingColors: null != Q ? Q : w,
             onThemeColorsChange: N.setTryItOutThemeColors,
             showPremiumIcon: !1,
@@ -180,7 +180,7 @@ function F(e) {
               subscriptionTier: v.PremiumSubscriptionSKUs.TIER_2,
               className: G.premiumSubscribeButton,
               size: l.Button.Sizes.MEDIUM,
-              buttonText: H ? j.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : er ? j.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+              buttonText: Y ? j.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : er ? j.default.Messages.PREMIUM_DISCOUNT_CTA.format({
                 percent: null == el ? void 0 : el.discount.amount
               }) : j.default.Messages.PREMIUM_UPSELL_GET_NITRO
             })]

@@ -12,11 +12,11 @@ var r, s = n("392711"),
   _ = n("442837"),
   A = n("570140"),
   I = n("158776"),
-  S = n("146282"),
-  l = n("26033"),
-  i = n("561308"),
-  R = n("981631"),
-  o = n("616922");
+  l = n("146282"),
+  i = n("26033"),
+  S = n("561308"),
+  o = n("981631"),
+  R = n("616922");
 
 function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -38,14 +38,14 @@ function f(e) {
     n = new Set;
   for (let r of e) {
     let e = function(e) {
-      return (0, i.isEntryExpired)(e) ? null : (0, i.isEntryActive)(e) && e.author_type === E.ContentInventoryAuthorType.USER ? I.default.getActivities(e.author_id).find(t => {
-        if (t.type === R.ActivityTypes.PLAYING && (0, l.isGamingLikeEntry)(e)) return function(e, t) {
+      return (0, S.isEntryExpired)(e) ? null : (0, S.isEntryActive)(e) && e.author_type === E.ContentInventoryAuthorType.USER ? I.default.getActivities(e.author_id).find(t => {
+        if (t.type === o.ActivityTypes.PLAYING && (0, i.isGamingLikeEntry)(e)) return function(e, t) {
           let n = e.extra;
           return null != n && ("application_id" in t && t.application_id === n.application_id || "game_name" in n && t.name === n.game_name)
         }(e, t);
-        if (t.type === R.ActivityTypes.LISTENING && e.content_type === u.ContentInventoryEntryType.LISTENED_SESSION) {
+        if (t.type === o.ActivityTypes.LISTENING && e.content_type === u.ContentInventoryEntryType.LISTENED_SESSION) {
           var n, r, s, a, E;
-          return n = e, r = t, (null === (a = n.extra.entries[0]) || void 0 === a ? void 0 : null === (s = a.media) || void 0 === s ? void 0 : s.provider) === T.ContentInventoryListenedMediaProvider.SPOTIFY && (0, o.isSpotifyParty)(null === (E = r.party) || void 0 === E ? void 0 : E.id)
+          return n = e, r = t, (null === (a = n.extra.entries[0]) || void 0 === a ? void 0 : null === (s = a.media) || void 0 === s ? void 0 : s.provider) === T.ContentInventoryListenedMediaProvider.SPOTIFY && (0, R.isSpotifyParty)(null === (E = r.party) || void 0 === E ? void 0 : E.id)
         }
         return !1
       }) : void 0
@@ -66,7 +66,7 @@ function M() {
     t = Array.from(d.keys()),
     n = new Set,
     r = new Set;
-  for (let t of S.default.getFeeds().values()) {
+  for (let t of l.default.getFeeds().values()) {
     let {
       updatedKeys: s,
       matchedKeys: a
@@ -80,13 +80,13 @@ function M() {
 }
 class G extends(r = _.default.Store) {
   initialize() {
-    this.waitFor(S.default, I.default), this.syncWith([I.default], M)
+    this.waitFor(l.default, I.default), this.syncWith([I.default], M)
   }
   getMatchingActivity(e) {
-    return (0, i.isEntryExpired)(e) ? null : d.get(c(e))
+    return (0, S.isEntryExpired)(e) ? null : d.get(c(e))
   }
   constructor(...e) {
-    super(...e), N(this, "canRenderContent", e => !(0, i.isEntryExpired)(e) && (!O.has(e.content_type) || null != this.getMatchingActivity(e)))
+    super(...e), N(this, "canRenderContent", e => !(0, S.isEntryExpired)(e) && (!O.has(e.content_type) || null != this.getMatchingActivity(e)))
   }
 }
 N(G, "displayName", "ContentInventoryActivityStore"), t.default = new G(A.default, {

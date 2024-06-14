@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   formatCanvasDescription: function() {
     return s
   },
@@ -9,10 +9,10 @@ n.r(t), n.d(t, {
   getContentAltText: function() {
     return i
   }
-}), n("627494"), n("757143"), n("201133");
-var a = n("5192"),
-  r = n("561308"),
-  l = n("689938");
+}), a("627494"), a("757143"), a("201133");
+var n = a("5192"),
+  r = a("561308"),
+  l = a("689938");
 let i = (e, t) => l.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
     username: t.username,
     activity: e.extra.game_name
@@ -21,9 +21,9 @@ let i = (e, t) => l.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.fo
     let t = (0, r.isEntryActive)(e);
     return (0, r.isEntryNew)(e) ? t ? l.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME : l.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME : t ? l.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME : l.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME
   },
-  s = (e, t, n) => {
+  s = (e, t, a) => {
     let r = o(e),
-      l = a.default.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
+      l = n.default.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, a),
       i = e.extra.game_name;
     return r.plainFormat({
       gameName: i,
@@ -33,14 +33,14 @@ let i = (e, t) => l.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.fo
   u = e => {
     let {
       entry: t,
-      channel: n,
+      channel: a,
       users: i,
       countOthers: o
     } = e;
     return ((0, r.isEntryActive)(t) ? l.default.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYING : l.default.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYED).plainFormat({
       gameName: t.extra.game_name,
-      user1: a.default.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, i[0]),
-      user2: a.default.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, i[1]),
+      user1: n.default.getName(null == a ? void 0 : a.guild_id, null == a ? void 0 : a.id, i[0]),
+      user2: n.default.getName(null == a ? void 0 : a.guild_id, null == a ? void 0 : a.id, i[1]),
       countOthers: o
     }).replaceAll("*", "")
   }

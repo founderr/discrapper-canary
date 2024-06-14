@@ -4,24 +4,24 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var s = n("735250"),
-  r = n("470079"),
+var r = n("735250"),
+  s = n("470079"),
   l = n("120356"),
   a = n.n(l),
-  o = n("481060"),
-  u = n("16140");
+  u = n("481060"),
+  o = n("16140");
 
 function i(e) {
   let {
     code: t,
     className: n
-  } = e, l = r.useMemo(() => t.split(" "), [t]);
-  return (0, s.jsx)("div", {
-    className: a()(u.code, n),
-    children: l.map((e, t) => (0, s.jsx)("div", {
-      className: u.codeChunk,
-      children: (0, s.jsx)(o.Text, {
-        className: u.codeText,
+  } = e, l = s.useMemo(() => t.split(" "), [t]);
+  return (0, r.jsx)("div", {
+    className: a()(o.code, n),
+    children: l.map((e, t) => (0, r.jsx)("div", {
+      className: o.codeChunk,
+      children: (0, r.jsx)(u.Text, {
+        className: o.codeText,
         variant: "code",
         color: "text-normal",
         children: e

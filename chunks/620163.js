@@ -43,8 +43,8 @@ var n = s("990547"),
   B = s("626135"),
   y = s("49012"),
   V = s("358085"),
-  H = s("998502"),
-  Y = s("392735"),
+  Y = s("998502"),
+  H = s("392735"),
   k = s("61160"),
   w = s("604227"),
   W = s("38915"),
@@ -110,8 +110,8 @@ let eG = () => {
       numOfPendingFamilyRequests: eB,
       isOverlaySupported: ey,
       isClipsBetaTagShowing: eV = !1,
-      shouldMergeGameSettings: eH,
-      isUserSettingsSearchEnabled: eY,
+      shouldMergeGameSettings: eY,
+      isUserSettingsSearchEnabled: eH,
       isKeywordFilteringEnabled: ek,
       isStaff: ew,
       isInappropriateConversationWarningEnabled: eW,
@@ -123,12 +123,12 @@ let eG = () => {
       [eL.WebSetting.SEARCH_BAR]: {
         section: S.SectionTypes.CUSTOM,
         element: ef.default,
-        predicate: () => eY
+        predicate: () => eH
       },
       [eL.WebSetting.SEARCH_NO_RESULTS]: {
         section: S.SectionTypes.CUSTOM,
         element: em.default,
-        predicate: () => eY
+        predicate: () => eH
       },
       [eL.WebSetting.ACCOUNT]: {
         section: eP.UserSettingsSections.ACCOUNT,
@@ -228,7 +228,7 @@ let eG = () => {
         label: eU.default.Messages.GAMES,
         ariaLabel: eU.default.Messages.GAMES,
         element: eD.default,
-        predicate: () => eH
+        predicate: () => eY
       },
       [eL.WebSetting.GAMES_MY_GAMES]: {
         section: eP.UserSettingsSections.GAMES,
@@ -434,7 +434,7 @@ let eG = () => {
         ariaLabel: eU.default.Messages.AUTH_SESSIONS,
         element: eA.default,
         newIndicatorDismissibleContentTypes: [i.DismissibleContent.AUTH_SESSIONS_NEW],
-        predicate: () => Y.default.getCurrentConfig({
+        predicate: () => H.default.getCurrentConfig({
           location: "9f7d84_1"
         }, {
           autoTrackExposure: !1
@@ -465,7 +465,7 @@ let eG = () => {
         ariaLabel: eU.default.Messages.CLIPS,
         icon: eV ? (0, a.jsx)(I.default, {}) : void 0,
         element: N.default,
-        predicate: () => !eH
+        predicate: () => !eY
       },
       [eL.WebSetting.FRIEND_REQUESTS]: {
         section: eP.UserSettingsSections.FRIEND_REQUESTS,
@@ -784,7 +784,7 @@ let eG = () => {
         section: eP.UserSettingsSections.VOICE,
         searchableTitle: eU.default.Messages.FORM_CHECKBOX_CONNECTION_LOG,
         parent: eL.WebSetting.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-        predicate: () => ("canary" === H.default.releaseChannel || "development" === H.default.releaseChannel) && ew && U.default.supports(ev.Features.CONNECTION_REPLAY)
+        predicate: () => ("canary" === Y.default.releaseChannel || "development" === Y.default.releaseChannel) && ew && U.default.supports(ev.Features.CONNECTION_REPLAY)
       },
       [eL.WebSetting.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING]: {
         section: eP.UserSettingsSections.VOICE,
@@ -1143,31 +1143,31 @@ let eG = () => {
         label: eU.default.Messages.ACTIVITY_PRIVACY,
         ariaLabel: eU.default.Messages.ACTIVITY_PRIVACY,
         element: ee.default,
-        predicate: () => !eH
+        predicate: () => !eY
       },
       [eL.WebSetting.ACTIVITY_PRIVACY_STATUS]: {
-        section: eH ? eP.UserSettingsSections.GAMES : eP.UserSettingsSections.ACTIVITY_PRIVACY,
+        section: eY ? eP.UserSettingsSections.GAMES : eP.UserSettingsSections.ACTIVITY_PRIVACY,
         searchableTitle: eU.default.Messages.ACTIVITY_STATUS,
-        parent: eH ? eL.WebSetting.GAMES : eL.WebSetting.ACTIVITY_PRIVACY
+        parent: eY ? eL.WebSetting.GAMES : eL.WebSetting.ACTIVITY_PRIVACY
       },
       [eL.WebSetting.ACTIVITY_PRIVACY_RICH_PRESENCE]: {
-        section: eH ? eP.UserSettingsSections.GAMES : eP.UserSettingsSections.ACTIVITY_PRIVACY,
+        section: eY ? eP.UserSettingsSections.GAMES : eP.UserSettingsSections.ACTIVITY_PRIVACY,
         searchableTitle: eU.default.Messages.ACTIVITY_PARTY_PRIVACY,
-        parent: eH ? eL.WebSetting.GAMES : eL.WebSetting.ACTIVITY_PRIVACY
+        parent: eY ? eL.WebSetting.GAMES : eL.WebSetting.ACTIVITY_PRIVACY
       },
       [eL.WebSetting.REGISTERED_GAMES]: {
         section: eP.UserSettingsSections.REGISTERED_GAMES,
         searchableTitle: eU.default.Messages.REGISTERED_GAMES,
         label: eU.default.Messages.REGISTERED_GAMES,
         element: eu.default,
-        predicate: () => !eH && (0, eM.shouldShowRegisteredGamesSettings)()
+        predicate: () => !eY && (0, eM.shouldShowRegisteredGamesSettings)()
       },
       [eL.WebSetting.OVERLAY]: {
         section: eP.UserSettingsSections.OVERLAY,
         searchableTitle: eU.default.Messages.OVERLAY,
         label: eU.default.Messages.OVERLAY,
         element: eI.default,
-        predicate: () => !eH && ey
+        predicate: () => !eY && ey
       },
       [eL.WebSetting.CHANGELOG]: {
         section: "changelog",

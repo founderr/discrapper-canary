@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return c
   },
   getAttachmentFilename: function() {
-    return A
+    return N
   },
   getClassificationExpiration: function() {
     return C
@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return T
   },
   parseMessageEmbedForProps: function() {
-    return N
+    return A
   }
 }), n("724458");
 var i = n("913527"),
@@ -41,12 +41,12 @@ function a(e) {
   return E()().to(E()(e))
 }
 
-function A(e) {
+function N(e) {
   var t, n;
   return (0, I.isImageFile)(e.filename) || (0, I.isVideoFile)(e.filename) ? "".concat(s.SPOILER_ATTACHMENT_PREFIX).concat(null !== (t = e.filename) && void 0 !== t ? t : ".png") : null !== (n = e.filename) && void 0 !== n ? n : ""
 }
 
-function N(e) {
+function A(e) {
   var t, n, i, E;
   if (null == e.fields) return;
   let I = e.fields.reduce((e, t) => (e[t.rawName] = t.rawValue, e), {});

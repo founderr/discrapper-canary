@@ -38,20 +38,20 @@ var a = s("735250"),
   B = s("526761"),
   y = s("726985"),
   V = s("689938"),
-  H = s("431008");
+  Y = s("431008");
 
-function Y() {
+function H() {
   return (0, a.jsx)(o.Card, {
-    className: H.noItemsCard,
+    className: Y.noItemsCard,
     type: o.Card.Types.CUSTOM,
     children: (0, a.jsxs)(x.default, {
       align: x.default.Align.CENTER,
       children: [(0, a.jsx)(L.default, {
         game: null,
         size: L.default.Sizes.SMALL,
-        className: H.noItemsIcon
+        className: Y.noItemsIcon
       }), (0, a.jsx)("span", {
-        className: H.cardText,
+        className: Y.cardText,
         children: V.default.Messages.USER_SETTINGS_NO_SUBSCRIPTION_CREDIT
       })]
     })
@@ -63,18 +63,18 @@ function k() {
   return n.useEffect(() => {
     (0, S.fetchUserEntitlementsForApplication)(G.PREMIUM_SUBSCRIPTION_APPLICATION)
   }, []), (0, a.jsxs)("section", {
-    className: H.sectionAccountCredit,
+    className: Y.sectionAccountCredit,
     children: [(0, a.jsx)(o.FormTitle, {
-      className: H.accountCreditTitle,
+      className: Y.accountCreditTitle,
       tag: o.FormTitleTags.H1,
       children: V.default.Messages.BILLING_SUBSCRIPTION_CREDIT
     }), (0, a.jsx)("p", {
-      className: H.accountCreditDescription,
+      className: Y.accountCreditDescription,
       children: V.default.Messages.BILLING_ACCOUNT_CREDIT_DESCRIPTION
     }), null != e && b.default.hasAccountCredit(e) ? (0, a.jsx)(v.default, {
-      className: H.accountCredit,
+      className: Y.accountCredit,
       entitlements: e
-    }) : (0, a.jsx)(Y, {})]
+    }) : (0, a.jsx)(H, {})]
   })
 }
 t.default = function() {
@@ -97,17 +97,17 @@ t.default = function() {
   }) : L === B.APPLICATION_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(A.default, {
     onGoBack: () => T.default.clearSubsection()
   }) : (0, a.jsx)("div", {
-    className: H.container,
+    className: Y.container,
     children: (0, a.jsxs)("div", {
-      className: H.content,
+      className: Y.content,
       children: [s ? (0, a.jsx)(j.DuplicateSubscriptionsBanner, {}) : null, null != e ? (0, a.jsx)(j.default, {
-        className: H.subscriptionDetails,
+        className: Y.subscriptionDetails,
         subscription: e,
         paymentSource: i,
         busy: D,
         subscriptions: t
       }) : (0, a.jsx)(j.SubscriptionDetailsEmpty, {
-        className: H.subscriptionDetails
+        className: Y.subscriptionDetails
       }), (0, a.jsx)(g.default, {
         onClickManageSubscription: () => T.default.setSection(F.UserSettingsSections.SUBSCRIPTIONS, B.ROLE_SUBSCRIPTION_SUBSECTION)
       }), (0, a.jsx)(m.default, {
@@ -123,7 +123,7 @@ t.default = function() {
       }) : null]
     })
   }) : (0, a.jsx)("div", {
-    className: l()(H.container, H.loading),
+    className: l()(Y.container, Y.loading),
     children: (0, a.jsx)(o.Spinner, {})
   })
 }

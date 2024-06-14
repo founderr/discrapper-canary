@@ -8,20 +8,20 @@ var a = n("735250");
 n("470079");
 var u = n("442837"),
   l = n("481060"),
-  i = n("914010"),
-  s = n("362658"),
+  s = n("914010"),
+  i = n("362658"),
   r = n("981631"),
   d = n("689938");
 
 function o(e) {
-  let t = (0, u.useStateFromStores)([i.default], () => i.default.getGuildId()),
+  let t = (0, u.useStateFromStores)([s.default], () => s.default.getGuildId()),
     o = e.type === r.ChannelTypes.GUILD_CATEGORY,
     {
-      isFavoritesPerk: c
-    } = (0, s.useFavoritesServerExperiment)("useChannelFavoriteSetNickname");
+      isFavoritesPerk: f
+    } = (0, i.useFavoritesServerExperiment)("useChannelFavoriteSetNickname");
   return __OVERLAY__ || t !== r.FAVORITES ? null : (0, a.jsx)(l.MenuItem, {
     id: "set-channel-nickname",
-    label: c && o ? d.default.Messages.FAVORITES_RENAME_CATEGORY : d.default.Messages.CHANGE_NICKNAME,
+    label: f && o ? d.default.Messages.FAVORITES_RENAME_CATEGORY : d.default.Messages.CHANGE_NICKNAME,
     action: function() {
       (0, l.openModalLazy)(async () => {
         let {
@@ -30,9 +30,9 @@ function o(e) {
         return n => (0, a.jsx)(t, {
           ...n,
           channelId: e.id,
-          heading: c && o ? d.default.Messages.FAVORITES_RENAME_CATEGORY : d.default.Messages.CHANGE_NICKNAME,
-          formTitle: c && o ? d.default.Messages.CATEGORY_NAME : d.default.Messages.NICKNAME,
-          allowReset: !(c && o)
+          heading: f && o ? d.default.Messages.FAVORITES_RENAME_CATEGORY : d.default.Messages.CHANGE_NICKNAME,
+          formTitle: f && o ? d.default.Messages.CATEGORY_NAME : d.default.Messages.NICKNAME,
+          allowReset: !(f && o)
         })
       })
     }

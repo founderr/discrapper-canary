@@ -38,8 +38,8 @@ var a = s("735250"),
   B = s("726985"),
   y = s("981631"),
   V = s("801461"),
-  H = s("689938"),
-  Y = s("493087"),
+  Y = s("689938"),
+  H = s("493087"),
   k = s("611273");
 class w extends n.PureComponent {
   componentDidMount() {
@@ -58,14 +58,14 @@ class w extends n.PureComponent {
     if (!e.isClaimed()) {
       let e = (0, a.jsxs)("section", {
         children: [(0, a.jsx)("div", {
-          className: Y.accountWarningBodyText,
-          children: H.default.Messages.UNCLAIMED_ACCOUNT_BODY_2
+          className: H.accountWarningBodyText,
+          children: Y.default.Messages.UNCLAIMED_ACCOUNT_BODY_2
         }), (0, a.jsx)(c.Button, {
           look: c.ButtonLooks.OUTLINED,
           size: c.ButtonSizes.SMALL,
           color: c.Button.Colors.WHITE,
           onClick: () => I.default.openClaimAccountModal(),
-          children: H.default.Messages.CLAIM_ACCOUNT_LONG
+          children: Y.default.Messages.CLAIM_ACCOUNT_LONG
         })]
       });
       return (0, a.jsx)(c.FormNotice, {
@@ -76,7 +76,7 @@ class w extends n.PureComponent {
           width: 60,
           height: 60
         },
-        title: H.default.Messages.UNCLAIMED_ACCOUNT_TITLE,
+        title: Y.default.Messages.UNCLAIMED_ACCOUNT_TITLE,
         body: e
       })
     }
@@ -84,8 +84,8 @@ class w extends n.PureComponent {
     if (!e.verified) {
       let e = (0, a.jsxs)("section", {
         children: [(0, a.jsx)("div", {
-          className: Y.accountWarningBodyText,
-          children: H.default.Messages.USER_SETTINGS_UNVERIFIED_EMAIL_BODY
+          className: H.accountWarningBodyText,
+          children: Y.default.Messages.USER_SETTINGS_UNVERIFIED_EMAIL_BODY
         }), (0, a.jsx)(v.default, {
           size: c.ButtonSizes.SMALL,
           color: c.Button.Colors.PRIMARY
@@ -99,29 +99,29 @@ class w extends n.PureComponent {
           width: 60,
           height: 60
         },
-        title: H.default.Messages.UNVERIFIED_EMAIL_TITLE,
+        title: Y.default.Messages.UNVERIFIED_EMAIL_TITLE,
         body: e
       })
     }
   }
   renderPomeloWarning() {
     return this.props.shouldRenderPomeloWarning ? (0, a.jsxs)(D.default, {
-      className: Y.accountWarningBodyText,
+      className: H.accountWarningBodyText,
       messageType: D.HelpMessageTypes.WARNING,
-      children: [this.props.forceMigrationExperiment ? H.default.Messages.POMELO_ACTION_NEEDED_FORCE.format({
+      children: [this.props.forceMigrationExperiment ? Y.default.Messages.POMELO_ACTION_NEEDED_FORCE.format({
         date: (0, N.getLocalizedForcedUUDate)(this.props.locale)
-      }) : H.default.Messages.POMELO_ACTION_NEEDED.format(), " ", "", (0, a.jsx)(x.default, {
-        className: Y.noticeTextButton,
+      }) : Y.default.Messages.POMELO_ACTION_NEEDED.format(), " ", "", (0, a.jsx)(x.default, {
+        className: H.noticeTextButton,
         onClick: () => (0, m.default)(V.PomeloEntrypoints.USER_SETTINGS),
-        children: H.default.Messages.GET_STARTED
+        children: Y.default.Messages.GET_STARTED
       })]
     }) : null
   }
   renderAccountSettings() {
     return (0, a.jsxs)(c.FormSection, {
       tag: c.FormTitleTags.H1,
-      title: H.default.Messages.USER_SETTINGS_MY_ACCOUNT,
-      className: Y.__invalid_userSettingsAccount,
+      title: Y.default.Messages.USER_SETTINGS_MY_ACCOUNT,
+      className: H.__invalid_userSettingsAccount,
       children: [this.renderPomeloWarning(), this.renderAccountWarning(), (0, a.jsx)(G.default, {})]
     })
   }
@@ -132,29 +132,29 @@ class w extends n.PureComponent {
       theme: n
     } = this.props, i = (0, u.isThemeDark)(n) ? s("555702") : s("610802");
     return (0, a.jsxs)(c.FormSection, {
-      className: l()(Y.userSettingsSecurity, k.marginTop40),
-      title: H.default.Messages.USER_SETTINGS_ACCOUNT_PASSWORD_AND_AUTHENTICATION,
+      className: l()(H.userSettingsSecurity, k.marginTop40),
+      title: Y.default.Messages.USER_SETTINGS_ACCOUNT_PASSWORD_AND_AUTHENTICATION,
       tag: "h1",
       children: [t.mfaEnabled ? (0, a.jsx)(c.FormSection, {
         children: (0, a.jsxs)(c.FormTitle, {
-          className: l()(Y.isEnabled, k.marginBottom20),
+          className: l()(H.isEnabled, k.marginBottom20),
           children: [(0, a.jsx)("img", {
             alt: "",
-            className: l()(Y.lockIcon),
+            className: l()(H.lockIcon),
             src: s("511391")
-          }), H.default.Messages.TWO_FA_ENABLED]
+          }), Y.default.Messages.TWO_FA_ENABLED]
         })
       }) : null, (0, a.jsx)(A.Subsetting, {
         setting: B.WebSetting.ACCOUNT_CHANGE_PASSWORD,
         children: (0, a.jsx)("div", {
           children: (0, a.jsx)(c.Button, {
             size: c.Button.Sizes.SMALL,
-            className: Y.changePasswordButton,
+            className: H.changePasswordButton,
             onClick: () => (0, c.openModal)(e => (0, a.jsx)(F.default, {
               ...e,
               onSuccess: e.onClose
             })),
-            children: H.default.Messages.CHANGE_PASSWORD
+            children: Y.default.Messages.CHANGE_PASSWORD
           })
         })
       }), (0, a.jsx)(A.Subsetting, {
@@ -172,7 +172,7 @@ class w extends n.PureComponent {
             grow: 0,
             children: (0, a.jsx)("img", {
               src: i,
-              className: Y.userSettingsSecurityImage,
+              className: H.userSettingsSecurityImage,
               alt: ""
             })
           })]
@@ -193,14 +193,14 @@ class w extends n.PureComponent {
       });
       return (0, a.jsx)(c.DeclarativeConfirmModal, {
         dismissable: !0,
-        header: H.default.Messages.DELETE_ACCOUNT_TRANSFER_OWNERSHIP,
-        confirmText: H.default.Messages.OKAY,
+        header: Y.default.Messages.DELETE_ACCOUNT_TRANSFER_OWNERSHIP,
+        confirmText: Y.default.Messages.OKAY,
         confirmButtonColor: c.ButtonColors.BRAND,
         onCancel: e,
         onConfirm: e,
         children: (0, a.jsx)(c.Text, {
           variant: "text-md/normal",
-          children: H.default.Messages.DELETE_ACCOUNT_TRANSFER_OWNERSHIP_BODY
+          children: Y.default.Messages.DELETE_ACCOUNT_TRANSFER_OWNERSHIP_BODY
         })
       })
     }
@@ -210,14 +210,14 @@ class w extends n.PureComponent {
       });
       return (0, a.jsx)(c.DeclarativeConfirmModal, {
         dismissable: !0,
-        header: H.default.Messages.DELETE_ACCOUNT,
-        confirmText: H.default.Messages.DELETE_ACCOUNT,
-        cancelText: H.default.Messages.CANCEL,
+        header: Y.default.Messages.DELETE_ACCOUNT,
+        confirmText: Y.default.Messages.DELETE_ACCOUNT,
+        cancelText: Y.default.Messages.CANCEL,
         onCancel: e,
         onConfirm: () => (0, E.disableAccount)("", !0).then(e),
         children: (0, a.jsx)(c.Text, {
           variant: "text-md/normal",
-          children: H.default.Messages.DELETE_ACCOUNT_BODY
+          children: Y.default.Messages.DELETE_ACCOUNT_BODY
         })
       })
     }
@@ -228,8 +228,8 @@ class w extends n.PureComponent {
       });
       return (0, a.jsx)(c.DeclarativeConfirmModal, {
         dismissable: !0,
-        header: H.default.Messages.DELETE_ACCOUNT_ERROR,
-        confirmText: H.default.Messages.OKAY,
+        header: Y.default.Messages.DELETE_ACCOUNT_ERROR,
+        confirmText: Y.default.Messages.OKAY,
         confirmButtonColor: c.ButtonColors.BRAND,
         onCancel: e,
         onConfirm: e,
@@ -291,9 +291,9 @@ class w extends n.PureComponent {
     t.isClaimed() ? (0, c.openModal)(t => (0, a.jsx)(_.default, {
       ...t,
       handleSubmit: t => this.handleSubmitDisableAccount(t, e),
-      title: e ? H.default.Messages.DELETE_ACCOUNT : H.default.Messages.DISABLE_ACCOUNT,
-      actionText: e ? H.default.Messages.DELETE_ACCOUNT : H.default.Messages.DISABLE_ACCOUNT,
-      children: e ? H.default.Messages.DELETE_ACCOUNT_BODY : H.default.Messages.DISABLE_ACCOUNT_BODY
+      title: e ? Y.default.Messages.DELETE_ACCOUNT : Y.default.Messages.DISABLE_ACCOUNT,
+      actionText: e ? Y.default.Messages.DELETE_ACCOUNT : Y.default.Messages.DISABLE_ACCOUNT,
+      children: e ? Y.default.Messages.DELETE_ACCOUNT_BODY : Y.default.Messages.DISABLE_ACCOUNT_BODY
     })) : this.setState({
       shouldRenderDeleteAccountConfirmModal: !0
     })

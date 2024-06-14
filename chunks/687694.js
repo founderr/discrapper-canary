@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   useMemberListHoverInteractions: function() {
     return r
   }
 });
-let a = (0, n("818083").createExperiment)({
+let n = (0, a("818083").createExperiment)({
     id: "2024-04_memberlist_hover_interactions",
     kind: "user",
     label: "Memberlist Hover Interactions",
@@ -38,14 +38,14 @@ let a = (0, n("818083").createExperiment)({
   r = e => {
     let {
       location: t,
-      autoTrackExposure: n = !0
+      autoTrackExposure: a = !0
     } = e, {
       showReplyIcon: r,
       openOnHover: l
-    } = a.useExperiment({
+    } = n.useExperiment({
       location: t
     }, {
-      autoTrackExposure: n
+      autoTrackExposure: a
     });
     return {
       showReplyIcon: r,

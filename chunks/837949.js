@@ -4,9 +4,9 @@ a.r(t), a.d(t, {
     return f
   }
 });
-var l = a("735250");
+var n = a("735250");
 a("470079");
-var n = a("442837"),
+var l = a("442837"),
   s = a("481060"),
   u = a("430824"),
   i = a("594174"),
@@ -17,9 +17,9 @@ var n = a("442837"),
 
 function f(e) {
   let t = (0, d.useOptInEnabledForGuild)(e),
-    a = (0, n.useStateFromStores)([u.default], () => u.default.getGuild(e)),
-    f = (0, n.useStateFromStores)([i.default], () => i.default.getCurrentUser());
-  return null != f && null != a && (a.hasFeature(o.GuildFeatures.COMMUNITY) || f.isStaff()) ? (0, l.jsx)(s.MenuCheckboxItem, {
+    a = (0, l.useStateFromStores)([u.default], () => u.default.getGuild(e)),
+    f = (0, l.useStateFromStores)([i.default], () => i.default.getCurrentUser());
+  return null != f && null != a && (a.hasFeature(o.GuildFeatures.COMMUNITY) || f.isStaff()) ? (0, n.jsx)(s.MenuCheckboxItem, {
     id: "opt-in",
     label: c.default.Messages.GUILD_CHANNEL_OPT_IN,
     checked: !t,

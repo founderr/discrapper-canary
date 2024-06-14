@@ -85,7 +85,7 @@ t.default = e => {
     pendingGlobalName: void 0,
     pendingAccentColor: void 0,
     ...null != I ? c.default.getAllPending() : C.default.getAllPending()
-  })), U = P.default.isPremium(l), L = P.default.canUsePremiumProfileCustomization(l), F = (0, h.default)(l.id), b = !!(null == F ? void 0 : F.getPreviewBio(N).value), y = {
+  })), U = P.default.isPremium(l), L = P.default.canUsePremiumProfileCustomization(l), b = (0, h.default)(l.id), F = !!(null == b ? void 0 : b.getPreviewBio(N).value), y = {
     user: l,
     guild: I,
     pendingGlobalName: S,
@@ -99,7 +99,7 @@ t.default = e => {
     pendingThemeColors: j,
     pendingAccentColor: O,
     pendingProfileEffectId: null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : null,
-    hideFakeActivity: b,
+    hideFakeActivity: F,
     canUsePremiumCustomization: L,
     onUpsellClick: g.default,
     onAvatarChange: null != I ? o.setPendingAvatar : r.setPendingAvatar,

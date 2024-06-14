@@ -4,9 +4,9 @@ a.r(t), a.d(t, {
     return d
   }
 });
-var l = a("735250");
+var n = a("735250");
 a("470079");
-var n = a("481060"),
+var l = a("481060"),
   s = a("104624"),
   u = a("518756"),
   i = a("576749"),
@@ -16,16 +16,16 @@ function d(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     d = (0, u.default)(e),
     o = (0, i.default)();
-  return d ? (0, l.jsx)(n.MenuItem, {
+  return d ? (0, n.jsx)(l.MenuItem, {
     id: "create-event",
     label: r.default.Messages.SCHEDULE_EVENT,
     icon: t ? s.default : void 0,
     action: () => {
-      (0, n.openModalLazy)(async () => {
+      (0, l.openModalLazy)(async () => {
         let {
           default: t
         } = await Promise.all([a.e("49237"), a.e("99387"), a.e("22347"), a.e("58023"), a.e("77745")]).then(a.bind(a, "779250"));
-        return a => (0, l.jsx)(t, {
+        return a => (0, n.jsx)(t, {
           ...a,
           guildId: e
         })

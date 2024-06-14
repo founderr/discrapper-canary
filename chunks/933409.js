@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return h
+    return b
   }
 }), l("47120"), l("789020");
 var a = l("735250"),
@@ -22,26 +22,26 @@ var a = l("735250"),
   I = l("594174"),
   C = l("979651"),
   _ = l("630388"),
-  R = l("5192"),
-  A = l("813872"),
-  N = l("981631"),
-  O = l("590433"),
+  A = l("5192"),
+  O = l("813872"),
+  R = l("981631"),
+  N = l("590433"),
   v = l("372897"),
-  b = l("689938");
+  h = l("689938");
 
-function h(e, t, h, T) {
+function b(e, t, b, T) {
   let U = n.useMemo(() => ({
       [t]: [e.id]
     }), [t, e.id]),
-    F = null != T ? [T] : [];
+    L = null != T ? [T] : [];
   (0, r.useSubscribeGuildMembers)(U), (0, u.useStateFromStores)([g.default], () => g.default.getGuildVersion(t), [t]);
-  let L = (0, u.useStateFromStores)([S.default], () => S.default.getGuild(t), [t]),
-    P = (0, u.useStateFromStores)([I.default], () => {
+  let F = (0, u.useStateFromStores)([S.default], () => S.default.getGuild(t), [t]),
+    p = (0, u.useStateFromStores)([I.default], () => {
       var t;
       return (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.id
     }, [e.id]),
-    p = (0, u.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(t, e.id), [t, e.id]),
-    x = (0, u.useStateFromStores)([m.default], () => m.default.getChannel(h), [h]),
+    P = (0, u.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(t, e.id), [t, e.id]),
+    x = (0, u.useStateFromStores)([m.default], () => m.default.getChannel(b), [b]),
     [, D] = (0, f.default)(e.id, t),
     G = null == x ? void 0 : x.isGuildStageVoice(),
     {
@@ -60,10 +60,10 @@ function h(e, t, h, T) {
       }
     }),
     k = (0, u.useStateFromStores)([E.default], () => E.default.getMember(t, e.id)),
-    w = (0, A.default)({
+    w = (0, O.default)({
       userId: e.id,
       guildId: t,
-      channelId: h,
+      channelId: b,
       location: T
     }),
     K = (0, M.useTrackModerationAction)(t, {
@@ -71,84 +71,84 @@ function h(e, t, h, T) {
       targetUserId: e.id
     }),
     H = (0, c.default)(t, e.id),
-    Y = null != B && null != h && g.default.canWithPartialContext(N.Permissions.VIEW_CHANNEL, {
+    Y = null != B && null != b && g.default.canWithPartialContext(R.Permissions.VIEW_CHANNEL, {
       channelId: B
-    }) && !p ? [(!G || G && !V) && g.default.canWithPartialContext(N.Permissions.MUTE_MEMBERS, {
-      channelId: h
+    }) && !P ? [(!G || G && !V) && g.default.canWithPartialContext(R.Permissions.MUTE_MEMBERS, {
+      channelId: b
     }) ? (0, a.jsx)(s.MenuCheckboxItem, {
       id: "voice-mute",
-      label: b.default.Messages.SERVER_VOICE_MUTE,
+      label: h.default.Messages.SERVER_VOICE_MUTE,
       checked: y,
       color: "danger",
       action: () => {
         !1 === y && K(M.ModerationActionType.MUTE), d.default.setServerMute(t, e.id, !y)
       }
-    }, "voice-mute") : null, (!G || G && !V) && g.default.canWithPartialContext(N.Permissions.DEAFEN_MEMBERS, {
-      channelId: h
+    }, "voice-mute") : null, (!G || G && !V) && g.default.canWithPartialContext(R.Permissions.DEAFEN_MEMBERS, {
+      channelId: b
     }) ? (0, a.jsx)(s.MenuCheckboxItem, {
       id: "voice-deafen",
-      label: b.default.Messages.SERVER_DEAFEN,
+      label: h.default.Messages.SERVER_DEAFEN,
       checked: j,
       color: "danger",
       action: () => d.default.setServerDeaf(t, e.id, !j)
-    }, "voice-deafen") : null, !P && null != L && g.default.canWithPartialContext(N.Permissions.MOVE_MEMBERS, {
-      channelId: h
+    }, "voice-deafen") : null, !p && null != F && g.default.canWithPartialContext(R.Permissions.MOVE_MEMBERS, {
+      channelId: b
     }) ? (0, a.jsx)(s.MenuItem, {
       id: "voice-disconnect",
-      label: P ? b.default.Messages.DISCONNECT_SELF : b.default.Messages.DISCONNECT_OTHER,
+      label: p ? h.default.Messages.DISCONNECT_SELF : h.default.Messages.DISCONNECT_OTHER,
       color: "danger",
       action: () => d.default.setChannel(t, e.id, null)
     }, "voice-disconnect") : null] : [],
     W = async (t, l, a) => {
       if (t.ctrlKey || t.metaKey) try {
         var n;
-        await i.default.setCommunicationDisabledDuration(l, a, O.DisableCommunicationDuration.DURATION_60_SEC, null, T), K(M.ModerationActionType.TIMEOUT), (0, s.showToast)((0, s.createToast)(b.default.Messages.GUILD_COMMUNICATION_DISABLED_SUCCESS.format({
-          user: null !== (n = R.default.getName(l, null, e)) && void 0 !== n ? n : ""
+        await i.default.setCommunicationDisabledDuration(l, a, N.DisableCommunicationDuration.DURATION_60_SEC, null, T), K(M.ModerationActionType.TIMEOUT), (0, s.showToast)((0, s.createToast)(h.default.Messages.GUILD_COMMUNICATION_DISABLED_SUCCESS.format({
+          user: null !== (n = A.default.getName(l, null, e)) && void 0 !== n ? n : ""
         }), s.ToastType.SUCCESS))
       } catch (e) {
-        (0, s.showToast)((0, s.createToast)(b.default.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR, s.ToastType.FAILURE))
+        (0, s.showToast)((0, s.createToast)(h.default.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR, s.ToastType.FAILURE))
       }
-    }, z = null, q = null != L && g.default.canManageUser(N.Permissions.MODERATE_MEMBERS, e, L) && g.default.canManageUser(N.Permissions.KICK_MEMBERS, e, L) && g.default.canManageUser(N.Permissions.BAN_MEMBERS, e, L), J = null != L && (g.default.canManageUser(N.Permissions.MANAGE_GUILD, e, L) || g.default.canManageUser(N.Permissions.MANAGE_ROLES, e, L));
-  if (!P && null != L && null != k && null != k.joinedAt && (q || J) && L.hasFeature(N.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED)) {
+    }, z = null, q = null != F && g.default.canManageUser(R.Permissions.MODERATE_MEMBERS, e, F) && g.default.canManageUser(R.Permissions.KICK_MEMBERS, e, F) && g.default.canManageUser(R.Permissions.BAN_MEMBERS, e, F), J = null != F && (g.default.canManageUser(R.Permissions.MANAGE_GUILD, e, F) || g.default.canManageUser(R.Permissions.MANAGE_ROLES, e, F));
+  if (!p && null != F && null != k && null != k.joinedAt && (q || J) && F.hasFeature(R.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED)) {
     var Q;
     z = (0, _.hasFlag)(null !== (Q = k.flags) && void 0 !== Q ? Q : 0, v.GuildMemberFlags.BYPASSES_VERIFICATION) ? (0, a.jsx)(s.MenuItem, {
       id: "verify",
-      label: b.default.Messages.MANUALLY_UNVERIFY_MEMBER,
+      label: h.default.Messages.MANUALLY_UNVERIFY_MEMBER,
       action: () => {
         var t;
-        return d.default.setMemberFlags(L.id, e.id, (0, _.setFlag)(null !== (t = k.flags) && void 0 !== t ? t : 0, v.GuildMemberFlags.BYPASSES_VERIFICATION, !1))
+        return d.default.setMemberFlags(F.id, e.id, (0, _.setFlag)(null !== (t = k.flags) && void 0 !== t ? t : 0, v.GuildMemberFlags.BYPASSES_VERIFICATION, !1))
       }
     }, "verify") : (0, a.jsx)(s.MenuItem, {
       id: "verify",
-      label: b.default.Messages.MANUALLY_VERIFY_MEMBER,
+      label: h.default.Messages.MANUALLY_VERIFY_MEMBER,
       action: () => {
         var t;
-        return d.default.setMemberFlags(L.id, e.id, (0, _.setFlag)(null !== (t = k.flags) && void 0 !== t ? t : 0, v.GuildMemberFlags.BYPASSES_VERIFICATION, !0))
+        return d.default.setMemberFlags(F.id, e.id, (0, _.setFlag)(null !== (t = k.flags) && void 0 !== t ? t : 0, v.GuildMemberFlags.BYPASSES_VERIFICATION, !0))
       }
     }, "verify")
   }
-  return [...Y, ...P || null == L ? [] : [w, z, H && !p ? D ? (0, a.jsx)(s.MenuItem, {
+  return [...Y, ...p || null == F ? [] : [w, z, H && !P ? D ? (0, a.jsx)(s.MenuItem, {
     id: "removetimeout",
-    label: b.default.Messages.ENABLE_GUILD_COMMUNICATION_FOR_USER.format({
+    label: h.default.Messages.ENABLE_GUILD_COMMUNICATION_FOR_USER.format({
       user: e.username
     }),
     color: "danger",
     action: () => {
-      (0, o.openEnableCommunication)(t, e.id, F)
+      (0, o.openEnableCommunication)(t, e.id, L)
     }
   }, "removetimeout") : (0, a.jsx)(s.MenuItem, {
     id: "timeout",
-    label: b.default.Messages.DISABLE_GUILD_COMMUNICATION_FOR_USER.format({
+    label: h.default.Messages.DISABLE_GUILD_COMMUNICATION_FOR_USER.format({
       user: e.username
     }),
     color: "danger",
     action: l => {
       if (l.ctrlKey || l.metaKey) return W(l, t, e.id);
-      (0, o.openDisableCommunication)(t, e.id, F)
+      (0, o.openDisableCommunication)(t, e.id, L)
     }
-  }, "timeout") : null, g.default.canManageUser(N.Permissions.KICK_MEMBERS, e, L) && !e.isClyde() ? (0, a.jsx)(s.MenuItem, {
+  }, "timeout") : null, g.default.canManageUser(R.Permissions.KICK_MEMBERS, e, F) && !e.isClyde() ? (0, a.jsx)(s.MenuItem, {
     id: "kick",
-    label: b.default.Messages.KICK_USER.format({
+    label: h.default.Messages.KICK_USER.format({
       user: e.username
     }),
     color: "danger",
@@ -163,9 +163,9 @@ function h(e, t, h, T) {
         user: e
       })
     })
-  }, "kick") : null, g.default.canManageUser(N.Permissions.BAN_MEMBERS, e, L) ? (0, a.jsx)(s.MenuItem, {
+  }, "kick") : null, g.default.canManageUser(R.Permissions.BAN_MEMBERS, e, F) ? (0, a.jsx)(s.MenuItem, {
     id: "ban",
-    label: b.default.Messages.BAN_USER.format({
+    label: h.default.Messages.BAN_USER.format({
       user: e.username
     }),
     color: "danger",

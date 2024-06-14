@@ -4,23 +4,23 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var s = n("470079"),
-  r = n("442837"),
+var r = n("470079"),
+  s = n("442837"),
   l = n("470956"),
   a = n("592125"),
-  o = n("979651"),
-  u = n("436592");
+  u = n("979651"),
+  o = n("436592");
 
 function i(e, t) {
   var n, i;
   let c = function(e) {
-    let t = (0, r.useStateFromStores)([o.default], () => o.default.getVoiceStatesForChannel(e)),
-      n = s.useMemo(() => Object.keys(t), [t]);
+    let t = (0, s.useStateFromStores)([u.default], () => u.default.getVoiceStatesForChannel(e)),
+      n = r.useMemo(() => Object.keys(t), [t]);
     return (0, l.useEnsureSyncedUserIds)(e, n)
   }(t);
   return function(e) {
-    let t = (0, u.useIsSecureFramesUIEnabled)(e),
-      n = (0, r.useStateFromStores)([a.default], () => {
+    let t = (0, o.useIsSecureFramesUIEnabled)(e),
+      n = (0, s.useStateFromStores)([a.default], () => {
         var t;
         return (null === (t = a.default.getChannel(e)) || void 0 === t ? void 0 : t.isGuildStageVoice()) === !0
       });

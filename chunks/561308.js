@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   calculateActiveTimestampDurations: function() {
-    return R
+    return o
   },
   formatActiveTimestamp: function() {
-    return o
+    return R
   },
   formatEndedTimestamp: function() {
     return N
@@ -73,9 +73,9 @@ var r = n("283398"),
   _ = n("835473"),
   A = n("70956"),
   I = n("709054"),
-  S = n("719247"),
-  l = n("689938");
-let i = e => {
+  l = n("719247"),
+  i = n("689938");
+let S = e => {
     let {
       start: t,
       now: n
@@ -87,24 +87,24 @@ let i = e => {
       days: Math.floor(r / A.default.Seconds.DAY)
     }
   },
-  R = (e, t) => {
+  o = (e, t) => {
     let n = "id" in e ? I.default.extractTimestamp(e.id) : e.start;
-    return i({
+    return S({
       start: n,
       now: "end" in e && null != e.end ? Math.min(e.end, t) : t
     })
   },
-  o = (e, t) => {
+  R = (e, t) => {
     let {
       seconds: n,
       minutes: r,
       hours: s
-    } = R(e, t);
+    } = o(e, t);
 
     function a(e) {
       return String(e).padStart(2, "0")
     }
-    return l.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE.format({
+    return i.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE.format({
       hours: s,
       minutes: s > 0 ? a(r) : r,
       seconds: a(n)
@@ -114,18 +114,18 @@ let i = e => {
     let n = a()(I.default.extractTimestamp(e.id)),
       r = n.isSame(a()(), "day"),
       s = a()().diff(n, "s");
-    if (s < A.default.Seconds.MINUTE) return l.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO.format({
+    if (s < A.default.Seconds.MINUTE) return i.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO.format({
       count: s
     });
     if (s < A.default.Seconds.HOUR) {
       let e = Math.round(s / A.default.Seconds.MINUTE);
-      return l.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO.format({
+      return i.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO.format({
         count: e
       })
     }
     if (s < 6 * A.default.Seconds.HOUR) {
       let e = Math.round(s / A.default.Seconds.HOUR);
-      return l.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO.format({
+      return i.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO.format({
         count: e
       })
     } else if (s < A.default.Seconds.WEEK && r) return n.toDate().toLocaleTimeString(t, {
@@ -136,11 +136,11 @@ let i = e => {
       hour: "numeric"
     });
     let E = Math.round(s / (7 * A.default.Seconds.DAY));
-    return l.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO.format({
+    return i.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO.format({
       count: E
     })
   },
-  O = (e, t) => c(e) ? o(e, Date.now()) : N(e, t);
+  O = (e, t) => c(e) ? R(e, Date.now()) : N(e, t);
 
 function d(e, t) {
   return e.traits.find(e => e.type === t)
@@ -189,7 +189,7 @@ function U(e) {
     start: e,
     end: new Date
   });
-  return l.default.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED_AFTER.format({
+  return i.default.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED_AFTER.format({
     months: t,
     weeks: t > 0 ? 0 : n,
     days: t > 0 || n > 0 ? 0 : s
@@ -216,7 +216,7 @@ function y(e) {
   let t = G(e);
   if (null == t) return null;
   let n = Math.round(t / A.default.Seconds.HOUR);
-  return l.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_FOR_HOURS.format({
+  return i.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_FOR_HOURS.format({
     hours: n
   })
 }
@@ -224,7 +224,7 @@ function y(e) {
 function K(e) {
   var t;
   let n = null !== (t = G(e)) && void 0 !== t ? t : 0;
-  return n > 10 * A.default.Seconds.HOUR ? l.default.Messages.MEMBER_LIST_CONTENT_FEED_EPIC_MARATHON : n > 5 * A.default.Seconds.HOUR ? l.default.Messages.MEMBER_LIST_CONTENT_FEED_ULTRA_MARATHON : l.default.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON
+  return n > 10 * A.default.Seconds.HOUR ? i.default.Messages.MEMBER_LIST_CONTENT_FEED_EPIC_MARATHON : n > 5 * A.default.Seconds.HOUR ? i.default.Messages.MEMBER_LIST_CONTENT_FEED_ULTRA_MARATHON : i.default.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON
 }
 
 function p(e) {
@@ -239,7 +239,7 @@ function m(e) {
 }
 
 function F(e) {
-  let t = (0, u.useStateFromStores)([S.default], () => S.default.getMatchingActivity(e)),
+  let t = (0, u.useStateFromStores)([l.default], () => l.default.getMatchingActivity(e)),
     [n, r] = (0, _.default)([null == t ? void 0 : t.application_id, e.extra.application_id]);
   return {
     activity: t,

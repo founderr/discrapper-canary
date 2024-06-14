@@ -42,9 +42,9 @@ var a = s("735250"),
   B = s("959517"),
   y = s("689938"),
   V = s("471264"),
-  H = s("611273");
+  Y = s("611273");
 
-function Y(e, t, s) {
+function H(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -102,14 +102,14 @@ let k = {
 class X extends n.Component {
   renderZoomSlider() {
     return x.isPlatformEmbedded ? (0, a.jsxs)(u.FormItem, {
-      className: H.marginTop20,
+      className: Y.marginTop20,
       children: [(0, a.jsx)(u.FormTitle, {
         id: w,
         tag: u.FormTitleTags.H5,
-        className: H.marginBottom8,
+        className: Y.marginBottom8,
         children: y.default.Messages.ACCESSIBILITY_ZOOM_LEVEL_LABEL
       }), (0, a.jsx)(u.Slider, {
-        className: l()(H.marginTop20, H.marginBottom4),
+        className: l()(Y.marginTop20, Y.marginBottom4),
         initialValue: this.props.zoom,
         defaultValue: G.Accessibility.ZOOM_DEFAULT,
         markers: G.Accessibility.ZOOM_SCALES,
@@ -127,16 +127,16 @@ class X extends n.Component {
   }
   renderFontScaleSlider() {
     return (0, a.jsxs)(u.FormItem, {
-      className: H.marginTop20,
+      className: Y.marginTop20,
       children: [(0, a.jsx)(u.FormTitle, {
         id: W,
         tag: u.FormTitleTags.H5,
-        className: H.marginBottom8,
+        className: Y.marginBottom8,
         children: y.default.Messages.ACCESSIBILITY_FONT_SCALING_LABEL
       }), (0, a.jsx)(M.default, {
         align: M.default.Align.CENTER,
         children: (0, a.jsx)(u.Slider, {
-          className: l()(H.marginTop20, H.marginBottom4),
+          className: l()(Y.marginTop20, Y.marginBottom4),
           initialValue: this.props.fontSize,
           defaultValue: G.Accessibility.FONT_SIZE_DEFAULT,
           markers: G.Accessibility.FONT_SIZES,
@@ -156,14 +156,14 @@ class X extends n.Component {
       messageGroupSpacing: t
     } = this.props;
     return (0, a.jsxs)(u.FormItem, {
-      className: H.marginTop20,
+      className: Y.marginTop20,
       children: [(0, a.jsx)(u.FormTitle, {
         id: K,
         tag: u.FormTitleTags.H5,
-        className: H.marginBottom8,
+        className: Y.marginBottom8,
         children: y.default.Messages.ACCESSIBILITY_MESSAGE_GROUP_SPACING
       }), (0, a.jsx)(u.Slider, {
-        className: l()(H.marginTop20, H.marginBottom4),
+        className: l()(Y.marginTop20, Y.marginBottom4),
         initialValue: t,
         defaultValue: e ? B.DEFAULT_COMPACT_SPACING : B.DEFAULT_COZY_SPACING,
         markers: B.MESSAGE_GROUP_SPACING,
@@ -185,7 +185,7 @@ class X extends n.Component {
     } = this.props, i = (0, d.isThemeDark)(t) ? this.darkMessages : this.lightMessages;
     return (0, a.jsx)(u.FocusBlock, {
       children: (0, a.jsx)(u.Card, {
-        className: l()(V.preview, H.marginBottom40, e ? V.compactPreview : void 0, "group-spacing-".concat(null != s ? s : e ? B.DEFAULT_COMPACT_SPACING : B.DEFAULT_COZY_SPACING)),
+        className: l()(V.preview, Y.marginBottom40, e ? V.compactPreview : void 0, "group-spacing-".concat(null != s ? s : e ? B.DEFAULT_COMPACT_SPACING : B.DEFAULT_COZY_SPACING)),
         outline: !0,
         "aria-hidden": !0,
         children: i.map((t, s) => (0, a.jsx)(C.default, {
@@ -207,7 +207,7 @@ class X extends n.Component {
       gradientPreset: n
     } = this.props;
     return t ? (0, a.jsx)(u.FormItem, {
-      className: l()(H.marginTop8, H.marginBottom40),
+      className: l()(Y.marginTop8, Y.marginBottom40),
       title: (0, a.jsx)("div", {
         className: V.themeTitle,
         children: (0, a.jsx)("div", {
@@ -225,7 +225,7 @@ class X extends n.Component {
         }) : y.default.Messages.THEME_DISABLED_FOR_FORCED_COLORS
       })
     }) : (0, a.jsxs)(u.FormItem, {
-      className: H.marginTop8,
+      className: Y.marginTop8,
       title: (0, a.jsxs)("div", {
         className: V.themeTitle,
         children: [(0, a.jsx)("div", {
@@ -240,7 +240,7 @@ class X extends n.Component {
         value: s && (0, d.isThemeLight)(e) && !t,
         disabled: e !== G.ThemeTypes.LIGHT || t || null != n,
         onChange: this.handleDarkSidebarChecked,
-        className: H.marginTop20,
+        className: Y.marginTop20,
         children: y.default.Messages.ACCESSIBILITY_DARK_SIDEBAR
       })]
     })
@@ -248,7 +248,7 @@ class X extends n.Component {
   renderDisplayMode() {
     return (0, a.jsxs)(u.FormItem, {
       title: y.default.Messages.MESSAGE_DISPLAY_MODE_LABEL,
-      className: H.marginTop8,
+      className: Y.marginTop8,
       children: [(0, a.jsx)(u.RadioGroup, {
         options: [{
           name: y.default.Messages.COZY_MODE,
@@ -263,7 +263,7 @@ class X extends n.Component {
         value: this.props.messageDisplayCompact && this.props.displayCompactAvatars,
         disabled: !this.props.messageDisplayCompact,
         onChange: this.handleDisplayCompactAvatarsChanged,
-        className: H.marginTop20,
+        className: Y.marginTop20,
         children: y.default.Messages.DISPLAY_COMPACT_AVATARS
       })]
     })
@@ -274,7 +274,7 @@ class X extends n.Component {
   renderScalingAndSpacing() {
     return (0, a.jsxs)(a.Fragment, {
       children: [this.renderFontScaleSlider(), this.renderMessageGroupSpacingSlider(), this.renderZoomSlider(), (0, a.jsx)(u.FormDivider, {
-        className: H.marginTop20
+        className: Y.marginTop20
       })]
     })
   }
@@ -293,7 +293,7 @@ class X extends n.Component {
         children: this.renderScalingAndSpacing()
       }), (0, a.jsx)(u.Text, {
         variant: "text-md/normal",
-        className: H.marginTop20,
+        className: Y.marginTop20,
         children: y.default.Messages.APPEARANCE_SETTINGS_ACCESSIBILITY_LINK.format({
           onAccessibilityClick() {
             S.default.open(G.UserSettingsSections.ACCESSIBILITY)
@@ -330,11 +330,11 @@ class X extends n.Component {
     (0, T.setZoom)(e)
   }
   constructor(...e) {
-    super(...e), Y(this, "darkMessages", z(G.ThemeTypes.DARK)), Y(this, "lightMessages", z(G.ThemeTypes.LIGHT)), Y(this, "handleDisplayCompactAvatarsChanged", e => {
+    super(...e), H(this, "darkMessages", z(G.ThemeTypes.DARK)), H(this, "lightMessages", z(G.ThemeTypes.LIGHT)), H(this, "handleDisplayCompactAvatarsChanged", e => {
       c.default.updatedUnsyncedSettings({
         displayCompactAvatars: e
       })
-    }), Y(this, "handleMessageDisplayModeChange", e => {
+    }), H(this, "handleMessageDisplayModeChange", e => {
       let {
         value: t
       } = e;

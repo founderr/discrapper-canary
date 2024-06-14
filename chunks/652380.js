@@ -222,7 +222,7 @@ function x() {
     }
   }
 
-  function H(e, t) {
+  function Y(e, t) {
     O({
       ...l,
       config: {
@@ -383,12 +383,12 @@ function x() {
         children: [(0, a.jsx)(_.default, {
           title: "Primary",
           colorKey: "primary",
-          onChange: H,
+          onChange: Y,
           value: l.config.colors.primary
         }), (0, a.jsx)(_.default, {
           title: "Secondary",
           colorKey: "secondary",
-          onChange: H,
+          onChange: Y,
           value: l.config.colors.secondary
         })]
       }), (0, a.jsx)(A.default, {

@@ -153,9 +153,9 @@ function j(e) {
       } = e;
       return x.PREMIUM_GUILD_SUBSCRIPTION_PLANS.has(t)
     }),
-    H = y || V ? B.total - G.total : -G.total,
+    Y = y || V ? B.total - G.total : -G.total,
     {
-      interval: Y,
+      interval: H,
       intervalCount: k
     } = L;
   return (0, i.jsxs)(i.Fragment, {
@@ -175,7 +175,7 @@ function j(e) {
           label: P.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_INVOICE_SUBSCRIPTION_CANCELLED.format({
             subscriptionCount: 1
           }),
-          value: (0, M.formatRate)((0, M.formatPrice)(H, n.currency), Y, k),
+          value: (0, M.formatRate)((0, M.formatPrice)(Y, n.currency), H, k),
           className: b.invoiceCancelRow
         }), null != F && F.length > 0 ? (0, i.jsxs)("div", {
           children: [(0, i.jsx)(g.PremiumInvoiceTableDivider, {}), (0, i.jsx)(m.SubscriptionInvoiceFooter, {

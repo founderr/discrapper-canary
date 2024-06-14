@@ -42,8 +42,8 @@ var a = s("735250"),
   B = s("815660"),
   y = s("801461"),
   V = s("228168"),
-  H = s("689938"),
-  Y = s("276380");
+  Y = s("689938"),
+  H = s("276380");
 let k = v.default.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
 
 function w(e) {
@@ -57,18 +57,18 @@ function w(e) {
   }, [o.username]);
   let A = !o.isClaimed(),
     C = S && !o.isPomelo() && !o.hasVerifiedEmailOrPhone() || A,
-    O = C ? H.default.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
+    O = C ? Y.default.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
   return (0, a.jsxs)("div", {
-    className: l()(Y.field, r),
+    className: l()(H.field, r),
     children: [(0, a.jsx)("div", {
-      className: Y.constrainedRow,
+      className: H.constrainedRow,
       children: (0, a.jsxs)("div", {
-        className: Y.usernameRow,
+        className: H.usernameRow,
         children: [(0, a.jsx)(c.FormTitle, {
-          className: Y.fieldTitle,
-          children: H.default.Messages.USER_SETTINGS_LABEL_USERNAME
+          className: H.fieldTitle,
+          children: Y.default.Messages.USER_SETTINGS_LABEL_USERNAME
         }), (0, a.jsxs)("div", {
-          className: Y.usernameInnerRow,
+          className: H.usernameInnerRow,
           ref: d,
           children: [(0, a.jsx)(c.Text, {
             tag: "span",
@@ -84,16 +84,16 @@ function w(e) {
         })]
       })
     }), E && (0, a.jsx)("div", {
-      className: Y.pomeloWarning,
+      className: H.pomeloWarning,
       children: (0, a.jsx)(c.Tooltip, {
-        text: H.default.Messages.ACTION_NEEDED,
+        text: Y.default.Messages.ACTION_NEEDED,
         children: e => (0, a.jsx)(L.default, {
           ...e,
           color: u.default.colors.STATUS_WARNING.css
         })
       })
     }), null != _ && (0, a.jsx)("div", {
-      className: Y.pomeloWarning,
+      className: H.pomeloWarning,
       children: (0, a.jsx)(c.Tooltip, {
         text: _,
         "aria-label": !1,
@@ -108,9 +108,9 @@ function w(e) {
         ...e,
         disabled: C,
         size: c.Button.Sizes.SMALL,
-        className: Y.fieldButton,
+        className: H.fieldButton,
         color: c.Button.Colors.PRIMARY,
-        "aria-label": H.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_USERNAME_A11Y_LABEL,
+        "aria-label": Y.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_USERNAME_A11Y_LABEL,
         onClick: () => (0, c.openModalLazy)(async () => {
           if (E) {
             let {
@@ -129,7 +129,7 @@ function w(e) {
             })
           }
         }),
-        children: I ? H.default.Messages.DISAPPROVAL : H.default.Messages.EDIT
+        children: I ? Y.default.Messages.DISAPPROVAL : Y.default.Messages.EDIT
       })
     })]
   })
@@ -144,27 +144,27 @@ function W(e) {
   return n.useEffect(() => {
     _(null != E.current && E.current.scrollWidth > E.current.clientWidth)
   }, [S]), (0, a.jsxs)("div", {
-    className: l()(Y.field, r),
+    className: l()(H.field, r),
     children: [(0, a.jsx)("div", {
-      className: Y.constrainedRow,
+      className: H.constrainedRow,
       children: (0, a.jsxs)("div", {
-        className: Y.usernameRow,
+        className: H.usernameRow,
         children: [(0, a.jsx)(c.FormTitle, {
-          className: Y.fieldTitle,
-          children: H.default.Messages.DISPLAY_NAME
+          className: H.fieldTitle,
+          children: Y.default.Messages.DISPLAY_NAME
         }), (0, a.jsx)("div", {
-          className: Y.usernameInnerRow,
+          className: H.usernameInnerRow,
           ref: E,
           children: (0, a.jsx)(c.Text, {
             tag: "span",
             color: "header-primary",
             variant: "text-md/normal",
-            children: null == S ? H.default.Messages.USER_SETTINGS_NO_DISPLAYNAME_PLACEHOLDER : S
+            children: null == S ? Y.default.Messages.USER_SETTINGS_NO_DISPLAYNAME_PLACEHOLDER : S
           })
         })]
       })
     }), null != d && (0, a.jsx)("div", {
-      className: Y.pomeloWarning,
+      className: H.pomeloWarning,
       children: (0, a.jsx)(c.Tooltip, {
         text: d,
         "aria-label": !1,
@@ -174,12 +174,12 @@ function W(e) {
         })
       })
     }), (0, a.jsx)(c.Button, {
-      className: Y.fieldButton,
+      className: H.fieldButton,
       size: c.Button.Sizes.SMALL,
       color: c.Button.Colors.PRIMARY,
-      "aria-label": H.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_DISPLAYNAME_A11Y_LABEL,
+      "aria-label": Y.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_DISPLAYNAME_A11Y_LABEL,
       onClick: q,
-      children: T ? H.default.Messages.DISAPPROVAL : H.default.Messages.EDIT
+      children: T ? Y.default.Messages.DISAPPROVAL : Y.default.Messages.EDIT
     })]
   })
 }
@@ -198,7 +198,7 @@ function K(e) {
       color: c.Button.Colors.LINK,
       "aria-label": r ? l : i,
       onClick: () => o(!r),
-      children: r ? H.default.Messages.HIDE : H.default.Messages.REVEAL
+      children: r ? Y.default.Messages.HIDE : Y.default.Messages.REVEAL
     })]
   })
 }
@@ -210,10 +210,10 @@ function Q(e) {
   } = e;
   if (i.isClaimed()) {
     if (null == i.email) t = {
-      buttonText: H.default.Messages.ADD,
-      buttonAriaLabel: H.default.Messages.USER_SETTINGS_ACCOUNT_ADD_EMAIL_A11Y_LABEL,
+      buttonText: Y.default.Messages.ADD,
+      buttonAriaLabel: Y.default.Messages.USER_SETTINGS_ACCOUNT_ADD_EMAIL_A11Y_LABEL,
       buttonColor: c.Button.Colors.PRIMARY,
-      valueMessage: H.default.Messages.USER_SETTINGS_NO_EMAIL_PLACEHOLDER,
+      valueMessage: Y.default.Messages.USER_SETTINGS_NO_EMAIL_PLACEHOLDER,
       handleClick: () => (0, c.openModalLazy)(async () => {
         let {
           default: e
@@ -228,14 +228,14 @@ function Q(e) {
         email: e
       } = i;
       t = {
-        buttonText: H.default.Messages.EDIT,
-        buttonAriaLabel: H.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_EMAIL_A11Y_LABEL,
+        buttonText: Y.default.Messages.EDIT,
+        buttonAriaLabel: Y.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_EMAIL_A11Y_LABEL,
         buttonColor: c.Button.Colors.PRIMARY,
         valueMessage: (0, a.jsx)(K, {
           text: e,
           censor: j.censorEmail,
-          revealLabel: H.default.Messages.USER_SETTINGS_ACCOUNT_REVEAL_EMAIL_A11Y_LABEL,
-          hideLabel: H.default.Messages.USER_SETTINGS_ACCOUNT_HIDE_EMAIL_A11Y_LABEL
+          revealLabel: Y.default.Messages.USER_SETTINGS_ACCOUNT_REVEAL_EMAIL_A11Y_LABEL,
+          hideLabel: Y.default.Messages.USER_SETTINGS_ACCOUNT_HIDE_EMAIL_A11Y_LABEL
         }),
         handleClick: () => (0, c.openModalLazy)(async () => {
           let {
@@ -248,20 +248,20 @@ function Q(e) {
       }
     }
   } else t = {
-    buttonText: H.default.Messages.CLAIM_ACCOUNT_SHORT,
-    buttonAriaLabel: H.default.Messages.CLAIM_ACCOUNT_SHORT,
+    buttonText: Y.default.Messages.CLAIM_ACCOUNT_SHORT,
+    buttonAriaLabel: Y.default.Messages.CLAIM_ACCOUNT_SHORT,
     buttonColor: c.Button.Colors.BRAND,
-    valueMessage: H.default.Messages.USER_SETTINGS_ADD_EMAIL_CLAIM,
+    valueMessage: Y.default.Messages.USER_SETTINGS_ADD_EMAIL_CLAIM,
     handleClick: () => _.default.openClaimAccountModal()
   };
   return (0, a.jsxs)("div", {
-    className: l()(Y.field, n),
+    className: l()(H.field, n),
     children: [(0, a.jsx)("div", {
-      className: Y.constrainedRow,
+      className: H.constrainedRow,
       children: (0, a.jsxs)("div", {
         children: [(0, a.jsx)(c.FormTitle, {
-          className: Y.fieldTitle,
-          children: H.default.Messages.USER_SETTINGS_LABEL_EMAIL
+          className: H.fieldTitle,
+          children: Y.default.Messages.USER_SETTINGS_LABEL_EMAIL
         }), (0, a.jsx)("div", {
           children: (0, a.jsx)(c.Text, {
             tag: "span",
@@ -272,7 +272,7 @@ function Q(e) {
         })]
       })
     }), (0, a.jsx)(c.Button, {
-      className: Y.fieldButton,
+      className: H.fieldButton,
       size: c.Button.Sizes.SMALL,
       color: c.Button.Colors.PRIMARY,
       "aria-label": t.buttonAriaLabel,
@@ -295,16 +295,16 @@ function z(e) {
   return t = d ? (0, a.jsx)(K, {
     text: r,
     censor: j.censorPhone,
-    revealLabel: H.default.Messages.USER_SETTINGS_ACCOUNT_REVEAL_PHONE_A11Y_LABEL,
-    hideLabel: H.default.Messages.USER_SETTINGS_ACCOUNT_HIDE_PHONE_A11Y_LABEL
-  }) : H.default.Messages.USER_SETTINGS_NO_PHONE_PLACEHOLDER, (0, a.jsxs)("div", {
-    className: l()(Y.field, n),
+    revealLabel: Y.default.Messages.USER_SETTINGS_ACCOUNT_REVEAL_PHONE_A11Y_LABEL,
+    hideLabel: Y.default.Messages.USER_SETTINGS_ACCOUNT_HIDE_PHONE_A11Y_LABEL
+  }) : Y.default.Messages.USER_SETTINGS_NO_PHONE_PLACEHOLDER, (0, a.jsxs)("div", {
+    className: l()(H.field, n),
     children: [(0, a.jsx)("div", {
-      className: Y.constrainedRow,
+      className: H.constrainedRow,
       children: (0, a.jsxs)("div", {
         children: [(0, a.jsx)(c.FormTitle, {
-          className: Y.fieldTitle,
-          children: H.default.Messages.USER_SETTINGS_LABEL_PHONE_NUMBER
+          className: H.fieldTitle,
+          children: Y.default.Messages.USER_SETTINGS_LABEL_PHONE_NUMBER
         }), (0, a.jsx)("div", {
           children: (0, a.jsx)(c.Text, {
             tag: "span",
@@ -315,28 +315,28 @@ function z(e) {
         })]
       })
     }), (0, a.jsxs)("div", {
-      className: Y.fieldButtonList,
+      className: H.fieldButtonList,
       children: [d && null != o ? (0, a.jsx)(c.Button, {
-        className: l()(Y.fieldButton, Y.removeButton),
+        className: l()(H.fieldButton, H.removeButton),
         size: c.Button.Sizes.SMALL,
         look: c.Button.Looks.LINK,
         color: c.Button.Colors.PRIMARY,
-        "aria-label": H.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_A11Y_LABEL,
+        "aria-label": Y.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_A11Y_LABEL,
         onClick: function() {
           (0, c.openModal)(e => (0, a.jsx)(T.default, {
             ...e,
-            title: H.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_NUMBER_TITLE,
-            children: i.hasFlag(F.UserFlags.MFA_SMS) ? H.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_SMS_BACKUP_WARNING : void 0,
-            actionText: H.default.Messages.REMOVE,
+            title: Y.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_NUMBER_TITLE,
+            children: i.hasFlag(F.UserFlags.MFA_SMS) ? Y.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_SMS_BACKUP_WARNING : void 0,
+            actionText: Y.default.Messages.REMOVE,
             handleSubmit: e => g.default.removePhone(e, g.ChangePhoneReason.USER_SETTINGS_UPDATE)
           }))
         },
-        children: H.default.Messages.REMOVE
+        children: Y.default.Messages.REMOVE
       }) : null, (0, a.jsx)(c.Button, {
-        className: Y.fieldButton,
+        className: H.fieldButton,
         size: c.Button.Sizes.SMALL,
         color: c.Button.Colors.PRIMARY,
-        "aria-label": d ? H.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_PHONE_A11Y_LABEL : H.default.Messages.USER_SETTINGS_ACCOUNT_ADD_PHONE_A11Y_LABEL,
+        "aria-label": d ? Y.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_PHONE_A11Y_LABEL : Y.default.Messages.USER_SETTINGS_ACCOUNT_ADD_PHONE_A11Y_LABEL,
         onClick: function() {
           (0, c.openModalLazy)(async () => {
             let {
@@ -350,7 +350,7 @@ function z(e) {
             modalKey: B.PHONE_VERIFICATION_MODAL_KEY
           })
         },
-        children: d ? H.default.Messages.EDIT : H.default.Messages.ADD
+        children: d ? Y.default.Messages.EDIT : Y.default.Messages.ADD
       })]
     })]
   })
@@ -361,7 +361,7 @@ function X(e) {
     user: t
   } = e, s = (0, I.default)({
     id: t.id,
-    label: H.default.Messages.COPY_ID_USER
+    label: Y.default.Messages.COPY_ID_USER
   });
   return U.DeveloperMode.useSetting() && P.SUPPORTS_COPY ? (0, a.jsx)(c.Popout, {
     renderPopout: e => {
@@ -372,16 +372,16 @@ function X(e) {
         onClose: t,
         onSelect: void 0,
         navId: "copy-id",
-        "aria-label": H.default.Messages.USER_MORE_ACTIONS_MENU_LABEL,
+        "aria-label": Y.default.Messages.USER_MORE_ACTIONS_MENU_LABEL,
         children: s
       })
     },
     children: e => (0, a.jsx)(c.Clickable, {
       ...e,
-      className: Y.overflowMenuButton,
-      "aria-label": H.default.Messages.ACTIONS,
+      className: H.overflowMenuButton,
+      "aria-label": Y.default.Messages.ACTIONS,
       children: (0, a.jsx)(x.default, {
-        className: Y.overflowMenuIcon,
+        className: H.overflowMenuIcon,
         height: 24,
         width: 24
       })
@@ -412,7 +412,7 @@ function Z() {
       size: c.AvatarSizes.SIZE_80
     });
   return (0, a.jsxs)("div", {
-    className: Y.accountProfileCard,
+    className: H.accountProfileCard,
     children: [(0, a.jsx)(R.default, {
       displayProfile: s,
       user: t,
@@ -420,9 +420,9 @@ function Z() {
       guildId: void 0,
       profileType: V.UserProfileTypes.SETTINGS
     }), (0, a.jsxs)("div", {
-      className: Y.userInfo,
+      className: H.userInfo,
       children: [(0, a.jsx)(k, {
-        className: Y.avatar,
+        className: H.avatar,
         src: u,
         avatarDecoration: S,
         status: i,
@@ -430,37 +430,37 @@ function Z() {
         "aria-label": t.username
       }), (0, a.jsxs)("div", {
         children: [(0, a.jsxs)("div", {
-          className: Y.profileCardUsernameRow,
+          className: H.profileCardUsernameRow,
           children: [(0, a.jsx)(E.default, {
             user: t,
-            className: Y.userTag,
-            discriminatorClass: Y.discriminator
+            className: H.userTag,
+            discriminatorClass: H.discriminator
           }), (0, a.jsx)(X, {
             user: t
           })]
         }), (0, a.jsx)(h.default, {
           badges: n,
-          className: Y.badgeList,
-          badgeClassName: Y.badge
+          className: H.badgeList,
+          badgeClassName: H.badge
         })]
       }), (0, a.jsx)(c.Button, {
         onClick: q,
         size: c.Button.Sizes.SMALL,
-        children: H.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE
+        children: Y.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE
       })]
     }), (0, a.jsxs)("div", {
-      className: Y.background,
+      className: H.background,
       children: [null != r ? (0, a.jsx)(c.Text, {
-        className: Y.avatarError,
+        className: H.avatarError,
         variant: "text-xs/normal",
         color: "text-danger",
         children: r
       }) : null, (0, a.jsxs)("div", {
-        className: Y.fieldList,
+        className: H.fieldList,
         children: [(0, a.jsx)(A.Subsetting, {
           setting: G.WebSetting.ACCOUNT_DISPLAY_NAME,
           children: (0, a.jsx)(W, {
-            className: Y.fieldSpacerBottom,
+            className: H.fieldSpacerBottom,
             user: t
           })
         }), (0, a.jsx)(A.Subsetting, {
@@ -471,13 +471,13 @@ function Z() {
         }), (0, a.jsx)(A.Subsetting, {
           setting: G.WebSetting.ACCOUNT_EMAIL,
           children: (0, a.jsx)(Q, {
-            className: Y.fieldSpacer,
+            className: H.fieldSpacer,
             user: t
           })
         }), (0, a.jsx)(A.Subsetting, {
           setting: G.WebSetting.ACCOUNT_PHONE_NUMBER,
           children: (0, a.jsx)(z, {
-            className: Y.fieldSpacer,
+            className: H.fieldSpacer,
             user: t
           })
         })]

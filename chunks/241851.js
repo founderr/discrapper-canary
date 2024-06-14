@@ -4,10 +4,10 @@ a.r(t), a.d(t, {
     return h
   }
 });
-var l = a("735250");
+var n = a("735250");
 a("470079");
-var n = a("120356"),
-  s = a.n(n),
+var l = a("120356"),
+  s = a.n(l),
   u = a("704215"),
   i = a("481060"),
   r = a("605236"),
@@ -20,20 +20,20 @@ var n = a("120356"),
 let h = e => {
   let {
     guild: t
-  } = e, n = t.id, h = async () => {
-    let e = o.default.isLurking(n);
-    await d.default.leaveGuild(n), e ? (0, c.transitionTo)(f.Routes.GUILD_DISCOVERY) : !(0, r.isDismissibleContentDismissed)(u.DismissibleContent.GUILD_LEAVE_FEEDBACK) && (0, i.openModalLazy)(async () => {
+  } = e, l = t.id, h = async () => {
+    let e = o.default.isLurking(l);
+    await d.default.leaveGuild(l), e ? (0, c.transitionTo)(f.Routes.GUILD_DISCOVERY) : !(0, r.isDismissibleContentDismissed)(u.DismissibleContent.GUILD_LEAVE_FEEDBACK) && (0, i.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([a.e("49237"), a.e("99387"), a.e("41953")]).then(a.bind(a, "131102"));
-      return a => (0, l.jsx)(e, {
+      return a => (0, n.jsx)(e, {
         ...a,
-        guildId: n,
+        guildId: l,
         guildName: t.name
       })
     })
   };
-  return (0, l.jsx)(i.ConfirmModal, {
+  return (0, n.jsx)(i.ConfirmModal, {
     className: s()(C.__invalid_confirmModal),
     bodyClassName: s()(C.__invalid_confirmModalBody),
     header: E.default.Messages.LEAVE_SERVER_TITLE.format({
@@ -43,7 +43,7 @@ let h = e => {
     cancelText: E.default.Messages.CANCEL,
     onConfirm: h,
     ...e,
-    children: (0, l.jsx)(i.Text, {
+    children: (0, n.jsx)(i.Text, {
       variant: "text-md/normal",
       children: t.hasFeature(f.GuildFeatures.HUB) ? E.default.Messages.LEAVE_HUB_BODY.format({
         name: t.name

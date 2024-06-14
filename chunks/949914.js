@@ -125,8 +125,8 @@ t.default = e => {
   } = (0, M.default)(t), [A, O] = n.useState(!1), p = (0, h.useUID)(), {
     analyticsLocations: V
   } = (0, _.default)(), {
-    shouldHideGuildPurchaseEntryPoints: H
-  } = (0, N.useShouldHideGuildPurchaseEntryPoints)(null == o ? void 0 : o.id), Y = (null == t ? void 0 : t.paymentGateway) === b.PaymentGateways.APPLE_PARTNER;
+    shouldHideGuildPurchaseEntryPoints: Y
+  } = (0, N.useShouldHideGuildPurchaseEntryPoints)(null == o ? void 0 : o.id), H = (null == t ? void 0 : t.paymentGateway) === b.PaymentGateways.APPLE_PARTNER;
   if (null == i || null == s || null == f) return null;
   let k = () => {
       null != o && ((0, m.transitionTo)(b.Routes.CHANNEL(o.id, v.StaticChannelRoute.ROLE_SUBSCRIPTIONS)), (0, c.popLayer)(), S.default.show(b.NoticeTypes.BACK_TO_PREVIOUS_SCREEN, void 0, j.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_BACK_TO_SUBSCRIPTION_USER_SETTING_CTA, () => E.default.open(b.UserSettingsSections.SUBSCRIPTIONS, U.ROLE_SUBSCRIPTION_SUBSECTION)))
@@ -153,7 +153,7 @@ t.default = e => {
       nextRenewalDate: q,
       nextRenewalLabel: Z,
       isTrial: J
-    } = f, $ = s.soft_deleted || null == o || Y, ee = () => {
+    } = f, $ = s.soft_deleted || null == o || H, ee = () => {
       if (K) return (0, a.jsx)(d.TextBadge, {
         text: j.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_CANCELLED
       });
@@ -173,7 +173,7 @@ t.default = e => {
         })
       });
       else return null
-    }, et = () => Y ? (0, a.jsx)(d.Tooltip, {
+    }, et = () => H ? (0, a.jsx)(d.Tooltip, {
       text: j.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_IOS_PLATFORM_TOOLTIP,
       children: e => (0, a.jsx)("div", {
         ...e,
@@ -252,7 +252,7 @@ t.default = e => {
         })]
       }), (0, a.jsx)(d.Spacer, {
         size: 16
-      }), !K && !Y && (0, a.jsxs)(a.Fragment, {
+      }), !K && !H && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(d.FormTitle, {
           children: j.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_PAYMENT_METHOD_LABEL
         }), (0, a.jsx)(B, {
@@ -262,7 +262,7 @@ t.default = e => {
         isTrial: J,
         isCancelled: K,
         isResubscribing: A,
-        shouldHideRoleSubscriptionEntryPoints: H,
+        shouldHideRoleSubscriptionEntryPoints: Y,
         onCancelSubscriptionClick: w,
         onChangePlanClick: k,
         onResubscribeClick: W

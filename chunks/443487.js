@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   Card: function() {
     return _
   },
@@ -13,41 +13,41 @@ n.r(t), n.d(t, {
     return N
   }
 });
-var a = n("735250");
-n("470079");
-var r = n("120356"),
-  l = n.n(r),
-  i = n("442837"),
-  o = n("481060"),
-  s = n("271383"),
-  u = n("430824"),
-  d = n("594174"),
-  c = n("351167"),
-  g = n("806519"),
-  f = n("5192"),
-  m = n("192918"),
-  E = n("687694"),
-  T = n("571425");
+var n = a("735250");
+a("470079");
+var r = a("120356"),
+  l = a.n(r),
+  i = a("442837"),
+  o = a("481060"),
+  s = a("271383"),
+  u = a("430824"),
+  d = a("594174"),
+  c = a("351167"),
+  g = a("806519"),
+  f = a("5192"),
+  E = a("192918"),
+  m = a("687694"),
+  T = a("571425");
 
 function _(e) {
   let {
     children: t,
-    selected: n
+    selected: a
   } = e, {
     showReplyIcon: r,
     openOnHover: i
-  } = (0, E.useMemberListHoverInteractions)({
+  } = (0, m.useMemberListHoverInteractions)({
     location: "ContentCard"
   });
-  return (0, a.jsxs)("div", {
+  return (0, n.jsxs)("div", {
     className: l()(T.container, {
-      [T.selected]: n
+      [T.selected]: a
     }, {
       [T.openOnHover]: i
     }),
-    children: [t, r && (0, a.jsx)("div", {
+    children: [t, r && (0, n.jsx)("div", {
       className: T.reply,
-      children: (0, a.jsx)(c.default, {
+      children: (0, n.jsx)(c.default, {
         className: T.icon
       })
     })]
@@ -58,7 +58,7 @@ function h(e) {
   let {
     children: t
   } = e;
-  return (0, a.jsx)("div", {
+  return (0, n.jsx)("div", {
     className: T.infoSection,
     children: t
   })
@@ -67,20 +67,20 @@ function h(e) {
 function v(e) {
   let {
     users: t,
-    guildId: n
+    guildId: a
   } = e;
-  return (0, a.jsx)("div", {
+  return (0, n.jsx)("div", {
     className: T.facePile,
     children: t.map((e, r) => {
-      let l = (0, a.jsx)(o.Avatar, {
-        src: e.getAvatarURL(n, 80),
+      let l = (0, n.jsx)(o.Avatar, {
+        src: e.getAvatarURL(a, 80),
         size: o.AvatarSizes.SIZE_16,
         "aria-label": "avatar"
       });
-      return r === t.length - 1 ? (0, a.jsx)("div", {
+      return r === t.length - 1 ? (0, n.jsx)("div", {
         className: T.facePileItem,
         children: l
-      }, e.id) : (0, a.jsx)(g.default, {
+      }, e.id) : (0, n.jsx)(g.default, {
         width: 16,
         height: 16,
         className: T.facePileItem,
@@ -94,32 +94,32 @@ function v(e) {
 function I(e) {
   let {
     guildId: t,
-    channelId: n,
+    channelId: a,
     entry: r,
     maxAvatars: l = 3
   } = e, c = r.author_id, g = (0, i.useStateFromStores)([d.default], () => d.default.getUser(c)), {
-    displayParticipants: E,
+    displayParticipants: m,
     numOtherParticipants: _
-  } = (0, m.default)(r, l), h = (0, i.useStateFromStores)([s.default], () => s.default.getMember(t, c)), I = (0, i.useStateFromStores)([u.default], () => {
+  } = (0, E.default)(r, l), h = (0, i.useStateFromStores)([s.default], () => s.default.getMember(t, c)), I = (0, i.useStateFromStores)([u.default], () => {
     var e;
     return (null == h ? void 0 : h.colorRoleId) != null ? null === (e = u.default.getRole(t, h.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
   }, [t, h]);
   if (null == g) return null;
   let N = null == h ? void 0 : h.colorString,
-    x = f.default.getName(t, n, g);
-  return (0, a.jsxs)("div", {
+    x = f.default.getName(t, a, g);
+  return (0, n.jsxs)("div", {
     className: T.userSection,
-    children: [(0, a.jsx)(v, {
-      users: E,
+    children: [(0, n.jsx)(v, {
+      users: m,
       guildId: t
-    }), (0, a.jsx)(o.NameWithRole, {
+    }), (0, n.jsx)(o.NameWithRole, {
       color: null != N ? N : void 0,
       roleName: I,
       name: x,
       className: T.userName
-    }), _ > 0 ? (0, a.jsx)("div", {
+    }), _ > 0 ? (0, n.jsx)("div", {
       className: T.additionalParticipantBadge,
-      children: (0, a.jsxs)(o.Text, {
+      children: (0, n.jsxs)(o.Text, {
         variant: "text-xxs/medium",
         color: "text-normal",
         className: T.additionalParticipantBadgeText,
@@ -133,7 +133,7 @@ function N(e) {
   let {
     children: t
   } = e;
-  return (0, a.jsx)(o.Heading, {
+  return (0, n.jsx)(o.Heading, {
     variant: "heading-sm/normal",
     className: T.contentDescription,
     lineClamp: 1,

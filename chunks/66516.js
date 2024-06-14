@@ -72,24 +72,24 @@ function v(e) {
     pendingBio: B,
     pendingPronouns: y,
     pendingThemeColors: V,
-    source: H
+    source: Y
   } = (0, r.useStateFromStoresObject)([R.default], () => ({
     ...R.default.getAllPending(),
     source: R.default.getSource()
   }));
   if (n.useEffect(() => () => d.default.wait(h.resetAllPending), []), n.useEffect(() => {
-      null != H && E.default.trackWithMetadata(x.AnalyticEvents.SETTINGS_PANE_VIEWED, {
+      null != Y && E.default.trackWithMetadata(x.AnalyticEvents.SETTINGS_PANE_VIEWED, {
         settings_type: "guild",
         destination_pane: x.AnalyticsSections.SETTINGS_CUSTOMIZE_PROFILE,
-        source: H
+        source: Y
       })
-    }, [H]), A) return (0, a.jsx)(c.default, {});
+    }, [Y]), A) return (0, a.jsx)(c.default, {});
   if (!u) return (0, a.jsx)(o.Spinner, {});
-  let Y = O.default.canUsePremiumProfileCustomization(i),
+  let H = O.default.canUsePremiumProfileCustomization(i),
     k = {
       user: i,
       guild: t,
-      canUsePremiumCustomization: Y,
+      canUsePremiumCustomization: H,
       onAvatarChange: h.setPendingAvatar,
       onBannerChange: h.setPendingBanner,
       onUpsellClick: b,

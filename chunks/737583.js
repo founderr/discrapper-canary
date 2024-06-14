@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   drawAvatars: function() {
     return i
   },
   drawBadges: function() {
     return l
   }
-}), n("47120");
-var a = n("693824"),
-  r = n("169040");
+}), a("47120");
+var n = a("693824"),
+  r = a("169040");
 
 function l(e) {
   let t, {
-    canvas: n,
+    canvas: a,
     badges: l,
     startPosition: i,
     maxWidth: o
@@ -21,16 +21,16 @@ function l(e) {
       iconPath: e,
       text: s
     }
-    of(n.setFont({
+    of(a.setFont({
       size: 12,
-      truncate: a.TextTruncationMethod.None
+      truncate: n.TextTruncationMethod.None
     }), l)) {
-    let a = null != t ? t.w + t.x + r.spaceBetweenBadges : i,
+    let n = null != t ? t.w + t.x + r.spaceBetweenBadges : i,
       l = null != t ? t.w + t.x + r.spaceBetweenBadges + r.spaceBetweenBadgeIconAndText : i + r.spaceBetweenBadgeIconAndText;
-    n.drawPath(e, {
-      x: a,
+    a.drawPath(e, {
+      x: n,
       y: r.badgeIconPosition
-    }, !0, .6), t = n.drawText(s, {
+    }, !0, .6), t = a.drawText(s, {
       x: l,
       y: r.badgeTextPosition,
       w: o
@@ -41,25 +41,25 @@ function l(e) {
 function i(e) {
   let {
     canvas: t,
-    avatarSrcs: n,
+    avatarSrcs: a,
     position: {
       x: r,
       y: l
     },
     avatarImageSize: i
   } = e;
-  for (let e = 0; e < n.length; e++) e < n.length - 1 && t.clipRoundedRect({
+  for (let e = 0; e < a.length; e++) e < a.length - 1 && t.clipRoundedRect({
     x: r + (e + 1) * (i - 8) - 2,
     y: l - 1,
     w: i + 2,
     h: i + 2
-  }, i / 2, !0), t.drawRoundedImage(n[e], {
+  }, i / 2, !0), t.drawRoundedImage(a[e], {
     x: r + e * (i - 8),
     y: l
   }, {
     w: i,
     h: i
   }, 50, {
-    fillMode: a.FillMode.Cover
+    fillMode: n.FillMode.Cover
   }), t.restoreContext()
 }

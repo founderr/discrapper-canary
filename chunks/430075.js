@@ -14,12 +14,12 @@ var E = n("442837"),
   s = n("800530"),
   o = n("981631"),
   a = n("689938"),
-  A = n("833440");
+  N = n("833440");
 
-function N() {
+function A() {
   return (0, i.jsxs)(I.Notice, {
     color: I.NoticeColors.DANGER,
-    className: A.nagbar,
+    className: N.nagbar,
     children: [(0, i.jsx)(I.Text, {
       tag: "span",
       color: "always-white",
@@ -38,14 +38,14 @@ function N() {
 
 function l() {
   return (0, i.jsx)("div", {
-    className: A.pageContainer,
+    className: N.pageContainer,
     children: (0, i.jsx)(_.default, {})
   })
 }
 
 function c() {
   return null == (0, E.useStateFromStores)([r.default], () => r.default.getSuspendedUserToken()) && (0, S.transitionTo)(o.Routes.LOGIN), (0, i.jsxs)("div", {
-    className: A.container,
-    children: [(0, i.jsx)(N, {}), (0, i.jsx)(l, {})]
+    className: N.container,
+    children: [(0, i.jsx)(A, {}), (0, i.jsx)(l, {})]
   })
 }

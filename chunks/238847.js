@@ -155,14 +155,14 @@ t.default = e => {
         F(!1)
       }
     }, {
-      isCancelled: H,
-      isDeleted: Y,
+      isCancelled: Y,
+      isDeleted: H,
       isPastDue: k,
       subscriptionPlanPrice: w,
       subscribedSinceDate: W,
       currentPeriodEndDate: K,
       currentPeriodEndLabel: Q
-    } = f, z = (0, D.isApplicationUserSubscription)(i.sku_flags), X = (0, D.isApplicationGuildSubscription)(i.sku_flags), q = i.soft_deleted || null == A || (!X || null == u) && !z, Z = () => H || Y ? (0, a.jsx)(c.TextBadge, {
+    } = f, z = (0, D.isApplicationUserSubscription)(i.sku_flags), X = (0, D.isApplicationGuildSubscription)(i.sku_flags), q = i.soft_deleted || null == A || (!X || null == u) && !z, Z = () => Y || H ? (0, a.jsx)(c.TextBadge, {
       text: b.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CANCELED
     }) : k ? (0, a.jsx)(c.Tooltip, {
       text: b.default.Messages.APPLICATION_SUBSCRIPTION_USER_SUBSCRIPTION_PAST_DUE_WARNING,
@@ -239,7 +239,7 @@ t.default = e => {
       id: h,
       children: [(0, a.jsx)("div", {
         className: v.divider
-      }), Y ? (0, a.jsx)(O.default, {
+      }), H ? (0, a.jsx)(O.default, {
         messageType: O.HelpMessageTypes.WARNING,
         className: v.deletedHelpMessage,
         children: b.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_DELETED_WARNING
@@ -267,9 +267,9 @@ t.default = e => {
         size: 16
       }), t.status === P.SubscriptionStatusTypes.ACTIVE && (0, a.jsx)(j, {
         subscription: t,
-        disabled: Y
+        disabled: H
       }), !q && (0, a.jsx)(G, {
-        isCancelled: H,
+        isCancelled: Y,
         onCancelSubscriptionClick: y,
         isResubscribing: M,
         onResubscribeClick: V

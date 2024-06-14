@@ -42,8 +42,8 @@ var a = s("735250"),
   B = s("689938"),
   y = s("572965"),
   V = s("611273"),
-  H = s("328756");
-let Y = (0, R.uid)(),
+  Y = s("328756");
+let H = (0, R.uid)(),
   k = (0, R.uid)(),
   w = (0, R.uid)(),
   W = o().debounce(e => {
@@ -131,7 +131,7 @@ function z() {
           className: y.previewAvatars,
           children: [j.StatusTypes.ONLINE, j.StatusTypes.DND, j.StatusTypes.IDLE].map(e => (0, a.jsx)(u.AnimatedAvatar, {
             "aria-label": B.default.Messages.USER_SETTINGS_AVATAR,
-            src: H,
+            src: Y,
             size: u.AvatarSizes.SIZE_32,
             status: e
           }, e))
@@ -162,7 +162,7 @@ function X() {
   return (0, a.jsxs)(u.FormSection, {
     className: V.marginTop20,
     children: [(0, a.jsx)(u.FormTitle, {
-      id: Y,
+      id: H,
       className: V.marginBottom8,
       children: B.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_TITLE
     }), (0, a.jsx)(u.FormText, {
@@ -171,7 +171,7 @@ function X() {
       className: V.marginBottom20,
       children: B.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_DESCRIPTION
     }), (0, a.jsx)(u.Slider, {
-      "aria-labelledby": Y,
+      "aria-labelledby": H,
       "aria-describedby": k,
       markers: j.Accessibility.SATURATION_INCREMENTS,
       equidistant: !0,

@@ -10,9 +10,9 @@ a.r(t), a.d(t, {
     return f
   }
 }), a("789020"), a("47120"), a("653041"), a("524437");
-var l = a("549817");
+var n = a("549817");
 a("581883");
-var n = a("984933"),
+var l = a("984933"),
   s = a("271383"),
   u = a("9156"),
   i = a("630388"),
@@ -22,11 +22,11 @@ var n = a("984933"),
 
 function c(e) {
   var t, a;
-  let l = (0, d.isOptInEnabledForGuild)(e),
-    n = null !== (a = null === (t = s.default.getSelfMember(e)) || void 0 === t ? void 0 : t.flags) && void 0 !== a ? a : 0,
-    r = (0, i.hasFlag)(n, o.GuildMemberFlags.COMPLETED_ONBOARDING),
+  let n = (0, d.isOptInEnabledForGuild)(e),
+    l = null !== (a = null === (t = s.default.getSelfMember(e)) || void 0 === t ? void 0 : t.flags) && void 0 !== a ? a : 0,
+    r = (0, i.hasFlag)(l, o.GuildMemberFlags.COMPLETED_ONBOARDING),
     c = u.default.getOptedInChannels(e).size > 0;
-  return !l && !r && !c
+  return !n && !r && !c
 }
 
 function f(e) {
@@ -43,7 +43,7 @@ function E(e) {
   let {
     include: t = new Set,
     exclude: a = new Set
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, s = n.default.getChannels(e), u = [...s[0, n.GUILD_SELECTABLE_CHANNELS_KEY], ...s[0, n.GUILD_VOCAL_CHANNELS_KEY]].filter(e => {
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, s = l.default.getChannels(e), u = [...s[0, l.GUILD_SELECTABLE_CHANNELS_KEY], ...s[0, l.GUILD_VOCAL_CHANNELS_KEY]].filter(e => {
     let {
       channel: t
     } = e;
@@ -54,5 +54,5 @@ function E(e) {
     } = e;
     return t.id
   });
-  t.forEach(e => u.push(e)), l.default.onboardExistingMember(e, new Set(u))
+  t.forEach(e => u.push(e)), n.default.onboardExistingMember(e, new Set(u))
 }

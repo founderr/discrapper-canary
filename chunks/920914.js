@@ -38,8 +38,8 @@ var a = s("735250"),
   B = s("205266"),
   y = s("216153"),
   V = s("981631"),
-  H = s("856651"),
-  Y = s("921944"),
+  Y = s("856651"),
+  H = s("921944"),
   k = s("689938"),
   w = s("220301"),
   W = s("611273");
@@ -111,7 +111,7 @@ function Q(e) {
     [R, p] = n.useState(T.visibility),
     [M, x] = n.useState(T.metadataVisibility),
     [P, v] = n.useState(T.showActivity),
-    [j, Y] = n.useState(null),
+    [j, H] = n.useState(null),
     [W, Q] = n.useState(null),
     [z, X] = n.useState(!1),
     [q, Z] = n.useState([]),
@@ -120,7 +120,7 @@ function Q(e) {
   n.useEffect(() => {
     h(T.friendSync), p(T.visibility), x(T.metadataVisibility), v(T.showActivity)
   }, [T]), n.useEffect(() => {
-    !1 !== T.verified && (null != j && (p(j), E.default.setVisibility(T.type, T.id, j), Y(null)), null != W && (x(W), E.default.setMetadataVisibility(T.type, T.id, W), Q(null)))
+    !1 !== T.verified && (null != j && (p(j), E.default.setVisibility(T.type, T.id, j), H(null)), null != W && (x(W), E.default.setMetadataVisibility(T.type, T.id, W), Q(null)))
   }, [T]);
 
   function ee() {
@@ -157,7 +157,7 @@ function Q(e) {
       verified: t
     } = T, s = e ? 1 : 0;
     if (e && !t) {
-      Y(s), (0, A.default)({
+      H(s), (0, A.default)({
         platformType: T.type,
         location: "User Settings"
       });
@@ -193,7 +193,7 @@ function Q(e) {
       var t;
       let s = g.default.get(e.type),
         n = g.default.get(J),
-        i = "1" === (null !== (t = e.metadata) && void 0 !== t ? t : {})[H.MetadataFields.TWITTER_VERIFIED],
+        i = "1" === (null !== (t = e.metadata) && void 0 !== t ? t : {})[Y.MetadataFields.TWITTER_VERIFIED],
         l = null;
       return s.type === V.PlatformTypes.TWITTER && i && (l = (0, a.jsx)(c.Tooltip, {
         text: k.default.Messages.CONNECTION_VERIFIED_ON_TWITTER,
@@ -253,7 +253,7 @@ function Q(e) {
       var t;
       let s = null !== (t = e.metadata) && void 0 !== t ? t : {},
         n = null,
-        i = (0, m.getCreatedAtDate)(s[H.MetadataFields.CREATED_AT], N);
+        i = (0, m.getCreatedAtDate)(s[Y.MetadataFields.CREATED_AT], N);
       switch (e.type) {
         case V.PlatformTypes.REDDIT:
           n = (0, C.generateRedditMetadataItems)(s, w.metadataItem);
@@ -391,7 +391,7 @@ function Q(e) {
 function z() {
   return n.useEffect(() => () => {
     (0, O.markDismissibleContentAsDismissed)(o.DismissibleContent.NEW_CRUNCHYROLL_CONNECTION, {
-      dismissAction: Y.ContentDismissActionType.AUTO
+      dismissAction: H.ContentDismissActionType.AUTO
     })
   }, []), (0, a.jsxs)("div", {
     className: w.connectContainer,

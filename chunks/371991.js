@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   ActiveTimestamp: function() {
-    return l
+    return i
   },
   useTimestampTickedNow: function() {
-    return S
+    return l
   }
 }), n("47120");
 var r = n("735250"),
@@ -17,7 +17,7 @@ var r = n("735250"),
   A = n("561308"),
   I = n("592567");
 
-function S(e) {
+function l(e) {
   let [t, n] = s.useState(Date.now()), r = (0, _.useIsWindowFocused)(), a = s.useMemo(() => {
     let {
       hours: n
@@ -31,12 +31,12 @@ function S(e) {
     }), !r && e.stop(), () => e.stop()
   }, [a, r]), t
 }
-let l = e => {
+let i = e => {
   let {
     entry: t,
     inline: n = !1,
     textColor: a
-  } = e, E = S(t), T = s.useMemo(() => (0, A.formatActiveTimestamp)(t, E), [t, E]);
+  } = e, E = l(t), T = s.useMemo(() => (0, A.formatActiveTimestamp)(t, E), [t, E]);
   return (0, r.jsx)(u.Text, {
     className: n ? I.inlineTimestamp : void 0,
     variant: "text-xs/normal",
@@ -50,7 +50,7 @@ t.default = e => {
     entry: t,
     textColor: n
   } = e, s = (0, A.isEntryActive)(t), E = (0, a.useStateFromStores)([T.default], () => T.default.locale);
-  return s ? (0, r.jsx)(l, {
+  return s ? (0, r.jsx)(i, {
     entry: t,
     textColor: n
   }) : (0, r.jsx)(u.Text, {

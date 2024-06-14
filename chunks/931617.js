@@ -44,15 +44,15 @@ function R(e, t) {
     u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
     _ = (0, n.useStateFromStores)([c.default], () => c.default.getGuild(t)),
     R = (0, n.useStateFromStores)([c.default], () => c.default.getRoles(t)),
-    A = (0, n.useStateFromStores)([d.default], () => d.default.roleStyle),
-    C = (0, i.useTrackModerationAction)(t, {
+    C = (0, n.useStateFromStores)([d.default], () => d.default.roleStyle),
+    A = (0, i.useTrackModerationAction)(t, {
       location: u,
       targetUserId: e
     }),
     {
       userRoles: N,
-      isGuildMember: I,
-      canManageRoles: O
+      isGuildMember: O,
+      canManageRoles: h
     } = (0, n.useStateFromStoresObject)([f.default, E.default], () => {
       let l = f.default.getMember(t, e);
       return {
@@ -61,31 +61,31 @@ function R(e, t) {
         canManageRoles: null != _ && E.default.can(S.Permissions.MANAGE_ROLES, _)
       }
     }, [e, t, _]);
-  if (__OVERLAY__ || null == N || null == _ || !I) return null;
-  let h = E.default.getHighestRole(_),
-    T = Object.values(R).filter(e => !(0, r.isEveryoneRoleId)(_.id, e.id)),
-    p = O ? T.map(l => {
-      let u = l.managed || !E.default.isRoleHigher(_, h, l),
+  if (__OVERLAY__ || null == N || null == _ || !O) return null;
+  let p = E.default.getHighestRole(_),
+    I = Object.values(R).filter(e => !(0, r.isEveryoneRoleId)(_.id, e.id)),
+    T = h ? I.map(l => {
+      let u = l.managed || !E.default.isRoleHigher(_, p, l),
         n = -1 !== N.indexOf(l.id);
       return u && !n ? null : (0, a.jsx)(s.MenuCheckboxItem, {
         id: l.id,
-        label: () => g(l, A),
+        label: () => g(l, C),
         disabled: u,
         action: () => {
           var a;
-          return a = l, void(N.includes(a.id) ? (o.default.updateMemberRoles(t, e, N.filter(e => e !== a.id), [], [a.id]), C(i.ModerationActionType.REMOVE_ROLE)) : (o.default.updateMemberRoles(t, e, N.concat([a.id]), [a.id], []), C(i.ModerationActionType.ADD_ROLE)))
+          return a = l, void(N.includes(a.id) ? (o.default.updateMemberRoles(t, e, N.filter(e => e !== a.id), [], [a.id]), A(i.ModerationActionType.REMOVE_ROLE)) : (o.default.updateMemberRoles(t, e, N.concat([a.id]), [a.id], []), A(i.ModerationActionType.ADD_ROLE)))
         },
         checked: n
       }, l.id)
-    }) : T.filter(e => -1 !== N.indexOf(e.id)).map(e => (0, r.isEveryoneRoleId)(_.id, e.id) ? null : (0, a.jsx)(s.MenuItem, {
+    }) : I.filter(e => -1 !== N.indexOf(e.id)).map(e => (0, r.isEveryoneRoleId)(_.id, e.id) ? null : (0, a.jsx)(s.MenuItem, {
       id: e.id,
-      label: () => g(e, A)
+      label: () => g(e, C)
     }, e.id));
-  return 0 === p.filter(M.isNotNullish).length ? null : l ? p : (0, a.jsx)(s.MenuItem, {
+  return 0 === T.filter(M.isNotNullish).length ? null : l ? T : (0, a.jsx)(s.MenuItem, {
     id: "roles",
     label: m.default.Messages.ROLES_LIST.format({
-      numRoles: p.length
+      numRoles: T.length
     }),
-    children: p
+    children: T
   })
 }

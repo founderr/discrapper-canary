@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
 }), n("47120");
 var a = n("470079"),
   u = n("974180"),
   l = n("557177");
 
-function i() {
+function s() {
   let [e, t] = a.useState(), n = a.useRef(-1);
   return {
     playSound: a.useCallback(e => {

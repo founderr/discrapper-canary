@@ -149,13 +149,13 @@ t.default = function() {
   let h = b.DropsOptedOut.useSetting(),
     V = null != A || !C,
     {
-      promotionsLoaded: H,
-      activeOutboundPromotions: Y,
+      promotionsLoaded: Y,
+      activeOutboundPromotions: H,
       claimedEndedOutboundPromotions: k,
       claimedOutboundPromotionCodeMap: w,
       addClaimedOutboundPromotionCode: W
     } = (0, O.useOutboundPromotions)(),
-    K = Y.length + k.length > 0,
+    K = H.length + k.length > 0,
     Q = m.OutboundPromoDesktopUpsellExperiment.useExperiment({
       location: "EntitlementGifts"
     }, {
@@ -166,7 +166,7 @@ t.default = function() {
   function z() {
     T.default.open(j.UserSettingsSections.PREMIUM)
   }
-  return _ && H && V ? (0, a.jsxs)(a.Fragment, {
+  return _ && Y && V ? (0, a.jsxs)(a.Fragment, {
     children: [C ? (0, a.jsx)(U.default, {
       dropsOptedOut: h,
       dropsStatuses: A
@@ -227,7 +227,7 @@ t.default = function() {
               addClaimedOutboundPromotionCode: W,
               disabled: !i
             }, s.id)
-          }), Y.map(e => (0, a.jsx)(y, {
+          }), H.map(e => (0, a.jsx)(y, {
             outboundPromotion: e,
             code: w[e.id],
             addClaimedOutboundPromotionCode: W,

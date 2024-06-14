@@ -25,12 +25,12 @@ function S(e) {
     channelId: S,
     location: g,
     onAction: I
-  } = e, C = n.useContext(c.AnalyticsContext), _ = (0, i.useWindowDispatch)(), R = (0, u.useStateFromStores)([o.default], () => null != S ? S : o.default.getChannelId(l, !0), [S, l]), A = (0, r.useCanAccessGuildMemberModView)(l, !0);
-  return null != l && A ? (0, a.jsx)(s.MenuItem, {
+  } = e, C = n.useContext(c.AnalyticsContext), _ = (0, i.useWindowDispatch)(), A = (0, u.useStateFromStores)([o.default], () => null != S ? S : o.default.getChannelId(l, !0), [S, l]), O = (0, r.useCanAccessGuildMemberModView)(l, !0);
+  return null != l && O ? (0, a.jsx)(s.MenuItem, {
     id: "mod-view",
     label: E.default.Messages.GUILD_MEMBER_MOD_VIEW_TITLE,
     action: () => {
-      null == I || I(), (0, d.openGuildMemberModViewSidebar)(l, t, null != R ? R : M.StaticChannelRoute.MEMBER_SAFETY, {
+      null == I || I(), (0, d.openGuildMemberModViewSidebar)(l, t, null != A ? A : M.StaticChannelRoute.MEMBER_SAFETY, {
         modViewPanel: m.ModViewPanel.INFO,
         sourceLocation: null != g ? g : C.location
       }), _.dispatch(f.ComponentActions.POPOUT_CLOSE)

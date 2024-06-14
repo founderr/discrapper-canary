@@ -65,8 +65,8 @@ function B() {
     debugLoggingEnabled: B,
     legacyAudioSubsystemSupported: y,
     experimentalAudioSubsystemSupported: V,
-    qosSupported: H,
-    attenuationSupported: Y
+    qosSupported: Y,
+    attenuationSupported: H
   } = (0, r.useStateFromStoresObject)([E.default], () => ({
     inputMode: E.default.getMode(),
     qosEnabled: E.default.getQoS(),
@@ -142,7 +142,7 @@ function B() {
         }), (0, a.jsx)(S.Subsetting, {
           setting: L.WebSetting.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
           children: (0, a.jsx)(p.default, {})
-        }), H && (0, a.jsx)(S.Subsetting, {
+        }), Y && (0, a.jsx)(S.Subsetting, {
           setting: L.WebSetting.VOICE_AND_VIDEO_ADVANCED_QOS,
           children: (0, a.jsx)(o.FormSection, {
             className: U.marginBottom20,
@@ -154,7 +154,7 @@ function B() {
               children: v.default.Messages.FORM_CHECKBOX_QOS
             })
           })
-        }), Y && (0, a.jsx)(S.Subsetting, {
+        }), H && (0, a.jsx)(S.Subsetting, {
           setting: L.WebSetting.VOICE_AND_VIDEO_ADVANCED_ATTENUATION,
           children: (0, a.jsxs)(o.FormSection, {
             className: U.marginBottom20,

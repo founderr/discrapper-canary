@@ -38,8 +38,8 @@ var a = s("735250"),
   B = s("898997"),
   y = s("197115"),
   V = s("823188"),
-  H = s("504865"),
-  Y = s("179984"),
+  Y = s("504865"),
+  H = s("179984"),
   k = s("386733"),
   w = s("487980"),
   W = s("474936"),
@@ -112,7 +112,7 @@ function J() {
             numMonths: null !== (s = null == E ? void 0 : E.duration) && void 0 !== s ? s : W.DISCOUNT_DURATION_FALLBACK
           })
         })]
-      }) : (0, a.jsx)(H.default, {
+      }) : (0, a.jsx)(Y.default, {
         variant: r ? "heading-lg/normal" : void 0,
         subscriptionTier: W.PremiumSubscriptionSKUs.TIER_2,
         interval: O.interval,
@@ -259,7 +259,7 @@ t.default = function() {
         className: z.__invalid_container,
         children: [(0, a.jsx)(J, {}), p && (0, a.jsx)(k.default, {
           isInSettings: !0
-        }), (0, a.jsx)($, {}), (0, a.jsx)(Y.default, {
+        }), (0, a.jsx)($, {}), (0, a.jsx)(H.default, {
           className: z.__invalid_planComparisonTable,
           hideCTAs: !0,
           headingOverride: Q.default.Messages.PREMIUM_COMPARISON_TABLE_WHAT_YOU_HAVE_GOT_TITLE,

@@ -1,7 +1,7 @@
 "use strict";
-var a, r;
-n.r(t), n.d(t, {
+var n, r;
+a.r(t), a.d(t, {
   TrendingType: function() {
-    return a
+    return n
   }
-}), (r = a || (a = {}))[r.TRENDING_TYPE_UNSPECIFIED = 0] = "TRENDING_TYPE_UNSPECIFIED", r[r.GLOBAL = 1] = "GLOBAL"
+}), (r = n || (n = {}))[r.TRENDING_TYPE_UNSPECIFIED = 0] = "TRENDING_TYPE_UNSPECIFIED", r[r.GLOBAL = 1] = "GLOBAL"
