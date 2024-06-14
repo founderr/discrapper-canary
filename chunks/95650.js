@@ -39,7 +39,6 @@ function R(e) {
       className: E.productSection,
       children: [(0, l.jsx)(o.Heading, {
         variant: "heading-lg/semibold",
-        color: "header-secondary",
         children: A.default.Messages.STOREFRONT_APP_SUBSCRIPTIONS
       }), (0, l.jsx)("div", {
         className: s()(E.productList, E.subList),
@@ -61,7 +60,6 @@ function R(e) {
       className: E.productSection,
       children: [(0, l.jsx)(o.Heading, {
         variant: "heading-lg/semibold",
-        color: "header-secondary",
         children: A.default.Messages.STOREFRONT_APP_PRODUCTS
       }), (0, l.jsx)("div", {
         className: s()(E.productList, E.itemList),

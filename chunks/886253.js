@@ -59,7 +59,11 @@ function c(e) {
           tosUrl: T,
           ppUrl: v
         })
-      }) : null, p]
+      }) : (0, i.jsx)(r.Text, {
+        color: "header-primary",
+        variant: "text-xs/normal",
+        children: o.default.Messages.STOREFRONT_NO_TOS_PP
+      }), p]
     })]
   })
 }

@@ -26,25 +26,25 @@ function m(e) {
     onClose: T,
     skuId: v,
     transitionState: _,
-    onHeaderTitleClick: I
-  } = e, g = (0, o.useGetSubscriptionListing__DO_NOT_USE)(v), x = l.useMemo(() => {
+    onHeaderTitleClick: g
+  } = e, I = (0, o.useGetSubscriptionListing__DO_NOT_USE)(v), x = l.useMemo(() => {
     var e;
-    return (null == g ? void 0 : g.image_asset) != null && null !== (e = c.default.toURLSafe((0, d.getAssetURL)(t, g.image_asset, 256))) && void 0 !== e ? e : void 0
-  }, [t, null == g ? void 0 : g.image_asset]), E = l.useMemo(() => {
-    var e;
-    return null == g ? void 0 : null === (e = g.store_listing_benefits) || void 0 === e ? void 0 : e.map(e => ({
+    return (null == I ? void 0 : I.image_asset) != null && null !== (e = c.default.toURLSafe((0, d.getAssetURL)(t, I.image_asset, 256))) && void 0 !== e ? e : void 0
+  }, [t, null == I ? void 0 : I.image_asset]), E = l.useMemo(() => {
+    let e = null == I ? void 0 : I.store_listing_benefits;
+    if (null != e && 0 !== e.length) return e.map(e => ({
       id: e.id,
       title: e.name,
       description: e.description,
       icon: (0, u.getBenefitIcon)(t, e.icon)
     }))
-  }, [t, null == g ? void 0 : g.store_listing_benefits]);
-  if (null == g) return null;
-  let C = g.subscription_plans.length > 0 ? g.subscription_plans[0] : null;
-  return null == C ? null : (0, i.jsx)(f.CardDetailsModal, {
+  }, [t, null == I ? void 0 : I.store_listing_benefits]);
+  if (null == I) return null;
+  let N = I.subscription_plans.length > 0 ? I.subscription_plans[0] : null;
+  return null == N ? null : (0, i.jsx)(f.CardDetailsModal, {
     appId: t,
     transitionState: _,
-    onHeaderTitleClick: null != I ? I : T,
+    onHeaderTitleClick: null != g ? g : T,
     onClose: T,
     footer: (0, i.jsx)(S.SubscriptionPurchaseButton, {
       appId: t,
@@ -52,7 +52,7 @@ function m(e) {
       groupListingType: m,
       guildId: h,
       skuId: v,
-      subPlan: C
+      subPlan: N
     }),
     children: (0, i.jsx)(p.TrackedCardDetails, {
       appId: t,
@@ -62,9 +62,9 @@ function m(e) {
         icon: e.icon,
         description: e.description
       }, e.id)) : void 0,
-      description: g.description,
+      description: I.description,
       imgSrc: x,
-      title: g.name,
+      title: I.name,
       tag: (0, i.jsx)(a.SubscriptionTag, {
         type: m
       }),
