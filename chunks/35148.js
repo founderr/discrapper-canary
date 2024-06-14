@@ -11,8 +11,8 @@ var a = s("120356"),
   d = s("685613"),
   c = s("340100"),
   E = s("644646"),
-  f = s("898170"),
-  _ = s("46140"),
+  _ = s("898170"),
+  f = s("46140"),
   h = s("689938"),
   C = s("743451");
 t.default = function(e) {
@@ -28,7 +28,7 @@ t.default = function(e) {
     percentComplete: N
   } = (0, o.useQuestTaskDetails)({
     quest: g,
-    location: _.QuestsExperimentLocations.QUESTS_BAR
+    location: f.QuestsExperimentLocations.QUESTS_BAR
   });
   return (0, n.jsxs)(i.animated.div, {
     "aria-hidden": m && T,
@@ -42,7 +42,7 @@ t.default = function(e) {
         output: [1, 0]
       })
     },
-    children: [(0, n.jsx)(f.QuestBarBackgroundAnimation, {
+    children: [(0, n.jsx)(_.QuestBarBackgroundAnimation, {
       quest: g,
       useReducedMotion: A
     }), (0, n.jsx)("div", {

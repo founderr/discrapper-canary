@@ -10,8 +10,8 @@ var n = s("735250"),
   d = s("819640"),
   c = s("569379"),
   E = s("675654"),
-  f = s("977524"),
-  _ = s("197857");
+  _ = s("977524"),
+  f = s("197857");
 let h = ["#51BC9D"];
 t.default = e => {
   var t;
@@ -22,10 +22,10 @@ t.default = e => {
   } = e, {
     completionSpring: T,
     startCompletionAnimation: g
-  } = (0, c.useQuestBarCompletionAnimation)(), A = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, p = a.useRef(!1), N = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), S = a.useRef(null), I = (0, r.useStateFromStores)([d.default], () => d.default.hasLayers()), x = (0, o.default)(I), [R, v] = a.useState(null), [M, O] = a.useState(null), L = a.useRef(new l.Environment({
+  } = (0, c.useQuestBarCompletionAnimation)(), A = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, p = a.useRef(!1), N = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), S = a.useRef(null), I = (0, r.useStateFromStores)([d.default], () => d.default.hasLayers()), x = (0, o.default)(I), [R, v] = a.useState(null), [O, M] = a.useState(null), L = a.useRef(new l.Environment({
     gravity: 0,
     wind: 0
-  })), y = (0, l.useConfettiCannon)(R, M), b = a.useCallback(() => {
+  })), y = (0, l.useConfettiCannon)(R, O), b = a.useCallback(() => {
     if (N) return;
     let e = C.current,
       t = S.current;
@@ -88,21 +88,21 @@ t.default = e => {
   }, [A, x, I, g, b]), a.useEffect(() => {
     y.isReady && (!p.current && A && (g(), b()), p.current = A)
   }, [A, p, b, g, y]), N) ? null : (0, n.jsxs)("div", {
-    className: f.wrapper,
+    className: _.wrapper,
     "aria-hidden": "true",
     ref: S,
     children: [(0, n.jsx)(i.animated.div, {
-      className: f.background,
+      className: _.background,
       style: {
         opacity: T
       }
     }), (0, n.jsx)(l.ConfettiCanvas, {
       ref: v,
-      className: f.confetti,
+      className: _.confetti,
       environment: L.current
     }), (0, n.jsx)(l.SpriteCanvas, {
-      ref: O,
-      sprites: [_],
+      ref: M,
+      sprites: [f],
       colors: h,
       spriteWidth: E.COMMON_CONFETTI_MAX_SPRITE_SIZE,
       spriteHeight: E.COMMON_CONFETTI_MAX_SPRITE_SIZE

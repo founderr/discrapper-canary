@@ -10,9 +10,9 @@ var n = s("768433"),
   d = s("496675"),
   c = s("386438"),
   E = s("287328"),
-  f = s("458772");
+  _ = s("458772");
 
-function _(e, t, s) {
+function f(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -128,7 +128,7 @@ t.default = new class e {
   }
   unsync(e, t) {
     var s;
-    null === (s = this.synced) || void 0 === s || s.delete(e), E.default.basicChannelsTransaction(t).delete(e), E.default.syncedBasicChannelsTransaction(t).put(e, !1), f.default.invalidate(e)
+    null === (s = this.synced) || void 0 === s || s.delete(e), E.default.basicChannelsTransaction(t).delete(e), E.default.syncedBasicChannelsTransaction(t).put(e, !1), _.default.invalidate(e)
   }
   sync(e) {
     h.verbose("Starting to write all basic channels");
@@ -154,7 +154,7 @@ t.default = new class e {
     }(e)), E.default.syncedBasicChannelsTransaction(t).put(e, !0), !0)
   }
   constructor() {
-    _(this, "synced", null), _(this, "actions", {
+    f(this, "synced", null), f(this, "actions", {
       BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
       CHANNEL_CREATE: (e, t) => this.handleChannelCreate(e, t),
       CHANNEL_DELETE: (e, t) => this.handleChannelDelete(e, t),

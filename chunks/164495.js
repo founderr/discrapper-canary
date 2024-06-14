@@ -14,8 +14,8 @@ var n = s("735250"),
   d = s("617136"),
   c = s("113434"),
   E = s("497505"),
-  f = s("918701"),
-  _ = s("667105"),
+  _ = s("918701"),
+  f = s("667105"),
   h = s("46140"),
   C = s("981631"),
   m = s("689938"),
@@ -25,7 +25,7 @@ let g = e => {
       quest: t,
       isExpanded: s,
       hidePlayGameButton: o = !1
-    } = e, [c, _] = a.useState(!1), [h, C] = a.useState(!1), g = a.useRef(new i.Timeout), A = a.useRef(new i.Timeout);
+    } = e, [c, f] = a.useState(!1), [h, C] = a.useState(!1), g = a.useRef(new i.Timeout), A = a.useRef(new i.Timeout);
     a.useEffect(() => {
       let e = A.current,
         t = g.current;
@@ -43,17 +43,17 @@ let g = e => {
         })
       },
       N = () => {
-        (0, f.copyShareLink)(t.id, {
+        (0, _.copyShareLink)(t.id, {
           content: E.QuestContent.QUEST_BAR_V2,
           ctaContent: d.QuestContentCTA.QUEST_BAR_COPY_LINK
-        }), _(!0), C(!0), A.current.start(500, () => C(!1)), g.current.start(600, () => _(!1))
+        }), f(!0), C(!0), A.current.start(500, () => C(!1)), g.current.start(600, () => f(!1))
       };
     return (0, n.jsxs)("div", {
       className: T.ctaContainer,
       children: [!o && (0, n.jsx)(r.Button, {
         className: T.flex,
         size: r.Button.Sizes.SMALL,
-        onClick: () => (0, f.openGameLink)(t, {
+        onClick: () => (0, _.openGameLink)(t, {
           content: E.QuestContent.QUEST_BAR_V2,
           ctaContent: d.QuestContentCTA.OPEN_GAME_LINK
         }),
@@ -100,7 +100,7 @@ let g = e => {
       isExpanded: s
     } = e, {
       xboxAndPlaystationAccounts: a
-    } = (0, c.useConnectedAccounts)(), l = 0 === a.length, i = !l && (0, f.isQuestProgressingOnConsole)(t) || (0, f.hasVariant)(t, h.QuestVariants.IN_HOUSE_CONSOLE_QUEST);
+    } = (0, c.useConnectedAccounts)(), l = 0 === a.length, i = !l && (0, _.isQuestProgressingOnConsole)(t) || (0, _.hasVariant)(t, h.QuestVariants.IN_HOUSE_CONSOLE_QUEST);
     return l ? (0, n.jsx)(A, {}) : (0, n.jsx)(g, {
       quest: t,
       isExpanded: s,
@@ -112,7 +112,7 @@ let g = e => {
       quest: t,
       useReducedMotion: s,
       isExpanded: a
-    } = e, l = (0, _.useHandleClaimQuestsReward)({
+    } = e, l = (0, f.useHandleClaimQuestsReward)({
       quest: t,
       location: E.QuestContent.QUEST_BAR
     });
@@ -135,7 +135,7 @@ let g = e => {
       useReducedMotion: l,
       isExpanded: i,
       hasMadeProgress: r
-    } = e, o = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, u = a.useMemo(() => (0, f.isConsoleQuest)(s), [s]);
+    } = e, o = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, u = a.useMemo(() => (0, _.isConsoleQuest)(s), [s]);
     if (o) return (0, n.jsx)(N, {
       quest: s,
       useReducedMotion: l,

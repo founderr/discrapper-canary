@@ -14,8 +14,8 @@ t.default = function(e) {
     isExpanded: d,
     isExpansionAnimationComplete: c,
     onCtxMenuOpened: E,
-    onCtxMenuClosed: f,
-    onCtxMenuSelection: _,
+    onCtxMenuClosed: _,
+    onCtxMenuSelection: f,
     onContentHeightChange: h,
     quest: C,
     useReducedMotion: m
@@ -36,8 +36,8 @@ t.default = function(e) {
     }), (0, n.jsx)(r.default, {
       className: u.content,
       onCtxMenuOpen: E,
-      onCtxMenuClose: f,
-      onCtxMenuSelect: _,
+      onCtxMenuClose: _,
+      onCtxMenuSelect: f,
       onContentHeightChange: h,
       isExpanded: d,
       isExpansionAnimationComplete: c,

@@ -11,8 +11,8 @@ var a = s("120356"),
   d = s("914788"),
   c = s("981631"),
   E = s("689938"),
-  f = s("125640");
-let _ = [18, 18, 16, 16, 14, 12, 10];
+  _ = s("125640");
+let f = [18, 18, 16, 16, 14, 12, 10];
 t.default = e => {
   let {
     guildId: t
@@ -22,19 +22,19 @@ t.default = e => {
     h = s.toString(),
     C = s.getIconURL(40, !0),
     m = null,
-    T = _[_.length - 1];
+    T = f[f.length - 1];
   if (null == s.icon && null != h) {
     var g;
-    T = null !== (g = _[(m = (0, i.getAcronym)(h)).length - 1]) && void 0 !== g ? g : _[_.length - 1]
+    T = null !== (g = f[(m = (0, i.getAcronym)(h)).length - 1]) && void 0 !== g ? g : f[f.length - 1]
   }
   return (0, n.jsxs)("div", {
-    className: f.container,
+    className: _.container,
     children: [(0, n.jsxs)("div", {
       style: {
         fontSize: T
       },
       children: [null != m ? (0, n.jsx)("div", {
-        className: l()(f.childWrapper, f.acronym),
+        className: l()(_.childWrapper, _.acronym),
         "aria-hidden": !0,
         children: m
       }) : null, null != C ? (0, n.jsx)(o.Avatar, {
@@ -43,14 +43,14 @@ t.default = e => {
         "aria-hidden": !0
       }) : null]
     }), (0, n.jsxs)("div", {
-      className: f.descriptors,
+      className: _.descriptors,
       children: [(0, n.jsxs)("div", {
-        className: f.header,
+        className: _.header,
         children: [a ? (0, n.jsx)(u.default, {
           guild: s,
           tooltipPosition: "bottom",
           tooltipColor: o.Tooltip.Colors.PRIMARY,
-          className: f.guildBadge
+          className: _.guildBadge
         }) : null, (0, n.jsx)(o.Text, {
           variant: "text-md/semibold",
           children: s.toString()

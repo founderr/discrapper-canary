@@ -13,10 +13,10 @@ s.r(t), s.d(t, {
     return h
   },
   resetClanDiscovery: function() {
-    return _
+    return f
   },
   setClanDiscoveryMode: function() {
-    return f
+    return _
   },
   useClanDiscoveryUIStore: function() {
     return E
@@ -72,7 +72,7 @@ let E = (0, u.default)((0, d.persist)(e => ({
   })
 }));
 
-function f(e) {
+function _(e) {
   let t = E.getState().mode;
   E.setState({
     mode: e,
@@ -80,7 +80,7 @@ function f(e) {
   })
 }
 
-function _() {
+function f() {
   E.setState({
     started: !1,
     mode: "admin_upsell",

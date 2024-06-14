@@ -24,14 +24,14 @@ let E = {
     HORIZONTAL: u.flexHorizontal,
     HORIZONTAL_REVERSE: u.flexHorizontalReverse
   },
-  f = {
+  _ = {
     START: u.flexJustifyStart,
     END: u.flexJustifyEnd,
     CENTER: u.flexJustifyCenter,
     BETWEEN: u.flexJustifyBetween,
     AROUND: u.flexJustifyAround
   },
-  _ = {
+  f = {
     NO_WRAP: u.flexNowrap,
     WRAP: u.flexWrap,
     WRAP_REVERSE: u.flexWrapReverse
@@ -98,8 +98,8 @@ class T extends(a = i.PureComponent) {
       grow: u,
       basis: c,
       style: E,
-      gutter: f,
-      ..._
+      gutter: _,
+      ...f
     } = this.props, h = {
       flexShrink: r,
       flexGrow: u,
@@ -108,17 +108,17 @@ class T extends(a = i.PureComponent) {
     };
     return (0, l.jsx)("div", {
       style: h,
-      className: o()(d.flex, s, n, a, i, f, t),
-      ..._,
+      className: o()(d.flex, s, n, a, i, _, t),
+      ...f,
       children: e
     })
   }
 }
-c(T, "Child", m), c(T, "Direction", E), c(T, "Align", h), c(T, "Justify", f), c(T, "Wrap", _), c(T, "Gutter", C), c(T, "defaultProps", {
+c(T, "Child", m), c(T, "Direction", E), c(T, "Align", h), c(T, "Justify", _), c(T, "Wrap", f), c(T, "Gutter", C), c(T, "defaultProps", {
   direction: E.HORIZONTAL,
-  justify: f.START,
+  justify: _.START,
   align: h.STRETCH,
-  wrap: _.WRAP,
+  wrap: f.WRAP,
   shrink: 1,
   grow: 1,
   basis: "auto",

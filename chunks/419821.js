@@ -14,8 +14,8 @@ var n = s("735250"),
   d = s("465670"),
   c = s("933970"),
   E = s("340453"),
-  f = s("292352"),
-  _ = s("689938"),
+  _ = s("292352"),
+  f = s("689938"),
   h = s("999593");
 
 function C(e) {
@@ -39,14 +39,14 @@ function C(e) {
       className: h.details,
       children: (0, n.jsx)(E.default, {
         otherUser: t,
-        status: f.UserLinkStatus.ACTIVE
+        status: _.UserLinkStatus.ACTIVE
       })
     }), (0, n.jsx)("div", {
       className: h.actions,
       children: (0, n.jsx)(c.default, {
         icon: d.default,
         className: h.__invalid_actionDeny,
-        tooltip: _.default.Messages.FAMILY_CENTER_LINK_ACTION_DISCONNECT,
+        tooltip: f.default.Messages.FAMILY_CENTER_LINK_ACTION_DISCONNECT,
         onClick: C
       })
     })]

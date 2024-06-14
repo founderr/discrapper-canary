@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return f
   }
 }), s("47120");
 var n = s("735250"),
@@ -14,7 +14,7 @@ var n = s("735250"),
   d = s("584825"),
   c = s("931547"),
   E = s("689938");
-let f = e => {
+let _ = e => {
   let [t, s] = a.useState(!1), [n, l] = a.useState(null);
   return {
     resetRenewalMutation: async t => {
@@ -32,7 +32,7 @@ let f = e => {
   }
 };
 
-function _(e) {
+function f(e) {
   let {
     groupListingId: t,
     subscription: s,
@@ -40,10 +40,10 @@ function _(e) {
   } = e, {
     analyticsLocations: r
   } = (0, u.default)(o.default.PENDING_PLAN_CHANGE_NOTICE), {
-    resetRenewalMutation: _,
+    resetRenewalMutation: f,
     submitting: h,
     error: C
-  } = f(r), m = (0, d.useSubscriptionListingsForGroup)(t, {
+  } = _(r), m = (0, d.useSubscriptionListingsForGroup)(t, {
     includeSoftDeleted: !0
   }), {
     currentListing: T,
@@ -70,7 +70,7 @@ function _(e) {
       changeDate: A
     }),
     error: null == C ? void 0 : C.message,
-    onClick: () => _(s),
+    onClick: () => f(s),
     submitting: h,
     ctaMessage: E.default.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_DELETE_MUTATION_CTA,
     className: l

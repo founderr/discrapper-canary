@@ -10,8 +10,8 @@ var n = s("735250"),
   d = s("151827"),
   c = s("785681"),
   E = s("485664"),
-  f = s("880257"),
-  _ = s("631885"),
+  _ = s("880257"),
+  f = s("631885"),
   h = s("895328"),
   C = s("568671"),
   m = s("419821"),
@@ -99,7 +99,7 @@ function R() {
 }
 
 function v() {
-  let e = (0, _.useHasMaxConnections)();
+  let e = (0, f.useHasMaxConnections)();
   return (0, n.jsxs)("div", {
     className: i()(N.box, N.linkingBanner),
     children: [(0, n.jsxs)("div", {
@@ -125,12 +125,12 @@ function v() {
   })
 }
 
-function M(e) {
+function O(e) {
   let {
     sectionType: t,
     sectionTitle: s,
     requests: l
-  } = e, i = a.useRef(null), c = "".concat(t, "-list"), E = (0, u.default)(c), f = a.useCallback(e => {
+  } = e, i = a.useRef(null), c = "".concat(t, "-list"), E = (0, u.default)(c), _ = a.useCallback(e => {
     let {
       row: s,
       listIndex: a
@@ -144,7 +144,7 @@ function M(e) {
         user: i
       })
     }, i.id)
-  }, [l, t]), _ = a.useCallback(() => (0, n.jsx)(d.default, {
+  }, [l, t]), f = a.useCallback(() => (0, n.jsx)(d.default, {
     className: N.__invalid_sectionTitle,
     children: (0, n.jsx)(o.Text, {
       className: S.marginBottom8,
@@ -174,8 +174,8 @@ function M(e) {
             },
             sectionHeight: A.FAMILY_CENTER_REQUEST_SECTION_HEIGHT,
             rowHeight: A.FAMILY_CENTER_REQUEST_ROW_HEIGHT,
-            renderSection: _,
-            renderRow: f,
+            renderSection: f,
+            renderRow: _,
             sections: [l.length],
             chunkSize: 30,
             fade: !0,
@@ -186,9 +186,9 @@ function M(e) {
     })
   })
 }
-let O = () => {
-    let e = (0, f.default)(),
-      t = (0, _.useUserForLinkStatus)(A.UserLinkStatus.ACTIVE),
+let M = () => {
+    let e = (0, _.default)(),
+      t = (0, f.useUserForLinkStatus)(A.UserLinkStatus.ACTIVE),
       s = e ? A.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : A.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
       a = {
         count: t.length,
@@ -196,7 +196,7 @@ let O = () => {
       },
       l = (0, c.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(a), p.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(a));
     return (0, n.jsx)(n.Fragment, {
-      children: t.length > 0 ? (0, n.jsx)(M, {
+      children: t.length > 0 ? (0, n.jsx)(O, {
         sectionType: A.UserLinkStatus.ACTIVE,
         sectionTitle: l,
         requests: t
@@ -217,8 +217,8 @@ let O = () => {
     })
   },
   L = () => {
-    let e = (0, _.useHasMaxConnections)(),
-      t = (0, f.default)() ? A.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : A.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
+    let e = (0, f.useHasMaxConnections)(),
+      t = (0, _.default)() ? A.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : A.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
       s = (0, c.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({
         maxConnections: t
       }), p.default.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_PARENT.format({
@@ -250,22 +250,22 @@ let O = () => {
     })]
   }) : null,
   b = () => {
-    let e = (0, _.useUserForLinkStatus)(A.UserLinkStatus.PENDING),
+    let e = (0, f.useUserForLinkStatus)(A.UserLinkStatus.PENDING),
       t = (0, c.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({
         count: e.length
       }), p.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({
         count: e.length
       }));
-    return 0 === e.length ? null : (0, n.jsx)(M, {
+    return 0 === e.length ? null : (0, n.jsx)(O, {
       sectionType: A.UserLinkStatus.PENDING,
       sectionTitle: t,
       requests: e
     })
   };
 t.default = () => {
-  let e = (0, f.default)();
+  let e = (0, _.default)();
   return (0, n.jsxs)("div", {
     className: N.container,
-    children: [e ? (0, n.jsx)(R, {}) : (0, n.jsx)(v, {}), (0, n.jsx)(O, {}), (0, n.jsx)(b, {}), (0, n.jsx)(L, {}), (0, n.jsx)(y, {})]
+    children: [e ? (0, n.jsx)(R, {}) : (0, n.jsx)(v, {}), (0, n.jsx)(M, {}), (0, n.jsx)(b, {}), (0, n.jsx)(L, {}), (0, n.jsx)(y, {})]
   })
 }

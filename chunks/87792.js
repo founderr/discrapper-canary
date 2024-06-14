@@ -10,8 +10,8 @@ var n = s("735250"),
   d = s("507893"),
   c = s("626135"),
   E = s("709054"),
-  f = s("914788"),
-  _ = s("546791"),
+  _ = s("914788"),
+  f = s("546791"),
   h = s("259756"),
   C = s("785681"),
   m = s("985002"),
@@ -25,8 +25,8 @@ var n = s("735250"),
   x = s("198952"),
   R = s("329242"),
   v = s("895328"),
-  M = s("292352"),
-  O = s("981631"),
+  O = s("292352"),
+  M = s("981631"),
   L = s("689938"),
   y = s("334611");
 
@@ -62,51 +62,51 @@ function D(e) {
     isMoreLoading: c
   } = (0, m.useFamilyCenterActions)({
     onError: s
-  }), f = M.ACTION_TO_TEXT.get(t), [C, g] = a.useState(M.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), p = (0, h.useIsEligibleForFamilyCenterVCJoin)({
+  }), _ = O.ACTION_TO_TEXT.get(t), [C, g] = a.useState(O.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), p = (0, h.useIsEligibleForFamilyCenterVCJoin)({
     location: "family_center_activity_section_web"
   }), N = a.useCallback(() => {
-    g(e => e + M.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
+    g(e => e + O.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
   }, [t, d]);
-  i()(f, "No text for action type");
-  let x = f.sectionHeader(u),
+  i()(_, "No text for action type");
+  let x = _.sectionHeader(u),
     R = a.useCallback(e => {
       let {
         row: t
       } = e, s = r[t];
-      return (0, _.isUserAction)(s) ? (0, n.jsx)(I.default, {
+      return (0, f.isUserAction)(s) ? (0, n.jsx)(I.default, {
         userId: s.entity_id,
         timestamp: E.default.extractTimestamp(s.event_id),
-        timestampFormatter: f.timestampFormatter
-      }, s.event_id) : (0, _.isGuildAction)(s) ? (0, n.jsx)(S.default, {
+        timestampFormatter: _.timestampFormatter
+      }, s.event_id) : (0, f.isGuildAction)(s) ? (0, n.jsx)(S.default, {
         guildId: s.entity_id
       }, s.event_id) : void 0
-    }, [r, f.timestampFormatter]),
+    }, [r, _.timestampFormatter]),
     v = a.useCallback(() => (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)(o.Text, {
         className: y.sectionHeader,
         variant: "eyebrow",
         color: "header-secondary",
         children: x
-      }), void 0 !== f.sectionDescription ? (0, n.jsx)(o.Text, {
+      }), void 0 !== _.sectionDescription ? (0, n.jsx)(o.Text, {
         className: y.sectionDescription,
         variant: "text-md/medium",
         color: "text-muted",
-        children: f.sectionDescription(null != l && l, p)
+        children: _.sectionDescription(null != l && l, p)
       }) : null]
-    }), [x, f, l, p]);
+    }), [x, _, l, p]);
   if (0 === r.length) return null;
-  let O = r.slice(0, C);
+  let M = r.slice(0, C);
   return (0, n.jsxs)("div", {
     className: y.actionSection,
     children: [v(), (0, n.jsx)("div", {
       className: y.actions,
       style: {
-        maxHeight: 65 * O.length
+        maxHeight: 65 * M.length
       },
-      children: O.map((e, t) => R({
+      children: M.map((e, t) => R({
         row: t
       }))
-    }), O.length !== u ? (0, n.jsx)(o.Clickable, {
+    }), M.length !== u ? (0, n.jsx)(o.Clickable, {
       className: y.loadMoreBar,
       onClick: N,
       role: "button",
@@ -117,7 +117,7 @@ function D(e) {
         className: y.loadMore,
         variant: "text-sm/bold",
         children: L.default.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
-          pageSize: Math.min(u - O.length, M.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS)
+          pageSize: Math.min(u - M.length, O.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS)
         })
       })
     }) : null]
@@ -125,11 +125,11 @@ function D(e) {
 }
 let j = () => {
     let e = (0, A.default)(),
-      t = (0, p.useUserForLinkStatus)(M.UserLinkStatus.ACTIVE),
+      t = (0, p.useUserForLinkStatus)(O.UserLinkStatus.ACTIVE),
       s = (0, C.useAgeSpecificText)(L.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
         activeLinks: t.length
       }), L.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
-      a = (0, _.getActivityWindowTimestampFormatter)(!!e),
+      a = (0, f.getActivityWindowTimestampFormatter)(!!e),
       l = (0, p.useActivityWindowTimeStamp)(a);
     return e && t.length > 1 ? (0, n.jsx)(o.Text, {
       variant: "eyebrow",
@@ -167,8 +167,8 @@ let j = () => {
     })
   },
   P = () => {
-    let e = (0, p.useUserForLinkStatus)(M.UserLinkStatus.ACTIVE),
-      t = (0, r.useStateFromStores)([f.default], () => f.default.getSelectedTeenId()),
+    let e = (0, p.useUserForLinkStatus)(O.UserLinkStatus.ACTIVE),
+      t = (0, r.useStateFromStores)([_.default], () => _.default.getSelectedTeenId()),
       {
         selectTeenUser: s
       } = (0, m.useFamilyCenterActions)({}),
@@ -189,8 +189,8 @@ let j = () => {
       },
       serialize: e => e,
       select: e => {
-        s(e), c.default.track(O.AnalyticEvents.FAMILY_CENTER_ACTION, {
-          action: M.FamilyCenterAction.SelectTeen
+        s(e), c.default.track(M.AnalyticEvents.FAMILY_CENTER_ACTION, {
+          action: O.FamilyCenterAction.SelectTeen
         })
       },
       isSelected: e => e === t,
@@ -200,7 +200,7 @@ let j = () => {
   B = e => {
     let {
       userId: t
-    } = e, s = (0, A.default)(), a = (0, p.useUserForLinkStatus)(M.UserLinkStatus.ACTIVE), l = (0, _.getActivityWindowTimestampFormatter)(!!s), i = (0, p.useActivityWindowTimeStamp)(l);
+    } = e, s = (0, A.default)(), a = (0, p.useUserForLinkStatus)(O.UserLinkStatus.ACTIVE), l = (0, f.getActivityWindowTimestampFormatter)(!!s), i = (0, p.useActivityWindowTimeStamp)(l);
     return s && 1 !== a.length ? (0, n.jsx)(P, {}) : (0, n.jsx)(U, {
       userId: t,
       subText: i
@@ -209,7 +209,7 @@ let j = () => {
 t.default = e => {
   let {
     user: t
-  } = e, s = Array.from(M.ACTION_TO_TEXT.entries()), a = (0, T.useHasActionForAnyDisplayType)(), l = (0, _.getEmptyActivityFormatter)(), i = (0, p.useActivityWindowTimeStamp)(l);
+  } = e, s = Array.from(O.ACTION_TO_TEXT.entries()), a = (0, T.useHasActionForAnyDisplayType)(), l = (0, f.getEmptyActivityFormatter)(), i = (0, p.useActivityWindowTimeStamp)(l);
   return (0, n.jsxs)("div", {
     className: y.container,
     children: [(0, n.jsxs)("div", {

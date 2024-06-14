@@ -24,37 +24,37 @@ function T(e) {
   var t, n, T, v;
   let {
     onClose: _,
-    transitionState: I,
-    skuId: g,
+    transitionState: g,
+    skuId: I,
     appId: x,
     onHeaderTitleClick: E
-  } = e, C = (0, a.useStateFromStores)([o.default], () => o.default.getForSKU(g), [g]), N = (0, a.useStateFromStores)([s.default], () => s.default.get(g), [g]), j = (0, c.useHasActiveEntitlement)(g);
-  if (null == N) return null;
-  let R = null !== (n = N.name) && void 0 !== n ? n : "",
-    L = null !== (T = null == C ? void 0 : null === (t = C.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== T ? T : void 0,
-    A = (null == C ? void 0 : C.headerBackground) != null && null !== (v = d.default.toURLSafe((0, u.getAssetURL)(x, C.headerBackground, 256))) && void 0 !== v ? v : void 0,
-    b = N.type === m.SKUTypes.DURABLE && j,
-    y = N.type === m.SKUTypes.DURABLE ? b ? h.default.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : h.default.Messages.STOREFRONT_DURABLE_AVAILABILITY : void 0,
+  } = e, N = (0, a.useStateFromStores)([o.default], () => o.default.getForSKU(I), [I]), C = (0, a.useStateFromStores)([s.default], () => s.default.get(I), [I]), j = (0, c.useHasActiveEntitlement)(I);
+  if (null == C) return null;
+  let R = null !== (n = C.name) && void 0 !== n ? n : "",
+    L = null !== (T = null == N ? void 0 : null === (t = N.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== T ? T : void 0,
+    A = (null == N ? void 0 : N.headerBackground) != null && null !== (v = d.default.toURLSafe((0, u.getAssetURL)(x, N.headerBackground, 256))) && void 0 !== v ? v : void 0,
+    y = C.type === m.SKUTypes.DURABLE && j,
+    b = C.type === m.SKUTypes.DURABLE ? y ? h.default.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : h.default.Messages.STOREFRONT_DURABLE_AVAILABILITY : void 0,
     {
       price: O
-    } = N;
+    } = C;
   return null == O ? null : (0, i.jsx)(f.CardDetailsModal, {
     appId: x,
-    transitionState: I,
+    transitionState: g,
     onHeaderTitleClick: null != E ? E : _,
     onClose: _,
     footer: (0, i.jsx)(S.ItemPurchaseButton, {
       appId: x,
-      sku: N
+      sku: C
     }),
     children: (0, i.jsx)(p.TrackedCardDetails, {
       appId: x,
-      skuId: N.id,
+      skuId: C.id,
       title: R,
       description: L,
       imgSrc: A,
-      tag: null != y ? (0, i.jsx)(l.Tag, {
-        text: y
+      tag: null != b ? (0, i.jsx)(l.Tag, {
+        text: b
       }) : void 0,
       FallbackIcon: r.TicketIcon
     })

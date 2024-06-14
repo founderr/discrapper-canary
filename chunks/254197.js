@@ -10,8 +10,8 @@ var n = s("735250"),
   d = s("808268"),
   c = s("810090"),
   E = s("617136"),
-  f = s("272008"),
-  _ = s("113434"),
+  _ = s("272008"),
+  f = s("113434"),
   h = s("569984"),
   C = s("497505"),
   m = s("918701"),
@@ -25,8 +25,8 @@ var n = s("735250"),
   x = s("759853"),
   R = s("205511"),
   v = s("95985"),
-  M = s("658590"),
-  O = s("46140"),
+  O = s("658590"),
+  M = s("46140"),
   L = s("689938"),
   y = s("263094");
 let b = a.forwardRef(function(e, t) {
@@ -41,8 +41,8 @@ let b = a.forwardRef(function(e, t) {
     onContentHeightChange: B,
     quest: V,
     useReducedMotion: G
-  } = e, H = a.useRef(null), F = (0, r.useStateFromStores)([h.default], () => h.default.isEnrolling(V.id), [V]), k = (0, _.useQuestFormattedDate)(V.config.expiresAt), w = a.useMemo(() => (0, m.isAssetAnimated)(V.config.assets.questBarHero), [V]), Q = a.useCallback(() => {
-    (0, f.enrollInQuest)(V.id, {
+  } = e, H = a.useRef(null), F = (0, r.useStateFromStores)([h.default], () => h.default.isEnrolling(V.id), [V]), k = (0, f.useQuestFormattedDate)(V.config.expiresAt), w = a.useMemo(() => (0, m.isAssetAnimated)(V.config.assets.questBarHero), [V]), Q = a.useCallback(() => {
+    (0, _.enrollInQuest)(V.id, {
       questContent: C.QuestContent.QUEST_BAR,
       questContentCTA: E.QuestContentCTA.ACCEPT_QUEST
     })
@@ -59,16 +59,16 @@ let b = a.forwardRef(function(e, t) {
   }, [V]), {
     primaryVariant: W
   } = T.QuestBarExperiment.useExperiment({
-    location: O.QuestsExperimentLocations.QUESTS_BAR
+    location: M.QuestsExperimentLocations.QUESTS_BAR
   }, {
     autoTrackExposure: !1
-  }), z = (null === (s = V.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null, Z = (0, _.useQuestTaskDetails)({
+  }), z = (null === (s = V.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null, Z = (0, f.useQuestTaskDetails)({
     quest: V,
-    location: O.QuestsExperimentLocations.QUESTS_BAR
+    location: M.QuestsExperimentLocations.QUESTS_BAR
   }), K = Z.percentComplete > 0, X = b && D, J = a.useMemo(() => (0, m.isConsoleQuest)(V), [V]), $ = (0, m.getQuestBarHeroAssetUrl)(V), ee = (0, m.getQuestsInstructionsToWinReward)({
     quest: V,
-    location: O.QuestsExperimentLocations.QUESTS_BAR,
-    useV2Variants: W === T.QuestBarExperimentVariants.V2 || (0, M.shouldForceQuestBarV2)(V),
+    location: M.QuestsExperimentLocations.QUESTS_BAR,
+    useV2Variants: W === T.QuestBarExperimentVariants.V2 || (0, O.shouldForceQuestBarV2)(V),
     taskDetails: Z
   });
   return (0, n.jsx)("div", {

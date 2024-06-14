@@ -10,8 +10,8 @@ var n = s("735250"),
   d = s("918701"),
   c = s("685613"),
   E = s("78826"),
-  f = s("898170"),
-  _ = s("759853"),
+  _ = s("898170"),
+  f = s("759853"),
   h = s("95985"),
   C = s("743294"),
   m = s("689938"),
@@ -25,7 +25,7 @@ let g = a.forwardRef(function(e, t) {
     isExpansionAnimationComplete: N,
     quest: S,
     useReducedMotion: I
-  } = e, x = a.useRef(null), R = (null === (l = S.userStatus) || void 0 === l ? void 0 : l.enrolledAt) != null, v = a.useMemo(() => (0, d.isAssetAnimated)(S.config.assets.questBarHero), [S]), M = (0, d.getQuestBarHeroAssetUrl)(S);
+  } = e, x = a.useRef(null), R = (null === (l = S.userStatus) || void 0 === l ? void 0 : l.enrolledAt) != null, v = a.useMemo(() => (0, d.isAssetAnimated)(S.config.assets.questBarHero), [S]), O = (0, d.getQuestBarHeroAssetUrl)(S);
   return (0, n.jsxs)(r.animated.div, {
     ref: t,
     "aria-hidden": p && N,
@@ -59,8 +59,8 @@ let g = a.forwardRef(function(e, t) {
           className: T.heroAsset,
           controls: !1,
           children: (0, n.jsx)("source", {
-            src: M,
-            type: (0, d.getVideoAssetMimeType)(M)
+            src: O,
+            type: (0, d.getVideoAssetMimeType)(O)
           })
         })
       }) : (0, n.jsx)(E.QuestsAsset, {
@@ -69,7 +69,7 @@ let g = a.forwardRef(function(e, t) {
           ref: e,
           alt: "",
           className: T.heroAsset,
-          src: M
+          src: O
         })
       })]
     }), R ? (0, n.jsx)("div", {
@@ -77,12 +77,12 @@ let g = a.forwardRef(function(e, t) {
       style: {
         backgroundImage: "linear-gradient(90deg, ".concat(C.QUEST_BAR_V2_BACKGROUND_GRADIENT_LEFT, ", ").concat(C.QUEST_BAR_V2_BACKGROUND_GRADIENT_RIGHT, ")")
       }
-    }) : (0, n.jsx)(f.QuestBarBackgroundAnimation, {
+    }) : (0, n.jsx)(_.QuestBarBackgroundAnimation, {
       className: T.background,
       animationClassName: T.backgroundAnimation,
       quest: S,
       useReducedMotion: I
-    }), (0, n.jsx)(_.default, {
+    }), (0, n.jsx)(f.default, {
       progressBarRef: x,
       quest: S,
       isExpanded: p

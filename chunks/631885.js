@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   useAcceptedRequestsCount: function() {
-    return _
+    return f
   },
   useActivityWindowTimeStamp: function() {
     return h
@@ -13,7 +13,7 @@ s.r(t), s.d(t, {
     return C
   },
   usePendingRequestCount: function() {
-    return f
+    return _
   },
   useUserForLinkStatus: function() {
     return d
@@ -51,13 +51,13 @@ function E() {
   return t.length >= s
 }
 
-function f() {
+function _() {
   let e = (0, n.useStateFromStores)([a.default], () => a.default.getCurrentUser()),
     t = (0, n.useStateFromStores)([l.default], () => l.default.getLinkedUsers());
   return null == e ? 0 : Object.values(t).filter(t => null != t && t.link_status === u.UserLinkStatus.PENDING && e.id !== t.requestor_id).length
 }
 
-function _() {
+function f() {
   let e = (0, n.useStateFromStores)([a.default], () => a.default.getCurrentUser()),
     t = (0, n.useStateFromStores)([l.default], () => l.default.getLinkedUsers());
   return null == e ? 0 : Object.values(t).filter(e => null != e && e.link_status === u.UserLinkStatus.ACTIVE).length

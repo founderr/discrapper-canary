@@ -14,8 +14,8 @@ var n = s("735250"),
   d = s("481060"),
   c = s("451478"),
   E = s("302221"),
-  f = s("517740");
-let _ = [0, .5, 1],
+  _ = s("517740");
+let f = [0, .5, 1],
   h = {
     "layers[1].shapes[1].g.k.k": [0, .522, .278, .776, .5, .522, .278, .776, 1, .522, .278, .776],
     "layers[2].shapes[1].g.k.k": [0, .714, .271, .757, .5, .714, .271, .757, 1, .714, .271, .757]
@@ -50,7 +50,7 @@ function m(e) {
         g: e.g / 255,
         b: e.b / 255
       },
-      s = _.reduce((e, s) => [...e, s, t.r, t.g, t.b], []);
+      s = f.reduce((e, s) => [...e, s, t.r, t.g, t.b], []);
     return C(r.id, s)
   }, [r]), p = (null === (t = r.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, N = !o && h;
   a.useEffect(() => {
@@ -61,18 +61,18 @@ function m(e) {
     g(!0)
   }, []);
   return null == A || p ? (0, n.jsx)("div", {
-    className: f.backgroundFallback,
+    className: _.backgroundFallback,
     style: {
       backgroundImage: "linear-gradient(90deg, ".concat(r.config.colors.primary, ", ").concat(r.config.colors.secondary, ")")
     }
   }) : (0, n.jsx)("div", {
-    className: i()(f.lottieAnimationBackgroundWrapper, l),
+    className: i()(_.lottieAnimationBackgroundWrapper, l),
     children: (0, n.jsx)(d.LottieAnimation, {
       ref: m,
       onComplete: S,
       importData: () => A,
       shouldAnimate: !T && N,
-      className: i()(f.lottieAnimation, f.lottieAnimationBackground, s),
+      className: i()(_.lottieAnimation, _.lottieAnimationBackground, s),
       loop: 0,
       rendererSettings: {
         preserveAspectRatio: "none"

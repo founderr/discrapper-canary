@@ -12,8 +12,8 @@ t.default = a.forwardRef((e, t) => {
     strokeWidth: o = 3,
     glowBlur: u = .4,
     children: d
-  } = e, c = (0, l.useProgressBarColors)(a > 0), E = r / 2, f = r / 2 - o / 2, _ = 2 * Math.PI * f, h = _ - a * _, C = {
-    strokeDasharray: "".concat(_, " ").concat(_),
+  } = e, c = (0, l.useProgressBarColors)(a > 0), E = r / 2, _ = r / 2 - o / 2, f = 2 * Math.PI * _, h = f - a * f, C = {
+    strokeDasharray: "".concat(f, " ").concat(f),
     strokeDashoffset: h
   }, m = {
     boxShadow: "0 0 30px 0px ".concat(c.glow)
@@ -64,7 +64,7 @@ t.default = a.forwardRef((e, t) => {
       }), (0, n.jsx)("circle", {
         strokeWidth: o,
         fill: "transparent",
-        r: f,
+        r: _,
         cx: E,
         cy: E,
         stroke: "url(#linear)"
@@ -72,7 +72,7 @@ t.default = a.forwardRef((e, t) => {
         className: i.progress,
         strokeWidth: o,
         fill: "transparent",
-        r: f,
+        r: _,
         cx: E,
         cy: E,
         stroke: c.foreground,

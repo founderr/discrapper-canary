@@ -14,8 +14,8 @@ var n = s("735250"),
   d = s("263704"),
   c = s("465670"),
   E = s("880257"),
-  f = s("631885"),
-  _ = s("933970"),
+  _ = s("631885"),
+  f = s("933970"),
   h = s("340453"),
   C = s("292352"),
   m = s("689938"),
@@ -24,7 +24,7 @@ var n = s("735250"),
 function g(e) {
   let {
     user: t
-  } = e, l = (0, E.default)(), g = (0, f.useHasMaxConnections)(), A = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), p = a.useCallback(() => {
+  } = e, l = (0, E.default)(), g = (0, _.useHasMaxConnections)(), A = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), p = a.useCallback(() => {
     i()(void 0 !== A, "User must be logged in to accept a link request"), (0, o.openModalLazy)(async () => {
       let {
         default: e
@@ -68,18 +68,18 @@ function g(e) {
       })
     }), (0, n.jsx)("div", {
       className: T.actions,
-      children: l ? (0, n.jsx)(_.default, {
+      children: l ? (0, n.jsx)(f.default, {
         icon: c.default,
         className: T.__invalid_actionDeny,
         tooltip: m.default.Messages.FAMILY_CENTER_LINK_ACTION_CANCEL,
         onClick: S
       }) : (0, n.jsxs)(n.Fragment, {
-        children: [g ? null : (0, n.jsx)(_.default, {
+        children: [g ? null : (0, n.jsx)(f.default, {
           icon: d.default,
           className: T.__invalid_actionAccept,
           tooltip: m.default.Messages.FAMILY_CENTER_LINK_ACTION_ACCEPT,
           onClick: p
-        }), (0, n.jsx)(_.default, {
+        }), (0, n.jsx)(f.default, {
           icon: c.default,
           className: T.__invalid_actionDeny,
           tooltip: m.default.Messages.FAMILY_CENTER_LINK_ACTION_DECLINE,

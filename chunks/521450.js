@@ -10,8 +10,8 @@ var n = s("735250"),
   d = s("481060"),
   c = s("37234"),
   E = s("960412"),
-  f = s("151662"),
-  _ = s("695346"),
+  _ = s("151662"),
+  f = s("695346"),
   h = s("877453"),
   C = s("981631"),
   m = s("930441"),
@@ -19,11 +19,11 @@ var n = s("735250"),
   g = s("120762"),
   A = s("611273");
 t.default = () => {
-  let e = _.FamilyCenterEnabled.useSetting(),
+  let e = f.FamilyCenterEnabled.useSetting(),
     {
       categories: t,
       initialized: s
-    } = (0, u.useStateFromStoresObject)([f.default], () => f.default.getEmailSettings());
+    } = (0, u.useStateFromStoresObject)([_.default], () => _.default.getEmailSettings());
   return a.useEffect(() => {
     null == s && (0, E.fetchEmailSettings)()
   }, [s]), (0, n.jsxs)("div", {
@@ -37,7 +37,7 @@ t.default = () => {
       value: e,
       note: T.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
       hideBorder: !0,
-      onChange: _.FamilyCenterEnabled.updateSetting,
+      onChange: f.FamilyCenterEnabled.updateSetting,
       children: T.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH
     }), e ? (0, n.jsx)(d.Card, {
       className: g.enableCard,

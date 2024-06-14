@@ -14,7 +14,7 @@ function o(e) {
   let {
     onError: t,
     onSuccess: s
-  } = null != e ? e : {}, [o, u] = n.useState(!1), [d, c] = n.useState(!1), [E, f] = n.useState(!1), [_, h] = n.useState(!1), [C, m] = n.useState(!1), [T, g] = n.useState(!1), [A, p] = n.useState(!1), [N, S] = n.useState(!1), I = o || d || E || _ || T || N, x = n.useCallback(async e => {
+  } = null != e ? e : {}, [o, u] = n.useState(!1), [d, c] = n.useState(!1), [E, _] = n.useState(!1), [f, h] = n.useState(!1), [C, m] = n.useState(!1), [T, g] = n.useState(!1), [A, p] = n.useState(!1), [N, S] = n.useState(!1), I = o || d || E || f || T || N, x = n.useCallback(async e => {
     if (!I) {
       u(!0);
       try {
@@ -40,17 +40,17 @@ function o(e) {
     }
   }, [I, t, s]), v = n.useCallback(async e => {
     if (!I) {
-      f(!0);
+      _(!0);
       try {
         await (0, l.updateLinkForUserId)(e.id, r.UserLinkStatus.INACTIVE), null == s || s()
       } catch (s) {
         let e = new a.APIError(s);
         null == t || t(e)
       } finally {
-        f(!1)
+        _(!1)
       }
     }
-  }, [I, t, s]), M = n.useCallback(async e => {
+  }, [I, t, s]), O = n.useCallback(async e => {
     if (!I) {
       h(!0);
       try {
@@ -62,7 +62,7 @@ function o(e) {
         h(!1)
       }
     }
-  }, [I, t, s]), O = n.useCallback(async () => {
+  }, [I, t, s]), M = n.useCallback(async () => {
     if (!C) {
       m(!0);
       try {
@@ -103,9 +103,9 @@ function o(e) {
     acceptLinkRequest: x,
     declineLinkRequest: R,
     disconnectLinkRequest: v,
-    cancelLinkRequest: M,
+    cancelLinkRequest: O,
     selectTeenUser: L,
-    getLinkCode: O,
+    getLinkCode: M,
     requestLink: y,
     loadMore: n.useCallback(async e => {
       let s = i.default.getActionsForDisplayType(e),
@@ -127,7 +127,7 @@ function o(e) {
     isAcceptLoading: o,
     isDeclineLoading: d,
     isDisconnectLoading: E,
-    isCancelLoading: _,
+    isCancelLoading: f,
     isGetLinkCodeLoading: C,
     isSelectTeenUserLoading: A,
     isRequestingLink: T,

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   NotchBackground: function() {
-    return _.NotchBackground
+    return f.NotchBackground
   }
 }), s("47120");
 var n = s("735250"),
@@ -14,8 +14,8 @@ var n = s("735250"),
   d = s("481060"),
   c = s("846027"),
   E = s("131951"),
-  f = s("19780"),
-  _ = s("233304"),
+  _ = s("19780"),
+  f = s("233304"),
   h = s("626135"),
   C = s("981631"),
   m = s("689938"),
@@ -107,7 +107,7 @@ class A extends a.PureComponent {
     } = this.props, {
       isMicTesting: c,
       volume: E
-    } = this.state, f = e && !c ? m.default.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
+    } = this.state, _ = e && !c ? m.default.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
     return c && e && !u && this._micTestStop(), (0, n.jsxs)("div", {
       className: T.container,
       children: [(0, n.jsx)(d.FormTitle, {
@@ -121,7 +121,7 @@ class A extends a.PureComponent {
       }), (0, n.jsxs)("div", {
         className: T.micTest,
         children: [(0, n.jsx)(d.Tooltip, {
-          text: f,
+          text: _,
           children: e => {
             let {
               onMouseEnter: t,
@@ -138,7 +138,7 @@ class A extends a.PureComponent {
               children: c ? i : l
             })
           }
-        }), (0, n.jsx)(_.default, {
+        }), (0, n.jsx)(f.default, {
           progress: c ? E + 100 : 0,
           notchBackground: a
         }), this.renderCaption()]
@@ -176,7 +176,7 @@ class A extends a.PureComponent {
     })
   }
 }
-t.default = r.default.connectStores([f.default, E.default], () => {
+t.default = r.default.connectStores([_.default, E.default], () => {
   let e = E.default.getInputDeviceId(),
     t = E.default.getInputDevices(),
     s = i().find(t, t => {
@@ -195,7 +195,7 @@ t.default = r.default.connectStores([f.default, E.default], () => {
     }),
     r = E.default.getModeOptions();
   return {
-    isVoiceConnected: f.default.isConnected(),
+    isVoiceConnected: _.default.isConnected(),
     inputVolume: E.default.getInputVolume(),
     outputVolume: E.default.getOutputVolume(),
     inputMode: E.default.getMode(),

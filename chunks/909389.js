@@ -15,7 +15,7 @@ t.default = function(e) {
     onCtxMenuClosed: d,
     onCtxMenuSelection: c,
     quest: E,
-    useReducedMotion: f
+    useReducedMotion: _
   } = e;
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(a.default, {
@@ -24,7 +24,7 @@ t.default = function(e) {
       isExpanded: r,
       isExpansionAnimationComplete: o,
       quest: E,
-      useReducedMotion: f
+      useReducedMotion: _
     }), (0, n.jsx)(l.default, {
       className: i.content,
       onCtxMenuOpen: u,
@@ -33,7 +33,7 @@ t.default = function(e) {
       isExpanded: r,
       isExpansionAnimationComplete: o,
       quest: E,
-      useReducedMotion: f,
+      useReducedMotion: _,
       ref: t
     })]
   })

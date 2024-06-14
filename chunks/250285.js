@@ -10,13 +10,13 @@ var n = s("735250"),
   d = s("906732"),
   c = s("171368"),
   E = s("981631"),
-  f = s("611193");
+  _ = s("611193");
 t.default = e => {
   let {
     userId: t,
     children: s,
     isLast: l,
-    className: _
+    className: f
   } = e, [h, C] = a.useState(!1), {
     analyticsLocations: m
   } = (0, d.default)(), T = a.useCallback(() => {
@@ -43,9 +43,9 @@ t.default = e => {
         style: {
           opacity: 1
         },
-        className: i()(f.rowItem, _, {
-          [f.last]: l,
-          [f.active]: h
+        className: i()(_.rowItem, f, {
+          [_.last]: l,
+          [_.active]: h
         }),
         onMouseEnter: g,
         onMouseLeave: A,

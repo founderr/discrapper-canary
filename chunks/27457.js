@@ -171,14 +171,14 @@ let eE = l.memo(e => {
     e2 = l.useCallback(e => {
       null == h || h(c, e)
     }, [h, c]),
-    e4 = e_;
-  (ek || eB) && (e4 = !1);
-  let e3 = null,
+    e3 = e_;
+  (ek || eB) && (e3 = !1);
+  let e4 = null,
     e7 = null,
     e5 = "";
   switch (c.type) {
     case ec.ParticipantTypes.STREAM:
-      e3 = (0, a.jsx)(ei.default, {
+      e4 = (0, a.jsx)(ei.default, {
         participant: c,
         selected: $,
         width: X,
@@ -192,14 +192,14 @@ let eE = l.memo(e => {
         selected: $,
         width: X,
         focused: en,
-        idle: e4,
+        idle: e3,
         premiumIndicator: ek || eG.enabled
       }), e5 = em.default.Messages.CALL_TILE_A11Y_LABEL_STREAM.format({
         streamerName: c.user.username
       });
       break;
     case ec.ParticipantTypes.USER:
-      e3 = (0, a.jsx)(er.default, {
+      e4 = (0, a.jsx)(er.default, {
         channel: Z,
         inCall: Q,
         participant: c,
@@ -216,7 +216,7 @@ let eE = l.memo(e => {
       });
       break;
     case ec.ParticipantTypes.ACTIVITY:
-      e3 = (0, a.jsx)(el.default, {
+      e4 = (0, a.jsx)(el.default, {
         interactible: en,
         participant: c,
         selected: $,
@@ -227,7 +227,7 @@ let eE = l.memo(e => {
       });
       break;
     case ec.ParticipantTypes.HIDDEN_STREAM:
-      e3 = (0, a.jsx)(ei.default, {
+      e4 = (0, a.jsx)(ei.default, {
         participant: c,
         selected: $,
         width: X,
@@ -285,7 +285,7 @@ let eE = l.memo(e => {
                   height: null !== (d = null == e6 ? void 0 : null === (s = e6.current) || void 0 === s ? void 0 : s.clientHeight) && void 0 !== d ? d : 0
                 }
               })
-            }) : null, e3, ek ? (0, a.jsx)(P.PremiumStreamingEffectOverlay, {
+            }) : null, e4, ek ? (0, a.jsx)(P.PremiumStreamingEffectOverlay, {
               onPlayed: e$,
               played: ew.hqStreamingFrameAnimationPlayed
             }) : null, ee ? null : (0, a.jsx)("div", {

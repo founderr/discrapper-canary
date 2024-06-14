@@ -22,8 +22,8 @@ var n, a, l, i, r = s("278074"),
   d = s("689938"),
   c = s("714953"),
   E = s("160506"),
-  f = s("263660"),
-  _ = s("22344"),
+  _ = s("263660"),
+  f = s("22344"),
   h = s("848359"),
   C = s("782984"),
   m = s("186077"),
@@ -39,7 +39,7 @@ let A = {
       assetIds: ["a_98555e40cc6802bd3a4fed906af1d992", "a_09de63526a45be1ddac70e84718ee04a", "a_904b1989077c91fca1168d39bfcaa0a4"],
       entrypointDecorationAssets: {
         srcDark: E,
-        srcLight: f
+        srcLight: _
       },
       entryPointClassName: "shyButton"
     },
@@ -81,7 +81,7 @@ let A = {
   })).otherwise(() => null),
   N = {
     SHY: {
-      confettiAssetSrc: _,
+      confettiAssetSrc: f,
       style: {
         position: "absolute",
         width: "600px"

@@ -33,9 +33,9 @@ function h(e) {
     onHasClicked: u,
     skuId: h,
     subPlan: T,
-    icon: I
+    icon: g
   } = e, {
-    openModal: g
+    openModal: I
   } = (0, o.default)({
     guildId: a,
     groupListingId: l,
@@ -50,12 +50,12 @@ function h(e) {
     appId: t,
     skuId: h,
     onClick: e => {
-      (null != s ? s : g)(e), null == u || u()
+      (null != s ? s : I)(e), null == u || u()
     },
     className: n,
     children: (0, i.jsxs)("div", {
       className: m.btnContent,
-      children: [I, p.default.Messages.STOREFRONT_SUBSCRIBE_FOR.format({
+      children: [g, p.default.Messages.STOREFRONT_SUBSCRIBE_FOR.format({
         rate: (0, d.formatRate)((0, d.formatPrice)(T.price, T.currency), S.SubscriptionIntervalTypes.MONTH, 1)
       })]
     })
@@ -78,10 +78,10 @@ function T(e) {
       skuId: u.id,
       analyticsLocations: h
     })
-  }, I = (0, c.useHasActiveEntitlement)(u.id), g = u.type === f.SKUTypes.DURABLE && I, {
+  }, g = (0, c.useHasActiveEntitlement)(u.id), I = u.type === f.SKUTypes.DURABLE && g, {
     price: x
   } = u;
-  return null == x ? null : g ? (0, i.jsx)(_, {
+  return null == x ? null : I ? (0, i.jsx)(_, {
     className: n,
     children: p.default.Messages.COLLECTIBLES_ALREADY_OWNED
   }) : (0, i.jsx)(v, {
