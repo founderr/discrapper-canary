@@ -26,28 +26,27 @@ let I = new Set,
   h = {},
   A = {},
   m = {},
-  N = !1,
-  p = !1;
+  N = !1;
 
-function O() {
+function p() {
   I.clear(), T.clear(), f = {}, S = {}, h = {}, A = {}, m = {}, N = !1
 }
 
-function C(e) {
+function O(e) {
   let {
     userId: t
   } = e;
   T.add(t)
 }
 
-function R(e) {
+function C(e) {
   let {
     userId: t
   } = e;
   T.delete(t)
 }
 
-function g(e) {
+function R(e) {
   return r()(e).map(e => ({
     key: e.id,
     user: new o.default(e),
@@ -60,22 +59,22 @@ function g(e) {
   }).value()
 }
 
-function L(e) {
-  T.delete(e.userId), h[e.userId] = g(e.mutualFriends), A[e.userId] = e.mutualFriends.length
+function g(e) {
+  T.delete(e.userId), h[e.userId] = R(e.mutualFriends), A[e.userId] = e.mutualFriends.length
 }
 
-function v() {
+function L() {
   if (0 === Object.keys(m).length) return !1;
   m = {}
 }
 
-function D(e) {
+function v(e) {
   if (null == m[e.user.id]) return !1;
   delete m[e.user.id]
 }
 
-function M(e) {
-  var t, n, i, r, a, o, l, d, _, E, T, N, p, O, C, R, L;
+function D(e) {
+  var t, n, i, r, a, o, l, d, _, E, T, N, p, O, C, g, L;
   if (I.delete(e.user.id), null != e.mutual_guilds) {
     let t = {};
     e.mutual_guilds.forEach(e => {
@@ -96,7 +95,7 @@ function M(e) {
     let t = e.mutual_friends_count;
     A[e.user.id] = t
   }
-  null != e.mutual_friends && (h[e.user.id] = g(e.mutual_friends), A[e.user.id] = e.mutual_friends.length);
+  null != e.mutual_friends && (h[e.user.id] = R(e.mutual_friends), A[e.user.id] = e.mutual_friends.length);
   let v = null !== (_ = e.premium_since) && void 0 !== _ ? _ : null,
     D = e.application;
   if (f[e.user.id] = {
@@ -135,7 +134,7 @@ function M(e) {
       accentColor: e.guild_member_profile.accent_color,
       themeColors: null === (O = e.guild_member_profile) || void 0 === O ? void 0 : O.theme_colors,
       popoutAnimationParticleType: null === (C = e.guild_member_profile) || void 0 === C ? void 0 : C.popout_animation_particle_type,
-      profileEffectId: null === (L = e.guild_member_profile) || void 0 === L ? void 0 : null === (R = L.profile_effect) || void 0 === R ? void 0 : R.id,
+      profileEffectId: null === (L = e.guild_member_profile) || void 0 === L ? void 0 : null === (g = L.profile_effect) || void 0 === g ? void 0 : g.id,
       bio: e.guild_member_profile.bio,
       pronouns: e.guild_member_profile.pronouns,
       badges: e.guild_badges
@@ -146,14 +145,14 @@ function M(e) {
   }
 }
 
-function y(e) {
+function M(e) {
   let {
     userId: t
   } = e;
   I.add(t)
 }
 
-function P(e) {
+function y(e) {
   var t;
   let {
     userId: n
@@ -175,11 +174,11 @@ function P(e) {
   }, I.delete(n)
 }
 
-function U(e) {
+function P(e) {
   N = !0
 }
 
-function b(e) {
+function U(e) {
   N = !1, null != e.guild_id ? ! function(e) {
     let {
       userId: t,
@@ -230,15 +229,11 @@ function b(e) {
   }(e)
 }
 
-function G(e) {
+function b(e) {
   N = !1
 }
 
-function w(e) {
-  p = !0
-}
-
-function k(e) {
+function G(e) {
   let {
     user: t
   } = e;
@@ -246,12 +241,12 @@ function k(e) {
   f[t.id].lastFetched = 0
 }
 
-function B() {
+function w() {
   I.clear(), f = {}, S = {}
 }
-class V extends _.default {
+class k extends _.default {
   initialize() {
-    this.waitFor(c.default), this.syncWith([a.default], B)
+    this.waitFor(c.default), this.syncWith([a.default], w)
   }
   isFetchingProfile(e) {
     return I.has(e)
@@ -278,13 +273,10 @@ class V extends _.default {
   getMutualGuilds(e) {
     return m[e]
   }
-  getIsAccessibilityTooltipViewed() {
-    return p
-  }
   takeSnapshot() {
     let e = l.default.getId();
     return {
-      version: V.LATEST_SNAPSHOT_VERSION,
+      version: k.LATEST_SNAPSHOT_VERSION,
       data: [{
         userId: e,
         profile: f[e]
@@ -294,25 +286,24 @@ class V extends _.default {
   constructor() {
     super({
       CACHE_LOADED_LAZY: () => this.loadCache(),
-      USER_PROFILE_FETCH_START: y,
-      USER_PROFILE_FETCH_FAILURE: P,
-      USER_PROFILE_FETCH_SUCCESS: M,
-      USER_PROFILE_UPDATE_START: U,
-      USER_PROFILE_UPDATE_SUCCESS: b,
-      USER_PROFILE_UPDATE_FAILURE: G,
-      USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED: w,
-      MUTUAL_FRIENDS_FETCH_START: C,
-      MUTUAL_FRIENDS_FETCH_SUCCESS: L,
-      MUTUAL_FRIENDS_FETCH_FAILURE: R,
-      GUILD_JOIN: v,
-      GUILD_DELETE: v,
-      GUILD_MEMBER_ADD: D,
-      GUILD_MEMBER_REMOVE: D,
-      GUILD_MEMBER_UPDATE: k,
-      USER_UPDATE: k,
-      LOGOUT: O
+      USER_PROFILE_FETCH_START: M,
+      USER_PROFILE_FETCH_FAILURE: y,
+      USER_PROFILE_FETCH_SUCCESS: D,
+      USER_PROFILE_UPDATE_START: P,
+      USER_PROFILE_UPDATE_SUCCESS: U,
+      USER_PROFILE_UPDATE_FAILURE: b,
+      MUTUAL_FRIENDS_FETCH_START: O,
+      MUTUAL_FRIENDS_FETCH_SUCCESS: g,
+      MUTUAL_FRIENDS_FETCH_FAILURE: C,
+      GUILD_JOIN: L,
+      GUILD_DELETE: L,
+      GUILD_MEMBER_ADD: v,
+      GUILD_MEMBER_REMOVE: v,
+      GUILD_MEMBER_UPDATE: G,
+      USER_UPDATE: G,
+      LOGOUT: p
     }), E(this, "loadCache", () => {
-      let e = this.readSnapshot(V.LATEST_SNAPSHOT_VERSION);
+      let e = this.readSnapshot(k.LATEST_SNAPSHOT_VERSION);
       null != e && e.forEach(e => {
         let {
           userId: t,
@@ -323,4 +314,4 @@ class V extends _.default {
     })
   }
 }
-E(V, "displayName", "UserProfileStore"), E(V, "LATEST_SNAPSHOT_VERSION", 1), t.default = new V
+E(k, "displayName", "UserProfileStore"), E(k, "LATEST_SNAPSHOT_VERSION", 1), t.default = new k

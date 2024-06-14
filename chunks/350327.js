@@ -1,40 +1,37 @@
 "use strict";
 n.r(t), n.d(t, {
-  handleProfileAccessibilityTooltipViewed: function() {
-    return I
-  },
   resetPendingProfileChanges: function() {
-    return T
+    return I
   },
   saveProfileChanges: function() {
     return E
   },
   setPendingAccentColor: function() {
-    return A
-  },
-  setPendingBanner: function() {
-    return f
-  },
-  setPendingBio: function() {
-    return S
-  },
-  setPendingPronouns: function() {
     return h
   },
+  setPendingBanner: function() {
+    return T
+  },
+  setPendingBio: function() {
+    return f
+  },
+  setPendingPronouns: function() {
+    return S
+  },
   setPendingThemeColors: function() {
-    return m
+    return A
   },
   setTryItOutAvatar: function() {
-    return N
+    return m
   },
   setTryItOutAvatarDecoration: function() {
-    return p
+    return N
   },
   setTryItOutBanner: function() {
-    return O
+    return p
   },
   setTryItOutThemeColors: function() {
-    return C
+    return O
   }
 });
 var i = n("544891"),
@@ -97,73 +94,67 @@ async function E(e, t) {
 
 function I() {
   r.default.dispatch({
-    type: "USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED"
-  })
-}
-
-function T() {
-  r.default.dispatch({
     type: "USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES"
   })
 }
 
-function f(e) {
+function T(e) {
   r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER",
     banner: e
   })
 }
 
-function S(e) {
+function f(e) {
   r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_BIO",
     bio: e
   })
 }
 
-function h(e) {
+function S(e) {
   r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS",
     pronouns: e
   })
 }
 
-function A(e) {
+function h(e) {
   r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR",
     color: e
   })
 }
 
-function m(e) {
+function A(e) {
   r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS",
     themeColors: e
   })
 }
 
-function N(e) {
+function m(e) {
   r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR",
     avatar: e
   }), c(_.AnalyticsPremiumFeatureNames.ANIMATED_AVATAR)
 }
 
-function p(e) {
+function N(e) {
   r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION",
     avatarDecoration: e
   }), c(_.AnalyticsPremiumFeatureNames.AVATAR_DECORATION)
 }
 
-function O(e) {
+function p(e) {
   r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER",
     banner: e
   }), c(_.AnalyticsPremiumFeatureNames.PROFILE_BANNER)
 }
 
-function C(e) {
+function O(e) {
   r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS",
     themeColors: e

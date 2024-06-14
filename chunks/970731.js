@@ -1,85 +1,82 @@
 "use strict";
-n.r(t), n.d(t, {
-  ButtonLayout: function() {
-    return a
-  },
+E.r(t), E.d(t, {
   CaretPosition: function() {
-    return s
+    return T
   },
   default: function() {
-    return I
+    return o
   }
 });
-var i, r, s, a, o = n("735250"),
-  l = n("470079"),
-  u = n("120356"),
-  d = n.n(u),
-  _ = n("481060"),
-  c = n("921944"),
-  E = n("835104");
+var s, _, T, a, A = E("735250"),
+  n = E("470079"),
+  I = E("120356"),
+  u = E.n(I),
+  i = E("481060"),
+  l = E("921944"),
+  L = E("835104");
 
-function I(e) {
+function o(e) {
   let {
     className: t,
-    header: n,
-    headerClassName: i,
-    content: r,
-    contentClassName: s,
+    header: E,
+    headerClassName: s,
+    content: _,
+    contentClassName: T,
     buttonCTA: a,
-    secondaryButtonCTA: u,
-    onClick: I,
-    onSecondaryClick: T,
-    buttonProps: f = {
-      color: _.Button.Colors.BRAND,
-      look: _.Button.Looks.FILLED
+    secondaryButtonCTA: I,
+    onClick: o,
+    onSecondaryClick: r,
+    buttonProps: d = {
+      color: i.Button.Colors.BRAND,
+      look: i.Button.Looks.FILLED
     },
-    secondaryButtonProps: S = {
-      color: _.Button.Colors.BRAND_INVERTED
+    secondaryButtonProps: N = {
+      color: i.Button.Colors.BRAND_INVERTED
     },
-    onComponentMount: h,
-    asset: A,
-    markAsDismissed: m,
-    caretPosition: N = "caretTopCenter",
-    buttonLayout: p = 0
+    onComponentMount: S,
+    asset: g,
+    markAsDismissed: D,
+    caretPosition: G = "caretTopCenter",
+    buttonLayout: O = 0
   } = e;
-  l.useEffect(() => {
-    null == h || h()
+  n.useEffect(() => {
+    null == S || S()
   }, []);
-  let O = null != u;
-  return (0, o.jsxs)("div", {
-    className: d()(t, E.upsellTooltipWrapper, E[N]),
-    children: [A, null == n ? null : (0, o.jsx)(_.Heading, {
-      className: d()(i, E.upsellTooltipHeader),
+  let c = null != I;
+  return (0, A.jsxs)("div", {
+    className: u()(t, L.upsellTooltipWrapper, L[G]),
+    children: [g, null == E ? null : (0, A.jsx)(i.Heading, {
+      className: u()(s, L.upsellTooltipHeader),
       variant: "heading-md/semibold",
-      children: n
-    }), (0, o.jsx)(_.Text, {
+      children: E
+    }), (0, A.jsx)(i.Text, {
       color: "always-white",
-      className: d()(s, E.content),
+      className: u()(T, L.content),
       variant: "text-sm/normal",
-      children: r
-    }), null != a || O ? (0, o.jsxs)("div", {
-      className: d()(E.upsellButtonsContainer, {
-        [E.upsellButtonsAdjacent]: 0 === p,
-        [E.upsellButtonsStacked]: 1 === p
+      children: _
+    }), null != a || c ? (0, A.jsxs)("div", {
+      className: u()(L.upsellButtonsContainer, {
+        [L.upsellButtonsAdjacent]: 0 === O,
+        [L.upsellButtonsStacked]: 1 === O
       }),
-      children: [O ? (0, o.jsx)(_.Button, {
-        ...S,
+      children: [c ? (0, A.jsx)(i.Button, {
+        ...N,
         onClick: () => {
-          null == T || T(), null == m || m(c.ContentDismissActionType.SECONDARY)
+          null == r || r(), null == D || D(l.ContentDismissActionType.SECONDARY)
         },
-        children: u
-      }) : null, null == a ? null : (0, o.jsx)(_.Button, {
-        className: d()({
-          [E.fullWidth]: !O
-        }, f.className),
-        color: f.color,
-        look: f.look,
-        innerClassName: f.innerClassName,
+        children: I
+      }) : null, null == a ? null : (0, A.jsx)(i.Button, {
+        className: u()({
+          [L.fullWidth]: !c
+        }, d.className),
+        color: d.color,
+        look: d.look,
+        innerClassName: d.innerClassName,
         onClick: e => {
-          I(e), null == m || m(c.ContentDismissActionType.PRIMARY)
+          o(e), null == D || D(l.ContentDismissActionType.PRIMARY)
         },
         children: a
       })]
     }) : null]
   })
-}(i = s || (s = {})).TOP_CENTER = "caretTopCenter", i.TOP_RIGHT = "caretTopRight", i.TOP_LEFT = "caretTopLeft", i.BOTTOM_CENTER = "caretBottomCenter", i.BOTTOM_LEFT = "caretBottomLeft", i.LEFT_CENTER = "caretLeftCenter", i.LEFT_TOP = "caretLeftTop", i.RIGHT_CENTER = "caretRightCenter", (r = a || (a = {}))[r.ADJACENT = 0] = "ADJACENT", r[r.STACKED = 1] = "STACKED", I.CaretPosition = s, I.ButtonLayout = a
+}(s = T || (T = {})).TOP_CENTER = "caretTopCenter", s.TOP_RIGHT = "caretTopRight", s.TOP_LEFT = "caretTopLeft", s.BOTTOM_CENTER = "caretBottomCenter", s.BOTTOM_LEFT = "caretBottomLeft", s.LEFT_CENTER = "caretLeftCenter", s.LEFT_TOP = "caretLeftTop", s.RIGHT_CENTER = "caretRightCenter", (_ = a || (a = {}))[_.ADJACENT = 0] = "ADJACENT", _[_.STACKED = 1] = "STACKED", o.CaretPosition = T, o.ButtonLayout = a
