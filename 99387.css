@@ -8216,6 +8216,11 @@ html .progress__00e29 {
     margin-right: 5px
 }
 
+.refreshIcon__69088 {
+    margin-left: 8px;
+    color: var(--interactive-normal)
+}
+
 .partnerBranding__2f8d1 {
     align-items: center;
     display: flex;

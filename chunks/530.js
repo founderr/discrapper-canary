@@ -36,7 +36,7 @@ function _(e) {
     onClick: S,
     className: d.clickableUsername,
     children: e
-  });
+  }), p = null != I && I.length > 0;
   return (0, i.jsxs)("div", {
     className: s()(d.container, T),
     children: [(0, i.jsxs)("div", {
@@ -50,7 +50,7 @@ function _(e) {
         children: E
       })]
     }), (0, i.jsxs)("div", {
-      className: s()(d.tags, m),
+      className: s()(d.tags, m, p && d.tagsWithPronouns),
       children: [N((0, i.jsx)(o.default, {
         user: t,
         usernameIcon: r,
@@ -59,7 +59,7 @@ function _(e) {
         className: d.userTag,
         usernameClass: d.userTagUsername,
         discriminatorClass: d.userTagDiscriminator
-      })), null != I && I.length > 0 && (0, i.jsxs)(i.Fragment, {
+      })), p && (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)("div", {
           "aria-hidden": "true",
           className: d.dotSpacer

@@ -11,6 +11,7 @@ e.exports = {
   pronouns: "pronouns__1266d userTag_eb9b2a",
   pronounsTooltip: "pronounsTooltip__77e16",
   tags: "tags__18aee",
+  tagsWithPronouns: "tagsWithPronouns_ab1466",
   userTag: "userTag_eb9b2a",
   userTagDiscriminator: "userTagDiscriminator_dd0ae5",
   userTagUsername: "userTagUsername__88953",
