@@ -32,46 +32,45 @@ var i = n("735250"),
   P = n("947519"),
   U = n("243778"),
   b = n("813744"),
-  G = n("904085"),
-  w = n("892254"),
-  k = n("210887"),
-  B = n("819640"),
-  x = n("594174"),
-  V = n("451478"),
-  F = n("672752"),
-  H = n("812663"),
-  Y = n("153850"),
-  j = n("725568"),
-  W = n("78415"),
-  K = n("806519"),
-  z = n("358085"),
-  Z = n("74538"),
-  Q = n("663993"),
-  X = n("823453"),
-  q = n("628123"),
-  J = n("962745"),
-  $ = n("151851"),
-  ee = n("981631"),
-  et = n("921944"),
-  en = n("776954");
+  G = n("892254"),
+  w = n("210887"),
+  k = n("819640"),
+  B = n("594174"),
+  x = n("451478"),
+  V = n("672752"),
+  F = n("812663"),
+  H = n("153850"),
+  Y = n("725568"),
+  j = n("78415"),
+  W = n("806519"),
+  K = n("358085"),
+  z = n("74538"),
+  Z = n("663993"),
+  Q = n("823453"),
+  X = n("628123"),
+  q = n("962745"),
+  J = n("151851"),
+  $ = n("981631"),
+  ee = n("921944"),
+  et = n("776954");
 n("792295"), Promise.resolve().then(n.bind(n, "62883")).then(e => {
-  z.isPlatformEmbedded ? window.addEventListener("contextmenu", e.contextMenuCallbackNative, !1) : window.addEventListener("contextmenu", e.contextMenuCallbackWeb, !1)
+  K.isPlatformEmbedded ? window.addEventListener("contextmenu", e.contextMenuCallbackNative, !1) : window.addEventListener("contextmenu", e.contextMenuCallbackWeb, !1)
 }), (0, E.setDesignConfig)({
   getDefaultLinkInterceptor: A.default
-}), (0, Q.makeLazy)({
+}), (0, Z.makeLazy)({
   createPromise: () => Promise.all([n.e("99387"), n.e("40326"), n.e("80451"), n.e("30634"), n.e("54343")]).then(n.bind(n, "849493")),
   webpackId: "849493"
-}), (0, Q.makeLazy)({
+}), (0, Z.makeLazy)({
   createPromise: () => Promise.all([n.e("40326"), n.e("80451"), n.e("30634"), n.e("81811")]).then(n.bind(n, "80753")),
   webpackId: "80753"
 });
-let ei = (0, Q.makeLazy)({
+let en = (0, Z.makeLazy)({
     createPromise: () => Promise.all([n.e("99387"), n.e("46369")]).then(n.bind(n, "177741")),
     webpackId: "177741"
   }),
-  er = r.memo(function(e) {
-    let t = (0, _.useStateFromStores)([V.default], () => V.default.isFocused());
-    return (0, i.jsx)($.default, {
+  ei = r.memo(function(e) {
+    let t = (0, _.useStateFromStores)([x.default], () => x.default.isFocused());
+    return (0, i.jsx)(J.default, {
       ...e,
       focused: t
     })
@@ -82,52 +81,46 @@ t.default = function(e) {
     skipsSettingDefaultPageTitle: n
   } = e, {
     pathname: s
-  } = (0, u.useLocation)(), E = (0, z.getPlatform)(), A = d.isMobile || d.isTablet, V = (0, _.useStateFromStores)([k.default], () => k.default.darkSidebar ? ee.ThemeTypes.DARK : void 0), Q = (0, _.useStateFromStores)([N.default], () => N.default.useForcedColors ? "yes" : "no"), [$, es] = (0, _.useStateFromStoresArray)([D.default], () => [D.default.isEditorOpen, D.default.isCoachmark]), ea = (0, _.useStateFromStores)([R.default], () => R.default.isEditorOpen), {
-    enabled: eo
-  } = G.default.useExperiment({
-    location: "client_themes_coachmark_reintro"
-  }, {
-    autoTrackExposure: !0
-  }), el = (0, _.useStateFromStores)([B.default], () => B.default.getLayers().includes(ee.Layers.USER_SETTINGS)), eu = (0, _.useStateFromStores)([x.default], () => Z.default.canUseClientThemes(x.default.getCurrentUser())), ed = $ && !el, e_ = [];
-  ed && es && eo && !eu && e_.push(c.DismissibleContent.CLIENT_THEMES_COACHMARK);
-  let [ec, eE] = (0, U.useSelectedDismissibleContent)(e_, et.DismissibleContentGroupName.SIDEBAR, !0);
-  e_.push(c.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
-  let eI = ec === c.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
-    eT = ec === c.DismissibleContent.CLIENT_THEMES_COACHMARK;
+  } = (0, u.useLocation)(), E = (0, K.getPlatform)(), A = d.isMobile || d.isTablet, x = (0, _.useStateFromStores)([w.default], () => w.default.darkSidebar ? $.ThemeTypes.DARK : void 0), Z = (0, _.useStateFromStores)([N.default], () => N.default.useForcedColors ? "yes" : "no"), [J, er] = (0, _.useStateFromStoresArray)([D.default], () => [D.default.isEditorOpen, D.default.isCoachmark]), es = (0, _.useStateFromStores)([R.default], () => R.default.isEditorOpen), ea = (0, _.useStateFromStores)([k.default], () => k.default.getLayers().includes($.Layers.USER_SETTINGS)), eo = (0, _.useStateFromStores)([B.default], () => z.default.canUseClientThemes(B.default.getCurrentUser())), el = J && !ea, eu = [];
+  el && er && !eo && eu.push(c.DismissibleContent.CLIENT_THEMES_COACHMARK);
+  let [ed, e_] = (0, U.useSelectedDismissibleContent)(eu, ee.DismissibleContentGroupName.SIDEBAR, !0);
+  eu.push(c.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
+  let ec = ed === c.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
+    eE = ed === c.DismissibleContent.CLIENT_THEMES_COACHMARK;
   r.useEffect(() => {
     null == (0, l.matchPath)(s, {
       path: "invite",
       exact: !1,
       strict: !1
-    }) && eI && !eT && (T.default.dispatch({
+    }) && ec && !eE && (T.default.dispatch({
       type: "APP_ICON_EDITOR_OPEN"
     }), T.default.dispatch({
       type: "APP_ICON_TRACK_IMPRESSION",
-      markAsDismissed: eE
+      markAsDismissed: e_
     }))
-  }, [eI, eT, eE, s]);
-  let ef = r.useRef(document.body);
-  return (0, i.jsx)(w.default, {
+  }, [ec, eE, e_, s]);
+  let eI = r.useRef(document.body);
+  return (0, i.jsx)(G.default, {
     children: (0, i.jsx)(p.default, {
       children: (0, i.jsxs)(I.RedesignIconContextProvider, {
-        children: [(0, i.jsx)(X.default, {
+        children: [(0, i.jsx)(Q.default, {
           skipsSettingDefaultPageTitle: n
-        }), (0, i.jsx)(J.default, {
-          children: (0, i.jsx)(q.default, {
+        }), (0, i.jsx)(q.default, {
+          children: (0, i.jsx)(X.default, {
             children: (0, i.jsxs)(I.FocusRingScope, {
-              containerRef: ef,
-              children: [(0, i.jsx)(K.MaskLibrary, {}), (0, i.jsx)(F.default, {}), (0, i.jsx)(o.FocusGuard, {}), null != E ? (0, i.jsx)(er, {
+              containerRef: eI,
+              children: [(0, i.jsx)(W.MaskLibrary, {}), (0, i.jsx)(V.default, {}), (0, i.jsx)(o.FocusGuard, {}), null != E ? (0, i.jsx)(ei, {
                 type: E,
-                themeOverride: V
+                themeOverride: x
               }) : null, (0, i.jsx)(m.AppWindowContextProvider, {
-                appContext: ee.AppContext.APP,
+                appContext: $.AppContext.APP,
                 renderWindow: window,
-                children: (0, i.jsxs)(Y.AppLayerProvider, {
+                children: (0, i.jsxs)(H.AppLayerProvider, {
                   children: [(0, i.jsxs)("div", {
-                    className: a()(en.appAsidePanelWrapper, A && en.mobileAppAsidePanelWrapper, {
-                      [en.allowsScrolling]: (() => {
+                    className: a()(et.appAsidePanelWrapper, A && et.mobileAppAsidePanelWrapper, {
+                      [et.allowsScrolling]: (() => {
                         let e = (0, l.matchPath)(s, {
-                          path: ee.Routes.APPLICATION_DIRECTORY,
+                          path: $.Routes.APPLICATION_DIRECTORY,
                           exact: !1,
                           strict: !1
                         });
@@ -135,24 +128,24 @@ t.default = function(e) {
                       })()
                     }),
                     children: [(0, i.jsx)("div", {
-                      className: en.notAppAsidePanel,
+                      className: et.notAppAsidePanel,
                       "data-app-not-dev-tools": !0,
                       children: (0, i.jsx)(y.CommonConfettiCannonContextProvider, {
-                        children: (0, i.jsx)(W.VerificationLayerProvider, {
-                          children: (0, i.jsxs)(H.default.Provider, {
+                        children: (0, i.jsx)(j.VerificationLayerProvider, {
+                          children: (0, i.jsxs)(F.default.Provider, {
                             value: O.default,
                             children: [(0, i.jsx)("div", {
-                              className: a()(A ? en.mobileApp : en.app),
+                              className: a()(A ? et.mobileApp : et.app),
                               children: t
-                            }), (0, i.jsx)(L.default, {}), (0, i.jsx)(S.default, {}), (0, i.jsx)(I.Modals, {}), (0, i.jsx)(h.default, {}), (0, i.jsx)(j.FullScreenLayers, {}), (0, i.jsx)(Y.AppLayerContainer, {}), (0, i.jsx)(W.VerificationLayerContainer, {}), (0, i.jsx)(I.ToastContainer, {}), (0, i.jsx)(C.default, {}), (0, i.jsx)(b.default, {}), (0, i.jsx)(ei, {})]
+                            }), (0, i.jsx)(L.default, {}), (0, i.jsx)(S.default, {}), (0, i.jsx)(I.Modals, {}), (0, i.jsx)(h.default, {}), (0, i.jsx)(Y.FullScreenLayers, {}), (0, i.jsx)(H.AppLayerContainer, {}), (0, i.jsx)(j.VerificationLayerContainer, {}), (0, i.jsx)(I.ToastContainer, {}), (0, i.jsx)(C.default, {}), (0, i.jsx)(b.default, {}), (0, i.jsx)(en, {})]
                           })
                         })
                       })
-                    }), (0, i.jsx)(v.default, {}), (0, i.jsx)(f.default, {}), ed && !es || eT ? (0, i.jsx)(M.default, {
-                      markAsDismissed: eE
-                    }) : null, !ea || el || eT ? null : (0, i.jsx)(g.default, {
-                      isCoachmark: eI,
-                      markAsDismissed: eE
+                    }), (0, i.jsx)(v.default, {}), (0, i.jsx)(f.default, {}), el && !er || eE ? (0, i.jsx)(M.default, {
+                      markAsDismissed: e_
+                    }) : null, !es || ea || eE ? null : (0, i.jsx)(g.default, {
+                      isCoachmark: ec,
+                      markAsDismissed: e_
                     }), (0, i.jsx)(P.default, {
                       mobile: A
                     })]
@@ -164,5 +157,5 @@ t.default = function(e) {
         })]
       })
     })
-  }, Q)
+  }, Z)
 }
