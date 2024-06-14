@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   findAppIconSrc: function() {
-    return l
+    return r
   }
 });
 var i = n("591759");
 
-function l(e, t) {
-  let n = e.getIconSource(t);
+function r(t, e) {
+  let n = t.getIconSource(e);
   if (null != n && "number" != typeof n) {
-    let e;
-    if (Array.isArray(n) ? n.length > 0 && (e = n[0].uri) : e = n.uri, null != e) {
-      var l;
-      return null !== (l = i.default.toURLSafe(e)) && void 0 !== l ? l : void 0
+    let t;
+    if (Array.isArray(n) ? n.length > 0 && (t = n[0].uri) : t = n.uri, null != t) {
+      var r;
+      return null !== (r = i.default.toURLSafe(t)) && void 0 !== r ? r : void 0
     }
   }
 }

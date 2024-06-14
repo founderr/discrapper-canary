@@ -1,25 +1,25 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   CardDetails: function() {
     return o
   }
 });
 var i = n("735250");
 n("470079");
-var l = n("777207"),
-  r = n("541822"),
+var r = n("777207"),
+  l = n("541822"),
   a = n("330711"),
   s = n("878106");
 
-function o(e) {
+function o(t) {
   let {
-    benefits: t,
+    benefits: e,
     description: n,
     imgSrc: o,
     title: u,
     tag: d,
     FallbackIcon: c
-  } = e, f = null != o ? {
+  } = t, f = null != o ? {
     "--custom-background-url": "url(".concat(o.toString(), ")")
   } : void 0;
   return (0, i.jsxs)("div", {
@@ -45,34 +45,34 @@ function o(e) {
           width: 96
         })
       })]
-    }), (0, i.jsxs)(r.default, {
+    }), (0, i.jsxs)(l.default, {
       className: s.scroll,
       children: [(0, i.jsx)("br", {}), (0, i.jsxs)("div", {
         className: s.scrollContent,
-        children: [(0, i.jsx)(l.Text, {
+        children: [(0, i.jsx)(r.Text, {
           color: "header-primary",
           tag: "div",
           variant: "heading-xl/semibold",
           children: u
-        }), (null != n && "" !== n || null != t) && (0, i.jsxs)("div", {
+        }), (null != n && "" !== n || null != e) && (0, i.jsxs)("div", {
           className: s.details,
-          children: [(0, i.jsx)(l.Text, {
+          children: [(0, i.jsx)(r.Text, {
             color: "header-primary",
             tag: "div",
             variant: "heading-lg/semibold",
             children: a.default.Messages.Storefront.PRODUCT_DETAILS
-          }), (0, i.jsx)(l.Text, {
+          }), (0, i.jsx)(r.Text, {
             color: "text-muted",
             variant: "text-md/normal",
             className: s.description,
             children: n
-          }), null != t && (0, i.jsxs)("div", {
+          }), null != e && (0, i.jsxs)("div", {
             className: s.benefits,
-            children: [(0, i.jsx)(l.Text, {
+            children: [(0, i.jsx)(r.Text, {
               color: "header-secondary",
               variant: "eyebrow",
               children: a.default.Messages.Storefront.BENEFITS_TITLE
-            }), t]
+            }), e]
           })]
         })]
       })]

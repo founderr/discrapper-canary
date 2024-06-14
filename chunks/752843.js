@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   SubscriptionTag: function() {
     return d
   },
@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var l = n("628028"),
-  r = n("220427"),
+var r = n("628028"),
+  l = n("220427"),
   a = n("777207"),
   s = n("330711"),
   o = n("305967");
@@ -19,30 +19,30 @@ let u = {
   height: 12
 };
 
-function d(e) {
+function d(t) {
   let {
-    type: t
-  } = e;
+    type: e
+  } = t;
   return (0, i.jsx)(c, {
-    icon: "user" === t ? (0, i.jsx)(r.UserIcon, {
+    icon: "user" === e ? (0, i.jsx)(l.UserIcon, {
       ...u,
       color: "var(--text-positive)"
-    }) : (0, i.jsx)(l.ServerIcon, {
+    }) : (0, i.jsx)(r.ServerIcon, {
       ...u,
       color: "var(--text-brand)"
     }),
-    text: "user" === t ? s.default.Messages.Storefront.USER_SUBSCRIPTION : s.default.Messages.Storefront.SERVER_SUBSCRIPTION
+    text: "user" === e ? s.default.Messages.Storefront.USER_SUBSCRIPTION : s.default.Messages.Storefront.SERVER_SUBSCRIPTION
   })
 }
 
-function c(e) {
+function c(t) {
   let {
-    icon: t,
+    icon: e,
     text: n
-  } = e;
+  } = t;
   return (0, i.jsxs)("div", {
     className: o.container,
-    children: [t, (0, i.jsx)(a.Text, {
+    children: [e, (0, i.jsx)(a.Text, {
       color: "header-secondary",
       variant: "text-sm/medium",
       children: n

@@ -4,9 +4,9 @@ i.r(t), i.d(t, {
     return n
   }
 }), i("47120");
-var n, l, a, s, r, o, u = i("442837"),
-  d = i("570140"),
-  c = i("55563"),
+var n, l, a, s, o, r, u = i("442837"),
+  c = i("570140"),
+  d = i("55563"),
   p = i("551428");
 let C = new Map,
   f = new Map;
@@ -17,7 +17,7 @@ let S = {
 };
 class h extends(l = u.default.Store) {
   initialize() {
-    this.waitFor(c.default, p.default)
+    this.waitFor(d.default, p.default)
   }
   hasStorefront(e) {
     return C.has(e)
@@ -31,12 +31,12 @@ class h extends(l = u.default.Store) {
     return C.has(e) ? 2 : null !== (t = f.get(e)) && void 0 !== t ? t : 0
   }
 }
-o = "ApplicationStoreDirectoryStore", (r = "displayName") in(s = h) ? Object.defineProperty(s, r, {
-  value: o,
+r = "ApplicationStoreDirectoryStore", (o = "displayName") in(s = h) ? Object.defineProperty(s, o, {
+  value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[r] = o, t.default = new h(d.default, {
+}) : s[o] = r, t.default = new h(c.default, {
   APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS: function(e) {
     let {
       applicationId: t,

@@ -1,25 +1,25 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   BadgeIcon: function() {
     return a
   }
 });
 var i = n("735250");
 n("470079");
-var l = n("692547"),
-  r = n("331595");
-let a = e => {
+var r = n("692547"),
+  l = n("331595");
+let a = t => {
   let {
-    width: t = 24,
+    width: e = 24,
     height: n = 24,
-    color: a = l.default.colors.INTERACTIVE_NORMAL,
+    color: a = r.default.colors.INTERACTIVE_NORMAL,
     colorClass: s = "",
     ...o
-  } = e;
+  } = t;
   return (0, i.jsx)("svg", {
-    ...(0, r.default)(o),
+    ...(0, l.default)(o),
     xmlns: "http://www.w3.org/2000/svg",
-    width: t,
+    width: e,
     height: n,
     fill: "none",
     viewBox: "0 0 24 24",
