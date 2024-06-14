@@ -1,6 +1,6 @@
 "use strict";
 s.r(t), s("653041");
-var a, n = s("442837"),
+var n, a = s("442837"),
   l = s("570140"),
   i = s("381496"),
   r = s("430824");
@@ -22,7 +22,7 @@ let u = {},
     }
   };
 d();
-class c extends(a = n.default.PersistedStore) {
+class c extends(n = a.default.PersistedStore) {
   initialize(e) {
     null != e && (u = e), this.waitFor(r.default)
   }
@@ -50,13 +50,13 @@ o(c, "displayName", "GuildAffinitiesStore"), o(c, "persistKey", "GuildAffinities
     u.guildAffinities = [], u.guildAffinitiesByGuildId = {}, u.lastFetched = Date.now(), t.forEach((e, t) => {
       let {
         affinity: s,
-        guild_id: a
-      } = e, n = {
+        guild_id: n
+      } = e, a = {
         score: s,
-        guildId: a,
+        guildId: n,
         index: t
       };
-      u.guildAffinitiesByGuildId[a] = n, u.guildAffinities.push(n)
+      u.guildAffinitiesByGuildId[n] = a, u.guildAffinities.push(a)
     })
   },
   LOGOUT: function() {

@@ -1,11 +1,11 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return f
   }
 });
-var a = s("735250"),
-  n = s("470079"),
+var n = s("735250"),
+  a = s("470079"),
   l = s("120356"),
   i = s.n(l),
   r = s("481060"),
@@ -17,44 +17,44 @@ let E = e => {
   let {
     color: t
   } = e;
-  return (0, a.jsxs)("svg", {
+  return (0, n.jsxs)("svg", {
     width: "48",
     height: "28",
     viewBox: "0 0 55 34",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg",
-    children: [(0, a.jsx)("rect", {
+    children: [(0, n.jsx)("rect", {
       x: "10.1968",
       y: "7",
       width: "14.4203",
       height: "14.4203",
       transform: "rotate(45 10.1968 7)",
       className: c.__invalid_toastBG
-    }), (0, a.jsx)("rect", {
+    }), (0, n.jsx)("rect", {
       x: "27.3936",
       y: "0.59021",
       width: "23.4851",
       height: "23.4851",
       transform: "rotate(45 27.3936 0.59021)",
       className: c.__invalid_toastBG
-    }), (0, a.jsx)("rect", {
+    }), (0, n.jsx)("rect", {
       x: "44.5903",
       y: "7",
       width: "14.4203",
       height: "14.4203",
       transform: "rotate(45 44.5903 7)",
       className: c.__invalid_toastBG
-    }), (0, a.jsx)("rect", {
+    }), (0, n.jsx)("rect", {
       x: "10.1968",
       y: "13",
       width: "6",
       height: "6",
       transform: "rotate(45 10.1968 13)",
       fill: t
-    }), (0, a.jsx)("path", {
+    }), (0, n.jsx)("path", {
       d: "M27.3936 4.39355L34.1233 16.2873L27.3936 28.1811L20.6638 16.2873L27.3936 4.39355Z",
       fill: t
-    }), (0, a.jsx)("rect", {
+    }), (0, n.jsx)("rect", {
       x: "44.5903",
       y: "13",
       width: "6",
@@ -65,20 +65,20 @@ let E = e => {
   })
 };
 
-function _(e) {
+function f(e) {
   let {
     achievement: t,
     unlocked: s
   } = e, {
     name: l,
-    description: _,
-    rarity: f,
+    description: f,
+    rarity: _,
     hideDescriptionUntilUnlock: h,
     onAction: C
   } = t, {
     color: m
-  } = (0, o.getAchievementStyles)(f);
-  n.useEffect(() => {
+  } = (0, o.getAchievementStyles)(_);
+  a.useEffect(() => {
     let e = setTimeout(() => {
       u.default.playAchievementUnlockSound()
     }, 50);
@@ -88,32 +88,32 @@ function _(e) {
   }, []);
   let T = null != C && s,
     g = T ? r.Clickable : "div";
-  return (0, a.jsxs)(g, {
+  return (0, n.jsxs)(g, {
     className: i()(c.container, T && c.actionable),
     onClick: () => {
       T && C()
     },
-    children: [(0, a.jsx)("div", {
+    children: [(0, n.jsx)("div", {
       className: c.iconContainer,
-      children: (0, a.jsx)(d.default, {
+      children: (0, n.jsx)(d.default, {
         achievementId: t.id,
         size: d.default.Sizes.SIZE_40,
         unlocked: s
       })
-    }), (0, a.jsxs)("div", {
+    }), (0, n.jsxs)("div", {
       className: c.__invalid_nameContainer,
-      children: [(0, a.jsx)(r.Text, {
+      children: [(0, n.jsx)(r.Text, {
         variant: "text-md/semibold",
         color: "header-primary",
         children: l()
-      }), (0, a.jsx)(r.Text, {
+      }), (0, n.jsx)(r.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
-        children: h && !s ? "?????" : _()
+        children: h && !s ? "?????" : f()
       })]
-    }), (0, a.jsx)("div", {
+    }), (0, n.jsx)("div", {
       className: c.flair,
-      children: (0, a.jsx)(E, {
+      children: (0, n.jsx)(E, {
         color: m
       })
     })]

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s("47120");
-var a = s("392711"),
-  n = s.n(a),
+var n = s("392711"),
+  a = s.n(n),
   l = s("710845"),
   i = s("592125"),
   r = s("306680"),
@@ -21,8 +21,8 @@ t.default = new class e {
   async getAll(e) {
     let t = performance.now(),
       s = await u.default.readStates(e).getMany(),
-      a = performance.now();
-    return c.log("asynchronously loaded in ".concat(a - t, "ms (readStates: ").concat(s.length, ")")), s
+      n = performance.now();
+    return c.log("asynchronously loaded in ".concat(n - t, "ms (readStates: ").concat(s.length, ")")), s
   }
   resetInMemoryState() {
     this.readStateVersion = null
@@ -36,13 +36,13 @@ t.default = new class e {
   handleWriteCaches(e, t) {
     let s = r.default.getAllReadStates(!1);
     if (t) {
-      var a;
+      var n;
       if (null == this.readStateVersion) return;
       let t = "0",
         l = "0",
         r = Object.keys(i.default.getMutablePrivateChannels()),
         d = new Set(r);
-      for (let e of (l = null !== (a = n()(r).sort(o.default.compare).reverse().value()[0]) && void 0 !== a ? a : "0", s)) null != e._lastMessageId && (1 === o.default.compare(e._lastMessageId, t) && (t = e._lastMessageId), d.has(e.channelId) && 1 === o.default.compare(e._lastMessageId, l) && (l = e._lastMessageId));
+      for (let e of (l = null !== (n = a()(r).sort(o.default.compare).reverse().value()[0]) && void 0 !== n ? n : "0", s)) null != e._lastMessageId && (1 === o.default.compare(e._lastMessageId, t) && (t = e._lastMessageId), d.has(e.channelId) && 1 === o.default.compare(e._lastMessageId, l) && (l = e._lastMessageId));
       u.default.nonGuildVersionsTransaction(e).putAll([{
         id: "highest_last_message_id",
         versionString: t

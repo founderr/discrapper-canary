@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   setHomeLink: function() {
-    return n
+    return a
   }
 });
-var a = s("570140");
+var n = s("570140");
 
-function n(e) {
-  a.default.dispatch({
+function a(e) {
+  n.default.dispatch({
     type: "APP_VIEW_SET_HOME_LINK",
     link: e
   })

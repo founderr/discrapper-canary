@@ -1,8 +1,8 @@
 "use strict";
 s.r(t);
-var a = s("735250");
+var n = s("735250");
 s("470079");
-var n = s("35148"),
+var a = s("35148"),
   l = s("266685"),
   i = s("213595");
 t.default = function(e) {
@@ -15,17 +15,17 @@ t.default = function(e) {
     onCtxMenuClosed: d,
     onCtxMenuSelection: c,
     quest: E,
-    useReducedMotion: _
+    useReducedMotion: f
   } = e;
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(n.default, {
+  return (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsx)(a.default, {
       className: i.content,
       expansionSpring: s,
       isExpanded: r,
       isExpansionAnimationComplete: o,
       quest: E,
-      useReducedMotion: _
-    }), (0, a.jsx)(l.default, {
+      useReducedMotion: f
+    }), (0, n.jsx)(l.default, {
       className: i.content,
       onCtxMenuOpen: u,
       onCtxMenuClose: d,
@@ -33,7 +33,7 @@ t.default = function(e) {
       isExpanded: r,
       isExpansionAnimationComplete: o,
       quest: E,
-      useReducedMotion: _,
+      useReducedMotion: f,
       ref: t
     })]
   })

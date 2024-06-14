@@ -7,9 +7,9 @@ s.r(t), s.d(t, {
     return u
   }
 });
-var a = s("735250");
+var n = s("735250");
 s("470079");
-var n = s("481060"),
+var a = s("481060"),
   l = s("570140"),
   i = s("955204"),
   r = s("510273"),
@@ -24,9 +24,9 @@ function u(e) {
 
 function d(e, t) {
   let s = (0, i.getPoggermodeAchievementData)(e);
-  null != s && (0, n.showToast)((0, n.createToast)(o.default.Messages.POGGERMODE_ACHIEVEMENTS, n.ToastType.CUSTOM, {
-    position: n.ToastPosition.BOTTOM,
-    component: (0, a.jsx)(r.default, {
+  null != s && (0, a.showToast)((0, a.createToast)(o.default.Messages.POGGERMODE_ACHIEVEMENTS, a.ToastType.CUSTOM, {
+    position: a.ToastPosition.BOTTOM,
+    component: (0, n.jsx)(r.default, {
       achievement: s,
       unlocked: t
     }),

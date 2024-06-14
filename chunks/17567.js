@@ -1,18 +1,18 @@
 "use strict";
 s.r(t), s("47120");
-var a = s("710845"),
-  n = s("314897"),
+var n = s("710845"),
+  a = s("314897"),
   l = s("430824"),
   i = s("411198"),
   r = s("625137"),
   o = s("287328");
-let u = new a.default("Guilds");
+let u = new n.default("Guilds");
 t.default = new class e {
   async getAsync(e) {
     let t = performance.now(),
       s = await o.default.guilds(e).getMany(),
-      a = performance.now();
-    return u.verbose("loaded in ".concat(a - t, "ms (guilds: ").concat(s.length, ")")), s
+      n = performance.now();
+    return u.verbose("loaded in ".concat(n - t, "ms (guilds: ").concat(s.length, ")")), s
   }
   async getOneAsync(e, t) {
     return await o.default.guilds(e).get(t)
@@ -22,8 +22,8 @@ t.default = new class e {
       if ("unavailable" === s.data_mode) return;
       let e = l.default.getGuild(s.id);
       if (null != e) {
-        let a = l.default.getRoles(s.id);
-        this.put(i.attachRoles(i.fromBackgroundSync(s, e), "partial" === s.data_mode ? i.filterRoleDeletes(s.id, a, s.partial_updates.roles, s.partial_updates.deleted_role_ids) : (0, r.sortServerRoles)(s.id, s.roles)), t)
+        let n = l.default.getRoles(s.id);
+        this.put(i.attachRoles(i.fromBackgroundSync(s, e), "partial" === s.data_mode ? i.filterRoleDeletes(s.id, n, s.partial_updates.roles, s.partial_updates.deleted_role_ids) : (0, r.sortServerRoles)(s.id, s.roles)), t)
       }
     }
   }
@@ -35,24 +35,24 @@ t.default = new class e {
   }
   handleGuildUpdate(e, t) {
     let s = l.default.getGuild(e.guild.id),
-      a = i.fromServerUpdate(e.guild, s);
-    this.put(i.attachRoles(a, (0, r.sortServerRoles)(e.guild.id, e.guild.roles)), t)
+      n = i.fromServerUpdate(e.guild, s);
+    this.put(i.attachRoles(n, (0, r.sortServerRoles)(e.guild.id, e.guild.roles)), t)
   }
   handleGuildDelete(e, t) {
     this.delete(e.guild.id, t)
   }
   handleGuildRoleChange(e, t) {
     let s = l.default.getGuild(e.guildId),
-      a = l.default.getRoles(e.guildId);
-    null != s && this.put(i.attachRoles(s, a), t)
+      n = l.default.getRoles(e.guildId);
+    null != s && this.put(i.attachRoles(s, n), t)
   }
   handleGuildRoleDelete(e, t) {
     let s = l.default.getGuild(e.guildId),
-      a = l.default.getRoles(e.guildId);
-    null != s && this.put(i.attachRoles(s, a), t)
+      n = l.default.getRoles(e.guildId);
+    null != s && this.put(i.attachRoles(s, n), t)
   }
   handleGuildMemberAdd(e, t) {
-    if (null != e.joinedAt && e.user.id === n.default.getId()) {
+    if (null != e.joinedAt && e.user.id === a.default.getId()) {
       let s = l.default.getGuild(e.guildId);
       null != s && this.put(i.attachRoles(s.updateJoinedAt(e.joinedAt), l.default.getRoles(s.id)), t)
     }
@@ -60,8 +60,8 @@ t.default = new class e {
   resetInMemoryState() {}
   putOne(e, t) {
     let s = l.default.getGuild(e.id),
-      a = i.attachRoles(i.fromServer(e, s), e.roles instanceof Array ? (0, r.sortServerRoles)(e.id, e.roles) : e.roles);
-    this.put(a, t)
+      n = i.attachRoles(i.fromServer(e, s), e.roles instanceof Array ? (0, r.sortServerRoles)(e.id, e.roles) : e.roles);
+    this.put(n, t)
   }
   put(e, t) {
     o.default.guildsTransaction(t).put(e)

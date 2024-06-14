@@ -4,13 +4,13 @@ s.r(t), s.d(t, {
     return l
   }
 });
-var a = s("470079"),
-  n = s("661111");
+var n = s("470079"),
+  a = s("661111");
 
 function l(e) {
-  a.useEffect(() => {
-    if (null != e) return n.default.lockChangeLog(e), () => {
-      n.default.unlockChangeLog(e)
+  n.useEffect(() => {
+    if (null != e) return a.default.lockChangeLog(e), () => {
+      a.default.unlockChangeLog(e)
     }
   }, [e])
 }

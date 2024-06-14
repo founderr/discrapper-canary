@@ -1,8 +1,8 @@
 "use strict";
 s.r(t);
-var a = s("735250");
+var n = s("735250");
 s("470079");
-var n = s("399606"),
+var a = s("399606"),
   l = s("481060"),
   i = s("594174"),
   r = s("51144"),
@@ -14,19 +14,19 @@ t.default = e => {
     userId: t,
     timestamp: s,
     timestampFormatter: c
-  } = e, E = (0, n.useStateFromStores)([i.default], () => i.default.getUser(t));
-  return void 0 === E ? null : (0, a.jsxs)("div", {
+  } = e, E = (0, a.useStateFromStores)([i.default], () => i.default.getUser(t));
+  return void 0 === E ? null : (0, n.jsxs)("div", {
     className: d.container,
-    children: [(0, a.jsx)(u.FamilyCenterAvatar, {
+    children: [(0, n.jsx)(u.FamilyCenterAvatar, {
       user: E,
       avatarSize: l.AvatarSizes.SIZE_40
-    }), (0, a.jsx)("div", {
-      children: (0, a.jsxs)("div", {
+    }), (0, n.jsx)("div", {
+      children: (0, n.jsxs)("div", {
         className: d.descriptors,
-        children: [(0, a.jsx)(l.Text, {
+        children: [(0, n.jsx)(l.Text, {
           variant: "text-md/semibold",
           children: r.default.getName(E)
-        }), (0, a.jsx)(l.Text, {
+        }), (0, n.jsx)(l.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
           children: (0, o.formatUserActivityTimestamp)(new Date(s).getTime(), c)

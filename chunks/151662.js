@@ -1,6 +1,6 @@
 "use strict";
 s.r(t);
-var a, n, l, i, r = s("442837"),
+var n, a, l, i, r = s("442837"),
   o = s("570140");
 let u = {},
   d = null;
@@ -16,12 +16,12 @@ class E extends(i = r.default.Store) {
     }
   }
 }
-l = "EmailSettingsStore", (n = "displayName") in(a = E) ? Object.defineProperty(a, n, {
+l = "EmailSettingsStore", (a = "displayName") in(n = E) ? Object.defineProperty(n, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[n] = l, t.default = new E(o.default, {
+}) : n[a] = l, t.default = new E(o.default, {
   CONNECTION_OPEN: c,
   LOGOUT: c,
   EMAIL_SETTINGS_FETCH_SUCCESS: function(e) {

@@ -4,8 +4,8 @@ s.r(t), s.d(t, {
     return S
   }
 }), s("47120");
-var a = s("735250"),
-  n = s("470079"),
+var n = s("735250"),
+  a = s("470079"),
   l = s("722770"),
   i = s("846519"),
   r = s("481060"),
@@ -14,8 +14,8 @@ var a = s("735250"),
   d = s("617136"),
   c = s("113434"),
   E = s("497505"),
-  _ = s("918701"),
-  f = s("667105"),
+  f = s("918701"),
+  _ = s("667105"),
   h = s("46140"),
   C = s("981631"),
   m = s("689938"),
@@ -25,8 +25,8 @@ let g = e => {
       quest: t,
       isExpanded: s,
       hidePlayGameButton: o = !1
-    } = e, [c, f] = n.useState(!1), [h, C] = n.useState(!1), g = n.useRef(new i.Timeout), A = n.useRef(new i.Timeout);
-    n.useEffect(() => {
+    } = e, [c, _] = a.useState(!1), [h, C] = a.useState(!1), g = a.useRef(new i.Timeout), A = a.useRef(new i.Timeout);
+    a.useEffect(() => {
       let e = A.current,
         t = g.current;
       return function() {
@@ -35,7 +35,7 @@ let g = e => {
     }, []);
     let p = () => {
         let e = o ? 20 : 16;
-        return (0, a.jsx)(u.default, {
+        return (0, n.jsx)(u.default, {
           className: o ? T.copyIcon : void 0,
           width: e,
           height: e,
@@ -43,17 +43,17 @@ let g = e => {
         })
       },
       N = () => {
-        (0, _.copyShareLink)(t.id, {
+        (0, f.copyShareLink)(t.id, {
           content: E.QuestContent.QUEST_BAR_V2,
           ctaContent: d.QuestContentCTA.QUEST_BAR_COPY_LINK
-        }), f(!0), C(!0), A.current.start(500, () => C(!1)), g.current.start(600, () => f(!1))
+        }), _(!0), C(!0), A.current.start(500, () => C(!1)), g.current.start(600, () => _(!1))
       };
-    return (0, a.jsxs)("div", {
+    return (0, n.jsxs)("div", {
       className: T.ctaContainer,
-      children: [!o && (0, a.jsx)(r.Button, {
+      children: [!o && (0, n.jsx)(r.Button, {
         className: T.flex,
         size: r.Button.Sizes.SMALL,
-        onClick: () => (0, _.openGameLink)(t, {
+        onClick: () => (0, f.openGameLink)(t, {
           content: E.QuestContent.QUEST_BAR_V2,
           ctaContent: d.QuestContentCTA.OPEN_GAME_LINK
         }),
@@ -61,21 +61,21 @@ let g = e => {
       }), (() => {
         let e = c ? r.Tooltip.Colors.GREEN : r.Tooltip.Colors.PRIMARY,
           t = c ? m.default.Messages.COPY_SUCCESS_1 : m.default.Messages.QUESTS_SHARE_LINK,
-          n = o && !c;
-        return (0, a.jsx)(r.Tooltip, {
+          a = o && !c;
+        return (0, n.jsx)(r.Tooltip, {
           hideOnClick: !1,
-          shouldShow: !n,
+          shouldShow: !a,
           forceOpen: h && s,
           color: e,
           text: t,
-          children: e => (0, a.jsxs)(r.Button, {
+          children: e => (0, n.jsxs)(r.Button, {
             ...e,
             className: o ? T.iconButtonLarge : T.iconButton,
             innerClassName: T.iconButtonInner,
             size: o ? r.Button.Sizes.SMALL : r.Button.Sizes.ICON,
             color: r.Button.Colors.CUSTOM,
             onClick: N,
-            children: [o && (0, a.jsx)(r.Text, {
+            children: [o && (0, n.jsx)(r.Text, {
               color: c ? "status-positive" : "text-primary",
               variant: "text-sm/normal",
               children: m.default.Messages.COPY_LINK
@@ -85,9 +85,9 @@ let g = e => {
       })()]
     })
   },
-  A = () => (0, a.jsx)("div", {
+  A = () => (0, n.jsx)("div", {
     className: T.ctaContainer,
-    children: (0, a.jsx)(r.Button, {
+    children: (0, n.jsx)(r.Button, {
       fullWidth: !0,
       onClick: () => o.default.open(C.UserSettingsSections.CONNECTIONS),
       size: r.Button.Sizes.SMALL,
@@ -99,9 +99,9 @@ let g = e => {
       quest: t,
       isExpanded: s
     } = e, {
-      xboxAndPlaystationAccounts: n
-    } = (0, c.useConnectedAccounts)(), l = 0 === n.length, i = !l && (0, _.isQuestProgressingOnConsole)(t) || (0, _.hasVariant)(t, h.QuestVariants.IN_HOUSE_CONSOLE_QUEST);
-    return l ? (0, a.jsx)(A, {}) : (0, a.jsx)(g, {
+      xboxAndPlaystationAccounts: a
+    } = (0, c.useConnectedAccounts)(), l = 0 === a.length, i = !l && (0, f.isQuestProgressingOnConsole)(t) || (0, f.hasVariant)(t, h.QuestVariants.IN_HOUSE_CONSOLE_QUEST);
+    return l ? (0, n.jsx)(A, {}) : (0, n.jsx)(g, {
       quest: t,
       isExpanded: s,
       hidePlayGameButton: i
@@ -111,18 +111,18 @@ let g = e => {
     let {
       quest: t,
       useReducedMotion: s,
-      isExpanded: n
-    } = e, l = (0, f.useHandleClaimQuestsReward)({
+      isExpanded: a
+    } = e, l = (0, _.useHandleClaimQuestsReward)({
       quest: t,
       location: E.QuestContent.QUEST_BAR
     });
-    return (0, a.jsx)("div", {
+    return (0, n.jsx)("div", {
       className: T.ctaContainer,
-      children: (0, a.jsx)(r.ShinyButton, {
+      children: (0, n.jsx)(r.ShinyButton, {
         fullWidth: !0,
         size: r.Button.Sizes.SMALL,
         onClick: l,
-        pauseAnimation: s || !n,
+        pauseAnimation: s || !a,
         buttonShineClassName: T.shine,
         children: m.default.Messages.QUESTS_CLAIM_REWARD
       })
@@ -135,17 +135,17 @@ let g = e => {
       useReducedMotion: l,
       isExpanded: i,
       hasMadeProgress: r
-    } = e, o = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, u = n.useMemo(() => (0, _.isConsoleQuest)(s), [s]);
-    if (o) return (0, a.jsx)(N, {
+    } = e, o = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, u = a.useMemo(() => (0, f.isConsoleQuest)(s), [s]);
+    if (o) return (0, n.jsx)(N, {
       quest: s,
       useReducedMotion: l,
       isExpanded: i
     });
-    if (!r && u) return (0, a.jsx)(p, {
+    if (!r && u) return (0, n.jsx)(p, {
       quest: s,
       isExpanded: i
     });
-    if (!r) return (0, a.jsx)(g, {
+    if (!r) return (0, n.jsx)(g, {
       quest: s,
       isExpanded: i
     });

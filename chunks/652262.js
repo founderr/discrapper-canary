@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return l
   }
 });
-var a = s("399606");
+var n = s("399606");
 s("594174");
-var n = s("914788");
-let l = () => (0, a.useStateFromStores)([n.default], () => n.default.getSelectedTeenId())
+var a = s("914788");
+let l = () => (0, n.useStateFromStores)([a.default], () => a.default.getSelectedTeenId())

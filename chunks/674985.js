@@ -1,6 +1,6 @@
 "use strict";
 s.r(t);
-var a, n, l, i, r = s("442837"),
+var n, a, l, i, r = s("442837"),
   o = s("570140"),
   u = s("594174"),
   d = s("981631");
@@ -10,12 +10,12 @@ class E extends(i = r.default.Store) {
     return c
   }
 }
-l = "HypeSquadStore", (n = "displayName") in(a = E) ? Object.defineProperty(a, n, {
+l = "HypeSquadStore", (a = "displayName") in(n = E) ? Object.defineProperty(n, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[n] = l, t.default = new E(o.default, {
+}) : n[a] = l, t.default = new E(o.default, {
   CONNECTION_OPEN: function() {
     let e = u.default.getCurrentUser();
     null != e && (e.hasFlag(d.UserFlags.HYPESQUAD_ONLINE_HOUSE_1) ? c = d.HypeSquadHouses.HOUSE_1 : e.hasFlag(d.UserFlags.HYPESQUAD_ONLINE_HOUSE_2) ? c = d.HypeSquadHouses.HOUSE_2 : e.hasFlag(d.UserFlags.HYPESQUAD_ONLINE_HOUSE_3) && (c = d.HypeSquadHouses.HOUSE_3))

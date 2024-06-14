@@ -4,9 +4,9 @@ s.r(t), s.d(t, {
     return i
   }
 });
-var a = s("818083"),
-  n = s("977156");
-let l = (0, a.createExperiment)({
+var n = s("818083"),
+  a = s("977156");
+let l = (0, n.createExperiment)({
     id: "2024-03_quest_bar_progress_cta",
     kind: "user",
     label: "Quest Bar Progress CTA",
@@ -31,7 +31,7 @@ let l = (0, a.createExperiment)({
     let {
       location: t,
       autoTrackExposure: s = !1
-    } = e, a = (0, n.useIsEligibleForQuests)({
+    } = e, n = (0, a.useIsEligibleForQuests)({
       location: t
     }), {
       enabled: i
@@ -40,5 +40,5 @@ let l = (0, a.createExperiment)({
     }, {
       autoTrackExposure: s
     });
-    return a && i
+    return n && i
   }

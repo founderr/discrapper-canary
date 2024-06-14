@@ -7,19 +7,19 @@ s.r(t), s.d(t, {
     return o
   }
 });
-var a = s("399606"),
-  n = s("594174"),
+var n = s("399606"),
+  a = s("594174"),
   l = s("914788"),
   i = s("880257");
 let r = () => {
     let e = (0, i.default)();
-    return (0, a.useStateFromStores)([l.default, n.default], () => {
-      if (!e) return n.default.getCurrentUser();
+    return (0, n.useStateFromStores)([l.default, a.default], () => {
+      if (!e) return a.default.getCurrentUser();
       let t = l.default.getSelectedTeenId();
-      if (null !== t) return n.default.getUser(t)
+      if (null !== t) return a.default.getUser(t)
     })
   },
-  o = e => (0, a.useStateFromStores)([n.default], () => {
-    let t = n.default.getUser(e);
+  o = e => (0, n.useStateFromStores)([a.default], () => {
+    let t = a.default.getUser(e);
     if (null != t) return t
   })

@@ -13,19 +13,19 @@ s.r(t), s.d(t, {
     return h
   },
   resetClanDiscovery: function() {
-    return f
+    return _
   },
   setClanDiscoveryMode: function() {
-    return _
+    return f
   },
   useClanDiscoveryUIStore: function() {
     return E
   }
 });
-var a, n, l, i, r, o, u = s("652874"),
+var n, a, l, i, r, o, u = s("652874"),
   d = s("868888"),
   c = s("433517");
-(a = i || (i = {})).ADMIN_UPSELL = "admin_upsell", a.GET_STARTED = "get_started", a.DISCOVERY = "discovery", a.PLAYSTYLE = "playstyle", a.TRAITS = "traits", a.GAMES = "games", (n = r || (r = {})).VALORANT = "valorant", n.GENSHIN = "genshin", (l = o || (o = {})).USER_UPSELL = "user_upsell", l.USER_ONBOARDING = "user_onboarding";
+(n = i || (i = {})).ADMIN_UPSELL = "admin_upsell", n.GET_STARTED = "get_started", n.DISCOVERY = "discovery", n.PLAYSTYLE = "playstyle", n.TRAITS = "traits", n.GAMES = "games", (a = r || (r = {})).VALORANT = "valorant", a.GENSHIN = "genshin", (l = o || (o = {})).USER_UPSELL = "user_upsell", l.USER_ONBOARDING = "user_onboarding";
 let E = (0, u.default)((0, d.persist)(e => ({
   mode: "admin_upsell",
   previousMode: "admin_upsell",
@@ -72,7 +72,7 @@ let E = (0, u.default)((0, d.persist)(e => ({
   })
 }));
 
-function _(e) {
+function f(e) {
   let t = E.getState().mode;
   E.setState({
     mode: e,
@@ -80,7 +80,7 @@ function _(e) {
   })
 }
 
-function f() {
+function _() {
   E.setState({
     started: !1,
     mode: "admin_upsell",
@@ -96,10 +96,10 @@ function f() {
 function h(e) {
   var t;
   let s = e.selectedGames,
-    a = null !== (t = e.selectedPlaystyle) && void 0 !== t ? t : void 0;
+    n = null !== (t = e.selectedPlaystyle) && void 0 !== t ? t : void 0;
   return {
     games: s,
-    playstyle: a,
+    playstyle: n,
     traits: e.selectedTraits
   }
 }

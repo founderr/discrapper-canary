@@ -24,7 +24,7 @@ t.default = e => {
   }) : null == f || null == E ? n : (0, s.jsx)("div", {
     className: d.questsCollectibleReward,
     children: (0, s.jsx)(i.default, {
-      avatarSize: u.AvatarSizes.SIZE_80,
+      avatarSize: u.AvatarSizes.SIZE_56,
       user: f,
       guildId: null,
       avatarDecorationOverride: E,

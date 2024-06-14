@@ -4,18 +4,18 @@ s.r(t), s.d(t, {
     return d
   }
 });
-var a = s("735250");
+var n = s("735250");
 s("470079");
-var n = s("481060"),
+var a = s("481060"),
   l = s("204197"),
   i = s("998502"),
   r = s("689938"),
   o = s("135473");
-let u = i.default.getEnableHardwareAcceleration() ? n.AnimatedAvatar : n.Avatar,
+let u = i.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar,
   d = e => {
     let {
       user: t,
-      avatarSize: s = n.AvatarSizes.SIZE_48
+      avatarSize: s = a.AvatarSizes.SIZE_48
     } = e, {
       avatarSrc: i,
       avatarDecorationSrc: d,
@@ -24,9 +24,9 @@ let u = i.default.getEnableHardwareAcceleration() ? n.AnimatedAvatar : n.Avatar,
       user: t,
       size: s
     });
-    return (0, a.jsx)("div", {
+    return (0, n.jsx)("div", {
       ...c,
-      children: (0, a.jsx)(u, {
+      children: (0, n.jsx)(u, {
         className: o.__invalid_avatar,
         src: i,
         avatarDecoration: d,
@@ -41,15 +41,15 @@ t.default = e => {
   let {
     currentUser: t,
     otherUser: s,
-    children: n
+    children: a
   } = e;
-  return (0, a.jsx)("div", {
+  return (0, n.jsx)("div", {
     className: o.avatarPairContainer,
-    children: (0, a.jsxs)("div", {
+    children: (0, n.jsxs)("div", {
       className: o.avatarPair,
-      children: [(0, a.jsx)(d, {
+      children: [(0, n.jsx)(d, {
         user: t
-      }), n, (0, a.jsx)(d, {
+      }), a, (0, n.jsx)(d, {
         user: s
       })]
     })

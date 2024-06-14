@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return h
   }
 }), s("47120");
-var a, n = s("735250"),
+var n, a = s("735250"),
   l = s("470079"),
   i = s("120356"),
   r = s.n(i),
@@ -14,7 +14,7 @@ var a, n = s("735250"),
   c = s("162168"),
   E = s("314721");
 
-function _(e, t, s) {
+function f(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -22,12 +22,12 @@ function _(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let f = (0, d.cssValueToNumber)(u.default.GRADIENT_PROGRESS_NOTCH_WIDTH),
+let _ = (0, d.cssValueToNumber)(u.default.GRADIENT_PROGRESS_NOTCH_WIDTH),
   h = Object.freeze({
     BLACK: E.black,
     GRAY: E.gray
   });
-class C extends(a = l.Component) {
+class C extends(n = l.Component) {
   componentDidMount() {
     this.computeBars(), window.addEventListener("resize", this.computeBars)
   }
@@ -35,7 +35,7 @@ class C extends(a = l.Component) {
     window.removeEventListener("resize", this.computeBars)
   }
   roundToNearestStep(e) {
-    return Math.round(e / f) * f
+    return Math.round(e / _) * _
   }
   getProgressStyles() {
     let {
@@ -53,10 +53,10 @@ class C extends(a = l.Component) {
       gradientStart: t,
       progress: s
     } = this.props, {
-      barWidth: a
+      barWidth: n
     } = this.state;
     return {
-      width: "".concat(a, "px"),
+      width: "".concat(n, "px"),
       background: s <= 0 ? "none" : "linear-gradient(to right, ".concat(t, ", ").concat(e, ")")
     }
   }
@@ -67,16 +67,16 @@ class C extends(a = l.Component) {
     } = this.props, {
       barWidth: s
     } = this.state;
-    return (0, n.jsx)("div", {
+    return (0, a.jsx)("div", {
       className: E.wrapper,
       ref: this.sizerRef,
-      children: (0, n.jsxs)("div", {
+      children: (0, a.jsxs)("div", {
         className: r()(E.container, e),
         style: this.getGradientStyles(),
-        children: [(0, n.jsx)("div", {
+        children: [(0, a.jsx)("div", {
           className: E.progress,
           style: this.getProgressStyles()
-        }), 0 !== s && (0, n.jsx)(c.default, {
+        }), 0 !== s && (0, a.jsx)(c.default, {
           width: s,
           className: r()(E.notches, t)
         })]
@@ -84,9 +84,9 @@ class C extends(a = l.Component) {
     })
   }
   constructor(...e) {
-    super(...e), _(this, "state", {
+    super(...e), f(this, "state", {
       barWidth: 0
-    }), _(this, "sizerRef", l.createRef()), _(this, "computeBars", () => {
+    }), f(this, "sizerRef", l.createRef()), f(this, "computeBars", () => {
       let {
         current: e
       } = this.sizerRef;
@@ -96,7 +96,7 @@ class C extends(a = l.Component) {
     })
   }
 }
-_(C, "defaultProps", {
+f(C, "defaultProps", {
   gradientStart: o.default.unsafe_rawColors.YELLOW_260.css,
   gradientEnd: o.default.unsafe_rawColors.GREEN_360.css
 }), t.default = C

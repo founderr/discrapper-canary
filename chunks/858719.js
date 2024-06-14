@@ -10,18 +10,18 @@ s.r(t), s.d(t, {
     return o
   }
 });
-var a = s("399606"),
-  n = s("914788"),
+var n = s("399606"),
+  a = s("914788"),
   l = s("292352");
 
 function i(e) {
-  return (0, a.useStateFromStoresArray)([n.default], () => n.default.getActionsForDisplayType(e))
+  return (0, n.useStateFromStoresArray)([a.default], () => a.default.getActionsForDisplayType(e))
 }
 
 function r(e) {
-  return (0, a.useStateFromStores)([n.default], () => n.default.getTotalForDisplayType(e))
+  return (0, n.useStateFromStores)([a.default], () => a.default.getTotalForDisplayType(e))
 }
 
 function o() {
-  return (0, a.useStateFromStores)([n.default], () => Object.values(l.TeenActionDisplayType).some(e => n.default.getTotalForDisplayType(e) > 0))
+  return (0, n.useStateFromStores)([a.default], () => Object.values(l.TeenActionDisplayType).some(e => a.default.getTotalForDisplayType(e) > 0))
 }

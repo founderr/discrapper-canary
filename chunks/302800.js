@@ -4,10 +4,10 @@ s.r(t), s.d(t, {
     return A
   },
   CollectiblesMarketingVariant: function() {
-    return a
+    return n
   },
   ShopCoachtipEditions: function() {
-    return n
+    return a
   },
   getCountdownDisplayOptions: function() {
     return p
@@ -16,20 +16,20 @@ s.r(t), s.d(t, {
     return S
   }
 }), s("627341");
-var a, n, l, i, r = s("278074"),
+var n, a, l, i, r = s("278074"),
   o = s("180650"),
   u = s("704215"),
   d = s("689938"),
   c = s("714953"),
   E = s("160506"),
-  _ = s("263660"),
-  f = s("22344"),
+  f = s("263660"),
+  _ = s("22344"),
   h = s("848359"),
   C = s("782984"),
   m = s("186077"),
   T = s("376477"),
   g = s("224941");
-(l = a || (a = {}))[l.NONE = 0] = "NONE", l[l.TOOLTIP = 1] = "TOOLTIP", l[l.COACHTIP = 2] = "COACHTIP", (i = n || (n = {})).NONE = "NONE", i.SHY = "SHY", i.LOFI_VIBES = "LOFI_VIBES", i.GALAXY = "GALAXY", i.RETRO_AND_PIRATES = "RETRO_AND_PIRATES", i.ARCADE = "ARCADE";
+(l = n || (n = {}))[l.NONE = 0] = "NONE", l[l.TOOLTIP = 1] = "TOOLTIP", l[l.COACHTIP = 2] = "COACHTIP", (i = a || (a = {})).NONE = "NONE", i.SHY = "SHY", i.LOFI_VIBES = "LOFI_VIBES", i.GALAXY = "GALAXY", i.RETRO_AND_PIRATES = "RETRO_AND_PIRATES", i.ARCADE = "ARCADE";
 let A = {
     [u.DismissibleContent.COLLECTIBLES_SHOP_SHY_COACHTIP]: {
       type: 2,
@@ -39,7 +39,7 @@ let A = {
       assetIds: ["a_98555e40cc6802bd3a4fed906af1d992", "a_09de63526a45be1ddac70e84718ee04a", "a_904b1989077c91fca1168d39bfcaa0a4"],
       entrypointDecorationAssets: {
         srcDark: E,
-        srcLight: _
+        srcLight: f
       },
       entryPointClassName: "shyButton"
     },
@@ -81,7 +81,7 @@ let A = {
   })).otherwise(() => null),
   N = {
     SHY: {
-      confettiAssetSrc: f,
+      confettiAssetSrc: _,
       style: {
         position: "absolute",
         width: "600px"

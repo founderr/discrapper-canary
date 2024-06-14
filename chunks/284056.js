@@ -1,11 +1,11 @@
 "use strict";
 s.r(t), s.d(t, {
   NotchBackground: function() {
-    return f.NotchBackground
+    return _.NotchBackground
   }
 }), s("47120");
-var a = s("735250"),
-  n = s("470079"),
+var n = s("735250"),
+  a = s("470079"),
   l = s("392711"),
   i = s.n(l),
   r = s("442837"),
@@ -14,8 +14,8 @@ var a = s("735250"),
   d = s("481060"),
   c = s("846027"),
   E = s("131951"),
-  _ = s("19780"),
-  f = s("233304"),
+  f = s("19780"),
+  _ = s("233304"),
   h = s("626135"),
   C = s("981631"),
   m = s("689938"),
@@ -29,7 +29,7 @@ function g(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class A extends n.PureComponent {
+class A extends a.PureComponent {
   componentDidMount() {
     this._initTimeout.start(1e3, this.setupVoiceActivity)
   }
@@ -41,8 +41,8 @@ class A extends n.PureComponent {
       isVoiceConnected: e,
       inputDeviceName: t,
       inputVolume: s,
-      outputDeviceName: a,
-      outputVolume: n,
+      outputDeviceName: n,
+      outputVolume: a,
       inputMode: l,
       vadAutoThreshold: i,
       vadThreshold: r,
@@ -56,8 +56,8 @@ class A extends n.PureComponent {
     }), h.default.track(C.AnalyticEvents.MIC_TESTING_STARTED, {
       input_device_name: t,
       input_device_volume: s,
-      output_device_name: a,
-      output_device_volume: n,
+      output_device_name: n,
+      output_device_volume: a,
       input_mode: l,
       input_sensitivity_is_automatic: i,
       input_sensitivity_threshold: Math.round(r),
@@ -70,9 +70,9 @@ class A extends n.PureComponent {
       isMicTesting: t
     } = this.state, {
       isVoiceConnected: s,
-      isDeafened: a
+      isDeafened: n
     } = this.props;
-    if (!!t) s && a && e && c.default.toggleSelfDeaf(), c.default.setLoopback(!1), this.setState({
+    if (!!t) s && n && e && c.default.toggleSelfDeaf(), c.default.setLoopback(!1), this.setState({
       isMicTesting: !1,
       didDeafenUser: !1
     }), null != this._micTestStartTime && h.default.track(C.AnalyticEvents.MIC_TESTING_STOPPED, {
@@ -85,12 +85,12 @@ class A extends n.PureComponent {
       captionNoVoice: t
     } = this.props, {
       isMicTesting: s,
-      isDetectingInput: n
+      isDetectingInput: a
     } = this.state;
-    return (0, a.jsx)(d.FormText, {
+    return (0, n.jsx)(d.FormText, {
       className: T.micTestCaption,
       type: d.FormText.Types.DESCRIPTION,
-      children: s ? n ? e : t : null
+      children: s ? a ? e : t : null
     })
   }
   render() {
@@ -98,7 +98,7 @@ class A extends n.PureComponent {
       isVoiceConnected: e,
       title: t,
       description: s,
-      notchBackground: n,
+      notchBackground: a,
       buttonTest: l,
       buttonStop: i,
       buttonClassName: r,
@@ -107,27 +107,27 @@ class A extends n.PureComponent {
     } = this.props, {
       isMicTesting: c,
       volume: E
-    } = this.state, _ = e && !c ? m.default.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
-    return c && e && !u && this._micTestStop(), (0, a.jsxs)("div", {
+    } = this.state, f = e && !c ? m.default.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
+    return c && e && !u && this._micTestStop(), (0, n.jsxs)("div", {
       className: T.container,
-      children: [(0, a.jsx)(d.FormTitle, {
+      children: [(0, n.jsx)(d.FormTitle, {
         tag: d.FormTitleTags.H5,
         className: T.title,
         children: t
-      }), null != s && (0, a.jsx)(d.FormText, {
+      }), null != s && (0, n.jsx)(d.FormText, {
         type: d.FormText.Types.DESCRIPTION,
         className: T.description,
         children: s
-      }), (0, a.jsxs)("div", {
+      }), (0, n.jsxs)("div", {
         className: T.micTest,
-        children: [(0, a.jsx)(d.Tooltip, {
-          text: _,
+        children: [(0, n.jsx)(d.Tooltip, {
+          text: f,
           children: e => {
             let {
               onMouseEnter: t,
               onMouseLeave: s
             } = e;
-            return (0, a.jsx)(d.Button, {
+            return (0, n.jsx)(d.Button, {
               grow: !1,
               onClick: this.handleToggleMicTest,
               onMouseEnter: t,
@@ -138,9 +138,9 @@ class A extends n.PureComponent {
               children: c ? i : l
             })
           }
-        }), (0, a.jsx)(f.default, {
+        }), (0, n.jsx)(_.default, {
           progress: c ? E + 100 : 0,
-          notchBackground: n
+          notchBackground: a
         }), this.renderCaption()]
       })]
     })
@@ -176,7 +176,7 @@ class A extends n.PureComponent {
     })
   }
 }
-t.default = r.default.connectStores([_.default, E.default], () => {
+t.default = r.default.connectStores([f.default, E.default], () => {
   let e = E.default.getInputDeviceId(),
     t = E.default.getInputDevices(),
     s = i().find(t, t => {
@@ -185,17 +185,17 @@ t.default = r.default.connectStores([_.default, E.default], () => {
       } = t;
       return s === e
     }),
-    a = E.default.getOutputDeviceId(),
-    n = E.default.getOutputDevices(),
-    l = i().find(n, e => {
+    n = E.default.getOutputDeviceId(),
+    a = E.default.getOutputDevices(),
+    l = i().find(a, e => {
       let {
         id: t
       } = e;
-      return t === a
+      return t === n
     }),
     r = E.default.getModeOptions();
   return {
-    isVoiceConnected: _.default.isConnected(),
+    isVoiceConnected: f.default.isConnected(),
     inputVolume: E.default.getInputVolume(),
     outputVolume: E.default.getOutputVolume(),
     inputMode: E.default.getMode(),

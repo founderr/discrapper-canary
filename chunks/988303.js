@@ -4,11 +4,11 @@ s.r(t), s.d(t, {
     return i
   },
   QuestBarExperimentVariants: function() {
-    return n
+    return a
   }
 });
-var a, n, l = s("818083");
-(a = n || (n = {}))[a.V1 = 0] = "V1", a[a.V2 = 1] = "V2";
+var n, a, l = s("818083");
+(n = a || (a = {}))[n.V1 = 0] = "V1", n[n.V2 = 1] = "V2";
 let i = (0, l.createExperiment)({
   id: "2024-05_quest_bar",
   kind: "user",

@@ -1,16 +1,16 @@
 "use strict";
-u.r(e), u.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return d
+    return s
   }
 });
-var n = u("528734"),
-  r = u("221508"),
-  a = u("486218"),
-  f = u("951516");
+var r = n("528734"),
+  i = n("221508"),
+  a = n("486218"),
+  o = n("951516");
 
-function d(t) {
-  (0, f.default)(1, arguments);
-  var e = (0, n.default)(t);
-  return (0, r.default)(e).getTime() === (0, a.default)(e).getTime()
+function s(e) {
+  (0, o.default)(1, arguments);
+  var t = (0, r.default)(e);
+  return (0, i.default)(t).getTime() === (0, a.default)(t).getTime()
 }

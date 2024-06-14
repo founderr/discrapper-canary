@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s("47120");
-var a = s("392711"),
-  n = s.n(a),
+var n = s("392711"),
+  a = s.n(n),
   l = s("710845"),
   i = s("581883"),
   r = s("314897"),
@@ -21,11 +21,11 @@ t.default = new class e {
   async getAll(e) {
     let t = performance.now(),
       s = await o.default.userSettings(e).getMany(),
-      a = performance.now();
-    c.verbose("loaded in ".concat(a - t, "ms (settings: ").concat(s.length, ")"));
-    let n = {};
-    for (let e of s) n[e.id] = e.value;
-    return n
+      n = performance.now();
+    c.verbose("loaded in ".concat(n - t, "ms (settings: ").concat(s.length, ")"));
+    let a = {};
+    for (let e of s) a[e.id] = e.value;
+    return a
   }
   resetInMemoryState() {}
   constructor() {
@@ -39,11 +39,11 @@ t.default = new class e {
         t = u.default.database(e);
       null == t || t.transaction(e => {
         var t, s;
-        let a = i.default.computeState(),
-          n = o.default.userSettingsTransaction(e);
-        for (let e in a) n.put({
+        let n = i.default.computeState(),
+          a = o.default.userSettingsTransaction(e);
+        for (let e in n) a.put({
           id: Number(e),
-          value: a[e]
+          value: n[e]
         });
         let l = null !== (s = null === (t = i.default.settings.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== s ? s : -1;
         o.default.nonGuildVersionsTransaction(e).put({
@@ -51,6 +51,6 @@ t.default = new class e {
           version: l
         })
       }, "handleUserSettingsProtoChange")
-    }), d(this, "throttledOnChange", n().debounce(this.handleUserSettingsProtoChange, 0))
+    }), d(this, "throttledOnChange", a().debounce(this.handleUserSettingsProtoChange, 0))
   }
 }

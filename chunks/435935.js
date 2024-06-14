@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return T
   }
 });
-var a, n, l = s("735250"),
+var n, a, l = s("735250"),
   i = s("470079"),
   r = s("557533"),
   o = s.n(r),
@@ -24,14 +24,14 @@ let E = {
     HORIZONTAL: u.flexHorizontal,
     HORIZONTAL_REVERSE: u.flexHorizontalReverse
   },
-  _ = {
+  f = {
     START: u.flexJustifyStart,
     END: u.flexJustifyEnd,
     CENTER: u.flexJustifyCenter,
     BETWEEN: u.flexJustifyBetween,
     AROUND: u.flexJustifyAround
   },
-  f = {
+  _ = {
     NO_WRAP: u.flexNowrap,
     WRAP: u.flexWrap,
     WRAP_REVERSE: u.flexWrapReverse
@@ -46,22 +46,22 @@ let E = {
     SMALL: d.flexGutterSmall,
     LARGE: d.flexGutterLarge
   };
-class m extends(a = i.PureComponent) {
+class m extends(n = i.PureComponent) {
   render() {
     let {
       children: e,
       className: t,
       shrink: s,
-      grow: a,
-      basis: n,
+      grow: n,
+      basis: a,
       style: r,
       wrap: u,
       ...c
     } = this.props, E = {
       style: {
-        flexGrow: a,
+        flexGrow: n,
         flexShrink: s,
-        flexBasis: n,
+        flexBasis: a,
         ...r
       },
       className: t === d.flexChild ? t : o()(d.flexChild, t),
@@ -85,21 +85,21 @@ c(m, "defaultProps", {
   style: {},
   wrap: !1
 });
-class T extends(n = i.PureComponent) {
+class T extends(a = i.PureComponent) {
   render() {
     let {
       children: e,
       className: t,
       direction: s,
-      justify: a,
-      align: n,
+      justify: n,
+      align: a,
       wrap: i,
       shrink: r,
       grow: u,
       basis: c,
       style: E,
-      gutter: _,
-      ...f
+      gutter: f,
+      ..._
     } = this.props, h = {
       flexShrink: r,
       flexGrow: u,
@@ -108,17 +108,17 @@ class T extends(n = i.PureComponent) {
     };
     return (0, l.jsx)("div", {
       style: h,
-      className: o()(d.flex, s, a, n, i, _, t),
-      ...f,
+      className: o()(d.flex, s, n, a, i, f, t),
+      ..._,
       children: e
     })
   }
 }
-c(T, "Child", m), c(T, "Direction", E), c(T, "Align", h), c(T, "Justify", _), c(T, "Wrap", f), c(T, "Gutter", C), c(T, "defaultProps", {
+c(T, "Child", m), c(T, "Direction", E), c(T, "Align", h), c(T, "Justify", f), c(T, "Wrap", _), c(T, "Gutter", C), c(T, "defaultProps", {
   direction: E.HORIZONTAL,
-  justify: _.START,
+  justify: f.START,
   align: h.STRETCH,
-  wrap: f.WRAP,
+  wrap: _.WRAP,
   shrink: 1,
   grow: 1,
   basis: "auto",
