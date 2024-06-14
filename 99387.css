@@ -63691,8 +63691,8 @@ input[type=checkbox]:focus-visible+.label__8e100 {
 
 .message__702f7 {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -71273,9 +71273,6 @@ html .invoiceCancelRow_aa7946 {
     height: 100%;
     left: 0;
     padding: 8px 12px;
-    align-items: center;
-    justify-items: center;
-    place-items: center;
     position: absolute;
     width: 100%;
     z-index: 2
@@ -71288,7 +71285,7 @@ html .invoiceCancelRow_aa7946 {
 }
 
 .contentCollapsedAccepted__3a865 {
-    padding: 0 12px
+    padding: 12px
 }
 
 .contentCollapsedExpanded__6173a {

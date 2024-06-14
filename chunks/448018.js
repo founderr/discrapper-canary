@@ -1,11 +1,11 @@
 "use strict";
 s.r(t), s.d(t, {
   getQuestBarVariantConfig: function() {
-    return c
+    return E
   }
 });
-var a = s("497505"),
-  n = s("988303"),
+var n = s("497505"),
+  a = s("988303"),
   l = s("909389"),
   i = s("941348"),
   r = s("658590"),
@@ -23,7 +23,8 @@ let u = {
     shouldExpandOnQuestComplete: e => !0,
     getVerticalPadding: () => 8
   },
-  d = {
+  d = o.QUEST_BAR_V2_MARGIN,
+  c = {
     component: i.default,
     getCollapsedHeight: e => {
       var t;
@@ -34,24 +35,24 @@ let u = {
     getPreEnrollmentBackgroundColor: e => "var(--home-background)",
     canCollapseOnBlur: e => !0,
     shouldExpandOnQuestComplete: e => !1,
-    getVerticalPadding: () => 12
+    getVerticalPadding: () => d
   },
-  c = (e, t, s) => {
+  E = (e, t, s) => {
     var l;
     let i = (null === (l = e.userStatus) || void 0 === l ? void 0 : l.enrolledAt) != null,
-      o = !i && t === n.QuestBarExperimentVariants.V2 || i && s === n.QuestBarExperimentVariants.V2 || (0, r.shouldForceQuestBarV2)(e),
-      c = o ? d : u;
+      o = !i && t === a.QuestBarExperimentVariants.V2 || i && s === a.QuestBarExperimentVariants.V2 || (0, r.shouldForceQuestBarV2)(e),
+      d = o ? c : u;
     return {
-      component: c.component,
-      collapsedHeight: c.getCollapsedHeight(e),
-      preEnrollmentExpandedHeight: c.getPreEnrollmentExpandedHeight(e),
-      postEnrollmentBackgroundImage: c.getPostEnrollmentBackgroundImage(e),
-      preEnrollmentBackgroundColor: c.getPreEnrollmentBackgroundColor(e),
-      canCollapseOnBlur: c.canCollapseOnBlur(e),
-      shouldExpandOnQuestComplete: c.shouldExpandOnQuestComplete(e),
-      paddingVertical: c.getVerticalPadding(),
+      component: d.component,
+      collapsedHeight: d.getCollapsedHeight(e),
+      preEnrollmentExpandedHeight: d.getPreEnrollmentExpandedHeight(e),
+      postEnrollmentBackgroundImage: d.getPostEnrollmentBackgroundImage(e),
+      preEnrollmentBackgroundColor: d.getPreEnrollmentBackgroundColor(e),
+      canCollapseOnBlur: d.canCollapseOnBlur(e),
+      shouldExpandOnQuestComplete: d.shouldExpandOnQuestComplete(e),
+      paddingVertical: d.getVerticalPadding(),
       trackingCtx: {
-        content: o ? a.QuestContent.QUEST_BAR_V2 : a.QuestContent.QUEST_BAR
+        content: o ? n.QuestContent.QUEST_BAR_V2 : n.QuestContent.QUEST_BAR
       }
     }
   }

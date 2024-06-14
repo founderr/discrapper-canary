@@ -1,11 +1,15 @@
 "use strict";
 s.r(t), s.d(t, {
   QUEST_BAR_V2_BACKGROUND_GRADIENT_LEFT: function() {
-    return a
+    return n
   },
   QUEST_BAR_V2_BACKGROUND_GRADIENT_RIGHT: function() {
-    return n
+    return a
+  },
+  QUEST_BAR_V2_MARGIN: function() {
+    return l
   }
 });
-let a = "#00000000",
-  n = "#CDD8FF1A"
+let n = "#00000000",
+  a = "#CDD8FF1A",
+  l = 12
