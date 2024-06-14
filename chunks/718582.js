@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return es
   },
   getEventLocationData: function() {
-    return eo
+    return eu
   },
   getJoinHandler: function() {
-    return ea
+    return el
   },
   getUserNameString: function() {
     return ei
@@ -22,13 +22,13 @@ n.r(t), n.d(t, {
     return er
   },
   useChannelStatus: function() {
-    return eu
+    return e_
   },
   useGetEventCardUsers: function() {
     return en
   },
   useGetOrFetchEmbeddedActivityApplication: function() {
-    return el
+    return ed
   },
   useGuildPopoutCards: function() {
     return J
@@ -77,8 +77,8 @@ var i, r, s = n("470079"),
   w = n("594174"),
   k = n("979651"),
   B = n("938475"),
-  x = n("393112"),
-  V = n("626135"),
+  V = n("393112"),
+  x = n("626135"),
   F = n("823379"),
   H = n("5192"),
   Y = n("51144"),
@@ -420,7 +420,7 @@ function er(e, t, n, i) {
   a.card_affinity_users_count = Math.min(l.length, 6), a.card_total_users_count = l.length, a.card_affinity_user_ids = l.slice(0, 6).map(e => e.id), a.card_max_affinity_user_id = l.length > 0 ? l[0].id : "0", a.card_user_affinity_scores = l.slice(0, 6).map(e => {
     var t, n;
     return null !== (n = null === (t = G.default.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
-  }), V.default.track(K.AnalyticEvents.GUILD_TOOLTIP_CARD_CLICKED, {
+  }), x.default.track(K.AnalyticEvents.GUILD_TOOLTIP_CARD_CLICKED, {
     ...a,
     ...(0, c.collectGuildAnalyticsMetadata)(t)
   })
@@ -456,8 +456,19 @@ function es(e, t, n) {
       return null
   }
 }
+let ea = async (e, t) => {
+  let n = await (0, O.connectOrLurkStage)(e, t);
+  (0, p.navigateToStage)(n, null, !1)
+}, eo = (e, t) => {
+  T.default.handleVoiceConnect({
+    channel: t,
+    connected: k.default.isInChannel(t.id),
+    needSubscriptionToAccess: (0, S.getChannelRoleSubscriptionStatus)(t.id).needSubscriptionToAccess,
+    locked: !1
+  }), (0, N.transitionToGuild)(e, t.id)
+};
 
-function ea(e, t) {
+function el(e, t) {
   let {
     category: n
   } = e;
@@ -468,24 +479,14 @@ function ea(e, t) {
         let {
           channelId: n
         } = e, i = v.default.getChannel(n);
-        null != i && i.type === K.ChannelTypes.GUILD_VOICE && P.default.can(K.Permissions.CONNECT, i) && (T.default.handleVoiceConnect({
-          channel: i,
-          connected: k.default.isInChannel(n),
-          needSubscriptionToAccess: (0, S.getChannelRoleSubscriptionStatus)(n).needSubscriptionToAccess,
-          locked: !1
-        }), (0, N.transitionToGuild)(t, n))
+        null != i && P.default.can(K.Permissions.CONNECT, i) && (i.isGuildStageVoice() ? ea(t, n) : i.isGuildVoice() && eo(t, i))
       };
     case W.CardCategory.EMBEDDED_ACTIVITY:
       return () => {
         let {
           channelId: n
         } = e.embeddedActivities[0], i = v.default.getChannel(n);
-        null != i && i.type === K.ChannelTypes.GUILD_VOICE && P.default.can(K.Permissions.CONNECT, i) && (T.default.handleVoiceConnect({
-          channel: i,
-          connected: k.default.isInChannel(n),
-          needSubscriptionToAccess: (0, S.getChannelRoleSubscriptionStatus)(n).needSubscriptionToAccess,
-          locked: !1
-        }), (0, N.transitionToGuild)(t, n))
+        null != i && i.type === K.ChannelTypes.GUILD_VOICE && P.default.can(K.Permissions.CONNECT, i) && eo(t, i)
       };
     case W.CardCategory.EVENT:
       return () => {
@@ -502,23 +503,14 @@ function ea(e, t) {
           });
           return
         }
-        let a = async () => {
-          let e = await (0, O.connectOrLurkStage)(i, n);
-          (0, p.navigateToStage)(e, null, !1)
-        };
-        r === z.GuildScheduledEventEntityTypes.STAGE_INSTANCE ? a() : r === z.GuildScheduledEventEntityTypes.VOICE && (T.default.handleVoiceConnect({
-          channel: s,
-          connected: k.default.isInChannel(n),
-          needSubscriptionToAccess: (0, S.getChannelRoleSubscriptionStatus)(n).needSubscriptionToAccess,
-          locked: !1
-        }), (0, N.transitionToGuild)(i, n))
+        r === z.GuildScheduledEventEntityTypes.STAGE_INSTANCE ? ea(i, n) : r === z.GuildScheduledEventEntityTypes.VOICE && eo(i, s)
       };
     default:
       return null
   }
 }
 
-function eo(e) {
+function eu(e) {
   let t, n;
   let i = (0, m.getLocationFromEvent)(e),
     r = null == i ? void 0 : i.replace(/[<#>]/g, ""),
@@ -527,7 +519,7 @@ function eo(e) {
   if (null != s && a) t = (0, f.getSimpleChannelIconComponent)(s.type), n = s.name;
   else {
     if (null == i) return null;
-    t = x.default, n = i
+    t = V.default, n = i
   }
   return {
     IconComponent: t,
@@ -535,12 +527,12 @@ function eo(e) {
   }
 }
 
-function el(e) {
+function ed(e) {
   let t = e.category === W.CardCategory.EMBEDDED_ACTIVITY ? e.embeddedActivities[0].applicationId : null;
   return (0, E.useGetOrFetchApplication)(t)
 }
 
-function eu(e) {
+function e_(e) {
   let t = (0, l.useStateFromStores)([I.default], () => I.default.getChannelStatus(e)),
     n = null != t && t.trim().length > 0;
   return {
