@@ -32,11 +32,12 @@ function v(e) {
     channel: n
   } = e, {
     analyticsLocations: v
-  } = (0, u.default)(o.default.PROFILE_PANEL), x = (0, f.default)(t.id), N = (0, r.default)(), M = l.useRef(null), y = (0, i.default)(M), R = () => {
+  } = (0, u.default)(o.default.PROFILE_PANEL), x = (0, f.default)(t.id), N = (0, r.default)(), M = l.useRef(null), y = (0, i.default)(M), R = e => {
     (0, C.openUserProfileModal)({
       sourceAnalyticsLocations: v,
       userId: t.id,
-      channelId: n.id
+      channelId: n.id,
+      ...e
     })
   };
   return (0, a.jsx)(u.AnalyticsLocationProvider, {
