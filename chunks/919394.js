@@ -1,30 +1,33 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   generateGamingContentImage: function() {
-    return C
+    return M
   },
   generateGamingContentImageFromEntry: function() {
-    return A
+    return R
   }
-}), n("653041");
-var a = n("512722"),
-  r = n.n(a),
-  l = n("705512"),
-  i = n("812206"),
-  o = n("55000"),
-  s = n("220082"),
-  u = n("693824"),
-  d = n("690725"),
-  c = n("706454"),
-  g = n("594174"),
-  f = n("70956"),
-  m = n("561308"),
-  E = n("206295"),
-  T = n("737583"),
-  _ = n("438226"),
-  h = n("169040"),
-  v = n("689938");
-let I = (e, t) => ({
+}), a("653041");
+var n = a("512722"),
+  r = a.n(n),
+  l = a("913527"),
+  i = a.n(l),
+  o = a("705512"),
+  s = a("812206"),
+  u = a("55000"),
+  d = a("220082"),
+  c = a("693824"),
+  g = a("690725"),
+  f = a("706454"),
+  E = a("594174"),
+  m = a("70956"),
+  T = a("709054"),
+  _ = a("561308"),
+  h = a("206295"),
+  v = a("737583"),
+  I = a("438226"),
+  N = a("169040"),
+  x = a("689938");
+let C = (e, t) => ({
     AvatarImage1: e[0],
     ...null != e[1] && {
       AvatarImage2: e[1]
@@ -36,176 +39,180 @@ let I = (e, t) => ({
       ApplicationImage: t
     }
   }),
-  N = (e, t) => {
-    let n = [{
-      iconPath: h.GAME_CONTROLLER_ICON_PATH,
-      text: t
-    }];
-    if ((0, m.isEntryNew)(e) && n.push({
-        iconPath: h.NEW_GAME_ICON_PATH,
-        text: v.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
-      }), (0, m.isValidStreak)(e)) {
-      let t = (0, m.getStreakCount)(e);
-      n.push({
-        iconPath: h.FLASH_ICON_PATH,
-        text: v.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
+  A = (e, t) => {
+    let a = [{
+        iconPath: N.GAME_CONTROLLER_ICON_PATH,
+        text: t
+      }],
+      n = T.default.extractTimestamp(e.extra.application_id);
+    if (i()().diff(i()(n), "days") > 7 && a.push({
+        iconPath: N.NEW_RELEASE_ICON_PATH,
+        text: x.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
+      }), (0, _.isEntryNew)(e) && a.push({
+        iconPath: N.NEW_GAME_ICON_PATH,
+        text: x.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
+      }), (0, _.isValidStreak)(e)) {
+      let t = (0, _.getStreakCount)(e);
+      a.push({
+        iconPath: N.FLASH_ICON_PATH,
+        text: x.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
           days: t
         })
       })
-    }
-    let a = (0, m.getResurrectedEntryLastPlayTime)(e);
-    if (null != a && n.push({
-        iconPath: h.RESURRECTED_ICON_PATH,
-        text: (0, m.getFullResurrectedBadgeText)(a)
-      }), (0, m.isEntryMarathon)(e) && n.push({
-        iconPath: h.TIMER_ICON_PATH,
-        text: (0, m.isEntryActive)(e) ? (0, m.getMarathonName)(e) : (0, m.getFullMarathonDescription)(e)
-      }), (0, m.isEntryTopGame)(e)) {
-      let t = (0, m.getEntryDuration)(e);
+    }(0, _.getTrendingType)(e) === o.TrendingType.GLOBAL && a.push({
+      iconPath: N.TRENDING_ICON_PATH,
+      text: x.default.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
+    });
+    let r = (0, _.getResurrectedEntryLastPlayTime)(e);
+    if (null != r && a.push({
+        iconPath: N.RESURRECTED_ICON_PATH,
+        text: (0, _.getFullResurrectedBadgeText)(r)
+      }), (0, _.isEntryMarathon)(e) && a.push({
+        iconPath: N.TIMER_ICON_PATH,
+        text: (0, _.isEntryActive)(e) ? (0, _.getMarathonName)(e) : (0, _.getFullMarathonDescription)(e)
+      }), (0, _.isEntryTopGame)(e)) {
+      let t = (0, _.getEntryDuration)(e);
       if (null != t) {
-        let e = v.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({
-          hours: Math.round(t / f.default.Seconds.HOUR)
+        let e = x.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({
+          hours: Math.round(t / m.default.Seconds.HOUR)
         });
         return [{
-          iconPath: h.TROPHY_ICON_PATH,
-          text: "".concat(v.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, " — ").concat(e)
+          iconPath: N.TROPHY_ICON_PATH,
+          text: "".concat(x.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, " — ").concat(e)
         }]
       }
     }
-    return (0, m.getTrendingType)(e) === l.TrendingType.GLOBAL && n.push({
-      iconPath: h.TRENDING_ICON_PATH,
-      text: v.default.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
-    }), n
+    return a
   },
-  x = (e, t) => {
+  p = (e, t) => {
     let {
-      timestamp: n,
-      colors: a,
+      timestamp: a,
+      colors: n,
       description: r,
       entry: l,
       numAvatars: i
-    } = t, s = a.map((e, t) => ({
+    } = t, o = n.map((e, t) => ({
       color: e,
       stop: t
     }));
     e.setSize({
-      w: h.imageWidth,
-      h: h.imageHeight
-    }, 4), e.drawRoundedGradientRect(s, {
+      w: N.imageWidth,
+      h: N.imageHeight
+    }, 4), e.drawRoundedGradientRect(o, {
       x: 0,
-      y: h.imageHeight
+      y: N.imageHeight
     }, {
-      x: h.imageWidth,
+      x: N.imageWidth,
       y: 0
     }, {
       x: 0,
       y: 0,
-      h: h.imageHeight,
-      w: h.imageWidth
+      h: N.imageHeight,
+      w: N.imageWidth
     }, 8), e.setColor("rgba(108, 111, 124, 0.24)"), e.drawRoundedRect({
-      x: h.imageWidth - h.imagePadding - h.betaTagWidth,
-      y: h.imagePadding,
-      w: h.betaTagWidth,
-      h: h.betaTagHeight
+      x: N.imageWidth - N.imagePadding - N.betaTagWidth,
+      y: N.imagePadding,
+      w: N.betaTagWidth,
+      h: N.betaTagHeight
     }, 4, !0), e.setColor("rgba(255, 255, 255, 0.5)");
     e.setFont({
       size: 12,
       family: ["gg sans", "sans-serif"],
       weight: 500,
-      truncate: u.TextTruncationMethod.None
-    }), e.drawText(v.default.Messages.BETA, {
-      x: h.imageWidth - h.imagePadding - 29,
-      y: h.imagePadding + 12 + 2
+      truncate: c.TextTruncationMethod.None
+    }), e.drawText(x.default.Messages.BETA, {
+      x: N.imageWidth - N.imagePadding - 29,
+      y: N.imagePadding + 12 + 2
     }, !0), e.setColor("white"), e.drawRoundedImage("ApplicationImage", {
-      x: h.imagePadding,
-      y: h.imagePadding
+      x: N.imagePadding,
+      y: N.imagePadding
     }, {
-      w: h.applicationImageSize,
-      h: h.applicationImageSize
-    }, 8) === u.DrawResultStatus.Failure && e.drawPath(o.ACTIVITY_IMAGE_FALLBACK_PATH, {
-      x: h.imagePadding,
-      y: h.imagePadding
+      w: N.applicationImageSize,
+      h: N.applicationImageSize
+    }, 8) === c.DrawResultStatus.Failure && e.drawPath(u.ACTIVITY_IMAGE_FALLBACK_PATH, {
+      x: N.imagePadding,
+      y: N.imagePadding
     }, !0, 2 + 2 / 3);
-    (0, T.drawAvatars)({
+    (0, v.drawAvatars)({
       canvas: e,
       avatarSrcs: ["AvatarImage1", "AvatarImage2", "AvatarImage3"].slice(0, i),
       position: {
-        x: h.descriptionIndent,
-        y: h.imagePadding
+        x: N.descriptionIndent,
+        y: N.imagePadding
       },
-      avatarImageSize: h.avatarImageSize
+      avatarImageSize: N.avatarImageSize
     }), e.setColor("white"), e.setFont({
       size: 16,
-      truncate: u.TextTruncationMethod.Wrap
+      truncate: c.TextTruncationMethod.Wrap
     }), e.drawText(r, {
-      x: h.descriptionIndent,
+      x: N.descriptionIndent,
       y: 64,
       h: 32,
-      w: h.descriptionMaxWidth
+      w: N.descriptionMaxWidth
     }, !0);
-    let d = N(l, n);
-    (0, T.drawBadges)({
+    let s = A(l, a);
+    (0, v.drawBadges)({
       canvas: e,
-      badges: d,
-      startPosition: h.descriptionIndent,
-      maxWidth: h.descriptionMaxWidth
+      badges: s,
+      startPosition: N.descriptionIndent,
+      maxWidth: N.descriptionMaxWidth
     })
   },
-  C = async e => {
+  M = async e => {
     let {
       applicationImageSrc: t,
-      entry: n,
-      avatarSrcs: a,
+      entry: a,
+      avatarSrcs: n,
       description: r,
       timestamp: l,
       colors: i,
       channelId: o
-    } = e, s = n.extra.game_name, c = I(a, t);
-    return await (0, d.generateImageFromCanvas)({
-      assetsToLoad: c,
-      drawImage: e => x(e, {
+    } = e, s = a.extra.game_name, u = C(n, t);
+    return await (0, g.generateImageFromCanvas)({
+      assetsToLoad: u,
+      drawImage: e => p(e, {
         timestamp: l,
         colors: i,
         description: r,
-        entry: n,
-        numAvatars: a.length
+        entry: a,
+        numAvatars: n.length
       }),
       exportConfigs: {
-        format: u.DiscordCanvasExporterOutputFormats.CloudUpload,
+        format: c.DiscordCanvasExporterOutputFormats.CloudUpload,
         quality: 1,
         fileName: "user-reacting-to-".concat(s, ".png").toLowerCase(),
         fileType: "png",
         channelId: o
       }
     })
-  }, A = async (e, t) => {
-    let n = e.extra.game_name,
-      a = i.default.getApplication(e.extra.application_id),
-      l = null == a ? void 0 : a.getIconURL(128),
-      o = g.default.getUser(e.author_id);
-    r()(null != o, "Author must not be null"), await (0, s.maybeFetchColors)(null != l ? l : "");
-    let f = [null == o ? void 0 : o.getAvatarURL(t.guild_id, 128)],
-      T = I(f, l),
-      h = c.default.locale,
-      v = (0, m.formatEntryTimestamp)(e, h),
+  }, R = async (e, t) => {
+    let a = e.extra.game_name,
+      n = s.default.getApplication(e.extra.application_id),
+      l = null == n ? void 0 : n.getIconURL(128),
+      i = E.default.getUser(e.author_id);
+    r()(null != i, "Author must not be null"), await (0, d.maybeFetchColors)(null != l ? l : "");
+    let o = [null == i ? void 0 : i.getAvatarURL(t.guild_id, 128)],
+      u = C(o, l),
+      m = f.default.locale,
+      T = (0, _.formatEntryTimestamp)(e, m),
       {
-        primaryColor: N,
-        secondaryColor: C
-      } = (0, E.getHeroColors)(null != l ? l : ""),
-      A = (0, _.formatCanvasDescription)(e, t, o);
-    return await (0, d.generateImageFromCanvas)({
-      assetsToLoad: T,
-      drawImage: t => x(t, {
-        timestamp: v,
-        colors: [N, C],
-        description: A,
+        primaryColor: v,
+        secondaryColor: N
+      } = (0, h.getHeroColors)(null != l ? l : ""),
+      x = (0, I.formatCanvasDescription)(e, t, i);
+    return await (0, g.generateImageFromCanvas)({
+      assetsToLoad: u,
+      drawImage: t => p(t, {
+        timestamp: T,
+        colors: [v, N],
+        description: x,
         entry: e,
-        numAvatars: f.length
+        numAvatars: o.length
       }),
       exportConfigs: {
-        format: u.DiscordCanvasExporterOutputFormats.CloudUpload,
+        format: c.DiscordCanvasExporterOutputFormats.CloudUpload,
         quality: 1,
-        fileName: "user-reacting-to-".concat(n, ".png").toLowerCase(),
+        fileName: "user-reacting-to-".concat(a, ".png").toLowerCase(),
         fileType: "png",
         channelId: t.id
       }
