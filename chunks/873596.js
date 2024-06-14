@@ -62,7 +62,7 @@ function g(e) {
     isOverlay: n,
     lobbyId: a,
     closePopout: s
-  } = e, i = (0, r.useIsSecureFramesUIEnabled)(t) ? h.default.Messages.E2EE_RTC_PANEL_CONNECTION : h.default.Messages.SECURE_CONNECTION;
+  } = e, i = (0, r.useIsSecureFramesUIEnabled)(t) ? h.default.Messages.E2EE_END_TO_END_ENCRYPTION : h.default.Messages.SECURE_CONNECTION;
   return n ? (0, l.jsx)(C, {
     lobbyId: a,
     closePopout: s,

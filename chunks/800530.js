@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return R
   },
   SafetyHubAnalyticsActionSource: function() {
-    return N
+    return A
   },
   SafetyHubAnalyticsActions: function() {
-    return A
+    return N
   },
   SafetyHubLinks: function() {
     return C
@@ -46,7 +46,7 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var i, E, I, S, r, _, s, o, a, A, N, l, c, u, T = n("981631");
+var i, E, I, S, r, _, s, o, a, N, A, l, c, u, T = n("981631");
 
 function L(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -55,13 +55,13 @@ function L(e, t, n) {
     configurable: !0,
     writable: !0
   }) : e[t] = n, e
-}(i = o || (o = {})).SETTINGS = "SETTINGS", i.ACCOUNT_STANDING = "ACCOUNT_STANDING", i.GUILD_SETTINGS = "GUILD_SETTINGS";
+}(i = o || (o = {})).SETTINGS = "SETTINGS", i.ACCOUNT_STANDING = "ACCOUNT_STANDING", i.GUILD_SETTINGS = "GUILD_SETTINGS", i.ENCRYPTION = "ENCRYPTION";
 class C {}
 L(C, "TOS_LINK", "https://discord.com/terms"), L(C, "COMMUNITY_GUIDELINES", "https://discord.com/guidelines"), L(C, "APPEALS_LINK", "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731"), L(C, "WARNING_SYSTEM_HELPCENTER_LINK", "https://support.discord.com/hc/articles/18210965981847"), L(C, "AGE_VERIFICATION_LINK", "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731"), L(C, "SPAM_LINK", "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__");
 class O {}
 L(O, "CLASSIFICATION_ID", "classification_id"), L(O, "INCIDENT_TIMESTAMP", "incident_time"), (E = a || (a = {})).POLICY_VIOLATION_DETAIL = "policy_violation_detail", E.LEARN_MORE_LINK = "learn_more_link";
 class f {}
-L(f, "ICON_TYPE", "icon_type"), L(f, "HEADER", "header"), L(f, "BODY", "body"), L(f, "CTAS", "ctas"), L(f, "TIMESTAMP", "timestamp"), L(f, "THEME", "theme"), L(f, "CLIENT_VERSION_MESSAGE", "client_version_message"), L(f, "LEARN_MORE_LINK", "learn_more_link"), L(f, "CLASSIFICATION_ID", "classification_id"), (I = A || (A = {}))[I.ViewViolationDetail = 0] = "ViewViolationDetail", I[I.ViewViolationsDropdown = 1] = "ViewViolationsDropdown", I[I.ClickLetUsKnow = 2] = "ClickLetUsKnow", I[I.ClickAgeVerificationLink = 3] = "ClickAgeVerificationLink", I[I.ClickSpamWebformLink = 4] = "ClickSpamWebformLink", I[I.ClickLearnMoreLink = 5] = "ClickLearnMoreLink", I[I.ClickCommunityGuidelinesLink = 6] = "ClickCommunityGuidelinesLink", I[I.ClickWarningSystemHelpcenterLink = 7] = "ClickWarningSystemHelpcenterLink", (S = N || (N = {}))[S.SystemDM = 0] = "SystemDM", S[S.StandingTab = 1] = "StandingTab", S[S.AppealIngestion = 2] = "AppealIngestion", Object.freeze({
+L(f, "ICON_TYPE", "icon_type"), L(f, "HEADER", "header"), L(f, "BODY", "body"), L(f, "CTAS", "ctas"), L(f, "TIMESTAMP", "timestamp"), L(f, "THEME", "theme"), L(f, "CLIENT_VERSION_MESSAGE", "client_version_message"), L(f, "LEARN_MORE_LINK", "learn_more_link"), L(f, "CLASSIFICATION_ID", "classification_id"), (I = N || (N = {}))[I.ViewViolationDetail = 0] = "ViewViolationDetail", I[I.ViewViolationsDropdown = 1] = "ViewViolationsDropdown", I[I.ClickLetUsKnow = 2] = "ClickLetUsKnow", I[I.ClickAgeVerificationLink = 3] = "ClickAgeVerificationLink", I[I.ClickSpamWebformLink = 4] = "ClickSpamWebformLink", I[I.ClickLearnMoreLink = 5] = "ClickLearnMoreLink", I[I.ClickCommunityGuidelinesLink = 6] = "ClickCommunityGuidelinesLink", I[I.ClickWarningSystemHelpcenterLink = 7] = "ClickWarningSystemHelpcenterLink", (S = A || (A = {}))[S.SystemDM = 0] = "SystemDM", S[S.StandingTab = 1] = "StandingTab", S[S.AppealIngestion = 2] = "AppealIngestion", Object.freeze({
   SPEED_BUMP: T.AnalyticsSections.APPEAL_INGESTION_SPEED_BUMP,
   COLLECT_SIGNAL: T.AnalyticsSections.APPEAL_INGESTION_COLLECT_SIGNAL,
   CONFIRM_SUBMISSION: T.AnalyticsSections.APPEAL_INGESTION_CONFIRM_SUBMISSION,
