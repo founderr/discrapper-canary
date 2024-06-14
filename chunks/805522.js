@@ -9,10 +9,10 @@ var i, r, s = n("735250"),
   _ = n("182906"),
   c = n("220082"),
   E = n("318661"),
-  I = n("806519"),
-  T = n("768581"),
-  f = n("792125"),
-  S = n("783097"),
+  I = n("768581"),
+  T = n("792125"),
+  f = n("783097"),
+  S = n("753972"),
   h = n("231338"),
   A = n("689938"),
   m = n("573214");
@@ -23,7 +23,7 @@ function N(e) {
     look: n = "large_banner",
     isPartner: i,
     onClick: r
-  } = e, o = a.useMemo(() => T.default.getApplicationIconURL({
+  } = e, o = a.useMemo(() => I.default.getApplicationIconURL({
     id: t.id,
     icon: t.icon,
     bot: t.bot,
@@ -43,7 +43,7 @@ function N(e) {
       }), i && (0, s.jsx)("div", {
         className: m.partnerLabelWrapper,
         children: (0, s.jsx)(u.Text, {
-          className: (0, f.getThemeClass)(h.ThemeTypes.DARK),
+          className: (0, T.getThemeClass)(h.ThemeTypes.DARK),
           variant: "text-sm/medium",
           color: "text-normal",
           children: A.default.Messages.APP_DIRECTORY_PARTNER
@@ -51,15 +51,10 @@ function N(e) {
       })]
     }), (0, s.jsxs)("div", {
       className: m.appDetailsContainer,
-      children: [null != o && (0, s.jsx)(I.default, {
-        mask: I.default.Masks.SQUIRCLE,
-        className: m.iconContainer,
-        children: (0, s.jsx)("img", {
-          src: o,
-          alt: "",
-          className: m.icon,
-          "aria-hidden": !0
-        })
+      children: [null != o && (0, s.jsx)(S.default, {
+        src: o,
+        className: m.icon,
+        "aria-hidden": !0
       }), (0, s.jsxs)("div", {
         className: m.appDetails,
         children: [(0, s.jsx)(u.Heading, {
@@ -83,7 +78,7 @@ function p(e) {
     application: t,
     fallbackColor: n
   } = e;
-  return (0, S.isEmbeddedApp)({
+  return (0, f.isEmbeddedApp)({
     application: t
   }) ? (0, s.jsx)(O, {
     application: t

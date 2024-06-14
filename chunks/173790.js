@@ -11,7 +11,7 @@ var r = n("481060"),
   a = n("361213"),
   o = n("778569"),
   l = n("783097"),
-  u = n("377658"),
+  u = n("753972"),
   d = n("387658"),
   _ = n("536650"),
   c = n("675993"),
@@ -34,9 +34,7 @@ function I(e) {
     }), (0, i.jsx)("div", {
       children: (0, i.jsx)(u.default, {
         application: n,
-        className: E.activityIcon,
-        width: 80,
-        height: 80
+        className: E.activityIcon
       })
     }), (0, i.jsx)(r.Spacer, {
       size: 54
