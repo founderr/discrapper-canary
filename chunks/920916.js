@@ -113,7 +113,12 @@ function U(e) {
     isSaving: _,
     onClose: c,
     onConfirm: I
-  } = e, T = (0, C.hasVariant)(t, L.QuestVariants.IN_HOUSE_CONSOLE_QUEST), S = R.SharedQuestFields.build(t.config).defaultRewardRedemptionInstructionsByPlatform[O.QuestRewardCodePlatforms.CROSS_PLATFORM];
+  } = e, T = (0, C.hasVariant)(t, L.QuestVariants.IN_HOUSE_CONSOLE_QUEST), S = R.SharedQuestFields.build(t.config).defaultRewardRedemptionInstructionsByPlatform[O.QuestRewardCodePlatforms.CROSS_PLATFORM], h = (0, C.getCollectibleQuestRewardDuration)(t.config), A = null == h ? D.default.Messages.QUESTS_REWARD_AVATAR_DECORATION_BODY.format({
+    decorationName: s
+  }) : D.default.Messages.QUESTS_REWARD_AVATAR_DECORATION_BODY_WITH_EXPIRATION.format({
+    decorationName: s,
+    duration: h
+  });
   return (0, i.jsxs)("div", {
     className: M.claimedRootContainer,
     children: [(0, i.jsxs)("div", {
@@ -158,9 +163,7 @@ function U(e) {
           variant: "text-sm/normal",
           color: "always-white",
           className: M.text,
-          children: D.default.Messages.QUESTS_REWARD_AVATAR_DECORATION_BODY.format({
-            decorationName: s
-          })
+          children: A
         }), (0, i.jsx)(u.Button, {
           submitting: _,
           onClick: I,

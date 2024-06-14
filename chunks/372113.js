@@ -203,7 +203,7 @@ t.default = e => {
             day: "numeric"
           }), R = (0, g.isTieredRewardCodeQuest)({
             quest: o
-          }), v = A.SharedQuestFields.build(o.config).defaultReward.messages.nameWithArticle;
+          }), v = A.SharedQuestFields.build(o.config).defaultReward.messages.nameWithArticle, x = (0, g.getCollectibleQuestRewardDuration)(o.config);
           if (m && h && C) return P.default.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({
             date: M
           });
@@ -227,20 +227,23 @@ t.default = e => {
             reward: v,
             date: M
           });
-          let x = R ? (0, g.getRewardCodeQuestReward)({
+          let y = R ? (0, g.getRewardCodeQuestReward)({
             quest: o,
             idx: 0
           }) : null;
-          if (c) return P.default.Messages.QUESTS_EXPIRED_QUEST_CARD_SUBHEADING.format({
-            reward: null !== (r = null == x ? void 0 : x.messages.nameWithArticle) && void 0 !== r ? r : v
-          });
-          if ((h || S) && C) return _ || f ? P.default.Messages.QUEST_REWARD.format({
-            reward: v
-          }) : h ? P.default.Messages.QUEST_REWARD_IN_HOUSE.format({
+          return c ? P.default.Messages.QUESTS_EXPIRED_QUEST_CARD_SUBHEADING.format({
+            reward: null !== (r = null == y ? void 0 : y.messages.nameWithArticle) && void 0 !== r ? r : v
+          }) : C && !_ && !f && S ? null != x ? P.default.Messages.QUEST_REWARD_MULTIPLATFORM_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
+            gameTitle: o.config.messages.gameTitle,
             reward: v,
+            streamingDurationRequirement: (0, g.getQuestTaskDetails)({
+              quest: o,
+              location: L.QuestsExperimentLocations.QUESTS_CARD
+            }).targetMinutes,
             onClick: () => {
               E.default.open(D.UserSettingsSections.CONNECTIONS)
-            }
+            },
+            duration: x
           }) : P.default.Messages.QUEST_REWARD_MULTIPLATFORM.format({
             gameTitle: o.config.messages.gameTitle,
             reward: v,
@@ -251,11 +254,13 @@ t.default = e => {
             onClick: () => {
               E.default.open(D.UserSettingsSections.CONNECTIONS)
             }
-          });
-          return null != x && null != x.approximateCount ? P.default.Messages.QUEST_REWARD_TIERED.format({
-            maxReward: x.messages.nameWithArticle,
-            maxRewardCount: (0, I.humanizeValue)(x.approximateCount, d),
+          }) : null != y && null != y.approximateCount ? P.default.Messages.QUEST_REWARD_TIERED.format({
+            maxReward: y.messages.nameWithArticle,
+            maxRewardCount: (0, I.humanizeValue)(y.approximateCount, d),
             helpCenterLink: T.default.getArticleURL(D.HelpdeskArticles.QUESTS_LEARN_MORE)
+          }) : null != x ? P.default.Messages.QUEST_REWARD_WITH_EXPIRATION.format({
+            reward: v,
+            duration: x
           }) : P.default.Messages.QUEST_REWARD.format({
             reward: v
           })

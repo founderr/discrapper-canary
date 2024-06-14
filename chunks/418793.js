@@ -35,7 +35,7 @@ let a = e => {
             redemptionInstructionsByPlatform: s(e.messages.redemption_instructions_by_platform),
             name: e.messages.name,
             nameWithArticle: e.messages.name_with_article
-          }, ...t
+          }, expiresAt: e.expires_at, ...t
         };
       case i.QuestRewardTypes.IN_GAME:
         return {
