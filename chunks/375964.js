@@ -17309,6 +17309,8 @@ e.exports = Object.freeze({
   QUESTS_MICROPHONE_UNIT_BODY: "We automatically check for launched games, but no one’s perfect. Hit the refresh button to check if you’ve launched {gameTitle}.",
   QUESTS_MICROPHONE_UNIT_BODY_ANY_GAME: "We automatically check for launched games, but no one’s perfect. Hit the refresh button to check if you’ve launched a game.",
   QUESTS_MICROHPONE_UNIT_BUTTON_CTA: "Check For Launches",
+  QUESTS_CHECK_FOR_GAME_LAUNCH_TOOLTIP: "Got {gameTitle} running, but not detected? Try this.",
+  QUESTS_CHECK_FOR_ANY_GAME_LAUNCH_TOOLTIP: "Got a game running, but not detected? Try this.",
   QUESTS_HOME_HERO_EYEBROW: "What are Quests?",
   QUESTS_HOME_HERO_TITLE: "Play Games. Get Rewards.",
   QUESTS_HOME_HERO_DESCRIPTION: "Quests are a brand new way for players to discover games and earn rewards for playing them on Discord.",

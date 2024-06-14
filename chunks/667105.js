@@ -1,49 +1,90 @@
 "use strict";
 n.r(t), n.d(t, {
+  useAnimatedRefreshIcon: function() {
+    return S
+  },
   useHandleClaimQuestsReward: function() {
-    return c
+    return T
   },
   useHasLaunchedGame: function() {
-    return E
+    return f
   }
-});
-var i = n("470079"),
-  r = n("442837"),
-  s = n("594190"),
-  a = n("594174"),
-  o = n("617136"),
-  l = n("918701"),
-  u = n("920916"),
-  d = n("669041"),
-  _ = n("341907");
+}), n("47120");
+var i = n("735250"),
+  r = n("470079"),
+  s = n("920906"),
+  a = n("442837"),
+  o = n("594190"),
+  l = n("594174"),
+  u = n("869472"),
+  d = n("617136"),
+  _ = n("918701"),
+  c = n("920916"),
+  E = n("669041"),
+  I = n("341907");
 
-function c(e) {
+function T(e) {
   let {
     quest: t,
     location: n,
-    questContentPosition: s
-  } = e, c = (0, r.useStateFromStores)([a.default], () => {
+    questContentPosition: i
+  } = e, s = (0, a.useStateFromStores)([l.default], () => {
     var e;
-    return null === (e = a.default.getCurrentUser()) || void 0 === e ? void 0 : e.verified
+    return null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.verified
   });
-  return i.useCallback(() => {
-    null != t && ((0, o.trackQuestContentClicked)({
+  return r.useCallback(() => {
+    null != t && ((0, d.trackQuestContentClicked)({
       questId: t.id,
       questContent: n,
-      questContentCTA: o.QuestContentCTA.CLAIM_REWARD,
-      questContentPosition: s
-    }), c ? (0, l.hasCollectiblesQuestReward)(t.config) ? (0, u.openCollectibleRewardModal)(t, n) : (0, _.openQuestsRewardCodeModal)({
+      questContentCTA: d.QuestContentCTA.CLAIM_REWARD,
+      questContentPosition: i
+    }), s ? (0, _.hasCollectiblesQuestReward)(t.config) ? (0, c.openCollectibleRewardModal)(t, n) : (0, I.openQuestsRewardCodeModal)({
       questId: t.id,
       location: n,
-      questContentPosition: s
-    }) : (0, d.openRewardModalUnverified)())
-  }, [t, n, s, c])
+      questContentPosition: i
+    }) : (0, E.openRewardModalUnverified)())
+  }, [t, n, i, s])
 }
 
-function E(e) {
+function f(e) {
   var t;
-  let n = (0, r.useStateFromStoresArray)([s.default], () => s.default.getGamesSeen(!1)).find(t => (null == t ? void 0 : t.id) === e);
+  let n = (0, a.useStateFromStoresArray)([o.default], () => o.default.getGamesSeen(!1)).find(t => (null == t ? void 0 : t.id) === e);
   if (null == n) return !1;
   let i = Date.now() - 2592e7;
   return i <= (null !== (t = n.lastLaunched) && void 0 !== t ? t : 0)
+}
+let S = e => {
+  let {
+    useReducedMotion: t,
+    className: n,
+    size: a = 16
+  } = e, [o, l] = (0, s.useSpring)(() => ({})), d = r.useRef(!1), _ = (0, s.animated)(u.default);
+  return {
+    render: () => (0, i.jsx)(_, {
+      className: n,
+      style: t ? void 0 : o,
+      height: a,
+      width: a
+    }),
+    startAnimation: () => {
+      d.current = !0, l({
+        from: {
+          rotate: "0deg"
+        },
+        to: {
+          rotate: "360deg"
+        },
+        config: {
+          tension: 750,
+          mass: 5,
+          friction: 100
+        },
+        loop: () => d,
+        immediate: t
+      })
+    },
+    stopAnimation: () => {
+      d.current = !1
+    }
+  }
 }

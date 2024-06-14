@@ -59,17 +59,20 @@ var i = n("990547"),
   E = n("46140"),
   I = n("981631");
 async function T(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    n = (await r.HTTP.post({
+  let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+  try {
+    let n = (await r.HTTP.post({
       url: I.Endpoints.QUEST_ON_CONSOLE_START(e),
       query: t ? {
         preview: t
       } : void 0
     })).body;
-  return null != n.quest_user_status && s.default.dispatch({
-    type: "QUESTS_USER_STATUS_UPDATE",
-    user_status: n.quest_user_status
-  }), null
+    null != n.quest_user_status && s.default.dispatch({
+      type: "QUESTS_USER_STATUS_UPDATE",
+      user_status: n.quest_user_status
+    })
+  } catch (e) {}
+  return null
 }
 async function f(e) {
   await r.HTTP.post({
