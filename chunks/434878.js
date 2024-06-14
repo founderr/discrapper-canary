@@ -881,7 +881,7 @@ function eI(e) {
     ...eP,
     style: {
       ...A,
-      position: "absolute",
+      position: "static",
       height: "auto"
     },
     children: (0, s.jsxs)(H.ComponentDispatchGroupProvider, {

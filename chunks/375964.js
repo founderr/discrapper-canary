@@ -2893,7 +2893,6 @@ e.exports = Object.freeze({
   RECONNECT: "Reconnect",
   RECONNECTING: "Reconnecting",
   UNLOCK_WITH_NITRO: "Unlock with Nitro",
-  CUSTOMIZE: "Customize",
   DISMISS: "Dismiss",
   DISABLE: "Disable",
   ENABLE: "Enable",

@@ -97,7 +97,7 @@ class l {
         let s = o(f, d, this.columnWidth),
           u = {
             position: "absolute",
-            [c]: this.columnWidth * r + l * (r + 1) - l + E,
+            [c]: this.columnWidth * r + l * (r + 1) - l,
             width: this.columnWidth,
             top: i - I,
             height: s
@@ -111,16 +111,16 @@ class l {
       }
       _ > 0 && (this.coordsMap[s(f)] = {
         position: "sticky",
-        [c]: E,
+        [c]: 0,
         width: this.columnWidth * i + l * i,
         top: 0,
         height: _
       }), this.coordsMap[r(f)] = {
         position: "absolute",
-        [c]: T,
-        width: this.columnWidth * i + l * (i - 1) + 2 * E,
+        [c]: T + E,
+        width: this.columnWidth * i + l * (i - 1),
         top: I,
-        height: this.getMaxColumnHeight(this.columnHeights) - I
+        height: this.getMaxColumnHeight(this.columnHeights) - I - l
       }, f++
     }
     this.columnHeights = this.columnHeights.map(e => e - l + I), this.totalHeight = this.getMaxColumnHeight(), this.visibleSections = {}, this.needsFullCompute = !1

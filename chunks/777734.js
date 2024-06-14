@@ -8,12 +8,10 @@ let r = s.forwardRef(function(e, t) {
   let {
     title: n,
     subtitle: s,
-    icon: r,
-    style: o
+    icon: r
   } = e;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      style: o,
       className: i.sectionHeader,
       children: [(0, a.jsxs)("div", {
         className: i.sectionHeaderTitle,

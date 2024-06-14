@@ -61,9 +61,9 @@ let R = () => 80,
       updatedOnAllSurfaces: L
     } = (0, h.useSimplifiedProfileExperiment)({
       location: "ProfileEffectPresetItem"
-    }), b = I.default.canUseCollectibles(l), F = i === S.Section.PREMIUM_PURCHASE && !b;
+    }), F = I.default.canUseCollectibles(l), b = i === S.Section.PREMIUM_PURCHASE && !F;
     return (0, s.jsxs)(M, {
-      className: F && !d ? v.decorationGridItemChurned : void 0,
+      className: b && !d ? v.decorationGridItemChurned : void 0,
       innerRef: null != r ? r : T,
       isSelected: d,
       ...E,
@@ -75,7 +75,7 @@ let R = () => 80,
         className: v.presetEffectImg,
         src: O,
         alt: U
-      }), i === S.Section.PURCHASE || i === S.Section.PREMIUM_PURCHASE && b ? null : R ? (0, s.jsx)(c.PremiumBadge, {
+      }), i === S.Section.PURCHASE || i === S.Section.PREMIUM_PURCHASE && F ? null : R ? (0, s.jsx)(c.PremiumBadge, {
         className: v.newBadge,
         text: (0, s.jsxs)("div", {
           className: v.newBadgeText,
@@ -109,7 +109,6 @@ t.default = e => {
     u(), (0, d.pushLayer)(x.Layers.COLLECTIBLES_SHOP)
   }, f = (0, S.default)(), m = null != a;
   return (0, s.jsx)("section", {
-    className: v.section,
     children: (0, s.jsx)(c.MasonryList, {
       fade: !0,
       itemGutter: 12,
@@ -167,18 +166,16 @@ t.default = e => {
           }, h)
         })
       },
-      renderSection: (e, t) => {
+      renderSection: e => {
         let {
-          header: l
+          header: t
         } = f[e];
         return (0, s.jsx)("div", {
           style: {
-            ...t,
-            height: "".concat(16, "px"),
-            position: "absolute"
+            height: "".concat(16, "px")
           },
           children: (0, s.jsx)(c.FormTitle, {
-            children: l
+            children: t
           })
         })
       },

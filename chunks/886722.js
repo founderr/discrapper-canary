@@ -1,8 +1,6 @@
 "use strict";
 e.exports = {
   card: "card_e4e263",
-  glassBackground: "glassBackground__11035",
-  glassBackgroundTop: "glassBackgroundTop__487b7",
   masonryList: "masonryList__7a8d2",
   masonryListContainer: "masonryListContainer__755e5",
   masonryListGradient: "masonryListGradient__25591",
