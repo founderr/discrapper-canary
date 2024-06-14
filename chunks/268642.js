@@ -29,7 +29,7 @@ function u(e) {
   } catch (e) {
     return null
   }
-  if ((0, a.isSpotifySpecialEmbedHost)(r) || null == u) return null;
+  if (!(0, a.isSpotifySpecialEmbedHost)(r) || null == u) return null;
   let c = u.split("/"),
     m = null != c[1] ? c[1].toLowerCase() : null,
     h = null != c[3] ? c[3].toLowerCase() : null,
