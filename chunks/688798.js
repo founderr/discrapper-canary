@@ -13,16 +13,17 @@ var i = n("913527"),
   E = n("706454"),
   I = n("695346"),
   T = n("375954"),
-  f = n("709054"),
-  S = n("839627"),
-  h = n("802098"),
-  A = n("128014"),
-  m = n("163379"),
-  N = n("596401"),
-  p = n("981631"),
-  O = n("930441");
+  f = n("306680"),
+  S = n("709054"),
+  h = n("839627"),
+  A = n("802098"),
+  m = n("128014"),
+  N = n("163379"),
+  p = n("596401"),
+  O = n("981631"),
+  C = n("930441");
 
-function C(e, t, n) {
+function R(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -30,73 +31,76 @@ function C(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-async function R(e) {
-  let t = I.LastReceivedChangelogId.getSetting(),
-    n = f.default.extractTimestamp(e);
-  if (t >= e || r()().diff(n, "days") > 30) return;
-  let i = await (0, c.fetchEmailSettings)();
-  if (!(null == i ? void 0 : i.categories[O.EmailCategories.UPDATES_AND_ANNOUNCEMENTS])) return;
-  let s = await o.default.getOrEnsurePrivateChannel(N.SYSTEM_UPDATES_USER_ID);
-  if (null == s) return;
+async function g(e, t) {
+  let n = I.LastReceivedChangelogId.getSetting(),
+    i = S.default.extractTimestamp(e);
+  if ((n >= e || r()().diff(i, "days") > 30) && !t) return;
+  let s = await (0, c.fetchEmailSettings)();
+  if (!(null == s ? void 0 : s.categories[C.EmailCategories.UPDATES_AND_ANNOUNCEMENTS])) return;
+  let a = await o.default.getOrEnsurePrivateChannel(p.SYSTEM_UPDATES_USER_ID);
+  if (null == a) return;
   await l.default.fetchMessages({
-    channelId: s,
+    channelId: a,
     limit: 1
   });
-  let a = T.default.getLastMessage(s);
-  if (null == a) return;
-  let u = (0, _.default)({
-    ...a,
-    channelId: s,
+  let u = T.default.getLastMessage(a),
+    d = f.default.getOldestUnreadMessageId(a),
+    E = f.default.hasUnread(a);
+  if (null == u || null == d || E || u.id > d) return;
+  let h = (0, _.default)({
+    ...u,
+    channelId: a,
     messageReference: void 0,
     poll: void 0,
-    changelogId: a.changelogId
+    changelogId: u.changelogId
   });
-  l.default.receiveMessage(s, {
-    ...u,
-    state: p.MessageStates.SENT,
-    channel_id: s
+  l.default.receiveMessage(a, {
+    ...h,
+    state: O.MessageStates.SENT,
+    channel_id: a
   }, !0, {})
 }
-class g extends d.default {
+class L extends d.default {
   constructor(...e) {
-    super(...e), C(this, "actions", {
+    super(...e), R(this, "actions", {
       POST_CONNECTION_OPEN: e => this.handleConnectionOpen(e)
-    }), C(this, "handleConnectionOpen", async e => {
+    }), R(this, "handleConnectionOpen", async e => {
       let {
-        canReceiveMessage: t
-      } = S.default.getCurrentConfig({
+        canReceiveMessage: t,
+        canReceiveUnpublishedMessages: n
+      } = h.default.getCurrentConfig({
         location: "changelog_manager"
       }, {
         autoTrackExposure: !1
-      }), n = await a.default.fetchChangelogConfig(), i = n.body, r = function(e, t) {
+      }), i = await a.default.fetchChangelogConfig(), r = i.body, o = function(e, t) {
         let n = 0,
           i = null;
         for (var [r, {
             min_version: s
           }] of Object.entries(e)) s <= t && s > n && (n = s, i = r);
         return i
-      }(i, (0, A.getClientVersionForChangelog)());
+      }(r, (0, m.getClientVersionForChangelog)());
       if (s.default.dispatch({
           type: "CHANGE_LOG_SET_CONFIG",
-          config: n.body,
-          latestChangelogId: r
-        }), null == r) return;
+          config: i.body,
+          latestChangelogId: o
+        }), null == o) return;
       if (t) {
-        (0, u.getUser)(N.SYSTEM_UPDATES_USER_ID), R(r);
+        (0, u.getUser)(p.SYSTEM_UPDATES_USER_ID), g(o, n);
         return
       }
-      if (!0 !== i[r].show_on_startup) return;
-      let o = h.default.lastSeenChangelogId(),
-        l = h.default.lastSeenChangelogDate();
-      if (null != o && 0 >= f.default.compare(r, o)) return;
-      let d = await a.default.fetchChangelog(r, E.default.locale);
-      if (null != d) {
-        if (null == l || null == h.default.lastSeenChangelogDate()) {
-          a.default.markChangelogAsSeen(r, d.date);
+      if (!0 !== r[o].show_on_startup) return;
+      let l = A.default.lastSeenChangelogId(),
+        d = A.default.lastSeenChangelogDate();
+      if (null != l && 0 >= S.default.compare(o, l)) return;
+      let _ = await a.default.fetchChangelog(o, E.default.locale);
+      if (null != _) {
+        if (null == d || null == A.default.lastSeenChangelogDate()) {
+          a.default.markChangelogAsSeen(o, _.date);
           return
-        }!h.default.isLocked() && new Date(d.date) > new Date(l) && (0, m.openChangelog)()
+        }!A.default.isLocked() && new Date(_.date) > new Date(d) && (0, N.openChangelog)()
       }
     })
   }
 }
-t.default = new g
+t.default = new L
