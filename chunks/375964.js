@@ -541,6 +541,8 @@ e.exports = Object.freeze({
   APP_LAUNCHER_HOME_LEARN_MORE_SECTION_BODY: "Check out our starter guide to learn about the cool things apps can do.",
   APP_LAUNCHER_HOME_LEARN_MORE_SECTION_LEARN_MORE: "Learn More",
   APP_LAUNCHER_ACTIVITY_NOT_AVAILABLE_IN_THREAD: "Activities cannot be launched in Threads at this time",
+  APP_LAUNCHER_GLOBAL_SEARCH_COACHMARK_TITLE: "Find hundreds of Apps",
+  APP_LAUNCHER_GLOBAL_SEARCH_COACHMARK_DESCRIPTION: "You now have hundreds of apps within reach. Find something rad.",
   READY: "Ready",
   CONNECTING: "Connecting…",
   CONNECTING_PROBLEMS_CTA: "Connection problems? Let us know!",
