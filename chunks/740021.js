@@ -21,13 +21,13 @@ var i = l("442837"),
   m = l("78675"),
   v = l("438163"),
   _ = l("652853"),
-  T = l("900687"),
-  p = l("228168"),
-  x = l("182294"),
+  p = l("900687"),
+  x = l("228168"),
+  T = l("182294"),
   g = l("602091"),
   N = l("231338"),
-  C = l("566483");
-let A = f.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
+  A = l("566483");
+let C = f.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
 function U(e) {
   let {
@@ -49,7 +49,7 @@ function U(e) {
   } = (0, E.default)({
     user: t,
     guildId: null == l ? void 0 : l.guildId,
-    size: x.AvatarSizes.SIZE_120
+    size: T.AvatarSizes.SIZE_120
   }), {
     originalFriendingEnabled: D,
     improvedFriendingEnabled: b
@@ -63,25 +63,25 @@ function U(e) {
     children: [(0, s.jsx)(m.default, {
       user: t,
       displayProfile: l,
-      profileType: p.UserProfileTypes.FULL_SIZE,
+      profileType: x.UserProfileTypes.FULL_SIZE,
       hasProfileEffect: (null == l ? void 0 : l.profileEffectId) != null
     }), (0, s.jsxs)("div", {
-      className: C.inner,
+      className: A.inner,
       children: [(0, s.jsx)("div", {
         ...L,
-        children: (0, s.jsx)(A, {
+        children: (0, s.jsx)(C, {
           src: O,
           avatarDecoration: F,
-          size: x.AvatarSizes.SIZE_120,
-          className: C.avatar,
+          size: T.AvatarSizes.SIZE_120,
+          className: A.avatar,
           status: k,
           statusBackdropColor: (0, n.getStatusBackdropColor)(j),
           "aria-label": t.username,
           isMobile: w,
           statusTooltip: !0,
-          statusTooltipDelay: p.USER_PROFILE_TOOLTIP_DELAY
+          statusTooltipDelay: x.USER_PROFILE_TOOLTIP_DELAY
         })
-      }), (0, s.jsx)(T.default, {
+      }), (0, s.jsx)(p.default, {
         user: t,
         isCurrentUser: G,
         guildId: U,
@@ -93,7 +93,7 @@ function U(e) {
         onClose: M
       }), (0, s.jsx)(v.UserProfileCustomStatusBubble, {
         statusActivity: f,
-        profileType: p.UserProfileTypes.FULL_SIZE,
+        profileType: x.UserProfileTypes.FULL_SIZE,
         hasEntered: h === g.ModalTransitionState.ENTERED
       })]
     })]

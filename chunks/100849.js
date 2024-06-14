@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return T
+    return p
   }
 });
 var s = l("735250"),
@@ -21,14 +21,14 @@ var s = l("735250"),
   v = l("886140"),
   _ = l("305944");
 
-function T(e) {
+function p(e) {
   let {
     user: t,
     type: l,
     showActions: a,
-    onClose: T
-  } = e, p = (0, o.useStateFromStores)([c.default], () => null != c.default.getAnyStreamForUser(t.id)), x = (0, o.useStateFromStores)([f.default], () => f.default.getActivities(t.id)), g = i.useMemo(() => x.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [x]), N = i.useMemo(() => p ? g.find(e => e.type === m.ActivityTypes.PLAYING) : null, [g, p]), C = i.useMemo(() => g.filter(e => e !== N), [N, g]), {
-    analyticsLocations: A,
+    onClose: p
+  } = e, x = (0, o.useStateFromStores)([c.default], () => null != c.default.getAnyStreamForUser(t.id)), T = (0, o.useStateFromStores)([f.default], () => f.default.getActivities(t.id)), g = i.useMemo(() => T.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [T]), N = i.useMemo(() => x ? g.find(e => e.type === m.ActivityTypes.PLAYING) : null, [g, x]), A = i.useMemo(() => g.filter(e => e !== N), [N, g]), {
+    analyticsLocations: C,
     newestAnalyticsLocation: U
   } = (0, d.default)(), {
     trackUserProfileAction: P,
@@ -42,7 +42,7 @@ function T(e) {
   return (0, s.jsxs)(r.ScrollerThin, {
     className: _.listScroller,
     fade: !0,
-    children: [p ? (0, s.jsx)(u.default, {
+    children: [x ? (0, s.jsx)(u.default, {
       type: l,
       user: t,
       source: U,
@@ -52,7 +52,7 @@ function T(e) {
       actionColor: v.actionColor,
       analyticsParams: R,
       showActions: a,
-      onOpenGameProfile: T,
+      onOpenGameProfile: p,
       onAction: () => {
         P({
           action: "JOIN_ACTIVITY"
@@ -62,11 +62,11 @@ function T(e) {
           activityPlatform: null == N ? void 0 : N.platform,
           activitySessionId: null == N ? void 0 : N.session_id,
           applicationId: null == N ? void 0 : N.application_id,
-          analyticsLocations: A,
+          analyticsLocations: C,
           ...h
         })
       }
-    }) : null, C.map(e => (0, s.jsx)(u.default, {
+    }) : null, A.map(e => (0, s.jsx)(u.default, {
       type: l,
       activity: e,
       user: t,
@@ -77,7 +77,7 @@ function T(e) {
       actionColor: v.actionColor,
       analyticsParams: R,
       showActions: a,
-      onOpenGameProfile: T,
+      onOpenGameProfile: p,
       onAction: () => {
         P({
           action: "JOIN_ACTIVITY"
@@ -87,7 +87,7 @@ function T(e) {
           activityPlatform: e.platform,
           activitySessionId: e.session_id,
           applicationId: e.application_id,
-          analyticsLocations: A,
+          analyticsLocations: C,
           ...h
         })
       }

@@ -1,13 +1,13 @@
 "use strict";
 E.r(t), E.d(t, {
   SearchState: function() {
-    return s
+    return _
   },
   getSearchState: function() {
     return N
   },
   openMemberProfile: function() {
-    return l
+    return L
   },
   useContextMenuModerateRoles: function() {
     return o
@@ -19,63 +19,63 @@ E.r(t), E.d(t, {
     return d
   }
 });
-var _, s, T = E("470079"),
+var s, _, T = E("470079"),
   a = E("399606"),
   A = E("906732"),
   n = E("171368"),
   I = E("430824"),
   u = E("594174"),
   i = E("91047"),
-  L = E("981631");
-let l = (e, t) => {
+  l = E("981631");
+let L = (e, t) => {
   let {
     guildId: E,
-    userId: _,
-    colorRoleId: s
+    userId: s,
+    colorRoleId: _
   } = e;
   (0, n.openUserProfileModal)({
-    userId: _,
+    userId: s,
     guildId: E,
     sourceAnalyticsLocations: t,
-    roleId: s,
+    roleId: _,
     analyticsLocation: {
-      section: L.AnalyticsSections.MEMBER_SAFETY_PAGE,
-      object: L.AnalyticsObjects.ACTIONED_BY_USER
+      section: l.AnalyticsSections.MEMBER_SAFETY_PAGE,
+      object: l.AnalyticsObjects.ACTIONED_BY_USER
     }
   })
 };
 
 function o(e, t, E) {
   let {
-    analyticsLocations: _
+    analyticsLocations: s
   } = (0, A.default)();
-  return T.useCallback(s => {
+  return T.useCallback(_ => {
     if (null == e) return;
     let T = u.default.getUser(e.userId);
-    null != T && (s.stopPropagation(), (0, i.openModerateRoleContextMenu)(s, {
+    null != T && (_.stopPropagation(), (0, i.openModerateRoleContextMenu)(_, {
       user: T,
       guildId: e.guildId,
-      analyticsLocations: null != t ? [t] : _,
+      analyticsLocations: null != t ? [t] : s,
       onCloseContextMenu: E
     }))
-  }, [e, _, E, t])
+  }, [e, s, E, t])
 }
 
 function r(e, t, E) {
   let {
-    analyticsLocations: _
+    analyticsLocations: s
   } = (0, A.default)();
-  return T.useCallback(s => {
+  return T.useCallback(_ => {
     if (null == e) return;
     let T = u.default.getUser(e.userId);
-    null != T && (s.stopPropagation(), (0, i.openModerateUserContextMenu)(s, {
+    null != T && (_.stopPropagation(), (0, i.openModerateUserContextMenu)(_, {
       user: T,
       guildId: e.guildId,
-      analyticsLocations: null != t ? [t] : _,
+      analyticsLocations: null != t ? [t] : s,
       onCloseContextMenu: E,
       showTransferOwnershipItem: !0
     }))
-  }, [e, E, _, t])
+  }, [e, E, s, t])
 }
 
 function d(e) {
@@ -89,4 +89,4 @@ function d(e) {
 
 function N(e, t, E) {
   return t ? 0 : e ? 1 : E <= 0 ? 2 : 3
-}(_ = s || (s = {}))[_.LOADING = 0] = "LOADING", _[_.SUCCESS_STILL_INDEXING = 1] = "SUCCESS_STILL_INDEXING", _[_.SUCCESS_EMPTY = 2] = "SUCCESS_EMPTY", _[_.SUCCESS_FULL = 3] = "SUCCESS_FULL"
+}(s = _ || (_ = {}))[s.LOADING = 0] = "LOADING", s[s.SUCCESS_STILL_INDEXING = 1] = "SUCCESS_STILL_INDEXING", s[s.SUCCESS_EMPTY = 2] = "SUCCESS_EMPTY", s[s.SUCCESS_FULL = 3] = "SUCCESS_FULL"

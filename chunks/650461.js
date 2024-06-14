@@ -4,7 +4,7 @@ E.r(t), E.d(t, {
     return g
   }
 }), E("47120");
-var _, s = E("470079"),
+var s, _ = E("470079"),
   T = E("392711"),
   a = E.n(T),
   A = E("442837"),
@@ -12,9 +12,9 @@ var _, s = E("470079"),
   I = E("944163"),
   u = E("709054"),
   i = E("116175"),
-  L = E("308083");
+  l = E("308083");
 
-function l(e, t, E) {
+function L(e, t, E) {
   return t in e ? Object.defineProperty(e, t, {
     value: E,
     enumerable: !0,
@@ -27,10 +27,10 @@ let o = new Map,
   d = !1,
   N = Object.freeze({
     gameApplicationIds: new Set,
-    playstyle: L.ClanPlaystyles.NONE,
+    playstyle: l.ClanPlaystyles.NONE,
     interests: new Set,
     description: "",
-    wildcardDescriptors: [L.EMPTY_WILDCARD, L.EMPTY_WILDCARD, L.EMPTY_WILDCARD],
+    wildcardDescriptors: [l.EMPTY_WILDCARD, l.EMPTY_WILDCARD, l.EMPTY_WILDCARD],
     tag: "",
     verificationForm: {
       ...I.NO_MEMBER_VERIFICATION_FORM
@@ -38,21 +38,21 @@ let o = new Map,
     badgeKind: i.ClanBadgeKind.SWORD,
     badgePrimaryColor: void 0,
     badgeSecondaryColor: void 0,
-    banner: L.ClanBannerKind.NIGHT_SKY,
+    banner: l.ClanBannerKind.NIGHT_SKY,
     brandPrimaryColor: void 0,
     brandSecondaryColor: void 0,
-    currentStep: L.ClanSetupSteps.GAMES,
-    furthestStep: L.ClanSetupSteps.GAMES,
+    currentStep: l.ClanSetupSteps.GAMES,
+    furthestStep: l.ClanSetupSteps.GAMES,
     requiredGameId: void 0
   });
 
 function S() {
   let e = a().cloneDeep(N);
-  return e.badgeKind = (0, i.getRandomClanBadgeKind)(), e.banner = (0, L.getRandomClanBannerKind)(), e
+  return e.badgeKind = (0, i.getRandomClanBadgeKind)(), e.banner = (0, l.getRandomClanBannerKind)(), e
 }
 
 function g() {
-  return s.useState(() => S())[0]
+  return _.useState(() => S())[0]
 }
 
 function D(e) {
@@ -66,34 +66,34 @@ function G(e, t) {
     ...E,
     ...t
   });
-  let _ = r.get(e);
-  if (null != _) {
+  let s = r.get(e);
+  if (null != s) {
     let E = {
-      ..._
+      ...s
     };
     Object.keys(t).forEach(e => {
       delete E[e]
     }), r.set(e, E)
   }
 }
-class O extends(_ = A.default.PersistedStore) {
+class O extends(s = A.default.PersistedStore) {
   initialize(e) {
     null != e && u.default.keys(e.progressByGuild).forEach(t => {
-      var E, _, s, T, a;
+      var E, s, _, T, a;
       o.set(t, (E = e.progressByGuild[t], {
         gameApplicationIds: new Set(E.gameApplicationIds),
         playstyle: E.playstyle,
         interests: new Set(E.interests),
         description: E.description,
-        wildcardDescriptors: null !== (_ = E.wildcardDescriptors) && void 0 !== _ ? _ : [L.EMPTY_WILDCARD, L.EMPTY_WILDCARD, L.EMPTY_WILDCARD],
+        wildcardDescriptors: null !== (s = E.wildcardDescriptors) && void 0 !== s ? s : [l.EMPTY_WILDCARD, l.EMPTY_WILDCARD, l.EMPTY_WILDCARD],
         tag: E.tag,
-        verificationForm: null !== (s = E.verificationForm) && void 0 !== s ? s : {
+        verificationForm: null !== (_ = E.verificationForm) && void 0 !== _ ? _ : {
           ...I.NO_MEMBER_VERIFICATION_FORM
         },
         badgeKind: null !== (T = E.badgeKind) && void 0 !== T ? T : i.ClanBadgeKind.SWORD,
         badgePrimaryColor: E.badgePrimaryColor,
         badgeSecondaryColor: E.badgeSecondaryColor,
-        banner: null !== (a = E.banner) && void 0 !== a ? a : L.ClanBannerKind.NIGHT_SKY,
+        banner: null !== (a = E.banner) && void 0 !== a ? a : l.ClanBannerKind.NIGHT_SKY,
         brandPrimaryColor: E.brandPrimaryColor,
         brandSecondaryColor: E.brandSecondaryColor,
         currentStep: E.currentStep,
@@ -105,24 +105,24 @@ class O extends(_ = A.default.PersistedStore) {
   getState() {
     let e = {};
     return o.forEach((t, E) => {
-      var _;
+      var s;
       e[E] = {
-        gameApplicationIds: Array.from((_ = t).gameApplicationIds),
-        playstyle: _.playstyle,
-        interests: Array.from(_.interests),
-        description: _.description,
-        wildcardDescriptors: _.wildcardDescriptors,
-        tag: _.tag,
-        verificationForm: _.verificationForm,
-        badgeKind: _.badgeKind,
-        badgePrimaryColor: _.badgePrimaryColor,
-        badgeSecondaryColor: _.badgeSecondaryColor,
-        banner: _.banner,
-        brandPrimaryColor: _.brandPrimaryColor,
-        brandSecondaryColor: _.brandSecondaryColor,
-        currentStep: _.currentStep,
-        furthestStep: _.furthestStep,
-        requiredGameId: _.requiredGameId
+        gameApplicationIds: Array.from((s = t).gameApplicationIds),
+        playstyle: s.playstyle,
+        interests: Array.from(s.interests),
+        description: s.description,
+        wildcardDescriptors: s.wildcardDescriptors,
+        tag: s.tag,
+        verificationForm: s.verificationForm,
+        badgeKind: s.badgeKind,
+        badgePrimaryColor: s.badgePrimaryColor,
+        badgeSecondaryColor: s.badgeSecondaryColor,
+        banner: s.banner,
+        brandPrimaryColor: s.brandPrimaryColor,
+        brandSecondaryColor: s.brandSecondaryColor,
+        currentStep: s.currentStep,
+        furthestStep: s.furthestStep,
+        requiredGameId: s.requiredGameId
       }
     }), {
       progressByGuild: e
@@ -139,7 +139,7 @@ class O extends(_ = A.default.PersistedStore) {
     return [...o.keys()]
   }
 }
-l(O, "displayName", "ClanSetupStore"), l(O, "persistKey", "ClanSetupStore"), t.default = new O(n.default, {
+L(O, "displayName", "ClanSetupStore"), L(O, "persistKey", "ClanSetupStore"), t.default = new O(n.default, {
   CLAN_SETUP_RESET: function() {
     o.clear(), r.clear()
   },
@@ -180,13 +180,13 @@ l(O, "displayName", "ClanSetupStore"), l(O, "persistKey", "ClanSetupStore"), t.d
     let t;
     let {
       form: E,
-      guildId: _,
-      isLocalUpdate: s
+      guildId: s,
+      isLocalUpdate: _
     } = e;
-    s && (t = null == E ? I.NO_MEMBER_VERIFICATION_FORM : {
-      ...D(_).verificationForm,
+    _ && (t = null == E ? I.NO_MEMBER_VERIFICATION_FORM : {
+      ...D(s).verificationForm,
       ...E
-    }, G(_, {
+    }, G(s, {
       verificationForm: t
     }))
   }

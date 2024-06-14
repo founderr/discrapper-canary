@@ -1,7 +1,7 @@
 "use strict";
 E.r(t), E.d(t, {
   AuditLogChange: function() {
-    return L
+    return l
   },
   getActionType: function() {
     return i
@@ -10,8 +10,8 @@ E.r(t), E.d(t, {
     return u
   }
 });
-var _ = E("913527"),
-  s = E.n(_),
+var s = E("913527"),
+  _ = E.n(s),
   T = E("81825"),
   a = E("960048"),
   A = E("709054"),
@@ -141,15 +141,15 @@ function i(e) {
   }
   return n.AuditLogActionTypes.ALL
 }
-class L {
+class l {
   constructor(e, t, E) {
     I(this, "key", void 0), I(this, "oldValue", void 0), I(this, "newValue", void 0), I(this, "subtarget", void 0), this.key = e, this.oldValue = t, this.newValue = E
   }
 }
-class l extends T.default {
+class L extends T.default {
   constructor(e) {
-    var t, E, _, T, a, n;
-    super(), I(this, "id", void 0), I(this, "actionType", void 0), I(this, "action", void 0), I(this, "targetType", void 0), I(this, "targetId", void 0), I(this, "target", void 0), I(this, "userId", void 0), I(this, "changes", void 0), I(this, "timestampStart", void 0), I(this, "timestampEnd", void 0), I(this, "user", void 0), I(this, "options", void 0), this.id = e.id, this.action = e.action, this.actionType = i(this.action), this.targetId = e.targetId, this.timestampStart = null !== (t = e.timestampStart) && void 0 !== t ? t : s()(A.default.extractTimestamp(this.id)), this.timestampEnd = null !== (E = e.timestampEnd) && void 0 !== E ? E : this.timestampStart, this.userId = e.userId, this.changes = null !== (_ = e.changes) && void 0 !== _ ? _ : [], this.targetType = u(this.action), this.options = null !== (T = e.options) && void 0 !== T ? T : {}, this.target = null !== (a = e.target) && void 0 !== a ? a : e.id, this.user = null !== (n = e.user) && void 0 !== n ? n : null
+    var t, E, s, T, a, n;
+    super(), I(this, "id", void 0), I(this, "actionType", void 0), I(this, "action", void 0), I(this, "targetType", void 0), I(this, "targetId", void 0), I(this, "target", void 0), I(this, "userId", void 0), I(this, "changes", void 0), I(this, "timestampStart", void 0), I(this, "timestampEnd", void 0), I(this, "user", void 0), I(this, "options", void 0), this.id = e.id, this.action = e.action, this.actionType = i(this.action), this.targetId = e.targetId, this.timestampStart = null !== (t = e.timestampStart) && void 0 !== t ? t : _()(A.default.extractTimestamp(this.id)), this.timestampEnd = null !== (E = e.timestampEnd) && void 0 !== E ? E : this.timestampStart, this.userId = e.userId, this.changes = null !== (s = e.changes) && void 0 !== s ? s : [], this.targetType = u(this.action), this.options = null !== (T = e.options) && void 0 !== T ? T : {}, this.target = null !== (a = e.target) && void 0 !== a ? a : e.id, this.user = null !== (n = e.user) && void 0 !== n ? n : null
   }
 }
-t.default = l
+t.default = L

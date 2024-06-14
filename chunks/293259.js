@@ -20,13 +20,13 @@ var s = l("735250"),
   m = l("785717"),
   v = l("621853"),
   _ = l("204197"),
-  T = l("735336"),
-  p = l("520978"),
-  x = l("184325"),
+  p = l("735336"),
+  x = l("520978"),
+  T = l("184325"),
   g = l("652853"),
   N = l("225714"),
-  C = l("228168"),
-  A = l("231338"),
+  A = l("228168"),
+  C = l("231338"),
   U = l("689938"),
   P = l("155614");
 let h = o.AvatarSizes.SIZE_120,
@@ -57,11 +57,11 @@ function M(e) {
   }), Z = i.useMemo(() => (0, u.shouldDisableUserPresenceInChannel)(E, j), [E, j]);
   return (0, s.jsxs)("header", {
     className: O,
-    children: [(0, s.jsx)(T.default, {
+    children: [(0, s.jsx)(p.default, {
       displayProfile: t,
       onClose: D,
       user: E,
-      profileType: C.UserProfileTypes.MODAL,
+      profileType: A.UserProfileTypes.MODAL,
       hasProfileEffect: F
     }), (0, s.jsxs)("div", {
       className: P.header,
@@ -72,7 +72,7 @@ function M(e) {
           avatarDecoration: z,
           size: h,
           className: P.avatar,
-          status: Z ? A.StatusTypes.UNKNOWN : L ? A.StatusTypes.STREAMING : G,
+          status: Z ? C.StatusTypes.UNKNOWN : L ? C.StatusTypes.STREAMING : G,
           statusBackdropColor: (0, o.getStatusBackdropColor)(Y),
           isMobile: B,
           statusTooltip: !0,
@@ -88,17 +88,17 @@ function M(e) {
             className: P.warningCircleIcon,
             color: n.default.unsafe_rawColors.YELLOW_300.css
           })
-        }) : (0, s.jsx)(x.default, {
+        }) : (0, s.jsx)(T.default, {
           user: E,
           className: P.badgeList,
           guildId: M,
-          size: x.BadgeSizes.SIZE_24,
+          size: T.BadgeSizes.SIZE_24,
           shrinkAtCount: 8,
-          shrinkToSize: x.BadgeSizes.SIZE_18,
+          shrinkToSize: T.BadgeSizes.SIZE_18,
           onBadgeClick: D
         }), (0, s.jsxs)("div", {
           className: P.relationshipButtons,
-          children: [(null == k ? void 0 : k.application) != null && (0, s.jsx)(p.default, {
+          children: [(null == k ? void 0 : k.application) != null && (0, s.jsx)(x.default, {
             className: P.applicationInstallButton,
             application: k.application
           }), (0, s.jsx)(N.default, {

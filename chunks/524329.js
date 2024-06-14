@@ -19,55 +19,55 @@ E.r(t), E.d(t, {
     return a
   }
 });
-var _ = E("544891"),
-  s = E("570140"),
+var s = E("544891"),
+  _ = E("570140"),
   T = E("981631");
 let a = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    s.default.dispatch({
+    _.default.dispatch({
       type: "WELCOME_SCREEN_VIEW",
       guildId: e,
       isLurking: t
     })
   },
   A = async e => {
-    s.default.dispatch({
+    _.default.dispatch({
       type: "WELCOME_SCREEN_FETCH_START"
     });
     try {
-      let t = await _.HTTP.get({
+      let t = await s.HTTP.get({
         url: T.Endpoints.GUILD_WELCOME_SCREEN(e),
         oldFormErrors: !0
       });
-      return s.default.dispatch({
+      return _.default.dispatch({
         type: "WELCOME_SCREEN_FETCH_SUCCESS",
         guildId: e,
         welcomeScreen: t.body
       }), t.body
     } catch (e) {
-      s.default.dispatch({
+      _.default.dispatch({
         type: "WELCOME_SCREEN_FETCH_FAIL"
       })
     }
   }, n = () => {
-    s.default.dispatch({
+    _.default.dispatch({
       type: "WELCOME_SCREEN_SETTINGS_RESET"
     })
   }, I = () => {
-    s.default.dispatch({
+    _.default.dispatch({
       type: "WELCOME_SCREEN_SETTINGS_CLEAR"
     })
   }, u = e => {
-    s.default.dispatch({
+    _.default.dispatch({
       type: "WELCOME_SCREEN_SETTINGS_UPDATE",
       settings: e
     })
   }, i = async (e, t) => {
-    s.default.dispatch({
+    _.default.dispatch({
       type: "WELCOME_SCREEN_SUBMIT"
     });
     try {
-      let E = await _.HTTP.patch({
+      let E = await s.HTTP.patch({
         url: T.Endpoints.GUILD_WELCOME_SCREEN(e),
         body: {
           description: t.description,
@@ -76,13 +76,13 @@ let a = function(e) {
         },
         oldFormErrors: !0
       });
-      s.default.dispatch({
+      _.default.dispatch({
         type: "WELCOME_SCREEN_SUBMIT_SUCCESS",
         guildId: e,
         welcomeScreen: E.body
       })
     } catch (e) {
-      s.default.dispatch({
+      _.default.dispatch({
         type: "WELCOME_SCREEN_SUBMIT_FAILURE"
       })
     }

@@ -25,9 +25,9 @@ function S(e) {
     canDM: m,
     relationshipType: v,
     originalFriendingEnabled: _ = !1,
-    improvedFriendingEnabled: T = !1,
-    viewProfileItem: p,
-    onClose: x
+    improvedFriendingEnabled: p = !1,
+    viewProfileItem: x,
+    onClose: T
   } = e, {
     trackUserProfileAction: g
   } = (0, o.useUserProfileAnalyticsContext)();
@@ -43,31 +43,31 @@ function S(e) {
         ...l,
         originalFriendingEnabled: _,
         relationshipType: v,
-        viewProfileItem: p,
+        viewProfileItem: x,
         user: t,
         isCurrentUser: S,
         guildId: I,
         trackUserProfileAction: g,
-        onClose: x
+        onClose: T
       })
     })
   }
   return (0, s.jsxs)("div", {
     className: f.buttons,
-    children: [(_ || T) && (0, s.jsxs)(s.Fragment, {
+    children: [(_ || p) && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(d.default, {
         user: t,
         isCurrentUser: S,
         relationshipType: v,
         originalFriendingEnabled: _,
-        improvedFriendingEnabled: T,
+        improvedFriendingEnabled: p,
         friendToken: E,
-        onClose: x
+        onClose: T
       }), S && (0, s.jsx)(r.default, {
         user: t,
         guildId: I,
         profileType: c.UserProfileTypes.FULL_SIZE,
-        onClose: x
+        onClose: T
       }), !t.isNonUserBot() && _ ? (0, s.jsx)(i.Clickable, {
         focusProps: {
           offset: {
@@ -79,14 +79,14 @@ function S(e) {
           className: f.additionalActionsIcon
         })
       }) : null]
-    }), !_ && !T && (m ? (0, s.jsx)(u.default, {
+    }), !_ && !p && (m ? (0, s.jsx)(u.default, {
       user: t,
-      onClose: x
+      onClose: T
     }) : (0, s.jsx)(r.default, {
       user: t,
       guildId: I,
       profileType: c.UserProfileTypes.FULL_SIZE,
-      onClose: x
+      onClose: T
     }))]
   })
 }

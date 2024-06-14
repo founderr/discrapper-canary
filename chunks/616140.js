@@ -20,13 +20,13 @@ var s = l("735250"),
   m = l("162267"),
   v = l("100849"),
   _ = l("944546"),
-  T = l("470900"),
-  p = l("988246"),
-  x = l("834534"),
+  p = l("470900"),
+  x = l("988246"),
+  T = l("834534"),
   g = l("228168"),
   N = l("981631"),
-  C = l("689938"),
-  A = l("773386");
+  A = l("689938"),
+  C = l("773386");
 let U = e => {
   var t, l;
   let {
@@ -39,19 +39,19 @@ let U = e => {
     return t !== N.ActivityTypes.CUSTOM_STATUS
   })), c = null === (t = (0, E.default)(s.id, s.id !== (null == i ? void 0 : i.id)).mutualFriends) || void 0 === t ? void 0 : t.length, f = null === (l = (0, m.default)(s.id, s.id !== (null == i ? void 0 : i.id)).mutualGuilds) || void 0 === l ? void 0 : l.length, S = [{
     section: g.UserProfileSections.USER_INFO,
-    text: C.default.Messages.USER_PROFILE_ABOUT_ME
+    text: A.default.Messages.USER_PROFILE_ABOUT_ME
   }];
   return (null != o || null != r) && S.push({
     section: g.UserProfileSections.ACTIVITY,
-    text: C.default.Messages.USER_PROFILE_ACTIVITY
+    text: A.default.Messages.USER_PROFILE_ACTIVITY
   }), s.id !== (null == i ? void 0 : i.id) && (S.push({
     section: g.UserProfileSections.MUTUAL_FRIENDS,
-    text: (0, a.match)(c).with(void 0, () => C.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER).with(0, () => C.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS).otherwise(e => C.default.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
+    text: (0, a.match)(c).with(void 0, () => A.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER).with(0, () => A.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS).otherwise(e => A.default.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
       count: e
     }))
   }), S.push({
     section: g.UserProfileSections.MUTUAL_GUILDS,
-    text: (0, a.match)(f).with(void 0, () => C.default.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => C.default.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => C.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
+    text: (0, a.match)(f).with(void 0, () => A.default.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => A.default.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => A.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
       count: e
     }))
   })), S
@@ -74,10 +74,10 @@ function P(e) {
   }) : t === g.UserProfileSections.MUTUAL_FRIENDS ? (0, s.jsx)(_.default, {
     user: i,
     onClose: o
-  }) : t === g.UserProfileSections.MUTUAL_GUILDS ? (0, s.jsx)(T.default, {
+  }) : t === g.UserProfileSections.MUTUAL_GUILDS ? (0, s.jsx)(p.default, {
     user: i,
     onClose: o
-  }) : (0, s.jsx)(x.default, {
+  }) : (0, s.jsx)(T.default, {
     user: i,
     currentUser: a,
     displayProfile: n,
@@ -96,14 +96,14 @@ function h(e) {
     onClose: E
   } = e, {
     trackUserProfileAction: m
-  } = (0, I.useUserProfileAnalyticsContext)(), v = (0, n.useStateFromStores)([f.default], () => f.default.getCurrentUser()), _ = (0, n.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), T = U({
+  } = (0, I.useUserProfileAnalyticsContext)(), v = (0, n.useStateFromStores)([f.default], () => f.default.getCurrentUser()), _ = (0, n.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), p = U({
     user: a,
     currentUser: v
   }), [{
-    section: x,
+    section: T,
     subsection: N
-  }, C] = i.useState({
-    section: null !== (l = null === (t = T.find(e => {
+  }, A] = i.useState({
+    section: null !== (l = null === (t = p.find(e => {
       let {
         section: t
       } = e;
@@ -114,28 +114,28 @@ function h(e) {
     m({
       action: "PRESS_SECTION",
       section: e
-    }), C({
+    }), A({
       section: e,
       subsection: void 0
     })
-  }, [m, C]);
+  }, [m, A]);
   return null == v ? null : _ ? (0, s.jsx)("div", {
-    className: A.container,
-    children: (0, s.jsx)(p.default, {})
+    className: C.container,
+    children: (0, s.jsx)(x.default, {})
   }) : (0, s.jsxs)("div", {
-    className: A.container,
+    className: C.container,
     children: [(0, s.jsx)(o.TabBar, {
-      className: A.tabBar,
+      className: C.tabBar,
       type: "top",
-      selectedItem: x,
+      selectedItem: T,
       onItemSelect: h,
-      children: T.map(e => {
+      children: p.map(e => {
         let {
           section: t,
           text: l
         } = e;
         return (0, s.jsx)(o.TabBar.Item, {
-          className: A.tabBarItem,
+          className: C.tabBarItem,
           id: t,
           "aria-label": l,
           children: (0, s.jsx)(r.Text, {
@@ -145,7 +145,7 @@ function h(e) {
         }, t)
       })
     }), (0, s.jsx)(P, {
-      section: x,
+      section: T,
       subsection: N,
       user: a,
       currentUser: v,

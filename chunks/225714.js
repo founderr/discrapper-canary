@@ -27,26 +27,26 @@ function _(e) {
     user: l,
     relationshipType: i,
     friendToken: _,
-    originalFriendingEnabled: T = !1,
-    improvedFriendingEnabled: p = !1,
-    onClose: x
+    originalFriendingEnabled: p = !1,
+    improvedFriendingEnabled: x = !1,
+    onClose: T
   } = e, {
     newestAnalyticsLocation: g
   } = (0, f.default)(), {
     trackUserProfileAction: N
   } = (0, S.useUserProfileAnalyticsContext)();
   if (t || i === E.RelationshipTypes.BLOCKED) return null;
-  let C = () => {
+  let A = () => {
     N({
       action: "SEND_MESSAGE"
-    }), d.default.openPrivateChannel(l.id, !1, !1, g), x()
+    }), d.default.openPrivateChannel(l.id, !1, !1, g), T()
   };
-  if (p) return i === E.RelationshipTypes.FRIEND || l.bot ? (0, s.jsx)(I.default, {
+  if (x) return i === E.RelationshipTypes.FRIEND || l.bot ? (0, s.jsx)(I.default, {
     variant: "text",
     text: m.default.Messages.SEND_DM,
     icon: n.ChatIcon,
     color: a()(u.Button.Colors.PRIMARY, v.color),
-    onClick: C
+    onClick: A
   }) : i === E.RelationshipTypes.PENDING_OUTGOING ? (0, s.jsxs)("div", {
     className: v.multipleButtons,
     children: [(0, s.jsx)(I.default, {
@@ -61,7 +61,7 @@ function _(e) {
       text: m.default.Messages.SEND_DM,
       icon: n.ChatIcon,
       color: a()(u.Button.Colors.PRIMARY, v.color),
-      onClick: C
+      onClick: A
     })]
   }) : i === E.RelationshipTypes.PENDING_INCOMING ? (0, s.jsxs)("div", {
     className: v.multipleButtons,
@@ -78,7 +78,7 @@ function _(e) {
       icon: n.ChatIcon,
       className: v.iconButton,
       color: a()(u.Button.Colors.PRIMARY, v.color),
-      onClick: C
+      onClick: A
     })]
   }) : (0, s.jsxs)("div", {
     className: v.multipleButtons,
@@ -88,7 +88,7 @@ function _(e) {
       icon: n.ChatIcon,
       className: v.iconButton,
       color: a()(u.Button.Colors.PRIMARY, v.color),
-      onClick: C
+      onClick: A
     }), (0, s.jsx)(I.default, {
       variant: "text",
       text: m.default.Messages.USER_PROFILE_ADD_FRIEND,
@@ -107,16 +107,16 @@ function _(e) {
       }
     })]
   });
-  if (i === E.RelationshipTypes.FRIEND || l.bot) return T ? (0, s.jsx)(I.default, {
+  if (i === E.RelationshipTypes.FRIEND || l.bot) return p ? (0, s.jsx)(I.default, {
     variant: "text",
     text: m.default.Messages.SEND_DM,
     color: a()(u.Button.Colors.PRIMARY, v.color),
-    onClick: C
+    onClick: A
   }) : (0, s.jsx)(I.default, {
     variant: "text",
     text: m.default.Messages.SEND_MESSAGE,
     color: u.Button.Colors.GREEN,
-    onClick: C
+    onClick: A
   });
   if (i === E.RelationshipTypes.PENDING_OUTGOING) return (0, s.jsx)(I.default, {
     variant: "text",
@@ -124,11 +124,11 @@ function _(e) {
     color: u.Button.Colors.GREEN,
     disabled: !0
   });
-  if (i === E.RelationshipTypes.PENDING_INCOMING) return T ? (0, s.jsx)(I.default, {
+  if (i === E.RelationshipTypes.PENDING_INCOMING) return p ? (0, s.jsx)(I.default, {
     variant: "text",
     text: m.default.Messages.SEND_DM,
     color: a()(u.Button.Colors.PRIMARY, v.color),
-    onClick: C
+    onClick: A
   }) : (0, s.jsxs)("div", {
     className: v.pendingIncoming,
     children: [(0, s.jsx)(I.default, {

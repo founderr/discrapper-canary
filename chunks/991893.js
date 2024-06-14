@@ -4,30 +4,30 @@ E.r(t), E.d(t, {
     return a
   }
 });
-var _ = E("735250");
+var s = E("735250");
 E("470079");
-var s = E("692547"),
+var _ = E("692547"),
   T = E("331595");
 let a = e => {
   let {
     width: t = 24,
     height: E = 24,
-    color: a = s.default.colors.INTERACTIVE_NORMAL,
+    color: a = _.default.colors.INTERACTIVE_NORMAL,
     colorClass: A = "",
     ...n
   } = e;
-  return (0, _.jsxs)("svg", {
+  return (0, s.jsxs)("svg", {
     ...(0, T.default)(n),
     xmlns: "http://www.w3.org/2000/svg",
     width: t,
     height: E,
     fill: "none",
     viewBox: "0 0 24 24",
-    children: [(0, _.jsx)("path", {
+    children: [(0, s.jsx)("path", {
       fill: "string" == typeof a ? a : a.css,
       d: "m7.7 16.95 3.68-6.76a1 1 0 0 0-.5-1.4A3 3 0 1 1 15 6a1 1 0 1 0 2 0 5 5 0 1 0-7.85 4.1L5.95 16a2 2 0 1 0 1.78 3h8.54a2 2 0 1 0 0-2H7.73l-.02-.05Z",
       className: A
-    }), (0, _.jsx)("path", {
+    }), (0, s.jsx)("path", {
       fill: "string" == typeof a ? a : a.css,
       d: "M13.8 6.86A2 2 0 1 0 12.16 8l4.53 6.58a1 1 0 0 0 .82.43h.5a3 3 0 1 1-1.98 5.25 1 1 0 0 0-.66-.25h-.01a1 1 0 0 0-.66 1.75A4.98 4.98 0 0 0 23 18a5 5 0 0 0-4.97-5L13.8 6.86ZM5.97 13.88a1 1 0 0 1-.72 1.21 3 3 0 1 0 2.73 5.16 1 1 0 1 1 1.33 1.5A4.98 4.98 0 0 1 1 18a5 5 0 0 1 3.75-4.84 1 1 0 0 1 1.22.72Z",
       className: A
