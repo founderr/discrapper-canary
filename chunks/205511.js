@@ -96,52 +96,55 @@ function I(e) {
   })
 }
 t.default = function(e) {
+  var t;
   let {
-    onContentHeightChange: t,
-    quest: s
-  } = e, l = (0, r.useStateFromStores)([E.default], () => E.default.useReducedMotion), i = (0, h.useQuestTaskDetails)({
-    quest: s,
+    onContentHeightChange: s,
+    quest: l
+  } = e, i = (0, r.useStateFromStores)([E.default], () => E.default.useReducedMotion), o = (0, h.useQuestTaskDetails)({
+    quest: l,
     location: g.QuestsExperimentLocations.QUESTS_BAR
   }), {
-    xboxAndPlaystationAccounts: o
+    xboxAndPlaystationAccounts: _
   } = (0, h.useConnectedAccounts)(), {
-    steps: _,
-    hasConnectedAccounts: f,
-    isProgressingQuestForLaunchedGame: T,
-    isQuestComplete: S
+    steps: f,
+    hasConnectedAccounts: T,
+    isProgressingQuestForLaunchedGame: S,
+    isQuestComplete: x
   } = a.useMemo(() => {
     var e;
-    let t = o.length > 0,
-      n = t && (0, C.isQuestProgressingOnConsole)(s),
-      a = (0, C.hasVariant)(s, g.QuestVariants.IN_HOUSE_CONSOLE_QUEST),
-      l = m.SharedQuestFields.build(s.config).application.name,
-      r = (null === (e = s.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
+    let t = _.length > 0,
+      s = t && (0, C.isQuestProgressingOnConsole)(l),
+      n = (0, C.hasVariant)(l, g.QuestVariants.IN_HOUSE_CONSOLE_QUEST),
+      a = m.SharedQuestFields.build(l.config).application.name,
+      i = (null === (e = l.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
     return {
       steps: [{
         content: A.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CONNECT_ACCOUNT,
-        isComplete: t || n || r
+        isComplete: t || s || i
       }, {
-        content: a ? A.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_ANY_GAME : A.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_GAME.format({
-          gameTitle: l
+        content: n ? A.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_ANY_GAME : A.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_GAME.format({
+          gameTitle: a
         }),
-        isComplete: n || r
+        isComplete: s || i
       }, {
         content: A.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_PLAYTIME.format({
-          numMinutes: i.targetMinutes
+          numMinutes: o.targetMinutes
         }),
-        isComplete: r
+        isComplete: i
       }],
       hasConnectedAccounts: t,
-      isProgressingQuestForLaunchedGame: n,
-      isQuestComplete: r
+      isProgressingQuestForLaunchedGame: s,
+      isQuestComplete: i
     }
-  }, [o, s, i]), {
-    ref: x,
-    height: R = 0
-  } = (0, d.default)(), v = (0, c.default)(R), O = R - (null != v ? v : 0);
+  }, [_, l, o]), {
+    ref: R,
+    height: v = 0
+  } = (0, d.default)(), O = null !== (t = (0, c.default)(v)) && void 0 !== t ? t : 0;
   return a.useLayoutEffect(() => {
-    0 !== O && t(O)
-  }, [O, t]), (0, n.jsxs)("div", {
+    if (0 === O) return;
+    let e = v - O;
+    0 !== e && s(e)
+  }, [v, O, s]), (0, n.jsxs)("div", {
     className: p.wrapper,
     children: [(0, n.jsx)("div", {
       className: p.headingWrapper,
@@ -151,18 +154,18 @@ t.default = function(e) {
         children: A.default.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_HEADING
       })
     }), (0, n.jsx)("div", {
-      ref: x,
+      ref: R,
       children: (0, n.jsxs)("div", {
         className: p.stepsWrapper,
         children: [(0, n.jsx)("ul", {
-          children: _.map((e, t) => (0, n.jsx)(N, {
+          children: f.map((e, t) => (0, n.jsx)(N, {
             isComplete: e.isComplete,
-            hasNextStep: t < _.length - 1,
+            hasNextStep: t < f.length - 1,
             children: e.content
           }, t))
-        }), f && !T && !S && (0, n.jsx)(I, {
-          useReducedMotion: l,
-          quest: s
+        }), T && !S && !x && (0, n.jsx)(I, {
+          useReducedMotion: i,
+          quest: l
         })]
       })
     })]

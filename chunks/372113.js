@@ -143,46 +143,44 @@ t.default = e => {
     else return 0
   }(t), w = k >= 1, H = k >= 3, V = k >= 4, Y = (0, g.hasCollectiblesQuestReward)(t.config), K = (0, g.hasVariant)(t, L.QuestVariants.IN_HOUSE_CONSOLE_QUEST), W = (0, g.isConsoleQuest)(t), z = (0, O.isQuestCardInGiftInventory)(n), Q = n === C.QuestContent.QUESTS_EMBED, q = c || B, {
     xboxAndPlaystationAccounts: X
-  } = (0, N.useConnectedAccounts)(), Z = (0, N.useQuestInstructionTitle)(t, L.QuestsExperimentLocations.QUESTS_CARD), J = w && !V && z, $ = X.length > 0, ee = (0, g.isQuestProgressingOnConsole)(t), et = (0, u.useStateFromStores)([_.default], () => _.default.useReducedMotion), en = function(e) {
+  } = (0, N.useConnectedAccounts)(), Z = (0, N.useQuestInstructionTitle)(t, L.QuestsExperimentLocations.QUESTS_CARD), J = w && !V && z, $ = X.length > 0, ee = (0, g.isQuestProgressingOnConsole)(t), et = w && W && !$, en = (0, u.useStateFromStores)([_.default], () => _.default.useReducedMotion), es = function(e) {
     let {
       progressState: t,
       isCollectibleQuest: n,
       isInHouseQuest: s,
       inGiftInventory: a,
-      hasConsoleTasks: l,
-      hasConsoleConnection: i
+      waitingForConsoleConnection: l
     } = e;
     switch (t) {
       case 0:
+      default:
         return P.default.Messages.QUESTS_ACCEPT;
       case 1:
-        if (l && !i && a) return P.default.Messages.QUESTS_CONNECT_CONSOLE;
+        if (l && a) return P.default.Messages.QUESTS_CONNECT_CONSOLE;
+        return P.default.Messages.QUESTS_CLAIM_REWARD;
       case 2:
       case 3:
         return P.default.Messages.QUESTS_CLAIM_REWARD;
       case 4:
         if (s && a) return P.default.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD;
         if (n) return P.default.Messages.COLLECTIBLES_USE_NOW;
-        return P.default.Messages.QUESTS_SEE_CODE;
-      default:
-        return P.default.Messages.QUESTS_ACCEPT
+        return P.default.Messages.QUESTS_SEE_CODE
     }
   }({
     progressState: k,
     isCollectibleQuest: Y,
     isInHouseQuest: K,
     inGiftInventory: z,
-    hasConsoleTasks: W,
-    hasConsoleConnection: $
-  }), es = K && z && H ? P.default.Messages.QUESTS_IN_HOUSE_REWARD_TOOLTIP : w ? P.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : P.default.Messages.QUESTS_ACCEPT_TOOLTIP, ea = (0, v.useHandleClaimQuestsReward)({
+    waitingForConsoleConnection: et
+  }), ea = K && z && H ? P.default.Messages.QUESTS_IN_HOUSE_REWARD_TOOLTIP : w ? P.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : P.default.Messages.QUESTS_ACCEPT_TOOLTIP, el = (0, v.useHandleClaimQuestsReward)({
     quest: t,
     location: n,
     questContentPosition: G
-  }), el = i.useMemo(() => W && z && !$ ? 2 === k : w && !H, [W, z, w, H, k, $]), ei = (0, u.useStateFromStores)([S.default], () => S.default.isEnrolling(t.id)), er = () => W && z && 1 === k ? E.default.open(D.UserSettingsSections.CONNECTIONS) : w ? void ea() : (0, h.enrollInQuest)(t.id, {
+  }), ei = i.useMemo(() => W && z && !$ ? 2 === k : w && !H, [W, z, w, H, k, $]), er = (0, u.useStateFromStores)([S.default], () => S.default.isEnrolling(t.id)), eo = () => et && z ? E.default.open(D.UserSettingsSections.CONNECTIONS) : w ? void el() : (0, h.enrollInQuest)(t.id, {
     questContent: n,
     questContentCTA: p.QuestContentCTA.ACCEPT_QUEST,
     questContentPosition: G
-  }), eo = (0, u.useStateFromStores)([m.default], () => m.default.locale), eu = z && Y, ed = r && !H, ec = (0, l.jsx)(R.default, {
+  }), eu = (0, u.useStateFromStores)([m.default], () => m.default.locale), ed = z && Y, ec = r && !H, ef = (0, l.jsx)(R.default, {
     autoplay: a,
     className: o()(y.gridImg, {
       [y.questRewardGiftInventory]: z && "lg" === s,
@@ -206,9 +204,9 @@ t.default = e => {
     },
     "aria-hidden": !q,
     children: [(0, l.jsx)(f.Tooltip, {
-      text: ed ? P.default.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
+      text: ec ? P.default.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
       tooltipContentClassName: y.rewardTileExpirationTooltip,
-      shouldShow: ed,
+      shouldShow: ec,
       children: e => (0, l.jsxs)("div", {
         className: y.rewardTileWrapper,
         ...e,
@@ -217,11 +215,11 @@ t.default = e => {
           children: (0, l.jsx)(d.CircleExclamationPointIcon, {
             color: f.tokens.colors.WHITE
           })
-        }), eu ? (0, l.jsx)(x.default, {
+        }), ed ? (0, l.jsx)(x.default, {
           questConfig: t.config,
-          fallback: ec,
+          fallback: ef,
           isFocused: a
-        }) : ec]
+        }) : ef]
       })
     }), (0, l.jsxs)("div", {
       className: o()(y.gridText, y.taskDetails),
@@ -312,7 +310,7 @@ t.default = e => {
         }({
           quest: t,
           location: n,
-          locale: eo,
+          locale: eu,
           isQuestExpired: r,
           hasConsoleConnection: $
         })
@@ -330,25 +328,25 @@ t.default = e => {
           })
         },
         children: P.default.Messages.QUESTS_LEARN_MORE_V2
-      }), r && !H ? null : W && w && $ && !ee ? (0, l.jsx)(b, {
+      }), r && !H ? null : W && z && w && $ && !ee ? (0, l.jsx)(b, {
         quest: t,
-        useReducedMotion: et
+        useReducedMotion: en
       }) : (0, l.jsx)(f.Tooltip, {
-        text: es,
+        text: ea,
         tooltipContentClassName: y.ctaTooltipCopy,
         shouldShow: !H || H && W && z,
         children: e => (0, l.jsx)(F, {
           ...e,
           isQuestComplete: H,
-          useReducedMotion: et,
+          useReducedMotion: en,
           isInHouseQuest: K,
           inGiftInventory: z,
-          disabled: el,
-          isEnrolling: ei,
-          onClick: er,
-          children: en
+          disabled: ei,
+          isEnrolling: er,
+          onClick: eo,
+          children: es
         })
-      }, es)]
+      }, ea)]
     }), J && (0, l.jsx)(M.default, {
       className: y.gridProgressBar,
       color: H ? f.tokens.colors.TEXT_POSITIVE : f.tokens.colors.BG_BRAND,
