@@ -2,54 +2,57 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("143927"),
-  i = n("622535"),
-  r = n("970606"),
-  o = n("945124"),
-  u = n("231467"),
-  d = n("931515"),
-  c = n("207796"),
-  f = n("777734"),
-  E = n("976757"),
-  h = n("981631"),
-  C = n("886722");
+  l = n("120356"),
+  i = n.n(l),
+  r = n("143927"),
+  o = n("622535"),
+  u = n("970606"),
+  d = n("945124"),
+  c = n("231467"),
+  f = n("931515"),
+  E = n("207796"),
+  h = n("777734"),
+  C = n("976757"),
+  _ = n("981631"),
+  m = n("886722");
 t.default = s.memo(function(e) {
   let {
     title: t,
-    subtitle: n
+    subtitle: n,
+    className: l
   } = e, {
-    loaded: _,
-    clans: m,
-    searchResult: S,
-    searchCriteria: p
-  } = (0, d.useClanDiscoveryList)(20), I = (0, c.useClanDiscoveryUIStore)(e => e.selectedTraits, l.default), g = s.useMemo(() => new Set(p.games), [p.games]), T = s.useCallback(e => {
+    loaded: S,
+    clans: p,
+    searchResult: I,
+    searchCriteria: g
+  } = (0, f.useClanDiscoveryList)(20), T = (0, E.useClanDiscoveryUIStore)(e => e.selectedTraits, r.default), A = s.useMemo(() => new Set(g.games), [g.games]), N = s.useCallback(e => {
     var t;
-    return (0, a.jsx)(u.default, {
+    return (0, a.jsx)(c.default, {
       clan: e,
-      className: C.card,
-      affinity: null !== (t = e.affininty) && void 0 !== t ? t : (0, o.getClanDiscoveryAffinity)(e, p),
-      traitsToHighlight: I,
-      source: h.AnalyticsSections.DISCOVER_SEARCH,
-      prioritizedGameIds: g,
+      className: m.card,
+      affinity: null !== (t = e.affininty) && void 0 !== t ? t : (0, d.getClanDiscoveryAffinity)(e, g),
+      traitsToHighlight: T,
+      source: _.AnalyticsSections.DISCOVER_SEARCH,
+      prioritizedGameIds: A,
       onlyAnimateIconOnHover: !0
     }, e.id)
-  }, [p, I, g]), A = s.useMemo(() => null != S && (0, E.isLoadedSearchResult)(S) ? m : [], [m, S]), N = s.useCallback(e => {
-    e && A.length > 0 && (0, r.trackClanDiscoveryViewed)(A.map(e => e.id), "top_picks", p)
-  }, [A, p]);
-  return 0 !== m.length && _ ? (0, a.jsx)(i.VisibilitySensor, {
-    onChange: N,
+  }, [g, T, A]), v = s.useMemo(() => null != I && (0, C.isLoadedSearchResult)(I) ? p : [], [p, I]), R = s.useCallback(e => {
+    e && v.length > 0 && (0, u.trackClanDiscoveryViewed)(v.map(e => e.id), "top_picks", g)
+  }, [v, g]);
+  return 0 !== p.length && S ? (0, a.jsx)(o.VisibilitySensor, {
+    onChange: R,
     threshold: .25,
     children: (0, a.jsxs)("div", {
-      className: C.previewListContainer,
+      className: i()(m.previewListContainer, l),
       children: [(0, a.jsx)("div", {
-        className: C.previewListSection,
-        children: (0, a.jsx)(f.default, {
+        className: m.previewListSection,
+        children: (0, a.jsx)(h.default, {
           title: t,
           subtitle: n
         })
       }), (0, a.jsx)("div", {
-        className: C.previewList,
-        children: A.map(e => T(e))
+        className: m.previewList,
+        children: v.map(e => N(e))
       })]
     })
   }) : null

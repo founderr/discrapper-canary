@@ -14,6 +14,7 @@ e.exports = {
   clanCardOuterContainer: "clanCardOuterContainer__05636",
   clanCardOuterLeft: "clanCardOuterLeft_a7787d clanCardOuter__79a32 clanCard__50538",
   clanCardOuterRight: "clanCardOuterRight__19d1a clanCardOuter__79a32 clanCard__50538",
+  customizeButton: "customizeButton__48348",
   ring: "ring__07750",
   ringInner: "ringInner__1b7bc ring__07750",
   ringMiddle: "ringMiddle__02bf7 ring__07750",

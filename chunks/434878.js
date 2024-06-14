@@ -881,7 +881,7 @@ function eI(e) {
     ...eP,
     style: {
       ...A,
-      position: "static",
+      position: Y === m.ForumLayout.GRID ? "absolute" : "static",
       height: "auto"
     },
     children: (0, s.jsxs)(H.ComponentDispatchGroupProvider, {

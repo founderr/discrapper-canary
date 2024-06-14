@@ -10,6 +10,7 @@ e.exports = {
   notAllowedIcon: "notAllowedIcon_e48f6e icon__31096",
   presetEffectBackground: "presetEffectBackground__87eb6",
   presetEffectImg: "presetEffectImg_e57dd7",
+  section: "section__43116",
   selected: "selected__52c38",
   shopIcon: "shopIcon__0af17 icon__31096",
   tooltip: "tooltip_e767f1",

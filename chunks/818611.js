@@ -156,18 +156,22 @@ t.default = e => {
         }, E)
       })
     },
-    renderSection: e => {
+    renderSection: (e, t) => {
       let {
-        header: t
+        header: n
       } = _[e];
       return (0, i.jsx)("div", {
         className: O.headings,
+        style: {
+          ...t,
+          position: "absolute"
+        },
         children: (0, i.jsx)(d.HeadingLevel, {
           forceLevel: 5,
           children: (0, i.jsx)(d.Heading, {
             variant: "eyebrow",
             color: "header-secondary",
-            children: t
+            children: n
           })
         })
       })
