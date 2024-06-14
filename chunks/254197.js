@@ -26,8 +26,8 @@ var a = s("735250"),
   v = s("205511"),
   R = s("95985"),
   O = s("658590"),
-  L = s("46140"),
-  M = s("689938"),
+  M = s("46140"),
+  L = s("689938"),
   y = s("263094");
 let D = n.forwardRef(function(e, t) {
   var s;
@@ -59,15 +59,15 @@ let D = n.forwardRef(function(e, t) {
   }, [V]), {
     primaryVariant: W
   } = T.QuestBarExperiment.useExperiment({
-    location: L.QuestsExperimentLocations.QUESTS_BAR
+    location: M.QuestsExperimentLocations.QUESTS_BAR
   }, {
     autoTrackExposure: !1
   }), z = (null === (s = V.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null, Z = (0, f.useQuestTaskDetails)({
     quest: V,
-    location: L.QuestsExperimentLocations.QUESTS_BAR
+    location: M.QuestsExperimentLocations.QUESTS_BAR
   }), K = Z.percentComplete > 0, X = D && b, J = n.useMemo(() => (0, m.isConsoleQuest)(V), [V]), $ = (0, m.getQuestBarHeroAssetUrl)(V), ee = (0, m.getQuestsInstructionsToWinReward)({
     quest: V,
-    location: L.QuestsExperimentLocations.QUESTS_BAR,
+    location: M.QuestsExperimentLocations.QUESTS_BAR,
     useV2Variants: W === T.QuestBarExperimentVariants.V2 || (0, O.shouldForceQuestBarV2)(V),
     taskDetails: Z
   });
@@ -85,7 +85,7 @@ let D = n.forwardRef(function(e, t) {
         children: [(0, a.jsx)(u.Text, {
           variant: "text-xxs/medium",
           className: i()(y.flex, y.headerText),
-          children: M.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
+          children: L.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
             expirationDate: k
           })
         }), (0, a.jsx)(N.QuestsEntryContextMenuPopout, {
@@ -99,7 +99,7 @@ let D = n.forwardRef(function(e, t) {
           children: e => (0, a.jsx)(u.Clickable, {
             ...e,
             className: y.submenuWrapper,
-            "aria-label": M.default.Messages.ACTIONS,
+            "aria-label": L.default.Messages.ACTIONS,
             children: (0, a.jsx)(d.default, {
               className: i()(y.submenuIcon, y.interactiveNormal)
             })
@@ -145,7 +145,7 @@ let D = n.forwardRef(function(e, t) {
               children: [(0, a.jsx)(u.Text, {
                 color: "always-white",
                 variant: "text-xs/normal",
-                children: M.default.Messages.QUESTS_PROMOTED
+                children: L.default.Messages.QUESTS_PROMOTED
               }), (0, a.jsx)(o.CircleQuestionIcon, {
                 color: u.tokens.colors.WHITE,
                 className: y.promotedBadgeIcon
@@ -162,7 +162,7 @@ let D = n.forwardRef(function(e, t) {
             children: e => (0, a.jsx)(u.Clickable, {
               ...e,
               className: y.submenuWrapper,
-              "aria-label": M.default.Messages.ACTIONS,
+              "aria-label": L.default.Messages.ACTIONS,
               children: (0, a.jsx)(d.default, {
                 className: i()(y.submenuIcon, y.white)
               })
@@ -178,7 +178,7 @@ let D = n.forwardRef(function(e, t) {
           }), (0, a.jsx)(u.Heading, {
             className: y.title,
             variant: "heading-md/medium",
-            children: M.default.Messages.QUESTS_TITLE.format({
+            children: L.default.Messages.QUESTS_TITLE.format({
               questName: V.config.messages.questName
             })
           }), (0, a.jsx)(u.Text, {
@@ -193,7 +193,7 @@ let D = n.forwardRef(function(e, t) {
           onClick: X ? Q : void 0,
           size: u.Button.Sizes.SMALL,
           submitting: F,
-          children: M.default.Messages.QUESTS_ACCEPT_QUEST
+          children: L.default.Messages.QUESTS_ACCEPT_QUEST
         })]
       }), (0, a.jsx)("div", {
         className: y.heroAssetWrapper,

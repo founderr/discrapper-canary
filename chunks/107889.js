@@ -18,14 +18,14 @@ var s = l("735250"),
   E = l("785717"),
   I = l("318661"),
   m = l("502762"),
-  _ = l("564440"),
-  v = l("329831"),
-  p = l("441580"),
-  T = l("146331"),
-  g = l("171368"),
-  A = l("806926"),
-  C = l("740021"),
-  x = l("228168"),
+  v = l("544989"),
+  _ = l("481932"),
+  T = l("195387"),
+  p = l("272510"),
+  x = l("171368"),
+  g = l("806926"),
+  A = l("740021"),
+  C = l("228168"),
   N = l("981631"),
   U = l("689938"),
   P = l("61007");
@@ -84,7 +84,7 @@ function h(e) {
       w({
         action: "PRESS_VIEW_MAIN_PROFILE",
         analyticsLocations: G
-      }), F(), (0, g.openUserProfileModal)({
+      }), F(), (0, x.openUserProfileModal)({
         userId: t.id,
         showGuildProfile: !1,
         guildId: B,
@@ -105,7 +105,7 @@ function h(e) {
       w({
         action: "PRESS_VIEW_SERVER_PROFILE",
         analyticsLocations: G
-      }), F(), (0, g.openUserProfileModal)({
+      }), F(), (0, x.openUserProfileModal)({
         userId: t.id,
         showGuildProfile: !0,
         guildId: B,
@@ -135,34 +135,34 @@ function h(e) {
         children: [(0, s.jsxs)(m.default, {
           user: t,
           displayProfile: Y,
-          profileType: x.UserProfileTypes.FULL_SIZE,
+          profileType: C.UserProfileTypes.FULL_SIZE,
           ref: z,
-          children: [k ? (0, s.jsx)(_.default, {
-            profileType: x.UserProfileTypes.FULL_SIZE,
-            children: (0, s.jsx)(p.default, {
+          children: [k ? (0, s.jsx)(v.default, {
+            profileType: C.UserProfileTypes.FULL_SIZE,
+            children: (0, s.jsx)(T.default, {
               user: t,
               guildId: B,
               channelId: h,
               onClose: F
             })
-          }) : (0, s.jsxs)(_.default, {
-            profileType: x.UserProfileTypes.FULL_SIZE,
-            children: [(0, s.jsx)(p.default, {
+          }) : (0, s.jsxs)(v.default, {
+            profileType: C.UserProfileTypes.FULL_SIZE,
+            children: [(0, s.jsx)(T.default, {
               user: t,
               guildId: B,
               channelId: h,
               onClose: F
-            }), (0, s.jsx)(v.default, {
-              profileType: x.UserProfileTypes.FULL_SIZE,
+            }), (0, s.jsx)(_.default, {
+              profileType: C.UserProfileTypes.FULL_SIZE,
               user: t,
               friendToken: j
-            }), (0, s.jsx)(T.default, {
+            }), (0, s.jsx)(p.default, {
               user: t,
-              profileType: x.UserProfileTypes.FULL_SIZE,
+              profileType: C.UserProfileTypes.FULL_SIZE,
               guildId: B,
               viewProfileItem: Q()
             })]
-          }), (0, s.jsx)(C.default, {
+          }), (0, s.jsx)(A.default, {
             user: t,
             displayProfile: Y,
             guildId: B,
@@ -172,7 +172,7 @@ function h(e) {
             transitionState: L,
             viewProfileItem: Q(),
             onClose: F
-          }), (0, s.jsx)(A.default, {
+          }), (0, s.jsx)(g.default, {
             user: t,
             channelId: h,
             displayProfile: Y,

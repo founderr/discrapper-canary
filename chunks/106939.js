@@ -33,8 +33,8 @@ var a = s("735250"),
   v = s("626135"),
   R = s("792125"),
   O = s("280570"),
-  L = s("914788"),
-  M = s("841409"),
+  M = s("914788"),
+  L = s("841409"),
   y = s("652262"),
   D = s("880257"),
   b = s("631885"),
@@ -134,12 +134,12 @@ function W() {
   let e = (0, D.default)(),
     t = (0, b.useAcceptedRequestsCount)(),
     s = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE),
-    l = (0, u.useStateFromStores)([L.default], () => L.default.getIsInitialized()),
+    l = (0, u.useStateFromStores)([M.default], () => M.default.getIsInitialized()),
     r = (0, y.useSelectedTeenId)(),
     {
       selectedTab: E,
       handleTabChange: f
-    } = (0, M.default)(),
+    } = (0, L.default)(),
     h = (0, I.useUID)(),
     T = S.default.getCurrentUser(),
     p = null != e,
@@ -183,12 +183,12 @@ function W() {
 function z() {
   let {
     analyticsLocations: e
-  } = (0, h.default)(f.default.FAMILY_CENTER), t = (0, D.default)(), s = (0, b.useAcceptedRequestsCount)(), l = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([L.default], () => L.default.getIsInitialized()), T = (0, y.useSelectedTeenId)(), x = (0, u.useStateFromStores)([p.default], () => p.default.theme), {
+  } = (0, h.default)(f.default.FAMILY_CENTER), t = (0, D.default)(), s = (0, b.useAcceptedRequestsCount)(), l = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([M.default], () => M.default.getIsInitialized()), T = (0, y.useSelectedTeenId)(), x = (0, u.useStateFromStores)([p.default], () => p.default.theme), {
     selectedTab: R,
     handleTabChange: j
-  } = (0, M.default)(), U = (0, I.useUID)(), P = S.default.getCurrentUser(), w = null != t, Y = r && null != P && !w;
+  } = (0, L.default)(), U = (0, I.useUID)(), P = S.default.getCurrentUser(), w = null != t, Y = r && null != P && !w;
   if (n.useEffect(() => {
-      E.setHomeLink(V.Routes.FAMILY_CENTER), (0, A.trackAppUIViewed)("family-center"), !L.default.isLoading() && L.default.canRefetch() && O.default.initialPageLoad(), !l && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
+      E.setHomeLink(V.Routes.FAMILY_CENTER), (0, A.trackAppUIViewed)("family-center"), !M.default.isLoading() && M.default.canRefetch() && O.default.initialPageLoad(), !l && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
         dismissAction: H.ContentDismissActionType.AUTO,
         forceTrack: !0
       })

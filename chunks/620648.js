@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return A
+    return g
   }
 });
 var s = l("735250"),
@@ -18,57 +18,57 @@ var s = l("735250"),
   E = l("648067"),
   I = l("588822"),
   m = l("900927"),
-  _ = l("652853"),
-  v = l("335191"),
-  p = l("988246"),
-  T = l("689938"),
-  g = l("921152");
+  v = l("652853"),
+  _ = l("335191"),
+  T = l("988246"),
+  p = l("689938"),
+  x = l("921152");
 
-function A(e) {
+function g(e) {
   var t;
   let {
     user: l,
-    displayProfile: A,
-    autoFocusNote: C = !1,
-    scrollToConnections: x = !1
+    displayProfile: g,
+    autoFocusNote: A = !1,
+    scrollToConnections: C = !1
   } = e, {
     trackUserProfileAction: N
   } = (0, S.useUserProfileAnalyticsContext)(), U = (0, a.useStateFromStores)([f.default], () => f.default.hidePersonalInformation), {
     theme: P
-  } = (0, _.useUserProfileThemeContext)(), h = (0, a.useStateFromStores)([c.default], () => c.default.locale), R = (0, u.default)("user_profile"), M = (null == A ? void 0 : A.bio) != null && (null == A ? void 0 : A.bio) !== "" || (0, r.default)(l.id), j = (0, E.default)(l.id), y = i.useRef(null);
+  } = (0, v.useUserProfileThemeContext)(), h = (0, a.useStateFromStores)([c.default], () => c.default.locale), R = (0, u.default)("user_profile"), M = (null == g ? void 0 : g.bio) != null && (null == g ? void 0 : g.bio) !== "" || (0, r.default)(l.id), j = (0, E.default)(l.id), y = i.useRef(null);
   return (i.useLayoutEffect(() => {
-    if (x) {
+    if (C) {
       var e;
       null == y || null === (e = y.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [x]), U) ? (0, s.jsx)(p.default, {}) : (0, s.jsxs)(n.ScrollerThin, {
+  }, [C]), U) ? (0, s.jsx)(T.default, {}) : (0, s.jsxs)(n.ScrollerThin, {
     fade: !0,
-    className: g.infoScroller,
+    className: x.infoScroller,
     children: [(0, s.jsxs)("div", {
-      className: g.userInfoSection,
+      className: x.userInfoSection,
       children: [M && (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(n.Heading, {
           variant: "eyebrow",
-          className: g.userInfoSectionHeader,
-          children: T.default.Messages.USER_PROFILE_ABOUT_ME
+          className: x.userInfoSectionHeader,
+          children: p.default.Messages.USER_PROFILE_ABOUT_ME
         }), (0, s.jsx)(I.default, {
-          className: g.userInfoText,
-          userBio: null !== (t = null == A ? void 0 : A.bio) && void 0 !== t ? t : "",
+          className: x.userInfoText,
+          userBio: null !== (t = null == g ? void 0 : g.bio) && void 0 !== t ? t : "",
           userId: l.id
         })]
       }), (0, s.jsxs)("div", {
         children: [(0, s.jsx)(n.Heading, {
           variant: "eyebrow",
-          className: g.userInfoSectionHeader,
-          children: T.default.Messages.USER_PROFILE_MEMBER_SINCE
+          className: x.userInfoSectionHeader,
+          children: p.default.Messages.USER_PROFILE_MEMBER_SINCE
         }), (0, s.jsx)(m.default, {
           userId: l.id,
-          textClassName: g.userInfoText
+          textClassName: x.userInfoText
         })]
       }), R && (0, s.jsx)("div", {
-        className: g.clans,
+        className: x.clans,
         children: (0, s.jsx)("div", {
-          className: g.userInfoText,
+          className: x.userInfoText,
           children: (0, s.jsx)(d.UserProfileClanContainer, {
             userId: l.id
           })
@@ -76,23 +76,23 @@ function A(e) {
       }), !l.isNonUserBot() && (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(n.Heading, {
           variant: "eyebrow",
-          className: g.userInfoSectionHeader,
-          children: T.default.Messages.NOTE
+          className: x.userInfoSectionHeader,
+          children: p.default.Messages.NOTE
         }), (0, s.jsx)(o.default, {
           userId: l.id,
-          autoFocus: C,
-          className: g.note,
+          autoFocus: A,
+          className: x.note,
           onUpdate: () => N({
             action: "SET_NOTE"
           })
         })]
       })]
-    }), (0, s.jsx)(v.ConnectedUserAccounts, {
+    }), (0, s.jsx)(_.ConnectedUserAccounts, {
       ref: y,
       connectedAccounts: j,
       theme: P,
       locale: h,
-      className: g.userInfoSection,
+      className: x.userInfoSection,
       userId: l.id
     })]
   })

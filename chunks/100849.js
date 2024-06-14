@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return p
+    return T
   }
 });
 var s = l("735250"),
@@ -18,16 +18,16 @@ var s = l("735250"),
   E = l("785717"),
   I = l("221292"),
   m = l("981631"),
-  _ = l("886140"),
-  v = l("305944");
+  v = l("886140"),
+  _ = l("305944");
 
-function p(e) {
+function T(e) {
   let {
     user: t,
     type: l,
     showActions: a,
-    onClose: p
-  } = e, T = (0, o.useStateFromStores)([c.default], () => null != c.default.getAnyStreamForUser(t.id)), g = (0, o.useStateFromStores)([f.default], () => f.default.getActivities(t.id)), A = i.useMemo(() => g.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [g]), C = i.useMemo(() => T ? A.find(e => e.type === m.ActivityTypes.PLAYING) : null, [A, T]), x = i.useMemo(() => A.filter(e => e !== C), [C, A]), {
+    onClose: T
+  } = e, p = (0, o.useStateFromStores)([c.default], () => null != c.default.getAnyStreamForUser(t.id)), x = (0, o.useStateFromStores)([f.default], () => f.default.getActivities(t.id)), g = i.useMemo(() => x.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [x]), A = i.useMemo(() => p ? g.find(e => e.type === m.ActivityTypes.PLAYING) : null, [g, p]), C = i.useMemo(() => g.filter(e => e !== A), [A, g]), {
     analyticsLocations: N,
     newestAnalyticsLocation: U
   } = (0, d.default)(), {
@@ -40,44 +40,44 @@ function p(e) {
     }
   };
   return (0, s.jsxs)(r.ScrollerThin, {
-    className: v.listScroller,
+    className: _.listScroller,
     fade: !0,
-    children: [T ? (0, s.jsx)(u.default, {
+    children: [p ? (0, s.jsx)(u.default, {
       type: l,
       user: t,
       source: U,
-      className: _.userProfileActivity,
+      className: v.userProfileActivity,
       showChannelDetails: l === S.Types.SIMPLIFIED_PROFILE,
-      activity: C,
-      actionColor: _.actionColor,
+      activity: A,
+      actionColor: v.actionColor,
       analyticsParams: R,
       showActions: a,
-      onOpenGameProfile: p,
+      onOpenGameProfile: T,
       onAction: () => {
         P({
           action: "JOIN_ACTIVITY"
         }), (0, I.trackUserProfileActivityJoined)({
           activityType: m.ActivityTypes.STREAMING,
-          activityName: null == C ? void 0 : C.name,
-          activityPlatform: null == C ? void 0 : C.platform,
-          activitySessionId: null == C ? void 0 : C.session_id,
-          applicationId: null == C ? void 0 : C.application_id,
+          activityName: null == A ? void 0 : A.name,
+          activityPlatform: null == A ? void 0 : A.platform,
+          activitySessionId: null == A ? void 0 : A.session_id,
+          applicationId: null == A ? void 0 : A.application_id,
           analyticsLocations: N,
           ...h
         })
       }
-    }) : null, x.map(e => (0, s.jsx)(u.default, {
+    }) : null, C.map(e => (0, s.jsx)(u.default, {
       type: l,
       activity: e,
       user: t,
       useStoreStream: !1,
       source: U,
-      className: n()(_.userProfileActivity, l === S.Types.SIMPLIFIED_PROFILE && _.simplifiedProfileActivity),
+      className: n()(v.userProfileActivity, l === S.Types.SIMPLIFIED_PROFILE && v.simplifiedProfileActivity),
       showChannelDetails: l === S.Types.SIMPLIFIED_PROFILE,
-      actionColor: _.actionColor,
+      actionColor: v.actionColor,
       analyticsParams: R,
       showActions: a,
-      onOpenGameProfile: p,
+      onOpenGameProfile: T,
       onAction: () => {
         P({
           action: "JOIN_ACTIVITY"

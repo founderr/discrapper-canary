@@ -18,14 +18,14 @@ var s = l("735250"),
   E = l("759231"),
   I = l("998502"),
   m = l("785717"),
-  _ = l("621853"),
-  v = l("204197"),
-  p = l("735336"),
-  T = l("520978"),
-  g = l("184325"),
-  A = l("652853"),
-  C = l("225714"),
-  x = l("228168"),
+  v = l("621853"),
+  _ = l("204197"),
+  T = l("735336"),
+  p = l("520978"),
+  x = l("184325"),
+  g = l("652853"),
+  A = l("225714"),
+  C = l("228168"),
   N = l("231338"),
   U = l("689938"),
   P = l("155614");
@@ -43,25 +43,25 @@ function M(e) {
     isStreaming: L,
     hasProfileEffect: F,
     onClose: D
-  } = e, b = (0, a.useStateFromStores)([f.default], () => f.default.getRelationshipType(I.id)), B = (0, a.useStateFromStores)([c.default], () => c.default.isMobileOnline(I.id)), G = (0, a.useStateFromStores)([c.default], () => c.default.getStatus(I.id)), k = (0, a.useStateFromStores)([_.default], () => _.default.getUserProfile(I.id)), w = (0, a.useStateFromStores)([d.default], () => d.default.getId() === I.id), {
+  } = e, b = (0, a.useStateFromStores)([f.default], () => f.default.getRelationshipType(I.id)), B = (0, a.useStateFromStores)([c.default], () => c.default.isMobileOnline(I.id)), G = (0, a.useStateFromStores)([c.default], () => c.default.getStatus(I.id)), k = (0, a.useStateFromStores)([v.default], () => v.default.getUserProfile(I.id)), w = (0, a.useStateFromStores)([d.default], () => d.default.getId() === I.id), {
     theme: Y
-  } = (0, A.useUserProfileThemeContext)(), {
+  } = (0, g.useUserProfileThemeContext)(), {
     trackUserProfileAction: V
   } = (0, m.useUserProfileAnalyticsContext)(), {
     avatarSrc: H,
     eventHandlers: W,
     avatarDecorationSrc: z
-  } = (0, v.default)({
+  } = (0, _.default)({
     user: I,
     size: h
   }), Z = i.useMemo(() => (0, u.shouldDisableUserPresenceInChannel)(I, j), [I, j]);
   return (0, s.jsxs)("header", {
     className: O,
-    children: [(0, s.jsx)(p.default, {
+    children: [(0, s.jsx)(T.default, {
       displayProfile: t,
       onClose: D,
       user: I,
-      profileType: x.UserProfileTypes.MODAL,
+      profileType: C.UserProfileTypes.MODAL,
       hasProfileEffect: F
     }), (0, s.jsxs)("div", {
       className: P.header,
@@ -88,20 +88,20 @@ function M(e) {
             className: P.warningCircleIcon,
             color: n.default.unsafe_rawColors.YELLOW_300.css
           })
-        }) : (0, s.jsx)(g.default, {
+        }) : (0, s.jsx)(x.default, {
           user: I,
           className: P.badgeList,
           guildId: M,
-          size: g.BadgeSizes.SIZE_24,
+          size: x.BadgeSizes.SIZE_24,
           shrinkAtCount: 8,
-          shrinkToSize: g.BadgeSizes.SIZE_18,
+          shrinkToSize: x.BadgeSizes.SIZE_18,
           onBadgeClick: D
         }), (0, s.jsxs)("div", {
           className: P.relationshipButtons,
-          children: [(null == k ? void 0 : k.application) != null && (0, s.jsx)(T.default, {
+          children: [(null == k ? void 0 : k.application) != null && (0, s.jsx)(p.default, {
             className: P.applicationInstallButton,
             application: k.application
-          }), (0, s.jsx)(C.default, {
+          }), (0, s.jsx)(A.default, {
             user: I,
             isCurrentUser: w,
             relationshipType: b,

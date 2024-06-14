@@ -96,7 +96,7 @@ t.default = function(e) {
         children: [(0, a.jsx)("img", {
           alt: "",
           className: T.wreathIcon,
-          src: s("896145")
+          src: s("858595")
         }), (0, a.jsx)(c.default, {
           className: T.partnerBranding,
           quest: N,

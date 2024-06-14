@@ -170,7 +170,7 @@ let e0 = o.default.connectStores([F.default, eU.default, eD.default], () => ({
   }),
   e2 = [eQ.Routes.GUILD_BOOSTING_MARKETING(":guildId"), ...Array.from(eZ.StaticChannelRoutes).map(e => eQ.Routes.CHANNEL(":guildId", e))];
 
-function e7(e) {
+function e3(e) {
   let {
     guildId: t,
     channelId: n = null,
@@ -184,7 +184,7 @@ function e7(e) {
     threadId: s
   }
 }
-let e3 = [{
+let e7 = [{
   path: [eQ.Routes.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode")],
   render(e) {
     let {
@@ -401,7 +401,7 @@ function e9(e) {
       path: t,
       isChatRoute: n
     }
-    of e3) {
+    of e7) {
     if (!n) continue;
     let a = (0, i.matchPath)(e, {
       path: t
@@ -453,7 +453,7 @@ class e8 extends s.PureComponent {
             path: t,
             isSessionRequired: n
           }
-          of e3) {
+          of e7) {
           if (!n) continue;
           let a = (0, i.matchPath)(e, {
             path: t
@@ -470,7 +470,7 @@ class e8 extends s.PureComponent {
         channelId: s,
         messageId: r,
         threadId: o
-      } = e7(n), u = (0, eE.isValidGuildId)(a), d = (0, eE.isValidChannelId)(s), c = (0, eE.isValidChannelId)(o), h = eB.default.getGuildId(), C = h !== a;
+      } = e3(n), u = (0, eE.isValidGuildId)(a), d = (0, eE.isValidChannelId)(s), c = (0, eE.isValidChannelId)(o), h = eB.default.getGuildId(), C = h !== a;
       if (u && C && f.default.selectGuild(a), u && d) {
         let n = ek.default.getChannelId(h),
           i = n !== s;
@@ -529,7 +529,7 @@ class e8 extends s.PureComponent {
       guildId: a,
       channelId: s,
       threadId: l
-    } = e7(n), i = (0, eE.isValidGuildId)(a) && a !== eQ.ME && a !== eQ.FAVORITES;
+    } = e3(n), i = (0, eE.isValidGuildId)(a) && a !== eQ.ME && a !== eQ.FAVORITES;
     if (null != s && (0, eE.isValidChannelId)(s) && !(0, eZ.isStaticChannelRoute)(s) && i) {
       let n = eb.default.getChannel(s);
       if (null == n) eA.default.loadThread(s).then(() => e5({
@@ -564,7 +564,7 @@ class e8 extends s.PureComponent {
           exact: !0,
           from: "/channels",
           to: "/"
-        }), e3.map(e => {
+        }), e7.map(e => {
           let {
             path: t,
             render: n

@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return x
+    return C
   }
 });
 var s = l("735250");
@@ -19,58 +19,58 @@ var i = l("120356"),
   E = l("648067"),
   I = l("588822"),
   m = l("900927"),
-  _ = l("678738"),
-  v = l("652853"),
-  p = l("335191"),
-  T = l("351707"),
-  g = l("228168"),
-  A = l("689938"),
-  C = l("363175");
+  v = l("678738"),
+  _ = l("652853"),
+  T = l("335191"),
+  p = l("351707"),
+  x = l("228168"),
+  g = l("689938"),
+  A = l("363175");
 
-function x(e) {
+function C(e) {
   let {
     user: t,
     currentUser: l,
     displayProfile: i,
-    subsection: x,
+    subsection: C,
     className: N,
     onClose: U
   } = e, {
     theme: P
-  } = (0, v.useUserProfileThemeContext)(), {
+  } = (0, _.useUserProfileThemeContext)(), {
     trackUserProfileAction: h
   } = (0, f.useUserProfileAnalyticsContext)(), R = null == i ? void 0 : i.guildId, M = (0, n.useStateFromStores)([d.default], () => null != R ? d.default.getGuild(R) : null), j = (0, n.useStateFromStores)([c.default], () => c.default.getGuildId()), y = (0, n.useStateFromStores)([u.default], () => u.default.locale), O = (0, E.default)(t.id), L = (0, S.default)(t.id);
   return (0, s.jsxs)(o.ScrollerThin, {
     fade: !0,
-    className: a()(C.scroller, N),
+    className: a()(A.scroller, N),
     children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, s.jsx)(I.default, {
       userBio: i.bio,
       setLineClamp: !1
-    }), null != M && (0, s.jsx)(T.default, {
+    }), null != M && (0, s.jsx)(p.default, {
       user: t,
       currentUser: l,
       guild: M,
-      scrollIntoView: x === g.UserProfileSubsections.ROLES
-    }), (0, s.jsx)(_.default, {
-      title: A.default.Messages.USER_PROFILE_MEMBER_SINCE,
+      scrollIntoView: C === x.UserProfileSubsections.ROLES
+    }), (0, s.jsx)(v.default, {
+      title: g.default.Messages.USER_PROFILE_MEMBER_SINCE,
       children: (0, s.jsx)(m.default, {
         userId: t.id,
         guildId: null == i ? void 0 : i.guildId,
-        tooltipDelay: g.USER_PROFILE_TOOLTIP_DELAY
+        tooltipDelay: x.USER_PROFILE_TOOLTIP_DELAY
       })
-    }), O.length > 0 && (0, s.jsx)(_.default, {
-      title: A.default.Messages.CONNECTIONS,
-      children: (0, s.jsx)(p.ConnectedUserAccounts, {
+    }), O.length > 0 && (0, s.jsx)(v.default, {
+      title: g.default.Messages.CONNECTIONS,
+      children: (0, s.jsx)(T.ConnectedUserAccounts, {
         connectedAccounts: O,
-        className: C.connections,
+        className: A.connections,
         userId: t.id,
         theme: P,
         locale: y
       })
-    }), L.length > 0 && (0, s.jsx)(_.default, {
-      title: A.default.Messages.APPS,
-      children: L.map(e => (0, s.jsx)(p.ConnectedApplicationUserRoleAccount, {
-        className: C.appsConnections,
+    }), L.length > 0 && (0, s.jsx)(v.default, {
+      title: g.default.Messages.APPS,
+      children: L.map(e => (0, s.jsx)(T.ConnectedApplicationUserRoleAccount, {
+        className: A.appsConnections,
         applicationRoleConnection: e,
         locale: y,
         onApplicationClicked: () => {
@@ -80,13 +80,13 @@ function x(e) {
         },
         selectedGuildId: null != j ? j : void 0
       }, e.application.id))
-    }), (0, s.jsx)(_.default, {
-      title: A.default.Messages.NOTE,
-      scrollIntoView: x === g.UserProfileSubsections.NOTE,
+    }), (0, s.jsx)(v.default, {
+      title: g.default.Messages.NOTE,
+      scrollIntoView: C === x.UserProfileSubsections.NOTE,
       children: (0, s.jsx)(r.default, {
         userId: t.id,
-        className: C.note,
-        autoFocus: x === g.UserProfileSubsections.NOTE,
+        className: A.note,
+        autoFocus: C === x.UserProfileSubsections.NOTE,
         onUpdate: () => h({
           action: "SET_NOTE"
         })

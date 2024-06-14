@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return p
+    return T
   }
 });
 var s = l("735250");
@@ -19,19 +19,19 @@ var i = l("442837"),
   E = l("616140"),
   I = l("228168"),
   m = l("981631"),
-  _ = l("602091"),
-  v = l("854898");
+  v = l("602091"),
+  _ = l("854898");
 
-function p(e) {
+function T(e) {
   var t;
   let {
     user: l,
-    channelId: p,
-    displayProfile: T,
-    initialSection: g,
-    initialSubsection: A,
-    friendToken: C,
-    transitionState: x,
+    channelId: T,
+    displayProfile: p,
+    initialSection: x,
+    initialSubsection: g,
+    friendToken: A,
+    transitionState: C,
     onClose: N
   } = e, U = (0, i.useStateFromStores)([a.default], () => a.default.getRelationshipType(l.id)), {
     originalFriendingEnabled: P,
@@ -40,38 +40,38 @@ function p(e) {
     location: "SimplifiedUserProfileModalBody"
   });
   return (0, s.jsxs)("div", {
-    className: v.container,
+    className: _.container,
     children: [(0, s.jsx)(S.default, {
       user: l,
       profileType: I.UserProfileTypes.FULL_SIZE,
-      nickname: n.default.getName(null == T ? void 0 : T.guildId, p, l),
-      pronouns: null == T ? void 0 : T.pronouns,
+      nickname: n.default.getName(null == p ? void 0 : p.guildId, T, l),
+      pronouns: null == p ? void 0 : p.pronouns,
       nicknameVariant: "heading-xl/bold",
       nicknameIcons: (0, s.jsx)(d.default, {
         userId: l.id
       }),
       tags: (0, s.jsx)(r.default, {
-        displayProfile: T,
+        displayProfile: p,
         profileType: I.UserProfileTypes.FULL_SIZE,
         onClose: N
       })
     }), (h || P) && U === m.RelationshipTypes.PENDING_INCOMING && (0, s.jsx)(f.default.Overlay, {
-      className: v.banner,
+      className: _.banner,
       children: (0, s.jsx)(c.default, {
         user: l,
-        guildId: null !== (t = null == T ? void 0 : T.guildId) && void 0 !== t ? t : void 0,
-        channelId: p,
-        friendToken: C
+        guildId: null !== (t = null == p ? void 0 : p.guildId) && void 0 !== t ? t : void 0,
+        channelId: T,
+        friendToken: A
       })
     }), (0, s.jsxs)(f.default.Overlay, {
-      className: v.overlay,
-      children: [x === _.ModalTransitionState.ENTERED && (0, s.jsx)(u.default, {
+      className: _.overlay,
+      children: [C === v.ModalTransitionState.ENTERED && (0, s.jsx)(u.default, {
         onTooltipClose: N
       }), (0, s.jsx)(E.default, {
         user: l,
-        displayProfile: T,
-        initialSection: g,
-        initialSubsection: A,
+        displayProfile: p,
+        initialSection: x,
+        initialSubsection: g,
         onClose: N
       })]
     })]

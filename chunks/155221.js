@@ -13,8 +13,8 @@
       r = t("719711"),
       l = t("271579"),
       s = t("756647"),
-      b = t("442837"),
-      u = t("433517"),
+      u = t("442837"),
+      b = t("433517"),
       p = t("799656"),
       h = t("540117"),
       m = t("765717"),
@@ -283,11 +283,11 @@
           })
         }), (0, d.jsxs)(E.default, {
           skipsSettingDefaultPageTitle: n,
-          children: [e, v.isPlatformEmbedded && (t === I.MigrationStatus.NOT_STARTED || t === I.MigrationStatus.IN_PROGRESS) && !0 !== u.Storage.get(r.DOMAIN_MIGRATION_SUCCESS_KEY) ? (0, d.jsx)(g.default, {}) : null]
+          children: [e, v.isPlatformEmbedded && (t === I.MigrationStatus.NOT_STARTED || t === I.MigrationStatus.IN_PROGRESS) && !0 !== b.Storage.get(r.DOMAIN_MIGRATION_SUCCESS_KEY) ? (0, d.jsx)(g.default, {}) : null]
         })
       }
     }
-    a.default = b.default.connectStores([T.default, I.default], () => ({
+    a.default = u.default.connectStores([T.default, I.default], () => ({
       isAuthenticated: T.default.isAuthenticated(),
       migrationStatus: I.default.getMigrationStatus()
     }), {
