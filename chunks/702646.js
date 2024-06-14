@@ -5,10 +5,10 @@ var a = n("735250"),
   l = n("120356"),
   i = n.n(l),
   r = n("143927"),
-  o = n("531057"),
-  u = n("149020"),
-  d = n("8386"),
-  c = n("738232"),
+  o = n("785511"),
+  u = n("531057"),
+  d = n("149020"),
+  c = n("8386"),
   f = n("376644"),
   E = n("481060"),
   h = n("963202"),
@@ -25,7 +25,7 @@ function g(e) {
     text: n,
     ariaLabel: l,
     tooltip: r,
-    onClick: u,
+    onClick: o,
     isActive: d,
     autoWidth: c = !1
   } = e, [f, h] = s.useState(!1), [C, _] = s.useState(!1), S = m.useClanDiscoveryUIStore.getState().mode, p = S === m.ClanDiscoveryMode.GAMES || S === m.ClanDiscoveryMode.PLAYSTYLE || S === m.ClanDiscoveryMode.TRAITS;
@@ -35,7 +35,7 @@ function g(e) {
   let g = d && (C || f),
     T = s.useMemo(() => (0, a.jsxs)(E.Clickable, {
       className: I.tooltipContentWrapper,
-      onClick: u,
+      onClick: o,
       onMouseEnter: () => {
         !p && h(!0)
       },
@@ -45,7 +45,7 @@ function g(e) {
       children: [(0, a.jsx)("div", {
         className: I.tooltipHoverBridge
       }), r]
-    }), [r, u, p]);
+    }), [r, o, p]);
   return (0, a.jsx)(E.Tooltip, {
     text: T,
     position: "bottom",
@@ -66,7 +66,7 @@ function g(e) {
       innerClassName: I.filterPillContents,
       look: E.ButtonLooks.OUTLINED,
       color: E.ButtonColors.CUSTOM,
-      onClick: u,
+      onClick: o,
       onMouseEnter: () => {
         _(!0)
       },
@@ -79,7 +79,7 @@ function g(e) {
           variant: "text-xs/medium",
           color: "none",
           children: n
-        }), (0, a.jsx)(o.ChevronSmallDownIcon, {
+        }), (0, a.jsx)(u.ChevronSmallDownIcon, {
           className: I.chevron,
           color: "currentColor"
         })]
@@ -92,19 +92,19 @@ function T() {
   var e;
   let t = (0, m.useClanDiscoveryUIStore)(e => e.selectedGames, r.default),
     n = s.useCallback(() => {
-      (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.GAMES)
+      (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.GAMES, !0)
     }, []),
     l = null !== (e = (0, C.useFormattedGameNames)(t)) && void 0 !== e ? e : "",
     i = t.slice(0, 3),
     o = t.length - 3,
-    d = (0, a.jsx)("div", {
+    u = (0, a.jsx)("div", {
       className: I.gamesTooltip,
       children: i.map((e, t) => (0, a.jsx)(_.default, {
         applicationId: e,
         otherGamesCount: 2 === t && o > 0 ? o + 1 : void 0
       }, e))
     }),
-    c = (0, a.jsx)(u.GameControllerIcon, {
+    c = (0, a.jsx)(d.GameControllerIcon, {
       className: I.filterPillIcon,
       color: "currentColor"
     });
@@ -113,7 +113,7 @@ function T() {
     text: p.default.Messages.CLAN_DISCOVERY_GAME_FILTER.format({
       count: t.length
     }),
-    tooltip: d,
+    tooltip: u,
     onClick: n,
     isActive: t.length > 0,
     ariaLabel: l,
@@ -127,10 +127,9 @@ function A() {
     n = null != t ? e[t] : null,
     l = null == n ? void 0 : n.title,
     i = s.useCallback(() => {
-      (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.PLAYSTYLE)
-    }, []);
-  if (null == n || null == l) return null;
-  let o = (0, a.jsxs)(a.Fragment, {
+      (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.PLAYSTYLE, !0)
+    }, []),
+    u = null != n ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(E.Heading, {
         variant: "heading-xxl/medium",
         children: n.emoji
@@ -143,25 +142,25 @@ function A() {
           children: n.subtitle
         })]
       })]
-    }),
-    u = (0, a.jsx)(c.ReactionIcon, {
+    }) : null,
+    d = (0, a.jsx)(o.DpadIcon, {
       className: I.filterPillIcon,
       color: "currentColor"
     });
   return (0, a.jsx)(g, {
-    icon: u,
-    text: l,
-    tooltip: o,
+    icon: d,
+    text: null != l ? l : p.default.Messages.CLAN_DISCOVERY_ANY_PLAYSTYLE,
+    tooltip: u,
     onClick: i,
     isActive: null != n,
-    ariaLabel: l
+    ariaLabel: null != l ? l : p.default.Messages.CLAN_DISCOVERY_ANY_PLAYSTYLE
   })
 }
 
 function N() {
   let e = (0, m.useClanDiscoveryUIStore)(e => e.selectedTraits, r.default),
     t = s.useCallback(() => {
-      (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.TRAITS)
+      (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.TRAITS, !0)
     }, []);
   if (null == e) return null;
   let n = (0, a.jsx)("div", {
@@ -200,7 +199,7 @@ function v() {
   return e ? (0, a.jsxs)(E.Clickable, {
     className: i()(I.buttonPill),
     onClick: () => (0, m.setClanDiscoveryMode)(m.ClanDiscoveryMode.ADMIN_UPSELL),
-    children: [(0, a.jsx)(d.PlusSmallIcon, {
+    children: [(0, a.jsx)(c.PlusSmallIcon, {
       className: I.filterPillIcon,
       color: "currentColor"
     }), (0, a.jsx)("div", {
@@ -213,9 +212,12 @@ function v() {
     })]
   }) : null
 }
-t.default = function() {
+t.default = function(e) {
+  let {
+    className: t
+  } = e;
   return (0, a.jsxs)("div", {
-    className: I.toolbar,
+    className: i()(I.toolbar, t),
     children: [(0, a.jsx)("div", {
       className: I.addClan,
       children: (0, a.jsx)(v, {})

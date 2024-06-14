@@ -73,10 +73,13 @@ let E = (0, u.default)((0, d.persist)(e => ({
 }));
 
 function _(e) {
-  let t = E.getState().mode;
+  let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+    s = E.getState().mode,
+    n = E.getState().started;
   E.setState({
     mode: e,
-    previousMode: t
+    previousMode: s,
+    started: t || n
   })
 }
 

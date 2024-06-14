@@ -74,7 +74,8 @@ let T = {
             className: g.toolbar,
             style: {
               opacity: c.opacity,
-              transform: c.opacity.to([0, 1], [-40, 0]).to(e => "translateY(".concat(e, "px)"))
+              transform: c.opacity.to([0, 1], [-40, 0]).to(e => "translateY(".concat(e, "px)")),
+              borderBottom: "1px solid var(--bg-mod-strong)"
             },
             children: (0, l.jsx)(m.default, {})
           }), (0, l.jsx)(r.animated.div, {
