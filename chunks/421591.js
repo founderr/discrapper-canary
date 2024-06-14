@@ -45,7 +45,7 @@ t.default = r.memo(function(e) {
     case a.HistoryItemType.HOME:
       t = (0, i.jsx)(l.default, {
         channel: d,
-        enableRecommendations: f.enabled,
+        enableRecommendations: f.recommendationsEnabled,
         enableRecents: f.recentsDropdownEnabled
       });
       break;
