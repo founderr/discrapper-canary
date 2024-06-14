@@ -16,8 +16,8 @@ var i = l("120356"),
   c = l("194359"),
   f = l("906732"),
   S = l("785717"),
-  E = l("993409"),
-  I = l("981631"),
+  I = l("993409"),
+  E = l("981631"),
   m = l("689938"),
   v = l("431154");
 
@@ -33,50 +33,69 @@ function _(e) {
   } = e, {
     newestAnalyticsLocation: g
   } = (0, f.default)(), {
-    trackUserProfileAction: A
+    trackUserProfileAction: N
   } = (0, S.useUserProfileAnalyticsContext)();
-  if (t || i === I.RelationshipTypes.BLOCKED) return null;
+  if (t || i === E.RelationshipTypes.BLOCKED) return null;
   let C = () => {
-    A({
+    N({
       action: "SEND_MESSAGE"
     }), d.default.openPrivateChannel(l.id, !1, !1, g), x()
   };
-  if (p) return i === I.RelationshipTypes.FRIEND || l.bot ? (0, s.jsx)(E.default, {
+  if (p) return i === E.RelationshipTypes.FRIEND || l.bot ? (0, s.jsx)(I.default, {
     variant: "text",
     text: m.default.Messages.SEND_DM,
     icon: n.ChatIcon,
     color: a()(u.Button.Colors.PRIMARY, v.color),
     onClick: C
-  }) : i === I.RelationshipTypes.PENDING_OUTGOING || i === I.RelationshipTypes.PENDING_INCOMING ? (0, s.jsxs)("div", {
+  }) : i === E.RelationshipTypes.PENDING_OUTGOING ? (0, s.jsxs)("div", {
     className: v.multipleButtons,
-    children: [(0, s.jsx)(E.default, {
+    children: [(0, s.jsx)(I.default, {
       variant: "icon",
       text: m.default.Messages.FRIENDS_SECTION_PENDING,
       icon: o.UserClockIcon,
+      className: v.iconButton,
       color: a()(u.Button.Colors.PRIMARY, v.color),
       disabled: !0
-    }), (0, s.jsx)(E.default, {
+    }), (0, s.jsx)(I.default, {
       variant: "text",
       text: m.default.Messages.SEND_DM,
       icon: n.ChatIcon,
       color: a()(u.Button.Colors.PRIMARY, v.color),
       onClick: C
     })]
+  }) : i === E.RelationshipTypes.PENDING_INCOMING ? (0, s.jsxs)("div", {
+    className: v.multipleButtons,
+    children: [(0, s.jsx)(I.default, {
+      variant: "icon",
+      text: m.default.Messages.FRIENDS_SECTION_PENDING,
+      icon: o.UserClockIcon,
+      className: v.iconButton,
+      color: a()(u.Button.Colors.PRIMARY, v.color),
+      disabled: !0
+    }), (0, s.jsx)(I.default, {
+      variant: "text",
+      text: m.default.Messages.SEND_DM,
+      icon: n.ChatIcon,
+      className: v.iconButton,
+      color: a()(u.Button.Colors.PRIMARY, v.color),
+      onClick: C
+    })]
   }) : (0, s.jsxs)("div", {
     className: v.multipleButtons,
-    children: [(0, s.jsx)(E.default, {
+    children: [(0, s.jsx)(I.default, {
       variant: "icon",
       text: m.default.Messages.SEND_DM,
       icon: n.ChatIcon,
+      className: v.iconButton,
       color: a()(u.Button.Colors.PRIMARY, v.color),
       onClick: C
-    }), (0, s.jsx)(E.default, {
+    }), (0, s.jsx)(I.default, {
       variant: "text",
       text: m.default.Messages.USER_PROFILE_ADD_FRIEND,
       icon: r.UserPlusIcon,
       color: a()(u.Button.Colors.BRAND, v.color),
       onClick: () => {
-        A({
+        N({
           action: "SEND_FRIEND_REQUEST"
         }), c.default.addRelationship({
           userId: l.id,
@@ -88,36 +107,36 @@ function _(e) {
       }
     })]
   });
-  if (i === I.RelationshipTypes.FRIEND || l.bot) return T ? (0, s.jsx)(E.default, {
+  if (i === E.RelationshipTypes.FRIEND || l.bot) return T ? (0, s.jsx)(I.default, {
     variant: "text",
     text: m.default.Messages.SEND_DM,
     color: a()(u.Button.Colors.PRIMARY, v.color),
     onClick: C
-  }) : (0, s.jsx)(E.default, {
+  }) : (0, s.jsx)(I.default, {
     variant: "text",
     text: m.default.Messages.SEND_MESSAGE,
     color: u.Button.Colors.GREEN,
     onClick: C
   });
-  if (i === I.RelationshipTypes.PENDING_OUTGOING) return (0, s.jsx)(E.default, {
+  if (i === E.RelationshipTypes.PENDING_OUTGOING) return (0, s.jsx)(I.default, {
     variant: "text",
     text: m.default.Messages.ADD_FRIEND_BUTTON_AFTER,
     color: u.Button.Colors.GREEN,
     disabled: !0
   });
-  if (i === I.RelationshipTypes.PENDING_INCOMING) return T ? (0, s.jsx)(E.default, {
+  if (i === E.RelationshipTypes.PENDING_INCOMING) return T ? (0, s.jsx)(I.default, {
     variant: "text",
     text: m.default.Messages.SEND_DM,
     color: a()(u.Button.Colors.PRIMARY, v.color),
     onClick: C
   }) : (0, s.jsxs)("div", {
     className: v.pendingIncoming,
-    children: [(0, s.jsx)(E.default, {
+    children: [(0, s.jsx)(I.default, {
       variant: "text",
       text: m.default.Messages.FRIEND_REQUEST_ACCEPT,
       color: u.Button.Colors.GREEN,
       onClick: () => {
-        A({
+        N({
           action: "ACCEPT_FRIEND_REQUEST"
         }), c.default.addRelationship({
           userId: l.id,
@@ -127,12 +146,12 @@ function _(e) {
           friendToken: _
         })
       }
-    }), (0, s.jsx)(E.default, {
+    }), (0, s.jsx)(I.default, {
       variant: "text",
       text: m.default.Messages.FRIEND_REQUEST_IGNORE,
       color: u.Button.Colors.PRIMARY,
       onClick: () => {
-        A({
+        N({
           action: "IGNORE_FRIEND_REQUEST"
         }), c.default.cancelFriendRequest(l.id, {
           location: g
@@ -141,12 +160,12 @@ function _(e) {
       className: v.actionRightButton
     })]
   });
-  return (0, s.jsx)(E.default, {
+  return (0, s.jsx)(I.default, {
     variant: "text",
     text: m.default.Messages.ADD_FRIEND_BUTTON,
     color: u.Button.Colors.GREEN,
     onClick: () => {
-      A({
+      N({
         action: "SEND_FRIEND_REQUEST"
       }), c.default.addRelationship({
         userId: l.id,
