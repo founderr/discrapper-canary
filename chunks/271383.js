@@ -605,7 +605,7 @@ l = "GuildMemberStore", (o = "displayName") in(a = ee) ? Object.defineProperty(a
     if (null == s) return R.warn("Guild ".concat(t, " not found during GUILD_MEMBER_UPDATE.")), !1;
     let a = r[n];
     if (null == a || a.roles.includes(i)) return !1;
-    a.roles.push(i);
+    a.roles = [...a.roles, i];
     let o = H(O.default.getRoles(s.id), a.roles);
     return r[n] = {
       ...a,
