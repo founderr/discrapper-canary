@@ -298,9 +298,10 @@ function ei(e) {
       layout: "SIMPLIFIED_ACCOUNT_POPOUT",
       userId: t.id,
       guildId: l,
-      children: (0, a.jsx)("div", {
-        className: en.popoutContainer,
+      children: (0, a.jsx)(h.Dialog, {
         ref: ed,
+        "aria-label": t.username,
+        className: en.popoutContainer,
         children: (0, a.jsxs)(D.default, {
           className: en.themeContainer,
           user: t,
