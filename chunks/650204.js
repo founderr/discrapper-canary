@@ -5,8 +5,8 @@
     var r = t("202226"),
       l = t("512722"),
       s = t.n(l),
-      u = t("832037"),
-      b = t("464253"),
+      b = t("832037"),
+      u = t("464253"),
       p = t("485359"),
       h = t("395727"),
       m = t("471638"),
@@ -59,8 +59,8 @@
       let o = Object.keys(t).filter(e => null != t[e]).map(e => "".concat(e, ": ").concat(t[e])).join(", ");
       new M.default().log("[NATIVE INFO] host ".concat(e, ", modules: ").concat(o, ", build: ").concat(a)), O.default.initializeExitHook()
     }
-    if ((0, N.setupWindow)(window), __OVERLAY__) V(u.default.Overlay);
-    else if (null != window.require && null == window.DiscordNative) V(u.default.OutdatedClient);
+    if ((0, N.setupWindow)(window), __OVERLAY__) V(b.default.Overlay);
+    else if (null != window.require && null == window.DiscordNative) V(b.default.OutdatedClient);
     else {
       if (document.addEventListener("scroll", e => e.preventDefault()), A.isPlatformEmbedded) {
         window.onbeforeunload = () => O.default.beforeUnload(), O.default.on("HELP_OPEN", () => window.open(I.default.getCommunityURL()));
@@ -77,5 +77,5 @@
           (0, v.hidden)(window)
         })
       }
-      h.default.initialize(), b.default.init(), _.default.init(), y.default.init(), p.default.initialize(), g.default.initialize(), T.default.initialize(), m.initialize(), V(u.default.App)
+      h.default.initialize(), u.default.init(), _.default.init(), y.default.init(), p.default.initialize(), g.default.initialize(), T.default.initialize(), m.initialize(), V(b.default.App)
     }

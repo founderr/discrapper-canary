@@ -9,8 +9,8 @@
       r = t("199902"),
       l = t("314897"),
       s = t("569545"),
-      u = t("803647"),
-      b = t("981631"),
+      b = t("803647"),
+      u = t("981631"),
       p = t("65154");
 
     function h(e, a, t) {
@@ -111,7 +111,7 @@
             null != a && (0, c.setStreamPaused)(a, !0);
             break;
           case f.StreamDirectorActionType.STOP:
-            null != a && (0, u.default)(a);
+            null != a && (0, b.default)(a);
             break;
           default:
             throw Error("unhandled stream action: ".concat(e.type))
@@ -144,13 +144,13 @@
             sourceId: c,
             audioSourceId: f,
             sound: o
-          } = e, r = l.default.getId(), u = (0, s.encodeStreamKey)({
+          } = e, r = l.default.getId(), b = (0, s.encodeStreamKey)({
             streamType: a,
             guildId: t,
             channelId: d,
             ownerId: r
           });
-          null == n != (null == c) ? (null != n && this._onStreamApplication(u, n), null != c && this._onStreamDirectSource(u, c, f, o)) : new i.default("ApplicationSwitchingManager").warn("invalid start_stream: both application + display modes were specified (pid: ".concat(n, ", source-id: ").concat(c, ")"))
+          null == n != (null == c) ? (null != n && this._onStreamApplication(b, n), null != c && this._onStreamDirectSource(b, c, f, o)) : new i.default("ApplicationSwitchingManager").warn("invalid start_stream: both application + display modes were specified (pid: ".concat(n, ", source-id: ").concat(c, ")"))
         }), d.default.subscribe("STREAM_DELETE", e => {
           let {
             streamKey: a
@@ -171,7 +171,7 @@
             videoState: a,
             context: t
           } = e;
-          t === p.MediaEngineContextTypes.STREAM && this._onCapturePaused(a === b.MediaEngineVideoStates.PAUSED)
+          t === p.MediaEngineContextTypes.STREAM && this._onCapturePaused(a === u.MediaEngineVideoStates.PAUSED)
         }), d.default.subscribe("MEDIA_ENGINE_SET_GO_LIVE_SOURCE", e => {
           let {
             settings: a

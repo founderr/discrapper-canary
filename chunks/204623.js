@@ -13,8 +13,8 @@
       r = t("946188"),
       l = t("481060"),
       s = t("596454"),
-      u = t("451478"),
-      b = t("586576"),
+      b = t("451478"),
+      u = t("586576"),
       p = t("176354"),
       h = t("63063"),
       m = t("358085"),
@@ -23,8 +23,8 @@
       I = t("151851"),
       g = t("981631"),
       O = t("689938");
-    let T = o.default.connectStores([u.default], () => ({
-      focused: u.default.isFocused()
+    let T = o.default.connectStores([b.default], () => ({
+      focused: b.default.isFocused()
     }))(I.default);
     class S extends n.PureComponent {
       getPlatform() {
@@ -62,7 +62,7 @@
             })
           }), (0, d.jsx)(T, {
             type: this.getPlatform()
-          }), (0, d.jsx)(b.default, {
+          }), (0, d.jsx)(u.default, {
             title: O.default.Messages.UNSUPPORTED_BROWSER_TITLE,
             note: e,
             action: a

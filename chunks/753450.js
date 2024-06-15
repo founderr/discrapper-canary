@@ -52,8 +52,8 @@ var l = i("735250"),
   Y = i("451478"),
   H = i("729035"),
   V = i("86813"),
-  K = i("826026"),
-  W = i("808268"),
+  W = i("826026"),
+  K = i("808268"),
   Z = i("626135"),
   z = i("768581"),
   q = i("572004"),
@@ -119,7 +119,7 @@ function ej(e) {
     }),
     {
       similarApplications: V,
-      similarLoadId: K
+      similarLoadId: W
     } = (0, m.useStateFromStoresObject)([ee.default], () => {
       let e = {
           applicationId: f,
@@ -189,12 +189,12 @@ function ej(e) {
         [ex]: "true"
       }))
     }, [eB, P, eH]),
-    eK = a.useCallback(() => {
+    eW = a.useCallback(() => {
       (0, ed.replaceAppDirectoryURLWith)("".concat(ev.Routes.APPLICATION_DIRECTORY_PROFILE(f)).concat(location.search))
     }, [f]);
   a.useEffect(() => {
-    _ === eg.ApplicationDirectoryProfileSections.GENERAL && eK()
-  }, [eK, _]), a.useEffect(() => {
+    _ === eg.ApplicationDirectoryProfileSections.GENERAL && eW()
+  }, [eW, _]), a.useEffect(() => {
     null != f && X.getApplication(f)
   }, [f]), a.useEffect(() => {
     if ((null == eB ? void 0 : eB.directory_entry) != null) {
@@ -207,7 +207,7 @@ function ej(e) {
       }))) : eb(void 0)
     }
   }, [eB]);
-  let eW = z.default.getApplicationIconURL({
+  let eK = z.default.getApplicationIconURL({
       id: null !== (r = null == eB ? void 0 : eB.id) && void 0 !== r ? r : "-1",
       icon: null == eB ? void 0 : eB.icon,
       size: eN
@@ -302,13 +302,13 @@ function ej(e) {
         current_page: "product",
         application_id: eB.id,
         suggested_application_id: t.id,
-        load_id: K,
+        load_id: W,
         guild_id: A,
         shown_mutual_guilds_count: i.length
       }), (0, ed.goToApplication)({
         applicationId: t.id
       })
-    }, [null == eB ? void 0 : eB.id, K, A]),
+    }, [null == eB ? void 0 : eB.id, W, A]),
     e4 = a.useCallback(() => {
       null != eB && (0, x.default)(function(e, t) {
         let i = "https://".concat(ev.SUPPORT_DOMAIN, "/hc/").concat(e.toLowerCase(), "/requests/new"),
@@ -512,11 +512,11 @@ function ej(e) {
             })]
           }))
       }
-      return ts(t), 0 === e.length && _ !== eg.ApplicationDirectoryProfileSections.GENERAL && null != eB && eK(), e.map((e, t) => (0, l.jsx)("div", {
+      return ts(t), 0 === e.length && _ !== eg.ApplicationDirectoryProfileSections.GENERAL && null != eB && eW(), e.map((e, t) => (0, l.jsx)("div", {
         className: eR.section,
         children: e
       }, t))
-    }, [_, eK, eB, ej, tl, tt, e$, eU, e0, td, f, A, e8, to, tc, eJ]),
+    }, [_, eW, eB, ej, tl, tt, e$, eU, e0, td, f, A, e8, to, tc, eJ]),
     tp = a.useMemo(() => {
       let e = [{
         name: eg.ApplicationDirectoryProfileSections.GENERAL,
@@ -560,7 +560,7 @@ function ej(e) {
     loading: eL === $.FetchState.FETCHING,
     children: [(0, l.jsx)(eM, {
       app: eB,
-      iconSrc: eW
+      iconSrc: eK
     }), (0, l.jsxs)("div", {
       className: eR.__invalid_page,
       children: [(0, l.jsxs)("div", {
@@ -571,7 +571,7 @@ function ej(e) {
             className: eR.headerIcon,
             alt: "",
             "aria-hidden": !0,
-            src: eW,
+            src: eK,
             width: eN,
             height: eN
           }), (0, l.jsx)(es.default, {
@@ -626,7 +626,7 @@ function ej(e) {
                 children: e => (0, l.jsx)(E.Clickable, {
                   className: eR.overflow,
                   ...e,
-                  children: (0, l.jsx)(W.default, {
+                  children: (0, l.jsx)(K.default, {
                     width: 20,
                     height: 20,
                     className: eR.iconInteractive
@@ -703,7 +703,7 @@ let eD = e => {
         className: eR.showMoreButtonText,
         variant: "eyebrow",
         children: eE.default.Messages.APP_DIRECTORY_PROFILE_SHOW_LESS
-      }), (0, l.jsx)(K.default, {
+      }), (0, l.jsx)(W.default, {
         className: eR.showMoreButtonIcon
       })]
     }) : (0, l.jsxs)(l.Fragment, {

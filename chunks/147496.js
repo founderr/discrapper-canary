@@ -31,8 +31,8 @@ function T(t) {
   } = t, C = (0, a.useStateFromStores)([o.default], () => o.default.getForSKU(E), [E]), L = (0, a.useStateFromStores)([s.default], () => s.default.get(E), [E]), N = (0, c.useHasActiveEntitlement)(E);
   if (null == L) return null;
   let R = null !== (n = L.name) && void 0 !== n ? n : "",
-    j = null !== (T = null == C ? void 0 : null === (e = C.description) || void 0 === e ? void 0 : e.trim()) && void 0 !== T ? T : void 0,
-    A = (null == C ? void 0 : C.headerBackground) != null && null !== (_ = d.default.toURLSafe((0, u.getAssetURL)(g, C.headerBackground, 256))) && void 0 !== _ ? _ : void 0,
+    A = null !== (T = null == C ? void 0 : null === (e = C.description) || void 0 === e ? void 0 : e.trim()) && void 0 !== T ? T : void 0,
+    j = (null == C ? void 0 : C.headerBackground) != null && null !== (_ = d.default.toURLSafe((0, u.getAssetURL)(g, C.headerBackground, 256))) && void 0 !== _ ? _ : void 0,
     O = L.type === m.SKUTypes.DURABLE && N,
     y = L.type === m.SKUTypes.DURABLE ? O ? h.default.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : h.default.Messages.STOREFRONT_DURABLE_AVAILABILITY : void 0,
     {
@@ -52,8 +52,8 @@ function T(t) {
       appId: g,
       skuId: L.id,
       title: R,
-      description: j,
-      imgSrc: A,
+      description: A,
+      imgSrc: j,
       tag: null != y ? (0, i.jsx)(r.Tag, {
         text: y
       }) : void 0,
