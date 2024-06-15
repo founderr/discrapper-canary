@@ -1,23 +1,24 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return o
   }
 });
 var s = n("336197"),
   a = n("592125"),
-  l = n("900849"),
-  i = n("981631");
-async function r(e, t) {
-  var n, r;
+  l = n("430824"),
+  i = n("900849"),
+  r = n("981631");
+async function o(e, t) {
+  var n, o;
   if (null == e.messageReference) return;
-  let o = e.messageReference.channel_id,
-    u = a.default.getChannel(o);
-  if (null == u && null != t.guild) try {
-    await (0, l.startLurking)(t.guild.id, {}, {
-      channelId: o
-    }), u = a.default.getChannel(o)
+  let u = e.messageReference.channel_id,
+    d = a.default.getChannel(u);
+  if (null == d && null != t.guild && null == l.default.getGuild(t.guild.id)) try {
+    await (0, i.startLurking)(t.guild.id, {}, {
+      channelId: u
+    }), d = a.default.getChannel(u)
   } catch {}
-  let d = null !== (r = null == u ? void 0 : u.guild_id) && void 0 !== r ? r : null === (n = t.guild) || void 0 === n ? void 0 : n.id;
-  (0, s.default)(i.Routes.CHANNEL(d, o, e.messageReference.message_id), void 0)
+  let c = null !== (o = null == d ? void 0 : d.guild_id) && void 0 !== o ? o : null === (n = t.guild) || void 0 === n ? void 0 : n.id;
+  (0, s.default)(r.Routes.CHANNEL(c, u, e.messageReference.message_id), void 0)
 }

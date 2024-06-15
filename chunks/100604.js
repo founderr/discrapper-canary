@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MessageForward: function() {
-    return _
+    return m
   }
 });
 var s = n("933557"),
@@ -24,63 +24,90 @@ function E(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class _ {
+
+function _(e, t) {
+  return {
+    originLabel: e.name,
+    originIconUrl: d.default.getGuildIconURL({
+      id: e.id,
+      size: 16,
+      icon: e.icon,
+      canAnimate: !1
+    }),
+    timestampLabel: t,
+    accessibilityLabel: f.default.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format({
+      origin: e.name,
+      timestamp: t
+    })
+  }
+}
+class m {
   getForwardInfo() {
-    var e, t, n;
-    let E = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.default,
-      _ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.default,
-      m = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.default,
-      T = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.default,
-      I = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : i.default,
-      p = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : a.default,
+    var e, t, n, d, E, m;
+    let T = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.default,
+      I = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.default,
+      p = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.default,
+      h = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.default,
+      N = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : i.default,
+      S = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : a.default,
       {
-        snapshotIndex: h,
-        parentMessage: N,
-        messageSnapshot: S
+        snapshotIndex: C,
+        parentMessage: g,
+        messageSnapshot: A
       } = this,
-      C = (0, c.calendarFormatCompact)(S.message.timestamp),
-      g = E.getChannel(null === (e = N.messageReference) || void 0 === e ? void 0 : e.channel_id),
-      A = E.getChannel(this.parentMessage.channel_id);
-    if (null != g && null != A && g.guild_id === A.guild_id) {
-      if (!T.can(g.accessPermissions, g)) return {
-        snapshotIndex: h
+      M = (0, c.calendarFormatCompact)(A.message.timestamp),
+      R = T.getChannel(this.parentMessage.channel_id);
+    if (null != R && R.guild_id === (null === (e = g.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
+      let e = T.getChannel(null === (E = g.messageReference) || void 0 === E ? void 0 : E.channel_id);
+      if (null == e) {
+        let e = N.getGuild(R.guild_id);
+        return null == e ? {
+          snapshotIndex: C
+        } : {
+          snapshotIndex: C,
+          footerInfo: _(e, M)
+        }
+      }
+      if (!h.can(e.accessPermissions, e)) return {
+        snapshotIndex: C
       };
-      let e = (0, s.computeChannelName)(g, _, m, !0);
+      let t = (0, s.computeChannelName)(e, I, p, !0);
       return {
-        snapshotIndex: h,
+        snapshotIndex: C,
         footerInfo: {
-          originLabel: e,
-          timestampLabel: C,
+          originLabel: t,
+          timestampLabel: M,
           accessibilityLabel: f.default.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format({
-            origin: e,
-            timestamp: C
+            origin: t,
+            timestamp: M
           })
         }
       }
     }
-    let M = null === (t = S.guild) || void 0 === t ? void 0 : t.id;
-    if (null == M) return {
-      snapshotIndex: h
-    };
-    let R = null !== (n = I.getGuild(M)) && void 0 !== n ? n : p.getGuild(M);
-    return null == R ? {
-      snapshotIndex: h
-    } : {
-      snapshotIndex: h,
-      footerInfo: {
-        originLabel: R.name,
-        originIconUrl: d.default.getGuildIconURL({
-          id: M,
-          size: 16,
-          icon: R.icon,
-          canAnimate: !1
-        }),
-        timestampLabel: C,
-        accessibilityLabel: f.default.Messages.MESSAGE_FORWARD_FOOTER_WITH_ORIGIN_A11Y.format({
-          origin: R.name,
-          timestamp: C
-        })
+    let v = null === (t = A.guild) || void 0 === t ? void 0 : t.id;
+    if (null != v) {
+      let e = null !== (m = N.getGuild(v)) && void 0 !== m ? m : S.getGuild(v);
+      return null == e ? {
+        snapshotIndex: C
+      } : {
+        snapshotIndex: C,
+        footerInfo: _(e, M)
       }
+    }
+    let O = null === (n = g.messageReference) || void 0 === n ? void 0 : n.guild_id;
+    if (null == O) return {
+      snapshotIndex: C
+    };
+    let x = N.getGuild(O);
+    if (null == x) return {
+      snapshotIndex: C
+    };
+    let L = T.getChannel(null === (d = g.messageReference) || void 0 === d ? void 0 : d.channel_id);
+    return null == L || h.can(L.accessPermissions, L) ? {
+      snapshotIndex: C,
+      footerInfo: _(x, M)
+    } : {
+      snapshotIndex: C
     }
   }
   constructor(e, t, n) {
