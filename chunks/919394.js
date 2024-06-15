@@ -45,7 +45,7 @@ let C = (e, t) => ({
         text: t
       }],
       n = T.default.extractTimestamp(e.extra.application_id);
-    if (i()().diff(i()(n), "days") > 7 && a.push({
+    if (7 >= i()().diff(i()(n), "days") && a.push({
         iconPath: N.NEW_RELEASE_ICON_PATH,
         text: x.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
       }), (0, _.isEntryNew)(e) && a.push({
