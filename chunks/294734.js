@@ -35,6 +35,7 @@ function x() {
   return (0, s.jsxs)("div", {
     className: O.headerContainer,
     children: [(0, s.jsx)(u.ChatArrowRightIcon, {
+      className: O.headerIcon,
       width: 16,
       height: 16,
       color: o.default.colors.TEXT_LOW_CONTRAST

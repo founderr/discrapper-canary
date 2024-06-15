@@ -1,10 +1,10 @@
 "use strict";
 l.r(t), l.d(t, {
   EmbedVideo: function() {
-    return O
+    return V
   },
   default: function() {
-    return L
+    return k
   }
 }), l("47120"), l("653041");
 var n, r = l("735250"),
@@ -34,9 +34,10 @@ var n, r = l("735250"),
   N = l("981631"),
   j = l("689938"),
   A = l("946278"),
-  _ = l("214607");
+  _ = l("214607"),
+  R = l("346661");
 
-function R(e, t, l) {
+function O(e, t, l) {
   return t in e ? Object.defineProperty(e, t, {
     value: l,
     enumerable: !0,
@@ -45,7 +46,7 @@ function R(e, t, l) {
   }) : e[t] = l, e
 }
 
-function O(e) {
+function V(e) {
   let {
     className: t,
     iframeWrapperClassName: l,
@@ -202,7 +203,7 @@ function O(e) {
   })
 }
 
-function V(e) {
+function L(e) {
   let {
     className: t,
     href: l,
@@ -242,7 +243,7 @@ function V(e) {
     placeholderVersion: b
   })
 }
-class L extends(n = s.PureComponent) {
+class k extends(n = s.PureComponent) {
   renderProvider() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
       {
@@ -537,7 +538,7 @@ class L extends(n = s.PureComponent) {
         let {
           disableAnimations: a
         } = e;
-        return (0, r.jsx)(V, {
+        return (0, r.jsx)(L, {
           className: _.embedMedia,
           href: n,
           thumbnail: s,
@@ -555,7 +556,7 @@ class L extends(n = s.PureComponent) {
         })
       }
     });
-    return (0, r.jsx)(O, {
+    return (0, r.jsx)(V, {
       className: _.embedMedia,
       href: n,
       allowFullScreen: c,
@@ -810,19 +811,19 @@ class L extends(n = s.PureComponent) {
   }
   constructor(...e) {
     var t;
-    super(...e), t = this, R(this, "state", {
+    super(...e), t = this, O(this, "state", {
       isVisible: null == this.props.obscureReason,
       videoControlsShown: !1,
       ...(0, h.getMaxEmbedMediaSize)(this.props.embed)
-    }), R(this, "onReveal", () => {
+    }), O(this, "onReveal", () => {
       this.setState({
         isVisible: !0
       })
-    }), R(this, "onToggleObscurity", () => {
+    }), O(this, "onToggleObscurity", () => {
       this.setState({
         isVisible: !this.state.isVisible
       })
-    }), R(this, "renderInlineMediaEmbed", function() {
+    }), O(this, "renderInlineMediaEmbed", function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         {
           obscureReason: l,
@@ -830,7 +831,7 @@ class L extends(n = s.PureComponent) {
         } = t.props;
       return (0, r.jsx)("div", {
         "aria-hidden": e,
-        className: a()(_.inlineMediaEmbed, n, {
+        className: a()(_.inlineMediaEmbed, R.inlineEmbedWrapper, n, {
           [_.spoilerAttachment]: l === d.ObscureReason.SPOILER,
           [_.hiddenExplicitAttachment]: null != l && [d.ObscureReason.EXPLICIT_CONTENT, d.ObscureReason.POTENTIAL_EXPLICIT_CONTENT].includes(l),
           [_.isHidden]: e,
@@ -838,7 +839,7 @@ class L extends(n = s.PureComponent) {
         }),
         children: t.renderMedia(e)
       })
-    }), R(this, "renderEmbedContent", function() {
+    }), O(this, "renderEmbedContent", function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         {
           className: l,
@@ -881,7 +882,7 @@ class L extends(n = s.PureComponent) {
     })
   }
 }
-R(L, "defaultProps", {
+O(k, "defaultProps", {
   hideMedia: !1,
   allowFullScreen: !0,
   maxThumbnailWidth: 80,
