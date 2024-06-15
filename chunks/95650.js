@@ -114,7 +114,7 @@ function T(e) {
           }, {
             modalKey: e,
             onCloseCallback() {
-              (0, I.goToApplicationSection)({
+              !C() && (0, I.goToApplicationSection)({
                 applicationId: t,
                 section: g.ApplicationDirectoryProfileSections.STORE
               })
@@ -143,7 +143,7 @@ function T(e) {
           }, {
             modalKey: e,
             onCloseCallback() {
-              (0, I.goToApplicationSection)({
+              !C() && (0, I.goToApplicationSection)({
                 applicationId: t,
                 section: g.ApplicationDirectoryProfileSections.STORE
               })
@@ -155,4 +155,8 @@ function T(e) {
   }, [t, c, s, i, n]), a.useLayoutEffect(() => () => {
     (0, o.closeModal)(c)
   }, [c]), null
+}
+
+function C() {
+  return window.location.pathname.startsWith("/login")
 }
