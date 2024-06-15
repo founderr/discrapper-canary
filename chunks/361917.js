@@ -3,7 +3,7 @@ n.r(t), n.d(t, {
   default: function() {
     return v
   }
-}), n("47120");
+}), n("47120"), n("653041");
 var i = n("735250"),
   r = n("470079"),
   s = n("392711"),
@@ -22,7 +22,7 @@ var i = n("735250"),
   h = n("10718"),
   A = n("148958"),
   m = n("695676"),
-  N = n("805522"),
+  N = n("98880"),
   p = n("601053"),
   O = n("105862"),
   C = n("689079"),
@@ -87,7 +87,7 @@ function y(e) {
     pushHistory: n
   } = (0, m.useAppLauncherHistoryContext)(), {
     sectionDescriptors: s,
-    filterSection: a
+    filterSection: o
   } = h.useDiscovery(t, {
     commandType: _.ApplicationCommandType.CHAT
   }, {
@@ -96,19 +96,34 @@ function y(e) {
     includeFrecency: !0
   });
   r.useEffect(() => {
-    a(C.BuiltInSectionId.FRECENCY)
-  }, [a]);
-  let o = s.filter(e => e.id !== C.BuiltInSectionId.FRECENCY && e.id !== C.BuiltInSectionId.BUILT_IN),
-    l = (0, A.useSortApplicationsViaFrecency)(o);
-  return (0, i.jsx)(p.default, {
-    title: R.default.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER,
-    children: l.map(e => {
+    o(C.BuiltInSectionId.FRECENCY)
+  }, [o]);
+  let l = r.useMemo(() => s.filter(e => e.id !== C.BuiltInSectionId.FRECENCY && e.id !== C.BuiltInSectionId.BUILT_IN), [s]),
+    u = (0, A.useSortApplicationsViaFrecency)(l),
+    d = r.useMemo(() => a().compact(u.map(e => {
       let {
         application: t
       } = e;
-      return null != t && (0, i.jsx)(N.default, {
+      return t
+    })).map(e => ({
+      application: e
+    })), [u]),
+    {
+      items: c,
+      handleViewMore: E
+    } = b(R.default.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, N.default.Looks.NO_BANNER, d, 8);
+  return (0, i.jsx)(p.default, {
+    title: R.default.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER,
+    onClickViewMore: E,
+    children: c.map(e => {
+      let {
+        application: t,
+        isPartner: r
+      } = e;
+      return (0, i.jsx)(N.default, {
         application: t,
         look: N.default.Looks.NO_BANNER,
+        isPartner: r,
         onClick: e => {
           e.stopPropagation(), n({
             type: m.HistoryItemType.APPLICATION,
@@ -123,9 +138,7 @@ function y(e) {
 function P(e) {
   let {
     channel: t
-  } = e, {
-    pushHistory: n
-  } = (0, m.useAppLauncherHistoryContext)(), s = function(e) {
+  } = e, n = function(e) {
     let {
       channelId: t,
       location: n
@@ -142,10 +155,10 @@ function P(e) {
   }({
     channelId: t.id,
     location: o.AppRecommendationsLocation.APP_LAUNCHER_TEXT
-  }), a = function(e) {
+  }), s = function(e) {
     let {
       channel: t,
-      recommendations: n
+      recommendationsSections: n
     } = e;
     (0, T.useFetchDeveloperActivityShelfItems)();
     let i = (0, I.default)({
@@ -163,51 +176,82 @@ function P(e) {
     }, [n, i])
   }({
     channel: t,
-    recommendations: s
+    recommendationsSections: n
   });
   return (0, i.jsx)(i.Fragment, {
-    children: s.map(e => {
+    children: n.map(e => (0, i.jsx)(U, {
+      recommendationsSection: e,
+      remainingActivities: s
+    }, e.key))
+  })
+}
+
+function U(e) {
+  let {
+    recommendationsSection: t,
+    remainingActivities: n
+  } = e, {
+    pushHistory: s
+  } = (0, m.useAppLauncherHistoryContext)(), a = t.section_title, o = t.type === l.AppRecommendationsType.BANNER_CARDS ? N.default.Looks.LARGE_BANNER : N.default.Looks.NO_BANNER, {
+    items: u,
+    handleViewMore: d
+  } = b(a, o, r.useMemo(() => {
+    let e = t.items.map(e => {
       let {
-        key: t,
-        type: r,
-        section_title: s,
-        items: o,
-        appends_remaining_activities: u
-      } = e, d = r === l.AppRecommendationsType.BANNER_CARDS ? N.default.Looks.LARGE_BANNER : N.default.Looks.NO_BANNER;
-      return (0, i.jsxs)(p.default, {
-        title: s,
-        children: [o.map(e => {
-          let {
-            application: t,
-            is_partner: r
-          } = e;
-          return (0, i.jsx)(N.default, {
-            application: t,
-            look: d,
-            onClick: e => {
-              e.stopPropagation(), n({
-                type: m.HistoryItemType.APPLICATION,
-                application: t
-              })
-            },
-            isPartner: r
-          }, t.id)
-        }), u && a.map(e => {
-          let {
+        application: t,
+        is_partner: n
+      } = e;
+      return {
+        application: t,
+        isPartner: n
+      }
+    });
+    return t.appends_remaining_activities && e.push(...n.map(e => {
+      let {
+        application: t
+      } = e;
+      return {
+        application: t
+      }
+    })), e
+  }, [t.items, t.appends_remaining_activities, n]), 8);
+  return (0, i.jsx)(p.default, {
+    title: t.section_title,
+    onClickViewMore: d,
+    children: u.map(e => {
+      let {
+        application: t,
+        isPartner: n
+      } = e;
+      return (0, i.jsx)(N.default, {
+        application: t,
+        look: o,
+        onClick: e => {
+          e.stopPropagation(), s({
+            type: m.HistoryItemType.APPLICATION,
             application: t
-          } = e;
-          return (0, i.jsx)(N.default, {
-            application: t,
-            look: d,
-            onClick: e => {
-              e.stopPropagation(), n({
-                type: m.HistoryItemType.APPLICATION,
-                application: t
-              })
-            }
-          }, t.id)
-        })]
-      }, t)
+          })
+        },
+        isPartner: n
+      }, t.id)
     })
   })
+}
+
+function b(e, t, n, i) {
+  let {
+    pushHistory: s
+  } = (0, m.useAppLauncherHistoryContext)();
+  return r.useMemo(() => n.length <= i ? {
+    items: n,
+    handleViewMore: void 0
+  } : {
+    items: n.slice(0, i),
+    handleViewMore: () => s({
+      type: m.HistoryItemType.LIST,
+      title: e,
+      look: t,
+      items: n
+    })
+  }, [n, i, s, t, e])
 }

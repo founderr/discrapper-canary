@@ -6,18 +6,19 @@ var i = n("735250"),
   a = n("695676"),
   o = n("173790"),
   l = n("361917"),
-  u = n("579539");
+  u = n("684256"),
+  d = n("579539");
 t.default = r.memo(function(e) {
   let t, {
       drawerRef: n,
-      channel: d
+      channel: _
     } = e,
     {
-      history: _,
-      setHistory: c,
-      currentView: E,
-      pushHistory: I,
-      goBack: T
+      history: c,
+      setHistory: E,
+      currentView: I,
+      pushHistory: T,
+      goBack: f
     } = function() {
       let [e, t] = r.useState([{
         type: a.HistoryItemType.HOME
@@ -36,41 +37,48 @@ t.default = r.memo(function(e) {
         }
       }
     }(),
-    f = s.AppLauncherRecommendationsExperiment.useExperiment({
+    S = s.AppLauncherRecommendationsExperiment.useExperiment({
       location: "App Launcher Root"
     }, {
       autoTrackExposure: !0
     });
-  switch (null == E ? void 0 : E.type) {
+  switch (null == I ? void 0 : I.type) {
     case a.HistoryItemType.HOME:
       t = (0, i.jsx)(l.default, {
-        channel: d,
-        enableRecommendations: f.recommendationsEnabled,
-        enableRecents: f.recentsDropdownEnabled
+        channel: _,
+        enableRecommendations: S.recommendationsEnabled,
+        enableRecents: S.recentsDropdownEnabled
+      });
+      break;
+    case a.HistoryItemType.LIST:
+      t = (0, i.jsx)(u.default, {
+        title: I.title,
+        look: I.look,
+        items: I.items
       });
       break;
     case a.HistoryItemType.APPLICATION:
       t = (0, i.jsx)(o.default, {
-        channel: d,
-        application: E.application,
-        sectionName: E.sectionName
+        channel: _,
+        application: I.application,
+        sectionName: I.sectionName
       });
       break;
     default:
       t = null
   }
   return (0, i.jsx)("div", {
-    className: u.drawerSizingWrapper,
+    className: d.drawerSizingWrapper,
     ref: n,
     children: (0, i.jsx)("div", {
-      className: u.contentWrapper,
+      className: d.contentWrapper,
       children: (0, i.jsx)(a.AppLauncherHistoryContext.Provider, {
         value: {
-          history: _,
-          setHistory: c,
-          currentView: E,
-          pushHistory: I,
-          goBack: T
+          history: c,
+          setHistory: E,
+          currentView: I,
+          pushHistory: T,
+          goBack: f
         },
         children: t
       })

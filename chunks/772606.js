@@ -1,29 +1,33 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("330711"),
-  a = n("270292"),
-  o = n("481060"),
-  l = n("695676"),
-  u = n("259255");
+  s = n("120356"),
+  a = n.n(s),
+  o = n("330711"),
+  l = n("270292"),
+  u = n("481060"),
+  d = n("695676"),
+  _ = n("259255");
 
-function d() {
+function c(e) {
   let {
-    goBack: e
-  } = (0, l.useAppLauncherHistoryContext)(), t = r.useCallback(() => {
-    e()
-  }, [e]);
-  return (0, i.jsx)(o.Clickable, {
-    "aria-label": s.default.Messages.BACK,
-    onClick: t,
-    className: u.clickable,
-    children: (0, i.jsx)(a.ArrowLargeLeftIcon, {
-      color: o.tokens.colors.INTERACTIVE_ACTIVE,
+    className: t
+  } = e, {
+    goBack: n
+  } = (0, d.useAppLauncherHistoryContext)(), s = r.useCallback(() => {
+    n()
+  }, [n]);
+  return (0, i.jsx)(u.Clickable, {
+    "aria-label": o.default.Messages.BACK,
+    onClick: s,
+    className: a()(_.clickable, t),
+    children: (0, i.jsx)(l.ArrowLargeLeftIcon, {
+      color: u.tokens.colors.INTERACTIVE_ACTIVE,
       width: 18,
       height: 18
     })

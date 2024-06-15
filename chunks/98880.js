@@ -15,7 +15,7 @@ var i, r, s = n("735250"),
   S = n("753972"),
   h = n("231338"),
   A = n("689938"),
-  m = n("573214");
+  m = n("741382");
 
 function N(e) {
   let {
@@ -23,12 +23,24 @@ function N(e) {
     look: n = "large_banner",
     isPartner: i,
     onClick: r
-  } = e, o = a.useMemo(() => I.default.getApplicationIconURL({
-    id: t.id,
-    icon: t.icon,
-    bot: t.bot,
-    botIconFirst: !0
-  }), [t]), d = (0, c.default)(o, "");
+  } = e, {
+    iconURL: o,
+    name: d,
+    description: _
+  } = a.useMemo(() => (0, f.isRealApplication)(t) ? {
+    iconURL: I.default.getApplicationIconURL({
+      id: t.id,
+      icon: t.icon,
+      bot: t.bot,
+      botIconFirst: !0
+    }),
+    name: t.name,
+    description: t.description
+  } : {
+    iconURL: null,
+    name: A.default.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME,
+    description: A.default.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
+  }, [t]), E = (0, c.default)(o, "");
   return (0, s.jsxs)(u.Clickable, {
     className: m.container,
     onClick: r,
@@ -39,7 +51,7 @@ function N(e) {
       }),
       children: [(0, s.jsx)(p, {
         application: t,
-        fallbackColor: d
+        fallbackColor: E
       }), i && (0, s.jsx)("div", {
         className: m.partnerLabelWrapper,
         children: (0, s.jsx)(u.Text, {
@@ -61,12 +73,12 @@ function N(e) {
           variant: "heading-md/semibold",
           color: "header-primary",
           lineClamp: 1,
-          children: t.name
+          children: d
         }), (0, s.jsx)(u.Text, {
           variant: "text-sm/normal",
           color: "text-secondary",
           lineClamp: 1,
-          children: t.description
+          children: _
         })]
       })]
     })]
@@ -78,13 +90,17 @@ function p(e) {
     application: t,
     fallbackColor: n
   } = e;
-  return (0, f.isEmbeddedApp)({
-    application: t
-  }) ? (0, s.jsx)(O, {
-    application: t
-  }) : null != t.bot ? (0, s.jsx)(C, {
-    bot: t.bot
-  }) : (0, s.jsx)("div", {
+  if ((0, f.isRealApplication)(t)) {
+    if ((0, f.isEmbeddedApp)({
+        application: t
+      })) return (0, s.jsx)(O, {
+      application: t
+    });
+    if (null != t.bot) return (0, s.jsx)(C, {
+      bot: t.bot
+    })
+  }
+  return (0, s.jsx)("div", {
     className: m.bannerImage,
     style: {
       backgroundColor: n

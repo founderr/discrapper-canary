@@ -11,7 +11,7 @@ n.r(t), n.d(t, {
   }
 });
 var i, r, s = n("470079");
-(i = r || (r = {})).HOME = "home", i.APPLICATION = "application";
+(i = r || (r = {})).HOME = "home", i.LIST = "list", i.APPLICATION = "application";
 let a = s.createContext({
   history: [],
   setHistory: () => {},

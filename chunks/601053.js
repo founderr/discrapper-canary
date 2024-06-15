@@ -25,6 +25,7 @@ function o(e) {
         children: t
       }), null != o && (0, i.jsx)(r.Clickable, {
         className: a.viewMore,
+        onClick: o,
         children: (0, i.jsx)(r.Text, {
           variant: "text-md/semibold",
           color: "text-brand",
