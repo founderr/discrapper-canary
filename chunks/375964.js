@@ -12818,6 +12818,7 @@ e.exports = Object.freeze({
   AFFINITIES_MARKETING_HEADER_V2_3: "Join {username} and other friends on Nitro",
   AFFINITIES_MARKETING_HEADER_V2_2: "Join {username} and {otherUsername} on Nitro",
   AFFINITIES_MARKETING_HEADER_V2_1: "Join {username} on Nitro",
+  AFFINITIES_MARKETING_HEADER_V2_1_WITH_LINK: "Join {username} on Nitro. [Learn more](onClickLearnMore)",
   PICK_YOUR_PLAN: "Pick Your Plan",
   AND_MORE: "And more!",
   PREMIUM_FEATURES_TABLE_TITLE_SUBSCRIBER: "What You've Got",
