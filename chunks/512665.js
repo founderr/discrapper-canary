@@ -84,64 +84,60 @@ function B(e) {
 }
 
 function x(e, t, n, r, s) {
-  let o, a, l, d;
-  let c = (0, T.Z)(e),
+  let o, a, l, _;
+  let d = (0, T.Z)(e),
     {
-      trailingIconClass: E,
-      leadingIconClass: h,
-      iconSize: S
+      trailingIconClass: c,
+      leadingIconClass: E,
+      iconSize: h
     } = s,
-    f = null == t || "" === t || Array.isArray(t) && 0 === t.length,
-    N = (0, R.cv)(c).length > 0,
-    m = null != c.interaction,
-    O = c.hasFlag(b.iLy.IS_VOICE_MESSAGE),
-    v = c.isPoll(),
-    D = c.type === b.uaV.POLL_RESULT;
-  if ((0, I.Z)(e) && (d = (0, i.jsx)(u.a, {
-      className: h,
-      width: S,
-      height: S
-    })), n) o = G.Z.Messages.REPLY_QUOTE_MESSAGE_BLOCKED;
-  else if (c.type === b.uaV.CHANNEL_PINNED_MESSAGE) o = G.Z.Messages.MESSAGE_PINNED;
-  else if (f) {
-    if (v) {
-      var M, P;
-      a = null == c ? void 0 : null === (P = c.poll) || void 0 === P ? void 0 : null === (M = P.question) || void 0 === M ? void 0 : M.text
-    } else D ? o = (0, A.N4)(c) : N ? o = G.Z.Messages.REPLY_QUOTE_STICKER : m ? o = G.Z.Messages.REPLY_QUOTE_COMMAND : O ? o = G.Z.Messages.REPLY_QUOTE_VOICE_MESSAGE : (o = G.Z.Messages.REPLY_QUOTE_NO_TEXT_CONTENT, l = (0, i.jsx)(p.Z, {
+    S = null == t || "" === t || Array.isArray(t) && 0 === t.length,
+    f = (0, R.cv)(d).length > 0,
+    N = null != d.interaction,
+    m = d.hasFlag(b.iLy.IS_VOICE_MESSAGE),
+    O = d.isPoll(),
+    v = d.type === b.uaV.POLL_RESULT;
+  if ((0, I.Z)(e) && (_ = (0, i.jsx)(u.a, {
       className: E,
-      width: S,
-      height: S
+      width: h,
+      height: h
+    })), n) o = G.Z.Messages.REPLY_QUOTE_MESSAGE_BLOCKED;
+  else if (d.type === b.uaV.CHANNEL_PINNED_MESSAGE) o = G.Z.Messages.MESSAGE_PINNED;
+  else if (S) {
+    if (O) {
+      var D, M;
+      a = null == d ? void 0 : null === (M = d.poll) || void 0 === M ? void 0 : null === (D = M.question) || void 0 === D ? void 0 : D.text
+    } else v ? o = (0, A.N4)(d) : f ? o = G.Z.Messages.REPLY_QUOTE_STICKER : N ? o = G.Z.Messages.REPLY_QUOTE_COMMAND : m ? o = G.Z.Messages.REPLY_QUOTE_VOICE_MESSAGE : (o = G.Z.Messages.REPLY_QUOTE_NO_TEXT_CONTENT, l = (0, i.jsx)(p.Z, {
+      className: c,
+      width: h,
+      height: h
     }))
   } else a = (0, i.jsx)(y.ZP, {
-    message: c,
+    message: d,
     content: t,
     className: r
   });
-  return N ? l = (0, i.jsx)(L.Z, {
-    className: E,
-    width: S,
-    height: S
-  }) : m ? l = (0, i.jsx)(C.Z, {
-    className: E,
-    width: S,
-    height: S
-  }) : O ? l = (0, i.jsx)(g.Z, {
-    className: E,
-    width: 19 / 24 * S,
-    height: S
-  }) : D ? l = (0, i.jsx)(_.Q, {
-    className: E,
-    width: S,
-    height: S
-  }) : (c.attachments.length > 0 || c.embeds.length > 0) && (l = (0, i.jsx)(p.Z, {
-    className: E,
-    width: S,
-    height: S
+  return f ? l = (0, i.jsx)(L.Z, {
+    className: c,
+    width: h,
+    height: h
+  }) : N ? l = (0, i.jsx)(C.Z, {
+    className: c,
+    width: h,
+    height: h
+  }) : m ? l = (0, i.jsx)(g.Z, {
+    className: c,
+    width: 19 / 24 * h,
+    height: h
+  }) : (d.attachments.length > 0 || d.embeds.length > 0) && !v && (l = (0, i.jsx)(p.Z, {
+    className: c,
+    width: h,
+    height: h
   })), {
     contentPlaceholder: o,
     renderedContent: a,
     trailingIcon: l,
-    leadingIcon: d
+    leadingIcon: _
   }
 }
 
@@ -152,19 +148,19 @@ function V(e) {
     baseAuthor: s,
     baseMessage: a,
     referencedMessage: u,
-    renderPopout: _
-  } = e, I = r.useMemo(() => null != _ && u.state === m.Y.LOADED ? e => _(e, u.message) : void 0, [u, _]), T = function(e, t, n) {
+    renderPopout: I
+  } = e, T = r.useMemo(() => null != I && u.state === m.Y.LOADED ? e => I(e, u.message) : void 0, [u, I]), A = function(e, t, n) {
     let {
       referencedMessage: r,
       compact: s,
       isReplyAuthorBlocked: a,
       repliedAuthor: l,
       showAvatarPopout: u,
-      onClickAvatar: _,
-      onContextMenu: I,
-      onPopoutRequestClose: T
+      onClickAvatar: I,
+      onContextMenu: T,
+      onPopoutRequestClose: h
     } = e, {
-      analyticsLocations: h
+      analyticsLocations: S
     } = (0, E.ZP)(c.Z.AVATAR);
     if (s || r.state !== m.Y.LOADED || a) return (0, i.jsx)("div", {
       className: w.replyBadge,
@@ -178,9 +174,14 @@ function V(e) {
     if (r.message.type === b.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION) return (0, i.jsx)(v.Z, {
       className: w.ticketIcon
     });
-    let S = () => {
+    if (r.message.type === b.uaV.POLL_RESULT) return (0, i.jsx)(_.Q, {
+      className: w.repliedTextContentLeadingIcon,
+      width: U.WW,
+      height: U.WW
+    });
+    let f = () => {
       var e, n, s, a, u;
-      return e = r.message.author, n = l, s = t, a = _, u = I, (0, i.jsx)("img", {
+      return e = r.message.author, n = l, s = t, a = I, u = T, (0, i.jsx)("img", {
         alt: "",
         src: (null == n ? void 0 : n.guildMemberAvatar) != null && null != s ? (0, D.JM)({
           guildId: s,
@@ -196,19 +197,19 @@ function V(e) {
       })
     };
     return null != n && null != u ? (0, i.jsx)(E.Gt, {
-      value: h,
+      value: S,
       children: (0, i.jsx)(d.Popout, {
         renderPopout: n,
         shouldShow: u,
         position: "right",
-        onRequestClose: T,
-        children: S
+        onRequestClose: h,
+        children: f
       })
     }) : (0, i.jsx)(E.Gt, {
-      value: h,
-      children: S()
+      value: S,
+      children: f()
     })
-  }(e, r.useContext(h.Z), I), A = function(e, t) {
+  }(e, r.useContext(h.Z), T), R = function(e, t) {
     let {
       baseMessage: n,
       channel: r,
@@ -218,7 +219,7 @@ function V(e) {
       onContextMenu: l,
       onPopoutRequestClose: u
     } = e, _ = (null == s ? void 0 : s.state) === m.Y.LOADED ? s.message : void 0;
-    return null == _ || _.type === b.uaV.USER_JOIN || _.type === b.uaV.ROLE_SUBSCRIPTION_PURCHASE || _.type === b.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || _.type === b.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || _.type === b.uaV.GUILD_GAMING_STATS_PROMPT ? null : (0, i.jsx)(f.Z, {
+    return null == _ || _.type === b.uaV.USER_JOIN || _.type === b.uaV.ROLE_SUBSCRIPTION_PURCHASE || _.type === b.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || _.type === b.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || _.type === b.uaV.GUILD_GAMING_STATS_PROMPT || _.type === b.uaV.POLL_RESULT ? null : (0, i.jsx)(f.Z, {
       message: _,
       channel: r,
       compact: !0,
@@ -230,7 +231,7 @@ function V(e) {
       onPopoutRequestClose: u,
       isRepliedMessage: !0
     })
-  }(e, I), R = function(e) {
+  }(e, T), C = function(e) {
     let {
       content: t,
       referencedMessage: n,
@@ -281,14 +282,14 @@ function V(e) {
       default:
         (0, P.vE)(n)
     }
-  }(e), C = r.useMemo(() => e.compact ? (0, N.Z)((0, M.vc)(l()(), "LT")) : null, [e.compact]);
+  }(e), p = r.useMemo(() => e.compact ? (0, N.Z)((0, M.vc)(l()(), "LT")) : null, [e.compact]);
   return null != n && null != s && (t = G.Z.Messages.CHANNEL_MESSAGE_REPLY_A11Y_LABEL.format({
     author: null == s ? void 0 : s.nick,
     repliedAuthor: null == n ? void 0 : n.nick
   })), (0, i.jsxs)("div", {
     id: (0, S.Gq)(a),
-    className: o()(w.repliedMessage, C),
+    className: o()(w.repliedMessage, p),
     "aria-label": t,
-    children: [T, A, R]
+    children: [A, R, C]
   })
 }
