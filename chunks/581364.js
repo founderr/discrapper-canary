@@ -1,49 +1,46 @@
 "use strict";
 n.d(t, {
   $z: function() {
-    return C
-  },
-  BH: function() {
-    return O
-  },
-  BO: function() {
-    return L
-  },
-  D7: function() {
-    return M
-  },
-  Dd: function() {
     return R
   },
-  Ft: function() {
-    return v
-  },
-  X0: function() {
-    return y
-  },
-  XA: function() {
-    return U
-  },
-  Z8: function() {
-    return A
-  },
-  bD: function() {
-    return p
-  },
-  nG: function() {
+  BH: function() {
     return m
   },
-  oK: function() {
+  BO: function() {
+    return p
+  },
+  D7: function() {
+    return v
+  },
+  Dd: function() {
+    return O
+  },
+  Ft: function() {
     return g
   },
-  qJ: function() {
-    return G
+  X0: function() {
+    return M
   },
-  tI: function() {
+  XA: function() {
     return P
   },
+  Z8: function() {
+    return N
+  },
+  bD: function() {
+    return C
+  },
+  nG: function() {
+    return A
+  },
+  qJ: function() {
+    return U
+  },
+  tI: function() {
+    return D
+  },
   vC: function() {
-    return b
+    return y
   }
 }), n(47120), n(653041), n(390547), n(724458);
 var i = n(654861),
@@ -55,16 +52,16 @@ var i = n(654861),
   u = n(149765),
   _ = n(911969),
   d = n(367907),
-  c = n(399860),
-  E = n(131704),
-  I = n(703558),
-  T = n(895924),
-  h = n(531010),
-  S = n(689079),
-  f = n(981631),
-  N = n(231338);
+  c = n(399860);
+n(131704);
+var E = n(703558),
+  I = n(895924),
+  T = n(531010),
+  h = n(689079),
+  S = n(981631),
+  f = n(231338);
 
-function A(e) {
+function N(e) {
   var t, n, i;
   let r, {
     rootCommand: s,
@@ -77,16 +74,16 @@ function A(e) {
     r[e.id] = e
   })));
   let E = (null != l ? l : []).map(e => e.name),
-    I = (null != l ? l : []).map(e => e.displayName);
+    T = (null != l ? l : []).map(e => e.displayName);
   return {
     version: s.version,
     guildId: s.guild_id,
-    id: [s.id, ...E].join(S.oQ),
+    id: [s.id, ...E].join(h.oQ),
     name: [s.name, ...E].join(" "),
     serverLocalizedName: o.name_localized,
     applicationId: a,
     type: null !== (t = s.type) && void 0 !== t ? t : _.yU.CHAT,
-    inputType: T.iw.BOT,
+    inputType: I.iw.BOT,
     description: o.description,
     options: function e(t) {
       return null == t ? void 0 : t.map(t => {
@@ -129,7 +126,7 @@ function A(e) {
     defaultMemberPermissions: null == s.default_member_permissions ? void 0 : u.vB(s.default_member_permissions),
     dmPermission: s.dm_permission,
     permissions: r,
-    displayName: [null !== (n = s.name_localized) && void 0 !== n ? n : s.name, ...I].join(" "),
+    displayName: [null !== (n = s.name_localized) && void 0 !== n ? n : s.name, ...T].join(" "),
     displayDescription: null !== (i = o.description_localized) && void 0 !== i ? i : o.description,
     nsfw: s.nsfw,
     contexts: s.contexts,
@@ -138,7 +135,7 @@ function A(e) {
   }
 }
 
-function m(e, t) {
+function A(e, t) {
   return l().flatMap(e, e => (o()(null != e.id, "Missing command id"), function e(t) {
     var n, i;
     let {
@@ -149,14 +146,14 @@ function m(e, t) {
       useKeyedPermissions: l
     } = t;
     if (s.hasOwnProperty("id")) {
-      if (null == s.options || 0 === s.options.length) return [A({
+      if (null == s.options || 0 === s.options.length) return [N({
         rootCommand: r,
         command: s,
         applicationId: o,
         subCommandPath: a,
         useKeyedPermissions: l
       })]
-    } else if (s.type !== _.jw.SUB_COMMAND && s.type !== _.jw.SUB_COMMAND_GROUP && (null == s.options || 0 === s.options.length)) return [A({
+    } else if (s.type !== _.jw.SUB_COMMAND && s.type !== _.jw.SUB_COMMAND_GROUP && (null == s.options || 0 === s.options.length)) return [N({
       rootCommand: r,
       command: s,
       applicationId: o,
@@ -178,7 +175,7 @@ function m(e, t) {
       useKeyedPermissions: l
     }));
     let c = s.options.filter(e => e.type === _.jw.SUB_COMMAND);
-    for (let e = 0; e < c.length; e++) u.push(A({
+    for (let e = 0; e < c.length; e++) u.push(N({
       rootCommand: r,
       command: c[e],
       applicationId: o,
@@ -189,7 +186,7 @@ function m(e, t) {
       }]),
       useKeyedPermissions: l
     }));
-    return 0 === d.length && 0 === c.length && u.push(A({
+    return 0 === d.length && 0 === c.length && u.push(N({
       rootCommand: r,
       command: s,
       applicationId: o,
@@ -205,18 +202,18 @@ function m(e, t) {
   })))
 }
 
-function O(e) {
-  return f.Xyh.test(e.trim())
+function m(e) {
+  return S.Xyh.test(e.trim())
 }
 
-function R(e, t, n, i) {
+function O(e, t, n, i) {
   let r = [];
   return l()(e).forEach(e => {
     t.test(e.displayName) && (null == e.predicate || e.predicate(n)) && r.push(e)
   }), r.slice(0, i)
 }
 
-function C(e) {
+function R(e) {
   let t = e.type === _.jw.STRING,
     n = e.type === _.jw.CHANNEL,
     i = e.type === _.jw.USER || e.type === _.jw.MENTIONABLE,
@@ -232,16 +229,12 @@ function C(e) {
   }
 }
 
-function p(e) {
+function C(e) {
   return r()(e).subtract(1).toString()
 }
+let p = u.vB(0);
 
-function g(e, t, n, i) {
-  return !n && (!!i.isMultiUserDM() || (i.isDM() ? !i.isSystemDM() : i.isArchivedLockedThread() ? e.can(u.$e(N.Pl.USE_APPLICATION_COMMANDS, N.Pl.MANAGE_THREADS), i) : !!(0, E.Em)(i.type) && e.can(u.$e(N.Pl.USE_APPLICATION_COMMANDS, N.Pl.SEND_MESSAGES), i)))
-}
-let L = u.vB(0);
-
-function v(e) {
+function g(e) {
   let {
     PermissionStore: t,
     guild: n,
@@ -250,46 +243,46 @@ function v(e) {
     commandLevelPermissions: s,
     defaultMemberPermissions: o
   } = e;
-  if (n.ownerId === i.userId || t.can(N.Pl.ADMINISTRATOR, n)) return !0;
+  if (n.ownerId === i.userId || t.can(f.Pl.ADMINISTRATOR, n)) return !0;
   let a = n.id;
   if (null != s) {
-    let e = D(i, a, s);
+    let e = L(i, a, s);
     if ("boolean" == typeof e) return e
   }
-  let l = D(i, a, r);
-  return ("boolean" != typeof l || !!l) && (null == o || !u.fS(o, L) && t.can(o, n))
+  let l = L(i, a, r);
+  return ("boolean" != typeof l || !!l) && (null == o || !u.fS(o, p) && t.can(o, n))
 }
 
-function D(e, t, n) {
-  let i = n[(0, c.rE)(e.userId, T.Kw.USER)];
+function L(e, t, n) {
+  let i = n[(0, c.rE)(e.userId, I.Kw.USER)];
   if (null != i) return i.permission;
   let r = !1;
   for (let t of e.roles) {
-    let e = n[(0, c.rE)(t, T.Kw.ROLE)];
+    let e = n[(0, c.rE)(t, I.Kw.ROLE)];
     if (null != e && (r = !0, e.permission)) return !0
   }
   if (r) return !1;
-  let s = n[(0, c.rE)(t, T.Kw.ROLE)];
+  let s = n[(0, c.rE)(t, I.Kw.ROLE)];
   return null != s ? s.permission : null
 }
 
-function M(e) {
+function v(e) {
   switch (e) {
-    case T.bB.CHAT:
-      return I.d.SlashCommand;
-    case T.bB.APPLICATION_LAUNCHER:
-      return I.d.ApplicationLauncherCommand
+    case I.bB.CHAT:
+      return E.d.SlashCommand;
+    case I.bB.APPLICATION_LAUNCHER:
+      return E.d.ApplicationLauncherCommand
   }
 }
 
-function P(e) {
-  return null == e ? void 0 : e.id === S.bi.BUILT_IN ? T.ub.BUILT_IN : e.id === S.bi.FRECENCY ? T.ub.FRECENCY : T.ub.APP
+function D(e) {
+  return null == e ? void 0 : e.id === h.bi.BUILT_IN ? I.ub.BUILT_IN : e.id === h.bi.FRECENCY ? I.ub.FRECENCY : I.ub.APP
 }
 
-function y(e) {
+function M(e) {
   var t, n;
   return {
-    type: T.Qi.APPLICATION,
+    type: I.Qi.APPLICATION,
     id: e.id,
     name: null !== (n = null == e ? void 0 : null === (t = e.bot) || void 0 === t ? void 0 : t.username) && void 0 !== n ? n : e.name,
     icon: e.icon,
@@ -297,26 +290,26 @@ function y(e) {
   }
 }
 
-function U(e) {
+function P(e) {
   let t = e.id,
     n = e.options,
     i = null == n ? void 0 : n.find(e => e.type === _.jw.SUB_COMMAND_GROUP);
-  null != i && (t += "".concat(S.oQ).concat(i.name), n = i.options);
+  null != i && (t += "".concat(h.oQ).concat(i.name), n = i.options);
   let r = null == n ? void 0 : n.find(e => e.type === _.jw.SUB_COMMAND);
-  return null != r && (t += "".concat(S.oQ).concat(r.name), n = r.options), {
+  return null != r && (t += "".concat(h.oQ).concat(r.name), n = r.options), {
     commandKey: t,
     interactionOptions: n
   }
 }
 
-function b(e, t, n) {
-  return null == e || h.Z.getCurrentConfig({
+function y(e, t, n) {
+  return null == e || T.Z.getCurrentConfig({
     guildId: e,
     ...t
-  }, n).userAppsTreatment === h.e.ALLOWED
+  }, n).userAppsTreatment === T.e.ALLOWED
 }
 
-function G(e) {
+function U(e) {
   var t, n;
   let {
     command: i,
@@ -327,7 +320,7 @@ function G(e) {
     query: l,
     searchResultsPosition: u
   } = e;
-  (0, d.yw)(f.rMx.APPLICATION_COMMAND_SELECTED, {
+  (0, d.yw)(S.rMx.APPLICATION_COMMAND_SELECTED, {
     command_id: null !== (n = null === (t = i.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : i.id,
     application_id: i.applicationId,
     location: r,

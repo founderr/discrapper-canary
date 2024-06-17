@@ -28,42 +28,43 @@ var i, r, s = n(512722),
   S = n(981631);
 
 function f(e, t, n) {
+  var i;
   let {
-    context: i,
-    commandType: r,
-    allowNsfw: s,
-    computedPermissions: _,
-    userId: f,
-    roleIds: N,
-    isImpersonating: A,
-    hasBaseAccessPermissions: R,
-    hasSendMessagesPermission: C
+    context: r,
+    commandType: s,
+    allowNsfw: _,
+    computedPermissions: f,
+    userId: N,
+    roleIds: A,
+    isImpersonating: R,
+    hasBaseAccessPermissions: C
   } = t, {
     applicationAllowedForUser: p,
     applicationAllowedForChannel: g,
     isGuildInstalled: L,
-    commandBotId: v
+    isUserInstalled: v,
+    commandBotId: D
   } = n;
-  if (e.type !== r) return 2;
-  if (e.nsfw && !s) return 1;
-  let D = (0, T.Vh)(i, v);
+  if (e.type !== s) return 2;
+  if (e.nsfw && !_) return 1;
+  let M = (0, T.Vh)(r, D);
   if (null != e.contexts) {
-    if (!e.contexts.includes(D)) return 4
-  } else if (e.inputType === E.iw.BOT && (!1 === e.dmPermission && D === u.D.BOT_DM || D === u.D.PRIVATE_CHANNEL)) return 4;
-  if (null != e.predicate && i instanceof d.Sf) {
-    let t = c.Z.getGuild(i.guild_id);
+    if (!e.contexts.includes(M)) return 4
+  } else if (e.inputType === E.iw.BOT && (!1 === e.dmPermission && M === u.D.BOT_DM || M === u.D.PRIVATE_CHANNEL)) return 4;
+  if (null != e.predicate && r instanceof d.Sf) {
+    let t = c.Z.getGuild(r.guild_id);
     if (!e.predicate({
-        channel: i,
+        channel: r,
         guild: t
       })) return 3
   }
   if (e.applicationId === h.bi.BUILT_IN) return 0;
-  let M = (0, T.ny)(i);
-  if (null == M || l.e$(_, S.Plq.ADMINISTRATOR)) return 0;
-  if (!R || !C && L && (null == e.integration_types || e.integration_types.includes(a.Y.GUILD_INSTALL))) return 5;
-  if (i instanceof d.Sf) {
+  let P = (0, T.ny)(r);
+  if (null == P || l.e$(f, S.Plq.ADMINISTRATOR) || v && (null === (i = e.integration_types) || void 0 === i ? void 0 : i.includes(a.Y.USER_INSTALL))) return 0;
+  if (!C && L && (null == e.integration_types || e.integration_types.includes(a.Y.GUILD_INSTALL))) return 5;
+  if (r instanceof d.Sf) {
     o()(void 0 !== g, "missing applicationAllowedForChannel");
-    let t = m(e.permissions, i, M);
+    let t = m(e.permissions, r, P);
     if (function(e) {
         return !1 === e
       }(t) || ! function(e) {
@@ -72,14 +73,14 @@ function f(e, t, n) {
         return !1 === e
       }(g)) return 6
   }
-  let P = O(e.permissions, M, f, N, A);
+  let y = O(e.permissions, P, N, A, R);
   return function(e) {
     return !0 === e
-  }(P) ? 0 : function(e) {
+  }(y) ? 0 : function(e) {
     return !1 === e
-  }(P) ? 7 : function(e) {
+  }(y) ? 7 : function(e) {
     return !1 === e
-  }(p) || null != e.defaultMemberPermissions && !(!l.fS(e.defaultMemberPermissions, I.BO) && l.e$(_, e.defaultMemberPermissions)) ? 7 : 0
+  }(p) || null != e.defaultMemberPermissions && !(!l.fS(e.defaultMemberPermissions, I.BO) && l.e$(f, e.defaultMemberPermissions)) ? 7 : 0
 }
 
 function N(e) {

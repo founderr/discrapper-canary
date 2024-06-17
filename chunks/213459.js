@@ -487,7 +487,7 @@ function $(e, t, n, i) {
     loading: l
   } = function(e, t, n) {
     let i = (0, D.Hs)(e, t.commandType),
-      r = !1 !== t.applicationCommands && i.hasBaseAccessPermissions,
+      r = !1 !== t.applicationCommands,
       s = X(e, r, n.allowFetch),
       a = J(r, n.allowFetch),
       l = (0, _.e7)([q], () => q.getApplicationStates()),
@@ -573,47 +573,47 @@ function et(e) {
     splitQuery: L,
     allowEmptySections: f,
     scoreMethod: A
-  };
+  }, U = null !== (r = null === (t = u.result) || void 0 === t ? void 0 : t.sections) && void 0 !== r ? r : {}, b = null !== (s = null === (n = _.result) || void 0 === n ? void 0 : n.sections) && void 0 !== s ? s : {}, G = new Set;
   if (T) {
-    let e = null !== (r = null === (n = u.result) || void 0 === n ? void 0 : n.sections) && void 0 !== r ? r : {},
-      t = null !== (s = null === (i = _.result) || void 0 === i ? void 0 : i.sections) && void 0 !== s ? s : {},
-      a = new Set;
-    for (let t in e) {
-      let n = e[t];
-      (null == h || n.descriptor.id === h) && a.add(t)
+    if (a.hasBaseAccessPermissions)
+      for (let e in U) {
+        let t = U[e];
+        (null == h || t.descriptor.id === h) && G.add(e)
+      }
+    for (let e in b) {
+      let t = b[e];
+      (null == h || t.descriptor.id === h) && G.add(e)
     }
-    for (let e in t) {
-      let n = t[e];
-      (null == h || n.descriptor.id === h) && a.add(e)
-    }
-    let c = new Map;
-    for (let [e, t] of d)
-      if (null == h || e === h) {
-        let e = null === (o = t.result) || void 0 === o ? void 0 : o.sections;
-        if (null != e)
-          for (let t of Object.keys(e)) a.add(t), c.set(t, e[t])
-      } for (let n of Array.from(a)) {
-      let i, r;
-      let s = e[n],
-        o = t[n],
-        a = c.get(n),
-        u = null != s;
-      if (null != s && null != o) {
-        for (let e in i = o.descriptor, r = [], o.commands) {
-          let t = o.commands[e];
-          r.push(t)
+  }
+  let w = new Map;
+  for (let [e, t] of d)
+    if (null == h || e === h) {
+      let e = null === (o = t.result) || void 0 === o ? void 0 : o.sections;
+      if (null != e)
+        for (let t of Object.keys(e)) G.add(t), w.set(t, e[t])
+    } for (let e of Array.from(G)) {
+    let t, n;
+    let i = U[e],
+      r = b[e],
+      s = w.get(e),
+      o = null != i,
+      a = null != r;
+    if (null != i && null != r) {
+      for (let e in t = r.descriptor, n = [], r.commands) {
+        let t = r.commands[e];
+        n.push(t)
+      }
+      for (let e in i.commands)
+        if (!(e in r.commands)) {
+          let t = i.commands[e];
+          n.push(t)
         }
-        for (let e in s.commands)
-          if (!(e in o.commands)) {
-            let t = s.commands[e];
-            r.push(t)
-          }
-      } else null != s ? (i = s.descriptor, r = Object.values(s.commands)) : null != o ? (i = o.descriptor, r = Object.values(o.commands)) : null != a && (i = a.descriptor, r = Object.values(a.commands));
-      l()(null != i, "Failed to select application descriptor"), l()(null != r, "Failed to select list of application commands");
-      let _ = en(i, r, u, y);
-      null != _ && M.push(_)
-    }
-    m.applications.useFrecency && S.DZ.loadIfNecessary(), M.sort((e, t) => {
+    } else null != i ? (t = i.descriptor, n = Object.values(i.commands)) : null != r ? (t = r.descriptor, n = Object.values(r.commands)) : null != s && (t = s.descriptor, n = Object.values(s.commands));
+    l()(null != t, "Failed to select application descriptor"), l()(null != n, "Failed to select list of application commands");
+    let u = en(t, n, o, a, y);
+    null != u && M.push(u)
+  }
+  if (m.applications.useFrecency && S.DZ.loadIfNecessary(), M.sort((e, t) => {
       if (m.applications.useScore && A === g.p.APPLICATION_ONLY) {
         var n, i, r, s;
         let o = null !== (r = null === (n = e.data[0]) || void 0 === n ? void 0 : n.score) && void 0 !== r ? r : Number.MAX_VALUE,
@@ -626,20 +626,18 @@ function et(e) {
         if (n !== i) return i - n
       }
       return el(e.section.name, t.section.name)
-    })
-  }
-  if (D.length > 0 || !0 === f) {
-    let e = en(O.Tm[P.bi.BUILT_IN], D, !0, y);
+    }), D.length > 0 || !0 === f) {
+    let e = en(O.Tm[P.bi.BUILT_IN], D, !0, !0, y);
     null != e && M.push(e)
   }
-  let U = M.flatMap(e => e.data.map(t => ({
+  let k = M.flatMap(e => e.data.map(t => ({
     ...t,
     section: e.section
   })));
   if (A === g.p.COMMAND_ONLY || A === g.p.COMMAND_OR_APPLICATION) {
     let e = a.context,
       t = N.Z.getGuild(a.context.guild_id);
-    m.commands.useFrecency && S.DZ.loadIfNecessary(), U.sort((n, i) => {
+    m.commands.useFrecency && S.DZ.loadIfNecessary(), k.sort((n, i) => {
       if (m.commands.useScore) {
         var r, s;
         let e = null !== (r = n.score) && void 0 !== r ? r : 0,
@@ -661,37 +659,38 @@ function et(e) {
     })
   }
   return {
-    commands: U,
+    commands: k,
     descriptors: M.map(e => e.section),
     sectionedCommands: M,
-    loading: (null == u ? void 0 : u.fetchState.fetching) === !0 || (null == _ ? void 0 : _.fetchState.fetching) === !0 || null != h && (null === (t = d.get(h)) || void 0 === t ? void 0 : t.fetchState.fetching) === !0
+    loading: (null == u ? void 0 : u.fetchState.fetching) === !0 || (null == _ ? void 0 : _.fetchState.fetching) === !0 || null != h && (null === (i = d.get(h)) || void 0 === i ? void 0 : i.fetchState.fetching) === !0
   }
 }
 
-function en(e, t, n, i) {
-  let r, {
-      query: s,
-      splitQuery: o,
-      allowEmptySections: a,
-      scoreMethod: l,
-      permissionContext: u
-    } = i,
+function en(e, t, n, i, r) {
+  let s, {
+      query: o,
+      splitQuery: a,
+      allowEmptySections: l,
+      scoreMethod: u,
+      permissionContext: _
+    } = r,
     {
-      context: _,
-      userId: d,
-      roleIds: c,
-      isImpersonating: E
-    } = u,
-    I = null != _.guild_id ? M.ML(e.permissions, _.guild_id, d, c, E) : null,
-    T = null != _.guild_id ? M.ZJ(e.permissions, _, _.guild_id) : null,
-    h = [];
-  for (let i of t) M.Ft(i, u, {
-    applicationAllowedForUser: I,
-    applicationAllowedForChannel: T,
+      context: d,
+      userId: c,
+      roleIds: E,
+      isImpersonating: I
+    } = _,
+    T = null != d.guild_id ? M.ML(e.permissions, d.guild_id, c, E, I) : null,
+    h = null != d.guild_id ? M.ZJ(e.permissions, d, d.guild_id) : null,
+    S = [];
+  for (let r of t) M.Ft(r, _, {
+    applicationAllowedForUser: T,
+    applicationAllowedForChannel: h,
     commandBotId: e.botId,
-    isGuildInstalled: n
-  }) === M.mF.ALLOWED && h.push(i);
-  return 0 !== (r = l !== g.p.NONE && null != s && null != o ? function(e, t, n, i, r) {
+    isGuildInstalled: n,
+    isUserInstalled: i
+  }) === M.mF.ALLOWED && S.push(r);
+  return 0 !== (s = u !== g.p.NONE && null != o && null != a ? function(e, t, n, i, r) {
     let s;
     let o = [];
     if (r === g.p.APPLICATION_ONLY || r === g.p.COMMAND_OR_APPLICATION) {
@@ -731,9 +730,9 @@ function en(e, t, n, i) {
       })
     }
     return o
-  }(s, o, h, e, l) : h).length || a ? ((l === g.p.NONE || l === g.p.APPLICATION_ONLY) && r.sort((e, t) => el(e.displayName, t.displayName)), {
+  }(o, a, S, e, u) : S).length || l ? ((u === g.p.NONE || u === g.p.APPLICATION_ONLY) && s.sort((e, t) => el(e.displayName, t.displayName)), {
     section: e,
-    data: r
+    data: s
   }) : null
 }
 
