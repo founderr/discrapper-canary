@@ -102,9 +102,9 @@ async function P(e) {
     if (!t && ((0, C.TX)(e, a.applicationId, f.Z, S.Z) || n || u)) {
       let t;
       try {
-        n && (t = await (0, d.Z)(e, a.applicationId))
+        n && (t = await (0, d.ZP)(e, a.applicationId))
       } catch (e) {
-        if (e.message !== d.s) throw e
+        if (e.message !== d.sV) throw e
       }
       await (0, I.qn)({
         applicationId: a.applicationId,

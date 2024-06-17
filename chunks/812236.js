@@ -1,9 +1,12 @@
 "use strict";
 n.d(t, {
-  Z: function() {
+  SY: function() {
+    return d
+  },
+  ZP: function() {
     return u
   },
-  s: function() {
+  sV: function() {
     return l
   }
 }), n(411104);
@@ -32,6 +35,17 @@ async function u(e, t) {
 
 function _(e, t) {
   return o.ZP.query(e, {
+    commandType: i.yU.PRIMARY_ENTRY_POINT
+  }, {
+    placeholderCount: 1,
+    scoreMethod: a.p.COMMAND_ONLY,
+    applicationId: t,
+    allowFetch: !1
+  })
+}
+
+function d(e, t) {
+  return (0, o.v1)(e, {
     commandType: i.yU.PRIMARY_ENTRY_POINT
   }, {
     placeholderCount: 1,
