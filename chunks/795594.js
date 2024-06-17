@@ -144,7 +144,6 @@ let Y = e => {
               wrap: !0,
               grow: 0,
               children: (0, a.jsx)(I.Button, {
-                className: F.deleteApp,
                 color: I.ButtonColors.RED,
                 look: I.ButtonLooks.OUTLINED,
                 size: I.ButtonSizes.SMALL,
