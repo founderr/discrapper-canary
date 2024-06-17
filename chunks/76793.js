@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return R
   }
 }), s("47120");
 var a = s("735250"),
@@ -14,37 +14,38 @@ var a = s("735250"),
   u = s("700582"),
   c = s("542828"),
   S = s("130123"),
-  E = s("433612"),
+  E = s("627617"),
   T = s("171368"),
   _ = s("594174"),
   I = s("709054"),
   N = s("51144"),
   g = s("63454"),
-  f = s("231338"),
-  m = s("689938"),
-  A = s("104229"),
-  C = s("611273");
+  f = s("689938"),
+  m = s("104229"),
+  A = s("611273");
 
-function O(e) {
+function C(e) {
   let {
     userId: t,
     count: s
-  } = e, i = (0, r.useStateFromStores)([_.default], () => _.default.getUser(t)), c = N.default.getFormattedName(i), S = f.NOOP, E = n.useCallback(() => (0, T.openUserProfileModal)({
+  } = e, i = (0, r.useStateFromStores)([_.default], () => _.default.getUser(t)), c = N.default.getFormattedName(i), S = n.useCallback(() => {
+    (0, E.clearAllUserVerifications)(t)
+  }, [t]), I = n.useCallback(() => (0, T.openUserProfileModal)({
     userId: t
   }), [t]);
   return n.useEffect(() => {
     (0, d.getUser)(t)
   }, [t]), (0, a.jsxs)("div", {
-    className: A.section,
+    className: m.section,
     children: [null != i && (0, a.jsx)(u.default, {
-      className: A.avatar,
+      className: m.avatar,
       user: i,
       size: o.AvatarSizes.SIZE_40
     }), (0, a.jsxs)("div", {
-      className: A.text,
+      className: m.text,
       children: [(0, a.jsx)(o.Clickable, {
-        className: A.username,
-        onClick: E,
+        className: m.username,
+        onClick: I,
         children: (0, a.jsx)(o.Text, {
           variant: "text-md/semibold",
           color: "interactive-active",
@@ -53,13 +54,13 @@ function O(e) {
       }), (0, a.jsx)(o.Text, {
         variant: "text-md/medium",
         color: "header-secondary",
-        children: m.default.Messages.E2EE_DEVICES_COUNT.format({
+        children: f.default.Messages.E2EE_DEVICES_COUNT.format({
           count: s
         })
       })]
     }), (0, a.jsx)(o.Clickable, {
       onClick: S,
-      className: A.sectionIconContainer,
+      className: m.sectionIconContainer,
       children: (0, a.jsx)(l.TrashIcon, {
         height: 16,
         width: 16
@@ -68,30 +69,33 @@ function O(e) {
   })
 }
 
-function h(e) {
+function O(e) {
   let {
     className: t,
-    device: s,
-    index: n
-  } = e, l = (0, E.getSecureFramesUserVerifiedTimestamp)(s.timestamp), r = f.NOOP;
+    userId: s,
+    device: l,
+    index: r
+  } = e, d = (0, E.getSecureFramesUserVerifiedTimestamp)(l.timestamp), u = n.useCallback(() => {
+    (0, E.clearUserVerification)(s)
+  }, [s]);
   return (0, a.jsxs)("div", {
     className: t,
     children: [(0, a.jsxs)("div", {
-      className: A.text,
+      className: m.text,
       children: [(0, a.jsx)(o.Text, {
         variant: "text-sm/semibold",
         color: "interactive-active",
-        children: m.default.Messages.E2EE_ANONYMOUS_DEVICE_TAG.format({
-          index: n
+        children: f.default.Messages.E2EE_ANONYMOUS_DEVICE_TAG.format({
+          index: r
         })
       }), (0, a.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: l
+        children: d
       })]
     }), (0, a.jsx)(o.Clickable, {
-      className: A.icon,
-      onClick: r,
+      className: m.icon,
+      onClick: u,
       children: (0, a.jsx)(i.CloseSmallIcon, {
         height: 24,
         width: 24,
@@ -101,7 +105,7 @@ function h(e) {
   })
 }
 
-function R(e) {
+function h(e) {
   let {
     data: t
   } = e, s = n.useMemo(() => I.default.keys(t), [t]);
@@ -109,25 +113,26 @@ function R(e) {
     children: s.map(e => {
       let s = t[e];
       return (0, a.jsxs)("div", {
-        className: A.item,
-        children: [(0, a.jsx)(O, {
+        className: m.item,
+        children: [(0, a.jsx)(C, {
           userId: e,
           count: s.length
-        }), s.map((e, t) => (0, a.jsxs)(n.Fragment, {
-          children: [(0, a.jsx)(h, {
-            className: A.row,
-            index: t,
-            device: e
-          }), t !== s.length - 1 && (0, a.jsx)("div", {
-            className: A.divider
+        }), s.map((t, i) => (0, a.jsxs)(n.Fragment, {
+          children: [(0, a.jsx)(O, {
+            className: m.row,
+            userId: e,
+            index: i,
+            device: t
+          }), i !== s.length - 1 && (0, a.jsx)("div", {
+            className: m.divider
           })]
-        }, "".concat(t, "-").concat(e.timestamp)))]
+        }, "".concat(i, "-").concat(t.timestamp)))]
       }, e)
     })
   })
 }
 
-function p() {
+function R() {
   let e = (0, r.useStateFromStores)([S.default], () => S.default.getPersistentCodesEnabled()),
     t = n.useCallback(e => {
       c.default.updateSettings({
@@ -138,40 +143,40 @@ function p() {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(o.FormSection, {
       tag: o.FormTitleTags.H1,
-      title: m.default.Messages.E2EE_END_TO_END_ENCRYPTION,
+      title: f.default.Messages.E2EE_END_TO_END_ENCRYPTION,
       children: [(0, a.jsx)(o.FormText, {
         type: o.FormTextTypes.DESCRIPTION,
-        className: C.marginBottom20,
-        children: m.default.Messages.E2EE_SETTINGS_SUBTITLE.format({
+        className: A.marginBottom20,
+        children: f.default.Messages.E2EE_SETTINGS_SUBTITLE.format({
           helpArticle: g.E2EE_HELPDESK_ARTICLE
         })
       }), (0, a.jsxs)(o.FormItem, {
         children: [(0, a.jsx)(o.FormTitle, {
           tag: o.FormTitleTags.H5,
-          className: C.marginBottom8,
-          children: m.default.Messages.E2EE_VERIFICATION_CODES
+          className: A.marginBottom8,
+          children: f.default.Messages.E2EE_VERIFICATION_CODES
         }), (0, a.jsx)(o.FormSwitch, {
           value: e,
-          note: m.default.Messages.E2EE_PERSISTENT_CODES_DESCRIPTION.format({
+          note: f.default.Messages.E2EE_PERSISTENT_CODES_DESCRIPTION.format({
             helpArticle: g.E2EE_PERSISTENT_CODES_HELPDESK_ARTICLE
           }),
           onChange: t,
-          children: m.default.Messages.E2EE_ENABLE_PERSISTENT_CODES
+          children: f.default.Messages.E2EE_ENABLE_PERSISTENT_CODES
         })]
       })]
     }), (0, a.jsxs)(o.FormItem, {
-      className: C.marginBottom20,
+      className: A.marginBottom20,
       children: [(0, a.jsx)(o.FormTitle, {
         tag: o.FormTitleTags.H5,
-        className: C.marginBottom8,
-        children: m.default.Messages.E2EE_VERIFIED_DEVICES
+        className: A.marginBottom8,
+        children: f.default.Messages.E2EE_VERIFIED_DEVICES
       }), (0, a.jsx)(o.FormText, {
         type: o.FormTextTypes.DESCRIPTION,
-        children: m.default.Messages.E2EE_VERIFIED_DEVICES_DESCRIPTION.format({
+        children: f.default.Messages.E2EE_VERIFIED_DEVICES_DESCRIPTION.format({
           helpArticle: g.E2EE_VERIFIED_DEVICES_HELPDESK_ARTICLE
         })
       })]
-    }), (0, a.jsx)(R, {
+    }), (0, a.jsx)(h, {
       data: s
     })]
   })
