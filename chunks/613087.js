@@ -27,56 +27,57 @@ let u = a.createContext({
     expansionSpring: null,
     isExpansionAnimationComplete: !1
   }),
-  d = e => {
+  d = a.forwardRef(function(e, t) {
     let {
-      children: t,
-      id: s,
-      inState: o,
-      isTextTransition: d = !1
+      children: s,
+      id: o,
+      inState: d,
+      isTextTransition: c = !1
     } = e, {
-      isExpansionAnimationComplete: c,
-      recalculateAnimationPositions: E,
+      isExpansionAnimationComplete: E,
+      recalculateAnimationPositions: f,
       registerComponent: _,
-      unregisterComponent: f,
-      expansionSpring: h
-    } = a.useContext(u), C = a.useRef(null), m = a.useRef(null), T = a.useContext(r.QuestBarPreviewContext);
+      unregisterComponent: h,
+      expansionSpring: C
+    } = a.useContext(u), m = a.useRef(null), T = a.useRef(null), g = a.useContext(r.QuestBarPreviewContext);
     a.useEffect(() => {
-      E()
-    }, [E]), a.useEffect(() => {
-      let e = C.current;
-      return null != e && _(e, s, o), () => {
-        null != e && f(s, o)
+      f()
+    }, [f]), a.useEffect(() => {
+      let e = m.current;
+      return null != e && _(e, o, d), () => {
+        null != e && h(o, d)
       }
-    }, [s, o, _, f]);
-    let g = document.getElementById(T ? "quest-bar-v2-preview-" + s : "quest-bar-v2-" + s),
+    }, [o, d, _, h]);
+    let p = document.getElementById(g ? "quest-bar-v2-preview-" + o : "quest-bar-v2-" + o),
       A = null;
-    return null == g ? A = null : d && null != h ? A = (0, n.jsxs)(n.Fragment, {
-      children: ["collapsed" === o && (0, l.createPortal)((0, n.jsx)(i.animated.div, {
+    return null == p ? A = null : c && null != C ? A = (0, n.jsxs)(n.Fragment, {
+      children: ["collapsed" === d && (0, l.createPortal)((0, n.jsx)(i.animated.div, {
         style: {
           position: "absolute",
-          opacity: h.to({
+          opacity: C.to({
             range: [0, 1],
             output: [1, 0]
           })
         },
-        children: t(m)
-      }), g), "expanded" === o && (0, l.createPortal)((0, n.jsx)(i.animated.div, {
+        children: s(T)
+      }), p), "expanded" === d && (0, l.createPortal)((0, n.jsx)(i.animated.div, {
         style: {
           position: "absolute",
-          opacity: h.to({
+          opacity: C.to({
             range: [0, 1],
             output: [0, 1]
           })
         },
-        children: t(m)
-      }), g)]
-    }) : "collapsed" === o && (A = (0, l.createPortal)(t(m), g)), (0, n.jsxs)("div", {
+        children: s(T)
+      }), p)]
+    }) : "collapsed" === d && (A = (0, l.createPortal)(s(T), p)), (0, n.jsxs)("div", {
       style: {
-        opacity: null == g || c ? 1 : 0
+        opacity: null == p || E ? 1 : 0
       },
-      children: [t(C), !c && A]
+      ref: t,
+      children: [s(m), !E && A]
     })
-  },
+  }),
   c = e => {
     let {
       children: t,
@@ -84,7 +85,7 @@ let u = a.createContext({
       collapsedContentRef: l,
       expansionSpring: i,
       isExpansionAnimationComplete: r
-    } = e, [d, c] = a.useState({}), [E, _] = a.useState([]), f = a.useCallback((e, t, s) => {
+    } = e, [d, c] = a.useState({}), [E, f] = a.useState([]), _ = a.useCallback((e, t, s) => {
       c(n => {
         var a;
         let l = null !== (a = n[t]) && void 0 !== a ? a : {
@@ -123,23 +124,23 @@ let u = a.createContext({
           u = a.getBoundingClientRect().left - s.current.getBoundingClientRect().left + o.QUEST_BAR_V2_MARGIN,
           c = n.getBoundingClientRect().left - l.current.getBoundingClientRect().left,
           E = -a.getBoundingClientRect().right + s.current.getBoundingClientRect().right + o.QUEST_BAR_V2_MARGIN,
-          _ = -n.getBoundingClientRect().right + l.current.getBoundingClientRect().right;
+          f = -n.getBoundingClientRect().right + l.current.getBoundingClientRect().right;
         e.push({
           id: t,
           collapsedLeft: c,
           expandedLeft: u,
-          collapsedRight: _,
+          collapsedRight: f,
           expandedRight: E,
           collapsedTop: r,
           expandedTop: i
         })
       }
-      _(e)
-    }, [d, s, l, _]);
+      f(e)
+    }, [d, s, l, f]);
     return (0, n.jsx)(u.Provider, {
       value: {
         isExpansionAnimationComplete: r,
-        registerComponent: f,
+        registerComponent: _,
         unregisterComponent: h,
         animatedComponents: d,
         expandedContentRef: s,

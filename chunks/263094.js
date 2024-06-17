@@ -11,9 +11,12 @@ e.exports = {
   flex: "flex_fcc03e",
   headerText: "headerText__020fc",
   heroAsset: "heroAsset__8e1c6",
+  heroAssetDarken: "heroAssetDarken__79f8f",
+  heroAssetTint: "heroAssetTint__46067",
   heroAssetWrapper: "heroAssetWrapper__954c7",
   iconButton: "iconButton_a5db4c",
   interactiveNormal: "interactiveNormal_a449a5",
+  legibilityGradient: "legibilityGradient__4708e",
   promotedBadge: "promotedBadge__73648",
   promotedBadgeIcon: "promotedBadgeIcon__07043",
   promotedBadgeWrapper: "promotedBadgeWrapper__130d9",
@@ -27,6 +30,5 @@ e.exports = {
   submenuIcon: "submenuIcon__4f60b",
   submenuWrapper: "submenuWrapper__19139",
   title: "title_de2774",
-  utils: "utils_ab6626",
   white: "white__5d308"
 }

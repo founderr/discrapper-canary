@@ -5,111 +5,49 @@ var n = s("735250"),
   l = s("120356"),
   i = s.n(l),
   r = s("920906"),
-  o = s("481060"),
-  u = s("810090"),
-  d = s("918701"),
-  c = s("685613"),
-  E = s("78826"),
-  _ = s("898170"),
-  f = s("759853"),
-  h = s("95985"),
-  C = s("743294"),
-  m = s("689938"),
-  T = s("481900");
-let g = a.forwardRef(function(e, t) {
-  var l;
+  o = s("759853"),
+  u = s("95985"),
+  d = s("743294"),
+  c = s("481900");
+let E = a.forwardRef(function(e, t) {
+  var s;
   let {
-    className: g,
-    expansionSpring: A,
-    isExpanded: p,
-    isExpansionAnimationComplete: N,
-    quest: S,
-    useReducedMotion: I
-  } = e, x = a.useRef(null), R = (null === (l = S.userStatus) || void 0 === l ? void 0 : l.enrolledAt) != null, v = a.useMemo(() => (0, d.isAssetAnimated)(S.config.assets.questBarHero), [S]), O = (0, d.getQuestBarHeroAssetUrl)(S);
+    className: l,
+    expansionSpring: E,
+    isExpanded: f,
+    isExpansionAnimationComplete: _,
+    quest: h
+  } = e, C = a.useRef(null), m = (null === (s = h.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null;
   return (0, n.jsxs)(r.animated.div, {
     ref: t,
-    "aria-hidden": p && N,
-    className: i()(g, T.contentCollapsed, {
-      [T.contentCollapsedExpanded]: p,
-      [T.contentCollapsedAccepted]: R
+    "aria-hidden": f && _,
+    className: i()(l, c.contentCollapsed, {
+      [c.contentCollapsedExpanded]: f,
+      [c.contentCollapsedAccepted]: m
     }),
     style: {
-      opacity: A.to({
+      opacity: E.to({
         range: [0, 1],
         output: [1, 0]
       })
     },
-    children: [(0, n.jsxs)("div", {
-      className: T.heroAssetWrapper,
-      children: [(0, n.jsx)("div", {
-        className: T.heroAssetDarken
-      }), (0, n.jsx)("div", {
-        className: T.heroAssetTint,
-        style: {
-          backgroundColor: S.config.colors.primary
-        }
-      }), v ? (0, n.jsx)(E.QuestsAsset, {
-        id: "QuestBarV2ContentExpanded_heroAnimated",
-        children: e => (0, n.jsx)(u.default, {
-          ref: e,
-          autoPlay: !1,
-          loop: !0,
-          muted: !0,
-          playsInline: !0,
-          className: T.heroAsset,
-          controls: !1,
-          children: (0, n.jsx)("source", {
-            src: O,
-            type: (0, d.getVideoAssetMimeType)(O)
-          })
-        })
-      }) : (0, n.jsx)(E.QuestsAsset, {
-        id: "QuestBarV2ContentExpanded_heroStatic",
-        children: e => (0, n.jsx)("img", {
-          ref: e,
-          alt: "",
-          className: T.heroAsset,
-          src: O
-        })
-      })]
-    }), R ? (0, n.jsx)("div", {
-      className: T.postEnrollmentBackground,
+    children: [m ? (0, n.jsx)("div", {
+      className: c.postEnrollmentBackground,
       style: {
-        backgroundImage: "linear-gradient(90deg, ".concat(C.QUEST_BAR_V2_BACKGROUND_GRADIENT_LEFT, ", ").concat(C.QUEST_BAR_V2_BACKGROUND_GRADIENT_RIGHT, ")")
+        backgroundImage: "linear-gradient(90deg, ".concat(d.QUEST_BAR_V2_BACKGROUND_GRADIENT_LEFT, ", ").concat(d.QUEST_BAR_V2_BACKGROUND_GRADIENT_RIGHT, ")")
       }
-    }) : (0, n.jsx)(_.QuestBarBackgroundAnimation, {
-      className: T.background,
-      animationClassName: T.backgroundAnimation,
-      quest: S,
-      useReducedMotion: I
-    }), (0, n.jsx)(f.default, {
-      progressBarRef: x,
-      quest: S,
-      isExpanded: p
+    }) : null, (0, n.jsx)(o.default, {
+      progressBarRef: C,
+      quest: h,
+      isExpanded: f
     }), (0, n.jsx)("div", {
-      className: T.contentCollapsedWrapper,
-      children: R ? (0, n.jsx)(h.default, {
-        quest: S,
-        progressBarRef: x,
+      className: c.contentCollapsedWrapper,
+      children: m ? (0, n.jsx)(u.default, {
+        quest: h,
+        progressBarRef: C,
         isExpanded: !1
-      }) : (0, n.jsxs)("div", {
-        className: T.preEnrollmentWrapper,
-        children: [(0, n.jsx)("img", {
-          alt: "",
-          className: T.wreathIcon,
-          src: s("858595")
-        }), (0, n.jsx)(c.default, {
-          className: T.partnerBranding,
-          quest: S,
-          withGameTile: !1
-        }), (0, n.jsx)(o.Text, {
-          color: "always-white",
-          variant: "text-xs/medium",
-          className: T.questAvailable,
-          children: m.default.Messages.QUEST_AVAILABLE
-        })]
-      })
+      }) : null
     })]
   })
 });
-t.default = g
+t.default = E

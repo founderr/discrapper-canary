@@ -22,15 +22,15 @@ function C(e) {
     quest: t,
     location: n,
     questContent: C
-  } = e, _ = u.SharedQuestFields.build(t.config).defaultReward.messages.name, m = s.useRef(null), S = (0, i.useQuestTaskDetails)({
+  } = e, _ = u.SharedQuestFields.build(t.config).defaultReward.messages.name, m = (0, i.useQuestTaskDetails)({
     quest: t,
     location: n
-  }), p = S.percentComplete > 0, I = (0, o.getQuestsInstructionsToWinReward)({
+  }), S = m.percentComplete > 0, p = (0, o.getQuestsInstructionsToWinReward)({
     quest: t,
     location: n,
     useV2Variants: !0,
-    taskDetails: S
-  }), g = !(0, o.isQuestExpired)(t), T = s.useCallback(() => (0, a.jsx)(l.Text, {
+    taskDetails: m
+  }), I = !(0, o.isQuestExpired)(t), g = s.useCallback(() => (0, a.jsx)(l.Text, {
     variant: "text-md/semibold",
     color: "text-brand",
     tag: "span",
@@ -41,12 +41,11 @@ function C(e) {
     className: h.container,
     children: [(0, a.jsxs)("div", {
       className: h.rewardDescriptionContainer,
-      children: [p ? (0, a.jsx)("div", {
+      children: [S ? (0, a.jsx)("div", {
         className: h.progressWrapper,
         children: (0, a.jsx)(d.default, {
           size: 76,
-          percentComplete: S.percentComplete,
-          progressBarRef: m,
+          percentComplete: m.percentComplete,
           children: (0, a.jsx)("div", {
             className: h.circularRewardTileWrapper,
             children: (0, a.jsx)(c.default, {
@@ -69,17 +68,17 @@ function C(e) {
             color: "header-primary",
             className: h.header,
             children: E.default.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
-              rewardHook: T
+              rewardHook: g
             })
           })
-        }), null != I ? (0, a.jsx)(l.Text, {
+        }), null != p ? (0, a.jsx)(l.Text, {
           variant: "text-sm/medium",
           color: "text-muted",
           className: h.description,
-          children: I
+          children: p
         }) : null]
       })]
-    }), g ? (0, a.jsx)(f.default, {
+    }), I ? (0, a.jsx)(f.default, {
       quest: t
     }) : null]
   })

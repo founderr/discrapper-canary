@@ -15,24 +15,24 @@ t.default = e => {
   let {
     quest: t,
     progressBarRef: s,
-    isExpanded: _
+    isExpanded: f
   } = e, {
-    percentComplete: f
+    percentComplete: _
   } = (0, l.useQuestTaskDetails)({
     quest: t,
     location: c.QuestsExperimentLocations.QUESTS_BAR
-  }), h = (0, d.useQuestBarTitle)(t), C = (0, d.useQuestBarSubtitle)(t, _), m = _ ? "expanded" : "collapsed";
+  }), h = (0, d.useQuestBarTitle)(t), C = (0, d.useQuestBarSubtitle)(t, f), m = f ? "expanded" : "collapsed";
   return (0, n.jsxs)("div", {
     className: E.questProgressWrapper,
     children: [(0, n.jsx)(o.QuestBarV2AnimationComponent, {
       inState: m,
       id: "progress-bar",
+      ref: s,
       children: e => (0, n.jsx)(u.default, {
         ref: e,
-        percentComplete: f,
+        percentComplete: _,
         size: 42,
         strokeWidth: 3,
-        progressBarRef: s,
         children: (0, n.jsx)(r.default, {
           className: E.questProgressRewardTile,
           quest: t,
