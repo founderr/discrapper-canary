@@ -521,6 +521,7 @@ e.exports = Object.freeze({
   APP_LAUNCHER_SEARCH_PLACEHOLDER: "Search Apps & Commands",
   APP_LAUNCHER_HOME_EMPTY_STATE_BODY: "No apps have been installed in this server yet",
   APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY: "No apps or commands match your search",
+  APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY_GENERIC: "Nothing matches your search",
   APP_LAUNCHER_BUILT_IN_SECTION_NAME: "Discord Built-In",
   APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION: "Built-in commands for everyday use",
   APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_TITLE: "Something went wrong...",
