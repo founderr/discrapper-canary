@@ -15513,6 +15513,7 @@ e.exports = Object.freeze({
   COLLECTIBLES_PERMANENT_COLLECTION_BUNDLE: "These decorations are now part of your collection and can be used anytime from your User Profile.",
   COLLECTIBLES_YOU_COLLECTED: "You've collected {itemName}!",
   COLLECTIBLES_ALREADY_OWNED: "Already owned",
+  COLLECTIBLES_PARTIALLY_OWNED: "Partially owned",
   COLLECTIBLES_PARTIALLY_OWNED_DISCLAIMER: "You already own one or more bundle items.",
   COLLECTIBLES_INCLUDED_WITH_PREMIUM: "Included with Nitro",
   COLLECTIBLES_DETAILS_MODAL_PREMIUM_PURCHASE_DISCLAIMER: "Once purchased, this decoration will be added to your collection and can be used anytime",
