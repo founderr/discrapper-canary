@@ -13,10 +13,10 @@ var a = n("735250"),
   u = n("442837"),
   d = n("481060"),
   c = n("570140"),
-  f = n("265875"),
-  E = n("569984"),
-  h = n("918701"),
-  C = n("800599"),
+  f = n("569984"),
+  E = n("918701"),
+  h = n("93127"),
+  C = n("814443"),
   _ = n("594174"),
   m = n("801077"),
   S = n("626135"),
@@ -92,7 +92,7 @@ let y = 15 * p.default.Millis.MINUTE,
       }
     }) : null
   }),
-  D = i().throttle(() => f.fetchUserAffinities(!1), 3e5);
+  D = i().throttle(() => h.fetchUserAffinities(!1), 3e5);
 
 function x() {
   let {
@@ -107,7 +107,7 @@ function x() {
     needsRefresh: C.default.needsRefresh(),
     fetching: C.default.getFetching(),
     currentUser: _.default.getCurrentUser()
-  })), r = (0, u.useStateFromStores)([E.default], () => E.default.quests);
+  })), r = (0, u.useStateFromStores)([f.default], () => f.default.quests);
   s.useEffect(() => (c.default.wait(() => I.mount()), () => c.default.wait(() => I.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
     n && !l && D()
   }, [n, l]);
@@ -119,14 +119,14 @@ function x() {
           game: s
         } = e;
         if (null != s) {
-          let e = (0, h.getQuestByApplicationId)(r, s.id);
+          let e = (0, E.getQuestByApplicationId)(r, s.id);
           null != e && !n.has(e.id) && (t.set(a.party.id, e), n.add(e.id))
         }
       });
       return t
     }, [e, r]),
-    f = null;
-  return t ? (f = e.length > 0 ? e.map(e => {
+    h = null;
+  return t ? (h = e.length > 0 ? e.map(e => {
     let {
       party: t
     } = e;
@@ -147,7 +147,7 @@ function x() {
       children: L.default.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY
     })]
   }), (0, a.jsx)(a.Fragment, {
-    children: f
+    children: h
   })) : (0, a.jsx)("div", {
     className: P.emptyCard,
     children: (0, a.jsx)(d.Spinner, {})
