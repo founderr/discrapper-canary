@@ -1,116 +1,116 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return T
   }
 }), n("642549");
 var r = n("735250"),
   s = n("470079"),
-  a = n("442837"),
-  u = n("836957"),
+  u = n("442837"),
+  a = n("836957"),
   l = n("481060"),
   o = n("377171"),
   i = n("592125"),
   c = n("594174"),
   d = n("153124"),
-  f = n("5192"),
-  E = n("627617"),
+  E = n("5192"),
+  f = n("627617"),
   S = n("571463"),
-  m = n("840467"),
-  C = n("71328"),
-  I = n("498126"),
-  h = n("63454"),
-  _ = n("689938"),
-  g = n("55915");
+  I = n("840467"),
+  _ = n("71328"),
+  C = n("498126"),
+  m = n("63454"),
+  R = n("689938"),
+  h = n("55915");
 
-function R(e) {
+function T(e) {
   let {
     transitionState: t,
     userId: n,
-    channelId: R,
-    onClose: D
-  } = e, T = (0, d.useUID)(), N = (0, a.useStateFromStores)([c.default], () => c.default.getUser(n)), p = (0, a.useStateFromStores)([i.default], () => {
+    channelId: T,
+    onClose: N
+  } = e, g = (0, d.useUID)(), D = (0, u.useStateFromStores)([c.default], () => c.default.getUser(n)), A = (0, u.useStateFromStores)([i.default], () => {
     var e;
-    return null === (e = i.default.getChannel(R)) || void 0 === e ? void 0 : e.getGuildId()
-  }), x = f.default.useName(p, null, N), y = (0, m.useReadableSecureFramesCode)({
-    rawCode: btoa("12345".repeat(12)),
-    chunkSize: 5,
-    desiredLength: 60
-  }), A = s.useCallback(() => {
-    (0, E.addUserVerification)(n), D()
-  }, [D, n]), v = s.useCallback(() => {
-    (0, E.clearUserVerification)(n), D()
-  }, [D, n]), M = (0, S.useIsUserSecureFramesVerified)(n, R);
+    return null === (e = i.default.getChannel(T)) || void 0 === e ? void 0 : e.getGuildId()
+  }), O = E.default.useName(A, null, D), p = (0, I.useReadableSecureFramesCode)({
+    codeBase64: btoa("12345".repeat(12)),
+    chunkSize: m.USER_VERIFICATION_CHUNK_SIZE,
+    desiredLength: m.USER_VERIFICATION_LENGTH
+  }), x = s.useCallback(() => {
+    (0, f.addUserVerification)(n), N()
+  }, [N, n]), U = s.useCallback(() => {
+    (0, f.clearUserVerification)(n), N()
+  }, [N, n]), V = (0, S.useIsUserSecureFramesVerified)(n, T);
   return (0, r.jsxs)(l.ModalRoot, {
     transitionState: t,
-    "aria-labelledby": T,
+    "aria-labelledby": g,
     children: [(0, r.jsx)("div", {
-      className: g.shieldIconContainer,
+      className: h.shieldIconContainer,
       children: (0, r.jsx)("div", {
-        className: g.shieldIcon,
-        children: (0, r.jsx)(u.ShieldLockIcon, {
+        className: h.shieldIcon,
+        children: (0, r.jsx)(a.ShieldLockIcon, {
           width: 55,
           height: 55,
           color: l.tokens.colors.HEADER_SECONDARY
         })
       })
     }), (0, r.jsxs)(l.ModalContent, {
-      className: g.content,
+      className: h.content,
       children: [(0, r.jsx)(l.Heading, {
-        className: g.title,
+        className: h.title,
         variant: "heading-lg/bold",
         color: "header-primary",
-        children: _.default.Messages.E2EE_VERIFICATION_CODE
+        children: R.default.Messages.E2EE_VERIFICATION_CODE
       }), (0, r.jsx)(l.Text, {
-        className: g.subtitle,
+        className: h.subtitle,
         variant: "text-md/normal",
         color: "header-secondary",
-        children: _.default.Messages.E2EE_USER_VERIFY_MODAL_SUBTITLE.format({
-          username: x
+        children: R.default.Messages.E2EE_USER_VERIFY_MODAL_SUBTITLE.format({
+          username: O
         })
       }), (0, r.jsxs)("div", {
-        className: g.verification,
+        className: h.verification,
         children: [(0, r.jsxs)("div", {
-          className: g.header,
+          className: h.header,
           children: [(0, r.jsx)(l.Heading, {
             variant: "text-sm/bold",
             color: "header-primary",
-            children: _.default.Messages.E2EE_VOICE_PRIVACY_CODE
-          }), null != y && (0, r.jsx)(I.SecureFramesCopyIcon, {
-            className: g.copyIcon,
-            chunks: y,
+            children: R.default.Messages.E2EE_VOICE_PRIVACY_CODE
+          }), null != p && (0, r.jsx)(C.SecureFramesCopyIcon, {
+            className: h.copyIcon,
+            chunks: p,
             color: l.tokens.colors.INTERACTIVE_NORMAL
           }), (0, r.jsx)(l.TextBadge, {
-            text: _.default.Messages.NEW,
+            text: R.default.Messages.NEW,
             color: o.default.STATUS_DANGER
           })]
-        }), null != y && (0, r.jsx)(C.SecureFramesCode, {
-          className: g.code,
-          chunks: y,
-          columns: 4
+        }), null != p && (0, r.jsx)(_.SecureFramesCode, {
+          className: h.code,
+          chunks: p,
+          columns: m.USER_VERIFICATION_NUM_COLUMNS
         })]
       }), (0, r.jsx)(l.Text, {
-        className: g.details,
+        className: h.details,
         variant: "text-sm/normal",
         color: "text-muted",
-        children: _.default.Messages.E2EE_USER_VERIFY_FOOTER_TEXT.format({
-          helpArticle: h.E2EE_HELPDESK_ARTICLE
+        children: R.default.Messages.E2EE_USER_VERIFY_FOOTER_TEXT.format({
+          helpArticle: m.E2EE_HELPDESK_ARTICLE
         })
       }), (0, r.jsx)(l.Button, {
         fullWidth: !0,
-        className: g.verifiedButton,
-        color: M ? l.ButtonColors.RED : l.ButtonColors.BRAND,
+        className: h.verifiedButton,
+        color: V ? l.ButtonColors.RED : l.ButtonColors.BRAND,
         size: l.ButtonSizes.MEDIUM,
         look: l.ButtonLooks.FILLED,
-        onClick: M ? v : A,
-        children: M ? _.default.Messages.E2EE_CLEAR_VERIFICATION : _.default.Messages.E2EE_MARK_AS_VERIFIED
+        onClick: V ? U : x,
+        children: V ? R.default.Messages.E2EE_CLEAR_VERIFICATION : R.default.Messages.E2EE_MARK_AS_VERIFIED
       }), (0, r.jsx)(l.Button, {
         fullWidth: !0,
         color: l.ButtonColors.PRIMARY,
         size: l.ButtonSizes.MEDIUM,
         look: l.ButtonLooks.FILLED,
-        onClick: D,
-        children: _.default.Messages.CANCEL
+        onClick: N,
+        children: R.default.Messages.CANCEL
       })]
     })]
   })

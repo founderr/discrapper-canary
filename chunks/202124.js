@@ -23,9 +23,9 @@ function m() {
       return null === (e = r.default.getSecureFramesState()) || void 0 === e ? void 0 : e.epochAuthenticator
     }),
     t = (0, o.useReadableSecureFramesCode)({
-      rawCode: e,
-      chunkSize: 5,
-      desiredLength: 30
+      codeBase64: e,
+      chunkSize: c.EPOCH_AUTHENTICATOR_CHUNK_SIZE,
+      desiredLength: c.EPOCH_AUTHENTICATOR_LENGTH
     });
   return (0, l.jsxs)("div", {
     className: h.container,
@@ -43,7 +43,7 @@ function m() {
     }), (0, l.jsx)(i.Text, {
       variant: "text-xs/normal",
       color: "text-secondary",
-      children: f.default.Messages.E2EE_OVERVIEW_SUBTITLE
+      children: f.default.Messages.E2EE_CALL_DETAILS_SUBTITLE
     }), (0, l.jsxs)("div", {
       className: h.header,
       children: [(0, l.jsx)(i.Heading, {
@@ -57,11 +57,11 @@ function m() {
     }), null != t && (0, l.jsx)(u.SecureFramesCode, {
       className: h.code,
       chunks: t,
-      columns: 3
+      columns: c.EPOCH_AUTHENTICATOR_COLUMNS
     }), (0, l.jsx)(i.Text, {
       variant: "text-xs/normal",
       color: "text-secondary",
-      children: f.default.Messages.E2EE_OVERVIEW_FOOTER_TEXT.format({
+      children: f.default.Messages.E2EE_CALL_DETAILS_FOOTER_TEXT.format({
         helpArticle: c.E2EE_HELPDESK_ARTICLE
       })
     })]

@@ -580,8 +580,8 @@ e.exports = Object.freeze({
   E2EE_PRIVACY: "Privacy",
   E2EE_END_TO_END_ENCRYPTION: "End-to-end encryption",
   E2EE_END_TO_END_ENCRYPTED: "End-to-end encrypted",
-  E2EE_OVERVIEW_SUBTITLE: "Only you and your friends on this call can hear you. Nobody else – not even Wumpus – can listen in!",
-  E2EE_OVERVIEW_FOOTER_TEXT: "A new code is generated when people join or leave this call. [Learn more about end-to-end encryption.]({helpArticle})",
+  E2EE_CALL_DETAILS_SUBTITLE: "Only you and your friends on this call can hear you. Nobody else – not even Wumpus – can listen in!",
+  E2EE_CALL_DETAILS_FOOTER_TEXT: "A new code is generated when people join or leave this call. [Learn more about end-to-end encryption.]({helpArticle})",
   E2EE_ENCRYPTION: "Encryption",
   E2EE_SETTINGS_SUBTITLE: "All of your calls on Discord are end-to-end encrypted. That means nobody — not even Wumpus — can listen in on your conversations. You can verify your privacy by comparing verification codes with whoever you’re talking to. [Learn more about end-to-end encryption.]({helpArticle})",
   E2EE_VERIFICATION_CODES: "Verification codes",
@@ -597,5 +597,8 @@ e.exports = Object.freeze({
   E2EE_USER_VERIFIED_HOURS_AGO: "Verified {count} {count, plural, =1 {hour} other {hours}} ago",
   E2EE_USER_VERIFIED_MINUTES_AGO: "Verified {count} {count, plural, =1 {minute} other {minutes}} ago",
   E2EE_USER_VERIFIED_SECONDS_AGO: "Verified {count} {count, plural, =1 {second} other {seconds}} ago",
-  E2EE_DEVICES_COUNT: "{count} {count, plural, =1 {device} other {devices}}"
+  E2EE_DEVICES_COUNT: "{count} {count, plural, =1 {device} other {devices}}",
+  E2EE_CHECK_PRIVACY_CODE: "Check this call's privacy code",
+  E2EE_MOBILE_CALL_DETAILS_SUBTITLE: "Compare this code with your friends. If these numbers are the same on everyone's screen, then this call is end-to-end encrypted.",
+  E2EE_PRIVACY_CODE: "Privacy Code"
 })
