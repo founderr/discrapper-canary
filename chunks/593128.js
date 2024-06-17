@@ -335,7 +335,8 @@ t.default = e => {
               case M.ClanSetupSteps.MEMBER_APPLICATION:
                 return (0, a.jsx)(L.default, {
                   guildId: t,
-                  inSettings: !0
+                  inSettings: !0,
+                  error: B.verificationForm
                 });
               case M.ClanSetupSteps.CUSTOMIZE_BANNER:
                 return (0, a.jsx)(h.default, {

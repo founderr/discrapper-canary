@@ -14,30 +14,36 @@ var r = a("442837"),
 t.default = e => {
   let {
     guildId: t,
-    inSettings: a = !1
-  } = e, m = (0, r.useStateFromStores)([o.default], () => o.default.getGuild(t)), E = (0, r.useStateFromStores)([d.default, c.default], () => {
-    var e, n;
-    return a ? d.default.getState().settings.verificationForm : null === (n = c.default.getStateForGuild(t)) || void 0 === n ? void 0 : null === (e = n.progress) || void 0 === e ? void 0 : e.verificationForm
+    error: a,
+    inSettings: m = !1
+  } = e, E = (0, r.useStateFromStores)([o.default], () => o.default.getGuild(t)), h = (0, r.useStateFromStores)([d.default, c.default], () => {
+    var e, a;
+    return m ? d.default.getState().settings.verificationForm : null === (a = c.default.getStateForGuild(t)) || void 0 === a ? void 0 : null === (e = a.progress) || void 0 === e ? void 0 : e.verificationForm
   });
-  return null == m ? null : (0, n.jsxs)("div", {
+  return null == E ? null : (0, n.jsxs)("div", {
     className: f.slideContent,
     children: [(0, n.jsx)(i.Heading, {
       variant: "heading-xxl/medium",
       className: f.title,
-      children: a ? u.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION_SETUP : u.default.Messages.CLAN_SETUP_APPLICATION_TITLE
+      children: m ? u.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION_SETUP : u.default.Messages.CLAN_SETUP_APPLICATION_TITLE
     }), (0, n.jsx)(i.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: f.subtitle,
       children: u.default.Messages.CLAN_SETUP_APPLICATION_SUBTITLE
-    }), (0, n.jsx)("div", {
+    }), (0, n.jsxs)("div", {
       className: f.maxWidthContainer,
-      children: (0, n.jsx)(l.default, {
-        guild: m,
+      children: [null != a && (0, n.jsx)(i.Text, {
+        variant: "text-sm/normal",
+        color: "status-danger",
+        className: f.errorText,
+        children: a
+      }), (0, n.jsx)(l.default, {
+        guild: E,
         isClanContext: !0,
         onFieldsSave: (e, t) => (s.default.updateVerificationFormFieldsLocal(e, [...t]), Promise.resolve()),
-        verificationForm: E
-      })
+        verificationForm: h
+      })]
     })]
   })
 }

@@ -88,7 +88,8 @@ s = "ClanSettingsStore", (i = "displayName") in(r = g) ? Object.defineProperty(r
       description: t.getFirstFieldErrorMessage("description"),
       wildcardDescriptors: t.getFirstFieldErrorMessage("wildcard_descriptors"),
       interests: t.getFirstFieldErrorMessage("search_terms"),
-      tag: t.getFirstFieldErrorMessage("tag")
+      tag: t.getFirstFieldErrorMessage("tag"),
+      verificationForm: t.getFirstFieldErrorMessage(["verification_form", "form_fields"])
     }
   },
   MEMBER_VERIFICATION_FORM_UPDATE: function(e) {

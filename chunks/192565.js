@@ -165,9 +165,12 @@ let g = {
   [S.ClanSetupSteps.MEMBER_APPLICATION]: function(e) {
     let {
       guildId: t
-    } = e;
+    } = e, {
+      errors: n
+    } = I(t);
     return (0, a.jsx)(E.default, {
-      guildId: t
+      guildId: t,
+      error: null == n ? void 0 : n.verificationForm
     })
   }
 };

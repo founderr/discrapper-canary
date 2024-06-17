@@ -173,7 +173,8 @@ L(O, "displayName", "ClanSetupStore"), L(O, "persistKey", "ClanSetupStore"), t.d
       description: E.getFirstFieldErrorMessage("description"),
       wildcardDescriptors: E.getFirstFieldErrorMessage("wildcard_descriptors"),
       interests: E.getFirstFieldErrorMessage("search_terms"),
-      tag: E.getFirstFieldErrorMessage("tag")
+      tag: E.getFirstFieldErrorMessage("tag"),
+      verificationForm: E.getFirstFieldErrorMessage(["verification_form", "form_fields"])
     })
   },
   MEMBER_VERIFICATION_FORM_UPDATE: function(e) {
