@@ -1,5 +1,6 @@
 "use strict";
 e.exports = {
+  errorCircle: "errorCircle__55c7a",
   heading: "heading__5c363",
   headingChevron: "headingChevron_a9d95d",
   headingWrapper: "headingWrapper_dfde31",

@@ -1,5 +1,5 @@
 "use strict";
-n.r(t);
+n.r(t), n("47120");
 var s, a, l = n("735250"),
   i = n("470079"),
   r = n("120356"),
@@ -55,36 +55,65 @@ function j(e) {
     onClick: n,
     children: s
   })
-}(s = a || (a = {}))[s.UNACCEPTED = 0] = "UNACCEPTED", s[s.ACCEPTED = 1] = "ACCEPTED", s[s.IN_PROGRESS = 2] = "IN_PROGRESS", s[s.COMPLETED = 3] = "COMPLETED", s[s.CLAIMED = 4] = "CLAIMED";
+}(a = s || (s = {}))[a.UNACCEPTED = 0] = "UNACCEPTED", a[a.ACCEPTED = 1] = "ACCEPTED", a[a.IN_PROGRESS = 2] = "IN_PROGRESS", a[a.COMPLETED = 3] = "COMPLETED", a[a.CLAIMED = 4] = "CLAIMED";
 
 function b(e) {
   let {
     quest: t,
     useReducedMotion: n
-  } = e, s = (0, v.useAnimatedRefreshIcon)({
+  } = e, [s, a] = i.useState([]), r = (0, v.useAnimatedRefreshIcon)({
     useReducedMotion: n,
-    className: y.refreshIcon
-  }), a = (0, g.hasVariant)(t, L.QuestVariants.IN_HOUSE_CONSOLE_QUEST), i = async () => {
-    s.startAnimation(), await (0, h.manuallyStartConsoleQuest)(t.id), s.stopAnimation()
-  }, r = () => {
-    s.startAnimation(), i()
-  }, o = a ? P.default.Messages.QUESTS_CHECK_FOR_ANY_GAME_LAUNCH_TOOLTIP : P.default.Messages.QUESTS_CHECK_FOR_GAME_LAUNCH_TOOLTIP.format({
-    gameTitle: A.SharedQuestFields.build(t.config).application.name
-  });
+    className: o()(y.refreshIcon, s.length > 0 ? y.refreshIconErrorState : void 0)
+  }), u = async () => {
+    r.startAnimation(), a((await (0, h.manuallyStartConsoleQuest)(t.id)).errorHints), r.stopAnimation()
+  }, d = () => {
+    r.startAnimation(), u()
+  }, {
+    rawTooltipText: c,
+    renderTooltipText: E,
+    buttonText: _
+  } = i.useMemo(() => {
+    let e = A.SharedQuestFields.build(t.config).application.name,
+      n = (0, g.hasVariant)(t, L.QuestVariants.IN_HOUSE_CONSOLE_QUEST),
+      a = s.join("\n"),
+      i = () => (0, l.jsx)(l.Fragment, {
+        children: s.map((e, t) => (0, l.jsx)(f.Text, {
+          className: t > 0 ? y.ctaTooltipErrorHint : void 0,
+          variant: "text-xxs/normal",
+          children: e
+        }, t))
+      });
+    return n ? {
+      rawTooltipText: s.length > 0 ? a : P.default.Messages.QUESTS_CHECK_FOR_ANY_GAME_LAUNCH_TOOLTIP,
+      renderTooltipText: s.length > 0 ? i : () => P.default.Messages.QUESTS_CHECK_FOR_ANY_GAME_LAUNCH_TOOLTIP,
+      buttonText: s.length > 0 ? P.default.Messages.QUESTS_ANY_GAME_NOT_DETECTED : P.default.Messages.QUESTS_MICROHPONE_UNIT_BUTTON_CTA
+    } : {
+      rawTooltipText: s.length > 0 ? a : P.default.Messages.QUESTS_CHECK_FOR_GAME_LAUNCH_TOOLTIP.format({
+        gameTitle: e
+      }),
+      renderTooltipText: s.length > 0 ? i : () => P.default.Messages.QUESTS_CHECK_FOR_GAME_LAUNCH_TOOLTIP.format({
+        gameTitle: e
+      }),
+      buttonText: s.length > 0 ? P.default.Messages.QUESTS_GAME_NOT_DETECTED.format({
+        gameTitle: e
+      }) : P.default.Messages.QUESTS_MICROHPONE_UNIT_BUTTON_CTA
+    }
+  }, [t, s]);
   return (0, l.jsx)(f.Tooltip, {
-    text: o,
-    tooltipContentClassName: y.ctaTooltipCopy,
+    "aria-label": c,
+    text: E(),
+    tooltipContentClassName: s.length > 0 ? y.ctaTooltipErrorText : y.ctaTooltipText,
     children: e => (0, l.jsx)(f.Button, {
       ...e,
       wrapperClassName: y.ctaButtonWrapper,
-      color: f.ButtonColors.PRIMARY,
-      onClick: r,
+      color: s.length > 0 ? f.ButtonColors.RED : f.ButtonColors.PRIMARY,
+      onClick: d,
       children: (0, l.jsxs)("div", {
         className: y.ctaButtonInner,
-        children: [P.default.Messages.QUESTS_MICROHPONE_UNIT_BUTTON_CTA, s.render()]
+        children: [_, r.render()]
       })
     })
-  }, o)
+  }, c)
 }
 
 function F(e) {
@@ -333,7 +362,7 @@ t.default = e => {
         useReducedMotion: en
       }) : (0, l.jsx)(f.Tooltip, {
         text: ea,
-        tooltipContentClassName: y.ctaTooltipCopy,
+        tooltipContentClassName: y.ctaTooltipText,
         shouldShow: !H || H && W && z,
         children: e => (0, l.jsx)(F, {
           ...e,

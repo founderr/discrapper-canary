@@ -67,12 +67,17 @@ async function T(e) {
         preview: t
       } : void 0
     })).body;
-    null != n.quest_user_status && s.default.dispatch({
+    if (null != n.quest_user_status) s.default.dispatch({
       type: "QUESTS_USER_STATUS_UPDATE",
       user_status: n.quest_user_status
-    })
+    });
+    else if (null != n.error_hints && n.error_hints.length > 0) return {
+      errorHints: n.error_hints
+    }
   } catch (e) {}
-  return null
+  return {
+    errorHints: []
+  }
 }
 async function f(e) {
   await r.HTTP.post({
