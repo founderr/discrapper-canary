@@ -1,7 +1,7 @@
 "use strict";
-var n, u;
-l.r(t), l.d(t, {
+var l, a;
+n.r(t), n.d(t, {
   GuildInviteFlags: function() {
-    return n
+    return l
   }
-}), l("47120"), (u = n || (n = {}))[u.IS_GUEST_INVITE = 1] = "IS_GUEST_INVITE", u[u.IS_VIEWED = 2] = "IS_VIEWED", u[u.IS_ENHANCED = 4] = "IS_ENHANCED"
+}), n("47120"), (a = l || (l = {}))[a.IS_GUEST_INVITE = 1] = "IS_GUEST_INVITE", a[a.IS_VIEWED = 2] = "IS_VIEWED", a[a.IS_ENHANCED = 4] = "IS_ENHANCED"

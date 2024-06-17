@@ -10,27 +10,27 @@ var n = s("735250"),
   d = s("906732"),
   c = s("171368"),
   E = s("981631"),
-  _ = s("611193");
+  f = s("611193");
 t.default = e => {
   let {
     userId: t,
     children: s,
     isLast: l,
-    className: f
-  } = e, [h, C] = a.useState(!1), {
-    analyticsLocations: m
+    className: _
+  } = e, [h, m] = a.useState(!1), {
+    analyticsLocations: C
   } = (0, d.default)(), T = a.useCallback(() => {
     (0, c.openUserProfileModal)({
       userId: t,
-      sourceAnalyticsLocations: m,
+      sourceAnalyticsLocations: C,
       analyticsLocation: {
         section: E.AnalyticsSections.FAMILY_CENTER
       }
     })
-  }, [t, m]), g = () => {
-    C(!0)
-  }, A = () => {
-    C(!1)
+  }, [t, C]), g = () => {
+    m(!0)
+  }, p = () => {
+    m(!1)
   };
   return (0, n.jsx)(u.ListNavigatorItem, {
     id: t,
@@ -43,12 +43,12 @@ t.default = e => {
         style: {
           opacity: 1
         },
-        className: i()(_.rowItem, f, {
-          [_.last]: l,
-          [_.active]: h
+        className: i()(f.rowItem, _, {
+          [f.last]: l,
+          [f.active]: h
         }),
         onMouseEnter: g,
-        onMouseLeave: A,
+        onMouseLeave: p,
         onClick: T,
         ...e,
         children: s(h)

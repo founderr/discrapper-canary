@@ -10,20 +10,20 @@ var n = s("735250"),
   d = s("481060"),
   c = s("37234"),
   E = s("960412"),
-  _ = s("151662"),
-  f = s("695346"),
+  f = s("151662"),
+  _ = s("695346"),
   h = s("877453"),
-  C = s("981631"),
-  m = s("930441"),
+  m = s("981631"),
+  C = s("930441"),
   T = s("689938"),
   g = s("120762"),
-  A = s("611273");
+  p = s("611273");
 t.default = () => {
-  let e = f.FamilyCenterEnabled.useSetting(),
+  let e = _.FamilyCenterEnabled.useSetting(),
     {
       categories: t,
       initialized: s
-    } = (0, u.useStateFromStoresObject)([_.default], () => _.default.getEmailSettings());
+    } = (0, u.useStateFromStoresObject)([f.default], () => f.default.getEmailSettings());
   return a.useEffect(() => {
     null == s && (0, E.fetchEmailSettings)()
   }, [s]), (0, n.jsxs)("div", {
@@ -33,11 +33,11 @@ t.default = () => {
       color: "text-muted",
       children: T.default.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
     }), (0, n.jsx)(d.FormSwitch, {
-      className: i()(A.marginTop8, A.marginBottom20),
+      className: i()(p.marginTop8, p.marginBottom20),
       value: e,
       note: T.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
       hideBorder: !0,
-      onChange: f.FamilyCenterEnabled.updateSetting,
+      onChange: _.FamilyCenterEnabled.updateSetting,
       children: T.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH
     }), e ? (0, n.jsx)(d.Card, {
       className: g.enableCard,
@@ -55,7 +55,7 @@ t.default = () => {
           children: (0, n.jsx)(r.Link, {
             onClick: c.popLayer,
             to: {
-              pathname: C.Routes.FAMILY_CENTER,
+              pathname: m.Routes.FAMILY_CENTER,
               state: {
                 scrollRestoration: !1
               }
@@ -69,12 +69,12 @@ t.default = () => {
         })]
       })
     }) : null, (0, n.jsx)(d.FormSwitch, {
-      className: i()(A.marginTop20, A.marginBottom20),
-      value: !!t[m.EmailCategories.FAMILY_CENTER_DIGEST],
+      className: i()(p.marginTop20, p.marginBottom20),
+      value: !!t[C.EmailCategories.FAMILY_CENTER_DIGEST],
       note: T.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
       hideBorder: !0,
       onChange: function(e) {
-        (0, E.updateEmailSetting)(m.EmailCategories.FAMILY_CENTER_DIGEST, e)
+        (0, E.updateEmailSetting)(C.EmailCategories.FAMILY_CENTER_DIGEST, e)
       },
       children: T.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH
     })]

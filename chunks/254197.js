@@ -13,8 +13,8 @@ var n = s("735250"),
   f = s("272008"),
   _ = s("113434"),
   h = s("569984"),
-  C = s("497505"),
-  m = s("918701"),
+  m = s("497505"),
+  C = s("918701"),
   T = s("988303"),
   g = s("644646"),
   p = s("78826"),
@@ -39,10 +39,10 @@ let L = a.forwardRef(function(e, t) {
     onCtxMenuSelect: U,
     onContentHeightChange: P,
     quest: B,
-    useReducedMotion: V
-  } = e, G = a.useRef(null), H = (0, o.useStateFromStores)([h.default], () => h.default.isEnrolling(B.id), [B]), F = (0, _.useQuestFormattedDate)(B.config.expiresAt), k = a.useMemo(() => (0, m.isAssetAnimated)(B.config.assets.questBarHero), [B]), w = a.useCallback(() => {
+    useReducedMotion: G
+  } = e, V = a.useRef(null), H = (0, o.useStateFromStores)([h.default], () => h.default.isEnrolling(B.id), [B]), F = (0, _.useQuestFormattedDate)(B.config.expiresAt), k = a.useMemo(() => (0, C.isAssetAnimated)(B.config.assets.questBarHero), [B]), w = a.useCallback(() => {
     (0, f.enrollInQuest)(B.id, {
-      questContent: C.QuestContent.QUEST_BAR,
+      questContent: m.QuestContent.QUEST_BAR,
       questContentCTA: E.QuestContentCTA.ACCEPT_QUEST
     })
   }, [B]), {
@@ -54,7 +54,7 @@ let L = a.forwardRef(function(e, t) {
   }), Y = (null === (s = B.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null, q = (0, _.useQuestTaskDetails)({
     quest: B,
     location: v.QuestsExperimentLocations.QUESTS_BAR
-  }), W = q.percentComplete > 0, z = L && y, Z = a.useMemo(() => (0, m.isConsoleQuest)(B), [B]), K = (0, m.getQuestBarHeroAssetUrl)(B), X = (0, m.getQuestsInstructionsToWinReward)({
+  }), W = q.percentComplete > 0, z = L && y, Z = a.useMemo(() => (0, C.isConsoleQuest)(B), [B]), K = (0, C.getQuestBarHeroAssetUrl)(B), X = (0, C.getQuestsInstructionsToWinReward)({
     quest: B,
     location: v.QuestsExperimentLocations.QUESTS_BAR,
     useV2Variants: Q === T.QuestBarExperimentVariants.V2 || (0, R.shouldForceQuestBarV2)(B),
@@ -81,7 +81,7 @@ let L = a.forwardRef(function(e, t) {
           onOpen: D,
           onClose: j,
           onSelect: U,
-          questContent: C.QuestContent.QUEST_BAR,
+          questContent: m.QuestContent.QUEST_BAR,
           quest: B,
           shouldShowDisclosure: !1,
           showShareLink: !0,
@@ -97,19 +97,19 @@ let L = a.forwardRef(function(e, t) {
       }), (0, n.jsx)("div", {
         className: O.divider
       }), (0, n.jsx)(S.default, {
-        progressBarRef: G,
+        progressBarRef: V,
         quest: B,
         isExpanded: L
       }), (0, n.jsx)(x.default, {
         quest: B,
-        progressBarRef: G,
+        progressBarRef: V,
         isExpanded: !0
       }), Z && (0, n.jsx)(I.default, {
         onContentHeightChange: P,
         quest: B
       }), (0, n.jsx)(N.QuestBarV2BottomCta, {
         quest: B,
-        useReducedMotion: V,
+        useReducedMotion: G,
         isExpanded: L,
         hasMadeProgress: W
       })]
@@ -123,7 +123,7 @@ let L = a.forwardRef(function(e, t) {
             className: O.rewardTile,
             learnMoreStyle: "text",
             quest: B,
-            questContent: C.QuestContent.QUEST_BAR
+            questContent: m.QuestContent.QUEST_BAR
           }), (0, n.jsx)(u.Heading, {
             className: O.title,
             variant: "heading-md/medium",
@@ -165,7 +165,7 @@ let L = a.forwardRef(function(e, t) {
           id: "QuestBarV2ContentExpanded_heroAnimated",
           children: e => (0, n.jsx)(c.default, {
             ref: e,
-            autoPlay: !V,
+            autoPlay: !G,
             loop: !0,
             muted: !0,
             playsInline: !0,
@@ -173,7 +173,7 @@ let L = a.forwardRef(function(e, t) {
             controls: !1,
             children: (0, n.jsx)("source", {
               src: K,
-              type: (0, m.getVideoAssetMimeType)(K)
+              type: (0, C.getVideoAssetMimeType)(K)
             })
           })
         }) : (0, n.jsx)(p.QuestsAsset, {

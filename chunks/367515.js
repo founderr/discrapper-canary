@@ -14,75 +14,75 @@ var n = s("735250"),
   d = s("263704"),
   c = s("465670"),
   E = s("880257"),
-  _ = s("631885"),
-  f = s("933970"),
+  f = s("631885"),
+  _ = s("933970"),
   h = s("340453"),
-  C = s("292352"),
-  m = s("689938"),
+  m = s("292352"),
+  C = s("689938"),
   T = s("999593");
 
 function g(e) {
   let {
     user: t
-  } = e, l = (0, E.default)(), g = (0, _.useHasMaxConnections)(), A = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), p = a.useCallback(() => {
-    i()(void 0 !== A, "User must be logged in to accept a link request"), (0, o.openModalLazy)(async () => {
+  } = e, l = (0, E.default)(), g = (0, f.useHasMaxConnections)(), p = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), A = a.useCallback(() => {
+    i()(void 0 !== p, "User must be logged in to accept a link request"), (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([s.e("99387"), s.e("59716")]).then(s.bind(s, "275370"));
       return s => (0, n.jsx)(e, {
         ...s,
-        currentUser: A,
+        currentUser: p,
         otherUser: t
       })
     })
-  }, [A, t]), N = a.useCallback(() => {
-    i()(void 0 !== A, "User must be logged in to decline a link request"), (0, o.openModalLazy)(async () => {
+  }, [p, t]), N = a.useCallback(() => {
+    i()(void 0 !== p, "User must be logged in to decline a link request"), (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([s.e("99387"), s.e("958")]).then(s.bind(s, "4526"));
       return s => (0, n.jsx)(e, {
         ...s,
-        currentUser: A,
+        currentUser: p,
         otherUser: t
       })
     })
-  }, [A, t]), S = a.useCallback(() => {
-    i()(void 0 !== A, "User must be logged in to decline a link request"), (0, o.openModalLazy)(async () => {
+  }, [p, t]), S = a.useCallback(() => {
+    i()(void 0 !== p, "User must be logged in to decline a link request"), (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([s.e("99387"), s.e("69015")]).then(s.bind(s, "247265"));
       return s => (0, n.jsx)(e, {
         ...s,
-        currentUser: A,
+        currentUser: p,
         otherUser: t
       })
     })
-  }, [A, t]);
+  }, [p, t]);
   return (0, n.jsxs)("div", {
     className: T.container,
     children: [(0, n.jsx)("div", {
       className: T.details,
       children: (0, n.jsx)(h.default, {
         otherUser: t,
-        status: C.UserLinkStatus.PENDING
+        status: m.UserLinkStatus.PENDING
       })
     }), (0, n.jsx)("div", {
       className: T.actions,
-      children: l ? (0, n.jsx)(f.default, {
+      children: l ? (0, n.jsx)(_.default, {
         icon: c.default,
         className: T.__invalid_actionDeny,
-        tooltip: m.default.Messages.FAMILY_CENTER_LINK_ACTION_CANCEL,
+        tooltip: C.default.Messages.FAMILY_CENTER_LINK_ACTION_CANCEL,
         onClick: S
       }) : (0, n.jsxs)(n.Fragment, {
-        children: [g ? null : (0, n.jsx)(f.default, {
+        children: [g ? null : (0, n.jsx)(_.default, {
           icon: d.default,
           className: T.__invalid_actionAccept,
-          tooltip: m.default.Messages.FAMILY_CENTER_LINK_ACTION_ACCEPT,
-          onClick: p
-        }), (0, n.jsx)(f.default, {
+          tooltip: C.default.Messages.FAMILY_CENTER_LINK_ACTION_ACCEPT,
+          onClick: A
+        }), (0, n.jsx)(_.default, {
           icon: c.default,
           className: T.__invalid_actionDeny,
-          tooltip: m.default.Messages.FAMILY_CENTER_LINK_ACTION_DECLINE,
+          tooltip: C.default.Messages.FAMILY_CENTER_LINK_ACTION_DECLINE,
           onClick: N
         })]
       })

@@ -27,8 +27,8 @@ var a = n("735250"),
   O = n("925058"),
   L = n("835104"),
   P = n("741160"),
-  y = n("829972"),
-  M = n("31932"),
+  M = n("829972"),
+  y = n("31932"),
   D = n("642301");
 
 function x(e) {
@@ -92,7 +92,7 @@ t.default = s.memo(function(e) {
       },
       location_stack: f
     })
-  }, w = (0, i.isThemeDark)(n) ? y : M, [k, B] = (0, c.useSelectedDismissibleContent)(t, A.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
+  }, w = (0, i.isThemeDark)(n) ? M : y, [k, B] = (0, c.useSelectedDismissibleContent)(t, A.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
   return (0, a.jsx)(a.Fragment, {
     children: (() => {
       switch (k) {

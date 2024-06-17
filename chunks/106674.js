@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return M
   }
 }), n("47120");
 var a = n("735250"),
@@ -51,7 +51,7 @@ function P(e) {
   })
 }
 
-function y(e) {
+function M(e) {
   var t;
   let {
     broadcast: n
@@ -59,11 +59,11 @@ function y(e) {
     userId: i,
     applicationId: p,
     channelId: I,
-    streamKey: y
-  } = n, [M, D] = s.useState(!1), x = (0, l.useStateFromStores)([_.default], () => _.default.getUser(i)), [b] = (0, c.default)([p]), U = null !== (t = g.default.getGlobalName(x)) && void 0 !== t ? t : g.default.getUserTag(x), j = (0, N.default)(), G = (0, l.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, I, i)), w = (0, l.useStateFromStores)([C.default], () => C.default.getVoiceChannelId()), k = (0, A.default)(), B = (0, T.default)(I);
+    streamKey: M
+  } = n, [y, D] = s.useState(!1), x = (0, l.useStateFromStores)([_.default], () => _.default.getUser(i)), [b] = (0, c.default)([p]), U = null !== (t = g.default.getGlobalName(x)) && void 0 !== t ? t : g.default.getUserTag(x), j = (0, N.default)(), G = (0, l.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, I, i)), w = (0, l.useStateFromStores)([C.default], () => C.default.getVoiceChannelId()), k = (0, A.default)(), B = (0, T.default)(I);
   if (s.useEffect(() => {
-      M && w === I && D(!1)
-    }, [w, M, I]), null == x || null == U) return null;
+      y && w === I && D(!1)
+    }, [w, y, I]), null == x || null == U) return null;
   let {
     buttonColor: F,
     buttonCTA: H,
@@ -105,7 +105,7 @@ function y(e) {
               o.default.selectPrivateChannel(I);
               return
             }
-            D(!0), (0, u.joinPrivateChannelAndWatchStream)(I, y), d.default.trackWithMetadata(v.AnalyticEvents.BROADCAST_VIEWED, {
+            D(!0), (0, u.joinPrivateChannelAndWatchStream)(I, M), d.default.trackWithMetadata(v.AnalyticEvents.BROADCAST_VIEWED, {
               num_active_broadcasts: j.length,
               broadcast_position: j.findIndex(e => e.userId === i) + 1,
               is_broadcasting: k,

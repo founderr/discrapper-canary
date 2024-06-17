@@ -179,7 +179,7 @@ function M(e) {
     (0, s.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([l.e("99387"), l.e("60133"), l.e("75620")]).then(l.bind(l, "827940"));
+      } = await Promise.all([l.e("99387"), l.e("60133"), l.e("36925")]).then(l.bind(l, "827940"));
       return t => (0, i.jsx)(e, {
         activityItem: c,
         ...t,

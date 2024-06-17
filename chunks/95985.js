@@ -21,11 +21,11 @@ t.default = e => {
   } = (0, l.useQuestTaskDetails)({
     quest: t,
     location: c.QuestsExperimentLocations.QUESTS_BAR
-  }), h = (0, d.useQuestBarTitle)(t), C = (0, d.useQuestBarSubtitle)(t, f), m = f ? "expanded" : "collapsed";
+  }), h = (0, d.useQuestBarTitle)(t), m = (0, d.useQuestBarSubtitle)(t, f), C = f ? "expanded" : "collapsed";
   return (0, n.jsxs)("div", {
     className: E.questProgressWrapper,
     children: [(0, n.jsx)(o.QuestBarV2AnimationComponent, {
-      inState: m,
+      inState: C,
       id: "progress-bar",
       ref: s,
       children: e => (0, n.jsx)(u.default, {
@@ -42,7 +42,7 @@ t.default = e => {
       })
     }), (0, n.jsxs)("div", {
       children: [(0, n.jsx)(o.QuestBarV2AnimationComponent, {
-        inState: m,
+        inState: C,
         id: "progress-title",
         children: e => (0, n.jsx)(a.Text, {
           ref: e,
@@ -52,7 +52,7 @@ t.default = e => {
           children: h
         })
       }), (0, n.jsx)(o.QuestBarV2AnimationComponent, {
-        inState: m,
+        inState: C,
         id: "progress-subtitle",
         isTextTransition: !0,
         children: e => (0, n.jsx)(a.Text, {
@@ -60,7 +60,7 @@ t.default = e => {
           className: E.questProgressHint,
           color: "text-muted",
           variant: "text-xs/normal",
-          children: C
+          children: m
         })
       })]
     })]

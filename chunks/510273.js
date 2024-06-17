@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return f
   }
 });
 var n = s("735250"),
@@ -65,19 +65,19 @@ let E = e => {
   })
 };
 
-function _(e) {
+function f(e) {
   let {
     achievement: t,
     unlocked: s
   } = e, {
     name: l,
-    description: _,
-    rarity: f,
+    description: f,
+    rarity: _,
     hideDescriptionUntilUnlock: h,
-    onAction: C
+    onAction: m
   } = t, {
-    color: m
-  } = (0, o.getAchievementStyles)(f);
+    color: C
+  } = (0, o.getAchievementStyles)(_);
   a.useEffect(() => {
     let e = setTimeout(() => {
       u.default.playAchievementUnlockSound()
@@ -86,12 +86,12 @@ function _(e) {
       clearTimeout(e)
     }
   }, []);
-  let T = null != C && s,
+  let T = null != m && s,
     g = T ? r.Clickable : "div";
   return (0, n.jsxs)(g, {
     className: i()(c.container, T && c.actionable),
     onClick: () => {
-      T && C()
+      T && m()
     },
     children: [(0, n.jsx)("div", {
       className: c.iconContainer,
@@ -109,12 +109,12 @@ function _(e) {
       }), (0, n.jsx)(r.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
-        children: h && !s ? "?????" : _()
+        children: h && !s ? "?????" : f()
       })]
     }), (0, n.jsx)("div", {
       className: c.flair,
       children: (0, n.jsx)(E, {
-        color: m
+        color: C
       })
     })]
   })

@@ -10,39 +10,39 @@ var n = s("735250"),
   d = s("481060"),
   c = s("808268"),
   E = s("810090"),
-  _ = s("358085"),
-  f = s("617136"),
+  f = s("358085"),
+  _ = s("617136"),
   h = s("272008"),
-  C = s("113434"),
-  m = s("569984"),
+  m = s("113434"),
+  C = s("569984"),
   T = s("497505"),
   g = s("918701"),
-  A = s("865364"),
-  p = s("566078"),
+  p = s("865364"),
+  A = s("566078"),
   N = s("340100"),
   S = s("611855"),
   I = s("644646"),
   x = s("78826"),
   R = s("670638"),
   v = s("667105"),
-  O = s("46140"),
-  M = s("689938"),
+  M = s("46140"),
+  O = s("689938"),
   L = s("96268");
 let y = a.forwardRef(function(e, t) {
   var s, l;
   let {
-    className: A,
+    className: p,
     isExpanded: y,
     isExpansionAnimationComplete: D,
     onCtxMenuOpen: j,
     onCtxMenuClose: U,
     onCtxMenuSelect: P,
     quest: B,
-    useReducedMotion: V
-  } = e, G = (0, r.useStateFromStores)([m.default], () => m.default.isEnrolling(B.id), [B]), H = (0, C.useQuestFormattedDate)(B.config.expiresAt), F = p.SharedQuestFields.build(B.config), k = (0, C.useQuestFormattedDate)(F.rewardsExpireAt), w = a.useMemo(() => (0, g.isAssetAnimated)(B.config.assets.questBarHero), [B]), Q = (0, v.useHasLaunchedGame)(F.application.id), Y = a.useCallback(() => {
+    useReducedMotion: G
+  } = e, V = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(B.id), [B]), H = (0, m.useQuestFormattedDate)(B.config.expiresAt), F = A.SharedQuestFields.build(B.config), k = (0, m.useQuestFormattedDate)(F.rewardsExpireAt), w = a.useMemo(() => (0, g.isAssetAnimated)(B.config.assets.questBarHero), [B]), Q = (0, v.useHasLaunchedGame)(F.application.id), Y = a.useCallback(() => {
     (0, h.enrollInQuest)(B.id, {
       questContent: T.QuestContent.QUEST_BAR,
-      questContentCTA: f.QuestContentCTA.ACCEPT_QUEST
+      questContentCTA: _.QuestContentCTA.ACCEPT_QUEST
     })
   }, [B]), q = (0, v.useHandleClaimQuestsReward)({
     quest: B,
@@ -50,16 +50,16 @@ let y = a.forwardRef(function(e, t) {
   }), W = a.useCallback(() => {
     (0, g.openGameLink)(B, {
       content: T.QuestContent.QUEST_BAR,
-      ctaContent: f.QuestContentCTA.OPEN_GAME_LINK
+      ctaContent: _.QuestContentCTA.OPEN_GAME_LINK
     })
-  }, [B]), z = F.features.has(O.QuestVariants.POST_ENROLLMENT_CTA), Z = (0, C.useQuestTaskDetails)({
+  }, [B]), z = F.features.has(M.QuestVariants.POST_ENROLLMENT_CTA), Z = (0, m.useQuestTaskDetails)({
     quest: B,
-    location: O.QuestsExperimentLocations.QUESTS_BAR
+    location: M.QuestsExperimentLocations.QUESTS_BAR
   }), K = Z.progressSeconds > 0, X = (null === (s = B.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null, J = (null === (l = B.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, $ = a.useMemo(() => (0, g.hasCollectiblesQuestReward)(B.config), [B.config]), ee = y && D, et = (0, g.getQuestBarHeroAssetUrl)(B), es = (0, g.getQuestsInstructionsToWinReward)({
     quest: B,
-    location: O.QuestsExperimentLocations.QUESTS_BAR,
+    location: M.QuestsExperimentLocations.QUESTS_BAR,
     taskDetails: Z
-  }), en = (0, _.isWeb)(), ea = a.useMemo(() => {
+  }), en = (0, f.isWeb)(), ea = a.useMemo(() => {
     let e = (0, u.getContrastingColor)(B.config.colors.primary, {
       base: "#ffffff",
       contrastRatio: u.WCAGContrastRatios.Text
@@ -72,7 +72,7 @@ let y = a.forwardRef(function(e, t) {
   }, [B.config.colors.primary]);
   return (0, n.jsx)("div", {
     "aria-hidden": !ee,
-    className: i()(A, L.contentExpanded, {
+    className: i()(p, L.contentExpanded, {
       [L.contentInteractable]: ee
     }),
     children: X ? (0, n.jsxs)("div", {
@@ -99,9 +99,9 @@ let y = a.forwardRef(function(e, t) {
               className: L.questAcceptedContentCopySubheading,
               color: "always-white",
               variant: "text-xxs/normal",
-              children: J ? M.default.Messages.QUESTS_CLAIM_BY_DATE.format({
+              children: J ? O.default.Messages.QUESTS_CLAIM_BY_DATE.format({
                 expirationDate: k
-              }) : M.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
+              }) : O.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
                 expirationDate: H
               })
             })]
@@ -117,7 +117,7 @@ let y = a.forwardRef(function(e, t) {
           children: e => (0, n.jsx)(d.Clickable, {
             ...e,
             className: L.submenuWrapper,
-            "aria-label": M.default.Messages.ACTIONS,
+            "aria-label": O.default.Messages.ACTIONS,
             children: (0, n.jsx)(c.default, {
               className: L.submenuIcon
             })
@@ -130,7 +130,7 @@ let y = a.forwardRef(function(e, t) {
         fullWidth: !0,
         onClick: q,
         size: d.Button.Sizes.NONE,
-        children: M.default.Messages.QUESTS_CLAIM_REWARD
+        children: O.default.Messages.QUESTS_CLAIM_REWARD
       }) : (0, n.jsx)(d.Text, {
         className: L.description,
         color: "always-white",
@@ -160,7 +160,7 @@ let y = a.forwardRef(function(e, t) {
             children: e => (0, n.jsx)(d.Clickable, {
               ...e,
               className: L.submenuWrapper,
-              "aria-label": M.default.Messages.ACTIONS,
+              "aria-label": O.default.Messages.ACTIONS,
               children: (0, n.jsx)(c.default, {
                 className: L.submenuIcon
               })
@@ -177,7 +177,7 @@ let y = a.forwardRef(function(e, t) {
             className: L.title,
             color: "always-white",
             variant: "heading-md/medium",
-            children: M.default.Messages.QUESTS_TITLE.format({
+            children: O.default.Messages.QUESTS_TITLE.format({
               questName: B.config.messages.questName
             })
           }), (0, n.jsx)(d.Text, {
@@ -193,8 +193,8 @@ let y = a.forwardRef(function(e, t) {
           fullWidth: !0,
           onClick: ee ? Y : void 0,
           size: d.Button.Sizes.NONE,
-          submitting: G,
-          children: M.default.Messages.QUESTS_ACCEPT_QUEST
+          submitting: V,
+          children: O.default.Messages.QUESTS_ACCEPT_QUEST
         })]
       }), (0, n.jsx)("div", {
         className: L.heroAssetWrapper,
@@ -205,7 +205,7 @@ let y = a.forwardRef(function(e, t) {
           id: "QuestBarContentExpanded_heroAnimated",
           children: e => (0, n.jsx)(E.default, {
             ref: e,
-            autoPlay: !V,
+            autoPlay: !G,
             loop: !0,
             muted: !0,
             playsInline: !0,
@@ -235,8 +235,8 @@ function b(e) {
     style: t,
     onClick: s
   } = e;
-  return (0, A.useIsEligibleForQuestBarProgressCTA)({
-    location: O.QuestsExperimentLocations.QUESTS_BAR,
+  return (0, p.useIsEligibleForQuestBarProgressCTA)({
+    location: M.QuestsExperimentLocations.QUESTS_BAR,
     autoTrackExposure: !0
   }) ? (0, n.jsx)(d.Button, {
     className: L.cta,
@@ -245,7 +245,7 @@ function b(e) {
     fullWidth: !0,
     onClick: s,
     size: d.Button.Sizes.NONE,
-    children: M.default.Messages.QUESTS_GET_THIS_GAME
+    children: O.default.Messages.QUESTS_GET_THIS_GAME
   }) : null
 }
 t.default = y

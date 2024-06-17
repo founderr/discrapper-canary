@@ -80,8 +80,8 @@ function A(e) {
     subHeader: O,
     subHeaderExtra: L,
     featureCards: P,
-    changeLogId: y,
-    button: M
+    changeLogId: M,
+    button: y
   } = e, {
     onClose: D,
     transitionState: x
@@ -100,27 +100,27 @@ function A(e) {
     if ("video" === l.type || "embed" === l.type) {
       let [e, t] = J();
       _.default.track(S.AnalyticEvents.CHANGE_LOG_VIDEO_PLAYED, {
-        change_log_id: y,
+        change_log_id: M,
         seconds_played: Math.round(e / 1e3)
       }), _.default.track(S.AnalyticEvents.CHANGE_LOG_VIDEO_UNMUTE, {
-        change_log_id: y,
+        change_log_id: M,
         seconds_unmuted: Math.round(t / 1e3)
       })
     }
-  }, [y, l]), s.useEffect(() => {
+  }, [M, l]), s.useEffect(() => {
     null != A && (0, d.requestMarkDismissibleContentAsShown)(A);
     let e = Date.now();
     return _.default.track(S.AnalyticEvents.CHANGE_LOG_OPENED, {
-      change_log_id: y
+      change_log_id: M
     }), () => {
       _.default.track(S.AnalyticEvents.CHANGE_LOG_CLOSED, {
-        change_log_id: y,
+        change_log_id: M,
         seconds_open: Math.round((Date.now() - e) / 1e3)
       }), null != A && (0, d.markDismissibleContentAsDismissed)(A, {
         dismissAction: p.ContentDismissActionType.DISMISS
       })
     }
-  }, [A, y]), (0, a.jsxs)(o.ModalRoot, {
+  }, [A, M]), (0, a.jsxs)(o.ModalRoot, {
     className: i()(I.root, t),
     transitionState: x,
     "aria-labelledby": b,
@@ -146,7 +146,7 @@ function A(e) {
         poster: l.poster,
         onPlay: e => {
           _.default.track(S.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
-            change_log_id: y
+            change_log_id: M
           }), w(Date.now()), Y(!0), K(e.currentTarget.muted)
         },
         onEnded: e => {
@@ -173,7 +173,7 @@ function A(e) {
         renderLinkComponent: c.renderMaskedLinkComponent,
         onPlay: () => {
           _.default.track(S.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
-            change_log_id: y
+            change_log_id: M
           })
         }
       }) : "image" === l.type ? (0, a.jsx)("img", {
@@ -192,7 +192,7 @@ function A(e) {
           ...e,
           wideStyle: U
         }, "".concat(e.header, "_").concat(t)))
-      }), M()]
+      }), y()]
     })]
   })
 }

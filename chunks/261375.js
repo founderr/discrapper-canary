@@ -10,9 +10,9 @@ var n = s("768433"),
   d = s("496675"),
   c = s("386438"),
   E = s("287328"),
-  _ = s("458772");
+  f = s("458772");
 
-function f(e, t, s) {
+function _(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -22,7 +22,7 @@ function f(e, t, s) {
 }
 let h = new a.default("GuildBasicChannels");
 
-function C(e, t) {
+function m(e, t) {
   return null == e || e.type !== t.type || e.parent_id !== t.parent_id || d.default.computeBasicPermissions(e) !== d.default.computeBasicPermissions(t)
 }
 t.default = new class e {
@@ -53,7 +53,7 @@ t.default = new class e {
     null != e.channel.guild_id && this.unsync(e.channel.guild_id, t)
   }
   handleChannelUpdates(e, t) {
-    for (let s of e.channels.filter(e => null != e.guild_id)) C(o.default.getBasicChannel(s.id), s) && this.unsync(s.guild_id, t)
+    for (let s of e.channels.filter(e => null != e.guild_id)) m(o.default.getBasicChannel(s.id), s) && this.unsync(s.guild_id, t)
   }
   handleBackgroundSync(e, t) {
     for (let l of e.guilds) switch (l.data_mode) {
@@ -118,7 +118,7 @@ t.default = new class e {
     this.synced = null
   }
   onGuildUpdate(e, t, s, n) {
-    (s.length > 0 || t.some(e => C(o.default.getBasicChannel(e.id), e))) && this.unsync(e, n)
+    (s.length > 0 || t.some(e => m(o.default.getBasicChannel(e.id), e))) && this.unsync(e, n)
   }
   onGuildSync(e, t) {
     this.unsync(e, t)
@@ -128,7 +128,7 @@ t.default = new class e {
   }
   unsync(e, t) {
     var s;
-    null === (s = this.synced) || void 0 === s || s.delete(e), E.default.basicChannelsTransaction(t).delete(e), E.default.syncedBasicChannelsTransaction(t).put(e, !1), _.default.invalidate(e)
+    null === (s = this.synced) || void 0 === s || s.delete(e), E.default.basicChannelsTransaction(t).delete(e), E.default.syncedBasicChannelsTransaction(t).put(e, !1), f.default.invalidate(e)
   }
   sync(e) {
     h.verbose("Starting to write all basic channels");
@@ -154,7 +154,7 @@ t.default = new class e {
     }(e)), E.default.syncedBasicChannelsTransaction(t).put(e, !0), !0)
   }
   constructor() {
-    f(this, "synced", null), f(this, "actions", {
+    _(this, "synced", null), _(this, "actions", {
       BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
       CHANNEL_CREATE: (e, t) => this.handleChannelCreate(e, t),
       CHANNEL_DELETE: (e, t) => this.handleChannelDelete(e, t),

@@ -40,7 +40,7 @@ function L(e) {
     clans: i,
     searchResult: L,
     searchCriteria: P
-  } = (0, p.useClanDiscoveryList)(), y = (0, I.useClanDiscoveryUIStore)(e => e.selectedTraits, d.default), M = (0, E.default)(L), [D, x] = o.useState(0), b = o.useMemo(() => ({
+  } = (0, p.useClanDiscoveryList)(), M = (0, I.useClanDiscoveryUIStore)(e => e.selectedTraits, d.default), y = (0, E.default)(L), [D, x] = o.useState(0), b = o.useMemo(() => ({
     height: D
   }), [D]), U = (0, u.useSpring)({
     opacity: D > 0 ? 1 : 0,
@@ -64,8 +64,8 @@ function L(e) {
     trailing: !0
   });
   o.useEffect(() => {
-    if (null != L && !!(0, A.isLoadedSearchResult)(L))(!(null != M && (0, A.isLoadedSearchResult)(M)) || !(M.loadedAt >= L.loadedAt)) && (0, _.trackClanDiscoveryViewed)(L.items.map(e => e.id), "top_picks", P)
-  }, [P, L, M, F, n]), o.useEffect(() => {
+    if (null != L && !!(0, A.isLoadedSearchResult)(L))(!(null != y && (0, A.isLoadedSearchResult)(y)) || !(y.loadedAt >= L.loadedAt)) && (0, _.trackClanDiscoveryViewed)(L.items.map(e => e.id), "top_picks", P)
+  }, [P, L, y, F, n]), o.useEffect(() => {
     !n && (0, A.isLoadedSearchResult)(L) && setTimeout(() => F())
   }, [F, n, L]);
   let V = o.useMemo(() => (function(e, t, n) {
@@ -127,14 +127,14 @@ function L(e) {
       return (0, r.jsx)(S.default, {
         clan: o,
         affinity: null !== (s = o.affininty) && void 0 !== s ? s : (0, m.getClanDiscoveryAffinity)(o, P),
-        traitsToHighlight: y,
+        traitsToHighlight: M,
         className: R.card,
         style: n,
         source: N.AnalyticsSections.DISCOVER_SEARCH,
         prioritizedGameIds: Y,
         onlyAnimateIconOnHover: !0
       }, a)
-    }, [P, V, y, Y]),
+    }, [P, V, M, Y]),
     K = o.useCallback((e, t) => {
       let {
         header: n,

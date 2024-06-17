@@ -14,10 +14,10 @@ n.r(t), n.d(t, {
   }
 }), n("653041");
 var i = n("367907"),
-  r = n("271383"),
-  s = n("158776"),
-  a = n("699516"),
-  o = n("800599"),
+  r = n("814443"),
+  s = n("271383"),
+  a = n("158776"),
+  o = n("699516"),
   l = n("594174"),
   u = n("626135"),
   d = n("768581"),
@@ -44,8 +44,8 @@ let f = e => {
     return (null == s ? void 0 : s.bio) && a.push(E.TrackUserProfileProperties.BIO), (null == s ? void 0 : s.themeColors) != null && void 0 !== s.themeColors.find(e => null !== e) && a.push(E.TrackUserProfileProperties.THEME), (null == t ? void 0 : t.avatarDecoration) != null && a.push(E.TrackUserProfileProperties.AVATAR_DECORATION), (null == s ? void 0 : s.profileEffectId) != null && a.push(E.TrackUserProfileProperties.PROFILE_EFFECT), a
   },
   S = e => {
-    let t = s.default.getStatus(e),
-      n = s.default.isMobileOnline(e);
+    let t = a.default.getStatus(e),
+      n = a.default.isMobileOnline(e);
     return t === T.StatusTypes.ONLINE && n ? "".concat(t, "-mobile") : t === T.StatusTypes.ONLINE ? "".concat(t, "-desktop") : t
   },
   h = e => null == e ? e : Object.keys(I.ActivityTypes)[Object.values(I.ActivityTypes).indexOf(e)],
@@ -53,13 +53,13 @@ let f = e => {
     var t, n;
     let {
       layout: i,
-      userId: a,
+      userId: r,
       guildId: o,
       showGuildProfile: u = !0
-    } = e, d = l.default.getUser(a);
+    } = e, d = l.default.getUser(r);
     if (null == d) return {};
     let _ = (0, c.getDisplayProfile)(null == d ? void 0 : d.id, u ? o : void 0),
-      E = u && null != o ? r.default.getMember(o, null == d ? void 0 : d.id) : null;
+      E = u && null != o ? s.default.getMember(o, null == d ? void 0 : d.id) : null;
     return {
       profile_layout: i,
       profile_properties: f({
@@ -70,7 +70,7 @@ let f = e => {
         guildMember: E,
         guildMemberProfile: null == _ ? void 0 : _._guildMemberProfile
       }),
-      profile_activity_types: s.default.getActivities(d.id).map(e => {
+      profile_activity_types: a.default.getActivities(d.id).map(e => {
         let {
           type: t
         } = e;
@@ -92,11 +92,11 @@ let f = e => {
     var t, n;
     return null == e ? {} : {
       related_user_id: e,
-      relationship_type: a.default.getRelationshipType(e),
-      related_since: a.default.getSince(e),
+      relationship_type: o.default.getRelationshipType(e),
+      related_since: o.default.getSince(e),
       num_mutual_friends: _.default.getMutualFriendsCount(e),
       num_mutual_guilds: null === (t = _.default.getMutualGuilds(e)) || void 0 === t ? void 0 : t.length,
-      affinity: null === (n = o.default.getUserAffinity(e)) || void 0 === n ? void 0 : n.affinity
+      affinity: null === (n = r.default.getUserAffinity(e)) || void 0 === n ? void 0 : n.affinity
     }
   },
   N = e => {

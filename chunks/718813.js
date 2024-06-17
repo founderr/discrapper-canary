@@ -59,8 +59,8 @@ let N = (0, C.makeLazy)({
     [g.Layers.COLLECTIBLES_SHOP]: () => (0, s.jsx)(R, {})
   },
   P = "SHOWN",
-  y = "HIDDEN",
-  M = {
+  M = "HIDDEN",
+  y = {
     friction: 10,
     tension: 100
   };
@@ -82,8 +82,8 @@ class x extends(a = l.PureComponent) {
       mode: n
     } = e;
     if (t !== n) {
-      if (t === P && n === y) return this.animateIn();
-      if (t === y && n === P) return this.animateUnder()
+      if (t === P && n === M) return this.animateIn();
+      if (t === M && n === P) return this.animateUnder()
     }
   }
   componentWillEnter(e) {
@@ -108,10 +108,10 @@ class x extends(a = l.PureComponent) {
     } = this.state;
     o.default.parallel([o.default.spring(t, {
       toValue: 1,
-      ...M
+      ...y
     }), o.default.spring(n, {
       toValue: 1,
-      ...M
+      ...y
     })]).start(() => this.animateComplete(e))
   }
   animateOut(e) {
@@ -122,10 +122,10 @@ class x extends(a = l.PureComponent) {
     } = this.state;
     p.ComponentDispatch.dispatch(g.ComponentActions.LAYER_POP_START), o.default.parallel([o.default.spring(t, {
       toValue: 0,
-      ...M
+      ...y
     }), o.default.spring(n, {
       toValue: 1.1,
-      ...M
+      ...y
     })]).start(() => {
       e(), p.ComponentDispatch.dispatch(g.ComponentActions.LAYER_POP_COMPLETE)
     })
@@ -138,10 +138,10 @@ class x extends(a = l.PureComponent) {
     } = this.state;
     o.default.parallel([o.default.spring(e, {
       toValue: 0,
-      ...M
+      ...y
     }), o.default.spring(t, {
       toValue: .93,
-      ...M
+      ...y
     })]).start(() => this.animateComplete())
   }
   animateComplete(e) {
@@ -157,13 +157,13 @@ class x extends(a = l.PureComponent) {
       children: n,
       baseLayer: a,
       ...l
-    } = this.props, i = e || t === y ? this.getAnimatedStyle() : null, u = (0, s.jsx)(o.default.div, {
+    } = this.props, i = e || t === M ? this.getAnimatedStyle() : null, u = (0, s.jsx)(o.default.div, {
       ref: e => this.containerRef.current = null != e ? e.refs.node : void 0,
-      "aria-hidden": t === y,
+      "aria-hidden": t === M,
       className: r()(T.layer, {
         [T.baseLayer]: a,
         [T.animating]: e,
-        "stop-animations": t === y
+        "stop-animations": t === M
       }),
       style: i,
       ...l,
@@ -194,7 +194,7 @@ class x extends(a = l.PureComponent) {
     super(e), A(this, "containerRef", l.createRef());
     let t = 1,
       n = 1;
-    e.mode === y && (t = .93, n = 0), this.state = {
+    e.mode === M && (t = .93, n = 0), this.state = {
       animating: !1,
       scale: new o.default.Value(t),
       opacity: new o.default.Value(n),
@@ -221,7 +221,7 @@ class b extends l.PureComponent {
       length: a
     } = t, l = [];
     return l.push((0, s.jsx)(x, {
-      mode: 0 !== a || n ? y : P,
+      mode: 0 !== a || n ? M : P,
       baseLayer: !0,
       children: e
     }, "layer-base")), t.forEach((e, t) => l.push(this.renderComponent(e, t, a))), l
@@ -229,7 +229,7 @@ class b extends l.PureComponent {
   renderComponent(e, t, n) {
     let a;
     return a = "string" == typeof e ? L[e]() : (0, s.jsx)(e, {}), (0, s.jsxs)(x, {
-      mode: t === n - 1 ? P : y,
+      mode: t === n - 1 ? P : M,
       children: [(0, s.jsx)(D, {}), a]
     }, "layer-".concat(t))
   }

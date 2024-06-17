@@ -31,8 +31,8 @@ var a = n("735250"),
   O = n("880257"),
   L = n("631885"),
   P = n("457396"),
-  y = n("51596"),
-  M = n("905423"),
+  M = n("51596"),
+  y = n("905423"),
   D = n("155409"),
   x = n("210887"),
   b = n("695346"),
@@ -219,7 +219,7 @@ let $ = e => {
       }
     })
   },
-  ei = () => (0, y.show)("DM_SEARCH");
+  ei = () => (0, M.show)("DM_SEARCH");
 
 function er(e) {
   switch (e) {
@@ -240,7 +240,7 @@ let eo = e => {
     homeLink: s,
     storeLink: l,
     premiumTabSelected: o
-  } = e, [d, c] = (0, M.default)(e => {
+  } = e, [d, c] = (0, y.default)(e => {
     let {
       channelId: t,
       path: n

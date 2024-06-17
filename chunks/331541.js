@@ -31,8 +31,8 @@ var a = n("735250"),
   O = n("221292"),
   L = n("318661"),
   P = n("502762"),
-  y = n("192133"),
-  M = n("138394"),
+  M = n("192133"),
+  y = n("138394"),
   D = n("131640"),
   x = n("695346"),
   b = n("199902"),
@@ -296,7 +296,7 @@ function J(e) {
               isHovering: ea,
               showPremiumBadgeUpsell: !1
             }), (0, a.jsxs)(P.default.Overlay, {
-              children: [(0, a.jsx)(y.default, {
+              children: [(0, a.jsx)(M.default, {
                 activity: H,
                 customStatusActivity: J,
                 displayProfile: B,
@@ -306,7 +306,7 @@ function J(e) {
                 canDM: !1,
                 hideNote: !0,
                 showCopiableUsername: !0
-              }), (0, a.jsx)(M.default, {
+              }), (0, a.jsx)(y.default, {
                 className: q.divider
               }), (0, a.jsxs)(E.Menu, {
                 navId: "account",

@@ -3,8 +3,8 @@ s.r(t);
 var n, a, r, l, i = s("442837"),
   u = s("570140"),
   o = s("656063"),
-  d = s("158776"),
-  c = s("800599"),
+  d = s("814443"),
+  c = s("158776"),
   I = s("594174"),
   T = s("981631");
 let E = !1,
@@ -70,21 +70,21 @@ function O(e) {
 
 function R() {
   let e = !1;
-  if (!c.default.needsRefresh() && !E) {
+  if (!d.default.needsRefresh() && !E) {
     let t;
-    f = {}, _ = {}, t = !1, d.default.getUserIds().forEach(e => {
+    f = {}, _ = {}, t = !1, c.default.getUserIds().forEach(e => {
       let s = I.default.getUser(e);
       null != s && (t = O({
         user: s,
-        activities: d.default.getActivities(e)
+        activities: c.default.getActivities(e)
       }) || t)
     }), e = t
   }
-  return E = !c.default.needsRefresh(), e
+  return E = !d.default.needsRefresh(), e
 }
 class N extends(l = i.default.Store) {
   initialize() {
-    this.waitFor(c.default), this.syncWith([c.default], R)
+    this.waitFor(d.default), this.syncWith([d.default], R)
   }
   get games() {
     return f

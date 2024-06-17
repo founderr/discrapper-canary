@@ -54,7 +54,7 @@ let L = {
       getStatus: () => R.default.Messages.VOICE_CHANNEL_MUTED
     }
   },
-  y = {
+  M = {
     serverDeaf: {
       icon: o.HeadphonesDenyIcon,
       colorize: !0,
@@ -82,7 +82,7 @@ let L = {
     }
   };
 
-function M(e) {
+function y(e) {
   var t, s;
   let {
     channel: l,
@@ -95,7 +95,7 @@ function M(e) {
   } = e, g = (0, r.useStateFromStores)([p.default], () => p.default.isLocalMute(o.id)), T = (0, h.default)({
     userId: o.id,
     checkSoundSharing: !0
-  }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, M = o.getAvatarURL(l.guild_id, 24), D = null != u ? u : N.default.getName(o), {
+  }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, y = o.getAvatarURL(l.guild_id, 24), D = null != u ? u : N.default.getName(o), {
     icon: x,
     colorize: b,
     getStatus: U
@@ -107,11 +107,11 @@ function M(e) {
       mute: s,
       localMute: l
     } = e, i = (0, f.useRedesignIconContext)().enabled;
-    if (t) return i ? y.serverDeaf : P.serverDeaf;
-    if (n) return i ? y.deaf : P.deaf;
-    if (a) return i ? y.serverMute : P.serverMute;
-    else if (l) return i ? y.localMute : P.mute;
-    else if (s) return i ? y.mute : P.mute
+    if (t) return i ? M.serverDeaf : P.serverDeaf;
+    if (n) return i ? M.deaf : P.deaf;
+    if (a) return i ? M.serverMute : P.serverMute;
+    else if (l) return i ? M.localMute : P.mute;
+    else if (s) return i ? M.mute : P.mute
   }({
     serverDeaf: I,
     deaf: c,
@@ -175,7 +175,7 @@ function M(e) {
               [O.speaking]: T
             }),
             style: {
-              backgroundImage: "url(".concat(M, ")")
+              backgroundImage: "url(".concat(y, ")")
             },
             children: null != x ? (0, a.jsx)(x, {
               className: i()(O.avatarIconOverlay, {
@@ -234,7 +234,7 @@ function D(e) {
           nick: s,
           voiceState: l
         } = e;
-        return t.id !== E ? (0, a.jsx)(M, {
+        return t.id !== E ? (0, a.jsx)(y, {
           channel: n,
           user: t,
           nick: s,

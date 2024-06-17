@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   CollectiblesDCToDisplayOptions: function() {
-    return A
+    return p
   },
   CollectiblesMarketingVariant: function() {
     return n
@@ -10,7 +10,7 @@ s.r(t), s.d(t, {
     return a
   },
   getCountdownDisplayOptions: function() {
-    return p
+    return A
   },
   getCustomConfettiDisplayOptions: function() {
     return S
@@ -22,15 +22,15 @@ var n, a, l, i, r = s("278074"),
   d = s("689938"),
   c = s("714953"),
   E = s("160506"),
-  _ = s("263660"),
-  f = s("22344"),
+  f = s("263660"),
+  _ = s("22344"),
   h = s("848359"),
-  C = s("782984"),
-  m = s("186077"),
+  m = s("782984"),
+  C = s("186077"),
   T = s("376477"),
   g = s("224941");
 (l = n || (n = {}))[l.NONE = 0] = "NONE", l[l.TOOLTIP = 1] = "TOOLTIP", l[l.COACHTIP = 2] = "COACHTIP", (i = a || (a = {})).NONE = "NONE", i.SHY = "SHY", i.LOFI_VIBES = "LOFI_VIBES", i.GALAXY = "GALAXY", i.RETRO_AND_PIRATES = "RETRO_AND_PIRATES", i.ARCADE = "ARCADE";
-let A = {
+let p = {
     [u.DismissibleContent.COLLECTIBLES_SHOP_SHY_COACHTIP]: {
       type: 2,
       title: () => d.default.Messages.COLLECTIBLES_SHY_COACHTIP_TITLE,
@@ -39,7 +39,7 @@ let A = {
       assetIds: ["a_98555e40cc6802bd3a4fed906af1d992", "a_09de63526a45be1ddac70e84718ee04a", "a_904b1989077c91fca1168d39bfcaa0a4"],
       entrypointDecorationAssets: {
         srcDark: E,
-        srcLight: _
+        srcLight: f
       },
       entryPointClassName: "shyButton"
     },
@@ -47,7 +47,7 @@ let A = {
       type: 2,
       title: () => d.default.Messages.COLLECTIBLES_LOFI_VIBES_COACHTIP_TITLE,
       body: () => d.default.Messages.COLLECTIBLES_LOFI_VIBES_COACHTIP_DESCRIPTION,
-      imageSrc: C,
+      imageSrc: m,
       assetIds: ["a_49c479e15533fb4c02eb320c9c137433", "a_77b7b6a740a9451e1ef39c0252154ef8", "a_e8c11f139e55dac538cdaafb3caa2317"]
     },
     [u.DismissibleContent.COLLECTIBLES_SHOP_GALAXY_COACHTIP]: {
@@ -72,16 +72,16 @@ let A = {
       assetIds: ["a_e72e44eeea89e92dc02c9bec8b02d158", "a_492f6b54b761c0a14d9dbc9c98aaa0f5", "a_46750412a18f4988de71f4cf14991b38"]
     }
   },
-  p = e => (0, r.match)(e).with(o.CollectiblesCategorySkuId.SHY, () => ({
+  A = e => (0, r.match)(e).with(o.CollectiblesCategorySkuId.SHY, () => ({
     label: () => d.default.Messages.COLLECTIBLES_SHY_FOR_A_LIMITED_TIME,
     backgroundColor: "rgba(255, 70, 85, 1)",
     boxShadow: "0 0 12px 0 rgba(255, 70, 85, 0.5)",
     labelColor: "rgba(15, 25, 35, 1)",
-    iconSrc: m
+    iconSrc: C
   })).otherwise(() => null),
   N = {
     SHY: {
-      confettiAssetSrc: f,
+      confettiAssetSrc: _,
       style: {
         position: "absolute",
         width: "600px"

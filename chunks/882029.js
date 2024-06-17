@@ -21,7 +21,7 @@ let c = {
   E = {
     ...c
   };
-class _ extends(n = a.default.PersistedStore) {
+class f extends(n = a.default.PersistedStore) {
   initialize(e) {
     this.waitFor(i.default, u.default);
     let t = null != e ? e : {
@@ -40,7 +40,7 @@ class _ extends(n = a.default.PersistedStore) {
     return null !== (t = E.unlockedAchievements[e]) && void 0 !== t ? t : null
   }
 }
-d(_, "displayName", "PoggermodeAchievementStore"), d(_, "persistKey", "PoggermodeAchievementStore"), t.default = new _(l.default, {
+d(f, "displayName", "PoggermodeAchievementStore"), d(f, "persistKey", "PoggermodeAchievementStore"), t.default = new f(l.default, {
   POGGERMODE_ACHIEVEMENT_UNLOCK: function(e) {
     var t;
     let {

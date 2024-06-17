@@ -14,7 +14,7 @@ var n, a = s("735250"),
   c = s("162168"),
   E = s("314721");
 
-function _(e, t, s) {
+function f(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -22,12 +22,12 @@ function _(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let f = (0, d.cssValueToNumber)(u.default.GRADIENT_PROGRESS_NOTCH_WIDTH),
+let _ = (0, d.cssValueToNumber)(u.default.GRADIENT_PROGRESS_NOTCH_WIDTH),
   h = Object.freeze({
     BLACK: E.black,
     GRAY: E.gray
   });
-class C extends(n = l.Component) {
+class m extends(n = l.Component) {
   componentDidMount() {
     this.computeBars(), window.addEventListener("resize", this.computeBars)
   }
@@ -35,7 +35,7 @@ class C extends(n = l.Component) {
     window.removeEventListener("resize", this.computeBars)
   }
   roundToNearestStep(e) {
-    return Math.round(e / f) * f
+    return Math.round(e / _) * _
   }
   getProgressStyles() {
     let {
@@ -84,9 +84,9 @@ class C extends(n = l.Component) {
     })
   }
   constructor(...e) {
-    super(...e), _(this, "state", {
+    super(...e), f(this, "state", {
       barWidth: 0
-    }), _(this, "sizerRef", l.createRef()), _(this, "computeBars", () => {
+    }), f(this, "sizerRef", l.createRef()), f(this, "computeBars", () => {
       let {
         current: e
       } = this.sizerRef;
@@ -96,7 +96,7 @@ class C extends(n = l.Component) {
     })
   }
 }
-_(C, "defaultProps", {
+f(m, "defaultProps", {
   gradientStart: o.default.unsafe_rawColors.YELLOW_260.css,
   gradientEnd: o.default.unsafe_rawColors.GREEN_360.css
-}), t.default = C
+}), t.default = m

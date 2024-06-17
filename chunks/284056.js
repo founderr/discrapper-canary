@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   NotchBackground: function() {
-    return f.NotchBackground
+    return _.NotchBackground
   }
 }), s("47120");
 var n = s("735250"),
@@ -14,11 +14,11 @@ var n = s("735250"),
   d = s("481060"),
   c = s("846027"),
   E = s("131951"),
-  _ = s("19780"),
-  f = s("233304"),
+  f = s("19780"),
+  _ = s("233304"),
   h = s("626135"),
-  C = s("981631"),
-  m = s("689938"),
+  m = s("981631"),
+  C = s("689938"),
   T = s("246963");
 
 function g(e, t, s) {
@@ -29,7 +29,7 @@ function g(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class A extends a.PureComponent {
+class p extends a.PureComponent {
   componentDidMount() {
     this._initTimeout.start(1e3, this.setupVoiceActivity)
   }
@@ -53,7 +53,7 @@ class A extends a.PureComponent {
       isMicTesting: !0,
       isDetectingInput: !0,
       didDeafenUser: d
-    }), h.default.track(C.AnalyticEvents.MIC_TESTING_STARTED, {
+    }), h.default.track(m.AnalyticEvents.MIC_TESTING_STARTED, {
       input_device_name: t,
       input_device_volume: s,
       output_device_name: n,
@@ -75,7 +75,7 @@ class A extends a.PureComponent {
     if (!!t) s && n && e && c.default.toggleSelfDeaf(), c.default.setLoopback(!1), this.setState({
       isMicTesting: !1,
       didDeafenUser: !1
-    }), null != this._micTestStartTime && h.default.track(C.AnalyticEvents.MIC_TESTING_STOPPED, {
+    }), null != this._micTestStartTime && h.default.track(m.AnalyticEvents.MIC_TESTING_STOPPED, {
       testing_duration: Math.round((Date.now() - this._micTestStartTime) / 1e3)
     })
   }
@@ -107,7 +107,7 @@ class A extends a.PureComponent {
     } = this.props, {
       isMicTesting: c,
       volume: E
-    } = this.state, _ = e && !c ? m.default.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
+    } = this.state, f = e && !c ? C.default.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
     return c && e && !u && this._micTestStop(), (0, n.jsxs)("div", {
       className: T.container,
       children: [(0, n.jsx)(d.FormTitle, {
@@ -121,7 +121,7 @@ class A extends a.PureComponent {
       }), (0, n.jsxs)("div", {
         className: T.micTest,
         children: [(0, n.jsx)(d.Tooltip, {
-          text: _,
+          text: f,
           children: e => {
             let {
               onMouseEnter: t,
@@ -138,7 +138,7 @@ class A extends a.PureComponent {
               children: c ? i : l
             })
           }
-        }), (0, n.jsx)(f.default, {
+        }), (0, n.jsx)(_.default, {
           progress: c ? E + 100 : 0,
           notchBackground: a
         }), this.renderCaption()]
@@ -176,7 +176,7 @@ class A extends a.PureComponent {
     })
   }
 }
-t.default = r.default.connectStores([_.default, E.default], () => {
+t.default = r.default.connectStores([f.default, E.default], () => {
   let e = E.default.getInputDeviceId(),
     t = E.default.getInputDevices(),
     s = i().find(t, t => {
@@ -195,7 +195,7 @@ t.default = r.default.connectStores([_.default, E.default], () => {
     }),
     r = E.default.getModeOptions();
   return {
-    isVoiceConnected: _.default.isConnected(),
+    isVoiceConnected: f.default.isConnected(),
     inputVolume: E.default.getInputVolume(),
     outputVolume: E.default.getOutputVolume(),
     inputMode: E.default.getMode(),
@@ -205,4 +205,4 @@ t.default = r.default.connectStores([_.default, E.default], () => {
     inputDeviceName: null != s ? s.name : "",
     outputDeviceName: null != l ? l.name : ""
   }
-})(A)
+})(p)

@@ -30,8 +30,8 @@ var i = n("924826"),
   O = n("649765"),
   L = n("565626"),
   P = n("734741"),
-  y = n("701910"),
-  M = n("487980"),
+  M = n("701910"),
+  y = n("487980"),
   D = n("474936"),
   x = n("981631"),
   b = n("921944"),
@@ -57,7 +57,7 @@ let w = e => {
     Q = (0, L.default)(),
     Z = (0, P.useShouldShowWhatsNewBadge)(),
     X = (0, A.useTenureRewardBadgeDescription)(),
-    J = (0, M.useIsEligibleSenderForReferralProgramTabBadge)(G),
+    J = (0, y.useIsEligibleSenderForReferralProgramTabBadge)(G),
     $ = (0, r.useStateFromStores)([m.default], () => m.default.getCreatedAtOverride()),
     ee = null != $ ? $ : null == F ? void 0 : F.createdAt,
     et = s || null != W || null != K || q || Q || Z || null != X || V,
@@ -74,11 +74,11 @@ let w = e => {
       showTabForOtherReasons: et
     });
   if (!(et = et || null != F && null != ee && Date.now() - ee.getTime() > es)) return null;
-  Z ? (n = (0, l.jsx)(y.PerksDiscoverabilityMarketingMomentWhatsNewBadge, {}), a = 2) : q ? (n = (0, l.jsx)(T.default, {
+  Z ? (n = (0, l.jsx)(M.PerksDiscoverabilityMarketingMomentWhatsNewBadge, {}), a = 2) : q ? (n = (0, l.jsx)(T.default, {
     isNitroTab: !0
-  }), a = 0) : null != X ? (n = (0, l.jsx)(y.default, {
+  }), a = 0) : null != X ? (n = (0, l.jsx)(M.default, {
     copy: X
-  }), a = 1) : Q ? (n = (0, l.jsx)(y.default, {}), a = 2) : null != K ? (n = (0, l.jsx)(R.PremiumDiscountOfferTabBadge, {
+  }), a = 1) : Q ? (n = (0, l.jsx)(M.default, {}), a = 2) : null != K ? (n = (0, l.jsx)(R.PremiumDiscountOfferTabBadge, {
     userDiscount: K,
     isTabSelected: s,
     includesAmountOff: !1

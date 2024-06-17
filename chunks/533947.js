@@ -27,7 +27,7 @@ function O() {
   A = p.FormStates.OPEN, N = {}, v = !1
 }
 let L = c().debounce(() => {
-  v && ((null == g || c().isEqual(g, P(g.id))) && (v = !1), !v && M.emitChange())
+  v && ((null == g || c().isEqual(g, P(g.id))) && (v = !1), !v && y.emitChange())
 }, 500);
 
 function P(e) {
@@ -38,7 +38,7 @@ function P(e) {
     return n === e
   })
 }
-class y extends(i = f.default.Store) {
+class M extends(i = f.default.Store) {
   initialize() {
     this.waitFor(C.default, _.default, S.default, m.default)
   }
@@ -73,13 +73,13 @@ class y extends(i = f.default.Store) {
     }
   }
 }
-u = "ChannelSettingsIntegrationsStore", (o = "displayName") in(r = y) ? Object.defineProperty(r, o, {
+u = "ChannelSettingsIntegrationsStore", (o = "displayName") in(r = M) ? Object.defineProperty(r, o, {
   value: u,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : r[o] = u;
-let M = new y(E.default, __OVERLAY__ ? {} : {
+let y = new M(E.default, __OVERLAY__ ? {} : {
   INTEGRATION_SETTINGS_INIT: O,
   INTEGRATION_SETTINGS_SAVE_SUCCESS: O,
   CHANNEL_SETTINGS_SET_SECTION: function(e) {
@@ -164,4 +164,4 @@ let M = new y(E.default, __OVERLAY__ ? {} : {
     A = p.FormStates.OPEN, N = null !== (t = e.errors) && void 0 !== t ? t : {}
   }
 });
-t.default = M
+t.default = y

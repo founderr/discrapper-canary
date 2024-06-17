@@ -634,7 +634,7 @@ let eN = a.memo(function() {
             eh(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), (0, u.openModalLazy)(async () => {
               let {
                 default: e
-              } = await Promise.all([n.e("49237"), n.e("99387"), n.e("15972"), n.e("6416"), n.e("8016"), n.e("68136"), n.e("80633")]).then(n.bind(n, "561623"));
+              } = await Promise.all([n.e("49237"), n.e("99387"), n.e("15972"), n.e("6416"), n.e("8016"), n.e("68136"), n.e("89021")]).then(n.bind(n, "561623"));
               return t => (0, s.jsx)(e, {
                 ...t,
                 daysLeft: ed.metadata.daysLeft,

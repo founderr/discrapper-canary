@@ -21,7 +21,7 @@ function c(e) {
   } = e, i = (0, r.useLinkTimestampText)(t.id, s), {
     avatarSrc: c,
     avatarDecorationSrc: E,
-    eventHandlers: _
+    eventHandlers: f
   } = (0, l.default)({
     user: t,
     size: a.AvatarSizes.SIZE_40,
@@ -29,7 +29,7 @@ function c(e) {
   });
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)("div", {
-      ..._,
+      ...f,
       children: (0, n.jsx)(d, {
         className: u.avatar,
         src: c,

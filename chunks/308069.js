@@ -13,8 +13,8 @@ var n = s("735250"),
   f = s("918701"),
   _ = s("685613"),
   h = s("670638"),
-  C = s("341907"),
-  m = s("898170"),
+  m = s("341907"),
+  C = s("898170"),
   T = s("689938"),
   g = s("682396");
 t.default = e => {
@@ -28,7 +28,7 @@ t.default = e => {
     isExpanded: I,
     isExpansionAnimationComplete: x
   } = e, R = a.useCallback(() => {
-    (0, C.openDisclosureModal)(t, {
+    (0, m.openDisclosureModal)(t, {
       content: E.QuestContent.QUEST_BAR,
       ctaContent: c.QuestContentCTA.OPEN_DISCLOSURE
     })
@@ -89,7 +89,7 @@ t.default = e => {
           output: [0, 8]
         })
       },
-      children: (0, n.jsx)(m.QuestBarBackgroundAnimation, {
+      children: (0, n.jsx)(C.QuestBarBackgroundAnimation, {
         className: g.background,
         animationClassName: g.backgroundAnimation,
         quest: t,

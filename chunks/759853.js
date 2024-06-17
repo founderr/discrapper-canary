@@ -10,24 +10,24 @@ var n = s("735250"),
   d = s("819640"),
   c = s("569379"),
   E = s("675654"),
-  _ = s("977524"),
-  f = s("197857");
+  f = s("977524"),
+  _ = s("197857");
 let h = ["#51BC9D"];
 t.default = e => {
   var t;
   let {
     quest: s,
-    progressBarRef: C,
-    isExpanded: m
+    progressBarRef: m,
+    isExpanded: C
   } = e, {
     completionSpring: T,
     startCompletionAnimation: g
-  } = (0, c.useQuestBarCompletionAnimation)(), A = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, p = a.useRef(!1), N = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), S = a.useRef(null), I = (0, r.useStateFromStores)([d.default], () => d.default.hasLayers()), x = (0, o.default)(I), [R, v] = a.useState(null), [O, M] = a.useState(null), L = a.useRef(new l.Environment({
+  } = (0, c.useQuestBarCompletionAnimation)(), p = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, A = a.useRef(!1), N = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), S = a.useRef(null), I = (0, r.useStateFromStores)([d.default], () => d.default.hasLayers()), x = (0, o.default)(I), [R, v] = a.useState(null), [M, O] = a.useState(null), L = a.useRef(new l.Environment({
     gravity: 0,
     wind: 0
-  })), y = (0, l.useConfettiCannon)(R, O), b = a.useCallback(() => {
+  })), y = (0, l.useConfettiCannon)(R, M), b = a.useCallback(() => {
     if (N) return;
-    let e = C.current,
+    let e = m.current,
       t = S.current;
     if (null != t && null != e && y.isReady) {
       var s, n, a, l;
@@ -78,31 +78,31 @@ t.default = e => {
         }
       }), 100)
     }
-  }, [C, S, y, N]), D = (0, o.default)(m);
+  }, [m, S, y, N]), D = (0, o.default)(C);
   return (a.useEffect(() => {
-    A && m && !D && (g(), b())
-  }, [m, A, g, b, D]), a.useEffect(() => {
-    A && !I && x && setTimeout(() => {
+    p && C && !D && (g(), b())
+  }, [C, p, g, b, D]), a.useEffect(() => {
+    p && !I && x && setTimeout(() => {
       g(), b()
     }, 200)
-  }, [A, x, I, g, b]), a.useEffect(() => {
-    y.isReady && (!p.current && A && (g(), b()), p.current = A)
-  }, [A, p, b, g, y]), N) ? null : (0, n.jsxs)("div", {
-    className: _.wrapper,
+  }, [p, x, I, g, b]), a.useEffect(() => {
+    y.isReady && (!A.current && p && (g(), b()), A.current = p)
+  }, [p, A, b, g, y]), N) ? null : (0, n.jsxs)("div", {
+    className: f.wrapper,
     "aria-hidden": "true",
     ref: S,
     children: [(0, n.jsx)(i.animated.div, {
-      className: _.background,
+      className: f.background,
       style: {
         opacity: T
       }
     }), (0, n.jsx)(l.ConfettiCanvas, {
       ref: v,
-      className: _.confetti,
+      className: f.confetti,
       environment: L.current
     }), (0, n.jsx)(l.SpriteCanvas, {
-      ref: M,
-      sprites: [f],
+      ref: O,
+      sprites: [_],
       colors: h,
       spriteWidth: E.COMMON_CONFETTI_MAX_SPRITE_SIZE,
       spriteHeight: E.COMMON_CONFETTI_MAX_SPRITE_SIZE

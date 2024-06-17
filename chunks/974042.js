@@ -139,13 +139,13 @@ let N = !0,
   L = !0,
   P = !1;
 
-function y() {
+function M() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
   N && (e || R !== m.FriendsSections.ONLINE && R !== m.FriendsSections.ADD_FRIEND) && !v && (N = !1, v = !0, o.default.fetchRelationships())
 }
 
-function M() {
-  if (N = !0, L ? v = !1 : y(), O = O.reset(), P) return;
+function y() {
+  if (N = !0, L ? v = !1 : M(), O = O.reset(), P) return;
   let e = O.getRelationshipCounts();
   R = 0 === e[m.RelationshipTypes.FRIEND] ? 0 !== e[m.RelationshipTypes.PENDING_INCOMING] ? m.FriendsSections.PENDING : m.FriendsSections.ADD_FRIEND : m.FriendsSections.ONLINE
 }
@@ -161,7 +161,7 @@ function x(e) {
 }
 class b extends(a = i.default.Store) {
   initialize() {
-    this.waitFor(C.default, h.default, _.default, E.default, f.default, c.default, d.default), this.syncWith([C.default], D), this.syncWith([d.default], D), this.syncWith([_.default], x(p)), this.syncWith([h.default, c.default], x(I)), M()
+    this.waitFor(C.default, h.default, _.default, E.default, f.default, c.default, d.default), this.syncWith([C.default], D), this.syncWith([d.default], D), this.syncWith([_.default], x(p)), this.syncWith([h.default, c.default], x(I)), y()
   }
   getState() {
     return {
@@ -174,10 +174,10 @@ class b extends(a = i.default.Store) {
 }
 S(b, "displayName", "FriendsStore"), t.default = new b(r.default, {
   CONNECTION_OPEN: function() {
-    M()
+    y()
   },
   FRIENDS_SET_SECTION: function(e) {
-    R = e.section, y()
+    R = e.section, M()
   },
   CHANNEL_SELECT: function(e) {
     let {

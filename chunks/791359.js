@@ -31,8 +31,8 @@ var a = n("735250"),
   O = n("674563"),
   L = n("689938"),
   P = n("676563");
-let y = 15 * p.default.Millis.MINUTE,
-  M = (0, v.default)(function(e) {
+let M = 15 * p.default.Millis.MINUTE,
+  y = (0, v.default)(function(e) {
     let {
       party: t,
       onUserContextMenu: n,
@@ -62,7 +62,7 @@ let y = 15 * p.default.Millis.MINUTE,
         in_voice_channel: p,
         games_detected: e
       })
-    }, [C, _, m, p, E]), v = o()(I, y);
+    }, [C, _, m, p, E]), v = o()(I, M);
     return null != r || null != u ? (0, a.jsx)(d.Popout, {
       position: "left",
       renderPopout: e => {
@@ -130,7 +130,7 @@ function x() {
     let {
       party: t
     } = e;
-    return (0, a.jsx)(M, {
+    return (0, a.jsx)(y, {
       party: t,
       quest: o.get(t.id)
     }, t.id)

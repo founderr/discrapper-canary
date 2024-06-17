@@ -14,10 +14,10 @@ t.default = a.forwardRef((e, t) => {
   } = e, d = (0, l.useProgressBarColors)(s > 0), c = a / 2, E = a / 2 - r / 2, f = 2 * Math.PI * E, _ = f - s * f, h = {
     strokeDasharray: "".concat(f, " ").concat(f),
     strokeDashoffset: _
-  }, C = {
+  }, m = {
     strokeDasharray: "".concat(f, " ").concat(f),
     strokeDashoffset: -s * f
-  }, m = {
+  }, C = {
     boxShadow: "0 0 30px 0px ".concat(d.glow)
   };
   return (0, n.jsxs)("div", {
@@ -25,7 +25,7 @@ t.default = a.forwardRef((e, t) => {
     ref: t,
     children: [(0, n.jsx)("div", {
       className: i.inner,
-      style: m,
+      style: C,
       children: u
     }), (0, n.jsxs)("svg", {
       className: i.progressBar,
@@ -70,7 +70,7 @@ t.default = a.forwardRef((e, t) => {
         cx: c,
         cy: c,
         stroke: "url(#linear)",
-        style: C
+        style: m
       }), (0, n.jsx)("circle", {
         className: i.progress,
         strokeWidth: r,

@@ -58,7 +58,7 @@ class P extends r.default {
       (null == e ? void 0 : e.hasVerificationGate()) && (r = !0, (0, E.fetchWelcomeScreen)(e.id))
     }
     let P = () => 0 === C.default.totalGuilds && !I.isPlatformEmbedded,
-      y = o.userNeedsAgeGate();
+      M = o.userNeedsAgeGate();
     e = [{
       key: "Unified NUF Modal",
       open: async function e(e) {
@@ -109,7 +109,7 @@ class P extends r.default {
     }, {
       key: "New User Age Gate",
       open: u.openNewUserAgeGateModal,
-      predicate: () => y && !P() && !R.CONFERENCE_MODE_ENABLED
+      predicate: () => M && !P() && !R.CONFERENCE_MODE_ENABLED
     }, {
       key: "Claim Account Modal",
       open: e => u.openClaimAccountModal(I.isPlatformEmbedded, e),

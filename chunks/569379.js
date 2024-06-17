@@ -1,16 +1,16 @@
 "use strict";
 s.r(t), s.d(t, {
   useProgressBarColors: function() {
-    return m
+    return C
   },
   useQuestBarCompletionAnimation: function() {
-    return C
+    return m
   },
   useQuestBarSubtitle: function() {
     return h
   },
   useQuestBarTitle: function() {
-    return f
+    return _
   }
 }), s("47120");
 var n = s("470079"),
@@ -23,9 +23,9 @@ var n = s("470079"),
   d = s("918701"),
   c = s("566078"),
   E = s("46140"),
-  _ = s("689938");
+  f = s("689938");
 
-function f(e) {
+function _(e) {
   var t, s;
   let n = (0, l.useStateFromStores)([r.default], () => r.default.locale),
     {
@@ -34,16 +34,16 @@ function f(e) {
       quest: e,
       location: E.QuestsExperimentLocations.QUESTS_BAR
     });
-  if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return _.default.Messages.QUESTS_COMPLETION_COMPLETE;
+  if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return f.default.Messages.QUESTS_COMPLETION_COMPLETE;
   if ((null === (s = e.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null && a > 0) {
     let e = (0, o.formatPercent)(n, a, {
       roundingMode: "floor"
     });
-    return _.default.Messages.QUESTS_COMPLETION_PROGRESS_STARTED_V2.format({
+    return f.default.Messages.QUESTS_COMPLETION_PROGRESS_STARTED_V2.format({
       percent: e
     })
   }
-  return (0, d.isConsoleQuest)(e) ? _.default.Messages.QUEST_BAR_TITLE_START_PLAYING : _.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
+  return (0, d.isConsoleQuest)(e) ? f.default.Messages.QUEST_BAR_TITLE_START_PLAYING : f.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
 }
 
 function h(e, t) {
@@ -53,7 +53,7 @@ function h(e, t) {
       quest: e,
       location: E.QuestsExperimentLocations.QUESTS_BAR
     });
-  return (null === (s = e.userStatus) || void 0 === s ? void 0 : s.completedAt) != null ? _.default.Messages.QUESTS_CLAIM_BY_DATE.format({
+  return (null === (s = e.userStatus) || void 0 === s ? void 0 : s.completedAt) != null ? f.default.Messages.QUESTS_CLAIM_BY_DATE.format({
     expirationDate: n
   }) : t ? (0, d.getQuestsInstructionsToWinReward)({
     quest: e,
@@ -63,10 +63,10 @@ function h(e, t) {
   }) : a.percentComplete > 0 ? (0, d.getContextualEntrypointHeading)({
     quest: e,
     taskDetails: a
-  }) : _.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED_SUBTITLE
+  }) : f.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED_SUBTITLE
 }
 
-function C() {
+function m() {
   let [{
     spring: e
   }, t] = (0, a.useSpring)(() => ({
@@ -85,7 +85,7 @@ function C() {
   }
 }
 
-function m(e) {
+function C(e) {
   var t;
   let s = null !== (t = (0, i.useThemeIndex)()) && void 0 !== t ? t : 0,
     n = "var(--green-330)",

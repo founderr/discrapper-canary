@@ -31,8 +31,8 @@ var a = n("735250"),
   O = n("515550"),
   L = n("1585"),
   P = n("304761"),
-  y = n("865427"),
-  M = n("571250"),
+  M = n("865427"),
+  y = n("571250"),
   D = n("628581"),
   x = n("55311"),
   b = n("575175"),
@@ -85,8 +85,8 @@ var a = n("735250"),
   eO = n("937482"),
   eL = n("87888"),
   eP = n("976401"),
-  ey = n("333454"),
-  eM = n("864441"),
+  eM = n("333454"),
+  ey = n("864441"),
   eD = n("626135"),
   ex = n("768581"),
   eb = n("572004"),
@@ -164,12 +164,12 @@ class ez extends s.PureComponent {
     })), (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("div", {
         className: eV.panelTitleContainer,
-        children: (0, a.jsx)(eM.default, {
+        children: (0, a.jsx)(ey.default, {
           children: r
         })
       }), (0, a.jsx)("div", {
         className: eV.panelSubtextContainer,
-        children: (0, a.jsx)(ey.default, {
+        children: (0, a.jsx)(eM.default, {
           children: null != e ? e : s
         })
       })]
@@ -655,10 +655,10 @@ function eq() {
     } = (0, ef.default)(C),
     O = (0, r.useStateFromStores)([P.default], () => {
       var e;
-      return (0, y.probablyHasBuildOverride)() ? null === (e = P.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
+      return (0, M.probablyHasBuildOverride)() ? null === (e = P.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
     L = (0, r.useStateFromStores)([eT.default], () => eT.default.getPremiumTypeSubscription()),
-    M = (0, r.useStateFromStores)([em.default], () => em.default.getEverSpeakingWhileMuted()),
+    y = (0, r.useStateFromStores)([em.default], () => em.default.getEverSpeakingWhileMuted()),
     D = (0, r.useStateFromStores)([e_.default], () => e_.default.hasLayers()),
     x = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || D || ej.ProcessArgs.isDisallowPopupsSet(),
     b = (0, Z.useIsEligibleForPomelo)();
@@ -746,7 +746,7 @@ function eq() {
     showTagAsButton: w,
     showTaglessAccountPanel: B,
     speaking: f,
-    speakingWhileMuted: M,
+    speakingWhileMuted: y,
     status: c,
     streaming: d,
     suppress: I,
@@ -845,7 +845,7 @@ function eX(e) {
     }
   } = (0, h.useHeadphonesLottie)(u ? "undeafen" : "deafen"), _ = n ? d.HeadphonesDenyIcon : c;
   return s.useEffect(() => () => f(), [u, f]), (0, a.jsx)(eP.default, {
-    tooltipText: (0, M.default)(t, n, l),
+    tooltipText: (0, y.default)(t, n, l),
     onMouseEnter: E,
     onMouseLeave: C,
     icon: (0, a.jsx)(_, {

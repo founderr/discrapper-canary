@@ -17,8 +17,8 @@ t.default = function(e) {
     isExpansionAnimationComplete: f,
     onCtxMenuOpened: _,
     onCtxMenuClosed: h,
-    onCtxMenuSelection: C,
-    onContentHeightChange: m,
+    onCtxMenuSelection: m,
+    onContentHeightChange: C,
     quest: T,
     useReducedMotion: g
   } = e, p = a.useRef(null), A = (null === (t = T.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null;
@@ -35,7 +35,7 @@ t.default = function(e) {
       isExpansionAnimationComplete: f,
       onCtxMenuOpen: _,
       onCtxMenuClose: h,
-      onCtxMenuSelect: C
+      onCtxMenuSelect: m
     }), (0, n.jsx)(r.default, {
       ref: p,
       className: d.content,
@@ -49,8 +49,8 @@ t.default = function(e) {
       className: d.content,
       onCtxMenuOpen: _,
       onCtxMenuClose: h,
-      onCtxMenuSelect: C,
-      onContentHeightChange: m,
+      onCtxMenuSelect: m,
+      onContentHeightChange: C,
       isExpanded: E,
       isExpansionAnimationComplete: f,
       quest: T,

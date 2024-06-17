@@ -4,13 +4,13 @@ a.r(t), a("47120");
 var c, u, f, m, p = a("442837"),
   I = a("570140"),
   g = a("823385"),
-  h = a("823379"),
-  T = a("971130"),
-  S = a("709054"),
-  N = a("592125"),
-  y = a("496675"),
-  v = a("699516"),
-  C = a("800599"),
+  h = a("814443"),
+  T = a("823379"),
+  S = a("971130"),
+  N = a("709054"),
+  y = a("592125"),
+  v = a("496675"),
+  C = a("699516"),
   A = a("981631"),
   E = a("245335");
 let x = new Set,
@@ -20,10 +20,10 @@ let x = new Set,
 function R(e) {
   let t = new Set,
     a = null == l || d === E.InviteTargetTypes.EMBEDDED_APPLICATION ? void 0 : l.id,
-    i = (0, T.getMostRecentDMedUser)(x, a);
-  for (let e of (null != i && !v.default.isBlocked(i.id) && t.add(i.id), C.default.getUserAffinitiesUserIds())) t.add(e);
+    i = (0, S.getMostRecentDMedUser)(x, a);
+  for (let e of (null != i && !C.default.isBlocked(i.id) && t.add(i.id), h.default.getUserAffinitiesUserIds())) t.add(e);
   let s = new Set;
-  return d === E.InviteTargetTypes.EMBEDDED_APPLICATION && g.default.getChannelHistory().map(e => N.default.getChannel(e)).filter(h.isNotNullish).filter(e => e.type === A.ChannelTypes.GUILD_TEXT).filter(e => y.default.can(A.Permissions.SEND_MESSAGES, e)).slice(0, 3).forEach(e => s.add(e.id)), (0, T.generateRowsForQuery)({
+  return d === E.InviteTargetTypes.EMBEDDED_APPLICATION && g.default.getChannelHistory().map(e => y.default.getChannel(e)).filter(T.isNotNullish).filter(e => e.type === A.ChannelTypes.GUILD_TEXT).filter(e => v.default.can(A.Permissions.SEND_MESSAGES, e)).slice(0, 3).forEach(e => s.add(e.id)), (0, S.generateRowsForQuery)({
     query: e,
     omitUserIds: x,
     suggestedUserIds: t,
@@ -43,7 +43,7 @@ function D(e) {
 }
 class j extends(c = p.default.Store) {
   initialize() {
-    this.waitFor(v.default, C.default)
+    this.waitFor(C.default, h.default)
   }
   getInviteSuggestionRows() {
     return _
@@ -56,7 +56,7 @@ class j extends(c = p.default.Store) {
   }
   getSelectedInviteMetadata(e) {
     let t = w.get(e),
-      a = C.default.getUserAffinitiesUserIds();
+      a = h.default.getUserAffinitiesUserIds();
     return null != t ? {
       rowNum: t.index,
       isAffinitySuggestion: e.isSuggested,
@@ -81,9 +81,9 @@ m = "InviteSuggestionsStore", (f = "displayName") in(u = j) ? Object.definePrope
       inviteTargetType: f
     } = e;
     l = null != c ? a : null, o = c, r = u, d = f;
-    let m = v.default.getRelationships(),
-      p = S.default.keys(m).filter(e => m[e] === A.RelationshipTypes.BLOCKED),
-      I = (0, T.getUsersAlreadyJoined)({
+    let m = C.default.getRelationships(),
+      p = N.default.keys(m).filter(e => m[e] === A.RelationshipTypes.BLOCKED),
+      I = (0, S.getUsersAlreadyJoined)({
         channel: o,
         applicationId: r,
         inviteTargetType: f

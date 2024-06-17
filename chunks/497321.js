@@ -1,17 +1,17 @@
 "use strict";
 s.r(t), s("47120");
-var n, r = s("735250"),
-  a = s("470079"),
-  u = s("120356"),
-  i = s.n(u),
-  l = s("481060"),
-  E = s("37234"),
-  c = s("230711"),
-  o = s("981631"),
-  _ = s("689938"),
-  d = s("662090");
+var r, n = s("735250"),
+  i = s("470079"),
+  a = s("120356"),
+  l = s.n(a),
+  o = s("481060"),
+  c = s("37234"),
+  u = s("230711"),
+  d = s("981631"),
+  f = s("689938"),
+  p = s("662090");
 
-function T(e, t, s) {
+function g(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -19,27 +19,27 @@ function T(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class I extends(n = a.Component) {
+class v extends(r = i.Component) {
   render() {
-    return (0, r.jsxs)("div", {
-      className: d.streamerModeEnabled,
-      children: [(0, r.jsx)("div", {
-        className: d.streamerModeEnabledImage
-      }), (0, r.jsx)(l.Clickable, {
-        className: i()(d.streamerModeEnabledBtn, {
-          [d.disabled]: this.props.disableButton
+    return (0, n.jsxs)("div", {
+      className: p.streamerModeEnabled,
+      children: [(0, n.jsx)("div", {
+        className: p.streamerModeEnabledImage
+      }), (0, n.jsx)(o.Clickable, {
+        className: l()(p.streamerModeEnabledBtn, {
+          [p.disabled]: this.props.disableButton
         }),
         onClick: this.handleClick,
-        children: _.default.Messages.STREAMER_MODE_ENABLED
+        children: f.default.Messages.STREAMER_MODE_ENABLED
       })]
     })
   }
   constructor(...e) {
-    super(...e), T(this, "handleClick", () => {
-      !this.props.disableButton && ((0, E.pushLayer)(o.Layers.USER_SETTINGS), c.default.setSection(o.UserSettingsSections.STREAMER_MODE))
+    super(...e), g(this, "handleClick", () => {
+      !this.props.disableButton && ((0, c.pushLayer)(d.Layers.USER_SETTINGS), u.default.setSection(d.UserSettingsSections.STREAMER_MODE))
     })
   }
 }
-T(I, "defaultProps", {
+g(v, "defaultProps", {
   disableButton: !1
-}), t.default = I
+}), t.default = v

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   useAcceptedRequestsCount: function() {
-    return f
+    return _
   },
   useActivityWindowTimeStamp: function() {
     return h
@@ -10,10 +10,10 @@ s.r(t), s.d(t, {
     return E
   },
   useLinkTimestampText: function() {
-    return C
+    return m
   },
   usePendingRequestCount: function() {
-    return _
+    return f
   },
   useUserForLinkStatus: function() {
     return d
@@ -51,13 +51,13 @@ function E() {
   return t.length >= s
 }
 
-function _() {
+function f() {
   let e = (0, n.useStateFromStores)([a.default], () => a.default.getCurrentUser()),
     t = (0, n.useStateFromStores)([l.default], () => l.default.getLinkedUsers());
   return null == e ? 0 : Object.values(t).filter(t => null != t && t.link_status === u.UserLinkStatus.PENDING && e.id !== t.requestor_id).length
 }
 
-function f() {
+function _() {
   let e = (0, n.useStateFromStores)([a.default], () => a.default.getCurrentUser()),
     t = (0, n.useStateFromStores)([l.default], () => l.default.getLinkedUsers());
   return null == e ? 0 : Object.values(t).filter(e => null != e && e.link_status === u.UserLinkStatus.ACTIVE).length
@@ -69,7 +69,7 @@ function h(e) {
   return null == s ? null : (0, i.formatUserActivityTimestamp)(new Date(s).getTime(), () => e, 7)
 }
 
-function C(e, t) {
+function m(e, t) {
   let s = (0, n.useStateFromStores)([l.default], () => l.default.getLinkTimestamp(e));
   return null != s ? (0, i.formatLinkTimestamp)(Date.parse(s), t === u.UserLinkStatus.PENDING ? u.PENDING_LINK_REQUEST_TIMESTAMP_FORMATTER : u.ACCEPTED_LINK_REQUEST_TIMESTAMP_FORMATTER) : null
 }

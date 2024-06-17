@@ -11,8 +11,8 @@ var a = s("120356"),
   d = s("914788"),
   c = s("981631"),
   E = s("689938"),
-  _ = s("125640");
-let f = [18, 18, 16, 16, 14, 12, 10];
+  f = s("125640");
+let _ = [18, 18, 16, 16, 14, 12, 10];
 t.default = e => {
   let {
     guildId: t
@@ -20,37 +20,37 @@ t.default = e => {
   if (void 0 === s) return null;
   let a = s.hasFeature(c.GuildFeatures.VERIFIED) || s.hasFeature(c.GuildFeatures.PARTNERED),
     h = s.toString(),
-    C = s.getIconURL(40, !0),
-    m = null,
-    T = f[f.length - 1];
+    m = s.getIconURL(40, !0),
+    C = null,
+    T = _[_.length - 1];
   if (null == s.icon && null != h) {
     var g;
-    T = null !== (g = f[(m = (0, i.getAcronym)(h)).length - 1]) && void 0 !== g ? g : f[f.length - 1]
+    T = null !== (g = _[(C = (0, i.getAcronym)(h)).length - 1]) && void 0 !== g ? g : _[_.length - 1]
   }
   return (0, n.jsxs)("div", {
-    className: _.container,
+    className: f.container,
     children: [(0, n.jsxs)("div", {
       style: {
         fontSize: T
       },
-      children: [null != m ? (0, n.jsx)("div", {
-        className: l()(_.childWrapper, _.acronym),
+      children: [null != C ? (0, n.jsx)("div", {
+        className: l()(f.childWrapper, f.acronym),
         "aria-hidden": !0,
-        children: m
-      }) : null, null != C ? (0, n.jsx)(o.Avatar, {
+        children: C
+      }) : null, null != m ? (0, n.jsx)(o.Avatar, {
         src: s.getIconURL(40, !0),
         size: o.AvatarSizes.SIZE_40,
         "aria-hidden": !0
       }) : null]
     }), (0, n.jsxs)("div", {
-      className: _.descriptors,
+      className: f.descriptors,
       children: [(0, n.jsxs)("div", {
-        className: _.header,
+        className: f.header,
         children: [a ? (0, n.jsx)(u.default, {
           guild: s,
           tooltipPosition: "bottom",
           tooltipColor: o.Tooltip.Colors.PRIMARY,
-          className: _.guildBadge
+          className: f.guildBadge
         }) : null, (0, n.jsx)(o.Text, {
           variant: "text-md/semibold",
           children: s.toString()

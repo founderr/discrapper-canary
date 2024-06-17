@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return _
   }
 }), s("47120");
 var n = s("735250"),
@@ -14,7 +14,7 @@ var n = s("735250"),
   d = s("584825"),
   c = s("931547"),
   E = s("689938");
-let _ = e => {
+let f = e => {
   let [t, s] = a.useState(!1), [n, l] = a.useState(null);
   return {
     resetRenewalMutation: async t => {
@@ -32,7 +32,7 @@ let _ = e => {
   }
 };
 
-function f(e) {
+function _(e) {
   let {
     groupListingId: t,
     subscription: s,
@@ -40,10 +40,10 @@ function f(e) {
   } = e, {
     analyticsLocations: r
   } = (0, u.default)(o.default.PENDING_PLAN_CHANGE_NOTICE), {
-    resetRenewalMutation: f,
+    resetRenewalMutation: _,
     submitting: h,
-    error: C
-  } = _(r), m = (0, d.useSubscriptionListingsForGroup)(t, {
+    error: m
+  } = f(r), C = (0, d.useSubscriptionListingsForGroup)(t, {
     includeSoftDeleted: !0
   }), {
     currentListing: T,
@@ -55,22 +55,22 @@ function f(e) {
     };
     let e = s.items[0].planId,
       t = s.renewalMutations.items[0].planId,
-      n = m.find(t => t.subscription_plans[0].id === e);
+      n = C.find(t => t.subscription_plans[0].id === e);
     return {
       currentListing: n,
-      nextListing: m.find(e => e.subscription_plans[0].id === t)
+      nextListing: C.find(e => e.subscription_plans[0].id === t)
     }
-  }, [s, m]);
+  }, [s, C]);
   if (null == s || null == T || null == g) return null;
-  let A = i()(s.currentPeriodEnd).format("MMM DD, YYYY");
+  let p = i()(s.currentPeriodEnd).format("MMM DD, YYYY");
   return (0, n.jsx)(c.default, {
     message: E.default.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_DELETE_MUTATION_DESCRIPTION.format({
       currentListing: T.name,
       nextListing: g.name,
-      changeDate: A
+      changeDate: p
     }),
-    error: null == C ? void 0 : C.message,
-    onClick: () => f(s),
+    error: null == m ? void 0 : m.message,
+    onClick: () => _(s),
     submitting: h,
     ctaMessage: E.default.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_DELETE_MUTATION_CTA,
     className: l

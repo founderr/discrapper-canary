@@ -38,23 +38,23 @@ let u = a.createContext({
       recalculateAnimationPositions: f,
       registerComponent: _,
       unregisterComponent: h,
-      expansionSpring: C
-    } = a.useContext(u), m = a.useRef(null), T = a.useRef(null), g = a.useContext(r.QuestBarPreviewContext);
+      expansionSpring: m
+    } = a.useContext(u), C = a.useRef(null), T = a.useRef(null), g = a.useContext(r.QuestBarPreviewContext);
     a.useEffect(() => {
       f()
     }, [f]), a.useEffect(() => {
-      let e = m.current;
+      let e = C.current;
       return null != e && _(e, o, d), () => {
         null != e && h(o, d)
       }
     }, [o, d, _, h]);
     let p = document.getElementById(g ? "quest-bar-v2-preview-" + o : "quest-bar-v2-" + o),
       A = null;
-    return null == p ? A = null : c && null != C ? A = (0, n.jsxs)(n.Fragment, {
+    return null == p ? A = null : c && null != m ? A = (0, n.jsxs)(n.Fragment, {
       children: ["collapsed" === d && (0, l.createPortal)((0, n.jsx)(i.animated.div, {
         style: {
           position: "absolute",
-          opacity: C.to({
+          opacity: m.to({
             range: [0, 1],
             output: [1, 0]
           })
@@ -63,7 +63,7 @@ let u = a.createContext({
       }), p), "expanded" === d && (0, l.createPortal)((0, n.jsx)(i.animated.div, {
         style: {
           position: "absolute",
-          opacity: C.to({
+          opacity: m.to({
             range: [0, 1],
             output: [0, 1]
           })
@@ -75,7 +75,7 @@ let u = a.createContext({
         opacity: null == p || E ? 1 : 0
       },
       ref: t,
-      children: [s(m), !E && A]
+      children: [s(C), !E && A]
     })
   }),
   c = e => {
@@ -112,7 +112,7 @@ let u = a.createContext({
           [e]: a
         }
       })
-    }, []), C = a.useCallback(() => {
+    }, []), m = a.useCallback(() => {
       let e = [];
       for (let t in d) {
         if (null == d[t] || null == s.current || null == l.current) continue;
@@ -145,7 +145,7 @@ let u = a.createContext({
         animatedComponents: d,
         expandedContentRef: s,
         collapsedContentRef: l,
-        recalculateAnimationPositions: C,
+        recalculateAnimationPositions: m,
         animatedComponentProps: E,
         expansionSpring: i
       },

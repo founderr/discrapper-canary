@@ -108,8 +108,8 @@ var a = n("735250"),
   e0 = n("354459"),
   e1 = n("921944"),
   e2 = n("440493"),
-  e3 = n("157925"),
-  e4 = n("689938"),
+  e4 = n("157925"),
+  e3 = n("689938"),
   e7 = n("19340");
 
 function e5(e, t, n) {
@@ -557,7 +557,7 @@ class e9 extends l.PureComponent {
             channel: e
           }, "pins")), i.push((0, a.jsx)(et.default, {
             channel: e,
-            tooltip: e4.default.Messages.GROUP_DM_ADD_FRIENDS
+            tooltip: e3.default.Messages.GROUP_DM_ADD_FRIENDS
           }, "invite")), i.push((0, a.jsx)(en.default, {
             channel: e,
             showCallOrActivityPanel: l || s
@@ -571,7 +571,7 @@ class e9 extends l.PureComponent {
             }, "calls")), i.push((0, a.jsx)(X.default, {
               channel: e
             }, "pins")), !e.isManaged()) {
-            let t = e4.default.Messages.GROUP_DM_ADD_FRIENDS;
+            let t = e3.default.Messages.GROUP_DM_ADD_FRIENDS;
             i.push((0, a.jsx)(et.default, {
               channel: e,
               tooltip: t
@@ -684,7 +684,7 @@ class e9 extends l.PureComponent {
             ...n
           })
         }),
-        children: e4.default.Messages.FOLLOW
+        children: e3.default.Messages.FOLLOW
       }) : null
     }), e5(this, "renderHeaderBar", () => {
       let {
@@ -714,7 +714,7 @@ class e9 extends l.PureComponent {
           mobileToolbar: this.renderMobileToolbar(),
           className: i()(e7.title, d && r ? (0, eW.getThemeClass)(eQ.ThemeTypes.DARK) : null),
           transparent: r || u,
-          "aria-label": e4.default.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
+          "aria-label": e3.default.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
           children: ["left" === c && (0, a.jsx)($.HeaderGuildBreadcrumb, {
             channel: e,
             guild: l,
@@ -772,7 +772,7 @@ t.default = l.memo(function(e) {
   l.useEffect(() => {
     var e, t, n;
     let a = (0, ef.getHistory)();
-    if ((null == a ? void 0 : null === (e = a.location) || void 0 === e ? void 0 : e.state) === e3.STAGE_INVITE_STATE_KEY) {
+    if ((null == a ? void 0 : null === (e = a.location) || void 0 === e ? void 0 : e.state) === e4.STAGE_INVITE_STATE_KEY) {
       let {
         channelId: e
       } = null !== (n = (0, ei.tryParseChannelPath)(null == a ? void 0 : null === (t = a.location) || void 0 === t ? void 0 : t.pathname)) && void 0 !== n ? n : {};

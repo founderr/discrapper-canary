@@ -114,7 +114,7 @@ function K(e, t) {
         if (null != e && e.type === k.ChannelTypes.GUILD_VOICE) return (0, l.openModalLazy)(async () => {
           let {
             default: t
-          } = await Promise.all([i.e("49237"), i.e("99387"), i.e("7654"), i.e("1187"), i.e("96626")]).then(i.bind(i, "560114"));
+          } = await Promise.all([i.e("49237"), i.e("99387"), i.e("7654"), i.e("1187"), i.e("53700")]).then(i.bind(i, "560114"));
           return i => (0, a.jsx)(t, {
             ...i,
             guild: s,

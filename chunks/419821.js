@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   UserLinkAcceptedRequestRow: function() {
-    return C
+    return m
   }
 });
 var n = s("735250"),
@@ -14,14 +14,14 @@ var n = s("735250"),
   d = s("465670"),
   c = s("933970"),
   E = s("340453"),
-  _ = s("292352"),
-  f = s("689938"),
+  f = s("292352"),
+  _ = s("689938"),
   h = s("999593");
 
-function C(e) {
+function m(e) {
   let {
     user: t
-  } = e, l = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), C = a.useCallback(() => {
+  } = e, l = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), m = a.useCallback(() => {
     i()(void 0 !== l, "User must be logged in to accept a link request"), (0, o.openModalLazy)(async () => {
       let {
         default: e
@@ -39,15 +39,15 @@ function C(e) {
       className: h.details,
       children: (0, n.jsx)(E.default, {
         otherUser: t,
-        status: _.UserLinkStatus.ACTIVE
+        status: f.UserLinkStatus.ACTIVE
       })
     }), (0, n.jsx)("div", {
       className: h.actions,
       children: (0, n.jsx)(c.default, {
         icon: d.default,
         className: h.__invalid_actionDeny,
-        tooltip: f.default.Messages.FAMILY_CENTER_LINK_ACTION_DISCONNECT,
-        onClick: C
+        tooltip: _.default.Messages.FAMILY_CENTER_LINK_ACTION_DISCONNECT,
+        onClick: m
       })
     })]
   })

@@ -31,8 +31,8 @@ var a = n("735250"),
   O = n("785717"),
   L = n("318661"),
   P = n("741308"),
-  y = n("549546"),
-  M = n("681837"),
+  M = n("549546"),
+  y = n("681837"),
   D = n("502762"),
   x = n("530"),
   b = n("544989"),
@@ -331,9 +331,9 @@ function ei(e) {
                 onClose: o
               }),
               nicknameIcons: (0, a.jsxs)(a.Fragment, {
-                children: [(0, a.jsx)(M.default, {
+                children: [(0, a.jsx)(y.default, {
                   userId: t.id
-                }), (0, a.jsx)(y.default, {
+                }), (0, a.jsx)(M.default, {
                   user: t,
                   isHovering: ec
                 })]
