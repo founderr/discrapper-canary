@@ -251,7 +251,7 @@ y(function() {
   let i = {},
     r = window.GLOBAL_ENV.RELEASE_CHANNEL;
   r && (i.release_channel = r.split("-")[0]);
-  let s = parseInt((n = "302654", "302654"), 10);
+  let s = parseInt((n = "302733", "302733"), 10);
   !isNaN(s) && (i.client_build_number = s);
   let o = null == C ? void 0 : null === (e = (t = C.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
   return !isNaN(o) && (i.native_build_number = o), i.client_event_source = function() {

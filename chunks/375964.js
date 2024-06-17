@@ -17187,7 +17187,7 @@ e.exports = Object.freeze({
   QUESTS_IN_PROGRESS_TOOLTIP: "Complete the task to unlock the reward",
   QUESTS_STREAM_TASK: "Stream {gameTitle} to a friend for {minutes} minutes",
   QUESTS_PLAY_TASK: "Play {gameTitle} for {minutes} minutes",
-  QUESTS_IN_HOUSE_TITLE: "Console Gamers",
+  QUESTS_IN_HOUSE_TITLE: "Console Gaming",
   QUESTS_IN_HOUSE_TASK: "Connect a console and play any game for {minutes} minutes",
   QUESTS_IN_HOUSE_TASK_WITH_LINK: "Play any game on a [connected console](onClick) for {minutes} minutes",
   QUESTS_UNLOCK_REWARDS: "Unlock Rewards",

@@ -43,7 +43,7 @@ t.Z = {
       var i;
       let d = {
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          build_number: "302654"
+          build_number: "302733"
         },
         c = l.default.getCurrentUser();
       null != c && (d.user_id = c.id, d.user_name = c.tag, null != c.email && (d.email = c.email));
