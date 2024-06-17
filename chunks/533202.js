@@ -1,132 +1,129 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return L
+    return x
   }
 }), s("47120");
-var a = s("735250"),
-  l = s("470079"),
+var l = s("735250"),
+  a = s("470079"),
   i = s("990547"),
   n = s("481060"),
   d = s("458879"),
   r = s("996453"),
   o = s("601964"),
-  u = s("792125"),
-  c = s("99325"),
-  C = s("454432"),
-  m = s("492749"),
-  f = s("66626"),
-  T = s("892322"),
+  u = s("99325"),
+  c = s("454432"),
+  C = s("492749"),
+  m = s("66626"),
+  f = s("892322"),
   _ = s("15608"),
   E = s("486527"),
-  x = s("981631"),
-  I = s("264603");
+  T = s("264603");
 
-function L(e) {
+function x(e) {
   let {
     directoryChannelId: t,
     transitionState: s,
-    initialSlide: L = E.CreateOrAddGuildSlideTypes.CHOOSE_GUILD,
-    onClose: h,
-    directoryGuildName: g,
-    directoryGuildId: N,
-    currentCategoryId: S
-  } = e, [M, p] = l.useState(L), [A, j] = l.useState(null), [U, B] = l.useState(null), [D, H] = l.useState(null), [O, G] = l.useState(null), [R, v] = l.useState(null), [y, b] = l.useState(""), [F, k] = l.useState(null != S ? S : E.DirectoryEntryCategories.UNCATEGORIZED), [Z, V] = l.useState(!1), {
-    availableGuilds: w,
-    addedGuilds: P,
-    loading: z
-  } = (0, C.default)(N, t);
-  l.useEffect(() => {
-    p(L)
-  }, [p, L]);
-  let Y = async () => {
-    let e = R;
-    if (!Z) {
-      if (null == D || null == U) return;
-      let t = await d.default.createGuildFromTemplate(D, O, U);
-      v(e = new o.default(t))
+    initialSlide: x = E.CreateOrAddGuildSlideTypes.CHOOSE_GUILD,
+    onClose: I,
+    directoryGuildName: L,
+    directoryGuildId: h,
+    currentCategoryId: g
+  } = e, [S, N] = a.useState(x), [M, p] = a.useState(null), [A, j] = a.useState(null), [U, B] = a.useState(null), [D, H] = a.useState(null), [O, G] = a.useState(null), [R, v] = a.useState(""), [y, b] = a.useState(null != g ? g : E.DirectoryEntryCategories.UNCATEGORIZED), [F, k] = a.useState(!1), {
+    availableGuilds: Z,
+    addedGuilds: V,
+    loading: w
+  } = (0, c.default)(h, t);
+  a.useEffect(() => {
+    N(x)
+  }, [N, x]);
+  let P = async () => {
+    let e = O;
+    if (!F) {
+      if (null == U || null == A) return;
+      let t = await d.default.createGuildFromTemplate(U, D, A);
+      G(e = new o.default(t))
     }
-    null != e && (await c.addDirectoryGuildEntry(t, e.id, y, F), p(E.CreateOrAddGuildSlideTypes.CONFIRMATION))
-  }, X = {
+    null != e && (await u.addDirectoryGuildEntry(t, e.id, R, y), N(E.CreateOrAddGuildSlideTypes.CONFIRMATION))
+  }, z = {
     impression_group: i.ImpressionGroups.DIRECTORY_GUILD_ADD_FLOW
   };
-  return (0, a.jsx)("div", {
-    className: (0, u.getThemeClass)(x.ThemeTypes.LIGHT),
-    children: (0, a.jsx)(n.ModalRoot, {
+  return (0, l.jsx)("div", {
+    children: (0, l.jsx)(n.ModalRoot, {
       transitionState: s,
       disableTrack: !0,
-      children: (0, a.jsx)("div", {
-        className: I.container,
-        children: (0, a.jsxs)(n.Slides, {
-          activeSlide: M,
+      children: (0, l.jsx)("div", {
+        className: T.container,
+        children: (0, l.jsxs)(n.Slides, {
+          activeSlide: S,
           width: 440,
-          onSlideReady: e => j(e),
-          children: [(0, a.jsx)(n.Slide, {
+          onSlideReady: e => p(e),
+          children: [(0, l.jsx)(n.Slide, {
             id: E.CreateOrAddGuildSlideTypes.CHOOSE_GUILD,
             impressionName: i.ImpressionNames.HUB_EXISTING_GUILD_CHOOSE,
-            impressionProperties: X,
-            children: (0, a.jsx)(m.default, {
+            impressionProperties: z,
+            children: (0, l.jsx)(C.default, {
               directoryChannelId: t,
-              directoryGuildName: g,
+              directoryGuildName: L,
               onGuildChosen: e => {
-                V(!0), p(E.CreateOrAddGuildSlideTypes.CUSTOMIZE_EXISTING_GUILD), v(e)
+                k(!0), N(E.CreateOrAddGuildSlideTypes.CUSTOMIZE_EXISTING_GUILD), G(e)
               },
               handleChooseCreate: () => {
-                V(!1), p(E.CreateOrAddGuildSlideTypes.GUILD_TEMPLATES)
+                k(!1), N(E.CreateOrAddGuildSlideTypes.GUILD_TEMPLATES)
               },
-              onClose: h,
-              availableGuilds: w,
-              addedGuilds: P,
-              loading: z
+              onClose: I,
+              availableGuilds: Z,
+              addedGuilds: V,
+              loading: w
             })
-          }), (0, a.jsx)(n.Slide, {
+          }), (0, l.jsx)(n.Slide, {
             id: E.CreateOrAddGuildSlideTypes.GUILD_TEMPLATES,
             impressionName: i.ImpressionNames.HUB_CREATE_GUILD_TEMPLATE,
-            impressionProperties: X,
-            children: (0, a.jsx)(_.default, {
-              directoryGuildName: g,
+            impressionProperties: z,
+            children: (0, l.jsx)(_.default, {
+              directoryGuildName: L,
               onChooseTemplate: e => {
-                V(!1), p(E.CreateOrAddGuildSlideTypes.CUSTOMIZE_NEW_GUILD), B(e)
+                k(!1), N(E.CreateOrAddGuildSlideTypes.CUSTOMIZE_NEW_GUILD), j(e)
               },
-              onClose: h,
-              onBack: () => p(E.CreateOrAddGuildSlideTypes.CHOOSE_GUILD)
+              onClose: I,
+              onBack: () => N(E.CreateOrAddGuildSlideTypes.CHOOSE_GUILD)
             })
-          }), (0, a.jsx)(n.Slide, {
+          }), (0, l.jsx)(n.Slide, {
             id: E.CreateOrAddGuildSlideTypes.CUSTOMIZE_NEW_GUILD,
             impressionName: i.ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
-            impressionProperties: X,
-            children: (0, a.jsx)(r.default, {
-              guildTemplate: U,
+            impressionProperties: z,
+            children: (0, l.jsx)(r.default, {
+              guildTemplate: A,
               onHubGuildInfoSet: (e, t) => {
-                H(e), G(t), p(E.CreateOrAddGuildSlideTypes.CUSTOMIZE_EXISTING_GUILD)
+                B(e), H(t), N(E.CreateOrAddGuildSlideTypes.CUSTOMIZE_EXISTING_GUILD)
               },
-              onClose: h,
-              onBack: () => p(E.CreateOrAddGuildSlideTypes.GUILD_TEMPLATES),
-              isSlideReady: A === E.CreateOrAddGuildSlideTypes.CUSTOMIZE_NEW_GUILD
+              onClose: I,
+              onBack: () => N(E.CreateOrAddGuildSlideTypes.GUILD_TEMPLATES),
+              isSlideReady: M === E.CreateOrAddGuildSlideTypes.CUSTOMIZE_NEW_GUILD
             })
-          }), (0, a.jsx)(n.Slide, {
+          }), (0, l.jsx)(n.Slide, {
             id: E.CreateOrAddGuildSlideTypes.CUSTOMIZE_EXISTING_GUILD,
             impressionName: i.ImpressionNames.HUB_EXISTING_GUILD_CUSTOMIZE,
-            impressionProperties: X,
-            children: (0, a.jsx)(f.default, {
+            impressionProperties: z,
+            children: (0, l.jsx)(m.default, {
               directoryChannelId: t,
-              description: y,
-              onDescriptionChange: b,
-              categoryId: F,
-              onCategoryIdChange: k,
-              onSubmit: Y,
-              onBack: () => p(Z ? E.CreateOrAddGuildSlideTypes.CHOOSE_GUILD : E.CreateOrAddGuildSlideTypes.CUSTOMIZE_NEW_GUILD),
-              onClose: h
+              description: R,
+              onDescriptionChange: v,
+              categoryId: y,
+              onCategoryIdChange: b,
+              onSubmit: P,
+              onBack: () => N(F ? E.CreateOrAddGuildSlideTypes.CHOOSE_GUILD : E.CreateOrAddGuildSlideTypes.CUSTOMIZE_NEW_GUILD),
+              onClose: I
             })
-          }), (0, a.jsx)(n.Slide, {
+          }), (0, l.jsx)(n.Slide, {
             id: E.CreateOrAddGuildSlideTypes.CONFIRMATION,
             impressionName: i.ImpressionNames.DIRECTORY_ADD_GUILD_CONFIRMATION,
-            impressionProperties: X,
-            children: (0, a.jsx)(T.default, {
-              directoryGuildName: g,
-              guildToAdd: R,
-              isExistingGuildFlow: Z,
-              onClose: h
+            impressionProperties: z,
+            children: (0, l.jsx)(f.default, {
+              directoryGuildName: L,
+              guildToAdd: O,
+              isExistingGuildFlow: F,
+              onClose: I
             })
           })]
         })

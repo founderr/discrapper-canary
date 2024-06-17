@@ -150,6 +150,7 @@ function P(e) {
       }) : null, (0, a.jsx)(u.Text, {
         className: R.heading,
         variant: "text-md/semibold",
+        color: "always-white",
         children: y.default.Messages.EMBEDDED_ACTIVITIES_VC_TILE_ENTRY_POINT_INVITE
       }), (0, a.jsxs)("div", {
         className: R.buttonContainer,
@@ -176,10 +177,7 @@ function P(e) {
           children: [(0, a.jsx)(_.default, {
             width: 16,
             height: 16
-          }), (0, a.jsx)(u.Text, {
-            variant: "text-sm/medium",
-            children: y.default.Messages.INVITE_FRIENDS
-          })]
+          }), y.default.Messages.INVITE_FRIENDS]
         }), (0, a.jsxs)(u.Button, {
           size: u.Button.Sizes.LARGE,
           className: R.button,
@@ -196,10 +194,7 @@ function P(e) {
           children: [(0, a.jsx)(T.default, {
             width: 16,
             height: 16
-          }), (0, a.jsx)(u.Text, {
-            variant: "text-sm/medium",
-            children: y.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_ENTRY_POINT_TILE_CHOOSE_AN_ACTIVITY
-          })]
+          }), y.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_ENTRY_POINT_TILE_CHOOSE_AN_ACTIVITY]
         })]
       })]
     })
