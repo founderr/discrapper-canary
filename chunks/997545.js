@@ -148,7 +148,7 @@ class L extends E.default {
         })
       })
     })).setSecureFramesStateUpdateCallback) || void 0 === r || r.call(t, e => {
-      this.logger.info("Secure frames state update: ".concat(JSON.stringify(e)))
+      this.logger.info("Secure frames state update: ".concat(JSON.stringify(e))), this.emit(f.BaseConnectionEvent.SecureFramesUpdate, e)
     }), null === (s = t.setDesktopSourceStatusCallback) || void 0 === s || s.call(t, e => {
       if ("videohook_start" === e.type) this.emit(f.BaseConnectionEvent.VideoHookStart);
       else if ("videohook_stop" === e.type) this.emit(f.BaseConnectionEvent.VideoHookStop);

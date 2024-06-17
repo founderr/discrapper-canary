@@ -13,13 +13,19 @@ var r = n("735250"),
 
 function i(e) {
   let {
-    code: t,
-    className: n
-  } = e, l = s.useMemo(() => t.split(" "), [t]);
+    chunks: t,
+    columns: n,
+    className: l
+  } = e, i = s.useMemo(() => ({
+    "--secure-frames-columns": n
+  }), [n]);
   return (0, r.jsx)("div", {
-    className: a()(o.code, n),
-    children: l.map((e, t) => (0, r.jsx)("div", {
-      className: o.codeChunk,
+    style: i,
+    className: a()(o.code, l),
+    children: t.map((e, t) => (0, r.jsx)("div", {
+      className: a()(o.chunk, {
+        [o.divider]: t > n - 1
+      }),
       children: (0, r.jsx)(u.Text, {
         className: o.codeText,
         variant: "code",

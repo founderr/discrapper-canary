@@ -9,7 +9,7 @@ var l = n("735250"),
   s = n("442837"),
   i = n("481060"),
   r = n("436592"),
-  o = n("608695"),
+  o = n("202124"),
   u = n("19780"),
   d = n("362446"),
   c = n("153124"),
@@ -62,7 +62,7 @@ function g(e) {
     isOverlay: n,
     lobbyId: a,
     closePopout: s
-  } = e, i = (0, r.useIsSecureFramesUIEnabled)(t) ? h.default.Messages.E2EE_END_TO_END_ENCRYPTION : h.default.Messages.SECURE_CONNECTION;
+  } = e, i = (0, r.useIsSecureFramesUIEnabled)(t) ? h.default.Messages.E2EE_END_TO_END_ENCRYPTED : h.default.Messages.SECURE_CONNECTION;
   return n ? (0, l.jsx)(C, {
     lobbyId: a,
     closePopout: s,
@@ -81,9 +81,7 @@ function E(e) {
           ...e
         });
       case "rtc_secure_frames":
-        return (0, l.jsx)(o.SecureFramesOverview, {
-          code: "12345 67890 12345 67890 12345 67890 12345 67890 12345 67890 12345 67890"
-        })
+        return (0, l.jsx)(o.default, {})
     }
   }, [e, t]);
   return (0, l.jsxs)("div", {

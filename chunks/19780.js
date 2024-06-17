@@ -88,6 +88,13 @@ function L(e, t) {
         channelId: n
       })
     })
+  }), s.on(_.RTCConnectionEvent.SecureFramesUpdate, e => {
+    d.default.wait(() => {
+      d.default.dispatch({
+        type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE",
+        state: e
+      })
+    })
   }), O = new c.default(f.default.getId(), t), C = null, R = !1, g = !1, s
 }
 
@@ -182,6 +189,9 @@ class P extends(s = u.default.Store) {
   getWasEverRtcConnected() {
     return g
   }
+  getSecureFramesState() {
+    return null == i ? void 0 : i.getSecureFramesState()
+  }
 }
 l = "RTCConnectionStore", (o = "displayName") in(a = P) ? Object.defineProperty(a, o, {
   value: l,
@@ -204,6 +214,7 @@ let U = new P(d.default, __OVERLAY__ ? {} : {
   RTC_CONNECTION_UPDATE_ID: function(e) {
     return e.connection === i
   },
+  RTC_CONNECTION_SECURE_FRAMES_UPDATE: y,
   VOICE_STATE_UPDATES: function(e) {
     let {
       voiceStates: t
