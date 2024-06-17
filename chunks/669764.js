@@ -58,20 +58,22 @@ a = "DetectableGameSupplementalStore", (s = "displayName") in(r = c) ? Object.de
         application_id: t,
         name: n,
         summary: i,
-        themes: r,
-        genres: s,
-        artwork_urls: a,
-        cover_image_url: o,
-        first_release_date: l
+        websites: r,
+        themes: s,
+        genres: a,
+        artwork_urls: o,
+        cover_image_url: l,
+        first_release_date: d
       } = e;
       u.set(t, {
         name: n,
         summary: i,
-        themes: r,
-        genres: s,
-        artwork: a,
-        coverImageUrl: o,
-        firstReleaseDate: l
+        websites: r,
+        themes: s,
+        genres: a,
+        artwork: o,
+        coverImageUrl: l,
+        firstReleaseDate: d
       })
     })
   },

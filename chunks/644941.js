@@ -1,126 +1,128 @@
 "use strict";
 t.r(l), t("47120");
 var a = t("735250"),
-  n = t("470079"),
-  s = t("120356"),
-  o = t.n(s),
-  i = t("528560"),
-  r = t("442837"),
+  s = t("470079"),
+  n = t("120356"),
+  i = t.n(n),
+  r = t("528560"),
+  o = t("442837"),
   c = t("481060"),
   d = t("224706"),
   u = t("812206"),
   m = t("168551"),
-  x = t("26033"),
+  I = t("26033"),
   g = t("669764"),
-  v = t("814225"),
-  h = t("567409"),
+  h = t("814225"),
+  x = t("567409"),
   f = t("383895"),
-  p = t("689938"),
-  j = t("884430");
-let E = function() {
+  v = t("183391"),
+  E = t("689938"),
+  A = t("884430");
+let C = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
       l = arguments.length > 1 ? arguments[1] : void 0;
     if (null == e) return [];
     let t = {};
     return e.forEach(e => {
-      if (!(0, x.isGamingLikeEntry)(e)) return;
+      if (!(0, I.isGamingLikeEntry)(e)) return;
       let a = e.extra.application_id;
       a !== l && (null == t[a] && (t[a] = 0), t[a] += 1)
     }), Object.keys(t).sort((e, l) => t[l] - t[e])
   },
-  I = e => {
+  p = e => {
     var l;
     let {
       applicationId: t,
-      channel: n,
-      onClose: s
-    } = e, [o, i] = (0, r.useStateFromStoresArray)([g.default, u.default], () => [g.default.getGame(t), u.default.getApplication(t)]);
-    if (null == o) return null;
-    let d = o.coverImageUrl;
+      channel: s,
+      onClose: n
+    } = e, [i, r] = (0, o.useStateFromStoresArray)([g.default, u.default], () => [g.default.getGame(t), u.default.getApplication(t)]);
+    if (null == i) return null;
+    let d = i.coverImageUrl;
     return (0, a.jsx)(c.Clickable, {
-      className: j.clickable,
+      className: A.clickable,
       onClick: async () => {
-        (0, c.openModalLazy)(() => Promise.resolve(e => (0, a.jsx)(_, {
+        (0, c.openModalLazy)(() => Promise.resolve(e => (0, a.jsx)(j, {
           applicationId: t,
-          channel: n,
+          channel: s,
           ...e
-        }))), await new Promise(e => setTimeout(e, 10)), s()
+        }))), await new Promise(e => setTimeout(e, 10)), n()
       },
       children: (0, a.jsx)("img", {
         src: d,
-        className: j.similarGames,
-        alt: p.default.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({
-          game: null !== (l = null == i ? void 0 : i.name) && void 0 !== l ? l : null == o ? void 0 : o.name
+        className: A.similarGames,
+        alt: E.default.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({
+          game: null !== (l = null == r ? void 0 : r.name) && void 0 !== l ? l : null == i ? void 0 : i.name
         })
       })
     })
   },
-  _ = e => {
-    var l, t, s;
+  j = e => {
+    var l, t, n;
     let {
-      applicationId: _,
-      channel: C,
-      transitionState: M,
-      onClose: A
+      applicationId: j,
+      channel: T,
+      transitionState: N,
+      onClose: M
     } = e, {
-      entries: N
-    } = (0, h.default)(), y = n.useMemo(() => {
+      entries: O
+    } = (0, x.default)(), _ = s.useMemo(() => {
       var e;
-      return null !== (e = null == N ? void 0 : N.filter(e => (0, x.isGamingLikeEntry)(e) && e.extra.application_id === _)) && void 0 !== e ? e : []
-    }, [N, _]), S = n.useMemo(() => E(N, _), [N, _]);
-    n.useEffect(() => {
-      d.default.getDetectableGamesSupplemental([_, ...S])
-    }, [_, S]);
-    let L = u.default.getApplication(_),
-      R = (0, r.useStateFromStores)([g.default], () => g.default.getGame(_)),
-      G = null !== (l = null == R ? void 0 : R.name) && void 0 !== l ? l : null == L ? void 0 : L.name,
-      O = n.useMemo(() => null == R ? void 0 : R.genres.map(v.getGenreText).join(", "), [R]),
-      b = null == L ? void 0 : L.getIconURL(80, "webp"),
-      T = null !== (t = null == R ? void 0 : R.coverImageUrl) && void 0 !== t ? t : b,
-      w = null !== (s = null == R ? void 0 : R.artwork) && void 0 !== s ? s : [],
+      return null !== (e = null == O ? void 0 : O.filter(e => (0, I.isGamingLikeEntry)(e) && e.extra.application_id === j)) && void 0 !== e ? e : []
+    }, [O, j]), y = s.useMemo(() => C(O, j), [O, j]);
+    s.useEffect(() => {
+      d.default.getDetectableGamesSupplemental([j, ...y])
+    }, [j, y]);
+    let R = u.default.getApplication(j),
+      G = (0, o.useStateFromStores)([g.default], () => g.default.getGame(j)),
+      L = null !== (l = null == G ? void 0 : G.name) && void 0 !== l ? l : null == R ? void 0 : R.name,
+      S = s.useMemo(() => null == G ? void 0 : G.genres.map(h.getGenreText).join(", "), [G]),
+      b = null == R ? void 0 : R.getIconURL(80, "webp"),
+      D = null !== (t = null == G ? void 0 : G.coverImageUrl) && void 0 !== t ? t : b,
+      w = null !== (n = null == G ? void 0 : G.artwork) && void 0 !== n ? n : [],
+      F = null == G ? void 0 : G.websites,
       {
-        clientThemesClassName: F
+        clientThemesClassName: B
       } = (0, m.default)();
     return (0, a.jsxs)(c.ModalRoot, {
-      transitionState: M,
+      transitionState: N,
       size: c.ModalSize.DYNAMIC,
-      className: o()(F, j.gameProfileModal),
+      className: i()(B, A.gameProfileModal),
       children: [(0, a.jsx)("div", {
         style: {
-          backgroundImage: 'url("'.concat(null == R ? void 0 : R.artwork[0], '")')
+          backgroundImage: 'url("'.concat(null == G ? void 0 : G.artwork[0], '")')
         },
-        className: j.hero
+        className: A.hero
       }), (0, a.jsxs)("div", {
-        className: o()(j.content, j.row, j.headerInfo),
+        className: i()(A.content, A.row, A.headerInfo),
         children: [(0, a.jsx)("div", {
-          className: j.logoWrapper,
-          children: null != T && (0, a.jsx)("img", {
-            className: j.logo,
-            src: T,
-            alt: p.default.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({
-              game: G
+          className: A.logoWrapper,
+          children: null != D && (0, a.jsx)("img", {
+            className: A.logo,
+            src: D,
+            alt: E.default.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({
+              game: L
             })
           })
         }), (0, a.jsx)("div", {
           children: (0, a.jsxs)(c.Button, {
-            innerClassName: j.followButton,
+            innerClassName: A.followButton,
             color: c.Button.Colors.PRIMARY,
-            children: [(0, a.jsx)(i.BellIcon, {
+            children: [(0, a.jsx)(r.BellIcon, {
               color: c.tokens.colors.WHITE
-            }), p.default.Messages.FOLLOW]
+            }), E.default.Messages.FOLLOW]
           })
         })]
       }), (0, a.jsxs)("div", {
-        className: o()(j.content, j.column, j.gapSm, j.gameDetails),
+        className: i()(A.content, A.column, A.gapSm, A.gameDetails),
         children: [(0, a.jsx)(c.Heading, {
           variant: "heading-xl/bold",
-          children: G
+          children: L
         }), (0, a.jsxs)("div", {
-          className: o()(j.row, j.gapSm),
+          className: i()(A.row, A.gapSm),
           children: [(0, a.jsx)(c.Text, {
             variant: "text-sm/semibold",
             color: "text-muted",
-            children: O
+            children: S
           }), null != b && (0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsx)(c.Text, {
               variant: "text-sm/semibold",
@@ -128,74 +130,80 @@ let E = function() {
             }), (0, a.jsx)("img", {
               src: b,
               height: 16,
-              alt: p.default.Messages.GAME_PROFILE_GAME_ICON_ALT.format({
-                game: G
+              alt: E.default.Messages.GAME_PROFILE_GAME_ICON_ALT.format({
+                game: L
               })
             })]
           })]
         })]
       }), (0, a.jsx)(c.Scroller, {
         children: (0, a.jsxs)("div", {
-          className: o()(j.content, j.mainContent),
+          className: i()(A.content, A.mainContent),
           children: [(0, a.jsxs)("div", {
-            className: j.column,
-            children: [y.length > 0 && (0, a.jsx)("div", {
-              className: j.section,
-              children: (0, a.jsxs)("div", {
-                className: o()(j.column, j.gapNone),
-                children: [(0, a.jsx)(c.Text, {
-                  variant: "text-xs/semibold",
-                  color: "text-primary",
-                  children: p.default.Messages.GAME_PROFILE_FRIENDS_WHO_PLAY_TAB
-                }), null == y ? void 0 : y.map((e, l) => (0, a.jsx)(f.default, {
+            className: A.column,
+            children: [(0, a.jsx)(c.Heading, {
+              variant: "heading-md/bold",
+              color: "text-primary",
+              children: E.default.Messages.GAME_PROFILE_FRIENDS_WHO_PLAY_TAB
+            }), (0, a.jsxs)("div", {
+              className: A.section,
+              children: [0 === _.length && (0, a.jsx)(c.Text, {
+                variant: "text-xs/semibold",
+                color: "text-primary",
+                className: A.emptyFriendsWhoPlay,
+                children: E.default.Messages.GAME_PROFILE_EMPTY_FRIENDS_WHO_PLAY
+              }), (0, a.jsx)("div", {
+                className: i()(A.column, A.gapNone),
+                children: null == _ ? void 0 : _.map((e, l) => (0, a.jsx)(f.default, {
                   style: {
                     animationDelay: "".concat(.5 + .15 * l, "s")
                   },
                   entry: e,
-                  channel: C,
-                  onClose: A
-                }, e.id))]
-              })
+                  channel: T,
+                  onClose: M
+                }, e.id))
+              })]
             }), w.length > 0 && (0, a.jsxs)(a.Fragment, {
-              children: [(0, a.jsx)(c.Text, {
-                variant: "text-xs/semibold",
-                color: "text-primary",
-                children: p.default.Messages.GAME_PROFILE_SCREENSHOTS
+              children: [(0, a.jsx)(c.Heading, {
+                variant: "heading-md/bold",
+                children: E.default.Messages.GAME_PROFILE_SCREENSHOTS
               }), (0, a.jsx)(c.Scroller, {
                 style: {
                   overflowY: "visible"
                 },
-                className: o()(j.row, j.imageScroller),
+                className: i()(A.row, A.imageScroller),
                 orientation: "horizontal",
                 children: w.map(e => (0, a.jsx)("img", {
                   src: e,
-                  className: j.gameArtwork,
-                  alt: p.default.Messages.GAME_PROFILE_GAME_ARTWORK_ALT.format({
-                    game: G
+                  className: A.gameArtwork,
+                  alt: E.default.Messages.GAME_PROFILE_GAME_ARTWORK_ALT.format({
+                    game: L
                   })
                 }, e))
               })]
             })]
           }), (0, a.jsxs)("div", {
-            className: j.column,
-            children: [(0, a.jsx)(c.Text, {
-              variant: "text-xs/semibold",
-              children: p.default.Messages.ABOUT
-            }), (null == R ? void 0 : R.summary) != null && (0, a.jsx)(c.Text, {
+            className: A.column,
+            children: [(0, a.jsx)(c.Heading, {
+              variant: "heading-md/bold",
+              children: E.default.Messages.ABOUT
+            }), (null == G ? void 0 : G.summary) != null && (0, a.jsx)(c.Text, {
               lineClamp: 4,
               variant: "text-sm/semibold",
-              className: j.summary,
-              children: null == R ? void 0 : R.summary
+              className: A.summary,
+              children: null == G ? void 0 : G.summary
+            }), (0, a.jsx)(v.default, {
+              websites: F
             }), (0, a.jsx)(c.Text, {
               variant: "text-xs/semibold",
-              children: p.default.Messages.GAME_PROFILE_ALSO_PLAYING
+              children: E.default.Messages.GAME_PROFILE_ALSO_PLAYING
             }), (0, a.jsx)("div", {
-              className: j.row,
+              className: A.row,
               style: {},
-              children: S.slice(0, 4).map(e => (0, a.jsx)(I, {
+              children: y.slice(0, 4).map(e => (0, a.jsx)(p, {
                 applicationId: e,
-                channel: C,
-                onClose: A
+                channel: T,
+                onClose: M
               }, e))
             })]
           })]
@@ -203,4 +211,4 @@ let E = function() {
       })]
     })
   };
-l.default = _
+l.default = j
