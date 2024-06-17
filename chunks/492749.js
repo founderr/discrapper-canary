@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return g
   }
 }), s("47120");
-var a, l, i = s("735250"),
+var l, a, i = s("735250"),
   n = s("470079"),
   d = s("120356"),
   r = s.n(d),
@@ -14,9 +14,9 @@ var a, l, i = s("735250"),
   C = s("346656"),
   m = s("808268"),
   f = s("273387"),
-  T = s("16853"),
-  _ = s("689938"),
-  E = s("939865"),
+  _ = s("16853"),
+  E = s("689938"),
+  T = s("939865"),
   x = s("36705"),
   I = s("216019");
 
@@ -26,18 +26,18 @@ function L(e) {
     onClick: s
   } = e;
   return (0, i.jsxs)(u.Clickable, {
-    className: E.clickableGuildRow,
+    className: T.clickableGuildRow,
     onClick: s,
     children: [(0, i.jsx)(C.default, {
       guild: t,
       size: C.default.Sizes.MEDIUM,
       active: !0
     }), (0, i.jsx)(u.Text, {
-      className: E.guildName,
+      className: T.guildName,
       variant: "text-md/semibold",
       children: t.name
     }), (0, i.jsx)("img", {
-      className: E.__invalid_arrow,
+      className: T.__invalid_arrow,
       alt: "",
       src: I
     })]
@@ -48,23 +48,23 @@ function h(e) {
   let {
     directoryChannelId: t,
     guild: s
-  } = e, a = (0, o.useStateFromStores)([f.default], () => f.default.getDirectoryEntry(t, s.id));
+  } = e, l = (0, o.useStateFromStores)([f.default], () => f.default.getDirectoryEntry(t, s.id));
   return (0, i.jsxs)("div", {
-    className: E.guildRow,
+    className: T.guildRow,
     children: [(0, i.jsx)(C.default, {
       guild: s,
       size: C.default.Sizes.MEDIUM,
       active: !0
     }), (0, i.jsx)(u.Text, {
-      className: E.guildName,
+      className: T.guildName,
       variant: "text-md/normal",
       children: s.name
-    }), (0, i.jsx)(T.default, {
-      entry: a,
+    }), (0, i.jsx)(_.default, {
+      entry: l,
       forceLightTheme: !0,
       children: e => (0, i.jsx)(m.default, {
         ...e,
-        className: E.overflowIcon
+        className: T.overflowIcon
       })
     })]
   })
@@ -73,44 +73,44 @@ function h(e) {
 function g(e) {
   let t, {
       directoryChannelId: s,
-      onClose: a,
-      onGuildChosen: l,
+      onClose: l,
+      onGuildChosen: a,
       handleChooseCreate: d,
       directoryGuildName: o,
       availableGuilds: C,
       addedGuilds: m,
       loading: f
     } = e,
-    [T, I] = n.useState(0);
+    [_, I] = n.useState(0);
   return t = f ? (0, i.jsx)("div", {
-    className: E.emptyContainer,
+    className: T.emptyContainer,
     children: (0, i.jsx)(u.Spinner, {})
-  }) : 0 === T ? 0 === C.length ? (0, i.jsxs)("div", {
-    className: E.emptyContainer,
+  }) : 0 === _ ? 0 === C.length ? (0, i.jsxs)("div", {
+    className: T.emptyContainer,
     children: [(0, i.jsx)("img", {
       src: x,
       alt: "",
-      className: E.emptyImage
+      className: T.emptyImage
     }), (0, i.jsx)(u.Text, {
-      className: E.emptyText,
+      className: T.emptyText,
       color: "header-secondary",
       variant: "text-md/normal",
-      children: _.default.Messages.HUB_CHOOSE_GUILD_EMPTY
+      children: E.default.Messages.HUB_CHOOSE_GUILD_EMPTY
     })]
   }) : C.map(e => (0, i.jsx)(L, {
     guild: e,
-    onClick: () => l(e)
+    onClick: () => a(e)
   }, e.id)) : 0 === m.length ? (0, i.jsxs)("div", {
-    className: E.emptyContainer,
+    className: T.emptyContainer,
     children: [(0, i.jsx)("img", {
       src: x,
       alt: "",
-      className: E.emptyImage
+      className: T.emptyImage
     }), (0, i.jsx)(u.Text, {
-      className: E.emptyText,
+      className: T.emptyText,
       color: "header-secondary",
       variant: "text-md/normal",
-      children: _.default.Messages.HUB_CHOOSE_GUILD_ADDED_EMPTY
+      children: E.default.Messages.HUB_CHOOSE_GUILD_ADDED_EMPTY
     })]
   }) : m.map(e => (0, i.jsx)(h, {
     directoryChannelId: s,
@@ -118,58 +118,58 @@ function g(e) {
   }, e.id)), (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsxs)(u.ModalHeader, {
       direction: c.default.Direction.VERTICAL,
-      className: E.header,
+      className: T.header,
       separator: !1,
-      children: [null != a && (0, i.jsx)(u.ModalCloseButton, {
-        className: E.closeButton,
-        onClick: a
+      children: [null != l && (0, i.jsx)(u.ModalCloseButton, {
+        className: T.closeButton,
+        onClick: l
       }), (0, i.jsx)(u.Heading, {
-        className: E.title,
+        className: T.title,
         variant: "heading-xl/semibold",
-        children: _.default.Messages.HUB_CHOOSE_GUILD_TITLE.format({
+        children: E.default.Messages.HUB_CHOOSE_GUILD_TITLE.format({
           guildName: o
         })
       }), (0, i.jsx)(u.Text, {
-        className: E.subtitle,
+        className: T.subtitle,
         color: "header-secondary",
         variant: "text-md/normal",
-        children: _.default.Messages.HUB_CHOOSE_GUILD_SUBTITLE
+        children: E.default.Messages.HUB_CHOOSE_GUILD_SUBTITLE
       }), (0, i.jsxs)(u.TabBar, {
-        className: E.tabBar,
-        selectedItem: T,
+        className: T.tabBar,
+        selectedItem: _,
         onItemSelect: I,
         type: "top",
         look: "brand",
         children: [(0, i.jsx)(u.TabBar.Item, {
-          className: r()(E.tabBarItem, {
-            [E.selectedTab]: 0 === T
+          className: r()(T.tabBarItem, {
+            [T.selectedTab]: 0 === _
           }),
           id: 0,
-          children: _.default.Messages.HUB_CHOOSE_GUILD_CHOOSE_TAB
+          children: E.default.Messages.HUB_CHOOSE_GUILD_CHOOSE_TAB
         }), (0, i.jsx)(u.TabBar.Item, {
-          className: r()(E.tabBarItem, {
-            [E.selectedTab]: 1 === T
+          className: r()(T.tabBarItem, {
+            [T.selectedTab]: 1 === _
           }),
           id: 1,
-          children: _.default.Messages.HUB_CHOOSE_GUILD_ADDED_TAB
+          children: E.default.Messages.HUB_CHOOSE_GUILD_ADDED_TAB
         })]
       })]
     }), (0, i.jsx)(u.ModalContent, {
-      className: E.guildList,
+      className: T.guildList,
       paddingFix: !1,
       children: t
     }), (0, i.jsxs)(u.ModalFooter, {
-      className: E.footer,
+      className: T.footer,
       children: [(0, i.jsx)(u.Heading, {
         variant: "heading-lg/semibold",
-        className: E.footerTitle,
-        children: _.default.Messages.HUB_CREATE_GUILD_LABEL
+        className: T.footerTitle,
+        children: E.default.Messages.HUB_CREATE_GUILD_LABEL
       }), (0, i.jsx)(u.Button, {
-        className: E.footerButton,
+        className: T.footerButton,
         color: u.Button.Colors.PRIMARY,
         onClick: d,
-        children: _.default.Messages.HUB_CREATE_GUILD_CTA
+        children: E.default.Messages.HUB_CREATE_GUILD_CTA
       })]
     })]
   })
-}(l = a || (a = {}))[l.AVAILABLE = 0] = "AVAILABLE", l[l.ADDED = 1] = "ADDED"
+}(a = l || (l = {}))[a.AVAILABLE = 0] = "AVAILABLE", a[a.ADDED = 1] = "ADDED"

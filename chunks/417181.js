@@ -55,14 +55,14 @@ var C = Function.prototype,
   M = Object.prototype,
   A = k["__core-js_shared__"];
 var _ = (a = /[^.]+$/.exec(A && A.keys && A.keys.IE_PROTO || "")) ? "Symbol(src)_1." + a : "",
-  R = C.toString,
-  S = M.hasOwnProperty,
+  S = C.toString,
+  R = M.hasOwnProperty,
   D = M.toString,
-  P = RegExp("^" + R.call(S).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
+  P = RegExp("^" + S.call(R).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
   B = Object.create,
   F = Math.max,
-  N = Math.min;
-var T = (n = $(Object, "defineProperty"), (s = $.name) && s.length > 2 ? n : void 0);
+  T = Math.min;
+var N = (n = $(Object, "defineProperty"), (s = $.name) && s.length > 2 ? n : void 0);
 
 function I(e) {
   return function() {
@@ -122,7 +122,7 @@ function L(e, t, r, a, n, s, o, i, u, l) {
     var C = f ? r : this,
       M = b ? C[e] : e;
     return y = m.length, i ? m = function(e, t) {
-      for (var r = e.length, a = N(t.length, r), n = function(e, t) {
+      for (var r = e.length, a = T(t.length, r), n = function(e, t) {
           var r = -1,
             a = e.length;
           for (t || (t = Array(a)); ++r < a;) t[r] = e[r];
@@ -163,7 +163,7 @@ function $(e, t) {
   }(n) ? P : g).test(function(e) {
     if (null != e) {
       try {
-        return R.call(e)
+        return S.call(e)
       } catch (e) {}
       try {
         return e + ""
@@ -172,9 +172,9 @@ function $(e, t) {
     return ""
   }(n)) ? s : void 0
 }
-var U = T ? function(e, t, r) {
+var U = N ? function(e, t, r) {
   var a, n, s, o, i, u = t + "";
-  return T(e, "toString", {
+  return N(e, "toString", {
     configurable: !0,
     enumerable: !1,
     value: function(e) {
@@ -218,26 +218,26 @@ function G(e, t, r) {
       ;
       if (8 == t || 16 == t) {
         ;
-        d = e, h = t, p = i, g = I(d), S = function e() {
+        d = e, h = t, p = i, g = I(d), R = function e() {
           for (var t = arguments.length, r = Array(t), a = t, n = z(e); a--;) r[a] = arguments[a];
           var s = t < 3 && r[0] !== n && r[t - 1] !== n ? [] : j(r, n);
           return (t -= s.length) < p ? q(d, h, L, e.placeholder, void 0, r, s, void 0, void 0, p - t) : E(this && this !== k && this instanceof e ? g : d, this, r)
         }
-      } else if (32 != t && 33 != t || n.length) S = L.apply(void 0, b);
+      } else if (32 != t && 33 != t || n.length) R = L.apply(void 0, b);
       else {
         ;
-        y = e, v = t, m = r, O = a, w = 1 & v, x = I(y), S = function e() {
+        y = e, v = t, m = r, O = a, w = 1 & v, x = I(y), R = function e() {
           for (var t = -1, r = arguments.length, a = -1, n = O.length, s = Array(n + r); ++a < n;) s[a] = O[a];
           for (; r--;) s[a++] = arguments[++t];
           return E(this && this !== k && this instanceof e ? x : y, w ? m : this, s)
         }
       }
     } else {
-      var d, h, p, g, y, v, m, O, w, x, C, M, A, _, R, S = (C = e, M = t, A = r, _ = 1 & M, R = I(C), function e() {
-        return (this && this !== k && this instanceof e ? R : C).apply(_ ? A : this, arguments)
+      var d, h, p, g, y, v, m, O, w, x, C, M, A, _, S, R = (C = e, M = t, A = r, _ = 1 & M, S = I(C), function e() {
+        return (this && this !== k && this instanceof e ? S : C).apply(_ ? A : this, arguments)
       })
     }
-    return U(S, e, t)
+    return U(R, e, t)
   }(e, 8, void 0, void 0, void 0, void 0, void 0, t = r ? void 0 : t);
   return a.placeholder = G.placeholder, a
 }

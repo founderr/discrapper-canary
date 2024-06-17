@@ -592,14 +592,14 @@ r = this, n = function() {
         }))
       }
     },
-    G = function(t) {
+    M = function(t) {
       return function(r, n, i) {
         return A(t)(r, n, e(e({}, i), {}, {
           scope: [t1.Synonyms]
         }))
       }
     },
-    M = function(t) {
+    G = function(t) {
       return function(e, r) {
         return "GET" === e.method ? t.transporter.read(e, r) : t.transporter.write(e, r)
       }
@@ -1289,7 +1289,7 @@ r = this, n = function() {
     },
     tz = function(t) {
       return function(e, r) {
-        return u(tG(t)([e], r).then(function(t) {
+        return u(tM(t)([e], r).then(function(t) {
           return {
             objectID: t.objectIDs[0],
             taskID: t.taskIDs[0]
@@ -1299,7 +1299,7 @@ r = this, n = function() {
         })
       }
     },
-    tG = function(t) {
+    tM = function(t) {
       return function(e, n) {
         var i = n || {},
           a = i.createIfNotExists,
@@ -1308,7 +1308,7 @@ r = this, n = function() {
         return ty(t)(e, o, s)
       }
     },
-    tM = function(t) {
+    tG = function(t) {
       return function(a, s) {
         var o = s || {},
           c = o.safe,
@@ -1620,7 +1620,7 @@ r = this, n = function() {
         }, n)
       }
     },
-    t6 = function(t) {
+    t9 = function(t) {
       return function(r, n) {
         return t2(t)(r.map(function(t) {
           return e(e({}, t), {}, {
@@ -1629,7 +1629,7 @@ r = this, n = function() {
         }), n)
       }
     },
-    t9 = function(t) {
+    t6 = function(t) {
       return function(r, n) {
         var i = r.map(function(t) {
           return e(e({}, t), {}, {
@@ -1872,7 +1872,7 @@ r = this, n = function() {
         multipleQueries: tn,
         copyIndex: A,
         copySettings: z,
-        copySynonyms: G,
+        copySynonyms: M,
         copyRules: C,
         moveIndex: tt,
         listIndices: Y,
@@ -1902,7 +1902,7 @@ r = this, n = function() {
         searchDictionaryEntries: tc,
         setDictionarySettings: th,
         waitAppTask: td,
-        customRequest: M,
+        customRequest: G,
         initIndex: function(t) {
           return function(e) {
             return K(t)(e, {
@@ -1920,7 +1920,7 @@ r = this, n = function() {
                 setSettings: tY,
                 getSettings: tA,
                 partialUpdateObject: tz,
-                partialUpdateObjects: tG,
+                partialUpdateObjects: tM,
                 deleteObject: tS,
                 deleteObjects: tT,
                 deleteBy: tP,
@@ -1936,7 +1936,7 @@ r = this, n = function() {
                 browseSynonyms: tv,
                 deleteSynonym: tD,
                 clearSynonyms: t_,
-                replaceAllObjects: tM,
+                replaceAllObjects: tG,
                 replaceAllSynonyms: tL,
                 searchRules: tQ,
                 getRule: tN,
@@ -1984,8 +1984,8 @@ r = this, n = function() {
         },
         getRecommendations: t2,
         getFrequentlyBoughtTogether: t4,
-        getLookingSimilar: t6,
-        getRecommendedForYou: t9,
+        getLookingSimilar: t9,
+        getRecommendedForYou: t6,
         getRelatedProducts: t3,
         getTrendingFacets: t8,
         getTrendingItems: t7

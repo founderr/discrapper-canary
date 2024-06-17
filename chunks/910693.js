@@ -10,13 +10,13 @@ n.r(e), n.d(e, {
     return p
   },
   useTrackMemberFilterRolesUsed: function() {
-    return c
+    return _
   },
   useTrackMemberFilterSafetyFlagsUsed: function() {
     return S
   },
   useTrackMemberSearchUsed: function() {
-    return _
+    return c
   },
   useTrackModerationAction: function() {
     return N
@@ -27,9 +27,9 @@ var i, a, r, u, o = n("470079"),
   s = n("367907"),
   T = n("314897"),
   E = n("626135"),
-  I = n("981631");
+  l = n("981631");
 
-function l(t, e, n) {
+function I(t, e, n) {
   var i;
   let a = {
     ...e,
@@ -38,19 +38,19 @@ function l(t, e, n) {
   E.default.track(t, a)
 }
 
-function _(t) {
+function c(t) {
   return o.useCallback(e => {
     ! function(t) {
       let e = {
         guild_id: t,
         location: d.default.MEMBER_SAFETY_PAGE
       };
-      l(I.AnalyticEvents.MOD_DASH_SEARCH_MEMBERS, e)
+      I(l.AnalyticEvents.MOD_DASH_SEARCH_MEMBERS, e)
     }(t)
   }, [t])
 }
 
-function c(t) {
+function _(t) {
   return o.useCallback(e => {
     ! function(t, e) {
       let n = {
@@ -58,7 +58,7 @@ function c(t) {
         guild_id: t,
         location: d.default.MEMBER_SAFETY_PAGE
       };
-      l(I.AnalyticEvents.MOD_DASH_FILTER_ROLES, n)
+      I(l.AnalyticEvents.MOD_DASH_FILTER_ROLES, n)
     }(t, e)
   }, [t])
 }(i = r || (r = {})).UNUSUAL_DM_ACTIVITY = "unusual_dm_activity", i.COMMUNICATION_DISABLED = "communication_disabled", i.UNUSUAL_ACCOUNT_ACTIVITY = "unusual_account_activity", i.USERNAME_QUARANTINED = "username_quarantined";
@@ -71,7 +71,7 @@ function S(t) {
         guild_id: t,
         location: d.default.MEMBER_SAFETY_PAGE
       };
-      l(I.AnalyticEvents.MOD_DASH_FILTER_SAFETY_FLAGS, n)
+      I(l.AnalyticEvents.MOD_DASH_FILTER_SAFETY_FLAGS, n)
     }(t, e)
   }, [t])
 }
@@ -93,12 +93,12 @@ function N(t, e) {
       target_user_id: null != i ? i : void 0,
       targets: null != a ? a : void 0
     };
-    l(I.AnalyticEvents.MODERATION_ACTION, u)
+    I(l.AnalyticEvents.MODERATION_ACTION, u)
   }, [t, n, i, a, r])
 }
 
 function p(t, e) {
-  l(I.AnalyticEvents.MOD_DASH_MEMBERS_TABLE_VIEWED, {
+  I(l.AnalyticEvents.MOD_DASH_MEMBERS_TABLE_VIEWED, {
     guild_id: t,
     location: e
   })

@@ -13,13 +13,13 @@ n.r(e), n.d(e, {
     return T
   },
   initIntegrationPermissions: function() {
-    return I
-  },
-  resetPermissions: function() {
     return l
   },
+  resetPermissions: function() {
+    return I
+  },
   updateApplicationCommandPermissions: function() {
-    return _
+    return c
   }
 });
 var i = n("544891"),
@@ -84,20 +84,20 @@ async function E(t, e, n) {
   })
 }
 
-function I(t) {
+function l(t) {
   a.default.dispatch({
     applicationId: t,
     type: "INTEGRATION_PERMISSION_SETTINGS_INIT"
   })
 }
 
-function l(t) {
+function I(t) {
   a.default.dispatch({
     commandId: t,
     type: "INTEGRATION_PERMISSION_SETTINGS_RESET"
   })
 }
-async function _(t) {
+async function c(t) {
   let {
     applicationId: e,
     commandId: n,

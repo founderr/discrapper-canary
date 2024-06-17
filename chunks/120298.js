@@ -4,8 +4,8 @@ s.r(t), s.d(t, {
     return r
   }
 });
-var a = s("43236"),
-  l = s("103714"),
+var l = s("43236"),
+  a = s("103714"),
   i = s("940328"),
   n = s("888395"),
   d = s("389028");
@@ -15,6 +15,6 @@ let r = {
   HUB_STUDY: n,
   HUB_CLASS: s("425506"),
   HUB_SOCIAL: d,
-  HUB_MAJOR: l,
-  HUB_DORM: a
+  HUB_MAJOR: a,
+  HUB_DORM: l
 }

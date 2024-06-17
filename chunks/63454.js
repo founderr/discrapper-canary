@@ -7,9 +7,9 @@ n.r(t), n.d(t, {
     return s
   },
   E2EE_VERIFIED_DEVICES_HELPDESK_ARTICLE: function() {
-    return l
+    return a
   }
 });
 let r = "",
   s = "",
-  l = ""
+  a = ""

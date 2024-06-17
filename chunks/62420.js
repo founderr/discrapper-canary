@@ -8,19 +8,19 @@ var a = n("735250");
 n("470079");
 var u = n("481060"),
   l = n("117984"),
-  s = n("593214"),
-  i = n("362658"),
+  i = n("593214"),
+  s = n("362658"),
   r = n("689938");
 
 function d(e) {
-  let t = (0, s.useFavoritesGuildSelected)(),
-    n = (0, s.useFavorite)(e.id),
-    d = (0, s.useFavoritesCategories)(),
+  let t = (0, i.useFavoritesGuildSelected)(),
+    n = (0, i.useFavorite)(e.id),
+    d = (0, i.useFavoritesCategories)(),
     {
       isFavoritesPerk: o
-    } = (0, i.useFavoritesServerExperiment)("useChannelMoveToCategory");
+    } = (0, s.useFavoritesServerExperiment)("useChannelMoveToCategory");
   if (__OVERLAY__ || !t || null == n || !o) return null;
-  let [f, c] = function(e) {
+  let [c, f] = function(e) {
     let t = [],
       n = null;
     for (let a of e) null == a.id ? n = a : t.push(a);
@@ -30,17 +30,17 @@ function d(e) {
   function S(e) {
     null != n && (0, l.updateFavoriteChannelParent)(n.id, e)
   }
-  return null == f && 0 === c.length ? null : (0, a.jsxs)(u.MenuItem, {
+  return null == c && 0 === f.length ? null : (0, a.jsxs)(u.MenuItem, {
     id: "move-to-category",
     label: r.default.Messages.MOVE_TO,
-    children: [null != f && (0, a.jsx)(u.MenuGroup, {
+    children: [null != c && (0, a.jsx)(u.MenuGroup, {
       children: (0, a.jsx)(u.MenuItem, {
         id: "favorite-uncategorized",
-        label: f.name,
-        action: () => S(f.id)
+        label: c.name,
+        action: () => S(c.id)
       })
-    }), c.length > 0 && (0, a.jsx)(u.MenuGroup, {
-      children: c.map(e => {
+    }), f.length > 0 && (0, a.jsx)(u.MenuGroup, {
+      children: f.map(e => {
         let {
           id: t,
           name: n

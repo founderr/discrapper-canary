@@ -1,7 +1,7 @@
 "use strict";
 s.r(t);
-var a = s("990547"),
-  l = s("881052"),
+var l = s("990547"),
+  a = s("881052"),
   i = s("573261"),
   n = s("981631");
 async function d(e, t, s, d, r) {
@@ -18,7 +18,7 @@ async function d(e, t, s, d, r) {
         staff_only: !!r || void 0
       },
       trackedActionData: {
-        event: a.NetworkActionNames.GUILD_CREATE,
+        event: l.NetworkActionNames.GUILD_CREATE,
         properties: {
           template_name: s.id,
           is_community_intent: d
@@ -26,7 +26,7 @@ async function d(e, t, s, d, r) {
       }
     })).body
   } catch (e) {
-    throw new l.APIError(e)
+    throw new a.APIError(e)
   }
 }
 t.default = {

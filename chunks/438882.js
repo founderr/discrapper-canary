@@ -11,9 +11,9 @@ function r(e, t, n) {
   if (n > 8) throw Error("groupSize must be less than or equal to ".concat(8));
   let r = BigInt(10 ** n),
     s = "";
-  for (let l = 0; l < t; l += n) {
+  for (let a = 0; a < t; a += n) {
     let t = BigInt(0);
-    for (let r = n; r > 0; --r) t = t << 8n | BigInt(e[l + (n - r)]);
+    for (let r = n; r > 0; --r) t = t << 8n | BigInt(e[a + (n - r)]);
     t %= r, s += t.toString().padStart(n, "0")
   }
   return s

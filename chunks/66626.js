@@ -4,8 +4,8 @@ s.r(t), s.d(t, {
     return c
   }
 }), s("47120");
-var a = s("735250"),
-  l = s("470079"),
+var l = s("735250"),
+  a = s("470079"),
   i = s("481060"),
   n = s("479531"),
   d = s("285952"),
@@ -21,9 +21,9 @@ function c(e) {
     categoryId: C,
     onCategoryIdChange: m,
     onSubmit: f,
-    onClose: T,
-    onBack: _
-  } = e, [E, x] = l.useState(!1), [I, L] = l.useState(null), h = async () => {
+    onClose: _,
+    onBack: E
+  } = e, [T, x] = a.useState(!1), [I, L] = a.useState(null), h = async () => {
     x(!0);
     try {
       await f()
@@ -32,40 +32,40 @@ function c(e) {
     }
     x(!1)
   };
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsxs)(i.ModalHeader, {
+  return (0, l.jsxs)(l.Fragment, {
+    children: [(0, l.jsxs)(i.ModalHeader, {
       direction: d.default.Direction.VERTICAL,
       className: u.header,
       separator: !1,
-      children: [(0, a.jsx)(i.Heading, {
+      children: [(0, l.jsx)(i.Heading, {
         className: u.title,
         variant: "heading-xl/semibold",
         children: o.default.Messages.HUB_CUSTOMIZE_GUILD_TITLE
-      }), (0, a.jsx)(i.Text, {
+      }), (0, l.jsx)(i.Text, {
         className: u.subtitle,
         color: "header-secondary",
         variant: "text-md/normal",
         children: o.default.Messages.HUB_CUSTOMIZE_GUILD_SUBTITLE
-      }), null != T && (0, a.jsx)(i.ModalCloseButton, {
+      }), null != _ && (0, l.jsx)(i.ModalCloseButton, {
         className: u.closeButton,
-        onClick: T
+        onClick: _
       })]
-    }), (0, a.jsxs)(i.ModalContent, {
+    }), (0, l.jsxs)(i.ModalContent, {
       className: u.createGuild,
       paddingFix: !1,
-      children: [(0, a.jsx)(i.FormItem, {
+      children: [(0, l.jsx)(i.FormItem, {
         title: o.default.Messages.HUB_ADD_GUILD_DESCRIPTION_TITLE,
-        children: (0, a.jsx)(i.TextArea, {
+        children: (0, l.jsx)(i.TextArea, {
           value: s,
           maxLength: 200,
           placeholder: o.default.Messages.HUB_ADD_GUILD_DESCRIPTION_PLACEHOLDER,
           onChange: c,
           error: null == I ? void 0 : I.getAnyErrorMessage()
         })
-      }), (0, a.jsx)(i.FormItem, {
+      }), (0, l.jsx)(i.FormItem, {
         className: u.formItemSpaced,
         title: o.default.Messages.HUB_ADD_GUILD_CATEGORY_TITLE,
-        children: (0, a.jsx)(i.SingleSelect, {
+        children: (0, l.jsx)(i.SingleSelect, {
           placeholder: o.default.Messages.SELECT,
           options: (0, r.getHubCategories)(t),
           clearable: !1,
@@ -75,18 +75,18 @@ function c(e) {
           popoutClassName: "theme-light"
         })
       })]
-    }), (0, a.jsxs)(i.ModalFooter, {
+    }), (0, l.jsxs)(i.ModalFooter, {
       justify: d.default.Justify.BETWEEN,
-      children: [(0, a.jsx)(i.Button, {
+      children: [(0, l.jsx)(i.Button, {
         color: i.Button.Colors.BRAND,
         onClick: h,
-        submitting: E,
+        submitting: T,
         disabled: "" === s || C === r.DirectoryEntryCategories.UNCATEGORIZED,
         children: o.default.Messages.HUB_ADD_SERVER_CTA
-      }), (0, a.jsx)(i.Button, {
+      }), (0, l.jsx)(i.Button, {
         look: i.Button.Looks.BLANK,
         size: i.Button.Sizes.MIN,
-        onClick: _,
+        onClick: E,
         children: o.default.Messages.BACK
       })]
     })]

@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
     return x
   }
 }), s("47120");
-var a = s("735250"),
-  l = s("470079"),
+var l = s("735250"),
+  a = s("470079"),
   i = s("120356"),
   n = s.n(i),
   d = s("481060"),
@@ -19,9 +19,9 @@ var a = s("735250"),
   C = s("153124"),
   m = s("892880"),
   f = s("458879"),
-  T = s("981631"),
-  _ = s("689938"),
-  E = s("445063");
+  _ = s("981631"),
+  E = s("689938"),
+  T = s("445063");
 
 function x(e) {
   var t;
@@ -33,19 +33,19 @@ function x(e) {
     onGuildCreated: L,
     isSlideReady: h,
     hasFooter: g = !0,
-    isCommunity: N = !1
-  } = e, [S, M] = l.useState(m.default.getGuildNameSuggestion()), [p, A] = l.useState(null), [j, U] = l.useState(!1), [B, D] = l.useState(null), H = !!(null === (t = u.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()), [O, G] = l.useState(H), R = (0, C.useUID)(), v = l.useRef(null);
-  l.useEffect(() => {
+    isCommunity: S = !1
+  } = e, [N, M] = a.useState(m.default.getGuildNameSuggestion()), [p, A] = a.useState(null), [j, U] = a.useState(!1), [B, D] = a.useState(null), H = !!(null === (t = u.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()), [O, G] = a.useState(H), R = (0, C.useUID)(), v = a.useRef(null);
+  a.useEffect(() => {
     var e;
     h && (null === (e = v.current) || void 0 === e || e.focus())
   }, [h]);
-  let y = l.useCallback(async e => {
+  let y = a.useCallback(async e => {
       if (e.preventDefault(), null != s) {
         U(!0), D(null);
         try {
-          if (null != I) I(S, p);
+          if (null != I) I(N, p);
           else {
-            let e = await f.default.createGuildFromTemplate(S, p, s, N, O);
+            let e = await f.default.createGuildFromTemplate(N, p, s, S, O);
             r.default.transitionToGuildSync(e.id), null == L || L(e.id)
           }
         } catch (e) {
@@ -53,90 +53,90 @@ function x(e) {
         }
         U(!1)
       }
-    }, [s, I, S, p, N, O, L]),
-    b = (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(d.Button, {
+    }, [s, I, N, p, S, O, L]),
+    b = (0, l.jsxs)(l.Fragment, {
+      children: [(0, l.jsx)(d.Button, {
         color: d.Button.Colors.BRAND,
         onClick: y,
-        disabled: 0 === S.length,
+        disabled: 0 === N.length,
         submitting: j,
-        children: null != I ? _.default.Messages.NEXT : _.default.Messages.CREATE
-      }), (0, a.jsx)(d.Button, {
-        className: E.backButton,
+        children: null != I ? E.default.Messages.NEXT : E.default.Messages.CREATE
+      }), (0, l.jsx)(d.Button, {
+        className: T.backButton,
         look: d.Button.Looks.BLANK,
         size: d.Button.Sizes.MIN,
         onClick: x,
-        children: _.default.Messages.BACK
+        children: E.default.Messages.BACK
       })]
     });
   return {
-    content: (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsxs)(d.ModalHeader, {
+    content: (0, l.jsxs)(l.Fragment, {
+      children: [(0, l.jsxs)(d.ModalHeader, {
         direction: c.default.Direction.VERTICAL,
-        className: E.header,
+        className: T.header,
         separator: !1,
-        children: [(0, a.jsx)(d.Heading, {
-          className: n()(E.title),
+        children: [(0, l.jsx)(d.Heading, {
+          className: n()(T.title),
           variant: "heading-xl/semibold",
-          children: _.default.Messages.NUF_CREATE_SERVER_CUSTOMIZE_HEADER
-        }), (0, a.jsx)(d.Text, {
-          className: E.subtitle,
+          children: E.default.Messages.NUF_CREATE_SERVER_CUSTOMIZE_HEADER
+        }), (0, l.jsx)(d.Text, {
+          className: T.subtitle,
           color: "header-secondary",
           variant: "text-md/normal",
-          children: _.default.Messages.NUF_CREATE_SERVER_CUSTOMIZE_SUBHEADER
-        }), null != i && (0, a.jsx)(d.ModalCloseButton, {
-          className: E.closeButton,
+          children: E.default.Messages.NUF_CREATE_SERVER_CUSTOMIZE_SUBHEADER
+        }), null != i && (0, l.jsx)(d.ModalCloseButton, {
+          className: T.closeButton,
           onClick: i
         })]
-      }), (0, a.jsxs)(d.ModalContent, {
-        className: E.createGuild,
-        children: [(0, a.jsx)("div", {
-          className: E.uploadIcon,
-          children: (0, a.jsx)(o.default, {
+      }), (0, l.jsxs)(d.ModalContent, {
+        className: T.createGuild,
+        children: [(0, l.jsx)("div", {
+          className: T.uploadIcon,
+          children: (0, l.jsx)(o.default, {
             icon: p,
             onChange: A
           })
-        }), (0, a.jsxs)("form", {
+        }), (0, l.jsxs)("form", {
           onSubmit: y,
-          children: [(0, a.jsxs)(d.FormItem, {
-            className: E.nameInput,
+          children: [(0, l.jsxs)(d.FormItem, {
+            className: T.nameInput,
             error: null == B ? void 0 : B.getFirstFieldErrorMessage("name"),
-            children: [(0, a.jsx)(d.FormTitle, {
+            children: [(0, l.jsx)(d.FormTitle, {
               tag: "label",
               htmlFor: R,
-              children: _.default.Messages.FORM_LABEL_SERVER_NAME
-            }), (0, a.jsx)(d.TextInput, {
+              children: E.default.Messages.FORM_LABEL_SERVER_NAME
+            }), (0, l.jsx)(d.TextInput, {
               type: "text",
-              value: S,
+              value: N,
               maxLength: 100,
               onChange: M,
               inputRef: v,
               id: R
             })]
-          }), H && (0, a.jsx)(d.FormSwitch, {
+          }), H && (0, l.jsx)(d.FormSwitch, {
             hideBorder: !0,
             value: O,
             onChange: e => G(e),
-            note: _.default.Messages.GUILD_CREATE_STAFF_ONLY_HINT,
-            className: E.formItemSpaced,
-            children: (0, a.jsx)(d.FormTitle, {
+            note: E.default.Messages.GUILD_CREATE_STAFF_ONLY_HINT,
+            className: T.formItemSpaced,
+            children: (0, l.jsx)(d.FormTitle, {
               tag: "label",
               children: "Staff Only"
             })
-          }), (0, a.jsx)(d.Text, {
+          }), (0, l.jsx)(d.Text, {
             variant: "text-xs/normal",
             color: "text-muted",
-            className: E.guidelines,
-            children: _.default.Messages.CREATE_SERVER_GUIDELINES.format({
-              guidelinesURL: T.MarketingURLs.GUIDELINES
+            className: T.guidelines,
+            children: E.default.Messages.CREATE_SERVER_GUIDELINES.format({
+              guidelinesURL: _.MarketingURLs.GUIDELINES
             })
           })]
-        }), null == B || B.hasFieldErrors() ? null : (0, a.jsx)(d.Text, {
+        }), null == B || B.hasFieldErrors() ? null : (0, l.jsx)(d.Text, {
           variant: "text-xs/normal",
           color: "text-danger",
           children: B.message
         })]
-      }), g && (0, a.jsx)(d.ModalFooter, {
+      }), g && (0, l.jsx)(d.ModalFooter, {
         justify: c.default.Justify.BETWEEN,
         children: b
       })]

@@ -16,7 +16,7 @@ var l = a("442837"),
   f = a("689938"),
   c = a("377337");
 
-function E(e) {
+function m(e) {
   let {
     color: t,
     className: a
@@ -68,7 +68,7 @@ function S(e, t) {
         cancelText: f.default.Messages.CANCEL,
         onConfirm: () => n.default.setDMOwner(t.id, e.id),
         ...a,
-        children: [(0, u.jsx)(E, {
+        children: [(0, u.jsx)(m, {
           color: s.default.unsafe_rawColors.PRIMARY_300.css
         }), (0, u.jsxs)("div", {
           className: c.fromToWrapper,
