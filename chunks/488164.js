@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  SearchableQuickSelect: function() {
-    return d
+n.d(t, {
+  E: function() {
+    return _
   }
-}), n("47120"), n("724458"), n("653041");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("658722"),
-  a = n.n(s),
-  o = n("481060"),
-  l = n("683976");
+}), n(47120), n(724458), n(653041);
+var i = n(735250),
+  r = n(470079),
+  s = n(658722),
+  o = n.n(s),
+  a = n(481060),
+  l = n(683976);
 
 function u(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ function u(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class d extends r.PureComponent {
+class _ extends r.PureComponent {
   render() {
     let {
       label: e,
@@ -28,13 +28,13 @@ class d extends r.PureComponent {
       renderValue: r,
       className: s
     } = this.props;
-    return (0, i.jsx)(o.Popout, {
+    return (0, i.jsx)(a.Popout, {
       ...n,
       renderPopout: this.renderPopout,
-      children: n => (0, i.jsx)(o.Clickable, {
+      children: n => (0, i.jsx)(a.Clickable, {
         ...n,
         className: s,
-        children: (0, i.jsx)(l.QuickSelectBase, {
+        children: (0, i.jsx)(l.F, {
           label: e,
           value: t,
           renderValue: r
@@ -48,7 +48,7 @@ class d extends r.PureComponent {
         items: t,
         renderItem: n
       } = this.props;
-      return t.reduce((t, i, r) => (a()(e.toLowerCase(), i.label.toLowerCase()) && t.push(n(i, r)), t), [])
+      return t.reduce((t, i, r) => (o()(e.toLowerCase(), i.label.toLowerCase()) && t.push(n(i, r)), t), [])
     }), u(this, "renderPopout", e => {
       let {
         closePopout: t
@@ -56,12 +56,12 @@ class d extends r.PureComponent {
         placeholder: n,
         popoutClassName: r,
         onChange: s,
-        value: a
+        value: o
       } = this.props;
-      return (0, i.jsx)(o.ComboboxPopout, {
+      return (0, i.jsx)(a.ComboboxPopout, {
         className: r,
         placeholder: n,
-        value: new Set([a.value]),
+        value: new Set([o.value]),
         onChange: s,
         onClose: t,
         children: e => this.renderItems(e)

@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
-  getIsEligibleForQuests: function() {
-    return s
-  },
-  isQuestPreviewToolEnabled: function() {
+n.d(t, {
+  X7: function() {
     return l
   },
-  useIsEligibleForQuests: function() {
-    return a
+  Zy: function() {
+    return o
+  },
+  cB: function() {
+    return s
   }
 });
-var i = n("818083");
-let r = (0, i.createExperiment)({
+var i = n(818083);
+let r = (0, i.B)({
     id: "2023-12_quests",
     kind: "user",
     label: "Quests",
@@ -42,7 +42,7 @@ let r = (0, i.createExperiment)({
       autoTrackExposure: !1
     }).enabled
   },
-  a = e => {
+  o = e => {
     let {
       location: t
     } = e;
@@ -52,7 +52,7 @@ let r = (0, i.createExperiment)({
       autoTrackExposure: !1
     }).enabled
   },
-  o = (0, i.createExperiment)({
+  a = (0, i.B)({
     id: "2024-04_quest_preview_tool",
     kind: "user",
     label: "Quest Preview Tool",
@@ -72,7 +72,7 @@ function l(e) {
   let {
     location: t
   } = e;
-  return o.getCurrentConfig({
+  return a.getCurrentConfig({
     location: t
   }, {
     autoTrackExposure: !1

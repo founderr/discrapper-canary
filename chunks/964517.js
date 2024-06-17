@@ -8,11 +8,11 @@ function i(e) {
 function r(e) {
   return null == e ? void 0 : e.activity_id
 }
-n.r(t), n.d(t, {
-  default: function() {
-    return i
-  },
-  getActivitySessionIdFromServerData: function() {
+n.d(t, {
+  C: function() {
     return r
+  },
+  Z: function() {
+    return i
   }
 })

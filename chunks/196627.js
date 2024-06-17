@@ -1,10 +1,9 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("417995");
-let s = n("848304");
-t.default = e => {
+var i = n(735250);
+n(470079);
+var r = n(417995);
+let s = n(848304);
+t.Z = e => {
   let {
     element: t
   } = e;

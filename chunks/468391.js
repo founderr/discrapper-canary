@@ -7,11 +7,11 @@ function r() {
 function i() {
   return "npm"
 }
-n.r(e), n.d(e, {
-  getSDKSource: function() {
+n.d(e, {
+  S: function() {
     return i
   },
-  isBrowserBundle: function() {
+  n: function() {
     return r
   }
 })

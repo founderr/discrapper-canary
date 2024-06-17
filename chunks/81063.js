@@ -1,47 +1,47 @@
 "use strict";
 n.r(t), n.d(t, {
   fetchAssetIds: function() {
-    return R
+    return p
   },
   getAssetFromImageURL: function() {
-    return A
+    return N
   },
   getAssetIds: function() {
     return g
   },
   getAssetImage: function() {
-    return m
+    return A
   },
   getAssets: function() {
-    return N
+    return m
   }
-}), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("47120");
-var i = n("512722"),
+}), n(315314), n(610138), n(216116), n(78328), n(815648), n(47120);
+var i = n(512722),
   r = n.n(i),
-  s = n("544891"),
-  a = n("570140"),
-  o = n("430449"),
-  l = n("710845"),
-  u = n("134432"),
-  d = n("981631");
-let _ = "https://i.scdn.co/image/",
+  s = n(544891),
+  o = n(570140),
+  a = n(430449),
+  l = n(710845),
+  u = n(134432),
+  _ = n(981631);
+let d = "https://i.scdn.co/image/",
   c = (e, t, n) => "https://static-cdn.jtvnw.net/previews-ttv/live_user_".concat(e, "-").concat(t, "x").concat(n, ".jpg"),
   E = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/,
   I = e => "https://i.ytimg.com/vi/".concat(e, "/hqdefault_live.jpg"),
   T = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/,
-  f = {
-    [d.PlatformTypes.SPOTIFY]: {
-      deserialize: e => "".concat(_).concat(encodeURIComponent(e)),
-      serialize: e => e.split(_)[1]
+  h = {
+    [_.ABu.SPOTIFY]: {
+      deserialize: e => "".concat(d).concat(encodeURIComponent(e)),
+      serialize: e => e.split(d)[1]
     },
-    [d.PlatformTypes.TWITCH]: {
+    [_.ABu.TWITCH]: {
       deserialize: (e, t) => c(encodeURIComponent(e), t[0], t[1]),
       serialize: e => {
         let t = e.match(E);
         return null != t ? t[1] : null
       }
     },
-    [d.PlatformTypes.YOUTUBE]: {
+    [_.ABu.YOUTUBE]: {
       deserialize: e => I(encodeURIComponent(e)),
       serialize: e => {
         let t = e.match(T);
@@ -54,59 +54,59 @@ let _ = "https://i.scdn.co/image/",
     }
   },
   S = {};
-async function h(e) {
+async function f(e) {
   let {
     body: t
-  } = await s.HTTP.get({
-    url: d.Endpoints.APPLICATION_ASSETS(e),
+  } = await s.tn.get({
+    url: _.ANM.APPLICATION_ASSETS(e),
     oldFormErrors: !0
   });
-  return a.default.dispatch({
+  return o.Z.dispatch({
     type: "APPLICATION_ASSETS_UPDATE",
     applicationId: e,
     assets: t
-  }), o.default.getApplicationAssets(e)
+  }), a.Z.getApplicationAssets(e)
 }
 
-function A(e, t) {
-  let n = f[e].serialize(t);
+function N(e, t) {
+  let n = h[e].serialize(t);
   return n ? "".concat(e, ":").concat(n.toString()) : null
 }
 
-function m(e, t, n) {
+function A(e, t, n) {
   if (null != t && t.includes(":")) {
     let [e, i] = t.split(":");
-    if (e === d.PlatformTypes.TWITCH) {
+    if (e === _.ABu.TWITCH) {
       if (null == n || "number" == typeof n) {
-        new l.default("ApplicationAssetUtils").warn("getAssetImage: size must === [number, number] for Twitch");
+        new l.Z("ApplicationAssetUtils").warn("getAssetImage: size must === [number, number] for Twitch");
         return
       }
-      return f[d.PlatformTypes.TWITCH].deserialize(i, n)
+      return h[_.ABu.TWITCH].deserialize(i, n)
     }
-    return Object.prototype.hasOwnProperty.call(f, e) ? f[e].deserialize(i) : void 0
+    return Object.prototype.hasOwnProperty.call(h, e) ? h[e].deserialize(i) : void 0
   }
   if (null == e || null == t) return;
   let i = Array.isArray(n) ? Math.max(...n) : n,
-    r = "number" == typeof i ? "?size=".concat((0, u.getBestMediaProxySize)(i)) : "";
-  return null != window.GLOBAL_ENV.CDN_HOST ? "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/app-assets/").concat(e, "/").concat(t, ".png").concat(r) : "".concat((0, s.getAPIBaseURL)(), "/applications/").concat(e, "/app-assets/").concat(t, ".png").concat(r)
+    r = "number" == typeof i ? "?size=".concat((0, u.oO)(i)) : "";
+  return null != window.GLOBAL_ENV.CDN_HOST ? "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/app-assets/").concat(e, "/").concat(t, ".png").concat(r) : "".concat((0, s.K0)(), "/applications/").concat(e, "/app-assets/").concat(t, ".png").concat(r)
 }
-async function N(e) {
+async function m(e) {
   let t = await
 
   function(e) {
     var t;
-    let n = o.default.getApplicationAssets(e);
-    return null == n || (t = n.lastUpdated, Date.now() - t > 36e5) ? h(e) : Promise.resolve(n)
+    let n = a.Z.getApplicationAssets(e);
+    return null == n || (t = n.lastUpdated, Date.now() - t > 36e5) ? f(e) : Promise.resolve(n)
   }(e);
   return null == t ? void 0 : t.assets
 }
-async function p(e, t) {
+async function O(e, t) {
   let n = t.filter(e => null != e && !Object.prototype.hasOwnProperty.call(S, e) && null == S[e]);
   if (0 === n.length) return;
   let {
     body: i
-  } = await s.HTTP.post({
-    url: d.Endpoints.APPLICATION_EXTERNAL_ASSETS(e),
+  } = await s.tn.post({
+    url: _.ANM.APPLICATION_EXTERNAL_ASSETS(e),
     body: {
       urls: n
     },
@@ -119,14 +119,14 @@ async function p(e, t) {
     of i) S[e] = t
 }
 
-function O(e, t) {
+function R(e, t) {
   let n = 0;
   if (e.filter(e => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:"))).length > 0)
     for (let i = 0; i < e.length; i++) {
       let r = e[i];
       if (null == r) continue;
       let s = Object.prototype.hasOwnProperty.call(S, r) ? S[r] : void 0;
-      null != s && (t[i] = A("mp", s), n++)
+      null != s && (t[i] = N("mp", s), n++)
     }
   return n === e.length
 }
@@ -134,32 +134,32 @@ function O(e, t) {
 function C(e, t, n, i) {
   let r = !1;
   for (let s = 0; s < e.length; s++) {
-    let a = e[s];
-    if (null == a || null != t[s]) continue;
-    let o = Object.prototype.hasOwnProperty.call(n, a) && n[a];
-    if (!o) {
+    let o = e[s];
+    if (null == o || null != t[s]) continue;
+    let a = Object.prototype.hasOwnProperty.call(n, o) && n[o];
+    if (!a) {
       if (null == i || i <= 0) {
         t[s] = null;
         continue
       }
       r = !0
     }
-    t[s] = o.id
+    t[s] = a.id
   }
   return r
 }
-async function R(e, t) {
+async function p(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-  a.default.dispatch({
+  o.Z.dispatch({
     type: "APPLICATION_ASSETS_FETCH",
     applicationId: e
   });
   let i = [],
     r = t.filter(e => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:")));
-  return (r.length > 0 && await p(e, r), O(t, i)) ? (a.default.dispatch({
+  return (r.length > 0 && await O(e, r), R(t, i)) ? (o.Z.dispatch({
     type: "APPLICATION_ASSETS_FETCH_SUCCESS",
     applicationId: e
-  }), i) : C(t, i, await N(e), n) ? h(e).then(() => R(e, t, n - 1)) : (a.default.dispatch({
+  }), i) : C(t, i, await m(e), n) ? f(e).then(() => p(e, t, n - 1)) : (o.Z.dispatch({
     type: "APPLICATION_ASSETS_FETCH_SUCCESS",
     applicationId: e
   }), i)
@@ -167,7 +167,7 @@ async function R(e, t) {
 
 function g(e, t) {
   let n = [];
-  if (O(t, n)) return n;
-  let i = o.default.getApplicationAssets(e);
+  if (R(t, n)) return n;
+  let i = a.Z.getApplicationAssets(e);
   return null == i ? n : (C(t, n, i), n)
 }

@@ -1,79 +1,79 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  Z: function() {
     return _
   }
-}), s("47120"), s("653041");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("481060");
-s("674180");
-var i = s("723047"),
-  r = s("727843"),
-  o = s("290348"),
-  d = s("764163"),
-  u = s("155758"),
-  c = s("293810"),
-  E = s("689938");
+}), t(47120), t(653041);
+var n = t(735250),
+  i = t(470079),
+  l = t(481060);
+t(674180);
+var a = t(723047),
+  r = t(727843),
+  o = t(290348),
+  c = t(764163),
+  d = t(155758),
+  u = t(293810),
+  E = t(689938);
 
 function _() {
   let {
     editStateId: e,
-    guildId: t
-  } = (0, r.useEditStateContext)(), [s, _] = o.useChannelBenefits(e), I = l.useMemo(() => new Set(s.map(e => e.ref_id)), [s]);
+    guildId: s
+  } = (0, r.N)(), [t, _] = o.UE(e), I = i.useMemo(() => new Set(t.map(e => e.ref_id)), [t]);
 
-  function T(e, t) {
+  function T(e, s) {
     let {
-      channelId: a,
-      description: l,
-      emojiId: n,
-      emojiName: i
-    } = e, r = [...s], o = {
+      channelId: n,
+      description: i,
+      emojiId: l,
+      emojiName: a
+    } = e, r = [...t], o = {
       name: "",
-      description: l,
-      emoji_id: n,
-      emoji_name: i,
-      ref_type: c.GuildRoleSubscriptionBenefitTypes.CHANNEL,
-      ref_id: a
+      description: i,
+      emoji_id: l,
+      emoji_name: a,
+      ref_type: u.Qs.CHANNEL,
+      ref_id: n
     };
-    null != t ? r[t] = o : r.push(o), _(r)
+    null != s ? r[s] = o : r.push(o), _(r)
   }
-  let S = (0, i.useRoleSubscriptionSettingsDisabled)();
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(u.EditableBenefitsList, {
-      benefits: s,
+  let N = (0, a.mY)();
+  return (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsx)(d.p, {
+      benefits: t,
       onEdit: function(e) {
-        (0, n.openModal)(l => (0, a.jsx)(d.EditChannelBenefitModal, {
-          ...l,
-          guildId: t,
+        (0, l.openModal)(i => (0, n.jsx)(c.x3, {
+          ...i,
+          guildId: s,
           omitChannelIds: I,
-          initialData: s[e],
-          onSave: t => T(t, e),
+          initialData: t[e],
+          onSave: s => T(s, e),
           onDelete: () => (function(e) {
-            let t = [...s];
-            t.splice(e, 1), _(t)
+            let s = [...t];
+            s.splice(e, 1), _(s)
           })(e)
         }))
       },
-      onMove: function(e, t) {
-        let a = [...s],
-          [l] = a.splice(e, 1);
-        a.splice(t, 0, l), _(a)
+      onMove: function(e, s) {
+        let n = [...t],
+          [i] = n.splice(e, 1);
+        n.splice(s, 0, i), _(n)
       },
-      guildId: t
-    }), s.length > 0 && (0, a.jsx)(n.Spacer, {
+      guildId: s
+    }), t.length > 0 && (0, n.jsx)(l.Spacer, {
       size: 8
-    }), (0, a.jsx)(u.AddBenefitCard, {
+    }), (0, n.jsx)(d.s, {
       onClick: function() {
-        (0, n.openModal)(e => (0, a.jsx)(d.EditChannelBenefitModal, {
+        (0, l.openModal)(e => (0, n.jsx)(c.x3, {
           ...e,
-          guildId: t,
+          guildId: s,
           omitChannelIds: I,
           onSave: e => T(e)
         }))
       },
-      disabled: S,
-      children: E.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_ADD_BUTTON_TEXT
+      disabled: N,
+      children: E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_ADD_BUTTON_TEXT
     })]
   })
 }

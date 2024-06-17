@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return T
   }
-}), n("47120"), n("653041"), n("411104");
-var i, r, s = n("442837"),
-  a = n("710845"),
-  o = n("483012"),
-  l = n("138859"),
-  u = n("91247");
+}), n(47120), n(653041), n(411104);
+var i, r, s = n(442837),
+  o = n(710845),
+  a = n(483012),
+  l = n(138859),
+  u = n(91247);
 
-function d(e, t, n) {
+function _(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -18,7 +18,7 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let _ = new a.default("GatewaySocket"),
+let d = new o.Z("GatewaySocket"),
   c = new Set(["INITIAL_GUILD", "READY"]),
   E = new Set(["READY", "INITIAL_GUILD"]),
   I = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]);
@@ -70,11 +70,11 @@ class T {
     let t = "none",
       n = !1;
     try {
-      this.socket.connectionState === l.default.RESUMING && s.default.Emitter.pause(150), s.default.Emitter.batched(() => {
+      this.socket.connectionState === l.Z.RESUMING && s.ZP.Emitter.pause(150), s.ZP.Emitter.batched(() => {
         e.forEach(e => {
           t = e.type, n = n || I.has(e.type), this.dispatchOne(e)
-        }), o.default.flush()
-      }), n && s.default.Emitter.resume()
+        }), a.Z.flush()
+      }), n && s.ZP.Emitter.resume()
     } catch (e) {
       this.socket.resetSocketOnDispatchError({
         error: e,
@@ -87,24 +87,24 @@ class T {
     let {
       data: r,
       type: s,
-      compressionAnalytics: a,
-      preloadedData: d
-    } = e, _ = performance.now();
-    if (this.socket.connectionState === l.default.RESUMING) {
-      let e = _ - this.resumeAnalytics.lastUpdateTime;
-      0 === this.resumeAnalytics.numEvents ? this.resumeAnalytics.initialWaitTime = e : e > this.resumeAnalytics.largestWaitTime && (this.resumeAnalytics.largestWaitTime = e), this.resumeAnalytics.totalWaitTime += e, this.resumeAnalytics.lastUpdateTime = _, this.resumeAnalytics.numEvents += 1
+      compressionAnalytics: o,
+      preloadedData: _
+    } = e, d = performance.now();
+    if (this.socket.connectionState === l.Z.RESUMING) {
+      let e = d - this.resumeAnalytics.lastUpdateTime;
+      0 === this.resumeAnalytics.numEvents ? this.resumeAnalytics.initialWaitTime = e : e > this.resumeAnalytics.largestWaitTime && (this.resumeAnalytics.largestWaitTime = e), this.resumeAnalytics.totalWaitTime += e, this.resumeAnalytics.lastUpdateTime = d, this.resumeAnalytics.numEvents += 1
     }
-    if (o.default.flush(s, r), "READY" === s) {
-      let e = (0, u.getReadyPayloadByteSizeAnalytics)(r);
-      null === (t = this.getDispatchHandler(s)) || void 0 === t || t.dispatch(r, s, d), (0, u.logReadyPayloadReceived)(this.socket, r, _, a, e)
-    } else "RESUMED" === s ? (null === (n = this.getDispatchHandler(s)) || void 0 === n || n.dispatch(r, s, d), (0, u.logResumeAnalytics)(this.resumeAnalytics), this.resumeAnalytics = (0, u.createResumeAnalytics)(), this.socket.handleResumeDispatched()) : null === (i = this.getDispatchHandler(s)) || void 0 === i || i.dispatch(r, s, d);
-    this.socket.connectionState === l.default.RESUMING && (this.resumeAnalytics.dispatchTime += performance.now() - _)
+    if (a.Z.flush(s, r), "READY" === s) {
+      let e = (0, u.vW)(r);
+      null === (t = this.getDispatchHandler(s)) || void 0 === t || t.dispatch(r, s, _), (0, u.dm)(this.socket, r, d, o, e)
+    } else "RESUMED" === s ? (null === (n = this.getDispatchHandler(s)) || void 0 === n || n.dispatch(r, s, _), (0, u.uB)(this.resumeAnalytics), this.resumeAnalytics = (0, u.zH)(), this.socket.handleResumeDispatched()) : null === (i = this.getDispatchHandler(s)) || void 0 === i || i.dispatch(r, s, _);
+    this.socket.connectionState === l.Z.RESUMING && (this.resumeAnalytics.dispatchTime += performance.now() - d)
   }
   clear() {
     this.paused = !1, this.queue.length = 0
   }
   constructor(e) {
-    d(this, "socket", void 0), d(this, "queue", void 0), d(this, "dispatchTimeout", void 0), d(this, "nextDispatchTimeout", void 0), d(this, "paused", void 0), d(this, "resumeAnalytics", void 0), d(this, "getDispatchHandler", void 0), d(this, "flush", void 0), this.socket = e, this.queue = [], this.dispatchTimeout = null, this.nextDispatchTimeout = 33, this.paused = !0, this.resumeAnalytics = (0, u.createResumeAnalytics)(), this.getDispatchHandler = null, this.flush = () => {
+    _(this, "socket", void 0), _(this, "queue", void 0), _(this, "dispatchTimeout", void 0), _(this, "nextDispatchTimeout", void 0), _(this, "paused", void 0), _(this, "resumeAnalytics", void 0), _(this, "getDispatchHandler", void 0), _(this, "flush", void 0), this.socket = e, this.queue = [], this.dispatchTimeout = null, this.nextDispatchTimeout = 33, this.paused = !0, this.resumeAnalytics = (0, u.zH)(), this.getDispatchHandler = null, this.flush = () => {
       if (this.paused) return;
       clearTimeout(this.dispatchTimeout), this.dispatchTimeout = null;
       let e = Date.now(),
@@ -114,7 +114,7 @@ class T {
       let n = this.queue.splice(0, t);
       this.dispatchMultiple(n);
       let i = Date.now() - e;
-      i > 100 ? (_.log("Dispatched ".concat(n.length, " messages in ").concat(i, "ms")), this.nextDispatchTimeout = 250) : this.nextDispatchTimeout = 33
+      i > 100 ? (d.log("Dispatched ".concat(n.length, " messages in ").concat(i, "ms")), this.nextDispatchTimeout = 250) : this.nextDispatchTimeout = 33
     }
   }
 }

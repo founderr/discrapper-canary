@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("735250");
-n("470079");
-var r = n("392711"),
-  s = n("481060"),
-  a = n("689938"),
-  o = n("160503");
-t.default = e => {
+n(47120);
+var i = n(735250);
+n(470079);
+var r = n(392711),
+  s = n(481060),
+  o = n(689938),
+  a = n(160503);
+t.Z = e => {
   let t = (0, r.flatMap)(e.history, e => {
     var t;
     let {
@@ -16,19 +16,19 @@ t.default = e => {
     return s.length > 0 && (r[0] = s.join(", ")), "" !== n && (r[1] = n), r
   }).filter(e => null != e);
   return 0 === t.length ? null : (0, i.jsxs)("div", {
-    className: o.container,
+    className: a.container,
     children: [(0, i.jsx)(s.Heading, {
-      className: o.breadcrumbsHeader,
+      className: a.breadcrumbsHeader,
       color: "header-secondary",
       variant: "heading-sm/semibold",
-      children: a.default.Messages.MOBILE_REPORTS_BREADCRUMBS_TITLE
+      children: o.Z.Messages.MOBILE_REPORTS_BREADCRUMBS_TITLE
     }), t.map((e, t) => (0, i.jsxs)("div", {
-      className: o.breadcrumbContainer,
+      className: a.breadcrumbContainer,
       children: [(0, i.jsx)("div", {
-        className: o.breadcrumbDot
+        className: a.breadcrumbDot
       }), (0, i.jsx)(s.Text, {
         variant: "text-md/normal",
-        className: o.breadcrumbText,
+        className: a.breadcrumbText,
         children: e
       })]
     }, "".concat(e, "+").concat(t)))]

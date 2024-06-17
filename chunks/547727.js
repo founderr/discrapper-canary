@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-t.default = new class e {
+t.Z = new class e {
   nativeMuteChanged(e) {}
   updateNativeMute() {}
 }

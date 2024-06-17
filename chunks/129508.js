@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("512722"),
+n(47120);
+var i = n(512722),
   r = n.n(i),
-  s = n("921608"),
-  a = n("693824");
+  s = n(921608),
+  o = n(693824);
 
-function o(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -13,7 +13,7 @@ function o(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-t.default = class e {
+t.Z = class e {
   getCanvas() {
     return this.canvas
   }
@@ -36,17 +36,17 @@ t.default = class e {
   drawRoundedImageWithFallbacks(e, t, n, i, r) {
     for (let s of e) {
       let e = this.drawRoundedImage(s, t, n, i, r);
-      if (e !== a.DrawResultStatus.Failure) return e
+      if (e !== o.vP.Failure) return e
     }
-    return a.DrawResultStatus.Failure
+    return o.vP.Failure
   }
   constructor(e, t) {
-    o(this, "color", "black"), o(this, "font", {
+    a(this, "color", "black"), a(this, "font", {
       style: "normal",
       weight: 300,
-      size: s.DEFAULT_FONT_SIZE,
+      size: s.n,
       family: ["serif"],
-      truncate: a.TextTruncationMethod.None
-    }), o(this, "assetMap", void 0), o(this, "canvas", void 0), this.canvas = e, this.assetMap = t
+      truncate: o.GX.None
+    }), a(this, "assetMap", void 0), a(this, "canvas", void 0), this.canvas = e, this.assetMap = t
   }
 }

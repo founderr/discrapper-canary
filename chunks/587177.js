@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
 });
-var i = n("311850");
+var i = n(311850);
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -20,16 +20,16 @@ class s {
       prices: t,
       type: n,
       premium_type: r,
-      name: a,
-      sku_id: o,
+      name: o,
+      sku_id: a,
       summary: l
     } = e;
     return new s({
-      prices: (0, i.getPricesFromServer)(t),
+      prices: (0, i.l)(t),
       type: n,
       premiumType: r,
-      name: a,
-      skuId: o,
+      name: o,
+      skuId: a,
       summary: l
     })
   }

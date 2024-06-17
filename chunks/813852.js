@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  ColorMixDesktopClientThemesExperiment: function() {
+n.d(t, {
+  U: function() {
     return i
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-05_color_mixed_desktop_client_themes",
   label: "Better Desktop Client Themes",

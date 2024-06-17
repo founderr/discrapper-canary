@@ -1,11 +1,11 @@
 "use strict";
-var e = n("192291"),
-  o = n("692994"),
-  i = n("165915"),
-  u = n("974971"),
-  c = n("926515"),
-  f = n("581031"),
-  a = n("936940"),
+var e = n(192291),
+  o = n(692994),
+  i = n(165915),
+  u = n(974971),
+  c = n(926515),
+  f = n(581031),
+  a = n(936940),
   s = e.aTypedArray,
   y = e.exportTypedArrayMethod,
   p = f("".slice);

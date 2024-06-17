@@ -1,19 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  handleFocus: function() {
-    return u
+n.d(t, {
+  I: function() {
+    return s
   }
 });
-var r = n("470079"),
-  i = n.n(r),
-  a = Object.assign || function(e) {
+var r = n(470079),
+  i = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
       var n = arguments[t];
       for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
     }
     return e
   },
-  o = function() {
+  a = function() {
     function e(e, t) {
       for (var n = 0; n < t.length; n++) {
         var r = t[n];
@@ -25,19 +24,19 @@ var r = n("470079"),
     }
   }();
 
-function s(e, t) {
+function o(e, t) {
   if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
   return t && ("object" == typeof t || "function" == typeof t) ? t : e
 }
-var u = function(e) {
+var s = function(e) {
   var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "span";
   return function(n) {
-    function r() {
+    function s() {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-      }(this, r);
-      for (var e, t, n, i = arguments.length, a = Array(i), o = 0; o < i; o++) a[o] = arguments[o];
-      return t = n = s(this, (e = r.__proto__ || Object.getPrototypeOf(r)).call.apply(e, [this].concat(a))), n.state = {
+      }(this, s);
+      for (var e, t, n, r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
+      return t = n = o(this, (e = s.__proto__ || Object.getPrototypeOf(s)).call.apply(e, [this].concat(i))), n.state = {
         focus: !1
       }, n.handleFocus = function() {
         return n.setState({
@@ -47,7 +46,7 @@ var u = function(e) {
         return n.setState({
           focus: !1
         })
-      }, s(n, t)
+      }, o(n, t)
     }
     return ! function(e, t) {
       if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function, not " + typeof t);
@@ -59,14 +58,14 @@ var u = function(e) {
           configurable: !0
         }
       }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-    }(r, n), o(r, [{
+    }(s, n), a(s, [{
       key: "render",
       value: function() {
-        return i().createElement(t, {
+        return r.createElement(t, {
           onFocus: this.handleFocus,
           onBlur: this.handleBlur
-        }, i().createElement(e, a({}, this.props, this.state)))
+        }, r.createElement(e, i({}, this.props, this.state)))
       }
-    }]), r
-  }(i().Component)
+    }]), s
+  }(r.Component)
 }

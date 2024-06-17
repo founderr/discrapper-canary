@@ -1,42 +1,42 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return w
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
-  o = n("442837"),
-  l = n("481060"),
-  u = n("100527"),
-  d = n("314897"),
-  _ = n("592125"),
-  c = n("246946"),
-  E = n("5192"),
-  I = n("51144"),
-  T = n("342656"),
-  f = n("621853"),
-  S = n("652853"),
-  h = n("421486"),
-  A = n("138394"),
-  m = n("790711"),
-  N = n("248345"),
-  p = n("337125"),
-  O = n("19836"),
-  C = n("207570"),
-  R = n("77097"),
-  g = n("538564"),
-  L = n("489642"),
-  v = n("319300"),
-  D = n("591600"),
-  M = n("579729"),
-  y = n("302316"),
-  P = n("186395"),
-  U = n("584045"),
-  b = n("981631"),
-  G = n("383630");
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(442837),
+  l = n(481060),
+  u = n(100527),
+  _ = n(314897),
+  d = n(592125),
+  c = n(246946),
+  E = n(5192),
+  I = n(51144),
+  T = n(342656),
+  h = n(621853),
+  S = n(652853),
+  f = n(421486),
+  N = n(138394),
+  A = n(790711),
+  m = n(248345),
+  O = n(337125),
+  R = n(19836),
+  C = n(207570),
+  p = n(77097),
+  g = n(538564),
+  L = n(489642),
+  v = n(319300),
+  D = n(591600),
+  M = n(579729),
+  P = n(302316),
+  y = n(186395),
+  U = n(584045),
+  b = n(981631),
+  G = n(383630);
 
 function w(e) {
   var t, n, s;
@@ -44,22 +44,22 @@ function w(e) {
     activity: w,
     customStatusActivity: k,
     user: B,
-    displayProfile: V,
-    guild: x,
-    guildMember: F,
+    displayProfile: x,
+    guild: V,
+    guildMember: Z,
     channelId: H,
-    onClose: Y,
-    setNote: j = !1,
-    canDM: W,
-    hideNote: K = !1,
-    showCopiableUsername: z = !1,
-    analyticsParams: Z
-  } = e, Q = (0, o.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), X = (0, o.useStateFromStores)([f.default], () => {
+    onClose: F,
+    setNote: Y = !1,
+    canDM: j,
+    hideNote: W = !1,
+    showCopiableUsername: K = !1,
+    analyticsParams: z
+  } = e, q = (0, a.e7)([c.Z], () => c.Z.hidePersonalInformation), X = (0, a.e7)([h.Z], () => {
     var e;
-    return null === (e = f.default.getUserProfile(B.id)) || void 0 === e ? void 0 : e.application
-  }), q = (0, o.useStateFromStores)([_.default], () => _.default.getChannel(H)), {
+    return null === (e = h.Z.getUserProfile(B.id)) || void 0 === e ? void 0 : e.application
+  }), Q = (0, a.e7)([d.Z], () => d.Z.getChannel(H)), {
     theme: J
-  } = (0, S.useUserProfileThemeContext)(), $ = r.useRef(null), [ee, et] = r.useState(!0), en = r.useCallback(() => {
+  } = (0, S.z)(), $ = r.useRef(null), [ee, et] = r.useState(!0), en = r.useCallback(() => {
     let {
       current: e
     } = $;
@@ -74,109 +74,109 @@ function w(e) {
       top: 0
     }))
   }, []);
-  let ei = (0, o.useStateFromStores)([d.default], () => d.default.getId()),
+  let ei = (0, a.e7)([_.default], () => _.default.getId()),
     er = B.id === ei,
     es = B.bot || er,
     {
-      enabled: ea
-    } = (0, T.useProfileMutualsExperiment)({
+      enabled: eo
+    } = (0, T.qI)({
       autoTrackExposure: !0,
-      location: u.default.PROFILE_POPOUT,
+      location: u.Z.PROFILE_POPOUT,
       disable: es
     });
   if (B.isSystemUser()) return null;
-  if (B.isNonUserBot()) return (0, i.jsx)(U.default, {
+  if (B.isNonUserBot()) return (0, i.jsx)(U.Z, {
     user: B,
     nickname: null,
     pronouns: null,
     className: G.usernameSection,
     lastSection: !0
   });
-  let eo = null !== (t = E.default.getNickname(null == x ? void 0 : x.id, H, B)) && void 0 !== t ? t : I.default.getName(B),
+  let ea = null !== (t = E.ZP.getNickname(null == V ? void 0 : V.id, H, B)) && void 0 !== t ? t : I.ZP.getName(B),
     el = {
       location: {
-        page: b.AnalyticsPages.USER_POPOUT,
-        section: b.AnalyticsSections.USER_PROFILE
+        page: b.ZY5.USER_POPOUT,
+        section: b.jXE.USER_PROFILE
       }
     };
   return (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(U.default, {
+    children: [(0, i.jsx)(U.Z, {
       className: G.usernameSection,
       user: B,
-      nickname: eo,
-      pronouns: null == V ? void 0 : V.pronouns,
-      usernameIcon: B.hasAvatarForGuild(null == x ? void 0 : x.id) && (0, i.jsx)(m.default, {
+      nickname: ea,
+      pronouns: null == x ? void 0 : x.pronouns,
+      usernameIcon: B.hasAvatarForGuild(null == V ? void 0 : V.id) && (0, i.jsx)(A.Z, {
         user: B,
-        nickname: eo
+        nickname: ea
       }),
-      shouldCopyOnClick: z
+      shouldCopyOnClick: K
     }), (0, i.jsxs)(l.HeadingLevel, {
-      children: [(0, i.jsx)(g.default, {
+      children: [(0, i.jsx)(g.Z, {
         className: G.customStatusSection,
         customStatusActivity: k
-      }), (0, i.jsx)(A.default, {
+      }), (0, i.jsx)(N.Z, {
         className: G.divider
       }), (0, i.jsxs)(l.AdvancedScroller, {
-        className: a()(G.scroller, {
+        className: o()(G.scroller, {
           [G.scrollerSeparator]: !ee
         }),
         onScroll: en,
         ref: $,
-        children: [(0, i.jsx)(C.default, {
+        children: [(0, i.jsx)(C.Z, {
           user: B,
-          guildId: null == x ? void 0 : x.id
-        }), (0, i.jsx)(O.default, {
-          isUsingGuildBio: null !== (n = null == V ? void 0 : V.isUsingGuildMemberBio()) && void 0 !== n && n,
-          bio: null == V ? void 0 : V.bio,
-          guild: x,
-          hidePersonalInformation: Q
-        }), ea && (0, i.jsx)(h.default, {
+          guildId: null == V ? void 0 : V.id
+        }), (0, i.jsx)(R.Z, {
+          isUsingGuildBio: null !== (n = null == x ? void 0 : x.isUsingGuildMemberBio()) && void 0 !== n && n,
+          bio: null == x ? void 0 : x.bio,
+          guild: V,
+          hidePersonalInformation: q
+        }), eo && (0, i.jsx)(f.ZP, {
           className: G.profileMutuals,
           user: B,
-          onClose: Y
-        }), (0, i.jsx)(v.default, {
+          onClose: F
+        }), (0, i.jsx)(v.Z, {
           userId: B.id,
-          guildId: null == x ? void 0 : x.id
-        }), (0, i.jsx)(N.default, {
+          guildId: null == V ? void 0 : V.id
+        }), (0, i.jsx)(m.Z, {
           activity: w,
           user: B,
-          guild: x,
+          guild: V,
           channelId: H,
-          onClose: Y,
-          analyticsParams: (null == Z ? void 0 : Z.location) != null ? Z : el
-        }), (null == X ? void 0 : X.popularApplicationCommandIds) != null && null != q ? (0, i.jsx)(M.default, {
+          onClose: F,
+          analyticsParams: (null == z ? void 0 : z.location) != null ? z : el
+        }), (null == X ? void 0 : X.popularApplicationCommandIds) != null && null != Q ? (0, i.jsx)(M.Z, {
           applicationId: X.id,
           commandIds: X.popularApplicationCommandIds,
-          channel: q,
-          guildId: null == x ? void 0 : x.id,
-          onClick: Y
-        }) : null, (0, i.jsx)(p.default, {
+          channel: Q,
+          guildId: null == V ? void 0 : V.id,
+          onClick: F
+        }) : null, (0, i.jsx)(O.Z, {
           user: B,
-          guildId: null == x ? void 0 : x.id
-        }), (0, i.jsx)(P.default, {
+          guildId: null == V ? void 0 : V.id
+        }), (0, i.jsx)(y.Z, {
           user: B,
-          guild: x,
-          guildMember: F,
-          showBorder: null !== (s = null == V ? void 0 : V.canEditThemes) && void 0 !== s && s
-        }), (0, i.jsx)(R.default, {
+          guild: V,
+          guildMember: Z,
+          showBorder: null !== (s = null == x ? void 0 : x.canEditThemes) && void 0 !== s && s
+        }), (0, i.jsx)(p.Z, {
           userId: B.id,
           channelId: H,
-          guild: x,
-          onClose: Y,
+          guild: V,
+          onClose: F,
           theme: J
-        }), null != X && void 0 !== H && (0, i.jsx)(y.default, {
+        }), null != X && void 0 !== H && (0, i.jsx)(P.Z, {
           channelId: H,
           applicationId: X.id
-        }), !Q && !K && (0, i.jsx)(D.default, {
+        }), !q && !W && (0, i.jsx)(D.Z, {
           user: B,
-          setNote: j,
-          autoFocus: !W,
-          lastSection: !W
-        }), !B.isNonUserBot() && W && (0, i.jsx)(L.default, {
+          setNote: Y,
+          autoFocus: !j,
+          lastSection: !j
+        }), !B.isNonUserBot() && j && (0, i.jsx)(L.Z, {
           user: B,
-          setNote: j,
-          canDM: W,
-          onClose: Y
+          setNote: Y,
+          canDM: j,
+          onClose: F
         })]
       })]
     })]

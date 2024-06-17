@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  isActivityParticipantCurrentUserCurrentSession: function() {
+n.d(t, {
+  J: function() {
     return r
   }
 });
-var i = n("314897");
+var i = n(314897);
 
 function r(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.default,

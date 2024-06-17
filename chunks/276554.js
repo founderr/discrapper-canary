@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  shouldShowNitroBadge: function() {
+n.d(t, {
+  R: function() {
     return r
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2023-10_social_proofing_message_nitro_badge",
   label: "Social Proofing Message Nitro Badge",

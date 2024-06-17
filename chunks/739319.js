@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return c
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
-  o = n("481060"),
-  l = n("454585"),
-  u = n("572004"),
-  d = n("689938"),
-  _ = n("501496");
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(481060),
+  l = n(454585),
+  u = n(572004),
+  _ = n(689938),
+  d = n(501496);
 
 function c(e) {
   let {
@@ -24,37 +24,37 @@ function c(e) {
         is_localized: c
       }
     }
-  } = e, [E, I] = r.useState(!1), T = r.useRef(l.default.reactParserFor(l.default.defaultRules));
+  } = e, [E, I] = r.useState(!1), T = r.useRef(l.Z.reactParserFor(l.Z.defaultRules));
   return c ? (0, i.jsxs)("div", {
-    className: _.container,
-    children: [(0, i.jsx)(o.Heading, {
+    className: d.container,
+    children: [(0, i.jsx)(a.Heading, {
       variant: "heading-sm/semibold",
       color: "header-secondary",
-      className: _.header,
+      className: d.header,
       children: t
-    }), (0, i.jsx)(o.Text, {
+    }), (0, i.jsx)(a.Text, {
       variant: "text-sm/normal",
-      className: _.bodyText,
+      className: d.bodyText,
       children: T.current(n)
     }), (0, i.jsx)("div", {
-      className: _.__invalid_smsInfoContainer,
+      className: d.__invalid_smsInfoContainer,
       children: (0, i.jsxs)("div", {
-        className: a()(_.smsNumberContainer, {
-          [_.copied]: E
+        className: o()(d.smsNumberContainer, {
+          [d.copied]: E
         }),
-        children: [(0, i.jsx)(o.Text, {
+        children: [(0, i.jsx)(a.Text, {
           variant: "text-md/normal",
           selectable: !0,
-          className: _.smsNumberText,
+          className: d.smsNumberText,
           children: s
-        }), (0, i.jsx)(o.Button, {
-          size: o.Button.Sizes.SMALL,
-          className: _.__invalid_trailingButton,
+        }), (0, i.jsx)(a.Button, {
+          size: a.Button.Sizes.SMALL,
+          className: d.__invalid_trailingButton,
           onClick: () => {
-            (0, u.copy)(s) && I(!0)
+            (0, u.JG)(s) && I(!0)
           },
-          color: o.Button.Colors.PRIMARY,
-          children: E ? d.default.Messages.COPIED : d.default.Messages.COPY
+          color: a.Button.Colors.PRIMARY,
+          children: E ? _.Z.Messages.COPIED : _.Z.Messages.COPY
         })]
       })
     })]

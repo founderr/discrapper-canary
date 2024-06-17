@@ -1,206 +1,206 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return b
+t.d(s, {
+  Z: function() {
+    return P
   }
-}), s("47120");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("120356"),
-  i = s.n(n),
-  r = s("920906"),
-  o = s("442837"),
-  d = s("692547"),
-  u = s("215569"),
-  c = s("780384"),
-  E = s("481060"),
-  _ = s("410030"),
-  I = s("607070"),
-  T = s("367907"),
-  S = s("996753"),
-  f = s("626135"),
-  m = s("585483"),
-  N = s("999382"),
-  g = s("743475"),
-  h = s("983135"),
-  C = s("8426"),
-  R = s("969632"),
-  x = s("570961"),
-  L = s("208665"),
-  O = s("359191"),
-  p = s("84658"),
-  A = s("142961"),
-  M = s("232764"),
-  D = s("729311"),
-  v = s("850864"),
-  j = s("966301"),
-  G = s("981631"),
-  U = s("689938"),
-  P = s("231249");
+}), t(47120);
+var n = t(735250),
+  i = t(470079),
+  l = t(120356),
+  a = t.n(l),
+  r = t(920906),
+  o = t(442837),
+  c = t(692547),
+  d = t(215569),
+  u = t(780384),
+  E = t(481060),
+  _ = t(410030),
+  I = t(607070),
+  T = t(367907),
+  N = t(996753),
+  m = t(626135),
+  S = t(585483),
+  h = t(999382),
+  g = t(743475),
+  x = t(983135),
+  C = t(8426),
+  R = t(969632),
+  L = t(570961),
+  O = t(208665),
+  A = t(359191),
+  p = t(84658),
+  M = t(142961),
+  f = t(232764),
+  v = t(729311),
+  D = t(850864),
+  Z = t(966301),
+  j = t(981631),
+  U = t(689938),
+  G = t(231249);
 
-function b() {
-  let e = (0, o.useStateFromStores)([N.default], () => N.default.getGuild());
-  return null == e ? null : (0, a.jsx)(y, {
+function P() {
+  let e = (0, o.e7)([h.Z], () => h.Z.getGuild());
+  return null == e ? null : (0, n.jsx)(b, {
     guild: e
   })
 }
 
-function y(e) {
+function b(e) {
   let {
-    guild: t
-  } = e, n = t.id, N = (0, o.useStateFromStores)([O.default], () => O.default.getCurrentPage()), b = (0, A.default)(n), {
-    hasChanges: y,
+    guild: s
+  } = e, l = s.id, h = (0, o.e7)([A.Z], () => A.Z.getCurrentPage()), P = (0, M.Z)(l), {
+    hasChanges: b,
     hasConfiguredAnythingForCurrentStep: B,
-    hasErrors: F
-  } = (0, o.useStateFromStoresObject)([O.default], () => ({
-    hasChanges: O.default.hasChanges(),
-    hasConfiguredAnythingForCurrentStep: O.default.hasConfiguredAnythingForCurrentStep(),
-    hasErrors: O.default.hasErrors()
-  })), H = (0, o.useStateFromStores)([O.default], () => {
-    let e = (0, p.pageToEducationUpsellType)(N);
-    return null != e && !O.default.isEducationUpsellDismissed(e)
-  }), k = (0, o.useStateFromStores)([I.default], () => I.default.useReducedMotion), w = (0, _.default)(), V = l.useRef(null), [{
-    spring: Y
-  }, W] = (0, r.useSpring)(() => ({
+    hasErrors: y
+  } = (0, o.cj)([A.Z], () => ({
+    hasChanges: A.Z.hasChanges(),
+    hasConfiguredAnythingForCurrentStep: A.Z.hasConfiguredAnythingForCurrentStep(),
+    hasErrors: A.Z.hasErrors()
+  })), F = (0, o.e7)([A.Z], () => {
+    let e = (0, p.lg)(h);
+    return null != e && !A.Z.isEducationUpsellDismissed(e)
+  }), w = (0, o.e7)([I.Z], () => I.Z.useReducedMotion), k = (0, _.ZP)(), H = i.useRef(null), [{
+    spring: V
+  }, Y] = (0, r.useSpring)(() => ({
     spring: 0
   }));
-  l.useEffect(() => {
+  i.useEffect(() => {
     function e() {
-      W({
+      Y({
         spring: 1,
         config: r.config.gentle
-      }), W({
+      }), Y({
         spring: 0,
         config: r.config.gentle,
         delay: 1e3
       })
     }
-    return m.ComponentDispatch.subscribe(G.ComponentActions.EMPHASIZE_NOTICE, e), () => {
-      m.ComponentDispatch.unsubscribe(G.ComponentActions.EMPHASIZE_NOTICE, e)
+    return S.S.subscribe(j.CkL.EMPHASIZE_NOTICE, e), () => {
+      S.S.unsubscribe(j.CkL.EMPHASIZE_NOTICE, e)
     }
-  }, [W]);
-  let z = (0, E.useToken)(d.default.colors.BACKGROUND_FLOATING).hex(),
-    K = (0, E.useToken)(d.default.unsafe_rawColors.PRIMARY_160).hex(),
-    Z = (0, c.isThemeDark)(w) ? z : K,
-    X = Y.to({
+  }, [Y]);
+  let W = (0, E.useToken)(c.Z.colors.BACKGROUND_FLOATING).hex(),
+    K = (0, E.useToken)(c.Z.unsafe_rawColors.PRIMARY_160).hex(),
+    z = (0, u.wj)(k) ? W : K,
+    q = V.to({
       range: [0, 1],
-      output: [(0, E.useToken)(d.default.unsafe_rawColors.WHITE_500).hex(), (0, E.useToken)(d.default.colors.TEXT_NORMAL).hex()]
+      output: [(0, E.useToken)(c.Z.unsafe_rawColors.WHITE_500).hex(), (0, E.useToken)(c.Z.colors.TEXT_NORMAL).hex()]
     }),
-    Q = Y.to({
+    X = V.to({
       range: [0, 1],
-      output: [Z, (0, E.useToken)(d.default.colors.STATUS_DANGER).hex()]
+      output: [z, (0, E.useToken)(c.Z.colors.STATUS_DANGER).hex()]
     });
-  if (b) {
-    if (N === p.GuildSettingsOnboardingPage.DEFAULT_CHANNELS) return (0, a.jsx)(D.GuildSettingsDefaultChannelsNotice, {});
-    if (N === p.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS) return (0, a.jsx)(j.GuildSettingsOnboardingPromptsNotice, {});
-    else if (N === p.GuildSettingsOnboardingPage.HOME_SETTINGS) return (0, a.jsx)(v.GuildSettingsHomeSettingsNotice, {})
+  if (P) {
+    if (h === p.PG.DEFAULT_CHANNELS) return (0, n.jsx)(v.j, {});
+    if (h === p.PG.CUSTOMIZATION_QUESTIONS) return (0, n.jsx)(Z.Zm, {});
+    else if (h === p.PG.HOME_SETTINGS) return (0, n.jsx)(D.T, {})
   }
-  let J = N === p.ONBOARDING_STEPS[p.ONBOARDING_STEPS.length - 1],
-    q = async () => {
-      let e = L.default.advancedMode;
-      if (y) try {
-        if (N === p.GuildSettingsOnboardingPage.DEFAULT_CHANNELS) await (0, g.saveDefaultChannels)(t).then(() => e ? (0, x.saveGuildOnboardingPrompts)(t, {
+  let Q = h === p.xh[p.xh.length - 1],
+    J = async () => {
+      let e = O.Z.advancedMode;
+      if (b) try {
+        if (h === p.PG.DEFAULT_CHANNELS) await (0, g.DO)(s).then(() => e ? (0, L.rS)(s, {
           ignoreDefaultPrompt: !0
         }) : Promise.resolve());
-        else if (N === p.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS) await (0, x.saveGuildOnboardingPrompts)(t, {
+        else if (h === p.PG.CUSTOMIZATION_QUESTIONS) await (0, L.rS)(s, {
           ignoreDefaultPrompt: !0
         });
-        else if (N === p.GuildSettingsOnboardingPage.HOME_SETTINGS) {
-          let e = R.default.getSettings();
-          await (0, C.saveHomeSettings)(t.id, e)
+        else if (h === p.PG.HOME_SETTINGS) {
+          let e = R.Z.getSettings();
+          await (0, C.oo)(s.id, e)
         }
       } catch {
         return !1
       }
       return !0
     }, $ = async () => {
-      f.default.track(G.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
-        ...(0, T.collectGuildAnalyticsMetadata)(n),
-        step: p.GuildSettingsOnboardingPage[N],
+      m.default.track(j.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+        ...(0, T.hH)(l),
+        step: p.PG[h],
         back: !1,
-        skip: !y
-      }), (0, h.dismissEducationUpsell)((0, p.pageToEducationUpsellType)(N)), await q() && (0, h.goToNextOnboardingStep)(n, N)
+        skip: !b
+      }), (0, x.Nb)((0, p.lg)(h)), await J() && (0, x.IG)(l, h)
     }, ee = async () => {
-      f.default.track(G.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
-        ...(0, T.collectGuildAnalyticsMetadata)(n),
-        step: p.GuildSettingsOnboardingPage[N],
+      m.default.track(j.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+        ...(0, T.hH)(l),
+        step: p.PG[h],
         back: !0,
         skip: !1
-      }), await q() && (0, h.goToPrevOnboardingStep)(n, N)
-    }, et = null;
-  H && (N === p.GuildSettingsOnboardingPage.SAFETY_CHECK ? et = (0, a.jsx)(M.SafetyCheckUpsell, {}) : N === p.GuildSettingsOnboardingPage.DEFAULT_CHANNELS ? et = (0, a.jsx)(M.DefaultChannelsUpsell, {}) : N === p.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS ? et = (0, a.jsx)(M.CustomizationQuestionsUpsell, {}) : N === p.GuildSettingsOnboardingPage.HOME_SETTINGS && (et = (0, a.jsx)(M.HomeSettingsUpsell, {})));
-  let es = (0, a.jsx)(E.Button, {
-      className: i()(P.button, {
-        [P.hidden]: H
+      }), await J() && (0, x.Wy)(l, h)
+    }, es = null;
+  F && (h === p.PG.SAFETY_CHECK ? es = (0, n.jsx)(f.j7, {}) : h === p.PG.DEFAULT_CHANNELS ? es = (0, n.jsx)(f.Io, {}) : h === p.PG.CUSTOMIZATION_QUESTIONS ? es = (0, n.jsx)(f.cZ, {}) : h === p.PG.HOME_SETTINGS && (es = (0, n.jsx)(f.g6, {})));
+  let et = (0, n.jsx)(E.Button, {
+      className: a()(G.button, {
+        [G.hidden]: F
       }),
       color: E.Button.Colors.PRIMARY,
       look: E.Button.Looks.OUTLINED,
       size: E.Button.Sizes.SMALL,
       onClick: ee,
-      disabled: H || F,
-      children: (0, a.jsxs)("span", {
-        className: P.button,
-        children: [(0, a.jsx)(S.default, {
-          className: P.arrow,
-          direction: S.default.Directions.LEFT
-        }), U.default.Messages.BACK]
+      disabled: F || y,
+      children: (0, n.jsxs)("span", {
+        className: G.button,
+        children: [(0, n.jsx)(N.Z, {
+          className: G.arrow,
+          direction: N.Z.Directions.LEFT
+        }), U.Z.Messages.BACK]
       })
     }),
-    ea = (0, a.jsx)(E.Button, {
-      className: P.button,
+    en = (0, n.jsx)(E.Button, {
+      className: G.button,
       color: B ? E.Button.Colors.BRAND : E.Button.Colors.PRIMARY,
       look: E.Button.Looks.FILLED,
       size: E.Button.Sizes.SMALL,
       onClick: $,
-      disabled: H || F,
-      children: (0, a.jsxs)(r.animated.span, {
-        className: P.button,
+      disabled: F || y,
+      children: (0, n.jsxs)(r.animated.span, {
+        className: G.button,
         style: {
-          color: X
+          color: q
         },
-        children: [B ? U.default.Messages.NEXT : U.default.Messages.SKIP, (0, a.jsx)(S.default, {
-          className: P.arrow,
-          direction: S.default.Directions.RIGHT
+        children: [B ? U.Z.Messages.NEXT : U.Z.Messages.SKIP, (0, n.jsx)(N.Z, {
+          className: G.arrow,
+          direction: N.Z.Directions.RIGHT
         })]
       })
     });
-  return (0, a.jsx)(u.TransitionGroup, {
+  return (0, n.jsx)(d.W, {
     component: "div",
-    children: (0, a.jsx)(E.SlideIn, {
-      className: i()(P.noticeRegion),
-      children: (0, a.jsx)(r.animated.div, {
-        className: P.container,
+    children: (0, n.jsx)(E.SlideIn, {
+      className: a()(G.noticeRegion),
+      children: (0, n.jsx)(r.animated.div, {
+        className: G.container,
         style: {
-          backgroundColor: Q
+          backgroundColor: X
         },
-        children: (0, a.jsxs)("div", {
-          className: P.flexContainer,
-          ref: V,
-          children: [H ? (0, a.jsxs)("div", {
-            className: P.educationUpsellRoot,
-            children: [(0, a.jsx)("img", {
-              className: i()(P.wumpus, {
-                [P.animated]: !k
+        children: (0, n.jsxs)("div", {
+          className: G.flexContainer,
+          ref: H,
+          children: [F ? (0, n.jsxs)("div", {
+            className: G.educationUpsellRoot,
+            children: [(0, n.jsx)("img", {
+              className: a()(G.wumpus, {
+                [G.animated]: !w
               }),
-              src: s("33631"),
+              src: t(33631),
               alt: "wumpus"
-            }), (0, a.jsxs)("div", {
-              className: P.educationUpsell,
-              children: [et, (0, a.jsx)("div", {
-                className: P.educationUpsellArrow
+            }), (0, n.jsxs)("div", {
+              className: G.educationUpsell,
+              children: [es, (0, n.jsx)("div", {
+                className: G.educationUpsellArrow
               })]
             })]
-          }) : null, (0, a.jsx)(E.FocusRingScope, {
-            containerRef: V,
-            children: (0, a.jsxs)("div", {
-              className: P.actions,
-              children: [es, (0, a.jsxs)("div", {
-                className: P.next,
-                children: [F ? (0, a.jsx)(E.Text, {
+          }) : null, (0, n.jsx)(E.FocusRingScope, {
+            containerRef: H,
+            children: (0, n.jsxs)("div", {
+              className: G.actions,
+              children: [et, (0, n.jsxs)("div", {
+                className: G.next,
+                children: [y ? (0, n.jsx)(E.Text, {
                   variant: "text-sm/normal",
                   color: "status-warning",
-                  children: U.default.Messages.ONBOARDING_PROMPTS_INCOMPLETE
-                }) : null, J ? null : ea]
+                  children: U.Z.Messages.ONBOARDING_PROMPTS_INCOMPLETE
+                }) : null, Q ? null : en]
               })]
             })
           })]

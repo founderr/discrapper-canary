@@ -1,10 +1,9 @@
 "use strict";
-n.r(t);
-var r = n("686266"),
-  i = n("185490"),
-  a = n("49767"),
-  o = n("627324"),
-  s = n("759638");
+var r = n(686266),
+  i = n(185490),
+  a = n(49767),
+  o = n(627324),
+  s = n(759638);
 
 function u(e) {
   var t = -1,
@@ -14,4 +13,4 @@ function u(e) {
     this.set(r[0], r[1])
   }
 }
-u.prototype.clear = r.default, u.prototype.delete = i.default, u.prototype.get = a.default, u.prototype.has = o.default, u.prototype.set = s.default, t.default = u
+u.prototype.clear = r.Z, u.prototype.delete = i.Z, u.prototype.get = a.Z, u.prototype.has = o.Z, u.prototype.set = s.Z, t.Z = u

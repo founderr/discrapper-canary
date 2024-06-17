@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
-  setNewUser: function() {
-    return s
+n.d(t, {
+  H: function() {
+    return i
   },
-  setNewUserFlowCompleted: function() {
-    return l
+  c: function() {
+    return r
   }
 });
-var a = n("570140");
+var s = n(570140);
 
-function s(e) {
-  a.default.wait(() => a.default.dispatch({
+function r(e) {
+  s.Z.wait(() => s.Z.dispatch({
     type: "NUF_NEW_USER",
     newUserType: e
   }))
 }
 
-function l() {
-  a.default.wait(() => a.default.dispatch({
+function i() {
+  s.Z.wait(() => s.Z.dispatch({
     type: "NUF_COMPLETE"
   }))
 }

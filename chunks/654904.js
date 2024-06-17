@@ -1,47 +1,47 @@
 "use strict";
-n.r(t), n.d(t, {
-  getPreviewAvatar: function() {
-    return f
-  },
-  getPreviewName: function() {
-    return S
-  },
-  getPreviewProfileEffectId: function() {
-    return h
-  },
-  handleOpenSelectImageModal: function() {
+n.d(t, {
+  $r: function() {
     return I
   },
-  isColorDark: function() {
-    return A
+  DP: function() {
+    return N
   },
-  showFileSizeErrorModal: function() {
+  Ly: function() {
+    return S
+  },
+  SG: function() {
+    return h
+  },
+  Wf: function() {
     return T
+  },
+  ZT: function() {
+    return f
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("866442"),
-  s = n("481060"),
-  a = n("531643"),
-  o = n("768581"),
-  l = n("403182"),
-  u = n("51144"),
-  d = n("661543"),
-  _ = n("200299"),
-  c = n("486324"),
-  E = n("689938");
+var i = n(735250);
+n(470079);
+var r = n(866442),
+  s = n(481060),
+  o = n(531643),
+  a = n(768581),
+  l = n(403182),
+  u = n(51144),
+  _ = n(661543),
+  d = n(200299),
+  c = n(486324),
+  E = n(689938);
 
-function I(e, t, r, a) {
+function I(e, t, r, o) {
   (0, s.openModalLazy)(async () => {
     let {
       default: s
-    } = await Promise.all([n.e("99387"), n.e("89289")]).then(n.bind(n, "28130"));
+    } = await Promise.all([n.e("99387"), n.e("89289")]).then(n.bind(n, 28130));
     return n => (0, i.jsx)(s, {
-      filters: a,
-      maxFileSizeBytes: _.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
-      imageSpecifications: e === c.UploadTypes.BANNER && E.default.Messages.USER_SETTINGS_PROFILE_THEMES_BANNER_MODAL_SPECS,
-      onComplete: (n, i) => (0, d.maybeOpenProfilePreviewModal)({
+      filters: o,
+      maxFileSizeBytes: d.B,
+      imageSpecifications: e === c.pC.BANNER && E.Z.Messages.USER_SETTINGS_PROFILE_THEMES_BANNER_MODAL_SPECS,
+      onComplete: (n, i) => (0, _.j)({
         imageSrc: n,
         file: i,
         uploadType: e,
@@ -56,22 +56,22 @@ function I(e, t, r, a) {
 }
 
 function T() {
-  (0, a.openUploadError)({
-    title: E.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-    help: E.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
-      maxSize: (0, l.sizeString)(_.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
+  (0, o.openUploadError)({
+    title: E.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+    help: E.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
+      maxSize: (0, l.Ng)(d.B)
     })
   })
 }
 
-function f(e, t, n) {
+function h(e, t, n) {
   let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
   if (null != e) return e;
   let {
     size: r = 80,
     canAnimate: s = !0
-  } = i, a = null === e;
-  return a && null == t ? o.default.getDefaultAvatarURL(n.id, n.discriminator) : a || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, r, s) : n.getAvatarURL(null == t ? void 0 : t.guildId, r, s)
+  } = i, o = null === e;
+  return o && null == t ? a.ZP.getDefaultAvatarURL(n.id, n.discriminator) : o || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, r, s) : n.getAvatarURL(null == t ? void 0 : t.guildId, r, s)
 }
 
 function S(e) {
@@ -81,19 +81,19 @@ function S(e) {
     pendingGlobalName: i,
     user: r,
     guildMember: s
-  } = e, a = "" === n ? null : null != n ? n : null == s ? void 0 : s.nick, o = "" === i ? r.username : i;
-  return null !== (t = null != a ? a : o) && void 0 !== t ? t : u.default.getName(r)
+  } = e, o = "" === n ? null : null != n ? n : null == s ? void 0 : s.nick, a = "" === i ? r.username : i;
+  return null !== (t = null != o ? o : a) && void 0 !== t ? t : u.ZP.getName(r)
 }
 
-function h(e) {
+function f(e) {
   var t, n;
   let {
     pendingProfileEffectId: i,
     displayProfile: r
-  } = e, s = null == r ? void 0 : null === (t = r._userProfile) || void 0 === t ? void 0 : t.profileEffectId, a = null == r ? void 0 : null === (n = r._guildMemberProfile) || void 0 === n ? void 0 : n.profileEffectId, o = null === i;
-  return o && null != a ? s : o ? null : null != i ? i : null == r ? void 0 : r.profileEffectId
+  } = e, s = null == r ? void 0 : null === (t = r._userProfile) || void 0 === t ? void 0 : t.profileEffectId, o = null == r ? void 0 : null === (n = r._guildMemberProfile) || void 0 === n ? void 0 : n.profileEffectId, a = null === i;
+  return a && null != o ? s : a ? null : null != i ? i : null == r ? void 0 : r.profileEffectId
 }
 
-function A(e) {
-  return (null != e ? (0, r.getDarkness)(e) : 1) > .25
+function N(e) {
+  return (null != e ? (0, r.Bd)(e) : 1) > .25
 }

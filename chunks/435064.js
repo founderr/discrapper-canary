@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n("47120"), n("789020");
-var i, r = n("442837"),
-  s = n("570140"),
-  a = n("579806"),
-  o = n("594190"),
-  l = n("569545"),
-  u = n("314897"),
-  d = n("630388"),
-  _ = n("894694"),
-  c = n("356659"),
-  E = n("981631"),
-  I = n("37113");
+n(47120), n(789020);
+var i, r = n(442837),
+  s = n(570140),
+  o = n(579806),
+  a = n(594190),
+  l = n(569545),
+  u = n(314897),
+  _ = n(630388),
+  d = n(894694),
+  c = n(356659),
+  E = n(981631),
+  I = n(37113);
 
 function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -20,29 +20,29 @@ function T(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let f = "default",
+let h = "default",
   S = [],
-  h = [],
-  A = [],
-  m = 0,
-  N = null,
-  p = null,
-  O = {},
+  f = [],
+  N = [],
+  A = 0,
+  m = null,
+  O = null,
+  R = {},
   C = null,
-  R = null,
+  p = null,
   g = {},
   L = {
     clipsEnabled: !1,
-    storageLocation: f,
+    storageLocation: h,
     clipsQuality: {
-      resolution: I.ApplicationStreamResolutions.RESOLUTION_1080,
-      frameRate: I.ApplicationStreamFPS.FPS_30
+      resolution: I.LY.RESOLUTION_1080,
+      frameRate: I.ws.FPS_30
     },
-    clipsLength: c.ClipsLengthSettings.SECONDS_30,
+    clipsLength: c.OT.SECONDS_30,
     remindersEnabled: !0,
     decoupledClipsEnabled: !1,
     viewerClipsEnabled: !0,
-    viewerConnectivity: c.ClipsViewerConnectivitySettings.ALL
+    viewerConnectivity: c.dJ.ALL
   },
   v = {
     clipsSettings: L,
@@ -59,19 +59,19 @@ let f = "default",
     }
   };
 async function D() {
-  if (v.clipsSettings.storageLocation !== f || null == a.default || null == a.default.remoteApp) return;
-  let e = await a.default.remoteApp.getPath("documents");
-  v.clipsSettings.storageLocation = e, y.emitChange()
+  if (v.clipsSettings.storageLocation !== h || null == o.Z || null == o.Z.remoteApp) return;
+  let e = await o.Z.remoteApp.getPath("documents");
+  v.clipsSettings.storageLocation = e, P.emitChange()
 }
-class M extends(i = r.default.DeviceSettingsStore) {
+class M extends(i = r.ZP.DeviceSettingsStore) {
   initialize(e) {
-    null != e && (v = e), D(), this.waitFor(o.default)
+    null != e && (v = e), D(), this.waitFor(a.ZP)
   }
   getClips() {
-    return h
+    return f
   }
   getPendingClips() {
-    return A
+    return N
   }
   getUserAgnosticState() {
     return v
@@ -80,13 +80,13 @@ class M extends(i = r.default.DeviceSettingsStore) {
     return v.clipsSettings
   }
   getLastClipsSession() {
-    return p
+    return O
   }
   getClipsWarningShown(e) {
-    return N === e
+    return m === e
   }
   getActiveAnimation() {
-    return R
+    return p
   }
   getStreamClipAnimations(e) {
     var t;
@@ -105,22 +105,22 @@ class M extends(i = r.default.DeviceSettingsStore) {
     return v.hardwareClassificationVersion
   }
   getIsAtMaxSaveClipOperations() {
-    return m >= c.MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS
+    return A >= c.Kw
   }
   getLastClipsError() {
     return C
   }
   isClipsEnabledForUser(e) {
     var t, n;
-    return null !== (n = null === (t = O[e]) || void 0 === t ? void 0 : t.clipsEnabled) && void 0 !== n && n
+    return null !== (n = null === (t = R[e]) || void 0 === t ? void 0 : t.clipsEnabled) && void 0 !== n && n
   }
   isVoiceRecordingAllowedForUser(e) {
     var t, n;
-    return null !== (n = null === (t = O[e]) || void 0 === t ? void 0 : t.allowVoiceRecording) && void 0 !== n && n
+    return null !== (n = null === (t = R[e]) || void 0 === t ? void 0 : t.allowVoiceRecording) && void 0 !== n && n
   }
   isViewerClippingAllowedForUser(e) {
     var t, n;
-    return null !== (n = null === (t = O[e]) || void 0 === t ? void 0 : t.allowAnyViewerClips) && void 0 !== n && n
+    return null !== (n = null === (t = R[e]) || void 0 === t ? void 0 : t.allowAnyViewerClips) && void 0 !== n && n
   }
   hasClips() {
     return v.hasClips
@@ -177,7 +177,7 @@ T(M, "displayName", "ClipsStore"), T(M, "persistKey", "ClipsStore"), T(M, "migra
   }
 }, e => {
   var t;
-  let i = null === (t = n("131951").default) || void 0 === t ? void 0 : t.getHardwareH264();
+  let i = null === (t = n(131951).Z) || void 0 === t ? void 0 : t.getHardwareH264();
   return {
     ...e,
     clipsSettings: {
@@ -217,7 +217,7 @@ T(M, "displayName", "ClipsStore"), T(M, "persistKey", "ClipsStore"), T(M, "migra
     numberOfTimesDismissed: 0
   }
 })]);
-let y = new M(s.default, {
+let P = new M(s.Z, {
   CLIPS_SETTINGS_UPDATE: function(e) {
     let {
       settings: t
@@ -235,32 +235,32 @@ let y = new M(s.default, {
     let {
       clip: i
     } = e;
-    m = Math.max(m - 1, 0), p = {
+    A = Math.max(A - 1, 0), O = {
       applicationName: i.applicationName,
       ended: !1,
-      ...p,
-      newClipIds: [...null !== (t = null == p ? void 0 : p.newClipIds) && void 0 !== t ? t : [], i.id]
+      ...O,
+      newClipIds: [...null !== (t = null == O ? void 0 : O.newClipIds) && void 0 !== t ? t : [], i.id]
     }, v = {
       ...v,
       newClipIds: [...null !== (n = v.newClipIds) && void 0 !== n ? n : [], i.id]
-    }, A = A.filter(e => {
+    }, N = N.filter(e => {
       let {
         id: t
       } = e;
       return t !== i.id
-    }), h = [i, ...h], v.hasClips = !0
+    }), f = [i, ...f], v.hasClips = !0
   },
   CLIPS_SAVE_CLIP_PLACEHOLDER: function(e) {
     let {
       clip: t
     } = e;
-    A = [t, ...A]
+    N = [t, ...N]
   },
   CLIPS_SAVE_CLIP_PLACEHOLDER_ERROR: function(e) {
     let {
       clipId: t
     } = e;
-    A = A.filter(e => {
+    N = N.filter(e => {
       let {
         id: n
       } = e;
@@ -273,24 +273,24 @@ let y = new M(s.default, {
       streamKey: n,
       thumbnail: i
     } = e;
-    if (m += 1, v.hasTakenDecoupledClip = v.hasTakenDecoupledClip || t === c.ClipSaveTypes.DECOUPLED, null != n && null != i) {
+    if (A += 1, v.hasTakenDecoupledClip = v.hasTakenDecoupledClip || t === c.X9.DECOUPLED, null != n && null != i) {
       var r;
       let e = Date.now();
-      R = null != R ? R : e, g[n] = [...null !== (r = g[n]) && void 0 !== r ? r : [], {
+      p = null != p ? p : e, g[n] = [...null !== (r = g[n]) && void 0 !== r ? r : [], {
         timestamp: e,
         thumbnail: i
       }]
     }
   },
   CLIPS_SAVE_CLIP_ERROR: function() {
-    m = Math.max(m - 1, 0)
+    A = Math.max(A - 1, 0)
   },
   CLIPS_SAVE_ANIMATION_END: function(e) {
     let {
       streamKey: t,
       timestamp: n
     } = e;
-    R === n && (R = null), null == n ? g[t] = [] : g[t] = g[t].filter(e => e.timestamp !== n)
+    p === n && (p = null), null == n ? g[t] = [] : g[t] = g[t].filter(e => e.timestamp !== n)
   },
   STREAM_START: function(e) {
     let {
@@ -301,11 +301,11 @@ let y = new M(s.default, {
     let i = t;
     if (null != n) {
       var r;
-      let e = o.default.getGameForPID(n);
+      let e = a.ZP.getGameForPID(n);
       i = null !== (r = null == e ? void 0 : e.name) && void 0 !== r ? r : i
     }
     if (null == i || "" === i) return !1;
-    p = {
+    O = {
       applicationName: i,
       newClipIds: [],
       ended: !1
@@ -315,24 +315,24 @@ let y = new M(s.default, {
     let {
       streamKey: t
     } = e;
-    if (R = null, g[t] = [], null == p || (0, l.decodeStreamKey)(t).ownerId !== u.default.getId()) return !1;
-    p = 0 === p.newClipIds.length ? null : {
-      ...p,
+    if (p = null, g[t] = [], null == O || (0, l.my)(t).ownerId !== u.default.getId()) return !1;
+    O = 0 === O.newClipIds.length ? null : {
+      ...O,
       ended: !0
     }
   },
   CLIPS_CLEAR_CLIPS_SESSION: function() {
-    if (null == p) return !1;
-    p = null
+    if (null == O) return !1;
+    O = null
   },
   CLIPS_CLEAR_NEW_CLIP_IDS: function() {
     v.newClipIds = []
   },
   CLIPS_LOAD_DIRECTORY_SUCCESS: function(e) {
-    v.hasClips = e.clips.length > 0, h = e.clips
+    v.hasClips = e.clips.length > 0, f = e.clips
   },
   CLIPS_DELETE_CLIP: function(e) {
-    0 === (h = h.filter(t => {
+    0 === (f = f.filter(t => {
       let {
         filepath: n
       } = t;
@@ -343,45 +343,45 @@ let y = new M(s.default, {
     let {
       clip: t
     } = e;
-    for (let [e, n] of h.entries())
+    for (let [e, n] of f.entries())
       if (n.id === t.id) {
-        h[e] = t, h = [...h];
+        f[e] = t, f = [...f];
         return
       }
   },
   RTC_CONNECTION_FLAGS: function(e) {
-    O[e.userId] = {
-      clipsEnabled: (0, d.hasFlag)(e.flags, E.VoiceFlags.CLIPS_ENABLED),
-      allowVoiceRecording: (0, d.hasFlag)(e.flags, E.VoiceFlags.ALLOW_VOICE_RECORDING),
-      allowAnyViewerClips: (0, d.hasFlag)(e.flags, E.VoiceFlags.ALLOW_ANY_VIEWER_CLIPS)
+    R[e.userId] = {
+      clipsEnabled: (0, _.yE)(e.flags, E.BVn.CLIPS_ENABLED),
+      allowVoiceRecording: (0, _.yE)(e.flags, E.BVn.ALLOW_VOICE_RECORDING),
+      allowAnyViewerClips: (0, _.yE)(e.flags, E.BVn.ALLOW_ANY_VIEWER_CLIPS)
     }
   },
   CLIPS_SHOW_CALL_WARNING: function(e) {
     let {
       channelId: t
     } = e;
-    N = t
+    m = t
   },
   VOICE_CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    t !== N && (N = null)
+    t !== m && (m = null)
   },
   CLIPS_CLASSIFY_HARDWARE: function(e) {
     let {
       classification: t
     } = e, n = v.hardwareClassification;
-    v.hardwareClassificationVersion = c.CLIPS_HARDWARE_CLASSIFICATION_VERSION, v.hardwareClassification = t, v.hardwareClassification === _.ClipsHardwareClassification.MEETS_AUTO_ENABLE && n !== _.ClipsHardwareClassification.MEETS_AUTO_ENABLE && (v.clipsSettings.clipsEnabled = !0);
+    v.hardwareClassificationVersion = c.WM, v.hardwareClassification = t, v.hardwareClassification === d.x.MEETS_AUTO_ENABLE && n !== d.x.MEETS_AUTO_ENABLE && (v.clipsSettings.clipsEnabled = !0);
     let i = v.hardwareClassificationForDecoupled;
-    v.hardwareClassificationForDecoupled = t, v.hardwareClassificationForDecoupled === _.ClipsHardwareClassification.MEETS_AUTO_ENABLE && i !== _.ClipsHardwareClassification.MEETS_AUTO_ENABLE && v.clipsSettings.clipsEnabled && (v.clipsSettings.decoupledClipsEnabled = !0)
+    v.hardwareClassificationForDecoupled = t, v.hardwareClassificationForDecoupled === d.x.MEETS_AUTO_ENABLE && i !== d.x.MEETS_AUTO_ENABLE && v.clipsSettings.clipsEnabled && (v.clipsSettings.decoupledClipsEnabled = !0)
   },
   CLIPS_INIT: function(e) {
     let {
       applicationName: t
     } = e;
     if (C = null, !v.clipsSettings.clipsEnabled) return !1;
-    p = {
+    O = {
       applicationName: t,
       newClipIds: [],
       ended: !1
@@ -398,11 +398,11 @@ let y = new M(s.default, {
       educationType: t
     } = e;
     switch (t) {
-      case c.ClipsUserEducationType.Error:
+      case c.D5.Error:
         C = null;
         break;
-      case c.ClipsUserEducationType.Disabled:
-      case c.ClipsUserEducationType.Enabled:
+      case c.D5.Disabled:
+      case c.D5.Enabled:
         v.clipsEducationState.dismissedAt = Date.now(), v.clipsEducationState.numberOfGamesLaunchedSinceDismissal = 0, v.clipsEducationState.numberOfTimesDismissed += 1
     }
   },
@@ -413,4 +413,4 @@ let y = new M(s.default, {
     t.length > 0 && (v.clipsEducationState.numberOfGamesLaunchedSinceDismissal += 1)
   }
 });
-t.default = y
+t.Z = P

@@ -1,62 +1,61 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("120356"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("481060"),
-  o = n("822545");
-t.default = function(e) {
+  o = n(481060),
+  a = n(822545);
+t.Z = function(e) {
   let {
     className: t,
     compact: n = !1,
     contentOnly: r = !1,
     zalgo: l = !0,
     disableInteraction: u = !1,
-    childrenRepliedMessage: d,
-    childrenExecutedCommand: _,
+    childrenRepliedMessage: _,
+    childrenExecutedCommand: d,
     childrenHeader: c,
     childrenSystemMessage: E,
     childrenButtons: I,
     childrenMessageContent: T,
-    childrenAccessories: f,
+    childrenAccessories: h,
     messageRef: S,
-    focusProps: h = {
+    focusProps: f = {
       offset: {
         left: 4,
         right: 4
       }
     },
-    hasThread: A,
-    isSystemMessage: m,
-    hasReply: N,
-    ...p
-  } = e, O = (0, i.jsx)(a.FocusRing, {
-    ...h,
+    hasThread: N,
+    isSystemMessage: A,
+    hasReply: m,
+    ...O
+  } = e, R = (0, i.jsx)(o.FocusRing, {
+    ...f,
     children: (0, i.jsxs)("div", {
       className: s()(t, {
-        [o.wrapper]: !0,
-        [o.contentOnly]: r,
-        [o.compact]: n,
-        [o.cozy]: !n,
-        [o.zalgo]: l,
-        [o.hasThread]: A,
-        [o.isSystemMessage]: m,
-        [o.hasReply]: N
+        [a.wrapper]: !0,
+        [a.contentOnly]: r,
+        [a.compact]: n,
+        [a.cozy]: !n,
+        [a.zalgo]: l,
+        [a.hasThread]: N,
+        [a.isSystemMessage]: A,
+        [a.hasReply]: m
       }),
       ref: S,
-      ...p,
+      ...O,
       role: "article",
-      children: [d, _, (0, i.jsxs)("div", {
-        className: o.contents,
+      children: [_, d, (0, i.jsxs)("div", {
+        className: a.contents,
         children: [E, c, null == E && T]
-      }), f, null != I ? (0, i.jsx)("div", {
-        className: o.buttonContainer,
+      }), h, null != I ? (0, i.jsx)("div", {
+        className: a.buttonContainer,
         children: I
       }) : null]
     })
   });
-  return u ? (0, i.jsx)(a.FocusBlock, {
-    children: O
-  }) : O
+  return u ? (0, i.jsx)(o.FocusBlock, {
+    children: R
+  }) : R
 }

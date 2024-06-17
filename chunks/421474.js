@@ -13,11 +13,11 @@ function r(e) {
     skuId: i
   }
 }
-n.r(t), n.d(t, {
-  makeStorefrontSKUCodedLink: function() {
-    return i
-  },
-  parseStorefrontSkuCodedLink: function() {
+n.d(t, {
+  Q: function() {
     return r
+  },
+  l: function() {
+    return i
   }
-}), n("47120")
+}), n(47120)

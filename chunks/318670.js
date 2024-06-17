@@ -1,9 +1,8 @@
 "use strict";
-n.r(t);
-var r = n("345114"),
-  i = n("806159"),
-  a = n("738562");
-t.default = function(e, t, n, o, s, u) {
+var r = n(345114),
+  i = n(806159),
+  a = n(738562);
+t.Z = function(e, t, n, o, s, u) {
   var c = 1 & n,
     l = e.length,
     d = t.length;
@@ -13,7 +12,7 @@ t.default = function(e, t, n, o, s, u) {
   if (f && p) return f == t && p == e;
   var h = -1,
     m = !0,
-    g = 2 & n ? new r.default : void 0;
+    g = 2 & n ? new r.Z : void 0;
   for (u.set(e, t), u.set(t, e); ++h < l;) {
     var _ = e[h],
       b = t[h];
@@ -24,8 +23,8 @@ t.default = function(e, t, n, o, s, u) {
       break
     }
     if (g) {
-      if (!(0, i.default)(t, function(e, t) {
-          if (!(0, a.default)(g, t) && (_ === e || s(_, e, n, o, u))) return g.push(t)
+      if (!(0, i.Z)(t, function(e, t) {
+          if (!(0, a.Z)(g, t) && (_ === e || s(_, e, n, o, u))) return g.push(t)
         })) {
         m = !1;
         break

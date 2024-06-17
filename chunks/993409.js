@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return u
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("120356"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("693789"),
-  o = n("481060"),
-  l = n("47200");
+  o = n(693789),
+  a = n(481060),
+  l = n(47200);
 
 function u(e) {
   let {
@@ -18,8 +18,8 @@ function u(e) {
     text: n,
     icon: r,
     tooltipDelay: u,
-    tooltipClassName: d,
-    className: _,
+    tooltipClassName: _,
+    className: d,
     innerClassName: c,
     ...E
   } = e, I = {
@@ -27,18 +27,18 @@ function u(e) {
     [l.icon]: "icon" === t,
     [l.banner]: "banner" === t
   };
-  return (0, i.jsx)(o.TooltipContainer, {
+  return (0, i.jsx)(a.TooltipContainer, {
     text: n,
     "aria-label": E["aria-label"],
     delay: u,
-    tooltipClassName: d,
+    tooltipClassName: _,
     shouldShow: "text" !== t,
-    children: (0, i.jsxs)(a.Button, {
-      className: s()(l.button, I, _),
+    children: (0, i.jsxs)(o.zx, {
+      className: s()(l.button, I, d),
       innerClassName: s()(l.buttonInner, I, c),
-      color: s()(a.ButtonColors.PRIMARY, l.color, I),
-      look: a.Button.Looks.FILLED,
-      size: "text" === t ? a.Button.Sizes.SMALL : a.Button.Sizes.NONE,
+      color: s()(o.Tt.PRIMARY, l.color, I),
+      look: o.zx.Looks.FILLED,
+      size: "text" === t ? o.zx.Sizes.SMALL : o.zx.Sizes.NONE,
       grow: "text" === t,
       ...E,
       children: [null != r && (0, i.jsx)(r, {

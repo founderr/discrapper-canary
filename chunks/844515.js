@@ -1,13 +1,11 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("844303"),
-  o = n("464854");
-t.default = (0, a.handleHover)(function(e) {
+var r = n(470079),
+  i = n(844303),
+  a = n(464854);
+t.Z = (0, i.handleHover)(function(e) {
   var t = e.hover,
     n = e.color,
-    r = e.onClick,
+    o = e.onClick,
     s = e.onSwatchHover,
     u = {
       position: "relative",
@@ -15,7 +13,7 @@ t.default = (0, a.handleHover)(function(e) {
       outline: "2px solid #fff",
       boxShadow: "0 0 5px 2px rgba(0,0,0,0.25)"
     },
-    c = (0, a.default)({
+    c = (0, i.default)({
       default: {
         swatch: {
           width: "25px",
@@ -29,11 +27,11 @@ t.default = (0, a.handleHover)(function(e) {
     }, {
       hover: t
     });
-  return i().createElement("div", {
+  return r.createElement("div", {
     style: c.swatch
-  }, i().createElement(o.Swatch, {
+  }, r.createElement(a.m4, {
     color: n,
-    onClick: r,
+    onClick: o,
     onHover: s,
     focusStyle: u
   }))

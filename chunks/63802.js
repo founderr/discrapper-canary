@@ -1,52 +1,52 @@
 "use strict";
-n.r(t), n.d(t, {
-  ButtonSparkleGroup: function() {
-    return E
-  },
-  PREMIUM_NEW_TIER_2_SVG_GRADIENT_ID: function() {
-    return _
-  },
-  PREMIUM_OLD_TIER_2_SVG_GRADIENT_ID: function() {
+n.d(t, {
+  Qi: function() {
     return c
   },
-  SparkleStar: function() {
+  R9: function() {
     return I
+  },
+  l_: function() {
+    return d
+  },
+  t: function() {
+    return E
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("120356"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("780384"),
-  o = n("410030"),
-  l = n("325767"),
-  u = n("474936"),
-  d = n("646541");
-let _ = "premium_new_tier_2_gradient",
+  o = n(780384),
+  a = n(410030),
+  l = n(325767),
+  u = n(474936),
+  _ = n(646541);
+let d = "premium_new_tier_2_gradient",
   c = "premium_old_tier_2_gradient";
 
 function E(e) {
   let {
-    tier: t = u.PremiumTypes.TIER_2
-  } = e, n = (0, o.default)(), r = (0, a.isThemeLight)(n);
+    tier: t = u.p9.TIER_2
+  } = e, n = (0, a.ZP)(), r = (0, o.ap)(n);
   return (0, i.jsxs)(i.Fragment, {
     children: [!r && (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)("div", {
-        className: s()(d.rimGlowVertical, {
-          [d.rimGlowVerticalTier0]: t === u.PremiumTypes.TIER_0,
-          [d.rimGlowVerticalTier2]: t === u.PremiumTypes.TIER_2
+        className: s()(_.rimGlowVertical, {
+          [_.rimGlowVerticalTier0]: t === u.p9.TIER_0,
+          [_.rimGlowVerticalTier2]: t === u.p9.TIER_2
         })
       }), (0, i.jsx)(I, {
-        foreground: d.buttonSparkleStar1
+        foreground: _.buttonSparkleStar1
       })]
     }), (0, i.jsx)(I, {
-      foreground: d.buttonSparkleStar2
+      foreground: _.buttonSparkleStar2
     }), (0, i.jsx)(I, {
-      foreground: d.buttonSparkleStar3
+      foreground: _.buttonSparkleStar3
     }), (0, i.jsx)(I, {
-      foreground: d.buttonSparkleStar4
+      foreground: _.buttonSparkleStar4
     }), (0, i.jsx)(I, {
-      foreground: d.buttonSparkleStar5
+      foreground: _.buttonSparkleStar5
     })]
   })
 }
@@ -57,11 +57,11 @@ function I(e) {
     height: n = 13,
     color: r = "white",
     foreground: s,
-    ...a
+    ...o
   } = e;
   return (0, i.jsxs)("svg", {
-    ...(0, l.default)({
-      ...a
+    ...(0, l.Z)({
+      ...o
     }),
     preserveAspectRatio: "none",
     width: t,
@@ -71,7 +71,7 @@ function I(e) {
     xmlns: "http://www.w3.org/2000/svg",
     children: [(0, i.jsxs)("defs", {
       children: [(0, i.jsxs)("linearGradient", {
-        id: _,
+        id: d,
         x1: "0%",
         y1: "0%",
         x2: "100%",

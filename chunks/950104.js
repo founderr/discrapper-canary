@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
-  WCAGContrastRatios: function() {
+n.d(t, {
+  Qg: function() {
+    return a
+  },
+  S3: function() {
     return s
   },
-  darkenColor: function() {
+  r5: function() {
     return l
-  },
-  getContrastingColor: function() {
-    return o
   }
-}), n("47120"), n("411104");
-var i = n("688619"),
+}), n(47120), n(411104);
+var i = n(688619),
   r = n.n(i);
 let s = {
   NonText: 3,
@@ -18,33 +18,33 @@ let s = {
   HighContrastText: 7
 };
 
-function a(e) {
+function o(e) {
   let [t, n, i, r] = e.rgba();
   return "rgba(".concat(t, ", ").concat(n, ", ").concat(i, ", ").concat(r, ")")
 }
 
-function o(e) {
+function a(e) {
   var t, n, i;
-  let o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-    l = null !== (t = o.contrastRatio) && void 0 !== t ? t : s.NonText,
-    u = null !== (n = o.tolerance) && void 0 !== n ? n : 3,
-    d = r()(null !== (i = o.base) && void 0 !== i ? i : e),
-    _ = r()(e),
-    c = d.luminance(),
-    E = _,
+  let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+    l = null !== (t = a.contrastRatio) && void 0 !== t ? t : s.NonText,
+    u = null !== (n = a.tolerance) && void 0 !== n ? n : 3,
+    _ = r()(null !== (i = a.base) && void 0 !== i ? i : e),
+    d = r()(e),
+    c = _.luminance(),
+    E = d,
     I = l + u,
-    T = r().contrast(d, _),
-    f = 100;
-  for (; f-- > 0;) {
+    T = r().contrast(_, d),
+    h = 100;
+  for (; h-- > 0;) {
     let e = T < l,
       t = T > I;
     if (!e && !t) break;
     let n = E.luminance() > c;
-    E = t && n || e && !n ? E.darken() : E.brighten(), T = r().contrast(d, E)
+    E = t && n || e && !n ? E.darken() : E.brighten(), T = r().contrast(_, E)
   }
-  return a(E)
+  return o(E)
 }
 
 function l(e, t) {
-  return a(r()(e).darken(t))
+  return o(r()(e).darken(t))
 }

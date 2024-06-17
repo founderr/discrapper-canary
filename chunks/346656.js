@@ -1,21 +1,20 @@
 "use strict";
-n.r(t);
-var i, r = n("735250"),
-  s = n("470079"),
-  a = n("120356"),
-  o = n.n(a),
-  l = n("613828"),
-  u = n("442837"),
-  d = n("692547"),
-  _ = n("481060"),
-  c = n("891819"),
-  E = n("451478"),
-  I = n("956664"),
-  T = n("153066"),
-  f = n("940627"),
-  S = n("794647");
+var i, r = n(735250),
+  s = n(470079),
+  o = n(120356),
+  a = n.n(o),
+  l = n(613828),
+  u = n(442837),
+  _ = n(692547),
+  d = n(481060),
+  c = n(891819),
+  E = n(451478),
+  I = n(956664),
+  T = n(153066),
+  h = n(940627),
+  S = n(794647);
 
-function h(e, t, n) {
+function f(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -23,7 +22,7 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = {
+let N = {
     SMOL: "Smol",
     MINI: "Mini",
     SMALLER: "Smaller",
@@ -33,27 +32,27 @@ let A = {
     LARGER: "Larger",
     XLARGE: "XLarge"
   },
-  m = {
-    [A.SMOL]: 16,
-    [A.MINI]: 20,
-    [A.SMALLER]: 24,
-    [A.SMALL]: 30,
-    [A.MEDIUM]: 40,
-    [A.LARGE]: 50,
-    [A.LARGER]: 64,
-    [A.XLARGE]: 100
+  A = {
+    [N.SMOL]: 16,
+    [N.MINI]: 20,
+    [N.SMALLER]: 24,
+    [N.SMALL]: 30,
+    [N.MEDIUM]: 40,
+    [N.LARGE]: 50,
+    [N.LARGER]: 64,
+    [N.XLARGE]: 100
   },
-  N = {
-    [A.SMOL]: [10, 10, 8, 6, 6, 4],
-    [A.MINI]: [12, 12, 10, 10, 8, 6, 4],
-    [A.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
-    [A.SMALL]: [14, 14, 12, 12, 10, 8, 6],
-    [A.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
-    [A.LARGE]: [18, 18, 16, 16, 14, 12, 10],
-    [A.LARGER]: [19, 19, 17, 17, 15, 13, 11],
-    [A.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
+  m = {
+    [N.SMOL]: [10, 10, 8, 6, 6, 4],
+    [N.MINI]: [12, 12, 10, 10, 8, 6, 4],
+    [N.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
+    [N.SMALL]: [14, 14, 12, 12, 10, 8, 6],
+    [N.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
+    [N.LARGE]: [18, 18, 16, 16, 14, 12, 10],
+    [N.LARGER]: [19, 19, 17, 17, 15, 13, 11],
+    [N.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
   };
-class p extends s.PureComponent {
+class O extends s.PureComponent {
   renderAcronym() {
     let {
       guild: e,
@@ -72,7 +71,7 @@ class p extends s.PureComponent {
       badgeTooltipColor: i,
       badgeTooltipDelay: s
     } = this.props;
-    return e && null != t.hasFeature ? (0, r.jsx)(f.default, {
+    return e && null != t.hasFeature ? (0, r.jsx)(h.Z, {
       className: S.guildIconBadge,
       guild: t,
       badgeStrokeColor: n,
@@ -86,34 +85,34 @@ class p extends s.PureComponent {
       guild: n,
       className: i,
       showBadge: s,
-      active: a,
+      active: o,
       size: l,
       style: u = {},
-      textScale: d,
+      textScale: _,
       showTooltip: c,
       tooltipPosition: E,
       onClick: I,
-      to: f,
-      badgeStrokeColor: h,
-      animate: A,
-      tabIndex: m,
-      iconSrc: p,
-      "aria-hidden": O,
+      to: h,
+      badgeStrokeColor: f,
+      animate: N,
+      tabIndex: A,
+      iconSrc: O,
+      "aria-hidden": R,
       ...C
-    } = this.props, R = N[l], g = null != I ? _.Clickable : "div";
+    } = this.props, p = m[l], g = null != I ? d.Clickable : "div";
     return (0, r.jsxs)(g, {
-      className: o()(S.icon, i, (0, T.getClass)(S, "iconSize", l), {
-        [null !== (e = (0, T.getClass)(S, "iconActive", l)) && void 0 !== e ? e : ""]: a,
-        [S.iconInactive]: !a,
+      className: a()(S.icon, i, (0, T.l)(S, "iconSize", l), {
+        [null !== (e = (0, T.l)(S, "iconActive", l)) && void 0 !== e ? e : ""]: o,
+        [S.iconInactive]: !o,
         [S.noIcon]: null == n.icon
       }),
-      "aria-hidden": O,
+      "aria-hidden": R,
       style: null == n.icon ? {
-        fontSize: (null !== (t = R[n.acronym.length]) && void 0 !== t ? t : R[R.length - 1]) * d,
+        fontSize: (null !== (t = p[n.acronym.length]) && void 0 !== t ? t : p[p.length - 1]) * _,
         ...u
       } : u,
-      onClick: null != f || null == I ? void 0 : I,
-      tabIndex: m,
+      onClick: null != h || null == I ? void 0 : I,
+      tabIndex: A,
       ...C,
       children: [this.renderAcronym(), this.renderBadge()]
     })
@@ -124,7 +123,7 @@ class p extends s.PureComponent {
       showTooltip: t,
       tooltipPosition: n
     } = this.props;
-    return t ? (0, r.jsx)(_.Tooltip, {
+    return t ? (0, r.jsx)(d.Tooltip, {
       text: e.name,
       position: n,
       "aria-label": !1,
@@ -141,7 +140,7 @@ class p extends s.PureComponent {
       tabIndex: i,
       "aria-hidden": s
     } = this.props;
-    return null != e ? (0, r.jsx)(l.Link, {
+    return null != e ? (0, r.jsx)(l.rU, {
       "aria-hidden": s,
       to: {
         pathname: e,
@@ -155,7 +154,7 @@ class p extends s.PureComponent {
     }) : this.renderTooltip()
   }
 }
-let O = u.default.connectStores([E.default], e => {
+let R = u.ZP.connectStores([E.Z], e => {
   let {
     guild: t,
     animate: n,
@@ -166,26 +165,26 @@ let O = u.default.connectStores([E.default], e => {
   return {
     style: {
       ...r,
-      backgroundImage: (0, I.makeCssUrlString)(null != i ? i : t.getIconURL(m[s], n && E.default.isFocused()))
+      backgroundImage: (0, I.rv)(null != i ? i : t.getIconURL(A[s], n && E.Z.isFocused()))
     }
   }
-})((0, c.backgroundImagePreloader)(e => (0, r.jsx)(p, {
+})((0, c.N)(e => (0, r.jsx)(O, {
   ...e
 })));
 class C extends(i = s.PureComponent) {
   render() {
-    return (0, r.jsx)(O, {
+    return (0, r.jsx)(R, {
       ...this.props
     })
   }
 }
-h(C, "Sizes", A), h(C, "defaultProps", {
-  size: A.LARGE,
+f(C, "Sizes", N), f(C, "defaultProps", {
+  size: N.LARGE,
   textScale: 1,
   showBadge: !1,
   showTooltip: !1,
   active: !1,
   tooltipPosition: "top",
-  badgeStrokeColor: d.default.unsafe_rawColors.WHITE_500.css,
+  badgeStrokeColor: _.Z.unsafe_rawColors.WHITE_500.css,
   animate: !1
-}), t.default = C
+}), t.Z = C

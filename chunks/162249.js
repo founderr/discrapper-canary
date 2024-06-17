@@ -1,18 +1,16 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("844303"),
-  o = n("230866"),
-  s = n("827622"),
-  u = Object.assign || function(e) {
+var r = n(470079),
+  i = n(844303),
+  a = n(230866),
+  o = n(827622),
+  s = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
       var n = arguments[t];
       for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
     }
     return e
   },
-  c = function() {
+  u = function() {
     function e(e, t) {
       for (var n = 0; n < t.length; n++) {
         var r = t[n];
@@ -24,18 +22,18 @@ var r = n("470079"),
     }
   }();
 
-function l(e, t) {
+function c(e, t) {
   if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
   return t && ("object" == typeof t || "function" == typeof t) ? t : e
 }
-var d = function(e) {
+var l = function(e) {
   function t() {
     ! function(e, t) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
     }(this, t);
-    for (var e, n, r, i = arguments.length, a = Array(i), s = 0; s < i; s++) a[s] = arguments[s];
-    return n = r = l(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(a))), r.handleChange = function(e) {
-      var t = o.calculateChange(e, r.props.hsl, r.props.direction, r.props.a, r.container);
+    for (var e, n, r, i = arguments.length, o = Array(i), s = 0; s < i; s++) o[s] = arguments[s];
+    return n = r = c(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o))), r.handleChange = function(e) {
+      var t = a.T(e, r.props.hsl, r.props.direction, r.props.a, r.container);
       t && "function" == typeof r.props.onChange && r.props.onChange(t, e)
     }, r.handleMouseDown = function(e) {
       r.handleChange(e), window.addEventListener("mousemove", r.handleChange), window.addEventListener("mouseup", r.handleMouseUp)
@@ -43,7 +41,7 @@ var d = function(e) {
       r.unbindEventListeners()
     }, r.unbindEventListeners = function() {
       window.removeEventListener("mousemove", r.handleChange), window.removeEventListener("mouseup", r.handleMouseUp)
-    }, l(r, n)
+    }, c(r, n)
   }
   return ! function(e, t) {
     if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function, not " + typeof t);
@@ -55,7 +53,7 @@ var d = function(e) {
         configurable: !0
       }
     }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-  }(t, e), c(t, [{
+  }(t, e), u(t, [{
     key: "componentWillUnmount",
     value: function() {
       this.unbindEventListeners()
@@ -65,7 +63,7 @@ var d = function(e) {
     value: function() {
       var e = this,
         t = this.props.rgb,
-        n = (0, a.default)({
+        n = (0, i.default)({
           default: {
             alpha: {
               absolute: "0px 0px 0px 0px",
@@ -110,20 +108,20 @@ var d = function(e) {
               top: 100 * t.a + "%"
             }
           },
-          overwrite: u({}, this.props.style)
+          overwrite: s({}, this.props.style)
         }, {
           vertical: "vertical" === this.props.direction,
           overwrite: !0
         });
-      return i().createElement("div", {
+      return r.createElement("div", {
         style: n.alpha
-      }, i().createElement("div", {
+      }, r.createElement("div", {
         style: n.checkboard
-      }, i().createElement(s.default, {
+      }, r.createElement(o.Z, {
         renderers: this.props.renderers
-      })), i().createElement("div", {
+      })), r.createElement("div", {
         style: n.gradient
-      }), i().createElement("div", {
+      }), r.createElement("div", {
         style: n.container,
         ref: function(t) {
           return e.container = t
@@ -131,12 +129,12 @@ var d = function(e) {
         onMouseDown: this.handleMouseDown,
         onTouchMove: this.handleChange,
         onTouchStart: this.handleChange
-      }, i().createElement("div", {
+      }, r.createElement("div", {
         style: n.pointer
-      }, this.props.pointer ? i().createElement(this.props.pointer, this.props) : i().createElement("div", {
+      }, this.props.pointer ? r.createElement(this.props.pointer, this.props) : r.createElement("div", {
         style: n.slider
       }))))
     }
   }]), t
 }(r.PureComponent || r.Component);
-t.default = d
+t.Z = l

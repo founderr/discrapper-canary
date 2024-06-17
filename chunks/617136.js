@@ -1,36 +1,36 @@
 "use strict";
-n.r(t), n.d(t, {
-  QuestContentCTA: function() {
-    return r
-  },
-  getContentProperties: function() {
+n.d(t, {
+  _3: function() {
     return f
   },
-  getQuestContentName: function() {
+  _b: function() {
     return E
   },
-  getQuestStatus: function() {
-    return I
+  dA: function() {
+    return S
   },
-  trackQuestContentClicked: function() {
+  jZ: function() {
+    return r
+  },
+  mH: function() {
     return h
   },
-  trackQuestEvent: function() {
-    return S
+  uk: function() {
+    return I
   }
 });
-var i, r, s = n("367907"),
-  a = n("857192"),
-  o = n("626135"),
-  l = n("569984"),
-  u = n("497505"),
-  d = n("566078"),
-  _ = n("981631");
-let c = Object.keys(u.QuestContent);
+var i, r, s = n(367907),
+  o = n(857192),
+  a = n(626135),
+  l = n(569984),
+  u = n(497505),
+  _ = n(566078),
+  d = n(981631);
+let c = Object.keys(u.jn);
 
 function E(e) {
   var t;
-  return null !== (t = c.find(t => u.QuestContent[t] === e)) && void 0 !== t ? t : ""
+  return null !== (t = c.find(t => u.jn[t] === e)) && void 0 !== t ? t : ""
 }
 
 function I(e) {
@@ -39,7 +39,7 @@ function I(e) {
 }
 
 function T(e) {
-  let t = d.SharedQuestFields.build(e.config);
+  let t = _.r.build(e.config);
   return {
     quest_id: e.id,
     game_id: t.application.id,
@@ -47,7 +47,7 @@ function T(e) {
   }
 }
 
-function f(e, t) {
+function h(e, t) {
   return {
     content_id: e,
     content_name: E(e),
@@ -61,25 +61,24 @@ function S(e) {
     event: n,
     properties: i,
     trackGuildAndChannelMetadata: r = !1
-  } = e, u = l.default.quests.get(t);
+  } = e, u = l.Z.quests.get(t);
   if (null != u) {
-    if (a.default.isLoggingAnalyticsEvents && console.info("[Quest] AnalyticsUtils.track", n, {
+    if (o.default.isLoggingAnalyticsEvents && console.info("[Quest] AnalyticsUtils.track", n, {
         ...T(u),
         ...i
-      }), !u.preview) {
-      if (r) return s.default.trackWithMetadata(n, {
-        ...T(u),
-        ...i
-      });
-      o.default.track(n, {
-        ...T(u),
-        ...i
-      })
-    }
+      }), u.preview) return;
+    if (r) return s.ZP.trackWithMetadata(n, {
+      ...T(u),
+      ...i
+    });
+    a.default.track(n, {
+      ...T(u),
+      ...i
+    })
   }
 }
 
-function h(e) {
+function f(e) {
   let {
     questId: t,
     questContent: n,
@@ -89,9 +88,9 @@ function h(e) {
   } = e;
   S({
     questId: t,
-    event: _.AnalyticEvents.QUEST_CONTENT_CLICKED,
+    event: d.rMx.QUEST_CONTENT_CLICKED,
     properties: {
-      ...f(n, r),
+      ...h(n, r),
       cta_name: i
     },
     trackGuildAndChannelMetadata: s

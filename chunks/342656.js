@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  isInProfileMutualsExperiment: function() {
+n.d(t, {
+  oU: function() {
     return s
   },
-  useProfileMutualsExperiment: function() {
-    return a
+  qI: function() {
+    return o
   }
 });
-var i = n("818083");
-let r = (0, i.createExperiment)({
+var i = n(818083);
+let r = (0, i.B)({
     kind: "user",
     id: "2024-03_profile_mutuals",
     label: "Profile Mutuals",
@@ -36,7 +36,7 @@ let r = (0, i.createExperiment)({
       disable: t
     })
   },
-  a = function() {
+  o = function() {
     let {
       autoTrackExposure: e = !1,
       disable: t = !1,

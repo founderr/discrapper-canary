@@ -1,6 +1,6 @@
 "use strict";
-var e = n("796774"),
-  o = n("680625"),
+var e = n(796774),
+  o = n(680625),
   i = Array,
   u = Math.abs,
   c = Math.pow,

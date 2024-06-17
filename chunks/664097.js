@@ -1,25 +1,25 @@
 "use strict";
-n.r(t), n.d(t, {
-  useDeveloperActivityShelfItems: function() {
-    return o
+n.d(t, {
+  o: function() {
+    return a
   }
 });
-var i = n("470079"),
-  r = n("442837"),
-  s = n("115130"),
-  a = n("701488");
-let o = () => {
+var i = n(470079),
+  r = n(442837),
+  s = n(115130),
+  o = n(701488);
+let a = () => {
   let {
     isEnabled: e,
     lastUsedObject: t
-  } = (0, r.useStateFromStoresObject)([s.default], () => ({
-    isEnabled: s.default.getIsEnabled(),
-    lastUsedObject: s.default.getLastUsedObject()
-  }), []), n = (0, r.useStateFromStoresArray)([s.default], () => s.default.getDeveloperShelfItems(), []);
+  } = (0, r.cj)([s.Z], () => ({
+    isEnabled: s.Z.getIsEnabled(),
+    lastUsedObject: s.Z.getLastUsedObject()
+  }), []), n = (0, r.Wu)([s.Z], () => s.Z.getDeveloperShelfItems(), []);
   return i.useMemo(() => e ? n.map(e => ({
     application: e,
     activity: {
-      ...a.DEFAULT_EMBEDDED_ACTIVITY_CONFIG,
+      ...o.wT,
       ...e.embeddedActivityConfig,
       application_id: e.id
     }

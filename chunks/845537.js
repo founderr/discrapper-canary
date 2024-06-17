@@ -1,61 +1,61 @@
 "use strict";
-n.r(t), n.d(t, {
-  ChannelMention: function() {
-    return M
-  },
-  CommandMention: function() {
-    return U
-  },
-  CustomEmoji: function() {
-    return g
-  },
-  Emoji: function() {
-    return R
-  },
-  RoleMention: function() {
-    return D
-  },
-  SoundboardMention: function() {
-    return y
-  },
-  StaticRouteMention: function() {
-    return P
-  },
-  TextMention: function() {
-    return L
-  },
-  Timestamp: function() {
+n.d(t, {
+  EK: function() {
     return b
   },
-  UserMention: function() {
+  Io: function() {
+    return M
+  },
+  NY: function() {
+    return y
+  },
+  Ox: function() {
+    return L
+  },
+  Vq: function() {
+    return D
+  },
+  Wf: function() {
+    return U
+  },
+  cB: function() {
     return v
+  },
+  dy: function() {
+    return p
+  },
+  mb: function() {
+    return P
+  },
+  wP: function() {
+    return g
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("442837"),
-  s = n("481060"),
-  a = n("596454"),
-  o = n("99690"),
-  l = n("607070"),
-  u = n("797610"),
-  d = n("754688"),
-  _ = n("699450"),
-  c = n("763296"),
-  E = n("592125"),
-  I = n("430824"),
-  T = n("246946"),
-  f = n("594174"),
-  S = n("797053"),
-  h = n("934415"),
-  A = n("5192"),
-  m = n("51144"),
-  N = n("377668"),
-  p = n("689938"),
-  O = n("640567"),
-  C = n("946278");
+var i = n(735250);
+n(470079);
+var r = n(442837),
+  s = n(481060),
+  o = n(596454),
+  a = n(99690),
+  l = n(607070),
+  u = n(797610),
+  _ = n(754688),
+  d = n(699450),
+  c = n(763296),
+  E = n(592125),
+  I = n(430824),
+  T = n(246946),
+  h = n(594174),
+  S = n(797053),
+  f = n(934415),
+  N = n(5192),
+  A = n(51144),
+  m = n(377668),
+  O = n(689938),
+  R = n(640567),
+  C = n(946278);
 
-function R(e) {
+function p(e) {
   let {
     emoji: t
   } = e;
@@ -63,7 +63,7 @@ function R(e) {
     text: t.name,
     delay: 750,
     position: "top",
-    children: e => (0, i.jsx)(a.default, {
+    children: e => (0, i.jsx)(o.Z, {
       src: t.src,
       emojiName: t.name,
       animated: !1,
@@ -80,7 +80,7 @@ function g(e) {
     text: t.name,
     delay: 750,
     position: "top",
-    children: e => (0, i.jsx)(a.default, {
+    children: e => (0, i.jsx)(o.Z, {
       emojiId: t.emojiId,
       emojiName: t.name,
       animated: t.animated,
@@ -94,9 +94,9 @@ function L(e) {
     text: t,
     channelId: n,
     guildId: r
-  } = e, s = I.default.getGuild(r), a = E.default.getChannel(n), o = (0, u.useClydeEnabled)(s, a) && "@Clyde" === t ? N.CLYDE_AI_MENTION_COLOR : null;
-  return (0, i.jsx)(S.default, {
-    color: o,
+  } = e, s = I.Z.getGuild(r), o = E.Z.getChannel(n), a = (0, u.Ib)(s, o) && "@Clyde" === t ? m.jM : null;
+  return (0, i.jsx)(S.Z, {
+    color: a,
     children: t
   })
 }
@@ -105,98 +105,98 @@ function v(e) {
   let {
     id: t,
     guildId: n,
-    channelId: a
-  } = e, l = (0, r.useStateFromStores)([f.default], () => f.default.getUser(t)), u = (0, r.useStateFromStores)([T.default], () => T.default.hidePersonalInformation), d = A.default.useName(n, a, l), _ = (0, i.jsx)(S.default, {
-    children: null == d ? "<@".concat(t, ">") : "@".concat(d)
+    channelId: o
+  } = e, l = (0, r.e7)([h.default], () => h.default.getUser(t)), u = (0, r.e7)([T.Z], () => T.Z.hidePersonalInformation), _ = N.ZP.useName(n, o, l), d = (0, i.jsx)(S.Z, {
+    children: null == _ ? "<@".concat(t, ">") : "@".concat(_)
   });
   if (null != l) {
     let e = u || l.isPomelo() ? null : "#".concat(l.discriminator);
     return (0, i.jsx)(s.Tooltip, {
       text: (0, i.jsxs)("div", {
-        className: O.userTooltip,
-        children: [(0, i.jsx)(o.default, {
+        className: R.userTooltip,
+        children: [(0, i.jsx)(a.Z, {
           user: l,
           animate: !0,
           size: s.AvatarSizes.SIZE_16,
-          className: O.avatar
-        }), m.default.getUserTag(l, {
+          className: R.avatar
+        }), A.ZP.getUserTag(l, {
           mode: "username",
           identifiable: u ? "never" : "always"
         }), (0, i.jsx)("span", {
-          className: O.discriminator,
+          className: R.discriminator,
           children: e
         })]
       }),
       delay: 750,
       position: "top",
-      "aria-label": m.default.getUserTag(l, {
+      "aria-label": A.ZP.getUserTag(l, {
         decoration: "never"
       }),
       children: e => (0, i.jsx)(s.Clickable, {
         tag: "span",
         ...e,
-        children: _
+        children: d
       })
     })
   }
-  return _
+  return d
 }
 
 function D(e) {
   let {
     id: t,
     guildId: n
-  } = e, a = (0, r.useStateFromStores)([I.default], () => null != n ? I.default.getRole(n, t) : void 0), o = (0, r.useStateFromStores)([l.default], () => l.default.roleStyle);
-  if (null == a) return (0, i.jsxs)("span", {
-    children: ["@", p.default.Messages.UNKNOWN_ROLE_PLACEHOLDER]
+  } = e, o = (0, r.e7)([I.Z], () => null != n ? I.Z.getRole(n, t) : void 0), a = (0, r.e7)([l.Z], () => l.Z.roleStyle);
+  if (null == o) return (0, i.jsxs)("span", {
+    children: ["@", O.Z.Messages.UNKNOWN_ROLE_PLACEHOLDER]
   });
-  let u = null != a.color && 0 !== a.color;
-  return (0, i.jsxs)(S.default, {
-    color: "username" === o && u ? a.color : null,
-    children: ["dot" === o && (0, i.jsx)(s.RoleDot, {
-      color: a.colorString,
+  let u = null != o.color && 0 !== o.color;
+  return (0, i.jsxs)(S.Z, {
+    color: "username" === a && u ? o.color : null,
+    children: ["dot" === a && (0, i.jsx)(s.RoleDot, {
+      color: o.colorString,
       background: !1,
       tooltip: !1
-    }), "@", a.name]
+    }), "@", o.name]
   })
 }
 
 function M(e) {
   let {
     id: t
-  } = e, n = (0, r.useStateFromStores)([E.default], () => E.default.getChannel(t)), s = p.default.Messages.UNKNOWN_CHANNEL.toLowerCase(), a = "text", o = !0;
+  } = e, n = (0, r.e7)([E.Z], () => E.Z.getChannel(t)), s = O.Z.Messages.UNKNOWN_CHANNEL.toLowerCase(), o = "text", a = !0;
   if (null != n) {
     var l;
-    s = (0, d.canViewChannel)(n) ? n.name : p.default.Messages.NO_ACCESS, a = (0, d.canViewChannel)(n) ? null !== (l = (0, h.getMentionIconType)(n)) && void 0 !== l ? l : "text" : "locked", o = (0, _.isChannelTypeMentionable)(n.type)
+    s = (0, _.YO)(n) ? n.name : O.Z.Messages.NO_ACCESS, o = (0, _.YO)(n) ? null !== (l = (0, f.wl)(n)) && void 0 !== l ? l : "text" : "locked", a = (0, d.B)(n.type)
   }
-  return o ? (0, i.jsx)(S.default, {
-    iconType: a,
+  return a ? (0, i.jsx)(S.Z, {
+    iconType: o,
     children: s
   }) : (0, i.jsx)("span", {
     children: "#" + s
   })
 }
 
-function y(e) {
+function P(e) {
   var t;
   let {
     id: n
-  } = e, s = (0, r.useStateFromStores)([c.default], () => c.default.getSoundById(n));
-  return (0, i.jsx)(S.default, {
+  } = e, s = (0, r.e7)([c.Z], () => c.Z.getSoundById(n));
+  return (0, i.jsx)(S.Z, {
     children: null !== (t = null == s ? void 0 : s.name) && void 0 !== t ? t : "Sound"
   })
 }
 
-function P(e) {
+function y(e) {
   let {
     id: t
   } = e, n = {
-    home: p.default.Messages.SERVER_GUIDE,
-    guide: p.default.Messages.SERVER_GUIDE,
-    browse: p.default.Messages.CHANNEL_BROWSER_TITLE,
-    customize: p.default.Messages.CHANNELS_AND_ROLES
+    home: O.Z.Messages.SERVER_GUIDE,
+    guide: O.Z.Messages.SERVER_GUIDE,
+    browse: O.Z.Messages.CHANNEL_BROWSER_TITLE,
+    customize: O.Z.Messages.CHANNELS_AND_ROLES
   };
-  return (0, i.jsx)(S.default, {
+  return (0, i.jsx)(S.Z, {
     iconType: t,
     children: n[t]
   })
@@ -207,7 +207,7 @@ function U(e) {
     text: t,
     id: n
   } = e;
-  return (0, i.jsxs)(S.default, {
+  return (0, i.jsxs)(S.Z, {
     children: [t, "(", n, ")"]
   })
 }

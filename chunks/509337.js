@@ -1,5 +1,5 @@
 "use strict";
-let r = n("517024");
+let r = n(517024);
 
 function i() {}
 e.exports = i, i.prototype.get = function(e) {

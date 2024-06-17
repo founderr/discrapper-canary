@@ -1,19 +1,18 @@
 "use strict";
-n.r(t);
-var a, s, l, i, r = n("442837"),
-  o = n("570140"),
-  u = n("358085"),
-  d = n("998502"),
-  c = n("869614"),
-  f = n("281083"),
-  E = n("672598");
+var r, i, l, s, a = n(442837),
+  o = n(570140),
+  u = n(358085),
+  c = n(998502),
+  d = n(869614),
+  f = n(281083),
+  v = n(672598);
 let h = !1,
   C = !0,
-  _ = !1;
-class m extends(i = r.default.Store) {
+  Z = !1;
+class N extends(s = a.ZP.Store) {
   initialize() {
-    !(!u.isPlatformEmbedded || __OVERLAY__) && d.default.getGPUDriverVersions().then(e => {
-      h = (0, E.default)(e), C = (0, c.default)(e), _ = (0, f.default)(e), this.emitChange()
+    !(!u.isPlatformEmbedded || __OVERLAY__) && c.ZP.getGPUDriverVersions().then(e => {
+      h = (0, v.Z)(e), C = (0, d.Z)(e), Z = (0, f.Z)(e), this.emitChange()
     })
   }
   get GPUDriversOutdated() {
@@ -23,22 +22,22 @@ class m extends(i = r.default.Store) {
     return C
   }
   get problematicGPUDriver() {
-    return _
+    return Z
   }
   getState() {
     return {
       GPUDriversOutdated: h,
       canUseHardwareAcceleration: C,
-      problematicGPUDriver: _
+      problematicGPUDriver: Z
     }
   }
 }
-l = "StreamingCapabilitiesStore", (s = "displayName") in(a = m) ? Object.defineProperty(a, s, {
+l = "StreamingCapabilitiesStore", (i = "displayName") in(r = N) ? Object.defineProperty(r, i, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = l, t.default = new m(o.default, {
+}) : r[i] = l, t.Z = new N(o.Z, {
   OVERLAY_INITIALIZE: function(e) {
     let {
       streamingCapabilitiesStoreState: t

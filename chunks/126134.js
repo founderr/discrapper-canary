@@ -1,7 +1,7 @@
 "use strict";
-var i, r, s, a;
-n.r(t), n.d(t, {
-  CardCategory: function() {
+var i, r, s, o;
+n.d(t, {
+  L: function() {
     return r
   }
-}), (s = i || (i = {}))[s.WHO = 0] = "WHO", s[s.WHAT = 1] = "WHAT", (a = r || (r = {})).HANGOUT = "hangout", a.EMBEDDED_ACTIVITY = "embedded-activity", a.EVENT = "event", a.GAMING = "gaming"
+}), (s = i || (i = {}))[s.WHO = 0] = "WHO", s[s.WHAT = 1] = "WHAT", (o = r || (r = {})).HANGOUT = "hangout", o.EMBEDDED_ACTIVITY = "embedded-activity", o.EVENT = "event", o.GAMING = "gaming"

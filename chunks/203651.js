@@ -7,16 +7,16 @@ function i(e, t) {
   return r
 }
 "undefined" != typeof window ? r = window : "undefined" == typeof self ? (console.warn("Using browser-only version of superagent in non-browser environment"), r = void 0) : r = self;
-let a = n("606419"),
-  o = n("164390"),
-  s = n("339768"),
-  u = n("615252"),
-  c = n("517024"),
+let a = n(606419),
+  o = n(164390),
+  s = n(339768),
+  u = n(615252),
+  c = n(517024),
   l = c.isObject,
   d = c.mixin,
   f = c.hasOwn,
-  p = n("509337"),
-  h = n("675246");
+  p = n(509337),
+  h = n(675246);
 
 function m() {}
 e.exports = function(e, n) {
@@ -144,7 +144,9 @@ function E(e) {
     let t, n, r, i;
     let a = e.split(/\r?\n/),
       o = {};
-    for (let e = 0, s = a.length; e < s; ++e) - 1 !== (t = (n = a[e]).indexOf(":")) && (r = n.slice(0, t).toLowerCase(), i = _(n.slice(t + 1)), o[r] = i);
+    for (let e = 0, s = a.length; e < s; ++e) {
+      if (-1 !== (t = (n = a[e]).indexOf(":"))) r = n.slice(0, t).toLowerCase(), i = _(n.slice(t + 1)), o[r] = i
+    }
     return o
   }(this.xhr.getAllResponseHeaders()), this.header = this.headers, this.header["content-type"] = this.xhr.getResponseHeader("content-type"), this._setHeaderProperties(this.header), null === this.text && e._responseType ? this.body = this.xhr.response : this.body = "HEAD" === this.req.method ? null : this._parseBody(this.text ? this.text : this.xhr.response)
 }
@@ -270,7 +272,7 @@ for (var x = 0, w = ["GET", "POST", "OPTIONS", "PATCH", "PUT", "DELETE"]; x < w.
   }
 }
 
-function T(e, t, n) {
+function C(e, t, n) {
   let r = g("DELETE", e);
   return "function" == typeof t && (n = t, t = null), t && r.send(t), n && r.end(n), r
 }
@@ -283,7 +285,7 @@ h.prototype.del = h.prototype.delete, g.get = (e, t, n) => {
 }, g.options = (e, t, n) => {
   let r = g("OPTIONS", e);
   return "function" == typeof t && (n = t, t = null), t && r.send(t), n && r.end(n), r
-}, g.del = T, g.delete = T, g.patch = (e, t, n) => {
+}, g.del = C, g.delete = C, g.patch = (e, t, n) => {
   let r = g("PATCH", e);
   return "function" == typeof t && (n = t, t = null), t && r.send(t), n && r.end(n), r
 }, g.post = (e, t, n) => {

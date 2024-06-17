@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  DesktopFileUploadUpsellExperiment: function() {
-    return a
+n.d(t, {
+  MP: function() {
+    return o
   },
-  HDStreamingUpsellExperiment: function() {
+  PC: function() {
     return s
   },
-  shouldShowSocialProof: function() {
-    return o
+  YN: function() {
+    return a
   }
 });
-var i = n("818083"),
-  r = n("474936");
-let s = (0, i.createExperiment)({
+var i = n(818083),
+  r = n(474936);
+let s = (0, i.B)({
     id: "2024-06_hd_streaming_desktop_upsell",
     label: "HD Streaming Desktop Upsell",
     kind: "user",
@@ -36,7 +36,7 @@ let s = (0, i.createExperiment)({
       }
     }]
   }),
-  a = (0, i.createExperiment)({
+  o = (0, i.B)({
     id: "2024-05_file_upload_desktop_upsell",
     label: "File Upload Desktop Upsell",
     kind: "user",
@@ -61,15 +61,15 @@ let s = (0, i.createExperiment)({
     }]
   });
 
-function o(e) {
+function a(e) {
   switch (e) {
-    case r.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL:
-      return a.getCurrentConfig({
+    case r.cd.UPLOAD_ERROR_UPSELL:
+      return o.getCurrentConfig({
         location: "File Upload Roadblock"
       }, {
         autoTrackExposure: !1
       }).addSocialProof;
-    case r.PremiumUpsellTypes.STREAM_QUALITY_UPSELL:
+    case r.cd.STREAM_QUALITY_UPSELL:
       return s.getCurrentConfig({
         location: "HD Streaming Roadblock"
       }, {

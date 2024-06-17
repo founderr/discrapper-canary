@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
-  PremiumStreamingEffectOverlay: function() {
-    return u
-  },
-  preloadPremiumStreamingEffectImage: function() {
+n.d(t, {
+  O: function() {
     return l
+  },
+  W: function() {
+    return u
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("134432"),
-  a = n("931761"),
-  o = n("242493");
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(134432),
+  o = n(931761),
+  a = n(242493);
 
 function l() {
-  (0, s.loadImage)("".concat(o, "?query=true"))
+  (0, s.po)("".concat(a, "?query=true"))
 }
 
 function u(e) {
@@ -29,13 +29,13 @@ function u(e) {
     }), [t]), r.useEffect(() => {
       l(e => !e)
     }, [n]), n) return null;
-  let d = "".concat(o, "?query=").concat(s);
+  let _ = "".concat(a, "?query=").concat(s);
   return (0, i.jsx)("div", {
-    className: a.demoEffectOverlay,
+    className: o.demoEffectOverlay,
     children: (0, i.jsx)("img", {
       alt: "",
-      className: a.demoEffectImg,
-      src: d
+      className: o.demoEffectImg,
+      src: _
     })
   })
 }

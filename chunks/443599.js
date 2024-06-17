@@ -1,40 +1,40 @@
 "use strict";
-n.r(t), n.d(t, {
-  showReportModal: function() {
-    return o
+n.d(t, {
+  m: function() {
+    return a
   }
-}), n("653041");
-var i = n("735250");
-n("470079");
-var r = n("481060"),
-  s = n("185625"),
-  a = n("186023");
-async function o(e, t, n, o) {
+}), n(653041);
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  s = n(185625),
+  o = n(186023);
+async function a(e, t, n, a) {
   let l = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
     u = !(arguments.length > 5) || void 0 === arguments[5] || arguments[5],
-    d = arguments.length > 6 ? arguments[6] : void 0,
-    _ = (0, r.getInteractingModalContext)();
+    _ = arguments.length > 6 ? arguments[6] : void 0,
+    d = (0, r.getInteractingModalContext)();
   try {
-    let c, E = u ? await (0, s.getReportMenu)(e, t) : await (0, s.getUnauthenticatedReportMenu)(e, t),
+    let c, E = u ? await (0, s.Nt)(e, t) : await (0, s.B0)(e, t),
       I = [];
     let T = e => {
         I.push(e)
       },
-      f = e => {
+      h = e => {
         c = e, null == n || n()
       };
-    (0, r.openModal)(t => (0, i.jsx)(a.default, {
+    (0, r.openModal)(t => (0, i.jsx)(o.Z, {
       menu: E,
       reportType: e,
       modalProps: t,
       onNavigate: T,
-      onSubmit: f,
+      onSubmit: h,
       isAuthenticated: u,
-      emailToken: d
+      emailToken: _
     }), {
       onCloseCallback: () => {
-        (0, s.trackCloseReportModalAnalytics)(e, I, c), null == o || o(), l && (0, s.showInAppReportsFeedbackModal)(e, null != c ? c : null)
+        (0, s.k8)(e, I, c), null == a || a(), l && (0, s.X)(e, null != c ? c : null)
       }
-    }, _)
+    }, d)
   } catch {}
 }

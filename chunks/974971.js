@@ -1,8 +1,8 @@
 "use strict";
-var e = n("525305"),
-  o = n("354848"),
-  i = n("332916"),
-  u = n("641236")("toStringTag"),
+var e = n(525305),
+  o = n(354848),
+  i = n(332916),
+  u = n(641236)("toStringTag"),
   c = Object,
   f = "Arguments" === i(function() {
     return arguments

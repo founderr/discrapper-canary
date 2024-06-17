@@ -1,26 +1,26 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return o
+n.d(t, {
+  Z: function() {
+    return a
   }
 });
-var i = n("442837"),
-  r = n("314897"),
-  s = n("317381"),
-  a = n("613611");
+var i = n(442837),
+  r = n(314897),
+  s = n(317381),
+  o = n(613611);
 
-function o(e) {
+function a(e) {
   let t = r.default.getId(),
     {
       userActivity: n,
-      inActivity: o
-    } = (0, i.useStateFromStoresObject)([s.default], () => {
-      let n = s.default.getSelfEmbeddedActivityForChannel(e),
-        i = s.default.getEmbeddedActivitiesForChannel(e).find(e => e.applicationId === (null == n ? void 0 : n.applicationId)),
+      inActivity: a
+    } = (0, i.cj)([s.ZP], () => {
+      let n = s.ZP.getSelfEmbeddedActivityForChannel(e),
+        i = s.ZP.getEmbeddedActivitiesForChannel(e).find(e => e.applicationId === (null == n ? void 0 : n.applicationId)),
         r = !1;
       if ((null == i ? void 0 : i.participants) != null) {
-        var o;
-        r = (null == i ? void 0 : null === (o = i.participants) || void 0 === o ? void 0 : o.find(e => (0, a.isActivityParticipantCurrentUserCurrentSession)(e))) != null
+        var a;
+        r = (null == i ? void 0 : null === (a = i.participants) || void 0 === a ? void 0 : a.find(e => (0, o.J)(e))) != null
       } else(null == i ? void 0 : i.userIds) != null && (r = i.userIds.has(t));
       return {
         userActivity: n,
@@ -29,6 +29,6 @@ function o(e) {
     });
   return {
     userActivity: n,
-    inActivity: o
+    inActivity: a
   }
 }

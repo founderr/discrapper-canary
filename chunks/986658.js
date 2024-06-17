@@ -1,28 +1,26 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("476400"),
-  o = n.n(a),
-  s = n("844303"),
-  u = n("829307"),
-  c = n("464854"),
-  l = n("588945"),
-  d = n("740622"),
-  f = n("698842"),
-  p = function(e) {
+var r = n(470079),
+  i = n(476400),
+  a = n.n(i),
+  o = n(844303),
+  s = n(829307),
+  u = n(464854),
+  c = n(588945),
+  l = n(740622),
+  d = n(698842),
+  f = function(e) {
     var t = e.width,
       n = e.onChange,
-      r = e.disableAlpha,
+      i = e.disableAlpha,
       a = e.rgb,
-      o = e.hsl,
+      f = e.hsl,
       p = e.hsv,
       h = e.hex,
       m = e.renderers,
       g = e.styles,
       _ = e.className,
       b = e.defaultView,
-      v = (0, s.default)((0, u.default)({
+      v = (0, o.default)((0, s.Z)({
         default: {
           picker: {
             width: t,
@@ -102,66 +100,66 @@ var r = n("470079"),
           }
         }
       }, void 0 === g ? {} : g), {
-        disableAlpha: r
+        disableAlpha: i
       });
-    return i().createElement("div", {
+    return r.createElement("div", {
       style: v.picker,
       className: "chrome-picker " + (void 0 === _ ? "" : _)
-    }, i().createElement("div", {
+    }, r.createElement("div", {
       style: v.saturation
-    }, i().createElement(c.Saturation, {
+    }, r.createElement(u.OQ, {
       style: v.Saturation,
-      hsl: o,
+      hsl: f,
       hsv: p,
-      pointer: f.default,
+      pointer: d.Z,
       onChange: n
-    })), i().createElement("div", {
+    })), r.createElement("div", {
       style: v.body
-    }, i().createElement("div", {
+    }, r.createElement("div", {
       style: v.controls,
       className: "flexbox-fix"
-    }, i().createElement("div", {
+    }, r.createElement("div", {
       style: v.color
-    }, i().createElement("div", {
+    }, r.createElement("div", {
       style: v.swatch
-    }, i().createElement("div", {
+    }, r.createElement("div", {
       style: v.active
-    }), i().createElement(c.Checkboard, {
+    }), r.createElement(u.QN, {
       renderers: m
-    }))), i().createElement("div", {
+    }))), r.createElement("div", {
       style: v.toggles
-    }, i().createElement("div", {
+    }, r.createElement("div", {
       style: v.hue
-    }, i().createElement(c.Hue, {
+    }, r.createElement(u.PS, {
       style: v.Hue,
-      hsl: o,
-      pointer: d.default,
+      hsl: f,
+      pointer: l.Z,
       onChange: n
-    })), i().createElement("div", {
+    })), r.createElement("div", {
       style: v.alpha
-    }, i().createElement(c.Alpha, {
+    }, r.createElement(u.xV, {
       style: v.Alpha,
       rgb: a,
-      hsl: o,
-      pointer: d.default,
+      hsl: f,
+      pointer: l.Z,
       renderers: m,
       onChange: n
-    })))), i().createElement(l.default, {
+    })))), r.createElement(c.Z, {
       rgb: a,
-      hsl: o,
+      hsl: f,
       hex: h,
       view: b,
       onChange: n,
-      disableAlpha: r
+      disableAlpha: i
     })))
   };
-p.propTypes = {
-  width: o().oneOfType([o().string, o().number]),
-  disableAlpha: o().bool,
-  styles: o().object,
-  defaultView: o().oneOf(["hex", "rgb", "hsl"])
-}, p.defaultProps = {
+f.propTypes = {
+  width: a().oneOfType([a().string, a().number]),
+  disableAlpha: a().bool,
+  styles: a().object,
+  defaultView: a().oneOf(["hex", "rgb", "hsl"])
+}, f.defaultProps = {
   width: 225,
   disableAlpha: !1,
   styles: {}
-}, (0, c.ColorWrap)(p)
+}, (0, u.t1)(f)

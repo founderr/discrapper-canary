@@ -1,22 +1,22 @@
 "use strict";
 let i, r;
-n.r(t), n("47120");
-var s, a, o, l, u = n("442837"),
-  d = n("570140");
-let _ = new Map,
+n(47120);
+var s, o, a, l, u = n(442837),
+  _ = n(570140);
+let d = new Map,
   c = new Map,
   E = !1,
   I = !1;
 
 function T(e) {
-  e(_), _ = new Map(_)
+  e(d), d = new Map(d)
 }
-class f extends(s = u.default.Store) {
+class h extends(s = u.ZP.Store) {
   getFeeds() {
-    return _
+    return d
   }
   getFeed(e) {
-    return _.get(e)
+    return d.get(e)
   }
   getFeedState(e) {
     return c.get(e)
@@ -38,14 +38,14 @@ class f extends(s = u.default.Store) {
     return E
   }
 }
-l = "ContentInventoryStore", (o = "displayName") in(a = f) ? Object.defineProperty(a, o, {
+l = "ContentInventoryStore", (a = "displayName") in(o = h) ? Object.defineProperty(o, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = l, t.default = new f(d.default, {
+}) : o[a] = l, t.Z = new h(_.Z, {
   CONNECTION_OPEN: function() {
-    _ = new Map, E = !1
+    d = new Map, E = !1
   },
   CONTENT_INVENTORY_SET_FEED: function(e) {
     let {
@@ -71,7 +71,7 @@ l = "ContentInventoryStore", (o = "displayName") in(a = f) ? Object.defineProper
     let {
       feedId: t
     } = e;
-    if (!_.has(t)) return !1;
+    if (!d.has(t)) return !1;
     T(e => e.delete(t))
   },
   CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: function() {

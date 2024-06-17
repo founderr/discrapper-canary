@@ -1,55 +1,55 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("147913"),
-  r = n("31996"),
-  s = n("981631");
-let a = new Set;
+n(47120);
+var i = n(147913),
+  r = n(31996),
+  s = n(981631);
+let o = new Set;
 
-function o(e) {
+function a(e) {
   var t, n, i;
-  let o = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  if (o && !a.has(e.channel_id) || (null === (t = e.message_reference) || void 0 === t ? void 0 : t.type) !== s.MessageReferenceTypes.FORWARD) return;
+  let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+  if (a && !o.has(e.channel_id) || (null === (t = e.message_reference) || void 0 === t ? void 0 : t.type) !== s.Uvt.FORWARD) return;
   let l = null === (n = e.message_snapshots) || void 0 === n ? void 0 : n[0];
-  null != l && (null === (i = l.guild) || void 0 === i ? void 0 : i.id) != null && (0, r.fetchBasicGuild)(l.guild.id)
+  if (null != l && (null === (i = l.guild) || void 0 === i ? void 0 : i.id) != null)(0, r.Q)(l.guild.id)
 }
-class l extends i.default {
+class l extends i.Z {
   handleConnectionOpen() {
-    a.clear()
+    o.clear()
   }
   handleChannelSelect(e) {
     let {
       channelId: t
     } = e;
-    null != t && a.add(t)
+    null != t && o.add(t)
   }
   handleMessage(e) {
     let {
       message: t
     } = e;
-    return o(t, !0)
+    return a(t, !0)
   }
   handleLoadMessages(e) {
     let {
       channelId: t,
       messages: n
     } = e;
-    a.add(t), n.forEach(e => o(e, !0))
+    o.add(t), n.forEach(e => a(e, !0))
   }
   handleLoadRecentMentions(e) {
     let {
       messages: t
     } = e;
-    t.forEach(e => o(e))
+    t.forEach(e => a(e))
   }
   handleLoadPinnedMessages(e) {
     let {
       messages: t
     } = e;
-    t.forEach(e => o(e))
+    t.forEach(e => a(e))
   }
   handleSearchFinish(e) {
     e.messages.forEach(e => {
-      e.forEach(e => o(e))
+      e.forEach(e => a(e))
     })
   }
   constructor(...e) {
@@ -79,4 +79,4 @@ class l extends i.default {
     }) : t[n] = i
   }
 }
-t.default = new l
+t.Z = new l

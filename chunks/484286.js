@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n("47120");
-var i, r = n("735250"),
-  s = n("470079"),
-  a = n("120356"),
-  o = n.n(a),
-  l = n("904969");
+n(47120);
+var i, r = n(735250),
+  s = n(470079),
+  o = n(120356),
+  a = n.n(o),
+  l = n(904969);
 
 function u(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function u(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class d extends(i = s.PureComponent) {
+class _ extends(i = s.PureComponent) {
   static getDerivedStateFromProps(e, t) {
     let {
       streamId: n
@@ -44,8 +44,8 @@ class d extends(i = s.PureComponent) {
     let {
       children: n,
       mirror: i,
-      paused: a,
-      component: o
+      paused: o,
+      component: a
     } = this.props;
     if (null == e) {
       if (null == n) return null;
@@ -57,8 +57,8 @@ class d extends(i = s.PureComponent) {
         ...e.props
       })
     }
-    return (0, r.jsx)(o, {
-      paused: a,
+    return (0, r.jsx)(a, {
+      paused: o,
       className: l.media,
       streamId: e,
       onReady: t ? null : this.handleReady
@@ -70,7 +70,7 @@ class d extends(i = s.PureComponent) {
       className: t
     } = this.props;
     return (0, r.jsxs)("div", {
-      className: o()(l.video, t, {
+      className: a()(l.video, t, {
         [l.mirror]: e
       }),
       onDoubleClick: this.handleDoubleClick,
@@ -109,6 +109,6 @@ class d extends(i = s.PureComponent) {
     })
   }
 }
-u(d, "defaultProps", {
+u(_, "defaultProps", {
   paused: !0
-}), t.default = d
+}), t.Z = _

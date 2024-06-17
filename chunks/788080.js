@@ -1,92 +1,92 @@
 "use strict";
-n.r(t), n.d(t, {
-  capitalizeText: function() {
-    return u
-  },
-  getAppealSignalDisplayText: function() {
-    return c
-  },
-  getAttachmentFilename: function() {
-    return N
-  },
-  getClassificationExpiration: function() {
-    return C
-  },
-  getClassificationRelativeIncidentTime: function() {
-    return a
-  },
-  getRequestReviewErrorFromCode: function() {
-    return L
-  },
-  isFlaggedContentEmpty: function() {
+E.d(e, {
+  FB: function() {
     return l
   },
-  isGuildClassification: function() {
+  Pu: function() {
+    return O
+  },
+  Vt: function() {
+    return L
+  },
+  XX: function() {
+    return o
+  },
+  Zs: function() {
+    return C
+  },
+  c7: function() {
     return T
   },
-  parseMessageEmbedForProps: function() {
-    return A
+  eS: function() {
+    return s
+  },
+  fr: function() {
+    return c
+  },
+  ox: function() {
+    return u
   }
-}), n("724458");
-var i = n("913527"),
-  E = n.n(i),
-  I = n("118139"),
-  S = n("531441"),
-  r = n("800530"),
-  _ = n("981631"),
-  s = n("959517"),
-  o = n("689938");
+}), E(724458);
+var t = E(913527),
+  I = E.n(t),
+  _ = E(118139),
+  i = E(531441),
+  r = E(800530),
+  N = E(981631),
+  S = E(959517),
+  A = E(689938);
 
-function a(e) {
-  return E()().to(E()(e))
+function o(n) {
+  return I()().to(I()(n))
 }
 
-function N(e) {
-  var t, n;
-  return (0, I.isImageFile)(e.filename) || (0, I.isVideoFile)(e.filename) ? "".concat(s.SPOILER_ATTACHMENT_PREFIX).concat(null !== (t = e.filename) && void 0 !== t ? t : ".png") : null !== (n = e.filename) && void 0 !== n ? n : ""
+function s(n) {
+  var e, E;
+  return (0, _.CO)(n.filename) || (0, _.NU)(n.filename) ? "".concat(S._j).concat(null !== (e = n.filename) && void 0 !== e ? e : ".png") : null !== (E = n.filename) && void 0 !== E ? E : ""
 }
 
-function A(e) {
-  var t, n, i, E;
-  if (null == e.fields) return;
-  let I = e.fields.reduce((e, t) => (e[t.rawName] = t.rawValue, e), {});
+function c(n) {
+  var e, E, t, I;
+  if (null == n.fields) return;
+  let _ = n.fields.reduce((n, e) => (n[e.rawName] = e.rawValue, n), {});
   return {
-    header: null !== (t = I[r.SafetySystemNotificationEmbedKeys.HEADER]) && void 0 !== t ? t : "",
-    icon: I[r.SafetySystemNotificationEmbedKeys.ICON_TYPE],
-    body: null !== (n = I[r.SafetySystemNotificationEmbedKeys.BODY]) && void 0 !== n ? n : "",
-    ctas: (null !== (i = I[r.SafetySystemNotificationEmbedKeys.CTAS]) && void 0 !== i ? i : "").split(",").filter(e => "" !== e),
-    timestamp: parseFloat(null !== (E = I[r.SafetySystemNotificationEmbedKeys.TIMESTAMP]) && void 0 !== E ? E : 0),
-    theme: I[r.SafetySystemNotificationEmbedKeys.THEME],
-    learn_more_link: I[r.SafetySystemNotificationEmbedKeys.LEARN_MORE_LINK],
-    classification_id: I[r.SafetySystemNotificationEmbedKeys.CLASSIFICATION_ID]
+    header: null !== (e = _[r.I5.HEADER]) && void 0 !== e ? e : "",
+    icon: _[r.I5.ICON_TYPE],
+    body: null !== (E = _[r.I5.BODY]) && void 0 !== E ? E : "",
+    ctas: (null !== (t = _[r.I5.CTAS]) && void 0 !== t ? t : "").split(",").filter(n => "" !== n),
+    timestamp: parseFloat(null !== (I = _[r.I5.TIMESTAMP]) && void 0 !== I ? I : 0),
+    theme: _[r.I5.THEME],
+    learn_more_link: _[r.I5.LEARN_MORE_LINK],
+    classification_id: _[r.I5.CLASSIFICATION_ID]
   }
 }
 
-function l(e) {
-  if (e.type === S.ContentIdType.MESSAGE) return "" === e.content && 0 === e.attachments.length;
+function L(n) {
+  if (n.type === i.lK.MESSAGE) return "" === n.content && 0 === n.attachments.length;
   return !0
 }
-let c = e => ({
-    [r.AppealIngestionSignal.DIDNT_VIOLATE_POLICY]: o.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DIDNT_VIOLATE_POLICY,
-    [r.AppealIngestionSignal.TOO_STRICT_UNFAIR]: o.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_TOO_STRICT_UNFAIR,
-    [r.AppealIngestionSignal.DONT_AGREE_PENALTY]: o.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DONT_AGREE_PENALTY,
-    [r.AppealIngestionSignal.SOMETHING_ELSE]: o.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_SOMETHING_ELSE
-  })[e],
-  u = e => null == e || 0 === e.length ? "" : 1 === e.length ? e.toUpperCase() : "".concat(e.charAt(0).toUpperCase()).concat(e.slice(1));
+let u = n => ({
+    [r.bK.DIDNT_VIOLATE_POLICY]: A.Z.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DIDNT_VIOLATE_POLICY,
+    [r.bK.TOO_STRICT_UNFAIR]: A.Z.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_TOO_STRICT_UNFAIR,
+    [r.bK.DONT_AGREE_PENALTY]: A.Z.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DONT_AGREE_PENALTY,
+    [r.bK.SOMETHING_ELSE]: A.Z.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_SOMETHING_ELSE
+  })[n],
+  T = n => null == n || 0 === n.length ? "" : 1 === n.length ? n.toUpperCase() : "".concat(n.charAt(0).toUpperCase()).concat(n.slice(1));
 
-function T(e) {
-  return null != e && null != e.guild_metadata
+function l(n) {
+  return null != n && null != n.guild_metadata
 }
-let L = e => {
-  if (e === _.AbortCodes.DSA_APPEAL_REQUEST_DEFLECTION) return o.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_DEFLECTION_ERROR;
-  return o.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ERROR
+let C = n => {
+  if (n === N.evJ.DSA_APPEAL_REQUEST_DEFLECTION) return A.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_DEFLECTION_ERROR;
+  return A.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ERROR
 };
 
-function C(e) {
-  let t = e.max_expiration_time;
-  if (null == t) return null;
+function O(n) {
+  let e = n.max_expiration_time;
+  if (null == e) return null;
   try {
-    return new Date(t)
+    return new Date(e)
   } catch {
     return null
   }

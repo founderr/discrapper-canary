@@ -1,16 +1,14 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("844303"),
-  o = n("13942"),
-  s = n("464854");
-t.default = function(e) {
+var r = n(470079),
+  i = n(844303),
+  a = n(13942),
+  o = n(464854);
+t.Z = function(e) {
   var t = e.onChange,
     n = e.rgb,
-    r = e.hsv,
+    s = e.hsv,
     u = e.hex,
-    c = (0, a.default)({
+    c = (0, i.default)({
       default: {
         fields: {
           paddingTop: "5px",
@@ -81,54 +79,54 @@ t.default = function(e) {
         }
       }
     }),
-    l = function(e, i) {
-      e["#"] ? o.isValidHex(e["#"]) && t({
+    l = function(e, r) {
+      e["#"] ? a.FX(e["#"]) && t({
         hex: e["#"],
         source: "hex"
-      }, i) : e.r || e.g || e.b ? t({
+      }, r) : e.r || e.g || e.b ? t({
         r: e.r || n.r,
         g: e.g || n.g,
         b: e.b || n.b,
         source: "rgb"
-      }, i) : (e.h || e.s || e.v) && t({
-        h: e.h || r.h,
-        s: e.s || r.s,
-        v: e.v || r.v,
+      }, r) : (e.h || e.s || e.v) && t({
+        h: e.h || s.h,
+        s: e.s || s.s,
+        v: e.v || s.v,
         source: "hsv"
-      }, i)
+      }, r)
     };
-  return i().createElement("div", {
+  return r.createElement("div", {
     style: c.fields
-  }, i().createElement(s.EditableInput, {
+  }, r.createElement(o.Vm, {
     style: {
       wrap: c.RGBwrap,
       input: c.RGBinput,
       label: c.RGBlabel
     },
     label: "h",
-    value: Math.round(r.h),
+    value: Math.round(s.h),
     onChange: l
-  }), i().createElement(s.EditableInput, {
+  }), r.createElement(o.Vm, {
     style: {
       wrap: c.RGBwrap,
       input: c.RGBinput,
       label: c.RGBlabel
     },
     label: "s",
-    value: Math.round(100 * r.s),
+    value: Math.round(100 * s.s),
     onChange: l
-  }), i().createElement(s.EditableInput, {
+  }), r.createElement(o.Vm, {
     style: {
       wrap: c.RGBwrap,
       input: c.RGBinput,
       label: c.RGBlabel
     },
     label: "v",
-    value: Math.round(100 * r.v),
+    value: Math.round(100 * s.v),
     onChange: l
-  }), i().createElement("div", {
+  }), r.createElement("div", {
     style: c.divider
-  }), i().createElement(s.EditableInput, {
+  }), r.createElement(o.Vm, {
     style: {
       wrap: c.RGBwrap,
       input: c.RGBinput,
@@ -137,7 +135,7 @@ t.default = function(e) {
     label: "r",
     value: n.r,
     onChange: l
-  }), i().createElement(s.EditableInput, {
+  }), r.createElement(o.Vm, {
     style: {
       wrap: c.RGBwrap,
       input: c.RGBinput,
@@ -146,7 +144,7 @@ t.default = function(e) {
     label: "g",
     value: n.g,
     onChange: l
-  }), i().createElement(s.EditableInput, {
+  }), r.createElement(o.Vm, {
     style: {
       wrap: c.RGBwrap,
       input: c.RGBinput,
@@ -155,9 +153,9 @@ t.default = function(e) {
     label: "b",
     value: n.b,
     onChange: l
-  }), i().createElement("div", {
+  }), r.createElement("div", {
     style: c.divider
-  }), i().createElement(s.EditableInput, {
+  }), r.createElement(o.Vm, {
     style: {
       wrap: c.HEXwrap,
       input: c.HEXinput,
@@ -166,13 +164,13 @@ t.default = function(e) {
     label: "#",
     value: u.replace("#", ""),
     onChange: l
-  }), i().createElement("div", {
+  }), r.createElement("div", {
     style: c.fieldSymbols
-  }, i().createElement("div", {
+  }, r.createElement("div", {
     style: c.symbol
-  }, "\xb0"), i().createElement("div", {
+  }, "\xb0"), r.createElement("div", {
     style: c.symbol
-  }, "%"), i().createElement("div", {
+  }, "%"), r.createElement("div", {
     style: c.symbol
   }, "%")))
 }

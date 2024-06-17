@@ -1,15 +1,15 @@
 "use strict";
 var i, r;
-n.r(t), n.d(t, {
-  APP_LAUNCHER_ELEMENT_CLASSNAME: function() {
+n.d(t, {
+  Jh: function() {
     return s
   },
-  APP_LAUNCHER_WEB_MODAL_KEY: function() {
-    return a
-  },
-  CommandListSortOrder: function() {
+  bS: function() {
     return i
+  },
+  e9: function() {
+    return o
   }
 }), (r = i || (i = {}))[r.POPULAR = 0] = "POPULAR", r[r.ALPHABETICAL = 1] = "ALPHABETICAL";
 let s = "app-launcher-element",
-  a = "app-launcher-modal"
+  o = "app-launcher-modal"

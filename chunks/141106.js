@@ -1,27 +1,27 @@
 "use strict";
 var i, r;
-n.r(t), n.d(t, {
-  MatchStrategy: function() {
+n.d(t, {
+  BD: function() {
+    return l
+  },
+  dQ: function() {
     return i
   },
-  getMatchedPositions: function() {
+  jO: function() {
     return u
-  },
-  isMatch: function() {
-    return l
   }
 }), (r = i || (i = {}))[r.ExactMatch = 0] = "ExactMatch", r[r.PrefixMatch = 1] = "PrefixMatch";
 let s = e => /\p{P}/gu.test(null != e ? e : "") || " " === e || "" === e,
-  a = (e, t, n) => {
+  o = (e, t, n) => {
     if (n - t > e.length) return !1;
     let i = e.charAt(t - 1),
       r = e.charAt(n + 1);
     return s(i) && s(r)
   },
-  o = (e, t) => s(e.charAt(t - 1)),
+  a = (e, t) => s(e.charAt(t - 1)),
   l = (e, t, n, i) => {
-    if (1 === i) return o(e, t);
-    return a(e, t, n)
+    if (1 === i) return a(e, t);
+    return o(e, t, n)
   },
   u = (e, t, n, i) => {
     if (0 === i) return {

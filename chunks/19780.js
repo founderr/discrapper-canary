@@ -1,67 +1,67 @@
 "use strict";
 let i, r;
-n.r(t), n("411104"), n("724458");
-var s, a, o, l, u = n("442837"),
-  d = n("570140"),
-  _ = n("437263"),
-  c = n("764976"),
-  E = n("646047"),
-  I = n("258609"),
-  T = n("338336"),
-  f = n("314897"),
-  S = n("938475"),
-  h = n("981631"),
-  A = n("65154");
-let m = [],
-  N = null,
-  p = null,
+n(411104), n(724458);
+var s, o, a, l, u = n(442837),
+  _ = n(570140),
+  d = n(437263),
+  c = n(764976),
+  E = n(646047),
+  I = n(258609),
+  T = n(338336),
+  h = n(314897),
+  S = n(938475),
+  f = n(981631),
+  N = n(65154);
+let A = [],
+  m = null,
   O = null,
+  R = null,
   C = null,
-  R = !1,
+  p = !1,
   g = !1;
 
 function L(e, t) {
   if (null == r) throw Error("Creating RTCConnection without session.");
-  let i = f.default.getId(),
-    s = new(n("861687")).default({
+  let i = h.default.getId(),
+    s = new(n(861687)).Z({
       userId: i,
       sessionId: r,
       guildId: e,
       channelId: t
     });
-  return s.on(_.RTCConnectionEvent.State, (e, t, n) => {
-    d.default.wait(() => d.default.dispatch({
+  return s.on(d.z.State, (e, t, n) => {
+    _.Z.wait(() => _.Z.dispatch({
       type: "RTC_CONNECTION_STATE",
       state: e,
       ...t,
       ...n
     }))
-  }), s.on(_.RTCConnectionEvent.Video, (e, t, n, i, r) => {
-    d.default.wait(() => d.default.dispatch({
+  }), s.on(d.z.Video, (e, t, n, i, r) => {
+    _.Z.wait(() => _.Z.dispatch({
       type: "RTC_CONNECTION_VIDEO",
       guildId: e,
       channelId: t,
       userId: n,
       streamId: i,
       rtcServerId: r,
-      context: A.MediaEngineContextTypes.DEFAULT
+      context: N.Yn.DEFAULT
     }))
-  }), s.on(_.RTCConnectionEvent.Ping, (e, t) => {
-    d.default.wait(() => d.default.dispatch({
+  }), s.on(d.z.Ping, (e, t) => {
+    _.Z.wait(() => _.Z.dispatch({
       type: "RTC_CONNECTION_PING",
       pings: e,
       quality: t
     }))
-  }), s.on(_.RTCConnectionEvent.OutboundLossRate, e => {
-    d.default.wait(() => d.default.dispatch({
+  }), s.on(d.z.OutboundLossRate, e => {
+    _.Z.wait(() => _.Z.dispatch({
       type: "RTC_CONNECTION_LOSS_RATE",
       lossRate: e
     }))
-  }), s.on(_.RTCConnectionEvent.Speaking, (e, t) => {
-    null == O || O.setSpeaking(e, t)
-  }), s.on(_.RTCConnectionEvent.Flags, (e, t) => {
-    d.default.wait(() => {
-      d.default.dispatch({
+  }), s.on(d.z.Speaking, (e, t) => {
+    null == R || R.setSpeaking(e, t)
+  }), s.on(d.z.Flags, (e, t) => {
+    _.Z.wait(() => {
+      _.Z.dispatch({
         type: "RTC_CONNECTION_FLAGS",
         flags: t,
         userId: e,
@@ -70,41 +70,41 @@ function L(e, t) {
         context: s.context
       })
     })
-  }), s.on(_.RTCConnectionEvent.ClientDisconnect, e => {
-    d.default.wait(() => {
-      d.default.dispatch({
+  }), s.on(d.z.ClientDisconnect, e => {
+    _.Z.wait(() => {
+      _.Z.dispatch({
         type: "RTC_CONNECTION_CLIENT_DISCONNECT",
         userId: e,
         guildId: s.guildId,
         channelId: s.channelId
       })
     })
-  }), s.on(_.RTCConnectionEvent.Platform, (e, t, n) => {
-    d.default.wait(() => {
-      d.default.dispatch({
+  }), s.on(d.z.Platform, (e, t, n) => {
+    _.Z.wait(() => {
+      _.Z.dispatch({
         type: "RTC_CONNECTION_PLATFORM",
         platform: t,
         userId: e,
         channelId: n
       })
     })
-  }), s.on(_.RTCConnectionEvent.SecureFramesUpdate, e => {
-    d.default.wait(() => {
-      d.default.dispatch({
+  }), s.on(d.z.SecureFramesUpdate, e => {
+    _.Z.wait(() => {
+      _.Z.dispatch({
         type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE",
         state: e
       })
     })
-  }), O = new c.default(f.default.getId(), t), C = null, R = !1, g = !1, s
+  }), R = new c.Z(h.default.getId(), t), C = null, p = !1, g = !1, s
 }
 
 function v() {
   if (null == i) return !1;
-  C = i.getDuration(), i.destroy(), i = null, O = null
+  C = i.getDuration(), i.destroy(), i = null, R = null
 }
 
 function D() {
-  N = null
+  m = null
 }
 
 function M(e) {
@@ -115,33 +115,33 @@ function M(e) {
   v()
 }
 
-function y() {
+function P() {
   return !0
 }
-class P extends(s = u.default.Store) {
+class y extends(s = u.ZP.Store) {
   initialize() {
-    this.waitFor(S.default), (0, T.setVideoToggleAnalyticsParams)(this.getRTCConnectionId, this.getMediaSessionId)
+    this.waitFor(S.ZP), (0, T.r)(this.getRTCConnectionId, this.getMediaSessionId)
   }
   getRTCConnection() {
     return i
   }
   getState() {
-    return null != i ? i.state : h.RTCConnectionStates.DISCONNECTED
+    return null != i ? i.state : f.hes.DISCONNECTED
   }
   isConnected() {
-    return this.getState() === h.RTCConnectionStates.RTC_CONNECTED
+    return this.getState() === f.hes.RTC_CONNECTED
   }
   isDisconnected() {
-    return this.getState() === h.RTCConnectionStates.DISCONNECTED
+    return this.getState() === f.hes.DISCONNECTED
   }
   getRemoteDisconnectVoiceChannelId() {
-    return N
+    return m
   }
   getLastSessionVoiceChannelId() {
-    return p
+    return O
   }
   setLastSessionVoiceChannelId(e) {
-    p = e
+    O = e
   }
   getGuildId() {
     return null == i ? void 0 : i.guildId
@@ -153,10 +153,10 @@ class P extends(s = u.default.Store) {
     return null != i ? i.hostname : ""
   }
   getQuality() {
-    return null != i ? i.quality : h.RTCConnectionQuality.UNKNOWN
+    return null != i ? i.quality : f.IE4.UNKNOWN
   }
   getPings() {
-    return null != i ? i.getPings() : m
+    return null != i ? i.getPings() : A
   }
   getAveragePing() {
     return null != i ? null == i ? void 0 : i.getAveragePing() : 0
@@ -181,10 +181,10 @@ class P extends(s = u.default.Store) {
     return null == i ? void 0 : i.getPacketStats()
   }
   getVoiceStateStats() {
-    return null == O ? void 0 : O.getStats()
+    return null == R ? void 0 : R.getStats()
   }
   getWasEverMultiParticipant() {
-    return R
+    return p
   }
   getWasEverRtcConnected() {
     return g
@@ -193,39 +193,39 @@ class P extends(s = u.default.Store) {
     return null == i ? void 0 : i.getSecureFramesState()
   }
 }
-l = "RTCConnectionStore", (o = "displayName") in(a = P) ? Object.defineProperty(a, o, {
+l = "RTCConnectionStore", (a = "displayName") in(o = y) ? Object.defineProperty(o, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = l;
-let U = new P(d.default, __OVERLAY__ ? {} : {
+}) : o[a] = l;
+let U = new y(_.Z, __OVERLAY__ ? {} : {
   CONNECTION_OPEN: function(e) {
-    return r = e.sessionId, N = null, p = null, v(), !1
+    return r = e.sessionId, m = null, O = null, v(), !1
   },
   CONNECTION_CLOSED: function() {
-    r = null, N = null, p = null, v()
+    r = null, m = null, O = null, v()
   },
   RTC_CONNECTION_STATE: function(e) {
-    return e.state === h.RTCConnectionStates.RTC_CONNECTED && (g = !0), !0
+    return e.state === f.hes.RTC_CONNECTED && (g = !0), !0
   },
-  RTC_CONNECTION_PING: y,
-  RTC_CONNECTION_LOSS_RATE: y,
+  RTC_CONNECTION_PING: P,
+  RTC_CONNECTION_LOSS_RATE: P,
   RTC_CONNECTION_UPDATE_ID: function(e) {
     return e.connection === i
   },
-  RTC_CONNECTION_SECURE_FRAMES_UPDATE: y,
+  RTC_CONNECTION_SECURE_FRAMES_UPDATE: P,
   VOICE_STATE_UPDATES: function(e) {
     let {
       voiceStates: t
     } = e;
     return t.reduce((e, t) => {
-      var n, s, a;
-      if (null == O || O.updateVoiceStates(t.userId, t.channelId), R = R || (null !== (n = null == O ? void 0 : O.getStats().max_voice_state_count) && void 0 !== n ? n : 0) > 1, f.default.getId() !== t.userId) return !1;
-      if (null != i) t.sessionId === r ? null != t.guildId && t.guildId === i.guildId || null == t.guildId && t.channelId === i.channelId ? null == t.channelId ? v() : i.channelId = t.channelId : (t.guildId !== i.guildId && null == t.channelId || v(), null != t.channelId && (N = null, p = null, i = L(t.guildId, t.channelId), R = (null !== (s = null == O ? void 0 : O.getStats().max_voice_state_count) && void 0 !== s ? s : 0) > 1)) : t.guildId === i.guildId && (!(null != I.default.getAwaitingRemoteSessionInfo() && null != I.default.getRemoteSessionId()) && (N = i.channelId), v());
+      var n, s, o;
+      if (null == R || R.updateVoiceStates(t.userId, t.channelId), p = p || (null !== (n = null == R ? void 0 : R.getStats().max_voice_state_count) && void 0 !== n ? n : 0) > 1, h.default.getId() !== t.userId) return !1;
+      if (null != i) t.sessionId === r ? null != t.guildId && t.guildId === i.guildId || null == t.guildId && t.channelId === i.channelId ? null == t.channelId ? v() : i.channelId = t.channelId : (t.guildId !== i.guildId && null == t.channelId || v(), null != t.channelId && (m = null, O = null, i = L(t.guildId, t.channelId), p = (null !== (s = null == R ? void 0 : R.getStats().max_voice_state_count) && void 0 !== s ? s : 0) > 1)) : t.guildId === i.guildId && (!(null != I.Z.getAwaitingRemoteSessionInfo() && null != I.Z.getRemoteSessionId()) && (m = i.channelId), v());
       else {
         if (t.sessionId !== r || null == t.channelId) return e;
-        N = null, p = null, i = L(t.guildId, t.channelId), R = (null !== (a = null == O ? void 0 : O.getStats().max_voice_state_count) && void 0 !== a ? a : 0) > 1
+        m = null, O = null, i = L(t.guildId, t.channelId), p = (null !== (o = null == R ? void 0 : R.getStats().max_voice_state_count) && void 0 !== o ? o : 0) > 1
       }
       return !0
     }, !1)
@@ -244,7 +244,7 @@ let U = new P(d.default, __OVERLAY__ ? {} : {
   CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: D,
   REMOTE_SESSION_CONNECT: D,
   CLEAR_LAST_SESSION_VOICE_CHANNEL_ID: function() {
-    p = null
+    O = null
   },
   GUILD_DELETE: function(e) {
     let {
@@ -264,11 +264,11 @@ let U = new P(d.default, __OVERLAY__ ? {} : {
   },
   APP_STATE_UPDATE: function(e) {
     if (null != i) {
-      let t = e.state === h.AppStates.BACKGROUND,
-        n = E.default.isEnabled();
+      let t = e.state === f.$7l.BACKGROUND,
+        n = E.Z.isEnabled();
       i.setAppBackgrounded(t, n)
     }
-    return e.state === h.AppStates.ACTIVE && null != i && i.resetBackoff("App state is active"), !1
+    return e.state === f.$7l.ACTIVE && null != i && i.resetBackoff("App state is active"), !1
   },
   RTC_DEBUG_SET_SIMULCAST_OVERRIDE: function(e) {
     let {
@@ -279,11 +279,11 @@ let U = new P(d.default, __OVERLAY__ ? {} : {
     null == i || i.setSimulcastDebugOverride(t, n, r)
   }
 });
-Promise.resolve().then(n.bind(n, "626135")).then(e => {
+Promise.resolve().then(n.bind(n, 626135)).then(e => {
   let {
     addExtraAnalyticsDecorator: t
   } = e;
   t(e => {
     e.client_rtc_state = U.getState()
   })
-}), t.default = U
+}), t.Z = U

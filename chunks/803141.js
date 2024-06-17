@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("695346"),
-  r = n("412788"),
-  s = n("932941"),
-  a = n("363072"),
-  o = n("526761");
+n(47120);
+var i = n(695346),
+  r = n(412788),
+  s = n(932941),
+  o = n(363072),
+  a = n(526761);
 
 function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -16,21 +16,21 @@ function l(e, t, n) {
 }
 let u = null;
 
-function d() {
+function _() {
   let {
     profanity: e = !1,
     slurs: t = !1,
     sexualContent: n = !1
-  } = i.KeywordFilterSettings.getSetting(), r = [...e ? s.PROFANITY_KEYWORD_LIST : [], ...t ? s.SLURS_KEYWORD_LIST : [], ...n ? s.SEXUAL_CONTENT_KEYWORD_LIST : []];
-  (u = new a.Trie).addWords(r)
+  } = i.gw.getSetting(), r = [...e ? s.pF : [], ...t ? s.wq : [], ...n ? s.$u : []];
+  (u = new o.B).addWords(r)
 }
 
-function _() {
-  d()
+function d() {
+  _()
 }
 
 function c() {
-  d()
+  _()
 }
 
 function E(e) {
@@ -38,13 +38,13 @@ function E(e) {
     local: t,
     settings: n
   } = e;
-  if (!t || n.type !== o.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
-  null != u && u.clear(), d()
+  if (!t || n.type !== a.yP.PRELOADED_USER_SETTINGS) return !1;
+  null != u && u.clear(), _()
 }
-class I extends r.default {
+class I extends r.Z {
   loadCache() {
     let e = this.readSnapshot(I.LATEST_SNAPSHOT_VERSION);
-    null != e && (u = null != e.keywordTrie ? a.Trie.fromSnapshot(e.keywordTrie) : null)
+    null != e && (u = null != e.keywordTrie ? o.B.fromSnapshot(e.keywordTrie) : null)
   }
   takeSnapshot() {
     return {
@@ -61,17 +61,17 @@ class I extends r.default {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
     ! function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-      null == u && (u = new a.Trie), u.addWords(e)
+      null == u && (u = new o.B), u.addWords(e)
     }(e)
   }
   constructor() {
     super({
-      CONNECTION_OPEN: _,
-      CONNECTION_OPEN_SUPPLEMENTAL: _,
+      CONNECTION_OPEN: d,
+      CONNECTION_OPEN_SUPPLEMENTAL: d,
       CACHE_LOADED: () => this.loadCache(),
       OVERLAY_INITIALIZE: c,
       USER_SETTINGS_PROTO_UPDATE: E
     })
   }
 }
-l(I, "displayName", "KeywordFilterStore"), l(I, "LATEST_SNAPSHOT_VERSION", 2), t.default = new I
+l(I, "displayName", "KeywordFilterStore"), l(I, "LATEST_SNAPSHOT_VERSION", 2), t.Z = new I

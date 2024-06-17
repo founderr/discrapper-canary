@@ -1,30 +1,30 @@
 "use strict";
-n.r(t), n.d(t, {
-  useTheme: function() {
+n.d(t, {
+  Fg: function() {
     return s
   },
-  useThemeIndex: function() {
-    return a
+  i6: function() {
+    return o
   }
 });
-var i = n("780384"),
-  r = n("981631");
+var i = n(780384),
+  r = n(981631);
 
 function s() {
   let {
     theme: e
-  } = (0, i.useThemeContext)();
+  } = (0, i.TC)();
   return e
 }
 
-function a() {
+function o() {
   return function(e) {
     switch (e) {
-      case r.ThemeTypes.DARK:
+      case r.BRd.DARK:
         return 0;
-      case r.ThemeTypes.LIGHT:
+      case r.BRd.LIGHT:
         return 1
     }
   }(s())
 }
-t.default = s
+t.ZP = s

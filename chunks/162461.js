@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
-  isEligibleForContentInventoryV1: function() {
-    return a
-  },
-  isEligibleForImpressionCapping: function() {
-    return o
-  },
-  isEligibleForListenedMediaInventory: function() {
+n.d(t, {
+  Dy: function() {
     return E
   },
-  useIsEligibleForRichPresenceInventory: function() {
+  Rg: function() {
+    return d
+  },
+  sA: function() {
+    return o
+  },
+  wh: function() {
     return T
   },
-  useIsEligibleForTopArtistInventory: function() {
-    return _
+  wm: function() {
+    return a
   }
 });
-var i = n("818083");
-let r = (0, i.createExperiment)({
+var i = n(818083);
+let r = (0, i.B)({
     kind: "user",
     id: "2024-03_content_inventory_memberlist_and_ranker",
     label: "Enables the memberlist content feed",
@@ -51,7 +51,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  s = (0, i.createExperiment)({
+  s = (0, i.B)({
     kind: "user",
     id: "2024-03_content_inventory_ranker_client_dummy",
     label: "Tracks exposure for which ranker bucket the user is in. This is here to test an exposure bug",
@@ -63,7 +63,7 @@ let r = (0, i.createExperiment)({
     }]
   });
 
-function a(e) {
+function o(e) {
   u.getCurrentConfig({
     location: e
   }, {
@@ -87,7 +87,7 @@ function a(e) {
   }), t
 }
 
-function o(e) {
+function a(e) {
   let {
     impressionCappingEnabled: t
   } = r.getCurrentConfig({
@@ -96,14 +96,14 @@ function o(e) {
     autoTrackExposure: !0
   });
   return !0 === t
-}(0, i.createExperiment)({
+}(0, i.B)({
   kind: "user",
   id: "2024-03_content_inventory_surface_holdout",
   label: "Content Inventory Surface Holdout",
   defaultConfig: {},
   treatments: []
 });
-let l = (0, i.createExperiment)({
+let l = (0, i.B)({
     kind: "user",
     id: "2024-03_holdout_bug_main_wrong_way",
     label: "Holdout Bug Experiment Wrong Way (pls ignore)",
@@ -114,7 +114,7 @@ let l = (0, i.createExperiment)({
       config: {}
     }]
   }),
-  u = (0, i.createExperiment)({
+  u = (0, i.B)({
     kind: "user",
     id: "2024-03_holdout_bug_main_right_way",
     label: "Holdout Bug Experiment Right Way (pls ignore)",
@@ -125,7 +125,7 @@ let l = (0, i.createExperiment)({
       config: {}
     }]
   }),
-  d = (0, i.createExperiment)({
+  _ = (0, i.B)({
     kind: "user",
     id: "2024-05_content_inventory_top_artist_cards",
     label: "Content Inventory: TOP_ARTIST cards",
@@ -141,17 +141,17 @@ let l = (0, i.createExperiment)({
     }]
   });
 
-function _(e) {
+function d(e) {
   let {
     enabled: t
-  } = d.useExperiment({
+  } = _.useExperiment({
     location: e
   }, {
     autoTrackExposure: !0
   });
   return t
 }
-let c = (0, i.createExperiment)({
+let c = (0, i.B)({
   kind: "user",
   id: "2024-04_content_inventory_listened_media",
   label: "Content Inventory: LISTENED_MEDIA",
@@ -177,7 +177,7 @@ function E(e) {
   });
   return t
 }
-let I = (0, i.createExperiment)({
+let I = (0, i.B)({
   kind: "user",
   id: "2024-05_content_inventory_games_rich_presence",
   label: "Content Inventory: Rich Presence for Games",

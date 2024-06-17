@@ -1,50 +1,50 @@
 "use strict";
-s.r(t), s.d(t, {
-  usePageScrollPosition: function() {
+t.d(s, {
+  _: function() {
     return o
   }
 });
-var a = s("470079"),
-  l = s("153832"),
-  n = s("638730"),
-  r = s("626135");
-let i = (e, t, s, a) => {
+var n = t(470079),
+  a = t(772848),
+  i = t(638730),
+  l = t(626135);
+let r = (e, s, t, n) => {
     let {
-      scrollTop: l = 0,
-      scrollOffset: n = 0,
-      scrollHeight: i = 0,
+      scrollTop: a = 0,
+      scrollOffset: i = 0,
+      scrollHeight: r = 0,
       scrollWidth: o = 0
-    } = a;
-    if (i > 0) {
-      let a = (l + n) / i;
-      a > 0 && r.default.track(e, {
-        scroll_visible_percent: a,
-        source: s,
-        page_height: Math.round(i),
+    } = n;
+    if (r > 0) {
+      let n = (a + i) / r;
+      n > 0 && l.default.track(e, {
+        scroll_visible_percent: n,
+        source: t,
+        page_height: Math.round(r),
         page_width: Math.round(o),
-        page_session_id: t
+        page_session_id: s
       })
     }
   },
-  o = (e, t) => {
-    let s = a.useRef(null),
-      r = a.useRef((0, l.v4)()),
-      o = (0, n.useThrottledFunction)(i, 5e3, [], {
+  o = (e, s) => {
+    let t = n.useRef(null),
+      l = n.useRef((0, a.Z)()),
+      o = (0, i.h)(r, 5e3, [], {
         trailing: !0
       }),
-      u = a.useCallback(() => {
-        var a;
-        let l = null === (a = s.current) || void 0 === a ? void 0 : a.getScrollerNode();
-        null != l && o(e, r.current, t, {
-          scrollTop: l.scrollTop,
-          scrollOffset: l.offsetHeight,
-          scrollHeight: l.scrollHeight,
-          scrollWidth: l.scrollWidth
+      c = n.useCallback(() => {
+        var n;
+        let a = null === (n = t.current) || void 0 === n ? void 0 : n.getScrollerNode();
+        null != a && o(e, l.current, s, {
+          scrollTop: a.scrollTop,
+          scrollOffset: a.offsetHeight,
+          scrollHeight: a.scrollHeight,
+          scrollWidth: a.scrollWidth
         })
-      }, [o, e, t]);
+      }, [o, e, s]);
     return {
-      scrollerRef: s,
-      scrollHandler: u,
-      sessionId: r.current
+      scrollerRef: t,
+      scrollHandler: c,
+      sessionId: l.current
     }
   }

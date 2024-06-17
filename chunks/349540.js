@@ -1,25 +1,25 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("147913"),
-  r = n("594174"),
-  s = n("74538"),
-  a = n("163684"),
-  o = n("748770"),
-  l = n("474936");
-class u extends i.default {
+n(47120);
+var i = n(147913),
+  r = n(594174),
+  s = n(74538),
+  o = n(163684),
+  a = n(748770),
+  l = n(474936);
+class u extends i.Z {
   onPostConnectionOpen() {
     this.maybeFetchActiveOutboundPromotions()
   }
   maybeFetchActiveOutboundPromotions() {
     let e = r.default.getCurrentUser(),
-      t = s.default.isPremium(e),
-      n = a.OutboundPromoDesktopUpsellExperiment.getCurrentConfig({
+      t = s.ZP.isPremium(e),
+      n = o.g.getCurrentConfig({
         location: "maybeFetchActiveOutboundPromotions"
       }, {
         autoTrackExposure: !t,
         disable: t
       }).enabled;
-    (s.default.isPremiumExactly(e, l.PremiumTypes.TIER_2) || n) && (0, o.fetchActiveOutboundPromotions)()
+    (s.ZP.isPremiumExactly(e, l.p9.TIER_2) || n) && (0, a.vM)()
   }
   constructor(...e) {
     var t, n, i;
@@ -34,4 +34,4 @@ class u extends i.default {
     }) : t[n] = i
   }
 }
-t.default = new u
+t.Z = new u

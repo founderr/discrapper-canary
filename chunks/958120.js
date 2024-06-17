@@ -1,33 +1,33 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return L
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("442837"),
-  a = n("954138"),
-  o = n("979264"),
-  l = n("699516"),
-  u = n("246946"),
-  d = n("5192"),
-  _ = n("447452"),
-  c = n("877485"),
-  E = n("741308"),
-  I = n("681837"),
-  T = n("91433"),
-  f = n("724593"),
-  S = n("502762"),
-  h = n("530"),
-  A = n("790711"),
-  m = n("580512"),
-  N = n("67152"),
-  p = n("579285"),
-  O = n("287612"),
-  C = n("228168"),
-  R = n("981631"),
-  g = n("153362");
+var i = n(735250),
+  r = n(470079),
+  s = n(442837),
+  o = n(954138),
+  a = n(979264),
+  l = n(699516),
+  u = n(246946),
+  _ = n(5192),
+  d = n(447452),
+  c = n(877485),
+  E = n(741308),
+  I = n(681837),
+  T = n(91433),
+  h = n(724593),
+  S = n(502762),
+  f = n(530),
+  N = n(790711),
+  A = n(580512),
+  m = n(67152),
+  O = n(579285),
+  R = n(287612),
+  C = n(228168),
+  p = n(981631),
+  g = n(153362);
 
 function L(e) {
   let {
@@ -37,81 +37,81 @@ function L(e) {
     guild: v,
     isHovering: D,
     onOpenProfile: M,
-    channelId: y,
-    onClose: P
+    channelId: P,
+    onClose: y
   } = e, {
     moreUserDetailsEnabled: U
-  } = (0, _.useSimplifiedProfileExperiment)({
+  } = (0, d.t)({
     location: "BiteSizeProfileBody"
   }), {
     originalFriendingEnabled: b,
     improvedFriendingEnabled: G
-  } = (0, c.useSimplifiedProfileFriendingExperiment)({
+  } = (0, c.V)({
     location: "BiteSizeProfileBody"
-  }), w = d.default.getName(null == v ? void 0 : v.id, y, t), k = (0, s.useStateFromStores)([l.default], () => l.default.getRelationshipType(t.id)), B = (0, s.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), V = (0, a.default)("username"), x = r.useMemo(() => ({
-    source: R.AnalyticsSections.PROFILE_POPOUT,
+  }), w = _.ZP.getName(null == v ? void 0 : v.id, P, t), k = (0, s.e7)([l.Z], () => l.Z.getRelationshipType(t.id)), B = (0, s.e7)([u.Z], () => u.Z.hidePersonalInformation), x = (0, o.Z)("username"), V = r.useMemo(() => ({
+    source: p.jXE.PROFILE_POPOUT,
     tagUserId: t.id
   }), [t.id]);
   return (0, i.jsxs)("div", {
     className: g.body,
-    children: [(0, i.jsx)(h.default, {
+    children: [(0, i.jsx)(f.Z, {
       user: t,
-      profileType: C.UserProfileTypes.BITE_SIZE,
+      profileType: C.y0.BITE_SIZE,
       onOpenProfile: M,
-      usernameIcon: t.hasAvatarForGuild(null == v ? void 0 : v.id) && (0, i.jsx)(A.default, {
+      usernameIcon: t.hasAvatarForGuild(null == v ? void 0 : v.id) && (0, i.jsx)(N.Z, {
         user: t,
         nickname: w
       }),
       nickname: w,
       pronouns: null == L ? void 0 : L.pronouns,
-      tags: (0, i.jsx)(E.default, {
+      tags: (0, i.jsx)(E.Z, {
         displayProfile: L,
-        profileType: C.UserProfileTypes.BITE_SIZE,
-        onClose: P
+        profileType: C.y0.BITE_SIZE,
+        onClose: y
       }),
       nicknameIcons: (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(I.default, {
+        children: [(0, i.jsx)(I.Z, {
           userId: t.id
-        }), (U || b || G) && !B && (0, i.jsx)(f.default, {
+        }), (U || b || G) && !B && (0, i.jsx)(h.Z, {
           user: t,
           isHovering: D,
           onOpenProfile: () => M({
-            subsection: C.UserProfileSubsections.NOTE
+            subsection: C.Tb.NOTE
           })
         })]
       })
-    }), (G || b) && k === R.RelationshipTypes.PENDING_INCOMING && (0, i.jsx)(S.default.Overlay, {
-      children: (0, i.jsx)(T.default, {
+    }), (G || b) && k === p.OGo.PENDING_INCOMING && (0, i.jsx)(S.Z.Overlay, {
+      children: (0, i.jsx)(T.Z, {
         user: t,
         guildId: null == v ? void 0 : v.id,
-        channelId: y,
+        channelId: P,
         className: g.banner
       })
-    }), t.id !== n.id && (0, i.jsx)(O.default, {
+    }), t.id !== n.id && (0, i.jsx)(R.Z, {
       user: t,
       onOpenProfile: e => M({
         section: e
       })
-    }), V && (0, i.jsx)(o.default, {
+    }), x && (0, i.jsx)(a.ZP, {
       userId: t.id,
       inline: !1,
-      profileViewedAnalytics: x
-    }), (U || b || G) && (0, i.jsx)(N.default, {
+      profileViewedAnalytics: V
+    }), (U || b || G) && (0, i.jsx)(m.Z, {
       user: t,
       bio: null == L ? void 0 : L.bio,
       hidePersonalInformation: B,
-      onClose: P
-    }), (0, i.jsx)(m.default, {
+      onClose: y
+    }), (0, i.jsx)(A.Z, {
       user: t,
       guild: v,
-      channelId: y,
-      onClose: P
-    }), null != v && (0, i.jsx)(p.default, {
+      channelId: P,
+      onClose: y
+    }), null != v && (0, i.jsx)(O.Z, {
       user: t,
       currentUser: n,
       guild: v,
       onOpenProfile: () => M({
-        subsection: C.UserProfileSubsections.ROLES
+        subsection: C.Tb.ROLES
       })
     })]
   })

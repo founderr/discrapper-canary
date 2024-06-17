@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return l
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("120356"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("228168"),
-  o = n("674484");
+  o = n(228168),
+  a = n(674484);
 
 function l(e) {
   let {
@@ -17,10 +17,10 @@ function l(e) {
     children: n
   } = e;
   return (0, i.jsx)("div", {
-    className: s()(o.wrapper, {
-      [o.biteSize]: t === a.UserProfileTypes.BITE_SIZE,
-      [o.fullSize]: t === a.UserProfileTypes.FULL_SIZE,
-      [o.panel]: t === a.UserProfileTypes.PANEL
+    className: s()(a.wrapper, {
+      [a.biteSize]: t === o.y0.BITE_SIZE,
+      [a.fullSize]: t === o.y0.FULL_SIZE,
+      [a.panel]: t === o.y0.PANEL
     }),
     children: n
   })

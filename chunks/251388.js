@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-t.default = function(e) {
+t.Z = function(e) {
   var t = this.__data__,
     n = t.delete(e);
   return this.size = t.size, n

@@ -1,18 +1,16 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("844303"),
-  o = n("464854"),
-  s = function(e) {
+var r = n(470079),
+  i = n(844303),
+  a = n(464854),
+  o = function(e) {
     var t = e.color,
       n = e.onClick,
-      r = e.onSwatchHover,
+      o = e.onSwatchHover,
       s = e.hover,
       u = e.active,
       c = e.circleSize,
       l = e.circleSpacing,
-      d = (0, a.default)({
+      d = (0, i.default)({
         default: {
           swatch: {
             width: c,
@@ -43,19 +41,19 @@ var r = n("470079"),
         hover: s,
         active: u
       });
-    return i().createElement("div", {
+    return r.createElement("div", {
       style: d.swatch
-    }, i().createElement(o.Swatch, {
+    }, r.createElement(a.m4, {
       style: d.Swatch,
       color: t,
       onClick: n,
-      onHover: r,
+      onHover: o,
       focusStyle: {
         boxShadow: d.Swatch.boxShadow + ", 0 0 5px " + t
       }
     }))
   };
-s.defaultProps = {
+o.defaultProps = {
   circleSize: 28,
   circleSpacing: 14
-}, t.default = (0, a.handleHover)(s)
+}, t.Z = (0, i.handleHover)(o)

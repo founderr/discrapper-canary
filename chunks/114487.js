@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  ClanGuildIconSimple: function() {
+n.d(t, {
+  b: function() {
     return E
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
-  o = n("442837"),
-  l = n("451478"),
-  u = n("806519"),
-  d = n("768581"),
-  _ = n("624138"),
-  c = n("545866");
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(442837),
+  l = n(451478),
+  u = n(806519),
+  _ = n(768581),
+  d = n(624138),
+  c = n(545866);
 
 function E(e) {
   let {
@@ -23,38 +23,38 @@ function E(e) {
     iconSize: s,
     className: E,
     animate: I
-  } = e, T = (0, o.useStateFromStores)([l.default], () => l.default.isFocused()), f = d.default.getGuildIconURL({
+  } = e, T = (0, a.e7)([l.Z], () => l.Z.isFocused()), h = _.ZP.getGuildIconURL({
     id: t,
     icon: r,
     size: s,
     canAnimate: I && T
   });
-  if (null == f) {
-    let e = (0, _.getAcronym)(n);
-    return (0, i.jsx)(u.default, {
-      mask: u.default.Masks.CLAN_ICON,
+  if (null == h) {
+    let e = (0, d.Zg)(n);
+    return (0, i.jsx)(u.ZP, {
+      mask: u.ZP.Masks.CLAN_ICON,
       width: s,
       height: s,
       className: E,
       children: (0, i.jsx)("div", {
-        className: a()(c.guildIconImage, c.acronym),
+        className: o()(c.guildIconImage, c.acronym),
         children: e
       })
     })
   }
-  return (0, i.jsx)(u.default, {
-    mask: u.default.Masks.CLAN_ICON,
+  return (0, i.jsx)(u.ZP, {
+    mask: u.ZP.Masks.CLAN_ICON,
     width: s,
     height: s,
     className: E,
     children: (0, i.jsx)("img", {
-      src: f,
+      src: h,
       alt: n,
       className: c.guildIconImage
     })
   })
 }
-t.default = r.memo(function(e) {
+t.Z = r.memo(function(e) {
   let {
     guild: t,
     iconSize: n,

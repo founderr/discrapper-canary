@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return o
   }
-}), n("724458"), n("653041");
-var i = n("778787"),
-  r = n("803358");
+}), n(724458), n(653041);
+var i = n(778787),
+  r = n(803358);
 
 function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -15,27 +15,27 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class a extends r.default {
+class o extends r.Z {
   static fromServer(e) {
     let {
       products: t,
       logo: n,
       pdp_bg: r,
       mobile_bg: s,
-      success_modal_bg: o,
+      success_modal_bg: a,
       mobile_banner: l,
       ...u
     } = e;
-    return new a({
+    return new o({
       ...super.fromServer(u),
       products: t.reduce((e, t) => {
-        let n = i.default.fromServer(t);
+        let n = i.Z.fromServer(t);
         return 0 === n.items.length ? e : (e.push(n), e)
       }, []),
       logo: n,
       pdpBg: r,
       mobileBg: s,
-      successModalBg: o,
+      successModalBg: a,
       mobileBanner: l
     })
   }

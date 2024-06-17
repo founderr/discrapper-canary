@@ -1,78 +1,78 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
-  o = n("824385"),
-  l = n("481060"),
-  u = n("40851"),
-  d = n("906732"),
-  _ = n("78839"),
-  c = n("267642"),
-  E = n("879892"),
-  I = n("981631"),
-  T = n("689938"),
-  f = n("658088");
-t.default = e => {
+n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(824385),
+  l = n(481060),
+  u = n(40851),
+  _ = n(906732),
+  d = n(78839),
+  c = n(267642),
+  E = n(879892),
+  I = n(981631),
+  T = n(689938),
+  h = n(658088);
+t.Z = e => {
   let {
     analyticsLocation: t,
     analyticsSourceLocation: n,
     guild: s,
     buttonText: S,
-    targetBoostedGuildTier: h,
-    onClose: A = () => {},
-    closeLayer: m = () => {},
-    pauseAnimation: N = !1,
-    applicationId: p,
-    handleSubscribeModalClose: O,
+    targetBoostedGuildTier: f,
+    onClose: N = () => {},
+    closeLayer: A = () => {},
+    pauseAnimation: m = !1,
+    applicationId: O,
+    handleSubscribeModalClose: R,
     withHighlight: C = !1,
-    ...R
+    ...p
   } = e, {
     analyticsLocations: g
-  } = (0, d.default)(), L = (0, u.useAppContext)() === I.AppContext.POPOUT, [v, D] = r.useState(!1), M = null != h ? Math.max((0, c.getNumberOfAppliedBoostsNeededForTier)(s, h), 1) : 1, y = (0, c.generateBlockGuildSubscriptionPurchasesNode)(), P = async () => {
-    D(!0), await (0, E.addAppliedGuildBoosts)({
+  } = (0, _.ZP)(), L = (0, u.bp)() === I.IlC.POPOUT, [v, D] = r.useState(!1), M = null != f ? Math.max((0, c.KK)(s, f), 1) : 1, P = (0, c.aq)(), y = async () => {
+    D(!0), await (0, E.u)({
       analyticsLocations: g,
       analyticsLocation: t,
       analyticsSourceLocation: n,
       guild: s,
       numberOfBoostsToAdd: M,
-      onClose: A,
-      closeLayer: m,
+      onClose: N,
+      closeLayer: A,
       inPopout: L,
-      applicationId: p,
-      handleSubscribeModalClose: O
+      applicationId: O,
+      handleSubscribeModalClose: R
     }), D(!1)
-  }, U = _.default.getPremiumTypeSubscription(), b = (0, i.jsx)("span", {
-    children: null != S ? S : T.default.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_SUBSCRIBE_THIS_SERVER
+  }, U = d.ZP.getPremiumTypeSubscription(), b = (0, i.jsx)("span", {
+    children: null != S ? S : T.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_SUBSCRIBE_THIS_SERVER
   });
   return ((null == U ? void 0 : U.isPausedOrPausePending) && (b = (0, i.jsxs)("div", {
-    className: f.pausedButton,
-    children: [(0, i.jsx)(o.LockIcon, {
-      className: f.lockIcon,
+    className: h.pausedButton,
+    children: [(0, i.jsx)(a.m, {
+      className: h.lockIcon,
       width: 16,
       height: 16
     }), " ", b]
-  }), R.disabled = !0), null != y) ? (0, i.jsx)(l.Tooltip, {
-    text: y,
+  }), p.disabled = !0), null != P) ? (0, i.jsx)(l.Tooltip, {
+    text: P,
     "aria-label": !1,
     children: e => (0, i.jsx)(l.ShinyButton, {
       ...e,
       disabled: !0,
       size: l.Button.Sizes.SMALL,
-      pauseAnimation: N,
-      ...R,
+      pauseAnimation: m,
+      ...p,
       children: b
     })
   }) : (0, i.jsx)(l.ShinyButton, {
     size: l.Button.Sizes.SMALL,
-    ...R,
-    className: a()(R.className, {
-      [f.buttonHighlighted]: C
+    ...p,
+    className: o()(p.className, {
+      [h.buttonHighlighted]: C
     }),
     submitting: v,
-    onClick: P,
-    pauseAnimation: N,
+    onClick: y,
+    pauseAnimation: m,
     children: b
   })
 }

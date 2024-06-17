@@ -13,7 +13,7 @@ var r = Object.assign || function(e) {
     return e && e.__esModule ? e : {
       default: e
     }
-  }(n("470079"));
+  }(n(470079));
 
 function a(e, t) {
   if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");

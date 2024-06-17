@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
-  Splash: function() {
-    return h
+n.d(t, {
+  h: function() {
+    return f
   }
-}), n("47120");
-var i, r = n("735250"),
-  s = n("470079"),
-  a = n("120356"),
-  o = n.n(a),
-  l = n("477690"),
-  u = n("257915"),
-  d = n("624138"),
-  _ = n("980483"),
-  c = n("450590"),
-  E = n("756286"),
-  I = n("271225");
+}), n(47120);
+var i, r = n(735250),
+  s = n(470079),
+  o = n(120356),
+  a = n.n(o),
+  l = n(477690),
+  u = n(257915),
+  _ = n(624138),
+  d = n(980483),
+  c = n(450590),
+  E = n(756286),
+  I = n(271225);
 
 function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function T(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let f = (0, d.cssValueToNumber)(l.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE);
+let h = (0, _.Mg)(l.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE);
 
 function S(e, t) {
   let {
@@ -34,22 +34,22 @@ function S(e, t) {
   if (0 === e || 0 === t) return null;
   let r = t / e,
     s = n,
-    a = Math.round(n * r);
-  return a < i && (a = i, s = Math.round(i * (r = e / t))), {
+    o = Math.round(n * r);
+  return o < i && (o = i, s = Math.round(i * (r = e / t))), {
     naturalWidth: e,
     naturalHeight: t,
     width: s,
-    height: a
+    height: o
   }
 }
 
-function h(e) {
+function f(e) {
   let {
     splash: t,
     children: n
   } = e, [{
     width: i,
-    height: a
+    height: o
   }, l] = s.useState({
     width: 0,
     height: 0,
@@ -68,8 +68,8 @@ function h(e) {
     }
     return window.addEventListener("resize", e), () => window.removeEventListener("reslize", e)
   }, []), (0, r.jsxs)(r.Fragment, {
-    children: [(0, r.jsx)(u.default, {
-      className: o()(I.rightSplit),
+    children: [(0, r.jsx)(u.Z, {
+      className: a()(I.rightSplit),
       onLoad: function(e) {
         let {
           currentTarget: t
@@ -81,21 +81,21 @@ function h(e) {
       },
       src: t,
       width: i,
-      height: a
+      height: o
     }), (0, r.jsx)("div", {
-      className: o()(I.leftSplit, {
+      className: a()(I.leftSplit, {
         [I.nonEmbeddedLeftSplit]: !0
       }),
       children: n
     })]
   })
 }
-class A extends(i = s.PureComponent) {
+class N extends(i = s.PureComponent) {
   componentWillUnmount() {
     window.removeEventListener("resize", this.handleResize)
   }
   calculateShowWaveAnimation() {
-    return window.innerWidth > f
+    return window.innerWidth > h
   }
   renderSplashArt() {
     let {
@@ -105,8 +105,8 @@ class A extends(i = s.PureComponent) {
       width: n,
       height: i
     } = this.state;
-    return null != e ? (0, r.jsx)(u.default, {
-      className: o()(I.rightSplit, {
+    return null != e ? (0, r.jsx)(u.Z, {
+      className: a()(I.rightSplit, {
         [I.embedded]: t
       }),
       src: e,
@@ -124,7 +124,7 @@ class A extends(i = s.PureComponent) {
       showWaveAnimation: i,
       splashLoaded: s
     } = this.state;
-    return i ? (0, r.jsx)(c.default, {
+    return i ? (0, r.jsx)(c.Z, {
       embedded: n,
       waveState: e,
       updateWaveState: t,
@@ -139,18 +139,18 @@ class A extends(i = s.PureComponent) {
       waveState: t,
       showLogo: n,
       logoClassName: i,
-      embedded: a
+      embedded: o
     } = this.props, {
       showWaveAnimation: l
     } = this.state;
     return (0, r.jsxs)(s.Fragment, {
       children: [this.renderWave(), (0, r.jsxs)("div", {
-        className: o()(I.leftSplit, {
-          [I.nonEmbeddedLeftSplit]: a
+        className: a()(I.leftSplit, {
+          [I.nonEmbeddedLeftSplit]: o
         }),
-        children: [n ? (0, r.jsx)(_.default, {
-          show: !l || t === E.WaveStates.ENTERED && t !== E.WaveStates.FILLING,
-          className: o()(I.logo, i)
+        children: [n ? (0, r.jsx)(d.Z, {
+          show: !l || t === E.hO.ENTERED && t !== E.hO.FILLING,
+          className: a()(I.logo, i)
         }) : null, e]
       })]
     })
@@ -160,7 +160,7 @@ class A extends(i = s.PureComponent) {
       className: e
     } = this.props;
     return (0, r.jsxs)("div", {
-      className: o()(e, I.wrapper),
+      className: a()(e, I.wrapper),
       children: [this.renderSplashArt(), this.renderContent()]
     })
   }
@@ -196,6 +196,6 @@ class A extends(i = s.PureComponent) {
     })
   }
 }
-T(A, "defaultProps", {
+T(N, "defaultProps", {
   embedded: !1
-}), t.default = A
+}), t.Z = N

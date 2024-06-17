@@ -1,7 +1,7 @@
 "use strict";
-var e = n("980855"),
-  o = n("49693"),
-  i = n("182867"),
+var e = n(980855),
+  o = n(49693),
+  i = n(182867),
   u = Array,
   c = Math.max;
 t.exports = function(t, r, n) {

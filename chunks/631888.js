@@ -1,11 +1,9 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("844303"),
-  o = n("786547"),
-  s = n("994167"),
-  u = function() {
+var r = n(470079),
+  i = n(844303),
+  a = n(786547),
+  o = n(994167),
+  s = function() {
     function e(e, t) {
       for (var n = 0; n < t.length; n++) {
         var r = t[n];
@@ -16,7 +14,7 @@ var r = n("470079"),
       return n && e(t.prototype, n), r && e(t, r), t
     }
   }(),
-  c = function(e) {
+  u = function(e) {
     function t(e) {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
@@ -26,14 +24,14 @@ var r = n("470079"),
         return t && ("object" == typeof t || "function" == typeof t) ? t : e
       }(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
       return n.handleChange = function(e) {
-        "function" == typeof n.props.onChange && n.throttle(n.props.onChange, s.calculateChange(e, n.props.hsl, n.container), e)
+        "function" == typeof n.props.onChange && n.throttle(n.props.onChange, o.T(e, n.props.hsl, n.container), e)
       }, n.handleMouseDown = function(e) {
         n.handleChange(e);
         var t = n.getContainerRenderWindow();
         t.addEventListener("mousemove", n.handleChange), t.addEventListener("mouseup", n.handleMouseUp)
       }, n.handleMouseUp = function() {
         n.unbindEventListeners()
-      }, n.throttle = (0, o.default)(function(e, t, n) {
+      }, n.throttle = (0, a.Z)(function(e, t, n) {
         e(t, n)
       }, 50), n
     }
@@ -47,7 +45,7 @@ var r = n("470079"),
           configurable: !0
         }
       }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-    }(t, e), u(t, [{
+    }(t, e), s(t, [{
       key: "componentWillUnmount",
       value: function() {
         this.throttle.cancel(), this.unbindEventListeners()
@@ -70,11 +68,11 @@ var r = n("470079"),
         var e = this,
           t = this.props.style || {},
           n = t.color,
-          r = t.white,
+          a = t.white,
           o = t.black,
           s = t.pointer,
           u = t.circle,
-          c = (0, a.default)({
+          c = (0, i.default)({
             default: {
               color: {
                 absolute: "0px 0px 0px 0px",
@@ -107,7 +105,7 @@ var r = n("470079"),
             },
             custom: {
               color: n,
-              white: r,
+              white: a,
               black: o,
               pointer: s,
               circle: u
@@ -115,7 +113,7 @@ var r = n("470079"),
           }, {
             custom: !!this.props.style
           });
-        return i().createElement("div", {
+        return r.createElement("div", {
           style: c.color,
           ref: function(t) {
             return e.container = t
@@ -123,18 +121,18 @@ var r = n("470079"),
           onMouseDown: this.handleMouseDown,
           onTouchMove: this.handleChange,
           onTouchStart: this.handleChange
-        }, i().createElement("style", null, "\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        "), i().createElement("div", {
+        }, r.createElement("style", null, "\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        "), r.createElement("div", {
           style: c.white,
           className: "saturation-white"
-        }, i().createElement("div", {
+        }, r.createElement("div", {
           style: c.black,
           className: "saturation-black"
-        }), i().createElement("div", {
+        }), r.createElement("div", {
           style: c.pointer
-        }, this.props.pointer ? i().createElement(this.props.pointer, this.props) : i().createElement("div", {
+        }, this.props.pointer ? r.createElement(this.props.pointer, this.props) : r.createElement("div", {
           style: c.circle
         }))))
       }
     }]), t
   }(r.PureComponent || r.Component);
-t.default = c
+t.Z = u

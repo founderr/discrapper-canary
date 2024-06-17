@@ -1,10 +1,8 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("844303"),
-  o = n("557011"),
-  s = function() {
+var r = n(470079),
+  i = n(844303),
+  a = n(557011),
+  o = function() {
     function e(e, t) {
       for (var n = 0; n < t.length; n++) {
         var r = t[n];
@@ -16,24 +14,24 @@ var r = n("470079"),
     }
   }();
 
-function u(e, t) {
+function s(e, t) {
   if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
   return t && ("object" == typeof t || "function" == typeof t) ? t : e
 }
-var c = function(e) {
+var u = function(e) {
   function t() {
     ! function(e, t) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
     }(this, t);
-    for (var e, n, r, i = arguments.length, a = Array(i), s = 0; s < i; s++) a[s] = arguments[s];
-    return n = r = u(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(a))), r.handleChange = function(e) {
-      var t = o.calculateChange(e, r.props.direction, r.props.hsl, r.container);
+    for (var e, n, r, i = arguments.length, o = Array(i), u = 0; u < i; u++) o[u] = arguments[u];
+    return n = r = s(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o))), r.handleChange = function(e) {
+      var t = a.T(e, r.props.direction, r.props.hsl, r.container);
       t && "function" == typeof r.props.onChange && r.props.onChange(t, e)
     }, r.handleMouseDown = function(e) {
       r.handleChange(e), window.addEventListener("mousemove", r.handleChange), window.addEventListener("mouseup", r.handleMouseUp)
     }, r.handleMouseUp = function() {
       r.unbindEventListeners()
-    }, u(r, n)
+    }, s(r, n)
   }
   return ! function(e, t) {
     if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function, not " + typeof t);
@@ -45,7 +43,7 @@ var c = function(e) {
         configurable: !0
       }
     }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-  }(t, e), s(t, [{
+  }(t, e), o(t, [{
     key: "componentWillUnmount",
     value: function() {
       this.unbindEventListeners()
@@ -61,7 +59,7 @@ var c = function(e) {
       var e = this,
         t = this.props.direction,
         n = void 0 === t ? "horizontal" : t,
-        r = (0, a.default)({
+        a = (0, i.default)({
           default: {
             hue: {
               absolute: "0px 0px 0px 0px",
@@ -97,23 +95,23 @@ var c = function(e) {
         }, {
           vertical: "vertical" === n
         });
-      return i().createElement("div", {
-        style: r.hue
-      }, i().createElement("div", {
+      return r.createElement("div", {
+        style: a.hue
+      }, r.createElement("div", {
         className: "hue-" + n,
-        style: r.container,
+        style: a.container,
         ref: function(t) {
           return e.container = t
         },
         onMouseDown: this.handleMouseDown,
         onTouchMove: this.handleChange,
         onTouchStart: this.handleChange
-      }, i().createElement("style", null, "\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          "), i().createElement("div", {
-        style: r.pointer
-      }, this.props.pointer ? i().createElement(this.props.pointer, this.props) : i().createElement("div", {
-        style: r.slider
+      }, r.createElement("style", null, "\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          "), r.createElement("div", {
+        style: a.pointer
+      }, this.props.pointer ? r.createElement(this.props.pointer, this.props) : r.createElement("div", {
+        style: a.slider
       }))))
     }
   }]), t
 }(r.PureComponent || r.Component);
-t.default = c
+t.Z = u

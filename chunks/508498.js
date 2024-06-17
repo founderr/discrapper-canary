@@ -1,31 +1,31 @@
 "use strict";
-s.r(t), s.d(t, {
-  useCollectiblesShopRouting: function() {
-    return c
+t.d(s, {
+  Db: function() {
+    return u
   }
-}), s("610138"), s("216116"), s("78328"), s("815648"), s("47120");
-var a, l, n = s("470079"),
-  r = s("613828"),
-  i = s("37234"),
-  o = s("703656"),
-  u = s("981631");
+}), t(610138), t(216116), t(78328), t(815648), t(47120);
+var n, a, i = t(470079),
+  l = t(266067),
+  r = t(37234),
+  o = t(703656),
+  c = t(981631);
 
-function c() {
+function u() {
   let {
     search: e
-  } = (0, r.useLocation)(), t = (0, r.useParams)(), s = n.useMemo(() => new URLSearchParams(e), [e]).get("source"), a = null != s ? parseInt(s, 10) : null;
+  } = (0, l.TH)(), s = (0, l.UO)(), t = i.useMemo(() => new URLSearchParams(e), [e]).get("source"), n = null != t ? parseInt(t, 10) : null;
   return {
-    onClose: n.useCallback(() => {
-      if (0 === a) {
-        (0, o.back)(), (0, i.pushLayer)(u.Layers.USER_SETTINGS);
+    onClose: i.useCallback(() => {
+      if (0 === n) {
+        (0, o.op)(), (0, r.jN)(c.S9g.USER_SETTINGS);
         return
       }
-      if ((0, o.currentRouteHasBackNavigation)()) {
-        (0, o.back)();
+      if ((0, o.uv)()) {
+        (0, o.op)();
         return
-      }(0, o.transitionTo)(u.Routes.APP)
-    }, [a]),
-    source: a,
-    ...t
+      }(0, o.uL)(c.Z5c.APP)
+    }, [n]),
+    source: n,
+    ...s
   }
-}(l = a || (a = {}))[l.SETTINGS = 0] = "SETTINGS", l[l.CHANGELOG = 1] = "CHANGELOG", l[l.DM_LIST = 2] = "DM_LIST"
+}(a = n || (n = {}))[a.SETTINGS = 0] = "SETTINGS", a[a.CHANGELOG = 1] = "CHANGELOG", a[a.DM_LIST = 2] = "DM_LIST"

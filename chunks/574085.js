@@ -1,76 +1,76 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  Z: function() {
     return E
   }
-}), s("47120"), s("653041");
-var a = s("735250");
-s("470079");
-var l = s("481060"),
-  n = s("723047"),
-  i = s("727843"),
-  r = s("290348"),
-  o = s("764163"),
-  d = s("155758"),
-  u = s("293810"),
-  c = s("689938");
+}), t(47120), t(653041);
+var n = t(735250);
+t(470079);
+var i = t(481060),
+  l = t(723047),
+  a = t(727843),
+  r = t(290348),
+  o = t(764163),
+  c = t(155758),
+  d = t(293810),
+  u = t(689938);
 
 function E() {
   let {
     editStateId: e,
-    guildId: t
-  } = (0, i.useEditStateContext)(), [s, E] = r.useIntangibleBenefits(e);
+    guildId: s
+  } = (0, a.N)(), [t, E] = r.R7(e);
 
-  function _(e, t) {
+  function _(e, s) {
     let {
-      name: a,
-      description: l,
-      emojiId: n,
-      emojiName: i
-    } = e, r = [...s], o = {
-      name: a,
-      description: l,
-      emoji_id: n,
-      emoji_name: i,
-      ref_type: u.GuildRoleSubscriptionBenefitTypes.INTANGIBLE,
+      name: n,
+      description: i,
+      emojiId: l,
+      emojiName: a
+    } = e, r = [...t], o = {
+      name: n,
+      description: i,
+      emoji_id: l,
+      emoji_name: a,
+      ref_type: d.Qs.INTANGIBLE,
       ref_id: void 0
     };
-    null != t ? r[t] = o : r.push(o), E(r)
+    null != s ? r[s] = o : r.push(o), E(r)
   }
-  let I = (0, n.useRoleSubscriptionSettingsDisabled)();
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(d.EditableBenefitsList, {
-      benefits: s,
+  let I = (0, l.mY)();
+  return (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsx)(c.p, {
+      benefits: t,
       onEdit: function(e) {
-        (0, l.openModal)(l => (0, a.jsx)(o.EditIntangibleBenefitModal, {
-          ...l,
-          guildId: t,
-          initialData: s[e],
-          onSave: t => _(t, e),
+        (0, i.openModal)(i => (0, n.jsx)(o.DI, {
+          ...i,
+          guildId: s,
+          initialData: t[e],
+          onSave: s => _(s, e),
           onDelete: () => (function(e) {
-            let t = [...s];
-            t.splice(e, 1), E(t)
+            let s = [...t];
+            s.splice(e, 1), E(s)
           })(e)
         }))
       },
-      onMove: function(e, t) {
-        let a = [...s],
-          [l] = a.splice(e, 1);
-        a.splice(t, 0, l), E(a)
+      onMove: function(e, s) {
+        let n = [...t],
+          [i] = n.splice(e, 1);
+        n.splice(s, 0, i), E(n)
       },
-      guildId: t
-    }), s.length > 0 ? (0, a.jsx)(l.Spacer, {
+      guildId: s
+    }), t.length > 0 ? (0, n.jsx)(i.Spacer, {
       size: 8
-    }) : null, (0, a.jsx)(d.AddBenefitCard, {
+    }) : null, (0, n.jsx)(c.s, {
       onClick: function() {
-        (0, l.openModal)(e => (0, a.jsx)(o.EditIntangibleBenefitModal, {
+        (0, i.openModal)(e => (0, n.jsx)(o.DI, {
           ...e,
-          guildId: t,
+          guildId: s,
           onSave: e => _(e)
         }))
       },
       disabled: I,
-      children: c.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_ADD_BUTTON_TEXT
+      children: u.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_ADD_BUTTON_TEXT
     })]
   })
 }

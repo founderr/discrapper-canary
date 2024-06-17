@@ -1,10 +1,8 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("844303");
-t.default = function() {
-  var e = (0, a.default)({
+var r = n(470079),
+  i = n(844303);
+t.Z = function() {
+  var e = (0, i.default)({
     default: {
       triangle: {
         width: 0,
@@ -41,15 +39,15 @@ t.default = function() {
       }
     }
   });
-  return i().createElement("div", {
+  return r.createElement("div", {
     style: e.pointer
-  }, i().createElement("div", {
+  }, r.createElement("div", {
     style: e.left
-  }, i().createElement("div", {
+  }, r.createElement("div", {
     style: e.leftInside
-  })), i().createElement("div", {
+  })), r.createElement("div", {
     style: e.right
-  }, i().createElement("div", {
+  }, r.createElement("div", {
     style: e.rightInside
   })))
 }

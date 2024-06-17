@@ -1,33 +1,33 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return d
+n.d(t, {
+  Z: function() {
+    return _
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("481060"),
-  s = n("220082"),
-  a = n("768581"),
-  o = n("772606"),
-  l = n("689938"),
-  u = n("217992");
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  s = n(220082),
+  o = n(768581),
+  a = n(772606),
+  l = n(689938),
+  u = n(217992);
 
-function d(e) {
+function _(e) {
   let {
     application: t,
     imageUrl: n
-  } = e, d = a.default.getApplicationIconURL({
+  } = e, _ = o.ZP.getApplicationIconURL({
     id: t.id,
     icon: t.icon,
     bot: t.bot,
     size: 24
-  }), _ = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(), c = (0, s.default)("number" == typeof d ? "" : d, null != _ ? _ : "");
+  }), d = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(), c = (0, s.ZP)("number" == typeof _ ? "" : _, null != d ? d : "");
   return (0, i.jsxs)(i.Fragment, {
     children: [null != n ? (0, i.jsx)("img", {
       className: u.activityBackground,
       src: n,
-      alt: l.default.Messages.IMAGE
+      alt: l.Z.Messages.IMAGE
     }) : (0, i.jsx)("div", {
       className: u.bannerBackground,
       style: {
@@ -35,7 +35,7 @@ function d(e) {
       }
     }), (0, i.jsx)("div", {
       className: u.backButtonContainer,
-      children: (0, i.jsx)(o.default, {})
+      children: (0, i.jsx)(a.Z, {})
     })]
   })
 }

@@ -1,30 +1,30 @@
 "use strict";
 let i, r;
-n.r(t), n("47120");
-var s, a, o, l, u = n("348327"),
-  d = n.n(u),
-  _ = n("392711"),
-  c = n.n(_),
-  E = n("442837"),
-  I = n("570140"),
-  T = n("503438"),
-  f = n("860852"),
-  S = n("768419"),
-  h = n("695346"),
-  A = n("581883"),
-  m = n("131704"),
-  N = n("780570"),
-  p = n("314897"),
-  O = n("77498"),
-  C = n("517100"),
-  R = n("283595"),
-  g = n("293273"),
-  L = n("158776"),
-  v = n("797258"),
-  D = n("981631");
+n(47120);
+var s, o, a, l, u = n(348327),
+  _ = n.n(u),
+  d = n(392711),
+  c = n.n(d),
+  E = n(442837),
+  I = n(570140),
+  T = n(503438),
+  h = n(860852),
+  S = n(768419),
+  f = n(695346),
+  N = n(581883),
+  A = n(131704),
+  m = n(780570),
+  O = n(314897),
+  R = n(77498),
+  C = n(517100),
+  p = n(283595),
+  g = n(293273),
+  L = n(158776),
+  v = n(797258),
+  D = n(981631);
 let M = !1,
-  y = D.StatusTypes.ONLINE,
-  P = D.StatusTypes.UNKNOWN,
+  P = D.Skl.ONLINE,
+  y = D.Skl.UNKNOWN,
   U = 0,
   b = [],
   G = !1,
@@ -32,44 +32,44 @@ let M = !1,
   k = Object.freeze([]),
   B = [];
 
-function V(e) {
-  return (0, N.shouldShareApplicationActivity)(e, R.default)
-}
-
 function x(e) {
+  return (0, m.OT)(e, p.Z)
+}
+
+function V(e) {
   switch (e.type) {
-    case D.ActivityTypes.LISTENING:
-      if ((0, T.default)(e)) return S.default.shouldShowActivity();
-      if (null != e.application_id) return V(e.application_id);
+    case D.IIU.LISTENING:
+      if ((0, T.Z)(e)) return S.Z.shouldShowActivity();
+      if (null != e.application_id) return x(e.application_id);
       return !1;
-    case D.ActivityTypes.PLAYING:
-      return null != e.application_id ? V(e.application_id) : function(e) {
-        let t = O.default.getGameByName(e);
-        return null != t ? V(t.id) : h.ShowCurrentGame.getSetting()
+    case D.IIU.PLAYING:
+      return null != e.application_id ? x(e.application_id) : function(e) {
+        let t = R.Z.getGameByName(e);
+        return null != t ? x(t.id) : f.G6.getSetting()
       }(e.name);
-    case D.ActivityTypes.STREAMING:
-    case D.ActivityTypes.WATCHING:
+    case D.IIU.STREAMING:
+    case D.IIU.WATCHING:
     default:
-      return null == e.application_id || V(e.application_id)
+      return null == e.application_id || x(e.application_id)
   }
 }
 
-function F() {
+function Z() {
   var e;
-  if (U = null !== (e = C.default.getIdleSince()) && void 0 !== e ? e : 0, G = C.default.isAFK(), w) y = P, H();
-  else if (M) y = D.StatusTypes.INVISIBLE;
+  if (U = null !== (e = C.Z.getIdleSince()) && void 0 !== e ? e : 0, G = C.Z.isAFK(), w) P = y, H();
+  else if (M) P = D.Skl.INVISIBLE;
   else {
-    let e = h.StatusSetting.getSetting();
-    y = e !== D.StatusTypes.UNKNOWN ? e : D.StatusTypes.ONLINE
+    let e = f.co.getSetting();
+    P = e !== D.Skl.UNKNOWN ? e : D.Skl.ONLINE
   }
-  y === D.StatusTypes.ONLINE && U > 0 && (y = D.StatusTypes.IDLE);
+  P === D.Skl.ONLINE && U > 0 && (P = D.Skl.IDLE);
   let t = !1,
-    n = w || y === D.StatusTypes.INVISIBLE ? [] : g.default.getActivities().filter(x);
-  !d()(b, n) && (b = n, t = !0);
-  let i = v.default.getRemoteActivities();
+    n = w || P === D.Skl.INVISIBLE ? [] : g.Z.getActivities().filter(V);
+  !_()(b, n) && (b = n, t = !0);
+  let i = v.Z.getRemoteActivities();
   if (k !== i && (k = i, t = !0), t) {
-    let e = b.find(e => e.type === D.ActivityTypes.CUSTOM_STATUS);
-    B = b.filter(e => e.type !== D.ActivityTypes.CUSTOM_STATUS).length > 0 ? b : null != e ? [e, ...c()(k).filter(e => e.type !== D.ActivityTypes.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : c().uniqBy(k, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
+    let e = b.find(e => e.type === D.IIU.CUSTOM_STATUS);
+    B = b.filter(e => e.type !== D.IIU.CUSTOM_STATUS).length > 0 ? b : null != e ? [e, ...c()(k).filter(e => e.type !== D.IIU.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : c().uniqBy(k, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
   }
 }
 
@@ -77,16 +77,16 @@ function H() {
   i = void 0, r = void 0
 }
 
-function Y() {
-  w = !1, P = D.StatusTypes.UNKNOWN, F(), L.default.setCurrentUserOnConnectionOpen(y, B)
+function F() {
+  w = !1, y = D.Skl.UNKNOWN, Z(), L.Z.setCurrentUserOnConnectionOpen(P, B)
 }
-class j extends(s = E.default.Store) {
+class Y extends(s = E.ZP.Store) {
   initialize() {
-    this.waitFor(C.default, A.default, g.default, v.default, R.default, O.default), this.syncWith([g.default], F)
+    this.waitFor(C.Z, N.Z, g.Z, v.Z, p.Z, R.Z), this.syncWith([g.Z], Z)
   }
   getLocalPresence() {
     return {
-      status: y,
+      status: P,
       since: U,
       activities: b,
       afk: G,
@@ -94,7 +94,7 @@ class j extends(s = E.default.Store) {
     }
   }
   getStatus() {
-    return y
+    return P
   }
   getActivities() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
@@ -116,51 +116,51 @@ class j extends(s = E.default.Store) {
     return i
   }
 }
-l = "SelfPresenceStore", (o = "displayName") in(a = j) ? Object.defineProperty(a, o, {
+l = "SelfPresenceStore", (a = "displayName") in(o = Y) ? Object.defineProperty(o, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = l, t.default = new j(I.default, {
-  START_SESSION: F,
+}) : o[a] = l, t.Z = new Y(I.Z, {
+  START_SESSION: Z,
   CONNECTION_OPEN: function() {
-    Y()
+    F()
   },
-  CONNECTION_OPEN_SUPPLEMENTAL: Y,
-  OVERLAY_INITIALIZE: Y,
-  CONNECTION_CLOSED: F,
-  IDLE: F,
-  AFK: F,
-  RUNNING_GAMES_CHANGE: F,
-  STREAMING_UPDATE: F,
-  USER_SETTINGS_PROTO_UPDATE: F,
-  LOCAL_ACTIVITY_UPDATE: F,
-  SPOTIFY_PLAYER_STATE: F,
-  SPOTIFY_PLAYER_PLAY: F,
-  USER_CONNECTIONS_UPDATE: F,
-  SESSIONS_REPLACE: F,
-  RPC_APP_DISCONNECTED: F,
-  LIBRARY_FETCH_SUCCESS: F,
-  LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: F,
+  CONNECTION_OPEN_SUPPLEMENTAL: F,
+  OVERLAY_INITIALIZE: F,
+  CONNECTION_CLOSED: Z,
+  IDLE: Z,
+  AFK: Z,
+  RUNNING_GAMES_CHANGE: Z,
+  STREAMING_UPDATE: Z,
+  USER_SETTINGS_PROTO_UPDATE: Z,
+  LOCAL_ACTIVITY_UPDATE: Z,
+  SPOTIFY_PLAYER_STATE: Z,
+  SPOTIFY_PLAYER_PLAY: Z,
+  USER_CONNECTIONS_UPDATE: Z,
+  SESSIONS_REPLACE: Z,
+  RPC_APP_DISCONNECTED: Z,
+  LIBRARY_FETCH_SUCCESS: Z,
+  LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: Z,
   LOGOUT: function() {
-    w = !0, P = y, F()
+    w = !0, y = P, Z()
   },
-  EMBEDDED_ACTIVITY_CLOSE: F,
-  EMBEDDED_ACTIVITY_OPEN: F,
+  EMBEDDED_ACTIVITY_CLOSE: Z,
+  EMBEDDED_ACTIVITY_OPEN: Z,
   FORCE_INVISIBLE: function(e) {
-    return M = e.invisible, F()
+    return M = e.invisible, Z()
   },
   WINDOW_FOCUS: function() {
-    return M = !1, F()
+    return M = !1, Z()
   },
   BROADCAST_START: function(e) {
-    i = e.broadcast, r = (0, f.broadcastToServer)(e.broadcast)
+    i = e.broadcast, r = (0, h.HD)(e.broadcast)
   },
   BROADCAST_STOP: H,
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    t instanceof m.ChannelRecordBase && (null == t ? void 0 : t.isBroadcastChannel()) && (null == t ? void 0 : t.ownerId) === p.default.getId() && (i = void 0, r = void 0)
+    t instanceof A.Sf && (null == t ? void 0 : t.isBroadcastChannel()) && (null == t ? void 0 : t.ownerId) === O.default.getId() && (i = void 0, r = void 0)
   }
 })

@@ -1,142 +1,142 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return h
+t.d(s, {
+  Z: function() {
+    return x
   }
-}), s("47120");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("442837"),
-  i = s("481060"),
-  r = s("345861"),
-  o = s("208567"),
-  d = s("153124"),
-  u = s("937615"),
-  c = s("289393"),
-  E = s("723047"),
-  _ = s("727843"),
-  I = s("290348"),
-  T = s("927954"),
-  S = s("783454"),
-  f = s("981631"),
-  m = s("689938"),
-  N = s("169769"),
-  g = s("881744");
+}), t(47120);
+var n = t(735250),
+  i = t(470079),
+  l = t(442837),
+  a = t(481060),
+  r = t(345861),
+  o = t(208567),
+  c = t(153124),
+  d = t(937615),
+  u = t(289393),
+  E = t(723047),
+  _ = t(727843),
+  I = t(290348),
+  T = t(927954),
+  N = t(783454),
+  m = t(981631),
+  S = t(689938),
+  h = t(169769),
+  g = t(881744);
 
-function h(e) {
+function x(e) {
   let {
-    priceTiers: t
+    priceTiers: s
   } = e, {
-    editStateId: s
-  } = (0, _.useEditStateContext)(), h = (0, n.useStateFromStores)([c.default], () => {
+    editStateId: t
+  } = (0, _.N)(), x = (0, l.e7)([u.Z], () => {
     var e;
-    return null === (e = c.default.getSubscriptionListing(s)) || void 0 === e ? void 0 : e.image_asset
-  }), [C, R] = I.useName(s), [x, L] = I.usePriceTier(s), [O, p] = I.useDescription(s), [A, M] = I.useImage(s, 1024), {
-    imageCTA: D,
-    imageAriaLabel: v,
-    setFilename: j
-  } = (0, T.default)(h), G = l.useMemo(() => {
+    return null === (e = u.Z.getSubscriptionListing(t)) || void 0 === e ? void 0 : e.image_asset
+  }), [C, R] = I._T(t), [L, O] = I.mR(t), [A, p] = I.PK(t), [M, f] = I.d9(t, 1024), {
+    imageCTA: v,
+    imageAriaLabel: D,
+    setFilename: Z
+  } = (0, T.Z)(x), j = i.useMemo(() => {
     var e;
-    return null !== (e = null == t ? void 0 : t.map(e => ({
+    return null !== (e = null == s ? void 0 : s.map(e => ({
       value: e,
-      label: (0, u.formatPrice)(e, f.CurrencyCodes.USD)
+      label: (0, d.T4)(e, m.pKx.USD)
     }))) && void 0 !== e ? e : []
-  }, [t]);
+  }, [s]);
 
-  function U(e, t) {
-    null != t && j(t.name), M(e)
+  function U(e, s) {
+    null != s && Z(s.name), f(e)
   }
-  let P = (0, E.useRoleSubscriptionSettingsDisabled)(),
-    b = (0, d.useUID)(),
-    y = (0, d.useUID)(),
-    B = (0, d.useUID)();
-  return (0, a.jsxs)(S.default, {
-    title: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_BASIC_INFO_SECTION_TITLE,
+  let G = (0, E.mY)(),
+    P = (0, c.Dt)(),
+    b = (0, c.Dt)(),
+    B = (0, c.Dt)();
+  return (0, n.jsxs)(N.Z, {
+    title: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_BASIC_INFO_SECTION_TITLE,
     intiallyExpanded: !0,
-    children: [(0, a.jsxs)("div", {
+    children: [(0, n.jsxs)("div", {
       className: g.formSplit,
-      children: [(0, a.jsx)("div", {
+      children: [(0, n.jsx)("div", {
         className: g.formSplitHalf,
-        children: (0, a.jsx)(i.FormSection, {
-          title: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_NAME_TITLE,
-          titleId: b,
-          disabled: P,
-          children: (0, a.jsx)(i.TextInput, {
-            placeholder: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_NAME_PLACEHOLDER,
+        children: (0, n.jsx)(a.FormSection, {
+          title: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_NAME_TITLE,
+          titleId: P,
+          disabled: G,
+          children: (0, n.jsx)(a.TextInput, {
+            placeholder: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_NAME_PLACEHOLDER,
             value: C,
-            inputClassName: N.formInput,
+            inputClassName: h.formInput,
             onChange: R,
-            "aria-labelledby": b,
-            disabled: P
+            "aria-labelledby": P,
+            disabled: G
           })
         })
-      }), (0, a.jsx)("div", {
+      }), (0, n.jsx)("div", {
         className: g.formSplitHalf,
-        children: (0, a.jsx)(i.FormSection, {
-          title: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_PRICE_TITLE,
-          titleId: y,
-          disabled: P,
-          children: (0, a.jsx)(i.SingleSelect, {
-            options: G,
-            className: N.formInput,
-            isDisabled: P || null == t,
-            placeholder: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_PRICE_PLACEHOLDER,
-            value: x,
-            onChange: L,
+        children: (0, n.jsx)(a.FormSection, {
+          title: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_PRICE_TITLE,
+          titleId: b,
+          disabled: G,
+          children: (0, n.jsx)(a.SingleSelect, {
+            options: j,
+            className: h.formInput,
+            isDisabled: G || null == s,
+            placeholder: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_PRICE_PLACEHOLDER,
+            value: L,
+            onChange: O,
             maxVisibleItems: 5,
-            look: i.SelectLooks.CUSTOM,
-            "aria-labelledby": y
+            look: a.SelectLooks.CUSTOM,
+            "aria-labelledby": b
           })
         })
       })]
-    }), (0, a.jsx)(i.Spacer, {
+    }), (0, n.jsx)(a.Spacer, {
       size: 24
-    }), (0, a.jsx)(i.FormSection, {
-      title: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DESCRIPTION_TITLE,
+    }), (0, n.jsx)(a.FormSection, {
+      title: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DESCRIPTION_TITLE,
       titleId: B,
-      disabled: P,
-      children: (0, a.jsx)(i.TextArea, {
-        placeholder: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DESCRIPTION_PLACEHOLDER,
-        value: O,
+      disabled: G,
+      children: (0, n.jsx)(a.TextArea, {
+        placeholder: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DESCRIPTION_PLACEHOLDER,
+        value: A,
         rows: 2,
         autosize: !0,
-        className: N.formInput,
+        className: h.formInput,
         onChange: p,
         "aria-labelledby": B,
-        disabled: P
+        disabled: G
       })
-    }), (0, a.jsx)(i.Spacer, {
+    }), (0, n.jsx)(a.Spacer, {
       size: 24
-    }), (0, a.jsxs)("div", {
+    }), (0, n.jsxs)("div", {
       className: g.iconSection,
-      children: [(0, a.jsxs)(i.FormSection, {
-        title: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_SYMBOL_TITLE,
+      children: [(0, n.jsxs)(a.FormSection, {
+        title: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_SYMBOL_TITLE,
         className: g.iconSectionDescription,
-        disabled: P,
-        children: [(0, a.jsx)(i.FormText, {
-          type: i.FormText.Types.DESCRIPTION,
-          className: N.formDescription,
-          disabled: P,
-          children: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_SYMBOL_DESCRIPTION
-        }), (0, a.jsx)(r.default, {
+        disabled: G,
+        children: [(0, n.jsx)(a.FormText, {
+          type: a.FormText.Types.DESCRIPTION,
+          className: h.formDescription,
+          disabled: G,
+          children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_SYMBOL_DESCRIPTION
+        }), (0, n.jsx)(r.Z, {
           onChange: U,
-          buttonCTA: D,
-          "aria-label": v,
-          disabled: P,
-          look: i.Button.Looks.OUTLINED,
-          color: i.Button.Colors.PRIMARY
+          buttonCTA: v,
+          "aria-label": D,
+          disabled: G,
+          look: a.Button.Looks.OUTLINED,
+          color: a.Button.Colors.PRIMARY
         })]
-      }), (0, a.jsx)(o.default, {
-        image: A,
-        hint: D,
+      }), (0, n.jsx)(o.Z, {
+        image: M,
+        hint: v,
         showIcon: !0,
         showRemoveButton: !1,
         hideSize: !0,
         className: g.iconUploader,
         imageClassName: g.tierSymbolUploaderInner,
         onChange: U,
-        "aria-label": v,
-        disabled: P
+        "aria-label": D,
+        disabled: G
       })]
     })]
   })

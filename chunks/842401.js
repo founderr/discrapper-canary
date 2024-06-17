@@ -1,27 +1,26 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("481060"),
-  s = n("99690"),
-  a = n("689938"),
-  o = n("412356");
-t.default = e => {
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  s = n(99690),
+  o = n(689938),
+  a = n(412356);
+t.Z = e => {
   let {
     user: t
   } = e;
   return (0, i.jsxs)("div", {
-    className: o.container,
+    className: a.container,
     children: [(0, i.jsx)(r.Heading, {
-      className: o.header,
+      className: a.header,
       variant: "heading-sm/semibold",
-      children: a.default.Messages.REPORTS_USER_PREVIEW_TITLE
+      children: o.Z.Messages.REPORTS_USER_PREVIEW_TITLE
     }), (0, i.jsx)("div", {
-      className: o.userContainer,
+      className: a.userContainer,
       children: (0, i.jsxs)("div", {
-        className: o.userInfo,
-        children: [(0, i.jsx)(s.default, {
-          className: o.userIcon,
+        className: a.userInfo,
+        children: [(0, i.jsx)(s.Z, {
+          className: a.userIcon,
           user: t,
           size: r.AvatarSizes.SIZE_40
         }), (0, i.jsxs)("div", {

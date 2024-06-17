@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  Spacer: function() {
+n.d(t, {
+  L: function() {
     return r
   }
 });
-var i = n("735250");
+var i = n(735250);
 
 function r(e) {
   let {
@@ -21,4 +21,4 @@ function r(e) {
     }
   })
 }
-n("470079")
+n(470079)

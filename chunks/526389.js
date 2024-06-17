@@ -1,10 +1,9 @@
 "use strict";
-n.r(t);
-var r = Function.prototype.toString;
-t.default = function(e) {
+var n = Function.prototype.toString;
+t.Z = function(e) {
   if (null != e) {
     try {
-      return r.call(e)
+      return n.call(e)
     } catch (e) {}
     try {
       return e + ""

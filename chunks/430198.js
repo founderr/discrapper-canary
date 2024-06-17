@@ -1,22 +1,22 @@
 "use strict";
-n.r(t), n("47120");
-var i, r, s, a, o = n("149765"),
-  l = n("442837"),
-  u = n("570140"),
-  d = n("223892"),
-  _ = n("738774"),
-  c = n("644542"),
-  E = n("923726"),
-  I = n("973542"),
-  T = n("790285"),
-  f = n("160404"),
-  S = n("592125"),
-  h = n("271383"),
-  A = n("430824"),
-  m = n("594174"),
-  N = n("981631");
-let p = {},
-  O = new Set;
+n(47120);
+var i, r, s, o, a = n(149765),
+  l = n(442837),
+  u = n(570140),
+  _ = n(223892),
+  d = n(738774),
+  c = n(644542),
+  E = n(923726),
+  I = n(973542),
+  T = n(790285),
+  h = n(160404),
+  S = n(592125),
+  f = n(271383),
+  N = n(430824),
+  A = n(594174),
+  m = n(981631);
+let O = {},
+  R = new Set;
 
 function C(e) {
   let {
@@ -24,70 +24,70 @@ function C(e) {
     role: n,
     isPreviewingRoles: i
   } = e;
-  return !!(0, I.isSubscriptionRole)(n) && (!!(i || (0, I.isSubscriptionRoleAvailableForPurchase)(null != n ? n : void 0) || function(e, t) {
+  return !!(0, I.Z)(n) && (!!(i || (0, I.h)(null != n ? n : void 0) || function(e, t) {
     if (null == e) return !1;
-    let n = m.default.getCurrentUser();
+    let n = A.default.getCurrentUser();
     if (null == n) return !1;
-    let i = h.default.getMember(t, n.id);
+    let i = f.ZP.getMember(t, n.id);
     return null != i && i.roles.includes(e.id)
   }(n, t)) || !1)
 }
 
-function R(e, t) {
-  if (!t.hasFeature(N.GuildFeatures.CREATOR_MONETIZABLE) && !t.hasFeature(N.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) return !1;
-  let n = f.default.isViewingServerShop(t.id);
+function p(e, t) {
+  if (!t.hasFeature(m.oNc.CREATOR_MONETIZABLE) && !t.hasFeature(m.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) return !1;
+  let n = h.Z.isViewingServerShop(t.id);
   for (let i of Object.keys(e.permissionOverwrites)) {
-    let r = A.default.getRole(t.id, i);
+    let r = N.Z.getRole(t.id, i);
     if (!C({
         guildId: t.id,
         role: r,
         isPreviewingRoles: n
       })) continue;
     let s = e.permissionOverwrites[i];
-    if ((0, T.isChannelAccessGrantedBy)(e, s)) return !0
+    if ((0, T.TG)(e, s)) return !0
   }
-  let i = A.default.getRole(t.id, t.getEveryoneRoleId()),
-    r = null != i && !o.has(i.permissions, N.Permissions.VIEW_CHANNEL),
-    s = (0, T.isChannelAccessDeniedBy)(e, e.permissionOverwrites[t.id]);
+  let i = N.Z.getRole(t.id, t.getEveryoneRoleId()),
+    r = null != i && !a.e$(i.permissions, m.Plq.VIEW_CHANNEL),
+    s = (0, T.wB)(e, e.permissionOverwrites[t.id]);
   if (r && !s) {
-    for (let e of Object.values(A.default.getRoles(t.id)))
+    for (let e of Object.values(N.Z.getRoles(t.id)))
       if (C({
           guildId: t.id,
           role: e,
           isPreviewingRoles: n
-        }) && (0, T.isAllChannelsRole)(e)) return !0
+        }) && (0, T.MT)(e)) return !0
   }
   return !1
 }
 
 function g(e, t) {
-  let n = p[e];
+  let n = O[e];
   if (null == n) return !1;
-  let i = S.default.getChannel(t);
+  let i = S.Z.getChannel(t);
   if (null == i) return !1;
-  let r = A.default.getGuild(i.getGuildId());
+  let r = N.Z.getGuild(i.getGuildId());
   if (null == r) return !1;
   let s = n.has(t),
-    a = R(i, r);
-  return s !== a && (a ? n.add(t) : n.delete(t), !0)
+    o = p(i, r);
+  return s !== o && (o ? n.add(t) : n.delete(t), !0)
 }
 
 function L() {
-  p = {}, O.clear()
+  O = {}, R.clear()
 }
 
 function v(e) {
   let {
     guild: t
   } = e;
-  delete p[t.id]
+  delete O[t.id]
 }
 
 function D(e) {
   let {
     guildId: t
   } = e;
-  delete p[t]
+  delete O[t]
 }
 
 function M(e) {
@@ -96,37 +96,37 @@ function M(e) {
   } = e;
   return null != t.guild_id && g(t.guild_id, t.id)
 }
-class y extends(i = l.default.Store) {
+class P extends(i = l.ZP.Store) {
   initialize() {
-    this.waitFor(A.default, S.default, f.default), c.GuildRoleSubscriptionUsersExperiment.subscribe({
+    this.waitFor(N.Z, S.Z, h.Z), c.Zo.subscribe({
       location: "1"
     }, () => L())
   }
   isChannelGated(e, t) {
     if (null == e) return !1;
-    let n = p[e];
+    let n = O[e];
     return null == n && (! function(e) {
-      let t = A.default.getGuild(e);
+      let t = N.Z.getGuild(e);
       if (null == t) return;
-      let n = p[e] = new Set;
-      if (!t.hasFeature(N.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) || !(0, E.isGuildEligibleForRoleSubscriptions)(e) && !(0, d.isExpeditedMonetizationOnboardingGuild)(t)) return;
-      let i = S.default.getMutableGuildChannelsForGuild(e);
+      let n = O[e] = new Set;
+      if (!t.hasFeature(m.oNc.ROLE_SUBSCRIPTIONS_ENABLED) || !(0, E.kT)(e) && !(0, _.Rw)(t)) return;
+      let i = S.Z.getMutableGuildChannelsForGuild(e);
       for (let e in i) {
         let r = i[e];
-        R(r, t) && n.add(r.id)
+        p(r, t) && n.add(r.id)
       }
-    }(e), n = p[e]), null != n && n.has(t)
+    }(e), n = O[e]), null != n && n.has(t)
   }
   isChannelGatedAndVisible(e, t) {
-    return null != e && this.isChannelGated(e, t) && !O.has(e)
+    return null != e && this.isChannelGated(e, t) && !R.has(e)
   }
 }
-a = "GatedChannelStore", (s = "displayName") in(r = y) ? Object.defineProperty(r, s, {
-  value: a,
+o = "GatedChannelStore", (s = "displayName") in(r = P) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new y(u.default, {
+}) : r[s] = o, t.Z = new P(u.Z, {
   CONNECTION_OPEN: L,
   OVERLAY_INITIALIZE: L,
   CACHE_LOADED_LAZY: L,
@@ -144,7 +144,9 @@ a = "GatedChannelStore", (s = "displayName") in(r = y) ? Object.defineProperty(r
     let {
       channels: t
     } = e, n = !1;
-    for (let e of t) null != e.guild_id && g(e.guild_id, e.id) && (n = !0);
+    for (let e of t) {
+      if (null != e.guild_id) g(e.guild_id, e.id) && (n = !0)
+    }
     return n
   },
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: function(e) {
@@ -152,12 +154,12 @@ a = "GatedChannelStore", (s = "displayName") in(r = y) ? Object.defineProperty(r
       guildId: t,
       restrictions: n
     } = e;
-    (0, _.isRestrictedFromShowingGuildPurchaseEntryPoints)(n) ? O.add(t): O.delete(t)
+    (0, d.uq)(n) ? R.add(t): R.delete(t)
   },
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: function(e) {
     let {
       guildId: t
     } = e;
-    O.add(t)
+    R.add(t)
   }
 })

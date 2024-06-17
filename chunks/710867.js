@@ -1,17 +1,16 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("293335"),
-  s = n("935689");
-t.default = e => {
+var i = n(735250);
+n(470079);
+var r = n(293335),
+  s = n(935689);
+t.Z = e => {
   let {
     profileEffectConfig: t,
     onReady: n
   } = e, {
-    pendingRef: a,
-    setPending: o
-  } = (0, r.default)(t.effects, n);
+    pendingRef: o,
+    setPending: a
+  } = (0, r.Z)(t.effects, n);
   return (0, i.jsx)("div", {
     className: s.profileEffects,
     children: (0, i.jsx)("div", {
@@ -25,7 +24,7 @@ t.default = e => {
           position: "absolute"
         },
         onLoad: () => {
-          o(a.current - 1), a.current = a.current - 1
+          a(o.current - 1), o.current = o.current - 1
         }
       }, e.src))
     })

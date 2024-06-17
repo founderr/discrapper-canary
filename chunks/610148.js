@@ -1,6 +1,6 @@
 "use strict";
-var e = n("325008"),
-  o = n("498576"),
+var e = n(325008),
+  o = n(498576),
   i = TypeError,
   u = Object.getOwnPropertyDescriptor,
   c = e && ! function() {

@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  questTaskConfigFromServer: function() {
-    return a
+n.d(t, {
+  f: function() {
+    return o
   }
-}), n("47120");
-var i = n("742635");
+}), n(47120);
+var i = n(742635);
 let r = e => {
     let t = {};
     for (let n of Object.keys(e)) {
@@ -30,15 +30,15 @@ let r = e => {
     }
     return t
   },
-  a = e => {
+  o = e => {
     switch (e.type) {
-      case i.QuestTaskConfigTypes.FIRST_PARTY:
+      case i.L.FIRST_PARTY:
         return {
-          type: i.QuestTaskConfigTypes.FIRST_PARTY, tasks: r(e.tasks), joinOperator: e.join_operator
+          type: i.L.FIRST_PARTY, tasks: r(e.tasks), joinOperator: e.join_operator
         };
-      case i.QuestTaskConfigTypes.THIRD_PARTY:
+      case i.L.THIRD_PARTY:
         return {
-          type: i.QuestTaskConfigTypes.THIRD_PARTY, tasks: s(e.tasks), enrollmentUrl: e.enrollment_url, developerApplicationId: e.developer_application_id, joinOperator: e.join_operator
+          type: i.L.THIRD_PARTY, tasks: s(e.tasks), enrollmentUrl: e.enrollment_url, developerApplicationId: e.developer_application_id, joinOperator: e.join_operator
         }
     }
   }

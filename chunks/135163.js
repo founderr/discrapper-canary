@@ -1,20 +1,19 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("960259"),
-  s = n("989885"),
-  a = n("325767");
-t.default = (0, r.replaceIcon)(function(e) {
+var i = n(735250);
+n(470079);
+var r = n(960259),
+  s = n(989885),
+  o = n(325767);
+t.Z = (0, r.hN)(function(e) {
   let {
     width: t = 16,
     height: n = 16,
     color: r = "currentColor",
     foreground: s,
-    ...o
+    ...a
   } = e;
   return (0, i.jsxs)("svg", {
-    ...(0, a.default)(o),
+    ...(0, o.Z)(a),
     width: t,
     height: n,
     viewBox: "0 0 16 16",
@@ -29,6 +28,6 @@ t.default = (0, r.replaceIcon)(function(e) {
       d: "M3.81962 11.3333L3.81962 1.33325L5.52983 1.33325L5.52985 11.3333L7.46703 9.36658L8.66663 10.5916L4.67068 14.6666L0.666626 10.5916L1.86622 9.34158L3.81962 11.3333Z"
     })]
   })
-}, s.ArrowsUpDownIcon, void 0, {
+}, s.u, void 0, {
   size: 16
 })

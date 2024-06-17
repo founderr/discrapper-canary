@@ -1,78 +1,78 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return _
-  },
-  useFetchPurchases: function() {
+n.d(t, {
+  Z: function() {
     return d
+  },
+  c: function() {
+    return _
   }
-}), n("47120");
-var i = n("470079"),
-  r = n("399606"),
-  s = n("634894"),
-  a = n("335131"),
-  o = n("337679"),
-  l = n("1870"),
-  u = n("267097");
+}), n(47120);
+var i = n(470079),
+  r = n(399606),
+  s = n(634894),
+  o = n(335131),
+  a = n(337679),
+  l = n(1870),
+  u = n(267097);
 
-function d() {
+function _() {
   let e = "useFetchPurchases";
-  (0, s.useTriggerDebuggingAA)({
+  (0, s.j)({
     location: e + " auto on",
     autoTrackExposure: !0
-  }), (0, s.useTriggerDebuggingAA)({
+  }), (0, s.j)({
     location: e + " auto off",
     autoTrackExposure: !1
   });
-  let [t, n, u, d, _] = (0, r.useStateFromStoresArray)([l.default], () => [l.default.isFetching, l.default.isClaiming, l.default.fetchError, l.default.claimError, l.default.purchases]), {
+  let [t, n, u, _, d] = (0, r.Wu)([l.Z], () => [l.Z.isFetching, l.Z.isClaiming, l.Z.fetchError, l.Z.claimError, l.Z.purchases]), {
     shouldFakePurchaseSuccessFlowLocally: c
-  } = (0, o.default)({
+  } = (0, a.Z)({
     location: "useFetchPurchases"
   });
   return (0, i.useEffect)(() => {
-    (!c || !(_.size > 0)) && (0, a.fetchCollectiblesPurchases)()
+    if (!c || !(d.size > 0))(0, o.qg)()
   }, [c]), {
     isClaiming: n,
     fetchError: u,
-    claimError: d,
+    claimError: _,
     isFetching: t,
-    purchases: _
+    purchases: d
   }
 }
 
-function _(e) {
+function d(e) {
   var t;
   let n = null == e ? void 0 : e.paymentGateway,
     i = "useFetchCollectiblesCategoriesAndPurchases";
-  (0, s.useTriggerDebuggingAA)({
+  (0, s.j)({
     location: i + " auto on",
     autoTrackExposure: !0
-  }), (0, s.useTriggerDebuggingAA)({
+  }), (0, s.j)({
     location: i + " auto off",
     autoTrackExposure: !1
   });
   let {
     isFetching: r,
-    categories: a,
-    error: o,
+    categories: o,
+    error: a,
     refreshCategories: l
-  } = (0, u.default)({
+  } = (0, u.Z)({
     paymentGateway: n
   }), {
-    isClaiming: _,
+    isClaiming: d,
     fetchError: c,
     claimError: E,
     isFetching: I,
     purchases: T
-  } = d();
+  } = _();
   return {
     isFetching: r || I,
     isFetchingCategories: r,
     isFetchingPurchases: I,
-    isClaiming: _,
-    categories: a,
+    isClaiming: d,
+    categories: o,
     purchases: T,
-    error: null !== (t = null != o ? o : c) && void 0 !== t ? t : E,
+    error: null !== (t = null != a ? a : c) && void 0 !== t ? t : E,
     refreshCategories: l
   }
 }

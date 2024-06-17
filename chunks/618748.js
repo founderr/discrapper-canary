@@ -1,127 +1,127 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return y
+t.d(s, {
+  Z: function() {
+    return b
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("442837"),
-  n = s("481060"),
-  i = s("204875"),
-  r = s("715796"),
-  o = s("434404"),
-  d = s("999382"),
-  u = s("962086"),
-  c = s("225675"),
-  E = s("703656"),
-  _ = s("577275"),
-  I = s("430824"),
-  T = s("594174"),
-  S = s("823379"),
-  f = s("730647"),
-  m = s("584825"),
-  N = s("723047"),
-  g = s("303737"),
-  h = s("568074"),
-  C = s("411667"),
-  R = s("903773"),
-  x = s("822531"),
-  L = s("909656"),
-  O = s("210591"),
-  p = s("927731"),
-  A = s("798680"),
-  M = s("509026"),
-  D = s("981631"),
-  v = s("176505"),
-  j = s("829857"),
-  G = s("689938"),
-  U = s("213079");
+var n = t(735250);
+t(470079);
+var i = t(442837),
+  l = t(481060),
+  a = t(204875),
+  r = t(715796),
+  o = t(434404),
+  c = t(999382),
+  d = t(962086),
+  u = t(225675),
+  E = t(703656),
+  _ = t(577275),
+  I = t(430824),
+  T = t(594174),
+  N = t(823379),
+  m = t(730647),
+  S = t(584825),
+  h = t(723047),
+  g = t(303737),
+  x = t(568074),
+  C = t(411667),
+  R = t(903773),
+  L = t(822531),
+  O = t(909656),
+  A = t(210591),
+  p = t(927731),
+  M = t(798680),
+  f = t(509026),
+  v = t(981631),
+  D = t(176505),
+  Z = t(829857),
+  j = t(689938),
+  U = t(213079);
 
-function P(e) {
+function G(e) {
   let {
-    application: t,
-    guild: s
-  } = e, n = (0, m.useSubscriptionsSettings)(s.id), i = (0, m.useSubscriptionListingsForGuild)(s.id), r = i.some(e => null != e.name && null != e.subscription_plans[0] && null != e.description && null != e.image_asset), o = (0, l.useStateFromStores)([I.default], () => I.default.getRoles(s.id)), d = i.map(e => o[e.role_id]).some(e => null != e && 0 !== e.color), u = i.some(e => e.role_benefits.benefits.length > 0), c = null != t && s.hasFeature(D.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED), E = [{
-    title: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PAYMENT,
+    application: s,
+    guild: t
+  } = e, l = (0, S.YB)(t.id), a = (0, S.qi)(t.id), r = a.some(e => null != e.name && null != e.subscription_plans[0] && null != e.description && null != e.image_asset), o = (0, i.e7)([I.Z], () => I.Z.getRoles(t.id)), c = a.map(e => o[e.role_id]).some(e => null != e && 0 !== e.color), d = a.some(e => e.role_benefits.benefits.length > 0), u = null != s && t.hasFeature(v.oNc.ROLE_SUBSCRIPTIONS_ENABLED), E = [{
+    title: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PAYMENT,
     items: [{
-      description: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_PAYMENT_ENABLE,
-      completed: c
-    }]
-  }, {
-    title: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO,
-    items: [{
-      description: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_INFO_FORMAT,
-      completed: !0
-    }, {
-      description: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_INFO_DESCRIPTION,
-      completed: (null == n ? void 0 : n.description) != null && "" !== n.description
-    }, {
-      description: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_INFO_COVER_IMAGE,
-      completed: (null == n ? void 0 : n.cover_image_asset) != null
-    }]
-  }, {
-    title: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_TIERS,
-    items: [{
-      description: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_TIER_BASICS,
-      completed: r
-    }, {
-      description: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_TIER_FLAIR,
-      completed: d
-    }, {
-      description: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_TIER_PERKS,
+      description: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_PAYMENT_ENABLE,
       completed: u
     }]
+  }, {
+    title: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO,
+    items: [{
+      description: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_INFO_FORMAT,
+      completed: !0
+    }, {
+      description: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_INFO_DESCRIPTION,
+      completed: (null == l ? void 0 : l.description) != null && "" !== l.description
+    }, {
+      description: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_INFO_COVER_IMAGE,
+      completed: (null == l ? void 0 : l.cover_image_asset) != null
+    }]
+  }, {
+    title: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_TIERS,
+    items: [{
+      description: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_TIER_BASICS,
+      completed: r
+    }, {
+      description: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_TIER_FLAIR,
+      completed: c
+    }, {
+      description: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_TIER_PERKS,
+      completed: d
+    }]
   }];
-  return (0, a.jsx)(O.default, {
+  return (0, n.jsx)(A.Z, {
     children: E
   })
 }
 
-function b(e) {
+function P(e) {
   let {
-    application: t
+    application: s
   } = e, {
-    teams: s
-  } = (0, _.default)({
+    teams: t
+  } = (0, _.Z)({
     refreshOnDepChange: !1
-  }), l = s.find(e => {
-    var s;
-    return e.id === (null == t ? void 0 : null === (s = t.team) || void 0 === s ? void 0 : s.id)
-  }), i = [j.PayoutAccountStatuses.ACTION_REQUIRED, j.PayoutAccountStatuses.BLOCKED, j.PayoutAccountStatuses.SUSPENDED];
-  return (null == l ? void 0 : l.payout_account_status) != null && i.includes(null == l ? void 0 : l.payout_account_status) ? (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(n.Spacer, {
+  }), i = t.find(e => {
+    var t;
+    return e.id === (null == s ? void 0 : null === (t = s.team) || void 0 === t ? void 0 : t.id)
+  }), a = [Z.C.ACTION_REQUIRED, Z.C.BLOCKED, Z.C.SUSPENDED];
+  return (null == i ? void 0 : i.payout_account_status) != null && a.includes(null == i ? void 0 : i.payout_account_status) ? (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsx)(l.Spacer, {
       size: 16
-    }), (0, a.jsx)(R.default, {
-      children: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYOUTS_PROBLEM_WARNING.format({
-        url: D.MarketingURLs.DEVELOPER_PORTAL_PAYOUT_SETTINGS(l.id)
+    }), (0, n.jsx)(R.Z, {
+      children: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYOUTS_PROBLEM_WARNING.format({
+        url: v.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(i.id)
       })
-    }), (0, a.jsx)(n.Spacer, {
+    }), (0, n.jsx)(l.Spacer, {
       size: 16
     })]
   }) : null
 }
 
-function y(e) {
-  let t, {
-      guild: s,
-      application: n
+function b(e) {
+  let s, {
+      guild: t,
+      application: l
     } = e,
-    i = (0, l.useStateFromStores)([d.default], () => d.default.getProps().subsection),
-    o = null != n && s.hasFeature(D.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED);
-  return (0, r.useNewOwnerOnboardingRequired)(s), t = o ? function(e) {
-    if (e === D.GuildSettingsSubsections.ROLE_SUBSCRIPTION_EMOJI) return A.TabBarSection.EMOJIS;
-    return A.TabBarSection.TIERS
-  }(i) : A.TabBarSection.PAYMENT, (0, a.jsx)(f.GroupListingsFetchContextProvider, {
-    guildId: s.id,
+    a = (0, i.e7)([c.Z], () => c.Z.getProps().subsection),
+    o = null != l && t.hasFeature(v.oNc.ROLE_SUBSCRIPTIONS_ENABLED);
+  return (0, r.P)(t), s = o ? function(e) {
+    if (e === v.KsC.ROLE_SUBSCRIPTION_EMOJI) return M.ue.EMOJIS;
+    return M.ue.TIERS
+  }(a) : M.ue.PAYMENT, (0, n.jsx)(m.l, {
+    guildId: t.id,
     refetchOnMount: !0,
-    children: (0, a.jsx)(N.RoleSubscriptionSettingsDisabledContextProvider, {
-      guildId: s.id,
-      children: (0, a.jsx)(A.TabBarContextProvider, {
-        initialTab: t,
-        children: (0, a.jsx)(B, {
-          guild: s,
-          application: n
+    children: (0, n.jsx)(h.in, {
+      guildId: t.id,
+      children: (0, n.jsx)(M.M7, {
+        initialTab: s,
+        children: (0, n.jsx)(B, {
+          guild: t,
+          application: l
         })
       })
     })
@@ -129,129 +129,129 @@ function y(e) {
 }
 
 function B(e) {
-  let t, {
-      guild: s,
+  let s, {
+      guild: t,
       application: r
     } = e,
-    d = null != r && s.hasFeature(D.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED),
+    c = null != r && t.hasFeature(v.oNc.ROLE_SUBSCRIPTIONS_ENABLED),
     {
       currentTab: _,
-      setCurrentTab: m
-    } = (0, A.useTabBarState)(),
-    N = (0, f.useGroupListingsFetchContext)(),
-    R = (0, l.useStateFromStores)([T.default], () => T.default.getCurrentUser()),
-    O = (0, h.default)(s.id),
-    j = s.isOwner(R),
-    y = () => {
-      let e = I.default.getRole(s.id, s.getEveryoneRoleId());
+      setCurrentTab: S
+    } = (0, M.dw)(),
+    h = (0, m.f)(),
+    R = (0, i.e7)([T.default], () => T.default.getCurrentUser()),
+    A = (0, x.Z)(t.id),
+    Z = t.isOwner(R),
+    b = () => {
+      let e = I.Z.getRole(t.id, t.getEveryoneRoleId());
       if (null == e) return;
-      o.default.close();
-      let t = {
+      o.Z.close();
+      let s = {
         [e.id]: e
       };
-      (0, u.startImpersonating)(s.id, {
-        type: c.ImpersonateType.SERVER_SHOP,
-        roles: t,
+      (0, d.iD)(t.id, {
+        type: u.z.SERVER_SHOP,
+        roles: s,
         initialTab: "role_subscriptions",
-        returnToSection: D.GuildSettingsSections.ROLE_SUBSCRIPTIONS
-      }), (0, g.announceCreateTemplateChannels)(s.id), (0, E.transitionTo)(D.Routes.CHANNEL(s.id, v.StaticChannelRoute.ROLE_SUBSCRIPTIONS))
+        returnToSection: v.pNK.ROLE_SUBSCRIPTIONS
+      }), (0, g.be)(t.id), (0, E.uL)(v.Z5c.CHANNEL(t.id, D.oC.ROLE_SUBSCRIPTIONS))
     };
-  if (!N) return (0, a.jsx)(n.Spinner, {});
+  if (!h) return (0, n.jsx)(l.Spinner, {});
   switch (_) {
-    case A.TabBarSection.BASIC_INFO:
-      t = (0, a.jsx)(L.default, {
-        guild: s
+    case M.ue.BASIC_INFO:
+      s = (0, n.jsx)(O.Z, {
+        guild: t
       });
       break;
-    case A.TabBarSection.TIERS:
-      t = (0, a.jsx)(p.default, {
-        guildId: s.id
+    case M.ue.TIERS:
+      s = (0, n.jsx)(p.Z, {
+        guildId: t.id
       });
       break;
-    case A.TabBarSection.PAYMENT:
-      t = (0, a.jsx)(x.default, {
-        guild: s
+    case M.ue.PAYMENT:
+      s = (0, n.jsx)(L.Z, {
+        guild: t
       });
       break;
-    case A.TabBarSection.EMOJIS:
-      t = (0, a.jsx)(M.default, {
-        guild: s
+    case M.ue.EMOJIS:
+      s = (0, n.jsx)(f.Z, {
+        guild: t
       });
       break;
     default:
-      (0, S.assertNever)(_)
+      (0, N.vE)(_)
   }
-  return (0, a.jsxs)("div", {
+  return (0, n.jsxs)("div", {
     className: U.container,
-    children: [(0, a.jsxs)("div", {
+    children: [(0, n.jsxs)("div", {
       className: U.mainContent,
-      children: [(0, a.jsx)(n.FormTitle, {
+      children: [(0, n.jsx)(l.FormTitle, {
         tag: "h1",
-        children: G.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
-      }), (0, a.jsx)(n.FormText, {
-        type: n.FormText.Types.DESCRIPTION,
-        children: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_DESCRIPTION
-      }), (0, a.jsx)(C.default, {
-        guild: s
-      }), d && (0, a.jsx)(b, {
+        children: j.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
+      }), (0, n.jsx)(l.FormText, {
+        type: l.FormText.Types.DESCRIPTION,
+        children: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_DESCRIPTION
+      }), (0, n.jsx)(C.Z, {
+        guild: t
+      }), c && (0, n.jsx)(P, {
         application: r
-      }), (0, a.jsxs)("div", {
+      }), (0, n.jsxs)("div", {
         className: U.tabBarContainer,
-        children: [(0, a.jsxs)(n.TabBar, {
+        children: [(0, n.jsxs)(l.TabBar, {
           className: U.tabBar,
-          "aria-label": G.default.Messages.OPTIONS,
+          "aria-label": j.Z.Messages.OPTIONS,
           selectedItem: _,
           type: "top",
           look: "brand",
-          onItemSelect: m,
-          children: [(0, a.jsx)(i.default, {
-            id: A.TabBarSection.BASIC_INFO,
-            disabledTooltip: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
-            disabled: !d,
-            children: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO
-          }), (0, a.jsx)(i.default, {
-            id: A.TabBarSection.TIERS,
-            disabledTooltip: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
-            disabled: !d,
-            children: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_TIERS
-          }), (0, a.jsx)(i.default, {
-            id: A.TabBarSection.EMOJIS,
-            disabledTooltip: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
-            disabled: !d,
-            children: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_EMOJI
-          }), j ? (0, a.jsx)(n.TabBar.Item, {
+          onItemSelect: S,
+          children: [(0, n.jsx)(a.Z, {
+            id: M.ue.BASIC_INFO,
+            disabledTooltip: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
+            disabled: !c,
+            children: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO
+          }), (0, n.jsx)(a.Z, {
+            id: M.ue.TIERS,
+            disabledTooltip: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
+            disabled: !c,
+            children: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_TIERS
+          }), (0, n.jsx)(a.Z, {
+            id: M.ue.EMOJIS,
+            disabledTooltip: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
+            disabled: !c,
+            children: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_EMOJI
+          }), Z ? (0, n.jsx)(l.TabBar.Item, {
             className: U.__invalid_tabBarItem,
-            id: A.TabBarSection.PAYMENT,
-            children: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PAYMENT
+            id: M.ue.PAYMENT,
+            children: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PAYMENT
           }) : null]
-        }), d && (0, a.jsx)("div", {
+        }), c && (0, n.jsx)("div", {
           className: U.previewButton,
-          children: (0, a.jsx)(n.Tooltip, {
-            text: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PREVIEW_DISABLED,
+          children: (0, n.jsx)(l.Tooltip, {
+            text: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PREVIEW_DISABLED,
             children: e => {
               let {
-                onMouseEnter: t,
-                onMouseLeave: s
+                onMouseEnter: s,
+                onMouseLeave: t
               } = e;
-              return (0, a.jsx)(n.Button, {
-                disabled: O,
-                onMouseEnter: O ? t : void 0,
-                onMouseLeave: O ? s : void 0,
-                onClick: y,
-                color: n.Button.Colors.PRIMARY,
-                size: n.Button.Sizes.SMALL,
-                grow: !O,
-                look: n.Button.Looks.OUTLINED,
+              return (0, n.jsx)(l.Button, {
+                disabled: A,
+                onMouseEnter: A ? s : void 0,
+                onMouseLeave: A ? t : void 0,
+                onClick: b,
+                color: l.Button.Colors.PRIMARY,
+                size: l.Button.Sizes.SMALL,
+                grow: !A,
+                look: l.Button.Looks.OUTLINED,
                 className: U.previewButton,
-                children: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PREVIEW
+                children: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PREVIEW
               })
             }
           })
         })]
-      }), t]
-    }), (0, a.jsx)(P, {
+      }), s]
+    }), (0, n.jsx)(G, {
       application: r,
-      guild: s
+      guild: t
     })]
   })
 }

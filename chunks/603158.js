@@ -1,6 +1,6 @@
 "use strict";
-n.r(t), n.d(t, {
-  normalize: function() {
+n.d(t, {
+  F: function() {
     return l
   }
 });
@@ -19,17 +19,17 @@ let i = {
     "-": "-",
     " ": " "
   },
-  a = {
+  o = {
     "​": "",
     "‌": "",
     "‍": "",
     "‎": "",
     "\uFEFF": ""
   },
-  o = {
+  a = {
     ...s,
     ...r,
-    ...a,
+    ...o,
     ...i
   };
 
@@ -37,7 +37,7 @@ function l(e) {
   let t = "";
   for (let n = 0; n < e.length; n++) {
     let i = e[n];
-    null != o[i] ? t += o[i] : /[\p{Pd}\p{Pc}\p{Po}]/gu.test(i) ? t += " " : t += i
+    null != a[i] ? t += a[i] : /[\p{Pd}\p{Pc}\p{Po}]/gu.test(i) ? t += " " : t += i
   }
   return t.toLowerCase()
 }

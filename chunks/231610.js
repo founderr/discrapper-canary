@@ -1,37 +1,37 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  Z: function() {
     return T
   }
-}), s("47120");
-var a = s("735250");
-s("470079");
-var l = s("481060"),
-  n = s("723047"),
-  i = s("727843"),
-  r = s("290348"),
-  o = s("783454"),
-  d = s("893729"),
-  u = s("619326"),
-  c = s("553204"),
-  E = s("689938"),
-  _ = s("169769"),
-  I = s("654402");
+}), t(47120);
+var n = t(735250);
+t(470079);
+var i = t(481060),
+  l = t(723047),
+  a = t(727843),
+  r = t(290348),
+  o = t(783454),
+  c = t(893729),
+  d = t(619326),
+  u = t(553204),
+  E = t(689938),
+  _ = t(169769),
+  I = t(654402);
 
 function T() {
   let {
     editStateId: e,
-    guildId: t
-  } = (0, i.useEditStateContext)(), [, T] = r.useRoleIcon(e, t), [S, f] = r.useRoleColor(e, t), m = r.useRole(e, t);
+    guildId: s
+  } = (0, a.N)(), [, T] = r.p9(e, s), [N, m] = r.Ek(e, s), S = r.qs(e, s);
 
-  function N() {
-    (0, l.openModalLazy)(async () => {
+  function h() {
+    (0, i.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([s.e("99387"), s.e("22942")]).then(s.bind(s, "660727"));
-      return s => (0, a.jsx)(e, {
-        ...s,
-        guildId: t,
+      } = await Promise.all([t.e("99387"), t.e("22942")]).then(t.bind(t, 660727));
+      return t => (0, n.jsx)(e, {
+        ...t,
+        guildId: s,
         onUploadIcon: e => T({
           icon: e,
           unicodeEmoji: null
@@ -43,61 +43,61 @@ function T() {
       })
     })
   }
-  let g = (0, n.useRoleSubscriptionSettingsDisabled)();
-  return (0, a.jsxs)(o.default, {
-    title: E.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_FLAIR_HEADER_TITLE,
-    description: E.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_FLAIR_HEADER_SUBTITLE,
-    children: [(0, a.jsx)(l.FormSection, {
-      title: E.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_COLOR_TITLE,
+  let g = (0, l.mY)();
+  return (0, n.jsxs)(o.Z, {
+    title: E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_FLAIR_HEADER_TITLE,
+    description: E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_FLAIR_HEADER_SUBTITLE,
+    children: [(0, n.jsx)(i.FormSection, {
+      title: E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_COLOR_TITLE,
       disabled: g,
-      children: (0, a.jsx)(u.default, {
-        value: S,
-        onChange: f,
+      children: (0, n.jsx)(d.Z, {
+        value: N,
+        onChange: m,
         disabled: g
       })
-    }), (0, a.jsx)(l.Spacer, {
+    }), (0, n.jsx)(i.Spacer, {
       size: 24
-    }), (0, a.jsx)("div", {
+    }), (0, n.jsx)("div", {
       className: _.__invalid_iconSection,
-      children: (0, a.jsxs)(l.FormSection, {
-        title: E.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_BADGE_TITLE,
+      children: (0, n.jsxs)(i.FormSection, {
+        title: E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_BADGE_TITLE,
         disabled: g,
-        children: [(0, a.jsx)(l.FormText, {
-          type: l.FormText.Types.DESCRIPTION,
+        children: [(0, n.jsx)(i.FormText, {
+          type: i.FormText.Types.DESCRIPTION,
           className: _.formDescription,
           disabled: g,
-          children: E.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_BADGE_DESCRIPTION
-        }), (0, a.jsxs)("div", {
+          children: E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_BADGE_DESCRIPTION
+        }), (0, n.jsxs)("div", {
           className: I.iconUploaderContainer,
-          children: [(0, a.jsx)(c.default, {
-            role: m,
-            "aria-label": E.default.Messages.ROLE_ICON_CHOOSE_IMAGE,
-            onClick: N,
+          children: [(0, n.jsx)(u.Z, {
+            role: S,
+            "aria-label": E.Z.Messages.ROLE_ICON_CHOOSE_IMAGE,
+            onClick: h,
             disabled: g
-          }), (0, a.jsx)(l.Button, {
-            look: l.Button.Looks.OUTLINED,
-            color: l.Button.Colors.PRIMARY,
+          }), (0, n.jsx)(i.Button, {
+            look: i.Button.Looks.OUTLINED,
+            color: i.Button.Colors.PRIMARY,
             className: _.__invalid_imageUploadButtonCTA,
-            onClick: N,
+            onClick: h,
             disabled: g,
-            children: E.default.Messages.ROLE_ICON_CHOOSE_IMAGE
+            children: E.Z.Messages.ROLE_ICON_CHOOSE_IMAGE
           })]
         })]
       })
-    }), (0, a.jsx)(l.Spacer, {
+    }), (0, n.jsx)(i.Spacer, {
       size: 24
-    }), (0, a.jsx)(l.FocusBlock, {
-      children: (0, a.jsxs)("div", {
+    }), (0, n.jsx)(i.FocusBlock, {
+      children: (0, n.jsxs)("div", {
         className: I.previewContainer,
         "aria-hidden": !0,
-        children: [(0, a.jsx)(d.default, {
-          guildId: t,
-          role: m,
+        children: [(0, n.jsx)(c.Z, {
+          guildId: s,
+          role: S,
           className: I.messageContainer,
           theme: "light"
-        }), (0, a.jsx)(d.default, {
-          guildId: t,
-          role: m,
+        }), (0, n.jsx)(c.Z, {
+          guildId: s,
+          role: S,
           className: I.messageContainer,
           theme: "dark"
         })]

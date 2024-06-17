@@ -1,13 +1,11 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("844303"),
-  o = n("13942"),
-  s = n("176213"),
-  u = n("464854"),
-  c = n("893580"),
-  l = function() {
+var r = n(470079),
+  i = n(844303),
+  a = n(13942),
+  o = n(176213),
+  s = n(464854),
+  u = n(893580),
+  c = function() {
     function e(e, t) {
       for (var n = 0; n < t.length; n++) {
         var r = t[n];
@@ -18,7 +16,7 @@ var r = n("470079"),
       return n && e(t.prototype, n), r && e(t, r), t
     }
   }(),
-  d = function(e) {
+  l = function(e) {
     function t(e) {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
@@ -38,7 +36,7 @@ var r = n("470079"),
           view: "rgb"
         }))
       }, n.handleChange = function(e, t) {
-        e.hex ? o.isValidHex(e.hex) && n.props.onChange({
+        e.hex ? a.FX(e.hex) && n.props.onChange({
           hex: e.hex,
           source: "hex"
         }, t) : e.r || e.g || e.b ? n.props.onChange({
@@ -54,8 +52,8 @@ var r = n("470079"),
           source: "rgb"
         }, t)) : (e.h || e.s || e.l) && ("string" == typeof e.s && e.s.includes("%") && (e.s = e.s.replace("%", "")), "string" == typeof e.l && e.l.includes("%") && (e.l = e.l.replace("%", "")), 1 == e.s ? e.s = .01 : 1 == e.l && (e.l = .01), n.props.onChange({
           h: e.h || n.props.hsl.h,
-          s: Number((0, s.default)(e.s) ? n.props.hsl.s : e.s),
-          l: Number((0, s.default)(e.l) ? n.props.hsl.l : e.l),
+          s: Number((0, o.Z)(e.s) ? n.props.hsl.s : e.s),
+          l: Number((0, o.Z)(e.l) ? n.props.hsl.l : e.l),
           source: "hsl"
         }, t))
       }, n.showHighlight = function(e) {
@@ -78,11 +76,11 @@ var r = n("470079"),
           configurable: !0
         }
       }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-    }(t, e), l(t, [{
+    }(t, e), c(t, [{
       key: "render",
       value: function() {
         var e = this,
-          t = (0, a.default)({
+          t = (0, i.default)({
             default: {
               wrap: {
                 paddingTop: "16px",
@@ -156,12 +154,12 @@ var r = n("470079"),
             }
           }, this.props, this.state),
           n = void 0;
-        return "hex" === this.state.view ? n = i().createElement("div", {
+        return "hex" === this.state.view ? n = r.createElement("div", {
           style: t.fields,
           className: "flexbox-fix"
-        }, i().createElement("div", {
+        }, r.createElement("div", {
           style: t.field
-        }, i().createElement(u.EditableInput, {
+        }, r.createElement(s.Vm, {
           style: {
             input: t.input,
             label: t.label
@@ -169,12 +167,12 @@ var r = n("470079"),
           label: "hex",
           value: this.props.hex,
           onChange: this.handleChange
-        }))) : "rgb" === this.state.view ? n = i().createElement("div", {
+        }))) : "rgb" === this.state.view ? n = r.createElement("div", {
           style: t.fields,
           className: "flexbox-fix"
-        }, i().createElement("div", {
+        }, r.createElement("div", {
           style: t.field
-        }, i().createElement(u.EditableInput, {
+        }, r.createElement(s.Vm, {
           style: {
             input: t.input,
             label: t.label
@@ -182,9 +180,9 @@ var r = n("470079"),
           label: "r",
           value: this.props.rgb.r,
           onChange: this.handleChange
-        })), i().createElement("div", {
+        })), r.createElement("div", {
           style: t.field
-        }, i().createElement(u.EditableInput, {
+        }, r.createElement(s.Vm, {
           style: {
             input: t.input,
             label: t.label
@@ -192,9 +190,9 @@ var r = n("470079"),
           label: "g",
           value: this.props.rgb.g,
           onChange: this.handleChange
-        })), i().createElement("div", {
+        })), r.createElement("div", {
           style: t.field
-        }, i().createElement(u.EditableInput, {
+        }, r.createElement(s.Vm, {
           style: {
             input: t.input,
             label: t.label
@@ -202,9 +200,9 @@ var r = n("470079"),
           label: "b",
           value: this.props.rgb.b,
           onChange: this.handleChange
-        })), i().createElement("div", {
+        })), r.createElement("div", {
           style: t.alpha
-        }, i().createElement(u.EditableInput, {
+        }, r.createElement(s.Vm, {
           style: {
             input: t.input,
             label: t.label
@@ -213,12 +211,12 @@ var r = n("470079"),
           value: this.props.rgb.a,
           arrowOffset: .01,
           onChange: this.handleChange
-        }))) : "hsl" === this.state.view && (n = i().createElement("div", {
+        }))) : "hsl" === this.state.view && (n = r.createElement("div", {
           style: t.fields,
           className: "flexbox-fix"
-        }, i().createElement("div", {
+        }, r.createElement("div", {
           style: t.field
-        }, i().createElement(u.EditableInput, {
+        }, r.createElement(s.Vm, {
           style: {
             input: t.input,
             label: t.label
@@ -226,9 +224,9 @@ var r = n("470079"),
           label: "h",
           value: Math.round(this.props.hsl.h),
           onChange: this.handleChange
-        })), i().createElement("div", {
+        })), r.createElement("div", {
           style: t.field
-        }, i().createElement(u.EditableInput, {
+        }, r.createElement(s.Vm, {
           style: {
             input: t.input,
             label: t.label
@@ -236,9 +234,9 @@ var r = n("470079"),
           label: "s",
           value: Math.round(100 * this.props.hsl.s) + "%",
           onChange: this.handleChange
-        })), i().createElement("div", {
+        })), r.createElement("div", {
           style: t.field
-        }, i().createElement(u.EditableInput, {
+        }, r.createElement(s.Vm, {
           style: {
             input: t.input,
             label: t.label
@@ -246,9 +244,9 @@ var r = n("470079"),
           label: "l",
           value: Math.round(100 * this.props.hsl.l) + "%",
           onChange: this.handleChange
-        })), i().createElement("div", {
+        })), r.createElement("div", {
           style: t.alpha
-        }, i().createElement(u.EditableInput, {
+        }, r.createElement(s.Vm, {
           style: {
             input: t.input,
             label: t.label
@@ -257,18 +255,18 @@ var r = n("470079"),
           value: this.props.hsl.a,
           arrowOffset: .01,
           onChange: this.handleChange
-        })))), i().createElement("div", {
+        })))), r.createElement("div", {
           style: t.wrap,
           className: "flexbox-fix"
-        }, n, i().createElement("div", {
+        }, n, r.createElement("div", {
           style: t.toggle
-        }, i().createElement("div", {
+        }, r.createElement("div", {
           style: t.icon,
           onClick: this.toggleViews,
           ref: function(t) {
             return e.icon = t
           }
-        }, i().createElement(c.default, {
+        }, r.createElement(u.default, {
           style: t.svg,
           onMouseOver: this.showHighlight,
           onMouseEnter: this.showHighlight,
@@ -283,7 +281,7 @@ var r = n("470079"),
         } : null
       }
     }]), t
-  }(i().Component);
-d.defaultProps = {
+  }(r.Component);
+l.defaultProps = {
   view: "hex"
-}, t.default = d
+}, t.Z = l

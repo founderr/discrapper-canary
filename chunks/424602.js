@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  AppLauncherDesktopExperiment: function() {
+n.d(t, {
+  T: function() {
     return r
   },
-  DesktopAppLauncherInActivitiesShelfExperiment: function() {
+  m1: function() {
     return s
   }
 });
-var i = n("818083");
-let r = (0, i.createExperiment)({
+var i = n(818083);
+let r = (0, i.B)({
     kind: "user",
     id: "2023-11_app_launcher_desktop",
     label: "App Launcher - Desktop",
@@ -23,7 +23,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  s = (0, i.createExperiment)({
+  s = (0, i.B)({
     kind: "user",
     id: "2024-06_desktop_app_launcher_in_activities_shelf",
     label: "Desktop App Launcher In Activities Shelf",
@@ -38,7 +38,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   });
-(0, i.createExperiment)({
+(0, i.B)({
   kind: "user",
   id: "2024-06_mobile_app_launcher_in_activities_shelf",
   label: "[Mobile] App Launcher in Activities Shelf",

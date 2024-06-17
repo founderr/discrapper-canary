@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  Switch: function() {
+n.d(t, {
+  r: function() {
     return T
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
-  o = n("920906"),
-  l = n("692547"),
-  u = n("186325"),
-  d = n("84735"),
-  _ = n("180035"),
-  c = n("235949");
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(920906),
+  l = n(692547),
+  u = n(186325),
+  _ = n(84735),
+  d = n(180035),
+  c = n(235949);
 let E = {
     mass: 1,
     tension: 250
@@ -38,63 +38,63 @@ let E = {
       onChange: n,
       checked: s,
       disabled: T,
-      className: f,
+      className: h,
       focusProps: S,
-      innerRef: h
+      innerRef: f
     } = e, {
-      reducedMotion: A
-    } = r.useContext(u.AccessibilityPreferencesContext), m = r.useRef(null), [N, p] = r.useState(!1), O = (0, _.useToken)(l.default.unsafe_rawColors.PRIMARY_400).spring(), C = (0, _.useToken)(l.default.unsafe_rawColors.GREEN_360).spring(), {
-      state: R,
+      reducedMotion: N
+    } = r.useContext(u.S), A = r.useRef(null), [m, O] = r.useState(!1), R = (0, d.d)(l.Z.unsafe_rawColors.PRIMARY_400).spring(), C = (0, d.d)(l.Z.unsafe_rawColors.GREEN_360).spring(), {
+      state: p,
       opacity: g
-    } = (0, o.useSpring)({
+    } = (0, a.useSpring)({
       config: E,
       opacity: T ? .3 : 1,
-      state: N ? s ? .7 : .3 : s ? 1 : 0
+      state: m ? s ? .7 : .3 : s ? 1 : 0
     });
-    return (0, i.jsx)(d.FocusRing, {
+    return (0, i.jsx)(_.t, {
       ...S,
       within: !0,
       offset: -2,
-      children: (0, i.jsxs)(o.animated.div, {
-        className: a()(c.container, f, {
+      children: (0, i.jsxs)(a.animated.div, {
+        className: o()(c.container, h, {
           [c.checked]: s,
           [c.disabled]: T
         }),
-        onMouseDown: () => !T && p(!0),
-        onMouseUp: () => p(!1),
-        onMouseLeave: () => p(!1),
+        onMouseDown: () => !T && O(!0),
+        onMouseUp: () => O(!1),
+        onMouseLeave: () => O(!1),
         style: {
           opacity: g,
-          backgroundColor: R.to({
-            output: [O, C]
+          backgroundColor: p.to({
+            output: [R, C]
           })
         },
-        children: [(0, i.jsxs)(o.animated.svg, {
+        children: [(0, i.jsxs)(a.animated.svg, {
           className: c.slider,
           viewBox: "0 0 28 20",
           preserveAspectRatio: "xMinYMid meet",
           style: {
-            left: R.to({
+            left: p.to({
               range: [0, .3, .7, 1],
               output: [-3, 1, 8, 12]
             })
           },
           "aria-hidden": !0,
-          children: [(0, i.jsx)(o.animated.rect, {
+          children: [(0, i.jsx)(a.animated.rect, {
             fill: "white",
-            x: R.to({
+            x: p.to({
               range: [0, .3, .7, 1],
               output: [4, 0, 0, 4]
             }),
-            y: R.to({
+            y: p.to({
               range: [0, .3, .7, 1],
               output: [0, 1, 1, 0]
             }),
-            height: R.to({
+            height: p.to({
               range: [0, .3, .7, 1],
               output: [20, 18, 18, 20]
             }),
-            width: R.to({
+            width: p.to({
               range: [0, .3, .7, 1],
               output: [20, 28, 28, 20]
             }),
@@ -103,18 +103,18 @@ let E = {
             let s = e.to({
                 output: [t, n]
               }),
-              a = r ? [I.X.TOP, I.X.TOP, I.CHECK.TOP, I.CHECK.TOP] : [I.X.TOP, I.BAR.TOP, I.BAR.TOP, I.CHECK.TOP],
+              o = r ? [I.X.TOP, I.X.TOP, I.CHECK.TOP, I.CHECK.TOP] : [I.X.TOP, I.BAR.TOP, I.BAR.TOP, I.CHECK.TOP],
               l = r ? [I.X.BOTTOM, I.X.BOTTOM, I.CHECK.BOTTOM, I.CHECK.BOTTOM] : [I.X.BOTTOM, I.BAR.BOTTOM, I.BAR.BOTTOM, I.CHECK.BOTTOM];
             return (0, i.jsxs)("svg", {
               viewBox: "0 0 20 20",
               fill: "none",
-              children: [(0, i.jsx)(o.animated.path, {
+              children: [(0, i.jsx)(a.animated.path, {
                 fill: s,
                 d: e.to({
                   range: [0, .3, .7, 1],
-                  output: a
+                  output: o
                 })
-              }), (0, i.jsx)(o.animated.path, {
+              }), (0, i.jsx)(a.animated.path, {
                 fill: s,
                 d: e.to({
                   range: [0, .3, .7, 1],
@@ -122,24 +122,24 @@ let E = {
                 })
               })]
             })
-          }(R, O, C, A.enabled)]
+          }(p, R, C, N.enabled)]
         }), (0, i.jsx)("input", {
           id: t,
           type: "checkbox",
           ref: e => {
-            m.current = e, null != h && (h.current = e)
+            A.current = e, null != f && (f.current = e)
           },
           className: c.input,
           tabIndex: T ? -1 : 0,
           onKeyDown: function(e) {
-            if (!T && !e.repeat)(" " === e.key || "Enter" === e.key) && p(!0)
+            if (!T && !e.repeat)(" " === e.key || "Enter" === e.key) && O(!0)
           },
           onKeyUp: function(e) {
             var t;
-            if (!T && !!N && !e.repeat) p(!1), "Enter" === e.key && (null === (t = m.current) || void 0 === t || t.click())
+            if (!T && !!m && !e.repeat) O(!1), "Enter" === e.key && (null === (t = A.current) || void 0 === t || t.click())
           },
           onChange: function(e) {
-            p(!1), null == n || n(e.currentTarget.checked, e)
+            O(!1), null == n || n(e.currentTarget.checked, e)
           },
           checked: s,
           disabled: T

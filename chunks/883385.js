@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return i
   }
 });
-var u = n("735250");
-n("470079");
-var l = n("410575");
+var o = n(735250);
+n(470079);
+var r = n(410575);
 
-function a(e, t) {
+function i(e, t) {
   return function(n) {
-    return (0, u.jsx)(l.default, {
+    return (0, o.jsx)(r.Z, {
       page: t.page,
       section: t.section,
       object: t.object,
       objectType: t.objectType,
-      children: (0, u.jsx)(e, {
+      children: (0, o.jsx)(e, {
         ...n
       })
     })

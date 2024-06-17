@@ -1,23 +1,24 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("147913"),
-  r = n("710845"),
-  s = n("880027");
-let a = new r.default("LeagueOfLegendsLifecycleManager");
-class o extends i.default {
+n(47120);
+var i = n(147913),
+  r = n(710845),
+  s = n(880027);
+let o = new r.Z("LeagueOfLegendsLifecycleManager");
+class a extends i.Z {
   handleRunningGameChange(e) {
     let {
       added: t,
       removed: n
     } = e;
+    if (!!(0, s.J)("LeagueOfLegendsLifecycleManager")) i(t) && o.info("League of Legends Match Started", {
+      added: t
+    }), i(n) && o.info("League of Legends Match Ended", {
+      removed: n
+    });
 
     function i(e) {
       return e.some(e => "League of Legends" === e.name)
-    }(0, s.isEligibleForLeaderboard)("LeagueOfLegendsLifecycleManager") && (i(t) && a.info("League of Legends Match Started", {
-      added: t
-    }), i(n) && a.info("League of Legends Match Ended", {
-      removed: n
-    }))
+    }
   }
   constructor(...e) {
     var t, n, i;
@@ -31,4 +32,4 @@ class o extends i.default {
     }) : t[n] = i
   }
 }
-t.default = new o
+t.Z = new a

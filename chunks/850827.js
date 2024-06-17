@@ -1,88 +1,87 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("120356"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("512722"),
-  o = n.n(a),
-  l = n("442837"),
-  u = n("481060"),
-  d = n("730749"),
-  _ = n("726542"),
-  c = n("750154"),
-  E = n("592125"),
-  I = n("594174"),
-  T = n("979651"),
-  f = n("285952"),
-  S = n("543595"),
-  h = n("503438"),
-  A = n("802856"),
-  m = n("606925"),
-  N = n("719216"),
-  p = n("429589"),
-  O = n("276149"),
-  C = n("636245"),
-  R = n("697761"),
-  g = n("611459"),
-  L = n("544671"),
-  v = n("757182"),
-  D = n("910424"),
-  M = n("981631"),
-  y = n("620932");
-t.default = (0, d.default)(e => {
+  o = n(512722),
+  a = n.n(o),
+  l = n(442837),
+  u = n(481060),
+  _ = n(730749),
+  d = n(726542),
+  c = n(750154),
+  E = n(592125),
+  I = n(594174),
+  T = n(979651),
+  h = n(285952),
+  S = n(543595),
+  f = n(503438),
+  N = n(802856),
+  A = n(606925),
+  m = n(719216),
+  O = n(429589),
+  R = n(276149),
+  C = n(636245),
+  p = n(697761),
+  g = n(611459),
+  L = n(544671),
+  v = n(757182),
+  D = n(910424),
+  M = n(981631),
+  P = n(620932);
+t.Z = (0, _.Z)(e => {
   let {
     activity: t,
     embeddedActivity: n,
     user: r,
-    applicationStream: a,
-    className: d,
-    guildId: P,
+    applicationStream: o,
+    className: _,
+    guildId: y,
     channelId: U,
     source: b,
     color: G = u.Button.Colors.WHITE,
     look: w = u.Button.Looks.OUTLINED,
     type: k,
     onAction: B,
-    isEmbedded: V = !1
-  } = e, x = (0, l.useStateFromStores)([I.default], () => {
+    isEmbedded: x = !1
+  } = e, V = (0, l.e7)([I.default], () => {
     let e = I.default.getCurrentUser();
-    return o()(null != e, "UserActivityActions: currentUser cannot be undefined"), e
-  }), F = k === S.Types.PROFILE || k === S.Types.PROFILE_V2 || k === S.Types.SIMPLIFIED_PROFILE, H = k === S.Types.STREAM_PREVIEW || null != a, Y = k === S.Types.SIMPLIFIED_PROFILE || k === S.Types.BITE_SIZE_POPOUT, j = (0, h.default)(t), W = F ? f.default.Align.END : f.default.Align.STRETCH, K = j || H ? f.default.Direction.HORIZONTAL : f.default.Direction.VERTICAL, z = (null == t ? void 0 : t.type) === M.ActivityTypes.HANG_STATUS, Z = (0, l.useStateFromStores)([T.default, E.default], () => {
+    return a()(null != e, "UserActivityActions: currentUser cannot be undefined"), e
+  }), Z = k === S.Y.PROFILE || k === S.Y.PROFILE_V2 || k === S.Y.SIMPLIFIED_PROFILE, H = k === S.Y.STREAM_PREVIEW || null != o, F = k === S.Y.SIMPLIFIED_PROFILE || k === S.Y.BITE_SIZE_POPOUT, Y = (0, f.Z)(t), j = Z ? h.Z.Align.END : h.Z.Align.STRETCH, W = Y || H ? h.Z.Direction.HORIZONTAL : h.Z.Direction.VERTICAL, K = (null == t ? void 0 : t.type) === M.IIU.HANG_STATUS, z = (0, l.e7)([T.Z, E.Z], () => {
     var e;
-    return z ? E.default.getChannel(null === (e = T.default.getVoiceStateForUser(r.id)) || void 0 === e ? void 0 : e.channelId) : null
-  }), Q = K === f.default.Direction.VERTICAL;
-  return (0, i.jsx)(f.default, {
+    return K ? E.Z.getChannel(null === (e = T.Z.getVoiceStateForUser(r.id)) || void 0 === e ? void 0 : e.channelId) : null
+  }), q = W === h.Z.Direction.VERTICAL;
+  return (0, i.jsx)(h.Z, {
     grow: 0,
-    align: W,
-    direction: K,
-    wrap: Q ? f.default.Wrap.WRAP : f.default.Wrap.NO_WRAP,
-    className: s()(d, y.buttonsWrapper, Q ? y.vertical : y.horizontal),
+    align: j,
+    direction: W,
+    wrap: q ? h.Z.Wrap.WRAP : h.Z.Wrap.NO_WRAP,
+    className: s()(_, P.buttonsWrapper, q ? P.vertical : P.horizontal),
     children: (() => {
-      if ((0, A.default)(t)) return (0, i.jsx)(m.default, {
-        platform: _.default.get(M.PlatformTypes.XBOX),
+      if ((0, N.Z)(t)) return (0, i.jsx)(A.Z, {
+        platform: d.Z.get(M.ABu.XBOX),
         look: w,
         color: G,
         onAction: B
       }, "ConnectPlatformActivityButton");
-      if ((null == t ? void 0 : t.platform) === M.ActivityGamePlatforms.PS4 || (null == t ? void 0 : t.platform) === M.ActivityGamePlatforms.PS5) return (0, i.jsx)(m.default, {
+      if ((null == t ? void 0 : t.platform) === M.M7m.PS4 || (null == t ? void 0 : t.platform) === M.M7m.PS5) return (0, i.jsx)(A.Z, {
         look: w,
         color: G,
-        platform: _.default.get(M.PlatformTypes.PLAYSTATION),
+        platform: d.Z.get(M.ABu.PLAYSTATION),
         onAction: B
       }, "ConnectPlatformActivityButton");
-      if (j) {
-        let e = (0, i.jsx)(L.default, {
+      if (Y) {
+        let e = (0, i.jsx)(L.Z, {
             activity: t,
             user: r,
-            guildId: P,
+            guildId: y,
             channelId: U,
             source: b,
             look: w,
             color: G,
             onAction: B
           }, "spotify-activity-sync-button"),
-          n = (0, i.jsx)(g.default, {
+          n = (0, i.jsx)(g.Z, {
             activity: t,
             user: r,
             source: b,
@@ -90,55 +89,55 @@ t.default = (0, d.default)(e => {
             color: G,
             onAction: B
           }, "spotify-activity-play-button");
-        return Y ? (0, i.jsxs)(i.Fragment, {
+        return F ? (0, i.jsxs)(i.Fragment, {
           children: [e, n]
         }) : (0, i.jsxs)(i.Fragment, {
           children: [n, e]
         })
       }
-      if ((0, c.isStageActivity)(t)) {
-        let e = (0, c.unpackStageChannelParty)(t);
-        return null == e ? null : (0, i.jsx)(C.default, {
+      if ((0, c.dS)(t)) {
+        let e = (0, c.rq)(t);
+        return null == e ? null : (0, i.jsx)(C.Z, {
           guildId: e.guildId,
           channelId: e.channelId,
           color: G,
           look: w,
-          isProfile: F,
+          isProfile: Z,
           onAction: B
         }, e.channelId)
       }
-      return H ? (0, i.jsx)(D.default, {
-        isCurrentUser: x.id === r.id,
+      return H ? (0, i.jsx)(D.Z, {
+        isCurrentUser: V.id === r.id,
         color: G,
         look: w,
-        applicationStream: a,
+        applicationStream: o,
         onAction: B
-      }, "watch-button") : z && null != Z ? (0, i.jsx)(O.default, {
+      }, "watch-button") : K && null != z ? (0, i.jsx)(R.Z, {
         color: G,
         look: w,
-        hangStatusChannel: Z,
+        hangStatusChannel: z,
         onAction: B
       }, "hang-status-button") : (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(v.default, {
+        children: [(0, i.jsx)(v.Z, {
           activity: t,
           color: G,
           look: w,
           onAction: B
-        }, "watch-button"), (0, i.jsx)(p.default, {
+        }, "watch-button"), (0, i.jsx)(O.Z, {
           activity: t,
           embeddedActivity: n,
           user: r,
           color: G,
           look: w,
-          isEmbedded: V,
+          isEmbedded: x,
           onAction: B
-        }, "join-activity-button"), (0, i.jsx)(R.default, {
+        }, "join-activity-button"), (0, i.jsx)(p.Z, {
           activity: t,
           user: r,
           color: G,
           look: w,
           onAction: B
-        }, "notify-button"), (0, i.jsx)(N.default, {
+        }, "notify-button"), (0, i.jsx)(m.Z, {
           user: r,
           color: G,
           look: w,

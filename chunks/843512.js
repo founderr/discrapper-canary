@@ -1,7 +1,6 @@
 "use strict";
-n.r(t);
-var s = n("818083");
-t.default = (0, s.createExperiment)({
+var s = n(818083);
+t.Z = (0, s.B)({
   id: "2024-03_passwordless_login",
   label: "Passwordless Login",
   kind: "user",

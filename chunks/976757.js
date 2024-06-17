@@ -1,22 +1,22 @@
 "use strict";
-n.r(t), n.d(t, {
-  buildClanFromServer: function() {
-    return a
-  },
-  isLoadedSearchResult: function() {
+n.d(t, {
+  Gh: function() {
     return o
+  },
+  Pw: function() {
+    return a
   }
-}), n("945124");
-var i = n("116175"),
-  r = n("308083");
+}), n(945124);
+var i = n(116175),
+  r = n(308083);
 
 function s(e, t) {
   return void 0 === e || "" === e ? t : e
 }
 
-function a(e) {
-  let t = (0, i.getRandomClanBadgePreset)(),
-    n = (0, r.getRandomClanBrandPreset)();
+function o(e) {
+  let t = (0, i.yf)(),
+    n = (0, r.dt)();
   return {
     id: e.id,
     name: e.name,
@@ -43,6 +43,6 @@ function a(e) {
   }
 }
 
-function o(e) {
+function a(e) {
   return "loaded" === e.status
 }

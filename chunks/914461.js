@@ -2,10 +2,10 @@
 Object.defineProperty(t, "__esModule", {
   value: !0
 }), t.flattenNames = void 0;
-var r = s(n("426169")),
-  i = s(n("320403")),
-  a = s(n("667066")),
-  o = s(n("681926"));
+var r = s(n(426169)),
+  i = s(n(320403)),
+  a = s(n(667066)),
+  o = s(n(681926));
 
 function s(e) {
   return e && e.__esModule ? e : {

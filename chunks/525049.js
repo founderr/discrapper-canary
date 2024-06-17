@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  DIAGONAL_FACEPILE_AVATAR_PROPORTION: function() {
-    return s
-  },
-  DIAGONAL_FACEPILE_AVATAR_STROKE_WIDTH: function() {
+n.d(t, {
+  $V: function() {
     return i
   },
-  DIAGONAL_FACEPILE_MASK_OFFSET: function() {
+  jR: function() {
+    return o
+  },
+  o: function() {
     return r
   },
-  DIAGONAL_FACEPILE_TYPING_WIDTH_TO_HEIGHT_RATIO: function() {
-    return a
+  z3: function() {
+    return s
   }
 });
 let i = 3,
   r = .5,
   s = 1,
-  a = 2.5
+  o = 2.5

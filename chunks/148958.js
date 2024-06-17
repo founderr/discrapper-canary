@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  useSortApplicationsViaFrecency: function() {
-    return o
+n.d(t, {
+  h: function() {
+    return a
   }
-}), n("47120");
-var i = n("470079"),
-  r = n("442837"),
-  s = n("675478"),
-  a = n("822245");
+}), n(47120);
+var i = n(470079),
+  r = n(442837),
+  s = n(675478),
+  o = n(822245);
 
-function o(e) {
+function a(e) {
   i.useEffect(() => {
-    s.FrecencyUserSettingsActionCreators.loadIfNecessary()
+    s.DZ.loadIfNecessary()
   }, []);
-  let t = (0, r.useStateFromStores)([a.default], () => a.default.getApplicationFrecencyWithoutLoadingLatest());
+  let t = (0, r.e7)([o.Z], () => o.Z.getApplicationFrecencyWithoutLoadingLatest());
   return i.useMemo(() => {
     let n = [...e];
     return n.sort((e, n) => {

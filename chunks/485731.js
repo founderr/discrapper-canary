@@ -1,22 +1,22 @@
 "use strict";
-n.r(t), n.d(t, {
-  hqStreamingFrameAnimationPlayed: function() {
-    return s
-  },
-  hqStreamingPopoutDismissed: function() {
-    return o
-  },
-  hqStreamingSetEnabled: function() {
+n.d(t, {
+  J1: function() {
     return r
   },
-  hqStreamingUnlockAnimationPlayed: function() {
-    return a
+  dE: function() {
+    return o
   },
-  usePerksDemosUIStore: function() {
+  hP: function() {
+    return s
+  },
+  j$: function() {
     return i
+  },
+  pM: function() {
+    return a
   }
 });
-let i = (0, n("652874").default)(() => ({
+let i = (0, n(652874).Z)(() => ({
   hqStreamingFrameAnimationPlayed: !1,
   hqStreamingUnlockAnimationPlayed: !1,
   hqStreamingPopoutDismissed: !1,
@@ -40,13 +40,13 @@ function s(e) {
   })
 }
 
-function a(e) {
+function o(e) {
   i.setState({
     hqStreamingUnlockAnimationPlayed: e
   })
 }
 
-function o(e) {
+function a(e) {
   i.setState({
     hqStreamingPopoutDismissed: e
   })

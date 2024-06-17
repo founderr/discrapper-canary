@@ -1,44 +1,44 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return N
+n.d(t, {
+  Z: function() {
+    return m
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("481060"),
-  a = n("911969"),
-  o = n("555573"),
-  l = n("10718"),
-  u = n("895924"),
-  d = n("585483"),
-  _ = n("499254"),
-  c = n("676161"),
-  E = n("660090"),
-  I = n("783097"),
-  T = n("870205"),
-  f = n("981631"),
-  S = n("689079"),
-  h = n("689938"),
-  A = n("831330");
+var i = n(735250),
+  r = n(470079),
+  s = n(481060),
+  o = n(911969),
+  a = n(555573),
+  l = n(10718),
+  u = n(895924),
+  _ = n(585483),
+  d = n(499254),
+  c = n(676161),
+  E = n(660090),
+  I = n(783097),
+  T = n(870205),
+  h = n(981631),
+  S = n(689079),
+  f = n(689938),
+  N = n(831330);
 
-function m(e) {
+function A(e) {
   let {
     channel: t,
     command: n,
-    section: a
+    section: o
   } = e, l = r.useCallback(() => {
-    _.dismissAppLauncher(), o.setActiveCommand({
+    d.y(), a.Po({
       channelId: t.id,
       command: n,
-      section: a,
-      location: u.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW
-    }), d.ComponentDispatch.dispatch(f.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+      section: o,
+      location: u.Vh.APP_LAUNCHER_APPLICATION_VIEW
+    }), _.S.dispatch(h.CkL.FOCUS_CHANNEL_TEXT_AREA, {
       channelId: t.id
     })
-  }, [t, n, a]);
+  }, [t, n, o]);
   return (0, i.jsxs)(s.Clickable, {
-    className: A.command,
+    className: N.command,
     onClick: l,
     children: [(0, i.jsx)(s.Text, {
       variant: "text-sm/semibold",
@@ -51,50 +51,50 @@ function m(e) {
   })
 }
 
-function N(e) {
+function m(e) {
   var t;
   let {
     channel: n,
-    application: o
+    application: a
   } = e, {
     filterSection: u,
-    commandsByActiveSection: d,
-    sectionDescriptors: _
-  } = l.useDiscovery(n, {
-    commandType: a.ApplicationCommandType.CHAT
+    commandsByActiveSection: _,
+    sectionDescriptors: d
+  } = l.wi(n, {
+    commandType: o.yU.CHAT
   }, {
     placeholderCount: 0,
-    limit: S.DISCOVERY_COMMANDS_QUERY_LIMIT,
+    limit: S.tn,
     includeFrecency: !0
-  }), c = null !== (t = _.find(e => e.id === o.id)) && void 0 !== t ? t : null, {
-    sortOrder: f,
-    setSortOrder: N,
-    commands: O,
+  }), c = null !== (t = d.find(e => e.id === a.id)) && void 0 !== t ? t : null, {
+    sortOrder: h,
+    setSortOrder: m,
+    commands: R,
     canSort: C
-  } = (0, E.default)({
-    sectionId: o.id,
-    commandsByActiveSection: d
+  } = (0, E.Z)({
+    sectionId: a.id,
+    commandsByActiveSection: _
   });
   return (r.useEffect(() => {
-    u(o.id)
-  }, [o.id, u]), 0 === O.length && (0, I.isEmbeddedApp)({
-    application: o
+    u(a.id)
+  }, [a.id, u]), 0 === R.length && (0, I.ye)({
+    application: a
   })) ? null : (0, i.jsxs)("ul", {
-    className: A.contentContainer,
-    children: [(0, i.jsx)(p, {
-      commands: O,
+    className: N.contentContainer,
+    children: [(0, i.jsx)(O, {
+      commands: R,
       channel: n
     }), (0, i.jsxs)("div", {
-      className: A.commandListHeader,
+      className: N.commandListHeader,
       children: [(0, i.jsx)(s.Heading, {
         variant: "text-md/medium",
-        children: h.default.Messages.APP_LAUNCHER_ALL_COMMANDS_HEADER
-      }), C && (0, i.jsx)(T.default, {
-        sortOrder: f,
-        onSortOptionClick: N
+        children: f.Z.Messages.APP_LAUNCHER_ALL_COMMANDS_HEADER
+      }), C && (0, i.jsx)(T.Z, {
+        sortOrder: h,
+        onSortOptionClick: m
       })]
     }), (0, i.jsx)("ul", {
-      children: O.map(e => (0, i.jsx)(m, {
+      children: R.map(e => (0, i.jsx)(A, {
         channel: n,
         command: e,
         section: c
@@ -103,12 +103,12 @@ function N(e) {
   })
 }
 
-function p(e) {
+function O(e) {
   let {
     channel: t,
     commands: n
   } = e;
-  return 0 === (0, c.default)({
+  return 0 === (0, c.Z)({
     channel: t,
     commands: n,
     limit: 5

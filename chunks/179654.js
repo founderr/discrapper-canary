@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return o
   }
 });
-var i = n("848479"),
-  r = n("909766");
+var i = n(848479),
+  r = n(909766);
 
 function s(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -15,11 +15,11 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class a {
+class o {
   getStats() {
     let e = this.cpuHistogram.getReport(),
       t = this.memoryHistogram.getReport(),
-      n = i.default.getCumulativeCPUUsage(),
+      n = i.Z.getCumulativeCPUUsage(),
       r = null == this.startCPU || null == n ? void 0 : (n.usage - this.startCPU.usage) * 100 / ((n.sampleTime - this.startCPU.sampleTime) / 1e3);
     return {
       client_performance_cpu_percentile25: e.percentiles[25],
@@ -39,8 +39,8 @@ class a {
     }
   }
   takeSample() {
-    let e = i.default.getCumulativeCPUUsage(),
-      t = i.default.getCurrentMemoryUsageKB();
+    let e = i.Z.getCumulativeCPUUsage(),
+      t = i.Z.getCurrentMemoryUsageKB();
     if (null != e) {
       let t = !0;
       if (null != this.lastCPU) {
@@ -52,12 +52,12 @@ class a {
       }
       t && (this.lastCPU = e)
     } else {
-      let e = i.default.getCurrentCPUUsagePercent();
+      let e = i.Z.getCurrentCPUUsagePercent();
       null != e && this.cpuHistogram.addSample(e)
     }
     null != t && this.memoryHistogram.addSample(t)
   }
   constructor() {
-    s(this, "cpuHistogram", new r.Histogram), s(this, "memoryHistogram", new r.Histogram), s(this, "startCPU", i.default.getCumulativeCPUUsage()), s(this, "lastCPU", this.startCPU)
+    s(this, "cpuHistogram", new r.b), s(this, "memoryHistogram", new r.b), s(this, "startCPU", i.Z.getCumulativeCPUUsage()), s(this, "lastCPU", this.startCPU)
   }
 }

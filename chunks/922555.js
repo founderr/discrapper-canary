@@ -1,9 +1,8 @@
 "use strict";
-n.r(t);
-var i = n("570140");
-t.default = {
+var i = n(570140);
+t.Z = {
   move(e, t) {
-    i.default.dispatch({
+    i.Z.dispatch({
       type: "INCOMING_CALL_MOVE",
       x: e,
       y: t

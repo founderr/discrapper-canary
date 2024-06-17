@@ -1,24 +1,22 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("476400"),
-  o = n.n(a),
-  s = n("844303"),
-  u = n("464854"),
-  c = Object.assign || function(e) {
+var r = n(470079),
+  i = n(476400),
+  a = n.n(i),
+  o = n(844303),
+  s = n(464854),
+  u = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
       var n = arguments[t];
       for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
     }
     return e
   },
-  l = function(e) {
+  c = function(e) {
     var t = e.colors,
       n = e.onClick,
-      r = void 0 === n ? function() {} : n,
+      i = void 0 === n ? function() {} : n,
       a = e.onSwatchHover,
-      o = (0, s.default)({
+      c = (0, o.default)({
         default: {
           colors: {
             margin: "0 -10px",
@@ -47,24 +45,24 @@ var r = n("470079"),
         "no-presets": !t || !t.length
       }),
       l = function(e, t) {
-        r({
+        i({
           hex: e,
           source: "hex"
         }, t)
       };
-    return i().createElement("div", {
-      style: o.colors,
+    return r.createElement("div", {
+      style: c.colors,
       className: "flexbox-fix"
     }, t.map(function(e) {
       var t = "string" == typeof e ? {
           color: e
         } : e,
         n = "" + t.color + (t.title || "");
-      return i().createElement("div", {
+      return r.createElement("div", {
         key: n,
-        style: o.swatchWrap
-      }, i().createElement(u.Swatch, c({}, t, {
-        style: o.swatch,
+        style: c.swatchWrap
+      }, r.createElement(s.m4, u({}, t, {
+        style: c.swatch,
         onClick: l,
         onHover: a,
         focusStyle: {
@@ -73,9 +71,9 @@ var r = n("470079"),
       })))
     }))
   };
-l.propTypes = {
-  colors: o().arrayOf(o().oneOfType([o().string, o().shape({
-    color: o().string,
-    title: o().string
+c.propTypes = {
+  colors: a().arrayOf(a().oneOfType([a().string, a().shape({
+    color: a().string,
+    title: a().string
   })])).isRequired
-}, t.default = l
+}, t.Z = c

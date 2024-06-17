@@ -1,33 +1,33 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
+t.d(s, {
+  Z: function() {
     return _
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("512722"),
-  n = s.n(l),
-  i = s("442837"),
-  r = s("481060"),
-  o = s("395586"),
-  d = s("825055"),
-  u = s("909656"),
-  c = s("430824"),
-  E = s("689938");
+var n = t(735250);
+t(470079);
+var i = t(512722),
+  l = t.n(i),
+  a = t(442837),
+  r = t(481060),
+  o = t(395586),
+  c = t(825055),
+  d = t(909656),
+  u = t(430824),
+  E = t(689938);
 
 function _(e) {
   let {
-    guildId: t
-  } = e, s = (0, i.useStateFromStores)([c.default], () => c.default.getGuild(t));
-  return n()(null != s, "Guild not found"), (0, a.jsxs)(o.CreatorMonetizationSettingsDisabledContextProvider, {
-    guildId: t,
-    children: [(0, a.jsx)(d.default, {
-      children: E.default.Messages.GUILD_PRODUCTS_BASIC_INFO_SYNC_DISCLAIMER
-    }), (0, a.jsx)(r.Spacer, {
+    guildId: s
+  } = e, t = (0, a.e7)([u.Z], () => u.Z.getGuild(s));
+  return l()(null != t, "Guild not found"), (0, n.jsxs)(o.AL, {
+    guildId: s,
+    children: [(0, n.jsx)(c.Z, {
+      children: E.Z.Messages.GUILD_PRODUCTS_BASIC_INFO_SYNC_DISCLAIMER
+    }), (0, n.jsx)(r.Spacer, {
       size: 32
-    }), (0, a.jsx)(u.default, {
-      guild: s,
+    }), (0, n.jsx)(d.Z, {
+      guild: t,
       isGuildProducts: !0
     })]
   })

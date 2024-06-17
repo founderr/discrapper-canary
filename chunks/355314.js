@@ -1,105 +1,105 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return C
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("442837"),
-  a = n("481060"),
-  o = n("310752"),
-  l = n("174609"),
-  u = n("703656"),
-  d = n("210887"),
-  _ = n("594174"),
-  c = n("626135"),
-  E = n("424218"),
-  I = n("74538"),
-  T = n("104494"),
-  f = n("639119"),
-  S = n("631771"),
-  h = n("790527"),
-  A = n("474936"),
-  m = n("981631"),
-  N = n("731994"),
-  p = n("689938"),
-  O = n("241614");
+var i = n(735250),
+  r = n(470079),
+  s = n(442837),
+  o = n(481060),
+  a = n(310752),
+  l = n(174609),
+  u = n(703656),
+  _ = n(210887),
+  d = n(594174),
+  c = n(626135),
+  E = n(424218),
+  I = n(74538),
+  T = n(104494),
+  h = n(639119),
+  S = n(631771),
+  f = n(790527),
+  N = n(474936),
+  A = n(981631),
+  m = n(731994),
+  O = n(689938),
+  R = n(241614);
 
 function C(e) {
   let {
     onClose: t,
     ...n
-  } = e, C = (0, s.useStateFromStores)([_.default], () => _.default.getCurrentUser()), R = (0, s.useStateFromStores)([d.default], () => d.default.theme), g = (0, f.usePremiumTrialOffer)(), L = (0, T.usePremiumDiscountOffer)(), v = null != g || null != L, {
+  } = e, C = (0, s.e7)([d.default], () => d.default.getCurrentUser()), p = (0, s.e7)([_.Z], () => _.Z.theme), g = (0, h.N)(), L = (0, T.Ng)(), v = null != g || null != L, {
     enabled: D
-  } = S.DesktopFileUploadUpsellExperiment.useExperiment({
+  } = S.MP.useExperiment({
     location: "File Upload Roadblock"
   }, {
     autoTrackExposure: !v,
     disable: v
-  }), M = R === m.ThemeTypes.LIGHT ? "light" : "dark", y = D ? (0, i.jsx)("img", {
-    className: O.updatedArt,
+  }), M = p === A.BRd.LIGHT ? "light" : "dark", P = D ? (0, i.jsx)("img", {
+    className: R.updatedArt,
     alt: "File Upload Nitro Perk",
     src: "https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_".concat(M, ".png")
-  }) : (0, i.jsx)(o.default, {
-    icons: N.DEFAULT_FILE_UPLOAD_ICONS
-  }), P = r.useMemo(() => {
-    let e = I.default.getUserMaxFileSize(C),
-      t = (0, E.formatSize)(e / 1024, {
+  }) : (0, i.jsx)(a.Z, {
+    icons: m.J6
+  }), y = r.useMemo(() => {
+    let e = I.ZP.getUserMaxFileSize(C),
+      t = (0, E.BU)(e / 1024, {
         useKibibytes: !0
       }),
-      n = p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
+      n = O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
         maxSize: t
       });
     switch (null == C ? void 0 : C.premiumType) {
-      case A.PremiumTypes.TIER_0:
-        n = p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_0.format({
+      case N.p9.TIER_0:
+        n = O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_0.format({
           maxSize: t
         });
         break;
-      case A.PremiumTypes.TIER_1:
-        n = p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_1.format({
+      case N.p9.TIER_1:
+        n = O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_1.format({
           maxSize: t
         })
     }
     return n
-  }, [C]), U = D ? p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_TIER_2 : p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE, b = D ? (0, i.jsx)("div", {
-    className: O.body,
-    children: (0, i.jsx)(a.Text, {
+  }, [C]), U = D ? O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_TIER_2 : O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE, b = D ? (0, i.jsx)("div", {
+    className: R.body,
+    children: (0, i.jsx)(o.Text, {
       variant: "text-sm/medium",
       children: U
     })
   }) : (0, i.jsxs)("div", {
-    className: O.body,
+    className: R.body,
     children: [(0, i.jsx)("span", {
-      children: P
-    }), (0, i.jsx)(a.Text, {
+      children: y
+    }), (0, i.jsx)(o.Text, {
       variant: "text-md/medium",
       children: U
     })]
   });
-  return (0, i.jsx)(h.default, {
-    artElement: y,
-    artContainerClassName: D ? O.updatedArtContainer : O.artContainer,
+  return (0, i.jsx)(f.Z, {
+    artElement: P,
+    artContainerClassName: D ? R.updatedArtContainer : R.artContainer,
     enableArtBoxShadow: !1,
-    type: A.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL,
-    title: p.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+    type: N.cd.UPLOAD_ERROR_UPSELL,
+    title: O.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
     body: b,
-    context: p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
-      maxSize: p.default.Messages.FILE_UPLOAD_LIMIT_NEW_STANDARD
+    context: O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
+      maxSize: O.Z.Messages.FILE_UPLOAD_LIMIT_NEW_STANDARD
     }),
     glowUp: U,
     analyticsLocation: {
-      section: m.AnalyticsSections.FILE_UPLOAD_POPOUT
+      section: A.jXE.FILE_UPLOAD_POPOUT
     },
     onClose: t,
-    subscriptionTier: A.PremiumSubscriptionSKUs.TIER_2,
-    secondaryCTA: D ? p.default.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA : void 0,
+    subscriptionTier: N.Si.TIER_2,
+    secondaryCTA: D ? O.Z.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA : void 0,
     onSecondaryClick: D ? function() {
-      (0, l.default)(), t(), c.default.track(m.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
-        location_section: m.AnalyticsSections.FILE_UPLOAD_UPSELL_MODAL,
-        location_object: m.AnalyticsObjects.NAVIGATION_LINK
-      }), (0, u.transitionTo)(m.Routes.APPLICATION_STORE)
+      (0, l.Z)(), t(), c.default.track(A.rMx.PREMIUM_PROMOTION_OPENED, {
+        location_section: A.jXE.FILE_UPLOAD_UPSELL_MODAL,
+        location_object: A.qAy.NAVIGATION_LINK
+      }), (0, u.uL)(A.Z5c.APPLICATION_STORE)
     } : void 0,
     showEnhancedUpsell: D,
     ...n

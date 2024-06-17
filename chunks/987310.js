@@ -1,11 +1,10 @@
 "use strict";
-n.r(t);
-var r = n("195168"),
+var r = n(195168),
   i = "object" == typeof exports && exports && !exports.nodeType && exports,
   a = i && "object" == typeof module && module && !module.nodeType && module,
-  o = a && a.exports === i ? r.default.Buffer : void 0,
+  o = a && a.exports === i ? r.Z.Buffer : void 0,
   s = o ? o.allocUnsafe : void 0;
-t.default = function(e, t) {
+t.Z = function(e, t) {
   if (t) return e.slice();
   var n = e.length,
     r = s ? s(n) : new e.constructor(n);

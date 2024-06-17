@@ -1,6 +1,6 @@
 "use strict";
-var e = n("863664"),
-  o = n("192291"),
+var e = n(863664),
+  o = n(192291),
   i = o.aTypedArray,
   u = o.exportTypedArrayMethod,
   c = o.getTypedArrayConstructor;

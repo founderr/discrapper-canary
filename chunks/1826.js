@@ -1,9 +1,7 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("844303"),
-  o = function() {
+var r = n(470079),
+  i = n(844303),
+  a = function() {
     function e(e, t) {
       for (var n = 0; n < t.length; n++) {
         var r = t[n];
@@ -14,9 +12,9 @@ var r = n("470079"),
       return n && e(t.prototype, n), r && e(t, r), t
     }
   }(),
-  s = [38, 40],
-  u = 1,
-  c = function(e) {
+  o = [38, 40],
+  s = 1,
+  u = function(e) {
     function t(e) {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
@@ -34,7 +32,7 @@ var r = n("470079"),
         n.setUpdatedValue(e.target.value, e)
       }, n.handleKeyDown = function(e) {
         var t, r = Number(String(e.target.value).replace(/%/g, ""));
-        if (!isNaN(r) && (t = e.keyCode, s.indexOf(t) > -1)) {
+        if (!isNaN(r) && (t = e.keyCode, o.indexOf(t) > -1)) {
           var i = n.getArrowOffset(),
             a = 38 === e.keyCode ? r + i : r - i;
           n.setUpdatedValue(a, e)
@@ -53,7 +51,7 @@ var r = n("470079"),
       }, n.state = {
         value: String(e.value).toUpperCase(),
         blurValue: String(e.value).toUpperCase()
-      }, n.inputId = "rc-editable-input-" + u++, n
+      }, n.inputId = "rc-editable-input-" + s++, n
     }
     return ! function(e, t) {
       if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function, not " + typeof t);
@@ -65,7 +63,7 @@ var r = n("470079"),
           configurable: !0
         }
       }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-    }(t, e), o(t, [{
+    }(t, e), a(t, [{
       key: "componentDidUpdate",
       value: function(e, t) {
         this.props.value !== this.state.value && (e.value !== this.props.value || t.value !== this.state.value) && (this.input === document.activeElement ? this.setState({
@@ -108,7 +106,7 @@ var r = n("470079"),
       key: "render",
       value: function() {
         var e = this,
-          t = (0, a.default)({
+          t = (0, i.default)({
             default: {
               wrap: {
                 position: "relative"
@@ -127,9 +125,9 @@ var r = n("470079"),
           }, {
             "user-override": !0
           }, this.props);
-        return i().createElement("div", {
+        return r.createElement("div", {
           style: t.wrap
-        }, i().createElement("input", {
+        }, r.createElement("input", {
           id: this.inputId,
           style: t.input,
           ref: function(t) {
@@ -141,7 +139,7 @@ var r = n("470079"),
           onBlur: this.handleBlur,
           placeholder: this.props.placeholder,
           spellCheck: "false"
-        }), this.props.label && !this.props.hideLabel ? i().createElement("label", {
+        }), this.props.label && !this.props.hideLabel ? r.createElement("label", {
           htmlFor: this.inputId,
           style: t.label,
           onMouseDown: this.handleMouseDown
@@ -149,4 +147,4 @@ var r = n("470079"),
       }
     }]), t
   }(r.PureComponent || r.Component);
-t.default = c
+t.Z = u

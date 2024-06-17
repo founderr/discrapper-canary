@@ -1,88 +1,88 @@
 "use strict";
-n.r(t), n.d(t, {
-  connectToRemote: function() {
-    return m
-  },
-  disconnectRemote: function() {
-    return A
-  },
-  fetchDevices: function() {
-    return R
-  },
-  persistSelectedDeviceId: function() {
-    return g
-  },
-  remoteAudioSettingsUpdate: function() {
-    return O
-  },
-  remoteDisconnect: function() {
+n.d(t, {
+  LO: function() {
     return p
   },
-  remoteVoiceStateUpdate: function() {
+  On: function() {
+    return R
+  },
+  Vv: function() {
+    return m
+  },
+  _: function() {
+    return O
+  },
+  bp: function() {
+    return g
+  },
+  ef: function() {
+    return A
+  },
+  s6: function() {
     return N
   },
-  transferToPlayStation: function() {
+  sh: function() {
     return D
   }
-}), n("653041"), n("47120");
-var i = n("434179"),
-  r = n("771649"),
-  s = n("544891"),
-  a = n("570140"),
-  o = n("668781"),
-  l = n("340332"),
-  u = n("19780"),
-  d = n("797258"),
-  _ = n("626135"),
-  c = n("960048"),
-  E = n("607214"),
-  I = n("258609"),
-  T = n("893387"),
-  f = n("981631"),
-  S = n("689938");
+}), n(653041), n(47120);
+var i = n(434179),
+  r = n(771649),
+  s = n(544891),
+  o = n(570140),
+  a = n(668781),
+  l = n(340332),
+  u = n(19780),
+  _ = n(797258),
+  d = n(626135),
+  c = n(960048),
+  E = n(607214),
+  I = n(258609),
+  T = n(893387),
+  h = n(981631),
+  S = n(689938);
 
-function h(e, t) {
+function f(e, t) {
   var n, i;
-  _.default.track(f.AnalyticEvents.REMOTE_COMMAND_SENT, {
+  d.default.track(h.rMx.REMOTE_COMMAND_SENT, {
     command_type: e,
-    remote_platform: null === (i = d.default.getSessionById(t)) || void 0 === i ? void 0 : null === (n = i.clientInfo) || void 0 === n ? void 0 : n.os
+    remote_platform: null === (i = _.Z.getSessionById(t)) || void 0 === i ? void 0 : null === (n = i.clientInfo) || void 0 === n ? void 0 : n.os
   })
 }
-async function A() {
-  let e = I.default.getAwaitingRemoteSessionInfo(),
+async function N() {
+  let e = I.Z.getAwaitingRemoteSessionInfo(),
     t = null == e ? void 0 : e.nonce;
-  a.default.dispatch({
+  o.Z.dispatch({
     type: "REMOTE_SESSION_DISCONNECT"
   });
   let n = [];
-  ((null == e ? void 0 : e.type) === f.PlatformTypes.PLAYSTATION || (null == e ? void 0 : e.type) === f.PlatformTypes.PLAYSTATION_STAGING) && (null == e ? void 0 : e.commandId) != null && (null == e ? void 0 : e.deviceId) != null && n.push(v(e.type, e.deviceId, e.commandId)), null != t && n.push(function(e) {
-    return s.HTTP.del({
-      url: f.Endpoints.CONNECT_REQUEST(e)
+  ((null == e ? void 0 : e.type) === h.ABu.PLAYSTATION || (null == e ? void 0 : e.type) === h.ABu.PLAYSTATION_STAGING) && (null == e ? void 0 : e.commandId) != null && (null == e ? void 0 : e.deviceId) != null && n.push(v(e.type, e.deviceId, e.commandId)), null != t && n.push(function(e) {
+    return s.tn.del({
+      url: h.ANM.CONNECT_REQUEST(e)
     })
   }(t));
   try {
     await Promise.all(n)
   } catch (e) {
-    o.default.show({
-      title: S.default.Messages.CANCEL_TRANSFER_VOICE_FAILED_TITLE,
-      body: S.default.Messages.CANCEL_TRANSFER_VOICE_FAILED_BODY
+    a.Z.show({
+      title: S.Z.Messages.CANCEL_TRANSFER_VOICE_FAILED_TITLE,
+      body: S.Z.Messages.CANCEL_TRANSFER_VOICE_FAILED_BODY
     })
   }
 }
 
-function m(e) {
-  a.default.dispatch({
+function A(e) {
+  o.Z.dispatch({
     type: "REMOTE_SESSION_CONNECT",
     sessionId: e
   })
 }
 
-function N(e, t) {
+function m(e, t) {
   let {
     selfMute: n,
     selfDeaf: i
   } = t;
-  a.default.dispatch({
+  o.Z.dispatch({
     type: "REMOTE_COMMAND",
     sessionId: e,
     payload: {
@@ -90,22 +90,22 @@ function N(e, t) {
       self_mute: n,
       self_deaf: i
     }
-  }), h("VOICE_STATE_UPDATE", e)
+  }), f("VOICE_STATE_UPDATE", e)
 }
 
-function p(e) {
-  a.default.dispatch({
+function O(e) {
+  o.Z.dispatch({
     type: "REMOTE_COMMAND",
     sessionId: e,
     payload: {
       type: "DISCONNECT"
     }
-  }), h("DISCONNECT", e), A()
+  }), f("DISCONNECT", e), N()
 }
 
-function O(e, t, n, i) {
-  let r = (0, l.coerceAudioContextForProto)(n);
-  null != r && (a.default.dispatch({
+function R(e, t, n, i) {
+  let r = (0, l.z)(n);
+  null != r && (o.Z.dispatch({
     type: "REMOTE_COMMAND",
     sessionId: e,
     payload: {
@@ -114,14 +114,14 @@ function O(e, t, n, i) {
       id: t,
       ...i
     }
-  }), h("AUDIO_SETTINGS_UPDATE", e))
+  }), f("AUDIO_SETTINGS_UPDATE", e))
 }
 async function C() {
   let e;
   try {
-    let t = null != u.default.getRTCConnectionId() ? r.ConsoleHandoffType.TRANSFER_EXISTING_CALL : r.ConsoleHandoffType.CREATE_NEW_CALL;
-    e = (await s.HTTP.post({
-      url: f.Endpoints.CONNECT_REQUEST_CREATE,
+    let t = null != u.Z.getRTCConnectionId() ? r.o.TRANSFER_EXISTING_CALL : r.o.CREATE_NEW_CALL;
+    e = (await s.tn.post({
+      url: h.ANM.CONNECT_REQUEST_CREATE,
       body: {
         analytics_properties: {
           handoff_type: t
@@ -129,29 +129,29 @@ async function C() {
       }
     })).body.nonce
   } catch (e) {
-    c.default.captureException(e)
+    c.Z.captureException(e)
   }
   return e
 }
-async function R(e) {
+async function p(e) {
   let t;
-  a.default.dispatch({
+  o.Z.dispatch({
     type: "GAME_CONSOLE_FETCH_DEVICES_START",
     platform: e
   });
   try {
-    t = await s.HTTP.get({
-      url: f.Endpoints.CONSOLES_DEVICES(e)
+    t = await s.tn.get({
+      url: h.ANM.CONSOLES_DEVICES(e)
     })
   } catch (t) {
-    throw a.default.dispatch({
+    throw o.Z.dispatch({
       type: "GAME_CONSOLE_FETCH_DEVICES_FAIL",
       platform: e,
       error: t
     }), t
   }
   let n = t.body.devices;
-  return a.default.dispatch({
+  return o.Z.dispatch({
     type: "GAME_CONSOLE_FETCH_DEVICES_SUCCESS",
     platform: e,
     devices: n
@@ -159,37 +159,37 @@ async function R(e) {
 }
 
 function g(e, t) {
-  a.default.dispatch({
+  o.Z.dispatch({
     type: "GAME_CONSOLE_SELECT_DEVICE",
     platform: e,
     deviceId: t
   })
 }
 async function L(e, t, n, r) {
-  let o;
-  a.default.dispatch({
+  let a;
+  o.Z.dispatch({
     type: "GAME_CONSOLE_DEVICE_SEND_COMMAND_START",
     platform: e
   });
   try {
-    o = await s.HTTP.post({
-      url: f.Endpoints.CONSOLES_DEVICES_COMMANDS(e, t),
+    a = await s.tn.post({
+      url: h.ANM.CONSOLES_DEVICES_COMMANDS(e, t),
       body: {
-        command: i.ConsoleCommands.CONNECT_VOICE,
+        command: i.n.CONNECT_VOICE,
         channel_id: n.id,
         guild_id: n.guild_id,
         nonce: r
       }
     })
   } catch (t) {
-    throw a.default.dispatch({
+    throw o.Z.dispatch({
       type: "GAME_CONSOLE_DEVICE_SEND_COMMAND_FAIL",
       platform: e,
       error: t
     }), t
   }
-  let l = o.body.id;
-  return a.default.dispatch({
+  let l = a.body.id;
+  return o.Z.dispatch({
     type: "WAIT_FOR_REMOTE_SESSION",
     sessionType: e,
     nonce: r,
@@ -199,18 +199,18 @@ async function L(e, t, n, r) {
   }), l
 }
 async function v(e, t, n) {
-  a.default.dispatch({
+  o.Z.dispatch({
     type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_START",
     platform: e,
     deviceId: t,
     commandId: n
   });
   try {
-    await s.HTTP.del({
-      url: f.Endpoints.CONSOLES_DEVICES_COMMAND(e, t, n)
+    await s.tn.del({
+      url: h.ANM.CONSOLES_DEVICES_COMMAND(e, t, n)
     })
   } catch (i) {
-    throw a.default.dispatch({
+    throw o.Z.dispatch({
       type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_FAIL",
       platform: e,
       deviceId: t,
@@ -218,7 +218,7 @@ async function v(e, t, n) {
       error: i
     }), i
   }
-  a.default.dispatch({
+  o.Z.dispatch({
     type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_SUCCESS",
     platform: e,
     deviceId: t,
@@ -226,7 +226,7 @@ async function v(e, t, n) {
   })
 }
 async function D(e, t, n) {
-  await E.default.maybeShowPTTAlert(e), await A();
+  await E.Z.maybeShowPTTAlert(e), await N();
   let i = await C();
-  await L(e, t, n, i), (0, T.default)(n.id, e)
+  await L(e, t, n, i), (0, T.Z)(n.id, e)
 }

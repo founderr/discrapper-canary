@@ -1,34 +1,32 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("476400"),
-  o = n.n(a),
-  s = n("844303"),
-  u = n("829307"),
-  c = n("13942"),
-  l = n("464854"),
-  d = n("465995"),
-  f = function(e) {
+var r = n(470079),
+  i = n(476400),
+  a = n.n(i),
+  o = n(844303),
+  s = n(829307),
+  u = n(13942),
+  c = n(464854),
+  l = n(465995),
+  d = function(e) {
     var t = e.onChange,
       n = e.onSwatchHover,
-      r = e.hex,
+      i = e.hex,
       a = e.colors,
-      o = e.width,
+      d = e.width,
       f = e.triangle,
       p = e.styles,
       h = e.className,
-      m = "transparent" === r,
+      m = "transparent" === i,
       g = function(e, n) {
-        c.isValidHex(e) && t({
+        u.FX(e) && t({
           hex: e,
           source: "hex"
         }, n)
       },
-      _ = (0, s.default)((0, u.default)({
+      _ = (0, o.default)((0, s.Z)({
         default: {
           card: {
-            width: o,
+            width: d,
             background: "#fff",
             boxShadow: "0 1px rgba(0,0,0,.1)",
             borderRadius: "6px",
@@ -36,7 +34,7 @@ var r = n("470079"),
           },
           head: {
             height: "110px",
-            background: r,
+            background: i,
             borderRadius: "6px 6px 0 0",
             display: "flex",
             alignItems: "center",
@@ -48,7 +46,7 @@ var r = n("470079"),
           },
           label: {
             fontSize: "18px",
-            color: c.getContrastingColor(r),
+            color: u.Qg(i),
             position: "relative"
           },
           triangle: {
@@ -56,7 +54,7 @@ var r = n("470079"),
             height: "0px",
             borderStyle: "solid",
             borderWidth: "0 10px 10px 10px",
-            borderColor: "transparent transparent " + r + " transparent",
+            borderColor: "transparent transparent " + i + " transparent",
             position: "absolute",
             top: "-10px",
             left: "50%",
@@ -83,39 +81,39 @@ var r = n("470079"),
       }, void 0 === p ? {} : p), {
         "hide-triangle": "hide" === f
       });
-    return i().createElement("div", {
+    return r.createElement("div", {
       style: _.card,
       className: "block-picker " + (void 0 === h ? "" : h)
-    }, i().createElement("div", {
+    }, r.createElement("div", {
       style: _.triangle
-    }), i().createElement("div", {
+    }), r.createElement("div", {
       style: _.head
-    }, m && i().createElement(l.Checkboard, {
+    }, m && r.createElement(c.QN, {
       borderRadius: "6px 6px 0 0"
-    }), i().createElement("div", {
+    }), r.createElement("div", {
       style: _.label
-    }, r)), i().createElement("div", {
+    }, i)), r.createElement("div", {
       style: _.body
-    }, i().createElement(d.default, {
+    }, r.createElement(l.Z, {
       colors: a,
       onClick: g,
       onSwatchHover: n
-    }), i().createElement(l.EditableInput, {
+    }), r.createElement(c.Vm, {
       style: {
         input: _.input
       },
-      value: r,
+      value: i,
       onChange: g
     })))
   };
-f.propTypes = {
-  width: o().oneOfType([o().string, o().number]),
-  colors: o().arrayOf(o().string),
-  triangle: o().oneOf(["top", "hide"]),
-  styles: o().object
-}, f.defaultProps = {
+d.propTypes = {
+  width: a().oneOfType([a().string, a().number]),
+  colors: a().arrayOf(a().string),
+  triangle: a().oneOf(["top", "hide"]),
+  styles: a().object
+}, d.defaultProps = {
   width: 170,
   colors: ["#D9E3F0", "#F47373", "#697689", "#37D67A", "#2CCCE4", "#555555", "#dce775", "#ff8a65", "#ba68c8"],
   triangle: "top",
   styles: {}
-}, (0, l.ColorWrap)(f)
+}, (0, c.t1)(d)

@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-04_changelog",
   label: "New Changelog Messages",
@@ -24,4 +23,4 @@ let i = (0, n("818083").createExperiment)({
     }
   }]
 });
-t.default = i
+t.Z = i

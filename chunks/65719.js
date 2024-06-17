@@ -1,17 +1,15 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("924102"),
-  o = n("13942"),
-  s = Object.assign || function(e) {
+var r = n(470079),
+  i = n(924102),
+  a = n(13942),
+  o = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
       var n = arguments[t];
       for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
     }
     return e
   },
-  u = function() {
+  s = function() {
     function e(e, t) {
       for (var n = 0; n < t.length; n++) {
         var r = t[n];
@@ -22,7 +20,7 @@ var r = n("470079"),
       return n && e(t.prototype, n), r && e(t, r), t
     }
   }();
-t.default = function(e) {
+t.Z = function(e) {
   var t = function(t) {
     function n(e) {
       ! function(e, t) {
@@ -33,16 +31,16 @@ t.default = function(e) {
         return t && ("object" == typeof t || "function" == typeof t) ? t : e
       }(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
       return t.handleChange = function(e, n) {
-        if (o.simpleCheckForValidColor(e)) {
-          var r = o.toState(e, e.h || t.state.oldHue);
+        if (a.LX(e)) {
+          var r = a.jH(e, e.h || t.state.oldHue);
           t.setState(r), t.props.onChangeComplete && t.debounce(t.props.onChangeComplete, r, n), t.props.onChange && t.props.onChange(r, n)
         }
       }, t.handleSwatchHover = function(e, n) {
-        if (o.simpleCheckForValidColor(e)) {
-          var r = o.toState(e, e.h || t.state.oldHue);
+        if (a.LX(e)) {
+          var r = a.jH(e, e.h || t.state.oldHue);
           t.props.onSwatchHover && t.props.onSwatchHover(r, n)
         }
-      }, t.state = s({}, o.toState(e.color, 0)), t.debounce = (0, a.default)(function(e, t, n) {
+      }, t.state = o({}, a.jH(e.color, 0)), t.debounce = (0, i.Z)(function(e, t, n) {
         e(t, n)
       }, 100), t
     }
@@ -56,22 +54,22 @@ t.default = function(e) {
           configurable: !0
         }
       }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-    }(n, t), u(n, [{
+    }(n, t), s(n, [{
       key: "render",
       value: function() {
         var t = {};
-        return this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover), i().createElement(e, s({}, this.props, this.state, {
+        return this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover), r.createElement(e, o({}, this.props, this.state, {
           onChange: this.handleChange
         }, t))
       }
     }], [{
       key: "getDerivedStateFromProps",
       value: function(e, t) {
-        return s({}, o.toState(e.color, t.oldHue))
+        return o({}, a.jH(e.color, t.oldHue))
       }
     }]), n
   }(r.PureComponent || r.Component);
-  return t.propTypes = s({}, e.propTypes), t.defaultProps = s({}, e.defaultProps, {
+  return t.propTypes = o({}, e.propTypes), t.defaultProps = o({}, e.defaultProps, {
     color: {
       h: 250,
       s: .5,

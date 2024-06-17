@@ -1,36 +1,36 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return p
+n.d(t, {
+  Z: function() {
+    return O
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
-  o = n("442837"),
-  l = n("481060"),
-  u = n("367907"),
-  d = n("739566"),
-  _ = n("623292"),
-  c = n("703656"),
-  E = n("665906"),
-  I = n("488131"),
-  T = n("375954"),
-  f = n("36082"),
-  S = n("696202"),
-  h = n("981631"),
-  A = n("689938"),
-  m = n("98482");
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(442837),
+  l = n(481060),
+  u = n(367907),
+  _ = n(739566),
+  d = n(623292),
+  c = n(703656),
+  E = n(665906),
+  I = n(488131),
+  T = n(375954),
+  h = n(36082),
+  S = n(696202),
+  f = n(981631),
+  N = n(689938),
+  A = n(98482);
 
-function N(e) {
+function m(e) {
   let {
     channel: t,
     message: n,
     replyChainLength: s
   } = e;
   return r.useEffect(() => {
-    (0, u.trackWithMetadata)(h.AnalyticEvents.THREAD_NUDGE_SHOWN, {
+    (0, u.yw)(f.rMx.THREAD_NUDGE_SHOWN, {
       type: "Reply Chain (".concat(3, ")"),
       reply_chain_length: s + 1,
       channel_id: t.id,
@@ -38,9 +38,9 @@ function N(e) {
     })
   }, [t]), (0, i.jsxs)(l.Clickable, {
     onClick: function() {
-      (0, _.deletePendingReply)(t.id), (0, I.openThreadSidebarForCreating)(t, n, "Reply Chain Nudge")
+      (0, d.A6)(t.id), (0, I.R6)(t, n, "Reply Chain Nudge")
     },
-    className: m.threadSuggestionBar,
+    className: A.threadSuggestionBar,
     focusProps: {
       offset: {
         right: -4,
@@ -49,21 +49,21 @@ function N(e) {
     },
     children: [(0, i.jsx)(l.Text, {
       color: "header-secondary",
-      className: m.text,
+      className: A.text,
       variant: "text-sm/normal",
-      children: A.default.Messages.THREAD_REPLY_SUGGESTION.format({
+      children: N.Z.Messages.THREAD_REPLY_SUGGESTION.format({
         count: Math.min(10, s + 1)
       })
     }), (0, i.jsx)(l.Text, {
       color: "text-link",
-      className: m.createThreadButton,
+      className: A.createThreadButton,
       variant: "text-sm/semibold",
-      children: A.default.Messages.CREATE_THREAD
+      children: N.Z.Messages.CREATE_THREAD
     })]
   })
 }
 
-function p(e) {
+function O(e) {
   let {
     reply: t,
     chatInputType: n
@@ -73,34 +73,34 @@ function p(e) {
     shouldMention: u,
     showMentionToggle: I
   } = t, {
-    nick: p,
-    colorString: O,
+    nick: O,
+    colorString: R,
     colorRoleName: C
-  } = (0, d.default)(s), R = function(e, t) {
+  } = (0, _.ZP)(s), p = function(e, t) {
     let n = e.id,
       i = t.id;
-    return (0, o.useStateFromStores)([T.default], () => {
+    return (0, a.e7)([T.Z], () => {
       let e = i;
       for (let t = 0; t < 10; t++) {
-        let i = T.default.getMessage(n, e);
-        if ((null == i ? void 0 : i.type) !== h.MessageTypes.REPLY || null == i.messageReference) return t;
+        let i = T.Z.getMessage(n, e);
+        if ((null == i ? void 0 : i.type) !== f.uaV.REPLY || null == i.messageReference) return t;
         e = i.messageReference.message_id
       }
       return 10
     }, [n, i])
-  }(r, s), g = (0, E.useCanStartPublicThread)(r, s), L = n.showThreadPromptOnReply && R >= 2 && g;
+  }(r, s), g = (0, E.NE)(r, s), L = n.showThreadPromptOnReply && p >= 2 && g;
 
   function v(e) {
-    e.stopPropagation(), (0, _.setPendingReplyShouldMention)(r.id, !u)
+    e.stopPropagation(), (0, d.qx)(r.id, !u)
   }
   return (0, i.jsx)("div", {
-    className: m.clipContainer,
+    className: A.clipContainer,
     children: (0, i.jsxs)("div", {
-      className: m.container,
+      className: A.container,
       children: [(0, i.jsxs)("div", {
-        className: m.replyBar,
+        className: A.replyBar,
         children: [(0, i.jsx)(l.Clickable, {
-          onClick: () => (0, c.transitionTo)(h.Routes.CHANNEL(r.getGuildId(), r.id, s.id)),
+          onClick: () => (0, c.uL)(f.Z5c.CHANNEL(r.getGuildId(), r.id, s.id)),
           focusProps: {
             offset: {
               top: -8,
@@ -111,22 +111,22 @@ function p(e) {
           },
           children: (0, i.jsx)(l.Text, {
             color: "header-secondary",
-            className: a()(m.text, m.replyLabel),
+            className: o()(A.text, A.replyLabel),
             variant: "text-sm/normal",
-            children: A.default.Messages.REPLYING_TO.format({
+            children: N.Z.Messages.REPLYING_TO.format({
               userHook: (e, t) => (0, i.jsx)(l.NameWithRole, {
-                className: m.name,
-                name: p,
-                color: O,
+                className: A.name,
+                name: O,
+                color: R,
                 roleName: C
               }, t)
             })
           })
         }), (0, i.jsxs)("div", {
-          className: m.actions,
+          className: A.actions,
           children: [I && (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(l.Tooltip, {
-              text: u ? A.default.Messages.REPLY_MENTION_ON_TOOLTIP : A.default.Messages.REPLY_MENTION_OFF_TOOLTIP,
+              text: u ? N.Z.Messages.REPLY_MENTION_ON_TOOLTIP : N.Z.Messages.REPLY_MENTION_OFF_TOOLTIP,
               children: e => {
                 let {
                   onMouseEnter: t,
@@ -145,32 +145,32 @@ function p(e) {
                   children: (0, i.jsxs)(l.Text, {
                     variant: "text-sm/bold",
                     color: u ? "text-link" : "text-muted",
-                    className: m.mentionButton,
-                    children: [(0, i.jsx)(f.default, {
-                      "aria-label": A.default.Messages.MENTION,
-                      className: m.mentionIcon
-                    }), u ? A.default.Messages.REPLY_MENTION_ON : A.default.Messages.REPLY_MENTION_OFF]
+                    className: A.mentionButton,
+                    children: [(0, i.jsx)(h.Z, {
+                      "aria-label": N.Z.Messages.MENTION,
+                      className: A.mentionIcon
+                    }), u ? N.Z.Messages.REPLY_MENTION_ON : N.Z.Messages.REPLY_MENTION_OFF]
                   })
                 })
               }
             }), (0, i.jsx)("div", {
-              className: m.separator,
+              className: A.separator,
               "aria-hidden": !0
             })]
           }), (0, i.jsx)(l.Clickable, {
-            className: m.closeButton,
+            className: A.closeButton,
             onClick: function(e) {
-              e.stopPropagation(), (0, _.deletePendingReply)(r.id)
+              e.stopPropagation(), (0, d.A6)(r.id)
             },
-            children: (0, i.jsx)(S.default, {
-              className: m.closeIcon
+            children: (0, i.jsx)(S.Z, {
+              className: A.closeIcon
             })
           })]
         })]
-      }), L && (0, i.jsx)(N, {
+      }), L && (0, i.jsx)(m, {
         channel: r,
         message: s,
-        replyChainLength: R
+        replyChainLength: p
       })]
     })
   })

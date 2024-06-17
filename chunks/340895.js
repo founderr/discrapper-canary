@@ -1,30 +1,30 @@
 "use strict";
-n.r(t), n("47120");
-var i, r, s, a, o = n("442837"),
-  l = n("433517"),
-  u = n("570140"),
-  d = n("695346"),
-  _ = n("581883"),
-  c = n("314897"),
-  E = n("592125"),
-  I = n("885110"),
-  T = n("981631");
-let f = "IncomingCallStore",
+n(47120);
+var i, r, s, o, a = n(442837),
+  l = n(433517),
+  u = n(570140),
+  _ = n(695346),
+  d = n(581883),
+  c = n(314897),
+  E = n(592125),
+  I = n(885110),
+  T = n(981631);
+let h = "IncomingCallStore",
   S = {
     width: 232,
     height: 315
   },
-  h = new Set,
-  A = [],
-  m = new Map,
-  N = new Set,
-  p = 0,
+  f = new Set,
+  N = [],
+  A = new Map,
+  m = new Set,
   O = 0,
+  R = 0,
   C = !1;
 
-function R(e) {
-  if (null == e || null == m.get(e)) return !1;
-  m.delete(e), (N = new Set(N)).delete(e)
+function p(e) {
+  if (null == e || null == A.get(e)) return !1;
+  A.delete(e), (m = new Set(m)).delete(e)
 }
 
 function g(e) {
@@ -32,82 +32,82 @@ function g(e) {
     channelId: t,
     ringing: n
   } = e, i = n.includes(c.default.getId());
-  if (!N.has(t) && i) {
-    let e = E.default.getChannel(t);
+  if (!m.has(t) && i) {
+    let e = E.Z.getChannel(t);
     if (null == e) return !1;
-    let n = 10 * N.size;
-    m.set(t, {
+    let n = 10 * m.size;
+    A.set(t, {
       channel: e,
-      x: p + n,
-      y: O + n
-    }), (N = new Set(N)).add(t)
+      x: O + n,
+      y: R + n
+    }), (m = new Set(m)).add(t)
   } else {
-    if (!N.has(t) || i) return !1;
-    R(t)
+    if (!m.has(t) || i) return !1;
+    p(t)
   }
 }! function() {
-  let e = l.Storage.get(f);
-  if (null != e) p = +e.x, O = +e.y;
+  let e = l.K.get(h);
+  if (null != e) O = +e.x, R = +e.y;
   else {
-    let e = n("451478").default.windowSize();
-    p = e.width / 2 - S.width / 2, O = e.height / 2 - S.height / 2
+    let e = n(451478).Z.windowSize();
+    O = e.width / 2 - S.width / 2, R = e.height / 2 - S.height / 2
   }
 }();
 
 function L() {
-  C = I.default.getStatus() === T.StatusTypes.DND || d.FocusMode.getSetting()
+  C = I.Z.getStatus() === T.Skl.DND || _.QZ.getSetting()
 }
-class v extends(i = o.default.Store) {
+class v extends(i = a.ZP.Store) {
   initialize() {
-    this.waitFor(E.default, I.default), this.syncWith([I.default], L), this.syncWith([_.default], L)
+    this.waitFor(E.Z, I.Z), this.syncWith([I.Z], L), this.syncWith([d.Z], L)
   }
   getIncomingCalls() {
-    return C ? A : Array.from(m.values())
+    return C ? N : Array.from(A.values())
   }
   getIncomingCallChannelIds() {
-    return C ? h : N
+    return C ? f : m
   }
   getFirstIncomingCallId() {
-    return C ? null : N.values().next().value
+    return C ? null : m.values().next().value
   }
   hasIncomingCalls() {
-    return !C && N.size > 0
+    return !C && m.size > 0
   }
 }
-a = "IncomingCallStore", (s = "displayName") in(r = v) ? Object.defineProperty(r, s, {
-  value: a,
+o = "IncomingCallStore", (s = "displayName") in(r = v) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new v(u.default, {
+}) : r[s] = o, t.Z = new v(u.Z, {
   CALL_CREATE: g,
   CALL_UPDATE: g,
   CALL_DELETE: function(e) {
     let {
       channelId: t
     } = e;
-    return R(t)
+    return p(t)
   },
   VOICE_CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    return R(t)
+    return p(t)
   },
   INCOMING_CALL_MOVE: function(e) {
     let {
       x: t,
       y: n
     } = e;
-    return p = t, O = n, l.Storage.set(f, {
-      x: p,
-      y: O
+    return O = t, R = n, l.K.set(h, {
+      x: O,
+      y: R
     }), !1
   },
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    return R(t.id)
+    return p(t.id)
   }
 })

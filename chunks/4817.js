@@ -2,8 +2,8 @@
 Object.defineProperty(t, "__esModule", {
   value: !0
 }), t.mergeClasses = void 0;
-var r = o(n("320403")),
-  i = o(n("117806")),
+var r = o(n(320403)),
+  i = o(n(117806)),
   a = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
       var n = arguments[t];

@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return c
   }
-}), n("789020"), n("47120"), n("653041");
-var i = n("470079"),
-  r = n("442837"),
-  s = n("630388"),
-  a = n("115130"),
-  o = n("844797"),
-  l = n("694312"),
-  u = n("405625"),
-  d = n("664097"),
-  _ = n("981631");
+}), n(789020), n(47120), n(653041);
+var i = n(470079),
+  r = n(442837),
+  s = n(630388),
+  o = n(115130),
+  a = n(844797),
+  l = n(694312),
+  u = n(405625),
+  _ = n(664097),
+  d = n(981631);
 
 function c(e) {
   let {
@@ -21,20 +21,20 @@ function c(e) {
     channel: c
   } = e, {
     filter: E
-  } = (0, r.useStateFromStoresObject)([a.default], () => ({
-    filter: a.default.getFilter()
-  })), I = (0, l.useActivityShelfData)(t), T = (0, u.default)(I), f = (0, d.useDeveloperActivityShelfItems)(), S = (0, o.useIsActivityInTextChannel)(c);
+  } = (0, r.cj)([o.Z], () => ({
+    filter: o.Z.getFilter()
+  })), I = (0, l.E)(t), T = (0, u.Z)(I), h = (0, _.o)(), S = (0, a.oy)(c);
   return i.useMemo(() => {
     function e(e) {
       return !!(!n || "" === E || e.application.name.toLowerCase().includes(E.toLowerCase())) || !1
     }
 
     function t(e) {
-      return !S || (0, s.hasFlag)(e.application.flags, _.ApplicationFlags.EMBEDDED_RELEASED)
+      return !S || (0, s.yE)(e.application.flags, d.udG.EMBEDDED_RELEASED)
     }
-    let i = [...f].filter(e).filter(t),
+    let i = [...h].filter(e).filter(t),
       r = new Set(i.map(e => e.application.id));
     for (let n of T) !r.has(n.application.id) && e(n) && t(n) && i.push(n);
     return i
-  }, [f, n, E, T, S])
+  }, [h, n, E, T, S])
 }

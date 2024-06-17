@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  useCanSeeRemixBadge: function() {
+n.d(t, {
+  X$: function() {
     return r
   },
-  useIsRemixANitroPerk: function() {
+  _f: function() {
     return s
   }
-}), n("906732");
-let i = (0, n("818083").createExperiment)({
+}), n(906732);
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2023-08_remix_ga",
   label: "Remix General Available",

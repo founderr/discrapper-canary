@@ -1,7 +1,7 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("818083");
-let r = (0, i.createExperiment)({
+n(47120);
+var i = n(818083);
+let r = (0, i.B)({
   kind: "user",
   id: "2024-06_rtc_pacer__simulcast",
   label: "RTC Pacer & Golive Simulcast",
@@ -44,7 +44,7 @@ let r = (0, i.createExperiment)({
     }
   }]
 });
-t.default = {
+t.Z = {
   getConfig(e, t) {
     let n = r.getCurrentConfig({
       location: "e1c55b_1"

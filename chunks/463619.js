@@ -1,11 +1,10 @@
 "use strict";
-n.r(t);
-var r = n("548015"),
+var r = n(548015),
   i = Object.prototype,
   a = i.hasOwnProperty,
   o = i.toString,
-  s = r.default ? r.default.toStringTag : void 0;
-t.default = function(e) {
+  s = r.Z ? r.Z.toStringTag : void 0;
+t.Z = function(e) {
   var t = a.call(e, s),
     n = e[s];
   try {

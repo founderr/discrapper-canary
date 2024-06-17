@@ -1,28 +1,28 @@
 "use strict";
-s.r(t), s.d(t, {
-  useSlideCarouselAnalytics: function() {
-    return r
+t.d(s, {
+  X: function() {
+    return l
   }
 });
-var a = s("470079"),
-  l = s("626135"),
-  n = s("981631");
-let r = (e, t) => {
-  let s = a.useCallback((s, a) => l.default.track(n.AnalyticEvents.SLIDE_CAROUSEL_ITEM_VIEWED, {
+var n = t(470079),
+  a = t(626135),
+  i = t(981631);
+let l = (e, s) => {
+  let t = n.useCallback((t, n) => a.default.track(i.rMx.SLIDE_CAROUSEL_ITEM_VIEWED, {
     carousel_id: e,
-    slide_id: null != a ? a : s.toString(),
-    slide_index: s,
-    location_stack: t
-  }), [e, t]);
+    slide_id: null != n ? n : t.toString(),
+    slide_index: t,
+    location_stack: s
+  }), [e, s]);
   return {
-    trackSlideView: s,
-    trackPagination: a.useCallback((s, a, r, i) => l.default.track(n.AnalyticEvents.SLIDE_CAROUSEL_PAGINATION_CLICKED, {
+    trackSlideView: t,
+    trackPagination: n.useCallback((t, n, l, r) => a.default.track(i.rMx.SLIDE_CAROUSEL_PAGINATION_CLICKED, {
       carousel_id: e,
-      current_slide_index: a,
-      next_slide_index: s,
-      current_slide_id: i,
-      next_slide_id: r,
-      location_stack: t
-    }), [e, t])
+      current_slide_index: n,
+      next_slide_index: t,
+      current_slide_id: r,
+      next_slide_id: l,
+      location_stack: s
+    }), [e, s])
   }
 }

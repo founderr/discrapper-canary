@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n.d(t, {
-  FormErrorBlock: function() {
+n.d(t, {
+  k: function() {
     return c
   },
-  FormErrorBlockColors: function() {
-    return _
+  m: function() {
+    return d
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
-  o = n("1561"),
-  l = n("465670"),
-  u = n("759231"),
-  d = n("835023");
-let _ = {
-    RED: d.backgroundRed,
-    BACKGROUND_TERTIARY: d.backgroundTertiary,
-    BACKGROUND_ACCENT: d.backgroundAccent
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(1561),
+  l = n(465670),
+  u = n(759231),
+  _ = n(835023);
+let d = {
+    RED: _.backgroundRed,
+    BACKGROUND_TERTIARY: _.backgroundTertiary,
+    BACKGROUND_ACCENT: _.backgroundAccent
   },
   c = r.forwardRef(function(e, t) {
     let {
@@ -26,24 +26,24 @@ let _ = {
       children: r,
       className: s,
       onDismiss: c,
-      backgroundColor: E = _.RED,
-      icon: I = u.default,
+      backgroundColor: E = d.RED,
+      icon: I = u.Z,
       iconClassName: T
     } = e;
     return (0, i.jsxs)("div", {
-      className: a()(d.error, s, E),
+      className: o()(_.error, s, E),
       ref: t,
       children: [(0, i.jsx)(I, {
-        className: a()(d.icon, T)
+        className: o()(_.icon, T)
       }), (0, i.jsx)("div", {
         role: n,
-        className: d.text,
+        className: _.text,
         children: r
-      }), null != c ? (0, i.jsx)(o.Clickable, {
+      }), null != c ? (0, i.jsx)(a.P, {
         onClick: c,
-        className: d.errorClose,
-        children: (0, i.jsx)(l.default, {
-          className: d.errorCloseIcon
+        className: _.errorClose,
+        children: (0, i.jsx)(l.Z, {
+          className: _.errorCloseIcon
         })
       }) : null]
     })

@@ -1,27 +1,25 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("476400"),
-  o = n.n(a),
-  s = n("844303"),
-  u = n("329022"),
-  c = n("829307"),
-  l = n("13942"),
-  d = n("464854"),
-  f = function(e) {
+var r = n(470079),
+  i = n(476400),
+  a = n.n(i),
+  o = n(844303),
+  s = n(329022),
+  u = n(829307),
+  c = n(13942),
+  l = n(464854),
+  d = function(e) {
     var t = e.onChange,
       n = e.onSwatchHover,
-      r = e.hex,
+      i = e.hex,
       a = e.colors,
-      o = e.width,
+      d = e.width,
       f = e.triangle,
       p = e.styles,
       h = e.className,
-      m = (0, s.default)((0, c.default)({
+      m = (0, o.default)((0, u.Z)({
         default: {
           card: {
-            width: o,
+            width: d,
             background: "#fff",
             border: "0 solid rgba(0,0,0,0.25)",
             boxShadow: "0 1px 4px rgba(0,0,0,0.25)",
@@ -120,22 +118,22 @@ var r = n("470079"),
         "top-right-triangle": "top-right" === f
       }),
       g = function(e, n) {
-        l.isValidHex(e) && t({
+        c.FX(e) && t({
           hex: e,
           source: "hex"
         }, n)
       };
-    return i().createElement("div", {
+    return r.createElement("div", {
       style: m.card,
       className: "twitter-picker " + (void 0 === h ? "" : h)
-    }, i().createElement("div", {
+    }, r.createElement("div", {
       style: m.triangleShadow
-    }), i().createElement("div", {
+    }), r.createElement("div", {
       style: m.triangle
-    }), i().createElement("div", {
+    }), r.createElement("div", {
       style: m.body
-    }, (0, u.default)(a, function(e, t) {
-      return i().createElement(d.Swatch, {
+    }, (0, s.Z)(a, function(e, t) {
+      return r.createElement(l.m4, {
         key: t,
         color: e,
         hex: e,
@@ -146,27 +144,27 @@ var r = n("470079"),
           boxShadow: "0 0 4px " + e
         }
       })
-    }), i().createElement("div", {
+    }), r.createElement("div", {
       style: m.hash
-    }, "#"), i().createElement(d.EditableInput, {
+    }, "#"), r.createElement(l.Vm, {
       label: null,
       style: {
         input: m.input
       },
-      value: r.replace("#", ""),
+      value: i.replace("#", ""),
       onChange: g
-    }), i().createElement("div", {
+    }), r.createElement("div", {
       style: m.clear
     })))
   };
-f.propTypes = {
-  width: o().oneOfType([o().string, o().number]),
-  triangle: o().oneOf(["hide", "top-left", "top-right"]),
-  colors: o().arrayOf(o().string),
-  styles: o().object
-}, f.defaultProps = {
+d.propTypes = {
+  width: a().oneOfType([a().string, a().number]),
+  triangle: a().oneOf(["hide", "top-left", "top-right"]),
+  colors: a().arrayOf(a().string),
+  styles: a().object
+}, d.defaultProps = {
   width: 276,
   colors: ["#FF6900", "#FCB900", "#7BDCB5", "#00D084", "#8ED1FC", "#0693E3", "#ABB8C3", "#EB144C", "#F78DA7", "#9900EF"],
   triangle: "top-left",
   styles: {}
-}, (0, d.ColorWrap)(f)
+}, (0, l.t1)(d)

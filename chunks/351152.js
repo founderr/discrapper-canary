@@ -1,69 +1,69 @@
 "use strict";
-l.r(t), l.d(t, {
-  default: function() {
-    return p
+n.d(t, {
+  Z: function() {
+    return x
   }
-}), l("390547");
-var a = l("735250");
-l("470079");
-var n = l("120356"),
-  s = l.n(n),
-  i = l("392711"),
-  r = l.n(i),
-  u = l("442837"),
-  o = l("481060"),
-  d = l("984933"),
-  c = l("430824"),
-  f = l("496675"),
-  m = l("771845"),
-  S = l("346656"),
-  E = l("259580"),
-  _ = l("102172"),
-  h = l("148381"),
-  C = l("689938"),
-  g = l("555066"),
-  N = l("386475");
+}), n(390547);
+var l = n(735250);
+n(470079);
+var s = n(120356),
+  a = n.n(s),
+  i = n(392711),
+  r = n.n(i),
+  o = n(442837),
+  u = n(481060),
+  c = n(984933),
+  d = n(430824),
+  m = n(496675),
+  E = n(771845),
+  _ = n(346656),
+  S = n(259580),
+  h = n(102172),
+  g = n(148381),
+  Z = n(689938),
+  C = n(555066),
+  f = n(386475);
 
-function I(e) {
+function N(e) {
   let {
     guildId: t,
-    onClick: l
-  } = e, n = (0, u.useStateFromStores)([c.default], () => c.default.getGuild(t)), s = (0, u.useStateFromStores)([d.default, c.default, f.default], () => d.default.getChannels(t)[d.GUILD_VOCAL_CHANNELS_KEY].some(e => {
+    onClick: n
+  } = e, s = (0, o.e7)([d.Z], () => d.Z.getGuild(t)), a = (0, o.e7)([c.ZP, d.Z, m.Z], () => c.ZP.getChannels(t)[c.Zb].some(e => {
     let {
       channel: t
     } = e;
-    return (0, _.canStreamInChannel)(t, c.default, f.default)
+    return (0, h.JL)(t, d.Z, m.Z)
   }));
-  return null != n && s ? (0, a.jsxs)(o.Clickable, {
-    onClick: () => l(t),
-    className: N.guildRow,
-    children: [(0, a.jsx)(S.default, {
-      guild: n,
-      size: S.default.Sizes.SMALL,
-      className: N.guildIcon
-    }), (0, a.jsx)(o.Text, {
+  return null != s && a ? (0, l.jsxs)(u.Clickable, {
+    onClick: () => n(t),
+    className: f.guildRow,
+    children: [(0, l.jsx)(_.Z, {
+      guild: s,
+      size: _.Z.Sizes.SMALL,
+      className: f.guildIcon
+    }), (0, l.jsx)(u.Text, {
       variant: "text-md/normal",
-      className: N.guildName,
-      children: n.toString()
-    }), (0, a.jsx)(E.default, {
-      direction: E.default.Directions.RIGHT,
-      className: N.guildArrow
+      className: f.guildName,
+      children: s.toString()
+    }), (0, l.jsx)(S.Z, {
+      direction: S.Z.Directions.RIGHT,
+      className: f.guildArrow
     })]
   }) : null
 }
 
-function p(e) {
+function x(e) {
   let {
     onSelectGuild: t
-  } = e, l = (0, u.useStateFromStores)([m.default], () => m.default.getGuildFolders());
-  return (0, a.jsx)(h.default, {
-    title: C.default.Messages.GO_LIVE_MODAL_SELECT_GUILD_FORM_TITLE,
-    scrollerClassName: s()(N.guildScroller, g.marginBottom),
-    children: r().flatMap(l, e => {
+  } = e, n = (0, o.e7)([E.ZP], () => E.ZP.getGuildFolders());
+  return (0, l.jsx)(g.Z, {
+    title: Z.Z.Messages.GO_LIVE_MODAL_SELECT_GUILD_FORM_TITLE,
+    scrollerClassName: a()(f.guildScroller, C.marginBottom),
+    children: r().flatMap(n, e => {
       let {
-        guildIds: l
+        guildIds: n
       } = e;
-      return l.map(e => (0, a.jsx)(I, {
+      return n.map(e => (0, l.jsx)(N, {
         guildId: e,
         onClick: t
       }, e))

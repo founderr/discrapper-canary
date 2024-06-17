@@ -13,9 +13,9 @@ var r = function() {
       return n && e(t.prototype, n), r && e(t, r), t
     }
   }(),
-  i = n("470079"),
+  i = n(470079),
   a = s(i),
-  o = s(n("844303"));
+  o = s(n(844303));
 
 function s(e) {
   return e && e.__esModule ? e : {

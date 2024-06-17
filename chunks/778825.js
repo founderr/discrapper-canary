@@ -1,39 +1,38 @@
 "use strict";
-let i, r, s, a, o, l, u, d, _, c, E;
-n.r(t);
-var I, T, f, S, h = n("442837"),
-  A = n("570140"),
-  m = n("981631");
-let N = m.FormStates.CLOSED,
-  p = {};
+let i, r, s, o, a, l, u, _, d, c, E;
+var I, T, h, S, f = n(442837),
+  N = n(570140),
+  A = n(981631);
+let m = A.QZA.CLOSED,
+  O = {};
 
-function O() {
-  N = m.FormStates.CLOSED, p = {}, _ = null, c = void 0, E = []
+function R() {
+  m = A.QZA.CLOSED, O = {}, d = null, c = void 0, E = []
 }
 
 function C() {
-  R(), g(), p = {}, N = m.FormStates.OPEN
+  p(), g(), O = {}, m = A.QZA.OPEN
 }
 
-function R() {
+function p() {
   i = void 0, u = void 0, r = void 0
 }
 
 function g() {
-  a = void 0, o = void 0, l = void 0, d = void 0, s = void 0
+  o = void 0, a = void 0, l = void 0, _ = void 0, s = void 0
 }
-class L extends(S = h.default.Store) {
+class L extends(S = f.ZP.Store) {
   getFormState() {
-    return N
+    return m
   }
   getErrors() {
-    return p
+    return O
   }
   showNotice() {
-    return void 0 !== i || void 0 !== r || void 0 !== s || void 0 !== a || void 0 !== o || void 0 !== l || void 0 !== u || void 0 !== d
+    return void 0 !== i || void 0 !== r || void 0 !== s || void 0 !== o || void 0 !== a || void 0 !== l || void 0 !== u || void 0 !== _
   }
   getIsSubmitDisabled() {
-    return void 0 !== o && o.length > m.BIO_MAX_LENGTH
+    return void 0 !== a && a.length > A.tPV
   }
   getPendingAvatar() {
     return i
@@ -45,10 +44,10 @@ class L extends(S = h.default.Store) {
     return s
   }
   getPendingBanner() {
-    return a
+    return o
   }
   getPendingBio() {
-    return o
+    return a
   }
   getPendingNickname() {
     return u
@@ -60,22 +59,22 @@ class L extends(S = h.default.Store) {
     return u
   }
   getPendingThemeColors() {
-    return d
+    return _
   }
   getAllPending() {
     return {
       pendingAvatar: i,
       pendingAvatarDecoration: r,
       pendingProfileEffectId: s,
-      pendingBanner: a,
-      pendingBio: o,
+      pendingBanner: o,
+      pendingBio: a,
       pendingPronouns: l,
       pendingNickname: u,
-      pendingThemeColors: d
+      pendingThemeColors: _
     }
   }
   getGuild() {
-    return _
+    return d
   }
   getSource() {
     return c
@@ -84,32 +83,32 @@ class L extends(S = h.default.Store) {
     return E
   }
 }
-f = "GuildIdentitySettingsStore", (T = "displayName") in(I = L) ? Object.defineProperty(I, T, {
-  value: f,
+h = "GuildIdentitySettingsStore", (T = "displayName") in(I = L) ? Object.defineProperty(I, T, {
+  value: h,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : I[T] = f, t.default = new L(A.default, {
+}) : I[T] = h, t.Z = new L(N.Z, {
   GUILD_IDENTITY_SETTINGS_INIT: function(e) {
-    _ = e.guild, N = m.FormStates.OPEN, p = {}, c = e.source, E = e.analyticsLocations
+    d = e.guild, m = A.QZA.OPEN, O = {}, c = e.source, E = e.analyticsLocations
   },
-  GUILD_IDENTITY_SETTINGS_CLOSE: O,
+  GUILD_IDENTITY_SETTINGS_CLOSE: R,
   GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: function() {
-    C(), O()
+    C(), R()
   },
   GUILD_IDENTITY_SETTINGS_SET_GUILD: function(e) {
-    _ = e.guild, p = {}
+    d = e.guild, O = {}
   },
   GUILD_IDENTITY_SETTINGS_SUBMIT: function() {
-    N = m.FormStates.SUBMITTING, p = {}
+    m = A.QZA.SUBMITTING, O = {}
   },
   GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE: function(e) {
     var t;
-    if (N !== m.FormStates.SUBMITTING) return !1;
-    N = m.FormStates.OPEN, p = null !== (t = e.errors) && void 0 !== t ? t : {}
+    if (m !== A.QZA.SUBMITTING) return !1;
+    m = A.QZA.OPEN, O = null !== (t = e.errors) && void 0 !== t ? t : {}
   },
   USER_PROFILE_UPDATE_FAILURE: function(e) {
-    N = m.FormStates.OPEN, p = e.errors
+    m = A.QZA.OPEN, O = e.errors
   },
   GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: function(e) {
     let {
@@ -133,13 +132,13 @@ f = "GuildIdentitySettingsStore", (T = "displayName") in(I = L) ? Object.defineP
     let {
       banner: t
     } = e;
-    a = t
+    o = t
   },
   GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: function(e) {
     let {
       bio: t
     } = e;
-    o = t
+    a = t
   },
   GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: function(e) {
     let {
@@ -157,13 +156,13 @@ f = "GuildIdentitySettingsStore", (T = "displayName") in(I = L) ? Object.defineP
     let {
       themeColors: t
     } = e;
-    d = t
+    _ = t
   },
-  GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: R,
+  GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: p,
   GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: g,
   GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: C,
   GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: C,
   GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: function() {
-    p = {}
+    O = {}
   }
 })

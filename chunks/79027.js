@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  SlideIn: function() {
+n.d(t, {
+  o: function() {
     return E
   }
-}), n("47120");
-var i, r = n("735250"),
-  s = n("470079"),
-  a = n("120356"),
-  o = n.n(a),
-  l = n("748780"),
-  u = n("481060"),
-  d = n("599952");
+}), n(47120);
+var i, r = n(735250),
+  s = n(470079),
+  o = n(120356),
+  a = n.n(o),
+  l = n(748780),
+  u = n(481060),
+  _ = n(599952);
 
-function _(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -35,10 +35,10 @@ class E extends(i = s.Component) {
     let {
       reducedMotion: t
     } = this.context;
-    t.enabled ? this.animateTo(0).start(e) : l.default.stagger(250, [this.animateTo(1.3), this.animateTo(0)]).start(e)
+    t.enabled ? this.animateTo(0).start(e) : l.Z.stagger(250, [this.animateTo(1.3), this.animateTo(0)]).start(e)
   }
   animateTo(e) {
-    return l.default.spring(this.animation, {
+    return l.Z.spring(this.animation, {
       ...c,
       toValue: e
     })
@@ -47,7 +47,7 @@ class E extends(i = s.Component) {
     let {
       reducedMotion: e
     } = this.context;
-    return l.default.accelerate({
+    return l.Z.accelerate({
       opacity: this.animation,
       transform: e.enabled ? void 0 : [{
         translateY: this.animation.interpolate({
@@ -62,14 +62,14 @@ class E extends(i = s.Component) {
       className: e,
       children: t
     } = this.props;
-    return (0, r.jsx)(l.default.div, {
-      className: o()(e, d.slider),
+    return (0, r.jsx)(l.Z.div, {
+      className: a()(e, _.slider),
       style: this.getAnimatedStyle(),
       children: t
     })
   }
   constructor(...e) {
-    super(...e), _(this, "animation", new l.default.Value(0))
+    super(...e), d(this, "animation", new l.Z.Value(0))
   }
 }
-_(E, "contextType", u.AccessibilityPreferencesContext)
+d(E, "contextType", u.AccessibilityPreferencesContext)

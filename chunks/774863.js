@@ -1,19 +1,19 @@
 "use strict";
 let i;
-n.r(t), n("47120");
-var r, s, a, o, l = n("442837"),
-  u = n("570140"),
-  d = n("70956"),
-  _ = n("709054");
-let c = 14 * d.default.Millis.DAY,
+n(47120);
+var r, s, o, a, l = n(442837),
+  u = n(570140),
+  _ = n(70956),
+  d = n(709054);
+let c = 14 * _.Z.Millis.DAY,
   E = Object.freeze([]);
 let I = {},
   T = {};
 
-function f() {
+function h() {
   I = {}, T = {}
 }
-class S extends(r = l.default.Store) {
+class S extends(r = l.ZP.Store) {
   getFpMessageInfo(e) {
     return I[e]
   }
@@ -23,18 +23,18 @@ class S extends(r = l.default.Store) {
   }
   canSubmitFpReport(e) {
     let t = I[e];
-    return null != t && !t.reportSubmit && _.default.age(t.messageId) < c
+    return null != t && !t.reportSubmit && d.default.age(t.messageId) < c
   }
   get validContentScanVersion() {
     return i
   }
 }
-o = "FalsePositiveStore", (a = "displayName") in(s = S) ? Object.defineProperty(s, a, {
-  value: o,
+a = "FalsePositiveStore", (o = "displayName") in(s = S) ? Object.defineProperty(s, o, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = o, t.default = new S(u.default, {
+}) : s[o] = a, t.Z = new S(u.Z, {
   LOGOUT: function() {
     (function() {
       I = {}, T = {}
@@ -60,8 +60,8 @@ o = "FalsePositiveStore", (a = "displayName") in(s = S) ? Object.defineProperty(
       channelId: i,
       attachments: r,
       reportSubmit: !1
-    }, a = null !== (t = T[i]) && void 0 !== t ? t : E;
-    T[i] = [...a, s], I[n] = s
+    }, o = null !== (t = T[i]) && void 0 !== t ? t : E;
+    T[i] = [...o, s], I[n] = s
   },
   MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT: function(e) {
     let {

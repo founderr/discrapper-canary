@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("846519"),
-  r = n("570140"),
-  s = n("710845"),
-  a = n("671335"),
-  o = n("928518"),
-  l = n("451478"),
-  u = n("70956"),
-  d = n("981631");
+n(47120);
+var i = n(846519),
+  r = n(570140),
+  s = n(710845),
+  o = n(671335),
+  a = n(928518),
+  l = n(451478),
+  u = n(70956),
+  _ = n(981631);
 
-function _(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -32,21 +32,21 @@ let c = new class e {
     this.incomingVideoEnabled = e, t && (this.logger.info("Window visibility incoming video changed, incomingVideoEnabled = ".concat(this.incomingVideoEnabled)), this.videoEnabledObservers.forEach(e => e(this.incomingVideoEnabled)))
   }
   anyDiscordWindowVisible() {
-    return l.default.isVisible() || o.default.getWindowVisible(d.PopoutWindowKeys.CHANNEL_CALL_POPOUT)
+    return l.Z.isVisible() || a.Z.getWindowVisible(_.KJ3.CHANNEL_CALL_POPOUT)
   }
   constructor() {
-    _(this, "hiddenWindowDisableVideoTimer", new i.Timeout), _(this, "incomingVideoEnabled", !0), _(this, "videoEnabledObservers", new Set), _(this, "logger", new s.default("WindowVisibilityVideoManager")), _(this, "HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS", 30 * u.default.Millis.SECOND), _(this, "handleWindowVisibilityChange", () => {
-      a.default.getCurrentConfig({
-        location: "WindowVisibilityVideoManager"
-      }, {
-        autoTrackExposure: !0
-      }).stopVideoForHiddenWindow && (this.anyDiscordWindowVisible() ? (this.hiddenWindowDisableVideoTimer.stop(), this.setIncomingVideoEnabled(!0)) : this.hiddenWindowDisableVideoTimer.start(this.HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS, () => {
+    d(this, "hiddenWindowDisableVideoTimer", new i.V7), d(this, "incomingVideoEnabled", !0), d(this, "videoEnabledObservers", new Set), d(this, "logger", new s.Z("WindowVisibilityVideoManager")), d(this, "HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS", 30 * u.Z.Millis.SECOND), d(this, "handleWindowVisibilityChange", () => {
+      if (!!o.Z.getCurrentConfig({
+          location: "WindowVisibilityVideoManager"
+        }, {
+          autoTrackExposure: !0
+        }).stopVideoForHiddenWindow) this.anyDiscordWindowVisible() ? (this.hiddenWindowDisableVideoTimer.stop(), this.setIncomingVideoEnabled(!0)) : this.hiddenWindowDisableVideoTimer.start(this.HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS, () => {
         this.setIncomingVideoEnabled(!1)
-      }))
-    }), r.default.subscribe("WINDOW_VISIBILITY_CHANGE", this.handleWindowVisibilityChange)
+      })
+    }), r.Z.subscribe("WINDOW_VISIBILITY_CHANGE", this.handleWindowVisibilityChange)
   }
 };
-t.default = new class e {
+t.Z = new class e {
   isIncomingVideoEnabled() {
     return c.isIncomingVideoEnabled()
   }

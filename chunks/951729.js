@@ -1,21 +1,19 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("476400"),
-  o = n.n(a),
-  s = n("844303"),
-  u = n("829307"),
-  c = n("464854"),
-  l = n("781466"),
-  d = n("522082"),
-  f = function(e) {
+var r = n(470079),
+  i = n(476400),
+  a = n.n(i),
+  o = n(844303),
+  s = n(829307),
+  u = n(464854),
+  c = n(781466),
+  l = n(522082),
+  d = function(e) {
     var t = e.hsl,
       n = e.onChange,
-      r = e.pointer,
+      i = e.pointer,
       a = e.styles,
-      o = e.className,
-      d = (0, s.default)((0, u.default)({
+      l = e.className,
+      d = (0, o.default)((0, s.Z)({
         default: {
           hue: {
             height: "12px",
@@ -26,26 +24,26 @@ var r = n("470079"),
           }
         }
       }, void 0 === a ? {} : a));
-    return i().createElement("div", {
+    return r.createElement("div", {
       style: d.wrap || {},
-      className: "slider-picker " + (void 0 === o ? "" : o)
-    }, i().createElement("div", {
+      className: "slider-picker " + (void 0 === l ? "" : l)
+    }, r.createElement("div", {
       style: d.hue
-    }, i().createElement(c.Hue, {
+    }, r.createElement(u.PS, {
       style: d.Hue,
       hsl: t,
-      pointer: r,
+      pointer: i,
       onChange: n
-    })), i().createElement("div", {
+    })), r.createElement("div", {
       style: d.swatches
-    }, i().createElement(l.default, {
+    }, r.createElement(c.Z, {
       hsl: t,
       onClick: n
     })))
   };
-f.propTypes = {
-  styles: o().object
-}, f.defaultProps = {
-  pointer: d.default,
+d.propTypes = {
+  styles: a().object
+}, d.defaultProps = {
+  pointer: l.Z,
   styles: {}
-}, (0, c.ColorWrap)(f)
+}, (0, u.t1)(d)

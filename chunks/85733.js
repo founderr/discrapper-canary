@@ -1,7 +1,7 @@
 "use strict";
-var r = n("478497"),
-  i = n("995769"),
-  a = n("606956"),
+var r = n(478497),
+  i = n(995769),
+  a = n(606956),
   o = Object.prototype.hasOwnProperty,
   s = {
     brackets: function(e) {
@@ -45,13 +45,13 @@ var r = n("478497"),
   },
   h = {},
   m = function e(t, n, a, o, s, c, d, f, m, g, _, b, v, y, E, S, x, w) {
-    for (var T, C, D = t, O = w, M = 0, A = !1; void 0 !== (O = O.get(h)) && !A;) {
-      var k = O.get(t);
-      if (M += 1, void 0 !== k) {
-        if (k === M) throw RangeError("Cyclic object value");
+    for (var C, T, D = t, M = w, O = 0, A = !1; void 0 !== (M = M.get(h)) && !A;) {
+      var k = M.get(t);
+      if (O += 1, void 0 !== k) {
+        if (k === O) throw RangeError("Cyclic object value");
         A = !0
       }
-      void 0 === O.get(h) && (M = 0)
+      void 0 === M.get(h) && (O = 0)
     }
     if ("function" == typeof g ? D = g(n, D) : D instanceof Date ? D = v(D) : "comma" === a && u(D) && (D = i.maybeMap(D, function(e) {
         return e instanceof Date ? v(e) : e
@@ -59,29 +59,29 @@ var r = n("478497"),
       if (c) return m && !S ? m(n, p.encoder, x, "key", y) : n;
       D = ""
     }
-    if ("string" == typeof(T = D) || "number" == typeof T || "boolean" == typeof T || "symbol" == typeof T || "bigint" == typeof T || i.isBuffer(D)) return m ? [E(S ? n : m(n, p.encoder, x, "key", y)) + "=" + E(m(D, p.encoder, x, "value", y))] : [E(n) + "=" + E(String(D))];
+    if ("string" == typeof(C = D) || "number" == typeof C || "boolean" == typeof C || "symbol" == typeof C || "bigint" == typeof C || i.isBuffer(D)) return m ? [E(S ? n : m(n, p.encoder, x, "key", y)) + "=" + E(m(D, p.encoder, x, "value", y))] : [E(n) + "=" + E(String(D))];
     var R = [];
     if (void 0 === D) return R;
-    if ("comma" === a && u(D)) S && m && (D = i.maybeMap(D, m)), C = [{
+    if ("comma" === a && u(D)) S && m && (D = i.maybeMap(D, m)), T = [{
       value: D.length > 0 ? D.join(",") || null : void 0
     }];
-    else if (u(g)) C = g;
+    else if (u(g)) T = g;
     else {
       var N = Object.keys(D);
-      C = _ ? N.sort(_) : N
+      T = _ ? N.sort(_) : N
     }
     var I = f ? n.replace(/\./g, "%2E") : n,
       L = o && u(D) && 1 === D.length ? I + "[]" : I;
     if (s && u(D) && 0 === D.length) return L + "[]";
-    for (var P = 0; P < C.length; ++P) {
-      var F = C[P],
-        B = "object" == typeof F && void 0 !== F.value ? F.value : D[F];
-      if (!d || null !== B) {
-        var U = b && f ? F.replace(/\./g, "%2E") : F,
+    for (var P = 0; P < T.length; ++P) {
+      var B = T[P],
+        F = "object" == typeof B && void 0 !== B.value ? B.value : D[B];
+      if (!d || null !== F) {
+        var U = b && f ? B.replace(/\./g, "%2E") : B,
           j = u(D) ? "function" == typeof a ? a(L, U) : L : L + (b ? "." + U : "[" + U + "]");
-        w.set(t, M);
+        w.set(t, O);
         var Y = r();
-        Y.set(h, w), l(R, e(B, j, a, o, s, c, d, f, "comma" === a && S && u(D) ? null : m, g, _, b, v, y, E, S, x, Y))
+        Y.set(h, w), l(R, e(F, j, a, o, s, c, d, f, "comma" === a && S && u(D) ? null : m, g, _, b, v, y, E, S, x, Y))
       }
     }
     return R
@@ -135,7 +135,7 @@ e.exports = function(e, t) {
   !n && (n = Object.keys(a)), o.sort && n.sort(o.sort);
   for (var p = r(), h = 0; h < n.length; ++h) {
     var _ = n[h];
-    (!o.skipNulls || null !== a[_]) && l(c, m(a[_], _, d, f, o.allowEmptyArrays, o.strictNullHandling, o.skipNulls, o.encodeDotInKeys, o.encode ? o.encoder : null, o.filter, o.sort, o.allowDots, o.serializeDate, o.format, o.formatter, o.encodeValuesOnly, o.charset, p))
+    if (!o.skipNulls || null !== a[_]) l(c, m(a[_], _, d, f, o.allowEmptyArrays, o.strictNullHandling, o.skipNulls, o.encodeDotInKeys, o.encode ? o.encoder : null, o.filter, o.sort, o.allowDots, o.serializeDate, o.format, o.formatter, o.encodeValuesOnly, o.charset, p))
   }
   var b = c.join(o.delimiter),
     v = !0 === o.addQueryPrefix ? "?" : "";

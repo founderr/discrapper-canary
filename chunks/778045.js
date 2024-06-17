@@ -1,39 +1,39 @@
 "use strict";
-n.r(t), n("733860");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("481060"),
-  a = n("353093"),
-  o = n("785008");
+n(733860);
+var i = n(735250),
+  r = n(470079),
+  s = n(481060),
+  o = n(353093),
+  a = n(785008);
 
 function l(e) {
   let {
     games: t
   } = e;
   return (0, i.jsx)("div", {
-    className: o.tooltipGames,
+    className: a.tooltipGames,
     children: t.map(e => {
       let t = e.getIconURL(24);
       return null == t ? null : (0, i.jsxs)("div", {
-        className: o.tooltipGame,
+        className: a.tooltipGame,
         children: [(0, i.jsx)("div", {
-          className: o.tooltipGameImageContainer,
+          className: a.tooltipGameImageContainer,
           children: (0, i.jsx)("img", {
             src: t,
             alt: e.name,
-            className: o.tooltipGameImage
+            className: a.tooltipGameImage
           })
         }), (0, i.jsx)(s.Text, {
           variant: "text-xs/medium",
           color: "text-normal",
-          className: o.tooltipGameName,
+          className: a.tooltipGameName,
           children: e.name
         })]
       }, e.id)
     })
   })
 }
-t.default = r.memo(function(e) {
+t.Z = r.memo(function(e) {
   let {
     games: t,
     prioritizedGameIds: n
@@ -45,15 +45,15 @@ t.default = r.memo(function(e) {
         u.unshift(t)
       }
   }
-  let d = u.slice(0, 3),
-    _ = r.useMemo(() => {
+  let _ = u.slice(0, 3),
+    d = r.useMemo(() => {
       let e = u[3];
       if (null == e) return null;
       let t = e.getIconURL(24);
       if (null == t) return null;
       if (u.length > 4) {
         let n = u.slice(3),
-          r = (0, a.formatSelectionList)(n.map(e => e.name));
+          r = (0, o.f6)(n.map(e => e.name));
         return (0, i.jsx)(s.Tooltip, {
           "aria-label": null != r ? r : "",
           text: (0, i.jsx)(l, {
@@ -62,13 +62,13 @@ t.default = r.memo(function(e) {
           position: "bottom",
           children: r => (0, i.jsxs)("div", {
             ...r,
-            className: o.gameImageContainer,
+            className: a.gameImageContainer,
             children: [(0, i.jsx)("img", {
               src: t,
               alt: e.name,
-              className: o.gameImage
+              className: a.gameImage
             }), (0, i.jsx)("div", {
-              className: o.extraGameCount,
+              className: a.extraGameCount,
               children: (0, i.jsx)(s.Text, {
                 variant: "text-xs/medium",
                 color: "always-white",
@@ -83,31 +83,31 @@ t.default = r.memo(function(e) {
         position: "bottom",
         children: n => (0, i.jsx)("div", {
           ...n,
-          className: o.gameImageContainer,
+          className: a.gameImageContainer,
           children: (0, i.jsx)("img", {
             src: t,
             alt: e.name,
-            className: o.gameImage
+            className: a.gameImage
           })
         })
       })
     }, [u]);
   return (0, i.jsxs)(i.Fragment, {
-    children: [d.map(e => {
+    children: [_.map(e => {
       let t = e.getIconURL(24);
       return null == t ? null : (0, i.jsx)(s.Tooltip, {
         text: e.name,
         position: "bottom",
         children: n => (0, i.jsx)("div", {
           ...n,
-          className: o.gameImageContainer,
+          className: a.gameImageContainer,
           children: (0, i.jsx)("img", {
             src: t,
             alt: e.name,
-            className: o.gameImage
+            className: a.gameImage
           })
         })
       }, e.id)
-    }), _]
+    }), d]
   })
 })

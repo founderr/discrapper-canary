@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n.d(t, {
-  AttachmentUpload: function() {
+n.d(t, {
+  g: function() {
     return T
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
-  o = n("112456"),
-  l = n.n(o),
-  u = n("481060"),
-  d = n("403182"),
-  _ = n("465670"),
-  c = n("689938"),
-  E = n("242206");
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(112456),
+  l = n.n(a),
+  u = n(481060),
+  _ = n(403182),
+  d = n(465670),
+  c = n(689938),
+  E = n(242206);
 let I = e => {
     let {
       filename: t
-    } = e, r = (0, d.classifyFileName)(t), s = n("435362")("../images/file_icons/icon-file-".concat(r, ".svg").replace("../images/file_icons/", "./"));
+    } = e, r = (0, _.uV)(t), s = n(148660)("./icon-file-".concat(r, ".svg"));
     return (0, i.jsx)("img", {
       className: E.icon,
       src: s,
-      alt: c.default.Messages.IMG_ALT_ATTACHMENT_FILE_TYPE.format({
+      alt: c.Z.Messages.IMG_ALT_ATTACHMENT_FILE_TYPE.format({
         fileType: r
       }),
       title: r
@@ -34,12 +34,12 @@ let I = e => {
       filename: n,
       size: r,
       progress: s,
-      onCancelUpload: o,
-      onClick: d,
+      onCancelUpload: a,
+      onClick: _,
       onContextMenu: T
-    } = e, f = 100 === s, S = !f && r > 0;
+    } = e, h = 100 === s, S = !h && r > 0;
     return (0, i.jsxs)("div", {
-      className: a()(E.attachment, t),
+      className: o()(E.attachment, t),
       children: [(0, i.jsx)(I, {
         filename: n
       }), (0, i.jsxs)("div", {
@@ -48,7 +48,7 @@ let I = e => {
           className: E.filenameWrapper,
           children: [(0, i.jsx)(u.Clickable, {
             className: E.filename,
-            onClick: d,
+            onClick: _,
             onContextMenu: T,
             children: n
           }), S ? (0, i.jsx)("div", {
@@ -57,14 +57,14 @@ let I = e => {
           }) : null]
         }), (0, i.jsx)("div", {
           className: E.progressContainer,
-          children: f ? c.default.Messages.ATTACHMENT_PROCESSING : (0, i.jsx)(u.Progress, {
+          children: h ? c.Z.Messages.ATTACHMENT_PROCESSING : (0, i.jsx)(u.Progress, {
             className: E.progress,
             percent: s
           })
         })]
-      }), f ? null : (0, i.jsx)(u.Clickable, {
-        onClick: o,
-        children: (0, i.jsx)(_.default, {
+      }), h ? null : (0, i.jsx)(u.Clickable, {
+        onClick: a,
+        children: (0, i.jsx)(d.Z, {
           className: E.cancelButton,
           width: 24,
           height: 24
@@ -72,19 +72,19 @@ let I = e => {
       })]
     })
   };
-t.default = e => {
+t.Z = e => {
   let {
     className: t,
     url: n,
     fileName: s,
-    fileSize: o,
-    onClick: d,
-    onContextMenu: _,
+    fileSize: a,
+    onClick: _,
+    onContextMenu: d,
     renderAdjacentContent: c
   } = e;
   return (0, i.jsxs)(r.Fragment, {
     children: [(0, i.jsxs)("div", {
-      className: a()(E.attachment, E.newMosaicStyle, t),
+      className: o()(E.attachment, E.newMosaicStyle, t),
       children: [(0, i.jsx)(I, {
         filename: s
       }), (0, i.jsxs)("div", {
@@ -94,13 +94,13 @@ t.default = e => {
           children: (0, i.jsx)(u.Anchor, {
             className: E.fileNameLink,
             href: n,
-            onClick: d,
-            onContextMenu: _,
+            onClick: _,
+            onContextMenu: d,
             children: s
           })
         }), (0, i.jsx)("div", {
           className: E.metadata,
-          children: l().filesize(o)
+          children: l().filesize(a)
         })]
       })]
     }), null != c && c()]

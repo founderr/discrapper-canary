@@ -1,58 +1,58 @@
 "use strict";
-n.r(t), n.d(t, {
-  amber: function() {
-    return g
-  },
-  blue: function() {
-    return u
-  },
-  blueGrey: function() {
-    return y
-  },
-  brown: function() {
-    return v
-  },
-  cyan: function() {
-    return l
-  },
-  deepOrange: function() {
-    return b
-  },
-  deepPurple: function() {
-    return o
-  },
-  green: function() {
-    return f
-  },
-  indigo: function() {
-    return s
-  },
-  lightBlue: function() {
-    return c
-  },
-  lightGreen: function() {
-    return p
-  },
-  lime: function() {
-    return h
-  },
-  orange: function() {
-    return _
-  },
-  pink: function() {
-    return i
-  },
-  purple: function() {
-    return a
-  },
-  red: function() {
-    return r
-  },
-  teal: function() {
+n.d(t, {
+  $C: function() {
     return d
   },
-  yellow: function() {
+  $y: function() {
+    return _
+  },
+  BU: function() {
+    return y
+  },
+  Dz: function() {
+    return g
+  },
+  LR: function() {
+    return h
+  },
+  P_: function() {
+    return v
+  },
+  Q6: function() {
+    return r
+  },
+  QN: function() {
+    return s
+  },
+  ZE: function() {
+    return p
+  },
+  bK: function() {
+    return b
+  },
+  ek: function() {
+    return f
+  },
+  er: function() {
     return m
+  },
+  f7: function() {
+    return c
+  },
+  iN: function() {
+    return u
+  },
+  iQ: function() {
+    return i
+  },
+  jk: function() {
+    return a
+  },
+  sl: function() {
+    return l
+  },
+  vq: function() {
+    return o
   }
 });
 var r = {

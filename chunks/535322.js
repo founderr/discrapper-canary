@@ -1,25 +1,25 @@
 "use strict";
-n.r(t), n.d(t, {
-  StretchedSparkleStar: function() {
-    return _
+n.d(t, {
+  A: function() {
+    return d
   },
-  default: function() {
+  Z: function() {
     return c
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("120356"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("481060"),
-  o = n("325767"),
-  l = n("645652"),
-  u = n("689938"),
-  d = n("907849");
+  o = n(481060),
+  a = n(325767),
+  l = n(645652),
+  u = n(689938),
+  _ = n(907849);
 
-function _(e) {
+function d(e) {
   return (0, i.jsx)("svg", {
-    ...(0, o.default)({
+    ...(0, a.Z)({
       ...e
     }),
     width: "25",
@@ -39,18 +39,18 @@ function c(e) {
     className: t,
     forceUseColorForSparkles: n = !1,
     shouldInheritTextColor: r = !1,
-    shouldInheritBackgroundColor: o = !1
+    shouldInheritBackgroundColor: a = !1
   } = e;
-  return (0, i.jsx)(l.default, {
+  return (0, i.jsx)(l.Z, {
     className: t,
     forceUseColor: n,
-    children: (0, i.jsx)(a.TextBadge, {
+    children: (0, i.jsx)(o.TextBadge, {
       disableColor: !0,
-      className: s()(d.tag, {
-        [d.inheritTextColor]: r,
-        [d.inheritBackgroundColor]: o
+      className: s()(_.tag, {
+        [_.inheritTextColor]: r,
+        [_.inheritBackgroundColor]: a
       }),
-      text: u.default.Messages.NEW
+      text: u.Z.Messages.NEW
     })
   })
 }

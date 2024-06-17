@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  getGuildEligibilityForRecentlyOnlineExperiment: function() {
-    return a
+n.d(t, {
+  h: function() {
+    return o
   }
 });
-var i = n("358085"),
-  r = n("280234"),
-  s = n("480384");
+var i = n(358085),
+  r = n(280234),
+  s = n(480384);
 
-function a(e) {
+function o(e) {
   if (!(0, i.isDesktop)()) return {
     isRecentlyOnlineUIEnabled: !1,
     shouldPrioritizeSubscription: !1
@@ -16,7 +16,7 @@ function a(e) {
   let {
     allowPrioritySubscriptions: t,
     isRecentlyOnlineEnabled: n
-  } = r.default.getCurrentConfig({
+  } = r.Z.getCurrentConfig({
     location: "guild-subscriptions-store"
   }, {
     autoTrackExposure: !1
@@ -25,9 +25,9 @@ function a(e) {
     isRecentlyOnlineUIEnabled: !1,
     shouldPrioritizeSubscription: !1
   };
-  let a = s.default.getPriorityGuilds().includes(e);
+  let o = s.Z.getPriorityGuilds().includes(e);
   return {
-    isRecentlyOnlineUIEnabled: a && n,
-    shouldPrioritizeSubscription: a && t
+    isRecentlyOnlineUIEnabled: o && n,
+    shouldPrioritizeSubscription: o && t
   }
 }

@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return _
+n.d(t, {
+  Z: function() {
+    return d
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("481060"),
-  s = n("153124"),
-  a = n("793397"),
-  o = n("228168"),
-  l = n("678444");
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  s = n(153124),
+  o = n(793397),
+  a = n(228168),
+  l = n(678444);
 let u = e => {
     let {
       size: t,
@@ -18,76 +18,76 @@ let u = e => {
     } = (0, r.getAvatarSpecs)(e);
     return t / 2 + n
   },
-  d = {
-    [o.UserProfileTypes.POPOUT]: {
+  _ = {
+    [a.y0.POPOUT]: {
       radius: u(r.AvatarSizes.SIZE_80),
       offsetX: 16,
       offsetY: 4
     },
-    [o.UserProfileTypes.BITE_SIZE]: {
+    [a.y0.BITE_SIZE]: {
       radius: u(r.AvatarSizes.SIZE_80),
       offsetX: 10,
       offsetY: 4
     },
-    [o.UserProfileTypes.MODAL]: {
+    [a.y0.MODAL]: {
       radius: u(r.AvatarSizes.SIZE_120),
       offsetX: 14,
       offsetY: 5
     },
-    [o.UserProfileTypes.FULL_SIZE]: {
+    [a.y0.FULL_SIZE]: {
       radius: u(r.AvatarSizes.SIZE_120),
       offsetX: 16,
       offsetY: 5
     },
-    [o.UserProfileTypes.SETTINGS]: {
+    [a.y0.SETTINGS]: {
       radius: u(r.AvatarSizes.SIZE_80),
       offsetX: 16,
       offsetY: -22
     },
-    [o.UserProfileTypes.PANEL]: {
+    [a.y0.PANEL]: {
       radius: u(r.AvatarSizes.SIZE_80),
       offsetX: 10,
       offsetY: 8
     },
-    [o.UserProfileTypes.POMELO_POPOUT]: {
+    [a.y0.POMELO_POPOUT]: {
       radius: u(r.AvatarSizes.SIZE_80),
       offsetX: 20,
       offsetY: -20
     },
-    [o.UserProfileTypes.CANCEL_MODAL]: {
+    [a.y0.CANCEL_MODAL]: {
       radius: u(r.AvatarSizes.SIZE_56),
       offsetX: 8,
       offsetY: 2
     }
   };
 
-function _(e) {
+function d(e) {
   let {
     children: t,
     profileType: n,
     isPremium: r,
     hasThemeColors: u,
-    hasBanner: _,
+    hasBanner: d,
     overrideBannerWidth: c,
     hasProfileEffect: E = !1
-  } = e, I = (0, s.useUID)(), T = null != c ? c : (0, a.getUserBannerSize)(n), f = (0, a.getUserBannerHeight)({
+  } = e, I = (0, s.Dt)(), T = null != c ? c : (0, o.e7)(n), h = (0, o.Wo)({
     profileType: n,
     user: {
-      hasBanner: _,
+      hasBanner: d,
       isPremium: r,
       hasProfileEffect: E
     }
   }), {
     radius: S,
-    offsetX: h,
-    offsetY: A
-  } = d[n], m = u && (n === o.UserProfileTypes.POPOUT || n === o.UserProfileTypes.BITE_SIZE) ? 4 : 0, N = f - A - m;
+    offsetX: f,
+    offsetY: N
+  } = _[n], A = u && (n === a.y0.POPOUT || n === a.y0.BITE_SIZE) ? 4 : 0, m = h - N - A;
   return (0, i.jsxs)("svg", {
     className: l.bannerSVGWrapper,
-    viewBox: "0 0 ".concat(T, " ").concat(f),
+    viewBox: "0 0 ".concat(T, " ").concat(h),
     style: {
       minWidth: T,
-      minHeight: f
+      minHeight: h
     },
     children: [(0, i.jsxs)("mask", {
       id: I,
@@ -99,8 +99,8 @@ function _(e) {
         height: "100%"
       }), (0, i.jsx)("circle", {
         fill: "black",
-        cx: S + h - m,
-        cy: N,
+        cx: S + f - A,
+        cy: m,
         r: S
       })]
     }), (0, i.jsx)("foreignObject", {

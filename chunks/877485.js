@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  getSimplifiedProfileFriendingExperimentConfig: function() {
+n.d(t, {
+  V: function() {
     return a
   },
-  useSimplifiedProfileFriendingExperiment: function() {
+  c: function() {
     return o
   }
 });
-var i = n("818083"),
-  r = n("447452");
-let s = (0, i.createExperiment)({
+var i = n(818083),
+  r = n(447452);
+let s = (0, i.B)({
     kind: "user",
     id: "2024-05_simplified_profile_friending",
     label: "Simplified Profile Friending Experiment",
@@ -33,7 +33,7 @@ let s = (0, i.createExperiment)({
       }
     }]
   }),
-  a = e => {
+  o = e => {
     let {
       location: t,
       autoTrackExposure: n = !0,
@@ -46,19 +46,19 @@ let s = (0, i.createExperiment)({
       trackExposureOptions: i
     })
   },
-  o = e => {
+  a = e => {
     let {
       location: t,
       autoTrackExposure: n = !0,
       trackExposureOptions: i = {}
     } = e, {
-      updatedOnAllSurfaces: a
-    } = (0, r.useSimplifiedProfileExperiment)({
+      updatedOnAllSurfaces: o
+    } = (0, r.t)({
       location: t,
       autoTrackExposure: n,
       trackExposureOptions: i
     }), {
-      originalFriendingEnabled: o,
+      originalFriendingEnabled: a,
       improvedFriendingEnabled: l
     } = s.useExperiment({
       location: t
@@ -67,7 +67,7 @@ let s = (0, i.createExperiment)({
       trackExposureOptions: i
     });
     return {
-      originalFriendingEnabled: o,
-      improvedFriendingEnabled: l || !o && a
+      originalFriendingEnabled: a,
+      improvedFriendingEnabled: l || !a && o
     }
   }

@@ -1,27 +1,27 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("566860"),
-  a = n("695676"),
-  o = n("173790"),
-  l = n("361917"),
-  u = n("684256"),
-  d = n("579539");
-t.default = r.memo(function(e) {
+n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(566860),
+  o = n(695676),
+  a = n(173790),
+  l = n(361917),
+  u = n(684256),
+  _ = n(579539);
+t.Z = r.memo(function(e) {
   let t, {
       drawerRef: n,
-      channel: _
+      channel: d
     } = e,
     {
       history: c,
       setHistory: E,
       currentView: I,
       pushHistory: T,
-      goBack: f
+      goBack: h
     } = function() {
       let [e, t] = r.useState([{
-        type: a.HistoryItemType.HOME
+        type: o.gc.HOME
       }]), n = e[e.length - 1];
       return {
         history: e,
@@ -37,29 +37,29 @@ t.default = r.memo(function(e) {
         }
       }
     }(),
-    S = s.AppLauncherRecommendationsExperiment.useExperiment({
+    S = s.K.useExperiment({
       location: "App Launcher Root"
     }, {
       autoTrackExposure: !0
     });
   switch (null == I ? void 0 : I.type) {
-    case a.HistoryItemType.HOME:
-      t = (0, i.jsx)(l.default, {
-        channel: _,
+    case o.gc.HOME:
+      t = (0, i.jsx)(l.Z, {
+        channel: d,
         enableRecommendations: S.recommendationsEnabled,
         enableRecents: S.recentsDropdownEnabled
       });
       break;
-    case a.HistoryItemType.LIST:
-      t = (0, i.jsx)(u.default, {
+    case o.gc.LIST:
+      t = (0, i.jsx)(u.Z, {
         title: I.title,
         look: I.look,
         items: I.items
       });
       break;
-    case a.HistoryItemType.APPLICATION:
-      t = (0, i.jsx)(o.default, {
-        channel: _,
+    case o.gc.APPLICATION:
+      t = (0, i.jsx)(a.Z, {
+        channel: d,
         application: I.application,
         sectionName: I.sectionName
       });
@@ -68,17 +68,17 @@ t.default = r.memo(function(e) {
       t = null
   }
   return (0, i.jsx)("div", {
-    className: d.drawerSizingWrapper,
+    className: _.drawerSizingWrapper,
     ref: n,
     children: (0, i.jsx)("div", {
-      className: d.contentWrapper,
-      children: (0, i.jsx)(a.AppLauncherHistoryContext.Provider, {
+      className: _.contentWrapper,
+      children: (0, i.jsx)(o.uX.Provider, {
         value: {
           history: c,
           setHistory: E,
           currentView: I,
           pushHistory: T,
-          goBack: f
+          goBack: h
         },
         children: t
       })

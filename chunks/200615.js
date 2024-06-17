@@ -1,32 +1,32 @@
 "use strict";
-s.r(t), s.d(t, {
-  SubscribeNow: function() {
-    return c
+t.d(s, {
+  F: function() {
+    return u
   }
 });
-var a = s("735250"),
-  l = s("470079"),
-  n = s("481060"),
-  r = s("906732"),
-  i = s("963249"),
-  o = s("474936"),
-  u = s("289604");
-let c = e => {
+var n = t(735250),
+  a = t(470079),
+  i = t(481060),
+  l = t(906732),
+  r = t(963249),
+  o = t(474936),
+  c = t(289604);
+let u = e => {
   let {
-    text: t
+    text: s
   } = e, {
-    analyticsLocations: s
-  } = (0, r.default)(), c = l.useRef(null);
-  return (0, a.jsx)(n.Clickable, {
-    className: u.subscribeNow,
-    innerRef: c,
+    analyticsLocations: t
+  } = (0, l.ZP)(), u = a.useRef(null);
+  return (0, n.jsx)(i.Clickable, {
+    className: c.subscribeNow,
+    innerRef: u,
     onClick: () => {
-      (0, i.default)({
-        subscriptionTier: o.PremiumSubscriptionSKUs.TIER_2,
-        analyticsLocations: s,
-        returnRef: c
+      (0, r.Z)({
+        subscriptionTier: o.Si.TIER_2,
+        analyticsLocations: t,
+        returnRef: u
       })
     },
-    children: t
+    children: s
   })
 }

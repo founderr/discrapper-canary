@@ -1,9 +1,8 @@
 "use strict";
-n.r(t);
-var i = n("735250"),
-  r = n("470079"),
-  s = n("283232");
-t.default = r.memo(function(e) {
+var i = n(735250),
+  r = n(470079),
+  s = n(283232);
+t.Z = r.memo(function(e) {
   let {
     className: t
   } = e;

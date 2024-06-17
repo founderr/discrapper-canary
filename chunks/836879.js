@@ -1,11 +1,10 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("960259"),
-  s = n("367802"),
-  a = n("325767");
-t.default = (0, r.replaceIcon)(function(e) {
+var i = n(735250);
+n(470079);
+var r = n(960259),
+  s = n(367802),
+  o = n(325767);
+t.Z = (0, r.hN)(function(e) {
   let {
     width: t = 16,
     height: n = 16,
@@ -15,7 +14,7 @@ t.default = (0, r.replaceIcon)(function(e) {
   return (0, i.jsx)("svg", {
     width: t,
     height: n,
-    ...(0, a.default)(s),
+    ...(0, o.Z)(s),
     viewBox: "0 0 16 16",
     children: (0, i.jsx)("path", {
       fillRule: "evenodd",
@@ -30,7 +29,7 @@ t.default = (0, r.replaceIcon)(function(e) {
     height: n = 16,
     ...r
   } = e;
-  return (0, i.jsx)(s.StickerSmallIcon, {
+  return (0, i.jsx)(s.B, {
     width: t,
     height: n,
     ...r

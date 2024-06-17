@@ -1,11 +1,10 @@
 "use strict";
-n.r(t);
-var r = n("675717"),
-  i = n("595250"),
-  a = n("220955"),
+var r = n(675717),
+  i = n(595250),
+  a = n(220955),
   o = Math.max,
   s = Math.min;
-t.default = function(e, t, n) {
+t.Z = function(e, t, n) {
   var u, c, l, d, f, p, h = 0,
     m = !1,
     g = !1,
@@ -17,7 +16,7 @@ t.default = function(e, t, n) {
       r = c;
     return u = c = void 0, h = t, d = e.apply(r, n)
   }
-  t = (0, a.default)(t) || 0, (0, r.default)(n) && (m = !!n.leading, l = (g = "maxWait" in n) ? o((0, a.default)(n.maxWait) || 0, t) : l, _ = "trailing" in n ? !!n.trailing : _);
+  t = (0, a.Z)(t) || 0, (0, r.Z)(n) && (m = !!n.leading, l = (g = "maxWait" in n) ? o((0, a.Z)(n.maxWait) || 0, t) : l, _ = "trailing" in n ? !!n.trailing : _);
 
   function v(e) {
     var n = e - p,
@@ -26,7 +25,7 @@ t.default = function(e, t, n) {
   }
 
   function y() {
-    var e, n, r, a, o = (0, i.default)();
+    var e, n, r, a, o = (0, i.Z)();
     if (v(o)) return E(o);
     f = setTimeout(y, (n = (e = o) - p, r = e - h, a = t - n, g ? s(a, l - r) : a))
   }
@@ -36,7 +35,7 @@ t.default = function(e, t, n) {
   }
 
   function S() {
-    var e, n = (0, i.default)(),
+    var e, n = (0, i.Z)(),
       r = v(n);
     if (u = arguments, c = this, p = n, r) {
       if (void 0 === f) {
@@ -50,6 +49,6 @@ t.default = function(e, t, n) {
   return S.cancel = function() {
     void 0 !== f && clearTimeout(f), h = 0, u = p = c = f = void 0
   }, S.flush = function() {
-    return void 0 === f ? d : E((0, i.default)())
+    return void 0 === f ? d : E((0, i.Z)())
   }, S
 }

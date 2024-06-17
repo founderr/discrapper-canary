@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  MessageSendFailureExperiment: function() {
+n.d(t, {
+  i: function() {
     return i
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-06_message_send_failure",
   label: "Message Send Failure Experiment",

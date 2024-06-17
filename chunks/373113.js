@@ -1,51 +1,51 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return n
+t.d(s, {
+  Z: function() {
+    return i
   }
 });
-var a = s("735250");
-s("470079");
-var l = s("521480");
+var n = t(735250);
+t(470079);
+var a = t(521480);
 
-function n() {
-  return (0, a.jsxs)("div", {
-    className: l.__invalid_snowflakes,
-    children: [(0, a.jsx)("div", {
-      className: l.snowflake,
+function i() {
+  return (0, n.jsxs)("div", {
+    className: a.__invalid_snowflakes,
+    children: [(0, n.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, a.jsx)("div", {
-      className: l.snowflake,
+    }), (0, n.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, a.jsx)("div", {
-      className: l.snowflake,
+    }), (0, n.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, a.jsx)("div", {
-      className: l.snowflake,
+    }), (0, n.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, a.jsx)("div", {
-      className: l.snowflake,
+    }), (0, n.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, a.jsx)("div", {
-      className: l.snowflake,
+    }), (0, n.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, a.jsx)("div", {
-      className: l.snowflake,
+    }), (0, n.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, a.jsx)("div", {
-      className: l.snowflake,
+    }), (0, n.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, a.jsx)("div", {
-      className: l.snowflake,
+    }), (0, n.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, a.jsx)("div", {
-      className: l.snowflake,
+    }), (0, n.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, a.jsx)("div", {
-      className: l.snowflake,
+    }), (0, n.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
-    }), (0, a.jsx)("div", {
-      className: l.snowflake,
+    }), (0, n.jsx)("div", {
+      className: a.snowflake,
       children: "❅"
     })]
   })

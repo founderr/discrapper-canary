@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return o
+n.d(t, {
+  Z: function() {
+    return a
   }
 });
-var i = n("928801"),
-  r = n("549895"),
-  s = n("885110");
+var i = n(928801),
+  r = n(549895),
+  s = n(885110);
 
-function a(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -16,12 +16,12 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class o extends i.default {
+class a extends i.Z {
   getInitialState() {
-    return s.default.getLocalPresence()
+    return s.Z.getLocalPresence()
   }
   getNextState() {
-    return s.default.getLocalPresence()
+    return s.Z.getLocalPresence()
   }
   shouldCommit() {
     return this.socket.isSessionEstablished()
@@ -44,6 +44,6 @@ class o extends i.default {
     this.switchingAccounts = !0, this.reset(), this.emitPresenceUpdate(this.getState())
   }
   constructor(e) {
-    super(!1), a(this, "socket", void 0), a(this, "switchingAccounts", void 0), a(this, "didCommit", void 0), this.socket = e, this.switchingAccounts = !1, this.didCommit = (0, r.default)(5, 2e4, this.emitPresenceUpdate.bind(this))
+    super(!1), o(this, "socket", void 0), o(this, "switchingAccounts", void 0), o(this, "didCommit", void 0), this.socket = e, this.switchingAccounts = !1, this.didCommit = (0, r.Z)(5, 2e4, this.emitPresenceUpdate.bind(this))
   }
 }

@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
-  UserProfileCustomStatusBubble: function() {
+n.d(t, {
+  J: function() {
     return T
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
-  o = n("920906"),
-  l = n("442837"),
-  u = n("846519"),
-  d = n("481060"),
-  _ = n("788307"),
-  c = n("607070"),
-  E = n("228168"),
-  I = n("660762");
+}), n(47120);
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(920906),
+  l = n(442837),
+  u = n(846519),
+  _ = n(481060),
+  d = n(788307),
+  c = n(607070),
+  E = n(228168),
+  I = n(660762);
 
 function T(e) {
   let {
@@ -23,94 +23,94 @@ function T(e) {
     profileType: n,
     hasEntered: s = !0,
     animate: T = !0
-  } = e, f = (0, l.useStateFromStores)([c.default], () => c.default.useReducedMotion), [S, h] = r.useState(!0), [A] = r.useState(() => new u.Timeout), m = r.useRef(null), N = r.useRef(null), p = r.useRef(null), O = r.useRef(null), C = (null == t ? void 0 : t.state) != null && "" !== t.state ? t.state : null, R = null != C && C.length > 0, {
+  } = e, h = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), [S, f] = r.useState(!0), [N] = r.useState(() => new u.V7), A = r.useRef(null), m = r.useRef(null), O = r.useRef(null), R = r.useRef(null), C = (null == t ? void 0 : t.state) != null && "" !== t.state ? t.state : null, p = null != C && C.length > 0, {
     emoji: g
-  } = null != t ? t : {}, L = null != g, v = L && !R, D = L || R, [M, y] = r.useState(v);
+  } = null != t ? t : {}, L = null != g, v = L && !p, D = L || p, [M, P] = r.useState(v);
   r.useLayoutEffect(() => {
-    if (null == m.current || v) return;
-    let e = Math.floor(m.current.getBoundingClientRect().height);
-    if (y(v || e <= 18), s) {
+    if (null == A.current || v) return;
+    let e = Math.floor(A.current.getBoundingClientRect().height);
+    if (P(v || e <= 18), s) {
       var t, n, i, r;
-      N.current = null !== (i = null === (t = m.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== i ? i : 144, O.current = null !== (r = null === (n = p.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== r ? r : 36
+      m.current = null !== (i = null === (t = A.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== i ? i : 144, R.current = null !== (r = null === (n = O.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== r ? r : 36
     }
   }, [s, v]);
-  let [P, U] = (0, o.useSpring)(() => ({
+  let [y, U] = (0, a.useSpring)(() => ({
     maxHeight: "".concat(36, "px"),
     config: {
       clamp: !0,
-      immediate: f,
+      immediate: h,
       duration: 150
     }
   }));
-  if (r.useEffect(() => () => A.stop(), [A]), !D) return null;
+  if (r.useEffect(() => () => N.stop(), [N]), !D) return null;
   let b = e => {
       var t, n;
       if (!M) {
         e ? U({
-          maxHeight: "".concat(Math.min(null !== (t = N.current) && void 0 !== t ? t : 144, 144), "px"),
+          maxHeight: "".concat(Math.min(null !== (t = m.current) && void 0 !== t ? t : 144, 144), "px"),
           delay: 300
         }) : U({
-          maxHeight: "".concat(Math.min(null !== (n = O.current) && void 0 !== n ? n : 36, 36), "px"),
+          maxHeight: "".concat(Math.min(null !== (n = R.current) && void 0 !== n ? n : 36, 36), "px"),
           delay: 0
         });
-        A.start(e ? 300 : 150, () => {
-          h(!e)
+        N.start(e ? 300 : 150, () => {
+          f(!e)
         })
       }
     },
-    G = () => L ? (0, i.jsx)(_.ActivityEmoji, {
-      className: R ? I.statusEmojiInline : I.statusEmojiOnly,
+    G = () => L ? (0, i.jsx)(d.I, {
+      className: p ? I.statusEmojiInline : I.statusEmojiOnly,
       emoji: g,
       animate: T,
       hideTooltip: !1,
-      tooltipDelay: E.USER_PROFILE_TOOLTIP_DELAY
+      tooltipDelay: E.vB
     }) : null,
-    w = () => R ? (0, i.jsx)(d.Text, {
+    w = () => p ? (0, i.jsx)(_.Text, {
       variant: "text-sm/medium",
       className: I.statusText,
       children: C
     }) : null,
     k = {
-      [I.biteSize]: n === E.UserProfileTypes.BITE_SIZE,
-      [I.fullSize]: n === E.UserProfileTypes.FULL_SIZE,
-      [I.panel]: n === E.UserProfileTypes.PANEL
+      [I.biteSize]: n === E.y0.BITE_SIZE,
+      [I.fullSize]: n === E.y0.FULL_SIZE,
+      [I.panel]: n === E.y0.PANEL
     },
-    B = a()(I.statusBubbleOuter, k, {
-      [I.statusBubbleShape]: !R && L || !M,
-      [I.statusBubbleSingleLineWithTextShape]: M && R
+    B = o()(I.statusBubbleOuter, k, {
+      [I.statusBubbleShape]: !p && L || !M,
+      [I.statusBubbleSingleLineWithTextShape]: M && p
     }),
-    V = a()(I.statusBubble, {
-      [I.statusBubbleShape]: !R && L || !M,
-      [I.statusBubbleSingleLineWithTextShape]: M && R,
+    x = o()(I.statusBubble, {
+      [I.statusBubbleShape]: !p && L || !M,
+      [I.statusBubbleSingleLineWithTextShape]: M && p,
       [I.statusBubbleEmojiOnlyPadding]: v,
-      [I.statusBubbleWithTextPadding]: R,
-      [I.statusBubbleWithTextMinWidth]: R,
+      [I.statusBubbleWithTextPadding]: p,
+      [I.statusBubbleWithTextMinWidth]: p,
       [I.statusBubbleCopyStatusCursor]: D
     });
   return (0, i.jsxs)("div", {
     children: [(0, i.jsx)("div", {
-      className: a()(I.invisibleContainer, k),
+      className: o()(I.invisibleContainer, k),
       children: (0, i.jsx)("div", {
         className: B,
         children: (0, i.jsxs)("span", {
-          className: V,
+          className: x,
           children: [(0, i.jsxs)("div", {
-            className: a()(I.content, I.clamp, I.placeholderWidth, {
-              [I.panel]: n === E.UserProfileTypes.PANEL
+            className: o()(I.content, I.clamp, I.placeholderWidth, {
+              [I.panel]: n === E.y0.PANEL
             }),
-            ref: p,
+            ref: O,
             children: [G(), w()]
           }), (0, i.jsxs)("div", {
-            className: a()(I.content, I.unclamp, I.placeholderWidth, I.incorporeal, {
-              [I.panel]: n === E.UserProfileTypes.PANEL
+            className: o()(I.content, I.unclamp, I.placeholderWidth, I.incorporeal, {
+              [I.panel]: n === E.y0.PANEL
             }),
-            ref: m,
+            ref: A,
             children: [G(), w()]
           })]
         })
       })
     }), (0, i.jsx)("div", {
-      className: a()(I.visibleContainer, k),
+      className: o()(I.visibleContainer, k),
       children: (0, i.jsx)("div", {
         tabIndex: 0,
         className: B,
@@ -119,15 +119,15 @@ function T(e) {
         onMouseEnter: () => b(!0),
         onMouseLeave: () => b(!1),
         children: (0, i.jsx)("span", {
-          className: V,
+          className: x,
           children: (() => {
-            let e = a()(I.content, {
+            let e = o()(I.content, {
               [I.clamp]: S,
               [I.unclamp]: !S,
               [I.singleLineAlign]: M
             });
-            return (0, i.jsxs)(o.animated.div, {
-              style: P,
+            return (0, i.jsxs)(a.animated.div, {
+              style: y,
               className: e,
               children: [G(), w()]
             })

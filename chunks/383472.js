@@ -1,19 +1,17 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("844303"),
-  o = n("829307"),
-  s = n("13942"),
-  u = n("464854");
-(0, u.ColorWrap)(function(e) {
+var r = n(470079),
+  i = n(844303),
+  a = n(829307),
+  o = n(13942),
+  s = n(464854);
+(0, s.t1)(function(e) {
   var t = e.onChange,
     n = e.hex,
-    r = e.rgb,
+    u = e.rgb,
     c = e.styles,
     l = void 0 === c ? {} : c,
     d = e.className,
-    f = (0, a.default)((0, o.default)({
+    f = (0, i.default)((0, a.Z)({
       default: {
         material: {
           width: "98px",
@@ -80,22 +78,22 @@ var r = n("470079"),
       }
     }, l)),
     p = function(e, n) {
-      e.hex ? s.isValidHex(e.hex) && t({
+      e.hex ? o.FX(e.hex) && t({
         hex: e.hex,
         source: "hex"
       }, n) : (e.r || e.g || e.b) && t({
-        r: e.r || r.r,
-        g: e.g || r.g,
-        b: e.b || r.b,
+        r: e.r || u.r,
+        g: e.g || u.g,
+        b: e.b || u.b,
         source: "rgb"
       }, n)
     };
-  return i().createElement(u.Raised, {
+  return r.createElement(s.xZ, {
     styles: l
-  }, i().createElement("div", {
+  }, r.createElement("div", {
     style: f.material,
     className: "material-picker " + (void 0 === d ? "" : d)
-  }, i().createElement(u.EditableInput, {
+  }, r.createElement(s.Vm, {
     style: {
       wrap: f.HEXwrap,
       input: f.HEXinput,
@@ -104,41 +102,41 @@ var r = n("470079"),
     label: "hex",
     value: n,
     onChange: p
-  }), i().createElement("div", {
+  }), r.createElement("div", {
     style: f.split,
     className: "flexbox-fix"
-  }, i().createElement("div", {
+  }, r.createElement("div", {
     style: f.third
-  }, i().createElement(u.EditableInput, {
+  }, r.createElement(s.Vm, {
     style: {
       wrap: f.RGBwrap,
       input: f.RGBinput,
       label: f.RGBlabel
     },
     label: "r",
-    value: r.r,
+    value: u.r,
     onChange: p
-  })), i().createElement("div", {
+  })), r.createElement("div", {
     style: f.third
-  }, i().createElement(u.EditableInput, {
+  }, r.createElement(s.Vm, {
     style: {
       wrap: f.RGBwrap,
       input: f.RGBinput,
       label: f.RGBlabel
     },
     label: "g",
-    value: r.g,
+    value: u.g,
     onChange: p
-  })), i().createElement("div", {
+  })), r.createElement("div", {
     style: f.third
-  }, i().createElement(u.EditableInput, {
+  }, r.createElement(s.Vm, {
     style: {
       wrap: f.RGBwrap,
       input: f.RGBinput,
       label: f.RGBlabel
     },
     label: "b",
-    value: r.b,
+    value: u.b,
     onChange: p
   })))))
 })

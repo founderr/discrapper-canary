@@ -1,10 +1,8 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("844303");
-t.default = function() {
-  var e = (0, a.default)({
+var r = n(470079),
+  i = n(844303);
+t.Z = function() {
+  var e = (0, i.default)({
     default: {
       picker: {
         width: "12px",
@@ -16,7 +14,7 @@ t.default = function() {
       }
     }
   });
-  return i().createElement("div", {
+  return r.createElement("div", {
     style: e.picker
   })
 }

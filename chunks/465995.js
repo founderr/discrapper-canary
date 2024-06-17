@@ -1,15 +1,13 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("844303"),
-  o = n("329022"),
-  s = n("464854");
-t.default = function(e) {
+var r = n(470079),
+  i = n(844303),
+  a = n(329022),
+  o = n(464854);
+t.Z = function(e) {
   var t = e.colors,
     n = e.onClick,
-    r = e.onSwatchHover,
-    u = (0, a.default)({
+    s = e.onSwatchHover,
+    u = (0, i.default)({
       default: {
         swatches: {
           marginRight: "-10px"
@@ -27,20 +25,20 @@ t.default = function(e) {
         }
       }
     });
-  return i().createElement("div", {
+  return r.createElement("div", {
     style: u.swatches
-  }, (0, o.default)(t, function(e) {
-    return i().createElement(s.Swatch, {
+  }, (0, a.Z)(t, function(e) {
+    return r.createElement(o.m4, {
       key: e,
       color: e,
       style: u.swatch,
       onClick: n,
-      onHover: r,
+      onHover: s,
       focusStyle: {
         boxShadow: "0 0 4px " + e
       }
     })
-  }), i().createElement("div", {
+  }), r.createElement("div", {
     style: u.clear
   }))
 }

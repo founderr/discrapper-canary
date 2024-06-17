@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  AppLauncherHistoryContext: function() {
-    return a
-  },
-  HistoryItemType: function() {
+n.d(t, {
+  gc: function() {
     return r
   },
-  useAppLauncherHistoryContext: function() {
+  hH: function() {
+    return a
+  },
+  uX: function() {
     return o
   }
 });
-var i, r, s = n("470079");
+var i, r, s = n(470079);
 (i = r || (r = {})).HOME = "home", i.LIST = "list", i.APPLICATION = "application";
-let a = s.createContext({
+let o = s.createContext({
   history: [],
   setHistory: () => {},
   currentView: void 0,
@@ -20,6 +20,6 @@ let a = s.createContext({
   goBack: () => {}
 });
 
-function o() {
-  return s.useContext(a)
+function a() {
+  return s.useContext(o)
 }

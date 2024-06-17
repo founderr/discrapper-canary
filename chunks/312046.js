@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  questFromServerV2: function() {
+n.d(t, {
+  Q: function() {
     return s
   }
 });
-var i = n("418793"),
-  r = n("460597");
+var i = n(418793),
+  r = n(460597);
 let s = e => ({
   id: e.id,
   configVersion: 2,
@@ -37,6 +37,6 @@ let s = e => ({
     gameTitle: e.messages.game_title,
     gamePublisher: e.messages.game_publisher
   },
-  taskConfig: (0, r.questTaskConfigFromServer)(e.task_config),
-  rewardsConfig: (0, i.questRewardsConfigV2FromServer)(e.rewards_config)
+  taskConfig: (0, r.f)(e.task_config),
+  rewardsConfig: (0, i.v)(e.rewards_config)
 })

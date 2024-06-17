@@ -1,30 +1,30 @@
 "use strict";
-n.r(t), n("47120"), n("724458");
-var i, r, s, a, o = n("392711"),
-  l = n.n(o),
-  u = n("442837"),
-  d = n("570140"),
-  _ = n("872810"),
-  c = n("569545"),
-  E = n("70722");
+n(47120), n(724458);
+var i, r, s, o, a = n(392711),
+  l = n.n(a),
+  u = n(442837),
+  _ = n(570140),
+  d = n(872810),
+  c = n(569545),
+  E = n(70722);
 let I = {},
   T = {},
-  f = new Set;
+  h = new Set;
 
 function S() {
   I = {}, T = {}
 }
-class h extends(i = u.default.Store) {
+class f extends(i = u.ZP.Store) {
   getPreviewURL(e, t, n) {
-    let i = (0, c.encodeStreamKey)({
-        streamType: null != e ? E.StreamTypes.GUILD : E.StreamTypes.CALL,
+    let i = (0, c.V9)({
+        streamType: null != e ? E.lo.GUILD : E.lo.CALL,
         guildId: e,
         channelId: t,
         ownerId: n
       }),
       r = I[i];
-    return null == r || Date.now() > r.expires ? (!f.has(i) && (f.add(i), Promise.resolve().then(() => {
-      (0, _.fetchStreamPreview)(e, t, n)
+    return null == r || Date.now() > r.expires ? (!h.has(i) && (h.add(i), Promise.resolve().then(() => {
+      (0, d.n9)(e, t, n)
     })), null) : r.url
   }
   getPreviewURLForStreamKey(e) {
@@ -32,25 +32,25 @@ class h extends(i = u.default.Store) {
       guildId: t,
       channelId: n,
       ownerId: i
-    } = (0, c.decodeStreamKey)(e);
+    } = (0, c.my)(e);
     return this.getPreviewURL(t, n, i)
   }
   getIsPreviewLoading(e, t, n) {
-    let i = (0, c.encodeStreamKey)({
-      streamType: null != e ? E.StreamTypes.GUILD : E.StreamTypes.CALL,
+    let i = (0, c.V9)({
+      streamType: null != e ? E.lo.GUILD : E.lo.CALL,
       guildId: e,
       channelId: t,
       ownerId: n
     });
-    return f.has(i)
+    return h.has(i)
   }
 }
-a = "ApplicationStreamPreviewStore", (s = "displayName") in(r = h) ? Object.defineProperty(r, s, {
-  value: a,
+o = "ApplicationStreamPreviewStore", (s = "displayName") in(r = f) ? Object.defineProperty(r, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new h(d.default, {
+}) : r[s] = o, t.Z = new f(_.Z, {
   CONNECTION_OPEN: S,
   LOGOUT: S,
   STREAM_PREVIEW_FETCH_START: function(e) {
@@ -58,7 +58,7 @@ a = "ApplicationStreamPreviewStore", (s = "displayName") in(r = h) ? Object.defi
     let {
       streamKey: n
     } = e;
-    T[n] = (null !== (t = T[n]) && void 0 !== t ? t : 0) + 1, f.add(n)
+    T[n] = (null !== (t = T[n]) && void 0 !== t ? t : 0) + 1, h.add(n)
   },
   STREAM_PREVIEW_FETCH_SUCCESS: function(e) {
     let {
@@ -68,7 +68,7 @@ a = "ApplicationStreamPreviewStore", (s = "displayName") in(r = h) ? Object.defi
     I[t] = {
       url: n,
       expires: Date.now() + 12e4
-    }, T[t] = 0, f.delete(t)
+    }, T[t] = 0, h.delete(t)
   },
   STREAM_PREVIEW_FETCH_FAIL: function(e) {
     let {
@@ -78,7 +78,7 @@ a = "ApplicationStreamPreviewStore", (s = "displayName") in(r = h) ? Object.defi
     I[t] = {
       url: null,
       expires: Date.now() + (null != n ? n : 1e4 * T[t])
-    }, f.delete(t)
+    }, h.delete(t)
   },
   VOICE_STATE_UPDATES: function(e) {
     let {
@@ -92,13 +92,13 @@ a = "ApplicationStreamPreviewStore", (s = "displayName") in(r = h) ? Object.defi
         selfStream: s
       } = t;
       if (s) return e;
-      let a = (0, c.encodeStreamKey)({
-        streamType: null != i ? E.StreamTypes.GUILD : E.StreamTypes.CALL,
+      let o = (0, c.V9)({
+        streamType: null != i ? E.lo.GUILD : E.lo.CALL,
         guildId: i,
         channelId: r,
         ownerId: n
       });
-      return delete I[a], delete T[a], !0
+      return delete I[o], delete T[o], !0
     }, !1)
   }
 })

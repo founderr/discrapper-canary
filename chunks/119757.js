@@ -1,22 +1,22 @@
 "use strict";
-n.r(t), n.d(t, {
-  IconSelectOption: function() {
-    return a
+n.d(t, {
+  Z: function() {
+    return o
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("481060"),
-  s = n("380451");
-let a = e => {
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  s = n(380451);
+let o = e => {
   let {
     title: t,
     subtitle: n,
-    icon: a
+    icon: o
   } = e;
   return (0, i.jsxs)("div", {
     className: s.wrapper,
-    children: [null != a && (0, i.jsx)(a, {
+    children: [null != o && (0, i.jsx)(o, {
       width: 16,
       height: 16,
       className: s.icon

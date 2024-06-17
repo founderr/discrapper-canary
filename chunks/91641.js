@@ -8,11 +8,11 @@ function i(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-n.r(t), n.d(t, {
-  CommonTriggerPointConfiguration: function() {
+n.d(t, {
+  E: function() {
     return r
   }
-}), n("411104"), n("47120");
+}), n(411104), n(47120);
 class r {
   registeredExperimentIds() {
     return this.experiments.map(e => e.definition.id)
@@ -25,6 +25,7 @@ class r {
     }(this.triggerPoint, this.experiments, this.params)
   }
   constructor(e, t, n) {
-    i(this, "experiments", void 0), i(this, "triggerPoint", void 0), i(this, "params", void 0), this.experiments = e, this.triggerPoint = t, this.params = n
+    i(this, "experiments", void 0), i(this, "triggerPoint", void 0), i(this, "params", void 0);
+    this.experiments = e, this.triggerPoint = t, this.params = n
   }
 }

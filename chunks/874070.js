@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return s
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("325767");
+var i = n(735250);
+n(470079);
+var r = n(325767);
 
 function s(e) {
   let {
@@ -14,7 +14,7 @@ function s(e) {
     ...n
   } = e;
   return (0, i.jsxs)("svg", {
-    ...(0, r.default)(n),
+    ...(0, r.Z)(n),
     viewBox: "0 0 26 19",
     fill: "none",
     children: [(0, i.jsx)("path", {

@@ -1,88 +1,78 @@
 "use strict";
-l.r(t), l.d(t, {
-  rgbaToDataURL: function() {
-    return n
-  },
-  thumbHashToApproximateAspectRatio: function() {
-    return a
-  },
-  thumbHashToDataURL: function() {
-    return s
+n.d(t, {
+  xS: function() {
+    return l
   }
 });
 
-function a(e) {
-  let t = e[3],
-    l = 128 & e[2],
-    a = 128 & e[4];
-  return (a ? l ? 5 : 7 : 7 & t) / (a ? 7 & t : l ? 5 : 7)
-}
-
-function n(e, t, l) {
-  let a = 4 * e + 1,
-    n = 6 + t * (5 + a),
-    s = [137, 80, 78, 71, 13, 10, 26, 10, 0, 0, 0, 13, 73, 72, 68, 82, 0, 0, e >> 8, 255 & e, 0, 0, t >> 8, 255 & t, 8, 6, 0, 0, 0, 0, 0, 0, 0, n >>> 24, n >> 16 & 255, n >> 8 & 255, 255 & n, 73, 68, 65, 84, 120, 1],
-    i = [0, 498536548, 997073096, 651767980, 1994146192, 1802195444, 1303535960, 1342533948, -306674912, -267414716, -690576408, -882789492, -1687895376, -2032938284, -1609899400, -1111625188],
-    r = 1,
-    u = 0;
-  for (let e = 0, n = 0, i = a - 1; e < t; e++, i += a - 1)
-    for (s.push(e + 1 < t ? 0 : 1, 255 & a, a >> 8, 255 & ~a, a >> 8 ^ 255, 0), u = (u + r) % 65521; n < i; n++) {
-      let e = 255 & l[n];
-      s.push(e), u = (u + (r = (r + e) % 65521)) % 65521
-    }
-  for (let [e, t] of(s.push(u >> 8, 255 & u, r >> 8, 255 & r, 0, 0, 0, 0, 0, 0, 0, 0, 73, 69, 78, 68, 174, 66, 96, 130), [
-      [12, 29],
-      [37, 41 + n]
-    ])) {
-    let l = -1;
-    for (let a = e; a < t; a++) l ^= s[a], l = (l = l >>> 4 ^ i[15 & l]) >>> 4 ^ i[15 & l];
-    l = ~l, s[t++] = l >>> 24, s[t++] = l >> 16 & 255, s[t++] = l >> 8 & 255, s[t++] = 255 & l
-  }
-  return "data:image/png;base64," + btoa(String.fromCharCode(...s))
-}
-
-function s(e) {
+function l(e) {
   let t = function(e) {
     let {
       PI: t,
-      min: l,
-      max: n,
+      min: n,
+      max: l,
       cos: s,
-      round: i
-    } = Math, r = e[0] | e[1] << 8 | e[2] << 16, u = e[3] | e[4] << 8, o = (63 & r) / 63, d = (r >> 6 & 63) / 31.5 - 1, c = (r >> 12 & 63) / 31.5 - 1, f = r >> 23, m = u >> 15, S = n(3, m ? f ? 5 : 7 : 7 & u), E = n(3, m ? 7 & u : f ? 5 : 7), _ = f ? (15 & e[5]) / 15 : 1, h = (e[5] >> 4) / 15, C = f ? 6 : 5, g = 0, N = (t, l, a) => {
-      let n = [];
-      for (let s = 0; s < l; s++)
-        for (let i = s ? 0 : 1; i * l < t * (l - s); i++) n.push(((e[C + (g >> 1)] >> ((1 & g++) << 2) & 15) / 7.5 - 1) * a);
-      return n
-    }, I = N(S, E, (r >> 18 & 31) / 31), p = N(3, 3, (u >> 3 & 63) / 63 * 1.25), x = N(3, 3, (u >> 9 & 63) / 63 * 1.25), A = f && N(5, 5, h), T = a(e), R = i(T > 1 ? 32 : 32 * T), v = i(T > 1 ? 32 / T : 32), L = new Uint8Array(R * v * 4), M = [], O = [];
+      round: a
+    } = Math, i = e[0] | e[1] << 8 | e[2] << 16, r = e[3] | e[4] << 8, o = (63 & i) / 63, u = (i >> 6 & 63) / 31.5 - 1, c = (i >> 12 & 63) / 31.5 - 1, d = i >> 23, m = r >> 15, E = l(3, m ? d ? 5 : 7 : 7 & r), _ = l(3, m ? 7 & r : d ? 5 : 7), S = d ? (15 & e[5]) / 15 : 1, h = (e[5] >> 4) / 15, g = d ? 6 : 5, Z = 0, C = (t, n, l) => {
+      let s = [];
+      for (let a = 0; a < n; a++)
+        for (let i = a ? 0 : 1; i * n < t * (n - a); i++) s.push(((e[g + (Z >> 1)] >> ((1 & Z++) << 2) & 15) / 7.5 - 1) * l);
+      return s
+    }, f = C(E, _, (i >> 18 & 31) / 31), N = C(3, 3, (r >> 3 & 63) / 63 * 1.25), x = C(3, 3, (r >> 9 & 63) / 63 * 1.25), I = d && C(5, 5, h), A = function(e) {
+      let t = e[3],
+        n = 128 & e[2],
+        l = 128 & e[4];
+      return (l ? n ? 5 : 7 : 7 & t) / (l ? 7 & t : n ? 5 : 7)
+    }(e), T = a(A > 1 ? 32 : 32 * A), v = a(A > 1 ? 32 / A : 32), R = new Uint8Array(T * v * 4), L = [], p = [];
     for (let e = 0, a = 0; e < v; e++)
-      for (let i = 0; i < R; i++, a += 4) {
+      for (let i = 0; i < T; i++, a += 4) {
         let r = o,
-          u = d,
-          m = c,
-          h = _;
-        for (let e = 0, l = n(S, f ? 5 : 3); e < l; e++) M[e] = s(t / R * (i + .5) * e);
-        for (let l = 0, a = n(E, f ? 5 : 3); l < a; l++) O[l] = s(t / v * (e + .5) * l);
-        for (let e = 0, t = 0; e < E; e++)
-          for (let l = e ? 0 : 1, a = 2 * O[e]; l * E < S * (E - e); l++, t++) r += I[t] * M[l] * a;
+          m = u,
+          h = c,
+          g = S;
+        for (let e = 0, n = l(E, d ? 5 : 3); e < n; e++) L[e] = s(t / T * (i + .5) * e);
+        for (let n = 0, a = l(_, d ? 5 : 3); n < a; n++) p[n] = s(t / v * (e + .5) * n);
+        for (let e = 0, t = 0; e < _; e++)
+          for (let n = e ? 0 : 1, l = 2 * p[e]; n * _ < E * (_ - e); n++, t++) r += f[t] * L[n] * l;
         for (let e = 0, t = 0; e < 3; e++)
-          for (let l = e ? 0 : 1, a = 2 * O[e]; l < 3 - e; l++, t++) {
-            let e = M[l] * a;
-            u += p[t] * e, m += x[t] * e
+          for (let n = e ? 0 : 1, l = 2 * p[e]; n < 3 - e; n++, t++) {
+            let e = L[n] * l;
+            m += N[t] * e, h += x[t] * e
           }
-        if (f)
+        if (d)
           for (let e = 0, t = 0; e < 5; e++)
-            for (let l = e ? 0 : 1, a = 2 * O[e]; l < 5 - e; l++, t++) h += A[t] * M[l] * a;
-        let C = r - 2 / 3 * u,
-          g = (3 * r - C + m) / 2,
-          N = g - m;
-        L[a] = n(0, 255 * l(1, g)), L[a + 1] = n(0, 255 * l(1, N)), L[a + 2] = n(0, 255 * l(1, C)), L[a + 3] = n(0, 255 * l(1, h))
+            for (let n = e ? 0 : 1, l = 2 * p[e]; n < 5 - e; n++, t++) g += I[t] * L[n] * l;
+        let Z = r - 2 / 3 * m,
+          C = (3 * r - Z + h) / 2,
+          A = C - h;
+        R[a] = l(0, 255 * n(1, C)), R[a + 1] = l(0, 255 * n(1, A)), R[a + 2] = l(0, 255 * n(1, Z)), R[a + 3] = l(0, 255 * n(1, g))
       }
     return {
-      w: R,
+      w: T,
       h: v,
-      rgba: L
+      rgba: R
     }
   }(e);
-  return n(t.w, t.h, t.rgba)
+  return function(e, t, n) {
+    let l = 4 * e + 1,
+      s = 6 + t * (5 + l),
+      a = [137, 80, 78, 71, 13, 10, 26, 10, 0, 0, 0, 13, 73, 72, 68, 82, 0, 0, e >> 8, 255 & e, 0, 0, t >> 8, 255 & t, 8, 6, 0, 0, 0, 0, 0, 0, 0, s >>> 24, s >> 16 & 255, s >> 8 & 255, 255 & s, 73, 68, 65, 84, 120, 1],
+      i = [0, 498536548, 997073096, 651767980, 1994146192, 1802195444, 1303535960, 1342533948, -306674912, -267414716, -690576408, -882789492, -1687895376, -2032938284, -1609899400, -1111625188],
+      r = 1,
+      o = 0;
+    for (let e = 0, s = 0, i = l - 1; e < t; e++, i += l - 1)
+      for (a.push(e + 1 < t ? 0 : 1, 255 & l, l >> 8, 255 & ~l, l >> 8 ^ 255, 0), o = (o + r) % 65521; s < i; s++) {
+        let e = 255 & n[s];
+        a.push(e), o = (o + (r = (r + e) % 65521)) % 65521
+      }
+    for (let [e, t] of(a.push(o >> 8, 255 & o, r >> 8, 255 & r, 0, 0, 0, 0, 0, 0, 0, 0, 73, 69, 78, 68, 174, 66, 96, 130), [
+        [12, 29],
+        [37, 41 + s]
+      ])) {
+      let n = -1;
+      for (let l = e; l < t; l++) n ^= a[l], n = (n = n >>> 4 ^ i[15 & n]) >>> 4 ^ i[15 & n];
+      n = ~n, a[t++] = n >>> 24, a[t++] = n >> 16 & 255, a[t++] = n >> 8 & 255, a[t++] = 255 & n
+    }
+    return "data:image/png;base64," + btoa(String.fromCharCode(...a))
+  }(t.w, t.h, t.rgba)
 }

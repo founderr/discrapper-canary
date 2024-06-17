@@ -1,5 +1,5 @@
 "use strict";
-var r = n("606956"),
+var r = n(606956),
   i = Object.prototype.hasOwnProperty,
   a = Array.isArray,
   o = function() {

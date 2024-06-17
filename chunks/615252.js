@@ -1,7 +1,7 @@
 "use strict";
-var r = n("444675");
-let i = n("620633"),
-  a = n("517024"),
+var r = n(444675);
+let i = n(620633),
+  a = n(517024),
   o = a.isObject,
   s = a.hasOwn;
 

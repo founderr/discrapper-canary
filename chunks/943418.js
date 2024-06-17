@@ -1,2 +1,2 @@
-var l = t("383083");
-i.encode = l.encode, i.decode = l.decode
+var n = s(383083);
+t.encode = n.encode, t.decode = n.decode

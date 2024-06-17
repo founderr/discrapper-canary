@@ -1,5 +1,5 @@
 "use strict";
-var e = n("581031"),
+var e = n(581031),
   o = Error,
   i = e("".replace),
   u = String(o("zxcasd").stack),

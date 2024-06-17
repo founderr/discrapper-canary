@@ -1,79 +1,79 @@
 "use strict";
-n.r(t), n.d(t, {
-  AppealIngestionSignal: function() {
-    return l
-  },
-  AppealIngestionSignalOrder: function() {
-    return d
-  },
-  AppealIngestionSlideTypes: function() {
-    return c
-  },
-  DEFAULT_MEDIA_MAX_HEIGHT: function() {
-    return M
-  },
-  DEFAULT_MEDIA_MAX_WIDTH: function() {
-    return R
-  },
-  SafetyHubAnalyticsActionSource: function() {
-    return A
-  },
-  SafetyHubAnalyticsActions: function() {
-    return N
-  },
-  SafetyHubLinks: function() {
-    return C
-  },
-  SafetyHubPolicyNoticeKeys: function() {
-    return O
-  },
-  SafetyHubView: function() {
-    return o
-  },
-  SafetySystemNotificationCtaType: function() {
+E.d(e, {
+  Cg: function() {
     return a
   },
-  SafetySystemNotificationEmbedKeys: function() {
+  Cs: function() {
+    return u
+  },
+  EY: function() {
     return f
   },
-  SlidesOrderDsaEligible: function() {
+  I5: function() {
+    return R
+  },
+  RY: function() {
+    return M
+  },
+  SU: function() {
+    return A
+  },
+  Sv: function() {
     return D
   },
-  SlidesOrderNonDsaEligible: function() {
-    return p
+  bK: function() {
+    return L
   },
-  ViolationType: function() {
-    return u
+  c6: function() {
+    return P
+  },
+  d9: function() {
+    return G
+  },
+  n0: function() {
+    return s
+  },
+  qS: function() {
+    return T
+  },
+  s: function() {
+    return c
+  },
+  sQ: function() {
+    return O
+  },
+  wo: function() {
+    return o
   }
 });
-var i, E, I, S, r, _, s, o, a, N, A, l, c, u, T = n("981631");
+var t, I, _, i, r, N, S, A, o, s, c, L, u, T, l = E(981631);
 
-function L(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: n,
+function C(n, e, E) {
+  return e in n ? Object.defineProperty(n, e, {
+    value: E,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
-}(i = o || (o = {})).SETTINGS = "SETTINGS", i.ACCOUNT_STANDING = "ACCOUNT_STANDING", i.GUILD_SETTINGS = "GUILD_SETTINGS", i.ENCRYPTION = "ENCRYPTION";
-class C {}
-L(C, "TOS_LINK", "https://discord.com/terms"), L(C, "COMMUNITY_GUIDELINES", "https://discord.com/guidelines"), L(C, "APPEALS_LINK", "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731"), L(C, "WARNING_SYSTEM_HELPCENTER_LINK", "https://support.discord.com/hc/articles/18210965981847"), L(C, "AGE_VERIFICATION_LINK", "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731"), L(C, "SPAM_LINK", "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__");
+  }) : n[e] = E, n
+}(t = A || (A = {})).SETTINGS = "SETTINGS", t.ACCOUNT_STANDING = "ACCOUNT_STANDING", t.GUILD_SETTINGS = "GUILD_SETTINGS", t.ENCRYPTION = "ENCRYPTION";
 class O {}
-L(O, "CLASSIFICATION_ID", "classification_id"), L(O, "INCIDENT_TIMESTAMP", "incident_time"), (E = a || (a = {})).POLICY_VIOLATION_DETAIL = "policy_violation_detail", E.LEARN_MORE_LINK = "learn_more_link";
-class f {}
-L(f, "ICON_TYPE", "icon_type"), L(f, "HEADER", "header"), L(f, "BODY", "body"), L(f, "CTAS", "ctas"), L(f, "TIMESTAMP", "timestamp"), L(f, "THEME", "theme"), L(f, "CLIENT_VERSION_MESSAGE", "client_version_message"), L(f, "LEARN_MORE_LINK", "learn_more_link"), L(f, "CLASSIFICATION_ID", "classification_id"), (I = N || (N = {}))[I.ViewViolationDetail = 0] = "ViewViolationDetail", I[I.ViewViolationsDropdown = 1] = "ViewViolationsDropdown", I[I.ClickLetUsKnow = 2] = "ClickLetUsKnow", I[I.ClickAgeVerificationLink = 3] = "ClickAgeVerificationLink", I[I.ClickSpamWebformLink = 4] = "ClickSpamWebformLink", I[I.ClickLearnMoreLink = 5] = "ClickLearnMoreLink", I[I.ClickCommunityGuidelinesLink = 6] = "ClickCommunityGuidelinesLink", I[I.ClickWarningSystemHelpcenterLink = 7] = "ClickWarningSystemHelpcenterLink", (S = A || (A = {}))[S.SystemDM = 0] = "SystemDM", S[S.StandingTab = 1] = "StandingTab", S[S.AppealIngestion = 2] = "AppealIngestion", Object.freeze({
-  SPEED_BUMP: T.AnalyticsSections.APPEAL_INGESTION_SPEED_BUMP,
-  COLLECT_SIGNAL: T.AnalyticsSections.APPEAL_INGESTION_COLLECT_SIGNAL,
-  CONFIRM_SUBMISSION: T.AnalyticsSections.APPEAL_INGESTION_CONFIRM_SUBMISSION,
-  REQUEST_SENT: T.AnalyticsSections.APPEAL_INGESTION_REQUEST_SENT,
-  THANKS: T.AnalyticsSections.APPEAL_INGESTION_THANKS,
-  SPAM: T.AnalyticsSections.APPEAL_INGESTION_SPAM
-}), (r = l || (l = {}))[r.DIDNT_VIOLATE_POLICY = 0] = "DIDNT_VIOLATE_POLICY", r[r.TOO_STRICT_UNFAIR = 1] = "TOO_STRICT_UNFAIR", r[r.DONT_AGREE_PENALTY = 2] = "DONT_AGREE_PENALTY", r[r.SOMETHING_ELSE = 3] = "SOMETHING_ELSE";
-let d = [0, 1, 2, 3],
-  R = 372,
-  M = 279;
-(_ = c || (c = {})).SPEED_BUMP = "speed-bump", _.COLLECT_SIGNAL = "collect-signal", _.CONFIRM_SUBMISSION = "confirm-submission", _.REQUEST_SENT = "request-sent", _.THANKS = "thanks";
-let D = {
+C(O, "TOS_LINK", "https://discord.com/terms"), C(O, "COMMUNITY_GUIDELINES", "https://discord.com/guidelines"), C(O, "APPEALS_LINK", "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731"), C(O, "WARNING_SYSTEM_HELPCENTER_LINK", "https://support.discord.com/hc/articles/18210965981847"), C(O, "AGE_VERIFICATION_LINK", "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731"), C(O, "SPAM_LINK", "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__");
+class a {}
+C(a, "CLASSIFICATION_ID", "classification_id"), C(a, "INCIDENT_TIMESTAMP", "incident_time"), (I = o || (o = {})).POLICY_VIOLATION_DETAIL = "policy_violation_detail", I.LEARN_MORE_LINK = "learn_more_link";
+class R {}
+C(R, "ICON_TYPE", "icon_type"), C(R, "HEADER", "header"), C(R, "BODY", "body"), C(R, "CTAS", "ctas"), C(R, "TIMESTAMP", "timestamp"), C(R, "THEME", "theme"), C(R, "CLIENT_VERSION_MESSAGE", "client_version_message"), C(R, "LEARN_MORE_LINK", "learn_more_link"), C(R, "CLASSIFICATION_ID", "classification_id"), (_ = s || (s = {}))[_.ViewViolationDetail = 0] = "ViewViolationDetail", _[_.ViewViolationsDropdown = 1] = "ViewViolationsDropdown", _[_.ClickLetUsKnow = 2] = "ClickLetUsKnow", _[_.ClickAgeVerificationLink = 3] = "ClickAgeVerificationLink", _[_.ClickSpamWebformLink = 4] = "ClickSpamWebformLink", _[_.ClickLearnMoreLink = 5] = "ClickLearnMoreLink", _[_.ClickCommunityGuidelinesLink = 6] = "ClickCommunityGuidelinesLink", _[_.ClickWarningSystemHelpcenterLink = 7] = "ClickWarningSystemHelpcenterLink", (i = c || (c = {}))[i.SystemDM = 0] = "SystemDM", i[i.StandingTab = 1] = "StandingTab", i[i.AppealIngestion = 2] = "AppealIngestion", Object.freeze({
+  SPEED_BUMP: l.jXE.APPEAL_INGESTION_SPEED_BUMP,
+  COLLECT_SIGNAL: l.jXE.APPEAL_INGESTION_COLLECT_SIGNAL,
+  CONFIRM_SUBMISSION: l.jXE.APPEAL_INGESTION_CONFIRM_SUBMISSION,
+  REQUEST_SENT: l.jXE.APPEAL_INGESTION_REQUEST_SENT,
+  THANKS: l.jXE.APPEAL_INGESTION_THANKS,
+  SPAM: l.jXE.APPEAL_INGESTION_SPAM
+}), (r = L || (L = {}))[r.DIDNT_VIOLATE_POLICY = 0] = "DIDNT_VIOLATE_POLICY", r[r.TOO_STRICT_UNFAIR = 1] = "TOO_STRICT_UNFAIR", r[r.DONT_AGREE_PENALTY = 2] = "DONT_AGREE_PENALTY", r[r.SOMETHING_ELSE = 3] = "SOMETHING_ELSE";
+let M = [0, 1, 2, 3],
+  D = 372,
+  f = 279;
+(N = u || (u = {})).SPEED_BUMP = "speed-bump", N.COLLECT_SIGNAL = "collect-signal", N.CONFIRM_SUBMISSION = "confirm-submission", N.REQUEST_SENT = "request-sent", N.THANKS = "thanks";
+let G = {
     "speed-bump": {
       next: "collect-signal",
       prev: null
@@ -91,7 +91,7 @@ let D = {
       prev: null
     }
   },
-  p = {
+  P = {
     "collect-signal": {
       next: "thanks",
       prev: null
@@ -101,4 +101,4 @@ let D = {
       prev: null
     }
   };
-(s = u || (u = {}))[s.USER = 1] = "USER", s[s.GUILD_OWNER = 2] = "GUILD_OWNER", s[s.GUILD_MEMBER = 3] = "GUILD_MEMBER"
+(S = T || (T = {}))[S.USER = 1] = "USER", S[S.GUILD_OWNER = 2] = "GUILD_OWNER", S[S.GUILD_MEMBER = 3] = "GUILD_MEMBER"

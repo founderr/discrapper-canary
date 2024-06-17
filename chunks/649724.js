@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
-  CopyInput: function() {
+n.d(t, {
+  k: function() {
     return T
   },
-  CopyInputModes: function() {
+  u: function() {
     return I
   }
-}), n("47120");
-var i, r = n("735250"),
-  s = n("470079"),
-  a = n("120356"),
-  o = n.n(a),
-  l = n("481060"),
-  u = n("285952"),
-  d = n("153066"),
-  _ = n("689938"),
-  c = n("245578");
+}), n(47120);
+var i, r = n(735250),
+  s = n(470079),
+  o = n(120356),
+  a = n.n(o),
+  l = n(481060),
+  u = n(285952),
+  _ = n(153066),
+  d = n(689938),
+  c = n(245578);
 
 function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ class T extends(i = s.PureComponent) {
       mode: i
     } = this.props, s = null === (t = this.context) || void 0 === t ? void 0 : t.titleId;
     return (0, r.jsx)("input", {
-      className: o()((0, d.getClass)(c, "input", i), {
+      className: a()((0, _.l)(c, "input", i), {
         [c.inputHidden]: e
       }),
       ref: this.inputRef,
@@ -56,11 +56,11 @@ class T extends(i = s.PureComponent) {
   render() {
     let e;
     let {
-      text: t = _.default.Messages.COPY,
+      text: t = d.Z.Messages.COPY,
       mode: n,
       hideMessage: i,
       className: s,
-      buttonLook: a
+      buttonLook: o
     } = this.props, E = null != i;
     switch (n) {
       case I.SUCCESS:
@@ -76,17 +76,17 @@ class T extends(i = s.PureComponent) {
       focusTarget: this.inputRef,
       ringTarget: this.containerRef,
       children: (0, r.jsx)("div", {
-        className: o()((0, d.getClass)(c, "copyInput", n), s),
+        className: a()((0, _.l)(c, "copyInput", n), s),
         ref: this.containerRef,
-        children: (0, r.jsxs)(u.default, {
+        children: (0, r.jsxs)(u.Z, {
           className: c.layout,
-          children: [(0, r.jsxs)(u.default, {
+          children: [(0, r.jsxs)(u.Z, {
             className: c.inputWrapper,
             children: [this.renderInput(E), E ? (0, r.jsx)("div", {
               className: c.hiddenMessage,
               children: i
             }) : null]
-          }), (0, r.jsx)(u.default, {
+          }), (0, r.jsx)(u.Z, {
             shrink: 1,
             grow: 0,
             style: {
@@ -97,7 +97,7 @@ class T extends(i = s.PureComponent) {
               onClick: this.handleButtonClick,
               size: l.ButtonSizes.MIN,
               color: e,
-              look: a,
+              look: o,
               children: t
             })
           })]

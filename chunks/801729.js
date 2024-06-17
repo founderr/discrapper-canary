@@ -1,40 +1,40 @@
 "use strict";
-n.r(t), n.d(t, {
-  BadgeShapes: function() {
+n.d(t, {
+  Dv: function() {
     return l
   },
-  CircleBadge: function() {
-    return T
-  },
-  IconBadge: function() {
+  G2: function() {
     return I
   },
-  NumberBadge: function() {
-    return _
-  },
-  PremiumBadge: function() {
-    return E
-  },
-  TextBadge: function() {
+  IG: function() {
     return c
   },
-  getBadgeCountString: function() {
-    return d
+  NG: function() {
+    return _
   },
-  getBadgeWidthForValue: function() {
+  OV: function() {
     return u
+  },
+  fW: function() {
+    return T
+  },
+  lB: function() {
+    return E
+  },
+  mA: function() {
+    return d
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("120356"),
+var i = n(735250);
+n(470079);
+var r = n(120356),
   s = n.n(r),
-  a = n("377171"),
-  o = n("254474");
+  o = n(377171),
+  a = n(254474);
 let l = {
-  ROUND: o.baseShapeRound,
-  ROUND_LEFT: o.baseShapeRoundLeft,
-  ROUND_RIGHT: o.baseShapeRoundRight,
+  ROUND: a.baseShapeRound,
+  ROUND_LEFT: a.baseShapeRoundLeft,
+  ROUND_RIGHT: a.baseShapeRoundRight,
   SQUARE: ""
 };
 
@@ -42,21 +42,21 @@ function u(e) {
   return e < 10 ? 16 : e < 100 ? 22 : 30
 }
 
-function d(e) {
+function _(e) {
   return e < 1e3 ? "".concat(e) : "".concat(Math.min(Math.floor(e / 1e3), 9), "k+")
 }
-let _ = e => {
+let d = e => {
     let {
       count: t,
-      color: n = a.default.STATUS_DANGER,
+      color: n = o.Z.STATUS_DANGER,
       disableColor: r = !1,
-      shape: _ = l.ROUND,
+      shape: d = l.ROUND,
       className: c,
       style: E,
       ...I
     } = e;
     return (0, i.jsx)("div", {
-      className: s()(c, o.numberBadge, _),
+      className: s()(c, a.numberBadge, d),
       style: {
         backgroundColor: r ? void 0 : n,
         width: u(t),
@@ -73,24 +73,24 @@ let _ = e => {
         ...E
       },
       ...I,
-      children: d(t)
+      children: _(t)
     })
   },
   c = e => {
     let {
       text: t,
       className: n,
-      color: r = a.default.STATUS_DANGER,
+      color: r = o.Z.STATUS_DANGER,
       shape: u = l.ROUND,
-      disableColor: d = !1,
-      style: _,
+      disableColor: _ = !1,
+      style: d,
       ...c
     } = e;
     return (0, i.jsx)("div", {
-      className: s()(n, o.textBadge, u),
+      className: s()(n, a.textBadge, u),
       style: {
-        backgroundColor: d ? void 0 : r,
-        ..._
+        backgroundColor: _ ? void 0 : r,
+        ...d
       },
       ...c,
       children: t
@@ -103,7 +103,7 @@ let _ = e => {
       ...r
     } = e;
     return (0, i.jsx)(c, {
-      className: s()(o.premiumBadge, n),
+      className: s()(a.premiumBadge, n),
       text: t,
       ...r
     })
@@ -112,37 +112,37 @@ let _ = e => {
     let {
       icon: t,
       className: n,
-      color: r = a.default.STATUS_DANGER,
+      color: r = o.Z.STATUS_DANGER,
       shape: u = l.ROUND,
-      disableColor: d = !1,
-      style: _
+      disableColor: _ = !1,
+      style: d
     } = e;
     return (0, i.jsx)("div", {
-      className: s()(n, o.iconBadge, u),
+      className: s()(n, a.iconBadge, u),
       style: {
-        backgroundColor: d ? void 0 : r,
-        ..._
+        backgroundColor: _ ? void 0 : r,
+        ...d
       },
       children: (0, i.jsx)(t, {
-        className: o.icon
+        className: a.icon
       })
     })
   },
   T = e => {
     let {
       className: t,
-      color: n = a.default.INTERACTIVE_ACTIVE,
+      color: n = o.Z.INTERACTIVE_ACTIVE,
       shape: r = l.ROUND,
       disableColor: u = !1,
-      style: d,
-      ..._
+      style: _,
+      ...d
     } = e;
     return (0, i.jsx)("div", {
-      className: s()(t, o.circleBadge, r),
+      className: s()(t, a.circleBadge, r),
       style: {
         backgroundColor: u ? void 0 : n,
-        ...d
+        ..._
       },
-      ..._
+      ...d
     })
   }

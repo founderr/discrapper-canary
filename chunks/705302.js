@@ -1,23 +1,21 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("476400"),
-  o = n.n(a),
-  s = n("844303"),
-  u = n("329022"),
-  c = n("829307"),
-  l = n("464854"),
-  d = n("844515"),
-  f = function(e) {
+var r = n(470079),
+  i = n(476400),
+  a = n.n(i),
+  o = n(844303),
+  s = n(329022),
+  u = n(829307),
+  c = n(464854),
+  l = n(844515),
+  d = function(e) {
     var t = e.width,
       n = e.colors,
-      r = e.onChange,
+      i = e.onChange,
       a = e.onSwatchHover,
-      o = e.triangle,
-      l = e.styles,
+      c = e.triangle,
+      d = e.styles,
       f = e.className,
-      p = (0, s.default)((0, c.default)({
+      p = (0, o.default)((0, u.Z)({
         default: {
           card: {
             width: t,
@@ -93,28 +91,28 @@ var r = n("470079"),
             transform: "rotate(180deg)"
           }
         }
-      }, void 0 === l ? {} : l), {
-        "hide-triangle": "hide" === o,
-        "top-left-triangle": "top-left" === o,
-        "top-right-triangle": "top-right" === o,
-        "bottom-left-triangle": "bottom-left" === o,
-        "bottom-right-triangle": "bottom-right" === o
+      }, void 0 === d ? {} : d), {
+        "hide-triangle": "hide" === c,
+        "top-left-triangle": "top-left" === c,
+        "top-right-triangle": "top-right" === c,
+        "bottom-left-triangle": "bottom-left" === c,
+        "bottom-right-triangle": "bottom-right" === c
       }),
       h = function(e, t) {
-        return r({
+        return i({
           hex: e,
           source: "hex"
         }, t)
       };
-    return i().createElement("div", {
+    return r.createElement("div", {
       style: p.card,
       className: "github-picker " + (void 0 === f ? "" : f)
-    }, i().createElement("div", {
+    }, r.createElement("div", {
       style: p.triangleShadow
-    }), i().createElement("div", {
+    }), r.createElement("div", {
       style: p.triangle
-    }), (0, u.default)(n, function(e) {
-      return i().createElement(d.default, {
+    }), (0, s.Z)(n, function(e) {
+      return r.createElement(l.Z, {
         color: e,
         key: e,
         onClick: h,
@@ -122,14 +120,14 @@ var r = n("470079"),
       })
     }))
   };
-f.propTypes = {
-  width: o().oneOfType([o().string, o().number]),
-  colors: o().arrayOf(o().string),
-  triangle: o().oneOf(["hide", "top-left", "top-right", "bottom-left", "bottom-right"]),
-  styles: o().object
-}, f.defaultProps = {
+d.propTypes = {
+  width: a().oneOfType([a().string, a().number]),
+  colors: a().arrayOf(a().string),
+  triangle: a().oneOf(["hide", "top-left", "top-right", "bottom-left", "bottom-right"]),
+  styles: a().object
+}, d.defaultProps = {
   width: 200,
   colors: ["#B80000", "#DB3E00", "#FCCB00", "#008B02", "#006B76", "#1273DE", "#004DCF", "#5300EB", "#EB9694", "#FAD0C3", "#FEF3BD", "#C1E1C5", "#BEDADC", "#C4DEF6", "#BED3F3", "#D4C4FB"],
   triangle: "top-left",
   styles: {}
-}, (0, l.ColorWrap)(f)
+}, (0, c.t1)(d)

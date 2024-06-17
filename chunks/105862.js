@@ -1,46 +1,46 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return c
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("481060"),
-  a = n("782568"),
-  o = n("63063"),
-  l = n("981631"),
-  u = n("689938"),
-  d = n("54674"),
-  _ = n("224275");
+var i = n(735250),
+  r = n(470079),
+  s = n(481060),
+  o = n(782568),
+  a = n(63063),
+  l = n(981631),
+  u = n(689938),
+  _ = n(54674),
+  d = n(224275);
 
 function c() {
   let e = r.useCallback(() => {
-    (0, a.default)(o.default.getArticleURL(l.HelpdeskArticles.LAUNCHING_APPS_WITH_SHAPES_BUTTON))
+    (0, o.Z)(a.Z.getArticleURL(l.BhN.LAUNCHING_APPS_WITH_SHAPES_BUTTON))
   }, []);
   return (0, i.jsxs)("div", {
-    className: d.container,
+    className: _.container,
     children: [(0, i.jsx)("img", {
-      className: d.image,
-      src: _,
+      className: _.image,
+      src: d,
       alt: "",
       "aria-hidden": !0
     }), (0, i.jsxs)("div", {
-      className: d.body,
+      className: _.body,
       children: [(0, i.jsx)(s.Heading, {
         variant: "heading-lg/bold",
         color: "header-primary",
-        children: u.default.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE
+        children: u.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE
       }), (0, i.jsx)(s.Text, {
         variant: "text-xs/normal",
         color: "text-normal",
-        children: u.default.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_BODY
+        children: u.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_BODY
       })]
     }), (0, i.jsx)(s.Button, {
       size: s.Button.Sizes.MEDIUM,
-      "aria-label": u.default.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE,
+      "aria-label": u.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE,
       onClick: e,
-      children: u.default.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_LEARN_MORE
+      children: u.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_LEARN_MORE
     })]
   })
 }

@@ -1,20 +1,18 @@
 "use strict";
-r.r(t);
-var a = r("599295"),
-  n = r("692378"),
-  s = r("383237"),
-  o = r("470079"),
-  i = r.n(o),
-  u = r("639519"),
-  l = r.n(u),
-  c = r("456519"),
-  f = r("3339"),
-  b = r("652621"),
-  d = r("398420"),
-  h = r("893361"),
-  p = ["getItemString", "keyPath", "labelRenderer", "styling", "value", "valueRenderer", "isCustomNode"];
+var a = r(599295),
+  n = r(692378),
+  s = r(383237),
+  o = r(470079),
+  i = r(639519),
+  c = r.n(i),
+  u = r(456519),
+  l = r(3339),
+  b = r(652621),
+  f = r(398420),
+  d = r(893361),
+  h = ["getItemString", "keyPath", "labelRenderer", "styling", "value", "valueRenderer", "isCustomNode"];
 
-function g(e, t) {
+function p(e, t) {
   var r = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var a = Object.getOwnPropertySymbols(e);
@@ -28,36 +26,36 @@ function g(e, t) {
 function y(e) {
   for (var t = 1; t < arguments.length; t++) {
     var r = null != arguments[t] ? arguments[t] : {};
-    t % 2 ? g(Object(r), !0).forEach(function(t) {
-      (0, n.default)(e, t, r[t])
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r)) : g(Object(r)).forEach(function(t) {
+    t % 2 ? p(Object(r), !0).forEach(function(t) {
+      (0, n.Z)(e, t, r[t])
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r)) : p(Object(r)).forEach(function(t) {
       Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t))
     })
   }
   return e
 }
-var v = function(e) {
+var g = function(e) {
   var t = e.getItemString,
     r = e.keyPath,
     n = e.labelRenderer,
-    o = e.styling,
-    u = e.value,
-    l = e.valueRenderer,
+    i = e.styling,
+    c = e.value,
+    p = e.valueRenderer,
     g = e.isCustomNode,
-    v = (0, s.default)(e, p),
-    m = g(u) ? "Custom" : (0, c.default)(u),
+    v = (0, s.Z)(e, h),
+    m = g(c) ? "Custom" : (0, u.Z)(c),
     O = {
       getItemString: t,
       key: r[0],
       keyPath: r,
       labelRenderer: n,
       nodeType: m,
-      styling: o,
-      value: u,
-      valueRenderer: l
+      styling: i,
+      value: c,
+      valueRenderer: p
     },
     w = y(y(y({}, v), O), {}, {
-      data: u,
+      data: c,
       isCustomNode: g
     });
   switch (m) {
@@ -65,67 +63,67 @@ var v = function(e) {
     case "Error":
     case "WeakMap":
     case "WeakSet":
-      return i().createElement(f.default, w);
+      return o.createElement(l.Z, w);
     case "Array":
-      return i().createElement(b.default, w);
+      return o.createElement(b.Z, w);
     case "Iterable":
     case "Map":
     case "Set":
-      return i().createElement(d.default, w);
+      return o.createElement(f.Z, w);
     case "String":
-      return i().createElement(h.default, (0, a.default)({}, O, {
+      return o.createElement(d.Z, (0, a.Z)({}, O, {
         valueGetter: function(e) {
           return '"'.concat(e, '"')
         }
       }));
     case "Number":
     case "Custom":
-      return i().createElement(h.default, O);
+      return o.createElement(d.Z, O);
     case "Boolean":
-      return i().createElement(h.default, (0, a.default)({}, O, {
+      return o.createElement(d.Z, (0, a.Z)({}, O, {
         valueGetter: function(e) {
           return e ? "true" : "false"
         }
       }));
     case "Date":
-      return i().createElement(h.default, (0, a.default)({}, O, {
+      return o.createElement(d.Z, (0, a.Z)({}, O, {
         valueGetter: function(e) {
           return e.toISOString()
         }
       }));
     case "Null":
-      return i().createElement(h.default, (0, a.default)({}, O, {
+      return o.createElement(d.Z, (0, a.Z)({}, O, {
         valueGetter: function() {
           return "null"
         }
       }));
     case "Undefined":
-      return i().createElement(h.default, (0, a.default)({}, O, {
+      return o.createElement(d.Z, (0, a.Z)({}, O, {
         valueGetter: function() {
           return "undefined"
         }
       }));
     case "Function":
     case "Symbol":
-      return i().createElement(h.default, (0, a.default)({}, O, {
+      return o.createElement(d.Z, (0, a.Z)({}, O, {
         valueGetter: function(e) {
           return e.toString()
         }
       }));
     default:
-      return i().createElement(h.default, (0, a.default)({}, O, {
+      return o.createElement(d.Z, (0, a.Z)({}, O, {
         valueGetter: function() {
           return "<".concat(m, ">")
         }
       }))
   }
 };
-v.propTypes = {
-  getItemString: l().func.isRequired,
-  keyPath: l().arrayOf(l().oneOfType([l().string, l().number]).isRequired).isRequired,
-  labelRenderer: l().func.isRequired,
-  styling: l().func.isRequired,
-  value: l().any,
-  valueRenderer: l().func.isRequired,
-  isCustomNode: l().func.isRequired
-}, t.default = v
+g.propTypes = {
+  getItemString: c().func.isRequired,
+  keyPath: c().arrayOf(c().oneOfType([c().string, c().number]).isRequired).isRequired,
+  labelRenderer: c().func.isRequired,
+  styling: c().func.isRequired,
+  value: c().any,
+  valueRenderer: c().func.isRequired,
+  isCustomNode: c().func.isRequired
+}, t.Z = g

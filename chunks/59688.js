@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  useCanShowNewGuildTooltip: function() {
+n.d(t, {
+  o: function() {
     return r
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-04_server_peek",
   label: "Change the guild tooltip",
@@ -31,4 +31,4 @@ function r(e) {
     });
   return n
 }
-t.default = i
+t.Z = i

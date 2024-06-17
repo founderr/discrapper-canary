@@ -1,76 +1,76 @@
 "use strict";
-n.r(t), n("47120");
-var i, r, s = n("735250"),
-  a = n("470079"),
-  o = n("120356"),
-  l = n.n(o),
-  u = n("481060"),
-  d = n("823379"),
-  _ = n("797717"),
-  c = n("24514"),
-  E = n("665786"),
-  I = n("192091"),
-  T = n("507957"),
-  f = n("981631"),
-  S = n("689938"),
-  h = n("298829");
+n(47120);
+var i, r, s = n(735250),
+  o = n(470079),
+  a = n(120356),
+  l = n.n(a),
+  u = n(481060),
+  _ = n(823379),
+  d = n(797717),
+  c = n(24514),
+  E = n(665786),
+  I = n(192091),
+  T = n(507957),
+  h = n(981631),
+  S = n(689938),
+  f = n(298829);
 (r = i || (i = {}))[r.PARTNERED = 0] = "PARTNERED", r[r.STAFF = 1] = "STAFF", r[r.VERIFIED = 2] = "VERIFIED", r[r.VERIFIED_AND_PARTNERED = 3] = "VERIFIED_AND_PARTNERED", r[r.VERIFIED_AND_HUB = 4] = "VERIFIED_AND_HUB", r[r.HUB = 5] = "HUB", r[r.NONE = 6] = "NONE";
-class A extends a.PureComponent {
+class N extends o.PureComponent {
   renderBadge(e, t, n) {
     let {
       className: i,
       badgeStrokeColor: r,
-      tooltipColor: a = u.Tooltip.Colors.BRAND,
-      tooltipPosition: o,
+      tooltipColor: o = u.Tooltip.Colors.BRAND,
+      tooltipPosition: a,
       tooltipDelay: c,
       size: E = 16,
       badgeColor: I,
       iconClassName: T,
-      flowerStarClassName: f
-    } = this.props, A = function(e) {
+      flowerStarClassName: h
+    } = this.props, N = function(e) {
       switch (e) {
         case 2:
-          return S.default.Messages.GUILD_VERIFIED;
+          return S.Z.Messages.GUILD_VERIFIED;
         case 0:
-          return S.default.Messages.GUILD_PARTNERED;
+          return S.Z.Messages.GUILD_PARTNERED;
         case 3:
-          return S.default.Messages.GUILD_VERIFIED_AND_PARTNERED;
+          return S.Z.Messages.GUILD_VERIFIED_AND_PARTNERED;
         case 4:
-          return S.default.Messages.HUB_VERIFIED_DISCORD_HUB;
+          return S.Z.Messages.HUB_VERIFIED_DISCORD_HUB;
         case 5:
-          return S.default.Messages.HUB_DISCORD_HUB;
+          return S.Z.Messages.HUB_DISCORD_HUB;
         case 1:
-          return S.default.Messages.INTERNAL_EMPLOYEE_ONLY;
+          return S.Z.Messages.INTERNAL_EMPLOYEE_ONLY;
         case 6:
           return null;
         default:
-          (0, d.assertNever)(e)
+          (0, _.vE)(e)
       }
     }(e);
     return (0, s.jsx)(u.Tooltip, {
-      color: a,
-      position: o,
+      color: o,
+      position: a,
       delay: c,
-      text: A,
-      children: a => 5 === e || 4 === e ? (0, s.jsx)("div", {
-        ...a,
+      text: N,
+      children: o => 5 === e || 4 === e ? (0, s.jsx)("div", {
+        ...o,
         className: l()(n, i),
         style: {
           width: E,
           height: E
         },
         children: (0, s.jsx)(t, {
-          className: l()(h.icon, T)
+          className: l()(f.icon, T)
         })
-      }) : (0, s.jsx)(_.default, {
-        ...a,
+      }) : (0, s.jsx)(d.Z, {
+        ...o,
         className: l()(n, i),
-        flowerStarClassName: f,
+        flowerStarClassName: h,
         color: I,
         stroke: r,
         size: E,
         children: (0, s.jsx)(t, {
-          className: l()(h.icon, T)
+          className: l()(f.icon, T)
         })
       })
     })
@@ -79,7 +79,7 @@ class A extends a.PureComponent {
     let {
       guild: e
     } = this.props, t = new Set(e.features);
-    return t.has(f.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) ? this.renderBadge(1, I.default, h.staff) : t.has(f.GuildFeatures.VERIFIED) && t.has(f.GuildFeatures.HUB) ? this.renderBadge(4, c.default, h.verifiedHub) : t.has(f.GuildFeatures.HUB) ? this.renderBadge(5, c.default, h.hub) : t.has(f.GuildFeatures.VERIFIED) && t.has(f.GuildFeatures.PARTNERED) ? this.renderBadge(3, T.default, h.verified) : t.has(f.GuildFeatures.VERIFIED) ? this.renderBadge(2, T.default, h.verified) : t.has(f.GuildFeatures.PARTNERED) ? this.renderBadge(0, E.default, h.partnered) : null
+    return t.has(h.oNc.INTERNAL_EMPLOYEE_ONLY) ? this.renderBadge(1, I.Z, f.staff) : t.has(h.oNc.VERIFIED) && t.has(h.oNc.HUB) ? this.renderBadge(4, c.Z, f.verifiedHub) : t.has(h.oNc.HUB) ? this.renderBadge(5, c.Z, f.hub) : t.has(h.oNc.VERIFIED) && t.has(h.oNc.PARTNERED) ? this.renderBadge(3, T.Z, f.verified) : t.has(h.oNc.VERIFIED) ? this.renderBadge(2, T.Z, f.verified) : t.has(h.oNc.PARTNERED) ? this.renderBadge(0, E.Z, f.partnered) : null
   }
 }
-t.default = A
+t.Z = N

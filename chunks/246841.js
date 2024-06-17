@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return l
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("481060"),
-  s = n("395361"),
-  a = n("829820"),
-  o = n("22387");
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  s = n(395361),
+  o = n(829820),
+  a = n(22387);
 
 function l(e) {
   let {
@@ -17,22 +17,22 @@ function l(e) {
     user: n,
     source: l,
     className: u,
-    size: d,
-    look: _,
+    size: _,
+    look: d,
     color: c,
     fullWidth: E,
     onAction: I
   } = e, {
     label: T,
-    tooltip: f,
+    tooltip: h,
     loading: S,
-    disabled: h,
-    onClick: A
-  } = (0, a.useSpotifyPlayAction)(t, n, l), m = () => {
-    null == I || I(), A()
+    disabled: f,
+    onClick: N
+  } = (0, o.Ih)(t, n, l), A = () => {
+    null == I || I(), N()
   };
   return (0, i.jsx)(r.Tooltip, {
-    text: f,
+    text: h,
     children: e => {
       let {
         onMouseEnter: t,
@@ -40,17 +40,17 @@ function l(e) {
       } = e;
       return (0, i.jsxs)(r.Button, {
         className: u,
-        innerClassName: o.playButtonInner,
-        size: d,
-        look: _,
+        innerClassName: a.playButtonInner,
+        size: _,
+        look: d,
         color: c,
         fullWidth: E,
-        onClick: m,
+        onClick: A,
         onMouseEnter: t,
         onMouseLeave: n,
-        disabled: h,
+        disabled: f,
         submitting: S,
-        children: [(0, i.jsx)(s.default, {
+        children: [(0, i.jsx)(s.Z, {
           width: 16,
           height: 16
         }), T]

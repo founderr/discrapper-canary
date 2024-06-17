@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
-  UserAppsTreatment: function() {
+n.d(t, {
+  e: function() {
     return r
   }
 });
-var i, r, s = n("818083");
-(i = r || (r = {})).ALLOWED = "allowed", i.DEFAULT = "default", t.default = (0, s.createExperiment)({
+var i, r, s = n(818083);
+(i = r || (r = {})).ALLOWED = "allowed", i.DEFAULT = "default", t.Z = (0, s.B)({
   kind: "guild",
   id: "2023-09_user_apps_guild",
   label: "Allow user app commands",

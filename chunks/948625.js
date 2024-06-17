@@ -1,101 +1,97 @@
 "use strict";
-s.r(t), s.d(t, {
-  COLLECTIBLES_HEADERS: function() {
-    return L
+t.d(s, {
+  E8: function() {
+    return v
   },
-  getOverflowImages: function() {
-    return N
+  T8: function() {
+    return b
   }
 });
-var a = s("180650"),
-  l = s("44315"),
-  n = s("981631"),
-  r = s("689938"),
-  i = s("994745"),
-  o = s("341364"),
-  u = s("763542"),
-  c = s("354873"),
-  d = s("525071"),
-  f = s("737140"),
-  C = s("194349"),
-  E = s("523569"),
-  m = s("55817"),
-  p = s("696228"),
-  S = s("202796"),
-  g = s("570593"),
-  h = s("199546"),
-  I = s("613540"),
-  _ = s("769411");
-let T = {
-    MOST_POPULAR: () => r.default.Messages.MOST_POPULAR,
-    NEW_RELEASE: () => r.default.Messages.APPLICATION_STORE_NEW_RELEASE,
-    NITRO_EXCLUSIVE: () => r.default.Messages.COLLECTIBLES_NITRO_EXCLUSIVE
-  },
-  x = {
-    TAKE_ME_THERE: () => r.default.Messages.TAKE_ME_THERE
-  },
-  L = [{
+var n = t(180650),
+  a = t(44315),
+  i = t(981631),
+  l = t(689938),
+  r = t(994745),
+  o = t(341364),
+  c = t(763542),
+  u = t(354873),
+  d = t(525071),
+  C = t(737140),
+  E = t(194349),
+  f = t(523569),
+  m = t(55817),
+  p = t(696228),
+  g = t(202796),
+  h = t(570593),
+  x = t(199546),
+  _ = t(613540),
+  I = t(769411);
+let T = () => l.Z.Messages.MOST_POPULAR,
+  N = () => l.Z.Messages.APPLICATION_STORE_NEW_RELEASE,
+  S = () => l.Z.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
+  L = () => l.Z.Messages.TAKE_ME_THERE,
+  b = [{
     id: "category_anime",
-    backgroundStaticSrc: f,
-    backgroundVideoSrc: i,
+    backgroundStaticSrc: C,
+    backgroundVideoSrc: r,
     overflowSrcStatic: d,
-    overflowSrcAnimatedBackground: c,
-    overflowSrcAnimated: u,
+    overflowSrcAnimatedBackground: u,
+    overflowSrcAnimated: c,
     logoSrc: o,
-    textColor: (0, l.getColor)(n.Color.BLACK_500),
+    textColor: (0, a.Lq)(i.Ilk.BLACK_500),
     badge: {
-      label: T.MOST_POPULAR
+      label: T
     },
     cta: {
-      label: x.TAKE_ME_THERE,
-      categorySkuId: a.CollectiblesCategorySkuId.ANIME_V2
+      label: L,
+      categorySkuId: n.T.ANIME_V2
     }
   }, {
     id: "category_galaxy",
-    backgroundStaticSrc: _,
-    backgroundVideoSrc: h,
-    logoSrc: I,
-    textColor: (0, l.getColor)(n.Color.WHITE_100),
+    backgroundStaticSrc: I,
+    backgroundVideoSrc: x,
+    logoSrc: _,
+    textColor: (0, a.Lq)(i.Ilk.WHITE_100),
     badge: {
-      label: T.NEW_RELEASE,
+      label: N,
       date: new Date
     },
     cta: {
-      label: x.TAKE_ME_THERE,
-      categorySkuId: a.CollectiblesCategorySkuId.GALAXY
+      label: L,
+      categorySkuId: n.T.GALAXY
     }
   }, {
     id: "category_disxcore",
-    backgroundStaticSrc: g,
-    overflowSrcStatic: S,
+    backgroundStaticSrc: h,
+    overflowSrcStatic: g,
     logoSrc: p,
-    textColor: (0, l.getColor)(n.Color.WHITE_100),
+    textColor: (0, a.Lq)(i.Ilk.WHITE_100),
     badge: {
-      label: T.NITRO_EXCLUSIVE
+      label: S
     },
     cta: {
-      label: x.TAKE_ME_THERE,
-      categorySkuId: a.CollectiblesCategorySkuId.DISXCORE
+      label: L,
+      categorySkuId: n.T.DISXCORE
     }
   }, {
     id: "category_cyberpunk",
     backgroundStaticSrc: m,
-    backgroundVideoSrc: C,
-    logoSrc: E,
-    textColor: (0, l.getColor)(n.Color.WHITE_100),
+    backgroundVideoSrc: E,
+    logoSrc: f,
+    textColor: (0, a.Lq)(i.Ilk.WHITE_100),
     badge: {
-      label: T.MOST_POPULAR
+      label: T
     },
     cta: {
-      label: x.TAKE_ME_THERE,
-      categorySkuId: a.CollectiblesCategorySkuId.CYBERPUNK
+      label: L,
+      categorySkuId: n.T.CYBERPUNK
     }
   }],
-  N = (e, t) => {
+  v = (e, s) => {
     let {
-      overflowSrcStatic: s,
-      overflowSrcAnimated: a,
-      overflowSrcAnimatedBackground: l
+      overflowSrcStatic: t,
+      overflowSrcAnimated: n,
+      overflowSrcAnimatedBackground: a
     } = e;
-    return null == s ? [] : t || null == a ? [s] : null == l ? [a] : [l, a]
+    return null == t ? [] : s || null == n ? [t] : null == a ? [n] : [a, n]
   }

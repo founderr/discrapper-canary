@@ -1,24 +1,22 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("844303"),
-  o = n("13942"),
-  s = n("464854");
-t.default = function(e) {
+var r = n(470079),
+  i = n(844303),
+  a = n(13942),
+  o = n(464854);
+t.Z = function(e) {
   var t = e.onChange,
     n = e.rgb,
-    r = e.hsl,
+    s = e.hsl,
     u = e.hex,
     c = e.hsv,
     l = function(e, n) {
-      if (e.hex) o.isValidHex(e.hex) && t({
+      if (e.hex) a.FX(e.hex) && t({
         hex: e.hex,
         source: "hex"
       }, n);
       else if (e.rgb) {
         var r = e.rgb.split(",");
-        o.isvalidColorString(e.rgb, "rgb") && t({
+        a.p7(e.rgb, "rgb") && t({
           r: r[0],
           g: r[1],
           b: r[2],
@@ -27,23 +25,23 @@ t.default = function(e) {
         }, n)
       } else if (e.hsv) {
         var i = e.hsv.split(",");
-        o.isvalidColorString(e.hsv, "hsv") && (i[2] = i[2].replace("%", ""), i[1] = i[1].replace("%", ""), i[0] = i[0].replace("\xb0", ""), 1 == i[1] ? i[1] = .01 : 1 == i[2] && (i[2] = .01), t({
+        a.p7(e.hsv, "hsv") && (i[2] = i[2].replace("%", ""), i[1] = i[1].replace("%", ""), i[0] = i[0].replace("\xb0", ""), 1 == i[1] ? i[1] = .01 : 1 == i[2] && (i[2] = .01), t({
           h: Number(i[0]),
           s: Number(i[1]),
           v: Number(i[2]),
           source: "hsv"
         }, n))
       } else if (e.hsl) {
-        var a = e.hsl.split(",");
-        o.isvalidColorString(e.hsl, "hsl") && (a[2] = a[2].replace("%", ""), a[1] = a[1].replace("%", ""), a[0] = a[0].replace("\xb0", ""), 1 == h[1] ? h[1] = .01 : 1 == h[2] && (h[2] = .01), t({
-          h: Number(a[0]),
-          s: Number(a[1]),
-          v: Number(a[2]),
+        var o = e.hsl.split(",");
+        a.p7(e.hsl, "hsl") && (o[2] = o[2].replace("%", ""), o[1] = o[1].replace("%", ""), o[0] = o[0].replace("\xb0", ""), 1 == h[1] ? h[1] = .01 : 1 == h[2] && (h[2] = .01), t({
+          h: Number(o[0]),
+          s: Number(o[1]),
+          v: Number(o[2]),
           source: "hsl"
         }, n))
       }
     },
-    d = (0, a.default)({
+    d = (0, i.default)({
       default: {
         wrap: {
           display: "flex",
@@ -121,16 +119,16 @@ t.default = function(e) {
       }
     }),
     f = n.r + ", " + n.g + ", " + n.b,
-    p = Math.round(r.h) + "\xb0, " + Math.round(100 * r.s) + "%, " + Math.round(100 * r.l) + "%",
+    p = Math.round(s.h) + "\xb0, " + Math.round(100 * s.s) + "%, " + Math.round(100 * s.l) + "%",
     h = Math.round(c.h) + "\xb0, " + Math.round(100 * c.s) + "%, " + Math.round(100 * c.v) + "%";
-  return i().createElement("div", {
+  return r.createElement("div", {
     style: d.wrap,
     className: "flexbox-fix"
-  }, i().createElement("div", {
+  }, r.createElement("div", {
     style: d.fields
-  }, i().createElement("div", {
+  }, r.createElement("div", {
     style: d.double
-  }, i().createElement(s.EditableInput, {
+  }, r.createElement(o.Vm, {
     style: {
       input: d.input,
       label: d.label
@@ -138,11 +136,11 @@ t.default = function(e) {
     label: "hex",
     value: u,
     onChange: l
-  })), i().createElement("div", {
+  })), r.createElement("div", {
     style: d.column
-  }, i().createElement("div", {
+  }, r.createElement("div", {
     style: d.single
-  }, i().createElement(s.EditableInput, {
+  }, r.createElement(o.Vm, {
     style: {
       input: d.input2,
       label: d.label2
@@ -150,9 +148,9 @@ t.default = function(e) {
     label: "rgb",
     value: f,
     onChange: l
-  })), i().createElement("div", {
+  })), r.createElement("div", {
     style: d.single
-  }, i().createElement(s.EditableInput, {
+  }, r.createElement(o.Vm, {
     style: {
       input: d.input2,
       label: d.label2
@@ -160,9 +158,9 @@ t.default = function(e) {
     label: "hsv",
     value: h,
     onChange: l
-  })), i().createElement("div", {
+  })), r.createElement("div", {
     style: d.single
-  }, i().createElement(s.EditableInput, {
+  }, r.createElement(o.Vm, {
     style: {
       input: d.input2,
       label: d.label2

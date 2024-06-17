@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
-  useIsEligibleForMembersListQuestEntrypoint: function() {
-    return a
+n.d(t, {
+  z: function() {
+    return o
   }
 });
-var i = n("818083"),
-  r = n("977156");
-let s = (0, i.createExperiment)({
+var i = n(818083),
+  r = n(977156);
+let s = (0, i.B)({
     id: "2024-03_quests_members_list_entrypoint",
     kind: "user",
     label: "Quests Members List Entrypoint",
@@ -27,18 +27,18 @@ let s = (0, i.createExperiment)({
       }
     }]
   }),
-  a = e => {
+  o = e => {
     let {
       location: t,
       autoTrackExposure: n = !1
-    } = e, i = (0, r.useIsEligibleForQuests)({
+    } = e, i = (0, r.Zy)({
       location: t
     }), {
-      enabled: a
+      enabled: o
     } = s.useExperiment({
       location: t
     }, {
       autoTrackExposure: n
     });
-    return i && a
+    return i && o
   }

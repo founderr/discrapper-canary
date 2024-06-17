@@ -1,10 +1,10 @@
 "use strict";
-s.r(t), s.d(t, {
-  useCollectiblesCondensedBannersExperiment: function() {
-    return l
+t.d(s, {
+  O: function() {
+    return a
   }
 });
-let a = (0, s("818083").createExperiment)({
+let n = (0, t(818083).B)({
     kind: "user",
     id: "2024-05_shop_condensed_category_banners",
     label: "Collectibles Shop Dynamic Header & Condensed Category Banners",
@@ -39,11 +39,11 @@ let a = (0, s("818083").createExperiment)({
       }
     }]
   }),
-  l = e => {
+  a = e => {
     let {
-      location: t
+      location: s
     } = e;
-    return a.useExperiment({
-      location: t
+    return n.useExperiment({
+      location: s
     })
   }

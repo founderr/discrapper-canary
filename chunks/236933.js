@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-var r = n("334389");
+var r = n(334389);
 
 function i(e, t) {
   if ("function" != typeof e || null != t && "function" != typeof t) throw TypeError("Expected a function");
@@ -12,6 +11,6 @@ function i(e, t) {
     var o = e.apply(this, r);
     return n.cache = a.set(i, o) || a, o
   };
-  return n.cache = new(i.Cache || r.default), n
+  return n.cache = new(i.Cache || r.Z), n
 }
-i.Cache = r.default, t.default = i
+i.Cache = r.Z, t.Z = i

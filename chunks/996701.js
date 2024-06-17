@@ -1,22 +1,22 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return d
+n.d(t, {
+  Z: function() {
+    return _
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("481060"),
-  s = n("782568"),
-  a = n("441957"),
-  o = n("689938"),
-  l = n("831124");
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  s = n(782568),
+  o = n(441957),
+  a = n(689938),
+  l = n(831124);
 let u = e => {
   let {
     data: {
       url: t,
       link_text: n,
-      link_description: o,
+      link_description: a,
       is_localized: u
     }
   } = e;
@@ -24,7 +24,7 @@ let u = e => {
     role: "link",
     className: l.linkButton,
     onClick: () => {
-      (0, s.default)(t)
+      (0, s.Z)(t)
     },
     children: [(0, i.jsxs)("div", {
       className: l.linkTextContainer,
@@ -32,18 +32,18 @@ let u = e => {
         className: l.__invalid_linkText,
         variant: "text-md/semibold",
         children: n
-      }), null != o && "" !== o && (0, i.jsx)(r.Text, {
+      }), null != a && "" !== a && (0, i.jsx)(r.Text, {
         variant: "text-md/normal",
         color: "text-muted",
-        children: o
+        children: a
       })]
-    }), (0, i.jsx)(a.default, {
+    }), (0, i.jsx)(o.Z, {
       className: l.linkIcon
     })]
   }) : null
 };
 
-function d(e) {
+function _(e) {
   let {
     elements: t
   } = e;
@@ -73,7 +73,7 @@ function d(e) {
       variant: "heading-sm/semibold",
       color: "header-secondary",
       className: l.header,
-      children: o.default.Messages.LEARN_MORE
+      children: a.Z.Messages.LEARN_MORE
     }), n]
   })
 }

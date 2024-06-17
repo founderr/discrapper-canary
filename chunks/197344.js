@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n("653041");
-var i = n("442837"),
-  r = n("292556"),
-  s = n("695346"),
-  a = n("292959"),
-  o = n("626135"),
-  l = n("378364"),
-  u = n("981631"),
-  d = n("689938");
+n(653041);
+var i = n(442837),
+  r = n(292556),
+  s = n(695346),
+  o = n(292959),
+  a = n(626135),
+  l = n(378364),
+  u = n(981631),
+  _ = n(689938);
 
-function _() {
-  return I() && l.default.experiment.getCurrentConfig({
+function d() {
+  return I() && l.Z.experiment.getCurrentConfig({
     location: "holiday_events_is_eligible"
   }, {
     autoTrackExposure: !1
@@ -20,7 +20,7 @@ function _() {
 function c() {
   let {
     enabled: e
-  } = l.default.experiment.useExperiment({
+  } = l.Z.experiment.useExperiment({
     location: "holiday_events_use_eligible"
   }, {
     autoTrackExposure: !1
@@ -29,55 +29,55 @@ function c() {
 }
 
 function E() {
-  return null != l.default.ringtone && null != l.default.getRingtoneSettingsLabel
+  return null != l.Z.ringtone && null != l.Z.getRingtoneSettingsLabel
 }
 
 function I() {
   let e = Date.now();
-  return e >= l.default.startTimeMs && e <= l.default.endTimeMs
+  return e >= l.Z.startTimeMs && e <= l.Z.endTimeMs
 }
-t.default = {
+t.Z = {
   subscribe: function(e) {
-    return l.default.experiment.subscribe({
+    return l.Z.experiment.subscribe({
       location: "holiday_events_subscribe"
     }, e)
   },
-  isEligible: _,
+  isEligible: d,
   isRingtoneDisabled: function() {
-    return null == l.default.ringtone || a.default.isSoundDisabled(l.default.ringtone)
+    return null == l.Z.ringtone || o.Z.isSoundDisabled(l.Z.ringtone)
   },
   isRingtoneEligible: function() {
-    return _() && E()
+    return d() && E()
   },
   onRingtoneSettingValueChange: function(e) {
-    let t = a.default.getDisabledSounds();
-    if (null == l.default.ringtone) return;
-    let n = t.filter(e => e !== l.default.ringtone);
-    !e && n.push(l.default.ringtone), r.default.setDisabledSounds(n), o.default.track(u.AnalyticEvents.EVENT_RINGTONE_TOGGLED, {
+    let t = o.Z.getDisabledSounds();
+    if (null == l.Z.ringtone) return;
+    let n = t.filter(e => e !== l.Z.ringtone);
+    !e && n.push(l.Z.ringtone), r.default.setDisabledSounds(n), a.default.track(u.rMx.EVENT_RINGTONE_TOGGLED, {
       toggled_on: e,
-      sound_name: l.default.ringtone
+      sound_name: l.Z.ringtone
     })
   },
   useIsEligible: c,
   useIsRingtoneDisabled: function() {
-    return (0, i.useStateFromStores)([a.default], () => null == l.default.ringtone || a.default.isSoundDisabled(l.default.ringtone))
+    return (0, i.e7)([o.Z], () => null == l.Z.ringtone || o.Z.isSoundDisabled(l.Z.ringtone))
   },
   useIsRingtoneEligible: function() {
     return c() && E()
   },
   useRingtoneSettingDescription: function() {
-    return s.NativePhoneIntegrationEnabled.useSetting() ? void 0 : d.default.Messages.ENABLE_PHONE_INTEGRATION
+    return s.D3.useSetting() ? void 0 : _.Z.Messages.ENABLE_PHONE_INTEGRATION
   },
   useRingtoneSettingValue: function() {
-    let e = (0, i.useStateFromStores)([a.default], () => a.default.getDisabledSounds()),
-      t = s.NativePhoneIntegrationEnabled.useSetting();
-    return null != l.default.ringtone && t && !e.includes(l.default.ringtone)
+    let e = (0, i.e7)([o.Z], () => o.Z.getDisabledSounds()),
+      t = s.D3.useSetting();
+    return null != l.Z.ringtone && t && !e.includes(l.Z.ringtone)
   },
   getAppSpinnerSources: function() {
-    return I() ? l.default.appSpinnerSources : null
+    return I() ? l.Z.appSpinnerSources : null
   },
   getLoadingTips: function() {
     var e;
-    return I() ? null === (e = l.default.getLoadingTips) || void 0 === e ? void 0 : e.call(l.default) : null
+    return I() ? null === (e = l.Z.getLoadingTips) || void 0 === e ? void 0 : e.call(l.Z) : null
   }
 }

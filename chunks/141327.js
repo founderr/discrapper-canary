@@ -1,9 +1,8 @@
 "use strict";
-n.r(t);
-var r = n("816569"),
+var r = n(816569),
   i = "object" == typeof exports && exports && !exports.nodeType && exports,
   a = i && "object" == typeof module && module && !module.nodeType && module,
-  o = a && a.exports === i && r.default.process,
+  o = a && a.exports === i && r.Z.process,
   s = function() {
     try {
       var e = a && a.require && a.require("util").types;
@@ -11,4 +10,4 @@ var r = n("816569"),
       return o && o.binding && o.binding("util")
     } catch (e) {}
   }();
-t.default = s
+t.Z = s

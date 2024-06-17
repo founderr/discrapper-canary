@@ -1,26 +1,24 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("476400"),
-  o = n.n(a),
-  s = n("844303"),
-  u = n("829307"),
-  c = n("464854"),
-  l = n("654474"),
-  d = n("252053"),
-  f = n("175445"),
-  p = function(e) {
+var r = n(470079),
+  i = n(476400),
+  a = n.n(i),
+  o = n(844303),
+  s = n(829307),
+  u = n(464854),
+  c = n(654474),
+  l = n(252053),
+  d = n(175445),
+  f = function(e) {
     var t = e.width,
       n = e.onChange,
-      r = e.rgb,
+      i = e.rgb,
       a = e.hsl,
-      o = e.hsv,
+      f = e.hsv,
       p = e.hex,
       h = e.header,
       m = e.styles,
       g = e.className,
-      _ = (0, s.default)((0, u.default)({
+      _ = (0, o.default)((0, s.Z)({
         default: {
           picker: {
             width: t,
@@ -51,7 +49,7 @@ var r = n("470079"),
             width: "30%",
             height: "228px",
             padding: "0px",
-            background: "rgba(" + r.r + ", " + r.g + ", " + r.b + ", 1)",
+            background: "rgba(" + i.r + ", " + i.g + ", " + i.b + ", 1)",
             position: "relative",
             overflow: "hidden"
           },
@@ -79,47 +77,47 @@ var r = n("470079"),
           }
         }
       }, void 0 === m ? {} : m));
-    return i().createElement("div", {
+    return r.createElement("div", {
       style: _.picker,
       className: "google-picker " + (void 0 === g ? "" : g)
-    }, i().createElement("div", {
+    }, r.createElement("div", {
       style: _.head
-    }, h), i().createElement("div", {
+    }, h), r.createElement("div", {
       style: _.swatch
-    }), i().createElement("div", {
+    }), r.createElement("div", {
       style: _.saturation
-    }, i().createElement(c.Saturation, {
+    }, r.createElement(u.OQ, {
       hsl: a,
-      hsv: o,
-      pointer: l.default,
+      hsv: f,
+      pointer: c.C,
       onChange: n
-    })), i().createElement("div", {
+    })), r.createElement("div", {
       style: _.body
-    }, i().createElement("div", {
+    }, r.createElement("div", {
       style: _.controls,
       className: "flexbox-fix"
-    }, i().createElement("div", {
+    }, r.createElement("div", {
       style: _.hue
-    }, i().createElement(c.Hue, {
+    }, r.createElement(u.PS, {
       style: _.Hue,
       hsl: a,
       radius: "4px",
-      pointer: d.default,
+      pointer: l.Z,
       onChange: n
-    }))), i().createElement(f.default, {
-      rgb: r,
+    }))), r.createElement(d.Z, {
+      rgb: i,
       hsl: a,
       hex: p,
-      hsv: o,
+      hsv: f,
       onChange: n
     })))
   };
-p.propTypes = {
-  width: o().oneOfType([o().string, o().number]),
-  styles: o().object,
-  header: o().string
-}, p.defaultProps = {
+f.propTypes = {
+  width: a().oneOfType([a().string, a().number]),
+  styles: a().object,
+  header: a().string
+}, f.defaultProps = {
   width: 652,
   styles: {},
   header: "Color picker"
-}, (0, c.ColorWrap)(p)
+}, (0, u.t1)(f)

@@ -1,9 +1,9 @@
 "use strict";
-n.r(t), n.d(t, {
-  serializeComponentRenderAverages: function() {
+n.d(t, {
+  EA: function() {
     return s
   }
-}), n("47120"), n("735250"), n("470079");
+}), n(47120), n(735250), n(470079);
 let i = {};
 
 function r(e, t) {

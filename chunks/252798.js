@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-t.default = function(e) {
+t.Z = function(e) {
   var t = -1,
     n = Array(e.size);
   return e.forEach(function(e, r) {

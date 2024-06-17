@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return u
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("481060"),
-  s = n("466111"),
-  a = n("929204"),
-  o = n("689938"),
-  l = n("450671");
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  s = n(466111),
+  o = n(929204),
+  a = n(689938),
+  l = n(450671);
 
 function u(e) {
   let {
@@ -22,11 +22,11 @@ function u(e) {
     innerClassName: l.premiumButtonInner,
     color: r.Button.Colors.GREEN,
     size: r.Button.Sizes.SMALL,
-    onClick: () => (0, a.default)({
+    onClick: () => (0, o.Z)({
       section: t
     }),
-    children: [(0, i.jsx)(s.default, {
+    children: [(0, i.jsx)(s.Z, {
       className: l.premiumButtonNitroWheel
-    }), null != n ? n : o.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_CTA]
+    }), null != n ? n : a.Z.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_CTA]
   })
 }

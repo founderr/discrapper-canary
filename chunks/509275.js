@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  formatRecentlyOnlineStatus: function() {
-    return a
+n.d(t, {
+  H: function() {
+    return o
   }
 });
-var i = n("913527"),
+var i = n(913527),
   r = n.n(i),
-  s = n("689938");
+  s = n(689938);
 
-function a(e) {
+function o(e) {
   let t = function(e) {
     let t = r().duration(r()().diff(e)),
       n = Math.floor(t.asDays()),
@@ -19,7 +19,7 @@ function a(e) {
     if (s > 0) return "".concat(s, "m");
     else return "1m"
   }(new Date(e));
-  return s.default.Messages.RECENTLY_ONLINE_STATUS.format({
+  return s.Z.Messages.RECENTLY_ONLINE_STATUS.format({
     time: t
   })
 }

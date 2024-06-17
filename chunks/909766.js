@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  Histogram: function() {
+n.d(t, {
+  b: function() {
     return s
   }
-}), n("653041"), n("47120");
-var i = n("508385");
+}), n(653041), n(47120);
+var i = n(508385);
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {

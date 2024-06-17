@@ -1,8 +1,8 @@
 "use strict";
-var e = n("161581"),
-  o = n("936940"),
-  i = n("80270"),
-  u = n("192291").NATIVE_ARRAY_BUFFER_VIEWS,
+var e = n(161581),
+  o = n(936940),
+  i = n(80270),
+  u = n(192291).NATIVE_ARRAY_BUFFER_VIEWS,
   c = e.ArrayBuffer,
   f = e.Int8Array;
 t.exports = !u || !o(function() {

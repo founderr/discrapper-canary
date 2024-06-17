@@ -1,17 +1,15 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("844303");
-t.default = function(e) {
+var r = n(470079),
+  i = n(844303);
+t.Z = function(e) {
   var t = e.hsl,
     n = e.offset,
-    r = e.onClick,
-    o = void 0 === r ? function() {} : r,
+    a = e.onClick,
+    o = void 0 === a ? function() {} : a,
     s = e.active,
     u = e.first,
     c = e.last,
-    l = (0, a.default)({
+    l = (0, i.default)({
       default: {
         swatch: {
           height: "12px",
@@ -40,7 +38,7 @@ t.default = function(e) {
       first: u,
       last: c
     });
-  return i().createElement("div", {
+  return r.createElement("div", {
     style: l.swatch,
     onClick: function(e) {
       return o({

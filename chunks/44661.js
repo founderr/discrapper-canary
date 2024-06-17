@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-var r = n("110592");
-t.default = function(e) {
-  return (0, r.default)(this, e).get(e)
+var r = n(110592);
+t.Z = function(e) {
+  return (0, r.Z)(this, e).get(e)
 }

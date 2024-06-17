@@ -1,8 +1,8 @@
 "use strict";
-var e = n("498576"),
-  o = n("933676"),
-  i = n("622281"),
-  u = n("641236")("species"),
+var e = n(498576),
+  o = n(933676),
+  i = n(622281),
+  u = n(641236)("species"),
   c = Array;
 t.exports = function(t) {
   var r;

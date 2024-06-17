@@ -1,5 +1,4 @@
 "use strict";
-n.r(t);
-t.default = function(e) {
+t.Z = function(e) {
   return this.__data__.get(e)
 }

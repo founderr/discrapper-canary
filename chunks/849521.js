@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
-  trackAppDirectoryProfileEmbed: function() {
+n.d(t, {
+  y: function() {
     return l
   }
 });
-var i = n("873546"),
-  r = n("944486"),
-  s = n("914010"),
-  a = n("626135"),
-  o = n("981631");
+var i = n(873546),
+  r = n(944486),
+  s = n(914010),
+  o = n(626135),
+  a = n(981631);
 
 function l(e, t) {
-  a.default.track(o.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_SENT, {
+  o.default.track(a.rMx.APP_DIRECTORY_PROFILE_EMBED_SENT, {
     application_id: e,
-    device_platform: i.isMobile ? "mobile_web" : "desktop_web",
-    guild_id: s.default.getGuildId(),
-    channel_id: r.default.getChannelId(),
+    device_platform: i.tq ? "mobile_web" : "desktop_web",
+    guild_id: s.Z.getGuildId(),
+    channel_id: r.Z.getChannelId(),
     section: t
   })
 }

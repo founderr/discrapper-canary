@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  useIsIarUserReportingEnabled: function() {
+n.d(t, {
+  oV: function() {
     return r
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2023-09_iar_user_reporting",
   label: "Safety Experience IAR User Reporting",

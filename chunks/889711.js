@@ -11,14 +11,14 @@ function r(e, t) {
 function s(e, t) {
   e.unobserve(t)
 }
-n.r(t), n.d(t, {
-  getResizeObserver: function() {
-    return i
-  },
-  unwatch: function() {
+n.d(t, {
+  UC: function() {
     return s
   },
-  watch: function() {
+  YP: function() {
     return r
+  },
+  pP: function() {
+    return i
   }
 })

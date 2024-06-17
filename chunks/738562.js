@@ -1,5 +1,4 @@
 "use strict";
-n.r(t);
-t.default = function(e, t) {
+t.Z = function(e, t) {
   return e.has(t)
 }

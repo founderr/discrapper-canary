@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("147913"),
-  r = n("160462");
-class s extends i.default {
+n(47120);
+var i = n(147913),
+  r = n(160462);
+class s extends i.Z {
   handleConnectionOpen() {
-    r.ConnectionOpenTriggerPoint.trigger()
+    r.W.trigger()
   }
   constructor(...e) {
     var t, n, i;
@@ -18,4 +18,4 @@ class s extends i.default {
     }) : t[n] = i
   }
 }
-t.default = new s
+t.Z = new s

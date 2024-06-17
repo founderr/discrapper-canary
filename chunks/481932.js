@@ -1,47 +1,47 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return p
+n.d(t, {
+  Z: function() {
+    return O
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("442837"),
-  s = n("124597"),
-  a = n("657147"),
-  o = n("97910"),
-  l = n("780014"),
-  u = n("481060"),
-  d = n("194359"),
-  _ = n("906732"),
-  c = n("822972"),
-  E = n("314897"),
-  I = n("699516"),
-  T = n("465670"),
-  f = n("877485"),
-  S = n("785717"),
-  h = n("993409"),
-  A = n("228168"),
-  m = n("981631"),
-  N = n("689938");
+var i = n(735250);
+n(470079);
+var r = n(442837),
+  s = n(124597),
+  o = n(657147),
+  a = n(97910),
+  l = n(780014),
+  u = n(481060),
+  _ = n(194359),
+  d = n(906732),
+  c = n(822972),
+  E = n(314897),
+  I = n(699516),
+  T = n(465670),
+  h = n(877485),
+  S = n(785717),
+  f = n(993409),
+  N = n(228168),
+  A = n(981631),
+  m = n(689938);
 
-function p(e) {
+function O(e) {
   let {
     user: t,
     friendToken: n,
-    acceptFriendRequestColor: p,
-    profileType: O
+    acceptFriendRequestColor: O,
+    profileType: R
   } = e, {
     trackUserProfileAction: C
-  } = (0, S.useUserProfileAnalyticsContext)(), {
-    originalFriendingEnabled: R,
+  } = (0, S.KZ)(), {
+    originalFriendingEnabled: p,
     improvedFriendingEnabled: g
-  } = (0, f.useSimplifiedProfileFriendingExperiment)({
+  } = (0, h.V)({
     location: "UserProfileFriendRequestBannerButtons"
-  }), L = (0, r.useStateFromStores)([E.default], () => E.default.getId() === (null == t ? void 0 : t.id)), v = (0, r.useStateFromStores)([I.default], () => null != t ? I.default.getRelationshipType(t.id) : m.RelationshipTypes.NONE), {
+  }), L = (0, r.e7)([E.default], () => E.default.getId() === (null == t ? void 0 : t.id)), v = (0, r.e7)([I.Z], () => null != t ? I.Z.getRelationshipType(t.id) : A.OGo.NONE), {
     analyticsLocations: D,
     newestAnalyticsLocation: M
-  } = (0, _.default)(), y = (0, c.default)({
+  } = (0, d.ZP)(), P = (0, c.Z)({
     user: t,
     color: "danger",
     location: M,
@@ -50,8 +50,8 @@ function p(e) {
       analyticsLocations: D
     })
   });
-  if (null == t || t.bot || L || v === m.RelationshipTypes.BLOCKED) return null;
-  if (v === m.RelationshipTypes.FRIEND) return (0, i.jsx)(u.Popout, {
+  if (null == t || t.bot || L || v === A.OGo.BLOCKED) return null;
+  if (v === A.OGo.FRIEND) return (0, i.jsx)(u.Popout, {
     renderPopout: e => {
       let {
         closePopout: t
@@ -60,34 +60,34 @@ function p(e) {
         navId: "user-profile-friend-request-buttons",
         onSelect: void 0,
         onClose: t,
-        "aria-label": N.default.Messages.FRIEND_ACTIONS_MENU_LABEL,
-        children: y
+        "aria-label": m.Z.Messages.FRIEND_ACTIONS_MENU_LABEL,
+        children: P
       })
     },
-    children: e => (0, i.jsx)(h.default, {
+    children: e => (0, i.jsx)(f.Z, {
       variant: "banner",
-      icon: a.UserCheckIcon,
-      text: N.default.Messages.FRIENDS,
+      icon: o._,
+      text: m.Z.Messages.FRIENDS,
       ...e
     })
   });
-  if (v === m.RelationshipTypes.PENDING_INCOMING) return g && O === A.UserProfileTypes.FULL_SIZE ? null : (g || R) && O !== A.UserProfileTypes.PANEL ? (0, i.jsx)(h.default, {
+  if (v === A.OGo.PENDING_INCOMING) return g && R === N.y0.FULL_SIZE ? null : (g || p) && R !== N.y0.PANEL ? (0, i.jsx)(f.Z, {
     variant: "banner",
-    icon: o.UserClockIcon,
-    text: N.default.Messages.FRIENDS_SECTION_PENDING,
+    icon: a.i,
+    text: m.Z.Messages.FRIENDS_SECTION_PENDING,
     disabled: !0
   }) : (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(h.default, {
+    children: [(0, i.jsx)(f.Z, {
       variant: "banner",
-      icon: e => (0, i.jsx)(s.CheckmarkLargeIcon, {
+      icon: e => (0, i.jsx)(s.d, {
         ...e,
-        color: null != p ? p : u.tokens.colors.TEXT_BRAND
+        color: null != O ? O : u.tokens.colors.TEXT_BRAND
       }),
-      text: N.default.Messages.ACCEPT_FRIEND_REQUEST,
+      text: m.Z.Messages.ACCEPT_FRIEND_REQUEST,
       onClick: () => {
         C({
           action: "ACCEPT_FRIEND_REQUEST"
-        }), d.default.addRelationship({
+        }), _.Z.addRelationship({
           userId: t.id,
           friendToken: n,
           context: {
@@ -95,32 +95,32 @@ function p(e) {
           }
         })
       }
-    }), (0, i.jsx)(h.default, {
+    }), (0, i.jsx)(f.Z, {
       variant: "banner",
-      icon: T.default,
-      text: N.default.Messages.IGNORE_FRIEND_REQUEST,
+      icon: T.Z,
+      text: m.Z.Messages.IGNORE_FRIEND_REQUEST,
       onClick: () => {
         C({
           action: "IGNORE_FRIEND_REQUEST"
-        }), d.default.cancelFriendRequest(t.id, {
+        }), _.Z.cancelFriendRequest(t.id, {
           location: M
         })
       }
     })]
   });
-  return v === m.RelationshipTypes.PENDING_OUTGOING && (!g || g && O === A.UserProfileTypes.BITE_SIZE) ? (0, i.jsx)(h.default, {
+  return v === A.OGo.PENDING_OUTGOING && (!g || g && R === N.y0.BITE_SIZE) ? (0, i.jsx)(f.Z, {
     variant: "banner",
-    icon: o.UserClockIcon,
-    text: g || R ? N.default.Messages.FRIENDS_SECTION_PENDING : N.default.Messages.REQUEST_SENT,
+    icon: a.i,
+    text: g || p ? m.Z.Messages.FRIENDS_SECTION_PENDING : m.Z.Messages.REQUEST_SENT,
     disabled: !0
-  }) : !g || g && O === A.UserProfileTypes.BITE_SIZE ? (0, i.jsx)(h.default, {
+  }) : !g || g && R === N.y0.BITE_SIZE ? (0, i.jsx)(f.Z, {
     variant: "banner",
-    icon: l.UserPlusIcon,
-    text: N.default.Messages.ADD_FRIEND,
+    icon: l.o,
+    text: m.Z.Messages.ADD_FRIEND,
     onClick: () => {
       C({
         action: "SEND_FRIEND_REQUEST"
-      }), d.default.addRelationship({
+      }), _.Z.addRelationship({
         userId: t.id,
         friendToken: n,
         context: {

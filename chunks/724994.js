@@ -1,24 +1,24 @@
 "use strict";
-s.r(t), s.d(t, {
-  getProductPurchaseState: function() {
-    return i
-  },
-  useProductPurchaseState: function() {
+t.d(s, {
+  L: function() {
     return o
+  },
+  U: function() {
+    return r
   }
 });
-var a = s("24217"),
-  l = s.n(a),
-  n = s("442837"),
-  r = s("1870");
-let i = (e, t) => {
-    var s;
-    let a = null != e.getPurchase(t.skuId),
-      n = null !== (s = t.items) && void 0 !== s ? s : [],
-      r = l()(n.map(t => e.getPurchase(t.skuId)));
+var n = t(24217),
+  a = t.n(n),
+  i = t(442837),
+  l = t(1870);
+let r = (e, s) => {
+    var t;
+    let n = null != e.getPurchase(s.skuId),
+      i = null !== (t = s.items) && void 0 !== t ? t : [],
+      l = a()(i.map(s => e.getPurchase(s.skuId)));
     return {
-      isPurchased: a || n.length > 0 && r.length === n.length,
-      isPartiallyPurchased: r.length > 0 && r.length < n.length
+      isPurchased: n || i.length > 0 && l.length === i.length,
+      isPartiallyPurchased: l.length > 0 && l.length < i.length
     }
   },
-  o = e => (0, n.useStateFromStoresObject)([r.default], () => i(r.default, e))
+  o = e => (0, i.cj)([l.Z], () => r(l.Z, e))

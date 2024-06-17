@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return l
   }
-}), n("47120");
-var i = n("470079"),
-  r = n("663507"),
-  s = n("924428"),
-  a = n("151973");
-let o = Object.freeze({
+}), n(47120);
+var i = n(470079),
+  r = n(663507),
+  s = n(924428),
+  o = n(151973);
+let a = Object.freeze({
   coordsMap: {},
   visibleSections: {},
   totalHeight: 0,
@@ -24,46 +24,46 @@ function l(e) {
     columns: n,
     getItemKey: l,
     getItemHeight: u,
-    getSectionHeight: d,
-    chunkSize: _ = 250,
+    getSectionHeight: _,
+    chunkSize: d = 250,
     getScrollerState: c,
     maxBufferWidth: E,
     itemGutter: I,
     removeEdgeItemGutters: T,
-    sectionGutter: f,
+    sectionGutter: h,
     padding: S,
-    paddingVertical: h,
-    paddingHorizontal: A,
-    dir: m
-  } = e, N = (0, s.default)(), p = (0, i.useRef)(o), [O] = (0, i.useState)(() => new r.default), C = c(), R = Math.min(null != E ? E : 1 / 0, C.offsetWidth), g = null != E ? Math.max(0, C.offsetWidth - E) : 0, {
+    paddingVertical: f,
+    paddingHorizontal: N,
+    dir: A
+  } = e, m = (0, s.Z)(), O = (0, i.useRef)(a), [R] = (0, i.useState)(() => new r.ZP), C = c(), p = Math.min(null != E ? E : 1 / 0, C.offsetWidth), g = null != E ? Math.max(0, C.offsetWidth - E) : 0, {
     dirty: L,
     chunkStart: v,
     chunkEnd: D,
     forceUpdateOnChunkChange: M
-  } = (0, a.default)({
-    chunkSize: _,
+  } = (0, o.Z)({
+    chunkSize: d,
     getScrollerState: c,
-    forceUpdate: N
+    forceUpdate: m
   });
-  return p.current = (0, i.useMemo)(() => L > 0 ? p.current : (O.mergeProps({
+  return O.current = (0, i.useMemo)(() => L > 0 ? O.current : (R.mergeProps({
     sections: t,
     columns: n,
     getItemKey: l,
     getItemHeight: u,
-    getSectionHeight: d,
-    bufferWidth: R,
+    getSectionHeight: _,
+    bufferWidth: p,
     itemGutter: I,
     removeEdgeItemGutters: T,
-    sectionGutter: f,
+    sectionGutter: h,
     padding: S,
-    paddingVertical: h,
-    paddingHorizontal: A,
+    paddingVertical: f,
+    paddingHorizontal: N,
     marginLeft: g / 2,
-    dir: m
-  }), O.computeVisibleSections(Math.max(0, v * _), D * _), O.getState()), [L, O, t, n, l, u, d, v, D, _, I, T, f, S, h, A, R, m]), {
-    ...p.current,
-    masonryComputer: O,
+    dir: A
+  }), R.computeVisibleSections(Math.max(0, v * d), D * d), R.getState()), [L, R, t, n, l, u, _, v, D, d, I, T, h, S, f, N, p, A]), {
+    ...O.current,
+    masonryComputer: R,
     forceUpdateOnChunkChange: M,
-    forceUpdate: N
+    forceUpdate: m
   }
 }

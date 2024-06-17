@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n.d(t, {
-  Image: function() {
-    return p
+n.d(t, {
+  E: function() {
+    return O
   }
-}), n("47120");
-var i, r = n("735250"),
-  s = n("470079"),
-  a = n("120356"),
-  o = n.n(a),
-  l = n("780384"),
-  u = n("481060"),
-  d = n("410030"),
-  _ = n("446108"),
-  c = n("956664"),
-  E = n("921948"),
-  I = n("823023"),
-  T = n("981631"),
-  f = n("768760"),
-  S = n("689938"),
-  h = n("599908"),
-  A = n("167969"),
-  m = n("557256");
+}), n(47120);
+var i, r = n(735250),
+  s = n(470079),
+  o = n(120356),
+  a = n.n(o),
+  l = n(780384),
+  u = n(481060),
+  _ = n(410030),
+  d = n(446108),
+  c = n(956664),
+  E = n(921948),
+  I = n(823023),
+  T = n(981631),
+  h = n(768760),
+  S = n(689938),
+  f = n(599908),
+  N = n(167969),
+  A = n(557256);
 
-function N(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -30,7 +30,7 @@ function N(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class p extends(i = s.PureComponent) {
+class O extends(i = s.PureComponent) {
   render() {
     let e;
     let {
@@ -38,73 +38,73 @@ class p extends(i = s.PureComponent) {
       imageClassName: n,
       readyState: i,
       src: s,
-      placeholder: a,
+      placeholder: o,
       placeholderVersion: l,
-      alt: d,
+      alt: _,
       width: E,
-      height: A,
-      maxWidth: m = E,
-      maxHeight: N = A,
-      minWidth: p,
-      minHeight: R,
+      height: N,
+      maxWidth: A = E,
+      maxHeight: m = N,
+      minWidth: O,
+      minHeight: p,
       mediaLayoutType: g,
       limitResponsiveWidth: L = !0,
       accessory: v,
       zoomable: D,
       original: M,
-      children: y,
-      renderAccessory: P,
+      children: P,
+      renderAccessory: y,
       onClick: U,
       tabIndex: b,
       useFullWidth: G = !1,
       ...w
     } = this.props;
-    if (1 === E && 1 === A) return null;
-    let k = (0, c.fit)({
+    if (1 === E && 1 === N) return null;
+    let k = (0, c.Tj)({
         width: E,
-        height: A,
-        maxWidth: m,
-        maxHeight: N,
-        minWidth: p,
-        minHeight: R
+        height: N,
+        maxWidth: A,
+        maxHeight: m,
+        minWidth: O,
+        minHeight: p
       }),
       B = 0 !== k.width ? k.width / k.height : 1;
-    "" !== s && i !== T.ImageReadyStates.ERROR ? e = y({
+    "" !== s && i !== T.zo9.ERROR ? e = P({
       src: s,
       size: k,
-      alt: d,
+      alt: _,
       className: n,
       mediaLayoutType: g
-    }) : i !== T.ImageReadyStates.LOADING && (e = (0, r.jsx)(O, {
+    }) : i !== T.zo9.LOADING && (e = (0, r.jsx)(R, {
       size: k,
       mediaLayoutType: g,
-      alt: d
-    })), e = (0, r.jsx)(I.ImageLoadingOverlay, {
+      alt: _
+    })), e = (0, r.jsx)(I.N, {
       readyState: i,
       aspectRatio: B,
-      placeholder: a,
+      placeholder: o,
       placeholderVersion: l,
       placeholderStyle: C(k, g),
       children: e
     });
-    let V = null != P ? P() : null;
-    return V = null != V ? V : v, (0, r.jsx)(u.FocusRing, {
+    let x = null != y ? y() : null;
+    return x = null != x ? x : v, (0, r.jsx)(u.FocusRing, {
       ringTarget: this._containerRef,
       focusTarget: this._clickableRef,
       children: (0, r.jsxs)("div", {
-        className: o()(h.imageWrapper, {
-          [h.imageZoom]: D,
-          [h.imageWrapperBackground]: i !== T.ImageReadyStates.READY,
-          [h.clickable]: null != U
+        className: a()(f.imageWrapper, {
+          [f.imageZoom]: D,
+          [f.imageWrapperBackground]: i !== T.zo9.READY,
+          [f.clickable]: null != U
         }, t),
         style: function(e, t, n, i) {
-          return i === f.MediaLayoutType.MOSAIC ? {
+          return i === h.hV.MOSAIC ? {
             display: "block",
             maxHeight: "inherit",
             margin: "auto",
-            width: !n && e.width <= f.MEDIA_MOSAIC_MAX_WIDTH ? e.width : "100%",
+            width: !n && e.width <= h.mT ? e.width : "100%",
             height: "100%"
-          } : i === f.MediaLayoutType.RESPONSIVE ? {
+          } : i === h.hV.RESPONSIVE ? {
             maxWidth: t ? e.width : void 0,
             width: "100%",
             aspectRatio: "".concat(e.width, " / ").concat(e.height)
@@ -115,65 +115,65 @@ class p extends(i = s.PureComponent) {
           tabIndex: -1,
           onClick: U,
           "aria-hidden": !0,
-          className: h.originalLink,
+          className: f.originalLink,
           href: M,
           ref: this._containerRef,
           "data-role": "img",
           "data-safe-src": s
         }), null != U ? (0, r.jsx)(u.Clickable, {
-          className: h.clickableWrapper,
+          className: f.clickableWrapper,
           tabIndex: null != b ? b : 0,
           onClick: U,
-          "aria-label": null != d ? d : S.default.Messages.IMAGE,
-          "aria-describedby": _.IMAGE_OPEN_DIALOG_DESCRIPTION,
+          "aria-label": null != _ ? _ : S.Z.Messages.IMAGE,
+          "aria-describedby": d.r5,
           innerRef: this._clickableRef,
           focusProps: {
             enabled: !1
           },
           children: e
-        }) : e, null != V ? (0, r.jsx)("div", {
-          className: h.imageAccessory,
-          children: V
+        }) : e, null != x ? (0, r.jsx)("div", {
+          className: f.imageAccessory,
+          children: x
         }) : null]
       })
     })
   }
   constructor(...e) {
-    super(...e), N(this, "_containerRef", s.createRef()), N(this, "_clickableRef", s.createRef())
+    super(...e), m(this, "_containerRef", s.createRef()), m(this, "_clickableRef", s.createRef())
   }
 }
 
-function O(e) {
+function R(e) {
   let {
     size: t,
     mediaLayoutType: n,
     alt: i
-  } = e, s = (0, d.default)();
+  } = e, s = (0, _.ZP)();
   return (0, r.jsx)("div", {
-    className: h.imageErrorWrapper,
+    className: f.imageErrorWrapper,
     style: function(e, t) {
       switch (t) {
-        case f.MediaLayoutType.MOSAIC:
+        case h.hV.MOSAIC:
           return {
             width: "100%", height: "100%", aspectRatio: "".concat(e.width, " / ").concat(e.height), display: "flex", maxHeight: "inherit"
           };
-        case f.MediaLayoutType.RESPONSIVE:
+        case h.hV.RESPONSIVE:
           return {
-            ...R(e), display: "flex"
+            ...p(e), display: "flex"
           };
         default:
           return e
       }
     }(t, n),
     children: (0, r.jsx)("img", {
-      src: (0, l.isThemeLight)(s) ? m : A,
-      className: h.imageError,
-      alt: null != i ? i : S.default.Messages.IMAGE
+      src: (0, l.ap)(s) ? A : N,
+      className: f.imageError,
+      alt: null != i ? i : S.Z.Messages.IMAGE
     })
   })
 }
-N(p, "defaultProps", {
-  readyState: T.ImageReadyStates.READY,
+m(O, "defaultProps", {
+  readyState: T.zo9.READY,
   zoomable: !0,
   children: e => {
     let {
@@ -181,13 +181,13 @@ N(p, "defaultProps", {
       size: n,
       alt: i,
       className: s,
-      mediaLayoutType: a
+      mediaLayoutType: o
     } = e;
     return (0, r.jsx)("img", {
       className: null != s ? s : void 0,
-      alt: null != i ? i : S.default.Messages.IMAGE,
+      alt: null != i ? i : S.Z.Messages.IMAGE,
       src: t,
-      style: C(n, a)
+      style: C(n, o)
     })
   },
   minWidth: 0,
@@ -196,18 +196,18 @@ N(p, "defaultProps", {
 
 function C(e, t) {
   switch (t) {
-    case f.MediaLayoutType.MOSAIC:
+    case h.hV.MOSAIC:
       return {
-        display: "block", objectFit: "cover", minWidth: "100%", minHeight: "100%", maxWidth: 1 === (0, E.default)() ? "calc(100% + 1px)" : "100%"
+        display: "block", objectFit: "cover", minWidth: "100%", minHeight: "100%", maxWidth: 1 === (0, E.Z)() ? "calc(100% + 1px)" : "100%"
       };
-    case f.MediaLayoutType.RESPONSIVE:
-      return R(e);
+    case h.hV.RESPONSIVE:
+      return p(e);
     default:
       return e
   }
 }
 
-function R(e) {
+function p(e) {
   let {
     width: t,
     height: n

@@ -1,66 +1,66 @@
 "use strict";
 let i;
-n.r(t), n.d(t, {
-  hidePIPEmbed: function() {
-    return A
+n.d(t, {
+  RI: function() {
+    return N
   },
-  showPIPEmbed: function() {
-    return m
+  jy: function() {
+    return A
   }
 });
-var r = n("570140"),
-  s = n("519938"),
-  a = n("317770"),
-  o = n("928518"),
-  l = n("592125"),
-  u = n("819640"),
-  d = n("366050"),
-  _ = n("19780"),
-  c = n("944486"),
-  E = n("914010"),
-  I = n("979651"),
-  T = n("317381"),
-  f = n("719296"),
-  S = n("958185"),
-  h = n("981631");
+var r = n(570140),
+  s = n(519938),
+  o = n(317770),
+  a = n(928518),
+  l = n(592125),
+  u = n(819640),
+  _ = n(366050),
+  d = n(19780),
+  c = n(944486),
+  E = n(914010),
+  I = n(979651),
+  T = n(317381),
+  h = n(719296),
+  S = n(958185),
+  f = n(981631);
+
+function N(e) {
+  let t = null != e ? e : i;
+  null != t && _.Z.isOpen(t) && r.Z.wait(() => s.Cp(t))
+}
 
 function A(e) {
   let t = null != e ? e : i;
-  null != t && d.default.isOpen(t) && r.default.wait(() => s.hide(t))
+  null != t && _.Z.isOpen(t) && r.Z.wait(() => s.$Z(t))
 }
 
-function m(e) {
-  let t = null != e ? e : i;
-  null != t && d.default.isOpen(t) && r.default.wait(() => s.show(t))
-}
-
-function N() {
-  let e = T.default.getConnectedActivityChannelId(),
-    t = T.default.getSelfEmbeddedActivityForChannel(null != e ? e : h.EMPTY_STRING_SNOWFLAKE_ID),
-    n = l.default.getChannel(e);
+function m() {
+  let e = T.ZP.getConnectedActivityChannelId(),
+    t = T.ZP.getSelfEmbeddedActivityForChannel(null != e ? e : f.lds),
+    n = l.Z.getChannel(e);
   return null == e || null == n || null == t ? function() {
     let e = i;
-    null != e && d.default.isOpen(e) && (r.default.wait(() => s.close(e)), i = null)
+    null != e && _.Z.isOpen(e) && (r.Z.wait(() => s.xv(e)), i = null)
   }() : function(e, t) {
-    if (d.default.isOpen(t)) return !1;
-    r.default.wait(() => s.open(t, h.PictureInPictureComponents.EMBED_IFRAME, {
+    if (_.Z.isOpen(t)) return !1;
+    r.Z.wait(() => s.bA(t, f.NYg.EMBED_IFRAME, {
       channel: e
     })), i = t
-  }(n, (0, f.default)(e, t.applicationId))
+  }(n, (0, h.Z)(e, t.applicationId))
 }
 
-function p() {
-  return (0, S.default)({
-    LayerStore: u.default,
-    PopoutWindowStore: o.default
-  }) ? A() : m()
+function O() {
+  return (0, S.Z)({
+    LayerStore: u.Z,
+    PopoutWindowStore: a.Z
+  }) ? N() : A()
 }
-class O extends a.default {
+class R extends o.Z {
   _initialize() {
-    c.default.addChangeListener(N), E.default.addChangeListener(N), _.default.addChangeListener(N), I.default.addChangeListener(N), o.default.addChangeListener(N), T.default.addChangeListener(N), u.default.addChangeListener(p)
+    c.Z.addChangeListener(m), E.Z.addChangeListener(m), d.Z.addChangeListener(m), I.Z.addChangeListener(m), a.Z.addChangeListener(m), T.ZP.addChangeListener(m), u.Z.addChangeListener(O)
   }
   _terminate() {
-    c.default.removeChangeListener(N), E.default.removeChangeListener(N), _.default.removeChangeListener(N), I.default.removeChangeListener(N), o.default.removeChangeListener(N), T.default.removeChangeListener(N), u.default.removeChangeListener(p)
+    c.Z.removeChangeListener(m), E.Z.removeChangeListener(m), d.Z.removeChangeListener(m), I.Z.removeChangeListener(m), a.Z.removeChangeListener(m), T.ZP.removeChangeListener(m), u.Z.removeChangeListener(O)
   }
 }
-t.default = new O
+t.ZP = new R

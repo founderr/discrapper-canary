@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  getSimplifiedProfileExperimentConfig: function() {
+n.d(t, {
+  T: function() {
     return r
   },
-  useSimplifiedProfileExperiment: function() {
+  t: function() {
     return s
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
     kind: "user",
     id: "2024-03_simplified_profile_phase_one",
     label: "Simplified Profile Experiment",

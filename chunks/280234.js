@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  getRecentlyOnlineStrategy: function() {
+n.d(t, {
+  $: function() {
     return r
   }
 });
-var i = n("818083");
+var i = n(818083);
 
 function r(e) {
   let {
@@ -20,7 +20,7 @@ function r(e) {
     isRecentlyOnlineTrackable: i <= 1728e5
   }
 }
-let s = (0, i.createExperiment)({
+let s = (0, i.B)({
   kind: "user",
   id: "2024-05_clientside_recently_online_desktop",
   label: "Recently Online Clientside Desktop",
@@ -63,4 +63,4 @@ let s = (0, i.createExperiment)({
     }
   }]
 });
-t.default = s
+t.Z = s

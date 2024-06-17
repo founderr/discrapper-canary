@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
-  isEligibleForKeywordFiltering: function() {
-    return s
-  },
-  useIsEligibleForKeywordFiltering: function() {
+n.d(t, {
+  Xo: function() {
     return r
+  },
+  pB: function() {
+    return s
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-04_keyword_filter_experiment",
   label: "Replace registered keywords with asterisks",

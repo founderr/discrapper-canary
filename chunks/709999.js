@@ -1,291 +1,291 @@
 "use strict";
-s.r(t), s("47120"), s("627341");
-var a = s("735250"),
-  l = s("470079"),
-  n = s("120356"),
-  r = s.n(n),
-  i = s("512722"),
-  o = s.n(i),
-  u = s("278074"),
-  c = s("979554"),
-  d = s("399606"),
-  f = s("692547"),
-  C = s("663002"),
-  E = s("481060"),
-  m = s("37234"),
-  p = s("727637"),
-  S = s("100527"),
-  g = s("906732"),
-  h = s("1585"),
-  I = s("333867"),
-  _ = s("197115"),
-  T = s("300284"),
-  x = s("876917"),
-  L = s("642619"),
-  N = s("210887"),
-  b = s("725808"),
-  A = s("794358"),
-  v = s("466111"),
-  R = s("74538"),
-  P = s("335131"),
-  O = s("1870"),
-  y = s("884697"),
-  j = s("724994"),
-  M = s("624377"),
-  k = s("390698"),
-  B = s("813083"),
-  D = s("680942"),
-  F = s("558060"),
-  U = s("237031"),
-  H = s("616066"),
-  w = s("216541"),
-  G = s("832149"),
-  W = s("474936"),
-  V = s("689938"),
-  Y = s("775087");
-let K = e => {
+t(47120), t(627341);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  l = t.n(i),
+  r = t(512722),
+  o = t.n(r),
+  c = t(278074),
+  u = t(979554),
+  d = t(399606),
+  C = t(692547),
+  E = t(663002),
+  f = t(481060),
+  m = t(37234),
+  p = t(727637),
+  g = t(100527),
+  h = t(906732),
+  x = t(1585),
+  _ = t(333867),
+  I = t(197115),
+  T = t(300284),
+  N = t(876917),
+  S = t(642619),
+  L = t(210887),
+  b = t(725808),
+  v = t(794358),
+  O = t(466111),
+  Z = t(74538),
+  A = t(335131),
+  R = t(1870),
+  j = t(884697),
+  P = t(724994),
+  M = t(624377),
+  k = t(390698),
+  B = t(813083),
+  y = t(680942),
+  F = t(558060),
+  D = t(237031),
+  U = t(616066),
+  H = t(216541),
+  w = t(832149),
+  G = t(474936),
+  W = t(689938),
+  V = t(775087);
+let Y = e => {
     let {
-      children: t,
-      onClick: s,
-      ...l
+      children: s,
+      onClick: t,
+      ...a
     } = e;
-    return (0, a.jsx)(E.Button, {
+    return (0, n.jsx)(f.Button, {
       fullWidth: !0,
-      look: E.Button.Looks.FILLED,
+      look: f.Button.Looks.FILLED,
       onClick: e => {
-        e.stopPropagation(), s()
+        e.stopPropagation(), t()
       },
-      ...l,
-      children: t
+      ...a,
+      children: s
     })
   },
   z = e => {
     let {
-      className: t,
-      ...s
+      className: s,
+      ...t
     } = e;
-    return (0, a.jsx)(E.Button, {
-      color: E.ButtonColors.BRAND,
-      look: E.Button.Looks.FILLED,
-      size: E.ButtonSizes.ICON,
-      className: r()(Y.previewButton, t),
-      innerClassName: Y.previewButtonInner,
-      "aria-label": V.default.Messages.PREVIEW,
-      ...s,
-      children: (0, a.jsx)(A.default, {
+    return (0, n.jsx)(f.Button, {
+      color: f.ButtonColors.BRAND,
+      look: f.Button.Looks.FILLED,
+      size: f.ButtonSizes.ICON,
+      className: l()(V.previewButton, s),
+      innerClassName: V.previewButtonInner,
+      "aria-label": W.Z.Messages.PREVIEW,
+      ...t,
+      children: (0, n.jsx)(v.Z, {
         width: 24,
         height: 24
       })
     })
   };
-t.default = function(e) {
+s.Z = function(e) {
   let {
-    product: t,
-    user: s,
-    category: n,
-    onMount: i,
-    isGiftEasterEggEnabled: A
+    product: s,
+    user: t,
+    category: i,
+    onMount: r,
+    isGiftEasterEggEnabled: v
   } = e, {
-    analyticsLocations: Z
-  } = (0, g.default)(S.default.COLLECTIBLES_SHOP_CARD), X = l.useRef(null), q = (0, p.default)(X), [Q, $] = l.useState(!1), J = q || Q, [ee] = t.items, {
-    backgroundColors: et
-  } = (0, M.default)(t.styles), es = R.default.canUseCollectibles(s), ea = (0, y.getFormattedPriceForCollectiblesProduct)(t, es, !1), el = l.useMemo(() => (0, y.getProductDiscount)(t, es), [t, es]), en = (0, y.isPremiumCollectiblesProduct)(t), er = (0, y.isFreeCollectiblesProduct)(t), {
-    isPurchased: ei,
+    analyticsLocations: K
+  } = (0, h.ZP)(g.Z.COLLECTIBLES_SHOP_CARD), X = a.useRef(null), q = (0, p.Z)(X), [Q, $] = a.useState(!1), J = q || Q, [ee] = s.items, {
+    backgroundColors: es
+  } = (0, M.Z)(s.styles), et = Z.ZP.canUseCollectibles(t), en = (0, j.XM)(s, et, !1), ea = a.useMemo(() => (0, j.BH)(s, et), [s, et]), ei = (0, j.G1)(s), el = (0, j.rN)(s), {
+    isPurchased: er,
     isPartiallyPurchased: eo
-  } = (0, j.useProductPurchaseState)(t), [eu, ec] = (0, d.useStateFromStoresArray)([O.default], () => [O.default.isClaiming === t.skuId, null != O.default.isClaiming && O.default.isClaiming !== t.skuId]), ed = (0, d.useStateFromStores)([N.default], () => (0, C.isThemeDark)(N.default.theme)), ef = (0, y.isProductNew)(t.skuId);
-  l.useEffect(() => {
+  } = (0, P.L)(s), [ec, eu] = (0, d.Wu)([R.Z], () => [R.Z.isClaiming === s.skuId, null != R.Z.isClaiming && R.Z.isClaiming !== s.skuId]), ed = (0, d.e7)([L.Z], () => (0, E.w)(L.Z.theme)), eC = (0, j.Yq)(s.skuId);
+  a.useEffect(() => {
     let {
       current: e
     } = X;
     if (null == e) return;
-    let t = () => $(!0);
-    return e.addEventListener("focusin", t), e.blur(), () => {
-      e.removeEventListener("focusin", t)
+    let s = () => $(!0);
+    return e.addEventListener("focusin", s), e.blur(), () => {
+      e.removeEventListener("focusin", s)
     }
-  }, []), l.useEffect(() => {
-    null == i || i(X)
-  }, [i]);
-  let eC = (0, T.default)({
-      analyticsLocations: Z
+  }, []), a.useEffect(() => {
+    null == r || r(X)
+  }, [r]);
+  let eE = (0, T.Z)({
+      analyticsLocations: K
     }),
-    eE = l.useRef(null),
+    ef = a.useRef(null),
     em = () => {
-      if ((0, m.popLayer)(), eC(), t.type === c.CollectiblesItemType.AVATAR_DECORATION && null != ee) {
-        o()(ee.type === t.type, "product type is equivlant to first item's check for avatar deco"), (0, h.openAvatarDecorationModal)({
+      if ((0, m.xf)(), eE(), s.type === u.Z.AVATAR_DECORATION && null != ee) {
+        o()(ee.type === s.type, "product type is equivlant to first item's check for avatar deco"), (0, x.ps)({
           initialSelectedDecoration: ee,
-          analyticsLocations: Z
+          analyticsLocations: K
         });
         return
       }
-      t.type === c.CollectiblesItemType.PROFILE_EFFECT && (0, L.openProfileEffectModal)({
+      s.type === u.Z.PROFILE_EFFECT && (0, S.H)({
         initialSelectedEffectId: ee.id,
-        analyticsLocations: Z
+        analyticsLocations: K
       })
     },
-    ep = e => s => {
-      eE.current = s.currentTarget, (0, U.openCollectiblesShopProductDetailsModal)({
-        product: t,
-        category: n,
-        analyticsLocations: Z,
+    ep = e => t => {
+      ef.current = t.currentTarget, (0, D.T)({
+        product: s,
+        category: i,
+        analyticsLocations: K,
         analyticsSource: e,
-        returnRef: eE
+        returnRef: ef
       })
     },
-    eS = ep(S.default.COLLECTIBLES_SHOP_CARD),
-    eg = ep(S.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
-    eh = () => (0, a.jsx)("div", {
-      className: Y.hoverUpsellContainer,
-      children: (0, a.jsx)(_.default, {
+    eg = ep(g.Z.COLLECTIBLES_SHOP_CARD),
+    eh = ep(g.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+    ex = () => (0, n.jsx)("div", {
+      className: V.hoverUpsellContainer,
+      children: (0, n.jsx)(I.Z, {
         fullWidth: !0,
-        className: Y.__invalid_premiumSubscribeButton,
-        disabled: ec,
+        className: V.__invalid_premiumSubscribeButton,
+        disabled: eu,
         onClick: e => e.stopPropagation(),
-        buttonText: V.default.Messages.UNLOCK_WITH_NITRO,
-        subscriptionTier: W.PremiumSubscriptionSKUs.TIER_2
+        buttonText: W.Z.Messages.UNLOCK_WITH_NITRO,
+        subscriptionTier: G.Si.TIER_2
       })
     }),
-    eI = () => ei || eo ? (0, a.jsx)(k.AlreadyOwned, {
-      className: Y.priceTag,
+    e_ = () => er || eo ? (0, n.jsx)(k.U, {
+      className: V.priceTag,
       isPartiallyPurchased: eo
-    }) : en ? (0, a.jsx)(E.Text, {
+    }) : ei ? (0, n.jsx)(f.Text, {
       variant: "text-md/semibold",
-      className: Y.priceTag,
-      children: V.default.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
-    }) : (0, a.jsx)(F.default, {
-      product: t,
-      discount: el,
-      isPremiumUser: es,
-      className: Y.priceTag
+      className: V.priceTag,
+      children: W.Z.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
+    }) : (0, n.jsx)(F.Z, {
+      product: s,
+      discount: ea,
+      isPremiumUser: et,
+      className: V.priceTag
     }),
-    e_ = () => en ? null : er ? (0, a.jsx)(z, {
-      onClick: eg
-    }) : (0, a.jsx)(D.default, {
-      product: t,
+    eI = () => ei ? null : el ? (0, n.jsx)(z, {
+      onClick: eh
+    }) : (0, n.jsx)(y.Z, {
+      product: s,
       returnRef: X,
-      isGiftEasterEggEnabled: A,
+      isGiftEasterEggEnabled: v,
       disableCustomColor: !0,
       tooltipDelay: 250
     }),
     eT = () => {
-      if (en && !es && !er) return eh();
-      let e = en ? {
-        submitting: eu,
-        submittingStartedLabel: V.default.Messages.COLLECTIBLES_COLLECTING,
-        submittingFinishedLabel: V.default.Messages.COLLECTIBLES_COLLECTING_FINISHED,
+      if (ei && !et && !el) return ex();
+      let e = ei ? {
+        submitting: ec,
+        submittingStartedLabel: W.Z.Messages.COLLECTIBLES_COLLECTING,
+        submittingFinishedLabel: W.Z.Messages.COLLECTIBLES_COLLECTING_FINISHED,
         onClick: async () => {
-          await (0, P.claimPremiumCollectiblesProduct)(t.skuId), (0, G.default)({
-            product: t,
-            analyticsLocations: Z
+          await (0, A.fK)(s.skuId), (0, w.Z)({
+            product: s,
+            analyticsLocations: K
           })
         }
       } : {
-        onClick: () => (0, I.default)({
-          skuId: t.skuId,
-          analyticsLocations: Z,
+        onClick: () => (0, _.Z)({
+          skuId: s.skuId,
+          analyticsLocations: K,
           returnRef: X
         })
       };
-      return (0, a.jsxs)("div", {
-        className: Y.buttonsContainer,
-        children: [eo ? null : ei ? (0, a.jsx)(K, {
-          disabled: ec,
+      return (0, n.jsxs)("div", {
+        className: V.buttonsContainer,
+        children: [eo ? null : er ? (0, n.jsx)(Y, {
+          disabled: eu,
           onClick: em,
-          children: V.default.Messages.COLLECTIBLES_USE_NOW
-        }) : (0, a.jsx)(K, {
-          disabled: ec,
-          className: Y.purchaseButton,
+          children: W.Z.Messages.COLLECTIBLES_USE_NOW
+        }) : (0, n.jsx)(Y, {
+          disabled: eu,
+          className: V.purchaseButton,
           ...e,
-          children: en ? V.default.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION : V.default.Messages.COLLECTIBLES_PURCHASE.format({
-            price: ea
+          children: ei ? W.Z.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION : W.Z.Messages.COLLECTIBLES_PURCHASE.format({
+            price: en
           })
-        }), e_()]
+        }), eI()]
       })
     },
-    ex = ed ? "0 0 15px 1px ".concat(f.default.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)";
-  return (0, y.isBundleProduct)(t) && null != el && el.discountPercentage < 0 ? null : (0, a.jsx)(E.FocusRing, {
-    children: (0, a.jsxs)(E.Clickable, {
+    eN = ed ? "0 0 15px 1px ".concat(C.Z.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)";
+  return (0, j.x6)(s) && null != ea && ea.discountPercentage < 0 ? null : (0, n.jsx)(f.FocusRing, {
+    children: (0, n.jsxs)(f.Clickable, {
       innerRef: X,
-      className: r()(Y.shopCard, Y.shopCardAnimation, {
-        [Y.partiallyOwned]: eo
+      className: l()(V.shopCard, V.shopCardAnimation, {
+        [V.partiallyOwned]: eo
       }),
       onBlur: () => $(!1),
-      onClick: eS,
-      style: null != et ? {
+      onClick: eg,
+      style: null != es ? {
         backgroundColor: ed ? "var(--background-floating)" : "var(--background-secondary)",
         borderColor: "var(--chat-border)",
-        boxShadow: J ? ex : "none"
+        boxShadow: J ? eN : "none"
       } : void 0,
-      id: "shop-item-".concat(t.skuId),
-      children: [en && (0, a.jsx)(E.Tooltip, {
-        tooltipContentClassName: Y.premiumWheelTooltipContent,
-        color: E.Tooltip.Colors.PRIMARY,
-        text: V.default.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER,
-        children: e => (0, a.jsx)(E.TextBadge, {
+      id: "shop-item-".concat(s.skuId),
+      children: [ei && (0, n.jsx)(f.Tooltip, {
+        tooltipContentClassName: V.premiumWheelTooltipContent,
+        color: f.Tooltip.Colors.PRIMARY,
+        text: W.Z.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER,
+        children: e => (0, n.jsx)(f.TextBadge, {
           ...e,
-          className: Y.premiumWheelBadge,
-          text: (0, a.jsx)(v.default, {
-            className: Y.premiumWheel
+          className: V.premiumWheelBadge,
+          text: (0, n.jsx)(O.Z, {
+            className: V.premiumWheel
           })
         })
-      }), (0, a.jsx)("div", {
-        className: Y.preview,
-        children: (0, u.match)(t.type).with(c.CollectiblesItemType.PROFILE_EFFECT, () => (0, a.jsx)("div", {
-          className: Y.profileEffectShopPreview,
-          children: (0, a.jsx)(x.default, {
+      }), (0, n.jsx)("div", {
+        className: V.preview,
+        children: (0, c.EQ)(s.type).with(u.Z.PROFILE_EFFECT, () => (0, n.jsx)("div", {
+          className: V.profileEffectShopPreview,
+          children: (0, n.jsx)(N.Z, {
             isHovering: J,
             profileEffectId: ee.id,
-            isPurchased: ei,
+            isPurchased: er,
             removeSetHeight: !0
           })
-        })).with(c.CollectiblesItemType.AVATAR_DECORATION, () => (o()(ee.type === c.CollectiblesItemType.AVATAR_DECORATION, "ts-match already checked the type"), (0, a.jsx)("div", {
-          className: Y.avatarContainer,
-          children: (0, a.jsx)(H.AvatarDecorationPreview, {
+        })).with(u.Z.AVATAR_DECORATION, () => (o()(ee.type === u.Z.AVATAR_DECORATION, "ts-match already checked the type"), (0, n.jsx)("div", {
+          className: V.avatarContainer,
+          children: (0, n.jsx)(U.R, {
             item: ee,
-            user: s,
-            isPurchased: ei,
+            user: t,
+            isPurchased: er,
             isHighlighted: J
           })
-        }))).with(c.CollectiblesItemType.BUNDLE, () => (0, a.jsx)(w.BundlePreview, {
-          product: t,
-          user: s,
-          isPurchased: ei,
+        }))).with(u.Z.BUNDLE, () => (0, n.jsx)(H.d, {
+          product: s,
+          user: t,
+          isPurchased: er,
           isHighlighted: J
         })).otherwise(() => null)
-      }), ei ? (0, a.jsx)("div", {
-        className: Y.checkmarkWrapper,
-        children: (0, a.jsx)(b.default, {
+      }), er ? (0, n.jsx)("div", {
+        className: V.checkmarkWrapper,
+        children: (0, n.jsx)(b.Z, {
           width: 38,
           height: 38,
-          className: Y.checkmark
+          className: V.checkmark
         })
-      }) : null, (0, a.jsxs)("div", {
-        className: r()(Y.cardText, {
-          [Y.cardTextBlur]: (null == ee ? void 0 : ee.type) === c.CollectiblesItemType.PROFILE_EFFECT
+      }) : null, (0, n.jsxs)("div", {
+        className: l()(V.cardText, {
+          [V.cardTextBlur]: (null == ee ? void 0 : ee.type) === u.Z.PROFILE_EFFECT
         }),
-        children: [(0, a.jsx)("div", {
-          className: r()(Y.cardBackground, ed ? Y.darkCardBackground : Y.lightCardBackground, (null == ee ? void 0 : ee.type) === c.CollectiblesItemType.PROFILE_EFFECT ? Y.cardLowOpacity : null)
-        }), (0, a.jsx)(E.Text, {
+        children: [(0, n.jsx)("div", {
+          className: l()(V.cardBackground, ed ? V.darkCardBackground : V.lightCardBackground, (null == ee ? void 0 : ee.type) === u.Z.PROFILE_EFFECT ? V.cardLowOpacity : null)
+        }), (0, n.jsx)(f.Text, {
           variant: "text-lg/bold",
-          className: Y.productName,
-          children: t.name
-        }), (0, a.jsxs)("div", {
-          className: Y.detailsWrapper,
-          children: [(0, a.jsx)("div", {
-            className: eo ? void 0 : Y.innerBlur,
-            children: eI()
-          }), (0, a.jsx)("div", {
-            className: Y.innerHover,
+          className: V.productName,
+          children: s.name
+        }), (0, n.jsxs)("div", {
+          className: V.detailsWrapper,
+          children: [(0, n.jsx)("div", {
+            className: eo ? void 0 : V.innerBlur,
+            children: e_()
+          }), (0, n.jsx)("div", {
+            className: V.innerHover,
             children: eT()
           })]
         })]
-      }), (0, a.jsx)(B.default, {
-        category: n,
-        className: Y.limitedTimeBadge,
+      }), (0, n.jsx)(B.Z, {
+        category: i,
+        className: V.limitedTimeBadge,
         display: "card"
-      }), ef && !eo && !ei && (0, a.jsx)(E.TextBadge, {
-        text: V.default.Messages.NEW,
+      }), eC && !eo && !er && (0, n.jsx)(f.TextBadge, {
+        text: W.Z.Messages.NEW,
         disableColor: !0,
-        className: Y.newBadge
+        className: V.newBadge
       })]
     })
   })

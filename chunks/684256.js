@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return u
   }
 });
-var i = n("735250"),
-  r = n("481060"),
-  s = n("695676"),
-  a = n("98880"),
-  o = n("772606"),
-  l = n("274017");
+var i = n(735250),
+  r = n(481060),
+  s = n(695676),
+  o = n(98880),
+  a = n(772606),
+  l = n(274017);
 
 function u(e) {
   let {
@@ -17,13 +17,13 @@ function u(e) {
     look: n,
     items: u
   } = e, {
-    pushHistory: d
-  } = (0, s.useAppLauncherHistoryContext)();
+    pushHistory: _
+  } = (0, s.hH)();
   return (0, i.jsxs)("div", {
     className: l.container,
     children: [(0, i.jsxs)("div", {
       className: l.header,
-      children: [(0, i.jsx)(o.default, {
+      children: [(0, i.jsx)(a.Z, {
         className: l.backButton
       }), (0, i.jsx)(r.Heading, {
         variant: "heading-md/medium",
@@ -38,12 +38,12 @@ function u(e) {
             application: t,
             isPartner: r
           } = e;
-          return (0, i.jsx)(a.default, {
+          return (0, i.jsx)(o.Z, {
             application: t,
             look: n,
             onClick: e => {
-              e.stopPropagation(), d({
-                type: s.HistoryItemType.APPLICATION,
+              e.stopPropagation(), _({
+                type: s.gc.APPLICATION,
                 application: t
               })
             },

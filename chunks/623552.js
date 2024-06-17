@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
+n.d(t, {
+  Z: function() {
     return E
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("120356"),
-  a = n.n(s),
-  o = n("481060"),
-  l = n("410030"),
-  u = n("718582"),
-  d = n("981631"),
-  _ = n("411511");
+var i = n(735250),
+  r = n(470079),
+  s = n(120356),
+  o = n.n(s),
+  a = n(481060),
+  l = n(410030),
+  u = n(718582),
+  _ = n(981631),
+  d = n(411511);
 let c = [
   [{
     translateY: 0,
@@ -88,27 +88,27 @@ function E(e) {
   let {
     users: t,
     guildId: n
-  } = e, s = (0, u.useSortUsersByAffinity)(t), o = (0, l.default)(), E = r.useRef(!1);
+  } = e, s = (0, u.fd)(t), a = (0, l.ZP)(), E = r.useRef(!1);
   r.useEffect(() => {
     E.current = !0
   }, []);
-  let f = Math.min(c.length - 1, s.length - 1),
-    S = c[Math.max(0, f)],
-    h = s.length > 4,
-    A = s.length - 3,
-    m = A >= 10 ? 1 : 2,
-    N = S.map((e, t) => {
+  let h = Math.min(c.length - 1, s.length - 1),
+    S = c[Math.max(0, h)],
+    f = s.length > 4,
+    N = s.length - 3,
+    A = N >= 10 ? 1 : 2,
+    m = S.map((e, t) => {
       let r = s[t];
       if (null == r) return null;
-      let o = h && t === m;
+      let a = f && t === A;
       return (0, i.jsx)("div", {
-        className: a()(_.avatarContainer),
+        className: o()(d.avatarContainer),
         style: {
           opacity: 1,
           transform: "translateX(".concat(e.translateX, "px) translateY(").concat(e.translateY, "px) scale(").concat(e.scale, ")")
         },
-        children: o ? (0, i.jsx)(I, {
-          count: A
+        children: a ? (0, i.jsx)(I, {
+          count: N
         }) : (0, i.jsx)(T, {
           guildId: n,
           user: r
@@ -116,10 +116,10 @@ function E(e) {
       }, r.id)
     });
   return (0, i.jsx)("div", {
-    className: o === d.ThemeTypes.DARK ? _.gradientContainerDark : _.gradientContainer,
+    className: a === _.BRd.DARK ? d.gradientContainerDark : d.gradientContainer,
     children: (0, i.jsx)("div", {
-      className: _.groupContainer,
-      children: N
+      className: d.groupContainer,
+      children: m
     })
   })
 }
@@ -129,10 +129,10 @@ function I(e) {
     count: t
   } = e;
   return (0, i.jsx)("div", {
-    className: _.avatarWrapper,
+    className: d.avatarWrapper,
     children: (0, i.jsx)("div", {
-      className: _.overflowCount,
-      children: (0, i.jsxs)(o.Text, {
+      className: d.overflowCount,
+      children: (0, i.jsxs)(a.Text, {
         variant: "text-sm/semibold",
         children: ["+", t]
       })
@@ -146,9 +146,9 @@ function T(e) {
     user: n
   } = e;
   return null == r.useMemo(() => null == n ? void 0 : n.getAvatarSource(t, !1, 30), [t, n]) ? null : (0, i.jsx)("div", {
-    className: _.avatarWrapper,
+    className: d.avatarWrapper,
     children: (0, i.jsx)("img", {
-      className: _.avatar,
+      className: d.avatar,
       src: null == n ? void 0 : n.getAvatarURL(t, 80),
       alt: ""
     })

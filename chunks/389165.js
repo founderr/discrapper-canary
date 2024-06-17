@@ -2,8 +2,8 @@
 Object.defineProperty(t, "__esModule", {
   value: !0
 }), t.isvalidColorString = t.red = t.getContrastingColor = t.isValidHex = t.toState = t.simpleCheckForValidColor = void 0;
-var r = a(n("876344")),
-  i = a(n("979590"));
+var r = a(n(876344)),
+  i = a(n(979590));
 
 function a(e) {
   return e && e.__esModule ? e : {

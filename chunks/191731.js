@@ -1,7 +1,4 @@
 "use strict";
-Object.defineProperty(t, "__esModule", {
-  value: !0
-});
 var r = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
       var n = arguments[t];
@@ -13,7 +10,7 @@ var r = Object.assign || function(e) {
     return e && e.__esModule ? e : {
       default: e
     }
-  }(n("470079"));
+  }(n(470079));
 t.default = function(e) {
   var t = e.fill,
     n = e.width,

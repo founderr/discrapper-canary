@@ -1,39 +1,39 @@
 "use strict";
-n.r(t), n.d(t, {
-  DISCORD_EPOCH: function() {
-    return s
-  },
-  SnowflakeSequence: function() {
-    return c
-  },
-  age: function() {
-    return d
-  },
-  atPreviousMillisecond: function() {
-    return u
-  },
-  compare: function() {
+n.d(t, {
+  B_: function() {
     return _
   },
-  extractTimestamp: function() {
-    return a
-  },
-  fromTimestamp: function() {
+  Lm: function() {
     return o
   },
-  fromTimestampWithSequence: function() {
+  Ol: function() {
+    return a
+  },
+  P4: function() {
     return l
+  },
+  Tk: function() {
+    return c
+  },
+  cO: function() {
+    return u
+  },
+  cj: function() {
+    return s
+  },
+  qu: function() {
+    return d
   }
-}), n("411104");
-var i = n("654861"),
+}), n(411104);
+var i = n(654861),
   r = n.n(i);
 let s = 14200704e5;
 
-function a(e) {
+function o(e) {
   return Math.floor(Number(e) / 4194304) + s
 }
 
-function o(e) {
+function a(e) {
   let t = e - s;
   return t <= 0 ? "0" : r()(t).shiftLeft(22).toString()
 }
@@ -44,14 +44,14 @@ function l(e, t) {
 }
 
 function u(e) {
-  return o(a(e) - 1)
+  return a(o(e) - 1)
 }
 
-function d(e) {
-  return Date.now() - a(e)
+function _(e) {
+  return Date.now() - o(e)
 }
 
-function _(e, t) {
+function d(e, t) {
   return e === t ? 0 : null == t ? 1 : null == e ? -1 : e.length > t.length ? 1 : e.length < t.length ? -1 : e > t ? 1 : -1
 }
 class c {
@@ -64,7 +64,7 @@ class c {
   }
   constructor() {
     var e, t, n;
-    e = this, n = void 0, (t = "seq") in e ? Object.defineProperty(e, t, {
+    e = this, t = "seq", n = void 0, "seq" in e ? Object.defineProperty(e, t, {
       value: n,
       enumerable: !0,
       configurable: !0,

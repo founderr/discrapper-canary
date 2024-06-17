@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
-  ConnectionOpenTriggerPoint: function() {
-    return a
+n.d(t, {
+  W: function() {
+    return o
   }
 });
-var i = n("185745"),
-  r = n("91641"),
-  s = n("987338");
-let a = new r.CommonTriggerPointConfiguration([i.CTPAppOpenVanillaExperiment, i.CTPAppOpenFiltersExperiment, i.CTPAppOpenEveryoneExperiment, i.CTPAppOpenMultipleBucketsExperiment, i.CTPAppOpenUnevenBucketsExperiment], s.CommonTriggerPoints.POST_CONNECTION_OPEN, {
+var i = n(185745),
+  r = n(91641),
+  s = n(987338);
+let o = new r.E([i.ul, i.qs, i.vt, i.U5, i.qW], s.$P.POST_CONNECTION_OPEN, {
   location: "connection open"
 })

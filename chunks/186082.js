@@ -1,6 +1,5 @@
 "use strict";
-n.r(t);
-t.default = function(e, t, n) {
+t.Z = function(e, t, n) {
   switch (n.length) {
     case 0:
       return e.call(t);

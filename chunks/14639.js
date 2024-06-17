@@ -1,3 +1,2 @@
 "use strict";
-n.r(t);
-t.default = 30717
+t.Z = 30717

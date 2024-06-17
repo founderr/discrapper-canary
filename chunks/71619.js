@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return d
+n.d(t, {
+  AB: function() {
+    return a
   },
-  useCurrentUserCommunicationDisabled: function() {
-    return o
-  },
-  userCommunicationDisabled: function() {
+  ZP: function() {
     return _
+  },
+  s5: function() {
+    return d
   }
 });
-var i = n("442837"),
-  r = n("271383"),
-  s = n("594174"),
-  a = n("69882");
+var i = n(442837),
+  r = n(271383),
+  s = n(594174),
+  o = n(69882);
 
-function o(e) {
-  let t = (0, i.useStateFromStores)([s.default], () => s.default.getCurrentUser());
-  return d(null == t ? void 0 : t.id, e)
+function a(e) {
+  let t = (0, i.e7)([s.default], () => s.default.getCurrentUser());
+  return _(null == t ? void 0 : t.id, e)
 }
 
 function l(e, t, n) {
@@ -26,13 +26,13 @@ function l(e, t, n) {
 
 function u(e) {
   var t;
-  return [null !== (t = null == e ? void 0 : e.communicationDisabledUntil) && void 0 !== t ? t : null, (0, a.isMemberCommunicationDisabled)(e)]
-}
-
-function d(e, t) {
-  return u((0, i.useStateFromStores)([r.default], () => l(e, t, r.default), [t, e]))
+  return [null !== (t = null == e ? void 0 : e.communicationDisabledUntil) && void 0 !== t ? t : null, (0, o.b)(e)]
 }
 
 function _(e, t) {
-  return u(l(e, t, r.default))
+  return u((0, i.e7)([r.ZP], () => l(e, t, r.ZP), [t, e]))
+}
+
+function d(e, t) {
+  return u(l(e, t, r.ZP))
 }

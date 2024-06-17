@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  PHONE_VERIFICATION_CODE_NUM_DIGITS: function() {
-    return o
-  },
-  PHONE_VERIFICATION_MODAL_KEY: function() {
+n.d(t, {
+  M: function() {
     return r
+  },
+  z: function() {
+    return o
   }
 });
 let r = "PHONE_VERIFICATION_MODAL_KEY",

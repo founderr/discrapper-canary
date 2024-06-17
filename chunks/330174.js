@@ -1,12 +1,10 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("844303");
-t.default = function(e) {
+var r = n(470079),
+  i = n(844303);
+t.Z = function(e) {
   var t = e.rgb,
     n = e.currentColor,
-    r = (0, a.default)({
+    a = (0, i.default)({
       default: {
         swatches: {
           border: "1px solid #B3B3B3",
@@ -31,15 +29,15 @@ t.default = function(e) {
         }
       }
     });
-  return i().createElement("div", null, i().createElement("div", {
-    style: r.label
-  }, "new"), i().createElement("div", {
-    style: r.swatches
-  }, i().createElement("div", {
-    style: r.new
-  }), i().createElement("div", {
-    style: r.current
-  })), i().createElement("div", {
-    style: r.label
+  return r.createElement("div", null, r.createElement("div", {
+    style: a.label
+  }, "new"), r.createElement("div", {
+    style: a.swatches
+  }, r.createElement("div", {
+    style: a.new
+  }), r.createElement("div", {
+    style: a.current
+  })), r.createElement("div", {
+    style: a.label
   }, "current"))
 }

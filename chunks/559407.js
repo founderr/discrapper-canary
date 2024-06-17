@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
-  CASH_APP_PAY_CONTAINER: function() {
+n.d(t, {
+  F: function() {
     return r
   },
-  default: function() {
-    return a
+  Z: function() {
+    return o
   }
 });
-var i = n("735250");
-n("470079"), n("637515");
+var i = n(735250);
+n(470079), n(637515);
 let r = "cash-app-pay-container";
 
 function s() {
@@ -19,7 +19,7 @@ function s() {
   })
 }
 
-function a() {
+function o() {
   return (0, i.jsx)(i.Fragment, {
     children: (0, i.jsx)(s, {})
   })

@@ -1,31 +1,31 @@
 "use strict";
-n.r(t), n.d(t, {
-  getKeywordSubstitutedContent: function() {
+n.d(t, {
+  N: function() {
     return u
   }
-}), n("47120"), n("724458");
-var i = n("626135"),
-  r = n("960048"),
-  s = n("592204"),
-  a = n("803141"),
-  o = n("603158"),
-  l = n("981631");
+}), n(47120), n(724458);
+var i = n(626135),
+  r = n(960048),
+  s = n(592204),
+  o = n(803141),
+  a = n(603158),
+  l = n(981631);
 
 function u(e, t) {
-  (0, s.isEligibleForKeywordFiltering)({
+  (0, s.pB)({
     location: "keyword_substituted_content"
   });
   try {
     let n = function(e) {
       var t;
-      let n = a.default.getKeywordTrie();
+      let n = o.Z.getKeywordTrie();
       if ("" === e) return [];
-      let i = (0, o.normalize)(e).toLowerCase();
+      let i = (0, a.F)(e).toLowerCase();
       return Object.values(null !== (t = null == n ? void 0 : n.search(i)) && void 0 !== t ? t : {})
     }(e);
     if (0 === n.length) return e;
     return n.forEach(e => {
-      i.default.track(l.AnalyticEvents.KEYWORD_FILTER_MATCH, {
+      i.default.track(l.rMx.KEYWORD_FILTER_MATCH, {
         message_id: null == t ? void 0 : t.messageId,
         channel_id: null == t ? void 0 : t.channelId,
         author_id: null == t ? void 0 : t.authorId,
@@ -35,12 +35,12 @@ function u(e, t) {
       let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         r = Math.max(t, 0),
         s = Math.min(n, e.length - 1),
-        a = i ? "\\*" : "*",
-        o = [...e.substring(r, s + 1)].map(e => " " === e ? " " : a).join("");
-      return "".concat(e.substring(0, r)).concat(o).concat(e.substring(s + 1))
+        o = i ? "\\*" : "*",
+        a = [...e.substring(r, s + 1)].map(e => " " === e ? " " : o).join("");
+      return "".concat(e.substring(0, r)).concat(a).concat(e.substring(s + 1))
     })(e, n.start, n.end, null == t ? void 0 : t.escapeReplacement), e)
   } catch (t) {
-    return r.default.captureException(t, {
+    return r.Z.captureException(t, {
       tags: {
         app_context: "keyword_filtering"
       }

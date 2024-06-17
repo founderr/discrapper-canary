@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  useCanSeeGameProfile: function() {
+n.d(t, {
+  x: function() {
     return r
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-06_game_profile",
   label: "Enables the Game Profile",

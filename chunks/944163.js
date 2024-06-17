@@ -1,27 +1,27 @@
 "use strict";
-n.r(t), n.d(t, {
-  NO_MEMBER_VERIFICATION_FORM: function() {
+n.d(t, {
+  t: function() {
     return c
   }
 });
-var i, r, s, a, o = n("392711"),
-  l = n.n(o),
-  u = n("442837"),
-  d = n("570140"),
-  _ = n("246364");
+var i, r, s, o, a = n(392711),
+  l = n.n(a),
+  u = n(442837),
+  _ = n(570140),
+  d = n(246364);
 let c = {
     version: "",
     description: "",
     formFields: []
   },
   E = {};
-class I extends(a = u.default.Store) {
+class I extends(o = u.ZP.Store) {
   get(e) {
     if (null != e) return E[e]
   }
   getRulesPrompt(e) {
     var t;
-    return l().find(null === (t = E[e]) || void 0 === t ? void 0 : t.formFields, _.isTermsFormField)
+    return l().find(null === (t = E[e]) || void 0 === t ? void 0 : t.formFields, d.J)
   }
 }
 s = "MemberVerificationFormStore", (r = "displayName") in(i = I) ? Object.defineProperty(i, r, {
@@ -29,7 +29,7 @@ s = "MemberVerificationFormStore", (r = "displayName") in(i = I) ? Object.define
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new I(d.default, {
+}) : i[r] = s, t.Z = new I(_.Z, {
   INVITE_ACCEPT_SUCCESS: function(e) {
     let {
       invite: t

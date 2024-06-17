@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
-  isEligibleForLeaderboard: function() {
+n.d(t, {
+  J: function() {
     return r
   }
 });
-let i = (0, n("818083").createExperiment)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-06_leaderboard",
   label: "Leaderboard",

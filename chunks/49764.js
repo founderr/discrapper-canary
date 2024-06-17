@@ -1,14 +1,12 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("844303"),
-  o = n("464854");
-t.default = function(e) {
+var r = n(470079),
+  i = n(844303),
+  a = n(464854);
+t.Z = function(e) {
   var t = e.hex,
     n = e.rgb,
-    r = e.onChange,
-    s = (0, a.default)({
+    o = e.onChange,
+    s = (0, i.default)({
       default: {
         fields: {
           display: "flex",
@@ -69,22 +67,22 @@ t.default = function(e) {
       }
     }),
     u = function(e, t) {
-      e.r || e.g || e.b ? r({
+      e.r || e.g || e.b ? o({
         r: e.r || n.r,
         g: e.g || n.g,
         b: e.b || n.b,
         source: "rgb"
-      }, t) : r({
+      }, t) : o({
         hex: e.hex,
         source: "hex"
       }, t)
     };
-  return i().createElement("div", {
+  return r.createElement("div", {
     style: s.fields,
     className: "flexbox-fix"
-  }, i().createElement("div", {
+  }, r.createElement("div", {
     style: s.active
-  }), i().createElement(o.EditableInput, {
+  }), r.createElement(a.Vm, {
     style: {
       wrap: s.HEXwrap,
       input: s.HEXinput,
@@ -93,7 +91,7 @@ t.default = function(e) {
     label: "hex",
     value: t,
     onChange: u
-  }), i().createElement(o.EditableInput, {
+  }), r.createElement(a.Vm, {
     style: {
       wrap: s.RGBwrap,
       input: s.RGBinput,
@@ -102,7 +100,7 @@ t.default = function(e) {
     label: "r",
     value: n.r,
     onChange: u
-  }), i().createElement(o.EditableInput, {
+  }), r.createElement(a.Vm, {
     style: {
       wrap: s.RGBwrap,
       input: s.RGBinput,
@@ -111,7 +109,7 @@ t.default = function(e) {
     label: "g",
     value: n.g,
     onChange: u
-  }), i().createElement(o.EditableInput, {
+  }), r.createElement(a.Vm, {
     style: {
       wrap: s.RGBwrap,
       input: s.RGBinput,

@@ -1,30 +1,28 @@
 "use strict";
-n.r(t);
-var r = n("470079"),
-  i = n.n(r),
-  a = n("476400"),
-  o = n.n(a),
-  s = n("844303"),
-  u = n("829307"),
-  c = n("464854"),
-  l = n("353144"),
-  d = Object.assign || function(e) {
+var r = n(470079),
+  i = n(476400),
+  a = n.n(i),
+  o = n(844303),
+  s = n(829307),
+  u = n(464854),
+  c = n(353144),
+  l = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
       var n = arguments[t];
       for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
     }
     return e
   },
-  f = function(e) {
+  d = function(e) {
     var t = e.width,
       n = e.height,
-      r = e.onChange,
+      i = e.onChange,
       a = e.hsl,
-      o = e.direction,
-      l = e.pointer,
+      c = e.direction,
+      d = e.pointer,
       f = e.styles,
       p = e.className,
-      h = (0, s.default)((0, u.default)({
+      h = (0, o.default)((0, s.Z)({
         default: {
           picker: {
             position: "relative",
@@ -36,29 +34,29 @@ var r = n("470079"),
           }
         }
       }, void 0 === f ? {} : f));
-    return i().createElement("div", {
+    return r.createElement("div", {
       style: h.picker,
       className: "hue-picker " + (void 0 === p ? "" : p)
-    }, i().createElement(c.Hue, d({}, h.hue, {
+    }, r.createElement(u.PS, l({}, h.hue, {
       hsl: a,
-      pointer: l,
+      pointer: d,
       onChange: function(e) {
-        return r({
+        return i({
           a: 1,
           h: e.h,
           l: .5,
           s: 1
         })
       },
-      direction: o
+      direction: c
     })))
   };
-f.propTypes = {
-  styles: o().object
-}, f.defaultProps = {
+d.propTypes = {
+  styles: a().object
+}, d.defaultProps = {
   width: "316px",
   height: "16px",
   direction: "horizontal",
-  pointer: l.default,
+  pointer: c.Z,
   styles: {}
-}, (0, c.ColorWrap)(f)
+}, (0, u.t1)(d)

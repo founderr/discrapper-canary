@@ -1,34 +1,33 @@
 "use strict";
-n.r(t);
-var i, r, s = n("735250"),
-  a = n("470079"),
-  o = n("120356"),
-  l = n.n(o),
-  u = n("481060"),
-  d = n("778569"),
-  _ = n("182906"),
-  c = n("220082"),
-  E = n("318661"),
-  I = n("768581"),
-  T = n("792125"),
-  f = n("783097"),
-  S = n("753972"),
-  h = n("231338"),
-  A = n("689938"),
-  m = n("741382");
+var i, r, s = n(735250),
+  o = n(470079),
+  a = n(120356),
+  l = n.n(a),
+  u = n(481060),
+  _ = n(778569),
+  d = n(182906),
+  c = n(220082),
+  E = n(318661),
+  I = n(768581),
+  T = n(792125),
+  h = n(783097),
+  S = n(753972),
+  f = n(231338),
+  N = n(689938),
+  A = n(741382);
 
-function N(e) {
+function m(e) {
   let {
     application: t,
     look: n = "large_banner",
     isPartner: i,
     onClick: r
   } = e, {
-    iconURL: o,
-    name: d,
-    description: _
-  } = a.useMemo(() => (0, f.isRealApplication)(t) ? {
-    iconURL: I.default.getApplicationIconURL({
+    iconURL: a,
+    name: _,
+    description: d
+  } = o.useMemo(() => (0, h.BQ)(t) ? {
+    iconURL: I.ZP.getApplicationIconURL({
       id: t.id,
       icon: t.icon,
       bot: t.bot,
@@ -38,62 +37,62 @@ function N(e) {
     description: t.description
   } : {
     iconURL: null,
-    name: A.default.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME,
-    description: A.default.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
-  }, [t]), E = (0, c.default)(o, "");
+    name: N.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME,
+    description: N.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
+  }, [t]), E = (0, c.ZP)(a, "");
   return (0, s.jsxs)(u.Clickable, {
-    className: m.container,
+    className: A.container,
     onClick: r,
     children: [(0, s.jsxs)("div", {
-      className: l()(m.bannerImageContainer, {
-        [m.mediumBanner]: "medium_banner" === n,
-        [m.largeBanner]: "large_banner" === n
+      className: l()(A.bannerImageContainer, {
+        [A.mediumBanner]: "medium_banner" === n,
+        [A.largeBanner]: "large_banner" === n
       }),
-      children: [(0, s.jsx)(p, {
+      children: [(0, s.jsx)(O, {
         application: t,
         fallbackColor: E
       }), i && (0, s.jsx)("div", {
-        className: m.partnerLabelWrapper,
+        className: A.partnerLabelWrapper,
         children: (0, s.jsx)(u.Text, {
-          className: (0, T.getThemeClass)(h.ThemeTypes.DARK),
+          className: (0, T.Q)(f.BR.DARK),
           variant: "text-sm/medium",
           color: "text-normal",
-          children: A.default.Messages.APP_DIRECTORY_PARTNER
+          children: N.Z.Messages.APP_DIRECTORY_PARTNER
         })
       })]
     }), (0, s.jsxs)("div", {
-      className: m.appDetailsContainer,
-      children: [null != o && (0, s.jsx)(S.default, {
-        src: o,
-        className: m.icon,
+      className: A.appDetailsContainer,
+      children: [null != a && (0, s.jsx)(S.Z, {
+        src: a,
+        className: A.icon,
         "aria-hidden": !0
       }), (0, s.jsxs)("div", {
-        className: m.appDetails,
+        className: A.appDetails,
         children: [(0, s.jsx)(u.Heading, {
           variant: "heading-md/semibold",
           color: "header-primary",
           lineClamp: 1,
-          children: d
+          children: _
         }), (0, s.jsx)(u.Text, {
           variant: "text-sm/normal",
           color: "text-secondary",
           lineClamp: 1,
-          children: _
+          children: d
         })]
       })]
     })]
   })
 }
 
-function p(e) {
+function O(e) {
   let {
     application: t,
     fallbackColor: n
   } = e;
-  if ((0, f.isRealApplication)(t)) {
-    if ((0, f.isEmbeddedApp)({
+  if ((0, h.BQ)(t)) {
+    if ((0, h.ye)({
         application: t
-      })) return (0, s.jsx)(O, {
+      })) return (0, s.jsx)(R, {
       application: t
     });
     if (null != t.bot) return (0, s.jsx)(C, {
@@ -101,39 +100,39 @@ function p(e) {
     })
   }
   return (0, s.jsx)("div", {
-    className: m.bannerImage,
+    className: A.bannerImage,
     style: {
       backgroundColor: n
     }
   })
 }
 
-function O(e) {
+function R(e) {
   let {
     application: t
-  } = e, n = (0, d.default)({
+  } = e, n = (0, _.Z)({
     applicationId: t.id,
     size: 600,
     names: ["embedded_cover"]
   });
-  return (0, s.jsx)(_.default, {
+  return (0, s.jsx)(d.Z, {
     imageBackground: n,
     applicationName: t.name,
-    imageClassName: m.bannerImage,
-    imageNotFoundClassName: m.bannerImage
+    imageClassName: A.bannerImage,
+    imageNotFoundClassName: A.bannerImage
   })
 }
 
 function C(e) {
   let {
     bot: t
-  } = e, n = (0, E.default)(t.id), i = a.useMemo(() => null == n ? void 0 : n.getBannerURL({
+  } = e, n = (0, E.ZP)(t.id), i = o.useMemo(() => null == n ? void 0 : n.getBannerURL({
     canAnimate: !1,
     size: 600
   }), [n]);
   return (0, s.jsx)("img", {
     src: i,
     alt: "",
-    className: m.bannerImage
+    className: A.bannerImage
   })
-}(i = r || (r = {})).NO_BANNER = "no_banner", i.MEDIUM_BANNER = "medium_banner", i.LARGE_BANNER = "large_banner", t.default = N, N.Looks = r
+}(i = r || (r = {})).NO_BANNER = "no_banner", i.MEDIUM_BANNER = "medium_banner", i.LARGE_BANNER = "large_banner", t.Z = m, m.Looks = r
