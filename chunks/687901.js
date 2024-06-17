@@ -2,7 +2,6 @@
 e.exports = {
   alignRight: "alignRight__42d5c",
   emojiItem: "emojiItem_de65fd",
-  emojiItemDisabled: "emojiItemDisabled__843ea",
   emojiItemLarge: "emojiItemLarge__9348e",
   emojiItemMedium: "emojiItemMedium__344c5",
   emojiItemSelected: "emojiItemSelected__023be",
