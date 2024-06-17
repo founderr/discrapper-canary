@@ -40,7 +40,7 @@ function b(e, t) {
   (0, h.openContextMenuLazy)(e, async () => {
     let {
       default: e
-    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("7654"), n.e("33053"), n.e("32493"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("46453"), n.e("90144"), n.e("69760"), n.e("33213"), n.e("19255")]).then(n.bind(n, "545135"));
+    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("7654"), n.e("33053"), n.e("32493"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("83256"), n.e("90144"), n.e("69760"), n.e("33213"), n.e("19255")]).then(n.bind(n, "545135"));
     return n => (0, l.jsx)(e, {
       ...n,
       guild: t
@@ -74,7 +74,9 @@ t.default = a.memo(function(e) {
   null == ee && K > 0 ? ee = null !== (s = (0, x.renderMentionBadge)(K)) && void 0 !== s ? s : void 0 : null == ee && null != q && (ee = null !== (h = (0, x.renderGuildJoinRequestBadge)({
     guildJoinRequestStatus: q
   })) && void 0 !== h ? h : void 0);
-  let et = null !== (D = e.lowerBadgeWidth) && void 0 !== D ? D : (0, c.getBadgeWidthForValue)(K),
+  let et = null !== (D = e.lowerBadgeSize) && void 0 !== D ? D : {
+      width: (0, c.getBadgeWidthForValue)(K)
+    },
     [{
       dragging: en
     }, el] = (0, r.useDrag)({
@@ -180,7 +182,7 @@ t.default = a.memo(function(e) {
         selected: ed || V || er,
         upperBadge: $,
         lowerBadge: ee,
-        lowerBadgeWidth: et,
+        lowerBadgeSize: et,
         children: e_
       })
     });

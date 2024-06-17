@@ -20,7 +20,7 @@ let h = a.forwardRef(function(e, t) {
     tooltip: p,
     upperBadge: g,
     lowerBadge: E,
-    lowerBadgeWidth: S,
+    lowerBadgeSize: S,
     showPill: _ = !0,
     className: I,
     "aria-label": N,
@@ -44,7 +44,7 @@ let h = a.forwardRef(function(e, t) {
         selected: C || R,
         upperBadge: g,
         lowerBadge: E,
-        lowerBadgeWidth: S,
+        lowerBadgeSize: S,
         children: (0, l.jsx)(o.Clickable, {
           innerRef: t,
           onMouseEnter: () => {

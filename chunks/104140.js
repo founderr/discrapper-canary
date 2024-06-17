@@ -184,24 +184,27 @@ class g extends(r = a.Component) {
     }).start()), !o || R(this.props) || this.timeout.isStarted() ? R(this.props) && this.timeout.isStarted() && this.timeout.stop() : this.timeout.start(_()(108e5, 18e6), this.handleTimeout)
   }
   getBadgePositionInterpolation(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+      n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 20;
     if (null == e) return;
     let {
-      spring: n
+      spring: i
     } = e.springs;
-    return n.to([0, 1], [20, 0]).to(e => "translate(".concat(e, " ").concat(e * t, ")"))
+    return i.to([0, 1], [n, 0]).to(e => "translate(".concat(e, " ").concat(e * t, ")"))
   }
   getLowerBadgeStyles() {
     let {
       lowerBadgeMask: e
-    } = this.state;
+    } = this.state, {
+      lowerBadgeSize: t
+    } = this.props;
     if (null == e) return;
     let {
-      spring: t
-    } = e.springs;
+      spring: n
+    } = e.springs, i = (null == t ? void 0 : t.width) != null ? t.width : 16, r = (null == t ? void 0 : t.height) != null ? t.height : 16;
     return {
-      opacity: t.to([0, .5, 1], [0, 0, 1]),
-      transform: t.to(e => "translate(".concat(16 - 16 * e, "px, ").concat(16 - 16 * e, "px)"))
+      opacity: n.to([0, .5, 1], [0, 0, 1]),
+      transform: n.to(e => "translate(".concat(i - e * i, "px, ").concat(r - e * r, "px)"))
     }
   }
   getUpperBadgeStyles() {
@@ -227,7 +230,7 @@ class g extends(r = a.Component) {
       className: t,
       innerClassName: n,
       lowerBadge: i,
-      lowerBadgeWidth: r,
+      lowerBadgeSize: r,
       style: o,
       upperBadge: u,
       highlight: d
@@ -267,7 +270,9 @@ class g extends(r = a.Component) {
       p = "".concat(_, "-lower_badge_masks"),
       O = "".concat(_, "-blob_mask"),
       R = "".concat(_, "-stroke_mask"),
-      g = "".concat(_, "-highlight_mask");
+      g = "".concat(_, "-highlight_mask"),
+      L = (null == r ? void 0 : r.width) != null ? r.width : 16,
+      v = (null == r ? void 0 : r.height) != null ? r.height : 16;
     return (0, s.jsxs)("div", {
       className: l()(t, S.wrapper),
       style: o,
@@ -299,13 +304,13 @@ class g extends(r = a.Component) {
             transform: this.getBadgePositionInterpolation(T, -1)
           }) : null, A ? (0, s.jsx)(c.animated.rect, {
             id: p,
-            x: 48 - (r + 8) + 4,
-            y: 28,
-            width: r + 8,
-            height: 24,
+            x: 48 - (L + 8) + 4,
+            y: 48 - (v + 8) + 4,
+            width: L + 8,
+            height: v + 8,
             rx: 12,
             ry: 12,
-            transform: this.getBadgePositionInterpolation(E)
+            transform: this.getBadgePositionInterpolation(E, 1, L + 4)
           }) : null]
         }), (0, s.jsxs)("mask", {
           id: _,
@@ -414,6 +419,9 @@ class g extends(r = a.Component) {
 }
 h(g, "defaultProps", {
   selected: !1,
-  lowerBadgeWidth: 16,
+  lowerBadgeSize: {
+    width: 16,
+    height: 16
+  },
   highlight: !1
 })

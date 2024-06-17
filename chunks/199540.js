@@ -122,7 +122,9 @@ function A(e) {
     selected: !n,
     upperBadge: R,
     lowerBadge: M,
-    lowerBadgeWidth: (0, c.getBadgeWidthForValue)(u),
+    lowerBadgeSize: {
+      width: (0, c.getBadgeWidthForValue)(u)
+    },
     children: (0, l.jsx)(c.Clickable, {
       className: i()(S.folder, {
         [S.hover]: A

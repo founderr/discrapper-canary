@@ -1,44 +1,58 @@
 "use strict";
 n.r(t), n.d(t, {
   handleDiscoveryButtonClick: function() {
-    return h
+    return g
   }
 });
 var l = n("735250"),
   a = n("470079"),
-  s = n("212093"),
-  i = n("703656"),
-  r = n("683301"),
-  o = n("104259"),
-  u = n("603592"),
-  d = n("981631"),
-  c = n("731455"),
-  f = n("689938");
+  s = n("704215"),
+  i = n("212093"),
+  r = n("963202"),
+  o = n("605236"),
+  u = n("703656"),
+  d = n("683301"),
+  c = n("104259"),
+  f = n("603592"),
+  h = n("981631"),
+  m = n("731455"),
+  C = n("689938"),
+  p = n("427122");
 
-function h() {
-  let e = window.location.pathname.startsWith(d.Routes.GUILD_DISCOVERY),
-    t = r.default.getCurrentCategoryId() === c.CategoryId.Clans;
-  e && !t && ((0, s.clearSearch)(), (0, s.selectCategory)(c.DISCOVERY_ALL_CATEGORIES_ID, !0));
-  let n = (0, i.getHistory)().location.search;
-  (0, i.transitionTo)(d.Routes.GUILD_DISCOVERY, {
+function g() {
+  let e = window.location.pathname.startsWith(h.Routes.GUILD_DISCOVERY),
+    t = d.default.getCurrentCategoryId() === m.CategoryId.Clans;
+  e && !t && ((0, i.clearSearch)(), (0, i.selectCategory)(m.DISCOVERY_ALL_CATEGORIES_ID, !0));
+  let n = (0, u.getHistory)().location.search;
+  (0, u.transitionTo)(h.Routes.GUILD_DISCOVERY, {
     search: n
   })
 }
-let m = a.forwardRef(function(e, t) {
+let E = a.forwardRef(function(e, t) {
   let {
     selected: n,
     tooltip: a,
-    className: s,
-    onClick: i
-  } = e;
-  return (0, l.jsx)(u.default, {
+    className: i,
+    onClick: u
+  } = e, {
+    clanDiscoveryEnabled: d
+  } = (0, r.useClanPilotExperiment)("guild_discovery"), h = (0, o.useIsDismissibleContentDismissed)(s.DismissibleContent.NEW_GAMING_DISCOVERY_NOTIF), m = {
+    lowerBadgeSize: {
+      width: 12,
+      height: 12
+    }
+  };
+  return d && !h && (m.lowerBadge = (0, l.jsx)("div", {
+    className: p.guildNotif
+  })), (0, l.jsx)(f.default, {
     id: "guild-discover-button",
     ref: t,
-    className: s,
-    onClick: null != i ? i : h,
+    className: i,
+    onClick: null != u ? u : g,
     selected: n,
-    tooltip: null != a ? a : f.default.Messages.GUILD_DISCOVERY_TOOLTIP,
-    icon: o.default
+    tooltip: null != a ? a : C.default.Messages.GUILD_DISCOVERY_TOOLTIP,
+    icon: c.default,
+    ...m
   })
 });
-t.default = m
+t.default = E

@@ -153,7 +153,9 @@ class O extends(l = s.PureComponent) {
               screenshare: d,
               isCurrentUserConnected: c
             }),
-            lowerBadgeWidth: (0, u.getBadgeWidthForValue)(l),
+            lowerBadgeSize: {
+              width: (0, u.getBadgeWidthForValue)(l)
+            },
             children: (0, a.jsx)(r.ListNavigatorItem, {
               id: e.id,
               children: l => (0, a.jsx)(u.NavItem, {

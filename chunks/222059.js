@@ -92,7 +92,9 @@ function H(e) {
       selected: X,
       lowerBadge: f > 0 ? (0, P.renderMentionBadge)(f) : null,
       upperBadge: Z,
-      lowerBadgeWidth: (0, o.getBadgeWidthForValue)(f),
+      lowerBadgeSize: {
+        width: (0, o.getBadgeWidthForValue)(f)
+      },
       children: (0, l.jsx)(o.NavItem, {
         onMouseEnter: () => N(!0),
         onMouseLeave: () => N(!1),
