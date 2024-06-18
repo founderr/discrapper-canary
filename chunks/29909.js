@@ -48,6 +48,7 @@ t.Z = r.memo(function(e) {
       onClick: O,
       onDoubleClick: e => e.preventDefault(),
       children: (0, i.jsx)(m, {
+        color: "currentColor",
         className: E.icon
       })
     })
