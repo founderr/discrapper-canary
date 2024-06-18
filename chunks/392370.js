@@ -70,8 +70,7 @@ function N(e) {
     }, [i, r, a.fetchState.fetching, null === (t = a.result) || void 0 === t ? void 0 : t.sections, l.fetchState.fetching, null === (n = l.result) || void 0 === n ? void 0 : n.sections])
   }({
     channel: t,
-    includeBuiltIn: !0,
-    allowFetch: r
+    includeBuiltIn: !0
   }), {
     apps: m
   } = function(e) {
