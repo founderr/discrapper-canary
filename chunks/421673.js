@@ -1,32 +1,53 @@
 "use strict";
 n.d(t, {
-  Z: function() {
-    return _
+  ZP: function() {
+    return h
   }
 }), n(724458), n(653041), n(47120);
 var i = n(658722),
   r = n.n(i),
-  s = n(339085),
-  o = n(633302),
-  a = n(697426),
-  l = n(242291);
-let u = [];
+  s = n(954955),
+  o = n.n(s),
+  a = n(339085),
+  l = n(633302),
+  u = n(626135),
+  _ = n(697426),
+  c = n(242291),
+  d = n(981631);
+let E = [],
+  I = o()(function(e, t) {
+    u.default.track(d.rMx.SEARCH_STARTED, {
+      channel_id: t,
+      search_type: d.aib.SOUNDBOARD,
+      location_stack: e
+    })
+  }, 350),
+  T = o()(function(e, t, n, i) {
+    u.default.track(d.rMx.SEARCH_RESULT_VIEWED, {
+      search_type: d.aib.SOUNDBOARD,
+      channel_id: n,
+      query: i,
+      total_results: e.length,
+      location_stack: t
+    })
+  }, 350);
 
-function _(e, t, n, i) {
-  if (0 === e.length) return u;
-  let _ = t.reduce((e, t) => {
-      for (let n of t.items) t.categoryInfo.type !== a.bg.FAVORITES && n.type === a.vB.SOUND && e.push(n.sound);
+function h(e, t, n, i, s) {
+  if (0 === e.length) return E;
+  let o = t.reduce((e, t) => {
+      for (let n of t.items) t.categoryInfo.type !== _.bg.FAVORITES && n.type === _.vB.SOUND && e.push(n.sound);
       return e
     }, []),
-    c = _.reduce((t, a) => (t[a.soundId] = function(e, t, n, i) {
-      var a;
-      let u = 0,
-        _ = t.name.toLocaleLowerCase(),
-        c = null != t.emojiId ? s.Z.getCustomEmojiById(t.emojiId) : null,
-        d = null != t.emojiName ? o.ZP.convertSurrogateToName(t.emojiName, !1) : null,
-        E = null != d ? o.ZP.getByName(d) : null,
-        I = null != c ? [c.name] : null !== (a = null == E ? void 0 : E.names) && void 0 !== a ? a : [];
-      return e === _ && (u += 8), I.includes(e) && (u += 7), _.startsWith(e) && (u += 6), I.some(t => t.startsWith(e)) && (u += 5), _.endsWith(e) && (u += 4), I.some(t => t.endsWith(e)) && (u += 3), r()(e, t.name.toLocaleLowerCase()) && (u += 2), I.some(t => r()(e, t)) && (u += 1), u > 0 && (0, l.Nq)(n, t, i) && (u += 100), u
-    }(e.toLocaleLowerCase(), a, n, i), t), {});
-  return _.filter(e => c[e.soundId] > 0).sort((e, t) => c[t.soundId] - c[e.soundId])
+    u = o.reduce((t, o) => (I(s, null == i ? void 0 : i.id), t[o.soundId] = function(e, t, n, i) {
+      var s;
+      let o = 0,
+        u = t.name.toLocaleLowerCase(),
+        _ = null != t.emojiId ? a.Z.getCustomEmojiById(t.emojiId) : null,
+        d = null != t.emojiName ? l.ZP.convertSurrogateToName(t.emojiName, !1) : null,
+        E = null != d ? l.ZP.getByName(d) : null,
+        I = null != _ ? [_.name] : null !== (s = null == E ? void 0 : E.names) && void 0 !== s ? s : [];
+      return e === u && (o += 8), I.includes(e) && (o += 7), u.startsWith(e) && (o += 6), I.some(t => t.startsWith(e)) && (o += 5), u.endsWith(e) && (o += 4), I.some(t => t.endsWith(e)) && (o += 3), r()(e, t.name.toLocaleLowerCase()) && (o += 2), I.some(t => r()(e, t)) && (o += 1), o > 0 && (0, c.Nq)(n, t, i) && (o += 100), o
+    }(e.toLocaleLowerCase(), o, n, i), t), {}),
+    d = o.filter(e => u[e.soundId] > 0).sort((e, t) => u[t.soundId] - u[e.soundId]);
+  return T(d, s, null == i ? void 0 : i.id, e), d
 }
