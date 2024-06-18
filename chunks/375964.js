@@ -12935,6 +12935,7 @@ e.exports = Object.freeze({
   PAYMENT_AUTHORIZING: "Authorizing",
   PAYMENT_AUTHORIZATION_EXPIRED: "Payment authorization link has expired.",
   PAYMENT_AUTH_SUCCEEDED_SUGGESTION: "If you followed this link after trying to make a purchase, please go back to the app to see the status of your purchase.",
+  PAYMENT_AUTHORIZED_SUCCEEDED_SUGGESTION: "If you followed this link after trying to make a purchase, please go back to the app and retry the purchase.",
   PAYMENT_AUTH_EXPIRED_SUGGESTION: "Please try to make the purchase again.",
   TEXT_IN_VOICE_ONBOARDING_TITLE: "NEW! Text chat in voice!",
   TEXT_IN_VOICE_ONBOARDING_SUBTITLE: "No more clogging general. Send messages, images, and links to everyone in this voice channel.",
