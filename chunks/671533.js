@@ -5,7 +5,7 @@ n(470079);
 var o = n(120356),
   a = n.n(o),
   l = n(325767),
-  u = n(785641);
+  u = n(459e3);
 (r = i || (i = {})).LEFT = "LEFT", r.RIGHT = "RIGHT", r.UP = "UP", r.DOWN = "DOWN", r.UP_LEFT = "UP_LEFT", r.DOWN_RIGHT = "DOWN_RIGHT";
 let _ = e => {
   let {

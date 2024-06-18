@@ -25,7 +25,7 @@ var i = n(735250),
   m = n(784222),
   O = n(149203),
   R = n(689938),
-  p = n(13450);
+  p = n(961184);
 
 function g(e) {
   return "animated" in e

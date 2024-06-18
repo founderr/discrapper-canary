@@ -9,7 +9,7 @@ n(470079);
 var r = n(120356),
   s = n.n(r),
   o = n(920906),
-  a = n(771941);
+  a = n(90004);
 let l = Object.freeze({
     tension: 400,
     friction: 30

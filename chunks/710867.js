@@ -2,7 +2,7 @@
 var i = n(735250);
 n(470079);
 var r = n(293335),
-  s = n(935689);
+  s = n(539);
 t.Z = e => {
   let {
     profileEffectConfig: t,

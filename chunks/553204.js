@@ -15,7 +15,7 @@ var n = t(735250),
   u = t(176278),
   E = t(624138),
   _ = t(689938),
-  I = t(3827);
+  I = t(15110);
 let T = (0, E.Mg)(r.Z.ROLE_ICON_UPLOADER_ICON_SIZE);
 
 function N(e) {

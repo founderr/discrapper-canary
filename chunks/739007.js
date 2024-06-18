@@ -7,7 +7,7 @@ n.d(t, {
 var i = n(735250),
   r = n(470079),
   s = n(561779),
-  o = n(623509);
+  o = n(83622);
 let a = e => "".concat(e.toFixed(0), "%"),
   l = r.forwardRef(function(e, t) {
     let {

@@ -10,7 +10,7 @@ n.d(t, {
 var i = n(735250);
 n(470079);
 var r = n(772848),
-  s = n(948583);
+  s = n(20237);
 
 function o() {
   return (0, i.jsx)("svg", {

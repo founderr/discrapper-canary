@@ -11,8 +11,8 @@ var i = n(735250),
   a = n(696689),
   l = n.n(a),
   u = n(692547),
-  _ = n(701717),
-  c = n(24073);
+  _ = n(951200),
+  c = n(487204);
 let d = Object.fromEntries(Object.keys(u.Z.colors).map(e => [l()(e), e])),
   E = r.forwardRef(function(e, t) {
     let n, {

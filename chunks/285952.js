@@ -3,8 +3,8 @@ var i = n(735250),
   r = n(470079),
   s = n(120356),
   o = n.n(s),
-  a = n(335607),
-  l = n(961047);
+  a = n(151366),
+  l = n(83922);
 let u = {
     VERTICAL: l.vertical,
     HORIZONTAL: a.horizontal,

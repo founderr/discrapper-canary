@@ -10,7 +10,7 @@ var i = n(735250),
   _ = n(585483),
   c = n(981631),
   d = n(689938),
-  E = n(480710);
+  E = n(23838);
 t.Z = r.memo(function(e) {
   let {
     width: t,
