@@ -399,7 +399,7 @@ function B(e) {
     onClick: () => (0, E.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([t.e("49237"), t.e("99387"), t.e("10778"), t.e("81352")]).then(t.bind(t, 766775));
+      } = await Promise.all([t.e("99387"), t.e("10778"), t.e("81352")]).then(t.bind(t, 766775));
       return t => (0, i.jsx)(e, {
         ...t,
         guildTemplate: s
