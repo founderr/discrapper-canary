@@ -185,12 +185,10 @@ function L(e, t) {
 function D(e) {
   return null == e.message_snapshots ? [] : e.message_snapshots.map(e => {
     let {
-      message: t,
-      guild: n
+      message: t
     } = e;
     return new _.Hx({
-      message: m(t),
-      guild: n
+      message: m(t)
     })
   })
 }

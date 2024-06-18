@@ -11,7 +11,7 @@ var i = n(544891),
   a = n(981631);
 let l = new Set;
 async function u(e) {
-  if (null == s.Z.getGuild(e) && null == o.Z.getGuild(e)) {
+  if (null == s.Z.getGuild(e) && null == o.Z.getGuildOrStatus(e)) {
     if (!l.has(e)) {
       r.Z.dispatch({
         type: "BASIC_GUILD_FETCH",
@@ -19,8 +19,7 @@ async function u(e) {
       }), l.add(e);
       try {
         let t = (await i.tn.get({
-          url: a.ANM.GUILD_BASIC(e),
-          oldFormErrors: !0
+          url: a.ANM.GUILD_BASIC(e)
         })).body;
         r.Z.dispatch({
           type: "BASIC_GUILD_FETCH_SUCCESS",

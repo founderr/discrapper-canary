@@ -32,7 +32,7 @@ class d extends r.Z {
 }
 class E extends r.Z {
   constructor(e) {
-    super(), c(this, "message", void 0), c(this, "guild", void 0), this.guild = e.guild, this.message = new d(e.message)
+    super(), c(this, "message", void 0), this.message = new d(e.message)
   }
 }
 t.ZP = class e extends d {
