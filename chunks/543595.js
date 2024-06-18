@@ -21,7 +21,7 @@ var i, r, s, o = n(735250),
   A = n(503438),
   m = n(802856),
   O = n(420660),
-  R = n(539746),
+  R = n(774073),
   p = n(833858),
   g = n(223135),
   C = n(769654),
@@ -482,7 +482,7 @@ class q extends(r = a.PureComponent) {
       application: s,
       showReactions: a,
       onOpenGameProfile: l,
-      canSeeGameProfile: _
+      shouldOpenGameProfile: _
     } = this.props, c = this.activity;
     if (null == c || c.type === x.IIU.CUSTOM_STATUS) return null;
     let d = "UserPopout" === t || "UserPopoutV2" === t || "BiteSizePopout" === t,
@@ -498,19 +498,18 @@ class q extends(r = a.PureComponent) {
       R = this.renderChannelDetails(c),
       p = null != i ? i() : null,
       g = this.renderTimeBar(c),
-      C = null != c.application_id && _,
-      v = ![e, f, N, A, O, g, p].some(e => null != e);
+      C = ![e, f, N, A, O, g, p].some(e => null != e);
     return (0, o.jsxs)("div", {
       className: u()(this.getTypeClass("activity"), r),
-      children: [this.renderHeader(v), (0, o.jsx)("div", {
+      children: [this.renderHeader(C), (0, o.jsx)("div", {
         className: u()(S ? H.bodyAlignCenter : H.bodyNormal, a && !d && !h && H.wrap),
         children: (0, o.jsxs)("div", {
           className: H.activityDetails,
           children: [e, this.isStreamerOnTypeActivityFeed() ? null : (0, o.jsxs)(y.Z.Child, {
             className: u()((0, M.l)(H, "content", S ? "GameImage" : null != e ? "Images" : "NoImages", t)),
             children: [(0, o.jsxs)(E.Clickable, {
-              className: u()(C && H.openGameProfile),
-              onClick: C ? () => {
+              className: u()(_ && H.openGameProfile),
+              onClick: _ ? () => {
                 (0, E.openModalLazy)(async () => {
                   let {
                     default: e
@@ -562,10 +561,14 @@ class q extends(r = a.PureComponent) {
 }
 F(q, "Types", i);
 let X = e => {
-  let t = (0, R.x)("UserActivity");
+  var t;
+  let n = (0, R.Z)({
+    location: "UserActivity",
+    applicationId: null === (t = e.application) || void 0 === t ? void 0 : t.id
+  });
   return (0, o.jsx)(q, {
     ...e,
-    canSeeGameProfile: t
+    shouldOpenGameProfile: n
   })
 };
 X.Types = i, t.Z = X
