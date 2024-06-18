@@ -33,7 +33,7 @@ var i, r, s = n(735250),
   L = n(626135),
   D = n(238302),
   M = n(514361),
-  P = n(110577),
+  P = n(583901),
   y = n(469115),
   U = n(981631),
   b = n(921944),
@@ -42,7 +42,7 @@ var i, r, s = n(735250),
   k = n(526761),
   B = n(231338),
   x = n(689938),
-  V = n(737679);
+  V = n(758219);
 (r = i || (i = {})).EDITOR = "EDITOR", r.SETTINGS = "SETTINGS";
 let Z = Object.freeze({
     EDITOR: k.fy.SLOW_USER_ACTION,

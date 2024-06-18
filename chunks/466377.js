@@ -41,7 +41,7 @@ var i, r, s = n(735250),
   m = n(602091),
   O = n(231338),
   R = n(689938),
-  p = n(721790);
+  p = n(743942);
 (i = r || (r = {})).SMALL = "small", i.MEDIUM = "medium", i.LARGE = "large", i.DYNAMIC = "dynamic";
 let g = Object.freeze({
   small: p.small,

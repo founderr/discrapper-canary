@@ -8,7 +8,7 @@ n.d(t, {
   }
 });
 var i = n(735250);
-n(470079), n(637515);
+n(470079), n(269936);
 let r = "cash-app-pay-container";
 
 function s() {

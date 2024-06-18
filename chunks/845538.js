@@ -15,7 +15,7 @@ var i = n(735250),
   l = n(981631),
   u = n(921944),
   _ = n(689938),
-  c = n(628842);
+  c = n(995006);
 
 function d(e) {
   return e || !(s.tq || s.Em) ? _.Z.Messages.SEASONAL_GIFTING_DM_POPUP_BODY : _.Z.Messages.SEASONAL_GIFTING_MAKE_SOMEONES_DAY_TOOLTIP

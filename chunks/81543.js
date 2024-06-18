@@ -10,7 +10,7 @@ var n, i, l = t(735250),
   o = t.n(r),
   c = t(748780),
   d = t(215569),
-  u = t(328207);
+  u = t(228119);
 (n = i || (i = {}))[n.RIGHT = -1] = "RIGHT", n[n.LEFT = 1] = "LEFT";
 let E = {
   friction: 10,

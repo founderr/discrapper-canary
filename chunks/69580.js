@@ -67,7 +67,7 @@ var i, r, s = n(735250),
   K = n(574384),
   z = n(981631),
   q = n(689938),
-  X = n(884103);
+  X = n(248702);
 let Q = "oauth2-authorize-header-id";
 
 function J() {

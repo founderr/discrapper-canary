@@ -4,7 +4,7 @@ var i = n(735250),
   s = n(120356),
   o = n.n(s),
   a = n(481060),
-  l = n(993123);
+  l = n(212170);
 let u = r.memo(function(e) {
   let {
     text: t,

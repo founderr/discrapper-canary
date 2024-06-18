@@ -49,7 +49,7 @@ var i = n(735250),
   q = n(981631),
   X = n(921944),
   Q = n(185923),
-  J = n(773390);
+  J = n(919854);
 let $ = (0, G.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_HORIZONTAL),
   ee = (0, G.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
   et = e => e.stopPropagation(),

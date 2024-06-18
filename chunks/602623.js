@@ -17,7 +17,7 @@ var i, r = n(735250),
   I = n(594174),
   T = n(426563),
   h = n(806519),
-  S = n(881867);
+  S = n(171553);
 
 function f(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {

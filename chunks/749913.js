@@ -58,7 +58,7 @@ var s = n(735250),
   ee = n(981631),
   et = n(176505),
   en = n(689938),
-  es = n(730729);
+  es = n(852908);
 let el = E.I.CREATE_FORUM_POST;
 
 function ea(e) {

@@ -16,7 +16,7 @@ var n, a, r, l, i = t(735250),
   p = t(122289),
   g = t(624138),
   h = t(689938),
-  I = t(696674);
+  I = t(398333);
 class _ extends(l = o.PureComponent) {
   get typeString() {
     let {

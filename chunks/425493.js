@@ -6,7 +6,7 @@ var o = n(120356),
   l = n(873546),
   u = n(481060),
   _ = n(689938),
-  c = n(966646);
+  c = n(375515);
 (i = r || (r = {})).DEFAULT = "", i.BOLD = "Bold", i.SOLID = "Solid";
 let d = e => {
   let {

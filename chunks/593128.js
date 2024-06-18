@@ -28,7 +28,7 @@ var n = t(735250),
   M = t(981631),
   f = t(231338),
   D = t(689938),
-  v = t(943303);
+  v = t(740268);
 let j = e => [{
     section: E.ID.HEADER,
     label: D.Z.Messages.CLAN_SETTINGS_BASIC_INFO

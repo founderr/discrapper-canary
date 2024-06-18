@@ -28,7 +28,7 @@ var i = n(735250),
   p = n(921944),
   g = n(474936),
   C = n(689938),
-  v = n(819074);
+  v = n(698938);
 let L = () => {
     u.Z.dispatch({
       type: "APP_ICON_EDITOR_CLOSE"

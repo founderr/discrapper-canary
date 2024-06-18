@@ -51,7 +51,7 @@ var i = n(735250),
   Q = n(151851),
   J = n(981631),
   $ = n(921944),
-  ee = n(776954);
+  ee = n(242694);
 n(792295), Promise.resolve().then(n.bind(n, 62883)).then(e => {
   j.isPlatformEmbedded ? window.addEventListener("contextmenu", e.contextMenuCallbackNative, !1) : window.addEventListener("contextmenu", e.contextMenuCallbackWeb, !1)
 }), (0, d.E)({

@@ -17,7 +17,7 @@ var i = t(852229),
   E = t(613810),
   _ = t(391181),
   I = t(689938),
-  T = t(460316);
+  T = t(673817);
 let N = "guild-product-listings-header";
 
 function m(e) {

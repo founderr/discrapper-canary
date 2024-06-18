@@ -12,7 +12,7 @@ n(470079);
 var o = n(120356),
   a = n.n(o),
   l = n(481060),
-  u = n(239260);
+  u = n(873773);
 (i = r || (r = {})).INFO = "info", i.WARNING = "warning";
 let _ = {
     info: u.info,

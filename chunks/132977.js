@@ -18,7 +18,7 @@ var i, r, s, o, a, l, u = n(735250),
   I = n(481060),
   T = n(727637),
   h = n(285952),
-  S = n(385742);
+  S = n(650234);
 (i = a || (a = {})).DEFAULT = "default", i.SMALL = "small";
 let f = {
     default: S.shineDefault,

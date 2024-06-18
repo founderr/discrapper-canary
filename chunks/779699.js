@@ -6,7 +6,7 @@ var r = n(120356),
   o = n(481060),
   a = n(457926),
   l = n(689938),
-  u = n(345116);
+  u = n(157451);
 t.Z = function(e) {
   let {
     iconType: t,

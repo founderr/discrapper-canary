@@ -22,7 +22,7 @@ var i = n(735250),
   f = n(228168),
   N = n(981631),
   A = n(474936),
-  m = n(579935);
+  m = n(148443);
 let O = o.AvatarSizes.SIZE_80,
   R = I.ZP.getEnableHardwareAcceleration() ? o.AnimatedAvatar : o.Avatar;
 

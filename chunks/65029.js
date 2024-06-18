@@ -8,7 +8,7 @@ var r = n(120356),
   l = n(819758),
   u = n(149203),
   _ = n(689938),
-  c = n(181710);
+  c = n(615246);
 let d = e => {
   let {
     emojiSubCategory: t

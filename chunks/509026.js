@@ -36,7 +36,7 @@ function E(e) {
           null != e && null != i && (0, l.openModalLazy)(async () => {
             let {
               CreateEmojiWithRolesModal: l
-            } = await Promise.all([t.e("99387"), t.e("9007")]).then(t.bind(t, 142774));
+            } = await Promise.all([t.e("99387"), t.e("9007")]).then(t.bind(t, 604623));
             return t => (0, n.jsx)(l, {
               ...t,
               data: e,
@@ -61,7 +61,7 @@ function E(e) {
           (0, l.openModalLazy)(async () => {
             let {
               UpdateEmojiRolesModal: i
-            } = await Promise.all([t.e("99387"), t.e("9007")]).then(t.bind(t, 142774));
+            } = await Promise.all([t.e("99387"), t.e("9007")]).then(t.bind(t, 604623));
             return t => (0, n.jsx)(i, {
               ...t,
               emoji: e,

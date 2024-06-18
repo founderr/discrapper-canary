@@ -4,7 +4,7 @@ n.d(t, {
     return r
   }
 });
-var i = n(768160);
+var i = n(639897);
 let r = {
   default: i.colorDefault,
   brand: i.colorBrand,

@@ -25,7 +25,7 @@ var s = n(735250),
   N = n(127654),
   I = n(124252),
   S = n(689938),
-  p = n(382170);
+  p = n(563292);
 let v = [{
     name: "Media Post Thumbnail",
     extensions: ["jpg", "jpeg", "png", "gif", "webp"]
