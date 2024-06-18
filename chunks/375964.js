@@ -4915,6 +4915,7 @@ e.exports = Object.freeze({
   OUTGOING_FRIEND_REQUEST_DELETE_MSG: "Are you sure you want to delete your friend request to **!!{name}!!**?",
   FRIEND_REQUESTS_COMBINED_COUNT: "{incoming, number} received  •  {outgoing, number} sent",
   INCOMING_FRIEND_REQUEST_ACCEPTED_SUBLABEL: "is now your friend!",
+  INCOMING_FRIEND_REQUEST_ACCEPTED_SUBLABEL_A11Y: "!!{name}!! is now your friend!",
   BLOCK: "Block",
   CONFIRM_USER_BLOCK_TITLE: "Block !!{name}!!?",
   CONFIRM_USER_BLOCK_BODY: "Are you sure you want to block **!!{name}!!**? Blocking this user will also remove them from your friends list.",
