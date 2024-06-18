@@ -13,6 +13,7 @@ function l(e) {
   o.default.track(a.rMx.QUEST_DECISION_ROUNDTRIP, {
     ...(0, i.Z)(),
     endpoint: e.endpoint,
+    was_successful: e.wasSuccessful,
     api_latency_ms: t,
     mobile_network_type: s.Z.getType(),
     ...null != n && {
