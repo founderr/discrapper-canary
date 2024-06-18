@@ -32,7 +32,7 @@ function C(e) {
     glow: a,
     playIntroTransition: C,
     onUnlocked: I
-  } = e, [N, Z] = s.useState(!1), x = (0, o.e7)([c.Z], () => c.Z.useReducedMotion), {
+  } = e, [Z, N] = s.useState(!1), x = (0, o.e7)([c.Z], () => c.Z.useReducedMotion), {
     hqStreamingState: f
   } = (0, d.k)(r.q.STREAM_HIGH_QUALITY), A = s.useCallback(() => {
     (0, m.dE)(!0), I()
@@ -40,10 +40,10 @@ function C(e) {
   return s.useEffect(() => {
     if (f.hqStreamingUnlockAnimationPlayed) return;
     let e = setTimeout(() => {
-      Z(!0)
+      N(!0)
     }, 1150);
     return () => {
-      clearTimeout(e), Z(!1)
+      clearTimeout(e), N(!1)
     }
   }, [A, f, x]), s.useEffect(() => {
     if (f.hqStreamingUnlockAnimationPlayed) return;
@@ -74,7 +74,7 @@ function C(e) {
         shouldAnimate: !x,
         pauseAtFrame: 90,
         className: i()(h.animation, {
-          [h.animationEndState]: N || !C || x
+          [h.animationEndState]: Z || !C || x
         }),
         loop: !1
       }), (0, l.jsx)("div", {

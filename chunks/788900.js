@@ -18,7 +18,7 @@ function l(e) {
       for (let a = 0; a < n; a++)
         for (let i = a ? 0 : 1; i * n < t * (n - a); i++) s.push(((e[g + (C >> 1)] >> ((1 & C++) << 2) & 15) / 7.5 - 1) * l);
       return s
-    }, N = I(E, _, (i >> 18 & 31) / 31), Z = I(3, 3, (r >> 3 & 63) / 63 * 1.25), x = I(3, 3, (r >> 9 & 63) / 63 * 1.25), f = d && I(5, 5, h), A = function(e) {
+    }, Z = I(E, _, (i >> 18 & 31) / 31), N = I(3, 3, (r >> 3 & 63) / 63 * 1.25), x = I(3, 3, (r >> 9 & 63) / 63 * 1.25), f = d && I(5, 5, h), A = function(e) {
       let t = e[3],
         n = 128 & e[2],
         l = 128 & e[4];
@@ -33,11 +33,11 @@ function l(e) {
         for (let e = 0, n = l(E, d ? 5 : 3); e < n; e++) L[e] = s(t / T * (i + .5) * e);
         for (let n = 0, a = l(_, d ? 5 : 3); n < a; n++) p[n] = s(t / R * (e + .5) * n);
         for (let e = 0, t = 0; e < _; e++)
-          for (let n = e ? 0 : 1, l = 2 * p[e]; n * _ < E * (_ - e); n++, t++) r += N[t] * L[n] * l;
+          for (let n = e ? 0 : 1, l = 2 * p[e]; n * _ < E * (_ - e); n++, t++) r += Z[t] * L[n] * l;
         for (let e = 0, t = 0; e < 3; e++)
           for (let n = e ? 0 : 1, l = 2 * p[e]; n < 3 - e; n++, t++) {
             let e = L[n] * l;
-            m += Z[t] * e, h += x[t] * e
+            m += N[t] * e, h += x[t] * e
           }
         if (d)
           for (let e = 0, t = 0; e < 5; e++)

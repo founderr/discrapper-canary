@@ -21,8 +21,8 @@ var l = n(735250),
   g = n(494620),
   C = n(592125),
   I = n(650774),
-  N = n(430824),
-  Z = n(131951),
+  Z = n(430824),
+  N = n(131951),
   x = n(944486),
   f = n(594174),
   A = n(449224),
@@ -94,7 +94,7 @@ function Y(e) {
   let {
     onChange: t,
     guildId: n
-  } = e, s = (0, r.e7)([N.Z], () => N.Z.getGuild(n));
+  } = e, s = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n));
   return null == s ? (t(), null) : (0, l.jsx)(o.FormItem, {
     title: F.Z.Messages.GO_LIVE_MODAL_GUILD_FORM_TITLE,
     className: z.modalContent,
@@ -197,7 +197,7 @@ function X(e) {
     selectedGuildId: S,
     targetGuildPremiumTier: h,
     selectSource: I,
-    selectGuild: N,
+    selectGuild: Z,
     sound: A,
     onClose: T,
     onChangeSelectedFPS: R,
@@ -212,7 +212,7 @@ function X(e) {
   } = e, z = (0, r.e7)([x.Z, C.Z], () => C.Z.getChannel(x.Z.getVoiceChannelId())), X = (0, r.e7)([j.Z], () => j.Z.GPUDriversOutdated), $ = (0, r.e7)([j.Z], () => j.Z.problematicGPUDriver), ee = (0, r.e7)([f.default], () => f.default.getCurrentUser()), et = (0, m.Go)(), en = (0, m.Zq)({
     autoTrackExposure: !et
   }), el = (0, D.Z)();
-  null != t && t.id.startsWith("screen") && !Z.Z.supportsScreenSoundshare() && (el = F.Z.Messages.GO_LIVE_SCREENSHARE_NO_SOUND);
+  null != t && t.id.startsWith("screen") && !N.Z.supportsScreenSoundshare() && (el = F.Z.Messages.GO_LIVE_SCREENSHARE_NO_SOUND);
   let es = et ? (0, l.jsx)(_.Z, {
       guildId: S,
       isAnimationDone: B
@@ -220,7 +220,7 @@ function X(e) {
     ea = !!(null == t ? void 0 : t.id.startsWith("camera")),
     ei = null != ee && ee.verified && !ee.bot,
     er = null != z && !(0, d.Yk)(z),
-    eo = !(0, r.e7)([Z.Z], () => Z.Z.getHardwareEncoding());
+    eo = !(0, r.e7)([N.Z], () => N.Z.getHardwareEncoding());
   return (0, l.jsxs)(s.Fragment, {
     children: [ea ? (0, l.jsx)(G.Z, {
       selectedSource: t,
@@ -239,7 +239,7 @@ function X(e) {
         onChange: k,
         screen: t.id.startsWith("screen")
       }) : null]
-    }), N && null != S ? (0, l.jsx)(Y, {
+    }), Z && null != S ? (0, l.jsx)(Y, {
       guildId: S,
       onChange: w
     }) : null, null != z ? (0, l.jsx)(b.Z, {

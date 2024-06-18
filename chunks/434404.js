@@ -31,7 +31,7 @@ let O = new a.Z("GuildSettingsActionCreators"),
     },
     async open(e, t, i, r) {
       var s;
-      await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("23755"), n.e("89350"), n.e("11751"), n.e("29549"), n.e("7654"), n.e("31605"), n.e("33053"), n.e("65840"), n.e("45397"), n.e("75475"), n.e("90508"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("3084"), n.e("12549"), n.e("43502"), n.e("47523"), n.e("77594"), n.e("1187"), n.e("19589"), n.e("41889"), n.e("92557"), n.e("96936")]).then(n.bind(n, 994763)), (null === (s = T.Z.getGuild(e)) || void 0 === s ? void 0 : s.hasFeature(N.oNc.COMMUNITY)) && (t === N.pNK.GUILD_AUTOMOD && (t = N.pNK.SAFETY, r = N.KsC.SAFETY_AUTOMOD), t === N.pNK.MEMBER_VERIFICATION && (t = N.pNK.SAFETY, r = N.KsC.SAFETY_DM_AND_SPAM_PROTECTION)), R.init(e, t, i, r);
+      await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("23755"), n.e("89350"), n.e("11751"), n.e("29549"), n.e("7654"), n.e("31605"), n.e("33053"), n.e("65840"), n.e("45397"), n.e("75475"), n.e("90508"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("3084"), n.e("12549"), n.e("43502"), n.e("18965"), n.e("77594"), n.e("1187"), n.e("19589"), n.e("41889"), n.e("92557"), n.e("96936")]).then(n.bind(n, 994763)), (null === (s = T.Z.getGuild(e)) || void 0 === s ? void 0 : s.hasFeature(N.oNc.COMMUNITY)) && (t === N.pNK.GUILD_AUTOMOD && (t = N.pNK.SAFETY, r = N.KsC.SAFETY_AUTOMOD), t === N.pNK.MEMBER_VERIFICATION && (t = N.pNK.SAFETY, r = N.KsC.SAFETY_DM_AND_SPAM_PROTECTION)), R.init(e, t, i, r);
       (0, o.jN)(N.S9g.GUILD_SETTINGS)
     },
     close() {

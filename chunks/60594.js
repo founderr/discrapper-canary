@@ -19,8 +19,8 @@ var l, s, a = n(735250),
   g = n(812206),
   C = n(594190),
   I = n(751571),
-  N = n(120522),
-  Z = n(933843),
+  Z = n(120522),
+  N = n(933843),
   x = n(485731),
   f = n(361291),
   A = n(592125),
@@ -71,17 +71,17 @@ function K(e) {
   }), [ec, ed] = null !== (l = (0, U.Z)(et, er, eu)) && void 0 !== l ? l : [H.LY.RESOLUTION_720, H.ws.FPS_30];
   et !== H.tI.PRESET_CUSTOM && (en = ec, el = ed), !(0, G.Z)(et, en, el, er, eu) && (en = ec, el = ed);
   let em = (0, O.Dt)();
-  let [eE, e_] = i.useState((K = q, Y = Q, K ? 0 : Y ? 1 : 2)), [eS, eh] = i.useState(null), [eg, eC] = i.useState(!1), [eI, eN] = i.useState(null), [eZ, ex] = i.useState(null), [ef, eA] = i.useState(null), [eT, eR] = i.useState(et), [ev, eL] = i.useState(en), [ep, eM] = i.useState(el), [eO, ej] = i.useState(es), [eP, eD] = i.useState(null != J ? J : null), eG = null !== (s = null == ea ? void 0 : ea.id) && void 0 !== s ? s : eI;
+  let [eE, e_] = i.useState((K = q, Y = Q, K ? 0 : Y ? 1 : 2)), [eS, eh] = i.useState(null), [eg, eC] = i.useState(!1), [eI, eZ] = i.useState(null), [eN, ex] = i.useState(null), [ef, eA] = i.useState(null), [eT, eR] = i.useState(et), [ev, eL] = i.useState(en), [ep, eM] = i.useState(el), [eO, ej] = i.useState(es), [eP, eD] = i.useState(null != J ? J : null), eG = null !== (s = null == ea ? void 0 : ea.id) && void 0 !== s ? s : eI;
   async function eU() {
     var e, t, n;
-    o()(null != ei || null != eZ, "got nothing to stream");
+    o()(null != ei || null != eN, "got nothing to stream");
     let l = null !== (e = null == ea ? void 0 : ea.id) && void 0 !== e ? e : eI;
     o()(null != l, "Received null target channel ID");
     let s = A.Z.getChannel(l),
       a = null !== (t = null == s ? void 0 : s.getGuildId()) && void 0 !== t ? t : J;
     null == ea && _.default.selectVoiceChannel(l);
     let i = !0;
-    (0, Z.vw)(c.q.STREAM_HIGH_QUALITY) && (i = await (0, N.S)(c.q.STREAM_HIGH_QUALITY), (0, x.J1)(!(0, Z.mc)(ev, ep)), j.default.track(V.rMx.PERK_DEMO_OFFER_ACCEPTED, {
+    (0, N.vw)(c.q.STREAM_HIGH_QUALITY) && (i = await (0, Z.S)(c.q.STREAM_HIGH_QUALITY), (0, x.J1)(!(0, N.mc)(ev, ep)), j.default.track(V.rMx.PERK_DEMO_OFFER_ACCEPTED, {
       guild_id: a,
       channel_id: null !== (n = null == ea ? void 0 : ea.id) && void 0 !== n ? n : eI,
       perk_type: c.q.STREAM_HIGH_QUALITY,
@@ -97,12 +97,12 @@ function K(e) {
       frameRate: d,
       soundshareEnabled: eO
     });
-    let m = (0, B.Z)(ei, eZ, C.ZP.getRunningGames()),
-      h = !(0, P.isWindows)() || null == m || (null == eZ ? void 0 : eZ.id.startsWith("camera:")) || null == m ? null : m.pid;
+    let m = (0, B.Z)(ei, eN, C.ZP.getRunningGames()),
+      h = !(0, P.isWindows)() || null == m || (null == eN ? void 0 : eN.id.startsWith("camera:")) || null == m ? null : m.pid;
     (0, S.WH)(a, l, {
       pid: h,
-      sourceId: null == h && null != eZ ? eZ.id : null,
-      sourceName: null == h && null != eZ ? eZ.name : null,
+      sourceId: null == h && null != eN ? eN.id : null,
+      sourceName: null == h && null != eN ? eN.name : null,
       audioSourceId: ef,
       sound: eO
     }), (async () => {
@@ -140,11 +140,11 @@ function K(e) {
   }, [er, eu, ep, ev, eT]);
   async function ey(e) {
     if (e.preventDefault(), 1 === eE) return e_(2);
-    let t = (0, B.Z)(ei, eZ, C.ZP.getRunningGames()),
+    let t = (0, B.Z)(ei, eN, C.ZP.getRunningGames()),
       l = D.ZP.supportsFeature(V.eRX.ELEVATED_HOOK) && (null == t ? void 0 : t.elevated);
-    if ((0, P.isMac)() && null != eZ) {
+    if ((0, P.isMac)() && null != eN) {
       let e = await R.Z.getMediaEngine().getDesktopSources(),
-        t = eZ.id;
+        t = eN.id;
       if (t.startsWith("screen") && e.length > 0 && !e.some(e => e.includes(t))) {
         var s, i;
         s = t, i = e, j.default.track(V.rMx.SCREENSHARE_FAILED, {
@@ -236,7 +236,7 @@ function K(e) {
         children: (0, a.jsx)("div", {
           className: z.modalSize,
           children: (0, a.jsx)(k.Z, {
-            selectedSource: eZ,
+            selectedSource: eN,
             onChangeSelectedSource: ek
           })
         })
@@ -248,7 +248,7 @@ function K(e) {
             selectedChannelId: null !== (r = null == ea ? void 0 : ea.id) && void 0 !== r ? r : eI,
             selectedPreset: eT,
             selectedResolution: ev,
-            selectedSource: eZ,
+            selectedSource: eN,
             selectedFPS: ep,
             sound: eO,
             sourceChanged: eg,
@@ -256,7 +256,7 @@ function K(e) {
             onChangeSelectedFPS: e => ew(eT, ev, e),
             onChangeSelectedResolution: e => ew(eT, e, ep),
             onChangeSelectedPreset: e => ew(e, ev, ep),
-            onChangeSelectedChannelId: eN,
+            onChangeSelectedChannelId: eZ,
             onChangeSelectedSource: ek,
             onChangeSource: () => e_(1),
             onChangeAudioDevice: e => eA(e),
@@ -283,7 +283,7 @@ function K(e) {
           return null
       }
     }(eE, q, Q, eg),
-    ez = 2 !== eE || null == eZ && null == ei || null == eG,
+    ez = 2 !== eE || null == eN && null == ei || null == eG,
     eK = (0, a.jsxs)(m.ModalFooter, {
       justify: null == eW ? M.Z.Justify.START : M.Z.Justify.BETWEEN,
       children: [(0, a.jsx)(m.Button, {

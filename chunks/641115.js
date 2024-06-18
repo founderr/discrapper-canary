@@ -21,8 +21,8 @@ var l = n(735250),
   g = n(386542),
   C = n(594174),
   I = n(285952),
-  N = n(74538),
-  Z = n(451467),
+  Z = n(74538),
+  N = n(451467),
   x = n(200445),
   f = n(122186),
   A = n(37113),
@@ -146,11 +146,11 @@ function D(e) {
   } = e, y = (0, c.e7)([C.default], () => {
     let e = C.default.getCurrentUser();
     return o()(null != e, "StreamSettings: user cannot be undefined"), e
-  }), k = N.ZP.canStreamQuality(N.U2.MID, y), {
+  }), k = Z.ZP.canStreamQuality(Z.U2.MID, y), {
     location: B
   } = (0, E.O)(), H = (0, _.Zq)({
     autoTrackExposure: !1
-  }), V = (0, N.I5)(y, R.p9.TIER_1), {
+  }), V = (0, Z.I5)(y, R.p9.TIER_1), {
     inPerksDemosExperiment: F
   } = S.Z.useExperiment({
     location: "Go Live Modal"
@@ -188,7 +188,7 @@ function D(e) {
       buttons: $.map(e => P({
         type: e,
         selected: e.value === r,
-        needsPremium: !(0, Z.Z)(i, e.value, j, y, b),
+        needsPremium: !(0, N.Z)(i, e.value, j, y, b),
         needsDemo: W && e.value !== A.LY.RESOLUTION_720,
         analyticsLocation: ee,
         useGradient: !0,
@@ -201,7 +201,7 @@ function D(e) {
       buttons: A.k0.map(e => P({
         type: e,
         selected: e.value === j,
-        needsPremium: !(0, Z.Z)(i, r, e.value, y, b),
+        needsPremium: !(0, N.Z)(i, r, e.value, y, b),
         needsDemo: W && e.value === A.ws.FPS_60,
         analyticsLocation: ee,
         useGradient: !0,

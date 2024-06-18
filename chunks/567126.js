@@ -21,8 +21,8 @@ var l = n(735250),
   g = n(977156),
   C = n(433811),
   I = n(131951),
-  N = n(449224),
-  Z = n(285952),
+  Z = n(449224),
+  N = n(285952),
   x = n(643095),
   f = n(358085),
   A = n(463727),
@@ -91,7 +91,7 @@ async function D() {
 }
 
 function G(e) {
-  let t = (0, f.isWindows)() ? (0, R.Z)(_.ZP, N.Z) : null,
+  let t = (0, f.isWindows)() ? (0, R.Z)(_.ZP, Z.Z) : null,
     n = _.ZP.getRunningGames();
   return null != t && (0, T.Z)(e.id, t.windowHandle) ? 2 : null != n.find(t => (0, T.Z)(e.id, t.windowHandle)) ? 1 : 0
 }
@@ -104,7 +104,7 @@ function U(e) {
     enableGoLiveCaptureCard: a
   } = A.Z.useExperiment({
     location: "GoLive_Source_Select"
-  }), r = I.Z.supports(M.AN.GO_LIVE_HARDWARE), [c, E] = s.useState(null), [N, f] = s.useState(null), [R, D] = s.useState(null), U = null != R && R.length > 0, [b, w] = s.useState(o.vA.WINDOW), [y, k] = s.useState(!1), B = s.useRef(null), H = s.useRef(new d.Xp), V = (0, u.e7)([_.ZP], () => _.ZP.getRunningGames()), F = function(e, t, n) {
+  }), r = I.Z.supports(M.AN.GO_LIVE_HARDWARE), [c, E] = s.useState(null), [Z, f] = s.useState(null), [R, D] = s.useState(null), U = null != R && R.length > 0, [b, w] = s.useState(o.vA.WINDOW), [y, k] = s.useState(!1), B = s.useRef(null), H = s.useRef(new d.Xp), V = (0, u.e7)([_.ZP], () => _.ZP.getRunningGames()), F = function(e, t, n) {
     let l = (0, g.Zy)({
       location: p.dr.STREAM_SOURCE_SELECT
     });
@@ -122,7 +122,7 @@ function U(e) {
       }
       return null
     }, [l, e, t, n])
-  }((0, u.e7)([S.Z], () => S.Z.quests), V, N), W = s.useMemo(() => null == N ? null : [...N].sort((e, t) => (null == F ? void 0 : F.source.id) === e.id ? -1 : (null == F ? void 0 : F.source.id) === t.id ? 1 : G(t) - G(e)), [F, N]);
+  }((0, u.e7)([S.Z], () => S.Z.quests), V, Z), W = s.useMemo(() => null == Z ? null : [...Z].sort((e, t) => (null == F ? void 0 : F.source.id) === e.id ? -1 : (null == F ? void 0 : F.source.id) === t.id ? 1 : G(t) - G(e)), [F, Z]);
   s.useEffect(() => {
     let e = H.current;
     return P().then(e => {
@@ -159,10 +159,10 @@ function U(e) {
           return R
       }
     }(b);
-  if (null == K) return (0, l.jsx)(Z.Z, {
+  if (null == K) return (0, l.jsx)(N.Z, {
     className: j.spinner,
-    justify: Z.Z.Justify.CENTER,
-    align: Z.Z.Align.CENTER,
+    justify: N.Z.Justify.CENTER,
+    align: N.Z.Align.CENTER,
     children: (0, l.jsx)(m.Spinner, {})
   });
   let Y = K.map(e => {
