@@ -13,15 +13,15 @@ var i = n(735250),
   u = n(794295),
   _ = n(663993),
   c = n(339085),
-  d = n(590956),
-  E = n(703656),
-  I = n(430824),
-  T = n(797053),
-  h = n(68588),
-  S = n(332870),
-  f = n(750156),
-  N = n(979516),
-  A = n(671612),
+  d = n(779699),
+  E = n(359875),
+  I = n(124072),
+  T = n(695503),
+  h = n(628692),
+  S = n(590956),
+  f = n(703656),
+  N = n(430824),
+  A = n(68588),
   m = n(572004),
   O = n(900849),
   R = n(746878),
@@ -135,8 +135,8 @@ let w = {
     }, n.key)
   },
   spoiler: {
-    react: (e, t, n) => (0, i.jsx)(h.Z, {
-      type: h.Z.Types.TEXT,
+    react: (e, t, n) => (0, i.jsx)(A.Z, {
+      type: A.Z.Types.TEXT,
       inline: n.formatInline,
       renderTextElement: (e, t) => null == e || e.type !== u.Z || t ? e : r.cloneElement(e, {
         tabIndex: -1
@@ -145,7 +145,7 @@ let w = {
     }, n.key)
   },
   soundboard: {
-    react: e => (0, i.jsx)(A.Z, {
+    react: e => (0, i.jsx)(h.Z, {
       channelId: e.channelId,
       soundId: e.soundId,
       jumbo: e.jumboable
@@ -155,7 +155,7 @@ let w = {
     react(e, t, n) {
       let r = () => {
         ! function(e, t) {
-          let n = I.Z.getGuild(e);
+          let n = N.Z.getGuild(e);
           if (null == e || null == n || !n.hasFeature(M.oNc.COMMUNITY)) return;
           let i = {
               home: P.oC.GUILD_HOME,
@@ -163,13 +163,13 @@ let w = {
               customize: P.oC.CUSTOMIZE_COMMUNITY,
               guide: P.oC.GUILD_HOME
             } [t],
-            r = I.Z.getGuild(e);
+            r = N.Z.getGuild(e);
           if ((null == r ? void 0 : r.joinedAt) == null) {
             O.Ub(e, {}, {
               channelId: i
             });
             return
-          }(0, E.uL)(M.Z5c.CHANNEL(e, i))
+          }(0, f.uL)(M.Z5c.CHANNEL(e, i))
         }(e.guildId, e.channelId)
       };
       if (!(0, R.k)(e.channelId)) return null;
@@ -193,7 +193,7 @@ let w = {
             onMouseEnter: o,
             onMouseLeave: a
           } = s;
-          return (0, i.jsx)(T.Z, {
+          return (0, i.jsx)(I.Z, {
             role: "link",
             onClick: r,
             onMouseEnter: o,
@@ -245,21 +245,21 @@ let w = {
   },
   guild: {
     react: (e, t, n) => {
-      let r = I.Z.getGuild(e.guildId);
-      return (0, i.jsx)(f.Z, {
+      let r = N.Z.getGuild(e.guildId);
+      return (0, i.jsx)(E.Z, {
         guild: r,
         children: (0, R.S)(e, t, n)
       }, n.key)
     }
   },
   channel: {
-    react: (e, t, n) => (0, i.jsx)(S.Z, {
+    react: (e, t, n) => (0, i.jsx)(d.Z, {
       iconType: e.iconType,
       children: (0, R.S)(e, t, n)
     }, n.key)
   },
   message: {
-    react: (e, t, n) => (0, i.jsx)(N.Z, {}, n.key)
+    react: (e, t, n) => (0, i.jsx)(T.Z, {}, n.key)
   },
   subtext: {
     react: (e, t, n) => (0, a.reactElement)("small", (null == n ? void 0 : n.key) != null ? "".concat(n.key) : null, {
@@ -284,7 +284,7 @@ function k(e) {
           let {
             key: o
           } = s;
-          return e.src ? (0, i.jsx)(d.c, {
+          return e.src ? (0, i.jsx)(S.c, {
             node: e,
             tooltipPosition: t,
             enableClick: n
@@ -313,7 +313,7 @@ function k(e) {
               name: t ? ":".concat(u.name, ":") : u.name
             }
           }
-          return (0, i.jsx)(d.Y, {
+          return (0, i.jsx)(S.Y, {
             isInteracting: l,
             node: e,
             tooltipPosition: t,

@@ -12,18 +12,18 @@ var r = n(120356),
   a = n(239091),
   l = n(782568),
   u = n(364640),
-  _ = n(198620),
-  c = n(797053),
+  _ = n(124072),
+  c = n(198620),
   d = n(746878),
   E = n(981631),
   I = n(261805),
-  T = n(504649);
+  T = n(345116);
 
 function h(e) {
   return {
     react(t, r, h) {
       let S = h.noStyleAndInteraction ? void 0 : async n => {
-        let i = await (0, _.B_)(t.attachmentUrl);
+        let i = await (0, c.B_)(t.attachmentUrl);
         e.shouldStopPropagation && (null == n || n.stopPropagation()), u.Z.trackLinkClicked(i), e.shouldCloseDefaultModals && (0, o.closeAllModals)(), (0, l.Z)(i)
       }, f = h.noStyleAndInteraction ? E.dG4 : e => {
         (0, a.jW)(e, async () => {
@@ -37,7 +37,7 @@ function h(e) {
           })
         })
       };
-      return (0, i.jsxs)(c.Z, {
+      return (0, i.jsxs)(_.Z, {
         role: "link",
         href: t.attachmentUrl,
         onClick: S,

@@ -1,20 +1,20 @@
 "use strict";
 t.Z = function(e) {
   function t(e, t, o) {
-    var i = t.trim().split(h);
-    t = i;
-    var r = i.length,
+    var r = t.trim().split(h);
+    t = r;
+    var i = r.length,
       a = e.length;
     switch (a) {
       case 0:
       case 1:
         var u = 0;
-        for (e = 0 === a ? "" : e[0] + " "; u < r; ++u) t[u] = n(e, t[u], o, a).trim();
+        for (e = 0 === a ? "" : e[0] + " "; u < i; ++u) t[u] = n(e, t[u], o, a).trim();
         break;
       default:
         var s = u = 0;
-        for (t = []; u < r; ++u)
-          for (var l = 0; l < a; ++l) t[s++] = n(e[l] + " ", i[u], o, a).trim()
+        for (t = []; u < i; ++u)
+          for (var l = 0; l < a; ++l) t[s++] = n(e[l] + " ", r[u], o, a).trim()
     }
     return t
   }
@@ -32,15 +32,15 @@ t.Z = function(e) {
     return e + t
   }
 
-  function o(e, t, n, r) {
+  function o(e, t, n, i) {
     var a = e + ";",
-      u = 2 * t + 3 * n + 4 * r;
+      u = 2 * t + 3 * n + 4 * i;
     if (944 === u) {
       e = a.indexOf(":", 9) + 1;
       var s = a.substring(e, a.length - 1).trim();
-      return s = a.substring(0, e).trim() + s + ";", 1 === D || 2 === D && i(s, 1) ? "-webkit-" + s + s : s
+      return s = a.substring(0, e).trim() + s + ";", 1 === D || 2 === D && r(s, 1) ? "-webkit-" + s + s : s
     }
-    if (0 === D || 2 === D && !i(a, 1)) return a;
+    if (0 === D || 2 === D && !r(a, 1)) return a;
     switch (u) {
       case 1015:
         return 97 === a.charCodeAt(10) ? "-webkit-" + a + a : a;
@@ -123,27 +123,27 @@ t.Z = function(e) {
         if (45 !== a.charCodeAt(3) || 122 === a.charCodeAt(4)) break;
       case 931:
       case 953:
-        if (!0 === A.test(e)) return 115 === (s = e.substring(e.indexOf(":") + 1)).charCodeAt(0) ? o(e.replace("stretch", "fill-available"), t, n, r).replace(":fill-available", ":stretch") : a.replace(s, "-webkit-" + s) + a.replace(s, "-moz-" + s.replace("fill-", "")) + a;
+        if (!0 === A.test(e)) return 115 === (s = e.substring(e.indexOf(":") + 1)).charCodeAt(0) ? o(e.replace("stretch", "fill-available"), t, n, i).replace(":fill-available", ":stretch") : a.replace(s, "-webkit-" + s) + a.replace(s, "-moz-" + s.replace("fill-", "")) + a;
         break;
       case 962:
-        if (a = "-webkit-" + a + (102 === a.charCodeAt(5) ? "-ms-" + a : "") + a, 211 === n + r && 105 === a.charCodeAt(13) && 0 < a.indexOf("transform", 10)) return a.substring(0, a.indexOf(";", 27) + 1).replace(f, "$1-webkit-$2") + a
+        if (a = "-webkit-" + a + (102 === a.charCodeAt(5) ? "-ms-" + a : "") + a, 211 === n + i && 105 === a.charCodeAt(13) && 0 < a.indexOf("transform", 10)) return a.substring(0, a.indexOf(";", 27) + 1).replace(f, "$1-webkit-$2") + a
     }
     return a
   }
 
-  function i(e, t) {
+  function r(e, t) {
     var n = e.indexOf(1 === t ? ":" : "{"),
       o = e.substring(0, 3 !== t ? n : 10);
     return n = e.substring(n + 1, e.length - 1), L(2 !== t ? o : o.replace(x, "$1"), n, t)
   }
 
-  function r(e, t) {
+  function i(e, t) {
     var n = o(t, t.charCodeAt(0), t.charCodeAt(1), t.charCodeAt(2));
     return n !== t + ";" ? n.replace(C, " or ($1)").substring(4) : "(" + t + ")"
   }
 
-  function a(e, t, n, o, i, r, a, u, l, c) {
-    for (var p, d = 0, f = t; d < P; ++d) switch (p = I[d].call(s, e, f, n, o, i, r, a, u, l, c)) {
+  function a(e, t, n, o, r, i, a, u, l, c) {
+    for (var p, d = 0, f = t; d < P; ++d) switch (p = I[d].call(s, e, f, n, o, r, i, a, u, l, c)) {
       case void 0:
       case !1:
       case !0:
@@ -237,14 +237,14 @@ t.Z = function(e) {
                 }
                 if (_ = (m = e(u, R, m, h, d + 1)).length, 0 < P && (C = a(3, m, R = t(M, H, B), u, k, w, _, h, d, p), H = R.join(""), void 0 !== C && 0 === (_ = (m = C.trim()).length) && (h = 0, m = "")), 0 < _) switch (h) {
                   case 115:
-                    H = H.replace(y, r);
+                    H = H.replace(y, i);
                   case 100:
                   case 109:
                   case 45:
                     m = H + "{" + m + "}";
                     break;
                   case 107:
-                    m = (H = H.replace(v, "$1 $2")) + "{" + m + "}", m = 1 === D || 2 === D && i("@" + m, 3) ? "@-webkit-" + m + "@" + m : "@" + m;
+                    m = (H = H.replace(v, "$1 $2")) + "{" + m + "}", m = 1 === D || 2 === D && r("@" + m, 3) ? "@-webkit-" + m + "@" + m : "@" + m;
                     break;
                   default:
                     m = H + m, 112 === p && (W += m, m = "")
@@ -368,7 +368,7 @@ t.Z = function(e) {
       if (0 < (_ = W.length)) {
         if (R = u, 0 < P && void 0 !== (C = a(2, W, R, n, k, w, _, p, d, p)) && 0 === (W = C).length) return G + W + z;
         if (W = R.join(",") + "{" + W + "}", 0 != D * F) {
-          switch (2 !== D || i(W, 2) || (F = 0), F) {
+          switch (2 !== D || r(W, 2) || (F = 0), F) {
             case 111:
               W = W.replace(E, ":-moz-$1") + W;
               break;

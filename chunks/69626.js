@@ -14,13 +14,13 @@ var i = n(735250),
   a = n(555573),
   l = n(10718),
   u = n(895924),
-  _ = n(665906),
-  c = n(695346),
-  d = n(592125),
-  E = n(703558),
-  I = n(496675),
-  T = n(944486),
-  h = n(797053),
+  _ = n(124072),
+  c = n(665906),
+  d = n(695346),
+  E = n(592125),
+  I = n(703558),
+  T = n(496675),
+  h = n(944486),
   S = n(585483),
   f = n(981631),
   N = n(689079),
@@ -31,7 +31,7 @@ var i = n(735250),
 function R(e, t, n, r) {
   if (null == e) return;
   let s = () => {
-    let i = d.Z.getChannel(e);
+    let i = E.Z.getChannel(e);
     if (null == i) return;
     let {
       command: s,
@@ -61,7 +61,7 @@ function R(e, t, n, r) {
       })
     }
   };
-  "" !== E.Z.getDraft(e, E.d.ChannelMessage) ? (0, o.openModal)(t => (0, i.jsx)(o.ConfirmModal, {
+  "" !== I.Z.getDraft(e, I.d.ChannelMessage) ? (0, o.openModal)(t => (0, i.jsx)(o.ConfirmModal, {
     header: m.Z.Messages.APPLICATION_COMMAND_MENTION_CONFIRM_HEADER,
     confirmText: m.Z.Messages.CLEAR,
     cancelText: m.Z.Messages.CANCEL,
@@ -85,25 +85,25 @@ function p(e) {
   let {
     node: n,
     output: a,
-    state: E
-  } = e, S = (0, s.e7)([d.Z, T.Z], () => {
+    state: I
+  } = e, S = (0, s.e7)([E.Z, h.Z], () => {
     var e;
-    return d.Z.getChannel(null !== (e = n.channelId) && void 0 !== e ? e : T.Z.getChannelId())
+    return E.Z.getChannel(null !== (e = n.channelId) && void 0 !== e ? e : h.Z.getChannelId())
   }, [n.channelId]), {
     hasSendMessagePerm: m,
     hasUseAppCommandsPerm: O
-  } = (0, s.cj)([I.Z], () => {
-    let e = I.Z.can(f.Plq.SEND_MESSAGES, S);
+  } = (0, s.cj)([T.Z], () => {
+    let e = T.Z.can(f.Plq.SEND_MESSAGES, S);
     return {
       hasSendMessagePerm: e,
-      hasUseAppCommandsPerm: I.Z.can(f.Plq.USE_APPLICATION_COMMANDS, S)
+      hasUseAppCommandsPerm: T.Z.can(f.Plq.USE_APPLICATION_COMMANDS, S)
     }
   }), {
     command: p
-  } = l.YZ(S, null !== (t = n.commandKey) && void 0 !== t ? t : ""), g = c.dN.useSetting(), C = r.useMemo(() => {
+  } = l.YZ(S, null !== (t = n.commandKey) && void 0 !== t ? t : ""), g = d.dN.useSetting(), C = r.useMemo(() => {
     if (null == p || null == S || p.name !== n.commandName || g) return !1;
     let e = S.isPrivate();
-    if ((0, _.xl)(S) || !e && !m) return !1;
+    if ((0, c.xl)(S) || !e && !m) return !1;
     let t = (null == p ? void 0 : p.applicationId) === N.bi.BUILT_IN;
     return !!e || !!t || !!O || !1
   }, [S, p, m, O, n.commandName, g]), v = r.useCallback(e => {
@@ -117,16 +117,16 @@ function p(e) {
         onMouseEnter: t,
         onMouseLeave: r
       } = e;
-      return (0, i.jsxs)(h.Z, {
+      return (0, i.jsxs)(_.Z, {
         role: "link",
         onClick: v,
         onMouseEnter: t,
         onMouseLeave: r,
-        children: [A.GI, a(n.content, E)]
-      }, E.key)
+        children: [A.GI, a(n.content, I)]
+      }, I.key)
     }
-  }, E.key) : (0, i.jsxs)("span", {
-    children: [A.GI, a(n.content, E)]
+  }, I.key) : (0, i.jsxs)("span", {
+    children: [A.GI, a(n.content, I)]
   })
 }
 
@@ -136,7 +136,7 @@ function g(e) {
     commandName: n,
     commandDescription: r,
     onClick: a
-  } = e, l = (0, s.e7)([T.Z], () => T.Z.getChannelId()), _ = e => {
+  } = e, l = (0, s.e7)([h.Z], () => h.Z.getChannelId()), _ = e => {
     null == e || e.stopPropagation(), R(l, n, t, u.Vh.POPULAR_COMMANDS), null == a || a(t)
   };
   return (0, i.jsx)(o.Tooltip, {

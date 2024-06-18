@@ -20,14 +20,14 @@ var r = n(120356),
   T = n(906732),
   h = n(818083),
   S = n(480608),
-  f = n(484459),
-  N = n(103575),
-  A = n(592125),
-  m = n(271383),
-  O = n(430824),
-  R = n(594174),
-  p = n(285952),
-  g = n(797053),
+  f = n(124072),
+  N = n(484459),
+  A = n(103575),
+  m = n(592125),
+  O = n(271383),
+  R = n(430824),
+  p = n(594174),
+  g = n(285952),
   C = n(151827),
   v = n(689938),
   L = n(743090),
@@ -59,7 +59,7 @@ function P(e) {
     inlinePreview: U = !1
   } = e, {
     analyticsLocations: b
-  } = (0, T.ZP)(I.Z.ROLE_MENTION), G = (0, u.e7)([E.Z], () => E.Z.roleStyle), w = null != t && 0 !== t && !U, k = w && "dot" === G, B = e => (0, i.jsxs)(g.Z, {
+  } = (0, T.ZP)(I.Z.ROLE_MENTION), G = (0, u.e7)([E.Z], () => E.Z.roleStyle), w = null != t && 0 !== t && !U, k = w && "dot" === G, B = e => (0, i.jsxs)(f.Z, {
     className: s()(D.roleMention),
     color: "username" === G && w ? t : null,
     ...e,
@@ -86,22 +86,22 @@ function P(e) {
         null != r && await (0, S.H)(P, r)
       },
       renderPopout: e => {
-        let t = A.Z.getChannel(o),
-          s = O.Z.getGuild(P),
-          l = m.ZP.getMembers(s.id),
-          u = O.Z.getRole(P, null != r ? r : s.getEveryoneRoleId()),
-          E = a()(l).filter(e => !!("@everyone" === h || e.roles.includes(r)) && null != R.default.getUser(e.userId)).sortBy(e => {
+        let t = m.Z.getChannel(o),
+          s = R.Z.getGuild(P),
+          l = O.ZP.getMembers(s.id),
+          u = R.Z.getRole(P, null != r ? r : s.getEveryoneRoleId()),
+          E = a()(l).filter(e => !!("@everyone" === h || e.roles.includes(r)) && null != p.default.getUser(e.userId)).sortBy(e => {
             var t;
-            let n = R.default.getUser(e.userId);
+            let n = p.default.getUser(e.userId);
             return (null != n ? null !== (t = e.nick) && void 0 !== t ? t : n.username : "").toLocaleLowerCase()
           }).map(e => {
-            let r = R.default.getUser(e.userId);
+            let r = p.default.getUser(e.userId);
             return (0, i.jsx)(_.Popout, {
-              preload: () => (0, f.W)(r.id, r.getAvatarURL(t.guild_id, 80), {
+              preload: () => (0, N.W)(r.id, r.getAvatarURL(t.guild_id, 80), {
                 guildId: t.guild_id,
                 channelId: t.id
               }),
-              renderPopout: n => (0, i.jsx)(N.Z, {
+              renderPopout: n => (0, i.jsx)(A.Z, {
                 ...n,
                 location: "RoleMention",
                 userId: e.userId,
@@ -143,7 +143,7 @@ function P(e) {
               }
             }, r.id)
           }).value();
-        return (0, i.jsx)(p.Z, {
+        return (0, i.jsx)(g.Z, {
           className: D.rolePopout,
           ...e,
           children: (0, i.jsxs)(_.Scroller, {

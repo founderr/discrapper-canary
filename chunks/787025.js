@@ -13,12 +13,12 @@ var i = n(735250),
   o = n.n(s),
   a = n(466377),
   l = n(481060),
-  u = n(252618),
-  _ = n(612744),
+  u = n(568154),
+  _ = n(252618),
   c = n(449934),
   d = n(792125),
   E = n(981631),
-  I = n(756286),
+  I = n(898625),
   T = n(689938),
   h = n(897456);
 
@@ -30,11 +30,11 @@ function S(e) {
   } = e, [a, S] = r.useState(I.hO.INITIAL), f = r.useCallback(e => {
     S(t => Math.max(t, e))
   }, []);
-  return (0, u.Tt)({
+  return (0, _.Tt)({
     location: T.Z.Messages.OAUTH2_TITLE
   }), (0, i.jsx)(l.ThemeContextProvider, {
     theme: E.BRd.DARK,
-    children: (0, i.jsx)(_.Z, {
+    children: (0, i.jsx)(u.Z, {
       embedded: s,
       className: o()((0, d.Q)(E.BRd.DARK), h.wave),
       splash: (0, c.gK)(),

@@ -16,14 +16,14 @@ var i = n(735250),
   d = n(906732),
   E = n(797610),
   I = n(927723),
-  T = n(484459),
-  h = n(103575),
-  S = n(592125),
-  f = n(271383),
-  N = n(430824),
-  A = n(699516),
-  m = n(594174),
-  O = n(797053),
+  T = n(124072),
+  h = n(484459),
+  S = n(103575),
+  f = n(592125),
+  N = n(271383),
+  A = n(430824),
+  m = n(699516),
+  O = n(594174),
   R = n(5192),
   p = n(51144),
   g = n(377668);
@@ -48,7 +48,7 @@ function C(e) {
       })
     })
   }, [t]);
-  return (0, i.jsx)(O.Z, {
+  return (0, i.jsx)(T.Z, {
     className: s,
     onClick: a,
     onContextMenu: l,
@@ -67,7 +67,7 @@ function v(e) {
     viewingChannelId: D
   } = e, {
     analyticsLocations: M
-  } = (0, d.ZP)(c.Z.USER_MENTION), P = (0, l.e7)([m.default], () => m.default.getUser(r)), y = (0, l.e7)([S.Z], () => S.Z.getChannel(s)), U = null != y ? y.getGuildId() : null, b = L || null == P || null == U || null == s ? void 0 : e => {
+  } = (0, d.ZP)(c.Z.USER_MENTION), P = (0, l.e7)([O.default], () => O.default.getUser(r)), y = (0, l.e7)([f.Z], () => f.Z.getChannel(s)), U = null != y ? y.getGuildId() : null, b = L || null == P || null == U || null == s ? void 0 : e => {
     null != y && (0, _.jW)(e, async () => {
       let {
         default: e
@@ -80,13 +80,13 @@ function v(e) {
         guildId: U
       })
     })
-  }, G = p.ZP.useName(P), w = (0, l.e7)([S.Z, f.ZP, A.Z], () => R.ZP.getNickname(U, s, P)), k = N.Z.getGuild(U), B = (0, E.Ib)(k, y) && r === g.fL ? g.jM : null;
+  }, G = p.ZP.useName(P), w = (0, l.e7)([f.Z, N.ZP, m.Z], () => R.ZP.getNickname(U, s, P)), k = A.Z.getGuild(U), B = (0, E.Ib)(k, y) && r === g.fL ? g.jM : null;
   if (null == P) return (0, i.jsx)(C, {
     userId: I,
     className: t,
     children: v
   });
-  let x = e => (0, i.jsx)(O.Z, {
+  let x = e => (0, i.jsx)(T.Z, {
     className: t,
     onContextMenu: b,
     color: B,
@@ -99,11 +99,11 @@ function v(e) {
   }) : (0, i.jsx)(d.Gt, {
     value: M,
     children: (0, i.jsx)(u.Popout, {
-      preload: null == P ? void 0 : () => (0, T.W)(P.id, P.getAvatarURL(U, 80), {
+      preload: null == P ? void 0 : () => (0, h.W)(P.id, P.getAvatarURL(U, 80), {
         guildId: null != U ? U : void 0,
         channelId: null != s ? s : void 0
       }),
-      renderPopout: e => (o()(null != P, "Unexpected missing user"), (0, i.jsx)(h.Z, {
+      renderPopout: e => (o()(null != P, "Unexpected missing user"), (0, i.jsx)(S.Z, {
         location: "UserMention",
         userId: P.id,
         guildId: null != U ? U : void 0,

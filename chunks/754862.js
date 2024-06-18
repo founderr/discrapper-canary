@@ -6,7 +6,7 @@ var o = Object.assign || function(e) {
     }
     return e
   },
-  i = function() {
+  r = function() {
     function e(e, t) {
       for (var n = 0; n < t.length; n++) {
         var o = t[n];
@@ -17,8 +17,8 @@ var o = Object.assign || function(e) {
       return n && e(t.prototype, n), o && e(t, o), t
     }
   }(),
-  r = n(470079),
-  a = s(r),
+  i = n(470079),
+  a = s(i),
   u = s(n(476400));
 
 function s(e) {
@@ -73,7 +73,7 @@ var l = {
           configurable: !0
         }
       }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-    }(t, e), i(t, [{
+    }(t, e), r(t, [{
       key: "componentDidMount",
       value: function() {
         this.mounted = !0, this.copyInputStyles(), this.updateInputWidth()
@@ -151,23 +151,23 @@ var l = {
           }),
           n = o({}, this.props.style);
         !n.display && (n.display = "inline-block");
-        var i = o({
+        var r = o({
             boxSizing: "content-box",
             width: this.state.inputWidth + "px"
           }, this.props.inputStyle),
-          r = function(e, t) {
+          i = function(e, t) {
             var n = {};
             for (var o in e) {
               if (!(t.indexOf(o) >= 0)) Object.prototype.hasOwnProperty.call(e, o) && (n[o] = e[o])
             }
             return n
           }(this.props, []);
-        return e = r, c.forEach(function(t) {
+        return e = i, c.forEach(function(t) {
           return delete e[t]
-        }), r.className = this.props.inputClassName, r.id = this.state.inputId, r.style = i, a.default.createElement("div", {
+        }), i.className = this.props.inputClassName, i.id = this.state.inputId, i.style = r, a.default.createElement("div", {
           className: this.props.className,
           style: n
-        }, this.renderStyles(), a.default.createElement("input", o({}, r, {
+        }, this.renderStyles(), a.default.createElement("input", o({}, i, {
           ref: this.inputRef
         })), a.default.createElement("div", {
           ref: this.sizerRef,
@@ -178,7 +178,7 @@ var l = {
         }, this.props.placeholder) : null)
       }
     }]), t
-  }(r.Component);
+  }(i.Component);
 h.propTypes = {
   className: u.default.string,
   defaultValue: u.default.any,

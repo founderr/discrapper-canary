@@ -1,5 +1,5 @@
-var r = n(444675);
 "use strict";
+var r = n(444675);
 
 function i(e) {
   if ("string" != typeof e) throw TypeError("Path must be a string. Received " + JSON.stringify(e))

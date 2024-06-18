@@ -5,18 +5,18 @@ var n = Number.isNaN || function(e) {
 
 function o(e, t) {
   if (e.length !== t.length) return !1;
-  for (var o, i, r = 0; r < e.length; r++) {
+  for (var o, r, i = 0; i < e.length; i++) {
     ;
-    if (o = e[r], !(o === (i = t[r]) || n(o) && n(i))) return !1
+    if (o = e[i], !(o === (r = t[i]) || n(o) && n(r))) return !1
   }
   return !0
 }
 t.Z = function(e, t) {
   void 0 === t && (t = o);
-  var n, i, r = [],
+  var n, r, i = [],
     a = !1;
   return function() {
     for (var o = [], u = 0; u < arguments.length; u++) o[u] = arguments[u];
-    return a && n === this && t(o, r) ? i : (i = e.apply(this, o), a = !0, n = this, r = o, i)
+    return a && n === this && t(o, i) ? r : (r = e.apply(this, o), a = !0, n = this, i = o, r)
   }
 }

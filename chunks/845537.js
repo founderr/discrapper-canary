@@ -41,12 +41,12 @@ var r = n(442837),
   u = n(797610),
   _ = n(754688),
   c = n(699450),
-  d = n(763296),
-  E = n(592125),
-  I = n(430824),
-  T = n(246946),
-  h = n(594174),
-  S = n(797053),
+  d = n(124072),
+  E = n(763296),
+  I = n(592125),
+  T = n(430824),
+  h = n(246946),
+  S = n(594174),
   f = n(934415),
   N = n(5192),
   A = n(51144),
@@ -94,8 +94,8 @@ function v(e) {
     text: t,
     channelId: n,
     guildId: r
-  } = e, s = I.Z.getGuild(r), o = E.Z.getChannel(n), a = (0, u.Ib)(s, o) && "@Clyde" === t ? m.jM : null;
-  return (0, i.jsx)(S.Z, {
+  } = e, s = T.Z.getGuild(r), o = I.Z.getChannel(n), a = (0, u.Ib)(s, o) && "@Clyde" === t ? m.jM : null;
+  return (0, i.jsx)(d.Z, {
     color: a,
     children: t
   })
@@ -106,7 +106,7 @@ function L(e) {
     id: t,
     guildId: n,
     channelId: o
-  } = e, l = (0, r.e7)([h.default], () => h.default.getUser(t)), u = (0, r.e7)([T.Z], () => T.Z.hidePersonalInformation), _ = N.ZP.useName(n, o, l), c = (0, i.jsx)(S.Z, {
+  } = e, l = (0, r.e7)([S.default], () => S.default.getUser(t)), u = (0, r.e7)([h.Z], () => h.Z.hidePersonalInformation), _ = N.ZP.useName(n, o, l), c = (0, i.jsx)(d.Z, {
     children: null == _ ? "<@".concat(t, ">") : "@".concat(_)
   });
   if (null != l) {
@@ -146,12 +146,12 @@ function D(e) {
   let {
     id: t,
     guildId: n
-  } = e, o = (0, r.e7)([I.Z], () => null != n ? I.Z.getRole(n, t) : void 0), a = (0, r.e7)([l.Z], () => l.Z.roleStyle);
+  } = e, o = (0, r.e7)([T.Z], () => null != n ? T.Z.getRole(n, t) : void 0), a = (0, r.e7)([l.Z], () => l.Z.roleStyle);
   if (null == o) return (0, i.jsxs)("span", {
     children: ["@", O.Z.Messages.UNKNOWN_ROLE_PLACEHOLDER]
   });
   let u = null != o.color && 0 !== o.color;
-  return (0, i.jsxs)(S.Z, {
+  return (0, i.jsxs)(d.Z, {
     color: "username" === a && u ? o.color : null,
     children: ["dot" === a && (0, i.jsx)(s.RoleDot, {
       color: o.colorString,
@@ -164,12 +164,12 @@ function D(e) {
 function M(e) {
   let {
     id: t
-  } = e, n = (0, r.e7)([E.Z], () => E.Z.getChannel(t)), s = O.Z.Messages.UNKNOWN_CHANNEL.toLowerCase(), o = "text", a = !0;
+  } = e, n = (0, r.e7)([I.Z], () => I.Z.getChannel(t)), s = O.Z.Messages.UNKNOWN_CHANNEL.toLowerCase(), o = "text", a = !0;
   if (null != n) {
     var l;
     s = (0, _.YO)(n) ? n.name : O.Z.Messages.NO_ACCESS, o = (0, _.YO)(n) ? null !== (l = (0, f.wl)(n)) && void 0 !== l ? l : "text" : "locked", a = (0, c.B)(n.type)
   }
-  return a ? (0, i.jsx)(S.Z, {
+  return a ? (0, i.jsx)(d.Z, {
     iconType: o,
     children: s
   }) : (0, i.jsx)("span", {
@@ -181,8 +181,8 @@ function P(e) {
   var t;
   let {
     id: n
-  } = e, s = (0, r.e7)([d.Z], () => d.Z.getSoundById(n));
-  return (0, i.jsx)(S.Z, {
+  } = e, s = (0, r.e7)([E.Z], () => E.Z.getSoundById(n));
+  return (0, i.jsx)(d.Z, {
     children: null !== (t = null == s ? void 0 : s.name) && void 0 !== t ? t : "Sound"
   })
 }
@@ -196,7 +196,7 @@ function y(e) {
     browse: O.Z.Messages.CHANNEL_BROWSER_TITLE,
     customize: O.Z.Messages.CHANNELS_AND_ROLES
   };
-  return (0, i.jsx)(S.Z, {
+  return (0, i.jsx)(d.Z, {
     iconType: t,
     children: n[t]
   })
@@ -207,7 +207,7 @@ function U(e) {
     text: t,
     id: n
   } = e;
-  return (0, i.jsxs)(S.Z, {
+  return (0, i.jsxs)(d.Z, {
     children: [t, "(", n, ")"]
   })
 }

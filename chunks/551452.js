@@ -12,11 +12,11 @@ var r = n(481060),
   a = n(364640),
   l = n(754688),
   u = n(336197),
-  _ = n(131704),
-  c = n(592125),
-  d = n(430824),
-  E = n(797053),
-  I = n(442514),
+  _ = n(124072),
+  c = n(891984),
+  d = n(131704),
+  E = n(592125),
+  I = n(430824),
   T = n(900849),
   h = n(746878),
   S = n(981631);
@@ -27,7 +27,7 @@ async function f(e, t, n) {
       channelId: t,
       messageId: n
     }), null != e) {
-    let n = d.Z.getGuild(e);
+    let n = I.Z.getGuild(e);
     if ((null == n ? void 0 : n.joinedAt) == null) try {
       await T.Ub(e, {}, {
         channelId: t
@@ -35,8 +35,8 @@ async function f(e, t, n) {
       return
     } catch {}
   }
-  let i = c.Z.getChannel(t);
-  if (null != i && null == n && (0, _.bw)(i.type) && (0, l.YO)(i)) {
+  let i = E.Z.getChannel(t);
+  if (null != i && null == n && (0, d.bw)(i.type) && (0, l.YO)(i)) {
     o.default.selectVoiceChannel(i.id);
     return
   }(0, u.Z)(S.Z5c.CHANNEL(e, t, n))
@@ -45,11 +45,11 @@ async function f(e, t, n) {
 function N(e) {
   return {
     react(t, o, a) {
-      let l = c.Z.getChannel(t.channelId),
+      let l = E.Z.getChannel(t.channelId),
         u = a.noStyleAndInteraction ? void 0 : n => {
           e.shouldStopPropagation && (null == n || n.stopPropagation()), f(t.guildId, t.channelId, t.messageId), e.shouldCloseDefaultModals && (0, r.closeAllModals)()
         },
-        _ = a.noStyleAndInteraction || null == t.channelId || null == l && null == t.originalLink ? S.dG4 : e => {
+        d = a.noStyleAndInteraction || null == t.channelId || null == l && null == t.originalLink ? S.dG4 : e => {
           (0, s.jW)(e, async () => {
             let {
               default: e
@@ -66,12 +66,12 @@ function N(e) {
             }
           })
         };
-      return (0, i.jsxs)(E.Z, {
+      return (0, i.jsxs)(_.Z, {
         role: "link",
         onClick: u,
-        onContextMenu: _,
+        onContextMenu: d,
         className: "channelMention",
-        children: [null != t.inContent ? o(t.inContent, a) : null, null != t.inContent ? (0, i.jsx)(I.Z, {}) : null, (0, h.S)(t, o, a)]
+        children: [null != t.inContent ? o(t.inContent, a) : null, null != t.inContent ? (0, i.jsx)(c.Z, {}) : null, (0, h.S)(t, o, a)]
       }, a.key)
     }
   }
