@@ -81,7 +81,7 @@ let S = e => {
           mass: 5,
           friction: 100
         },
-        loop: () => _,
+        loop: () => _.current,
         immediate: t
       })
     },

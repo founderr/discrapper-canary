@@ -1,49 +1,49 @@
 "use strict";
 n.d(t, {
   AH: function() {
-    return A
-  },
-  CS: function() {
-    return h
-  },
-  EW: function() {
-    return M
-  },
-  QB: function() {
-    return O
-  },
-  T0: function() {
-    return L
-  },
-  Tj: function() {
     return m
   },
-  Wf: function() {
-    return C
-  },
-  eT: function() {
-    return v
-  },
-  gl: function() {
-    return p
-  },
-  is: function() {
+  CS: function() {
     return S
   },
-  kP: function() {
-    return D
+  EW: function() {
+    return P
   },
-  m0: function() {
-    return N
-  },
-  nE: function() {
-    return g
-  },
-  pf: function() {
+  QB: function() {
     return R
   },
-  xw: function() {
+  T0: function() {
+    return D
+  },
+  Tj: function() {
+    return O
+  },
+  Wf: function() {
+    return v
+  },
+  eT: function() {
+    return L
+  },
+  gl: function() {
+    return g
+  },
+  is: function() {
     return f
+  },
+  kP: function() {
+    return M
+  },
+  m0: function() {
+    return A
+  },
+  nE: function() {
+    return C
+  },
+  pf: function() {
+    return p
+  },
+  xw: function() {
+    return N
   }
 }), n(411104);
 var i = n(990547),
@@ -58,8 +58,9 @@ var i = n(990547),
   d = n(242755),
   E = n(566078),
   I = n(46140),
-  T = n(981631);
-async function h(e) {
+  T = n(981631),
+  h = n(689938);
+async function S(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   try {
     let n = (await r.tn.post({
@@ -75,17 +76,26 @@ async function h(e) {
     else if (null != n.error_hints && n.error_hints.length > 0) return {
       errorHints: n.error_hints
     }
-  } catch (e) {}
+  } catch (t) {
+    var n;
+    let e = new o.Z(t);
+    if (429 === e.status) return {
+      errorHints: [h.Z.Messages.RATE_LIMITED]
+    };
+    return {
+      errorHints: [null !== (n = e.getAnyErrorMessage()) && void 0 !== n ? n : h.Z.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR]
+    }
+  }
   return {
     errorHints: []
   }
 }
-async function S(e) {
+async function f(e) {
   await r.tn.post({
     url: T.ANM.QUEST_ON_CONSOLE_STOP(e)
   })
 }
-async function f() {
+async function N() {
   if (!_.Z.isFetchingCurrentQuests) {
     s.Z.dispatch({
       type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN"
@@ -113,7 +123,7 @@ async function f() {
     }
   }
 }
-async function N(e) {
+async function A(e) {
   let {
     questId: t,
     streamKey: n,
@@ -155,7 +165,7 @@ async function N(e) {
     })
   }
 }
-async function A(e, t) {
+async function m(e, t) {
   if (null != t.questContentCTA && (0, l._3)({
       questId: e,
       questContent: t.questContent,
@@ -185,7 +195,7 @@ async function A(e, t) {
     }
   }
 }
-async function m(e, t, n) {
+async function O(e, t, n) {
   if (!_.Z.isClaimingRewardCode(e)) {
     s.Z.dispatch({
       type: "QUESTS_CLAIM_REWARD_CODE_BEGIN",
@@ -213,7 +223,7 @@ async function m(e, t, n) {
     }
   }
 }
-async function O(e, t, n) {
+async function R(e, t, n) {
   if (!_.Z.isClaimingReward(e)) {
     s.Z.dispatch({
       type: "QUESTS_CLAIM_REWARD_BEGIN",
@@ -246,7 +256,7 @@ async function O(e, t, n) {
     }
   }
 }
-async function R(e) {
+async function p(e) {
   if (!_.Z.isFetchingRewardCode(e)) {
     s.Z.dispatch({
       type: "QUESTS_FETCH_REWARD_CODE_BEGIN",
@@ -270,7 +280,7 @@ async function R(e) {
     }
   }
 }
-async function p(e, t) {
+async function g(e, t) {
   let n = _.Z.isDismissingContent(e),
     i = (0, c.GN)(t);
   if (!n && i) {
@@ -298,13 +308,13 @@ async function p(e, t) {
   }
 }
 
-function g(e) {
+function C(e) {
   s.Z.dispatch({
     type: "QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE",
     streamKey: e
   })
 }
-async function C(e) {
+async function v(e) {
   try {
     let t = await r.tn.post({
       url: T.ANM.QUESTS_PREVIEW_COMPLETE(e),
@@ -322,7 +332,7 @@ async function C(e) {
     })
   }
 }
-async function v(e) {
+async function L(e) {
   try {
     let t = await r.tn.del({
       url: T.ANM.QUESTS_PREVIEW_STATUS(e),
@@ -340,7 +350,7 @@ async function v(e) {
     })
   }
 }
-async function L(e) {
+async function D(e) {
   try {
     let t = await r.tn.del({
       url: T.ANM.QUESTS_PREVIEW_DISMISSIBILITY(e),
@@ -359,14 +369,14 @@ async function L(e) {
   }
 }
 
-function D(e) {
+function M(e) {
   s.Z.dispatch({
     type: "QUESTS_OPTIMISTIC_PROGRESS_UPDATE",
     userStatus: e
   })
 }
 
-function M(e) {
+function P(e) {
   s.Z.dispatch({
     type: "QUESTS_DELIVERY_OVERRIDE",
     questId: e
