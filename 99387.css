@@ -31803,7 +31803,9 @@ img.thumbnail_c64476 {
 }
 
 .button_a79c58.open_a79c58 {
-    transform: translate3d(0, -3px, 0)rotate(270deg)
+    --custom-fix-rspack-build-bug: -90deg;
+    transform: translate3d(0, -3px, 0)rotate(270deg);
+    transform: translate3d(0, -3px, 0)rotate(var(--custom-fix-rspack-build-bug))
 }
 
 .button_a79c58.open_a79c58 path {
