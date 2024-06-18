@@ -1,6 +1,6 @@
 "undefined" != typeof navigator && function(t, e) {
-  "object" == typeof exports ? module.exports = e() : "function" == typeof define && define.amd ? define(e) : (t = "undefined" != typeof globalThis ? globalThis : t || self).lottie = e()
-}(this, function() {
+  module.exports = e()
+}(0, function() {
   "use strict";
   var svgNS = "http://www.w3.org/2000/svg",
     locationHref = "",
@@ -2314,7 +2314,7 @@
   }
   var readyStateCheckInterval = setInterval(checkReady, 100);
   try {
-    (void 0 === exports ? "undefined" : _typeof$3(exports)) !== "object" && !("function" == typeof define && define.amd) && (window.bodymovin = lottie)
+    "object" !== _typeof$3(exports) && !("function" == typeof define && define.amd) && (window.bodymovin = lottie)
   } catch (err) {}
   var ShapeModifiers = function() {
     var t = {},

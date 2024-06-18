@@ -1,5 +1,5 @@
 e = n.nmd(e), ! function(r) {
-  var i = "object" == typeof t && t && !t.nodeType && t,
+  var i = t && !t.nodeType && t,
     a = e && !e.nodeType && e,
     o = "object" == typeof n.g && n.g;
   (o.global === o || o.window === o || o.self === o) && (r = o);

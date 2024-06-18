@@ -1,6 +1,6 @@
 t = e.nmd(t);
 var n = e(940151),
-  o = "object" == typeof r && r && !r.nodeType && r,
+  o = r && !r.nodeType && r,
   i = o && t && !t.nodeType && t,
   a = i && i.exports === o && n.process,
   u = function() {

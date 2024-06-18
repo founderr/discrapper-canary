@@ -1,11 +1,5 @@
-! function(r, n) {
-  if ("object" == typeof t) e.exports = n();
-  else if ("function" == typeof define && define.amd) define([], n);
-  else {
-    var o = n();
-    for (var i in o)("object" == typeof t ? t : r)[i] = o[i]
-  }
-}(this, function() {
+var t, r;
+t = 0, r = function() {
   return function(e) {
     var t = {};
 
@@ -4614,4 +4608,4 @@
       version: "10.0.5"
     }
   }])
-})
+}, e.exports = r()

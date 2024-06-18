@@ -1,5 +1,5 @@
 var r, i;
-e = n.nmd(e), r = this, i = function() {
+e = n.nmd(e), r = 0, i = function() {
   "use strict";
 
   function t() {
@@ -1591,4 +1591,4 @@ e = n.nmd(e), r = this, i = function() {
     WEEK: "YYYY-[W]WW",
     MONTH: "YYYY-MM"
   }, t
-}, "object" == typeof t ? e.exports = i() : "function" == typeof define && define.amd ? define(i) : r.moment = i()
+}, e.exports = i()

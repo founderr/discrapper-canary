@@ -1,5 +1,5 @@
-var r, n;
-r = this, n = function() {
+var e, r;
+e = 0, r = function() {
   "use strict";
 
   function t(t, e) {
@@ -2031,4 +2031,4 @@ r = this, n = function() {
     }, _.methods)
   }
   return t9.version = "4.23.3", t9
-}, "object" == typeof e ? t.exports = n() : "function" == typeof define && define.amd ? define(n) : (r = r || self).algoliasearch = n()
+}, t.exports = r()

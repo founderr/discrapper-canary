@@ -1,5 +1,5 @@
-var n, r;
-n = this, r = function() {
+var t, n;
+t = 0, n = function() {
   "use strict";
   var e, t, n, r, i, a, o, s, u = /\r\n?/g,
     c = /\t/g,
@@ -880,4 +880,4 @@ n = this, r = function() {
       return "undefined" != typeof console && console.warn("defaultOutput is deprecated, please use `defaultReactOutput`"), Q.apply(null, arguments)
     }
   }
-}, "object" == typeof t ? e.exports = r() : "function" == typeof define && define.amd ? define(r) : (n = n || self).SimpleMarkdown = r()
+}, e.exports = n()

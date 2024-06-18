@@ -130,7 +130,7 @@ e = n.nmd(e), (function() {
     e6 = "object" == typeof n.g && n.g && n.g.Object === Object && n.g,
     e5 = "object" == typeof self && self && self.Object === Object && self,
     e8 = e6 || e5 || Function("return this")(),
-    e9 = "object" == typeof t && t && !t.nodeType && t,
+    e9 = t && !t.nodeType && t,
     e7 = e9 && e && !e.nodeType && e,
     te = e7 && e7.exports === e9,
     tt = te && e6.process,

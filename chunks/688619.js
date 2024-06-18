@@ -1,5 +1,5 @@
-var e, n;
-e = this, n = function() {
+var r, e;
+r = 0, e = function() {
   "use strict";
   for (var t = function(t, r, e) {
       return void 0 === r && (r = 0), void 0 === e && (e = 1), t < r ? r : t > e ? e : t
@@ -1599,4 +1599,4 @@ e = this, n = function() {
       return rW(["#000", "#f00", "#ff0", "#fff"]).mode("rgb")
     }
   }, h.colors = t3, h.brewer = eg, h
-}, "object" == typeof r ? t.exports = n() : "function" == typeof define && define.amd ? define(n) : (e = "undefined" != typeof globalThis ? globalThis : e || self).chroma = n()
+}, t.exports = e()

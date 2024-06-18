@@ -1,5 +1,5 @@
-var i, r;
-i = globalThis, r = function() {
+var t, i;
+t = globalThis, i = function() {
   return (() => {
     var e, t, i, r, o, n, a, s, u, d = {
         506: e => {
@@ -3946,4 +3946,4 @@ i = globalThis, r = function() {
       }
     }), f.OGVVersion = void 0, t = e(h(8)), i = e(h(523)), r = e(h(964)), o = e(h(759)), n = e(h(278)), a = e(h(869)), s = e(h(168)), u = "1.8.9-20220406232920-cb5f7ff", f.OGVVersion = u, "object" === ("undefined" == typeof window ? "undefined" : (0, t.default)(window)) && (window.OGVCompat = i.default, window.OGVLoader = r.default, window.OGVMediaError = o.default, window.OGVMediaType = n.default, window.OGVTimeRanges = s.default, window.OGVPlayer = a.default, window.OGVVersion = u), f
   })()
-}, "object" == typeof t ? e.exports = r() : "function" == typeof define && define.amd ? define([], r) : "object" == typeof t ? t.ogvjs = r() : i.ogvjs = r()
+}, e.exports = i()

@@ -2,9 +2,7 @@
   var n = this,
     r = n.humanize,
     i = {};
-  void 0 !== t ? (e.exports && (t = e.exports = i), t.humanize = i) : ("function" == typeof define && define.amd && define("humanize", function() {
-    return i
-  }), n.humanize = i), i.noConflict = function() {
+  e.exports && (t = e.exports = i), t.humanize = i, i.noConflict = function() {
     return n.humanize = r, this
   }, i.pad = function(e, t, n, r) {
     if (e += "", n ? n.length > 1 && (n = n.charAt(0)) : n = " ", "right" == (r = void 0 === r ? "left" : "right"))

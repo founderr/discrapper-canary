@@ -1,5 +1,5 @@
-var r, n;
-r = this, n = function() {
+var e, r;
+e = 0, r = function() {
   "use strict";
   var t, e, r, n, i, o, a, u, s, c, l = Array.prototype.slice;
 
@@ -2509,4 +2509,4 @@ r = this, n = function() {
     is: tv,
     fromJS: tg
   }
-}, "object" == typeof e ? t.exports = n() : "function" == typeof define && define.amd ? define(n) : r.Immutable = n()
+}, t.exports = r()

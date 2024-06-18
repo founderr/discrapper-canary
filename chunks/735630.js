@@ -34,7 +34,8 @@ i.getDurationString = function(e, t) {
   if (!(t > 0)) return "(empty)";
   for (var n = "", r = 0; r < t; r++) r > 0 && (n += ","), n += "[" + i.getDurationString(e.start(r)) + "," + i.getDurationString(e.end(r)) + "]";
   return n
-}, void 0 !== t && (t.Log = i);
+};
+t.Log = i;
 var a = function(e) {
   if (e instanceof ArrayBuffer) this.buffer = e, this.dataview = new DataView(e);
   else throw "Needs an array buffer";
@@ -124,7 +125,8 @@ a.prototype.getPosition = function() {
 }, a.prototype.readInt32Array = function(e) {
   for (var t = new Int32Array(e), n = 0; n < e; n++) t[n] = this.readInt32();
   return t
-}, void 0 !== t && (t.MP4BoxStream = a);
+};
+t.MP4BoxStream = a;
 var o = function(e, t, n) {
   this._byteOffset = t || 0, e instanceof ArrayBuffer ? this.buffer = e : "object" == typeof e ? (this.dataView = e, t && (this._byteOffset += t)) : this.buffer = new ArrayBuffer(e || 0), this.position = 0, this.endianness = null == n ? o.LITTLE_ENDIAN : n
 };
@@ -269,7 +271,8 @@ o.prototype.readInt64 = function() {
   return 4294967296 * this.readUint32() + this.readUint32()
 }, o.prototype.readUint24 = function() {
   return (this.readUint8() << 16) + (this.readUint8() << 8) + this.readUint8()
-}, void 0 !== t && (t.DataStream = o), o.prototype.save = function(e) {
+};
+t.DataStream = o, o.prototype.save = function(e) {
   var t = new Blob([this.buffer]);
   if (window.URL && URL.createObjectURL) {
     var n = window.URL.createObjectURL(t),
@@ -582,7 +585,8 @@ s.prototype = new o(new ArrayBuffer, 0, o.BIG_ENDIAN), s.prototype.initialized =
 }, s.prototype.getEndPosition = function() {
   if (-1 === this.bufferIndex || null === this.buffers[this.bufferIndex]) throw "Error accessing position in the MultiBufferStream";
   return this.buffers[this.bufferIndex].fileStart + this.byteLength
-}, void 0 !== t && (t.MultiBufferStream = s);
+};
+t.MultiBufferStream = s;
 var u = function() {
   var e = [];
   e[3] = "ES_Descriptor", e[4] = "DecoderConfigDescriptor", e[5] = "DecoderSpecificInfo", e[6] = "SLConfigDescriptor", this.getDescriptorName = function(t) {
@@ -636,7 +640,7 @@ var u = function() {
     n.Descriptor.call(this, 6, e)
   }, n.SLConfigDescriptor.prototype = new n.Descriptor, this
 };
-void 0 !== t && (t.MPEG4DescriptorParser = u);
+t.MPEG4DescriptorParser = u;
 var c = {
   ERR_INVALID_DATA: -1,
   ERR_NOT_ENOUGH_DATA: 0,
@@ -769,7 +773,8 @@ c.initialize(), c.TKHD_FLAG_ENABLED = 1, c.TKHD_FLAG_IN_MOVIE = 2, c.TKHD_FLAG_I
 }, c.Box.prototype.addEntry = function(e, t) {
   var n = t || "entries";
   return !this[n] && (this[n] = []), this[n].push(e), this
-}, void 0 !== t && (t.BoxParser = c), c.parseUUID = function(e) {
+};
+t.BoxParser = c, c.parseUUID = function(e) {
   return c.parseHex16(e)
 }, c.parseHex16 = function(e) {
   for (var t = "", n = 0; n < 16; n++) {
@@ -1911,7 +1916,8 @@ f.prototype.parseSample = function(e) {
 }, f.prototype.parseConfig = function(e) {
   var t = new a(e.buffer);
   return t.readUint32(), t.readCString()
-}, void 0 !== t && (t.XMLSubtitlein4Parser = d, t.Textin4Parser = f);
+};
+t.XMLSubtitlein4Parser = d, t.Textin4Parser = f;
 var p = function(e) {
   this.stream = e || new s, this.boxes = [], this.mdats = [], this.moofs = [], this.isProgressive = !1, this.moovStartFound = !1, this.onMoovStart = null, this.moovStartSent = !1, this.onReady = null, this.readySent = !1, this.onSegment = null, this.onSamples = null, this.onError = null, this.sampleListBuilt = !1, this.fragmentedTracks = [], this.extractedTracks = [], this.isFragmentationInitialized = !1, this.sampleProcessingStarted = !1, this.nextMoofNumber = 0, this.itemListBuilt = !1, this.onSidx = null, this.sidxSent = !1
 };
@@ -2084,7 +2090,8 @@ p.prototype.setSegmentOptions = function(e, t, n) {
     t++
   }
   return !0
-}, void 0 !== t && (t.ISOFile = p), p.prototype.lastBoxStartPosition = 0, p.prototype.parsingMdat = null, p.prototype.nextParsePosition = 0, p.prototype.discardMdatData = !1, p.prototype.processIncompleteBox = function(e) {
+};
+t.ISOFile = p, p.prototype.lastBoxStartPosition = 0, p.prototype.parsingMdat = null, p.prototype.nextParsePosition = 0, p.prototype.discardMdatData = !1, p.prototype.processIncompleteBox = function(e) {
   var t;
   if ("mdat" === e.type) return (t = new c[e.type + "Box"](e.size), this.parsingMdat = t, this.boxes.push(t), this.mdats.push(t), t.start = e.start, t.hdr_size = e.hdr_size, this.stream.addUsedBytes(t.hdr_size), this.lastBoxStartPosition = t.start + t.size, this.stream.seek(t.start + t.size, !1, this.discardMdatData)) ? (this.parsingMdat = null, !0) : (this.moovStartFound ? this.nextParsePosition = this.stream.findEndContiguousBuf() : this.nextParsePosition = t.start + t.size, !1);
   return ("moov" === e.type && (this.moovStartFound = !0, 0 === this.mdats.length && (this.isProgressive = !0)), this.stream.mergeNextBuffer && this.stream.mergeNextBuffer()) ? (this.nextParsePosition = this.stream.getEndPosition(), !0) : (e.type ? this.moovStartFound ? this.nextParsePosition = this.stream.getEndPosition() : this.nextParsePosition = this.stream.getPosition() + e.size : this.nextParsePosition = this.stream.getEndPosition(), !1)
@@ -2424,4 +2431,5 @@ var h = {};
 h.createFile = function(e, t) {
   var n = new p(t);
   return n.discardMdatData = !(void 0 === e || e), n
-}, void 0 !== t && (t.createFile = h.createFile)
+};
+t.createFile = h.createFile

@@ -1,11 +1,5 @@
-! function(r) {
-  if ("object" == typeof t) e.exports = r();
-  else if ("function" == typeof define && define.amd) define([], r);
-  else {
-    var i;
-    "undefined" != typeof window ? i = window : void 0 !== n.g ? i = n.g : "undefined" != typeof self ? i = self : i = this, i.braintree = r()
-  }
-}(function() {
+var t;
+t = function() {
   var e;
   return (function e(t, n, r) {
     function i(a, s) {
@@ -10092,4 +10086,4 @@
       "@braintree/wrap-promise": 43
     }]
   }, {}, [117])(117)
-})
+}, e.exports = t()

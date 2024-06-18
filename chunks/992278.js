@@ -9,25 +9,25 @@ e = n.nmd(e), o = function() {
         e(t + "}")
       } catch (e) {}
     }
-    return function(i, r, a, u, s, l, c, p, d, f) {
-      switch (i) {
+    return function(r, i, a, u, s, l, c, p, d, f) {
+      switch (r) {
         case 1:
-          if (0 === d && 64 === r.charCodeAt(0)) return e(r + ";"), "";
+          if (0 === d && 64 === i.charCodeAt(0)) return e(i + ";"), "";
           break;
         case 2:
-          if (0 === p) return r + t;
+          if (0 === p) return i + t;
           break;
         case 3:
           switch (p) {
             case 102:
             case 112:
-              return e(a[0] + r), "";
+              return e(a[0] + i), "";
             default:
-              return r + (0 === f ? t : "")
+              return i + (0 === f ? t : "")
           }
         case -2:
-          r.split(n).forEach(o)
+          i.split(n).forEach(o)
       }
     }
   }
-}, "object" == typeof t ? e.exports = o() : "function" == typeof define && define.amd ? define(o()) : window.stylisRuleSheet = o()
+}, e.exports = o()
