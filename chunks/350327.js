@@ -42,24 +42,24 @@ var i = n(544891),
   l = n(594174),
   u = n(626135),
   _ = n(981631),
-  d = n(474936);
+  c = n(474936);
 
-function c(e) {
+function d(e) {
   u.default.track(_.rMx.PREMIUM_FEATURE_TRY_OUT, {
     feature_name: e,
-    feature_tier: d.h1.PREMIUM_STANDARD
+    feature_tier: c.h1.PREMIUM_STANDARD
   })
 }
 async function E(e, t) {
   var n, u;
-  let d = null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
-  if (null == d) return;
-  let c = a.dN.getSetting();
-  null != e.bio && c && (e.bio = o.ZP.parse(void 0, e.bio).content);
+  let c = null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
+  if (null == c) return;
+  let d = a.dN.getSetting();
+  null != e.bio && d && (e.bio = o.ZP.parse(void 0, e.bio).content);
   try {
     r.Z.dispatch({
       type: "USER_PROFILE_UPDATE_START",
-      userId: d
+      userId: c
     });
     let n = await i.tn.patch({
       url: null != t ? _.ANM.GUILD_PROFILE(t, _.ME) : _.ANM.USER_PROFILE(_.ME),
@@ -69,7 +69,7 @@ async function E(e, t) {
       let e = null === (u = n.body.profile_effect) || void 0 === u ? void 0 : u.id;
       r.Z.dispatch({
         type: "USER_PROFILE_UPDATE_SUCCESS",
-        userId: d,
+        userId: c,
         profileEffectId: e,
         ...n.body
       })
@@ -137,26 +137,26 @@ function A(e) {
   r.Z.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR",
     avatar: e
-  }), c(d.QP.ANIMATED_AVATAR)
+  }), d(c.QP.ANIMATED_AVATAR)
 }
 
 function m(e) {
   r.Z.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION",
     avatarDecoration: e
-  }), c(d.QP.AVATAR_DECORATION)
+  }), d(c.QP.AVATAR_DECORATION)
 }
 
 function O(e) {
   r.Z.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER",
     banner: e
-  }), c(d.QP.PROFILE_BANNER)
+  }), d(c.QP.PROFILE_BANNER)
 }
 
 function R(e) {
   r.Z.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS",
     themeColors: e
-  }), c(d.QP.PROFILE_THEME_COLOR)
+  }), d(c.QP.PROFILE_THEME_COLOR)
 }

@@ -11,7 +11,7 @@ t.Z = () => {
     t = (0, u.QP)(e => e.fullScreenLayers.length > 0),
     n = (0, o.EV)(),
     _ = (0, r.useModalsStore)(r.hasAnyModalOpen),
-    d = (0, i.e7)([s.Z], () => s.Z.isConnected()),
-    c = (0, i.e7)([a.Z], () => a.Z.isOpen());
-  return e || t || _ || n || !d || c
+    c = (0, i.e7)([s.Z], () => s.Z.isConnected()),
+    d = (0, i.e7)([a.Z], () => a.Z.isOpen());
+  return e || t || _ || n || !c || d
 }

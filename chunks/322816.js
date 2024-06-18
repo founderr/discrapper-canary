@@ -22,8 +22,8 @@ var n = t(735250),
   S = t(95242),
   h = t(420966),
   g = t(275296),
-  x = t(203377),
-  C = t(981631),
+  C = t(203377),
+  x = t(981631),
   R = t(689938),
   L = t(318745),
   O = t(585512);
@@ -139,7 +139,7 @@ function M(e) {
     handleScroll: A
   } = (0, h.V)(), M = i.useRef(!1);
   return i.useEffect(() => {
-    if (!M.current && "" !== d.trimStart()) _.default.track(C.rMx.SEARCH_STARTED, {
+    if (!M.current && "" !== d.trimStart()) _.default.track(x.rMx.SEARCH_STARTED, {
       search_type: "Permissions"
     }), M.current = !0
   }, [d]), (0, n.jsx)(c.AdvancedScrollerAuto, {
@@ -158,7 +158,7 @@ function M(e) {
         children: [(0, n.jsx)(h.Z, {
           guild: s,
           role: t,
-          selectedSection: x.ZI.PERMISSIONS,
+          selectedSection: C.ZI.PERMISSIONS,
           setSelectedSection: r
         }), (0, n.jsx)("div", {
           className: L.noticeContainer,

@@ -133,10 +133,10 @@ function m(e) {
         numRules: s
       })
     }, [m, S]),
-    x = (0, E.Q)(s),
-    C = x[u.u.CAPTCHA_AND_RAID_PROTECTION],
-    R = x[u.u.DM_AND_SPAM_PROTECTION],
-    L = x[u.u.PERMISSIONS],
+    C = (0, E.Q)(s),
+    x = C[u.u.CAPTCHA_AND_RAID_PROTECTION],
+    R = C[u.u.DM_AND_SPAM_PROTECTION],
+    L = C[u.u.PERMISSIONS],
     O = (0, o.pr)(s.id);
   return (0, n.jsxs)("div", {
     children: [(0, n.jsx)(l.Heading, {
@@ -150,8 +150,8 @@ function m(e) {
         icon: t(14215),
         title: _.Z.Messages.GUILD_SETTINGS_SAFETY_CAPTCHA_RAID_PROTECTION,
         subtitle: _.Z.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
-          enabled: C.filter(e => e.enabled).length,
-          total: C.length
+          enabled: x.filter(e => e.enabled).length,
+          total: x.length
         }),
         page: u.u.CAPTCHA_AND_RAID_PROTECTION
       }), (0, n.jsx)("div", {

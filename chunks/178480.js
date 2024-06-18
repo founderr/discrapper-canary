@@ -4,13 +4,13 @@ n.d(t, {
     return E
   },
   RB: function() {
-    return c
+    return d
   },
   a3: function() {
     return l
   },
   hn: function() {
-    return d
+    return c
   },
   mH: function() {
     return _
@@ -47,7 +47,7 @@ function _(e, t) {
   }
 }
 
-function d(e) {
+function c(e) {
   return {
     acked: !1,
     enableBadge: !0,
@@ -58,7 +58,7 @@ function d(e) {
     deeplink: e.urls.install.toString()
   }
 }
-let c = e => e.type === o.DY.RECENT_MENTION || e.type === o.DY.REPLY_MENTION;
+let d = e => e.type === o.DY.RECENT_MENTION || e.type === o.DY.REPLY_MENTION;
 
 function E() {
   return (0, s.Fl)()

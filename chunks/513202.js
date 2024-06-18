@@ -9,15 +9,15 @@ var r = n(481060),
   l = n(287545),
   u = n(318891),
   _ = n(719296),
-  d = n(689938);
-class c extends l.Z {
+  c = n(689938);
+class d extends l.Z {
   showErrorModal(e) {
     let {
       code: t,
       message: n
     } = e;
     (0, r.openModalLazy)(async () => e => (0, i.jsx)(o.default, {
-      title: d.Z.Messages.EMBEDDED_ACTIVITIES_ERROR_TITLE.format({
+      title: c.Z.Messages.EMBEDDED_ACTIVITIES_ERROR_TITLE.format({
         code: t
       }),
       body: n,
@@ -26,7 +26,7 @@ class c extends l.Z {
   }
   showLaunchErrorModal(e) {
     (0, r.openModalLazy)(async () => t => (0, i.jsx)(o.default, {
-      title: d.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+      title: c.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
       body: e,
       ...t
     }))
@@ -70,4 +70,4 @@ class c extends l.Z {
     }) : t[n] = i
   }
 }
-t.Z = new c
+t.Z = new d

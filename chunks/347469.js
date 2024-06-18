@@ -19,15 +19,15 @@ t.Z = e => {
     onElementResize: s,
     onElementResizeEnd: o,
     throttleDuration: _ = 300,
-    orientation: d,
-    usePointerEvents: c = !1
+    orientation: c,
+    usePointerEvents: d = !1
   } = e, [E, I] = a.useState(!1), T = a.useRef(0), h = a.useRef(null == t ? 0 : t);
   return a.useLayoutEffect(() => {
     if (!E || null == n.current) return;
 
     function e(e) {
-      let t = 1 === u(d) ? e.screenX : e.screenY,
-        n = 0 === d || 2 === d,
+      let t = 1 === u(c) ? e.screenX : e.screenY,
+        n = 0 === c || 2 === c,
         s = (t - T.current) * (n ? -1 : 1),
         o = h.current + s;
       return (0, l.clamp)(o, null != r ? r : 0, null != i ? i : o)
@@ -36,7 +36,7 @@ t.Z = e => {
       a = i => {
         if (null == n.current) return null;
         let r = e(i),
-          s = 1 === u(d) ? "width" : "height";
+          s = 1 === u(c) ? "width" : "height";
         n.current.style[s] = "".concat(r, "px"), t(r)
       },
       S = t => {
@@ -44,14 +44,14 @@ t.Z = e => {
         let n = e(t);
         s(n), null == o || o(n)
       },
-      f = c ? "pointerup" : "mouseup",
-      N = c ? "pointermove" : "mousemove",
+      f = d ? "pointerup" : "mouseup",
+      N = d ? "pointermove" : "mousemove",
       A = n.current.ownerDocument;
     return A.addEventListener(f, S), A.addEventListener(N, a), () => {
       A.removeEventListener(f, S), A.removeEventListener(N, a), t.cancel()
     }
-  }, [E, s, r, i, d, n, _, o, c]), a.useCallback(e => {
-    let t = 1 === u(d);
+  }, [E, s, r, i, c, n, _, o, d]), a.useCallback(e => {
+    let t = 1 === u(c);
     null != n.current && (h.current = t ? n.current.offsetWidth : n.current.offsetHeight), T.current = t ? e.screenX : e.screenY, I(!0)
-  }, [d, n])
+  }, [c, n])
 }

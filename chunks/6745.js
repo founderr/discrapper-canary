@@ -18,21 +18,21 @@ function _(e) {
     placeholder: n,
     value: s,
     onChange: _,
-    onClose: d,
-    showScrollbar: c,
+    onClose: c,
+    showScrollbar: d,
     className: E,
     multiSelect: I,
     ...T
   } = e, h = r.useCallback(e => {
-    _(e), !I && (null == d || d())
-  }, [_, d, I]);
+    _(e), !I && (null == c || c())
+  }, [_, c, I]);
   return (0, i.jsx)(a.V, {
     className: o()(u.container, E, {
-      [u.scroller]: c
+      [u.scroller]: d
     }),
     children: (0, i.jsx)(l.hQ, {
       ...T,
-      showScrollbar: c,
+      showScrollbar: d,
       value: s,
       multiSelect: I,
       onChange: h,

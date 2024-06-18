@@ -9,8 +9,8 @@ var i, r, s, o = n(735250),
   l = n(120356),
   u = n.n(l),
   _ = n(392711),
-  d = n.n(_),
-  c = n(374470),
+  c = n.n(_),
+  d = n(374470),
   E = n(84735),
   I = n(981729),
   T = n(607070),
@@ -62,18 +62,18 @@ function N(e) {
       let l = f(n, o = t.sort((e, t) => e - t)),
         u = o[0],
         _ = o[o.length - 1],
-        d = _ - u;
+        c = _ - u;
       if (s) {
         let e = 100 / (o.length - 1);
         a = o.map((t, n) => n * e)
       } else {
-        let e = e => 100 * (e - u) / d;
+        let e = e => 100 * (e - u) / c;
         a = o.map(t => e(t))
       }
       return {
         min: u,
         max: _,
-        range: d,
+        range: c,
         sortedMarkers: o,
         markerPositions: a,
         closestMarkerIndex: l
@@ -108,9 +108,9 @@ class A extends(r = a.PureComponent) {
       closestMarkerIndex: a,
       newClosestIndex: l,
       min: _,
-      max: d
+      max: c
     } = this.state, {
-      disabled: c,
+      disabled: d,
       stickToMarkers: S,
       className: f,
       children: N,
@@ -118,11 +118,11 @@ class A extends(r = a.PureComponent) {
       fillStyles: m,
       mini: O,
       hideBubble: R,
-      defaultValue: C,
-      orientation: p,
-      onValueRender: g,
-      renderMarker: L,
-      getAriaValueText: v,
+      defaultValue: p,
+      orientation: g,
+      onValueRender: C,
+      renderMarker: v,
+      getAriaValueText: L,
       barClassName: D,
       grabberClassName: M,
       grabberStyles: P = {},
@@ -136,7 +136,7 @@ class A extends(r = a.PureComponent) {
     let B = "".concat(k, "%"),
       x = null != s && null != r ? s.map((e, t) => {
         let n = r[t],
-          i = null != C && C === n,
+          i = null != p && p === n,
           s = this.renderMark(n);
         return (0, o.jsx)("div", {
           className: u()(h.mark, {
@@ -147,7 +147,7 @@ class A extends(r = a.PureComponent) {
           style: {
             left: "".concat(e, "%")
           },
-          children: null != L ? L(n) : (0, o.jsxs)(o.Fragment, {
+          children: null != v ? v(n) : (0, o.jsxs)(o.Fragment, {
             children: [(0, o.jsx)("div", {
               className: h.markValue,
               children: s
@@ -157,21 +157,21 @@ class A extends(r = a.PureComponent) {
           })
         }, t)
       }) : null,
-      V = null != g ? g(t) : "".concat(k.toFixed(0), "%"),
-      Z = null !== (e = null == v ? void 0 : v(t)) && void 0 !== e ? e : void 0;
+      V = null != C ? C(t) : "".concat(k.toFixed(0), "%"),
+      Z = null !== (e = null == L ? void 0 : L(t)) && void 0 !== e ? e : void 0;
     return (0, o.jsx)(E.t, {
       focusTarget: this.containerRef,
       ringTarget: this.grabberRef,
       children: (0, o.jsxs)("div", {
         className: u()(h.slider, f, {
-          [h.disabled]: c,
+          [h.disabled]: d,
           [h.mini]: O
         }),
         "aria-valuemin": _,
-        "aria-valuemax": d,
+        "aria-valuemax": c,
         "aria-valuenow": t,
-        "aria-disabled": c,
-        "aria-orientation": p,
+        "aria-disabled": d,
+        "aria-orientation": g,
         "aria-hidden": U,
         "aria-label": b,
         "aria-labelledby": G,
@@ -255,8 +255,8 @@ class A extends(r = a.PureComponent) {
     } = n;
     if (e.clientX <= l || e.clientX >= u) return;
     let _ = e.clientX - i,
-      d = s[r] + _ / (u - l) * 100;
-    null != (t = this.props.equidistant ? f(d, s) : f(this.unscaleValue(d), o)) && (null == a || a(o[t])), this.setState({
+      c = s[r] + _ / (u - l) * 100;
+    null != (t = this.props.equidistant ? f(c, s) : f(this.unscaleValue(c), o)) && (null == a || a(o[t])), this.setState({
       newClosestIndex: t
     })
   }
@@ -279,7 +279,7 @@ class A extends(r = a.PureComponent) {
           s = t[r];
         if (null == s) return;
         l.value = s, l.closestMarkerIndex = r, l.newClosestIndex = r
-      } else l.value = d().clamp(n + e, i, r);
+      } else l.value = c().clamp(n + e, i, r);
       this.setState(l), l.value !== this.state.value && (null == s || s(l.value), null == o || o(l.value))
     }), S(this, "handleContainerMouseDown", e => {
       let t;
@@ -297,13 +297,13 @@ class A extends(r = a.PureComponent) {
       if (n) return;
       let {
         clientX: _,
-        currentTarget: d
+        currentTarget: c
       } = e;
-      if (!(0, c.k)(d)) return;
+      if (!(0, d.k)(c)) return;
       let {
         left: E,
         width: I
-      } = d.getBoundingClientRect(), T = (_ - E) / I;
+      } = c.getBoundingClientRect(), T = (_ - E) / I;
       if (a) {
         let {
           nextClosestMarkerIndex: e
@@ -353,7 +353,7 @@ class A extends(r = a.PureComponent) {
       let {
         current: i
       } = this.containerRef;
-      if (null == i || null === (t = i.ownerDocument) || void 0 === t || t.addEventListener("mousemove", this.handleMouseMove, !0), null == i || null === (n = i.ownerDocument) || void 0 === n || n.addEventListener("mouseup", this.handleMouseUp, !0), !(0, c.k)(i)) throw Error("[UIKit]Slider.handleMouseDown(): assert failed: domNode nodeType !== Element");
+      if (null == i || null === (t = i.ownerDocument) || void 0 === t || t.addEventListener("mousemove", this.handleMouseMove, !0), null == i || null === (n = i.ownerDocument) || void 0 === n || n.addEventListener("mouseup", this.handleMouseUp, !0), !(0, d.k)(i)) throw Error("[UIKit]Slider.handleMouseDown(): assert failed: domNode nodeType !== Element");
       this.setState({
         x: e.clientX,
         active: !0,

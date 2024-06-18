@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return v
+    return L
   }
 }), n(47120);
 var i = n(735250),
@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(100527),
   u = n(906732),
   _ = n(680295),
-  d = n(271383),
-  c = n(430824),
+  c = n(271383),
+  d = n(430824),
   E = n(594174),
   I = n(877485),
   T = n(785717),
@@ -25,16 +25,16 @@ var i = n(735250),
   m = n(272510),
   O = n(171368),
   R = n(958120),
-  C = n(215633),
-  p = n(23293),
-  g = n(228168),
-  L = n(689938);
+  p = n(215633),
+  g = n(23293),
+  C = n(228168),
+  v = n(689938);
 
-function v(e) {
+function L(e) {
   let {
     user: t,
     guildId: n,
-    channelId: v,
+    channelId: L,
     messageId: D,
     roleId: M,
     closePopout: P,
@@ -51,10 +51,10 @@ function v(e) {
     layout: "BITE_SIZE_POPOUT",
     userId: t.id,
     guildId: n,
-    channelId: v,
+    channelId: L,
     messageId: D,
     roleId: M
-  }), B = (0, s.e7)([E.default], () => E.default.getCurrentUser()), x = (0, s.e7)([c.Z], () => null != n ? c.Z.getGuild(n) : null), V = (0, s.e7)([d.ZP], () => null != n ? d.ZP.getMember(n, t.id) : null), Z = r.useRef(null), H = (0, h.ZP)(t.id, n), F = (0, a.Z)(Z);
+  }), B = (0, s.e7)([E.default], () => E.default.getCurrentUser()), x = (0, s.e7)([d.Z], () => null != n ? d.Z.getGuild(n) : null), V = (0, s.e7)([c.ZP], () => null != n ? c.ZP.getMember(n, t.id) : null), Z = r.useRef(null), H = (0, h.ZP)(t.id, n), F = (0, a.Z)(Z);
   r.useEffect(() => {
     null == y || y(null == Z ? void 0 : Z.current)
   }, [Z, y]);
@@ -63,7 +63,7 @@ function v(e) {
       sourceAnalyticsLocations: w,
       userId: t.id,
       guildId: n,
-      channelId: v,
+      channelId: L,
       messageId: D,
       roleId: M,
       ...e
@@ -75,7 +75,7 @@ function v(e) {
       layout: "BITE_SIZE_POPOUT",
       userId: t.id,
       guildId: n,
-      channelId: v,
+      channelId: L,
       messageId: D,
       roleId: M,
       shouldTrackViewOnMount: null == V || null != V.fullProfileLoadedTimestamp,
@@ -85,25 +85,25 @@ function v(e) {
         children: [(0, i.jsxs)(S.Z, {
           user: t,
           displayProfile: H,
-          profileType: g.y0.BITE_SIZE,
+          profileType: C.y0.BITE_SIZE,
           children: [(0, i.jsxs)(f.Z, {
-            profileType: g.y0.BITE_SIZE,
+            profileType: C.y0.BITE_SIZE,
             children: [(0, i.jsx)(A.Z, {
               user: t,
               guildId: n,
-              channelId: v,
+              channelId: L,
               onClose: P
             }), (0, i.jsx)(N.Z, {
-              profileType: g.y0.BITE_SIZE,
+              profileType: C.y0.BITE_SIZE,
               user: t,
               acceptFriendRequestColor: G ? o.tokens.colors.BUTTON_OUTLINE_POSITIVE_BORDER : null
             }), (0, i.jsx)(m.Z, {
               user: t,
-              profileType: g.y0.BITE_SIZE,
+              profileType: C.y0.BITE_SIZE,
               guildId: n,
               viewProfileItem: (0, i.jsx)(o.MenuItem, {
                 id: "view-profile",
-                label: L.Z.Messages.VIEW_FULL_PROFILE,
+                label: v.Z.Messages.VIEW_FULL_PROFILE,
                 action: () => {
                   k({
                     action: "PRESS_VIEW_PROFILE",
@@ -112,11 +112,11 @@ function v(e) {
                 }
               })
             })]
-          }), (0, i.jsx)(p.Z, {
+          }), (0, i.jsx)(g.Z, {
             user: t,
             displayProfile: H,
             guildId: n,
-            channelId: v,
+            channelId: L,
             onOpenProfile: U ? void 0 : Y
           }), (0, i.jsx)(R.Z, {
             user: t,
@@ -125,12 +125,12 @@ function v(e) {
             guild: x,
             isHovering: F,
             onOpenProfile: Y,
-            channelId: v,
+            channelId: L,
             onClose: P
-          }), (0, i.jsx)(C.Z, {
+          }), (0, i.jsx)(p.Z, {
             user: t,
             guildId: n,
-            channelId: v,
+            channelId: L,
             onClose: P
           })]
         }), (null == H ? void 0 : H.profileEffectId) != null && (0, i.jsx)(_.Z, {

@@ -12,8 +12,8 @@ var a, r, o, c, d = t(392711),
   S = t(990492),
   h = t(823379),
   g = t(700785),
-  x = t(999382),
-  C = t(203377),
+  C = t(999382),
+  x = t(203377),
   R = t(981631);
 let L = new Set,
   O = R.QZA.CLOSED,
@@ -21,10 +21,10 @@ let L = new Set,
   p = !1,
   M = [],
   f = [],
-  v = C.ZI.DISPLAY,
-  D = !1,
-  Z = new Set,
-  j = new Map,
+  D = x.ZI.DISPLAY,
+  v = !1,
+  j = new Set,
+  Z = new Map,
   U = new Map;
 
 function G() {
@@ -64,12 +64,12 @@ function P(e) {
 
 function b() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  n = x.Z.getProps().guild, A = !1, p = !1, l = void 0, L.clear(), O = R.QZA.OPEN, f = [...M = null != n ? u()(m.Z.getRoles(n.id)).values().sortBy(e => {
+  n = C.Z.getProps().guild, A = !1, p = !1, l = void 0, L.clear(), O = R.QZA.OPEN, f = [...M = null != n ? u()(m.Z.getRoles(n.id)).values().sortBy(e => {
     let {
       position: s
     } = e;
     return s
-  }).reverse().value() : []], D = !1, e && (U.clear(), j.forEach((e, s) => {
+  }).reverse().value() : []], v = !1, e && (U.clear(), Z.forEach((e, s) => {
     U.set(s, [...e])
   }))
 }
@@ -84,7 +84,7 @@ let B = u().debounce(() => {
         return t === e
       })
     }(s)) && (L.delete(s), e = !0)
-  }), 0 === L.size && (A = !1), D && u().isEqual(j, U) && (e = !0, D = !1), e && H.emitChange()
+  }), 0 === L.size && (A = !1), v && u().isEqual(Z, U) && (e = !0, v = !1), e && w.emitChange()
 }, 500);
 
 function y(e, s) {
@@ -106,12 +106,12 @@ function F(e) {
   })
 }
 
-function w(e) {
+function k(e) {
   let {
     guildId: s
   } = e;
   if (null == n || s !== n.id || O === R.QZA.SUBMITTING) return !1;
-  n = x.Z.getProps().guild;
+  n = C.Z.getProps().guild;
   let t = [];
   null != n && (t = u()(m.Z.getRoles(n.id)).values().sortBy(e => {
     let {
@@ -129,12 +129,12 @@ function w(e) {
     }) || null == s ? L.delete(e) : t[n] = s
   }), 0 === L.size && (A = !1), p = !1, M = [...t]
 }
-class k extends(a = I.ZP.Store) {
+class H extends(a = I.ZP.Store) {
   initialize() {
-    this.waitFor(x.Z, N.Z, m.Z)
+    this.waitFor(C.Z, N.Z, m.Z)
   }
   hasChanges() {
-    return A || p || D
+    return A || p || v
   }
   get errorMessage() {
     return l
@@ -143,7 +143,7 @@ class k extends(a = I.ZP.Store) {
     return p
   }
   get hasRoleConfigurationChanges() {
-    return D
+    return v
   }
   get guild() {
     return n
@@ -152,7 +152,7 @@ class k extends(a = I.ZP.Store) {
     return Array.from(L)
   }
   get editedRoleIdsForConfigurations() {
-    return Z
+    return j
   }
   get roles() {
     return M
@@ -161,7 +161,7 @@ class k extends(a = I.ZP.Store) {
     return O
   }
   get lastRoleEditSection() {
-    return v
+    return D
   }
   getSortDeltas() {
     return G()
@@ -179,13 +179,13 @@ class k extends(a = I.ZP.Store) {
     return U
   }
 }
-c = "GuildSettingsRolesStore", (o = "displayName") in(r = k) ? Object.defineProperty(r, o, {
+c = "GuildSettingsRolesStore", (o = "displayName") in(r = H) ? Object.defineProperty(r, o, {
   value: c,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : r[o] = c;
-let H = new k(T.Z, __OVERLAY__ ? {} : {
+let w = new H(T.Z, __OVERLAY__ ? {} : {
   GUILD_SETTINGS_ROLES_INIT: () => b(),
   GUILD_SETTINGS_INIT: P,
   GUILD_SETTINGS_SET_SECTION: P,
@@ -296,9 +296,9 @@ let H = new k(T.Z, __OVERLAY__ ? {} : {
       roleConnectionConfigurations: t
     } = e, n = F(s);
     if (null == n) return !1;
-    let i = j.get(n.id);
+    let i = Z.get(n.id);
     if (u().isEqual(i, t)) return !1;
-    U.set(n.id, t), j.set(n.id, t), B()
+    U.set(n.id, t), Z.set(n.id, t), B()
   },
   GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS: function(e) {
     let {
@@ -306,15 +306,15 @@ let H = new k(T.Z, __OVERLAY__ ? {} : {
       roleConnectionConfigurations: t
     } = e, n = F(s);
     if (null == n) return !1;
-    D = !0, Z.add(n.id), U.set(n.id, t), B()
+    v = !0, j.add(n.id), U.set(n.id, t), B()
   },
   GUILD_SETTINGS_CLOSE: function() {
-    n = null, f = M = [], j.clear(), L.clear(), U.clear(), Z = new Set, A = !1, p = !1, D = !1, O = R.QZA.CLOSED
+    n = null, f = M = [], Z.clear(), L.clear(), U.clear(), j = new Set, A = !1, p = !1, v = !1, O = R.QZA.CLOSED
   },
-  GUILD_ROLE_CREATE: w,
-  GUILD_ROLE_UPDATE: w,
+  GUILD_ROLE_CREATE: k,
+  GUILD_ROLE_UPDATE: k,
   GUILD_ROLE_DELETE: function(e) {
-    return Z.has(e.roleId) && (Z.delete(e.roleId), j.delete(e.roleId), U.delete(e.roleId), D = !1), w(e)
+    return j.has(e.roleId) && (j.delete(e.roleId), Z.delete(e.roleId), U.delete(e.roleId), v = !1), k(e)
   },
   GUILD_SETTINGS_ROLES_SUBMITTING: function() {
     O = R.QZA.SUBMITTING
@@ -332,7 +332,7 @@ let H = new k(T.Z, __OVERLAY__ ? {} : {
     let {
       section: s
     } = e;
-    v = s
+    D = s
   }
 });
-s.Z = H
+s.Z = w

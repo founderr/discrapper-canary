@@ -8,9 +8,9 @@ var i = n(836560),
   l = n(544891),
   u = n(996106),
   _ = n(981631);
-let d = _.V6Z + _.frH - 1;
+let c = _.V6Z + _.frH - 1;
 
-function c(e, t) {
+function d(e, t) {
   if (null == e || null == t) throw Error("cmd and name required");
   return "".concat(e, ":").concat(t)
 }
@@ -26,7 +26,7 @@ class h extends i.EventEmitter {
   }
   connect() {
     if (null == T) {
-      if (I > d) {
+      if (I > c) {
         I = _.V6Z, this.emit("disconnected");
         return
       }
@@ -64,13 +64,13 @@ class h extends i.EventEmitter {
             }, s.message)), this.disconnect();
             return
           }
-          this.emit(c(n, i), s);
+          this.emit(d(n, i), s);
           return
         }
         let o = null;
         i === _.zMe.ERROR && (o = new u.Z({
           errorCode: s.code
-        }, s.message), s = null), this.emit(c(n, r), o, s)
+        }, s.message), s = null), this.emit(d(n, r), o, s)
       }, T.onclose = T.onerror = e => this.disconnect(e))
     }
   }
@@ -82,10 +82,10 @@ class h extends i.EventEmitter {
     null != T && (this.emit("disconnected"), T.close(), T = null)
   }
   subscribe(e, t, n) {
-    return this.on(c(_.Etm.DISPATCH, e), n), this.request(_.Etm.SUBSCRIBE, t, e)
+    return this.on(d(_.Etm.DISPATCH, e), n), this.request(_.Etm.SUBSCRIBE, t, e)
   }
   unsubscribe(e, t, n) {
-    return this.removeListener(c(_.Etm.DISPATCH, e), n), this.request(_.Etm.UNSUBSCRIBE, t, e)
+    return this.removeListener(d(_.Etm.DISPATCH, e), n), this.request(_.Etm.UNSUBSCRIBE, t, e)
   }
   request(e, t, n) {
     return new Promise((i, r) => {
@@ -104,7 +104,7 @@ class h extends i.EventEmitter {
           evt: n,
           nonce: s
         });
-      this.once(c(e, s), (e, t) => null != e ? r(e) : i(t)), null == T || T.send(o)
+      this.once(d(e, s), (e, t) => null != e ? r(e) : i(t)), null == T || T.send(o)
     })
   }
   requestOnce(e, t, n) {

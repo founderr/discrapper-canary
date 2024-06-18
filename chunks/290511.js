@@ -13,7 +13,7 @@ n.d(t, {
     return I
   },
   Oq: function() {
-    return v
+    return L
   },
   RF: function() {
     return O
@@ -34,16 +34,16 @@ n.d(t, {
     return f
   },
   cf: function() {
-    return L
+    return v
   },
   dr: function() {
-    return p
+    return g
   },
   fY: function() {
     return m
   },
   iU: function() {
-    return c
+    return d
   },
   l7: function() {
     return o
@@ -55,13 +55,13 @@ n.d(t, {
     return S
   },
   yZ: function() {
-    return C
+    return p
   }
 });
 var i, r, s, o, a, l, u = n(348327),
   _ = n.n(u),
-  d = n(689938);
-let c = 100,
+  c = n(689938);
+let d = 100,
   E = 50,
   I = 100,
   T = 15,
@@ -87,7 +87,7 @@ function O(e) {
 function R() {
   return {
     id: String(Date.now()),
-    title: d.Z.Messages.ONBOARDING_PROMPT_DEFAULT_TITLE,
+    title: c.Z.Messages.ONBOARDING_PROMPT_DEFAULT_TITLE,
     options: [],
     singleSelect: !1,
     required: !1,
@@ -96,7 +96,7 @@ function R() {
   }
 }
 
-function C(e) {
+function p(e) {
   return {
     id: String(Date.now()),
     title: "",
@@ -108,7 +108,7 @@ function C(e) {
   }
 }
 
-function p(e) {
+function g(e) {
   return {
     id: e.id,
     options: e.options.map(e => {
@@ -134,7 +134,7 @@ function p(e) {
   }
 }
 
-function g(e) {
+function C(e) {
   return {
     id: e.id,
     options: e.options.map(e => {
@@ -157,10 +157,10 @@ function g(e) {
   }
 }
 
-function L(e) {
+function v(e) {
   var t, n, i;
   return {
-    prompts: e.prompts.map(g),
+    prompts: e.prompts.map(C),
     defaultChannelIds: e.default_channel_ids,
     responses: null !== (t = e.responses) && void 0 !== t ? t : [],
     mode: e.mode,
@@ -171,6 +171,6 @@ function L(e) {
   }
 }
 
-function v(e) {
+function L(e) {
   return null == e || null == e.id && null == e.name
 }(i = o || (o = {}))[i.CUSTOMIZE = 0] = "CUSTOMIZE", i[i.BROWSE = 1] = "BROWSE", (r = a || (a = {}))[r.MULTIPLE_CHOICE = 0] = "MULTIPLE_CHOICE", r[r.DROPDOWN = 1] = "DROPDOWN", (s = l || (l = {}))[s.ONBOARDING_DEFAULT = 0] = "ONBOARDING_DEFAULT", s[s.ONBOARDING_ADVANCED = 1] = "ONBOARDING_ADVANCED"

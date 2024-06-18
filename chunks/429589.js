@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(224706),
   u = n(287734),
   _ = n(2052),
-  d = n(906732),
-  c = n(835473),
+  c = n(906732),
+  d = n(835473),
   E = n(592745),
   I = n(592125),
   T = n(757266),
@@ -25,11 +25,11 @@ var i = n(735250),
   m = n(944486),
   O = n(594174),
   R = n(979651),
-  C = n(181106),
-  p = n(417363),
-  g = n(358085),
-  L = n(804739),
-  v = n(566620),
+  p = n(181106),
+  g = n(417363),
+  C = n(358085),
+  v = n(804739),
+  L = n(566620),
   D = n(317381),
   M = n(638880),
   P = n(255621),
@@ -56,14 +56,14 @@ function H(e) {
     ...z
   } = e, {
     analyticsLocations: q
-  } = (0, d.ZP)(), [X, Q] = r.useState(!1), J = (0, s.e7)([O.default], () => O.default.getCurrentUser()), $ = Y.id === (null == J ? void 0 : J.id), ee = null !== (t = null == F ? void 0 : F.applicationId) && void 0 !== t ? t : null == H ? void 0 : H.application_id, et = (0, y.Z)({
+  } = (0, c.ZP)(), [X, Q] = r.useState(!1), J = (0, s.e7)([O.default], () => O.default.getCurrentUser()), $ = Y.id === (null == J ? void 0 : J.id), ee = null !== (t = null == F ? void 0 : F.applicationId) && void 0 !== t ? t : null == H ? void 0 : H.application_id, et = (0, y.Z)({
     channelId: null == F ? void 0 : F.channelId,
     userId: Y.id,
     activity: H
-  }), en = (0, s.e7)([f.Z, E.Z, p.Z, T.Z], () => W || null != ee && (0, L.t)({
+  }), en = (0, s.e7)([f.Z, E.Z, g.Z, T.Z], () => W || null != ee && (0, v.t)({
     LibraryApplicationStore: f.Z,
     LaunchableGameStore: E.Z,
-    DispatchApplicationStore: p.Z,
+    DispatchApplicationStore: g.Z,
     ConnectedAppsStore: T.Z,
     applicationId: ee
   })), ei = (0, s.e7)([D.ZP], () => Array.from(D.ZP.getSelfEmbeddedActivities().values()).some(e => {
@@ -72,7 +72,7 @@ function H(e) {
       channelId: n
     } = e;
     return (t === (null == H ? void 0 : H.application_id) || t === (null == F ? void 0 : F.applicationId)) && n === et
-  })), er = (0, s.e7)([C.Z], () => null != H && null != H.application_id && C.Z.getState(H.application_id, V.mFx.JOIN) === V.OcF.LOADING), [es] = (0, c.Z)((null == F ? void 0 : F.applicationId) != null ? [null == F ? void 0 : F.applicationId] : (null == H ? void 0 : H.application_id) != null ? [null == H ? void 0 : H.application_id] : []), eo = (0, U.s5)({
+  })), er = (0, s.e7)([p.Z], () => null != H && null != H.application_id && p.Z.getState(H.application_id, V.mFx.JOIN) === V.OcF.LOADING), [es] = (0, d.Z)((null == F ? void 0 : F.applicationId) != null ? [null == F ? void 0 : F.applicationId] : (null == H ? void 0 : H.application_id) != null ? [null == H ? void 0 : H.application_id] : []), eo = (0, U.s5)({
     userId: Y.id,
     activity: H,
     channelId: et,
@@ -91,12 +91,12 @@ function H(e) {
     SelectedChannelStore: m.Z,
     VoiceStateStore: R.Z,
     PermissionStore: N.Z
-  }) : void 0), el = (0, s.e7)([D.ZP], () => Array.from(D.ZP.getSelfEmbeddedActivities().values()).some(e => e.applicationId === (null == F ? void 0 : F.applicationId) && e.channelId === (null == F ? void 0 : F.channelId))), eu = (0, w.Z)(), e_ = (0, _.O)(), ed = !g.isPlatformEmbedded;
+  }) : void 0), el = (0, s.e7)([D.ZP], () => Array.from(D.ZP.getSelfEmbeddedActivities().values()).some(e => e.applicationId === (null == F ? void 0 : F.applicationId) && e.channelId === (null == F ? void 0 : F.channelId))), eu = (0, w.Z)(), e_ = (0, _.O)(), ec = !C.isPlatformEmbedded;
   if (!((0, b.Z)(H, V.xjy.JOIN) || W) || null == ee) return null;
-  let ec = !$ || W && !el,
-    eE = ec && (ed || en) && !X && !ei && (!W || ea),
+  let ed = !$ || W && !el,
+    eE = ed && (ec || en) && !X && !ei && (!W || ea),
     eI = null;
-  ec ? !ed && !en && null != H && (eI = Z.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({
+  ed ? !ec && !en && null != H && (eI = Z.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({
     name: H.name
   })) : eI = Z.Z.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF;
   let eT = null !== (n = null == F ? void 0 : F.launchId) && void 0 !== n ? n : null == H ? void 0 : H.session_id,
@@ -133,7 +133,7 @@ function H(e) {
       }
       if (!e) {
         let e;
-        ea && (null == j || j(), eh(Y, H)), Q(!0), null != et && null != ee ? e = await v.pu({
+        ea && (null == j || j(), eh(Y, H)), Q(!0), null != et && null != ee ? e = await L.pu({
           channelId: et,
           applicationId: ee,
           userId: Y.id,

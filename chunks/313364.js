@@ -22,8 +22,8 @@ var n = t(735250),
   S = t(440857),
   h = t(472596),
   g = t(598948),
-  x = t(428936),
-  C = t(41586),
+  C = t(428936),
+  x = t(41586),
   R = t(918192),
   L = t(981631),
   O = t(689938),
@@ -43,12 +43,12 @@ function p(e) {
         section: L.jXE.GUILD_SETTINGS_MEMBERS
       }
     })
-  }, [l]), v = i.useRef(null), D = i.useCallback(() => {
+  }, [l]), D = i.useRef(null), v = i.useCallback(() => {
     var e;
-    null === (e = v.current) || void 0 === e || e.resetSearchText()
+    null === (e = D.current) || void 0 === e || e.resetSearchText()
   }, []);
   if (null == t) return null;
-  let Z = (0, h.xb)(!1, !1, M);
+  let j = (0, h.xb)(!1, !1, M);
   return (0, n.jsx)(d.Gt, {
     value: l,
     children: (0, n.jsx)("div", {
@@ -75,16 +75,16 @@ function p(e) {
                   guild: t
                 }), p ? (0, n.jsxs)("div", {
                   className: a()(A.mainTableContainer),
-                  children: [(0, n.jsx)(C.Z, {
+                  children: [(0, n.jsx)(x.Z, {
                     guild: t,
-                    ref: v
+                    ref: D
                   }), (0, n.jsx)(g.Z, {
                     guild: t,
-                    searchState: Z,
+                    searchState: j,
                     compact: !0,
                     onSelectRow: f,
-                    onResetForNewMembers: D
-                  }), Z !== h.po.SUCCESS_STILL_INDEXING && (0, n.jsx)(x.Z, {
+                    onResetForNewMembers: v
+                  }), j !== h.po.SUCCESS_STILL_INDEXING && (0, n.jsx)(C.Z, {
                     guildId: t.id
                   })]
                 }) : (0, n.jsx)("div", {

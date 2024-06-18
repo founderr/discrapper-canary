@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return c
+    return d
   }
 }), n(47120);
 var i = n(735250),
@@ -12,14 +12,14 @@ var i = n(735250),
   l = n(768581),
   u = n(895924),
   _ = n(588970),
-  d = n(970952);
+  c = n(970952);
 
-function c(e) {
+function d(e) {
   let {
     section: t,
     isSelected: n,
     width: s,
-    height: c,
+    height: d,
     className: E,
     selectable: I = !1,
     onFocus: T,
@@ -31,11 +31,11 @@ function c(e) {
     m(!0), null == T || T()
   }, [T]), R = r.useCallback(() => {
     m(!1), null == h || h()
-  }, [h]), C = r.useCallback(() => {
+  }, [h]), p = r.useCallback(() => {
     m(!0), null == S || S()
-  }, [S]), p = r.useCallback(() => {
+  }, [S]), g = r.useCallback(() => {
     m(!1), null == f || f()
-  }, [f]), g = r.useMemo(() => {
+  }, [f]), C = r.useMemo(() => {
     if (t.type === u.Qi.APPLICATION) {
       var e;
       return l.ZP.getApplicationIconURL({
@@ -46,7 +46,7 @@ function c(e) {
         size: s
       })
     }
-    return d
+    return c
   }, [t, s]);
   return (0, i.jsx)("div", {
     ...N,
@@ -56,21 +56,21 @@ function c(e) {
     }),
     onFocus: O,
     onBlur: R,
-    onMouseOver: C,
-    onMouseLeave: p,
+    onMouseOver: p,
+    onMouseLeave: g,
     children: (0, i.jsx)(a.ZP, {
       className: _.mask,
       mask: I && (n || A) ? a.QS.SQUIRCLE : a.QS.AVATAR_DEFAULT,
       width: s,
-      height: c,
+      height: d,
       children: (0, i.jsx)("img", {
         alt: "",
         className: _.icon,
         style: {
           width: s,
-          height: c
+          height: d
         },
-        src: g
+        src: C
       })
     })
   })

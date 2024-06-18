@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return p
+    return g
   }
 }), n(773603), n(411104), n(47120), n(600040);
 var i = n(264344),
@@ -12,8 +12,8 @@ var i = n(264344),
   l = n.n(a),
   u = n(839548),
   _ = n(46973),
-  d = n(734298),
-  c = n(970838),
+  c = n(734298),
+  d = n(970838),
   E = n(68721),
   I = n(997653),
   T = n(384136),
@@ -33,8 +33,8 @@ function R(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let C = new s.Y("MediaEngineWebRTC");
-class p extends o.Z {
+let p = new s.Y("MediaEngineWebRTC");
+class g extends o.Z {
   destroy() {
     null != this.voiceActivityInput && (this.voiceActivityInput.destroy(), this.voiceActivityInput = null), this.eachConnection(e => e.destroy()), this.emit(_.aB.Destroy), this.removeAllListeners()
   }
@@ -42,7 +42,7 @@ class p extends o.Z {
     !this.interacted && (document.createElement("audio").play(), this.interacted = !0), this.eachConnection(e => e.interact())
   }
   static supported() {
-    return !__OVERLAY__ && (O.fi && null != window.AudioContext && null != window.RTCPeerConnection ? (n(250678), !0) : (C.info("WebRTC is not supported on", r().name, r().version), !1))
+    return !__OVERLAY__ && (O.fi && null != window.AudioContext && null != window.RTCPeerConnection ? (n(250678), !0) : (p.info("WebRTC is not supported on", r().name, r().version), !1))
   }
   supported() {
     return !0
@@ -101,8 +101,8 @@ class p extends o.Z {
       modes: o,
       streamUserId: a,
       streamParameters: l
-    } = n, d = (0, I.Q)(e, t, this.getAudioContext(), l);
-    return d.streamUserId = a, d.setOutputVolume(this.outputVolume), d.setSinkId(this.sinkId), d.once(u.S.Destroy, e => this.connections.delete(e)), d.on(u.S.Silence, e => this.emit(_.aB.Silence, e)), d.on(u.S.DesktopSourceEnd, this.handleDesktopSourceEnd), d.on(u.S.AudioPermission, this.handleAudioPermission), d.on(u.S.VideoPermission, this.handleVideoPermission), this.interacted && d.interact(), e === m.Yn.DEFAULT && (d.setAudioSource(this.sourceId), this.enabled && d.input.enableAudioInput()), this.connections.add(d), this.emit(_.aB.Connection, d), d
+    } = n, c = (0, I.Q)(e, t, this.getAudioContext(), l);
+    return c.streamUserId = a, c.setOutputVolume(this.outputVolume), c.setSinkId(this.sinkId), c.once(u.S.Destroy, e => this.connections.delete(e)), c.on(u.S.Silence, e => this.emit(_.aB.Silence, e)), c.on(u.S.DesktopSourceEnd, this.handleDesktopSourceEnd), c.on(u.S.AudioPermission, this.handleAudioPermission), c.on(u.S.VideoPermission, this.handleVideoPermission), this.interacted && c.interact(), e === m.Yn.DEFAULT && (c.setAudioSource(this.sourceId), this.enabled && c.input.enableAudioInput()), this.connections.add(c), this.emit(_.aB.Connection, c), c
   }
   findConnection(e) {
     return Array.from(this.connections).find(t => null == e || t.context === e)
@@ -286,6 +286,6 @@ class p extends o.Z {
       this.emit(_.aB.AudioPermission, e)
     }), R(this, "handleVideoPermission", e => {
       this.emit(_.aB.VideoPermission, e)
-    }), this.on("newListener", this.handleNewListener), this.on("removeListener", this.handleRemoveListener), (0, c.px)(this.handleActiveSinksChange), (0, d.Z)(this)
+    }), this.on("newListener", this.handleNewListener), this.on("removeListener", this.handleRemoveListener), (0, d.px)(this.handleActiveSinksChange), (0, c.Z)(this)
   }
 }

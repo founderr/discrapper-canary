@@ -22,8 +22,8 @@ var n = t(735250),
   S = t(585483),
   h = t(999382),
   g = t(743475),
-  x = t(983135),
-  C = t(8426),
+  C = t(983135),
+  x = t(8426),
   R = t(969632),
   L = t(570961),
   O = t(208665),
@@ -31,10 +31,10 @@ var n = t(735250),
   p = t(84658),
   M = t(142961),
   f = t(232764),
-  v = t(729311),
-  D = t(850864),
-  Z = t(966301),
-  j = t(981631),
+  D = t(729311),
+  v = t(850864),
+  j = t(966301),
+  Z = t(981631),
   U = t(689938),
   G = t(231249);
 
@@ -59,7 +59,7 @@ function b(e) {
   })), F = (0, o.e7)([A.Z], () => {
     let e = (0, p.lg)(h);
     return null != e && !A.Z.isEducationUpsellDismissed(e)
-  }), w = (0, o.e7)([I.Z], () => I.Z.useReducedMotion), k = (0, _.ZP)(), H = i.useRef(null), [{
+  }), k = (0, o.e7)([I.Z], () => I.Z.useReducedMotion), H = (0, _.ZP)(), w = i.useRef(null), [{
     spring: V
   }, Y] = (0, r.useSpring)(() => ({
     spring: 0
@@ -75,25 +75,25 @@ function b(e) {
         delay: 1e3
       })
     }
-    return S.S.subscribe(j.CkL.EMPHASIZE_NOTICE, e), () => {
-      S.S.unsubscribe(j.CkL.EMPHASIZE_NOTICE, e)
+    return S.S.subscribe(Z.CkL.EMPHASIZE_NOTICE, e), () => {
+      S.S.unsubscribe(Z.CkL.EMPHASIZE_NOTICE, e)
     }
   }, [Y]);
   let W = (0, E.useToken)(c.Z.colors.BACKGROUND_FLOATING).hex(),
-    K = (0, E.useToken)(c.Z.unsafe_rawColors.PRIMARY_160).hex(),
-    z = (0, u.wj)(k) ? W : K,
+    z = (0, E.useToken)(c.Z.unsafe_rawColors.PRIMARY_160).hex(),
+    K = (0, u.wj)(H) ? W : z,
     q = V.to({
       range: [0, 1],
       output: [(0, E.useToken)(c.Z.unsafe_rawColors.WHITE_500).hex(), (0, E.useToken)(c.Z.colors.TEXT_NORMAL).hex()]
     }),
     X = V.to({
       range: [0, 1],
-      output: [z, (0, E.useToken)(c.Z.colors.STATUS_DANGER).hex()]
+      output: [K, (0, E.useToken)(c.Z.colors.STATUS_DANGER).hex()]
     });
   if (P) {
-    if (h === p.PG.DEFAULT_CHANNELS) return (0, n.jsx)(v.j, {});
-    if (h === p.PG.CUSTOMIZATION_QUESTIONS) return (0, n.jsx)(Z.Zm, {});
-    else if (h === p.PG.HOME_SETTINGS) return (0, n.jsx)(D.T, {})
+    if (h === p.PG.DEFAULT_CHANNELS) return (0, n.jsx)(D.j, {});
+    if (h === p.PG.CUSTOMIZATION_QUESTIONS) return (0, n.jsx)(j.Zm, {});
+    else if (h === p.PG.HOME_SETTINGS) return (0, n.jsx)(v.T, {})
   }
   let Q = h === p.xh[p.xh.length - 1],
     J = async () => {
@@ -107,26 +107,26 @@ function b(e) {
         });
         else if (h === p.PG.HOME_SETTINGS) {
           let e = R.Z.getSettings();
-          await (0, C.oo)(s.id, e)
+          await (0, x.oo)(s.id, e)
         }
       } catch {
         return !1
       }
       return !0
     }, $ = async () => {
-      m.default.track(j.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+      m.default.track(Z.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
         ...(0, T.hH)(l),
         step: p.PG[h],
         back: !1,
         skip: !b
-      }), (0, x.Nb)((0, p.lg)(h)), await J() && (0, x.IG)(l, h)
+      }), (0, C.Nb)((0, p.lg)(h)), await J() && (0, C.IG)(l, h)
     }, ee = async () => {
-      m.default.track(j.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+      m.default.track(Z.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
         ...(0, T.hH)(l),
         step: p.PG[h],
         back: !0,
         skip: !1
-      }), await J() && (0, x.Wy)(l, h)
+      }), await J() && (0, C.Wy)(l, h)
     }, es = null;
   F && (h === p.PG.SAFETY_CHECK ? es = (0, n.jsx)(f.j7, {}) : h === p.PG.DEFAULT_CHANNELS ? es = (0, n.jsx)(f.Io, {}) : h === p.PG.CUSTOMIZATION_QUESTIONS ? es = (0, n.jsx)(f.cZ, {}) : h === p.PG.HOME_SETTINGS && (es = (0, n.jsx)(f.g6, {})));
   let et = (0, n.jsx)(E.Button, {
@@ -175,12 +175,12 @@ function b(e) {
         },
         children: (0, n.jsxs)("div", {
           className: G.flexContainer,
-          ref: H,
+          ref: w,
           children: [F ? (0, n.jsxs)("div", {
             className: G.educationUpsellRoot,
             children: [(0, n.jsx)("img", {
               className: a()(G.wumpus, {
-                [G.animated]: !w
+                [G.animated]: !k
               }),
               src: t(33631),
               alt: "wumpus"
@@ -191,7 +191,7 @@ function b(e) {
               })]
             })]
           }) : null, (0, n.jsx)(E.FocusRingScope, {
-            containerRef: H,
+            containerRef: w,
             children: (0, n.jsxs)("div", {
               className: G.actions,
               children: [et, (0, n.jsxs)("div", {

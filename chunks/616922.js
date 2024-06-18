@@ -16,7 +16,7 @@ n.d(t, {
     return I
   },
   ai: function() {
-    return c
+    return d
   },
   c8: function() {
     return f
@@ -25,18 +25,18 @@ n.d(t, {
     return o
   },
   lS: function() {
-    return d
+    return c
   }
 });
 var i, r, s, o, a = n(726542),
   l = n(358085),
   u = n(981631);
 let _ = "spotify",
-  d = "spotify:",
-  c = a.Z.get(u.ABu.SPOTIFY).name;
+  c = "spotify:",
+  d = a.Z.get(u.ABu.SPOTIFY).name;
 
 function E(e) {
-  return null != e && e.startsWith(d)
+  return null != e && e.startsWith(c)
 }(i = s || (s = {})).TRACK = "track", i.ARTIST = "artist", i.ALBUM = "album", i.PLAYLIST = "playlist", i.EPISODE = "episode", i.SHOW = "show", (r = o || (o = {})).USER_ACTIVITY_PLAY = "user_activity_play", r.USER_ACTIVITY_SYNC = "user_activity_sync", r.EMBED_SYNC = "embed_sync";
 let I = ["open.spotify.com", "www.spotify.com"],
   T = "https://api.spotify.com/v1",

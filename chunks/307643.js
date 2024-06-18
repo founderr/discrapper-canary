@@ -13,7 +13,7 @@ n.d(t, {
     return a
   },
   tn: function() {
-    return d
+    return c
   }
 });
 var i = n(544891),
@@ -50,7 +50,7 @@ function _(e) {
     applicationId: e
   }), Promise.reject(new s.Z(t))))
 }
-async function d(e) {
+async function c(e) {
   return (await i.tn.get({
     url: o.ANM.ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS,
     query: {

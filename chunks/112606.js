@@ -39,15 +39,15 @@ function _(e, t) {
     return t(Number.parseInt(n))
   })
 }
-let d = r().throttle(e => {
+let c = r().throttle(e => {
   let {
     enabled: t,
     combosEnabled: n,
     combosRequiredCount: i,
     screenshakeEnabled: r,
     shakeIntensity: o,
-    screenshakeEnabledLocations: d,
-    confettiEnabled: c,
+    screenshakeEnabledLocations: c,
+    confettiEnabled: d,
     confettiSize: E,
     confettiCount: I,
     confettiEnabledLocations: T
@@ -58,11 +58,11 @@ let d = r().throttle(e => {
     combos_required_count: i,
     screenshake_enabled: r,
     shake_intensity: o,
-    screenshake_enabled_locations: _(d, l),
-    confetti_enabled: c,
+    screenshake_enabled_locations: _(c, l),
+    confetti_enabled: d,
     confetti_size: E,
     confetti_count: I,
     confetti_enabled_locations: _(T, u)
   })
 }, 5e3);
-t.Z = d
+t.Z = c

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return c
+    return d
   }
 });
 var i = n(735250);
@@ -17,21 +17,21 @@ let _ = {
     section: a.jXE.PROFILE_POPOUT,
     object: a.qAy.EDIT_PER_SERVER_IDENTITY
   },
-  d = {
+  c = {
     page: a.ZY5.USER_POPOUT,
     section: a.jXE.PROFILE_POPOUT
   };
 
-function c(e) {
+function d(e) {
   let {
     onSelect: t,
     onClose: n,
     guild: a
-  } = e, c = (0, s.Z)({
+  } = e, d = (0, s.Z)({
     guild: a,
     analyticsLocation: _
   }), E = (0, s.Z)({
-    analyticsLocation: d
+    analyticsLocation: c
   }), {
     trackUserProfileAction: I
   } = (0, o.KZ)();
@@ -48,7 +48,7 @@ function c(e) {
       action: () => {
         I({
           action: "EDIT_GUILD_PROFILE"
-        }), c()
+        }), d()
       }
     }), (0, i.jsx)(r.MenuItem, {
       id: "edit-main-profile",

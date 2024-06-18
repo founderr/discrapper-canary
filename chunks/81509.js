@@ -1,7 +1,7 @@
 "use strict";
 t.d(s, {
   Z: function() {
-    return C
+    return x
   }
 });
 var n = t(735250);
@@ -154,7 +154,7 @@ function g(e) {
   })
 }
 
-function x(e) {
+function C(e) {
   let {
     highlightedCreatorGuild: s
   } = e, {
@@ -177,8 +177,8 @@ function x(e) {
     guildAvatarUrl: I,
     subscriberCount: T,
     emojisToShow: m,
-    notShownEmojiCount: x,
-    storePageUrl: C
+    notShownEmojiCount: C,
+    storePageUrl: x
   } = o.details;
   return (0, n.jsxs)("div", {
     className: N.guildCard,
@@ -193,13 +193,13 @@ function x(e) {
       quoteAttributionTitle: r
     }), (0, n.jsx)(g, {
       emojisToShow: m,
-      notShownEmojiCount: x,
-      storePageUrl: C
+      notShownEmojiCount: C,
+      storePageUrl: x
     })]
   })
 }
 
-function C(e) {
+function x(e) {
   let {
     highlightedCreators: s
   } = e;
@@ -213,7 +213,7 @@ function C(e) {
     }), (0, n.jsx)(_.Z, {
       carouselClassName: N.creatorGuildCarousel,
       items: s,
-      renderItem: e => (0, n.jsx)(x, {
+      renderItem: e => (0, n.jsx)(C, {
         highlightedCreatorGuild: e
       }),
       intervalBetweenAutomaticItemRotations: 7e3

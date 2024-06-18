@@ -11,9 +11,9 @@ var i, r = n(735250),
   l = n(748780),
   u = n(481060),
   _ = n(981631),
-  d = n(265835);
+  c = n(265835);
 
-function c(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -51,12 +51,12 @@ class E extends(i = s.Component) {
       href: _.Z5c.INDEX,
       target: "_blank",
       rel: "noopener",
-      className: a()(d.logo, this.props.className),
+      className: a()(c.logo, this.props.className),
       style: this.getAnimatedStyle()
     })
   }
   constructor(...e) {
-    super(...e), c(this, "anim", new l.Z.Value(0)), c(this, "animate", e => {
+    super(...e), d(this, "anim", new l.Z.Value(0)), d(this, "animate", e => {
       l.Z.spring(this.anim, {
         toValue: e,
         friction: 10,
@@ -65,4 +65,4 @@ class E extends(i = s.Component) {
     })
   }
 }
-c(E, "contextType", u.AccessibilityPreferencesContext)
+d(E, "contextType", u.AccessibilityPreferencesContext)

@@ -7,10 +7,10 @@ n.d(t, {
     return _
   },
   dS: function() {
-    return c
+    return d
   },
   rq: function() {
-    return d
+    return c
   }
 }), n(47120);
 var i = n(314897),
@@ -31,7 +31,7 @@ function _(e, t) {
   return "".concat(u).concat(e.guild_id, ":").concat(e.id, ":").concat(_, ":").concat(t.id)
 }
 
-function d(e) {
+function c(e) {
   if (null == e || null == e.party) return;
   let {
     id: t,
@@ -54,12 +54,12 @@ function d(e) {
   }
 }
 
-function c(e) {
+function d(e) {
   return (null == e ? void 0 : e.application_id) === a.gD
 }
 
 function E(e) {
-  let t = d(e);
+  let t = c(e);
   if (null == t) return !1;
   let {
     channelId: n

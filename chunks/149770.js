@@ -8,22 +8,22 @@ var i = n(570140),
   l = n(131951),
   u = n(944486),
   _ = n(914010),
-  d = n(981631);
-class c extends s.Z {
+  c = n(981631);
+class d extends s.Z {
   handleGuildCreate(e) {
     let {
       guild: t
-    } = e, n = u.Z.getChannelId(d.ME), i = u.Z.getVoiceChannelId();
+    } = e, n = u.Z.getChannelId(c.ME), i = u.Z.getVoiceChannelId();
     t.id === n && (0, a.X)(t.id), t.id === i && !1 !== t.unavailable && null == i && r.default.selectVoiceChannel((0, u.C)(t.id))
   }
   handleChannelCreate(e) {
     let {
       channel: t
     } = e;
-    if (t.type !== d.d4z.GROUP_DM) return;
+    if (t.type !== c.d4z.GROUP_DM) return;
     let n = t.originChannelId,
-      i = u.Z.getChannelId(d.kod);
-    null == _.Z.getGuildId() && null != n && n === i && (0, o.uL)(d.Z5c.CHANNEL(d.ME, t.id)), null != n && n === u.Z.getVoiceChannelId() && r.default.selectVoiceChannel(t.id, l.Z.isVideoEnabled())
+      i = u.Z.getChannelId(c.kod);
+    null == _.Z.getGuildId() && null != n && n === i && (0, o.uL)(c.Z5c.CHANNEL(c.ME, t.id)), null != n && n === u.Z.getVoiceChannelId() && r.default.selectVoiceChannel(t.id, l.Z.isVideoEnabled())
   }
   handleLogout() {
     i.Z.dispatch({
@@ -48,4 +48,4 @@ class c extends s.Z {
     }) : t[n] = i
   }
 }
-t.Z = new c
+t.Z = new d

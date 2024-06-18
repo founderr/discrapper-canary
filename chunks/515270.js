@@ -18,8 +18,8 @@ var i = n(920478),
   l = n(53529),
   u = n(925994),
   _ = n(436660),
-  d = n(887490),
-  c = n(42530);
+  c = n(887490),
+  d = n(42530);
 let E = new Set(["line"]),
   I = i.Z.listLanguages(),
   T = {};
@@ -41,12 +41,12 @@ function f(e) {
     onChange: t
   } = e, n = null;
   return e.onChange = () => {
-    d.bN.richValue(e) !== n && (l.T.withMergedEntry(e, () => {
-      d.bN.withoutNormalizing(e, () => (function(e) {
+    c.bN.richValue(e) !== n && (l.T.withMergedEntry(e, () => {
+      c.bN.withoutNormalizing(e, () => (function(e) {
         let t = function(e) {
           let t = [],
             n = null;
-          for (let i of d.bN.blocks(e)) {
+          for (let i of c.bN.blocks(e)) {
             let r = null != n && (n.isInCodeBlock || n.opensCodeBlock),
               s = null != n && (n.isStyledCodeBlockLine || n.opensCodeBlockOnOwnLine);
             n = function(e, t, n, i, r) {
@@ -59,14 +59,14 @@ function f(e) {
                     s = /\\|```/g;
                   for (let e = 0; e < n.children.length; e++) {
                     let o = n.children[e];
-                    if (d.LC.isText(o))
+                    if (c.LC.isText(o))
                       for (s.lastIndex = 0; null != (t = s.exec(o.text));) {
                         if ("\\" === t[0]) {
                           s.lastIndex += 1;
                           continue
                         }
                         r.push({
-                          path: d.C0.child(i, e),
+                          path: c.C0.child(i, e),
                           offset: t.index
                         })
                       }
@@ -77,11 +77,11 @@ function f(e) {
                 l = o[o.length - 1],
                 u = null;
               if (null != l) {
-                let [t] = d.bN.node(e, l.path);
+                let [t] = c.bN.node(e, l.path);
                 u = t.text.substring(l.offset + 3)
               }
               let _ = n && null != a,
-                c = n && 0 === o.length,
+                d = n && 0 === o.length,
                 I = i && 0 === o.length,
                 h = (_ ? o.slice(1) : o).length % 2 == 1,
                 f = h && (null == u || "" === u || null != u.match(S)),
@@ -89,7 +89,7 @@ function f(e) {
               return {
                 blockEntry: t,
                 wasInCodeBlock: n,
-                isInCodeBlock: c,
+                isInCodeBlock: d,
                 isStyledCodeBlockLine: I,
                 lang: h || _ ? N : r,
                 hljsTypes: null,
@@ -172,7 +172,7 @@ function f(e) {
           }
         })(e, t)
       })(e))
-    }), n = d.bN.richValue(e)), t()
+    }), n = c.bN.richValue(e)), t()
   }, e
 }
 let N = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
@@ -185,20 +185,20 @@ let N = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
 
 function O(e, t) {
   let n = 0;
-  for (let r of d.bN.nodes(e, {
+  for (let r of c.bN.nodes(e, {
       at: {
         anchor: {
-          path: c.u9,
+          path: d.u9,
           offset: 0
         },
         focus: t
       },
       mode: "lowest",
-      match: e => d.LC.isText(e)
+      match: e => c.LC.isText(e)
     })) {
     var i;
     let e = r[0].text;
-    d.C0.equals(r[1], t.path) && (e = e.substring(0, t.offset));
+    c.C0.equals(r[1], t.path) && (e = e.substring(0, t.offset));
     let s = e.match(/```/g);
     n += null !== (i = null == s ? void 0 : s.length) && void 0 !== i ? i : 0
   }
@@ -207,6 +207,6 @@ function O(e, t) {
 
 function R(e) {
   if (null == e.selection) return !1;
-  let t = d.M8.start(e.selection);
+  let t = c.M8.start(e.selection);
   return O(e, t)
 }

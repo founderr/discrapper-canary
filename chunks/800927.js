@@ -8,8 +8,8 @@ let a = /\n{2,}$/,
   l = /(?:^|\n)( *)$/,
   u = "(?:[*-]|\\d+\\.)",
   _ = "( *)(" + u + ") +",
-  d = RegExp("^" + _),
-  c = RegExp(_ + "[^\\n]*(?:\\n(?!\\1" + u + " )[^\\n]*)*(\n|$)", "gm"),
+  c = RegExp("^" + _),
+  d = RegExp(_ + "[^\\n]*(?:\\n(?!\\1" + u + " )[^\\n]*)*(\n|$)", "gm"),
   E = / *\n$/,
   I = RegExp("^( *)(" + u + ") [\\s\\S]+?(?:\\n(?! )(?!\\1" + u + " )|$)"),
   T = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
@@ -27,7 +27,7 @@ let a = /\n{2,}$/,
       let i = e[2],
         s = i.length > 1,
         o = s ? Math.min(1e9, Math.max(1, +i)) : void 0,
-        l = e[0].replace(a, "\n").match(c);
+        l = e[0].replace(a, "\n").match(d);
       r()(null != l, "markup list items can not be parsed.");
       let u = !1;
       return {
@@ -35,16 +35,16 @@ let a = /\n{2,}$/,
         start: o,
         items: l.map((e, i) => {
           let r;
-          let s = d.exec(e),
+          let s = c.exec(e),
             o = RegExp("^ {1," + (null != s ? s[0].length : 0) + "}", "gm"),
-            a = e.replace(o, "").replace(d, ""),
+            a = e.replace(o, "").replace(c, ""),
             _ = i === l.length - 1,
-            c = -1 !== a.indexOf("\n\n") || _ && u;
-          u = c;
+            d = -1 !== a.indexOf("\n\n") || _ && u;
+          u = d;
           let I = n.inline,
             T = n._list,
             S = n._listLevel;
-          n._list = !0, n._listLevel = (null != S ? S : 0) + 1, c ? (n.inline = !1, r = a.replace(E, "\n\n")) : (n.inline = !0, r = a.replace(E, ""));
+          n._list = !0, n._listLevel = (null != S ? S : 0) + 1, d ? (n.inline = !1, r = a.replace(E, "\n\n")) : (n.inline = !0, r = a.replace(E, ""));
           let f = h(t(r, {
             ...n,
             allowHeading: !1

@@ -14,28 +14,28 @@ function _(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let d = {};
-class c extends(i = o.ZP.PersistedStore) {
+let c = {};
+class d extends(i = o.ZP.PersistedStore) {
   initialize(e) {
-    d = null != e ? e : {}
+    c = null != e ? e : {}
   }
   getState() {
-    return d
+    return c
   }
   shouldSync(e) {
     var t;
-    return (null === (t = d[e]) || void 0 === t ? void 0 : t.shouldSync) !== !1
+    return (null === (t = c[e]) || void 0 === t ? void 0 : t.shouldSync) !== !1
   }
   getTextSettings() {
     var e;
-    return null === (e = d.text) || void 0 === e ? void 0 : e.settings
+    return null === (e = c.text) || void 0 === e ? void 0 : e.settings
   }
   getAppearanceSettings() {
     var e;
-    return null === (e = d.appearance) || void 0 === e ? void 0 : e.settings
+    return null === (e = c.appearance) || void 0 === e ? void 0 : e.settings
   }
 }
-_(c, "displayName", "SelectivelySyncedUserSettingsStore"), _(c, "persistKey", "SelectivelySyncedUserSettingsStore"), _(c, "migrations", [() => {
+_(d, "displayName", "SelectivelySyncedUserSettingsStore"), _(d, "persistKey", "SelectivelySyncedUserSettingsStore"), _(d, "migrations", [() => {
   var e, t;
   let n = null !== (e = a.K.get("UserSettingsSync")) && void 0 !== e ? e : {},
     i = null !== (t = a.K.get("UserSettingsStore")) && void 0 !== t ? t : {};
@@ -60,7 +60,7 @@ _(c, "displayName", "SelectivelySyncedUserSettingsStore"), _(c, "persistKey", "S
       }
     }
   }
-}]), t.Z = new c(l.Z, {
+}]), t.Z = new d(l.Z, {
   SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: function(e) {
     let {
       changes: t
@@ -72,17 +72,17 @@ _(c, "displayName", "SelectivelySyncedUserSettingsStore"), _(c, "persistKey", "S
         settings: r
       } = t[e];
       if (!0 === i) {
-        delete d[e];
+        delete c[e];
         continue
-      }!1 === i && (d[e] = {
+      }!1 === i && (c[e] = {
         shouldSync: i,
         settings: {}
       });
-      if ((null === (n = d[e]) || void 0 === n ? void 0 : n.shouldSync) === !1)
-        for (let t in r) d[e].settings[t] = r[t]
+      if ((null === (n = c[e]) || void 0 === n ? void 0 : n.shouldSync) === !1)
+        for (let t in r) c[e].settings[t] = r[t]
     }
   },
   LOGOUT: function() {
-    d = {}
+    c = {}
   }
 })

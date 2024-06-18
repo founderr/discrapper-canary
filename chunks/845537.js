@@ -10,7 +10,7 @@ n.d(t, {
     return y
   },
   Ox: function() {
-    return L
+    return v
   },
   Vq: function() {
     return D
@@ -19,16 +19,16 @@ n.d(t, {
     return U
   },
   cB: function() {
-    return v
+    return L
   },
   dy: function() {
-    return p
+    return g
   },
   mb: function() {
     return P
   },
   wP: function() {
-    return g
+    return C
   }
 });
 var i = n(735250);
@@ -40,8 +40,8 @@ var r = n(442837),
   l = n(607070),
   u = n(797610),
   _ = n(754688),
-  d = n(699450),
-  c = n(763296),
+  c = n(699450),
+  d = n(763296),
   E = n(592125),
   I = n(430824),
   T = n(246946),
@@ -53,9 +53,9 @@ var r = n(442837),
   m = n(377668),
   O = n(689938),
   R = n(640567),
-  C = n(946278);
+  p = n(946278);
 
-function p(e) {
+function g(e) {
   let {
     emoji: t
   } = e;
@@ -72,7 +72,7 @@ function p(e) {
   })
 }
 
-function g(e) {
+function C(e) {
   let {
     emoji: t
   } = e;
@@ -89,7 +89,7 @@ function g(e) {
   })
 }
 
-function L(e) {
+function v(e) {
   let {
     text: t,
     channelId: n,
@@ -101,12 +101,12 @@ function L(e) {
   })
 }
 
-function v(e) {
+function L(e) {
   let {
     id: t,
     guildId: n,
     channelId: o
-  } = e, l = (0, r.e7)([h.default], () => h.default.getUser(t)), u = (0, r.e7)([T.Z], () => T.Z.hidePersonalInformation), _ = N.ZP.useName(n, o, l), d = (0, i.jsx)(S.Z, {
+  } = e, l = (0, r.e7)([h.default], () => h.default.getUser(t)), u = (0, r.e7)([T.Z], () => T.Z.hidePersonalInformation), _ = N.ZP.useName(n, o, l), c = (0, i.jsx)(S.Z, {
     children: null == _ ? "<@".concat(t, ">") : "@".concat(_)
   });
   if (null != l) {
@@ -135,11 +135,11 @@ function v(e) {
       children: e => (0, i.jsx)(s.Clickable, {
         tag: "span",
         ...e,
-        children: d
+        children: c
       })
     })
   }
-  return d
+  return c
 }
 
 function D(e) {
@@ -167,7 +167,7 @@ function M(e) {
   } = e, n = (0, r.e7)([E.Z], () => E.Z.getChannel(t)), s = O.Z.Messages.UNKNOWN_CHANNEL.toLowerCase(), o = "text", a = !0;
   if (null != n) {
     var l;
-    s = (0, _.YO)(n) ? n.name : O.Z.Messages.NO_ACCESS, o = (0, _.YO)(n) ? null !== (l = (0, f.wl)(n)) && void 0 !== l ? l : "text" : "locked", a = (0, d.B)(n.type)
+    s = (0, _.YO)(n) ? n.name : O.Z.Messages.NO_ACCESS, o = (0, _.YO)(n) ? null !== (l = (0, f.wl)(n)) && void 0 !== l ? l : "text" : "locked", a = (0, c.B)(n.type)
   }
   return a ? (0, i.jsx)(S.Z, {
     iconType: o,
@@ -181,7 +181,7 @@ function P(e) {
   var t;
   let {
     id: n
-  } = e, s = (0, r.e7)([c.Z], () => c.Z.getSoundById(n));
+  } = e, s = (0, r.e7)([d.Z], () => d.Z.getSoundById(n));
   return (0, i.jsx)(S.Z, {
     children: null !== (t = null == s ? void 0 : s.name) && void 0 !== t ? t : "Sound"
   })
@@ -217,7 +217,7 @@ function b(e) {
     timestamp: t
   } = e;
   return (0, i.jsx)("span", {
-    className: C.timestamp,
+    className: p.timestamp,
     children: t.formatted
   })
 }

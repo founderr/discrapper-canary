@@ -1,15 +1,15 @@
 "use strict";
 n.d(t, {
   n: function() {
-    return C
+    return p
   }
 }), n(757143), n(411104), n(47120);
 var i, r, s, o, a = n(735250),
   l = n(470079),
   u = n(120356),
   _ = n.n(u),
-  d = n(372817),
-  c = n(866442),
+  c = n(372817),
+  d = n(866442),
   E = n(692547),
   I = n(1561),
   T = n(993365),
@@ -52,7 +52,7 @@ function m(e) {
 function O(e, t) {
   if (null == e) return;
   let n = {};
-  return "Selected" === t ? (n.backgroundColor = e, n.color = E.Z.unsafe_rawColors.WHITE_500.css, n) : ("Hover" === t && (n.backgroundColor = (0, c.wK)(e, .1)), n.color = e, n)
+  return "Selected" === t ? (n.backgroundColor = e, n.color = E.Z.unsafe_rawColors.WHITE_500.css, n) : ("Hover" === t && (n.backgroundColor = (0, d.wK)(e, .1)), n.color = e, n)
 }(o = i || (i = {})).DEFAULT = "Default", o.HOVER = "Hover", o.SELECTED = "Selected";
 class R extends(r = l.Component) {
   getStyle() {
@@ -71,14 +71,14 @@ class R extends(r = l.Component) {
         borderColor: e,
         color: e
       } : r ? {
-        borderColor: (0, c.wK)(e, .1),
-        color: (0, c.wK)(e, .6)
+        borderColor: (0, d.wK)(e, .1),
+        color: (0, d.wK)(e, .6)
       } : {
         borderColor: "transparent",
-        color: (0, c.wK)(e, .4)
+        color: (0, d.wK)(e, .4)
       };
       if ("top-pill" === i) return n === t ? {
-        backgroundColor: (0, c.wK)(e, .2),
+        backgroundColor: (0, d.wK)(e, .2),
         color: e
       } : {
         backgroundColor: e,
@@ -97,11 +97,11 @@ class R extends(r = l.Component) {
       onContextMenu: o,
       clickableRef: l,
       look: u,
-      disableItemStyles: d
-    } = this.props, c = this.props["aria-label"], E = i === n;
+      disableItemStyles: c
+    } = this.props, d = this.props["aria-label"], E = i === n;
     return (0, a.jsx)(I.P, {
       className: _()(t, {
-        [S.item]: !d,
+        [S.item]: !c,
         [S.brand]: "brand" === u,
         [S.selected]: null == r && E,
         [S.themed]: "grey" === u,
@@ -119,7 +119,7 @@ class R extends(r = l.Component) {
       onMouseUp: null != r ? this.handleMouseUp : void 0,
       onMouseDown: this.handleMouseDown,
       onContextMenu: o,
-      "aria-label": c,
+      "aria-label": d,
       ref: l,
       children: e
     })
@@ -164,7 +164,7 @@ f(R, "defaultProps", {
   look: "grey",
   disableItemStyles: !1
 });
-class C extends(s = l.Component) {
+class p extends(s = l.Component) {
   render() {
     let {
       className: e,
@@ -186,7 +186,7 @@ class C extends(s = l.Component) {
     })
   }
   constructor(...e) {
-    super(...e), f(this, "tabBarRef", l.createRef()), f(this, "focusManager", (0, d.E)({
+    super(...e), f(this, "tabBarRef", l.createRef()), f(this, "focusManager", (0, c.E)({
       getFocusableElements: () => {
         let e = this.tabBarRef.current;
         return null != e ? Array.from(e.querySelectorAll('[role="tab"][aria-disabled="false"]')) : []
@@ -229,7 +229,7 @@ class C extends(s = l.Component) {
     })
   }
 }
-f(C, "Header", function(e) {
+f(p, "Header", function(e) {
   let {
     className: t,
     onClick: n,
@@ -255,7 +255,7 @@ f(C, "Header", function(e) {
       children: i
     })
   })
-}), f(C, "Item", R), f(C, "Separator", function(e) {
+}), f(p, "Item", R), f(p, "Separator", function(e) {
   let {
     style: t
   } = e;
@@ -263,4 +263,4 @@ f(C, "Header", function(e) {
     className: S.separator,
     style: t
   })
-}), f(C, "Panel", A)
+}), f(p, "Panel", A)

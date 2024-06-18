@@ -3,8 +3,8 @@ var i, r, s, o, a = n(442837),
   l = n(570140),
   u = n(752305),
   _ = n(957730),
-  d = n(695346),
-  c = n(375954);
+  c = n(695346),
+  d = n(375954);
 let E = {},
   I = {};
 class T extends(o = a.ZP.Store) {
@@ -29,7 +29,7 @@ class T extends(o = a.ZP.Store) {
   }
   getEditingMessage(e) {
     let t = E[e];
-    return null != t && null != t.messageId ? c.Z.getMessage(e, t.messageId) : null
+    return null != t && null != t.messageId ? d.Z.getMessage(e, t.messageId) : null
   }
   getEditActionSource(e) {
     return I[e]
@@ -47,7 +47,7 @@ s = "EditMessageStore", (r = "displayName") in(i = T) ? Object.defineProperty(i,
       messageId: n,
       content: i,
       source: r
-    } = e, s = d.dN.getSetting(), o = _.ZP.unparse(i, t);
+    } = e, s = c.dN.getSetting(), o = _.ZP.unparse(i, t);
     E[t] = {
       channelId: t,
       messageId: n,

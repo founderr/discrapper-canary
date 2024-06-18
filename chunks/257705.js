@@ -16,8 +16,8 @@ function u(e, t) {
   return r.forwardRef(function(s, u) {
     let {
       children: _,
-      className: d,
-      dir: c = "ltr",
+      className: c,
+      dir: d = "ltr",
       orientation: E = "vertical",
       paddingFix: I = !0,
       fade: T = !1,
@@ -27,8 +27,8 @@ function u(e, t) {
     } = s, N = r.useRef(null), A = (0, l.tT)({
       paddingFix: I,
       orientation: E,
-      dir: c,
-      className: d,
+      dir: d,
+      className: c,
       scrollerRef: N,
       specs: n
     });
@@ -36,12 +36,12 @@ function u(e, t) {
       ref: e => {
         "function" == typeof u ? u(e) : null != u && (u.current = e), N.current = e
       },
-      className: o()(d, {
+      className: o()(c, {
         [e]: !0,
         [t]: T
       }),
       style: (0, l.uT)(S, E),
-      dir: c,
+      dir: d,
       ...f,
       children: (0, i.jsxs)(a.Jc, {
         containerRef: N,

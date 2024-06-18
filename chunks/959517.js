@@ -2,7 +2,7 @@
 var i, r, s, o;
 n.d(t, {
   D4: function() {
-    return c
+    return d
   },
   Eo: function() {
     return E
@@ -29,7 +29,7 @@ n.d(t, {
     return T
   },
   kQ: function() {
-    return d
+    return c
   },
   pq: function() {
     return l
@@ -54,8 +54,8 @@ let a = [0, 4, 8, 16, 24],
     moreUtilities: !1,
     contextMenu: !1
   }),
-  d = 16,
   c = 16,
+  d = 16,
   E = 32,
   I = 64,
   T = "---new-messages-bar",

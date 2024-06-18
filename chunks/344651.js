@@ -13,8 +13,8 @@ var s = n(442837),
   l = n(821849),
   u = n(232567),
   _ = n(864106),
-  d = n(710845),
-  c = n(292419),
+  c = n(710845),
+  d = n(292419),
   E = n(566006),
   I = n(952537),
   T = n(218543),
@@ -26,14 +26,14 @@ var s = n(442837),
   m = n(271383),
   O = n(819640),
   R = n(594174),
-  C = n(979651),
-  p = n(509545),
-  g = n(78839),
-  L = n(936101),
-  v = n(868158),
+  p = n(979651),
+  g = n(509545),
+  C = n(78839),
+  v = n(936101),
+  L = n(868158),
   D = n(483012),
   M = n(955132);
-let P = new d.Z("ConnectionStore"),
+let P = new c.Z("ConnectionStore"),
   y = new D.Z(M.Wb, (e, t) => {
     var n;
     e = null != e ? e : {
@@ -108,13 +108,13 @@ function Z(e, t, n) {
     avatar: a,
     avatar_decoration_data: l,
     flags: u,
-    premium_since: d,
-    pending: c,
+    premium_since: c,
+    pending: d,
     joined_at: E,
     communication_disabled_until: I,
     unusual_dm_activity_until: T
   } = n, h = m.ZP.getMember(e, t.id);
-  if (!(null != h && h.nick === o && h.avatar === a && r().isEqual(h.roles, s) && (0, _.sr)(h.avatarDecoration, l)) || h.premiumSince !== d || h.isPending !== c || h.joinedAt !== E || h.communicationDisabledUntil !== I || h.flags !== u || (null !== (i = h.unusualDMActivityUntil) && void 0 !== i ? i : null) !== (null != T ? T : null)) V({
+  if (!(null != h && h.nick === o && h.avatar === a && r().isEqual(h.roles, s) && (0, _.sr)(h.avatarDecoration, l)) || h.premiumSince !== c || h.isPending !== d || h.joinedAt !== E || h.communicationDisabledUntil !== I || h.flags !== u || (null !== (i = h.unusualDMActivityUntil) && void 0 !== i ? i : null) !== (null != T ? T : null)) V({
     type: "GUILD_MEMBER_ADD",
     guildId: e,
     user: t,
@@ -122,8 +122,8 @@ function Z(e, t, n) {
     nick: o,
     avatar: a,
     avatarDecoration: l,
-    premiumSince: d,
-    isPending: c,
+    premiumSince: c,
+    isPending: d,
     joinedAt: E,
     communicationDisabledUntil: I,
     unusualDMActivityUntil: T,
@@ -181,7 +181,7 @@ function Y(e) {
 B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.o.loadGuildIds([e.id]), e => {
   T.Z.initialGuild.measure(() => {
     s.ZP.Emitter.batched(() => {
-      let t = v.Fx(e, M.Wb.identifyStartTime);
+      let t = L.Fx(e, M.Wb.identifyStartTime);
       null != R.default.getCurrentUser() && (V({
         type: "GUILD_CREATE",
         guild: t
@@ -211,7 +211,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.o.loadGuildIds([e.id
   T.Z.readySupplemental.measure(() => {
     s.ZP.Emitter.batched(() => {
       var t, n;
-      e = T.Z.hydrateReadySupplemental.measure(() => v.r$(e, M.Wb.identifyStartTime));
+      e = T.Z.hydrateReadySupplemental.measure(() => L.r$(e, M.Wb.identifyStartTime));
       let i = e => e.map(e => ({
           user: e.user,
           status: e.status,
@@ -265,7 +265,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.o.loadGuildIds([e.id
   }), 2e3)
 }), B(["READY"], e => {
   var t;
-  let n = v.Eb(),
+  let n = L.Eb(),
     i = e.guilds.filter(e => {
       var t, n;
       return !e.unavailable && "partial" === e.data_mode && (!!((null !== (t = e.partial_updates.channels) && void 0 !== t ? t : []).length > 0) || !!((null !== (n = e.partial_updates.deleted_channel_ids) && void 0 !== n ? n : []).length > 0) || void 0)
@@ -283,7 +283,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.o.loadGuildIds([e.id
   }
   T.Z.ready.measure(() => {
     s.ZP.Emitter.batched(() => {
-      let t = (e = T.Z.hydrateReady.measure(() => v.IM(e, M.Wb.identifyStartTime, n))).private_channels.map(e => (0, S.q_)(e)),
+      let t = (e = T.Z.hydrateReady.measure(() => L.IM(e, M.Wb.identifyStartTime, n))).private_channels.map(e => (0, S.q_)(e)),
         i = e.guilds.filter(e => !0 === e.unavailable && !0 !== e.geo_restricted).map(e => e.id),
         r = e.guilds.filter(e => !0 !== e.unavailable),
         s = e.guilds.filter(e => !0 === e.geo_restricted);
@@ -520,7 +520,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.o.loadGuildIds([e.id
     guildId: e.id
   });
   else {
-    let t = v.J2(e);
+    let t = L.J2(e);
     a.Z.createGuild(t), V({
       type: "VOICE_STATE_UPDATES",
       voiceStates: t.voice_states.map(e => {
@@ -769,7 +769,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.o.loadGuildIds([e.id
       suppress: e.suppress,
       selfStream: e.self_stream || !1,
       requestToSpeakTimestamp: null !== (t = e.request_to_speak_timestamp) && void 0 !== t ? t : null,
-      oldChannelId: C.Z.getUserVoiceChannelId(e.guild_id, e.user_id)
+      oldChannelId: p.Z.getUserVoiceChannelId(e.guild_id, e.user_id)
     }]
   })
 }), k(["VOICE_SERVER_UPDATE"], e => {
@@ -903,18 +903,18 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.o.loadGuildIds([e.id
     entitlement: e
   })
 }), k(["USER_PAYMENT_SOURCES_UPDATE"], () => {
-  O.Z.hasLayers() && (n(355467).tZ(), l.Gn(p.Z.getFetchedSKUIDs()))
+  O.Z.hasLayers() && (n(355467).tZ(), l.Gn(g.Z.getFetchedSKUIDs()))
 }), k(["USER_SUBSCRIPTIONS_UPDATE"], () => {
   u.k(), O.Z.hasLayers() && n(355467).jg()
 }), k(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE"], e => {
   V({
     type: "GUILD_BOOST_SLOT_CREATE",
-    guildBoostSlot: f.Z.createFromServer(e, g.ZP.getSubscriptionById(e.subscription_id))
+    guildBoostSlot: f.Z.createFromServer(e, C.ZP.getSubscriptionById(e.subscription_id))
   })
 }), k(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_UPDATE"], e => {
   V({
     type: "GUILD_BOOST_SLOT_UPDATE",
-    guildBoostSlot: f.Z.createFromServer(e, g.ZP.getSubscriptionById(e.subscription_id))
+    guildBoostSlot: f.Z.createFromServer(e, C.ZP.getSubscriptionById(e.subscription_id))
   })
 }), k(["BILLING_POPUP_BRIDGE_CALLBACK"], e => {
   V({
@@ -930,7 +930,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.o.loadGuildIds([e.id
     loadId: e.load_id
   })
 }), k(["USER_PAYMENT_CLIENT_ADD"], e => {
-  (0, L.L)().then(t => {
+  (0, v.L)().then(t => {
     let n = e.purchase_token_hash;
     n === t && V({
       type: "USER_PAYMENT_CLIENT_ADD",
@@ -1133,7 +1133,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.o.loadGuildIds([e.id
     customId: e.custom_id,
     application: e.application,
     title: e.title,
-    components: (0, c.uZ)(e.components),
+    components: (0, d.uZ)(e.components),
     nonce: e.nonce
   })
 }), k(["INTERACTION_IFRAME_MODAL_CREATE"], e => {

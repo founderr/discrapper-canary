@@ -13,8 +13,8 @@ var r = n(442837),
   l = n(621853),
   u = n(873572),
   _ = n(520978),
-  d = n(659101),
-  c = n(479968);
+  c = n(659101),
+  d = n(479968);
 
 function E(e) {
   var t;
@@ -25,12 +25,12 @@ function E(e) {
     var e;
     return null === (e = l.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application
   }), u = (0, o.R)(null !== (t = null == a ? void 0 : a.id) && void 0 !== t ? t : "");
-  return null == a ? null : (0, i.jsx)(d.Z, {
+  return null == a ? null : (0, i.jsx)(c.Z, {
     children: (0, i.jsxs)("div", {
-      className: c.buttonsContainer,
+      className: d.buttonsContainer,
       children: [(0, i.jsx)(_.Z, {
         application: a,
-        className: c.button
+        className: d.button
       }), u && null != s && (0, i.jsx)(I, {
         application: a,
         user: n,
@@ -54,7 +54,7 @@ function I(e) {
       (0, s.openModalLazy)(async () => {
         let {
           default: r
-        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("29549"), n.e("31605"), n.e("77172"), n.e("89131"), n.e("88772")]).then(n.bind(n, 7225));
+        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("29549"), n.e("31605"), n.e("77172"), n.e("89131"), n.e("95390")]).then(n.bind(n, 7225));
         return n => (0, i.jsx)(r, {
           transitionState: n.transitionState,
           onClose: n.onClose,
@@ -63,7 +63,7 @@ function I(e) {
         })
       })
     })(t, o),
-    className: c.button,
+    className: d.button,
     size: s.ButtonSizes.SMALL
   })
 }

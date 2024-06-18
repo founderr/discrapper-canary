@@ -18,8 +18,8 @@ function _(e) {
     centerButton: t = !1,
     channel: n,
     onClick: _,
-    onMouseEnter: d,
-    onMouseLeave: c,
+    onMouseEnter: c,
+    onMouseLeave: d,
     ...E
   } = e, I = t ? l.d : l.Z, T = n.isBroadcastChannel(), h = (0, a.zW)(n.id), {
     Component: S,
@@ -32,10 +32,10 @@ function _(e) {
     },
     iconComponent: S,
     onMouseEnter: e => {
-      null == d || d(e), f.onMouseEnter()
+      null == c || c(e), f.onMouseEnter()
     },
     onMouseLeave: e => {
-      null == c || c(e), f.onMouseLeave()
+      null == d || d(e), f.onMouseLeave()
     },
     label: h ? u.Z.Messages.STOP_BROADCASTING : T ? u.Z.Messages.LEAVE_BROADCAST : u.Z.Messages.DISCONNECT_SELF
   })

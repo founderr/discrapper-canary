@@ -7,8 +7,8 @@ var i, r = n(442837),
   l = n(569545),
   u = n(314897),
   _ = n(630388),
-  d = n(894694),
-  c = n(356659),
+  c = n(894694),
+  d = n(356659),
   E = n(981631),
   I = n(37113);
 
@@ -28,24 +28,24 @@ let h = "default",
   m = null,
   O = null,
   R = {},
-  C = null,
   p = null,
-  g = {},
-  L = {
+  g = null,
+  C = {},
+  v = {
     clipsEnabled: !1,
     storageLocation: h,
     clipsQuality: {
       resolution: I.LY.RESOLUTION_1080,
       frameRate: I.ws.FPS_30
     },
-    clipsLength: c.OT.SECONDS_30,
+    clipsLength: d.OT.SECONDS_30,
     remindersEnabled: !0,
     decoupledClipsEnabled: !1,
     viewerClipsEnabled: !0,
-    viewerConnectivity: c.dJ.ALL
+    viewerConnectivity: d.dJ.ALL
   },
-  v = {
-    clipsSettings: L,
+  L = {
+    clipsSettings: v,
     hardwareClassification: null,
     hardwareClassificationForDecoupled: null,
     hardwareClassificationVersion: 0,
@@ -59,13 +59,13 @@ let h = "default",
     }
   };
 async function D() {
-  if (v.clipsSettings.storageLocation !== h || null == o.Z || null == o.Z.remoteApp) return;
+  if (L.clipsSettings.storageLocation !== h || null == o.Z || null == o.Z.remoteApp) return;
   let e = await o.Z.remoteApp.getPath("documents");
-  v.clipsSettings.storageLocation = e, P.emitChange()
+  L.clipsSettings.storageLocation = e, P.emitChange()
 }
 class M extends(i = r.ZP.DeviceSettingsStore) {
   initialize(e) {
-    null != e && (v = e), D(), this.waitFor(a.ZP)
+    null != e && (L = e), D(), this.waitFor(a.ZP)
   }
   getClips() {
     return f
@@ -74,10 +74,10 @@ class M extends(i = r.ZP.DeviceSettingsStore) {
     return N
   }
   getUserAgnosticState() {
-    return v
+    return L
   }
   getSettings() {
-    return v.clipsSettings
+    return L.clipsSettings
   }
   getLastClipsSession() {
     return O
@@ -86,29 +86,29 @@ class M extends(i = r.ZP.DeviceSettingsStore) {
     return m === e
   }
   getActiveAnimation() {
-    return p
+    return g
   }
   getStreamClipAnimations(e) {
     var t;
-    return null !== (t = g[e]) && void 0 !== t ? t : S
+    return null !== (t = C[e]) && void 0 !== t ? t : S
   }
   hasAnyClipAnimations() {
-    return Object.values(g).some(e => e.length > 0)
+    return Object.values(C).some(e => e.length > 0)
   }
   getHardwareClassification() {
-    return v.hardwareClassification
+    return L.hardwareClassification
   }
   getHardwareClassificationForDecoupled() {
-    return v.hardwareClassificationForDecoupled
+    return L.hardwareClassificationForDecoupled
   }
   getHardwareClassificationVersion() {
-    return v.hardwareClassificationVersion
+    return L.hardwareClassificationVersion
   }
   getIsAtMaxSaveClipOperations() {
-    return A >= c.Kw
+    return A >= d.Kw
   }
   getLastClipsError() {
-    return C
+    return p
   }
   isClipsEnabledForUser(e) {
     var t, n;
@@ -123,21 +123,21 @@ class M extends(i = r.ZP.DeviceSettingsStore) {
     return null !== (n = null === (t = R[e]) || void 0 === t ? void 0 : t.allowAnyViewerClips) && void 0 !== n && n
   }
   hasClips() {
-    return v.hasClips
+    return L.hasClips
   }
   hasTakenDecoupledClip() {
-    return v.hasTakenDecoupledClip
+    return L.hasTakenDecoupledClip
   }
   getNewClipIds() {
-    return v.newClipIds
+    return L.newClipIds
   }
 }
 T(M, "displayName", "ClipsStore"), T(M, "persistKey", "ClipsStore"), T(M, "migrations", [e => ({
-  clipsSettings: null != e ? e : L,
+  clipsSettings: null != e ? e : v,
   newClipsCount: 0
 }), e => {
   let t = {
-    ...L,
+    ...v,
     ...e.clipsSettings
   };
   return {
@@ -167,7 +167,7 @@ T(M, "displayName", "ClipsStore"), T(M, "persistKey", "ClipsStore"), T(M, "migra
   ...e,
   clipsSettings: {
     ...e.clipsSettings,
-    decoupledClipsEnabled: L.decoupledClipsEnabled
+    decoupledClipsEnabled: v.decoupledClipsEnabled
   }
 }), e => {
   var t;
@@ -197,7 +197,7 @@ T(M, "displayName", "ClipsStore"), T(M, "persistKey", "ClipsStore"), T(M, "migra
   ...e,
   clipsSettings: {
     ...e.clipsSettings,
-    clipsQuality: "number" == typeof e.clipsSettings.clipsQuality || null == e.clipsSettings.clipsQuality ? L.clipsQuality : e.clipsSettings.clipsQuality
+    clipsQuality: "number" == typeof e.clipsSettings.clipsQuality || null == e.clipsSettings.clipsQuality ? v.clipsQuality : e.clipsSettings.clipsQuality
   }
 }), e => {
   var t;
@@ -205,7 +205,7 @@ T(M, "displayName", "ClipsStore"), T(M, "persistKey", "ClipsStore"), T(M, "migra
     ...e,
     clipsSettings: {
       ...e.clipsSettings,
-      remindersEnabled: null !== (t = e.clipsSettings.remindersEnabled) && void 0 !== t ? t : L.remindersEnabled
+      remindersEnabled: null !== (t = e.clipsSettings.remindersEnabled) && void 0 !== t ? t : v.remindersEnabled
     }
   }
 }, e => ({
@@ -222,10 +222,10 @@ let P = new M(s.Z, {
     let {
       settings: t
     } = e;
-    v = {
-      ...v,
+    L = {
+      ...L,
       clipsSettings: {
-        ...v.clipsSettings,
+        ...L.clipsSettings,
         ...t
       }
     }
@@ -240,15 +240,15 @@ let P = new M(s.Z, {
       ended: !1,
       ...O,
       newClipIds: [...null !== (t = null == O ? void 0 : O.newClipIds) && void 0 !== t ? t : [], i.id]
-    }, v = {
-      ...v,
-      newClipIds: [...null !== (n = v.newClipIds) && void 0 !== n ? n : [], i.id]
+    }, L = {
+      ...L,
+      newClipIds: [...null !== (n = L.newClipIds) && void 0 !== n ? n : [], i.id]
     }, N = N.filter(e => {
       let {
         id: t
       } = e;
       return t !== i.id
-    }), f = [i, ...f], v.hasClips = !0
+    }), f = [i, ...f], L.hasClips = !0
   },
   CLIPS_SAVE_CLIP_PLACEHOLDER: function(e) {
     let {
@@ -273,10 +273,10 @@ let P = new M(s.Z, {
       streamKey: n,
       thumbnail: i
     } = e;
-    if (A += 1, v.hasTakenDecoupledClip = v.hasTakenDecoupledClip || t === c.X9.DECOUPLED, null != n && null != i) {
+    if (A += 1, L.hasTakenDecoupledClip = L.hasTakenDecoupledClip || t === d.X9.DECOUPLED, null != n && null != i) {
       var r;
       let e = Date.now();
-      p = null != p ? p : e, g[n] = [...null !== (r = g[n]) && void 0 !== r ? r : [], {
+      g = null != g ? g : e, C[n] = [...null !== (r = C[n]) && void 0 !== r ? r : [], {
         timestamp: e,
         thumbnail: i
       }]
@@ -290,14 +290,14 @@ let P = new M(s.Z, {
       streamKey: t,
       timestamp: n
     } = e;
-    p === n && (p = null), null == n ? g[t] = [] : g[t] = g[t].filter(e => e.timestamp !== n)
+    g === n && (g = null), null == n ? C[t] = [] : C[t] = C[t].filter(e => e.timestamp !== n)
   },
   STREAM_START: function(e) {
     let {
       sourceName: t,
       pid: n
     } = e;
-    if (!v.clipsSettings.clipsEnabled) return !1;
+    if (!L.clipsSettings.clipsEnabled) return !1;
     let i = t;
     if (null != n) {
       var r;
@@ -315,7 +315,7 @@ let P = new M(s.Z, {
     let {
       streamKey: t
     } = e;
-    if (p = null, g[t] = [], null == O || (0, l.my)(t).ownerId !== u.default.getId()) return !1;
+    if (g = null, C[t] = [], null == O || (0, l.my)(t).ownerId !== u.default.getId()) return !1;
     O = 0 === O.newClipIds.length ? null : {
       ...O,
       ended: !0
@@ -326,10 +326,10 @@ let P = new M(s.Z, {
     O = null
   },
   CLIPS_CLEAR_NEW_CLIP_IDS: function() {
-    v.newClipIds = []
+    L.newClipIds = []
   },
   CLIPS_LOAD_DIRECTORY_SUCCESS: function(e) {
-    v.hasClips = e.clips.length > 0, f = e.clips
+    L.hasClips = e.clips.length > 0, f = e.clips
   },
   CLIPS_DELETE_CLIP: function(e) {
     0 === (f = f.filter(t => {
@@ -337,7 +337,7 @@ let P = new M(s.Z, {
         filepath: n
       } = t;
       return n !== e.filepath
-    })).length && (v.hasClips = !1)
+    })).length && (L.hasClips = !1)
   },
   CLIPS_UPDATE_METADATA: function(e) {
     let {
@@ -371,16 +371,16 @@ let P = new M(s.Z, {
   CLIPS_CLASSIFY_HARDWARE: function(e) {
     let {
       classification: t
-    } = e, n = v.hardwareClassification;
-    v.hardwareClassificationVersion = c.WM, v.hardwareClassification = t, v.hardwareClassification === d.x.MEETS_AUTO_ENABLE && n !== d.x.MEETS_AUTO_ENABLE && (v.clipsSettings.clipsEnabled = !0);
-    let i = v.hardwareClassificationForDecoupled;
-    v.hardwareClassificationForDecoupled = t, v.hardwareClassificationForDecoupled === d.x.MEETS_AUTO_ENABLE && i !== d.x.MEETS_AUTO_ENABLE && v.clipsSettings.clipsEnabled && (v.clipsSettings.decoupledClipsEnabled = !0)
+    } = e, n = L.hardwareClassification;
+    L.hardwareClassificationVersion = d.WM, L.hardwareClassification = t, L.hardwareClassification === c.x.MEETS_AUTO_ENABLE && n !== c.x.MEETS_AUTO_ENABLE && (L.clipsSettings.clipsEnabled = !0);
+    let i = L.hardwareClassificationForDecoupled;
+    L.hardwareClassificationForDecoupled = t, L.hardwareClassificationForDecoupled === c.x.MEETS_AUTO_ENABLE && i !== c.x.MEETS_AUTO_ENABLE && L.clipsSettings.clipsEnabled && (L.clipsSettings.decoupledClipsEnabled = !0)
   },
   CLIPS_INIT: function(e) {
     let {
       applicationName: t
     } = e;
-    if (C = null, !v.clipsSettings.clipsEnabled) return !1;
+    if (p = null, !L.clipsSettings.clipsEnabled) return !1;
     O = {
       applicationName: t,
       newClipIds: [],
@@ -391,26 +391,26 @@ let P = new M(s.Z, {
     let {
       errMsg: t
     } = e;
-    C = t
+    p = t
   },
   CLIPS_DISMISS_EDUCATION: function(e) {
     let {
       educationType: t
     } = e;
     switch (t) {
-      case c.D5.Error:
-        C = null;
+      case d.D5.Error:
+        p = null;
         break;
-      case c.D5.Disabled:
-      case c.D5.Enabled:
-        v.clipsEducationState.dismissedAt = Date.now(), v.clipsEducationState.numberOfGamesLaunchedSinceDismissal = 0, v.clipsEducationState.numberOfTimesDismissed += 1
+      case d.D5.Disabled:
+      case d.D5.Enabled:
+        L.clipsEducationState.dismissedAt = Date.now(), L.clipsEducationState.numberOfGamesLaunchedSinceDismissal = 0, L.clipsEducationState.numberOfTimesDismissed += 1
     }
   },
   RUNNING_GAMES_CHANGE: function(e) {
     let {
       added: t
     } = e;
-    t.length > 0 && (v.clipsEducationState.numberOfGamesLaunchedSinceDismissal += 1)
+    t.length > 0 && (L.clipsEducationState.numberOfGamesLaunchedSinceDismissal += 1)
   }
 });
 t.Z = P

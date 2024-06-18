@@ -10,7 +10,7 @@ n.d(t, {
     return l
   },
   I5: function() {
-    return c
+    return d
   },
   ID: function() {
     return S
@@ -19,7 +19,7 @@ n.d(t, {
     return A
   },
   It: function() {
-    return d
+    return c
   },
   W3: function() {
     return O
@@ -115,13 +115,13 @@ function _() {
   }), (0, s.xf)()
 }
 
-function d() {
+function c() {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM"
   })
 }
 
-function c(e) {
+function d(e) {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR",
     avatar: e

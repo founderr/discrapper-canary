@@ -36,8 +36,8 @@ var i = n(112456),
   l = n(948350),
   u = n(430824),
   _ = n(594174),
-  d = n(74538),
-  c = n(981631),
+  c = n(74538),
+  d = n(981631),
   E = n(474936);
 
 function I(e, t) {
@@ -120,10 +120,10 @@ function A(e) {
   }), l.Z.trackExposure({
     location: "de18ec_2"
   });
-  let n = d.ZP.getUserMaxFileSize(t);
+  let n = c.ZP.getUserMaxFileSize(t);
   if (null == e) return n;
   let i = u.Z.getGuild(e);
-  return Math.max(null != i ? E.HO[i.premiumTier].limits.fileSize : c.mBz, n)
+  return Math.max(null != i ? E.HO[i.premiumTier].limits.fileSize : d.mBz, n)
 }
 
 function m(e, t) {

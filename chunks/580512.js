@@ -13,8 +13,8 @@ var r = n(442837),
   l = n(158776),
   u = n(594174),
   _ = n(785717),
-  d = n(221292),
-  c = n(981631),
+  c = n(221292),
+  d = n(981631),
   E = n(10268);
 
 function I(e) {
@@ -40,12 +40,12 @@ function I(e) {
         let {
           type: t
         } = e;
-        return t === c.IIU.PLAYING
+        return t === d.IIU.PLAYING
       }) : l.Z.findActivity(t.id, e => {
         let {
           type: t
         } = e;
-        return t !== c.IIU.CUSTOM_STATUS
+        return t !== d.IIU.CUSTOM_STATUS
       })
     }
   });
@@ -61,8 +61,8 @@ function I(e) {
     onAction: () => {
       f({
         action: "JOIN_ACTIVITY"
-      }), (0, d.Ac)({
-        activityType: m ? c.IIU.STREAMING : null == O ? void 0 : O.type,
+      }), (0, c.Ac)({
+        activityType: m ? d.IIU.STREAMING : null == O ? void 0 : O.type,
         activityName: null == O ? void 0 : O.name,
         activityPlatform: null == O ? void 0 : O.platform,
         activitySessionId: null == O ? void 0 : O.session_id,

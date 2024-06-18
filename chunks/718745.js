@@ -3,26 +3,26 @@ var i, r, s, o, a = n(442837),
   l = n(570140),
   u = n(981631);
 let _ = {},
-  d = {
+  c = {
     integration: "",
     query: ""
   };
-class c extends(o = a.ZP.Store) {
+class d extends(o = a.ZP.Store) {
   getResults(e, t) {
     if (null == e || null == t) return null;
     let n = _[e];
     return null != n && null != n[t] ? n[t] : null
   }
   getQuery() {
-    return d
+    return c
   }
 }
-s = "IntegrationQueryStore", (r = "displayName") in(i = c) ? Object.defineProperty(i, r, {
+s = "IntegrationQueryStore", (r = "displayName") in(i = d) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.Z = new c(l.Z, {
+}) : i[r] = s, t.Z = new d(l.Z, {
   INTEGRATION_QUERY: function(e) {
     var t;
     let {
@@ -46,7 +46,7 @@ s = "IntegrationQueryStore", (r = "displayName") in(i = c) ? Object.defineProper
         type: u.nkL[t].type,
         meta: e
       }))
-    }, d = {
+    }, c = {
       query: n,
       integration: t
     }

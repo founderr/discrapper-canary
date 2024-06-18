@@ -16,8 +16,8 @@ function _(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let d = 1 * l.Z.Millis.SECOND,
-  c = 30 * l.Z.Millis.SECOND,
+let c = 1 * l.Z.Millis.SECOND,
+  d = 30 * l.Z.Millis.SECOND,
   E = new s.Z("RTCLatencyTestManager");
 class I extends r.Z {
   _terminate() {
@@ -35,7 +35,7 @@ class I extends r.Z {
       (0, i.J)().then(e => this._handleTestRegionsResponse(e.body)).catch(e => E.warn(e)), this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, 360 * l.Z.Millis.MINUTE)
     }), _(this, "_handleConnectionOpen", () => {
       if (u.isPlatformEmbedded && !__OVERLAY__) {
-        let e = Math.floor(d + Math.random() * c);
+        let e = Math.floor(c + Math.random() * d);
         null != this.refetchTimeout && clearTimeout(this.refetchTimeout), this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, e)
       }
     })

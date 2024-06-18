@@ -2,8 +2,8 @@
 n(47120);
 var i, r, s, o, a, l, u = n(392711),
   _ = n(442837),
-  d = n(759174),
-  c = n(570140),
+  c = n(759174),
+  d = n(570140),
   E = n(598077),
   I = n(314897),
   T = n(709054),
@@ -16,23 +16,23 @@ let f = new Set,
   m = [],
   O = e => "user:".concat(e),
   R = e => "channel:".concat(e),
-  C = e => "validity:".concat(e),
-  p = new d.h(function(e) {
+  p = e => "validity:".concat(e),
+  g = new c.h(function(e) {
     let t = f.has(e.userId) ? 1 : 0;
-    return null != e.viewers && (t = 2), [O(e.userId), R(e.channelId), C(t)]
+    return null != e.viewers && (t = 2), [O(e.userId), R(e.channelId), p(t)]
   }, e => e.channelId);
 
-function g(e, t, n) {
+function C(e, t, n) {
   if (I.default.getId() === e) return !1;
   if (null == t) {
-    let t = p.get(e);
-    return !!(null != t && (0, u.isEqual)(t.source, n)) && (p.delete(e), void 0)
+    let t = g.get(e);
+    return !!(null != t && (0, u.isEqual)(t.source, n)) && (g.delete(e), void 0)
   }!f.has(e) && !N.has(e) && (A.add(e), m = [...A]);
   let i = (0, S.tI)(t, e, n);
-  p.set(e, i)
+  g.set(e, i)
 }
 
-function L(e) {
+function v(e) {
   return null != e ? {
     type: S.$C.GUILD,
     guildId: e
@@ -40,29 +40,29 @@ function L(e) {
     type: S.$C.GLOBAL
   }
 }
-class v extends(r = _.ZP.Store) {
+class L extends(r = _.ZP.Store) {
   getBroadcasts() {
-    return p.values(C(2))
+    return g.values(p(2))
   }
   getBroadcastsToValidateChannels() {
-    return p.values(C(1))
+    return g.values(p(1))
   }
   getBroadcastByChannel(e) {
-    return p.values(R(e))[0]
+    return g.values(R(e))[0]
   }
   getBroadcastByUser(e) {
-    return p.get(e)
+    return g.get(e)
   }
   getUserIdsToValidate() {
     return m
   }
 }
-l = "BroadcastingStore", (a = "displayName") in(o = v) ? Object.defineProperty(o, a, {
+l = "BroadcastingStore", (a = "displayName") in(o = L) ? Object.defineProperty(o, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[a] = l, t.Z = new v(c.Z, {
+}) : o[a] = l, t.Z = new L(d.Z, {
   PRESENCE_UPDATES: function(e) {
     let {
       updates: t
@@ -73,7 +73,7 @@ l = "BroadcastingStore", (a = "displayName") in(o = v) ? Object.defineProperty(o
         broadcast: n,
         guildId: i
       } = e;
-      g(t.id, n, L(i))
+      C(t.id, n, v(i))
     })
   },
   PRESENCES_REPLACE: function(e) {
@@ -86,7 +86,7 @@ l = "BroadcastingStore", (a = "displayName") in(o = v) ? Object.defineProperty(o
         broadcast: n,
         guildId: i
       } = e;
-      g(t.id, n, L(i))
+      C(t.id, n, v(i))
     })
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
@@ -100,7 +100,7 @@ l = "BroadcastingStore", (a = "displayName") in(o = v) ? Object.defineProperty(o
         broadcast: n,
         guildId: i
       } = e;
-      g(t.id, n, L(i))
+      C(t.id, n, v(i))
     }), n.forEach(e => {
       let {
         presences: t,
@@ -111,7 +111,7 @@ l = "BroadcastingStore", (a = "displayName") in(o = v) ? Object.defineProperty(o
           user: t,
           broadcast: i
         } = e;
-        g(t.id, i, L(n))
+        C(t.id, i, v(n))
       })
     })
   },
@@ -121,8 +121,8 @@ l = "BroadcastingStore", (a = "displayName") in(o = v) ? Object.defineProperty(o
     } = e;
     T.default.keys(t).forEach(e => {
       h.g.includes(t[e]) ? f.add(e) : N.add(e), A.clear(), m = [...A];
-      let n = p.get(e);
-      null != n && (p.delete(e), p.set(e, n))
+      let n = g.get(e);
+      null != n && (g.delete(e), g.set(e, n))
     })
   },
   BROADCAST_VIEWERS_UPDATE: function(e) {
@@ -130,8 +130,8 @@ l = "BroadcastingStore", (a = "displayName") in(o = v) ? Object.defineProperty(o
       viewers: t
     } = e;
     Object.entries(t).forEach(e => {
-      let [t, n] = e, i = p.get(t);
-      null != i && p.set(t, {
+      let [t, n] = e, i = g.get(t);
+      null != i && g.set(t, {
         ...i,
         viewers: n
       })
@@ -141,9 +141,9 @@ l = "BroadcastingStore", (a = "displayName") in(o = v) ? Object.defineProperty(o
     let {
       channelId: t,
       user: n
-    } = e, i = p.values(R(t))[0];
+    } = e, i = g.values(R(t))[0];
     if (null == i || null == i.viewers || i.viewers.some(e => e.id === n.id)) return !1;
-    p.set(i.userId, {
+    g.set(i.userId, {
       ...i,
       viewers: [...i.viewers, new E.Z(n)]
     })
@@ -152,9 +152,9 @@ l = "BroadcastingStore", (a = "displayName") in(o = v) ? Object.defineProperty(o
     let {
       channelId: t,
       user: n
-    } = e, i = p.values(R(t))[0];
+    } = e, i = g.values(R(t))[0];
     if (null == i || null == i.viewers) return !1;
-    p.set(i.userId, {
+    g.set(i.userId, {
       ...i,
       viewers: i.viewers.filter(e => e.id !== n.id)
     })
@@ -163,15 +163,15 @@ l = "BroadcastingStore", (a = "displayName") in(o = v) ? Object.defineProperty(o
     var t;
     let {
       channel: n
-    } = e, i = p.values(R(n.id))[0];
+    } = e, i = g.values(R(n.id))[0];
     if (null == i) return !1;
     let r = null !== (t = n.rawRecipients) && void 0 !== t ? t : [];
-    p.set(i.userId, {
+    g.set(i.userId, {
       ...i,
       viewers: r.filter(e => e.id !== i.userId).map(e => new E.Z(e))
     })
   },
   LOGOUT: function() {
-    f.clear(), N.clear(), A.clear(), m = [], p.clear()
+    f.clear(), N.clear(), A.clear(), m = [], g.clear()
   }
 })

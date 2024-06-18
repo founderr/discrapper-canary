@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return u
   },
   goToApplication: function() {
-    return d
+    return c
   },
   goToApplicationSection: function() {
-    return c
+    return d
   },
   goToApplicationStoreSku: function() {
     return E
@@ -62,13 +62,13 @@ let u = e => {
               });
               break
             }
-            c({
+            d({
               applicationId: i,
               section: s
             });
             break
           }
-          d({
+          c({
             applicationId: i
           })
         }
@@ -82,7 +82,7 @@ let u = e => {
       state: e
     })
   },
-  d = e => {
+  c = e => {
     let {
       applicationId: t
     } = e, n = {
@@ -92,7 +92,7 @@ let u = e => {
       state: n
     })
   },
-  c = e => {
+  d = e => {
     let {
       applicationId: t,
       section: n

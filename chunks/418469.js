@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 });
 var i = n(735250);
@@ -14,12 +14,12 @@ var r = n(442837),
   u = n(959457),
   _ = n(689938);
 
-function d(e, t, d) {
-  var c;
+function c(e, t, c) {
+  var d;
   let E = (0, a.Cf)(e),
     I = (0, r.e7)([l.default], () => l.default.getId()),
     T = null != e ? (0, o.V9)(e) : u.Z.getActiveStreamKey(),
-    h = null !== (c = u.Z.getVideoStats(T)) && void 0 !== c ? c : {},
+    h = null !== (d = u.Z.getVideoStats(T)) && void 0 !== d ? d : {},
     S = {
       media_session_id: u.Z.getMediaSessionId(T),
       rtc_connection_id: u.Z.getRtcConnectionId(T),
@@ -31,7 +31,7 @@ function d(e, t, d) {
     id: "report-stream-problem",
     label: _.Z.Messages.STREAM_REPORT_PROBLEM_MENU_ITEM,
     action: () => {
-      null == d || d(), null != e && (0, s.openModalLazy)(async () => {
+      null == c || c(), null != e && (0, s.openModalLazy)(async () => {
         let {
           default: t
         } = await Promise.all([n.e("99387"), n.e("75994")]).then(n.bind(n, 340140));

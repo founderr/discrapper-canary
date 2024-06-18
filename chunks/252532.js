@@ -17,12 +17,12 @@ function _(e) {
     user: t,
     guildId: n,
     size: _,
-    showPending: d = !1,
-    animateOnHover: c = !1,
+    showPending: c = !1,
+    animateOnHover: d = !1,
     avatarOverride: E
-  } = e, [I, T] = i.useState(!1), h = (0, r.e7)([s.Z], () => s.Z.useReducedMotion), S = (0, r.e7)([l.Z], () => l.Z.isFocused()) && (I || !h && !c), {
+  } = e, [I, T] = i.useState(!1), h = (0, r.e7)([s.Z], () => s.Z.useReducedMotion), S = (0, r.e7)([l.Z], () => l.Z.isFocused()) && (I || !h && !d), {
     pendingAvatar: f
-  } = (0, u.Z)({}), N = void 0 !== E ? E : d ? f : void 0, A = (0, r.e7)([a.ZP], () => null != n && null != t ? a.ZP.getMember(n, t.id) : null), m = i.useMemo(() => null != t ? (0, o.SG)(N, A, t, {
+  } = (0, u.Z)({}), N = void 0 !== E ? E : c ? f : void 0, A = (0, r.e7)([a.ZP], () => null != n && null != t ? a.ZP.getMember(n, t.id) : null), m = i.useMemo(() => null != t ? (0, o.SG)(N, A, t, {
     canAnimate: S,
     size: _
   }) : void 0, [N, A, t, S, _]), O = i.useCallback(() => T(!0), []);

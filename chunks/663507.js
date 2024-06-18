@@ -48,12 +48,12 @@ class l {
       bufferWidth: l = this.bufferWidth,
       padding: u = this.padding,
       paddingVertical: _ = this.paddingVertical,
-      paddingHorizontal: d = this.paddingHorizontal,
-      marginLeft: c = this.marginLeft,
+      paddingHorizontal: c = this.paddingHorizontal,
+      marginLeft: d = this.marginLeft,
       sectionGutter: E = this.sectionGutter,
       dir: I = this.dir
     } = e;
-    if (this.sections !== t || this.columns !== n || this.itemGutter !== i || this.removeEdgeItemGutters !== r || this.getItemKey !== s || this.getSectionHeight !== a || this.getItemHeight !== o || this.bufferWidth !== l || this.padding !== u || this.paddingVertical !== _ || this.paddingHorizontal !== d || this.marginLeft !== c || this.sectionGutter !== E || this.dir !== I) this.needsFullCompute = !0, this.sections = t, this.columns = n, this.itemGutter = i, this.getItemKey = s, this.getSectionHeight = a, this.getItemHeight = o, this.bufferWidth = l, this.padding = u, this.paddingVertical = _, this.paddingHorizontal = d, this.marginLeft = c, this.sectionGutter = E, this.dir = I
+    if (this.sections !== t || this.columns !== n || this.itemGutter !== i || this.removeEdgeItemGutters !== r || this.getItemKey !== s || this.getSectionHeight !== a || this.getItemHeight !== o || this.bufferWidth !== l || this.padding !== u || this.paddingVertical !== _ || this.paddingHorizontal !== c || this.marginLeft !== d || this.sectionGutter !== E || this.dir !== I) this.needsFullCompute = !0, this.sections = t, this.columns = n, this.itemGutter = i, this.getItemKey = s, this.getSectionHeight = a, this.getItemHeight = o, this.bufferWidth = l, this.padding = u, this.paddingVertical = _, this.paddingHorizontal = c, this.marginLeft = d, this.sectionGutter = E, this.dir = I
   }
   computeFullCoords() {
     var e, t, n;
@@ -65,8 +65,8 @@ class l {
       itemGutter: l,
       getSectionHeight: u,
       bufferWidth: _,
-      removeEdgeItemGutters: d
-    } = this, c = "rtl" === this.dir ? "right" : "left";
+      removeEdgeItemGutters: c
+    } = this, d = "rtl" === this.dir ? "right" : "left";
     this.coordsMap = {}, this.gridData = {
       boundaries: [],
       coordinates: {}
@@ -74,16 +74,16 @@ class l {
     let E = this.getPaddingHorizontal(),
       I = this.getPaddingVertical(),
       T = null !== (e = this.marginLeft) && void 0 !== e ? e : 0;
-    this.columnHeights = Array(i).fill(I), this.columnWidth = (_ - 2 * E - l * (i - 1) - (d ? l : 0)) / i, this.itemGrid = [];
+    this.columnHeights = Array(i).fill(I), this.columnWidth = (_ - 2 * E - l * (i - 1) - (c ? l : 0)) / i, this.itemGrid = [];
     let h = 0;
     for (; h < this.sections.length;) {
       this.gridData.boundaries[h] = this.currentRow, this.currentRow = 0, this.lastColumnIndex = 0;
       let e = this.sections[h],
         _ = 0,
-        d = u(h),
+        c = u(h),
         I = this.getMaxColumnHeight(this.columnHeights);
       h > 0 && (I = I - l + this.getSectionGutter());
-      let S = d > 0 ? d + l : 0;
+      let S = c > 0 ? c + l : 0;
       for (let e = 0; e < this.columnHeights.length; e++) this.columnHeights[e] = I + S;
       for (; _ < e;) {
         ;
@@ -97,27 +97,27 @@ class l {
         let s = a(h, _, this.columnWidth),
           u = {
             position: "absolute",
-            [c]: this.columnWidth * r + l * (r + 1) - l + E,
+            [d]: this.columnWidth * r + l * (r + 1) - l + E,
             width: this.columnWidth,
             top: i - I,
             height: s
           },
-          d = {
+          c = {
             section: h,
             row: this.currentRow,
             column: r
           };
-        this.coordsMap[e] = u, this.gridData.coordinates[e] = d, this.columnHeights[r] = i + s + l, this.itemGrid[r] = null !== (t = this.itemGrid[r]) && void 0 !== t ? t : [], this.itemGrid[r].push(e), _++
+        this.coordsMap[e] = u, this.gridData.coordinates[e] = c, this.columnHeights[r] = i + s + l, this.itemGrid[r] = null !== (t = this.itemGrid[r]) && void 0 !== t ? t : [], this.itemGrid[r].push(e), _++
       }
-      d > 0 && (this.coordsMap[s(h)] = {
+      c > 0 && (this.coordsMap[s(h)] = {
         position: "sticky",
-        [c]: E,
+        [d]: E,
         width: this.columnWidth * i + l * i,
         top: 0,
-        height: d
+        height: c
       }), this.coordsMap[r(h)] = {
         position: "absolute",
-        [c]: T,
+        [d]: T,
         width: this.columnWidth * i + l * (i - 1) + 2 * E,
         top: I,
         height: this.getMaxColumnHeight(this.columnHeights) - I
@@ -149,20 +149,20 @@ class l {
         s++;
         continue
       }
-      let d = 0,
-        c = 1;
-      for (_ < t && _ > e && (d = o - 1, c = -1), this.visibleSections[a] = []; d >= 0 && d < o;) {
-        let r = n(s, d),
+      let c = 0,
+        d = 1;
+      for (_ < t && _ > e && (c = o - 1, d = -1), this.visibleSections[a] = []; c >= 0 && c < o;) {
+        let r = n(s, c),
           o = null != r ? i[r] : null;
         if (null == r || null == o) {
-          d += c;
+          c += d;
           continue
         }
         let {
           top: l,
           height: _
         } = o;
-        l + u > e - _ && l + u < t && (-1 === c ? this.visibleSections[a].unshift([r, s, d]) : this.visibleSections[a].push([r, s, d])), d += c
+        l + u > e - _ && l + u < t && (-1 === d ? this.visibleSections[a].unshift([r, s, c]) : this.visibleSections[a].push([r, s, c])), c += d
       }
       if (u < e && _ > t) break;
       s++

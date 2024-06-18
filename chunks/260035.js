@@ -14,10 +14,10 @@ var i = n(735250),
 function u(e) {
   let {
     children: t
-  } = e, [n, u] = r.useState(null), [_, d] = r.useState(null), c = r.useRef(new Set), [E, I] = r.useState(!1), T = r.useCallback(e => {
-    c.current.delete(e), I(c.current.size > 0)
-  }, []), h = r.useCallback(e => (c.current.add(e), I(!0), () => T(e)), [T]), S = r.useCallback((e, t) => {
-    for (let n of c.current) n(e, t)
+  } = e, [n, u] = r.useState(null), [_, c] = r.useState(null), d = r.useRef(new Set), [E, I] = r.useState(!1), T = r.useCallback(e => {
+    d.current.delete(e), I(d.current.size > 0)
+  }, []), h = r.useCallback(e => (d.current.add(e), I(!0), () => T(e)), [T]), S = r.useCallback((e, t) => {
+    for (let n of d.current) n(e, t)
   }, []);
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(o.d, {
@@ -28,7 +28,7 @@ function u(e) {
       removeClickListener: T,
       children: t
     }), (0, i.jsx)(s.O_, {
-      ref: d,
+      ref: c,
       className: l.canvas,
       environment: a.rq,
       onClick: E ? S : void 0

@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   jy: function() {
-    return c
+    return d
   },
   sw: function() {
-    return d
+    return c
   }
 });
 var i = n(149765),
@@ -62,7 +62,7 @@ let u = (0, s.B)({
     }]
   });
 
-function d(e) {
+function c(e) {
   let t = (0, r.e7)([o.Z], () => o.Z.getGuild(e)),
     n = (0, r.e7)([a.Z], () => null != t && i.Db(a.Z.computePermissions(t), l.cv)),
     s = u.useExperiment({
@@ -72,7 +72,7 @@ function d(e) {
       disable: !n,
       autoTrackExposure: !0
     }),
-    d = _.useExperiment({
+    c = _.useExperiment({
       guildId: e,
       location: "c3fae3_2"
     }, {
@@ -80,12 +80,12 @@ function d(e) {
       autoTrackExposure: !0
     });
   return {
-    showAlertMode: s.showAlertMode || d.showAlertMode,
-    alsoShowMemberSafety: s.alsoShowMemberSafety || d.alsoShowMemberSafety
+    showAlertMode: s.showAlertMode || c.showAlertMode,
+    alsoShowMemberSafety: s.alsoShowMemberSafety || c.alsoShowMemberSafety
   }
 }
 
-function c(e) {
+function d(e) {
   let t = o.Z.getGuild(e),
     n = null != t && i.Db(a.Z.computePermissions(t), l.cv),
     r = u.getCurrentConfig({

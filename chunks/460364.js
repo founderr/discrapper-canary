@@ -17,8 +17,8 @@ function u(e) {
     isFocused: n,
     menuSubmenuProps: u,
     rows: _,
-    rowHeight: d,
-    onScroll: c,
+    rowHeight: c,
+    onScroll: d,
     listClassName: E
   } = e, I = r.useRef(null), T = r.useRef(null), h = r.useRef(null), S = r.useRef(null), {
     isUsingKeyboardNavigation: f,
@@ -58,10 +58,10 @@ function u(e) {
             ref: S,
             className: E,
             listPadding: [6, 0, 6, 8],
-            onScroll: c,
+            onScroll: d,
             renderRow: m,
             rowCount: _.length,
-            rowHeight: d
+            rowHeight: c
           })
         })
       })

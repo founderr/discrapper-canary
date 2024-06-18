@@ -13,7 +13,7 @@ var o, a = n(756647),
   u = n(544891),
   _ = n(761609);
 
-function d(e, t, n) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -21,7 +21,7 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let c = 1500,
+let d = 1500,
   E = null !== (o = window.requestIdleCallback) && void 0 !== o ? o : e => setImmediate(() => e()),
   I = new _.R,
   T = {
@@ -44,7 +44,7 @@ let c = 1500,
       drainTimeoutOverride: N,
       waitFor: A
     } = e;
-    c = null != N ? N : 1500;
+    d = null != N ? N : 1500;
 
     function m() {
       return 0 !== h.length && (null != r ? null != i : null != o())
@@ -52,14 +52,14 @@ let c = 1500,
 
     function O() {
       null == s && m() && (s = E(R, {
-        timeout: c
+        timeout: d
       }))
     }
 
     function R() {
       if (s = null, !m()) return;
       let e = h.slice();
-      h = [], C(e).then(() => {
+      h = [], p(e).then(() => {
         e.forEach(e => {
           var t;
           null === (t = e.resolve) || void 0 === t || t.call(e)
@@ -73,7 +73,7 @@ let c = 1500,
       })
     }
 
-    function C(e) {
+    function p(e) {
       let t = Date.now(),
         n = e.map(e => ({
           ...e,
@@ -121,22 +121,22 @@ let c = 1500,
             ...n
           },
           resolve: l
-        }, d = function(e) {
+        }, c = function(e) {
           if (null != r) return r;
           let t = e.fingerprint || o();
           return null != t ? (0, a.s)(t) : null
         }(_);
-        null != d && (_.properties.client_uuid = I.generate(d)), h.push(_);
+        null != c && (_.properties.client_uuid = I.generate(c)), h.push(_);
         h.length > 1e4 && (h = h.slice(-1e4)), i ? R() : O()
       }), !1
     };
-    class p extends l.yh {
+    class g extends l.yh {
       initialize() {
         null != A && this.waitFor(...A)
       }
       constructor(...e) {
-        super(...e), d(this, "submitEventsImmediately", C)
+        super(...e), c(this, "submitEventsImmediately", p)
       }
     }
-    return d(p, "displayName", "AnalyticsTrackingStore"), new p(t, n)
+    return c(g, "displayName", "AnalyticsTrackingStore"), new g(t, n)
   }

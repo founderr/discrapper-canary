@@ -8,8 +8,8 @@ var i = n(735250),
   l = n(588822),
   u = n(171368),
   _ = n(981631),
-  d = n(689938),
-  c = n(783116);
+  c = n(689938),
+  d = n(783116);
 t.Z = r.memo(function(e) {
   let {
     user: t,
@@ -29,7 +29,7 @@ t.Z = r.memo(function(e) {
       ref: e => {
         null != e && m(e.scrollHeight - e.clientHeight > 1)
       },
-      className: c.descriptionClamp,
+      className: d.descriptionClamp,
       children: (0, i.jsx)(l.Z, {
         userBio: E,
         setLineClamp: !1,
@@ -38,8 +38,8 @@ t.Z = r.memo(function(e) {
     }), A && (0, i.jsx)(s.Button, {
       look: s.Button.Looks.BLANK,
       size: s.Button.Sizes.NONE,
-      className: c.viewFullBio,
-      color: c.viewFullBioColor,
+      className: d.viewFullBio,
+      color: d.viewFullBioColor,
       onClick: () => {
         null == n || n(), (0, u.openUserProfileModal)({
           userId: t.id,
@@ -56,7 +56,7 @@ t.Z = r.memo(function(e) {
       children: (0, i.jsx)(s.Text, {
         variant: "text-xs/normal",
         color: "none",
-        children: d.Z.Messages.USER_PROFILE_VIEW_FULL_BIO
+        children: c.Z.Messages.USER_PROFILE_VIEW_FULL_BIO
       })
     })]
   })

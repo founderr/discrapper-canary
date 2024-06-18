@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return C
+    return p
   }
 }), n(47120);
 var i = n(735250),
@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(481060),
   u = n(2052),
   _ = n(410030),
-  d = n(100527),
-  c = n(906732),
+  c = n(100527),
+  d = n(906732),
   E = n(98278),
   I = n(197115),
   T = n(626135),
@@ -26,27 +26,27 @@ var i = n(735250),
   O = n(864295),
   R = n(369454);
 
-function C(e) {
+function p(e) {
   var t;
   let {
     onClose: s,
-    closePopout: C,
-    sound: p,
-    channel: g
-  } = e, L = (0, _.ZP)(), [v, D] = r.useState(!1), {
+    closePopout: p,
+    sound: g,
+    channel: C
+  } = e, v = (0, _.ZP)(), [L, D] = r.useState(!1), {
     location: M
   } = (0, u.O)(), P = r.useMemo(() => ({
     ...M,
     section: N.jXE.SOUNDBOARD_SOUND_PICKER
   }), [M]), {
     analyticsLocations: y
-  } = (0, c.ZP)(d.Z.PREMIUM_UPSELL), {
+  } = (0, d.ZP)(c.Z.PREMIUM_UPSELL), {
     previewSound: U
-  } = (0, S.Z)(p, null !== (t = null == g ? void 0 : g.id) && void 0 !== t ? t : null), b = (0, f.K_)({
-    sound: p,
+  } = (0, S.Z)(g, null !== (t = null == C ? void 0 : C.id) && void 0 !== t ? t : null), b = (0, f.K_)({
+    sound: g,
     previewSound: U,
     tooltipPosition: "left"
-  }), G = (0, a.ap)(L) ? n(537381) : n(341048);
+  }), G = (0, a.ap)(v) ? n(537381) : n(341048);
   r.useEffect(() => {
     T.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
       type: A.cd.SOUND_PICKER_SOUND_CLICKED,
@@ -62,8 +62,8 @@ function C(e) {
   let w = r.useCallback(() => {
     T.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
       location_section: N.jXE.SOUNDBOARD_SOUND_PICKER_UPSELL
-    }), (0, E.z)(), C()
-  }, [C]);
+    }), (0, E.z)(), p()
+  }, [p]);
   return (0, i.jsxs)("div", {
     className: o()(R.premiumPromo, O.container),
     children: [(0, i.jsx)(l.Clickable, {
@@ -94,7 +94,7 @@ function C(e) {
         children: b
       }), (0, i.jsx)(I.Z, {
         subscriptionTier: A.Si.TIER_2,
-        submitting: v,
+        submitting: L,
         premiumModalAnalyticsLocation: {
           section: N.jXE.SOUNDBOARD_SOUND_PICKER,
           object: N.qAy.BUTTON_CTA

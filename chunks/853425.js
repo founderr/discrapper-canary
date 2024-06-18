@@ -8,11 +8,11 @@ var i = n(735250),
   l = n(865427),
   u = n(478543),
   _ = n(366953);
-async function d(e) {
+async function c(e) {
   if (200 !== (await (0, o.f0)(e)).status) throw Error("Build override couldn't apply");
   window.location.reload(!0)
 }
-async function c(e) {
+async function d(e) {
   if (200 !== (await (0, o.aD)(e)).status) throw Error("Build override couldn't apply");
   window.location.reload(!0)
 }
@@ -28,10 +28,10 @@ t.Z = r.memo(function(e) {
   } = o, h = n.state === a.Z.Resolving || o.state === a.Z.Resolving, S = r.useCallback(() => {
     if ((0, l.mG)(o.url) && null != o.override) {
       var e;
-      return c(null === (e = o.override) || void 0 === e ? void 0 : e.targetBuildOverride)
+      return d(null === (e = o.override) || void 0 === e ? void 0 : e.targetBuildOverride)
     }
     if (null == I) return Promise.reject(Error("Invalid override payload"));
-    return (0, _.Z)(o.override, I), d(I)
+    return (0, _.Z)(o.override, I), c(I)
   }, [I, o]);
   return null != T ? (0, i.jsx)(u.Z, {
     loading: h,

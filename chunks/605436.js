@@ -10,7 +10,7 @@ n.d(t, {
     return f
   },
   Gy: function() {
-    return C
+    return p
   },
   RD: function() {
     return H
@@ -25,7 +25,7 @@ n.d(t, {
     return A
   },
   Wx: function() {
-    return L
+    return v
   },
   X0: function() {
     return N
@@ -49,10 +49,10 @@ n.d(t, {
     return b
   },
   ik: function() {
-    return g
+    return C
   },
   kA: function() {
-    return v
+    return L
   },
   nT: function() {
     return F
@@ -75,8 +75,8 @@ var i = n(149765),
   l = n(271383),
   u = n(594174),
   _ = n(934415),
-  d = n(823379),
-  c = n(700785),
+  c = n(823379),
+  d = n(700785),
   E = n(709054),
   I = n(51144),
   T = n(71080),
@@ -131,37 +131,37 @@ function R(e, t) {
   return E.default.castGuildIdAsEveryoneGuildRoleId(e) === t
 }
 
-function C(e, t) {
+function p(e, t) {
   return !R(e, t)
 }
 
-function p(e, t) {
+function g(e, t) {
   return !R(e.id, t.id)
 }
 
-function g(e, t, n, i) {
+function C(e, t, n, i) {
   let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-  return Object.values(t).filter(t => !f(t) && O(n, t.id, i) && p(e, t) && r(t.name)).sort(A).map(e => N(e))
+  return Object.values(t).filter(t => !f(t) && O(n, t.id, i) && g(e, t) && r(t.name)).sort(A).map(e => N(e))
 }
 
-function L(e, t, n, r) {
+function v(e, t, n, r) {
   let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-  return Object.values(t).filter(t => !f(t) && O(n, t.id, r) && p(e, t) && s(t.name)).sort(A).map(e => N(e, i.e$(e.permissions, r)))
+  return Object.values(t).filter(t => !f(t) && O(n, t.id, r) && g(e, t) && s(t.name)).sort(A).map(e => N(e, i.e$(e.permissions, r)))
 }
 
-function v(e, t, n, i, r) {
+function L(e, t, n, i, r) {
   var s, o, a, l, u;
   let _ = [];
-  return 0 === (_ = (s = e, o = t, a = n, l = i, u = r, Object.values(o).filter(e => f(e) || !O(a, e.id, l, u) && p(s, e))).sort(A).map(e => N(e))).length ? m(S.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : _
+  return 0 === (_ = (s = e, o = t, a = n, l = i, u = r, Object.values(o).filter(e => f(e) || !O(a, e.id, l, u) && g(s, e))).sort(A).map(e => N(e))).length ? m(S.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : _
 }
 
 function D(e, t, n, r, s) {
   var o, a, l, u, _;
-  let d = [];
-  return 0 === (d = (o = e, a = t, l = n, u = r, _ = s, Object.values(a).filter(e => {
+  let c = [];
+  return 0 === (c = (o = e, a = t, l = n, u = r, _ = s, Object.values(a).filter(e => {
     var t;
-    return f(e) || !O(l, e.id, u, _) && p(o, e) || i.e$(i.$e(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u)
-  })).sort(A).map(e => N(e, i.e$(e.permissions, r)))).length ? m(S.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : d
+    return f(e) || !O(l, e.id, u, _) && g(o, e) || i.e$(i.$e(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u)
+  })).sort(A).map(e => N(e, i.e$(e.permissions, r)))).length ? m(S.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : c
 }
 
 function M(e, t) {
@@ -196,12 +196,12 @@ function U(e, t) {
 
 function b(e, t, n, i) {
   let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-  return e.map(u.default.getUser).filter(d.lm).filter(e => !n.isOwner(e) && O(t, e.id, i) && (r(M(e, n)) || r(e.username) || r(e.discriminator))).map(e => y(e, n)).sort(U)
+  return e.map(u.default.getUser).filter(c.lm).filter(e => !n.isOwner(e) && O(t, e.id, i) && (r(M(e, n)) || r(e.username) || r(e.discriminator))).map(e => y(e, n)).sort(U)
 }
 
 function G(e, t, n, i, r) {
   var s, o, a, l, _;
-  return (s = e, o = t, a = n, l = i, _ = r, s.map(u.default.getUser).filter(d.lm).filter(e => {
+  return (s = e, o = t, a = n, l = i, _ = r, s.map(u.default.getUser).filter(c.lm).filter(e => {
     var t;
     return !O(o, e.id, l, _) || (t = e, a.isOwner(t))
   })).map(e => y(e, n)).sort(U)
@@ -244,7 +244,7 @@ function k(e) {
 
 function B(e, t, n) {
   let r = e.permissionOverwrites[e.guild_id];
-  null == r && (r = c.we(e.guild_id));
+  null == r && (r = d.we(e.guild_id));
   let s = {
     ...r
   };
@@ -264,8 +264,8 @@ function V(e, t) {
     let r = {
       id: n.id,
       type: o.BN.MEMBER,
-      allow: i.IH(c.Hn, t),
-      deny: c.Hn
+      allow: i.IH(d.Hn, t),
+      deny: d.Hn
     };
     return (0, s.hw)(e.id, [r], !0)
   } {

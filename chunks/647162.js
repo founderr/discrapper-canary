@@ -24,8 +24,8 @@ var i = n(763472),
   l = n(18323),
   u = n(768419),
   _ = n(616922),
-  d = n(981631);
-let c = 30 * o.Z.Millis.SECOND;
+  c = n(981631);
+let d = 30 * o.Z.Millis.SECOND;
 
 function E(e) {
   return null != e.getActiveSocketAndDevice() || l.Z.isProtocolRegistered()
@@ -36,7 +36,7 @@ function I() {
   if (null != e) return Promise.resolve(e);
   if (!l.Z.isProtocolRegistered()) return Promise.reject(Error("protocol is not registered"));
   let t = u.Z.getPlayableComputerDevices();
-  if (s.ZP.isObservedAppRunning(r.Z.get(d.ABu.SPOTIFY).name) && t.length > 0) {
+  if (s.ZP.isObservedAppRunning(r.Z.get(c.ABu.SPOTIFY).name) && t.length > 0) {
     let {
       socket: e,
       device: n
@@ -49,7 +49,7 @@ function I() {
   return new Promise((e, n) => {
     let i = setTimeout(() => {
         u.Z.removeChangeListener(r), n(Error("timeout launching spotify"))
-      }, c),
+      }, d),
       r = () => {
         for (let {
             socket: n,

@@ -7,8 +7,8 @@ var i = n(735250),
   l = n(829883),
   u = n(623624),
   _ = n(973542),
-  d = n(703656),
-  c = n(592125),
+  c = n(703656),
+  d = n(592125),
   E = n(430824),
   I = n(944486),
   T = n(514342),
@@ -25,29 +25,29 @@ t.Z = e => {
     roleIcon: t,
     guild: n
   } = e, {
-    name: C
+    name: p
   } = t;
   r.useEffect(() => {
     f.default.track(A.rMx.OPEN_POPOUT, {
       type: "Role Icon Popout",
       guild_id: n.id,
-      ...(0, a.v_)(c.Z.getChannel(I.Z.getChannelId(n.id)))
+      ...(0, a.v_)(d.Z.getChannel(I.Z.getChannelId(n.id)))
     })
   }, []);
-  let p = (0, s.e7)([E.Z], () => null != t.roleId ? E.Z.getRole(n.id, t.roleId) : void 0),
-    g = (0, _.Z)(p),
-    L = g ? O.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format({
-      name: C
+  let g = (0, s.e7)([E.Z], () => null != t.roleId ? E.Z.getRole(n.id, t.roleId) : void 0),
+    C = (0, _.Z)(g),
+    v = C ? O.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format({
+      name: p
     }) : O.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION.format({
-      name: C
+      name: p
     }),
-    v = {
+    L = {
       ...t,
       src: null == t.src ? t.src : (0, l.o)(t.src, 40),
       size: 40
     },
-    D = g ? () => {
-      (0, d.uL)(A.Z5c.CHANNEL(n.id, m.oC.ROLE_SUBSCRIPTIONS))
+    D = C ? () => {
+      (0, c.uL)(A.Z5c.CHANNEL(n.id, m.oC.ROLE_SUBSCRIPTIONS))
     } : () => {
       (0, u.f)({
         guildId: n.id,
@@ -65,7 +65,7 @@ t.Z = e => {
           children: [(0, i.jsx)("div", {
             className: R.roleIconContainer,
             children: (0, i.jsx)(S.Z, {
-              ...v,
+              ...L,
               enableTooltip: !1,
               className: R.__invalid_roleIcon,
               enableHeight: !1
@@ -76,11 +76,11 @@ t.Z = e => {
               variant: "heading-md/semibold",
               className: R.roleName,
               children: (0, i.jsx)(T.Z, {
-                children: C
+                children: p
               })
             }), (0, i.jsx)(o.Text, {
               variant: "text-sm/normal",
-              children: L
+              children: v
             })]
           })]
         }), (0, i.jsxs)(o.Button, {

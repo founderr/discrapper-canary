@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   A4: function() {
-    return d
+    return c
   },
   E9: function() {
     return u
@@ -10,7 +10,7 @@ n.d(t, {
     return a
   },
   jx: function() {
-    return c
+    return d
   },
   nv: function() {
     return o
@@ -75,11 +75,11 @@ function _(e) {
   })
 }
 
-function d(e) {
-  c([e])
+function c(e) {
+  d([e])
 }
 
-function c(e) {
+function d(e) {
   i.Z.dispatch({
     type: "LAYOUT_CREATE_WIDGETS",
     widgetConfigs: e

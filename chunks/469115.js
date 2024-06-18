@@ -144,7 +144,7 @@ let _ = [{
     getName: () => u.Z.Messages.CLIENT_THEMES_GRADIENT_DESERT_KHAKI,
     midpointPercentage: 50
   }],
-  d = [{
+  c = [{
     id: a.Us.SUNSET,
     theme: l.BR.DARK,
     colors: [{
@@ -356,7 +356,7 @@ let _ = [{
     getName: () => u.Z.Messages.CLIENT_THEMES_GRADIENT_SEPIA,
     midpointPercentage: 50
   }],
-  c = {
+  d = {
     id: a.Us.BLURPLE_TWILIGHT,
     theme: l.BR.DARK,
     colors: [{
@@ -370,7 +370,7 @@ let _ = [{
     getName: () => u.Z.Messages.CLIENT_THEMES_GRADIENT_BLURPLE_TWILIGHT,
     midpointPercentage: 50
   },
-  E = [..._, ...d, c, {
+  E = [..._, ...c, d, {
     id: a.Us.EASTER_EGG,
     theme: l.BR.LIGHT,
     colors: [{
@@ -384,7 +384,7 @@ let _ = [{
     getName: () => u.Z.Messages.CLIENT_THEMES_GRADIENT_EASTER_EGG,
     midpointPercentage: 50
   }];
-[...d, ..._], (r = i || (i = {}))[r.DARK = 0] = "DARK", r[r.LIGHT = 1] = "LIGHT", r[r.SYSTEM = 2] = "SYSTEM", l.BR.DARK, l.BR.LIGHT, l.BR.DARKER, l.BR.LIGHT, l.BR.MIDNIGHT, () => u.Z.Messages.THEME_MIDNIGHT;
+[...c, ..._], (r = i || (i = {}))[r.DARK = 0] = "DARK", r[r.LIGHT = 1] = "LIGHT", r[r.SYSTEM = 2] = "SYSTEM", l.BR.DARK, l.BR.LIGHT, l.BR.DARKER, l.BR.LIGHT, l.BR.MIDNIGHT, () => u.Z.Messages.THEME_MIDNIGHT;
 let I = (0, s.keyBy)(E, "id"),
   T = new Map([
     [a.Us.BLURPLE_TWILIGHT, o.z.BRAND_REFRESH_CLIENT_THEME_BADGE]

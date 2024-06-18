@@ -30,9 +30,9 @@ var i, r, s = n(512722),
 n(442837);
 var _ = n(627420);
 n(704215);
-var d = n(277800);
+var c = n(277800);
 n(605236);
-var c = n(430824);
+var d = n(430824);
 n(496675);
 var E = n(856651),
   I = n(981631),
@@ -290,16 +290,16 @@ function A(e) {
     onlyChannelConnectionRoles: u = !1
   } = e;
   if (null == i) return null;
-  if (null == r && null != a && (r = c.Z.getGuild(a.getGuildId())), null == r) return null;
+  if (null == r && null != a && (r = d.Z.getGuild(a.getGuildId())), null == r) return null;
   let {
     id: _
   } = r;
-  null == s && (s = c.Z.getRoles(_));
+  null == s && (s = d.Z.getRoles(_));
   let E = i.roles.map(e => s[e]).filter(e => {
       var t;
       return (null == e ? void 0 : null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null
     }).sort((e, t) => (o()(null != e && null != t, "roleA or roleB is null"), t.position - e.position)),
-    I = l().intersection(E, (0, d.Z)(a));
+    I = l().intersection(E, (0, c.Z)(a));
   return I.length > 0 ? null !== (t = I[0]) && void 0 !== t ? t : null : u ? null : null !== (n = E[0]) && void 0 !== n ? n : null
 }
 

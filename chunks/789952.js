@@ -13,25 +13,25 @@ let r = !1;
   i.F3.toSlateRange = (e, t, n) => {
     let r, s, o, a, l, {
       exactMatch: u,
-      suppressThrow: d
+      suppressThrow: c
     } = n;
     if (function(e) {
         let t = e && e.anchorNode && _(e.anchorNode);
         return null != t && e instanceof t.Selection
       }(t) ? (r = t.anchorNode, s = t.anchorOffset, o = t.focusNode, a = t.focusOffset, l = t.isCollapsed) : (r = t.startContainer, s = t.startOffset, o = t.endContainer, a = t.endOffset, l = t.collapsed), null == r || null == o || null == s || null == a) {
-      if (d) return null;
+      if (c) return null;
       throw Error("Cannot resolve a Slate range from DOM range")
     }
-    let c = i.F3.toSlatePoint(e, [r, s], {
+    let d = i.F3.toSlatePoint(e, [r, s], {
         exactMatch: u,
-        suppressThrow: d
+        suppressThrow: c
       }),
-      E = l ? c : i.F3.toSlatePoint(e, [o, a], {
+      E = l ? d : i.F3.toSlatePoint(e, [o, a], {
         exactMatch: u,
-        suppressThrow: d
+        suppressThrow: c
       });
-    return null != c && null != E ? {
-      anchor: c,
+    return null != d && null != E ? {
+      anchor: d,
       focus: E
     } : null
   };

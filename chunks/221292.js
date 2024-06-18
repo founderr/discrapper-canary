@@ -7,7 +7,7 @@ n.d(t, {
     return R
   },
   Qf: function() {
-    return C
+    return p
   },
   pQ: function() {
     return m
@@ -21,8 +21,8 @@ var i = n(367907),
   l = n(594174),
   u = n(626135),
   _ = n(768581),
-  d = n(621853),
-  c = n(318661),
+  c = n(621853),
+  d = n(318661),
   E = n(228168),
   I = n(981631),
   T = n(231338);
@@ -58,17 +58,17 @@ let h = e => {
       showGuildProfile: u = !0
     } = e, _ = l.default.getUser(r);
     if (null == _) return {};
-    let d = (0, c.Of)(null == _ ? void 0 : _.id, u ? a : void 0),
+    let c = (0, d.Of)(null == _ ? void 0 : _.id, u ? a : void 0),
       E = u && null != a ? s.ZP.getMember(a, null == _ ? void 0 : _.id) : null;
     return {
       profile_layout: i,
       profile_properties: h({
         user: _,
-        userProfile: null == d ? void 0 : d._userProfile
+        userProfile: null == c ? void 0 : c._userProfile
       }),
       guild_profile_properties: h({
         guildMember: E,
-        guildMemberProfile: null == d ? void 0 : d._guildMemberProfile
+        guildMemberProfile: null == c ? void 0 : c._guildMemberProfile
       }),
       profile_activity_types: o.Z.getActivities(_.id).map(e => {
         let {
@@ -76,16 +76,16 @@ let h = e => {
         } = e;
         return t
       }).filter(e => void 0 !== e),
-      profile_badges: null == d ? void 0 : null === (t = d.getBadges()) || void 0 === t ? void 0 : t.map(e => {
+      profile_badges: null == c ? void 0 : null === (t = c.getBadges()) || void 0 === t ? void 0 : t.map(e => {
         let {
           id: t
         } = e;
         return t
       }),
       avatar_decoration_sku_id: null === (n = _.avatarDecoration) || void 0 === n ? void 0 : n.skuId,
-      profile_effect_sku_id: null == d ? void 0 : d.profileEffectId,
+      profile_effect_sku_id: null == c ? void 0 : c.profileEffectId,
       user_status: S(_.id),
-      is_guild_profile: (null == d ? void 0 : d.guildId) != null
+      is_guild_profile: (null == c ? void 0 : c.guildId) != null
     }
   },
   A = e => {
@@ -94,8 +94,8 @@ let h = e => {
       related_user_id: e,
       relationship_type: a.Z.getRelationshipType(e),
       related_since: a.Z.getSince(e),
-      num_mutual_friends: d.Z.getMutualFriendsCount(e),
-      num_mutual_guilds: null === (t = d.Z.getMutualGuilds(e)) || void 0 === t ? void 0 : t.length,
+      num_mutual_friends: c.Z.getMutualFriendsCount(e),
+      num_mutual_guilds: null === (t = c.Z.getMutualGuilds(e)) || void 0 === t ? void 0 : t.length,
       affinity: null === (n = r.Z.getUserAffinity(e)) || void 0 === n ? void 0 : n.affinity
     }
   },
@@ -109,8 +109,8 @@ let h = e => {
       showGuildProfile: a,
       analyticsLocations: l,
       layout: _,
-      action: d,
-      section: c
+      action: c,
+      section: d
     } = e;
     u.default.track(I.rMx.USER_PROFILE_ACTION, {
       ...(0, i.hH)(n),
@@ -123,8 +123,8 @@ let h = e => {
       }),
       ...A(t),
       location_stack: l,
-      profile_action: d,
-      profile_section: c,
+      profile_action: c,
+      profile_section: d,
       source_message_id: s,
       source_role_id: o
     })
@@ -139,8 +139,8 @@ let h = e => {
       layout: a,
       activityType: l,
       activityName: _,
-      activityPlatform: d,
-      activitySessionId: c,
+      activityPlatform: c,
+      activitySessionId: d,
       applicationId: E,
       voiceChannelId: T
     } = e;
@@ -157,8 +157,8 @@ let h = e => {
       location_stack: o,
       activity_type: null != T ? "VOICE" : f(l),
       activity_name: _,
-      activity_platform: d,
-      activity_session_id: c,
+      activity_platform: c,
+      activity_session_id: d,
       application_id: E,
       voice_channel_id: T
     })
@@ -187,7 +187,7 @@ let h = e => {
       badge: l
     })
   },
-  C = e => {
+  p = e => {
     let {
       userId: t,
       guildId: n,

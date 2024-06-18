@@ -22,8 +22,8 @@ let u = Object.freeze({
       className: r = a.wrapper,
       size: l = u.SIZE_14,
       selectable: _ = !1,
-      children: d,
-      color: c,
+      children: c,
+      color: d,
       onClick: E,
       onContextMenu: I,
       style: T,
@@ -43,11 +43,11 @@ let u = Object.freeze({
         [a.uppercase]: S
       }),
       title: h,
-      style: null != c ? {
+      style: null != d ? {
         ...T,
-        color: c
+        color: d
       } : T,
-      children: d
+      children: c
     })
   };
 _.Sizes = u, t.Z = _

@@ -4,10 +4,10 @@ n.d(t, {
     return E
   },
   WS: function() {
-    return c
+    return d
   },
   l5: function() {
-    return d
+    return c
   },
   qB: function() {
     return I
@@ -54,7 +54,7 @@ let _ = (0, s.B)({
   }]
 });
 
-function d(e) {
+function c(e) {
   var t;
   if (null == e || void 0 === e) return !1;
   let n = o.Z.getChannel(e.parent_id);
@@ -62,9 +62,9 @@ function d(e) {
   return t = e.type, [i.d.GUILD_TEXT, i.d.GROUP_DM, i.d.DM].includes(t)
 }
 
-function c(e, t, n) {
+function d(e, t, n) {
   if (null == e) return !1;
-  let i = d(e),
+  let i = c(e),
     r = a.Z.can(u.Pl.USE_EMBEDDED_ACTIVITIES, e),
     s = r && a.Z.can(u.Pl.SEND_MESSAGES | u.Pl.USE_APPLICATION_COMMANDS, e);
   if ((null == e ? void 0 : e.guild_id) != null) return t ? s && i : r && i;
@@ -85,32 +85,32 @@ function E(e, t, n) {
       i = a.Z.can(u.Pl.USE_EMBEDDED_ACTIVITIES, n),
       r = i && a.Z.can(u.Pl.SEND_MESSAGES | u.Pl.USE_APPLICATION_COMMANDS, n);
     return {
-      isActivitiesInTextEnabledForChannelType: d(n),
+      isActivitiesInTextEnabledForChannelType: c(n),
       channelGuildId: null == n ? void 0 : n.guild_id,
       hasPermission: t ? r : i
     }
-  }), c = null != s, E = _.useExperiment({
+  }), d = null != s, E = _.useExperiment({
     location: n
   }, {
-    autoTrackExposure: !c,
-    disable: c
+    autoTrackExposure: !d,
+    disable: d
   });
-  return c ? l && i : t ? E.activitiesInTextEnabled && i : i
+  return d ? l && i : t ? E.activitiesInTextEnabled && i : i
 }
 
 function I(e, t) {
   let n = (0, r.e7)([o.Z], () => o.Z.getChannel(e)),
     i = (0, r.e7)([a.Z], () => a.Z.can(u.Pl.USE_EMBEDDED_ACTIVITIES, n)),
-    s = d(n),
+    s = c(n),
     l = null == n ? void 0 : n.guild_id,
-    c = null != l,
+    d = null != l,
     E = _.useExperiment({
       location: t
     }, {
-      autoTrackExposure: !c,
-      disable: c
+      autoTrackExposure: !d,
+      disable: d
     });
-  return c ? i && s : E.showInOmniButtonMenu && s
+  return d ? i && s : E.showInOmniButtonMenu && s
 }
 
 function T(e, t) {
@@ -132,6 +132,6 @@ function T(e, t) {
   }, {
     autoTrackExposure: !n,
     disable: n
-  }), d = a && u.activitiesInTextEnabled;
-  return s || d
+  }), c = a && u.activitiesInTextEnabled;
+  return s || c
 }

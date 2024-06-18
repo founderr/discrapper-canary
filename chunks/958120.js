@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return L
+    return v
   }
 });
 var i = n(735250),
@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(699516),
   u = n(246946),
   _ = n(5192),
-  d = n(447452),
-  c = n(877485),
+  c = n(447452),
+  d = n(877485),
   E = n(741308),
   I = n(681837),
   T = n(91433),
@@ -25,48 +25,48 @@ var i = n(735250),
   m = n(67152),
   O = n(579285),
   R = n(287612),
-  C = n(228168),
-  p = n(981631),
-  g = n(153362);
+  p = n(228168),
+  g = n(981631),
+  C = n(153362);
 
-function L(e) {
+function v(e) {
   let {
     user: t,
     currentUser: n,
-    displayProfile: L,
-    guild: v,
+    displayProfile: v,
+    guild: L,
     isHovering: D,
     onOpenProfile: M,
     channelId: P,
     onClose: y
   } = e, {
     moreUserDetailsEnabled: U
-  } = (0, d.t)({
+  } = (0, c.t)({
     location: "BiteSizeProfileBody"
   }), {
     originalFriendingEnabled: b,
     improvedFriendingEnabled: G
-  } = (0, c.V)({
+  } = (0, d.V)({
     location: "BiteSizeProfileBody"
-  }), w = _.ZP.getName(null == v ? void 0 : v.id, P, t), k = (0, s.e7)([l.Z], () => l.Z.getRelationshipType(t.id)), B = (0, s.e7)([u.Z], () => u.Z.hidePersonalInformation), x = (0, o.Z)("username"), V = r.useMemo(() => ({
-    source: p.jXE.PROFILE_POPOUT,
+  }), w = _.ZP.getName(null == L ? void 0 : L.id, P, t), k = (0, s.e7)([l.Z], () => l.Z.getRelationshipType(t.id)), B = (0, s.e7)([u.Z], () => u.Z.hidePersonalInformation), x = (0, o.Z)("username"), V = r.useMemo(() => ({
+    source: g.jXE.PROFILE_POPOUT,
     tagUserId: t.id
   }), [t.id]);
   return (0, i.jsxs)("div", {
-    className: g.body,
+    className: C.body,
     children: [(0, i.jsx)(f.Z, {
       user: t,
-      profileType: C.y0.BITE_SIZE,
+      profileType: p.y0.BITE_SIZE,
       onOpenProfile: M,
-      usernameIcon: t.hasAvatarForGuild(null == v ? void 0 : v.id) && (0, i.jsx)(N.Z, {
+      usernameIcon: t.hasAvatarForGuild(null == L ? void 0 : L.id) && (0, i.jsx)(N.Z, {
         user: t,
         nickname: w
       }),
       nickname: w,
-      pronouns: null == L ? void 0 : L.pronouns,
+      pronouns: null == v ? void 0 : v.pronouns,
       tags: (0, i.jsx)(E.Z, {
-        displayProfile: L,
-        profileType: C.y0.BITE_SIZE,
+        displayProfile: v,
+        profileType: p.y0.BITE_SIZE,
         onClose: y
       }),
       nicknameIcons: (0, i.jsxs)(i.Fragment, {
@@ -76,16 +76,16 @@ function L(e) {
           user: t,
           isHovering: D,
           onOpenProfile: () => M({
-            subsection: C.Tb.NOTE
+            subsection: p.Tb.NOTE
           })
         })]
       })
-    }), (G || b) && k === p.OGo.PENDING_INCOMING && (0, i.jsx)(S.Z.Overlay, {
+    }), (G || b) && k === g.OGo.PENDING_INCOMING && (0, i.jsx)(S.Z.Overlay, {
       children: (0, i.jsx)(T.Z, {
         user: t,
-        guildId: null == v ? void 0 : v.id,
+        guildId: null == L ? void 0 : L.id,
         channelId: P,
-        className: g.banner
+        className: C.banner
       })
     }), t.id !== n.id && (0, i.jsx)(R.Z, {
       user: t,
@@ -98,20 +98,20 @@ function L(e) {
       profileViewedAnalytics: V
     }), (U || b || G) && (0, i.jsx)(m.Z, {
       user: t,
-      bio: null == L ? void 0 : L.bio,
+      bio: null == v ? void 0 : v.bio,
       hidePersonalInformation: B,
       onClose: y
     }), (0, i.jsx)(A.Z, {
       user: t,
-      guild: v,
+      guild: L,
       channelId: P,
       onClose: y
-    }), null != v && (0, i.jsx)(O.Z, {
+    }), null != L && (0, i.jsx)(O.Z, {
       user: t,
       currentUser: n,
-      guild: v,
+      guild: L,
       onOpenProfile: () => M({
-        subsection: C.Tb.ROLES
+        subsection: p.Tb.ROLES
       })
     })]
   })

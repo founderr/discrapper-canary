@@ -15,11 +15,11 @@ let _ = e => {
     direction: r,
     foreground: o,
     className: _,
-    title: d,
-    ...c
+    title: c,
+    ...d
   } = e;
   return (0, s.jsxs)("svg", {
-    ...(0, l.Z)(c),
+    ...(0, l.Z)(d),
     width: t,
     height: n,
     className: a()(_, function(e) {
@@ -41,8 +41,8 @@ let _ = e => {
       }
     }(r)),
     viewBox: "0 0 24 24",
-    children: [null != d ? (0, s.jsx)("title", {
-      children: d
+    children: [null != c ? (0, s.jsx)("title", {
+      children: c
     }) : null, (0, s.jsx)("polygon", {
       className: o,
       fill: i,

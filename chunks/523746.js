@@ -3,8 +3,8 @@ var i, r, s, o, a = n(392711),
   l = n.n(a),
   u = n(442837),
   _ = n(544891),
-  d = n(570140),
-  c = n(592125),
+  c = n(570140),
+  d = n(592125),
   E = n(944486),
   I = n(914010),
   T = n(981631);
@@ -14,13 +14,13 @@ let h = {},
 function f() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E.Z.getChannelId(),
-    n = c.Z.getChannel(t);
+    n = d.Z.getChannel(t);
   if (null != n && null == n.getGuildId() && null != t && (null == h[t] || e)) {
     var i;
     return h[t] = null !== (i = h[t]) && void 0 !== i ? i : {
       channelId: t,
       ringing: []
-    }, d.Z.dispatch({
+    }, c.Z.dispatch({
       type: "CALL_CONNECT",
       channelId: t
     }), !0
@@ -61,7 +61,7 @@ s = "CallStore", (r = "displayName") in(i = N) ? Object.defineProperty(i, r, {
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.Z = new N(d.Z, {
+}) : i[r] = s, t.Z = new N(c.Z, {
   CONNECTION_OPEN: function() {
     return f(!0)
   },

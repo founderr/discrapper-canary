@@ -23,8 +23,8 @@ function l(e, t, n) {
 }
 let u = null,
   _ = {},
-  d = {},
   c = {},
+  d = {},
   E = {},
   I = [],
   T = 0,
@@ -43,7 +43,7 @@ let u = null,
   O = /\ud83c[\udffb-\udfff](?=\ud83c[\udffb-\udfff])|(?:[^\ud800-\udfff][\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]?|[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\ud800-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?(?:\u200d(?:[^\ud800-\udfff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?)*/g;
 for (let e = 0; e < f.length; e++) {
   let t = f[e];
-  c["skin-tone-".concat(e + 1)] = t, E[t] = "skin-tone-".concat(e + 1)
+  d["skin-tone-".concat(e + 1)] = t, E[t] = "skin-tone-".concat(e + 1)
 }
 class R {
   get names() {
@@ -115,9 +115,9 @@ class R {
     }
   }
 }
-let C = n(5420);
-for (let e in C) {
-  let t = C[e].map(e => {
+let p = n(5420);
+for (let e in p) {
+  let t = p[e].map(e => {
     let t = new R(e),
       n = t.surrogates,
       i = t.uniqueName;
@@ -125,17 +125,17 @@ for (let e in C) {
       let e = n.replace("️", "");
       e !== n && (E[e] = i)
     }
-    for (let e of t.names) d[e] = t, c[e] = n;
+    for (let e of t.names) c[e] = t, d[e] = n;
     let r = t.diversityChildren;
     for (let t in r) {
       let n = r[t],
         i = n.surrogates;
-      for (let e of n.names) d[e] = n, c[e] = i;
+      for (let e of n.names) c[e] = n, d[e] = i;
       if (!e.hasMultiDiversity) {
         let t = S[n.emojiObject.diversity[0]];
         for (let r of e.names) {
           let e = "".concat(r, "::skin-tone-").concat(t + 1);
-          c[e] = i, d[e] = n
+          d[e] = i, c[e] = n
         }
       }
       E[i] = n.uniqueName
@@ -145,11 +145,11 @@ for (let e in C) {
   _[e] = o.ZP.filterUnsupportedEmojis(t)
 }
 
-function p(e) {
-  return Object.prototype.hasOwnProperty.call(d, e) ? d[e] : null
+function g(e) {
+  return Object.prototype.hasOwnProperty.call(c, e) ? c[e] : null
 }
 
-function g(e) {
+function C(e) {
   let t = E[e];
   return null != t ? {
     type: "emoji",
@@ -160,8 +160,8 @@ function g(e) {
     text: e
   }
 }
-let L = String.fromCodePoint(917631),
-  v = String.fromCodePoint(127988),
+let v = String.fromCodePoint(917631),
+  L = String.fromCodePoint(127988),
   D = /^[\u{E0061}-\u{E007A}]$/u;
 
 function M(e, t) {
@@ -176,16 +176,16 @@ function M(e, t) {
   for (let e = 0; e < s.length; e++) {
     let t = s[e];
     if (null != i && "" !== i) {
-      if (t === L) t = i + t, i = "";
+      if (t === v) t = i + t, i = "";
       else if (D.test(t)) {
         i += t;
         continue
-      } else r.push(g(i)), i = ""
-    } else if (t === v) {
+      } else r.push(C(i)), i = ""
+    } else if (t === L) {
       i = t;
       continue
     }
-    let n = g(t);
+    let n = C(t);
     if (r.length > 0) {
       let e = r[r.length - 1];
       if ("text" === n.type && "text" === e.type) {
@@ -195,12 +195,12 @@ function M(e, t) {
     }
     r.push(n)
   }
-  return null != i && "" !== i && r.push(g(i)), r
+  return null != i && "" !== i && r.push(C(i)), r
 }
 
 function P(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-  return Object.prototype.hasOwnProperty.call(c, e) ? c[e] : t
+  return Object.prototype.hasOwnProperty.call(d, e) ? d[e] : t
 }
 
 function y(e) {
@@ -219,7 +219,7 @@ t.ZP = {
   getCategories: function() {
     return Object.keys(_)
   },
-  getByName: p,
+  getByName: g,
   getByCategory: function(e) {
     return _[e]
   },
@@ -244,7 +244,7 @@ t.ZP = {
     return Object.prototype.hasOwnProperty.call(A, e) && (i = A[e]), t ? ":".concat(i, ":") : i
   },
   convertSurrogateToBase: function(e) {
-    return p(y(f.reduce((e, t) => e.replace(t, ""), e), !1))
+    return g(y(f.reduce((e, t) => e.replace(t, ""), e), !1))
   },
   forEach: e => r().each(I, e),
   all: () => I,

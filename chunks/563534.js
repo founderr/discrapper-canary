@@ -10,13 +10,13 @@ let u = {
     enabled: !1
   },
   _ = [],
-  d = {},
-  c = new Set,
+  c = {},
+  d = new Set,
   E = {};
 
 function I(e) {
   var t;
-  let n = null === (t = d[e]) || void 0 === t ? void 0 : t.newMemberActions;
+  let n = null === (t = c[e]) || void 0 === t ? void 0 : t.newMemberActions;
   return null == n ? null : (E[e] = n, E[e])
 }
 
@@ -25,12 +25,12 @@ function T(e) {
     homeSettings: t,
     guildId: n
   } = e;
-  null != n && (null == t && (d[n] = u), d[n] = t, I(n), c.delete(n))
+  null != n && (null == t && (c[n] = u), c[n] = t, I(n), d.delete(n))
 }
 class h extends(i = a.ZP.Store) {
   getSettings(e) {
     var t;
-    return null == e ? null : null !== (t = d[e]) && void 0 !== t ? t : u
+    return null == e ? null : null !== (t = c[e]) && void 0 !== t ? t : u
   }
   getNewMemberActions(e) {
     var t;
@@ -46,7 +46,7 @@ class h extends(i = a.ZP.Store) {
   }
   getResourceChannels(e) {
     var t, n;
-    return null !== (n = null === (t = d[e]) || void 0 === t ? void 0 : t.resourceChannels) && void 0 !== n ? n : _
+    return null !== (n = null === (t = c[e]) || void 0 === t ? void 0 : t.resourceChannels) && void 0 !== n ? n : _
   }
   getResourceForChannel(e, t) {
     if (null == e) return null;
@@ -54,22 +54,22 @@ class h extends(i = a.ZP.Store) {
     return n === _ ? null : n.find(e => e.channelId === t)
   }
   getIsLoading(e) {
-    return null != e && c.has(e)
+    return null != e && d.has(e)
   }
   getWelcomeMessage(e) {
     var t;
-    if (null != e) return null === (t = d[e]) || void 0 === t ? void 0 : t.welcomeMessage
+    if (null != e) return null === (t = c[e]) || void 0 === t ? void 0 : t.welcomeMessage
   }
   hasSettings(e) {
-    return null != e && null != d[e]
+    return null != e && null != c[e]
   }
   getEnabled(e) {
     var t, n;
-    return null != e && null !== (n = null === (t = d[e]) || void 0 === t ? void 0 : t.enabled) && void 0 !== n && n
+    return null != e && null !== (n = null === (t = c[e]) || void 0 === t ? void 0 : t.enabled) && void 0 !== n && n
   }
   getNewMemberAction(e, t) {
     var n, i, r;
-    return null == e || null == t ? null : null !== (r = null === (i = d[e]) || void 0 === i ? void 0 : null === (n = i.newMemberActions) || void 0 === n ? void 0 : n.find(e => e.channelId === t)) && void 0 !== r ? r : null
+    return null == e || null == t ? null : null !== (r = null === (i = c[e]) || void 0 === i ? void 0 : null === (n = i.newMemberActions) || void 0 === n ? void 0 : n.find(e => e.channelId === t)) && void 0 !== r ? r : null
   }
 }
 o = "GuildOnboardingHomeSettingsStore", (s = "displayName") in(r = h) ? Object.defineProperty(r, s, {
@@ -82,21 +82,21 @@ o = "GuildOnboardingHomeSettingsStore", (s = "displayName") in(r = h) ? Object.d
     let {
       guildId: t
     } = e;
-    c.add(t)
+    d.add(t)
   },
   GUILD_HOME_SETTINGS_FETCH_SUCCESS: T,
   GUILD_HOME_SETTINGS_FETCH_FAIL: function(e) {
     let {
       guildId: t
     } = e;
-    c.delete(t)
+    d.delete(t)
   },
   GUILD_HOME_SETTINGS_UPDATE_SUCCESS: T,
   GUILD_HOME_SETTINGS_TOGGLE_ENABLED: function(e) {
     let {
       guildId: t,
       enabled: n
-    } = e, i = d[t];
+    } = e, i = c[t];
     if (null == i) return !1;
     i.enabled = n
   },
@@ -105,7 +105,7 @@ o = "GuildOnboardingHomeSettingsStore", (s = "displayName") in(r = h) ? Object.d
     let {
       guildId: n,
       resourceChannel: i
-    } = e, r = d[n];
+    } = e, r = c[n];
     if (null == r) return !1;
     r.resourceChannels = null !== (t = r.resourceChannels) && void 0 !== t ? t : [];
     let s = r.resourceChannels.findIndex(e => e.channelId === i.channelId);
@@ -118,7 +118,7 @@ o = "GuildOnboardingHomeSettingsStore", (s = "displayName") in(r = h) ? Object.d
     let {
       guildId: n,
       action: i
-    } = e, r = d[n];
+    } = e, r = c[n];
     if (null == r) return !1;
     r.newMemberActions = null !== (t = r.newMemberActions) && void 0 !== t ? t : [];
     let s = r.newMemberActions.findIndex(e => e.channelId === i.channelId);
@@ -130,7 +130,7 @@ o = "GuildOnboardingHomeSettingsStore", (s = "displayName") in(r = h) ? Object.d
     let {
       guild: t
     } = e;
-    if (null == d[t.id]) return !1;
-    delete d[t.id], delete E[t.id]
+    if (null == c[t.id]) return !1;
+    delete c[t.id], delete E[t.id]
   }
 })

@@ -22,8 +22,8 @@ var n = t(735250),
   S = t(496675),
   h = t(792125),
   g = t(764260),
-  x = t(95242),
-  C = t(541575),
+  C = t(95242),
+  x = t(541575),
   R = t(420966),
   L = t(337344),
   O = t(275296),
@@ -31,10 +31,10 @@ var n = t(735250),
   p = t(981631),
   M = t(689938),
   f = t(75518),
-  v = t(585512),
-  D = t(179517),
-  Z = t(79829);
-let j = (0, E.Un)({
+  D = t(585512),
+  v = t(179517),
+  j = t(79829);
+let Z = (0, E.Un)({
     createPromise: () => t.e("5609").then(t.bind(t, 336231)),
     webpackId: 336231
   }),
@@ -74,7 +74,7 @@ function P(e) {
     children: [(0, n.jsx)(d.FormText, {
       className: f.colorDescription,
       children: M.Z.Messages.ROLE_COLOR_HELP
-    }), (0, n.jsx)(j, {
+    }), (0, n.jsx)(Z, {
       defaultColor: p.p6O,
       colors: p.pmI,
       value: s.color,
@@ -114,11 +114,11 @@ function b(e) {
       colorString: null !== (s = a.colorString) && void 0 !== s ? s : void 0
     },
     u = {
-      src: D,
+      src: v,
       name: a.name
     },
     E = {
-      src: Z,
+      src: j,
       name: a.name
     },
     S = (0, _.oC)(r, a);
@@ -188,7 +188,7 @@ function y(e) {
   } = e, r = (0, u.pM)(null == s ? void 0 : s.id, t.id), o = i || r, E = (0, c.e7)([S.Z], () => S.Z.canImpersonateRole(s, t)), {
     headerHeight: _,
     headerRef: I
-  } = (0, x.Z)(0), {
+  } = (0, C.Z)(0), {
     scrolledToTop: T,
     handleScroll: N
   } = (0, R.V)();
@@ -199,10 +199,10 @@ function y(e) {
     },
     onScroll: N,
     children: (0, n.jsxs)("div", {
-      className: v.contentWidth,
+      className: D.contentWidth,
       children: [(0, n.jsx)("div", {
-        className: a()(v.header, v.stickyHeader, {
-          [v.stickyHeaderElevated]: !T
+        className: a()(D.header, D.stickyHeader, {
+          [D.stickyHeaderElevated]: !T
         }),
         ref: I,
         children: (0, n.jsx)(R.Z, {
@@ -224,7 +224,7 @@ function y(e) {
       }), (0, n.jsx)(P, {
         role: t,
         disabled: o
-      }), (0, n.jsx)(C.Z, {
+      }), (0, n.jsx)(x.Z, {
         guild: s,
         disabled: o,
         role: t

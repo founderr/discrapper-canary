@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   },
   c: function() {
     return _
@@ -24,23 +24,23 @@ function _() {
     location: e + " auto off",
     autoTrackExposure: !1
   });
-  let [t, n, u, _, d] = (0, r.Wu)([l.Z], () => [l.Z.isFetching, l.Z.isClaiming, l.Z.fetchError, l.Z.claimError, l.Z.purchases]), {
-    shouldFakePurchaseSuccessFlowLocally: c
+  let [t, n, u, _, c] = (0, r.Wu)([l.Z], () => [l.Z.isFetching, l.Z.isClaiming, l.Z.fetchError, l.Z.claimError, l.Z.purchases]), {
+    shouldFakePurchaseSuccessFlowLocally: d
   } = (0, a.Z)({
     location: "useFetchPurchases"
   });
   return (0, i.useEffect)(() => {
-    if (!c || !(d.size > 0))(0, o.qg)()
-  }, [c]), {
+    if (!d || !(c.size > 0))(0, o.qg)()
+  }, [d]), {
     isClaiming: n,
     fetchError: u,
     claimError: _,
     isFetching: t,
-    purchases: d
+    purchases: c
   }
 }
 
-function d(e) {
+function c(e) {
   var t;
   let n = null == e ? void 0 : e.paymentGateway,
     i = "useFetchCollectiblesCategoriesAndPurchases";
@@ -59,8 +59,8 @@ function d(e) {
   } = (0, u.Z)({
     paymentGateway: n
   }), {
-    isClaiming: d,
-    fetchError: c,
+    isClaiming: c,
+    fetchError: d,
     claimError: E,
     isFetching: I,
     purchases: T
@@ -69,10 +69,10 @@ function d(e) {
     isFetching: r || I,
     isFetchingCategories: r,
     isFetchingPurchases: I,
-    isClaiming: d,
+    isClaiming: c,
     categories: o,
     purchases: T,
-    error: null !== (t = null != a ? a : c) && void 0 !== t ? t : E,
+    error: null !== (t = null != a ? a : d) && void 0 !== t ? t : E,
     refreshCategories: l
   }
 }

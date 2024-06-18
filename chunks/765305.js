@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   $I: function() {
-    return C
+    return p
   },
   Fc: function() {
     return D
@@ -19,7 +19,7 @@ n.d(t, {
     return l
   },
   _U: function() {
-    return g
+    return C
   },
   fL: function() {
     return a
@@ -34,7 +34,7 @@ n.d(t, {
     return o
   },
   nz: function() {
-    return p
+    return g
   },
   p: function() {
     return N
@@ -43,10 +43,10 @@ n.d(t, {
     return i
   },
   pg: function() {
-    return L
+    return v
   },
   rC: function() {
-    return v
+    return L
   },
   sy: function() {
     return s
@@ -61,7 +61,7 @@ n.d(t, {
     return O
   }
 }), n(47120);
-var i, r, s, o, a, l, u, _, d, c, E, I, T, h, S = n(70956),
+var i, r, s, o, a, l, u, _, c, d, E, I, T, h, S = n(70956),
   f = n(981631);
 let N = 100,
   A = 1e3,
@@ -69,16 +69,16 @@ let N = 100,
   O = "Guild Events Modal",
   R = "-1";
 (_ = i || (i = {}))[_.SCHEDULED = 1] = "SCHEDULED", _[_.ACTIVE = 2] = "ACTIVE", _[_.COMPLETED = 3] = "COMPLETED", _[_.CANCELED = 4] = "CANCELED";
-let C = new Set([3, 4]);
-(d = r || (r = {}))[d.NONE = 0] = "NONE", d[d.STAGE_INSTANCE = 1] = "STAGE_INSTANCE", d[d.VOICE = 2] = "VOICE", d[d.EXTERNAL = 3] = "EXTERNAL", d[d.PRIME_TIME = 4] = "PRIME_TIME", (c = s || (s = {}))[c.EVENT_START = 1] = "EVENT_START", (E = o || (o = {}))[E.PUBLIC = 1] = "PUBLIC", E[E.GUILD_ONLY = 2] = "GUILD_ONLY";
-let p = {
+let p = new Set([3, 4]);
+(c = r || (r = {}))[c.NONE = 0] = "NONE", c[c.STAGE_INSTANCE = 1] = "STAGE_INSTANCE", c[c.VOICE = 2] = "VOICE", c[c.EXTERNAL = 3] = "EXTERNAL", c[c.PRIME_TIME = 4] = "PRIME_TIME", (d = s || (s = {}))[d.EVENT_START = 1] = "EVENT_START", (E = o || (o = {}))[E.PUBLIC = 1] = "PUBLIC", E[E.GUILD_ONLY = 2] = "GUILD_ONLY";
+let g = {
     1: f.d4z.GUILD_STAGE_VOICE,
     2: f.d4z.GUILD_VOICE
   },
-  g = new Set([3]),
-  L = new Set([1, 2]);
+  C = new Set([3]),
+  v = new Set([1, 2]);
 (I = a || (a = {}))[I.EVENT_INFO = 0] = "EVENT_INFO", I[I.RSVP_LIST = 1] = "RSVP_LIST";
-let v = 100,
+let L = 100,
   D = 2 * S.Z.Millis.DAY,
   M = 12 * S.Z.Millis.HOUR,
   P = 4;

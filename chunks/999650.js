@@ -19,8 +19,8 @@ var i, r, s = n(658722),
   l = n.n(a),
   u = n(913527),
   _ = n.n(u),
-  d = n(346610),
-  c = n(984933),
+  c = n(346610),
+  d = n(984933),
   E = n(699516),
   I = n(768119),
   T = n(944486),
@@ -33,39 +33,39 @@ var i, r, s = n(658722),
   O = n(981631),
   R = n(689938);
 
-function C() {
+function p() {
   return new Set(_().months().map(e => e.toLowerCase()))
 }
 
-function p() {
+function g() {
   return new Set(_().weekdays().map(e => e.toLowerCase()))
 }
 
-function g() {
+function C() {
   let e = new Date().getFullYear();
   return new Set(l().range(2015, e + 1).map(e => e.toString()))
 }
 
-function L(e, t) {
+function v(e, t) {
   return [e, e.clone().add(1, t)]
 }
 
-function v(e) {
+function L(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-  return L(_()().startOf(e).add(t, e), e)
+  return v(_()().startOf(e).add(t, e), e)
 }
 
 function D(e, t, n) {
-  return L(_()(e, t).local(), n)
+  return v(_()(e, t).local(), n)
 }
 
 function M() {
   return {
-    [R.Z.Messages.SEARCH_SHORTCUT_TODAY]: () => v("day"),
-    [R.Z.Messages.SEARCH_SHORTCUT_YESTERDAY]: () => v("day", -1),
-    [R.Z.Messages.SEARCH_SHORTCUT_WEEK]: () => v("week"),
-    [R.Z.Messages.SEARCH_SHORTCUT_MONTH]: () => v("month"),
-    [R.Z.Messages.SEARCH_SHORTCUT_YEAR]: () => v("year")
+    [R.Z.Messages.SEARCH_SHORTCUT_TODAY]: () => L("day"),
+    [R.Z.Messages.SEARCH_SHORTCUT_YESTERDAY]: () => L("day", -1),
+    [R.Z.Messages.SEARCH_SHORTCUT_WEEK]: () => L("week"),
+    [R.Z.Messages.SEARCH_SHORTCUT_MONTH]: () => L("month"),
+    [R.Z.Messages.SEARCH_SHORTCUT_YEAR]: () => L("year")
   }
 }
 let P = RegExp("(?:\\s*(".concat("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", "|").concat("([0-9]{4})-([0-9]{1,2})", "|").concat("\\d{4}", "|").concat("([^\\d\\s]+)", "))"), "i"),
@@ -90,14 +90,14 @@ function w(e, t) {
   let n, i;
   let r = e.getFullMatch().trim().toLowerCase(),
     s = M()[r];
-  return null != s ? [n, i] = s() : C().has(r) ? [n, i] = D(r, "MMMM", "month") : p().has(r) ? [n, i] = D(r, "dddd", "day") : g().has(r) ? [n, i] = D(r, "YYYY", "year") : [n, i] = D(r, O.b2L, "day"), !!(n.isValid() && i.isValid()) && ("before" === t ? (i = n, n = null) : "after" === t && (n = i, i = null), e.setData("start", n), e.setData("end", i), !0)
+  return null != s ? [n, i] = s() : p().has(r) ? [n, i] = D(r, "MMMM", "month") : g().has(r) ? [n, i] = D(r, "dddd", "day") : C().has(r) ? [n, i] = D(r, "YYYY", "year") : [n, i] = D(r, O.b2L, "day"), !!(n.isValid() && i.isValid()) && ("before" === t ? (i = n, n = null) : "after" === t && (n = i, i = null), e.setData("start", n), e.setData("end", i), !0)
 }
 
 function k(e) {
   let t = e.getMatch(1),
     n = h.Z.getGuildId(),
-    i = c.ZP.getChannels(n)[c.sH].concat(c.ZP.getChannels(n)[c.Zb]),
-    r = c.ZP.getTextChannelNameDisambiguations(n),
+    i = d.ZP.getChannels(n)[d.sH].concat(d.ZP.getChannels(n)[d.Zb]),
+    r = d.ZP.getTextChannelNameDisambiguations(n),
     s = l().chain(i).map(e => {
       let {
         channel: t
@@ -126,7 +126,7 @@ function B(e) {
 }
 
 function x() {
-  return [...Array.from(C()), ...Array.from(p()), ...Array.from(g()), ...Object.keys(M())]
+  return [...Array.from(p()), ...Array.from(g()), ...Array.from(C()), ...Object.keys(M())]
 }
 
 function V() {
@@ -207,7 +207,7 @@ function z() {
   Object.assign(K, function() {
     let {
       canForwardMessages: e
-    } = d.w.getCurrentConfig({
+    } = c.w.getCurrentConfig({
       location: "SearchTokens"
     }, {
       autoTrackExposure: !1
@@ -337,12 +337,12 @@ function z() {
           "#" === e[0] && (e = e.substring(1));
           let i = N.ZP.queryChannels({
             query: e,
-            type: c.sH,
+            type: d.sH,
             guildId: t,
             limit: 1 / 0
           }).concat(N.ZP.queryChannels({
             query: e,
-            type: c.Zb,
+            type: d.Zb,
             guildId: t,
             limit: 1 / 0
           })).map(e => {
@@ -356,7 +356,7 @@ function z() {
               n = i.find(t => t.id === e);
             null != n && (i.splice(i.indexOf(n), 1), i.unshift(n))
           }
-          let r = c.ZP.getTextChannelNameDisambiguations(t);
+          let r = d.ZP.getTextChannelNameDisambiguations(t);
           return l()(i).take(n).map(e => {
             var t, n;
             return {

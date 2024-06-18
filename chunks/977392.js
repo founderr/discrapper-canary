@@ -15,13 +15,13 @@ function l(e, t) {
     l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     u = (0, i.e7)([s.ZP], () => null != e ? s.ZP.getMember(e.id, t) : null, [e, t]),
     _ = (0, i.e7)([r.Z], () => r.Z.getChannel(n), [n]),
-    d = (0, i.e7)([r.Z], () => r.Z.getChannel(null == _ ? void 0 : _.parent_id), [_]),
-    c = (0, i.e7)([o.Z], () => null != e ? o.Z.getRoles(e.id) : void 0);
-  return null == e || null == c || null == u ? null : (0, a.Ur)({
+    c = (0, i.e7)([r.Z], () => r.Z.getChannel(null == _ ? void 0 : _.parent_id), [_]),
+    d = (0, i.e7)([o.Z], () => null != e ? o.Z.getRoles(e.id) : void 0);
+  return null == e || null == d || null == u ? null : (0, a.Ur)({
     guild: e,
-    guildRoles: c,
+    guildRoles: d,
     guildMember: u,
-    channel: null != _ && _.isThread() && null != d ? d : _,
+    channel: null != _ && _.isThread() && null != c ? c : _,
     onlyChannelConnectionRoles: l
   })
 }

@@ -18,15 +18,15 @@ function _(e) {
     label: n,
     control: s,
     disabled: _,
-    isFocused: d,
-    showDefaultFocus: c = !1,
+    isFocused: c,
+    showDefaultFocus: d = !1,
     menuItemProps: E,
     onClose: I
   } = e, T = r.useRef(null), h = r.useRef(null);
   r.useLayoutEffect(() => {
     var e, t, n;
-    d ? ((0, a.F)(T), null === (e = h.current) || void 0 === e || e.focus()) : null === (n = h.current) || void 0 === n || null === (t = n.blur) || void 0 === t || t.call(n)
-  }, [d]);
+    c ? ((0, a.F)(T), null === (e = h.current) || void 0 === e || e.focus()) : null === (n = h.current) || void 0 === n || null === (t = n.blur) || void 0 === t || t.call(n)
+  }, [c]);
   let S = r.useCallback(() => {
       var e, t;
       (null === (t = h.current) || void 0 === t ? void 0 : null === (e = t.activate) || void 0 === e ? void 0 : e.call(t)) && I()
@@ -34,14 +34,14 @@ function _(e) {
     f = s({
       onClose: I,
       disabled: _,
-      isFocused: d
+      isFocused: c
     }, h);
   return (0, i.jsxs)("div", {
     onClick: S,
     className: o()(u.item, l._[t], {
       [u.disabled]: _,
-      [u.focused]: c && d,
-      [u.hideInteraction]: !c
+      [u.focused]: d && c,
+      [u.hideInteraction]: !d
     }),
     "aria-disabled": _,
     ...E,

@@ -10,21 +10,21 @@ let _ = [e => a.Z.isInvite(e) ? "Discord Server Invite" : null, e => {
   let t = o.Z.safeParseWithQuery(e);
   if (null == t) return null;
   let n = (0, l.Qj)(t.path);
-  return null == n ? null : d({
+  return null == n ? null : c({
     guildId: n.guildId,
     channelId: n.channelId,
     messageId: n.messageId
   })
 }];
 
-function d(e) {
+function c(e) {
   return null != e.guildId && null != e.channelId && null != e.messageId ? "Discord Message Link" : null != e.guildId && null != e.channelId ? "Discord Channel Link" : "Unknown"
 }
 t.Z = {
   trackDiscordLinkClicked: function(e) {
     s.default.track(u.rMx.LINK_CLICKED, {
       is_discord_link: !0,
-      discord_link_type: d(e)
+      discord_link_type: c(e)
     })
   },
   trackLinkClicked: function(e, t) {
@@ -39,7 +39,7 @@ t.Z = {
           if (null != n) return n
         }
         return "Unknown"
-      }(n) : d(i)) : null
+      }(n) : c(i)) : null
     })
   },
   trackAnnouncementMessageLinkClicked: function(e) {

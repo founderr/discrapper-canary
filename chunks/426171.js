@@ -12,9 +12,9 @@ t.d(s, {
 }), t(757143), t(47120), t(653041);
 var n = t(470079),
   a = t(266067),
-  i = t(442837),
+  r = t(442837),
   l = t(607070),
-  r = t(100527),
+  i = t(100527),
   o = t(906732),
   c = t(328347),
   u = t(237031),
@@ -36,14 +36,14 @@ let C = "".concat("#").concat("itemSkuId", "="),
       productSkuId: t,
       analyticsLocations: n,
       analyticsSource: a,
-      initialItemCardRef: i,
+      initialItemCardRef: r,
       reducedMotion: l = !1
     } = e;
     for (let e of s.values()) {
       let s = e.products.find(e => e.skuId === t);
       if (null != s) {
-        var r;
-        null === (r = i.current) || void 0 === r || r.scrollIntoView({
+        var i;
+        null === (i = r.current) || void 0 === i || i.scrollIntoView({
           behavior: l ? "instant" : "smooth",
           block: "center",
           inline: "center"
@@ -55,7 +55,7 @@ let C = "".concat("#").concat("itemSkuId", "="),
             category: e,
             analyticsSource: a,
             analyticsLocations: n,
-            returnRef: i
+            returnRef: r
           })
         }, 750);
         return () => clearTimeout(t)
@@ -69,8 +69,8 @@ let C = "".concat("#").concat("itemSkuId", "="),
       isFetchingCategories: t,
       isLayer: u,
       initialItemCardRef: C
-    } = e, f = (0, i.e7)([l.Z], () => l.Z.useReducedMotion), m = n.useRef(null), g = (0, a.TH)(), h = g.pathname === d.Z5c.COLLECTIBLES_SHOP ? r.Z.HOME_PAGE_SHOP_TAB : g.pathname === d.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? r.Z.COLLECTIBLES_SHOP_FULLSCREEN : r.Z.COLLECTIBLES_SHOP, {
-      analyticsLocations: x
+    } = e, f = (0, r.e7)([l.Z], () => l.Z.useReducedMotion), m = n.useRef(null), g = (0, a.TH)(), h = g.pathname === d.Z5c.COLLECTIBLES_SHOP ? i.Z.HOME_PAGE_SHOP_TAB : g.pathname === d.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? i.Z.COLLECTIBLES_SHOP_FULLSCREEN : i.Z.COLLECTIBLES_SHOP, {
+      analyticsLocations: I
     } = (0, o.ZP)(h);
     n.useEffect(() => {
       if (u) return;
@@ -80,7 +80,7 @@ let C = "".concat("#").concat("itemSkuId", "="),
         m.current = s
       }
     }, []);
-    let _ = (0, i.e7)([c.Z], () => c.Z.initialProductSkuId);
+    let _ = (0, r.e7)([c.Z], () => c.Z.initialProductSkuId);
     n.useEffect(() => {
       if (t) return;
       let e = null;
@@ -90,7 +90,7 @@ let C = "".concat("#").concat("itemSkuId", "="),
             let n = p({
               categories: s,
               productSkuId: e,
-              analyticsLocations: x,
+              analyticsLocations: I,
               analyticsSource: h,
               initialItemCardRef: C,
               reducedMotion: f
@@ -101,11 +101,11 @@ let C = "".concat("#").concat("itemSkuId", "="),
           t.forEach(e => e())
         }
       }
-    }, [u, x, h, s, t, _, C, f])
+    }, [u, I, h, s, t, _, C, f])
   },
   h = e => {
     let s = n.useRef({}),
-      t = (0, i.e7)([l.Z], () => l.Z.useReducedMotion),
+      t = (0, r.e7)([l.Z], () => l.Z.useReducedMotion),
       a = n.useCallback((e, t) => {
         s.current[e] = t
       }, []);

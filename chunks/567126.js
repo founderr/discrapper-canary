@@ -19,24 +19,24 @@ var l = n(735250),
   S = n(569984),
   h = n(918701),
   g = n(977156),
-  Z = n(433811),
-  C = n(131951),
-  f = n(449224),
-  N = n(285952),
+  C = n(433811),
+  I = n(131951),
+  N = n(449224),
+  Z = n(285952),
   x = n(643095),
-  I = n(358085),
+  f = n(358085),
   A = n(463727),
   T = n(855403),
-  v = n(989941),
-  R = n(958707),
+  R = n(989941),
+  v = n(958707),
   L = n(133179),
   p = n(46140),
   M = n(65154),
-  j = n(689938),
-  O = n(578168);
+  O = n(689938),
+  j = n(578168);
 async function P() {
-  let e = C.Z.getVideoDevices(),
-    t = (0, c.Z)(C.Z.getMediaEngine(), [o.vA.WINDOW, o.vA.SCREEN], {
+  let e = I.Z.getVideoDevices(),
+    t = (0, c.Z)(I.Z.getMediaEngine(), [o.vA.WINDOW, o.vA.SCREEN], {
       width: 176,
       height: 99
     }),
@@ -91,7 +91,7 @@ async function D() {
 }
 
 function G(e) {
-  let t = (0, I.isWindows)() ? (0, v.Z)(_.ZP, f.Z) : null,
+  let t = (0, f.isWindows)() ? (0, R.Z)(_.ZP, N.Z) : null,
     n = _.ZP.getRunningGames();
   return null != t && (0, T.Z)(e.id, t.windowHandle) ? 2 : null != n.find(t => (0, T.Z)(e.id, t.windowHandle)) ? 1 : 0
 }
@@ -104,7 +104,7 @@ function U(e) {
     enableGoLiveCaptureCard: a
   } = A.Z.useExperiment({
     location: "GoLive_Source_Select"
-  }), r = C.Z.supports(M.AN.GO_LIVE_HARDWARE), [c, E] = s.useState(null), [f, I] = s.useState(null), [v, D] = s.useState(null), U = null != v && v.length > 0, [w, b] = s.useState(o.vA.WINDOW), [y, k] = s.useState(!1), B = s.useRef(null), H = s.useRef(new d.Xp), V = (0, u.e7)([_.ZP], () => _.ZP.getRunningGames()), F = function(e, t, n) {
+  }), r = I.Z.supports(M.AN.GO_LIVE_HARDWARE), [c, E] = s.useState(null), [N, f] = s.useState(null), [R, D] = s.useState(null), U = null != R && R.length > 0, [b, w] = s.useState(o.vA.WINDOW), [y, k] = s.useState(!1), B = s.useRef(null), H = s.useRef(new d.Xp), V = (0, u.e7)([_.ZP], () => _.ZP.getRunningGames()), F = function(e, t, n) {
     let l = (0, g.Zy)({
       location: p.dr.STREAM_SOURCE_SELECT
     });
@@ -122,7 +122,7 @@ function U(e) {
       }
       return null
     }, [l, e, t, n])
-  }((0, u.e7)([S.Z], () => S.Z.quests), V, f), W = s.useMemo(() => null == f ? null : [...f].sort((e, t) => (null == F ? void 0 : F.source.id) === e.id ? -1 : (null == F ? void 0 : F.source.id) === t.id ? 1 : G(t) - G(e)), [F, f]);
+  }((0, u.e7)([S.Z], () => S.Z.quests), V, N), W = s.useMemo(() => null == N ? null : [...N].sort((e, t) => (null == F ? void 0 : F.source.id) === e.id ? -1 : (null == F ? void 0 : F.source.id) === t.id ? 1 : G(t) - G(e)), [F, N]);
   s.useEffect(() => {
     let e = H.current;
     return P().then(e => {
@@ -131,14 +131,14 @@ function U(e) {
         windowSources: n,
         cameraSources: l
       } = e;
-      E(t), I(n), D(l)
+      E(t), f(n), D(l)
     }), e.start(1e3, async () => {
       let {
         screenSources: e,
         windowSources: t,
         cameraSources: n
       } = await P();
-      E(e), I(t), D(n)
+      E(e), f(t), D(n)
     }), () => {
       e.stop()
     }
@@ -156,13 +156,13 @@ function U(e) {
         case o.vA.SCREEN:
           return c;
         case o.vA.CAMERA:
-          return v
+          return R
       }
-    }(w);
-  if (null == K) return (0, l.jsx)(N.Z, {
-    className: O.spinner,
-    justify: N.Z.Justify.CENTER,
-    align: N.Z.Align.CENTER,
+    }(b);
+  if (null == K) return (0, l.jsx)(Z.Z, {
+    className: j.spinner,
+    justify: Z.Z.Justify.CENTER,
+    align: Z.Z.Align.CENTER,
     children: (0, l.jsx)(m.Spinner, {})
   });
   let Y = K.map(e => {
@@ -170,8 +170,8 @@ function U(e) {
       id: s
     } = e, a = (null == t ? void 0 : t.id) === s;
     return (0, l.jsx)(m.Clickable, {
-      className: i()(O.tile, {
-        [O.selected]: a
+      className: i()(j.tile, {
+        [j.selected]: a
       }),
       onClick: () => n(e, null),
       children: (0, l.jsx)(L.Z, {
@@ -187,56 +187,56 @@ function U(e) {
   }
   return (0, l.jsxs)(s.Fragment, {
     children: [(0, l.jsxs)("div", {
-      className: O.segmentContainer,
-      children: [(0, l.jsx)(R.Z, {
+      className: j.segmentContainer,
+      children: [(0, l.jsx)(v.Z, {
         separator: y
       }), (0, l.jsx)(m.SegmentedControl, {
         options: function() {
           let e = [{
-            name: j.Z.Messages.GO_LIVE_MODAL_APPLICATIONS,
+            name: O.Z.Messages.GO_LIVE_MODAL_APPLICATIONS,
             value: o.vA.WINDOW
           }, {
-            name: j.Z.Messages.GO_LIVE_MODAL_SCREENS,
+            name: O.Z.Messages.GO_LIVE_MODAL_SCREENS,
             value: o.vA.SCREEN
           }];
           return a && r && U && e.push({
-            name: j.Z.Messages.GO_LIVE_MODAL_CAPTURE,
+            name: O.Z.Messages.GO_LIVE_MODAL_CAPTURE,
             value: o.vA.CAMERA
           }), e
         }(),
-        value: w,
+        value: b,
         onChange: e => {
           let {
             value: t
           } = e;
-          return b(t)
+          return w(t)
         },
-        className: O.segmentControl,
-        optionClassName: O.segmentControlOption
+        className: j.segmentControl,
+        optionClassName: j.segmentControlOption
       })]
-    }), w === o.vA.CAMERA ? (0, l.jsx)("div", {
-      className: O.sourceContainer,
+    }), b === o.vA.CAMERA ? (0, l.jsx)("div", {
+      className: j.sourceContainer,
       children: (0, l.jsx)(m.AdvancedScroller, {
         ref: z,
-        className: O.sourceScroller,
+        className: j.sourceScroller,
         onScroll: q,
         children: (0, l.jsx)(x.Z, {
           layout: x.Z.Layout.WRAP,
           columns: 2,
-          className: O.sourceContainer,
+          className: j.sourceContainer,
           children: Y
         })
       })
     }) : (0, l.jsxs)(m.AdvancedScroller, {
       ref: z,
-      className: O.sourceScroller,
+      className: j.sourceScroller,
       onScroll: q,
-      children: [w === o.vA.WINDOW && null != F && (0, l.jsx)(Z.Z, {
+      children: [b === o.vA.WINDOW && null != F && (0, l.jsx)(C.Z, {
         quest: F.quest
       }), (0, l.jsx)(x.Z, {
         layout: x.Z.Layout.WRAP,
         columns: 2,
-        className: O.sourceContainer,
+        className: j.sourceContainer,
         children: Y
       })]
     })]

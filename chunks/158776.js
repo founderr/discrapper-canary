@@ -4,8 +4,8 @@ var i, r, s, o, a = n(348327),
   l = n.n(a),
   u = n(392711),
   _ = n.n(u),
-  d = n(442837),
-  c = n(570140),
+  c = n(442837),
+  d = n(570140),
   E = n(122810),
   I = n(106301),
   T = n(709054),
@@ -17,14 +17,14 @@ let N = Object.freeze([]),
   m = {},
   O = {},
   R = {},
-  C = {},
-  p = {};
+  p = {},
+  g = {};
 
-function g(e, t) {
+function C(e, t) {
   let n = A[e];
   return null != n ? n[t] : null
 }
-let L = e => {
+let v = e => {
     switch (e.type) {
       case f.IIU.CUSTOM_STATUS:
         return 4;
@@ -38,17 +38,17 @@ let L = e => {
         return 0
     }
   },
-  v = e => (0, E.Z)(e) ? 1 : 0;
+  L = e => (0, E.Z)(e) ? 1 : 0;
 
 function D(e, t) {
   var n, i, r, s, o;
-  return n = e, L(t) - L(n) || (i = e, v(t) - v(i)) || (r = e, (null !== (s = t.created_at) && void 0 !== s ? s : 0) - (null !== (o = r.created_at) && void 0 !== o ? o : 0))
+  return n = e, v(t) - v(n) || (i = e, L(t) - L(i)) || (r = e, (null !== (s = t.created_at) && void 0 !== s ? s : 0) - (null !== (o = r.created_at) && void 0 !== o ? o : 0))
 }
 
 function M(e) {
   if (delete m[e], delete O[e], delete R[e], null == A[e]) return;
   let [t] = _().sortBy(A[e], e => -e.timestamp);
-  t.status !== f.Skl.OFFLINE ? (m[e] = t.status, O[e] = t.activities, null != t.clientStatus && (R[e] = t.clientStatus), delete p[e]) : (_().every(A[e], e => e.status === f.Skl.OFFLINE) && delete A[e], p[e] = Date.now())
+  t.status !== f.Skl.OFFLINE ? (m[e] = t.status, O[e] = t.activities, null != t.clientStatus && (R[e] = t.clientStatus), delete g[e]) : (_().every(A[e], e => e.status === f.Skl.OFFLINE) && delete A[e], g[e] = Date.now())
 }
 
 function P(e) {
@@ -88,7 +88,7 @@ function y(e) {
       timestamp: Date.now()
     }
   }
-  return delete C[n], M(n), !0
+  return delete p[n], M(n), !0
 }
 
 function U(e) {
@@ -133,7 +133,7 @@ function b(e, t) {
 function G(e) {
   for (let t of T.default.keys(A)) b(e, t)
 }
-class w extends(i = d.ZP.Store) {
+class w extends(i = c.ZP.Store) {
   initialize() {
     this.waitFor(h.default, I.Z)
   }
@@ -147,7 +147,7 @@ class w extends(i = d.ZP.Store) {
       s = S.default.getUser(e);
     if (null != s && s.hasFlag(f.xW$.BOT_HTTP_INTERACTIONS) && (r = f.Skl.UNKNOWN), null == s ? void 0 : s.isClyde()) return f.Skl.ONLINE;
     if (null == i) return null !== (t = m[e]) && void 0 !== t ? t : r;
-    let o = g(e, i);
+    let o = C(e, i);
     return null !== (n = null == o ? void 0 : o.status) && void 0 !== n ? n : r
   }
   getActivities(e) {
@@ -156,7 +156,7 @@ class w extends(i = d.ZP.Store) {
       var n;
       return null !== (n = O[e]) && void 0 !== n ? n : N
     }
-    let i = g(e, t);
+    let i = C(e, t);
     return null == i || null == i.activities ? N : i.activities
   }
   getPrimaryActivity(e) {
@@ -181,7 +181,7 @@ class w extends(i = d.ZP.Store) {
     return this.getActivities(e, n).find(t)
   }
   getActivityMetadata(e) {
-    return C[e]
+    return p[e]
   }
   getUserIds() {
     return T.default.keys(O)
@@ -194,16 +194,16 @@ class w extends(i = d.ZP.Store) {
     return R[e]
   }
   getLastOnlineTimestamp(e) {
-    return p[e]
+    return g[e]
   }
   getState() {
     return {
       presencesForGuilds: A,
       statuses: m,
       activities: O,
-      activityMetadata: C,
+      activityMetadata: p,
       clientStatuses: R,
-      lastOnlineTimestamps: p
+      lastOnlineTimestamps: g
     }
   }
 }
@@ -212,7 +212,7 @@ o = "PresenceStore", (s = "displayName") in(r = w) ? Object.defineProperty(r, s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new w(c.Z, {
+}) : r[s] = o, t.Z = new w(d.Z, {
   CONNECTION_OPEN: function() {
     return !0
   },
@@ -221,7 +221,7 @@ o = "PresenceStore", (s = "displayName") in(r = w) ? Object.defineProperty(r, s,
       guilds: t,
       presences: n
     } = e, i = h.default.getId();
-    A = {}, C = {}, p = {}, m = {
+    A = {}, p = {}, g = {}, m = {
       [i]: m[i]
     }, O = {
       [i]: O[i]
@@ -268,7 +268,7 @@ o = "PresenceStore", (s = "displayName") in(r = w) ? Object.defineProperty(r, s,
     let {
       presences: t
     } = e;
-    A = t.presencesForGuilds, m = t.statuses, O = t.activities, C = t.activityMetadata
+    A = t.presencesForGuilds, m = t.statuses, O = t.activities, p = t.activityMetadata
   },
   GUILD_CREATE: function(e) {
     let {
@@ -349,7 +349,7 @@ o = "PresenceStore", (s = "displayName") in(r = w) ? Object.defineProperty(r, s,
       userId: t,
       metadata: n
     } = e;
-    return C[t] = n, !1
+    return p[t] = n, !1
   },
   THREAD_MEMBER_LIST_UPDATE: function(e) {
     let {
@@ -384,6 +384,6 @@ o = "PresenceStore", (s = "displayName") in(r = w) ? Object.defineProperty(r, s,
   SELF_PRESENCE_STORE_UPDATE: function(e) {
     let t = h.default.getId();
     if (m[t] === e.status && O[t] === e.activities) return !1;
-    m[t] = e.status, O[t] = e.activities, delete C[t]
+    m[t] = e.status, O[t] = e.activities, delete p[t]
   }
 })

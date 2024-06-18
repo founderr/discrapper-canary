@@ -11,8 +11,8 @@ var i, r = n(735250),
   l = n(477690),
   u = n(257915),
   _ = n(624138),
-  d = n(980483),
-  c = n(450590),
+  c = n(980483),
+  d = n(450590),
   E = n(756286),
   I = n(271225);
 
@@ -124,7 +124,7 @@ class N extends(i = s.PureComponent) {
       showWaveAnimation: i,
       splashLoaded: s
     } = this.state;
-    return i ? (0, r.jsx)(c.Z, {
+    return i ? (0, r.jsx)(d.Z, {
       embedded: n,
       waveState: e,
       updateWaveState: t,
@@ -148,7 +148,7 @@ class N extends(i = s.PureComponent) {
         className: a()(I.leftSplit, {
           [I.nonEmbeddedLeftSplit]: o
         }),
-        children: [n ? (0, r.jsx)(d.Z, {
+        children: [n ? (0, r.jsx)(c.Z, {
           show: !l || t === E.hO.ENTERED && t !== E.hO.FILLING,
           className: a()(I.logo, i)
         }) : null, e]

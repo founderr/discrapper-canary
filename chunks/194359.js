@@ -6,8 +6,8 @@ var i, r, s = n(544891),
   l = n(391650),
   u = n(877215),
   _ = n(895886),
-  d = n(397550),
-  c = n(594174),
+  c = n(397550),
+  d = n(594174),
   E = n(657682),
   I = n(51144),
   T = n(668781),
@@ -46,7 +46,7 @@ function A(e, t, n) {
       }
     default:
       if (s === S.evJ.USER_QUARANTINED)(0, h.Zy)(), (0, _.default)();
-      else if ((0, d.b)(i, s)) break;
+      else if ((0, c.b)(i, s)) break;
       else if (0 === t) {
         let e = null != n ? (0, E.NF)(s || 0, n) : f.Z.Messages.POMELO_ADD_FRIEND_ERROR;
         N({
@@ -87,7 +87,7 @@ let m = {
       friendToken: o,
       fromFriendSuggestion: a,
       captchaPayload: l
-    } = e, u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, _ = c.default.getUser(n);
+    } = e, u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, _ = d.default.getUser(n);
     return s.tn.put({
       url: S.ANM.USER_RELATIONSHIP(n),
       body: {

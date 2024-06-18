@@ -25,12 +25,12 @@ var i, r, s = n(367907),
   l = n(569984),
   u = n(497505),
   _ = n(566078),
-  d = n(981631);
-let c = Object.keys(u.jn);
+  c = n(981631);
+let d = Object.keys(u.jn);
 
 function E(e) {
   var t;
-  return null !== (t = c.find(t => u.jn[t] === e)) && void 0 !== t ? t : ""
+  return null !== (t = d.find(t => u.jn[t] === e)) && void 0 !== t ? t : ""
 }
 
 function I(e) {
@@ -88,7 +88,7 @@ function f(e) {
   } = e;
   S({
     questId: t,
-    event: d.rMx.QUEST_CONTENT_CLICKED,
+    event: c.rMx.QUEST_CONTENT_CLICKED,
     properties: {
       ...h(n, r),
       cta_name: i

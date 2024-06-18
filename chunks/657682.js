@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   NF: function() {
-    return d
+    return c
   },
   Zy: function() {
     return _
@@ -30,7 +30,7 @@ function _(e) {
   }(e), o.Z.Messages.POMELO_ADD_FRIEND_ERROR)
 }
 
-function d(e, t) {
+function c(e, t) {
   switch (e) {
     case s.evJ.RELATIONSHIP_INCOMING_DISABLED:
       return o.Z.Messages.ADD_FRIEND_ERROR_INVALID_DISCORD_TAG.format({

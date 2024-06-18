@@ -24,8 +24,8 @@ var i = n(392711),
   l = n(709054),
   u = n(981631),
   _ = n(817384);
-let d = /sketchfab/i,
-  c = /^https:\/\/sketchfab\.com/i,
+let c = /sketchfab/i,
+  d = /^https:\/\/sketchfab\.com/i,
   E = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
   I = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
   T = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/;
@@ -100,7 +100,7 @@ function f(e, t, n) {
         format: "jpeg"
       })
     }), null != i.thumbnail && h(n.video) && function(e, t, n) {
-      if (null != t && d.test(t.name) || c.test(n.url)) return !1;
+      if (null != t && c.test(t.name) || d.test(n.url)) return !1;
       let i = null != n.proxy_url || /^https:/i.test(n.url);
       return null != e && 1492472454139 > l.default.extractTimestamp(e) && (i = i && null != t && E.test(t.name)), i
     }(t, n.provider, n.video) && (i.video = S(n.video))), _.k.has(i.type)) {

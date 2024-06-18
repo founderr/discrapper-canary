@@ -1,7 +1,7 @@
 "use strict";
 let i, r, s, o;
 n(536091), n(47120), n(653041), n(724458);
-var a, l, u, _, d, c, E = n(392711),
+var a, l, u, _, c, d, E = n(392711),
   I = n.n(E),
   T = n(442837),
   h = n(570140),
@@ -12,11 +12,11 @@ var a, l, u, _, d, c, E = n(392711),
   m = n(592125),
   O = n(430824),
   R = n(306680),
-  C = n(944486),
-  p = n(9156),
-  g = n(594174),
-  L = n(70956),
-  v = n(709054),
+  p = n(944486),
+  g = n(9156),
+  C = n(594174),
+  v = n(70956),
+  L = n(709054),
   D = n(418088),
   M = n(814249);
 (u = a || (a = {})).FETCHING = "fetching", u.OK = "ok", u.ERROR = "error";
@@ -44,13 +44,13 @@ class V extends(l = T.ZP.PersistedStore) {
   }
   initialize(e) {
     var t;
-    i = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(m.Z, g.default, C.Z, O.Z, N.Z), this.syncWith([A.Z], x)
+    i = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(m.Z, C.default, p.Z, O.Z, N.Z), this.syncWith([A.Z], x)
   }
   allSummaries() {
     return P
   }
   topSummaries() {
-    return Object.values(P).flat().filter(e => e.people.length > 1 && v.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * L.Z.Millis.HOUR).sort((e, t) => v.default.extractTimestamp(t.endId) - v.default.extractTimestamp(e.endId))
+    return Object.values(P).flat().filter(e => e.people.length > 1 && L.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * v.Z.Millis.HOUR).sort((e, t) => L.default.extractTimestamp(t.endId) - L.default.extractTimestamp(e.endId))
   }
   summaries(e) {
     var t;
@@ -99,7 +99,7 @@ class V extends(l = T.ZP.PersistedStore) {
     return w
   }
   shouldFetchChannelAffinities() {
-    return !("fetching" === w.status || null != w.lastResponse && Date.now() - w.lastResponse < 30 * L.Z.Millis.SECOND) && !0
+    return !("fetching" === w.status || null != w.lastResponse && Date.now() - w.lastResponse < 30 * v.Z.Millis.SECOND) && !0
   }
   defaultChannelIds(e) {
     let {
@@ -110,7 +110,7 @@ class V extends(l = T.ZP.PersistedStore) {
     } = e, s = [];
     return t && (s = s.concat(k)), n && (s = s.concat(b.map(e => e.channel_id))), i && (s = s.filter(e => {
       let t = m.Z.getChannel(e);
-      return null != t && !p.ZP.isChannelMuted(t.guild_id, e) && R.ZP.hasUnread(e)
+      return null != t && !g.ZP.isChannelMuted(t.guild_id, e) && R.ZP.hasUnread(e)
     })), (s = s.filter(e => {
       let t = m.Z.getChannel(e);
       return (0, S.Lp)(t, !1, !1)
@@ -120,12 +120,12 @@ class V extends(l = T.ZP.PersistedStore) {
     return s
   }
 }
-c = "SummaryStore", (d = "persistKey") in(_ = V) ? Object.defineProperty(_, d, {
-  value: c,
+d = "SummaryStore", (c = "persistKey") in(_ = V) ? Object.defineProperty(_, c, {
+  value: d,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : _[d] = c;
+}) : _[c] = d;
 let Z = new V(h.Z, {
   CONNECTION_OPEN: () => !1,
   CHANNEL_SELECT(e) {
@@ -188,7 +188,7 @@ let Z = new V(h.Z, {
       let e = (null !== (a = P[n]) && void 0 !== a ? a : []).find(e => e.id === (null == o ? void 0 : o.summaryId));
       null != e && s.push(e)
     }
-    P[n] = (0, E.sortBy)(s, e => v.default.extractTimestamp(e.startId)).reverse();
+    P[n] = (0, E.sortBy)(s, e => L.default.extractTimestamp(e.startId)).reverse();
     let l = {
       ...y[n],
       fetching: !1,
@@ -217,7 +217,7 @@ let Z = new V(h.Z, {
     }
   },
   UPDATE_VISIBLE_MESSAGES(e) {
-    let t = C.Z.getChannelId();
+    let t = p.Z.getChannelId();
     if (null != t) {
       if (null != r && r.channelId === t && null != r.summaryId) {
         let e = P[r.channelId];
@@ -301,7 +301,7 @@ let Z = new V(h.Z, {
         channelIds: r
       }
     } = e, s = I().toPairs(t).reduce((e, t) => {
-      let [n, i] = t, r = I().chain(i.map(e => (0, D.b)(e, n))).sortBy(e => v.default.extractTimestamp(e.startId)).takeRight(75).reverse().filter(e => Object.keys(e).length > 0).value();
+      let [n, i] = t, r = I().chain(i.map(e => (0, D.b)(e, n))).sortBy(e => L.default.extractTimestamp(e.startId)).takeRight(75).reverse().filter(e => Object.keys(e).length > 0).value();
       return e[n] = r, e
     }, {}), o = r.reduce((e, t) => {
       var r;
@@ -331,7 +331,7 @@ let Z = new V(h.Z, {
       channel_id: r,
       summaries: s,
       guild_id: o
-    } = e, a = Date.now(), l = I().chain(s).sortBy(e => v.default.extractTimestamp(e.start_id)).filter(e => Object.keys(e).length > 0).map(e => (0, D.b)(e, r)).reverse().value(), u = null !== (n = P[r]) && void 0 !== n ? n : [], _ = I().chain(l).concat(u).sortBy(e => v.default.extractTimestamp(e.startId)).takeRight(75).uniqBy("id").reverse().value();
+    } = e, a = Date.now(), l = I().chain(s).sortBy(e => L.default.extractTimestamp(e.start_id)).filter(e => Object.keys(e).length > 0).map(e => (0, D.b)(e, r)).reverse().value(), u = null !== (n = P[r]) && void 0 !== n ? n : [], _ = I().chain(l).concat(u).sortBy(e => L.default.extractTimestamp(e.startId)).takeRight(75).uniqBy("id").reverse().value();
     P[r] = _, y[r] = {
       ...y[r],
       error: void 0,

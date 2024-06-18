@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 });
 var i = n(470079),
@@ -13,11 +13,11 @@ var i = n(470079),
   u = n(689938),
   _ = n(354088);
 
-function d(e, t) {
+function c(e, t) {
   let {
     hideSimpleEmbedContent: n,
-    formatInline: d = !1,
-    noStyleAndInteraction: c = !1,
+    formatInline: c = !1,
+    noStyleAndInteraction: d = !1,
     isInteracting: E = !1,
     allowHeading: I = !1,
     allowList: T = !1,
@@ -36,8 +36,8 @@ function d(e, t) {
     }
   }) : (0, o.ZP)(e, {
     hideSimpleEmbedContent: n,
-    formatInline: d,
-    noStyleAndInteraction: c,
+    formatInline: c,
+    noStyleAndInteraction: d,
     isInteracting: E,
     allowHeading: I,
     allowList: T,
@@ -47,5 +47,5 @@ function d(e, t) {
     previewLinkTarget: N,
     shouldFilterKeywords: null != m,
     viewingChannelId: A
-  }), [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, n, d, c, E, I, T, h, N, f, m])
+  }), [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, n, c, d, E, I, T, h, N, f, m])
 }

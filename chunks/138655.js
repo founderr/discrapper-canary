@@ -12,8 +12,8 @@ var i = n(470079),
   l = n(780384),
   u = n(607070),
   _ = n(629935),
-  d = n(168551),
-  c = n(792125),
+  c = n(168551),
+  d = n(792125),
   E = n(168631);
 let I = Object.freeze({
   "--profile-gradient-primary-color": "var(--background-secondary-alt)",
@@ -64,8 +64,8 @@ function T(e) {
         })
       }
     }, [n, r, S, f, N, A, m, t, T]),
-    profileThemeClassName: s()((0, c.Q)(t), {
-      [d.e3]: null != n,
+    profileThemeClassName: s()((0, d.Q)(t), {
+      [c.e3]: null != n,
       "custom-profile-theme": null != n
     })
   }

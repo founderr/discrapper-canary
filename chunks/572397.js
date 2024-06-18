@@ -15,12 +15,12 @@ var i = n(470079),
   l = n(581883),
   u = n(626135),
   _ = n(238302),
-  d = n(514361),
-  c = n(981631),
+  c = n(514361),
+  d = n(981631),
   E = n(474936),
   I = n(874893);
 let T = () => {
-    let e = (0, r.e7)([d.Z], () => d.Z.gradientPreset),
+    let e = (0, r.e7)([c.Z], () => c.Z.gradientPreset),
       t = (0, r.e7)([a.ZP], () => a.ZP.useSystemTheme === I.K.ON),
       [n, s] = (0, i.useState)(t);
     return (0, i.useEffect)(() => {
@@ -33,12 +33,12 @@ let T = () => {
   h = () => {
     let {
       previewPaneVariant: e
-    } = (0, r.cj)([d.Z], () => ({
-      previewPaneVariant: d.Z.isPreview ? E.h1.FREE : E.h1.PREMIUM_STANDARD
+    } = (0, r.cj)([c.Z], () => ({
+      previewPaneVariant: c.Z.isPreview ? E.h1.FREE : E.h1.PREMIUM_STANDARD
     })), t = (0, r.e7)([l.Z], () => {
       var e;
       let t = null === (e = l.Z.settings.appearance) || void 0 === e ? void 0 : e.theme;
-      return "default ".concat(t === s.Q2.LIGHT ? c.BRd.LIGHT : c.BRd.DARK)
+      return "default ".concat(t === s.Q2.LIGHT ? d.BRd.LIGHT : d.BRd.DARK)
     });
     return (0, i.useCallback)(n => {
       u.default.track(n, {

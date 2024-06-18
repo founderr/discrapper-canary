@@ -8,8 +8,8 @@ var i = n(735250),
   l = n.n(a),
   u = n(392711),
   _ = n.n(u),
-  d = n(442837),
-  c = n(481060),
+  c = n(442837),
+  d = n(481060),
   E = n(846027),
   I = n(925549),
   T = n(37234),
@@ -21,11 +21,11 @@ var i = n(735250),
   m = n(221888),
   O = n(933557),
   R = n(569545),
-  C = n(74299),
-  p = n(863908),
-  g = n(803647),
-  L = n(788983),
-  v = n(703656),
+  p = n(74299),
+  g = n(863908),
+  C = n(803647),
+  v = n(788983),
+  L = n(703656),
   D = n(937995),
   M = n(618158),
   P = n(922745),
@@ -105,7 +105,7 @@ class ea extends r.PureComponent {
     } = this.props;
     if (!(0, ei._5)(e)) return null;
     let n = this.activeStreamForSelectedParticipant;
-    return null == n ? null : (0, p.Z)(n, e.user, e.user.id === t, this.streamerPaused)
+    return null == n ? null : (0, g.Z)(n, e.user, e.user.id === t, this.streamerPaused)
   }
   isEmptyBroadcast() {
     var e;
@@ -161,7 +161,7 @@ class ea extends r.PureComponent {
     if ((null == t ? void 0 : t.type) === ei.fO.STREAM || (null == t ? void 0 : t.type) === ei.fO.USER) {
       var n;
       let r = null !== (n = W.ZP.getNickname(e.getGuildId(), e.id, t.user)) && void 0 !== n ? n : K.ZP.getName(t.user);
-      return (0, i.jsx)(c.Text, {
+      return (0, i.jsx)(d.Text, {
         variant: "text-md/normal",
         color: "always-white",
         className: er.participantName,
@@ -184,7 +184,7 @@ class ea extends r.PureComponent {
       component: B.Z.getVideoComponent(),
       mirror: l,
       children: (0, i.jsx)(Y.Z, {
-        size: c.AvatarSizes.SIZE_80,
+        size: d.AvatarSizes.SIZE_80,
         src: null == n ? void 0 : n.user.getAvatarURL(e.guild_id, 80),
         "aria-label": null == n ? void 0 : n.user.username
       })
@@ -227,7 +227,7 @@ class ea extends r.PureComponent {
       } = this.props;
       (0, T.Ou)();
       let n = null !== (e = t.getGuildId()) && void 0 !== e ? e : en.ME;
-      I.Z.channelListScrollTo(n, t.id), (0, v.XU)(n, t.id)
+      I.Z.channelListScrollTo(n, t.id), (0, L.XU)(n, t.id)
     }), eo(this, "handleStartStream", () => {
       let {
         canGoLive: e,
@@ -240,12 +240,12 @@ class ea extends r.PureComponent {
         participantOnScreen: e,
         isSelfBroadcasting: t
       } = this.props;
-      l()((0, ei._5)(e), "cannot stop stream for non streamer"), t ? (0, f.Z)(() => (0, g.Z)(e.stream)) : (0, g.Z)(e.stream)
+      l()((0, ei._5)(e), "cannot stop stream for non streamer"), t ? (0, f.Z)(() => (0, C.Z)(e.stream)) : (0, C.Z)(e.stream)
     }), eo(this, "handleOpenPopout", () => {
       let {
         channel: e
       } = this.props;
-      L.hP(e)
+      v.hP(e)
     }), eo(this, "renderBottomLeftControls", () => {
       let {
         canSeeParticipantName: e
@@ -315,21 +315,21 @@ class ea extends r.PureComponent {
     })
   }
 }
-t.Z = d.ZP.connectStores([B.Z, N.Z, k.default, Z.Z, H.Z, w.Z, F.Z], e => {
+t.Z = c.ZP.connectStores([B.Z, N.Z, k.default, Z.Z, H.Z, w.Z, F.Z], e => {
   let {
     channel: t
-  } = e, n = Z.Z.getSpeaker(t.id), i = N.Z.getParticipant(t.id, n), r = _()(B.Z.getVideoDevices()).values().first(), s = null == r || r.disabled, o = null != i && i.type !== ei.fO.ACTIVITY && i.type !== ei.fO.HIDDEN_STREAM ? H.Z.getStreamId(i.user.id, t.getGuildId(), (0, A.Z)(i.type)) : null, a = !s && B.Z.isVideoEnabled(), l = (0, C.Z)(B.Z), u = k.default.getId(), d = w.Z.getCurrentUserActiveStream(), c = (0, S.tA)(t.id);
+  } = e, n = Z.Z.getSpeaker(t.id), i = N.Z.getParticipant(t.id, n), r = _()(B.Z.getVideoDevices()).values().first(), s = null == r || r.disabled, o = null != i && i.type !== ei.fO.ACTIVITY && i.type !== ei.fO.HIDDEN_STREAM ? H.Z.getStreamId(i.user.id, t.getGuildId(), (0, A.Z)(i.type)) : null, a = !s && B.Z.isVideoEnabled(), l = (0, p.Z)(B.Z), u = k.default.getId(), c = w.Z.getCurrentUserActiveStream(), d = (0, S.tA)(t.id);
   return {
     channel: t,
     streamId: o,
     participantOnScreen: i,
     isVideoAvailable: !1 === s,
     isVideoEnabled: a,
-    isSelfBroadcasting: c,
+    isSelfBroadcasting: d,
     canGoLive: l,
     currentUserId: u,
     activeStreams: w.Z.getAllActiveStreams(),
-    activeSelfStream: d,
+    activeSelfStream: c,
     isMainWindowFocused: F.Z.isFocused()
   }
 })(ea)

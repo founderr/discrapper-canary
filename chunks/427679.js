@@ -3,15 +3,15 @@ var i, r, s, o, a = n(442837),
   l = n(570140),
   u = n(765305);
 let _ = {},
-  d = {};
+  c = {};
 
-function c(e, t) {
+function d(e, t) {
   var n;
   let i = {
     ...null !== (n = _[e]) && void 0 !== n ? n : {}
   };
   null == t || t.forEach(e => {
-    d[e.channel_id] = e, i[e.channel_id] = e
+    c[e.channel_id] = e, i[e.channel_id] = e
   }), _[e] = i
 }
 
@@ -19,12 +19,12 @@ function E(e) {
   let {
     instance: t
   } = e;
-  c(t.guild_id, [t])
+  d(t.guild_id, [t])
 }
 
 function I(e, t) {
   var n;
-  if (delete d[t], null == e) return;
+  if (delete c[t], null == e) return;
   let i = {
     ...null !== (n = _[e]) && void 0 !== n ? n : {}
   };
@@ -32,7 +32,7 @@ function I(e, t) {
 }
 class T extends(o = a.ZP.Store) {
   getStageInstanceByChannel(e) {
-    if (null != e) return d[e]
+    if (null != e) return c[e]
   }
   isLive(e) {
     return null != this.getStageInstanceByChannel(e)
@@ -46,7 +46,7 @@ class T extends(o = a.ZP.Store) {
     return null == e ? {} : null !== (t = _[e]) && void 0 !== t ? t : {}
   }
   getAllStageInstances() {
-    return Object.values(d)
+    return Object.values(c)
   }
 }
 s = "StageInstanceStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r, {
@@ -59,13 +59,13 @@ s = "StageInstanceStore", (r = "displayName") in(i = T) ? Object.defineProperty(
     let {
       guilds: t
     } = e;
-    _ = {}, d = {}, t.forEach(e => c(e.id, e.stage_instances))
+    _ = {}, c = {}, t.forEach(e => d(e.id, e.stage_instances))
   },
   GUILD_CREATE: function(e) {
     let {
       guild: t
     } = e;
-    c(t.id, t.stage_instances)
+    d(t.id, t.stage_instances)
   },
   GUILD_DELETE: function(e) {
     var t;
@@ -73,7 +73,7 @@ s = "StageInstanceStore", (r = "displayName") in(i = T) ? Object.defineProperty(
       guild: n
     } = e, i = null !== (t = _[n.id]) && void 0 !== t ? t : {};
     delete _[n.id], Object.keys(i).forEach(e => {
-      delete d[e]
+      delete c[e]
     })
   },
   STAGE_INSTANCE_CREATE: E,
@@ -91,6 +91,6 @@ s = "StageInstanceStore", (r = "displayName") in(i = T) ? Object.defineProperty(
     I(t.guild_id, t.id)
   },
   LOGOUT: function() {
-    d = {}, _ = {}
+    c = {}, _ = {}
   }
 })

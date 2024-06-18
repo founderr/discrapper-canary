@@ -6,8 +6,8 @@ n.d(t, {
 });
 var i, r, s, o, a, l, u = n(31775),
   _ = n.n(u),
-  d = n(442837),
-  c = n(570140);
+  c = n(442837),
+  d = n(570140);
 
 function E(e) {
   let {
@@ -21,7 +21,7 @@ let I = new(_())({
     max: 20
   }),
   T = {};
-class h extends(l = d.ZP.Store) {
+class h extends(l = c.ZP.Store) {
   getSimilarApplications(e) {
     let {
       applicationId: t,
@@ -54,7 +54,7 @@ o = "ApplicationDirectorySimilarApplicationsStore", (s = "displayName") in(r = h
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new h(c.Z, {
+}) : r[s] = o, t.Z = new h(d.Z, {
   APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS: function(e) {
     let {
       applicationId: t,

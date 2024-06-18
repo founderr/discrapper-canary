@@ -10,16 +10,16 @@ n.d(t, {
     return S
   },
   Sk: function() {
-    return d.Skl
+    return c.Skl
   },
   W5: function() {
-    return C
+    return p
   },
   lm: function() {
     return h
   },
   qb: function() {
-    return p
+    return g
   },
   rs: function() {
     return R
@@ -39,8 +39,8 @@ var i = n(735250),
   l = n(780384),
   u = n(44315),
   _ = n(806519),
-  d = n(981631),
-  c = n(182294),
+  c = n(981631),
+  d = n(182294),
   E = n(824250);
 let I = {
   tension: 600,
@@ -50,19 +50,19 @@ let I = {
 function T(e, t) {
   let n = (0, u.Sl)(function(e) {
       switch (e) {
-        case d.Skl.ONLINE:
-          return d.Ilk.GREEN_360;
-        case d.Skl.IDLE:
-          return d.Ilk.YELLOW_300;
-        case d.Skl.DND:
-          return d.Ilk.RED_400;
-        case d.Skl.STREAMING:
-          return d.Ilk.TWITCH;
-        case d.Skl.INVISIBLE:
-        case d.Skl.UNKNOWN:
-        case d.Skl.OFFLINE:
+        case c.Skl.ONLINE:
+          return c.Ilk.GREEN_360;
+        case c.Skl.IDLE:
+          return c.Ilk.YELLOW_300;
+        case c.Skl.DND:
+          return c.Ilk.RED_400;
+        case c.Skl.STREAMING:
+          return c.Ilk.TWITCH;
+        case c.Skl.INVISIBLE:
+        case c.Skl.UNKNOWN:
+        case c.Skl.OFFLINE:
         default:
-          return d.Ilk.PRIMARY_400
+          return c.Ilk.PRIMARY_400
       }
     }(e)).hex,
     i = (0, u.K3)(null != t ? t : n);
@@ -70,11 +70,11 @@ function T(e, t) {
 }
 
 function h(e, t) {
-  return t === c.VZ.WHITE && e === d.Skl.IDLE ? c.d_.HIGH : c.d_.LOW
+  return t === d.VZ.WHITE && e === c.Skl.IDLE ? d.d_.HIGH : d.d_.LOW
 }
 
 function S(e) {
-  return (0, l.wj)(e) ? c.VZ.BLACK : c.VZ.WHITE
+  return (0, l.wj)(e) ? d.VZ.BLACK : d.VZ.WHITE
 }
 
 function f(e, t, n, i) {
@@ -99,7 +99,7 @@ function A(e) {
     bgY: .25 * t + a,
     bgX: 0,
     bgHeight: t,
-    bgWidth: t * c.D6,
+    bgWidth: t * d.D6,
     cutoutX: .5 * t + l,
     cutoutY: .75 * t + a,
     cutoutWidth: 0,
@@ -112,12 +112,12 @@ function A(e) {
     dotRadius: 0
   };
   switch (n) {
-    case d.Skl.ONLINE:
+    case c.Skl.ONLINE:
       if (i) return {
-        bgRadius: t * c.EW * c.e7,
+        bgRadius: t * d.EW * d.e7,
         bgY: 0,
         bgX: l,
-        bgHeight: t * c.EW,
+        bgHeight: t * d.EW,
         bgWidth: t,
         cutoutX: .125 * t + l,
         cutoutY: .25 * t,
@@ -133,21 +133,21 @@ function A(e) {
       return {
         bgRadius: .5 * t, bgY: .25 * t + a, bgX: l, bgHeight: t, bgWidth: t, cutoutX: .5 * t + l, cutoutY: .75 * t + a, cutoutWidth: 0, cutoutHeight: 0, cutoutRadius: 0, polygonScale: f(t, 0, a, l), polygonOrigin: N(t, a, l), dotY: .75 * t + a, dotX: .5 * t + l, dotRadius: 0
       };
-    case d.Skl.IDLE:
+    case c.Skl.IDLE:
       return {
         bgRadius: .5 * t, bgY: .25 * t + a, bgX: l, bgHeight: t, bgWidth: t, cutoutX: -(.125 * t) + l, cutoutY: .125 * t + a, cutoutWidth: .75 * t, cutoutHeight: .75 * t, cutoutRadius: .375 * t, polygonScale: f(t, 0, a, l), polygonOrigin: N(t, a, l), dotY: .75 * t + a, dotX: .5 * t + l, dotRadius: 0
       };
-    case d.Skl.DND:
+    case c.Skl.DND:
       return {
         bgRadius: .5 * t, bgY: .25 * t + a, bgX: l, bgHeight: t, bgWidth: t, cutoutX: .125 * t + l, cutoutY: .625 * t + a, cutoutWidth: .75 * t, cutoutHeight: .25 * t, cutoutRadius: .125 * t, polygonScale: f(t, 0, a, l), polygonOrigin: N(t, a, l), dotY: .75 * t + a, dotX: .5 * t + l, dotRadius: 0
       };
-    case d.Skl.STREAMING:
+    case c.Skl.STREAMING:
       return {
         bgRadius: .5 * t, bgY: .25 * t + a, bgX: l, bgHeight: t, bgWidth: t, cutoutX: .5 * t + l, cutoutY: .75 * t + a, cutoutWidth: 0, cutoutHeight: 0, cutoutRadius: .25 * t, polygonScale: f(t, 1, a, l), polygonOrigin: N(t, a, l), dotY: .75 * t + a, dotX: .5 * t + l, dotRadius: 0
       };
-    case d.Skl.INVISIBLE:
-    case d.Skl.UNKNOWN:
-    case d.Skl.OFFLINE:
+    case c.Skl.INVISIBLE:
+    case c.Skl.UNKNOWN:
+    case c.Skl.OFFLINE:
     default:
       return {
         bgRadius: .5 * t, bgY: .25 * t + a, bgX: l, bgHeight: t, bgWidth: t, cutoutX: .25 * t + l, cutoutY: .5 * t + a, cutoutWidth: .5 * t, cutoutHeight: .5 * t, cutoutRadius: .25 * t, polygonScale: f(t, 0, a, l), polygonOrigin: N(t, a, l), dotY: .75 * t + a, dotX: .5 * t + l, dotRadius: 0
@@ -163,8 +163,8 @@ function m(e, t, n) {
     bgX: l,
     bgHeight: u,
     bgWidth: _,
-    cutoutX: d,
-    cutoutY: c,
+    cutoutX: c,
+    cutoutY: d,
     cutoutWidth: E,
     cutoutHeight: I,
     cutoutRadius: T,
@@ -185,8 +185,8 @@ function m(e, t, n) {
       ry: s,
       fill: "white"
     }), (0, i.jsx)(a.animated.rect, {
-      x: d,
-      y: c,
+      x: c,
+      y: d,
       width: E,
       height: I,
       rx: T,
@@ -216,7 +216,7 @@ function O(e) {
     color: l,
     className: u,
     style: _
-  } = e, h = r.useId(), S = t === d.Skl.ONLINE && n, f = r.useMemo(() => A({
+  } = e, h = r.useId(), S = t === c.Skl.ONLINE && n, f = r.useMemo(() => A({
     size: s,
     status: t,
     isMobile: S
@@ -228,18 +228,18 @@ function O(e) {
   }] = (0, a.useSpring)({
     config: I,
     fill: O
-  }, [O]), C = Math.ceil(s * c.EW);
+  }, [O]), p = Math.ceil(s * d.EW);
   return (0, i.jsxs)("svg", {
     width: s,
-    height: C,
-    viewBox: "0 0 ".concat(s, " ").concat(C),
+    height: p,
+    viewBox: "0 0 ".concat(s, " ").concat(p),
     className: o()(E.mask, u),
     style: _,
     children: [m(N, s, h), (0, i.jsx)(a.animated.rect, {
       x: 0,
       y: 0,
       width: s,
-      height: C,
+      height: p,
       fill: R,
       mask: "url(#".concat(h, ")")
     })]
@@ -250,35 +250,35 @@ function R(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   if (n) return _.ZP.Masks.STATUS_TYPING;
   switch (e) {
-    case d.Skl.IDLE:
+    case c.Skl.IDLE:
       return _.ZP.Masks.STATUS_IDLE;
-    case d.Skl.DND:
+    case c.Skl.DND:
       return _.ZP.Masks.STATUS_DND;
-    case d.Skl.STREAMING:
+    case c.Skl.STREAMING:
       return _.ZP.Masks.STATUS_STREAMING;
-    case d.Skl.INVISIBLE:
-    case d.Skl.UNKNOWN:
-    case d.Skl.OFFLINE:
+    case c.Skl.INVISIBLE:
+    case c.Skl.UNKNOWN:
+    case c.Skl.OFFLINE:
       return _.ZP.Masks.STATUS_OFFLINE;
-    case d.Skl.ONLINE:
+    case c.Skl.ONLINE:
     default:
       if (t) return _.ZP.Masks.STATUS_ONLINE_MOBILE;
       return _.ZP.Masks.STATUS_ONLINE
   }
 }
 
-function C(e, t, n) {
+function p(e, t, n) {
   let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-  return t === d.Skl.ONLINE && n && !i ? {
+  return t === c.Skl.ONLINE && n && !i ? {
     width: e,
-    height: e * c.EW
+    height: e * d.EW
   } : {
-    width: i ? e * c.D6 : e,
+    width: i ? e * d.D6 : e,
     height: e
   }
 }
 
-function p(e) {
+function g(e) {
   let {
     status: t,
     isMobile: n = !1,
@@ -286,15 +286,15 @@ function p(e) {
     className: s,
     style: a,
     color: l
-  } = e, u = t === d.Skl.ONLINE && n, c = T(t, l);
+  } = e, u = t === c.Skl.ONLINE && n, d = T(t, l);
   return (0, i.jsx)(_.ZP, {
     mask: R(t, u),
     className: o()(E.mask, s),
     style: a,
-    ...C(r, t, u),
+    ...p(r, t, u),
     children: (0, i.jsx)("div", {
       style: {
-        backgroundColor: c
+        backgroundColor: d
       },
       className: E.status
     })

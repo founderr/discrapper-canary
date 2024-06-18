@@ -18,8 +18,8 @@ function l(e) {
     source: l,
     className: u,
     size: _,
-    look: d,
-    color: c,
+    look: c,
+    color: d,
     fullWidth: E,
     onAction: I
   } = e, {
@@ -42,8 +42,8 @@ function l(e) {
         className: u,
         innerClassName: a.playButtonInner,
         size: _,
-        look: d,
-        color: c,
+        look: c,
+        color: d,
         fullWidth: E,
         onClick: A,
         onMouseEnter: t,

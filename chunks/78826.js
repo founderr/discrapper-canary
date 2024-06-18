@@ -4,7 +4,7 @@ n.d(t, {
     return _
   },
   d7: function() {
-    return d
+    return c
   },
   p: function() {
     return u
@@ -30,12 +30,12 @@ function u(e) {
     children: t,
     isPreview: n = !1,
     sentrySource: u
-  } = e, [_, d] = r.useState(!1), [c, E] = r.useState(new Set), [I, T] = r.useState(!1), h = r.useRef(!1);
+  } = e, [_, c] = r.useState(!1), [d, E] = r.useState(new Set), [I, T] = r.useState(!1), h = r.useRef(!1);
   r.useEffect(() => {
     let e = new Set;
-    for (let t of c) !l(t) && e.add(t);
-    e.size !== c.size && E(e)
-  }, [c]);
+    for (let t of d) !l(t) && e.add(t);
+    e.size !== d.size && E(e)
+  }, [d]);
   let S = r.useCallback(e => {
       let {
         assetNode: t,
@@ -44,12 +44,12 @@ function u(e) {
         errorMessage: a
       } = e;
       if (!n && null != u) {
-        var l, _, c;
-        o.Z.captureException(Error("".concat(r, ": ").concat(null != a ? "".concat(a, ", ") : "").concat((l = t, (0, s.k)(l, HTMLImageElement) ? l.getAttribute("src") : (0, s.k)(l, HTMLVideoElement) ? null !== (c = null === (_ = l.querySelectorAll("source")[0]) || void 0 === _ ? void 0 : _.getAttribute("src")) && void 0 !== c ? c : "video" : l.tagName), ", ").concat(i)), {
+        var l, _, d;
+        o.Z.captureException(Error("".concat(r, ": ").concat(null != a ? "".concat(a, ", ") : "").concat((l = t, (0, s.k)(l, HTMLImageElement) ? l.getAttribute("src") : (0, s.k)(l, HTMLVideoElement) ? null !== (d = null === (_ = l.querySelectorAll("source")[0]) || void 0 === _ ? void 0 : _.getAttribute("src")) && void 0 !== d ? d : "video" : l.tagName), ", ").concat(i)), {
           tags: {
             source: u
           }
-        }), d(!0)
+        }), c(!0)
       }
     }, [n, u]),
     f = r.useCallback(e => {
@@ -78,7 +78,7 @@ function u(e) {
         }), e.removeEventListener("error", n)
       })
     }, [S, f]),
-    A = r.useMemo(() => c.size > 0 || !I, [I, c]);
+    A = r.useMemo(() => d.size > 0 || !I, [I, d]);
   r.useEffect(() => {
     !A && (h.current = !0)
   }, [A]);
@@ -110,7 +110,7 @@ function _(e) {
   }, [i, s, t]), n(o)
 }
 
-function d() {
+function c() {
   let {
     hasError: e,
     isLoading: t

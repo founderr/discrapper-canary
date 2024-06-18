@@ -22,8 +22,8 @@ var n = t(735250),
   S = t(626135),
   h = t(267642),
   g = t(63063),
-  x = t(999382),
-  C = t(981631),
+  C = t(999382),
+  x = t(981631),
   R = t(689938),
   L = t(878496);
 
@@ -94,7 +94,7 @@ function M() {
       (0, o.tZ)(), (0, c.Y2)()
     })
   }, []);
-  let e = (0, l.e7)([x.Z], () => x.Z.getGuild()),
+  let e = (0, l.e7)([C.Z], () => C.Z.getGuild()),
     s = (0, l.e7)([N.Z], () => null != e ? N.Z.getAppliedGuildBoostsForGuild(e.id) : null),
     t = (0, u.V)();
   return (0, n.jsxs)(n.Fragment, {
@@ -109,20 +109,20 @@ function M() {
         type: a.FormText.Types.DESCRIPTION,
         className: L.titleBlurb,
         children: R.Z.Messages.GUILD_SETTINGS_PREMIUM_GUILD_BLURB.format({
-          helpdeskArticle: g.Z.getArticleURL(C.BhN.GUILD_SUBSCRIPTIONS)
+          helpdeskArticle: g.Z.getArticleURL(x.BhN.GUILD_SUBSCRIPTIONS)
         })
       })]
     }), (0, n.jsx)(I.Z, {
-      tiers: (0, h.cP)(null != e && e.hasFeature(C.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= C.B9o),
+      tiers: (0, h.cP)(null != e && e.hasFeature(x.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= x.B9o),
       renderTier: p
     }), (0, n.jsx)("div", {
       className: L.divider
     }), t ? (0, n.jsx)(_.Z, {}) : null, t ? (0, n.jsx)(E.Z, {
-      onOpenPremiumClick: () => void S.default.track(C.rMx.PREMIUM_PROMOTION_OPENED, {
+      onOpenPremiumClick: () => void S.default.track(x.rMx.PREMIUM_PROMOTION_OPENED, {
         location: {
-          page: C.ZY5.GUILD_SETTINGS,
-          section: C.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,
-          object: C.qAy.BUTTON_CTA
+          page: x.ZY5.GUILD_SETTINGS,
+          section: x.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,
+          object: x.qAy.BUTTON_CTA
         }
       })
     }) : null]

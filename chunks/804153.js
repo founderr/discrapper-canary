@@ -18,8 +18,8 @@ var n = t(735250),
   S = t(434404),
   h = t(999382),
   g = t(981631),
-  x = t(689938),
-  C = t(684617);
+  C = t(689938),
+  x = t(684617);
 
 function R(e, s, t) {
   return s in e ? Object.defineProperty(e, s, {
@@ -67,33 +67,33 @@ class A extends i.PureComponent {
     }).value();
     return i.unshift({
       value: L,
-      label: x.Z.Messages.NO_INSTANT_INVITE
+      label: C.Z.Messages.NO_INSTANT_INVITE
     }), (0, n.jsxs)(c.FormItem, {
-      title: x.Z.Messages.FORM_LABEL_INSTANT_INVITE_CHANNEL,
+      title: C.Z.Messages.FORM_LABEL_INSTANT_INVITE_CHANNEL,
       children: [(0, n.jsx)(c.SingleSelect, {
-        className: C.spacing,
+        className: x.spacing,
         options: i,
         value: s,
         onChange: this.handleChannelSelect
       }), (0, n.jsx)(c.FormText, {
         type: c.FormTextTypes.DESCRIPTION,
-        children: x.Z.Messages.FORM_HELP_INSTANT_INVITE_CHANNEL
+        children: C.Z.Messages.FORM_HELP_INSTANT_INVITE_CHANNEL
       })]
     })
   }
   renderAPIInfo(e) {
     let s = "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, "/guilds/").concat(e.id, "/widget.json");
     return (0, n.jsxs)("div", {
-      className: C.infoWrapper,
+      className: x.infoWrapper,
       children: [(0, n.jsx)(c.FormItem, {
-        title: x.Z.Messages.FORM_LABEL_SERVER_ID,
-        className: C.infoItem,
+        title: C.Z.Messages.FORM_LABEL_SERVER_ID,
+        className: x.infoItem,
         children: (0, n.jsx)(u.Z, {
           value: e.id
         })
       }), (0, n.jsx)(c.FormItem, {
-        title: x.Z.Messages.FORM_LABEL_JSON_API,
-        className: C.infoItem,
+        title: C.Z.Messages.FORM_LABEL_JSON_API,
+        className: x.infoItem,
         children: (0, n.jsx)(u.Z, {
           value: s
         })
@@ -104,18 +104,18 @@ class A extends i.PureComponent {
     let s = "".concat(location.protocol).concat(window.GLOBAL_ENV.WIDGET_ENDPOINT, "?id=").concat(e.id, "&theme=dark");
     return (0, n.jsx)("div", {
       children: (0, n.jsxs)("div", {
-        className: C.infoWrapper,
+        className: x.infoWrapper,
         children: [(0, n.jsxs)(c.FormItem, {
-          className: C.infoItem,
-          title: x.Z.Messages.FORM_LABEL_PREMADE_WIDGET,
+          className: x.infoItem,
+          title: C.Z.Messages.FORM_LABEL_PREMADE_WIDGET,
           children: [(0, n.jsx)(u.Z, {
             value: '<iframe src="'.concat(s, '" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>')
           }), (0, n.jsx)(c.FormText, {
             type: c.FormTextTypes.DESCRIPTION,
-            children: x.Z.Messages.GUILD_SETTINGS_WIDGET_EMBED_HELP.format()
+            children: C.Z.Messages.GUILD_SETTINGS_WIDGET_EMBED_HELP.format()
           })]
         }), (0, n.jsx)("img", {
-          className: C.infoItem,
+          className: x.infoItem,
           "data-accessibility": "desaturate",
           alt: "",
           src: t(329488)
@@ -129,11 +129,11 @@ class A extends i.PureComponent {
     } = this.props;
     return null == e ? null : this.props.hide ? (0, n.jsx)(d.Z, {}) : (0, n.jsxs)(c.FormSection, {
       tag: c.FormTitleTags.H1,
-      title: x.Z.Messages.GUILD_SETTINGS_TITLE_SERVER_WIDGET,
+      title: C.Z.Messages.GUILD_SETTINGS_TITLE_SERVER_WIDGET,
       children: [this.renderToggle(), this.renderChannelSelect(e), (0, n.jsx)(c.FormDivider, {
-        className: C.divider
+        className: x.divider
       }), this.renderAPIInfo(e), (0, n.jsx)(c.FormDivider, {
-        className: C.divider
+        className: x.divider
       }), this.renderWidget(e)]
     })
   }
@@ -142,10 +142,10 @@ class A extends i.PureComponent {
       internalEnabled: this.props.widgetEnabled,
       widgetEnabledProp: this.props.widgetEnabled
     }), R(this, "renderToggle", () => (0, n.jsx)(c.FormSwitch, {
-      className: C.spacing,
+      className: x.spacing,
       value: this.state.internalEnabled,
       onChange: this.handleToggleWidget,
-      children: x.Z.Messages.GUILD_SETTINGS_WIDGET_ENABLE_WIDGET
+      children: C.Z.Messages.GUILD_SETTINGS_WIDGET_ENABLE_WIDGET
     })), R(this, "handleToggleWidget", e => {
       let {
         guild: s,

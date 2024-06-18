@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   B0: function() {
-    return v
+    return L
   },
   Hc: function() {
     return y
@@ -10,7 +10,7 @@ n.d(t, {
     return U
   },
   Q6: function() {
-    return g
+    return C
   },
   V9: function() {
     return w
@@ -25,10 +25,10 @@ n.d(t, {
     return O
   },
   Zv: function() {
-    return C
+    return p
   },
   _V: function() {
-    return p
+    return g
   },
   cv: function() {
     return G
@@ -37,7 +37,7 @@ n.d(t, {
     return b
   },
   sM: function() {
-    return L
+    return v
   },
   z: function() {
     return M
@@ -51,15 +51,15 @@ var i = n(606301),
   l = n(358085),
   u = n(913663),
   _ = n(373228),
-  d = n(611480),
-  c = n(981631);
+  c = n(611480),
+  d = n(981631);
 let {
   API_ENDPOINT: E,
   MEDIA_PROXY_ENDPOINT: I,
   PROJECT_ENV: T,
   ASSET_ENDPOINT: h,
   CDN_HOST: S
-} = window.GLOBAL_ENV, f = Object.values(_.og), N = decodeURIComponent(c.ANM.STICKER_ASSET("[\\d]+", "(".concat(f.join("|"), ")"))), A = RegExp("(".concat(location.protocol).concat(h, "|").concat(location.protocol).concat(I, ")(").concat(N, ")"), "ig"), m = RegExp("".concat(location.protocol).concat(E, "(").concat(N, ")"), "ig"), O = e => {
+} = window.GLOBAL_ENV, f = Object.values(_.og), N = decodeURIComponent(d.ANM.STICKER_ASSET("[\\d]+", "(".concat(f.join("|"), ")"))), A = RegExp("(".concat(location.protocol).concat(h, "|").concat(location.protocol).concat(I, ")(").concat(N, ")"), "ig"), m = RegExp("".concat(location.protocol).concat(E, "(").concat(N, ")"), "ig"), O = e => {
   if (null != e.cover_sticker_id) {
     let t = e.stickers.find(t => t.id === e.cover_sticker_id);
     if (null != t) return t
@@ -78,7 +78,7 @@ let {
     default:
       throw Error("Unexpected format type: ".concat(e))
   }
-}, C = e => {
+}, p = e => {
   switch (e) {
     case "application/json":
       return _.u3.LOTTIE;
@@ -92,15 +92,15 @@ let {
     default:
       throw Error("Unexpected file type: ".concat(e))
   }
-}, p = e => null == e ? null : "".concat(e.name, ".").concat(R(e.format_type)), g = function(e) {
+}, g = e => null == e ? null : "".concat(e.name, ".").concat(R(e.format_type)), C = function(e) {
   let {
     isPreview: t = !1,
-    size: n = d.lE
+    size: n = c.lE
   } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   if (null == e.format_type) return null;
   let i = e.format_type;
   e.format_type === _.u3.GIF && t && (i = _.u3.PNG);
-  let s = c.ANM.STICKER_ASSET(e.id, R(i));
+  let s = d.ANM.STICKER_ASSET(e.id, R(i));
   if ("development" !== T) {
     if (e.format_type === _.u3.LOTTIE) return "".concat(location.protocol).concat(h).concat(s);
     let i = e.format_type === _.u3.APNG && t && !(0, l.isAndroid)() ? "&passthrough=false" : "",
@@ -108,13 +108,13 @@ let {
     return "".concat(location.protocol).concat(I).concat(s, "?size=").concat((0, r.oO)(n * o)).concat(i)
   }
   return "".concat(location.protocol).concat(E).concat(s)
-}, L = (e, t) => {
+}, v = (e, t) => {
   let n;
   let i = e.banner_asset_id;
   if (null == i) return null;
   let s = a.$k ? "webp" : "png";
-  return n = null != S ? "".concat(location.protocol, "//").concat(S, "/app-assets/").concat(d.Ks, "/store/").concat(i, ".").concat(s) : "".concat(location.protocol).concat(E).concat(c.ANM.STORE_ASSET(d.Ks, i, s)), null != t && (n += "?size=".concat((0, r.oO)(t))), n
-}, v = e => e.match("development" !== T ? A : m), D = e => e.stickers.some(e => {
+  return n = null != S ? "".concat(location.protocol, "//").concat(S, "/app-assets/").concat(c.Ks, "/store/").concat(i, ".").concat(s) : "".concat(location.protocol).concat(E).concat(d.ANM.STORE_ASSET(c.Ks, i, s)), null != t && (n += "?size=".concat((0, r.oO)(t))), n
+}, L = e => e.match("development" !== T ? A : m), D = e => e.stickers.some(e => {
   let {
     format_type: t
   } = e;
@@ -125,7 +125,7 @@ let {
   name: e.name,
   stickers: e.stickers,
   previewSticker: O(e)
-}), P = (e, t) => e === d.yr.ANIMATE_ON_INTERACTION ? t : e !== d.yr.NEVER_ANIMATE, y = (e, t, n, r) => {
+}), P = (e, t) => e === c.yr.ANIMATE_ON_INTERACTION ? t : e !== c.yr.NEVER_ANIMATE, y = (e, t, n, r) => {
   if (o.Z.getUploadCount(n, r) > 0) return !0;
   let s = u.Z.getStickerPreview(n, r);
   if (null != s && s.length > 0) return !0;

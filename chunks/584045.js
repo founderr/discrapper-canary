@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(129861),
   u = n(954138),
   _ = n(979264),
-  d = n(969832),
-  c = n(51144),
+  c = n(969832),
+  d = n(51144),
   E = n(659101),
   I = n(981631),
   T = n(689938),
@@ -30,7 +30,7 @@ function S(e) {
     className: A,
     isTryItOut: m = !1,
     lastSection: O
-  } = e, R = (0, u.Z)("username"), C = r.useMemo(() => ({
+  } = e, R = (0, u.Z)("username"), p = r.useMemo(() => ({
     source: I.jXE.PROFILE_POPOUT,
     tagUserId: t.id
   }), [t.id]);
@@ -39,11 +39,11 @@ function S(e) {
     lastSection: O,
     children: [(0, i.jsxs)("div", {
       className: n ? h.copiableNameTag : void 0,
-      children: [(0, i.jsx)(d.o, {
+      children: [(0, i.jsx)(c.o, {
         className: h.copiableField,
         copyMetaData: "User Tag",
         copyTooltip: T.Z.Messages.ACCOUNT_CLICK_TO_COPY,
-        copyValue: c.ZP.getUserTag(t, {
+        copyValue: d.ZP.getUserTag(t, {
           decoration: "never",
           identifiable: "always"
         }),
@@ -80,7 +80,7 @@ function S(e) {
       children: (0, i.jsx)(_.ZP, {
         userId: t.id,
         inline: !1,
-        profileViewedAnalytics: C
+        profileViewedAnalytics: p
       })
     })]
   })

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   closeUserProfileModal: function() {
-    return c
+    return d
   },
   openUserProfileModal: function() {
-    return d
+    return c
   }
 });
 var i = n(570140),
@@ -16,12 +16,12 @@ var i = n(570140),
   u = n(484459),
   _ = n(981631);
 
-function d(e) {
+function c(e) {
   let {
     userId: t,
     guildId: n = _.ME,
-    channelId: d,
-    messageId: c,
+    channelId: c,
+    messageId: d,
     roleId: E,
     section: I,
     subsection: T,
@@ -46,8 +46,8 @@ function d(e) {
       type: "USER_PROFILE_MODAL_OPEN",
       userId: t,
       guildId: null != n ? n : void 0,
-      channelId: null != d ? d : void 0,
-      messageId: null != c ? c : void 0,
+      channelId: null != c ? c : void 0,
+      messageId: null != d ? d : void 0,
       roleId: null != E ? E : void 0,
       section: I,
       subsection: T,
@@ -66,8 +66,8 @@ function d(e) {
     type: "USER_PROFILE_MODAL_OPEN",
     userId: t,
     guildId: null != n ? n : void 0,
-    channelId: null != d ? d : void 0,
-    messageId: null != c ? c : void 0,
+    channelId: null != c ? c : void 0,
+    messageId: null != d ? d : void 0,
     roleId: null != E ? E : void 0,
     section: I,
     subsection: T,
@@ -78,7 +78,7 @@ function d(e) {
   })
 }
 
-function c() {
+function d() {
   i.Z.dispatch({
     type: "USER_PROFILE_MODAL_CLOSE"
   })

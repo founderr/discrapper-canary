@@ -13,13 +13,13 @@ n.d(t, {
     return U
   },
   LM: function() {
-    return C
+    return p
   },
   ZP: function() {
     return b
   },
   _k: function() {
-    return g
+    return C
   },
   h6: function() {
     return M
@@ -40,8 +40,8 @@ var i, r, s = n(470079),
   l = n(887706),
   u = n(812206),
   _ = n(430824),
-  d = n(496675),
-  c = n(509545),
+  c = n(496675),
+  d = n(509545),
   E = n(78839),
   I = n(580130),
   T = n(55563),
@@ -65,7 +65,7 @@ let R = function(e, t) {
       listingsLoaded: i === N.M.FETCHED
     }
   },
-  C = e => {
+  p = e => {
     let {
       guildId: t,
       canFetch: n = !0,
@@ -79,7 +79,7 @@ let R = function(e, t) {
       entitlementsLoaded: r === N.M.FETCHED
     }
   },
-  p = e => {
+  g = e => {
     let {
       applicationId: t,
       canFetch: n = !0,
@@ -97,7 +97,7 @@ let R = function(e, t) {
       entitlementsLoaded: l
     }
   },
-  g = function(e) {
+  C = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
       includeSoftDeleted: !1
     };
@@ -113,8 +113,8 @@ let R = function(e, t) {
       return i
     }, [e, t.includeSoftDeleted])
   },
-  L = [],
-  v = [];
+  v = [],
+  L = [];
 
 function D(e, t) {
   let n = (0, o.e7)([E.ZP], () => E.ZP.getSubscriptions()),
@@ -126,15 +126,15 @@ function D(e, t) {
       var n, i;
       return {
         subscriptionGroupListing: null != e ? N.Z.getSubscriptionGroupListingForApplication(e) : null,
-        guildEntitlements: null != e && null != t ? N.Z.getApplicationEntitlementsForGuild(e, t) : L,
-        userEntitlements: null != e && null !== (i = null === (n = I.Z.getForApplication(e)) || void 0 === n ? void 0 : n.values()) && void 0 !== i ? i : v
+        guildEntitlements: null != e && null != t ? N.Z.getApplicationEntitlementsForGuild(e, t) : v,
+        userEntitlements: null != e && null !== (i = null === (n = I.Z.getForApplication(e)) || void 0 === n ? void 0 : n.values()) && void 0 !== i ? i : L
       }
     }, [e, t]),
     l = s.useMemo(() => [...r, ...a], [r, a]),
     u = null == i ? void 0 : i.subscription_listings,
     {
       activeSubscriptionListing: _,
-      activeEntitlement: d
+      activeEntitlement: c
     } = s.useMemo(() => {
       if (null != u) {
         for (let e of l)
@@ -158,7 +158,7 @@ function D(e, t) {
       return null
     }, [_, n]),
     activeSubscriptionListing: _,
-    activeEntitlement: d,
+    activeEntitlement: c,
     subscriptionGroupListing: i
   }
 }
@@ -168,9 +168,9 @@ function M(e) {
   let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : m.lds,
     {
       entitlementsLoaded: i
-    } = C({
+    } = p({
       guildId: n,
-      canFetch: (0, o.e7)([d.Z], () => d.Z.can(m.Plq.ADMINISTRATOR, e))
+      canFetch: (0, o.e7)([c.Z], () => c.Z.can(m.Plq.ADMINISTRATOR, e))
     }),
     r = (0, o.e7)([h.Z], () => h.Z.getLastGuildDismissedTime(n)),
     a = (0, o.Wu)([N.Z], () => {
@@ -187,7 +187,7 @@ function M(e) {
   return i ? u.filter(e => null != e.endsAt && e.endsAt.getTime() > Math.max(null != r ? r : 0, Date.now() - O)) : []
 }
 let P = e => {
-    let [t, n] = s.useState(!1), i = s.useMemo(() => e.map(A.bZ), [e]), r = (0, o.Wu)([c.Z], () => i.filter(e => null == c.Z.get(e)), [i]);
+    let [t, n] = s.useState(!1), i = s.useMemo(() => e.map(A.bZ), [e]), r = (0, o.Wu)([d.Z], () => i.filter(e => null == d.Z.get(e)), [i]);
     return s.useEffect(() => {
       r.length > 0 && (n(!0), Promise.all(r.map(e => (0, S.vY)(e))).catch(() => {}).then(() => {
         n(!1)
@@ -230,11 +230,11 @@ function b(e) {
     listingsLoaded: s
   } = R(t, n), {
     entitlementsLoaded: o
-  } = C({
+  } = p({
     guildId: i
   }), {
     entitlementsLoaded: a
-  } = p({
+  } = g({
     applicationId: t,
     loggedIn: r
   }), u = U(t), _ = (null == u ? void 0 : u.isMonetized) === !0;

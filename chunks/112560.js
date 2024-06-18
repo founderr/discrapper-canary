@@ -26,23 +26,23 @@ function _(e) {
     header: r,
     description: u,
     size: _,
-    className: d,
-    artURL: c,
+    className: c,
+    artURL: d,
     noArt: E = !1,
     selected: I = !1
   } = e;
   return (0, i.jsxs)(a.Z, {
-    className: d,
+    className: c,
     justify: a.Z.Justify.CENTER,
     align: a.Z.Align.CENTER,
     direction: a.Z.Direction.VERTICAL,
     style: {
       padding: 4
     },
-    children: [!E && null != c && (0, i.jsx)("div", {
+    children: [!E && null != d && (0, i.jsx)("div", {
       className: s()(l.art, l[_]),
       style: {
-        backgroundImage: "url(".concat(c, ")")
+        backgroundImage: "url(".concat(d, ")")
       }
     }), null != r ? (0, i.jsx)(o.Text, {
       color: "none",

@@ -18,8 +18,8 @@ function _(e) {
     children: n,
     tooltip: s,
     dangerous: _ = !1,
-    className: d,
-    "aria-label": c
+    className: c,
+    "aria-label": d
   } = e;
   return (0, i.jsx)(a.Tooltip, {
     text: s,
@@ -37,8 +37,8 @@ function _(e) {
           e.stopPropagation(), null == I || I(), t(e)
         },
         dangerous: _,
-        "aria-label": null != c ? c : s,
-        className: d,
+        "aria-label": null != d ? d : s,
+        className: c,
         children: r.Children.map(n, e => r.isValidElement(e) ? r.cloneElement(e, {
           className: o()(e.props.className, u.actionBarIcon)
         }) : e)

@@ -7,7 +7,7 @@ n.d(t, {
     return a
   },
   dt: function() {
-    return d
+    return c
   },
   xx: function() {
     return u
@@ -34,7 +34,7 @@ async function u(e) {
 async function _(e) {
   return (await s.tn.del(o.ANM.NOTIFICATION_SNAPSHOT(e))).body
 }
-async function d(e) {
+async function c(e) {
   if (e.length > 0) {
     var t;
     let n = r().sum(e.map(e => e.length)),

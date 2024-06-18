@@ -2,8 +2,8 @@
 let i, r;
 var s, o, a, l, u = n(392711),
   _ = n(442837),
-  d = n(570140),
-  c = n(358085),
+  c = n(570140),
+  d = n(358085),
   E = n(729436);
 let I = [],
   T = !1;
@@ -15,7 +15,7 @@ let N = 0,
     h = (0, u.cloneDeep)(e);
     let t = {};
     h.forEach(e => {
-      t[e.id] = (0, c.isAndroid)() ? (0, E.Q)(e) : e
+      t[e.id] = (0, d.isAndroid)() ? (0, E.Q)(e) : e
     }), S = t
   },
   m = () => {
@@ -49,7 +49,7 @@ a = "ProfileEffectStore", (o = "displayName") in(s = O) ? Object.defineProperty(
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[o] = a, t.Z = new O(d.Z, {
+}) : s[o] = a, t.Z = new O(c.Z, {
   USER_PROFILE_EFFECTS_FETCH: () => {
     T = !0
   },

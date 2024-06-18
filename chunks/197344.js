@@ -9,7 +9,7 @@ var i = n(442837),
   u = n(981631),
   _ = n(689938);
 
-function d() {
+function c() {
   return I() && l.Z.experiment.getCurrentConfig({
     location: "holiday_events_is_eligible"
   }, {
@@ -17,7 +17,7 @@ function d() {
   }).enabled
 }
 
-function c() {
+function d() {
   let {
     enabled: e
   } = l.Z.experiment.useExperiment({
@@ -42,12 +42,12 @@ t.Z = {
       location: "holiday_events_subscribe"
     }, e)
   },
-  isEligible: d,
+  isEligible: c,
   isRingtoneDisabled: function() {
     return null == l.Z.ringtone || o.Z.isSoundDisabled(l.Z.ringtone)
   },
   isRingtoneEligible: function() {
-    return d() && E()
+    return c() && E()
   },
   onRingtoneSettingValueChange: function(e) {
     let t = o.Z.getDisabledSounds();
@@ -58,12 +58,12 @@ t.Z = {
       sound_name: l.Z.ringtone
     })
   },
-  useIsEligible: c,
+  useIsEligible: d,
   useIsRingtoneDisabled: function() {
     return (0, i.e7)([o.Z], () => null == l.Z.ringtone || o.Z.isSoundDisabled(l.Z.ringtone))
   },
   useIsRingtoneEligible: function() {
-    return c() && E()
+    return d() && E()
   },
   useRingtoneSettingDescription: function() {
     return s.D3.useSetting() ? void 0 : _.Z.Messages.ENABLE_PHONE_INTEGRATION

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   K: function() {
-    return p
+    return g
   }
 });
 var i = n(735250);
@@ -13,8 +13,8 @@ var r = n(693789),
   l = n(254711),
   u = n(213459),
   _ = n(10718),
-  d = n(367790),
-  c = n(998698),
+  c = n(367790),
+  d = n(998698),
   E = n(895924),
   I = n(581364),
   T = n(826298),
@@ -26,14 +26,14 @@ var r = n(693789),
   m = n(665692),
   O = n(689079),
   R = n(689938),
-  C = n(442630);
-let p = {
+  p = n(442630);
+let g = {
   results: {
     entries: []
   }
 };
 
-function g() {
+function C() {
   (0, s.ZD)(async () => {
     let {
       default: e
@@ -43,12 +43,12 @@ function g() {
     })
   })
 }
-let L = {
+let v = {
   sentinel: m.GI,
-  stores: [c.Z, u.ZP, h.Z],
-  matches: (e, t, n, i, r) => r.commands !== A.L8.DISABLED && null == c.Z.getActiveCommand(e.id) && (i || r.commands !== A.L8.OLD_BUILT_INS),
+  stores: [d.Z, u.ZP, h.Z],
+  matches: (e, t, n, i, r) => r.commands !== A.L8.DISABLED && null == d.Z.getActiveCommand(e.id) && (i || r.commands !== A.L8.OLD_BUILT_INS),
   queryResults(e, t, n, i, r) {
-    if (0 === n.length && i.commands !== A.L8.OLD_BUILT_INS) return p;
+    if (0 === n.length && i.commands !== A.L8.OLD_BUILT_INS) return g;
     if (i.commands === A.L8.OLD_BUILT_INS) {
       let i = (0, l.Kh)(o.yU.CHAT, !1, !1),
         r = RegExp("^".concat(f.Z.escape(n)), "i"),
@@ -57,7 +57,7 @@ let L = {
           guild: t
         }, A.AQ),
         a = l.Tm[O.bi.BUILT_IN];
-      return 0 === s.length ? p : {
+      return 0 === s.length ? g : {
         results: {
           entries: s.map(e => ({
             command: e,
@@ -76,19 +76,19 @@ let L = {
       }, {
         limit: A.AQ,
         placeholderCount: A.YP,
-        scoreMethod: d.p.COMMAND_OR_APPLICATION,
+        scoreMethod: c.p.COMMAND_OR_APPLICATION,
         allowFetch: r
       });
-    if (null == a) return p;
-    let c = a;
+    if (null == a) return g;
+    let d = a;
     if (s.hasSpaceTerminator) {
       let e = s.text.trim(),
         t = e + " ";
-      c = c.filter(n => n.name === e || n.name.startsWith(t))
+      d = d.filter(n => n.name === e || n.name.startsWith(t))
     }
-    return 0 === c.length ? p : {
+    return 0 === d.length ? g : {
       results: {
-        entries: c.slice(0, A.AQ).map(e => ({
+        entries: d.slice(0, A.AQ).map(e => ({
           command: e,
           section: null == u ? void 0 : u.find(t => t.id === e.applicationId)
         }))
@@ -106,7 +106,7 @@ let L = {
       options: a,
       onHover: l,
       onClick: u
-    } = e, _ = (0, T.hV)(s, o), d = a.commands === A.L8.OLD_BUILT_INS;
+    } = e, _ = (0, T.hV)(s, o), c = a.commands === A.L8.OLD_BUILT_INS;
     return (0, N.HI)({
       query: _.text,
       selectedIndex: n,
@@ -116,7 +116,7 @@ let L = {
       titleWithQuery: R.Z.Messages.COMMANDS_MATCHING,
       titleWithoutQuery: R.Z.Messages.COMMANDS,
       getQuery: e => "".concat(m.GI).concat(e),
-      Component: d ? S.ZP.Command : S.ZP.NewCommand,
+      Component: c ? S.ZP.Command : S.ZP.NewCommand,
       getProps: e => {
         let {
           command: t,
@@ -132,13 +132,13 @@ let L = {
         }
       },
       key: "commands",
-      headerClassName: d ? C.legacyInputCommandHeader : null,
-      headerTrailingContent: d ? (0, i.jsx)(r.zx, {
+      headerClassName: c ? p.legacyInputCommandHeader : null,
+      headerTrailingContent: c ? (0, i.jsx)(r.zx, {
         type: "button",
         look: r.zx.Looks.LINK,
         color: r.zx.Colors.BRAND,
         size: r.zx.Sizes.MIN,
-        onClick: g,
+        onClick: C,
         children: R.Z.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
       }) : null
     })
@@ -177,4 +177,4 @@ let L = {
     }
   }
 };
-t.Z = L
+t.Z = v

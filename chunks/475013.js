@@ -25,8 +25,8 @@ var n = t(735250),
   S = t(853813),
   h = t(163249),
   g = t(150689),
-  x = t(203377),
-  C = t(981631);
+  C = t(203377),
+  x = t(981631);
 
 function R(e) {
   _.Z.selectRole(e)
@@ -44,7 +44,7 @@ let L = () => {
       } = e, t = T.Z.editedRoleIds.map(e => T.Z.getRole(e)).filter(E.lm), n = T.Z.getSortDeltas(), i = null, l = null;
       T.Z.hasRoleConfigurationChanges && (l = T.Z.editedRoleIdsForConfigurations, i = T.Z.getEditedRoleConnectionConfigurationsMap()), (0, I.Gf)(s, t, n, l, i)
     },
-    submitting: s === C.QZA.SUBMITTING,
+    submitting: s === x.QZA.SUBMITTING,
     onReset: I.S1
   })
 };
@@ -64,16 +64,16 @@ function O(e) {
   a()(null != c, "Guild must have an everyone role");
   let E = i.useMemo(() => l.filter(e => !(0, d.pM)(t.id, e.id)), [l, t]),
     _ = (0, r.e7)([N.Z], () => N.Z.getSelectedRoleId()),
-    [I, C] = i.useState(E.length > 0);
+    [I, x] = i.useState(E.length > 0);
   i.useEffect(() => {
-    C(I || E.length > 0)
+    x(I || E.length > 0)
   }, [I, E.length]), i.useEffect(() => {
     let e = u.Z.getMemberCount(t.id);
     null != e && e <= m.cm && o.Z.requestMembers(t.id, "", 0, !1)
   }, []);
-  let [L, O] = i.useState(x.ZI.DISPLAY);
+  let [L, O] = i.useState(C.ZI.DISPLAY);
   return (i.useEffect(() => {
-    null == _ && O(x.ZI.DISPLAY)
+    null == _ && O(C.ZI.DISPLAY)
   }, [_]), null != _) ? (0, n.jsx)(S.Z, {
     editRoleId: _,
     setEditRoleId: R,

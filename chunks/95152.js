@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return p
   }
 }), n(47120), n(315314), n(610138), n(216116), n(78328), n(815648);
 var i = n(735250),
@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(166459),
   u = n(476326),
   _ = n(752305),
-  d = n(849522),
-  c = n(703558),
+  c = n(849522),
+  d = n(703558),
   E = n(626135),
   I = n(358085),
   T = n(998502),
@@ -35,9 +35,9 @@ function m(e) {
   var t, n, s, a;
   let {
     file: l
-  } = e, [u, _] = r.useState(), [d, c] = r.useState(!1), [E, I] = r.useState({}), T = r.useRef(null);
+  } = e, [u, _] = r.useState(), [c, d] = r.useState(!1), [E, I] = r.useState({}), T = r.useRef(null);
   r.useEffect(() => {
-    if (null != T.current && c(!1), null == l) return;
+    if (null != T.current && d(!1), null == l) return;
     let e = URL.createObjectURL(l);
     return _(e), () => {
       _(void 0), URL.revokeObjectURL(e)
@@ -55,7 +55,7 @@ function m(e) {
       }) : I({
         width: void 0,
         height: 104 / t
-      }), c(!0)
+      }), d(!0)
     })
   }, []);
   let h = Math.max(16, (120 - (null !== (n = null === (t = T.current) || void 0 === t ? void 0 : t.width) && void 0 !== n ? n : 0)) / 2);
@@ -63,7 +63,7 @@ function m(e) {
     ref: T,
     src: u,
     className: o()(f.icon, {
-      [f.image]: !d
+      [f.image]: !c
     }),
     "aria-hidden": !0,
     alt: "",
@@ -239,7 +239,7 @@ class R extends r.Component {
         spoiler: s
       }), t()
     });
-    let a = e.ignoreDraft ? "" : c.Z.getDraft(this.props.channelId, e.draftType);
+    let a = e.ignoreDraft ? "" : d.Z.getDraft(this.props.channelId, e.draftType);
     this.state = {
       ...(0, _.eK)(a),
       textFocused: !0,
@@ -251,8 +251,8 @@ class R extends r.Component {
   }
 }
 
-function C(e) {
-  let t = (0, d.Z)();
+function p(e) {
+  let t = (0, c.Z)();
   return e.upload.item.platform !== u.ow.WEB ? null : (0, i.jsx)(R, {
     ...e,
     file: e.upload.item.file,

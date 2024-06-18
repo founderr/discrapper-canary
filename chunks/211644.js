@@ -4,7 +4,7 @@ n.d(t, {
     return R
   },
   ZP: function() {
-    return p
+    return g
   },
   bn: function() {
     return m
@@ -19,7 +19,7 @@ n.d(t, {
     return N
   },
   mc: function() {
-    return C
+    return p
   },
   ot: function() {
     return O
@@ -55,8 +55,8 @@ let s = new(n(499303)).I,
     let s = e.recentlyShown.filter(e => e !== t.content);
     return s.unshift(t.content), s.splice(5), e.recentlyShown = s, null != t.groupName && e.currentlyShownGroup.add(t.groupName), !r.O.has(t.content) && (e.shownFatigableCandidate = t, (null === (i = e.prevFatigableCandidate) || void 0 === i ? void 0 : i.content) !== t.content && (e.prevFatigableCandidate = t, e.lastWinnerTime = new Date().getTime())), null === (n = t.onAdded) || void 0 === n || n.call(t), e
   },
-  d = (e, t) => (e.candidates.set(t.content, t), e),
-  c = (e, t) => (e.candidates.delete(t.content), e),
+  c = (e, t) => (e.candidates.set(t.content, t), e),
+  d = (e, t) => (e.candidates.delete(t.content), e),
   E = (e, t) => _(u(e, e.shownFatigableCandidate), t),
   I = e => null != e.prevFatigableCandidate ? e.candidates.get(e.prevFatigableCandidate.content) : void 0,
   T = e => {
@@ -84,13 +84,13 @@ let s = new(n(499303)).I,
     let t = r.O.has(e.content);
     a.setState(n => {
       let i = l(n);
-      return t ? _(i, e) : S(d(i, e))
+      return t ? _(i, e) : S(c(i, e))
     })
   },
   N = (e, t) => {
     a.setState(n => {
       let i = l(n);
-      return t ? S(u(c(i, e), e)) : u(c(i, e), e)
+      return t ? S(u(d(i, e), e)) : u(d(i, e), e)
     })
   },
   A = e => a.getState().currentlyShown.has(e),
@@ -100,10 +100,10 @@ let s = new(n(499303)).I,
     let e = [...a.getState().currentlyShown].filter(e => !r.O.has(e)).length;
     return [a.getState().currentlyShown.size, e]
   },
-  C = () => {
+  p = () => {
     a.setState(o), s.unschedule()
   };
 
-function p(e) {
+function g(e) {
   return a(e)
 }

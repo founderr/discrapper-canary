@@ -28,19 +28,19 @@ var r = n(866442),
   l = n(403182),
   u = n(51144),
   _ = n(661543),
-  d = n(200299),
-  c = n(486324),
+  c = n(200299),
+  d = n(486324),
   E = n(689938);
 
 function I(e, t, r, o) {
   (0, s.openModalLazy)(async () => {
     let {
       default: s
-    } = await Promise.all([n.e("99387"), n.e("89289")]).then(n.bind(n, 28130));
+    } = await Promise.all([n.e("99387"), n.e("82634")]).then(n.bind(n, 28130));
     return n => (0, i.jsx)(s, {
       filters: o,
-      maxFileSizeBytes: d.B,
-      imageSpecifications: e === c.pC.BANNER && E.Z.Messages.USER_SETTINGS_PROFILE_THEMES_BANNER_MODAL_SPECS,
+      maxFileSizeBytes: c.B,
+      imageSpecifications: e === d.pC.BANNER && E.Z.Messages.USER_SETTINGS_PROFILE_THEMES_BANNER_MODAL_SPECS,
       onComplete: (n, i) => (0, _.j)({
         imageSrc: n,
         file: i,
@@ -59,7 +59,7 @@ function T() {
   (0, o.openUploadError)({
     title: E.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
     help: E.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
-      maxSize: (0, l.Ng)(d.B)
+      maxSize: (0, l.Ng)(c.B)
     })
   })
 }

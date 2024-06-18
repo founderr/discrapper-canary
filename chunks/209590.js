@@ -3,8 +3,8 @@ let i, r;
 n(724458);
 var s, o, a, l, u = n(442837),
   _ = n(433517),
-  d = n(570140),
-  c = n(592125),
+  c = n(570140),
+  d = n(592125),
   E = n(430824);
 let I = "hideSuppressWarning",
   T = !1,
@@ -15,14 +15,14 @@ class f extends(s = u.ZP.Store) {
     S = _.K.get(I) || S
   }
   isAFKChannel() {
-    let e = c.Z.getChannel(r);
+    let e = d.Z.getChannel(r);
     if (null == e) return !1;
     let t = E.Z.getGuild(e.getGuildId());
     return null != t && e.id === t.afkChannelId
   }
   shouldShowWarning() {
     var e;
-    return !(null === (e = c.Z.getChannel(r)) || void 0 === e ? void 0 : e.isGuildStageVoice()) && !h
+    return !(null === (e = d.Z.getChannel(r)) || void 0 === e ? void 0 : e.isGuildStageVoice()) && !h
   }
 }
 l = "PermissionSpeakStore", (a = "displayName") in(o = f) ? Object.defineProperty(o, a, {
@@ -30,7 +30,7 @@ l = "PermissionSpeakStore", (a = "displayName") in(o = f) ? Object.definePropert
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[a] = l, t.Z = new f(d.Z, {
+}) : o[a] = l, t.Z = new f(c.Z, {
   CONNECTION_OPEN: function(e) {
     i = e.sessionId, T = !1
   },

@@ -13,8 +13,8 @@ var r = n(120356),
   l = n(100527),
   u = n(906732),
   _ = n(617136),
-  d = n(497505),
-  c = n(626135),
+  c = n(497505),
+  d = n(626135),
   E = n(785717),
   I = n(221292),
   T = n(290421),
@@ -57,8 +57,8 @@ function A(e) {
           if (null != n) return null == A || A(), n(t)
         },
         onMouseEnter: () => {
-          e.id === T.i && c.default.track(S.rMx.QUEST_CONTENT_VIEWED, {
-            ...(0, _.mH)(d.jn.QUEST_BADGE)
+          e.id === T.i && d.default.track(S.rMx.QUEST_CONTENT_VIEWED, {
+            ...(0, _.mH)(c.jn.QUEST_BADGE)
           }), O({
             action: "HOVER_BADGE"
           }), (0, I.Qf)({

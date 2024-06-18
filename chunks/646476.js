@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   RO: function() {
-    return d
+    return c
   },
   rK: function() {
-    return c
+    return d
   }
 }), n(47120);
 var i = n(470079),
@@ -29,7 +29,7 @@ let l = new Date("2024-01-04T07:59:59.000Z"),
       }
     }]
   }),
-  d = (0, a.Z)({
+  c = (0, a.Z)({
     id: "2023-11_seasonal_gifting_marketing_2023",
     label: "Seasonal Gifting Marketing 2023",
     kind: "user",
@@ -45,7 +45,7 @@ let l = new Date("2024-01-04T07:59:59.000Z"),
     }]
   });
 
-function c() {
+function d() {
   let [e, t] = i.useState(() => u.isAfter(Date.now()));
   return i.useEffect(() => {
     let n = new o.V7,

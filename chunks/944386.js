@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   u: function() {
-    return d
+    return c
   }
 });
 var i = n(470079),
@@ -12,12 +12,12 @@ var i = n(470079),
   l = n(130402),
   u = n(185923),
   _ = n(981631);
-let d = e => {
+let c = e => {
   let {
     emojiId: t,
     currentGuildId: n,
-    popoutData: d,
-    nonce: c,
+    popoutData: c,
+    nonce: d,
     demoMode: E
   } = e, {
     current: I
@@ -29,8 +29,8 @@ let d = e => {
   return i.useEffect(() => {
     var e;
     (0, l.x)(u.qR.TrackOpenPopoutUsed), !E && a.default.track(_.rMx.OPEN_POPOUT, {
-      type: null !== (e = null == d ? void 0 : d.analyticsType) && void 0 !== e ? e : "Standard Emoji Popout",
-      nonce: c,
+      type: null !== (e = null == c ? void 0 : c.analyticsType) && void 0 !== e ? e : "Standard Emoji Popout",
+      nonce: d,
       ...I
     })
   }, []), I

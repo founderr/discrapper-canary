@@ -7,8 +7,8 @@ var i, r = n(348327),
   l = n(570140),
   u = n(457330),
   _ = n(726542),
-  d = n(81063),
-  c = n(70956),
+  c = n(81063),
+  d = n(70956),
   E = n(553795),
   I = n(246946),
   T = n(981631);
@@ -21,17 +21,17 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let S = 1 * c.Z.Millis.MINUTE,
+let S = 1 * d.Z.Millis.MINUTE,
   f = e => "https://youtube.com/watch?v=".concat(e),
-  N = 5 * c.Z.Millis.MINUTE,
+  N = 5 * d.Z.Millis.MINUTE,
   A = /live_user_(.*)-\{width\}/,
   m = null,
   O = 0,
   R = null,
-  C = new Set,
-  p = {};
+  p = new Set,
+  g = {};
 
-function g(e, t, n) {
+function C(e, t, n) {
   return a.tn.get({
     url: "".concat("https://api.twitch.tv/helix").concat(e),
     query: t,
@@ -41,19 +41,19 @@ function g(e, t, n) {
     }
   })
 }
-async function L(e, t) {
-  let n = p[e];
+async function v(e, t) {
+  let n = g[e];
   if (null != n) return n;
   let {
     body: {
       data: i
     }
-  } = await g("/games", {
+  } = await C("/games", {
     id: e
   }, t), r = i[0].name;
-  return p[e] = r, r
+  return g[e] = r, r
 }
-let v = new class e {
+let L = new class e {
   start() {
     !this._started && (this._started = !0, E.Z.isFetching() ? u.Z.fetch() : this._check())
   }
@@ -72,18 +72,18 @@ let v = new class e {
         body: {
           data: a
         }
-      } = await g("/streams", {
+      } = await C("/streams", {
         user_id: e.id,
         first: 1
       }, t), l = a[0];
       if (null == l || "live" !== l.type) throw Error("no stream");
       let {
         thumbnail_url: u,
-        game_id: c,
+        game_id: d,
         title: E
       } = l, I = {
-        large_image: null != u && null !== (i = (0, d.getAssetFromImageURL)(T.ABu.TWITCH, u)) && void 0 !== i ? i : void 0
-      }, h = await L(c, t), S = _.Z.get(T.ABu.TWITCH);
+        large_image: null != u && null !== (i = (0, c.getAssetFromImageURL)(T.ABu.TWITCH, u)) && void 0 !== i ? i : void 0
+      }, h = await v(d, t), S = _.Z.get(T.ABu.TWITCH);
       let f = null !== (s = u, r = null === (o = A.exec(s)) || void 0 === o ? void 0 : o[1]) && void 0 !== r ? r : e.name;
       return {
         url: null === (n = S.getPlatformUserUrl) || void 0 === n ? void 0 : n.call(S, {
@@ -102,7 +102,7 @@ let v = new class e {
   }
   async _checkYouTube(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-    if (R = null, e.revoked || C.has(e.id)) return null;
+    if (R = null, e.revoked || p.has(e.id)) return null;
     try {
       var n;
       let {
@@ -129,7 +129,7 @@ let v = new class e {
           thumbnails: o
         }
       } = i[0], l = {
-        large_image: null !== (n = (0, d.getAssetFromImageURL)(T.ABu.YOUTUBE, o.high.url)) && void 0 !== n ? n : void 0
+        large_image: null !== (n = (0, c.getAssetFromImageURL)(T.ABu.YOUTUBE, o.high.url)) && void 0 !== n ? n : void 0
       };
       return R = {
         url: f(r),
@@ -139,7 +139,7 @@ let v = new class e {
       }
     } catch (n) {
       if (401 === n.status && null == t) return u.Z.refreshAccessToken(e.type, e.id).then(t => this._checkYouTube(e, t)).catch(() => null);
-      return 403 === n.status && C.add(e.id), null
+      return 403 === n.status && p.add(e.id), null
     }
   }
   _check() {
@@ -170,7 +170,7 @@ let v = new class e {
 };
 
 function D() {
-  I.Z.enabled ? v.start() : v.stop()
+  I.Z.enabled ? L.start() : L.stop()
 }
 class M extends(i = o.ZP.Store) {
   initialize() {
@@ -186,5 +186,5 @@ h(M, "displayName", "ExternalStreamingStore"), t.Z = new M(l.Z, {
     if (s()(e.stream, m)) return !1;
     m = null !== (t = e.stream) && void 0 !== t ? t : null
   },
-  USER_CONNECTIONS_UPDATE: () => v._check()
+  USER_CONNECTIONS_UPDATE: () => L._check()
 })

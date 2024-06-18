@@ -4,8 +4,8 @@ n(47120);
 var r, s, o, a, l = n(442837),
   u = n(433517),
   _ = n(570140),
-  d = n(902676),
-  c = n(626135),
+  c = n(902676),
+  d = n(626135),
   E = n(358085),
   I = n(704133),
   T = n(981631);
@@ -30,14 +30,14 @@ class N extends(r = l.ZP.Store) {
   isBlockedDomain(e) {
     let t = n(647229);
     if (null == f) return this.getBlockedDomainList(), null;
-    let i = (0, d.F)(e),
+    let i = (0, c.F)(e),
       r = new t.hash.sha256,
       s = t.codec.hex.fromBits(r.update(i).finalize()),
       o = "";
     f.has(s) && (o = i);
     let a = i.indexOf(".");
     for (; - 1 !== a && "" === o;) i = i.substring(a + 1), r.reset(), s = t.codec.hex.fromBits(r.update(i).finalize()), f.has(s) && (o = i), a = i.indexOf(".");
-    return "" !== o ? (c.default.track(T.rMx.LINK_SECURITY_CHECK_BLOCKED, {
+    return "" !== o ? (d.default.track(T.rMx.LINK_SECURITY_CHECK_BLOCKED, {
       blocked_domain: o
     }), o) : null
   }

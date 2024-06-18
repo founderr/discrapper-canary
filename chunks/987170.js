@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return c
+    return d
   }
 }), n(47120);
 var i = n(470079),
@@ -16,23 +16,23 @@ function _(e, t, n) {
   return "guild" === e ? a.Z.getGuildExperimentDescriptor(t, n.guildId) : a.Z.getUserExperimentDescriptor(t)
 }
 
-function d(e, t, n, i) {
+function c(e, t, n, i) {
   var r, s;
   return (null == i ? void 0 : i.aaMode) ? e.defaultConfig : null !== (s = null === (r = n.get(t)) || void 0 === r ? void 0 : r.config) && void 0 !== s ? s : e.defaultConfig
 }
 
-function c(e) {
+function d(e) {
   var t, n;
   (0, l.K)(e.id, e.label, e.commonTriggerPoint);
-  let c = new Map;
-  c.set(u.NZ.NOT_ELIGIBLE, {
+  let d = new Map;
+  d.set(u.NZ.NOT_ELIGIBLE, {
     description: "Not Eligible",
     config: e.defaultConfig
-  }), c.set(u.NZ.CONTROL, {
+  }), d.set(u.NZ.CONTROL, {
     description: "Control Bucket",
     config: e.defaultConfig
   }), e.treatments.forEach(e => {
-    c.set(e.id, {
+    d.set(e.id, {
       description: "Treatment ".concat(e.id, ": ").concat(e.label),
       config: e.config
     })
@@ -41,8 +41,8 @@ function c(e) {
     id: e.id,
     title: e.label,
     commonTriggerPoint: e.commonTriggerPoint,
-    description: [...c.values()].map(e => e.description),
-    buckets: [...c.keys()]
+    description: [...d.values()].map(e => e.description),
+    buckets: [...d.keys()]
   }, "guild" === t ? (0, o.gK)(n) : (0, o.Xz)(n));
 
   function I(e) {
@@ -68,13 +68,13 @@ function c(e) {
   function h(e, t, n) {
     if (null != n) {
       var i, r, a, l, _;
-      let d = u.a0.MANUAL;
+      let c = u.a0.MANUAL;
       (0, o.W9)(E.id, n, {
         location: null !== (i = null == e ? void 0 : e.location) && void 0 !== i ? i : "unknown",
         analyticsLocations: null !== (r = null == t ? void 0 : t.analyticsLocations) && void 0 !== r ? r : [],
         fingerprint: null !== (l = null !== (a = null == t ? void 0 : t.fingerprint) && void 0 !== a ? a : s.default.getFingerprint()) && void 0 !== l ? l : void 0,
         excluded: (null == t ? void 0 : t.excluded) || !1,
-        exposureType: null !== (_ = null == t ? void 0 : t.exposureType) && void 0 !== _ ? _ : d
+        exposureType: null !== (_ = null == t ? void 0 : t.exposureType) && void 0 !== _ ? _ : c
       })
     }
   }
@@ -90,9 +90,9 @@ function c(e) {
       let i = _(e.kind, e.id, t),
         s = null == i || r ? u.NZ.NOT_ELIGIBLE : i.bucket,
         a = null == i ? -1 : i.revision;
-      (s !== o || l !== a) && (n(d(e, s, c, i), s, a), o = s, l = a)
+      (s !== o || l !== a) && (n(c(e, s, d, i), s, a), o = s, l = a)
     }
-    return n(d(e, o, c, s), o, l), a.Z.addReactChangeListener(E), () => {
+    return n(c(e, o, d, s), o, l), a.Z.addReactChangeListener(E), () => {
       a.Z.removeReactChangeListener(E)
     }
   }
@@ -111,7 +111,7 @@ function c(e) {
           [N, A, m], O
         ] = (0, i.useState)(() => {
           let t = null == T || l ? u.NZ.NOT_ELIGIBLE : T.bucket;
-          return [d(e, t, c, T), t, null == T ? -1 : T.revision]
+          return [c(e, t, d, T), t, null == T ? -1 : T.revision]
         }),
         R = (0, r.Z)(t);
       return (0, i.useEffect)(() => {
@@ -129,12 +129,12 @@ function c(e) {
           autoTrackExposure: !0
         },
         i = _(e.kind, e.id, t);
-      if (null == i || n.disable) return d(e, u.NZ.NOT_ELIGIBLE, c, i);
+      if (null == i || n.disable) return c(e, u.NZ.NOT_ELIGIBLE, d, i);
       if (!1 !== n.autoTrackExposure || i.triggerDebuggingEnabled) {
         let e = !1 === n.autoTrackExposure;
         I(t, n.trackExposureOptions, e, i)
       }
-      return d(e, i.bucket, c, i)
+      return c(e, i.bucket, d, i)
     },
     definition: e,
     isAAMode: function(t) {

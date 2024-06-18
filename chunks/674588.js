@@ -30,8 +30,8 @@ var i = n(261470),
   l = n(894653),
   u = n(368862),
   _ = n(809547),
-  d = n(303383),
-  c = n(973001),
+  c = n(303383),
+  d = n(973001),
   E = n(981631);
 let I = 12633 == n.j ? 864e5 : null,
   T = new Map;
@@ -123,16 +123,16 @@ async function N(e) {
     options: a
   } = e, {
     page: l
-  } = null != a ? a : {}, u = Date.now(), _ = d.Z.getFetchState({
+  } = null != a ? a : {}, u = Date.now(), _ = c.Z.getFetchState({
     applicationId: n,
     guildId: i
   }), {
-    lastFetchTimeMs: c
-  } = null !== (t = d.Z.getSimilarApplications({
+    lastFetchTimeMs: d
+  } = null !== (t = c.Z.getSimilarApplications({
     applicationId: n,
     guildId: i
   })) && void 0 !== t ? t : {};
-  if (_ !== d.M.FETCHING && (null == c || !(c + 6e5 > u))) {
+  if (_ !== c.M.FETCHING && (null == d || !(d + 6e5 > u))) {
     s.Z.dispatch({
       type: "APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS",
       applicationId: n,
@@ -176,24 +176,24 @@ async function A(e) {
     onSuccessCallback: l
   } = e, {
     page: u,
-    categoryId: d,
-    integrationType: c,
+    categoryId: c,
+    integrationType: d,
     minUserInstallCommandCount: I,
     excludeAppsWithCustomInstallUrl: T
   } = null != a ? a : {}, h = Date.now(), S = _.Z.getFetchState({
     query: n,
     guildId: i,
     page: u,
-    categoryId: d,
-    integrationType: c
+    categoryId: c,
+    integrationType: d
   }), {
     lastFetchTimeMs: f
   } = null !== (t = _.Z.getSearchResults({
     query: n,
     guildId: i,
     page: u,
-    categoryId: d,
-    integrationType: c
+    categoryId: c,
+    integrationType: d
   })) && void 0 !== t ? t : {};
   if (S !== _.M.FETCHING && (null == f || !(f + 6e5 > h))) {
     s.Z.dispatch({
@@ -201,8 +201,8 @@ async function A(e) {
       query: n,
       guildId: i,
       page: u,
-      categoryId: d,
-      integrationType: c,
+      categoryId: c,
+      integrationType: d,
       minUserInstallCommandCount: I,
       excludeAppsWithCustomInstallUrl: T
     });
@@ -213,9 +213,9 @@ async function A(e) {
           query: n,
           guild_id: i,
           page: u,
-          category_id: d,
+          category_id: c,
           locale: o.default.locale,
-          integration_type: c,
+          integration_type: d,
           min_user_install_command_count: I,
           exclude_apps_with_custom_install_url: T
         }
@@ -225,8 +225,8 @@ async function A(e) {
         query: n,
         guildId: i,
         page: u,
-        categoryId: d,
-        integrationType: c,
+        categoryId: c,
+        integrationType: d,
         result: {
           results: e.body.results,
           countsByCategory: e.body.counts_by_category,
@@ -244,8 +244,8 @@ async function A(e) {
         query: n,
         guildId: i,
         page: u,
-        categoryId: d,
-        integrationType: c,
+        categoryId: c,
+        integrationType: d,
         minUserInstallCommandCount: I,
         excludeAppsWithCustomInstallUrl: T
       })
@@ -288,10 +288,10 @@ async function m() {
 }
 async function O() {
   let e = Date.now(),
-    t = c.Z.getFetchState(),
-    n = c.Z.getLastFetchTimeMs(),
-    i = c.Z.getNextFetchRetryTimeMs();
-  if (t !== c.M.FETCHING && (null == n || !(n + I > e)) && (null == i || !(e < i))) {
+    t = d.Z.getFetchState(),
+    n = d.Z.getLastFetchTimeMs(),
+    i = d.Z.getNextFetchRetryTimeMs();
+  if (t !== d.M.FETCHING && (null == n || !(n + I > e)) && (null == i || !(e < i))) {
     s.Z.dispatch({
       type: "FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS"
     });

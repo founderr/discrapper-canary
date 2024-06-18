@@ -13,8 +13,8 @@ var r = n(481060),
   l = n(300429),
   u = n(594174),
   _ = n(626135),
-  d = n(760729),
-  c = n(74538),
+  c = n(760729),
+  d = n(74538),
   E = n(981631),
   I = n(689938);
 
@@ -28,11 +28,11 @@ function T(e) {
     channel: f,
     restrictMentions: N = !0,
     respectCooldown: A = !0
-  } = e, m = c.ZP.canUseIncreasedMessageLength(u.default.getCurrentUser());
+  } = e, m = d.ZP.canUseIncreasedMessageLength(u.default.getCurrentUser());
   return new Promise(e => (function(e) {
     var t, n, u;
     let {
-      openWarningPopout: c,
+      openWarningPopout: d,
       type: T,
       content: h,
       stickers: S,
@@ -50,11 +50,11 @@ function T(e) {
       });
       return
     }
-    let C = O ? E.en1 : E.J6R;
-    if (h.length > C) {
+    let p = O ? E.en1 : E.J6R;
+    if (h.length > p) {
       if (O || null == N) {
         ;
-        n = h.length, u = C, (0, r.openModal)(e => (0, i.jsx)(o.default, {
+        n = h.length, u = p, (0, r.openModal)(e => (0, i.jsx)(o.default, {
           title: I.Z.Messages.MESSAGE_TOO_LONG_HEADER,
           body: I.Z.Messages.MESSAGE_TOO_LONG_BODY_TEXT.format({
             currentLength: n,
@@ -85,16 +85,16 @@ function T(e) {
         });
         return
       }
-      if (null != c)
+      if (null != d)
         for (let {
             check: e,
             analyticsType: t,
             animation: n
           }
-          of d.$) {
+          of c.$) {
           let i = e(h, N, A);
           if (!1 !== i) {
-            c({
+            d({
               analyticsType: t,
               channel: N,
               onCancel: () => R({

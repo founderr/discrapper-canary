@@ -12,8 +12,8 @@ var i = n(392711),
   l = n(865427),
   u = n(710845),
   _ = n(314897),
-  d = n(412788),
-  c = n(626135),
+  c = n(412788),
+  d = n(626135),
   E = n(360359),
   I = n(987338),
   T = n(981631);
@@ -33,11 +33,11 @@ let S = "scientist:triggered",
   m = new u.Z("ExperimentStore"),
   O = !1,
   R = {},
-  C = {},
-  p = [],
+  p = {},
   g = [],
-  L = {},
+  C = [],
   v = {},
+  L = {},
   D = {},
   M = {},
   P = {},
@@ -111,13 +111,13 @@ function H(e) {
     };
     null != s && (e.context_guild_id = s.guildId);
     let _ = u ? T.rMx.EXPERIMENT_USER_TRIGGERED_FALLBACK : T.rMx.EXPERIMENT_USER_TRIGGERED;
-    c.default.track(_, e, {
+    d.default.track(_, e, {
       flush: !0,
       fingerprint: o
     })
   } else if (n.type === I.xY.GUILD) {
     let e = u ? T.rMx.EXPERIMENT_GUILD_TRIGGERED_FALLBACK : T.rMx.EXPERIMENT_GUILD_TRIGGERED;
-    c.default.track(e, {
+    d.default.track(e, {
       name: t,
       revision: n.revision,
       bucket: n.bucket,
@@ -168,7 +168,7 @@ function Y(e) {
 }
 
 function j(e) {
-  !y && "CONNECTION_OPEN" === e.type && k(e.user) && (y = !0), L = {}, v = {}, D = {};
+  !y && "CONNECTION_OPEN" === e.type && k(e.user) && (y = !0), v = {}, L = {}, D = {};
   let t = "CONNECTION_OPEN" === e.type || null == e.fingerprint || e.fingerprint === _.default.getFingerprint(),
     {
       experiments: i,
@@ -178,9 +178,9 @@ function j(e) {
 }
 
 function W(e, t) {
-  p = e, g = null != t ? t : [], e.forEach(e => {
+  g = e, C = null != t ? t : [], e.forEach(e => {
     let [t, n, i, r, s, o, a, l] = e;
-    L[t] = {
+    v[t] = {
       type: "user",
       revision: n,
       population: s,
@@ -192,7 +192,7 @@ function W(e, t) {
     }
   }), null != t && t.forEach(e => {
     let [t, n, i, r, s, o, a, l, u, _] = e;
-    v[t] = {
+    L[t] = {
       hashKey: n,
       revision: i,
       populations: r.map(Y),
@@ -269,7 +269,7 @@ function q(e) {
     serializedExperimentStore: t,
     user: n
   } = e;
-  !y && k(n) && (y = !0), O = t.hasLoadedExperiments, R = t.trackedExposureExperiments, L = t.loadedUserExperiments, M = t.userExperimentOverrides, P = t.guildExperimentOverrides, v = z(t.loadedGuildExperiments), D = {}
+  !y && k(n) && (y = !0), O = t.hasLoadedExperiments, R = t.trackedExposureExperiments, v = t.loadedUserExperiments, M = t.userExperimentOverrides, P = t.guildExperimentOverrides, L = z(t.loadedGuildExperiments), D = {}
 }
 
 function X() {
@@ -280,7 +280,7 @@ function Q(e) {
   let {
     isSwitchingAccount: t
   } = e;
-  a.K.remove(S), !t && (a.K.remove(f), a.K.remove(N), a.K.remove(A), M = {}, P = {}), L = {}, p = [], R = {}, O = !1
+  a.K.remove(S), !t && (a.K.remove(f), a.K.remove(N), a.K.remove(A), M = {}, P = {}), v = {}, g = [], R = {}, O = !1
 }
 
 function J() {
@@ -291,7 +291,7 @@ function $() {
   try {
     a.K.set(N, M)
   } catch (e) {
-    m.error("Error saving user experiment overrides, unsaved data will be lost", e), c.default.track(T.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
+    m.error("Error saving user experiment overrides, unsaved data will be lost", e), d.default.track(T.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
       module: "discord_app",
       call: "ExperimentStore.saveExperimentOverrides"
     })
@@ -299,7 +299,7 @@ function $() {
   try {
     a.K.set(A, P)
   } catch (e) {
-    m.error("Error saving guild experiment overrides, unsaved data will be lost", e), c.default.track(T.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
+    m.error("Error saving guild experiment overrides, unsaved data will be lost", e), d.default.track(T.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
       module: "discord_app",
       call: "ExperimentStore.saveExperimentOverrides"
     })
@@ -313,7 +313,7 @@ function ee(e) {
       e: e
     })
   } catch (e) {
-    m.error("Error saving tracked exposure experiments, unsaved data will be lost", e), c.default.track(T.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
+    m.error("Error saving tracked exposure experiments, unsaved data will be lost", e), d.default.track(T.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
       module: "discord_app",
       call: "ExperimentStore.saveTrackedExposureExperiments"
     })
@@ -329,7 +329,7 @@ function et(e) {
     buckets: s,
     commonTriggerPoint: o
   } = e;
-  C[t] = {
+  p[t] = {
     type: n,
     title: i,
     description: r,
@@ -345,7 +345,7 @@ function en(e) {
     experimentBucket: i,
     experimentType: r,
     skipCleanup: s
-  } = e, o = null != r ? r : null === (t = C[n]) || void 0 === t ? void 0 : t.type;
+  } = e, o = null != r ? r : null === (t = p[n]) || void 0 === t ? void 0 : t.type;
   if (null == o) return !1;
   if (null == i ? (M = {
       ...M
@@ -370,7 +370,7 @@ function en(e) {
       }
     }, !s)
     for (let e of [M, P])
-      for (let t in e) null == C[t] && delete M[t];
+      for (let t in e) null == p[t] && delete M[t];
   $()
 }
 
@@ -383,7 +383,7 @@ function ei(e) {
     t.id === n && delete D[e]
   }
 }
-class er extends d.Z {
+class er extends c.Z {
   initialize() {
     R = function() {
       let e = a.K.get(S);
@@ -423,14 +423,14 @@ class er extends d.Z {
   }
   loadCache() {
     let e = this.readSnapshot(er.LATEST_SNAPSHOT_VERSION);
-    null != e && ("loadedUserExperiments" in e ? (L = e.loadedUserExperiments, v = z(e.loadedGuildExperiments)) : W(e.rawUserExperiments, e.rawGuildExperiments))
+    null != e && ("loadedUserExperiments" in e ? (v = e.loadedUserExperiments, L = z(e.loadedGuildExperiments)) : W(e.rawUserExperiments, e.rawGuildExperiments))
   }
   takeSnapshot() {
     return {
       version: er.LATEST_SNAPSHOT_VERSION,
       data: {
-        rawUserExperiments: p,
-        rawGuildExperiments: g
+        rawUserExperiments: g,
+        rawGuildExperiments: C
       }
     }
   }
@@ -438,7 +438,7 @@ class er extends d.Z {
     return O
   }
   hasRegisteredExperiment(e) {
-    return null != C[e]
+    return null != p[e]
   }
   getUserExperimentDescriptor(e) {
     if (y) {
@@ -446,7 +446,7 @@ class er extends d.Z {
       if (null != t) return t
     }
     let t = b(e);
-    return L["".concat(t)]
+    return v["".concat(t)]
   }
   getGuildExperimentDescriptor(e, t) {
     let n = null != t ? t : T.lds,
@@ -457,7 +457,7 @@ class er extends d.Z {
     let s = function e(t, n) {
       var i, r;
       let s = b(n),
-        o = v["".concat(s)];
+        o = L["".concat(s)];
       if (null == o) return null;
       let {
         revision: a,
@@ -472,19 +472,19 @@ class er extends d.Z {
         hashResult: -1,
         triggerDebuggingEnabled: _
       };
-      let d = b("".concat(null !== (i = o.hashKey) && void 0 !== i ? i : n, ":").concat(t)) % 1e4,
-        c = null;
+      let c = b("".concat(null !== (i = o.hashKey) && void 0 !== i ? i : n, ":").concat(t)) % 1e4,
+        d = null;
       for (let e of null !== (r = o.overridesFormatted) && void 0 !== r ? r : [])
-        if (null !== (c = K(t, e, d))) return {
+        if (null !== (d = K(t, e, c))) return {
           type: I.xY.GUILD,
           guildId: t,
           revision: o.revision,
-          bucket: c,
+          bucket: d,
           override: !0,
-          hashResult: d,
+          hashResult: c,
           triggerDebuggingEnabled: _
         };
-      if (null == (c = K(t, o.populations, d))) return null;
+      if (null == (d = K(t, o.populations, c))) return null;
       if (null != o.holdoutName && null != o.holdoutBucket && o.holdoutName !== n) {
         let n = e(t, o.holdoutName);
         if ((null == n ? void 0 : n.bucket) != null && (!0 !== n.override && H({
@@ -496,8 +496,8 @@ class er extends d.Z {
         type: I.xY.GUILD,
         guildId: t,
         revision: o.revision,
-        bucket: c,
-        hashResult: d,
+        bucket: d,
+        hashResult: c,
         aaMode: l,
         triggerDebuggingEnabled: _
       }
@@ -513,16 +513,16 @@ class er extends d.Z {
     return null != n ? n.bucket : I.NZ.NOT_ELIGIBLE
   }
   getAllUserExperimentDescriptors() {
-    return L
-  }
-  getGuildExperiments() {
     return v
   }
+  getGuildExperiments() {
+    return L
+  }
   getLoadedUserExperiment(e) {
-    return L[b(e)]
+    return v[b(e)]
   }
   getLoadedGuildExperiment(e) {
-    return v[b(e)]
+    return L[b(e)]
   }
   getRecentExposures(e, t) {
     let n = "".concat(e, "|").concat(t, "|");
@@ -537,7 +537,7 @@ class er extends d.Z {
     })
   }
   getRegisteredExperiments() {
-    return C
+    return p
   }
   getAllExperimentOverrideDescriptors() {
     return y ? {
@@ -552,11 +552,11 @@ class er extends d.Z {
   getAllExperimentAssignments() {
     let e = {},
       t = {};
-    for (let n in Object.keys(C).forEach(e => {
+    for (let n in Object.keys(p).forEach(e => {
         t[b("".concat(e))] = e
-      }), L) {
+      }), v) {
       let i = t[n];
-      null != i && (e[i] = L[n].bucket)
+      null != i && (e[i] = v[n].bucket)
     }
     for (let t in D) {
       let n = D[t];
@@ -566,12 +566,12 @@ class er extends d.Z {
   }
   getSerializedState() {
     let e = {};
-    for (let t in v)
-      for (let n of (e[t] = JSON.parse(JSON.stringify(v[t])), e[t].populations)) n.filters = [];
+    for (let t in L)
+      for (let n of (e[t] = JSON.parse(JSON.stringify(L[t])), e[t].populations)) n.filters = [];
     return {
       hasLoadedExperiments: O,
       trackedExposureExperiments: R,
-      loadedUserExperiments: L,
+      loadedUserExperiments: v,
       loadedGuildExperiments: e,
       userExperimentOverrides: M,
       guildExperimentOverrides: P

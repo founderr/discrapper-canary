@@ -8,8 +8,8 @@ var i = n(592125),
   l = n(553245),
   u = n(143806),
   _ = n(814074),
-  d = n(582142),
-  c = n(989263),
+  c = n(582142),
+  d = n(989263),
   E = n(872261);
 
 function I(e, t, n) {
@@ -37,7 +37,7 @@ class N extends o.Z {
   }
   saveLimit(e) {
     let t = i.Z.getBasicChannel(e);
-    return null != t && (0, d.p)(t) || null != t && h.has(e) ? 25 : 1
+    return null != t && (0, c.p)(t) || null != t && h.has(e) ? 25 : 1
   }
   getSaveableChannels() {
     let e = i.Z.getChannelIds(null).map(e => ({
@@ -66,7 +66,7 @@ class N extends o.Z {
   }
   static recordChannel(e) {
     let t = i.Z.getBasicChannel(e);
-    if (null != t && (0, c.v)(t)) {
+    if (null != t && (0, d.v)(t)) {
       var n;
       let i = {
         guildId: null !== (n = t.guild_id) && void 0 !== n ? n : null,
@@ -85,11 +85,11 @@ class N extends o.Z {
   static dropUnreachableChannels() {
     for (let e of h.keys()) {
       let t = i.Z.getBasicChannel(e);
-      !(0, c.v)(t) && N.deleteChannel(e)
+      !(0, d.v)(t) && N.deleteChannel(e)
     }
   }
   static deleteUnreadableGuildChannels(e) {
-    for (let t of h.values()) e === t.guildId && !(0, c.$)(t.channelId) && N.deleteChannel(t.channelId)
+    for (let t of h.values()) e === t.guildId && !(0, d.$)(t.channelId) && N.deleteChannel(t.channelId)
   }
   static replaceLru(e) {
     h = e
@@ -98,13 +98,13 @@ class N extends o.Z {
     super({
       CACHE_LOADED_LAZY_NO_CACHE: D,
       CACHE_LOADED_LAZY: () => this.loadCache(),
-      CHANNEL_DELETE: C,
+      CHANNEL_DELETE: p,
       CHANNEL_UPDATES: R,
       CONNECTION_OPEN_SUPPLEMENTAL: m,
-      GUILD_DELETE: L,
-      LOGIN_SUCCESS: v,
-      THREAD_DELETE: g,
-      THREAD_UPDATE: p
+      GUILD_DELETE: v,
+      LOGIN_SUCCESS: L,
+      THREAD_DELETE: C,
+      THREAD_UPDATE: g
     })
   }
 }
@@ -120,7 +120,7 @@ function m() {
 
 function O(e) {
   let t = e.id,
-    n = (0, c.v)(e),
+    n = (0, d.v)(e),
     i = s.Z.getChannelId();
   n && t === i && N.recordChannel(t), !n && N.deleteChannel(t)
 }
@@ -129,23 +129,23 @@ function R(e) {
   for (let t of e.channels) O(t)
 }
 
+function p(e) {
+  N.deleteChannel(e.channel.id)
+}
+
+function g(e) {
+  O(e.channel)
+}
+
 function C(e) {
   N.deleteChannel(e.channel.id)
 }
 
-function p(e) {
-  O(e.channel)
-}
-
-function g(e) {
-  N.deleteChannel(e.channel.id)
-}
-
-function L(e) {
+function v(e) {
   return !e.guild.unavailable && (N.deleteGuild(e.guild.id), !0)
 }
 
-function v(e) {
+function L(e) {
   h.clear(), S.clear(), f = !1
 }
 

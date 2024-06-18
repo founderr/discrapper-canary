@@ -2,9 +2,9 @@
 var n = t(735250);
 t(470079);
 var a = t(780384),
-  i = t(481060),
+  r = t(481060),
   l = t(410030),
-  r = t(689938),
+  i = t(689938),
   o = t(797056),
   c = t(982240),
   u = t(533854);
@@ -18,19 +18,19 @@ s.Z = e => {
       className: o.__invalid_loadIssueImg,
       src: (0, a.wj)(t) ? c : u,
       alt: ""
-    }), (0, n.jsx)(i.Heading, {
+    }), (0, n.jsx)(r.Heading, {
       className: o.heading1,
       variant: "heading-xl/semibold",
-      children: r.Z.Messages.COLLECTIBLES_SHOP_ERROR_HEADING
-    }), (0, n.jsx)(i.Text, {
+      children: i.Z.Messages.COLLECTIBLES_SHOP_ERROR_HEADING
+    }), (0, n.jsx)(r.Text, {
       variant: "text-md/normal",
-      children: r.Z.Messages.COLLECTIBLES_SHOP_ERROR_SHOP_LOAD
-    }), (0, n.jsx)(i.Button, {
+      children: i.Z.Messages.COLLECTIBLES_SHOP_ERROR_SHOP_LOAD
+    }), (0, n.jsx)(r.Button, {
       className: o.reload,
-      size: i.Button.Sizes.MEDIUM,
-      color: i.Button.Colors.BRAND,
+      size: r.Button.Sizes.MEDIUM,
+      color: r.Button.Colors.BRAND,
       onClick: s,
-      children: r.Z.Messages.ERRORS_RELOAD
+      children: i.Z.Messages.ERRORS_RELOAD
     })]
   })
 }

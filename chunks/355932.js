@@ -9,7 +9,7 @@ var i = n(735250),
   u = n(689938),
   _ = n(691553);
 
-function d(e) {
+function c(e) {
   let {
     items: t,
     renderItem: n
@@ -34,7 +34,7 @@ t.Z = function(e) {
     items: n,
     renderItem: s,
     itemGapPx: a = 0,
-    maxLines: c
+    maxLines: d
   } = e, {
     lastVisibleIndex: E,
     containerRef: I,
@@ -45,7 +45,7 @@ t.Z = function(e) {
       itemGapPx: t,
       items: n,
       maxLines: i
-    } = e, [s, o] = r.useState(0), [a, u] = r.useState(0), _ = r.useRef([]), d = r.useRef(0), c = r.useRef(0), E = r.useRef(null), I = r.useRef(null), T = (0, l.y)(e => {
+    } = e, [s, o] = r.useState(0), [a, u] = r.useState(0), _ = r.useRef([]), c = r.useRef(0), d = r.useRef(0), E = r.useRef(null), I = r.useRef(null), T = (0, l.y)(e => {
       let t = null == e ? void 0 : e.getBoundingClientRect().width;
       null != t && u(t)
     });
@@ -57,7 +57,7 @@ t.Z = function(e) {
           width: n
         } = e.getBoundingClientRect();
         _.current[t] = n
-      }), d.current = null !== (e = I.current.getBoundingClientRect().width) && void 0 !== e ? e : 0;
+      }), c.current = null !== (e = I.current.getBoundingClientRect().width) && void 0 !== e ? e : 0;
       let r = function(e) {
         let {
           items: t,
@@ -70,10 +70,10 @@ t.Z = function(e) {
         for (let e = 0; e < t.length; e++) {
           let _ = i[e];
           if (isNaN(_) || _ > s) continue;
-          let d = a === n - 1,
-            c = e === t.length - 1;
-          if (!(l + _ + (d && !c ? o + r : 0) < s)) {
-            if (d) break;
+          let c = a === n - 1,
+            d = e === t.length - 1;
+          if (!(l + _ + (c && !d ? o + r : 0) < s)) {
+            if (c) break;
             a++, l = 0
           }
           u = e, l += _ + r
@@ -85,11 +85,11 @@ t.Z = function(e) {
         itemGapPx: t,
         containerWidth: a,
         itemWidths: _.current,
-        overflowWidth: d.current
+        overflowWidth: c.current
       });
-      r !== c.current && (c.current = r, o(e => e + 1))
+      r !== d.current && (d.current = r, o(e => e + 1))
     }, [a, t, n, i]), r.useMemo(() => ({
-      lastVisibleIndex: c.current,
+      lastVisibleIndex: d.current,
       containerRef: T,
       itemsRef: E,
       overflowItemsRef: I,
@@ -98,7 +98,7 @@ t.Z = function(e) {
   }({
     items: n,
     itemGapPx: a,
-    maxLines: c
+    maxLines: d
   }), S = r.useMemo(() => n.slice(0, E + 1), [n, E]), f = r.useMemo(() => n.slice(E + 1), [n, E]);
   return (0, i.jsxs)("div", {
     className: o()(t, _.items),
@@ -117,7 +117,7 @@ t.Z = function(e) {
           count: Number("1".concat(n.length))
         }))
       })]
-    }), S.map(s), f.length > 0 && (0, i.jsx)(d, {
+    }), S.map(s), f.length > 0 && (0, i.jsx)(c, {
       items: f,
       renderItem: s
     })]

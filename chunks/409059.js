@@ -3,19 +3,19 @@ var i, r, s, o, a = n(442837),
   l = n(570140),
   u = n(741847),
   _ = n(58346);
-let d = {},
-  c = null;
+let c = {},
+  d = null;
 
 function E(e, t) {
   var n;
-  let i = null !== (n = d[e]) && void 0 !== n ? n : {
+  let i = null !== (n = c[e]) && void 0 !== n ? n : {
     code: e,
     state: _.Rj.RESOLVING
   };
   t(i = {
     ...i
-  }), d = {
-    ...d,
+  }), c = {
+    ...c,
     [e]: i
   }
 }
@@ -38,19 +38,19 @@ function h(e) {
 }
 class S extends(o = a.ZP.Store) {
   getGuildTemplate(e) {
-    return null != e ? d[e] : null
+    return null != e ? c[e] : null
   }
   getGuildTemplates() {
-    return d
+    return c
   }
   getForGuild(e) {
-    for (let t in d) {
-      let n = d[t];
+    for (let t in c) {
+      let n = c[t];
       if ("sourceGuildId" in n && n.sourceGuildId === e && n.state !== _.Rj.EXPIRED) return n
     }
   }
   getDisplayedGuildTemplateCode() {
-    return c
+    return d
   }
 }
 s = "GuildTemplateStore", (r = "displayName") in(i = S) ? Object.defineProperty(i, r, {
@@ -63,8 +63,8 @@ s = "GuildTemplateStore", (r = "displayName") in(i = S) ? Object.defineProperty(
     let {
       code: t
     } = e;
-    d = {
-      ...d,
+    c = {
+      ...c,
       [t]: {
         code: t,
         state: _.Rj.RESOLVING
@@ -99,9 +99,9 @@ s = "GuildTemplateStore", (r = "displayName") in(i = S) ? Object.defineProperty(
     })
   },
   GUILD_TEMPLATE_MODAL_SHOW: function(e) {
-    c = e.code
+    d = e.code
   },
   GUILD_TEMPLATE_MODAL_HIDE: function(e) {
-    c = null
+    d = null
   }
 })

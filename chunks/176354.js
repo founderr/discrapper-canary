@@ -18,8 +18,8 @@ var i = n(738774),
   l = n(594174),
   u = n(768581),
   _ = n(563114),
-  d = n(956664),
-  c = n(74538),
+  c = n(956664),
+  d = n(74538),
   E = n(981631),
   I = n(185923);
 let T = new Set([I.Z5.PREMIUM_LOCKED, I.Z5.ROLE_SUBSCRIPTION_LOCKED]),
@@ -44,20 +44,20 @@ function A(e) {
     forceIncludeExternalGuilds: _
   } = e;
   if (!f(t)) return null;
-  let d = null != n && (0, o.zi)(n.type),
+  let c = null != n && (0, o.zi)(n.type),
     T = null != n && (0, o.bw)(n.type),
     h = N(t, r),
     S = a.Z.can(E.Plq.USE_EXTERNAL_EMOJIS, n);
   if (u === I.Hz.COMMUNITY_CONTENT) return h && null != t.guildId && t.available ? null : I.Z5.DISALLOW_EXTERNAL;
-  if (!(0, I.Gt)(u) && !N(t, r) && !_ || (d || T) && !h && !S) return I.Z5.DISALLOW_EXTERNAL;
+  if (!(0, I.Gt)(u) && !N(t, r) && !_ || (c || T) && !h && !S) return I.Z5.DISALLOW_EXTERNAL;
   if (null != t.id && !t.available) return I.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE;
   let A = l.default.getCurrentUser();
-  if (!c.ZP.canUseEmojisEverywhere(A) && !h) {
+  if (!d.ZP.canUseEmojisEverywhere(A) && !h) {
     if (u === I.Hz.STATUS) return I.Z5.PREMIUM_LOCKED;
     if (!t.managed) return I.Z5.PREMIUM_LOCKED
   }
   if ((0, s.Fv)(t, null != r ? r : void 0)) return (0, i.Ol)(t.guildId) ? I.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE : I.Z5.ROLE_SUBSCRIPTION_LOCKED;
-  return !t.animated || c.ZP.canUseAnimatedEmojis(A) || (0, s.yH)(t) ? null : I.Z5.PREMIUM_LOCKED
+  return !t.animated || d.ZP.canUseAnimatedEmojis(A) || (0, s.yH)(t) ? null : I.Z5.PREMIUM_LOCKED
 }
 
 function m(e, t) {
@@ -164,5 +164,5 @@ t.ZP = {
     return h.has(t)
   },
   isFileTooBig: e => e.size > 2097152,
-  isDataTooBig: e => (0, d.QB)(e) > I.h_
+  isDataTooBig: e => (0, c.QB)(e) > I.h_
 }

@@ -1,30 +1,30 @@
 "use strict";
-n.d(t, {
+t.d(n, {
   Z: function() {
-    return a
+    return l
   }
-}), n(47120);
-var r = n(553813),
-  i = n.n(r),
-  l = n(358085);
+}), t(47120);
+var r = t(553813),
+  o = t.n(r),
+  i = t(358085);
 let s = {
-  [l.PlatformTypes.WINDOWS]: {
+  [i.PlatformTypes.WINDOWS]: {
     nvidia: ">=397.93.0"
   }
 };
 
-function a(e) {
-  let t = s[(0, l.getPlatform)()];
-  if (null == t) return !1;
-  for (let n of Object.keys(e)) {
-    let r = e[n],
-      l = t[n];
-    if (null == r || null == l || null != r.error) continue;
+function l(e) {
+  let n = s[(0, i.getPlatform)()];
+  if (null == n) return !1;
+  for (let t of Object.keys(e)) {
+    let r = e[t],
+      i = n[t];
+    if (null == r || null == i || null != r.error) continue;
     let s = function(e) {
-      var t, n;
-      return "".concat(null !== (t = e.major) && void 0 !== t ? t : 0, ".").concat(null !== (n = e.minor) && void 0 !== n ? n : 0, ".0")
+      var n, t;
+      return "".concat(null !== (n = e.major) && void 0 !== n ? n : 0, ".").concat(null !== (t = e.minor) && void 0 !== t ? t : 0, ".0")
     }(r);
-    if (!i().satisfies(s, l)) return !0
+    if (!o().satisfies(s, i)) return !0
   }
   return !1
 }

@@ -3,9 +3,9 @@ let i;
 var r, s, o, a, l = n(569048),
   u = n.n(l),
   _ = n(167006),
-  d = n.n(_),
-  c = n(989872),
-  E = n.n(c),
+  c = n.n(_),
+  d = n(989872),
+  E = n.n(d),
   I = n(442837),
   T = n(570140),
   h = n(758449),
@@ -16,8 +16,8 @@ let f = {},
   m = {},
   O = !1,
   R = !1,
-  C = !1;
-class p extends(a = I.ZP.Store) {
+  p = !1;
+class g extends(a = I.ZP.Store) {
   getInvite(e) {
     var t, n;
     let {
@@ -34,17 +34,17 @@ class p extends(a = I.ZP.Store) {
     return O
   }
   canRevokeFriendInvite() {
-    return null != i && !R && !C
+    return null != i && !R && !p
   }
 }
-o = "InstantInviteStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
+o = "InstantInviteStore", (s = "displayName") in(r = g) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new p(T.Z, {
+}) : r[s] = o, t.Z = new g(T.Z, {
   CONNECTION_OPEN: function() {
-    f = {}, N = {}, A = {}, m = {}, i = null, R = !1, C = !1, O = !1
+    f = {}, N = {}, A = {}, m = {}, i = null, R = !1, p = !1, O = !1
   },
   CHANNEL_DELETE: function(e) {
     let {
@@ -54,16 +54,16 @@ o = "InstantInviteStore", (s = "displayName") in(r = p) ? Object.defineProperty(
   },
   FRIEND_INVITE_CREATE_SUCCESS: function(e) {
     var t;
-    m[e.invite.code] = h.Z.createFromServer(e.invite), i = null !== (t = u()(d()(E()(Object.values(m), "createdAt")))) && void 0 !== t ? t : null, C = !1
+    m[e.invite.code] = h.Z.createFromServer(e.invite), i = null !== (t = u()(c()(E()(Object.values(m), "createdAt")))) && void 0 !== t ? t : null, p = !1
   },
   FRIEND_INVITE_CREATE_FAILURE: function() {
-    C = !1
+    p = !1
   },
   FRIEND_INVITE_REVOKE_SUCCESS: function(e) {
     var t;
     null != e.invites && e.invites.forEach(e => {
       null != m[e.code] && delete m[e.code]
-    }), i = null !== (t = u()(d()(E()(Object.values(m), "createdAt")))) && void 0 !== t ? t : null, R = !1
+    }), i = null !== (t = u()(c()(E()(Object.values(m), "createdAt")))) && void 0 !== t ? t : null, R = !1
   },
   INSTANT_INVITE_CREATE_SUCCESS: function(e) {
     let {
@@ -88,7 +88,7 @@ o = "InstantInviteStore", (s = "displayName") in(r = p) ? Object.defineProperty(
     R = !0
   },
   FRIEND_INVITE_CREATE_REQUEST: function() {
-    C = !0
+    p = !0
   },
   FRIEND_INVITES_FETCH_REQUEST: function() {
     O = !0
@@ -97,7 +97,7 @@ o = "InstantInviteStore", (s = "displayName") in(r = p) ? Object.defineProperty(
     var t;
     m = {}, e.invites.forEach(e => {
       m[e.code] = h.Z.createFromServer(e)
-    }), i = null !== (t = u()(d()(E()(Object.values(m), "createdAt")))) && void 0 !== t ? t : null, O = !1
+    }), i = null !== (t = u()(c()(E()(Object.values(m), "createdAt")))) && void 0 !== t ? t : null, O = !1
   },
   INSTANT_INVITE_CLEAR: function(e) {
     delete f[e.channelId]

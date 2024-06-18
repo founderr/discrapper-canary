@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   _T: function() {
-    return d
+    return c
   },
   y: function() {
     return u
@@ -29,11 +29,11 @@ function _(e, t, n) {
   return null == n ? l.Z.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER : null !== (i = u(e, t, n)) && void 0 !== i ? i : a.ZP.getName(n)
 }
 
-function d(e, t, n) {
+function c(e, t, n) {
   return (0, i.e7)([s.ZP, r.Z, o.Z], () => _(e, t, n))
 }
 t.ZP = {
   getNickname: u,
   getName: _,
-  useName: d
+  useName: c
 }

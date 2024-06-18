@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Vk: function() {
-    return d
+    return c
   },
   YK: function() {
     return S
@@ -19,7 +19,7 @@ n.d(t, {
     return h
   },
   n0: function() {
-    return c
+    return d
   },
   nc: function() {
     return u
@@ -28,7 +28,7 @@ n.d(t, {
     return N
   }
 });
-var i, r, s, o, a, l, u, _, d, c, E, I, T = n(358085);
+var i, r, s, o, a, l, u, _, c, d, E, I, T = n(358085);
 let h = T.isPlatformEmbedded && ((0, T.isWindows)() || !1);
 
 function S(e) {
@@ -52,7 +52,7 @@ function S(e) {
     default:
       return 5
   }
-}(i = u || (u = {}))[i.WELCOME = 0] = "WELCOME", i[i.NEWS = 1] = "NEWS", i[i.GO_LIVE_VOICE = 2] = "GO_LIVE_VOICE", i[i.GO_LIVE_NON_VOICE = 3] = "GO_LIVE_NON_VOICE", i[i.BROADCAST = 4] = "BROADCAST", i[i.KEYBIND_INDICATORS = 5] = "KEYBIND_INDICATORS", (r = _ || (_ = {})).PRIMARY = "PRIMARY", r.BRAND = "BRAND", r.DANGER = "DANGER", (s = d || (d = {}))[s.Nudge = 0] = "Nudge", s[s.TextChat = 1] = "TextChat", s[s.VoiceCall = 2] = "VoiceCall", s[s.Activity = 3] = "Activity", s[s.Clips = 4] = "Clips", s[s.Other = 5] = "Other", (o = c || (c = {})).NewsNudge = "News Nudge", o.WelcomeNudge = "Welcome Nudge", o.TextChat = "Text Chat", o.ActivityUserJoin = "Activity User Join", o.ActivityInvite = "Activity Invite", o.IncomingCall = "Incoming Call", o.GoLiveNudge = "Go Live Nudge", o.GoLiveNonVoiceNudge = "Go Live Non Voice Nudge", o.OverlayCrashed = "Overlay Crashed", o.StartBroadcastNotification = "Start Broadcast Notification", o.ClipsReminderNotification = "Clips Reminder Notification", o.ClipsNotification = "Clips Notification", o.KeybindIndicatorsNotification = "Keybind Indicators Notification", (a = E || (E = {}))[a.Viewed = 0] = "Viewed", a[a.Clicked = 1] = "Clicked";
+}(i = u || (u = {}))[i.WELCOME = 0] = "WELCOME", i[i.NEWS = 1] = "NEWS", i[i.GO_LIVE_VOICE = 2] = "GO_LIVE_VOICE", i[i.GO_LIVE_NON_VOICE = 3] = "GO_LIVE_NON_VOICE", i[i.BROADCAST = 4] = "BROADCAST", i[i.KEYBIND_INDICATORS = 5] = "KEYBIND_INDICATORS", (r = _ || (_ = {})).PRIMARY = "PRIMARY", r.BRAND = "BRAND", r.DANGER = "DANGER", (s = c || (c = {}))[s.Nudge = 0] = "Nudge", s[s.TextChat = 1] = "TextChat", s[s.VoiceCall = 2] = "VoiceCall", s[s.Activity = 3] = "Activity", s[s.Clips = 4] = "Clips", s[s.Other = 5] = "Other", (o = d || (d = {})).NewsNudge = "News Nudge", o.WelcomeNudge = "Welcome Nudge", o.TextChat = "Text Chat", o.ActivityUserJoin = "Activity User Join", o.ActivityInvite = "Activity Invite", o.IncomingCall = "Incoming Call", o.GoLiveNudge = "Go Live Nudge", o.GoLiveNonVoiceNudge = "Go Live Non Voice Nudge", o.OverlayCrashed = "Overlay Crashed", o.StartBroadcastNotification = "Start Broadcast Notification", o.ClipsReminderNotification = "Clips Reminder Notification", o.ClipsNotification = "Clips Notification", o.KeybindIndicatorsNotification = "Keybind Indicators Notification", (a = E || (E = {}))[a.Viewed = 0] = "Viewed", a[a.Clicked = 1] = "Clicked";
 let f = Object.freeze({
   LOW: "background-opacity-low",
   MEDIUM: "background-opacity-medium",

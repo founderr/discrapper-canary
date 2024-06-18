@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 }), n(47120), n(789020);
 var i = n(913527),
@@ -20,13 +20,13 @@ function u(e, t, n) {
   }) : e[t] = n, e
 }
 let _ = ["500428425362931713", "451550535720501248", "471376328319303681", "466696214818193408"];
-class d extends s.Z {
+class c extends s.Z {
   static createFromServer(e) {
     var t, n, i, s, o;
     let {
       price: l
     } = e;
-    return new d({
+    return new c({
       id: e.id,
       type: e.type,
       applicationId: e.application_id,

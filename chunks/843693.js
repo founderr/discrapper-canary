@@ -8,8 +8,8 @@ var i, r, s, o, a = n(442837),
   l = n(759174),
   u = n(846519),
   _ = n(570140),
-  d = n(314897),
-  c = n(944486),
+  c = n(314897),
+  d = n(944486),
   E = n(585483),
   I = n(351780),
   T = n(641033),
@@ -61,7 +61,7 @@ function O(e, t, n, i) {
 }
 class R extends(i = a.ZP.Store) {
   initialize() {
-    this.waitFor(d.default, c.Z)
+    this.waitFor(c.default, d.Z)
   }
   getComboScore(e, t) {
     let n = N.get(m({
@@ -101,7 +101,7 @@ o = "PoggermodeStore", (s = "displayName") in(r = R) ? Object.defineProperty(r, 
   configurable: !0,
   writable: !0
 }) : r[s] = o;
-let C = new R(_.Z, {
+let p = new R(_.Z, {
   POGGERMODE_UPDATE_COMBO: function(e) {
     let {
       type: t,
@@ -112,28 +112,28 @@ let C = new R(_.Z, {
       var n, i, r, s, o, a;
       let l = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         _ = N.get(m(t)),
-        d = {
+        c = {
           ..._,
           ...t,
           value: null !== (i = null !== (n = t.value) && void 0 !== n ? n : null == _ ? void 0 : _.value) && void 0 !== i ? i : 0,
           multiplier: Math.min(null !== (s = null !== (r = t.multiplier) && void 0 !== r ? r : null == _ ? void 0 : _.multiplier) && void 0 !== s ? s : 1, 7),
           decayInterval: null !== (o = null == _ ? void 0 : _.decayInterval) && void 0 !== o ? o : new u.Xp
         };
-      N.set(m(t), d), l && (null === (a = d.decayInterval) || void 0 === a || a.start(1e3, () => {
-        let t = N.get(m(d));
+      N.set(m(t), c), l && (null === (a = c.decayInterval) || void 0 === a || a.start(1e3, () => {
+        let t = N.get(m(c));
         if (null != t) {
-          let i = d.multiplier !== t.multiplier && d.value !== t.value;
+          let i = c.multiplier !== t.multiplier && c.value !== t.value;
           if (t.value <= 0 || i) {
             var n;
             null === (n = t.decayInterval) || void 0 === n || n.stop(), t.value <= 0 && (e({
               ...t,
               value: 0,
               multiplier: 1
-            }), C.emitChange())
+            }), p.emitChange())
           } else e({
             ...t,
             value: t.value - 1
-          }), C.emitChange()
+          }), p.emitChange()
         }
       }))
     }(n)
@@ -157,7 +157,7 @@ let C = new R(_.Z, {
       }
     } = e;
     if (!I.Z.isEnabled()) return !1;
-    let a = d.default.getId();
+    let a = c.default.getId();
     if (!O(null == s ? void 0 : s.id, a, o, f)) return !1;
     let l = N.get(m({
       userId: null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : "???",
@@ -173,4 +173,4 @@ let C = new R(_.Z, {
     return !1
   }
 });
-t.ZP = C
+t.ZP = p

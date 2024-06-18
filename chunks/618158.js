@@ -40,7 +40,7 @@ function a(e) {
     allowIdle: _
   } = o("interact");
   r.useEffect(() => () => _(), [_]);
-  let d = r.useCallback(e => {
+  let c = r.useCallback(e => {
     var t;
     let n = null !== (t = e.target.ownerDocument) && void 0 !== t ? t : document;
     if (!e.currentTarget.contains(n.activeElement)) a()
@@ -50,7 +50,7 @@ function a(e) {
     onMouseEnter: u,
     onMouseLeave: _,
     onFocus: l,
-    onBlur: d,
+    onBlur: c,
     children: t
   })
 }

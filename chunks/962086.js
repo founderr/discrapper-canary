@@ -4,7 +4,7 @@ n.d(t, {
     return N
   },
   aq: function() {
-    return C
+    return p
   },
   iD: function() {
     return f
@@ -27,8 +27,8 @@ var i = n(570140),
   l = n(271383),
   u = n(430824),
   _ = n(496675),
-  d = n(944486),
-  c = n(9156),
+  c = n(944486),
+  d = n(9156),
   E = n(626135),
   I = n(160404),
   T = n(225675),
@@ -71,7 +71,7 @@ function A(e) {
 }
 
 function m(e) {
-  let t = d.Z.getChannelId(e),
+  let t = c.Z.getChannelId(e),
     n = o.Z.getChannel(t);
   if (!(null != t && (0, S.AB)(t)) && !_.Z.can(h.Plq.VIEW_CHANNEL, n)) {
     let t = a.ZP.getDefaultChannel(e);
@@ -80,7 +80,7 @@ function m(e) {
 }
 
 function O(e, t, n) {
-  let i = new Set(c.ZP.getOptedInChannels(e));
+  let i = new Set(d.ZP.getOptedInChannels(e));
   t.forEach(e => i.add(e)), n.forEach(e => i.delete(e)), N(e, {
     type: T.z.NEW_MEMBER,
     optInChannels: i
@@ -107,7 +107,7 @@ function R(e, t) {
   })
 }
 
-function C(e, t) {
+function p(e, t) {
   N(e, {
     type: T.z.NEW_MEMBER,
     ...t

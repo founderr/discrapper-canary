@@ -16,7 +16,7 @@ n.d(t, {
     return I
   },
   P8: function() {
-    return C
+    return p
   },
   PJ: function() {
     return k
@@ -37,7 +37,7 @@ n.d(t, {
     return P
   },
   ib: function() {
-    return p
+    return g
   },
   lh: function() {
     return j
@@ -46,7 +46,7 @@ n.d(t, {
     return H
   },
   ub: function() {
-    return v
+    return L
   },
   v1: function() {
     return U
@@ -66,8 +66,8 @@ var i = n(392711),
   l = n(70956),
   u = n(709054),
   _ = n(849464),
-  d = n(765305),
-  c = n(689938);
+  c = n(765305),
+  d = n(689938);
 let E = 365,
   I = 366,
   T = 4,
@@ -80,34 +80,34 @@ let E = 365,
   O = [o.Ci.SU.weekday, o.Ci.MO.weekday, o.Ci.TU.weekday, o.Ci.WE.weekday, o.Ci.TH.weekday, o.Ci.FR.weekday, o.Ci.SA.weekday],
   R = new Set([0, 6]);
 
-function C(e) {
+function p(e) {
   var t;
   let n = e.toDate(),
     i = Math.ceil(n.getDate() / 7),
     r = e.format("dddd"),
     s = [{
       value: _.z.NONE,
-      label: c.Z.Messages.CREATE_EVENT_RECUR_NONE
+      label: d.Z.Messages.CREATE_EVENT_RECUR_NONE
     }, {
       value: _.z.WEEKLY,
-      label: c.Z.Messages.CREATE_EVENT_RECUR_WEEKLY.format({
+      label: d.Z.Messages.CREATE_EVENT_RECUR_WEEKLY.format({
         weekday: r
       })
     }, {
       value: _.z.BIWEEKLY,
-      label: c.Z.Messages.CREATE_EVENT_RECUR_BIWEEKLY.format({
+      label: d.Z.Messages.CREATE_EVENT_RECUR_BIWEEKLY.format({
         weekday: r
       })
     }, {
       value: _.z.MONTHLY,
-      label: c.Z.Messages.CREATE_EVENT_RECUR_MONTHLY.format({
+      label: d.Z.Messages.CREATE_EVENT_RECUR_MONTHLY.format({
         nth: i,
         weekday: r
       })
     }, {
       value: _.z.YEARLY,
-      label: c.Z.Messages.CREATE_EVENT_RECUR_YEARLY.format({
-        date: n.toLocaleString(c.Z.getLocale(), {
+      label: d.Z.Messages.CREATE_EVENT_RECUR_YEARLY.format({
+        date: n.toLocaleString(d.Z.getLocale(), {
           month: "short",
           day: "2-digit"
         })
@@ -115,28 +115,28 @@ function C(e) {
     }];
   return R.has(n.getDay()) ? (null === (t = a.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && s.push({
     value: _.z.WEEKEND_ONLY,
-    label: c.Z.Messages.CREATE_EVENT_RECUR_WEEKENDS
+    label: d.Z.Messages.CREATE_EVENT_RECUR_WEEKENDS
   }) : s.push({
     value: _.z.WEEKDAY_ONLY,
-    label: c.Z.Messages.CREATE_EVENT_RECUR_WEEKDAYS
+    label: d.Z.Messages.CREATE_EVENT_RECUR_WEEKDAYS
   }), s
 }
-let p = () => {
+let g = () => {
     let e = s()().add(1, "hour"),
       t = e.hour();
     return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0)
   },
-  g = (e, t) => e.format(e.get("years") === t.get("years") ? "ddd MMM Do \xb7 LT" : "ddd MMM Do, YYYY \xb7 LT"),
-  L = (e, t) => e.diff(t, "days") > 1 ? g(e, t) : e.calendar(t);
+  C = (e, t) => e.format(e.get("years") === t.get("years") ? "ddd MMM Do \xb7 LT" : "ddd MMM Do, YYYY \xb7 LT"),
+  v = (e, t) => e.diff(t, "days") > 1 ? C(e, t) : e.calendar(t);
 
-function v(e, t, n) {
+function L(e, t, n) {
   null == n && (n = s()());
   let i = s()(e),
     r = null != t && "" !== t ? s()(t) : void 0,
     o = null != t && i.isSame(r, "day");
   return {
-    startDateTimeString: L(i, n),
-    endDateTimeString: null != r ? o ? r.format("LT") : g(r, n) : void 0,
+    startDateTimeString: v(i, n),
+    endDateTimeString: null != r ? o ? r.format("LT") : C(r, n) : void 0,
     currentOrPastEvent: i <= n,
     upcomingEvent: i <= s()().add(1, "hour"),
     withinStartWindow: i <= s()().add(15, "minute"),
@@ -311,8 +311,8 @@ function H(e, t) {
     interval: a,
     byweekday: l,
     bynweekday: u,
-    bymonth: d,
-    bymonthday: c,
+    bymonth: c,
+    bymonthday: d,
     byyearday: E,
     count: I
   } = n.options, T = null == u ? void 0 : u.map(e => ({
@@ -326,8 +326,8 @@ function H(e, t) {
     interval: a,
     byWeekday: l,
     byNWeekday: T,
-    byMonth: d,
-    byMonthDay: c,
+    byMonth: c,
+    byMonthDay: d,
     byYearDay: E,
     count: I
   }
@@ -358,5 +358,5 @@ function Y(e, t) {
 }
 
 function j(e, t, n) {
-  return (null == e ? void 0 : e.is_canceled) ? d.p1.CANCELED : t < n ? d.p1.COMPLETED : null != e ? d.p1.SCHEDULED : null
+  return (null == e ? void 0 : e.is_canceled) ? c.p1.CANCELED : t < n ? c.p1.COMPLETED : null != e ? c.p1.SCHEDULED : null
 }

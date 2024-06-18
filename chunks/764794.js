@@ -8,8 +8,8 @@ var i = n(735250),
   l = n(410030),
   u = n(100527),
   _ = n(906732),
-  d = n(790368),
-  c = n(704440),
+  c = n(790368),
+  d = n(704440),
   E = n(147915),
   I = n(632583),
   T = n(626135),
@@ -25,45 +25,45 @@ t.Z = r.memo(function(e) {
     isResending: m
   } = e, {
     enabled: O
-  } = d.Z.useExperiment({
+  } = c.Z.useExperiment({
     location: "ec41f5_1"
   }, {
     autoTrackExposure: !0
-  }), R = O ? f.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : m ? f.Z.Messages.SHARE_NITRO_RESEND_TOOLTIP : f.Z.Messages.SHARE_NITRO_TOOLTIP, C = O ? f.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [p, g] = r.useState(!1), [L, v] = r.useState(!1), D = (0, a.Z)(null, () => v(!1)), {
+  }), R = O ? f.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : m ? f.Z.Messages.SHARE_NITRO_RESEND_TOOLTIP : f.Z.Messages.SHARE_NITRO_TOOLTIP, p = O ? f.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [g, C] = r.useState(!1), [v, L] = r.useState(!1), D = (0, a.Z)(null, () => L(!1)), {
     analyticsLocations: M
   } = (0, _.ZP)(u.Z.REFERRAL_TRIALS_COMPOSER_BUTTON), P = A.isDM() && void 0 !== A.recipients ? A.recipients[0] : null, y = (0, l.ZP)();
   return t ? null : (0, i.jsxs)("div", {
     ref: D,
     className: N.buttonContainer,
-    children: [(0, i.jsx)(c.Z, {
-      shouldShowPopout: L,
+    children: [(0, i.jsx)(d.Z, {
+      shouldShowPopout: v,
       referralsRemaining: n,
       channel: A,
-      onClose: () => v(!1),
+      onClose: () => L(!1),
       isResending: m
     }), (0, i.jsx)(s.u, {
       text: R,
-      shouldShow: !L,
-      "aria-label": null != C ? C : R,
+      shouldShow: !v,
+      "aria-label": null != p ? p : R,
       children: e => (0, i.jsx)("div", {
         onMouseEnter: () => {
-          !L && !p && (g(!0), T.default.track(h.rMx.SHARE_NITRO_FLOW_STEPS, {
+          !v && !g && (C(!0), T.default.track(h.rMx.SHARE_NITRO_FLOW_STEPS, {
             location_stack: M,
             step: S.fz.BADGE_TOOLTIP_VIEWED,
             other_user_id: Number(P)
           }))
         },
         onMouseLeave: () => {
-          g(!1)
+          C(!1)
         },
         children: (0, i.jsx)(E.Z, {
           ...e,
           innerClassName: N.button,
-          isActive: L,
-          "aria-label": null != C ? C : R,
+          isActive: v,
+          "aria-label": null != p ? p : R,
           "aria-haspopup": "dialog",
           onClick: () => {
-            v(e => !e), T.default.track(h.rMx.SHARE_NITRO_FLOW_STEPS, {
+            L(e => !e), T.default.track(h.rMx.SHARE_NITRO_FLOW_STEPS, {
               location_stack: M,
               step: S.fz.BADGE_CLICKED,
               other_user_id: Number(P)
@@ -71,7 +71,7 @@ t.Z = r.memo(function(e) {
           },
           children: (0, i.jsx)(I.Z, {
             referralsRemaining: n,
-            hovered: p,
+            hovered: g,
             isResending: m,
             shouldShowBirthdayUX: O,
             isLightTheme: (0, o.ap)(y)

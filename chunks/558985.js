@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   $: function() {
-    return d
+    return c
   }
 }), n(47120), n(411104);
 var i, r = n(470079),
@@ -19,7 +19,7 @@ function a(e, t, n) {
 let l = (0, s.Z)(),
   u = new Map,
   _ = new Map;
-class d extends(i = r.Component) {
+class c extends(i = r.Component) {
   componentDidMount() {
     if (this.props.active) {
       let e = this.getVisibilityObserver();
@@ -66,7 +66,7 @@ class d extends(i = r.Component) {
     }))
   }
 }
-a(d, "defaultProps", {
+a(c, "defaultProps", {
   active: !0,
   children: r.createElement("span"),
   root: null,

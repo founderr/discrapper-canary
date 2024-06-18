@@ -42,7 +42,7 @@ let u = {
     }
   },
   _ = {};
-class d extends(r = o.ZP.DeviceSettingsStore) {
+class c extends(r = o.ZP.DeviceSettingsStore) {
   getUserAgnosticState() {
     return {
       toggleStates: _
@@ -75,7 +75,7 @@ class d extends(r = o.ZP.DeviceSettingsStore) {
     })
   }
 }
-l(d, "displayName", "DevToolsDevSettingsStore"), l(d, "persistKey", "DevToolsDevSettingsStore"), t.ZP = new d(a.Z, {
+l(c, "displayName", "DevToolsDevSettingsStore"), l(c, "persistKey", "DevToolsDevSettingsStore"), t.ZP = new c(a.Z, {
   DEV_TOOLS_DEV_SETTING_SET: function(e) {
     _[e.toggle] = e.value
   }

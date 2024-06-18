@@ -7,8 +7,8 @@ var i, r = n(392711),
   l = n(579806),
   u = n(292959),
   _ = n(246946),
-  d = n(626135),
-  c = n(358085),
+  c = n(626135),
+  d = n(358085),
   E = n(557177),
   I = n(998502),
   T = n(981631);
@@ -21,7 +21,7 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let S = c.isPlatformEmbedded && (0, c.isWindows)(),
+let S = d.isPlatformEmbedded && (0, d.isWindows)(),
   f = S && 10 > parseFloat(l.Z.os.release),
   N = !0;
 if (S && !f) {
@@ -61,36 +61,36 @@ f && (I.ZP.on("NOTIFICATION_CLICK", (e, t) => {
   }
 }, h(i, "permission", "granted"), h(i, "_id", 0), R = i);
 
-function C() {
+function p() {
   return null != R && "granted" === R.permission
 }
 
-function p(e) {
+function g(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
     n = arguments.length > 2 ? arguments[2] : void 0;
   e.includes("message") ? m(e, t, void 0, n) : (0, E.GN)(e, t)
 }
 
-function g(e) {
-  return _.Z.disableNotifications && null == e.overrideStreamerMode || !C() || c.isPlatformEmbedded && !I.ZP.shouldDisplayNotifications()
+function C(e) {
+  return _.Z.disableNotifications && null == e.overrideStreamerMode || !p() || d.isPlatformEmbedded && !I.ZP.shouldDisplayNotifications()
 }
 t.Z = {
-  hasPermission: C,
+  hasPermission: p,
   requestPermission: function(e) {
     null != R && R.requestPermission(() => {
-      null != e && e(C())
+      null != e && e(p())
     })
   },
   showNotification: function(e, t, n, i, r) {
     var o, a, l, _;
     let E;
-    if (g(r)) {
-      null != r.sound && !1 !== r.playSoundIfDisabled && p(r.sound, null !== (a = r.volume) && void 0 !== a ? a : 1, r.soundpack);
+    if (C(r)) {
+      null != r.sound && !1 !== r.playSoundIfDisabled && g(r.sound, null !== (a = r.volume) && void 0 !== a ? a : 1, r.soundpack);
       return
     }
-    null != r.sound && p(r.sound, null !== (l = r.volume) && void 0 !== l ? l : 1, r.soundpack);
+    null != r.sound && g(r.sound, null !== (l = r.volume) && void 0 !== l ? l : 1, r.soundpack);
     let h = null !== (_ = null == r ? void 0 : r.tag) && void 0 !== _ ? _ : null;
-    (0, c.isLinux)() && (n = s().escape(n));
+    (0, d.isLinux)() && (n = s().escape(n));
     let f = {
       icon: e,
       body: n,
@@ -103,9 +103,9 @@ t.Z = {
     } catch (e) {
       return null
     }
-    return (null === (o = r.onShown) || void 0 === o || o.call(r), !r.omitViewTracking && d.default.track(T.rMx.NOTIFICATION_VIEWED, i), E.onclick = () => {
+    return (null === (o = r.onShown) || void 0 === o || o.call(r), !r.omitViewTracking && c.default.track(T.rMx.NOTIFICATION_VIEWED, i), E.onclick = () => {
       var e;
-      c.isPlatformEmbedded ? I.ZP.focus() : (window.focus(), E.close()), !r.omitClickTracking && d.default.track(T.rMx.NOTIFICATION_CLICKED, i), null === (e = r.onClick) || void 0 === e || e.call(r)
+      d.isPlatformEmbedded ? I.ZP.focus() : (window.focus(), E.close()), !r.omitClickTracking && c.default.track(T.rMx.NOTIFICATION_CLICKED, i), null === (e = r.onClick) || void 0 === e || e.call(r)
     }, A && setTimeout(() => E.close(), 5e3), N) ? E : {
       close() {
         var e;
@@ -113,5 +113,5 @@ t.Z = {
       }
     }
   },
-  disabled: g
+  disabled: C
 }

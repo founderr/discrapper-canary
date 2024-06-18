@@ -17,13 +17,13 @@ let a = new Set,
   u = !1,
   _ = null;
 
-function d(e) {
+function c(e) {
   return e.isMessageRequest && !e.isSpam
 }
 
-function c(e) {
+function d(e) {
   let t = !1;
-  return d(e) && !a.has(e.id) && (a.add(e.id), t = !0), !d(e) && a.has(e.id) && (a.delete(e.id), t = !0), !d(e) && l.has(e.id) && (l.delete(e.id), t = !0), t
+  return c(e) && !a.has(e.id) && (a.add(e.id), t = !0), !c(e) && a.has(e.id) && (a.delete(e.id), t = !0), !c(e) && l.has(e.id) && (l.delete(e.id), t = !0), t
 }
 
 function E(e) {
@@ -33,7 +33,7 @@ function E(e) {
 
 function I(e) {
   "CONNECTION_OPEN" === e.type && E(e.countryCode), a.clear(), l.clear(), Object.values(r.Z.getMutablePrivateChannels()).forEach(e => {
-    c(e)
+    d(e)
   }), u = !0
 }
 
@@ -48,14 +48,14 @@ function h(e) {
   let {
     channel: t
   } = e;
-  return c(t)
+  return d(t)
 }
 
 function S(e) {
   let {
     channels: t
   } = e;
-  for (let e of t) c(e)
+  for (let e of t) d(e)
 }
 
 function f(e) {

@@ -8,8 +8,8 @@ var i = n(879443),
   l = n(710845),
   u = n(626135),
   _ = n(358085),
-  d = n(981631);
-let c = {},
+  c = n(981631);
+let d = {},
   E = [],
   I = !1,
   T = o()(new(r())(window)),
@@ -27,12 +27,12 @@ function O(e) {
 }
 
 function R(e, t) {
-  return (n, i) => (u.default.track(d.rMx.KEYBOARD_SHORTCUT_USED, {
+  return (n, i) => (u.default.track(c.rMx.KEYBOARD_SHORTCUT_USED, {
     shortcut_name: e
   }), t(n, i))
 }
 
-function C(e) {
+function p(e) {
   for (let [t, n] of Object.entries(e)) {
     if (null == n) continue;
     let e = A();
@@ -63,17 +63,17 @@ function C(e) {
     n.length > 0 && new l.Z("Keybinds").warn("Duplicate keyboard shortcuts defined:", n)
   },
   setLayout(e) {
-    c = e
+    d = e
   },
   enable() {
-    if (!I) I = !0, this.checkDupes(c), C(c)
+    if (!I) I = !0, this.checkDupes(d), p(d)
   },
   enableTemp(e) {
-    E.push(c), c = e, C(e), I = !0
+    E.push(d), d = e, p(e), I = !0
   },
   disableTemp() {
     let e = E.pop();
-    null != e && (c = e), this.disable(), this.enable()
+    null != e && (d = e), this.disable(), this.enable()
   },
   disable() {
     if (!!I) I = !1, m.forEach(e => e()), m = [], T.reset()
@@ -82,7 +82,7 @@ function C(e) {
     if (!!I && !!this.hasBind(e)) T.unbind(e)
   },
   hasBind(e) {
-    let t = O(c);
+    let t = O(d);
     return e = (e = e.replace("meta", "cmd")).replace(/right |left /i, "").trim(), t.includes(e)
   }
 }

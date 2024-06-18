@@ -10,7 +10,7 @@ n.d(t, {
     return I
   },
   cb: function() {
-    return c
+    return d
   },
   d$: function() {
     return _
@@ -35,7 +35,7 @@ let r = (e, t) => {
   l = e => s(e, "image"),
   u = /\.(webp|gif)$/i,
   _ = e => r(e, u),
-  d = (0, i.isIOS)() ? /\.(mp4|mov)$/i : ((0, i.isAndroid)(), /\.(mp4|webm|mov)$/i),
-  c = e => r(e, d),
-  E = e => null != e && d.test(e),
+  c = (0, i.isIOS)() ? /\.(mp4|mov)$/i : ((0, i.isAndroid)(), /\.(mp4|webm|mov)$/i),
+  d = e => r(e, c),
+  E = e => null != e && c.test(e),
   I = e => s(e, "video")

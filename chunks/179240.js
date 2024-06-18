@@ -11,9 +11,9 @@ var r, s = n(735250),
   l = n.n(a),
   u = n(58654),
   _ = n(84735),
-  d = n(842648);
+  c = n(842648);
 
-function c(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -118,7 +118,7 @@ class I extends(r = o.PureComponent) {
     return (0, s.jsx)(_.t, {
       children: (0, s.jsx)("textarea", {
         ...n,
-        className: l()(t, d.scrollbarGhostHairline),
+        className: l()(t, c.scrollbarGhostHairline),
         ref: this.handleSetRef,
         style: i,
         onChange: this.handleChange
@@ -126,9 +126,9 @@ class I extends(r = o.PureComponent) {
     })
   }
   constructor(e) {
-    super(e), c(this, "_textArea", void 0), c(this, "handleSetRef", e => {
+    super(e), d(this, "_textArea", void 0), d(this, "handleSetRef", e => {
       this._textArea = e
-    }), c(this, "handleChange", e => {
+    }), d(this, "handleChange", e => {
       let {
         onChange: t
       } = this.props;
@@ -138,7 +138,7 @@ class I extends(r = o.PureComponent) {
     }
   }
 }
-c(I, "defaultProps", {
+d(I, "defaultProps", {
   autoFocus: !1,
   disabled: !1,
   autoCorrect: "off"

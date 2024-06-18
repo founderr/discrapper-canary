@@ -7,7 +7,7 @@ n.d(t, {
     return f
   },
   Nv: function() {
-    return v
+    return L
   },
   Qj: function() {
     return E
@@ -16,25 +16,25 @@ n.d(t, {
     return R
   },
   Uv: function() {
-    return L
+    return v
   },
   ZZ: function() {
-    return d
+    return c
   },
   Zt: function() {
     return A
   },
   cq: function() {
-    return c
+    return d
   },
   eN: function() {
-    return g
+    return C
   },
   f1: function() {
     return T
   },
   gs: function() {
-    return C
+    return p
   },
   lq: function() {
     return h
@@ -55,7 +55,7 @@ n.d(t, {
     return I
   },
   u1: function() {
-    return p
+    return g
   }
 });
 var i = n(570140),
@@ -73,7 +73,7 @@ function _(e) {
   })
 }
 
-function d() {
+function c() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
   i.Z.dispatch({
     type: "ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING",
@@ -81,7 +81,7 @@ function d() {
   })
 }
 
-function c(e) {
+function d(e) {
   i.Z.dispatch({
     type: "ACCESSIBILITY_SET_ZOOM",
     zoom: e
@@ -181,14 +181,14 @@ function R(e) {
   })
 }
 
-function C(e) {
+function p(e) {
   i.Z.dispatch({
     type: "ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS",
     alwaysShowLinkDecorations: e
   })
 }
 
-function p(e) {
+function g(e) {
   i.Z.dispatch({
     type: "ACCESSIBILITY_SET_ROLE_STYLE",
     roleStyle: e
@@ -197,19 +197,19 @@ function p(e) {
   })
 }
 
-function g() {
+function C() {
   i.Z.dispatch({
     type: "ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE"
   })
 }
 
-function L() {
+function v() {
   i.Z.dispatch({
     type: "ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE"
   })
 }
 
-function v(e) {
+function L(e) {
   i.Z.dispatch({
     type: "ACCESSIBILITY_SET_HIDE_TAGS",
     hideTags: e

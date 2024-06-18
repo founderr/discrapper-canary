@@ -16,10 +16,10 @@ function l(e, t, n) {
   if (null == l.id || null == n || !(0, r.zi)(n.type)) return !0;
   let u = i.Z.getUsableCustomEmojiById(l.id),
     _ = s.ZP.isInternalEmojiForGuildId(u, n.getGuildId()),
-    d = o.BT({
+    c = o.BT({
       permission: a.Plq.USE_EXTERNAL_EMOJIS,
       user: t,
       context: n
     });
-  return !_ || d
+  return !_ || c
 }

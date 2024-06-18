@@ -18,18 +18,18 @@ function a(e) {
     onMouseLeave: l,
     ...u
   } = e, _ = n ? s.d : s.Z, {
-    Component: d,
-    events: c
+    Component: c,
+    events: d
   } = (0, r.P)("disable");
   return (0, i.jsx)(_, {
     label: t ? o.Z.Messages.STOP_STREAMING : o.Z.Messages.STOP_WATCHING,
-    iconComponent: d,
+    iconComponent: c,
     isActive: !0,
     onMouseEnter: e => {
-      null == a || a(e), c.onMouseEnter()
+      null == a || a(e), d.onMouseEnter()
     },
     onMouseLeave: e => {
-      null == l || l(e), c.onMouseLeave()
+      null == l || l(e), d.onMouseLeave()
     },
     ...u
   })

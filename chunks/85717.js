@@ -6,8 +6,8 @@ var o = n(493683),
   l = n(872810),
   u = n(147913),
   _ = n(594190),
-  d = n(569545),
-  c = n(695346),
+  c = n(569545),
+  d = n(695346),
   E = n(314897),
   I = n(592125),
   T = n(77498),
@@ -19,7 +19,7 @@ var o = n(493683),
   m = n(158631),
   O = n(981631);
 let R = [];
-class C extends u.Z {
+class p extends u.Z {
   handleRunningGamesChange() {
     let e = _.ZP.getVisibleGame();
     if (null == e) return;
@@ -30,7 +30,7 @@ class C extends u.Z {
     }, {
       autoTrackExposure: !1
     }), n = S.Z.getBroadcast(), i = (0, f.Ds)(e), r = null != T.Z.getGameByName(i), s = (0, m.dD)();
-    if (!t || null != n || !c.xd.getSetting() || !r || !s || null != R.find(t => t.pid === e.pid)) return;
+    if (!t || null != n || !d.xd.getSetting() || !r || !s || null != R.find(t => t.pid === e.pid)) return;
     if (R = _.ZP.getRunningGames(), !(0, A.Q)()) return;
     let o = h.Z.getVoiceChannelId();
     (0, l.tE)({
@@ -52,7 +52,7 @@ class C extends u.Z {
     let {
       ownerId: n,
       channelId: o
-    } = (0, d.my)(t);
+    } = (0, c.my)(t);
     if (null == n || null == o || n !== E.default.getId()) return;
     let a = I.Z.getChannel(o),
       l = null != a && a.isBroadcastChannel();
@@ -124,4 +124,4 @@ class C extends u.Z {
     }) : t[n] = i
   }
 }
-t.Z = new C
+t.Z = new p

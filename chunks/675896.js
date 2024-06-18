@@ -7,15 +7,15 @@ let a = o.E.NONE,
   l = window.matchMedia("(prefers-color-scheme: dark)"),
   u = window.matchMedia("(prefers-color-scheme: light)"),
   _ = window.matchMedia("(inverted-colors: inverted)"),
-  d = window.matchMedia("(prefers-contrast: more)"),
-  c = window.matchMedia("(forced-colors: active)");
+  c = window.matchMedia("(prefers-contrast: more)"),
+  d = window.matchMedia("(forced-colors: active)");
 
 function E(e, t) {
   t ? a |= e : a &= ~e
 }
 t.Z = {
   init() {
-    s.Z.addChangeListener(this.handleAccessibilityStoreChanged), i.Z.addChangeListener(this.handleAccessibilityStoreChanged), l.addListener(this.handlePrefersColorSchemeDarkChanged), this.handlePrefersColorSchemeDarkChanged(l), u.addListener(this.handlePrefersColorSchemeLightChanged), this.handlePrefersColorSchemeLightChanged(u), d.addListener(this.handlePrefersMoreContrastChanged), this.handlePrefersMoreContrastChanged(d), c.addListener(this.handlePrefersForcedColorsChanged), this.handlePrefersForcedColorsChanged(c), _.addListener(this.handleInvertColorsChanged), this.handleInvertColorsChanged(_), r.default.setSystemAccessibilityFeatures(this.getActiveFeatures)
+    s.Z.addChangeListener(this.handleAccessibilityStoreChanged), i.Z.addChangeListener(this.handleAccessibilityStoreChanged), l.addListener(this.handlePrefersColorSchemeDarkChanged), this.handlePrefersColorSchemeDarkChanged(l), u.addListener(this.handlePrefersColorSchemeLightChanged), this.handlePrefersColorSchemeLightChanged(u), c.addListener(this.handlePrefersMoreContrastChanged), this.handlePrefersMoreContrastChanged(c), d.addListener(this.handlePrefersForcedColorsChanged), this.handlePrefersForcedColorsChanged(d), _.addListener(this.handleInvertColorsChanged), this.handleInvertColorsChanged(_), r.default.setSystemAccessibilityFeatures(this.getActiveFeatures)
   },
   getActiveFeatures: () => a,
   handlePrefersColorSchemeDarkChanged(e) {

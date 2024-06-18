@@ -9,8 +9,8 @@ var r = n(481060),
   l = n(592125),
   u = n(271383),
   _ = n(914010),
-  d = n(630388),
-  c = n(526120),
+  c = n(630388),
+  d = n(526120),
   E = n(563534),
   I = n(734893),
   T = n(846121),
@@ -45,7 +45,7 @@ class A extends s.Z {
         guildId: o
       } = e;
       if (s.id === a.default.getId()) {
-        if (!this.onboardingCompleteGuilds.has(o) && (0, d.yE)(null != t ? t : 0, f.q.COMPLETED_HOME_ACTIONS)) {
+        if (!this.onboardingCompleteGuilds.has(o) && (0, c.yE)(null != t ? t : 0, f.q.COMPLETED_HOME_ACTIONS)) {
           var l, u;
           this.onboardingCompleteGuilds.add(o);
           let e = null !== (u = null === (l = E.Z.getNewMemberActions(o)) || void 0 === l ? void 0 : l.length) && void 0 !== u ? u : 0;
@@ -77,7 +77,7 @@ class A extends s.Z {
         memberActions: i,
         completedActions: r
       } = await this._getOrLoadOnboardingMemberActions(t), s = null == i ? void 0 : i.find(e => e.channelId === n);
-      (null == r ? void 0 : r[n]) !== !0 && null != s && s.actionType === I.oi.VIEW && (0, c.Oh)(t, n)
+      (null == r ? void 0 : r[n]) !== !0 && null != s && s.actionType === I.oi.VIEW && (0, d.Oh)(t, n)
     }), N(this, "handleMessageSend", e => {
       var t;
       let {
@@ -100,7 +100,7 @@ class A extends s.Z {
         memberActions: n,
         completedActions: i
       } = await this._getOrLoadOnboardingMemberActions(e), r = null == n ? void 0 : n.find(e => e.channelId === t);
-      (null == i ? void 0 : i[t]) !== !0 && null != r && r.actionType === I.oi.CHAT && (0, c.Oh)(e, t)
+      (null == i ? void 0 : i[t]) !== !0 && null != r && r.actionType === I.oi.CHAT && (0, d.Oh)(e, t)
     }), N(this, "_getOrLoadOnboardingMemberActions", async e => {
       var t, n;
       let i = (0, h.s)(e),
@@ -119,7 +119,7 @@ class A extends s.Z {
         s = E.Z.getIsLoading(e);
       if (!(null == r && !s && (0, S.m)(null !== (n = t.joinedAt) && void 0 !== n ? n : void 0, null !== (i = t.flags) && void 0 !== i ? i : void 0))) return r;
       {
-        let t = await (0, c.cP)(e);
+        let t = await (0, d.cP)(e);
         return null == t ? void 0 : t.newMemberActions
       }
     }), N(this, "_getOrLoadMemberActions", async (e, t) => {
@@ -128,7 +128,7 @@ class A extends s.Z {
         completedActions: i,
         loading: r
       } = T.Z.getState(e);
-      return null == i && !r && (0, d.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, f.q.STARTED_HOME_ACTIONS) ? await (0, c.Fg)(e) : i
+      return null == i && !r && (0, c.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, f.q.STARTED_HOME_ACTIONS) ? await (0, d.Fg)(e) : i
     })
   }
 }

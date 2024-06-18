@@ -8,15 +8,15 @@ var i = n(147913),
   l = n(314897),
   u = n(592125),
   _ = n(131951),
-  d = n(19780),
-  c = n(876506),
+  c = n(19780),
+  d = n(876506),
   E = n(981631),
   I = n(761274);
 let T = null;
 
 function h() {
   r.Z.requestPermission(I.Eu.AUDIO).then(e => {
-    if (!!e)(0, c.Z)(!0)
+    if (!!e)(0, d.Z)(!0)
   }), _.Z.getMode() === E.pM4.PUSH_TO_TALK && r.Z.requestPermission(I.Eu.INPUT_MONITORING)
 }
 class S extends i.Z {
@@ -34,14 +34,14 @@ class S extends i.Z {
       var t, n, i, r;
       let {
         userId: _,
-        channelId: c
+        channelId: d
       } = e;
-      if (null != c && l.default.getId() === _ && null != d.Z.getRTCConnectionId() && T !== c) {
-        if (t = _, n = c, (null === (i = u.Z.getChannel(n)) || void 0 === i ? !void 0 : !i.isListenModeCapable()) || s.ZP.isSpeaker(t, n)) {
-          T = c, h();
+      if (null != d && l.default.getId() === _ && null != c.Z.getRTCConnectionId() && T !== d) {
+        if (t = _, n = d, (null === (i = u.Z.getChannel(n)) || void 0 === i ? !void 0 : !i.isListenModeCapable()) || s.ZP.isSpeaker(t, n)) {
+          T = d, h();
           return
         }
-        r = new a.Z(e), (0, o.gf)(r) === o.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && (T = c, h())
+        r = new a.Z(e), (0, o.gf)(r) === o.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && (T = d, h())
       }
     })
   }

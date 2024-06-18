@@ -7,14 +7,14 @@ var i = n(544891),
   l = n(480739),
   u = n(985518),
   _ = n(228392),
-  d = n(981631),
-  c = n(689938);
+  c = n(981631),
+  d = n(689938);
 async function E(e, t, n) {
   try {
     return await e()
   } catch (e) {
     var i;
-    (null === (i = e.body) || void 0 === i ? void 0 : i.code) === d.evJ.NON_MODERATED_TAG_REQUIRED && s.Z.show({
+    (null === (i = e.body) || void 0 === i ? void 0 : i.code) === c.evJ.NON_MODERATED_TAG_REQUIRED && s.Z.show({
       title: t,
       body: n
     })
@@ -28,7 +28,7 @@ t.Z = {
     })
   },
   createForumTag: (e, t) => i.tn.post({
-    url: d.ANM.FORUM_TAGS(t),
+    url: c.ANM.FORUM_TAGS(t),
     body: {
       name: e.name,
       emoji_id: e.emojiId,
@@ -38,7 +38,7 @@ t.Z = {
   }),
   updateForumTag(e, t) {
     let n = i.tn.put({
-      url: d.ANM.FORUM_TAG(t, e.id),
+      url: c.ANM.FORUM_TAG(t, e.id),
       body: {
         name: e.name,
         emoji_id: e.emojiId,
@@ -46,16 +46,16 @@ t.Z = {
         moderated: e.moderated
       }
     });
-    E(() => n, c.Z.Messages.FORUM_TAG_EDIT_ERROR, c.Z.Messages.FORUM_POST_NON_MODERATED_TAG_REQUIRED)
+    E(() => n, d.Z.Messages.FORUM_TAG_EDIT_ERROR, d.Z.Messages.FORUM_POST_NON_MODERATED_TAG_REQUIRED)
   },
   deleteForumTag(e, t) {
     let n = i.tn.del({
-      url: d.ANM.FORUM_TAG(e, t)
+      url: c.ANM.FORUM_TAG(e, t)
     });
-    E(() => n, c.Z.Messages.FORUM_TAG_REMOVE_ERROR, c.Z.Messages.FORUM_POST_NON_MODERATED_TAG_REQUIRED)
+    E(() => n, d.Z.Messages.FORUM_TAG_REMOVE_ERROR, d.Z.Messages.FORUM_POST_NON_MODERATED_TAG_REQUIRED)
   },
   updateForumPostTags: async (e, t) => (await o.Z.unarchiveThreadIfNecessary(e), i.tn.patch({
-    url: d.ANM.CHANNEL(e),
+    url: c.ANM.CHANNEL(e),
     body: {
       applied_tags: t
     }

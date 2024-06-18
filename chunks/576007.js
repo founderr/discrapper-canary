@@ -15,19 +15,19 @@ async function u(e, t) {
     _ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
   if (_ > 3) throw Error("Unable to search guild members after max retries");
   let {
-    autoRetry: d = !0,
-    signal: c
+    autoRetry: c = !0,
+    signal: d
   } = n;
   try {
     var E;
     let s = await i.tn.post({
       url: l.ANM.GUILD_MEMBER_SEARCH(e),
       body: t,
-      signal: c
+      signal: d
     });
     if (s.status === a.t) {
       if (null == s.body.retry_after) throw Error("Indexing response did not include retry_after");
-      if (!d) throw Error("Indexing response received but autoRetry is disabled");
+      if (!c) throw Error("Indexing response received but autoRetry is disabled");
       return await r.Z.dispatch({
         type: "MEMBER_SAFETY_GUILD_MEMBER_SEARCH_STILL_INDEXING",
         guildId: e

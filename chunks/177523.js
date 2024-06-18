@@ -4,7 +4,7 @@ n.d(t, {
     return o.KV
   },
   ZP: function() {
-    return c
+    return d
   }
 }), n(47120);
 var i = n(392711),
@@ -24,10 +24,10 @@ function _(e, t, n) {
   }) : e[t] = n, e
 }
 
-function d(e) {
+function c(e) {
   return null != e && "null" !== e && e !== u.ME && "undefined" !== e && e !== u.I_8
 }
-class c {
+class d {
   _enqueue(e, t) {
     this._pending[e] = {
       ...this._pending[e],
@@ -74,31 +74,31 @@ class c {
     }), this._onChange(this._pending), this._pending = {}
   }
   subscribeUser(e, t) {
-    d(e) && this._members.subscribe(e, t)
+    c(e) && this._members.subscribe(e, t)
   }
   unsubscribeUser(e, t) {
-    d(e) && this._members.unsubscribe(e, t)
+    c(e) && this._members.unsubscribe(e, t)
   }
   subscribeChannel(e, t, n) {
-    return !!d(e) && this._channels.subscribe(e, t, n)
+    return !!c(e) && this._channels.subscribe(e, t, n)
   }
   subscribeToMemberUpdates(e) {
-    if (!d(e)) return !1;
+    if (!c(e)) return !1;
     this._enqueue(e, {
       member_updates: !0
     }), this._memberUpdates.add(e)
   }
   unsubscribeFromMemberUpdates(e) {
-    if (!d(e)) return !1;
+    if (!c(e)) return !1;
     this._enqueue(e, {
       member_updates: !1
     })
   }
   subscribeThreadMemberList(e, t, n) {
-    return !!d(e) && this._threadMemberLists.subscribe(e, t, n)
+    return !!c(e) && this._threadMemberLists.subscribe(e, t, n)
   }
   unsubscribeThreadMemberList(e, t) {
-    return !!d(e) && this._threadMemberLists.unsubscribe(e, t)
+    return !!c(e) && this._threadMemberLists.unsubscribe(e, t)
   }
   subscribeToGuild(e) {
     this._subscribeToFeature(e, this._typing, {
@@ -110,7 +110,7 @@ class c {
     })
   }
   _subscribeToFeature(e, t, n) {
-    if (d(e)) {
+    if (c(e)) {
       if (!t.has(e)) t.add(e), this._enqueue(e, n)
     }
   }

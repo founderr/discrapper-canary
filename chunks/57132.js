@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   PP: function() {
-    return c
+    return d
   },
   SO: function() {
     return I
@@ -18,7 +18,7 @@ var a = n(777639),
   u = n(488832);
 (r = i || (i = {}))[r.EXISTING_USERS = 0] = "EXISTING_USERS", r[r.NEW_USERS = 1] = "NEW_USERS";
 let _ = "tabs-v2-experiment-key",
-  d = (0, s.Z)((e, t) => ({
+  c = (0, s.Z)((e, t) => ({
     _experimentCacheInitialized: !1,
     _experimentEnabled: !1,
     getExperimentEnabled() {
@@ -43,15 +43,15 @@ let _ = "tabs-v2-experiment-key",
     }
   }));
 
-function c() {
+function d() {
   return E() ? (0, a.D)() : void 0
 }
 
 function E() {
-  let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.getState().getExperimentEnabled();
+  let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.getState().getExperimentEnabled();
   return (0, u.y)(e), e
 }
 
 function I() {
-  return E(d(e => e.getExperimentEnabled()))
+  return E(c(e => e.getExperimentEnabled()))
 }

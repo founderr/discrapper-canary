@@ -13,10 +13,10 @@ n.d(t, {
     return _
   },
   s4: function() {
-    return d
+    return c
   },
   sm: function() {
-    return c
+    return d
   }
 }), n(757143);
 var i = n(633302),
@@ -54,14 +54,14 @@ function _(e, t) {
   return null == e.id && t.name === e.name
 }
 
-function d(e) {
+function c(e) {
   if (e.isThread()) return s.jXE.THREAD_TEXT_AREA;
   if (e.isForumPost()) return s.jXE.FORUM_CHANNEL_TEXT_AREA;
   if (e.isGuildVocal()) return s.jXE.TEXT_IN_VOICE;
   return s.jXE.CHANNEL_TEXT_AREA
 }
 
-function c(e) {
+function d(e) {
   let {
     userId: t,
     optimistic: n

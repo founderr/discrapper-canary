@@ -18,13 +18,13 @@ function _(e) {
     color: n,
     className: s,
     ..._
-  } = e, d = (0, a.useToken)(a.tokens.colors.BG_SURFACE_OVERLAY), c = r.useMemo(() => (0, l.j1)(t, d.hex()), [t]);
+  } = e, c = (0, a.useToken)(a.tokens.colors.BG_SURFACE_OVERLAY), d = r.useMemo(() => (0, l.j1)(t, c.hex()), [t]);
   return (0, i.jsx)(a.Button, {
     ..._,
-    style: c,
+    style: d,
     className: o()(s, {
-      [u.customButton]: null != c
+      [u.customButton]: null != d
     }),
-    color: null != c ? a.Button.Colors.CUSTOM : n
+    color: null != d ? a.Button.Colors.CUSTOM : n
   })
 }

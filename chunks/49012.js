@@ -4,7 +4,7 @@ n.d(t, {
     return D
   },
   r: function() {
-    return v
+    return L
   }
 });
 var i = n(302454),
@@ -15,8 +15,8 @@ var i = n(302454),
   l = n(704133),
   u = n(139674),
   _ = n(702321),
-  d = n(900460),
-  c = n(627714),
+  c = n(900460),
+  d = n(627714),
   E = n(364640),
   I = n(772096),
   T = n(982806),
@@ -28,23 +28,23 @@ var i = n(302454),
   m = n(902676),
   O = n(375954),
   R = n(699516),
-  C = n(944486),
-  p = n(626135),
-  g = n(981631),
-  L = n(689938);
+  p = n(944486),
+  g = n(626135),
+  C = n(981631),
+  v = n(689938);
 
-function v(e, t) {
+function L(e, t) {
   var n;
-  let i = f.Z.getChannel(C.Z.getChannelId());
-  return !!(null == i || i.type !== g.d4z.DM || R.Z.isFriend(null !== (n = i.getRecipientId()) && void 0 !== n ? n : "")) && e === t
+  let i = f.Z.getChannel(p.Z.getChannelId());
+  return !!(null == i || i.type !== C.d4z.DM || R.Z.isFriend(null !== (n = i.getRecipientId()) && void 0 !== n ? n : "")) && e === t
 }
 
 function D(e, t) {
   let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
     {
       trusted: R,
-      onClick: C,
-      onConfirm: v,
+      onClick: p,
+      onConfirm: L,
       shouldConfirm: D,
       messageId: M,
       channelId: P
@@ -52,8 +52,8 @@ function D(e, t) {
     y = r().sanitizeUrl(e.href);
   if (null == y) {
     null != t && t.preventDefault(), s.Z.show({
-      title: L.Z.Messages.HOLD_UP,
-      body: L.Z.Messages.MALFORMED_LINK_BODY.format({
+      title: v.Z.Messages.HOLD_UP,
+      body: v.Z.Messages.MALFORMED_LINK_BODY.format({
         url: e.href
       }),
       isDismissable: !0
@@ -71,26 +71,26 @@ function D(e, t) {
       t = f.Z.getBasicChannel(P);
     U = null !== (V = null == t ? void 0 : t.guild_id) && void 0 !== V ? V : null;
     let n = N.Z.getGuild(U),
-      i = (null == e ? void 0 : null === (B = e.messageReference) || void 0 === B ? void 0 : B.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(g.iLy.IS_CROSSPOST)) && null != U;
+      i = (null == e ? void 0 : null === (B = e.messageReference) || void 0 === B ? void 0 : B.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(C.iLy.IS_CROSSPOST)) && null != U;
     i && (null == e ? void 0 : null === (x = e.messageReference) || void 0 === x ? void 0 : x.guild_id) != null ? (G = e.messageReference.message_id, w = e.messageReference.channel_id, k = e.messageReference.guild_id) : k = U;
-    let r = (null == t ? void 0 : t.type) === g.d4z.GUILD_ANNOUNCEMENT && (null == n ? void 0 : n.hasFeature(g.oNc.COMMUNITY)) === !0,
-      s = (null == e ? void 0 : e.hasFlag(g.iLy.EPHEMERAL)) === !0;
+    let r = (null == t ? void 0 : t.type) === C.d4z.GUILD_ANNOUNCEMENT && (null == n ? void 0 : n.hasFeature(C.oNc.COMMUNITY)) === !0,
+      s = (null == e ? void 0 : e.hasFlag(C.iLy.EPHEMERAL)) === !0;
     b = null != e && !s && (i || r)
   }
   if (null != P) {
     let e = f.Z.getChannel(P),
       t = N.Z.getGuild(null == e ? void 0 : e.getGuildId());
-    null != e && null != t && t.hasFeature(g.oNc.DISCOVERABLE) && p.default.track(g.rMx.URL_CLICKED, {
+    null != e && null != t && t.hasFeature(C.oNc.DISCOVERABLE) && g.default.track(C.rMx.URL_CLICKED, {
       url_domain: (0, m.F)(y),
       guild_id: t.id,
       channel_id: e.id
-    }), (0, _.Z)(P) && p.default.track(g.rMx.CHANGE_LOG_CTA_CLICKED, {
+    }), (0, _.Z)(P) && g.default.track(C.rMx.CHANGE_LOG_CTA_CLICKED, {
       cta_type: "inline_link",
       target: y
     })
   }
-  if (E.Z.trackLinkClicked(y), null != C) {
-    if (C(t)) return
+  if (E.Z.trackLinkClicked(y), null != p) {
+    if (p(t)) return
   } else {
     let {
       default: e
@@ -107,8 +107,8 @@ function D(e, t) {
         guildId: U,
         sourceChannelId: w,
         sourceGuildId: k
-      }), null != v) {
-      v();
+      }), null != L) {
+      L();
       return
     }(0, a.Z)(y)
   };
@@ -120,8 +120,8 @@ function D(e, t) {
     null == t || t.preventDefault(), h.Z.show(y);
     return
   }
-  if ((0, c.I)(y)) {
-    null == t || t.preventDefault(), d.Z.show(y);
+  if ((0, d.I)(y)) {
+    null == t || t.preventDefault(), c.Z.show(y);
     return
   }
   let H = "function" == typeof R ? R() : R,

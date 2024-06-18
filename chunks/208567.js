@@ -5,9 +5,9 @@ t.d(s, {
   }
 }), t(47120);
 var n, a = t(735250),
-  i = t(470079),
+  r = t(470079),
   l = t(120356),
-  r = t.n(l),
+  i = t.n(l),
   o = t(512722),
   c = t.n(o),
   u = t(481060),
@@ -32,26 +32,26 @@ function g(e) {
     icon: t = null
   } = e;
   return (0, a.jsx)("div", {
-    className: r()(m.imageUploaderIcon, s),
+    className: i()(m.imageUploaderIcon, s),
     children: t
   })
 }
-class h extends(n = i.PureComponent) {
+class h extends(n = r.PureComponent) {
   handleExternalFileChange(e) {
     c()(null != this.inputRef.current, "ImageInputRef asked to handleExternalFileChange when not mounted"), this.inputRef.current.handleFileChange(e)
   }
   render() {
     var e;
-    let s, t, n, i;
+    let s, t, n, r;
     let {
       image: l,
       hint: o,
       name: c,
       makeURL: p,
       disabled: h,
-      onChange: x,
+      onChange: I,
       showIcon: _,
-      showIconDisabled: I,
+      showIconDisabled: x,
       className: T,
       imageClassName: N,
       iconClassName: S,
@@ -59,8 +59,8 @@ class h extends(n = i.PureComponent) {
       icon: b,
       hideSize: v,
       imageStyle: O,
-      showRemoveButton: Z,
-      maxFileSizeBytes: A,
+      showRemoveButton: A,
+      maxFileSizeBytes: Z,
       onFileSizeError: R,
       onOpenImageSelectModal: j,
       "aria-label": P
@@ -69,24 +69,24 @@ class h extends(n = i.PureComponent) {
         className: m.imageUploaderAcronym,
         children: (0, d.Zg)(c)
       })), h) return (0, a.jsx)("div", {
-      className: r()(m.imageUploader, m.disabled, T),
+      className: i()(m.imageUploader, m.disabled, T),
       children: (0, a.jsxs)("div", {
-        className: r()(m.imageUploaderInner, N),
+        className: i()(m.imageUploaderInner, N),
         style: {
           ...O,
           backgroundImage: t
         },
-        children: [n, I && (0, a.jsx)("div", {
-          className: r()(m.imageUploaderIcon, m.imageUploaderIconDisabled, S),
+        children: [n, x && (0, a.jsx)("div", {
+          className: i()(m.imageUploaderIcon, m.imageUploaderIconDisabled, S),
           children: b
         })]
       })
     });
-    null != l ? i = (0, a.jsx)(u.Anchor, {
+    null != l ? r = (0, a.jsx)(u.Anchor, {
       className: m.removeButton,
       onClick: this.handleRemove,
       children: f.Z.Messages.REMOVE
-    }) : !v && (i = (0, a.jsx)("small", {
+    }) : !v && (r = (0, a.jsx)("small", {
       className: m.sizeInfo,
       children: f.Z.Messages.MINIMUM_SIZE.format({
         size: E.IXf
@@ -94,13 +94,13 @@ class h extends(n = i.PureComponent) {
     }));
     let M = null !== (e = null != P ? P : o) && void 0 !== e ? e : f.Z.Messages.CHANGE_AVATAR;
     return (0, a.jsxs)("div", {
-      className: r()(m.imageUploader, T),
+      className: i()(m.imageUploader, T),
       children: [(0, a.jsx)(u.FocusRing, {
         within: !0,
         children: (0, a.jsxs)("div", {
-          className: _ ? r()(m.imageUploaderIconWrapper, L) : void 0,
+          className: _ ? i()(m.imageUploaderIconWrapper, L) : void 0,
           children: [(0, a.jsxs)("div", {
-            className: r()(m.imageUploaderInner, N),
+            className: i()(m.imageUploaderInner, N),
             style: {
               ...O,
               backgroundImage: t
@@ -114,11 +114,11 @@ class h extends(n = i.PureComponent) {
               onClick: j
             }) : (0, a.jsx)(C.ZP, {
               ref: this.inputRef,
-              onChange: x,
+              onChange: I,
               className: m.imageUploaderFileInput,
               "aria-label": M,
               tabIndex: 0,
-              maxFileSizeBytes: A,
+              maxFileSizeBytes: Z,
               onFileSizeError: R
             })]
           }), null != o && (0, a.jsx)("div", {
@@ -130,11 +130,11 @@ class h extends(n = i.PureComponent) {
             icon: b
           })]
         })
-      }), Z ? i : null]
+      }), A ? r : null]
     })
   }
   constructor(...e) {
-    super(...e), p(this, "inputRef", i.createRef()), p(this, "handleRemove", () => {
+    super(...e), p(this, "inputRef", r.createRef()), p(this, "handleRemove", () => {
       this.props.onChange(null)
     })
   }

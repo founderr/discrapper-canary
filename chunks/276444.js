@@ -4,8 +4,8 @@ var i, r, s, o, a = n(275726),
   l = n(442837),
   u = n(570140),
   _ = n(594174),
-  d = n(281494),
-  c = n(981631);
+  c = n(281494),
+  d = n(981631);
 let E = null,
   I = {},
   T = [],
@@ -17,11 +17,11 @@ let E = null,
   m = {},
   O = 0,
   R = null,
-  C = [],
-  p = !1,
-  g = 0,
-  L = !1,
-  v = null,
+  p = [],
+  g = !1,
+  C = 0,
+  v = !1,
+  L = null,
   D = () => !0;
 
 function M(e) {
@@ -40,7 +40,7 @@ function y(e) {
   if (null == t) return !1;
   if (!A.has(t) && !N.has(t)) {
     var n;
-    n = t, N.add(n), u.Z.wait(() => (0, d.IB)(t).catch(c.VqG))
+    n = t, N.add(n), u.Z.wait(() => (0, c.IB)(t).catch(d.VqG))
   }
 }
 class U extends(i = l.ZP.Store) {
@@ -48,7 +48,7 @@ class U extends(i = l.ZP.Store) {
     this.waitFor(_.default), this.syncWith([_.default], D)
   }
   checkAndFetchReferralsRemaining() {
-    null == E && !f && O < 5 && (null == R || R < Date.now()) && (0, d.C$)()
+    null == E && !f && O < 5 && (null == R || R < Date.now()) && (0, c.C$)()
   }
   getReferralsRemaining() {
     return this.checkAndFetchReferralsRemaining(), E
@@ -63,7 +63,7 @@ class U extends(i = l.ZP.Store) {
     return S.has(e)
   }
   getRecipientEligibility(e) {
-    return void 0 === I[e] && !S.has(e) && (0, d.Ve)(e), I[e]
+    return void 0 === I[e] && !S.has(e) && (0, c.Ve)(e), I[e]
   }
   getRelevantUserTrialOffer(e) {
     return m[e]
@@ -72,19 +72,19 @@ class U extends(i = l.ZP.Store) {
     return N.has(e)
   }
   getEligibleUsers() {
-    return C
-  }
-  getFetchingEligibleUsers() {
     return p
   }
-  getNextIndexOfEligibleUsers() {
+  getFetchingEligibleUsers() {
     return g
   }
+  getNextIndexOfEligibleUsers() {
+    return C
+  }
   getIsEligibleToSendReferrals() {
-    return L
+    return v
   }
   getRefreshAt() {
-    return v
+    return L
   }
   getRelevantReferralTrialOffers() {
     return m
@@ -104,14 +104,14 @@ o = "ReferralTrialStore", (s = "displayName") in(r = U) ? Object.defineProperty(
       userTrialOfferId: t,
       recipientId: n
     } = e;
-    if (!f && (0, d.C$)(), !S.has(n) && (0, d.Ve)(n), !N.has(t)) {
+    if (!f && (0, c.C$)(), !S.has(n) && (0, c.Ve)(n), !N.has(t)) {
       var i;
-      i = t, N.add(i), u.Z.wait(() => (0, d.IB)(t).catch(c.VqG))
+      i = t, N.add(i), u.Z.wait(() => (0, c.IB)(t).catch(d.VqG))
     }
   },
   BILLING_REFERRALS_REMAINING_FETCH_START: function(e) {
     let {} = e;
-    L = !1, v = null, f = !0
+    v = !1, L = null, f = !0
   },
   BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: function(e) {
     let {
@@ -121,11 +121,11 @@ o = "ReferralTrialStore", (s = "displayName") in(r = U) ? Object.defineProperty(
       recipient_status: r,
       has_eligible_friends: s
     } = e;
-    L = null == i && s, f = !1, E = t, T = n, v = i, h = r
+    v = null == i && s, f = !1, E = t, T = n, L = i, h = r
   },
   BILLING_REFERRALS_REMAINING_FETCH_FAIL: function(e) {
     let {} = e;
-    L = !1, v = null, f = !1, O += 1, R = Date.now() + 1e3 * Math.pow(2, O)
+    v = !1, L = null, f = !1, O += 1, R = Date.now() + 1e3 * Math.pow(2, O)
   },
   BILLING_CREATE_REFERRAL_PREVIEW_START: function(e) {
     let {
@@ -150,13 +150,13 @@ o = "ReferralTrialStore", (s = "displayName") in(r = U) ? Object.defineProperty(
     let {
       userTrialOffer: t
     } = e;
-    (0, d.C$)(), m[t.id] = t, T = [...T, t.user_id]
+    (0, c.C$)(), m[t.id] = t, T = [...T, t.user_id]
   },
   CREATE_REFERRALS_SUCCESS: function(e) {
     let {
       userTrialOffers: t
     } = e;
-    for (let e of ((0, d.C$)(), t)) m[e.id] = e, T = [...T, e.user_id]
+    for (let e of ((0, c.C$)(), t)) m[e.id] = e, T = [...T, e.user_id]
   },
   BILLING_REFERRAL_RESOLVE_SUCCESS: function(e) {
     let {
@@ -171,17 +171,17 @@ o = "ReferralTrialStore", (s = "displayName") in(r = U) ? Object.defineProperty(
     N.delete(t), A.add(t)
   },
   REFERRALS_FETCH_ELIGIBLE_USER_START: function() {
-    p = !0
+    g = !0
   },
   REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: function(e) {
     let {
       users: t,
       nextIndex: n
     } = e;
-    p = !1, C = t, g = n
+    g = !1, p = t, C = n
   },
   REFERRALS_FETCH_ELIGIBLE_USER_FAIL: function() {
-    p = !1
+    g = !1
   },
   LOAD_MESSAGES_SUCCESS: P,
   MESSAGE_CREATE: function(e) {
@@ -192,6 +192,6 @@ o = "ReferralTrialStore", (s = "displayName") in(r = U) ? Object.defineProperty(
   },
   LOAD_MESSAGES_AROUND_SUCCESS: P,
   LOGOUT: function() {
-    E = null, I = {}, T = [], S = new Set, f = !1, N = new Set, A = new Set, m = {}, O = 0, R = null, C = [], p = !1, g = 0, L = !1, v = null, h = new Map
+    E = null, I = {}, T = [], S = new Set, f = !1, N = new Set, A = new Set, m = {}, O = 0, R = null, p = [], g = !1, C = 0, v = !1, L = null, h = new Map
   }
 })

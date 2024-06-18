@@ -12,8 +12,8 @@ t.Z = r.forwardRef(function(e, t) {
     contentClassName: r,
     isUnread: s,
     children: _,
-    id: d,
-    role: c,
+    id: c,
+    role: d,
     "aria-label": E
   } = e;
   return (0, i.jsxs)("div", {
@@ -23,8 +23,8 @@ t.Z = r.forwardRef(function(e, t) {
       [u.hasContent]: null != _
     }),
     ref: t,
-    id: d,
-    role: c,
+    id: c,
+    role: d,
     "aria-label": E,
     children: [null != _ ? (0, i.jsx)("span", {
       className: o()(u.content, r),

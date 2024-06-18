@@ -2,8 +2,8 @@
 n(47120), n(724458);
 var i, r, s, o, a, l, u = n(392711),
   _ = n.n(u),
-  d = n(442837),
-  c = n(570140),
+  c = n(442837),
+  d = n(570140),
   E = n(592125),
   I = n(984933),
   T = n(271383),
@@ -20,7 +20,7 @@ let O = {},
     moderator: !1
   };
 
-function C(e, t) {
+function p(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   null == O[t] && (O[t] = {});
   let i = function(e, t) {
@@ -47,7 +47,7 @@ function C(e, t) {
   return O[t][e] = i, i
 }
 
-function p(e) {
+function g(e) {
   let t = I.ZP.getChannels(e)[I.Zb].filter(e => {
     let {
       channel: t
@@ -61,7 +61,7 @@ function p(e) {
   return t.length > 0
 }
 
-function g(e) {
+function C(e) {
   let {
     guildId: t,
     user: n
@@ -75,7 +75,7 @@ function g(e) {
   }(n.id, t)
 }
 
-function L(e) {
+function v(e) {
   let {
     guild: t
   } = e;
@@ -84,7 +84,7 @@ function L(e) {
     (null == n || n.guild_id === t.id) && delete O[e]
   }
 }
-class v extends(r = d.ZP.Store) {
+class L extends(r = c.ZP.Store) {
   initialize() {
     this.waitFor(T.ZP, E.Z, h.Z, S.default, f.Z)
   }
@@ -104,16 +104,16 @@ class v extends(r = d.ZP.Store) {
     let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (null == e || null == t) return R;
     let r = null === (n = O[t]) || void 0 === n ? void 0 : n[e];
-    if (null != r) return i && null == r.moderator ? C(e, t, !0) : r;
-    return C(e, t, i)
+    if (null != r) return i && null == r.moderator ? p(e, t, !0) : r;
+    return p(e, t, i)
   }
 }
-l = "StageChannelRoleStore", (a = "displayName") in(o = v) ? Object.defineProperty(o, a, {
+l = "StageChannelRoleStore", (a = "displayName") in(o = L) ? Object.defineProperty(o, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[a] = l, t.ZP = new v(c.Z, {
+}) : o[a] = l, t.ZP = new L(d.Z, {
   CHANNEL_UPDATES: function(e) {
     let {
       channels: t
@@ -123,16 +123,16 @@ l = "StageChannelRoleStore", (a = "displayName") in(o = v) ? Object.defineProper
   CONNECTION_OPEN: function() {
     O = {}
   },
-  GUILD_MEMBER_REMOVE: g,
-  GUILD_MEMBER_UPDATE: g,
+  GUILD_MEMBER_REMOVE: C,
+  GUILD_MEMBER_UPDATE: C,
   GUILD_ROLE_UPDATE: function(e) {
     let {
       guildId: t
     } = e;
-    p(t)
+    g(t)
   },
   PASSIVE_UPDATE_V2: function(e) {
-    return p(e.guildId)
+    return g(e.guildId)
   },
   VOICE_STATE_UPDATES: function(e) {
     let {
@@ -151,6 +151,6 @@ l = "StageChannelRoleStore", (a = "displayName") in(o = v) ? Object.defineProper
       }(n, i) || e
     }, !1)
   },
-  GUILD_CREATE: L,
-  GUILD_DELETE: L
+  GUILD_CREATE: v,
+  GUILD_DELETE: v
 })

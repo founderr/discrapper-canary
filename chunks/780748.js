@@ -17,8 +17,8 @@ function u(e) {
     channel: n,
     disableEnterToSubmit: u,
     onKeyDown: _,
-    onKeyUp: d,
-    onTab: c,
+    onKeyUp: c,
+    onTab: d,
     onEnter: E,
     allowNewLines: I,
     submit: T,
@@ -59,7 +59,7 @@ function u(e) {
         null == h || h();
         break;
       case l.yXg.TAB:
-        if ((0, a.E)(e, {}) && (null == c ? void 0 : c())) {
+        if ((0, a.E)(e, {}) && (null == d ? void 0 : d())) {
           e.preventDefault(), e.stopPropagation();
           return
         }
@@ -79,11 +79,11 @@ function u(e) {
       return
     }
     e.which === l.yXg.ENTER && (!e.altKey && !e.shiftKey && (!u || e.ctrlKey) && !(0, o.L6)(t) || !I) && (e.preventDefault(), e.stopPropagation(), T()), null == _ || _(e)
-  }, [I, n.id, u, t, h, S, E, _, c, T]);
+  }, [I, n.id, u, t, h, S, E, _, d, T]);
   return {
     handleKeyDown: f,
     handleKeyUp: i.useCallback(e => {
-      null == d || d(e)
-    }, [d])
+      null == c || c(e)
+    }, [c])
   }
 }

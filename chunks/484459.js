@@ -15,8 +15,8 @@ var i = n(570140),
   l = n(598077),
   u = n(592125),
   _ = n(271383),
-  d = n(342656),
-  c = n(447452),
+  c = n(342656),
+  d = n(447452),
   E = n(877485),
   I = n(621853),
   T = n(120569);
@@ -34,7 +34,7 @@ function h() {
       location: "maybeFetchUserProfileForPopout",
       autoTrackExposure: !1
     }),
-    T = (0, d.oU)().enabled || (0, c.T)({
+    T = (0, c.oU)().enabled || (0, d.T)({
       location: "maybeFetchUserProfileForPopout",
       autoTrackExposure: !1
     }).basicsEnabled || I.originalFriendingEnabled || I.improvedFriendingEnabled;
@@ -45,8 +45,8 @@ function h() {
   })
 }
 async function S(e, t) {
-  var n, l, d;
-  let c, {
+  var n, l, c;
+  let d, {
     withMutualGuilds: E = !1,
     withMutualFriendsCount: h = !1,
     withMutualFriends: S = !1,
@@ -58,29 +58,29 @@ async function S(e, t) {
     abortSignal: R
   } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
   if ("" === e) return;
-  (0, a.z)(), null != t && (0, s.vM)(t), null != m && !E && (E = !0), null != m && (c = null !== (l = null === (n = (0, o.Ur)({
+  (0, a.z)(), null != t && (0, s.vM)(t), null != m && !E && (E = !0), null != m && (d = null !== (l = null === (n = (0, o.Ur)({
     guildMember: _.ZP.getMember(m, e),
     channel: u.Z.getChannel(O)
   })) || void 0 === n ? void 0 : n.id) && void 0 !== l ? l : void 0);
-  let C = I.Z.getUserProfile(e),
-    p = I.Z.getGuildMemberProfile(e, m),
-    g = I.Z.getMutualGuilds(e),
-    L = I.Z.getMutualFriends(e),
-    v = I.Z.getMutualFriendsCount(e),
+  let p = I.Z.getUserProfile(e),
+    g = I.Z.getGuildMemberProfile(e, m),
+    C = I.Z.getMutualGuilds(e),
+    v = I.Z.getMutualFriends(e),
+    L = I.Z.getMutualFriendsCount(e),
     D = I.Z.isFetchingProfile(e),
     M = N ? T.Z : void 0,
-    P = null == g && E,
-    y = null == L && S,
-    U = null == v && h,
-    b = null != m && null == p,
-    G = Date.now() - (null !== (d = null == C ? void 0 : C.lastFetched) && void 0 !== d ? d : 0) >= 6e4;
+    P = null == C && E,
+    y = null == v && S,
+    U = null == L && h,
+    b = null != m && null == g,
+    G = Date.now() - (null !== (c = null == p ? void 0 : p.lastFetched) && void 0 !== c ? c : 0) >= 6e4;
   if (!!(!D && (P || U || y)) || !!b || !!G) A ? await i.Z.wait(() => (0, r.In)(e, {
     withMutualGuilds: E,
     withMutualFriends: S,
     withMutualFriendsCount: h,
     friendToken: f,
     guildId: m,
-    connectionsRoleId: c,
+    connectionsRoleId: d,
     abortSignal: R
   }, M)) : await (0, r.In)(e, {
     withMutualGuilds: E,
@@ -88,7 +88,7 @@ async function S(e, t) {
     withMutualFriendsCount: h,
     friendToken: f,
     guildId: m,
-    connectionsRoleId: c,
+    connectionsRoleId: d,
     abortSignal: R
   }, M)
 }

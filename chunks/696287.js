@@ -8,9 +8,9 @@ var i = n(846519),
   l = n(70956),
   u = n(581567),
   _ = n(594190),
-  d = n(981631);
+  c = n(981631);
 
-function c(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -33,12 +33,12 @@ class I extends r.Z {
     _.ZP.getRunningGames().length > 0 && this.maybeStartHeartbeat()
   }
   constructor(...e) {
-    super(...e), c(this, "heartbeatInterval", new i.Xp), c(this, "runningGameKeys", new Set), c(this, "actions", {
+    super(...e), d(this, "heartbeatInterval", new i.Xp), d(this, "runningGameKeys", new Set), d(this, "actions", {
       RUNNING_GAMES_CHANGE: e => this.handleRunningGamesChanged(e),
       LOGOUT: () => this.stopHeartbeat(),
       CONNECTION_CLOSED: () => this.stopHeartbeat(),
       POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen()
-    }), c(this, "handleRunningGamesChanged", e => {
+    }), d(this, "handleRunningGamesChanged", e => {
       let {
         games: t
       } = e;
@@ -47,7 +47,7 @@ class I extends r.Z {
         return
       }
       this.maybeStartHeartbeat()
-    }), c(this, "logRunningGameHeartbeats", () => {
+    }), d(this, "logRunningGameHeartbeats", () => {
       let e = _.ZP.getRunningGames(),
         t = {
           rtc_connection_id: o.Z.getRTCConnectionId(),
@@ -58,9 +58,9 @@ class I extends r.Z {
         var i, r;
         let o = (0, _.rH)(e),
           l = !this.runningGameKeys.has(o),
-          c = null !== (r = e.id) && void 0 !== r ? r : null === (i = s.Z.getGameByName(e.name)) || void 0 === i ? void 0 : i.id;
-        a.default.track(d.rMx.RUNNING_GAME_HEARTBEAT, {
-          game_id: c,
+          d = null !== (r = e.id) && void 0 !== r ? r : null === (i = s.Z.getGameByName(e.name)) || void 0 === i ? void 0 : i.id;
+        a.default.track(c.rMx.RUNNING_GAME_HEARTBEAT, {
+          game_id: d,
           game_name: e.name,
           game_distributor: e.distributor,
           game_executable: (0, u.N6)(e.exePath),

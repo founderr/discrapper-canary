@@ -8,7 +8,7 @@ var i, r = n(442837),
   u = n(984933),
   _ = n(981631);
 
-function d(e, t, n) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -16,7 +16,7 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let c = {},
+let d = {},
   E = 0;
 
 function I() {
@@ -24,49 +24,49 @@ function I() {
 }
 
 function T(e) {
-  if (null == c[e]) return !1;
-  delete c[e]
+  if (null == d[e]) return !1;
+  delete d[e]
 }
 class h extends(i = r.ZP.PersistedStore) {
   initialize(e) {
-    this.waitFor(a.Z, l.Z), this.removeChangeListener(I), this.addChangeListener(I), c = null != e ? e : {}
+    this.waitFor(a.Z, l.Z), this.removeChangeListener(I), this.addChangeListener(I), d = null != e ? e : {}
   }
   getState() {
-    return c
+    return d
   }
   isCollapsed(e) {
-    return null != e && "null" !== e && !!c[e] && c[e]
+    return null != e && "null" !== e && !!d[e] && d[e]
   }
   getCollapsedCategories() {
-    return c
+    return d
   }
   get version() {
     return E
   }
 }
-d(h, "displayName", "CategoryCollapseStore"), d(h, "persistKey", "collapsedCategories"), t.Z = new h(s.Z, {
+c(h, "displayName", "CategoryCollapseStore"), c(h, "persistKey", "collapsedCategories"), t.Z = new h(s.Z, {
   CONNECTION_OPEN: function(e) {
-    for (let t of (!e.userGuildSettings.partial && (c = {}), e.userGuildSettings.entries))
+    for (let t of (!e.userGuildSettings.partial && (d = {}), e.userGuildSettings.entries))
       if (null != t.channel_overrides)
-        for (let e of t.channel_overrides) e.collapsed ? c[e.channel_id] = !0 : delete c[e.channel_id]
+        for (let e of t.channel_overrides) e.collapsed ? d[e.channel_id] = !0 : delete d[e.channel_id]
   },
   USER_GUILD_SETTINGS_FULL_UPDATE: function(e) {
     let {
       userGuildSettings: t
     } = e, n = new Set(t.map(e => e.guild_id).filter(o.lm));
-    for (let e in c) {
+    for (let e in d) {
       let t = a.Z.getChannel(e);
-      null != t && null != t.guild_id && n.has(t.guild_id) && delete c[t.id]
+      null != t && null != t.guild_id && n.has(t.guild_id) && delete d[t.id]
     }
     for (let e of t)
-      for (let t of e.channel_overrides) t.collapsed && (c[t.channel_id] = !0)
+      for (let t of e.channel_overrides) t.collapsed && (d[t.channel_id] = !0)
   },
   CATEGORY_COLLAPSE: function(e) {
     let {
       id: t
     } = e;
-    if (c[t]) return !1;
-    c[t] = !0
+    if (d[t]) return !1;
+    d[t] = !0
   },
   CATEGORY_EXPAND: function(e) {
     let {
@@ -82,7 +82,7 @@ d(h, "displayName", "CategoryCollapseStore"), d(h, "persistKey", "collapsedCateg
       let {
         channel: t
       } = e;
-      "null" !== t.id && (c[t.id] = !0)
+      "null" !== t.id && (d[t.id] = !0)
     })
   },
   CATEGORY_EXPAND_ALL: function(e) {
@@ -93,7 +93,7 @@ d(h, "displayName", "CategoryCollapseStore"), d(h, "persistKey", "collapsedCateg
       let {
         channel: t
       } = e;
-      delete c[t.id]
+      delete d[t.id]
     })
   },
   CHANNEL_DELETE: function(e) {

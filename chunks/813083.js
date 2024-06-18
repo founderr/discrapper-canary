@@ -1,9 +1,9 @@
 "use strict";
 t(627341);
-var n, a, i = t(735250);
+var n, a, r = t(735250);
 t(470079);
 var l = t(120356),
-  r = t.n(l),
+  i = t.n(l),
   o = t(278074),
   c = t(780384),
   u = t(481060),
@@ -22,10 +22,10 @@ s.Z = e => {
   let l = (0, C.OT)(s.unpublishedAt);
 
   function m(e) {
-    return (0, i.jsx)(u.TextBadge, {
+    return (0, r.jsx)(u.TextBadge, {
       disableColor: !0,
       text: e,
-      className: r()((0, c.wj)(a) ? f.badgeDark : f.badgeLight, n)
+      className: i()((0, c.wj)(a) ? f.badgeDark : f.badgeLight, n)
     })
   }
   return (0, o.EQ)([t, l > 1]).with(["card", !0], () => null).with(["banner", !0], () => m(E.Z.Messages.COLLECTIBLES_DAYS_LEFT_IN_SHOP.format({

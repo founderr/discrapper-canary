@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return c
+    return d
   },
   o: function() {
-    return d
+    return c
   }
 }), n(47120);
 var i = n(392711),
@@ -15,7 +15,7 @@ var i = n(392711),
   l = n(283595),
   u = n(804739),
   _ = n(981631);
-async function d() {
+async function c() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.Z.entitledBranchIds;
   if (!(0, u.Q)() || 0 === e.length) return [];
   let t = r().chunk(e, 50);
@@ -40,7 +40,7 @@ async function d() {
     }), []
   }
 }
-async function c(e) {
+async function d(e) {
   try {
     let t = await s.tn.get({
         url: _.ANM.OWNED_APPLICATION_BRANCHES(e),

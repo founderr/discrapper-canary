@@ -7,8 +7,8 @@ var i = n(735250),
   l = n(420596),
   u = n(880563),
   _ = n(484459),
-  d = n(318661),
-  c = n(695346),
+  c = n(318661),
+  d = n(695346),
   E = n(981631),
   I = n(147556);
 t.Z = function(e) {
@@ -20,30 +20,30 @@ t.Z = function(e) {
     pulseSpeakingIndicator: S = !1,
     speaking: f = !1,
     ...N
-  } = e, A = null != T ? T : n, m = (0, a.ZP)(A, s.Z.unsafe_rawColors.PRIMARY_800.css), O = (0, l.c)(!0, "VideoBackground-web").enabled, R = (0, d.ZP)(null != h ? h : E.lds), C = null == R ? void 0 : R.getBannerURL({
+  } = e, A = null != T ? T : n, m = (0, a.ZP)(A, s.Z.unsafe_rawColors.PRIMARY_800.css), O = (0, l.c)(!0, "VideoBackground-web").enabled, R = (0, c.ZP)(null != h ? h : E.lds), p = null == R ? void 0 : R.getBannerURL({
     size: 1024,
-    canAnimate: c.QK.getSetting()
+    canAnimate: d.QK.getSetting()
   });
   if (r.useEffect(() => {
       null != h && O && (0, _.Z)(h, void 0, {
         dispatchWait: !0
       })
     }, [O, h]), null == n) return null;
-  let p = (0, i.jsx)(o.Avatar, {
+  let g = (0, i.jsx)(o.Avatar, {
       className: I.avatarWrapper,
       src: n,
       ...N
     }),
-    g = {
+    C = {
       ...t,
       backgroundColor: m
     };
-  return null != C && f && O && (g.backgroundImage = "url(".concat(C, ")"), g.backgroundSize = "cover"), (0, i.jsx)("div", {
-    style: g,
+  return null != p && f && O && (C.backgroundImage = "url(".concat(p, ")"), C.backgroundSize = "cover"), (0, i.jsx)("div", {
+    style: C,
     className: I.background,
     children: S ? (0, i.jsx)(u.Z, {
       shouldAnimate: f,
-      children: p
-    }) : p
+      children: g
+    }) : g
   })
 }

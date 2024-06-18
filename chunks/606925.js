@@ -18,11 +18,11 @@ function _(e) {
     platform: t,
     color: n,
     look: _,
-    onAction: d
+    onAction: c
   } = e;
   return (0, r.e7)([o.Z], () => o.Z.getAccounts().some(e => e.type === t.type)) ? null : (0, i.jsx)(a.Z, {
     onClick: () => {
-      null == d || d(), (0, s.Z)({
+      null == c || c(), (0, s.Z)({
         platformType: t.type,
         location: "Activity Action"
       })

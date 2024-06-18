@@ -8,21 +8,21 @@ n.d(t, {
 var r, s, o, a, l = n(392711),
   u = n(442837),
   _ = n(780384),
-  d = n(570140),
-  c = n(70956),
+  c = n(570140),
+  d = n(70956),
   E = n(963838),
   I = n(354459);
 let T = [],
   h = {},
   S = [],
   f = e => {
-    null != e && d.Z.dispatch({
+    null != e && c.Z.dispatch({
       type: "VOICE_CHANNEL_EFFECT_CLEAR",
       userId: e
     })
   },
   N = [],
-  A = 10 * c.Z.Millis.SECOND,
+  A = 10 * d.Z.Millis.SECOND,
   m = (0, l.debounce)(() => {
     let e = (0, E.cX)(S);
     _.uv.announce(e, "polite"), S = []
@@ -46,7 +46,7 @@ a = "VoiceChannelEffectsStore", (o = "displayName") in(s = O) ? Object.definePro
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[o] = a, t.Z = new O(d.Z, {
+}) : s[o] = a, t.Z = new O(c.Z, {
   VOICE_CHANNEL_EFFECT_CLEAR: e => {
     let {
       userId: t

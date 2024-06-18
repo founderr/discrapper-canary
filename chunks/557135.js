@@ -9,8 +9,8 @@ var r = n(481060),
   l = n(569471),
   u = n(346479),
   _ = n(314897),
-  d = n(944486),
-  c = n(979651),
+  c = n(944486),
+  d = n(979651),
   E = n(366297),
   I = n(981631);
 t.Z = {
@@ -26,8 +26,8 @@ t.Z = {
     } = e;
     t.isThread() && (await u.Z.unarchiveThreadIfNecessary(t.id), !l.Z.hasJoined(t.id) && await u.Z.joinThread(t, "Join Voice"));
     let m = o.Z.getRemoteSessionId(),
-      O = c.Z.getVoiceStateForSession(_.default.getId(), m),
-      R = (null == O ? void 0 : O.channelId) === t.id || d.Z.getChannelId() === c.Z.getCurrentClientVoiceChannelId(t.guild_id);
+      O = d.Z.getVoiceStateForSession(_.default.getId(), m),
+      R = (null == O ? void 0 : O.channelId) === t.id || c.Z.getChannelId() === d.Z.getCurrentClientVoiceChannelId(t.guild_id);
     return !N && !S && (0, E._)(t) ? new Promise(e => {
       (0, r.openModalLazy)(async () => {
         let {

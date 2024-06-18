@@ -11,8 +11,8 @@ var i, r = n(735250),
   l = n(699581),
   u = n(374470),
   _ = n(846519),
-  d = n(337033),
-  c = n(302901),
+  c = n(337033),
+  d = n(302901),
   E = n(539907),
   I = n(952265),
   T = n(40851),
@@ -81,7 +81,7 @@ class m extends(i = s.Component) {
       }, {
         isShown: n,
         position: this.state.renderedPosition
-      }), (0, r.jsx)(d.y, {
+      }), (0, r.jsx)(c.y, {
         forceLevel: 2,
         children: this.renderLayer()
       })]
@@ -101,11 +101,11 @@ class m extends(i = s.Component) {
       disablePointerEvents: u,
       layerContext: _
     } = this.props, {
-      resizeKey: d,
+      resizeKey: c,
       isLoading: I,
       shouldShowLoadingState: T
     } = this.state;
-    return I && !T ? null : (0, r.jsx)(c.mh, {
+    return I && !T ? null : (0, r.jsx)(d.mh, {
       layerContext: null != _ ? _ : h.nz,
       children: (0, r.jsx)(E.j, {
         ref: this.layerRef,
@@ -120,7 +120,7 @@ class m extends(i = s.Component) {
         spacing: s,
         autoInvert: o,
         fixed: a,
-        positionKey: null != l ? l : String(d),
+        positionKey: null != l ? l : String(c),
         disablePointerEvents: u,
         onPositionChange: this.handlePopoutPositionChange,
         children: this.renderPopout

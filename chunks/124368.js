@@ -4,7 +4,7 @@ n.d(t, {
     return u
   },
   M3: function() {
-    return d
+    return c
   },
   RN: function() {
     return h
@@ -28,7 +28,7 @@ n.d(t, {
     return _
   },
   yX: function() {
-    return c
+    return d
   },
   zb: function() {
     return T
@@ -38,8 +38,8 @@ var i, r, s, o, a = n(981631),
   l = n(689938);
 let u = 4320,
   _ = 50,
-  d = 1e5,
-  c = 50,
+  c = 1e5,
+  d = 50,
   E = 25,
   I = {
     HAS_INTERACTED: 1,

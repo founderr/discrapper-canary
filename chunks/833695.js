@@ -35,9 +35,9 @@ function g(e) {
   var s, t, r;
   let {
     guildId: T
-  } = e, g = (0, N.Z)(T), x = (0, a.f3)(), C = (0, i.e7)([I.Z], () => I.Z.getGuild());
-  return g.loading || null == C ? (0, n.jsx)(l.Spinner, {}) : null == g.application ? (0, n.jsx)(u.Z, {
-    guild: C
+  } = e, g = (0, N.Z)(T), C = (0, a.f3)(), x = (0, i.e7)([I.Z], () => I.Z.getGuild());
+  return g.loading || null == x ? (0, n.jsx)(l.Spinner, {}) : null == g.application ? (0, n.jsx)(u.Z, {
+    guild: x
   }) : (0, n.jsxs)(d.Z, {
     children: [(0, n.jsx)(c.Z, {
       revenue: g.metrics.revenue,
@@ -59,7 +59,7 @@ function g(e) {
       })
     }), (0, n.jsx)(l.FormSection, {
       title: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TITLE,
-      disabled: x,
+      disabled: C,
       children: (0, n.jsx)(E.Z, {
         guildId: T,
         application: g.application

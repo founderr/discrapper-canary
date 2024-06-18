@@ -7,8 +7,8 @@ var i, r = n(735250),
   l = n(481060),
   u = n(129861),
   _ = n(730749),
-  d = n(484459),
-  c = n(103575),
+  c = n(484459),
+  d = n(103575),
   E = n(285952),
   I = n(981631),
   T = n(21782);
@@ -37,10 +37,10 @@ class S extends(i = s.Component) {
       }
     };
     return (0, r.jsx)(l.Popout, {
-      preload: () => (0, d.W)(t.id, t.getAvatarURL(s, 80), {
+      preload: () => (0, c.W)(t.id, t.getAvatarURL(s, 80), {
         guildId: s
       }),
-      renderPopout: e => (0, r.jsx)(c.Z, {
+      renderPopout: e => (0, r.jsx)(d.Z, {
         ...e,
         location: "UserListItem",
         guildId: s,
@@ -78,8 +78,8 @@ class S extends(i = s.Component) {
         user: s,
         status: o,
         textClassName: _,
-        nick: d,
-        guildId: c
+        nick: c,
+        guildId: d
       } = this.props;
       return (0, r.jsxs)(E.Z, {
         align: E.Z.Align.CENTER,
@@ -91,7 +91,7 @@ class S extends(i = s.Component) {
         onKeyDown: e.onKeyDown,
         onClick: this.handleClickUser,
         children: [(0, r.jsx)(l.Avatar, {
-          src: s.getAvatarURL(c, 24),
+          src: s.getAvatarURL(d, 24),
           className: T.avatar,
           "aria-label": s.username,
           size: l.AvatarSizes.SIZE_24,
@@ -101,7 +101,7 @@ class S extends(i = s.Component) {
           variant: "text-sm/normal",
           children: (0, r.jsx)(u.Z, {
             user: s,
-            nick: d,
+            nick: c,
             usernameClass: T.username,
             hideDiscriminator: !0
           })

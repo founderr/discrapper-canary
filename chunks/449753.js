@@ -8,14 +8,14 @@ var i = n(846519),
   l = n(592125),
   u = n(936349),
   _ = n(944486),
-  d = n(959457),
-  c = n(70956),
+  c = n(959457),
+  d = n(70956),
   E = n(569545),
   I = n(981631);
 let T = new i.V7,
   h = new i.V7,
-  S = 5 * c.Z.Millis.SECOND,
-  f = 12 * c.Z.Millis.SECOND,
+  S = 5 * d.Z.Millis.SECOND,
+  f = 12 * d.Z.Millis.SECOND,
   N = null;
 
 function A(e, t) {
@@ -32,12 +32,12 @@ function A(e, t) {
 
 function m(e, t) {
   let n = null != t ? t : u.Z.getPreferredRegion();
-  null != n && n !== u.Z.getRegion(d.Z.getHostname(d.Z.getActiveStreamKey())) && (0, s.dV)(e, n)
+  null != n && n !== u.Z.getRegion(c.Z.getHostname(c.Z.getActiveStreamKey())) && (0, s.dV)(e, n)
 }
 t.Z = {
   init() {
     let e = (e, t) => {
-      !d.Z.getAllActiveStreamKeys().includes(e) && h.start(t ? f : S, () => {
+      !c.Z.getAllActiveStreamKeys().includes(e) && h.start(t ? f : S, () => {
         r.Z.dispatch({
           type: "STREAM_TIMED_OUT",
           streamKey: e

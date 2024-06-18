@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   F: function() {
-    return d
+    return c
   },
   e: function() {
     return r
@@ -34,7 +34,7 @@ class _ {
   }
 }
 
-function d(e) {
+function c(e) {
   if (1 === e) return new s.Z;
   return new _
 }(i = r || (r = {}))[i.MESSAGE_ATTACHMENT = 0] = "MESSAGE_ATTACHMENT", i[i.GUILD_PRODUCT_ATTACHMENT = 1] = "GUILD_PRODUCT_ATTACHMENT"

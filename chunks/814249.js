@@ -10,17 +10,17 @@ n.d(t, {
     return l
   },
   cS: function() {
-    return d
+    return c
   },
   iq: function() {
-    return c
+    return d
   }
 });
 var i, r, s, o, a, l, u = n(70956),
   _ = n(689938);
-let d = 5 * u.Z.Millis.SECOND;
+let c = 5 * u.Z.Millis.SECOND;
 
-function c() {
+function d() {
   return [{
     value: "DUPLICATED",
     label: _.Z.Messages.SUMMARIES_FEEDBACK_OPTION_DUPLICATED

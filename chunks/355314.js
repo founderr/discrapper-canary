@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return C
+    return p
   }
 });
 var i = n(735250),
@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(174609),
   u = n(703656),
   _ = n(210887),
-  d = n(594174),
-  c = n(626135),
+  c = n(594174),
+  d = n(626135),
   E = n(424218),
   I = n(74538),
   T = n(104494),
@@ -26,32 +26,32 @@ var i = n(735250),
   O = n(689938),
   R = n(241614);
 
-function C(e) {
+function p(e) {
   let {
     onClose: t,
     ...n
-  } = e, C = (0, s.e7)([d.default], () => d.default.getCurrentUser()), p = (0, s.e7)([_.Z], () => _.Z.theme), g = (0, h.N)(), L = (0, T.Ng)(), v = null != g || null != L, {
+  } = e, p = (0, s.e7)([c.default], () => c.default.getCurrentUser()), g = (0, s.e7)([_.Z], () => _.Z.theme), C = (0, h.N)(), v = (0, T.Ng)(), L = null != C || null != v, {
     enabled: D
   } = S.MP.useExperiment({
     location: "File Upload Roadblock"
   }, {
-    autoTrackExposure: !v,
-    disable: v
-  }), M = p === A.BRd.LIGHT ? "light" : "dark", P = D ? (0, i.jsx)("img", {
+    autoTrackExposure: !L,
+    disable: L
+  }), M = g === A.BRd.LIGHT ? "light" : "dark", P = D ? (0, i.jsx)("img", {
     className: R.updatedArt,
     alt: "File Upload Nitro Perk",
     src: "https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_".concat(M, ".png")
   }) : (0, i.jsx)(a.Z, {
     icons: m.J6
   }), y = r.useMemo(() => {
-    let e = I.ZP.getUserMaxFileSize(C),
+    let e = I.ZP.getUserMaxFileSize(p),
       t = (0, E.BU)(e / 1024, {
         useKibibytes: !0
       }),
       n = O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
         maxSize: t
       });
-    switch (null == C ? void 0 : C.premiumType) {
+    switch (null == p ? void 0 : p.premiumType) {
       case N.p9.TIER_0:
         n = O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_0.format({
           maxSize: t
@@ -63,7 +63,7 @@ function C(e) {
         })
     }
     return n
-  }, [C]), U = D ? O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_TIER_2 : O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE, b = D ? (0, i.jsx)("div", {
+  }, [p]), U = D ? O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_TIER_2 : O.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE, b = D ? (0, i.jsx)("div", {
     className: R.body,
     children: (0, i.jsx)(o.Text, {
       variant: "text-sm/medium",
@@ -96,7 +96,7 @@ function C(e) {
     subscriptionTier: N.Si.TIER_2,
     secondaryCTA: D ? O.Z.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA : void 0,
     onSecondaryClick: D ? function() {
-      (0, l.Z)(), t(), c.default.track(A.rMx.PREMIUM_PROMOTION_OPENED, {
+      (0, l.Z)(), t(), d.default.track(A.rMx.PREMIUM_PROMOTION_OPENED, {
         location_section: A.jXE.FILE_UPLOAD_UPSELL_MODAL,
         location_object: A.qAy.NAVIGATION_LINK
       }), (0, u.uL)(A.Z5c.APPLICATION_STORE)

@@ -8,8 +8,8 @@ var i = n(704215),
   l = n(496675),
   u = n(619574),
   _ = n(317816),
-  d = n(828312),
-  c = n(994840),
+  c = n(828312),
+  d = n(994840),
   E = n(981631);
 
 function I(e, t, n) {
@@ -26,8 +26,8 @@ class T extends s.Z {
       POST_CONNECTION_OPEN: e => this.handleConnectionOpen(e),
       CHANNEL_SELECT: e => this.handleChannelSelect(e)
     }), I(this, "handleConnectionOpen", e => {
-      let t = (0, c.jZ)("SignUpManager"),
-        n = (0, d.t)("SignUpManager", !1),
+      let t = (0, d.jZ)("SignUpManager"),
+        n = (0, c.t)("SignUpManager", !1),
         s = (0, o.un)(i.z.GAME_ONE_USER_SIGNUPS),
         a = (0, _.v)("SignUpManager"),
         l = (0, u.e)("SignUpManager", !1),
@@ -54,9 +54,9 @@ class T extends s.Z {
       let n = (0, o.un)(i.z.GAME_ONE_USER_SIGNUPS),
         s = (0, o.un)(i.z.GENSHIN_USER_SIGNUPS);
       if (n && s) return;
-      let _ = (0, d.t)("SignUpManager"),
-        c = (0, u.e)("SignUpManager");
-      if (!_ && !c) return;
+      let _ = (0, c.t)("SignUpManager"),
+        d = (0, u.e)("SignUpManager");
+      if (!_ && !d) return;
       let I = a.Z.getGuild(t);
       if (null != I) {
         if (I.hasFeature(E.oNc.VALORANT_L30) && l.Z.can(E.Plq.MANAGE_GUILD, I) && !n) {

@@ -8,8 +8,8 @@ var i = n(544891),
   l = n(408987),
   u = n(57132),
   _ = n(895886),
-  d = n(703656),
-  c = n(131704),
+  c = n(703656),
+  d = n(131704),
   E = n(592125),
   I = n(306680),
   T = n(626135),
@@ -56,7 +56,7 @@ t.Z = {
       let e = await i.tn.post({
           url: N.ANM.BROADCAST_PRIVATE_CHANNEL
         }),
-        t = (0, c.q_)(e.body);
+        t = (0, d.q_)(e.body);
       return S.Z.call(t.id, !1, !1, null), e.body.id
     } catch (t) {
       var e;
@@ -66,7 +66,7 @@ t.Z = {
   _openCachedDMChannel(e, t) {
     let n = E.Z.getDMFromUserId(e),
       i = null != n ? E.Z.getChannel(n) : null;
-    return null != i ? (null == t || t(), null != (0, u.PP)() ? (0, d.uL)(N.Z5c.CHANNEL(N.ME, i.id), {
+    return null != i ? (null == t || t(), null != (0, u.PP)() ? (0, c.uL)(N.Z5c.CHANNEL(N.ME, i.id), {
       navigationReplace: !0
     }) : f.default.selectPrivateChannel(i.id), i) : null
   },
@@ -79,7 +79,7 @@ t.Z = {
         },
         oldFormErrors: !0
       }),
-      r = (0, c.q_)(n.body);
+      r = (0, d.q_)(n.body);
     return s.Z.dispatch({
       type: "CHANNEL_CREATE",
       channel: r
@@ -91,7 +91,7 @@ t.Z = {
   },
   async getDMChannel(e) {
     let t = await i.tn.get(N.ANM.DM_CHANNEL(e)),
-      n = (0, c.q_)(t.body);
+      n = (0, d.q_)(t.body);
     return s.Z.dispatch({
       type: "CHANNEL_CREATE",
       channel: n
@@ -99,11 +99,11 @@ t.Z = {
   },
   _getRecipients: e => null != e ? Array.isArray(e) ? e : [e] : [],
   _openPrivateChannel(e) {
-    let t = (0, c.q_)(e);
+    let t = (0, d.q_)(e);
     return s.Z.dispatch({
       type: "CHANNEL_CREATE",
       channel: t
-    }), null != (0, u.PP)() ? (0, d.uL)(N.Z5c.CHANNEL(N.ME, t.id), {
+    }), null != (0, u.PP)() ? (0, c.uL)(N.Z5c.CHANNEL(N.ME, t.id), {
       navigationReplace: !0
     }) : f.default.selectPrivateChannel(t.id), t
   },
@@ -121,7 +121,7 @@ t.Z = {
         parent_id: void 0
       },
       silent: n
-    }), t && !__OVERLAY__ && (0, d.uL)(N.Z5c.FRIENDS), i.tn.del({
+    }), t && !__OVERLAY__ && (0, c.uL)(N.Z5c.FRIENDS), i.tn.del({
       url: N.ANM.CHANNEL(e),
       query: {
         silent: n

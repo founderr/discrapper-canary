@@ -25,7 +25,7 @@ n.d(t, {
     return _
   },
   sd: function() {
-    return d
+    return c
   }
 });
 var i = n(367907),
@@ -40,12 +40,12 @@ function _(e) {
   return null != e && "object" == typeof e && "id" in e && e.type === l.xV.BACKGROUND
 }
 
-function d(e) {
+function c(e) {
   return "number" == typeof e && e in l.dp
 }
 
-function c(e) {
-  return d(e) ? l.X7.includes(e) : !!_(e) && ((0, a.xR)(e.asset) || (0, a.ay)(e.asset))
+function d(e) {
+  return c(e) ? l.X7.includes(e) : !!_(e) && ((0, a.xR)(e.asset) || (0, a.ay)(e.asset))
 }
 
 function E(e) {
@@ -82,7 +82,7 @@ function T(e, t, n) {
   let a = s.Z.getGuildId(),
     l = s.Z.getChannelId(),
     _ = r.Z.getChannel(l),
-    d = (0, i.kO)(a, l, !0);
+    c = (0, i.kO)(a, l, !0);
   o.default.track(u.rMx.VIDEO_EFFECT_UPDATED, {
     location: t,
     effect_type: E(e),
@@ -91,17 +91,17 @@ function T(e, t, n) {
     channel_id: l,
     channel_type: null == _ ? void 0 : _.type,
     guild_id: a,
-    voice_state_count: d.voice_state_count,
-    video_stream_count: d.video_stream_count,
+    voice_state_count: c.voice_state_count,
+    video_stream_count: c.video_stream_count,
     media_session_id: s.Z.getMediaSessionId(),
     rtc_connection_id: s.Z.getRTCConnectionId(),
-    is_animated: c(e)
+    is_animated: d(e)
   })
 }
 
 function h(e, t, n) {
   o.default.track(u.rMx.VIDEO_BACKGROUND_ADDED, {
-    is_animated: c(e),
+    is_animated: d(e),
     is_video: t,
     is_from_tenor: n
   })
@@ -109,7 +109,7 @@ function h(e, t, n) {
 
 function S(e) {
   o.default.track(u.rMx.VIDEO_BACKGROUND_DELETED, {
-    is_animated: c(e)
+    is_animated: d(e)
   })
 }
 

@@ -7,7 +7,7 @@ n.d(t, {
     return _
   },
   te: function() {
-    return d
+    return c
   }
 });
 var i = n(442837),
@@ -22,8 +22,8 @@ function u(e) {
     var t, n, i, s;
     let u = o.ZP.isOptInEnabled(e),
       _ = null !== (i = null === (t = r.Z.getGuild(e)) || void 0 === t ? void 0 : t.hasFeature(l.oNc.COMMUNITY)) && void 0 !== i && i,
-      d = null !== (s = null === (n = a.default.getCurrentUser()) || void 0 === n ? void 0 : n.isStaff()) && void 0 !== s && s;
-    return u && (_ || d)
+      c = null !== (s = null === (n = a.default.getCurrentUser()) || void 0 === n ? void 0 : n.isStaff()) && void 0 !== s && s;
+    return u && (_ || c)
   })
 }
 
@@ -33,7 +33,7 @@ function _(e) {
   return null != e && null != t && null != n && (t.hasFeature(l.oNc.COMMUNITY) || n.isStaff()) && o.ZP.isOptInEnabled(e)
 }
 
-function d(e) {
+function c(e) {
   return (0, i.e7)([r.Z, s.Z], () => {
     var t;
     let n = r.Z.getGuild(e),

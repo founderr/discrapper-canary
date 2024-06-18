@@ -22,7 +22,7 @@ function T(e) {
   let {
     rule: h,
     onChangeRule: g
-  } = e, x = i.useCallback(e => {
+  } = e, C = i.useCallback(e => {
     g({
       ...h,
       triggerMetadata: {
@@ -30,7 +30,7 @@ function T(e) {
         keywordFilter: e
       }
     })
-  }, [g, h]), C = i.useCallback(e => {
+  }, [g, h]), x = i.useCallback(e => {
     g({
       ...h,
       triggerMetadata: {
@@ -46,7 +46,7 @@ function T(e) {
         step: 1,
         header: _.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_TRIGGER_HEADER,
         children: [(0, n.jsx)(o.Z, {
-          onChangeText: x,
+          onChangeText: C,
           maxWordCount: E.RH,
           initialValue: null === (s = h.triggerMetadata) || void 0 === s ? void 0 : s.keywordFilter
         }), (0, n.jsx)(r.Z, {
@@ -54,7 +54,7 @@ function T(e) {
           onChangeRule: g,
           collapsed: (null == h ? void 0 : null === (t = h.triggerMetadata) || void 0 === t ? void 0 : t.regexPatterns) == null || (null == h ? void 0 : null === (T = h.triggerMetadata) || void 0 === T ? void 0 : T.regexPatterns.length) === 0
         }), (0, n.jsx)(l.Z, {
-          onChange: C,
+          onChange: x,
           initialValue: null === (N = h.triggerMetadata) || void 0 === N ? void 0 : N.allowList,
           maxWordCount: E.n4,
           collapsed: (null === (m = h.triggerMetadata) || void 0 === m ? void 0 : m.allowList) == null || (null === (S = h.triggerMetadata) || void 0 === S ? void 0 : S.allowList.length) === 0

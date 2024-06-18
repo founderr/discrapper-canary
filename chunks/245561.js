@@ -4,7 +4,7 @@ n.d(t, {
     return _
   },
   ZP: function() {
-    return d
+    return c
   }
 });
 var i = n(735250);
@@ -23,11 +23,11 @@ function _(e) {
     skuBenefits: o,
     className: a
   } = e;
-  return null != r ? t = r.map(e => (0, i.jsx)(c, {
+  return null != r ? t = r.map(e => (0, i.jsx)(d, {
     applicationId: n,
     benefit: e,
     className: s()(u.__invalid_benefit, a)
-  }, e.id)) : null != o && (t = o.map((e, t) => (0, i.jsx)(d, {
+  }, e.id)) : null != o && (t = o.map((e, t) => (0, i.jsx)(c, {
     benefit: e,
     className: s()(u.__invalid_benefit, a)
   }, t))), (0, i.jsx)(i.Fragment, {
@@ -35,14 +35,14 @@ function _(e) {
   })
 }
 
-function d(e) {
+function c(e) {
   let {
     benefit: t,
     className: n,
     emojiContainerClassName: r,
     showsDescription: l = !0,
     nameTextVariant: _ = "text-md/medium",
-    nameTextColor: d = "header-primary"
+    nameTextColor: c = "header-primary"
   } = e;
   return (0, i.jsxs)("div", {
     className: s()(u.container, n),
@@ -57,7 +57,7 @@ function d(e) {
       className: u.infoContainer,
       children: [(0, i.jsx)(o.Text, {
         variant: _,
-        color: d,
+        color: c,
         className: u.name,
         children: t.name
       }), l && (0, i.jsx)(o.Text, {
@@ -69,15 +69,15 @@ function d(e) {
   })
 }
 
-function c(e) {
+function d(e) {
   let {
     applicationId: t,
     benefit: n,
     className: r,
     emojiContainerClassName: a,
     showsDescription: _ = !0,
-    nameTextVariant: d = "text-md/medium",
-    nameTextColor: c = "header-primary"
+    nameTextVariant: c = "text-md/medium",
+    nameTextColor: d = "header-primary"
   } = e;
   return (0, i.jsxs)("div", {
     className: s()(u.container, r),
@@ -87,8 +87,8 @@ function c(e) {
     }), (0, i.jsxs)("div", {
       className: u.infoContainer,
       children: [(0, i.jsx)(o.Text, {
-        variant: d,
-        color: c,
+        variant: c,
+        color: d,
         className: u.name,
         children: n.name
       }), _ && (0, i.jsx)(o.Text, {

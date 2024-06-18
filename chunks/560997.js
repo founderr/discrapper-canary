@@ -4,7 +4,7 @@ n.d(t, {
     return _
   },
   R2: function() {
-    return d
+    return c
   },
   Zc: function() {
     return u
@@ -24,7 +24,7 @@ function u(e, t, n, r) {
   };
   return {
     getSetting: s,
-    updateSetting: c(s, n => o.hW.updateAsync(e, e => {
+    updateSetting: d(s, n => o.hW.updateAsync(e, e => {
       e[t] = r(n, e[t])
     }, l.fy.INFREQUENT_USER_ACTION)),
     useSetting: () => (0, i.e7)([a.Z], s)
@@ -47,7 +47,7 @@ function _(e, t, n) {
         });
       return null != o ? o : r
     },
-    updateSetting: c(o, i => s.Z.shouldSync(t) ? e.updateSetting(i) : (r.Z.dispatch({
+    updateSetting: d(o, i => s.Z.shouldSync(t) ? e.updateSetting(i) : (r.Z.dispatch({
       type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
       changes: {
         [t]: {
@@ -60,7 +60,7 @@ function _(e, t, n) {
   }
 }
 
-function d(e, t, n, i) {
+function c(e, t, n, i) {
   let s = () => {
     var t;
     return null !== (t = n()) && void 0 !== t ? t : e.getSetting()
@@ -72,14 +72,14 @@ function d(e, t, n, i) {
         n = i();
       return null != n ? n : t
     },
-    updateSetting: c(s, n => (r.Z.dispatch({
+    updateSetting: d(s, n => (r.Z.dispatch({
       type: "USER_SETTINGS_OVERRIDE_CLEAR",
       settings: [t]
     }), e.updateSetting(n)))
   }
 }
 
-function c(e, t) {
+function d(e, t) {
   return function(n) {
     return "function" == typeof n ? t(n(e())) : t(n)
   }

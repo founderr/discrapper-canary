@@ -4,8 +4,8 @@ var i, r, s, o, a = n(442837),
   l = n(570140),
   u = n(271383),
   _ = n(430824),
-  d = n(594174),
-  c = n(981631);
+  c = n(594174),
+  d = n(981631);
 let E = [],
   I = {},
   T = null,
@@ -21,11 +21,11 @@ function S(e) {
 }
 
 function f(e) {
-  return !(e === c.ME || E.includes(e)) && (E = [...E, e], !0)
+  return !(e === d.ME || E.includes(e)) && (E = [...E, e], !0)
 }
 class N extends(i = a.ZP.Store) {
   initialize() {
-    this.waitFor(_.Z, d.default)
+    this.waitFor(_.Z, c.default)
   }
   setHistorySnapshot(e) {
     T = e
@@ -72,14 +72,14 @@ o = "LurkingStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, 
     if (n) {
       var o, a;
       switch (f(t), o = t, null != (a = s) && (I[o] = a), i) {
-        case c.vtS.MOBILE_GUILD_DISCOVERY:
+        case d.vtS.MOBILE_GUILD_DISCOVERY:
           h = {
-            type: c.vtS.MOBILE_GUILD_DISCOVERY
+            type: d.vtS.MOBILE_GUILD_DISCOVERY
           };
           break;
-        case c.vtS.DIRECTORY_ENTRY:
+        case d.vtS.DIRECTORY_ENTRY:
           h = {
-            type: c.vtS.DIRECTORY_ENTRY,
+            type: d.vtS.DIRECTORY_ENTRY,
             directoryChannelId: r
           };
           break;
@@ -124,7 +124,7 @@ o = "LurkingStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, 
       guildId: n,
       joinedAt: i,
       user: r
-    } = e, s = r.id === (null === (t = d.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
+    } = e, s = r.id === (null === (t = c.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
     return !!(s && null != i && E.includes(n)) && (S(n), T = null, h = null, !0)
   }
 })

@@ -4,8 +4,8 @@ var i, r, s, o, a = n(392711),
   l = n.n(a),
   u = n(442837),
   _ = n(570140),
-  d = n(709054),
-  c = n(594174),
+  c = n(709054),
+  d = n(594174),
   E = n(981631);
 let I = {},
   T = {},
@@ -24,7 +24,7 @@ function m() {
 }
 class O extends(i = u.ZP.Store) {
   initialize() {
-    this.waitFor(c.default)
+    this.waitFor(d.default)
   }
   isFriend(e) {
     return I[e] === E.OGo.FRIEND
@@ -61,7 +61,7 @@ class O extends(i = u.ZP.Store) {
     return h
   }
   getFriendIDs() {
-    return d.default.keys(I).filter(e => I[e] === E.OGo.FRIEND)
+    return c.default.keys(I).filter(e => I[e] === E.OGo.FRIEND)
   }
 }
 o = "RelationshipStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, {
@@ -111,7 +111,7 @@ o = "RelationshipStore", (s = "displayName") in(r = O) ? Object.defineProperty(r
   RELATIONSHIP_PENDING_INCOMING_REMOVED: function(e) {
     I = {
       ...I
-    }, d.default.keys(I).forEach(e => {
+    }, c.default.keys(I).forEach(e => {
       I[e] === E.OGo.PENDING_INCOMING && delete I[e]
     }), m()
   }

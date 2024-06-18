@@ -31,9 +31,9 @@ function a(e, t) {
         timestamp: new Date, rtc_state: r.Z.getState(), channelId: u, channelType: _
       };
     case s.rMx.GUILD_VIEWED_CLICKSTREAM:
-      let d = (n = t).guildId;
+      let c = (n = t).guildId;
       return {
-        timestamp: new Date, rtc_state: r.Z.getState(), guildId: d
+        timestamp: new Date, rtc_state: r.Z.getState(), guildId: c
       };
     case s.rMx.FRIENDS_LIST_VIEWED_CLICKSTREAM:
       return n = t, {

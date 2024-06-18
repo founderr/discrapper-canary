@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(846027),
   u = n(2052),
   _ = n(451467),
-  d = n(386542),
-  c = n(933843),
+  c = n(386542),
+  d = n(933843),
   E = n(485731),
   I = n(361291),
   T = n(430824),
@@ -28,18 +28,18 @@ function O(e, t) {
   let {
     preset: O,
     resolution: R,
-    fps: C
-  } = (0, o.cj)([I.Z], () => I.Z.getState()), p = (0, o.e7)([h.Z], () => h.Z.getGoLiveSource()), g = (0, o.e7)([S.default], () => S.default.getCurrentUser()), L = (0, o.e7)([T.Z], () => {
+    fps: p
+  } = (0, o.cj)([I.Z], () => I.Z.getState()), g = (0, o.e7)([h.Z], () => h.Z.getGoLiveSource()), C = (0, o.e7)([S.default], () => S.default.getCurrentUser()), v = (0, o.e7)([T.Z], () => {
     var t;
     return null === (t = T.Z.getGuild(null == e ? void 0 : e.guildId)) || void 0 === t ? void 0 : t.premiumTier
   }), {
-    location: v
+    location: L
   } = (0, u.O)(), {
     available: D,
     activated: M
-  } = (0, d.k)(s.q.STREAM_HIGH_QUALITY), P = r.useCallback((e, r, s, o) => {
+  } = (0, c.k)(s.q.STREAM_HIGH_QUALITY), P = r.useCallback((e, r, s, o) => {
     if (e) {
-      if (null != p) {
+      if (null != g) {
         let e = {
           qualityOptions: {
             preset: N.tI.PRESET_CUSTOM,
@@ -48,18 +48,18 @@ function O(e, t) {
           },
           context: A.Yn.STREAM
         };
-        null != p.desktopSource ? e.desktopSettings = {
-          sourceId: p.desktopSource.id,
+        null != g.desktopSource ? e.desktopSettings = {
+          sourceId: g.desktopSource.id,
           sound: !0
-        } : null != p.cameraSource && (e.cameraSettings = {
-          videoDeviceGuid: p.cameraSource.videoDeviceGuid,
-          audioDeviceGuid: p.cameraSource.audioDeviceGuid
-        }), D && (0, E.J1)(!(0, c.mc)(r, s)), l.Z.setGoLiveSource(e)
+        } : null != g.cameraSource && (e.cameraSettings = {
+          videoDeviceGuid: g.cameraSource.videoDeviceGuid,
+          audioDeviceGuid: g.cameraSource.audioDeviceGuid
+        }), D && (0, E.J1)(!(0, d.mc)(r, s)), l.Z.setGoLiveSource(e)
       }
     } else {
       var u, _;
       u = t, _ = {
-        ...v,
+        ...L,
         object: f.qAy.RADIO_ITEM,
         objectType: o
       }, (0, a.openModalLazy)(async () => {
@@ -74,19 +74,19 @@ function O(e, t) {
         contextKey: u === f.IlC.POPOUT ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT
       })
     }
-  }, [t, v, p, D]);
+  }, [t, L, g, D]);
   if (null == e) return null;
-  let y = O === N.tI.PRESET_DOCUMENTS ? N.ws.FPS_30 : C,
+  let y = O === N.tI.PRESET_DOCUMENTS ? N.ws.FPS_30 : p,
     U = N.af.map(e => {
       let {
         value: t,
         label: n
-      } = e, r = (0, _.Z)(N.tI.PRESET_CUSTOM, R, t, g, L);
+      } = e, r = (0, _.Z)(N.tI.PRESET_CUSTOM, R, t, C, v);
       return D && !M && (r = !1), (0, i.jsx)(a.MenuRadioItem, {
         group: "stream-settings-fps",
         id: "stream-settings-fps-".concat(t),
         label: n,
-        checked: t === C,
+        checked: t === p,
         action: () => P(r, R, t, f.Qqv.RESOLUTION)
       }, "stream-settings-fps-".concat(t))
     }),
@@ -94,7 +94,7 @@ function O(e, t) {
       let {
         value: t,
         label: n
-      } = e, r = (0, _.Z)(N.tI.PRESET_CUSTOM, t, y, g, L);
+      } = e, r = (0, _.Z)(N.tI.PRESET_CUSTOM, t, y, C, v);
       return D && !M && (r = !1), (0, i.jsx)(a.MenuRadioItem, {
         group: "stream-settings-resolution",
         id: "stream-settings-resolution-".concat(t),

@@ -13,31 +13,31 @@ t.Z = function(e) {
     children: t,
     className: n,
     compact: r = !1,
-    timestamp: d,
-    isVisibleOnlyOnHover: c = !1,
+    timestamp: c,
+    isVisibleOnlyOnHover: d = !1,
     cozyAlt: E = !1,
     isInline: I = !0,
     id: T,
     isEdited: h = !1
-  } = e, S = (0, l.Hg)(d), f = r ? (0, l.vc)(d, "LT") : (0, l.Y4)(d), N = r ? (0, a.Z)(f) : null, A = h ? u.Z.Messages.MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL.format({
+  } = e, S = (0, l.Hg)(c), f = r ? (0, l.vc)(c, "LT") : (0, l.Y4)(c), N = r ? (0, a.Z)(f) : null, A = h ? u.Z.Messages.MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL.format({
     timeFormatted: S
   }) : S;
   return (0, i.jsx)("span", {
     className: s()(n, N, {
       [_.timestamp]: !0,
-      [_.timestampVisibleOnHover]: c,
+      [_.timestampVisibleOnHover]: d,
       [_.timestampInline]: I,
       [_.alt]: E
     }),
     children: (0, i.jsx)(o.Tooltip, {
-      text: (0, l.vc)(d, "LLLL"),
+      text: (0, l.vc)(c, "LLLL"),
       "aria-label": A,
       tooltipClassName: _.timestampTooltip,
       delay: 750,
       children: e => (0, i.jsx)("time", {
         ...e,
         id: T,
-        dateTime: d.toISOString(),
+        dateTime: c.toISOString(),
         children: null != t ? t : (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)("i", {
             className: _.separator,

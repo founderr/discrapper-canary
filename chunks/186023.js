@@ -8,8 +8,8 @@ var i = n(735250),
   l = n(82554),
   u = n(185625),
   _ = n(255514),
-  d = n(981631),
-  c = n(191466);
+  c = n(981631),
+  d = n(191466);
 t.Z = e => {
   let {
     reportType: t,
@@ -24,7 +24,7 @@ t.Z = e => {
     root_node_id: A,
     success_node_id: m,
     fail_node_id: O
-  } = n, [R, C] = r.useState(A), [p, g] = r.useState(void 0), [L, v] = r.useState(void 0), [D, M] = r.useState([]), [P, y] = r.useState(void 0), U = e => {
+  } = n, [R, p] = r.useState(A), [g, C] = r.useState(void 0), [v, L] = r.useState(void 0), [D, M] = r.useState([]), [P, y] = r.useState(void 0), U = e => {
     var n;
     let {
       destination: i
@@ -33,9 +33,9 @@ t.Z = e => {
       ...e,
       destination: ["", s.button.target]
     });
-    if (M([...D, e]), null != s.key && (null == T || T(s.key)), g(void 0), v(void 0), t.name === l.b.MESSAGE || t.name === l.b.FIRST_DM) {
+    if (M([...D, e]), null != s.key && (null == T || T(s.key)), C(void 0), L(void 0), t.name === l.b.MESSAGE || t.name === l.b.FIRST_DM) {
       let e = t.record.id;
-      o.ZP.trackWithMetadata(d.rMx.IAR_NAVIGATE, {
+      o.ZP.trackWithMetadata(c.rMx.IAR_NAVIGATE, {
         message_id: e,
         content_type: t.name,
         report_sub_type: s.report_type,
@@ -43,7 +43,7 @@ t.Z = e => {
         next_node: s.id
       })
     }
-    C(r)
+    p(r)
   }, b = async e => {
     var i;
     let r = S ? await (0, u.ZD)(n, t, [...D, e]) : await (0, u.fw)(n, t, [...D, e], h),
@@ -57,7 +57,7 @@ t.Z = e => {
       s = null !== (n = null == r ? void 0 : r.nodeRef) && void 0 !== n ? n : A;
     if (t.name === l.b.MESSAGE || t.name === l.b.FIRST_DM) {
       let e = t.record.id;
-      o.ZP.trackWithMetadata(d.rMx.IAR_NAVIGATE, {
+      o.ZP.trackWithMetadata(c.rMx.IAR_NAVIGATE, {
         message_id: e,
         content_type: t.name,
         report_sub_type: N[s].report_type,
@@ -65,7 +65,7 @@ t.Z = e => {
         next_node: N[s].id
       })
     }
-    g(null == r ? void 0 : null === (e = r.multiSelect) || void 0 === e ? void 0 : e.state), v(null == r ? void 0 : r.textInput), C(s), M(i), null == T || T("..")
+    C(null == r ? void 0 : null === (e = r.multiSelect) || void 0 === e ? void 0 : e.state), L(null == r ? void 0 : r.textInput), p(s), M(i), null == T || T("..")
   }, w = [], k = [];
   for (let e in N) {
     var B, x;
@@ -92,7 +92,7 @@ t.Z = e => {
       children: V.map(e => (0, i.jsx)(s.Slide, {
         id: e.id,
         children: (0, i.jsx)("div", {
-          className: c.slideContainer,
+          className: d.slideContainer,
           children: (0, i.jsx)(_.Z, {
             node: e,
             reportType: t,
@@ -100,8 +100,8 @@ t.Z = e => {
             onModalClose: E.onClose,
             onSelectChild: U,
             onNavigateBack: G,
-            multiSelect: p,
-            textInput: L,
+            multiSelect: g,
+            textInput: v,
             successNodeId: m,
             failNodeId: O,
             onSubmit: b,

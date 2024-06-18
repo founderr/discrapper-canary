@@ -6,9 +6,9 @@ var i, r, s = n(404097),
   l = n(747268),
   u = n(250471),
   _ = n(20186),
-  d = n(981631);
+  c = n(981631);
 
-function c(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -63,12 +63,12 @@ t.Z = new class e {
     if (this._metrics.length > 0) {
       let e = [...this._metrics];
       o.tn.post({
-        url: (0, u.V)("monitoring-agent") ? d.ANM.METRICS_V2 : d.ANM.METRICS,
+        url: (0, u.V)("monitoring-agent") ? c.ANM.METRICS_V2 : c.ANM.METRICS,
         body: {
           metrics: e,
           client_info: {
-            built_at: "1718672305424",
-            build_number: "302832"
+            built_at: "1718722272746",
+            build_number: "302904"
           }
         },
         retries: 1
@@ -79,7 +79,7 @@ t.Z = new class e {
     this._metrics = []
   }
   constructor() {
-    c(this, "_metrics", void 0), c(this, "_intervalId", void 0), this._metrics = [], this._intervalId = setInterval(() => {
+    d(this, "_metrics", void 0), d(this, "_intervalId", void 0), this._metrics = [], this._intervalId = setInterval(() => {
       this._flush()
     }, 12e4)
   }

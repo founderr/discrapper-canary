@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   j: function() {
-    return p
+    return g
   },
   t: function() {
     return A
@@ -14,8 +14,8 @@ var i, r = n(735250),
   l = n(512722),
   u = n.n(l),
   _ = n(84735),
-  d = n(801787),
-  c = n(585483),
+  c = n(801787),
+  d = n(585483),
   E = n(792125),
   I = n(872801),
   T = n(302901),
@@ -86,14 +86,14 @@ function R(e, t, n) {
   return n
 }
 
-function C(e) {
+function p(e) {
   let {
     targetRef: t,
     overrideTargetRect: n
   } = e;
   return null != n ? n : (u()(null != t.current, "Invalid ref"), t.current.getBoundingClientRect())
 }
-class p extends(i = s.Component) {
+class g extends(i = s.Component) {
   formatDimension(e) {
     return this.props.useRawTargetDimensions ? e : Math.ceil(e)
   }
@@ -214,7 +214,7 @@ class p extends(i = s.Component) {
     var i, r, s;
     let {
       spacing: o = 0
-    } = this.props, a = C(this.props), l = n.getBoundingClientRect();
+    } = this.props, a = p(this.props), l = n.getBoundingClientRect();
     let u = (i = a, r = l.left, s = l.top, {
       top: i.top - s,
       left: i.left - r,
@@ -311,12 +311,12 @@ class p extends(i = s.Component) {
       ...this.calculateState()
     });
     let r = this.elementRef.current;
-    u()(null != r, "Missing elementRef"), null != n.current && N.set(r, n.current), c.S.subscribe(h.CkL.LAYER_POP_START, this.handleLayerPopStart), c.S.subscribe(h.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.addEventListener("resize", this.handleLayerPopComplete), null == i || i()
+    u()(null != r, "Missing elementRef"), null != n.current && N.set(r, n.current), d.S.subscribe(h.CkL.LAYER_POP_START, this.handleLayerPopStart), d.S.subscribe(h.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.addEventListener("resize", this.handleLayerPopComplete), null == i || i()
   }
   componentDidUpdate(e, t) {
     if ((m(e) !== m(this.props) || ! function(e, t) {
-        let n = C(e),
-          i = C(t);
+        let n = p(e),
+          i = p(t);
         return n.top === i.top && n.left === i.left
       }(e, this.props)) && this.updatePosition(), t.position !== this.state.position) {
       var n, i;
@@ -326,7 +326,7 @@ class p extends(i = s.Component) {
   componentWillUnmount() {
     var e, t, n, i;
     let r = this.elementRef.current;
-    u()(null != r, "Missing elementRef"), N.delete(r), c.S.unsubscribe(h.CkL.LAYER_POP_START, this.handleLayerPopStart), c.S.unsubscribe(h.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.removeEventListener("resize", this.handleLayerPopComplete), null === (n = (i = this.props).onUnmount) || void 0 === n || n.call(i)
+    u()(null != r, "Missing elementRef"), N.delete(r), d.S.unsubscribe(h.CkL.LAYER_POP_START, this.handleLayerPopStart), d.S.unsubscribe(h.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.removeEventListener("resize", this.handleLayerPopComplete), null === (n = (i = this.props).onUnmount) || void 0 === n || n.call(i)
   }
   render() {
     let {
@@ -339,13 +339,13 @@ class p extends(i = s.Component) {
       position: o,
       isPositioned: l,
       isSettingsLayerTransitioning: u,
-      nudge: c
+      nudge: d
     } = this.state;
-    return (0, r.jsx)(d.C1, {
-      children: d => {
+    return (0, r.jsx)(c.C1, {
+      children: c => {
         let {
           theme: I
-        } = d;
+        } = c;
         return (0, r.jsx)("div", {
           id: e,
           className: a()(t, (0, E.Q)(I), S.layer, {
@@ -362,7 +362,7 @@ class p extends(i = s.Component) {
             containerRef: this.elementRef,
             children: n({
               position: o,
-              nudge: c,
+              nudge: d,
               isPositioned: l
             }, this.updatePosition)
           })
@@ -392,7 +392,7 @@ class p extends(i = s.Component) {
     })
   }
 }
-f(p, "defaultProps", {
+f(g, "defaultProps", {
   nudgeAlignIntoViewport: !1,
   spacing: 0,
   autoInvert: !1,

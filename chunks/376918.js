@@ -4,7 +4,7 @@ n.d(t, {
     return _
   },
   _H: function() {
-    return d
+    return c
   },
   a7: function() {
     return u
@@ -28,7 +28,7 @@ function u(e, t, n) {
 }
 
 function _(e, t, n, i) {
-  var r, o, u, _, d;
+  var r, o, u, _, c;
   a.default.track(l.rMx.CHANNEL_AUTOCOMPLETE_SELECTED, {
     ...(0, s.v_)(n),
     ...(0, s.hH)(n.guild_id),
@@ -40,11 +40,11 @@ function _(e, t, n, i) {
     num_sticker_results: null !== (o = null == i ? void 0 : i.numStickerResults) && void 0 !== o ? o : 0,
     emoji_name: null !== (u = null == i ? void 0 : i.expressionName) && void 0 !== u ? u : "",
     is_custom: null !== (_ = null == i ? void 0 : i.isCustom) && void 0 !== _ && _,
-    is_animated: null !== (d = null == i ? void 0 : i.isAnimated) && void 0 !== d && d
+    is_animated: null !== (c = null == i ? void 0 : i.isAnimated) && void 0 !== c && c
   })
 }(i = r || (r = {})).AUTOCOMPLETE = "autocomplete", i.AUTOSUGGEST = "autosuggest", i.STICKER_PICKER = "picker";
 
-function d(e) {
+function c(e) {
   let {
     sticker: t,
     stickerSelectLocation: n,

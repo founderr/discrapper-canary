@@ -9,9 +9,9 @@ t.d(s, {
 });
 var n = t(180650),
   a = t(44315),
-  i = t(981631),
+  r = t(981631),
   l = t(689938),
-  r = t(994745),
+  i = t(994745),
   o = t(341364),
   c = t(763542),
   u = t(354873),
@@ -23,9 +23,9 @@ var n = t(180650),
   p = t(696228),
   g = t(202796),
   h = t(570593),
-  x = t(199546),
+  I = t(199546),
   _ = t(613540),
-  I = t(769411);
+  x = t(769411);
 let T = () => l.Z.Messages.MOST_POPULAR,
   N = () => l.Z.Messages.APPLICATION_STORE_NEW_RELEASE,
   S = () => l.Z.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
@@ -33,12 +33,12 @@ let T = () => l.Z.Messages.MOST_POPULAR,
   b = [{
     id: "category_anime",
     backgroundStaticSrc: C,
-    backgroundVideoSrc: r,
+    backgroundVideoSrc: i,
     overflowSrcStatic: d,
     overflowSrcAnimatedBackground: u,
     overflowSrcAnimated: c,
     logoSrc: o,
-    textColor: (0, a.Lq)(i.Ilk.BLACK_500),
+    textColor: (0, a.Lq)(r.Ilk.BLACK_500),
     badge: {
       label: T
     },
@@ -48,10 +48,10 @@ let T = () => l.Z.Messages.MOST_POPULAR,
     }
   }, {
     id: "category_galaxy",
-    backgroundStaticSrc: I,
-    backgroundVideoSrc: x,
+    backgroundStaticSrc: x,
+    backgroundVideoSrc: I,
     logoSrc: _,
-    textColor: (0, a.Lq)(i.Ilk.WHITE_100),
+    textColor: (0, a.Lq)(r.Ilk.WHITE_100),
     badge: {
       label: N,
       date: new Date
@@ -65,7 +65,7 @@ let T = () => l.Z.Messages.MOST_POPULAR,
     backgroundStaticSrc: h,
     overflowSrcStatic: g,
     logoSrc: p,
-    textColor: (0, a.Lq)(i.Ilk.WHITE_100),
+    textColor: (0, a.Lq)(r.Ilk.WHITE_100),
     badge: {
       label: S
     },
@@ -78,7 +78,7 @@ let T = () => l.Z.Messages.MOST_POPULAR,
     backgroundStaticSrc: m,
     backgroundVideoSrc: E,
     logoSrc: f,
-    textColor: (0, a.Lq)(i.Ilk.WHITE_100),
+    textColor: (0, a.Lq)(r.Ilk.WHITE_100),
     badge: {
       label: T
     },

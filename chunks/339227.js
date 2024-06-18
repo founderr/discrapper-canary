@@ -12,8 +12,8 @@ var i = n(512722),
   l = n(25209),
   u = n(710845),
   _ = n(772096),
-  d = n(428595),
-  c = n(594199),
+  c = n(428595),
+  d = n(594199),
   E = n(364458),
   I = n(70956),
   T = n(40786),
@@ -166,10 +166,10 @@ let S = {
   f = new Set(["*", "_", "\\"]),
   N = {},
   A = {};
-for (let e in d.Z.RULES) {
+for (let e in c.Z.RULES) {
   if (!(e in S)) throw Error("Slate: Unknown markdown rule: ".concat(e, ".  If you have just added a new markdown rule ") + "then you probably need to add it to this file so that the rich chat box understands it.");
   let t = S[e];
-  "skip" !== t.type && (N[e] = m(d.Z.RULES[e])), "skip" !== t.type && "inlineObject" !== t.type && (A[e] = m("text" === e ? c.ZP : d.Z.RULES[e]))
+  "skip" !== t.type && (N[e] = m(c.Z.RULES[e])), "skip" !== t.type && "inlineObject" !== t.type && (A[e] = m("text" === e ? d.ZP : c.Z.RULES[e]))
 }
 
 function m(e) {
@@ -225,16 +225,16 @@ let O = {
     }
   },
   R = (0, E.Z)([N, O]),
-  C = (0, E.Z)([A, O]),
-  p = l._p(R),
-  g = l._p(C),
-  L = {
+  p = (0, E.Z)([A, O]),
+  g = l._p(R),
+  C = l._p(p),
+  v = {
     max: 1 / 0,
     maxAge: 1 * I.Z.Millis.MINUTE,
     updateAgeOnGet: !0
   },
-  v = new(o())(L),
-  D = new(o())(L);
+  L = new(o())(v),
+  D = new(o())(v);
 
 function M(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -257,7 +257,7 @@ function M(e, t) {
       let l = e.substring(s, n);
       "" !== l && (function(e, t, n) {
         let i = [],
-          r = n ? D : v,
+          r = n ? D : L,
           s = r.get(e);
         if (null != s) return s;
         let o = e.replace(/\r\n/g, " \n").replace(/[\r\f]/g, " ").replace(/\t/g, " ") + "\n\n",
@@ -267,7 +267,7 @@ function M(e, t) {
               0: ""
             },
             type: "paragraph",
-            content: (n ? g : p)(o, !0, {
+            content: (n ? C : g)(o, !0, {
               returnMentionIds: !0,
               disableAutoBlockNewlines: !0,
               guildId: t
@@ -453,9 +453,9 @@ function b(e) {
     startPos: a
   })), Error("Slate: Unable to find content in source text!");
   let _ = a + i.length,
-    d = n.substring(r, _);
+    c = n.substring(r, _);
   return t.push({
-    text: d,
+    text: c,
     attributes: s.slice(),
     start: r,
     data: o

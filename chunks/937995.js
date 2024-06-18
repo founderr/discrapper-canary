@@ -25,37 +25,37 @@ function l(e) {
   let {
     children: t,
     timeout: n
-  } = e, [l, u] = r.useState(!1), _ = r.useRef(new Set), d = r.useRef(null);
-  r.useEffect(() => (d.current = new s.sW(n, () => u(!0)), d.current.delay(), () => {
+  } = e, [l, u] = r.useState(!1), _ = r.useRef(new Set), c = r.useRef(null);
+  r.useEffect(() => (c.current = new s.sW(n, () => u(!0)), c.current.delay(), () => {
     var e;
-    null === (e = d.current) || void 0 === e || e.cancel(), d.current = null
+    null === (e = c.current) || void 0 === e || e.cancel(), c.current = null
   }), [n]);
-  let c = r.useCallback(e => {
+  let d = r.useCallback(e => {
       var t;
-      u(!1), _.current.add(e), null === (t = d.current) || void 0 === t || t.cancel()
-    }, [_, d, u]),
+      u(!1), _.current.add(e), null === (t = c.current) || void 0 === t || t.cancel()
+    }, [_, c, u]),
     E = r.useCallback(e => {
       if (_.current.delete(e), 0 === _.current.size) {
         var t;
-        null === (t = d.current) || void 0 === t || t.delay()
+        null === (t = c.current) || void 0 === t || t.delay()
       }
-    }, [_, d]),
+    }, [_, c]),
     I = r.useCallback(() => {
       if (u(!1), 0 === _.current.size) {
         var e;
-        null === (e = d.current) || void 0 === e || e.delay()
+        null === (e = c.current) || void 0 === e || e.delay()
       }
-    }, [_, d, u]),
+    }, [_, c, u]),
     T = r.useCallback(() => {
       var e;
-      if (!(_.current.size > 0)) null === (e = d.current) || void 0 === e || e.cancel(), u(!0)
-    }, [d, u]),
+      if (!(_.current.size > 0)) null === (e = c.current) || void 0 === e || e.cancel(), u(!0)
+    }, [c, u]),
     h = r.useMemo(() => ({
       onAllowIdle: E,
-      onPreventIdle: c,
+      onPreventIdle: d,
       onActive: I,
       onForceIdle: T
-    }), [E, c, I, T]);
+    }), [E, d, I, T]);
   return (0, i.jsx)(a.Provider, {
     value: l,
     children: (0, i.jsx)(o.Provider, {

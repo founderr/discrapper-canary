@@ -10,10 +10,10 @@ n.d(t, {
     return E
   },
   p6: function() {
-    return c
+    return d
   },
   rs: function() {
-    return d
+    return c
   }
 }), n(47120), n(757143), n(865427);
 var i = n(830121),
@@ -25,8 +25,8 @@ var i = n(830121),
 let u = new Set([l.hBH.IMAGE, l.hBH.GIFV]),
   _ = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
 
-function d(e, t) {
-  let n = c({
+function c(e, t) {
+  let n = d({
       channelId: e.channel_id,
       messageId: e.id,
       renderOptions: t
@@ -40,7 +40,7 @@ function d(e, t) {
   }
 }
 
-function c(e) {
+function d(e) {
   let {
     channelId: t,
     messageId: n,
@@ -83,7 +83,7 @@ function I(e) {
     let {
       toAST: o = !1,
       hideSimpleEmbedContent: l = !0,
-      formatInline: c = !1,
+      formatInline: d = !1,
       postProcessor: E,
       shouldFilterKeywords: I,
       contentMessage: T
@@ -92,12 +92,12 @@ function I(e) {
       messageId: t.id,
       channelId: t.channel_id,
       authorId: null === (s = t.author) || void 0 === s ? void 0 : s.id
-    }) : N, !0, d(t, n), (e, n) => (!Array.isArray(e) && (e = [e]), l && (e = function(e, t) {
+    }) : N, !0, c(t, n), (e, n) => (!Array.isArray(e) && (e = [e]), l && (e = function(e, t) {
       if (1 !== e.length || 1 !== t.length) return e;
       let n = e[0],
         i = t[0];
       return ("link" === n.type || "attachmentLink" === n.type) && u.has(i.type) && (0, a.dY)(i) ? [] : e
-    }(e, (null != T ? T : t).embeds)), !c && (e = function(e, t) {
+    }(e, (null != T ? T : t).embeds)), !d && (e = function(e, t) {
       return t ? h(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = h(e[0].content)), e)
     }(e, n)), f = function(e, t) {
       return t ? S(e) : "paragraph" === e[0].type && e[0].content instanceof Array && S(e[0].content)
@@ -108,7 +108,7 @@ function I(e) {
           r = (0, i.el)(e.target);
         return !(n && null != r && !t)
       })
-    }(e), n), c && (e = function e(t) {
+    }(e), n), d && (e = function e(t) {
       return t.forEach(t => {
         _.has(t.type) && null != t.content && (Array.isArray(t.content) ? e(t.content) : t.content = t.content.replace(/\n/g, " "))
       }), t

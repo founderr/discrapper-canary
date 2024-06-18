@@ -7,24 +7,24 @@ var i = n(544891),
   l = n(626135),
   u = n(668781),
   _ = n(194359),
-  d = n(287734),
-  c = n(981631),
+  c = n(287734),
+  d = n(981631),
   E = n(689938);
 t.Z = {
   call(e, t, n, r, s) {
     let I = n => {
-      d.default.selectVoiceChannel(e, t), n && this.ring(e), null == s || s(e)
+      c.default.selectVoiceChannel(e, t), n && this.ring(e), null == s || s(e)
     };
     if (null != r) {
       if (o.Z.isBlocked(r)) return;
       let t = a.default.getUser(r);
       i.tn.get({
-        url: c.ANM.CALL(e),
+        url: d.ANM.CALL(e),
         oldFormErrors: !0
       }).then(e => {
         I(n && e.body.ringable)
       }, () => {
-        l.default.track(c.rMx.OPEN_POPOUT, {
+        l.default.track(d.rMx.OPEN_POPOUT, {
           type: "Not Friend",
           source: "Call"
         }), u.Z.show({
@@ -50,7 +50,7 @@ t.Z = {
     let n = s.Z.getCall(e);
     if (null != n && null != n.messageId && !s.Z.isCallUnavailable(e)) {
       i.tn.post({
-        url: c.ANM.CALL_RING(e),
+        url: d.ANM.CALL_RING(e),
         body: {
           recipients: t
         },
@@ -65,7 +65,7 @@ t.Z = {
     })
   },
   stopRinging: (e, t) => i.tn.post({
-    url: c.ANM.CALL_STOP_RINGING(e),
+    url: d.ANM.CALL_STOP_RINGING(e),
     body: {
       recipients: t
     },

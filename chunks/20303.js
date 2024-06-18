@@ -3,8 +3,8 @@ n(47120), n(757143);
 var i, r, s, o, a, l = n(442837),
   u = n(433517),
   _ = n(570140),
-  d = n(591759),
-  c = n(902676),
+  c = n(591759),
+  d = n(902676),
   E = n(616922);
 let I = "MaskedLinkStore",
   T = new Set,
@@ -12,7 +12,7 @@ let I = "MaskedLinkStore",
   S = null === (i = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === i ? void 0 : i.replace("//", "");
 
 function f(e) {
-  let t = (0, c.F)(e);
+  let t = (0, d.F)(e);
   switch (t) {
     case window.GLOBAL_ENV.CDN_HOST:
     case window.GLOBAL_ENV.INVITE_HOST:
@@ -22,12 +22,12 @@ function f(e) {
     case location.hostname:
       return !0;
     default:
-      return E.SD.includes(t) || d.Z.isDiscordHostname(t) || T.has(t)
+      return E.SD.includes(t) || c.Z.isDiscordHostname(t) || T.has(t)
   }
 }
 
 function N(e) {
-  let t = (0, c.E)(e);
+  let t = (0, d.E)(e);
   return h.has(t)
 }
 class A extends(r = l.ZP.Store) {
@@ -61,7 +61,7 @@ a = "MaskedLinkStore", (o = "displayName") in(s = A) ? Object.defineProperty(s, 
       url: t
     } = e;
     if (f(t)) return !1;
-    T.add((0, c.F)(t)), u.K.set(I, {
+    T.add((0, d.F)(t)), u.K.set(I, {
       trustedDomains: T,
       trustedProtocols: h
     })
@@ -71,7 +71,7 @@ a = "MaskedLinkStore", (o = "displayName") in(s = A) ? Object.defineProperty(s, 
       url: t
     } = e;
     if (N(t)) return !1;
-    h.add((0, c.E)(t)), u.K.set(I, {
+    h.add((0, d.E)(t)), u.K.set(I, {
       trustedDomains: T,
       trustedProtocols: h
     })

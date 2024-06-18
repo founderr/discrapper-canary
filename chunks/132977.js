@@ -12,8 +12,8 @@ n.d(t, {
 });
 var i, r, s, o, a, l, u = n(735250),
   _ = n(470079),
-  d = n(120356),
-  c = n.n(d),
+  c = n(120356),
+  d = n.n(c),
   E = n(748780),
   I = n(481060),
   T = n(727637),
@@ -38,7 +38,7 @@ class A extends(l = _.PureComponent) {
     } = this.props;
     return (0, u.jsx)(E.Z.div, {
       ...i,
-      className: c()(S.shineContainer, e, {
+      className: d()(S.shineContainer, e, {
         [S.shinePaused]: n
       }),
       children: (0, u.jsx)(h.Z, {
@@ -70,18 +70,18 @@ let m = e => {
     shineSize: o = "default",
     shinePaused: a,
     buttonShineClassName: l,
-    onlyShineOnHover: d,
+    onlyShineOnHover: c,
     ...E
-  } = e, h = _.createRef(), f = (0, T.Z)(h), N = !i && !r && !0 !== s && (!d || f);
+  } = e, h = _.createRef(), f = (0, T.Z)(h), N = !i && !r && !0 !== s && (!c || f);
   return (0, u.jsxs)(I.Button, {
     buttonRef: h,
     ...E,
-    className: c()(S.shinyButton, n),
+    className: d()(S.shinyButton, n),
     disabled: i,
     submitting: r,
     children: [t, N ? (0, u.jsx)(A, {
       shinePaused: a,
-      className: c()(S.buttonShine, d ? S.onlyShineOnHover : void 0, l),
+      className: d()(S.buttonShine, c ? S.onlyShineOnHover : void 0, l),
       shineSize: o
     }) : null]
   })

@@ -3,13 +3,13 @@ let i, r;
 n(411104);
 var s, o, a, l, u = n(442837),
   _ = n(544891),
-  d = n(570140),
-  c = n(358085),
+  c = n(570140),
+  d = n(358085),
   E = n(981631);
 let I = null,
   T = null,
   h = null;
-(0, c.isDesktop)() && (window.popupBridge = {
+(0, d.isDesktop)() && (window.popupBridge = {
   getReturnUrlPrefix: () => {
     if (null == i) throw Error("popupBridgeState is unset");
     return (0, _.K0)() + E.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(E.gg$.BRAINTREE, i)
@@ -38,7 +38,7 @@ l = "BraintreeStore", (a = "displayName") in(o = S) ? Object.defineProperty(o, a
   configurable: !0,
   writable: !0
 }) : o[a] = l;
-let f = new S(d.Z, {
+let f = new S(c.Z, {
   BRAINTREE_CREATE_CLIENT_SUCCESS: function(e) {
     let {
       client: t

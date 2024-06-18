@@ -18,8 +18,8 @@ let u = r.createContext(void 0),
     let {
       children: n,
       impressionType: _,
-      impression: d,
-      disableTrack: c,
+      impression: c,
+      disableTrack: d,
       returnRef: E,
       ...I
     } = e, T = r.useRef(null);
@@ -27,10 +27,10 @@ let u = r.createContext(void 0),
       returnRef: E
     }), r.useContext(l.Z)({
       type: _,
-      name: null == d ? void 0 : d.impressionName,
-      properties: null == d ? void 0 : d.impressionProperties
+      name: null == c ? void 0 : c.impressionName,
+      properties: null == c ? void 0 : c.impressionProperties
     }, {
-      disableTrack: c
+      disableTrack: d
     }), r.useImperativeHandle(t, () => T.current), (0, i.jsx)(u.Provider, {
       value: !0,
       children: (0, i.jsx)("div", {

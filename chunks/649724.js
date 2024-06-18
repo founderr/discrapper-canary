@@ -14,8 +14,8 @@ var i, r = n(735250),
   l = n(481060),
   u = n(285952),
   _ = n(153066),
-  d = n(689938),
-  c = n(245578);
+  c = n(689938),
+  d = n(245578);
 
 function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -42,8 +42,8 @@ class T extends(i = s.PureComponent) {
       mode: i
     } = this.props, s = null === (t = this.context) || void 0 === t ? void 0 : t.titleId;
     return (0, r.jsx)("input", {
-      className: a()((0, _.l)(c, "input", i), {
-        [c.inputHidden]: e
+      className: a()((0, _.l)(d, "input", i), {
+        [d.inputHidden]: e
       }),
       ref: this.inputRef,
       type: "text",
@@ -56,7 +56,7 @@ class T extends(i = s.PureComponent) {
   render() {
     let e;
     let {
-      text: t = d.Z.Messages.COPY,
+      text: t = c.Z.Messages.COPY,
       mode: n,
       hideMessage: i,
       className: s,
@@ -76,14 +76,14 @@ class T extends(i = s.PureComponent) {
       focusTarget: this.inputRef,
       ringTarget: this.containerRef,
       children: (0, r.jsx)("div", {
-        className: a()((0, _.l)(c, "copyInput", n), s),
+        className: a()((0, _.l)(d, "copyInput", n), s),
         ref: this.containerRef,
         children: (0, r.jsxs)(u.Z, {
-          className: c.layout,
+          className: d.layout,
           children: [(0, r.jsxs)(u.Z, {
-            className: c.inputWrapper,
+            className: d.inputWrapper,
             children: [this.renderInput(E), E ? (0, r.jsx)("div", {
-              className: c.hiddenMessage,
+              className: d.hiddenMessage,
               children: i
             }) : null]
           }), (0, r.jsx)(u.Z, {
@@ -93,7 +93,7 @@ class T extends(i = s.PureComponent) {
               margin: 0
             },
             children: (0, r.jsx)(l.Button, {
-              className: c.button,
+              className: d.button,
               onClick: this.handleButtonClick,
               size: l.ButtonSizes.MIN,
               color: e,

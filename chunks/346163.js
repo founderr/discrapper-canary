@@ -30,10 +30,10 @@ function T(e) {
       error: S,
       loading: h,
       createEnableRequest: g,
-      submittedRequest: x
+      submittedRequest: C
     } = (0, c.Z)(null == e ? void 0 : e.id),
     {
-      loading: C,
+      loading: x,
       error: R,
       refresh: L,
       eligibility: O
@@ -46,9 +46,9 @@ function T(e) {
     {
       isMonetizationReapplicationDisabled: f
     } = (0, l.eC)(null == e ? void 0 : e.id),
-    v = x || (null == O ? void 0 : O.isApplicationPending) === !0,
-    D = (null == O ? void 0 : O.canApply) === !0,
-    Z = I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUIREMENTS_DESCRIPTION.format({
+    D = C || (null == O ? void 0 : O.isApplicationPending) === !0,
+    v = (null == O ? void 0 : O.canApply) === !0,
+    j = I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUIREMENTS_DESCRIPTION.format({
       faqUrl: r.Z.getArticleURL(_.BhN.CREATOR_FAQ)
     });
   A && f ? s = !0 === T ? I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM.format({
@@ -59,30 +59,30 @@ function T(e) {
     requestCooldownDuration: p,
     creatorRevenuePolicyUrl: r.Z.getArticleURL(_.BhN.CREATOR_POLICY)
   }));
-  let j = t && m && !1 === N,
+  let Z = t && m && !1 === N,
     U = t && !1 === T,
     G = (0, E.f)(),
-    P = A && D && m ? I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_RESUBMIT_V2.format() : void 0;
+    P = A && v && m ? I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_RESUBMIT_V2.format() : void 0;
   return n.useEffect(() => {
-    j && L()
-  }, [L, j]), {
+    Z && L()
+  }, [L, Z]), {
     resubmittingEnableRequest: h,
     resubmissionError: S,
     isGuildOwner: m,
     createEnableRequest: g,
-    resubmittedRequest: x,
-    eligibilityLoading: C,
+    resubmittedRequest: C,
+    eligibilityLoading: x,
     eligibilityError: R,
     refreshEligibility: L,
     eligibility: O,
-    eligibleForMonetization: D,
-    isApplicationPending: v,
+    eligibleForMonetization: v,
+    isApplicationPending: D,
     hasPreviousApplicationRejection: A,
     requestRejectedNoticeText: s,
     reapplyNoticeText: P,
     showAcceptTermsFlow: U,
     wasRejectedInV1: U && (M || A),
-    requirementsFinePrintText: Z,
+    requirementsFinePrintText: j,
     acceptTermsCheckboxText: G
   }
 }

@@ -8,8 +8,8 @@ var r = n(704215),
   l = n(605236),
   u = n(131951),
   _ = n(626135),
-  d = n(542238),
-  c = n(927923),
+  c = n(542238),
+  d = n(927923),
   E = n(981631),
   I = n(689938),
   T = n(112995);
@@ -45,7 +45,7 @@ t.Z = {
       body: n,
       errorCodeMessage: r,
       reconnectPlatformType: l
-    } = e, u = (0, i.jsx)(d.t, {
+    } = e, u = (0, i.jsx)(c.t, {
       body: n,
       errorCodeMessage: r,
       dismissCallback: () => (0, s.Mr)(h)
@@ -55,7 +55,7 @@ t.Z = {
       null != l && ((0, a.Z)({
         platformType: l
       }), _.default.track(E.rMx.ACCOUNT_LINK_STEP, {
-        previous_step: c.Lw,
+        previous_step: d.Lw,
         current_step: "desktop oauth",
         platform_type: l
       }))

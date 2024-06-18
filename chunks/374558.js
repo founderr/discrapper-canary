@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   M0: function() {
-    return d
+    return c
   },
   YX: function() {
     return u
@@ -28,14 +28,14 @@ let u = {
     SIZE_36: l.size36
   };
 
-function d(e) {
+function c(e) {
   let {
     className: t,
     tooltip: n,
     color: r,
     size: u = _.SIZE_32,
-    icon: d,
-    onClick: c,
+    icon: c,
+    onClick: d,
     disabled: E,
     focusProps: I
   } = e;
@@ -55,10 +55,10 @@ function d(e) {
           [l.disabled]: E
         }),
         onClick: e => {
-          null == a || a(), c(e)
+          null == a || a(), d(e)
         },
         focusProps: I,
-        children: d
+        children: c
       })
     }
   })

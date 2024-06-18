@@ -1,7 +1,7 @@
 "use strict";
 t.d(s, {
   t: function() {
-    return v
+    return D
   }
 }), t(47120), t(627341);
 var n, i, l = t(735250),
@@ -20,8 +20,8 @@ var n, i, l = t(735250),
   S = t(703656),
   h = t(430824),
   g = t(594174),
-  x = t(63063),
-  C = t(267101),
+  C = t(63063),
+  x = t(267101),
   R = t(294294),
   L = t(310800),
   O = t(833695),
@@ -30,15 +30,15 @@ var n, i, l = t(735250),
   M = t(689938),
   f = t(594567);
 
-function v(e) {
+function D(e) {
   let {
     guildId: s,
     hasValidApplication: t
   } = e, {
     listingsLoaded: n
-  } = (0, C.eD)(s), i = (0, o.e7)([h.Z], () => h.Z.getGuild(s)), v = (0, o.e7)([g.default], () => g.default.getCurrentUser()), D = (null == i ? void 0 : i.isOwner(v)) === !0, {
-    loading: Z
-  } = (0, d.H)(s), [j, U] = a.useState(t ? "manage_listings" : "payment");
+  } = (0, x.eD)(s), i = (0, o.e7)([h.Z], () => h.Z.getGuild(s)), D = (0, o.e7)([g.default], () => g.default.getCurrentUser()), v = (null == i ? void 0 : i.isOwner(D)) === !0, {
+    loading: j
+  } = (0, d.H)(s), [Z, U] = a.useState(t ? "manage_listings" : "payment");
   (0, _.P)(i);
   let G = a.useCallback(() => {
     if (null == i) return;
@@ -55,7 +55,7 @@ function v(e) {
       returnToSection: A.pNK.GUILD_PRODUCTS
     }), (0, S.uL)(A.Z5c.CHANNEL(i.id, p.oC.GUILD_SHOP))
   }, [i]);
-  if (!n || Z) return (0, l.jsx)(c.Spinner, {});
+  if (!n || j) return (0, l.jsx)(c.Spinner, {});
   if (null == i) return null;
   let P = (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(c.FormTitle, {
@@ -64,8 +64,8 @@ function v(e) {
       }), (0, l.jsx)(c.FormText, {
         type: c.FormText.Types.DESCRIPTION,
         children: M.Z.Messages.GUILD_PRODUCTS_SETTINGS_DESCRIPTION.format({
-          monetizationPolicyLink: x.Z.getArticleURL(A.BhN.CREATOR_POLICY),
-          serverProductsSupportLink: x.Z.getCreatorSupportArticleURL(A.BhN.SERVER_PRODUCTS)
+          monetizationPolicyLink: C.Z.getArticleURL(A.BhN.CREATOR_POLICY),
+          serverProductsSupportLink: C.Z.getCreatorSupportArticleURL(A.BhN.SERVER_PRODUCTS)
         })
       })]
     }),
@@ -74,7 +74,7 @@ function v(e) {
       look: "brand",
       className: f.tabBar,
       "aria-label": M.Z.Messages.GUILD_PRODUCTS_TITLE,
-      selectedItem: j,
+      selectedItem: Z,
       onItemSelect: U,
       children: [(0, l.jsx)(E.Z, {
         id: "basic_info",
@@ -86,7 +86,7 @@ function v(e) {
         disabledTooltip: M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
         disabled: !t,
         children: M.Z.Messages.GUILD_PRODUCTS_LISTINGS_SECTION
-      }), D ? (0, l.jsx)(c.TabBar.Item, {
+      }), v ? (0, l.jsx)(c.TabBar.Item, {
         id: "payment",
         className: f.tabBarItem,
         children: M.Z.Messages.GUILD_PRODUCTS_PAYMENT_SECTION
@@ -101,7 +101,7 @@ function v(e) {
         })
       }) : null]
     }),
-    B = (0, r.EQ)(j).with("basic_info", () => (0, l.jsx)(R.Z, {
+    B = (0, r.EQ)(Z).with("basic_info", () => (0, l.jsx)(R.Z, {
       guildId: s
     })).with("manage_listings", () => (0, l.jsx)(L.Z, {
       guildId: s
@@ -109,7 +109,7 @@ function v(e) {
       guildId: s
     })).exhaustive(),
     y = n ? (0, l.jsx)(c.TabBar.Panel, {
-      id: j,
+      id: Z,
       children: B
     }) : (0, l.jsx)(c.Spinner, {});
   return (0, l.jsxs)(u.AL, {

@@ -4,7 +4,7 @@ n.d(t, {
     return o.S
   },
   Z: function() {
-    return d
+    return c
   }
 }), n(47120);
 var i = n(117806),
@@ -23,7 +23,7 @@ function u(e, t, n) {
   }) : e[t] = n, e
 }
 let _ = 0;
-class d extends s.Z {
+class c extends s.Z {
   destroy() {
     this.destroyed = !0, this.framerateReducer.destroy(), this.setConnectionState(l.$j.DISCONNECTED), this.emit(o.S.Destroy, this), this.removeAllListeners()
   }

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 });
 var i = n(735250);
@@ -14,17 +14,17 @@ var r = n(481060),
   u = n(39198),
   _ = n(379916);
 
-function d(e) {
+function c(e) {
   let {
     applicationId: t,
     channelId: n
   } = e, {
-    installedIntegrations: d,
-    fetched: c
+    installedIntegrations: c,
+    fetched: d
   } = (0, o.j)({
     channelId: n
   });
-  return c && void 0 !== d.find(e => e.application.id === t) ? (0, i.jsxs)(a.Z, {
+  return d && void 0 !== c.find(e => e.application.id === t) ? (0, i.jsxs)(a.Z, {
     children: [(0, i.jsx)(r.Heading, {
       variant: "eyebrow",
       className: _.title,

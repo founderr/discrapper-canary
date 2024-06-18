@@ -82,9 +82,9 @@ s.Z = e => {
   let g = () => {
       null !== m.current && ((0, l.closeModal)(m.current), m.current = null)
     },
-    x = async e => {
+    C = async e => {
       null == T || T(!0), await u(e, s), h(!0), null == T || T(!1)
-    }, C = async e => {
+    }, x = async e => {
       var s, i, a;
       if (e.stopPropagation(), e.preventDefault(), (null === (s = e.currentTarget) || void 0 === s ? void 0 : s.files) == null || (null === (a = e.currentTarget) || void 0 === a ? void 0 : null === (i = a.files) || void 0 === i ? void 0 : i.length) === 0) return;
       let r = e.currentTarget.files;
@@ -93,13 +93,13 @@ s.Z = e => {
           default: e
         } = await Promise.all([t.e("99387"), t.e("16169")]).then(t.bind(t, 935333));
         return s => (0, n.jsx)(e, {
-          processFiles: () => x(r),
+          processFiles: () => C(r),
           ...s
         })
       })
     };
   return (0, n.jsx)(a.Z, {
-    onChange: C,
+    onChange: x,
     filters: null != I ? I : (0, r.Zj)(),
     multiple: o,
     disabled: c,

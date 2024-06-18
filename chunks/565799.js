@@ -4,8 +4,8 @@ var i, r, s, o, a = n(348327),
   l = n.n(a),
   u = n(392711),
   _ = n.n(u),
-  d = n(442837),
-  c = n(759174),
+  c = n(442837),
+  d = n(759174),
   E = n(570140),
   I = n(569545),
   T = n(199902),
@@ -17,14 +17,14 @@ var i, r, s, o, a = n(348327),
   m = n(606304),
   O = n(594174),
   R = n(979651),
-  C = n(938475),
-  p = n(501655),
-  g = n(88751),
-  L = n(427679);
-let v = "NO_GUILD",
-  D = new c.h(e => [function(e) {
+  p = n(938475),
+  g = n(501655),
+  C = n(88751),
+  v = n(427679);
+let L = "NO_GUILD",
+  D = new d.h(e => [function(e) {
     var t;
-    return null !== (t = e.getGuildId()) && void 0 !== t ? t : v
+    return null !== (t = e.getGuildId()) && void 0 !== t ? t : L
   }(e)], e => e.id),
   M = new Set,
   P = {};
@@ -53,11 +53,11 @@ function b(e) {
 
 function G(e) {
   let t = P[e];
-  return null == t && (t = new p.ZP(e), P[e] = t, t.rebuild()), t
+  return null == t && (t = new g.ZP(e), P[e] = t, t.rebuild()), t
 }
 
 function w(e) {
-  return null != e && e.isGuildStageVoice() && C.ZP.countVoiceStatesForChannel(e.id) > 0
+  return null != e && e.isGuildStageVoice() && p.ZP.countVoiceStatesForChannel(e.id) > 0
 }
 
 function k(e) {
@@ -125,9 +125,9 @@ function j(e) {
   return !!(null != i && M.has(i)) && B(r, [n])
 }
 let W = [];
-class K extends(i = d.ZP.Store) {
+class K extends(i = c.ZP.Store) {
   initialize() {
-    this.waitFor(h.default, O.default, S.Z, m.Z, R.Z, N.Z, C.ZP, f.Z, g.ZP, A.Z, L.Z, T.Z)
+    this.waitFor(h.default, O.default, S.Z, m.Z, R.Z, N.Z, p.ZP, f.Z, C.ZP, A.Z, v.Z, T.Z)
   }
   getParticipantsVersion(e) {
     var t, n;
@@ -150,7 +150,7 @@ class K extends(i = d.ZP.Store) {
     return null !== (i = null === (n = b(e)) || void 0 === n ? void 0 : n.size(t)) && void 0 !== i ? i : 0
   }
   getChannels(e) {
-    return U(null != e ? e : v), D.values(null != e ? e : v)
+    return U(null != e ? e : L), D.values(null != e ? e : L)
   }
   getChannelsVersion() {
     return D.version

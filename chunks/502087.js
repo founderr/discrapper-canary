@@ -19,13 +19,13 @@ let u = "OverridePremiumTypeStore",
     createdAtOverride: a.Zh
   };
 
-function d(e) {
+function c(e) {
   let {
     user: t
   } = e;
   _.premiumTypeActual = (0, o.G)(t.premium_type)
 }
-class c extends(i = r.ZP.PersistedStore) {
+class d extends(i = r.ZP.PersistedStore) {
   initialize(e) {
     if (null != e) {
       _.premiumTypeActual = null == e ? void 0 : e.premiumTypeActual, _.premiumTypeOverride = null == e ? void 0 : e.premiumTypeOverride, null != e.createdAtOverride ? _.createdAtOverride = new Date(e.createdAtOverride) : _.createdAtOverride = a.Zh;
@@ -49,12 +49,12 @@ class c extends(i = r.ZP.PersistedStore) {
     return _.premiumTypeOverride
   }
 }
-l(c, "displayName", u), l(c, "persistKey", u), l(c, "migrations", [e => {
+l(d, "displayName", u), l(d, "persistKey", u), l(d, "migrations", [e => {
   if ((null == e ? void 0 : e.createdAtOverride) == null) return {
     ...e,
     createdAtOverride: a.Zh
   }
-}]), t.Z = new c(s.Z, {
+}]), t.Z = new d(s.Z, {
   SET_PREMIUM_TYPE_OVERRIDE: function(e) {
     let {
       premiumType: t
@@ -67,6 +67,6 @@ l(c, "displayName", u), l(c, "persistKey", u), l(c, "migrations", [e => {
     } = e;
     _.createdAtOverride = t
   },
-  CURRENT_USER_UPDATE: d,
-  CONNECTION_OPEN: d
+  CURRENT_USER_UPDATE: c,
+  CONNECTION_OPEN: c
 })

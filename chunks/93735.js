@@ -4,7 +4,7 @@ n.d(t, {
     return s
   },
   N7: function() {
-    return d
+    return c
   },
   ZW: function() {
     return _
@@ -44,9 +44,9 @@ function a(e) {
     embedIds: n
   } = function(e) {
     var t, n, i, r, a, l, u, _;
-    let d = null !== (a = null == e ? void 0 : null === (t = e.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== a ? a : 0,
-      c = null !== (l = null == e ? void 0 : null === (n = e.embeds) || void 0 === n ? void 0 : n.length) && void 0 !== l ? l : 0;
-    if (0 === d && 0 === c) return {
+    let c = null !== (a = null == e ? void 0 : null === (t = e.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== a ? a : 0,
+      d = null !== (l = null == e ? void 0 : null === (n = e.embeds) || void 0 === n ? void 0 : n.length) && void 0 !== l ? l : 0;
+    if (0 === c && 0 === d) return {
       attachmentIds: [],
       embedIds: []
     };
@@ -72,9 +72,9 @@ function u(e) {
 
 function _(e) {
   var t, n, i, r, s, o, a, _;
-  let d = null !== (s = null == e ? void 0 : null === (t = e.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== s ? s : 0,
-    c = null !== (o = null == e ? void 0 : null === (n = e.embeds) || void 0 === n ? void 0 : n.length) && void 0 !== o ? o : 0;
-  if (0 === d && 0 === c) return {
+  let c = null !== (s = null == e ? void 0 : null === (t = e.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== s ? s : 0,
+    d = null !== (o = null == e ? void 0 : null === (n = e.embeds) || void 0 === n ? void 0 : n.length) && void 0 !== o ? o : 0;
+  if (0 === c && 0 === d) return {
     attachmentIds: [],
     embedIds: []
   };
@@ -86,7 +86,7 @@ function _(e) {
   }
 }
 
-function d(e) {
+function c(e) {
   let {
     attachmentIds: t,
     embedIds: n

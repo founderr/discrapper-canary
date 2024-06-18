@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   z: function() {
-    return c
+    return d
   }
 }), n(47120);
 var i = n(735250),
@@ -12,26 +12,26 @@ var i = n(735250),
   l = n(442837),
   u = n(393238),
   _ = n(607070),
-  d = n(392767);
+  c = n(392767);
 
-function c(e) {
+function d(e) {
   let {
     children: t,
     className: n,
     collapsibleContent: s,
-    isExpanded: c
-  } = e, [E, I] = r.useState(!1), T = (0, l.e7)([_.Z], () => _.Z.useReducedMotion), [h, S] = r.useState(!0), [f, N] = r.useState(!1), A = null != c ? c : E, {
+    isExpanded: d
+  } = e, [E, I] = r.useState(!1), T = (0, l.e7)([_.Z], () => _.Z.useReducedMotion), [h, S] = r.useState(!0), [f, N] = r.useState(!1), A = null != d ? d : E, {
     ref: m,
     height: O = 0
   } = (0, u.Z)(), {
     ref: R,
-    height: C = 0
-  } = (0, u.Z)(), p = (0, a.useSpring)({
-    height: A ? O + C : C,
+    height: p = 0
+  } = (0, u.Z)(), g = (0, a.useSpring)({
+    height: A ? O + p : p,
     immediate: h || T,
     config: a.config.stiff,
     onRest: () => N(!0)
-  }), g = r.useCallback(() => {
+  }), C = r.useCallback(() => {
     I(!E)
   }, [E, I]);
   return r.useLayoutEffect(() => {
@@ -40,21 +40,21 @@ function c(e) {
     }, 100);
     return () => clearTimeout(e)
   }, []), (0, i.jsx)("div", {
-    className: o()(d.collapseable, {
-      [d.toggled]: A
+    className: o()(c.collapseable, {
+      [c.toggled]: A
     }, n),
     children: (0, i.jsxs)(a.animated.div, {
-      className: o()(d.contentExpandContainer, {
-        [d.showOverflow]: A && f
+      className: o()(c.contentExpandContainer, {
+        [c.showOverflow]: A && f
       }),
-      style: p,
+      style: g,
       children: [(0, i.jsx)("div", {
         ref: R,
-        className: o()(d.header, {
-          [d.toggled]: A
+        className: o()(c.header, {
+          [c.toggled]: A
         }),
         children: t({
-          onClick: g
+          onClick: C
         })
       }), (0, i.jsx)("div", {
         ref: m,

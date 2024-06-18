@@ -15,8 +15,8 @@ var i = n(512722),
   l = n(592125),
   u = n(430824),
   _ = n(699516),
-  d = n(914010),
-  c = n(594174),
+  c = n(914010),
+  d = n(594174),
   E = n(51144),
   I = n(887490);
 
@@ -45,12 +45,12 @@ function h(e, t) {
     ignoreEmptyNodes: l,
     ignoreTrailingEmptyNodes: u,
     preventEmojiSurrogates: _
-  } = null != t ? t : {}, d = e.length > 0 && !I.LC.isText(e[0]);
-  null == a && (a = d ? "\n" : "");
-  let c = null !== (n = null == s ? void 0 : s.path[0]) && void 0 !== n ? n : 0,
+  } = null != t ? t : {}, c = e.length > 0 && !I.LC.isText(e[0]);
+  null == a && (a = c ? "\n" : "");
+  let d = null !== (n = null == s ? void 0 : s.path[0]) && void 0 !== n ? n : 0,
     E = null !== (i = null == o ? void 0 : o.path[0]) && void 0 !== i ? i : e.length - 1;
   if (u)
-    for (let t = E; t >= c; t--) {
+    for (let t = E; t >= d; t--) {
       let n = e[t];
       if (I.LC.isText(n)) {
         if (n.text.length > 0) {
@@ -61,16 +61,16 @@ function h(e, t) {
         E = t;
         break
       }
-      if (t === c) return ""
+      if (t === d) return ""
     }
-  let T = c > 0 && I.aj.isType(e[c - 1], "blockQuote"),
-    h = I.aj.isType(e[c], "blockQuote"),
+  let T = d > 0 && I.aj.isType(e[d - 1], "blockQuote"),
+    h = I.aj.isType(e[d], "blockQuote"),
     f = I.aj.isType(e[E], "blockQuote"),
     N = [];
-  for (let t = c; t <= E; t++) {
+  for (let t = d; t <= E; t++) {
     let n = e[t];
     if (l && I.LC.isText(n) && 0 === n.text.length) continue;
-    let i = null != s && t === c ? {
+    let i = null != s && t === d ? {
         path: s.path.slice(1),
         offset: s.offset
       } : void 0,
@@ -138,7 +138,7 @@ function S(e, t) {
       if ("raw" === n) return t;
       let i = l.Z.getChannel(e.channelId);
       if (null == i) return t;
-      return (0, s.F6)(i, c.default, _.Z, !0, !0)
+      return (0, s.F6)(i, d.default, _.Z, !0, !0)
     }
     case "soundboard": {
       let t = "<sound:".concat(e.soundId, ">");
@@ -152,12 +152,12 @@ function S(e, t) {
       if ("raw" === n) return t;
       let i = l.Z.getChannel(e.channelId);
       if (null == i) return t;
-      return (0, s.F6)(i, c.default, _.Z, !0, !0)
+      return (0, s.F6)(i, d.default, _.Z, !0, !0)
     }
     case "roleMention": {
       let t = "<@&".concat(e.roleId, ">");
       if ("raw" === n) return t;
-      let i = d.Z.getGuildId(),
+      let i = c.Z.getGuildId(),
         r = null != i ? u.Z.getRole(i, e.roleId) : void 0;
       if (null == r) return t;
       return "@".concat(r.name)
@@ -165,7 +165,7 @@ function S(e, t) {
     case "userMention": {
       let t = "<@".concat(e.userId, ">");
       if ("raw" === n) return t;
-      let i = c.default.getUser(e.userId);
+      let i = d.default.getUser(e.userId);
       if (null == i) return t;
       return "@".concat(E.ZP.getUserTag(i, {
         decoration: "never"

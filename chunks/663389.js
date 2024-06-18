@@ -3,9 +3,9 @@ var i, r, s, o, a = n(392711),
   l = n.n(a),
   u = n(442837),
   _ = n(570140),
-  d = n(594174),
-  c = n(981631);
-let E = c.QZA.CLOSED,
+  c = n(594174),
+  d = n(981631);
+let E = d.QZA.CLOSED,
   I = null,
   T = null,
   h = {},
@@ -16,19 +16,19 @@ let E = c.QZA.CLOSED,
   m = !1,
   O = !1,
   R = null,
-  C = null,
   p = null,
-  g = [],
-  L = null,
-  v = null;
+  g = null,
+  C = [],
+  v = null,
+  L = null;
 
 function D(e) {
   var t, n, i, r, s, o;
-  let a = d.default.getCurrentUser();
+  let a = c.default.getCurrentUser();
   if (null == a) return M();
-  T = null !== (t = e.section) && void 0 !== t ? t : T, L = null !== (n = e.section) && void 0 !== n ? n : T, null != e.subsection && null != T && (h[T] = e.subsection), null != e.scrollPosition && null != T && (S[T] = e.scrollPosition), O = !!e.openWithoutBackstack, E = c.QZA.OPEN, f = {}, A = {
+  T = null !== (t = e.section) && void 0 !== t ? t : T, v = null !== (n = e.section) && void 0 !== n ? n : T, null != e.subsection && null != T && (h[T] = e.subsection), null != e.scrollPosition && null != T && (S[T] = e.scrollPosition), O = !!e.openWithoutBackstack, E = d.QZA.OPEN, f = {}, A = {
     ...N = {
-      [c.oAB.ACCOUNT]: {
+      [d.oAB.ACCOUNT]: {
         userId: a.id,
         username: a.username,
         discriminator: a.discriminator,
@@ -39,22 +39,22 @@ function D(e) {
         claimed: a.isClaimed()
       }
     }
-  }, C = null !== (i = e.onClose) && void 0 !== i ? i : null, p = null !== (r = e.analyticsLocation) && void 0 !== r ? r : null, g = null !== (s = e.analyticsLocations) && void 0 !== s ? s : [], v = null !== (o = e.impressionSource) && void 0 !== o ? o : null
+  }, p = null !== (i = e.onClose) && void 0 !== i ? i : null, g = null !== (r = e.analyticsLocation) && void 0 !== r ? r : null, C = null !== (s = e.analyticsLocations) && void 0 !== s ? s : [], L = null !== (o = e.impressionSource) && void 0 !== o ? o : null
 }
 
 function M() {
-  E = c.QZA.CLOSED, m = !1, N = null, L = null, A = null, I = null, T = null, h = {}, S = {}, C = null, p = null, g = [], v = null
+  E = d.QZA.CLOSED, m = !1, N = null, v = null, A = null, I = null, T = null, h = {}, S = {}, p = null, g = null, C = [], L = null
 }
 
 function P() {
-  E = c.QZA.OPEN, f = {}
+  E = d.QZA.OPEN, f = {}
 }
 class y extends(o = u.ZP.Store) {
   initialize() {
-    this.waitFor(d.default)
+    this.waitFor(c.default)
   }
   hasChanges() {
-    return null != A && null != N && (!!this.isOpen() || R === c.cII.USER_SETTINGS) && !l().isEqual(A, N)
+    return null != A && null != N && (!!this.isOpen() || R === d.cII.USER_SETTINGS) && !l().isEqual(A, N)
   }
   isOpen() {
     return m
@@ -76,7 +76,7 @@ class y extends(o = u.ZP.Store) {
   }
   getProps() {
     return {
-      submitting: E === c.QZA.SUBMITTING,
+      submitting: E === d.QZA.SUBMITTING,
       section: T,
       subsection: null != T ? h[T] : null,
       scrollPosition: null != T ? S[T] : null,
@@ -84,14 +84,14 @@ class y extends(o = u.ZP.Store) {
       errors: f,
       hasChanges: this.hasChanges(),
       openWithoutBackstack: O,
-      analyticsLocation: p,
-      analyticsLocations: g,
-      initialSection: L,
-      impressionSource: v
+      analyticsLocation: g,
+      analyticsLocations: C,
+      initialSection: v,
+      impressionSource: L
     }
   }
   get onClose() {
-    return C
+    return p
   }
 }
 s = "UserSettingsModalStore", (r = "displayName") in(i = y) ? Object.defineProperty(i, r, {
@@ -107,16 +107,16 @@ s = "UserSettingsModalStore", (r = "displayName") in(i = y) ? Object.definePrope
   USER_SETTINGS_MODAL_CLOSE: M,
   LOGOUT: M,
   USER_SETTINGS_MODAL_SUBMIT: function() {
-    E = c.QZA.SUBMITTING
+    E = d.QZA.SUBMITTING
   },
   USER_SETTINGS_MODAL_SUBMIT_FAILURE: function(e) {
     var t;
-    if (E !== c.QZA.SUBMITTING) return !1;
-    E = c.QZA.OPEN, T = c.oAB.ACCOUNT, f = null !== (t = e.errors) && void 0 !== t ? t : {}
+    if (E !== d.QZA.SUBMITTING) return !1;
+    E = d.QZA.OPEN, T = d.oAB.ACCOUNT, f = null !== (t = e.errors) && void 0 !== t ? t : {}
   },
   USER_SETTINGS_MODAL_SET_SECTION: function(e) {
     var t;
-    I = T, T = e.section, p = null, g = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (h[T] = e.subsection)
+    I = T, T = e.section, g = null, C = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (h[T] = e.subsection)
   },
   USER_SETTINGS_MODAL_CLEAR_SUBSECTION: function(e) {
     let {
@@ -135,18 +135,18 @@ s = "UserSettingsModalStore", (r = "displayName") in(i = y) ? Object.definePrope
       settings: t
     } = e;
     null == A && (A = {});
-    let n = A[c.oAB.ACCOUNT];
-    A[c.oAB.ACCOUNT] = {
+    let n = A[d.oAB.ACCOUNT];
+    A[d.oAB.ACCOUNT] = {
       ...n,
       ...t
     }
   },
   USER_SETTINGS_MODAL_SUBMIT_COMPLETE: P,
   USER_SETTINGS_MODAL_RESET: function() {
-    let e = d.default.getCurrentUser();
+    let e = c.default.getCurrentUser();
     P(), null != e && (A = {
       ...N = {
-        [c.oAB.ACCOUNT]: {
+        [d.oAB.ACCOUNT]: {
           userId: e.id,
           username: e.username,
           discriminator: e.discriminator,
@@ -160,7 +160,7 @@ s = "UserSettingsModalStore", (r = "displayName") in(i = y) ? Object.definePrope
     })
   },
   DRAWER_SELECT_TAB: function(e) {
-    return R = e.tab, null == T && R === c.cII.USER_SETTINGS && D({
+    return R = e.tab, null == T && R === d.cII.USER_SETTINGS && D({
       type: "USER_SETTINGS_MODAL_INIT",
       section: null,
       subsection: null,

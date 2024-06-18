@@ -17,8 +17,8 @@ function s(e, t, n, s) {
   var o, a, l;
   let u = {},
     _ = {},
-    d = [],
-    c = [];
+    c = [],
+    d = [];
   for (let t of e.values()) switch (t.type) {
     case "candidate-pair":
       u[t.id] = t;
@@ -27,15 +27,15 @@ function s(e, t, n, s) {
       _[t.id] = t;
       break;
     case "inbound-rtp":
-      d.push(t);
+      c.push(t);
       break;
     case "outbound-rtp":
-      c.push(t)
+      d.push(t)
   }
   let E = Object.values(u).find(e => "succeeded" === e.state);
   if (void 0 === E) return null;
   let I = [];
-  for (let e of c) {
+  for (let e of d) {
     let t = _[e.codecId];
     if (null == t) continue;
     let s = {
@@ -76,7 +76,7 @@ function s(e, t, n, s) {
     }
   }
   let T = {};
-  for (let e of d) {
+  for (let e of c) {
     let o = _[e.codecId];
     if (null == o) continue;
     let a = t(e.ssrc);

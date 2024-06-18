@@ -17,8 +17,8 @@ n.d(t, {
 var r, s, o, a, l = n(392711),
   u = n.n(l),
   _ = n(913527),
-  d = n.n(_),
-  c = n(442837),
+  c = n.n(_),
+  d = n(442837),
   E = n(433517),
   I = n(570140),
   T = n(593472),
@@ -30,11 +30,11 @@ var r, s, o, a, l = n(392711),
   m = n(77498),
   O = n(283595),
   R = n(417363),
-  C = n(626135),
-  p = n(70956),
-  g = n(877481),
-  L = n(823379),
-  v = n(358085),
+  p = n(626135),
+  g = n(70956),
+  C = n(877481),
+  v = n(823379),
+  L = n(358085),
   D = n(998502),
   M = n(145597),
   P = n(370862),
@@ -231,7 +231,7 @@ function el(e) {
   var t, n;
   let i = {
     ...e,
-    played: null != e.lastFocused && 0 !== e.lastFocused ? d()(new Date(e.lastFocused * p.Z.Millis.SECOND)).fromNow() : " ",
+    played: null != e.lastFocused && 0 !== e.lastFocused ? c()(new Date(e.lastFocused * g.Z.Millis.SECOND)).fromNow() : " ",
     overlay: (t = e, null !== (n = W.enableOverlay[ei(t)]) && void 0 !== n ? n : er(t).enabled),
     verified: m.Z.isGameInDatabase(e),
     detectable: es(e)
@@ -268,13 +268,13 @@ function eu() {
 }
 
 function e_() {
-  if (!__OVERLAY__ && v.isPlatformEmbedded) {
+  if (!__OVERLAY__ && L.isPlatformEmbedded) {
     let e = [...x, ...u().values(W.gameOverrides)];
     D.ZP.setGameCandidateOverrides(e)
   }
 }
 
-function ed(e) {
+function ec(e) {
   if (null != e && 0 !== e.length) e.forEach(e => {
     if (W.gamesSeen.some(t => {
         if (t.name === e.name) {
@@ -298,13 +298,13 @@ function ed(e) {
         return null != e.id && (t.id = e.id), null != e.nativeProcessObserverId && (t.nativeProcessObserverId = e.nativeProcessObserverId), null != e.name && (t.name = e.name), e.add && (t.add = !0), e.block && (t.block = !0), ee(t, e), t
       }(e))
     }
-  }), W.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused), ea(), g.Z.setRecentGames(ec().map(e => el(e)))
+  }), W.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused), ea(), C.Z.setRecentGames(ed().map(e => el(e)))
 }
 
-function ec() {
+function ed() {
   let e = u().values(W.gameOverrides);
   return W.gamesSeen.filter(e => void 0 === W.gameOverrides[ei(e)]).concat(e)
-}!__OVERLAY__ && (0, v.isDesktop)() && (K = function() {
+}!__OVERLAY__ && (0, L.isDesktop)() && (K = function() {
   let e = [],
     t = new Set;
   i = {};
@@ -324,7 +324,7 @@ function ec() {
         let {
           os: t
         } = e;
-        return t === (0, v.getPlatformName)()
+        return t === (0, L.getPlatformName)()
       }) : [],
       s = {};
     r.forEach(e => {
@@ -367,7 +367,7 @@ function ec() {
     })), Z = e, F = n, i = r, en()
   }), e_()
 });
-class eE extends(r = c.ZP.Store) {
+class eE extends(r = d.ZP.Store) {
   initialize() {
     var e, t, n, i;
     let r = null !== (e = E.K.get(G)) && void 0 !== e ? e : {
@@ -383,7 +383,7 @@ class eE extends(r = c.ZP.Store) {
         W.gameOverrides[t] = e
       }), W.enableOverlay = null !== (n = r.enableOverlay) && void 0 !== n ? n : {}, W.enableDetection = null !== (i = r.enableDetection) && void 0 !== i ? i : {}, e_(), Array.isArray(r.gamesSeen))
       for (let e of r.gamesSeen) "number" == typeof e.id && (e.nativeProcessObserverId = e.id, delete e.id, s = !0);
-    ed(r.gamesSeen), this.waitFor(m.Z), this.syncWith([O.Z, m.Z, R.Z], u().throttle(eu, 1e3)), s && ea()
+    ec(r.gamesSeen), this.waitFor(m.Z), this.syncWith([O.Z, m.Z, R.Z], u().throttle(eu, 1e3)), s && ea()
   }
   getVisibleGame() {
     return null == H || eo(H) ? H : null
@@ -403,7 +403,7 @@ class eE extends(r = c.ZP.Store) {
     return e
   }
   getRunningVerifiedApplicationIds() {
-    return this.getRunningGames().map(e => m.Z.getGameByName(e.name)).filter(L.lm).map(e => e.id)
+    return this.getRunningGames().map(e => m.Z.getGameByName(e.name)).filter(v.lm).map(e => e.id)
   }
   getGameForPID(e) {
     var t;
@@ -430,7 +430,7 @@ class eE extends(r = c.ZP.Store) {
   }
   getGamesSeen(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-      n = ec();
+      n = ed();
     if (e) {
       let e = this.getVisibleGame();
       if (null != e) {
@@ -475,7 +475,7 @@ a = "RunningGameStore", (o = "displayName") in(s = eE) ? Object.defineProperty(s
   writable: !0
 }) : s[o] = a, t.ZP = new eE(I.Z, {
   RUNNING_GAMES_CHANGE: function(e) {
-    ed(Z)
+    ec(Z)
   },
   CANDIDATE_GAMES_CHANGE: function(e) {
     V = e.games
@@ -512,12 +512,12 @@ a = "RunningGameStore", (o = "displayName") in(s = eE) ? Object.defineProperty(s
     (null == i.lastFocused || 0 === i.lastFocused) && (i.lastFocused = Math.floor(Date.now() / 1e3)), W.gameOverrides[t] = {
       ...i,
       add: !0
-    }, ed(Z), e_(), ea(), en()
+    }, ec(Z), e_(), ea(), en()
   },
   RUNNING_GAME_TOGGLE_OVERLAY: function(e) {
     if (W.enableOverlay[ei(e.game)] = e.newEnabledValue, ea(), !__OVERLAY__) {
       let t = null != e.game.id ? m.Z.getDetectableGame(e.game.id) : null;
-      null != t && C.default.track(y.rMx.OVERLAY_TOGGLED, {
+      null != t && p.default.track(y.rMx.OVERLAY_TOGGLED, {
         enabled: e.newEnabledValue,
         setting_type: "overlay toggled - game",
         application_id: t.id,
@@ -529,7 +529,7 @@ a = "RunningGameStore", (o = "displayName") in(s = eE) ? Object.defineProperty(s
     let {
       game: t
     } = e, n = es(t);
-    W.enableDetection[ei(t)] = !n, ea(), C.default.track(y.rMx.USER_SETTINGS_GAME_DETECTION_TOGGLE, {
+    W.enableDetection[ei(t)] = !n, ea(), p.default.track(y.rMx.USER_SETTINGS_GAME_DETECTION_TOGGLE, {
       enabled: !n
     })
   },
@@ -564,7 +564,7 @@ a = "RunningGameStore", (o = "displayName") in(s = eE) ? Object.defineProperty(s
   GAMES_DATABASE_UPDATE: K,
   GAME_LAUNCH_SUCCESS: function(e) {
     var t;
-    if (__OVERLAY__ || !v.isPlatformEmbedded) return;
+    if (__OVERLAY__ || !L.isPlatformEmbedded) return;
     let n = D.ZP.getDiscordUtils().notifyGameLaunched;
     if (null == n) return;
     let i = m.Z.getDetectableGame(e.applicationId);

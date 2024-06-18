@@ -17,7 +17,7 @@ function u(e) {
     u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.Z,
     _ = t.getChannel(e);
   if (null == _) return null;
-  let d = (0, i.F6)(_, n, u);
+  let c = (0, i.F6)(_, n, u);
   switch (_.type) {
     case l.d4z.DM: {
       let e = n.getUser(_.getRecipientId());
@@ -26,21 +26,21 @@ function u(e) {
         type: a.h8.USER,
         record: e,
         score: 0,
-        comparator: d
+        comparator: c
       }
     }
     case l.d4z.GROUP_DM:
       return {
-        type: a.h8.GROUP_DM, record: _, score: 0, comparator: d
+        type: a.h8.GROUP_DM, record: _, score: 0, comparator: c
       };
     case l.d4z.GUILD_VOICE:
     case l.d4z.GUILD_STAGE_VOICE:
       return {
-        type: a.h8.VOICE_CHANNEL, record: _, score: 0, comparator: d
+        type: a.h8.VOICE_CHANNEL, record: _, score: 0, comparator: c
       };
     default:
       return {
-        type: a.h8.TEXT_CHANNEL, record: _, score: 0, comparator: d
+        type: a.h8.TEXT_CHANNEL, record: _, score: 0, comparator: c
       }
   }
 }

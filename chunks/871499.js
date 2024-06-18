@@ -16,8 +16,8 @@ var r = n(120356),
   l = n(259580),
   u = n(806519),
   _ = n(618158),
-  d = n(362267),
-  c = n(689938),
+  c = n(362267),
+  d = n(689938),
   E = n(431606);
 
 function I(e) {
@@ -28,8 +28,8 @@ function I(e) {
     onMouseEnter: a,
     onMouseLeave: l,
     onContextMenu: u,
-    className: d,
-    wrapperClassName: c,
+    className: c,
+    wrapperClassName: d,
     iconClassName: I,
     iconComponent: T,
     themeable: h = !1,
@@ -40,13 +40,13 @@ function I(e) {
     forceTooltipOpen: m = !1,
     buttonRef: O,
     grow: R,
-    "aria-label": C
+    "aria-label": p
   } = e;
   return (0, i.jsx)(_.Z, {
     children: (0, i.jsx)(o.Tooltip, {
       position: N,
       text: t,
-      "aria-label": C,
+      "aria-label": p,
       shouldShow: A,
       forceOpen: m,
       children: e => {
@@ -85,11 +85,11 @@ function I(e) {
           innerClassName: E.lineHeightReset,
           className: s()({
             [E.active]: f
-          }, d),
-          wrapperClassName: c,
+          }, c),
+          wrapperClassName: d,
           buttonRef: O,
           grow: R,
-          "aria-label": C,
+          "aria-label": p,
           ...m,
           children: (0, i.jsx)(T, {
             className: s()(E.controlIcon, I, {
@@ -123,7 +123,7 @@ function h(e) {
     popoutOpen: f = !1,
     premiumGlow: N = !1,
     ...A
-  } = e, m = (0, d.Z)(t, n), O = (0, a.Z)("(max-width: 456px)"), R = (0, i.jsx)(I, {
+  } = e, m = (0, c.Z)(t, n), O = (0, a.Z)("(max-width: 456px)"), R = (0, i.jsx)(I, {
     ...A,
     grow: !1,
     onContextMenu: S,
@@ -142,7 +142,7 @@ function h(e) {
       children: R
     }), null != S ? (0, i.jsx)(_.Z, {
       children: (0, i.jsx)(o.Clickable, {
-        "aria-label": c.Z.Messages.MORE_OPTIONS,
+        "aria-label": d.Z.Messages.MORE_OPTIONS,
         onClick: S,
         onContextMenu: S,
         className: s()(E.contextMenuNub, T[m], {

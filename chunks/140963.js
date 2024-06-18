@@ -8,8 +8,8 @@ var i = n(735250),
   l = n(239091),
   u = n(555573),
   _ = n(998698),
-  d = n(459273),
-  c = n(358085),
+  c = n(459273),
+  d = n(358085),
   E = n(62883),
   I = n(752305),
   T = n(981631);
@@ -126,19 +126,19 @@ class f extends r.PureComponent {
       className: l,
       id: u,
       submitting: _,
-      textAreaPaddingClassName: c,
+      textAreaPaddingClassName: d,
       spellcheckEnabled: E,
       "aria-controls": I,
       "aria-expanded": h,
       "aria-activedescendant": S
     } = this.props;
     return (0, i.jsxs)(i.Fragment, {
-      children: [(0, i.jsx)(d.d9, {
+      children: [(0, i.jsx)(c.d9, {
         event: T.CkL.GLOBAL_CLIPBOARD_PASTE,
         handler: this.handleGlobalPaste
       }), (0, i.jsx)(a.TextAreaAutosize, {
         ref: this.handleSetRef,
-        className: o()(l, c),
+        className: o()(l, d),
         id: u,
         rows: 1,
         fontWidthEstimate: 6,
@@ -235,7 +235,7 @@ class f extends r.PureComponent {
     }), h(this, "handleClick", () => {
       this.props.maybeShowAutocomplete()
     }), h(this, "handleContextMenu", e => {
-      c.isPlatformEmbedded && (0, l.jW)(e, async () => {
+      d.isPlatformEmbedded && (0, l.jW)(e, async () => {
         let {
           default: e
         } = await n.e("99989").then(n.bind(n, 889662));

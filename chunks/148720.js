@@ -12,8 +12,8 @@ var i = n(668781),
   l = n(592125),
   u = n(430824),
   _ = n(496675),
-  d = n(594174),
-  c = n(979651),
+  c = n(594174),
+  d = n(979651),
   E = n(317381),
   I = n(638880),
   T = n(782769),
@@ -28,27 +28,27 @@ async function f(e) {
     inputApplication: A,
     analyticsLocations: m,
     embeddedActivitiesManager: O
-  } = e, R = E.ZP.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === f && (null == N || e.launchId === N)), C = A;
-  if (null == C) {
+  } = e, R = E.ZP.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === f && (null == N || e.launchId === N)), p = A;
+  if (null == p) {
     let e = await r.Z.fetchApplication(f);
-    C = a.Z.createFromServer(e)
+    p = a.Z.createFromServer(e)
   }
-  if (null == R || null == C) return;
-  let p = d.default.getCurrentUser(),
-    g = l.Z.getChannel(n),
-    L = (0, h.ZP)({
-      userId: null == p ? void 0 : p.id,
-      application: C,
+  if (null == R || null == p) return;
+  let g = c.default.getCurrentUser(),
+    C = l.Z.getChannel(n),
+    v = (0, h.ZP)({
+      userId: null == g ? void 0 : g.id,
+      application: p,
       channelId: n,
-      currentUser: p,
-      isActivitiesEnabledForCurrentPlatform: (0, T.a)(g),
+      currentUser: g,
+      isActivitiesEnabledForCurrentPlatform: (0, T.a)(C),
       ChannelStore: l.Z,
-      VoiceStateStore: c.Z,
+      VoiceStateStore: d.Z,
       PermissionStore: _.Z,
       GuildStore: u.Z
     }),
-    v = E.ZP.getSelfEmbeddedActivityForChannel(n),
-    D = null == v ? void 0 : v.applicationId,
+    L = E.ZP.getSelfEmbeddedActivityForChannel(n),
+    D = null == L ? void 0 : L.applicationId,
     M = null != D && null !== (t = s.Z.getApplication(D)) && void 0 !== t ? t : void 0;
   ! function(e) {
     let {
@@ -94,7 +94,7 @@ async function f(e) {
         })
     }
   }({
-    embeddedActivityJoinability: L,
+    embeddedActivityJoinability: v,
     handleCanJoin: async function e() {
       if (null != R) await (0, I.Z)({
         applicationId: R.applicationId,

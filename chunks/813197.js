@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Fq: function() {
-    return d
+    return c
   },
   Zj: function() {
     return _
@@ -29,7 +29,7 @@ function _() {
   }]
 }
 
-function d(e, t, n) {
+function c(e, t, n) {
   ! function(e, t) {
     if (null != e) {
       let n = new FileReader;
@@ -48,7 +48,7 @@ function d(e, t, n) {
     }
   })
 }
-class c extends(i = s.PureComponent) {
+class d extends(i = s.PureComponent) {
   componentDidMount() {
     this._isMounted = !0
   }
@@ -89,7 +89,7 @@ class c extends(i = s.PureComponent) {
             null == t || t(n, r.size);
             continue
           }
-          d(r, this.handleFileRead, this.handleFileError)
+          c(r, this.handleFileRead, this.handleFileError)
         }
     }), u(this, "handleFileRead", (e, t) => {
       let {
@@ -107,8 +107,8 @@ class c extends(i = s.PureComponent) {
     })
   }
 }
-u(c, "defaultProps", {
+u(d, "defaultProps", {
   multiple: !0,
   tabIndex: -1,
   maxFileSizeBytes: 1 / 0
-}), t.ZP = c
+}), t.ZP = d

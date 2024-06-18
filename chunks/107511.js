@@ -8,7 +8,7 @@ var i = n(433517),
   l = n(105372),
   u = n(88751),
   _ = n(157925);
-class d extends s.Z {
+class c extends s.Z {
   _initialize() {
     r.Z.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
   }
@@ -35,4 +35,4 @@ class d extends s.Z {
     }) : t[n] = r
   }
 }
-t.Z = new d
+t.Z = new c

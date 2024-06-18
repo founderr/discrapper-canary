@@ -19,7 +19,7 @@ s.Z = e => {
   var s;
   let {
     className: t
-  } = e, i = (0, a.e7)([c.default], () => c.default.getCurrentUser()), S = (0, a.e7)([o.default], () => o.default.locale), h = (0, a.e7)([u.ZP], () => u.ZP.getPremiumTypeSubscription()), g = (0, a.e7)([d.Z], () => null != h ? d.Z.get(h.planId) : void 0), x = null !== (s = (0, a.e7)([d.Z], () => null != g ? d.Z.getForSkuAndInterval((0, _.Wz)(T.Si.GUILD), g.interval, g.intervalCount) : void 0)) && void 0 !== s ? s : T.GP[T.Xh.PREMIUM_MONTH_GUILD];
+  } = e, i = (0, a.e7)([c.default], () => c.default.getCurrentUser()), S = (0, a.e7)([o.default], () => o.default.locale), h = (0, a.e7)([u.ZP], () => u.ZP.getPremiumTypeSubscription()), g = (0, a.e7)([d.Z], () => null != h ? d.Z.get(h.planId) : void 0), C = null !== (s = (0, a.e7)([d.Z], () => null != g ? d.Z.getForSkuAndInterval((0, _.Wz)(T.Si.GUILD), g.interval, g.intervalCount) : void 0)) && void 0 !== s ? s : T.GP[T.Xh.PREMIUM_MONTH_GUILD];
   return (0, n.jsxs)("div", {
     className: l()(m.wrapper, t),
     children: [(0, n.jsx)(r.Heading, {
@@ -59,9 +59,9 @@ s.Z = e => {
       }({
         currentUser: i,
         locale: S,
-        guildBoostingPlanId: x.id,
-        interval: x.interval,
-        intervalCount: x.intervalCount
+        guildBoostingPlanId: C.id,
+        interval: C.interval,
+        intervalCount: C.intervalCount
       })
     })]
   })

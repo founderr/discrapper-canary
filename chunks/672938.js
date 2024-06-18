@@ -8,7 +8,7 @@ var i, r = n(735250),
   u = n(285952),
   _ = n(991463);
 
-function d(e, t, n) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -17,7 +17,7 @@ function d(e, t, n) {
   }) : e[t] = n, e
 }
 
-function c(e) {
+function d(e) {
   let {
     percentage: t,
     isSingleLine: n
@@ -67,7 +67,7 @@ class T extends(i = s.PureComponent) {
       singleLine: s = !1
     } = this.props, {
       now: o
-    } = this.state, l = (t - e) / 1e3, d = Math.max(Math.min((o - e) / 1e3, l), 0);
+    } = this.state, l = (t - e) / 1e3, c = Math.max(Math.min((o - e) / 1e3, l), 0);
     return s ? (0, r.jsxs)("div", {
       className: a()(n, {
         [_.themed]: i
@@ -75,13 +75,13 @@ class T extends(i = s.PureComponent) {
       children: [(0, r.jsx)("div", {
         className: _.textLeftInSingleLine,
         children: I({
-          time: d,
+          time: c,
           padLargestUnit: !0
         })
       }), (0, r.jsx)("div", {
         className: _.barInSingleLine,
-        children: (0, r.jsx)(c, {
-          percentage: d / l,
+        children: (0, r.jsx)(d, {
+          percentage: c / l,
           isSingleLine: !0
         })
       }), (0, r.jsx)("div", {
@@ -95,15 +95,15 @@ class T extends(i = s.PureComponent) {
       className: a()(n, {
         [_.themed]: i
       }),
-      children: [(0, r.jsx)(c, {
-        percentage: d / l,
+      children: [(0, r.jsx)(d, {
+        percentage: c / l,
         isSingleLine: !1
       }), (0, r.jsxs)(u.Z, {
         children: [(0, r.jsx)(u.Z.Child, {
           grow: 1,
           className: _.textLeft,
           children: I({
-            time: d,
+            time: c,
             padLargestUnit: !1
           })
         }), (0, r.jsx)(u.Z.Child, {
@@ -118,11 +118,11 @@ class T extends(i = s.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), d(this, "timer", new l.Xp), d(this, "state", {
+    super(...e), c(this, "timer", new l.Xp), c(this, "state", {
       now: Date.now()
     })
   }
 }
-d(T, "defaultProps", {
+c(T, "defaultProps", {
   themed: !1
 }), t.Z = T

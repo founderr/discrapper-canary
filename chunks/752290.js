@@ -9,33 +9,33 @@ let a = (0, o.tu)("vibing_wumpus", "vibing_wumpus", 0),
   u = 0,
   _ = null;
 
-function d(e, t) {
+function c(e, t) {
   let n = Math.round(100 * e),
     i = Math.round(100 * u),
     s = Math.round(100 * l);
   n > 0 && s >= i || n < 0 && s <= i ? (clearInterval(_), 0 === i && null != t && t()) : (s += n, l = s / 100, a.volume = r()(l, 0, .5))
 }
 
-function c(e) {
+function d(e) {
   null != _ && clearInterval(_), u = 0;
   let t = h();
   _ = setInterval(() => {
-    d(t, e)
+    c(t, e)
   }, 100)
 }
 
 function E() {
   null != _ && clearInterval(_), a.loop(), u = .5;
   let e = h();
-  _ = setInterval(() => d(e), 100)
+  _ = setInterval(() => c(e), 100)
 }
 
 function I() {
-  c(a.pause.bind(a))
+  d(a.pause.bind(a))
 }
 
 function T() {
-  c(a.stop.bind(a))
+  d(a.stop.bind(a))
 }
 
 function h() {

@@ -18,8 +18,8 @@ var i = n(512722),
   l = n(932724),
   u = n(716161),
   _ = n(634041),
-  d = n(647177),
-  c = n(63985),
+  c = n(647177),
+  d = n(63985),
   E = n(638457),
   I = n(678916),
   T = n(981631);
@@ -46,7 +46,7 @@ async function f(e, t, n) {
   if (n === I.f7) return S(e, t, s.zZ.BACKGROUND_BLUR);
   if ("string" == typeof n || "number" == typeof n) {
     ;
-    let e = (0, c.Z)()[n];
+    let e = (0, d.Z)()[n];
     _ = null !== (i = e.isVideo) && void 0 !== i && i, l = e.source
   } else {
     let e = n.asset;
@@ -94,7 +94,7 @@ async function N(e, t) {
   } = t;
   await f(s.TO.CAMERA_BACKGROUND_LIVE, {
     type: s.W$.INPUT_DEVICE
-  }, e), n && (0, d.Bh)(e, i, "Enabled")
+  }, e), n && (0, c.Bh)(e, i, "Enabled")
 }
 async function A(e, t, n) {
   let {
@@ -104,7 +104,7 @@ async function A(e, t, n) {
   (0, u.GS)(), await f(s.TO.CAMERA_BACKGROUND_PREVIEW, {
     type: s.W$.STREAM,
     streamId: t
-  }, e), i && (0, d.Bh)(e, r, "Preview")
+  }, e), i && (0, c.Bh)(e, r, "Preview")
 }
 
 function m() {

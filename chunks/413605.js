@@ -13,7 +13,7 @@ n.d(t, {
     return o
   },
   VR: function() {
-    return d
+    return c
   },
   W6: function() {
     return a
@@ -47,7 +47,7 @@ function _(e) {
   return e.target_type === s.Iq.EMBEDDED_APPLICATION
 }
 
-function d(e) {
+function c(e) {
   var t, n;
   if ("number" == typeof e.type) return e.type;
   if ((t = e).type === s.wx.GROUP_DM || null != t.channel && (0, r.bc)(t.channel.type)) return s.wx.GROUP_DM;

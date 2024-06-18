@@ -8,8 +8,8 @@ var i = n(735250),
   l = n(592125),
   u = n(496675),
   _ = n(981631),
-  d = n(689938),
-  c = n(566580);
+  c = n(689938),
+  d = n(566580);
 t.Z = e => {
   let {
     message: t,
@@ -25,21 +25,21 @@ t.Z = e => {
     })
   }, [t]);
   return null != t && h ? (0, i.jsx)("div", {
-    className: c.container,
+    className: d.container,
     children: (0, i.jsxs)("div", {
-      className: c.messageContainer,
+      className: d.messageContainer,
       children: [(0, i.jsx)("div", {
-        className: c.description,
+        className: d.description,
         children: (0, i.jsx)(s.Text, {
           variant: "text-sm/normal",
-          children: d.Z.Messages.MOBILE_REPORTS_DELETE_MESSAGE_ELEMENT_DESCRIPTION
+          children: c.Z.Messages.MOBILE_REPORTS_DELETE_MESSAGE_ELEMENT_DESCRIPTION
         })
       }), (0, i.jsx)(s.Button, {
         onClick: () => T(),
         disabled: E,
         size: s.Button.Sizes.SMALL,
         color: s.Button.Colors.RED,
-        children: E ? d.Z.Messages.DELETED : d.Z.Messages.DELETE
+        children: E ? c.Z.Messages.DELETED : c.Z.Messages.DELETE
       })]
     })
   }) : null

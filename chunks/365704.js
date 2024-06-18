@@ -11,12 +11,12 @@ var i = n(590921),
   r = n(521090),
   s = n(126226),
   o = n(116364),
-  a = n(290401),
+  a = n(941140),
   l = n(341561),
   u = n(277981),
   _ = n(420001),
-  d = n(65090),
-  c = n(591236);
+  c = n(65090),
+  d = n(591236);
 let E = [i.eq.CHOICES, i.eq.GIFS, i.eq.COMMAND_OPTIONS, i.eq.EMOJIS_AND_STICKERS, i.eq.REACTIONS, i.eq.CHANNELS, i.eq.MENTIONS, i.eq.COMMANDS, i.eq.LEGACY_COMMANDS],
   I = {
     [i.eq.CHANNELS]: r.Z,
@@ -26,6 +26,6 @@ let E = [i.eq.CHOICES, i.eq.GIFS, i.eq.COMMAND_OPTIONS, i.eq.EMOJIS_AND_STICKERS
     [i.eq.EMOJIS_AND_STICKERS]: l.Z,
     [i.eq.GIFS]: u.Z,
     [i.eq.LEGACY_COMMANDS]: _.Z,
-    [i.eq.MENTIONS]: d.Z,
-    [i.eq.REACTIONS]: c.Z
+    [i.eq.MENTIONS]: c.Z,
+    [i.eq.REACTIONS]: d.Z
   }

@@ -5,7 +5,7 @@ n.d(t, {
     return Z
   }
 }), n(47120), n(724458);
-var _, d, c, E, I = n(392711),
+var _, c, d, E, I = n(392711),
   T = n.n(I),
   h = n(442837),
   S = n(433517),
@@ -15,11 +15,11 @@ var _, d, c, E, I = n(392711),
   m = n(703656),
   O = n(131704),
   R = n(823379),
-  C = n(314897),
-  p = n(592125),
-  g = n(984933),
-  L = n(430824),
-  v = n(131951),
+  p = n(314897),
+  g = n(592125),
+  C = n(984933),
+  v = n(430824),
+  L = n(131951),
   D = n(914010),
   M = n(981631),
   P = n(176505);
@@ -42,7 +42,7 @@ function B() {
     selectedChannelIds: U,
     mostRecentSelectedTextChannelIds: G,
     knownThreadIds: T()(U).values().concat(T().values(G)).filter(R.lm).uniq().filter(e => {
-      let t = p.Z.getBasicChannel(e);
+      let t = g.Z.getBasicChannel(e);
       return w.has(e) || null != t && O.Ec.has(t.type)
     }).value()
   })
@@ -50,32 +50,32 @@ function B() {
 
 function x(e) {
   if (null != e) {
-    let t = g.ZP.getDefaultChannel(e);
+    let t = C.ZP.getDefaultChannel(e);
     if (null != t) return t.id
   }
 }
 
 function V(e, t) {
   if (null == e || null == t || G[e] === t) return !1;
-  let n = p.Z.getChannel(t),
+  let n = g.Z.getChannel(t),
     i = null != n && (0, O.zi)(n.type),
     r = (null == n ? void 0 : n.getGuildId()) === e;
   return !!i && !!r && (G[e] = t, !0)
 }
 
 function Z(e) {
-  let t = p.Z.getMutableBasicGuildChannelsForGuild(e),
+  let t = g.Z.getMutableBasicGuildChannelsForGuild(e),
     n = T().find(t, e => e.type === M.d4z.GUILD_VOICE);
   return null == n ? void 0 : n.id
 }
 
 function H() {
   let e = !1,
-    t = L.Z.getGuilds();
+    t = v.Z.getGuilds();
   return T().each(U, (t, n) => {
-    (null == t || !p.Z.hasChannel(t) && t !== s && !w.has(t) && !(0, P.ME)(t)) && (delete U[n], delete b[n], e = !0)
+    (null == t || !g.Z.hasChannel(t) && t !== s && !w.has(t) && !(0, P.ME)(t)) && (delete U[n], delete b[n], e = !0)
   }), T().each(G, (t, n) => {
-    (null == t || !p.Z.hasChannel(t) && !w.has(t)) && (delete G[n], e = !0)
+    (null == t || !g.Z.hasChannel(t) && !w.has(t)) && (delete G[n], e = !0)
   }), T().each(t, e => {
     let t = U[e.id];
     null == G[e.id] && V(e.id, t)
@@ -87,7 +87,7 @@ function F(e, t) {
     let n = D.Z.getGuildId();
     U[k(n)] === e && (t = n)
   }
-  let n = null != L.Z.getGuild(t) ? t : null,
+  let n = null != v.Z.getGuild(t) ? t : null,
     i = !1;
   a === e && (a = null, i = !0), !(0, N.cn)() && (U[k(n)] === e && (U[k(n)] = x(k(n)), D.Z.getGuildId() === n && (0, m.dL)(M.Z5c.CHANNEL(t, U[k(n)])), i = !0), null != n && G[n] === e && (delete G[n], i = !0)), i && B()
 }
@@ -118,7 +118,7 @@ class j extends(_ = h.ZP.Store) {
         null: null
       })
     }
-    this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type), this.waitFor(L.Z, p.Z, D.Z, g.ZP, v.Z)
+    this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type), this.waitFor(v.Z, g.Z, D.Z, C.ZP, L.Z)
   }
   getChannelId(e) {
     var t, n;
@@ -127,7 +127,7 @@ class j extends(_ = h.ZP.Store) {
     return i ? null !== (n = U[r]) && void 0 !== n ? n : x(r) : U[r]
   }
   getVoiceChannelId() {
-    return v.Z.isSupported() ? a : null
+    return L.Z.isSupported() ? a : null
   }
   getMostRecentSelectedTextChannelId(e) {
     var t;
@@ -146,14 +146,14 @@ class j extends(_ = h.ZP.Store) {
     return o
   }
 }
-E = "SelectedChannelStore", (c = "displayName") in(d = j) ? Object.defineProperty(d, c, {
+E = "SelectedChannelStore", (d = "displayName") in(c = j) ? Object.defineProperty(c, d, {
   value: E,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : d[c] = E, t.Z = new j(f.Z, {
+}) : c[d] = E, t.Z = new j(f.Z, {
   CONNECTION_OPEN: function(e) {
-    i = e.sessionId, null != a && null == p.Z.getChannel(a) && (a = null), H() && B()
+    i = e.sessionId, null != a && null == g.Z.getChannel(a) && (a = null), H() && B()
   },
   OVERLAY_INITIALIZE: function(e) {
     i = e.sessionId, a = e.selectedVoiceChannelId, U = {}, b = {}, s = e.selectedChannelId, U[e.selectedGuildId] = e.selectedChannelId, V(e.selectedGuildId, s), H()
@@ -213,7 +213,7 @@ E = "SelectedChannelStore", (c = "displayName") in(d = j) ? Object.definePropert
       channelId: t
     } = e;
     if (null == t) {
-      let e = p.Z.getChannel(a),
+      let e = g.Z.getChannel(a),
         t = null == e ? void 0 : e.guild_id;
       null != t && t !== D.Z.getGuildId() && U[t] === a && (U[t] = x(t))
     }
@@ -227,15 +227,15 @@ E = "SelectedChannelStore", (c = "displayName") in(d = j) ? Object.definePropert
       var n, r, s;
       if (t.sessionId === i) {
         clearInterval(u);
-        let e = null === (n = p.Z.getChannel(a)) || void 0 === n ? void 0 : n.getGuildId();
+        let e = null === (n = g.Z.getChannel(a)) || void 0 === n ? void 0 : n.getGuildId();
         t.guildId !== e && null == t.channelId || (a = t.channelId), l = Date.now(), null != a && (u = setInterval(() => {
           l = Date.now(), B()
         }, 6e4)), B()
       } else {
-        if (t.userId !== C.default.getId()) return e;
+        if (t.userId !== p.default.getId()) return e;
         clearInterval(u), u = void 0, l = 0;
-        let n = null === (r = p.Z.getChannel(a)) || void 0 === r ? void 0 : r.getGuildId(),
-          i = null === (s = p.Z.getChannel(t.channelId)) || void 0 === s ? void 0 : s.getGuildId();
+        let n = null === (r = g.Z.getChannel(a)) || void 0 === r ? void 0 : r.getGuildId(),
+          i = null === (s = g.Z.getChannel(t.channelId)) || void 0 === s ? void 0 : s.getGuildId();
         (null != n && i === n || a === t.channelId) && (a = null), B()
       }
       return !0

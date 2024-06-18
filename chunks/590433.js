@@ -13,13 +13,13 @@ n.d(t, {
     return r
   },
   av: function() {
-    return c
+    return d
   },
   cu: function() {
     return _
   },
   hL: function() {
-    return d
+    return c
   },
   tr: function() {
     return u
@@ -67,7 +67,7 @@ let u = () => Object.keys(r).filter(e => isNaN(Number(e))).map(e => {
     }
   }),
   _ = s.Z.getArticleURL(o.BhN.DISABLE_GUILD_COMMUNICATION),
-  d = "GuildCommunicationDisabledDismissedGuilds",
-  c = "Set Communication Disabled Modal",
+  c = "GuildCommunicationDisabledDismissedGuilds",
+  d = "Set Communication Disabled Modal",
   E = "Clear Communication Disabled Modal",
   I = 512

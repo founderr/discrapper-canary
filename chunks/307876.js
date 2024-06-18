@@ -20,9 +20,9 @@ function _(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let d = !1;
+let c = !1;
 
-function c(e) {
+function d(e) {
   let t = a.default.getCurrentUser();
   if (null == t) return;
   let n = o.Z.getChannelId(),
@@ -30,20 +30,20 @@ function c(e) {
   if (!t.hasUrgentMessages() || i === n) return E({
     channelId: n
   });
-  !d && (d = !0, e())
+  !c && (c = !0, e())
 }
 
 function E(e) {
   let {
     channelId: t
   } = e, n = a.default.getCurrentUser(), r = t === s.Z.getDMFromUserId(l.I);
-  null != n && n.hasUrgentMessages() && r && (d = !1, i.mB(u.xW$.HAS_UNREAD_URGENT_MESSAGES, !1))
+  null != n && n.hasUrgentMessages() && r && (c = !1, i.mB(u.xW$.HAS_UNREAD_URGENT_MESSAGES, !1))
 }
 class I extends r.Z {
   constructor(e) {
     super(), _(this, "handleShowUrgentMessageAlert", void 0), _(this, "actions", void 0), this.handleShowUrgentMessageAlert = e, this.actions = {
-      POST_CONNECTION_OPEN: () => c(this.handleShowUrgentMessageAlert),
-      MESSAGE_CREATE: () => c(this.handleShowUrgentMessageAlert),
+      POST_CONNECTION_OPEN: () => d(this.handleShowUrgentMessageAlert),
+      MESSAGE_CREATE: () => d(this.handleShowUrgentMessageAlert),
       CHANNEL_SELECT: E
     }
   }

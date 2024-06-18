@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(580552),
   u = n(240991),
   _ = n(278297),
-  d = n(626135),
-  c = n(981631),
+  c = n(626135),
+  d = n(981631),
   E = n(596401),
   I = n(689938),
   T = n(946278);
@@ -32,7 +32,7 @@ function h(e) {
   if (null == t && null == A) return null;
   if ((0, l.Z)(A)) {
     let e = () => {
-      d.default.track(c.rMx.CHANGE_LOG_CTA_CLICKED, {
+      c.default.track(d.rMx.CHANGE_LOG_CTA_CLICKED, {
         cta_type: "profile_bio",
         target: E.D2
       })

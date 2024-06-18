@@ -18,13 +18,13 @@ function _(e) {
     user: t,
     guildId: n,
     color: _,
-    onAction: d,
-    location: c = s.Z.CONTEXT_MENU
+    onAction: c,
+    location: d = s.Z.CONTEXT_MENU
   } = e;
-  return !(0, a.oV)(c) || t.isNonUserBot() ? null : (0, i.jsx)(r.MenuItem, {
+  return !(0, a.oV)(d) || t.isNonUserBot() ? null : (0, i.jsx)(r.MenuItem, {
     id: "report-user",
     color: _,
     label: u.Z.Messages.REPORTS_USER_BUTTON_TITLE,
-    action: () => (0, o.pX)(t, n === l.ME ? void 0 : n, d)
+    action: () => (0, o.pX)(t, n === l.ME ? void 0 : n, c)
   })
 }

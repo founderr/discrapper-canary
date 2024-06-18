@@ -7,8 +7,8 @@ var i = n(544891),
   l = n(626135),
   u = n(768581),
   _ = n(546796),
-  d = n(981631),
-  c = n(792101),
+  c = n(981631),
+  d = n(792101),
   E = n(689938);
 t.Z = {
   open() {
@@ -99,12 +99,12 @@ t.Z = {
           ...e,
           discriminator: null != S && "" !== S ? S : void 0
         },
-        s = r.K.get(d.JkL),
-        l = (0, c.xJ)();
+        s = r.K.get(c.JkL),
+        l = (0, d.xJ)();
       null != l && null != s && (t.push_provider = l, t.push_token = s);
-      let u = r.K.get(d.scU);
-      return null != c.mv && null != u && (t.push_voip_provider = c.mv, t.push_voip_token = u), i.tn.patch({
-        url: d.ANM.ME,
+      let u = r.K.get(c.scU);
+      return null != d.mv && null != u && (t.push_voip_provider = d.mv, t.push_voip_token = u), i.tn.patch({
+        url: c.ANM.ME,
         oldFormErrors: !0,
         body: t
       })
@@ -122,7 +122,7 @@ t.Z = {
     }).then(e => {
       let t = e.body,
         n = t.token;
-      return l.default.track(d.rMx.USER_AVATAR_UPDATED, {
+      return l.default.track(c.rMx.USER_AVATAR_UPDATED, {
         animated: (0, u.xR)(t.avatar)
       }), delete t.token, s.Z.dispatch({
         type: "UPDATE_TOKEN",

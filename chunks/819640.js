@@ -7,7 +7,7 @@ let u = [];
 function _() {
   u = []
 }
-class d extends(i = a.ZP.Store) {
+class c extends(i = a.ZP.Store) {
   hasLayers() {
     return u.length > 0
   }
@@ -15,12 +15,12 @@ class d extends(i = a.ZP.Store) {
     return u
   }
 }
-o = "LayerStore", (s = "displayName") in(r = d) ? Object.defineProperty(r, s, {
+o = "LayerStore", (s = "displayName") in(r = c) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new d(l.Z, {
+}) : r[s] = o, t.Z = new c(l.Z, {
   LAYER_PUSH: function(e) {
     let {
       component: t

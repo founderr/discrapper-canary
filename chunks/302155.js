@@ -11,9 +11,9 @@ var s = n(213919),
   l = n(594174),
   u = n(626135),
   _ = n(726745),
-  d = n(981631);
+  c = n(981631);
 
-function c(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -34,9 +34,9 @@ class E extends a.Z {
     onSwitchError: n,
     onTokenSet: o
   }) {
-    super(), c(this, "onSwitchStart", void 0), c(this, "onSwitchSuccess", void 0), c(this, "onSwitchError", void 0), c(this, "onTokenSet", void 0), c(this, "actions", {
+    super(), d(this, "onSwitchStart", void 0), d(this, "onSwitchSuccess", void 0), d(this, "onSwitchError", void 0), d(this, "onTokenSet", void 0), d(this, "actions", {
       LOGOUT: e => this.handleLogout(e)
-    }), c(this, "handleConnectionOpen", () => {
+    }), d(this, "handleConnectionOpen", () => {
       var e, t, n;
       let o = l.default.getCurrentUser();
       if (null == o) return;
@@ -48,17 +48,17 @@ class E extends a.Z {
             } = e;
             return t
           });
-          u.default.track(d.rMx.MULTI_ACCOUNT_SWITCH_SUCCESS, {
+          u.default.track(c.rMx.MULTI_ACCOUNT_SWITCH_SUCCESS, {
             from_user_id: r,
             linked_user_ids: e
           }), null === (t = this.onSwitchSuccess) || void 0 === t || t.call(this, o)
-        } else u.default.track(d.rMx.MULTI_ACCOUNT_SWITCH_FAILURE), null === (n = this.onSwitchError) || void 0 === n || n.call(this, o);
+        } else u.default.track(c.rMx.MULTI_ACCOUNT_SWITCH_FAILURE), null === (n = this.onSwitchError) || void 0 === n || n.call(this, o);
         r = null
       }
       i = o.id;
       let a = s.getToken();
       null != a && "" !== a && s.setToken(a, o.id), null === (e = this.onTokenSet) || void 0 === e || e.call(this, o)
-    }), c(this, "handleLogout", e => {
+    }), d(this, "handleLogout", e => {
       if (e.isSwitchingAccount) {
         var t;
         r = i, null === (t = this.onSwitchStart) || void 0 === t || t.call(this)

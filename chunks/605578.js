@@ -17,8 +17,8 @@ function a(e) {
     focusProps: l,
     onClick: u,
     onDoubleClick: _,
-    onContextMenu: d,
-    onKeyDown: c,
+    onContextMenu: c,
+    onKeyDown: d,
     onFocus: E,
     onBlur: I,
     onMouseOver: T,
@@ -34,7 +34,7 @@ function a(e) {
     onMouseOver: T,
     onMouseLeave: S,
     onDoubleClick: _,
-    onContextMenu: d,
+    onContextMenu: c,
     children: [(0, i.jsx)(s.P, {
       ...f,
       focusProps: {
@@ -46,7 +46,7 @@ function a(e) {
       onClick: e => {
         e.stopPropagation(), null == u || u(e)
       },
-      onKeyDown: c,
+      onKeyDown: d,
       onFocus: E,
       onBlur: I,
       onMouseDown: h

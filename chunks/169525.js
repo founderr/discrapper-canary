@@ -7,7 +7,7 @@ n.d(t, {
     return A
   },
   MC: function() {
-    return C
+    return p
   },
   dn: function() {
     return N
@@ -28,8 +28,8 @@ var i, r, s = n(278074),
   l = n(163268),
   u = n(25610),
   _ = n(368844),
-  d = n(768494),
-  c = n(695346),
+  c = n(768494),
+  d = n(695346),
   E = n(375954),
   I = n(496675),
   T = n(630388),
@@ -71,7 +71,7 @@ let N = (e, t) => {
       let {
         contentScanFlags: e
       } = i;
-      if ((0, T.yE)(e, d.Cb.EXPLICIT) || a.ZP.get("obscure_blur_effect_enabled")) return "explicit_content"
+      if ((0, T.yE)(e, c.Cb.EXPLICIT) || a.ZP.get("obscure_blur_effect_enabled")) return "explicit_content"
     }
     return n ? "spoiler" : null
   };
@@ -99,7 +99,7 @@ function R(e) {
   let {
     channel: t,
     media: n
-  } = e, i = (0, o.e7)([I.Z], () => null != t && I.Z.can(S.Plq.MANAGE_MESSAGES, t)), r = c.cC.useSetting(), s = (0, u.m)();
+  } = e, i = (0, o.e7)([I.Z], () => null != t && I.Z.can(S.Plq.MANAGE_MESSAGES, t)), r = d.cC.useSetting(), s = (0, u.m)();
   return O(n, !(0, h.Z)(r, i), s)
 }
-let C = e => (0, s.EQ)(e).with("explicit_content", () => f.Z.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => f.Z.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)
+let p = e => (0, s.EQ)(e).with("explicit_content", () => f.Z.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => f.Z.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)

@@ -2,13 +2,13 @@
 let i;
 n.d(t, {
   M3: function() {
-    return c
+    return d
   },
   aD: function() {
     return u
   },
   bF: function() {
-    return d
+    return c
   },
   f0: function() {
     return _
@@ -54,7 +54,7 @@ async function _(e) {
     return e
   }
 }
-async function d() {
+async function c() {
   let e = await r.tn.del({
     url: (0, a.pU)(l),
     oldFormErrors: !0
@@ -62,7 +62,7 @@ async function d() {
   return await i(e), e
 }
 
-function c(e) {
+function d(e) {
   var t;
   return r.tn.post({
     url: (0, a.pU)("/__development/create_build_override_link"),

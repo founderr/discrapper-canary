@@ -19,13 +19,13 @@ function _(e, t) {
   null == t ? e in a && delete a[e] : null != e && (a[e] = t)
 }
 
-function d(e) {
+function c(e) {
   let {
     user: t
   } = e;
   u = t.id
 }
-class c extends(i = r.ZP.PersistedStore) {
+class d extends(i = r.ZP.PersistedStore) {
   initialize(e) {
     null != e && (a = e)
   }
@@ -44,7 +44,7 @@ class c extends(i = r.ZP.PersistedStore) {
     return a
   }
 }
-o(c, "displayName", "LoginRequiredActionStore"), o(c, "persistKey", "LoginRequiredActionStore"), t.Z = new c(s.Z, {
+o(d, "displayName", "LoginRequiredActionStore"), o(d, "persistKey", "LoginRequiredActionStore"), t.Z = new d(s.Z, {
   LOGIN_ATTEMPTED: function(e) {
     let {
       required_actions: t,
@@ -52,8 +52,8 @@ o(c, "displayName", "LoginRequiredActionStore"), o(c, "persistKey", "LoginRequir
     } = e;
     _(l = n, t)
   },
-  CONNECTION_OPEN: d,
-  CURRENT_USER_UPDATE: d,
+  CONNECTION_OPEN: c,
+  CURRENT_USER_UPDATE: c,
   LOGOUT: function(e) {
     let {
       isSwitchingAccount: t

@@ -19,19 +19,19 @@ n.d(t, {
     return M
   },
   jZ: function() {
-    return g
+    return C
   },
   oQ: function() {
-    return p
+    return g
   },
   rX: function() {
-    return L
+    return v
   },
   rY: function() {
     return D
   },
   rt: function() {
-    return v
+    return L
   },
   wR: function() {
     return G
@@ -48,8 +48,8 @@ var i = n(149765),
   l = n(590415),
   u = n(131704),
   _ = n(592125),
-  d = n(984933),
-  c = n(496675),
+  c = n(984933),
+  d = n(496675),
   E = n(944486),
   I = n(938475),
   T = n(700785),
@@ -67,7 +67,7 @@ function R(e, t) {
   return e === t || e === m
 }
 
-function C(e, t, n) {
+function p(e, t, n) {
   let r = T.Hn;
   return ((0, u.r8)(t) || t === m) && (r = i.IH(r, S.Plq.VIEW_CHANNEL)), (R(t, A) || R(t, O)) && (r = i.IH(r, S.Plq.VIEW_CHANNEL), r = i.IH(r, S.Plq.CONNECT)), {
     id: e,
@@ -77,7 +77,7 @@ function C(e, t, n) {
   }
 }
 
-function p(e, t, n) {
+function g(e, t, n) {
   let s = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     o = [];
   if (n.length > 0 || s) {
@@ -91,19 +91,19 @@ function p(e, t, n) {
     }))
   }
   return n.forEach(e => {
-    o.push(C(e, t, r.BN.ROLE))
+    o.push(p(e, t, r.BN.ROLE))
   }), o
 }
 
-function g(e, t) {
-  return C(e, t, r.BN.MEMBER)
+function C(e, t) {
+  return p(e, t, r.BN.MEMBER)
 }
 
-function L(e, t) {
-  return C(e, t, r.BN.ROLE)
+function v(e, t) {
+  return p(e, t, r.BN.ROLE)
 }
 
-function v(e) {
+function L(e) {
   return [{
     id: e,
     type: r.BN.ROLE,
@@ -119,10 +119,10 @@ function D(e, t, n) {
     l = null !== (i = null == a ? void 0 : a.maxVideoChannelUsers) && void 0 !== i ? i : -1,
     u = null !== (r = null == a ? void 0 : a.maxStageVideoChannelUsers) && void 0 !== r ? r : -1,
     _ = I.ZP.countVoiceStatesForChannel(e.id),
-    d = I.ZP.getVoiceStatesForChannel(e),
-    E = c.Z.can(S.Plq.MOVE_MEMBERS, e) && c.Z.can(S.Plq.CONNECT, e),
+    c = I.ZP.getVoiceStatesForChannel(e),
+    E = d.Z.can(S.Plq.MOVE_MEMBERS, e) && d.Z.can(S.Plq.CONNECT, e),
     T = !1;
-  T = e.type === O ? null != s && (t.hasVideo(e.id) || (0, o.a)(d)) && u > 0 && _ >= u : null != s && t.hasVideo(e.id) && l > 0 && _ >= l + (E ? 1 : 0);
+  T = e.type === O ? null != s && (t.hasVideo(e.id) || (0, o.a)(c)) && u > 0 && _ >= u : null != s && t.hasVideo(e.id) && l > 0 && _ >= l + (E ? 1 : 0);
   let h = e.userLimit > 0 && _ >= e.userLimit;
   return T || h && !E
 }
@@ -193,8 +193,8 @@ function y(e) {
 function U(e) {
   if (null == e) return "text";
   let t = e.isMediaChannel();
-  if (e.type === S.d4z.GUILD_VOICE) return c.Z.can(S.Plq.CONNECT, e) ? "voice" : "voice-locked";
-  if (e.type === S.d4z.GUILD_STAGE_VOICE) return c.Z.can(S.Plq.CONNECT, e) ? "stage" : "stage-locked";
+  if (e.type === S.d4z.GUILD_VOICE) return d.Z.can(S.Plq.CONNECT, e) ? "voice" : "voice-locked";
+  if (e.type === S.d4z.GUILD_STAGE_VOICE) return d.Z.can(S.Plq.CONNECT, e) ? "stage" : "stage-locked";
   if (u.Ec.has(e.type)) return e.isForumPost() ? "post" : "thread";
   else if (e.type === S.d4z.GUILD_FORUM) return t ? "media" : "forum";
   else if (e.type === S.d4z.GUILD_MEDIA) return "media";
@@ -206,7 +206,7 @@ function b(e) {
   let n = _.Z.getChannel(E.Z.getLastSelectedChannelId());
   if (null != n && n.getGuildId() === e && n.type === S.d4z.GUILD_TEXT) t = n.id;
   else {
-    let n = d.ZP.getDefaultChannel(e);
+    let n = c.ZP.getDefaultChannel(e);
     t = null != n ? n.id : null
   }
   return S.Z5c.CHANNEL(e, t)
@@ -221,8 +221,8 @@ function w(e, t, n, i) {
   let s = e.getGuildId(),
     o = (0, a.BC)(s, t);
   if (null != t && o) {
-    var l, u, _, d;
-    l = s, u = t.id, _ = e.id, d = h.default.castChannelIdAsMessageId(e.id), r = null == l || null == u || null == _ ? G(l, u, d) : "".concat(location.protocol, "//").concat(location.host).concat(S.Z5c.CHANNEL_THREAD_VIEW(l, u, _, d))
+    var l, u, _, c;
+    l = s, u = t.id, _ = e.id, c = h.default.castChannelIdAsMessageId(e.id), r = null == l || null == u || null == _ ? G(l, u, c) : "".concat(location.protocol, "//").concat(location.host).concat(S.Z5c.CHANNEL_THREAD_VIEW(l, u, _, c))
   } else r = null != i ? i : G(s, e.id, n);
   return r
 }

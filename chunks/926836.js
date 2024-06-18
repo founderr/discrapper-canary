@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   K: function() {
-    return C
+    return p
   },
   y: function() {
     return R
@@ -15,8 +15,8 @@ var i = n(735250),
   l = n(481060),
   u = n(425493),
   _ = n(169525),
-  d = n(585483),
-  c = n(956664),
+  c = n(585483),
+  d = n(956664),
   E = n(589530),
   I = n(261922),
   T = n(133910),
@@ -49,9 +49,9 @@ let m = e => {
     hasMediaControls: n,
     isObscured: s,
     src: a
-  } = e, [l, u] = r.useState(!1), d = r.useRef(a);
+  } = e, [l, u] = r.useState(!1), c = r.useRef(a);
   return (r.useEffect(() => {
-    a !== d.current && u(!s)
+    a !== c.current && u(!s)
   }, [a, s]), s) ? (0, i.jsx)(h.a.Provider, {
     value: l,
     children: (0, i.jsx)(h.Z, {
@@ -114,29 +114,29 @@ function R(e) {
     renderForwardComponent: h,
     maxWidth: f,
     maxHeight: R,
-    shouldAnimate: C,
-    onClose: p,
-    shouldHideMediaOptions: g = !1,
-    obscure: L = !1,
-    ...v
+    shouldAnimate: p,
+    onClose: g,
+    shouldHideMediaOptions: C = !1,
+    obscure: v = !1,
+    ...L
   } = e, {
     width: D,
     height: M
-  } = (0, c.zp)(o, l), P = a.tq && null != p;
+  } = (0, d.zp)(o, l), P = a.tq && null != g;
   r.useEffect(() => {
-    if (null != p) return d.S.subscribe(S.CkL.MEDIA_MODAL_CLOSE, p), () => {
-      d.S.unsubscribe(S.CkL.MEDIA_MODAL_CLOSE, p)
+    if (null != g) return c.S.subscribe(S.CkL.MEDIA_MODAL_CLOSE, g), () => {
+      c.S.unsubscribe(S.CkL.MEDIA_MODAL_CLOSE, g)
     }
-  }, [p]);
-  let y = g ? e => {
+  }, [g]);
+  let y = C ? e => {
     e.stopPropagation(), e.preventDefault()
-  } : v.onContextMenu;
+  } : L.onContextMenu;
   return (0, i.jsxs)("div", {
     className: N.wrapper,
     children: [P ? (0, i.jsx)(A, {
-      onClose: p
+      onClose: g
     }) : null, (0, i.jsx)(m, {
-      isObscured: L,
+      isObscured: v,
       src: t,
       children: e => (0, i.jsx)(I.Z, {
         src: t,
@@ -151,9 +151,9 @@ function R(e) {
         autoPlay: !e,
         responsive: E,
         onContextMenu: y,
-        ...v
+        ...L
       }, t)
-    }), null == n || g ? null : (0, i.jsx)(O, {
+    }), null == n || C ? null : (0, i.jsx)(O, {
       src: n,
       renderLinkComponent: T,
       renderForwardComponent: h
@@ -161,7 +161,7 @@ function R(e) {
   })
 }
 
-function C(e) {
+function p(e) {
   let {
     src: t,
     width: n,
@@ -170,12 +170,12 @@ function C(e) {
     renderLinkComponent: l,
     renderForwardComponent: u,
     shouldHideMediaOptions: _ = !1,
-    obscure: d = !1,
+    obscure: c = !1,
     ...I
   } = e, {
     width: h,
     height: S
-  } = (0, c.zp)(n, r), f = a.tq && null != s, R = _ ? e => {
+  } = (0, d.zp)(n, r), f = a.tq && null != s, R = _ ? e => {
     e.stopPropagation(), e.preventDefault()
   } : I.onContextMenu;
   return (0, i.jsxs)("div", {
@@ -184,7 +184,7 @@ function C(e) {
       onClose: s
     }) : null, (0, i.jsx)(m, {
       hasMediaControls: !0,
-      isObscured: d,
+      isObscured: c,
       src: t,
       children: e => (0, i.jsx)(T.Z, {
         src: t,

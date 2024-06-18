@@ -1,15 +1,15 @@
 "use strict";
 n.d(t, {
   sE: function() {
-    return v
+    return L
   }
 }), n(653041), n(47120);
 var i, r, s, o, a = n(442837),
   l = n(570140),
   u = n(710845),
   _ = n(301766),
-  d = n(255078),
-  c = n(314897),
+  c = n(255078),
+  d = n(314897),
   E = n(122289),
   I = n(981631);
 let T = null,
@@ -21,9 +21,9 @@ let T = null,
   m = !1,
   O = null,
   R = !1,
-  C = new u.Z("SubscriptionStore");
+  p = new u.Z("SubscriptionStore");
 
-function p(e) {
+function g(e) {
   let {
     activeSubscriptions: t,
     record: n
@@ -31,20 +31,20 @@ function p(e) {
   if (-1 === i) return [n, ...t];
   {
     let e = [...t];
-    return L(n) && n.status !== I.O0b.ENDED ? e[i] = n : e.splice(i, 1), e
+    return v(n) && n.status !== I.O0b.ENDED ? e[i] = n : e.splice(i, 1), e
   }
 }
 
-function g() {
+function C() {
   T = null, h = null, S = null, f = null, N = null, A = !1, m = !1, O = null, R = !1
 }
 
-function L(e) {
+function v(e) {
   return e.status !== I.O0b.UNPAID
 }
 
-function v(e) {
-  let t = c.default.getId();
+function L(e) {
+  let t = d.default.getId();
   return e.userId === t
 }
 
@@ -54,10 +54,10 @@ function D(e, t) {
   if (null == i) return null;
   for (let n in i) {
     let r = i[n];
-    if (!v(r)) {
+    if (!L(r)) {
       if (!m) {
-        let e = c.default.getId();
-        C.log("user id mismatch between logged in user and SubscriptionStore user"), (0, E.g9)("user id mismatch between logged in user and SubscriptionStore user", {
+        let e = d.default.getId();
+        p.log("user id mismatch between logged in user and SubscriptionStore user"), (0, E.g9)("user id mismatch between logged in user and SubscriptionStore user", {
           extra: {
             authUserId: e,
             subscriptionId: r.id,
@@ -126,10 +126,10 @@ o = "SubscriptionStore", (s = "displayName") in(r = M) ? Object.defineProperty(r
   BILLING_SUBSCRIPTION_FETCH_SUCCESS: function(e) {
     let {
       subscriptions: t
-    } = e, n = {}, i = {}, r = [], s = [], o = c.default.getId();
+    } = e, n = {}, i = {}, r = [], s = [], o = d.default.getId();
     t.forEach(e => {
       if (e.user_id !== o && !m) {
-        C.log("[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch"), (0, E.g9)("[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch", {
+        p.log("[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch"), (0, E.g9)("[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch", {
           extra: {
             authUserId: o,
             subscriptionId: e.id,
@@ -138,24 +138,24 @@ o = "SubscriptionStore", (s = "displayName") in(r = M) ? Object.defineProperty(r
         }), m = !0;
         return
       }
-      let t = d.Q.createFromServer(e);
-      n[t.id] = t, L(t) && (i[t.id] = t, t.type === I.NYc.GUILD && t.status !== I.O0b.ENDED && r.push(t), t.type === I.NYc.APPLICATION && t.status !== I.O0b.ENDED && s.push(t))
+      let t = c.Q.createFromServer(e);
+      n[t.id] = t, v(t) && (i[t.id] = t, t.type === I.NYc.GUILD && t.status !== I.O0b.ENDED && r.push(t), t.type === I.NYc.APPLICATION && t.status !== I.O0b.ENDED && s.push(t))
     }), T = n, h = i, f = r, N = s
   },
   BILLING_SUBSCRIPTION_UPDATE_SUCCESS: function(e) {
     let {
       subscription: t
-    } = e, n = d.Q.createFromServer(t);
+    } = e, n = c.Q.createFromServer(t);
     T = {
       ...T,
       [n.id]: n
-    }, L(n) && (h = {
+    }, v(n) && (h = {
       ...h,
       [n.id]: n
-    }), null != f && n.type === I.NYc.GUILD && (f = p({
+    }), null != f && n.type === I.NYc.GUILD && (f = g({
       activeSubscriptions: f,
       record: n
-    })), null != N && n.type === I.NYc.APPLICATION && (f = p({
+    })), null != N && n.type === I.NYc.APPLICATION && (f = g({
       activeSubscriptions: N,
       record: n
     }))
@@ -165,9 +165,9 @@ o = "SubscriptionStore", (s = "displayName") in(r = M) ? Object.defineProperty(r
       subscription: t
     } = e;
     if (A = !0, null != t) {
-      let e = c.default.getId();
+      let e = d.default.getId();
       if (t.user_id !== e && !m) {
-        C.log("[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch"), (0, E.g9)("[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch", {
+        p.log("[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch"), (0, E.g9)("[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch", {
           extra: {
             authUserId: e,
             subscriptionId: t.id,
@@ -176,7 +176,7 @@ o = "SubscriptionStore", (s = "displayName") in(r = M) ? Object.defineProperty(r
         }), A = !1, m = !0;
         return
       }
-      S = d.Q.createFromServer(t)
+      S = c.Q.createFromServer(t)
     }
   },
   BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: function(e) {
@@ -184,9 +184,9 @@ o = "SubscriptionStore", (s = "displayName") in(r = M) ? Object.defineProperty(r
       subscription: t
     } = e;
     if (R = !0, null != t) {
-      let e = c.default.getId();
+      let e = d.default.getId();
       if (t.user_id !== e && !m) {
-        C.log("[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch"), (0, E.g9)("[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch", {
+        p.log("[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch"), (0, E.g9)("[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch", {
           extra: {
             authUserId: e,
             subscriptionId: t.id,
@@ -195,9 +195,9 @@ o = "SubscriptionStore", (s = "displayName") in(r = M) ? Object.defineProperty(r
         }), R = !1, m = !0;
         return
       }
-      O = d.Q.createFromServer(t)
+      O = c.Q.createFromServer(t)
     }
   },
-  BILLING_SUBSCRIPTION_RESET: g,
-  LOGOUT: g
+  BILLING_SUBSCRIPTION_RESET: C,
+  LOGOUT: C
 })

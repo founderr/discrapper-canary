@@ -25,19 +25,19 @@ function u(e) {
     lazyCleanUpDelay: u
   } = e, _ = o.useRef(-1);
   o.useLayoutEffect(() => () => clearTimeout(_.current));
-  let [, d] = o.useState(a), c = o.useRef(null), E = o.useMemo(() => {
+  let [, c] = o.useState(a), d = o.useRef(null), E = o.useMemo(() => {
     var e;
-    let r = new Set(null === (e = c.current) || void 0 === e ? void 0 : e.keys()),
-      s = new Map(c.current);
+    let r = new Set(null === (e = d.current) || void 0 === e ? void 0 : e.keys()),
+      s = new Map(d.current);
     for (let e of t) {
       let t = i(e),
         o = s.get(t);
       if (null == o) {
-        let i = null != c.current ? 1 : 0,
+        let i = null != d.current ? 1 : 0,
           r = () => {
             var e, n;
-            let i = null === (e = c.current) || void 0 === e ? void 0 : e.get(t);
-            null == i || (2 === i.state ? (null === (n = c.current) || void 0 === n || n.delete(t), null != u ? (clearTimeout(_.current), _.current = setTimeout(() => d({}), u)) : d({})) : __DEV__ && console.warn("SimpleTransitionGroup.cleanUp: Attempted to remove an item that isn't yeetable: ".concat(t)))
+            let i = null === (e = d.current) || void 0 === e ? void 0 : e.get(t);
+            null == i || (2 === i.state ? (null === (n = d.current) || void 0 === n || n.delete(t), null != u ? (clearTimeout(_.current), _.current = setTimeout(() => c({}), u)) : c({})) : __DEV__ && console.warn("SimpleTransitionGroup.cleanUp: Attempted to remove an item that isn't yeetable: ".concat(t)))
           },
           s = n(t, e, i, r);
         o = {
@@ -81,9 +81,9 @@ function u(e) {
     }
     return s
   }, [t, i, n, u]);
-  o.useInsertionEffect(() => (c.current = E, () => {
+  o.useInsertionEffect(() => (d.current = E, () => {
     var e;
-    return null === (e = c.current) || void 0 === e ? void 0 : e.clear()
+    return null === (e = d.current) || void 0 === e ? void 0 : e.clear()
   }), [E]);
   let I = [];
   for (let [, e] of E) I.push(e.children);

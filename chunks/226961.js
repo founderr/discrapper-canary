@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   J$: function() {
-    return C
+    return p
   },
   Pz: function() {
     return S
   },
   fZ: function() {
-    return p
+    return g
   }
 }), n(47120), n(653041);
 var i, r = n(442837),
@@ -17,9 +17,9 @@ var i, r = n(442837),
   l = n(131951),
   u = n(594174),
   _ = n(981631),
-  d = n(65154);
+  c = n(65154);
 
-function c(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -27,7 +27,7 @@ function c(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let E = C(d.Yn.DEFAULT, _._s_.TRANSPORT, 0),
+let E = p(c.Yn.DEFAULT, _._s_.TRANSPORT, 0),
   I = E,
   T = {},
   h = new Map,
@@ -80,18 +80,18 @@ class A {
     return null != i ? i : null
   }
   constructor(e) {
-    c(this, "state", void 0), this.state = e
+    d(this, "state", void 0), this.state = e
   }
 }
 let m = A.empty(),
   O = !1,
   R = null;
 
-function C(e, t, n) {
+function p(e, t, n) {
   return "".concat(e, ":").concat(t, ":").concat(n)
 }
 
-function p(e) {
+function g(e) {
   let [t, n] = e.split(":");
   return {
     context: t,
@@ -99,26 +99,26 @@ function p(e) {
   }
 }
 
-function g() {
-  Object.values(d.Yn).forEach(e => {
+function C() {
+  Object.values(c.Yn).forEach(e => {
     T[e] = {}
   })
 }
-g();
+C();
 
-function L() {
+function v() {
   null != R && (R.destroy(), R = null)
 }
-class v extends(i = r.ZP.Store) {
+class L extends(i = r.ZP.Store) {
   getSection() {
     return I
   }
   getStats() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.Yn.DEFAULT;
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.Yn.DEFAULT;
     return T[e][0]
   }
   getAllStats() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.Yn.DEFAULT;
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.Yn.DEFAULT;
     return Object.values(T[e])
   }
   getVideoStreams() {
@@ -129,16 +129,16 @@ class v extends(i = r.ZP.Store) {
   }
   getSimulcastDebugOverride(e, t) {
     let n = N(e, t);
-    return h.has(n) ? h.get(n) : d.Z.NO_OVERRIDE
+    return h.has(n) ? h.get(n) : c.Z.NO_OVERRIDE
   }
 }
-c(v, "displayName", "RTCDebugStore"), t.ZP = new v(o.Z, {
+d(L, "displayName", "RTCDebugStore"), t.ZP = new L(o.Z, {
   RTC_DEBUG_MODAL_OPEN: function(e) {
     var t;
     I = null !== (t = e.section) && void 0 !== t ? t : E
   },
   RTC_DEBUG_MODAL_CLOSE: function() {
-    L()
+    v()
   },
   RTC_DEBUG_MODAL_SET_SECTION: function(e) {
     I = e.section
@@ -197,8 +197,8 @@ c(v, "displayName", "RTCDebugStore"), t.ZP = new v(o.Z, {
     let {
       path: t
     } = e, n = l.Z.getMediaEngine();
-    if (L(), !n.supports(d.AN.CONNECTION_REPLAY) || 0 === t.length) return;
-    let i = n.createReplayConnection(d.Yn.DEFAULT, t);
+    if (v(), !n.supports(c.AN.CONNECTION_REPLAY) || 0 === t.length) return;
+    let i = n.createReplayConnection(c.Yn.DEFAULT, t);
     null != i && (R = i, i.on(s.Sh.Video, (e, t, n, r, s) => {
       o.Z.dispatch({
         type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT",
@@ -227,10 +227,10 @@ c(v, "displayName", "RTCDebugStore"), t.ZP = new v(o.Z, {
     h.set(N(t, n), i)
   },
   VOICE_CHANNEL_SELECT: function(e) {
-    null != e.channelId && (g(), h.clear())
+    null != e.channelId && (C(), h.clear())
   }
 }), l.Z.getMediaEngine().on(s.aB.ConnectionStats, function(e) {
-  Object.values(d.Yn).forEach(t => {
+  Object.values(c.Yn).forEach(t => {
     e.filter(e => {
       let {
         connection: n

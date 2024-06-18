@@ -17,8 +17,8 @@ var n = t(735250),
   S = t(594174),
   h = t(259580),
   g = t(274730),
-  x = t(51144),
-  C = t(426563),
+  C = t(51144),
+  x = t(426563),
   R = t(501801),
   L = t(981631),
   O = t(689938),
@@ -34,7 +34,7 @@ class p extends i.PureComponent {
       className: A.userHook,
       children: [(0, n.jsx)(d.Text, {
         variant: "text-md/normal",
-        children: x.ZP.getUserTag(e, {
+        children: C.ZP.getUserTag(e, {
           mode: "username"
         })
       }), "0" !== e.discriminator && (0, n.jsxs)(d.Text, {
@@ -145,7 +145,7 @@ class M extends i.PureComponent {
             e.stopPropagation(), t.onClick(e)
           },
           className: A.avatar,
-          src: (i = e, l = s, i.action === L.rsA.AUTO_MODERATION_BLOCK_MESSAGE || i.action === L.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || i.action === L.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || i.action === L.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, C.j)() : null === (a = i.user) || void 0 === a ? void 0 : a.getAvatarURL(l, 40)),
+          src: (i = e, l = s, i.action === L.rsA.AUTO_MODERATION_BLOCK_MESSAGE || i.action === L.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || i.action === L.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || i.action === L.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, x.j)() : null === (a = i.user) || void 0 === a ? void 0 : a.getAvatarURL(l, 40)),
           "aria-hidden": !0,
           size: d.AvatarSizes.SIZE_40
         })

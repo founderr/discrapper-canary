@@ -3,8 +3,8 @@ var i, r, s, o, a = n(442837),
   l = n(570140),
   u = n(786761),
   _ = n(592125),
-  d = n(594174),
-  c = n(823379),
+  c = n(594174),
+  d = n(823379),
   E = n(709054);
 let I = {};
 
@@ -38,13 +38,13 @@ function N(e) {
     threads: t,
     mostRecentMessages: n
   } = e;
-  t.forEach(e => h(e.id, null)), null == n || n.filter(c.lm).forEach(e => {
+  t.forEach(e => h(e.id, null)), null == n || n.filter(d.lm).forEach(e => {
     h(e.channel_id, e)
   })
 }
 class A extends(o = a.ZP.Store) {
   initialize() {
-    this.waitFor(_.Z, d.default)
+    this.waitFor(_.Z, c.default)
   }
   getMessageState(e) {
     return !(e in I) && (I[e] = {

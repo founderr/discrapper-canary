@@ -8,17 +8,17 @@ var i = n(735250),
   l = n(721987),
   u = n(138655),
   _ = n(793397),
-  d = n(652853),
-  c = n(228168),
+  c = n(652853),
+  d = n(228168),
   E = n(983094);
 let I = (e, t) => {
-    let n = (0, a.EQ)(e).with(c.y0.MODAL, () => E.userProfileModalOuter).with(c.y0.PANEL, () => E.userPanelOuter).with(c.y0.CARD, () => E.userCardOuter).with(c.y0.BITE_SIZE, () => E.biteSizeOuter).with(c.y0.FULL_SIZE, () => E.fullSizeOuter).otherwise(() => E.userPopoutOuter),
+    let n = (0, a.EQ)(e).with(d.y0.MODAL, () => E.userProfileModalOuter).with(d.y0.PANEL, () => E.userPanelOuter).with(d.y0.CARD, () => E.userCardOuter).with(d.y0.BITE_SIZE, () => E.biteSizeOuter).with(d.y0.FULL_SIZE, () => E.fullSizeOuter).otherwise(() => E.userPopoutOuter),
       i = t ? E.userProfileOuterThemed : E.userProfileOuterUnthemed;
     return o()(n, i)
   },
   T = (e, t, n) => {
-    let i = (0, a.EQ)(e).with(c.y0.MODAL, c.y0.FULL_SIZE, () => E.userProfileModalInner).with(c.y0.PANEL, () => E.userPanelInner).with(c.y0.CARD, () => E.userCardInner).otherwise(() => E.userPopoutInner),
-      r = (0, a.EQ)(e).with(c.y0.PANEL, () => E.userPanelInnerThemed).with(c.y0.BITE_SIZE, () => E.biteSizeInnerThemed).with(c.y0.FULL_SIZE, () => E.fullSizeInnerThemed).otherwise(() => (0, _.zW)({
+    let i = (0, a.EQ)(e).with(d.y0.MODAL, d.y0.FULL_SIZE, () => E.userProfileModalInner).with(d.y0.PANEL, () => E.userPanelInner).with(d.y0.CARD, () => E.userCardInner).otherwise(() => E.userPopoutInner),
+      r = (0, a.EQ)(e).with(d.y0.PANEL, () => E.userPanelInnerThemed).with(d.y0.BITE_SIZE, () => E.biteSizeInnerThemed).with(d.y0.FULL_SIZE, () => E.fullSizeInnerThemed).otherwise(() => (0, _.zW)({
         premiumUserWithBanner: E.userProfileInnerThemedWithBanner,
         premiumUserWithoutBanner: E.userProfileInnerThemedPremiumWithoutBanner,
         default: E.userProfileInnerThemedNonPremium
@@ -35,7 +35,7 @@ let I = (e, t) => {
       profileType: s,
       className: a,
       pendingThemeColors: _,
-      pendingProfileEffectId: c,
+      pendingProfileEffectId: d,
       themeOverride: h,
       children: S,
       forceShowPremium: f = !1,
@@ -51,19 +51,19 @@ let I = (e, t) => {
       isPreview: f
     }), {
       profileThemeStyle: R,
-      profileThemeClassName: C
+      profileThemeClassName: p
     } = (0, u.Z)({
       theme: null != h ? h : A,
       primaryColor: m,
       secondaryColor: O
-    }), p = (null == r ? void 0 : r.canEditThemes) || f, g = null !== c && ((null == r ? void 0 : r.banner) != null || void 0 !== c);
+    }), g = (null == r ? void 0 : r.canEditThemes) || f, C = null !== d && ((null == r ? void 0 : r.banner) != null || void 0 !== d);
     return (0, i.jsx)("div", {
-      className: o()(I(s, p), N ? E.showOutOfBoundaryComponents : void 0, C, a),
+      className: o()(I(s, g), N ? E.showOutOfBoundaryComponents : void 0, p, a),
       style: R,
       ref: t,
       children: (0, i.jsx)("div", {
-        className: T(s, p, g),
-        children: (0, i.jsx)(d.X, {
+        className: T(s, g, C),
+        children: (0, i.jsx)(c.X, {
           profileType: s,
           theme: null != h ? h : A,
           primaryColor: m,
@@ -73,7 +73,7 @@ let I = (e, t) => {
       })
     })
   }),
-  S = e => (0, a.EQ)(e).with(c.y0.POPOUT, c.y0.SETTINGS, () => E.userPopoutOverlayBackground).with(c.y0.MODAL, () => E.userProfileModalOverlayBackground).with(c.y0.BITE_SIZE, () => E.biteSizeOverlayBackground).with(c.y0.FULL_SIZE, () => E.fullSizeOverlayBackground).otherwise(() => E.overlayBackground);
+  S = e => (0, a.EQ)(e).with(d.y0.POPOUT, d.y0.SETTINGS, () => E.userPopoutOverlayBackground).with(d.y0.MODAL, () => E.userProfileModalOverlayBackground).with(d.y0.BITE_SIZE, () => E.biteSizeOverlayBackground).with(d.y0.FULL_SIZE, () => E.fullSizeOverlayBackground).otherwise(() => E.overlayBackground);
 t.Z = Object.assign(h, {
   Overlay: function(e) {
     let {
@@ -81,7 +81,7 @@ t.Z = Object.assign(h, {
       className: n
     } = e, {
       profileType: r
-    } = (0, d.z)();
+    } = (0, c.z)();
     return (0, i.jsx)("div", {
       className: o()(S(r), n),
       children: t

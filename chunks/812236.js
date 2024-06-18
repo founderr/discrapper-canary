@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   SY: function() {
-    return d
+    return c
   },
   ZP: function() {
     return u
@@ -44,7 +44,7 @@ function _(e, t) {
   })
 }
 
-function d(e, t) {
+function c(e, t) {
   return (0, o.v1)(e, {
     commandType: i.yU.PRIMARY_ENTRY_POINT
   }, {

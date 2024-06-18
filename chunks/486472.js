@@ -4,9 +4,9 @@ var i, r, s, o, a = n(392711),
   l = n.n(a),
   u = n(442837),
   _ = n(570140),
-  d = n(710845),
-  c = n(430824);
-let E = new d.Z("GuildAvailabilityStore"),
+  c = n(710845),
+  d = n(430824);
+let E = new c.Z("GuildAvailabilityStore"),
   I = new Set;
 
 function T(e) {
@@ -19,13 +19,13 @@ function h(e) {
 }
 class S extends(i = u.ZP.Store) {
   initialize() {
-    this.waitFor(c.Z)
+    this.waitFor(d.Z)
   }
   isUnavailable(e) {
     return null != e && I.has(e)
   }
   get totalGuilds() {
-    return l().size(c.Z.getGuilds()) + I.size
+    return l().size(d.Z.getGuilds()) + I.size
   }
   get totalUnavailableGuilds() {
     return I.size
@@ -44,7 +44,7 @@ o = "GuildAvailabilityStore", (s = "displayName") in(r = S) ? Object.definePrope
   OVERLAY_INITIALIZE: T,
   GUILD_UNAVAILABLE: function(e) {
     if (I.has(e.guildId)) return !1;
-    let t = c.Z.getGuild(e.guildId),
+    let t = d.Z.getGuild(e.guildId),
       n = "???";
     null != t && null != t.name && (n = t.name), E.warn("Guild has gone unavailable: ".concat(e.guildId, " (").concat(n, ")")), I.add(e.guildId)
   },

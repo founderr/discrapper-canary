@@ -1,7 +1,7 @@
 "use strict";
 n(47120), n(411104), n(653041), n(733860);
-var i, r, s, o, a, l, u, _, d = n(392711),
-  c = n.n(d),
+var i, r, s, o, a, l, u, _, c = n(392711),
+  d = n.n(c),
   E = n(442837),
   I = n(433517),
   T = n(570140),
@@ -13,12 +13,12 @@ var i, r, s, o, a, l, u, _, d = n(392711),
   m = n(830168),
   O = n(358085),
   R = n(417363),
-  C = n(981631),
-  p = n(186901);
+  p = n(981631),
+  g = n(186901);
 (o = i || (i = {})).INSTALL = "Install", o.REPAIR = "Repair", (a = r || (r = {})).PATCH = "Patch", a.REPAIR = "Repair";
-let g = [p.ff.AUTHENTICATION_FAILED, p.ff.NOT_ENTITLED],
-  L = "DispatchManagerStore",
-  v = [],
+let C = [g.ff.AUTHENTICATION_FAILED, g.ff.NOT_ENTITLED],
+  v = "DispatchManagerStore",
+  L = [],
   D = [],
   M = !1,
   P = null,
@@ -30,15 +30,15 @@ let g = [p.ff.AUTHENTICATION_FAILED, p.ff.NOT_ENTITLED],
 
 function k() {
   let e = {
-    queue: v,
+    queue: L,
     paused: M,
     userActions: Array.from(b)
   };
-  I.K.set(L, e)
+  I.K.set(v, e)
 }
 
 function B() {
-  let e = v[0];
+  let e = L[0];
   if (null != e) {
     var t, n;
     let {
@@ -59,7 +59,7 @@ function B() {
 
 function x(e, t) {
   let n = (0, A.Tu)(e, t);
-  return v.findIndex(e => e.comboId === n)
+  return L.findIndex(e => e.comboId === n)
 }
 
 function V(e, t, n, i) {
@@ -70,13 +70,13 @@ function V(e, t, n, i) {
     },
     o = D.indexOf(r); - 1 !== o && D.splice(o, 1);
   let a = x(e, t);
-  0 !== a && (n ? -1 === a && (v.push(s), B()) : (a > 0 && v.splice(a, 1), v.unshift(s), B())), !n && M && m.Z.resume(), k()
+  0 !== a && (n ? -1 === a && (L.push(s), B()) : (a > 0 && L.splice(a, 1), L.unshift(s), B())), !n && M && m.Z.resume(), k()
 }
 
 function Z(e, t) {
   let n = (0, A.Tu)(e, t),
     i = D.indexOf(n); - 1 !== i && D.splice(i, 1);
-  let r = x(e, t); - 1 !== r && (v.splice(r, 1), k()), B()
+  let r = x(e, t); - 1 !== r && (L.splice(r, 1), k()), B()
 }
 
 function H(e) {
@@ -108,19 +108,19 @@ function j() {
 class W extends(s = E.ZP.Store) {
   initialize() {
     var e;
-    let t = null !== (e = I.K.get(L)) && void 0 !== e ? e : {
+    let t = null !== (e = I.K.get(v)) && void 0 !== e ? e : {
       queue: null,
       paused: null,
       userActions: null
     };
-    if (null != t.queue) v = t.queue.map(e => "string" == typeof e ? {
+    if (null != t.queue) L = t.queue.map(e => "string" == typeof e ? {
       comboId: e,
       action: "Patch"
     } : e);
     null != t.paused && (M = t.paused), null != t.userActions && (b = new Map(Array.from(t.userActions))), this.waitFor(R.Z, S.ZP), this.syncWith([S.ZP], j), this.waitFor(R.Z)
   }
   get activeItems() {
-    return v.map(e => {
+    return L.map(e => {
       let {
         comboId: t
       } = e;
@@ -178,7 +178,7 @@ _ = "DispatchManagerStore", (u = "displayName") in(l = W) ? Object.definePropert
       branchId: n
     } = e, i = x(t, n);
     if (i < 1) return !1;
-    v.splice(0, 0, v.splice(i, 1)[0]), B(), M && m.Z.resume(), k()
+    L.splice(0, 0, L.splice(i, 1)[0]), B(), M && m.Z.resume(), k()
   },
   DISPATCH_APPLICATION_REMOVE_FINISHED: F,
   DISPATCH_APPLICATION_STATE_UPDATE: function(e) {
@@ -189,14 +189,14 @@ _ = "DispatchManagerStore", (u = "displayName") in(l = W) ? Object.definePropert
     let n = M;
     M = t.paused, P = t.currentTask, y = t.nextTask;
     let i = !1;
-    v = v.filter(e => {
+    L = L.filter(e => {
       let {
         comboId: t
       } = e, {
         applicationId: n,
         branchId: r
       } = (0, A.CP)(t), s = R.Z.getState(n, r), o = N.Z.getTargetBuildId(n, r), a = N.Z.getTargetManifests(n, r);
-      if (null != s && s.type === C.vxO.UP_TO_DATE && s.buildId === s.targetBuildId && s.buildId === o && c().isEqual(s.manifestIds, s.targetManifestIds) && c().isEqual(s.manifestIds, a)) {
+      if (null != s && s.type === p.vxO.UP_TO_DATE && s.buildId === s.targetBuildId && s.buildId === o && d().isEqual(s.manifestIds, s.targetManifestIds) && d().isEqual(s.manifestIds, a)) {
         if (D.push(t), b.has(t)) {
           switch (b.get(t)) {
             case "Install":
@@ -219,8 +219,8 @@ _ = "DispatchManagerStore", (u = "displayName") in(l = W) ? Object.definePropert
       code: n
     } = t;
     if (null != n) {
-      if (g.includes(n)) Y();
-      else if (n === p.ff.APPLICATION_NOT_FOUND) {
+      if (C.includes(n)) Y();
+      else if (n === g.ff.APPLICATION_NOT_FOUND) {
         let {
           context: e
         } = t;
@@ -238,6 +238,6 @@ _ = "DispatchManagerStore", (u = "displayName") in(l = W) ? Object.definePropert
     (0, O.isDesktop)() && Y()
   },
   LOGOUT: function() {
-    I.K.remove(L), (0, O.isDesktop)() && m.Z.pause()
+    I.K.remove(v), (0, O.isDesktop)() && m.Z.pause()
   }
 })

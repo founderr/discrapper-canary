@@ -27,7 +27,7 @@ t.Z = {
       parsedUserId: l,
       roleId: u,
       roleName: _,
-      viewingChannelId: d
+      viewingChannelId: c
     } = e;
     return null == r && (null != u || "@everyone" === _ || "@here" === _) ? (0, i.jsx)(s.Z, {
       inlinePreview: n.formatInline,
@@ -37,7 +37,7 @@ t.Z = {
       className: "mention",
       userId: r,
       channelId: a,
-      viewingChannelId: d,
+      viewingChannelId: c,
       parsedUserId: l,
       content: t(e.content, n),
       inlinePreview: n.noStyleAndInteraction

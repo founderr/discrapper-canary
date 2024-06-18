@@ -7,7 +7,7 @@ n.d(t, {
     return E
   },
   nC: function() {
-    return d
+    return c
   },
   nU: function() {
     return I
@@ -32,13 +32,13 @@ function _(e, t) {
   }
 }
 
-function d(e) {
+function c(e) {
   let [t, n, i] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.Z, s.Z, o.ZP], a = t.getChannel(e);
   if (null == a) return null;
   let l = n.getGuild(a.guild_id);
   return null == l ? null : _(a, l, [i])
 }
-let c = () => ({
+let d = () => ({
   minutes: u.Z.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_MINUTES,
   hours: u.Z.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_HOURS,
   days: u.Z.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_DAYS,
@@ -46,7 +46,7 @@ let c = () => ({
 });
 
 function E(e, t) {
-  if (t === a.R6.POSTED_DURATION_AGO && e === i.z.CREATION_DATE) return c
+  if (t === a.R6.POSTED_DURATION_AGO && e === i.z.CREATION_DATE) return d
 }
 
 function I(e, t) {

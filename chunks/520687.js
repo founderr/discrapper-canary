@@ -16,8 +16,8 @@ function _(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let d = 7.5,
-  c = (0, o.Mg)(s.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
+let c = 7.5,
+  d = (0, o.Mg)(s.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
   E = 1 / 60;
 
 function I(e, t, n, i) {
@@ -38,7 +38,7 @@ t.Z = class e {
     this.points = []
   }
   update(e) {
-    if (0 !== this.points.length) this.points.forEach(t => t.update(Math.min(e, E))), !this.hasEntered && this.points[0].x > c && (this.hasEntered = !0, this.updateWaveState(u.hO.ENTERED)), this.isFilling && this.points[0].x > this.points[0].targetX && (this.isFilling = !1, this.updateWaveState(u.hO.FILLED))
+    if (0 !== this.points.length) this.points.forEach(t => t.update(Math.min(e, E))), !this.hasEntered && this.points[0].x > d && (this.hasEntered = !0, this.updateWaveState(u.hO.ENTERED)), this.isFilling && this.points[0].x > this.points[0].targetX && (this.isFilling = !1, this.updateWaveState(u.hO.FILLED))
   }
   render(e) {
     if (0 === this.points.length) return;
@@ -75,6 +75,6 @@ t.Z = class e {
         0 !== n ? r += (0, l.M)(0, 30) - 15 : i += (0, l.M)(0, 30) - 15, t.targetX = i, t.targetY = r, t.angle = Math.atan2(r, i)
       })
     }), _(this, "resizeWave", r()(this._resizeWave, 200)), this.updateWaveState = e, this.hasEntered = !1;
-    for (let e = 0; e <= 15; e++) this.points.push(new a.Z(Math.floor(d - Math.floor(Math.abs(e - d)))))
+    for (let e = 0; e <= 15; e++) this.points.push(new a.Z(Math.floor(c - Math.floor(Math.abs(e - c)))))
   }
 }

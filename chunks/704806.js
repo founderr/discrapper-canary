@@ -19,10 +19,10 @@ function _(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let d = {
+let c = {
   hashes: {}
 };
-async function c() {
+async function d() {
   if (!l.isPlatformEmbedded || !(0, l.isWindows)()) return [];
   await u.ZP.ensureModule("discord_media");
   let e = u.ZP.requireModule("discord_media");
@@ -30,15 +30,15 @@ async function c() {
 }
 async function E() {
   try {
-    let e = (await c()).filter(e => d.hashes[e.name] !== e.hash);
+    let e = (await d()).filter(e => c.hashes[e.name] !== e.hash);
     for (let {
         name: t,
         hash: n,
         data: i
       }
-      of e) a.default.track(t, i), (d = {
+      of e) a.default.track(t, i), (c = {
       hashes: {
-        ...d.hashes
+        ...c.hashes
       }
     }).hashes[t] = n;
     e.length > 0 && T.emitChange()
@@ -46,16 +46,16 @@ async function E() {
 }
 class I extends(i = r.ZP.PersistedStore) {
   initialize(e) {
-    d = null != e && "object" == typeof e.hashes ? e : {
+    c = null != e && "object" == typeof e.hashes ? e : {
       hashes: {}
     }, this.waitFor(o.Z)
   }
   getState() {
-    return d
+    return c
   }
   async info() {
     try {
-      let e = (await c()).find(e => "hardware_detected" === e.name);
+      let e = (await d()).find(e => "hardware_detected" === e.name);
       if (null == e) return null;
       return e.data
     } catch (e) {}

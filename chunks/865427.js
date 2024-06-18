@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Ce: function() {
-    return c
+    return d
   },
   Ji: function() {
     return _
@@ -22,7 +22,7 @@ n.d(t, {
     return N
   },
   pU: function() {
-    return d
+    return c
   },
   r4: function() {
     return O
@@ -38,12 +38,12 @@ n(981631);
 let u = void 0,
   _ = (0, o.isAndroid)() ? u.Version.split(" - ")[0] : (0, o.isIOS)() ? u.Version : void 0;
 
-function d(e) {
+function c(e) {
   return "".concat(location.protocol, "//").concat(location.host).concat(e)
 }
 
-function c() {
-  let e = a.Z.safeParseWithQuery(d("/__development/build_overrides"));
+function d() {
+  let e = a.Z.safeParseWithQuery(c("/__development/build_overrides"));
   return null == e ? Promise.resolve(null) : (e.search = null, _ && (e.query.version = _), s.tn.get({
     url: r.format(e),
     oldFormErrors: !0

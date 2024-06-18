@@ -22,10 +22,10 @@ t.Z = function(e, t, n) {
   return null != n && n.forwardRef ? function(e, t) {
     return n => {
       var _;
-      let d = "FluxContainer(".concat(l(n), ")");
-      class c extends(_ = r.Component) {
+      let c = "FluxContainer(".concat(l(n), ")");
+      class d extends(_ = r.Component) {
         componentDidMount() {
-          this.listener.attach(d)
+          this.listener.attach(c)
         }
         componentWillUnmount() {
           this.listener.detach(), this.memoizedGetStateFromStores.clear()
@@ -48,20 +48,20 @@ t.Z = function(e, t, n) {
           }))
         }
       }
-      a(c, "displayName", d);
-      let E = r.forwardRef((e, t) => (0, i.jsx)(c, {
+      a(d, "displayName", c);
+      let E = r.forwardRef((e, t) => (0, i.jsx)(d, {
         childProps: e,
         forwardedConnectStoresRef: t
       }));
-      return E.displayName = "ForwardRef(".concat(d, ")"), E
+      return E.displayName = "ForwardRef(".concat(c, ")"), E
     }
   }(e, t) : function(e, t) {
     return n => {
       var _;
-      let d = "FluxContainer(".concat(l(n), ")");
-      class c extends(_ = r.Component) {
+      let c = "FluxContainer(".concat(l(n), ")");
+      class d extends(_ = r.Component) {
         componentDidMount() {
-          this.listener.attach(d)
+          this.listener.attach(c)
         }
         componentWillUnmount() {
           this.listener.detach(), this.memoizedGetStateFromStores.clear()
@@ -80,7 +80,7 @@ t.Z = function(e, t, n) {
           }))
         }
       }
-      return a(c, "displayName", d), c
+      return a(d, "displayName", c), d
     }
   }(e, t)
 };

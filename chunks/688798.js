@@ -8,8 +8,8 @@ var i = n(913527),
   l = n(904245),
   u = n(232567),
   _ = n(147913),
-  d = n(3148),
-  c = n(960412),
+  c = n(3148),
+  d = n(960412),
   E = n(706454),
   I = n(695346),
   T = n(375954),
@@ -21,9 +21,9 @@ var i = n(913527),
   m = n(163379),
   O = n(596401),
   R = n(981631),
-  C = n(930441);
+  p = n(930441);
 
-function p(e, t, n) {
+function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -31,12 +31,12 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-async function g(e, t) {
+async function C(e, t) {
   let n = I.l4.getSetting(),
     i = S.default.extractTimestamp(e);
   if ((n >= e || r()().diff(i, "days") > 30) && !t) return;
-  let s = await (0, c.Y7)();
-  if (!(null == s ? void 0 : s.categories[C.$Z.UPDATES_AND_ANNOUNCEMENTS])) return;
+  let s = await (0, d.Y7)();
+  if (!(null == s ? void 0 : s.categories[p.$Z.UPDATES_AND_ANNOUNCEMENTS])) return;
   let o = await a.Z.getOrEnsurePrivateChannel(O.sP);
   if (null == o) return;
   await l.Z.fetchMessages({
@@ -47,7 +47,7 @@ async function g(e, t) {
     _ = h.ZP.getOldestUnreadMessageId(o),
     E = h.ZP.hasUnread(o);
   if (null == u || null == _ || E || u.id > _) return;
-  let f = (0, d.ZP)({
+  let f = (0, c.ZP)({
     ...u,
     channelId: o,
     messageReference: void 0,
@@ -60,11 +60,11 @@ async function g(e, t) {
     channel_id: o
   }, !0, {})
 }
-class L extends _.Z {
+class v extends _.Z {
   constructor(...e) {
-    super(...e), p(this, "actions", {
+    super(...e), g(this, "actions", {
       POST_CONNECTION_OPEN: e => this.handleConnectionOpen(e)
-    }), p(this, "handleConnectionOpen", async e => {
+    }), g(this, "handleConnectionOpen", async e => {
       let {
         canReceiveMessage: t,
         canReceiveUnpublishedMessages: n
@@ -86,21 +86,21 @@ class L extends _.Z {
           latestChangelogId: a
         }), null == a) return;
       if (t) {
-        (0, u.PR)(O.sP), g(a, n);
+        (0, u.PR)(O.sP), C(a, n);
         return
       }
       if (!0 !== r[a].show_on_startup) return;
       let l = N.Z.lastSeenChangelogId(),
         _ = N.Z.lastSeenChangelogDate();
       if (null != l && 0 >= S.default.compare(a, l)) return;
-      let d = await o.Z.fetchChangelog(a, E.default.locale);
-      if (null != d) {
+      let c = await o.Z.fetchChangelog(a, E.default.locale);
+      if (null != c) {
         if (null == _ || null == N.Z.lastSeenChangelogDate()) {
-          o.Z.markChangelogAsSeen(a, d.date);
+          o.Z.markChangelogAsSeen(a, c.date);
           return
-        }!N.Z.isLocked() && new Date(d.date) > new Date(_) && (0, m.Z)()
+        }!N.Z.isLocked() && new Date(c.date) > new Date(_) && (0, m.Z)()
       }
     })
   }
 }
-t.Z = new L
+t.Z = new v

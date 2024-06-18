@@ -10,7 +10,7 @@ n.d(t, {
     return u
   },
   ux: function() {
-    return d
+    return c
   }
 }), n(47120), n(724458), n(653041), n(789020);
 var i = n(442837),
@@ -34,6 +34,6 @@ function _(e) {
   })
 }
 
-function d(e) {
+function c(e) {
   return (0, i.e7)([r.ZP], () => null != e && _(r.ZP.getSelfMember(e)), [e])
 }

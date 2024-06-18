@@ -15,10 +15,10 @@ var i = n(399606),
 function _(e, t) {
   var n;
   let _ = (0, l.yV)(t),
-    d = (0, s.wE)(r.z.SERVER_SHOP_PHANTOM_PREVIEW),
-    c = (0, i.e7)([a.Z], () => null != e && a.Z.can(u.Plq.ADMINISTRATOR, e)),
+    c = (0, s.wE)(r.z.SERVER_SHOP_PHANTOM_PREVIEW),
+    d = (0, i.e7)([a.Z], () => null != e && a.Z.can(u.Plq.ADMINISTRATOR, e)),
     E = null !== (n = null == e ? void 0 : e.hasFeature(u.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) && void 0 !== n && n,
     I = (0, o.y)(null == e ? void 0 : e.id, "useGuildShopPreviewVisible"),
     T = [u.oNc.CREATOR_MONETIZABLE, u.oNc.CREATOR_MONETIZABLE_PROVISIONAL, u.oNc.ROLE_SUBSCRIPTIONS_ENABLED].some(t => (null == e ? void 0 : e.hasFeature(t)) === !0);
-  return null != e && c && !E && T && _ && I && !d
+  return null != e && d && !E && T && _ && I && !c
 }

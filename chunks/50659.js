@@ -30,8 +30,8 @@ function _(e, t, n) {
     before: {},
     after: {}
   };
-  let i = d(e, t),
-    r = d(e, n);
+  let i = c(e, t),
+    r = c(e, n);
   for (let e in i) !(e in r) && delete i[e];
   for (let e in r) !(e in i) && delete r[e];
   return {
@@ -40,7 +40,7 @@ function _(e, t, n) {
   }
 }
 
-function d(e, t) {
+function c(e, t) {
   let [n] = a.bN.node(e, t.path);
   if (!a.LC.isText(n)) return {};
   let i = n.text,
@@ -68,10 +68,10 @@ function d(e, t) {
     syntax: "___",
     type1: "italics",
     type2: "underline"
-  }), c(u, o, r, "**", "bold"), c(u, o, r, "*", "italics"), c(u, o, r, "_", "italics"), c(u, o, r, "__", "underline"), c(u, o, r, "`", "inlineCode"), c(u, o, r, "~~", "strikethrough"), c(u, o, r, "||", "spoiler"), u
+  }), d(u, o, r, "**", "bold"), d(u, o, r, "*", "italics"), d(u, o, r, "_", "italics"), d(u, o, r, "__", "underline"), d(u, o, r, "`", "inlineCode"), d(u, o, r, "~~", "strikethrough"), d(u, o, r, "||", "spoiler"), u
 }
 
-function c(e, t, n, i, r) {
+function d(e, t, n, i, r) {
   let s = I(t, i);
   s >= 0 && (e[r] = {
     chars: i,
@@ -110,28 +110,28 @@ function T(e, t) {
   s.T.withSingleEntry(e, () => {
     a.bN.withoutNormalizing(e, () => {
       r()(null != e.selection, "Editor has no selection");
-      let [n, i] = a.M8.edges(e.selection), s = _(e, n, i), l = s.before[t], d = s.after[t], c = a.bN.node(e, n.path), E = a.bN.node(e, i.path);
-      if (null == c || null == E || !a.LC.isText(c[0]) || !a.LC.isText(E[0])) return;
-      let I = a.C0.equals(c[1], E[1]);
-      if (null != l && null != d) {
+      let [n, i] = a.M8.edges(e.selection), s = _(e, n, i), l = s.before[t], c = s.after[t], d = a.bN.node(e, n.path), E = a.bN.node(e, i.path);
+      if (null == d || null == E || !a.LC.isText(d[0]) || !a.LC.isText(E[0])) return;
+      let I = a.C0.equals(d[1], E[1]);
+      if (null != l && null != c) {
         let t = {
             path: n.path,
             offset: l.location
           },
           r = {
             path: i.path,
-            offset: d.location
+            offset: c.location
           };
         o.Q.delete(e, {
           at: r,
-          distance: d.chars.length
+          distance: c.chars.length
         }), o.Q.delete(e, {
           at: t,
           distance: l.chars.length
         });
         let s = n.offset,
           u = i.offset;
-        !a.Jz.isBefore(n, t) && (s -= l.chars.length), I && !a.Jz.isBefore(i, t) && (u -= l.chars.length), a.Jz.isAfter(i, r) && (u -= d.chars.length), o.Q.select(e, {
+        !a.Jz.isBefore(n, t) && (s -= l.chars.length), I && !a.Jz.isBefore(i, t) && (u -= l.chars.length), a.Jz.isAfter(i, r) && (u -= c.chars.length), o.Q.select(e, {
           anchor: {
             path: n.path,
             offset: Math.max(0, s)
@@ -148,7 +148,7 @@ function T(e, t) {
         }), o.Q.insertText(e, r, {
           at: n
         });
-        let s = c[0].text.length + r.length,
+        let s = d[0].text.length + r.length,
           a = E[0].text.length + (I ? 2 * r.length : r.length);
         o.Q.select(e, {
           anchor: {

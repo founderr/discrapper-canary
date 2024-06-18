@@ -7,13 +7,13 @@ n.d(t, {
     return l
   },
   Rt: function() {
-    return c
+    return d
   },
   hW: function() {
     return u
   },
   t3: function() {
-    return d
+    return c
   }
 }), n(724458), n(653041), n(47120);
 var i, r, s = n(271383),
@@ -40,10 +40,10 @@ function _() {
   }
 }
 
-function d(e) {
+function c(e) {
   return Math.max(5 * e.pageSize, 250)
 }(r = i || (i = {}))[r.FORWARD = 1] = "FORWARD", r[r.BACKWARD = -1] = "BACKWARD";
-class c {
+class d {
   reset() {
     this._paginationState = _(), this._sortedMemberIds = [], this._cachedPaginationChunks = {}, this._version += 1
   }

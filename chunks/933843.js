@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   F4: function() {
-    return d
+    return c
   },
   mc: function() {
     return E
   },
   vw: function() {
-    return c
+    return d
   }
 });
 var i = n(594174),
@@ -22,7 +22,7 @@ function _() {
   let e = i.default.getCurrentUser();
   return null != e && !(0, r.I5)(e, l.p9.TIER_1)
 }
-let d = () => {
+let c = () => {
     let {
       inPerksDemosExperiment: e
     } = s.Z.getCurrentConfig({
@@ -38,5 +38,5 @@ let d = () => {
     });
     return _() && a.Z.shouldFetch() && e && t
   },
-  c = e => _() && a.Z.shouldActivate(e),
+  d = e => _() && a.Z.shouldActivate(e),
   E = (e, t) => e === u.LY.RESOLUTION_720 && t !== u.ws.FPS_60

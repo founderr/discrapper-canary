@@ -12,8 +12,8 @@ var i = n(544891),
   l = n(283595),
   u = n(129542),
   _ = n(70956),
-  d = n(981631);
-let c = 10 * _.Z.Millis.MINUTE,
+  c = n(981631);
+let d = 10 * _.Z.Millis.MINUTE,
   E = 10 * _.Z.Millis.MINUTE,
   I = 1 * _.Z.Millis.MINUTE,
   T = {};
@@ -26,7 +26,7 @@ async function h(e, t) {
     branchId: t,
     locale: _
   }), n && await (0, r._v)(Math.random() * I), i.tn.get({
-    url: d.ANM.APPLICATION_LIVE_BUILD(e, t),
+    url: c.ANM.APPLICATION_LIVE_BUILD(e, t),
     query: {
       platform: (0, u.D)(),
       locale: _
@@ -60,7 +60,7 @@ async function h(e, t) {
     });
     else {
       var r, a;
-      r = e, null == T[a = t] && (T[a] = new s.V7), T[a].start(c + Math.random() * E, () => {
+      r = e, null == T[a = t] && (T[a] = new s.V7), T[a].start(d + Math.random() * E, () => {
         null != l.Z.getLibraryApplication(r, a) && h(r, a)
       })
     }

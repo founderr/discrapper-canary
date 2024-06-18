@@ -10,7 +10,7 @@ n.d(t, {
     return T
   },
   r1: function() {
-    return d
+    return c
   },
   wA: function() {
     return E
@@ -161,8 +161,8 @@ class _ extends a.C {
     }])
   }
 }
-let d = new _;
-class c extends a.C {
+let c = new _;
+class d extends a.C {
   internalJsonWrite(e, t) {
     return this.refJsonWriter.scalar(i.wx.UINT64, e.value, "value", !1, !0)
   }
@@ -207,7 +207,7 @@ class c extends a.C {
     }])
   }
 }
-let E = new c;
+let E = new d;
 class I extends a.C {
   internalJsonWrite(e, t) {
     return this.refJsonWriter.scalar(5, e.value, "value", !1, !0)

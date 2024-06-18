@@ -13,8 +13,8 @@ var r = n(442837),
   l = n(785717),
   u = n(221292),
   _ = n(659101),
-  d = n(981631),
-  c = n(40226);
+  c = n(981631),
+  d = n(40226);
 
 function E(e) {
   let {
@@ -34,17 +34,17 @@ function E(e) {
     children: (0, i.jsx)(s.Z, {
       type: s.P.USER_POPOUT_V2,
       activity: t,
-      className: c.activity,
+      className: d.activity,
       user: n,
       guildId: null == E ? void 0 : E.id,
       channelId: I,
-      source: d.Sbl.PROFILE_POPOUT,
+      source: c.Sbl.PROFILE_POPOUT,
       onOpenGameProfile: T,
       onAction: () => {
         f({
           action: "JOIN_ACTIVITY"
         }), (0, u.Ac)({
-          activityType: A ? d.IIU.STREAMING : null == t ? void 0 : t.type,
+          activityType: A ? c.IIU.STREAMING : null == t ? void 0 : t.type,
           activityName: null == t ? void 0 : t.name,
           activityPlatform: null == t ? void 0 : t.platform,
           activitySessionId: null == t ? void 0 : t.session_id,
@@ -53,7 +53,7 @@ function E(e) {
           ...N
         }), null == T || T()
       },
-      actionColor: c.buttonColor,
+      actionColor: d.buttonColor,
       analyticsParams: h
     })
   })

@@ -11,8 +11,8 @@ var i, r = n(735250),
   l = n(481060),
   u = n(34854),
   _ = n(702557),
-  d = n(246946),
-  c = n(981631),
+  c = n(246946),
+  d = n(981631),
   E = n(689938),
   I = n(9601);
 
@@ -49,7 +49,7 @@ class h extends(i = s.PureComponent) {
         onBlur: this.handleBlur,
         onKeyPress: this.handleKeyPress,
         defaultValue: null != n ? n : void 0,
-        maxLength: c.vuo
+        maxLength: d.vuo
       })
     })
   }
@@ -68,13 +68,13 @@ class h extends(i = s.PureComponent) {
           var t;
           (null !== (t = e.currentTarget.value.match(/\n/g)) && void 0 !== t ? t : []).length >= 5 && e.preventDefault()
         } else e.preventDefault(), e.currentTarget.blur()
-      } else e.which === c.yXg.SPACE && e.stopPropagation()
+      } else e.which === d.yXg.SPACE && e.stopPropagation()
     })
   }
 }
 
 function S(e) {
-  let t = (0, a.e7)([d.Z], () => d.Z.hidePersonalInformation),
+  let t = (0, a.e7)([c.Z], () => c.Z.hidePersonalInformation),
     n = (0, _.Z)(e.userId);
   return (0, r.jsx)(h, {
     ...e,

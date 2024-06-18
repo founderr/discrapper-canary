@@ -9,8 +9,8 @@ var i, r, s, o = n(31775),
   l = n(442837),
   u = n(570140),
   _ = n(163268),
-  d = n(786761),
-  c = n(592125),
+  c = n(786761),
+  d = n(592125),
   E = n(375954),
   I = n(981631);
 
@@ -66,7 +66,7 @@ let N = new class e {
     let t = this._channelCaches.get(e.channel_id);
     return !!(null != t && t.has(e.id)) && (t.set(e.id, {
       state: 0,
-      message: (0, d.e5)(e)
+      message: (0, c.e5)(e)
     }), !0)
   }
   deleteChannelCache(e) {
@@ -101,7 +101,7 @@ function A(e) {
       let t = e.referenced_message;
       null != t ? (N.set(t.channel_id, t.id, {
         state: 0,
-        message: (0, d.e5)(t)
+        message: (0, c.e5)(t)
       }), e.type === I.uaV.THREAD_STARTER_MESSAGE && A(t)) : N.set(e.channel_id, i, {
         state: 2
       })
@@ -137,30 +137,30 @@ function R(e) {
   return m(t, e => m(e, e => A(e)))
 }
 
-function C(e) {
+function p(e) {
   return N.deleteChannelCache(e.channel.id)
 }
 
-function p(e, t) {
+function g(e, t) {
   if (!N.has(e, t)) return !1;
   N.set(e, t, {
     state: 2
   })
 }
 
-function g() {
+function C() {
   N.clear()
 }
 
-function L(e) {
+function v(e) {
   let {
     firstMessages: t
   } = e;
   return null != t && m(t, e => A(e))
 }
-class v extends(r = l.ZP.Store) {
+class L extends(r = l.ZP.Store) {
   initialize() {
-    this.waitFor(E.Z, c.Z)
+    this.waitFor(E.Z, d.Z)
   }
   getMessageByReference(e) {
     let t;
@@ -175,7 +175,7 @@ class v extends(r = l.ZP.Store) {
     return null != e && (t = N.getCachedMessageIdsForChannel(e)), null != t ? t : S
   }
 }
-T(v, "displayName", "ReferencedMessageStore"), t.Z = new v(u.Z, {
+T(L, "displayName", "ReferencedMessageStore"), t.Z = new L(u.Z, {
   CACHE_LOADED: function(e) {
     let {
       messages: t
@@ -187,8 +187,8 @@ T(v, "displayName", "ReferencedMessageStore"), t.Z = new v(u.Z, {
   LOAD_MESSAGES_AROUND_SUCCESS: O,
   SEARCH_FINISH: R,
   MOD_VIEW_SEARCH_FINISH: R,
-  LOAD_THREADS_SUCCESS: L,
-  LOAD_ARCHIVED_THREADS_SUCCESS: L,
+  LOAD_THREADS_SUCCESS: v,
+  LOAD_ARCHIVED_THREADS_SUCCESS: v,
   MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function(e) {
     let {
       messageId: t,
@@ -228,7 +228,7 @@ T(v, "displayName", "ReferencedMessageStore"), t.Z = new v(u.Z, {
     if (null == r || 0 !== r.state) return !1;
     N.set(i, n, {
       state: 0,
-      message: (0, d.wi)(r.message, t)
+      message: (0, c.wi)(r.message, t)
     })
   },
   MESSAGE_DELETE: function(e) {
@@ -236,14 +236,14 @@ T(v, "displayName", "ReferencedMessageStore"), t.Z = new v(u.Z, {
       id: t,
       channelId: n
     } = e;
-    return p(n, t)
+    return g(n, t)
   },
   MESSAGE_DELETE_BULK: function(e) {
     let {
       ids: t,
       channelId: n
     } = e;
-    return m(t, e => p(n, e))
+    return m(t, e => g(n, e))
   },
   CREATE_PENDING_REPLY: function(e) {
     let {
@@ -254,11 +254,11 @@ T(v, "displayName", "ReferencedMessageStore"), t.Z = new v(u.Z, {
       message: t
     })
   },
-  CHANNEL_DELETE: C,
-  THREAD_DELETE: C,
+  CHANNEL_DELETE: p,
+  THREAD_DELETE: p,
   GUILD_DELETE: function() {
-    if (0 === N.retainWhere(e => null != c.Z.getChannel(e))) return !1
+    if (0 === N.retainWhere(e => null != d.Z.getChannel(e))) return !1
   },
-  CONNECTION_OPEN: g,
-  LOGOUT: g
+  CONNECTION_OPEN: C,
+  LOGOUT: C
 })

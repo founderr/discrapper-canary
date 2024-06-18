@@ -32,14 +32,14 @@ var i, r, s, o, a = n(266067),
   l = n(652874),
   u = n(703656),
   _ = n(264043),
-  d = n(981631);
+  c = n(981631);
 (i = s || (s = {})).HOME = "home", i.SEARCH = "search", i.APPLICATION = "application", (r = o || (o = {})).EXTERNAL = "External", r.KEYBOARD_SHORTCUT = "Keyboard Shortcut", r.APPLICATION_DIRECTORY_URL = "Application Directory URL", r.APPLICATION_DIRECTORY_PROFILE_EMBED = "Application Directory Profile Embed", r.APPLICATION_DIRECTORY_UPSELL_MODAL = "Application Directory Upsell Modal", r.GUILD_HEADER_POPOUT = "Guild Header Popout", r.GUILD_SETTINGS = "Guild Settings", r.GUILD_INTEGRATION_SETTINGS = "Guild Integration Settings", r.GUILD_CONTEXT_MENU = "Guild Context Menu";
-let c = (0, l.Z)(() => ({
+let d = (0, l.Z)(() => ({
     guildId: null,
     entrypoint: null,
     trackedOpenedFromExternalEntrypoint: !1
   })),
-  E = c;
+  E = d;
 
 function I() {
   let {
@@ -57,13 +57,13 @@ function T() {
       pathname: n
     }
   } = (0, u.s1)(), i = (0, a.LX)(n, {
-    path: d.Z5c.APPLICATION_DIRECTORY,
+    path: c.Z5c.APPLICATION_DIRECTORY,
     exact: !0
   }), r = (0, a.LX)(n, {
-    path: d.Z5c.APPLICATION_DIRECTORY_SEARCH,
+    path: c.Z5c.APPLICATION_DIRECTORY_SEARCH,
     exact: !0
   }), s = (0, a.LX)(n, {
-    path: [d.Z5c.APPLICATION_DIRECTORY_PROFILE(":applicationId"), d.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(":applicationId", ":section")],
+    path: [c.Z5c.APPLICATION_DIRECTORY_PROFILE(":applicationId"), c.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(":applicationId", ":section")],
     exact: !0
   }), {
     applicationId: o,
@@ -87,26 +87,26 @@ function T() {
 }
 
 function h(e) {
-  c.setState({
+  d.setState({
     entrypoint: e
   })
 }
 
 function S(e) {
-  c.setState({
+  d.setState({
     guildId: e
   })
 }
 
 function f() {
-  c.setState({
+  d.setState({
     entrypoint: null,
     guildId: null
   })
 }
 
 function N(e) {
-  c.setState({
+  d.setState({
     trackedOpenedFromExternalEntrypoint: e
   })
 }

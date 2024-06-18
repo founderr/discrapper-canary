@@ -6,23 +6,23 @@ n.d(t, {
 }), n(47120);
 var i, r, s, o, a, l, u = n(442837),
   _ = n(570140),
-  d = n(973616);
+  c = n(973616);
 (s = i || (i = {}))[s.FETCHING = 0] = "FETCHING", s[s.FETCHED = 1] = "FETCHED", s[s.ERROR = 2] = "ERROR";
-let c = {},
+let d = {},
   E = {},
   I = new Set,
   T = {};
 class h extends(r = u.ZP.Store) {
   getApplication(e) {
-    if (null != e) return c[e]
+    if (null != e) return d[e]
   }
   getApplicationRecord(e) {
     if (null == e) return;
-    let t = c[e];
-    if (null != t) return d.Z.createFromServer(t)
+    let t = d[e];
+    if (null != t) return c.Z.createFromServer(t)
   }
   getApplications() {
-    return c
+    return d
   }
   getApplicationFetchState(e) {
     if (null != e) return E[e]
@@ -62,8 +62,8 @@ l = "ApplicationDirectoryApplicationsStore", (a = "displayName") in(o = h) ? Obj
     let {
       application: t
     } = e;
-    c = {
-      ...c,
+    d = {
+      ...d,
       [t.id]: t
     }, E = {
       ...E,

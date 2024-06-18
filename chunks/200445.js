@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return Z
+    return C
   }
 }), n(47120);
 var l = n(735250),
@@ -25,28 +25,28 @@ let g = async () => {
   return e
 };
 
-function Z(e) {
+function C(e) {
   let {
     selectedGuildId: t,
     selectedChannelId: n,
     glow: a,
-    playIntroTransition: Z,
-    onUnlocked: C
-  } = e, [f, N] = s.useState(!1), x = (0, o.e7)([c.Z], () => c.Z.useReducedMotion), {
-    hqStreamingState: I
+    playIntroTransition: C,
+    onUnlocked: I
+  } = e, [N, Z] = s.useState(!1), x = (0, o.e7)([c.Z], () => c.Z.useReducedMotion), {
+    hqStreamingState: f
   } = (0, d.k)(r.q.STREAM_HIGH_QUALITY), A = s.useCallback(() => {
-    (0, m.dE)(!0), C()
-  }, [C]);
+    (0, m.dE)(!0), I()
+  }, [I]);
   return s.useEffect(() => {
-    if (I.hqStreamingUnlockAnimationPlayed) return;
+    if (f.hqStreamingUnlockAnimationPlayed) return;
     let e = setTimeout(() => {
-      N(!0)
+      Z(!0)
     }, 1150);
     return () => {
-      clearTimeout(e), N(!1)
+      clearTimeout(e), Z(!1)
     }
-  }, [A, I, x]), s.useEffect(() => {
-    if (I.hqStreamingUnlockAnimationPlayed) return;
+  }, [A, f, x]), s.useEffect(() => {
+    if (f.hqStreamingUnlockAnimationPlayed) return;
     if (x) {
       A();
       return
@@ -57,7 +57,7 @@ function Z(e) {
     return () => {
       clearTimeout(e)
     }
-  }, [C, A, , I, x]), s.useEffect(() => {
+  }, [I, A, , f, x]), s.useEffect(() => {
     E.default.track(_.rMx.PERK_DEMO_OFFER_VIEWED, {
       guild_id: t,
       channel_id: n,
@@ -74,7 +74,7 @@ function Z(e) {
         shouldAnimate: !x,
         pauseAtFrame: 90,
         className: i()(h.animation, {
-          [h.animationEndState]: f || !Z || x
+          [h.animationEndState]: N || !C || x
         }),
         loop: !1
       }), (0, l.jsx)("div", {

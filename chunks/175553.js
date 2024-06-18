@@ -1,36 +1,36 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 });
 var i = n(454902),
   s = n(768581),
   l = n(312839),
-  a = n(981631),
-  o = n(987650),
+  o = n(981631),
+  a = n(987650),
   r = n(689938);
 
-function d(e, t) {
+function c(e, t) {
   let n = e.username,
-    d = r.Z.Messages.USER_ACTIVITY_USER_JOIN.format({
+    c = r.Z.Messages.USER_ACTIVITY_USER_JOIN.format({
       username: ""
     }),
-    c = (0, s.ov)(e),
+    d = (0, s.ov)(e),
     {
       trackView: u,
       trackClick: h
-    } = (0, l.R)(o.n0.ActivityUserJoin, {
-      notif_type: o.n0.ActivityUserJoin,
+    } = (0, l.R)(a.n0.ActivityUserJoin, {
+      notif_type: a.n0.ActivityUserJoin,
       notif_user_id: e.id,
-      activity_type: a.mFx.JOIN,
+      activity_type: o.mFx.JOIN,
       activity_name: t.name
     });
   return {
     colorScheme: i.ZP.ColorSchemes.PRIMARY,
-    icon: c,
+    icon: d,
     title: n,
-    body: d,
+    body: c,
     hint: e => (0, i.Yj)(e, r.Z.Messages.USER_ACTIVITY_USER_JOIN_HINT),
     onNotificationShow: () => {
       u()

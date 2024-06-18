@@ -1,16 +1,16 @@
 "use strict";
 n.d(t, {
   f: function() {
-    return c
+    return d
   }
 });
 var i, r, s, o, a = n(442837),
   l = n(570140);
 let u = !1,
   _ = null,
-  d = null;
+  c = null;
 
-function c(e) {
+function d(e) {
   E({
     locale: e
   })
@@ -27,7 +27,7 @@ class I extends(o = a.ZP.Store) {
     return u
   }
   getError() {
-    return d
+    return c
   }
 }
 s = "I18nLoaderStore", (r = "displayName") in(i = I) ? Object.defineProperty(i, r, {
@@ -41,13 +41,13 @@ s = "I18nLoaderStore", (r = "displayName") in(i = I) ? Object.defineProperty(i, 
     let {
       locale: t
     } = e;
-    t === _ && (u = !1, d = null, _ = null)
+    t === _ && (u = !1, c = null, _ = null)
   },
   I18N_LOAD_ERROR: function(e) {
     let {
       error: t,
       locale: n
     } = e;
-    n === _ && (u = !1, d = null != t ? t : null, _ = null)
+    n === _ && (u = !1, c = null != t ? t : null, _ = null)
   }
 })

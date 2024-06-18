@@ -34,17 +34,17 @@ function _(e) {
   let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   return !!n && !1 === e.isTrusted || (null === (t = e.key) || void 0 === t ? void 0 : t.toLowerCase()) === "d" && (e.metaKey || e.ctrlKey) && !e.altKey
 }
-class d {
+class c {
   setup() {
     var e;
-    if (d.isSetUp) throw Error("Cannot have two Keyboard backends at the same time.");
-    d.isSetUp = !0, this._handlingFirstEvent = !0, null === (e = this.context.window) || void 0 === e || e.addEventListener("keydown", this.handleGlobalKeyDown, {
+    if (c.isSetUp) throw Error("Cannot have two Keyboard backends at the same time.");
+    c.isSetUp = !0, this._handlingFirstEvent = !0, null === (e = this.context.window) || void 0 === e || e.addEventListener("keydown", this.handleGlobalKeyDown, {
       capture: !0
     })
   }
   teardown() {
     var e;
-    d.isSetUp = !1, null === (e = this.context.window) || void 0 === e || e.removeEventListener("keydown", this.handleGlobalKeyDown, {
+    c.isSetUp = !1, null === (e = this.context.window) || void 0 === e || e.removeEventListener("keydown", this.handleGlobalKeyDown, {
       capture: !0
     }), this.endDrag()
   }
@@ -120,5 +120,5 @@ class d {
     }), this.manager = e, this.actions = e.getActions(), this.monitor = e.getMonitor(), this.context = t, this.options = n, this.sourceNodes = new Map, this.sourcePreviewNodes = new Map, this.sourcePreviewNodeOptions = new Map, this.targetNodes = new Map, this._previewer = new r.Z(t.document), this._announcer = new i.Z(null == n ? void 0 : n.announcer)
   }
 }
-o(d, "isSetUp", void 0);
-t.ZP = (e, t, n) => new d(e, t, n)
+o(c, "isSetUp", void 0);
+t.ZP = (e, t, n) => new c(e, t, n)

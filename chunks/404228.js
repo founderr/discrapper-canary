@@ -1,7 +1,7 @@
 "use strict";
 t.d(s, {
   Z: function() {
-    return v
+    return D
   }
 }), t(47120);
 var n = t(735250),
@@ -22,8 +22,8 @@ var n = t(735250),
   S = t(210887),
   h = t(430824),
   g = t(246946),
-  x = t(884737),
-  C = t(770436),
+  C = t(884737),
+  x = t(770436),
   R = t(65226),
   L = t(689938),
   O = t(233324),
@@ -62,7 +62,7 @@ function f(e) {
           children: null == s ? void 0 : s.map(e => {
             let s = l === e.id,
               i = a === e.id;
-            return (0, n.jsx)(C.Z, {
+            return (0, n.jsx)(x.Z, {
               guildId: t,
               ref: s ? c : i ? d : null,
               className: O.row,
@@ -78,18 +78,18 @@ function f(e) {
   })
 }
 
-function v() {
+function D() {
   let e, s;
   let {
     guildId: t,
     guild: l,
     isInitialLoading: o,
     isLoading: T,
-    isLoadingNextPage: C,
-    showLoadMore: v,
-    hasError: D,
-    hasOlderLogs: Z,
-    rawLogs: j,
+    isLoadingNextPage: x,
+    showLoadMore: D,
+    hasError: v,
+    hasOlderLogs: j,
+    rawLogs: Z,
     theme: U,
     hide: G
   } = (0, d.cj)([m.Z, h.Z, N.Z, g.Z, S.Z], () => {
@@ -113,10 +113,10 @@ function v() {
     expandedId: null,
     lastExpandedId: null,
     actionFilterQuery: ""
-  }), B = x._$(j, l), y = !1, F = i.useRef(null), w = (0, I.Z)(P), k = (0, I.Z)(B), H = () => {
+  }), B = C._$(Z, l), y = !1, F = i.useRef(null), k = (0, I.Z)(P), H = (0, I.Z)(B), w = () => {
     var e;
     return (null === (e = F.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) || !1
-  }, V = !v && (null == B ? void 0 : B.length) !== (null == k ? void 0 : k.length) && null != F && H(), Y = () => {
+  }, V = !D && (null == B ? void 0 : B.length) !== (null == H ? void 0 : H.length) && null != F && w(), Y = () => {
     let t = {
       expanded: null,
       lastExpanded: null
@@ -130,7 +130,7 @@ function v() {
       null != s && (0, c.k)(s) && (t.expanded = s.getBoundingClientRect())
     }
     return t
-  }, W = Y(), K = (0, _.Z)(null, () => {
+  }, W = Y(), z = (0, _.Z)(null, () => {
     let {
       expandedId: t
     } = P;
@@ -141,9 +141,9 @@ function v() {
     })), W = Y())
   });
   i.useEffect(() => {
-    P.expandedId !== (null == w ? void 0 : w.expandedId) && z()
+    P.expandedId !== (null == k ? void 0 : k.expandedId) && K()
   }, []);
-  let z = () => {
+  let K = () => {
       let e = F.current;
       if (null == e) return;
       let s = Y(),
@@ -184,14 +184,14 @@ function v() {
       className: O.spinner
     });
   return (0, n.jsx)("div", {
-    ref: K,
+    ref: z,
     className: A.customColumn,
     children: (0, n.jsx)("div", {
       className: A.customContainer,
       children: (0, n.jsx)(u.AdvancedScrollerAuto, {
         className: a()(A.customScroller, O.scroller),
         onScroll: () => {
-          H() && Q()
+          w() && Q()
         },
         ref: F,
         children: (0, n.jsxs)("div", {
@@ -213,8 +213,8 @@ function v() {
             if (G) return (0, n.jsx)(E.Z, {});
             if (T || o) return ee();
             if ((null == B ? void 0 : B.length) === 0) {
-              let e = D ? L.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY : L.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY,
-                s = D ? L.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE : L.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
+              let e = v ? L.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY : L.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY,
+                s = v ? L.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE : L.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
               return (0, n.jsxs)(u.EmptyState, {
                 theme: U,
                 className: O.__invalid_empty,
@@ -248,13 +248,13 @@ function v() {
               scroller: F.current
             })
           })(), (() => {
-            if (v && Z && !G) return (0, n.jsx)(u.Button, {
+            if (D && j && !G) return (0, n.jsx)(u.Button, {
               color: u.Button.Colors.PRIMARY,
               className: O.__invalid_loadMore,
               onClick: Q,
               children: L.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_LOAD_MORE
             })
-          })(), !C || G || T ? null : ee()]
+          })(), !x || G || T ? null : ee()]
         })
       })
     })

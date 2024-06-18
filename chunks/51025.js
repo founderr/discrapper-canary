@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   A1: function() {
-    return p
+    return g
   },
   LO: function() {
     return N
@@ -10,13 +10,13 @@ n.d(t, {
     return S
   },
   Wx: function() {
-    return v
+    return L
   },
   XT: function() {
     return D
   },
   al: function() {
-    return g
+    return C
   },
   cG: function() {
     return A
@@ -34,10 +34,10 @@ n.d(t, {
     return R
   },
   wO: function() {
-    return C
+    return p
   },
   wi: function() {
-    return L
+    return v
   }
 }), n(411104);
 var i = n(544891),
@@ -48,8 +48,8 @@ var i = n(544891),
   l = n(695346),
   u = n(391690),
   _ = n(626135),
-  d = n(129542),
-  c = n(877481),
+  c = n(129542),
+  d = n(877481),
   E = n(830168),
   I = n(57513),
   T = n(981631),
@@ -60,7 +60,7 @@ function S(e, t) {
     userToken: e,
     userId: t,
     installPaths: u.Z.installationPaths,
-    platform: (0, d.D)(),
+    platform: (0, c.D)(),
     stateCallback: e => {
       r.Z.dispatch({
         type: "DISPATCH_APPLICATION_STATE_UPDATE",
@@ -150,7 +150,7 @@ function m(e, t, n, i) {
 
 function O(e, t, n) {
   let i = s.Z.getApplication(e);
-  null != i && (c.Z.removeShortcuts(i.name), _.default.track(T.rMx.LIBRARY_UNINSTALL_INITIATED, {
+  null != i && (d.Z.removeShortcuts(i.name), _.default.track(T.rMx.LIBRARY_UNINSTALL_INITIATED, {
     application_id: i.id,
     application_name: i.name,
     sku_id: i.primarySkuId,
@@ -166,11 +166,11 @@ function R() {
   E.Z.resume()
 }
 
-function C() {
+function p() {
   E.Z.pause()
 }
 
-function p(e, t) {
+function g(e, t) {
   r.Z.dispatch({
     type: "DISPATCH_APPLICATION_MOVE_UP",
     applicationId: e,
@@ -178,7 +178,7 @@ function p(e, t) {
   })
 }
 
-function g(e, t) {
+function C(e, t) {
   E.Z.cancel(e, t), r.Z.dispatch({
     type: "DISPATCH_APPLICATION_CANCEL",
     applicationId: e,
@@ -186,7 +186,7 @@ function g(e, t) {
   })
 }
 
-function L(e, t) {
+function v(e, t) {
   r.Z.dispatch({
     type: "DISPATCH_APPLICATION_REMOVE_FINISHED",
     applicationId: e,
@@ -194,9 +194,9 @@ function L(e, t) {
   })
 }
 
-function v(e, t) {
+function L(e, t) {
   let n = s.Z.getApplication(e);
-  null != n && c.Z.createShortcuts(l.Xc.getSetting(), l.Pe.getSetting(), n.name, n.id, t.installPath)
+  null != n && d.Z.createShortcuts(l.Xc.getSetting(), l.Pe.getSetting(), n.name, n.id, t.installPath)
 }
 
 function D(e, t) {
@@ -204,7 +204,7 @@ function D(e, t) {
   i.tn.post({
     url: T.ANM.LIBRARY_APPLICATION_INSTALLED(e, e),
     oldFormErrors: !0
-  }), null != r && (c.Z.createShortcuts(l.Xc.getSetting(), l.Pe.getSetting(), r.name, r.id, t.installPath), Promise.resolve().then(n.bind(n, 292556)).then(e => {
+  }), null != r && (d.Z.createShortcuts(l.Xc.getSetting(), l.Pe.getSetting(), r.name, r.id, t.installPath), Promise.resolve().then(n.bind(n, 292556)).then(e => {
     let {
       default: t
     } = e;

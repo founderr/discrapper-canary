@@ -11,8 +11,8 @@ var i, r = n(392711),
   l = n(704907),
   u = n(581883),
   _ = n(592125),
-  d = n(430824),
-  c = n(944486),
+  c = n(430824),
+  d = n(944486),
   E = n(914010),
   I = n(981631),
   T = n(526761);
@@ -34,7 +34,7 @@ let S = 100,
     },
     lookupKey: e => {
       var t, n;
-      return null !== (n = null !== (t = d.Z.getGuild(e)) && void 0 !== t ? t : _.Z.getChannel(e)) && void 0 !== n ? n : _.Z.getChannel(_.Z.getDMFromUserId(e))
+      return null !== (n = null !== (t = c.Z.getGuild(e)) && void 0 !== t ? t : _.Z.getChannel(e)) && void 0 !== n ? n : _.Z.getChannel(_.Z.getDMFromUserId(e))
     },
     afterCompute: () => {},
     numFrequentlyItems: S,
@@ -69,9 +69,9 @@ function O() {
 let R = {
   pendingUsages: []
 };
-class C extends(i = o.ZP.PersistedStore) {
+class p extends(i = o.ZP.PersistedStore) {
   initialize(e) {
-    this.waitFor(E.Z, c.Z), null != e && (e.pendingUsages = e.pendingUsages.filter(e => null != e && I.Xyh.test(e.key)), R = e), this.syncWith([u.Z], O)
+    this.waitFor(E.Z, d.Z), null != e && (e.pendingUsages = e.pendingUsages.filter(e => null != e && I.Xyh.test(e.key)), R = e), this.syncWith([u.Z], O)
   }
   getState() {
     return R
@@ -100,7 +100,7 @@ class C extends(i = o.ZP.PersistedStore) {
     return 100
   }
 }
-h(C, "displayName", "FrecencyStore"), h(C, "persistKey", "FrecencyStore"), t.Z = new C(a.Z, {
+h(p, "displayName", "FrecencyStore"), h(p, "persistKey", "FrecencyStore"), t.Z = new p(a.Z, {
   CHANNEL_SELECT: m,
   VOICE_CHANNEL_SELECT: m,
   USER_SETTINGS_PROTO_UPDATE: function(e) {

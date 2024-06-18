@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   LI: function() {
-    return c
+    return d
   }
 }), n(470079), n(902704);
 var i = n(433517),
@@ -17,7 +17,7 @@ let l = {
   },
   u = !1,
   _ = l,
-  d = (0, s.Z)({
+  c = (0, s.Z)({
     kind: "user",
     id: "2024-04_merged_tabs",
     label: "Mobile Redesign - Merge Tabs Last Stand Experiment",
@@ -106,13 +106,13 @@ let l = {
     }]
   });
 
-function c(e, t) {
+function d(e, t) {
   var n, s;
-  let c = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : !(0, a.cn)(),
-    E = !!c || (null == t ? void 0 : t.disable);
-  return r.Z.hasLoadedExperiments || E ? (0, o.P)(d.existingUsers, d.newUsers, e, {
+  let d = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : !(0, a.cn)(),
+    E = !!d || (null == t ? void 0 : t.disable);
+  return r.Z.hasLoadedExperiments || E ? (0, o.P)(c.existingUsers, c.newUsers, e, {
     ...t,
     disable: E,
-    autoTrackExposure: !c && (null === (s = null == t ? void 0 : t.autoTrackExposure) || void 0 === s || s)
+    autoTrackExposure: !d && (null === (s = null == t ? void 0 : t.autoTrackExposure) || void 0 === s || s)
   }) : (!u && (_ = null !== (n = i.K.get("--merged-tabs-experiment-cached-config")) && void 0 !== n ? n : l, u = !0), _)
 }

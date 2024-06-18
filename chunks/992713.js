@@ -8,8 +8,8 @@ var i = n(108131),
   l = n(662896),
   u = n(710845),
   _ = n(339085),
-  d = n(926491),
-  c = n(592125),
+  c = n(926491),
+  d = n(592125),
   E = n(430824),
   I = n(709054),
   T = n(38618);
@@ -40,7 +40,7 @@ function f(e) {
   let n = null === (t = E.Z.getGuild(e.guild_id)) || void 0 === t ? void 0 : t.name;
   h.fileOnly("received deleted guild entities (id: ".concat(e.guild_id, ", name: ").concat(n, ")")), s.ZP.Emitter.batched(() => {
     null != e.channels && function(e, t) {
-      let n = I.default.keys(c.Z.getMutableBasicGuildChannelsForGuild(e));
+      let n = I.default.keys(d.Z.getMutableBasicGuildChannelsForGuild(e));
       h.fileOnly("syncChannels", {
         channelIdsInMemory: n,
         channelIdsFromServer: t
@@ -72,7 +72,7 @@ function f(e) {
       })
     }(e.guild_id, new Set(e.emojis)), null != e.stickers && function(e, t) {
       var n;
-      let i = null !== (n = d.Z.getStickersByGuildId(e)) && void 0 !== n ? n : [],
+      let i = null !== (n = c.Z.getStickersByGuildId(e)) && void 0 !== n ? n : [],
         r = i.filter(e => t.has(e.id));
       i.length !== r.length && o.Z.dispatch({
         type: "GUILD_STICKERS_UPDATE",
@@ -101,10 +101,10 @@ function m(e) {
     var t, n, i;
     let r = null === (t = E.Z.getGuild(e)) || void 0 === t ? void 0 : t.name;
     h.fileOnly("requesting deleted guild entities (id: ".concat(e, ", name: ").concat(r, ")"));
-    let s = O(Object.keys(c.Z.getMutableBasicGuildChannelsForGuild(e))),
+    let s = O(Object.keys(d.Z.getMutableBasicGuildChannelsForGuild(e))),
       o = O(Object.keys(E.Z.getRoles(e))),
       a = O(_.Z.getGuildEmoji(e).map(e => e.id)),
-      l = O(null !== (i = null === (n = d.Z.getStickersByGuildId(e)) || void 0 === n ? void 0 : n.map(e => e.id)) && void 0 !== i ? i : []);
+      l = O(null !== (i = null === (n = c.Z.getStickersByGuildId(e)) || void 0 === n ? void 0 : n.map(e => e.id)) && void 0 !== i ? i : []);
     T.Z.getSocket().getDeletedEntityIdsNotMatchingHash(e, s, o, a, l)
   })(e), Math.ceil(2e3 * Math.random()))
 }

@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   $E: function() {
-    return g
+    return C
   },
   T6: function() {
-    return C
+    return p
   },
   TW: function() {
     return r
@@ -16,13 +16,13 @@ n.d(t, {
     return D
   },
   WO: function() {
-    return L
+    return v
   },
   rU: function() {
     return R
   },
   wX: function() {
-    return p
+    return g
   }
 });
 var i, r, s = n(544891),
@@ -31,8 +31,8 @@ var i, r, s = n(544891),
   l = n(668781),
   u = n(566006),
   _ = n(346479),
-  d = n(314897),
-  c = n(375954),
+  c = n(314897),
+  d = n(375954),
   E = n(585483),
   I = n(70956),
   T = n(176354),
@@ -69,7 +69,7 @@ function A(e, t, n, i, r) {
     type: e,
     channelId: t,
     messageId: n,
-    userId: null !== (s = null == r ? void 0 : r.userId) && void 0 !== s ? s : d.default.getId(),
+    userId: null !== (s = null == r ? void 0 : r.userId) && void 0 !== s ? s : c.default.getId(),
     emoji: i,
     optimistic: !0,
     colors: null !== (o = null == r ? void 0 : r.colors) && void 0 !== o ? o : [],
@@ -104,7 +104,7 @@ async function O(e) {
     channelId: t,
     messageId: n,
     emoji: i
-  }), d = await s.tn.get({
+  }), c = await s.tn.get({
     url: _,
     query: {
       limit: r,
@@ -112,23 +112,23 @@ async function O(e) {
       type: l
     },
     oldFormErrors: !0
-  }), c = l === u.O.VOTE ? d.body.users : d.body;
+  }), d = l === u.O.VOTE ? c.body.users : c.body;
   return a.Z.dispatch({
     type: "MESSAGE_REACTION_ADD_USERS",
     channelId: t,
     messageId: n,
-    users: c,
+    users: d,
     emoji: i,
     reactionType: l
-  }), c
+  }), d
 }
 async function R(e, t, n) {
   let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "Message",
     r = arguments.length > 4 ? arguments[4] : void 0,
     a = null != r && !!r.burst,
-    d = null != r && !!r.isRetry;
-  if (!d && function(e, t, n, i) {
-      let r = c.Z.getMessage(e, t);
+    c = null != r && !!r.isRetry;
+  if (!c && function(e, t, n, i) {
+      let r = d.Z.getMessage(e, t);
       return null != r && r.userHasReactedWithEmoji(n, i)
     }(e, t, n, a)) {
     l.Z.show({
@@ -138,7 +138,7 @@ async function R(e, t, n) {
     });
     return
   }
-  let E = await v(n, a);
+  let E = await L(n, a);
   return A("MESSAGE_REACTION_ADD", e, t, n, {
     burst: a,
     colors: E
@@ -172,7 +172,7 @@ async function R(e, t, n) {
       burst: a,
       isRetry: !0
     }), {
-      isRetry: d
+      isRetry: c
     }) && (A("MESSAGE_REACTION_REMOVE", e, t, n, {
       burst: a
     }), a ? o.uv.announce(f.Z.Messages.BURST_REACTION_ADD_UNLIMITED_ERROR_A11Y.format({
@@ -183,7 +183,7 @@ async function R(e, t, n) {
   })
 }
 
-function C(e) {
+function p(e) {
   let {
     channelId: t,
     messageId: n,
@@ -198,20 +198,20 @@ function C(e) {
     key: r
   })
 }
-async function p(e, t, n) {
+async function g(e, t, n) {
   let i = null != n && !!n.isRetry;
   await _.Z.unarchiveThreadIfNecessary(e), s.tn.del({
     url: S.ANM.REMOVE_REACTIONS(e, t),
     oldFormErrors: !0
   }).catch(n => {
-    N(n, () => p(e, t, {
+    N(n, () => g(e, t, {
       isRetry: !0
     }), {
       isRetry: i
     })
   })
 }
-async function g(e, t, n, i) {
+async function C(e, t, n, i) {
   let r = null != i && !!i.isRetry;
   await _.Z.unarchiveThreadIfNecessary(e);
   let o = null === n.id ? n.name : "".concat(n.name, ":").concat(n.id);
@@ -219,18 +219,18 @@ async function g(e, t, n, i) {
     url: S.ANM.REMOVE_EMOJI_REACTIONS(e, t, o),
     oldFormErrors: !0
   }).catch(i => {
-    N(i, () => g(e, t, n, {
+    N(i, () => C(e, t, n, {
       isRetry: !0
     }), {
       isRetry: r
     })
   })
 }
-async function L(e, t, n, i) {
+async function v(e, t, n, i) {
   let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "Message",
     a = arguments.length > 5 ? arguments[5] : void 0,
     l = null != a && !!a.burst,
-    d = null != a && !!a.isRetry;
+    c = null != a && !!a.isRetry;
   A("MESSAGE_REACTION_REMOVE", e, t, n, {
     userId: i,
     burst: l
@@ -255,13 +255,13 @@ async function L(e, t, n, i) {
       name: n.name
     }))
   }).catch(async s => {
-    if (N(s, () => L(e, t, n, i, r, {
+    if (N(s, () => v(e, t, n, i, r, {
         burst: l,
         isRetry: !0
       }), {
-        isRetry: d
+        isRetry: c
       })) {
-      let r = await v(n, l);
+      let r = await L(n, l);
       A("MESSAGE_REACTION_ADD", e, t, n, {
         userId: i,
         burst: l,
@@ -274,7 +274,7 @@ async function L(e, t, n, i) {
     }
   })
 }
-async function v(e, t) {
+async function L(e, t) {
   let n = [];
   if (t) try {
     n = await (0, T.B6)(e)
@@ -291,7 +291,7 @@ function D(e) {
     userId: s,
     location: o
   } = e;
-  L(t, n, i, s, o, {
+  v(t, n, i, s, o, {
     burst: r === u.O.BURST
   })
 }

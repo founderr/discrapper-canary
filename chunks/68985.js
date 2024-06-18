@@ -22,7 +22,7 @@ let _ = {
   renderedAtTimestamps: new Map,
   lastDCDismissed: null
 };
-class d extends(i = r.ZP.PersistedStore) {
+class c extends(i = r.ZP.PersistedStore) {
   initialize(e) {
     if (null != e) {
       var t;
@@ -48,9 +48,9 @@ class d extends(i = r.ZP.PersistedStore) {
     return t.setHours(0, 0, 0, 0), null != _.dailyCapPeriodStart && _.dailyCapPeriodStart < t.getTime() && (_.numberOfDCsShownToday = 0, _.dailyCapPeriodStart = null), _.numberOfDCsShownToday >= 3
   }
 }
-u(d, "displayName", "DismissibleContentFrameworkStore"), u(d, "persistKey", "DismissibleContentFrameworkStore"), u(d, "migrations", [e => ({
+u(c, "displayName", "DismissibleContentFrameworkStore"), u(c, "persistKey", "DismissibleContentFrameworkStore"), u(c, "migrations", [e => ({
   ...e
-})]), t.Z = new d(s.Z, {
+})]), t.Z = new c(s.Z, {
   LOGOUT: function() {
     _ = {
       ..._,

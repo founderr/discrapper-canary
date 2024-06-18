@@ -15,8 +15,8 @@ var i = n(735250),
   l = n(481060),
   u = n(204197),
   _ = n(357355),
-  d = n(182294),
-  c = n(689938),
+  c = n(182294),
+  d = n(689938),
   E = n(349768);
 
 function I(e) {
@@ -27,13 +27,13 @@ function I(e) {
   } = e, u = (0, a.e7)([_.Z], () => _.Z.affinities.slice(0, 3).reverse()), I = u.map((e, t) => (0, i.jsx)(T, {
     affinity: e,
     applyMask: t !== u.length - 1,
-    size: d.EF.SIZE_32
-  }, e.id)), h = e => null != e.globalName ? e.globalName : e.username, S = r.useMemo(() => 3 === u.length ? c.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_3.format({
+    size: c.EF.SIZE_32
+  }, e.id)), h = e => null != e.globalName ? e.globalName : e.username, S = r.useMemo(() => 3 === u.length ? d.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_3.format({
     username: h(u[2])
-  }) : 2 === u.length ? c.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_2.format({
+  }) : 2 === u.length ? d.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_2.format({
     username: h(u[1]),
     otherUsername: h(u[0])
-  }) : 1 === u.length ? c.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_1.format({
+  }) : 1 === u.length ? d.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_1.format({
     username: h(u[0])
   }) : "", [u]);
   return 0 === u.length ? null : (0, i.jsxs)("div", {

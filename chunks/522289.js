@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 });
 var i = n(735250);
@@ -14,14 +14,14 @@ var r = n(120356),
   u = n(346656),
   _ = n(901540);
 
-function d(e) {
+function c(e) {
   let {
     className: t,
     maxGuilds: n,
     guilds: r,
     onFocus: o,
-    onClick: d,
-    size: c = u.Z.Sizes.SMALLER,
+    onClick: c,
+    size: d = u.Z.Sizes.SMALLER,
     hideOverflowCount: E = !1,
     disableGuildNameTooltip: I = !1
   } = e;
@@ -34,8 +34,8 @@ function d(e) {
             className: _.avatar,
             children: (0, i.jsx)(u.Z, {
               guild: e,
-              onClick: d,
-              size: c,
+              onClick: c,
+              size: d,
               showTooltip: !1
             })
           }) : (0, i.jsx)(l.TooltipContainer, {
@@ -43,8 +43,8 @@ function d(e) {
             className: _.avatar,
             children: (0, i.jsx)(u.Z, {
               guild: e,
-              onClick: d,
-              size: c
+              onClick: c,
+              size: d
             })
           }, e.id)
         }).value(),
@@ -52,7 +52,7 @@ function d(e) {
       return t > 0 && !E && (e[e.length - 1] = (0, i.jsxs)(l.Button, {
         className: s()(_.avatar, _.overflow),
         onFocus: o,
-        onClick: e => null == d ? void 0 : d(e),
+        onClick: e => null == c ? void 0 : c(e),
         look: l.Button.Looks.BLANK,
         size: l.Button.Sizes.NONE,
         children: ["+", t + 1]

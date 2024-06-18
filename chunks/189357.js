@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   By: function() {
-    return d
+    return c
   },
   ms: function() {
-    return c
+    return d
   }
 }), n(47120);
 var i = n(149765),
@@ -26,7 +26,7 @@ let _ = function(e) {
       checkElevated: !1
     }), u.N)
   },
-  d = function(e) {
+  c = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
       n = arguments.length > 2 ? arguments[2] : void 0;
     if (null == e) return !1;
@@ -39,7 +39,7 @@ let _ = function(e) {
     return i && r
   };
 
-function c(e) {
+function d(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 ? arguments[2] : void 0,
     i = (0, r.e7)([s.Z, o.default], () => _(e, [s.Z, o.default]), [e]),

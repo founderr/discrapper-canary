@@ -13,7 +13,7 @@ var i = n(392711),
   u = n(19780),
   _ = n(531578);
 
-function d(e, t, n) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -21,13 +21,13 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let c = {
+let d = {
     chance: .2,
     cooldown: 864e5
   },
   E = {
     [_.nw.VOICE]: {
-      ...c,
+      ...d,
       hotspot: a.v6.VOICE_CALL_FEEDBACK,
       storageKey: "lastVoiceFeedback",
       eligibilityChecks: [function(e) {
@@ -35,12 +35,12 @@ let c = {
       }]
     },
     [_.nw.STREAM]: {
-      ...c,
+      ...d,
       hotspot: a.v6.REPORT_PROBLEM_POST_STREAM,
       storageKey: "lastStreamFeedback"
     },
     [_.nw.VIDEO_BACKGROUND]: {
-      ...c,
+      ...d,
       hotspot: a.v6.VIDEO_BACKGROUND_FEEDBACK,
       storageKey: "lastVideoBackgroundFeedback"
     },
@@ -84,7 +84,7 @@ class S extends o.Z {
       }(e) && (null == this.feedbackTypeToShow || !(_.b5[this.feedbackTypeToShow] < _.b5[e]))) this.feedbackTypeToShow = e, this.showFeedbackModalDebounced(t)
   }
   constructor(...e) {
-    super(...e), d(this, "feedbackTypeToShow", null), d(this, "showFeedbackModalDebounced", r().debounce(e => {
+    super(...e), c(this, "feedbackTypeToShow", null), c(this, "showFeedbackModalDebounced", r().debounce(e => {
       null != this.feedbackTypeToShow && (! function(e) {
         let t = E[e];
         null != t.storageKey && s.K.set(t.storageKey, Date.now())

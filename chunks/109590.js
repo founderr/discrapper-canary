@@ -15,9 +15,9 @@ var i = n(392711),
   l = n(592125),
   u = n(709054),
   _ = n(238349),
-  d = n(660189);
+  c = n(660189);
 n(682474);
-var c = n(981631);
+var d = n(981631);
 
 function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -85,7 +85,7 @@ function f(e) {
   let {
     loaded: i,
     firstMessage: r
-  } = (0, s.cj)([d.Z], () => d.Z.getMessage(e.id)), o = (0, s.e7)([l.Z], () => l.Z.getChannel(e.parent_id));
+  } = (0, s.cj)([c.Z], () => c.Z.getMessage(e.id)), o = (0, s.e7)([l.Z], () => l.Z.getChannel(e.parent_id));
   if (null != o && (t = i, n = r, !t && null == n))(function(e, t) {
     if (T.hasRequested(e.id, t)) return;
     let n = (0, _.U)(e.id),
@@ -106,7 +106,7 @@ function N(e, t) {
     let {
       loaded: s,
       firstMessage: o
-    } = d.Z.getMessage(t);
+    } = c.Z.getMessage(t);
     if (i = s, r = o, !i && null == r) T.request(e.id, t), n = !0
   }), n && null == h && (h = setTimeout(m, 0))
 }
@@ -133,7 +133,7 @@ async function O(e) {
         threads: r
       }
     } = await o.tn.post({
-      url: c.ANM.FORUM_POSTS(e),
+      url: d.ANM.FORUM_POSTS(e),
       body: {
         thread_ids: t
       }

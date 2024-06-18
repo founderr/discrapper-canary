@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return c
+    return d
   }
 }), n(47120);
 var i = n(735250),
@@ -12,44 +12,44 @@ var i = n(735250),
   l = n(454585),
   u = n(572004),
   _ = n(689938),
-  d = n(501496);
+  c = n(501496);
 
-function c(e) {
+function d(e) {
   let {
     element: {
       data: {
         title: t,
         body: n,
         sms: s,
-        is_localized: c
+        is_localized: d
       }
     }
   } = e, [E, I] = r.useState(!1), T = r.useRef(l.Z.reactParserFor(l.Z.defaultRules));
-  return c ? (0, i.jsxs)("div", {
-    className: d.container,
+  return d ? (0, i.jsxs)("div", {
+    className: c.container,
     children: [(0, i.jsx)(a.Heading, {
       variant: "heading-sm/semibold",
       color: "header-secondary",
-      className: d.header,
+      className: c.header,
       children: t
     }), (0, i.jsx)(a.Text, {
       variant: "text-sm/normal",
-      className: d.bodyText,
+      className: c.bodyText,
       children: T.current(n)
     }), (0, i.jsx)("div", {
-      className: d.__invalid_smsInfoContainer,
+      className: c.__invalid_smsInfoContainer,
       children: (0, i.jsxs)("div", {
-        className: o()(d.smsNumberContainer, {
-          [d.copied]: E
+        className: o()(c.smsNumberContainer, {
+          [c.copied]: E
         }),
         children: [(0, i.jsx)(a.Text, {
           variant: "text-md/normal",
           selectable: !0,
-          className: d.smsNumberText,
+          className: c.smsNumberText,
           children: s
         }), (0, i.jsx)(a.Button, {
           size: a.Button.Sizes.SMALL,
-          className: d.__invalid_trailingButton,
+          className: c.__invalid_trailingButton,
           onClick: () => {
             (0, u.JG)(s) && I(!0)
           },

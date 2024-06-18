@@ -7,7 +7,7 @@ n.d(t, {
     return l
   },
   I9: function() {
-    return d
+    return c
   },
   kr: function() {
     return s
@@ -16,7 +16,7 @@ n.d(t, {
     return o
   },
   nz: function() {
-    return c
+    return d
   },
   tB: function() {
     return E
@@ -30,7 +30,7 @@ var i, r, s, o, a = n(214627);
 let l = ">=19.0.0",
   u = ">=22.0.0",
   _ = ">=22.0.0",
-  d = ">=10.0.17763",
-  c = ">=10.0.22000";
+  c = ">=10.0.17763",
+  d = ">=10.0.22000";
 (r = o || (o = {})).GUILD = "guild", r.CALL = "call";
 let E = a.T.StreamNotificationsGuildMaxSize

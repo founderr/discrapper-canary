@@ -4,8 +4,8 @@ var i, r, s, o, a = n(442837),
   l = n(570140),
   u = n(981631),
   _ = n(65154);
-let d = null,
-  c = null,
+let c = null,
+  d = null,
   E = {};
 
 function I(e, t) {
@@ -41,14 +41,14 @@ o = "VideoStreamStore", (s = "displayName") in(r = T) ? Object.defineProperty(r,
       user: t,
       sessionId: n
     } = e;
-    d = t.id, c = n
+    c = t.id, d = n
   },
   OVERLAY_INITIALIZE: function(e) {
     let {
       user: t,
       sessionId: n
     } = e;
-    d = t.id, c = n
+    c = t.id, d = n
   },
   RTC_CONNECTION_VIDEO: function(e) {
     let {
@@ -81,8 +81,8 @@ o = "VideoStreamStore", (s = "displayName") in(r = T) ? Object.defineProperty(r,
         channelId: s,
         guildId: o
       } = t;
-      if (null == s && i === d) {
-        if (r !== c) return e;
+      if (null == s && i === c) {
+        if (r !== d) return e;
         E = {}
       } else {
         if (null != s || (null === (n = E[i]) || void 0 === n ? void 0 : n[null != o ? o : u.kod]) == null) return e;

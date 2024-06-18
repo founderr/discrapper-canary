@@ -13,8 +13,8 @@ var i, r, s = n(874141),
   l = n.n(a),
   u = n(839548),
   _ = n(46973),
-  d = n(886848),
-  c = n(961304),
+  c = n(886848),
+  d = n(961304),
   E = n(313232),
   I = n(450279),
   T = n(65154),
@@ -166,10 +166,10 @@ class f extends u.Z {
     let n = this.outputs[e];
     if (null == n) {
       var i;
-      (n = new c.Z(e, this.audioContext)).mute = this.selfDeaf || this.localMutes[e], n.volume = this.computeLocalVolume(e), n.on(c.X.Speaking, t => this.emit(_.Sh.Speaking, e, t, this.audioSSRC)), n.on(c.X.Video, t => {
+      (n = new d.Z(e, this.audioContext)).mute = this.selfDeaf || this.localMutes[e], n.volume = this.computeLocalVolume(e), n.on(d.X.Speaking, t => this.emit(_.Sh.Speaking, e, t, this.audioSSRC)), n.on(d.X.Video, t => {
         var n;
         return this.emitUnsafe(_.Sh.Video, e, t, this.audioSSRC, this.videoStreamParameters[0].ssrc, null !== (n = this.videoStreamParameters[0].rtxSsrc) && void 0 !== n ? n : 0, this.videoStreamParameters)
-      }), n.on(c.X.InteractionRequired, e => this.emit(_.Sh.InteractionRequired, e)), n.setSpeakingFlags(null !== (i = this.localSpeakingFlags[e]) && void 0 !== i ? i : T.Dg.NONE), n.setSinkId(this.sinkId), this.outputs[e] = n
+      }), n.on(d.X.InteractionRequired, e => this.emit(_.Sh.InteractionRequired, e)), n.setSpeakingFlags(null !== (i = this.localSpeakingFlags[e]) && void 0 !== i ? i : T.Dg.NONE), n.setSinkId(this.sinkId), this.outputs[e] = n
     }
     n.addTrack(t)
   }
@@ -242,6 +242,6 @@ class f extends u.Z {
         return
       }
       null != e && (this.webrtcStats.update(e), this.stats = e, Date.now() - this.lastPingTime >= T.$B && (this.emit(_.Sh.Ping, e.transport.ping), this.lastPingTime = Date.now()))
-    }), this.input = new d.Z(n), n.addEventListener("statechange", this.handleAudioContextStateChange), this.audioContext = n, this.input.on(d.G.AudioPermission, this.handleAudioPermission), this.input.on(d.G.VideoPermission, this.handleVideoPermission), this.input.on(d.G.Video, this.handleVideo), this.input.on(d.G.Mute, e => this.emit(_.Sh.Mute, e)), this.input.on(d.G.Stream, this.handleStream), this.input.on(d.G.DesktopSourceEnd, this.handleDesktopSourceEnd), this.input.on(d.G.Speaking, this.handleInputSpeaking), this.input.on(d.G.AddVideoTrack, this.handleAddVideoTrack), this.input.on(d.G.Video, this.handleAddVideoTrack), this.on("newListener", this.handleNewListener), this.initializeStreamParameters(i)
+    }), this.input = new c.Z(n), n.addEventListener("statechange", this.handleAudioContextStateChange), this.audioContext = n, this.input.on(c.G.AudioPermission, this.handleAudioPermission), this.input.on(c.G.VideoPermission, this.handleVideoPermission), this.input.on(c.G.Video, this.handleVideo), this.input.on(c.G.Mute, e => this.emit(_.Sh.Mute, e)), this.input.on(c.G.Stream, this.handleStream), this.input.on(c.G.DesktopSourceEnd, this.handleDesktopSourceEnd), this.input.on(c.G.Speaking, this.handleInputSpeaking), this.input.on(c.G.AddVideoTrack, this.handleAddVideoTrack), this.input.on(c.G.Video, this.handleAddVideoTrack), this.on("newListener", this.handleNewListener), this.initializeStreamParameters(i)
   }
 }

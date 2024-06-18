@@ -10,7 +10,7 @@ n.d(t, {
     return u
   },
   d$: function() {
-    return d
+    return c
   }
 }), n(411104);
 var i = n(358085),
@@ -61,7 +61,7 @@ function _(e, t) {
   })
 }
 
-function d(e, t, n) {
+function c(e, t, n) {
   a(e, t, e => {
     let {
       artist_ids: t

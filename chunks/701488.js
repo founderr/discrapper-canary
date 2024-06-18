@@ -16,10 +16,10 @@ n.d(t, {
     return et
   },
   Ev: function() {
-    return L
+    return v
   },
   Fr: function() {
-    return g
+    return C
   },
   Fu: function() {
     return J
@@ -70,7 +70,7 @@ n.d(t, {
     return U
   },
   W0: function() {
-    return d
+    return c
   },
   Ws: function() {
     return r
@@ -85,10 +85,10 @@ n.d(t, {
     return V
   },
   cE: function() {
-    return c
+    return d
   },
   cc: function() {
-    return p
+    return g
   },
   dv: function() {
     return P
@@ -124,7 +124,7 @@ n.d(t, {
     return z
   },
   qm: function() {
-    return v
+    return L
   },
   um: function() {
     return eo
@@ -139,12 +139,12 @@ n.d(t, {
     return l
   }
 }), n(47120);
-var i, r, s, o, a, l, u, _, d, c, E, I, T, h, S, f, N, A, m, O, R = n(911969),
-  C = n(981631);
-let p = 160,
-  g = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
-  L = "438122941302046720",
-  v = "773336526917861400",
+var i, r, s, o, a, l, u, _, c, d, E, I, T, h, S, f, N, A, m, O, R = n(911969),
+  p = n(981631);
+let g = 160,
+  C = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
+  v = "438122941302046720",
+  L = "773336526917861400",
   D = "880218832743055411",
   M = "1050941315912835122",
   P = "1019001450015100928",
@@ -181,7 +181,7 @@ let p = 160,
 let er = "activity-shelf",
   es = new Set(["755600276941176913", D, M, x]),
   eo = new Set([D, M, x]);
-(A = _ || (_ = {})).DISCORD_TURNS_8 = "DISCORD_TURNS_8", A.GDM_ACTIVITIES = "GDM_ACTIVITIES", A.PUTT_PARTY = "PUTT_PARTY", A.JAMSPACE_OLD = "JAMSPACE", A.JAMSPACE = "JAMSPACE2", A.POKER = "POKER", A.FREE = "FREE", (m = d || (d = {}))[m.PORTRAIT = 0] = "PORTRAIT", m[m.LANDSCAPE = 1] = "LANDSCAPE", (O = c || (c = {}))[O.FOCUSED = 0] = "FOCUSED", O[O.PIP = 1] = "PIP", O[O.GRID = 2] = "GRID";
+(A = _ || (_ = {})).DISCORD_TURNS_8 = "DISCORD_TURNS_8", A.GDM_ACTIVITIES = "GDM_ACTIVITIES", A.PUTT_PARTY = "PUTT_PARTY", A.JAMSPACE_OLD = "JAMSPACE", A.JAMSPACE = "JAMSPACE2", A.POKER = "POKER", A.FREE = "FREE", (m = c || (c = {}))[m.PORTRAIT = 0] = "PORTRAIT", m[m.LANDSCAPE = 1] = "LANDSCAPE", (O = d || (d = {}))[O.FOCUSED = 0] = "FOCUSED", O[O.PIP = 1] = "PIP", O[O.GRID = 2] = "GRID";
 let ea = {
     label_type: R.ww.NONE,
     release_phase: "",
@@ -201,5 +201,5 @@ let ea = {
     has_csp_exception: !1,
     displays_advertisements: !1
   },
-  eu = [C.d4z.GUILD_TEXT, C.d4z.DM, C.d4z.GROUP_DM],
+  eu = [p.d4z.GUILD_TEXT, p.d4z.DM, p.d4z.GROUP_DM],
   e_ = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety"

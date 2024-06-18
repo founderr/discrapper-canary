@@ -12,8 +12,8 @@ var i = n(392711),
   l = n(480294),
   u = n(580005),
   _ = n(496675),
-  d = n(9156),
-  c = n(70956),
+  c = n(9156),
+  d = n(70956),
   E = n(630388),
   I = n(823379),
   T = n(789662),
@@ -30,7 +30,7 @@ function f(e, t, n, i, E) {
   let S = [],
     f = Object.values(a.Z.getMutableGuildChannelsForGuild(e.id)).filter(e => _.Z.can(h.Plq.VIEW_CHANNEL, e));
   return S.push(... function(e, t) {
-    if (!(d.ZP.isMuted(e.id) && !d.ZP.isTemporarilyMuted(e.id))) return [];
+    if (!(c.ZP.isMuted(e.id) && !c.ZP.isTemporarilyMuted(e.id))) return [];
     let n = [{
         label: "Unmuting the guild and marking it as read",
         apply: e => {
@@ -38,7 +38,7 @@ function f(e, t, n, i, E) {
         },
         needsMarkedAsRead: !0
       }],
-      i = t.filter(t => d.ZP.getChannelMessageNotifications(e.id, t.id) === h.bL.ALL_MESSAGES);
+      i = t.filter(t => c.ZP.getChannelMessageNotifications(e.id, t.id) === h.bL.ALL_MESSAGES);
     return i.length > 0 && n.push({
       label: "Setting ".concat(i.length, " to mentions-only since they were all-messages and we are unmuting the guild"),
       debug: i.map(e => "\n    - #".concat(e.name)).join(""),
@@ -49,7 +49,7 @@ function f(e, t, n, i, E) {
       }
     }), n
   }(e, f)), S.push(function(e) {
-    if (d.ZP.getMessageNotifications(e.id) === h.bL.ALL_MESSAGES) return {
+    if (c.ZP.getMessageNotifications(e.id) === h.bL.ALL_MESSAGES) return {
       label: "Setting the guild to only mentions since it is in care-a-little but was previously all-messages",
       apply: e => {
         e.message_notifications = h.bL.ONLY_MENTIONS
@@ -64,7 +64,7 @@ function f(e, t, n, i, E) {
     }
   }()), S.push(... function(e) {
     let t = [],
-      [n, i] = r()(e).filter(e => e.type === h.d4z.GUILD_ANNOUNCEMENT).partition(e => d.ZP.isChannelMuted(e.guild_id, e.id) || null != e.parent_id && d.ZP.isChannelMuted(e.guild_id, e.parent_id)).value();
+      [n, i] = r()(e).filter(e => e.type === h.d4z.GUILD_ANNOUNCEMENT).partition(e => c.ZP.isChannelMuted(e.guild_id, e.id) || null != e.parent_id && c.ZP.isChannelMuted(e.guild_id, e.parent_id)).value();
     return n.length > 0 && t.push({
       label: "Not touching ".concat(n.length, " announcement channels since they are muted"),
       debug: n.map(e => "\n    - #".concat(e.name)).join("")
@@ -78,7 +78,7 @@ function f(e, t, n, i, E) {
   }(f)), S.push(... function(e) {
     let t = [],
       n = [];
-    for (let t of e) d.ZP.isChannelMuted(t.guild_id, t.id) && t.isCategory() && !o.Z.isCollapsed(t.id) && n.push(t);
+    for (let t of e) c.ZP.isChannelMuted(t.guild_id, t.id) && t.isCategory() && !o.Z.isCollapsed(t.id) && n.push(t);
     return n.length > 0 && t.push({
       label: "Unmuting ".concat(n.length, " categories and setting to grey-dot"),
       debug: n.map(e => "\n    - #".concat(e.name)).join(""),
@@ -93,8 +93,8 @@ function f(e, t, n, i, E) {
       n = [],
       i = [];
     return e.forEach(e => {
-      if (d.ZP.isChannelMuted(e.guild_id, e.id)) return;
-      let t = d.ZP.getChannelMessageNotifications(e.guild_id, e.id);
+      if (c.ZP.isChannelMuted(e.guild_id, e.id)) return;
+      let t = c.ZP.getChannelMessageNotifications(e.guild_id, e.id);
       t === h.bL.ALL_MESSAGES ? n.push(e) : t === h.bL.ONLY_MENTIONS && i.push(e)
     }), n.length > 0 && t.push({
       label: "Setting ".concat(n.length, " channels to white-dot since they were explicitly All Messages"),
@@ -110,7 +110,7 @@ function f(e, t, n, i, E) {
       }
     }), t
   }(f)), l.Z.hasConsented(h.pjP.PERSONALIZATION) ? S.push(... function(e, t, n, i, s) {
-    if (d.ZP.isMuted(e.id) && !d.ZP.isTemporarilyMuted(e.id)) return [];
+    if (c.ZP.isMuted(e.id) && !c.ZP.isTemporarilyMuted(e.id)) return [];
     let o = new Set(t.map(e => e.id)),
       a = i.filter(e => o.has(e.channel_id)),
       l = r().keyBy(a, "channel_id"),
@@ -122,29 +122,29 @@ function f(e, t, n, i, E) {
         var n;
         return e + Number(null !== (n = t.num_three_month_opens) && void 0 !== n ? n : 0)
       }, 0) * s.frecency.totalOpensPercent),
-      c = [],
+      d = [],
       E = [];
     t.forEach(e => {
       var t, n, i, r;
       let s = null !== (t = l[e.id]) && void 0 !== t ? t : {};
-      Number(null !== (n = s.num_year_opens) && void 0 !== n ? n : 0) > u || Number(null !== (i = s.num_month_opens) && void 0 !== i ? i : 0) > _ ? c.push(e) : Number(null !== (r = s.num_three_month_opens) && void 0 !== r ? r : 0) > 2 && E.push(e)
+      Number(null !== (n = s.num_year_opens) && void 0 !== n ? n : 0) > u || Number(null !== (i = s.num_month_opens) && void 0 !== i ? i : 0) > _ ? d.push(e) : Number(null !== (r = s.num_three_month_opens) && void 0 !== r ? r : 0) > 2 && E.push(e)
     });
     let I = [];
-    return c.length > 0 && I.push({
-      label: "Setting ".concat(c.length, " channels to white-dot since they are recent and frequently viewed"),
-      debug: c.map(e => "\n    - #".concat(e.name, " (").concat(JSON.stringify(l[e.id]), ")")).join(""),
+    return d.length > 0 && I.push({
+      label: "Setting ".concat(d.length, " channels to white-dot since they are recent and frequently viewed"),
+      debug: d.map(e => "\n    - #".concat(e.name, " (").concat(JSON.stringify(l[e.id]), ")")).join(""),
       apply: (e, t) => {
-        for (let n of c) m(e, t, n.id, !0)
+        for (let n of d) m(e, t, n.id, !0)
       }
     }), E.length > 0 && I.push({
       label: "NOT setting ".concat(E.length, " channels to white-dot because they were only viewed a little."),
       debug: E.map(e => "\n    - #".concat(e.name, " (").concat(JSON.stringify(l[e.id]), ")")).join("")
     }), I
   }(e, f, n, i, E)) : S.push(... function(e, t) {
-    if (d.ZP.isMuted(e.id) && !d.ZP.isTemporarilyMuted(e.id)) return [];
+    if (c.ZP.isMuted(e.id) && !c.ZP.isTemporarilyMuted(e.id)) return [];
     let n = [],
       i = new Set(t.map(e => e.id)),
-      r = Date.now() - c.Z.Millis.DAYS_30,
+      r = Date.now() - d.Z.Millis.DAYS_30,
       o = u.Z.getFrequentlyWithoutFetchingLatest().filter(e => e instanceof s.Sf && i.has(e.id)).filter(e => {
         var t, n;
         let i = null !== (n = null === (t = u.Z.frecencyWithoutFetchingLatest.usageHistory[e.id]) || void 0 === t ? void 0 : t.recentUses) && void 0 !== n ? n : [];

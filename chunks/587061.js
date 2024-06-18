@@ -7,8 +7,8 @@ var i = n(470079),
   l = n(857595),
   u = n(607070),
   _ = n(627845),
-  d = n(556296),
-  c = n(5967),
+  c = n(556296),
+  d = n(5967),
   E = n(13140),
   I = n(981631),
   T = n(420212);
@@ -27,7 +27,7 @@ t.Z = function(e, t) {
   let s = (0, i.useCallback)(e => {
     ! function(e, t) {
       var n, i;
-      let r = (0, c.VG)(null === (n = (0, c.uB)(e)) || void 0 === n ? void 0 : n.activeElement);
+      let r = (0, d.VG)(null === (n = (0, d.uB)(e)) || void 0 === n ? void 0 : n.activeElement);
       if (r && e.key !== T.mR.Tab || e.ctrlKey || e.altKey || e.metaKey || e.key !== T.mR.Tab && e.shiftKey) return;
       let s = function(e) {
         let t = E.C$("shift"),
@@ -45,7 +45,7 @@ t.Z = function(e, t) {
         }
         return null
       }(e);
-      null != s && !d.Z.hasExactKeybind(s) && !a.Z.hasBind(null !== (i = E.H9(s[0])) && void 0 !== i ? i : "") && ((0, l.Qj)(), r && !t && e.preventDefault())
+      null != s && !c.Z.hasExactKeybind(s) && !a.Z.hasBind(null !== (i = E.H9(s[0])) && void 0 !== i ? i : "") && ((0, l.Qj)(), r && !t && e.preventDefault())
     }(e, t)
   }, [t]);
   return (0, i.useLayoutEffect)(() => (n ? (e.addEventListener("mousedown", S), e.addEventListener("keydown", h)) : e.addEventListener("keydown", s), () => {

@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   Qi: function() {
-    return c
+    return d
   },
   R9: function() {
     return I
   },
   l_: function() {
-    return d
+    return c
   },
   t: function() {
     return E
@@ -22,8 +22,8 @@ var r = n(120356),
   l = n(325767),
   u = n(474936),
   _ = n(646541);
-let d = "premium_new_tier_2_gradient",
-  c = "premium_old_tier_2_gradient";
+let c = "premium_new_tier_2_gradient",
+  d = "premium_old_tier_2_gradient";
 
 function E(e) {
   let {
@@ -71,7 +71,7 @@ function I(e) {
     xmlns: "http://www.w3.org/2000/svg",
     children: [(0, i.jsxs)("defs", {
       children: [(0, i.jsxs)("linearGradient", {
-        id: d,
+        id: c,
         x1: "0%",
         y1: "0%",
         x2: "100%",
@@ -87,7 +87,7 @@ function I(e) {
           stopColor: "#AB5D8A"
         })]
       }), (0, i.jsxs)("linearGradient", {
-        id: c,
+        id: d,
         x1: "0%",
         y1: "0%",
         x2: "100%",

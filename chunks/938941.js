@@ -4,10 +4,10 @@ n.d(t, {
     return _
   },
   RM: function() {
-    return c
+    return d
   },
   SC: function() {
-    return d
+    return c
   },
   iA: function() {
     return I
@@ -49,14 +49,14 @@ function _(e) {
   })
 }
 
-function d(e) {
+function c(e) {
   return (0, i.jsx)(s.X2, {
     ...e,
     className: l.row
   })
 }
 
-function c(e) {
+function d(e) {
   return (0, i.jsx)(s.RM, {
     ...e,
     className: l.body

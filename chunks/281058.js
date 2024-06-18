@@ -16,7 +16,7 @@ function u(e, t, n) {
 let _ = {
   permissionStates: {}
 };
-class d extends(i = r.ZP.DeviceSettingsStore) {
+class c extends(i = r.ZP.DeviceSettingsStore) {
   initialize(e) {
     _ = null != e ? e : _
   }
@@ -44,4 +44,4 @@ class d extends(i = r.ZP.DeviceSettingsStore) {
     })
   }
 }
-u(d, "displayName", "NativePermissionStore"), u(d, "persistKey", "NativePermissionsStore"), t.Z = d
+u(c, "displayName", "NativePermissionStore"), u(c, "persistKey", "NativePermissionsStore"), t.Z = c

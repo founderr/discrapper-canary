@@ -4,7 +4,7 @@ t.d(s, {
     return _
   }
 });
-var n, a, i, l, r = t(735250),
+var n, a, r, l, i = t(735250),
   o = t(470079),
   c = t(120356),
   u = t.n(c),
@@ -16,7 +16,7 @@ var n, a, i, l, r = t(735250),
   p = t(122289),
   g = t(624138),
   h = t(689938),
-  x = t(696674);
+  I = t(696674);
 class _ extends(l = o.PureComponent) {
   get typeString() {
     let {
@@ -56,8 +56,8 @@ class _ extends(l = o.PureComponent) {
       paymentSource: e,
       descriptionClassName: s
     } = this.props;
-    return (0, r.jsx)(d.Text, {
-      className: u()(x.description, s),
+    return (0, i.jsx)(d.Text, {
+      className: u()(I.description, s),
       variant: "text-md/semibold",
       children: this.getLabel(e)
     })
@@ -79,43 +79,43 @@ class _ extends(l = o.PureComponent) {
       showSubtext: t,
       isForSubscription: n,
       showPaymentSourceIcon: a,
-      showLabels: i
+      showLabels: r
     } = this.props, l = this.renderSubText();
-    return (0, r.jsxs)(f.Z, {
-      children: [a && (0, r.jsx)(m.ZP, {
+    return (0, i.jsxs)(f.Z, {
+      children: [a && (0, i.jsx)(m.ZP, {
         type: this.typeString
-      }), (0, r.jsxs)(f.Z, {
+      }), (0, i.jsxs)(f.Z, {
         direction: f.Z.Direction.VERTICAL,
-        className: x.descriptionWrapper,
-        children: [(0, r.jsxs)(f.Z, {
+        className: I.descriptionWrapper,
+        children: [(0, i.jsxs)(f.Z, {
           align: f.Z.Align.CENTER,
-          children: [this.renderDescription(), i && e ? (0, r.jsx)("div", {
-            className: x.defaultIndicator,
+          children: [this.renderDescription(), r && e ? (0, i.jsx)("div", {
+            className: I.defaultIndicator,
             children: h.Z.Messages.DEFAULT
-          }) : null, n ? (0, r.jsx)("div", {
-            className: x.premiumIndicator,
+          }) : null, n ? (0, i.jsx)("div", {
+            className: I.premiumIndicator,
             children: h.Z.Messages.PAYMENT_SOURCE_SUBSCRIPTION
-          }) : null, i && s.invalid ? (0, r.jsx)("div", {
-            className: x.invalidIndicator,
+          }) : null, r && s.invalid ? (0, i.jsx)("div", {
+            className: I.invalidIndicator,
             children: h.Z.Messages.PAYMENT_SOURCE_INVALID
           }) : null]
-        }), t && null != l ? (0, r.jsx)("div", {
-          className: x.subText,
+        }), t && null != l ? (0, i.jsx)("div", {
+          className: I.subText,
           children: l
         }) : null]
       })]
     })
   }
 }
-i = {
+r = {
   isForSubscription: !1,
   isDefault: !1,
   showSubtext: !1,
   showPaymentSourceIcon: !1,
   showLabels: !1
 }, (a = "defaultProps") in(n = _) ? Object.defineProperty(n, a, {
-  value: i,
+  value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : n[a] = i
+}) : n[a] = r

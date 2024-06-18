@@ -78,8 +78,8 @@ function T(e) {
     className: T,
     maxTags: N
   } = e, m = i.useRef(null), S = i.useRef(null), h = i.useRef(null), g = (0, u.V)(t), {
-    handlePasteEvent: x,
-    handleInputChange: C,
+    handlePasteEvent: C,
+    handleInputChange: x,
     handleKeyDown: R,
     handleContainerKeyUp: L,
     handleRemoveTag: O,
@@ -87,16 +87,16 @@ function T(e) {
     handleSelectTag: p,
     handleUnselectTag: M,
     handleResetTagSelections: f,
-    handleInputBlurEvent: v
+    handleInputBlurEvent: D
   } = (0, u.Q)(g, {
     scrollerRef: h,
     mainInputRef: m,
     mainContainerRef: S
   }), {
     state: {
-      value: D,
-      tags: Z,
-      selections: j,
+      value: v,
+      tags: j,
+      selections: Z,
       isSelecting: U
     }
   } = g, [G, P] = i.useState(!1), b = i.useCallback(() => {
@@ -106,10 +106,10 @@ function T(e) {
     })
   }, [f]);
   i.useEffect(() => {
-    if (!G) l(Z)
-  }, [l, Z, G]), i.useEffect(() => {
-    if (!G) o(D)
-  }, [o, D, G]);
+    if (!G) l(j)
+  }, [l, j, G]), i.useEffect(() => {
+    if (!G) o(v)
+  }, [o, v, G]);
   let B = i.useCallback(function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
       e && b(), P(!1)
@@ -117,7 +117,7 @@ function T(e) {
     y = i.useCallback(e => s => {
       if (s) {
         var t;
-        let s = j.includes(Z[e]);
+        let s = Z.includes(j[e]);
         null === (t = m.current) || void 0 === t || t.focus(), s ? M(e) : (p(e), setImmediate(() => {
           var e;
           null === (e = m.current) || void 0 === e || e.blur(), setTimeout(() => {
@@ -126,7 +126,7 @@ function T(e) {
           }, 16)
         }))
       } else M(e, !0), P(!0)
-    }, [p, M, j, Z]);
+    }, [p, M, Z, j]);
   return (0, n.jsxs)("div", {
     className: a()(E.mainContainer, T),
     ref: S,
@@ -135,33 +135,33 @@ function T(e) {
     children: [(0, n.jsxs)(I, {
       ref: h,
       onClick: b,
-      children: [Z.map((e, s) => (0, n.jsx)(c.Z, {
+      children: [j.map((e, s) => (0, n.jsx)(c.Z, {
         value: e,
         onChange: A(s),
         onBlur: B,
         onFocus: y(s),
         onRemove: () => O(s),
-        isSelected: j.includes(e),
+        isSelected: Z.includes(e),
         isSelecting: U,
         error: d[e],
-        forceShowErrorTooltip: !G && s === Z.length - 1
+        forceShowErrorTooltip: !G && s === j.length - 1
       }, s)), (0, n.jsx)("input", {
         className: a()(E.mainTextInput, {
           [E.isEditingOtherNodes]: G
         }),
         ref: m,
-        onChange: C,
+        onChange: x,
         onKeyDownCapture: R,
-        onPaste: x,
-        onBlur: v,
-        placeholder: 0 === Z.length ? _ : void 0,
-        value: D
+        onPaste: C,
+        onBlur: D,
+        placeholder: 0 === j.length ? _ : void 0,
+        value: v
       })]
     }), null != N && (0, n.jsxs)(r.Text, {
       variant: "text-xs/normal",
       color: "text-muted",
       className: E.maxTags,
-      children: [null !== (s = null == Z ? void 0 : Z.length) && void 0 !== s ? s : 0, "/", N]
+      children: [null !== (s = null == j ? void 0 : j.length) && void 0 !== s ? s : 0, "/", N]
     })]
   })
 }

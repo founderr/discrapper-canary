@@ -10,13 +10,13 @@ n.d(t, {
     return S
   },
   T1: function() {
-    return c
+    return d
   },
   i9: function() {
     return u
   },
   kk: function() {
-    return d
+    return c
   },
   lk: function() {
     return I
@@ -54,11 +54,11 @@ function _(e) {
   return null != e.raidDetectedAt && r()(e.raidDetectedAt).add(o.lp, "hours") > r()()
 }
 
-function d(e) {
+function c(e) {
   return null != e.dmSpamDetectedAt && r()(e.dmSpamDetectedAt).add(o.lp, "hours") > r()()
 }
 
-function c(e) {
+function d(e) {
   return null == e ? void 0 : _(e) ? s.Hl.JOIN_RAID : s.Hl.DM_RAID
 }
 

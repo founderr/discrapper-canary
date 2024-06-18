@@ -15,7 +15,7 @@ var i, r = n(735250),
   u = n(692547),
   _ = n(648983);
 
-function d(e, t, n) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -23,7 +23,7 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let c = [u.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, u.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"];
+let d = [u.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, u.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"];
 class E extends s.PureComponent {
   render() {
     let {
@@ -43,8 +43,8 @@ class E extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), d(this, "state", {
-      backgroundColor: a().sample(c)
+    super(...e), c(this, "state", {
+      backgroundColor: a().sample(d)
     })
   }
 }
@@ -86,7 +86,7 @@ class I extends(i = s.Component) {
     })
   }
   constructor(e) {
-    super(e), d(this, "animateSlide", () => {
+    super(e), c(this, "animateSlide", () => {
       let {
         props: {
           direction: e
@@ -110,7 +110,7 @@ class I extends(i = s.Component) {
     }
   }
 }
-d(I, "defaultProps", {
+c(I, "defaultProps", {
   direction: -1
 });
 let T = e => {

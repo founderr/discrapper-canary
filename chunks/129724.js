@@ -1,14 +1,14 @@
 "use strict";
 n.d(t, {
   A: function() {
-    return a
+    return o
   }
 });
 var i = n(913527),
   s = n.n(i),
   l = n(689938);
 
-function a(e) {
+function o(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.Z.Messages.FORM_LABEL_OFF,
     i = s().duration(e, "seconds");

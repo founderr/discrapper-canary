@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(442837),
   u = n(692547),
   _ = n(481060),
-  d = n(220082),
-  c = n(583405),
+  c = n(220082),
+  d = n(583405),
   E = n(695346),
   I = n(451478),
   T = n(311715),
@@ -31,32 +31,32 @@ function m(e) {
     guildId: m,
     profileType: O,
     pendingBanner: R,
-    children: C,
-    animateOnHover: p = !1,
-    hasProfileEffect: g = !1,
-    canUsePremiumCustomization: L = !1
-  } = e, v = L || (null == s ? void 0 : s.canUsePremiumProfileCustomization) || !1, [D, M] = r.useState(!1), P = (0, l.e7)([I.Z], () => I.Z.isFocused()), y = E.QK.getSetting(), {
+    children: p,
+    animateOnHover: g = !1,
+    hasProfileEffect: C = !1,
+    canUsePremiumCustomization: v = !1
+  } = e, L = v || (null == s ? void 0 : s.canUsePremiumProfileCustomization) || !1, [D, M] = r.useState(!1), P = (0, l.e7)([I.Z], () => I.Z.isFocused()), y = E.QK.getSetting(), {
     bannerSrc: U,
     status: b
   } = (0, S.Z)({
     displayProfile: s,
     pendingBanner: R,
     size: (0, N.e7)(O),
-    canAnimate: p || !y ? D : P
-  }), G = (0, _.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(), w = (0, _.getAvatarSize)(_.AvatarSizes.SIZE_80), k = (0, a._i)((0, d.ZP)(n.getAvatarURL(m, w), G, !1)), B = (0, c.Z)(null !== (t = null == s ? void 0 : s.primaryColor) && void 0 !== t ? t : k).hsl;
+    canAnimate: g || !y ? D : P
+  }), G = (0, _.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(), w = (0, _.getAvatarSize)(_.AvatarSizes.SIZE_80), k = (0, a._i)((0, c.ZP)(n.getAvatarURL(m, w), G, !1)), B = (0, d.Z)(null !== (t = null == s ? void 0 : s.primaryColor) && void 0 !== t ? t : k).hsl;
   return (0, i.jsx)(f.Z, {
-    isPremium: v,
-    hasThemeColors: v,
+    isPremium: L,
+    hasThemeColors: L,
     profileType: O,
     hasBanner: null != U,
-    hasProfileEffect: g,
+    hasProfileEffect: C,
     children: (0, i.jsxs)("div", {
       className: o()(A.banner, A.divider, (0, N.Ae)({
         profileType: O,
         user: {
           hasBanner: null != U,
-          isPremium: v,
-          hasProfileEffect: g
+          isPremium: L,
+          hasProfileEffect: C
         }
       })),
       onMouseMove: () => M(!0),
@@ -67,7 +67,7 @@ function m(e) {
       },
       children: [!y && (0, h.F8)(U) && (0, i.jsx)(T.Z, {
         className: A.gifTag
-      }), C]
+      }), p]
     })
   })
 }

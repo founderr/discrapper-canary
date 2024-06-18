@@ -4,13 +4,13 @@ var i, r, s, o, a = n(348327),
   l = n.n(a),
   u = n(442837),
   _ = n(570140),
-  d = n(742738);
-let c = [d.Z],
+  c = n(742738);
+let d = [c.Z],
   E = [];
 
 function I() {
   let e = [];
-  for (let t of c) {
+  for (let t of d) {
     let n = t.getActivity();
     null != n && e.push(n)
   }
@@ -18,7 +18,7 @@ function I() {
 }
 class T extends(i = u.ZP.Store) {
   initialize() {
-    this.syncWith(c, I)
+    this.syncWith(d, I)
   }
   getActivities() {
     return E

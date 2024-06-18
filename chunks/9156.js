@@ -14,8 +14,8 @@ var i, r = n(392711),
   l = n(798140),
   u = n(160404),
   _ = n(312400),
-  d = n(569471),
-  c = n(131704),
+  c = n(569471),
+  d = n(131704),
   E = n(630388),
   I = n(709054),
   T = n(592125),
@@ -35,13 +35,13 @@ function O(e, t, n) {
   }) : e[t] = n, e
 }
 let R = {},
-  C = {},
-  p = !1,
+  p = {},
   g = !1,
-  L = {
+  C = !1,
+  v = {
     flags: 0
   },
-  v = new l.ZP,
+  L = new l.ZP,
   D = new l.ZP,
   M = {
     suppress_everyone: !1,
@@ -85,7 +85,7 @@ function B(e, t) {
       ...t,
       channel_overrides: o
     };
-  v.clearTimer(e), s().forEach(r, e => {
+  L.clearTimer(e), s().forEach(r, e => {
     D.clearTimer(e.channel_id)
   }), x(e, a), R[e] = a, y[e] = q(R[e]);
   let l = s().filter(a.channel_overrides, e => {
@@ -103,11 +103,11 @@ function B(e, t) {
         E.yE(t.flags, m.ic.OPT_IN_ENABLED) ? n.add(e) : n.delete(e)
       }
       Object.keys(i).length > 0 ? k[e] = n : delete k[e]
-    }(e), delete C[e]
+    }(e), delete p[e]
 }
 
 function x(e, t) {
-  !0 === t.muted && v.setTimer(e, t.mute_config, () => {
+  !0 === t.muted && L.setTimer(e, t.mute_config, () => {
     V(e, {
       muted: !1
     }), a.Z.dispatch({
@@ -199,7 +199,7 @@ function K(e) {
 }
 
 function z(e) {
-  p = E.yE(e.flags, N.c.USE_NEW_NOTIFICATIONS), g = E.yE(e.flags, N.c.MENTION_ON_ALL_MESSAGES), L = e
+  g = E.yE(e.flags, N.c.USE_NEW_NOTIFICATIONS), C = E.yE(e.flags, N.c.MENTION_ON_ALL_MESSAGES), v = e
 }
 
 function q(e) {
@@ -211,7 +211,7 @@ function X() {
 }
 
 function Q() {
-  return p && _.xT.getCurrentConfig({
+  return g && _.xT.getCurrentConfig({
     location: "UserGuildSettingsStore"
   }, {
     autoTrackExposure: !1
@@ -219,20 +219,20 @@ function Q() {
 }
 class J extends(i = o.ZP.PersistedStore) {
   initialize(e) {
-    if (this.waitFor(S.default, h.Z, u.Z, d.Z), null != e) {
+    if (this.waitFor(S.default, h.Z, u.Z, c.Z), null != e) {
       var t, n;
-      p = null !== (t = e.useNewNotifications) && void 0 !== t && t, "userGuildSettings" in e && (R = e.userGuildSettings, U = s().mapValues(null !== (n = e.optedInChannelsByGuild) && void 0 !== n ? n : {}, e => new Set(e)), s().forEach(R, (e, t) => {
+      g = null !== (t = e.useNewNotifications) && void 0 !== t && t, "userGuildSettings" in e && (R = e.userGuildSettings, U = s().mapValues(null !== (n = e.optedInChannelsByGuild) && void 0 !== n ? n : {}, e => new Set(e)), s().forEach(R, (e, t) => {
         y[t] = q(e)
       }))
     }
   }
   getState() {
     return {
-      useNewNotifications: p
+      useNewNotifications: g
     }
   }
   get mentionOnAllMessages() {
-    return g
+    return C
   }
   isSuppressEveryoneEnabled(e) {
     return K(e).suppress_everyone
@@ -303,7 +303,7 @@ class J extends(i = o.ZP.PersistedStore) {
     return this.getMessageNotifications(e.guild_id)
   }
   resolveUnreadSetting(e) {
-    if (c.Ec.has(e.type) || (0, c.hv)(e.type) || !Q()) return A.i.ALL_MESSAGES;
+    if (d.Ec.has(e.type) || (0, d.hv)(e.type) || !Q()) return A.i.ALL_MESSAGES;
     let t = this.getChannelUnreadSetting(e.guild_id, e.id);
     if (t !== A.i.UNSET) return t;
     if (null != e.parent_id) {
@@ -379,14 +379,14 @@ class J extends(i = o.ZP.PersistedStore) {
   }
   getGuildFavorites(e) {
     if (u.Z.isFullServerPreview(e)) return null;
-    if (null == C[e]) {
+    if (null == p[e]) {
       let t = s().filter(this.getChannelOverrides(e), t => {
         var n, i;
         return E.yE(null !== (i = t.flags) && void 0 !== i ? i : 0, m.ic.FAVORITED) && (null === (n = T.Z.getChannel(t.channel_id)) || void 0 === n ? void 0 : n.guild_id) === e
       });
-      C[e] = t.map(e => e.channel_id)
+      p[e] = t.map(e => e.channel_id)
     }
-    return C[e]
+    return p[e]
   }
   isFavorite(e, t) {
     var n;
@@ -407,10 +407,10 @@ class J extends(i = o.ZP.PersistedStore) {
     return null !== (e = U.null) && void 0 !== e ? e : G
   }
   get accountNotificationSettings() {
-    return L
+    return v
   }
   get useNewNotifications() {
-    return p
+    return g
   }
   getGuildUnreadSetting(e) {
     if (!Q()) return A.i.ALL_MESSAGES;
@@ -477,7 +477,7 @@ let $ = new J(a.Z, {
     return !(null == t || u.Z.isFullServerPreview(t)) && (H(t, n), !0)
   },
   CONNECTION_OPEN: function(e) {
-    z(e.notificationSettings), v.reset(), D.reset(), !e.userGuildSettings.partial && (R = {}, y = {}, U = {});
+    z(e.notificationSettings), L.reset(), D.reset(), !e.userGuildSettings.partial && (R = {}, y = {}, U = {});
     let t = new Set;
     for (let n in e.userGuildSettings.entries.forEach(e => {
         !("channel_overrides" in e) && (e.channel_overrides = {}), B(e.guild_id, e), null != e.guild_id && t.add(e.guild_id)

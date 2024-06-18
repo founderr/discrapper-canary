@@ -3,8 +3,8 @@ let i, r;
 n(47120), n(724458);
 var s, o, a, l, u = n(392711),
   _ = n.n(u),
-  d = n(442837),
-  c = n(570140),
+  c = n(442837),
+  d = n(570140),
   E = n(189786),
   I = n(981631),
   T = n(354459);
@@ -16,18 +16,18 @@ let h = 0,
   m = {},
   O = {},
   R = {},
-  C = {};
+  p = {};
 
-function p(e, t) {
+function g(e, t) {
   return "".concat(e, ":").concat(t)
 }
 
-function g(e, t) {
+function C(e, t) {
   let n = e[t];
   return null == n && (n = {}, e[t] = n), n
 }
 
-function L(e) {
+function v(e) {
   var t;
   let n = null !== (t = f[I.ME]) && void 0 !== t ? t : {},
     i = {};
@@ -36,22 +36,22 @@ function L(e) {
   }), f[I.ME] = i
 }
 
-function v(e) {
+function L(e) {
   var t;
   return null !== (t = A.get(e)) && void 0 !== t ? t : new Set
 }
 
 function D(e, t, n) {
-  let i = g(f, null != e ? e : I.ME),
+  let i = C(f, null != e ? e : I.ME),
     r = i[t],
     s = n(r);
-  return r === s ? [!1, s, r] : (null != r && (delete i[t], null != r.channelId && (delete g(m, r.channelId)[t], delete g(O, r.channelId)[t]), null != r.sessionId && delete g(R, t)[r.sessionId], ! function(e, t) {
-    let n = v(e);
+  return r === s ? [!1, s, r] : (null != r && (delete i[t], null != r.channelId && (delete C(m, r.channelId)[t], delete C(O, r.channelId)[t]), null != r.sessionId && delete C(R, t)[r.sessionId], ! function(e, t) {
+    let n = L(e);
     if (!!n.has(t))(n = new Set(n)).delete(t), 0 === n.size ? A.delete(e) : A.set(e, n)
-  }(null != e ? e : I.ME, t)), null != s && (i[t] = s, null != s.channelId && (g(m, s.channelId)[t] = s, s.selfVideo && (g(O, s.channelId)[t] = s, ! function(e, t) {
-    let n = v(e);
+  }(null != e ? e : I.ME, t)), null != s && (i[t] = s, null != s.channelId && (C(m, s.channelId)[t] = s, s.selfVideo && (C(O, s.channelId)[t] = s, ! function(e, t) {
+    let n = L(e);
     if (!n.has(t))(n = new Set(n)).add(t), A.set(e, n)
-  }(null != e ? e : I.ME, t))), null != s.sessionId && (g(R, t)[s.sessionId] = s)), [!0, s, r])
+  }(null != e ? e : I.ME, t))), null != s.sessionId && (C(R, t)[s.sessionId] = s)), [!0, s, r])
 }
 
 function M(e, t) {
@@ -84,7 +84,7 @@ function P(e) {
     D(t.id, e.userId, () => null)
   }), delete f[t.id]
 }
-class y extends(s = d.ZP.Store) {
+class y extends(s = c.ZP.Store) {
   getAllVoiceStates() {
     return f
   }
@@ -92,13 +92,13 @@ class y extends(s = d.ZP.Store) {
     return S
   }
   getVoiceStates(e) {
-    return g(f, null != e ? e : I.ME)
+    return C(f, null != e ? e : I.ME)
   }
   getVoiceStatesForChannel(e) {
-    return g(m, e)
+    return C(m, e)
   }
   getVideoVoiceStatesForChannel(e) {
-    return g(O, e)
+    return C(O, e)
   }
   getVoiceState(e, t) {
     return this.getVoiceStates(e)[t]
@@ -106,14 +106,14 @@ class y extends(s = d.ZP.Store) {
   getVoiceStateForChannel(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i;
-    return null === (t = g(m, e)) || void 0 === t ? void 0 : t[n]
+    return null === (t = C(m, e)) || void 0 === t ? void 0 : t[n]
   }
   getVoiceStateForUser(e) {
-    return Object.values(g(R, e))[0]
+    return Object.values(C(R, e))[0]
   }
   getVoiceStateForSession(e, t) {
     var n;
-    return null != t ? null === (n = g(R, e)) || void 0 === n ? void 0 : n[t] : null
+    return null != t ? null === (n = C(R, e)) || void 0 === n ? void 0 : n[t] : null
   }
   getUserVoiceChannelId(e, t) {
     var n;
@@ -138,12 +138,12 @@ class y extends(s = d.ZP.Store) {
     return null != n && (t !== i || null != r && n.sessionId === r)
   }
   hasVideo(e) {
-    return Object.values(g(O, e)).length > 0
+    return Object.values(C(O, e)).length > 0
   }
   getVoicePlatformForChannel(e, t) {
     var n, s;
     let o = null != r && (null === (s = R[i]) || void 0 === s ? void 0 : null === (n = s[r]) || void 0 === n ? void 0 : n.channelId);
-    return t === i && e === o ? T.wR.DESKTOP : C[p(t, e)]
+    return t === i && e === o ? T.wR.DESKTOP : p[g(t, e)]
   }
   get userHasBeenMovedVersion() {
     return h
@@ -154,7 +154,7 @@ l = "VoiceStateStore", (a = "displayName") in(o = y) ? Object.defineProperty(o, 
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[a] = l, t.Z = new y(c.Z, {
+}) : o[a] = l, t.Z = new y(d.Z, {
   CONNECTION_OPEN: function(e) {
     let {
       user: t,
@@ -197,13 +197,13 @@ l = "VoiceStateStore", (a = "displayName") in(o = y) ? Object.defineProperty(o, 
     let {
       channel: t
     } = e;
-    L(t.id)
+    v(t.id)
   },
   CALL_DELETE: function(e) {
     let {
       channelId: t
     } = e;
-    L(t)
+    v(t)
   },
   PASSIVE_UPDATE_V2: function(e) {
     let t = !1;
@@ -220,6 +220,6 @@ l = "VoiceStateStore", (a = "displayName") in(o = y) ? Object.defineProperty(o, 
       channelId: n,
       platform: i
     } = e;
-    C[p(t, n)] = i
+    p[g(t, n)] = i
   }
 })

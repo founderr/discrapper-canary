@@ -16,7 +16,7 @@ function l(e, t, n) {
 let u = {},
   _ = {};
 
-function d() {
+function c() {
   var e, t, n, i, r, s;
   let o = a.Z.settings;
   return {
@@ -26,12 +26,12 @@ function d() {
   }
 }
 
-function c() {
-  return _ = d(), !1
+function d() {
+  return _ = c(), !1
 }
 class E extends(i = r.ZP.PersistedStore) {
   initialize(e) {
-    u = null != e ? e : {}, this.syncWith([a.Z], c)
+    u = null != e ? e : {}, this.syncWith([a.Z], d)
   }
   getState() {
     return u
@@ -50,7 +50,7 @@ l(E, "displayName", "UserSettingsOverridesStore"), l(E, "persistKey", "UserSetti
   return s.K.remove("UserSettingsStoreOverrides"), t
 }]), t.Z = new E(o.Z, {
   USER_SETTINGS_PROTO_UPDATE: function() {
-    let e = d(),
+    let e = c(),
       t = !1;
     for (let n in e) e[n] !== _[n] && (delete u[n], t = !0);
     return t

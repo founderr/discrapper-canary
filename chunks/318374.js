@@ -12,8 +12,8 @@ var i = n(735250),
   l = n.n(a),
   u = n(481060),
   _ = n(239091),
-  d = n(321148),
-  c = n(51144),
+  c = n(321148),
+  d = n(51144),
   E = n(901540);
 
 function I(e) {
@@ -34,10 +34,10 @@ function I(e) {
       className: E.popoutWrapper,
       children: (0, i.jsx)(u.Scroller, {
         className: E.scroller,
-        children: I.map(e => (0, i.jsx)(d.Z, {
+        children: I.map(e => (0, i.jsx)(c.Z, {
           guildId: T,
           user: e,
-          nick: c.ZP.getName(e),
+          nick: d.ZP.getName(e),
           onContextMenu: t => (0, _.jW)(t, async () => {
             let {
               default: t
@@ -57,7 +57,7 @@ function I(e) {
     className: o()(t, E.avatars),
     children: function() {
       let e = l()(I).take(a).map(e => {
-          let t = c.ZP.getName(e);
+          let t = d.ZP.getName(e);
           return N ? (0, i.jsx)("div", {
             className: o()(E.avatar, s),
             children: (0, i.jsx)(u.Avatar, {

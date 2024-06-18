@@ -16,8 +16,8 @@ var i, r, s = n(47770),
   l = n(902704),
   u = n(846519),
   _ = n(526167),
-  d = n(70956),
-  c = n(709054),
+  c = n(70956),
+  d = n(709054),
   E = n(562319),
   I = n(981631),
   T = n(65154);
@@ -33,8 +33,8 @@ function h(e, t, n) {
 let S = {
     any: 100
   },
-  f = 30 * d.Z.Millis.SECOND,
-  N = 120 * d.Z.Millis.SECOND,
+  f = 30 * c.Z.Millis.SECOND,
+  N = 120 * c.Z.Millis.SECOND,
   A = -1 !== (0, _.hY)();
 (r = i || (i = {})).UserSSRCUpdate = "user-ssrc-update", r.Update = "update";
 class m extends s.Z {
@@ -115,7 +115,7 @@ class m extends s.Z {
   }
   setAppBackgrounded(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    for (let [i, r] of c.default.entries(this.streamIds))
+    for (let [i, r] of d.default.entries(this.streamIds))
       if (this.offscreenDisabledUsers[i] = e, null != r) {
         var n;
         let i = !e || t;
@@ -161,7 +161,7 @@ class m extends s.Z {
       if (!(null === (e = this.connection) || void 0 === e ? void 0 : e.getActiveOutputSinkTrackingEnabled())) return;
       let n = Date.now(),
         i = [];
-      for (let [e, r] of c.default.entries(this.streamIds)) {
+      for (let [e, r] of d.default.entries(this.streamIds)) {
         if (null != r)(null === (t = this.connection) || void 0 === t ? void 0 : t.getHasActiveVideoOutputSink(r)) ? (delete this.offscreenUsers[e], delete this.offscreenDisabledUsers[e]) : null == this.offscreenUsers[e] ? (this.offscreenUsers[e] = n, this.addLru(e, n, i)) : !this.offscreenDisabledUsers[e] && (n - this.offscreenUsers[e] >= this.getOffscreenTimeoutMs() ? this.offscreenDisabledUsers[e] = !0 : this.addLru(e, n, i))
       }
       if (i.length > 0) {
@@ -179,7 +179,7 @@ class m extends s.Z {
         n = {
           any: t
         };
-      for (let [i, s] of(r.updateOffscreenUsers(), c.default.entries(r.videoSsrcs))) {
+      for (let [i, s] of(r.updateOffscreenUsers(), d.default.entries(r.videoSsrcs))) {
         let o = [],
           a = !1,
           u = s[0].ssrc;

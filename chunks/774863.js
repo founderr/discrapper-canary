@@ -4,8 +4,8 @@ n(47120);
 var r, s, o, a, l = n(442837),
   u = n(570140),
   _ = n(70956),
-  d = n(709054);
-let c = 14 * _.Z.Millis.DAY,
+  c = n(709054);
+let d = 14 * _.Z.Millis.DAY,
   E = Object.freeze([]);
 let I = {},
   T = {};
@@ -23,7 +23,7 @@ class S extends(r = l.ZP.Store) {
   }
   canSubmitFpReport(e) {
     let t = I[e];
-    return null != t && !t.reportSubmit && d.default.age(t.messageId) < c
+    return null != t && !t.reportSubmit && c.default.age(t.messageId) < d
   }
   get validContentScanVersion() {
     return i

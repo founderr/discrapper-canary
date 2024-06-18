@@ -8,8 +8,8 @@ var r = n(120356),
   l = n(747613),
   u = n(533432),
   _ = n(149203),
-  d = n(185923),
-  c = n(773390);
+  c = n(185923),
+  d = n(773390);
 t.Z = e => {
   let {
     accessory: t,
@@ -30,27 +30,27 @@ t.Z = e => {
       emojiListRef: E,
       gridNavigatorId: _.Vr,
       onKeyDown: I,
-      className: c.searchBar,
+      className: d.searchBar,
       ref: S,
       isFullRow: !1,
       onFocus: T,
       autoFocus: h,
       defaultSearchPlaceholder: (0, a.nV)(n, A)
-    }), n === d.Hz.REACTION ? (0, i.jsx)("div", {
-      className: c.burstToggle,
+    }), n === c.Hz.REACTION ? (0, i.jsx)("div", {
+      className: d.burstToggle,
       children: (0, i.jsx)(o.Z, {
         checked: A,
         onClick: m
       })
     }) : null, null != t ? t : (0, i.jsx)(l.Z, {
       searchBarRef: S,
-      className: c.diversitySelector,
+      className: d.diversitySelector,
       hasTabWrapper: f,
       selectedSurrogate: N
     })]
   });
   return (0, i.jsx)("div", {
-    className: s()(c.header, r),
+    className: s()(d.header, r),
     children: null != O ? O(R) : R
   })
 }

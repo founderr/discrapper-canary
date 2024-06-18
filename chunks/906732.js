@@ -4,7 +4,7 @@ n.d(t, {
     return _
   },
   ZP: function() {
-    return c
+    return d
   }
 }), n(47120);
 var i = n(735250),
@@ -26,18 +26,18 @@ function _(e) {
   })
 }
 
-function d(e, t) {
+function c(e, t) {
   return 0 === t.length ? e : [...e, ...l().flatten(t)]
 }
 
-function c() {
+function d() {
   for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
-  let [s, a] = r.useState(n), l = r.useContext(u), _ = r.useMemo(() => d(l, s), [s, l]), c = r.useMemo(() => d(l, s.slice(0, s.length - 1)), [s, l]);
+  let [s, a] = r.useState(n), l = r.useContext(u), _ = r.useMemo(() => c(l, s), [s, l]), d = r.useMemo(() => c(l, s.slice(0, s.length - 1)), [s, l]);
   return r.useEffect(() => {
     !o()(n, s) && a(n)
   }, [n]), {
     analyticsLocations: _,
-    sourceAnalyticsLocations: c,
+    sourceAnalyticsLocations: d,
     newestAnalyticsLocation: null !== (e = _[_.length - 1]) && void 0 !== e ? e : null
   }
 }

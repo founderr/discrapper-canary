@@ -29,17 +29,17 @@ function a(e) {
     l = null !== (t = a.contrastRatio) && void 0 !== t ? t : s.NonText,
     u = null !== (n = a.tolerance) && void 0 !== n ? n : 3,
     _ = r()(null !== (i = a.base) && void 0 !== i ? i : e),
-    d = r()(e),
-    c = _.luminance(),
-    E = d,
+    c = r()(e),
+    d = _.luminance(),
+    E = c,
     I = l + u,
-    T = r().contrast(_, d),
+    T = r().contrast(_, c),
     h = 100;
   for (; h-- > 0;) {
     let e = T < l,
       t = T > I;
     if (!e && !t) break;
-    let n = E.luminance() > c;
+    let n = E.luminance() > d;
     E = t && n || e && !n ? E.darken() : E.brighten(), T = r().contrast(_, E)
   }
   return o(E)

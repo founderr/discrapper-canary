@@ -25,7 +25,7 @@ let u = e => {
     initialSelectedDecorationId: l,
     isTryItOutFlow: u,
     guild: _,
-    onClose: d
+    onClose: c
   } = e;
   (0, r.openModalLazy)(async () => {
     (0, s.s1)().location.pathname === a.Z5c.COLLECTIBLES_SHOP_FULLSCREEN && (0, s.uL)(a.Z5c.APP);
@@ -35,7 +35,7 @@ let u = e => {
     return n => (0, i.jsx)(e, {
       ...n,
       onCloseModal: n.onClose,
-      onClose: d,
+      onClose: c,
       analyticsLocations: t,
       initialSelectedDecoration: o,
       initialSelectedDecorationId: l,

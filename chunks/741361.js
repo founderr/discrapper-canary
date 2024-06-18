@@ -13,7 +13,7 @@ n.d(t, {
     return _
   },
   kU: function() {
-    return d
+    return c
   },
   kY: function() {
     return o
@@ -54,10 +54,10 @@ function u() {
 }
 
 function _(e, t, n) {
-  return d(e, t, [], n)
+  return c(e, t, [], n)
 }
 
-function d(e, t, n, r) {
+function c(e, t, n, r) {
   return i.Z.dispatch({
     type: "CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING"
   }), new Promise(i => {

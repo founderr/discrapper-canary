@@ -7,8 +7,8 @@ var i, r = n(392711),
   l = n(704907),
   u = n(581883),
   _ = n(70956),
-  d = n(926491),
-  c = n(526761);
+  c = n(926491),
+  d = n(526761);
 
 function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -28,12 +28,12 @@ let T = new l.Z({
       let t = 0;
       return e <= 3 ? t = 100 : e <= 15 ? t = 70 : e <= 30 ? t = 50 : e <= 45 ? t = 30 : e <= 80 && (t = 10), t
     },
-    lookupKey: e => d.Z.getStickerById(e),
+    lookupKey: e => c.Z.getStickerById(e),
     afterCompute: () => {},
     numFrequentlyItems: 20
   }),
   h = () => {
-    d.Z.isLoaded && T.compute()
+    c.Z.isLoaded && T.compute()
   },
   S = () => {
     h()
@@ -50,7 +50,7 @@ function f() {
 }
 class N extends(i = o.ZP.PersistedStore) {
   initialize(e) {
-    this.waitFor(d.Z), null != e && (I = e), this.syncWith([d.Z], S), this.syncWith([u.Z], f)
+    this.waitFor(c.Z), null != e && (I = e), this.syncWith([c.Z], S), this.syncWith([u.Z], f)
   }
   getState() {
     return I
@@ -81,7 +81,7 @@ E(N, "displayName", "StickersPersistedStore"), E(N, "persistKey", "StickersPersi
       },
       wasSaved: n
     } = e;
-    if (t !== c.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+    if (t !== d.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
     I.pendingUsages = []
   }
 })

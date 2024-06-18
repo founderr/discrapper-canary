@@ -10,8 +10,8 @@ var r, s, o = n(990547),
   l = n(544891),
   u = n(433517),
   _ = n(570140),
-  d = n(881052),
-  c = n(882037),
+  c = n(881052),
+  d = n(882037),
   E = n(710845),
   I = n(57132),
   T = n(703656),
@@ -23,9 +23,9 @@ var r, s, o = n(990547),
   m = n(981631),
   O = n(792101);
 let R = new E.Z("AuthenticationActionCreators"),
-  C = null;
+  p = null;
 
-function p(e) {
+function g(e) {
   let t = {
     type: "LOGOUT",
     ...e
@@ -36,9 +36,9 @@ function p(e) {
   })
 }
 
-function g() {
+function C() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.Z5c.DEFAULT_LOGGED_OUT;
-  p();
+  g();
   let t = (0, I.PP)();
   null != e && (null != t ? (A.Z.popAll(), t.navigate("auth")) : (0, T.uL)(e))
 }(s = r || (r = {})).MFA = "MFA", s.SUCCESS = "SUCCESS", t.Z = {
@@ -67,7 +67,7 @@ function g() {
       source: a,
       giftCodeSKUId: l,
       invite: u,
-      isMultiAccount: c
+      isMultiAccount: d
     } = e;
     _.Z.dispatch({
       type: "LOGIN",
@@ -89,10 +89,10 @@ function g() {
         event: o.NetworkActionNames.USER_LOGIN,
         properties: {
           invite_code: null == u ? void 0 : u.code,
-          is_multi_account: c
+          is_multi_account: d
         }
       },
-      ...c ? {
+      ...d ? {
         headers: {
           authorization: ""
         }
@@ -122,7 +122,7 @@ function g() {
         webauthn: i,
         totp: u,
         backup: o
-      }) : c ? this.switchAccountToken(s) : _.Z.dispatch({
+      }) : d ? this.switchAccountToken(s) : _.Z.dispatch({
         type: "LOGIN_SUCCESS",
         token: s
       })
@@ -152,7 +152,7 @@ function g() {
         type: "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED"
       }) : _.Z.dispatch({
         type: "LOGIN_FAILURE",
-        error: new d.yZ(e)
+        error: new c.yZ(e)
       })
     })
   },
@@ -297,7 +297,7 @@ function g() {
     })
   },
   logoutInternal(e) {
-    p(e)
+    g(e)
   },
   logout() {
     var e;
@@ -321,7 +321,7 @@ function g() {
         }
       }
     }).finally(() => {
-      (null == n || n === S.default.getId()) && g(t)
+      (null == n || n === S.default.getId()) && C(t)
     })
   },
   switchAccountToken(e) {
@@ -330,7 +330,7 @@ function g() {
     R.log("Switching accounts", {
       wasLoggedIn: null != n,
       tokenHasChanged: e !== n
-    }), p({
+    }), g({
       isSwitchingAccount: !0
     });
     let i = this.loginToken(e, !0).then(() => {
@@ -346,7 +346,7 @@ function g() {
     return l.tn.get({
       url: m.ANM.ME,
       oldFormErrors: !0
-    }).catch(() => g(e))
+    }).catch(() => C(e))
   },
   verify(e) {
     null != e ? N.Z.post({
@@ -475,7 +475,7 @@ function g() {
     } catch (e) {
       throw _.Z.dispatch({
         type: "LOGIN_FAILURE",
-        error: new d.yZ(e)
+        error: new c.yZ(e)
       }), e
     }
   },
@@ -527,7 +527,7 @@ function g() {
         type: "FORGOT_PASSWORD_SENT"
       })
     } catch (t) {
-      let e = new d.yZ(t);
+      let e = new c.yZ(t);
       throw e.code === m.evJ.PHONE_VERIFICATION_REQUIRED ? _.Z.dispatch({
         type: "LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION"
       }) : _.Z.dispatch({
@@ -548,12 +548,12 @@ function g() {
       withGuildExperiments: e
     })
   },
-  getLocationMetadata: () => null != C ? C : (clearTimeout(i), i = setTimeout(() => {
+  getLocationMetadata: () => null != p ? p : (clearTimeout(i), i = setTimeout(() => {
     _.Z.dispatch({
       type: "SET_CONSENT_REQUIRED",
       consentRequired: !0
     })
-  }, 5e3), C = l.tn.get({
+  }, 5e3), p = l.tn.get({
     url: m.ANM.AUTH_LOCATION_METADATA,
     retries: 2,
     oldFormErrors: !0
@@ -569,9 +569,9 @@ function g() {
     if (_.Z.dispatch({
         type: "SET_LOCATION_METADATA",
         countryCode: null !== (o = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.country_code) && void 0 !== o ? o : void 0
-      }), C = null, (null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.promotional_email_opt_in) != null) {
+      }), p = null, (null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.promotional_email_opt_in) != null) {
       let t = e.body.promotional_email_opt_in;
-      (0, c.K4)({
+      (0, d.K4)({
         required: t.required,
         checked: t.pre_checked,
         preChecked: t.pre_checked
@@ -581,7 +581,7 @@ function g() {
     clearTimeout(i), _.Z.dispatch({
       type: "SET_CONSENT_REQUIRED",
       consentRequired: !0
-    }), C = null
+    }), p = null
   })),
   closeSuspendedUser() {
     _.Z.dispatch({

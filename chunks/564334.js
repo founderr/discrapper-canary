@@ -85,11 +85,11 @@ class o {
         green: n,
         blue: i,
         alpha: r
-      } = e, s = t / 255, o = n / 255, a = i / 255, l = Math.max(s, o, a), u = Math.min(s, o, a), _ = l - u, d = (l + u) / 2, c = _ > 0 ? _ / (1 - Math.abs(2 * d - 1)) : 0;
+      } = e, s = t / 255, o = n / 255, a = i / 255, l = Math.max(s, o, a), u = Math.min(s, o, a), _ = l - u, c = (l + u) / 2, d = _ > 0 ? _ / (1 - Math.abs(2 * c - 1)) : 0;
       if (0 === _) return {
         hue: 0,
-        saturation: c,
-        lightness: d,
+        saturation: d,
+        lightness: c,
         alpha: r
       };
       let E = 0;
@@ -105,8 +105,8 @@ class o {
       }
       return {
         hue: 60 * E,
-        saturation: c,
-        lightness: d,
+        saturation: d,
+        lightness: c,
         alpha: r
       }
     }({

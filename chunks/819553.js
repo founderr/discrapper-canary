@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   kp: function() {
-    return c
+    return d
   },
   uX: function() {
     return a
@@ -9,16 +9,16 @@ n.d(t, {
 });
 var i, r, s, o, a, l, u = n(442837),
   _ = n(570140),
-  d = n(981631);
+  c = n(981631);
 
-function c(e) {
+function d(e) {
   return null != e && ["started", "ready"].includes(e)
 }(i = a || (a = {})).STARTED = "started", i.READY = "ready", i.COMPLETED = "completed", i.NOT_APPLICABLE = "not_applicable";
 let E = {},
   I = {};
 class T extends(l = u.ZP.Store) {
   shouldShowOnboarding(e) {
-    return !!(e !== d.ME && e !== d.I_8 && c(E[e])) || !1
+    return !!(e !== c.ME && e !== c.I_8 && d(E[e])) || !1
   }
   getOnboardingStatus(e) {
     return E[e]

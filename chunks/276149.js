@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 });
 var i = n(735250);
@@ -14,26 +14,26 @@ var r = n(442837),
   u = n(981631),
   _ = n(689938);
 
-function d(e) {
+function c(e) {
   let {
     className: t,
     color: n,
-    look: d,
-    hangStatusChannel: c,
+    look: c,
+    hangStatusChannel: d,
     onAction: E
-  } = e, I = (0, r.e7)([o.Z], () => o.Z.getChannelId() === c.id);
+  } = e, I = (0, r.e7)([o.Z], () => o.Z.getChannelId() === d.id);
   return (0, i.jsx)(l.Z, {
     className: t,
     disabled: I,
     onClick: () => {
-      null == E || E(), s.default.selectVoiceChannel(c.id), a.default.track(u.rMx.HANG_STATUS_CTA_CLICKED, {
+      null == E || E(), s.default.selectVoiceChannel(d.id), a.default.track(u.rMx.HANG_STATUS_CTA_CLICKED, {
         source: "UserProfilePopout",
-        guild_id: c.guild_id,
-        channel_id: c.id
+        guild_id: d.guild_id,
+        channel_id: d.id
       })
     },
     color: n,
-    look: d,
+    look: c,
     fullWidth: !0,
     children: _.Z.Messages.PROFILE_JOIN_VOICE_CHANNEL
   }, "join-hang")

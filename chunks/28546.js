@@ -10,13 +10,13 @@ n.d(t, {
     return E
   },
   _Q: function() {
-    return d
+    return c
   },
   hr: function() {
     return I
   },
   j9: function() {
-    return c
+    return d
   },
   ql: function() {
     return T
@@ -51,7 +51,7 @@ let l = Object.freeze({
       lastActiveView: u.getState().activeView
     })
   },
-  d = e => {
+  c = e => {
     let t = u.getState();
     if ((void 0 === e || e === t.activeViewType) && null !== t.activeView) u.setState({
       activeView: null,
@@ -59,15 +59,15 @@ let l = Object.freeze({
       lastActiveView: t.activeView
     })
   },
-  c = e => {
+  d = e => {
     let t = u.getState();
     if (null == t.activeView) {
       var n;
       _(null !== (n = t.lastActiveView) && void 0 !== n ? n : a.X1.EMOJI, e)
-    } else d()
+    } else c()
   },
   E = (e, t) => {
-    u.getState().activeView === e ? d() : _(e, t)
+    u.getState().activeView === e ? c() : _(e, t)
   },
   I = e => {
     u.setState({

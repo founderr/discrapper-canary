@@ -8,7 +8,7 @@ var i = n(147913),
   l = n(176505),
   u = n(149203);
 let _ = new Worker(new URL(n.p + n.u("80493"), n.b));
-class d extends i.Z {
+class c extends i.Z {
   handleChannelPreload(e) {
     let {
       channelId: t
@@ -64,4 +64,4 @@ class d extends i.Z {
     }) : t[n] = i
   }
 }
-t.Z = new d
+t.Z = new c

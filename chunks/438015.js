@@ -3,11 +3,11 @@ n(47120);
 var i = n(735250),
   s = n(470079),
   l = n(748780),
-  a = n(13245),
-  o = n(454902),
+  o = n(13245),
+  a = n(454902),
   r = n(692546),
-  d = n(981631),
-  c = n(196689);
+  c = n(981631),
+  d = n(196689);
 
 function u(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -45,10 +45,10 @@ class h extends s.Component {
   animateTo(e, t) {
     let n, i, s, l;
     let {
-      opacity: a,
-      scale: o,
+      opacity: o,
+      scale: a,
       translateX: r,
-      translateY: d
+      translateY: c
     } = this;
     switch (e) {
       case 0:
@@ -63,31 +63,31 @@ class h extends s.Component {
       default:
         i = .6, s = 0, l = .93
     }
-    null != t ? (0 === e ? l = 1.1 : i = 1.3, s = 0, n = t) : n = this.handleAnimationEnd, r.setValue(1), d.setValue(i), o.setValue(l), a.setValue(s), n()
+    null != t ? (0 === e ? l = 1.1 : i = 1.3, s = 0, n = t) : n = this.handleAnimationEnd, r.setValue(1), c.setValue(i), a.setValue(l), o.setValue(s), n()
   }
   getStyle() {
     let e, t, n, i, s;
     let {
       opacity: l,
-      scale: a,
-      translateX: o,
+      scale: o,
+      translateX: a,
       translateY: r,
       props: {
-        position: c,
+        position: d,
         zIndex: u
       }
     } = this;
-    switch (c) {
-      case d._vf.TOP_LEFT:
-      case d._vf.BOTTOM_LEFT:
+    switch (d) {
+      case c._vf.TOP_LEFT:
+      case c._vf.BOTTOM_LEFT:
         e = "-100%", t = 0;
         break;
       default:
         n = 0, e = "100%"
     }
-    switch (c) {
-      case d._vf.BOTTOM_LEFT:
-      case d._vf.BOTTOM_RIGHT:
+    switch (d) {
+      case c._vf.BOTTOM_LEFT:
+      case c._vf.BOTTOM_RIGHT:
         i = 0;
         break;
       default:
@@ -101,7 +101,7 @@ class h extends s.Component {
       zIndex: u,
       opacity: l,
       transform: [{
-        translateX: o.interpolate({
+        translateX: a.interpolate({
           inputRange: [0, 1],
           outputRange: [e, "0%"]
         })
@@ -111,7 +111,7 @@ class h extends s.Component {
           outputRange: ["0px", "20px"]
         })
       }, {
-        scale: a
+        scale: o
       }]
     }
   }
@@ -124,8 +124,8 @@ class h extends s.Component {
           props: {
             onNotificationShow: n,
             onDismissClick: s,
-            onNotificationClick: a,
-            onConfirmClick: d,
+            onNotificationClick: o,
+            onConfirmClick: c,
             onCancelClick: u,
             ...h
           }
@@ -135,14 +135,14 @@ class h extends s.Component {
         animatedIn: p
       }
     } = this, f = (0, i.jsx)(l.Z.div, {
-      className: c.animationContainer,
+      className: d.animationContainer,
       style: this.getStyle(),
-      children: (0, i.jsx)(o.ZP, {
+      children: (0, i.jsx)(a.ZP, {
         ...h,
         onNotificationShow: p && 0 === t ? this.handleNotificationShow : null,
         onDismissClick: this.handleDismissClick,
-        onNotificationClick: null != a ? this.handleNotificationClick : null,
-        onConfirmClick: null != d ? this.handleConfirmClick : null,
+        onNotificationClick: null != o ? this.handleNotificationClick : null,
+        onConfirmClick: null != c ? this.handleConfirmClick : null,
         onCancelClick: null != u ? this.handleCancelClick : null,
         expand: !e && 0 === t,
         disabled: 0 !== t
@@ -171,7 +171,7 @@ class h extends s.Component {
           onDismissClick: n
         }
       } = this.props.notification;
-      a.Z.updateNotificationStatus(t), null != n && n(e, t)
+      o.Z.updateNotificationStatus(t), null != n && n(e, t)
     }), u(this, "handleNotificationClick", e => {
       let {
         id: t,

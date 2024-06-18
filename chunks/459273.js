@@ -4,7 +4,7 @@ n.d(t, {
     return u
   },
   d9: function() {
-    return d
+    return c
   },
   oo: function() {
     return l
@@ -82,6 +82,6 @@ function _(e) {
   }, [i, t, o]), null
 }
 
-function d(e) {
+function c(e) {
   return _(e), null
 }

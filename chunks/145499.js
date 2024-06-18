@@ -18,10 +18,10 @@ var n = t(735250),
   S = t(386937),
   h = t(316350),
   g = t(863562),
-  x = t(981631),
-  C = t(689938),
+  C = t(981631),
+  x = t(689938),
   R = t(852522);
-let L = e => e < (0, T.A3)(x.Eu4.NONE) ? x.Eu4.NONE : e < (0, T.A3)(x.Eu4.TIER_1) ? x.Eu4.TIER_1 : e < (0, T.A3)(x.Eu4.TIER_2) ? x.Eu4.TIER_2 : e < (0, T.A3)(x.Eu4.TIER_3) ? x.Eu4.TIER_3 : x.Eu4.NONE,
+let L = e => e < (0, T.A3)(C.Eu4.NONE) ? C.Eu4.NONE : e < (0, T.A3)(C.Eu4.TIER_1) ? C.Eu4.TIER_1 : e < (0, T.A3)(C.Eu4.TIER_2) ? C.Eu4.TIER_2 : e < (0, T.A3)(C.Eu4.TIER_3) ? C.Eu4.TIER_3 : C.Eu4.NONE,
   O = e => {
     let {
       children: s,
@@ -36,7 +36,7 @@ let L = e => e < (0, T.A3)(x.Eu4.NONE) ? x.Eu4.NONE : e < (0, T.A3)(x.Eu4.TIER_1
         children: s
       }), !a && (0, n.jsx)(o.Text, {
         variant: "text-xs/normal",
-        children: C.Z.Messages.GUILD_STICKER_SETTINGS_REMAINING_SLOTS_AVAILABLE.format({
+        children: x.Z.Messages.GUILD_STICKER_SETTINGS_REMAINING_SLOTS_AVAILABLE.format({
           numTotal: r,
           numAvailable: (0, T.Qi)(i, l)
         })
@@ -61,7 +61,7 @@ let L = e => e < (0, T.A3)(x.Eu4.NONE) ? x.Eu4.NONE : e < (0, T.A3)(x.Eu4.TIER_1
     className: R.placeholderCard,
     children: (0, n.jsx)("img", {
       className: R.placeholderImg,
-      alt: C.Z.Messages.GUILD_STICKER_SETTINGS_PLACEHOLDER_ALT_TEXT,
+      alt: x.Z.Messages.GUILD_STICKER_SETTINGS_PLACEHOLDER_ALT_TEXT,
       src: t(872732)
     })
   }),
@@ -77,15 +77,15 @@ let L = e => e < (0, T.A3)(x.Eu4.NONE) ? x.Eu4.NONE : e < (0, T.A3)(x.Eu4.TIER_1
       size: o.Button.Sizes.SMALL,
       color: o.Button.Colors.BRAND,
       onClick: () => {
-        I.default.track(x.rMx.OPEN_MODAL, {
-          type: x.jXE.CREATE_STICKER_MODAL,
+        I.default.track(C.rMx.OPEN_MODAL, {
+          type: C.jXE.CREATE_STICKER_MODAL,
           location: t
         }), A({
           guildId: s.id
         })
       },
       disabled: !i,
-      children: C.Z.Messages.GUILD_STICKER_GRID_UPLOAD_LABEL
+      children: x.Z.Messages.GUILD_STICKER_GRID_UPLOAD_LABEL
     })
   };
 s.Z = e => {
@@ -96,7 +96,7 @@ s.Z = e => {
     return null !== (e = m.Z.getStickersByGuildId(s.id)) && void 0 !== e ? e : []
   }, [s]), {
     analyticsLocations: A
-  } = (0, d.ZP)(), f = s.hasFeature(x.oNc.MORE_STICKERS) ? x.Eu4.TIER_3 : s.premiumTier, v = s.hasFeature(x.oNc.MORE_STICKERS) ? (0, T.vn)(s.id)[x.Eu4.TIER_3] : s.premiumSubscriberCount;
+  } = (0, d.ZP)(), f = s.hasFeature(C.oNc.MORE_STICKERS) ? C.Eu4.TIER_3 : s.premiumTier, D = s.hasFeature(C.oNc.MORE_STICKERS) ? (0, T.vn)(s.id)[C.Eu4.TIER_3] : s.premiumSubscriberCount;
   if (i.useEffect(() => {
       let e = !1;
       return (async () => {
@@ -107,55 +107,55 @@ s.Z = e => {
     }, [s]), i.useEffect(() => {
       window.dispatchEvent(new Event("resize"))
     }, [I]), l) return (0, n.jsx)(o.Spinner, {});
-  let D = (e, t) => {
+  let v = (e, t) => {
       let n = null;
-      t === x.Eu4.TIER_1 ? n = x.Qqv.TIER_1 : t === x.Eu4.TIER_2 ? n = x.Qqv.TIER_2 : t === x.Eu4.TIER_3 && (n = x.Qqv.TIER_3), (0, E.Z)({
+      t === C.Eu4.TIER_1 ? n = C.Qqv.TIER_1 : t === C.Eu4.TIER_2 ? n = C.Qqv.TIER_2 : t === C.Eu4.TIER_3 && (n = C.Qqv.TIER_3), (0, E.Z)({
         analyticsLocations: A,
         analyticsLocation: {
-          page: x.ZY5.GUILD_SETTINGS,
-          section: x.jXE.GUILD_SETTINGS_STICKERS,
-          object: x.qAy.BOOST_LEVEL_UPSELL_BUTTON,
+          page: C.ZY5.GUILD_SETTINGS,
+          section: C.jXE.GUILD_SETTINGS_STICKERS,
+          object: C.qAy.BOOST_LEVEL_UPSELL_BUTTON,
           objectType: n
         },
         guildId: s.id,
         totalNumberOfSlotsToAssign: e
       })
     },
-    Z = [{
-      tier: x.Eu4.NONE,
+    j = [{
+      tier: C.Eu4.NONE,
       title: (0, n.jsx)(O, {
         guildStickers: I,
         currentGuildTier: f,
-        tier: x.Eu4.NONE,
-        children: C.Z.Messages.GUILD_SETTINGS_STICKERS_FREE_SLOTS_HEADER
+        tier: C.Eu4.NONE,
+        children: x.Z.Messages.GUILD_SETTINGS_STICKERS_FREE_SLOTS_HEADER
       })
     }, {
-      tier: x.Eu4.TIER_1,
+      tier: C.Eu4.TIER_1,
       title: (0, n.jsx)(O, {
         guildStickers: I,
         currentGuildTier: f,
-        tier: x.Eu4.TIER_1,
-        children: C.Z.Messages.PREMIUM_GUILD_TIER_1
+        tier: C.Eu4.TIER_1,
+        children: x.Z.Messages.PREMIUM_GUILD_TIER_1
       })
     }, {
-      tier: x.Eu4.TIER_2,
+      tier: C.Eu4.TIER_2,
       title: (0, n.jsx)(O, {
         guildStickers: I,
         currentGuildTier: f,
-        tier: x.Eu4.TIER_2,
-        children: C.Z.Messages.PREMIUM_GUILD_TIER_2
+        tier: C.Eu4.TIER_2,
+        children: x.Z.Messages.PREMIUM_GUILD_TIER_2
       })
     }, {
-      tier: x.Eu4.TIER_3,
+      tier: C.Eu4.TIER_3,
       title: (0, n.jsx)(O, {
         guildStickers: I,
         currentGuildTier: f,
-        tier: x.Eu4.TIER_3,
-        children: C.Z.Messages.PREMIUM_GUILD_TIER_3
+        tier: C.Eu4.TIER_3,
+        children: x.Z.Messages.PREMIUM_GUILD_TIER_3
       })
     }];
   return (0, n.jsx)(S.Z, {
-    tiers: Z,
+    tiers: j,
     renderTier: e => {
       let i, {
           isAnimatedTo: l,
@@ -171,37 +171,37 @@ s.Z = e => {
         S = d[E - 1],
         O = null != S ? (0, T.A3)(S.tier) : 0,
         A = (0, T.A3)(c.tier),
-        Z = (0, T.ig)(c.tier),
-        j = I.slice(O, A),
-        U = j.length > 0,
+        j = (0, T.ig)(c.tier),
+        Z = I.slice(O, A),
+        U = Z.length > 0,
         G = f < c.tier,
         P = L(I.length),
-        b = N && !G && P === c.tier && A !== j.length,
-        B = b || j.length > 0,
+        b = N && !G && P === c.tier && A !== Z.length,
+        B = b || Z.length > 0,
         y = A - O,
         F = t(872732),
-        w = Z - j.length,
-        k = b ? Math.min(5 - (j.length + 0) % 5, w) : 0,
-        H = [];
-      for (let e = 0; e < k; e++) H.push((0, n.jsx)(p, {}, "placeholder-".concat(e)));
+        k = j - Z.length,
+        H = b ? Math.min(5 - (Z.length + 0) % 5, k) : 0,
+        w = [];
+      for (let e = 0; e < H; e++) w.push((0, n.jsx)(p, {}, "placeholder-".concat(e)));
       let V = P === E + 1 && P > f,
         Y = b || V || E > f;
       return V ? i = (0, n.jsx)(u.Z, {
         guild: s,
         size: o.Button.Sizes.SMALL,
         color: o.Button.Colors.GREEN,
-        buttonText: C.Z.Messages.GUILD_STICKER_SETTINGS_UNLOCK_SLOTS,
+        buttonText: x.Z.Messages.GUILD_STICKER_SETTINGS_UNLOCK_SLOTS,
         targetBoostedGuildTier: f + 1,
         analyticsLocation: {
-          page: x.ZY5.GUILD_SETTINGS,
-          section: x.jXE.GUILD_SETTINGS_STICKERS,
-          object: x.qAy.BOOST_UPSELL_NEXT_LEVEL_HEADER,
+          page: C.ZY5.GUILD_SETTINGS,
+          section: C.jXE.GUILD_SETTINGS_STICKERS,
+          object: C.qAy.BOOST_UPSELL_NEXT_LEVEL_HEADER,
           objectType: (0, T.ge)(c.tier)
         }
       }) : b && (i = (0, n.jsx)(M, {
         guild: s
       })), (0, n.jsxs)(h.Z, {
-        subscriptionCount: v,
+        subscriptionCount: D,
         tier: c,
         onSetRef: r,
         isAnimatedTo: l,
@@ -212,38 +212,38 @@ s.Z = e => {
         guildId: s.id,
         children: [B && (0, n.jsxs)("div", {
           className: R.grid,
-          children: [j.map(e => (0, n.jsx)(g.Z, {
+          children: [Z.map(e => (0, n.jsx)(g.Z, {
             isDisabled: G,
             sticker: e,
             canManageSticker: m(e)
-          }, e.id)), H]
-        }), !G && !b && 0 === j.length && (0, n.jsx)("div", {
+          }, e.id)), w]
+        }), !G && !b && 0 === Z.length && (0, n.jsx)("div", {
           className: a()(R.emptyTierWrapper, R.unusedTierWrapper),
           children: (0, n.jsx)(o.Text, {
             variant: "text-md/normal",
             color: "header-secondary",
-            children: C.Z.Messages.GUILD_STICKER_UNUSED_TIER
+            children: x.Z.Messages.GUILD_STICKER_UNUSED_TIER
           })
         }), G && !U && (0, n.jsxs)("div", {
           className: R.emptyTierWrapper,
           children: [(0, n.jsx)("img", {
-            alt: C.Z.Messages.GUILD_STICKER_SETTINGS_ICON_ALT_TEXT,
+            alt: x.Z.Messages.GUILD_STICKER_SETTINGS_ICON_ALT_TEXT,
             className: R.emptyTierImage,
             src: F
           }), (0, n.jsx)(o.Text, {
             className: R.unlockTierCtaHeading,
             variant: "text-md/normal",
             color: "header-secondary",
-            children: c.tier === x.Eu4.TIER_1 ? C.Z.Messages.GUILD_STICKER_SETTINGS_ADDITIONAL_SLOTS_WITHOUT_TOTAL.format({
+            children: c.tier === C.Eu4.TIER_1 ? x.Z.Messages.GUILD_STICKER_SETTINGS_ADDITIONAL_SLOTS_WITHOUT_TOTAL.format({
               numAdditional: y
-            }) : C.Z.Messages.GUILD_STICKER_SETTINGS_ADDITIONAL_SLOTS.format({
+            }) : x.Z.Messages.GUILD_STICKER_SETTINGS_ADDITIONAL_SLOTS.format({
               numAdditional: y,
               numTotal: A
             })
           }), (0, n.jsx)(o.Button, {
             color: o.Button.Colors.GREEN,
-            onClick: () => D((0, T.vn)(s.id)[c.tier] - s.premiumSubscriberCount, c.tier),
-            children: C.Z.Messages.GUILD_STICKER_SETTINGS_BUY_LEVEL
+            onClick: () => v((0, T.vn)(s.id)[c.tier] - s.premiumSubscriberCount, c.tier),
+            children: x.Z.Messages.GUILD_STICKER_SETTINGS_BUY_LEVEL
           })]
         })]
       }, c.tier)

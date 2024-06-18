@@ -23,14 +23,14 @@ let _ = {
   fetchState: 0
 };
 
-function d(e) {
+function c(e) {
   let {
     applicationId: t,
     guildId: n
   } = e;
   null == _.applicationIdToGuildIds[t] && (_.applicationIdToGuildIds[t] = new Set), _.applicationIdToGuildIds[t].add(n), _.applicationIdToGuildIds[t] = new Set(_.applicationIdToGuildIds[t])
 }
-class c extends(r = o.ZP.PersistedStore) {
+class d extends(r = o.ZP.PersistedStore) {
   initialize(e) {
     if (null != e)
       for (let t in _.lastFetchTimeMs = e.lastFetchTimeMs, _.nextFetchRetryTimeMs = e.nextFetchRetryTimeMs, _.fetchState = e.fetchState, e.applicationIdToGuildIds) _.applicationIdToGuildIds[t] = new Set(e.applicationIdToGuildIds[t])
@@ -51,7 +51,7 @@ class c extends(r = o.ZP.PersistedStore) {
     return _.fetchState
   }
 }
-u(c, "displayName", "MyGuildApplicationsStore"), u(c, "persistKey", "MyGuildApplicationsStore"), t.Z = new c(a.Z, {
+u(d, "displayName", "MyGuildApplicationsStore"), u(d, "persistKey", "MyGuildApplicationsStore"), t.Z = new d(a.Z, {
   LOGOUT: function() {
     _.applicationIdToGuildIds = {}, _.lastFetchTimeMs = null, _.nextFetchRetryTimeMs = null, _.fetchState = 0
   },
@@ -63,7 +63,7 @@ u(c, "displayName", "MyGuildApplicationsStore"), u(c, "persistKey", "MyGuildAppl
       guildIdToApplicationIds: t
     } = e;
     for (let e in _.fetchState = 2, _.lastFetchTimeMs = Date.now(), _.applicationIdToGuildIds = {}, _.nextFetchRetryTimeMs = null, t)
-      for (let n of t[e]) d({
+      for (let n of t[e]) c({
         applicationId: n,
         guildId: e
       })
@@ -82,7 +82,7 @@ u(c, "displayName", "MyGuildApplicationsStore"), u(c, "persistKey", "MyGuildAppl
       application: t,
       guildId: n
     } = e;
-    if (null != t) d({
+    if (null != t) c({
       applicationId: t.id,
       guildId: n
     })

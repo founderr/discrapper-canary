@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return g
+    return C
   }
 }), n(47120);
 var i = n(735250),
@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(924826),
   u = n(91192),
   _ = n(442837),
-  d = n(481060),
-  c = n(749210),
+  c = n(481060),
+  d = n(749210),
   E = n(112724),
   I = n(434404),
   T = n(271383),
@@ -25,25 +25,25 @@ var i = n(735250),
   m = n(314172),
   O = n(981631),
   R = n(689938),
-  C = n(384878);
-let p = (0, E.Z)(function(e) {
+  p = n(384878);
+let g = (0, E.Z)(function(e) {
   let {
     user: t,
     currentUser: n,
     guild: s,
-    guildMember: c,
+    guildMember: d,
     userRoles: E,
     highestRole: I,
     canManageRoles: T,
     width: S,
     onAddRole: N,
-    onRemoveRole: p,
-    onOpenProfile: g
+    onRemoveRole: g,
+    onOpenProfile: C
   } = e;
   o()(null != S, "Unexpected null width");
-  let L = r.useRef({}),
-    v = (e, t) => {
-      null != t ? L.current[e] = t : delete L.current[e]
+  let v = r.useRef({}),
+    L = (e, t) => {
+      null != t ? v.current[e] = t : delete v.current[e]
     },
     D = (0, _.e7)([h.Z], () => h.Z.getRoles(s.id)),
     [M, P] = r.useState(null),
@@ -58,7 +58,7 @@ let p = (0, E.Z)(function(e) {
     }, [D, E, M]),
     [U, b] = r.useState(S),
     G = E.length > y.length,
-    w = T && null != c,
+    w = T && null != d,
     k = r.useRef(null),
     B = r.useRef(null);
   r.useLayoutEffect(() => {
@@ -66,20 +66,20 @@ let p = (0, E.Z)(function(e) {
     let l = null !== (r = null === (t = k.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.width) && void 0 !== r ? r : 0,
       u = null !== (s = null === (i = B.current) || void 0 === i ? void 0 : null === (n = i.getBoundingClientRect()) || void 0 === n ? void 0 : n.width) && void 0 !== s ? s : 0,
       _ = S - (l > 0 ? l + 4 : 0) - (u > 0 ? u + 4 : 0),
-      d = 0;
+      c = 0;
     for (let e = 0; e < 2; e++) {
       let t = 1 === e,
         n = 0;
-      for (let e = d; e < y.length; e++) {
+      for (let e = c; e < y.length; e++) {
         let i = y[e],
-          r = L.current[i.id];
+          r = v.current[i.id];
         if (null == r) continue;
         let s = null !== (a = null === (o = r.getBoundingClientRect()) || void 0 === o ? void 0 : o.width) && void 0 !== a ? a : 0;
         if (n > 0 && !t && n + s > S || n > 0 && t && n + s > _) break;
-        n += s + 4, d++
+        n += s + 4, c++
       }
     }
-    P(d === E.length ? null : d), b(_)
+    P(c === E.length ? null : c), b(_)
   }, [S, y, E]);
   let x = r.useMemo(() => "roles-".concat((0, a.Z)()), []),
     V = (0, l.ZP)({
@@ -101,8 +101,8 @@ let p = (0, E.Z)(function(e) {
           maxWidth: r === y.length - 1 ? U : S
         },
         disableBorderColor: !0,
-        ref: t => v(e.id, t),
-        onRemove: () => p(e),
+        ref: t => L(e.id, t),
+        onRemove: () => g(e),
         canRemove: T ? f.r6(s, n.id, I, e) : (null === (o = e.tags) || void 0 === o ? void 0 : o.guild_connections) === null && t.id === n.id
       }, e.id)
     });
@@ -115,17 +115,17 @@ let p = (0, E.Z)(function(e) {
           ...n
         } = e;
         return (0, i.jsxs)("div", {
-          className: C.root,
+          className: p.root,
           "aria-label": Z,
           ref: t,
           ...n,
-          children: [H, G && (0, i.jsx)(d.TooltipContainer, {
+          children: [H, G && (0, i.jsx)(c.TooltipContainer, {
             text: R.Z.Messages.VIEW_ALL_ROLES,
-            children: (0, i.jsx)(d.Clickable, {
+            children: (0, i.jsx)(c.Clickable, {
               innerRef: k,
-              onClick: g,
-              className: C.showMoreButton,
-              children: (0, i.jsx)(d.Text, {
+              onClick: C,
+              className: p.showMoreButton,
+              children: (0, i.jsx)(c.Text, {
                 variant: "text-xs/medium",
                 children: "+".concat(E.length - y.length)
               })
@@ -134,7 +134,7 @@ let p = (0, E.Z)(function(e) {
             variant: E.length > 0 ? "icon" : "text",
             buttonRef: B,
             guild: s,
-            guildMember: c,
+            guildMember: d,
             highestRole: I,
             onAddRole: N
           })]
@@ -144,7 +144,7 @@ let p = (0, E.Z)(function(e) {
   })
 });
 
-function g(e) {
+function C(e) {
   let {
     user: t,
     currentUser: n,
@@ -152,21 +152,21 @@ function g(e) {
     onOpenProfile: o
   } = e, {
     trackUserProfileAction: a
-  } = (0, N.KZ)(), l = (0, _.e7)([T.ZP], () => T.ZP.getMember(s.id, t.id)), u = null == l ? void 0 : l.roles, d = null == u || 0 === u.length, E = f.e9(s, n.id), [h] = (0, _.Wu)([S.Z], () => [S.Z.can(O.Plq.MANAGE_ROLES, s), null != s ? S.Z.getGuildVersion(s.id) : null]), A = r.useCallback(e => {
+  } = (0, N.KZ)(), l = (0, _.e7)([T.ZP], () => T.ZP.getMember(s.id, t.id)), u = null == l ? void 0 : l.roles, c = null == u || 0 === u.length, E = f.e9(s, n.id), [h] = (0, _.Wu)([S.Z], () => [S.Z.can(O.Plq.MANAGE_ROLES, s), null != s ? S.Z.getGuildVersion(s.id) : null]), A = r.useCallback(e => {
     var n, i;
     a({
       action: "REMOVE_ROLE"
     });
     let r = null !== (i = null == u ? void 0 : u.filter(t => t !== e.id)) && void 0 !== i ? i : [];
-    (null === (n = e.tags) || void 0 === n ? void 0 : n.guild_connections) === null ? c.Z.unassignGuildRoleConnection(s.id, e.id) : I.Z.updateMemberRoles(s.id, t.id, r, [], [e.id])
+    (null === (n = e.tags) || void 0 === n ? void 0 : n.guild_connections) === null ? d.Z.unassignGuildRoleConnection(s.id, e.id) : I.Z.updateMemberRoles(s.id, t.id, r, [], [e.id])
   }, [u, s.id, t.id, a]), m = r.useCallback(e => {
     a({
       action: "ADD_ROLE"
     });
     let n = null != u ? u : []; - 1 === n.indexOf(e) && (n = n.concat([e])), I.Z.updateMemberRoles(s.id, t.id, n, [e], [])
   }, [u, s.id, t.id, a]);
-  return d && !h ? null : (0, i.jsx)("div", {
-    children: (0, i.jsx)(p, {
+  return c && !h ? null : (0, i.jsx)("div", {
+    children: (0, i.jsx)(g, {
       user: t,
       currentUser: n,
       guild: s,

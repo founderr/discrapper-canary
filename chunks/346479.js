@@ -8,8 +8,8 @@ var i = n(697988),
   l = n(367907),
   u = n(555573),
   _ = n(131704),
-  d = n(314897),
-  c = n(592125),
+  c = n(314897),
+  d = n(592125),
   E = n(496675),
   I = n(823379),
   T = n(920303),
@@ -38,7 +38,7 @@ function R(e, t) {
     type: "THREAD_MEMBER_LOCAL_UPDATE",
     id: e.id,
     guildId: e.getGuildId(),
-    userId: d.default.getId(),
+    userId: c.default.getId(),
     isJoining: t
   })
 }
@@ -90,7 +90,7 @@ t.Z = {
   },
   async unarchiveThreadIfNecessary(e) {
     var t;
-    let n = c.Z.getChannel(e),
+    let n = d.Z.getChannel(e),
       i = E.Z.can(N.Plq.MANAGE_THREADS, n);
     null != n && n.isArchivedThread() && (i || (null === (t = n.threadMetadata) || void 0 === t ? void 0 : t.locked) !== !0) && await this.unarchiveThread(n, !1)
   },
@@ -284,7 +284,7 @@ t.Z = {
           members: l,
           has_more: u,
           first_messages: _,
-          most_recent_messages: d
+          most_recent_messages: c
         }
       } = i;
       null == r ? s.Z.dispatch({
@@ -301,7 +301,7 @@ t.Z = {
         tagFilter: o,
         threads: r,
         firstMessages: _,
-        mostRecentMessages: d,
+        mostRecentMessages: c,
         members: (null != l ? l : []).map(e => (0, f.Z)(e)),
         owners: r.map(e => e.owner).filter(I.lm),
         hasMore: u
@@ -322,7 +322,7 @@ t.Z = {
           threads: l,
           members: u,
           first_messages: _,
-          most_recent_messages: d
+          most_recent_messages: c
         }
       } = await r.tn.get({
         url: N.ANM.THREAD_SEARCH(t),
@@ -338,7 +338,7 @@ t.Z = {
       members: u,
       guildId: e,
       firstMessages: _,
-      mostRecentMessages: d
+      mostRecentMessages: c
     }), l.map(e => e.id)
   }
 }

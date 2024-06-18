@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return c
+    return d
   }
 });
 var i = n(735250);
@@ -13,25 +13,25 @@ var r = n(120356),
   l = n(659101),
   u = n(689938),
   _ = n(559567),
-  d = n(379916);
+  c = n(379916);
 
-function c(e) {
+function d(e) {
   let {
     user: t,
     guild: n,
     guildMember: r,
-    showBorder: c
+    showBorder: d
   } = e;
   return null == n || null == r ? null : (0, i.jsxs)(l.Z, {
     children: [(0, i.jsx)(o.Heading, {
       variant: "eyebrow",
-      className: d.title,
+      className: c.title,
       children: u.Z.Messages.ROLES_LIST.format({
         numRoles: r.roles.length
       })
     }), (0, i.jsx)(a.ZP, {
       roleClassName: s()(_.rolePill, {
-        [_.rolePillBorder]: c
+        [_.rolePillBorder]: d
       }),
       className: _.roles,
       guild: n,

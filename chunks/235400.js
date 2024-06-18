@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return L
   }
 }), n(47120);
 var i = n(735250),
@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(100527),
   u = n(906732),
   _ = n(335131),
-  d = n(884697),
-  c = n(449217),
+  c = n(884697),
+  d = n(449217),
   E = n(223143),
   I = n(311395),
   T = n(197115),
@@ -25,11 +25,11 @@ var i = n(735250),
   m = n(240781),
   O = n(818611),
   R = n(981631),
-  C = n(474936),
-  p = n(689938),
-  g = n(45538);
+  p = n(474936),
+  g = n(689938),
+  C = n(45538);
 
-function L(e) {
+function v(e) {
   let {
     user: t,
     categories: n,
@@ -41,8 +41,8 @@ function L(e) {
     isTryItOutFlow: f,
     guild: R
   } = e, {
-    pendingAvatarDecoration: L,
-    setPendingAvatarDecoration: v,
+    pendingAvatarDecoration: v,
+    setPendingAvatarDecoration: L,
     savedAvatarDecoration: D
   } = (0, h.Z)({
     analyticsLocations: o,
@@ -51,13 +51,13 @@ function L(e) {
   }), [M, P] = r.useState(() => {
     var e, t;
     if (null != E) return E;
-    let i = (0, d.iC)(s, n);
-    return null != S ? null !== (e = i.find(e => e.id === S)) && void 0 !== e ? e : null : void 0 !== L ? L : null == D ? null : null !== (t = i.find(e => (0, A.sr)(e, D))) && void 0 !== t ? t : null
+    let i = (0, c.iC)(s, n);
+    return null != S ? null !== (e = i.find(e => e.id === S)) && void 0 !== e ? e : null : void 0 !== v ? v : null == D ? null : null !== (t = i.find(e => (0, A.sr)(e, D))) && void 0 !== t ? t : null
   }), {
     product: y,
     purchase: U
-  } = (0, c.Z)(null == M ? void 0 : M.skuId), b = N.ZP.canUseCollectibles(t), G = r.useRef(null), w = (0, I.Z)(o), k = (0, A.sr)(M, void 0 === L ? D : L), B = () => {
-    v(M), u()
+  } = (0, d.Z)(null == M ? void 0 : M.skuId), b = N.ZP.canUseCollectibles(t), G = r.useRef(null), w = (0, I.Z)(o), k = (0, A.sr)(M, void 0 === v ? D : v), B = () => {
+    L(M), u()
   }, x = r.useCallback(e => {
     u(), (0, _.mK)({
       analyticsLocations: o,
@@ -68,16 +68,16 @@ function L(e) {
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsxs)(a.ModalHeader, {
       separator: !1,
-      className: g.modalHeader,
+      className: C.modalHeader,
       children: [(0, i.jsx)(a.Heading, {
         variant: "heading-lg/semibold",
-        children: p.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
+        children: g.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
       }), (0, i.jsx)(a.ModalCloseButton, {
-        className: g.modalCloseButton,
+        className: C.modalCloseButton,
         onClick: u
       })]
     }), (0, i.jsxs)(a.ModalContent, {
-      className: g.modalContent,
+      className: C.modalContent,
       scrollbarType: "none",
       children: [(0, i.jsx)(O.Z, {
         user: t,
@@ -89,40 +89,40 @@ function L(e) {
         },
         onOpenShop: x
       }), (0, i.jsx)(m.Z, {
-        className: g.modalPreview,
+        className: C.modalPreview,
         user: t,
         guildId: null == R ? void 0 : R.id,
         avatarDecorationOverride: M
       })]
     }), (0, i.jsxs)(a.ModalFooter, {
-      className: g.modalFooter,
-      children: [null != U && (!(0, d.qS)(U) || b) || null === M ? (0, i.jsx)(a.Button, {
+      className: C.modalFooter,
+      children: [null != U && (!(0, c.qS)(U) || b) || null === M ? (0, i.jsx)(a.Button, {
         onClick: B,
         disabled: k,
-        children: p.Z.Messages.AVATAR_DECORATION_MODAL_APPLY
-      }) : null == U && (b || !(0, d.G1)(y)) ? (0, i.jsx)(a.Button, {
-        className: g.modalFooterShopButton,
+        children: g.Z.Messages.AVATAR_DECORATION_MODAL_APPLY
+      }) : null == U && (b || !(0, c.G1)(y)) ? (0, i.jsx)(a.Button, {
+        className: C.modalFooterShopButton,
         onClick: () => x(null == y ? void 0 : y.skuId),
-        children: p.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
+        children: g.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
       }) : (0, i.jsx)(T.Z, {
-        subscriptionTier: C.Si.TIER_2,
-        buttonText: N.ZP.isPremium(t) ? p.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : p.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+        subscriptionTier: p.Si.TIER_2,
+        buttonText: N.ZP.isPremium(t) ? g.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : g.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
       }), (0, i.jsx)(a.Button, {
         look: a.Button.Looks.LINK,
         color: a.Button.Colors.PRIMARY,
         onClick: u,
-        children: p.Z.Messages.CANCEL
+        children: g.Z.Messages.CANCEL
       })]
     })]
   })
 }
 
-function v(e) {
+function L(e) {
   let {
     transitionState: t,
     analyticsLocations: n,
-    onClose: d,
-    onCloseModal: c,
+    onClose: c,
+    onCloseModal: d,
     initialSelectedDecoration: I,
     initialSelectedDecorationId: T,
     isTryItOutFlow: h,
@@ -131,10 +131,10 @@ function v(e) {
     analyticsLocations: m
   } = (0, u.ZP)(n, l.Z.EDIT_AVATAR_DECORATION_MODAL), {
     categories: O,
-    purchases: C,
-    isFetchingCategories: p,
-    isFetchingPurchases: v
-  } = (0, E.Z)(), D = p || v && 0 === C.size;
+    purchases: p,
+    isFetchingCategories: g,
+    isFetchingPurchases: L
+  } = (0, E.Z)(), D = g || L && 0 === p.size;
   return r.useEffect(() => {
     f.default.track(R.rMx.OPEN_MODAL, {
       type: "Edit Avatar Decoration Modal",
@@ -149,21 +149,21 @@ function v(e) {
     value: m,
     children: (0, i.jsx)(a.ModalRoot, {
       transitionState: t,
-      className: g.modal,
+      className: C.modal,
       size: D ? a.ModalSize.DYNAMIC : a.ModalSize.MEDIUM,
       children: D ? (0, i.jsx)(a.Spinner, {
-        className: g.spinner,
+        className: C.spinner,
         type: a.Spinner.Type.SPINNING_CIRCLE
-      }) : (0, i.jsx)(L, {
+      }) : (0, i.jsx)(v, {
         user: A,
         guild: N,
         categories: O,
-        purchases: C,
+        purchases: p,
         analyticsLocations: m,
         initialSelectedDecoration: I,
         initialSelectedDecorationId: T,
         onClose: () => {
-          c(), null == d || d()
+          d(), null == c || c()
         },
         isTryItOutFlow: h
       })

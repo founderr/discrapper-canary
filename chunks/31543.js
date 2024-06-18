@@ -7,8 +7,8 @@ var i = n(735250),
   l = n(806966),
   u = n(28546),
   _ = n(453070),
-  d = n(611480),
-  c = n(689938),
+  c = n(611480),
+  d = n(689938),
   E = n(311240);
 let I = r.forwardRef(function(e, t) {
   let {
@@ -23,7 +23,7 @@ let I = r.forwardRef(function(e, t) {
     isSearchSuggestion: e.isSearchSuggestion
   }), s.Z), A = l.ZN.useStore(e => e.searchPlaceholder), m = l.ZN.useStore(e => e.inspectedExpressionPosition, s.Z), O = r.useCallback(e => {
     var t;
-    l.ZN.setActiveCategoryIndex("" === e ? 0 : d.c), l.ZN.setInspectedExpressionPosition(0, 0), l.ZN.setSearchPlaceholder(null), (0, u.ql)(e), null === (t = I.current) || void 0 === t || t.scrollTo(0)
+    l.ZN.setActiveCategoryIndex("" === e ? 0 : c.c), l.ZN.setInspectedExpressionPosition(0, 0), l.ZN.setSearchPlaceholder(null), (0, u.ql)(e), null === (t = I.current) || void 0 === t || t.scrollTo(0)
   }, [I]), R = r.useCallback(() => {
     (0, u.ql)("")
   }, []);
@@ -45,7 +45,7 @@ let I = r.forwardRef(function(e, t) {
       query: f,
       ref: S,
       size: a.ZP.Sizes.MEDIUM,
-      placeholder: null != A ? A : h ? c.Z.Messages.SEARCH_FOR_STICKERS : c.Z.Messages.NO_STICKERS_TO_SEARCH_THROUGH,
+      placeholder: null != A ? A : h ? d.Z.Messages.SEARCH_FOR_STICKERS : d.Z.Messages.NO_STICKERS_TO_SEARCH_THROUGH,
       onClear: R,
       onKeyDown: n,
       onQueryChange: O,
@@ -54,9 +54,9 @@ let I = r.forwardRef(function(e, t) {
       useKeyboardNavigation: !1,
       inputProps: {
         "aria-haspopup": "grid",
-        "aria-controls": d.Vr,
+        "aria-controls": c.Vr,
         "aria-expanded": !0,
-        "aria-activedescendant": (0, o.NE)(d.Vr, m.columnIndex, m.rowIndex)
+        "aria-activedescendant": (0, o.NE)(c.Vr, m.columnIndex, m.rowIndex)
       }
     })
   })

@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   I8: function() {
-    return r
+    return i
   },
   KW: function() {
-    return h
+    return m
   },
   LT: function() {
     return u
@@ -30,8 +30,8 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let i = 2 / 3,
-  r = 12;
+let r = 2 / 3,
+  i = 12;
 class o {
   getWidth(e) {
     return this.getRenderOptions(e).columnWidth
@@ -63,8 +63,8 @@ let c = {
   },
   d = e => {
     let t = e - 2,
-      n = Math.ceil(t * i);
+      n = Math.ceil(t * r);
     return [t, n]
   },
   u = 12,
-  h = e => 60 + d(e - 2 * u)[1] + 24 + 3 * r
+  m = e => 60 + d(e - 2 * u)[1] + 24 + 3 * i

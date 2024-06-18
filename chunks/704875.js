@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 }), n(47120);
 var i = n(735250);
@@ -14,10 +14,10 @@ var r = n(120356),
   u = n(697692),
   _ = n(946278);
 
-function d(e, t, n) {
+function c(e, t, n) {
   var r, u;
   let {
-    attributes: d,
+    attributes: c,
     children: E,
     element: I,
     decorations: T
@@ -35,17 +35,17 @@ function d(e, t, n) {
       if (null === (u = I.codeBlockState) || void 0 === u ? void 0 : u.isInCodeBlock) return (0, i.jsx)("div", {
         className: l.codeLine,
         spellCheck: null == I.codeBlockState || null == I.codeBlockState.lang,
-        ...d,
+        ...c,
         children: E
       });
       return (0, i.jsx)("div", {
-        ...d,
+        ...c,
         children: E
       });
     case "blockQuote": {
       let e = s()(_.blockquoteContainer, _.slateBlockquoteContainer);
       return (0, i.jsxs)("div", {
-        ...d,
+        ...c,
         className: e,
         children: [(0, i.jsx)("span", {
           contentEditable: !1,
@@ -56,24 +56,24 @@ function d(e, t, n) {
       })
     }
     case "emoji":
-      return (0, i.jsxs)(c, {
-        attributes: d,
+      return (0, i.jsxs)(d, {
+        attributes: c,
         className: h,
         children: [(0, i.jsx)(o.dy, {
           emoji: I.emoji
         }), E]
       });
     case "customEmoji":
-      return (0, i.jsxs)(c, {
-        attributes: d,
+      return (0, i.jsxs)(d, {
+        attributes: c,
         className: h,
         children: [(0, i.jsx)(o.wP, {
           emoji: I.emoji
         }), E]
       });
     case "textMention":
-      return (0, i.jsxs)(c, {
-        attributes: d,
+      return (0, i.jsxs)(d, {
+        attributes: c,
         className: h,
         children: [(0, i.jsx)(o.Ox, {
           text: I.name,
@@ -82,8 +82,8 @@ function d(e, t, n) {
         }), E]
       });
     case "userMention":
-      return (0, i.jsxs)(c, {
-        attributes: d,
+      return (0, i.jsxs)(d, {
+        attributes: c,
         className: h,
         children: [(0, i.jsx)(o.cB, {
           id: I.userId,
@@ -92,8 +92,8 @@ function d(e, t, n) {
         }), E]
       });
     case "roleMention":
-      return (0, i.jsxs)(c, {
-        attributes: d,
+      return (0, i.jsxs)(d, {
+        attributes: c,
         className: h,
         children: [(0, i.jsx)(o.Vq, {
           id: I.roleId,
@@ -101,32 +101,32 @@ function d(e, t, n) {
         }), E]
       });
     case "channelMention":
-      return (0, i.jsxs)(c, {
-        attributes: d,
+      return (0, i.jsxs)(d, {
+        attributes: c,
         className: h,
         children: [(0, i.jsx)(o.Io, {
           id: I.channelId
         }), E]
       });
     case "staticRouteLink":
-      return (0, i.jsxs)(c, {
-        attributes: d,
+      return (0, i.jsxs)(d, {
+        attributes: c,
         className: h,
         children: [(0, i.jsx)(o.NY, {
           id: I.channelId
         }), E]
       });
     case "soundboard":
-      return (0, i.jsxs)(c, {
-        attributes: d,
+      return (0, i.jsxs)(d, {
+        attributes: c,
         className: h,
         children: [(0, i.jsx)(o.mb, {
           id: I.soundId
         }), E]
       });
     case "commandMention":
-      return (0, i.jsxs)(c, {
-        attributes: d,
+      return (0, i.jsxs)(d, {
+        attributes: c,
         className: h,
         children: [(0, i.jsx)(o.Wf, {
           text: I.commandName,
@@ -134,8 +134,8 @@ function d(e, t, n) {
         }), E]
       });
     case "timestamp":
-      return (0, i.jsxs)(c, {
-        attributes: d,
+      return (0, i.jsxs)(d, {
+        attributes: c,
         className: h,
         children: [(0, i.jsx)(o.EK, {
           timestamp: I.parsed
@@ -145,7 +145,7 @@ function d(e, t, n) {
       return null
   }
 }
-let c = e => {
+let d = e => {
   let {
     className: t,
     attributes: n,

@@ -6,8 +6,8 @@ n.d(t, {
 }), n(47120);
 var i, r, s, o, a, l, u = n(442837),
   _ = n(846519),
-  d = n(570140),
-  c = n(70956),
+  c = n(570140),
+  d = n(70956),
   E = n(592125),
   I = n(496675),
   T = n(981631);
@@ -30,7 +30,7 @@ function S(e, t, n) {
     cooldownEndTimestamp: i,
     timer: new _.V7
   }, h[t][e.id].timer.start(1e3, () => {
-    d.Z.dispatch({
+    c.Z.dispatch({
       type: "SLOWMODE_SET_COOLDOWN",
       channelId: e.id,
       slowmodeType: t,
@@ -42,7 +42,7 @@ function S(e, t, n) {
 function f(e, t) {
   let n = E.Z.getChannel(e);
   if (null == n) return !1;
-  S(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * c.Z.Millis.SECOND + 100)
+  S(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * d.Z.Millis.SECOND + 100)
 }
 
 function N(e) {
@@ -65,7 +65,7 @@ l = "SlowmodeStore", (a = "displayName") in(o = A) ? Object.defineProperty(o, a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[a] = l, t.Z = new A(d.Z, {
+}) : o[a] = l, t.Z = new A(c.Z, {
   SLOWMODE_RESET_COOLDOWN: function(e) {
     let {
       channelId: t,
@@ -99,7 +99,7 @@ l = "SlowmodeStore", (a = "displayName") in(o = A) ? Object.defineProperty(o, a,
         var n;
         let t = h[e][i.id],
           r = i.rateLimitPerUser;
-        if (null != t && t.rateLimitPerUser !== r) S(i, e, Math.min(null !== (n = null == t ? void 0 : t.cooldownMs) && void 0 !== n ? n : 0, r * c.Z.Millis.SECOND))
+        if (null != t && t.rateLimitPerUser !== r) S(i, e, Math.min(null !== (n = null == t ? void 0 : t.cooldownMs) && void 0 !== n ? n : 0, r * d.Z.Millis.SECOND))
       }
     })
   },

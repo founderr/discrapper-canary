@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 });
 var i = n(735250),
@@ -22,7 +22,7 @@ function _(e) {
   }, [a, i, _, n]), null
 }
 
-function d(e) {
+function c(e) {
   return (0, i.jsx)(a.Z, {
     confettiLocation: e.confettiLocation,
     children: (0, i.jsx)(_, {

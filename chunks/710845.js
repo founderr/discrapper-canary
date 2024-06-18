@@ -8,10 +8,10 @@ let s = Date.now(),
   for (var i = arguments.length, a = Array(i > 3 ? i - 3 : 0), l = 3; l < i; l++) a[l - 3] = arguments[l];
   let u = Date.now(),
     _ = ((u - s) / 1e3).toFixed(3),
-    d = ((u - o) / 1e3).toFixed(3),
-    c = "Σ:".concat(_, "s, Δ:").concat(d, "s");
+    c = ((u - o) / 1e3).toFixed(3),
+    d = "Σ:".concat(_, "s, Δ:").concat(c, "s");
   o = u, r.Hj({
     name: e,
-    timing: c
+    timing: d
   }, n, ...a), "file-only" !== t && console[t]("%c[".concat(e, "]"), "\nfont-weight: bold;\ncolor: purple;\n", n, ...a)
 }), t.Z = i.Y

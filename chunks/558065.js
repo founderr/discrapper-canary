@@ -20,7 +20,7 @@ function u(e, t, n) {
   }) : e[t] = n, e
 }
 let _ = new a.Y("DirectVideo");
-class d {
+class c {
   addref() {
     this.refcount++
   }
@@ -31,11 +31,11 @@ class d {
     u(this, "refcount", void 0), u(this, "stream", void 0), this.refcount = 1, this.stream = window.createDiscordStream(e)
   }
 }
-let c = new Map;
+let d = new Map;
 
 function E(e) {
-  let t = c.get(e);
-  null != t && t.release() && ((0, l.zS)().removeDirectVideoOutputSink(e), c.delete(e))
+  let t = d.get(e);
+  null != t && t.release() && ((0, l.zS)().removeDirectVideoOutputSink(e), d.delete(e))
 }
 
 function I(e) {
@@ -94,7 +94,7 @@ function I(e) {
         var i;
         let n;
         _.info("attaching srcObject for ".concat(t));
-        return e.srcObject = (i = t, null == (n = c.get(i)) ? (n = new d(i), (0, l.zS)().addDirectVideoOutputSink(i), c.set(i, n)) : n.addref(), n.stream), () => {
+        return e.srcObject = (i = t, null == (n = d.get(i)) ? (n = new c(i), (0, l.zS)().addDirectVideoOutputSink(i), d.set(i, n)) : n.addref(), n.stream), () => {
           E(t), e.srcObject = null
         }
       }

@@ -13,7 +13,7 @@ n.d(t, {
     return O
   },
   Qb: function() {
-    return c
+    return d
   },
   W2: function() {
     return E
@@ -42,8 +42,8 @@ var i = n(379649),
   l = n(626135),
   u = n(70956),
   _ = n(295141),
-  d = n(981631);
-async function c(e) {
+  c = n(981631);
+async function d(e) {
   let t = await _.X2(e);
   r.Z.dispatch({
     type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS",
@@ -140,7 +140,7 @@ async function m(e) {
     analyticsContext: s,
     onBeforeDispatchNewListing: o
   } = e, u = await _.aG(t, n, i);
-  return l.default.track(d.rMx.ROLE_SUBSCRIPTION_LISTING_CREATED, {
+  return l.default.track(c.rMx.ROLE_SUBSCRIPTION_LISTING_CREATED, {
     role_subscription_listing_id: u.id,
     role_subscription_group_listing_id: n,
     template_name: s.templateCategory,

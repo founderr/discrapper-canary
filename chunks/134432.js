@@ -24,8 +24,8 @@ var i = n(392711),
   l = n(261470),
   u = n(931619),
   _ = n(921948),
-  d = n(981631);
-let c = [16, 20, 22, 24, 28, 32, 40, 44, 48, 56, 60, 64, 80, 96, 100, 128, 160, 240, 256, 300, 320, 480, 512, 600, 640, 1024, 1280, 1536, 2048, 3072, 4096],
+  c = n(981631);
+let d = [16, 20, 22, 24, 28, 32, 40, 44, 48, 56, 60, 64, 80, 96, 100, 128, 160, 240, 256, 300, 320, 480, 512, 600, 640, 1024, 1280, 1536, 2048, 3072, 4096],
   E = new(o())({
     max: 1e3
   });
@@ -85,7 +85,7 @@ function S(e, t) {
         loaded: !0
       })
     })
-  }), d.dG4;
+  }), c.dG4;
   {
     let i;
     return null == n && (n = {
@@ -101,10 +101,10 @@ function f(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   if (n) {
-    let t = c.filter(t => t <= e).pop();
+    let t = d.filter(t => t <= e).pop();
     if (null != t && e / t <= 1.25) return t
   }
-  return null !== (t = c.find(t => e <= t)) && void 0 !== t ? t : c[c.length - 1]
+  return null !== (t = d.find(t => e <= t)) && void 0 !== t ? t : d[d.length - 1]
 }
 
 function N(e) {
@@ -116,11 +116,11 @@ function N(e) {
     maxHeight: o,
     ratio: l = 1,
     format: u = null,
-    quality: d = null
-  } = e, c = n, E = i;
-  l < 1 && (c = Math.round(n * l), E = Math.round(i * l)), null != s && (c = Math.min(c, s)), null != o && (E = Math.min(E, o));
+    quality: c = null
+  } = e, d = n, E = i;
+  l < 1 && (d = Math.round(n * l), E = Math.round(i * l)), null != s && (d = Math.min(d, s)), null != o && (E = Math.min(E, o));
   let I = (0, _.Z)();
-  return c *= I,
+  return d *= I,
     function(e) {
       let {
         src: t,
@@ -130,18 +130,18 @@ function N(e) {
         targetHeight: o,
         format: l = null,
         quality: u = null
-      } = e, [_, d] = function(e) {
+      } = e, [_, c] = function(e) {
         let [t, n] = e.split("?");
         return [t, a.parse(n)]
       }(t);
-      return null != l && (d.format = l), null != u && (d.quality = u), (s !== n || o !== i) && (d.width = 0 | s, d.height = 0 | o), !r().isEmpty(d) && (_ += "?" + a.stringify(d)), _
+      return null != l && (c.format = l), null != u && (c.quality = u), (s !== n || o !== i) && (c.width = 0 | s, c.height = 0 | o), !r().isEmpty(c) && (_ += "?" + a.stringify(c)), _
     }({
       src: t,
       sourceWidth: n,
       sourceHeight: i,
-      targetWidth: c,
+      targetWidth: d,
       targetHeight: E *= I,
       format: u,
-      quality: d
+      quality: c
     })
 }

@@ -3,8 +3,8 @@ var i, r, s, o, a = n(392711),
   l = n.n(a),
   u = n(442837),
   _ = n(570140),
-  d = n(314897);
-let c = Object.freeze([]),
+  c = n(314897);
+let d = Object.freeze([]),
   E = {};
 
 function I(e) {
@@ -14,19 +14,19 @@ function I(e) {
 }
 class T extends(o = u.ZP.Store) {
   initialize() {
-    this.waitFor(d.default)
+    this.waitFor(c.default)
   }
   getSessions() {
     return E
   }
   getSession() {
-    let e = d.default.getSessionId();
+    let e = c.default.getSessionId();
     return null != e ? this.getSessionById(e) : null
   }
   getRemoteActivities() {
-    let e = d.default.getSessionId(),
+    let e = c.default.getSessionId(),
       t = l().find(E, t => t.active && t.sessionId !== e);
-    return null != t ? t.activities : c
+    return null != t ? t.activities : d
   }
   getSessionById(e) {
     return E[e]

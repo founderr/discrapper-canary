@@ -39,8 +39,8 @@ function a(e) {
     onClick: l,
     titleWithQuery: u,
     titleWithoutQuery: _,
-    Component: d,
-    getProps: c,
+    Component: c,
+    getProps: d,
     getQuery: E,
     key: I,
     indexOffset: T = 0,
@@ -51,8 +51,8 @@ function a(e) {
   if (null == f && (null == s || 0 === s.length)) return null;
   let N = null == s ? void 0 : s.map((e, t) => {
     let i = t + T,
-      s = c(e, i);
-    return (0, r.createElement)(d, {
+      s = d(e, i);
+    return (0, r.createElement)(c, {
       onClick: l,
       onHover: a,
       selected: n === i,

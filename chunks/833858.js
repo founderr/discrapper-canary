@@ -4,7 +4,7 @@ n.d(t, {
     return I
   },
   V: function() {
-    return c
+    return d
   },
   tV: function() {
     return E
@@ -18,8 +18,8 @@ var i = n(981631),
   l = n(991254),
   u = n(485686),
   _ = n(400976),
-  d = n(443909);
-let c = () => ({
+  c = n(443909);
+let d = () => ({
     [i.tNA.CHILLING]: {
       title: r.Z.Messages.STATUS_CHILLING,
       icon: o,
@@ -52,14 +52,14 @@ let c = () => ({
     },
     [i.tNA.WATCHING]: {
       title: r.Z.Messages.STATUS_WATCHING,
-      icon: d,
+      icon: c,
       color: "#7C5571"
     }
   }),
   E = e => {
     if ((null == e ? void 0 : e.type) !== i.IIU.HANG_STATUS || (null == e ? void 0 : e.state) == null) return null;
     let t = e.state;
-    return t === i.tNA.CUSTOM ? null : c()[t]
+    return t === i.tNA.CUSTOM ? null : d()[t]
   },
   I = e => {
     var t;

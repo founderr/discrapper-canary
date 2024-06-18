@@ -9,8 +9,8 @@ var r = n(392711),
   l = n(904245),
   u = n(911969),
   _ = n(933557),
-  d = n(699516),
-  c = n(594174),
+  c = n(699516),
+  d = n(594174),
   E = n(895924),
   I = n(689079),
   T = n(981631),
@@ -87,7 +87,7 @@ let f = [...s()(T.nkL).values().map(e => ({
     var n, r;
     let {
       channel: s
-    } = t, u = (0, _.F6)(s, c.default, d.Z), E = h.Z.Messages.LEAVE_GROUP_DM_TITLE.format({
+    } = t, u = (0, _.F6)(s, d.default, c.Z), E = h.Z.Messages.LEAVE_GROUP_DM_TITLE.format({
       name: u
     }), I = h.Z.Messages.LEAVE_GROUP_DM_BODY.format({
       name: u

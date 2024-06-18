@@ -3,13 +3,13 @@ var i, r, s, o, a = n(442837),
   l = n(570140),
   u = n(981631);
 let _ = {},
-  d = null;
-class c extends(o = a.ZP.Store) {
+  c = null;
+class d extends(o = a.ZP.Store) {
   get applicationStatistics() {
     return _
   }
   get lastFetched() {
-    return d
+    return c
   }
   getGameDuration(e) {
     let t = _[e];
@@ -37,19 +37,19 @@ class c extends(o = a.ZP.Store) {
     return n
   }
 }
-s = "LibraryApplicationStatisticsStore", (r = "displayName") in(i = c) ? Object.defineProperty(i, r, {
+s = "LibraryApplicationStatisticsStore", (r = "displayName") in(i = d) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.Z = new c(l.Z, {
+}) : i[r] = s, t.Z = new d(l.Z, {
   USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: function(e) {
     let {
       statistics: t
     } = e;
     t.forEach(e => {
       _[e.application_id] = e
-    }), d = Date.now()
+    }), c = Date.now()
   },
   ACTIVITY_UPDATE_START: function(e) {
     let {
@@ -69,6 +69,6 @@ s = "LibraryApplicationStatisticsStore", (r = "displayName") in(i = c) ? Object.
     }
   },
   LOGOUT: function() {
-    _ = {}, d = null
+    _ = {}, c = null
   }
 })

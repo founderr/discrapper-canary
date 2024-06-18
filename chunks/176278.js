@@ -18,8 +18,8 @@ function u(e) {
     src: r,
     unicodeEmoji: u,
     name: _,
-    size: d = 20,
-    enableTooltip: c = !0,
+    size: c = 20,
+    enableTooltip: d = !0,
     enableHeight: E = !0,
     onClick: I
   } = e;
@@ -27,7 +27,7 @@ function u(e) {
   return (0, i.jsx)(o.TooltipContainer, {
     text: _,
     "aria-label": !1,
-    shouldShow: c,
+    shouldShow: d,
     element: "span",
     children: (t = (0, i.jsx)("img", {
       alt: "",
@@ -37,18 +37,18 @@ function u(e) {
       className: s()(l.roleIcon, n, {
         [l.clickable]: null != I
       }),
-      height: E ? d : void 0,
+      height: E ? c : void 0,
       src: r,
-      width: d
+      width: c
     }), (null != u && (t = (0, i.jsx)("img", {
       alt: "",
       "aria-label": u.allNamesString,
       className: s()(l.roleIcon, n, {
         [l.clickable]: null != I
       }),
-      height: E ? d : void 0,
+      height: E ? c : void 0,
       src: u.url,
-      width: d
+      width: c
     })), null == I) ? (0, i.jsx)(o.FocusRing, {
       offset: {
         left: 5

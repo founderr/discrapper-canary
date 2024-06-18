@@ -4,8 +4,8 @@ var i, r, s, o, a = n(392711),
   l = n.n(a),
   u = n(442837),
   _ = n(570140),
-  d = n(786761),
-  c = n(131704),
+  c = n(786761),
+  d = n(131704),
   E = n(23750),
   I = n(598077),
   T = n(592125),
@@ -18,7 +18,7 @@ let A = new Set,
   O = {};
 
 function R(e, t) {
-  c.AW.has(e.type) && C(function(e) {
+  d.AW.has(e.type) && p(function(e) {
     if (!(e.id in m)) {
       var t;
       m[e.id] = {
@@ -33,18 +33,18 @@ function R(e, t) {
   }(e), t)
 }
 
-function C(e, t) {
+function p(e, t) {
   var n;
   let i = (null !== (n = O[e.parentId]) && void 0 !== n ? n : 0) + 1;
   O[e.parentId] = i, t(e)
 }
 
-function p(e) {
+function g(e) {
   var t;
-  null === (t = e.threads) || void 0 === t || t.forEach(g)
+  null === (t = e.threads) || void 0 === t || t.forEach(C)
 }
 
-function g(e) {
+function C(e) {
   R(e, t => {
     var n;
     null != e.messageCount && (t.count = e.messageCount);
@@ -53,26 +53,26 @@ function g(e) {
   })
 }
 
-function L(e) {
+function v(e) {
   if (null != e && !(e.id in m)) {
     let t = T.Z.getChannel(e.id);
-    if (null != t) return g(t), !0
+    if (null != t) return C(t), !0
   }
   return !1
 }
 
-function v(e) {
+function L(e) {
   let {
     channel: t
   } = e;
-  g(t)
+  C(t)
 }
 
 function D(e) {
   let {
     threads: t
   } = e;
-  t.forEach(L)
+  t.forEach(v)
 }
 
 function M(e) {
@@ -81,8 +81,8 @@ function M(e) {
     threads: n
   } = e;
   for (let e of t)
-    for (let t of e) L(t.thread);
-  n.forEach(L)
+    for (let t of e) v(t.thread);
+  n.forEach(v)
 }
 class P extends(i = u.ZP.Store) {
   initialize() {
@@ -95,7 +95,7 @@ class P extends(i = u.ZP.Store) {
   getMostRecentMessage(e) {
     var t, n;
     let i = m[e];
-    return null == i ? null : (null == i.mostRecentMessage && null != i.mostRecentRawMessage && (i.mostRecentMessage = null !== (t = h.Z.getMessage(e, i.mostRecentRawMessage.id)) && void 0 !== t ? t : (0, d.e5)(i.mostRecentRawMessage), i.mostRecentRawMessage = null), null !== (n = i.mostRecentMessage) && void 0 !== n ? n : null)
+    return null == i ? null : (null == i.mostRecentMessage && null != i.mostRecentRawMessage && (i.mostRecentMessage = null !== (t = h.Z.getMessage(e, i.mostRecentRawMessage.id)) && void 0 !== t ? t : (0, c.e5)(i.mostRecentRawMessage), i.mostRecentRawMessage = null), null !== (n = i.mostRecentMessage) && void 0 !== n ? n : null)
   }
   getChannelThreadsVersion(e) {
     return O[e]
@@ -111,7 +111,7 @@ o = "ThreadMessageStore", (s = "displayName") in(r = P) ? Object.defineProperty(
   writable: !0
 }) : r[s] = o, t.Z = new P(_.Z, {
   CONNECTION_OPEN: function(e) {
-    O = {}, A.clear(), e.guilds.forEach(p)
+    O = {}, A.clear(), e.guilds.forEach(g)
   },
   OVERLAY_INITIALIZE: function(e) {
     let {
@@ -131,7 +131,7 @@ o = "ThreadMessageStore", (s = "displayName") in(r = P) ? Object.defineProperty(
     let {
       guild: t
     } = e;
-    p(t)
+    g(t)
   },
   GUILD_DELETE: function(e) {
     var t;
@@ -143,14 +143,14 @@ o = "ThreadMessageStore", (s = "displayName") in(r = P) ? Object.defineProperty(
       return n && delete O[e.parentId], n
     })
   },
-  THREAD_CREATE: v,
-  THREAD_UPDATE: v,
+  THREAD_CREATE: L,
+  THREAD_UPDATE: L,
   THREAD_LIST_SYNC: function(e) {
     let {
       threads: t,
       mostRecentMessages: n
     } = e;
-    t.forEach(g), null == n || n.forEach(e => {
+    t.forEach(C), null == n || n.forEach(e => {
       let t = T.Z.getChannel(e.channel_id);
       null != t && e.type !== N.uaV.THREAD_STARTER_MESSAGE && R(t, t => {
         t.mostRecentRawMessage = e, t.mostRecentMessage = null
@@ -183,7 +183,7 @@ o = "ThreadMessageStore", (s = "displayName") in(r = P) ? Object.defineProperty(
     } = e;
     if (n || i || null != r) return !1;
     let s = T.Z.getChannel(t.channel_id);
-    if (null == s || !c.Ec.has(s.type) || ! function(e, t) {
+    if (null == s || !d.Ec.has(s.type) || ! function(e, t) {
         return !(t.type === N.uaV.THREAD_STARTER_MESSAGE || e.isForumPost() && t.id === S.default.castChannelIdAsMessageId(e.id)) && !0
       }(s, t)) return !1;
     R(s, e => {
@@ -196,8 +196,8 @@ o = "ThreadMessageStore", (s = "displayName") in(r = P) ? Object.defineProperty(
       message: n
     } = e, i = m[n.channel_id], r = null !== (t = null == i ? void 0 : i.mostRecentRawMessage) && void 0 !== t ? t : null == i ? void 0 : i.mostRecentMessage;
     if (null == i || null == r || r.id !== n.id) return !1;
-    C(i, e => {
-      null != e.mostRecentMessage && (e.mostRecentMessage = (0, d.wi)(e.mostRecentMessage, n)), null != e.mostRecentRawMessage && (e.mostRecentRawMessage = (0, d.gx)(e.mostRecentRawMessage, n))
+    p(i, e => {
+      null != e.mostRecentMessage && (e.mostRecentMessage = (0, c.wi)(e.mostRecentMessage, n)), null != e.mostRecentRawMessage && (e.mostRecentRawMessage = (0, c.gx)(e.mostRecentRawMessage, n))
     })
   },
   MESSAGE_DELETE: function(e) {
@@ -208,7 +208,7 @@ o = "ThreadMessageStore", (s = "displayName") in(r = P) ? Object.defineProperty(
     if (null == i) return !1;
     let r = S.default.castChannelIdAsMessageId(n) !== t,
       s = !A.has(t);
-    C(i, e => {
+    p(i, e => {
       var n;
       let i = null !== (n = e.mostRecentRawMessage) && void 0 !== n ? n : e.mostRecentMessage;
       null != i && i.id === t && (e.mostRecentMessage = null, e.mostRecentRawMessage = null), e.count = r && s ? Math.max(e.count - 1, 0) : e.count, A.add(t)
@@ -225,7 +225,7 @@ o = "ThreadMessageStore", (s = "displayName") in(r = P) ? Object.defineProperty(
         i = !A.has(e);
       return t && i
     }).length;
-    r > 0 && C(i, e => {
+    r > 0 && p(i, e => {
       var n;
       let i = null !== (n = e.mostRecentRawMessage) && void 0 !== n ? n : e.mostRecentMessage;
       null != i && t.includes(i.id) && (e.mostRecentMessage = null, e.mostRecentRawMessage = null), e.count -= r, t.forEach(e => A.add(e))
@@ -233,10 +233,10 @@ o = "ThreadMessageStore", (s = "displayName") in(r = P) ? Object.defineProperty(
   },
   LOAD_MESSAGES_SUCCESS: function(e) {
     let t = !1;
-    for (let n of e.messages) t = L(n.thread) || t;
+    for (let n of e.messages) t = v(n.thread) || t;
     if (e.isAfter || e.isBefore || e.hasMoreAfter) return t;
     let n = T.Z.getChannel(e.channelId);
-    if (null == n || !c.Ec.has(n.type)) return t;
+    if (null == n || !d.Ec.has(n.type)) return t;
     R(n, t => {
       if (0 === e.messages.length) t.mostRecentRawMessage = null, t.mostRecentMessage = null, t.count = 0;
       else {

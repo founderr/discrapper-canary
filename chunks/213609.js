@@ -12,8 +12,8 @@ var i = n(470079),
   l = n(990547),
   u = n(570140),
   _ = n(592125),
-  d = n(944486),
-  c = n(914010),
+  c = n(944486),
+  d = n(914010),
   E = n(626135),
   I = n(367907),
   T = n(565384);
@@ -53,8 +53,8 @@ function S(e) {
           return null === (t = e._stackContext) || void 0 === t ? void 0 : t.isSlide
         })) return;
       (0, T.Ps)(e);
-      let a = null !== (t = null == o ? void 0 : o.guild_id) && void 0 !== t ? t : c.Z.getGuildId(),
-        u = null !== (n = null == o ? void 0 : o.channel_id) && void 0 !== n ? n : d.Z.getChannelId(a),
+      let a = null !== (t = null == o ? void 0 : o.guild_id) && void 0 !== t ? t : d.Z.getGuildId(),
+        u = null !== (n = null == o ? void 0 : o.channel_id) && void 0 !== n ? n : c.Z.getChannelId(a),
         S = (0, E.expandEventProperties)({
           impression_type: s,
           location: (0, T.k$)(),

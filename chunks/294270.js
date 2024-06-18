@@ -8,8 +8,8 @@ var i = n(392711),
   l = n(70956),
   u = n(557177),
   _ = n(697492),
-  d = n(37091),
-  c = n(721264);
+  c = n(37091),
+  d = n(721264);
 let E = 15 * l.Z.Millis.SECOND,
   I = 15 * l.Z.Millis.SECOND,
   T = ["\uD83C\uDDE9", "\uD83C\uDDF4", "\uD83C\uDDF9", "\uD83C\uDDE6"],
@@ -29,12 +29,12 @@ function R(e) {
     emoji: t,
     channelId: n,
     userId: i
-  } = e, o = a.default.getId(), l = d.Z.getEnabled();
+  } = e, o = a.default.getId(), l = c.Z.getEnabled();
   if (null != t) {
-    if (l && (0, c.Z)(t.name)) return function(e, t, n) {
+    if (l && (0, d.Z)(t.name)) return function(e, t, n) {
       var i;
       let r = S(t, n);
-      if (null != d.Z.getWaitingHighFive(n, t)) return;
+      if (null != c.Z.getWaitingHighFive(n, t)) return;
       let [o, a] = null !== (i = Object.entries(A).find(e => {
         let [t] = e;
         return t !== r
@@ -52,7 +52,7 @@ function R(e) {
   }
 }
 
-function C(e) {
+function p(e) {
   let {
     completingUserId: t,
     waitingUserId: n,
@@ -62,7 +62,7 @@ function C(e) {
     delete A[r], (0, _.hu)(t, n, i)
   }), A[r].delay()
 }
-class p extends o.Z {
+class g extends o.Z {
   _terminate() {
     Object.values(A).forEach(e => e.cancel()), A = {}
   }
@@ -70,7 +70,7 @@ class p extends o.Z {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
       VOICE_CHANNEL_EFFECT_SEND: R,
-      HIGH_FIVE_COMPLETE: C
+      HIGH_FIVE_COMPLETE: p
     }, n in t ? Object.defineProperty(t, n, {
       value: i,
       enumerable: !0,
@@ -79,4 +79,4 @@ class p extends o.Z {
     }) : t[n] = i
   }
 }
-t.Z = new p
+t.Z = new g

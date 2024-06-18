@@ -21,7 +21,7 @@ let u = {
     fetchState: 0
   },
   _ = u;
-class d extends(s = o.ZP.PersistedStore) {
+class c extends(s = o.ZP.PersistedStore) {
   initialize(e) {
     _ = {
       ..._,
@@ -38,7 +38,7 @@ class d extends(s = o.ZP.PersistedStore) {
     return _.userTenureRewardStatusByRewardId[e]
   }
 }
-l(d, "displayName", "TenureRewardStore"), l(d, "persistKey", "TenureRewardStore"), t.Z = new d(a.Z, {
+l(c, "displayName", "TenureRewardStore"), l(c, "persistKey", "TenureRewardStore"), t.Z = new c(a.Z, {
   USER_TENURE_REWARD_SYNC_START: function() {
     _.fetchState = 1
   },

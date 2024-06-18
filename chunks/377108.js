@@ -19,16 +19,16 @@ n.d(t, {
     return G
   },
   YI: function() {
-    return p
+    return g
   },
   _F: function() {
-    return L
+    return v
   },
   h_: function() {
     return D
   },
   ji: function() {
-    return d
+    return c
   },
   lG: function() {
     return k
@@ -82,7 +82,7 @@ class _ extends l.C {
           r.emojiFrecency = R.internalBinaryRead(e, e.uint32(), n, r.emojiFrecency);
           break;
         case 7:
-          r.applicationCommandFrecency = p.internalBinaryRead(e, e.uint32(), n, r.applicationCommandFrecency);
+          r.applicationCommandFrecency = g.internalBinaryRead(e, e.uint32(), n, r.applicationCommandFrecency);
           break;
         case 8:
           r.favoriteSoundboardSounds = D.internalBinaryRead(e, e.uint32(), n, r.favoriteSoundboardSounds);
@@ -109,7 +109,7 @@ class _ extends l.C {
     return r
   }
   internalBinaryWrite(e, t, n) {
-    e.versions && u.L.internalBinaryWrite(e.versions, t.tag(1, s.TD.LengthDelimited).fork(), n).join(), e.favoriteGifs && E.internalBinaryWrite(e.favoriteGifs, t.tag(2, s.TD.LengthDelimited).fork(), n).join(), e.favoriteStickers && S.internalBinaryWrite(e.favoriteStickers, t.tag(3, s.TD.LengthDelimited).fork(), n).join(), e.stickerFrecency && N.internalBinaryWrite(e.stickerFrecency, t.tag(4, s.TD.LengthDelimited).fork(), n).join(), e.favoriteEmojis && m.internalBinaryWrite(e.favoriteEmojis, t.tag(5, s.TD.LengthDelimited).fork(), n).join(), e.emojiFrecency && R.internalBinaryWrite(e.emojiFrecency, t.tag(6, s.TD.LengthDelimited).fork(), n).join(), e.applicationCommandFrecency && p.internalBinaryWrite(e.applicationCommandFrecency, t.tag(7, s.TD.LengthDelimited).fork(), n).join(), e.favoriteSoundboardSounds && D.internalBinaryWrite(e.favoriteSoundboardSounds, t.tag(8, s.TD.LengthDelimited).fork(), n).join(), e.applicationFrecency && G.internalBinaryWrite(e.applicationFrecency, t.tag(9, s.TD.LengthDelimited).fork(), n).join(), e.heardSoundFrecency && P.internalBinaryWrite(e.heardSoundFrecency, t.tag(10, s.TD.LengthDelimited).fork(), n).join(), e.playedSoundFrecency && U.internalBinaryWrite(e.playedSoundFrecency, t.tag(11, s.TD.LengthDelimited).fork(), n).join(), e.guildAndChannelFrecency && k.internalBinaryWrite(e.guildAndChannelFrecency, t.tag(12, s.TD.LengthDelimited).fork(), n).join();
+    e.versions && u.L.internalBinaryWrite(e.versions, t.tag(1, s.TD.LengthDelimited).fork(), n).join(), e.favoriteGifs && E.internalBinaryWrite(e.favoriteGifs, t.tag(2, s.TD.LengthDelimited).fork(), n).join(), e.favoriteStickers && S.internalBinaryWrite(e.favoriteStickers, t.tag(3, s.TD.LengthDelimited).fork(), n).join(), e.stickerFrecency && N.internalBinaryWrite(e.stickerFrecency, t.tag(4, s.TD.LengthDelimited).fork(), n).join(), e.favoriteEmojis && m.internalBinaryWrite(e.favoriteEmojis, t.tag(5, s.TD.LengthDelimited).fork(), n).join(), e.emojiFrecency && R.internalBinaryWrite(e.emojiFrecency, t.tag(6, s.TD.LengthDelimited).fork(), n).join(), e.applicationCommandFrecency && g.internalBinaryWrite(e.applicationCommandFrecency, t.tag(7, s.TD.LengthDelimited).fork(), n).join(), e.favoriteSoundboardSounds && D.internalBinaryWrite(e.favoriteSoundboardSounds, t.tag(8, s.TD.LengthDelimited).fork(), n).join(), e.applicationFrecency && G.internalBinaryWrite(e.applicationFrecency, t.tag(9, s.TD.LengthDelimited).fork(), n).join(), e.heardSoundFrecency && P.internalBinaryWrite(e.heardSoundFrecency, t.tag(10, s.TD.LengthDelimited).fork(), n).join(), e.playedSoundFrecency && U.internalBinaryWrite(e.playedSoundFrecency, t.tag(11, s.TD.LengthDelimited).fork(), n).join(), e.guildAndChannelFrecency && k.internalBinaryWrite(e.guildAndChannelFrecency, t.tag(12, s.TD.LengthDelimited).fork(), n).join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t
   }
@@ -148,7 +148,7 @@ class _ extends l.C {
       no: 7,
       name: "application_command_frecency",
       kind: "message",
-      T: () => p
+      T: () => g
     }, {
       no: 8,
       name: "favorite_soundboard_sounds",
@@ -177,8 +177,8 @@ class _ extends l.C {
     }])
   }
 }
-let d = new _;
-class c extends l.C {
+let c = new _;
+class d extends l.C {
   create(e) {
     let t = {
       gifs: {},
@@ -253,7 +253,7 @@ class c extends l.C {
     }])
   }
 }
-let E = new c;
+let E = new d;
 class I extends l.C {
   create(e) {
     let t = {
@@ -417,16 +417,16 @@ class f extends l.C {
           s = t.fixed64().toString();
           break;
         case 2:
-          o = L.internalBinaryRead(t, t.uint32(), n);
+          o = v.internalBinaryRead(t, t.uint32(), n);
           break;
         default:
           throw new globalThis.Error("unknown map entry field for field discord_protos.discord_users.v1.StickerFrecency.stickers")
       }
     }
-    e[null != s ? s : "0"] = null != o ? o : L.create()
+    e[null != s ? s : "0"] = null != o ? o : v.create()
   }
   internalBinaryWrite(e, t, n) {
-    for (let i of Object.keys(e.stickers)) t.tag(1, s.TD.LengthDelimited).fork().tag(1, s.TD.Bit64).fixed64(i), t.tag(2, s.TD.LengthDelimited).fork(), L.internalBinaryWrite(e.stickers[i], t, n), t.join().join();
+    for (let i of Object.keys(e.stickers)) t.tag(1, s.TD.LengthDelimited).fork().tag(1, s.TD.Bit64).fixed64(i), t.tag(2, s.TD.LengthDelimited).fork(), v.internalBinaryWrite(e.stickers[i], t, n), t.join().join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t
   }
@@ -438,7 +438,7 @@ class f extends l.C {
       K: 6,
       V: {
         kind: "message",
-        T: () => L
+        T: () => v
       }
     }])
   }
@@ -521,16 +521,16 @@ class O extends l.C {
           s = t.string();
           break;
         case 2:
-          o = L.internalBinaryRead(t, t.uint32(), n);
+          o = v.internalBinaryRead(t, t.uint32(), n);
           break;
         default:
           throw new globalThis.Error("unknown map entry field for field discord_protos.discord_users.v1.EmojiFrecency.emojis")
       }
     }
-    e[null != s ? s : ""] = null != o ? o : L.create()
+    e[null != s ? s : ""] = null != o ? o : v.create()
   }
   internalBinaryWrite(e, t, n) {
-    for (let i of Object.keys(e.emojis)) t.tag(1, s.TD.LengthDelimited).fork().tag(1, s.TD.LengthDelimited).string(i), t.tag(2, s.TD.LengthDelimited).fork(), L.internalBinaryWrite(e.emojis[i], t, n), t.join().join();
+    for (let i of Object.keys(e.emojis)) t.tag(1, s.TD.LengthDelimited).fork().tag(1, s.TD.LengthDelimited).string(i), t.tag(2, s.TD.LengthDelimited).fork(), v.internalBinaryWrite(e.emojis[i], t, n), t.join().join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t
   }
@@ -542,13 +542,13 @@ class O extends l.C {
       K: 9,
       V: {
         kind: "message",
-        T: () => L
+        T: () => v
       }
     }])
   }
 }
 let R = new O;
-class C extends l.C {
+class p extends l.C {
   create(e) {
     let t = {
       applicationCommands: {}
@@ -584,16 +584,16 @@ class C extends l.C {
           s = t.string();
           break;
         case 2:
-          o = L.internalBinaryRead(t, t.uint32(), n);
+          o = v.internalBinaryRead(t, t.uint32(), n);
           break;
         default:
           throw new globalThis.Error("unknown map entry field for field discord_protos.discord_users.v1.ApplicationCommandFrecency.application_commands")
       }
     }
-    e[null != s ? s : ""] = null != o ? o : L.create()
+    e[null != s ? s : ""] = null != o ? o : v.create()
   }
   internalBinaryWrite(e, t, n) {
-    for (let i of Object.keys(e.applicationCommands)) t.tag(1, s.TD.LengthDelimited).fork().tag(1, s.TD.LengthDelimited).string(i), t.tag(2, s.TD.LengthDelimited).fork(), L.internalBinaryWrite(e.applicationCommands[i], t, n), t.join().join();
+    for (let i of Object.keys(e.applicationCommands)) t.tag(1, s.TD.LengthDelimited).fork().tag(1, s.TD.LengthDelimited).string(i), t.tag(2, s.TD.LengthDelimited).fork(), v.internalBinaryWrite(e.applicationCommands[i], t, n), t.join().join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t
   }
@@ -605,13 +605,13 @@ class C extends l.C {
       K: 9,
       V: {
         kind: "message",
-        T: () => L
+        T: () => v
       }
     }])
   }
 }
-let p = new C;
-class g extends l.C {
+let g = new p;
+class C extends l.C {
   create(e) {
     let t = {
       totalUses: 0,
@@ -688,8 +688,8 @@ class g extends l.C {
     }])
   }
 }
-let L = new g;
-class v extends l.C {
+let v = new C;
+class L extends l.C {
   create(e) {
     let t = {
       soundIds: []
@@ -736,7 +736,7 @@ class v extends l.C {
     }])
   }
 }
-let D = new v;
+let D = new L;
 class M extends l.C {
   create(e) {
     let t = {
@@ -773,16 +773,16 @@ class M extends l.C {
           s = t.string();
           break;
         case 2:
-          o = L.internalBinaryRead(t, t.uint32(), n);
+          o = v.internalBinaryRead(t, t.uint32(), n);
           break;
         default:
           throw new globalThis.Error("unknown map entry field for field discord_protos.discord_users.v1.HeardSoundFrecency.heard_sounds")
       }
     }
-    e[null != s ? s : ""] = null != o ? o : L.create()
+    e[null != s ? s : ""] = null != o ? o : v.create()
   }
   internalBinaryWrite(e, t, n) {
-    for (let i of Object.keys(e.heardSounds)) t.tag(1, s.TD.LengthDelimited).fork().tag(1, s.TD.LengthDelimited).string(i), t.tag(2, s.TD.LengthDelimited).fork(), L.internalBinaryWrite(e.heardSounds[i], t, n), t.join().join();
+    for (let i of Object.keys(e.heardSounds)) t.tag(1, s.TD.LengthDelimited).fork().tag(1, s.TD.LengthDelimited).string(i), t.tag(2, s.TD.LengthDelimited).fork(), v.internalBinaryWrite(e.heardSounds[i], t, n), t.join().join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t
   }
@@ -794,7 +794,7 @@ class M extends l.C {
       K: 9,
       V: {
         kind: "message",
-        T: () => L
+        T: () => v
       }
     }])
   }
@@ -836,16 +836,16 @@ class y extends l.C {
           s = t.string();
           break;
         case 2:
-          o = L.internalBinaryRead(t, t.uint32(), n);
+          o = v.internalBinaryRead(t, t.uint32(), n);
           break;
         default:
           throw new globalThis.Error("unknown map entry field for field discord_protos.discord_users.v1.PlayedSoundFrecency.played_sounds")
       }
     }
-    e[null != s ? s : ""] = null != o ? o : L.create()
+    e[null != s ? s : ""] = null != o ? o : v.create()
   }
   internalBinaryWrite(e, t, n) {
-    for (let i of Object.keys(e.playedSounds)) t.tag(1, s.TD.LengthDelimited).fork().tag(1, s.TD.LengthDelimited).string(i), t.tag(2, s.TD.LengthDelimited).fork(), L.internalBinaryWrite(e.playedSounds[i], t, n), t.join().join();
+    for (let i of Object.keys(e.playedSounds)) t.tag(1, s.TD.LengthDelimited).fork().tag(1, s.TD.LengthDelimited).string(i), t.tag(2, s.TD.LengthDelimited).fork(), v.internalBinaryWrite(e.playedSounds[i], t, n), t.join().join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t
   }
@@ -857,7 +857,7 @@ class y extends l.C {
       K: 9,
       V: {
         kind: "message",
-        T: () => L
+        T: () => v
       }
     }])
   }
@@ -899,16 +899,16 @@ class b extends l.C {
           s = t.string();
           break;
         case 2:
-          o = L.internalBinaryRead(t, t.uint32(), n);
+          o = v.internalBinaryRead(t, t.uint32(), n);
           break;
         default:
           throw new globalThis.Error("unknown map entry field for field discord_protos.discord_users.v1.ApplicationFrecency.applications")
       }
     }
-    e[null != s ? s : ""] = null != o ? o : L.create()
+    e[null != s ? s : ""] = null != o ? o : v.create()
   }
   internalBinaryWrite(e, t, n) {
-    for (let i of Object.keys(e.applications)) t.tag(1, s.TD.LengthDelimited).fork().tag(1, s.TD.LengthDelimited).string(i), t.tag(2, s.TD.LengthDelimited).fork(), L.internalBinaryWrite(e.applications[i], t, n), t.join().join();
+    for (let i of Object.keys(e.applications)) t.tag(1, s.TD.LengthDelimited).fork().tag(1, s.TD.LengthDelimited).string(i), t.tag(2, s.TD.LengthDelimited).fork(), v.internalBinaryWrite(e.applications[i], t, n), t.join().join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t
   }
@@ -920,7 +920,7 @@ class b extends l.C {
       K: 9,
       V: {
         kind: "message",
-        T: () => L
+        T: () => v
       }
     }])
   }
@@ -962,16 +962,16 @@ class w extends l.C {
           s = t.fixed64().toString();
           break;
         case 2:
-          o = L.internalBinaryRead(t, t.uint32(), n);
+          o = v.internalBinaryRead(t, t.uint32(), n);
           break;
         default:
           throw new globalThis.Error("unknown map entry field for field discord_protos.discord_users.v1.GuildAndChannelFrecency.guild_and_channels")
       }
     }
-    e[null != s ? s : "0"] = null != o ? o : L.create()
+    e[null != s ? s : "0"] = null != o ? o : v.create()
   }
   internalBinaryWrite(e, t, n) {
-    for (let i of Object.keys(e.guildAndChannels)) t.tag(1, s.TD.LengthDelimited).fork().tag(1, s.TD.Bit64).fixed64(i), t.tag(2, s.TD.LengthDelimited).fork(), L.internalBinaryWrite(e.guildAndChannels[i], t, n), t.join().join();
+    for (let i of Object.keys(e.guildAndChannels)) t.tag(1, s.TD.LengthDelimited).fork().tag(1, s.TD.Bit64).fixed64(i), t.tag(2, s.TD.LengthDelimited).fork(), v.internalBinaryWrite(e.guildAndChannels[i], t, n), t.join().join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t
   }
@@ -983,7 +983,7 @@ class w extends l.C {
       K: 6,
       V: {
         kind: "message",
-        T: () => L
+        T: () => v
       }
     }])
   }

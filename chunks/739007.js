@@ -15,8 +15,8 @@ let a = e => "".concat(e.toFixed(0), "%"),
       minValue: l = 0,
       maxValue: u = 100,
       onChange: _,
-      renderValue: d = a,
-      "aria-label": c
+      renderValue: c = a,
+      "aria-label": d
     } = e, E = r.useRef(null);
     return r.useImperativeHandle(t, () => ({
       focus: () => {
@@ -40,9 +40,9 @@ let a = e => "".concat(e.toFixed(0), "%"),
         maxValue: u,
         onValueChange: _,
         asValueChanges: _,
-        onValueRender: d,
+        onValueRender: c,
         orientation: "horizontal",
-        "aria-label": c
+        "aria-label": d
       })
     })
   })

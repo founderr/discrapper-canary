@@ -13,7 +13,7 @@ t.Z = e => {
       subheader: n,
       button: _
     }
-  } = e, d = (null == _ ? void 0 : _.type) === "submit", c = r.useRef(o.Z.reactParserFor({
+  } = e, c = (null == _ ? void 0 : _.type) === "submit", d = r.useRef(o.Z.reactParserFor({
     ...o.Z.defaultRules,
     link: a.s
   }));
@@ -26,8 +26,8 @@ t.Z = e => {
     }) : null, null != n && "" !== t ? (0, i.jsx)(s.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      children: c.current(n)
-    }) : null, d && (0, i.jsx)(s.Text, {
+      children: d.current(n)
+    }) : null, c && (0, i.jsx)(s.Text, {
       variant: "text-sm/normal",
       children: l.Z.Messages.MOBILE_REPORTS_SUBMIT_INFO_TEXT.format()
     })]

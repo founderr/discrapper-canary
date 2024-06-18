@@ -8,11 +8,11 @@ var r = n(392711),
   l = n(749210),
   u = n(430824),
   _ = n(594174),
-  d = n(70956),
-  c = n(51144),
+  c = n(70956),
+  d = n(51144),
   E = n(689938);
 let I = new(a())({
-  maxAge: 1 * d.Z.Millis.MINUTE
+  maxAge: 1 * c.Z.Millis.MINUTE
 });
 
 function T(e, t, n) {
@@ -43,7 +43,7 @@ function h(e, t) {
 t.Z = {
   getGuildNameSuggestion: function(e) {
     let t = _.default.getCurrentUser(),
-      n = c.oY(t);
+      n = d.oY(t);
     return null == n || 0 === n.length ? "" : E.Z.Messages.CREATE_SERVER_DEFAULT_SERVER_NAME_FORMAT.format({
       username: (null == e ? void 0 : e.truncateUsername) ? n.slice(0, 20) : n
     })

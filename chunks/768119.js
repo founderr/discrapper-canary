@@ -4,8 +4,8 @@ n(733860);
 var r, s, o, a, l = n(392711),
   u = n.n(l),
   _ = n(442837),
-  d = n(433517),
-  c = n(570140),
+  c = n(433517),
+  d = n(570140),
   E = n(840877),
   I = n(952537),
   T = n(592125),
@@ -47,24 +47,24 @@ function O(e, t) {
   return null == i ? n : t(i)
 }
 let R = "SearchStore",
-  C = !1,
-  p = {},
-  g = null;
+  p = !1,
+  g = {},
+  C = null;
 
-function L(e) {
+function v(e) {
   var t;
   let {
     searchId: n,
     query: i
   } = e;
   if ("string" != typeof i || "" === (i = i.trim())) return;
-  let r = p[n] = null !== (t = p[n]) && void 0 !== t ? t : [],
-    s = r.indexOf(i); - 1 !== s ? (r.splice(s, 1), r.unshift(i)) : null != r[0] && "" !== r[0] && i.startsWith(r[0]) ? r[0] = i : s < 0 && r.unshift(i), r.length > 5 && r.splice(5, r.length), d.K.set(R, {
-    history: p
+  let r = g[n] = null !== (t = g[n]) && void 0 !== t ? t : [],
+    s = r.indexOf(i); - 1 !== s ? (r.splice(s, 1), r.unshift(i)) : null != r[0] && "" !== r[0] && i.startsWith(r[0]) ? r[0] = i : s < 0 && r.unshift(i), r.length > 5 && r.splice(5, r.length), c.K.set(R, {
+    history: g
   })
 }
 
-function v(e) {
+function L(e) {
   let {
     searchId: t
   } = e, n = f[t];
@@ -73,20 +73,20 @@ function v(e) {
 }
 
 function D(e) {
-  if (e === g) return !1;
-  null != e && null == f[e] && A(e), g = e
+  if (e === C) return !1;
+  null != e && null == f[e] && A(e), C = e
 }
 class M extends(r = _.ZP.Store) {
   initialize() {
     this.waitFor(h.Z, T.Z);
-    let e = d.K.get(R);
+    let e = c.K.get(R);
     if ((null == e ? void 0 : e.history) != null) {
       var t;
       Object.keys(t = e.history).forEach(e => {
         Array.isArray(t[e]) && (t[e] = t[e].filter(e => "string" == typeof e && e.trim())), (!Array.isArray(t[e]) || 0 === t[e].length) && delete t[e]
-      }), p = t
+      }), g = t
     }
-    C = !!d.K.get("tokenized")
+    p = !!c.K.get("tokenized")
   }
   isOpen() {
     return N
@@ -95,17 +95,17 @@ class M extends(r = _.ZP.Store) {
     return i
   }
   getCurrentSearchId() {
-    return g
+    return C
   }
   isActive() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : g;
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : C;
     return null != e && (this.isIndexing(e) || this.isSearching(e) || this.hasResults(e))
   }
   isTokenized() {
-    return C
+    return p
   }
   getSearchType(e) {
-    return O(null != e ? e : g, e => e.searchType)
+    return O(null != e ? e : C, e => e.searchType)
   }
   getRawResults(e) {
     return O(e, e => e.rawResults)
@@ -142,7 +142,7 @@ class M extends(r = _.ZP.Store) {
     return O(e, e => e.editorState)
   }
   getHistory(e) {
-    return p[e]
+    return g[e]
   }
   getOffset(e) {
     var t;
@@ -182,7 +182,7 @@ a = "SearchStore", (o = "displayName") in(s = M) ? Object.defineProperty(s, o, {
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[o] = a, t.Z = new M(c.Z, {
+}) : s[o] = a, t.Z = new M(d.Z, {
   SEARCH_START: function(e) {
     var t, n;
     let {
@@ -193,7 +193,7 @@ a = "SearchStore", (o = "displayName") in(s = M) ? Object.defineProperty(s, o, {
     null != o.searchFetcher && (o.searchFetcher.cancel(), o.searchFetcher = null);
     let a = o.searchType,
       l = new E.ZP(r, a, s);
-    o.searchFetcher = l, o.isSearching = !0, o.rawResults = null, o.analyticsId = null, o.query = u().omit(s, "type"), o.offset = null !== (n = s.offset) && void 0 !== n ? n : 0, o.showBlockedResults = !1, L({
+    o.searchFetcher = l, o.isSearching = !0, o.rawResults = null, o.analyticsId = null, o.query = u().omit(s, "type"), o.offset = null !== (n = s.offset) && void 0 !== n ? n : 0, o.showBlockedResults = !1, v({
       type: "SEARCH_ADD_HISTORY",
       searchId: r,
       query: i
@@ -201,7 +201,7 @@ a = "SearchStore", (o = "displayName") in(s = M) ? Object.defineProperty(s, o, {
     let _ = r === S.I_8 ? null === (t = T.Z.getChannel(r)) || void 0 === t ? void 0 : t.guild_id : a === S.aib.GUILD ? r : null;
     l.fetch(e => {
       var t, n;
-      c.Z.dispatch({
+      d.Z.dispatch({
         type: "SEARCH_FINISH",
         searchId: r,
         guildId: _,
@@ -215,12 +215,12 @@ a = "SearchStore", (o = "displayName") in(s = M) ? Object.defineProperty(s, o, {
         documentsIndexed: e.body.documents_indexed
       })
     }, () => {
-      c.Z.dispatch({
+      d.Z.dispatch({
         type: "SEARCH_INDEXING",
         searchId: r
       })
     }, () => {
-      c.Z.dispatch({
+      d.Z.dispatch({
         type: "SEARCH_FINISH",
         searchId: r,
         guildId: _,
@@ -247,7 +247,7 @@ a = "SearchStore", (o = "displayName") in(s = M) ? Object.defineProperty(s, o, {
     } = e, n = A(t);
     n.isSearching = !1, n.isIndexing = !1, n.isHistoricalIndexing = e.doingHistoricalIndex || !1, n.searchFetcher = null, n.totalResults = e.totalResults, n.hasError = e.hasError, n.analyticsId = e.analyticsId, n.documentsIndexed = null != e.documentsIndexed ? e.documentsIndexed : 0, n.showNoResultsAlt = .05 > Math.random(), n.rawResults = e.messages, null == n.query && (n.hasError = !0)
   },
-  SEARCH_EDITOR_STATE_CLEAR: v,
+  SEARCH_EDITOR_STATE_CLEAR: L,
   SEARCH_ENSURE_SEARCH_STATE: function(e) {
     let {
       searchId: t
@@ -282,16 +282,16 @@ a = "SearchStore", (o = "displayName") in(s = M) ? Object.defineProperty(s, o, {
     D(null != t ? t : n)
   },
   CHANNEL_TOGGLE_MEMBERS_SECTION: function() {
-    return null != g && v({
-      searchId: g
+    return null != C && L({
+      searchId: C
     })
   },
   SEARCH_CLEAR_HISTORY: function(e) {
     let {
       searchId: t
     } = e;
-    null == t ? (d.K.remove(R), p = {}) : (delete p[t], d.K.set(R, {
-      history: p
+    null == t ? (c.K.remove(R), g = {}) : (delete g[t], c.K.set(R, {
+      history: g
     }))
   },
   SEARCH_REMOVE_HISTORY: function(e) {
@@ -299,13 +299,13 @@ a = "SearchStore", (o = "displayName") in(s = M) ? Object.defineProperty(s, o, {
       searchId: t,
       query: n
     } = e;
-    null != p[t] && (p[t] = p[t].filter(e => e !== n), d.K.set(R, {
-      history: p
+    null != g[t] && (g[t] = g[t].filter(e => e !== n), c.K.set(R, {
+      history: g
     }))
   },
-  SEARCH_ADD_HISTORY: L,
+  SEARCH_ADD_HISTORY: v,
   LOGOUT: function() {
-    d.K.remove(R), p = {}
+    c.K.remove(R), g = {}
   },
   CONNECTION_OPEN: function() {
     Object.keys(f).forEach(e => {
@@ -317,7 +317,7 @@ a = "SearchStore", (o = "displayName") in(s = M) ? Object.defineProperty(s, o, {
       searchId: t,
       searchType: n
     } = e;
-    null != t && (g = t), N = !0, i = n
+    null != t && (C = t), N = !0, i = n
   },
   SEARCH_MODAL_CLOSE: function() {
     N = !1, i = void 0

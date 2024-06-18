@@ -12,8 +12,8 @@ var i = n(512722),
   l = n(70956),
   u = n(189800),
   _ = n(996106),
-  d = n(863141),
-  c = n(34954),
+  c = n(863141),
+  d = n(34954),
   E = n(186901),
   I = n(981631);
 
@@ -47,7 +47,7 @@ class f {
         e.close(I.$VG.CLOSE_NORMAL, "User logged out");
         return
       }
-      t.user = (0, d.Z)(n)
+      t.user = (0, c.Z)(n)
     }
     this.dispatch(e, null, I.Etm.DISPATCH, I.zMe.READY, t)
   }
@@ -64,7 +64,7 @@ class f {
       if (null == r) throw new _.Z({
         errorCode: I.lTL.INVALID_COMMAND
       }, "Invalid command: ".concat(t.cmd));
-      if (!(0, c.Z)(e.authorization.scopes, r.scope)) throw new _.Z({
+      if (!(0, d.Z)(e.authorization.scopes, r.scope)) throw new _.Z({
         errorCode: I.lTL.INVALID_PERMISSIONS
       }, "Not authenticated or invalid scope");
       u.N.getCurrentConfig({

@@ -77,8 +77,8 @@ class u extends s.Z {
     let l = null !== (i = t.w) && void 0 !== i ? i : this.canvas.width - t.x,
       u = this.context.measureText(e),
       _ = !1,
-      d = this.font.size,
-      c = (e, t) => {
+      c = this.font.size,
+      d = (e, t) => {
         null != this.context && (n ? this.context.fillText(e, t.x, t.y) : this.context.strokeText(e, t.x, t.y))
       },
       E = e => {
@@ -87,25 +87,25 @@ class u extends s.Z {
         for (; u.width + o.F > l;) t = t.slice(0, -4), u = this.context.measureText(t), _ = !0;
         return _ && (t += "..."), t
       };
-    if (this.font.truncate === a.GX.None && c(e, t), this.font.truncate === a.GX.Truncate && c(e = E(e), t), this.font.truncate === a.GX.Wrap) {
+    if (this.font.truncate === a.GX.None && d(e, t), this.font.truncate === a.GX.Truncate && d(e = E(e), t), this.font.truncate === a.GX.Wrap) {
       let n = e.split(" "),
         i = 1 / 0,
         o = "",
         a = 0;
-      for (null != t.h && (i = t.h / d, r()(i > 0, "DiscordCavas: boundingBox.h of ".concat(t.h, " results in 0 visible lines with font size of ").concat(d))); n.length > 0;)
+      for (null != t.h && (i = t.h / c, r()(i > 0, "DiscordCavas: boundingBox.h of ".concat(t.h, " results in 0 visible lines with font size of ").concat(c))); n.length > 0;)
         if ((u = this.context.measureText(o + " " + n[0])).width > l) {
           let e = !1;
-          if (a + 1 >= i && n.length > 0 && (e = !0), "" !== o ? (c(e ? E(o + "...") : o, {
+          if (a + 1 >= i && n.length > 0 && (e = !0), "" !== o ? (d(e ? E(o + "...") : o, {
               x: t.x,
-              y: t.y + d * a
-            }), o = "") : c(E(null !== (s = n.shift()) && void 0 !== s ? s : ""), {
+              y: t.y + c * a
+            }), o = "") : d(E(null !== (s = n.shift()) && void 0 !== s ? s : ""), {
               x: t.x,
-              y: t.y + d * a
+              y: t.y + c * a
             }), e) break;
           a += 1
-        } else o += " ".concat(n.shift()), 0 === n.length && c(o, {
+        } else o += " ".concat(n.shift()), 0 === n.length && d(o, {
           x: t.x,
-          y: t.y + d * a
+          y: t.y + c * a
         })
     }
     return {
@@ -200,15 +200,15 @@ class u extends s.Z {
         }), a.vP.Success
       }
       if (s === a.JU.Cover) {
-        var l, u, _, d;
+        var l, u, _, c;
         let r;
         let s = {
             w: o.width,
             h: o.height
           },
-          c = +(s.w / s.h).toFixed(1),
+          d = +(s.w / s.h).toFixed(1),
           E = +(n.w / n.h).toFixed(1);
-        if (E > c) {
+        if (E > d) {
           let e = s.w / E;
           r = {
             x: 0,
@@ -219,7 +219,7 @@ class u extends s.Z {
         } else {
           let e = s.h * E;
           r = {
-            x: (o.width - e) * (null !== (d = null == i ? void 0 : null === (_ = i.focus) || void 0 === _ ? void 0 : _.x) && void 0 !== d ? d : .5),
+            x: (o.width - e) * (null !== (c = null == i ? void 0 : null === (_ = i.focus) || void 0 === _ ? void 0 : _.x) && void 0 !== c ? c : .5),
             y: 0,
             w: e,
             h: o.height
@@ -248,8 +248,8 @@ class u extends s.Z {
     this.context.save();
     let _ = new Path2D;
     _.roundRect(s, o, l, u, i), this.context.clip(_);
-    let d = this.drawImage(e, t, n, r);
-    return this.restoreContext(), d
+    let c = this.drawImage(e, t, n, r);
+    return this.restoreContext(), c
   }
   drawCroppedImage(e, t, n) {
     var i;
@@ -263,11 +263,11 @@ class u extends s.Z {
       h: u
     } = t, {
       x: _,
-      y: d,
-      w: c,
+      y: c,
+      w: d,
       h: E
     } = n;
-    return this.context.drawImage(r, s, o, l, u, _, d, c, E), a.vP.Success
+    return this.context.drawImage(r, s, o, l, u, _, c, d, E), a.vP.Success
   }
   drawPath(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],

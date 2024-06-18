@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   A3: function() {
-    return L
+    return v
   },
   C1: function() {
     return V
@@ -28,7 +28,7 @@ n.d(t, {
     return G
   },
   PC: function() {
-    return v
+    return L
   },
   Y1: function() {
     return w
@@ -40,7 +40,7 @@ n.d(t, {
     return D
   },
   kI: function() {
-    return g
+    return C
   },
   nV: function() {
     return F
@@ -64,8 +64,8 @@ var i = n(470079),
 n(353842);
 var u = n(558217),
   _ = n(675478),
-  d = n(430824),
-  c = n(771845),
+  c = n(430824),
+  d = n(771845),
   E = n(594174),
   I = n(626135),
   T = n(70956),
@@ -78,9 +78,9 @@ var f = n(304852),
   m = n(981631),
   O = n(185923),
   R = n(957825),
-  C = n(474936),
-  p = n(689938);
-let g = function(e, t) {
+  p = n(474936),
+  g = n(689938);
+let C = function(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null == t ? void 0 : t.getGuildId();
     (0, u.O)(n);
     let r = (0, O.Gt)(e),
@@ -97,15 +97,15 @@ let g = function(e, t) {
         newlyAddedEmojis: I
       }),
       m = (0, o.e7)([l.Z], () => l.Z.getDisambiguatedEmojiContext(n), [n]),
-      R = (0, o.e7)([d.Z], () => {
+      R = (0, o.e7)([c.Z], () => {
         var e;
-        return null === (e = d.Z.getGuild(n)) || void 0 === e ? void 0 : e.name
+        return null === (e = c.Z.getGuild(n)) || void 0 === e ? void 0 : e.name
       }),
-      C = (0, o.e7)([E.default], () => E.default.getCurrentUser()),
-      g = (0, S.I5)(C);
+      p = (0, o.e7)([E.default], () => E.default.getCurrentUser()),
+      C = (0, S.I5)(p);
     return i.useMemo(() => {
       let i = m.getGroupedCustomEmoji(),
-        o = c.ZP.getFlattenedGuildIds(),
+        o = d.ZP.getFlattenedGuildIds(),
         u = [],
         _ = (i, r) => h.ZP.getEmojiUnavailableReasons({
           categoryEmojis: i,
@@ -117,13 +117,13 @@ let g = function(e, t) {
       return ((e, r) => {
         for (let s of e) {
           let e;
-          if (r === A.En.GUILD && (e = d.Z.getGuild(s)), null == e) continue;
+          if (r === A.En.GUILD && (e = c.Z.getGuild(s)), null == e) continue;
           let o = null == i ? void 0 : i[e.id];
           if (null == o || 0 === o.length) continue;
           let {
             emojisDisabled: a,
             emojisFilteredCount: l,
-            emojisPremiumLockedCount: c,
+            emojisPremiumLockedCount: d,
             emojiNitroLocked: E
           } = _(o, !1);
           if (null != t && o.length === l) continue;
@@ -131,7 +131,7 @@ let g = function(e, t) {
           r === A.En.GUILD && (I = {
             type: A.En.GUILD,
             guild: e,
-            isNitroLocked: !g && E && c === o.length,
+            isNitroLocked: !C && E && d === o.length,
             emojis: o,
             emojisDisabled: a
           }), null != I && (e.id === n ? u.unshift(I) : u.push(I))
@@ -146,7 +146,7 @@ let g = function(e, t) {
           e.push({
             type: A.En.TOP_GUILD_EMOJI,
             id: t,
-            name: p.Z.Messages.EMOJI_CATEGORY_TOP_GUILD_EMOJI.format({
+            name: g.Z.Messages.EMOJI_CATEGORY_TOP_GUILD_EMOJI.format({
               guildName: R
             }),
             isNitroLocked: !1,
@@ -162,7 +162,7 @@ let g = function(e, t) {
           e.push({
             type: A.En.RECENT,
             id: t,
-            name: p.Z.Messages.EMOJI_CATEGORY_RECENT,
+            name: g.Z.Messages.EMOJI_CATEGORY_RECENT,
             isNitroLocked: !1,
             emojis: i,
             emojisDisabled: n
@@ -176,7 +176,7 @@ let g = function(e, t) {
           e.push({
             type: A.En.FAVORITES,
             id: t,
-            name: p.Z.Messages.CATEGORY_FAVORITE,
+            name: g.Z.Messages.CATEGORY_FAVORITE,
             isNitroLocked: !1,
             emojis: i,
             emojisDisabled: n
@@ -192,16 +192,16 @@ let g = function(e, t) {
         });
         return e
       }, [])
-    }, [m, t, n, e, T, R, s, a, r, g])
+    }, [m, t, n, e, T, R, s, a, r, C])
   },
-  L = e => {
+  v = e => {
     let t = (null == e ? void 0 : e.getGuildId()) != null;
     I.default.track(m.rMx.PREMIUM_PROMOTION_OPENED, {
       location_page: t ? m.ZY5.GUILD_CHANNEL : m.ZY5.DM_CHANNEL,
       location_section: null != e ? m.jXE.EMOJI_PICKER_POPOUT : m.jXE.CUSTOM_STATUS_MODAL
     })
   },
-  v = (e, t) => {
+  L = (e, t) => {
     a.ZP.trackWithMetadata(m.rMx.SEARCH_STARTED, {
       search_type: null != t && t === O.Hz.REACTION ? m.aib.EMOJI_REACTION : m.aib.EMOJI,
       location: e
@@ -224,9 +224,9 @@ let g = function(e, t) {
       searchQuery: l,
       isLocked: u,
       location: _,
-      intention: d,
-      index: c
-    } = e, E = null !== (i = r.uniqueName) && void 0 !== i ? i : r.name, I = (0, s.EQ)(d).with(O.Hz.REACTION, () => m.aib.EMOJI_REACTION).with(O.Hz.AUTO_SUGGESTION, () => m.aib.EMOJI_AUTO_SUGGESTION).otherwise(() => m.aib.EMOJI);
+      intention: c,
+      index: d
+    } = e, E = null !== (i = r.uniqueName) && void 0 !== i ? i : r.name, I = (0, s.EQ)(c).with(O.Hz.REACTION, () => m.aib.EMOJI_REACTION).with(O.Hz.AUTO_SUGGESTION, () => m.aib.EMOJI_AUTO_SUGGESTION).otherwise(() => m.aib.EMOJI);
     a.ZP.trackWithMetadata(m.rMx.SEARCH_RESULT_SELECTED, {
       search_type: I,
       location: _,
@@ -237,7 +237,7 @@ let g = function(e, t) {
       is_animated: r.animated,
       is_locked: u,
       query: l,
-      index_num: c,
+      index_num: d,
       load_id: null == o ? void 0 : o.loadId,
       total_results: null == o ? void 0 : null === (t = o.results) || void 0 === t ? void 0 : t.length,
       emoji_suggestion_ids: null == o ? void 0 : null === (n = o.results) || void 0 === n ? void 0 : n.map(e => {
@@ -281,24 +281,24 @@ let g = function(e, t) {
       subCategory: l = A.t0.NONE,
       position: u,
       newlyAddedHighlight: _,
-      isBurstReaction: d
+      isBurstReaction: c
     } = e;
     switch (s) {
       case O.Hz.REACTION:
-        n = d ? C.cd.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED : C.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED;
+        n = c ? p.cd.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED : p.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED;
         break;
       case O.Hz.STATUS:
-        n = C.cd.EMOJI_PICKER_STATUS_EMOJI_CLICKED;
+        n = p.cd.EMOJI_PICKER_STATUS_EMOJI_CLICKED;
         break;
       default:
-        n = C.cd.EMOJI_PICKER_EMOJI_CLICKED
+        n = p.cd.EMOJI_PICKER_EMOJI_CLICKED
     }
-    let c = null !== (t = i.uniqueName) && void 0 !== t ? t : i.name;
+    let d = null !== (t = i.uniqueName) && void 0 !== t ? t : i.name;
     a.ZP.trackWithMetadata(m.rMx.EXPRESSION_PICKER_EXPRESSION_SELECTED, {
       type: n,
       location: r,
       expression_id: i.id,
-      expression_name: c,
+      expression_name: d,
       expression_guild_id: i.guildId,
       is_custom: null != i.id,
       is_animated: i.animated,
@@ -306,7 +306,7 @@ let g = function(e, t) {
       expression_section: null == l ? void 0 : l.toString(),
       emoji_position: u,
       newly_added_highlight: _,
-      is_burst: d
+      is_burst: c
     })
   },
   b = e => {
@@ -353,31 +353,31 @@ let G = (e, t) => {
   w = (e, t) => {
     switch (e) {
       case A.UX.TOP_GUILD_EMOJI:
-        return p.Z.Messages.EMOJI_CATEGORY_TOP_GUILD_EMOJI.format({
+        return g.Z.Messages.EMOJI_CATEGORY_TOP_GUILD_EMOJI.format({
           guildName: t
         });
       case A.UX.RECENT:
-        return p.Z.Messages.EMOJI_CATEGORY_RECENT;
+        return g.Z.Messages.EMOJI_CATEGORY_RECENT;
       case A.UX.FAVORITES:
-        return p.Z.Messages.CATEGORY_FAVORITE;
+        return g.Z.Messages.CATEGORY_FAVORITE;
       case A.UX.ACTIVITY:
-        return p.Z.Messages.EMOJI_CATEGORY_ACTIVITY;
+        return g.Z.Messages.EMOJI_CATEGORY_ACTIVITY;
       case A.UX.FLAGS:
-        return p.Z.Messages.EMOJI_CATEGORY_FLAGS;
+        return g.Z.Messages.EMOJI_CATEGORY_FLAGS;
       case A.UX.FOOD:
-        return p.Z.Messages.EMOJI_CATEGORY_FOOD;
+        return g.Z.Messages.EMOJI_CATEGORY_FOOD;
       case A.UX.NATURE:
-        return p.Z.Messages.EMOJI_CATEGORY_NATURE;
+        return g.Z.Messages.EMOJI_CATEGORY_NATURE;
       case A.UX.OBJECTS:
-        return p.Z.Messages.EMOJI_CATEGORY_OBJECTS;
+        return g.Z.Messages.EMOJI_CATEGORY_OBJECTS;
       case A.UX.PEOPLE:
-        return p.Z.Messages.EMOJI_CATEGORY_PEOPLE;
+        return g.Z.Messages.EMOJI_CATEGORY_PEOPLE;
       case A.UX.SYMBOLS:
-        return p.Z.Messages.EMOJI_CATEGORY_SYMBOLS;
+        return g.Z.Messages.EMOJI_CATEGORY_SYMBOLS;
       case A.UX.TRAVEL:
-        return p.Z.Messages.EMOJI_CATEGORY_TRAVEL;
+        return g.Z.Messages.EMOJI_CATEGORY_TRAVEL;
       case A.UX.PREMIUM_UPSELL:
-        return p.Z.Messages.EMOJI_CATEGORY_PREMIUM_UPSELL;
+        return g.Z.Messages.EMOJI_CATEGORY_PREMIUM_UPSELL;
       default:
         return null != t ? t : e
     }
@@ -435,5 +435,5 @@ function H(e, t, n) {
 }
 
 function F(e, t) {
-  return e === O.Hz.REACTION ? t ? p.Z.Messages.SEARCH_FOR_SUPER_REACTION : p.Z.Messages.SEARCH_FOR_REACTION : p.Z.Messages.SEARCH_FOR_EMOJI
+  return e === O.Hz.REACTION ? t ? g.Z.Messages.SEARCH_FOR_SUPER_REACTION : g.Z.Messages.SEARCH_FOR_REACTION : g.Z.Messages.SEARCH_FOR_EMOJI
 }

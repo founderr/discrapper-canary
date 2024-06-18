@@ -169,7 +169,7 @@ let a = {
     },
     showCharacterCount: !0
   },
-  d = {
+  c = {
     analyticsName: "forum",
     drafts: {
       type: o.d.ChannelMessage
@@ -193,7 +193,7 @@ let a = {
     },
     showCharacterCount: !0
   },
-  c = {
+  d = {
     analyticsName: "voice_channel_status",
     drafts: {
       type: o.d.ChannelMessage
@@ -395,8 +395,8 @@ let a = {
     OVERLAY: l,
     SIDEBAR: u,
     EDIT: _,
-    FORM: d,
-    VOICE_CHANNEL_STATUS: c,
+    FORM: c,
+    VOICE_CHANNEL_STATUS: d,
     THREAD_CREATION: E,
     USER_PROFILE: h,
     PROFILE_BIO_INPUT: S,

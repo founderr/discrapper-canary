@@ -24,8 +24,8 @@ let o = e => {
     if (null == u) return null;
     let _ = i.Z.parseString(a);
     if (null == _) return null;
-    let d = (0, r.AZ)(_.red, _.blue, _.green),
-      c = null !== (t = (0, r.k8)({
+    let c = (0, r.AZ)(_.red, _.blue, _.green),
+      d = null !== (t = (0, r.k8)({
         colors: [(0, r.j)(_, .6, !0), l],
         ratio: 3,
         saturationFactor: o
@@ -49,11 +49,11 @@ let o = e => {
       LIGHT: {
         accentColor: null == I ? void 0 : I.toHexString(),
         backgroundColor: (0, r.xj)({
-          colorRGB: c,
+          colorRGB: d,
           saturationFactor: o
         }),
         highlightColor: null == _ ? void 0 : _.toHexString(),
-        opacity: (null == d ? void 0 : d.saturation) < .1 ? .35 : .1
+        opacity: (null == c ? void 0 : c.saturation) < .1 ? .35 : .1
       },
       DARK: {
         accentColor: null == T ? void 0 : T.toHexString(),
@@ -62,7 +62,7 @@ let o = e => {
           saturationFactor: o
         }),
         highlightColor: null == _ ? void 0 : _.toHexString(),
-        opacity: (null == d ? void 0 : d.saturation) < .1 ? .5 : .2
+        opacity: (null == c ? void 0 : c.saturation) < .1 ? .5 : .2
       }
     }
   },

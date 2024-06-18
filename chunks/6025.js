@@ -47,10 +47,10 @@ t.Z = {
       channelId: n,
       details: _
     });
-    let d = null == _ ? void 0 : _.initialMessageId;
-    null != d ? r.Z.jumpToMessage({
+    let c = null == _ ? void 0 : _.initialMessageId;
+    null != c ? r.Z.jumpToMessage({
       channelId: n,
-      messageId: d,
+      messageId: c,
       flash: u,
       jumpType: s.SR.INSTANT
     }) : a.Z.fetchMessages({

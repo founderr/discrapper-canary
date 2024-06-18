@@ -8,8 +8,8 @@ var i = n(846519),
   l = n(592125),
   u = n(885110),
   _ = n(979651),
-  d = n(938475),
-  c = n(689938);
+  c = n(938475),
+  d = n(689938);
 
 function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -25,13 +25,13 @@ function T() {
   let e = _.Z.getCurrentClientVoiceChannelId(null);
   if (null == e) return !1;
   let t = l.Z.getChannel(e);
-  return !(null == t || !t.isPrivate() || t.recipients.length > 1 || d.ZP.countVoiceStatesForChannel(e) > 1) && null == a.ZP.getSelfEmbeddedActivityForChannel(e) && null == u.Z.getBroadcast() && !0
+  return !(null == t || !t.isPrivate() || t.recipients.length > 1 || c.ZP.countVoiceStatesForChannel(e) > 1) && null == a.ZP.getSelfEmbeddedActivityForChannel(e) && null == u.Z.getBroadcast() && !0
 }
 
 function h() {
   if (!T()) return;
   let e = _.Z.getCurrentClientVoiceChannelId(null);
-  if (null != e) r.Z.sendBotMessage(e, c.Z.Messages.BOT_CALL_IDLE_DISCONNECT_2.format({
+  if (null != e) r.Z.sendBotMessage(e, d.Z.Messages.BOT_CALL_IDLE_DISCONNECT_2.format({
     number: 3
   })), s.default.selectVoiceChannel(null)
 }

@@ -66,7 +66,7 @@ class l {
       retryAfter: l,
       errors: u,
       status: _,
-      captchaFields: d
+      captchaFields: c
     } = function(e, t) {
       if ("string" == typeof e) return {
         message: e,
@@ -104,6 +104,6 @@ class l {
         status: e.status
       }
     }(e, t);
-    this.message = null != i ? i : n, this.code = null != r ? r : -1, this.retryAfter = l, this.errors = u, this.status = _, this.captchaFields = null != d ? d : {}
+    this.message = null != i ? i : n, this.code = null != r ? r : -1, this.retryAfter = l, this.errors = u, this.status = _, this.captchaFields = null != c ? c : {}
   }
 }

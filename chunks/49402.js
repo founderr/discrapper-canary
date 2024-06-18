@@ -15,8 +15,8 @@ function u(e, t, n) {
   let s = (0, l.G6)(e);
   return r.forwardRef(function(u, _) {
     let {
-      children: d,
-      className: c,
+      children: c,
+      className: d,
       dir: E = "ltr",
       orientation: I = "vertical",
       fade: T = !1,
@@ -37,13 +37,13 @@ function u(e, t, n) {
       paddingFix: S,
       orientation: I,
       dir: E,
-      className: c,
+      className: d,
       scrollerRef: A,
       specs: s
     });
     return (0, i.jsx)("div", {
       ref: A,
-      className: o()(c, {
+      className: o()(d, {
         [e]: !0,
         [t]: T,
         [n]: h
@@ -53,7 +53,7 @@ function u(e, t, n) {
       ...N,
       children: (0, i.jsxs)(a.Jc, {
         containerRef: A,
-        children: [d, R]
+        children: [c, R]
       })
     })
   })

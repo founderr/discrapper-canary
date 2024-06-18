@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 }), n(789020);
 var i = n(913527),
@@ -20,9 +20,9 @@ function _(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class d extends s.Z {
+class c extends s.Z {
   static createFromServer(e) {
-    return new d({
+    return new c({
       id: e.application.id,
       branchId: e.branch_id,
       entitlements: null != e.entitlements ? e.entitlements.map(e => l.Z.createFromServer(e)) : [],
@@ -39,7 +39,7 @@ class d extends s.Z {
     })
   }
   static createForTestMode(e) {
-    return new d({
+    return new c({
       id: e.id,
       entitlements: [],
       branchId: e.branch.id,

@@ -8,15 +8,15 @@ var i = n(147913),
   l = n(979651),
   u = n(938475),
   _ = n(557177);
-let d = (0, _.uk)("call_calling", r.Z.getSoundpack());
-class c extends i.Z {
+let c = (0, _.uk)("call_calling", r.Z.getSoundpack());
+class d extends i.Z {
   handleSoundpackUpdate() {
-    d.stop(), d = (0, _.uk)("call_calling", r.Z.getSoundpack())
+    c.stop(), c = (0, _.uk)("call_calling", r.Z.getSoundpack())
   }
   handleRingUpdate() {
     let e = s.Z.getCalls().filter(e => e.ringing.length > 0 && l.Z.getCurrentClientVoiceChannelId(null) === e.channelId),
       t = l.Z.getCurrentClientVoiceChannelId(null);
-    null != t && u.ZP.countVoiceStatesForChannel(t) >= 2 || !(e.length > 0) || o.Z.isSoundDisabled("call_calling") || a.Z.disableSounds ? d.stop() : d.loop()
+    null != t && u.ZP.countVoiceStatesForChannel(t) >= 2 || !(e.length > 0) || o.Z.isSoundDisabled("call_calling") || a.Z.disableSounds ? c.stop() : c.loop()
   }
   constructor(...e) {
     var t, n, i;
@@ -28,4 +28,4 @@ class c extends i.Z {
     }) : t[n] = i
   }
 }
-t.Z = new c
+t.Z = new d

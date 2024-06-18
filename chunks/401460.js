@@ -12,8 +12,8 @@ var i = n(735250),
   l = n.n(a),
   u = n(481060),
   _ = n(110577),
-  d = n(997945),
-  c = n(630117),
+  c = n(997945),
+  d = n(630117),
   E = n(441319),
   I = n(981631),
   T = n(689938),
@@ -31,9 +31,9 @@ function N(e) {
     onSelect: s,
     isSelected: a = !1,
     tabIndex: l,
-    children: c,
+    children: d,
     isNew: T = !1
-  } = e, [S, N] = r.useState(E.QA[t].name), A = t === d.Ru.PIRATE, m = (0, u.useRadioItem)({
+  } = e, [S, N] = r.useState(E.QA[t].name), A = t === c.Ru.PIRATE, m = (0, u.useRadioItem)({
     label: S,
     isSelected: a
   });
@@ -52,7 +52,7 @@ function N(e) {
           [h.selected]: a
         }, n),
         onClick: a ? I.dG4 : () => null == s ? void 0 : s(t),
-        children: c
+        children: d
       }), a && (0, i.jsx)(_.oK, {})]
     })
   })
@@ -74,7 +74,7 @@ function A(e) {
     className: r ? h.disabled : void 0,
     tabIndex: s,
     isNew: a,
-    children: (0, i.jsx)(c.Z, {
+    children: (0, i.jsx)(d.Z, {
       id: t.id,
       width: E.M9
     })

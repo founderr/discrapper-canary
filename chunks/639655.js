@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   I: function() {
-    return c
+    return d
   }
 }), n(653041), n(411104), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817), n(47120);
 var i = n(710845),
@@ -152,7 +152,7 @@ u.push(class extends _ {
     super(e), a(this, "_socketId", void 0), a(this, "_usesZstd", void 0), this._usesZstd = s.Z.shouldUseZstd(), this._socketId = null
   }
 });
-class d extends _ {
+class c extends _ {
   static canUse() {
     return !0
   }
@@ -169,10 +169,10 @@ class d extends _ {
   close() {}
 }
 
-function c(e) {
-  if (r.s.isDiscordGatewayPlaintextSet()) return new d(e);
+function d(e) {
+  if (r.s.isDiscordGatewayPlaintextSet()) return new c(e);
   for (var t of u)
     if (t.canUse()) return new t(e);
-  return new d(e)
+  return new c(e)
 }
-u.push(d)
+u.push(c)

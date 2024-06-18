@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   },
   s: function() {
     return _
@@ -29,7 +29,7 @@ let _ = {
   BRAND: l.cardBrand,
   CUSTOM: l.card
 };
-class d extends(i = s.PureComponent) {
+class c extends(i = s.PureComponent) {
   render() {
     let e;
     let {
@@ -47,7 +47,7 @@ class d extends(i = s.PureComponent) {
     })
   }
 }
-u(d, "Types", _), u(d, "defaultProps", {
+u(c, "Types", _), u(c, "defaultProps", {
   type: _.PRIMARY,
   outline: !1,
   editable: !1

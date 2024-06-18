@@ -46,7 +46,7 @@ t.Z = r.memo(function(e) {
       }
   }
   let _ = u.slice(0, 3),
-    d = r.useMemo(() => {
+    c = r.useMemo(() => {
       let e = u[3];
       if (null == e) return null;
       let t = e.getIconURL(24);
@@ -108,6 +108,6 @@ t.Z = r.memo(function(e) {
           })
         })
       }, e.id)
-    }), d]
+    }), c]
   })
 })

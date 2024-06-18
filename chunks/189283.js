@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   s: function() {
-    return d
+    return c
   }
 });
 var i = n(735250),
@@ -18,8 +18,8 @@ function _(e) {
     selected: n,
     onClick: s,
     look: _,
-    className: d,
-    selectedClassName: c
+    className: c,
+    selectedClassName: d
   } = e, E = {
     [function(e) {
       switch (e) {
@@ -31,7 +31,7 @@ function _(e) {
       }
     }(_)]: n
   };
-  null != c && (E[c] = n);
+  null != d && (E[d] = n);
   let I = r.useCallback(e => s(t, e), [s, t]);
   return (0, i.jsx)(a.P, {
     className: o()(function(e) {
@@ -42,7 +42,7 @@ function _(e) {
         case "pill":
           return u.pillItem
       }
-    }(_), d, E),
+    }(_), c, E),
     onClick: I,
     children: (0, i.jsx)(l.x, {
       variant: "text-sm/medium",
@@ -52,15 +52,15 @@ function _(e) {
   })
 }
 
-function d(e) {
+function c(e) {
   let {
     options: t,
     value: n,
     onChange: s,
     look: a = "tab",
     className: l,
-    optionClassName: d,
-    selectedOptionClassName: c
+    optionClassName: c,
+    selectedOptionClassName: d
   } = e, E = r.useCallback(e => {
     var t;
     let r = n === e.value;
@@ -69,10 +69,10 @@ function d(e) {
       option: e,
       look: a,
       onClick: s,
-      className: d,
-      selectedClassName: c
+      className: c,
+      selectedClassName: d
     }, null !== (t = e.key) && void 0 !== t ? t : String(e.value))
-  }, [n, a, s, d, c]);
+  }, [n, a, s, c, d]);
   return (0, i.jsx)("div", {
     className: o()(function(e) {
       switch (e) {

@@ -4,8 +4,8 @@ var i, r, s, o, a = n(392711),
   l = n.n(a),
   u = n(442837),
   _ = n(570140),
-  d = n(160404),
-  c = n(592125),
+  c = n(160404),
+  d = n(592125),
   E = n(70956),
   I = n(709054),
   T = n(977258),
@@ -41,16 +41,16 @@ function R(e) {
   var t, n, i, r, s, o, a, l, u;
   let {
     guildId: _,
-    updates: d
-  } = e, c = null !== (s = null !== (r = d.onboardingPromptsSeen) && void 0 !== r ? r : null === (t = f[_]) || void 0 === t ? void 0 : t.onboardingPromptsSeen) && void 0 !== s ? s : {}, E = null !== (a = null !== (o = d.onboardingResponsesSeen) && void 0 !== o ? o : null === (n = f[_]) || void 0 === n ? void 0 : n.onboardingResponsesSeen) && void 0 !== a ? a : {}, I = O(null !== (u = null !== (l = d.prompts) && void 0 !== l ? l : null === (i = f[_]) || void 0 === i ? void 0 : i.prompts) && void 0 !== u ? u : [], c, E);
+    updates: c
+  } = e, d = null !== (s = null !== (r = c.onboardingPromptsSeen) && void 0 !== r ? r : null === (t = f[_]) || void 0 === t ? void 0 : t.onboardingPromptsSeen) && void 0 !== s ? s : {}, E = null !== (a = null !== (o = c.onboardingResponsesSeen) && void 0 !== o ? o : null === (n = f[_]) || void 0 === n ? void 0 : n.onboardingResponsesSeen) && void 0 !== a ? a : {}, I = O(null !== (u = null !== (l = c.prompts) && void 0 !== l ? l : null === (i = f[_]) || void 0 === i ? void 0 : i.prompts) && void 0 !== u ? u : [], d, E);
   f[_] = {
     ...f[_],
-    ...d,
+    ...c,
     prompts: I
   }
 }
 
-function C(e, t) {
+function p(e, t) {
   if (null == N[e]) return;
   let n = {};
   Object.keys(N[e]).forEach(i => {
@@ -64,24 +64,24 @@ function C(e, t) {
     responses: i
   }
 }
-let p = [],
-  g = [],
-  L = [];
-class v extends(i = u.ZP.Store) {
+let g = [],
+  C = [],
+  v = [];
+class L extends(i = u.ZP.Store) {
   initialize() {
-    this.waitFor(c.Z, h.ZP, d.Z)
+    this.waitFor(d.Z, h.ZP, c.Z)
   }
   getOnboardingPromptsForOnboarding(e) {
     var t, n;
-    return null !== (n = null === (t = f[e]) || void 0 === t ? void 0 : t.onboardingPrompts) && void 0 !== n ? n : p
+    return null !== (n = null === (t = f[e]) || void 0 === t ? void 0 : t.onboardingPrompts) && void 0 !== n ? n : g
   }
   getOnboardingPrompts(e) {
     var t, n;
-    return null !== (n = null === (t = f[e]) || void 0 === t ? void 0 : t.prompts) && void 0 !== n ? n : p
+    return null !== (n = null === (t = f[e]) || void 0 === t ? void 0 : t.prompts) && void 0 !== n ? n : g
   }
   getOnboardingResponses(e) {
     var t, n, i;
-    return d.Z.isFullServerPreview(e) ? Array.from(null !== (n = d.Z.getOnboardingResponses(e)) && void 0 !== n ? n : g) : null !== (i = null === (t = f[e]) || void 0 === t ? void 0 : t.responses) && void 0 !== i ? i : g
+    return c.Z.isFullServerPreview(e) ? Array.from(null !== (n = c.Z.getOnboardingResponses(e)) && void 0 !== n ? n : C) : null !== (i = null === (t = f[e]) || void 0 === t ? void 0 : t.responses) && void 0 !== i ? i : C
   }
   getSelectedOptions(e) {
     let t = this.getOnboardingResponses(e);
@@ -89,22 +89,22 @@ class v extends(i = u.ZP.Store) {
   }
   getOnboardingResponsesForPrompt(e, t) {
     let n = f[e];
-    if (null == n) return g;
+    if (null == n) return C;
     let i = n.prompts.find(e => e.id === t);
-    return null == i ? g : l().intersection(i.options.map(e => e.id), this.getOnboardingResponses(e))
+    return null == i ? C : l().intersection(i.options.map(e => e.id), this.getOnboardingResponses(e))
   }
   getEnabledOnboardingPrompts(e) {
     var t, n;
     let i = f[e];
-    return d.Z.isFullServerPreview(e) ? null !== (t = null == i ? void 0 : i.prompts) && void 0 !== t ? t : p : null != i && i.enabled ? null !== (n = i.prompts) && void 0 !== n ? n : p : p
+    return c.Z.isFullServerPreview(e) ? null !== (t = null == i ? void 0 : i.prompts) && void 0 !== t ? t : g : null != i && i.enabled ? null !== (n = i.prompts) && void 0 !== n ? n : g : g
   }
   getDefaultChannelIds(e) {
     var t, n;
-    return null !== (n = null === (t = f[e]) || void 0 === t ? void 0 : t.defaultChannelIds) && void 0 !== n ? n : L
+    return null !== (n = null === (t = f[e]) || void 0 === t ? void 0 : t.defaultChannelIds) && void 0 !== n ? n : v
   }
   getEnabled(e) {
     var t, n;
-    return d.Z.isFullServerPreview(e) ? null != f[e] : null !== (n = null === (t = f[e]) || void 0 === t ? void 0 : t.enabled) && void 0 !== n && n
+    return c.Z.isFullServerPreview(e) ? null != f[e] : null !== (n = null === (t = f[e]) || void 0 === t ? void 0 : t.enabled) && void 0 !== n && n
   }
   getOnboardingPrompt(e) {
     return Object.values(f).map(e => e.prompts).flat().find(t => t.id === e)
@@ -138,12 +138,12 @@ class v extends(i = u.ZP.Store) {
     return null != e && (null === (t = f[e]) || void 0 === t ? void 0 : t.mode) === S.Un.ONBOARDING_ADVANCED
   }
 }
-o = "GuildOnboardingPromptsStore", (s = "displayName") in(r = v) ? Object.defineProperty(r, s, {
+o = "GuildOnboardingPromptsStore", (s = "displayName") in(r = L) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new v(_.Z, {
+}) : r[s] = o, t.Z = new L(_.Z, {
   CONNECTION_OPEN: function() {
     m = !1, f = {}
   },
@@ -164,18 +164,18 @@ o = "GuildOnboardingPromptsStore", (s = "displayName") in(r = v) ? Object.define
     } = e;
     m = !1;
     let _ = h.ZP.getOnboardingStatus(t) === h.uX.READY,
-      d = O(n, o, a);
+      c = O(n, o, a);
     f[t] = {
       enabled: r,
       mode: l,
       belowRequirements: u,
-      prompts: d,
-      onboardingPrompts: d.filter(e => e.inOnboarding),
+      prompts: c,
+      onboardingPrompts: c.filter(e => e.inOnboarding),
       defaultChannelIds: i.filter(e => (0, T.s)(t, e)),
       responses: _ ? [] : s,
       onboardingPromptsSeen: o,
       onboardingResponsesSeen: a
-    }, !_ && C(t, s), A[t] = Date.now()
+    }, !_ && p(t, s), A[t] = Date.now()
   },
   GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: function() {
     m = !1
@@ -187,7 +187,7 @@ o = "GuildOnboardingPromptsStore", (s = "displayName") in(r = v) ? Object.define
       selected: i,
       removedOptionIds: r
     } = e;
-    return !!d.Z.isFullServerPreview(t) || null != f[t] && (null != r && r.length > 0 && l().pullAll(f[t].responses, r), i ? f[t].responses.push(n) : l().pull(f[t].responses, n), null == N[t] && (N[t] = {}), N[t][n] = i, null != r && r.forEach(e => N[t][e] = !1), N[t] = {
+    return !!c.Z.isFullServerPreview(t) || null != f[t] && (null != r && r.length > 0 && l().pullAll(f[t].responses, r), i ? f[t].responses.push(n) : l().pull(f[t].responses, n), null == N[t] && (N[t] = {}), N[t][n] = i, null != r && r.forEach(e => N[t][e] = !1), N[t] = {
       ...N[t]
     }, !0)
   },
@@ -198,7 +198,7 @@ o = "GuildOnboardingPromptsStore", (s = "displayName") in(r = v) ? Object.define
       prompts_seen: i,
       options_seen: r
     } = e;
-    C(t, n);
+    p(t, n);
     let s = f[t];
     if (null == s) return !1;
     let o = O(s.prompts, i, r);

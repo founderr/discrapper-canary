@@ -21,7 +21,7 @@ async function s(e) {
       u = new t,
       _ = new r.Z(l, u);
     s(_.canvas);
-    let d = await _.export(o);
-    return i.remove(), d
+    let c = await _.export(o);
+    return i.remove(), c
   }
 }

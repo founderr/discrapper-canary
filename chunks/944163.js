@@ -1,15 +1,15 @@
 "use strict";
 n.d(t, {
   t: function() {
-    return c
+    return d
   }
 });
 var i, r, s, o, a = n(392711),
   l = n.n(a),
   u = n(442837),
   _ = n(570140),
-  d = n(246364);
-let c = {
+  c = n(246364);
+let d = {
     version: "",
     description: "",
     formFields: []
@@ -21,7 +21,7 @@ class I extends(o = u.ZP.Store) {
   }
   getRulesPrompt(e) {
     var t;
-    return l().find(null === (t = E[e]) || void 0 === t ? void 0 : t.formFields, d.J)
+    return l().find(null === (t = E[e]) || void 0 === t ? void 0 : t.formFields, c.J)
   }
 }
 s = "MemberVerificationFormStore", (r = "displayName") in(i = I) ? Object.defineProperty(i, r, {
@@ -54,10 +54,10 @@ s = "MemberVerificationFormStore", (r = "displayName") in(i = I) ? Object.define
       form: t,
       guildId: n
     } = e;
-    if (null == t) E[n] = c;
+    if (null == t) E[n] = d;
     else {
       var i;
-      let e = null !== (i = E[n]) && void 0 !== i ? i : c;
+      let e = null !== (i = E[n]) && void 0 !== i ? i : d;
       E[n] = {
         ...e,
         ...t
@@ -69,7 +69,7 @@ s = "MemberVerificationFormStore", (r = "displayName") in(i = I) ? Object.define
     let {
       guildId: n
     } = e;
-    E[n] = null !== (t = E[n]) && void 0 !== t ? t : c
+    E[n] = null !== (t = E[n]) && void 0 !== t ? t : d
   },
   GUILD_DELETE: function(e) {
     let {

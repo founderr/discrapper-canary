@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 }), n(47120);
 var i = n(392711),
@@ -20,7 +20,7 @@ function u(e, t, n) {
   }) : e[t] = n, e
 }
 let _ = 1 * a.Z.Millis.MINUTE;
-class d {
+class c {
   reset() {
     this._subscriptions = {}, this._unsubscriptions = {}, this._unsubscribe.cancel()
   }

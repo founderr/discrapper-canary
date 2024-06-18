@@ -7,8 +7,8 @@ n.d(t, {
     return l
   }
 }), n(47120), n(411104), n(653041);
-var i, r, s, o, a, l, u, _, d = n(512722),
-  c = n.n(d),
+var i, r, s, o, a, l, u, _, c = n(512722),
+  d = n.n(c),
   E = n(719711),
   I = n(544891),
   T = n(433517),
@@ -20,20 +20,20 @@ var i, r, s, o, a, l, u, _, d = n(512722),
 let m = window.DiscordNative,
   O = ["jpg", "jpeg", "png"],
   R = null,
-  C = null,
   p = null,
-  g = {};
-null != m && (R = m.remoteApp.getVersion().split(".").map(e => parseInt(e)), p = null === (i = (r = m.remoteApp).getModuleVersions) || void 0 === i ? void 0 : i.call(r), C = null === (s = (o = m.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(o));
-let L = new Set(["discord_erlpack", "discord_game_utils", "discord_rpc", "discord_spellcheck", "discord_utils", "discord_voice"]),
-  v = !1;
+  g = null,
+  C = {};
+null != m && (R = m.remoteApp.getVersion().split(".").map(e => parseInt(e)), g = null === (i = (r = m.remoteApp).getModuleVersions) || void 0 === i ? void 0 : i.call(r), p = null === (s = (o = m.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(o));
+let v = new Set(["discord_erlpack", "discord_game_utils", "discord_rpc", "discord_spellcheck", "discord_utils", "discord_voice"]),
+  L = !1;
 async function D(e) {
   let t = await fetch(new Request(e, {
     method: "GET",
     mode: "cors"
   }));
-  c()(200 === t.status, "Data fetch unsuccessful");
+  d()(200 === t.status, "Data fetch unsuccessful");
   let n = await t.arrayBuffer();
-  return c()(null != n, "Data is null"), n
+  return d()(null != n, "Data is null"), n
 }
 
 function M(e) {
@@ -43,7 +43,7 @@ function M(e) {
 function P(e) {
   var t, n, i, r, s, o, a, l;
   return {
-    id: g[null !== (t = e.id) && void 0 !== t ? t : ""],
+    id: C[null !== (t = e.id) && void 0 !== t ? t : ""],
     nativeProcessObserverId: parseInt(null !== (n = e.id) && void 0 !== n ? n : "", 10),
     name: null !== (i = e.gameName) && void 0 !== i ? i : e.name,
     processName: null !== (r = e.name) && void 0 !== r ? r : "",
@@ -63,7 +63,7 @@ function P(e) {
   }
 }(u = a || (a = {}))[u.Camera = 0] = "Camera", u[u.Microphone = 1] = "Microphone", u[u.Photo = 2] = "Photo", u[u.InputMonitoring = 3] = "InputMonitoring", u[u.ScreenRecording = 4] = "ScreenRecording", (_ = l || (l = {})).VIDEO = "VIDEO", _.MUTE = "MUTE", _.DEAFEN = "DEAFEN", _.DISCONNECT = "DISCONNECT", t.ZP = {
   requireModule: e => m.nativeModules.requireModule(e),
-  ensureModule: e => S.isPlatformEmbedded ? __OVERLAY__ && L.has(e) ? Promise.resolve() : m.nativeModules.ensureModule(e) : Promise.reject(Error("not embedded")),
+  ensureModule: e => S.isPlatformEmbedded ? __OVERLAY__ && v.has(e) ? Promise.resolve() : m.nativeModules.ensureModule(e) : Promise.reject(Error("not embedded")),
   get canBootstrapNewUpdater() {
     return m.nativeModules.canBootstrapNewUpdater || !1
   },
@@ -94,11 +94,11 @@ function P(e) {
   },
   setObservedGamesCallback(e, t) {
     try {
-      g = {};
+      C = {};
       let n = 0;
       this.getDiscordUtils().setObservedGamesCallback(e.map(e => {
         let t = ++n;
-        return null != e.id && (g[t] = e.id), {
+        return null != e.id && (C[t] = e.id), {
           ...e,
           cmdline: e.cmdLine,
           id: t
@@ -124,10 +124,10 @@ function P(e) {
   },
   getVoiceEngine() {
     if (__OVERLAY__) throw Error("cannot require discord_voice in overlay");
-    return v = !0, this.requireModule("discord_voice")
+    return L = !0, this.requireModule("discord_voice")
   },
   getDiscordUtils() {
-    if (!v) try {
+    if (!L) try {
       this.getVoiceEngine()
     } catch (e) {}
     return this.requireModule("discord_utils")
@@ -185,22 +185,22 @@ function P(e) {
     return R
   },
   get buildNumber() {
-    return C
+    return p
   },
   get moduleVersions() {
-    return p
+    return g
   },
   copy(e) {
     S.isPlatformEmbedded && m.clipboard.copy(e)
   },
   async copyImage(e) {
-    c()(S.isPlatformEmbedded, "Copy image method called outside native app"), c()("function" == typeof m.clipboard.copyImage, "Copy image not supported");
+    d()(S.isPlatformEmbedded, "Copy image method called outside native app"), d()("function" == typeof m.clipboard.copyImage, "Copy image not supported");
     let t = await D(e);
     m.clipboard.copyImage(A.from(t), e)
   },
   async saveImage(e) {
     var t;
-    c()(S.isPlatformEmbedded, "Save image method called outside native app");
+    d()(S.isPlatformEmbedded, "Save image method called outside native app");
     let n = f.Z.toURLSafe(e);
     if (null == n) return;
     let i = null !== (t = n.pathname.split("/").pop()) && void 0 !== t ? t : "unknown",
@@ -210,7 +210,7 @@ function P(e) {
   },
   async saveFile(e, t) {
     var n;
-    c()(S.isPlatformEmbedded, "Save file method called outside native app");
+    d()(S.isPlatformEmbedded, "Save file method called outside native app");
     let i = f.Z.toURLSafe(e);
     if (null == i) return;
     let r = null !== (n = null != t ? t : i.pathname.split("/").pop()) && void 0 !== n ? n : "unknown",
@@ -391,14 +391,14 @@ function P(e) {
     }, u = t;
     "application/json" === l && (u = JSON.stringify(t));
     let _ = a / 1e3 * s,
-      d = Math.ceil(u.length / _),
-      c = Array(d);
-    for (let e = 0; e < d; e++) {
+      c = Math.ceil(u.length / _),
+      d = Array(c);
+    for (let e = 0; e < c; e++) {
       let t = e * _;
-      c[e] = u.substring(t, t + _)
+      d[e] = u.substring(t, t + _)
     }
     return new Promise((e, t) => {
-      null != m.http && m.http.makeChunkedRequest(i, c, {
+      null != m.http && m.http.makeChunkedRequest(i, d, {
         method: r,
         chunkInterval: a,
         contentType: l,

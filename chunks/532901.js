@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 });
 var i = n(735250),
@@ -13,38 +13,38 @@ var i = n(735250),
   u = n(49012),
   _ = n(773352);
 
-function d(e) {
+function c(e) {
   return {
-    react(t, n, d) {
+    react(t, n, c) {
       if (e.enableBuildOverrides && (0, a._G)(t.target)) return (0, i.jsx)(r.Fragment, {
         children: (0, i.jsx)(l.Z, {
           url: t.target
         }, t.target)
-      }, d.key);
-      let c = n(t.content, d),
+      }, c.key);
+      let d = n(t.content, c),
         E = "string" == typeof t.title && 0 !== t.title.length ? t.title : (0, s.Rp)(t.content),
         I = (null == e ? void 0 : e.mustConfirmExternalLink) ? e => (null == e || e.stopPropagation(), null == e || e.preventDefault(), (0, u.q)({
           href: t.target,
           shouldConfirm: !0,
-          messageId: d.messageId,
-          channelId: d.channelId
+          messageId: c.messageId,
+          channelId: c.channelId
         }), null) : void 0;
-      if (d.previewLinkTarget && !(0, _.r)(t)) {
+      if (c.previewLinkTarget && !(0, _.r)(t)) {
         let e = "\n\n(".concat(t.target, ")");
         E.length + e.length > 1024 && (e = "..." + e, E = (E = E.substr(0, 1024 - e.length)).trimEnd()), E += e
       }
-      return d.noStyleAndInteraction ? (0, i.jsx)("span", {
+      return c.noStyleAndInteraction ? (0, i.jsx)("span", {
         title: E,
-        children: c
-      }, d.key) : (0, i.jsx)(o.Z, {
+        children: d
+      }, c.key) : (0, i.jsx)(o.Z, {
         title: E,
         href: t.target,
         trusted: () => (0, _.r)(t),
         onClick: I,
-        messageId: d.messageId,
-        channelId: d.channelId,
-        children: c
-      }, d.key)
+        messageId: c.messageId,
+        channelId: c.channelId,
+        children: d
+      }, c.key)
     }
   }
 }

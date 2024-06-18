@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   BF: function() {
-    return d
+    return c
   },
   QA: function() {
     return _
@@ -24,7 +24,7 @@ function u(e) {
 function _() {
   return l
 }
-let d = e => {
+let c = e => {
   s.default.track(a.rMx.USER_FLOW_TRANSITION, {
     flow_type: o.tA,
     from_step: e.fromStep,

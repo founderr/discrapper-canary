@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(239091),
   u = n(688465),
   _ = n(63063),
-  d = n(689079),
-  c = n(981631),
+  c = n(689079),
+  d = n(981631),
   E = n(689938),
   I = n(418609);
 
@@ -46,9 +46,9 @@ function T(e) {
       variant: "text-sm/normal",
       color: "text-muted",
       children: [E.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EDUCATION.format({
-        betaUserLimit: d.um
+        betaUserLimit: c.um
       }), E.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE.format({
-        learnMoreUrl: _.Z.getArticleURL(c.BhN.USING_APPS_FAQ)
+        learnMoreUrl: _.Z.getArticleURL(d.BhN.USING_APPS_FAQ)
       })]
     })]
   })

@@ -12,8 +12,8 @@ var i = n(525654),
   l = n(756647),
   u = n(544891),
   _ = n(570140),
-  d = n(479531),
-  c = n(34756),
+  c = n(479531),
+  d = n(34756),
   E = n(867176),
   I = n(839426),
   T = n(625128),
@@ -25,11 +25,11 @@ var i = n(525654),
   m = n(924301),
   O = n(82085),
   R = n(264229),
-  C = n(652898),
-  p = n(895886),
-  g = n(143816),
-  L = n(703656),
-  v = n(922482),
+  p = n(652898),
+  g = n(895886),
+  C = n(143816),
+  v = n(703656),
+  L = n(922482),
   D = n(131704),
   M = n(314897),
   P = n(592125),
@@ -87,15 +87,15 @@ function $(e) {
   }(t, i, r), {
     targetUserId: u,
     targetType: _,
-    targetApplicationId: d
-  } = null != r ? r : {}, c = o === j.d4z.GUILD_STAGE_VOICE, T = j.Z5c.CHANNEL(t, l);
+    targetApplicationId: c
+  } = null != r ? r : {}, d = o === j.d4z.GUILD_STAGE_VOICE, T = j.Z5c.CHANNEL(t, l);
   D.tx.has(o) ? (0, h.h)(() => {
     Promise.resolve().then(n.bind(n, 287734)).then(e => {
       let {
         default: n
       } = e, o = () => {
-        if (c) {
-          (0, v.Cq)(i instanceof D.Sf ? i : (0, D.kt)(i)), (0, L.uL)(T);
+        if (d) {
+          (0, L.Cq)(i instanceof D.Sf ? i : (0, D.kt)(i)), (0, v.uL)(T);
           return
         }
         n.selectVoiceChannel(l), _ === z.Iq.STREAM && null != u && Y.iV({
@@ -103,11 +103,11 @@ function $(e) {
           ownerId: u,
           guildId: t,
           channelId: l
-        }), _ === z.Iq.EMBEDDED_APPLICATION && null != d && ((0, L.uL)(j.Z5c.CHANNEL(null != t ? t : j.ME, l)), (0, I.Z)(l, d, s, null == r ? void 0 : r.intent))
+        }), _ === z.Iq.EMBEDDED_APPLICATION && null != c && ((0, v.uL)(j.Z5c.CHANNEL(null != t ? t : j.ME, l)), (0, I.Z)(l, c, s, null == r ? void 0 : r.intent))
       };
       (0, f.n)(t, [b.Z, G.Z, B.default, U.ZP]) ? (0, S.hk)(t, o) : o()
     })
-  }) : (0, E.l5)(a) && _ === z.Iq.EMBEDDED_APPLICATION && null != d && ((0, L.uL)(j.Z5c.CHANNEL(null != t ? t : j.ME, l)), (0, I.Z)(l, d, s, null == r ? void 0 : r.intent)), (function(e, t) {
+  }) : (0, E.l5)(a) && _ === z.Iq.EMBEDDED_APPLICATION && null != c && ((0, v.uL)(j.Z5c.CHANNEL(null != t ? t : j.ME, l)), (0, I.Z)(l, c, s, null == r ? void 0 : r.intent)), (function(e, t) {
     let {
       type: n
     } = e, {
@@ -117,7 +117,7 @@ function $(e) {
     } = null != t ? t : {}, o = n === j.d4z.GUILD_STAGE_VOICE, a = {
       navigationReplace: !0
     };
-    return null != r && (a.welcomeModalChannelId = r), o && (a.state = q.Df), null != s && (a.guildScheduledEventId = s.id), e => null != i ? i(e, a, g.ZP.INVITE_ACCEPT) : (0, L.uL)(e, a, g.ZP.INVITE_ACCEPT)
+    return null != r && (a.welcomeModalChannelId = r), o && (a.state = q.Df), null != s && (a.guildScheduledEventId = s.id), e => null != i ? i(e, a, C.ZP.INVITE_ACCEPT) : (0, v.uL)(e, a, C.ZP.INVITE_ACCEPT)
   })(i, r)(T)
 }
 let ee = function(e, t) {
@@ -157,7 +157,7 @@ t.Z = {
     return _.Z.isDispatching() ? Promise.resolve().then(() => e(t, n, i)) : (_.Z.dispatch({
       type: "INVITE_RESOLVE",
       code: t
-    }), (0, C.Z)(t, n, i).then(e => {
+    }), (0, p.Z)(t, n, i).then(e => {
       let {
         invite: t,
         code: n,
@@ -205,7 +205,7 @@ t.Z = {
       throw _.Z.dispatch({
         type: "INSTANT_INVITE_CREATE_FAILURE",
         channelId: e
-      }), new d.Z(t)
+      }), new c.Z(t)
     }
   },
   async mobileCreateInvite(e, t) {
@@ -318,13 +318,13 @@ t.Z = {
       context: o,
       callback: a,
       skipOnboarding: l
-    } = e, d = (0, R.fU)(s), E = d.baseCode, I = M.default.getSessionId();
-    let T = (i = o, r = d, {
+    } = e, c = (0, R.fU)(s), E = c.baseCode, I = M.default.getSessionId();
+    let T = (i = o, r = c, {
         ...i,
         invite_guild_scheduled_event_id: r.guildScheduledEventId
       }),
       h = B.default.getCurrentUser();
-    return null !== (t = null == h ? void 0 : h.hasFlag(j.xW$.QUARANTINED)) && void 0 !== t && t ? ((0, p.default)(), new Promise((e, t) => t(Error()))) : (_.Z.dispatch({
+    return null !== (t = null == h ? void 0 : h.hasFlag(j.xW$.QUARANTINED)) && void 0 !== t && t ? ((0, g.default)(), new Promise((e, t) => t(Error()))) : (_.Z.dispatch({
       type: "INVITE_ACCEPT",
       code: E
     }), u.tn.post({
@@ -341,7 +341,7 @@ t.Z = {
         invite: e.body,
         code: E
       });
-      let r = m.ZP.getGuildScheduledEvent(d.guildScheduledEventId),
+      let r = m.ZP.getGuildScheduledEvent(c.guildScheduledEventId),
         s = {
           ...e.body,
           guild_scheduled_event: r
@@ -365,7 +365,7 @@ t.Z = {
           message: null === (t = e.body) || void 0 === t ? void 0 : t.message,
           code: null === (n = e.body) || void 0 === n ? void 0 : n.code
         }
-      }), new c.Z(e)
+      }), new d.Z(e)
     }))
   },
   acceptInviteAndTransitionToInviteChannel(e) {
@@ -400,7 +400,7 @@ t.Z = {
       return
     }
     if (null != o && (null === (i = o.features) || void 0 === i ? void 0 : i.includes(j.oNc.COMMUNITY)) && (null === (r = o.features) || void 0 === r ? void 0 : r.includes(j.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) && !o.features.includes(j.oNc.PREVIEW_ENABLED)) {
-      (0, L.uL)(j.Z5c.GUILD_MEMBER_VERIFICATION(o.id, e.code));
+      (0, v.uL)(j.Z5c.GUILD_MEMBER_VERIFICATION(o.id, e.code));
       return
     }
     if (null == s) return;
@@ -425,8 +425,8 @@ t.Z = {
     T.Z.openNativeAppModal(e, j.Etm.INVITE_BROWSER)
   },
   openApp(e, t, n, i, s) {
-    var u, d;
-    let c;
+    var u, c;
+    let d;
     let E = null != e ? (0, R.fU)(e) : null,
       I = null == E ? void 0 : E.baseCode;
     if (_.Z.dispatch({
@@ -439,10 +439,10 @@ t.Z = {
       });
       return
     }
-    if ((null === (u = r().os) || void 0 === u ? void 0 : u.family) === "Android" || (null === (d = r().os) || void 0 === d ? void 0 : d.family) === "iOS") {
+    if ((null === (u = r().os) || void 0 === u ? void 0 : u.family) === "Android" || (null === (c = r().os) || void 0 === c ? void 0 : c.family) === "iOS") {
       let e = null != I ? (0, o.z0)(I) : (0, o.Gk)(),
         t = (0, a.WS)();
-      c = (0, a.ZP)(e, {
+      d = (0, a.ZP)(e, {
         utmSource: 2 === s ? "friend_invite" : X,
         fingerprint: n,
         username: i,
@@ -455,8 +455,8 @@ t.Z = {
         source: X,
         invite_code: I
       })
-    } else "#" === (c = null != t ? j.Z5c.INVITE_PROXY(t) : "")[0] && (c = c.slice(1)), c = "discord://".concat(c);
-    H.Z.launch(c, t => {
+    } else "#" === (d = null != t ? j.Z5c.INVITE_PROXY(t) : "")[0] && (d = d.slice(1)), d = "discord://".concat(d);
+    H.Z.launch(d, t => {
       _.Z.dispatch(t ? {
         type: "INVITE_APP_OPENED",
         code: e

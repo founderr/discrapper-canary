@@ -13,8 +13,8 @@ var i, r, s = n(498607),
   l = n(493892),
   u = n(594174),
   _ = n(815790),
-  d = n(588215),
-  c = n(44715),
+  c = n(588215),
+  d = n(44715),
   E = n(331551);
 
 function I(e, t, n) {
@@ -55,7 +55,7 @@ class N {
         hasUnusualAccountActivity: o,
         sourceInviteCode: a,
         joinSourceType: l,
-        inviterId: c,
+        inviterId: d,
         integrationType: I
       } = this._computeMemberSupplementals(e.userId, e.unusualDMActivityUntil),
       T = u.default.getUser(e.userId);
@@ -64,13 +64,13 @@ class N {
       hasUnusualAccountActivity: o,
       sourceInviteCode: a,
       joinSourceType: l,
-      inviterId: c,
+      inviterId: d,
       integrationType: I,
       ...e,
       isCurrentGuildMemberByTimestamp: r <= this.newMemberTimestamp,
       isIncludedInSearchResults: !1,
       user: T,
-      sort: (0, E.b)(e, null !== (n = t.selectedSort) && void 0 !== n ? n : d.d$.ORDER_BY_UNSPECIFIED),
+      sort: (0, E.b)(e, null !== (n = t.selectedSort) && void 0 !== n ? n : c.d$.ORDER_BY_UNSPECIFIED),
       joinedAtTimestamp: r,
       ...i
     }
@@ -82,13 +82,13 @@ class N {
       joinSourceType: s,
       inviterId: o,
       integrationType: a
-    } = null !== (n = (0, c.W2)(this.guildId)[e]) && void 0 !== n ? n : {};
+    } = null !== (n = (0, d.W2)(this.guildId)[e]) && void 0 !== n ? n : {};
     return {
       sourceInviteCode: null != r ? r : null,
       joinSourceType: null != s ? s : null,
       inviterId: null != o ? o : null,
       integrationType: null != a ? a : null,
-      hasUnusualDmActivity: null != (i = t) && new Date(i).getTime() >= T - d.rL,
+      hasUnusualDmActivity: null != (i = t) && new Date(i).getTime() >= T - c.rL,
       hasUnusualAccountActivity: (0, l.He)(e)
     }
   }
@@ -110,10 +110,10 @@ class N {
         hasUnusualDmActivity: l,
         hasUnusualAccountActivity: u,
         joinSourceType: _,
-        inviterId: d,
-        integrationType: c
+        inviterId: c,
+        integrationType: d
       } = this._computeMemberSupplementals(i.userId, null !== (n = r.unusualDMActivityUntil) && void 0 !== n ? n : i.unusualDMActivityUntil);
-    for (let e in i.sourceInviteCode !== a && (r.sourceInviteCode = a), i.hasUnusualDmActivity !== l && (r.hasUnusualDmActivity = l), i.hasUnusualAccountActivity !== u && (r.hasUnusualAccountActivity = u), i.joinSourceType !== _ && (r.joinSourceType = _), i.inviterId !== d && (r.inviterId = d), i.integrationType !== c && (r.integrationType = c), r) {
+    for (let e in i.sourceInviteCode !== a && (r.sourceInviteCode = a), i.hasUnusualDmActivity !== l && (r.hasUnusualDmActivity = l), i.hasUnusualAccountActivity !== u && (r.hasUnusualAccountActivity = u), i.joinSourceType !== _ && (r.joinSourceType = _), i.inviterId !== c && (r.inviterId = c), i.integrationType !== d && (r.integrationType = d), r) {
       let t = r[e],
         n = i[e];
       !o()(t, n) && (i[e] = t, s = !0)

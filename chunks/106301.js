@@ -5,9 +5,9 @@ var o, a = n(392711),
   l = n.n(a),
   u = n(442837),
   _ = n(570140),
-  d = n(981631);
+  c = n(981631);
 
-function c(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -49,7 +49,7 @@ class T extends(o = u.ZP.PersistedStore) {
     return null == i ? null : s
   }
 }
-c(T, "displayName", "HangStatusStore"), c(T, "persistKey", "HangStatusStore"), t.Z = new T(_.Z, {
+d(T, "displayName", "HangStatusStore"), d(T, "persistKey", "HangStatusStore"), t.Z = new T(_.Z, {
   LOGOUT: function() {
     E = I()
   },
@@ -63,7 +63,7 @@ c(T, "displayName", "HangStatusStore"), c(T, "persistKey", "HangStatusStore"), t
       customHangStatus: r,
       expiresAt: Date.now() + 288e5
     }), s = {
-      type: d.IIU.HANG_STATUS,
+      type: c.IIU.HANG_STATUS,
       name: "Hang Status",
       state: i
     }
@@ -74,7 +74,7 @@ c(T, "displayName", "HangStatusStore"), c(T, "persistKey", "HangStatusStore"), t
       emoji: n,
       saveAsDefault: o
     } = e;
-    i = d.tNA.CUSTOM, r = {
+    i = c.tNA.CUSTOM, r = {
       status: t,
       emoji: n
     };
@@ -84,7 +84,7 @@ c(T, "displayName", "HangStatusStore"), c(T, "persistKey", "HangStatusStore"), t
       customHangStatus: r,
       expiresAt: Date.now() + 288e5
     }), s = {
-      type: d.IIU.HANG_STATUS,
+      type: c.IIU.HANG_STATUS,
       name: "Hang Status",
       state: i,
       details: t,

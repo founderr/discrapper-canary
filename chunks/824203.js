@@ -4,7 +4,7 @@ n.d(t, {
     return _
   },
   in: function() {
-    return d
+    return c
   }
 }), n(373793);
 var i = n(39621),
@@ -16,8 +16,8 @@ var i = n(39621),
   u = n(689938);
 
 function _(e, t, n) {
-  var i, u, _, d;
-  let c = (0, a.Hs)(t, r.yU.CHAT),
+  var i, u, _, c;
+  let d = (0, a.Hs)(t, r.yU.CHAT),
     E = (0, s.PL)(!0, !1),
     I = (0, s.LD)(null == t ? void 0 : t.guild_id, !1),
     T = (0, o.vC)(null == t ? void 0 : t.guild_id, n);
@@ -27,21 +27,21 @@ function _(e, t, n) {
     userId: S,
     roleIds: f,
     isImpersonating: N
-  } = c, A = null === (u = I.result) || void 0 === u ? void 0 : null === (i = u.sections[e.applicationId]) || void 0 === i ? void 0 : i.descriptor;
+  } = d, A = null === (u = I.result) || void 0 === u ? void 0 : null === (i = u.sections[e.applicationId]) || void 0 === i ? void 0 : i.descriptor;
   if (void 0 !== A) {
     let n = (0, l.ZJ)(A.permissions, t, null == t ? void 0 : t.guild_id),
       i = (0, l.ML)(A.permissions, h.guild_id, S, f, N);
-    if ((0, l.Ft)(e, c, {
+    if ((0, l.Ft)(e, d, {
         applicationAllowedForUser: i,
         applicationAllowedForChannel: n,
         commandBotId: A.botId
       }) === l.mF.ALLOWED) return !1
   }
-  let m = null === (d = E.result) || void 0 === d ? void 0 : null === (_ = d.sections[e.applicationId]) || void 0 === _ ? void 0 : _.commands;
+  let m = null === (c = E.result) || void 0 === c ? void 0 : null === (_ = c.sections[e.applicationId]) || void 0 === _ ? void 0 : _.commands;
   return null != m && e.id in m
 }
 
-function d(e) {
+function c(e) {
   switch (e) {
     case i.O.FEATURE_LIMITED:
       return u.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_REASON_FEATURE_LIMITED;

@@ -15,8 +15,8 @@ function l(e, t, n) {
 }
 let u = null,
   _ = null,
-  d = new Set,
-  c = {},
+  c = new Set,
+  d = {},
   E = {},
   I = new Set,
   T = Object.freeze({});
@@ -31,20 +31,20 @@ class h extends(i = r.ZP.DeviceSettingsStore) {
   }
   getDevicesForPlatform(e) {
     var t;
-    return null !== (t = c[e]) && void 0 !== t ? t : T
+    return null !== (t = d[e]) && void 0 !== t ? t : T
   }
   getLastSelectedDeviceByPlatform(e) {
     return E[e]
   }
   getDevice(e, t) {
     var n;
-    return null === (n = c[e]) || void 0 === n ? void 0 : n[t]
+    return null === (n = d[e]) || void 0 === n ? void 0 : n[t]
   }
   getFetchingDevices(e) {
     return I.has(e)
   }
   getPendingDeviceCommands() {
-    return d
+    return c
   }
   getRemoteSessionId() {
     return u
@@ -92,7 +92,7 @@ l(h, "displayName", "GameConsoleStore"), l(h, "persistKey", "GameConsoleStore"),
       devices: n
     } = e;
     I.delete(t);
-    let i = c[t] = {},
+    let i = d[t] = {},
       r = {};
     for (let e of n) i[e.id] = e, E[t] === e.id && (r[t] = e.id);
     E = r

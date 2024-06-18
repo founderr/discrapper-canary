@@ -16,8 +16,8 @@ var i, r, s = n(470079),
   l = n(1870),
   u = n(884697),
   _ = n(594174),
-  d = n(74538),
-  c = n(689938);
+  c = n(74538),
+  d = n(689938);
 (r = i || (i = {})).PURCHASE = "purchase", r.PREMIUM_PURCHASE = "premium_purchase", r.PREVIEW = "preview", r.PREMIUM_PREVIEW = "premium_preview";
 let E = {
     id: "None"
@@ -27,7 +27,7 @@ let E = {
   };
 t.ZP = () => {
   let e = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
-    t = d.ZP.canUseCollectibles(e),
+    t = c.ZP.canUseCollectibles(e),
     n = (0, o.e7)([l.Z], () => l.Z.purchases),
     [i, r] = (0, o.Wu)([a.Z], () => [a.Z.categories, a.Z.products]);
   return (0, s.useMemo)(() => {
@@ -45,17 +45,17 @@ t.ZP = () => {
       section: "purchase",
       items: [E, I, ...e.purchase],
       height: 12,
-      header: c.Z.Messages.CHANGE_DECORATION_MODAL_PURCHASE_HEADER
+      header: d.Z.Messages.CHANGE_DECORATION_MODAL_PURCHASE_HEADER
     }, {
       section: e.premium_purchase.length > 0 ? "premium_purchase" : "premium_preview",
       items: e.premium_purchase.length > 0 ? e.premium_purchase : e.premium_preview,
       height: 12,
-      header: c.Z.Messages.CHANGE_DECORATION_MODAL_PREMIUM_STARTER_HEADER
+      header: d.Z.Messages.CHANGE_DECORATION_MODAL_PREMIUM_STARTER_HEADER
     }, {
       section: "preview",
       items: e.preview,
       height: 12,
-      header: c.Z.Messages.PROFILE_EFFECT_MODAL_SHOP_PREVIEW_HEADER
+      header: d.Z.Messages.PROFILE_EFFECT_MODAL_SHOP_PREVIEW_HEADER
     }].filter(e => {
       let {
         items: t

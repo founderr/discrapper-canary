@@ -6,9 +6,9 @@ t.d(s, {
 }), t(653041);
 var n = t(735250),
   a = t(470079),
-  i = t(120356),
-  l = t.n(i),
-  r = t(920906),
+  r = t(120356),
+  l = t.n(r),
+  i = t(920906),
   o = t(873546),
   c = t(399606),
   u = t(481060),
@@ -23,13 +23,13 @@ function m(e) {
   } = e, {
     days: t,
     hours: a,
-    minutes: i,
+    minutes: r,
     seconds: l
-  } = (0, d.Z)(s), r = function(e, s, t, n) {
+  } = (0, d.Z)(s), i = function(e, s, t, n) {
     let a = (e, s) => "".concat(e.toString().padStart(2, "0")).concat(s),
-      i = [];
-    return e > 0 && i.push(a(e, E.Z.Messages.COUNTDOWN_UNITS_DAYS)), (s > 0 || i.length > 0) && i.push(a(s, E.Z.Messages.COUNTDOWN_UNITS_HOURS)), (t > 0 || i.length > 0) && i.push(a(t, E.Z.Messages.COUNTDOWN_UNITS_MINUTES)), i.push(a(n, E.Z.Messages.COUNTDOWN_UNITS_SECONDS)), i.join(":")
-  }(t, a, i, l);
+      r = [];
+    return e > 0 && r.push(a(e, E.Z.Messages.COUNTDOWN_UNITS_DAYS)), (s > 0 || r.length > 0) && r.push(a(s, E.Z.Messages.COUNTDOWN_UNITS_HOURS)), (t > 0 || r.length > 0) && r.push(a(t, E.Z.Messages.COUNTDOWN_UNITS_MINUTES)), r.push(a(n, E.Z.Messages.COUNTDOWN_UNITS_SECONDS)), r.join(":")
+  }(t, a, r, l);
   return (0, n.jsx)(u.Text, {
     variant: "heading-md/medium",
     className: f.countdown,
@@ -37,7 +37,7 @@ function m(e) {
     children: (0, n.jsx)("div", {
       role: "timer",
       "aria-relevant": "all",
-      children: r
+      children: i
     })
   })
 }
@@ -46,8 +46,8 @@ let p = a.memo(function(e) {
     unpublishedAt: s,
     isVisible: t,
     displayOptions: a,
-    isFullScreen: i
-  } = e, d = (0, c.e7)([C.Z], () => C.Z.useReducedMotion), E = (0, r.useSpring)({
+    isFullScreen: r
+  } = e, d = (0, c.e7)([C.Z], () => C.Z.useReducedMotion), E = (0, i.useSpring)({
     transform: "translateX(-50%) ".concat(t ? "translateY(-100%)" : "translateY(0%)"),
     opacity: t ? 1 : 0,
     config: {
@@ -56,8 +56,8 @@ let p = a.memo(function(e) {
     },
     immediate: d
   });
-  return (0, n.jsxs)(r.animated.div, {
-    className: l()([f.countDownWrapper, i && f.fullScreenWrapper, o.tq && f.mobileWrapper]),
+  return (0, n.jsxs)(i.animated.div, {
+    className: l()([f.countDownWrapper, r && f.fullScreenWrapper, o.tq && f.mobileWrapper]),
     role: "status",
     style: {
       backgroundColor: a.backgroundColor,

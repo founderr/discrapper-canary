@@ -21,9 +21,9 @@ function _(e) {
     l = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
     _ = (0, i.e7)([s.Z], () => s.Z.hidePersonalInformation);
   if (null == e) return [];
-  let d = null !== (t = null == e ? void 0 : e.getBadges()) && void 0 !== t ? t : [];
-  return null != l && l.id === e.userId && n && (d = d.filter(e => e.id !== u)), _ && (d = d.map(e => ({
+  let c = null !== (t = null == e ? void 0 : e.getBadges()) && void 0 !== t ? t : [];
+  return null != l && l.id === e.userId && n && (c = c.filter(e => e.id !== u)), _ && (c = c.map(e => ({
     ...e,
     description: e.id === u ? a.Z.Messages.STREAMER_MODE_ENABLED : e.description
-  }))), d
+  }))), c
 }

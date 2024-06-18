@@ -27,8 +27,8 @@ var i = n(392711),
   l = n(336892),
   u = n(624833),
   _ = n(944314),
-  d = n(399358),
-  c = n(945835),
+  c = n(399358),
+  d = n(945835),
   E = n(912931),
   I = n(966552),
   T = n(561763),
@@ -40,11 +40,11 @@ var i = n(392711),
   m = n(316137),
   O = n(654123),
   R = n(660020),
-  C = n(980084),
-  p = n(24688),
-  g = n(200997),
-  L = n(633302),
-  v = n(134432),
+  p = n(980084),
+  g = n(24688),
+  C = n(200997),
+  v = n(633302),
+  L = n(134432),
   D = n(594174),
   M = n(768581),
   P = n(176354),
@@ -55,7 +55,7 @@ let b = {
     end: 15
   },
   G = [s],
-  w = [o, a, l, u, _, d, c, E, I, T, h, S, f, N, A, m, O, R, C, p, g],
+  w = [o, a, l, u, _, c, d, E, I, T, h, S, f, N, A, m, O, R, p, g, C],
   k = {
     [y.q.BASIC]: G,
     [y.q.PREMIUM]: w
@@ -63,7 +63,7 @@ let b = {
   B = r().memoize(e => new Promise(t => {
     let n = new Image;
     n.src = e, n.crossOrigin = "Anonymous", n.onload = () => {
-      let i = y.v * (0, v.x_)();
+      let i = y.v * (0, L.x_)();
       if (n.width === i && n.height === i) t(e);
       else {
         var r;
@@ -91,8 +91,8 @@ function V(e) {
       size: t
     })
   }
-  let i = L.ZP.convertSurrogateToName(e.name, !1),
-    r = L.ZP.getByName(i);
+  let i = v.ZP.convertSurrogateToName(e.name, !1),
+    r = v.ZP.getByName(i);
   return null != r ? P.ZP.getURL(r.surrogates) : ""
 }
 

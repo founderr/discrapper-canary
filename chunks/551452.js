@@ -13,8 +13,8 @@ var r = n(481060),
   l = n(754688),
   u = n(336197),
   _ = n(131704),
-  d = n(592125),
-  c = n(430824),
+  c = n(592125),
+  d = n(430824),
   E = n(797053),
   I = n(442514),
   T = n(900849),
@@ -27,7 +27,7 @@ async function f(e, t, n) {
       channelId: t,
       messageId: n
     }), null != e) {
-    let n = c.Z.getGuild(e);
+    let n = d.Z.getGuild(e);
     if ((null == n ? void 0 : n.joinedAt) == null) try {
       await T.Ub(e, {}, {
         channelId: t
@@ -35,7 +35,7 @@ async function f(e, t, n) {
       return
     } catch {}
   }
-  let i = d.Z.getChannel(t);
+  let i = c.Z.getChannel(t);
   if (null != i && null == n && (0, _.bw)(i.type) && (0, l.YO)(i)) {
     o.default.selectVoiceChannel(i.id);
     return
@@ -45,7 +45,7 @@ async function f(e, t, n) {
 function N(e) {
   return {
     react(t, o, a) {
-      let l = d.Z.getChannel(t.channelId),
+      let l = c.Z.getChannel(t.channelId),
         u = a.noStyleAndInteraction ? void 0 : n => {
           e.shouldStopPropagation && (null == n || n.stopPropagation()), f(t.guildId, t.channelId, t.messageId), e.shouldCloseDefaultModals && (0, r.closeAllModals)()
         },

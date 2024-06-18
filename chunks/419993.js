@@ -11,8 +11,8 @@ var i, r = n(735250),
   l = n(772848),
   u = n(84735),
   _ = n(15127),
-  d = n(766646),
-  c = n(993365),
+  c = n(766646),
+  d = n(993365),
   E = n(179240),
   I = n(689938),
   T = n(709944),
@@ -103,7 +103,7 @@ class O extends(i = s.Component) {
   }
   renderErrorMessage() {
     let e = this.getErrorMessage();
-    return null == e ? null : (0, r.jsx)(c.x, {
+    return null == e ? null : (0, r.jsx)(d.x, {
       id: N,
       variant: "text-xs/normal",
       color: "text-danger",
@@ -120,25 +120,25 @@ class O extends(i = s.Component) {
       autoFocus: o,
       minLength: l,
       maxLength: _,
-      allowOverflow: c,
+      allowOverflow: d,
       spellCheck: f,
       resizeable: N,
       className: O,
       id: R,
-      rows: C,
-      flex: p,
-      autosize: g,
-      required: L,
-      onInvalid: v,
+      rows: p,
+      flex: g,
+      autosize: C,
+      required: v,
+      onInvalid: L,
       inputRef: D
-    } = this.props, M = g ? E.l : "textarea", P = this.hasError(), y = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, U = this.getAriaDescribedBy();
+    } = this.props, M = C ? E.l : "textarea", P = this.hasError(), y = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, U = this.getAriaDescribedBy();
     return (0, r.jsxs)("div", {
       className: a()(h.inputWrapper, {
-        [T.flex]: p
+        [T.flex]: g
       }),
       children: [(0, r.jsxs)("div", {
         className: a()(T.inputMaxLength, {
-          [T.flex]: p
+          [T.flex]: g
         }),
         children: [(0, r.jsx)(u.t, {
           children: (0, r.jsx)(M, {
@@ -160,23 +160,23 @@ class O extends(i = s.Component) {
             value: i,
             autoFocus: o,
             minLength: l,
-            maxLength: c ? void 0 : _,
+            maxLength: d ? void 0 : _,
             spellCheck: f,
-            required: L,
+            required: v,
             onChange: this.onChange,
             onBlur: this.onBlur,
             onFocus: this.onFocus,
             onKeyDown: this.onKeyDown,
-            onInvalid: v,
-            rows: C,
+            onInvalid: L,
+            rows: p,
             ref: D
           })
-        }), null != l && (0, r.jsx)(d.n, {
+        }), null != l && (0, r.jsx)(c.n, {
           id: A,
           children: I.Z.Messages.MINIMUM_LENGTH.format({
             minLength: l
           })
-        }), null != _ && (0, r.jsx)(d.n, {
+        }), null != _ && (0, r.jsx)(c.n, {
           id: m,
           children: I.Z.Messages.MAXIMUM_LENGTH.format({
             maxLength: _

@@ -4,22 +4,22 @@ var i, r, s, o, a = n(442837),
   l = n(570140),
   u = n(78839);
 let _ = !1,
-  d = {};
+  c = {};
 
-function c(e) {
+function d(e) {
   let {
     guildBoostSlot: t
   } = e;
-  d = {
-    ...d,
+  c = {
+    ...c,
     [t.id]: t
   }
 }
 
 function E() {
   let e = {};
-  for (let t of Object.values(d)) e[t.id] = t, t.subscription = u.ZP.getSubscriptionById(t.subscriptionId);
-  d = e
+  for (let t of Object.values(c)) e[t.id] = t, t.subscription = u.ZP.getSubscriptionById(t.subscriptionId);
+  c = e
 }
 class I extends(i = a.ZP.Store) {
   initialize() {
@@ -29,10 +29,10 @@ class I extends(i = a.ZP.Store) {
     return _
   }
   get boostSlots() {
-    return d
+    return c
   }
   getGuildBoostSlot(e) {
-    return d[e]
+    return c[e]
   }
 }
 o = "GuildBoostSlotStore", (s = "displayName") in(r = I) ? Object.defineProperty(r, s, {
@@ -45,14 +45,14 @@ o = "GuildBoostSlotStore", (s = "displayName") in(r = I) ? Object.defineProperty
     let {
       guildBoostSlots: t
     } = e;
-    d = {}, t.forEach(e => {
-      d[e.id] = e
+    c = {}, t.forEach(e => {
+      c[e.id] = e
     }), _ = !0
   },
-  GUILD_BOOST_SLOT_UPDATE_SUCCESS: c,
-  GUILD_BOOST_SLOT_CREATE: c,
-  GUILD_BOOST_SLOT_UPDATE: c,
+  GUILD_BOOST_SLOT_UPDATE_SUCCESS: d,
+  GUILD_BOOST_SLOT_CREATE: d,
+  GUILD_BOOST_SLOT_UPDATE: d,
   LOGOUT: function() {
-    d = {}, _ = !1
+    c = {}, _ = !1
   }
 })

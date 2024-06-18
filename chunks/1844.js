@@ -23,8 +23,8 @@ function l() {
 }
 let u = l(),
   _ = !1,
-  d = null,
-  c = !1,
+  c = null,
+  d = !1,
   E = null,
   I = [],
   T = null;
@@ -56,7 +56,7 @@ class f extends(i = r.ZP.PersistedStore) {
     return E
   }
   get isFetchingActiveOutboundPromotions() {
-    return c
+    return d
   }
   get hasFetchedConsumedInboundPromotionId() {
     return u.hasFetchedConsumedInboundPromotionId
@@ -71,7 +71,7 @@ class f extends(i = r.ZP.PersistedStore) {
     return _
   }
   get lastFetchedActiveBogoPromotion() {
-    return d
+    return c
   }
   getState() {
     return u
@@ -83,19 +83,19 @@ a(f, "displayName", "PromotionsStore"), a(f, "persistKey", "PromotionsPersistedS
       activeOutboundPromotions: t,
       consumedInboundPromotionId: n
     } = e;
-    I = t, E = Date.now(), c = !1, !u.hasFetchedConsumedInboundPromotionId && (u.hasFetchedConsumedInboundPromotionId = !0, u.consumedInboundPromotionId = n)
+    I = t, E = Date.now(), d = !1, !u.hasFetchedConsumedInboundPromotionId && (u.hasFetchedConsumedInboundPromotionId = !0, u.consumedInboundPromotionId = n)
   },
   ACTIVE_OUTBOUND_PROMOTIONS_FETCH: function() {
-    c = !0
+    d = !0
   },
   ACTIVE_OUTBOUND_PROMOTIONS_FETCH_FAIL: function() {
-    I = [], c = !1
+    I = [], d = !1
   },
   ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS: function(e) {
     let {
       activePromotion: t
     } = e;
-    u.bogoPromotion = t, d = Date.now(), _ = !1
+    u.bogoPromotion = t, c = Date.now(), _ = !1
   },
   ACTIVE_BOGO_PROMOTION_FETCH: function() {
     _ = !0
@@ -114,6 +114,6 @@ a(f, "displayName", "PromotionsStore"), a(f, "persistKey", "PromotionsPersistedS
     null != e && (T = e, u.lastSeenOutboundPromotionStartDate = e)
   },
   LOGOUT: function() {
-    u = l(), c = !1, E = null, _ = !1, d = null, I = []
+    u = l(), d = !1, E = null, _ = !1, c = null, I = []
   }
 })

@@ -4,7 +4,7 @@ n.d(t, {
     return _
   },
   a: function() {
-    return d
+    return c
   }
 });
 var i = n(470079),
@@ -48,7 +48,7 @@ function _(e) {
   return u(e, null != t && "0" !== t ? s.Z.getUsableCustomEmojiById(t) : null)
 }
 
-function d() {
+function c() {
   let e = a.Ok.useSetting(),
     t = null == e ? void 0 : e.emojiId,
     n = (0, r.e7)([s.Z], () => null != t && "0" !== t ? s.Z.getUsableCustomEmojiById(t) : null, [t]);

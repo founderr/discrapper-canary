@@ -8,7 +8,7 @@ var i = n(470079),
   l = n(597688),
   u = n(884697),
   _ = n(981631),
-  d = n(474936);
+  c = n(474936);
 t.Z = e => {
   let t = (0, o.e7)([l.Z], () => l.Z.products);
   return (0, i.useCallback)(n => {
@@ -17,8 +17,8 @@ t.Z = e => {
       skuId: o
     } = n, l = t.get(o);
     a.default.track(_.rMx.PREMIUM_FEATURE_TRY_OUT, {
-      feature_name: (0, r.EQ)(i).with(s.Z.AVATAR_DECORATION, () => d.QP.AVATAR_DECORATION).with(s.Z.PROFILE_EFFECT, () => d.QP.PROFILE_EFFECT).otherwise(() => void 0),
-      feature_tier: (0, u.G1)(l) ? d.h1.FREE : d.h1.PREMIUM_STANDARD,
+      feature_name: (0, r.EQ)(i).with(s.Z.AVATAR_DECORATION, () => c.QP.AVATAR_DECORATION).with(s.Z.PROFILE_EFFECT, () => c.QP.PROFILE_EFFECT).otherwise(() => void 0),
+      feature_tier: (0, u.G1)(l) ? c.h1.FREE : c.h1.PREMIUM_STANDARD,
       feature_selection: null == l ? void 0 : l.name,
       location_stack: e
     })

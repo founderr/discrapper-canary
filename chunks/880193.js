@@ -1,7 +1,7 @@
 "use strict";
 t.d(s, {
   Z: function() {
-    return x
+    return C
   }
 }), t(47120);
 var n = t(735250),
@@ -23,19 +23,19 @@ var n = t(735250),
   h = t(169769),
   g = t(881744);
 
-function x(e) {
+function C(e) {
   let {
     priceTiers: s
   } = e, {
     editStateId: t
-  } = (0, _.N)(), x = (0, l.e7)([u.Z], () => {
+  } = (0, _.N)(), C = (0, l.e7)([u.Z], () => {
     var e;
     return null === (e = u.Z.getSubscriptionListing(t)) || void 0 === e ? void 0 : e.image_asset
-  }), [C, R] = I._T(t), [L, O] = I.mR(t), [A, p] = I.PK(t), [M, f] = I.d9(t, 1024), {
-    imageCTA: v,
-    imageAriaLabel: D,
-    setFilename: Z
-  } = (0, T.Z)(x), j = i.useMemo(() => {
+  }), [x, R] = I._T(t), [L, O] = I.mR(t), [A, p] = I.PK(t), [M, f] = I.d9(t, 1024), {
+    imageCTA: D,
+    imageAriaLabel: v,
+    setFilename: j
+  } = (0, T.Z)(C), Z = i.useMemo(() => {
     var e;
     return null !== (e = null == s ? void 0 : s.map(e => ({
       value: e,
@@ -44,7 +44,7 @@ function x(e) {
   }, [s]);
 
   function U(e, s) {
-    null != s && Z(s.name), f(e)
+    null != s && j(s.name), f(e)
   }
   let G = (0, E.mY)(),
     P = (0, c.Dt)(),
@@ -63,7 +63,7 @@ function x(e) {
           disabled: G,
           children: (0, n.jsx)(a.TextInput, {
             placeholder: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_NAME_PLACEHOLDER,
-            value: C,
+            value: x,
             inputClassName: h.formInput,
             onChange: R,
             "aria-labelledby": P,
@@ -77,7 +77,7 @@ function x(e) {
           titleId: b,
           disabled: G,
           children: (0, n.jsx)(a.SingleSelect, {
-            options: j,
+            options: Z,
             className: h.formInput,
             isDisabled: G || null == s,
             placeholder: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_PRICE_PLACEHOLDER,
@@ -120,22 +120,22 @@ function x(e) {
           children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_SYMBOL_DESCRIPTION
         }), (0, n.jsx)(r.Z, {
           onChange: U,
-          buttonCTA: v,
-          "aria-label": D,
+          buttonCTA: D,
+          "aria-label": v,
           disabled: G,
           look: a.Button.Looks.OUTLINED,
           color: a.Button.Colors.PRIMARY
         })]
       }), (0, n.jsx)(o.Z, {
         image: M,
-        hint: v,
+        hint: D,
         showIcon: !0,
         showRemoveButton: !1,
         hideSize: !0,
         className: g.iconUploader,
         imageClassName: g.tierSymbolUploaderInner,
         onChange: U,
-        "aria-label": D,
+        "aria-label": v,
         disabled: G
       })]
     })]

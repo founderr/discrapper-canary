@@ -4,8 +4,8 @@ var i, r, s, o, a = n(442837),
   l = n(570140),
   u = n(375954);
 let _ = Object.freeze([]),
-  d = {},
   c = {},
+  d = {},
   E = {},
   I = {},
   T = {};
@@ -17,14 +17,14 @@ function S() {
 }
 
 function f(e, t) {
-  let n = d[e];
-  return null != n && (d[e] = n.filter(e => e.id !== t), delete c[t], delete E[t], n.length !== d[e].length)
+  let n = c[e];
+  return null != n && (c[e] = n.filter(e => e.id !== t), delete d[t], delete E[t], n.length !== c[e].length)
 }
 
 function N(e, t) {
-  let n = d[e];
+  let n = c[e];
   if (null == n) return !1;
-  d[e] = n.map(e => e.id === t.id ? {
+  c[e] = n.map(e => e.id === t.id ? {
     ...e,
     ...t
   } : e);
@@ -40,7 +40,7 @@ class A extends(i = a.ZP.Store) {
   }
   getFiles(e) {
     var t;
-    return null !== (t = d[e]) && void 0 !== t ? t : _
+    return null !== (t = c[e]) && void 0 !== t ? t : _
   }
   getMessageForFile(e) {
     return E[e]
@@ -73,8 +73,8 @@ o = "UploadStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
       message: s
     } = e;
     if (r._aborted || r._errored) return;
-    let o = null !== (t = d[n]) && void 0 !== t ? t : _;
-    c[i.id] = r, d[n] = [...o, i], E[i.id] = s;
+    let o = null !== (t = c[n]) && void 0 !== t ? t : _;
+    d[i.id] = r, c[n] = [...o, i], E[i.id] = s;
     let {
       items: a
     } = i;
@@ -114,7 +114,7 @@ o = "UploadStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
   UPLOAD_CANCEL_REQUEST: function(e) {
     let {
       file: t
-    } = e, n = c[t.id];
+    } = e, n = d[t.id];
     if (null == n) return !1;
     setImmediate(() => {
       var e;
@@ -125,7 +125,7 @@ o = "UploadStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
     let {
       file: t,
       itemId: n
-    } = e, i = c[t.id];
+    } = e, i = d[t.id];
     if (null == i) return !1;
     setImmediate(() => i.cancelItem(n))
   },

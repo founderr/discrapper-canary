@@ -8,11 +8,11 @@ var i = n(735250);
 n(470079);
 var s = n(481060),
   l = n(13245),
-  a = n(454902),
-  o = n(312839),
+  o = n(454902),
+  a = n(312839),
   r = n(981631),
-  d = n(987650),
-  c = n(689938),
+  c = n(987650),
+  d = n(689938),
   u = n(174325);
 
 function h() {
@@ -22,28 +22,28 @@ function h() {
       color: s.Button.Colors.GREEN,
       size: s.Button.Sizes.SMALL,
       className: u.ctaButton,
-      children: c.Z.Messages.OVERLAY_NEWS_GO_LIVE_CTA
+      children: d.Z.Messages.OVERLAY_NEWS_GO_LIVE_CTA
     })
   })
 }
 
 function p(e) {
   switch (e.type) {
-    case d.nc.GO_LIVE_VOICE: {
+    case c.nc.GO_LIVE_VOICE: {
       let {
         game: t,
         voiceGuild: u
       } = e, {
         trackView: p,
         trackClick: f
-      } = (0, o.R)(d.n0.GoLiveNudge, {
-        notif_type: d.n0.GoLiveNudge
+      } = (0, a.R)(c.n0.GoLiveNudge, {
+        notif_type: c.n0.GoLiveNudge
       });
       return {
-        colorScheme: a.IC.PRIMARY,
+        colorScheme: o.IC.PRIMARY,
         icon: n(847881),
         title: null,
-        body: c.Z.Messages.OVERLAY_NEWS_GO_LIVE_BODY.format({
+        body: d.Z.Messages.OVERLAY_NEWS_GO_LIVE_BODY.format({
           game: t.name,
           server: u.toString()
         }),
@@ -70,20 +70,20 @@ function p(e) {
         }
       }
     }
-    case d.nc.GO_LIVE_NON_VOICE: {
+    case c.nc.GO_LIVE_NON_VOICE: {
       let {
         game: t
       } = e, {
         trackView: u,
         trackClick: p
-      } = (0, o.R)(d.n0.GoLiveNonVoiceNudge, {
-        notif_type: d.n0.GoLiveNonVoiceNudge
+      } = (0, a.R)(c.n0.GoLiveNonVoiceNudge, {
+        notif_type: c.n0.GoLiveNonVoiceNudge
       });
       return {
-        colorScheme: a.IC.PRIMARY,
+        colorScheme: o.IC.PRIMARY,
         icon: n(847881),
         title: null,
-        body: c.Z.Messages.OVERLAY_NEWS_GO_LIVE_BODY_NO_VOICE_CHANNEL.format({
+        body: d.Z.Messages.OVERLAY_NEWS_GO_LIVE_BODY_NO_VOICE_CHANNEL.format({
           game: t.name
         }),
         hint: () => (0, i.jsx)(h, {}),

@@ -12,8 +12,8 @@ var i = n(623279),
   l = n(710845),
   u = n(706454),
   _ = n(823379),
-  d = n(598105),
-  c = n(643413);
+  c = n(598105),
+  d = n(643413);
 
 function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ let I = new l.Z("Spellchecker"),
 
 function h(e) {
   var t;
-  e = null !== (t = c.Z[e]) && void 0 !== t ? t : e;
+  e = null !== (t = d.Z[e]) && void 0 !== t ? t : e;
   let n = (0, i.parse)(e.replace(/[_-]/g, "-"));
   if (null == n || null == n.langtag.language || null == n.langtag.region) {
     I.error("".concat(e, " is not a valid locale."));
@@ -84,12 +84,12 @@ class S {
     let [t, n] = u.default.locale.split("-");
     this.regionPreference = n;
     let i = this.getAvailableLanguages(e);
-    this.languageDetector = new d.Z(t, n => {
+    this.languageDetector = new c.Z(t, n => {
       let r = "".concat(n, "-").concat(this.regionPreference);
       if (-1 !== e.indexOf(r)) this.setLocale(r);
       else {
         var s;
-        let e = null !== (s = i[n]) && void 0 !== s ? s : c.Z[t];
+        let e = null !== (s = i[n]) && void 0 !== s ? s : d.Z[t];
         null != e && this.setLocale(e)
       }
     }), T.on("spellcheck-result", (e, t) => {

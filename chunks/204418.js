@@ -13,8 +13,8 @@ t.Z = e => {
     avatarDecorationOverride: o,
     status: u,
     avatarSize: _ = r.AvatarSizes.SIZE_120,
-    "aria-hidden": d = !1,
-    className: c,
+    "aria-hidden": c = !1,
+    className: d,
     animateOnHover: E = !1
   } = e, {
     avatarDecorationSrc: I,
@@ -33,9 +33,9 @@ t.Z = e => {
     src: T,
     size: _,
     status: u,
-    "aria-label": d ? void 0 : a.Z.Messages.USER_SETTINGS_AVATAR,
-    "aria-hidden": d,
-    className: c,
+    "aria-label": c ? void 0 : a.Z.Messages.USER_SETTINGS_AVATAR,
+    "aria-hidden": c,
+    className: d,
     ...h
   })
 }

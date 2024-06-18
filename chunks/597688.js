@@ -3,8 +3,8 @@ let i, r;
 n(47120);
 var s, o, a, l, u = n(392711),
   _ = n(442837),
-  d = n(570140),
-  c = n(706454),
+  c = n(570140),
+  d = n(706454),
   E = n(884697);
 let I = new Map,
   T = new Map,
@@ -18,7 +18,7 @@ let A = {},
   };
 class O extends(s = _.ZP.Store) {
   initialize() {
-    this.syncWith([c.default], m)
+    this.syncWith([d.default], m)
   }
   get isFetchingCategories() {
     return f
@@ -57,7 +57,7 @@ l = "CollectiblesCategoryStore", (a = "displayName") in(o = O) ? Object.definePr
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[a] = l, t.Z = new O(d.Z, {
+}) : o[a] = l, t.Z = new O(c.Z, {
   COLLECTIBLES_CATEGORIES_FETCH: e => {
     f = !0, i = void 0, A = e.options
   },

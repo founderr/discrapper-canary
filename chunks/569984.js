@@ -1,19 +1,19 @@
 "use strict";
-let i, r, s, o, a, l, u, _, d, c, E, I;
+let i, r, s, o, a, l, u, _, c, d, E, I;
 n(47120);
 var T, h, S, f, N = n(887003),
   A = n(442837),
   m = n(570140),
   O = n(497505),
   R = n(918701),
-  C = n(5881),
-  p = n(46140);
+  p = n(5881),
+  g = n(46140);
 
-function g() {
-  i = !1, r = new Map, s = 0, o = new Set, a = new Set, l = new Set, u = new Set, _ = new Set, d = new Map, c = new Map, E = new Map, I = null
+function C() {
+  i = !1, r = new Map, s = 0, o = new Set, a = new Set, l = new Set, u = new Set, _ = new Set, c = new Map, d = new Map, E = new Map, I = null
 }
 
-function L(e, t) {
+function v(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
       updateProgress: !1
     },
@@ -35,23 +35,23 @@ function L(e, t) {
   }
 }
 
-function v(e, t) {
-  let n = new Map(d);
-  n.set(e, t), d = n
+function L(e, t) {
+  let n = new Map(c);
+  n.set(e, t), c = n
 }
 
 function D(e, t) {
-  v(e, t);
+  L(e, t);
   let n = r.get(e),
     i = null == n ? void 0 : n.userStatus;
-  null != i && null == i.claimedAt && L(e, {
+  null != i && null == i.claimedAt && v(e, {
     userStatus: {
       ...i,
       claimedAt: t.claimedAt
     }
   })
 }
-g();
+C();
 
 function M(e) {
   null != E.get(e) && (E = new Map(E)).delete(e)
@@ -95,10 +95,10 @@ class U extends(T = A.ZP.Store) {
     return _.has(e)
   }
   getRewardCode(e) {
-    return d.get(e)
+    return c.get(e)
   }
   getRewards(e) {
-    return c.get(e)
+    return d.get(e)
   }
   getStreamHeartbeatFailure(e) {
     return E.get(e)
@@ -114,7 +114,7 @@ f = "QuestsStore", (S = "displayName") in(h = U) ? Object.defineProperty(h, S, {
   writable: !0
 }) : h[S] = f, t.Z = new U(m.Z, {
   LOGOUT: function() {
-    g()
+    C()
   },
   QUESTS_FETCH_CURRENT_QUESTS_BEGIN: function() {
     s = Date.now(), i = !0
@@ -123,8 +123,8 @@ f = "QuestsStore", (S = "displayName") in(h = U) ? Object.defineProperty(h, S, {
     let {
       quests: t
     } = e;
-    for (let e of (i = !1, r = new Map, t)) r.set(e.id, e), e.targetedContent.includes(O.jn.QUEST_BAR) && (0, C.T)({
-      location: p.dr.QUESTS_STORE
+    for (let e of (i = !1, r = new Map, t)) r.set(e.id, e), e.targetedContent.includes(O.jn.QUEST_BAR) && (0, p.T)({
+      location: g.dr.QUESTS_STORE
     }).log("Delivered ".concat(e.config.messages.questName, " (").concat(e.id, ")"))
   },
   QUESTS_FETCH_CURRENT_QUESTS_FAILURE: function() {
@@ -136,7 +136,7 @@ f = "QuestsStore", (S = "displayName") in(h = U) ? Object.defineProperty(h, S, {
       streamKey: n,
       userStatus: i
     } = e;
-    L(t, {
+    v(t, {
       userStatus: i
     }, {
       updateProgress: !0
@@ -163,7 +163,7 @@ f = "QuestsStore", (S = "displayName") in(h = U) ? Object.defineProperty(h, S, {
     let {
       enrolledQuestUserStatus: t
     } = e;
-    L(t.questId, {
+    v(t.questId, {
       userStatus: t
     }), P(t.questId)
   },
@@ -223,8 +223,8 @@ f = "QuestsStore", (S = "displayName") in(h = U) ? Object.defineProperty(h, S, {
       entitlements: n
     } = e, i = new Set(l);
     i.delete(t), l = i, ! function(e, t) {
-      let n = new Map(c);
-      n.set(e, t.items), c = n;
+      let n = new Map(d);
+      n.set(e, t.items), d = n;
       let i = r.get(e),
         s = null == i ? void 0 : i.userStatus;
       if (null != s && null == s.claimedAt) {
@@ -238,7 +238,7 @@ f = "QuestsStore", (S = "displayName") in(h = U) ? Object.defineProperty(h, S, {
         }({
           entitlements: t
         });
-        null != n && v(e, n), L(e, {
+        null != n && L(e, n), v(e, {
           userStatus: {
             ...s,
             claimedAt: t.claimedAt,
@@ -264,7 +264,7 @@ f = "QuestsStore", (S = "displayName") in(h = U) ? Object.defineProperty(h, S, {
     let {
       dismissedQuestUserStatus: t
     } = e;
-    L(t.questId, {
+    v(t.questId, {
       userStatus: t
     }), y(t.questId)
   },
@@ -278,9 +278,9 @@ f = "QuestsStore", (S = "displayName") in(h = U) ? Object.defineProperty(h, S, {
     let {
       user_status: t
     } = e;
-    (0, C.T)({
-      location: p.dr.QUESTS_STORE
-    }).log("Received user status update for ".concat(t.quest_id), t), L(t.quest_id, {
+    (0, p.T)({
+      location: g.dr.QUESTS_STORE
+    }).log("Received user status update for ".concat(t.quest_id), t), v(t.quest_id, {
       userStatus: (0, R.U3)(t)
     }, {
       updateProgress: !0
@@ -302,15 +302,15 @@ f = "QuestsStore", (S = "displayName") in(h = U) ? Object.defineProperty(h, S, {
     let {
       previewQuestUserStatus: t
     } = e;
-    L(t.questId, {
+    v(t.questId, {
       userStatus: t
-    }), null == t.claimedAt && (d = new Map(d)).delete(t.questId)
+    }), null == t.claimedAt && (c = new Map(c)).delete(t.questId)
   },
   QUESTS_OPTIMISTIC_PROGRESS_UPDATE: function(e) {
     let {
       userStatus: t
     } = e;
-    L(t.questId, {
+    v(t.questId, {
       userStatus: t
     }, {
       updateProgress: !0

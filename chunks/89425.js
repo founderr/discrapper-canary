@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 }), n(411104);
 var i = n(430198),
@@ -12,16 +12,16 @@ var i = n(430198),
   l = n(944486),
   u = n(979651);
 class _ extends Error {}
-async function d(e) {
+async function c(e) {
   let {
     channelId: t,
     timeoutMs: n = 1e4,
-    bypassChangeModal: d = !1
-  } = e, c = o.Z.getChannel(t);
-  if (null == c || !await r.Z.handleVoiceConnect({
+    bypassChangeModal: c = !1
+  } = e, d = o.Z.getChannel(t);
+  if (null == d || !await r.Z.handleVoiceConnect({
       bypassGuildIdCheck: !0,
-      bypassChangeModal: d,
-      channel: c,
+      bypassChangeModal: c,
+      channel: d,
       connected: u.Z.isInChannel(t),
       needSubscriptionToAccess: (0, s.$)(t, o.Z, i.Z, a.Z).needSubscriptionToAccess
     })) return !1;

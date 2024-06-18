@@ -15,12 +15,12 @@ var i = n(442837),
   l = n(981631);
 
 function u(e, t) {
-  let [n, i, u] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [o.default, r.Z, s.Z], _ = i.getGuild(e), d = n.getUser(t);
-  return !(null == _ || null == d || d.isNonUserBot() || _.isOwner(d) || a.BT({
+  let [n, i, u] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [o.default, r.Z, s.Z], _ = i.getGuild(e), c = n.getUser(t);
+  return !(null == _ || null == c || c.isNonUserBot() || _.isOwner(c) || a.BT({
     permission: l.Plq.ADMINISTRATOR,
-    user: d,
+    user: c,
     context: _
-  })) && u.canManageUser(l.Plq.MODERATE_MEMBERS, d, _)
+  })) && u.canManageUser(l.Plq.MODERATE_MEMBERS, c, _)
 }
 
 function _(e, t) {

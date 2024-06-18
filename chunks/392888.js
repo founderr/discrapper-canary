@@ -13,12 +13,12 @@ var r = n(544891),
   l = n(480294),
   u = n(9156),
   _ = n(312400),
-  d = n(115345),
-  c = n(981631);
+  c = n(115345),
+  d = n(981631);
 class E extends a.Z {
   handlePostConnectionOpen() {
     if (!s.K.get("turnedOffNewNotifications")) {
-      if (l.Z.hasConsented(c.pjP.PERSONALIZATION)) {
+      if (l.Z.hasConsented(d.pjP.PERSONALIZATION)) {
         if (!_.xT.getCurrentConfig({
             location: "NotificationMigrationManager"
           }, {
@@ -43,20 +43,20 @@ class E extends a.Z {
         guild_noise: s,
         usage: a
       }
-    } = await r.tn.get("/users/@me/notification-migration-data2"), l = (0, d._Y)(a), {
+    } = await r.tn.get("/users/@me/notification-migration-data2"), l = (0, c._Y)(a), {
       default: u
     } = await Promise.all([n.e("99387"), n.e("53512")]).then(n.bind(n, 753521));
     if ((0, o.hasAnyModalOpen)()) return;
     if (_.fs.trackExposure({
         location: "NotificationMigrationManager"
-      }), !!t)(0, d.cG)(s, l) ? (0, o.openModal)(e => (0, i.jsx)(u, {
+      }), !!t)(0, c.cG)(s, l) ? (0, o.openModal)(e => (0, i.jsx)(u, {
       ...e,
       dismissable: !1,
       guildPain: s,
       myUsage: l
     }), {
       onCloseRequest: () => {}
-    }) : (0, d.ly)()
+    }) : (0, c.ly)()
   }
   checkNewUserExperiment() {
     let {
@@ -69,7 +69,7 @@ class E extends a.Z {
     });
     if (!!e) _.ad.trackExposure({
       location: "NotificationMigrationManager"
-    }), t && (0, d.ly)()
+    }), t && (0, c.ly)()
   }
   constructor(...e) {
     var t, n, i;
@@ -89,7 +89,7 @@ async function I(e) {
       guild_noise: t,
       usage: s
     }
-  } = await r.tn.get("/users/@me/notification-migration-data2"), a = (0, d._Y)(s);
+  } = await r.tn.get("/users/@me/notification-migration-data2"), a = (0, c._Y)(s);
   (0, o.openModalLazy)(async () => {
     let {
       default: r

@@ -7,7 +7,7 @@ n.d(t, {
     return E
   },
   on: function() {
-    return c
+    return d
   }
 }), n(47120);
 var i = n(442837),
@@ -19,7 +19,7 @@ var i = n(442837),
   u = n(772021),
   _ = n(981631);
 
-function d(e) {
+function c(e) {
   let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [l.Z, a.Z], i = t.getGuild(e);
   if (null == i) return !1;
   let r = (0, s.l)(i),
@@ -27,13 +27,13 @@ function d(e) {
   return !!(r && o || n.isViewingServerShop(e)) || !1
 }
 
-function c(e, t) {
-  return !!d(e) || (0, u.U)(e, t)
+function d(e, t) {
+  return !!c(e) || (0, u.U)(e, t)
 }
 
 function E(e) {
   let t = (0, u.Z)(e),
-    n = (0, i.e7)([l.Z, a.Z], () => d(e, [l.Z, a.Z]), [e]),
+    n = (0, i.e7)([l.Z, a.Z], () => c(e, [l.Z, a.Z]), [e]),
     {
       shouldHideGuildPurchaseEntryPoints: r
     } = (0, o.uP)(e);

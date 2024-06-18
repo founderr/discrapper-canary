@@ -16,16 +16,16 @@ var r = n(392711),
   u = n(998502);
 let _ = [];
 
-function d(e) {
+function c(e) {
   return e = e.toLowerCase(), (0, l.isWindows)() && (e = (e = e.replace(/^[a-z]:/, "")).replace(/\\/g, "/")), e
 }
 
-function c(e) {
-  null != e && "" !== e && (!(e = d(e)).endsWith("/") && (e += "/"), _.push(e))
+function d(e) {
+  null != e && "" !== e && (!(e = c(e)).endsWith("/") && (e += "/"), _.push(e))
 }
 
 function E(e) {
-  e = d(e);
+  e = c(e);
   let t = !1;
   return (_.forEach(n => {
     !t && e.startsWith(n) && (e = e.substr(n.length), t = !0)
@@ -40,8 +40,8 @@ async function I() {
   }
   if ((0, l.isWindows)()) {
     let e = o.Z.process.env;
-    c(e.LOCALAPPDATA), c(e["PROGRAMFILES(X86)"]), c(e.PROGRAMFILES), c(e.PROGRAMW6432), c(e.PROGRAMDATA), c("/games/"), c("/steamlibrary/steamapps/common/")
+    d(e.LOCALAPPDATA), d(e["PROGRAMFILES(X86)"]), d(e.PROGRAMFILES), d(e.PROGRAMW6432), d(e.PROGRAMDATA), d("/games/"), d("/steamlibrary/steamapps/common/")
   }
   let e = o.Z.remoteApp.getPath;
-  return c(await e("home")), c(await e("appData")), c(await e("desktop")), c(await e("documents")), c(await e("downloads")), (_ = s().uniq(_)).sort((e, t) => t.length - e.length), i
+  return d(await e("home")), d(await e("appData")), d(await e("desktop")), d(await e("documents")), d(await e("downloads")), (_ = s().uniq(_)).sort((e, t) => t.length - e.length), i
 }

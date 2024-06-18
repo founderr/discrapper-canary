@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 }), n(47120);
 var i = n(833858),
@@ -58,7 +58,7 @@ function _(e, t) {
   }(e.type, e.name, n)
 }
 
-function d(e, t) {
+function c(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     i = arguments.length > 3 ? arguments[3] : void 0;
   if (Array.isArray(e)) {

@@ -6,9 +6,9 @@ t.d(s, {
 }), t(47120);
 var n = t(735250),
   a = t(470079),
-  i = t(772848),
+  r = t(772848),
   l = t(979554),
-  r = t(399606),
+  i = t(399606),
   o = t(481060),
   c = t(37234),
   u = t(607070),
@@ -20,9 +20,9 @@ var n = t(735250),
   p = t(715627),
   g = t(300284),
   h = t(642619),
-  x = t(598),
+  I = t(598),
   _ = t(333867),
-  I = t(329067),
+  x = t(329067),
   T = t(981631),
   N = t(302800),
   S = t(689938),
@@ -51,14 +51,14 @@ function O(e) {
     product: s,
     paymentSource: t,
     onPurchaseComplete: O,
-    onUse: Z,
-    onError: A,
+    onUse: A,
+    onError: Z,
     onReviewPurchase: R,
     loadId: j,
     baseAnalyticsData: P,
     confettiCanvas: M = null
   } = e;
-  j = null != j ? j : (0, i.Z)();
+  j = null != j ? j : (0, r.Z)();
   let k = a.useRef(null),
     [B] = s.items,
     {
@@ -67,7 +67,7 @@ function O(e) {
     {
       buttonColors: F
     } = (0, f.Z)(s.styles),
-    D = (0, r.e7)([u.Z], () => u.Z.useReducedMotion),
+    D = (0, i.e7)([u.Z], () => u.Z.useReducedMotion),
     U = (0, N.UY)(s.skuId),
     [H, w] = a.useState(!1),
     [G, W] = a.useState(!1),
@@ -83,7 +83,7 @@ function O(e) {
         w(!0), O()
       },
       onError: e => {
-        A(e), W(!0)
+        Z(e), W(!0)
       },
       onReviewPurchase: R,
       paymentSource: t,
@@ -135,7 +135,7 @@ function O(e) {
       }), (0, n.jsx)(v, {
         style: V,
         onClick: () => {
-          if (Z(), (0, c.xf)(), Y(), (null == B ? void 0 : B.type) === l.Z.AVATAR_DECORATION) {
+          if (A(), (0, c.xf)(), Y(), (null == B ? void 0 : B.type) === l.Z.AVATAR_DECORATION) {
             (0, E.ps)({
               initialSelectedDecoration: B,
               analyticsLocations: y
@@ -154,7 +154,7 @@ function O(e) {
         variant: "text-lg/bold",
         className: L.productName,
         children: s.name
-      }), (0, n.jsx)(x.PaymentContextProvider, {
+      }), (0, n.jsx)(I.PaymentContextProvider, {
         loadId: j,
         stepConfigs: [],
         applicationId: T.XAJ,
@@ -162,7 +162,7 @@ function O(e) {
         isGift: !1,
         activeSubscription: null,
         purchaseType: T.GZQ.ONE_TIME,
-        children: (0, n.jsx)(I.Z, {
+        children: (0, n.jsx)(x.Z, {
           ...z
         })
       })]

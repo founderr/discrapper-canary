@@ -3,8 +3,8 @@ let i, r;
 n(47120);
 var s, o, a, l, u = n(442837),
   _ = n(570140),
-  d = n(911969),
-  c = n(314897),
+  c = n(911969),
+  d = n(314897),
   E = n(592125),
   I = n(622449);
 let T = {},
@@ -103,7 +103,7 @@ l = "InteractionStore", (a = "displayName") in(o = A) ? Object.defineProperty(o,
     if (null == n) return !1;
     let s = T[n];
     if (null == s) return !1;
-    null === (t = s.onFailure) || void 0 === t || t.call(s, i, r), s.data.interactionType === d.B8.APPLICATION_COMMAND ? N(n) : T[n] = {
+    null === (t = s.onFailure) || void 0 === t || t.call(s, i, r), s.data.interactionType === c.B8.APPLICATION_COMMAND ? N(n) : T[n] = {
       ...s,
       state: I.F.FAILED,
       errorCode: i,
@@ -147,7 +147,7 @@ l = "InteractionStore", (a = "displayName") in(o = A) ? Object.defineProperty(o,
   EMBEDDED_ACTIVITY_UPDATE_V2: function(e) {
     let {
       participants: t
-    } = e, n = c.default.getSessionId(), i = c.default.getId(), r = t.find(e => e.user_id === i && e.session_id === n);
+    } = e, n = d.default.getSessionId(), i = d.default.getId(), r = t.find(e => e.user_id === i && e.session_id === n);
     if (null != r && null != r.nonce) f(r.nonce)
   }
 })

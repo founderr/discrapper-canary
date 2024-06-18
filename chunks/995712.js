@@ -13,8 +13,8 @@ t.Z = e => {
   } = e, {
     id: u,
     icon: _,
-    name: d
-  } = n, c = null !== (t = o.ZP.getGuildIconURL({
+    name: c
+  } = n, d = null !== (t = o.ZP.getGuildIconURL({
     id: u,
     icon: _,
     size: 32
@@ -35,14 +35,14 @@ t.Z = e => {
           height: 32,
           className: l.guildIconMask,
           children: (0, i.jsx)("img", {
-            src: c,
+            src: d,
             alt: "",
             className: l.guildIcon
           })
         }), (0, i.jsx)(r.Text, {
           color: "header-secondary",
           variant: "text-sm/normal",
-          children: d
+          children: c
         })]
       })
     })]

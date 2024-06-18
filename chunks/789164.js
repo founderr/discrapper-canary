@@ -15,8 +15,8 @@ let u = r.forwardRef(function(e, t) {
   let {
     children: u,
     className: _,
-    titleClassName: d,
-    title: c,
+    titleClassName: c,
+    title: d,
     icon: E,
     disabled: I,
     htmlFor: T,
@@ -26,16 +26,16 @@ let u = r.forwardRef(function(e, t) {
   return (0, i.jsx)("div", {
     ref: t,
     className: _,
-    children: null != c ? (0, i.jsx)(s.y, {
+    children: null != d ? (0, i.jsx)(s.y, {
       component: (0, i.jsxs)("div", {
         className: l.sectionTitle,
-        children: [E, null != c ? (0, i.jsx)(a.v, {
+        children: [E, null != d ? (0, i.jsx)(a.v, {
           tag: h,
           id: N,
           htmlFor: T,
           disabled: I,
-          className: d,
-          children: c
+          className: c,
+          children: d
         }) : null]
       }),
       children: (0, i.jsx)("div", {

@@ -11,7 +11,7 @@ var r = n(780384),
 t.Z = function(e) {
   let {
     onClose: t
-  } = e, n = (0, o.ZP)(), d = (0, r.wj)(n);
+  } = e, n = (0, o.ZP)(), c = (0, r.wj)(n);
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsxs)(s.ModalHeader, {
       separator: !1,
@@ -19,7 +19,7 @@ t.Z = function(e) {
       children: [(0, i.jsx)("img", {
         alt: "",
         className: l.headerImage,
-        src: d ? u : _
+        src: c ? u : _
       }), (0, i.jsx)(s.Heading, {
         className: l.title,
         variant: "heading-xl/medium",

@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(923928),
   u = n(468026),
   _ = n(269647),
-  d = n(981631),
-  c = n(689938);
+  c = n(981631),
+  d = n(689938);
 
 function E() {
   let e = (0, s.e7)([_.Z], () => _.Z.shouldShowWarning(), []),
@@ -27,13 +27,13 @@ function E() {
     l.Z.clearVADWarning()
   }
   return r.useEffect(() => (e ? t.current = (0, o.openModal)(e => (0, i.jsx)(u.default, {
-    title: c.Z.Messages.VAD_PERMISSION_TITLE,
-    body: c.Z.Messages.VAD_PERMISSION_BODY,
+    title: d.Z.Messages.VAD_PERMISSION_TITLE,
+    body: d.Z.Messages.VAD_PERMISSION_BODY,
     onCancel: E,
-    cancelText: c.Z.Messages.VAD_PERMISSION_OKAY,
-    confirmText: c.Z.Messages.VAD_PERMISSION_ENABLE_PTT,
+    cancelText: d.Z.Messages.VAD_PERMISSION_OKAY,
+    confirmText: d.Z.Messages.VAD_PERMISSION_ENABLE_PTT,
     onConfirm: () => {
-      a.Z.setMode(d.pM4.PUSH_TO_TALK), E()
+      a.Z.setMode(c.pM4.PUSH_TO_TALK), E()
     },
     ...e
   })) : n(), () => {

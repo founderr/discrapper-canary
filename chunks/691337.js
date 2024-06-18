@@ -8,7 +8,7 @@ var i = n(735250),
   l = n(285952),
   u = n(259580),
   _ = n(287805);
-class d extends r.PureComponent {
+class c extends r.PureComponent {
   handleClick(e) {
     let {
       onBreadcrumbClick: t
@@ -34,10 +34,10 @@ class d extends r.PureComponent {
         onBreadcrumbClick: r,
         breadcrumbs: s,
         renderCustomBreadcrumb: l,
-        separatorClassName: d
-      } = this.props, c = e.id === n, E = t === s.length - 1, I = null != l ? l(e, c) : (0, i.jsx)("span", {
+        separatorClassName: c
+      } = this.props, d = e.id === n, E = t === s.length - 1, I = null != l ? l(e, d) : (0, i.jsx)("span", {
         className: o()(_.breadcrumb, {
-          [_.activeBreadcrumb]: c,
+          [_.activeBreadcrumb]: d,
           [_.interactiveBreadcrumb]: null != r
         }),
         children: e.label
@@ -52,7 +52,7 @@ class d extends r.PureComponent {
           className: _.breadcrumbClickWrapper,
           children: I
         }) : I, E ? null : (0, i.jsx)(u.Z, {
-          className: o()(_.breadcrumbArrow, d),
+          className: o()(_.breadcrumbArrow, c),
           direction: u.Z.Directions.RIGHT
         })]
       }, e.id)
@@ -64,4 +64,4 @@ class d extends r.PureComponent {
     }) : t[n] = r
   }
 }
-t.Z = d
+t.Z = c

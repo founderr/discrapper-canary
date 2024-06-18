@@ -3,21 +3,21 @@ var i, r, s, o, a = n(442837),
   l = n(570140),
   u = n(585483),
   _ = n(981631);
-let d = null,
-  c = 0;
+let c = null,
+  d = 0;
 
 function E() {
-  d = null
+  c = null
 }
 class I extends(o = a.ZP.Store) {
   isOpen() {
-    return null != d
+    return null != c
   }
   get version() {
-    return c
+    return d
   }
   getContextMenu() {
-    return d
+    return c
   }
   close() {
     return !!this.isOpen() && (u.S.dispatch(_.CkL.CONTEXT_MENU_CLOSE), !0)
@@ -33,7 +33,7 @@ s = "ContextMenuStore", (r = "displayName") in(i = I) ? Object.defineProperty(i,
     let {
       contextMenu: t
     } = e;
-    c++, d = t
+    d++, c = t
   },
   LAYER_PUSH: E,
   CONTEXT_MENU_CLOSE: E,

@@ -8,7 +8,7 @@ var i = n(607070),
   r = n(981631);
 
 function s(e, t, n) {
-  var s, o, a, l, u, _, d, c;
+  var s, o, a, l, u, _, c, d;
   let E = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
   return {
     key: null !== (o = null !== (s = t.key) && void 0 !== s ? s : E) && void 0 !== o ? o : "modal",
@@ -18,9 +18,9 @@ function s(e, t, n) {
     props: n,
     backdropStyle: null !== (u = t.backdropStyle) && void 0 !== u ? u : null,
     backdropInstant: null !== (_ = t.backdropInstant) && void 0 !== _ && _,
-    disableAnimation: null !== (d = t.disableAnimation) && void 0 !== d && d,
+    disableAnimation: null !== (c = t.disableAnimation) && void 0 !== c && c,
     closable: "boolean" != typeof t.closable || t.closable,
-    label: null !== (c = t.label) && void 0 !== c ? c : "",
+    label: null !== (d = t.label) && void 0 !== d ? d : "",
     callbacks: {}
   }
 }

@@ -4,8 +4,8 @@ var i, r, s, o, a = n(392711),
   l = n.n(a),
   u = n(442837),
   _ = n(570140),
-  d = n(131704),
-  c = n(592125),
+  c = n(131704),
+  d = n(592125),
   E = n(709054);
 let I = {},
   T = new Set;
@@ -22,7 +22,7 @@ function S(e) {
 }
 
 function f(e) {
-  null != e.threads && e.threads.length > 0 && (I[e.id] = {}, e.threads.filter(e => d.AW.has(e.type)).forEach(t => N(e.id, t))), e.hasThreadsSubscription && T.add(e.id)
+  null != e.threads && e.threads.length > 0 && (I[e.id] = {}, e.threads.filter(e => c.AW.has(e.type)).forEach(t => N(e.id, t))), e.hasThreadsSubscription && T.add(e.id)
 }
 
 function N(e, t) {
@@ -36,7 +36,7 @@ function A(e) {
   let {
     channel: i
   } = e;
-  if (!d.AW.has(i.type)) return !1;
+  if (!c.AW.has(i.type)) return !1;
   if ((null === (t = i.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0) return m(i);
   {
     let e = null !== (n = I[i.guild_id]) && void 0 !== n ? n : {};
@@ -67,7 +67,7 @@ function m(e) {
 let O = {};
 class R extends(i = u.ZP.Store) {
   initialize() {
-    this.waitFor(c.Z)
+    this.waitFor(d.Z)
   }
   isActive(e, t, n) {
     return null != e && null != this.getThreadsForParent(e, t)[n]
@@ -107,7 +107,7 @@ o = "ActiveThreadsStore", (s = "displayName") in(r = R) ? Object.defineProperty(
     let {
       channels: t
     } = e;
-    I = {}, l()(t).filter(e => d.Ec.has(e.type)).groupBy("guild_id").forEach((e, t) => {
+    I = {}, l()(t).filter(e => c.Ec.has(e.type)).groupBy("guild_id").forEach((e, t) => {
       I[t] = {}, e.forEach(e => N(t, e))
     })
   },

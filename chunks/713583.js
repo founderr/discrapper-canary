@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 });
 var i = n(735250),
@@ -13,9 +13,9 @@ var i = n(735250),
   u = n(689938),
   _ = n(603649);
 
-function d(e) {
+function c(e) {
   var t;
-  let s, d, c, {
+  let s, c, d, {
       className: E,
       activeCommand: I,
       activeOption: T,
@@ -41,20 +41,20 @@ function d(e) {
   if (null == I) return null;
   if (null != T) {
     let e = h[T.name].lastValidationResult;
-    s = T.displayName, d = T.displayDescription, c = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error
-  } else s = "".concat(l.GI).concat(I.displayName), d = I.displayDescription, c = null;
+    s = T.displayName, c = T.displayDescription, d = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error
+  } else s = "".concat(l.GI).concat(I.displayName), c = I.displayDescription, d = null;
   return (0, i.jsxs)("div", {
     className: o()(E, _.bar),
     onContextMenu: S,
     children: [(0, i.jsx)("span", {
       className: _.name,
       children: s
-    }), null != c ? (0, i.jsx)("span", {
+    }), null != d ? (0, i.jsx)("span", {
       className: _.error,
-      children: c
+      children: d
     }) : (0, i.jsx)("span", {
       className: _.description,
-      children: d
+      children: c
     })]
   })
 }

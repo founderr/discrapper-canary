@@ -18,8 +18,8 @@ var i = n(470079),
   l = n(70956),
   u = n(51144),
   _ = n(768419),
-  d = n(300020),
-  c = n(456190),
+  c = n(300020),
+  d = n(456190),
   E = n(239470),
   I = n(894344),
   T = n(203777),
@@ -35,16 +35,16 @@ function f(e) {
   i.useEffect(() => {
     a && (t !== _ || n || r) && (l(!1), u.stop())
   }, [t, _, n, r, a, u]);
-  let d = i.useCallback(() => {
+  let c = i.useCallback(() => {
       l(!0), u.start(S, () => l(!1))
     }, [u]),
-    c = i.useCallback(() => {
+    d = i.useCallback(() => {
       l(!1), u.stop()
     }, [u]);
   return i.useEffect(() => () => u.stop(), [u]), {
     loading: a,
-    startLoading: d,
-    clearLoading: c
+    startLoading: c,
+    clearLoading: d
   }
 }
 
@@ -68,8 +68,8 @@ function A(e, t, n) {
       u(), (0, T.Z)(r, h.kG.USER_ACTIVITY_PLAY, n).catch(_)
     }, [r, n, u, _]);
   return {
-    label: (0, d.Z)(r, h.kG.USER_ACTIVITY_PLAY),
-    tooltip: (0, c.Z)(r, h.kG.USER_ACTIVITY_PLAY),
+    label: (0, c.Z)(r, h.kG.USER_ACTIVITY_PLAY),
+    tooltip: (0, d.Z)(r, h.kG.USER_ACTIVITY_PLAY),
     disabled: !l && (o || s || a),
     loading: l,
     onClick: E,
@@ -94,8 +94,8 @@ function m(e, t, n, r) {
       T(), (0, I.Z)(o, h.kG.USER_ACTIVITY_SYNC, n).catch(S)
     }, [o, n, T, S]);
   return {
-    label: (0, d.Z)(o, h.kG.USER_ACTIVITY_SYNC),
-    tooltip: (0, c.Z)(o, h.kG.USER_ACTIVITY_SYNC, s),
+    label: (0, c.Z)(o, h.kG.USER_ACTIVITY_SYNC),
+    tooltip: (0, d.Z)(o, h.kG.USER_ACTIVITY_SYNC, s),
     disabled: !E && (_ || a || l),
     loading: E,
     onClick: A,
@@ -120,8 +120,8 @@ function O(e, t, n) {
       _(), (0, I.Z)(r, h.kG.EMBED_SYNC, n).catch(E)
     }, [r, n, _, E]);
   return {
-    label: (0, d.Z)(r, h.kG.EMBED_SYNC),
-    tooltip: (0, c.Z)(r, h.kG.EMBED_SYNC),
+    label: (0, c.Z)(r, h.kG.EMBED_SYNC),
+    tooltip: (0, d.Z)(r, h.kG.EMBED_SYNC),
     disabled: !u && (l || o || a || s),
     loading: u,
     onClick: T,

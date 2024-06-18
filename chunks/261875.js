@@ -16,12 +16,12 @@ function u(e, t, n) {
   }) : e[t] = n, e
 }
 let _ = new o.Z("DatabaseManager");
-class d extends i.yh {
+class c extends i.yh {
   initialize() {
     this.waitFor(a.default), this.carefullySpeculativelyOpen(l.n()), this.handleAuthenticationStoreChanged(), a.default.addChangeListener(() => this.handleAuthenticationStoreChanged())
   }
   databaseName(e) {
-    return c(e)
+    return d(e)
   }
   database(e) {
     if (null != e) {
@@ -88,11 +88,11 @@ class d extends i.yh {
   }
 }
 
-function c(e) {
+function d(e) {
   return "@account.".concat(e)
 }
 async function E(e) {
   var t;
   return null
 }
-t.Z = new d
+t.Z = new c

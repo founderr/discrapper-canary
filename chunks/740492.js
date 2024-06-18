@@ -2,8 +2,8 @@
 var i, r, s, o, a, l = n(392711),
   u = n.n(l),
   _ = n(442837),
-  d = n(433517),
-  c = n(570140);
+  c = n(433517),
+  d = n(570140);
 n(541049);
 var E = n(874893),
   I = n(981631),
@@ -141,9 +141,9 @@ class A extends(a = _.ZP.DeviceSettingsStore) {
   }
 }
 h(A, "displayName", "UnsyncedUserSettingsStore"), h(A, "persistKey", "UnsyncedUserSettingsStore"), h(A, "migrations", [() => {
-  let e = d.K.get("UserSettingsStore");
-  return d.K.remove("UserSettingsStore"), u().pick(e, "dataSavingMode", "videoUploadQuality", "lowQualityImageMode", "useSystemTheme", "expressionPickerWidth", "disableVoiceChannelChangeAlert", "disableHideSelfStreamAndVideoConfirmationAlert", "pushUpsellDismissed", "disableEmbeddedActivityPopOutAlert", "disableActivityHardwareAccelerationPrompt", "disableInviteWithTextChannelActivityLaunch", "disableActivityHostLeftNitroUpsell", "disableCallUserConfirmationPrompt", "disableApplicationSubscriptionCancellationSurvey", "enableAndroidChatListAnimations")
-}]), t.ZP = new A(c.Z, {
+  let e = c.K.get("UserSettingsStore");
+  return c.K.remove("UserSettingsStore"), u().pick(e, "dataSavingMode", "videoUploadQuality", "lowQualityImageMode", "useSystemTheme", "expressionPickerWidth", "disableVoiceChannelChangeAlert", "disableHideSelfStreamAndVideoConfirmationAlert", "pushUpsellDismissed", "disableEmbeddedActivityPopOutAlert", "disableActivityHardwareAccelerationPrompt", "disableInviteWithTextChannelActivityLaunch", "disableActivityHostLeftNitroUpsell", "disableCallUserConfirmationPrompt", "disableApplicationSubscriptionCancellationSurvey", "enableAndroidChatListAnimations")
+}]), t.ZP = new A(d.Z, {
   UNSYNCED_USER_SETTINGS_UPDATE: function(e) {
     N = {
       ...N,

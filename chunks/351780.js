@@ -37,53 +37,53 @@ let u = !1,
     confettiCount: 5,
     warningSeen: !1
   },
-  d = (0, r.cloneDeep)(_);
-class c extends(i = s.ZP.DeviceSettingsStore) {
+  c = (0, r.cloneDeep)(_);
+class d extends(i = s.ZP.DeviceSettingsStore) {
   initialize(e) {
-    d = {
-      ...d,
+    c = {
+      ...c,
       ...e
     }
   }
   getUserAgnosticState() {
-    return d
+    return c
   }
   get settingsVisible() {
-    return d.settingsVisible
+    return c.settingsVisible
   }
   isEnabled() {
     let {
       confettiLocation: e,
       shakeLocation: t
-    } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, n = null == e || d.confettiEnabled && d.confettiEnabledLocations[e], i = null == t || d.screenshakeEnabled && d.screenshakeEnabledLocations[t];
-    return this.settingsVisible && !u && d.enabled && n && i
+    } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, n = null == e || c.confettiEnabled && c.confettiEnabledLocations[e], i = null == t || c.screenshakeEnabled && c.screenshakeEnabledLocations[t];
+    return this.settingsVisible && !u && c.enabled && n && i
   }
   get shakeIntensity() {
-    return this.isEnabled() ? d.shakeIntensity : 0
+    return this.isEnabled() ? c.shakeIntensity : 0
   }
   get combosRequiredCount() {
-    return this.isEnabled() ? d.combosRequiredCount : 0
+    return this.isEnabled() ? c.combosRequiredCount : 0
   }
   get screenshakeEnabled() {
-    return d.screenshakeEnabled
+    return c.screenshakeEnabled
   }
   get screenshakeEnabledLocations() {
-    return d.screenshakeEnabledLocations
+    return c.screenshakeEnabledLocations
   }
   get combosEnabled() {
-    return d.combosEnabled
+    return c.combosEnabled
   }
   get comboSoundsEnabled() {
-    return d.comboSoundsEnabled
+    return c.comboSoundsEnabled
   }
 }
-l(c, "displayName", "PoggermodeSettingsStore"), l(c, "persistKey", "PoggermodeSettingsStore"), t.Z = new c(o.Z, {
+l(d, "displayName", "PoggermodeSettingsStore"), l(d, "persistKey", "PoggermodeSettingsStore"), t.Z = new d(o.Z, {
   POGGERMODE_SETTINGS_UPDATE: function(e) {
     let {
       settings: t
     } = e;
-    d = {
-      ...d,
+    c = {
+      ...c,
       ...t
     }
   },

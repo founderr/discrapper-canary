@@ -1,14 +1,14 @@
 "use strict";
-var i, s, l, a, o = n(442837),
+var i, s, l, o, a = n(442837),
   r = n(570140);
-let d = !1,
-  c = !1;
-class u extends(a = o.ZP.Store) {
+let c = !1,
+  d = !1;
+class u extends(o = a.ZP.Store) {
   get keepOpen() {
-    return c
+    return d
   }
   get enabled() {
-    return d
+    return c
   }
 }
 l = "SoundboardOverlayStore", (s = "displayName") in(i = u) ? Object.defineProperty(i, s, {
@@ -18,9 +18,9 @@ l = "SoundboardOverlayStore", (s = "displayName") in(i = u) ? Object.definePrope
   writable: !0
 }) : i[s] = l, t.Z = new u(r.Z, {
   SOUNDBOARD_SET_OVERLAY_ENABLED: function(e) {
-    if (d = e.enabled, e.enabled) {
+    if (c = e.enabled, e.enabled) {
       var t;
-      c = null !== (t = e.keepOpen) && void 0 !== t && t
+      d = null !== (t = e.keepOpen) && void 0 !== t && t
     }
   }
 })

@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(451478),
   u = n(806519),
   _ = n(768581),
-  d = n(624138),
-  c = n(545866);
+  c = n(624138),
+  d = n(545866);
 
 function E(e) {
   let {
@@ -30,14 +30,14 @@ function E(e) {
     canAnimate: I && T
   });
   if (null == h) {
-    let e = (0, d.Zg)(n);
+    let e = (0, c.Zg)(n);
     return (0, i.jsx)(u.ZP, {
       mask: u.ZP.Masks.CLAN_ICON,
       width: s,
       height: s,
       className: E,
       children: (0, i.jsx)("div", {
-        className: o()(c.guildIconImage, c.acronym),
+        className: o()(d.guildIconImage, d.acronym),
         children: e
       })
     })
@@ -50,7 +50,7 @@ function E(e) {
     children: (0, i.jsx)("img", {
       src: h,
       alt: n,
-      className: c.guildIconImage
+      className: d.guildIconImage
     })
   })
 }

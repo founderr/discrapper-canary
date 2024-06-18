@@ -7,8 +7,8 @@ var i = n(735250),
   l = n(626135),
   u = n(768581),
   _ = n(981631),
-  d = n(185923),
-  c = n(474936),
+  c = n(185923),
+  d = n(474936),
   E = n(689938),
   I = n(702816);
 t.Z = e => {
@@ -19,7 +19,7 @@ t.Z = e => {
   } = (0, s.ZP)();
   r.useEffect(() => {
     l.default.track(_.rMx.PREMIUM_UPSELL_VIEWED, {
-      type: c.cd.EMOJI_AUTOCOMPLETE_INLINE,
+      type: d.cd.EMOJI_AUTOCOMPLETE_INLINE,
       location_stack: n
     })
   }, [n]);
@@ -35,7 +35,7 @@ t.Z = e => {
           src: u.ZP.getEmojiURL({
             id: e.id,
             animated: e.animated,
-            size: d.$U
+            size: c.$U
           })
         })
       }, e.id);

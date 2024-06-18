@@ -4,8 +4,8 @@ var i, r, s, o, a = n(442837),
   l = n(433517),
   u = n(570140),
   _ = n(706454),
-  d = n(695346),
-  c = n(581883),
+  c = n(695346),
+  d = n(581883),
   E = n(596401);
 let I = {},
   T = {},
@@ -18,11 +18,11 @@ let I = {},
   O = new Set;
 
 function R() {
-  A = d.l4.getSetting()
+  A = c.l4.getSetting()
 }
-class C extends(i = a.ZP.Store) {
+class p extends(i = a.ZP.Store) {
   initialize() {
-    this.waitFor(_.default, c.Z), this.syncWith([_.default], () => !0), this.syncWith([c.Z], R);
+    this.waitFor(_.default, d.Z), this.syncWith([_.default], () => !0), this.syncWith([d.Z], R);
     let e = l.K.get(N);
     if (null != e) try {
       m = new Date(e)
@@ -68,12 +68,12 @@ class C extends(i = a.ZP.Store) {
     return O.size > 0
   }
 }
-o = "ChangelogStore", (s = "displayName") in(r = C) ? Object.defineProperty(r, s, {
+o = "ChangelogStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new C(u.Z, {
+}) : r[s] = o, t.Z = new p(u.Z, {
   CHANGE_LOG_LOCK: function(e) {
     let {
       key: t

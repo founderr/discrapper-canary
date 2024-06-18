@@ -8,8 +8,8 @@ var i = n(735250),
   l = n(239091),
   u = n(358085),
   _ = n(960048),
-  d = n(752305),
-  c = n(53529),
+  c = n(752305),
+  d = n(53529),
   E = n(789952),
   I = n(436660),
   T = n(887490),
@@ -127,7 +127,7 @@ class R extends r.PureComponent {
           exactMatch: !1,
           suppressThrow: !0
         });
-        null != t && null != e.data && (T.M8.isExpanded(t) ? c.T.withSingleEntry(n, () => {
+        null != t && null != e.data && (T.M8.isExpanded(t) ? d.T.withSingleEntry(n, () => {
           n.selection = t, n.deleteFragment(), n.insertText(e.data), e.preventDefault()
         }) : (n.insertText(e.data), e.preventDefault()))
       }
@@ -292,8 +292,8 @@ class R extends r.PureComponent {
       placeholder: l,
       channelId: u,
       guildId: _,
-      onChange: d,
-      onFocus: c,
+      onChange: c,
+      onFocus: d,
       onBlur: E,
       onKeyDown: I,
       onKeyUp: T,
@@ -338,7 +338,7 @@ class R extends r.PureComponent {
   }
   constructor(e) {
     super(e), O(this, "containerRef", r.createRef()), O(this, "state", void 0), this.decorate = this.decorate.bind(this), this.renderElement = this.renderElement.bind(this), this.renderLeaf = this.renderLeaf.bind(this), this.handleOnChange = this.handleOnChange.bind(this), this.handleKeyDown = this.handleKeyDown.bind(this), this.handleKeyUp = this.handleKeyUp.bind(this), this.handleBeforeInput = this.handleBeforeInput.bind(this), this.handleCompositionStart = this.handleCompositionStart.bind(this), this.handleCompositionEnd = this.handleCompositionEnd.bind(this), this.handleFocusCapture = this.handleFocusCapture.bind(this), this.handleBlurCapture = this.handleBlurCapture.bind(this), this.handleContextMenu = this.handleContextMenu.bind(this), this.handlePasteCapture = this.handlePasteCapture.bind(this), T.bN.isEditorEmpty(e.editor) ? this.state = {
-      initialValue: (0, d.H2)().richValue,
+      initialValue: (0, c.H2)().richValue,
       showPlaceholder: !0
     } : this.state = {
       initialValue: T.bN.richValue(e.editor),

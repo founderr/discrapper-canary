@@ -17,8 +17,8 @@ t.Z = {
       duration: a = 0,
       closed: l = !1,
       exePath: u = null,
-      voiceChannelId: d = null,
-      sessionId: c = null,
+      voiceChannelId: c = null,
+      sessionId: d = null,
       mediaSessionId: E = null
     } = e;
     r.Z.wait(() => r.Z.dispatch({
@@ -36,8 +36,8 @@ t.Z = {
         distributor: n,
         closed: l,
         exePath: u,
-        voice_channel_id: d,
-        session_id: c,
+        voice_channel_id: c,
+        session_id: d,
         media_session_id: E
       },
       retries: 1,
@@ -69,10 +69,10 @@ t.Z = {
       activity: i,
       content: r,
       location: l
-    } = e, d = a.Z.getChannel(t);
-    if (null == d) return Promise.resolve(null);
-    let c = o.ZP.parse(d, null != r ? r : "");
-    return u.Z.sendMessage(d.id, c, !1, {
+    } = e, c = a.Z.getChannel(t);
+    if (null == c) return Promise.resolve(null);
+    let d = o.ZP.parse(c, null != r ? r : "");
+    return u.Z.sendMessage(c.id, d, !1, {
       activityAction: {
         type: n,
         activity: i
@@ -81,10 +81,10 @@ t.Z = {
       location: l,
       invite_type: i.type === _.IIU.LISTENING ? _.dAT.SPOTIFY : _.dAT.APPLICATION,
       application_id: i.application_id,
-      guild_id: d.getGuildId(),
-      channel_id: d.id,
+      guild_id: c.getGuildId(),
+      channel_id: c.id,
       message_id: null != e ? e.body.id : null
-    }), Promise.resolve(d)), e => Promise.reject(e))
+    }), Promise.resolve(c)), e => Promise.reject(e))
   },
   sendActivityInviteUser(e) {
     let {

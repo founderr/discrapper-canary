@@ -18,13 +18,13 @@ function u(e) {
     user: n,
     look: u,
     color: _,
-    onAction: d
+    onAction: c
   } = e;
   return (0, s.Z)(t, a.xjy.INSTANCE) ? (0, i.jsx)(o.Z, {
     look: u,
     color: _,
     onClick: () => {
-      null == d || d(), new r.Z("UserActivityActions").log("notify", n.id, t)
+      null == c || c(), new r.Z("UserActivityActions").log("notify", n.id, t)
     },
     fullWidth: !0,
     children: l.Z.Messages.USER_ACTIVITY_ACTION_NOTIFY_ME

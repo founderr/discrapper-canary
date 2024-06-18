@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   v: function() {
-    return c
+    return d
   }
 }), n(653041), n(47120);
 var i = n(735250),
@@ -12,18 +12,18 @@ var i = n(735250),
   l = n.n(a),
   u = n(84735),
   _ = n(562701),
-  d = n(689197);
+  c = n(689197);
 
-function c(e, t, n, s) {
+function d(e, t, n, s) {
   let a = (0, _.G6)(e),
-    c = new Map,
+    d = new Map,
     E = new s(e => {
       e.forEach(e => {
         var t;
         let {
           target: n
         } = e;
-        null === (t = c.get(n)) || void 0 === t || t(e)
+        null === (t = d.get(n)) || void 0 === t || t(e)
       })
     });
   return r.forwardRef(function(s, I) {
@@ -37,11 +37,11 @@ function c(e, t, n, s) {
       sectionHeight: m,
       rowHeight: O,
       footerHeight: R = 0,
-      sidebarHeight: C,
-      listHeaderHeight: p = 0,
-      renderSection: g,
-      renderRow: L,
-      renderFooter: v,
+      sidebarHeight: p,
+      listHeaderHeight: g = 0,
+      renderSection: C,
+      renderRow: v,
+      renderFooter: L,
       renderSidebar: D,
       renderListHeader: M,
       wrapSection: P,
@@ -85,8 +85,8 @@ function c(e, t, n, s) {
       sectionHeight: m,
       rowHeight: O,
       footerHeight: R,
-      sidebarHeight: C,
-      listHeaderHeight: p,
+      sidebarHeight: p,
+      listHeaderHeight: g,
       paddingTop: U,
       paddingBottom: b,
       chunkSize: k,
@@ -104,13 +104,13 @@ function c(e, t, n, s) {
         }
         es(e)
       }, [es, J]),
-      ed = r.useCallback(() => e_(), [e_]);
+      ec = r.useCallback(() => e_(), [e_]);
     (0, _.zn)({
       ref: Q,
-      onUpdate: ed,
+      onUpdate: ec,
       key: "container",
       resizeObserver: E,
-      listenerMap: c
+      listenerMap: d
     }), (0, _.zn)({
       ref: z,
       onUpdate: () => {
@@ -119,9 +119,9 @@ function c(e, t, n, s) {
       },
       key: "content",
       resizeObserver: E,
-      listenerMap: c
+      listenerMap: d
     });
-    let ec = function(e) {
+    let ed = function(e) {
         let t = r.useRef(e);
         return r.useEffect(() => void(t.current = e), [e]), r.useCallback(() => t.current, [])
       }(en),
@@ -142,10 +142,10 @@ function c(e, t, n, s) {
     r.useImperativeHandle(I, () => ({
       getScrollerNode: () => Q.current,
       getScrollerState: $,
-      getItems: ec,
+      getItems: ed,
       getSectionRowFromIndex: eE,
       ...(0, _.rH)(Q, $, er, ea)
-    }), [Q, $, eE, ec, er, ea]);
+    }), [Q, $, eE, ed, er, ea]);
     let eI = r.useCallback(e => {
       e_(1), null == K.current ? X(!0) : clearTimeout(K.current), K.current = setTimeout(() => {
         K.current = null, X(!1)
@@ -153,7 +153,7 @@ function c(e, t, n, s) {
     }, [h, e_]);
     return r.useLayoutEffect(() => {
       2 !== J.current.dirty && (J.current.dirty = 2)
-    }, [en, g, L, v, P, et, ee, J]), (0, _.rS)({
+    }, [en, C, v, L, P, et, ee, J]), (0, _.rS)({
       scrollerRef: Q,
       anchor: eo,
       getScrollerState: $,
@@ -167,7 +167,7 @@ function c(e, t, n, s) {
         [e]: !0,
         [t]: G,
         [n]: w,
-        [d.scrolling]: q
+        [c.scrolling]: q
       }),
       style: (0, _.uT)(B),
       ...W,
@@ -180,7 +180,7 @@ function c(e, t, n, s) {
         style: {
           height: et
         },
-        className: o()(d.content, Y),
+        className: o()(c.content, Y),
         ref: z,
         children: (0, i.jsx)(u.J, {
           containerRef: z,
@@ -198,38 +198,38 @@ function c(e, t, n, s) {
               style: {
                 height: u
               }
-            }, "---list-spacer-top")], d = [], c = 0;
+            }, "---list-spacer-top")], c = [], d = 0;
             if (a.forEach(e => {
                 var i;
-                switch (e.section !== c && d.length > 0 && (_.push(null != o ? o(c, d) : d), d = []), c = null !== (i = e.section) && void 0 !== i ? i : 0, e.type) {
+                switch (e.section !== d && c.length > 0 && (_.push(null != o ? o(d, c) : c), c = []), d = null !== (i = e.section) && void 0 !== i ? i : 0, e.type) {
                   case "section":
-                    null != t && d.push(t(e));
+                    null != t && c.push(t(e));
                     break;
                   case "row":
-                    d.push(n(e));
+                    c.push(n(e));
                     break;
                   case "footer":
-                    null != r && d.push(r(e));
+                    null != r && c.push(r(e));
                     break;
                   case "header":
-                    null != s && d.push(s())
+                    null != s && c.push(s())
                 }
-              }), d.length > 0) {
+              }), c.length > 0) {
               var E;
-              _.push(null !== (E = null == o ? void 0 : o(c, d)) && void 0 !== E ? E : d)
+              _.push(null !== (E = null == o ? void 0 : o(d, c)) && void 0 !== E ? E : c)
             }
             return l()(_)
           }({
             items: en,
             renderListHeader: M,
-            renderSection: g,
-            renderRow: L,
-            renderFooter: v,
+            renderSection: C,
+            renderRow: v,
+            renderFooter: L,
             wrapSection: P,
             spacerTop: ee
           })
         })
-      }), [x, V, Z, H, F, Y, j, et, en, g, L, v, M, P, ee]), r.useMemo(() => (function(e) {
+      }), [x, V, Z, H, F, Y, j, et, en, C, v, L, M, P, ee]), r.useMemo(() => (function(e) {
         let {
           renderSidebar: t,
           sidebarHeight: n,
@@ -240,9 +240,9 @@ function c(e, t, n, s) {
       })({
         isSidebarVisible: ei,
         renderSidebar: D,
-        sidebarHeight: C,
+        sidebarHeight: p,
         isListVisible: 0 !== en.length
-      }), [ei, D, C, en.length])]
+      }), [ei, D, p, en.length])]
     })
   })
 }

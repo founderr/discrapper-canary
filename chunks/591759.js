@@ -8,14 +8,14 @@ var i = n(628735),
   l = n(981631);
 let u = /(?:^|\.)(?:discordapp|discord)\.com$/i,
   _ = r().v4().source,
-  d = RegExp("(?:".concat("(?:(?:[a-z]+:)?//)", "|www\\.)").concat("(?:\\S+(?::\\S*)?@)?", "(?:localhost|").concat(_, "|").concat("(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+").concat("(?:(?:[a-z\\u00a1-\\uffff]{2,}))", ")").concat("(?::\\d{2,5})?").concat('(?:[/?#][^\\s"]*)?'), "ig"),
-  c = new Set([window.GLOBAL_ENV.CDN_HOST, window.GLOBAL_ENV.INVITE_HOST, window.GLOBAL_ENV.GIFT_CODE_HOST, window.GLOBAL_ENV.GUILD_TEMPLATE_HOST]);
+  c = RegExp("(?:".concat("(?:(?:[a-z]+:)?//)", "|www\\.)").concat("(?:\\S+(?::\\S*)?@)?", "(?:localhost|").concat(_, "|").concat("(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+").concat("(?:(?:[a-z\\u00a1-\\uffff]{2,}))", ")").concat("(?::\\d{2,5})?").concat('(?:[/?#][^\\s"]*)?'), "ig"),
+  d = new Set([window.GLOBAL_ENV.CDN_HOST, window.GLOBAL_ENV.INVITE_HOST, window.GLOBAL_ENV.GIFT_CODE_HOST, window.GLOBAL_ENV.GUILD_TEMPLATE_HOST]);
 
 function E(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   if (null == e) return !1;
-  return u.test(e) || n && (t = e, c.has(t.toLowerCase()))
+  return u.test(e) || n && (t = e, d.has(t.toLowerCase()))
 }
 
 function I(e) {
@@ -31,7 +31,7 @@ function h(e) {
   return null != e && I(a.parse(e).protocol)
 }
 t.Z = {
-  URL_REGEX: d,
+  URL_REGEX: c,
   isDiscordHostname: E,
   isDiscordLocalhost: function(e, t) {
     return null != e && null != t && (window.location.host === e || !1)

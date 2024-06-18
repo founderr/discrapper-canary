@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   u: function() {
-    return c
+    return d
   }
 }), n(653041);
 var i = n(853856),
@@ -12,8 +12,8 @@ var i = n(853856),
   l = n(496675),
   u = n(914010),
   _ = n(771845),
-  d = n(981631);
-let c = {
+  c = n(981631);
+let d = {
   binds: (() => {
     let e = [];
     for (let t = 1; t < 10; t++) e.push("mod+".concat(t));
@@ -21,7 +21,7 @@ let c = {
   })(),
   comboKeysBindGlobal: !0,
   action(e, t) {
-    let n, c = parseInt(t.split("+")[1], 10);
-    return (0 === c && (c = 10), isNaN(c) || 0 === c || null == (n = 1 === c ? d.ME : (0, r.z)(i.Z, a.Z, l.Z) ? 2 === c ? d.I_8 : _.ZP.getFlattenedGuildIds()[c - 3] : _.ZP.getFlattenedGuildIds()[c - 2])) ? void 0 : n === d.ME && null == u.Z.getGuildId() ? ((0, s.uL)(d.Z5c.CHANNEL(n)), !1) : ((0, o.X)(n), !1)
+    let n, d = parseInt(t.split("+")[1], 10);
+    return (0 === d && (d = 10), isNaN(d) || 0 === d || null == (n = 1 === d ? c.ME : (0, r.z)(i.Z, a.Z, l.Z) ? 2 === d ? c.I_8 : _.ZP.getFlattenedGuildIds()[d - 3] : _.ZP.getFlattenedGuildIds()[d - 2])) ? void 0 : n === c.ME && null == u.Z.getGuildId() ? ((0, s.uL)(c.Z5c.CHANNEL(n)), !1) : ((0, o.X)(n), !1)
   }
 }

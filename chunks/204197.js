@@ -17,8 +17,8 @@ function l(e) {
     size: l,
     showPending: u = !1,
     showTryItOut: _ = !1,
-    animateOnHover: d = !1,
-    avatarDecorationOverride: c,
+    animateOnHover: c = !1,
+    avatarDecorationOverride: d,
     avatarOverride: E
   } = e, {
     avatarSrc: I,
@@ -29,7 +29,7 @@ function l(e) {
     guildId: n,
     size: (0, r.getAvatarSize)(l),
     showPending: u,
-    animateOnHover: d,
+    animateOnHover: c,
     avatarOverride: E
   }), {
     avatarPlaceholderSrc: S,
@@ -40,8 +40,8 @@ function l(e) {
     guildId: null != n ? n : void 0,
     size: (0, s.y9)(l),
     showPending: u,
-    animateOnHover: d,
-    avatarDecorationOverride: c,
+    animateOnHover: c,
+    avatarDecorationOverride: d,
     showTryItOut: _
   }), A = i.useCallback(() => {
     h.onMouseEnter(), N.onMouseEnter()

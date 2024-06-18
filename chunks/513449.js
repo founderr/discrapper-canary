@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   Ku: function() {
-    return d
+    return c
   },
   MV: function() {
-    return c
+    return d
   }
 });
 var i = n(470079),
@@ -18,19 +18,19 @@ let _ = (0, r.Z)(e => ({
   isOnStartStageScreen: !0
 }));
 
-function d(e) {
+function c(e) {
   _.setState({
     isOnStartStageScreen: e
   })
 }
 
-function c(e) {
+function d(e) {
   let t = (0, s.e7)([a.Z], () => a.Z.getVoiceChannelId() === e.id),
     n = (0, s.e7)([o.Z], () => o.Z.can(l.yP, e), [e]),
     r = (0, u.Z)(e.id),
     _ = n && !r;
   i.useEffect(() => {
-    t ? !_ && d(!1) : d(_)
+    t ? !_ && c(!1) : c(_)
   }, [t, _])
 }
 t.ZP = _

@@ -25,8 +25,8 @@ function l(e) {
     rowHeight: l,
     footerHeight: u,
     sidebarHeight: _,
-    listHeaderHeight: d,
-    chunkSize: c = 256,
+    listHeaderHeight: c,
+    chunkSize: d = 256,
     paddingTop: E = 0,
     paddingBottom: I = 0,
     getScrollerState: T,
@@ -37,48 +37,48 @@ function l(e) {
     chunkEnd: O,
     forceUpdateOnChunkChange: R
   } = (0, o.Z)({
-    chunkSize: c,
+    chunkSize: d,
     getScrollerState: T,
     forceUpdate: S
   }), {
-    items: C
-  } = f.current, p = null, {
-    scrollTop: g
+    items: p
+  } = f.current, g = null, {
+    scrollTop: C
   } = T();
-  for (let e of C) {
-    if (0 === g) break;
+  for (let e of p) {
+    if (0 === C) break;
     if ("footer" === e.type || "header" === e.type || null == e.anchorId) continue;
     let t = "row" === e.type ? e.row : void 0;
-    if (e.offsetTop >= g) {
-      p = {
+    if (e.offsetTop >= C) {
+      g = {
         id: e.anchorId,
         section: e.section,
         row: t,
-        scrollOffset: e.offsetTop - g
+        scrollOffset: e.offsetTop - C
       };
       break
     }
   }
-  let L = (0, i.useMemo)(() => {
-      let e = Math.max(0, m * c);
+  let v = (0, i.useMemo)(() => {
+      let e = Math.max(0, m * d);
       return null != _ && e < _
-    }, [c, m, _]),
-    v = (0, i.useMemo)(() => A > 0 ? f.current : (N.mergeProps({
+    }, [d, m, _]),
+    L = (0, i.useMemo)(() => A > 0 ? f.current : (N.mergeProps({
       sectionHeight: n,
       rowHeight: l,
       footerHeight: u,
-      listHeaderHeight: d,
+      listHeaderHeight: c,
       paddingBottom: I,
       paddingTop: E,
       sections: t,
       getAnchorId: h
-    }), N.compute(Math.max(0, m * c), O * c)), [A, m, O, n, l, u, d, I, E, t, N, c, h]);
-  return (0, i.useLayoutEffect)(() => void(f.current = v)), {
-    ...v,
+    }), N.compute(Math.max(0, m * d), O * d)), [A, m, O, n, l, u, c, I, E, t, N, d, h]);
+  return (0, i.useLayoutEffect)(() => void(f.current = L)), {
+    ...L,
     listComputer: N,
     forceUpdateOnChunkChange: R,
-    anchor: p,
-    isSidebarVisible: L
+    anchor: g,
+    isSidebarVisible: v
   }
 }
 

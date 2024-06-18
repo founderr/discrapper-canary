@@ -10,20 +10,20 @@ var i, r, s = n(735250),
   l = n.n(a),
   u = n(846519),
   _ = n(186325),
-  d = n(790231);
+  c = n(790231);
 (r = i || (i = {}))[r.TRANSLATE = 1] = "TRANSLATE", r[r.SCALE = 2] = "SCALE", r[r.FADE = 3] = "FADE";
-let c = Object.freeze({
-    1: d.translate,
-    2: d.scale,
-    3: d.fade
+let d = Object.freeze({
+    1: c.translate,
+    2: c.scale,
+    3: c.fade
   }),
   E = Object.freeze({
-    top: d.animatorTop,
-    bottom: d.animatorBottom,
-    left: d.animatorLeft,
-    right: d.animatorRight,
-    center: d.animatorCenter,
-    window_center: d.animatorCenter
+    top: c.animatorTop,
+    bottom: c.animatorBottom,
+    left: c.animatorLeft,
+    right: c.animatorRight,
+    center: c.animatorCenter,
+    window_center: c.animatorCenter
   });
 
 function I(e) {
@@ -38,8 +38,8 @@ function I(e) {
     null != t && h.start(10, () => T(!0))
   }, [t, h]), (0, s.jsx)("div", {
     className: l()(null != t ? E[t] : null, {
-      [c[a]]: null != t,
-      [d.didRender]: I
+      [d[a]]: null != t,
+      [c.didRender]: I
     }),
     children: i
   })

@@ -4,8 +4,8 @@ var i, r, s, o, a = n(442837),
   l = n(570140),
   u = n(367907),
   _ = n(998698),
-  d = n(981631);
-let c = new Map,
+  c = n(981631);
+let d = new Map,
   E = new Map,
   I = new Map;
 
@@ -27,7 +27,7 @@ function T(e) {
 }
 
 function h() {
-  return c.clear(), E.clear(), !0
+  return d.clear(), E.clear(), !0
 }
 
 function S(e) {
@@ -83,7 +83,7 @@ o = "ApplicationCommandAutocompleteStore", (s = "displayName") in(r = N) ? Objec
     let a = null === (t = o.optionNameToAutocompleteQueries.get(s)) || void 0 === t ? void 0 : t.get(r);
     if (null != a) return o.lastErrored = !1, o.optionNameToLastResults.set(s, a), !0;
     let l = o.optionNameToNonce.get(s);
-    if (null != l && c.delete(l), c.set(n, {
+    if (null != l && d.delete(l), d.set(n, {
         channelId: i,
         query: r,
         name: s
@@ -94,9 +94,9 @@ o = "ApplicationCommandAutocompleteStore", (s = "displayName") in(r = N) ? Objec
     let {
       choices: i,
       nonce: r
-    } = e, s = c.get(r);
+    } = e, s = d.get(r);
     if (null == s) return !1;
-    c.delete(r);
+    d.delete(r);
     let o = null !== (n = null == i ? void 0 : i.map(e => {
         var t;
         return {
@@ -106,7 +106,7 @@ o = "ApplicationCommandAutocompleteStore", (s = "displayName") in(r = N) ? Objec
       })) && void 0 !== n ? n : [],
       a = I.get(r),
       l = null != a ? new Date().getTime() - a.getTime() : 0;
-    (0, u.yw)(d.rMx.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, {
+    (0, u.yw)(c.rMx.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, {
       duration_ms: l,
       error: !1,
       num_options: o.length
@@ -119,12 +119,12 @@ o = "ApplicationCommandAutocompleteStore", (s = "displayName") in(r = N) ? Objec
       nonce: t
     } = e;
     if (null == t) return !1;
-    let n = c.get(t);
+    let n = d.get(t);
     if (null == n) return !1;
-    c.delete(t);
+    d.delete(t);
     let i = I.get(t),
       r = null != i ? new Date().getTime() - i.getTime() : 0;
-    return (0, u.yw)(d.rMx.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, {
+    return (0, u.yw)(c.rMx.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, {
       duration_ms: r,
       error: !0
     }), I.delete(t), T(n.channelId).lastErrored = !0, !0

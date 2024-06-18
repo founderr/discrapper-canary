@@ -21,11 +21,11 @@ var i = n(866442),
   l = n(168631),
   u = n(621853),
   _ = n(981631),
-  d = n(689938);
-let c = e => "".concat(e).length < 13 ? 1e3 * e : e,
+  c = n(689938);
+let d = e => "".concat(e).length < 13 ? 1e3 * e : e,
   E = e => {
     let t = Date.now() / 1e3;
-    return null != e.end ? I(t, c(e.end) / 1e3) : null != e.start ? I(c(e.start) / 1e3, t) : {
+    return null != e.end ? I(t, d(e.end) / 1e3) : null != e.start ? I(d(e.start) / 1e3, t) : {
       hours: 0,
       minutes: 0,
       seconds: 0
@@ -57,23 +57,23 @@ let c = e => "".concat(e).length < 13 ? 1e3 * e : e,
       theme: _ === t ? "dark" : a
     }
   },
-  f = (e, t) => (0, s.Z)(t) ? d.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_SPOTIFY.format({
+  f = (e, t) => (0, s.Z)(t) ? c.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_SPOTIFY.format({
     username: e.username,
     song: t.details,
     artist: t.state
-  }) : t.type === _.IIU.PLAYING ? d.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+  }) : t.type === _.IIU.PLAYING ? c.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
     username: e.username,
     activity: t.name
-  }) : t.type === _.IIU.WATCHING ? d.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
+  }) : t.type === _.IIU.WATCHING ? c.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
     username: e.username,
     activity: t.name
-  }) : t.type === _.IIU.LISTENING ? d.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING.format({
+  }) : t.type === _.IIU.LISTENING ? c.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING.format({
     username: e.username,
     activity: t.name
-  }) : (0, a.Z)(t) || t.type === _.IIU.STREAMING ? d.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING.format({
+  }) : (0, a.Z)(t) || t.type === _.IIU.STREAMING ? c.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING.format({
     username: e.username,
     activity: t.name
-  }) : d.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_BASE.format({
+  }) : c.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_BASE.format({
     username: e.username,
     activity: t.name
   })

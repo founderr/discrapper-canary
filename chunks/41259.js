@@ -13,8 +13,8 @@ var r = n(974674),
   l = n(768581),
   u = n(630388),
   _ = n(489863),
-  d = n(981631),
-  c = n(182294),
+  c = n(981631),
+  d = n(182294),
   E = n(689938),
   I = n(846288);
 
@@ -39,7 +39,7 @@ function T(e) {
       className: I.headerIcons,
       children: [(0, i.jsx)(r.qE, {
         src: m,
-        size: c.EF.SIZE_80,
+        size: d.EF.SIZE_80,
         "aria-label": T.name
       }), (0, i.jsxs)("div", {
         className: I.ellipseGroup,
@@ -52,7 +52,7 @@ function T(e) {
         })]
       }), (0, i.jsx)(r.qE, {
         src: O,
-        size: c.EF.SIZE_80,
+        size: d.EF.SIZE_80,
         "aria-label": n.username
       })]
     }), !A && (0, i.jsx)(o.x, {
@@ -65,7 +65,7 @@ function T(e) {
       color: "header-primary",
       children: [T.name, null != h ? (0, i.jsx)(a.Z, {
         className: I.botTag,
-        verified: null != h.public_flags && (0, u.yE)(h.public_flags, d.xW$.VERIFIED_BOT)
+        verified: null != h.public_flags && (0, u.yE)(h.public_flags, c.xW$.VERIFIED_BOT)
       }) : null]
     }), S.length > 0 ? (0, i.jsx)(o.x, {
       variant: "text-md/normal",

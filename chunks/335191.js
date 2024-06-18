@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   E3: function() {
-    return L
+    return C
   },
   OA: function() {
-    return D
+    return L
   },
   tH: function() {
     return v
@@ -18,8 +18,8 @@ var i = n(735250),
   l = n(780384),
   u = n(481060),
   _ = n(99690),
-  d = n(726542),
-  c = n(367907),
+  c = n(726542),
+  d = n(367907),
   E = n(132871),
   I = n(147890),
   T = n(122021),
@@ -28,63 +28,63 @@ var i = n(735250),
   f = n(753194),
   N = n(598077),
   A = n(671533),
-  m = n(880008),
-  O = n(49012),
-  R = n(981631),
-  C = n(856651),
+  m = n(49012),
+  O = n(981631),
+  R = n(856651),
   p = n(689938),
   g = n(16367);
 
-function L(e) {
+function C(e) {
   var t, n;
   let r, s, _, {
     connectedAccount: E,
     theme: I,
     locale: N,
-    userId: L,
+    userId: C,
     className: v,
-    showMetadata: D,
-    showInvisibleIcon: M
+    showMetadata: L,
+    showInvisibleIcon: D
   } = e;
-  null == D && (D = !0);
-  let P = null !== (n = E.metadata) && void 0 !== n ? n : {},
-    y = D ? (0, h.FI)(P[C.PC.CREATED_AT], N) : null,
-    U = (0, u.useToken)(a.Z.unsafe_rawColors.TWITTER).hex(),
-    b = p.Z.Messages.CONNECTION_VERIFIED;
-  if (D) switch (E.type) {
-    case R.ABu.REDDIT:
-      r = (0, S.oP)(P);
+  null == L && (L = !0);
+  let M = null !== (n = E.metadata) && void 0 !== n ? n : {},
+    P = L ? (0, h.FI)(M[R.PC.CREATED_AT], N) : null,
+    y = (0, u.useToken)(a.Z.unsafe_rawColors.TWITTER).hex(),
+    U = p.Z.Messages.CONNECTION_VERIFIED;
+  if (L) switch (E.type) {
+    case O.ABu.REDDIT:
+      r = (0, S.oP)(M);
       break;
-    case R.ABu.STEAM:
-      r = (0, S.Dq)(P);
+    case O.ABu.STEAM:
+      r = (0, S.Dq)(M);
       break;
-    case R.ABu.TWITTER:
-      r = (0, S.rJ)(P), "1" === P[C.PC.TWITTER_VERIFIED] && (s = U, b = p.Z.Messages.CONNECTION_VERIFIED_ON_TWITTER);
+    case O.ABu.TWITTER:
+      r = (0, S.rJ)(M), "1" === M[R.PC.TWITTER_VERIFIED] && (s = y, U = p.Z.Messages.CONNECTION_VERIFIED_ON_TWITTER);
       break;
-    case R.ABu.PAYPAL:
-      r = (0, S.li)(P);
+    case O.ABu.PAYPAL:
+      r = (0, S.li)(M);
       break;
-    case R.ABu.EBAY:
-      r = (0, S.ul)(P);
+    case O.ABu.EBAY:
+      r = (0, S.ul)(M);
       break;
-    case R.ABu.TIKTOK:
-      r = (0, S.hf)(P)
+    case O.ABu.TIKTOK:
+      r = (0, S.hf)(M)
   }
-  let G = d.Z.get((0, T.rR)(E.type)),
-    w = null == G ? void 0 : null === (t = G.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(G, E);
-  null != M && M ? _ = (0, i.jsx)(m.Z, {
-    className: o()(g.__invalid_connectedAccountOpenIconContainer, g.connectedAccountHideIcon),
-    foregroundColor: "currentColor"
-  }) : null != w && (_ = (0, i.jsx)(u.Anchor, {
-    href: w,
+  let b = c.Z.get((0, T.rR)(E.type)),
+    G = null == b ? void 0 : null === (t = b.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(b, E);
+  null != D && D ? _ = (0, i.jsx)(u.EyeSlashIcon, {
+    size: "md",
+    color: "currentColor",
+    className: o()(g.__invalid_connectedAccountOpenIconContainer, g.connectedAccountHideIcon)
+  }) : null != G && (_ = (0, i.jsx)(u.Anchor, {
+    href: G,
     onClick: e => {
       var t, n;
-      t = E.type, n = L, (0, c.yw)(R.rMx.CONNECTED_ACCOUNT_VIEWED, {
+      t = E.type, n = C, (0, d.yw)(O.rMx.CONNECTED_ACCOUNT_VIEWED, {
         platform_type: t,
         other_user_id: n
-      }), (0, O.q)({
-        href: w,
-        trusted: (null == G ? void 0 : G.type) !== R.ABu.DOMAIN
+      }), (0, m.q)({
+        href: G,
+        trusted: (null == b ? void 0 : b.type) !== O.ABu.DOMAIN
       }, e)
     },
     children: (0, i.jsx)(A.Z, {
@@ -92,28 +92,28 @@ function L(e) {
       direction: A.Z.Directions.RIGHT
     })
   }));
-  let k = (0, u.useToken)(a.Z.colors.INTERACTIVE_MUTED).hex(),
-    B = (0, u.useToken)(a.Z.colors.INTERACTIVE_ACTIVE).hex(),
-    x = E.verified ? (0, i.jsx)(f.Z, {
+  let w = (0, u.useToken)(a.Z.colors.INTERACTIVE_MUTED).hex(),
+    k = (0, u.useToken)(a.Z.colors.INTERACTIVE_ACTIVE).hex(),
+    B = E.verified ? (0, i.jsx)(f.Z, {
       className: g.connectedAccountVerifiedIcon,
-      color: null != s ? s : k,
-      forcedIconColor: B,
+      color: null != s ? s : w,
+      forcedIconColor: k,
       size: 16,
-      tooltipText: b
+      tooltipText: U
     }) : null;
   return (0, i.jsxs)("div", {
-    className: o()(g.connectedAccountContainer, null != r && r.length > 0 || null != y ? g.connectedAccountContainerWithMetadata : null, v),
+    className: o()(g.connectedAccountContainer, null != r && r.length > 0 || null != P ? g.connectedAccountContainerWithMetadata : null, v),
     children: [(0, i.jsxs)("div", {
       className: g.connectedAccount,
       children: [(0, i.jsx)(u.Tooltip, {
-        text: null == G ? void 0 : G.name,
+        text: null == b ? void 0 : b.name,
         children: e => (0, i.jsx)("img", {
           ...e,
           alt: p.Z.Messages.IMG_ALT_LOGO.format({
-            name: null == G ? void 0 : G.name
+            name: null == b ? void 0 : b.name
           }),
           className: g.connectedAccountIcon,
-          src: (0, l.wj)(I) ? null == G ? void 0 : G.icon.darkSVG : null == G ? void 0 : G.icon.lightSVG
+          src: (0, l.wj)(I) ? null == b ? void 0 : b.icon.darkSVG : null == b ? void 0 : b.icon.lightSVG
         })
       }), (0, i.jsxs)("div", {
         className: g.connectedAccountNameContainer,
@@ -131,13 +131,13 @@ function L(e) {
                 className: g.connectedAccountNameText,
                 children: E.name
               })
-            }), x]
+            }), B]
           }), _]
-        }), null != y ? (0, i.jsx)(u.Text, {
+        }), null != P ? (0, i.jsx)(u.Text, {
           variant: "text-xs/normal",
           color: "header-secondary",
           children: p.Z.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({
-            date: y
+            date: P
           })
         }) : null]
       })]
@@ -155,7 +155,7 @@ function v(e) {
     locale: r,
     onApplicationClicked: s,
     selectedGuildId: a
-  } = e, l = (0, S.rm)(t, void 0, r), d = () => {
+  } = e, l = (0, S.rm)(t, void 0, r), c = () => {
     null == s || s(), (0, I.goToAppDirectory)({
       view: E.ApplicationDirectoryViews.APPLICATION,
       applicationId: t.application.id,
@@ -171,7 +171,7 @@ function v(e) {
       className: g.connectedAccount,
       children: (0, i.jsxs)(u.Clickable, {
         className: o()(g.connectedAccountNameContainer, g.connectedAccountNameContainerClickable),
-        onClick: d,
+        onClick: c,
         children: [null != t.platform_name ? (0, i.jsx)(u.Text, {
           variant: "eyebrow",
           color: "interactive-normal",
@@ -195,7 +195,7 @@ function v(e) {
     }) : null, (0, i.jsx)("div", {
       children: (0, i.jsx)(u.Clickable, {
         className: g.connectedAccountPoweredBy,
-        onClick: d,
+        onClick: c,
         children: (0, i.jsx)(u.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
@@ -217,7 +217,7 @@ function v(e) {
     })]
   })
 }
-let D = 12633 == n.j ? r.forwardRef(function(e, t) {
+let L = 12633 == n.j ? r.forwardRef(function(e, t) {
   let {
     connectedAccounts: n,
     theme: r,
@@ -226,17 +226,17 @@ let D = 12633 == n.j ? r.forwardRef(function(e, t) {
     userId: l
   } = e;
   if (null == n || 0 === n.length) return null;
-  let u = n.filter(e => d.Z.isSupported(e.type)).map(e => (0, i.jsx)(L, {
+  let u = n.filter(e => c.Z.isSupported(e.type)).map(e => (0, i.jsx)(C, {
       connectedAccount: e,
       theme: r,
       locale: s,
       userId: l
     }, "".concat(e.type, ":").concat(e.id))),
     _ = [],
-    c = [];
+    d = [];
   for (let e = 0; e < u.length; e++) {
     let t = u[e];
-    e % 2 == 0 ? _.push(t) : c.push(t)
+    e % 2 == 0 ? _.push(t) : d.push(t)
   }
   return (0, i.jsxs)("div", {
     ref: t,
@@ -246,7 +246,7 @@ let D = 12633 == n.j ? r.forwardRef(function(e, t) {
       children: _
     }), (0, i.jsx)("div", {
       className: g.connectedAccountsColumn,
-      children: c
+      children: d
     })]
   })
 }) : null

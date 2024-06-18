@@ -7,8 +7,8 @@ n.d(t, {
 var i, r, s, o, a, l, u = n(442837),
   _ = n(570140);
 (i = a || (a = {}))[i.FETCHING = 0] = "FETCHING", i[i.FETCHED = 1] = "FETCHED", i[i.ERROR = 2] = "ERROR";
-let d = {},
-  c = {},
+let c = {},
+  d = {},
   E = {};
 
 function I(e) {
@@ -34,7 +34,7 @@ class T extends(l = u.ZP.Store) {
       location: t,
       channelId: n
     } = e;
-    return c[I({
+    return d[I({
       location: t,
       channelId: n
     })]
@@ -45,7 +45,7 @@ class T extends(l = u.ZP.Store) {
       location: n,
       channelId: i
     } = e;
-    return null !== (t = d[I({
+    return null !== (t = c[I({
       location: n,
       channelId: i
     })]) && void 0 !== t ? t : []
@@ -62,8 +62,8 @@ o = void 0, (s = "displayName") in(r = T) ? Object.defineProperty(r, s, {
       location: t,
       channelId: n
     } = e;
-    c = {
-      ...c,
+    d = {
+      ...d,
       [I({
         location: t,
         channelId: n
@@ -79,11 +79,11 @@ o = void 0, (s = "displayName") in(r = T) ? Object.defineProperty(r, s, {
       location: n,
       channelId: i
     });
-    d = {
-      ...d,
-      [r]: t
-    }, c = {
+    c = {
       ...c,
+      [r]: t
+    }, d = {
+      ...d,
       [r]: 1
     };
     let s = Date.now();
@@ -97,8 +97,8 @@ o = void 0, (s = "displayName") in(r = T) ? Object.defineProperty(r, s, {
       location: t,
       channelId: n
     } = e;
-    c = {
-      ...c,
+    d = {
+      ...d,
       [I({
         location: t,
         channelId: n

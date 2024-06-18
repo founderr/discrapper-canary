@@ -20,10 +20,10 @@ n.d(t, {
           excludeGuildPermissions: l
         } = t,
         u = R;
-      if (r instanceof c.Sf) {
+      if (r instanceof d.Sf) {
         var _;
         if (r.isScheduledForDeletion()) return A;
-        if (c.Ec.has(r.type)) {
+        if (d.Ec.has(r.type)) {
           let t = I.Z.getChannel(r.parent_id);
           return null == t ? A : y(r, e({
             forceRoles: i,
@@ -43,7 +43,7 @@ n.d(t, {
         n = null != t ? h.Z.getGuild(t) : null
       } else s = null != s ? s : {}, n = r;
       if (null == n) return A;
-      let d = {
+      let c = {
         userId: N.lds,
         nick: "",
         guildId: n.id,
@@ -58,7 +58,7 @@ n.d(t, {
       };
       return M({
         userId: N.lds,
-        member: d,
+        member: c,
         guild: n,
         overwrites: s,
         roles: o,
@@ -99,7 +99,7 @@ n.d(t, {
     return B
   },
   ym: function() {
-    return L
+    return v
   }
 }), n(47120);
 var i = n(392711),
@@ -110,8 +110,8 @@ var i = n(392711),
   l = n(69882),
   u = n(160404),
   _ = n(41776),
-  d = n(569471),
-  c = n(131704),
+  c = n(569471),
+  d = n(131704),
   E = n(314897),
   I = n(592125),
   T = n(271383),
@@ -123,12 +123,12 @@ let A = s.vB(0),
   m = s.$e(...r().values(N.Plq)),
   O = s.$e(N.Plq.CREATE_INSTANT_INVITE, N.Plq.CHANGE_NICKNAME, N.Plq.VIEW_CHANNEL, N.Plq.SEND_MESSAGES, N.Plq.EMBED_LINKS, N.Plq.ATTACH_FILES, N.Plq.READ_MESSAGE_HISTORY, N.Plq.MENTION_EVERYONE, N.Plq.USE_EXTERNAL_EMOJIS, N.Plq.USE_EXTERNAL_STICKERS, N.Plq.ADD_REACTIONS, N.Plq.CREATE_PUBLIC_THREADS, N.Plq.CREATE_PRIVATE_THREADS, N.Plq.SEND_MESSAGES_IN_THREADS, N.Plq.SEND_POLLS, N.Plq.CONNECT, N.Plq.SPEAK, N.Plq.USE_VAD, N.Plq.STREAM, N.Plq.USE_EMBEDDED_ACTIVITIES, N.Plq.USE_SOUNDBOARD, N.Plq.REQUEST_TO_SPEAK, N.Plq.USE_APPLICATION_COMMANDS, N.Plq.CREATE_GUILD_EXPRESSIONS, N.Plq.CREATE_EVENTS, N.Plq.USE_EXTERNAL_APPS),
   R = s.$e(N.Plq.VIEW_CHANNEL, N.Plq.READ_MESSAGE_HISTORY),
-  C = s.$e(N.Plq.VIEW_CHANNEL, N.Plq.SEND_MESSAGES, N.Plq.CONNECT, N.Plq.SPEAK, N.Plq.STREAM, N.Plq.USE_EMBEDDED_ACTIVITIES, N.Plq.USE_EXTERNAL_APPS, N.Plq.USE_EXTERNAL_EMOJIS, N.Plq.USE_EXTERNAL_SOUNDS, N.Plq.USE_EXTERNAL_STICKERS, N.Plq.USE_SOUNDBOARD, N.Plq.USE_VAD),
-  p = s.$e(N.Plq.VIEW_CHANNEL, N.Plq.READ_MESSAGE_HISTORY),
-  g = s.$e(N.Plq.VIEW_CHANNEL, N.Plq.READ_MESSAGE_HISTORY, N.Plq.CHANGE_NICKNAME),
-  L = s.$e(N.Plq.MANAGE_GUILD, N.Plq.MANAGE_ROLES, N.Plq.ADMINISTRATOR, N.Plq.BAN_MEMBERS, N.Plq.MANAGE_NICKNAMES, N.Plq.CREATE_GUILD_EXPRESSIONS, N.Plq.MANAGE_GUILD_EXPRESSIONS, N.Plq.MANAGE_WEBHOOKS, N.Plq.VIEW_AUDIT_LOG);
+  p = s.$e(N.Plq.VIEW_CHANNEL, N.Plq.SEND_MESSAGES, N.Plq.CONNECT, N.Plq.SPEAK, N.Plq.STREAM, N.Plq.USE_EMBEDDED_ACTIVITIES, N.Plq.USE_EXTERNAL_APPS, N.Plq.USE_EXTERNAL_EMOJIS, N.Plq.USE_EXTERNAL_SOUNDS, N.Plq.USE_EXTERNAL_STICKERS, N.Plq.USE_SOUNDBOARD, N.Plq.USE_VAD),
+  g = s.$e(N.Plq.VIEW_CHANNEL, N.Plq.READ_MESSAGE_HISTORY),
+  C = s.$e(N.Plq.VIEW_CHANNEL, N.Plq.READ_MESSAGE_HISTORY, N.Plq.CHANGE_NICKNAME),
+  v = s.$e(N.Plq.MANAGE_GUILD, N.Plq.MANAGE_ROLES, N.Plq.ADMINISTRATOR, N.Plq.BAN_MEMBERS, N.Plq.MANAGE_NICKNAMES, N.Plq.CREATE_GUILD_EXPRESSIONS, N.Plq.MANAGE_GUILD_EXPRESSIONS, N.Plq.MANAGE_WEBHOOKS, N.Plq.VIEW_AUDIT_LOG);
 
-function v(e, t, n) {
+function L(e, t, n) {
   let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
   if (i && t.mfaLevel === N.BpS.ELEVATED && n === E.default.getId()) {
     var r;
@@ -150,7 +150,7 @@ function D(e, t, n, i) {
     let o = i[t.userId];
     null != o && (n = s.Od(n, o.deny), n = s.IH(n, o.allow));
     let u = s.e$(n, N.Plq.ADMINISTRATOR);
-    (0, a.EY)(t) && !u && (n = s.hX(n, g)), (0, l.b)(t) && !u && (n = s.hX(n, p))
+    (0, a.EY)(t) && !u && (n = s.hX(n, C)), (0, l.b)(t) && !u && (n = s.hX(n, g))
   }
   return n
 }
@@ -167,17 +167,17 @@ function M(e) {
     lurkerPermissionsMask: u = R
   } = e;
   if (l) return D(i.id, n, A, r);
-  let d = (o = null != o ? {
+  let c = (o = null != o ? {
       ...h.Z.getRoles(i.id),
       ...o
     } : h.Z.getRoles(i.id))[i.getEveryoneRoleId()],
-    c = null != d ? d.permissions : O;
+    d = null != c ? c.permissions : O;
   if (null != n)
     for (let e = 0; e < n.roles.length; e++) {
       let t = o[n.roles[e]];
-      void 0 !== t && (c = s.IH(c, t.permissions))
+      void 0 !== t && (d = s.IH(d, t.permissions))
     }
-  return c = s.e$(c, N.Plq.ADMINISTRATOR) ? m : D(i.id, n, c, r), (_.Z.isLurking(i.id) || (null == n ? void 0 : n.isPending)) && (c = s.hX(c, u)), T.ZP.isCurrentUserGuest(i.id) && (c = s.hX(c, C)), v(c, i, t, a)
+  return d = s.e$(d, N.Plq.ADMINISTRATOR) ? m : D(i.id, n, d, r), (_.Z.isLurking(i.id) || (null == n ? void 0 : n.isPending)) && (d = s.hX(d, u)), T.ZP.isCurrentUserGuest(i.id) && (d = s.hX(d, p)), L(d, i, t, a)
 }
 
 function P(e) {
@@ -193,12 +193,12 @@ function P(e) {
   if (null == s) return A;
   let f = "string" == typeof s ? s : s.id,
     N = R;
-  if (o instanceof c.Sf) {
+  if (o instanceof d.Sf) {
     if (o.isScheduledForDeletion()) return A;
-    if (c.Ec.has(o.type)) {
+    if (d.Ec.has(o.type)) {
       let e = I.Z.getChannel(o.parent_id);
       if (null == e || e.isScheduledForDeletion()) return A;
-      let t = f === (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && d.Z.hasJoined(o.id);
+      let t = f === (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && c.Z.hasJoined(o.id);
       return y(o, P({
         user: s,
         context: e,
@@ -217,7 +217,7 @@ function P(e) {
     r = null != e ? h.Z.getGuild(e) : null
   } else a = null != a ? a : {}, r = o;
   if (null == r) return A;
-  if (!(f === (null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && u.Z.isViewingRoles(r.id)) && r.isOwner(f)) return v(m, r, f, _);
+  if (!(f === (null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && u.Z.isViewingRoles(r.id)) && r.isOwner(f)) return L(m, r, f, _);
   let O = T.ZP.getMember(r.id, f);
   return M({
     userId: f,
@@ -236,7 +236,7 @@ function y(e, t, n) {
 }
 
 function U(e, t) {
-  if (c.Ec.has(e.type)) return !0;
+  if (d.Ec.has(e.type)) return !0;
   let {
     guild_id: n
   } = e;
@@ -306,8 +306,8 @@ function x(e) {
 function V(e, t) {
   let n;
   let i = {};
-  if (t instanceof c.Sf) {
-    if (t.type === N.d4z.PRIVATE_THREAD || c.Ec.has(t.type) && null == (t = I.Z.getChannel(t.parent_id))) return !1;
+  if (t instanceof d.Sf) {
+    if (t.type === N.d4z.PRIVATE_THREAD || d.Ec.has(t.type) && null == (t = I.Z.getChannel(t.parent_id))) return !1;
     i = t.permissionOverwrites;
     let e = t.getGuildId();
     n = null != e ? h.Z.getGuild(e) : null
@@ -323,8 +323,8 @@ function V(e, t) {
 function Z(e, t) {
   let n;
   let i = {};
-  if (t instanceof c.Sf) {
-    if (t.type === N.d4z.PRIVATE_THREAD || c.Ec.has(t.type) && null == (t = I.Z.getChannel(t.parent_id))) return !1;
+  if (t instanceof d.Sf) {
+    if (t.type === N.d4z.PRIVATE_THREAD || d.Ec.has(t.type) && null == (t = I.Z.getChannel(t.parent_id))) return !1;
     i = t.permissionOverwrites;
     let e = t.getGuildId();
     n = null != e ? h.Z.getGuild(e) : null

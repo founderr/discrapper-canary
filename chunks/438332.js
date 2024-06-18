@@ -16,21 +16,21 @@ function u(e, t, n) {
 let _ = {
     lastSeenNewlyAddedEmojiIds: {}
   },
-  d = _,
-  c = {};
+  c = _,
+  d = {};
 
 function E() {
-  for (let e in c) d.lastSeenNewlyAddedEmojiIds[e] = c[e]
+  for (let e in d) c.lastSeenNewlyAddedEmojiIds[e] = d[e]
 }
 class I extends(i = o.ZP.PersistedStore) {
   initialize(e) {
-    d = null != e ? e : _
+    c = null != e ? e : _
   }
   getState() {
-    return d
+    return c
   }
   getLastSeenEmojiByGuild(e) {
-    return d.lastSeenNewlyAddedEmojiIds[e]
+    return c.lastSeenNewlyAddedEmojiIds[e]
   }
   isNewerThanLastSeen(e, t) {
     if (null == e || null == t) return !1;
@@ -59,19 +59,19 @@ u(I, "displayName", "NewlyAddedEmojiStore"), u(I, "persistKey", "NewlyAddedEmoji
   }
 }]), t.Z = new I(a.Z, {
   LOGOUT: function() {
-    d = _, c = {}
+    c = _, d = {}
   },
   NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED: function(e) {
     var t;
     let {
       guildId: n,
       emojiId: i
-    } = e, r = null !== (t = c[n]) && void 0 !== t ? t : d.lastSeenNewlyAddedEmojiIds[n];
-    null == r || 0 > l.default.compare(r.id, i) ? c[n] = {
+    } = e, r = null !== (t = d[n]) && void 0 !== t ? t : c.lastSeenNewlyAddedEmojiIds[n];
+    null == r || 0 > l.default.compare(r.id, i) ? d[n] = {
       id: i,
       lastSeen: Date.now(),
       acknowledged: !0
-    } : c[n] = {
+    } : d[n] = {
       ...r,
       acknowledged: !0
     }
@@ -81,8 +81,8 @@ u(I, "displayName", "NewlyAddedEmojiStore"), u(I, "persistKey", "NewlyAddedEmoji
     let {
       guildId: n,
       emojiId: i
-    } = e, r = null !== (t = c[n]) && void 0 !== t ? t : d.lastSeenNewlyAddedEmojiIds[n];
-    (null == r || 0 > l.default.compare(r.id, i)) && (c[n] = {
+    } = e, r = null !== (t = d[n]) && void 0 !== t ? t : c.lastSeenNewlyAddedEmojiIds[n];
+    (null == r || 0 > l.default.compare(r.id, i)) && (d[n] = {
       id: i,
       lastSeen: Date.now(),
       acknowledged: !1
@@ -90,7 +90,7 @@ u(I, "displayName", "NewlyAddedEmojiStore"), u(I, "persistKey", "NewlyAddedEmoji
   },
   NEWLY_ADDED_EMOJI_SEEN_UPDATED: E,
   CLEAR_CACHES: function() {
-    d = _, E()
+    c = _, E()
   },
   CONNECTION_CLOSED: E
 })

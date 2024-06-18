@@ -18,13 +18,13 @@ function u(e) {
     className: s,
     position: u,
     ..._
-  } = e, d = r.useRef(null), c = null != n ? n : "string" == typeof t && t;
+  } = e, c = r.useRef(null), d = null != n ? n : "string" == typeof t && t;
   return (0, i.jsx)(a.Tooltip, {
     ..._,
     position: null != u ? u : "top",
     delay: 500,
     text: t,
-    "aria-label": c,
+    "aria-label": d,
     children: n => {
       let {
         onMouseEnter: r,
@@ -32,12 +32,12 @@ function u(e) {
       } = n;
       return (0, i.jsx)("div", {
         className: o()(s, l.overflow),
-        ref: d,
+        ref: c,
         "aria-hidden": e["aria-hidden"],
         onMouseEnter: () => {
           let {
             current: e
-          } = d;
+          } = c;
           null != e && e.offsetWidth < e.scrollWidth && (null == r || r())
         },
         onMouseLeave: a,

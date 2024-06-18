@@ -13,8 +13,8 @@ var r = n(120356),
   l = n(906732),
   u = n(5192),
   _ = n(877485),
-  d = n(785717),
-  c = n(689938),
+  c = n(785717),
+  d = n(689938),
   E = n(125188);
 
 function I(e) {
@@ -26,7 +26,7 @@ function I(e) {
     className: T
   } = e, h = u.ZP.getName(n, r, t), {
     trackUserProfileAction: S
-  } = (0, d.KZ)(), {
+  } = (0, c.KZ)(), {
     newestAnalyticsLocation: f
   } = (0, l.ZP)(), {
     originalFriendingEnabled: N,
@@ -38,7 +38,7 @@ function I(e) {
     className: s()(E.container, T),
     children: [(0, i.jsx)(o.Text, {
       variant: "text-sm/normal",
-      children: c.Z.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUEST.format({
+      children: d.Z.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUEST.format({
         username: h
       })
     }), (0, i.jsxs)("div", {
@@ -63,7 +63,7 @@ function I(e) {
             }
           })
         },
-        children: c.Z.Messages.FRIEND_REQUEST_ACCEPT
+        children: d.Z.Messages.FRIEND_REQUEST_ACCEPT
       }), (0, i.jsx)(o.Button, {
         look: o.Button.Looks.FILLED,
         color: o.Button.Colors.PRIMARY,
@@ -76,7 +76,7 @@ function I(e) {
             location: f
           })
         },
-        children: c.Z.Messages.FRIEND_REQUEST_IGNORE
+        children: d.Z.Messages.FRIEND_REQUEST_IGNORE
       })]
     })]
   })

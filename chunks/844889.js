@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Gg: function() {
-    return d
+    return c
   },
   Hg: function() {
     return E
@@ -22,9 +22,9 @@ function _(e) {
   u = e
 }
 
-function d() {
+function c() {
   return l = l.then(async () => {
-    let e = await c();
+    let e = await d();
     if (null == e || function(e) {
         return 18e5 + e.lastUsed - Date.now() <= 0
       }(e)) {
@@ -39,7 +39,7 @@ function d() {
     return e
   })
 }
-async function c() {
+async function d() {
   let e = await r.K.getAfterRefresh(o),
     t = await r.K.getAfterRefresh(a).then(E),
     n = await r.K.getAfterRefresh(s).then(E);

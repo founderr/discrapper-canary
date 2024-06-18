@@ -21,7 +21,7 @@ function u(e) {
 function _(e) {
   let t = (0, r.e7)([a.Z], () => a.Z.getUserTrialOffer(e)),
     [n, _] = i.useState(u(t)),
-    d = (0, r.e7)([o.default], () => (0, l.I5)(o.default.getCurrentUser()));
+    c = (0, r.e7)([o.default], () => (0, l.I5)(o.default.getCurrentUser()));
   return i.useEffect(() => {
     if (null != t && null != t.expires_at) {
       let e = new s.V7,
@@ -33,5 +33,5 @@ function _(e) {
         };
       return i(), () => e.stop()
     }
-  }, [n, t]), n || d ? null : t
+  }, [n, t]), n || c ? null : t
 }

@@ -30,8 +30,8 @@ var i = n(470079),
   l = n(611144),
   u = n(468194),
   _ = n(477690),
-  d = n(691251),
-  c = n(981631);
+  c = n(691251),
+  d = n(981631);
 let E = (0, u.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
   I = e => {
     let {
@@ -127,7 +127,7 @@ let E = (0, u.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
       scrollOffset: a = 0,
       onActiveCategoryIndexChange: l,
       disableForSearch: u = !0
-    } = e, _ = i.useRef(c.xAR), d = i.useMemo(() => s().debounce(() => {
+    } = e, _ = i.useRef(d.xAR), c = i.useMemo(() => s().debounce(() => {
       r.current = !1
     }, 250), [r]), E = i.useMemo(() => s().debounce(e => {
       ("" === o || !u) && (window.cancelAnimationFrame(_.current), _.current = window.requestAnimationFrame(() => {
@@ -145,8 +145,8 @@ let E = (0, u.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
       }))
     }, 0), [o, n, t, a, l, u]);
     return i.useCallback(e => {
-      r.current = !0, d(), E(e)
-    }, [r, d, E])
+      r.current = !0, c(), E(e)
+    }, [r, c, E])
   },
   f = e => {
     let {
@@ -156,23 +156,23 @@ let E = (0, u.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
       itemList: s,
       onGridNavigatorItemSelect: l,
       onGridNavigatorPositionChange: u
-    } = e, _ = i.useRef(!1), d = i.useCallback((e, t) => {
+    } = e, _ = i.useRef(!1), c = i.useCallback((e, t) => {
       let n = r[t];
       if (null != n) return n[e]
-    }, [r]), c = i.useCallback(e => {
+    }, [r]), d = i.useCallback(e => {
       let {
         focusedX: t,
         focusedY: n
       } = e;
       _.current = !0;
-      let i = d(t, n);
+      let i = c(t, n);
       if (null == i) return;
       let {
         visibleRowIndex: r,
         columnIndex: o
       } = i;
       u(o, r), null != s.current && s.current.scrollRowIntoView(n)
-    }, [d, s, u]), E = i.useCallback((e, t, n) => {
+    }, [c, s, u]), E = i.useCallback((e, t, n) => {
       switch (n.type) {
         case o.Us.NAVIGATE_UP:
         case o.Us.NAVIGATE_DOWN:
@@ -184,12 +184,12 @@ let E = (0, u.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
         case o.Us.NAVIGATE_END:
         case o.Us.NAVIGATE_CROSSLINE_START:
         case o.Us.NAVIGATE_CROSSLINE_END:
-          c(t)
+          d(t)
       }
-    }, [c]), I = i.useCallback((e, t, n) => {
-      let i = d(e, t);
+    }, [d]), I = i.useCallback((e, t, n) => {
+      let i = c(e, t);
       null != i && l(i, n)
-    }, [d, l]), {
+    }, [c, l]), {
       dispatch: T,
       getItemProps: h,
       getRowProps: S,
@@ -241,28 +241,28 @@ function N(e) {
       l = [],
       u = [],
       _ = [],
-      d = 0,
       c = 0,
+      d = 0,
       E = 0;
     if (0 !== r) {
       let i = function(t, n) {
         let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
           r = Math.ceil(t.length / e);
-        u[c] = i ? 0 : r;
+        u[d] = i ? 0 : r;
         for (let s = 0; s < r; s++) {
           let r = s * e,
             o = r + e,
             a = t.slice(r, o).map((e, t) => ({
               item: e,
-              gridSectionIndex: c,
-              rowIndex: d,
+              gridSectionIndex: d,
+              rowIndex: c,
               columnIndex: t,
               visibleRowIndex: E,
               category: n
             }));
-          !i && (E++, _.push(a), l.push(a.length)), d++
+          !i && (E++, _.push(a), l.push(a.length)), c++
         }
-        c++
+        d++
       };
       for (let e of t)
         if (e.items.length > 0) {
@@ -272,7 +272,7 @@ function N(e) {
     }
     return {
       expressionsGrid: _,
-      rowCount: d,
+      rowCount: c,
       rowCountBySection: u,
       columnCounts: l,
       gutterWidth: i
@@ -291,7 +291,7 @@ function A(e) {
   } = e, {
     gridDispatch: u,
     getItemProps: _,
-    getRowProps: c,
+    getRowProps: d,
     gridContainerProps: E,
     handleGridContainerKeyDown: I,
     isUsingKeyboardNavigation: T
@@ -310,14 +310,14 @@ function A(e) {
       rowIndex: n,
       source: i
     } = e;
-    i !== d.u.GRID_NAVIGATOR_EVENT && u({
+    i !== c.u.GRID_NAVIGATOR_EVENT && u({
       type: l.s.SET_FOCUSED_POSITION,
       x: t,
       y: n
     })
   }, e => e.inspectedExpressionPosition), [u, s]), {
     getItemProps: _,
-    getRowProps: c,
+    getRowProps: d,
     gridContainerProps: E,
     handleGridContainerKeyDown: I,
     isUsingKeyboardNavigation: T

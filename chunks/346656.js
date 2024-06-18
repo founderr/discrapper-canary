@@ -6,8 +6,8 @@ var i, r = n(735250),
   l = n(613828),
   u = n(442837),
   _ = n(692547),
-  d = n(481060),
-  c = n(891819),
+  c = n(481060),
+  d = n(891819),
   E = n(451478),
   I = n(956664),
   T = n(153066),
@@ -89,7 +89,7 @@ class O extends s.PureComponent {
       size: l,
       style: u = {},
       textScale: _,
-      showTooltip: c,
+      showTooltip: d,
       tooltipPosition: E,
       onClick: I,
       to: h,
@@ -98,9 +98,9 @@ class O extends s.PureComponent {
       tabIndex: A,
       iconSrc: O,
       "aria-hidden": R,
-      ...C
-    } = this.props, p = m[l], g = null != I ? d.Clickable : "div";
-    return (0, r.jsxs)(g, {
+      ...p
+    } = this.props, g = m[l], C = null != I ? c.Clickable : "div";
+    return (0, r.jsxs)(C, {
       className: a()(S.icon, i, (0, T.l)(S, "iconSize", l), {
         [null !== (e = (0, T.l)(S, "iconActive", l)) && void 0 !== e ? e : ""]: o,
         [S.iconInactive]: !o,
@@ -108,12 +108,12 @@ class O extends s.PureComponent {
       }),
       "aria-hidden": R,
       style: null == n.icon ? {
-        fontSize: (null !== (t = p[n.acronym.length]) && void 0 !== t ? t : p[p.length - 1]) * _,
+        fontSize: (null !== (t = g[n.acronym.length]) && void 0 !== t ? t : g[g.length - 1]) * _,
         ...u
       } : u,
       onClick: null != h || null == I ? void 0 : I,
       tabIndex: A,
-      ...C,
+      ...p,
       children: [this.renderAcronym(), this.renderBadge()]
     })
   }
@@ -123,7 +123,7 @@ class O extends s.PureComponent {
       showTooltip: t,
       tooltipPosition: n
     } = this.props;
-    return t ? (0, r.jsx)(d.Tooltip, {
+    return t ? (0, r.jsx)(c.Tooltip, {
       text: e.name,
       position: n,
       "aria-label": !1,
@@ -168,17 +168,17 @@ let R = u.ZP.connectStores([E.Z], e => {
       backgroundImage: (0, I.rv)(null != i ? i : t.getIconURL(A[s], n && E.Z.isFocused()))
     }
   }
-})((0, c.N)(e => (0, r.jsx)(O, {
+})((0, d.N)(e => (0, r.jsx)(O, {
   ...e
 })));
-class C extends(i = s.PureComponent) {
+class p extends(i = s.PureComponent) {
   render() {
     return (0, r.jsx)(R, {
       ...this.props
     })
   }
 }
-f(C, "Sizes", N), f(C, "defaultProps", {
+f(p, "Sizes", N), f(p, "defaultProps", {
   size: N.LARGE,
   textScale: 1,
   showBadge: !1,
@@ -187,4 +187,4 @@ f(C, "Sizes", N), f(C, "defaultProps", {
   tooltipPosition: "top",
   badgeStrokeColor: _.Z.unsafe_rawColors.WHITE_500.css,
   animate: !1
-}), t.Z = C
+}), t.Z = p

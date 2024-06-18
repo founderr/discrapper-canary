@@ -13,8 +13,8 @@ var r = n(481060),
   l = n(726059),
   u = n(162267),
   _ = n(228168),
-  d = n(182294),
-  c = n(689938),
+  c = n(182294),
+  d = n(689938),
   E = n(391830);
 
 function I(e) {
@@ -39,14 +39,14 @@ function I(e) {
           } = e;
           return t
         }),
-        size: d.EF.SIZE_16,
+        size: c.EF.SIZE_16,
         hideOverflowCount: !0,
         disableUsernameTooltip: !0
       }), (0, i.jsx)(r.Text, {
         className: E.text,
         variant: f,
         color: "interactive-normal",
-        children: c.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
+        children: d.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
           count: I.length
         })
       })]
@@ -71,7 +71,7 @@ function I(e) {
         className: E.text,
         variant: f,
         color: "interactive-normal",
-        children: c.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
+        children: d.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
           count: T.length
         })
       })]

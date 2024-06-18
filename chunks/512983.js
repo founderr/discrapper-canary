@@ -21,8 +21,8 @@ function _(e) {
     className: r,
     faded: o,
     disabled: _,
-    required: d = !1,
-    error: c,
+    required: c = !1,
+    error: d,
     errorId: E,
     ...I
   } = e;
@@ -39,19 +39,19 @@ function _(e) {
       [u["defaultMargin".concat(n)]]: null == r,
       [u.faded]: o,
       [u.disabled]: _,
-      [u.error]: null != c
+      [u.error]: null != d
     }),
     ...I,
-    children: [i, d && null == c ? (0, s.jsx)("span", {
+    children: [i, c && null == d ? (0, s.jsx)("span", {
       className: u.required,
       children: "*"
-    }) : null, null != c ? (0, s.jsxs)("span", {
+    }) : null, null != d ? (0, s.jsxs)("span", {
       id: E,
       className: u.errorMessage,
       children: [null != i ? (0, s.jsx)("span", {
         className: u.errorSeparator,
         children: "-"
-      }) : null, c]
+      }) : null, d]
     }) : null]
   })
 }(i = r || (r = {})).H1 = "h1", i.H2 = "h2", i.H3 = "h3", i.H4 = "h4", i.H5 = "h5", i.LABEL = "label", i.LEGEND = "legend"

@@ -54,7 +54,7 @@ function g() {
   })
 }
 
-function x() {
+function C() {
   let e = (0, a.ZP)();
 
   function s(e) {
@@ -123,7 +123,7 @@ function x() {
   })
 }
 
-function C() {
+function x() {
   return (0, n.jsxs)("div", {
     className: c.earningBenefitCard,
     children: [(0, n.jsx)(l.Text, {
@@ -134,7 +134,7 @@ function C() {
       size: 32
     }), (0, n.jsx)(g, {}), (0, n.jsx)(l.Spacer, {
       size: 24
-    }), (0, n.jsx)(x, {})]
+    }), (0, n.jsx)(C, {})]
   })
 }
 
@@ -194,7 +194,7 @@ function O() {
       size: 24
     }), (0, n.jsxs)("div", {
       className: c.creatorBenefitsContainer,
-      children: [(0, n.jsx)(C, {}), (0, n.jsx)(R, {}), (0, n.jsx)(L, {})]
+      children: [(0, n.jsx)(x, {}), (0, n.jsx)(R, {}), (0, n.jsx)(L, {})]
     })]
   })
 }

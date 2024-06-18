@@ -4,7 +4,7 @@ n.d(t, {
     return f
   },
   KC: function() {
-    return d
+    return c
   },
   QX: function() {
     return m
@@ -19,7 +19,7 @@ n.d(t, {
     return I
   },
   _w: function() {
-    return c
+    return d
   },
   vc: function() {
     return E
@@ -42,11 +42,11 @@ function _(e, t) {
   return Math.floor((u(e, !1) - u(t, !1)) / a)
 }
 
-function d(e, t) {
+function c(e, t) {
   return Math.abs(+e - +t) <= a && e.getDate() === t.getDate()
 }
 
-function c(e, t, n) {
+function d(e, t, n) {
   return Math.abs(e.valueOf() - t.valueOf()) < n
 }
 

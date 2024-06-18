@@ -3,11 +3,11 @@ let i;
 var r, s, o, a, l = n(259443),
   u = n(442837),
   _ = n(570140),
-  d = n(818083),
-  c = n(353926),
+  c = n(818083),
+  d = n(353926),
   E = n(988348),
   I = n(987338);
-let T = (0, d.B)({
+let T = (0, c.B)({
     id: "2024-03_gateway_zstd",
     label: "Gateway Zstd compression",
     kind: "user",
@@ -45,7 +45,7 @@ let T = (0, d.B)({
       }
     }]
   }),
-  h = (0, d.B)({
+  h = (0, c.B)({
     id: "2024-04_gateway_zstd_verification",
     label: "Gateway Zstd Verification",
     kind: "user",
@@ -89,9 +89,9 @@ function R(e) {
     return
   }(0, E.CG)(e), e !== i && S.info("Setting Zstd to ".concat(e)), i = e
 }
-class C extends(a = u.ZP.Store) {
+class p extends(a = u.ZP.Store) {
   initialize() {
-    this.waitFor(c.Z)
+    this.waitFor(d.Z)
   }
   shouldUseZstd() {
     return m()
@@ -103,12 +103,12 @@ class C extends(a = u.ZP.Store) {
     A = !1
   }
 }
-o = "GatewayZstdStore", (s = "displayName") in(r = C) ? Object.defineProperty(r, s, {
+o = "GatewayZstdStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new C(_.Z, {
+}) : r[s] = o, t.Z = new p(_.Z, {
   CONNECTION_OPEN: O,
   CONNECTION_INTERRUPTED: function(e) {
     let {

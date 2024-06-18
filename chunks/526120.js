@@ -24,8 +24,8 @@ var i = n(544891),
   l = n(359110),
   u = n(592125),
   _ = n(626135),
-  d = n(709054),
-  c = n(563534),
+  c = n(709054),
+  d = n(563534),
   E = n(734893),
   I = n(846121),
   T = n(981631);
@@ -83,7 +83,7 @@ let h = async e => {
       channelId: t
     }), null == t) return;
   let i = u.Z.getChannel(t),
-    E = c.Z.getResourceForChannel(e, t);
+    E = d.Z.getResourceForChannel(e, t);
   null != e && !a.Z.isFullServerPreview(e) && null != i && null != E && _.default.track(T.rMx.SERVER_GUIDE_CHANNEL_SELECTED, {
     guild_id: e,
     channel_id: i.id,
@@ -92,7 +92,7 @@ let h = async e => {
   }), n && (0, l.Kh)(t);
   s.Z.jumpToMessage({
     channelId: t,
-    messageId: d.default.castChannelIdAsMessageId(t),
+    messageId: c.default.castChannelIdAsMessageId(t),
     flash: !1,
     jumpType: o.SR.INSTANT
   })
@@ -103,7 +103,7 @@ let h = async e => {
     channelId: t
   });
   let n = u.Z.getChannel(t),
-    i = c.Z.getActionForChannel(e, t);
+    i = d.Z.getActionForChannel(e, t);
   null != e && !a.Z.isFullServerPreview(e) && null != n && null != i && _.default.track(T.rMx.SERVER_GUIDE_CHANNEL_SELECTED, {
     guild_id: e,
     channel_id: n.id,
@@ -117,11 +117,11 @@ let h = async e => {
       channelId: t
     }), a.Z.isFullServerPreview(e)) return;
   let n = u.Z.getChannel(t),
-    s = c.Z.getActionForChannel(e, t);
+    s = d.Z.getActionForChannel(e, t);
   if (null != n && null != s) {
     var o, l;
-    let t = d.default.keys(null !== (o = I.Z.getCompletedActions(e)) && void 0 !== o ? o : {}),
-      i = null !== (l = c.Z.getNewMemberActions(e)) && void 0 !== l ? l : [];
+    let t = c.default.keys(null !== (o = I.Z.getCompletedActions(e)) && void 0 !== o ? o : {}),
+      i = null !== (l = d.Z.getNewMemberActions(e)) && void 0 !== l ? l : [];
     _.default.track(T.rMx.SERVER_GUIDE_ACTION_COMPLETED, {
       guild_id: n.guild_id,
       channel_id: n.id,

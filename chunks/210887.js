@@ -5,8 +5,8 @@ var r, s, o = n(442837),
   l = n(692547),
   u = n(780384),
   _ = n(570140),
-  d = n(607070),
-  c = n(47760),
+  c = n(607070),
+  d = n(47760),
   E = n(540059);
 n(57132);
 var I = n(541049);
@@ -28,21 +28,21 @@ function R(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let C = null !== (r = (0, I.Z)()) && void 0 !== r ? r : m.BRd.DARK,
-  p = null,
-  g = !1;
+let p = null !== (r = (0, I.Z)()) && void 0 !== r ? r : m.BRd.DARK,
+  g = null,
+  C = !1;
 
-function L() {
+function v() {
   let e = function() {
     var e, t;
     if (__OVERLAY__) return m.BRd.DARK;
-    if (d.Z.syncForcedColors && "active" === d.Z.systemForcedColors && null != i) return i;
+    if (c.Z.syncForcedColors && "active" === c.Z.systemForcedColors && null != i) return i;
     let n = f.ZP.useSystemTheme;
     if (n === A.K.ON && null != i) return i;
     let r = null === (e = S.Z.getAppearanceSettings()) || void 0 === e ? void 0 : e.theme;
     if (null != r) return r;
     let s = null === (t = N.Z.settings.appearance) || void 0 === t ? void 0 : t.theme;
-    if (null == s) return C;
+    if (null == s) return p;
     if (!E.i.getCurrentConfig({
         location: "ThemeStore"
       }).enabled) return s === a.Q2.LIGHT ? m.BRd.LIGHT : m.BRd.DARK;
@@ -62,7 +62,7 @@ function L() {
   return e
 }
 
-function v() {
+function L() {
   return M()
 }
 
@@ -71,12 +71,12 @@ function D() {
 }
 
 function M() {
-  let e = L();
-  return e !== C && (C = e, !0)
+  let e = v();
+  return e !== p && (p = e, !0)
 }
 class P extends(s = o.ZP.PersistedStore) {
   initialize(e) {
-    (null == e ? void 0 : e.theme) != null && (C = e.theme), this.waitFor(f.ZP, S.Z, N.Z, d.Z)
+    (null == e ? void 0 : e.theme) != null && (p = e.theme), this.waitFor(f.ZP, S.Z, N.Z, c.Z)
   }
   getState() {
     return {
@@ -84,19 +84,19 @@ class P extends(s = o.ZP.PersistedStore) {
     }
   }
   get darkSidebar() {
-    return (0, u.ap)(this.theme) && f.ZP.darkSidebar && !g
+    return (0, u.ap)(this.theme) && f.ZP.darkSidebar && !C
   }
   get theme() {
-    return L()
+    return v()
   }
   get systemTheme() {
-    return p
+    return g
   }
   get systemPrefersColorScheme() {
     return i
   }
   get isSystemThemeAvailable() {
-    return null !== p
+    return null !== g
   }
 }
 R(P, "displayName", "ThemeStore"), R(P, "persistKey", "ThemeStore"), R(P, "migrations", [e => {
@@ -106,44 +106,44 @@ R(P, "displayName", "ThemeStore"), R(P, "persistKey", "ThemeStore"), R(P, "migra
     theme: t
   }
 }]), t.Z = new P(_.Z, {
-  CACHE_LOADED: v,
-  CONNECTION_OPEN: v,
+  CACHE_LOADED: L,
+  CONNECTION_OPEN: L,
   LOGOUT: function(e) {
-    return !e.isSwitchingAccount && C !== m.BRd.DARK && (C = m.BRd.DARK, function() {
-      !__OVERLAY__ && h.isPlatformEmbedded && T.Z.setApplicationBackgroundColor((0, u.wj)(L()) ? l.Z.unsafe_rawColors.PRIMARY_700.resolve({
-        saturation: d.Z.saturation
+    return !e.isSwitchingAccount && p !== m.BRd.DARK && (p = m.BRd.DARK, function() {
+      !__OVERLAY__ && h.isPlatformEmbedded && T.Z.setApplicationBackgroundColor((0, u.wj)(v()) ? l.Z.unsafe_rawColors.PRIMARY_700.resolve({
+        saturation: c.Z.saturation
       }).hsl() : l.Z.unsafe_rawColors.WHITE_500.resolve({
-        saturation: d.Z.saturation
+        saturation: c.Z.saturation
       }).hsl())
     }(), M())
   },
-  OVERLAY_INITIALIZE: v,
+  OVERLAY_INITIALIZE: L,
   SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: D,
   UNSYNCED_USER_SETTINGS_UPDATE: D,
-  USER_SETTINGS_PROTO_UPDATE: v,
+  USER_SETTINGS_PROTO_UPDATE: L,
   UPDATE_BACKGROUND_GRADIENT_PRESET: function(e) {
     var t, n;
     let {
       presetId: i
     } = e;
-    C = null != i && null !== (n = null === (t = O.qt[i]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : L();
+    p = null != i && null !== (n = null === (t = O.qt[i]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : v();
     let r = null != i;
-    return g !== r ? (g = r, !0) : function() {
-      let e = L();
-      return !(0, c.qu)(C, e) && (C = e, !0)
+    return C !== r ? (C = r, !0) : function() {
+      let e = v();
+      return !(0, d.qu)(p, e) && (p = e, !0)
     }()
   },
-  RESET_PREVIEW_CLIENT_THEME: v,
+  RESET_PREVIEW_CLIENT_THEME: L,
   SYSTEM_THEME_CHANGE: function(e) {
     let {
       systemTheme: t
     } = e;
-    return p = t, M()
+    return g = t, M()
   },
   ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: function(e) {
     return i = e.systemPrefersColorScheme, M()
   },
   ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: function() {
-    return (0, u.ap)(L())
+    return (0, u.ap)(v())
   }
 })

@@ -1,5 +1,5 @@
 "use strict";
-let i, r, s, o, a, l, u, _, d, c, E;
+let i, r, s, o, a, l, u, _, c, d, E;
 var I, T, h, S, f = n(442837),
   N = n(570140),
   A = n(981631);
@@ -7,21 +7,21 @@ let m = A.QZA.CLOSED,
   O = {};
 
 function R() {
-  m = A.QZA.CLOSED, O = {}, d = null, c = void 0, E = []
-}
-
-function C() {
-  p(), g(), O = {}, m = A.QZA.OPEN
+  m = A.QZA.CLOSED, O = {}, c = null, d = void 0, E = []
 }
 
 function p() {
-  i = void 0, u = void 0, r = void 0
+  g(), C(), O = {}, m = A.QZA.OPEN
 }
 
 function g() {
+  i = void 0, u = void 0, r = void 0
+}
+
+function C() {
   o = void 0, a = void 0, l = void 0, _ = void 0, s = void 0
 }
-class L extends(S = f.ZP.Store) {
+class v extends(S = f.ZP.Store) {
   getFormState() {
     return m
   }
@@ -74,30 +74,30 @@ class L extends(S = f.ZP.Store) {
     }
   }
   getGuild() {
-    return d
+    return c
   }
   getSource() {
-    return c
+    return d
   }
   getAnalyticsLocations() {
     return E
   }
 }
-h = "GuildIdentitySettingsStore", (T = "displayName") in(I = L) ? Object.defineProperty(I, T, {
+h = "GuildIdentitySettingsStore", (T = "displayName") in(I = v) ? Object.defineProperty(I, T, {
   value: h,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : I[T] = h, t.Z = new L(N.Z, {
+}) : I[T] = h, t.Z = new v(N.Z, {
   GUILD_IDENTITY_SETTINGS_INIT: function(e) {
-    d = e.guild, m = A.QZA.OPEN, O = {}, c = e.source, E = e.analyticsLocations
+    c = e.guild, m = A.QZA.OPEN, O = {}, d = e.source, E = e.analyticsLocations
   },
   GUILD_IDENTITY_SETTINGS_CLOSE: R,
   GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: function() {
-    C(), R()
+    p(), R()
   },
   GUILD_IDENTITY_SETTINGS_SET_GUILD: function(e) {
-    d = e.guild, O = {}
+    c = e.guild, O = {}
   },
   GUILD_IDENTITY_SETTINGS_SUBMIT: function() {
     m = A.QZA.SUBMITTING, O = {}
@@ -158,10 +158,10 @@ h = "GuildIdentitySettingsStore", (T = "displayName") in(I = L) ? Object.defineP
     } = e;
     _ = t
   },
-  GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: p,
-  GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: g,
-  GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: C,
-  GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: C,
+  GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: g,
+  GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: C,
+  GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: p,
+  GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: p,
   GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: function() {
     O = {}
   }

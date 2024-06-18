@@ -12,7 +12,7 @@ let _ = () => {
       type: l.N4
     })
   },
-  d = e => {
+  c = e => {
     s.default.track(u.rMx.OPEN_MODAL, {
       type: l.N4,
       guild_id: e
@@ -20,14 +20,14 @@ let _ = () => {
   };
 t.Z = {
   openMemberVerificationModal(e, t) {
-    d(e);
+    c(e);
     let s = async t => {
       await o.Z.submitVerificationForm(e, t)
     };
     (0, r.ZD)(async () => {
       let {
         default: t
-      } = await Promise.all([n.e("99387"), n.e("80026"), n.e("70935")]).then(n.bind(n, 645264));
+      } = await Promise.all([n.e("99387"), n.e("80026"), n.e("70669")]).then(n.bind(n, 645264));
       return n => (0, i.jsx)(t, {
         ...n,
         guildId: e,

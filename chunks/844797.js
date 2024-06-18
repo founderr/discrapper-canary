@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   TX: function() {
-    return d
+    return c
   },
   oy: function() {
     return _
@@ -31,7 +31,7 @@ function _(e) {
   }))
 }
 
-function d(e, t, n, i) {
+function c(e, t, n, i) {
   return !a.ZP.getEmbeddedActivitiesForChannel(e).some(e => e.applicationId === t) && u({
     channelId: e,
     SelectedChannelStore: n,

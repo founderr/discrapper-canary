@@ -35,15 +35,15 @@ function _(e) {
     className: n,
     disabled: r,
     selectable: _,
-    children: d,
-    style: c,
+    children: c,
+    style: d,
     ...E
   } = e, I = u.DEFAULT;
   return r ? I = u.DISABLED : _ && (I = u.SELECTABLE), (0, i.jsx)(o.Z, {
     className: s()(a[t], n, a[I]),
-    style: c,
+    style: d,
     ...E,
-    children: d
+    children: c
   })
 }
 _.Types = l

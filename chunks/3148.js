@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   ZP: function() {
-    return d
+    return c
   },
   cs: function() {
-    return c
+    return d
   },
   pe: function() {
     return _
@@ -37,13 +37,13 @@ function _(e) {
   }
 }
 
-function d(e) {
+function c(e) {
   let {
     channelId: t,
     content: n,
     tts: i = !1,
-    type: d = u.uaV.DEFAULT,
-    messageReference: c,
+    type: c = u.uaV.DEFAULT,
+    messageReference: d,
     allowedMentions: E,
     author: I,
     flags: T,
@@ -51,13 +51,13 @@ function d(e) {
     poll: S,
     changelogId: f
   } = e, N = [];
-  if (d === u.uaV.REPLY && (r()(null != c, "Replies must have a message reference"), null == E || E.replied_user)) {
-    let e = s.Z.getMessageByReference(c);
+  if (c === u.uaV.REPLY && (r()(null != d, "Replies must have a message reference"), null == E || E.replied_user)) {
+    let e = s.Z.getMessageByReference(d);
     (null == e ? void 0 : e.state) === s.Y.LOADED && N.push(_(e.message.author))
   }
   return null == I && (I = a.default.getCurrentUser()), I instanceof o.Z && (I = _(I)), r()(null != I, "createMessage: author cannot be undefined"), {
     id: null != h ? h : (0, l.r)(),
-    type: d,
+    type: c,
     content: n,
     channel_id: t,
     author: I,
@@ -71,7 +71,7 @@ function d(e) {
     timestamp: new Date().toISOString(),
     state: u.yb.SENDING,
     tts: i,
-    message_reference: c,
+    message_reference: d,
     message_snapshots: [],
     flags: T,
     nonce: h,
@@ -80,7 +80,7 @@ function d(e) {
   }
 }
 
-function c(e) {
+function d(e) {
   let {
     messageId: t,
     channelId: n,

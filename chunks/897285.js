@@ -12,7 +12,7 @@ let l = {},
       await a.Z.getGuildEventsForCurrentUser(e), u.add(e)
     } catch (e) {}
   };
-class d extends i.Z {
+class c extends i.Z {
   async getGuildEventUserCounts(e, t, n) {
     let i = n.filter(n => null == l["".concat(e, "-").concat(t, "-").concat(n)] || Date.now() - l["".concat(e, "-").concat(t, "-").concat(n)] > 18e5);
     if (!(Date.now() - l["".concat(e, "-").concat(t)] < 18e5) || 0 !== i.length) {
@@ -75,4 +75,4 @@ class d extends i.Z {
     }) : t[n] = i
   }
 }
-t.Z = new d
+t.Z = new c

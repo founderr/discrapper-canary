@@ -12,8 +12,8 @@ var i = n(735250),
   l = n.n(a),
   u = n(442837),
   _ = n(481060),
-  d = n(493683),
-  c = n(37234),
+  c = n(493683),
+  d = n(37234),
   E = n(904245),
   I = n(541716),
   T = n(957730),
@@ -32,10 +32,10 @@ function R(e) {
     className: s,
     inputClassName: a,
     onSend: R
-  } = e, C = r.useRef(null), p = (0, u.e7)([S.Z], () => S.Z.isBlocked(t.id)), g = r.useCallback(e => {
+  } = e, p = r.useRef(null), g = (0, u.e7)([S.Z], () => S.Z.isBlocked(t.id)), C = r.useCallback(e => {
     if ("Enter" === e.key) {
-      e.preventDefault(), l()(null != C.current, "Keypress on Input when not mounted");
-      let n = C.current.value.trim();
+      e.preventDefault(), l()(null != p.current, "Keypress on Input when not mounted");
+      let n = p.current.value.trim();
       return (0, N.v)({
         type: I.I.NORMAL,
         content: n,
@@ -44,24 +44,24 @@ function R(e) {
         let {
           valid: i
         } = e;
-        if (!!i) d.Z.openPrivateChannel(t.id, !1, !1, "Quick Message Input").then(e => {
+        if (!!i) c.Z.openPrivateChannel(t.id, !1, !1, "Quick Message Input").then(e => {
           let t = h.Z.getChannel(e);
-          l()(null != t, "Newly created PrivateChannel is null"), E.Z.sendMessage(t.id, T.ZP.parse(t, n)), (0, c.xf)()
+          l()(null != t, "Newly created PrivateChannel is null"), E.Z.sendMessage(t.id, T.ZP.parse(t, n)), (0, d.xf)()
         }), null == R || R()
       }), !0
     }
     e.which === A.yXg.SPACE && e.stopPropagation()
-  }, [t, R]), L = p ? m.Z.Messages.QUICK_DM_BLOCKED : m.Z.Messages.QUICK_DM_USER.format({
+  }, [t, R]), v = g ? m.Z.Messages.QUICK_DM_BLOCKED : m.Z.Messages.QUICK_DM_USER.format({
     name: f.ZP.getName(t)
   });
   return (0, i.jsx)(_.TextInput, {
     className: s,
     inputClassName: o()(a, O.input),
-    inputRef: C,
+    inputRef: p,
     autoFocus: n,
-    placeholder: L,
-    "aria-label": L,
-    onKeyPress: g,
-    disabled: p
+    placeholder: v,
+    "aria-label": v,
+    onKeyPress: C,
+    disabled: g
   })
 }

@@ -6,8 +6,8 @@ var i, r = n(512722),
   l = n(442837),
   u = n(377108),
   _ = n(524437),
-  d = n(835913),
-  c = n(570140),
+  c = n(835913),
+  d = n(570140),
   E = n(262847),
   I = n(48481),
   T = n(526761);
@@ -55,7 +55,7 @@ function R(e) {
   null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), e.editInfo = (0, T.JC)()
 }
 
-function C(e) {
+function p(e) {
   let {
     settings: {
       proto: t,
@@ -70,7 +70,7 @@ function C(e) {
   r && R(a), i ? (a.proto = (0, I.re)(a.ProtoClass, a.proto, t), s()("string" != typeof a.proto, "UserSettingsProto cannot be a string")) : (a.proto = t, s()("string" != typeof a.proto, "UserSettingsProto cannot be a string"), a.editInfo.loaded = !0, a.editInfo.loading = !1)
 }
 
-function p(e) {
+function g(e) {
   null != e && a().forEach(N, (t, n) => {
     var i, r;
     let o = e[Number(n)];
@@ -85,9 +85,9 @@ function p(e) {
     null != _ && (t.editInfo.protoToSave = _, t.editInfo.offlineEditDataVersion = o.offlineEditDataVersion)
   })
 }
-class g extends(i = l.ZP.PersistedStore) {
+class C extends(i = l.ZP.PersistedStore) {
   initialize(e) {
-    p(e)
+    g(e)
   }
   getState() {
     return this.computeState()
@@ -134,7 +134,7 @@ class g extends(i = l.ZP.PersistedStore) {
     var t, n;
     if (null == e) return 0;
     let i = null === (n = this.settings.guilds) || void 0 === n ? void 0 : null === (t = n.guilds[e]) || void 0 === t ? void 0 : t.guildRecentsDismissedAt;
-    return null == i ? 0 : d.E.toDate(i).getTime()
+    return null == i ? 0 : c.E.toDate(i).getTime()
   }
   getDismissedGuildContent(e) {
     var t, n, i;
@@ -145,15 +145,15 @@ class g extends(i = l.ZP.PersistedStore) {
     return null !== (t = null === (e = this.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : null
   }
 }
-h(g, "displayName", "UserSettingsProtoStore"), h(g, "persistKey", "UserSettingsProtoStore-Cache"), t.Z = new g(c.Z, {
+h(C, "displayName", "UserSettingsProtoStore"), h(C, "persistKey", "UserSettingsProtoStore-Cache"), t.Z = new C(d.Z, {
   CACHE_LOADED: function(e) {
     let {
       userSettings: t
     } = e;
-    p(t)
+    g(t)
   },
-  USER_SETTINGS_PROTO_UPDATE: C,
-  USER_SETTINGS_PROTO_ENQUEUE_UPDATE: C,
+  USER_SETTINGS_PROTO_UPDATE: p,
+  USER_SETTINGS_PROTO_ENQUEUE_UPDATE: p,
   USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: function(e) {
     let {
       settings: {

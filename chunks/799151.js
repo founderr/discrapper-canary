@@ -12,19 +12,19 @@ var i = n(735250),
   l = n(993365),
   u = n(607070),
   _ = n(79320),
-  d = n(689938),
-  c = n(689085);
+  c = n(689938),
+  d = n(689085);
 
 function E() {
   let e = [{
       keybinds: ["Spacebar", "Enter"],
-      name: d.Z.Messages.DND_OPERATION_LABEL_DROP
+      name: c.Z.Messages.DND_OPERATION_LABEL_DROP
     }, {
       keybinds: ["up", "down"],
-      name: d.Z.Messages.DND_OPERATION_LABEL_MOVE
+      name: c.Z.Messages.DND_OPERATION_LABEL_MOVE
     }, {
       keybinds: ["ESC"],
-      name: d.Z.Messages.DND_OPERATION_LABEL_CANCEL
+      name: c.Z.Messages.DND_OPERATION_LABEL_CANCEL
     }],
     t = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
     n = (0, _.zP)();
@@ -45,9 +45,9 @@ function E() {
     },
     config: s.config.stiff
   })((t, n) => n ? (0, i.jsx)("div", {
-    className: c.positioner,
+    className: d.positioner,
     children: (0, i.jsx)(s.animated.div, {
-      className: c.container,
+      className: d.container,
       style: t,
       children: e.map((t, n) => {
         let {
@@ -57,13 +57,13 @@ function E() {
         return (0, i.jsxs)(r.Fragment, {
           children: [(0, i.jsx)(l.x, {
             variant: "text-md/semibold",
-            className: c.bindName,
+            className: d.bindName,
             children: o
           }), s.map(e => (0, i.jsx)(a.M, {
             shortcut: e,
-            className: c.shortcut
+            className: d.shortcut
           }, e)), n < e.length - 1 ? (0, i.jsx)("span", {
-            className: c.separator
+            className: d.separator
           }) : null]
         }, o)
       })

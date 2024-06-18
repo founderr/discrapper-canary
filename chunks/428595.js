@@ -8,8 +8,8 @@ var i = n(392711),
   l = n(633302),
   u = n(763296),
   _ = n(592125),
-  d = n(430824),
-  c = n(594174),
+  c = n(430824),
+  d = n(594174),
   E = n(5192),
   I = n(51144),
   T = n(298552),
@@ -21,11 +21,11 @@ var i = n(392711),
   m = n(594199),
   O = n(97734),
   R = n(660199),
-  C = n(364458),
-  p = n(981631),
-  g = n(689079),
-  L = n(377668),
-  v = n(689938);
+  p = n(364458),
+  g = n(981631),
+  C = n(689079),
+  v = n(377668),
+  L = n(689938);
 let D = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
   M = /^$|\n *$/,
   P = /^ *>>> ?/,
@@ -55,7 +55,7 @@ let b = e => {
     let t = _.Z.getChannel(e);
     return null == t ? void 0 : t.getGuildId()
   },
-  G = e => null != e.guildId ? d.Z.getGuild(e.guildId) : null != e.channelId ? d.Z.getGuild(b(e.channelId)) : null,
+  G = e => null != e.guildId ? c.Z.getGuild(e.guildId) : null != e.channelId ? c.Z.getGuild(b(e.channelId)) : null,
   w = {
     newline: o().defaultRules.newline,
     paragraph: o().defaultRules.paragraph,
@@ -172,10 +172,10 @@ let b = e => {
           id: r
         };
         let s = G(n),
-          o = null != s ? d.Z.getRole(s.id, r) : null;
+          o = null != s ? c.Z.getRole(s.id, r) : null;
         return null == o ? {
           type: "text",
-          content: "@".concat(v.Z.Messages.UNKNOWN_ROLE_PLACEHOLDER)
+          content: "@".concat(L.Z.Messages.UNKNOWN_ROLE_PLACEHOLDER)
         } : {
           type: "mention",
           channelId: n.channelId,
@@ -207,22 +207,22 @@ let b = e => {
           type: "mention",
           id: e[1]
         };
-        let s = c.default.getUser(e[1]),
+        let s = d.default.getUser(e[1]),
           o = _.Z.getChannel(n.channelId);
         if (null != s && (r = s.id, i = s.toString(), null != o)) {
           var l;
           i = null !== (l = E.ZP.getNickname(o.getGuildId(), n.channelId, s)) && void 0 !== l ? l : I.ZP.getName(s)
         }
-        null == s && "@Clyde" === e[0] && (0, a.gJ)(G(n), o) && (r = L.fL);
+        null == s && "@Clyde" === e[0] && (0, a.gJ)(G(n), o) && (r = v.fL);
         let u = e[1],
-          d = null != u && p.Xyh.test(u.trim()),
-          T = d && n.unknownUserMentionPlaceholder ? "@".concat(v.Z.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
+          c = null != u && g.Xyh.test(u.trim()),
+          T = c && n.unknownUserMentionPlaceholder ? "@".concat(L.Z.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
         return {
           userId: r,
           channelId: n.channelId,
           viewingChannelId: n.viewingChannelId,
           guildId: null == o ? void 0 : o.getGuildId(),
-          parsedUserId: d ? u : null,
+          parsedUserId: c ? u : null,
           roleName: e[2],
           content: [{
             type: "text",
@@ -244,7 +244,7 @@ let b = e => {
           type: "commandMention",
           id: e[2]
         };
-        let [, ...i] = e[1].split(" "), r = "".concat(e[2]).concat([...i].map(e => "".concat(g.oQ).concat(e)).join(""));
+        let [, ...i] = e[1].split(" "), r = "".concat(e[2]).concat([...i].map(e => "".concat(C.oQ).concat(e)).join(""));
         return {
           channelId: n.channelId,
           commandId: e[2],
@@ -320,7 +320,7 @@ let b = e => {
     spoiler: {
       order: m.ZP.order,
       requiredFirstCharacters: ["|"],
-      match: e => p.$92.exec(e),
+      match: e => g.$92.exec(e),
       parse: (e, t, n) => ({
         content: t(e[1], n),
         channelId: n.channelId
@@ -329,15 +329,15 @@ let b = e => {
     staticRouteLink: {
       order: m.ZP.order,
       requiredFirstCharacters: ["<"],
-      match: e => p.PEY.exec(e),
+      match: e => g.PEY.exec(e),
       parse: (e, t, n) => ({
         content: [{
           type: "text",
           content: {
-            home: v.Z.Messages.SERVER_GUIDE,
-            guide: v.Z.Messages.SERVER_GUIDE,
-            browse: v.Z.Messages.CHANNEL_BROWSER_TITLE,
-            customize: v.Z.Messages.CHANNELS_AND_ROLES
+            home: L.Z.Messages.SERVER_GUIDE,
+            guide: L.Z.Messages.SERVER_GUIDE,
+            browse: L.Z.Messages.CHANNEL_BROWSER_TITLE,
+            customize: L.Z.Messages.CHANNELS_AND_ROLES
           } [e[1]]
         }],
         channelId: e[1],
@@ -349,11 +349,11 @@ let b = e => {
     list: N.Z,
     subtext: A.Z
   },
-  k = (0, C.Z)([w, O.Z]),
+  k = (0, p.Z)([w, O.Z]),
   B = r().omit(k, ["inlineCode", "codeBlock", "br", "blockQuote", "subtext"]),
   x = r().omit(k, ["inlineCode", "codeBlock", "br", "blockQuote", "url", "attachmentLink", "mention", "roleMention", "channelMention", "channelOrMessageUrl", "mediaPostLink", "subtext"]),
   V = r().omit(k, ["codeBlock", "br", "mention", "channel", "roleMention", "attachmentLink", "subtext"]),
-  Z = r().omit((0, C.Z)([k, {
+  Z = r().omit((0, p.Z)([k, {
     inlineCode: {
       match(e, t, n) {
         let i = k.codeBlock.match(e, t, n);
@@ -371,7 +371,7 @@ let b = e => {
 function W(e, t) {
   return 0 === e.length || 0 === t || "" === e.charAt(t - 1).trim()
 }
-let K = (0, C.Z)([{
+let K = (0, p.Z)([{
   highlightWord: {
     order: -1,
     match(e, t) {

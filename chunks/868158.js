@@ -1,19 +1,19 @@
 "use strict";
 n.d(t, {
   Eb: function() {
-    return p
+    return g
   },
   Fx: function() {
-    return v
+    return L
   },
   IM: function() {
-    return g
+    return C
   },
   J2: function() {
     return y
   },
   r$: function() {
-    return C
+    return p
   }
 }), n(653041), n(47120), n(411104);
 var i = n(512722),
@@ -24,8 +24,8 @@ var i = n(512722),
   l = n(406966),
   u = n(795513),
   _ = n(591526),
-  d = n(261875),
-  c = n(768433),
+  c = n(261875),
+  d = n(768433),
   E = n(710845),
   I = n(339085),
   T = n(926491),
@@ -38,7 +38,7 @@ let A = new E.Z("ReadyPayloadUtils"),
   O = null,
   R = {};
 
-function C(e, t) {
+function p(e, t) {
   var n;
   let {
     guilds: i,
@@ -54,7 +54,7 @@ function C(e, t) {
       presences: n,
       members: i
     }
-  })) && void 0 !== n ? n : [], u = L(t, i, e => ({
+  })) && void 0 !== n ? n : [], u = v(t, i, e => ({
     id: e.id,
     members: e.members,
     presences: e.presences,
@@ -69,10 +69,10 @@ function C(e, t) {
   }
 }
 
-function p() {
+function g() {
   let e = a.Z.database(),
-    t = (0, c.O)() ? l.Z.getCommittedVersions() : Promise.resolve({}),
-    n = (0, c.O)() ? _.Z.getGuildIds() : Promise.resolve(new Set);
+    t = (0, d.O)() ? l.Z.getCommittedVersions() : Promise.resolve({}),
+    n = (0, d.O)() ? _.Z.getGuildIds() : Promise.resolve(new Set);
   return Promise.all([t, n, null != e ? u.Z.okAsync(e) : Promise.resolve(!1)]).then(e => {
     let [t, n, i] = e;
     return {
@@ -83,18 +83,18 @@ function p() {
   })
 }
 
-function g(e, t, n) {
+function C(e, t, n) {
   var i;
   let {
     users: s,
     relationships: l,
     private_channels: u,
     merged_members: _,
-    guilds: c,
+    guilds: d,
     ...E
   } = e;
   (function(e) {
-    null != a.Z.database() && !1 === e.databaseOk && d.Z.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"), m = {};
+    null != a.Z.database() && !1 === e.databaseOk && c.Z.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"), m = {};
     let t = Object.values(S.Z.getGuilds()),
       n = I.Z.getGuilds(),
       i = T.Z.getRawStickersByGuild(),
@@ -115,8 +115,8 @@ function g(e, t, n) {
     let t = e.recipient_ids;
     null != t && (e.recipients = t.map(e => (r()(null != R[e], "Missing user in compressed ready payload"), R[e]))), delete e.recipient_ids
   });
-  let A = null !== (i = null == c ? void 0 : c.map((e, t) => !0 === e.unavailable ? e : (e.members = D(R, null == _ ? void 0 : _[t]), P(e)))) && void 0 !== i ? i : [],
-    O = L(t, c, e => P(e));
+  let A = null !== (i = null == d ? void 0 : d.map((e, t) => !0 === e.unavailable ? e : (e.members = D(R, null == _ ? void 0 : _[t]), P(e)))) && void 0 !== i ? i : [],
+    O = v(t, d, e => P(e));
   return null != O && A.push(O), {
     ...E,
     users: s,
@@ -127,11 +127,11 @@ function g(e, t, n) {
   }
 }
 
-function L(e, t, n) {
+function v(e, t, n) {
   return null == O || O.identifyTime !== e || null != t && t.some(e => e.id === O.guild.id) ? null : n(O.guild)
 }
 
-function v(e, t) {
+function L(e, t) {
   var n, i, r;
   let s = S.Z.getGuild(e.id),
     o = y(e, null == s ? void 0 : {
@@ -162,7 +162,7 @@ function M(e) {
 }
 
 function P(e) {
-  var t, n, i, r, s, o, a, l, u, _, d, c;
+  var t, n, i, r, s, o, a, l, u, _, c, d;
   let E = M(e.id);
   if ("partial" !== e.data_mode) return {
     id: e.id,
@@ -211,10 +211,10 @@ function P(e) {
     stickers: null == E.stickers ? null : b(E.stickers, e.partial_updates.stickers, e.partial_updates.deleted_sticker_ids),
     stickerUpdates: {
       writes: null !== (_ = e.partial_updates.stickers) && void 0 !== _ ? _ : [],
-      deletes: null !== (d = e.partial_updates.deleted_sticker_ids) && void 0 !== d ? d : []
+      deletes: null !== (c = e.partial_updates.deleted_sticker_ids) && void 0 !== c ? c : []
     },
     unableToSyncDeletes: e.unable_to_sync_deletes,
-    threads: null !== (c = null === (n = e.threads) || void 0 === n ? void 0 : n.map(t => (0, h.q_)(t, e.id))) && void 0 !== c ? c : [],
+    threads: null !== (d = null === (n = e.threads) || void 0 === n ? void 0 : n.map(t => (0, h.q_)(t, e.id))) && void 0 !== d ? d : [],
     threadMessages: U(e.threads),
     version: e.version,
     hasThreadsSubscription: e.has_threads_subscription
@@ -222,7 +222,7 @@ function P(e) {
 }
 
 function y(e, t) {
-  var n, i, r, s, o, a, l, u, _, d, c, E;
+  var n, i, r, s, o, a, l, u, _, c, d, E;
   if (null == t && (t = M(e.id)), "partial" !== e.data_mode) return {
     id: e.id,
     emojis: e.emojis,
@@ -272,8 +272,8 @@ function y(e, t) {
     stage_instances: e.stage_instances,
     stickers: null == t.stickers ? null : b(t.stickers, e.partial_updates.stickers, e.partial_updates.deleted_sticker_ids),
     stickerUpdates: {
-      writes: null !== (d = e.partial_updates.stickers) && void 0 !== d ? d : [],
-      deletes: null !== (c = e.partial_updates.deleted_sticker_ids) && void 0 !== c ? c : []
+      writes: null !== (c = e.partial_updates.stickers) && void 0 !== c ? c : [],
+      deletes: null !== (d = e.partial_updates.deleted_sticker_ids) && void 0 !== d ? d : []
     },
     unableToSyncDeletes: e.unable_to_sync_deletes,
     threads: null !== (E = null === (i = e.threads) || void 0 === i ? void 0 : i.map(t => (0, h.q_)(t, e.id))) && void 0 !== E ? E : [],

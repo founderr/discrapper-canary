@@ -9,7 +9,7 @@ var i = n(846519),
   u = n(70956),
   _ = n(981631);
 
-function d(e, t, n) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -17,7 +17,7 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let c = new class e {
+let d = new class e {
   isIncomingVideoEnabled() {
     return this.incomingVideoEnabled
   }
@@ -35,7 +35,7 @@ let c = new class e {
     return l.Z.isVisible() || a.Z.getWindowVisible(_.KJ3.CHANNEL_CALL_POPOUT)
   }
   constructor() {
-    d(this, "hiddenWindowDisableVideoTimer", new i.V7), d(this, "incomingVideoEnabled", !0), d(this, "videoEnabledObservers", new Set), d(this, "logger", new s.Z("WindowVisibilityVideoManager")), d(this, "HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS", 30 * u.Z.Millis.SECOND), d(this, "handleWindowVisibilityChange", () => {
+    c(this, "hiddenWindowDisableVideoTimer", new i.V7), c(this, "incomingVideoEnabled", !0), c(this, "videoEnabledObservers", new Set), c(this, "logger", new s.Z("WindowVisibilityVideoManager")), c(this, "HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS", 30 * u.Z.Millis.SECOND), c(this, "handleWindowVisibilityChange", () => {
       if (!!o.Z.getCurrentConfig({
           location: "WindowVisibilityVideoManager"
         }, {
@@ -48,12 +48,12 @@ let c = new class e {
 };
 t.Z = new class e {
   isIncomingVideoEnabled() {
-    return c.isIncomingVideoEnabled()
+    return d.isIncomingVideoEnabled()
   }
   subscribe(e) {
-    c.subscribe(e)
+    d.subscribe(e)
   }
   unsubscribe(e) {
-    c.unsubscribe(e)
+    d.unsubscribe(e)
   }
 }

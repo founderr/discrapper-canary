@@ -18,12 +18,12 @@ async function l(e, t) {
     } = await (0, o.w1)({
       guildId: l
     }),
-    d = (0, a.Z)({
+    c = (0, a.Z)({
       applicationId: e,
       activityConfigs: u,
       applications: _
     });
-  if ((null == d ? void 0 : d.application) != null) return null == d ? void 0 : d.application;
+  if ((null == c ? void 0 : c.application) != null) return null == c ? void 0 : c.application;
   {
     let t = await (0, i.UM)(e);
     return r.Z.createFromServer(t)

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   CO: function() {
-    return c
+    return d
   },
   Rz: function() {
     return I
@@ -19,7 +19,7 @@ n.d(t, {
     return _
   },
   gH: function() {
-    return d
+    return c
   }
 });
 var i = n(392711),
@@ -54,7 +54,7 @@ function _(e) {
   u((0, o.ZY)(e))(e.innerWidth, e.innerHeight)
 }
 
-function d(e) {
+function c(e) {
   let t = (0, o.ZY)(e);
   r.Z.dispatch({
     type: "WINDOW_FULLSCREEN_CHANGE",
@@ -63,7 +63,7 @@ function d(e) {
   })
 }
 
-function c(e) {
+function d(e) {
   let t = (0, o.ZY)(e);
   r.Z.dispatch({
     type: "WINDOW_VISIBILITY_CHANGE",

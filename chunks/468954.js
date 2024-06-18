@@ -17,8 +17,8 @@ function _(e) {
     categories: t,
     collapsedCategories: n,
     containerWidth: _,
-    store: d,
-    onSelectItem: c,
+    store: c,
+    onSelectItem: d,
     onSearchExpressions: E,
     hasSearchResults: I,
     defaultSearchPlaceholder: T,
@@ -30,11 +30,11 @@ function _(e) {
     renderSectionFooter: m,
     renderInspector: O,
     renderEmptySearchState: R,
-    renderCategoryList: C,
-    renderHeaderAccessories: p,
-    rowHeight: g,
-    sectionHeaderHeight: L,
-    sectionFooterHeight: v,
+    renderCategoryList: p,
+    renderHeaderAccessories: g,
+    rowHeight: C,
+    sectionHeaderHeight: v,
+    sectionFooterHeight: L,
     itemNodeWidth: D,
     listPaddingRight: M,
     itemNodeMargin: P,
@@ -42,7 +42,7 @@ function _(e) {
     gridNavigatorId: U,
     gridNotice: b,
     renderHeader: G
-  } = e, w = r.useRef(null), k = r.useRef(null), B = r.useRef(null), x = 0 === t.length, V = (0, s.Iu)(e => e.searchQuery), Z = d.useStore(e => e.inspectedExpressionPosition), H = (0, o.ep)({
+  } = e, w = r.useRef(null), k = r.useRef(null), B = r.useRef(null), x = 0 === t.length, V = (0, s.Iu)(e => e.searchQuery), Z = c.useStore(e => e.inspectedExpressionPosition), H = (0, o.ep)({
     gridWrapperRef: w,
     containerWidth: _,
     showingEmptyState: x
@@ -69,41 +69,41 @@ function _(e) {
     columnCounts: W,
     expressionsListRef: k,
     expressionsGrid: F,
-    onSelectItem: c,
-    store: d,
+    onSelectItem: d,
+    store: c,
     gridNavigatorId: U
   }), $ = r.useCallback(e => f(F[e], q(e), {
     isUsingKeyboardNavigation: J.current,
     gutterWidth: K,
     rowIndex: e
-  }, t => z(e, t), t => d.setInspectedExpressionPosition(t, e)), [F, z, q, K, J, f, d]), ee = r.useCallback(e => null == N ? void 0 : N(t[e]), [t, N]), et = r.useCallback(e => null == A ? void 0 : A(t[e], e), [t, A]), en = r.useCallback(e => null == m ? void 0 : m(t[e]), [t, m]), ei = r.useCallback(() => {
+  }, t => z(e, t), t => c.setInspectedExpressionPosition(t, e)), [F, z, q, K, J, f, c]), ee = r.useCallback(e => null == N ? void 0 : N(t[e]), [t, N]), et = r.useCallback(e => null == A ? void 0 : A(t[e], e), [t, A]), en = r.useCallback(e => null == m ? void 0 : m(t[e]), [t, m]), ei = r.useCallback(() => {
     var e;
     return null == O ? void 0 : O(null == F ? void 0 : null === (e = F[Z.rowIndex]) || void 0 === e ? void 0 : e[Z.columnIndex])
   }, [F, Z.columnIndex, Z.rowIndex, O]);
   r.useEffect(() => {
     E(V)
-  }, [E, V]), r.useEffect(() => d.resetStoreState, [d.resetStoreState]), r.useLayoutEffect(() => {
+  }, [E, V]), r.useEffect(() => c.resetStoreState, [c.resetStoreState]), r.useLayoutEffect(() => {
     var e;
     null === (e = B.current) || void 0 === e || e.focus()
   }, []);
   let er = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(l.Z, {
       ref: B,
-      store: d,
+      store: c,
       hasSendableExpressions: !0,
       onKeyDown: Q,
       expressionsListRef: k,
       gridNavigatorId: U,
       defaultSearchPlaceholder: T,
       emptySearchPlaceholder: h
-    }), null == p ? void 0 : p()]
+    }), null == g ? void 0 : g()]
   });
   return (0, i.jsxs)(i.Fragment, {
     children: [null != G ? G(er) : (0, i.jsxs)("div", {
       className: u.header,
       children: [" ", er, " "]
     }), x && null != S ? S(u.emptyState) : (0, i.jsxs)(i.Fragment, {
-      children: [C(k), null != b && (0, i.jsx)("div", {
+      children: [p(k), null != b && (0, i.jsx)("div", {
         className: u.gridNoticeWrapper,
         children: b
       }), (0, i.jsx)("div", {
@@ -113,7 +113,7 @@ function _(e) {
         ...X,
         children: null != H ? (0, i.jsx)(a.Z, {
           ref: k,
-          store: d,
+          store: c,
           hasSearchResults: I,
           listPadding: y,
           renderRow: $,
@@ -124,9 +124,9 @@ function _(e) {
           renderEmptySearchState: R,
           rowCount: Y,
           rowCountBySection: j,
-          rowHeight: g,
-          sectionHeaderHeight: L,
-          sectionFooterHeight: v
+          rowHeight: C,
+          sectionHeaderHeight: v,
+          sectionFooterHeight: L
         }) : null
       })]
     })]

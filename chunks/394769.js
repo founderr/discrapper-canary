@@ -8,15 +8,15 @@ var r = n(920906),
   l = n(346656),
   u = n(678558),
   _ = n(981631),
-  d = n(530978);
+  c = n(530978);
 t.Z = function(e) {
   let {
     closeLayer: t,
     guild: n,
-    isVisible: c
+    isVisible: d
   } = e, E = (0, s.e7)([a.Z], () => a.Z.useReducedMotion), I = (0, r.useSpring)({
-    transform: c ? "translateY(-100%)" : "translateY(0%)",
-    opacity: c ? 1 : 0,
+    transform: d ? "translateY(-100%)" : "translateY(0%)",
+    opacity: d ? 1 : 0,
     config: {
       tension: 120,
       friction: 12
@@ -24,23 +24,23 @@ t.Z = function(e) {
     immediate: E
   });
   return (0, i.jsx)(r.animated.div, {
-    className: d.wrapper,
+    className: c.wrapper,
     style: I,
     children: (0, i.jsxs)("div", {
-      className: d.innerWrapper,
+      className: c.innerWrapper,
       children: [(0, i.jsxs)("div", {
-        className: d.guildInfo,
+        className: c.guildInfo,
         children: [(0, i.jsx)(l.Z, {
-          className: d.guildIcon,
+          className: c.guildIcon,
           guild: n,
           size: l.Z.Sizes.LARGER
         }), (0, i.jsx)(o.Heading, {
-          className: d.guildName,
+          className: c.guildName,
           variant: "text-lg/bold",
           children: n.name
         })]
       }), (0, i.jsx)(u.Z, {
-        className: d.ctaButton,
+        className: c.ctaButton,
         guild: n,
         analyticsLocation: {
           page: _.ZY5.PREMIUM_GUILD_USER_MODAL,
@@ -49,7 +49,7 @@ t.Z = function(e) {
           objectType: _.Qqv.BUY
         },
         closeLayer: t,
-        pauseAnimation: !c,
+        pauseAnimation: !d,
         size: o.Button.Sizes.LARGE
       })]
     })

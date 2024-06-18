@@ -13,8 +13,8 @@ var r = n(913527),
   l = n(366695),
   u = n(630388),
   _ = n(981631),
-  d = n(689938),
-  c = n(707533);
+  c = n(689938),
+  d = n(707533);
 
 function E(e) {
   let {
@@ -26,16 +26,16 @@ function E(e) {
       size: l.Z.Sizes.LARGE,
       game: t
     }), (0, i.jsxs)("div", {
-      className: c.textContainer,
+      className: d.textContainer,
       children: [(0, i.jsx)(o.Text, {
-        className: c.timestamp,
+        className: d.timestamp,
         variant: "text-xs/medium",
         color: "text-muted",
         children: s()(n).format("LLLL")
       }), (0, i.jsx)(o.Text, {
         variant: "text-md/normal",
         color: "interactive-active",
-        children: d.Z.Messages.MESSAGE_GAME_ICON_TOOLTIP_CONTENT.format({
+        children: c.Z.Messages.MESSAGE_GAME_ICON_TOOLTIP_CONTENT.format({
           applicationName: t.name
         })
       })]
@@ -50,9 +50,9 @@ function I(e) {
   return null != n && (0, u.yE)(n.flags, _.udG.SOCIAL_LAYER_INTEGRATION) ? (0, i.jsx)(o.Tooltip, {
     hideOnClick: !0,
     position: "top",
-    "aria-label": d.Z.Messages.MESSAGE_GAME_ICON_TOOLTIP,
-    tooltipClassName: c.gameMessageTooltip,
-    tooltipContentClassName: c.gameMessageTooltipContent,
+    "aria-label": c.Z.Messages.MESSAGE_GAME_ICON_TOOLTIP,
+    tooltipClassName: d.gameMessageTooltip,
+    tooltipContentClassName: d.gameMessageTooltipContent,
     text: (0, i.jsx)(E, {
       application: n,
       messageTimestamp: t.timestamp
@@ -61,7 +61,7 @@ function I(e) {
       tag: "span",
       ...e,
       children: (0, i.jsx)(l.Z, {
-        className: c.gameIcon,
+        className: d.gameIcon,
         size: l.Z.Sizes.XXSMALL,
         game: n
       })

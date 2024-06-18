@@ -17,10 +17,10 @@ function a(e) {
     let {
       index: u,
       timestamp: _,
-      logs: d,
-      nativeLogs: c,
+      logs: c,
+      nativeLogs: d,
       serverTrace: E
-    } = i, I = 0 === u ? null !== (a = null === (s = r().find(d, e => e.log.indexOf("Logger loaded") >= 0)) || void 0 === s ? void 0 : s.timestamp) && void 0 !== a ? a : e : _, T = function(e, t) {
+    } = i, I = 0 === u ? null !== (a = null === (s = r().find(c, e => e.log.indexOf("Logger loaded") >= 0)) || void 0 === s ? void 0 : s.timestamp) && void 0 !== a ? a : e : _, T = function(e, t) {
       var n, i;
       let s = (function(e) {
           let t = [];
@@ -65,7 +65,7 @@ function a(e) {
             return ["GET_CONSTANTS", "CONVERT_CONSTANTS"].some(t => e.includes(t))
           }(i), e.shouldKeep = e.shouldKeep || u)
         }
-        let d = {
+        let c = {
           emoji: "☕",
           timestamp: t.timestamp,
           delta: a > 0 ? a : void 0,
@@ -82,11 +82,11 @@ function a(e) {
             if (null != i && i > t.timestamp) break
           }
           e.splice(n, 0, t)
-        })(e, d), _ && (s += "| ", o.push(d))
+        })(e, c), _ && (s += "| ", o.push(c))
       });
       let a = !1;
       return e.filter(e => !(a && e.log.includes("↪")) && !(a = !i && "\uD83C\uDFA8" === e.emoji || !1 === e.shouldKeep))
-    }(d, c, t, n), I), h = "Trace #".concat(u + 1, " started ").concat((0, o.Ye)(_), "\n").concat(T);
+    }(c, d, t, n), I), h = "Trace #".concat(u + 1, " started ").concat((0, o.Ye)(_), "\n").concat(T);
     return null != E && (h += "\n Server trace for trace #".concat(u + 1).concat(E)), h
   }).join("\n\n")
 }

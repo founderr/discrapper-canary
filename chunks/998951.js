@@ -13,8 +13,8 @@ t.Z = function(e) {
     zalgo: l = !0,
     disableInteraction: u = !1,
     childrenRepliedMessage: _,
-    childrenExecutedCommand: d,
-    childrenHeader: c,
+    childrenExecutedCommand: c,
+    childrenHeader: d,
     childrenSystemMessage: E,
     childrenButtons: I,
     childrenMessageContent: T,
@@ -46,9 +46,9 @@ t.Z = function(e) {
       ref: S,
       ...O,
       role: "article",
-      children: [_, d, (0, i.jsxs)("div", {
+      children: [_, c, (0, i.jsxs)("div", {
         className: a.contents,
-        children: [E, c, null == E && T]
+        children: [E, d, null == E && T]
       }), h, null != I ? (0, i.jsx)("div", {
         className: a.buttonContainer,
         children: I

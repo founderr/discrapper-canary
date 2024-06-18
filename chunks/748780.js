@@ -12,10 +12,10 @@ function _(e) {
   let t = Object.keys(e)[0];
   return "".concat(t, "(").concat(e[t], ")")
 }
-let d = /rgba\(([\d.]+), ([\d.]+), ([\d.]+), ([\d.]+)\)/;
+let c = /rgba\(([\d.]+), ([\d.]+), ([\d.]+), ([\d.]+)\)/;
 
-function c(e) {
-  let t = e.match(d);
+function d(e) {
+  let t = e.match(c);
   return null != t && (e = "rgba(".concat(0 | t[1], ", ").concat(0 | t[2], ", ").concat(0 | t[3], ", ").concat(t[4], ")")), e
 }
 i.inject.ApplyAnimatedValues(function(e, t, n) {
@@ -23,7 +23,7 @@ i.inject.ApplyAnimatedValues(function(e, t, n) {
   else {
     if (!e.nodeType || void 0 === e.setAttribute) return !1;
     var i;
-    u().setValueForStyles(e, ((i = t.style) && (i.transform && (i.transform = i.WebkitTransform = i.MozTransform = i.transform.map(_).join(" ")), i.color && (i.color = c(i.color)), i.backgroundColor && (i.backgroundColor = c(i.backgroundColor))), i), n._reactInternalInstance)
+    u().setValueForStyles(e, ((i = t.style) && (i.transform && (i.transform = i.WebkitTransform = i.MozTransform = i.transform.map(_).join(" ")), i.color && (i.color = d(i.color)), i.backgroundColor && (i.backgroundColor = d(i.backgroundColor))), i), n._reactInternalInstance)
   }
 }, e => e);
 
@@ -47,8 +47,8 @@ t.Z = {
       friction: l = 0,
       loop: u,
       reverse: _,
-      invert: d,
-      callback: c,
+      invert: c,
+      callback: d,
       type: I = "spring",
       shouldLoop: T,
       durationMin: h,
@@ -61,7 +61,7 @@ t.Z = {
       friction: l,
       duration: A
     }), R = O;
-    if (_ || d) {
+    if (_ || c) {
       let e = E(n.duration, h, S);
       r = i[I](t, {
         ...f,
@@ -72,8 +72,8 @@ t.Z = {
       }), R = i.sequence([O, r])
     }
     u ? R.start(() => {
-      (!T || T && T()) && (c ? c(e.bind(null, t, n)) : e(t, n))
-    }) : R.start(c)
+      (!T || T && T()) && (d ? d(e.bind(null, t, n)) : e(t, n))
+    }) : R.start(d)
   },
   interpolate: function(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];

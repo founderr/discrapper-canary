@@ -35,7 +35,7 @@ function _(e) {
     })
   })
 }
-class d extends r.Component {
+class c extends r.Component {
   activateUploadDialogue() {
     if (null != this._ref) return this._ref.activateUploadDialogue()
   }
@@ -60,4 +60,4 @@ class d extends r.Component {
     }) : t[n] = i, this.setRef = this.setRef.bind(this)
   }
 }
-t.Z = d
+t.Z = c

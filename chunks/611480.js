@@ -5,7 +5,7 @@ n.d(t, {
     return o
   },
   Ht: function() {
-    return c
+    return d
   },
   Ks: function() {
     return _
@@ -17,7 +17,7 @@ n.d(t, {
     return a
   },
   Wt: function() {
-    return d
+    return c
   },
   c: function() {
     return l
@@ -38,7 +38,7 @@ let s = "sticker-picker-tab-panel",
   l = -1,
   u = 160,
   _ = "710982414301790216",
-  d = ["781323769960202280", "809209266556764241", "818597810047680532", "819129296374595614"],
-  c = 524288,
+  c = ["781323769960202280", "809209266556764241", "818597810047680532", "819129296374595614"],
+  d = 524288,
   E = 1572864;
 (r = i || (i = {}))[r.ALWAYS_ANIMATE = 0] = "ALWAYS_ANIMATE", r[r.ANIMATE_ON_INTERACTION = 1] = "ANIMATE_ON_INTERACTION", r[r.NEVER_ANIMATE = 2] = "NEVER_ANIMATE"

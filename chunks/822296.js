@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return c
+    return d
   }
 });
 var i = n(735250),
@@ -12,20 +12,20 @@ var i = n(735250),
   l = n(592125),
   u = n(112560),
   _ = n(689938);
-let d = n(340109);
+let c = n(340109);
 
-function c(e) {
+function d(e) {
   let {
     stream: t,
     width: n,
-    noArt: c = !1,
+    noArt: d = !1,
     selected: E = !1
   } = e, I = (0, s.e7)([l.Z], () => l.Z.getChannel(t.channelId));
   return r.useEffect(() => {
     (null == I ? void 0 : I.isGuildStageVoice()) && (0, o.aP)((0, a.V9)(t), !1)
   }, []), (0, i.jsx)(u.Z, {
-    artURL: d,
-    noArt: c,
+    artURL: c,
+    noArt: d,
     selected: E,
     size: (0, u.L)(n),
     header: _.Z.Messages.STREAM_ENDED,

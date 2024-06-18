@@ -1,5 +1,5 @@
 "use strict";
-var i, r, s, o, a, l, u, _, d, c, E, I, T, h;
+var i, r, s, o, a, l, u, _, c, d, E, I, T, h;
 
 function S(e, t) {
   let {
@@ -67,4 +67,4 @@ n.d(t, {
   vB: function() {
     return l
   }
-}), (_ = i || (i = {}))[_.PLAY = 0] = "PLAY", _[_.ADD = 1] = "ADD", (d = r || (r = {})).ENTRY = "entry_sound", d.EXIT = "exit_sound", d.DEFAULT = "default", (c = s || (s = {})).ADDED = "added", c.UPDATED = "updated", c.REMOVED = "removed", (E = o || (o = {})).DEFAULT = "default", E.CUSTOM = "custom", (I = a || (a = {}))[I.FAVORITES = 0] = "FAVORITES", I[I.RECENTLY_HEARD = 1] = "RECENTLY_HEARD", I[I.FREQUENTLY_USED = 2] = "FREQUENTLY_USED", I[I.GUILD = 3] = "GUILD", I[I.DEFAULTS = 4] = "DEFAULTS", I[I.SEARCH = 5] = "SEARCH", (T = l || (l = {}))[T.SOUND = 0] = "SOUND", T[T.ADD_SOUND = 1] = "ADD_SOUND", (h = u || (u = {}))[h.GIFT_CODE = 0] = "GIFT_CODE", h[h.SOUNDBOARD = 1] = "SOUNDBOARD", h[h.JOINED_VOICE_CHANNEL = 2] = "JOINED_VOICE_CHANNEL"
+}), (_ = i || (i = {}))[_.PLAY = 0] = "PLAY", _[_.ADD = 1] = "ADD", (c = r || (r = {})).ENTRY = "entry_sound", c.EXIT = "exit_sound", c.DEFAULT = "default", (d = s || (s = {})).ADDED = "added", d.UPDATED = "updated", d.REMOVED = "removed", (E = o || (o = {})).DEFAULT = "default", E.CUSTOM = "custom", (I = a || (a = {}))[I.FAVORITES = 0] = "FAVORITES", I[I.RECENTLY_HEARD = 1] = "RECENTLY_HEARD", I[I.FREQUENTLY_USED = 2] = "FREQUENTLY_USED", I[I.GUILD = 3] = "GUILD", I[I.DEFAULTS = 4] = "DEFAULTS", I[I.SEARCH = 5] = "SEARCH", (T = l || (l = {}))[T.SOUND = 0] = "SOUND", T[T.ADD_SOUND = 1] = "ADD_SOUND", (h = u || (u = {}))[h.GIFT_CODE = 0] = "GIFT_CODE", h[h.SOUNDBOARD = 1] = "SOUNDBOARD", h[h.JOINED_VOICE_CHANNEL = 2] = "JOINED_VOICE_CHANNEL"

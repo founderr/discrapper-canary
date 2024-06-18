@@ -38,17 +38,17 @@ let _ = [function(e, t, n, i) {
   }
 }("2024-03_amd_vdec_tests_1", "AMD video decode tests 1", [u(5592), u(5597), u(5686), u(5688), u(5708), u(5761), u(26607), u(26591), u(29471), u(29504), u(29631), u(29679), u(29663), u(29695), u(29759), u(29772), u(29822), u(29824)], ["disable_media_foundation_clear_playback", "disable_d3d11_video_decoder"])];
 
-function d(e) {
+function c(e) {
   for (let t of e)
     if (t[0] === a[0] && t[1] === a[1]) return !0;
   return !1
 }
-let c = !1;
+let d = !1;
 
 function E() {
   let e = {};
   for (let t of _)
-    if (d(t.gpus)) {
+    if (c(t.gpus)) {
       let n = t.experiment.getCurrentConfig({
         location: "updateFlags"
       });
@@ -65,10 +65,10 @@ class I extends i.Z {
       POST_CONNECTION_OPEN: async () => {
         try {
           var e, t, n, i;
-          if (c || (null === (t = window.DiscordNative) || void 0 === t ? void 0 : null === (e = t.gpuSettings) || void 0 === e ? void 0 : e.setChromiumSwitches) == null) return;
+          if (d || (null === (t = window.DiscordNative) || void 0 === t ? void 0 : null === (e = t.gpuSettings) || void 0 === e ? void 0 : e.setChromiumSwitches) == null) return;
           let s = await r.Z.processUtils.getSystemInfo();
           for (let e of null !== (i = null === (n = s.electronGPUInfo) || void 0 === n ? void 0 : n.gpuDevice) && void 0 !== i ? i : []) !0 === e.active && (a = [e.vendorId, e.deviceId]);
-          for (let e of (c = !0, _)) d(e.gpus) && e.experiment.subscribe({
+          for (let e of (d = !0, _)) c(e.gpus) && e.experiment.subscribe({
             location: "GPU experiment subscription"
           }, E);
           E()

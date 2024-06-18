@@ -29,15 +29,15 @@ function h() {
       loading: h
     } = (0, o.Z)(null == s ? void 0 : s.id, m.wW.GUILD_ROLE_SUBSCRIPTIONS),
     g = i.useRef(null),
-    x = (0, u.Z)(null != s ? s : void 0);
+    C = (0, u.Z)(null != s ? s : void 0);
   i.useEffect(() => {
     null != s && (0, E.sO)(s) && (0, c.EW)(a.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE)
   }, [s]);
-  let C = (null == s ? void 0 : s.hasFeature(N.oNc.CREATOR_MONETIZABLE)) === !1 && (null == s ? void 0 : s.hasFeature(N.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
-  return e = null == s || h ? (0, n.jsx)(r.Spinner, {}) : null != x ? (0, n.jsx)(I.Z, {
+  let x = (null == s ? void 0 : s.hasFeature(N.oNc.CREATOR_MONETIZABLE)) === !1 && (null == s ? void 0 : s.hasFeature(N.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
+  return e = null == s || h ? (0, n.jsx)(r.Spinner, {}) : null != C ? (0, n.jsx)(I.Z, {
     guild: s,
-    config: x
-  }) : C ? (0, n.jsx)(T.Z, {
+    config: C
+  }) : x ? (0, n.jsx)(T.Z, {
     guild: s
   }) : (0, n.jsx)(_.Z, {
     guild: s,

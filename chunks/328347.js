@@ -3,25 +3,25 @@ let i;
 var r, s, o, a, l = n(442837),
   u = n(570140);
 let _ = [],
-  d = _,
-  c = null,
+  c = _,
+  d = null,
   E = e => {
-    d = _, c = null
+    c = _, d = null
   };
 class I extends(a = l.ZP.Store) {
   get analyticsLocations() {
-    return d
+    return c
   }
   get analyticsSource() {
-    return c
+    return d
   }
   get initialProductSkuId() {
     return i
   }
   getAnalytics() {
     return {
-      analyticsLocations: d,
-      analyticsSource: c
+      analyticsLocations: c,
+      analyticsSource: d
     }
   }
 }
@@ -33,7 +33,7 @@ o = "CollectiblesShopStore", (s = "displayName") in(r = I) ? Object.defineProper
 }) : r[s] = o, t.Z = new I(u.Z, {
   COLLECTIBLES_SHOP_OPEN: e => {
     var t, n;
-    d = null !== (t = e.analyticsLocations) && void 0 !== t ? t : _, c = null !== (n = e.analyticsSource) && void 0 !== n ? n : null, i = e.initialProductSkuId
+    c = null !== (t = e.analyticsLocations) && void 0 !== t ? t : _, d = null !== (n = e.analyticsSource) && void 0 !== n ? n : null, i = e.initialProductSkuId
   },
   COLLECTIBLES_SHOP_CLOSE: E,
   COLLECTIBLES_PRODUCT_DETAILS_OPEN: e => {

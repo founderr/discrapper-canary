@@ -5,8 +5,8 @@ var i, r, s = n(735250),
   l = n.n(a),
   u = n(481060),
   _ = n(778569),
-  d = n(182906),
-  c = n(220082),
+  c = n(182906),
+  d = n(220082),
   E = n(318661),
   I = n(768581),
   T = n(792125),
@@ -25,7 +25,7 @@ function m(e) {
   } = e, {
     iconURL: a,
     name: _,
-    description: d
+    description: c
   } = o.useMemo(() => (0, h.BQ)(t) ? {
     iconURL: I.ZP.getApplicationIconURL({
       id: t.id,
@@ -39,7 +39,7 @@ function m(e) {
     iconURL: null,
     name: N.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME,
     description: N.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
-  }, [t]), E = (0, c.ZP)(a, "");
+  }, [t]), E = (0, d.ZP)(a, "");
   return (0, s.jsxs)(u.Clickable, {
     className: A.container,
     onClick: r,
@@ -77,7 +77,7 @@ function m(e) {
           variant: "text-sm/normal",
           color: "text-secondary",
           lineClamp: 1,
-          children: d
+          children: c
         })]
       })]
     })]
@@ -95,7 +95,7 @@ function O(e) {
       })) return (0, s.jsx)(R, {
       application: t
     });
-    if (null != t.bot) return (0, s.jsx)(C, {
+    if (null != t.bot) return (0, s.jsx)(p, {
       bot: t.bot
     })
   }
@@ -115,7 +115,7 @@ function R(e) {
     size: 600,
     names: ["embedded_cover"]
   });
-  return (0, s.jsx)(d.Z, {
+  return (0, s.jsx)(c.Z, {
     imageBackground: n,
     applicationName: t.name,
     imageClassName: A.bannerImage,
@@ -123,7 +123,7 @@ function R(e) {
   })
 }
 
-function C(e) {
+function p(e) {
   let {
     bot: t
   } = e, n = (0, E.ZP)(t.id), i = o.useMemo(() => null == n ? void 0 : n.getBannerURL({

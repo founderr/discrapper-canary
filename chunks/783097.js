@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   BQ: function() {
-    return c
+    return d
   },
   Y$: function() {
     return I
@@ -18,9 +18,9 @@ var i = n(668781),
   l = n(630388),
   u = n(981631),
   _ = n(689079),
-  d = n(689938);
+  c = n(689938);
 
-function c(e) {
+function d(e) {
   return e.id !== _.bi.BUILT_IN
 }
 
@@ -29,7 +29,7 @@ function E(e) {
   let {
     application: n
   } = e;
-  return c(n) && (0, l.yE)(null !== (t = n.flags) && void 0 !== t ? t : 0, u.udG.EMBEDDED)
+  return d(n) && (0, l.yE)(null !== (t = n.flags) && void 0 !== t ? t : 0, u.udG.EMBEDDED)
 }
 
 function I(e) {
@@ -39,7 +39,7 @@ function I(e) {
     context: l,
     commandTargetId: u,
     maxSizeCallback: _,
-    sectionName: c
+    sectionName: d
   } = e, {
     channel: E
   } = l, I = async () => {
@@ -51,7 +51,7 @@ function I(e) {
         commandTargetId: u,
         maxSizeCallback: _,
         commandOrigin: s.bB.APPLICATION_LAUNCHER,
-        sectionName: c
+        sectionName: d
       });
       if (t.inputType === s.iw.BUILT_IN_TEXT && null != i) {
         var e;
@@ -60,9 +60,9 @@ function I(e) {
       }
     } catch (e) {
       throw i.Z.show({
-        title: d.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_TITLE,
-        body: d.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_BODY,
-        confirmText: d.Z.Messages.RETRY,
+        title: c.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_TITLE,
+        body: c.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_BODY,
+        confirmText: c.Z.Messages.RETRY,
         onConfirm: () => I()
       }), e
     }

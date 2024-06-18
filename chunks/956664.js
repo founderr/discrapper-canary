@@ -4,7 +4,7 @@ n.d(t, {
     return A
   },
   Dc: function() {
-    return d
+    return c
   },
   OF: function() {
     return h
@@ -28,7 +28,7 @@ n.d(t, {
     return m
   },
   rn: function() {
-    return c
+    return d
   },
   rv: function() {
     return E
@@ -75,7 +75,7 @@ function _(e, t) {
   })
 }
 
-function d(e) {
+function c(e) {
   let {
     width: t,
     height: n,
@@ -87,7 +87,7 @@ function d(e) {
   return (n = Math.round(n * s)) > r && (o = r / n), Math.min(s * o, 1)
 }
 
-function c(e) {
+function d(e) {
   let {
     width: t,
     height: n,

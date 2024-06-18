@@ -22,8 +22,8 @@ var n = t(735250),
   S = t(251625),
   h = t(226951),
   g = t(51144),
-  x = t(434404),
-  C = t(372454),
+  C = t(434404),
+  x = t(372454),
   R = t(999382),
   L = t(84613),
   O = t(740903),
@@ -31,9 +31,9 @@ var n = t(735250),
   p = t(981631),
   M = t(689938),
   f = t(939056),
-  v = t(164149);
+  D = t(164149);
 
-function D(e, s, t) {
+function v(e, s, t) {
   return s in e ? Object.defineProperty(e, s, {
     value: t,
     enumerable: !0,
@@ -42,7 +42,7 @@ function D(e, s, t) {
   }) : e[s] = t, e
 }
 
-function Z(e) {
+function j(e) {
   let {
     transitionState: s,
     guild: t,
@@ -109,7 +109,7 @@ function Z(e) {
     })]
   })
 }
-class j extends i.PureComponent {
+class Z extends i.PureComponent {
   render() {
     let {
       user: e,
@@ -117,7 +117,7 @@ class j extends i.PureComponent {
       guild: t
     } = this.props;
     return (0, n.jsxs)(c.Clickable, {
-      className: a()(f.bannedUser, v.card),
+      className: a()(f.bannedUser, D.card),
       onClick: this.handleShowModal,
       onContextMenu: this.handleContextMenu,
       children: [(0, n.jsx)(c.Avatar, {
@@ -138,21 +138,21 @@ class j extends i.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), D(this, "handleShowModal", () => {
+    super(...e), v(this, "handleShowModal", () => {
       let {
         guild: e,
         user: s,
         hideDiscriminator: t,
         ban: i
       } = this.props;
-      (0, c.openModal)(l => (0, n.jsx)(Z, {
+      (0, c.openModal)(l => (0, n.jsx)(j, {
         ...l,
         guild: e,
         user: s,
         ban: i,
         hideDiscriminator: t
       }))
-    }), D(this, "handleContextMenu", e => {
+    }), v(this, "handleContextMenu", e => {
       (0, d.jW)(e, async () => {
         let {
           default: e
@@ -190,16 +190,16 @@ class U extends i.PureComponent {
     })
   }
   handleModerationClick() {
-    x.Z.setSection(p.pNK.SAFETY), (0, L.K)(O.u.DM_AND_SPAM_PROTECTION)
+    C.Z.setSection(p.pNK.SAFETY), (0, L.K)(O.u.DM_AND_SPAM_PROTECTION)
   }
   handleQueryChange(e) {
-    x.Z.setSearchQuery(e)
+    C.Z.setSearchQuery(e)
   }
   handleQueryClear() {
-    x.Z.setSearchQuery("")
+    C.Z.setSearchQuery("")
   }
   constructor(...e) {
-    super(...e), D(this, "getSortedBans", (0, S.oH)((e, s) => {
+    super(...e), v(this, "getSortedBans", (0, S.oH)((e, s) => {
       if (null == e) return [];
       let t = this.makeFilter(s),
         n = [];
@@ -208,7 +208,7 @@ class U extends i.PureComponent {
         null != e && t(e) && n.push(e)
       }
       return n.sort((e, s) => e.username.localeCompare(s.username))
-    })), D(this, "getRowHeight", (e, s) => {
+    })), v(this, "getRowHeight", (e, s) => {
       var t;
       if (e > 0) return 0;
       let {
@@ -219,7 +219,7 @@ class U extends i.PureComponent {
       let a = l[s],
         r = null == n ? void 0 : n.get(null !== (t = null == a ? void 0 : a.id) && void 0 !== t ? t : "");
       return null == a || null == r ? 0 : 56
-    }), D(this, "renderRow", e => {
+    }), v(this, "renderRow", e => {
       var s;
       let {
         section: t,
@@ -237,19 +237,19 @@ class U extends i.PureComponent {
       }, "spinner");
       let d = this.getSortedBans(l, o)[i],
         u = null == l ? void 0 : l.get(null !== (s = null == d ? void 0 : d.id) && void 0 !== s ? s : "");
-      if (null != d && null != u) return (0, n.jsx)(j, {
+      if (null != d && null != u) return (0, n.jsx)(Z, {
         user: d,
         ban: u,
         hideDiscriminator: a,
         guild: r
       }, d.id)
-    }), D(this, "getSectionHeight", e => {
+    }), v(this, "getSectionHeight", e => {
       if (e > 0) return 0;
       let {
         bans: s
       } = this.props;
       return null == s ? 462 : 120
-    }), D(this, "renderSection", () => {
+    }), v(this, "renderSection", () => {
       var e;
       let s;
       let {
@@ -325,7 +325,7 @@ function P() {
     guild: s
   } = (0, o.e7)([R.Z], () => R.Z.getProps(), [], r.isEqual), {
     enabled: t
-  } = C.T.useExperiment({
+  } = x.T.useExperiment({
     guildId: null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : p.lds,
     location: "4d6318_1"
   }, {

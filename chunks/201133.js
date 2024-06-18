@@ -15,10 +15,10 @@ var i = n(570140),
   l = n(314897),
   u = n(592125),
   _ = n(703558),
-  d = n(62817);
-let c = e => {
-    let t = d.Z.getFiles(e)[0];
-    return null == d.Z.getMessageForFile(t.id) ? Promise.reject() : new Promise((e, n) => {
+  c = n(62817);
+let d = e => {
+    let t = c.Z.getFiles(e)[0];
+    return null == c.Z.getMessageForFile(t.id) ? Promise.reject() : new Promise((e, n) => {
       let r = s => {
         s.file.id === t.id && (i.Z.unsubscribe("UPLOAD_COMPLETE", r), i.Z.unsubscribe("UPLOAD_FAIL", r), "UPLOAD_COMPLETE" === s.type ? e(s.messageRecord) : n(Error("Upload failed")))
       };
@@ -30,8 +30,8 @@ let c = e => {
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
       o = arguments.length > 3 ? arguments[3] : void 0,
       a = arguments.length > 4 ? arguments[4] : void 0,
-      d = u.Z.getChannel(t);
-    if (i = l.default.getToken(), s.ZP.parse(d, ""), r);
+      c = u.Z.getChannel(t);
+    if (i = l.default.getToken(), s.ZP.parse(c, ""), r);
     else {
       if (null == u.Z.getChannel(t)) throw Error("AtomicReactor sendUtils: Couldn't resolve channel with id ".concat(t));
       {
@@ -53,7 +53,7 @@ let c = e => {
       requireConfirmation: l = !1
     } = e, u = await r.Z.openPrivateChannel(i.id, !1, !1);
     E(t, u, l, s);
-    let _ = await c(u);
+    let _ = await d(u);
     if (null != _) {
       let e = (0, a.g1)(n);
       await (0, o.rU)(u, _.id, e)

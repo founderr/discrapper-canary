@@ -8,8 +8,8 @@ var i = n(735250),
   l = n(430824),
   u = n(346656),
   _ = n(981631),
-  d = n(689938),
-  c = n(93138);
+  c = n(689938),
+  d = n(93138);
 t.Z = e => {
   let {
     guildId: t,
@@ -27,41 +27,41 @@ t.Z = e => {
   if (null == T) return null;
   let f = () => {
     (0, s.openModal)(e => (0, i.jsx)(s.ConfirmModal, {
-      header: d.Z.Messages.LEAVE_SERVER_TITLE.format({
+      header: c.Z.Messages.LEAVE_SERVER_TITLE.format({
         name: T.name
       }),
-      confirmText: d.Z.Messages.LEAVE_SERVER,
-      cancelText: d.Z.Messages.CANCEL,
+      confirmText: c.Z.Messages.LEAVE_SERVER,
+      cancelText: c.Z.Messages.CANCEL,
       onConfirm: S,
       ...e,
       children: (0, i.jsx)(s.Text, {
         variant: "text-md/normal",
-        children: d.Z.Messages.LEAVE_SERVER_BODY.format({
+        children: c.Z.Messages.LEAVE_SERVER_BODY.format({
           name: T.name
         })
       })
     }))
   };
   return (0, i.jsxs)("div", {
-    className: c.container,
+    className: d.container,
     children: [(0, i.jsx)(s.Text, {
-      className: c.description,
+      className: d.description,
       variant: "text-sm/normal",
-      children: d.Z.Messages.MOBILE_REPORTS_LEAVE_ELEMENT_DESCRIPTION
+      children: c.Z.Messages.MOBILE_REPORTS_LEAVE_ELEMENT_DESCRIPTION
     }), (0, i.jsxs)("div", {
-      className: c.guildContainer,
+      className: d.guildContainer,
       children: [(0, i.jsxs)("div", {
-        className: c.guildInfo,
+        className: d.guildInfo,
         children: [(0, i.jsx)(u.Z, {
           guild: T,
           showBadge: !1,
           animate: !1,
           size: u.Z.Sizes.SMALL,
           "aria-label": T.name,
-          className: c.icon,
+          className: d.icon,
           active: !0
         }), (0, i.jsx)(s.Text, {
-          className: c.guildName,
+          className: d.guildName,
           variant: "text-sm/semibold",
           children: T.name
         })]
@@ -70,7 +70,7 @@ t.Z = e => {
         disabled: E,
         size: s.Button.Sizes.SMALL,
         color: s.Button.Colors.RED,
-        children: E ? d.Z.Messages.MOBILE_REPORTS_LEFT_SERVER : d.Z.Messages.LEAVE_SERVER
+        children: E ? c.Z.Messages.MOBILE_REPORTS_LEFT_SERVER : c.Z.Messages.LEAVE_SERVER
       })]
     })]
   })

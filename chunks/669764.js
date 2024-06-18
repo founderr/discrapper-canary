@@ -4,10 +4,10 @@ var i, r, s, o, a = n(442837),
   l = n(570140);
 let u = new Map,
   _ = new Set,
-  d = new Set;
-class c extends(i = a.ZP.Store) {
+  c = new Set;
+class d extends(i = a.ZP.Store) {
   canFetch(e) {
-    return !_.has(e) && !d.has(e) && !u.has(e)
+    return !_.has(e) && !c.has(e) && !u.has(e)
   }
   isFetching(e) {
     return _.has(e)
@@ -29,21 +29,21 @@ class c extends(i = a.ZP.Store) {
     return null == i ? null : null == t ? i : "".concat(i, "?width=").concat(t.width, "&height=").concat(t.height)
   }
 }
-o = "DetectableGameSupplementalStore", (s = "displayName") in(r = c) ? Object.defineProperty(r, s, {
+o = "DetectableGameSupplementalStore", (s = "displayName") in(r = d) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new c(l.Z, {
+}) : r[s] = o, t.Z = new d(l.Z, {
   CONNECTION_OPEN: function() {
-    u = new Map, _ = new Set, d = new Set
+    u = new Map, _ = new Set, c = new Set
   },
   DETECTABLE_GAME_SUPPLEMENTAL_FETCH: function(e) {
     let {
       applicationIds: t
     } = e;
     t.forEach(e => {
-      _.add(e), d.delete(e)
+      _.add(e), c.delete(e)
     })
   },
   DETECTABLE_GAME_SUPPLEMENTAL_FETCH_SUCCESS: function(e) {
@@ -52,7 +52,7 @@ o = "DetectableGameSupplementalStore", (s = "displayName") in(r = c) ? Object.de
       supplementalGameData: n
     } = e;
     t.forEach(e => {
-      _.delete(e), d.delete(e)
+      _.delete(e), c.delete(e)
     }), n.forEach(e => {
       let {
         application_id: t,
@@ -82,7 +82,7 @@ o = "DetectableGameSupplementalStore", (s = "displayName") in(r = c) ? Object.de
       applicationIds: t
     } = e;
     t.forEach(e => {
-      _.delete(e), d.add(e)
+      _.delete(e), c.add(e)
     })
   }
 })

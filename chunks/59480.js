@@ -23,13 +23,13 @@ class o {
     var n, o, a, l;
     let u = new Set([null === (n = t.author) || void 0 === n ? void 0 : n.id, null === (o = t.interaction) || void 0 === o ? void 0 : o.user.id, ...null !== (l = null === (a = t.mentions) || void 0 === a ? void 0 : a.map(e => e.id)) && void 0 !== l ? l : []]),
       _ = [],
-      d = [];
+      c = [];
     for (let t of u) {
       if (null == t) continue;
       let n = r.default.getUser(t),
         o = i.ZP.getTrueMember(null != e ? e : s.lds, t);
-      null != n && d.push(n), null != o && _.push(o)
+      null != n && c.push(n), null != o && _.push(o)
     }
-    return [_, d]
+    return [_, c]
   }
 }

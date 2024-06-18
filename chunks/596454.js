@@ -11,8 +11,8 @@ var i, r = n(735250),
   l = n(699581),
   u = n(374470),
   _ = n(442837),
-  d = n(134432),
-  c = n(695346),
+  c = n(134432),
+  d = n(695346),
   E = n(237997),
   I = n(278297),
   T = n(768581),
@@ -69,8 +69,8 @@ class A extends(i = s.PureComponent) {
       size: l = "default",
       alt: u,
       shouldAnimate: _,
-      isFocused: d,
-      emojiId: c,
+      isFocused: c,
+      emojiId: d,
       autoplay: E,
       isInteracting: I,
       ...T
@@ -93,8 +93,8 @@ class A extends(i = s.PureComponent) {
       }),
       onError: this.onError,
       "data-type": "emoji",
-      ...null != c && "" !== c ? {
-        "data-id": c
+      ...null != d && "" !== d ? {
+        "data-id": d
       } : {
         "data-name": n
       }
@@ -105,7 +105,7 @@ class A extends(i = s.PureComponent) {
       hover: !1
     }), N(this, "key", void 0), N(this, "cancelLoadImage", void 0), N(this, "onError", () => {
       let e = this.getSrc();
-      null != e && (this.cancelLoadImage = (0, d.po)(e, e => {
+      null != e && (this.cancelLoadImage = (0, c.po)(e, e => {
         !e && (this.key = Date.now(), this.forceUpdate())
       }))
     }), N(this, "onMouseEnter", e => {
@@ -208,7 +208,7 @@ let m = function(e) {
 }(A);
 
 function O(e) {
-  let t = c.Yk.useSetting(),
+  let t = d.Yk.useSetting(),
     n = {
       autoplay: null == e.autoplay ? t : e.autoplay,
       allowAnimatedEmoji: t

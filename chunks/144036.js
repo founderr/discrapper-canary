@@ -14,7 +14,7 @@ function _(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let d = (e, t) => {
+let c = (e, t) => {
   let {
     x: n,
     y: i
@@ -24,7 +24,7 @@ let d = (e, t) => {
   } = t;
   return Math.pow(n - r, 2) + Math.pow(i - s, 2)
 };
-class c extends(i = s.PureComponent) {
+class d extends(i = s.PureComponent) {
   componentDidMount() {
     let {
       initialX: e,
@@ -140,7 +140,7 @@ class c extends(i = s.PureComponent) {
         dragging: r,
         dragging: s
       } = this.state;
-      if (!r && d(this._dragStart, {
+      if (!r && c(this._dragStart, {
           x: e.clientX,
           y: e.clientY
         }) > 9 && (r = !0), !!r) this.animateToPosition(e.clientX - this._offsetX, e.clientY - this._offsetY, {
@@ -172,11 +172,11 @@ class c extends(i = s.PureComponent) {
     }
   }
 }
-_(c, "defaultProps", {
+_(d, "defaultProps", {
   maxX: 0,
   maxY: 0,
   initialX: 0,
   initialY: 0,
   disabled: !1,
   dragAnywhere: !1
-}), t.Z = c
+}), t.Z = d

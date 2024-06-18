@@ -32,21 +32,21 @@ function r(e, s, t) {
     id: e,
     icon: I,
     size: t
-  }), N = n.useMemo(() => null != _ && _.length > s ? _.slice(0, s) : _, [_, s]), m = null != _ && _.length > s ? _.length - s : null, S = null == u ? void 0 : u.slug, h = null != S ? a.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(S) : void 0, g = null == E ? void 0 : null === (r = E.guild) || void 0 === r ? void 0 : r.name, x = null == E ? void 0 : null === (o = E.role_subscription) || void 0 === o ? void 0 : o.subscriber_count, C = !c && null != g && null != I && null != T;
-  return C ? {
-    hasAllImperativeDetails: C,
+  }), N = n.useMemo(() => null != _ && _.length > s ? _.slice(0, s) : _, [_, s]), m = null != _ && _.length > s ? _.length - s : null, S = null == u ? void 0 : u.slug, h = null != S ? a.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(S) : void 0, g = null == E ? void 0 : null === (r = E.guild) || void 0 === r ? void 0 : r.name, C = null == E ? void 0 : null === (o = E.role_subscription) || void 0 === o ? void 0 : o.subscriber_count, x = !c && null != g && null != I && null != T;
+  return x ? {
+    hasAllImperativeDetails: x,
     isLoading: c,
     details: {
       guildName: g,
       guildIcon: I,
       guildAvatarUrl: T,
       storePageUrl: h,
-      subscriberCount: x,
+      subscriberCount: C,
       emojisToShow: N,
       notShownEmojiCount: m
     }
   } : {
-    hasAllImperativeDetails: C,
+    hasAllImperativeDetails: x,
     isLoading: c,
     error: d
   }

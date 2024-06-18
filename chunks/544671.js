@@ -18,21 +18,21 @@ function u(e) {
     user: n,
     guildId: u,
     channelId: _,
-    source: d,
-    look: c,
+    source: c,
+    look: d,
     color: E,
     onAction: I
   } = e;
   return null != t && (0, s.Z)(t, a.xjy.SYNC) && (0, o.Z)(t) ? (0, i.jsx)(r.Z, {
     className: l.button,
     size: l.buttonSize,
-    look: c,
+    look: d,
     color: E,
     user: n,
     activity: t,
     guildId: null != u ? u : void 0,
     channelId: _,
-    source: d,
+    source: c,
     onAction: I
   }, "sync") : null
 }

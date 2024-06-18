@@ -80,9 +80,9 @@ function _(e) {
     let t = e + (r.dj - 1);
     return l.push([e, t]), t + 1
   }
-  let d = a(.5 * s),
-    c = a(i, -d),
-    E = a(i + s, d);
-  for (c > 0 && (c = Math.max(_(0), c)), c = Math.floor(c / r.dj) * r.dj; c <= E;) c = _(c);
+  let c = a(.5 * s),
+    d = a(i, -c),
+    E = a(i + s, c);
+  for (d > 0 && (d = Math.max(_(0), d)), d = Math.floor(d / r.dj) * r.dj; d <= E;) d = _(d);
   u(t, n, l)
 }

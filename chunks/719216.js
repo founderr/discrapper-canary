@@ -20,7 +20,7 @@ function l(e) {
     onAction: _
   } = e;
   if ((null == t ? void 0 : t.buttons) == null || t.buttons.length < 1) return null;
-  async function d(e, t, n) {
+  async function c(e, t, n) {
     try {
       let i = await (0, r.sd)(e, t);
       if (i.button_urls.length <= n) return;
@@ -39,7 +39,7 @@ function l(e) {
       color: n,
       look: u,
       onClick: () => {
-        null == _ || _(), d(t, l.id, r)
+        null == _ || _(), c(t, l.id, r)
       },
       children: e
     }, "customButton-".concat(r)))

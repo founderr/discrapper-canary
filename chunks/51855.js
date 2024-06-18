@@ -6,9 +6,9 @@ t.d(s, {
 });
 var n = t(470079),
   a = t(100527),
-  i = t(818083),
+  r = t(818083),
   l = t(329067);
-let r = (0, i.B)({
+let i = (0, r.B)({
     kind: "user",
     id: "2024-04_lightning_checkout",
     label: "Lightning Checkout Experiment",
@@ -24,7 +24,7 @@ let r = (0, i.B)({
     }]
   }),
   o = () => {
-    let e = r.useExperiment({
+    let e = i.useExperiment({
         location: a.Z.COLLECTIBLES_SHOP
       }, {
         autoTrackExposure: !1
@@ -33,7 +33,7 @@ let r = (0, i.B)({
         userIsEligible: s
       } = (0, l.N)();
     return n.useEffect(() => {
-      s && r.trackExposure({
+      s && i.trackExposure({
         location: a.Z.COLLECTIBLES_SHOP
       })
     }, [s]), e.enabled && s

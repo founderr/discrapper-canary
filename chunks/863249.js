@@ -7,16 +7,16 @@ var i = n(544891),
   l = n(962086),
   u = n(160404),
   _ = n(264229),
-  d = n(271383),
-  c = n(701190),
+  c = n(271383),
+  d = n(701190),
   E = n(594174),
   I = n(626135),
   T = n(981631),
   h = n(689938);
 let S = async (e, t) => {
-  let n = null != t ? t : c.Z.getInviteKeyForGuildId(e),
+  let n = null != t ? t : d.Z.getInviteKeyForGuildId(e),
     s = E.default.getCurrentUser(),
-    o = !d.ZP.isMember(e, null == s ? void 0 : s.id);
+    o = !c.ZP.isMember(e, null == s ? void 0 : s.id);
   try {
     let t = await i.tn.get({
       url: T.ANM.GUILD_MEMBER_VERIFICATION(e),

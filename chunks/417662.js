@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   E: function() {
-    return c
+    return d
   },
   Z: function() {
     return E
@@ -15,9 +15,9 @@ var i = n(653603),
   l = n(50659),
   u = n(436660),
   _ = n(887490),
-  d = n(981631);
+  c = n(981631);
 
-function c(e, t) {
+function d(e, t) {
   let {
     cmd: n = !1,
     ctrl: i = !1,
@@ -32,33 +32,33 @@ function E(e) {
     var n, i, s, E;
     let I = e.isMac;
     switch (t.which) {
-      case d.yXg.B:
-        if (!_.bN.isEditorEmpty(e) && c(t, {
+      case c.yXg.B:
+        if (!_.bN.isEditorEmpty(e) && d(t, {
             ctrl: !I,
             cmd: I
           })) return (0, l.py)(e, "bold"), !0;
         break;
-      case d.yXg.I:
-        if (!_.bN.isEditorEmpty(e) && c(t, {
+      case c.yXg.I:
+        if (!_.bN.isEditorEmpty(e) && d(t, {
             ctrl: !I,
             cmd: I
           })) return (0, l.py)(e, "italics"), !0;
         break;
-      case d.yXg.U:
-        if (!_.bN.isEditorEmpty(e) && c(t, {
+      case c.yXg.U:
+        if (!_.bN.isEditorEmpty(e) && d(t, {
             ctrl: !I,
             cmd: I
           })) return (0, l.py)(e, "underline"), !0;
         break;
-      case d.yXg.S:
-        if (!_.bN.isEditorEmpty(e) && c(t, {
+      case c.yXg.S:
+        if (!_.bN.isEditorEmpty(e) && d(t, {
             ctrl: !I,
             cmd: I,
             shift: !0
           })) return (0, l.py)(e, "strikethrough"), !0;
         break;
-      case d.yXg.TAB:
-        if (null != e.selection && c(t, {
+      case c.yXg.TAB:
+        if (null != e.selection && d(t, {
             shift: null
           })) {
           let [i, r] = _.M8.edges(e.selection), s = _.bN.blocks(e).slice(i.path[0], r.path[0] + 1), o = !0;
@@ -117,18 +117,18 @@ function E(e) {
           }
         }
         break;
-      case d.yXg.ARROW_LEFT:
-      case d.yXg.ARROW_RIGHT: {
+      case c.yXg.ARROW_LEFT:
+      case c.yXg.ARROW_RIGHT: {
         let n, o;
-        if (c(t, {
+        if (d(t, {
             shift: null
           })) n = "character";
-        else if (c(t, {
+        else if (d(t, {
             ctrl: !I,
             alt: I,
             shift: null
           })) n = "word";
-        else if (I && c(t, {
+        else if (I && d(t, {
             cmd: !0,
             shift: null
           })) return !1;
@@ -136,15 +136,15 @@ function E(e) {
         t.shiftKey && (o = "focus");
         let a = e.children[null !== (E = null === (s = e.selection) || void 0 === s ? void 0 : null === (i = s.focus) || void 0 === i ? void 0 : i.path[0]) && void 0 !== E ? E : 0],
           l = "rtl" === r()(_.aj.string(a)),
-          T = t.which === d.yXg.ARROW_LEFT == !l;
+          T = t.which === c.yXg.ARROW_LEFT == !l;
         return u.Q.keyboardMove(e, {
           reverse: T,
           unit: n,
           edge: o
         }), !0
       }
-      case d.yXg.A:
-        if (I && c(t, {
+      case c.yXg.A:
+        if (I && d(t, {
             ctrl: !0
           })) {
           let t = _.bN.getCurrentBlock(e);
@@ -160,8 +160,8 @@ function E(e) {
           }
         }
         break;
-      case d.yXg.E:
-        if (I && c(t, {
+      case c.yXg.E:
+        if (I && d(t, {
             ctrl: !0
           })) {
           let t = _.bN.getCurrentBlock(e);
@@ -177,16 +177,16 @@ function E(e) {
           }
         }
         break;
-      case d.yXg.BACKSPACE:
-      case d.yXg.DELETE:
-      case d.yXg.K:
-        let T = t.which === d.yXg.BACKSPACE;
-        if ((!I && t.which !== d.yXg.K && c(t, {
+      case c.yXg.BACKSPACE:
+      case c.yXg.DELETE:
+      case c.yXg.K:
+        let T = t.which === c.yXg.BACKSPACE;
+        if ((!I && t.which !== c.yXg.K && d(t, {
             ctrl: !0,
             shift: !0
-          }) || I && t.which !== d.yXg.K && c(t, {
+          }) || I && t.which !== c.yXg.K && d(t, {
             cmd: !0
-          }) || I && t.which === d.yXg.K && c(t, {
+          }) || I && t.which === c.yXg.K && d(t, {
             ctrl: !0
           })) && null != e.selection) {
           let [t, n] = _.M8.edges(e.selection), [i, r] = _.bN.node(e, [T ? t.path[0] : n.path[0]]);

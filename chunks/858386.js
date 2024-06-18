@@ -9,13 +9,13 @@ var r = n(481060),
   l = n(626135),
   u = n(374023),
   _ = n(344532),
-  d = n(981631),
-  c = n(231338);
+  c = n(981631),
+  d = n(231338);
 class E extends o.Z {
   handleConnectionOpen() {
     let e = a.default.getCurrentUser();
     if (null == e || u.s.isDisallowPopupsSet()) return;
-    let t = _.Z.requiredActionsIncludes(e.id, [d.ane.UPDATE_PASSWORD]);
+    let t = _.Z.requiredActionsIncludes(e.id, [c.ane.UPDATE_PASSWORD]);
     _.Z.wasLoginAttemptedInSession(e.id) && t ? (0, r.openModalLazy)(async () => {
       let {
         default: e
@@ -24,19 +24,19 @@ class E extends o.Z {
         return (0, i.jsx)(e, {
           ...t,
           onSuccess: () => {
-            l.default.track(d.rMx.FORCED_UPDATE_PASSWORD_SUCCEEDED), t.onClose()
+            l.default.track(c.rMx.FORCED_UPDATE_PASSWORD_SUCCEEDED), t.onClose()
           },
           onClose: () => {
-            t.onClose(), s.Z.logout(d.Z5c.LOGIN)
+            t.onClose(), s.Z.logout(c.Z5c.LOGIN)
           },
           requirementsUpdated: !0
         })
       }
     }, {
       modalKey: "LOGIN_REQUIRED_ACTIONS_MODAL_KEY",
-      onCloseRequest: c.Vq,
+      onCloseRequest: d.Vq,
       instant: !0
-    }) : t && s.Z.logout(d.Z5c.LOGIN)
+    }) : t && s.Z.logout(c.Z5c.LOGIN)
   }
   constructor(...e) {
     var t, n, i;

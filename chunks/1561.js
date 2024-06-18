@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   P: function() {
-    return c
+    return d
   }
 }), n(47120);
 var i, r = n(735250),
@@ -12,7 +12,7 @@ var i, r = n(735250),
   u = n(84735),
   _ = n(981631);
 
-function d(e, t, n) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -20,7 +20,7 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class c extends(i = s.Component) {
+class d extends(i = s.Component) {
   renderNonInteractive() {
     let {
       tag: e,
@@ -65,7 +65,7 @@ class c extends(i = s.Component) {
     })
   }
   constructor(...e) {
-    super(...e), d(this, "ref", void 0), d(this, "handleKeyPress", e => {
+    super(...e), c(this, "ref", void 0), c(this, "handleKeyPress", e => {
       let {
         onClick: t,
         href: n,
@@ -73,7 +73,7 @@ class c extends(i = s.Component) {
         ignoreKeyPress: r
       } = this.props;
       !e.repeat && (!r && null != t && null != this.ref && (e.charCode === _.yXg.SPACE || e.charCode === _.yXg.ENTER) && (null == n && e.preventDefault(), null == this.ref.click ? t(e) : this.ref.click()), null != i && i(e))
-    }), d(this, "setRef", e => {
+    }), c(this, "setRef", e => {
       this.ref = e;
       let {
         innerRef: t
@@ -82,7 +82,7 @@ class c extends(i = s.Component) {
     })
   }
 }
-d(c, "contextType", l.g), d(c, "defaultProps", {
+c(d, "contextType", l.g), c(d, "defaultProps", {
   tag: "div",
   role: "button",
   tabIndex: 0

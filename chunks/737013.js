@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 });
 var i = n(735250);
@@ -14,25 +14,25 @@ var r = n(442837),
   u = n(689938),
   _ = n(608667);
 
-function d(e) {
+function c(e) {
   let t = (0, s.useModalContext)(),
-    d = (0, r.e7)([l.Z], () => l.Z.isVideoEnabled()),
-    c = (0, r.e7)([a.default], () => a.default.getId() === e),
+    c = (0, r.e7)([l.Z], () => l.Z.isVideoEnabled()),
+    d = (0, r.e7)([a.default], () => a.default.getId() === e),
     E = (0, o.Z)();
-  return (!d || E) && c ? (0, i.jsx)(s.MenuItem, {
+  return (!c || E) && d ? (0, i.jsx)(s.MenuItem, {
     id: "change-video-background",
     label: (0, i.jsx)("div", {
       className: _.item,
-      children: d ? u.Z.Messages.CAMERA_CHANGE_VIDEO_BACKGROUND_MENU_ITEM : u.Z.Messages.CAMERA_PREVIEW_MENU_ITEM
+      children: c ? u.Z.Messages.CAMERA_CHANGE_VIDEO_BACKGROUND_MENU_ITEM : u.Z.Messages.CAMERA_PREVIEW_MENU_ITEM
     }),
     action: function() {
       (0, s.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("5528"), n.e("24267")]).then(n.bind(n, 601572));
+        } = await Promise.all([n.e("99387"), n.e("5528"), n.e("91018")]).then(n.bind(n, 601572));
         return t => (0, i.jsx)(e, {
           ...t,
-          videoEnabled: d
+          videoEnabled: c
         })
       }, {
         modalKey: "camera-preview",

@@ -61,8 +61,8 @@ var i, r, s = n(278074),
   l = n(34756),
   u = n(100159),
   _ = n(912788),
-  d = n(594174),
-  c = n(626135),
+  c = n(594174),
+  d = n(626135),
   E = n(823379),
   I = n(358085),
   T = n(74538),
@@ -74,13 +74,13 @@ var i, r, s = n(278074),
 let m = h.Z.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
   O = [m, ...["discordapp.com/gifts", "discord.com/gifts"].map(e => h.Z.escape(e))].join("|"),
   R = RegExp("(?: |^|https?://)(?:".concat(O, ")/([a-z0-9-]+)"), "gi"),
-  C = [...["discord.com/billing/promotions", "promos.discord.gg"].map(e => h.Z.escape(e))].join("|"),
-  p = RegExp("(?: |^|https?://)(?:".concat(C, ")/([a-z0-9-]+)"), "gi"),
-  g = (e, t) => Array(t).fill(void 0).map(() => "[".concat("abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789", "]{").concat(e, "}")).join("-?"),
-  L = g(4, 4),
-  v = g(4, 6),
-  D = g(5, 3),
-  M = [L, v, D, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
+  p = [...["discord.com/billing/promotions", "promos.discord.gg"].map(e => h.Z.escape(e))].join("|"),
+  g = RegExp("(?: |^|https?://)(?:".concat(p, ")/([a-z0-9-]+)"), "gi"),
+  C = (e, t) => Array(t).fill(void 0).map(() => "[".concat("abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789", "]{").concat(e, "}")).join("-?"),
+  v = C(4, 4),
+  L = C(4, 6),
+  D = C(5, 3),
+  M = [v, L, D, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
   P = new RegExp("^(".concat("WUMP-?", ")?(").concat(M, ")$"));
 (r = i || (i = {}))[r.DEFAULT = 0] = "DEFAULT", r[r.CUSTOM_STYLE = 1] = "CUSTOM_STYLE", r[r.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD = 2] = "CUSTOM_MESSAGE_EMOJI_SOUNDBOARD";
 let y = (e, t) => o.tq || o.Em ? 0 : null != e || t ? 2 : 1,
@@ -110,7 +110,7 @@ let k = e => (null == e ? void 0 : e.type) === f.uaV.CUSTOM_GIFT && (null == e ?
     if (null == e) return [];
     let n = new Set;
     for (; null != (t = R.exec(e)) && n.size < 3;) n.add(w(t[1]));
-    for (; null != (t = p.exec(e)) && n.size < 3;) n.add(w(t[1]));
+    for (; null != (t = g.exec(e)) && n.size < 3;) n.add(w(t[1]));
     return Array.from(n)
   };
 
@@ -131,7 +131,7 @@ async function V(e) {
       },
       oldFormErrors: !0
     })).body;
-    return c.default.track(f.rMx.GIFT_CODE_RESOLVED, {
+    return d.default.track(f.rMx.GIFT_CODE_RESOLVED, {
       resolved: !0,
       gift_code: i.code,
       gift_code_max_uses: i.max_uses,
@@ -143,7 +143,7 @@ async function V(e) {
       flush: !0
     }), i
   } catch (t) {
-    throw c.default.track(f.rMx.GIFT_CODE_RESOLVED, {
+    throw d.default.track(f.rMx.GIFT_CODE_RESOLVED, {
       resolved: !1,
       gift_code: e
     }), new l.Z(t)
@@ -151,7 +151,7 @@ async function V(e) {
 }
 
 function Z(e, t) {
-  c.default.track(f.rMx.GIFT_CODE_COPIED, {
+  d.default.track(f.rMx.GIFT_CODE_COPIED, {
     ...(0, u.Z)(t, !1, !1),
     ...e.analyticsData
   })
@@ -278,7 +278,7 @@ function W(e, t, n, i, r) {
       default:
         return A.Z.Messages.GIFT_CONFIRMATION_BODY_UNKNOWN_ERROR
     }
-  }(t, d.default.getCurrentUser())
+  }(t, c.default.getCurrentUser())
 }
 
 function K(e, t, n) {

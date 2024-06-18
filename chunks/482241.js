@@ -7,8 +7,8 @@ var i = n(544891),
   l = n(709054),
   u = n(73346),
   _ = n(924301),
-  d = n(236373),
-  c = n(124165),
+  c = n(236373),
+  d = n(124165),
   E = n(765305),
   I = n(981631);
 t.Z = {
@@ -42,7 +42,7 @@ t.Z = {
         channel_id: s,
         entity_metadata: o,
         broadcast_to_directory_channels: r.broadcastToDirectoryChannels,
-        recurrence_rule: (0, d.J1)(t.recurrenceRule)
+        recurrence_rule: (0, c.J1)(t.recurrenceRule)
       };
     return i.tn.patch({
       url: I.ANM.GUILD_EVENT(n, e),
@@ -61,7 +61,7 @@ t.Z = {
       channel_id: e.channelId,
       entity_metadata: e.entityMetadata,
       broadcast_to_directory_channels: n.broadcastToDirectoryChannels,
-      recurrence_rule: (0, d.J1)(e.recurrenceRule)
+      recurrence_rule: (0, c.J1)(e.recurrenceRule)
     };
     return i.tn.post({
       url: I.ANM.GUILD_EVENTS_FOR_GUILD(t),
@@ -191,7 +191,7 @@ t.Z = {
     }
   },
   async updateRsvp(e, t, n, i, r) {
-    if (null != (0, c.X2)(e, t)) try {
+    if (null != (0, d.X2)(e, t)) try {
       await this.deleteRsvpForGuildEvent(e, t, n), null == r || r()
     } catch (e) {
       null == r || r(e)

@@ -3,8 +3,8 @@ let i, r;
 n(47120);
 var s, o, a, l, u = n(392711),
   _ = n.n(u),
-  d = n(442837),
-  c = n(570140),
+  c = n(442837),
+  d = n(570140),
   E = n(358221),
   I = n(569545),
   T = n(199902),
@@ -34,14 +34,14 @@ function A() {
       })) || void 0 === o ? void 0 : o[0]) && (e = null != r ? r : null === (l = n.first()) || void 0 === l ? void 0 : null === (a = l.user) || void 0 === a ? void 0 : a.id)
     }
   }
-  r !== e && (r = e, t && C.emitChange())
+  r !== e && (r = e, t && p.emitChange())
 }
 let m = _().debounce(A, 300);
 
 function O() {
   return m(), !1
 }
-class R extends(s = d.ZP.Store) {
+class R extends(s = c.ZP.Store) {
   initialize() {
     this.waitFor(E.Z, h.default, f.Z, T.Z, S.Z), this.syncWith([E.Z, T.Z], O)
   }
@@ -55,7 +55,7 @@ l = "VideoSpeakerStore", (a = "displayName") in(o = R) ? Object.defineProperty(o
   configurable: !0,
   writable: !0
 }) : o[a] = l;
-let C = new R(c.Z, {
+let p = new R(d.Z, {
   AUDIO_SET_LOCAL_VIDEO_DISABLED: O
 });
-t.Z = C
+t.Z = p

@@ -8,8 +8,8 @@ var i = n(846519),
   l = n(131951),
   u = n(19780),
   _ = n(885110),
-  d = n(606304),
-  c = n(938475),
+  c = n(606304),
+  d = n(938475),
   E = n(70956),
   I = n(367907),
   T = n(981631);
@@ -25,7 +25,7 @@ function h(e, t, n) {
 let S = 1 * E.Z.Millis.MINUTE;
 class f extends r.Z {
   _initialize() {
-    __OVERLAY__ ? this.stores = new Map : (this.stores = new Map().set(d.Z, () => this._handleSpeakingStoreChanged()).set(u.Z, () => this._handleRTCConnectionStoreChanged()), this._reset())
+    __OVERLAY__ ? this.stores = new Map : (this.stores = new Map().set(c.Z, () => this._handleSpeakingStoreChanged()).set(u.Z, () => this._handleRTCConnectionStoreChanged()), this._reset())
   }
   _reset() {
     this._currentUserSpeaking = !1, this._anyoneElseSpeaking = !1, null != this._reportInterval && (this._reportInterval.stop(), this._reportInterval = null)
@@ -38,7 +38,7 @@ class f extends r.Z {
         i = null == n ? void 0 : n.isBroadcastChannel();
       (0, I.yw)(T.rMx.START_SPEAKING, {
         mode: l.Z.getMode(),
-        priority: d.Z.isCurrentUserPrioritySpeaking(),
+        priority: c.Z.isCurrentUserPrioritySpeaking(),
         channel: e,
         server: t,
         channel_id: e,
@@ -46,7 +46,7 @@ class f extends r.Z {
         is_broadcast: i,
         rtc_connection_id: u.Z.getRTCConnectionId(),
         media_session_id: u.Z.getMediaSessionId(),
-        voice_state_count: c.ZP.countVoiceStatesForChannel(this._voiceChannelId),
+        voice_state_count: d.ZP.countVoiceStatesForChannel(this._voiceChannelId),
         ...this.getGameMetadata(),
         ...u.Z.getPacketStats()
       })
@@ -60,7 +60,7 @@ class f extends r.Z {
       i = null == n ? void 0 : n.isBroadcastChannel();
     (0, I.yw)(T.rMx.START_LISTENING, {
       mute: l.Z.isMute(),
-      anyone_priority: d.Z.isAnyonePrioritySpeaking(),
+      anyone_priority: c.Z.isAnyonePrioritySpeaking(),
       channel: e,
       server: t,
       channel_id: e,
@@ -68,12 +68,12 @@ class f extends r.Z {
       is_broadcast: i,
       rtc_connection_id: u.Z.getRTCConnectionId(),
       media_session_id: u.Z.getMediaSessionId(),
-      voice_state_count: c.ZP.countVoiceStatesForChannel(this._voiceChannelId),
+      voice_state_count: d.ZP.countVoiceStatesForChannel(this._voiceChannelId),
       ...this.getGameMetadata()
     })
   }
   _terminate() {
-    this._reset(), d.Z.removeChangeListener(this._handleSpeakingStoreChanged), u.Z.removeChangeListener(this._handleRTCConnectionStoreChanged)
+    this._reset(), c.Z.removeChangeListener(this._handleSpeakingStoreChanged), u.Z.removeChangeListener(this._handleRTCConnectionStoreChanged)
   }
   getGameMetadata() {
     let e = _.Z.findActivity(e => e.type === T.IIU.PLAYING),
@@ -98,9 +98,9 @@ class f extends r.Z {
         }))
       }
     }), h(this, "_handleSpeakingStoreChanged", () => {
-      let e = d.Z.isCurrentUserSpeaking();
+      let e = c.Z.isCurrentUserSpeaking();
       this._currentUserSpeaking !== e && (this._currentUserSpeaking = e, this._trackStartSpeaking());
-      let t = d.Z.isAnyoneElseSpeaking();
+      let t = c.Z.isAnyoneElseSpeaking();
       this._anyoneElseSpeaking !== t && (this._anyoneElseSpeaking = t, this._trackStartListening())
     })
   }

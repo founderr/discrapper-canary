@@ -4,7 +4,7 @@ n.d(t, {
     return _
   },
   fZ: function() {
-    return c
+    return d
   },
   py: function() {
     return E
@@ -26,8 +26,8 @@ function _(e) {
     canMentionRoles: a = !0,
     canMentionChannels: u = !0,
     canMentionEveryone: _,
-    canMentionClyde: d = !1,
-    useNewSlashCommands: c,
+    canMentionClyde: c = !1,
+    useNewSlashCommands: d,
     canOnlyUseTextCommands: E,
     canSendStickers: I,
     hideMentionDescription: T,
@@ -70,11 +70,11 @@ function _(e) {
   if (null != n) {
     let e = (0, r.$z)(n);
     e.canMentionChannels && (R.mentions.channel = l.nS.ALLOW_SELECTABLE), e.canMentionEveryone && (R.mentions.global = e.canMentionHere ? l.VV.ALLOW_EVERYONE_OR_HERE : l.VV.ALLOW_EVERYONE), e.canMentionRoles && (R.mentions.role = e.canMentionNonMentionableRoles ? l.Fw.ALLOW_ALL : l.Fw.ALLOW_MENTIONABLE), e.canMentionUsers && (R.mentions.user = e.canMentionAnyGuildUser ? l.h3.ALLOW_GUILD : l.h3.ALLOW_CHANNEL), R.hideMentionDescription = !0
-  } else u && (R.mentions.channel = l.nS.ALLOW_SELECTABLE), a && (R.mentions.role = l.Fw.ALLOW_MENTIONABLE), o && (R.mentions.user = l.h3.ALLOW_CHANNEL), _ && (R.mentions.global = l.VV.ALLOW_EVERYONE_OR_HERE), d && (R.mentions.clyde = l.cz.ALLOW);
-  return (null === (t = S.commands) || void 0 === t ? void 0 : t.enabled) && (c ? R.commands = E ? l.L8.NEW_TEXT_ONLY : l.L8.NEW : R.commands = l.L8.OLD_BUILT_INS), null != n && null != n.channelTypes && (R.allowedChannelTypes = n.channelTypes), R
+  } else u && (R.mentions.channel = l.nS.ALLOW_SELECTABLE), a && (R.mentions.role = l.Fw.ALLOW_MENTIONABLE), o && (R.mentions.user = l.h3.ALLOW_CHANNEL), _ && (R.mentions.global = l.VV.ALLOW_EVERYONE_OR_HERE), c && (R.mentions.clyde = l.cz.ALLOW);
+  return (null === (t = S.commands) || void 0 === t ? void 0 : t.enabled) && (d ? R.commands = E ? l.L8.NEW_TEXT_ONLY : l.L8.NEW : R.commands = l.L8.OLD_BUILT_INS), null != n && null != n.channelTypes && (R.allowedChannelTypes = n.channelTypes), R
 }
 
-function d(e) {
+function c(e) {
   let {
     type: t,
     channel: n,
@@ -90,7 +90,7 @@ function d(e) {
   return !!(null == l.matches || l.matches(n, i, r, s, o)) || !1
 }
 
-function c(e) {
+function d(e) {
   let {
     channel: t,
     guild: n,
@@ -98,14 +98,14 @@ function c(e) {
     currentWord: r,
     currentWordIsAtStart: s,
     textValue: _,
-    optionText: c
+    optionText: d
   } = e, E = null;
   for (let e of a.R) {
     var I, T, h, S, f, N;
     let A = a.W[e];
     if (e === l.eq.GIFS || e === l.eq.CHOICES) {
       if (i.commands === l.L8.OLD_BUILT_INS) {
-        if (d({
+        if (c({
             type: e,
             channel: t,
             guild: n,
@@ -120,20 +120,20 @@ function c(e) {
           };
           break
         }
-      } else if (d({
+      } else if (c({
           type: e,
           channel: t,
           guild: n,
-          query: c,
+          query: d,
           isAtStart: !1,
           options: i
         })) return {
         type: e,
         typeInfo: A,
-        query: c
+        query: d
       }
     } else if (e === l.eq.COMMANDS && i.commands !== l.L8.OLD_BUILT_INS) {
-      if (d({
+      if (c({
           type: e,
           channel: t,
           guild: n,
@@ -149,7 +149,7 @@ function c(e) {
         break
       }
     } else if (e === l.eq.LEGACY_COMMANDS) {
-      if (d({
+      if (c({
           type: e,
           channel: t,
           guild: n,
@@ -165,7 +165,7 @@ function c(e) {
         break
       }
     } else if (e === l.eq.EMOJIS_AND_STICKERS) {
-      if (null != r && r.length > 0 && (0, o.x)(u.qR.AutocompleteTyped), null != r && d({
+      if (null != r && r.length > 0 && (0, o.x)(u.qR.AutocompleteTyped), null != r && c({
           type: e,
           channel: t,
           guild: n,
@@ -180,7 +180,7 @@ function c(e) {
         };
         break
       }
-    } else if (null != r && d({
+    } else if (null != r && c({
         type: e,
         channel: t,
         guild: n,

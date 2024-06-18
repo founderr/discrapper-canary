@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   A: function() {
-    return d
+    return c
   },
   Z: function() {
-    return c
+    return d
   }
 });
 var i = n(735250);
@@ -17,7 +17,7 @@ var r = n(120356),
   u = n(689938),
   _ = n(907849);
 
-function d(e) {
+function c(e) {
   return (0, i.jsx)("svg", {
     ...(0, a.Z)({
       ...e
@@ -34,7 +34,7 @@ function d(e) {
   })
 }
 
-function c(e) {
+function d(e) {
   let {
     className: t,
     forceUseColorForSparkles: n = !1,

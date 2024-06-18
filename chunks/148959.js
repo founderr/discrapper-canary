@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return c
+    return d
   },
   y: function() {
     return i
@@ -14,7 +14,7 @@ var i, r, s = n(392711),
   u = n(70956),
   _ = n(65154);
 
-function d(e, t, n) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -22,7 +22,7 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(r = i || (i = {})).RequestedSSRCsUpdate = "requested-ssrcs-update", r.RequestedStreamsUpdate = "requested-streams-update";
-class c extends a.Z {
+class d extends a.Z {
   setUserID(e) {
     this.userId = e
   }
@@ -72,7 +72,7 @@ class c extends a.Z {
     else return [t.ssrc, 100, e.ssrc, 60]
   }
   constructor(e) {
-    super(), d(this, "supportsSeamless", void 0), d(this, "userId", void 0), d(this, "videoStreams", void 0), d(this, "audioSSRC", void 0), d(this, "downgraded", void 0), d(this, "debugQualityOverride", void 0), d(this, "pendingSSRC", void 0), d(this, "everReceivedFrame", void 0), d(this, "pendingSSRCReceived", void 0), d(this, "throttleDowngradeChanges", void 0), d(this, "STREAM_DOWNGRADE_CHANGE_INTERVAL_MS", void 0), d(this, "throttledSetStreamDowngraded", void 0), this.supportsSeamless = e, this.videoStreams = [], this.audioSSRC = 0, this.downgraded = !1, this.debugQualityOverride = _.Z.NO_OVERRIDE, this.pendingSSRC = -1, this.everReceivedFrame = !1, this.pendingSSRCReceived = !1, this.throttleDowngradeChanges = !0, this.STREAM_DOWNGRADE_CHANGE_INTERVAL_MS = 30 * u.Z.Millis.SECOND, this.throttledSetStreamDowngraded = o().throttle(this.setStreamDowngradedInternal, this.STREAM_DOWNGRADE_CHANGE_INTERVAL_MS, {
+    super(), c(this, "supportsSeamless", void 0), c(this, "userId", void 0), c(this, "videoStreams", void 0), c(this, "audioSSRC", void 0), c(this, "downgraded", void 0), c(this, "debugQualityOverride", void 0), c(this, "pendingSSRC", void 0), c(this, "everReceivedFrame", void 0), c(this, "pendingSSRCReceived", void 0), c(this, "throttleDowngradeChanges", void 0), c(this, "STREAM_DOWNGRADE_CHANGE_INTERVAL_MS", void 0), c(this, "throttledSetStreamDowngraded", void 0), this.supportsSeamless = e, this.videoStreams = [], this.audioSSRC = 0, this.downgraded = !1, this.debugQualityOverride = _.Z.NO_OVERRIDE, this.pendingSSRC = -1, this.everReceivedFrame = !1, this.pendingSSRCReceived = !1, this.throttleDowngradeChanges = !0, this.STREAM_DOWNGRADE_CHANGE_INTERVAL_MS = 30 * u.Z.Millis.SECOND, this.throttledSetStreamDowngraded = o().throttle(this.setStreamDowngradedInternal, this.STREAM_DOWNGRADE_CHANGE_INTERVAL_MS, {
       leading: !0,
       trailing: !1
     }), l.Z.subscribe(() => {

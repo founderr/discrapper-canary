@@ -9,8 +9,8 @@ var r = n(120356),
   l = n(481060),
   u = n(884697),
   _ = n(449217),
-  d = n(706454),
-  c = n(158776),
+  c = n(706454),
+  d = n(158776),
   E = n(74538),
   I = n(204418),
   T = n(689938),
@@ -31,7 +31,7 @@ let S = [{
   f = e => {
     let {
       purchase: t
-    } = e, n = (0, a.e7)([d.default], () => d.default.locale), r = (0, u.qS)(t);
+    } = e, n = (0, a.e7)([c.default], () => c.default.locale), r = (0, u.qS)(t);
     return (0, i.jsxs)("div", {
       className: h.purchaseInfo,
       children: [(0, i.jsx)(l.Text, {
@@ -60,13 +60,13 @@ t.Z = e => {
     user: t,
     guildId: n,
     avatarDecorationOverride: r,
-    className: d
-  } = e, N = (0, a.e7)([c.Z], () => c.Z.getStatus(t.id)), {
+    className: c
+  } = e, N = (0, a.e7)([d.Z], () => d.Z.getStatus(t.id)), {
     product: A,
     purchase: m
-  } = (0, _.Z)(null == r ? void 0 : r.skuId), O = E.ZP.canUseCollectibles(t), R = (0, u.qS)(m), C = (0, u.G1)(A), p = !O && R;
-  return null != A && (null == m || p) ? (0, i.jsxs)("div", {
-    className: s()(h.modalPreview, h.shopPreviewContainer, d),
+  } = (0, _.Z)(null == r ? void 0 : r.skuId), O = E.ZP.canUseCollectibles(t), R = (0, u.qS)(m), p = (0, u.G1)(A), g = !O && R;
+  return null != A && (null == m || g) ? (0, i.jsxs)("div", {
+    className: s()(h.modalPreview, h.shopPreviewContainer, c),
     children: [(0, i.jsx)("div", {
       className: h.shopPreviewBanner,
       children: (0, i.jsx)(I.Z, {
@@ -81,11 +81,11 @@ t.Z = e => {
         children: A.name
       }), (0, i.jsx)(l.Text, {
         variant: "text-sm/normal",
-        children: p ? T.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, o.EQ)([C, O]).with([!0, !0], () => T.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => T.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => T.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
+        children: g ? T.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, o.EQ)([p, O]).with([!0, !0], () => T.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => T.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => T.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
       })]
     })]
   }) : (0, i.jsxs)("div", {
-    className: s()(h.modalPreview, d),
+    className: s()(h.modalPreview, c),
     children: [(0, i.jsxs)("div", {
       className: h.previewSections,
       children: [(0, i.jsx)("div", {

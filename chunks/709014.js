@@ -12,8 +12,8 @@ var i = n(735250),
   l = n.n(a),
   u = n(186325),
   _ = n(390507),
-  d = n(679400),
-  c = n(580747),
+  c = n(679400),
+  d = n(580747),
   E = n(108447);
 let I = r.forwardRef(function(e, t) {
   let {
@@ -25,30 +25,30 @@ let I = r.forwardRef(function(e, t) {
     className: S,
     initialAnimation: f,
     markers: N
-  } = e, [A, m] = r.useState(null), O = r.useRef(null), R = r.useRef(null), C = r.useRef(null), p = "custom" === I ? {
+  } = e, [A, m] = r.useState(null), O = r.useRef(null), R = r.useRef(null), p = r.useRef(null), g = "custom" === I ? {
     width: T,
     height: h
-  } : (0, _.m)(I), g = !(0, c.Z)("lottie_hover_multiple_loop"), L = r.useContext(u.S).reducedMotion.enabled, {
-    enabled: v
-  } = d.Z.useExperiment({
+  } : (0, _.m)(I), C = !(0, d.Z)("lottie_hover_multiple_loop"), v = r.useContext(u.S).reducedMotion.enabled, {
+    enabled: L
+  } = c.Z.useExperiment({
     location: "LottieIcon web entry point"
-  }), D = L || !v;
+  }), D = v || !L;
   return r.useImperativeHandle(t, () => ({
     play: e => {
-      if (null != C.current) {
+      if (null != p.current) {
         if (R.current = e, D) {
           let t = N[e];
-          C.current.resetSegments(!0), C.current.setSegment(t.start + t.duration, t.start + t.duration), C.current.stop()
-        } else C.current.setLoop(!g && e.includes("hover")), C.current.resetSegments(!0), C.current.playSegments([N[e].start, N[e].start + N[e].duration], !0)
+          p.current.resetSegments(!0), p.current.setSegment(t.start + t.duration, t.start + t.duration), p.current.stop()
+        } else p.current.setLoop(!C && e.includes("hover")), p.current.resetSegments(!0), p.current.playSegments([N[e].start, N[e].start + N[e].duration], !0)
       }
     },
     stop: () => {
-      if (null == C.current || D) return
+      if (null == p.current || D) return
     },
     stopIfPlaying: e => {
-      null != C.current && !D && R.current === e && (C.current.resetSegments(!0), C.current.setSegment(N[e].start, N[e].start), C.current.stop())
+      null != p.current && !D && R.current === e && (p.current.resetSegments(!0), p.current.setSegment(N[e].start, N[e].start), p.current.stop())
     }
-  }), [D, g, N]), r.useEffect(() => {
+  }), [D, C, N]), r.useEffect(() => {
     null == A && a().then(e => m(e.default))
   }, [A, a]), r.useEffect(() => (n.e("23755").then(n.t.bind(n, 500923, 23)).then(e => {
     var t;
@@ -60,7 +60,7 @@ let I = r.forwardRef(function(e, t) {
       let e = N[r];
       n = [e.start, e.start + e.duration]
     }
-    null != O.current && (C.current = i.loadAnimation({
+    null != O.current && (p.current = i.loadAnimation({
       container: O.current,
       renderer: "svg",
       loop: !1,
@@ -70,12 +70,12 @@ let I = r.forwardRef(function(e, t) {
     }))
   }), () => {
     var e;
-    null === (e = C.current) || void 0 === e || e.destroy()
+    null === (e = p.current) || void 0 === e || e.destroy()
   }), [A, f, N]), (0, i.jsx)("div", {
     style: {
       "--__lottieIconColor": null != s && "string" == typeof s ? s : null == s ? void 0 : s.css,
       display: "flex",
-      ...p
+      ...g
     },
     className: o()(E.lottieIcon, S),
     ref: O

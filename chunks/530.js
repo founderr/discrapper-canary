@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 });
 var i = n(735250);
@@ -14,13 +14,13 @@ var r = n(120356),
   u = n(689938),
   _ = n(660120);
 
-function d(e) {
+function c(e) {
   let {
     user: t,
     profileType: n,
     usernameIcon: r,
-    tags: d,
-    nickname: c,
+    tags: c,
+    nickname: d,
     nicknameIcons: E,
     pronouns: I,
     className: T,
@@ -44,7 +44,7 @@ function d(e) {
       children: [m((0, i.jsx)(o.Heading, {
         className: s()(_.nickname, A),
         variant: f,
-        children: c
+        children: d
       })), null != E && (0, i.jsx)("div", {
         className: s()(_.nicknameIcons, A),
         children: E
@@ -74,7 +74,7 @@ function d(e) {
             children: I
           })
         })]
-      }), d]
+      }), c]
     })]
   })
 }

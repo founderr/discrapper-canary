@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   $x: function() {
-    return i
+    return r
   },
   GV: function() {
-    return r
+    return i
   },
   S$: function() {
     return g
@@ -13,14 +13,14 @@ n.d(t, {
     return o
   },
   tu: function() {
-    return h
+    return m
   }
 });
 var s = n(470079),
   l = n(31775),
   a = n.n(l);
-let i = 0,
-  r = 4,
+let r = 0,
+  i = 4,
   o = 4,
   c = "absolute",
   d = (e, t, n, s) => {
@@ -104,7 +104,7 @@ let i = 0,
     max: 100
   });
 
-function h(e) {
+function m(e) {
   let {
     numAttachments: t,
     containerWidth: n,
@@ -115,14 +115,14 @@ function h(e) {
     let {
       numAttachments: l,
       containerWidth: a,
-      containerHeight: i
+      containerHeight: r
     } = e;
-    let r = (t = l, n = a, s = i, "".concat(t, "-").concat(n, "-").concat(s)),
-      o = u.get(r);
+    let i = (t = l, n = a, s = r, "".concat(t, "-").concat(n, "-").concat(s)),
+      o = u.get(i);
     if (null != o) return o;
     {
-      let e = d(a, i, l, 4);
-      return u.set(r, e), e
+      let e = d(a, r, l, 4);
+      return u.set(i, e), e
     }
   })({
     numAttachments: t,
@@ -131,7 +131,7 @@ function h(e) {
   }), [t, n, l])
 }
 
-function m(e) {
+function h(e) {
   return e.map((t, n) => ({
     minWidth: 2 * e[n].width,
     minHeight: 2 * e[n].height,
@@ -145,6 +145,6 @@ function g(e) {
     imageContainerStyles: t,
     containerWidth: n,
     containerHeight: l
-  } = e, a = s.useRef(m(t)), i = s.useRef(n), r = s.useRef(l), o = n > i.current + 100, c = l > r.current + 100;
-  return (o || c) && (a.current = m(t)), a.current
+  } = e, a = s.useRef(h(t)), r = s.useRef(n), i = s.useRef(l), o = n > r.current + 100, c = l > i.current + 100;
+  return (o || c) && (a.current = h(t)), a.current
 }

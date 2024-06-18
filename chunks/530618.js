@@ -11,12 +11,12 @@ t.Z = function(e) {
     confettiVelocityMultiplier: a,
     sprites: l,
     colors: u
-  } = e, [_, d] = r.useState(null), c = (0, s.uR)(n, _), [E, I] = r.useState(!1);
+  } = e, [_, c] = r.useState(null), d = (0, s.uR)(n, _), [E, I] = r.useState(!1);
   return r.useEffect(() => {
     let e = Array(10).fill(0);
-    return null != t && c.isReady && !E && (e = e.map((n, i) => setTimeout(() => {
+    return null != t && d.isReady && !E && (e = e.map((n, i) => setTimeout(() => {
       var n, r;
-      i === e.length - 1 && I(!0), c.createMultipleConfetti((n = t.getBoundingClientRect(), r = null != (r = a) ? r : 1, {
+      i === e.length - 1 && I(!0), d.createMultipleConfetti((n = t.getBoundingClientRect(), r = null != (r = a) ? r : 1, {
         ...o.We,
         position: {
           type: "static-random",
@@ -48,8 +48,8 @@ t.Z = function(e) {
     }, 100 * i))), () => {
       for (let t of e) clearTimeout(t)
     }
-  }, [c, t, E, a]), (0, i.jsx)(s.Ji, {
-    ref: d,
+  }, [d, t, E, a]), (0, i.jsx)(s.Ji, {
+    ref: c,
     sprites: null != l ? l : o.CA,
     colors: null != u ? u : o.Br,
     spriteWidth: o.Ko,

@@ -14,8 +14,8 @@ t.Z = {
       cancelText: l,
       onConfirm: u,
       onCancel: _,
-      onCloseCallback: d,
-      secondaryConfirmText: c,
+      onCloseCallback: c,
+      secondaryConfirmText: d,
       onConfirmSecondary: E,
       className: I,
       titleClassName: T
@@ -29,12 +29,12 @@ t.Z = {
       cancelText: l,
       onConfirm: u,
       onCancel: _,
-      secondaryConfirmText: c,
+      secondaryConfirmText: d,
       onConfirmSecondary: E,
       className: I,
       titleClassName: T
     }), {
-      onCloseCallback: d
+      onCloseCallback: c
     })
   },
   close() {},

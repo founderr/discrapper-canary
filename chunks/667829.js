@@ -12,8 +12,8 @@ var i = n(735250),
   l = n.n(a),
   u = n(218887),
   _ = n.n(u),
-  d = n(729594),
-  c = n(873546),
+  c = n(729594),
+  d = n(873546),
   E = n(430742),
   I = n(166459),
   T = n(911969),
@@ -25,11 +25,11 @@ var i = n(735250),
   m = n(403182),
   O = n(541716),
   R = n(752305),
-  C = n(30465),
-  p = n(140963),
-  g = n(4484),
-  L = n(925994),
-  v = n(981631),
+  p = n(30465),
+  g = n(140963),
+  C = n(4484),
+  v = n(925994),
+  L = n(981631),
   D = n(689938),
   M = n(838329);
 
@@ -62,7 +62,7 @@ class b extends r.Component {
     if (this.fixFocus(e), this.props.useSlate !== e.useSlate) {
       var t, n;
       let e;
-      e = this.props.useSlate ? this.props.textValue : (0, L.sk)(this.props.richValue, {
+      e = this.props.useSlate ? this.props.textValue : (0, v.sk)(this.props.richValue, {
         mode: "plain"
       }), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, R.JM)(e))
     } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled()
@@ -171,7 +171,7 @@ class b extends r.Component {
       textValue: l,
       richValue: u,
       disabled: _,
-      onChange: d,
+      onChange: c,
       onKeyDown: E,
       onResize: I,
       onSubmit: T,
@@ -180,8 +180,8 @@ class b extends r.Component {
       fontSize: f,
       useSlate: N,
       spellcheckEnabled: m,
-      useNewSlashCommands: C,
-      canOnlyUseTextCommands: L,
+      useNewSlashCommands: p,
+      canOnlyUseTextCommands: v,
       className: D,
       id: P,
       required: y,
@@ -215,7 +215,7 @@ class b extends r.Component {
       maybeShowAutocomplete: this.maybeShowAutocomplete,
       hideAutocomplete: this.hideAutocomplete,
       allowNewLines: G,
-      onChange: d,
+      onChange: c,
       onResize: I,
       onKeyDown: E,
       onSubmit: T,
@@ -226,8 +226,8 @@ class b extends r.Component {
         [M.textAreaForUserProfile]: S === O.I.USER_PROFILE
       }),
       spellcheckEnabled: m,
-      useNewSlashCommands: C,
-      disableAutoFocus: c.tq || null !== (n = S.disableAutoFocus) && void 0 !== n && n,
+      useNewSlashCommands: p,
+      disableAutoFocus: d.tq || null !== (n = S.disableAutoFocus) && void 0 !== n && n,
       disableEnterToSubmit: null !== (r = null === (e = S.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== r && r,
       "aria-controls": null !== (s = V.id) && void 0 !== s ? s : void 0,
       "aria-haspopup": "listbox",
@@ -237,24 +237,24 @@ class b extends r.Component {
       "aria-describedby": w,
       "aria-labelledby": k,
       "aria-autocomplete": "list"
-    }, H = N ? (0, i.jsx)(g.Z, {
+    }, H = N ? (0, i.jsx)(C.Z, {
       ref: this.ref,
       ...Z,
       type: S,
       value: _ ? (0, R.JM)("") : u,
       canUseCommands: null === (t = S.commands) || void 0 === t ? void 0 : t.enabled,
-      canOnlyUseTextCommands: L
-    }) : (0, i.jsx)(p.Z, {
+      canOnlyUseTextCommands: v
+    }) : (0, i.jsx)(g.Z, {
       ref: this.ref,
       ...Z,
       value: _ ? "" : l
     });
     return (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(A.d9, {
-        event: v.CkL.INSERT_TEXT,
+        event: L.CkL.INSERT_TEXT,
         handler: this.handleInsertText
       }), (0, i.jsx)(A.d9, {
-        event: v.CkL.CLEAR_TEXT,
+        event: L.CkL.CLEAR_TEXT,
         handler: this.handleClearText
       }), H]
     })
@@ -365,7 +365,7 @@ class b extends r.Component {
                   try {
                     let {
                       pathname: n
-                    } = d.parse(t.src);
+                    } = c.parse(t.src);
                     null != n && n.length > 0 && (e = _().basename(n).split(".")[0])
                   } catch (e) {}
                   if (null != e && e.length > 0) return "".concat(e, ".png")
@@ -432,7 +432,7 @@ class b extends r.Component {
           }
         })
       })(a), this.focus(), !0)
-    }), this._unsubscribe = C.p8.subscribe(e => {
+    }), this._unsubscribe = p.p8.subscribe(e => {
       requestAnimationFrame(() => {
         this.setState({
           popup: e
@@ -441,7 +441,7 @@ class b extends r.Component {
     }), this.state = {
       focused: !1,
       submitting: !1,
-      popup: C.p8.getState()
+      popup: p.p8.getState()
     }
   }
 }

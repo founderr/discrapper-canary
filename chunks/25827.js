@@ -4,7 +4,7 @@ n.d(t, {
     return E
   },
   Z: function() {
-    return c
+    return d
   }
 });
 var i = n(735250),
@@ -15,17 +15,17 @@ var i = n(735250),
   l = n(40851),
   u = n(67844),
   _ = n(871499),
-  d = n(239618);
+  c = n(239618);
 
-function c(e) {
+function d(e) {
   let t = (0, u.X)(e),
     {
       enabled: n,
       cameraUnavailable: s,
       onChange: o,
       onCameraUnavailable: _,
-      hasPermission: d,
-      children: c,
+      hasPermission: c,
+      children: d,
       channelLimitReached: E = !1,
       join: I
     } = e,
@@ -37,10 +37,10 @@ function c(e) {
       events: N
     } = (0, a.o)(I || n ? "disable" : "enable");
   return r.useEffect(() => () => f(), [n, f]), (0, i.jsx)(i.Fragment, {
-    children: c({
+    children: d({
       onClick: h,
       active: n,
-      disabled: !n && (!d || E),
+      disabled: !n && (!c || E),
       iconComponent: S,
       label: t,
       unavailable: s,
@@ -66,7 +66,7 @@ function E(e) {
     onPopoutClick: S,
     ...f
   } = e, N = h ? _.d : _.Z;
-  return (0, i.jsx)(c, {
+  return (0, i.jsx)(d, {
     enabled: t,
     join: n,
     channel: r,
@@ -96,7 +96,7 @@ function E(e) {
         },
         isActive: t,
         className: o()(E, {
-          [d.fauxDisabled]: n
+          [c.fauxDisabled]: n
         }),
         onPopoutClick: S
       })

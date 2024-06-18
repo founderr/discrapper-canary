@@ -8,11 +8,11 @@ var i = n(570140),
 let l = {},
   u = {},
   _ = null;
-async function d(e, t) {
-  null == l[e] && (l[e] = new Set), l[e].add(t), null == u[e] && (u[e] = Date.now()), E(e) && await c(e)
+async function c(e, t) {
+  null == l[e] && (l[e] = new Set), l[e].add(t), null == u[e] && (u[e] = Date.now()), E(e) && await d(e)
 }
 
-function c(e) {
+function d(e) {
   if (null == l[e]) return;
   let t = Array.from(l[e]);
   l[e] = new Set, u[e] = Date.now(), requestAnimationFrame(async () => {
@@ -51,16 +51,16 @@ class T extends r.Z {
     null == _ && ! function() {
       if (null == _) _ = setInterval(() => {
         o.default.forEachKey(l, e => {
-          E(e) && c(e)
+          E(e) && d(e)
         })
       }, 1e4)
     }()
   }
   handleGuildMemberUpdate(e, t) {
-    if (!!a.Z.isInitialized(e)) return d(e, t)
+    if (!!a.Z.isInitialized(e)) return c(e, t)
   }
   handleGuildMemberRemove(e, t) {
-    if (!!a.Z.isInitialized(e)) return d(e, t)
+    if (!!a.Z.isInitialized(e)) return c(e, t)
   }
   handleGuildDelete(e) {
     let t = e.guild.id;

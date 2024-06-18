@@ -8,8 +8,8 @@ var i = n(688619),
   l = n.n(a),
   u = n(190558),
   _ = n(387117),
-  d = n(949180),
-  c = n(777910),
+  c = n(949180),
+  d = n(777910),
   E = n(897710);
 let {
   Themes: I
@@ -18,7 +18,7 @@ let {
   RawColors: h
 } = u.V, {
   Shadows: S
-} = c.V, {
+} = d.V, {
   Spacing: f
 } = E.V, {
   Modules: N
@@ -26,7 +26,7 @@ let {
   themes: I,
   modules: N,
   colors: l()(T, (e, t) => ({
-    css: p(t),
+    css: g(t),
     resolve(t) {
       let n = e[t.theme],
         i = n.raw,
@@ -41,19 +41,19 @@ let {
   unsafe_rawColors: l()(h, (e, t) => {
     let n = A[t];
     return {
-      css: p(t),
+      css: g(t),
       resolve: e => O(n, e.saturation)
     }
   }),
   shadows: l()(S, (e, t) => ({
-    css: p(t),
+    css: g(t),
     resolve: t => ({
       boxShadow: e[t.theme].boxShadow,
       filter: e[t.theme].filter,
       nativeStyles: e[t.theme].nativeStyles
     })
   })),
-  radii: d.w,
+  radii: c.w,
   spacing: l()(f, e => "".concat(e, "px"))
 };
 
@@ -87,13 +87,13 @@ function R(e, t, n) {
   return 1 !== t && (s = s.set("hsl.s", s.get("hsl.s") * t)), 1 !== r && (s = s.alpha(s.alpha() * r)), s
 }
 
-function C(e) {
+function p(e) {
   return e.toLowerCase().replace(/_/g, "-")
 }
 
-function p(e, t) {
-  let n = null != t ? C(t) : null,
-    i = C(e);
+function g(e, t) {
+  let n = null != t ? p(t) : null,
+    i = p(e);
   return "var(--".concat([n, i].filter(Boolean).join("-"), ")")
 }
 t.Z = m

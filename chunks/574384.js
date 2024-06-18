@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 }), n(47120);
 var i = n(735250),
@@ -13,12 +13,12 @@ var i = n(735250),
   u = n(689938),
   _ = n(302191);
 
-function d(e) {
+function c(e) {
   var t;
   let {
     selectedGuildId: n,
-    selectedChannelId: d,
-    onChannelChange: c,
+    selectedChannelId: c,
+    onChannelChange: d,
     error: E
   } = e, [I, T] = r.useState(null), h = r.useRef(!1);
   if (r.useEffect(() => {
@@ -29,10 +29,10 @@ function d(e) {
           channels: t
         }), h.current = !0)
       }
-      T(null), null == n ? c(null) : e(n)
-    }, [c, n]), r.useEffect(() => {
-      if (!!h.current) null == I ? null != d && c(null) : !I.channels.some(e => e.id === d) && c(null)
-    }, [I, c, d, n]), null == n) return null;
+      T(null), null == n ? d(null) : e(n)
+    }, [d, n]), r.useEffect(() => {
+      if (!!h.current) null == I ? null != c && d(null) : !I.channels.some(e => e.id === c) && d(null)
+    }, [I, d, c, n]), null == n) return null;
   let S = null == I || I.guildId !== n ? [] : (null !== (t = null == I ? void 0 : I.channels) && void 0 !== t ? t : []).map(e => ({
     value: e.id,
     label: e.name
@@ -50,10 +50,10 @@ function d(e) {
     }) : null, (0, i.jsx)(a.Select, {
       className: _.select,
       maxVisibleItems: 5,
-      select: c,
+      select: d,
       placeholder: u.Z.Messages.SCOPE_WEBHOOK_INCOMING_CHANNEL_PLACEHOLDER,
       options: S,
-      isSelected: e => e === d,
+      isSelected: e => e === c,
       serialize: e => e,
       renderOptionLabel: e => (0, i.jsx)(o.x, {
         variant: "text-md/normal",

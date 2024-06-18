@@ -11,7 +11,7 @@ var i = n(470079);
 
 function r() {
   for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-  let [r, o] = i.useState(void 0), [a, l] = i.useState(void 0), [u, _] = i.useState(void 0), [d, c] = i.useState(void 0), E = i.useRef(null);
+  let [r, o] = i.useState(void 0), [a, l] = i.useState(void 0), [u, _] = i.useState(void 0), [c, d] = i.useState(void 0), E = i.useRef(null);
   return s(E, e => {
     let {
       width: t,
@@ -19,12 +19,12 @@ function r() {
       scrollWidth: i,
       scrollHeight: r
     } = e;
-    l(n), o(t), _(i), c(r)
+    l(n), o(t), _(i), d(r)
   }, t), {
     ref: E,
     width: r,
     height: a,
-    scrollHeight: d,
+    scrollHeight: c,
     scrollWidth: u
   }
 }
@@ -39,17 +39,17 @@ function s(e, t) {
         var i, r, s, o, a, l;
         let u = n[0],
           _ = null == u ? void 0 : null === (r = u.borderBoxSize) || void 0 === r ? void 0 : null === (i = r[0]) || void 0 === i ? void 0 : i.inlineSize,
-          d = null == u ? void 0 : null === (o = u.borderBoxSize) || void 0 === o ? void 0 : null === (s = o[0]) || void 0 === s ? void 0 : s.blockSize;
-        if (null == _ || null == d) {
+          c = null == u ? void 0 : null === (o = u.borderBoxSize) || void 0 === o ? void 0 : null === (s = o[0]) || void 0 === s ? void 0 : s.blockSize;
+        if (null == _ || null == c) {
           let t = e.current;
           if (null != t) {
             let e = window.getComputedStyle(t);
-            null == _ && (_ = parseFloat(null !== (a = e.width) && void 0 !== a ? a : "0")), null == d && (d = parseFloat(null !== (l = e.height) && void 0 !== l ? l : "0"))
+            null == _ && (_ = parseFloat(null !== (a = e.width) && void 0 !== a ? a : "0")), null == c && (c = parseFloat(null !== (l = e.height) && void 0 !== l ? l : "0"))
           }
         }
         t({
           width: _,
-          height: d,
+          height: c,
           scrollHeight: u.target.scrollHeight,
           scrollWidth: u.target.scrollWidth
         })

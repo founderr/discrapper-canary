@@ -7,7 +7,7 @@ n.d(t, {
     return T
   },
   Fg: function() {
-    return c
+    return d
   },
   It: function() {
     return O
@@ -59,7 +59,7 @@ let u = (0, r.B)({
       }
     }]
   }),
-  d = (0, r.B)({
+  c = (0, r.B)({
     kind: "user",
     id: "2024-05_rapidash_prepilot_applications",
     label: "Rapidash Prepilot Application Gate",
@@ -75,8 +75,8 @@ let u = (0, r.B)({
     }]
   });
 
-function c(e) {
-  return d.useExperiment({
+function d(e) {
+  return c.useExperiment({
     location: e
   }, {
     autoTrackExposure: !1
@@ -104,13 +104,13 @@ function I(e) {
   })(e, s)), _ = a.filter(e => (function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return null != e && e.hasFeature(l.oNc.CLAN_PILOT_VALORANT) && (t || !e.hasFeature(l.oNc.CLAN))
-  })(e, s)), d = u.length > 0 && r.enableClanCreation, c = _.length > 0 && n.enableClanCreation, I = [];
-  return d && u.forEach(e => I.push(e)), c && _.forEach(e => I.push(e)), {
+  })(e, s)), c = u.length > 0 && r.enableClanCreation, d = _.length > 0 && n.enableClanCreation, I = [];
+  return c && u.forEach(e => I.push(e)), d && _.forEach(e => I.push(e)), {
     guilds: I,
-    enableClanCreation: d || c,
+    enableClanCreation: c || d,
     defaultGameId: E({
-      genshinConfig: d ? r : void 0,
-      valorantConfig: c ? n : void 0
+      genshinConfig: c ? r : void 0,
+      valorantConfig: d ? n : void 0
     })
   }
 }

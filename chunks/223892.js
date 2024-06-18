@@ -4,7 +4,7 @@ n.d(t, {
     return o
   },
   Lm: function() {
-    return d
+    return c
   },
   Ob: function() {
     return a
@@ -123,7 +123,7 @@ function _(e) {
   return t
 }
 
-function d() {
+function c() {
   let {
     enableCreatorMonetizationNagActivateForUser: e
   } = i.aC.getCurrentConfig({

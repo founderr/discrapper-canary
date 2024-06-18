@@ -15,7 +15,7 @@ var i = n(735250),
 function _(e, t, n) {
   let s = (0, l.G6)(e),
     _ = new Map,
-    d = new n(e => {
+    c = new n(e => {
       e.forEach(e => {
         var t;
         let {
@@ -24,7 +24,7 @@ function _(e, t, n) {
         null === (t = _.get(n)) || void 0 === t || t(e)
       })
     });
-  return (0, r.forwardRef)(function(n, c) {
+  return (0, r.forwardRef)(function(n, d) {
     let {
       onScroll: E,
       dir: I = "ltr",
@@ -37,11 +37,11 @@ function _(e, t, n) {
       renderSection: m,
       renderItem: O,
       getSectionProps: R,
-      itemGutter: C,
-      removeEdgeItemGutters: p,
-      sectionGutter: g,
-      padding: L,
-      paddingVertical: v,
+      itemGutter: p,
+      removeEdgeItemGutters: g,
+      sectionGutter: C,
+      padding: v,
+      paddingVertical: L,
       paddingHorizontal: D,
       fade: M = !1,
       className: P,
@@ -75,11 +75,11 @@ function _(e, t, n) {
       getItemHeight: f,
       getSectionHeight: N,
       chunkSize: A,
-      itemGutter: C,
-      removeEdgeItemGutters: p,
-      sectionGutter: g,
-      padding: L,
-      paddingVertical: v,
+      itemGutter: p,
+      removeEdgeItemGutters: g,
+      sectionGutter: C,
+      padding: v,
+      paddingVertical: L,
       paddingHorizontal: D,
       getScrollerState: Z,
       dir: I,
@@ -92,9 +92,9 @@ function _(e, t, n) {
       ref: x,
       key: "container",
       onUpdate: $,
-      resizeObserver: d,
+      resizeObserver: c,
       listenerMap: _
-    }), (0, r.useImperativeHandle)(c, () => ({
+    }), (0, r.useImperativeHandle)(d, () => ({
       getScrollerNode: () => x.current,
       getItemGrid: Q,
       getCoordsMap: J,

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return g
+    return C
   }
 }), n(724458), n(47120), n(757143), n(773603), n(315314), n(610138), n(216116), n(78328), n(815648), n(653041);
 var i = n(392711),
@@ -12,8 +12,8 @@ var i = n(392711),
   l = n(131704),
   u = n(601964),
   _ = n(709302),
-  d = n(592125),
-  c = n(580005),
+  c = n(592125),
+  d = n(580005),
   E = n(984933),
   I = n(699516),
   T = n(594174),
@@ -33,16 +33,16 @@ function R(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let C = Object.freeze({});
+let p = Object.freeze({});
 
-function p(e, t) {
+function g(e, t) {
   var n, i;
   if (!t.frecencyBoosters) return {};
-  let r = c.Z.getFrequentlyWithoutFetchingLatest(),
+  let r = d.Z.getFrequentlyWithoutFetchingLatest(),
     s = r.reduce((e, t) => {
       let {
         id: n
-      } = t, i = c.Z.getScoreWithoutFetchingLatest(n);
+      } = t, i = d.Z.getScoreWithoutFetchingLatest(n);
       return i > e ? i : e
     }, 0),
     o = [];
@@ -66,7 +66,7 @@ function p(e, t) {
   for (let t of o) {
     let {
       id: n
-    } = t, i = c.Z.getScoreWithoutFetchingLatest(n);
+    } = t, i = d.Z.getScoreWithoutFetchingLatest(n);
     if (e === m.h8.USER && t instanceof l.mn) {
       if (t.type === O.d4z.DM) a[n = t.getRecipientId()] = 1 + i / s;
       else if (t.type === O.d4z.GROUP_DM) {
@@ -76,10 +76,10 @@ function p(e, t) {
     } else a[n] = 1 + i / s
   }
   for (let e of I.Z.getFriendIDs()) a[e] = (null !== (n = a[e]) && void 0 !== n ? n : 1) + .2;
-  for (let e of d.Z.getDMUserIds()) a[e] = (null !== (i = a[e]) && void 0 !== i ? i : 1) + .1;
+  for (let e of c.Z.getDMUserIds()) a[e] = (null !== (i = a[e]) && void 0 !== i ? i : 1) + .1;
   return a
 }
-class g {
+class C {
   createSearchContext() {
     null == this.userSearchContext && (this.userSearchContext = N.Z.getSearchContext(this.parseUserResults, this._limit))
   }
@@ -139,7 +139,7 @@ class g {
   }
   queryTextChannels(e, t) {
     if (!this._include(m.h8.TEXT_CHANNEL)) return [];
-    let n = p(m.h8.TEXT_CHANNEL, this.options),
+    let n = g(m.h8.TEXT_CHANNEL, this.options),
       {
         blacklist: i
       } = this.options,
@@ -157,7 +157,7 @@ class g {
     if (!this._include(m.h8.VOICE_CHANNEL)) return [];
     let {
       voiceChannelGuildFilter: n
-    } = this.options, i = p(m.h8.VOICE_CHANNEL, this.options);
+    } = this.options, i = g(m.h8.VOICE_CHANNEL, this.options);
     return h.ZP.queryChannels({
       query: e,
       guildId: n,
@@ -169,7 +169,7 @@ class g {
   }
   queryGuilds(e, t) {
     if (!this._include(m.h8.GUILD)) return [];
-    let n = p(m.h8.GUILD, this.options),
+    let n = g(m.h8.GUILD, this.options),
       {
         blacklist: i
       } = this.options,
@@ -190,13 +190,13 @@ class g {
     let {
       userFilters: r
     } = this.options;
-    void 0 !== t && S.Z.requestMembers(t, e, 100), i.setLimit(n), i.setQuery(e, r, this._userBlacklist, p(m.h8.USER, this.options))
+    void 0 !== t && S.Z.requestMembers(t, e, 100), i.setLimit(n), i.setQuery(e, r, this._userBlacklist, g(m.h8.USER, this.options))
   }
   queryGroupDMs(e, t) {
     if (!this._include(m.h8.GROUP_DM)) return [];
     let {
       blacklist: n
-    } = this.options, i = p(m.h8.GROUP_DM, this.options), r = null != n ? e => !n.has("channel:".concat(e.id)) : void 0;
+    } = this.options, i = g(m.h8.GROUP_DM, this.options), r = null != n ? e => !n.has("channel:".concat(e.id)) : void 0;
     return h.ZP.queryGroupDMs({
       query: e,
       limit: t,
@@ -232,8 +232,8 @@ class g {
       score: 1
     }] : []
   }
-  constructor(e, t, n = 100, i = C) {
-    R(this, "query", ""), R(this, "options", C), R(this, "results", []), R(this, "_userResults", []), R(this, "_groupDMResults", []), R(this, "_textChannelResults", []), R(this, "_voiceChannelResults", []), R(this, "_guildResults", []), R(this, "_applicationResults", []), R(this, "_linkResults", []), R(this, "_asyncTimeout", void 0), R(this, "userSearchContext", void 0), R(this, "onResultsChange", void 0), R(this, "resultTypes", void 0), R(this, "_userBlacklist", null), R(this, "_limit", void 0), R(this, "parseUserResults", e => {
+  constructor(e, t, n = 100, i = p) {
+    R(this, "query", ""), R(this, "options", p), R(this, "results", []), R(this, "_userResults", []), R(this, "_groupDMResults", []), R(this, "_textChannelResults", []), R(this, "_voiceChannelResults", []), R(this, "_guildResults", []), R(this, "_applicationResults", []), R(this, "_linkResults", []), R(this, "_asyncTimeout", void 0), R(this, "userSearchContext", void 0), R(this, "onResultsChange", void 0), R(this, "resultTypes", void 0), R(this, "_userBlacklist", null), R(this, "_limit", void 0), R(this, "parseUserResults", e => {
       let {
         results: t
       } = e;

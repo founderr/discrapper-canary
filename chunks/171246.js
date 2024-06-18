@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   AQ: function() {
-    return d
+    return c
   },
   KK: function() {
     return u
@@ -39,6 +39,6 @@ function _(e) {
   return (0, s.yE)(e, o.l4R.APPLICATION_USER_SUBSCRIPTION)
 }
 
-function d(e, t, n) {
+function c(e, t, n) {
   return e.subscription_plans[0].sku_id === t.skuId && (u(e.sku_flags) ? null != n && t.guildId === n && n !== o.ME : !!_(e.sku_flags) && null == t.guildId)
 }

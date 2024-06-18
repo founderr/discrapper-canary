@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 });
 var i = n(735250);
@@ -14,19 +14,19 @@ var r = n(481060),
   u = n(730308),
   _ = n(379916);
 
-function d(e) {
+function c(e) {
   var t;
   let {
     user: n,
-    guildId: d
+    guildId: c
   } = e, {
-    botUpgraded: c,
+    botUpgraded: d,
     activeSubscriptionListing: E
   } = (0, o.Z)({
     user: n,
-    guildId: d
+    guildId: c
   }), I = null == E ? void 0 : null === (t = E.sku_benefits) || void 0 === t ? void 0 : t.benefits;
-  return null != d && c && null != I && 0 !== I.length ? (0, i.jsxs)(a.Z, {
+  return null != c && d && null != I && 0 !== I.length ? (0, i.jsxs)(a.Z, {
     children: [(0, i.jsx)(r.Heading, {
       variant: "eyebrow",
       className: _.title,

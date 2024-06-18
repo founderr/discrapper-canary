@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   N: function() {
-    return d
+    return c
   }
 }), n(653041);
 var i = n(735250),
@@ -25,7 +25,7 @@ let u = /url\(['"](.*)['"]\)/,
     return null != t ? t[1] : e
   };
 
-function d(e) {
+function c(e) {
   class t extends r.Component {
     componentDidUpdate(e, t) {
       if (t === this.state) return;

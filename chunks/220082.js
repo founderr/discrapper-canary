@@ -4,13 +4,13 @@ n.d(t, {
     return T
   },
   SR: function() {
-    return d
+    return c
   },
   ZP: function() {
     return I
   },
   vM: function() {
-    return c
+    return d
   }
 }), n(47120);
 var i = n(470079),
@@ -21,16 +21,16 @@ var i = n(470079),
   l = n(607070),
   u = n(302221),
   _ = n(956664);
-let d = (0, o.Z)(() => ({
+let c = (0, o.Z)(() => ({
   palette: {},
   fetching: {}
 }));
-async function c(e) {
-  null == d.getState().palette[e] && await E(e)
+async function d(e) {
+  null == c.getState().palette[e] && await E(e)
 }
 async function E(e) {
-  if (!d.getState().fetching[e]) {
-    d.setState(t => ({
+  if (!c.getState().fetching[e]) {
+    c.setState(t => ({
       fetching: {
         ...t.fetching,
         [e]: !0
@@ -39,7 +39,7 @@ async function E(e) {
     try {
       let t = await (0, _.OF)(e),
         n = (0, u.WY)(t[0]);
-      d.setState(i => ({
+      c.setState(i => ({
         fetching: {
           ...i.fetching,
           [e]: !1
@@ -50,7 +50,7 @@ async function E(e) {
         }
       }))
     } catch (t) {
-      d.setState(t => ({
+      c.setState(t => ({
         fetching: {
           ...t.fetching,
           [e]: !1
@@ -68,7 +68,7 @@ function I(e, t) {
 
 function T(e, t) {
   let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-    r = d(t => null == e ? void 0 : t.palette[e]),
+    r = c(t => null == e ? void 0 : t.palette[e]),
     o = (0, a.e7)([l.Z], () => n && l.Z.desaturateUserColors ? l.Z.saturation : 1);
   i.useEffect(() => {
     if (null != e && null == r) E(e)

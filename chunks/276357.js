@@ -1,37 +1,37 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return E
+    return f
   }
 }), n(47120);
 var s = n(735250),
   l = n(470079),
   a = n(924826),
-  i = n(91192),
-  r = n(442837),
+  r = n(91192),
+  i = n(442837),
   o = n(481060),
   c = n(607070),
   d = n(109434),
   u = n(456269),
-  h = n(228392),
-  m = n(479099),
+  m = n(228392),
+  h = n(479099),
   g = n(981631),
   x = n(689938),
   _ = n(451379);
 
-function f() {
+function E() {
   return Promise.resolve()
 }
 
-function E(e) {
+function f(e) {
   let {
     channel: t,
     closePopout: n,
-    setPopoutRef: E
-  } = e, N = (0, u.Vm)(t), {
+    setPopoutRef: f
+  } = e, C = (0, u.Vm)(t), {
     tagFilter: T
-  } = (0, d.H)(t.id), C = (0, d.v)(), p = (0, r.e7)([c.Z], () => c.Z.keyboardModeEnabled), v = l.useCallback(e => {
-    (0, h.e7)({
+  } = (0, d.H)(t.id), N = (0, d.v)(), I = (0, i.e7)([c.Z], () => c.Z.keyboardModeEnabled), S = l.useCallback(e => {
+    (0, m.e7)({
       guildId: t.guild_id,
       channelId: t.id,
       tagId: e,
@@ -42,25 +42,25 @@ function E(e) {
         section: g.jXE.FORUM_CHANNEL_HEADER,
         object: g.qAy.CHANNEL_TAG
       }
-    }), C.getState().toggleTagFilter(t.id, e)
-  }, [t, T, C]), M = l.useCallback(() => {
-    C.getState().setTagFilter(t.id, new Set), !p && n()
-  }, [C, t.id, p, n]), S = (0, a.ZP)({
+    }), N.getState().toggleTagFilter(t.id, e)
+  }, [t, T, N]), p = l.useCallback(() => {
+    N.getState().setTagFilter(t.id, new Set), !I && n()
+  }, [N, t.id, I, n]), v = (0, a.ZP)({
     id: "".concat(t.id, "-all-tags-dropdown-navigator"),
     isEnabled: !0,
     wrap: !0,
-    scrollToStart: f,
-    scrollToEnd: f
-  }), I = l.useRef(null);
+    scrollToStart: E,
+    scrollToEnd: E
+  }), M = l.useRef(null);
   return l.useEffect(() => {
     requestAnimationFrame(() => {
-      if (null != I.current) {
-        let e = I.current.querySelector(".".concat(_.tag));
+      if (null != M.current) {
+        let e = M.current.querySelector(".".concat(_.tag));
         null != e && e.focus()
       }
     })
   }, []), (0, s.jsxs)(o.Dialog, {
-    ref: E,
+    ref: f,
     "aria-label": x.Z.Messages.FORUM_TAG_FILTER_HEADER,
     className: _.container,
     children: [(0, s.jsx)("div", {
@@ -82,9 +82,9 @@ function E(e) {
           })
         })]
       })
-    }), (0, s.jsx)(i.bG, {
-      navigator: S,
-      children: (0, s.jsx)(i.SJ, {
+    }), (0, s.jsx)(r.bG, {
+      navigator: v,
+      children: (0, s.jsx)(r.SJ, {
         children: e => {
           let {
             ref: t,
@@ -92,15 +92,15 @@ function E(e) {
           } = e;
           return (0, s.jsx)("div", {
             ref: e => {
-              t.current = e, I.current = e
+              t.current = e, M.current = e
             },
             ...n,
             className: _.tagContainer,
-            children: N.map(e => (0, s.jsx)(m.Z, {
+            children: C.map(e => (0, s.jsx)(h.Z, {
               className: _.tag,
               tag: e,
               selected: T.has(e.id),
-              onClick: () => v(e.id)
+              onClick: () => S(e.id)
             }, e.id))
           })
         }
@@ -113,7 +113,7 @@ function E(e) {
       color: o.Button.Colors.CUSTOM,
       className: _.clear,
       "aria-label": x.Z.Messages.FORUM_CLEAR_ALL,
-      onClick: M,
+      onClick: p,
       children: (0, s.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "text-link",

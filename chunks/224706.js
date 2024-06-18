@@ -8,8 +8,8 @@ var i = n(664751),
   l = n(812206),
   u = n(439849),
   _ = n(669764),
-  d = n(706454),
-  c = n(757266),
+  c = n(706454),
+  d = n(757266),
   E = n(77498),
   I = n(283595),
   T = n(417363),
@@ -21,19 +21,19 @@ var i = n(664751),
   m = n(58642),
   O = n(254854),
   R = n(981631),
-  C = n(701488),
-  p = n(689938);
+  p = n(701488),
+  g = n(689938);
 
-function g(e) {
+function C(e) {
   let {
     applicationId: t,
     secret: n,
     channelId: i,
-    intent: r = C.Ws.PLAY,
+    intent: r = p.Ws.PLAY,
     embedded: s = !1,
     analyticsLocations: a = []
   } = e;
-  L(t, null, i, s, a).then(() => f.Z.waitConnected(t)).then(() => Promise.race([f.Z.waitSubscribed(t, R.zMe.ACTIVITY_JOIN)])).then(() => {
+  v(t, null, i, s, a).then(() => f.Z.waitConnected(t)).then(() => Promise.race([f.Z.waitSubscribed(t, R.zMe.ACTIVITY_JOIN)])).then(() => {
     o.Z.dispatch({
       type: "ACTIVITY_JOIN",
       applicationId: t,
@@ -47,11 +47,11 @@ function g(e) {
   }))
 }
 
-function L(e, t, n) {
+function v(e, t, n) {
   let u = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     _ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
   if (u) return null == n ? Promise.reject(Error("Invalid channel ID")) : ((0, a.J$)(n, e, _), Promise.resolve());
-  if (c.Z.isConnected(e)) return Promise.resolve();
+  if (d.Z.isConnected(e)) return Promise.resolve();
   let E = null;
   if (null == t) {
     let n = I.Z.getActiveLibraryApplication(e);
@@ -88,7 +88,7 @@ function L(e, t, n) {
     }, e => {
       if (404 === e.status) return null;
       throw e
-    })).then(e => f.Z.launchDispatchApplication(n, e, d.default.locale, a.getBranchName(), o))
+    })).then(e => f.Z.launchDispatchApplication(n, e, c.default.locale, a.getBranchName(), o))
   } else {
     let t = l.Z.getApplication(e);
     E = null != t ? f.Z.launch(t) : f.Z.launchGame(e)
@@ -108,7 +108,7 @@ function L(e, t, n) {
       pids: t
     })
   }).catch(t => {
-    O.Z.show(R.kVF.LAUNCH_GAME_FAILURE, p.Z.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), o.Z.dispatch({
+    O.Z.show(R.kVF.LAUNCH_GAME_FAILURE, g.Z.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), o.Z.dispatch({
       type: "GAME_LAUNCH_FAIL",
       applicationId: e,
       error: S
@@ -252,9 +252,9 @@ t.Z = {
       publisher: a,
       distributor: l,
       sku: _,
-      executableName: d
-    } = e, c = (0, u.F)(d);
-    if (null != c) s.tn.post({
+      executableName: c
+    } = e, d = (0, u.F)(c);
+    if (null != d) s.tn.post({
       url: R.ANM.UNVERIFIED_APPLICATIONS,
       body: {
         name: i,
@@ -264,7 +264,7 @@ t.Z = {
           distributor: t,
           sku: n
         }),
-        executable: c,
+        executable: d,
         publisher: a,
         report_version: 3
       },
@@ -304,7 +304,7 @@ t.Z = {
       game: e
     })
   },
-  launch: L,
+  launch: v,
   async join(e) {
     let {
       userId: t,
@@ -312,7 +312,7 @@ t.Z = {
       applicationId: i,
       channelId: r,
       messageId: s,
-      intent: a = C.Ws.PLAY,
+      intent: a = p.Ws.PLAY,
       embedded: l = !1
     } = e;
     if (__OVERLAY__) return o.Z.dispatch({
@@ -329,7 +329,7 @@ t.Z = {
     });
     try {
       let e = await A.Z.getJoinSecret(t, n, i, r, s);
-      return g({
+      return C({
         applicationId: i,
         secret: e,
         channelId: r,
@@ -343,5 +343,5 @@ t.Z = {
       }), !1
     }
   },
-  joinWithSecret: g
+  joinWithSecret: C
 }

@@ -171,7 +171,7 @@ function c(e, s) {
         }
       })
     }, [u]),
-    x = n.useCallback(function(e) {
+    C = n.useCallback(function(e) {
       let s = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
       if (!(o.trim().length <= 0))(0, a.flushSync)(() => {
@@ -188,7 +188,7 @@ function c(e, s) {
         })
       }), n && null != t.current && t.current.scrollToBottom(), s && (e.preventDefault(), e.stopPropagation())
     }, [t, u, o]),
-    C = n.useCallback(e => {
+    x = n.useCallback(e => {
       let s = o.trim().length <= 0;
       if (d.length > 0) {
         var t;
@@ -255,12 +255,12 @@ function c(e, s) {
       }), e.preventDefault(), e.stopPropagation()
     }, [l, i, u, c.length, o]),
     O = n.useCallback(e => {
-      e.relatedTarget !== e.currentTarget && x(e, !1, !1)
-    }, [x]),
+      e.relatedTarget !== e.currentTarget && C(e, !1, !1)
+    }, [C]),
     A = n.useCallback(e => {
       let s = e.metaKey || e.ctrlKey;
-      if ("Meta" !== e.key) r.ye.has(e.key) ? x(e) : "Backspace" === e.key ? C(e) : "Escape" === e.key ? h(e) : "a" === e.key && s ? L(e) : r.Bd.has(e.key) && s && R(e)
-    }, [x, C, h, L, R]);
+      if ("Meta" !== e.key) r.ye.has(e.key) ? C(e) : "Backspace" === e.key ? x(e) : "Escape" === e.key ? h(e) : "a" === e.key && s ? L(e) : r.Bd.has(e.key) && s && R(e)
+    }, [C, x, h, L, R]);
   return {
     handlePasteEvent: I,
     handleInputChange: g,
@@ -268,8 +268,8 @@ function c(e, s) {
     handleContainerKeyUp: n.useCallback(e => {
       if (document.activeElement !== l.current) return;
       let s = e.metaKey || e.ctrlKey;
-      "Backspace" === e.key ? C(e) : "a" === e.key && s ? L(e) : "Escape" === e.key ? h(e) : r.Bd.has(e.key) && s ? R(e) : "Meta" !== e.key && h(e)
-    }, [R, C, L, h, l]),
+      "Backspace" === e.key ? x(e) : "a" === e.key && s ? L(e) : "Escape" === e.key ? h(e) : r.Bd.has(e.key) && s ? R(e) : "Meta" !== e.key && h(e)
+    }, [R, x, L, h, l]),
     handleRemoveTag: T,
     handleTagChangeEvent: N,
     handleSelectTag: m,

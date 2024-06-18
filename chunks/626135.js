@@ -13,16 +13,16 @@ n.r(t), n.d(t, {
     return A
   },
   debugLogEvent: function() {
-    return L
+    return v
   },
   expandEventProperties: function() {
-    return g
+    return C
   },
   expandLocation: function() {
     return O
   },
   setUTMContext: function() {
-    return p
+    return g
   },
   trackNetworkAction: function() {
     return D
@@ -36,8 +36,8 @@ var i = n(470079),
   l = n(97145),
   u = n(857192),
   _ = n(747161),
-  d = n(848479),
-  c = n(960048),
+  c = n(848479),
+  d = n(960048),
   E = n(981631),
   I = n(94752),
   T = n(689938);
@@ -243,17 +243,17 @@ function O(e) {
   }
 }
 let R = () => I.E.NONE,
-  C = (0, r.trackMaker)({
+  p = (0, r.trackMaker)({
     analyticEventConfigs: m,
     dispatcher: s.Z,
     TRACK_ACTION_NAME: "TRACK"
   });
 
-function p(e) {
+function g(e) {
   return S = e
 }
 
-function g(e) {
+function C(e) {
   var t, n, i, r, s;
   let o = e;
   if (!o && (o = {}), null != o.location) {
@@ -285,37 +285,37 @@ function g(e) {
       }
     }
   }
-  o.client_performance_cpu = d.Z.getCurrentCPUUsagePercent(), o.client_performance_memory = d.Z.getCurrentMemoryUsageKB(), o.cpu_core_count = d.Z.getCPUCoreCount(), o.accessibility_features = R(), o.rendered_locale = T.Z.getLocale(), o.uptime_app = Math.floor((performance.now() - f) / 1e3);
-  let a = d.Z.getProcessUptime();
+  o.client_performance_cpu = c.Z.getCurrentCPUUsagePercent(), o.client_performance_memory = c.Z.getCurrentMemoryUsageKB(), o.cpu_core_count = c.Z.getCPUCoreCount(), o.accessibility_features = R(), o.rendered_locale = T.Z.getLocale(), o.uptime_app = Math.floor((performance.now() - f) / 1e3);
+  let a = c.Z.getProcessUptime();
   null != a && (o.uptime_process_renderer = Math.floor(a));
   let {
     utmSource: l,
     utmMedium: u,
     utmCampaign: _,
-    utmContent: c
+    utmContent: d
   } = S;
-  return o.utm_source = null !== (t = o.utm_source) && void 0 !== t ? t : l, o.utm_medium = null !== (n = o.utm_medium) && void 0 !== n ? n : u, o.utm_campaign = null !== (i = o.utm_campaign) && void 0 !== i ? i : _, o.utm_content = null !== (r = o.utm_content) && void 0 !== r ? r : c, N.forEach(e => e(o)), o
+  return o.utm_source = null !== (t = o.utm_source) && void 0 !== t ? t : l, o.utm_medium = null !== (n = o.utm_medium) && void 0 !== n ? n : u, o.utm_campaign = null !== (i = o.utm_campaign) && void 0 !== i ? i : _, o.utm_content = null !== (r = o.utm_content) && void 0 !== r ? r : d, N.forEach(e => e(o)), o
 }
 
-function L(e, t) {
+function v(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   u.default.isLoggingAnalyticsEvents && console.info("AnalyticsUtils.track(...):", e, t), n ? a.Hj("Analytics", e, t) : a.Hj("Analytics", e)
 }
-let v = (0, r.trackMaker)({
+let L = (0, r.trackMaker)({
   analyticEventConfigs: m,
   dispatcher: s.Z,
   TRACK_ACTION_NAME: "TRACK"
 });
 
 function D(e, t) {
-  let n = g({
+  let n = C({
     location: (0, o.k$)(),
     ...t
   });
   (0, o.dT)(e, {
     type: "action",
     ...t
-  }), L(e, n), v(e, n)
+  }), v(e, n), L(e, n)
 }
 t.default = {
   ...r,
@@ -323,15 +323,15 @@ t.default = {
   setSystemAccessibilityFeatures: function(e) {
     R = e
   },
-  expandEventProperties: g,
+  expandEventProperties: C,
   track: function(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    if (!l.R.includes(e) && c.Z.addBreadcrumb({
+    if (!l.R.includes(e) && d.Z.addBreadcrumb({
         category: "analytics",
         message: "".concat(e)
       }), null != n.throttlePercent && Math.random() > n.throttlePercent) return Promise.resolve();
-    let i = g(t);
-    return L(e, i, n.logEventProperties), C(e, i, {
+    let i = C(t);
+    return v(e, i, n.logEventProperties), p(e, i, {
       flush: n.flush,
       fingerprint: n.fingerprint
     })

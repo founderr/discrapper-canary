@@ -11,8 +11,8 @@ var i, r = n(735250),
   l = n(40851),
   u = n(261922),
   _ = n(926836),
-  d = n(956664),
-  c = n(506071),
+  c = n(956664),
+  d = n(506071),
   E = n(503349),
   I = n(689938),
   T = n(381237);
@@ -47,7 +47,7 @@ class S extends(i = s.PureComponent) {
         width: i,
         height: r
       } = this.props;
-      n((0, d.zp)(i, r))
+      n((0, c.zp)(i, r))
     }), h(this, "modalContext", (0, a.modalContextFromAppContext)(this.props.appContext)), h(this, "onCloseImage", () => {
       (0, a.closeModal)(E.c, this.modalContext)
     }), h(this, "onZoom", (e, t) => {
@@ -60,8 +60,8 @@ class S extends(i = s.PureComponent) {
         alt: s,
         src: l,
         original: u,
-        width: d,
-        height: c,
+        width: c,
+        height: d,
         animated: h,
         children: S,
         renderLinkComponent: f,
@@ -72,8 +72,8 @@ class S extends(i = s.PureComponent) {
         alt: s,
         src: l,
         original: null != u ? u : l,
-        width: d,
-        height: c,
+        width: c,
+        height: d,
         animated: h,
         children: S,
         zoomThumbnailPlaceholder: n,
@@ -105,7 +105,7 @@ class S extends(i = s.PureComponent) {
 
 function f(e) {
   let t = (0, l.bp)(),
-    n = (0, c.n)();
+    n = (0, d.n)();
   return (0, r.jsx)(S, {
     ...e,
     isWindowFocused: n,

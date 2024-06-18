@@ -3,8 +3,8 @@ var i, r, s, o, a = n(442837),
   l = n(902704),
   u = n(570140);
 let _ = {},
-  d = {},
-  c = {
+  c = {},
+  d = {
     scrollTop: 0
   };
 
@@ -43,10 +43,10 @@ class T extends(o = a.ZP.Store) {
   }
   getGuildDimensions(e) {
     var t;
-    return null !== (t = d[e]) && void 0 !== t ? t : E(e)
+    return null !== (t = c[e]) && void 0 !== t ? t : E(e)
   }
   getGuildListDimensions() {
-    return c
+    return d
   }
   isAtBottom(e) {
     return I(e)
@@ -85,15 +85,15 @@ s = "DimensionStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r
       scrollTop: n,
       scrollTo: i
     } = e;
-    null == d[t] && (d[t] = E(t)), void 0 !== n && (d[t].scrollTop = n);
+    null == c[t] && (c[t] = E(t)), void 0 !== n && (c[t].scrollTop = n);
     let r = !1;
-    return void 0 !== i && (r = d[t].scrollTo !== i, d[t].scrollTo = i), null != i || r
+    return void 0 !== i && (r = c[t].scrollTo !== i, c[t].scrollTo = i), null != i || r
   },
   UPDATE_GUILD_LIST_DIMENSIONS: function(e) {
     let {
       scrollTop: t
     } = e;
-    c.scrollTop = t
+    d.scrollTop = t
   },
   CALL_CREATE: function(e) {
     let {

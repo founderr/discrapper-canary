@@ -22,9 +22,9 @@ let _ = {
     taskbarFlash: !0,
     notifyMessagesInSelectedChannel: !1
   },
-  d = _;
+  c = _;
 
-function c(e, t) {
+function d(e, t) {
   !__OVERLAY__ && o.default.track(e, t)
 }
 
@@ -32,43 +32,43 @@ function E(e) {
   let {
     desktopType: t
   } = e;
-  d.desktopType = t, c(l.rMx.LOCAL_SETTINGS_UPDATED, {
+  c.desktopType = t, d(l.rMx.LOCAL_SETTINGS_UPDATED, {
     notifications_enabled: t === l.qrD.ALL
   })
 }
 class I extends(i = r.ZP.DeviceSettingsStore) {
   initialize(e) {
-    d = {
+    c = {
       ..._,
       ...e
     }
   }
   getUserAgnosticState() {
-    return d
+    return c
   }
   getDesktopType() {
-    return d.desktopType
+    return c.desktopType
   }
   getTTSType() {
-    return d.ttsType
+    return c.ttsType
   }
   getDisabledSounds() {
-    return d.disabledSounds
+    return c.disabledSounds
   }
   getDisableAllSounds() {
-    return d.disableAllSounds
+    return c.disableAllSounds
   }
   getDisableUnreadBadge() {
-    return d.disableUnreadBadge
+    return c.disableUnreadBadge
   }
   getNotifyMessagesInSelectedChannel() {
-    return d.notifyMessagesInSelectedChannel
+    return c.notifyMessagesInSelectedChannel
   }
   get taskbarFlash() {
-    return d.taskbarFlash
+    return c.taskbarFlash
   }
   isSoundDisabled(e) {
-    return d.disableAllSounds || -1 !== d.disabledSounds.indexOf(e)
+    return c.disableAllSounds || -1 !== c.disabledSounds.indexOf(e)
   }
 }
 u(I, "displayName", "NotificationSettingsStore"), u(I, "persistKey", "notifications"), u(I, "migrations", [e => {
@@ -82,23 +82,23 @@ u(I, "displayName", "NotificationSettingsStore"), u(I, "persistKey", "notificati
     let {
       ttsType: t
     } = e;
-    d.ttsType = t
+    c.ttsType = t
   },
   NOTIFICATIONS_SET_DISABLED_SOUNDS: function(e) {
     let {
       sounds: t
     } = e;
-    d.disabledSounds = t
+    c.disabledSounds = t
   },
   NOTIFICATIONS_TOGGLE_ALL_DISABLED: function() {
-    d.disableAllSounds = !d.disableAllSounds
+    c.disableAllSounds = !c.disableAllSounds
   },
   NOTIFICATIONS_SET_PERMISSION_STATE: function(e) {
     let {
       enabled: t,
       source: n
     } = e;
-    c(l.rMx.ENABLE_NOTIFICATIONS, {
+    d(l.rMx.ENABLE_NOTIFICATIONS, {
       enabled: t === l.$Ab.ENABLED,
       source: n
     }), t === l.$Ab.BLOCKED ? E({
@@ -111,18 +111,18 @@ u(I, "displayName", "NotificationSettingsStore"), u(I, "persistKey", "notificati
     let {
       disableUnreadBadge: t
     } = e;
-    d.disableUnreadBadge = t
+    c.disableUnreadBadge = t
   },
   NOTIFICATIONS_SET_TASKBAR_FLASH: function(e) {
     let {
       taskbarFlash: t
     } = e;
-    d.taskbarFlash = t
+    c.taskbarFlash = t
   },
   NOTIFICATIONS_SET_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL: function(e) {
     let {
       notify: t
     } = e;
-    d.notifyMessagesInSelectedChannel = t
+    c.notifyMessagesInSelectedChannel = t
   }
 })

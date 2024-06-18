@@ -16,8 +16,8 @@ function u(e, t, n) {
   }) : e[t] = n, e
 }
 let _ = r.Z.Millis.DAY,
-  d = 30 * r.Z.Millis.MINUTE,
-  c = 5 * r.Z.Millis.SECOND,
+  c = 30 * r.Z.Millis.MINUTE,
+  d = 5 * r.Z.Millis.SECOND,
   E = 5 * r.Z.Millis.MINUTE,
   I = 12 * r.Z.Millis.HOUR;
 class T extends i.Z {
@@ -32,9 +32,9 @@ class T extends i.Z {
     }), u(this, "handlePostConnectionOpen", () => {
       window.clearTimeout(this.initialFetchTimerId), window.clearTimeout(this.recurringFetchTimerId), this.recurringFetchTimerId = window.setInterval(() => {
         Date.now() - this.lastFetchAttemptedAt > _ && (this.lastFetchAttemptedAt = Date.now(), this._fetch())
-      }, d), this.initialFetchTimerId = window.setTimeout(() => {
+      }, c), this.initialFetchTimerId = window.setTimeout(() => {
         0 === o.Z.lastFetchedCurrentQuests && this._fetch()
-      }, Math.floor(Math.random() * c))
+      }, Math.floor(Math.random() * d))
     }), u(this, "handleRunningGamesChange", () => {
       if (!(this.instantiatedAt + I > Date.now() || o.Z.lastFetchedCurrentQuests + I > Date.now())) this._fetch()
     }), u(this, "handleUserSettingsProtoUpdate", e => {

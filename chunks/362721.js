@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   },
   w: function() {
     return _
@@ -28,7 +28,7 @@ function _(e) {
   return u(e, r.Z, t, n)
 }
 
-function d(e) {
+function c(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 ? arguments[2] : void 0;
   return (0, i.e7)([r.Z], () => u(e, r.Z, t, n), [e, t, n])

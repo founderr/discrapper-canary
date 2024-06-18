@@ -14,9 +14,9 @@ let l = e => {
   r.useEffect(() => {
     _(null != l ? l : "")
   }, [l]);
-  let d = t.name,
+  let c = t.name,
     {
-      title: c,
+      title: d,
       options: E
     } = t.data,
     I = r.useCallback(e => {
@@ -24,11 +24,11 @@ let l = e => {
     }, [n]);
   return (0, i.jsxs)("div", {
     className: a.marginBottom8,
-    children: [null != c && (0, i.jsx)("div", {
+    children: [null != d && (0, i.jsx)("div", {
       className: a.marginBottom8,
       children: (0, i.jsxs)(s.Text, {
         variant: "text-sm/bold",
-        children: [c, t.should_submit_data && (0, i.jsx)("span", {
+        children: [d, t.should_submit_data && (0, i.jsx)("span", {
           className: o.required,
           children: "*"
         })]
@@ -38,7 +38,7 @@ let l = e => {
       onChange: I,
       options: E
     })]
-  }, d)
+  }, c)
 };
 t.Z = e => {
   let {

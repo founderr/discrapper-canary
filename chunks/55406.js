@@ -8,8 +8,8 @@ var r = n(302454),
   l = n(594199);
 let u = s().defaultRules.lheading,
   _ = s().defaultRules.heading,
-  d = s().defaultRules.link,
-  c = s().defaultRules.image,
+  c = s().defaultRules.link,
+  d = s().defaultRules.image,
   E = s().defaultRules.list,
   I = s().defaultRules.blockQuote,
   T = s().defaultRules.paragraph,
@@ -33,11 +33,11 @@ let f = e => {
   N = e => ({
     ...i.baseRules,
     image: {
-      ...c,
+      ...d,
       ..."function" == typeof i.customRules.image ? i.customRules.image(e) : i.customRules.image
     },
     link: {
-      ...d,
+      ...c,
       ..."function" == typeof i.customRules.link ? i.customRules.link(e) : i.customRules.link
     },
     list: {

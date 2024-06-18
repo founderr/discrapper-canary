@@ -8,8 +8,8 @@ var i = n(913527),
   l = n(594174),
   u = n(580130),
   _ = n(111361),
-  d = n(470918),
-  c = n(595878),
+  c = n(470918),
+  d = n(595878),
   E = n(513785),
   I = n(106255),
   T = n(474936),
@@ -42,7 +42,7 @@ function A() {
     });
     return
   }
-  if (!!(0, c.d)({
+  if (!!(0, d.d)({
       location: "tenure_reward_manager"
     }))
     if ((!0 === e || function(e) {
@@ -68,7 +68,7 @@ function A() {
     }
 }
 async function m() {
-  if (!f) f = !0, await d.V(), f = !1, s.Z.wait(() => (function() {
+  if (!f) f = !0, await c.V(), f = !1, s.Z.wait(() => (function() {
     var e;
     if (O(), E.Z.getFetchState() !== E.M.FETCHED || f) return;
     let t = null !== (e = E.Z.getTenureRewardStatusForRewardId(h.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : E.Z.getTenureRewardStatusForRewardId(h.Ft.FREE_GUILD_BOOST_3_MONTHS);
@@ -86,10 +86,10 @@ function R() {
   O()
 }
 
-function C() {
+function p() {
   A()
 }
-class p extends o.Z {
+class g extends o.Z {
   forceRefreshIfOutdated() {
     let e = E.Z.getState();
     null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 864e5 && A({
@@ -99,7 +99,7 @@ class p extends o.Z {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
-      POST_CONNECTION_OPEN: C,
+      POST_CONNECTION_OPEN: p,
       CONNECTION_CLOSED: R,
       ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => A(),
       ENTITLEMENT_CREATE: N,
@@ -114,4 +114,4 @@ class p extends o.Z {
     }) : t[n] = i
   }
 }
-t.Z = new p
+t.Z = new g

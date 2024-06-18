@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   Lx: function() {
-    return p
+    return g
   },
   kq: function() {
-    return C
+    return p
   },
   vy: function() {
     return R
@@ -19,8 +19,8 @@ var i, r, s = n(392711),
   l = n(100527),
   u = n(367907),
   _ = n(339085),
-  d = n(697426),
-  c = n(100986),
+  c = n(697426),
+  d = n(100986),
   E = n(944486),
   I = n(70956),
   T = n(176354),
@@ -58,10 +58,10 @@ function R(e, t, n) {
     onRequestProgress: s
   }).then(A.VqG, () => {
     if (r.signal.aborted) return
-  }), (0, c.Z)([l.Z.CHANNEL_CALL], n, t, d.jy.ENTRY)
+  }), (0, d.Z)([l.Z.CHANNEL_CALL], n, t, c.jy.ENTRY)
 }
 
-function C(e, t, n, i) {
+function p(e, t, n, i) {
   var r, s;
   let a = _.Z.getCustomEmojiById(null !== (r = t.emojiId) && void 0 !== r ? r : ""),
     {
@@ -80,9 +80,9 @@ function C(e, t, n, i) {
     onRequestProgress: u
   }).then(A.VqG, () => {
     if (l.signal.aborted) return
-  }), (0, c.Z)(null != i ? i : [], n, t, d.jy.DEFAULT)
+  }), (0, d.Z)(null != i ? i : [], n, t, c.jy.DEFAULT)
 }(i = r || (r = {})).EMOJI_PICKER = "emoji_picker", i.EFFECT_BAR = "effect_bar";
-let p = async e => {
+let g = async e => {
   let {
     channel: t,
     emoji: n,
@@ -108,7 +108,7 @@ let p = async e => {
     await o.tn.post({
       url: A.ANM.VOICE_CHANNEL_EFFECTS(t.id),
       body: e
-    }), L(t, n, i, u), a.Z.dispatch({
+    }), v(t, n, i, u), a.Z.dispatch({
       type: "VOICE_CHANNEL_EFFECT_SENT_LOCAL"
     })
   } catch (e) {
@@ -120,10 +120,10 @@ let p = async e => {
       })
     }
   }
-}, g = {
+}, C = {
   [N.q.BASIC]: "Basic",
   [N.q.PREMIUM]: "Premium"
-}, L = (e, t, n, i) => {
+}, v = (e, t, n, i) => {
   let {
     unicode: r,
     custom: s,
@@ -131,7 +131,7 @@ let p = async e => {
     managed: a,
     managedExternal: l,
     animated: _
-  } = (0, T.sp)([t], e.getGuildId()), d = g[i];
+  } = (0, T.sp)([t], e.getGuildId()), c = C[i];
   u.ZP.trackWithMetadata(A.rMx.VOICE_CHANNEL_EFFECT_SENT, {
     channel_id: e.id,
     guild_id: e.getGuildId(),
@@ -142,7 +142,7 @@ let p = async e => {
     emoji_managed: a,
     emoji_managed_external: l,
     emoji_animated: _,
-    animation_type: d,
+    animation_type: c,
     is_broadcast: e.isBroadcastChannel()
   })
 }

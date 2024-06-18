@@ -29,15 +29,15 @@ function _(e) {
     customInstallUrl: n,
     installParams: u,
     integrationTypesConfig: _,
-    guildId: d,
-    channelId: c,
+    guildId: c,
+    channelId: d,
     disableGuildSelect: E,
     source: I
   } = e;
   if (null != n) {
     o.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
       application_id: t,
-      guild_id: d,
+      guild_id: c,
       auth_type: "custom_url",
       source: I,
       device_platform: i.tq ? "mobile_web" : "desktop_web"
@@ -49,28 +49,28 @@ function _(e) {
   if (null != _ && Object.values(_).some(e => null != e && null != e.oauth2_install_params)) {
     o.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
       application_id: t,
-      guild_id: d,
+      guild_id: c,
       auth_type: "in_app",
       source: I,
       device_platform: i.tq ? "mobile_web" : "desktop_web"
     }), (0, s.openOAuth2Modal)({
       clientId: t,
-      guildId: d,
-      channelId: c,
+      guildId: c,
+      channelId: d,
       disableGuildSelect: E
     });
     return
   }
   null != u && (o.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
     application_id: t,
-    guild_id: d,
+    guild_id: c,
     auth_type: "in_app",
     source: I,
     device_platform: i.tq ? "mobile_web" : "desktop_web"
   }), (0, s.openOAuth2Modal)({
     clientId: t,
-    guildId: d,
-    channelId: c,
+    guildId: c,
+    channelId: d,
     disableGuildSelect: E,
     scopes: u.scopes,
     permissions: null != u.permissions ? r.vB(u.permissions) : void 0

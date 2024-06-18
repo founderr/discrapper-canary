@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   GN: function() {
-    return g
+    return C
   },
   M2: function() {
-    return L
+    return v
   },
   Nq: function() {
-    return p
+    return g
   },
   SZ: function() {
     return M
@@ -19,7 +19,7 @@ n.d(t, {
     return R
   },
   sR: function() {
-    return v
+    return L
   },
   tt: function() {
     return y
@@ -33,8 +33,8 @@ var i = n(399606),
   l = n(581883),
   u = n(401062),
   _ = n(131704),
-  d = n(496675),
-  c = n(594174),
+  c = n(496675),
+  d = n(594174),
   E = n(626135),
   I = n(74538),
   T = n(51144),
@@ -52,20 +52,20 @@ function R() {
   return null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 100
 }
 
-function C(e, t) {
-  return (null == t ? void 0 : t.guild_id) == null || d.Z.can(O.Plq.USE_EXTERNAL_SOUNDS, t) || e.guildId === m.X8 || e.guildId === (null == t ? void 0 : t.guild_id)
-}
-
-function p(e, t, n) {
-  let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-  return (I.ZP.canUseSoundboardEverywhere(e) || t.guildId === (null == n ? void 0 : n.guild_id) || t.guildId === m.X8) && C(t, n) && (!i || t.available)
+function p(e, t) {
+  return (null == t ? void 0 : t.guild_id) == null || c.Z.can(O.Plq.USE_EXTERNAL_SOUNDS, t) || e.guildId === m.X8 || e.guildId === (null == t ? void 0 : t.guild_id)
 }
 
 function g(e, t, n) {
+  let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
+  return (I.ZP.canUseSoundboardEverywhere(e) || t.guildId === (null == n ? void 0 : n.guild_id) || t.guildId === m.X8) && p(t, n) && (!i || t.available)
+}
+
+function C(e, t, n) {
   (0, h.XE)(t, e, f.YQ.SOUNDBOARD), (0, u.kq)(t, e, __OVERLAY__, n)
 }
-async function L(e) {
-  let t = c.default.getCurrentUser(),
+async function v(e) {
+  let t = d.default.getCurrentUser(),
     n = (0, s.Z)(),
     i = (0, A.k9)(e);
   if (null == n || _.Lr.has(n.type) || null == i || !I.ZP.canUseCustomCallSounds(t) || !(0, N.D)()) return;
@@ -74,16 +74,16 @@ async function L(e) {
     o = S.Z.getSound(r, i.soundId);
   if (null != o) {
     var a, l;
-    if (!C(o, n) || !p(t, o, n, !0)) return null;
+    if (!p(o, n) || !g(t, o, n, !0)) return null;
     a = o, l = n.id, (0, h.XE)(l, a, f.YQ.JOINED_VOICE_CHANNEL), (0, u.vy)(l, a, __OVERLAY__)
   }
 }
 
-function v(e) {
+function L(e) {
   var t, n;
   let {
     isSoundboardButtonDisabled: s = !1
-  } = e, o = (0, i.e7)([c.default], () => c.default.getCurrentUser()), a = [r.z.SOUNDBOARD_EDUCATION];
+  } = e, o = (0, i.e7)([d.default], () => d.default.getCurrentUser()), a = [r.z.SOUNDBOARD_EDUCATION];
   if (!s && !Object.values(null !== (n = null === (t = l.Z.settings.guilds) || void 0 === t ? void 0 : t.guilds) && void 0 !== n ? n : {}).some(e => null != e.joinSound)) {
     a.push(r.z.CUSTOM_CALL_SOUNDS_SPARKLES);
     let e = (0, T.Fc)(o);

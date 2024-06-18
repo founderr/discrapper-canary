@@ -16,19 +16,19 @@ function a(e, t, n) {
   let {
     entries: u,
     serializedChildren: _
-  } = r.q.markdown(a, n, !0), d = [];
+  } = r.q.markdown(a, n, !0), c = [];
   for (let t = 0; t < u.length; t++) {
     let n = u[t];
     if (n.attributes.length > 0 && n.text.length > 0) {
       let s = u[t - 1],
         o = u[t + 1],
         a = (0, i.t)(e, l, _, n.start),
-        c = {
+        d = {
           anchor: a,
           focus: (0, i.t)(e, l, _, n.start + n.text.length)
         },
         E = r.bN.nodes(e, {
-          at: c,
+          at: d,
           mode: "lowest",
           voids: !1
         }),
@@ -43,12 +43,12 @@ function a(e, t, n) {
           anchor: r.bN.start(e, n),
           focus: r.bN.end(e, n)
         };
-        r.Jz.isBefore(t.anchor, c.anchor) && (t.anchor = c.anchor), r.Jz.isAfter(t.focus, c.focus) && (t.focus = c.focus), d.push({
+        r.Jz.isBefore(t.anchor, d.anchor) && (t.anchor = d.anchor), r.Jz.isAfter(t.focus, d.focus) && (t.focus = d.focus), c.push({
           ...I,
           ...t
         })
       }
     }
   }
-  return d
+  return c
 }

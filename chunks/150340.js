@@ -15,8 +15,8 @@ var i = n(913527),
   l = n(675478),
   u = n(581883),
   _ = n(430824),
-  d = n(709054),
-  c = n(866817),
+  c = n(709054),
+  d = n(866817),
   E = n(637853),
   I = n(981631),
   T = n(921944);
@@ -26,7 +26,7 @@ let h = [s.z.GUILD_ONBOARDING_UPSELL_MODAL_V2, s.z.GUILD_ONBOARDING_UPSELL_CHANN
 function f(e, t) {
   var n;
   let i = _.Z.getGuilds(),
-    s = d.default.entries(i).some(e => {
+    s = c.default.entries(i).some(e => {
       let [t, n] = e, i = (0, E.wC)(t), r = n.hasFeature(I.oNc.GUILD_ONBOARDING_EVER_ENABLED);
       return i && r
     });
@@ -38,7 +38,7 @@ function f(e, t) {
   if (-1 === N || !(null == f || f > S[N]) || h.find(e => !(0, a.un)(e)) !== t) return !1;
   let {
     showLifecycleUpsells: A
-  } = c.Z.getCurrentConfig({
+  } = d.Z.getCurrentConfig({
     guildId: e,
     location: "7f5b67_1"
   }, {

@@ -27,7 +27,7 @@ let o = ["#57595f", "#847d8b", "#d1cdd5"],
       primaryTintColor: u,
       ..._
     } = e, {
-      primaryColorsTransformed: d
+      primaryColorsTransformed: c
     } = (0, s.s)({
       primaryBaseColors: o,
       primaryTintColor: u,
@@ -43,25 +43,25 @@ let o = ["#57595f", "#847d8b", "#d1cdd5"],
       xmlns: "http://www.w3.org/2000/svg",
       children: [(0, i.jsx)("path", {
         d: "M14 4V3h-1V2h-1V1H4v1H3v1H2v1H1v6h1v1h1v1h1v2h1v1h6v-1h1v-2h1v-1h1v-1h1V4h-1Z",
-        fill: d[2]
+        fill: c[2]
       }), (0, i.jsx)("path", {
         d: "M4 1H3v1h1V1ZM3 2H2v1h1V2ZM2 3H1v1h1V3ZM4 12H3v2h1v-2ZM3 11H2v1h1v-1ZM5 14H4v1h1v-1ZM2 10H1v1h1v-1Z",
         fill: "#000"
       }), (0, i.jsx)("path", {
         d: "M4 11H3v1h1v-1ZM5 13H4v1h1v-1ZM3 10H2v1h1v-1ZM7 7H4v3h3V7Z",
-        fill: d[1]
+        fill: c[1]
       }), (0, i.jsx)("path", {
         d: "M7 8H5v2h2V8Z",
-        fill: d[0]
+        fill: c[0]
       }), (0, i.jsx)("path", {
         d: "M12 7H9v3h3V7Z",
-        fill: d[1]
+        fill: c[1]
       }), (0, i.jsx)("path", {
         d: "M12 8h-2v2h2V8Z",
-        fill: d[0]
+        fill: c[0]
       }), (0, i.jsx)("path", {
         d: "M12 12.01h1v-1h-1v1ZM11 14.01h1v-1h-1v1ZM13 11.01h1v-1h-1v1Z",
-        fill: d[1]
+        fill: c[1]
       }), (0, i.jsx)("path", {
         d: "M1 4H0v6h1V4Z",
         fill: "#000"
@@ -73,7 +73,7 @@ let o = ["#57595f", "#847d8b", "#d1cdd5"],
         fill: "#000"
       }), (0, i.jsx)("path", {
         d: "M14 10.01h1v-6h-1v6Z",
-        fill: d[1]
+        fill: c[1]
       }), (0, i.jsx)("path", {
         d: "M4 0v1h8V0H4Z",
         fill: "#000"
@@ -85,10 +85,10 @@ let o = ["#57595f", "#847d8b", "#d1cdd5"],
         fill: "#000"
       }), (0, i.jsx)("path", {
         d: "M5 14v1h6v-1H5Z",
-        fill: d[1]
+        fill: c[1]
       }), (0, i.jsx)("path", {
         d: "M7 13H6v2h1v-2ZM10 13H9v2h1v-2Z",
-        fill: d[0]
+        fill: c[0]
       })]
     })
   }

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   LO: function() {
-    return p
+    return g
   },
   On: function() {
     return R
@@ -13,7 +13,7 @@ n.d(t, {
     return O
   },
   bp: function() {
-    return g
+    return C
   },
   ef: function() {
     return A
@@ -33,8 +33,8 @@ var i = n(434179),
   l = n(340332),
   u = n(19780),
   _ = n(797258),
-  d = n(626135),
-  c = n(960048),
+  c = n(626135),
+  d = n(960048),
   E = n(607214),
   I = n(258609),
   T = n(893387),
@@ -43,7 +43,7 @@ var i = n(434179),
 
 function f(e, t) {
   var n, i;
-  d.default.track(h.rMx.REMOTE_COMMAND_SENT, {
+  c.default.track(h.rMx.REMOTE_COMMAND_SENT, {
     command_type: e,
     remote_platform: null === (i = _.Z.getSessionById(t)) || void 0 === i ? void 0 : null === (n = i.clientInfo) || void 0 === n ? void 0 : n.os
   })
@@ -55,7 +55,7 @@ async function N() {
     type: "REMOTE_SESSION_DISCONNECT"
   });
   let n = [];
-  ((null == e ? void 0 : e.type) === h.ABu.PLAYSTATION || (null == e ? void 0 : e.type) === h.ABu.PLAYSTATION_STAGING) && (null == e ? void 0 : e.commandId) != null && (null == e ? void 0 : e.deviceId) != null && n.push(v(e.type, e.deviceId, e.commandId)), null != t && n.push(function(e) {
+  ((null == e ? void 0 : e.type) === h.ABu.PLAYSTATION || (null == e ? void 0 : e.type) === h.ABu.PLAYSTATION_STAGING) && (null == e ? void 0 : e.commandId) != null && (null == e ? void 0 : e.deviceId) != null && n.push(L(e.type, e.deviceId, e.commandId)), null != t && n.push(function(e) {
     return s.tn.del({
       url: h.ANM.CONNECT_REQUEST(e)
     })
@@ -116,7 +116,7 @@ function R(e, t, n, i) {
     }
   }), f("AUDIO_SETTINGS_UPDATE", e))
 }
-async function C() {
+async function p() {
   let e;
   try {
     let t = null != u.Z.getRTCConnectionId() ? r.o.TRANSFER_EXISTING_CALL : r.o.CREATE_NEW_CALL;
@@ -129,11 +129,11 @@ async function C() {
       }
     })).body.nonce
   } catch (e) {
-    c.Z.captureException(e)
+    d.Z.captureException(e)
   }
   return e
 }
-async function p(e) {
+async function g(e) {
   let t;
   o.Z.dispatch({
     type: "GAME_CONSOLE_FETCH_DEVICES_START",
@@ -158,14 +158,14 @@ async function p(e) {
   }), n
 }
 
-function g(e, t) {
+function C(e, t) {
   o.Z.dispatch({
     type: "GAME_CONSOLE_SELECT_DEVICE",
     platform: e,
     deviceId: t
   })
 }
-async function L(e, t, n, r) {
+async function v(e, t, n, r) {
   let a;
   o.Z.dispatch({
     type: "GAME_CONSOLE_DEVICE_SEND_COMMAND_START",
@@ -198,7 +198,7 @@ async function L(e, t, n, r) {
     commandId: l
   }), l
 }
-async function v(e, t, n) {
+async function L(e, t, n) {
   o.Z.dispatch({
     type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_START",
     platform: e,
@@ -227,6 +227,6 @@ async function v(e, t, n) {
 }
 async function D(e, t, n) {
   await E.Z.maybeShowPTTAlert(e), await N();
-  let i = await C();
-  await L(e, t, n, i), (0, T.Z)(n.id, e)
+  let i = await p();
+  await v(e, t, n, i), (0, T.Z)(n.id, e)
 }

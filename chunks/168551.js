@@ -4,7 +4,7 @@ n.d(t, {
     return _
   },
   e3: function() {
-    return d
+    return c
   }
 }), n(47120);
 var i = n(470079),
@@ -15,8 +15,8 @@ var i = n(470079),
   l = n(514361),
   u = n(629935);
 let _ = "data-client-themes",
-  d = "custom-theme-background",
-  c = () => {
+  c = "custom-theme-background",
+  d = () => {
     let e = (0, s.e7)([l.Z], () => l.Z.gradientPreset),
       {
         enabled: t
@@ -36,16 +36,16 @@ let _ = "data-client-themes",
         let [t, n] = e;
         return "".concat(t, ": ").concat(n, ";")
       }).join("\n"), "\n    ") : "";
-      return ".".concat(d, " {\n      --custom-theme-background: ").concat(n, ";\n      ").concat(_, "\n    }")
+      return ".".concat(c, " {\n      --custom-theme-background: ").concat(n, ";\n      ").concat(_, "\n    }")
     }, [t, e])
   };
 t.ZP = () => {
-  let e = c();
+  let e = d();
   return null === e ? {
     clientThemesCSS: "",
     clientThemesClassName: ""
   } : {
     clientThemesCSS: e,
-    clientThemesClassName: d
+    clientThemesClassName: c
   }
 }

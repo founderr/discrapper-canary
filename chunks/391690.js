@@ -8,7 +8,7 @@ var r, s = n(442837),
   u = n(417363),
   _ = n(689938);
 
-function d(e, t, n) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -16,15 +16,15 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let c = {},
+let d = {},
   E = (0, l.isWindows)() ? "".concat(a.Z.process.env.LOCALAPPDATA, "\\DiscordGames") : (0, l.isMac)() ? "/Applications/DiscordGames" : "/tmp";
 
 function I(e, t) {
   var n;
-  c = {
-    ...c,
+  d = {
+    ...d,
     [e]: {
-      ...null !== (n = c[e]) && void 0 !== n ? n : {},
+      ...null !== (n = d[e]) && void 0 !== n ? n : {},
       ...t
     }
   }
@@ -79,7 +79,7 @@ class f extends(r = s.ZP.PersistedStore) {
     }))
   }
   get installationPathsMetadata() {
-    return c
+    return d
   }
   hasGamesInstalledInPath(e) {
     let {
@@ -101,7 +101,7 @@ class f extends(r = s.ZP.PersistedStore) {
     return e === E ? _.Z.Messages.INSTALL_LOCATION_MAIN : null !== (n = null !== (t = a.Z.fileManager.basename(e)) && void 0 !== t ? t : e.replace(/[/\\]+$/, "").split(/[/\\]+/g).slice(-1)[0]) && void 0 !== n ? n : "?"
   }
 }
-d(f, "displayName", "InstallationManagerStore"), d(f, "persistKey", "InstallationManagerStore"), t.Z = new f(o.Z, {
+c(f, "displayName", "InstallationManagerStore"), c(f, "persistKey", "InstallationManagerStore"), t.Z = new f(o.Z, {
   DISPATCH_APPLICATION_INSTALL: T,
   DISPATCH_APPLICATION_UNINSTALL: h,
   DISPATCH_APPLICATION_CANCEL: function(e) {
@@ -122,9 +122,9 @@ d(f, "displayName", "InstallationManagerStore"), d(f, "persistKey", "Installatio
     } = e;
     if (!i.installationPaths.has(n) || i.defaultInstallationPath === n) return !1;
     let r = new Set(i.installationPaths);
-    r.delete(n), i.installationPaths = r, t = n, c = {
-      ...c
-    }, delete c[t], ! function(e) {
+    r.delete(n), i.installationPaths = r, t = n, d = {
+      ...d
+    }, delete d[t], ! function(e) {
       if (null == i.pathLabels[e]) return;
       i.pathLabels = {
         ...i.pathLabels

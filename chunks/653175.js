@@ -12,8 +12,8 @@ var i = n(570140),
   l = n(592125),
   u = n(131951),
   _ = n(19780),
-  d = n(944486),
-  c = n(594174);
+  c = n(944486),
+  d = n(594174);
 let E = (e, t) => ({
     channel_id: e.id,
     channel_type: e.type,
@@ -25,7 +25,7 @@ let E = (e, t) => ({
   }),
   I = () => {
     var e;
-    let t = (0, s.P)(c.default.getCurrentUser());
+    let t = (0, s.P)(d.default.getCurrentUser());
     return {
       video_device_name: null === (e = u.Z.getVideoDevices()[u.Z.getVideoDeviceId()]) || void 0 === e ? void 0 : e.name,
       video_hardware_scaling_enabled: u.Z.getHardwareH264(),
@@ -35,7 +35,7 @@ let E = (e, t) => ({
   };
 
 function T(e, t, n, r) {
-  let s = d.Z.getVoiceChannelId(),
+  let s = c.Z.getVoiceChannelId(),
     a = l.Z.getChannel(s);
   if (null == t && null != s && null != a) {
     let t = E(a, r);

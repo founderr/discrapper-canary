@@ -28,23 +28,23 @@ n.d(t, {
     return S
   },
   tA: function() {
-    return c
+    return d
   },
   uu: function() {
     return E
   },
   zM: function() {
-    return d
+    return c
   }
 }), n(610138), n(216116), n(78328), n(815648), n(47120);
 var i, r, s, o, a = n(243814),
   l = n(981631);
 let u = "xbox://communitylinking/donut/audio",
   _ = "https://www.xbox.com/en-US/apps/xbox-app-for-mobile",
-  d = "https://login.live.com",
-  c = [a.x.VOICE, a.x.DM_CHANNELS_READ, a.x.GUILDS, a.x.GUILDS_MEMBERS_READ, a.x.IDENTIFY, a.x.CONNECTIONS],
+  c = "https://login.live.com",
+  d = [a.x.VOICE, a.x.DM_CHANNELS_READ, a.x.GUILDS, a.x.GUILDS_MEMBERS_READ, a.x.IDENTIFY, a.x.CONNECTIONS],
   E = "https://my.account.sony.com",
-  I = c,
+  I = d,
   T = e => {
     let {
       guildId: t,

@@ -20,14 +20,14 @@ function u() {
     analyticsLocations: u,
     openWithoutBackstack: _
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, {
-    analyticsLocations: d
+    analyticsLocations: c
   } = (0, s.ZP)();
   return (0, i.useCallback)(() => {
-    null != e && (0, o.Fq)(e, null != u ? u : d), r.Z.open(a.oAB.PROFILE_CUSTOMIZATION, null != e ? l.NB.GUILD : l.NB.USER_PROFILE, {
+    null != e && (0, o.Fq)(e, null != u ? u : c), r.Z.open(a.oAB.PROFILE_CUSTOMIZATION, null != e ? l.NB.GUILD : l.NB.USER_PROFILE, {
       scrollPosition: t,
       analyticsLocation: n,
       analyticsLocations: u,
       openWithoutBackstack: _
     })
-  }, [e, t, n, u, _, d])
+  }, [e, t, n, u, _, c])
 }

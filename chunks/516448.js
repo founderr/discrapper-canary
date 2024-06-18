@@ -28,7 +28,7 @@ function g(e) {
   } = e, {
     editStateId: t,
     guildId: g
-  } = (0, o.N)(), [x, C] = c.UE(t), [R, L] = c.R7(t), O = i.useMemo(() => s.filter(e => e.id !== t), [s, t]), {
+  } = (0, o.N)(), [C, x] = c.UE(t), [R, L] = c.R7(t), O = i.useMemo(() => s.filter(e => e.id !== t), [s, t]), {
     isFullServerGating: A
   } = (0, d.Z)(g), p = (0, a.Dt)(), M = (0, r.mY)();
   return (0, n.jsxs)(u.Z, {
@@ -43,18 +43,18 @@ function g(e) {
         disabled: M,
         children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_HEADER_SUBTITLE
       }), (0, n.jsx)(E.Z, {
-        channelBenefits: x,
+        channelBenefits: C,
         intangibleBenefits: R,
         subscriptionListings: O,
         onImport: function(e, s) {
-          C(s => s.concat(e)), L(e => e.concat(s))
+          x(s => s.concat(e)), L(e => e.concat(s))
         }
       }), (0, n.jsx)(l.Spacer, {
         size: 8
       }), (0, n.jsx)(E.w, {
         guildId: g,
         onImport: function(e) {
-          C(s => {
+          x(s => {
             let t = new Set(s.map(e => {
               let {
                 ref_id: s

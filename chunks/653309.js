@@ -4,7 +4,7 @@ n.d(t, {
     return _
   },
   Z: function() {
-    return d
+    return c
   }
 }), n(47120), n(390547), n(411104);
 var i = n(735250);
@@ -34,19 +34,19 @@ let _ = {
   subtext: a.subtext
 };
 
-function d(e, t) {
+function c(e, t) {
   let n;
   let {
     attributes: r,
     children: u,
-    leaf: d,
-    text: c
-  } = t, E = !1, [I] = o.bN.node(e, o.C0.parent(o.bN.findPath(e, c)));
+    leaf: c,
+    text: d
+  } = t, E = !1, [I] = o.bN.node(e, o.C0.parent(o.bN.findPath(e, d)));
   switch (o.bN.isEditor(I) ? "editor" : I.type) {
     case "line":
     case "blockQuote": {
       E = void 0;
-      let e = Object.entries(d).filter(e => {
+      let e = Object.entries(c).filter(e => {
         let [t] = e;
         return "text" !== t
       }).flatMap(e => {
@@ -59,12 +59,12 @@ function d(e, t) {
         }
       }).filter(e => null != e).join(" ");
       n = s()(e, {
-        [a.syntaxOverride]: "||" === d.text || "\\" === d.text
+        [a.syntaxOverride]: "||" === c.text || "\\" === c.text
       })
     }
   }
   return n = s()(n, {
-    [l.emptyText]: "" === c.text
+    [l.emptyText]: "" === d.text
   }), (0, i.jsx)("span", {
     ...r,
     className: n,

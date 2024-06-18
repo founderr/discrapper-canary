@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   AG: function() {
-    return c
+    return d
   },
   FR: function() {
-    return d
+    return c
   },
   Ij: function() {
     return E
@@ -42,7 +42,7 @@ function _(e) {
   return (0, i.e7)([o.Z], () => null != e && o.Z.can(l.Plq.MANAGE_GUILD, e), [e])
 }
 
-function d(e) {
+function c(e) {
   return u.useExperiment({
     guildId: e.id,
     location: "108f83_1"
@@ -50,7 +50,7 @@ function d(e) {
     autoTrackExposure: !1
   })
 }
-async function c(e, t) {
+async function d(e, t) {
   if (e.hasFeature(l.oNc.INVITES_DISABLED) === t) return;
   let n = new Set(e.features);
   t ? n.add(l.oNc.INVITES_DISABLED) : n.delete(l.oNc.INVITES_DISABLED), await a.Z.saveGuild(e.id, {

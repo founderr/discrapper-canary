@@ -63,10 +63,10 @@ function l(e) {
   } = e;
   if (o && !u || a.includes(t)) return !0;
   if (_ || null == l || 0 === l.length) return !1;
-  let d = i.Z.getChannel(n);
-  if (null == d) return !1;
-  let c = d.getGuildId();
-  if (null == c || null == s.Z.getGuild(c)) return !1;
-  let E = r.ZP.getMember(c, t);
+  let c = i.Z.getChannel(n);
+  if (null == c) return !1;
+  let d = c.getGuildId();
+  if (null == d || null == s.Z.getGuild(d)) return !1;
+  let E = r.ZP.getMember(d, t);
   return null != E && l.some(e => E.roles.includes(e))
 }

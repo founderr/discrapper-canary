@@ -8,8 +8,8 @@ var i = n(735250),
   l = n(266067),
   u = n(873546),
   _ = n(442837),
-  d = n(316792),
-  c = n(481060),
+  c = n(316792),
+  d = n(481060),
   E = n(607070),
   I = n(168551),
   T = n(19759),
@@ -21,9 +21,9 @@ var i = n(735250),
   m = n(252618),
   O = n(587061),
   R = n(392358),
-  C = n(981631);
+  p = n(981631);
 n(799623);
-let p = new Set([C.Z5c.LOGIN, C.Z5c.REGISTER]);
+let g = new Set([p.Z5c.LOGIN, p.Z5c.REGISTER]);
 t.Z = r.memo(function(e) {
   let {
     children: t,
@@ -33,11 +33,11 @@ t.Z = r.memo(function(e) {
     skipsSettingDefaultPageTitle: s
   });
   let {
-    clientThemesClassName: C,
-    clientThemesCSS: g
-  } = (0, I.ZP)(), L = r.createElement("style", {
+    clientThemesClassName: p,
+    clientThemesCSS: C
+  } = (0, I.ZP)(), v = r.createElement("style", {
     [I.PQ]: !0
-  }, g);
+  }, C);
   return (0, i.jsxs)(a.ql, {
     children: [function(e) {
       let {
@@ -48,14 +48,14 @@ t.Z = r.memo(function(e) {
         theme: S.Z.theme
       })), s = (0, _.e7)([f.Z], () => f.Z.isFocused(), []), {
         reducedMotion: a,
-        alwaysShowLinkDecorations: d
-      } = r.useContext(c.AccessibilityPreferencesContext), {
+        alwaysShowLinkDecorations: c
+      } = r.useContext(d.AccessibilityPreferencesContext), {
         fontScale: I,
         fontScaleClass: m,
-        keyboardModeEnabled: C,
-        saturation: g,
-        desaturateUserColors: L,
-        useForcedColors: v,
+        keyboardModeEnabled: p,
+        saturation: C,
+        desaturateUserColors: v,
+        useForcedColors: L,
         systemForcedColors: D
       } = (0, _.cj)([E.Z], () => {
         let {
@@ -76,37 +76,37 @@ t.Z = r.memo(function(e) {
           useForcedColors: s,
           systemForcedColors: o
         }
-      }), M = (0, l.TH)(), P = r.useMemo(() => p.has(M.pathname), [M.pathname]);
+      }), M = (0, l.TH)(), P = r.useMemo(() => g.has(M.pathname), [M.pathname]);
       (0, O.Z)(window, P);
       let y = (0, R.Z)(window, __OVERLAY__ || s),
         U = (0, _.e7)([T.Z], () => T.Z.sidebarWidth),
-        b = (0, c.useRedesignIconContext)().enabled,
+        b = (0, d.useRedesignIconContext)().enabled,
         G = window.CSS.supports("selector(::-webkit-scrollbar)");
       return (0, i.jsx)("html", {
         lang: t,
-        style: "font-size: ".concat(I, "%; --saturation-factor: ").concat(g, "; --devtools-sidebar-width: ").concat(U, "px;"),
+        style: "font-size: ".concat(I, "%; --saturation-factor: ").concat(C, "; --devtools-sidebar-width: ").concat(U, "px;"),
         className: o()(e, {
           overlay: __OVERLAY__,
           "mouse-mode": y,
-          "keyboard-mode": C,
+          "keyboard-mode": p,
           "reduce-motion": a.enabled,
           "full-motion": !a.enabled,
           "is-mobile": u.tq,
           "app-focused": s,
-          "low-saturation": g <= c.LOW_SATURATION_THRESHOLD,
-          "decorate-links": d,
-          "desaturate-user-colors": L,
-          "disable-forced-colors": !v && "active" === D,
-          "enable-forced-colors": v,
+          "low-saturation": C <= d.LOW_SATURATION_THRESHOLD,
+          "decorate-links": c,
+          "desaturate-user-colors": v,
+          "disable-forced-colors": !L && "active" === D,
+          "enable-forced-colors": L,
           "show-redesigned-icons": b,
           "no-webkit-scrollbar": !G,
           "has-webkit-scrollbar": G
         }, (0, N.Q)(n), (0, A.Z)(), m)
       })
-    }(C), function() {
+    }(p), function() {
       let [e, t] = r.useState([]);
       return r.useEffect(() => {
-        Promise.all(d.L.map(e => n(529305)("./".concat(e, ".woff2")).then(e => {
+        Promise.all(c.L.map(e => n(529305)("./".concat(e, ".woff2")).then(e => {
           let {
             default: t
           } = e;
@@ -121,6 +121,6 @@ t.Z = r.memo(function(e) {
           crossOrigin: "true"
         }, t))
       })
-    }(), L, t]
+    }(), v, t]
   })
 })

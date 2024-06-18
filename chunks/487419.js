@@ -4,8 +4,8 @@ var i, r, s, o, a = n(442837),
   l = n(570140),
   u = n(353926),
   _ = n(581883),
-  d = n(430824),
-  c = n(496675),
+  c = n(430824),
+  d = n(496675),
   E = n(709054),
   I = n(154285),
   T = n(533244);
@@ -15,7 +15,7 @@ let h = {},
 function f() {
   var e;
   let t = null !== (e = _.Z.getGuildsProto()) && void 0 !== e ? e : {},
-    n = d.Z.getGuilds(),
+    n = c.Z.getGuilds(),
     i = E.default.keys(n);
   for (let e of (S = {}, i))(0, I.jy)(e).showAlertMode && (S[e] = {
     guildId: e,
@@ -34,7 +34,7 @@ function N(e) {
 }
 class A extends(i = a.ZP.Store) {
   initialize() {
-    this.waitFor(_.Z, d.Z, c.Z, u.Z), this.syncWith([_.Z, d.Z, c.Z, u.Z], f)
+    this.waitFor(_.Z, c.Z, d.Z, u.Z), this.syncWith([_.Z, c.Z, d.Z, u.Z], f)
   }
   getGuildIncident(e) {
     return h[e]

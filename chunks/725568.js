@@ -7,10 +7,10 @@ n.d(t, {
     return N
   },
   ob: function() {
-    return p
+    return g
   },
   q4: function() {
-    return C
+    return p
   }
 }), n(47120);
 var i, r, s = n(735250),
@@ -19,16 +19,16 @@ var i, r, s = n(735250),
   l = n.n(a),
   u = n(832706),
   _ = n(435802),
-  d = n(652874),
-  c = n(477690),
+  c = n(652874),
+  d = n(477690),
   E = n(481060),
   I = n(714338),
   T = n(624138),
   h = n(153850),
   S = n(162534);
-let f = (0, T.Mg)(c.Z.FULL_SCREEN_LAYER_ANIMATION_DURATION);
+let f = (0, T.Mg)(d.Z.FULL_SCREEN_LAYER_ANIMATION_DURATION);
 (r = i || (i = {}))[r.ENTERING = 1] = "ENTERING", r[r.ENTERED = 2] = "ENTERED", r[r.EXITING = 3] = "EXITING", r[r.EXITED = 4] = "EXITED";
-let N = (0, d.Z)(e => ({
+let N = (0, c.Z)(e => ({
   fullScreenLayers: [],
   addLayer: t => e(e => {
     let {
@@ -50,7 +50,7 @@ function A(e) {
         binds: ["esc"],
         comboKeysBindGlobal: !0,
         action() {
-          p(e)
+          g(e)
         }
       }
     }
@@ -64,7 +64,7 @@ function A(e) {
         className: S.drag
       }), t.render({
         transitionState: null != t ? t.transitionState : 3,
-        closeLayer: () => p(t.key)
+        closeLayer: () => g(t.key)
       })]
     })
   })
@@ -110,7 +110,7 @@ function R() {
   })
 }
 
-function C(e) {
+function p(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
     {
       layerKey: n,
@@ -127,7 +127,7 @@ function C(e) {
   })), r
 }
 
-function p(e) {
+function g(e) {
   N.setState(t => ({
     fullScreenLayers: t.fullScreenLayers.filter(t => t.key !== e)
   }))

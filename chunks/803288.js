@@ -1,10 +1,10 @@
 "use strict";
 t.d(s, {
   T: function() {
-    return v
+    return D
   },
   Z: function() {
-    return Z
+    return j
   }
 }), t(757143), t(47120);
 var n = t(735250),
@@ -25,8 +25,8 @@ var n = t(735250),
   S = t(379070),
   h = t(709586),
   g = t(267642),
-  x = t(999382),
-  C = t(621319),
+  C = t(999382),
+  x = t(621319),
   R = t(44550),
   L = t(770270),
   O = t(981631),
@@ -42,23 +42,23 @@ function f(e, s, t) {
     writable: !0
   }) : e[s] = t, e
 }
-let v = r.ZP.connectStores([x.Z, R.Z], () => {
+let D = r.ZP.connectStores([C.Z, R.Z], () => {
   let e = R.Z.vanityURLCode,
-    s = x.Z.getGuildId();
+    s = C.Z.getGuildId();
   return {
     vanityURLCode: e,
     guildId: s,
     onReset() {
-      (0, C.H7)()
+      (0, x.H7)()
     },
     onSave() {
-      null != s && (0, C.en)(s, e)
+      null != s && (0, x.en)(s, e)
     }
   }
 })(d.Z);
-class D extends i.PureComponent {
+class v extends i.PureComponent {
   componentWillUnmount() {
-    (0, C.xv)()
+    (0, x.xv)()
   }
   renderEditCard() {
     let {
@@ -142,10 +142,10 @@ class D extends i.PureComponent {
     }
   }
   handleRemoveVanityURL() {
-    (0, C.Gy)("")
+    (0, x.Gy)("")
   }
   handleInviteCodeChange(e) {
-    (0, C.Gy)(e.replace(/ /g, "-"))
+    (0, x.Gy)(e.replace(/ /g, "-"))
   }
   render() {
     let {
@@ -214,8 +214,8 @@ class D extends i.PureComponent {
   }
 }
 
-function Z() {
-  let e = (0, r.e7)([x.Z], () => x.Z.getGuild()),
+function j() {
+  let e = (0, r.e7)([C.Z], () => C.Z.getGuild()),
     s = (0, r.cj)([R.Z], () => ({
       vanityURLCode: R.Z.vanityURLCode,
       vanityURLUses: R.Z.vanityURLUses,
@@ -229,7 +229,7 @@ function Z() {
     } = (0, _.ZP)(u.Z.VANITY_URL);
   return (0, n.jsx)(_.Gt, {
     value: i,
-    children: (0, n.jsx)(D, {
+    children: (0, n.jsx)(v, {
       guild: e,
       ...s,
       hide: t,

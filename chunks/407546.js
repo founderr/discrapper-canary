@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 });
 var i = n(735250);
@@ -14,14 +14,14 @@ var r = n(149765),
   u = n(689938),
   _ = n(302191);
 
-function d(e) {
+function c(e) {
   let {
     error: t,
     selectedGuildId: n,
-    onGuildChange: d,
-    guilds: c,
+    onGuildChange: c,
+    guilds: d,
     disabled: E = !1
-  } = e, I = c.filter(e => r.e$(e.permissions, l.Plq.MANAGE_GUILD)).map(e => ({
+  } = e, I = d.filter(e => r.e$(e.permissions, l.Plq.MANAGE_GUILD)).map(e => ({
     value: e.id,
     label: e.name
   }));
@@ -40,7 +40,7 @@ function d(e) {
       maxVisibleItems: 5,
       placeholder: u.Z.Messages.OAUTH2_ADD_TO_GUILD_PLACEHOLDER,
       options: I,
-      select: d,
+      select: c,
       isDisabled: E,
       isSelected: e => e === n,
       serialize: e => e

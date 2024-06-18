@@ -8,8 +8,8 @@ var i = n(735250),
   l = n(468026),
   u = n(503856),
   _ = n(209590),
-  d = n(689938);
-let c = () => {
+  c = n(689938);
+let d = () => {
     a.Z.clearSuppressWarning()
   },
   E = () => {
@@ -24,12 +24,12 @@ t.Z = () => {
   let [a, I] = (0, s.Wu)([_.Z], () => [_.Z.shouldShowWarning(), _.Z.isAFKChannel()], []), T = r.useCallback(() => {
     let t = "",
       n = "";
-    I ? (t = d.Z.Messages.SUPPRESSED_AFK_TITLE, n = d.Z.Messages.SUPPRESSED_AFK_BODY) : (t = d.Z.Messages.SUPPRESSED, n = d.Z.Messages.SUPPRESSED_PERMISSION_BODY), e.current = (0, o.openModal)(e => (0, i.jsx)(l.default, {
+    I ? (t = c.Z.Messages.SUPPRESSED_AFK_TITLE, n = c.Z.Messages.SUPPRESSED_AFK_BODY) : (t = c.Z.Messages.SUPPRESSED, n = c.Z.Messages.SUPPRESSED_PERMISSION_BODY), e.current = (0, o.openModal)(e => (0, i.jsx)(l.default, {
       title: t,
       body: n,
-      onConfirm: c,
-      confirmText: d.Z.Messages.OKAY,
-      secondaryConfirmText: d.Z.Messages.DONT_SHOW_AGAIN,
+      onConfirm: d,
+      confirmText: c.Z.Messages.OKAY,
+      secondaryConfirmText: c.Z.Messages.DONT_SHOW_AGAIN,
       onConfirmSecondary: E,
       ...e
     }))

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 });
 var i = n(727429),
@@ -12,19 +12,19 @@ var i = n(727429),
   l = n(849027),
   u = n(927723),
   _ = n(981631);
-async function d(e, t, n) {
-  let d = (0, a.Qj)(e);
-  if (null != d && !await (0, l.Z)(d)) {
+async function c(e, t, n) {
+  let c = (0, a.Qj)(e);
+  if (null != c && !await (0, l.Z)(c)) {
     (0, u.k)({
       kind: "channel"
     });
     return
   }
-  if (null == d) {
+  if (null == c) {
     (0, r.uL)(e, t, n);
     return
   }
-  let c = function(e) {
+  let d = function(e) {
     if (null == e.channelId) return e;
     let t = o.Z.getChannel(e.channelId);
     if (null == t) return e;
@@ -33,10 +33,10 @@ async function d(e, t, n) {
       ...e,
       guildId: null != n ? n : _.ME
     }
-  }(d);
-  if (null == c.channelId) {
-    (0, s.X)(c.guildId);
+  }(c);
+  if (null == d.channelId) {
+    (0, s.X)(d.guildId);
     return
   }
-  null != c.threadId ? (0, r.uL)(_.Z5c.CHANNEL_THREAD_VIEW(c.guildId, c.channelId, c.threadId, c.messageId), t, n) : (0, r.uL)(_.Z5c.CHANNEL(c.guildId, c.channelId, c.messageId), t, n)
+  null != d.threadId ? (0, r.uL)(_.Z5c.CHANNEL_THREAD_VIEW(d.guildId, d.channelId, d.threadId, d.messageId), t, n) : (0, r.uL)(_.Z5c.CHANNEL(d.guildId, d.channelId, d.messageId), t, n)
 }

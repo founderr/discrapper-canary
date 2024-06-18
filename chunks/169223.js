@@ -9,8 +9,8 @@ var r = n(481060),
   l = n(981283),
   u = n(928518),
   _ = n(314897),
-  d = n(592125),
-  c = n(158776),
+  c = n(592125),
+  d = n(158776),
   E = n(19780),
   I = n(959457),
   T = n(178635),
@@ -56,7 +56,7 @@ class N extends T.Z {
       let {
         streamKey: s,
         canShowFeedback: l
-      } = e, u = (0, o.my)(s), d = (0, a.L2)(u, c.Z), E = null !== (t = I.Z.getVideoStats(s)) && void 0 !== t ? t : {}, T = {
+      } = e, u = (0, o.my)(s), c = (0, a.L2)(u, d.Z), E = null !== (t = I.Z.getVideoStats(s)) && void 0 !== t ? t : {}, T = {
         media_session_id: I.Z.getMediaSessionId(s),
         rtc_connection_id: I.Z.getRtcConnectionId(s),
         stream_region: I.Z.getRegion(s),
@@ -70,7 +70,7 @@ class N extends T.Z {
           } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96307")]).then(n.bind(n, 142402));
           return t => (0, i.jsx)(e, {
             stream: u,
-            streamApplication: d,
+            streamApplication: c,
             isStreamer: u.ownerId === _.default.getId(),
             ...t,
             analyticsData: T
@@ -97,7 +97,7 @@ class N extends T.Z {
         applicationId: t,
         channelId: o,
         showFeedback: a
-      } = e, l = s.Z.getApplication(t), _ = d.Z.getChannel(o), c = {
+      } = e, l = s.Z.getApplication(t), _ = c.Z.getChannel(o), d = {
         rtc_connection_id: E.Z.getRTCConnectionId(),
         media_session_id: E.Z.getMediaSessionId()
       }, I = u.Z.getWindowOpen(S.KJ3.CHANNEL_CALL_POPOUT) ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
@@ -110,7 +110,7 @@ class N extends T.Z {
             ...t,
             activityApplication: l,
             channel: _,
-            analyticsData: c
+            analyticsData: d
           })
         }, {
           contextKey: I

@@ -16,24 +16,24 @@ let l = null,
     })
   },
   _ = (e, t) => {
-    var n, r, l, u, _, d;
-    let c = s.ZP.getMember(e, t),
+    var n, r, l, u, _, c;
+    let d = s.ZP.getMember(e, t),
       E = o.default.getUser(t);
-    if (null == c || null == E || (0, a.b)(c)) return;
+    if (null == d || null == E || (0, a.b)(d)) return;
     let I = {
-      ...c,
+      ...d,
       guildId: e,
-      nick: null !== (n = c.nick) && void 0 !== n ? n : E.username,
-      avatar: null !== (r = c.avatar) && void 0 !== r ? r : void 0,
-      avatarDecoration: null != c.avatarDecoration ? {
-        ...c.avatarDecoration
+      nick: null !== (n = d.nick) && void 0 !== n ? n : E.username,
+      avatar: null !== (r = d.avatar) && void 0 !== r ? r : void 0,
+      avatarDecoration: null != d.avatarDecoration ? {
+        ...d.avatarDecoration
       } : void 0,
-      premiumSince: null !== (l = c.premiumSince) && void 0 !== l ? l : void 0,
-      isPending: null !== (u = c.isPending) && void 0 !== u && u,
+      premiumSince: null !== (l = d.premiumSince) && void 0 !== l ? l : void 0,
+      isPending: null !== (u = d.isPending) && void 0 !== u && u,
       user: {
         ...E,
         email: null !== (_ = E.email) && void 0 !== _ ? _ : void 0,
-        phone: null !== (d = E.phone) && void 0 !== d ? d : void 0
+        phone: null !== (c = E.phone) && void 0 !== c ? c : void 0
       },
       communicationDisabledUntil: null
     };
@@ -42,7 +42,7 @@ let l = null,
       ...I
     })
   };
-class d extends r.Z {
+class c extends r.Z {
   _initialize() {
     l = setInterval(() => u(), 1e4)
   }
@@ -59,4 +59,4 @@ class d extends r.Z {
     }) : t[n] = i
   }
 }
-t.Z = new d
+t.Z = new c

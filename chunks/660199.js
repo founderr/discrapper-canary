@@ -4,7 +4,7 @@ n.d(t, {
     return _
   },
   He: function() {
-    return c
+    return d
   },
   K_: function() {
     return l
@@ -13,7 +13,7 @@ n.d(t, {
     return a
   },
   ZB: function() {
-    return d
+    return c
   }
 });
 var i = n(913527),
@@ -46,7 +46,7 @@ Object.setPrototypeOf(a, null);
 let u = Object.keys(a).join("|"),
   _ = new RegExp("^<t:(-?\\d{1,17})(?::(".concat(u, "))?>"));
 
-function d(e, t) {
+function c(e, t) {
   let n = r()(Number(e) * o.Z.Millis.SECOND);
   if (!n.isValid()) return null;
   let i = null != t ? a[t] : void 0;
@@ -59,6 +59,6 @@ function d(e, t) {
   }
 }
 
-function c(e, t) {
+function d(e, t) {
   return null != t ? "<t:".concat(e, ":").concat(t, ">") : "<t:".concat(e, ">")
 }

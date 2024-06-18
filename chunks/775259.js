@@ -27,7 +27,7 @@ let o = ["#ff1b90", "#ff7fc0", "#f0f0f0"],
       primaryTintColor: u,
       ..._
     } = e, {
-      primaryColorsTransformed: d
+      primaryColorsTransformed: c
     } = (0, s.s)({
       primaryBaseColors: o,
       primaryTintColor: u,
@@ -46,23 +46,23 @@ let o = ["#ff1b90", "#ff7fc0", "#f0f0f0"],
         fill: "#000"
       }), (0, i.jsx)("path", {
         d: "M15 4h-1V3h-1V2H9v1H7V2H3v1H2v1H1v5h1v2h1v1h2v1h2v1h2v-1h2v-1h2v-1h1V9h1V4Z",
-        fill: d[1]
+        fill: c[1]
       }), (0, i.jsx)("path", {
         d: "M15 4h-1v5h1V4ZM14 9h-1v2h1V9ZM3 9H2v2h1V9ZM13 11h-2v1h2v-1ZM11 12H9v1h2v-1ZM9 13H7v1h2v-1ZM7 12H5v1h2v-1ZM5 11H3v1h2v-1Z",
-        fill: d[0]
+        fill: c[0]
       }), (0, i.jsx)("path", {
         d: "M3 1v1h4V1H3ZM2 2v1h1V2H2ZM1 3v1h1V3H1ZM0 4v5h1V4H0ZM1 9v2h1V9H1ZM2 11v1h1v-1H2ZM3 12v1h2v-1H3ZM5 13v1h2v-1H5Z",
         fill: "#000"
       }), (0, i.jsx)("path", {
         d: "M3 2v1h4V2H3ZM9 2v1h4V2H9ZM7 3v1h2V3H7Z",
-        fill: d[2]
+        fill: c[2]
       }), (0, i.jsx)("path", {
         opacity: ".6",
         d: "M11 6V5H9v1H7V5H5v1H4v3h1v1h2.01v1h2v-1H11V9h1V6h-1Z",
         fill: "#fff"
       }), (0, i.jsx)("path", {
         d: "M13 3v1h1V3h-1ZM2 3v1h1V3H2ZM3 4v1h1V4H3ZM1 4v2h1V4H1Z",
-        fill: d[2]
+        fill: c[2]
       })]
     })
   }

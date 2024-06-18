@@ -8,8 +8,8 @@ var i = n(735250),
   l = n(273389),
   u = n(596891),
   _ = n(15667),
-  d = n(76264),
-  c = n(822686),
+  c = n(76264),
+  d = n(822686),
   E = n(356110),
   I = n(730719),
   T = n(996701),
@@ -21,11 +21,11 @@ var i = n(735250),
   m = n(449413),
   O = n(266080),
   R = n(316617),
-  C = n(15682),
-  p = n(905434),
-  g = n(196627),
-  L = n(739319),
-  v = n(842401),
+  p = n(15682),
+  g = n(905434),
+  C = n(196627),
+  v = n(739319),
+  L = n(842401),
   D = n(375790),
   M = n(981631),
   P = n(689938),
@@ -114,7 +114,7 @@ t.Z = e => {
       separator: !1,
       direction: o.Z.Direction.VERTICAL,
       className: y.header,
-      children: [(0, i.jsx)(g.Z, {
+      children: [(0, i.jsx)(C.Z, {
         element: U(t, "success")
       }), (0, i.jsx)(A.Z, {
         node: t
@@ -123,13 +123,13 @@ t.Z = e => {
       })]
     }), (0, i.jsxs)(s.ModalContent, {
       className: y.body,
-      children: [null != F ? (0, i.jsx)(L.Z, {
+      children: [null != F ? (0, i.jsx)(v.Z, {
         element: F
       }) : null, null != U(t, "breadcrumbs") && (0, i.jsx)(_.Z, {
         history: G
       }), null != U(t, "message_preview") && ("message" === n.name || "first_dm" === n.name) && (0, i.jsx)(R.Z, {
         message: n.record
-      }), null != U(t, "user_preview") && "user" === n.name ? (0, i.jsx)(v.Z, {
+      }), null != U(t, "user_preview") && "user" === n.name ? (0, i.jsx)(L.Z, {
         user: n.record
       }) : null, function(e) {
         let {
@@ -151,13 +151,13 @@ t.Z = e => {
         reportName: n.name,
         showBlock: null != U(t, "block_users"),
         showMute: null != U(t, "mute_users")
-      }), null != U(t, "delete_message") && "message" === n.name && (0, i.jsx)(c.Z, {
+      }), null != U(t, "delete_message") && "message" === n.name && (0, i.jsx)(d.Z, {
         message: n.record,
         reportId: V
       }), null != U(t, "leave_guild") && "guild" === n.name && (0, i.jsx)(O.Z, {
         guildId: n.record.id,
         reportId: V
-      }), null != U(t, "channel_preview") && "stage_channel" === n.name && (0, i.jsx)(p.Z, {
+      }), null != U(t, "channel_preview") && "stage_channel" === n.name && (0, i.jsx)(g.Z, {
         stageInstance: n.record
       }), null != U(t, "guild_scheduled_event_preview") && "guild_scheduled_event" === n.name && (0, i.jsx)(N.Z, {
         event: n.record
@@ -165,7 +165,7 @@ t.Z = e => {
         entry: n.record
       }), null != U(t, "guild_discovery_preview") && "guild_discovery" === n.name && (0, i.jsx)(f.Z, {
         entry: n.record
-      }), null != H && (0, i.jsx)(C.Z, {
+      }), null != H && (0, i.jsx)(p.Z, {
         element: H,
         onChange: (e, t) => {
           let n = {
@@ -182,7 +182,7 @@ t.Z = e => {
         elements: j,
         onChange: es,
         state: et
-      }), (0, i.jsx)(d.Z, {
+      }), (0, i.jsx)(c.Z, {
         node: t,
         onSelectChild: eo
       }), null != Y && Y.length > 0 ? (0, i.jsx)(T.Z, {

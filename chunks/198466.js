@@ -10,8 +10,8 @@ var i, r, s = n(735250),
   l = n(442837),
   u = n(481060),
   _ = n(607070),
-  d = n(745510),
-  c = n(737774);
+  c = n(745510),
+  d = n(737774);
 
 function E(e) {
   let {
@@ -19,7 +19,7 @@ function E(e) {
     confettiTriggerRef: n,
     setConfettiCount: i,
     setShouldFireConfetti: r,
-    tooltipProps: d
+    tooltipProps: c
   } = e, [E, I] = o.useState(0), T = o.useRef(-1), h = o.useRef(!0), S = (0, l.e7)([_.Z], () => _.Z.useReducedMotion), {
     scaleFactor: f
   } = (0, a.useSpring)({
@@ -39,12 +39,12 @@ function E(e) {
   }, []), S) ? (0, s.jsx)(s.Fragment, {
     children: t
   }) : (0, s.jsx)(a.animated.div, {
-    className: c.confettiTriggerWrapper,
+    className: d.confettiTriggerWrapper,
     style: {
       transform: f.to(e => "scale(".concat(e, ")"))
     },
     children: (0, s.jsx)(u.Clickable, {
-      className: c.confettiTrigger,
+      className: d.confettiTrigger,
       onMouseDown: () => {
         I(1), r(!0), i(e => Math.min(e + 2, 200)), window.clearTimeout(T.current), T.current = window.setTimeout(() => {
           h.current && i(0)
@@ -55,11 +55,11 @@ function E(e) {
       },
       onMouseEnter: () => {
         var e;
-        I(2), null == d || null === (e = d.onMouseEnter) || void 0 === e || e.call(d)
+        I(2), null == c || null === (e = c.onMouseEnter) || void 0 === e || e.call(c)
       },
       onMouseLeave: () => {
         var e;
-        I(0), null == d || null === (e = d.onMouseLeave) || void 0 === e || e.call(d)
+        I(0), null == c || null === (e = c.onMouseLeave) || void 0 === e || e.call(c)
       },
       innerRef: n,
       children: t
@@ -74,7 +74,7 @@ t.Z = function(e) {
   } = e, {
     cannon: r,
     createMultipleConfettiAt: s
-  } = o.useContext(d.h), a = (0, l.e7)([_.Z], () => _.Z.useReducedMotion);
+  } = o.useContext(c.h), a = (0, l.e7)([_.Z], () => _.Z.useReducedMotion);
   return o.useEffect(() => () => {
     null == r || r.clearConfetti()
   }, [r]), o.useEffect(() => {

@@ -4,8 +4,8 @@ var i, r, s, o, a = n(392711),
   l = n.n(a),
   u = n(442837),
   _ = n(570140),
-  d = n(959546),
-  c = n(283595),
+  c = n(959546),
+  d = n(283595),
   E = n(780570),
   I = n(55563);
 let T = {},
@@ -18,20 +18,20 @@ let T = {},
   O = new Set,
   R = {};
 
-function C(e) {
-  T[e.id] = d.Z.createFromServer(e), null == S[e.sku_id] && (S[e.sku_id] = new Set), null == f[e.application_id] && (f[e.application_id] = new Set), null != e.subscription_id && (null == R[e.subscription_id] && (R[e.subscription_id] = new Set), R[e.subscription_id].add(e.id)), f[e.application_id].add(e.id), S[e.sku_id].add(e.id)
-}
-
 function p(e) {
-  h[e.id] = d.Z.createFromServer(e)
+  T[e.id] = c.Z.createFromServer(e), null == S[e.sku_id] && (S[e.sku_id] = new Set), null == f[e.application_id] && (f[e.application_id] = new Set), null != e.subscription_id && (null == R[e.subscription_id] && (R[e.subscription_id] = new Set), R[e.subscription_id].add(e.id)), f[e.application_id].add(e.id), S[e.sku_id].add(e.id)
 }
 
 function g(e) {
-  return C(e.entitlement)
+  h[e.id] = c.Z.createFromServer(e)
 }
-class L extends(i = u.yh) {
+
+function C(e) {
+  return p(e.entitlement)
+}
+class v extends(i = u.yh) {
   initialize() {
-    this.syncWith([c.Z], () => !0)
+    this.syncWith([d.Z], () => !0)
   }
   get(e) {
     return T[e]
@@ -87,19 +87,19 @@ class L extends(i = u.yh) {
         if (null != n && n.isValid(e, I.Z, i)) return !0
       }
     if (O.has(n)) return !1;
-    let s = null != i ? c.Z.getLibraryApplication(n, i) : c.Z.getActiveLibraryApplication(n);
+    let s = null != i ? d.Z.getLibraryApplication(n, i) : d.Z.getActiveLibraryApplication(n);
     return !!(null != s && s.sku.id === t && (0, E.Je)(s)) || null
   }
   hasFetchedForApplicationIds(e) {
     return e.every(e => O.has(e))
   }
 }
-o = "EntitlementStore", (s = "displayName") in(r = L) ? Object.defineProperty(r, s, {
+o = "EntitlementStore", (s = "displayName") in(r = v) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new L(_.Z, {
+}) : r[s] = o, t.Z = new v(_.Z, {
   ENTITLEMENT_FETCH_APPLICATION_START: function(e) {
     let {
       applicationId: t
@@ -111,20 +111,20 @@ o = "EntitlementStore", (s = "displayName") in(r = L) ? Object.defineProperty(r,
       applicationId: t,
       entitlements: n
     } = e;
-    for (let e of (m.delete(t), O.add(t), n)) !0 !== e.consumed && C(e)
+    for (let e of (m.delete(t), O.add(t), n)) !0 !== e.consumed && p(e)
   },
   ENTITLEMENT_FETCH_APPLICATION_FAIL: function() {},
   ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: function(e) {
     let {
       entitlements: t
     } = e;
-    h = {}, t.forEach(p)
+    h = {}, t.forEach(g)
   },
   SKU_PURCHASE_SUCCESS: function(e) {
     let {
       entitlements: t
     } = e;
-    for (let e of t) C(e)
+    for (let e of t) p(e)
   },
   LIBRARY_FETCH_SUCCESS: function(e) {
     let {
@@ -132,10 +132,10 @@ o = "EntitlementStore", (s = "displayName") in(r = L) ? Object.defineProperty(r,
     } = e;
     for (let e of t)
       if (null != e.entitlements)
-        for (let t of e.entitlements) C(t)
+        for (let t of e.entitlements) p(t)
   },
-  ENTITLEMENT_CREATE: g,
-  ENTITLEMENT_UPDATE: g,
+  ENTITLEMENT_CREATE: C,
+  ENTITLEMENT_UPDATE: C,
   ENTITLEMENT_DELETE: function(e) {
     return function(e) {
       delete T[e.id];
@@ -158,7 +158,7 @@ o = "EntitlementStore", (s = "displayName") in(r = L) ? Object.defineProperty(r,
     let {
       entitlements: t
     } = e;
-    for (let e of (A = !0, N = !1, t)) C(e)
+    for (let e of (A = !0, N = !1, t)) p(e)
   },
   ENTITLEMENTS_FETCH_FOR_USER_FAIL: function() {
     A = !1, N = !1

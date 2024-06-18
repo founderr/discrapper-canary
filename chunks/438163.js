@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(442837),
   u = n(846519),
   _ = n(481060),
-  d = n(788307),
-  c = n(607070),
+  c = n(788307),
+  d = n(607070),
   E = n(228168),
   I = n(660762);
 
@@ -23,17 +23,17 @@ function T(e) {
     profileType: n,
     hasEntered: s = !0,
     animate: T = !0
-  } = e, h = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), [S, f] = r.useState(!0), [N] = r.useState(() => new u.V7), A = r.useRef(null), m = r.useRef(null), O = r.useRef(null), R = r.useRef(null), C = (null == t ? void 0 : t.state) != null && "" !== t.state ? t.state : null, p = null != C && C.length > 0, {
-    emoji: g
-  } = null != t ? t : {}, L = null != g, v = L && !p, D = L || p, [M, P] = r.useState(v);
+  } = e, h = (0, l.e7)([d.Z], () => d.Z.useReducedMotion), [S, f] = r.useState(!0), [N] = r.useState(() => new u.V7), A = r.useRef(null), m = r.useRef(null), O = r.useRef(null), R = r.useRef(null), p = (null == t ? void 0 : t.state) != null && "" !== t.state ? t.state : null, g = null != p && p.length > 0, {
+    emoji: C
+  } = null != t ? t : {}, v = null != C, L = v && !g, D = v || g, [M, P] = r.useState(L);
   r.useLayoutEffect(() => {
-    if (null == A.current || v) return;
+    if (null == A.current || L) return;
     let e = Math.floor(A.current.getBoundingClientRect().height);
-    if (P(v || e <= 18), s) {
+    if (P(L || e <= 18), s) {
       var t, n, i, r;
       m.current = null !== (i = null === (t = A.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== i ? i : 144, R.current = null !== (r = null === (n = O.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== r ? r : 36
     }
-  }, [s, v]);
+  }, [s, L]);
   let [y, U] = (0, a.useSpring)(() => ({
     maxHeight: "".concat(36, "px"),
     config: {
@@ -58,17 +58,17 @@ function T(e) {
         })
       }
     },
-    G = () => L ? (0, i.jsx)(d.I, {
-      className: p ? I.statusEmojiInline : I.statusEmojiOnly,
-      emoji: g,
+    G = () => v ? (0, i.jsx)(c.I, {
+      className: g ? I.statusEmojiInline : I.statusEmojiOnly,
+      emoji: C,
       animate: T,
       hideTooltip: !1,
       tooltipDelay: E.vB
     }) : null,
-    w = () => p ? (0, i.jsx)(_.Text, {
+    w = () => g ? (0, i.jsx)(_.Text, {
       variant: "text-sm/medium",
       className: I.statusText,
-      children: C
+      children: p
     }) : null,
     k = {
       [I.biteSize]: n === E.y0.BITE_SIZE,
@@ -76,15 +76,15 @@ function T(e) {
       [I.panel]: n === E.y0.PANEL
     },
     B = o()(I.statusBubbleOuter, k, {
-      [I.statusBubbleShape]: !p && L || !M,
-      [I.statusBubbleSingleLineWithTextShape]: M && p
+      [I.statusBubbleShape]: !g && v || !M,
+      [I.statusBubbleSingleLineWithTextShape]: M && g
     }),
     x = o()(I.statusBubble, {
-      [I.statusBubbleShape]: !p && L || !M,
-      [I.statusBubbleSingleLineWithTextShape]: M && p,
-      [I.statusBubbleEmojiOnlyPadding]: v,
-      [I.statusBubbleWithTextPadding]: p,
-      [I.statusBubbleWithTextMinWidth]: p,
+      [I.statusBubbleShape]: !g && v || !M,
+      [I.statusBubbleSingleLineWithTextShape]: M && g,
+      [I.statusBubbleEmojiOnlyPadding]: L,
+      [I.statusBubbleWithTextPadding]: g,
+      [I.statusBubbleWithTextMinWidth]: g,
       [I.statusBubbleCopyStatusCursor]: D
     });
   return (0, i.jsxs)("div", {

@@ -16,10 +16,10 @@ n.d(t, {
     return m
   },
   ZD: function() {
-    return d
+    return c
   },
   fw: function() {
-    return c
+    return d
   },
   hs: function() {
     return h
@@ -76,14 +76,14 @@ async function _(e, t) {
   })
 }
 
-function d(e, t, n) {
+function c(e, t, n) {
   return i.tn.post({
     url: a.ANM.SUBMIT_REPORT_MENU(f(t)),
     body: N(e, t, n)
   })
 }
 
-function c(e, t, n, r) {
+function d(e, t, n, r) {
   let s = S(t);
   return i.tn.post({
     url: a.ANM.SUBMIT_UNAUTHENTICATED_REPORT_MENU(s),

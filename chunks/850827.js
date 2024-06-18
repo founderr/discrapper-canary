@@ -8,8 +8,8 @@ var r = n(120356),
   l = n(442837),
   u = n(481060),
   _ = n(730749),
-  d = n(726542),
-  c = n(750154),
+  c = n(726542),
+  d = n(750154),
   E = n(592125),
   I = n(594174),
   T = n(979651),
@@ -21,11 +21,11 @@ var r = n(120356),
   m = n(719216),
   O = n(429589),
   R = n(276149),
-  C = n(636245),
-  p = n(697761),
-  g = n(611459),
-  L = n(544671),
-  v = n(757182),
+  p = n(636245),
+  g = n(697761),
+  C = n(611459),
+  v = n(544671),
+  L = n(757182),
   D = n(910424),
   M = n(981631),
   P = n(620932);
@@ -59,7 +59,7 @@ t.Z = (0, _.Z)(e => {
     className: s()(_, P.buttonsWrapper, q ? P.vertical : P.horizontal),
     children: (() => {
       if ((0, N.Z)(t)) return (0, i.jsx)(A.Z, {
-        platform: d.Z.get(M.ABu.XBOX),
+        platform: c.Z.get(M.ABu.XBOX),
         look: w,
         color: G,
         onAction: B
@@ -67,11 +67,11 @@ t.Z = (0, _.Z)(e => {
       if ((null == t ? void 0 : t.platform) === M.M7m.PS4 || (null == t ? void 0 : t.platform) === M.M7m.PS5) return (0, i.jsx)(A.Z, {
         look: w,
         color: G,
-        platform: d.Z.get(M.ABu.PLAYSTATION),
+        platform: c.Z.get(M.ABu.PLAYSTATION),
         onAction: B
       }, "ConnectPlatformActivityButton");
       if (Y) {
-        let e = (0, i.jsx)(L.Z, {
+        let e = (0, i.jsx)(v.Z, {
             activity: t,
             user: r,
             guildId: y,
@@ -81,7 +81,7 @@ t.Z = (0, _.Z)(e => {
             color: G,
             onAction: B
           }, "spotify-activity-sync-button"),
-          n = (0, i.jsx)(g.Z, {
+          n = (0, i.jsx)(C.Z, {
             activity: t,
             user: r,
             source: b,
@@ -95,9 +95,9 @@ t.Z = (0, _.Z)(e => {
           children: [n, e]
         })
       }
-      if ((0, c.dS)(t)) {
-        let e = (0, c.rq)(t);
-        return null == e ? null : (0, i.jsx)(C.Z, {
+      if ((0, d.dS)(t)) {
+        let e = (0, d.rq)(t);
+        return null == e ? null : (0, i.jsx)(p.Z, {
           guildId: e.guildId,
           channelId: e.channelId,
           color: G,
@@ -118,7 +118,7 @@ t.Z = (0, _.Z)(e => {
         hangStatusChannel: z,
         onAction: B
       }, "hang-status-button") : (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(v.Z, {
+        children: [(0, i.jsx)(L.Z, {
           activity: t,
           color: G,
           look: w,
@@ -131,7 +131,7 @@ t.Z = (0, _.Z)(e => {
           look: w,
           isEmbedded: x,
           onAction: B
-        }, "join-activity-button"), (0, i.jsx)(p.Z, {
+        }, "join-activity-button"), (0, i.jsx)(g.Z, {
           activity: t,
           user: r,
           color: G,

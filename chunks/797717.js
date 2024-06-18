@@ -18,8 +18,8 @@ function _(e) {
     size: n = 16,
     className: s,
     flowerStarClassName: _,
-    ...d
-  } = e, c = r.Children.only(t), E = (0, a.useRedesignIconContext)().enabled;
+    ...c
+  } = e, d = r.Children.only(t), E = (0, a.useRedesignIconContext)().enabled;
   return (0, i.jsxs)("div", {
     className: o()(u.flowerStarContainer, s),
     style: {
@@ -27,13 +27,13 @@ function _(e) {
       height: n
     },
     children: [(0, i.jsx)(l.Z, {
-      ...d,
+      ...c,
       className: o()(_, u.flowerStar)
     }), (0, i.jsx)("div", {
       className: o()(u.childContainer, {
         [u.redesignIconChildContainer]: E
       }),
-      children: c
+      children: d
     })]
   })
 }

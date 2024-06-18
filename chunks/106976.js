@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   i1: function() {
-    return d
+    return c
   },
   rx: function() {
     return _
   },
   sB: function() {
-    return c
+    return d
   },
   vY: function() {
     return E
@@ -84,7 +84,7 @@ async function _(e, t) {
     })
   }
 }
-async function d(e) {
+async function c(e) {
   i.Z.dispatch({
     type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS",
     guildId: e
@@ -104,7 +104,7 @@ async function d(e) {
   }
 }
 
-function c(e) {
+function d(e) {
   i.Z.dispatch({
     type: "APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED",
     guildId: e

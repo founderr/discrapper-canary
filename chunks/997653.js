@@ -12,8 +12,8 @@ var i = n(264344),
   l = n(912978),
   u = n(886848),
   _ = n(236842),
-  d = n(649318),
-  c = n(199857),
+  c = n(649318),
+  d = n(199857),
   E = n(65154),
   I = n(436620);
 
@@ -39,7 +39,7 @@ class S extends a.Z {
     if (this.fpc.audioCodec !== e || this.fpc.videoCodec !== t) o = this.codecs.find(t => t.name === e), this.fpc.audioCodec = e, this.fpc.audioPayloadType = null !== (i = null == o ? void 0 : o.payloadType) && void 0 !== i ? i : 0, o = this.codecs.find(e => e.name === t), this.fpc.videoCodec = t, this.fpc.videoPayloadType = null !== (r = null == o ? void 0 : o.payloadType) && void 0 !== r ? r : 0, this.fpc.rtxPayloadType = null !== (s = null == o ? void 0 : o.rtxPayloadType) && void 0 !== s ? s : 0, this.pc.negotiationNeeded()
   }
   setStream(e) {
-    this.fpc.direction = null != e ? d.Ns.SENDRECV : d.Ns.SENDONLY, this.pc.setStream(null != e ? e : null)
+    this.fpc.direction = null != e ? c.Ns.SENDRECV : c.Ns.SENDONLY, this.pc.setStream(null != e ? e : null)
   }
   createUser(e, t, n) {
     var i;
@@ -70,7 +70,7 @@ class S extends a.Z {
     let r = new l.Z;
     r.on("answer", e => this.pc.setRemoteDescription(e).catch(e => this.logger.error("Failed to set remote description (answer): ".concat(e)))), r.on("offer", e => {
       this.pc.setRemoteDescription(e).then(() => this.pc.createAnswer()).then(e => this.fpc.setRemoteDescription(e)).catch(e => this.logger.error("Failed to set remote description (offer): ".concat(e)))
-    }), r.direction = null != this.input.stream ? d.Ns.SENDRECV : d.Ns.SENDONLY, this.fpc = r;
+    }), r.direction = null != this.input.stream ? c.Ns.SENDRECV : c.Ns.SENDONLY, this.fpc = r;
     let a = new _.Z(this.voiceBitrate);
     a.on("addtrack", (e, t) => this.createOutput(h(e), t)), a.on("removetrack", (e, t) => this.destroyOutput(h(e), t)), a.once("connected", () => {
       this.input.reset(), this.setConnectionState(E.$j.CONNECTED), this.on(o.Sh.Stats, this.handleStats), this.input.on(u.G.VoiceActivity, this.handleVoiceActivity)
@@ -83,15 +83,15 @@ class S extends a.Z {
         audioSSRC: s,
         videoSSRC: a,
         rtxSSRC: l
-      } = (0, d.Nl)(t);
+      } = (0, c.Nl)(t);
       this.codecs = i;
-      let u = (0, d.nX)(t);
+      let u = (0, c.nX)(t);
       r.outboundStreams = n, this.audioSSRC = s, r.extensions = u, (this.videoStreamParameters[0].ssrc !== a || this.videoStreamParameters[0].rtxSsrc !== l || !this.videoReady) && (this.videoStreamParameters[0].ssrc = a, this.videoStreamParameters[0].rtxSsrc = l, this.emit(o.Sh.Video, this.userId, this.input.getVideoStreamId(), this.audioSSRC, this.videoStreamParameters[0].ssrc, this.videoStreamParameters[0].rtxSsrc, this.videoStreamParameters), this.videoReady = !0)
     }), a.once("offer", e => {
       let {
         sdp: t
       } = e;
-      this.emit(o.Sh.Connected, "webrtc", (0, d.sc)(t))
+      this.emit(o.Sh.Connected, "webrtc", (0, c.sc)(t))
     }), null != this.input.stream ? a.setStream(this.input.stream) : a.negotiationNeeded(), this.pc = a
   }
 }
@@ -99,5 +99,5 @@ class S extends a.Z {
 function f(e, t, n, i) {
   let o = "".concat(null != r().name && "" !== r().name ? r().name : "unknown", " ").concat(null != r().version && "" !== r().version ? r().version : "unknown"),
     a = new s.Y("Connection(".concat(e, ")"));
-  return I.WS ? (a.info("Using Unified Plan (".concat(o, ")")), new c.Z(e, t, n, i)) : (a.info("Using Plan B (".concat(o, ")")), new S(e, t, n, i))
+  return I.WS ? (a.info("Using Unified Plan (".concat(o, ")")), new d.Z(e, t, n, i)) : (a.info("Using Plan B (".concat(o, ")")), new S(e, t, n, i))
 }

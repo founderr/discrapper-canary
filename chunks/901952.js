@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(541716),
   u = n(752305),
   _ = n(893718),
-  d = n(957730),
-  c = n(131704),
+  c = n(957730),
+  d = n(131704),
   E = n(592125),
   I = n(5192),
   T = n(838440),
@@ -21,7 +21,7 @@ var i = n(735250),
   S = n(981631),
   f = n(689938),
   N = n(112147);
-let A = (0, c.kt)({
+let A = (0, d.kt)({
     id: "1",
     type: S.d4z.DM
   }),
@@ -42,8 +42,8 @@ let A = (0, c.kt)({
     let u = await s.Z.openPrivateChannel(t, !1, !1, i),
       _ = E.Z.getChannel(u);
     if (null == _) throw Error("Failed to open private channel");
-    let c = d.ZP.parse(_, n);
-    return o.Z.sendMessage(_.id, c)
+    let d = c.ZP.parse(_, n);
+    return o.Z.sendMessage(_.id, d)
   };
 
 function O(e) {
@@ -53,9 +53,9 @@ function O(e) {
     channelId: s,
     onClose: o
   } = e, {
-    newestAnalyticsLocation: d
+    newestAnalyticsLocation: c
   } = (0, a.ZP)(), {
-    trackUserProfileAction: c
+    trackUserProfileAction: d
   } = (0, h.KZ)(), [E, T] = r.useState(""), [S, O] = r.useState((0, u.JM)(E)), R = r.useRef(!1);
   return (0, i.jsx)(_.Z, {
     innerClassName: N.inner,
@@ -82,12 +82,12 @@ function O(e) {
         value: n
       } = e;
       try {
-        return c({
+        return d({
           action: "SEND_DIRECT_MESSAGE"
         }), await m({
           userId: t.id,
           content: n.trim(),
-          location: d
+          location: c
         }), null == o || o(), {
           shouldClear: !0,
           shouldRefocus: !1

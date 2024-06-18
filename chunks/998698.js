@@ -4,22 +4,22 @@ var i, r, s, o, a = n(442837),
   l = n(570140),
   u = n(433355),
   _ = n(944486),
-  d = n(581364);
-let c = {};
+  c = n(581364);
+let d = {};
 
 function E() {
-  return c = {}, !0
+  return d = {}, !0
 }
 
 function I(e) {
-  return !(e in c) && (c[e] = {
+  return !(e in d) && (d[e] = {
     activeCommand: null,
     activeCommandSection: null,
     activeOptionName: null,
     preferredCommandId: null,
     optionStates: {},
     initialValues: {}
-  }), c[e]
+  }), d[e]
 }
 
 function T(e) {
@@ -43,7 +43,7 @@ function T(e) {
       lastValidationResult: null,
       optionValue: null
     }
-  }), u.optionStates = _, null != i && (0, d.qJ)({
+  }), u.optionStates = _, null != i && (0, c.qJ)({
     command: i,
     location: o,
     triggerSection: a,
@@ -99,11 +99,11 @@ class f extends(i = a.ZP.Store) {
   initialize() {
     u.ZP.addChangeListener(() => {
       let e = _.Z.getChannelId();
-      if (null == e) return c = {}, !0;
+      if (null == e) return d = {}, !0;
       let t = u.ZP.getCurrentSidebarChannelId(e);
-      if (null != t && t in c) return !1;
-      c = e in c ? {
-        [e]: c[e]
+      if (null != t && t in d) return !1;
+      d = e in d ? {
+        [e]: d[e]
       } : {}
     })
   }

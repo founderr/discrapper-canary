@@ -11,9 +11,9 @@ var i, r = n(735250),
   l = n(442837),
   u = n(607070),
   _ = n(451478),
-  d = n(359152);
+  c = n(359152);
 
-function c(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -76,27 +76,27 @@ class E extends(i = s.PureComponent) {
   render() {
     return (0, r.jsx)("div", {
       ref: this.handleSetRef,
-      className: a()(this.props.className, d.wrapper)
+      className: a()(this.props.className, c.wrapper)
     })
   }
   constructor(...e) {
-    super(...e), c(this, "animationRef", null), c(this, "animation", void 0), c(this, "currentScene", this.props.nextScene), c(this, "isUnmounted", !1), c(this, "handleLoopComplete", () => {
+    super(...e), d(this, "animationRef", null), d(this, "animation", void 0), d(this, "currentScene", this.props.nextScene), d(this, "isUnmounted", !1), d(this, "handleLoopComplete", () => {
       let {
         onSceneComplete: e,
         nextScene: t
       } = this.props;
       null != e && e(this.currentScene), this.playScene(t)
-    }), c(this, "handleComplete", () => {
+    }), d(this, "handleComplete", () => {
       let {
         onSceneComplete: e
       } = this.props;
       null != e && e(this.currentScene)
-    }), c(this, "handleEnterFrame", e => {
+    }), d(this, "handleEnterFrame", e => {
       let {
         onEnterFrame: t
       } = this.props;
       null == t || t(this.currentScene, e)
-    }), c(this, "handleSetRef", e => {
+    }), d(this, "handleSetRef", e => {
       this.animationRef = e;
       let {
         animationRef: t
@@ -105,7 +105,7 @@ class E extends(i = s.PureComponent) {
     })
   }
 }
-c(E, "defaultProps", {
+d(E, "defaultProps", {
   pauseWhileUnfocused: !0,
   pause: !1
 });

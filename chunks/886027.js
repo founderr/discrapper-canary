@@ -33,13 +33,13 @@ function l(e) {
     t(n)
   }, e.deleteFragment = t => {
     if (null != e.selection) {
-      let [o, a] = s.M8.edges(e.selection), l = [o.path[0]], u = s.bN.node(e, l), _ = [a.path[0]], d = s.C0.equals(l, _) ? null : s.bN.node(e, _);
+      let [o, a] = s.M8.edges(e.selection), l = [o.path[0]], u = s.bN.node(e, l), _ = [a.path[0]], c = s.C0.equals(l, _) ? null : s.bN.node(e, _);
       i.T.withSingleEntry(e, () => {
         (null == u ? void 0 : u[0].type) === "blockQuote" && s.Jz.isAtStart(o, u) && r.Q.setNodes(e, {
           type: "line"
         }, {
           at: l
-        }), (null == d ? void 0 : d[0].type) === "blockQuote" && s.Jz.isAtEnd(a, d) && r.Q.setNodes(e, {
+        }), (null == c ? void 0 : c[0].type) === "blockQuote" && s.Jz.isAtEnd(a, c) && r.Q.setNodes(e, {
           type: "line"
         }, {
           at: _
@@ -74,34 +74,34 @@ function l(e) {
     l()
   };
   let _ = null,
-    d = !0;
+    c = !0;
   return e.onChange = () => {
     let t = s.bN.richValue(e);
-    (t !== _ || e.previewMarkdown !== d) && (i.T.withMergedEntry(e, () => {
+    (t !== _ || e.previewMarkdown !== c) && (i.T.withMergedEntry(e, () => {
       s.bN.withoutNormalizing(e, () => (function(e) {
         let t = !1;
         for (let l of s.bN.blocks(e)) {
           let [u, _] = l;
           if (!a.has(u.type)) continue;
-          let d = {
+          let c = {
             path: s.C0.child(_, 0),
             offset: 0
           };
-          if ((0, o.iF)(e, d)) {
+          if ((0, o.iF)(e, c)) {
             "blockQuote" === u.type && (r.Q.setNodes(e, {
               type: "line"
             }, {
               at: _
             }), r.Q.insertText(e, "> ", {
-              at: d
+              at: c
             }));
             continue
           }
           if ("blockQuote" === u.type || s.bN.areStylesDisabled(e)) continue;
-          let c = u.children[0];
-          if (!s.LC.isText(c)) continue;
-          let E = c.text.match(/^\s*>>> /),
-            I = c.text.match(/^\s*> /);
+          let d = u.children[0];
+          if (!s.LC.isText(d)) continue;
+          let E = d.text.match(/^\s*>>> /),
+            I = d.text.match(/^\s*> /);
           if ((null != I || null != E || t) && (r.Q.setNodes(e, {
               type: "blockQuote"
             }, {
@@ -125,6 +125,6 @@ function l(e) {
           }
         }
       })(e))
-    }), _ = t, d = e.previewMarkdown), u()
+    }), _ = t, c = e.previewMarkdown), u()
   }, e
 }

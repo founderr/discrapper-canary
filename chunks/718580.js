@@ -15,8 +15,8 @@ var i = n(735250),
   l = n(186325),
   u = n(393238),
   _ = n(699682),
-  d = n(906732),
-  c = n(812663),
+  c = n(906732),
+  d = n(812663),
   E = n(863840);
 let I = {
   mass: 1,
@@ -47,7 +47,7 @@ function S(e) {
     ...m
   } = e, O = {}, {
     analyticsLocations: R
-  } = (0, d.ZP)();
+  } = (0, c.ZP)();
   r.Children.forEach(m.children, (e, t) => {
     O[e.props.id] = {
       children: e.props.children,
@@ -56,19 +56,19 @@ function S(e) {
       index: t
     }
   });
-  let C = m.activeSlide,
-    p = (0, _.Z)(m.activeSlide);
-  let g = null !== (t = m.directionOverride) && void 0 !== t ? t : (S = null != p ? O[p] : null, f = O[C], null == S ? null : S.index > f.index ? "backwards" : S.index < f.index ? "forwards" : null),
+  let p = m.activeSlide,
+    g = (0, _.Z)(m.activeSlide);
+  let C = null !== (t = m.directionOverride) && void 0 !== t ? t : (S = null != g ? O[g] : null, f = O[p], null == S ? null : S.index > f.index ? "backwards" : S.index < f.index ? "forwards" : null),
     {
-      reducedMotion: L
+      reducedMotion: v
     } = r.useContext(l.S),
-    v = r.useContext(c.Z),
-    D = O[C].impressionName,
+    L = r.useContext(d.Z),
+    D = O[p].impressionName,
     M = {
-      ...O[C].impressionProperties,
+      ...O[p].impressionProperties,
       location_stack: R
     };
-  v({
+  L({
     type: o.ImpressionTypes.MODAL,
     name: D,
     properties: M,
@@ -80,19 +80,19 @@ function S(e) {
     ref: P,
     width: y = 0,
     height: U = 0
-  } = (0, u.Z)(C), b = {
+  } = (0, u.Z)(p), b = {
     ...I,
     ...m.springConfig,
-    ...L.enabled ? {
+    ...v.enabled ? {
       clamp: !0
     } : null
   }, G = (0, s.useSpring)({
-    immediate: null == p,
+    immediate: null == g,
     width: null !== (n = m.width) && void 0 !== n ? n : y,
     height: U,
     config: b
-  }), w = (0, s.useTransition)(C, {
-    immediate: null == p,
+  }), w = (0, s.useTransition)(p, {
+    immediate: null == g,
     value: 0,
     from: {
       value: 1
@@ -108,9 +108,9 @@ function S(e) {
       let {
         item: n
       } = t;
-      n === C && null != m.onSlideReady && m.onSlideReady(n)
+      n === p && null != m.onSlideReady && m.onSlideReady(n)
     }
-  }), k = (0, E.Z)(g), {
+  }), k = (0, E.Z)(C), {
     width: B,
     centered: x = !0
   } = m, V = a.tq ? "100%" : G.width.to(e => Math.round(e)), Z = a.tq ? "100%" : G.height.to(e => Math.round(e)), H = a.tq ? {} : x ? {
@@ -135,7 +135,7 @@ function S(e) {
         opacity: e.value.to(e => 1 - Math.abs(e))
       };
       return (0, i.jsx)(s.animated.div, {
-        ref: t === C ? P : null,
+        ref: t === p ? P : null,
         style: {
           position: "absolute",
           display: N,
@@ -143,7 +143,7 @@ function S(e) {
           backfaceVisibility: "hidden",
           width: a.tq ? "100%" : B,
           ...H,
-          ...L.enabled ? o : {
+          ...v.enabled ? o : {
             left: e.value.to(T("left", k)),
             right: e.value.to(T("right", k)),
             ...A && o

@@ -12,8 +12,8 @@ var i = n(46973),
   l = n(441167),
   u = n(314897),
   _ = n(131951),
-  d = n(19780),
-  c = n(959457),
+  c = n(19780),
+  d = n(959457),
   E = n(626135),
   I = n(358085),
   T = n(924557),
@@ -38,7 +38,7 @@ class O extends s.Z {
         ownerId: e
       } = (0, a.my)(r);
       if (e !== s) return;
-      let t = c.Z.getRTCConnection(r);
+      let t = d.Z.getRTCConnection(r);
       if (null == t) return;
       this.applyStreamRecording(s, t)
     }
@@ -57,7 +57,7 @@ class O extends s.Z {
       guildId: i
     } = e;
     this.maybeShowClipsWarning(t), this.applyUserVoiceRecording(t);
-    let r = c.Z.getRTCConnection(a.V9({
+    let r = d.Z.getRTCConnection(a.V9({
       streamType: null != i ? m.lo.GUILD : m.lo.CALL,
       ownerId: t,
       channelId: n,
@@ -76,7 +76,7 @@ class O extends s.Z {
     })
   }
   maybeShowClipsWarning(e) {
-    let t = d.Z.getChannelId();
+    let t = c.Z.getChannelId();
     if (!(null == t || h.Z.getClipsWarningShown(t)) && e !== u.default.getId()) h.Z.isClipsEnabledForUser(e) && (r.Z.dispatch({
       type: "CLIPS_SHOW_CALL_WARNING",
       channelId: t
@@ -103,7 +103,7 @@ class O extends s.Z {
       guildId: s
     } = e;
     if (n !== i.Yn.STREAM || !(0, f.Z)(_.Z)) return;
-    let o = c.Z.getRTCConnection(a.V9({
+    let o = d.Z.getRTCConnection(a.V9({
       streamType: null != s ? m.lo.GUILD : m.lo.CALL,
       ownerId: t,
       channelId: r,
@@ -155,7 +155,7 @@ class O extends s.Z {
   }
   applyUserVoiceRecording(e) {
     if (!(0, f.Z)(_.Z)) return;
-    let t = d.Z.getRTCConnection();
+    let t = c.Z.getRTCConnection();
     if (null == t) return;
     if (e === u.default.getId()) {
       t.setClipRecordUser(e, "audio", h.Z.getSettings().clipsEnabled);

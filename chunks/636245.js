@@ -8,22 +8,22 @@ var r = n(120356),
   l = n(979651),
   u = n(915863),
   _ = n(689938),
-  d = n(262470);
+  c = n(262470);
 t.Z = e => {
   let {
     guildId: t,
     channelId: n,
     color: r,
-    look: c,
+    look: d,
     isProfile: E,
     onAction: I
   } = e, T = (0, o.e7)([l.Z], () => l.Z.isInChannel(n), [n]);
   return (0, i.jsx)(u.Z, {
-    className: s()(d.button, {
-      [d.popout]: !E
+    className: s()(c.button, {
+      [c.popout]: !E
     }),
     color: r,
-    look: c,
+    look: d,
     disabled: T,
     onClick: () => {
       null == I || I(), a.AC(t, n)

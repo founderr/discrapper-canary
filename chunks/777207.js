@@ -12,8 +12,8 @@ var i = n(735250),
   l = n.n(a),
   u = n(692547),
   _ = n(701717),
-  d = n(24073);
-let c = Object.fromEntries(Object.keys(u.Z.colors).map(e => [l()(e), e])),
+  c = n(24073);
+let d = Object.fromEntries(Object.keys(u.Z.colors).map(e => [l()(e), e])),
   E = r.forwardRef(function(e, t) {
     let n, {
         variant: r,
@@ -43,7 +43,7 @@ let c = Object.fromEntries(Object.keys(u.Z.colors).map(e => [l()(e), e])),
         break;
       default:
         var A;
-        n = null === (A = u.Z.colors[c[I]]) || void 0 === A ? void 0 : A.css
+        n = null === (A = u.Z.colors[d[I]]) || void 0 === A ? void 0 : A.css
     }
     let m = {
       color: n,
@@ -56,8 +56,8 @@ let c = Object.fromEntries(Object.keys(u.Z.colors).map(e => [l()(e), e])),
         [_.defaultColor]: void 0 === I,
         [_.selectable]: a,
         [_.tabularNumbers]: T,
-        [d.fontScaling]: h
-      }, f, d[r], l),
+        [c.fontScaling]: h
+      }, f, c[r], l),
       ...S,
       style: Object.values(m).filter(Boolean).length > 0 ? m : void 0,
       "data-text-variant": r

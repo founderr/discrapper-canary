@@ -62,15 +62,15 @@ function s(e, t, n) {
         animate: u,
         callback: _
       } = e, {
-        scrollPosition: d,
-        offsetSize: c
+        scrollPosition: c,
+        offsetSize: d
       } = r(t(), s);
-      n -= l, i += l, n >= d && i <= d + c ? null != _ && _() : n < d || a ? o({
+      n -= l, i += l, n >= c && i <= c + d ? null != _ && _() : n < c || a ? o({
         to: n,
         animate: u,
         callback: _
       }) : o({
-        to: i - c,
+        to: i - d,
         animate: u,
         callback: _
       })
@@ -92,8 +92,8 @@ function s(e, t, n) {
       } = e;
       if (null == _) return;
       let {
-        offset: d,
-        offsetSize: c
+        offset: c,
+        offsetSize: d
       } = function(e, t, n) {
         let r = "horizontal" === t ? e.offsetWidth : e.offsetHeight,
           s = "horizontal" === t ? e.offsetLeft : e.offsetTop,
@@ -105,8 +105,8 @@ function s(e, t, n) {
         }
       }(n, s, _);
       a({
-        start: d,
-        end: d + c,
+        start: c,
+        end: c + d,
         shouldScrollToStart: r,
         padding: o,
         animate: l,

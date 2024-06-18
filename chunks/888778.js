@@ -17,12 +17,12 @@ function l(e) {
     size: n,
     canAnimate: i,
     pendingBanner: r
-  } = e, l = o.QK.getSetting(), u = null == t ? void 0 : t.getPreviewBanner(r, i, n), [_, d] = (0, s.useState)((null == t ? void 0 : t.banner) == null ? 2 : 0);
+  } = e, l = o.QK.getSetting(), u = null == t ? void 0 : t.getPreviewBanner(r, i, n), [_, c] = (0, s.useState)((null == t ? void 0 : t.banner) == null ? 2 : 0);
   return (0, s.useEffect)(() => {
     if (null == u || 0 !== _) return;
-    d(1);
+    c(1);
     let e = new Image;
-    e.src = u, e.onload = () => d(2)
+    e.src = u, e.onload = () => c(2)
   }, [u, _]), (0, s.useEffect)(() => {
     if (l) return;
     let e = null == t ? void 0 : t.getPreviewBanner(r, !0, n);

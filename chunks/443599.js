@@ -13,15 +13,15 @@ async function a(e, t, n, a) {
   let l = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
     u = !(arguments.length > 5) || void 0 === arguments[5] || arguments[5],
     _ = arguments.length > 6 ? arguments[6] : void 0,
-    d = (0, r.getInteractingModalContext)();
+    c = (0, r.getInteractingModalContext)();
   try {
-    let c, E = u ? await (0, s.Nt)(e, t) : await (0, s.B0)(e, t),
+    let d, E = u ? await (0, s.Nt)(e, t) : await (0, s.B0)(e, t),
       I = [];
     let T = e => {
         I.push(e)
       },
       h = e => {
-        c = e, null == n || n()
+        d = e, null == n || n()
       };
     (0, r.openModal)(t => (0, i.jsx)(o.Z, {
       menu: E,
@@ -33,8 +33,8 @@ async function a(e, t, n, a) {
       emailToken: _
     }), {
       onCloseCallback: () => {
-        (0, s.k8)(e, I, c), null == a || a(), l && (0, s.X)(e, null != c ? c : null)
+        (0, s.k8)(e, I, d), null == a || a(), l && (0, s.X)(e, null != d ? d : null)
       }
-    }, d)
+    }, c)
   } catch {}
 }

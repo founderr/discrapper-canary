@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(727637),
   u = n(980591),
   _ = n(58540),
-  d = n(603113),
-  c = n(420660),
+  c = n(603113),
+  d = n(420660),
   E = n(100527),
   I = n(906732),
   T = n(812206),
@@ -25,11 +25,11 @@ var i = n(735250),
   m = n(699516),
   O = n(626135),
   R = n(785717),
-  C = n(621853),
-  p = n(505737),
-  g = n(318661),
-  L = n(502762),
-  v = n(192133),
+  p = n(621853),
+  g = n(505737),
+  C = n(318661),
+  v = n(502762),
+  L = n(192133),
   D = n(240328),
   M = n(436478),
   P = n(131640),
@@ -58,9 +58,9 @@ function B(e) {
     newAnalyticsLocations: W = []
   } = e, {
     analyticsLocations: K
-  } = (0, I.ZP)([...W, E.Z.PROFILE_POPOUT]), z = r.useRef(null), q = (0, g.ZP)(t.id, n), X = (0, l.Z)(z), Q = (0, s.e7)([C.Z], () => {
+  } = (0, I.ZP)([...W, E.Z.PROFILE_POPOUT]), z = r.useRef(null), q = (0, C.ZP)(t.id, n), X = (0, l.Z)(z), Q = (0, s.e7)([p.Z], () => {
     var e;
-    return null === (e = C.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
+    return null === (e = p.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
   }), J = (0, s.e7)([N.Z], () => null != n ? N.Z.getGuild(n) : null), $ = (0, s.e7)([f.ZP], () => null != n ? f.ZP.getMember(n, t.id) : null), ee = t.isNonUserBot(), {
     activity: et,
     customStatusActivity: en,
@@ -90,14 +90,14 @@ function B(e) {
     [n]: [t.id]
   } : {}, [n, t.id]);
   (0, _.$)(el);
-  let eu = (0, p.Z)(t.id, n),
+  let eu = (0, g.Z)(t.id, n),
     e_ = (0, y.J)({
       popoutUser: t,
       source: M.m.USER_POPOUT,
       guildId: n
     }),
-    [ed, ec] = r.useState(!1);
-  (0, u.Z)(() => ec(!0), e_.shouldShow ? 250 : null);
+    [ec, ed] = r.useState(!1);
+  (0, u.Z)(() => ed(!0), e_.shouldShow ? 250 : null);
   let eE = (0, h.q)(null == et ? void 0 : et.application_id);
   return r.useEffect(() => {
     null == F || F(null == z ? void 0 : z.current)
@@ -132,7 +132,7 @@ function B(e) {
           party_max: null != i && null != i.size ? i.size[1] : void 0,
           party_id: null != i ? i.id : void 0,
           party_platform: null != i && (0, G.Ps)(i.id) ? b.ABu.SPOTIFY : null,
-          game_platform: (0, d.Z)(et),
+          game_platform: (0, c.Z)(et),
           profile_user_status: o,
           is_streaming: es,
           has_custom_status: null != en,
@@ -167,12 +167,12 @@ function B(e) {
           style: e_.shouldShow ? {
             marginTop: D.Ao
           } : void 0,
-          children: (0, i.jsxs)(L.Z, {
+          children: (0, i.jsxs)(v.Z, {
             user: t,
             displayProfile: q,
             profileType: U.y0.POPOUT,
             className: e_.shouldShow ? w.hasCollectiblesUpsell : void 0,
-            showOutOfBoundaryComponents: ed,
+            showOutOfBoundaryComponents: ec,
             children: [(0, i.jsx)(P.ZP, {
               user: t,
               displayProfile: q,
@@ -180,7 +180,7 @@ function B(e) {
               channelId: B,
               onClose: () => null == H ? void 0 : H(),
               isMobile: er,
-              isStreaming: (0, c.Z)(et),
+              isStreaming: (0, d.Z)(et),
               status: ei,
               disableUserProfileLink: Y,
               isHovering: X,
@@ -191,8 +191,8 @@ function B(e) {
                 onClose: H,
                 ...e_
               }) : void 0
-            }), (0, i.jsx)(L.Z.Overlay, {
-              children: (0, i.jsx)(v.Z, {
+            }), (0, i.jsx)(v.Z.Overlay, {
+              children: (0, i.jsx)(L.Z, {
                 activity: et,
                 customStatusActivity: en,
                 displayProfile: q,

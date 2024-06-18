@@ -7,8 +7,8 @@ var i = n(735250),
   l = n(85235),
   u = n(367907),
   _ = n(998698),
-  d = n(895924),
-  c = n(718745),
+  c = n(895924),
+  d = n(718745),
   E = n(156361),
   I = n(285952),
   T = n(590921),
@@ -33,7 +33,7 @@ function m(e, t, n) {
   }
 }
 let O = {
-  stores: [_.Z, c.Z],
+  stores: [_.Z, d.Z],
   matches(e, t, n, i, r) {
     var s;
     return r.commands !== T.L8.DISABLED && (r.commands === T.L8.OLD_BUILT_INS ? n.startsWith(h.GI + "gif") || n.startsWith(h.GI + "tenor") : (null === (s = _.Z.getActiveCommand(e.id)) || void 0 === s ? void 0 : s.integrationType) === S.q9n.GIF && _.Z.getOptionStates(e.id).query.hasValue)
@@ -46,7 +46,7 @@ let O = {
     if (null == s) return A;
     let u = o().findKey(S.nkL, e => e.command === s);
     r && null != u && a.length > 0 && l.Z.search(u, a);
-    let _ = c.Z.getResults(u, a);
+    let _ = d.Z.getResults(u, a);
     return null == _ ? A : {
       results: {
         command: s,
@@ -65,8 +65,8 @@ let O = {
       channel: o,
       query: l,
       options: u,
-      onHover: d,
-      onClick: c
+      onHover: c,
+      onClick: d
     } = e, {
       command: h,
       query: A
@@ -84,8 +84,8 @@ let O = {
             var r, o, a;
             return e = !0, (0, i.jsx)(E.ZP.GIFIntegration, {
               className: N.horizontalAutocomplete,
-              onClick: c,
-              onHover: d,
+              onClick: d,
+              onHover: c,
               selected: s === n,
               index: n,
               width: null !== (r = t.meta.width) && void 0 !== r ? r : 0,
@@ -135,7 +135,7 @@ let O = {
         source_object: "/".concat(t)
       }), s.commands !== T.L8.OLD_BUILT_INS) {
       let e = _.Z.getActiveCommand(o.id);
-      (null == e ? void 0 : e.inputType) === d.iw.BUILT_IN_INTEGRATION && u.ZP.trackWithMetadata(S.rMx.APPLICATION_COMMAND_USED, {
+      (null == e ? void 0 : e.inputType) === c.iw.BUILT_IN_INTEGRATION && u.ZP.trackWithMetadata(S.rMx.APPLICATION_COMMAND_USED, {
         command_id: e.id,
         application_id: e.applicationId,
         command_type: e.type

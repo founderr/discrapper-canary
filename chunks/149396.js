@@ -19,7 +19,7 @@ n.d(t, {
     return u.Dg
   },
   GO: function() {
-    return d
+    return c
   },
   H0: function() {
     return _
@@ -78,7 +78,7 @@ n.d(t, {
 });
 var i, r, s, o, a, l, u = n(65154);
 let _ = 3e4,
-  d = {
+  c = {
     [u.pM.VOICE_ACTIVITY]: 1,
     [u.pM.PUSH_TO_TALK]: 2
   };

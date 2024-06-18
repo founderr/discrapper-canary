@@ -7,8 +7,8 @@ var i, r = n(442837),
   l = n(490029),
   u = n(48481),
   _ = n(131704),
-  d = n(314897),
-  c = n(592125),
+  c = n(314897),
+  d = n(592125),
   E = n(984933),
   I = n(355863),
   T = n(914010),
@@ -40,11 +40,11 @@ let R = Object.freeze({
     showKeybindIndicators: !0,
     textWidgetOpacity: m.wF.LOWER
   }),
+  p = null,
+  g = {},
   C = null,
-  p = {},
-  g = null,
-  L = new Set,
-  v = !1,
+  v = new Set,
+  L = !1,
   D = null,
   M = !1,
   P = !1,
@@ -52,8 +52,8 @@ let R = Object.freeze({
   U = !1;
 
 function b(e) {
-  let t = p[e];
-  return null == t && (t = p[e] = {
+  let t = g[e];
+  return null == t && (t = g[e] = {
     ...R
   }), t
 }
@@ -65,13 +65,13 @@ let G = {
 
 function B() {
   if (!__OVERLAY__) return !1;
-  let e = C === (0, f.QF)(),
-    t = L.has((0, f.QF)()) || y.size > 0;
+  let e = p === (0, f.QF)(),
+    t = v.has((0, f.QF)()) || y.size > 0;
   e && t ? (0, a.T_)(window, !0) : (0, a.T_)(window, !1)
 }
 
 function x() {
-  if (C !== (0, f.QF)()) return !1;
+  if (p !== (0, f.QF)()) return !1;
   y.clear()
 }
 
@@ -119,10 +119,10 @@ function V(e) {
               break;
             case "GUILD_CREATE":
               let l = e => (0, _.kt)(e),
-                d = e.guild;
-              d.channels = null !== (s = null === (i = d.channels) || void 0 === i ? void 0 : i.map(l)) && void 0 !== s ? s : null, d.threads = null === (r = d.threads) || void 0 === r ? void 0 : r.map(l), null != d.channelUpdates && (d.channelUpdates.writes = null === (a = d.channelUpdates.writes) || void 0 === a ? void 0 : a.map(l)), o.Z.dispatch({
+                c = e.guild;
+              c.channels = null !== (s = null === (i = c.channels) || void 0 === i ? void 0 : i.map(l)) && void 0 !== s ? s : null, c.threads = null === (r = c.threads) || void 0 === r ? void 0 : r.map(l), null != c.channelUpdates && (c.channelUpdates.writes = null === (a = c.channelUpdates.writes) || void 0 === a ? void 0 : a.map(l)), o.Z.dispatch({
                 type: "GUILD_CREATE",
-                guild: d
+                guild: c
               });
               break;
             case "USER_SETTINGS_PROTO_UPDATE":
@@ -143,33 +143,33 @@ function V(e) {
 }
 class Z extends(i = r.ZP.PersistedStore) {
   initialize(e) {
-    if (this.waitFor(d.default), this.syncWith([d.default], () => {
-        let e = d.default.getId();
+    if (this.waitFor(c.default), this.syncWith([c.default], () => {
+        let e = c.default.getId();
         G = null != e ? b(e) : {
           ...R
         }
-      }), __OVERLAY__ && (h.isPlatformEmbedded && S.ZP.requireModule("discord_overlay2"), L.delete((0, f.QF)())), null != e) {
-      p = e;
-      let t = d.default.getId();
+      }), __OVERLAY__ && (h.isPlatformEmbedded && S.ZP.requireModule("discord_overlay2"), v.delete((0, f.QF)())), null != e) {
+      g = e;
+      let t = c.default.getId();
       null != t && (null == (G = b(t)).textChatNotifications && (G.textChatNotifications = R.textChatNotifications), null == G.textWidgetOpacity && (G.textWidgetOpacity = R.textWidgetOpacity))
     }
   }
   getState() {
-    return p
+    return g
   }
   isUILocked(e) {
-    return !L.has(e)
+    return !v.has(e)
   }
   isInstanceUILocked() {
     if (!__OVERLAY__) throw Error("OverlayStore: App instance should never call .isInstanceUILocked()");
-    return !L.has((0, f.QF)())
+    return !v.has((0, f.QF)())
   }
   isInstanceFocused() {
     if (!__OVERLAY__) throw Error("OverlayStore: App instance should never call .isInstanceFocused()");
-    return C === (0, f.QF)()
+    return p === (0, f.QF)()
   }
   isFocused(e) {
-    return C === e
+    return p === e
   }
   isPinned(e) {
     let t = I.Z.getLayout(f.qU);
@@ -185,7 +185,7 @@ class Z extends(i = r.ZP.PersistedStore) {
     return G.selectedChannelId
   }
   getSelectedCallId() {
-    return g
+    return C
   }
   getDisplayUserMode() {
     return G.displayUserMode
@@ -209,13 +209,13 @@ class Z extends(i = r.ZP.PersistedStore) {
     return G.disableExternalLinkAlert
   }
   getFocusedPID() {
-    return C
+    return p
   }
   get initialized() {
     return P
   }
   get incompatibleApp() {
-    return v
+    return L
   }
   getActiveRegions() {
     return y
@@ -242,7 +242,7 @@ O(Z, "displayName", "OverlayStore"), O(Z, "persistKey", "OverlayStoreV2"), O(Z, 
     ...5 === i ? r : null
   }
 }, e => {
-  let t = d.default.getId();
+  let t = c.default.getId();
   return null == e || null == t ? {} : {
     [t]: {
       ...e
@@ -250,13 +250,13 @@ O(Z, "displayName", "OverlayStore"), O(Z, "persistKey", "OverlayStoreV2"), O(Z, 
   }
 }]), t.Z = new Z(o.Z, {
   LOGOUT: function(e) {
-    !e.isSwitchingAccount && (p = {})
+    !e.isSwitchingAccount && (g = {})
   },
   MULTI_ACCOUNT_REMOVE_ACCOUNT: function(e) {
-    e.userId in p && delete p[e.userId]
+    e.userId in g && delete g[e.userId]
   },
   CONNECTION_CLOSED: function() {
-    L.clear()
+    v.clear()
   },
   OVERLAY_START_SESSION: function() {
     o.Z.addInterceptor(e => {
@@ -298,12 +298,12 @@ O(Z, "displayName", "OverlayStore"), O(Z, "persistKey", "OverlayStoreV2"), O(Z, 
     let {
       focusedPID: t
     } = e;
-    C = t
+    p = t
   },
   OVERLAY_READY: function() {
     let e = G.selectedGuildId,
       t = G.selectedChannelId;
-    if (null != e && (!E.ZP.hasChannels(e) || null != t && !E.ZP.hasSelectableChannel(e, t)) && (e = null, t = null), null != t && null == c.Z.getChannel(t) && (e = null, t = null), null == e && null == t && (e = T.Z.getGuildId()), null != e && null == t) {
+    if (null != e && (!E.ZP.hasChannels(e) || null != t && !E.ZP.hasSelectableChannel(e, t)) && (e = null, t = null), null != t && null == d.Z.getChannel(t) && (e = null, t = null), null == e && null == t && (e = T.Z.getGuildId()), null != e && null == t) {
       let n = E.ZP.getDefaultChannel(e);
       null != n && (t = n.id)
     }
@@ -313,7 +313,7 @@ O(Z, "displayName", "OverlayStore"), O(Z, "persistKey", "OverlayStoreV2"), O(Z, 
     let {
       pid: t
     } = e;
-    C = t, B()
+    p = t, B()
   },
   OVERLAY_SELECT_CHANNEL: function(e) {
     let {
@@ -326,10 +326,10 @@ O(Z, "displayName", "OverlayStore"), O(Z, "persistKey", "OverlayStoreV2"), O(Z, 
     let {
       callId: t
     } = e;
-    g = t
+    C = t
   },
   CALL_DELETE: function() {
-    g = null
+    C = null
   },
   LAYOUT_CREATE: function() {},
   OVERLAY_SET_DISPLAY_NAME_MODE: function(e) {
@@ -378,20 +378,20 @@ O(Z, "displayName", "OverlayStore"), O(Z, "persistKey", "OverlayStoreV2"), O(Z, 
     G.disableExternalLinkAlert = !0
   },
   OVERLAY_INCOMPATIBLE_APP: function() {
-    v = !0
+    L = !0
   },
   OVERLAY_SET_UI_LOCKED: function(e) {
     let {
       locked: t,
       pid: n
     } = e;
-    t ? L.delete(n) : L.add(n), x(), B(), U = !1
+    t ? v.delete(n) : v.add(n), x(), B(), U = !1
   },
   OVERLAY_ACTIVATE_REGION: function(e) {
     let {
       region: t
     } = e;
-    if (C !== (0, f.QF)() || y.has(t)) return !1;
+    if (p !== (0, f.QF)() || y.has(t)) return !1;
     y.add(t)
   },
   OVERLAY_DEACTIVATE_ALL_REGIONS: x,
@@ -405,6 +405,6 @@ O(Z, "displayName", "OverlayStore"), O(Z, "persistKey", "OverlayStoreV2"), O(Z, 
     }
   },
   OVERLAY_SET_ASSOCIATED_GAME: function(e) {
-    L.delete(e.previousAssociatedGamePID)
+    v.delete(e.previousAssociatedGamePID)
   }
 })

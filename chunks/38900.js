@@ -2,9 +2,9 @@
 var n = t(735250);
 t(470079);
 var a = t(120356),
-  i = t.n(a),
+  r = t.n(a),
   l = t(425734),
-  r = t(897246),
+  i = t(897246),
   o = t(211371),
   c = t(775087);
 let u = () => 4 * Math.random() + 8,
@@ -14,14 +14,14 @@ s.Z = () => (0, n.jsx)("div", {
   children: d.map(e => (0, n.jsxs)("div", {
     className: l.cardsContainer,
     children: [(0, n.jsx)("div", {
-      className: i()(o.skeleton, r.shopBanner),
+      className: r()(o.skeleton, i.shopBanner),
       children: (0, n.jsx)("div", {
         className: o.bannerBody
       })
     }), Array.from({
       length: e
     }, (e, s) => s).map(e => (0, n.jsx)("div", {
-      className: i()(o.skeleton, c.shopCard),
+      className: r()(o.skeleton, c.shopCard),
       children: (0, n.jsxs)("div", {
         className: o.cardBody,
         children: [(0, n.jsx)("div", {

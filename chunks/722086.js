@@ -6,17 +6,17 @@ let u = {};
 function _() {
   u = {}
 }
-class d extends(o = a.ZP.Store) {
+class c extends(o = a.ZP.Store) {
   getNote(e) {
     return u[e]
   }
 }
-s = "NoteStore", (r = "displayName") in(i = d) ? Object.defineProperty(i, r, {
+s = "NoteStore", (r = "displayName") in(i = c) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.Z = new d(l.Z, {
+}) : i[r] = s, t.Z = new c(l.Z, {
   CONNECTION_OPEN: _,
   OVERLAY_INITIALIZE: _,
   USER_NOTE_UPDATE: function(e) {

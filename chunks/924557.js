@@ -10,7 +10,7 @@ n.d(t, {
     return I
   },
   ln: function() {
-    return c
+    return d
   },
   nM: function() {
     return T
@@ -61,7 +61,7 @@ let _ = (0, i.B)({
       }
     }]
   }),
-  d = (0, i.B)({
+  c = (0, i.B)({
     kind: "user",
     id: "2023-09_clips_nitro_early_access",
     label: "Clips (Nitro EA)",
@@ -89,11 +89,11 @@ let _ = (0, i.B)({
     }]
   });
 
-function c() {
+function d() {
   if (!(0, l.Z)(o.Z)) return !1;
   let {
     enableClips: e
-  } = d.getCurrentConfig({
+  } = c.getCurrentConfig({
     location: "areClipsEnabled"
   }, {
     autoTrackExposure: !1
@@ -123,7 +123,7 @@ function E() {
   let e = (0, l.Z)(o.Z),
     {
       enableClips: t
-    } = d.useExperiment({
+    } = c.useExperiment({
       location: "useEnableClips"
     }, {
       autoTrackExposure: !1
@@ -156,7 +156,7 @@ let I = e => {
       autoTrackExposure: t
     } = e, n = (0, l.Z)(o.Z), {
       enablePremiumEarlyAccessGoLiveRoadblock: i
-    } = d.useExperiment({
+    } = c.useExperiment({
       location: "useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock"
     }, {
       autoTrackExposure: t && n
@@ -168,7 +168,7 @@ let I = e => {
       autoTrackExposure: t
     } = e, n = (0, l.Z)(o.Z), {
       enablePremiumEarlyAccessAnnouncementCoachmark: i
-    } = d.useExperiment({
+    } = c.useExperiment({
       location: "useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock"
     }, {
       autoTrackExposure: t && n

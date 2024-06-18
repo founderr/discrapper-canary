@@ -7,8 +7,8 @@ var i = n(735250),
   l = n(739566),
   u = n(25015),
   _ = n(592125),
-  d = n(998951),
-  c = n(113039),
+  c = n(998951),
+  d = n(113039),
   E = n(778947),
   I = n(512665),
   T = n(768760),
@@ -32,7 +32,7 @@ t.Z = e => {
     }), r = null == A || "" === A || Array.isArray(A) && 0 === A.length;
     return (0, i.jsxs)("div", {
       className: S.contentContainer,
-      children: [e, r ? n : (0, i.jsx)(c.ZP, {
+      children: [e, r ? n : (0, i.jsx)(d.ZP, {
         message: t,
         content: A
       })]
@@ -46,7 +46,7 @@ t.Z = e => {
       children: h.Z.Messages.MOBILE_REPORTS_MESSAGE_PREVIEW_TITLE
     }), (0, i.jsx)(o.Scroller, {
       className: S.messagePreviewContainer,
-      children: (0, i.jsx)(d.Z, {
+      children: (0, i.jsx)(c.Z, {
         childrenMessageContent: m(),
         childrenHeader: (0, i.jsx)(E.ZP, {
           message: t,

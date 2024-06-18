@@ -18,12 +18,12 @@ var i = t(442837),
   S = t(611480),
   h = t(689938),
   g = t(205616);
-let x = {
+let C = {
     page: m.ZY5.GUILD_SETTINGS,
     section: m.jXE.GUILD_SETTINGS_STICKERS,
     object: m.qAy.BOOSTING_BANNER
   },
-  C = e => {
+  x = e => {
     let {
       guild: s
     } = e, {
@@ -47,7 +47,7 @@ let x = {
           color: l.Button.Colors.WHITE,
           onClick: () => (0, d.Z)({
             analyticsLocations: t,
-            analyticsLocation: x,
+            analyticsLocation: C,
             guildId: s.id,
             totalNumberOfSlotsToAssign: i
           }),
@@ -132,7 +132,7 @@ s.Z = () => {
           guild: e,
           guildStickers: s
         }), (0, n.jsx)(R, {})]
-      }) : (0, n.jsx)(C, {
+      }) : (0, n.jsx)(x, {
         guild: e
       }), (0, n.jsx)(l.FormDivider, {
         className: g.divider

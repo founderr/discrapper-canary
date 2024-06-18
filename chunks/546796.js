@@ -29,13 +29,13 @@ function l(e) {
     null == l || l();
     return
   }
-  let _ = i(I, d, o);
+  let _ = i(I, c, o);
 
-  function d() {
+  function c() {
     null == l || l()
   }
 
-  function c(e) {
+  function d(e) {
     r(_), n(e)
   }
 
@@ -44,12 +44,12 @@ function l(e) {
   }
 
   function I(e) {
-    return a(_, I, d, {
+    return a(_, I, c, {
       ...o,
       isLoading: !0
     }), u({
       promiseFn: t,
-      resolve: c,
+      resolve: d,
       reject: E,
       code: e,
       mfaCodeHandler: T,
@@ -61,7 +61,7 @@ function l(e) {
     let {
       res: t
     } = e;
-    a(_, I, d, {
+    a(_, I, c, {
       ...o,
       error: t.body.message
     })

@@ -18,8 +18,8 @@ var i = n(512722),
   l = n(53529),
   u = n(341702),
   _ = n(925994),
-  d = n(436660),
-  c = n(887490);
+  c = n(436660),
+  d = n(887490);
 let E = /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\ |\\\\|\\"|(?!")\w)+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
   I = new Set(["emoji", "customEmoji", "textMention", "userMention", "roleMention", "channelMention", "staticRouteLink", "soundboard", "timestamp"]),
   T = new Set(["line", "blockQuote"]),
@@ -35,23 +35,23 @@ function S(e, t, n) {
   let o = null,
     a = !0;
   return e.onChange = () => {
-    let i = c.bN.richValue(e);
+    let i = d.bN.richValue(e);
     (i !== o || e.previewMarkdown !== a) && (l.T.withMergedEntry(e, () => {
-      c.bN.withoutNormalizing(e, () => f(e, t, n))
+      d.bN.withoutNormalizing(e, () => f(e, t, n))
     }), o = i, a = e.previewMarkdown), s()
   }, e
 }
 
 function f(e, t, n) {
-  let i = c.bN.areStylesDisabled(e);
-  for (let r of c.bN.blocks(e))
+  let i = d.bN.areStylesDisabled(e);
+  for (let r of d.bN.blocks(e))
     if (T.has(r[0].type)) i ? A(e, r, !0, null) : N(e, r, t, n);
     else {
       let [s, o] = r;
       for (let r = s.children.length - 1; r >= 0; r--) {
         let a = s.children[r];
         if (h.has(a.type)) {
-          let s = [a, c.C0.child(o, r)];
+          let s = [a, d.C0.child(o, r)];
           i ? A(e, s, !0, null) : N(e, s, t, n)
         }
       }
@@ -61,14 +61,14 @@ function f(e, t, n) {
 function N(e, t, n, i) {
   var s;
   let o = "line" === t[0].type && (null === (s = t[0].codeBlockState) || void 0 === s ? void 0 : s.isInCodeBlock) === !0,
-    l = c.q.markdown(t[0], n);
-  A(e, t, o, l) && (t = c.q.updateElement(e, t), l = c.q.markdown(t[0], n)), !o && (m(e, t, i, l) && (t = c.q.updateElement(e, t), l = c.q.markdown(t[0], n)), function(e, t, n, i, s) {
+    l = d.q.markdown(t[0], n);
+  A(e, t, o, l) && (t = d.q.updateElement(e, t), l = d.q.markdown(t[0], n)), !o && (m(e, t, i, l) && (t = d.q.updateElement(e, t), l = d.q.markdown(t[0], n)), function(e, t, n, i, s) {
     let [o, l] = t, u = !1;
     for (let _ = o.children.length - 1; _ >= 0; _--) {
       let I;
       let T = o.children[_];
-      if (!c.LC.isText(T)) continue;
-      let h = c.C0.child(l, _),
+      if (!d.LC.isText(T)) continue;
+      let h = d.C0.child(l, _),
         S = [];
       for (E.lastIndex = 0; null != (I = E.exec(T.text));) {
         if (0 !== I.index && null == T.text.charAt(I.index - 1).match(/(\t|\s)/)) {
@@ -94,11 +94,11 @@ function N(e, t, n, i) {
           path: a,
           offset: n + i
         };
-        r()(l.offset >= 0 && l.offset <= o.text.length, "Failed to find valid start position for raw mention replace"), r()(u.offset >= 0 && u.offset <= o.text.length, "Failed to find valid end position for raw mention replace"), d.Q.textToVoid(e, s, {
+        r()(l.offset >= 0 && l.offset <= o.text.length, "Failed to find valid start position for raw mention replace"), r()(u.offset >= 0 && u.offset <= o.text.length, "Failed to find valid end position for raw mention replace"), c.Q.textToVoid(e, s, {
           anchor: l,
           focus: u
         })
-      })(e, [T, c.C0.child(l, _)], t.index, t.length, t.node), u = !0
+      })(e, [T, d.C0.child(l, _)], t.index, t.length, t.node), u = !0
     };
   }(e, t, n, i, l))
 }
@@ -108,7 +108,7 @@ function A(e, t, n, i) {
   for (let t = r.children.length - 1; t >= 0; t--) {
     let a = r.children[t],
       l = t < r.children.length - 1 ? r.children[t + 1] : null;
-    if (c.LC.isText(a) && !n) {
+    if (d.LC.isText(a) && !n) {
       if (null == l || !e.isVoid(l)) continue;
       let n = !1,
         i = 0;
@@ -122,19 +122,19 @@ function A(e, t, n, i) {
         i = e + 2
       }
       if (n) {
-        let n = c.C0.child(s, t + 1);
-        d.Q.voidToText(e, (0, _.sg)(l, {
+        let n = d.C0.child(s, t + 1);
+        c.Q.voidToText(e, (0, _.sg)(l, {
           mode: "plain",
           preventEmojiSurrogates: !0
         }), n), o = !0
       }
     } else if (e.isVoid(a)) {
-      let r = c.C0.child(s, t),
+      let r = d.C0.child(s, t),
         l = {
-          path: c.C0.child(r, 0),
+          path: d.C0.child(r, 0),
           offset: 0
         };
-      (n || null != i && O(e, s, l, i)) && (d.Q.voidToText(e, (0, _.sg)(a, {
+      (n || null != i && O(e, s, l, i)) && (c.Q.voidToText(e, (0, _.sg)(a, {
         mode: "plain",
         preventEmojiSurrogates: !0
       }), r), o = !0)
@@ -150,8 +150,8 @@ function m(e, t, n, i) {
   for (let a = 0; a < o.length; a++) {
     let l;
     let _ = o[a],
-      c = o[a + 1];
-    if (null != c && c.text.endsWith("\\") && _.start === c.start + c.text.length) continue;
+      d = o[a + 1];
+    if (null != d && d.text.endsWith("\\") && _.start === d.start + d.text.length) continue;
     switch (_.attributes[0]) {
       case "emoji":
         l = {
@@ -250,7 +250,7 @@ function m(e, t, n, i) {
     if (!R(n, t[0], l)) continue;
     let E = (0, u.t)(e, r, i.serializedChildren, _.start),
       I = (0, u.t)(e, r, i.serializedChildren, _.start + _.text.length);
-    d.Q.textToVoid(e, l, {
+    c.Q.textToVoid(e, l, {
       anchor: E,
       focus: I
     }), s = !0
@@ -260,13 +260,13 @@ function m(e, t, n, i) {
 
 function O(e, t, n, i) {
   let r = 0;
-  for (let [i, s] of c.bN.nodes(e, {
+  for (let [i, s] of d.bN.nodes(e, {
       at: {
-        anchor: c.bN.start(e, t),
+        anchor: d.bN.start(e, t),
         focus: n
       },
       mode: "lowest"
-    })) c.LC.isText(i) ? c.C0.equals(s, n.path) ? r += n.offset : r += i.text.length : r += 1;
+    })) d.LC.isText(i) ? d.C0.equals(s, n.path) ? r += n.offset : r += i.text.length : r += 1;
   for (let e of i.entries) {
     if (!e.attributes.includes("codeBlockText") && !e.attributes.includes("inlineCode")) continue;
     let t = e.start,

@@ -7,9 +7,9 @@ t.d(s, {
 var n = t(735250);
 t(470079);
 var a = t(120356),
-  i = t.n(a),
+  r = t.n(a),
   l = t(481060),
-  r = t(937615),
+  i = t(937615),
   o = t(884697),
   c = t(87951);
 let u = e => e.length > 5 ? e.replace(/\.00$/, "") : e,
@@ -25,7 +25,7 @@ let u = e => e.length > 5 ? e.replace(/\.00$/, "") : e,
       className: E,
       discount: f = o.f_,
       variant: m = "heading-md/semibold"
-    } = e, p = u((0, r.T4)(t, a)), g = f !== o.f_ && f.discountPercentage >= 5 ? (0, n.jsxs)(n.Fragment, {
+    } = e, p = u((0, i.T4)(t, a)), g = f !== o.f_ && f.discountPercentage >= 5 ? (0, n.jsxs)(n.Fragment, {
       children: [p, (0, n.jsx)(l.Heading, {
         variant: m,
         color: "text-positive",
@@ -36,7 +36,7 @@ let u = e => e.length > 5 ? e.replace(/\.00$/, "") : e,
     return (0, n.jsx)(n.Fragment, {
       children: (0, n.jsxs)(l.Heading, {
         variant: m,
-        className: i()(c.container, E),
+        className: r()(c.container, E),
         children: [C, null !== (s = null == d ? void 0 : d(g)) && void 0 !== s ? s : g]
       })
     })

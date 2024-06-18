@@ -23,21 +23,21 @@ function _(e) {
   });
   let n = (0, r.e7)([o.Z], () => o.Z.hasLoadedExperiments),
     _ = (0, u.e)("useMaybeFetchCollectiblesCategories"),
-    [d, c, E, I, T] = (0, r.Wu)([l.Z], () => {
+    [c, d, E, I, T] = (0, r.Wu)([l.Z], () => {
       var e;
       return [l.Z.isFetchingCategories, l.Z.lastFetchOptions, l.Z.error, null !== (e = l.Z.lastSuccessfulFetch) && void 0 !== e ? e : 0, l.Z.categories]
     });
   return (0, i.useEffect)(() => {
-    if (!n || d || E) return;
+    if (!n || c || E) return;
     let t = {
         ...e,
         includeBundles: _
       },
-      i = !(0, a.oc)(c, t),
+      i = !(0, a.oc)(d, t),
       r = Date.now() - I < 6e5;
     (i || !r) && (0, a.F$)(t)
-  }, [n, d, c, I, e, E, _]), {
-    isFetching: d,
+  }, [n, c, d, I, e, E, _]), {
+    isFetching: c,
     categories: T,
     error: E,
     refreshCategories: (0, i.useCallback)(() => {

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   B: function() {
-    return d
+    return c
   },
   i: function() {
     return _
@@ -36,7 +36,7 @@ function _(e) {
   })
 }
 
-function d(e) {
+function c(e) {
   var t;
   let n = null != s.default.getId() ? a.default.age(s.default.getId()) : 0;
   return n < (null !== (t = l[e]) && void 0 !== t ? t : u)

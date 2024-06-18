@@ -19,7 +19,7 @@ let _ = e => new Promise((t, n) => {
   let i = new Image;
   i.src = e, i.onload = () => t(i), i.onerror = e => n(e)
 });
-class d extends(i = s.PureComponent) {
+class c extends(i = s.PureComponent) {
   componentDidUpdate(e) {
     e.src !== this.props.src && this.setState({
       loaded: !1
@@ -46,7 +46,7 @@ class d extends(i = s.PureComponent) {
       style: u,
       imageClassName: _
     } = this.props, {
-      loaded: d
+      loaded: c
     } = this.state;
     return (0, r.jsx)("div", {
       className: e,
@@ -57,7 +57,7 @@ class d extends(i = s.PureComponent) {
       },
       children: (0, r.jsx)("img", {
         className: a()(l.image, _, {
-          [l.loaded]: d
+          [l.loaded]: c
         }),
         width: i,
         height: s,
@@ -73,8 +73,8 @@ class d extends(i = s.PureComponent) {
     }), this.initialize()
   }
 }
-u(d, "defaultProps", {
+u(c, "defaultProps", {
   width: 0,
   height: 0,
   alt: ""
-}), t.Z = d
+}), t.Z = c

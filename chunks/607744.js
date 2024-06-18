@@ -4,8 +4,8 @@ var i, r, s, o, a = n(442837),
   l = n(570140),
   u = n(630388),
   _ = n(709054),
-  d = n(271383),
-  c = n(430824),
+  c = n(271383),
+  d = n(430824),
   E = n(594174),
   I = n(981631),
   T = n(372897);
@@ -23,16 +23,16 @@ let h = {
 function N(e) {
   let t;
   A(e), S.add(e);
-  let n = c.Z.getGuild(e),
+  let n = d.Z.getGuild(e),
     i = E.default.getCurrentUser();
   if (null == n || n.verificationLevel === I.sFg.NONE || null == i || n.isOwner(i) || i.isPhoneVerified()) return;
-  let r = d.ZP.getMember(n.id, i.id);
+  let r = c.ZP.getMember(n.id, i.id);
   if (null != r) {
     var s;
     if ((0, u.yE)(null !== (s = r.flags) && void 0 !== s ? s : 0, T.q.BYPASSES_VERIFICATION)) return;
     let e = new Set;
     for (let t of r.roles) {
-      let i = c.Z.getRole(n.id, t);
+      let i = d.Z.getRole(n.id, t);
       null != i && !i.managed && e.add(t)
     }
     let t = new Date("2022-12-02 00:00:00"),
@@ -74,7 +74,7 @@ function m(e) {
 }
 class O extends(i = a.ZP.Store) {
   initialize() {
-    this.waitFor(c.Z, E.default)
+    this.waitFor(d.Z, E.default)
   }
   getCheck(e) {
     var t;

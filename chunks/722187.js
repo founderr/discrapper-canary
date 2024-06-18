@@ -19,7 +19,7 @@ function _(e) {
     className: n,
     disabled: r,
     required: _ = !1,
-    ...d
+    ...c
   } = e;
   return (0, i.jsxs)(a.Z, {
     tag: "label",
@@ -28,7 +28,7 @@ function _(e) {
       [u.defaultMargin]: null == n,
       [u.disabled]: r
     }),
-    ...d,
+    ...c,
     children: [t, _ && (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)("span", {
         className: u.required,

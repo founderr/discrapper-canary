@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   Jh: function() {
-    return C
-  },
-  Lk: function() {
     return p
   },
-  Xg: function() {
+  Lk: function() {
     return g
+  },
+  Xg: function() {
+    return C
   },
   ZP: function() {
     return O
@@ -16,7 +16,7 @@ n.d(t, {
     return R
   },
   j3: function() {
-    return L
+    return v
   }
 });
 var i = n(735250),
@@ -27,8 +27,8 @@ var i = n(735250),
 if (12633 == n.j) var l = n(266067);
 var u = n(729594),
   _ = n(466377),
-  d = n(922770),
-  c = n(993365),
+  c = n(922770),
+  d = n(993365),
   E = n(481060),
   I = n(252618),
   T = n(703656),
@@ -56,13 +56,13 @@ function O(e) {
       className: m.closeButton
     }) : null, (0, i.jsxs)("div", {
       className: m.wrapper,
-      children: [a ? (0, i.jsx)(d.$, {}) : null, (0, i.jsx)("div", {
+      children: [a ? (0, i.jsx)(c.$, {}) : null, (0, i.jsx)("div", {
         className: o()(m.header, r)
-      }), (0, i.jsx)(c.x, {
+      }), (0, i.jsx)(d.x, {
         variant: "text-md/normal",
         className: m.text,
         children: t
-      }), null != n ? n : null, s ? (0, i.jsx)(c.x, {
+      }), null != n ? n : null, s ? (0, i.jsx)(d.x, {
         variant: "text-xs/normal",
         color: "text-muted",
         className: m.cta,
@@ -79,7 +79,7 @@ function R(e) {
   })
 }
 
-function C(e) {
+function p(e) {
   let {
     guild: t,
     application: n,
@@ -103,8 +103,8 @@ function C(e) {
       installedApplicationName: null == n ? void 0 : n.name
     });
     return A.Z.Messages.AUTHORIZED_GENERIC
-  }, [n, t]), d = (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(c.x, {
+  }, [n, t]), c = (0, i.jsxs)(i.Fragment, {
+    children: [(0, i.jsx)(d.x, {
       variant: "text-sm/normal",
       className: m.authorizedSuccessSubtext,
       children: _
@@ -135,24 +135,24 @@ function C(e) {
     className: m.authorizedSuccessWrapper,
     children: (0, i.jsx)(R, {
       message: a,
-      footer: d,
+      footer: c,
       ...s
     })
   })
 }
 
-function p(e) {
+function g(e) {
   return (0, i.jsx)(O, {
     ...e,
     headerClassName: m.headerFailure
   })
 }
 
-function g() {
+function C() {
   var e, t;
   let n = (0, l.TH)();
   return (0, i.jsx)(f.G, {
-    children: (0, i.jsx)(C, {
+    children: (0, i.jsx)(p, {
       guild: null === (e = n.state) || void 0 === e ? void 0 : e.guild,
       application: null === (t = n.state) || void 0 === t ? void 0 : t.application,
       showsCloseWindowText: !0
@@ -160,7 +160,7 @@ function g() {
   })
 }
 
-function L(e) {
+function v(e) {
   var t, n;
   let {
     location: s
@@ -173,7 +173,7 @@ function L(e) {
   let o = null != s ? (0, a.parse)(s.search) : {},
     l = null !== (n = null !== (t = o.error_description) && void 0 !== t ? t : o.error) && void 0 !== n ? n : A.Z.Messages.OAUTH2_UNKNOWN_ERROR;
   return (0, i.jsx)(f.G, {
-    children: (0, i.jsx)(p, {
+    children: (0, i.jsx)(g, {
       message: l,
       showsCloseWindowText: !0
     })

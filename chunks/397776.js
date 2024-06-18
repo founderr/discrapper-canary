@@ -44,7 +44,7 @@ function _(e) {
     channelId: i.id
   }), !0)
 }
-class d extends i.Z {
+class c extends i.Z {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
@@ -58,4 +58,4 @@ class d extends i.Z {
     }) : t[n] = i
   }
 }
-t.Z = new d
+t.Z = new c

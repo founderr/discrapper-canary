@@ -4,10 +4,10 @@ n.d(t, {
     return m
   },
   Xo: function() {
-    return v
+    return L
   },
   qE: function() {
-    return g
+    return C
   }
 }), n(411104), n(47120);
 var i = n(735250),
@@ -18,8 +18,8 @@ var i = n(735250),
   l = n(1561),
   u = n(438784),
   _ = n(696826),
-  d = n(981729),
-  c = n(806519),
+  c = n(981729),
+  d = n(806519),
   E = n(51144),
   I = n(182294),
   T = n(981631),
@@ -37,10 +37,10 @@ function A(e) {
     isMobile: n,
     isTyping: r,
     ...s
-  } = e, o = (0, I.UC)(t), a = o.status * (n && !r ? I.EW : 1), l = o.status * (r ? I.D6 : 1), u = r ? (o.status * I.D6 - o.status) / 2 : 0, _ = o.size - o.status - u - o.offset, d = o.size - a - o.offset;
+  } = e, o = (0, I.UC)(t), a = o.status * (n && !r ? I.EW : 1), l = o.status * (r ? I.D6 : 1), u = r ? (o.status * I.D6 - o.status) / 2 : 0, _ = o.size - o.status - u - o.offset, c = o.size - a - o.offset;
   return (0, i.jsx)("rect", {
     x: _,
-    y: d,
+    y: c,
     width: l,
     height: a,
     fill: "transparent",
@@ -79,7 +79,7 @@ function O(e, t, n, r) {
   let a = s.height + 2 * n.stroke,
     l = s.width + 2 * n.stroke,
     u = s.x - n.stroke,
-    d = s.y - n.stroke;
+    c = s.y - n.stroke;
   return (0, i.jsx)("rect", {
     fill: e,
     height: a,
@@ -88,7 +88,7 @@ function O(e, t, n, r) {
       opacity: o
     },
     x: u,
-    y: d,
+    y: c,
     rx: n.stroke
   })
 }
@@ -127,7 +127,7 @@ function R(e) {
   }
 }
 
-function C(e) {
+function p(e) {
   let {
     children: t,
     size: n,
@@ -136,18 +136,18 @@ function C(e) {
     onKeyDown: a,
     onContextMenu: u,
     onMouseEnter: _,
-    onMouseLeave: d,
+    onMouseLeave: c,
     className: T,
     tabIndex: N,
     ariaLabel: A,
     ariaHidden: m,
     status: O,
     isMobile: R = !1,
-    isTyping: C = !1,
-    avatarDecoration: p,
-    typingOffset: g,
-    specs: L
-  } = e, v = {
+    isTyping: p = !1,
+    avatarDecoration: g,
+    typingOffset: C,
+    specs: v
+  } = e, L = {
     width: (0, I.px)(n),
     height: (0, I.px)(n)
   }, D = null == A || m ? void 0 : function(e, t) {
@@ -156,67 +156,67 @@ function C(e) {
       label: e,
       status: (0, E.u5)(t, n)
     }) : e
-  }(A, O, R), M = L.size * h.hs, P = function(e, t, n, i) {
+  }(A, O, R), M = v.size * h.hs, P = function(e, t, n, i) {
     if (null == e) return null;
     if (i) switch (t) {
       case I.EF.SIZE_16:
-        return c.QS.AVATAR_DECORATION_STATUS_TYPING_16;
+        return d.QS.AVATAR_DECORATION_STATUS_TYPING_16;
       case I.EF.SIZE_20:
-        return c.QS.AVATAR_DECORATION_STATUS_TYPING_20;
+        return d.QS.AVATAR_DECORATION_STATUS_TYPING_20;
       case I.EF.SIZE_24:
-        return c.QS.AVATAR_DECORATION_STATUS_TYPING_24;
+        return d.QS.AVATAR_DECORATION_STATUS_TYPING_24;
       case I.EF.SIZE_32:
-        return c.QS.AVATAR_DECORATION_STATUS_TYPING_32;
+        return d.QS.AVATAR_DECORATION_STATUS_TYPING_32;
       case I.EF.SIZE_40:
-        return c.QS.AVATAR_DECORATION_STATUS_TYPING_40;
+        return d.QS.AVATAR_DECORATION_STATUS_TYPING_40;
       case I.EF.SIZE_56:
-        return c.QS.AVATAR_DECORATION_STATUS_TYPING_56;
+        return d.QS.AVATAR_DECORATION_STATUS_TYPING_56;
       case I.EF.SIZE_80:
-        return c.QS.AVATAR_DECORATION_STATUS_TYPING_80;
+        return d.QS.AVATAR_DECORATION_STATUS_TYPING_80;
       case I.EF.SIZE_120:
-        return c.QS.AVATAR_DECORATION_STATUS_TYPING_120
+        return d.QS.AVATAR_DECORATION_STATUS_TYPING_120
     }
     if (n) switch (t) {
       case I.EF.SIZE_16:
-        return c.QS.AVATAR_DECORATION_STATUS_MOBILE_16;
+        return d.QS.AVATAR_DECORATION_STATUS_MOBILE_16;
       case I.EF.SIZE_20:
-        return c.QS.AVATAR_DECORATION_STATUS_MOBILE_20;
+        return d.QS.AVATAR_DECORATION_STATUS_MOBILE_20;
       case I.EF.SIZE_24:
-        return c.QS.AVATAR_DECORATION_STATUS_MOBILE_24;
+        return d.QS.AVATAR_DECORATION_STATUS_MOBILE_24;
       case I.EF.SIZE_32:
-        return c.QS.AVATAR_DECORATION_STATUS_MOBILE_32;
+        return d.QS.AVATAR_DECORATION_STATUS_MOBILE_32;
       case I.EF.SIZE_40:
-        return c.QS.AVATAR_DECORATION_STATUS_MOBILE_40;
+        return d.QS.AVATAR_DECORATION_STATUS_MOBILE_40;
       case I.EF.SIZE_56:
-        return c.QS.AVATAR_DECORATION_STATUS_MOBILE_56;
+        return d.QS.AVATAR_DECORATION_STATUS_MOBILE_56;
       case I.EF.SIZE_80:
-        return c.QS.AVATAR_DECORATION_STATUS_MOBILE_80;
+        return d.QS.AVATAR_DECORATION_STATUS_MOBILE_80;
       case I.EF.SIZE_120:
-        return c.QS.AVATAR_DECORATION_STATUS_MOBILE_120
+        return d.QS.AVATAR_DECORATION_STATUS_MOBILE_120
     }
     switch (t) {
       case I.EF.SIZE_16:
-        return c.QS.AVATAR_DECORATION_STATUS_ROUND_16;
+        return d.QS.AVATAR_DECORATION_STATUS_ROUND_16;
       case I.EF.SIZE_20:
-        return c.QS.AVATAR_DECORATION_STATUS_ROUND_20;
+        return d.QS.AVATAR_DECORATION_STATUS_ROUND_20;
       case I.EF.SIZE_24:
-        return c.QS.AVATAR_DECORATION_STATUS_ROUND_24;
+        return d.QS.AVATAR_DECORATION_STATUS_ROUND_24;
       case I.EF.SIZE_32:
-        return c.QS.AVATAR_DECORATION_STATUS_ROUND_32;
+        return d.QS.AVATAR_DECORATION_STATUS_ROUND_32;
       case I.EF.SIZE_40:
-        return c.QS.AVATAR_DECORATION_STATUS_ROUND_40;
+        return d.QS.AVATAR_DECORATION_STATUS_ROUND_40;
       case I.EF.SIZE_56:
-        return c.QS.AVATAR_DECORATION_STATUS_ROUND_56;
+        return d.QS.AVATAR_DECORATION_STATUS_ROUND_56;
       case I.EF.SIZE_80:
-        return c.QS.AVATAR_DECORATION_STATUS_ROUND_80;
+        return d.QS.AVATAR_DECORATION_STATUS_ROUND_80;
       case I.EF.SIZE_120:
-        return c.QS.AVATAR_DECORATION_STATUS_ROUND_120
+        return d.QS.AVATAR_DECORATION_STATUS_ROUND_120
     }
     return null
-  }(O, n, R, C), y = null != p && (0, i.jsx)("svg", {
-    width: M + g,
+  }(O, n, R, p), y = null != g && (0, i.jsx)("svg", {
+    width: M + C,
     height: M,
-    viewBox: "0 0 ".concat(M + g, " ").concat(M),
+    viewBox: "0 0 ".concat(M + C, " ").concat(M),
     className: f.avatarDecoration,
     "aria-hidden": !0,
     children: (0, i.jsx)("foreignObject", {
@@ -229,7 +229,7 @@ function C(e) {
         className: f.avatarStack,
         children: (0, i.jsx)("img", {
           className: f.avatar,
-          src: p,
+          src: g,
           alt: " ",
           "aria-hidden": !0
         })
@@ -238,23 +238,23 @@ function C(e) {
   });
   return null != r || null != s ? (0, i.jsxs)(l.P, {
     className: o()(f.wrapper, f.pointer, T),
-    style: v,
+    style: L,
     onClick: r,
     tabIndex: N,
     onContextMenu: u,
     onMouseDown: s,
     onKeyDown: a,
     onMouseEnter: null != _ ? _ : void 0,
-    onMouseLeave: null != d ? d : void 0,
+    onMouseLeave: null != c ? c : void 0,
     "aria-label": D,
     "aria-hidden": m,
     children: [t, y]
   }) : (0, i.jsxs)("div", {
     className: o()(f.wrapper, T),
-    style: v,
+    style: L,
     onContextMenu: null != u ? u : void 0,
     onMouseEnter: null != _ ? _ : void 0,
-    onMouseLeave: null != d ? d : void 0,
+    onMouseLeave: null != c ? c : void 0,
     role: "img",
     "aria-label": D,
     "aria-hidden": m,
@@ -262,7 +262,7 @@ function C(e) {
   })
 }
 
-function p(e) {
+function g(e) {
   let {
     src: t,
     isSpeaking: n,
@@ -281,7 +281,7 @@ function p(e) {
   }, t)
 }
 
-function g(e) {
+function C(e) {
   let {
     src: t,
     status: n,
@@ -294,14 +294,14 @@ function g(e) {
     statusTooltip: N = !1,
     statusTooltipDelay: A,
     statusBackdropColor: R,
-    "aria-hidden": g = !1,
-    "aria-label": L,
-    imageClassName: v
+    "aria-hidden": C = !1,
+    "aria-label": v,
+    imageClassName: L
   } = e, D = n !== T.Skl.UNKNOWN ? n : null, M = (0, I.UC)(r), P = null != D ? Math.ceil((M.status * I.D6 - M.status) / 2) : 0, y = M.size + P, U = (0, _.vj)(D, s);
-  return (0, i.jsx)(C, {
+  return (0, i.jsx)(p, {
     ...e,
-    ariaLabel: L,
-    ariaHidden: g,
+    ariaLabel: v,
+    ariaHidden: C,
     status: D,
     specs: M,
     typingOffset: P,
@@ -317,75 +317,75 @@ function g(e) {
         width: M.size,
         height: M.size,
         mask: "url(#".concat(function(e, t, n, i) {
-          if (null == e) return c.QS.AVATAR_DEFAULT;
+          if (null == e) return d.QS.AVATAR_DEFAULT;
           if (i) switch (t) {
             case I.EF.SIZE_16:
-              return c.QS.AVATAR_STATUS_TYPING_16;
+              return d.QS.AVATAR_STATUS_TYPING_16;
             case I.EF.SIZE_20:
-              return c.QS.AVATAR_STATUS_TYPING_20;
+              return d.QS.AVATAR_STATUS_TYPING_20;
             case I.EF.SIZE_24:
-              return c.QS.AVATAR_STATUS_TYPING_24;
+              return d.QS.AVATAR_STATUS_TYPING_24;
             case I.EF.SIZE_32:
-              return c.QS.AVATAR_STATUS_TYPING_32;
+              return d.QS.AVATAR_STATUS_TYPING_32;
             case I.EF.SIZE_40:
-              return c.QS.AVATAR_STATUS_TYPING_40;
+              return d.QS.AVATAR_STATUS_TYPING_40;
             case I.EF.SIZE_48:
-              return c.QS.AVATAR_STATUS_TYPING_48;
+              return d.QS.AVATAR_STATUS_TYPING_48;
             case I.EF.SIZE_56:
-              return c.QS.AVATAR_STATUS_TYPING_56;
+              return d.QS.AVATAR_STATUS_TYPING_56;
             case I.EF.SIZE_80:
-              return c.QS.AVATAR_STATUS_TYPING_80;
+              return d.QS.AVATAR_STATUS_TYPING_80;
             case I.EF.SIZE_120:
-              return c.QS.AVATAR_STATUS_TYPING_120
+              return d.QS.AVATAR_STATUS_TYPING_120
           }
           if (e === T.Skl.ONLINE && n) switch (t) {
             case I.EF.SIZE_16:
-              return c.QS.AVATAR_STATUS_MOBILE_16;
+              return d.QS.AVATAR_STATUS_MOBILE_16;
             case I.EF.SIZE_20:
-              return c.QS.AVATAR_STATUS_MOBILE_20;
+              return d.QS.AVATAR_STATUS_MOBILE_20;
             case I.EF.SIZE_24:
-              return c.QS.AVATAR_STATUS_MOBILE_24;
+              return d.QS.AVATAR_STATUS_MOBILE_24;
             case I.EF.SIZE_32:
-              return c.QS.AVATAR_STATUS_MOBILE_32;
+              return d.QS.AVATAR_STATUS_MOBILE_32;
             case I.EF.SIZE_40:
-              return c.QS.AVATAR_STATUS_MOBILE_40;
+              return d.QS.AVATAR_STATUS_MOBILE_40;
             case I.EF.SIZE_48:
-              return c.QS.AVATAR_STATUS_MOBILE_48;
+              return d.QS.AVATAR_STATUS_MOBILE_48;
             case I.EF.SIZE_56:
-              return c.QS.AVATAR_STATUS_MOBILE_56;
+              return d.QS.AVATAR_STATUS_MOBILE_56;
             case I.EF.SIZE_80:
-              return c.QS.AVATAR_STATUS_MOBILE_80;
+              return d.QS.AVATAR_STATUS_MOBILE_80;
             case I.EF.SIZE_120:
-              return c.QS.AVATAR_STATUS_MOBILE_120
+              return d.QS.AVATAR_STATUS_MOBILE_120
           }
           switch (t) {
             case I.EF.SIZE_16:
-              return c.QS.AVATAR_STATUS_ROUND_16;
+              return d.QS.AVATAR_STATUS_ROUND_16;
             case I.EF.SIZE_20:
-              return c.QS.AVATAR_STATUS_ROUND_20;
+              return d.QS.AVATAR_STATUS_ROUND_20;
             case I.EF.SIZE_24:
-              return c.QS.AVATAR_STATUS_ROUND_24;
+              return d.QS.AVATAR_STATUS_ROUND_24;
             case I.EF.SIZE_32:
-              return c.QS.AVATAR_STATUS_ROUND_32;
+              return d.QS.AVATAR_STATUS_ROUND_32;
             case I.EF.SIZE_40:
-              return c.QS.AVATAR_STATUS_ROUND_40;
+              return d.QS.AVATAR_STATUS_ROUND_40;
             case I.EF.SIZE_48:
-              return c.QS.AVATAR_STATUS_ROUND_48;
+              return d.QS.AVATAR_STATUS_ROUND_48;
             case I.EF.SIZE_56:
-              return c.QS.AVATAR_STATUS_ROUND_56;
+              return d.QS.AVATAR_STATUS_ROUND_56;
             case I.EF.SIZE_80:
-              return c.QS.AVATAR_STATUS_ROUND_80;
+              return d.QS.AVATAR_STATUS_ROUND_80;
             case I.EF.SIZE_120:
-              return c.QS.AVATAR_STATUS_ROUND_120
+              return d.QS.AVATAR_STATUS_ROUND_120
           }
           throw Error("getMaskId(): Unsupported type, size: ".concat(t, ", status: ").concat(e, ", isMobile: ").concat(n ? "true" : "false"))
         }(D, r, a, l), ")"),
-        children: (0, i.jsx)(p, {
+        children: (0, i.jsx)(g, {
           src: t,
           isSpeaking: S,
-          className: v
+          className: L
         })
-      }), null != D && null != R ? O(R, a, M, D) : null, null != D ? (0, i.jsx)(d.u, {
+      }), null != D && null != R ? O(R, a, M, D) : null, null != D ? (0, i.jsx)(c.u, {
         text: N ? (0, E.u5)(D) : null,
         "aria-label": !1,
         position: "top",
@@ -410,26 +410,26 @@ function g(e) {
   })
 }
 
-function L(e) {
+function v(e) {
   let {
     fromIsMobile: t = !0,
     fromStatus: n,
     fromColor: s,
     isMobile: l = !1,
-    isTyping: c = !1,
+    isTyping: d = !1,
     typingIndicatorRef: T,
     isSpeaking: h = !1,
     size: S,
     src: m,
-    status: g,
-    statusColor: L,
-    statusTooltip: v = !1,
+    status: C,
+    statusColor: v,
+    statusTooltip: L = !1,
     statusTooltipDelay: D,
     statusBackdropColor: M,
     "aria-hidden": P = !1,
     "aria-label": y,
     imageClassName: U
-  } = e, b = (0, _.vj)(g, L), G = r.useId(), w = r.useId(), [k] = r.useState(() => ({
+  } = e, b = (0, _.vj)(C, v), G = r.useId(), w = r.useId(), [k] = r.useState(() => ({
     fill: s,
     ...R({
       size: S,
@@ -441,11 +441,11 @@ function L(e) {
     fill: b,
     ...R({
       size: S,
-      status: g,
+      status: C,
       isMobile: l,
-      isTyping: c
+      isTyping: d
     })
-  }), [b, S, g, l, c]), {
+  }), [b, S, C, l, d]), {
     avatarCutoutX: x,
     avatarCutoutY: V,
     avatarCutoutWidth: Z,
@@ -458,8 +458,8 @@ function L(e) {
     config: N,
     from: k,
     to: B
-  }), W = (0, I.px)(S), K = (0, I.UC)(S), z = K.status * I.D6, q = K.status * I.EW, X = null != g ? (K.status * I.D6 - K.status) / 2 : 0, Q = K.size - K.status - X - K.offset, J = K.size - q - K.offset, $ = K.size + Math.ceil(X);
-  return (0, i.jsx)(C, {
+  }), W = (0, I.px)(S), K = (0, I.UC)(S), z = K.status * I.D6, q = K.status * I.EW, X = null != C ? (K.status * I.D6 - K.status) / 2 : 0, Q = K.size - K.status - X - K.offset, J = K.size - q - K.offset, $ = K.size + Math.ceil(X);
+  return (0, i.jsx)(p, {
     ...e,
     ariaLabel: y,
     ariaHidden: P,
@@ -496,19 +496,19 @@ function L(e) {
         width: W,
         height: W,
         mask: "url(#".concat(G, ")"),
-        children: (0, i.jsx)(p, {
+        children: (0, i.jsx)(g, {
           src: m,
           isSpeaking: h,
           className: U
         })
-      }), null != M && O(M, l, K, g), (0, i.jsx)(d.u, {
-        text: v ? (0, E.u5)(g) : null,
+      }), null != M && O(M, l, K, C), (0, i.jsx)(c.u, {
+        text: L ? (0, E.u5)(C) : null,
         "aria-label": !1,
         position: "top",
         spacing: function(e, t, n) {
           let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
           return 5 - (n && !i ? 0 : .5 * e) + 1.5 * t
-        }(K.status, K.stroke, l, c),
+        }(K.status, K.stroke, l, d),
         delay: D,
         children: e => (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsxs)("svg", {
@@ -517,7 +517,7 @@ function L(e) {
             width: z,
             height: q,
             viewBox: "0 0 ".concat(z, " ").concat(q),
-            className: v ? f.cursorDefault : void 0,
+            className: L ? f.cursorDefault : void 0,
             children: [(0, _.vP)(j, K.status, w), (0, i.jsx)(a.animated.rect, {
               fill: Y,
               width: z,
@@ -528,12 +528,12 @@ function L(e) {
               dotRadius: K.status / 4,
               x: .15 * z,
               y: .5 * q,
-              hide: !c
+              hide: !d
             })]
           }), (0, i.jsx)(A, {
             size: S,
             isMobile: l,
-            isTyping: c,
+            isTyping: d,
             className: f.pointerEvents,
             ...e
           })]
@@ -542,28 +542,28 @@ function L(e) {
     })
   })
 }
-let v = r.memo(function(e) {
+let L = r.memo(function(e) {
   var t, n, s, o, a;
   let {
     statusColor: l,
     status: u,
-    ...d
+    ...c
   } = e, {
-    isMobile: c = !1,
+    isMobile: d = !1,
     isTyping: E = !1
-  } = d, I = r.useRef(u), h = r.useRef(c), S = (0, _.vj)(u, l), f = r.useRef(S), N = r.useRef(!1);
-  let A = N.current || (t = E, n = u, s = I.current, o = c, a = h.current, null != s && null != n && (!!t || n !== s || n === T.Skl.ONLINE && o !== a || !1));
+  } = c, I = r.useRef(u), h = r.useRef(d), S = (0, _.vj)(u, l), f = r.useRef(S), N = r.useRef(!1);
+  let A = N.current || (t = E, n = u, s = I.current, o = d, a = h.current, null != s && null != n && (!!t || n !== s || n === T.Skl.ONLINE && o !== a || !1));
   return r.useLayoutEffect(() => {
-    N.current = A, I.current = u, h.current = c, f.current = S
-  }, [u, c, S, A]), null != u && null != I.current && A ? (0, i.jsx)(L, {
-    ...d,
+    N.current = A, I.current = u, h.current = d, f.current = S
+  }, [u, d, S, A]), null != u && null != I.current && A ? (0, i.jsx)(v, {
+    ...c,
     status: u,
     statusColor: S,
     fromStatus: I.current,
     fromIsMobile: h.current,
     fromColor: f.current
-  }) : (0, i.jsx)(g, {
-    ...d,
+  }) : (0, i.jsx)(C, {
+    ...c,
     status: u,
     statusColor: S
   })

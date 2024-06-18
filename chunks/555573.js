@@ -27,8 +27,8 @@ var i = n(512722),
   l = n(314897),
   u = n(709054),
   _ = n(174212),
-  d = n(895924),
-  c = n(981631);
+  c = n(895924),
+  d = n(981631);
 
 function E(e) {
   let {
@@ -40,7 +40,7 @@ function E(e) {
     triggerSection: l,
     queryLength: u
   } = e;
-  null != n && r()(n.inputType !== d.iw.PLACEHOLDER, "command should not be placeholder"), o.Z.dispatch({
+  null != n && r()(n.inputType !== c.iw.PLACEHOLDER, "command should not be placeholder"), o.Z.dispatch({
     type: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND",
     channelId: t,
     command: n,
@@ -82,7 +82,7 @@ function S(e, t, n, i) {
     body: {
       permissions: i
     },
-    url: c.ANM.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n)
+    url: d.ANM.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n)
   })
 }
 
@@ -90,17 +90,17 @@ function f(e, t, n) {
   var i;
   r()(null != t.autocomplete, "Missing autocomplete context");
   let {
-    query: d,
+    query: c,
     name: E
   } = t.autocomplete, I = u.default.fromTimestamp(Date.now());
   if (o.Z.dispatch({
       type: "APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST",
       nonce: I,
       channelId: t.channel.id,
-      query: d,
+      query: c,
       name: E
-    }), null == _.Z.getAutocompleteChoices(t.channel.id, E, d)) s.tn.post({
-    url: c.ANM.INTERACTIONS,
+    }), null == _.Z.getAutocompleteChoices(t.channel.id, E, c)) s.tn.post({
+    url: d.ANM.INTERACTIONS,
     body: {
       type: a.B8.APPLICATION_COMMAND_AUTOCOMPLETE,
       application_id: e.applicationId,

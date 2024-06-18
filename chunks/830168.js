@@ -7,8 +7,8 @@ var s = n(570140),
   l = n(594174),
   u = n(436181),
   _ = n(626135),
-  d = n(358085),
-  c = n(998502),
+  c = n(358085),
+  d = n(998502),
   E = n(981631),
   I = n(186901);
 let T = new a.Z("NativeDispatchUtils");
@@ -35,18 +35,18 @@ t.Z = {
       stateCallback: a,
       errorCallback: u
     } = e;
-    if (null == r)(null != i ? Promise.resolve(i) : (0, d.isDesktop)() ? Promise.all([c.ZP.ensureModule("discord_dispatch"), c.ZP.ensureModule("discord_modules")]).then(() => {
-      c.ZP.requireModule("discord_modules");
-      let e = c.ZP.getDispatch();
+    if (null == r)(null != i ? Promise.resolve(i) : (0, c.isDesktop)() ? Promise.all([d.ZP.ensureModule("discord_dispatch"), d.ZP.ensureModule("discord_modules")]).then(() => {
+      d.ZP.requireModule("discord_modules");
+      let e = d.ZP.getDispatch();
       return null != e ? (i = e, e) : Promise.reject(Error("dispatch not found"))
     }) : Promise.reject(Error("not desktop client"))).then(e => {
       var i;
-      let d = {
+      let c = {
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          build_number: "302832"
+          build_number: "302904"
         },
-        c = l.default.getCurrentUser();
-      null != c && (d.user_id = c.id, d.user_name = c.tag, null != c.email && (d.email = c.email));
+        d = l.default.getCurrentUser();
+      null != d && (c.user_id = d.id, c.user_name = d.tag, null != d.email && (c.email = d.email));
       let I = {
         user_token: t,
         user_id: n,
@@ -58,7 +58,7 @@ t.Z = {
         }),
         api_endpoint: "".concat((i = "https:", "https:")).concat(window.GLOBAL_ENV.API_ENDPOINT),
         environment: window.GLOBAL_ENV.PROJECT_ENV,
-        sentry: d,
+        sentry: c,
         platform: o
       };
       r = new e.Dispatch(JSON.stringify(I), e => {

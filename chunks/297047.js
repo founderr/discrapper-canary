@@ -16,17 +16,17 @@ var r = n(442837),
   l = n(496675),
   u = n(944486),
   _ = n(585483),
-  d = n(51144),
-  c = n(981631),
+  c = n(51144),
+  d = n(981631),
   E = n(689938);
 
 function I(e, t) {
   let {
     id: n
-  } = e, i = "@".concat(d.ZP.getUserTag(e, {
+  } = e, i = "@".concat(c.ZP.getUserTag(e, {
     decoration: "never"
   }));
-  _.S.dispatchToLastSubscribed(c.CkL.INSERT_TEXT, {
+  _.S.dispatchToLastSubscribed(d.CkL.INSERT_TEXT, {
     plainText: i,
     rawText: "<@".concat(n, ">")
   }), null != t && o.Z.startTyping(t)
@@ -36,9 +36,9 @@ function T(e, t, n) {
   let [o, _] = (0, r.Wu)([u.Z, a.Z, l.Z], () => {
     let e = u.Z.getChannelId(t),
       n = a.Z.getChannel(e);
-    return [e, null != n && (n.isMultiUserDM() || l.Z.can(c.Plq.SEND_MESSAGES, n))]
-  }, [t]), d = n === c.IlC.POPOUT;
-  return !_ || d ? null : (0, i.jsx)(s.MenuItem, {
+    return [e, null != n && (n.isMultiUserDM() || l.Z.can(d.Plq.SEND_MESSAGES, n))]
+  }, [t]), c = n === d.IlC.POPOUT;
+  return !_ || c ? null : (0, i.jsx)(s.MenuItem, {
     id: "mention",
     label: E.Z.Messages.MENTION,
     action: function() {

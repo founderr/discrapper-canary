@@ -25,11 +25,11 @@ function S() {
   let {
     editStateId: s
   } = (0, u.N)(), [t, l] = E.TT(s), [S, h] = E.F2(s), g = (0, c.oC)(s), {
-    options: x
-  } = (0, I.Z)(null !== (e = null == g ? void 0 : g.active_trial) && void 0 !== e ? e : null), C = (0, _.Z)(), R = null != t, L = i.useCallback(e => {
-    let s = x.find(e => e.isDefault);
+    options: C
+  } = (0, I.Z)(null !== (e = null == g ? void 0 : g.active_trial) && void 0 !== e ? e : null), x = (0, _.Z)(), R = null != t, L = i.useCallback(e => {
+    let s = C.find(e => e.isDefault);
     a()(null != s, "Missing default trial duartion option"), l(e ? s.value : null)
-  }, [l, x]), O = (0, d.mY)(), A = (0, o.Dt)(), p = (0, o.Dt)();
+  }, [l, C]), O = (0, d.mY)(), A = (0, o.Dt)(), p = (0, o.Dt)();
   return (0, n.jsxs)(T.Z, {
     title: N.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_TITLE,
     description: N.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_DESCRIPTION,
@@ -52,7 +52,7 @@ function S() {
         size: 8
       }), (0, n.jsx)(r.SingleSelect, {
         "aria-labelledby": A,
-        options: x,
+        options: C,
         className: m.formInput,
         placeholder: N.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_DISABLED,
         value: t,
@@ -74,7 +74,7 @@ function S() {
         children: N.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ACTIVE_TRIAL_USER_LIMIT_DESCRIPTION
       }), (0, n.jsx)(r.SingleSelect, {
         "aria-labelledby": p,
-        options: C,
+        options: x,
         className: m.formInput,
         value: S,
         onChange: h,

@@ -27,13 +27,13 @@ function _(e) {
   return t
 }
 
-function d() {
+function c() {
   o.clear(), a.clear(), Object.values(i.Z.getMutablePrivateChannels()).forEach(e => {
     _(e)
   }), l = !0
 }
 
-function c(e) {
+function d(e) {
   let {
     channelId: t
   } = e;
@@ -91,13 +91,13 @@ class h extends r.Z {
   }
   constructor() {
     super({
-      CONNECTION_OPEN: d,
-      CONNECTION_OPEN_SUPPLEMENTAL: d,
+      CONNECTION_OPEN: c,
+      CONNECTION_OPEN_SUPPLEMENTAL: c,
       CACHE_LOADED_LAZY: () => this.loadCache(),
       CHANNEL_CREATE: E,
       CHANNEL_UPDATES: I,
       CHANNEL_DELETE: T,
-      MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: c
+      MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: d
     })
   }
 }

@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(361213),
   u = n(778569),
   _ = n(783097),
-  d = n(753972),
-  c = n(387658),
+  c = n(753972),
+  d = n(387658),
   E = n(536650),
   I = n(675993),
   T = n(564446);
@@ -35,7 +35,7 @@ function h(e) {
     children: [(0, i.jsx)(E.Z, {
       application: n,
       scrollerRef: u
-    }), (0, i.jsx)(d.Z, {
+    }), (0, i.jsx)(c.Z, {
       application: n,
       className: T.appIcon,
       size: 80
@@ -45,7 +45,7 @@ function h(e) {
       channel: t,
       application: n,
       sectionName: a
-    }), (0, i.jsx)(c.Z, {
+    }), (0, i.jsx)(d.Z, {
       channel: t,
       application: n,
       sectionName: a

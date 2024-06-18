@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(481060),
   u = n(100527),
   _ = n(314897),
-  d = n(592125),
-  c = n(246946),
+  c = n(592125),
+  d = n(246946),
   E = n(5192),
   I = n(51144),
   T = n(342656),
@@ -25,11 +25,11 @@ var i = n(735250),
   m = n(248345),
   O = n(337125),
   R = n(19836),
-  C = n(207570),
-  p = n(77097),
-  g = n(538564),
-  L = n(489642),
-  v = n(319300),
+  p = n(207570),
+  g = n(77097),
+  C = n(538564),
+  v = n(489642),
+  L = n(319300),
   D = n(591600),
   M = n(579729),
   P = n(302316),
@@ -54,10 +54,10 @@ function w(e) {
     hideNote: W = !1,
     showCopiableUsername: K = !1,
     analyticsParams: z
-  } = e, q = (0, a.e7)([c.Z], () => c.Z.hidePersonalInformation), X = (0, a.e7)([h.Z], () => {
+  } = e, q = (0, a.e7)([d.Z], () => d.Z.hidePersonalInformation), X = (0, a.e7)([h.Z], () => {
     var e;
     return null === (e = h.Z.getUserProfile(B.id)) || void 0 === e ? void 0 : e.application
-  }), Q = (0, a.e7)([d.Z], () => d.Z.getChannel(H)), {
+  }), Q = (0, a.e7)([c.Z], () => c.Z.getChannel(H)), {
     theme: J
   } = (0, S.z)(), $ = r.useRef(null), [ee, et] = r.useState(!0), en = r.useCallback(() => {
     let {
@@ -111,7 +111,7 @@ function w(e) {
       }),
       shouldCopyOnClick: K
     }), (0, i.jsxs)(l.HeadingLevel, {
-      children: [(0, i.jsx)(g.Z, {
+      children: [(0, i.jsx)(C.Z, {
         className: G.customStatusSection,
         customStatusActivity: k
       }), (0, i.jsx)(N.Z, {
@@ -122,7 +122,7 @@ function w(e) {
         }),
         onScroll: en,
         ref: $,
-        children: [(0, i.jsx)(C.Z, {
+        children: [(0, i.jsx)(p.Z, {
           user: B,
           guildId: null == V ? void 0 : V.id
         }), (0, i.jsx)(R.Z, {
@@ -134,7 +134,7 @@ function w(e) {
           className: G.profileMutuals,
           user: B,
           onClose: F
-        }), (0, i.jsx)(v.Z, {
+        }), (0, i.jsx)(L.Z, {
           userId: B.id,
           guildId: null == V ? void 0 : V.id
         }), (0, i.jsx)(m.Z, {
@@ -158,7 +158,7 @@ function w(e) {
           guild: V,
           guildMember: Z,
           showBorder: null !== (s = null == x ? void 0 : x.canEditThemes) && void 0 !== s && s
-        }), (0, i.jsx)(p.Z, {
+        }), (0, i.jsx)(g.Z, {
           userId: B.id,
           channelId: H,
           guild: V,
@@ -172,7 +172,7 @@ function w(e) {
           setNote: Y,
           autoFocus: !j,
           lastSection: !j
-        }), !B.isNonUserBot() && j && (0, i.jsx)(L.Z, {
+        }), !B.isNonUserBot() && j && (0, i.jsx)(v.Z, {
           user: B,
           setNote: Y,
           canDM: j,

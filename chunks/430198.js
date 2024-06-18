@@ -4,8 +4,8 @@ var i, r, s, o, a = n(149765),
   l = n(442837),
   u = n(570140),
   _ = n(223892),
-  d = n(738774),
-  c = n(644542),
+  c = n(738774),
+  d = n(644542),
   E = n(923726),
   I = n(973542),
   T = n(790285),
@@ -18,7 +18,7 @@ var i, r, s, o, a = n(149765),
 let O = {},
   R = new Set;
 
-function C(e) {
+function p(e) {
   let {
     guildId: t,
     role: n,
@@ -33,12 +33,12 @@ function C(e) {
   }(n, t)) || !1)
 }
 
-function p(e, t) {
+function g(e, t) {
   if (!t.hasFeature(m.oNc.CREATOR_MONETIZABLE) && !t.hasFeature(m.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) return !1;
   let n = h.Z.isViewingServerShop(t.id);
   for (let i of Object.keys(e.permissionOverwrites)) {
     let r = N.Z.getRole(t.id, i);
-    if (!C({
+    if (!p({
         guildId: t.id,
         role: r,
         isPreviewingRoles: n
@@ -51,7 +51,7 @@ function p(e, t) {
     s = (0, T.wB)(e, e.permissionOverwrites[t.id]);
   if (r && !s) {
     for (let e of Object.values(N.Z.getRoles(t.id)))
-      if (C({
+      if (p({
           guildId: t.id,
           role: e,
           isPreviewingRoles: n
@@ -60,7 +60,7 @@ function p(e, t) {
   return !1
 }
 
-function g(e, t) {
+function C(e, t) {
   let n = O[e];
   if (null == n) return !1;
   let i = S.Z.getChannel(t);
@@ -68,15 +68,15 @@ function g(e, t) {
   let r = N.Z.getGuild(i.getGuildId());
   if (null == r) return !1;
   let s = n.has(t),
-    o = p(i, r);
+    o = g(i, r);
   return s !== o && (o ? n.add(t) : n.delete(t), !0)
 }
 
-function L() {
+function v() {
   O = {}, R.clear()
 }
 
-function v(e) {
+function L(e) {
   let {
     guild: t
   } = e;
@@ -94,13 +94,13 @@ function M(e) {
   let {
     channel: t
   } = e;
-  return null != t.guild_id && g(t.guild_id, t.id)
+  return null != t.guild_id && C(t.guild_id, t.id)
 }
 class P extends(i = l.ZP.Store) {
   initialize() {
-    this.waitFor(N.Z, S.Z, h.Z), c.Zo.subscribe({
+    this.waitFor(N.Z, S.Z, h.Z), d.Zo.subscribe({
       location: "1"
-    }, () => L())
+    }, () => v())
   }
   isChannelGated(e, t) {
     if (null == e) return !1;
@@ -113,7 +113,7 @@ class P extends(i = l.ZP.Store) {
       let i = S.Z.getMutableGuildChannelsForGuild(e);
       for (let e in i) {
         let r = i[e];
-        p(r, t) && n.add(r.id)
+        g(r, t) && n.add(r.id)
       }
     }(e), n = O[e]), null != n && n.has(t)
   }
@@ -127,12 +127,12 @@ o = "GatedChannelStore", (s = "displayName") in(r = P) ? Object.defineProperty(r
   configurable: !0,
   writable: !0
 }) : r[s] = o, t.Z = new P(u.Z, {
-  CONNECTION_OPEN: L,
-  OVERLAY_INITIALIZE: L,
-  CACHE_LOADED_LAZY: L,
-  GUILD_CREATE: v,
-  GUILD_UPDATE: v,
-  GUILD_DELETE: v,
+  CONNECTION_OPEN: v,
+  OVERLAY_INITIALIZE: v,
+  CACHE_LOADED_LAZY: v,
+  GUILD_CREATE: L,
+  GUILD_UPDATE: L,
+  GUILD_DELETE: L,
   GUILD_ROLE_CREATE: D,
   GUILD_ROLE_UPDATE: D,
   GUILD_ROLE_DELETE: D,
@@ -145,7 +145,7 @@ o = "GatedChannelStore", (s = "displayName") in(r = P) ? Object.defineProperty(r
       channels: t
     } = e, n = !1;
     for (let e of t) {
-      if (null != e.guild_id) g(e.guild_id, e.id) && (n = !0)
+      if (null != e.guild_id) C(e.guild_id, e.id) && (n = !0)
     }
     return n
   },
@@ -154,7 +154,7 @@ o = "GatedChannelStore", (s = "displayName") in(r = P) ? Object.defineProperty(r
       guildId: t,
       restrictions: n
     } = e;
-    (0, d.uq)(n) ? R.add(t): R.delete(t)
+    (0, c.uq)(n) ? R.add(t): R.delete(t)
   },
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: function(e) {
     let {

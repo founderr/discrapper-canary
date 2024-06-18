@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return c
+    return d
   }
 }), n(47120);
 var i = n(470079),
@@ -12,18 +12,18 @@ var i = n(470079),
   l = n(81897),
   u = n(771845),
   _ = n(621853),
-  d = n(484459);
+  c = n(484459);
 
-function c(e) {
+function d(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    [n, c] = (0, s.Wu)([_.Z], () => [_.Z.getMutualGuilds(e), _.Z.isFetchingProfile(e)]),
+    [n, d] = (0, s.Wu)([_.Z], () => [_.Z.getMutualGuilds(e), _.Z.isFetchingProfile(e)]),
     E = (0, l.Z)(),
     [I, T] = (0, i.useState)(null),
-    h = t && null == I && !c && null == n;
+    h = t && null == I && !d && null == n;
   (0, i.useEffect)(() => {
     if (!!h)(async () => {
       try {
-        await (0, d.Z)(e, void 0, {
+        await (0, c.Z)(e, void 0, {
           withMutualGuilds: !0,
           abortSignal: E
         })
@@ -48,6 +48,6 @@ function c(e) {
     N = (0, a.Z)(f);
   return {
     mutualGuilds: null != f ? f : N,
-    isFetching: c
+    isFetching: d
   }
 }

@@ -6,21 +6,21 @@ t.d(s, {
 });
 var n = t(470079),
   a = t(772848),
-  i = t(638730),
+  r = t(638730),
   l = t(626135);
-let r = (e, s, t, n) => {
+let i = (e, s, t, n) => {
     let {
       scrollTop: a = 0,
-      scrollOffset: i = 0,
-      scrollHeight: r = 0,
+      scrollOffset: r = 0,
+      scrollHeight: i = 0,
       scrollWidth: o = 0
     } = n;
-    if (r > 0) {
-      let n = (a + i) / r;
+    if (i > 0) {
+      let n = (a + r) / i;
       n > 0 && l.default.track(e, {
         scroll_visible_percent: n,
         source: t,
-        page_height: Math.round(r),
+        page_height: Math.round(i),
         page_width: Math.round(o),
         page_session_id: s
       })
@@ -29,7 +29,7 @@ let r = (e, s, t, n) => {
   o = (e, s) => {
     let t = n.useRef(null),
       l = n.useRef((0, a.Z)()),
-      o = (0, i.h)(r, 5e3, [], {
+      o = (0, r.h)(i, 5e3, [], {
         trailing: !0
       }),
       c = n.useCallback(() => {

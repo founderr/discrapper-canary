@@ -18,8 +18,8 @@ var i = n(470079),
   l = n(487576),
   u = n(553795),
   _ = n(594174),
-  d = n(70956),
-  c = n(930090),
+  c = n(70956),
+  d = n(930090),
   E = n(981631),
   I = n(420212);
 let T = {
@@ -28,7 +28,7 @@ let T = {
   h = new Map([
     [E.ABu.INSTAGRAM, new Date(2023, 1, 18).getTime()]
   ]),
-  S = 30 * d.Z.Millis.DAY;
+  S = 30 * c.Z.Millis.DAY;
 
 function f(e) {
   let {
@@ -39,7 +39,7 @@ function f(e) {
     autoTrackExposure: !1
   }).allowPlayStationStaging, {
     enabled: r
-  } = c.E.useExperiment({
+  } = d.E.useExperiment({
     location: "ConnectionsHooks"
   });
   return e => {

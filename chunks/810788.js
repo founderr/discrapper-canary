@@ -15,7 +15,7 @@ function l(e, t, n) {
 }
 let u = new Set,
   _ = {};
-class d extends(i = r.ZP.PersistedStore) {
+class c extends(i = r.ZP.PersistedStore) {
   initialize(e) {
     null != e && (Array.isArray(e.hiddenHotspots) && (u = new Set(e.hiddenHotspots)), null != e.hotspotOverrides && (_ = e.hotspotOverrides))
   }
@@ -37,10 +37,10 @@ class d extends(i = r.ZP.PersistedStore) {
     }
   }
 }
-l(d, "displayName", "HotspotStore"), l(d, "persistKey", "hotspots"), l(d, "migrations", [e => ({
+l(c, "displayName", "HotspotStore"), l(c, "persistKey", "hotspots"), l(c, "migrations", [e => ({
   hiddenHotspots: null != e ? e : [],
   hotspotOverrides: {}
-})]), t.Z = new d(s.Z, {
+})]), t.Z = new c(s.Z, {
   OVERLAY_INITIALIZE: function(e) {
     let {
       hiddenHotspots: t

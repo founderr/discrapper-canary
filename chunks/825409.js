@@ -39,7 +39,7 @@ class _ {
     }), a(this, "_parsedMessages", {}), a(this, "_getParsedMessages", void 0), this._getParsedMessages = e
   }
 }
-class d extends _ {
+class c extends _ {
   refresh(e) {
     this._context = e, this._refresh(e, this._parsedMessages)
   }
@@ -56,7 +56,7 @@ class d extends _ {
     })
   }
 }
-class c extends _ {
+class d extends _ {
   refresh(e) {
     Object.assign(this._context, e), Object.keys(this._parsedMessages).forEach(e => {
       delete this._parsedMessages[e]
@@ -199,7 +199,7 @@ class E extends i.EventEmitter {
       if ("locale" === e) this.emit(e, this._chosenLocale)
     }), this.initialLanguageLoad = new Promise((e, t) => {
       this.resolveLanguageLoaded = e
-    }), Intl.__addLocaleData && Intl.__addLocaleData(n(201688)), this._languages = i(), this._provider = null != window.Proxy ? new c(this._getParsedMessages) : new d(this._getParsedMessages), this.Messages = this._provider.getMessages(), this._getMessages = t;
+    }), Intl.__addLocaleData && Intl.__addLocaleData(n(201688)), this._languages = i(), this._provider = null != window.Proxy ? new d(this._getParsedMessages) : new c(this._getParsedMessages), this.Messages = this._provider.getMessages(), this._getMessages = t;
     try {
       new Intl.NumberFormat(e, {}), this.setLocale(e || this.getDefaultLocale())
     } catch (e) {

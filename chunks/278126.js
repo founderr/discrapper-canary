@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   _: function() {
-    return d
+    return c
   }
 });
 var i, r = n(735250),
@@ -23,7 +23,7 @@ let _ = Object.freeze({
   MEDIUM: 2,
   LARGE: 4
 });
-class d extends(i = s.Component) {
+class c extends(i = s.Component) {
   renderCircle() {
     let {
       strokeSize: e,
@@ -74,6 +74,6 @@ class d extends(i = s.Component) {
     })
   }
 }
-u(d, "StrokeSizes", _), u(d, "defaultProps", {
+u(c, "StrokeSizes", _), u(c, "defaultProps", {
   strokeSize: _.MEDIUM
 })

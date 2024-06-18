@@ -18,15 +18,15 @@ function u(e) {
     guildId: n,
     channelId: u,
     onClose: _
-  } = e, d = (0, r.Z)(t.id, n);
+  } = e, c = (0, r.Z)(t.id, n);
   return (0, i.jsxs)("footer", {
     className: l.footer,
-    children: [d && (0, i.jsx)(o.Z, {
+    children: [c && (0, i.jsx)(o.Z, {
       user: t,
       guildId: n,
       channelId: u,
       onClose: _
-    }), !d && (0, i.jsx)(s.Z, {
+    }), !c && (0, i.jsx)(s.Z, {
       user: t,
       guildId: n,
       onClose: _,

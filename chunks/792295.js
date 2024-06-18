@@ -14,12 +14,12 @@ function _(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let d = {
+let c = {
   SMALL: u.sizeSmall,
   MEDIUM: u.sizeMedium,
   LARGE: u.sizeLarge
 };
-class c extends(i = s.PureComponent) {
+class d extends(i = s.PureComponent) {
   calculateScroll() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this._scroller;
     if (null == e) return;
@@ -80,8 +80,8 @@ class c extends(i = s.PureComponent) {
     }
   }
 }
-_(c, "Header", l.ModalHeader), _(c, "Footer", l.ModalFooter), _(c, "Content", l.ModalContent), _(c, "ListContent", l.ModalListContent), _(c, "CloseButton", l.ModalCloseButton), _(c, "Sizes", d), _(c, "defaultProps", {
+_(d, "Header", l.ModalHeader), _(d, "Footer", l.ModalFooter), _(d, "Content", l.ModalContent), _(d, "ListContent", l.ModalListContent), _(d, "CloseButton", l.ModalCloseButton), _(d, "Sizes", c), _(d, "defaultProps", {
   fullscreenOnMobile: !0,
-  size: d.SMALL,
+  size: c.SMALL,
   tag: "div"
 })

@@ -13,8 +13,8 @@ var r = n(481060),
   l = n(358085),
   u = n(857595),
   _ = n(607070),
-  d = n(981631);
-let c = window.matchMedia("(prefers-reduced-motion: reduce)"),
+  c = n(981631);
+let d = window.matchMedia("(prefers-reduced-motion: reduce)"),
   E = window.matchMedia("(prefers-contrast: more)"),
   I = window.matchMedia("(prefers-contrast: less)"),
   T = window.matchMedia("(prefers-color-scheme: dark)"),
@@ -27,15 +27,15 @@ function N() {
 }
 t.Z = {
   initBasic() {
-    c.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(c), T.addListener(this.handleSystemColorPreferencesChanged), h.addListener(this.handleSystemColorPreferencesChanged), S.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), E.addListener(this.handleSystemPrefersContrastChanged), I.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged()
+    d.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(d), T.addListener(this.handleSystemColorPreferencesChanged), h.addListener(this.handleSystemColorPreferencesChanged), S.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), E.addListener(this.handleSystemPrefersContrastChanged), I.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged()
   },
   init() {
     this.initBasic(), s.Z.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
-      a.default.track(d.rMx.LOCAL_SETTINGS_UPDATED, {
+      a.default.track(c.rMx.LOCAL_SETTINGS_UPDATED, {
         colorblind_enabled: _.Z.colorblindMode
       })
     }), s.Z.subscribe("ACCESSIBILITY_SET_SATURATION", e => {
-      a.default.track(d.rMx.LOCAL_SETTINGS_UPDATED, {
+      a.default.track(c.rMx.LOCAL_SETTINGS_UPDATED, {
         saturation_level: e.saturation
       })
     })
@@ -60,7 +60,7 @@ t.Z = {
   },
   handleSystemColorPreferencesChanged() {
     let e;
-    T.matches ? e = d.BRd.DARK : h.matches && (e = d.BRd.LIGHT);
+    T.matches ? e = c.BRd.DARK : h.matches && (e = c.BRd.LIGHT);
     let t = (!l.isPlatformEmbedded || N()) && S.matches ? "active" : "none";
     s.Z.wait(() => {
       u.Ej(e, t)

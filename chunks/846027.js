@@ -7,8 +7,8 @@ var i = n(570140),
   l = n(626135),
   u = n(557177),
   _ = n(557457),
-  d = n(981631),
-  c = n(65154);
+  c = n(981631),
+  d = n(65154);
 
 function E() {
   (0, u.GN)("mention3")
@@ -18,7 +18,7 @@ function I(e, t, n, i, r) {
   if (t === n) return;
   let s = e[t],
     a = e[n];
-  l.default.track(d.rMx.MEDIA_DEVICE_CHANGED, {
+  l.default.track(c.rMx.MEDIA_DEVICE_CHANGED, {
     device_from_name: o.Z.getCertifiedDeviceName(t, null != s ? s.name : ""),
     device_to_name: o.Z.getCertifiedDeviceName(n, null != a ? a.name : ""),
     device_type: i,
@@ -40,7 +40,7 @@ t.Z = {
   enable: h,
   toggleSelfMute() {
     let {
-      context: e = c.Yn.DEFAULT,
+      context: e = d.Yn.DEFAULT,
       syncRemote: t = !0,
       usedKeybind: n = !1,
       playSoundEffect: r = !0
@@ -69,7 +69,7 @@ t.Z = {
   },
   toggleSelfDeaf() {
     let {
-      context: e = c.Yn.DEFAULT,
+      context: e = d.Yn.DEFAULT,
       syncRemote: t = !0
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     !S() && i.Z.dispatch({
@@ -79,7 +79,7 @@ t.Z = {
     })
   },
   toggleLocalMute(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.Yn.DEFAULT;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.Yn.DEFAULT;
     !S() && i.Z.dispatch({
       type: "AUDIO_TOGGLE_LOCAL_MUTE",
       context: t,
@@ -87,7 +87,7 @@ t.Z = {
     })
   },
   toggleLocalSoundboardMute(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.Yn.DEFAULT;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.Yn.DEFAULT;
     i.Z.dispatch({
       type: "AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE",
       context: t,
@@ -95,7 +95,7 @@ t.Z = {
     })
   },
   setDisableLocalVideo(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.Yn.DEFAULT,
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.Yn.DEFAULT,
       r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
       s = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
     !S() && i.Z.dispatch({
@@ -108,7 +108,7 @@ t.Z = {
     })
   },
   setLocalVolume(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.Yn.DEFAULT;
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.Yn.DEFAULT;
     i.Z.dispatch({
       type: "AUDIO_SET_LOCAL_VOLUME",
       context: n,
@@ -117,7 +117,7 @@ t.Z = {
     })
   },
   setLocalPan(e, t, n) {
-    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : c.Yn.DEFAULT;
+    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : d.Yn.DEFAULT;
     i.Z.dispatch({
       type: "AUDIO_SET_LOCAL_PAN",
       context: r,
@@ -128,7 +128,7 @@ t.Z = {
   },
   setMode(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-      n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.Yn.DEFAULT;
+      n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.Yn.DEFAULT;
     !S() && i.Z.dispatch({
       type: "AUDIO_SET_MODE",
       context: n,

@@ -7,7 +7,7 @@ n.d(t, {
     return I
   },
   KJ: function() {
-    return c
+    return d
   },
   OT: function() {
     return u
@@ -16,7 +16,7 @@ n.d(t, {
     return a
   },
   d0: function() {
-    return d
+    return c
   },
   lK: function() {
     return E
@@ -52,17 +52,17 @@ function _(e, t) {
   return 0 === t ? 100 : e / t * 100
 }
 
-function d(e, t, n) {
+function c(e, t, n) {
   return !(null == t || n.enabled && t.hasFlag(o.eHb.PRIVATE)) && !t.isHidden()
 }
 
-function c(e) {
+function d(e) {
   return null == e ? null : e.type === o.vxO.INSTALLING || e.type === o.vxO.UPDATING || e.type === o.vxO.UNINSTALLING ? e : null
 }
 
 function E(e) {
   return e.reduce((e, t) => {
-    let n = c(t);
+    let n = d(t);
     return null == n || t.type === o.vxO.UP_TO_DATE ? e : {
       total: e.total + Number(n.total),
       progress: e.progress + Number(n.progress)

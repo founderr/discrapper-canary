@@ -12,8 +12,8 @@ var i = n(812206),
   l = n(566620),
   u = n(882347),
   _ = n(917107),
-  d = n(89425),
-  c = n(275920),
+  c = n(89425),
+  d = n(275920),
   E = n(197386),
   I = n(701488),
   T = n(981631);
@@ -36,15 +36,15 @@ async function h(e) {
       embeddedActivitiesManager: f,
       user: R
     })) return !1;
-  let C = (0, _.Z)(A.id),
-    p = I.wP.includes(A.type);
-  if (C) {
-    if (!await (0, d.Z)({
+  let p = (0, _.Z)(A.id),
+    g = I.wP.includes(A.type);
+  if (p) {
+    if (!await (0, c.Z)({
         channelId: A.id,
         bypassChangeModal: null != n
       })) return !1
-  } else if (!(0, a.WS)(A, !1, "joinEmbeddedActivity") || !p) return !1;
-  return (0, E.Z)(m, h), (0, l.J$)(h, t, N), (0, c.Z)({
+  } else if (!(0, a.WS)(A, !1, "joinEmbeddedActivity") || !g) return !1;
+  return (0, E.Z)(m, h), (0, l.J$)(h, t, N), (0, d.Z)({
     type: T.q5t.JOIN,
     userId: R.id,
     applicationId: t,

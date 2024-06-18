@@ -5,14 +5,14 @@ var i, r, s, o, a = n(442837),
 let u = new Set,
   _ = {};
 
-function d(e) {
+function c(e) {
   let {
     applicationId: t
   } = e;
   u.add(t)
 }
 
-function c(e) {
+function d(e) {
   let {
     applicationId: t
   } = e;
@@ -45,11 +45,11 @@ o = "LaunchableGameStore", (s = "displayName") in(r = E) ? Object.defineProperty
     } = e;
     _[t] = n
   },
-  GAME_CLOUD_SYNC_START: d,
-  GAME_LAUNCH_START: d,
-  GAME_LAUNCH_SUCCESS: c,
-  GAME_LAUNCH_FAIL: c,
-  GAME_CLOUD_SYNC_CONFLICT: c,
-  GAME_CLOUD_SYNC_ERROR: c,
-  GAME_CLOUD_SYNC_COMPLETE: c
+  GAME_CLOUD_SYNC_START: c,
+  GAME_LAUNCH_START: c,
+  GAME_LAUNCH_SUCCESS: d,
+  GAME_LAUNCH_FAIL: d,
+  GAME_CLOUD_SYNC_CONFLICT: d,
+  GAME_CLOUD_SYNC_ERROR: d,
+  GAME_CLOUD_SYNC_COMPLETE: d
 })

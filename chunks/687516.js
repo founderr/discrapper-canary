@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Cf: function() {
-    return d
+    return c
   },
   L2: function() {
     return u
@@ -37,6 +37,6 @@ function _(e, t) {
   return e === t || null != e && null != t && (0, r.Z)(e, t)
 }
 
-function d(e) {
+function c(e) {
   return (0, i.e7)([s.Z], () => u(e, s.Z), [e], _)
 }

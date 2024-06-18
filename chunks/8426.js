@@ -10,7 +10,7 @@ t.d(s, {
     return p
   },
   XG: function() {
-    return C
+    return x
   },
   _N: function() {
     return T
@@ -19,7 +19,7 @@ t.d(s, {
     return g
   },
   bj: function() {
-    return v
+    return D
   },
   el: function() {
     return m
@@ -40,7 +40,7 @@ t.d(s, {
     return f
   },
   r2: function() {
-    return x
+    return C
   },
   vR: function() {
     return N
@@ -122,14 +122,14 @@ async function g(e, s, t, n) {
   }
 }
 
-function x(e) {
+function C(e) {
   a.Z.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_ADD_RESOURCE_CHANNEL",
     resourceChannel: e
   })
 }
 
-function C(e, s) {
+function x(e, s) {
   a.Z.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_UPDATE_RESOURCE_CHANNEL",
     channelId: e,
@@ -253,7 +253,7 @@ function f(e, s) {
   })
 }
 
-function v() {
+function D() {
   a.Z.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESET"
   })

@@ -12,32 +12,32 @@ var i = n(735250),
   l = n(345332),
   u = n(417153),
   _ = n(561466),
-  d = n(775725);
-let c = {
+  c = n(775725);
+let d = {
     duration: 300,
     friction: 24,
     tension: 280
   },
   E = {
     [_.az.TOP]: {
-      styles: d.containerTop,
+      styles: c.containerTop,
       transition: {
         trail: 400,
         from: {
           transform: "translate3d(0, -100%, 0)",
           opacity: 0,
-          config: c
+          config: d
         },
         enter: {
           transform: "translate3d(0, -0px, 0)",
           opacity: 1,
-          config: c
+          config: d
         },
         leave: {
           transform: "translate3d(0, -100%, 0)",
           opacity: 0,
           config: {
-            ...c,
+            ...d,
             friction: 40,
             clamp: !0
           }
@@ -45,24 +45,24 @@ let c = {
       }
     },
     [_.az.BOTTOM]: {
-      styles: d.containerBottom,
+      styles: c.containerBottom,
       transition: {
         trail: 400,
         from: {
           transform: "translate3d(0, 100%, 0)",
           opacity: 0,
-          config: c
+          config: d
         },
         enter: {
           transform: "translate3d(0, 0px, 0)",
           opacity: 1,
-          config: c
+          config: d
         },
         leave: {
           transform: "translate3d(0, 100%, 0)",
           opacity: 0,
           config: {
-            ...c,
+            ...d,
             friction: 40,
             clamp: !0
           }
@@ -72,22 +72,22 @@ let c = {
   };
 
 function I() {
-  var e, t, n, d;
-  let c = (0, u.Es)(e => e.currentToast),
-    I = r.useRef(null !== (n = null == c ? void 0 : null === (e = c.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : _.si.position),
-    T = r.useRef(null !== (d = null == c ? void 0 : null === (t = c.options) || void 0 === t ? void 0 : t.duration) && void 0 !== d ? d : _.si.duration),
+  var e, t, n, c;
+  let d = (0, u.Es)(e => e.currentToast),
+    I = r.useRef(null !== (n = null == d ? void 0 : null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : _.si.position),
+    T = r.useRef(null !== (c = null == d ? void 0 : null === (t = d.options) || void 0 === t ? void 0 : t.duration) && void 0 !== c ? c : _.si.duration),
     h = (0, o.e7)([a.Z], () => a.Z.useReducedMotion);
   r.useEffect(() => {
-    if (null != c) {
+    if (null != d) {
       var e, t, n, i;
-      I.current = null !== (n = null === (e = c.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : _.si.position, T.current = null !== (i = null === (t = c.options) || void 0 === t ? void 0 : t.duration) && void 0 !== i ? i : _.si.duration
+      I.current = null !== (n = null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : _.si.position, T.current = null !== (i = null === (t = d.options) || void 0 === t ? void 0 : t.duration) && void 0 !== i ? i : _.si.duration
     }
-  }, [c]);
+  }, [d]);
   let S = r.useMemo(() => {
       var e, t;
-      return E[null !== (t = null == c ? void 0 : null === (e = c.options) || void 0 === e ? void 0 : e.position) && void 0 !== t ? t : I.current]
-    }, [c]),
-    f = (0, s.useTransition)(c, {
+      return E[null !== (t = null == d ? void 0 : null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== t ? t : I.current]
+    }, [d]),
+    f = (0, s.useTransition)(d, {
       keys: e => {
         var t;
         return null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : ""
@@ -96,10 +96,10 @@ function I() {
       ...S.transition
     });
   return r.useEffect(() => {
-    null != c && setTimeout(() => {
+    null != d && setTimeout(() => {
       (0, u.z5)()
     }, T.current)
-  }, [c]), (0, i.jsx)("div", {
+  }, [d]), (0, i.jsx)("div", {
     className: S.styles,
     children: f((e, t) => null === t ? null : (0, i.jsx)(s.animated.div, {
       style: e,

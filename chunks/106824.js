@@ -4,7 +4,7 @@ n.d(t, {
     return _
   },
   Z: function() {
-    return d
+    return c
   }
 }), n(47120);
 var i = n(836560),
@@ -31,7 +31,7 @@ function _() {
     didInitialQuery: !1
   }
 }
-class d extends i.EventEmitter {
+class c extends i.EventEmitter {
   updateProps(e) {
     let t = this.props.focused !== e.focused,
       n = this.props.channel.id !== e.channel.id || this.props.activeCommandOption !== e.activeCommandOption,
@@ -119,23 +119,23 @@ class d extends i.EventEmitter {
       return
     }
     let {
-      type: d,
-      typeInfo: c,
+      type: c,
+      typeInfo: d,
       query: E
-    } = u, I = i || n && ((null === (e = this.state.query) || void 0 === e ? void 0 : e.queryText) !== E || (null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo) !== c), T = o.fq.getSetting();
+    } = u, I = i || n && ((null === (e = this.state.query) || void 0 === e ? void 0 : e.queryText) !== E || (null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo) !== d), T = o.fq.getSetting();
     r.allowStickers = r.allowStickers ? T : r.allowStickers;
     let {
       results: h,
       metadata: S
-    } = c.queryResults(this.props.channel, this.props.guild, E, r, I), f = 0;
+    } = d.queryResults(this.props.channel, this.props.guild, E, r, I), f = 0;
     for (let e of Object.values(h)) Array.isArray(e) && (f += e.length);
     let N = !0 === h.isLoading,
-      A = this.shouldShow(f, N, c),
+      A = this.shouldShow(f, N, d),
       m = this.state.selectedIndex;
-    !A || N ? m = null : null != m && m >= f && (m = f - 1), A && !this.state.isVisible && (0, s.a7)(d, this.props.channel, S), this.setState({
+    !A || N ? m = null : null != m && m >= f && (m = f - 1), A && !this.state.isVisible && (0, s.a7)(c, this.props.channel, S), this.setState({
       query: {
-        type: d,
-        typeInfo: c,
+        type: c,
+        typeInfo: d,
         queryText: E,
         results: h,
         resultCount: f,
@@ -156,15 +156,15 @@ class d extends i.EventEmitter {
       type: l,
       typeInfo: u,
       results: _,
-      resultCount: d,
-      options: c
+      resultCount: c,
+      options: d
     } = this.state.query;
-    if (e >= d) return !1;
+    if (e >= c) return !1;
     let E = null === (r = u.onSelect) || void 0 === r ? void 0 : r.call(u, {
       results: _,
       index: e,
       type: t ? a.QB.SEND : a.QB.INSERT,
-      options: c,
+      options: d,
       channel: this.props.channel,
       tabOrEnter: n,
       queryText: null === (i = this.state.query) || void 0 === i ? void 0 : i.queryText

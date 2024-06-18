@@ -12,7 +12,7 @@ var i = n(735250),
 let l = ["#be0351", "#ff2c52", "#f0f0f0"],
   u = ["#ffb84b", "#ffe361", "#f0f0f0"],
   _ = [.3, .4, 1],
-  d = [{
+  c = [{
     base: 8,
     tint: 1
   }, {
@@ -22,7 +22,7 @@ let l = ["#be0351", "#ff2c52", "#f0f0f0"],
     base: 2,
     tint: 1
   }],
-  c = [.3, .5, 1],
+  d = [.3, .5, 1],
   E = [{
     base: 8,
     tint: 1
@@ -47,10 +47,10 @@ let l = ["#be0351", "#ff2c52", "#f0f0f0"],
       primaryBaseColors: l,
       primaryTintColor: I,
       primaryTintLuminances: _,
-      primaryLuminanceWeights: d,
+      primaryLuminanceWeights: c,
       secondaryBaseColors: u,
       secondaryTintColor: T,
-      secondaryTintLuminances: c,
+      secondaryTintLuminances: d,
       secondaryLuminanceWeights: E
     });
     return (0, i.jsxs)("svg", {

@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(481060),
   u = n(204197),
   _ = n(357355),
-  d = n(689938),
-  c = n(244351);
+  c = n(689938),
+  d = n(244351);
 
 function E() {
   let e = (0, a.e7)([_.Z], () => _.Z.affinities.slice(0, 3)),
@@ -27,21 +27,21 @@ function E() {
       animateOnHover: !0
     }),
     E = e => null != e.globalName ? e.globalName : e.username,
-    I = r.useMemo(() => e.length >= 2 ? d.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_3.format({
+    I = r.useMemo(() => e.length >= 2 ? c.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_3.format({
       username: E(e[0])
-    }) : 1 === e.length ? d.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_1.format({
+    }) : 1 === e.length ? c.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_1.format({
       username: E(e[0])
     }) : "", [e]);
   return 0 === e.length ? null : (0, i.jsxs)("div", {
-    className: c.container,
+    className: d.container,
     children: [(0, i.jsx)(l.Avatar, {
-      className: c.__invalid_icon,
+      className: d.__invalid_icon,
       src: n,
       "aria-label": t.username,
       size: l.AvatarSizes.SIZE_24,
       ...s
     }), (0, i.jsx)(l.Text, {
-      className: o()(c.text),
+      className: o()(d.text),
       variant: "text-sm/normal",
       color: "always-white",
       children: I

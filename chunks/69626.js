@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   ZP: function() {
-    return g
+    return C
   },
   wz: function() {
-    return p
+    return g
   }
 });
 var i = n(735250),
@@ -15,8 +15,8 @@ var i = n(735250),
   l = n(10718),
   u = n(895924),
   _ = n(665906),
-  d = n(695346),
-  c = n(592125),
+  c = n(695346),
+  d = n(592125),
   E = n(703558),
   I = n(496675),
   T = n(944486),
@@ -31,21 +31,21 @@ var i = n(735250),
 function R(e, t, n, r) {
   if (null == e) return;
   let s = () => {
-    let i = c.Z.getChannel(e);
+    let i = d.Z.getChannel(e);
     if (null == i) return;
     let {
       command: s,
       application: o
     } = l.Xq(i, n);
     if (null != s && s.name === t) {
-      var _, d;
+      var _, c;
       S.S.dispatch(f.CkL.FOCUS_CHANNEL_TEXT_AREA, {
         channelId: e
       });
       let t = null != o ? {
         type: u.Qi.APPLICATION,
         id: o.id,
-        icon: null !== (d = null == o ? void 0 : null === (_ = o.bot) || void 0 === _ ? void 0 : _.username) && void 0 !== d ? d : o.icon,
+        icon: null !== (c = null == o ? void 0 : null === (_ = o.bot) || void 0 === _ ? void 0 : _.username) && void 0 !== c ? c : o.icon,
         name: o.name,
         application: o
       } : null;
@@ -80,15 +80,15 @@ function R(e, t, n, r) {
   })) : s()
 }
 
-function C(e) {
+function p(e) {
   var t;
   let {
     node: n,
     output: a,
     state: E
-  } = e, S = (0, s.e7)([c.Z, T.Z], () => {
+  } = e, S = (0, s.e7)([d.Z, T.Z], () => {
     var e;
-    return c.Z.getChannel(null !== (e = n.channelId) && void 0 !== e ? e : T.Z.getChannelId())
+    return d.Z.getChannel(null !== (e = n.channelId) && void 0 !== e ? e : T.Z.getChannelId())
   }, [n.channelId]), {
     hasSendMessagePerm: m,
     hasUseAppCommandsPerm: O
@@ -99,17 +99,17 @@ function C(e) {
       hasUseAppCommandsPerm: I.Z.can(f.Plq.USE_APPLICATION_COMMANDS, S)
     }
   }), {
-    command: C
-  } = l.YZ(S, null !== (t = n.commandKey) && void 0 !== t ? t : ""), p = d.dN.useSetting(), g = r.useMemo(() => {
-    if (null == C || null == S || C.name !== n.commandName || p) return !1;
+    command: p
+  } = l.YZ(S, null !== (t = n.commandKey) && void 0 !== t ? t : ""), g = c.dN.useSetting(), C = r.useMemo(() => {
+    if (null == p || null == S || p.name !== n.commandName || g) return !1;
     let e = S.isPrivate();
     if ((0, _.xl)(S) || !e && !m) return !1;
-    let t = (null == C ? void 0 : C.applicationId) === N.bi.BUILT_IN;
+    let t = (null == p ? void 0 : p.applicationId) === N.bi.BUILT_IN;
     return !!e || !!t || !!O || !1
-  }, [S, C, m, O, n.commandName, p]), L = r.useCallback(e => {
+  }, [S, p, m, O, n.commandName, g]), v = r.useCallback(e => {
     null == e || e.stopPropagation(), null != S && null != n.commandName && null != n.commandKey && R(S.id, n.commandName, n.commandKey, u.Vh.MENTION)
   }, [S, n.commandKey, n.commandName]);
-  return g ? (0, i.jsx)(o.Tooltip, {
+  return C ? (0, i.jsx)(o.Tooltip, {
     text: n.output,
     position: "top",
     children: e => {
@@ -119,7 +119,7 @@ function C(e) {
       } = e;
       return (0, i.jsxs)(h.Z, {
         role: "link",
-        onClick: L,
+        onClick: v,
         onMouseEnter: t,
         onMouseLeave: r,
         children: [A.GI, a(n.content, E)]
@@ -130,7 +130,7 @@ function C(e) {
   })
 }
 
-function p(e) {
+function g(e) {
   let {
     commandId: t,
     commandName: n,
@@ -160,9 +160,9 @@ function p(e) {
   })
 }
 
-function g(e) {
+function C(e) {
   return {
-    react: (e, t, n) => (0, i.jsx)(C, {
+    react: (e, t, n) => (0, i.jsx)(p, {
       node: e,
       output: t,
       state: n

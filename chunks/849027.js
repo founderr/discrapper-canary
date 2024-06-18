@@ -12,8 +12,8 @@ var i = n(430198),
   l = n(931261),
   u = n(994592),
   _ = n(911560),
-  d = n(592125),
-  c = n(430824),
+  c = n(592125),
+  d = n(430824),
   E = n(823379),
   I = n(754688),
   T = n(981631),
@@ -22,7 +22,7 @@ async function S(e) {
   let {
     guildId: t,
     channelId: n
-  } = e, S = c.Z.getGuild(t), f = c.Z.getRoles(t);
+  } = e, S = d.Z.getGuild(t), f = d.Z.getRoles(t);
   if (null == S && t !== T.ME) return !1;
   if (null == n) return !0;
   if ((0, h.AB)(n)) switch (n) {
@@ -45,6 +45,6 @@ async function S(e) {
     default:
       (0, E.vE)(n)
   }
-  let N = d.Z.getChannel(n);
-  return (null != N || (await _.Z.loadThread(n), null != (N = d.Z.getChannel(n)))) && ((0, I.YO)(N) || i.Z.isChannelGatedAndVisible(t, n))
+  let N = c.Z.getChannel(n);
+  return (null != N || (await _.Z.loadThread(n), null != (N = c.Z.getChannel(n)))) && ((0, I.YO)(N) || i.Z.isChannelGatedAndVisible(t, n))
 }

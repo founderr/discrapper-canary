@@ -48,12 +48,12 @@ async function _(e) {
   try {
     return await i.tn.post({
       url: l.ANM.USER_PERKS_DEMOS_ACTIVATE(e)
-    }), d(e), !0
+    }), c(e), !0
   } catch {
     if ((0, s.QI)(t) && function(e) {
         var t;
         return (null === (t = a.Z.overrides()[e]) || void 0 === t ? void 0 : t.activateSuccess) === !0
-      }(e)) return d(e), !0;
+      }(e)) return c(e), !0;
     return r.Z.dispatch({
       type: "PREMIUM_PERKS_DEMO_ACTIVATE_FAILURE",
       perkType: e
@@ -61,7 +61,7 @@ async function _(e) {
   }
 }
 
-function d(e) {
+function c(e) {
   r.Z.dispatch({
     type: "PREMIUM_PERKS_DEMO_ACTIVATE_SUCCESS",
     perkType: e

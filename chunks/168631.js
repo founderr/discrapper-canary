@@ -30,8 +30,8 @@ var i = n(470079),
   l = n(780384),
   u = n(607070),
   _ = n(44315),
-  d = n(564334),
-  c = n(981631);
+  c = n(564334),
+  d = n(981631);
 
 function E(e) {
   let t = (0, o.e7)([u.Z], () => u.Z.saturation);
@@ -77,7 +77,7 @@ function E(e) {
 }
 
 function I(e) {
-  return null == e ? null : (0, s.Bd)(e) > .5 ? c.BRd.DARK : c.BRd.LIGHT
+  return null == e ? null : (0, s.Bd)(e) > .5 ? d.BRd.DARK : d.BRd.LIGHT
 }
 
 function T(e, t, n) {
@@ -89,7 +89,7 @@ function T(e, t, n) {
 function h(e, t) {
   let n = (0, s.px)(e);
   if (null == t) return 0;
-  let i = d.Z.parseString(t);
+  let i = c.Z.parseString(t);
   if (null == i) return 0;
   let r = [i.red, i.green, i.blue],
     o = [n[0], n[1], n[2]],
@@ -116,6 +116,6 @@ function N(e, t) {
 }
 
 function A(e, t) {
-  let n = (0, _.Sl)(c.Ilk.WHITE_500).hex;
+  let n = (0, _.Sl)(d.Ilk.WHITE_500).hex;
   return (0, l.wj)(e) ? (0, s._i)(n) : null != t ? f(t) : null
 }

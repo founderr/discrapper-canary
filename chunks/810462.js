@@ -8,11 +8,11 @@ var i = n(735250),
   l = n(806966),
   u = n(28546),
   _ = n(494064);
-let d = r.forwardRef(function(e, t) {
+let c = r.forwardRef(function(e, t) {
   let {
     store: n,
-    hasSendableExpressions: d,
-    onKeyDown: c,
+    hasSendableExpressions: c,
+    onKeyDown: d,
     gridNavigatorId: E,
     expressionsListRef: I,
     defaultSearchPlaceholder: T,
@@ -36,14 +36,14 @@ let d = r.forwardRef(function(e, t) {
   }, [N]), (0, i.jsx)("div", {
     className: _.wrapper,
     children: (0, i.jsx)(a.ZP, {
-      autoFocus: d,
-      disabled: !d,
+      autoFocus: c,
+      disabled: !c,
       query: f,
       ref: S,
       size: a.ZP.Sizes.MEDIUM,
-      placeholder: null != A ? A : d || null == h ? T : h,
+      placeholder: null != A ? A : c || null == h ? T : h,
       onClear: R,
-      onKeyDown: c,
+      onKeyDown: d,
       onQueryChange: O,
       className: _.__invalid_searchBar,
       preventEscapePropagation: !1,
@@ -57,4 +57,4 @@ let d = r.forwardRef(function(e, t) {
     })
   })
 });
-t.Z = d
+t.Z = c

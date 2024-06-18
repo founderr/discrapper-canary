@@ -13,7 +13,7 @@ n.d(t, {
     return S
   },
   aW: function() {
-    return c
+    return d
   },
   af: function() {
     return O
@@ -42,9 +42,9 @@ n.d(t, {
 }), n(411104);
 var i, r, s, o, a, l, u = n(981631),
   _ = n(474936),
-  d = n(689938);
+  c = n(689938);
 
-function c(e) {
+function d(e) {
   switch (e) {
     case 480:
       return 480;
@@ -182,17 +182,17 @@ function h(e, t) {
     }
   }
 }
-let S = [h(720), h(1080), h(1440), h(0, () => d.Z.Messages.SCREENSHARE_SOURCE)],
+let S = [h(720), h(1080), h(1440), h(0, () => c.Z.Messages.SCREENSHARE_SOURCE)],
   f = [h(720), h(1080), h(1440)],
-  N = e => 0 === e ? d.Z.Messages.SCREENSHARE_SOURCE : d.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
+  N = e => 0 === e ? c.Z.Messages.SCREENSHARE_SOURCE : c.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
     resolution: e
   }),
   A = [h(480, () => N(480)), h(720, () => N(720)), h(1080, () => N(1080)), h(1440, () => N(1440)), h(0, () => N(0))],
   m = [h(15), h(30), h(60)],
-  O = [h(15, () => d.Z.Messages.STREAM_FPS_OPTION.format({
+  O = [h(15, () => c.Z.Messages.STREAM_FPS_OPTION.format({
     value: 15
-  })), h(30, () => d.Z.Messages.STREAM_FPS_OPTION.format({
+  })), h(30, () => c.Z.Messages.STREAM_FPS_OPTION.format({
     value: 30
-  })), h(60, () => d.Z.Messages.STREAM_FPS_OPTION.format({
+  })), h(60, () => c.Z.Messages.STREAM_FPS_OPTION.format({
     value: 60
   }))]

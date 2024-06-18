@@ -8,8 +8,8 @@ var i = n(735250),
   l = n(260866),
   u = n(461745),
   _ = n(806966),
-  d = n(28546),
-  c = n(149203),
+  c = n(28546),
+  d = n(149203),
   E = n(981631),
   I = n(689938),
   T = n(773390);
@@ -23,11 +23,11 @@ let h = r.forwardRef(function(e, t) {
     autoFocus: N,
     className: A,
     defaultSearchPlaceholder: m
-  } = e, O = r.useRef(null), R = (0, d.Iu)(e => e.searchQuery), [C, p] = _.kJ.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], a.Z), g = r.useCallback(e => {
+  } = e, O = r.useRef(null), R = (0, c.Iu)(e => e.searchQuery), [p, g] = _.kJ.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], a.Z), C = r.useCallback(e => {
     var t;
-    _.kJ.setActiveCategoryIndex("" === e ? 0 : c.c), _.kJ.setInspectedExpressionPosition(0, 0), _.kJ.setSearchPlaceholder(null), (0, d.ql)(e), null === (t = n.current) || void 0 === t || t.scrollTo(0)
-  }, [n]), L = r.useCallback(() => {
-    (0, d.ql)("")
+    _.kJ.setActiveCategoryIndex("" === e ? 0 : d.c), _.kJ.setInspectedExpressionPosition(0, 0), _.kJ.setSearchPlaceholder(null), (0, c.ql)(e), null === (t = n.current) || void 0 === t || t.scrollTo(0)
+  }, [n]), v = r.useCallback(() => {
+    (0, c.ql)("")
   }, []);
   return r.useImperativeHandle(t, () => ({
     focus: () => {
@@ -39,8 +39,8 @@ let h = r.forwardRef(function(e, t) {
     query: R,
     ref: O,
     size: u.ZP.Sizes.MEDIUM,
-    placeholder: null != p ? p : m,
-    onClear: L,
+    placeholder: null != g ? g : m,
+    onClear: v,
     onKeyDown: e => {
       switch (e.keyCode) {
         case E.yXg.ARROW_LEFT:
@@ -52,7 +52,7 @@ let h = r.forwardRef(function(e, t) {
       S(e)
     },
     onFocus: f,
-    onQueryChange: g,
+    onQueryChange: C,
     className: o()(A, {
       [T.searchBarFullRow]: h
     }),
@@ -63,7 +63,7 @@ let h = r.forwardRef(function(e, t) {
       "aria-haspopup": "grid",
       "aria-controls": s,
       "aria-expanded": !0,
-      "aria-activedescendant": (0, l.NE)(s, C.columnIndex, C.rowIndex)
+      "aria-activedescendant": (0, l.NE)(s, p.columnIndex, p.rowIndex)
     }
   })
 });

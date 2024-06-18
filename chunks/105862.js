@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return c
+    return d
   }
 });
 var i = n(735250),
@@ -12,9 +12,9 @@ var i = n(735250),
   l = n(981631),
   u = n(689938),
   _ = n(54674),
-  d = n(224275);
+  c = n(224275);
 
-function c() {
+function d() {
   let e = r.useCallback(() => {
     (0, o.Z)(a.Z.getArticleURL(l.BhN.LAUNCHING_APPS_WITH_SHAPES_BUTTON))
   }, []);
@@ -22,7 +22,7 @@ function c() {
     className: _.container,
     children: [(0, i.jsx)("img", {
       className: _.image,
-      src: d,
+      src: c,
       alt: "",
       "aria-hidden": !0
     }), (0, i.jsxs)("div", {

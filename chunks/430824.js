@@ -4,8 +4,8 @@ n(47120);
 var r, s, o, a, l = n(442837),
   u = n(902704),
   _ = n(570140),
-  d = n(601964),
-  c = n(411198),
+  c = n(601964),
+  d = n(411198),
   E = n(625137),
   I = n(709054),
   T = n(314897),
@@ -17,7 +17,7 @@ let f = {},
   m = [];
 
 function O(e) {
-  for (let t of (N = {}, f = {}, i = 0, e)) i++, N[t.id] = c.cL(t), f[t.id] = t.roles
+  for (let t of (N = {}, f = {}, i = 0, e)) i++, N[t.id] = d.cL(t), f[t.id] = t.roles
 }
 
 function R(e) {
@@ -31,8 +31,8 @@ function R(e) {
     [n.id]: E.CL(n)
   }, i = E.iw(t, Object.values(i)), f[t] = i
 }
-let C = Object.freeze({});
-class p extends(r = l.ZP.Store) {
+let p = Object.freeze({});
+class g extends(r = l.ZP.Store) {
   getGuild(e) {
     return null == e ? void 0 : e === h.I_8 ? S.g : N[e]
   }
@@ -56,25 +56,25 @@ class p extends(r = l.ZP.Store) {
   }
   getRoles(e) {
     var t;
-    return null !== (t = f[e]) && void 0 !== t ? t : C
+    return null !== (t = f[e]) && void 0 !== t ? t : p
   }
   getRole(e, t) {
     var n;
     return null === (n = f[e]) || void 0 === n ? void 0 : n[t]
   }
 }
-a = "GuildStore", (o = "displayName") in(s = p) ? Object.defineProperty(s, o, {
+a = "GuildStore", (o = "displayName") in(s = g) ? Object.defineProperty(s, o, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[o] = a, t.Z = new p(_.Z, {
+}) : s[o] = a, t.Z = new g(_.Z, {
   BACKGROUND_SYNC: function(e) {
     for (let n of e.guilds) {
       var t;
       let e = N[n.id];
       if (null == e || "unavailable" === n.data_mode) return;
-      N[n.id] = c.sp(n, e), f[n.id] = "partial" === n.data_mode ? c.EO(n.id, null !== (t = f[n.id]) && void 0 !== t ? t : C, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : E.C5(n.id, n.roles)
+      N[n.id] = d.sp(n, e), f[n.id] = "partial" === n.data_mode ? d.EO(n.id, null !== (t = f[n.id]) && void 0 !== t ? t : p, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : E.C5(n.id, n.roles)
     }
     i = Object.keys(N).length
   },
@@ -82,7 +82,7 @@ a = "GuildStore", (o = "displayName") in(s = p) ? Object.defineProperty(s, o, {
     A = !0;
     let t = N;
     N = {}, f = {}, i = 0, e.guilds.forEach(e => {
-      i++, N[e.id] = c.wD(e, t[e.id]), f[e.id] = e.roles instanceof Array ? E.C5(e.id, e.roles) : e.roles
+      i++, N[e.id] = d.wD(e, t[e.id]), f[e.id] = e.roles instanceof Array ? E.C5(e.id, e.roles) : e.roles
     });
     let n = !1;
     if (m.length !== e.geoRestrictedGuilds.length) n = !0;
@@ -96,7 +96,7 @@ a = "GuildStore", (o = "displayName") in(s = p) ? Object.defineProperty(s, o, {
   OVERLAY_INITIALIZE: function(e) {
     var t;
     N = {}, f = {}, i = 0, null === (t = e.guilds) || void 0 === t || t.forEach(e => {
-      i++, N[e.id] = new d.ZP(e)
+      i++, N[e.id] = new c.ZP(e)
     }), f = e.allGuildsRoles
   },
   CACHE_LOADED: function(e) {
@@ -107,14 +107,14 @@ a = "GuildStore", (o = "displayName") in(s = p) ? Object.defineProperty(s, o, {
     O(e.guilds)
   },
   GUILD_CREATE: function(e) {
-    let t = c.wD(e.guild, N[e.guild.id]);
+    let t = d.wD(e.guild, N[e.guild.id]);
     null == N[t.id] && i++, N = {
       ...N,
       [t.id]: t
     }, f[t.id] = e.guild.roles instanceof Array ? E.C5(t.id, e.guild.roles) : e.guild.roles
   },
   GUILD_UPDATE: function(e) {
-    let t = c.di(e.guild, N[e.guild.id]);
+    let t = d.di(e.guild, N[e.guild.id]);
     null == N[t.id] && i++, N = {
       ...N,
       [t.id]: t

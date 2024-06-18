@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   D$: function() {
-    return p
+    return g
   },
   N4: function() {
     return D
@@ -13,10 +13,10 @@ n.d(t, {
     return A
   },
   _N: function() {
-    return C
+    return p
   },
   cS: function() {
-    return g
+    return C
   },
   cZ: function() {
     return M
@@ -31,10 +31,10 @@ n.d(t, {
     return m
   },
   uY: function() {
-    return L
+    return v
   },
   x9: function() {
-    return v
+    return L
   }
 }), n(757143), n(47120), n(724458);
 var i = n(392711),
@@ -45,8 +45,8 @@ var i = n(392711),
   l = n(442837),
   u = n(566006),
   _ = n(592125),
-  d = n(542578),
-  c = n(375954),
+  c = n(542578),
+  d = n(375954),
   E = n(496675),
   I = n(699516),
   T = n(70956),
@@ -79,15 +79,15 @@ function R(e) {
   return (0, l.e7)([E.Z], () => !!(null != e && f.TPd.POLLS.has(e.type)) && (!!e.isPrivate() || E.Z.can(f.Plq.SEND_MESSAGES, e) && E.Z.can(f.Plq.SEND_POLLS, e)))
 }
 
-function C() {
+function p() {
   return !1
 }
 
-function p(e, t, n) {
-  return 0 === e.length && null == t.find(e => g(e, n))
+function g(e, t, n) {
+  return 0 === e.length && null == t.find(e => C(e, n))
 }
 
-function g(e, t) {
+function C(e, t) {
   if (t === o.C.IMAGE_ONLY_ANSWERS) return null != e.image;
   {
     var n;
@@ -96,13 +96,13 @@ function g(e, t) {
   }
 }
 
-function L(e, t) {
+function v(e, t) {
   var n;
   let i = null === (n = e.text) || void 0 === n ? void 0 : n.trim();
   return t === o.C.DEFAULT && null != e.image && (null == i || 0 === i.length)
 }
 
-function v(e) {
+function L(e) {
   var t, n;
   if (null == e) return;
   let i = null == e ? void 0 : null === (t = e.answers) || void 0 === t ? void 0 : t.map((e, t) => {
@@ -149,7 +149,7 @@ function M(e) {
 
 function P(e, t, n) {
   var i, s;
-  let o = c.Z.getMessage(t, e);
+  let o = d.Z.getMessage(t, e);
   if (null == o) return "";
   let a = o.getReaction({
       id: n,
@@ -159,7 +159,7 @@ function P(e, t, n) {
     l = null !== (s = null == a ? void 0 : null === (i = a.count_details) || void 0 === i ? void 0 : i.vote) && void 0 !== s ? s : 0,
     E = function(e, t) {
       let n = e.getChannelId(),
-        i = d.Z.getReactions(n, e.id, {
+        i = c.Z.getReactions(n, e.id, {
           id: t,
           name: "",
           animated: !1

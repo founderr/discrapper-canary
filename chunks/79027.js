@@ -12,7 +12,7 @@ var i, r = n(735250),
   u = n(481060),
   _ = n(599952);
 
-function d(e, t, n) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -20,7 +20,7 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let c = {
+let d = {
   friction: 7,
   tension: 60
 };
@@ -39,7 +39,7 @@ class E extends(i = s.Component) {
   }
   animateTo(e) {
     return l.Z.spring(this.animation, {
-      ...c,
+      ...d,
       toValue: e
     })
   }
@@ -69,7 +69,7 @@ class E extends(i = s.Component) {
     })
   }
   constructor(...e) {
-    super(...e), d(this, "animation", new l.Z.Value(0))
+    super(...e), c(this, "animation", new l.Z.Value(0))
   }
 }
-d(E, "contextType", u.AccessibilityPreferencesContext)
+c(E, "contextType", u.AccessibilityPreferencesContext)

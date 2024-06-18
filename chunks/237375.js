@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(508688),
   u = n(154921),
   _ = n(987826),
-  d = n(826298),
-  c = n(665692),
+  c = n(826298),
+  d = n(665692),
   E = n(689938),
   I = n(859381);
 
@@ -51,20 +51,20 @@ function h(e) {
         return !(null == n ? void 0 : null === (t = n[e.name]) || void 0 === t ? void 0 : t.hasValue)
       })
     }
-  }, [t.options, n]), d = (0, i.jsx)("div", {
+  }, [t.options, n]), c = (0, i.jsx)("div", {
     className: I.optionalNames,
     children: _.map(e => (0, i.jsx)(a.Text, {
       variant: "text-sm/normal",
       children: e.displayName
     }, e.name))
-  }), c = o.map(e => T(e, null == n ? void 0 : n[e.name], s)), h = l.length > 0 ? (0, i.jsxs)(i.Fragment, {
+  }), d = o.map(e => T(e, null == n ? void 0 : n[e.name], s)), h = l.length > 0 ? (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(a.Heading, {
       className: I.optionalHeader,
       variant: "heading-deprecated-12/semibold",
       children: E.Z.Messages.COMMANDS_OPTIONAL_HEADER
     }), l.map(e => T(e, null == n ? void 0 : n[e.name], s))]
   }) : null, S = _.length > 0 ? (0, i.jsx)(a.Tooltip, {
-    text: d,
+    text: c,
     "aria-label": !1,
     delay: 200,
     children: e => (0, i.jsx)(u.Z, {
@@ -79,7 +79,7 @@ function h(e) {
     })
   }) : null;
   return (0, i.jsxs)(i.Fragment, {
-    children: [c, null != h || null != S ? (0, i.jsxs)("div", {
+    children: [d, null != h || null != S ? (0, i.jsxs)("div", {
       className: I.optionals,
       children: [h, S]
     }) : null]
@@ -105,10 +105,10 @@ function S(e) {
     }, [_, u]),
     R = null != _ ? null == f ? void 0 : f[_] : null;
   a = null != R && (null === (t = R.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? null !== (n = R.lastValidationResult.error) && void 0 !== n ? n : "" : null;
-  let C = S && null != A ? (0, d.ky)(A) : null;
+  let p = S && null != A ? (0, c.ky)(A) : null;
   return (0, i.jsxs)("div", {
     className: o()(I.wrapper, m ? null : I.disabled),
-    children: [null != C ? (0, i.jsx)(C, {
+    children: [null != p ? (0, i.jsx)(p, {
       className: I.image,
       channel: E,
       section: A,
@@ -120,7 +120,7 @@ function S(e) {
         className: I.usageWrapper,
         children: [(0, i.jsx)(l.BR, {
           className: I.title,
-          children: c.GI + u.displayName
+          children: d.GI + u.displayName
         }), T ? (0, i.jsx)(h, {
           command: u,
           optionStates: f,

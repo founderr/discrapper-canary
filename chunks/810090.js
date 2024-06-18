@@ -11,8 +11,8 @@ let u = e => {
     autoPlay: n,
     playOnHover: u,
     responsive: _,
-    mediaLayoutType: d,
-    ...c
+    mediaLayoutType: c,
+    ...d
   } = e, E = (0, o.e7)([a.Z], () => a.Z.useReducedMotion), I = r.useRef(null);
 
   function T() {
@@ -45,20 +45,20 @@ let u = e => {
     onMouseLeave: h,
     onFocus: T,
     onBlur: h,
-    style: d === l.hV.MOSAIC ? {
+    style: c === l.hV.MOSAIC ? {
       width: "100%",
       height: "100%",
       maxHeight: "inherit",
       objectFit: "cover"
     } : _ ? function() {
       return {
-        maxWidth: c.width,
-        maxHeight: c.height,
+        maxWidth: d.width,
+        maxHeight: d.height,
         width: "100%",
         height: "100%"
       }
     }() : {},
-    ...c
+    ...d
   })
 };
 t.Z = r.forwardRef((e, t) => (0, i.jsx)(u, {

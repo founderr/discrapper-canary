@@ -1,7 +1,7 @@
 "use strict";
 t.d(s, {
   UT: function() {
-    return C
+    return x
   },
   _4: function() {
     return N
@@ -13,7 +13,7 @@ t.d(s, {
     return h
   },
   eg: function() {
-    return x
+    return C
   },
   lJ: function() {
     return S
@@ -87,12 +87,12 @@ function g(e, s) {
   }, [e, s])
 }
 
-function x(e, s) {
+function C(e, s) {
   let t = e.trim().toLowerCase();
   return s.id === t || l()(t, s.name.toLowerCase()) || l()(t, s.userTag.toLowerCase())
 }
 
-function C(e) {
+function x(e) {
   switch (e) {
     case I.ZI.MEMBERS:
       return "Members";

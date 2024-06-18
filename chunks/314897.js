@@ -3,8 +3,8 @@ let i, r;
 n.r(t), n(47120), n(177593), n(653041), n(411104);
 var s, o, a, l, u = n(512722),
   _ = n.n(u),
-  d = n(213919),
-  c = n(756647),
+  c = n(213919),
+  d = n(756647),
   E = n(442837),
   I = n(544891),
   T = n(433517),
@@ -16,11 +16,11 @@ var s, o, a, l, u = n(512722),
   m = n(710845),
   O = n(703656),
   R = n(786213),
-  C = n(626135),
-  p = n(449934),
-  g = n(960048),
-  L = n(117240),
-  v = n(412788),
+  p = n(626135),
+  g = n(449934),
+  C = n(960048),
+  v = n(117240),
+  L = n(412788),
   D = n(981631),
   M = n(723359);
 let P = n(952265).nf,
@@ -65,7 +65,7 @@ function el(e) {
 }
 
 function eu(e) {
-  let t = null != d.getToken(),
+  let t = null != c.getToken(),
     n = null != T.K.get(D.B1h);
   y.verbose(e, {
     tokenManagerHasToken: t,
@@ -76,16 +76,16 @@ function eu(e) {
 function e_() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
   if (V = T.K.get(U), null != er) return er;
-  let t = null != V ? V : d.getToken();
-  if (!(!(0, O.m1)() || !e && null != t || L.Z.isHandoffAvailable())) ed({
+  let t = null != V ? V : c.getToken();
+  if (!(!(0, O.m1)() || !e && null != t || v.Z.isHandoffAvailable())) ec({
     withGuildExperiments: !0
   })
 }
 
-function ed(e) {
+function ec(e) {
   let {
     withGuildExperiments: t
-  } = e, n = {}, i = C.default.getSuperPropertiesBase64();
+  } = e, n = {}, i = p.default.getSuperPropertiesBase64();
   null != i && (n["X-Super-Properties"] = i), null != V && (n["X-Fingerprint"] = V), er = I.tn.get({
     url: D.ANM.EXPERIMENTS,
     query: {
@@ -119,16 +119,16 @@ function ed(e) {
   })
 }
 
-function ec() {
+function ed() {
   Z = V, V = null, T.K.remove(U)
 }
 
 function eE(e, t) {
-  eu("setAuthToken called."), d.setToken(e, t)
+  eu("setAuthToken called."), c.setToken(e, t)
 }
 
 function eI() {
-  return eu("removeAuthToken called."), d.removeToken()
+  return eu("removeAuthToken called."), c.removeToken()
 }
 
 function eT() {
@@ -141,15 +141,15 @@ function eh(e) {
   var t;
   eu("handleLogout called.");
   let n = eI();
-  !(null !== (t = null == e ? void 0 : e.isSwitchingAccount) && void 0 !== t && t) && (n && ec(), e_()), E.ZP.PersistedStore.clearAll({
+  !(null !== (t = null == e ? void 0 : e.isSwitchingAccount) && void 0 !== t && t) && (n && ed(), e_()), E.ZP.PersistedStore.clearAll({
     omit: ["InstallationManagerStore", "AgeGateStore", "NativePermissionsStore", "MultiAccountStore", "DraftStore", "OverlayStoreV2", "StreamerModeStore", "LoginRequiredActionStore"],
     type: (null == e ? void 0 : e.isSwitchingAccount) ? "user-data-only" : "all"
-  }), v.Z.clearAll();
-  A.ZH(), g.Z.clearUser(), T.K.remove(G), w = null, F = (null == e ? void 0 : e.isSwitchingAccount) ? D.u34.LOGGING_IN : D.u34.NONE, Y = D.$ib.NONE, K = "", J = "", q = null, z = !1, $ = !1, ee = !1, et = {}, en = {}, ea = !1
+  }), L.Z.clearAll();
+  A.ZH(), C.Z.clearUser(), T.K.remove(G), w = null, F = (null == e ? void 0 : e.isSwitchingAccount) ? D.u34.LOGGING_IN : D.u34.NONE, Y = D.$ib.NONE, K = "", J = "", q = null, z = !1, $ = !1, ee = !1, et = {}, en = {}, ea = !1
 }
 class eS extends(s = E.ZP.Store) {
   initialize() {
-    w = T.K.get(G), k = T.K.get(b), es = T.K.get("login_cache"), null == d.getToken() && e_(), this.addChangeListener(() => (0, N.u)(w))
+    w = T.K.get(G), k = T.K.get(b), es = T.K.get("login_cache"), null == c.getToken() && e_(), this.addChangeListener(() => (0, N.u)(w))
   }
   getEmail() {
     return k
@@ -182,10 +182,10 @@ class eS extends(s = E.ZP.Store) {
     return x
   }
   getToken() {
-    return (0, p.LP)()
+    return (0, g.LP)()
   }
   isAuthenticated() {
-    return (0, p.$8)()
+    return (0, g.$8)()
   }
   getFingerprint() {
     return V
@@ -275,7 +275,7 @@ l = "AuthenticationStore", (a = "displayName") in(o = eS) ? Object.definePropert
       analyticsToken: s,
       auth: o
     } = e;
-    eu("handleConnectionOpen called"), g.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, R.Z)(n)), B = i, x = r, H = s, w = n.id, k = n.email, void 0 !== o && (W = o.authenticator_types), T.K.set(b, n.email), T.K.set(G, n.id)
+    eu("handleConnectionOpen called"), C.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, R.Z)(n)), B = i, x = r, H = s, w = n.id, k = n.email, void 0 !== o && (W = o.authenticator_types), T.K.set(b, n.email), T.K.set(G, n.id)
   },
   OVERLAY_INITIALIZE: function(e) {
     var t;
@@ -285,7 +285,7 @@ l = "AuthenticationStore", (a = "displayName") in(o = eS) ? Object.definePropert
       analyticsToken: r,
       token: s
     } = e;
-    g.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, R.Z)(n)), B = i, H = r, eE(s), ec(), w = n.id, T.K.set(G, n.id)
+    C.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, R.Z)(n)), B = i, H = r, eE(s), ed(), w = n.id, T.K.set(G, n.id)
   },
   CONNECTION_CLOSED: function(e) {
     let {
@@ -296,7 +296,7 @@ l = "AuthenticationStore", (a = "displayName") in(o = eS) ? Object.definePropert
         eT();
         return
       }
-      C.default.track(D.rMx.APP_USER_DEAUTHENTICATED, {
+      p.default.track(D.rMx.APP_USER_DEAUTHENTICATED, {
         user_id: T.K.get(G)
       }), eh(), setImmediate(() => (0, O.uL)(D.Z5c.DEFAULT_LOGGED_OUT))
     }
@@ -314,7 +314,7 @@ l = "AuthenticationStore", (a = "displayName") in(o = eS) ? Object.definePropert
     let {
       token: t
     } = e;
-    F = D.u34.NONE, eE(t), ec(), K = "", z = !1, q = null, ea = !1, J = ""
+    F = D.u34.NONE, eE(t), ed(), K = "", z = !1, q = null, ea = !1, J = ""
   },
   LOGIN_FAILURE: function(e) {
     let {
@@ -406,12 +406,12 @@ l = "AuthenticationStore", (a = "displayName") in(o = eS) ? Object.definePropert
   LOGOUT: eh,
   FINGERPRINT: function(e) {
     let t = e.fingerprint;
-    null == V ? null != t ? (C.default.track(D.rMx.USER_FINGERPRINT_CHANGED, {
-      old_fingerprint: null != Z ? (0, c.s)(Z) : null,
-      new_fingerprint: (0, c.s)(t)
-    }), V = t, Z = t, T.K.set(U, V)) : e_() : null != t && V !== t && C.default.track(D.rMx.EXTERNAL_FINGERPRINT_DROPPED, {
-      fingerprint: (0, c.s)(V),
-      dropped_fingerprint: (0, c.s)(t)
+    null == V ? null != t ? (p.default.track(D.rMx.USER_FINGERPRINT_CHANGED, {
+      old_fingerprint: null != Z ? (0, d.s)(Z) : null,
+      new_fingerprint: (0, d.s)(t)
+    }), V = t, Z = t, T.K.set(U, V)) : e_() : null != t && V !== t && p.default.track(D.rMx.EXTERNAL_FINGERPRINT_DROPPED, {
+      fingerprint: (0, d.s)(V),
+      dropped_fingerprint: (0, d.s)(t)
     })
   },
   REGISTER_SAVE_FORM: function(e) {
@@ -433,7 +433,7 @@ l = "AuthenticationStore", (a = "displayName") in(o = eS) ? Object.definePropert
     let {
       token: t
     } = e;
-    Y = D.$ib.NONE, r = null, eE(t), ec()
+    Y = D.$ib.NONE, r = null, eE(t), ed()
   },
   REGISTER_FAILURE: function(e) {
     let {
@@ -465,9 +465,9 @@ l = "AuthenticationStore", (a = "displayName") in(o = eS) ? Object.definePropert
       token: t,
       userId: n
     } = e;
-    eu("handleUpdateToken called"), eE(t, n), ec()
+    eu("handleUpdateToken called"), eE(t, n), ed()
   },
-  EXPERIMENTS_FETCH: ed,
+  EXPERIMENTS_FETCH: ec,
   CURRENT_USER_UPDATE: function(e) {
     let {
       user: t

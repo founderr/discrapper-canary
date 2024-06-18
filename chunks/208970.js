@@ -4,12 +4,12 @@ var i, r, s, o, a = n(442837),
   u = n(592125);
 let _ = {};
 
-function d(e) {
+function c(e) {
   let t = u.Z.getChannel(e);
   return !!(null != t && t.isForumLikeChannel()) || !1
 }
 
-function c(e) {
+function d(e) {
   var t;
   let n = null !== (t = _[e]) && void 0 !== t ? t : {
     query: null,
@@ -70,8 +70,8 @@ s = "ForumSearchStore", (r = "displayName") in(i = E) ? Object.defineProperty(i,
       channelId: t,
       query: n
     } = e;
-    if (!d(t)) return !1;
-    let i = c(t);
+    if (!c(t)) return !1;
+    let i = d(t);
     _[t] = {
       ...i,
       query: n,
@@ -82,8 +82,8 @@ s = "ForumSearchStore", (r = "displayName") in(i = E) ? Object.defineProperty(i,
     let {
       channelId: t
     } = e;
-    if (!d(t)) return !1;
-    let n = c(t);
+    if (!c(t)) return !1;
+    let n = d(t);
     _[t] = {
       ...n,
       loading: !0
@@ -94,8 +94,8 @@ s = "ForumSearchStore", (r = "displayName") in(i = E) ? Object.defineProperty(i,
       channelId: t,
       threadIds: n
     } = e;
-    if (!d(t)) return !1;
-    let i = c(t);
+    if (!c(t)) return !1;
+    let i = d(t);
     _[t] = {
       ...i,
       loading: !1,
@@ -106,8 +106,8 @@ s = "ForumSearchStore", (r = "displayName") in(i = E) ? Object.defineProperty(i,
     let {
       channelId: t
     } = e;
-    if (!d(t)) return !1;
-    let n = c(t);
+    if (!c(t)) return !1;
+    let n = d(t);
     _[t] = {
       ...n,
       loading: !1,
@@ -118,6 +118,6 @@ s = "ForumSearchStore", (r = "displayName") in(i = E) ? Object.defineProperty(i,
     let {
       channelId: t
     } = e;
-    return !!d(t) && delete _[t]
+    return !!c(t) && delete _[t]
   }
 })

@@ -4,7 +4,7 @@ n.d(t, {
     return E
   },
   z: function() {
-    return c
+    return d
   }
 }), n(47120);
 var i = n(392711),
@@ -15,9 +15,9 @@ var i = n(392711),
   l = n(709054),
   u = n(853856),
   _ = n(362658),
-  d = n(231338);
+  c = n(231338);
 
-function c(e, t, n) {
+function d(e, t, n) {
   let {
     canShow: i,
     isFavoritesPerk: s
@@ -32,7 +32,7 @@ function c(e, t, n) {
   if (r().isEmpty(o)) return !1;
   let a = l.default.keys(o).filter(e => {
     let i = t.getChannel(e);
-    return null != i && (!!i.isPrivate() || n.can(d.Pl.VIEW_CHANNEL, i))
+    return null != i && (!!i.isPrivate() || n.can(c.Pl.VIEW_CHANNEL, i))
   });
   return !r().isEmpty(a) && !0
 }
@@ -41,6 +41,6 @@ function E() {
   let {
     canShow: e,
     isFavoritesPerk: t
-  } = (0, _.z)("7993a7_2"), n = (0, s.e7)([u.Z, o.Z, a.Z], () => e && c(u.Z, o.Z, a.Z));
+  } = (0, _.z)("7993a7_2"), n = (0, s.e7)([u.Z, o.Z, a.Z], () => e && d(u.Z, o.Z, a.Z));
   return !!t || n
 }

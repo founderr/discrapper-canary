@@ -8,8 +8,8 @@ var r = n(399606),
   l = n(440476),
   u = n(567949),
   _ = n(552781),
-  d = n(952567),
-  c = n(807159);
+  c = n(952567),
+  d = n(807159);
 
 function E(e) {
   let {
@@ -47,7 +47,7 @@ t.Z = function() {
       children: [(0, i.jsx)(E, {
         description: a.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_HD_STREAMING_DESCRIPTION,
         heading: a.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_HD_STREAMING_HEADING,
-        imgSrc: d
+        imgSrc: c
       }), (0, i.jsx)(E, {
         description: a.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_ANIMATED_GUILD_ICON_DESCRIPTION,
         heading: a.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_ANIMATED_GUILD_ICON_HEADING,
@@ -55,7 +55,7 @@ t.Z = function() {
       }), (0, i.jsx)(E, {
         description: a.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_VANITY_URL_DESCRIPTION,
         heading: a.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_VANITY_URL_HEADING,
-        imgSrc: c
+        imgSrc: d
       })]
     })]
   })

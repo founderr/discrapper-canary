@@ -6,8 +6,8 @@ var i, r = n(442837),
   l = n(695346),
   u = n(581883),
   _ = n(12647),
-  d = n(981631),
-  c = n(959517);
+  c = n(981631),
+  d = n(959517);
 
 function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -18,8 +18,8 @@ function E(e, t, n) {
   }) : e[t] = n, e
 }
 let I = {
-    fontSize: d.yqN.FONT_SIZE_DEFAULT,
-    zoom: d.yqN.ZOOM_DEFAULT,
+    fontSize: c.yqN.FONT_SIZE_DEFAULT,
+    zoom: c.yqN.ZOOM_DEFAULT,
     keyboardModeEnabled: !1,
     colorblindMode: !1,
     lowContrastMode: !1,
@@ -56,19 +56,19 @@ class S extends(i = r.ZP.DeviceSettingsStore) {
     this.waitFor(u.Z), isNaN((T = {
       ...I,
       ...null != e ? e : null
-    }).fontSize) && (T.fontSize = d.yqN.FONT_SIZE_DEFAULT), 0 > c.fP.indexOf(null != T.messageGroupSpacing ? T.messageGroupSpacing : -1) && (T.messageGroupSpacing = null)
+    }).fontSize) && (T.fontSize = c.yqN.FONT_SIZE_DEFAULT), 0 > d.fP.indexOf(null != T.messageGroupSpacing ? T.messageGroupSpacing : -1) && (T.messageGroupSpacing = null)
   }
   get fontScale() {
-    return T.fontSize / d.yqN.FONT_SIZE_DEFAULT * 100
+    return T.fontSize / c.yqN.FONT_SIZE_DEFAULT * 100
   }
   get fontSize() {
     return T.fontSize
   }
   get isFontScaledUp() {
-    return T.fontSize > d.yqN.FONT_SIZE_DEFAULT
+    return T.fontSize > c.yqN.FONT_SIZE_DEFAULT
   }
   get isFontScaledDown() {
-    return T.fontSize < d.yqN.FONT_SIZE_DEFAULT
+    return T.fontSize < c.yqN.FONT_SIZE_DEFAULT
   }
   get fontScaleClass() {
     var e;
@@ -79,10 +79,10 @@ class S extends(i = r.ZP.DeviceSettingsStore) {
     return T.zoom
   }
   get isZoomedIn() {
-    return T.zoom > d.yqN.ZOOM_DEFAULT
+    return T.zoom > c.yqN.ZOOM_DEFAULT
   }
   get isZoomedOut() {
-    return T.zoom < d.yqN.ZOOM_DEFAULT
+    return T.zoom < c.yqN.ZOOM_DEFAULT
   }
   get keyboardModeEnabled() {
     return T.keyboardModeEnabled
@@ -109,14 +109,14 @@ class S extends(i = r.ZP.DeviceSettingsStore) {
     return T.keyboardNavigationExplainerModalSeen
   }
   get messageGroupSpacing() {
-    return null != T.messageGroupSpacing ? T.messageGroupSpacing : l.jU.getSetting() ? c.c8 : c.pq
+    return null != T.messageGroupSpacing ? T.messageGroupSpacing : l.jU.getSetting() ? d.c8 : d.pq
   }
   get isMessageGroupSpacingIncreased() {
-    let e = l.jU.getSetting() ? c.c8 : c.pq;
+    let e = l.jU.getSetting() ? d.c8 : d.pq;
     return this.messageGroupSpacing > e
   }
   get isMessageGroupSpacingDecreased() {
-    let e = l.jU.getSetting() ? c.c8 : c.pq;
+    let e = l.jU.getSetting() ? d.c8 : d.pq;
     return this.messageGroupSpacing < e
   }
   get isSubmitButtonEnabled() {
@@ -174,7 +174,7 @@ E(S, "displayName", "AccessibilityStore"), E(S, "persistKey", "AccessibilityStor
     t = "a11yZoom",
     n = "a11yColorblindMode",
     i = s.K.get(e) || 100,
-    r = s.K.get(t) || d.yqN.ZOOM_DEFAULT,
+    r = s.K.get(t) || c.yqN.ZOOM_DEFAULT,
     o = s.K.get(n) || !1;
   return s.K.remove(e), s.K.remove(t), s.K.remove(n), {
     fontScale: i,
@@ -235,25 +235,25 @@ E(S, "displayName", "AccessibilityStore"), E(S, "persistKey", "AccessibilityStor
 let f = new S(a.Z, {
   ACCESSIBILITY_SET_FONT_SIZE: function(e) {
     var t;
-    let n = (t = e.fontSize, d.yqN.FONT_SIZES.indexOf(t) >= 0 ? t : d.yqN.FONT_SIZE_DEFAULT);
-    if (n > d.yqN.FONT_SIZE_MAX || n < d.yqN.FONT_SIZE_MIN || T.fontSize === n) return !1;
+    let n = (t = e.fontSize, c.yqN.FONT_SIZES.indexOf(t) >= 0 ? t : c.yqN.FONT_SIZE_DEFAULT);
+    if (n > c.yqN.FONT_SIZE_MAX || n < c.yqN.FONT_SIZE_MIN || T.fontSize === n) return !1;
     (T = {
       ...T
     }).fontSize = n
   },
   ACCESSIBILITY_SET_ZOOM: function(e) {
-    if (e.zoom < d.yqN.ZOOM_MIN || e.zoom > d.yqN.ZOOM_MAX || T.zoom === e.zoom) return !1;
+    if (e.zoom < c.yqN.ZOOM_MIN || e.zoom > c.yqN.ZOOM_MAX || T.zoom === e.zoom) return !1;
     (T = {
       ...T
     }).zoom = e.zoom, _.Z.setZoomFactor(T.zoom)
   },
   ACCESSIBILITY_RESET_TO_DEFAULT: function() {
-    let e = T.fontSize !== d.yqN.FONT_SIZE_DEFAULT,
-      t = T.zoom !== d.yqN.ZOOM_DEFAULT;
+    let e = T.fontSize !== c.yqN.FONT_SIZE_DEFAULT,
+      t = T.zoom !== c.yqN.ZOOM_DEFAULT;
     if (!e && !t) return !1;
     (T = {
       ...T
-    }).fontSize !== d.yqN.FONT_SIZE_DEFAULT && (T.fontSize = d.yqN.FONT_SIZE_DEFAULT), T.zoom !== d.yqN.ZOOM_DEFAULT && (T.zoom = d.yqN.ZOOM_DEFAULT, _.Z.setZoomFactor(T.zoom))
+    }).fontSize !== c.yqN.FONT_SIZE_DEFAULT && (T.fontSize = c.yqN.FONT_SIZE_DEFAULT), T.zoom !== c.yqN.ZOOM_DEFAULT && (T.zoom = c.yqN.ZOOM_DEFAULT, _.Z.setZoomFactor(T.zoom))
   },
   ACCESSIBILITY_KEYBOARD_MODE_ENABLE: function() {
     if (T.keyboardModeEnabled) return !1;

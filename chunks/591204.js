@@ -13,8 +13,8 @@ var r = n(481060),
   l = n(367907),
   u = n(895924),
   _ = n(499254),
-  d = n(981631),
-  c = n(689938);
+  c = n(981631),
+  d = n(689938);
 
 function E(e) {
   var t;
@@ -37,15 +37,15 @@ function E(e) {
       let {
         applicationId: t
       } = e;
-      _.y(), (0, l.yw)(d.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+      _.y(), (0, l.yw)(c.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
         location: u.Vh.APP_LAUNCHER_APPLICATION_VIEW,
         application_id: t,
         section_name: I,
         action: f
       })
     }
-  }), A = r.ButtonColors.BRAND, m = null != h ? h : c.Z.Messages.LAUNCH;
-  return f === o.JS.JOIN ? (A = r.ButtonColors.GREEN, m = c.Z.Messages.JOIN_ACTIVITY) : f === o.JS.LEAVE && (A = r.ButtonColors.RED, m = c.Z.Messages.LEAVE), (0, i.jsx)(r.Button, {
+  }), A = r.ButtonColors.BRAND, m = null != h ? h : d.Z.Messages.LAUNCH;
+  return f === o.JS.JOIN ? (A = r.ButtonColors.GREEN, m = d.Z.Messages.JOIN_ACTIVITY) : f === o.JS.LEAVE && (A = r.ButtonColors.RED, m = d.Z.Messages.LEAVE), (0, i.jsx)(r.Button, {
     type: "submit",
     size: r.ButtonSizes.MEDIUM,
     color: A,

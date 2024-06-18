@@ -28,16 +28,16 @@ function T(e) {
     S = t.isOwner(m),
     h = null == m ? void 0 : m.mfaEnabled,
     g = T === E.BpS.ELEVATED,
-    x = S && h,
-    C = (0, i.throttle)(async e => {
-      if (!!x) await d.Z.updateMFALevel({
+    C = S && h,
+    x = (0, i.throttle)(async e => {
+      if (!!C) await d.Z.updateMFALevel({
         guildId: t.id,
         level: e ? E.BpS.ELEVATED : E.BpS.NONE,
         isEnabled: !e
       })
     }, 1e3);
   if (!N) return null;
-  !x && (s = S ? _.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_DETAIL.format({
+  !C && (s = S ? _.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_DETAIL.format({
     settingsHook: () => r.Z.open(E.oAB.ACCOUNT)
   }) : _.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_NON_OWNER_DETAIL);
   let R = t.hasFeature(E.oNc.DISCOVERABLE);
@@ -54,18 +54,18 @@ function T(e) {
         color: "header-secondary",
         children: [_.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_BODY, " ", s]
       })]
-    }), !x || g && R ? (0, n.jsx)(a.Tooltip, {
+    }), !C || g && R ? (0, n.jsx)(a.Tooltip, {
       text: R ? _.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_DISCOVERABLE_DISABLED_TOOLTIP : S ? _.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_TOOLTIP : _.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_NON_OWNER_TOOLTIP,
       children: e => (0, n.jsx)(u.Z, {
         checked: g,
         disabled: !0,
-        onChange: C,
+        onChange: x,
         className: I.bringToFront,
         tooltipProps: e
       })
     }) : (0, n.jsx)(u.Z, {
       checked: g,
-      onChange: C,
+      onChange: x,
       className: I.bringToFront
     })]
   })

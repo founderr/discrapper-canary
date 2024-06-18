@@ -13,7 +13,7 @@ n.d(t, {
     return i
   },
   wM: function() {
-    return c
+    return d
   },
   wR: function() {
     return I
@@ -47,9 +47,9 @@ let _ = {
     contrast: 1,
     saturation: 1
   },
-  d = o.createContext(_);
+  c = o.createContext(_);
 
-function c(e) {
+function d(e) {
   let {
     children: t,
     theme: n = a.BR.DARK,
@@ -57,7 +57,7 @@ function c(e) {
     secondaryColor: r = null,
     gradient: l = null,
     flags: _ = 0,
-    contrast: c = 1,
+    contrast: d = 1,
     saturation: E = 1
   } = e, I = o.useMemo(() => u({
     theme: n,
@@ -65,10 +65,10 @@ function c(e) {
     secondaryColor: r,
     gradient: l,
     flags: _,
-    contrast: c,
+    contrast: d,
     saturation: E
-  }), [n, i, r, l, _, c, E]);
-  return (0, s.jsx)(d.Provider, {
+  }), [n, i, r, l, _, d, E]);
+  return (0, s.jsx)(c.Provider, {
     value: I,
     children: t
   })
@@ -83,17 +83,17 @@ function E(e) {
     gradient: a,
     flags: l,
     contrast: _,
-    saturation: c
-  } = e, E = o.useContext(d), I = o.useMemo(() => u({
+    saturation: d
+  } = e, E = o.useContext(c), I = o.useMemo(() => u({
     theme: null != n ? n : E.theme,
     primaryColor: null != i ? i : E.primaryColor,
     secondaryColor: null != r ? r : E.secondaryColor,
     gradient: null != a ? a : E.gradient,
     flags: null != l ? l : E.flags,
     contrast: null != _ ? _ : E.contrast,
-    saturation: null != c ? c : E.saturation
-  }), [n, E.theme, E.primaryColor, E.secondaryColor, E.gradient, E.flags, E.contrast, E.saturation, i, r, a, l, _, c]);
-  return (0, s.jsx)(d.Provider, {
+    saturation: null != d ? d : E.saturation
+  }), [n, E.theme, E.primaryColor, E.secondaryColor, E.gradient, E.flags, E.contrast, E.saturation, i, r, a, l, _, d]);
+  return (0, s.jsx)(c.Provider, {
     value: I,
     children: t
   })
@@ -106,14 +106,14 @@ function I(e) {
       primaryColor: null,
       secondaryColor: null
     }), [t]);
-  return (0, s.jsx)(d.Provider, {
+  return (0, s.jsx)(c.Provider, {
     value: n,
     children: e.children
   })
 }
 
 function T() {
-  let e = o.useContext(d);
+  let e = o.useContext(c);
   if (null == e) throw Error("useThemeContext must be used within a ThemeContext.Provider");
   return e
 }

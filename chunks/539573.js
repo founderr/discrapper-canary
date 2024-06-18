@@ -10,7 +10,7 @@ n.d(t, {
     return a
   },
   uF: function() {
-    return d
+    return c
   },
   uS: function() {
     return l
@@ -37,7 +37,7 @@ function _(e, t) {
   return (null == a ? void 0 : a.isThread()) ? o.Z.Messages.THREAD_AUTOMOD_ERROR : ((null == a ? void 0 : a.isForumPost()) || (null == a ? void 0 : a.isForumLikeChannel())) && (n === s.evJ.AUTOMOD_TITLE_BLOCKED || n === s.evJ.AUTOMOD_MESSAGE_BLOCKED) ? o.Z.Messages.FORUM_POST_AUTOMOD_ERROR : null
 }
 
-function d(e, t) {
+function c(e, t) {
   let n = _(t);
   return null != n ? n : null == e ? o.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE : function(e) {
     let t = r.Z.getChannel(e.message.channelId);

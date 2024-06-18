@@ -11,8 +11,8 @@ var i, r = n(735250),
   l = n(699581),
   u = n(358085),
   _ = n(144036),
-  d = n(981631),
-  c = n(731718);
+  c = n(981631),
+  d = n(731718);
 
 function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -50,7 +50,7 @@ class S extends(i = s.PureComponent) {
       maxX: o,
       maxY: a,
       dockedRect: _
-    } = this.props, c = Math.round(n), E = Math.round(a - r - this._height), I = Math.round(i), T = Math.round(o - s - this._width), h = (0, u.getPlatform)() !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
+    } = this.props, d = Math.round(n), E = Math.round(a - r - this._height), I = Math.round(i), T = Math.round(o - s - this._width), h = (0, u.getPlatform)() !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
     if (null != _) {
       var S, f;
       return {
@@ -59,17 +59,17 @@ class S extends(i = s.PureComponent) {
       }
     }
     switch (e) {
-      case d.VD2.TOP_LEFT:
+      case c.VD2.TOP_LEFT:
         return {
-          y: c, x: I
+          y: d, x: I
         };
-      case d.VD2.BOTTOM_LEFT:
+      case c.VD2.BOTTOM_LEFT:
         return {
           y: E, x: I
         };
-      case d.VD2.TOP_RIGHT:
+      case c.VD2.TOP_RIGHT:
         return {
-          y: c, x: T
+          y: d, x: T
         };
       default:
         return {
@@ -106,8 +106,8 @@ class S extends(i = s.PureComponent) {
       edgeOffsetRight: n
     } = this.props;
     switch (e) {
-      case d.VD2.TOP_LEFT:
-      case d.VD2.BOTTOM_LEFT:
+      case c.VD2.TOP_LEFT:
+      case c.VD2.BOTTOM_LEFT:
         return -t;
       default:
         return n
@@ -120,15 +120,15 @@ class S extends(i = s.PureComponent) {
       edgeOffsetBottom: n
     } = this.props;
     switch (e) {
-      case d.VD2.TOP_LEFT:
-      case d.VD2.TOP_RIGHT:
+      case c.VD2.TOP_LEFT:
+      case c.VD2.TOP_RIGHT:
         return -t;
       default:
         return n
     }
   }
   get inPopout() {
-    return this.props.appContext === d.IlC.POPOUT
+    return this.props.appContext === c.IlC.POPOUT
   }
   render() {
     let {
@@ -146,9 +146,9 @@ class S extends(i = s.PureComponent) {
     }), (0, r.jsx)(_.Z, {
       dragAnywhere: !0,
       ref: this.handleSetDraggableRef,
-      className: a()(c.pictureInPictureWindow, o, {
-        [c.hidden]: i,
-        [c.borderRadius]: s
+      className: a()(d.pictureInPictureWindow, o, {
+        [d.hidden]: i,
+        [d.borderRadius]: s
       }),
       maxX: e,
       maxY: t,
@@ -187,7 +187,7 @@ class S extends(i = s.PureComponent) {
         maxX: i,
         maxY: r
       } = this.props, s = this.calculateDecayingPosition(e, t, this._velocityX, this._velocityY), o = !0, a = !0;
-      if (s.x > i / 2 && (a = !1), s.y > r / 2 && (o = !1), n = o && a ? d.VD2.TOP_LEFT : o && !a ? d.VD2.TOP_RIGHT : !o && a ? d.VD2.BOTTOM_LEFT : d.VD2.BOTTOM_RIGHT, this.animateToPosition(n, this.ensureIsInPosition), n !== this.props.position) {
+      if (s.x > i / 2 && (a = !1), s.y > r / 2 && (o = !1), n = o && a ? c.VD2.TOP_LEFT : o && !a ? c.VD2.TOP_RIGHT : !o && a ? c.VD2.BOTTOM_LEFT : c.VD2.BOTTOM_RIGHT, this.animateToPosition(n, this.ensureIsInPosition), n !== this.props.position) {
         let {
           id: e,
           onMove: t
@@ -214,11 +214,11 @@ t.Z = s.memo(e => {
     roundCorners: _
   } = e;
   return (0, r.jsx)("div", {
-    className: c.pictureInPicture,
+    className: d.pictureInPicture,
     children: (() => {
       if (null == t) return null;
       let e = n.map(e => {
-        if (e.id !== t.id && e.component !== d.NYg.EMBED_IFRAME) return null;
+        if (e.id !== t.id && e.component !== c.NYg.EMBED_IFRAME) return null;
         let n = "string" == typeof e.component ? l[e.component] : e.component;
         return (0, r.jsx)(n, {
           ...e.props

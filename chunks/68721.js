@@ -13,7 +13,7 @@ var i = n(836560),
   u = n(65154),
   _ = n(231338);
 
-function d(e, t, n) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -21,7 +21,7 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let c = new r.Y("Output"),
+let d = new r.Y("Output"),
   E = new o.Z;
 class I extends i.EventEmitter {
   destroy() {
@@ -102,7 +102,7 @@ class I extends i.EventEmitter {
           i = this.context.createMediaStreamDestination();
         n.connect(this._audioFilter), this._audioFilter.connect(i), this.stream = i.stream
       } catch (t) {
-        c.error("failure creating krisp node"), c.error(t), this.stream = e
+        d.error("failure creating krisp node"), d.error(t), this.stream = e
       } else this.stream = e;
       return this.updateMode(), this.updateAudioTracks(), this.emit("permission", !0), this.emit("stream", this.stream), e
     } catch (e) {
@@ -158,9 +158,9 @@ class I extends i.EventEmitter {
     }
   }
   constructor(e) {
-    super(), d(this, "stream", void 0), d(this, "context", void 0), d(this, "sourceId", void 0), d(this, "_mute", !1), d(this, "_echoCancellation", !0), d(this, "_noiseSuppression", !0), d(this, "_automaticGainControl", !0), d(this, "_noiseCancellation", !1), d(this, "_audioFilter", void 0), d(this, "speaking", !1), d(this, "mode", u.pM.VOICE_ACTIVITY), d(this, "modeOptions", {
+    super(), c(this, "stream", void 0), c(this, "context", void 0), c(this, "sourceId", void 0), c(this, "_mute", !1), c(this, "_echoCancellation", !0), c(this, "_noiseSuppression", !0), c(this, "_automaticGainControl", !0), c(this, "_noiseCancellation", !1), c(this, "_audioFilter", void 0), c(this, "speaking", !1), c(this, "mode", u.pM.VOICE_ACTIVITY), c(this, "modeOptions", {
       delay: 20,
       threshold: -40
-    }), d(this, "cleanup", void 0), d(this, "pttReleaseDelayTimeout", void 0), d(this, "destroyed", !1), this.context = e
+    }), c(this, "cleanup", void 0), c(this, "pttReleaseDelayTimeout", void 0), c(this, "destroyed", !1), this.context = e
   }
 }

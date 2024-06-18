@@ -12,8 +12,8 @@ var i = n(594190),
   l = n(19780),
   u = n(979651),
   _ = n(709054),
-  d = n(356659),
-  c = n(981631),
+  c = n(356659),
+  d = n(981631),
   E = n(689938);
 
 function I(e) {
@@ -27,7 +27,7 @@ function I(e) {
         ownerId: t
       } = r.my(e);
       if (t !== o.default.getId()) {
-        let e = a.Z.getActivities(t).find(e => e.type === c.IIU.PLAYING);
+        let e = a.Z.getActivities(t).find(e => e.type === d.IIU.PLAYING);
         return {
           sourceName: null == e ? void 0 : e.name,
           sourceApplicationId: null == e ? void 0 : e.application_id
@@ -44,7 +44,7 @@ function I(e) {
   }(e), I = l.Z.getChannelId(), T = [o.default.getId()];
   return null != I && (T = Object.keys(u.Z.getVoiceStatesForChannel(I))), {
     id: _.default.fromTimestamp(Date.now()),
-    version: d.Bg,
+    version: c.Bg,
     applicationName: null != t ? t : E.Z.Messages.CLIPS_UNKNOWN_SOURCE,
     applicationId: n,
     users: T,

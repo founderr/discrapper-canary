@@ -5,13 +5,13 @@ n.d(t, {
     return O
   },
   DB: function() {
-    return g
+    return C
   },
   DR: function() {
     return R
   },
   Wf: function() {
-    return p
+    return g
   },
   XU: function() {
     return f
@@ -20,13 +20,13 @@ n.d(t, {
     return A
   },
   eH: function() {
-    return v
+    return L
   },
   m1: function() {
-    return C
+    return p
   },
   op: function() {
-    return L
+    return v
   },
   s1: function() {
     return m
@@ -43,8 +43,8 @@ var o = n(539528),
   l = n(585483),
   u = n(143816),
   _ = n(981631);
-let d = new a.Z("Routing/Utils"),
-  c = [_.E07.DEVELOPER_PORTAL];
+let c = new a.Z("Routing/Utils"),
+  d = [_.E07.DEVELOPER_PORTAL];
 i = __OVERLAY__ ? (0, o.PP)() : (0, o.lX)();
 let E = !1,
   I = i.listen((e, t) => {
@@ -56,11 +56,11 @@ function T() {
 }
 
 function h(e, t) {
-  return !!("string" == typeof e && c.some(t => e.startsWith(t))) && (d.log("".concat(t, " - route to external path ").concat(e)), window.dispatchEvent(new Event("beforeunload")), window.location[t](e), !0)
+  return !!("string" == typeof e && d.some(t => e.startsWith(t))) && (c.log("".concat(t, " - route to external path ").concat(e)), window.dispatchEvent(new Event("beforeunload")), window.location[t](e), !0)
 }
 
 function S(e, t, n, o) {
-  !h(e, "assign") && (d.log("transitionTo - Transitioning to ".concat(e)), null != n && (null == t ? t = {
+  !h(e, "assign") && (c.log("transitionTo - Transitioning to ".concat(e)), null != n && (null == t ? t = {
     source: n
   } : t.source = n), null == t ? i.push(e) : i.push({
     pathname: e,
@@ -69,7 +69,7 @@ function S(e, t, n, o) {
 }
 
 function f(e, t, n, i, r) {
-  d.log("transitionToGuild - Transitioning to ".concat(JSON.stringify({
+  c.log("transitionToGuild - Transitioning to ".concat(JSON.stringify({
     guildId: e,
     channelId: t,
     messageId: n
@@ -81,7 +81,7 @@ function N() {
 }
 
 function A(e, t, n) {
-  !h(e, "replace") && (d.log("Replacing route with ".concat(e)), "string" == typeof e ? i.replace(e, t) : i.replace(e), r = n)
+  !h(e, "replace") && (c.log("Replacing route with ".concat(e)), "string" == typeof e ? i.replace(e, t) : i.replace(e), r = n)
 }
 
 function m() {
@@ -96,7 +96,7 @@ function R() {
   return s
 }
 
-function C(e) {
+function p(e) {
   if (null == e) {
     var t;
     e = null !== (t = i.location.pathname) && void 0 !== t ? t : ""
@@ -104,7 +104,7 @@ function C(e) {
   return !e.startsWith(_.Z5c.HANDOFF) && !0
 }
 
-function p(e) {
+function g(e) {
   if (null == e) {
     var t;
     e = null !== (t = i.location.pathname) && void 0 !== t ? t : ""
@@ -125,14 +125,14 @@ function p(e) {
   return e
 }
 
-function g() {
+function C() {
   return E
 }
 
-function L() {
+function v() {
   T() && (r = null, i.goBack())
 }
 
-function v() {
+function L() {
   T() && (r = null, i.goForward())
 }

@@ -41,13 +41,13 @@ n.r(t), n.d(t, {
     return y
   },
   getCampaignParams: function() {
-    return L
+    return v
   },
   getDevice: function() {
     return D
   },
   getOS: function() {
-    return v
+    return L
   },
   getSuperProperties: function() {
     return b
@@ -67,8 +67,8 @@ var s, o = n(348327),
   l = n(512722),
   u = n.n(l),
   _ = n(264344),
-  d = n.n(_),
-  c = n(627420),
+  c = n.n(_),
+  d = n(627420),
   E = n(433517),
   I = n(298444),
   T = n(979675),
@@ -80,16 +80,16 @@ let A = "deviceProperties",
   m = "referralProperties",
   O = {},
   R = {},
-  C = window.DiscordNative;
-if (null != C) {
+  p = window.DiscordNative;
+if (null != p) {
   let e;
-  let t = C.remoteApp.getVersion(),
-    n = C.process.platform,
-    r = C.os.release,
-    o = C.os.arch,
-    a = C.os.appArch,
-    l = C.remoteApp.getReleaseChannel(),
-    u = (0, c.qf)();
+  let t = p.remoteApp.getVersion(),
+    n = p.process.platform,
+    r = p.os.release,
+    o = p.os.arch,
+    a = p.os.appArch,
+    l = p.remoteApp.getReleaseChannel(),
+    u = (0, d.qf)();
   switch (n) {
     case "win32":
       e = "Windows";
@@ -112,29 +112,29 @@ if (null != C) {
       os_arch: o,
       app_arch: a,
       system_locale: u
-    }, (null === (s = d().name) || void 0 === s ? void 0 : s.toLocaleLowerCase()) === "electron" && (i.browser_user_agent = d().ua || "", i.browser_version = d().version || ""), "linux" === n) {
-    let e = C.crashReporter.getMetadata();
+    }, (null === (s = c().name) || void 0 === s ? void 0 : s.toLocaleLowerCase()) === "electron" && (i.browser_user_agent = c().ua || "", i.browser_version = c().version || ""), "linux" === n) {
+    let e = p.crashReporter.getMetadata();
     i.window_manager = e.wm, i.distro = e.distro
   }
 }
-let p = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
+let g = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
 
-function g(e, t) {
+function C(e, t) {
   if (null == e) return "";
   t = t.replace(/[[]/, "\\[").replace(/[\]]/, "\\]");
   let n = new RegExp("[\\?&]".concat(t, "=([^&#]*)")).exec(e);
   return null === n || "string" != typeof n[1] && n[1].length ? "" : decodeURIComponent(n[1]).replace(/\+/g, " ")
 }
 
-function L(e) {
+function v(e) {
   let t = {};
-  return p.forEach(n => {
-    let i = g(e, n);
+  return g.forEach(n => {
+    let i = C(e, n);
     i.length > 0 && (t[n] = i)
   }), t
 }
 
-function v() {
+function L() {
   let {
     userAgent: e
   } = window.navigator;
@@ -166,7 +166,7 @@ function M() {
     return e.length >= 3 ? e[2] : ""
   }(), e = {
     ...e,
-    ...L(window.location.href),
+    ...v(window.location.href),
     ... function() {
       let e = {},
         t = document.referrer,
@@ -180,7 +180,7 @@ function M() {
         }();
       if (null != n) {
         e.search_engine = n;
-        let i = g(t, "yahoo" !== n ? "q" : "p");
+        let i = C(t, "yahoo" !== n ? "q" : "p");
         i.length > 0 && (e.mp_keyword = i)
       }
       return e
@@ -195,7 +195,7 @@ if (null == i) try {
   let e, t, n;
   e = E.K.get(A), null == e && (e = function() {
     let e = {},
-      t = v();
+      t = L();
     return e.os = t, e.browser = function() {
       let {
         userAgent: e,
@@ -216,7 +216,7 @@ if (null == i) try {
       else if (/MSIE|Trident\//.test(e)) return "Internet Explorer";
       else if (/Gecko/.test(e)) return "Mozilla";
       else return ""
-    }(), e.device = D(), e.system_locale = (0, c.qf)(), e
+    }(), e.device = D(), e.system_locale = (0, d.qf)(), e
   }(), E.K.set(A, e)), t = E.K.get(m), null == t && (t = M(), E.K.set(m, t)), n = I.x.get(m), null == n && (n = function(e, t) {
     let n = {};
     return Object.keys(e).map(i => n["".concat(i).concat(t)] = e[i]), n
@@ -226,11 +226,11 @@ if (null == i) try {
       var e, t;
       let n = {
         browser_user_agent: window.navigator.userAgent || "",
-        browser_version: d().version || ""
+        browser_version: c().version || ""
       };
       return {
         ...n,
-        os_version: null !== (t = null === d() || void 0 === d() ? void 0 : null === (e = d().os) || void 0 === e ? void 0 : e.version) && void 0 !== t ? t : ""
+        os_version: null !== (t = null === c() || void 0 === c() ? void 0 : null === (e = c().os) || void 0 === e ? void 0 : e.version) && void 0 !== t ? t : ""
       }
     }(),
     ...t,
@@ -251,9 +251,9 @@ y(function() {
   let i = {},
     r = window.GLOBAL_ENV.RELEASE_CHANNEL;
   r && (i.release_channel = r.split("-")[0]);
-  let s = parseInt((n = "302832", "302832"), 10);
+  let s = parseInt((n = "302904", "302904"), 10);
   !isNaN(s) && (i.client_build_number = s);
-  let o = null == C ? void 0 : null === (e = (t = C.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
+  let o = null == p ? void 0 : null === (e = (t = p.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
   return !isNaN(o) && (i.native_build_number = o), i.client_event_source = function() {
     try {
       if (__OVERLAY__) return "OVERLAY"

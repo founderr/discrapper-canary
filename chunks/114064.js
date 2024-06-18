@@ -8,60 +8,60 @@ let _ = {
     lastFetched: null,
     overrides: {}
   },
-  d = _;
-class c extends(o = a.ZP.Store) {
+  c = _;
+class d extends(o = a.ZP.Store) {
   getPerksDemos() {
-    return d.perksDemos
+    return c.perksDemos
   }
   getActivated() {
-    return d.activated
+    return c.activated
   }
   shouldFetch() {
-    return null == d.lastFetched || Date.now() > d.lastFetched + 864e5
+    return null == c.lastFetched || Date.now() > c.lastFetched + 864e5
   }
   shouldActivate(e) {
     var t;
-    return (null === (t = d.perksDemos) || void 0 === t ? void 0 : t[e]) === !0
+    return (null === (t = c.perksDemos) || void 0 === t ? void 0 : t[e]) === !0
   }
   overrides() {
-    return d.overrides
+    return c.overrides
   }
 }
-s = "PerksDemosStore", (r = "displayName") in(i = c) ? Object.defineProperty(i, r, {
+s = "PerksDemosStore", (r = "displayName") in(i = d) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.Z = new c(l.Z, {
+}) : i[r] = s, t.Z = new d(l.Z, {
   PREMIUM_PERKS_DEMOS_FETCH_SUCCESS: function(e) {
     let {
       demos: t
     } = e;
-    d.perksDemos = t, d.lastFetched = Date.now()
+    c.perksDemos = t, c.lastFetched = Date.now()
   },
   PREMIUM_PERKS_DEMOS_FETCH_FAILURE: function() {
-    d.perksDemos = _.perksDemos, d.lastFetched = null
+    c.perksDemos = _.perksDemos, c.lastFetched = null
   },
   PREMIUM_PERKS_DEMO_ACTIVATE_SUCCESS: function(e) {
     let {
       perkType: t
     } = e;
-    d.activated[t] = !0
+    c.activated[t] = !0
   },
   PREMIUM_PERKS_DEMO_ACTIVATE_FAILURE: function(e) {
     let {
       perkType: t
     } = e;
-    d.activated[t] = !1
+    c.activated[t] = !1
   },
   PREMIUM_PERKS_DEMO_COMPLETE: function(e) {
     let {
       perkType: t
     } = e;
-    null != d.perksDemos && !0 === d.activated[t] && (d.perksDemos[t] = !1)
+    null != c.perksDemos && !0 === c.activated[t] && (c.perksDemos[t] = !1)
   },
   LOGOUT: function() {
-    d = _
+    c = _
   },
   PREMIUM_PERKS_DEMO_OVERRIDE: function(e) {
     let {
@@ -70,9 +70,9 @@ s = "PerksDemosStore", (r = "displayName") in(i = c) ? Object.defineProperty(i, 
       available: i,
       activateSuccess: r
     } = e;
-    void 0 !== t && (0, u.QI)(t) && (d.overrides[n] = {
+    void 0 !== t && (0, u.QI)(t) && (c.overrides[n] = {
       available: i,
       activateSuccess: r
-    }, null == d.perksDemos && (d.perksDemos = {}), d.perksDemos[n] = i || !1, d.activated[n] = !1, d.lastFetched = null)
+    }, null == c.perksDemos && (c.perksDemos = {}), c.perksDemos[n] = i || !1, c.activated[n] = !1, c.lastFetched = null)
   }
 })

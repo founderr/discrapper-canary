@@ -27,22 +27,22 @@ function o(e) {
   } catch (e) {}
   let u = l.split("/"),
     _ = null,
-    d = 0;
+    c = 0;
   for (let e = u.length - 1; e >= 0; e--) {
     let t = u[e];
     if ("" !== t && "." !== t) {
       if (".." === t) {
-        d++;
+        c++;
         continue
       }
-      if (d > e) break;
-      _ = u[e - d];
+      if (c > e) break;
+      _ = u[e - c];
       break
     }
   }
   if (null == _) return null;
-  let c = _.split(".");
-  if (c.length < 2) return null;
-  let E = null === (t = c.pop()) || void 0 === t ? void 0 : t.toLowerCase();
+  let d = _.split(".");
+  if (d.length < 2) return null;
+  let E = null === (t = d.pop()) || void 0 === t ? void 0 : t.toLowerCase();
   return null != E && r.has(E) ? E : null
 }

@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   QN: function() {
-    return d
+    return c
   },
   ZP: function() {
     return _
   },
   gb: function() {
-    return c
+    return d
   },
   uF: function() {
     return E
@@ -22,11 +22,11 @@ var i = n(470079),
   u = n(317381);
 
 function _(e, t) {
-  return c((0, r.Wu)([u.ZP], () => null != e && null != e.id && "" !== e.id ? u.ZP.getEmbeddedActivitiesForChannel(e.id) : u.i6), t)
+  return d((0, r.Wu)([u.ZP], () => null != e && null != e.id && "" !== e.id ? u.ZP.getEmbeddedActivitiesForChannel(e.id) : u.i6), t)
 }
 
-function d(e) {
-  let t = c((0, r.e7)([u.ZP], () => null != e ? u.ZP.getEmbeddedActivitiesForGuild(e) : u.i6));
+function c(e) {
+  let t = d((0, r.e7)([u.ZP], () => null != e ? u.ZP.getEmbeddedActivitiesForGuild(e) : u.i6));
   return i.useMemo(() => {
     let e = new Map;
     return t.forEach(t => {
@@ -38,7 +38,7 @@ function d(e) {
   }, [t])
 }
 
-function c(e, t) {
+function d(e, t) {
   let n = e.map(e => e.applicationId),
     o = (0, s.Z)(n),
     u = new Set([]);

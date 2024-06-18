@@ -16,7 +16,7 @@ n.d(t, {
     return E
   },
   tR: function() {
-    return c
+    return d
   }
 });
 var i = n(430824),
@@ -27,9 +27,9 @@ var i = n(430824),
   l = n(37113),
   u = n(474936),
   _ = n(65154),
-  d = n(689938);
+  c = n(689938);
 
-function c(e) {
+function d(e) {
   if (null == e) return;
   let t = e.maxResolution.type === _.uA.SOURCE ? l.LY.RESOLUTION_SOURCE : e.maxResolution.height,
     n = (0, l.aW)(t);
@@ -47,13 +47,13 @@ function I(e) {
 }
 
 function T(e) {
-  return e.type === _.uA.SOURCE ? d.Z.Messages.SCREENSHARE_SOURCE : d.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
+  return e.type === _.uA.SOURCE ? c.Z.Messages.SCREENSHARE_SOURCE : c.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
     resolution: e.height
   })
 }
 
 function h(e) {
-  return d.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
+  return c.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
     fps: e
   })
 }
@@ -66,8 +66,8 @@ function S(e) {
 }
 
 function f(e, t, n) {
-  var _, d, c;
-  let E = (_ = e, d = t, c = n, l.ND.find(e => (null == e.preset || e.preset === _) && e.resolution === d && e.fps === c)),
+  var _, c, d;
+  let E = (_ = e, c = t, d = n, l.ND.find(e => (null == e.preset || e.preset === _) && e.resolution === c && e.fps === d)),
     I = s.default.getCurrentUser(),
     T = r.Z.getGuildId(),
     h = null != T ? i.Z.getGuild(T) : null;

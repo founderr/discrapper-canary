@@ -18,8 +18,8 @@ var i = n(735250),
   l = n(481060),
   u = n(285952),
   _ = n(981631),
-  d = n(85391),
-  c = n(611273);
+  c = n(85391),
+  d = n(611273);
 let {
   Provider: E,
   Consumer: I
@@ -38,7 +38,7 @@ class T extends r.PureComponent {
     return (0, i.jsx)(I, {
       children: E => (0, i.jsx)(u.Z.Child, {
         grow: 0,
-        className: o()(d.image, c.marginBottom40),
+        className: o()(c.image, d.marginBottom40),
         style: {
           ..._,
           width: n,
@@ -64,10 +64,10 @@ let h = e => {
     direction: u.Z.Direction.VERTICAL,
     style: a,
     children: [null != t && (0, i.jsx)(l.H, {
-      className: o()(n, d.title),
+      className: o()(n, c.title),
       children: t
     }), null != s ? (0, i.jsx)("div", {
-      className: o()(r, d.text, c.marginTop8),
+      className: o()(r, c.text, d.marginTop8),
       children: s
     }) : null]
   })
@@ -86,7 +86,7 @@ class S extends r.PureComponent {
         direction: u.Z.Direction.VERTICAL,
         align: u.Z.Align.CENTER,
         justify: u.Z.Justify.CENTER,
-        className: o()(d.wrapper, n),
+        className: o()(c.wrapper, n),
         style: r,
         children: e
       })

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return L
+    return v
   }
 });
 var i = n(735250),
@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(442837),
   u = n(481060),
   _ = n(239091),
-  d = n(100527),
-  c = n(906732),
+  c = n(100527),
+  d = n(906732),
   E = n(797610),
   I = n(927723),
   T = n(484459),
@@ -25,10 +25,10 @@ var i = n(735250),
   m = n(594174),
   O = n(797053),
   R = n(5192),
-  C = n(51144),
-  p = n(377668);
+  p = n(51144),
+  g = n(377668);
 
-function g(e) {
+function C(e) {
   let {
     userId: t,
     className: s,
@@ -56,18 +56,18 @@ function g(e) {
   })
 }
 
-function L(e) {
+function v(e) {
   let {
     className: t,
     userId: r,
     channelId: s,
     parsedUserId: I,
-    content: L,
-    inlinePreview: v = !1,
+    content: v,
+    inlinePreview: L = !1,
     viewingChannelId: D
   } = e, {
     analyticsLocations: M
-  } = (0, c.ZP)(d.Z.USER_MENTION), P = (0, l.e7)([m.default], () => m.default.getUser(r)), y = (0, l.e7)([S.Z], () => S.Z.getChannel(s)), U = null != y ? y.getGuildId() : null, b = v || null == P || null == U || null == s ? void 0 : e => {
+  } = (0, d.ZP)(c.Z.USER_MENTION), P = (0, l.e7)([m.default], () => m.default.getUser(r)), y = (0, l.e7)([S.Z], () => S.Z.getChannel(s)), U = null != y ? y.getGuildId() : null, b = L || null == P || null == U || null == s ? void 0 : e => {
     null != y && (0, _.jW)(e, async () => {
       let {
         default: e
@@ -80,11 +80,11 @@ function L(e) {
         guildId: U
       })
     })
-  }, G = C.ZP.useName(P), w = (0, l.e7)([S.Z, f.ZP, A.Z], () => R.ZP.getNickname(U, s, P)), k = N.Z.getGuild(U), B = (0, E.Ib)(k, y) && r === p.fL ? p.jM : null;
-  if (null == P) return (0, i.jsx)(g, {
+  }, G = p.ZP.useName(P), w = (0, l.e7)([S.Z, f.ZP, A.Z], () => R.ZP.getNickname(U, s, P)), k = N.Z.getGuild(U), B = (0, E.Ib)(k, y) && r === g.fL ? g.jM : null;
+  if (null == P) return (0, i.jsx)(C, {
     userId: I,
     className: t,
-    children: L
+    children: v
   });
   let x = e => (0, i.jsx)(O.Z, {
     className: t,
@@ -93,10 +93,10 @@ function L(e) {
     ...e,
     children: "@".concat(null != w ? w : G)
   });
-  return v ? (0, i.jsx)(c.Gt, {
+  return L ? (0, i.jsx)(d.Gt, {
     value: M,
     children: x()
-  }) : (0, i.jsx)(c.Gt, {
+  }) : (0, i.jsx)(d.Gt, {
     value: M,
     children: (0, i.jsx)(u.Popout, {
       preload: null == P ? void 0 : () => (0, T.W)(P.id, P.getAvatarURL(U, 80), {

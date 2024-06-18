@@ -15,9 +15,9 @@ var i = n(735250),
   l = n(797614),
   u = n(617136),
   _ = n(184309),
-  d = n(981631);
+  c = n(981631);
 
-function c(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -28,11 +28,11 @@ function c(e, t, n) {
 class E {
   constructor(e, t, n, i, r) {
     var a = this;
-    c(this, "id", void 0), c(this, "quests", void 0), c(this, "questContent", void 0), c(this, "questContentPosition", void 0), c(this, "trackGuildAndChannelMetadata", void 0), c(this, "triggeredByStatusChange", void 0), c(this, "beatTimeout", void 0), c(this, "lastBeatTime", void 0), c(this, "minViewTimeReachedTimeout", void 0), c(this, "minViewTimeSecond", void 0), c(this, "minViewportPercentage", void 0), c(this, "onMinViewTimeReached", () => {
+    d(this, "id", void 0), d(this, "quests", void 0), d(this, "questContent", void 0), d(this, "questContentPosition", void 0), d(this, "trackGuildAndChannelMetadata", void 0), d(this, "triggeredByStatusChange", void 0), d(this, "beatTimeout", void 0), d(this, "lastBeatTime", void 0), d(this, "minViewTimeReachedTimeout", void 0), d(this, "minViewTimeSecond", void 0), d(this, "minViewportPercentage", void 0), d(this, "onMinViewTimeReached", () => {
       this.quests.forEach(e => {
         (0, u.dA)({
           questId: e.id,
-          event: d.rMx.QUEST_CONTENT_VIEWED,
+          event: c.rMx.QUEST_CONTENT_VIEWED,
           properties: {
             min_view_time_seconds: this.minViewTimeSecond,
             min_viewport_percentage: this.minViewportPercentage,
@@ -42,12 +42,12 @@ class E {
           trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata
         })
       })
-    }), c(this, "heartbeat", function() {
+    }), d(this, "heartbeat", function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
       a.quests.forEach(t => {
         null != a.lastBeatTime && (0, u.dA)({
           questId: t.id,
-          event: d.rMx.QUEST_CONTENT_VIEW_TIME,
+          event: c.rMx.QUEST_CONTENT_VIEW_TIME,
           properties: {
             is_termination_beat: e,
             viewed_time_ms: Date.now() - a.lastBeatTime,
@@ -57,15 +57,15 @@ class E {
           trackGuildAndChannelMetadata: a.trackGuildAndChannelMetadata
         })
       }), a.lastBeatTime = Date.now()
-    }), c(this, "commonProperties", e => ({
+    }), d(this, "commonProperties", e => ({
       impression_id: this.id,
       quest_status: (0, u.uk)(e),
       ...(0, u.mH)(this.questContent, this.questContentPosition)
-    })), c(this, "start", () => {
+    })), d(this, "start", () => {
       this.stop(!1), this.lastBeatTime = Date.now(), this.beatTimeout = window.setInterval(() => this.heartbeat(), 6e4), this.minViewTimeReachedTimeout = window.setTimeout(this.onMinViewTimeReached, 1e3 * this.minViewTimeSecond), this.quests.forEach(e => {
         (0, u.dA)({
           questId: e.id,
-          event: d.rMx.QUEST_CONTENT_LOADED,
+          event: c.rMx.QUEST_CONTENT_LOADED,
           properties: {
             triggered_by_status_change: this.triggeredByStatusChange,
             ...this.commonProperties(e)
@@ -76,7 +76,7 @@ class E {
         name: o.V.QUEST_CONTENT_IMPRESSION,
         tags: ["quest_content:".concat((0, u._b)(this.questContent))]
       })
-    }), c(this, "stop", function() {
+    }), d(this, "stop", function() {
       let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
       e && a.heartbeat(!0), a.lastBeatTime = void 0, clearInterval(a.beatTimeout), clearTimeout(a.minViewTimeReachedTimeout)
     }), this.id = (0, s.Z)(), this.questContent = t, this.questContentPosition = n, this.minViewTimeSecond = 1, this.minViewportPercentage = .5, this.quests = Array.isArray(e) ? e : [e], this.trackGuildAndChannelMetadata = r, this.triggeredByStatusChange = i

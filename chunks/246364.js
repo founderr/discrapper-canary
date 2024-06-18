@@ -11,17 +11,17 @@ n.d(t, {
     return i
   },
   hW: function() {
-    return c
+    return d
   },
   tB: function() {
-    return d
+    return c
   },
   wB: function() {
     return o
   }
 });
-let d = 25,
-  c = 4;
+let c = 25,
+  d = 4;
 
 function E(e) {
   return null != e && "TERMS" === e.field_type

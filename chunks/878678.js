@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   ConfirmModal: function() {
-    return d
+    return c
   },
   DeclarativeConfirmModal: function() {
-    return c
+    return d
   }
 });
 var i = n(735250),
@@ -16,11 +16,11 @@ var i = n(735250),
   u = n(709692),
   _ = n(169935);
 
-function d(e) {
+function c(e) {
   let t, n, {
       header: s,
-      children: d,
-      confirmText: c,
+      children: c,
+      confirmText: d,
       cancelText: E,
       className: I,
       onConfirm: T,
@@ -33,11 +33,11 @@ function d(e) {
       confirmButtonColor: O = a.zx.Colors.RED,
       focusCancel: R = !1
     } = e,
-    C = r.useRef(null);
+    p = r.useRef(null);
   return r.useEffect(() => {
     !R && setTimeout(() => {
       var e;
-      return null === (e = C.current) || void 0 === e ? void 0 : e.focus()
+      return null === (e = p.current) || void 0 === e ? void 0 : e.focus()
     }, 0)
   }, [R]), r.useLayoutEffect(() => () => null == f ? void 0 : f()), null != E && (t = (0, i.jsx)(a.zx, {
     type: "button",
@@ -49,8 +49,8 @@ function d(e) {
     },
     autoFocus: R,
     children: E
-  })), null != c && (n = (0, i.jsx)(a.zx, {
-    buttonRef: C,
+  })), null != d && (n = (0, i.jsx)(a.zx, {
+    buttonRef: p,
     type: "submit",
     color: O,
     submitting: m,
@@ -62,7 +62,7 @@ function d(e) {
       }
     },
     autoFocus: !R,
-    children: c
+    children: d
   })), (0, i.jsxs)(u.Y0, {
     className: I,
     transitionState: A,
@@ -74,17 +74,17 @@ function d(e) {
       })
     }) : null, (0, i.jsx)(u.hz, {
       className: o()(_.content, N),
-      children: d
+      children: c
     }), (0, i.jsxs)(u.mz, {
       children: [n, t]
     })]
   })
 }
 
-function c(e) {
+function d(e) {
   return (0, i.jsx)(u.u_, {
     onCloseRequest: e.dismissable ? e.onCancel : null,
-    renderModal: t => (0, i.jsx)(d, {
+    renderModal: t => (0, i.jsx)(c, {
       ...t,
       ...e
     })

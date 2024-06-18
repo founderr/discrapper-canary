@@ -25,7 +25,7 @@ function N() {
     guildId: s
   } = (0, o.N)(), [N, m] = c.XZ(e, s), S = (0, d.Z)(s, e), {
     setCurrentTab: h
-  } = (0, _.dw)(), g = () => h(_.ue.EMOJIS), x = (0, i.e7)([a.Z], () => a.Z.getGuild(s)), C = null == x ? void 0 : x.getMaxRoleSubscriptionEmojiSlots();
+  } = (0, _.dw)(), g = () => h(_.ue.EMOJIS), C = (0, i.e7)([a.Z], () => a.Z.getGuild(s)), x = null == C ? void 0 : C.getMaxRoleSubscriptionEmojiSlots();
 
   function R(e) {
     null == N ? m(new Set(e)) : m(new Set([...N, ...e]))
@@ -44,7 +44,7 @@ function N() {
       className: T.formDescription,
       disabled: O,
       children: [I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_DESCRIPTION.format({
-        premiumEmojiMaximum: C
+        premiumEmojiMaximum: x
       }), (0, n.jsx)("br", {}), I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_MANAGE_LINK.format({
         handleTransitionToManageEmoji: g
       })]

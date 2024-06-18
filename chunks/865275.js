@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 }), n(47120), n(411104);
 var i = n(836560),
@@ -20,7 +20,7 @@ function u(e, t, n) {
   }) : e[t] = n, e
 }
 let _ = new o.Z("UploaderBase.tsx");
-class d extends i.EventEmitter {
+class c extends i.EventEmitter {
   _addAttachmentsToPayload(e, t, n) {
     let i = {
         ...e

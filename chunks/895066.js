@@ -162,7 +162,7 @@ class _ {
         numRateSamples: m
       } = h;
       if (void 0 !== A && N > A) {
-        var t, n, i, r, s, o, a, l, u, _, d, c, E, I;
+        var t, n, i, r, s, o, a, l, u, _, c, d, E, I;
         let O = N - A,
           R = {
             userId: T,
@@ -171,7 +171,7 @@ class _ {
             merged: null !== (o = f.merged) && void 0 !== o ? o : 0 - (null !== (s = S.merged) && void 0 !== s ? s : 0),
             expanded: null !== (l = f.expanded) && void 0 !== l ? l : 0 - (null !== (a = S.expanded) && void 0 !== a ? a : 0),
             accelerated: null !== (_ = f.accelerated) && void 0 !== _ ? _ : 0 - (null !== (u = S.accelerated) && void 0 !== u ? u : 0),
-            preemptiveExpanded: null !== (c = f.preemptiveExpanded) && void 0 !== c ? c : 0 - (null !== (d = S.preemptiveExpanded) && void 0 !== d ? d : 0),
+            preemptiveExpanded: null !== (d = f.preemptiveExpanded) && void 0 !== d ? d : 0 - (null !== (c = S.preemptiveExpanded) && void 0 !== c ? c : 0),
             cng: null !== (I = f.cng) && void 0 !== I ? I : 0 - (null !== (E = S.cng) && void 0 !== E ? E : 0),
             accelerateRate: h.accelerateRateSum / m,
             expandRate: h.expandRateSum / m,
@@ -218,15 +218,15 @@ class _ {
       }), r().forEach(e.rtp.inbound, (t, n) => {
         r().forEach(t, t => {
           if ("audio" === t.type) {
-            var i, s, o, a, l, u, _, d, c, E, I, T, h, S, f, N, A;
+            var i, s, o, a, l, u, _, c, d, E, I, T, h, S, f, N, A;
             let m = null !== (i = e.transport.ping) && void 0 !== i ? i : 0,
               O = t.packetsReceived,
               R = t.packetsLost,
-              C = t.bytesReceived,
-              p = null !== (s = t.fecPacketsReceived) && void 0 !== s ? s : 0,
-              g = null !== (o = t.fecPacketsDiscarded) && void 0 !== o ? o : 0,
-              L = null !== (a = t.jitterBuffer) && void 0 !== a ? a : 0,
-              v = {
+              p = t.bytesReceived,
+              g = null !== (s = t.fecPacketsReceived) && void 0 !== s ? s : 0,
+              C = null !== (o = t.fecPacketsDiscarded) && void 0 !== o ? o : 0,
+              v = null !== (a = t.jitterBuffer) && void 0 !== a ? a : 0,
+              L = {
                 audioJitterBuffer: t.audioJitterBuffer,
                 audioJitterTarget: t.audioJitterTarget,
                 audioJitterDelay: t.audioJitterDelay,
@@ -246,25 +246,25 @@ class _ {
                 passthroughCount: null !== (l = t.passthroughCount) && void 0 !== l ? l : 0,
                 decryptSuccessCount: null !== (u = t.decryptSuccessCount) && void 0 !== u ? u : 0,
                 decryptFailureCount: null !== (_ = t.decryptFailureCount) && void 0 !== _ ? _ : 0,
-                decryptDuration: null !== (d = t.decryptDuration) && void 0 !== d ? d : 0,
-                decryptAttempts: null !== (c = t.decryptAttempts) && void 0 !== c ? c : 0
+                decryptDuration: null !== (c = t.decryptDuration) && void 0 !== c ? c : 0,
+                decryptAttempts: null !== (d = t.decryptAttempts) && void 0 !== d ? d : 0
               };
             if (null != this.inboundStats[n]) {
               let e = O - this.inboundStats[n].packetsReceived,
                 i = R - this.inboundStats[n].packetsLost,
                 s = 0,
                 o = this.inboundStats[n].mosBuckets;
-              e > 0 && i >= 0 && (s = this.calculateMos(m + L, r().clamp(i / (e + i), 0, 1)), o[Math.floor(s)]++), this.inboundStats[n] = {
+              e > 0 && i >= 0 && (s = this.calculateMos(m + v, r().clamp(i / (e + i), 0, 1)), o[Math.floor(s)]++), this.inboundStats[n] = {
                 packetsReceived: O,
-                bytesReceived: C,
+                bytesReceived: p,
                 packetsLost: R,
-                fecPacketsReceived: p,
-                fecPacketsDiscarded: g,
+                fecPacketsReceived: g,
+                fecPacketsDiscarded: C,
                 mos: s,
                 mosSum: this.inboundStats[n].mosSum + s,
                 mosCount: this.inboundStats[n].mosCount + (s > 0 ? 1 : 0),
                 mosBuckets: o,
-                bufferStats: v,
+                bufferStats: L,
                 frameOpStats: D,
                 ...M
               }, this.periodicInboundStats[n] = {
@@ -280,15 +280,15 @@ class _ {
               }
             } else this.inboundStats[n] = {
               packetsReceived: O,
-              bytesReceived: C,
+              bytesReceived: p,
               packetsLost: R,
-              fecPacketsReceived: p,
-              fecPacketsDiscarded: g,
+              fecPacketsReceived: g,
+              fecPacketsDiscarded: C,
               mos: 0,
               mosSum: 0,
               mosCount: 0,
               mosBuckets: [0, 0, 0, 0, 0],
-              bufferStats: v,
+              bufferStats: L,
               frameOpStats: D,
               ...M
             }, this.periodicInboundStats[n] = {

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return c
+    return d
   }
 });
 var i = n(735250);
@@ -13,14 +13,14 @@ var r = n(512722),
   l = n(447452),
   u = n(877485),
   _ = n(788197),
-  d = n(969835);
+  c = n(969835);
 
-function c(e) {
+function d(e) {
   let {
     location: t,
     userId: n,
     user: r,
-    ...c
+    ...d
   } = e, {
     basicsEnabled: E
   } = (0, l.t)({
@@ -31,11 +31,11 @@ function c(e) {
   } = (0, u.V)({
     location: t
   }), h = (0, o.e7)([a.default], () => a.default.getUser(n), [n]), S = null != r ? r : h;
-  return (s()(null != S, "Unexpected missing user"), (E || I || T) && !S.bot && !S.isNonUserBot() && !S.isClyde()) ? (0, i.jsx)(d.Z, {
-    ...c,
+  return (s()(null != S, "Unexpected missing user"), (E || I || T) && !S.bot && !S.isNonUserBot() && !S.isClyde()) ? (0, i.jsx)(c.Z, {
+    ...d,
     user: S
   }) : (0, i.jsx)(_.Z, {
-    ...c,
+    ...d,
     user: S
   })
 }

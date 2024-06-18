@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   BB: function() {
-    return p
+    return g
   },
   C$: function() {
     return f
@@ -10,7 +10,7 @@ n.d(t, {
     return S
   },
   Kd: function() {
-    return C
+    return p
   },
   d2: function() {
     return R
@@ -27,13 +27,13 @@ var i = n(921738),
   l = n(823379),
   u = n(358085),
   _ = n(981631);
-let d = (0, u.isLinux)() ? _.HsE : (0, u.isMac)() ? _.REU : (0, u.isWindows)() ? _.iC$ : void 0,
-  c = o().invert(_.HsE);
-c["223"] = "`", Object.freeze(c);
+let c = (0, u.isLinux)() ? _.HsE : (0, u.isMac)() ? _.REU : (0, u.isWindows)() ? _.iC$ : void 0,
+  d = o().invert(_.HsE);
+d["223"] = "`", Object.freeze(d);
 let E = Object.freeze(o().invert(_.REU)),
   I = o().invert(_.iC$);
 I["223"] = "`", Object.freeze(I);
-let T = o().invert(null != d ? d : {});
+let T = o().invert(null != c ? c : {});
 
 function h() {
   if ((0, u.isLinux)()) return _.CgE.LINUX;
@@ -46,7 +46,7 @@ function S(e) {
   let [, t, n] = e;
   switch (n) {
     case _.CgE.LINUX:
-      return c["" + t];
+      return d["" + t];
     case _.CgE.MACOS:
       return E["" + t];
     case _.CgE.WINDOWS:
@@ -74,7 +74,7 @@ function f(e) {
         case _.CgE.BROWSER:
           return r()(e.replace(/^(right|left) (shift|meta|ctrl|alt)$/, "$2").replace("meta", "command"));
         default:
-          return d[e]
+          return c[e]
       }
     case _.MoX.MOUSE_BUTTON:
       return parseInt(e.replace("MOUSE", ""), 10);
@@ -145,7 +145,7 @@ function R(e) {
   }, [])
 }
 
-function C(e) {
+function p(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h(),
     n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.MoX.KEYBOARD_KEY;
   return e.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, a.Z.modKey).split("+").map(e => e.trim().replace("plus", "+")).reduce((e, i) => {
@@ -154,7 +154,7 @@ function C(e) {
   }, [])
 }
 
-function p(e) {
+function g(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     i = e.map(e => {
       let [t, n, i] = e;

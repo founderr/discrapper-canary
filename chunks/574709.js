@@ -15,27 +15,27 @@ function u(e, t, n) {
   }) : e[t] = n, e
 }
 let _ = new Date(2023, 8, 25),
-  d = new Date(2023, 9, 5),
-  c = () => ({
+  c = new Date(2023, 9, 5),
+  d = () => ({
     categoryItemViews: {
       [r.T.FANTASY]: {
         [s.Z.AVATAR_DECORATION]: _,
-        [s.Z.PROFILE_EFFECT]: d
+        [s.Z.PROFILE_EFFECT]: c
       },
       [r.T.ANIME]: {
         [s.Z.AVATAR_DECORATION]: _,
-        [s.Z.PROFILE_EFFECT]: d
+        [s.Z.PROFILE_EFFECT]: c
       },
       [r.T.BREAKFAST]: {
         [s.Z.AVATAR_DECORATION]: _,
-        [s.Z.PROFILE_EFFECT]: d
+        [s.Z.PROFILE_EFFECT]: c
       },
       [r.T.DISXCORE]: {
         [s.Z.AVATAR_DECORATION]: _
       }
     }
   }),
-  E = c();
+  E = d();
 class I extends(i = o.ZP.PersistedStore) {
   initialize(e) {
     null != e && (E = e)
@@ -49,7 +49,7 @@ class I extends(i = o.ZP.PersistedStore) {
     return null != i && (null === (n = E.categoryItemViews[i]) || void 0 === n ? void 0 : n[e.type]) != null
   }
   reset() {
-    E = c()
+    E = d()
   }
 }
 u(I, "displayName", "CollectiblesPersistedStore"), u(I, "persistKey", "CollectiblesPersistedStoreV2"), new I(a.Z, {

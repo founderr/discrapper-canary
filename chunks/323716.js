@@ -9,10 +9,10 @@ var i = n(544891),
 n(358085);
 var u = n(960048),
   _ = n(591759),
-  d = n(303850),
-  c = n(981631);
+  c = n(303850),
+  d = n(981631);
 let E = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://cdn.discordapp.com/bad-domains/hashes.json"],
-  I = new d.R,
+  I = new c.R,
   T = /\/api(\/v\d+)?\/science/;
 (0, i.lg)({
   prepareRequest(e) {
@@ -27,17 +27,17 @@ let E = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://
     } = n(594174), {
       default: l
     } = n(626135), {
-      isPlatformEmbedded: d
+      isPlatformEmbedded: c
     } = n(358085);
     if ("/" === e.url[0]) {
-      var c, h;
+      var d, h;
       e.url = (0, i.K0)() + e.url, !("Authorization" in e.header) && !("authorization" in e.header) && e.set("Authorization", t.getToken());
       let n = l.getSuperPropertiesBase64();
       null != n && e.set("X-Super-Properties", n);
       let r = t.getFingerprint();
-      if (null != r && "" !== r && e.set("X-Fingerprint", r), d) {
+      if (null != r && "" !== r && e.set("X-Fingerprint", r), c) {
         let t, n = [];
-        null != navigator && (n = (c = [...navigator.languages], c));
+        null != navigator && (n = (d = [...navigator.languages], d));
         let i = (t = 10, n.reduce((e, n) => (10 === t ? e.push(n) : e.push("".concat(n, ";q=0.").concat(t)), t = Math.max(t - 1, 1), e), []).join(","));
         e.set("Accept-Language", i)
       }
@@ -93,7 +93,7 @@ let E = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://
     })
   },
   interceptResponse(e, t, i) {
-    var r, l, u, _, d;
+    var r, l, u, _, c;
     return 400 === e.statusCode && (null === (r = e.body) || void 0 === r ? void 0 : r.captcha_key) ? (Promise.all([n.e("36514").then(n.bind(n, 475271)), n.e("31177").then(n.bind(n, 353250))]).then(t => {
       let [{
         default: n
@@ -109,7 +109,7 @@ let E = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://
         "X-Captcha-Key": n
       };
       null != i && (r["X-Captcha-Rqtoken"] = i), t(r)
-    }).catch(i), !0) : 401 === e.statusCode && (null === (l = e.body) || void 0 === l ? void 0 : l.code) === c.evJ.MFA_REQUIRED && (null === (u = e.body) || void 0 === u ? void 0 : u.mfa) ? (Promise.all([n.e("99387"), n.e("52030"), n.e("62344")]).then(n.bind(n, 24031)).then(n => {
+    }).catch(i), !0) : 401 === e.statusCode && (null === (l = e.body) || void 0 === l ? void 0 : l.code) === d.evJ.MFA_REQUIRED && (null === (u = e.body) || void 0 === u ? void 0 : u.mfa) ? (Promise.all([n.e("99387"), n.e("52030"), n.e("62344")]).then(n.bind(n, 24031)).then(n => {
       let {
         openMFAModal: r
       } = n;
@@ -119,7 +119,7 @@ let E = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://
         default: t
       } = e;
       t()
-    }), !1) : (0, s.b)(e.statusCode, null === (d = e.body) || void 0 === d ? void 0 : d.code) ? (n.e("76731").then(n.bind(n, 626892)).then(t => {
+    }), !1) : (0, s.b)(e.statusCode, null === (c = e.body) || void 0 === c ? void 0 : c.code) ? (n.e("76731").then(n.bind(n, 626892)).then(t => {
       var n;
       let {
         default: i

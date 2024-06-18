@@ -4,8 +4,8 @@ var i, r, s, o, a = n(442837),
   l = n(570140),
   u = n(786761),
   _ = n(797316),
-  d = n(594174),
-  c = n(709054);
+  c = n(594174),
+  d = n(709054);
 let E = {};
 
 function I(e) {
@@ -40,7 +40,7 @@ function h(e) {
     reactionType: a
   } = e, l = E[n];
   if (null == l || null == l.firstMessage || i !== l.firstMessage.id) return !1;
-  let u = d.default.getCurrentUser(),
+  let u = c.default.getCurrentUser(),
     _ = null != u && u.id === r;
   if (o && !_) return !1;
   E[n] = {
@@ -49,7 +49,7 @@ function h(e) {
 }
 class S extends(i = a.ZP.Store) {
   initialize() {
-    this.waitFor(_.Z, d.default)
+    this.waitFor(_.Z, c.default)
   }
   isLoading(e) {
     var t;
@@ -72,20 +72,20 @@ o = "ForumPostMessagesStore", (s = "displayName") in(r = S) ? Object.definePrope
     E = {}
   },
   MESSAGE_CREATE: function(e) {
-    if (e.isPushNotification || e.message.id !== c.default.castChannelIdAsMessageId(e.message.channel_id)) return !1;
+    if (e.isPushNotification || e.message.id !== d.default.castChannelIdAsMessageId(e.message.channel_id)) return !1;
     T(e.message.channel_id, e.message)
   },
   MESSAGE_UPDATE: function(e) {
     if (e.message.id !== e.message.channel_id) return !1;
-    let t = E[c.default.castMessageIdAsChannelId(e.message.id)];
+    let t = E[d.default.castMessageIdAsChannelId(e.message.id)];
     if (null == t || null == t.firstMessage) return !1;
-    E[c.default.castMessageIdAsChannelId(e.message.id)] = {
+    E[d.default.castMessageIdAsChannelId(e.message.id)] = {
       ...t,
       firstMessage: (0, u.wi)(t.firstMessage, e.message)
     }
   },
   MESSAGE_DELETE: function(e) {
-    if (e.id !== c.default.castChannelIdAsMessageId(e.channelId)) return !1;
+    if (e.id !== d.default.castChannelIdAsMessageId(e.channelId)) return !1;
     E[e.channelId] = {
       loaded: !0,
       firstMessage: null
@@ -130,7 +130,7 @@ o = "ForumPostMessagesStore", (s = "displayName") in(r = S) ? Object.definePrope
       reactions: i
     } = e, r = E[t];
     if (null == r || null == r.firstMessage || n !== r.firstMessage.id) return !1;
-    let s = d.default.getCurrentUser(),
+    let s = c.default.getCurrentUser(),
       o = r.firstMessage.addReactionBatch(i, null == s ? void 0 : s.id);
     E[t] = {
       ...r,
@@ -150,7 +150,7 @@ o = "ForumPostMessagesStore", (s = "displayName") in(r = S) ? Object.definePrope
       channelId: t,
       messages: n
     } = e, i = n[n.length - 1];
-    null != i && i.id === c.default.castChannelIdAsMessageId(t) && (E[t] = {
+    null != i && i.id === d.default.castChannelIdAsMessageId(t) && (E[t] = {
       loaded: !0,
       firstMessage: (0, u.e5)(i)
     })

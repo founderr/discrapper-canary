@@ -18,18 +18,18 @@ function u(e) {
     user: n,
     source: u,
     look: _,
-    color: d,
-    onAction: c
+    color: c,
+    onAction: d
   } = e;
   return null != t && (0, s.Z)(t, a.xjy.PLAY) && (0, o.Z)(t) ? (0, i.jsx)(r.Z, {
     className: l.button,
     size: l.buttonSize,
     look: _,
-    color: d,
+    color: c,
     fullWidth: !0,
     activity: t,
     user: n,
     source: u,
-    onAction: c
+    onAction: d
   }, "play") : null
 }

@@ -4,8 +4,8 @@ var i, r, s, o, a = n(913527),
   l = n.n(a),
   u = n(442837),
   _ = n(759174),
-  d = n(570140),
-  c = n(430824),
+  c = n(570140),
+  d = n(430824),
   E = n(594174),
   I = n(70956),
   T = n(881952),
@@ -35,24 +35,24 @@ function R(e, t, n) {
     }
   }
 }
-let C = !1,
-  p = e => "guild-join-request=".concat(e),
-  g = (e, t) => "guild-".concat(e, "-").concat(t);
+let p = !1,
+  g = e => "guild-join-request=".concat(e),
+  C = (e, t) => "guild-".concat(e, "-").concat(t);
 
-function L(e) {
+function v(e) {
   let t = [];
-  return t.push(p(e.joinRequestId)), t.push(g(e.guildId, e.applicationStatus)), t
+  return t.push(g(e.joinRequestId)), t.push(C(e.guildId, e.applicationStatus)), t
 }
-let v = new _.h(L, e => "".concat(e.joinRequestId)),
-  D = new _.h(L, e => "".concat(e.joinRequestId)),
-  M = new _.h(L, e => "".concat(e.actionedAt));
+let L = new _.h(v, e => "".concat(e.joinRequestId)),
+  D = new _.h(v, e => "".concat(e.joinRequestId)),
+  M = new _.h(v, e => "".concat(e.actionedAt));
 
 function P(e) {
-  return v.get(e)
+  return L.get(e)
 }
 
 function y(e) {
-  k[e.joinRequestId] = e, v.set(e.joinRequestId, e), (0, T.Nd)(e.applicationStatus) && (M.delete(e.joinRequestId), D.set(e.joinRequestId, e)), (0, T.bk)(e.applicationStatus) && (D.delete(e.joinRequestId), M.set(e.joinRequestId, e))
+  k[e.joinRequestId] = e, L.set(e.joinRequestId, e), (0, T.Nd)(e.applicationStatus) && (M.delete(e.joinRequestId), D.set(e.joinRequestId, e)), (0, T.bk)(e.applicationStatus) && (D.delete(e.joinRequestId), M.set(e.joinRequestId, e))
 }
 
 function U(e) {
@@ -62,7 +62,7 @@ function U(e) {
     request: r
   } = e, s = (0, S.j)(r), o = E.default.getCurrentUser();
   if (null == o || s.userId === o.id) return !1;
-  let a = null === (n = s.joinRequestId, t = v.get(n)) || void 0 === t ? void 0 : t.applicationStatus;
+  let a = null === (n = s.joinRequestId, t = L.get(n)) || void 0 === t ? void 0 : t.applicationStatus;
   return R(i, s.applicationStatus, a), y(s), !0
 }
 let b = {},
@@ -75,14 +75,14 @@ class x extends(i = u.ZP.Store) {
     return k[e]
   }
   getRequests(e, t) {
-    let n = g(e, t);
-    return (0, T.bk)(t) ? M.values(n) : (0, T.Nd)(t) ? D.values(n) : v.values(n)
+    let n = C(e, t);
+    return (0, T.bk)(t) ? M.values(n) : (0, T.Nd)(t) ? D.values(n) : L.values(n)
   }
   getSubmittedGuildJoinRequestTotal(e) {
     return A[e]
   }
   isFetching() {
-    return C
+    return p
   }
   hasFetched(e) {
     if (!N.has(e)) return !1;
@@ -91,7 +91,7 @@ class x extends(i = u.ZP.Store) {
   }
   getSelectedApplicationTab(e) {
     var t;
-    let n = c.Z.getGuild(e),
+    let n = d.Z.getGuild(e),
       i = (null == n ? void 0 : n.hasFeature(f.oNc.CLAN)) ? "REVIEW_APPLICATION" : h.wB.SUBMITTED;
     return null !== (t = b[e]) && void 0 !== t ? t : i
   }
@@ -102,7 +102,7 @@ class x extends(i = u.ZP.Store) {
   getSelectedGuildJoinRequest(e) {
     var t;
     let n = w[e];
-    return null != n ? (t = n.joinRequestId, v.get(t)) : null
+    return null != n ? (t = n.joinRequestId, L.get(t)) : null
   }
 }
 o = "GuildJoinRequestStoreV2", (s = "displayName") in(r = x) ? Object.defineProperty(r, s, {
@@ -110,7 +110,7 @@ o = "GuildJoinRequestStoreV2", (s = "displayName") in(r = x) ? Object.defineProp
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new x(d.Z, {
+}) : r[s] = o, t.Z = new x(c.Z, {
   GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS: function(e) {
     let {
       joinRequest: t
@@ -124,22 +124,22 @@ o = "GuildJoinRequestStoreV2", (s = "displayName") in(r = x) ? Object.defineProp
       total: i,
       guildId: r
     } = e;
-    C = !1, t === h.wB.SUBMITTED && O(r, i), n.forEach(e => {
+    p = !1, t === h.wB.SUBMITTED && O(r, i), n.forEach(e => {
       y(e)
     })
   },
   GUILD_JOIN_REQUESTS_FETCH_START: function() {
-    C = !0
+    p = !0
   },
   GUILD_JOIN_REQUESTS_FETCH_FAILURE: function() {
-    C = !1
+    p = !1
   },
   GUILD_JOIN_REQUESTS_BULK_ACTION: function(e) {
     let {
       guildId: t,
       action: n
     } = e;
-    v.values(g(t, h.wB.SUBMITTED)).forEach(e => {
+    L.values(C(t, h.wB.SUBMITTED)).forEach(e => {
       y({
         ...e,
         applicationStatus: n
@@ -154,10 +154,10 @@ o = "GuildJoinRequestStoreV2", (s = "displayName") in(r = x) ? Object.defineProp
       id: i,
       guildId: r
     } = e;
-    let s = (t = i, v.get(t));
+    let s = (t = i, L.get(t));
     if (null != s) {
       ;
-      R(r, null, s.applicationStatus), n = i, delete k[n], v.delete(n), D.delete(n), M.delete(n)
+      R(r, null, s.applicationStatus), n = i, delete k[n], L.delete(n), D.delete(n), M.delete(n)
     }
   },
   GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB: function(e) {

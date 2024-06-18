@@ -3,8 +3,8 @@ var i, r, s, o, a = n(442837),
   l = n(524437),
   u = n(570140),
   _ = n(581883),
-  d = n(131704),
-  c = n(981631);
+  c = n(131704),
+  d = n(981631);
 let E = {},
   I = !1;
 
@@ -43,12 +43,12 @@ class h extends(o = a.ZP.Store) {
   getCategoryRecord(e) {
     if (e in E && E[e].type === l.Dd.CATEGORY) {
       var t, n;
-      return t = E[e], (0, d.kt)({
+      return t = E[e], (0, c.kt)({
         id: t.id,
         name: null !== (n = t.nickname) && void 0 !== n ? n : "",
-        type: c.d4z.GUILD_CATEGORY,
+        type: d.d4z.GUILD_CATEGORY,
         position: t.order,
-        guild_id: c.I_8
+        guild_id: d.I_8
       })
     }
     return null

@@ -8,8 +8,8 @@ var i = n(544891),
   l = n(630388),
   u = n(621600),
   _ = n(709054),
-  d = n(981631),
-  c = n(526761),
+  c = n(981631),
+  d = n(526761),
   E = n(689938);
 t.Z = {
   open(e) {
@@ -81,8 +81,8 @@ t.Z = {
     }), _.default.keys(t).forEach(r => (0, u.jz)(e, r, t[r], a.get(r), n, i))
   },
   setForumThreadsCreated(e, t) {
-    let n = t ? c.ic.NEW_FORUM_THREADS_ON : c.ic.NEW_FORUM_THREADS_OFF,
-      i = t ? c.ic.NEW_FORUM_THREADS_OFF : c.ic.NEW_FORUM_THREADS_ON,
+    let n = t ? d.ic.NEW_FORUM_THREADS_ON : d.ic.NEW_FORUM_THREADS_OFF,
+      i = t ? d.ic.NEW_FORUM_THREADS_OFF : d.ic.NEW_FORUM_THREADS_ON,
       r = a.ZP.getChannelFlags(e);
     this.updateChannelOverrideSettings(e.guild_id, e.id, {
       flags: r & ~i | n
@@ -92,7 +92,7 @@ t.Z = {
     let n = a.ZP.accountNotificationSettings.flags,
       r = (0, l.mB)(n, e, t);
     await i.tn.patch({
-      url: d.ANM.ACCOUNT_NOTIFICATION_SETTINGS,
+      url: c.ANM.ACCOUNT_NOTIFICATION_SETTINGS,
       body: {
         flags: r
       }

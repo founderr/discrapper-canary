@@ -7,19 +7,19 @@ var i = n(266067),
   l = n(592125),
   u = n(944486),
   _ = n(981631),
-  d = n(176505);
-let c = {},
+  c = n(176505);
+let d = {},
   E = !1;
 
 function I(e) {
-  if (null == e || e === d.V || (0, d.AB)(e) || null != l.Z.getChannel(e)) return Promise.resolve();
+  if (null == e || e === c.V || (0, c.AB)(e) || null != l.Z.getChannel(e)) return Promise.resolve();
   if (E || (E = !0, s.Z.subscribe("CONNECTION_OPEN", () => {
-      c = {};
+      d = {};
       let e = u.Z.getChannelId(),
         t = l.Z.getChannel(e);
       null != e && null == t && I(e)
     })), !o.Z.isConnected()) return Promise.resolve();
-  let t = c[e];
+  let t = d[e];
   if (null != t) return "LOADING" === t.type ? t.promise : Promise.resolve();
   let n = (0, i.LX)(location.pathname, {
       path: _.Z5c.CHANNEL(":guildId", ":channelId", ":messageId"),
@@ -29,7 +29,7 @@ function I(e) {
       let {
         body: i
       } = t;
-      if (c[e] = {
+      if (d[e] = {
           type: "LOADED"
         }, a.Ec.has(i.type)) {
         var r;
@@ -41,7 +41,7 @@ function I(e) {
       }
     }).catch(() => {
       var t;
-      c[e] = {
+      d[e] = {
         type: "NOT_FOUND"
       }, s.Z.dispatch({
         type: "CHANNEL_DELETE",
@@ -52,7 +52,7 @@ function I(e) {
         }
       })
     });
-  return c[e] = {
+  return d[e] = {
     type: "LOADING",
     promise: T
   }, T

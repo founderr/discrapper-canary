@@ -4,8 +4,8 @@ var i, r, s, o, a = n(442837),
   l = n(570140);
 let u = {},
   _ = {},
-  d = new Set;
-class c extends(i = a.ZP.Store) {
+  c = new Set;
+class d extends(i = a.ZP.Store) {
   getCompletedActions(e) {
     return null == e ? null : _[e]
   }
@@ -16,21 +16,21 @@ class c extends(i = a.ZP.Store) {
   getState(e) {
     return null == e ? {} : {
       completedActions: _[e],
-      loading: d.has(e)
+      loading: c.has(e)
     }
   }
 }
-o = "GuildOnboardingMemberActionStore", (s = "displayName") in(r = c) ? Object.defineProperty(r, s, {
+o = "GuildOnboardingMemberActionStore", (s = "displayName") in(r = d) ? Object.defineProperty(r, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new c(l.Z, {
+}) : r[s] = o, t.Z = new d(l.Z, {
   GUILD_NEW_MEMBER_ACTIONS_FETCH_START: function(e) {
     let {
       guildId: t
     } = e;
-    d.add(t)
+    c.add(t)
   },
   GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS: function(e) {
     let {
@@ -41,13 +41,13 @@ o = "GuildOnboardingMemberActionStore", (s = "displayName") in(r = c) ? Object.d
       _[n] = u;
       return
     }
-    _[n] = t, d.delete(n)
+    _[n] = t, c.delete(n)
   },
   GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL: function(e) {
     let {
       guildId: t
     } = e;
-    d.delete(t)
+    c.delete(t)
   },
   GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS: function(e) {
     let {

@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   ZP: function() {
-    return c
+    return d
   },
   Zk: function() {
-    return d
+    return c
   },
   d0: function() {
     return _
@@ -24,7 +24,7 @@ let o = 3600,
     months: s.Z.Messages.DURATION_MONTHS_SHORT,
     years: s.Z.Messages.DURATION_YEARS_SHORT
   }),
-  d = () => ({
+  c = () => ({
     minutes: s.Z.Messages.DURATION_MINUTES_AGO,
     hours: s.Z.Messages.DURATION_HOURS_AGO,
     days: s.Z.Messages.DURATION_DAYS_AGO,
@@ -32,7 +32,7 @@ let o = 3600,
     years: s.Z.Messages.DURATION_YEARS_AGO
   });
 
-function c(e) {
+function d(e) {
   let {
     since: t,
     getFormatter: n

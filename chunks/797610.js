@@ -13,7 +13,7 @@ n.d(t, {
     return I
   },
   gJ: function() {
-    return c
+    return d
   }
 }), n(470079), n(442837);
 var i = n(430824),
@@ -43,10 +43,10 @@ function u(e) {
 
 function _(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  return d(l(e, n), e, t)
+  return c(l(e, n), e, t)
 }
 
-function d(e, t, n) {
+function c(e, t, n) {
   if (null == t) {
     if (null != n && n.isPrivate()) return !!n.hasFlag(a.zZ.CLYDE_AI) || i.Z.getGuildIds().some(e => E(i.Z.getGuild(e)));
     return !1
@@ -54,11 +54,11 @@ function d(e, t, n) {
   return null != e && e !== s.P.None && r.Z.can(o.Plq.USE_CLYDE_AI, n)
 }
 
-function c(e, t) {
+function d(e, t) {
   var n;
   let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     r = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : o.lds;
-  return d(s.Z.getCurrentConfig({
+  return c(s.Z.getCurrentConfig({
     guildId: r,
     location: "1e9ccc_2"
   }, {

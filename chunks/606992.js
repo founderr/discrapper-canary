@@ -14,11 +14,11 @@ function o(e) {
     type: n,
     state: o,
     isInPopoutExperiment: a = !1
-  } = e, [l, u] = i.useState(void 0), _ = null == o ? void 0 : o.query, d = null == o ? void 0 : o.isVisible, {
-    renderWindow: c
+  } = e, [l, u] = i.useState(void 0), _ = null == o ? void 0 : o.query, c = null == o ? void 0 : o.isVisible, {
+    renderWindow: d
   } = i.useContext(r.ZP), E = i.useCallback(() => {
     var e, t, i, r;
-    if (null != o && (null == _ || !d)) {
+    if (null != o && (null == _ || !c)) {
       u(void 0);
       return
     }
@@ -26,7 +26,7 @@ function o(e) {
       u(null);
       return
     }
-    let l = c.document.getSelection(),
+    let l = d.document.getSelection(),
       E = null != l && l.rangeCount > 0 ? l.getRangeAt(0) : null;
     if (null == E) return;
     let I = E.startContainer,
@@ -44,12 +44,12 @@ function o(e) {
       break
     }
     if (null == I) return;
-    let h = c.document.createRange();
+    let h = d.document.createRange();
     h.setStart(I, T), h.setEnd(I, T);
     let S = h.getBoundingClientRect();
     if ((null == S ? void 0 : S.height) !== 0) u(null != S ? S : null)
-  }, [a, c.document, o, d, _, n]);
-  return i.useEffect(() => (c.document.addEventListener("selectionchange", E), () => c.document.removeEventListener("selectionchange", E)), [c.document, E]), i.useEffect(() => {
+  }, [a, d.document, o, c, _, n]);
+  return i.useEffect(() => (d.document.addEventListener("selectionchange", E), () => d.document.removeEventListener("selectionchange", E)), [d.document, E]), i.useEffect(() => {
     E()
   }, [E, t]), l
 }

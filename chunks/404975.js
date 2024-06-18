@@ -31,8 +31,8 @@ function u(e) {
     selected: l = !1,
     children: u,
     disabled: _ = !1,
-    dangerous: d,
-    ...c
+    dangerous: c,
+    ...d
   } = e;
   return (0, i.jsx)(o.Clickable, {
     onClick: _ ? void 0 : t,
@@ -41,9 +41,9 @@ function u(e) {
       [a.button]: !0,
       [a.selected]: l,
       [a.disabled]: _,
-      [a.dangerous]: d
+      [a.dangerous]: c
     }),
-    ...c,
+    ...d,
     children: u
   })
 }

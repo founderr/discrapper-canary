@@ -13,8 +13,8 @@ var r = n(512722),
   l = n(410575),
   u = n(594174),
   _ = n(907285),
-  d = n(737013),
-  c = n(981631),
+  c = n(737013),
+  d = n(981631),
   E = n(689938);
 
 function I(e) {
@@ -24,9 +24,9 @@ function I(e) {
   } = e, r = (0, o.e7)([u.default], () => {
     let e = u.default.getCurrentUser();
     return s()(null != e, "VideoDeviceMenu: currentUser cannot be undefined"), e
-  }), I = (0, _.Z)(), T = (0, d.Z)(r.id);
+  }), I = (0, _.Z)(), T = (0, c.Z)(r.id);
   return (0, i.jsx)(l.Z, {
-    object: c.qAy.CONTEXT_MENU,
+    object: d.qAy.CONTEXT_MENU,
     children: (0, i.jsxs)(a.Menu, {
       onClose: t,
       navId: "video-device-context",

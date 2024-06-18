@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(806966),
   u = n(254494),
   _ = n(895924),
-  d = n(826298),
-  c = n(496030);
+  c = n(826298),
+  d = n(496030);
 let E = [16, 12, 8, 12];
 
 function I(e) {
@@ -36,7 +36,7 @@ function I(e) {
   }, [s]), m = r.useCallback((e, t) => {
     let r = s[t];
     if (null == r) return;
-    let o = (0, d.ky)(r),
+    let o = (0, c.ky)(r),
       l = r.type === _.Qi.BUILT_IN ? 4 : 0,
       u = 32 - 2 * l,
       E = (0, i.jsx)(o, {
@@ -50,7 +50,7 @@ function I(e) {
       }),
       S = r.type !== _.Qi.BUILT_IN && t < s.length - 1 && s[t + 1].type === _.Qi.BUILT_IN;
     return (0, i.jsxs)("div", {
-      className: c.section,
+      className: d.section,
       children: [(0, i.jsx)(a.Tooltip, {
         text: r.name,
         position: "right",
@@ -69,18 +69,18 @@ function I(e) {
           })
         }
       }), S ? (0, i.jsx)("hr", {
-        className: c.builtInSeparator
+        className: d.builtInSeparator
       }) : null]
     }, r.id)
   }, [I, n, h, s, T]);
   return 0 === s.length ? null : (0, i.jsx)("div", {
-    className: o()(t, c.wrapper),
+    className: o()(t, d.wrapper),
     children: (0, i.jsx)(u.Z, {
       categoryListRef: f,
       expressionsListRef: S,
       store: l.Xn,
       categories: s,
-      className: c.list,
+      className: d.list,
       renderCategoryListItem: m,
       rowCount: s.length,
       categoryHeight: N,

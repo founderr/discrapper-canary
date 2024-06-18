@@ -46,9 +46,9 @@ function _() {
     selectedSort: void 0
   }
 }
-let d = Object.freeze(_());
+let c = Object.freeze(_());
 
-function c(e, t) {
+function d(e, t) {
   return null != e && (!!e.toLowerCase().includes(t.toLowerCase()) || !1)
 }
 class E {
@@ -62,7 +62,7 @@ class E {
     return this._searchState = {
       ...this._searchState,
       ...e
-    }, this.hasDefaultQuery = r()(this._searchState, d), !0
+    }, this.hasDefaultQuery = r()(this._searchState, c), !0
   }
   resetSearchState() {
     return !this.hasDefaultQuery && (this._searchState = _(), this.hasDefaultQuery = !0, !0)
@@ -78,7 +78,7 @@ class E {
       requireUnusualAccountActivity: r,
       requireUsernameQuarantined: u,
       selectedRoleIds: _,
-      selectedJoinDateOption: d,
+      selectedJoinDateOption: c,
       selectedAccountAgeOption: E,
       selectedSourceInviteCode: I,
       selectedJoinSourceType: T
@@ -89,23 +89,23 @@ class E {
         for (let t of i)
           if (e.userId === t) return !0;
         for (let t of n)
-          if (c(e.nick, t)) return !0;
+          if (d(e.nick, t)) return !0;
         if (null == e.user) return !1;
         let {
           globalName: r,
           username: s
         } = e.user;
         for (let e of n)
-          if (c(s, e)) return !0;
+          if (d(s, e)) return !0;
         for (let e of n)
-          if (c(r, e)) return !0;
+          if (d(r, e)) return !0;
         return !1
       }(e, t)) return !1;
     if (_.size > 0) {
       var h, S;
       if (h = e, !(0 !== (S = _).size && Array.from(S).every(e => h.roles.includes(e)))) return !1
     }
-    if (null != d.afterDate && e.joinedAtTimestamp < d.afterDate || null != d.beforeDate && e.joinedAtTimestamp > d.beforeDate || null != E.afterDate && a.default.extractTimestamp(e.userId) < E.afterDate || null != E.beforeDate && a.default.extractTimestamp(e.userId) > E.beforeDate || null != I && e.sourceInviteCode !== I || null != T && e.joinSourceType !== T) return !1;
+    if (null != c.afterDate && e.joinedAtTimestamp < c.afterDate || null != c.beforeDate && e.joinedAtTimestamp > c.beforeDate || null != E.afterDate && a.default.extractTimestamp(e.userId) < E.afterDate || null != E.beforeDate && a.default.extractTimestamp(e.userId) > E.beforeDate || null != I && e.sourceInviteCode !== I || null != T && e.joinSourceType !== T) return !1;
     if (n || i || r || u) return !!(n && e.hasUnusualDmActivity || i && (0, o.b)(e) || r && e.hasUnusualAccountActivity || u && (0, s.EY)(e)) || !1;
     return !0
   }

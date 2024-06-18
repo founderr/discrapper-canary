@@ -17,24 +17,24 @@ function l(e) {
     application: l,
     channelId: u,
     currentUser: _,
-    isEmbedded: d,
-    ChannelStore: c,
+    isEmbedded: c,
+    ChannelStore: d,
     GuildStore: E,
     GuildMemberCountStore: I,
     RelationshipStore: T,
     SelectedChannelStore: h,
     VoiceStateStore: S,
     PermissionStore: f
-  } = e, N = c.getChannel(u), A = (0, r.a)(N);
+  } = e, N = d.getChannel(u), A = (0, r.a)(N);
   if (null == t) return !1;
-  if (d) return (0, s.ZP)({
+  if (c) return (0, s.ZP)({
     userId: t.id,
     activity: n,
     channelId: u,
     currentUser: _,
     application: l,
     isActivitiesEnabledForCurrentPlatform: A,
-    ChannelStore: c,
+    ChannelStore: d,
     VoiceStateStore: S,
     PermissionStore: f,
     GuildStore: E
@@ -42,7 +42,7 @@ function l(e) {
   if (!(0, i.isDesktop)()) return !1;
   if ((0, o.Z)(n, a.xjy.PARTY_PRIVACY_FRIENDS) && T.isFriend(t.id)) return !0;
   if ((0, o.Z)(n, a.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) {
-    let e = c.getChannel(h.getVoiceChannelId());
+    let e = d.getChannel(h.getVoiceChannelId());
     if (null == e || !S.isInChannel(e.id, t.id)) return !1;
     switch (e.type) {
       case a.d4z.DM:

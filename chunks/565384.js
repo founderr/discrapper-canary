@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Ez: function() {
-    return c
+    return d
   },
   Ps: function() {
     return a
@@ -16,7 +16,7 @@ n.d(t, {
     return l
   },
   k$: function() {
-    return d
+    return c
   }
 }), n(47120);
 var i = n(652874),
@@ -46,13 +46,13 @@ let s = Object.freeze({
   },
   _ = o;
 
-function d() {
+function c() {
   let e = {};
   return o.getState().impressions.forEach(t => {
     t.type === r.ImpressionTypes.PAGE ? e.page = t.name : e.section = t.name
   }), e
 }
 
-function c() {
+function d() {
   return o.getState().impressions
 }

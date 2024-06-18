@@ -15,13 +15,13 @@ t.Z = () => {
     null !== t.current && ((0, o.closeModal)(t.current), t.current = null)
   }
 
-  function d() {
+  function c() {
     a.Z.interact()
   }
   return r.useEffect(() => (e ? t.current = (0, o.openModal)(e => (0, i.jsx)(l.default, {
     title: _.Z.Messages.INTERACTION_REQUIRED_TITLE,
     body: _.Z.Messages.INTERACTION_REQUIRED_BODY,
-    onConfirm: d,
+    onConfirm: c,
     confirmText: _.Z.Messages.OKAY,
     ...e
   })) : n(), () => {

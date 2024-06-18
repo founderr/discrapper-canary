@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CalendarPicker: function() {
-    return c
+    return d
   }
 });
 var i = n(735250),
@@ -13,15 +13,15 @@ var i = n(735250),
   u = n(442837),
   _ = n(706454);
 n(700659);
-var d = n(756166);
+var c = n(756166);
 
-function c(e) {
+function d(e) {
   let {
     value: t = o()().local(),
     minDate: n,
     maxDate: s,
     onSelect: a,
-    calendarClassName: c,
+    calendarClassName: d,
     autoFocus: E,
     onClickOutside: I
   } = e, T = r.useCallback((e, t) => {
@@ -37,9 +37,9 @@ function c(e) {
   }, []);
   return (0, i.jsx)("div", {
     ref: A,
-    className: d.calendarPicker,
+    className: c.calendarPicker,
     children: (0, i.jsx)(l(), {
-      calendarClassName: c,
+      calendarClassName: d,
       selected: h,
       onChange: T,
       autoFocus: E,
@@ -53,4 +53,4 @@ function c(e) {
     })
   })
 }
-t.default = c
+t.default = d

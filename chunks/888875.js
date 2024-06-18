@@ -8,8 +8,8 @@ var i = n(392711),
   l = n(654455),
   u = n(822245),
   _ = n(339085),
-  d = n(178106),
-  c = n(822179),
+  c = n(178106),
+  d = n(822179),
   E = n(580005),
   I = n(70956),
   T = n(675478),
@@ -21,17 +21,17 @@ let N = "lastFrecencySavedTime",
   m = 1 * I.Z.Millis.DAY + Math.floor(Math.random() * (1 * I.Z.Millis.HOUR)),
   O = null,
   R = Date.now();
-class C extends a.Z {
+class p extends a.Z {
   _initialize() {
     T.DZ.beforeSendCallbacks.push({
       hasChanges: () => !1,
       processProto: () => {
-        v(!0)
+        L(!0)
       }
     }), T.DZ.beforeSendCallbacks.push({
-      hasChanges: () => c.Z.hasPendingUsage() && h.Z.hasLoaded(f.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+      hasChanges: () => d.Z.hasPendingUsage() && h.Z.hasLoaded(f.yP.FRECENCY_AND_FAVORITES_SETTINGS),
       processProto: e => {
-        if (!!c.Z.hasPendingUsage()) h.Z.hasLoaded(f.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (e.stickerFrecency = s.ls.create(), e.stickerFrecency.stickers = (0, S.tU)(c.Z.stickerFrecencyWithoutFetchingLatest.usageHistory, 100))
+        if (!!d.Z.hasPendingUsage()) h.Z.hasLoaded(f.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (e.stickerFrecency = s.ls.create(), e.stickerFrecency.stickers = (0, S.tU)(d.Z.stickerFrecencyWithoutFetchingLatest.usageHistory, 100))
       }
     }), T.DZ.beforeSendCallbacks.push({
       hasChanges: () => _.Z.hasPendingUsage() && h.Z.hasLoaded(f.yP.FRECENCY_AND_FAVORITES_SETTINGS),
@@ -39,9 +39,9 @@ class C extends a.Z {
         if (!!_.Z.hasPendingUsage()) h.Z.hasLoaded(f.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (e.emojiFrecency = s.PL.create(), e.emojiFrecency.emojis = (0, S.tU)(_.Z.emojiFrecencyWithoutFetchingLatest.usageHistory, 100))
       }
     }), T.DZ.beforeSendCallbacks.push({
-      hasChanges: () => d.Z.hasPendingUsage() && h.Z.hasLoaded(f.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+      hasChanges: () => c.Z.hasPendingUsage() && h.Z.hasLoaded(f.yP.FRECENCY_AND_FAVORITES_SETTINGS),
       processProto: e => {
-        if (!!d.Z.hasPendingUsage()) h.Z.hasLoaded(f.yP.FRECENCY_AND_FAVORITES_SETTINGS) && !r().isEmpty(d.Z.playedSoundHistory) && (e.playedSoundFrecency = s.pL.create(), e.playedSoundFrecency.playedSounds = (0, S.tU)(d.Z.playedSoundHistory, 100))
+        if (!!c.Z.hasPendingUsage()) h.Z.hasLoaded(f.yP.FRECENCY_AND_FAVORITES_SETTINGS) && !r().isEmpty(c.Z.playedSoundHistory) && (e.playedSoundFrecency = s.pL.create(), e.playedSoundFrecency.playedSounds = (0, S.tU)(c.Z.playedSoundHistory, 100))
       }
     }), T.DZ.beforeSendCallbacks.push({
       hasChanges: () => l.ZP.hasPendingUsage() && h.Z.hasLoaded(f.yP.FRECENCY_AND_FAVORITES_SETTINGS),
@@ -63,9 +63,9 @@ class C extends a.Z {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
-      POST_CONNECTION_OPEN: p,
-      CONNECTION_RESUMED: p,
-      CONNECTION_CLOSED: g
+      POST_CONNECTION_OPEN: g,
+      CONNECTION_RESUMED: g,
+      CONNECTION_CLOSED: C
     }, n in t ? Object.defineProperty(t, n, {
       value: i,
       enumerable: !0,
@@ -75,21 +75,21 @@ class C extends a.Z {
   }
 }
 
-function p() {
+function g() {
   var e;
-  R = null !== (e = o.K.get(N)) && void 0 !== e ? e : Date.now(), v(!1)
+  R = null !== (e = o.K.get(N)) && void 0 !== e ? e : Date.now(), L(!1)
 }
 
-function g() {
+function C() {
   clearTimeout(O), O = null
 }
-async function L() {
-  R = Date.now(), v(!0), !h.Z.hasLoaded(f.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (c.Z.hasPendingUsage() || _.Z.hasPendingUsage() || l.ZP.hasPendingUsage() || u.Z.hasPendingUsage() || E.Z.hasPendingUsage()) && await T.DZ.loadIfNecessary(), r().forEach(T.aj, e => {
+async function v() {
+  R = Date.now(), L(!0), !h.Z.hasLoaded(f.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (d.Z.hasPendingUsage() || _.Z.hasPendingUsage() || l.ZP.hasPendingUsage() || u.Z.hasPendingUsage() || E.Z.hasPendingUsage()) && await T.DZ.loadIfNecessary(), r().forEach(T.aj, e => {
     e.markDirtyIfHasPendingChange()
   })
 }
 
-function v(e) {
-  e && (R = Date.now(), o.K.set(N, R)), null != O && clearTimeout(O), O = setTimeout(L, Math.max(A, m - (Date.now() - R)))
+function L(e) {
+  e && (R = Date.now(), o.K.set(N, R)), null != O && clearTimeout(O), O = setTimeout(v, Math.max(A, m - (Date.now() - R)))
 }
-t.Z = new C
+t.Z = new p

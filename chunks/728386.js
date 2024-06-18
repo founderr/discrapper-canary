@@ -8,16 +8,16 @@ var i = n(735250),
   l = n(532772),
   u = n(570220),
   _ = n(28546),
-  d = n(147915),
-  c = n(957825),
+  c = n(147915),
+  d = n(957825),
   E = n(689938),
   I = n(838329);
 t.Z = r.memo(r.forwardRef(function(e, t) {
   let {
     disabled: n,
     type: s
-  } = e, [T, h] = (0, _.Iu)(e => [e.activeView, e.pickerId], a.Z), S = r.useContext(u.ZP), [f, N] = r.useState(!1), A = T === c.X1.STICKER, m = r.useCallback(() => {
-    (0, _.RO)(c.X1.STICKER, s)
+  } = e, [T, h] = (0, _.Iu)(e => [e.activeView, e.pickerId], a.Z), S = r.useContext(u.ZP), [f, N] = r.useState(!1), A = T === d.X1.STICKER, m = r.useCallback(() => {
+    (0, _.RO)(d.X1.STICKER, s)
   }, [s]);
   r.useEffect(() => {
     let e = () => {
@@ -37,18 +37,18 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
   let {
     Component: O,
     events: R,
-    play: C
+    play: p
   } = (0, l.z)();
   return n ? null : (0, i.jsx)("div", {
-    className: o()(c.CT, I.buttonContainer),
+    className: o()(d.CT, I.buttonContainer),
     ref: t,
-    children: (0, i.jsx)(d.Z, {
+    children: (0, i.jsx)(c.Z, {
       innerClassName: o()(I.button, I.stickerButton, {
         [I.stickerButtonTilted]: f && !A
       }),
       ...R,
       onClick: () => {
-        m(), C()
+        m(), p()
       },
       isActive: A,
       "aria-label": E.Z.Messages.STICKER_BUTTON_LABEL,

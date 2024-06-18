@@ -7,7 +7,7 @@ n.d(t, {
     return I
   },
   J5: function() {
-    return c
+    return d
   },
   UI: function() {
     return u
@@ -35,25 +35,25 @@ let u = new s.b,
     windowDispatch: u,
     windowId: (0, o.UU)()
   }),
-  d = new Map;
+  c = new Map;
 
-function c(e) {
+function d(e) {
   var t;
   let n = e.ownerDocument.defaultView;
   if (null == n) return;
   let i = (0, o.ZY)(n);
-  return null === (t = d.get(i)) || void 0 === t ? void 0 : t.windowDispatch
+  return null === (t = c.get(i)) || void 0 === t ? void 0 : t.windowDispatch
 }
 
 function E(e) {
-  return d.get(e)
+  return c.get(e)
 }
 
 function I() {
   let e = function() {
     var e;
     let t = (0, a.GR)();
-    return null == t ? null : null !== (e = d.get(t)) && void 0 !== e ? e : null
+    return null == t ? null : null !== (e = c.get(t)) && void 0 !== e ? e : null
   }();
   return null != e ? e.appContext : null
 }
@@ -65,14 +65,14 @@ function T(e) {
     children: r
   } = e, a = function(e, t) {
     let n = (0, o.ZY)(t),
-      i = d.get(n);
+      i = c.get(n);
     return null == i && (i = {
       appContext: e,
       renderWindow: t,
       windowDispatch: new s.b,
       windowId: n
-    }, d.set(n, i), t.addEventListener("unload", () => {
-      d.delete(n)
+    }, c.set(n, i), t.addEventListener("unload", () => {
+      c.delete(n)
     })), i
   }(t, n);
   return (0, i.jsx)(_.Provider, {

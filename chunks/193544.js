@@ -25,22 +25,22 @@ function T(e) {
     options: m,
     className: S,
     onChange: h
-  } = e, [g, x] = i.useState(N), [C, R] = i.useState(!1), [L, O] = i.useState(!1), A = i.useRef(null);
+  } = e, [g, C] = i.useState(N), [x, R] = i.useState(!1), [L, O] = i.useState(!1), A = i.useRef(null);
   i.useEffect(() => {
-    x(N)
+    C(N)
   }, [N]), i.useEffect(() => () => {
     clearTimeout(A.current)
   }, []);
   let p = m.find(e => e.value === g),
     M = e => {
-      if (!e.disabled && e.value !== g) O(!0), null == h || h(e), x(e.value), A.current = setTimeout(() => {
+      if (!e.disabled && e.value !== g) O(!0), null == h || h(e), C(e.value), A.current = setTimeout(() => {
         O(!1), R(!1)
       }, 1e3)
     };
   return (0, n.jsx)(u.Z, {
-    title: C ? T : null !== (s = null == p ? void 0 : p.title) && void 0 !== s ? s : T,
-    description: C ? "(".concat(null !== (t = null == p ? void 0 : p.title) && void 0 !== t ? t : _.Z.Messages.NONE, ")") : null !== (l = null == p ? void 0 : p.description) && void 0 !== l ? l : "",
-    highlightColor: C ? d.q.NONE : null == p ? void 0 : p.highlightColor,
+    title: x ? T : null !== (s = null == p ? void 0 : p.title) && void 0 !== s ? s : T,
+    description: x ? "(".concat(null !== (t = null == p ? void 0 : p.title) && void 0 !== t ? t : _.Z.Messages.NONE, ")") : null !== (l = null == p ? void 0 : p.description) && void 0 !== l ? l : "",
+    highlightColor: x ? d.q.NONE : null == p ? void 0 : p.highlightColor,
     action: (0, n.jsx)(r.Button, {
       look: r.Button.Looks.LINK,
       size: r.Button.Sizes.MIN,

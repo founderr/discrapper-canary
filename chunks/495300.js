@@ -22,8 +22,8 @@ var n = t(735250),
   S = t(359191),
   h = t(84658),
   g = t(142961),
-  x = t(729311),
-  C = t(850864),
+  C = t(729311),
+  x = t(850864),
   R = t(729995),
   L = t(966301),
   O = t(707076),
@@ -33,12 +33,12 @@ var n = t(735250),
 
 function f() {
   let e = (0, r.e7)([_.Z], () => _.Z.getGuildId());
-  return null == e ? null : (0, n.jsx)(v, {
+  return null == e ? null : (0, n.jsx)(D, {
     guildId: e
   })
 }
 
-function v(e) {
+function D(e) {
   let s, {
       guildId: t
     } = e,
@@ -50,7 +50,7 @@ function v(e) {
     m = (0, g.Z)(t),
     f = !m && _,
     {
-      homeSettingsEnabled: v
+      homeSettingsEnabled: D
     } = (0, u.kZ)(t);
   switch (i.useEffect(() => {
       (0, d.EW)(o.z.COMMUNITY_ONBOARDING_NEW_BADGE)
@@ -67,7 +67,7 @@ function v(e) {
       });
       break;
     case h.PG.DEFAULT_CHANNELS:
-      s = (0, n.jsx)(x.Z, {
+      s = (0, n.jsx)(C.Z, {
         saveOnClose: !m
       });
       break;
@@ -77,7 +77,7 @@ function v(e) {
       });
       break;
     case h.PG.HOME_SETTINGS:
-      s = (0, n.jsx)(C.Z, {
+      s = (0, n.jsx)(x.Z, {
         saveOnClose: !m
       });
       break;
@@ -91,10 +91,10 @@ function v(e) {
     className: a()(M.onboardingContainer, {
       [M.upsellOnTop]: f
     }),
-    children: [!m && l !== h.PG.LANDING && (0, n.jsx)(D, {
+    children: [!m && l !== h.PG.LANDING && (0, n.jsx)(v, {
       setOnboardingStep: T.$K,
       page: l,
-      homeSettingsEnabled: v
+      homeSettingsEnabled: D
     }), m && l !== h.PG.LANDING && (0, n.jsx)("div", {
       children: (0, n.jsxs)(c.Button, {
         innerClassName: M.backButton,
@@ -118,7 +118,7 @@ function v(e) {
   })
 }
 
-function D(e) {
+function v(e) {
   let {
     page: s,
     setOnboardingStep: t,

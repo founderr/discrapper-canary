@@ -4,19 +4,19 @@ n.d(t, {
     return i
   },
   CB: function() {
-    return g
+    return C
   },
   aU: function() {
     return O
   },
   cp: function() {
-    return L
+    return v
   },
   eL: function() {
-    return C
+    return p
   },
   vg: function() {
-    return p
+    return g
   },
   zy: function() {
     return R
@@ -28,8 +28,8 @@ var i, r, s = n(470079),
   l = n(695346),
   u = n(592125),
   _ = n(375954),
-  d = n(594174),
-  c = n(630388),
+  c = n(594174),
+  d = n(630388),
   E = n(823379),
   I = n(709054),
   T = n(591759),
@@ -71,10 +71,10 @@ function A(e) {
         content_scan_version: _
       } = e;
       if (null == a || null == l) return null;
-      let d = (0, o.NU)(u),
-        E = null != e.flags && (0, c.yE)(e.flags, h.J0y.IS_THUMBNAIL),
+      let c = (0, o.NU)(u),
+        E = null != e.flags && (0, d.yE)(e.flags, h.J0y.IS_THUMBNAIL),
         I = null != t ? t : n;
-      if (d) {
+      if (c) {
         let e = T.Z.toURLSafe(t);
         if (null == e) return null;
         e.searchParams.append("format", "jpeg"), I = e.toString()
@@ -87,7 +87,7 @@ function A(e) {
         flags: s,
         contentScanVersion: _,
         alt: i,
-        isVideo: d,
+        isVideo: c,
         isThumbnail: E,
         type: "attachment"
       }
@@ -142,28 +142,28 @@ function R(e, t) {
   return [...n, ...m(e, t)]
 }
 
-function C(e, t) {
+function p(e, t) {
   var n, i;
   let r = A(e),
     s = m(e, t);
   return null !== (i = null !== (n = r[0]) && void 0 !== n ? n : s[0]) && void 0 !== i ? i : null
 }
 
-function p(e, t) {
+function g(e, t) {
   let n = A(e),
     i = m(e, t);
   return null == n[0] && null != i[0]
 }
 
-function g(e, t) {
+function C(e, t) {
   var n;
   let i = u.Z.getChannel(t);
   if (null == i) return !1;
   let r = _.Z.getMessage(i.id, I.default.castChannelIdAsMessageId(i.id));
-  return null != r && e.length > 0 && null != e.find(e => e.isImage || e.isVideo) && i.isForumPost() && i.ownerId === (null === (n = d.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && 0 === a.Z.getCount(i.id) && (0 === r.attachments.length || null == r.attachments.find(e => S(e) || f(e)))
+  return null != r && e.length > 0 && null != e.find(e => e.isImage || e.isVideo) && i.isForumPost() && i.ownerId === (null === (n = c.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && 0 === a.Z.getCount(i.id) && (0 === r.attachments.length || null == r.attachments.find(e => S(e) || f(e)))
 }
 
-function L(e) {
+function v(e) {
   return e.reduce((e, t) => ({
     containsVideo: e.containsVideo || t.isVideo,
     containsGif: e.containsGif || (0, o.d$)(t.src)

@@ -12,8 +12,8 @@ var i = n(570140),
   l = n(630388),
   u = n(317381),
   _ = n(424291),
-  d = n(966434),
-  c = n(649591),
+  c = n(966434),
+  d = n(649591),
   E = n(981631);
 async function I(e, t) {
   try {
@@ -35,7 +35,7 @@ async function T(e) {
     embeddedActivitiesManager: i
   } = e;
   return !!(null == n || await new Promise(e => {
-    (0, d.Z)(n, t, () => {
+    (0, c.Z)(n, t, () => {
       i.leaveActivity({
         channelId: t.id,
         applicationId: n.id
@@ -70,7 +70,7 @@ async function S(e) {
     channel: i
   } = e, r = null != t ? t : await I(n, i.getGuildId());
   return null != r && (!!((0, l.yE)(r.flags, E.udG.EMBEDDED_RELEASED) || u.ZP.hasActivityEverBeenLaunched(n)) || new Promise(e => {
-    (0, c.j)({
+    (0, d.j)({
       application: r,
       onConfirm: () => e(!0),
       onCancel: () => e(!1)

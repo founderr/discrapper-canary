@@ -8,8 +8,8 @@ var i = n(735250),
   l = n(512722),
   u = n.n(l),
   _ = n(143927),
-  d = n(873546),
-  c = n(149765),
+  c = n(873546),
+  d = n(149765),
   E = n(442837),
   I = n(481060),
   T = n(430742),
@@ -21,11 +21,11 @@ var i = n(735250),
   m = n(663924),
   O = n(998698),
   R = n(271668),
-  C = n(931981),
-  p = n(326133),
-  g = n(570220),
-  L = n(28546),
-  v = n(805680),
+  p = n(931981),
+  g = n(326133),
+  C = n(570220),
+  v = n(28546),
+  L = n(805680),
   D = n(151574),
   M = n(368844),
   P = n(41776),
@@ -61,16 +61,16 @@ var i = n(735250),
   ea = n(957825),
   el = n(838329);
 t.Z = r.memo(r.forwardRef(function(e, t) {
-  var s, l, eu, e_, ed, ec, eE, eI, eT, eh, eS, ef, eN, eA;
+  var s, l, eu, e_, ec, ed, eE, eI, eT, eh, eS, ef, eN, eA;
   let {
     textValue: em,
     richValue: eO,
     className: eR,
-    innerClassName: eC,
-    editorClassName: ep,
-    id: eg,
-    required: eL,
-    disabled: ev,
+    innerClassName: ep,
+    editorClassName: eg,
+    id: eC,
+    required: ev,
+    disabled: eL,
     placeholder: eD,
     accessibilityLabel: eM,
     channel: eP,
@@ -105,8 +105,8 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
   } = e;
   u()(null != ey, "chat input type must be set");
   let {
-    analyticsLocations: e6
-  } = (0, f.ZP)(S.Z.CHANNEL_TEXT_AREA), e5 = function(e) {
+    analyticsLocations: e5
+  } = (0, f.ZP)(S.Z.CHANNEL_TEXT_AREA), e6 = function(e) {
     let t = r.useRef(null);
     if (null != e && "function" == typeof e) throw Error("Only Ref objects are supported");
     return null == e ? t : e
@@ -142,14 +142,14 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
           var r, s;
           let a = e.isPrivate(),
             l = V.Z.computePermissions(e),
-            u = c.e$(l, es.Plq.CREATE_PUBLIC_THREADS) || c.e$(l, es.Plq.CREATE_PRIVATE_THREADS),
-            _ = (!(null === (r = t.permissions) || void 0 === r ? void 0 : r.requireCreateTherads) || u) && (!(null === (s = t.permissions) || void 0 === s ? void 0 : s.requireSendMessages) || c.e$(l, es.Plq.SEND_MESSAGES)),
-            d = _ && c.e$(l, es.Plq.ATTACH_FILES),
+            u = d.e$(l, es.Plq.CREATE_PUBLIC_THREADS) || d.e$(l, es.Plq.CREATE_PRIVATE_THREADS),
+            _ = (!(null === (r = t.permissions) || void 0 === r ? void 0 : r.requireCreateTherads) || u) && (!(null === (s = t.permissions) || void 0 === s ? void 0 : s.requireSendMessages) || d.e$(l, es.Plq.SEND_MESSAGES)),
+            c = _ && d.e$(l, es.Plq.ATTACH_FILES),
             E = null != n,
             I = (0, k.xl)(e);
           return {
             disabled: i || o || !a && !_ || I,
-            canAttachFiles: !0 === t.attachments && (a || o || d || E),
+            canAttachFiles: !0 === t.attachments && (a || o || c || E),
             canCreateThreads: u,
             canEveryoneSendMessages: W.Uu(es.Plq.SEND_MESSAGES, e)
           }
@@ -159,10 +159,10 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
         isPendingMember: o,
         ...a
       }
-    }(eP, ey, ti, ev),
-    td = ey.toolbarType === q.O.STATIC,
-    tc = !B.dN.useSetting() && !(0, K.isAndroidWeb)() && null != window.ResizeObserver,
-    tE = !tc || !(null === (s = ey.commands) || void 0 === s ? void 0 : s.enabled) || !eU || em !== eo.GI,
+    }(eP, ey, ti, eL),
+    tc = ey.toolbarType === q.O.STATIC,
+    td = !B.dN.useSetting() && !(0, K.isAndroidWeb)() && null != window.ResizeObserver,
+    tE = !td || !(null === (s = ey.commands) || void 0 === s ? void 0 : s.enabled) || !eU || em !== eo.GI,
     tI = (0, y.Z)(),
     {
       isSubmitButtonEnabled: tT,
@@ -174,15 +174,15 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
     tS = (0, E.e7)([H.Z], () => H.Z.isEnabled());
   ! function(e, t) {
     let n = r.useCallback(() => {
-        if (!t)(0, L.RO)(ea.X1.EMOJI, e)
+        if (!t)(0, v.RO)(ea.X1.EMOJI, e)
       }, [t, e]),
       i = r.useCallback(() => {
         var n;
-        if (!t && !!(null === (n = e.gifs) || void 0 === n ? void 0 : n.allowSending))(0, L.RO)(ea.X1.GIF, e)
+        if (!t && !!(null === (n = e.gifs) || void 0 === n ? void 0 : n.allowSending))(0, v.RO)(ea.X1.GIF, e)
       }, [t, e]),
       s = r.useCallback(() => {
         var n;
-        if (!t && !!(null === (n = e.stickers) || void 0 === n ? void 0 : n.allowSending))(0, L.RO)(ea.X1.STICKER, e)
+        if (!t && !!(null === (n = e.stickers) || void 0 === n ? void 0 : n.allowSending))(0, v.RO)(ea.X1.STICKER, e)
       }, [t, e]);
     (0, j.yp)({
       event: es.CkL.TOGGLE_EMOJI_POPOUT,
@@ -213,13 +213,13 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
     submit: tm,
     handleSubmit: tO
   } = function(e, t, s, o) {
-    let [a, l] = r.useState(!1), u = r.useCallback((r, _, d, c, E) => {
+    let [a, l] = r.useState(!1), u = r.useCallback((r, _, c, d, E) => {
       var h, S, f;
       if (a) return;
       l(!0);
       let N = null !== (S = null === (h = b.Z.getStickerPreview(o, t.drafts.type)) || void 0 === h ? void 0 : h.map(e => e.id)) && void 0 !== S ? S : [],
         A = null !== (f = F.Z.getUploads(o, t.drafts.type)) && void 0 !== f ? f : [];
-      if (null == _ && !c && !E && (0, M.CB)(A, o)) {
+      if (null == _ && !d && !E && (0, M.CB)(A, o)) {
         l(!1), (0, I.openModalLazy)(async () => {
           let {
             default: e
@@ -238,21 +238,21 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
         uploads: A,
         stickers: N,
         command: _,
-        commandOptionValues: d,
-        isGif: c
+        commandOptionValues: c,
+        isGif: d
       }).then(e => {
         var n, i, r, a;
         let {
           shouldClear: u,
           shouldRefocus: _
         } = e;
-        let d = (n = u, i = t, null !== (a = n && (null === (r = i.submit) || void 0 === r ? void 0 : r.clearOnSubmit)) && void 0 !== a && a),
-          c = null != s.current;
-        if (d) {
+        let c = (n = u, i = t, null !== (a = n && (null === (r = i.submit) || void 0 === r ? void 0 : r.clearOnSubmit)) && void 0 !== a && a),
+          d = null != s.current;
+        if (c) {
           if (o !== Z.Z.getChannelId()) T.Z.saveDraft(o, "", t.drafts.type);
-          else c && s.current.clearValue()
+          else d && s.current.clearValue()
         }
-        c && (l(!1), (0, L._Q)(), _ && s.current.focus())
+        d && (l(!1), (0, v._Q)(), _ && s.current.focus())
       })
     }, [s, e, a, t, o]);
     return {
@@ -265,8 +265,8 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
     }
   }(eF, ey, e9, eP.id), {
     autocompleteRef: tR,
-    handleMaybeShowAutocomplete: tC,
-    handleHideAutocomplete: tp
+    handleMaybeShowAutocomplete: tp,
+    handleHideAutocomplete: tg
   } = function() {
     let e = r.useRef(null),
       t = r.useCallback(() => {
@@ -283,16 +283,16 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
       handleHideAutocomplete: n
     }
   }();
-  let tg = (eh = tm, eS = ey, ef = e9, r.useCallback(e => {
+  let tC = (eh = tm, eS = ey, ef = e9, r.useCallback(e => {
     var t, n;
-    eS === q.I.CREATE_FORUM_POST ? null === (n = ef.current) || void 0 === n || n.insertGIF(e) : eh(e.url, void 0, void 0, !0), (0, L._Q)(), null === (t = ef.current) || void 0 === t || t.focus()
+    eS === q.I.CREATE_FORUM_POST ? null === (n = ef.current) || void 0 === n || n.insertGIF(e) : eh(e.url, void 0, void 0, !0), (0, v._Q)(), null === (t = ef.current) || void 0 === t || t.focus()
   }, [ef, eh, eS]));
-  let tL = (eN = e9, r.useCallback(function(e, t) {
+  let tv = (eN = e9, r.useCallback(function(e, t) {
       let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = eN.current;
-      null != e && null != i && i.insertEmoji(e, t, n), t && (0, L._Q)()
+      null != e && null != i && i.insertEmoji(e, t, n), t && (0, v._Q)()
     }, [eN])),
-    tv = function(e) {
+    tL = function(e) {
       let {
         editorRef: t,
         disabled: n,
@@ -314,7 +314,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
           value: "",
           uploads: void 0,
           stickers: [e.id]
-        }), null === (_ = t.current) || void 0 === _ || _.clearValue()), (0, L._Q)(), null === (u = t.current) || void 0 === u || u.focus())
+        }), null === (_ = t.current) || void 0 === _ || _.clearValue()), (0, v._Q)(), null === (u = t.current) || void 0 === u || u.focus())
       }, [n, i, s, o.drafts.type, t, l, a])
     }({
       editorRef: e9,
@@ -326,7 +326,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
     });
   let tD = (eA = e9, r.useCallback(e => {
       let t = eA.current;
-      null != e && null != t && t.insertSound(e), (0, L._Q)()
+      null != e && null != t && t.insertSound(e), (0, v._Q)()
     }, [eA])),
     tM = r.useCallback(() => {
       var e;
@@ -372,12 +372,12 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
       handleAutocompleteVisibilityChange: tB,
       handleOuterClick: tx
     } = function(e, t, n) {
-      let [i, s] = (0, L.Iu)(e => [e.activeView, e.activeViewType], _.Z);
+      let [i, s] = (0, v.Iu)(e => [e.activeView, e.activeViewType], _.Z);
       r.useEffect(() => () => {
-        (0, L._Q)(e)
+        (0, v._Q)(e)
       }, [e]);
       let o = r.useCallback(e => {
-          t.emit("autocomplete-visibility-change", e), e && (0, L._Q)()
+          t.emit("autocomplete-visibility-change", e), e && (0, v._Q)()
         }, [t]),
         a = r.useCallback(() => {
           var e;
@@ -405,8 +405,8 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
   null != ti ? tY = null == ew ? void 0 : ew(ti, tr, el.attachButton) : (!ta || tu) && (tY = null == eb ? void 0 : eb(tH, el.attachButton), tV && (tj = null == eG ? void 0 : eG({
     ref: tn
   })));
-  let tW = tc && null != eO && !ta && ey.showCharacterCount && null == ti,
-    tK = tc && !__OVERLAY__ && null != eO && null == ti && ey.toolbarType !== q.O.NONE,
+  let tW = td && null != eO && !ta && ey.showCharacterCount && null == ti,
+    tK = td && !__OVERLAY__ && null != eO && null == ti && ey.toolbarType !== q.O.NONE,
     tz = function(e, t, n, i) {
       var r, s;
       let o = B.up.useSetting(),
@@ -414,16 +414,16 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
         l = null != a && a.length > 0;
       return o && (null === (r = t.stickers) || void 0 === r ? void 0 : r.autoSuggest) && !l && (null === (s = i.current) || void 0 === s ? void 0 : s.isVisible()) !== !0 && !__OVERLAY__ && null != n
     }(eP, ey, eO, tR),
-    tq = (0, C.e)(eP),
+    tq = (0, p.e)(eP),
     tX = null != ti || null != ek || tq,
     tQ = !!(null === (eu = ey.emojis) || void 0 === eu ? void 0 : eu.button) && tP <= 44;
-  return (0, i.jsx)(g.f6, {
+  return (0, i.jsx)(C.f6, {
     value: tf,
     children: (0, i.jsx)(f.Gt, {
-      value: e6,
+      value: e5,
       children: (0, i.jsxs)("div", {
         className: el.channelTextAreaContainer,
-        children: [tK && td ? (0, i.jsx)(er.Z, {
+        children: [tK && tc ? (0, i.jsx)(er.Z, {
           editorRef: e9,
           options: ey.markdown,
           channel: eP
@@ -433,12 +433,12 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
           containerRef: te,
           options: ey.markdown
         }) : null, (0, i.jsxs)("div", {
-          ref: e5,
+          ref: e6,
           className: o()(eR, {
             [el.channelTextArea]: !0,
             [el.channelTextAreaDisabled]: tF,
             [el.highlighted]: ej,
-            [el.textAreaMobileThemed]: d.tq
+            [el.textAreaMobileThemed]: c.tq
           }),
           onMouseDown: tx,
           children: [(0, i.jsx)($.Z, {
@@ -449,7 +449,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
           }), (0, i.jsxs)("div", {
             ref: te,
             onScroll: tM,
-            className: o()(eC, {
+            className: o()(ep, {
               [el.scrollableContainer]: !0,
               [el.themedBackground]: !e3,
               [el.hasConnectedBar]: tX
@@ -469,18 +469,18 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
                 [el.sansAttachButtonCreatePost]: ey === q.I.CREATE_FORUM_POST
               }),
               children: [tY, (0, i.jsx)(I.FocusRing, {
-                ringTarget: e5,
+                ringTarget: e6,
                 ringClassName: el.focusRing,
                 children: (0, i.jsx)(X.Z, {
                   ref: e9,
-                  id: eg,
+                  id: eC,
                   focused: eU,
-                  useSlate: tc,
+                  useSlate: td,
                   textValue: em,
                   richValue: eO,
                   disabled: ta,
                   placeholder: eD,
-                  required: eL,
+                  required: ev,
                   accessibilityLabel: eM,
                   isPreviewing: (ts || to) && t_,
                   channel: eP,
@@ -500,8 +500,8 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
                   onEnter: tb,
                   onMoveSelection: tG,
                   onSelectionChanged: tN,
-                  onMaybeShowAutocomplete: tC,
-                  onHideAutocomplete: tp,
+                  onMaybeShowAutocomplete: tp,
+                  onHideAutocomplete: tg,
                   promptToUpload: eY,
                   fontSize: th,
                   spellcheckEnabled: tS,
@@ -509,7 +509,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
                   className: o()({
                     [el.textAreaThreadCreation]: ey === q.I.THREAD_CREATION,
                     [el.profileBioInput]: ey === q.I.PROFILE_BIO_INPUT
-                  }, ep),
+                  }, eg),
                   "aria-labelledby": e$
                 })
               }), (0, i.jsx)(ee.Z, {
@@ -524,22 +524,22 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
             ref: e8,
             channel: eP,
             canOnlyUseTextCommands: tH
-          }), (0, i.jsx)(p.Z, {
+          }), (0, i.jsx)(g.Z, {
             ref: tR,
             channel: eP,
             canMentionRoles: eW,
             canMentionChannels: eK,
-            useNewSlashCommands: tc,
+            useNewSlashCommands: td,
             canOnlyUseTextCommands: tH,
             canSendStickers: null === (e_ = ey.stickers) || void 0 === e_ ? void 0 : e_.allowSending,
             textValue: em,
             focused: eU,
             expressionPickerView: tw,
             type: ey,
-            targetRef: e5,
+            targetRef: e6,
             editorRef: e9,
             onSendMessage: tm,
-            onSendSticker: tv,
+            onSendSticker: tL,
             onVisibilityChange: tB,
             editorHeight: tP,
             setValue: (e, t) => null == eB ? void 0 : eB(null, e, t),
@@ -559,16 +559,16 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
             editorRef: e9,
             channel: eP,
             isEditorFocused: eU,
-            onSelectSticker: tv,
-            submitButtonVisible: (null === (ed = ey.submit) || void 0 === ed ? void 0 : ed.button) && (null !== (eI = null === (ec = ey.submit) || void 0 === ec ? void 0 : ec.ignorePreference) && void 0 !== eI ? eI : tT),
+            onSelectSticker: tL,
+            submitButtonVisible: (null === (ec = ey.submit) || void 0 === ec ? void 0 : ec.button) && (null !== (eI = null === (ed = ey.submit) || void 0 === ed ? void 0 : ed.ignorePreference) && void 0 !== eI ? eI : tT),
             stickerIconVisible: null !== (eT = null === (eE = ey.stickers) || void 0 === eE ? void 0 : eE.button) && void 0 !== eT && eT
           }) : null, e2]
-        }), tj, tk ? null : (0, i.jsx)(v.Z, {
-          positionTargetRef: e5,
+        }), tj, tk ? null : (0, i.jsx)(L.Z, {
+          positionTargetRef: e6,
           type: ey,
-          onSelectGIF: tg,
-          onSelectEmoji: tL,
-          onSelectSticker: tv,
+          onSelectGIF: tC,
+          onSelectEmoji: tv,
+          onSelectSticker: tL,
           onSelectSound: tD,
           channel: eP,
           closeOnModalOuterClick: e4,

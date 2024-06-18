@@ -26,7 +26,7 @@ n.r(t), n.d(t, {
     return I
   },
   isDesktop: function() {
-    return d
+    return c
   },
   isIOS: function() {
     return h
@@ -41,7 +41,7 @@ n.r(t), n.d(t, {
     return o
   },
   isWeb: function() {
-    return c
+    return d
   },
   isWindows: function() {
     return l
@@ -63,11 +63,11 @@ function _() {
   return "linux" === a
 }
 
-function d() {
+function c() {
   return l() || u() || _()
 }
 
-function c() {
+function d() {
   return "WEB" === S()
 }
 

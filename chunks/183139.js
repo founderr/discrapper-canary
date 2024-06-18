@@ -33,7 +33,7 @@ class u extends s.EventEmitter {
       preferredRegions: l = null,
       videoStreamParameters: u = null,
       flags: _ = 0
-    } = e, d = {
+    } = e, c = {
       guild_id: t,
       channel_id: n,
       self_mute: i,
@@ -41,11 +41,11 @@ class u extends s.EventEmitter {
       self_video: s,
       flags: _
     };
-    null != n && o.Z.shouldIncludePreferredRegion() && (d.preferred_region = a, d.preferred_regions = l), null != u && (d.tracks = null == u ? void 0 : u.map(e => ({
+    null != n && o.Z.shouldIncludePreferredRegion() && (c.preferred_region = a, c.preferred_regions = l), null != u && (c.tracks = null == u ? void 0 : u.map(e => ({
       type: e.type,
       rid: e.rid,
       quality: e.quality
-    }))), this.send(4, d)
+    }))), this.send(4, c)
   }
   voiceServerPing() {
     this.send(5, null)

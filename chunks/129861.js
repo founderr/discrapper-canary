@@ -8,8 +8,8 @@ var r = n(120356),
   l = n(246946),
   u = n(467679),
   _ = n(180828),
-  d = n(51144),
-  c = n(689938),
+  c = n(51144),
+  d = n(689938),
   E = n(635889);
 
 function I(e) {
@@ -26,7 +26,7 @@ let T = e => {
     botVerified: o,
     discriminatorClass: l,
     className: _,
-    usernameClass: d,
+    usernameClass: c,
     color: I,
     botClass: T,
     showStreamerModeTooltip: h
@@ -34,12 +34,12 @@ let T = e => {
   return (0, i.jsxs)("div", {
     className: s()(E.info, _),
     children: [(0, i.jsx)(a.Tooltip, {
-      text: c.Z.Messages.STREAMER_MODE_ENABLED,
+      text: d.Z.Messages.STREAMER_MODE_ENABLED,
       shouldShow: h,
       "aria-label": !!h && void 0,
       children: e => (0, i.jsx)("span", {
         ...e,
-        className: s()(E.__invalid_username, d),
+        className: s()(E.__invalid_username, c),
         style: null != I ? {
           color: I
         } : void 0,
@@ -63,14 +63,14 @@ t.Z = e => {
     forceUsername: s,
     showAccountIdentifier: a,
     overrideDiscriminator: u,
-    forcePomelo: c,
+    forcePomelo: d,
     ...E
-  } = e, h = (0, o.e7)([l.Z], () => l.Z.hidePersonalInformation), S = h || t || n.isNonUserBot(), f = n.toString(), N = d.ZP.getName(n), A = s ? f : null != r ? r : N, m = n.isPomelo() || c;
+  } = e, h = (0, o.e7)([l.Z], () => l.Z.hidePersonalInformation), S = h || t || n.isNonUserBot(), f = n.toString(), N = c.ZP.getName(n), A = s ? f : null != r ? r : N, m = n.isPomelo() || d;
   if (m || A !== f) {
-    let e = A === f && m && s ? d.ZP.getUserTag(n, {
-        forcePomelo: c
+    let e = A === f && m && s ? c.ZP.getUserTag(n, {
+        forcePomelo: d
       }) : A,
-      t = a && e !== "@".concat(f) ? d.ZP.getUserTag(n) : void 0;
+      t = a && e !== "@".concat(f) ? c.ZP.getUserTag(n) : void 0;
     return (0, i.jsx)(T, {
       primary: e,
       secondary: t,

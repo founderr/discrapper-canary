@@ -4,7 +4,7 @@ n.d(t, {
     return i
   },
   n: function() {
-    return g
+    return C
   }
 }), n(47120), n(411104);
 var i, r, s = n(392711),
@@ -13,8 +13,8 @@ var i, r, s = n(392711),
   l = n(544891),
   u = n(710845),
   _ = n(432877),
-  d = n(549464),
-  c = n(740492),
+  c = n(549464),
+  d = n(740492),
   E = n(866960),
   I = n(626135),
   T = n(510990),
@@ -34,21 +34,21 @@ function O(e, t, n) {
   }) : e[t] = n, e
 }
 let R = new u.Z("CloudUpload.tsx"),
-  C = n(224497).Z;
+  p = n(224497).Z;
 (r = i || (i = {})).NOT_STARTED = "NOT_STARTED", r.STARTED = "STARTED", r.UPLOADING = "UPLOADING", r.ERROR = "ERROR", r.COMPLETED = "COMPLETED", r.CANCELED = "CANCELED";
-class p {
+class g {
   constructor() {
     O(this, "numChunks", void 0), O(this, "totalRequestCount", void 0), O(this, "timing", {}), O(this, "compressAndExtractDisabled", void 0), O(this, "fileAlreadyPrepped", void 0), O(this, "imageCompressionQuality", void 0), O(this, "videoCompressionQuality", void 0), O(this, "convertedMimeType", void 0), O(this, "sourceMediaWidth", void 0), O(this, "sourceMediaHeight", void 0), O(this, "sourceMediaFormat", void 0), O(this, "sourceVideoBitrate", void 0)
   }
 }
-class g extends N.ZP {
+class C extends N.ZP {
   static fromJson(e) {
     let {
       item: t,
       channelId: n,
       showLargeMessageDialog: i,
       reactNativeFileIndex: r
-    } = e, s = new g(t, n, i, r);
+    } = e, s = new C(t, n, i, r);
     return "COMPLETED" !== s.status && (s.status = "NOT_STARTED"), Object.entries(e).forEach(e => {
       let [t, n] = e;
       if (!t.startsWith("_")) s[t] = n
@@ -192,7 +192,7 @@ class g extends N.ZP {
       this.handleComplete(this.id);
       return
     }
-    let i = await C.getUploadPayload(this),
+    let i = await p.getUploadPayload(this),
       r = (0, A.F)(this.item.target);
     if (null == i.filename || "" === i.filename || 0 === this.currentSize) {
       R.error("File does not have a filename or size is 0.", JSON.stringify(i)), this.handleError(m.evJ.INVALID_FILE_ASSET);
@@ -225,7 +225,7 @@ class g extends N.ZP {
     }
     try {
       let e;
-      let t = d.Z.getCurrentConfig({
+      let t = c.Z.getCurrentConfig({
         location: "CloudUpload"
       }, {
         autoTrackExposure: !0
@@ -280,7 +280,7 @@ class g extends N.ZP {
     R.log("Cancelled called for ".concat(this.id)), this._abortController.abort(), this.trackUploadFinished("CANCELED"), "COMPLETED" === this.status && this.delete(), this.setStatus("CANCELED"), this.emit("complete"), this.removeAllListeners()
   }
   resetState() {
-    return this.status = "NOT_STARTED", this.uploadedFilename = void 0, this.responseUrl = void 0, this.error = void 0, this.startTime = void 0, this.uploadAnalytics = new p, this._abortController = new AbortController, super.resetState()
+    return this.status = "NOT_STARTED", this.uploadedFilename = void 0, this.responseUrl = void 0, this.error = void 0, this.startTime = void 0, this.uploadAnalytics = new g, this._abortController = new AbortController, super.resetState()
   }
   async delete() {
     if (null == this.uploadedFilename) return;
@@ -306,9 +306,9 @@ class g extends N.ZP {
     I.default.track(m.rMx.ATTACHMENT_UPLOAD_STARTED, {
       file_size: this.currentSize,
       mime_type: null !== (e = this.mimeType) && void 0 !== e ? e : "unknown",
-      video_upload_quality: c.ZP.videoUploadQuality,
-      data_saving_mode: c.ZP.dataSavingMode,
-      low_quality_image_mode: c.ZP.dataSavingMode,
+      video_upload_quality: d.ZP.videoUploadQuality,
+      data_saving_mode: d.ZP.dataSavingMode,
+      low_quality_image_mode: d.ZP.dataSavingMode,
       channel_id: this.channelId,
       connection_type: E.Z.getType(),
       effective_connection_speed: E.Z.getEffectiveConnectionSpeed(),
@@ -327,9 +327,9 @@ class g extends N.ZP {
       num_chunks: this.uploadAnalytics.numChunks,
       num_upload_attempts: null !== (n = this.uploadAnalytics.totalRequestCount) && void 0 !== n ? n : 1,
       error_code: this.error,
-      video_upload_quality: c.ZP.videoUploadQuality,
-      data_saving_mode: c.ZP.dataSavingMode,
-      low_quality_image_mode: c.ZP.dataSavingMode,
+      video_upload_quality: d.ZP.videoUploadQuality,
+      data_saving_mode: d.ZP.dataSavingMode,
+      low_quality_image_mode: d.ZP.dataSavingMode,
       compress_time_ms: this.uploadAnalytics.timing.compressTimeMs,
       get_upload_url_time_ms: this.uploadAnalytics.timing.getUploadUrlTimeMs,
       upload_time_ms: this.uploadAnalytics.timing.uploadTimeMs,
@@ -350,6 +350,6 @@ class g extends N.ZP {
   }
   constructor(e, t, n, i) {
     var r, s, o, a;
-    super(e, n), O(this, "RESUME_INCOMPLETE_CODES", [308]), O(this, "status", "NOT_STARTED"), O(this, "channelId", void 0), O(this, "responseUrl", void 0), O(this, "currentSize", void 0), O(this, "preCompressionSize", void 0), O(this, "postCompressionSize", void 0), O(this, "loaded", 0), O(this, "reactNativeFileIndex", void 0), O(this, "error", void 0), O(this, "reactNativeFilePrepped", !1), O(this, "startTime", void 0), O(this, "uploadAnalytics", new p), O(this, "_abortController", void 0), O(this, "_xhr", void 0), O(this, "_aborted", !1), this.channelId = t, this.preCompressionSize = null !== (o = null === (r = e.file) || void 0 === r ? void 0 : r.size) && void 0 !== o ? o : 0, this.currentSize = null !== (a = null === (s = e.file) || void 0 === s ? void 0 : s.size) && void 0 !== a ? a : 0, this.reactNativeFileIndex = i, this._abortController = new AbortController
+    super(e, n), O(this, "RESUME_INCOMPLETE_CODES", [308]), O(this, "status", "NOT_STARTED"), O(this, "channelId", void 0), O(this, "responseUrl", void 0), O(this, "currentSize", void 0), O(this, "preCompressionSize", void 0), O(this, "postCompressionSize", void 0), O(this, "loaded", 0), O(this, "reactNativeFileIndex", void 0), O(this, "error", void 0), O(this, "reactNativeFilePrepped", !1), O(this, "startTime", void 0), O(this, "uploadAnalytics", new g), O(this, "_abortController", void 0), O(this, "_xhr", void 0), O(this, "_aborted", !1), this.channelId = t, this.preCompressionSize = null !== (o = null === (r = e.file) || void 0 === r ? void 0 : r.size) && void 0 !== o ? o : 0, this.currentSize = null !== (a = null === (s = e.file) || void 0 === s ? void 0 : s.size) && void 0 !== a ? a : 0, this.reactNativeFileIndex = i, this._abortController = new AbortController
   }
 }

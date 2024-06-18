@@ -25,8 +25,8 @@ var n = t(735250),
   S = t(100527),
   h = t(367907),
   g = t(906732),
-  x = t(740504),
-  C = t(933557),
+  C = t(740504),
+  x = t(933557),
   R = t(471445),
   L = t(890477),
   O = t(688465),
@@ -34,10 +34,10 @@ var n = t(735250),
   p = t(48217),
   M = t(26323),
   f = t(35125),
-  v = t(536442),
-  D = t(142497),
-  Z = t(884858),
-  j = t(516129),
+  D = t(536442),
+  v = t(142497),
+  j = t(884858),
+  Z = t(516129),
   U = t(813197),
   G = t(208567),
   P = t(592125),
@@ -45,14 +45,14 @@ var n = t(735250),
   B = t(650774),
   y = t(496675),
   F = t(699516),
-  w = t(594174),
-  k = t(285952),
-  H = t(709586),
+  k = t(594174),
+  H = t(285952),
+  w = t(709586),
   V = t(768581),
   Y = t(630388),
   W = t(823379),
-  K = t(63063),
-  z = t(434404),
+  z = t(63063),
+  K = t(434404),
   q = t(999382),
   X = t(203377),
   Q = t(981631),
@@ -90,7 +90,7 @@ function eI(e) {
     label: s,
     channel: t,
     category: i
-  } = e, l = (0, R.KS)(t), a = null != i ? (0, C.F6)(i, w.default, F.Z) : null;
+  } = e, l = (0, R.KS)(t), a = null != i ? (0, x.F6)(i, k.default, F.Z) : null;
   return (0, n.jsx)(I.IconSelectOption, {
     title: s,
     icon: l,
@@ -101,7 +101,7 @@ function eI(e) {
 function eT(e) {
   return {
     value: e.id,
-    label: (0, C.F6)(e, w.default, F.Z),
+    label: (0, x.F6)(e, k.default, F.Z),
     channel: e,
     category: P.Z.getChannel(e.parent_id)
   }
@@ -133,9 +133,9 @@ let eN = () => {
       homeHeader: e.homeHeader,
       clan: e.clan
     };
-    !(0, W.OL)(new Set(e.features), new Set(s.features)) && (t.features = e.features), z.Z.saveGuild(e.id, t)
+    !(0, W.OL)(new Set(e.features), new Set(s.features)) && (t.features = e.features), K.Z.saveGuild(e.id, t)
   }, [e, s]), o = i.useCallback(() => {
-    if (null != e) z.Z.init(e.id)
+    if (null != e) K.Z.init(e.id)
   }, [e]);
   return (0, n.jsx)(T.Z, {
     submitting: t,
@@ -158,22 +158,22 @@ class em extends i.PureComponent {
     }
   }
   handleNameChange(e) {
-    z.Z.updateGuild({
+    K.Z.updateGuild({
       name: e
     })
   }
   handleAFKChannelChange(e) {
-    e === ea && (e = null), z.Z.updateGuild({
+    e === ea && (e = null), K.Z.updateGuild({
       afkChannelId: e
     })
   }
   handleAFKTimeoutChange(e) {
-    z.Z.updateGuild({
+    K.Z.updateGuild({
       afkTimeout: parseInt(e, 10)
     })
   }
   handleSystemChannelChange(e) {
-    e === er && (e = null), z.Z.updateGuild({
+    e === er && (e = null), K.Z.updateGuild({
       systemChannelId: e
     })
   }
@@ -181,12 +181,12 @@ class em extends i.PureComponent {
     let {
       value: s
     } = e;
-    z.Z.updateGuild({
+    K.Z.updateGuild({
       defaultMessageNotifications: s
     })
   }
   handleSplashChange(e) {
-    z.Z.updateGuild({
+    K.Z.updateGuild({
       splash: e
     })
   }
@@ -194,17 +194,17 @@ class em extends i.PureComponent {
     let {
       guild: t
     } = this.props, n = (0, Y.mB)(t.systemChannelFlags, e, s);
-    z.Z.updateGuild({
+    K.Z.updateGuild({
       systemChannelFlags: n
     })
   }
   handlePremiumProgressBarEnabledChange(e) {
-    z.Z.updateGuild({
+    K.Z.updateGuild({
       premiumProgressBarEnabled: e
     })
   }
   handleChangeDescription(e) {
-    z.Z.updateGuild({
+    K.Z.updateGuild({
       description: e
     })
   }
@@ -214,12 +214,12 @@ class em extends i.PureComponent {
       errors: s,
       canManageGuild: t
     } = this.props;
-    return (0, n.jsxs)(k.Z, {
+    return (0, n.jsxs)(H.Z, {
       className: a()(et.__invalid_baseSection),
-      children: [(0, n.jsxs)(k.Z, {
+      children: [(0, n.jsxs)(H.Z, {
         basis: "50%",
-        justify: k.Z.Justify.BETWEEN,
-        children: [(0, n.jsxs)(k.Z.Child, {
+        justify: H.Z.Justify.BETWEEN,
+        children: [(0, n.jsxs)(H.Z.Child, {
           wrap: !0,
           children: [(0, n.jsx)(G.Z, {
             showIcon: !0,
@@ -245,9 +245,9 @@ class em extends i.PureComponent {
             className: et.iconError,
             children: s.icon
           }) : null]
-        }), (0, n.jsxs)(k.Z, {
-          direction: k.Z.Direction.VERTICAL,
-          align: k.Z.Align.START,
+        }), (0, n.jsxs)(H.Z, {
+          direction: H.Z.Direction.VERTICAL,
+          align: H.Z.Align.START,
           style: {
             maxWidth: 180
           },
@@ -268,7 +268,7 @@ class em extends i.PureComponent {
             })]
           })]
         })]
-      }), (0, n.jsx)(k.Z.Child, {
+      }), (0, n.jsx)(H.Z.Child, {
         basis: "50%",
         children: (0, n.jsx)(I.FormItem, {
           title: es.Z.Messages.FORM_LABEL_SERVER_NAME,
@@ -332,8 +332,8 @@ class em extends i.PureComponent {
       label: es.Z.Messages.NO_AFK_CHANNEL
     }), (0, n.jsxs)(I.FormSection, {
       className: et.divider,
-      children: [(0, n.jsxs)(k.Z, {
-        children: [(0, n.jsx)(k.Z.Child, {
+      children: [(0, n.jsxs)(H.Z, {
+        children: [(0, n.jsx)(H.Z.Child, {
           basis: "50%",
           children: (0, n.jsx)(I.FormItem, {
             title: es.Z.Messages.FORM_LABEL_AFK_CHANNEL,
@@ -346,7 +346,7 @@ class em extends i.PureComponent {
               renderOptionValue: e_
             })
           })
-        }), (0, n.jsx)(k.Z.Child, {
+        }), (0, n.jsx)(H.Z.Child, {
           basis: "50%",
           children: (0, n.jsx)(I.FormItem, {
             title: es.Z.Messages.FORM_LABEL_AFK_TIMEOUT,
@@ -510,7 +510,7 @@ class em extends i.PureComponent {
           value: e.hasFeature(Q.oNc.SUMMARIES_ENABLED_BY_USER),
           hideBorder: !0,
           note: es.Z.Messages.GUILD_SETTINGS_SUMMARIES_TOGGLE_DESCRIPTION.format({
-            helpdeskArticle: K.Z.getArticleURL(Q.BhN.CONVERSATION_SUMMARIES)
+            helpdeskArticle: z.Z.getArticleURL(Q.BhN.CONVERSATION_SUMMARIES)
           }),
           disabled: !s,
           children: (0, n.jsxs)("div", {
@@ -529,7 +529,7 @@ class em extends i.PureComponent {
     let {
       guild: e,
       canManageGuild: s
-    } = this.props, t = e.hasFeature(Q.oNc.INVITE_SPLASH), i = s && t, l = (0, n.jsx)(j.Z, {
+    } = this.props, t = e.hasFeature(Q.oNc.INVITE_SPLASH), i = s && t, l = (0, n.jsx)(Z.Z, {
       image: e.splash,
       makeURL: s => null != s ? V.ZP.getGuildSplashURL({
         id: e.id,
@@ -540,17 +540,17 @@ class em extends i.PureComponent {
       hint: es.Z.Messages.CHANGE_SPLASH,
       enabled: i,
       maxFileSizeBytes: ee.B,
-      onFileSizeError: () => (0, Z.Z)(ee.B)
+      onFileSizeError: () => (0, j.Z)(ee.B)
     });
     return (0, n.jsx)("div", {
       ref: this._inviteSectionRef,
       children: (0, n.jsx)(I.FormSection, {
         className: et.divider,
-        children: (0, n.jsxs)(k.Z, {
+        children: (0, n.jsxs)(H.Z, {
           basis: "50%",
-          direction: k.Z.Direction.HORIZONTAL,
-          align: k.Z.Justify.START,
-          children: [(0, n.jsxs)(k.Z.Child, {
+          direction: H.Z.Direction.HORIZONTAL,
+          align: H.Z.Justify.START,
+          children: [(0, n.jsxs)(H.Z.Child, {
             wrap: !0,
             basis: "50%",
             children: [(0, n.jsxs)(I.FormTitle, {
@@ -570,7 +570,7 @@ class em extends i.PureComponent {
             }), (0, n.jsx)(I.FormText, {
               type: I.FormTextTypes.DESCRIPTION,
               children: es.Z.Messages.GUILD_SETTINGS_SPLASH_RECOMMEND.format({
-                articleURL: K.Z.getArticleURL(Q.BhN.GUILD_INVITE_SPLASH)
+                articleURL: z.Z.getArticleURL(Q.BhN.GUILD_INVITE_SPLASH)
               })
             }), t ? (0, n.jsxs)(I.Button, {
               disabled: !i,
@@ -580,10 +580,10 @@ class em extends i.PureComponent {
                 disabled: !i,
                 onChange: this.handleSplashChange,
                 maxFileSizeBytes: ee.B,
-                onFileSizeError: () => (0, Z.Z)(ee.B)
+                onFileSizeError: () => (0, j.Z)(ee.B)
               })]
             }) : this.uploadBGUpsellButton(this.handleInviteSplashUpsellButton)]
-          }), (0, n.jsx)(k.Z.Child, {
+          }), (0, n.jsx)(H.Z.Child, {
             wrap: !0,
             basis: "50%",
             children: t ? l : (0, n.jsx)(I.Clickable, {
@@ -603,7 +603,7 @@ class em extends i.PureComponent {
       guild: e,
       canManageGuild: s,
       analyticsLocations: t
-    } = this.props, i = e.hasFeature(Q.oNc.BANNER), l = e.hasFeature(Q.oNc.ANIMATED_BANNER), a = i && s, r = (0, n.jsx)(j.Z, {
+    } = this.props, i = e.hasFeature(Q.oNc.BANNER), l = e.hasFeature(Q.oNc.ANIMATED_BANNER), a = i && s, r = (0, n.jsx)(Z.Z, {
       image: e.banner,
       makeURL: s => null != s ? V.ZP.getGuildBannerURL({
         id: e.id,
@@ -629,11 +629,11 @@ class em extends i.PureComponent {
     });
     return (0, n.jsx)(I.FormSection, {
       className: et.divider,
-      children: (0, n.jsxs)(k.Z, {
+      children: (0, n.jsxs)(H.Z, {
         basis: "50%",
-        direction: k.Z.Direction.HORIZONTAL,
-        align: k.Z.Justify.START,
-        children: [(0, n.jsxs)(k.Z.Child, {
+        direction: H.Z.Direction.HORIZONTAL,
+        align: H.Z.Justify.START,
+        children: [(0, n.jsxs)(H.Z.Child, {
           wrap: !0,
           basis: "50%",
           children: [(0, n.jsxs)(I.FormTitle, {
@@ -653,10 +653,10 @@ class em extends i.PureComponent {
           }), (0, n.jsx)(I.FormText, {
             type: I.FormTextTypes.DESCRIPTION,
             children: es.Z.Messages.GUILD_SETTINGS_BANNER_RECOMMEND.format({
-              articleURL: K.Z.getArticleURL(Q.BhN.GUILD_BANNER_SPLASH)
+              articleURL: z.Z.getArticleURL(Q.BhN.GUILD_BANNER_SPLASH)
             })
           }), i ? o : this.uploadBGUpsellButton(this.handleBannerUpsellButton)]
-        }), (0, n.jsx)(k.Z.Child, {
+        }), (0, n.jsx)(H.Z.Child, {
           wrap: !0,
           basis: "50%",
           children: i ? r : (0, n.jsx)(I.Clickable, {
@@ -677,12 +677,12 @@ class em extends i.PureComponent {
       theme: t
     } = this.props;
     return (0, n.jsx)(I.FormSection, {
-      children: (0, n.jsxs)(k.Z, {
-        align: k.Z.Align.START,
-        children: [(0, n.jsxs)(k.Z, {
+      children: (0, n.jsxs)(H.Z, {
+        align: H.Z.Align.START,
+        children: [(0, n.jsxs)(H.Z, {
           basis: "50%",
-          direction: k.Z.Direction.VERTICAL,
-          align: k.Z.Align.STRETCH,
+          direction: H.Z.Direction.VERTICAL,
+          align: H.Z.Align.STRETCH,
           children: [(0, n.jsx)(I.FormSwitch, {
             className: a()(et.marginTop8, et.marginBottom8),
             onChange: this.handlePremiumProgressBarEnabledChange,
@@ -695,7 +695,7 @@ class em extends i.PureComponent {
             className: et.marginBottom8,
             children: es.Z.Messages.GUILD_SETTINGS_PREMIUM_PROGRESS_BAR_DESCRIPTION
           })]
-        }), (0, n.jsx)(k.Z.Child, {
+        }), (0, n.jsx)(H.Z.Child, {
           wrap: !0,
           basis: "50%",
           children: (0, n.jsx)("img", {
@@ -727,7 +727,7 @@ class em extends i.PureComponent {
   }
   constructor(...e) {
     super(...e), el(this, "_imageInputRef", i.createRef()), el(this, "_displaySectionRef", i.createRef()), el(this, "_inviteSectionRef", i.createRef()), el(this, "_notificationSectionRef", i.createRef()), el(this, "handleIconChange", e => {
-      z.Z.updateGuild({
+      K.Z.updateGuild({
         icon: e
       })
     }), el(this, "handleOpenImageCroppingModal", (e, s) => {
@@ -755,7 +755,7 @@ class em extends i.PureComponent {
       this.handleSystemChannelFlagsChange(Q.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES, !e)
     }), el(this, "handleHomeHeaderChange", (e, s) => {
       if (null == e || void 0 === s) {
-        z.Z.updateGuild({
+        K.Z.updateGuild({
           homeHeader: null
         });
         return
@@ -766,7 +766,7 @@ class em extends i.PureComponent {
         return t => (0, n.jsx)(i, {
           imgURI: e,
           file: s,
-          onCrop: e => z.Z.updateGuild({
+          onCrop: e => K.Z.updateGuild({
             homeHeader: e
           }),
           uploadType: $.pC.HOME_HEADER,
@@ -805,7 +805,7 @@ class em extends i.PureComponent {
           return
         }
       }
-      z.Z.updateGuild({
+      K.Z.updateGuild({
         banner: e
       })
     }), el(this, "handleShowModalUpsell", (e, s, t, n) => {
@@ -847,7 +847,7 @@ class em extends i.PureComponent {
       let {
         guild: s
       } = this.props, t = new Set(s.features);
-      e ? t.add(Q.oNc.SUMMARIES_ENABLED_BY_USER) : t.delete(Q.oNc.SUMMARIES_ENABLED_BY_USER), z.Z.updateGuild({
+      e ? t.add(Q.oNc.SUMMARIES_ENABLED_BY_USER) : t.delete(Q.oNc.SUMMARIES_ENABLED_BY_USER), K.Z.updateGuild({
         features: t
       })
     }), el(this, "uploadBGUpsellButton", e => (0, n.jsxs)(I.ShinyButton, {
@@ -855,7 +855,7 @@ class em extends i.PureComponent {
       className: a()(et.marginTop16),
       innerClassName: et.upsellButton,
       onClick: e,
-      children: [(0, n.jsx)(H.Z, {
+      children: [(0, n.jsx)(w.Z, {
         height: 16,
         width: 16,
         className: et.premiumUpsellBadge
@@ -875,10 +875,10 @@ function eS() {
     analyticsLocations: c
   } = (0, g.ZP)(S.Z.OVERVIEW);
   i.useEffect(() => {
-    (0, D.Kw)(v.v6.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL)
+    (0, v.Kw)(D.v6.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL)
   }, []);
   let d = (0, u.e7)([b.Z], () => b.Z.getCategories(null == s ? void 0 : s.id)),
-    E = i.useMemo(() => (0, x.Z)(d._categories, d), [d]),
+    E = i.useMemo(() => (0, C.Z)(d._categories, d), [d]),
     {
       canManageGuild: _,
       isGuildAdmin: I
@@ -887,7 +887,7 @@ function eS() {
       isGuildAdmin: y.Z.can(Q.Plq.ADMINISTRATOR, s)
     })),
     T = (0, u.e7)([B.Z], () => B.Z.getMemberCount(null == s ? void 0 : s.id)),
-    N = (0, u.e7)([w.default], () => w.default.getCurrentUser());
+    N = (0, u.e7)([k.default], () => k.default.getCurrentUser());
   o()(null != N, "GuildSettingsOverview: currentUser cannot be undefined");
   let {
     enableDeadchat: h
@@ -924,7 +924,7 @@ function eh(e, s, i) {
   (0, I.openModalLazy)(async () => {
     let {
       default: o
-    } = await Promise.all([t.e("99387"), t.e("82634")]).then(t.bind(t, 28130));
+    } = await Promise.all([t.e("99387"), t.e("89289")]).then(t.bind(t, 28130));
     return t => (0, n.jsx)(o, {
       maxFileSizeBytes: s,
       onComplete: i,

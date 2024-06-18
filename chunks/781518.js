@@ -44,9 +44,9 @@ var i = n(544891),
   l = n(358085),
   u = n(18323),
   _ = n(616922),
-  d = n(981631);
+  c = n(981631);
 
-function c(e, t, n, i) {
+function d(e, t, n, i) {
   let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1;
   return e(i = {
     ...i,
@@ -61,22 +61,22 @@ function c(e, t, n, i) {
           access_token: r
         }
       } = n;
-      return c(e, t, r, i, s - 1)
+      return d(e, t, r, i, s - 1)
     }).then(e => new Promise(t => setImmediate(() => t(e)))) : Promise.reject(n)
   })
 }
 let E = {
-  get: c.bind(null, i.tn.get),
-  put: c.bind(null, i.tn.put)
+  get: d.bind(null, i.tn.get),
+  put: d.bind(null, i.tn.put)
 };
 
 function I(e) {
   return i.tn.get({
-    url: d.ANM.CONNECTION_ACCESS_TOKEN(d.ABu.SPOTIFY, e),
+    url: c.ANM.CONNECTION_ACCESS_TOKEN(c.ABu.SPOTIFY, e),
     oldFormErrors: !0
   }).catch(t => {
     var n;
-    if ((null === (n = t.body) || void 0 === n ? void 0 : n.code) === d.evJ.CONNECTION_REVOKED) s.Z.dispatch({
+    if ((null === (n = t.body) || void 0 === n ? void 0 : n.code) === c.evJ.CONNECTION_REVOKED) s.Z.dispatch({
       type: "SPOTIFY_ACCOUNT_ACCESS_TOKEN_REVOKE",
       accountId: e
     });
@@ -125,7 +125,7 @@ function S(e, t, n, i) {
       deviceId: a,
       position: l,
       contextUri: u,
-      repeat: d
+      repeat: c
     } = r;
   return E.put(e, t, {
     url: _.C7.PLAYER_PLAY,
@@ -140,11 +140,11 @@ function S(e, t, n, i) {
       } : void 0,
       position_ms: null != l ? l : 0
     }
-  }).then(n => null == d ? n : E.put(e, t, {
+  }).then(n => null == c ? n : E.put(e, t, {
     url: _.C7.PLAYER_REPEAT,
     query: {
       device_id: a,
-      state: d ? "context" : "off"
+      state: c ? "context" : "off"
     }
   })).then(e => (s.Z.dispatch({
     type: "SPOTIFY_PLAYER_PLAY",

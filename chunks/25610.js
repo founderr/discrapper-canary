@@ -4,7 +4,7 @@ n.d(t, {
     return _
   },
   m: function() {
-    return d
+    return c
   }
 });
 var i = n(399606),
@@ -18,8 +18,8 @@ let _ = (e, t) => {
     let n = (0, a.yh)(),
       {
         explicitContentGuilds: _,
-        explicitContentFriendDm: d,
-        explicitContentNonFriendDm: c
+        explicitContentFriendDm: c,
+        explicitContentNonFriendDm: d
       } = (0, u.B)(),
       E = (0, i.e7)([s.Z], () => s.Z.getFriendIDs().includes(t)),
       I = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
@@ -27,9 +27,9 @@ let _ = (e, t) => {
         let t = r.Z.getChannel(e);
         return null != t && t.isPrivate()
       });
-    return !!n && null != I && I.id !== t && (T && E ? (0, l.vx)(d) : T ? (0, l.vx)(c) : (0, l.vx)(_))
+    return !!n && null != I && I.id !== t && (T && E ? (0, l.vx)(c) : T ? (0, l.vx)(d) : (0, l.vx)(_))
   },
-  d = () => {
+  c = () => {
     let e = (0, a.yh)(),
       {
         explicitContentGuilds: t

@@ -8,8 +8,8 @@ var i = n(735250),
   l = n.n(a),
   u = n(788911),
   _ = n(911969),
-  d = n(367907),
-  c = n(30465),
+  c = n(367907),
+  d = n(30465),
   E = n(806966),
   I = n(98528),
   T = n(551058),
@@ -21,17 +21,17 @@ var i = n(735250),
   m = n(367790),
   O = n(895924),
   R = n(581364),
-  C = n(56801),
-  p = n(342687),
-  g = n(826298),
-  L = n(689079),
-  v = n(981631),
+  p = n(56801),
+  g = n(342687),
+  C = n(826298),
+  v = n(689079),
+  L = n(981631),
   D = n(689938),
   M = n(920826),
   P = n(239840);
 let y = [8, 8, 0, 8],
   U = l().debounce(() => {
-    (0, d.yw)(v.rMx.APPLICATION_COMMAND_BROWSER_SCROLLED)
+    (0, c.yw)(L.rMx.APPLICATION_COMMAND_BROWSER_SCROLLED)
   }, 300);
 
 function b(e) {
@@ -43,7 +43,7 @@ t.Z = r.forwardRef(function(e, t) {
     canOnlyUseTextCommands: s
   } = e, a = r.useRef(!1), l = r.useRef(0), [G, w] = r.useState(0), k = r.useRef(null), [B, x] = r.useState(!1), V = E.Xn.useStore(e => e.activeCategoryIndex);
   r.useEffect(() => {
-    (0, d.yw)(v.rMx.APPLICATION_COMMAND_BROWSER_OPENED)
+    (0, c.yw)(L.rMx.APPLICATION_COMMAND_BROWSER_OPENED)
   }, []);
   let {
     sectionDescriptors: Z,
@@ -60,7 +60,7 @@ t.Z = r.forwardRef(function(e, t) {
     applicationCommands: !s
   }, {
     placeholderCount: 7,
-    limit: L.tn,
+    limit: v.tn,
     includeFrecency: !0
   }), q = (0, I.Qs)({
     activeCategoryIndex: V,
@@ -94,7 +94,7 @@ t.Z = r.forwardRef(function(e, t) {
     }
   }, [j, W]);
   let $ = r.useCallback(e => {
-      if (e.id === W || e.id === L.bi.FRECENCY) {
+      if (e.id === W || e.id === v.bi.FRECENCY) {
         var t;
         z(null), null === (t = k.current) || void 0 === t || t.scrollToSectionTop(0)
       } else z(e.id)
@@ -133,7 +133,7 @@ t.Z = r.forwardRef(function(e, t) {
   let et = r.useCallback(e => {
       let t = H[e];
       if (null == t) return null;
-      let r = (0, g.ky)(t),
+      let r = (0, C.ky)(t),
         s = (0, i.jsx)(r, {
           channel: n,
           section: t,
@@ -173,7 +173,7 @@ t.Z = r.forwardRef(function(e, t) {
       let s = F[t.sectionIndex],
         o = s.data[t.sectionRowIndex],
         a = "".concat(s.section.id, ":").concat(null !== (r = null == o ? void 0 : o.id) && void 0 !== r ? r : e);
-      if (null == o || s.section.id !== o.applicationId && s.section.id !== L.bi.FRECENCY || o.inputType === O.iw.PLACEHOLDER) return (0, i.jsx)(p.Z, {}, a);
+      if (null == o || s.section.id !== o.applicationId && s.section.id !== v.bi.FRECENCY || o.inputType === O.iw.PLACEHOLDER) return (0, i.jsx)(g.Z, {}, a);
       let l = Z.find(e => e.id === o.applicationId);
       return (0, i.jsx)(h.ZP.NewCommand, {
         index: e,
@@ -190,14 +190,14 @@ t.Z = r.forwardRef(function(e, t) {
       }, a)
     }, [n, F, ee, Z, G]),
     er = (0, f.Dt)();
-  return (0, c.KR)(er, !0, (0, h.DJ)(G)), r.useEffect(() => () => {
-    (0, c.sJ)()
+  return (0, d.KR)(er, !0, (0, h.DJ)(G)), r.useEffect(() => () => {
+    (0, d.sJ)()
   }, []), (0, i.jsxs)(h.ZP, {
     id: er,
     className: M.outerWrapper,
     innerClassName: M.wrapper,
     onMouseDown: b,
-    children: [(0, i.jsx)(C.Z, {
+    children: [(0, i.jsx)(p.Z, {
       className: M.rail,
       channel: n,
       sections: Z,

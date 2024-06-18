@@ -30,52 +30,52 @@ let a = {
       if (null == e.selection) return;
       n = e.selection
     }
-    let [d, c] = s.M8.isRange(n) ? s.M8.edges(n) : s.bN.edges(e, n);
+    let [c, d] = s.M8.isRange(n) ? s.M8.edges(n) : s.bN.edges(e, n);
     if (null != r || null != o) {
       var E, I, T;
       if (a) {
-        let t = null !== (E = s.bN.before(e, d, {
+        let t = null !== (E = s.bN.before(e, c, {
           distance: r,
           unit: o
         })) && void 0 !== E ? E : s.bN.start(e, []);
-        if ("character" === o && (null != r ? r : 1) === 1 && s.C0.equals(d.path, c.path)) {
-          let n = s.bN.leaf(e, d.path),
+        if ("character" === o && (null != r ? r : 1) === 1 && s.C0.equals(c.path, d.path)) {
+          let n = s.bN.leaf(e, c.path),
             i = null != n ? n[0].text : "";
-          i.length > 0 && null != i[i.length - 1].match(/[\u0E00-\u0E7F]/) && (t = null !== (I = s.bN.before(e, d, {
+          i.length > 0 && null != i[i.length - 1].match(/[\u0E00-\u0E7F]/) && (t = null !== (I = s.bN.before(e, c, {
             distance: r,
             unit: "offset"
           })) && void 0 !== I ? I : s.bN.start(e, []))
         }
-        d = t
-      } else c = null !== (T = s.bN.after(e, c, {
+        c = t
+      } else d = null !== (T = s.bN.after(e, d, {
         distance: r,
         unit: o
       })) && void 0 !== T ? T : s.bN.end(e, [])
     }
     if (null != u) {
       let [e, t] = s.M8.edges(u);
-      s.Jz.isBefore(d, e) && (d = e), s.Jz.isAfter(c, t) && (c = t)
-    }!s.Jz.equals(d, c) && (i.YR.delete(e, {
+      s.Jz.isBefore(c, e) && (c = e), s.Jz.isAfter(d, t) && (d = t)
+    }!s.Jz.equals(c, d) && (i.YR.delete(e, {
       at: {
-        anchor: d,
-        focus: c
+        anchor: c,
+        focus: d
       },
       hanging: !0,
       voids: _
-    }), l && s.bN.hasPath(e, d.path) && i.YR.select(e, d))
+    }), l && s.bN.hasPath(e, c.path) && i.YR.select(e, c))
   },
   textToText(e, t, n) {
     var r;
     let o = s.bN.getSelectionOverlap(e, n),
       [a, l] = s.M8.edges(n),
       _ = null !== (r = s.bN.before(e, a)) && void 0 !== r ? r : s.bN.start(e, []),
-      d = s.bN.after(e, l);
+      c = s.bN.after(e, l);
     s.M8.isExpanded(n) && i.YR.delete(e, {
       at: n,
       voids: !0
     }), i.YR.insertText(e, t, {
       at: _
-    }), _ = null != _ ? _ : s.bN.start(e, []), d = null != d ? d : s.bN.end(e, []), u(e, o, _, d, d)
+    }), _ = null != _ ? _ : s.bN.start(e, []), c = null != c ? c : s.bN.end(e, []), u(e, o, _, c, c)
   },
   textToVoid(e, t, n) {
     let r = s.bN.getSelectionOverlap(e, n),

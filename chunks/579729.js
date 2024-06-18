@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(69626),
   u = n(556084),
   _ = n(626135),
-  d = n(659101),
-  c = n(981631),
+  c = n(659101),
+  d = n(981631),
   E = n(689938),
   I = n(648659),
   T = n(379916);
@@ -32,14 +32,14 @@ function h(e) {
   let {
     commands: N
   } = a.Qm(h, t, n), A = r.useMemo(() => null == N ? void 0 : N.filter(e => !0 !== e.nsfw), [N]), m = r.useCallback(e => {
-    null == f || f(), _.default.track(c.rMx.POPULAR_APPLICATION_COMMAND_CLICKED, {
+    null == f || f(), _.default.track(d.rMx.POPULAR_APPLICATION_COMMAND_CLICKED, {
       application_id: t,
       command_id: e,
       guild_id: S,
       ...(0, o.JS)(h.id)
     })
   }, [t, h.id, S, f]);
-  return null == A || 0 === A.length ? null : (0, i.jsxs)(d.Z, {
+  return null == A || 0 === A.length ? null : (0, i.jsxs)(c.Z, {
     children: [(0, i.jsx)(s.Heading, {
       variant: "eyebrow",
       className: T.title,

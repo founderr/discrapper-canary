@@ -54,12 +54,12 @@ function m(e) {
     errors: S,
     validatePatternsChanged: h,
     validateEditingValueChanged: g
-  } = (0, d.Z)(l, r), [x] = i.useState(() => ({
+  } = (0, d.Z)(l, r), [C] = i.useState(() => ({
     tags: E,
     value: "",
     selections: [],
     isSelecting: !1
-  })), C = i.useMemo(() => S.reduce((e, s) => {
+  })), x = i.useMemo(() => S.reduce((e, s) => {
     let {
       pattern: t,
       message: n,
@@ -82,10 +82,10 @@ function m(e) {
     className: a()(I.keywordsContainer, o),
     children: [(0, n.jsx)(c.Z, {
       placeholder: "^b(a|@)d$\nw(o|0)rd(s|$)",
-      initialValue: x,
+      initialValue: C,
       onChangeTags: R,
       onChangeNewTagValue: L,
-      tagErrors: C,
+      tagErrors: x,
       maxTags: u.VW
     }), (0, n.jsx)(N, {
       text: _.Z.Messages.GUILD_AUTOMOD_REGEX_SUBTEXT.format({

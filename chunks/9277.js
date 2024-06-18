@@ -8,8 +8,8 @@ var i = n(735250),
   l = n(442837),
   u = n(114101),
   _ = n(481060),
-  d = n(28546),
-  c = n(581883),
+  c = n(28546),
+  d = n(581883),
   E = n(147915),
   I = n(459273),
   T = n(981631),
@@ -20,23 +20,23 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
   let {
     disabled: n,
     type: s
-  } = e, [N, A] = r.useState(!1), m = (0, l.e7)([c.Z], () => {
+  } = e, [N, A] = r.useState(!1), m = (0, l.e7)([d.Z], () => {
     var e, t;
-    return N && Object.values(null !== (t = null === (e = c.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2
-  }), [O, R, C] = (0, d.Iu)(e => [e.activeView, e.activeViewType, e.pickerId], a.Z), p = r.useRef(0), g = r.useCallback(() => {
-    A(!0), clearTimeout(p.current), p.current = setTimeout(() => {
-      A(!1), p.current = 0
+    return N && Object.values(null !== (t = null === (e = d.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2
+  }), [O, R, p] = (0, c.Iu)(e => [e.activeView, e.activeViewType, e.pickerId], a.Z), g = r.useRef(0), C = r.useCallback(() => {
+    A(!0), clearTimeout(g.current), g.current = setTimeout(() => {
+      A(!1), g.current = 0
     }, 2e3)
   }, []);
   (0, I.yp)({
     event: T.CkL.FAVORITE_GIF,
-    handler: g
+    handler: C
   });
-  let L = r.useCallback(() => {
-      (0, d.RO)(h.X1.GIF, s)
+  let v = r.useCallback(() => {
+      (0, c.RO)(h.X1.GIF, s)
     }, [s]),
     {
-      Component: v,
+      Component: L,
       events: D,
       play: M
     } = (0, u.V)();
@@ -54,15 +54,15 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
         onMouseEnter: D.onMouseEnter,
         onMouseLeave: D.onMouseLeave,
         onClick: () => {
-          L(), M()
+          v(), M()
         },
         isActive: P,
         pulse: N,
         "aria-label": S.Z.Messages.GIF_BUTTON_LABEL,
         "aria-expanded": P,
         "aria-haspopup": "dialog",
-        "aria-controls": C,
-        children: (0, i.jsx)(v, {
+        "aria-controls": p,
+        children: (0, i.jsx)(L, {
           color: "currentColor"
         })
       })

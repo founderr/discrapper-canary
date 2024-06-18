@@ -24,8 +24,8 @@ var i = n(544891),
   l = n(314897),
   u = n(592125),
   _ = n(77498),
-  d = n(770471),
-  c = n(292584),
+  c = n(770471),
+  d = n(292584),
   E = n(981631);
 
 function I(e) {
@@ -38,7 +38,7 @@ function T(e, t) {
   if (null == t) return;
   let {
     canBroadcast: n
-  } = d.Z.getCurrentConfig({
+  } = c.Z.getCurrentConfig({
     location: "start_broadcast_for_stream"
   }, {
     autoTrackExposure: !1
@@ -49,8 +49,8 @@ function T(e, t) {
     channelId: a
   } = (0, o.my)(e);
   if (null == i || null == a) return;
-  let c = l.default.getId();
-  if (i !== c) return;
+  let d = l.default.getId();
+  if (i !== d) return;
   let E = l.default.getSessionId();
   if (null == E) return;
   let T = u.Z.getChannel(a),
@@ -71,7 +71,7 @@ function T(e, t) {
     })
   }({
     sessionId: E,
-    userId: c,
+    userId: d,
     applicationId: S,
     channelId: T.id,
     streamKey: e
@@ -94,7 +94,7 @@ function S(e) {
   })
 }
 async function f() {
-  let e = c.Z.getUserIdsToValidate();
+  let e = d.Z.getUserIdsToValidate();
   try {
     let t = await i.tn.get({
       url: E.ANM.USER_BROADCASTS,
@@ -117,7 +117,7 @@ async function f() {
   }
 }
 async function N() {
-  let e = c.Z.getBroadcastsToValidateChannels().filter(e => null == e.viewers).map(e => e.channelId);
+  let e = d.Z.getBroadcastsToValidateChannels().filter(e => null == e.viewers).map(e => e.channelId);
   if (0 !== e.length) try {
     let t = await i.tn.get({
       url: E.ANM.BROADCAST_CHANNELS,
@@ -130,7 +130,7 @@ async function N() {
         n = {};
       e.forEach(e => {
         var t;
-        let i = c.Z.getBroadcastByChannel(e.id).userId,
+        let i = d.Z.getBroadcastByChannel(e.id).userId,
           r = null !== (t = e.recipients) && void 0 !== t ? t : [];
         n[i] = r.map(e => new a.Z(e)).filter(e => e.id !== i)
       }), r.Z.dispatch({

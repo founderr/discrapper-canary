@@ -7,10 +7,10 @@ n.d(t, {
     return A
   },
   bE: function() {
-    return C
+    return p
   },
   n4: function() {
-    return L
+    return v
   },
   q8: function() {
     return R
@@ -19,7 +19,7 @@ n.d(t, {
     return m
   },
   xl: function() {
-    return g
+    return C
   }
 }), n(411104), n(47120), n(724458);
 var i = n(683860),
@@ -30,8 +30,8 @@ var i = n(683860),
   l = n(592125),
   u = n(703558),
   _ = n(496675),
-  d = n(117530),
-  c = n(709054),
+  c = n(117530),
+  d = n(709054),
   E = n(660189),
   I = n(559241),
   T = n(474387),
@@ -56,7 +56,7 @@ function m(e) {
 }
 
 function O(e) {
-  return d.Z.getUploads(e, u.d.FirstThreadMessage).length
+  return c.Z.getUploads(e, u.d.FirstThreadMessage).length
 }
 
 function R(e) {
@@ -71,11 +71,11 @@ function R(e) {
   return Array.from(o).filter(e => a.has(e))
 }
 
-function C(e, t) {
+function p(e, t) {
   return Object.keys(r.Z.getThreadsForParent(e, t)).length
 }
 
-function p(e) {
+function g(e) {
   let {
     loaded: t,
     firstMessage: n
@@ -83,7 +83,7 @@ function p(e) {
   return t ? n : null
 }
 
-function g(e) {
+function C(e) {
   var t, n, i, r;
   let {
     channelId: s,
@@ -105,8 +105,8 @@ function g(e) {
   } : null
 }
 
-function L(e) {
-  var t, n, i, r, u, _, d;
+function v(e) {
+  var t, n, i, r, u, _, c;
   let {
     channelId: E,
     sessionId: I
@@ -114,7 +114,7 @@ function L(e) {
   if (null == h || !h.isForumPost()) return null;
   let S = l.Z.getChannel(h.parent_id);
   return null != S && S.isForumLikeChannel() ? {
-    ...g({
+    ...C({
       channelId: S.id,
       sessionId: I
     }),
@@ -122,16 +122,16 @@ function L(e) {
     thread_approximate_message_count: a.Z.getCount(E),
     thread_archived: (null === (t = h.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0,
     thread_locked: null !== (_ = null === (n = h.threadMetadata) || void 0 === n ? void 0 : n.locked) && void 0 !== _ && _,
-    thread_auto_archive_duration_minutes: null !== (d = null === (i = h.threadMetadata) || void 0 === i ? void 0 : i.autoArchiveDuration) && void 0 !== d ? d : 0,
-    thread_approximate_creation_date: c.default.extractTimestamp(E),
+    thread_auto_archive_duration_minutes: null !== (c = null === (i = h.threadMetadata) || void 0 === i ? void 0 : i.autoArchiveDuration) && void 0 !== c ? c : 0,
+    thread_approximate_creation_date: d.default.extractTimestamp(E),
     forum_post_id: h.id,
-    forum_post_first_message_id: c.default.castChannelIdAsMessageId(h.id),
+    forum_post_first_message_id: d.default.castChannelIdAsMessageId(h.id),
     forum_post_num_reactions: function(e) {
-      let t = p(e);
+      let t = g(e);
       return null == t ? 0 : t.reactions.reduce((e, t) => e + t.count, 0)
     }(h.id),
     forum_post_num_unique_reactions: function(e) {
-      let t = p(e);
+      let t = g(e);
       return null == t ? 0 : t.reactions.length
     }(h.id),
     forum_post_applied_tag_ids: function(e) {
@@ -149,7 +149,7 @@ function L(e) {
     forum_post_is_unread: null === (u = T.Z.getReadStateSnapshotAnalytics(h.id)) || void 0 === u ? void 0 : u.hasUnreads,
     forum_post_is_following: s.Z.hasJoined(h.id),
     forum_post_attachment_mimetypes: function(e) {
-      let t = p(e);
+      let t = g(e);
       return null == t ? [] : t.attachments.map(e => {
         var t;
         return null !== (t = e.content_type) && void 0 !== t ? t : "unknown"

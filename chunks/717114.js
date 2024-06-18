@@ -8,12 +8,12 @@ var i = n(735250),
   l = n(468026),
   u = n(594190),
   _ = n(131951),
-  d = n(19780),
-  c = n(63063),
+  c = n(19780),
+  d = n(63063),
   E = n(981631),
   I = n(689938);
 t.Z = () => {
-  let [e, t] = (0, s.Wu)([u.ZP], () => [u.ZP.canShowAdminWarning, u.ZP.getVisibleGame()], []), n = (0, s.e7)([d.Z], () => d.Z.isConnected(), []), T = (0, s.e7)([_.Z], () => _.Z.getMode() === E.pM4.PUSH_TO_TALK, []), h = null != t && t.elevated && n && T && e, S = r.useRef(null);
+  let [e, t] = (0, s.Wu)([u.ZP], () => [u.ZP.canShowAdminWarning, u.ZP.getVisibleGame()], []), n = (0, s.e7)([c.Z], () => c.Z.isConnected(), []), T = (0, s.e7)([_.Z], () => _.Z.getMode() === E.pM4.PUSH_TO_TALK, []), h = null != t && t.elevated && n && T && e, S = r.useRef(null);
 
   function f() {
     null !== S.current && ((0, o.closeModal)(S.current), S.current = null)
@@ -25,7 +25,7 @@ t.Z = () => {
     }),
     secondaryConfirmText: I.Z.Messages.DONT_SHOW_AGAIN,
     onConfirmSecondary: () => a.Z.clearPTTAdminWarning(),
-    onConfirm: () => window.open(c.Z.getArticleURL(E.BhN.PUSH_TO_TALK_ADMINISTRATOR_MODE), "_blank"),
+    onConfirm: () => window.open(d.Z.getArticleURL(E.BhN.PUSH_TO_TALK_ADMINISTRATOR_MODE), "_blank"),
     confirmText: I.Z.Messages.HELP_DESK,
     ...e
   })) : f(), () => {

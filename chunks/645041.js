@@ -15,22 +15,22 @@ var i = n(442837),
   l = n(915486),
   u = n(981631),
   _ = n(921944),
-  d = n(526761);
+  c = n(526761);
 
-function c(e, t) {
+function d(e, t) {
   let n = o.Z.getDismissedGuildContent(t);
   return null != n && (0, l.jl)(n, e)
 }
 
 function E(e, t) {
-  return (0, i.e7)([o.Z], () => c(e, t))
+  return (0, i.e7)([o.Z], () => d(e, t))
 }
 
 function I(e, t, n, i) {
   (0, s.PS)(t, n => {
-    if (c(e, t)) return !1;
+    if (d(e, t)) return !1;
     n.dismissedGuildContent = (0, l.GV)(n.dismissedGuildContent, e)
-  }, d.fy.INFREQUENT_USER_ACTION), n && a.default.track(u.rMx.DISMISSIBLE_CONTENT_DISMISSED, {
+  }, c.fy.INFREQUENT_USER_ACTION), n && a.default.track(u.rMx.DISMISSIBLE_CONTENT_DISMISSED, {
     type: r.C[e],
     guild_id: t,
     action: null != i ? i : _.L.UNKNOWN

@@ -8,8 +8,8 @@ var i = n(259443),
   l = n(592125),
   u = n(650774),
   _ = n(866960),
-  d = n(626135),
-  c = n(981631);
+  c = n(626135),
+  d = n(981631);
 let E = new i.Y("MessageRoundtripTrackerStore");
 
 function I(e) {
@@ -26,7 +26,7 @@ function T(e) {
   let n = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
     i = null == e.gatewaySeenTimestamp ? null : e.gatewaySeenTimestamp - e.initialSendTimestamp,
     r = (0, a.d)();
-  d.default.track(c.rMx.SEND_MESSAGE_ROUNDTRIP, {
+  c.default.track(d.rMx.SEND_MESSAGE_ROUNDTRIP, {
     ...(0, o.Z)(),
     api_latency_ms: n,
     gateway_latency_ms: i,

@@ -4,7 +4,7 @@ n.d(t, {
     return R
   },
   AA: function() {
-    return C
+    return p
   },
   Db: function() {
     return P
@@ -16,19 +16,19 @@ n.d(t, {
     return D
   },
   TB: function() {
-    return p
+    return g
   },
   XE: function() {
-    return L
+    return v
   },
   hs: function() {
-    return g
+    return C
   },
   w: function() {
     return m
   },
   xR: function() {
-    return v
+    return L
   },
   xz: function() {
     return M
@@ -42,8 +42,8 @@ var i = n(392711),
   l = n(479531),
   u = n(675478),
   _ = n(763296),
-  d = n(697426),
-  c = n(174470),
+  c = n(697426),
+  d = n(174470),
   E = n(710111),
   I = n(981631),
   T = n(526761),
@@ -55,7 +55,7 @@ let S = async e => {
       query: {
         guild_ids: e
       }
-    })).body.map(e => (0, d.o3)(e, E.X8));
+    })).body.map(e => (0, c.o3)(e, E.X8));
     o.Z.dispatch({
       type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS",
       soundboardSounds: t
@@ -78,7 +78,7 @@ let S = async e => {
   let t = f("SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS");
   return S(e), t
 }, A = () => {
-  let e = (0, c.D)();
+  let e = (0, d.D)();
   if (0 === e.length) return Promise.resolve();
   let t = f("SOUNDBOARD_SOUNDS_RECEIVED");
   return o.Z.dispatch({
@@ -108,7 +108,7 @@ async function O(e) {
       emoji_name: a
     }
   });
-  return (0, d.o3)(l.body, t)
+  return (0, c.o3)(l.body, t)
 }
 async function R(e) {
   let {
@@ -127,16 +127,16 @@ async function R(e) {
       emoji_name: a
     }
   });
-  return (0, d.o3)(l.body, t)
+  return (0, c.o3)(l.body, t)
 }
-async function C(e, t) {
+async function p(e, t) {
   await s.tn.del({
     url: I.ANM.GUILD_SOUNDBOARD_SOUND(e, t),
     oldFormErrors: !0
   })
 }
 
-function p(e) {
+function g(e) {
   u.DZ.updateAsync("favoriteSoundboardSounds", t => r().size(t.soundIds) >= T.oX ? (a.Z.show({
     title: h.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
     body: h.Z.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
@@ -145,13 +145,13 @@ function p(e) {
   }), !1) : !t.soundIds.includes(e) && void t.soundIds.push(e), T.fy.INFREQUENT_USER_ACTION)
 }
 
-function g(e) {
+function C(e) {
   u.DZ.updateAsync("favoriteSoundboardSounds", t => {
     t.soundIds = t.soundIds.filter(t => t !== e)
   }, T.fy.INFREQUENT_USER_ACTION)
 }
 
-function L(e, t, n) {
+function v(e, t, n) {
   o.Z.dispatch({
     type: "GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY",
     sound: t,
@@ -160,7 +160,7 @@ function L(e, t, n) {
   })
 }
 
-function v(e, t) {
+function L(e, t) {
   o.Z.dispatch({
     type: "GUILD_SOUNDBOARD_SOUND_PLAY_START",
     soundId: e,

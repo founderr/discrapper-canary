@@ -22,8 +22,8 @@ var n = t(735250),
   S = t(130341),
   h = t(981975),
   g = t(660962),
-  x = t(442182),
-  C = t(322816),
+  C = t(442182),
+  x = t(322816),
   R = t(266665),
   L = t(203377),
   O = t(981631),
@@ -39,17 +39,17 @@ function p(e) {
     f = (0, r.e7)([N.Z], () => N.Z.guild, []);
   a()(null != f, "guildId cannot be null here");
   let {
-    role: v,
-    permissionSearchQuery: D
+    role: D,
+    permissionSearchQuery: v
   } = (0, r.cj)([N.Z], () => ({
     role: N.Z.getRole(t),
     permissionSearchQuery: N.Z.getPermissionSearchQuery()
   }), [t]);
   i.useEffect(() => {
-    null == v && l(null)
-  }, [v, l]);
-  let Z = (0, r.e7)([E.Z], () => E.Z.getHighestRole(f), [f]),
-    j = (0, r.e7)([E.Z], () => !E.Z.isRoleHigher(f, Z, v)),
+    null == D && l(null)
+  }, [D, l]);
+  let j = (0, r.e7)([E.Z], () => E.Z.getHighestRole(f), [f]),
+    Z = (0, r.e7)([E.Z], () => !E.Z.isRoleHigher(f, j, D)),
     U = i.useRef(null),
     G = (0, r.e7)([m.Z], () => m.Z.getProps().integrations);
   if (i.useEffect(() => {
@@ -60,48 +60,48 @@ function p(e) {
         tab_opened: n,
         is_everyone: (0, d.pM)(f.id, t),
         role_id: t,
-        role_mentionable: null == v ? void 0 : v.mentionable,
-        role_hoist: null == v ? void 0 : v.hoist,
-        role_permissions: null == v ? void 0 : v.permissions.toString(),
+        role_mentionable: null == D ? void 0 : D.mentionable,
+        role_hoist: null == D ? void 0 : D.hoist,
+        role_permissions: null == D ? void 0 : D.permissions.toString(),
         role_num_members: i,
         ...(0, c.hH)(f.id)
       })
-    }, [p, f.id, null == v ? void 0 : v.id]), i.useEffect(() => {
-      if ((null == v ? void 0 : v.id) != null)(0, u.sE)(f.id, v.id)
-    }, [f.id, null == v ? void 0 : v.id]), null == v) return null;
+    }, [p, f.id, null == D ? void 0 : D.id]), i.useEffect(() => {
+      if ((null == D ? void 0 : D.id) != null)(0, u.sE)(f.id, D.id)
+    }, [f.id, null == D ? void 0 : D.id]), null == D) return null;
   switch (p) {
     case L.ZI.DISPLAY:
       s = (0, n.jsx)(g.ZP, {
         guild: f,
-        role: v,
-        locked: j,
-        highestRole: Z,
+        role: D,
+        locked: Z,
+        highestRole: j,
         setSelectedSection: M
       });
       break;
     case L.ZI.PERMISSIONS:
-      s = (0, n.jsx)(C.ZP, {
+      s = (0, n.jsx)(x.ZP, {
         guild: f,
-        role: v,
-        locked: j,
+        role: D,
+        locked: Z,
         setSelectedSection: M,
-        initialSearchQuery: D
+        initialSearchQuery: v
       });
       break;
     case L.ZI.VERIFICATIONS:
       s = (0, n.jsx)(h.Z, {
         guild: f,
-        role: v,
-        locked: j,
+        role: D,
+        locked: Z,
         setSelectedSection: M,
         integrations: null != G ? G : void 0
       });
       break;
     case L.ZI.MEMBERS:
-      s = (0, n.jsx)(x.ZP, {
+      s = (0, n.jsx)(C.ZP, {
         guild: f,
-        role: v,
-        locked: j,
+        role: D,
+        locked: Z,
         setSelectedSection: M
       });
       break;

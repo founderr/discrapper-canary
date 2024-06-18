@@ -4,8 +4,8 @@ n(653041), n(47120), n(411104), n(724458);
 var s, o, a, l = n(392711),
   u = n.n(l),
   _ = n(772848),
-  d = n(442837),
-  c = n(433517),
+  c = n(442837),
+  d = n(433517),
   E = n(570140),
   I = n(131792),
   T = n(252982),
@@ -127,7 +127,7 @@ function O(e) {
   var t;
   return null === (t = A[e]) || void 0 === t ? void 0 : t.defaultSettings
 }
-class R extends(o = d.ZP.PersistedStore) {
+class R extends(o = c.ZP.PersistedStore) {
   initialize(e) {
     null != e && null != e.layouts && null != e.widgets ? (i = function(e) {
       let t = {};
@@ -240,7 +240,7 @@ f(R, "displayName", "LayoutStore"), f(R, "persistKey", "LayoutStore"), f(R, "mig
     sizes: n,
     v: i
   } = {
-    ...c.K.get("OverlayStore")
+    ...d.K.get("OverlayStore")
   };
   if (5 === i && e) {
     let i = [],

@@ -8,8 +8,8 @@ var r = n(392711),
   l = n(872810),
   u = n(695346),
   _ = n(199902),
-  d = n(314897),
-  c = n(650774),
+  c = n(314897),
+  d = n(650774),
   E = n(19780),
   I = n(594174),
   T = n(449753),
@@ -45,7 +45,7 @@ t.Z = {
       if (n) return;
       let i = (0, h.my)(t);
       _.Z.getAllActiveStreams().forEach(e => {
-        if (e.ownerId !== i.ownerId && e.ownerId !== d.default.getId()) e.ownerId === d.default.getId() && a.Z.setGoLiveSource(null), (0, l.aP)((0, h.V9)(e), !1)
+        if (e.ownerId !== i.ownerId && e.ownerId !== c.default.getId()) e.ownerId === c.default.getId() && a.Z.setGoLiveSource(null), (0, l.aP)((0, h.V9)(e), !1)
       })
     }), o.Z.subscribe("VOICE_STATE_UPDATES", e => {
       let {
@@ -55,7 +55,7 @@ t.Z = {
         let {
           userId: t
         } = e;
-        if (t !== d.default.getId()) return;
+        if (t !== c.default.getId()) return;
         let n = _.Z.getAllActiveStreams(),
           i = E.Z.getChannelId();
         n.forEach(e => {
@@ -71,7 +71,7 @@ t.Z = {
         guildId: r
       } = (0, h.my)(n);
       if (null == r || null == i || i !== (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return;
-      let s = c.Z.getMemberCount(r);
+      let s = d.Z.getMemberCount(r);
       if (null != s && !(s < 2) && !(s > f.tB)) u.eo.getSetting() && A(n)
     })
   }

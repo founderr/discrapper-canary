@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 }), n(47120);
 var i = n(470079),
@@ -18,7 +18,7 @@ let u = [
   ],
   _ = 2 * a.Z.Seconds.HOUR;
 
-function d(e) {
+function c(e) {
   let t = (0, o.Z)();
   return (i.useEffect(() => {
     if ("R" !== e.format) return;

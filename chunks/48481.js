@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Uc: function() {
-    return c
+    return d
   },
   ac: function() {
     return h
@@ -22,7 +22,7 @@ n.d(t, {
     return N
   },
   tU: function() {
-    return C
+    return p
   },
   u0: function() {
     return A
@@ -45,8 +45,8 @@ var i = n(647943),
   l = n(524437),
   u = n(397696),
   _ = n(526761),
-  d = n(981631);
-let c = {
+  c = n(981631);
+let d = {
     readerFactory: e => new i.o(e, new TextDecoder("utf-8"))
   },
   E = {
@@ -62,7 +62,7 @@ function T(e, t) {
   if (null == t) return null;
   let n = (0, r.c)(t);
   try {
-    return e.fromBinary(n, c)
+    return e.fromBinary(n, d)
   } catch (e) {
     throw Error("Settings proto failed to deserialize (potentially corrupt): ".concat(e))
   }
@@ -88,7 +88,7 @@ function N(e, t, n) {
 }
 
 function A(e, t, n) {
-  return (null == t || "null" === t) && (t = d.aIL), !(t in e.guilds) && (e.guilds[t] = l.C4.create()), n(e.guilds[t])
+  return (null == t || "null" === t) && (t = c.aIL), !(t in e.guilds) && (e.guilds[t] = l.C4.create()), n(e.guilds[t])
 }
 
 function m(e, t, n, i) {
@@ -130,7 +130,7 @@ function R(e, t) {
   }
 }
 
-function C(e, t) {
+function p(e, t) {
   let n = Object.entries(e);
   if (n.length > t)
     for (n = o().sortBy(n, e => {

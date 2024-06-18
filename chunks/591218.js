@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 }), n(411104), n(47120);
 var i = n(836560),
@@ -20,7 +20,7 @@ function u(e, t, n) {
   }) : e[t] = n, e
 }
 let _ = new s.Z;
-class d extends i.EventEmitter {
+class c extends i.EventEmitter {
   destroy() {
     null != this.stream && (_.release(this.stream), this.stream = null), null != this.streamId && (0, o.jC)(this.streamId), this.destroyed = !0
   }

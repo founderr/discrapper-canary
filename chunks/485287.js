@@ -15,8 +15,8 @@ var i = n(442837),
   l = n(979651),
   u = n(557177),
   _ = n(565799),
-  d = n(431328),
-  c = n(501655),
+  c = n(431328),
+  d = n(501655),
   E = n(427679),
   I = n(754277);
 let T = e => e / 400,
@@ -52,14 +52,14 @@ function f() {
 
 function N(e) {
   let t = (0, i.e7)([a.Z], () => a.Z.getVoiceChannelId() === e),
-    n = null != (0, d.w8)(e, c.pV.SPEAKER).find(e => !e.voiceState.isVoiceMuted()),
+    n = null != (0, c.w8)(e, d.pV.SPEAKER).find(e => !e.voiceState.isVoiceMuted()),
     r = (0, i.e7)([E.Z], () => E.Z.getStageInstanceByChannel(e));
   return t && null == r && !n
 }
 
 function A(e) {
   let t = a.Z.getVoiceChannelId() === e,
-    n = null != _.Z.getMutableParticipants(e, c.pV.SPEAKER).find(e => !e.voiceState.isVoiceMuted()),
+    n = null != _.Z.getMutableParticipants(e, d.pV.SPEAKER).find(e => !e.voiceState.isVoiceMuted()),
     i = E.Z.getStageInstanceByChannel(e);
   return t && null == i && !n
 }

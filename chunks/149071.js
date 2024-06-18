@@ -16,8 +16,8 @@ function u(e, t, n) {
   }) : e[t] = n, e
 }
 let _ = {},
-  d = 0,
-  c = 15 * a.Z.Millis.SECOND;
+  c = 0,
+  d = 15 * a.Z.Millis.SECOND;
 
 function E() {
   _ = {
@@ -26,7 +26,7 @@ function E() {
 }
 
 function I() {
-  !__OVERLAY__ && (clearTimeout(d), d = setTimeout(() => h({}), c))
+  !__OVERLAY__ && (clearTimeout(c), c = setTimeout(() => h({}), d))
 }
 async function T(e, t) {
   null == e || e === l.ME ? await i.tn.patch({
@@ -37,7 +37,7 @@ async function T(e, t) {
   } : {})
 }
 async function h(e) {
-  clearTimeout(d);
+  clearTimeout(c);
   let t = 0 !== Object.keys(e).length,
     n = s.Z.getCollapsedCategories(),
     r = function() {

@@ -4,7 +4,7 @@ n.d(t, {
     return I
   },
   Lq: function() {
-    return c
+    return d
   },
   O0: function() {
     return T
@@ -22,12 +22,12 @@ var i = n(470079),
   u = n(410030),
   _ = n(607070);
 
-function d(e) {
+function c(e) {
   return e.toUpperCase().replace(/-/g, "_")
 }
 
-function c(e) {
-  return l.Z.unsafe_rawColors[d(e)].css
+function d(e) {
+  return l.Z.unsafe_rawColors[c(e)].css
 }
 
 function E(e) {
@@ -48,7 +48,7 @@ function T(e, t) {
   let n = (0, u.Fg)(),
     r = (0, a.e7)([_.Z], () => _.Z.saturation);
   return i.useMemo(() => null == e ? null : {
-    hex: l.Z.colors[d(e)].resolve({
+    hex: l.Z.colors[c(e)].resolve({
       theme: null != t ? t : n,
       saturation: r
     }).hex()

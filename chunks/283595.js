@@ -4,8 +4,8 @@ var i, r, s, o, a = n(392711),
   l = n.n(a),
   u = n(442837),
   _ = n(433517),
-  d = n(570140),
-  c = n(85521),
+  c = n(570140),
+  d = n(85521),
   E = n(630388),
   I = n(780570),
   T = n(314897),
@@ -21,26 +21,26 @@ let N = !1,
   m = {},
   O = new Set,
   R = {},
-  C = {},
-  p = !1;
+  p = {},
+  g = !1;
 
-function g() {
+function C() {
   _.K.set(S, {
     ...f(),
-    activeLaunchOptionIds: C
+    activeLaunchOptionIds: p
   })
 }
 
-function L() {
+function v() {
   _.K.set(S, {
     ...f(),
     activeLibraryApplicationBranchIds: R
   })
 }
 
-function v(e) {
+function L(e) {
   for (let t of e) {
-    let e = c.Z.createFromServer(t);
+    let e = d.Z.createFromServer(t);
     A[(0, I.Tu)(e.id, e.branchId)] = e
   }
 }
@@ -48,7 +48,7 @@ function v(e) {
 function D(e) {
   let {
     libraryApplication: t
-  } = e, n = c.Z.createFromServer(t), i = (0, I.Tu)(n.id, n.branchId);
+  } = e, n = d.Z.createFromServer(t), i = (0, I.Tu)(n.id, n.branchId);
   A[i] = n, O.delete(i)
 }
 
@@ -68,7 +68,7 @@ class y extends(i = u.ZP.Store) {
   initialize() {
     this.waitFor(T.default);
     let e = _.K.get(S);
-    null != e && (null == e.activeLaunchOptionIds ? g() : C = e.activeLaunchOptionIds, null == e.activeLibraryApplicationBranchIds ? L() : R = e.activeLibraryApplicationBranchIds)
+    null != e && (null == e.activeLaunchOptionIds ? C() : p = e.activeLaunchOptionIds, null == e.activeLibraryApplicationBranchIds ? v() : R = e.activeLibraryApplicationBranchIds)
   }
   get libraryApplications() {
     return function(e) {
@@ -114,7 +114,7 @@ class y extends(i = u.ZP.Store) {
     return O.has((0, I.Tu)(e, t))
   }
   getActiveLaunchOptionId(e, t) {
-    return C[(0, I.Tu)(e, t)]
+    return p[(0, I.Tu)(e, t)]
   }
   get fetched() {
     return N
@@ -123,7 +123,7 @@ class y extends(i = u.ZP.Store) {
     return l()(P()).values().filter(e => (0, I.Je)(e)).map(e => e.branchId).value()
   }
   get hasRemovedLibraryApplicationThisSession() {
-    return p
+    return g
   }
   whenInitialized(e) {
     this.addConditionalChangeListener(() => {
@@ -136,7 +136,7 @@ o = "LibraryApplicationStore", (s = "displayName") in(r = y) ? Object.defineProp
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new y(d.Z, {
+}) : r[s] = o, t.Z = new y(c.Z, {
   LOGOUT: function() {
     N = !1
   },
@@ -144,13 +144,13 @@ o = "LibraryApplicationStore", (s = "displayName") in(r = y) ? Object.defineProp
     let {
       libraryApplications: t
     } = e;
-    A = {}, v(t), N = !0
+    A = {}, L(t), N = !0
   },
   SKU_PURCHASE_SUCCESS: function(e) {
     let {
       libraryApplications: t
     } = e;
-    v(t)
+    L(t)
   },
   LIBRARY_APPLICATION_FLAGS_UPDATE_START: function(e) {
     let {
@@ -158,7 +158,7 @@ o = "LibraryApplicationStore", (s = "displayName") in(r = y) ? Object.defineProp
       branchId: n,
       flags: i
     } = e, r = (0, I.Tu)(t, n), s = M(t, n);
-    null != s && !s.isHidden() && E.yE(i, h.eHb.HIDDEN) && (p = !0), O.add(r)
+    null != s && !s.isHidden() && E.yE(i, h.eHb.HIDDEN) && (g = !0), O.add(r)
   },
   LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: D,
   LIBRARY_APPLICATION_UPDATE: D,
@@ -168,7 +168,7 @@ o = "LibraryApplicationStore", (s = "displayName") in(r = y) ? Object.defineProp
       branchId: n,
       launchOptionId: i
     } = e;
-    C[(0, I.Tu)(t, n)] = i, g()
+    p[(0, I.Tu)(t, n)] = i, C()
   },
   LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: function(e) {
     let {
@@ -176,7 +176,7 @@ o = "LibraryApplicationStore", (s = "displayName") in(r = y) ? Object.defineProp
       branchId: n
     } = e;
     if (R[t] === n) return !1;
-    R[t] = n, L()
+    R[t] = n, v()
   },
   LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: function(e) {
     let {

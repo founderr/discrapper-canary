@@ -12,11 +12,11 @@ var i = n(442837),
   l = n(372897);
 let u = (e, t) => {
   var n, u, _;
-  let d = (0, i.e7)([r.ZP], () => {
+  let c = (0, i.e7)([r.ZP], () => {
       var n, i;
       return (0, a.yE)(null !== (i = null === (n = r.ZP.getMember(e, t)) || void 0 === n ? void 0 : n.flags) && void 0 !== i ? i : 0, l.q.DID_REJOIN)
     }),
-    c = (0, i.e7)([s.Z], () => {
+    d = (0, i.e7)([s.Z], () => {
       var t;
       return null === (t = s.Z.getGuild(e)) || void 0 === t ? void 0 : t.isNew()
     }),
@@ -38,5 +38,5 @@ let u = (e, t) => {
     if (null == l) return !1;
     let u = Date.now() - l.getTime();
     return (null == i || u <= 864e5 * i) && u >= 864e5 * o
-  })(n, u, _), [u, n, _]) && !c && !E && !d
+  })(n, u, _), [u, n, _]) && !d && !E && !c
 }

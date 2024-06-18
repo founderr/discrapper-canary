@@ -18,16 +18,16 @@ function _(e) {
     src: n,
     className: s,
     size: _,
-    botIconFirst: d,
-    fallbackAvatar: c
+    botIconFirst: c,
+    fallbackAvatar: d
   } = e, E = r.useMemo(() => null != t ? a.ZP.getApplicationIconURL({
     id: t.id,
     icon: t.icon,
     bot: t.bot,
     size: _,
-    botIconFirst: d,
-    fallbackAvatar: c
-  }) : n, [t, n, _, d, c]);
+    botIconFirst: c,
+    fallbackAvatar: d
+  }) : n, [t, n, _, c, d]);
   return null == E ? null : (0, i.jsx)("img", {
     className: o()(u.icon, s),
     alt: l.Z.Messages.IMAGE,

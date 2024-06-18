@@ -72,7 +72,7 @@ function h(e) {
   } = t, N = (0, r.j)(I), {
     isLoading: h,
     error: g,
-    creatorMonetizationOnboardingMarketing: x
+    creatorMonetizationOnboardingMarketing: C
   } = (0, o.Z)(s.id);
   return ((0, a.Z)({
     type: i.ImpressionTypes.PANE,
@@ -95,7 +95,7 @@ function h(e) {
       guild: s,
       monetizationEligibility: t
     }), (0, n.jsx)(S, {
-      onboardingMarketing: x,
+      onboardingMarketing: C,
       onboardingMarketingError: g
     })]
   })

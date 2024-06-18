@@ -7,11 +7,11 @@ n.d(t, {
 var i = n(278323),
   s = n(13245),
   l = n(45114),
-  a = n(237997),
-  o = n(454902),
+  o = n(237997),
+  a = n(454902),
   r = n(312839),
-  d = n(981631),
-  c = n(987650),
+  c = n(981631),
+  d = n(987650),
   u = n(689938);
 
 function h(e, t, n, h) {
@@ -22,38 +22,38 @@ function h(e, t, n, h) {
     }),
     E = t.getAvatarURL(e.guild_id, 80),
     {
-      trackView: Z,
-      trackClick: g
-    } = (0, r.R)(c.n0.ActivityInvite, {
-      notif_type: c.n0.ActivityInvite,
+      trackView: g,
+      trackClick: m
+    } = (0, r.R)(d.n0.ActivityInvite, {
+      notif_type: d.n0.ActivityInvite,
       notif_user_id: t.id,
-      activity_type: d.mFx.JOIN_REQUEST,
+      activity_type: c.mFx.JOIN_REQUEST,
       activity_name: n.name
     });
   return {
-    colorScheme: o.ZP.ColorSchemes.PRIMARY,
+    colorScheme: a.ZP.ColorSchemes.PRIMARY,
     icon: E,
     title: p,
     body: f,
-    hint: e => (0, o.QR)(e, (0, r.P)(), u.Z.Messages.OVERLAY_UNLOCK_TO_ANSWER),
+    hint: e => (0, a.QR)(e, (0, r.P)(), u.Z.Messages.OVERLAY_UNLOCK_TO_ANSWER),
     confirmText: u.Z.Messages.USER_ACTIVITY_RESPOND_YEAH,
     cancelText: u.Z.Messages.USER_ACTIVITY_RESPOND_NOPE,
     onNotificationShow: () => {
-      Z()
+      g()
     },
     onConfirmClick: (t, n) => {
       i.Z.sendActivityInvite({
         channelId: e.id,
-        type: d.mFx.JOIN,
+        type: c.mFx.JOIN,
         activity: h,
-        location: a.Z.isInstanceUILocked() ? d.Sbl.LOCKED_OVERLAY : d.Sbl.UNLOCKED_OVERLAY
-      }), g("join"), s.Z.updateNotificationStatus(n)
+        location: o.Z.isInstanceUILocked() ? c.Sbl.LOCKED_OVERLAY : c.Sbl.UNLOCKED_OVERLAY
+      }), m("join"), s.Z.updateNotificationStatus(n)
     },
     onCancelClick: (t, n) => {
-      (0, l.In)(e.id, !0, !0), s.Z.updateNotificationStatus(n), g("decline")
+      (0, l.In)(e.id, !0, !0), s.Z.updateNotificationStatus(n), m("decline")
     },
     onDismissClick: () => {
-      g("dismiss")
+      m("dismiss")
     }
   }
 }

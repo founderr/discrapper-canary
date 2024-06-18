@@ -8,8 +8,8 @@ var i = n(735250),
   l = n(442837),
   u = n(481060),
   _ = n(867176),
-  d = n(317381),
-  c = n(30465),
+  c = n(317381),
+  d = n(30465),
   E = n(430824),
   I = n(156361),
   T = n(153124),
@@ -22,20 +22,20 @@ var i = n(735250),
   O = n(918559),
   R = n(583901);
 t.Z = r.forwardRef(function(e, t) {
-  var n, s, C, p, g;
+  var n, s, p, g, C;
   let {
-    channel: L,
-    type: v,
+    channel: v,
+    type: L,
     editorHeight: D,
     onVisibilityChange: M
   } = e, P = (0, T.Dt)(), y = (0, l.e7)([E.Z], () => {
     var e;
-    return null !== (e = E.Z.getGuild(L.guild_id)) && void 0 !== e ? e : null
-  }, [L.guild_id]), U = r.useRef(), [b, G, w] = (0, m.Z)({
+    return null !== (e = E.Z.getGuild(v.guild_id)) && void 0 !== e ? e : null
+  }, [v.guild_id]), U = r.useRef(), [b, G, w] = (0, m.Z)({
     ...e,
     guild: y
-  }, t, U), k = (null === (n = v.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? S.ZP : h.ZP, B = (0, I.DJ)(b.selectedIndex);
-  (0, c.KR)(P, b.isVisible, B), f.Z.trackExposure({
+  }, t, U), k = (null === (n = L.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? S.ZP : h.ZP, B = (0, I.DJ)(b.selectedIndex);
+  (0, d.KR)(P, b.isVisible, B), f.Z.trackExposure({
     location: "6e9811_1"
   });
   let {
@@ -46,21 +46,21 @@ t.Z = r.forwardRef(function(e, t) {
     autoTrackExposure: !1
   }), V = (0, A.Z)({
     editorHeight: D,
-    type: v,
+    type: L,
     state: b,
     isInPopoutExperiment: x
-  }), Z = (0, l.e7)([d.ZP], () => {
-    let e = d.ZP.getSelfEmbeddedActivityForChannel(L.id),
-      t = d.ZP.getActivityPanelMode();
-    return (0, _.l5)(L) && null != e && e.channelId === L.id && t === O.Ez.PANEL
-  }, [L]), H = r.useMemo(() => null == V ? "" : String(Date.now()), [null == V ? void 0 : V.top, null == V ? void 0 : V.left, null == V ? void 0 : V.bottom, null == V ? void 0 : V.right]);
+  }), Z = (0, l.e7)([c.ZP], () => {
+    let e = c.ZP.getSelfEmbeddedActivityForChannel(v.id),
+      t = c.ZP.getActivityPanelMode();
+    return (0, _.l5)(v) && null != e && e.channelId === v.id && t === O.Ez.PANEL
+  }, [v]), H = r.useMemo(() => null == V ? "" : String(Date.now()), [null == V ? void 0 : V.top, null == V ? void 0 : V.left, null == V ? void 0 : V.bottom, null == V ? void 0 : V.right]);
   if (r.useEffect(() => {
       M(b.isVisible)
     }, [M, b.isVisible]), !b.isVisible || null == b.query || void 0 === V) return null;
   let F = null !== (s = b.query.typeInfo.renderResults({
     results: b.query.results,
     selectedIndex: b.selectedIndex,
-    channel: L,
+    channel: v,
     guild: y,
     query: b.query.queryText,
     options: b.query.options,
@@ -75,7 +75,7 @@ t.Z = r.forwardRef(function(e, t) {
       [R.autocompleteTop]: Z
     },
     j = 490;
-  null != V && (j = (null === (C = v.autocomplete) || void 0 === C ? void 0 : C.small) ? 200 : (null === (p = b.query) || void 0 === p ? void 0 : p.type) === N.eq.EMOJIS_AND_STICKERS ? 490 : 245), j = Math.min(window.innerHeight - 175, j);
+  null != V && (j = (null === (p = L.autocomplete) || void 0 === p ? void 0 : p.small) ? 200 : (null === (g = b.query) || void 0 === g ? void 0 : g.type) === N.eq.EMOJIS_AND_STICKERS ? 490 : 245), j = Math.min(window.innerHeight - 175, j);
   let W = (0, i.jsx)(I.ZP, {
     id: P,
     className: o()(R.autocomplete, Y),
@@ -113,7 +113,7 @@ t.Z = r.forwardRef(function(e, t) {
       targetRef: e.targetRef,
       overrideTargetRect: V,
       positionKey: H,
-      position: null !== (g = e.position) && void 0 !== g ? g : "top",
+      position: null !== (C = e.position) && void 0 !== C ? C : "top",
       align: "left",
       spacing: 8,
       autoInvert: !0,

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   U: function() {
-    return c
+    return d
   }
 });
 var i = n(735250);
@@ -25,7 +25,7 @@ let o = ["#3f581a", "#7fb134", "#bcef42", "#f0f0f0"],
     tint: 1
   }],
   _ = [.15, .6, 1],
-  d = [{
+  c = [{
     base: 3,
     tint: 1
   }, {
@@ -35,11 +35,11 @@ let o = ["#3f581a", "#7fb134", "#bcef42", "#f0f0f0"],
     base: 4,
     tint: 1
   }],
-  c = e => {
+  d = e => {
     let {
       width: t = 24,
       height: n = 24,
-      primaryTintColor: c,
+      primaryTintColor: d,
       secondaryTintColor: E,
       ...I
     } = e, {
@@ -47,13 +47,13 @@ let o = ["#3f581a", "#7fb134", "#bcef42", "#f0f0f0"],
       secondaryColorsTransformed: h
     } = (0, s.s)({
       primaryBaseColors: o,
-      primaryTintColor: c,
+      primaryTintColor: d,
       primaryTintLuminances: l,
       primaryLuminanceWeights: u,
       secondaryBaseColors: a,
       secondaryTintColor: E,
       secondaryTintLuminances: _,
-      secondaryLuminanceWeights: d
+      secondaryLuminanceWeights: c
     });
     return (0, i.jsxs)("svg", {
       ...(0, r.Z)(I),

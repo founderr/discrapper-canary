@@ -7,8 +7,8 @@ var i = n(735250),
   l = n(906732),
   u = n(963249),
   _ = n(147915),
-  d = n(51144),
-  c = n(981631),
+  c = n(51144),
+  d = n(981631),
   E = n(474936),
   I = n(689938),
   T = n(838329);
@@ -18,7 +18,7 @@ t.Z = r.memo(function(e) {
     channel: n
   } = e, {
     analyticsLocations: r
-  } = (0, l.ZP)(a.Z.GIFT_BUTTON), h = (0, d.Ft)(n), {
+  } = (0, l.ZP)(a.Z.GIFT_BUTTON), h = (0, c.Ft)(n), {
     Component: S,
     events: f,
     play: N
@@ -31,10 +31,10 @@ t.Z = r.memo(function(e) {
     subscriptionTier: E.Si.TIER_2,
     analyticsLocations: r,
     analyticsObject: {
-      page: n.isPrivate() ? c.ZY5.DM_CHANNEL : c.ZY5.GUILD_CHANNEL,
-      section: c.jXE.CHANNEL_TEXT_AREA,
-      object: c.qAy.BUTTON_ICON,
-      objectType: c.Qqv.GIFT
+      page: n.isPrivate() ? d.ZY5.DM_CHANNEL : d.ZY5.GUILD_CHANNEL,
+      section: d.jXE.CHANNEL_TEXT_AREA,
+      object: d.qAy.BUTTON_ICON,
+      objectType: d.Qqv.GIFT
     }
   });
   return (0, i.jsx)(o.Tooltip, {

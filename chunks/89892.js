@@ -8,8 +8,8 @@ var i = n(392711),
   l = n(710845),
   u = n(786761),
   _ = n(709054),
-  d = n(697479),
-  c = n(981631);
+  c = n(697479),
+  d = n(981631);
 
 function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -82,12 +82,12 @@ class h {
   }
   cache(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    if (0 === this.length && (this._wasAtEdge = t), this._messages.length + e.length > c.FD8) {
-      if (this._wasAtEdge = !1, e.length > c.FD8) {
-        this._isCacheBefore ? this._messages = e.slice(e.length - c.FD8) : this._messages = e.slice(0, c.FD8), this._map = {}, this._messages.forEach(e => this._map[e.id] = e);
+    if (0 === this.length && (this._wasAtEdge = t), this._messages.length + e.length > d.FD8) {
+      if (this._wasAtEdge = !1, e.length > d.FD8) {
+        this._isCacheBefore ? this._messages = e.slice(e.length - d.FD8) : this._messages = e.slice(0, d.FD8), this._map = {}, this._messages.forEach(e => this._map[e.id] = e);
         return
       }
-      let t = c.FD8 - e.length;
+      let t = d.FD8 - e.length;
       this._isCacheBefore ? this._messages = this._messages.slice(Math.max(this._messages.length - t, 0)) : this._messages = this._messages.slice(0, t)
     }
     this._messages = this._isCacheBefore ? [...this._messages, ...e] : [...e, ...this._messages], this._map = {}, this._messages.forEach(e => this._map[e.id] = e)
@@ -351,7 +351,7 @@ class S {
     }, !0)
   }
   truncate(e, t) {
-    return this.length <= c.PNu ? this : e ? this.truncateBottom(c.j3N) : t ? this.truncateTop(c.j3N) : this
+    return this.length <= d.PNu ? this : e ? this.truncateBottom(d.j3N) : t ? this.truncateTop(d.j3N) : this
   }
   receiveMessage(e) {
     var t, n;
@@ -369,7 +369,7 @@ class S {
           autoTrackExposure: !1
         }).enabled ? (0, u.e5)(e) : T(this, e),
         n = this.merge([t]);
-      return i ? n.truncateTop(c.j3N, !1) : this.length > c.PNu ? n.truncateBottom(c.j3N, !1) : n
+      return i ? n.truncateTop(d.j3N, !1) : this.length > d.PNu ? n.truncateBottom(d.j3N, !1) : n
     }
     return this
   }
@@ -392,41 +392,41 @@ class S {
     })
   }
   loadComplete(e) {
-    var t, n, i, a, l, _, d, E, h, S, f;
+    var t, n, i, a, l, _, c, E, h, S, f;
     let N = [...e.newMessages],
       A = null !== (t = e.isBefore) && void 0 !== t && t,
       m = null !== (n = e.isAfter) && void 0 !== n && n,
       O = null !== (i = e.jump) && void 0 !== i ? i : null,
       R = null !== (a = e.hasMoreBefore) && void 0 !== a && a,
-      C = null !== (l = e.hasMoreAfter) && void 0 !== l && l,
-      p = null !== (_ = e.cached) && void 0 !== _ && _,
-      g = r()(N).reverse().map(s.Z.getCurrentConfig({
+      p = null !== (l = e.hasMoreAfter) && void 0 !== l && l,
+      g = null !== (_ = e.cached) && void 0 !== _ && _,
+      C = r()(N).reverse().map(s.Z.getCurrentConfig({
         location: "2ecb25_2"
       }, {
         autoTrackExposure: !1
       }).enabled ? e => (0, u.e5)(e) : e => T(this, e)).value(),
-      L = null;
-    if ((A || m) && null == O && this.ready) L = this.merge(g, A, !0);
+      v = null;
+    if ((A || m) && null == O && this.ready) v = this.merge(C, A, !0);
     else {
-      let e = this._array.filter(e => e.state === c.yb.SENDING),
-        t = this._array.filter(e => e.state === c.yb.SEND_FAILED),
+      let e = this._array.filter(e => e.state === d.yb.SENDING),
+        t = this._array.filter(e => e.state === d.yb.SEND_FAILED),
         n = e.length > 0 || t.length > 0;
-      L = this.reset(g), !n || A || m || (null == O ? void 0 : O.messageId) != null || (null == O ? void 0 : O.offset) != null ? I.info("loadComplete: resetting state for channelId=".concat(this.channelId, ", sending.length=").concat(e.length)) : (t.length > 0 && (I.info("loadComplete: merging with SEND_FAILED messages for channelId=".concat(this.channelId)), L = L.merge(t)), e.length > 0 && (I.info("loadComplete: merging with SENDING messages for channelId=".concat(this.channelId)), L = L.merge(e)))
+      v = this.reset(C), !n || A || m || (null == O ? void 0 : O.messageId) != null || (null == O ? void 0 : O.offset) != null ? I.info("loadComplete: resetting state for channelId=".concat(this.channelId, ", sending.length=").concat(e.length)) : (t.length > 0 && (I.info("loadComplete: merging with SEND_FAILED messages for channelId=".concat(this.channelId)), v = v.merge(t)), e.length > 0 && (I.info("loadComplete: merging with SENDING messages for channelId=".concat(this.channelId)), v = v.merge(e)))
     }
-    return L = L.mutate({
+    return v = v.mutate({
       ready: !0,
       loadingMore: !1,
-      jumpType: null !== (d = null == O ? void 0 : O.jumpType) && void 0 !== d ? d : o.SR.ANIMATED,
+      jumpType: null !== (c = null == O ? void 0 : O.jumpType) && void 0 !== c ? c : o.SR.ANIMATED,
       jumpFlash: null !== (E = null == O ? void 0 : O.flash) && void 0 !== E && E,
       jumped: null != O,
       jumpedToPresent: null !== (h = null == O ? void 0 : O.present) && void 0 !== h && h,
       jumpTargetId: null !== (S = null == O ? void 0 : O.messageId) && void 0 !== S ? S : null,
       jumpTargetOffset: null != O && null != O.messageId && null != O.offset ? O.offset : 0,
-      jumpSequenceId: null != O ? L.jumpSequenceId + 1 : L.jumpSequenceId,
+      jumpSequenceId: null != O ? v.jumpSequenceId + 1 : v.jumpSequenceId,
       jumpReturnTargetId: null !== (f = null == O ? void 0 : O.returnMessageId) && void 0 !== f ? f : null,
-      hasMoreBefore: null == O && m ? L.hasMoreBefore : R,
-      hasMoreAfter: null == O && A ? L.hasMoreAfter : C,
-      cached: p,
+      hasMoreBefore: null == O && m ? v.hasMoreBefore : R,
+      hasMoreAfter: null == O && A ? v.hasMoreAfter : p,
+      cached: g,
       hasFetched: e.hasFetched,
       error: !1
     })
@@ -434,7 +434,7 @@ class S {
   addCachedMessages(e, t) {
     (0, a.Z)(e);
     let n = e.map(e => T(this, e)).reverse();
-    return this._array.filter(e => !n.some(t => t.id === e.id)).forEach(e => d.$(n, e, (e, t) => _.default.compare(e.id, t.id))), this.reset(n).mutate({
+    return this._array.filter(e => !n.some(t => t.id === e.id)).forEach(e => c.$(n, e, (e, t) => _.default.compare(e.id, t.id))), this.reset(n).mutate({
       ready: !0,
       cached: t,
       error: !1

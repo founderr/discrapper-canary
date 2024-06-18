@@ -4,18 +4,18 @@ t.d(s, {
     return l
   },
   v: function() {
-    return r
+    return i
   }
 });
 var n = t(735250);
 t(470079);
 var a = t(481060);
-let i = "collectibles shop product details modal",
+let r = "collectibles shop product details modal",
   l = e => {
     let {
       product: s,
       category: l,
-      analyticsSource: r,
+      analyticsSource: i,
       analyticsLocations: o,
       returnRef: c
     } = e;
@@ -27,14 +27,14 @@ let i = "collectibles shop product details modal",
         ...t,
         product: s,
         category: l,
-        analyticsSource: r,
+        analyticsSource: i,
         analyticsLocations: o,
         returnRef: c
       })
     }, {
-      modalKey: i
+      modalKey: r
     })
   },
-  r = () => {
-    (0, a.closeModal)(i)
+  i = () => {
+    (0, a.closeModal)(r)
   }

@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   T: function() {
-    return d
+    return c
   },
   z: function() {
-    return c
+    return d
   }
 });
 var i = n(493683),
@@ -24,7 +24,7 @@ function _(e, t, n) {
   })
 }
 
-function d(e) {
+function c(e) {
   _(e, u.Z.Messages.NOTIFICATION_PENDING_FRIEND_REQUEST, () => {
     {
       let {
@@ -37,7 +37,7 @@ function d(e) {
   })
 }
 
-function c(e) {
+function d(e) {
   _(e, u.Z.Messages.NOTIFICATION_ACCEPTED_FRIEND_REQUEST, () => {
     i.Z.openPrivateChannel(e.id)
   })

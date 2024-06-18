@@ -27,8 +27,8 @@ var i = n(592125),
 let l = Array.from(n(176505).Vg).map(e => o.Z.escape(e)).join("|"),
   u = new RegExp("^/channels/(\\d+|".concat(a.ME, ")(?:/)?(\\d+|").concat(l, ")?")),
   _ = new RegExp("^/channels/(\\d+|".concat(a.ME, ")(?:/)(\\d+|").concat(l, ")(?:/)(\\d+)")),
-  d = RegExp("^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)"),
-  c = RegExp("^/guild-stages/(\\d+)(?:/)?(\\d+)?"),
+  c = RegExp("^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)"),
+  d = RegExp("^/guild-stages/(\\d+)(?:/)?(\\d+)?"),
   E = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
   I = new RegExp("^https://(?:canary\\.|ptb\\.)?discord.com/channels/(\\d+|".concat(a.ME, ")(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?")),
   T = RegExp("^https://(?:canary\\.|ptb\\.)?discord.com/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)");
@@ -41,7 +41,7 @@ function h(e) {
     channelId: t[2],
     messageId: t[3]
   };
-  let n = e.match(d);
+  let n = e.match(c);
   if (null != n && n.length > 4) return {
     guildId: n[1],
     channelId: n[2],
@@ -56,7 +56,7 @@ function h(e) {
       channelId: null !== (r = i[2]) && void 0 !== r ? r : void 0
     }
   }
-  let s = e.match(c);
+  let s = e.match(d);
   return null != s && s.length > 1 ? {
     guildId: s[1]
   } : null

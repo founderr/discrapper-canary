@@ -22,7 +22,7 @@ function o(e, t) {
   let u = s(e.record),
     _ = s(t.record);
   if (u !== _) return u - _;
-  let d = null !== (o = null !== (r = e.sortable) && void 0 !== r ? r : null === (n = e.comparator) || void 0 === n ? void 0 : n.toLocaleLowerCase()) && void 0 !== o ? o : "",
-    c = null !== (l = null !== (a = e.sortable) && void 0 !== a ? a : null === (i = t.comparator) || void 0 === i ? void 0 : i.toLocaleLowerCase()) && void 0 !== l ? l : "";
-  return d < c ? -1 : d > c ? 1 : 0
+  let c = null !== (o = null !== (r = e.sortable) && void 0 !== r ? r : null === (n = e.comparator) || void 0 === n ? void 0 : n.toLocaleLowerCase()) && void 0 !== o ? o : "",
+    d = null !== (l = null !== (a = e.sortable) && void 0 !== a ? a : null === (i = t.comparator) || void 0 === i ? void 0 : i.toLocaleLowerCase()) && void 0 !== l ? l : "";
+  return c < d ? -1 : c > d ? 1 : 0
 }

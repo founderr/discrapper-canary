@@ -14,18 +14,18 @@ let o = 3600,
     months: s.Z.Messages.THREAD_BROWSER_TIMESTAMP_MORE_THAN_MONTH,
     years: s.Z.Messages.THREAD_BROWSER_TIMESTAMP_MORE_THAN_YEAR
   }),
-  d = (e, t) => null != t && null != t[e],
-  c = (e, t, n) => {
+  c = (e, t) => null != t && null != t[e],
+  d = (e, t, n) => {
     var i, r, s;
-    return d(e, t) ? null !== (r = null !== (i = t[e]) && void 0 !== i ? i : null == n ? void 0 : n[e]) && void 0 !== r ? r : null : null !== (s = null == n ? void 0 : n[e]) && void 0 !== s ? s : null
+    return c(e, t) ? null !== (r = null !== (i = t[e]) && void 0 !== i ? i : null == n ? void 0 : n[e]) && void 0 !== r ? r : null : null !== (s = null == n ? void 0 : n[e]) && void 0 !== s ? s : null
   };
 t.Z = function(e, t) {
   let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
     i = r()().diff(r()(e), "s"),
     s = null != t ? t() : void 0,
-    d = _(),
+    c = _(),
     E = (e, t) => {
-      let i = c(e, s, n ? d : void 0);
+      let i = d(e, s, n ? c : void 0);
       return null == i ? null : "string" == typeof i ? i : i.format({
         count: t
       })

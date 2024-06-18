@@ -8,15 +8,15 @@ var i = n(911969),
   l = n(695346),
   u = n(594174),
   _ = n(156361),
-  d = n(5192),
-  c = n(417574),
+  c = n(5192),
+  d = n(417574),
   E = n(877565),
   I = n(590921),
   T = n(126226),
   h = n(689938);
 
 function S(e) {
-  let t = c.X.exec(e);
+  let t = d.X.exec(e);
   if (null != t) {
     let n = t[1],
       i = u.default.getUser(n);
@@ -41,23 +41,23 @@ let f = {
     if (!l.Xk.getSetting()) return T.K;
     let _ = S(n);
     if (null == _) return T.K;
-    let d = (0, a.hV)(e, _.cleanedQuery),
+    let c = (0, a.hV)(e, _.cleanedQuery),
       {
-        commands: c,
+        commands: d,
         sections: E
       } = r.JT(e, {
         commandType: i.yU.CHAT,
-        text: d.text
+        text: c.text
       }, {
         limit: I.AQ,
         placeholderCount: I.YP,
         scoreMethod: s.p.COMMAND_OR_APPLICATION,
         allowFetch: u
       });
-    if (null == c) return T.K;
-    let h = c;
-    if (d.hasSpaceTerminator) {
-      let e = d.text.trim(),
+    if (null == d) return T.K;
+    let h = d;
+    if (c.hasSpaceTerminator) {
+      let e = c.text.trim(),
         t = e + " ";
       h = h.filter(n => n.name === e || n.name.startsWith(t))
     }
@@ -109,8 +109,8 @@ let f = {
       getQuery: e => {
         let t = S(e);
         if ("mention" !== t.type) return e;
-        let n = d.ZP.getName(null == i ? void 0 : i.id, r.id, t.user);
-        return e.replace(c.X, "@".concat(n))
+        let n = c.ZP.getName(null == i ? void 0 : i.id, r.id, t.user);
+        return e.replace(d.X, "@".concat(n))
       },
       key: "commands"
     })

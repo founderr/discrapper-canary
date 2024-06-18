@@ -11,8 +11,8 @@ var i, r = n(264344),
   l = n(912095),
   u = n(886848),
   _ = n(649318),
-  d = n(65154),
-  c = n(436620);
+  c = n(65154),
+  d = n(436620);
 
 function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -269,7 +269,7 @@ class h extends l.Z {
     await e.setRemoteDescription(t), (this.unassignedStreams.audio.length > 0 || this.unassignedStreams.video.length > 0) && (this.negotiationNeeded = !0, this.logger.info("Renegotiating: Streams left unassigned after negotiation - renegotiate")), this.negotiating = !1, this.negotiationNeeded && this.handleNegotiationNeeded()
   }
   setConnected() {
-    this.input.reset(), this.setConnectionState(d.$j.CONNECTED), this.on(a.Sh.Stats, this.handleStats), this.input.on(u.G.VoiceActivity, this.handleVoiceActivity)
+    this.input.reset(), this.setConnectionState(c.$j.CONNECTED), this.on(a.Sh.Stats, this.handleStats), this.input.on(u.G.VoiceActivity, this.handleVoiceActivity)
   }
   async handleNegotiationNeeded() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -298,14 +298,14 @@ class h extends l.Z {
           this.setConnected();
           break;
         case "connecting":
-          "connected" === this.iceConnectionState ? this.setConnectionState(d.$j.DTLS_CONNECTING) : this.setConnectionState(d.$j.ICE_CHECKING);
+          "connected" === this.iceConnectionState ? this.setConnectionState(c.$j.DTLS_CONNECTING) : this.setConnectionState(c.$j.ICE_CHECKING);
           break;
         case "failed":
-          this.setConnectionState(d.$j.NO_ROUTE);
+          this.setConnectionState(c.$j.NO_ROUTE);
           break;
         case "disconnected":
         case "closed":
-          this.setConnectionState(d.$j.DISCONNECTED)
+          this.setConnectionState(c.$j.DISCONNECTED)
       }
     }), E(this, "handleIceConnectionStateChange", () => {
       let e = this.iceConnectionState;
@@ -314,14 +314,14 @@ class h extends l.Z {
           this.setConnected();
           break;
         case "checking":
-          this.setConnectionState(d.$j.ICE_CHECKING);
+          this.setConnectionState(c.$j.ICE_CHECKING);
           break;
         case "failed":
-          this.setConnectionState(d.$j.NO_ROUTE);
+          this.setConnectionState(c.$j.NO_ROUTE);
           break;
         case "disconnected":
         case "closed":
-          this.setConnectionState(d.$j.DISCONNECTED)
+          this.setConnectionState(c.$j.DISCONNECTED)
       }
     }), E(this, "handleSignalingStateChange", () => {
       let e = this.signalingState;
@@ -345,12 +345,12 @@ class h extends l.Z {
           (null === (t = this.users.get(e)) || void 0 === t ? void 0 : t.videoSSRC) == null && this.destroyOutput(e, n)
         }
       }
-    }), this.logger = new o.Y("UnifiedConnection(".concat(e, ")")), this.videoSupported = c.U8;
+    }), this.logger = new o.Y("UnifiedConnection(".concat(e, ")")), this.videoSupported = d.U8;
     let r = this.pc = new RTCPeerConnection({
       bundlePolicy: "max-bundle",
       sdpSemantics: "unified-plan"
     });
-    c.X6 ? (r.onconnectionstatechange = this.handlePeerConnectionStateChange, r.oniceconnectionstatechange = this.handlePeerConnectionStateChange) : r.oniceconnectionstatechange = this.handleIceConnectionStateChange, r.onsignalingstatechange = this.handleSignalingStateChange, r.onicegatheringstatechange = this.handleIceGatheringStateChange, r.ontrack = this.handleTrack, r.addTransceiver("audio", {
+    d.X6 ? (r.onconnectionstatechange = this.handlePeerConnectionStateChange, r.oniceconnectionstatechange = this.handlePeerConnectionStateChange) : r.oniceconnectionstatechange = this.handleIceConnectionStateChange, r.onsignalingstatechange = this.handleSignalingStateChange, r.onicegatheringstatechange = this.handleIceGatheringStateChange, r.ontrack = this.handleTrack, r.addTransceiver("audio", {
       direction: "recvonly",
       sendEncodings: [{
         maxBitrate: this.voiceBitrate

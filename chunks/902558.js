@@ -17,12 +17,12 @@ function _(e) {
   }
 }
 
-function d(e) {
+function c(e) {
   var t;
   a.ZP.setCrashInformation(_(e.context), null !== (t = e.mediaSessionId) && void 0 !== t ? t : null)
 }
 
-function c(e) {
+function d(e) {
   var t;
   let n = (null !== (t = e.channelId) && void 0 !== t ? t : "unknown") + e.context;
   switch (e.state) {
@@ -53,9 +53,9 @@ class I extends s.Z {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
-      RTC_CONNECTION_STATE: c,
+      RTC_CONNECTION_STATE: d,
       RTC_CONNECTION_VIDEO: E,
-      MEDIA_SESSION_JOINED: d
+      MEDIA_SESSION_JOINED: c
     }, n in t ? Object.defineProperty(t, n, {
       value: i,
       enumerable: !0,

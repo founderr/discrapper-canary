@@ -17,14 +17,14 @@ let u = {
     BETWEEN: l.justifyBetween,
     AROUND: l.justifyAround
   },
-  d = {
+  c = {
     START: l.alignStart,
     END: l.alignEnd,
     CENTER: l.alignCenter,
     STRETCH: l.alignStretch,
     BASELINE: l.alignBaseline
   },
-  c = {
+  d = {
     NO_WRAP: l.noWrap,
     WRAP: l.wrap,
     WRAP_REVERSE: l.wrapReverse
@@ -37,8 +37,8 @@ let u = {
       grow: l,
       basis: u,
       style: _,
-      wrap: d = !1,
-      ...c
+      wrap: c = !1,
+      ...d
     } = e, E = {
       className: n = null != n ? n : a.flexChild,
       style: {
@@ -47,9 +47,9 @@ let u = {
         flexBasis: u,
         ..._
       },
-      ...c
+      ...d
     };
-    if (!d && "string" != typeof t && 1 === r.Children.count(t)) {
+    if (!c && "string" != typeof t && 1 === r.Children.count(t)) {
       let e = r.Children.only(t);
       return E.style = {
         ...E.style,
@@ -73,8 +73,8 @@ let I = e => {
     className: n,
     direction: r = u.HORIZONTAL,
     justify: s = _.START,
-    align: l = d.STRETCH,
-    wrap: E = c.NO_WRAP,
+    align: l = c.STRETCH,
+    wrap: E = d.NO_WRAP,
     shrink: I,
     grow: T,
     basis: h,
@@ -97,4 +97,4 @@ I.defaultProps = {
   shrink: 1,
   grow: 1,
   basis: "auto"
-}, I.Child = E, I.Direction = u, I.Align = d, I.Justify = _, I.Wrap = c, t.Z = I
+}, I.Child = E, I.Direction = u, I.Align = c, I.Justify = _, I.Wrap = d, t.Z = I

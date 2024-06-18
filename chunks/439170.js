@@ -15,8 +15,8 @@ var i, r, s, o = n(392711),
   l = n(108131),
   u = n.n(l),
   _ = n(149765),
-  d = n(442837),
-  c = n(570140),
+  c = n(442837),
+  d = n(570140),
   E = n(353926),
   I = n(280234),
   T = n(653733),
@@ -28,12 +28,12 @@ var i, r, s, o = n(392711),
   m = n(271383),
   O = n(430824),
   R = n(158776),
-  C = n(885110),
-  p = n(594174),
-  g = n(981631),
-  L = n(689938);
+  p = n(885110),
+  g = n(594174),
+  C = n(981631),
+  v = n(689938);
 
-function v(e, t, n) {
+function L(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -46,25 +46,25 @@ let D = "everyone",
 
 function P(e, t, n, i) {
   switch (t) {
-    case g.Skl.ONLINE:
-    case g.Skl.OFFLINE:
-    case g.Skl.UNKNOWN:
+    case C.Skl.ONLINE:
+    case C.Skl.OFFLINE:
+    case C.Skl.UNKNOWN:
       return {
         type: "GROUP", key: t, id: t, get title() {
           switch (t) {
-            case g.Skl.ONLINE:
-              return L.Z.Messages.STATUS_ONLINE;
-            case g.Skl.OFFLINE:
-              return L.Z.Messages.STATUS_OFFLINE;
+            case C.Skl.ONLINE:
+              return v.Z.Messages.STATUS_ONLINE;
+            case C.Skl.OFFLINE:
+              return v.Z.Messages.STATUS_OFFLINE;
             default:
-              return L.Z.Messages.STATUS_UNKNOWN
+              return v.Z.Messages.STATUS_UNKNOWN
           }
         }, count: n, index: i
       };
     case "recently-online":
       return {
         type: "GROUP", key: t, id: t, get title() {
-          return L.Z.Messages.RECENTLY_ONLINE
+          return v.Z.Messages.RECENTLY_ONLINE
         }, count: n, index: i
       };
     default:
@@ -79,10 +79,10 @@ function P(e, t, n, i) {
 function y(e, t, n) {
   let i = n === f.default.getId(),
     r = R.Z.isMobileOnline(n),
-    s = i ? C.Z.getStatus() : R.Z.getStatus(n, e),
-    o = i ? C.Z.getActivities() : R.Z.getActivities(n, e),
+    s = i ? p.Z.getStatus() : R.Z.getStatus(n, e),
+    o = i ? p.Z.getActivities() : R.Z.getActivities(n, e),
     a = S.Z.getStreamForUser(n, e),
-    l = p.default.getUser(n),
+    l = g.default.getUser(n),
     u = R.Z.getLastOnlineTimestamp(n),
     {
       isRecentlyOnlineShowable: _
@@ -103,13 +103,13 @@ function y(e, t, n) {
 function U(e) {
   let t = N.Z.getChannel(e);
   return null == t ? D : null == t.memberListId ? function(e) {
-    return h.oz(g.Plq.VIEW_CHANNEL, e) ? D : u().v3(a()(e.permissionOverwrites).reduce((e, t) => {
+    return h.oz(C.Plq.VIEW_CHANNEL, e) ? D : u().v3(a()(e.permissionOverwrites).reduce((e, t) => {
       let {
         id: n,
         allow: i,
         deny: r
       } = t;
-      return _.e$(i, g.Plq.VIEW_CHANNEL) ? e.push("allow:".concat(n)) : _.e$(r, g.Plq.VIEW_CHANNEL) && e.push("deny:".concat(n)), e
+      return _.e$(i, C.Plq.VIEW_CHANNEL) ? e.push("allow:".concat(n)) : _.e$(r, C.Plq.VIEW_CHANNEL) && e.push("deny:".concat(n)), e
     }, []).sort().join(",")).toString()
   }(t) : t.memberListId
 }(s = i || (i = {})).GROUP = "GROUP", s.MEMBER = "MEMBER", s.CONTENT_INVENTORY = "CONTENT_INVENTORY", s.CONTENT_INVENTORY_GROUP = "CONTENT_INVENTORY_GROUP", s.HIDDEN_CONTENT_INVENTORY = "HIDDEN_CONTENT_INVENTORY";
@@ -194,7 +194,7 @@ class b {
     }
     let i = [],
       r = [],
-      s = this.rows.findIndex(e => null != e && "GROUP" === e.type && e.id === g.Skl.OFFLINE);
+      s = this.rows.findIndex(e => null != e && "GROUP" === e.type && e.id === C.Skl.OFFLINE);
     if (s < 0) {
       this.experimentalGroups = [], this.experimentalRows = [];
       return
@@ -204,12 +204,12 @@ class b {
     for (let e = s; e < this.rows.length; e++) {
       let t = this.rows[e];
       if (null != t && "MEMBER" === t.type) {
-        if (t.status === g.Skl.OFFLINE && null != t.lastOnlineTimestamp) {
+        if (t.status === C.Skl.OFFLINE && null != t.lastOnlineTimestamp) {
           let e = {
             ...t
           };
           i.push(e)
-        } else(t.status === g.Skl.OFFLINE || t.status === g.Skl.INVISIBLE) && r.push({
+        } else(t.status === C.Skl.OFFLINE || t.status === C.Skl.INVISIBLE) && r.push({
           ...t
         })
       }
@@ -219,7 +219,7 @@ class b {
       return (null !== (n = t.lastOnlineTimestamp) && void 0 !== n ? n : 0) - (null !== (i = e.lastOnlineTimestamp) && void 0 !== i ? i : 0)
     });
     let a = [...this.groups];
-    if (a = a.filter(e => e.id !== g.Skl.OFFLINE), i.length > 0) {
+    if (a = a.filter(e => e.id !== C.Skl.OFFLINE), i.length > 0) {
       let t = a[a.length - 1],
         n = null != t ? (null !== (e = t.index) && void 0 !== e ? e : 0) + t.count + 1 : 0,
         r = P(this.guildId, "recently-online", i.length, n);
@@ -228,13 +228,13 @@ class b {
     if (r.length > 0) {
       let e = a[a.length - 1],
         n = null != e ? (null !== (t = e.index) && void 0 !== t ? t : 0) + e.count + 1 : 0,
-        i = P(this.guildId, g.Skl.OFFLINE, r.length, n);
+        i = P(this.guildId, C.Skl.OFFLINE, r.length, n);
       a.push(i), o.push(i), o.push(...r)
     }
     this.experimentalGroups = a, this.experimentalRows = o
   }
   constructor(e, t) {
-    v(this, "guildId", void 0), v(this, "listId", void 0), v(this, "ownerId", void 0), v(this, "rows", []), v(this, "experimentalRows", []), v(this, "groups", []), v(this, "experimentalGroups", []), v(this, "members", {}), v(this, "version", 0), this.guildId = e, this.listId = t, this.updateOwnerId()
+    L(this, "guildId", void 0), L(this, "listId", void 0), L(this, "ownerId", void 0), L(this, "rows", []), L(this, "experimentalRows", []), L(this, "groups", []), L(this, "experimentalGroups", []), L(this, "members", {}), L(this, "version", 0), this.guildId = e, this.listId = t, this.updateOwnerId()
   }
 }
 let G = new class e {
@@ -243,7 +243,7 @@ let G = new class e {
     null == n && (n = this._guildLists[e] = {});
     let i = n[t];
     return null == i && ((i = new b(e, t)).setGroups([{
-      id: g.Skl.UNKNOWN,
+      id: C.Skl.UNKNOWN,
       count: 0
     }]), n[t] = i), i
   }
@@ -263,7 +263,7 @@ let G = new class e {
     this._guildLists = {}
   }
   constructor() {
-    v(this, "_guildLists", {})
+    L(this, "_guildLists", {})
   }
 };
 
@@ -284,9 +284,9 @@ function x() {
   let e = f.default.getId();
   G.forEach(null, t => t.rebuildMember(e, !0))
 }
-class V extends(r = d.ZP.Store) {
+class V extends(r = c.ZP.Store) {
   initialize() {
-    this.waitFor(p.default, O.Z, N.Z, m.ZP, R.Z, C.Z, f.default, A.Z, S.Z, E.Z), this.syncWith([C.Z], x), this.syncWith([S.Z], B)
+    this.waitFor(g.default, O.Z, N.Z, m.ZP, R.Z, p.Z, f.default, A.Z, S.Z, E.Z), this.syncWith([p.Z], x), this.syncWith([S.Z], B)
   }
   getProps(e, t) {
     let n = G.get(e, U(t));
@@ -308,7 +308,7 @@ class V extends(r = d.ZP.Store) {
     return G.get(e, U(t)).rows
   }
 }
-v(V, "displayName", "ChannelMemberStore"), t.ZP = new V(c.Z, {
+L(V, "displayName", "ChannelMemberStore"), t.ZP = new V(d.Z, {
   CONNECTION_OPEN: w,
   OVERLAY_INITIALIZE: w,
   GUILD_MEMBER_LIST_UPDATE: function(e) {

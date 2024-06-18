@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 });
 var i = n(735250);
@@ -14,24 +14,24 @@ var r = n(481060),
   u = n(917943),
   _ = n(379916);
 
-function d(e) {
+function c(e) {
   let {
     user: t,
     setNote: n,
-    autoFocus: d,
-    lastSection: c
+    autoFocus: c,
+    lastSection: d
   } = e, {
     trackUserProfileAction: E
   } = (0, o.KZ)();
   return (0, i.jsxs)(a.Z, {
-    lastSection: c,
+    lastSection: d,
     children: [(0, i.jsx)(r.Heading, {
       variant: "eyebrow",
       className: _.title,
       children: l.Z.Messages.NOTE
     }), (0, i.jsx)(s.Z, {
       userId: t.id,
-      autoFocus: n || d,
+      autoFocus: n || c,
       className: u.note,
       onUpdate: () => E({
         action: "SET_NOTE"

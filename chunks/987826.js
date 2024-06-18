@@ -19,20 +19,20 @@ function u(e) {
     className: r,
     state: u,
     isInline: _,
-    onClick: d
-  } = e, c = null, E = a.Z.Colors.HEADER_PRIMARY;
-  (null == u ? void 0 : u.isActive) && !_ ? c = l.active : (null == u ? void 0 : null === (t = u.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? c = l.error : (null == u ? void 0 : u.hasValue) && !_ && (c = l.set);
+    onClick: c
+  } = e, d = null, E = a.Z.Colors.HEADER_PRIMARY;
+  (null == u ? void 0 : u.isActive) && !_ ? d = l.active : (null == u ? void 0 : null === (t = u.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? d = l.error : (null == u ? void 0 : u.hasValue) && !_ && (d = l.set);
   let I = (0, i.jsx)(a.Z, {
     size: _ ? a.Z.Sizes.SIZE_16 : a.Z.Sizes.SIZE_14,
     color: E,
     className: s()(l.option, {
       [l.inline]: _
-    }, c, r),
+    }, d, r),
     children: n + (_ ? ":" : "")
   });
-  return null == d ? I : (0, i.jsx)(o.Clickable, {
+  return null == c ? I : (0, i.jsx)(o.Clickable, {
     className: l.clickable,
-    onClick: () => d(n),
+    onClick: () => c(n),
     children: I
   })
 }

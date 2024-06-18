@@ -5,8 +5,8 @@ var o, a = n(442837),
   l = n(570140),
   u = n(238514),
   _ = n(695346),
-  d = n(581883),
-  c = n(283595);
+  c = n(581883),
+  d = n(283595);
 
 function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ class A extends(o = a.ZP.PersistedStore) {
   initialize(e) {
     i = (T = {
       ...null != e ? e : I
-    }).applicationId, r = T.originURL, this.waitFor(d.Z, u.Z), this.syncWith([d.Z, u.Z], () => !0), c.Z.whenInitialized(() => {
+    }).applicationId, r = T.originURL, this.waitFor(c.Z, u.Z), this.syncWith([c.Z, u.Z], () => !0), d.Z.whenInitialized(() => {
       S = !0
     })
   }

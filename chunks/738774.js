@@ -10,7 +10,7 @@ n.d(t, {
     return _
   },
   m8: function() {
-    return d
+    return c
   },
   uq: function() {
     return a
@@ -47,6 +47,6 @@ function _(e) {
   return n === i.M.FETCHED ? u(s) : null === (t = null == a ? void 0 : a.hasFeature(o.oNc.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t
 }
 
-function d(e) {
+function c(e) {
   return null != e && e.includes(s.o.REAPPLICATION_DISABLED)
 }

@@ -4,7 +4,7 @@ n.d(t, {
     return A
   },
   DR: function() {
-    return c
+    return d
   },
   F$: function() {
     return h
@@ -19,7 +19,7 @@ n.d(t, {
     return f
   },
   mK: function() {
-    return d
+    return c
   },
   oK: function() {
     return E
@@ -41,7 +41,7 @@ var a = n(549616),
   u = n(161226),
   _ = n(981631);
 n(597688), n(574709), n(1870), n(328347);
-let d = e => {
+let c = e => {
     let {
       openInLayer: t = !0,
       ...n
@@ -52,7 +52,7 @@ let d = e => {
     });
     t && (0, s.jN)(_.S9g.COLLECTIBLES_SHOP)
   },
-  c = () => {
+  d = () => {
     r.Z.dispatch({
       type: "COLLECTIBLES_SHOP_CLOSE"
     }), (0, s.xf)()

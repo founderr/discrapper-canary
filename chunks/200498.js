@@ -25,8 +25,8 @@ var o = n(592125),
   l = n(496675),
   u = n(700785),
   _ = n(146085),
-  d = n(427679),
-  c = n(981631);
+  c = n(427679),
+  d = n(981631);
 
 function E(e, t, n) {
   var r, s;
@@ -51,14 +51,14 @@ function T(e) {
   return (0, r.e7)([l.Z, a.Z, o.Z], () => {
     let t = o.Z.getChannel(e),
       n = a.Z.getGuild(null == t ? void 0 : t.getGuildId());
-    return !!(l.Z.can(c.Plq.ADMINISTRATOR, n) || l.Z.can(c.Plq.MANAGE_ROLES, t, void 0, void 0, !0) || l.Z.can(_.N, t)) || !1
+    return !!(l.Z.can(d.Plq.ADMINISTRATOR, n) || l.Z.can(d.Plq.MANAGE_ROLES, t, void 0, void 0, !0) || l.Z.can(_.N, t)) || !1
   }, [e])
 }
 
 function h(e) {
-  return (0, r.e7)([o.Z, l.Z], () => null != e && l.Z.can(c.Plq.MUTE_MEMBERS, o.Z.getChannel(e)), [e])
+  return (0, r.e7)([o.Z, l.Z], () => null != e && l.Z.can(d.Plq.MUTE_MEMBERS, o.Z.getChannel(e)), [e])
 }
 
 function S(e) {
-  return !!(null != e && e.isGuildStageVoice() && s.Z.isLurking(e.guild_id) && d.Z.isPublic(e.id)) && l.Z.can(_.gl, e)
+  return !!(null != e && e.isGuildStageVoice() && s.Z.isLurking(e.guild_id) && c.Z.isPublic(e.id)) && l.Z.can(_.gl, e)
 }

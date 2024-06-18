@@ -19,10 +19,10 @@ n.Z = a.memo(function(e) {
     audio: t,
     className: s,
     waveformSettings: p
-  } = e, [N, v] = a.useState({
+  } = e, [N, _] = a.useState({
     width: 0,
     height: 0
-  }), _ = a.useRef(null), D = a.useMemo(() => {
+  }), v = a.useRef(null), D = a.useMemo(() => {
     var e;
     let n = null !== (e = null == t ? void 0 : t.duration) && void 0 !== e ? e : 1;
     return {
@@ -31,22 +31,22 @@ n.Z = a.memo(function(e) {
       duration: n,
       ...null != p ? p : {}
     }
-  }, [t, p]), O = (0, f.b1)(n), x = (0, f.NN)(O, _.current, D), S = (0, c.ZP)(), E = (0, d.Sl)((0, u.wj)(S) ? h.Il.PRIMARY_300 : h.Il.PRIMARY_700), y = null == O || null == x, A = (0 === N.width || 0 === N.height || y) && null != n, b = a.useCallback(() => {
-    null != _.current && v({
-      width: _.current.offsetWidth,
-      height: _.current.offsetHeight
+  }, [t, p]), O = (0, f.b1)(n), S = (0, f.NN)(O, v.current, D), x = (0, c.ZP)(), y = (0, d.Sl)((0, u.wj)(x) ? h.Il.PRIMARY_300 : h.Il.PRIMARY_700), E = null == O || null == S, A = (0 === N.width || 0 === N.height || E) && null != n, b = a.useCallback(() => {
+    null != v.current && _({
+      width: v.current.offsetWidth,
+      height: v.current.offsetHeight
     })
   }, []);
   return a.useEffect(() => {
-    if (null != _.current) {
+    if (null != v.current) {
       let e = new ResizeObserver((0, r.debounce)(b, 50));
-      return e.observe(_.current), () => {
+      return e.observe(v.current), () => {
         e.disconnect()
       }
     }
   }, [b]), a.useEffect(() => {
-    if (null == _.current) return;
-    let e = _.current,
+    if (null == v.current) return;
+    let e = v.current,
       n = e.getContext("2d");
     if (null == n) return;
     let {
@@ -54,23 +54,23 @@ n.Z = a.memo(function(e) {
       height: l
     } = e;
     if (0 !== N.width && 0 !== N.height) {
-      if (null != x && x.length > 0) {
-        let e = t / x.length,
+      if (null != S && S.length > 0) {
+        let e = t / S.length,
           a = -(e * (m.nl.waveformBarWidth - 1));
-        n.clearRect(0, 0, t, l), n.fillStyle = E.hex;
-        for (let t = 0; t < x.length; t++) {
-          let s = x[t] * l,
+        n.clearRect(0, 0, t, l), n.fillStyle = y.hex;
+        for (let t = 0; t < S.length; t++) {
+          let s = S[t] * l,
             i = t * e + a,
             r = l / 2 - s / 2;
           n.fillRect(i, r, e - a, s)
         }
       }
     }
-  }, [E, N, S, x]), (0, l.jsxs)("div", {
+  }, [y, N, x, S]), (0, l.jsxs)("div", {
     className: i()(g.container, s),
     children: [(0, l.jsx)("canvas", {
       className: g.waveformCanvas,
-      ref: _,
+      ref: v,
       width: 4 * N.width,
       height: 4 * N.height
     }), A && (0, l.jsx)("div", {

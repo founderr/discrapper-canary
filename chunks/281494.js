@@ -29,8 +29,8 @@ var i, r, s, o, a = n(544891),
   l = n(570140),
   u = n(904245),
   _ = n(598077),
-  d = n(944486),
-  c = n(960048),
+  c = n(944486),
+  d = n(960048),
   E = n(981631);
 
 function I(e, t, n) {
@@ -137,7 +137,7 @@ async function N(e) {
       s = null !== (i = e.body) && void 0 !== i ? i : null;
     null != s && t.push(s), n.set(r, 1)
   } catch (e) {
-    c.Z.captureException(e), n.set(r, 2)
+    d.Z.captureException(e), n.set(r, 2)
   }
   return l.Z.dispatch({
     type: "CREATE_REFERRALS_SUCCESS",
@@ -162,7 +162,7 @@ async function A(e) {
     if (l.Z.dispatch({
         type: "BILLING_CREATE_REFERRAL_FAIL"
       }), e.body.code === E.evJ.INVALID_MESSAGE_SEND_USER) {
-      let t = d.Z.getCurrentlySelectedChannelId();
+      let t = c.Z.getCurrentlySelectedChannelId();
       null != t && u.Z.sendClydeError(t, e.body.code)
     }
   }

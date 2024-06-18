@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(692547),
   u = n(186325),
   _ = n(84735),
-  d = n(180035),
-  c = n(235949);
+  c = n(180035),
+  d = n(235949);
 let E = {
     mass: 1,
     tension: 250
@@ -43,9 +43,9 @@ let E = {
       innerRef: f
     } = e, {
       reducedMotion: N
-    } = r.useContext(u.S), A = r.useRef(null), [m, O] = r.useState(!1), R = (0, d.d)(l.Z.unsafe_rawColors.PRIMARY_400).spring(), C = (0, d.d)(l.Z.unsafe_rawColors.GREEN_360).spring(), {
-      state: p,
-      opacity: g
+    } = r.useContext(u.S), A = r.useRef(null), [m, O] = r.useState(!1), R = (0, c.d)(l.Z.unsafe_rawColors.PRIMARY_400).spring(), p = (0, c.d)(l.Z.unsafe_rawColors.GREEN_360).spring(), {
+      state: g,
+      opacity: C
     } = (0, a.useSpring)({
       config: E,
       opacity: T ? .3 : 1,
@@ -56,25 +56,25 @@ let E = {
       within: !0,
       offset: -2,
       children: (0, i.jsxs)(a.animated.div, {
-        className: o()(c.container, h, {
-          [c.checked]: s,
-          [c.disabled]: T
+        className: o()(d.container, h, {
+          [d.checked]: s,
+          [d.disabled]: T
         }),
         onMouseDown: () => !T && O(!0),
         onMouseUp: () => O(!1),
         onMouseLeave: () => O(!1),
         style: {
-          opacity: g,
-          backgroundColor: p.to({
-            output: [R, C]
+          opacity: C,
+          backgroundColor: g.to({
+            output: [R, p]
           })
         },
         children: [(0, i.jsxs)(a.animated.svg, {
-          className: c.slider,
+          className: d.slider,
           viewBox: "0 0 28 20",
           preserveAspectRatio: "xMinYMid meet",
           style: {
-            left: p.to({
+            left: g.to({
               range: [0, .3, .7, 1],
               output: [-3, 1, 8, 12]
             })
@@ -82,19 +82,19 @@ let E = {
           "aria-hidden": !0,
           children: [(0, i.jsx)(a.animated.rect, {
             fill: "white",
-            x: p.to({
+            x: g.to({
               range: [0, .3, .7, 1],
               output: [4, 0, 0, 4]
             }),
-            y: p.to({
+            y: g.to({
               range: [0, .3, .7, 1],
               output: [0, 1, 1, 0]
             }),
-            height: p.to({
+            height: g.to({
               range: [0, .3, .7, 1],
               output: [20, 18, 18, 20]
             }),
-            width: p.to({
+            width: g.to({
               range: [0, .3, .7, 1],
               output: [20, 28, 28, 20]
             }),
@@ -122,14 +122,14 @@ let E = {
                 })
               })]
             })
-          }(p, R, C, N.enabled)]
+          }(g, R, p, N.enabled)]
         }), (0, i.jsx)("input", {
           id: t,
           type: "checkbox",
           ref: e => {
             A.current = e, null != f && (f.current = e)
           },
-          className: c.input,
+          className: d.input,
           tabIndex: T ? -1 : 0,
           onKeyDown: function(e) {
             if (!T && !e.repeat)(" " === e.key || "Enter" === e.key) && O(!0)

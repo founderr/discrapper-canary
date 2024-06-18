@@ -5,8 +5,8 @@ var i, r, s, o = n(735250),
   l = n(120356),
   u = n.n(l),
   _ = n(481060),
-  d = n(285952),
-  c = n(550118);
+  c = n(285952),
+  d = n(550118);
 
 function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -17,8 +17,8 @@ function E(e, t, n) {
   }) : e[t] = n, e
 }(s = i || (i = {})).SINGLE_AVATAR = "1", s.MULTIPLE_AVATAR = "2";
 let I = {
-  [_.AvatarSizes.SIZE_32]: c.avatarSmall,
-  [_.AvatarSizes.SIZE_40]: c.avatarLarge
+  [_.AvatarSizes.SIZE_32]: d.avatarSmall,
+  [_.AvatarSizes.SIZE_40]: d.avatarLarge
 };
 class T extends(r = a.Component) {
   render() {
@@ -28,29 +28,29 @@ class T extends(r = a.Component) {
       className: n
     } = this.props;
     return "2" === e ? (0, o.jsxs)("div", {
-      className: u()(c.multiplePlaceholder, n),
-      children: [(0, o.jsxs)(d.Z, {
+      className: u()(d.multiplePlaceholder, n),
+      children: [(0, o.jsxs)(c.Z, {
         children: [(0, o.jsx)("div", {
-          className: u()(c.placeholderAvatar, I[t], c.avatarMasked)
+          className: u()(d.placeholderAvatar, I[t], d.avatarMasked)
         }), (0, o.jsx)("div", {
-          className: u()(c.placeholderAvatar, I[t], c.avatarMasked)
+          className: u()(d.placeholderAvatar, I[t], d.avatarMasked)
         }), (0, o.jsx)("div", {
-          className: u()(c.placeholderAvatar, I[t])
+          className: u()(d.placeholderAvatar, I[t])
         })]
-      }), (0, o.jsx)(d.Z, {
+      }), (0, o.jsx)(c.Z, {
         grow: 1,
-        className: c.mulitplePlaceholderUsername,
+        className: d.mulitplePlaceholderUsername,
         style: {
           maxWidth: this.placeholderMaxWidth
         }
       })]
-    }) : (0, o.jsxs)(d.Z, {
-      className: u()(c.placeholder, n),
+    }) : (0, o.jsxs)(c.Z, {
+      className: u()(d.placeholder, n),
       children: [(0, o.jsx)("div", {
-        className: u()(c.placeholderAvatar, I[t])
-      }), (0, o.jsx)(d.Z, {
+        className: u()(d.placeholderAvatar, I[t])
+      }), (0, o.jsx)(c.Z, {
         grow: 1,
-        className: c.placeholderUsername,
+        className: d.placeholderUsername,
         style: {
           maxWidth: this.placeholderMaxWidth
         }

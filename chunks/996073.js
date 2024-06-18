@@ -20,10 +20,10 @@ let _ = Object.freeze({
 t.Z = function(e, t, n) {
   let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
     u = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
-    d = (0, r.e7)([a.Z], () => a.Z.getScrollPosition());
+    c = (0, r.e7)([a.Z], () => a.Z.getScrollPosition());
   (0, i.useEffect)(() => {
     let i = e.current;
-    if (null != i && t === d) setTimeout(() => {
+    if (null != i && t === c) setTimeout(() => {
       let e = requestAnimationFrame(() => {
         i.scrollIntoView({
           behavior: u ? "auto" : "smooth",
@@ -32,5 +32,5 @@ t.Z = function(e, t, n) {
       });
       return () => cancelAnimationFrame(e)
     }, l)
-  }, [e, t, d, u, n, l])
+  }, [e, t, c, u, n, l])
 }

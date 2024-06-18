@@ -31,21 +31,21 @@ n.d(t, {
     return N
   }
 });
-var i, r, s, o, a, l, u, _, d = n(474936),
-  c = n(231338);
+var i, r, s, o, a, l, u, _, c = n(474936),
+  d = n(231338);
 let E = 3,
   I = "(max-width: 485px)",
   T = "(max-height: 450px)";
 (i = a || (a = {})).GATING = "GATING", i.GROUP = "GROUP", i.DETAILS = "DETAILS", i.BENEFITS = "BENEFITS", i.CHANNEL_BENEFITS = "CHANNEL_BENEFITS", i.INTANGIBLE_BENEFITS = "INTANGIBLE_BENEFITS ", i.DESIGN = "DESIGN", i.CONFIRMATION = "CONFIRMATION", i.MEMBERS = "MEMBERS", (r = l || (l = {}))[r.CHANNEL = 1] = "CHANNEL", r[r.INTANGIBLE = 2] = "INTANGIBLE", (s = u || (u = {}))[s.SOME_CHANNELS = 0] = "SOME_CHANNELS", s[s.ALL_CHANNELS = 1] = "ALL_CHANNELS";
 let h = [{
-  interval: d.rV.DAY,
+  interval: c.rV.DAY,
   interval_count: 1
 }, {
-  interval: d.rV.DAY,
+  interval: c.rV.DAY,
   interval_count: 7
 }];
 (o = _ || (_ = {}))[o.NONE = 0] = "NONE", o[o.IN_SUBSCRIPTION_SERVER = 1] = "IN_SUBSCRIPTION_SERVER", o[o.SUBSCRIBED = 2] = "SUBSCRIBED";
-let S = "https://".concat(c.$R, "/creators"),
+let S = "https://".concat(d.$R, "/creators"),
   f = 90,
   N = Object.freeze({
     PROMO_PAGE_GUIDE: "https://discord.com/creators/say-hello-to-promo-pages-our-new-server-subscriptions-feature",

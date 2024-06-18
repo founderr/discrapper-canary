@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   E: function() {
-    return c
+    return d
   }
 });
 var i, r, s = n(735250),
@@ -11,15 +11,15 @@ var i, r, s = n(735250),
   u = n(692547),
   _ = n(855616);
 (i = r || (r = {})).XSMALL = "xsmall", i.SMALL = "small", i.LARGE = "large";
-let d = "indeterminate";
+let c = "indeterminate";
 
-function c(e) {
+function d(e) {
   let t, {
       className: n,
       percent: i,
       size: r = "small",
       foregroundColor: a = u.Z.unsafe_rawColors.BRAND_500.css,
-      backgroundColor: c = "var(--background-modifier-active)",
+      backgroundColor: d = "var(--background-modifier-active)",
       foregroundGradientColor: E,
       animate: I = !0
     } = e,
@@ -31,9 +31,9 @@ function c(e) {
   }, (0, s.jsx)("div", {
     className: l()(n, _.progress, _[r]),
     style: {
-      backgroundColor: c
+      backgroundColor: d
     },
-    children: T !== d && "number" == typeof T ? (0, s.jsx)("div", {
+    children: T !== c && "number" == typeof T ? (0, s.jsx)("div", {
       className: l()(_.progressBar, _[r], {
         [_.animating]: I
       }),
@@ -56,4 +56,4 @@ function c(e) {
     })
   })
 }
-c.Sizes = r, c.INDETERMINATE = d
+d.Sizes = r, d.INDETERMINATE = c

@@ -4,13 +4,13 @@ n.d(t, {
     return u
   },
   Ty: function() {
-    return d
+    return c
   },
   lW: function() {
     return E
   },
   sr: function() {
-    return c
+    return d
   },
   zP: function() {
     return _
@@ -31,7 +31,7 @@ function _() {
   i.default.disconnect()
 }
 
-function d(e, t) {
+function c(e, t) {
   if (!__OVERLAY__) throw new r.Z({
     errorCode: a.lTL.UNKNOWN_ERROR
   }, "called from wrong app context");
@@ -40,7 +40,7 @@ function d(e, t) {
   }, t => e((0, o.H)(t)))
 }
 
-function c(e, t) {
+function d(e, t) {
   if (__OVERLAY__) throw new r.Z({
     errorCode: a.lTL.UNKNOWN_ERROR
   }, "called from wrong app context");

@@ -8,8 +8,8 @@ var i = n(735250),
   l = n.n(a),
   u = n(920906),
   _ = n(91192),
-  d = n(946188),
-  c = n(477690),
+  c = n(946188),
+  d = n(477690),
   E = n(481060),
   I = n(80932),
   T = n(351773),
@@ -21,18 +21,18 @@ var i = n(735250),
   m = n(981631),
   O = n(689938),
   R = n(809605);
-let C = (0, f.hQ)(),
-  p = d.Z.convert.fromCodePoint("1f44f"),
-  g = (0, A.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
-  L = (0, A.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
-  v = e => {
+let p = (0, f.hQ)(),
+  g = c.Z.convert.fromCodePoint("1f44f"),
+  C = (0, A.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
+  v = (0, A.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
+  L = e => {
     let {
       fade: t,
       surrogate: n,
       onClick: r,
       delay: s,
       index: o
-    } = e, a = (0, _.JA)("item-".concat(o)), l = N.ZP.getURL(p + n), c = (0, u.useSpring)({
+    } = e, a = (0, _.JA)("item-".concat(o)), l = N.ZP.getURL(g + n), d = (0, u.useSpring)({
       opacity: 1,
       from: {
         opacity: t ? 0 : 1
@@ -47,7 +47,7 @@ let C = (0, f.hQ)(),
       className: R.diversityEmojiItem,
       children: (0, i.jsx)(u.animated.div, {
         "aria-label": function(e) {
-          switch (d.Z.convert.toCodePoint(e)) {
+          switch (c.Z.convert.toCodePoint(e)) {
             case "1f3fb":
               return O.Z.Messages.EMOJI_MODIFIER_LIGHT_SKIN_TONE;
             case "1f3fc":
@@ -65,7 +65,7 @@ let C = (0, f.hQ)(),
         className: R.diversityEmojiItemImage,
         style: {
           backgroundImage: 'url("'.concat(l, '")'),
-          ...c
+          ...d
         }
       })
     })
@@ -76,21 +76,21 @@ let C = (0, f.hQ)(),
       selectedSurrogate: n,
       onClick: s,
       hasTabWrapper: a
-    } = e, d = (0, h.Z)("diversity"), c = (0, u.useSpring)({
-      height: (L + 2 * g) * (S.gw.length + 1),
+    } = e, c = (0, h.Z)("diversity"), d = (0, u.useSpring)({
+      height: (v + 2 * C) * (S.gw.length + 1),
       from: {
-        height: L
+        height: v
       },
       config: {
         duration: 125
       }
     });
     r.useEffect(() => {
-      d.focusFirstVisibleItem()
-    }, [d]);
+      c.focusFirstVisibleItem()
+    }, [c]);
     let E = ["", ...S.gw];
     return l().remove(E, e => e === n), E.unshift(n), (0, i.jsx)(_.bG, {
-      navigator: d,
+      navigator: c,
       children: (0, i.jsx)(_.SJ, {
         children: e => {
           let {
@@ -104,9 +104,9 @@ let C = (0, f.hQ)(),
             className: o()(R.diversitySelectorOptions, {
               [R.diversitySelectorOptionsHasTabWrapper]: a
             }),
-            style: c,
+            style: d,
             role: "listbox",
-            children: E.map((e, t) => (0, i.jsx)(v, {
+            children: E.map((e, t) => (0, i.jsx)(L, {
               index: t,
               fade: 0 !== t,
               delay: 20 * t,
@@ -124,12 +124,12 @@ t.Z = e => {
     selectedSurrogate: n,
     className: s,
     hasTabWrapper: o
-  } = e, a = N.ZP.getURL(p + n), [l, u] = r.useState(!1), _ = (0, T.Z)(null, () => u(!1)), d = r.useRef(null);
+  } = e, a = N.ZP.getURL(g + n), [l, u] = r.useState(!1), _ = (0, T.Z)(null, () => u(!1)), c = r.useRef(null);
   return (0, i.jsxs)("div", {
     ref: _,
     className: s,
     children: [(0, i.jsx)(E.Clickable, {
-      innerRef: d,
+      innerRef: c,
       className: R.diversitySelectorButton,
       onClick: () => {
         u(!0)
@@ -137,7 +137,7 @@ t.Z = e => {
       "aria-label": O.Z.Messages.EMOJI_MODIFIER_MENU_BUTTON,
       "aria-haspopup": !0,
       "aria-expanded": l,
-      "aria-controls": C,
+      "aria-controls": p,
       tabIndex: l ? -1 : 0,
       children: (0, i.jsx)("div", {
         className: R.diversityEmojiItemImage,
@@ -147,10 +147,10 @@ t.Z = e => {
       })
     }), l ? (0, i.jsx)("div", {
       onKeyDown: e => {
-        e.keyCode === m.yXg.ESCAPE && (e.stopPropagation(), u(!1), null != d.current && d.current.focus())
+        e.keyCode === m.yXg.ESCAPE && (e.stopPropagation(), u(!1), null != c.current && c.current.focus())
       },
       children: (0, i.jsx)(D, {
-        id: C,
+        id: p,
         hasTabWrapper: o,
         selectedSurrogate: n,
         onClick: e => {

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   GI: function() {
-    return d
+    return c
   },
   Jt: function() {
     return a
@@ -56,16 +56,16 @@ function _(e) {
   } = e, _ = r.lazy(() => u({
     createPromise: t,
     webpackId: n
-  })), d = e => (0, i.jsx)(r.Suspense, {
+  })), c = e => (0, i.jsx)(r.Suspense, {
     fallback: null != o ? o() : s()(),
     children: (0, i.jsx)(_, {
       ...e
     })
   });
-  return l && (d = r.memo(d)), d.displayName = "Suspense(".concat(a || "Unknown", ")"), d
+  return l && (c = r.memo(c)), c.displayName = "Suspense(".concat(a || "Unknown", ")"), c
 }
 
-function d(e) {
+function c(e) {
   let {
     createPromise: t,
     webpackId: n,

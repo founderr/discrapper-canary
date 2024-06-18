@@ -15,26 +15,26 @@ function l(e) {
   let {
     navId: u,
     scrollerRef: _,
-    state: d,
-    onFocus: c
+    state: c,
+    onFocus: d
   } = e, {
     renderWindow: E
   } = i.useContext(o.ZP), I = (e, t) => {
     var n;
-    if (null === (n = _.current) || void 0 === n || n.scrollToTop(), e && null != d.query) {
-      let e = d.query.typeInfo.focusMode,
-        n = !(e === a.QZ.MANUAL || e === a.QZ.AUTO_WHEN_FILTERED && 0 === d.query.queryText.length);
-      d.isVisible && (!0 !== t || !1 !== n) ? (h.setFocus("0"), null == c || c(0)) : (h.setFocus(null), null == c || c(null))
+    if (null === (n = _.current) || void 0 === n || n.scrollToTop(), e && null != c.query) {
+      let e = c.query.typeInfo.focusMode,
+        n = !(e === a.QZ.MANUAL || e === a.QZ.AUTO_WHEN_FILTERED && 0 === c.query.queryText.length);
+      c.isVisible && (!0 !== t || !1 !== n) ? (h.setFocus("0"), null == d || d(0)) : (h.setFocus(null), null == d || d(null))
     }
   }, T = e => {
     var t;
-    if (null === (t = _.current) || void 0 === t || t.scrollToBottom(), e && null != d.query && d.query.resultCount > 0) {
-      let e = d.query.resultCount - 1;
-      h.setFocus(e.toString()), null == c || c(e)
+    if (null === (t = _.current) || void 0 === t || t.scrollToBottom(), e && null != c.query && c.query.resultCount > 0) {
+      let e = c.query.resultCount - 1;
+      h.setFocus(e.toString()), null == d || d(e)
     }
   }, h = (0, r.ZP)({
     id: u,
-    isEnabled: d.isVisible,
+    isEnabled: c.isVisible,
     orientation: s.hy.VERTICAL,
     useVirtualFocus: !0,
     setFocus: (e, t) => {
@@ -45,7 +45,7 @@ function l(e) {
           node: n
         })
       }
-      null == c || c(+t)
+      null == d || d(+t)
     },
     onNavigateNextAtEnd: () => I(!0),
     onNavigatePreviousAtStart: () => T(!0),
@@ -54,5 +54,5 @@ function l(e) {
   });
   return i.useEffect(() => {
     I(!0, !0)
-  }, [null === (t = d.query) || void 0 === t ? void 0 : t.type, null === (n = d.query) || void 0 === n ? void 0 : n.queryText, null === (l = d.query) || void 0 === l ? void 0 : l.isLoading, d.isVisible]), h
+  }, [null === (t = c.query) || void 0 === t ? void 0 : t.type, null === (n = c.query) || void 0 === n ? void 0 : n.queryText, null === (l = c.query) || void 0 === l ? void 0 : l.isLoading, c.isVisible]), h
 }

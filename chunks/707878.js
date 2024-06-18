@@ -3,37 +3,37 @@ n(47120);
 var i = n(735250),
   s = n(470079),
   l = n(442837),
-  a = n(481060),
-  o = n(13245),
+  o = n(481060),
+  a = n(13245),
   r = n(237997),
-  d = n(153124),
-  c = n(766032),
+  c = n(153124),
+  d = n(766032),
   u = n(987650),
   h = n(981631),
   p = n(689938),
   f = n(696756);
 let E = Object.values(u.wF).map(e => 100 * e),
-  Z = (0, d.hQ)();
-class g extends s.PureComponent {
+  g = (0, c.hQ)();
+class m extends s.PureComponent {
   handleUpdateBackgroundOpacity(e) {
-    o.Z.setTextWidgetOpacity((0, c.Z)(e / 100)), o.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, {
+    a.Z.setTextWidgetOpacity((0, d.Z)(e / 100)), a.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, {
       text_opacity_slider: e
     })
   }
   handlePreviewBackgroundOpacity(e) {
-    o.Z.setTextWidgetOpacity((0, c.Z)(e / 100))
+    a.Z.setTextWidgetOpacity((0, d.Z)(e / 100))
   }
   render() {
     return (0, i.jsxs)("div", {
       className: f.container,
-      children: [(0, i.jsx)(a.FormTitle, {
-        id: Z,
-        tag: a.FormTitleTags.H5,
+      children: [(0, i.jsx)(o.FormTitle, {
+        id: g,
+        tag: o.FormTitleTags.H5,
         className: f.title,
         children: p.Z.Messages.FORM_LABEL_OVERLAY_CHAT_OPACITY
       }), (0, i.jsx)("div", {
         className: f.sliderContainer,
-        children: (0, i.jsx)(a.Slider, {
+        children: (0, i.jsx)(o.Slider, {
           mini: !0,
           initialValue: this.initialValue,
           defaultValue: this.initialValue,
@@ -46,7 +46,7 @@ class g extends s.PureComponent {
           onMarkerRender: h.dG4,
           equidistant: !0,
           stickToMarkers: !0,
-          "aria-labelledby": Z
+          "aria-labelledby": g
         })
       })]
     })
@@ -63,4 +63,4 @@ class g extends s.PureComponent {
 }
 t.Z = l.ZP.connectStores([r.Z], () => ({
   opacity: r.Z.getTextWidgetOpacity()
-}))(g)
+}))(m)

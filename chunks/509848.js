@@ -4,7 +4,7 @@ n.d(t, {
     return u
   },
   ZP: function() {
-    return d
+    return c
   },
   dj: function() {
     return l
@@ -34,7 +34,7 @@ function _(e) {
     t[n] = e
   }), t
 }
-class d {
+class c {
   reset() {
     this._subscriptions = {}
   }

@@ -9,18 +9,18 @@ t.Z = e => {
   (0, o.V)(e);
   let u = (0, r.e7)([s.Z], () => s.Z.profileEffects),
     _ = u.reduce((t, n, i) => (n.id === e && (t = i), t), 0),
-    [, d] = i.useState(_),
-    c = i.useRef(_);
+    [, c] = i.useState(_),
+    d = i.useRef(_);
   return i.useEffect(() => {
     n(e), l(s.Z.getProfileEffectById(e))
   }, [e, u]), {
     increment: () => {
-      let e = (c.current + 1) % u.length;
-      c.current = e, d(e), n(u[e].id), l(u[e])
+      let e = (d.current + 1) % u.length;
+      d.current = e, c(e), n(u[e].id), l(u[e])
     },
     decrement: () => {
-      let e = 0 === c.current ? u.length - 1 : c.current - 1;
-      c.current = e, d(e), n(u[e].id), l(u[e])
+      let e = 0 === d.current ? u.length - 1 : d.current - 1;
+      d.current = e, c(e), n(u[e].id), l(u[e])
     },
     id: t,
     preset: a

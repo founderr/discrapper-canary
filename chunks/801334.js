@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 }), n(312677), n(411104), n(47120);
 var i = n(259443),
@@ -20,9 +20,9 @@ function l(e, t, n) {
 }
 let u = new i.Y("SpeedTester"),
   _ = 0;
-class d extends r.Z {
+class c extends r.Z {
   static create(e, t) {
-    let n = new d(e);
+    let n = new c(e);
     return u.info("Creating connection to ".concat(t.address, ":").concat(t.port, " with audio ssrc: ").concat(t.ssrc)), n.initialize(t), n
   }
   initialize(e) {

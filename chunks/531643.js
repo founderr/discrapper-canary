@@ -19,8 +19,8 @@ var r = n(120356),
   l = n(355314),
   u = n(153124),
   _ = n(310752),
-  d = n(731994),
-  c = n(239792);
+  c = n(731994),
+  d = n(239792);
 
 function E(e) {
   let {
@@ -31,7 +31,7 @@ function E(e) {
     icons: E,
     fileSize: I,
     onClose: T
-  } = e, h = (0, u.Dt)(), S = null != E ? E : d.J6;
+  } = e, h = (0, u.Dt)(), S = null != E ? E : c.J6;
   return r ? (0, i.jsx)(l.Z, {
     transitionState: o,
     onClose: T,
@@ -41,17 +41,17 @@ function E(e) {
     "aria-labelledby": h,
     transitionState: o,
     children: (0, i.jsx)("div", {
-      className: s()(c.uploadDropModal, c.error),
+      className: s()(d.uploadDropModal, d.error),
       children: (0, i.jsxs)("div", {
-        className: c.inner,
+        className: d.inner,
         children: [(0, i.jsx)(_.Z, {
           icons: S
         }), (0, i.jsx)("div", {
           id: h,
-          className: c.title,
+          className: d.title,
           children: t
         }), (0, i.jsx)("div", {
-          className: c.instructions,
+          className: d.instructions,
           children: n
         })]
       })

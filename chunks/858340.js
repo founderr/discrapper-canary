@@ -3,17 +3,17 @@ var i, r, s, o, a = n(442837),
   l = n(570140),
   u = n(981631);
 let _ = {};
-class d extends(o = a.ZP.Store) {
+class c extends(o = a.ZP.Store) {
   getHookError(e) {
     return _[e]
   }
 }
-s = "HookErrorStore", (r = "displayName") in(i = d) ? Object.defineProperty(i, r, {
+s = "HookErrorStore", (r = "displayName") in(i = c) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.Z = new d(l.Z, {
+}) : i[r] = s, t.Z = new c(l.Z, {
   MEDIA_ENGINE_SET_GO_LIVE_SOURCE: function() {
     _ = {}
   },

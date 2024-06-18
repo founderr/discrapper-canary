@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 });
 var i = n(735250);
@@ -14,12 +14,12 @@ var r = n(442837),
   u = n(981631),
   _ = n(689938);
 
-function d(e) {
+function c(e) {
   let {
     user: t,
     color: n,
-    onBlock: d,
-    onUnblock: c,
+    onBlock: c,
+    onUnblock: d,
     location: E = "ContextMenu"
   } = e, {
     id: I
@@ -32,7 +32,7 @@ function d(e) {
     color: n,
     label: h ? _.Z.Messages.UNBLOCK : _.Z.Messages.BLOCK,
     action: h ? () => {
-      null == c || c(), o.Z.unblockUser(I, {
+      null == d || d(), o.Z.unblockUser(I, {
         location: E
       })
     } : () => {
@@ -43,7 +43,7 @@ function d(e) {
         confirmText: _.Z.Messages.BLOCK,
         cancelText: _.Z.Messages.CANCEL,
         onConfirm: () => {
-          null == d || d(), o.Z.addRelationship({
+          null == c || c(), o.Z.addRelationship({
             userId: I,
             context: {
               location: E

@@ -28,18 +28,18 @@ function S(e) {
     editStateId: S,
     guildId: h,
     groupListingId: g
-  } = (0, E.N)(), x = (0, r.e7)([u.Z], () => u.Z.getSubscriptionListing(S)), C = null == x ? void 0 : x.id, R = (0, _.Z)(h), L = i.useMemo(() => {
+  } = (0, E.N)(), C = (0, r.e7)([u.Z], () => u.Z.getSubscriptionListing(S)), x = null == C ? void 0 : C.id, R = (0, _.Z)(h), L = i.useMemo(() => {
     var e;
-    return null != R && null != x && (null !== (e = R[x.role_id]) && void 0 !== e ? e : 0)
-  }, [R, x]), O = 0 === L, A = null == C, p = null !== (s = null == x ? void 0 : x.archived) && void 0 !== s && s, {
+    return null != R && null != C && (null !== (e = R[C.role_id]) && void 0 !== e ? e : 0)
+  }, [R, C]), O = 0 === L, A = null == x, p = null !== (s = null == C ? void 0 : C.archived) && void 0 !== s && s, {
     deleteSubscriptionListing: M,
     submitting: f
   } = (0, d.r4)(), {
-    archiveSubscriptionListing: v,
-    submitting: D
-  } = (0, d._1)(), Z = () => {
+    archiveSubscriptionListing: D,
+    submitting: v
+  } = (0, d._1)(), j = () => {
     let e = async () => {
-      if (!!A || (a()(null != g, "group listing doesnt exist"), a()(null != C, "subscription listing doesnt exist"), !!await M(h, g, C))) null == l || l()
+      if (!!A || (a()(null != g, "group listing doesnt exist"), a()(null != x, "subscription listing doesnt exist"), !!await M(h, g, x))) null == l || l()
     };
     (0, o.openModalLazy)(async () => {
       let {
@@ -61,17 +61,17 @@ function S(e) {
       })
     })
   }, {
-    allowSelfRemoveMonetization: j
+    allowSelfRemoveMonetization: Z
   } = (0, c.gX)(h);
-  return null == x ? null : (0, n.jsx)(I.Z, {
+  return null == C ? null : (0, n.jsx)(I.Z, {
     title: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ADVANCE_SECTION_TITLE,
     children: p ? (0, n.jsxs)(o.FormSection, {
       title: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_LABEL,
-      disabled: !j,
+      disabled: !Z,
       children: [(0, n.jsx)(o.FormText, {
         type: o.FormText.Types.DESCRIPTION,
         className: N.formDescription,
-        disabled: !j,
+        disabled: !Z,
         children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_DESCRIPTION
       }), (0, n.jsx)(o.Tooltip, {
         shouldShow: !O,
@@ -82,25 +82,25 @@ function S(e) {
           ...e,
           wrapperClassName: m.deleteListingButton,
           color: o.Button.Colors.RED,
-          onClick: Z,
+          onClick: j,
           submitting: f,
-          disabled: !j || !O,
+          disabled: !Z || !O,
           children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_BUTTON
         })
       })]
     }) : (0, n.jsxs)(o.FormSection, {
       title: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_LABEL,
-      disabled: !j,
+      disabled: !Z,
       children: [(0, n.jsx)(o.FormText, {
         type: o.FormText.Types.DESCRIPTION,
         className: N.formDescription,
-        disabled: !j,
+        disabled: !Z,
         children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_DESCRIPTION
       }), (0, n.jsx)(o.Button, {
         wrapperClassName: m.deleteListingButton,
         color: o.Button.Colors.RED,
         onClick: () => {
-          a()(null != g, "group listing doesnt exist"), a()(null != C, "subscription listing doesnt exist"), (0, o.openModalLazy)(async () => {
+          a()(null != g, "group listing doesnt exist"), a()(null != x, "subscription listing doesnt exist"), (0, o.openModalLazy)(async () => {
             let {
               ConfirmModal: e
             } = await Promise.resolve().then(t.bind(t, 481060));
@@ -109,7 +109,7 @@ function S(e) {
               confirmText: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_BUTTON,
               cancelText: T.Z.Messages.CANCEL,
               onConfirm: () => {
-                v(h, g, C)
+                D(h, g, x)
               },
               confirmButtonColor: o.Button.Colors.RED,
               ...s,
@@ -120,8 +120,8 @@ function S(e) {
             })
           })
         },
-        submitting: D,
-        disabled: !j,
+        submitting: v,
+        disabled: !Z,
         children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_BUTTON
       })]
     })

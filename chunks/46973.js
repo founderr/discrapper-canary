@@ -13,10 +13,10 @@ n.d(t, {
     return o
   },
   Yn: function() {
-    return c.Yn
+    return d.Yn
   },
   aB: function() {
-    return d.a
+    return c.a
   },
   aj: function() {
     return _.a
@@ -30,16 +30,16 @@ n.d(t, {
 });
 var i, r, s, o, a, l, u = n(839548),
   _ = n(60541),
-  d = n(946695),
-  c = n(65154);
+  c = n(946695),
+  d = n(65154);
 
 function E(e) {
   switch (e) {
-    case c.AS.NATIVE:
+    case d.AS.NATIVE:
       return n(743426).Z;
-    case c.AS.WEBRTC:
+    case d.AS.WEBRTC:
       return n(959856).Z;
-    case c.AS.DUMMY:
+    case d.AS.DUMMY:
     default:
       return n(135670).Z
   }
@@ -47,7 +47,7 @@ function E(e) {
 
 function I() {
   var e;
-  return null !== (e = [c.AS.NATIVE, c.AS.WEBRTC].find(e => E(e).supported())) && void 0 !== e ? e : c.AS.DUMMY
+  return null !== (e = [d.AS.NATIVE, d.AS.WEBRTC].find(e => E(e).supported())) && void 0 !== e ? e : d.AS.DUMMY
 }
 
 function T(e) {

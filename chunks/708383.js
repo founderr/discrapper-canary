@@ -2,11 +2,11 @@
 var i = n(735250),
   s = n(470079),
   l = n(266067),
-  a = n(749210),
-  o = n(287734),
+  o = n(749210),
+  a = n(287734),
   r = n(765717),
-  d = n(893607),
-  c = n(703656),
+  c = n(893607),
+  d = n(703656),
   u = n(981631);
 class h extends s.Component {
   componentDidUpdate(e) {
@@ -36,11 +36,11 @@ class h extends s.Component {
         messageId: i
       }
     }(e);
-    (0, d.S)(t) && (0, d.c)(n) ? (a.Z.selectGuild(t), o.default.selectChannel({
+    (0, c.S)(t) && (0, c.c)(n) ? (o.Z.selectGuild(t), a.default.selectChannel({
       guildId: t,
       channelId: n,
       messageId: i
-    })) : (0, c.dL)(u.Z5c.ME)
+    })) : (0, d.dL)(u.Z5c.ME)
   }
   render() {
     return null

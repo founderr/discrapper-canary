@@ -20,9 +20,9 @@ function u(e, t, n) {
     releaseChannel: i,
     expiresAt: u,
     validForUserIds: _,
-    allowedVersions: d,
-    targetBuildOverride: c
-  } = e, E = Object.keys(c);
+    allowedVersions: c,
+    targetBuildOverride: d
+  } = e, E = Object.keys(d);
   if (0 === r().intersection(E, t).length) return {
     valid: !1,
     reason: l.Z.Messages.BUILD_OVERRIDE_INCOMPATIBLE_TARGETS.format({
@@ -41,10 +41,10 @@ function u(e, t, n) {
       })
     }
   }
-  if (null != d && (null == n || !d.includes(n))) return {
+  if (null != c && (null == n || !c.includes(n))) return {
     valid: !1,
     reason: l.Z.Messages.BUILD_OVERRIDE_INCOMPATIBLE_CLIENT.format({
-      releaseChannel: d.join(", ")
+      releaseChannel: c.join(", ")
     })
   };
   let I = null != u ? new Date(u).getTime() : null;

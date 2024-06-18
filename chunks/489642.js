@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(481060),
   u = n(648996),
   _ = n(51144),
-  d = n(785717),
-  c = n(659101),
+  c = n(785717),
+  d = n(659101),
   E = n(689938),
   I = n(846389),
   T = n(390965),
@@ -58,8 +58,8 @@ function R(e) {
     onClose: s
   } = e, {
     trackUserProfileAction: o
-  } = (0, d.KZ)(), l = r && (0, _.EO)(t) && !t.bot;
-  return (0, i.jsxs)(c.Z, {
+  } = (0, c.KZ)(), l = r && (0, _.EO)(t) && !t.bot;
+  return (0, i.jsxs)(d.Z, {
     className: I.section,
     lastSection: !0,
     children: [l && r ? (0, i.jsx)(O, {

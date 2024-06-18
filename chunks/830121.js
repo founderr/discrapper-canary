@@ -13,7 +13,7 @@ n.d(t, {
     return H
   },
   oO: function() {
-    return L
+    return v
   },
   zO: function() {
     return Y
@@ -22,9 +22,9 @@ n.d(t, {
 var i, r, s, o, a, l, u = n(729594),
   _ = n(421474);
 n(865427);
-var d = n(264229);
+var c = n(264229);
 n(413605);
-var c = n(701190),
+var d = n(701190),
   E = n(226951),
   I = n(591759),
   T = n(960904),
@@ -36,18 +36,18 @@ let S = /^\/([a-zA-Z0-9-]+)$/,
   m = /^\/application-directory\/([0-9-]+)\/?$/,
   O = /^\/application-directory\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/,
   R = /^\/activities\/([0-9-]+)\/?$/,
-  C = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
-  p = /^\/channels\/([0-9]+)\/shop$/,
-  g = /^\/quests\/([0-9-]+)\/?$/,
-  L = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
-  v = k(window.GLOBAL_ENV.INVITE_HOST),
+  p = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
+  g = /^\/channels\/([0-9]+)\/shop$/,
+  C = /^\/quests\/([0-9-]+)\/?$/,
+  v = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
+  L = k(window.GLOBAL_ENV.INVITE_HOST),
   D = k(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
   M = k(null !== (i = window.GLOBAL_ENV.WEBAPP_ENDPOINT) && void 0 !== i ? i : "//canary.".concat(h.$R1)),
   P = k("//canary.".concat(h.$R1)),
   y = k("//ptb.".concat(h.$R1)),
   U = k("discordapp.com"),
   b = k("discord.com"),
-  G = [E.Z.escape(null !== (r = v.host) && void 0 !== r ? r : ""), E.Z.escape(null !== (s = D.host) && void 0 !== s ? s : ""), E.Z.escape(null !== (o = M.host) && void 0 !== o ? o : ""), E.Z.escape(null !== (a = U.host) && void 0 !== a ? a : ""), E.Z.escape(null !== (l = b.host) && void 0 !== l ? l : "")].filter(Boolean),
+  G = [E.Z.escape(null !== (r = L.host) && void 0 !== r ? r : ""), E.Z.escape(null !== (s = D.host) && void 0 !== s ? s : ""), E.Z.escape(null !== (o = M.host) && void 0 !== o ? o : ""), E.Z.escape(null !== (a = U.host) && void 0 !== a ? a : ""), E.Z.escape(null !== (l = b.host) && void 0 !== l ? l : "")].filter(Boolean),
   w = RegExp("((https?://[^ ]*)|^|[^/][^/.])(".concat(G.join("|"), ")"), "g");
 
 function k(e) {
@@ -92,7 +92,7 @@ function V(e) {
     templateHostRemainingPath: null,
     primaryHostRemainingPath: null
   };
-  let o = B(v, s),
+  let o = B(L, s),
     a = B(D, s),
     l = null !== (r = null !== (i = null !== (n = null !== (t = B(M, s)) && void 0 !== t ? t : B(P, s)) && void 0 !== n ? n : B(y, s)) && void 0 !== i ? i : B(U, s)) && void 0 !== r ? r : B(b, s);
   return {
@@ -108,7 +108,7 @@ function Z(e) {
   let t = new Set,
     n = [],
     i = (e = e.replace(w, (e, t, n, i) => null == n ? "".concat(t, "http://").concat(i) : e)).match(I.Z.URL_REGEX),
-    r = e.match(L);
+    r = e.match(v);
   if (null == (i = (null != i ? i : []).concat(null != r ? r : [])) || 0 === i.length) return [];
   for (let e of i) {
     if (n.length >= 10) break;
@@ -126,15 +126,15 @@ function Z(e) {
       }))
     };
     if ((null == r ? void 0 : r.match(S)) != null) {
-      let e = (0, d.mb)(r.substring(1), i.search);
-      c.Z.getInvite(e);
+      let e = (0, c.mb)(r.substring(1), i.search);
+      d.Z.getInvite(e);
       a(T.g.INVITE, e)
     }(null == s ? void 0 : s.match(S)) != null && a(T.g.TEMPLATE, s.substring(1));
     let l = null == o ? void 0 : o.match(N);
     if (null != l) {
       let e = l[1].toUpperCase();
       if (e === T.g.INVITE) {
-        let e = (0, d.mb)(l[2], i.search);
+        let e = (0, c.mb)(l[2], i.search);
         a(T.g.INVITE, e)
       } else a(e, l[2])
     }(null == o ? void 0 : o.match(f)) != null && a(T.g.CHANNEL_LINK, o.replace("/channels/", ""));
@@ -167,12 +167,12 @@ function Z(e) {
       let e = h[1];
       a(T.g.ACTIVITY_BOOKMARK, e)
     }
-    let g = null == o ? void 0 : o.match(C);
-    null != g && a(T.g.GUILD_PRODUCT, "".concat(g[1], "-").concat(g[2]));
-    let L = null == o ? void 0 : o.match(p);
-    null != L && a(T.g.SERVER_SHOP, L[1]);
-    let v = H(e);
-    null != v && a(T.g.QUESTS_EMBED, v)
+    let C = null == o ? void 0 : o.match(p);
+    null != C && a(T.g.GUILD_PRODUCT, "".concat(C[1], "-").concat(C[2]));
+    let v = null == o ? void 0 : o.match(g);
+    null != v && a(T.g.SERVER_SHOP, v[1]);
+    let L = H(e);
+    null != L && a(T.g.QUESTS_EMBED, L)
   }
   return n
 }
@@ -180,7 +180,7 @@ function Z(e) {
 function H(e) {
   var t, n;
   let i = V(e),
-    r = null == i ? void 0 : null === (t = i.primaryHostRemainingPath) || void 0 === t ? void 0 : t.match(g);
+    r = null == i ? void 0 : null === (t = i.primaryHostRemainingPath) || void 0 === t ? void 0 : t.match(C);
   return null !== (n = null == r ? void 0 : r[1]) && void 0 !== n ? n : null
 }
 

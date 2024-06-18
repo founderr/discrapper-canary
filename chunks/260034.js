@@ -16,11 +16,11 @@ let _ = r.forwardRef(function(e, t) {
     variant: n,
     className: r,
     ...s
-  } = e, _ = (0, l.x)(), d = "h".concat(Math.min(_, 6));
+  } = e, _ = (0, l.x)(), c = "h".concat(Math.min(_, 6));
   return (0, i.jsx)(a.x, {
     ref: t,
     variant: n,
-    tag: d,
+    tag: c,
     className: o()(u.defaultColor, r),
     ..._ > 6 ? {
       "data-excessive-heading-level": _

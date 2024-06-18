@@ -7,7 +7,7 @@ n.d(t, {
     return u
   },
   Tt: function() {
-    return c
+    return d
   },
   ZD: function() {
     return I
@@ -47,16 +47,16 @@ function _(e) {
   };
   return t.count = Math.max(t.count, t.messages.length), l.setState(e => ({
     flashQueue: [...e.flashQueue, t]
-  })), () => d(t.id)
+  })), () => c(t.id)
 }
 
-function d(e) {
+function c(e) {
   l.setState(t => ({
     flashQueue: t.flashQueue.filter(t => t.id !== e)
   }))
 }
 
-function c(e) {
+function d(e) {
   i.useEffect(() => {
     var t;
     return t = e, l.setState(e => ({
@@ -70,7 +70,7 @@ function c(e) {
 }
 
 function E(e) {
-  return c(e), null
+  return d(e), null
 }
 
 function I() {
@@ -114,12 +114,12 @@ function I() {
         return
       }
       if (document.hasFocus() && t.onlyWhenBlurred) {
-        d(t.id), r(!1);
+        c(t.id), r(!1);
         return
       }
       let e = setInterval(() => {
         if (s.current >= t.count) {
-          d(t.id), r(!1);
+          c(t.id), r(!1);
           return
         }
         r(e => !e || (s.current += 1, !1))

@@ -21,8 +21,8 @@ var i = n(544891),
   l = n(430824),
   u = n(626135),
   _ = n(630388),
-  d = n(45966),
-  c = n(290511),
+  c = n(45966),
+  d = n(290511),
   E = n(981631),
   I = n(372897);
 
@@ -43,7 +43,7 @@ function h(e) {
   }).then(t => {
     let {
       body: n
-    } = t, i = (0, c.cf)(n);
+    } = t, i = (0, d.cf)(n);
     return r.Z.dispatch({
       type: "GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS",
       guildId: e,
@@ -60,9 +60,9 @@ async function S(e) {
     r = (0, _.yE)(null !== (n = null === (t = a.ZP.getMember(e, i)) || void 0 === t ? void 0 : t.flags) && void 0 !== n ? n : 0, I.q.COMPLETED_ONBOARDING),
     s = l.Z.getGuild(e);
   if (null == s || !s.hasFeature(E.oNc.GUILD_ONBOARDING)) return Promise.resolve();
-  let u = d.Z.shouldFetchPrompts(e),
-    c = d.Z.getOnboardingPrompts(e);
-  if (!u && c.length > 0) return c.every(e => !e.inOnboarding) ? (N(e), Promise.resolve()) : (!r && f(e), Promise.resolve());
+  let u = c.Z.shouldFetchPrompts(e),
+    d = c.Z.getOnboardingPrompts(e);
+  if (!u && d.length > 0) return d.every(e => !e.inOnboarding) ? (N(e), Promise.resolve()) : (!r && f(e), Promise.resolve());
   let T = await h(e);
   return Array.isArray(T) && T.every(e => !e.inOnboarding) ? (N(e), Promise.resolve()) : (!r && f(e), T)
 }

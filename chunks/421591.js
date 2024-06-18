@@ -11,10 +11,10 @@ var i = n(735250),
 t.Z = r.memo(function(e) {
   let t, {
       drawerRef: n,
-      channel: d
+      channel: c
     } = e,
     {
-      history: c,
+      history: d,
       setHistory: E,
       currentView: I,
       pushHistory: T,
@@ -45,7 +45,7 @@ t.Z = r.memo(function(e) {
   switch (null == I ? void 0 : I.type) {
     case o.gc.HOME:
       t = (0, i.jsx)(l.Z, {
-        channel: d,
+        channel: c,
         enableRecommendations: S.recommendationsEnabled,
         enableRecents: S.recentsDropdownEnabled
       });
@@ -59,7 +59,7 @@ t.Z = r.memo(function(e) {
       break;
     case o.gc.APPLICATION:
       t = (0, i.jsx)(a.Z, {
-        channel: d,
+        channel: c,
         application: I.application,
         sectionName: I.sectionName
       });
@@ -74,7 +74,7 @@ t.Z = r.memo(function(e) {
       className: _.contentWrapper,
       children: (0, i.jsx)(o.uX.Provider, {
         value: {
-          history: c,
+          history: d,
           setHistory: E,
           currentView: I,
           pushHistory: T,

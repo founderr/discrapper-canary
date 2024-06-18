@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   $l: function() {
-    return g
+    return C
   },
   G1: function() {
     return f
@@ -30,8 +30,8 @@ var i = n(470079),
   l = n(570140),
   u = n(881052),
   _ = n(902840),
-  d = n(38618),
-  c = n(592125),
+  c = n(38618),
+  d = n(592125),
   E = n(70956),
   I = n(765104),
   T = n(981631);
@@ -124,7 +124,7 @@ function R(e, t) {
     rating: t
   })
 }
-async function C() {
+async function p() {
   var e;
   let t, n;
   if (!I.Z.shouldFetchChannelAffinities()) return Promise.resolve(null);
@@ -147,7 +147,7 @@ async function C() {
     receivedAt: Date.now()
   })
 }
-async function p(e) {
+async function g(e) {
   let t, n, {
     useQuickSwitcher: i = !0,
     useChannelAffinities: r = !0
@@ -158,7 +158,7 @@ async function p(e) {
       withQuickSwitcher: i,
       withChannelAffinities: r
     })).filter(e => {
-      let t = c.Z.getChannel(e);
+      let t = d.Z.getChannel(e);
       return (0, _.Lp)(t, !1, !0)
     }).filter(e => {
       let t = Date.now(),
@@ -194,7 +194,7 @@ async function p(e) {
     error: t
   })
 }
-async function g(e) {
+async function C(e) {
   try {
     await a.tn.del(T.Z5c.CHANNEL_SUMMARY(e.channelId, e.id)), l.Z.dispatch({
       type: "DELETE_SUMMARY",
@@ -204,32 +204,32 @@ async function g(e) {
     throw new u.Hx(e)
   }
 }
-let L = 12633 == n.j ? {
+let v = 12633 == n.j ? {
   setSummaryFeedback: R,
   updateVisibleMessages: O,
   setSelectedSummary: m,
   setHighlightedSummary: N,
   fetchSummaries: f,
-  fetchSummariesBulk: p,
+  fetchSummariesBulk: g,
   useChannelSummaries: function(e) {
     let {
       channelIds: t = []
     } = e;
     return ! function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-        t = (0, o.e7)([d.Z], () => d.Z.isConnected()),
+        t = (0, o.e7)([c.Z], () => c.Z.isConnected()),
         n = i.useMemo(() => e.join(","), [e]);
       i.useEffect(() => {
         t && e();
         async function e() {
           try {
-            await C()
+            await p()
           } catch (e) {}
-          await p(n.split(","))
+          await g(n.split(","))
         }
       }, [n, t])
     }(t), (0, o.Wu)([I.Z], () => I.Z.topSummaries(), [])
   },
-  deleteSummary: g
+  deleteSummary: C
 } : null;
-t.ZP = 12633 == n.j ? L : null
+t.ZP = 12633 == n.j ? v : null

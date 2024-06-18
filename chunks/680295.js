@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(607070),
   u = n(451478),
   _ = n(119837),
-  d = n(802433),
-  c = n(658312),
+  c = n(802433),
+  d = n(658312),
   E = n(729436),
   I = n(710867),
   T = n(312904),
@@ -34,13 +34,13 @@ let f = e => {
       introDelay: A = _.lG
     } = e, m = r.useRef(null), [O, R] = r.useState([]);
     (0, T.Z)(f);
-    let [C, p] = r.useState(0), [g, L] = r.useState(0), {
-      accessibilityLabel: v
+    let [p, g] = r.useState(0), [C, v] = r.useState(0), {
+      accessibilityLabel: L
     } = f, [D, M] = r.useState(-A), {
       stop: P,
       reset: y,
       ticking: U
-    } = (0, c.Z)(e => {
+    } = (0, d.Z)(e => {
       M(t => t + e)
     });
     r.useEffect(() => {
@@ -51,12 +51,12 @@ let f = e => {
       O.forEach(n => {
         let i = n.start + n.duration;
         i > e && (e = i), n.loop && n.start < t && (t = n.start)
-      }), p(t), L(e)
-    }, [L, O]);
+      }), g(t), v(e)
+    }, [v, O]);
     let [b, G] = r.useState(!1);
     return r.useEffect(() => {
-      !0 !== u && !a && (P(), M(0)), !a && b && U.current && (P(), M(0)), s && a && !U.current && (y(), f.animationType === d.Q.PERSISTENT ? M(I === d.j.FromStart ? 0 : C) : M(0))
-    }, [a, b, C, s, P, y, U, f.animationType, u, I]), (0, i.jsx)("div", {
+      !0 !== u && !a && (P(), M(0)), !a && b && U.current && (P(), M(0)), s && a && !U.current && (y(), f.animationType === c.Q.PERSISTENT ? M(I === c.j.FromStart ? 0 : p) : M(0))
+    }, [a, b, p, s, P, y, U, f.animationType, u, I]), (0, i.jsx)("div", {
       ref: m,
       className: o()(S.profileEffects, {
         [S.hovered]: a && l
@@ -64,37 +64,37 @@ let f = e => {
       children: (0, i.jsx)("div", {
         className: N ? S.innerNoRadius : S.inner,
         children: O.map((e, r) => {
-          var s, o, a, l, c, E, I, T;
+          var s, o, a, l, d, E, I, T;
           if (!U.current) {
-            if (f.animationType === d.Q.PERSISTENT && null != f.staticFrameSrc && 0 === r && !0 === u) {
+            if (f.animationType === c.Q.PERSISTENT && null != f.staticFrameSrc && 0 === r && !0 === u) {
               let {
                 staticFrameSrc: n
               } = f;
               return (0, i.jsx)("img", {
                 className: S.effect,
                 style: {
-                  top: null !== (c = null === (a = e.position) || void 0 === a ? void 0 : a.y) && void 0 !== c ? c : 0 - t,
+                  top: null !== (d = null === (a = e.position) || void 0 === a ? void 0 : a.y) && void 0 !== d ? d : 0 - t,
                   left: null !== (E = null === (l = e.position) || void 0 === l ? void 0 : l.x) && void 0 !== E ? E : 0
                 },
                 src: n,
-                alt: v
+                alt: L
               }, e.src + r)
             }
             return (0, i.jsx)("img", {
               src: _.td,
-              alt: v
+              alt: L
             }, e.src + r)
           }
           if (D < e.start || !e.loop && D > e.duration + e.start) return (0, i.jsx)("img", {
             src: _.td,
-            alt: v
+            alt: L
           }, e.src + r);
-          if (f.animationType === d.Q.PERSISTENT && !b && null != n && D >= g && G(!0), e.loop && void 0 !== e.loopDelay && e.loopDelay > 0) {
+          if (f.animationType === c.Q.PERSISTENT && !b && null != n && D >= C && G(!0), e.loop && void 0 !== e.loopDelay && e.loopDelay > 0) {
             let t = e.duration + e.loopDelay,
               s = Math.floor((D - e.start) / t);
-            if (D - e.start - s * t > e.duration) return f.animationType === d.Q.INTERMITTENT && !b && null != n && s >= n && G(!0), (0, i.jsx)("img", {
+            if (D - e.start - s * t > e.duration) return f.animationType === c.Q.INTERMITTENT && !b && null != n && s >= n && G(!0), (0, i.jsx)("img", {
               src: _.td,
-              alt: v
+              alt: L
             }, e.src + r)
           }
           return (0, i.jsx)("img", {
@@ -104,7 +104,7 @@ let f = e => {
               top: (null !== (I = null === (s = e.position) || void 0 === s ? void 0 : s.y) && void 0 !== I ? I : 0) - t,
               left: null !== (T = null === (o = e.position) || void 0 === o ? void 0 : o.x) && void 0 !== T ? T : 0
             },
-            alt: v
+            alt: L
           }, e.src + r)
         })
       })
@@ -121,7 +121,7 @@ let f = e => {
     } = e, {
       reducedMotionSrc: u,
       thumbnailPreviewSrc: _,
-      accessibilityLabel: d
+      accessibilityLabel: c
     } = t;
     return (0, i.jsx)("div", {
       className: o()(S.profileEffects, {
@@ -135,7 +135,7 @@ let f = e => {
           style: {
             top: 0 - r
           },
-          alt: d
+          alt: c
         })
       })
     })
@@ -147,7 +147,7 @@ t.Z = e => {
     {
       preset: _
     } = (0, h.Z)(e.profileEffectId, () => o(!1));
-  return null != _ && (t || e.shopPreview || _.config.animationType !== d.Q.INTERMITTENT) ? !t && e.shopPreview || !t && _.config.animationType === d.Q.PERSISTENT || n || !1 === e.autoPlay && !1 === e.isHovering ? (0, i.jsx)(N, {
+  return null != _ && (t || e.shopPreview || _.config.animationType !== c.Q.INTERMITTENT) ? !t && e.shopPreview || !t && _.config.animationType === c.Q.PERSISTENT || n || !1 === e.autoPlay && !1 === e.isHovering ? (0, i.jsx)(N, {
     useThumbnail: e.useThumbnail,
     config: _.config,
     bannerAdjustment: e.bannerAdjustment,

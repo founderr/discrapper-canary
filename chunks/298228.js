@@ -6,9 +6,9 @@ t.d(s, {
 }), t(47120), t(653041);
 var n = t(470079),
   a = t(399606),
-  i = t(1870);
+  r = t(1870);
 let l = e => {
-  let s = (0, a.e7)([i.Z], () => i.Z.purchases);
+  let s = (0, a.e7)([r.Z], () => r.Z.purchases);
   return (0, n.useMemo)(() => {
     let t = [],
       n = [];

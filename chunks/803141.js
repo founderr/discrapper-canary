@@ -25,11 +25,11 @@ function _() {
   (u = new o.B).addWords(r)
 }
 
-function d() {
+function c() {
   _()
 }
 
-function c() {
+function d() {
   _()
 }
 
@@ -66,10 +66,10 @@ class I extends r.Z {
   }
   constructor() {
     super({
-      CONNECTION_OPEN: d,
-      CONNECTION_OPEN_SUPPLEMENTAL: d,
+      CONNECTION_OPEN: c,
+      CONNECTION_OPEN_SUPPLEMENTAL: c,
       CACHE_LOADED: () => this.loadCache(),
-      OVERLAY_INITIALIZE: c,
+      OVERLAY_INITIALIZE: d,
       USER_SETTINGS_PROTO_UPDATE: E
     })
   }

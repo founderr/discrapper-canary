@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Sc: function() {
-    return d
+    return c
   },
   Zx: function() {
     return u
@@ -20,7 +20,7 @@ var i = n(570140),
 function u(e, t) {
   var n;
   if (null == e) {
-    d(t);
+    c(t);
     return
   }
   i.Z.dispatch({
@@ -38,7 +38,7 @@ function u(e, t) {
 function _(e, t, n) {
   var u;
   if ("" === e || null == t) {
-    d(n);
+    c(n);
     return
   }
   i.Z.dispatch({
@@ -54,7 +54,7 @@ function _(e, t, n) {
   })
 }
 
-function d(e) {
+function c(e) {
   var t;
   i.Z.dispatch({
     type: "CLEAR_HANG_STATUS",

@@ -26,10 +26,10 @@ function _(e) {
     hovered: n = !1,
     unread: r = !1,
     disabled: _ = !1,
-    className: d
+    className: c
   } = e;
   t = !_ && t, n = !_ && n, r = !_ && r;
-  let c = {
+  let d = {
       opacity: 1,
       height: t ? 40 : n ? 20 : 8,
       x: 0
@@ -38,14 +38,14 @@ function _(e) {
       config: l,
       keys: e => e ? "pill" : "empty",
       immediate: !n && !document.hasFocus(),
-      initial: t || n || r ? c : null,
+      initial: t || n || r ? d : null,
       from: u,
       leave: u,
-      enter: c,
-      update: c
+      enter: d,
+      update: d
     });
   return (0, i.jsx)("div", {
-    className: s()(d, a.wrapper),
+    className: s()(c, a.wrapper),
     "aria-hidden": !0,
     children: E((e, t) => t && (0, i.jsx)(o.animated.span, {
       className: a.item,

@@ -9,7 +9,7 @@ var i = n(570140),
   u = n(329461),
   _ = n(981631);
 
-function d(e, t, n) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -17,11 +17,11 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class c extends r.Z {
+class d extends r.Z {
   constructor(...e) {
-    super(...e), d(this, "actions", {
+    super(...e), c(this, "actions", {
       POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen()
-    }), d(this, "handlePostConnectionOpen", () => {
+    }), c(this, "handlePostConnectionOpen", () => {
       ! function e() {
         l.Z.getCurrentConfig({
           location: "8fe27d_1"
@@ -52,4 +52,4 @@ class c extends r.Z {
     })
   }
 }
-t.Z = new c
+t.Z = new d

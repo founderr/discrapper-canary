@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Mg: function() {
-    return d
+    return c
   },
   eD: function() {
     return i
@@ -10,7 +10,7 @@ n.d(t, {
     return _
   },
   qQ: function() {
-    return c
+    return d
   }
 }), n(47120), n(536091);
 var i, r, s = n(512722),
@@ -111,7 +111,7 @@ class _ {
   }
 }
 
-function d(e, t) {
+function c(e, t) {
   return {
     type: "guild",
     id: e,
@@ -121,7 +121,7 @@ function d(e, t) {
   }
 }
 
-function c(e, t, n) {
+function d(e, t, n) {
   var i, r, s;
   return {
     type: "folder",

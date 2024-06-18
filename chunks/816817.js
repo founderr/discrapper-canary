@@ -22,32 +22,32 @@ s.Z = function(e) {
   let {
     guild: l,
     disabled: g,
-    small: x,
-    loading: C = !1,
+    small: C,
+    loading: x = !1,
     description: R,
     memberCount: L,
     presenceCount: O,
     className: A
   } = e, p = (0, c.ZP)(), [M, f] = i.useState(!1);
-  if (null == l || C) return (0, n.jsx)("div", {
+  if (null == l || x) return (0, n.jsx)("div", {
     className: a()(A, N.card, N.cardPlaceholder, {
-      [N.cardSmall]: x,
+      [N.cardSmall]: C,
       [N.cardDisabled]: g
     })
   });
   let {
-    name: v
-  } = l, D = null != l.discoverySplash && /^data:/.test(l.discoverySplash) ? l.discoverySplash : _.ZP.getGuildDiscoverySplashURL({
+    name: D
+  } = l, v = null != l.discoverySplash && /^data:/.test(l.discoverySplash) ? l.discoverySplash : _.ZP.getGuildDiscoverySplashURL({
     id: l.id,
     splash: l.discoverySplash,
     size: 240 * (0, d.x_)()
-  }), Z = (0, r.wj)(p) ? m : S, j = null !== (s = _.ZP.getGuildIconURL({
+  }), j = (0, r.wj)(p) ? m : S, Z = null !== (s = _.ZP.getGuildIconURL({
     id: l.id,
     icon: l.icon,
     size: 40
   })) && void 0 !== s ? s : void 0, U = null != l.description ? l.description : R, G = null != L ? L : null == l ? void 0 : l.memberCount, P = null != O ? O : null == l ? void 0 : l.presenceCount, b = null;
-  if (null != j) b = (0, n.jsx)("img", {
-    src: j,
+  if (null != Z) b = (0, n.jsx)("img", {
+    src: Z,
     alt: "",
     className: N.avatar
   });
@@ -67,7 +67,7 @@ s.Z = function(e) {
   }
   return (0, n.jsxs)("div", {
     className: a()(A, N.card, {
-      [N.cardSmall]: x,
+      [N.cardSmall]: C,
       [N.cardDisabled]: g,
       [N.splashLoaded]: M
     }),
@@ -76,7 +76,7 @@ s.Z = function(e) {
       children: [(0, n.jsx)("div", {
         className: N.splash,
         children: (0, n.jsx)("img", {
-          src: null != D ? D : Z,
+          src: null != v ? v : j,
           alt: "",
           className: N.splashImage,
           onLoad: () => f(!0)
@@ -110,7 +110,7 @@ s.Z = function(e) {
           className: N.guildName,
           variant: "text-md/normal",
           children: (0, n.jsx)("span", {
-            children: v
+            children: D
           })
         })]
       }), (0, n.jsx)(o.Text, {
@@ -127,7 +127,7 @@ s.Z = function(e) {
             className: N.dotOnline
           }), (0, n.jsx)(o.Text, {
             variant: "text-xs/normal",
-            children: x ? T.Z.Messages.NUMBERS_ONLY.format({
+            children: C ? T.Z.Messages.NUMBERS_ONLY.format({
               count: P
             }) : T.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
               membersOnline: P
@@ -139,7 +139,7 @@ s.Z = function(e) {
             className: N.dotOffline
           }), (0, n.jsx)(o.Text, {
             variant: "text-xs/normal",
-            children: x ? T.Z.Messages.NUMBERS_ONLY.format({
+            children: C ? T.Z.Messages.NUMBERS_ONLY.format({
               count: G
             }) : T.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
               count: G

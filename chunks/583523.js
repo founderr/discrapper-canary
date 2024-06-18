@@ -9,7 +9,7 @@ var i = n(570140),
   u = n(631768),
   _ = n(981631);
 
-function d() {
+function c() {
   ! function() {
     let e = l.Z.getVoiceChannelId(),
       t = o.Z.bitrate;
@@ -34,11 +34,11 @@ function d() {
   }()
 }
 
-function c(e) {
+function d(e) {
   let {
     channels: t
   } = e;
-  for (let e of t) l.Z.getVoiceChannelId() === e.id && d()
+  for (let e of t) l.Z.getVoiceChannelId() === e.id && c()
 }
 
 function E(e) {
@@ -46,14 +46,14 @@ function E(e) {
     voiceStates: t
   } = e;
   t.forEach(e => {
-    s.default.getSessionId() === e.sessionId && d()
+    s.default.getSessionId() === e.sessionId && c()
   })
 }
 class I extends r.Z {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
-      CHANNEL_UPDATES: c,
+      CHANNEL_UPDATES: d,
       VOICE_STATE_UPDATES: E
     }, n in t ? Object.defineProperty(t, n, {
       value: i,

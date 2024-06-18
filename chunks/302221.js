@@ -114,7 +114,7 @@ function _(e) {
   return n
 }
 
-function d(e) {
+function c(e) {
   let {
     red: t,
     green: n,
@@ -123,11 +123,11 @@ function d(e) {
   return .2126 * r[0] + .7152 * r[1] + .0722 * r[2]
 }
 
-function c(e) {
+function d(e) {
   let t = e[0],
     n = e[1],
-    i = d(t),
-    r = d(n);
+    i = c(t),
+    r = c(n);
   return (Math.max(i, r) + .05) / (Math.min(i, r) + .05)
 }
 
@@ -191,7 +191,7 @@ function h(e) {
   if (null == o || null == s) return;
   let a = (0, i._i)(o.toHexString()),
     l = (0, i.Bd)(a) > .5,
-    u = c([s, o]),
+    u = d([s, o]),
     _ = E(s.red, s.green, s.blue);
   for (_.saturation *= r; u < n && null != _;) {
     ;
@@ -200,7 +200,7 @@ function h(e) {
       else break
     } else if (_.lightness > .05) _.lightness -= .05;
     else break;
-    u = c([I(_.hue, _.saturation, _.lightness), t[1]])
+    u = d([I(_.hue, _.saturation, _.lightness), t[1]])
   }
   return I(_.hue, _.saturation, _.lightness)
 }
@@ -218,17 +218,17 @@ function S(e) {
           l = parseInt(o[2], 16),
           u = parseInt(o[3], 16);
         let _ = a / 255,
-          d = l / 255,
-          c = u / 255,
-          E = Math.max(_, d, c),
-          I = E - Math.min(_, d, c),
+          c = l / 255,
+          d = u / 255,
+          E = Math.max(_, c, d),
+          I = E - Math.min(_, c, d),
           T = e => Math.round(100 * e) / 100;
         if (0 === I) r = s = 0;
         else {
           s = I / E;
           t = (E - _) / 6 / I + .5;
-          n = (E - d) / 6 / I + .5;
-          i = (E - c) / 6 / I + .5, (r = _ === E ? i - n : d === E ? 1 / 3 + t - i : c === E ? 2 / 3 + n - t : 0) < 0 ? r += 1 : r > 1 && (r -= 1)
+          n = (E - c) / 6 / I + .5;
+          i = (E - d) / 6 / I + .5, (r = _ === E ? i - n : c === E ? 1 / 3 + t - i : d === E ? 2 / 3 + n - t : 0) < 0 ? r += 1 : r > 1 && (r -= 1)
         }
         return {
           h: Math.round(360 * r),
@@ -271,6 +271,6 @@ function A(e, t, n) {
     l = parseInt(t.substring(5, 7), 16),
     u = Math.round(i + (o - i) * n).toString(16).padStart(2, "0"),
     _ = Math.round(r + (a - r) * n).toString(16).padStart(2, "0"),
-    d = Math.round(s + (l - s) * n).toString(16).padStart(2, "0");
-  return "#".concat(u).concat(_).concat(d)
+    c = Math.round(s + (l - s) * n).toString(16).padStart(2, "0");
+  return "#".concat(u).concat(_).concat(c)
 }

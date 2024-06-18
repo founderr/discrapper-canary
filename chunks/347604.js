@@ -18,15 +18,15 @@ var n = t(735250),
   S = t(981631),
   h = t(689938),
   g = t(940362),
-  x = t(716455);
-let C = ["322850917248663552", "172018499005317120", "414234792121597953", "228406572756369408"],
+  C = t(716455);
+let x = ["322850917248663552", "172018499005317120", "414234792121597953", "228406572756369408"],
   R = ["620723483965653003", "662246299369734154", "181970867549503489", "102860784329052160"];
 s.Z = e => {
   let {
     guild: s,
     onEnableDiscovery: t,
     isGuildAdmin: l
-  } = e, [L, O] = (0, r.Z)(() => [a().sample(C), a().sample(R)], []);
+  } = e, [L, O] = (0, r.Z)(() => [a().sample(x), a().sample(R)], []);
   i.useEffect(() => {
     E.z([L, O])
   }, [L, O]);
@@ -36,14 +36,14 @@ s.Z = e => {
   } = (0, o.cj)([d.ZP], () => ({
     canEnableDiscovery: d.ZP.passesChecklist(s.id),
     isPendingSuccess: d.ZP.isPendingSuccess(s.id)
-  }), [s.id]), [v, D] = (0, o.Wu)([N.Z], () => [null, N.Z.getMemberCount(s.id)], [s.id]), Z = i.useCallback(() => {
+  }), [s.id]), [D, v] = (0, o.Wu)([N.Z], () => [null, N.Z.getMemberCount(s.id)], [s.id]), j = i.useCallback(() => {
     null != t && t()
-  }, [t]), j = null;
-  return l ? f ? j = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_PENDING_HEALTHY : !M && (j = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_REQUIREMENTS_NOT_MET) : j = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY, (0, n.jsxs)("div", {
+  }, [t]), Z = null;
+  return l ? f ? Z = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_PENDING_HEALTHY : !M && (Z = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_REQUIREMENTS_NOT_MET) : Z = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY, (0, n.jsxs)("div", {
     className: g.container,
     children: [(0, n.jsx)("img", {
       alt: "",
-      src: x,
+      src: C,
       className: g.sparkles
     }), (0, n.jsxs)("div", {
       className: g.discoverPreview,
@@ -57,8 +57,8 @@ s.Z = e => {
         className: g.previewCard,
         guild: s,
         description: h.Z.Messages.GUILD_SETTINGS_DISCOVERY_PREVIEW_DESCRIPTION,
-        presenceCount: v,
-        memberCount: D
+        presenceCount: D,
+        memberCount: v
       }), (0, n.jsx)(I.Z, {
         className: g.placeholderCard,
         disabled: !0,
@@ -93,14 +93,14 @@ s.Z = e => {
         })
       })
     }), (0, n.jsx)(c.Tooltip, {
-      text: j,
+      text: Z,
       children: e => (0, n.jsx)(c.Button, {
         ...e,
         className: g.enableButton,
         color: c.Button.Colors.BRAND,
         size: c.Button.Sizes.LARGE,
         disabled: !M || !l,
-        onClick: Z,
+        onClick: j,
         children: h.Z.Messages.GUILD_SETTINGS_SET_UP_DISCOVERY
       })
     }), (0, n.jsx)(m.Z, {

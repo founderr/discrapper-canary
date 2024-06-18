@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 });
 var i, r = n(735250),
@@ -19,7 +19,7 @@ function _(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class d extends(i = s.Component) {
+class c extends(i = s.Component) {
   renderProvider(e) {
     var t, n;
     let {
@@ -28,9 +28,9 @@ class d extends(i = s.Component) {
       object: o,
       objectType: l,
       children: u
-    } = this.props, _ = this.mergeLocation(e.location, this.getLocation(s, i, o, l)), d = this.getContext(_, null !== (t = this._loadDate) && void 0 !== t ? t : e.loadDate, null !== (n = this._loadId) && void 0 !== n ? n : e.loadId);
+    } = this.props, _ = this.mergeLocation(e.location, this.getLocation(s, i, o, l)), c = this.getContext(_, null !== (t = this._loadDate) && void 0 !== t ? t : e.loadDate, null !== (n = this._loadId) && void 0 !== n ? n : e.loadId);
     return (0, r.jsx)(a.AnalyticsContext.Provider, {
-      value: d,
+      value: c,
       children: u
     })
   }
@@ -56,6 +56,6 @@ class d extends(i = s.Component) {
     }))), null != e.loadId ? this._loadId = e.loadId : e.root && (this._loadId = (0, o.Z)())
   }
 }
-_(d, "Pages", u.ZY5), _(d, "Sections", u.jXE), _(d, "Objects", u.qAy), _(d, "ObjectTypes", u.Qqv), _(d, "defaultProps", {
+_(c, "Pages", u.ZY5), _(c, "Sections", u.jXE), _(c, "Objects", u.qAy), _(c, "ObjectTypes", u.Qqv), _(c, "defaultProps", {
   root: !1
 })

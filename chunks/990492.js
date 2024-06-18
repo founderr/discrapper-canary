@@ -22,17 +22,17 @@ function o(e) {
   if (l !== u) return s.warn("Object IDs in the old ordering and the new ordering are not the same.", l, u), [];
   let _ = {};
   for (let e = 0; e < a; e++) _[i(t[e])] = r(t[e]);
-  let d = [];
+  let c = [];
   for (let e = 0; e < a; e++) {
     let t = i(n[e]),
       s = _[t],
       l = o ? e : a - 1 - e;
-    (s !== l || r(n[e]) !== l) && d.push({
+    (s !== l || r(n[e]) !== l) && c.push({
       id: t,
       position: l
     })
   }
-  return !o && d.reverse(), d
+  return !o && c.reverse(), c
 }
 
 function a(e, t, n) {

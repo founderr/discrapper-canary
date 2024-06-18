@@ -10,7 +10,7 @@ function i(e, t, n) {
 }
 n.d(t, {
   $o: function() {
-    return c
+    return d
   },
   NE: function() {
     return _
@@ -19,7 +19,7 @@ n.d(t, {
     return l
   },
   P2: function() {
-    return d
+    return c
   },
   ie: function() {
     return r
@@ -61,14 +61,14 @@ function _(e, t, n) {
   return "".concat(e, "-").concat(t, "-").concat(n)
 }
 
-function d(e, t) {
+function c(e, t) {
   let n = !1;
   return function() {
     for (var i = arguments.length, r = Array(i), s = 0; s < i; s++) r[s] = arguments[s];
     !n && (e(...r), n = !0, setTimeout(() => n = !1, t))
   }
 }
-class c {
+class d {
   get(e) {
     let t = this.handlers.get(e);
     return null == t && (t = this.makeHandler(e), this.handlers.set(e, t)), t

@@ -1,22 +1,22 @@
 "use strict";
-let i, r, s, o, a, l, u, _, d, c, E, I, T, h;
+let i, r, s, o, a, l, u, _, c, d, E, I, T, h;
 var S, f, N, A, m = n(979554),
   O = n(442837),
   R = n(570140),
-  C = n(981631);
-let p = C.QZA.CLOSED,
-  g = {};
-
-function L() {
-  p = C.QZA.OPEN, g = {}
-}
+  p = n(981631);
+let g = p.QZA.CLOSED,
+  C = {};
 
 function v() {
-  p = C.QZA.CLOSED, g = {}
+  g = p.QZA.OPEN, C = {}
+}
+
+function L() {
+  g = p.QZA.CLOSED, C = {}
 }
 
 function D() {
-  M(), P(), g = {}
+  M(), P(), C = {}
 }
 
 function M() {
@@ -24,24 +24,24 @@ function M() {
 }
 
 function P() {
-  a = void 0, l = void 0, u = void 0, _ = void 0, d = void 0, o = void 0
+  a = void 0, l = void 0, u = void 0, _ = void 0, c = void 0, o = void 0
 }
 
 function y() {
-  E = void 0, I = void 0, T = void 0, h = void 0, c = void 0
+  E = void 0, I = void 0, T = void 0, h = void 0, d = void 0
 }
 class U extends(A = O.ZP.Store) {
   getFormState() {
-    return p
-  }
-  getErrors() {
     return g
   }
+  getErrors() {
+    return C
+  }
   showNotice() {
-    return void 0 !== i || void 0 !== a || void 0 !== l || void 0 !== u || void 0 !== _ || void 0 !== d || void 0 !== s || void 0 !== o || void 0 !== r
+    return void 0 !== i || void 0 !== a || void 0 !== l || void 0 !== u || void 0 !== _ || void 0 !== c || void 0 !== s || void 0 !== o || void 0 !== r
   }
   getIsSubmitDisabled() {
-    return void 0 !== l && l.length > C.tPV
+    return void 0 !== l && l.length > p.tPV
   }
   getPendingAvatar() {
     return i
@@ -62,7 +62,7 @@ class U extends(A = O.ZP.Store) {
     return _
   }
   getPendingThemeColors() {
-    return d
+    return c
   }
   getPendingAvatarDecoration() {
     return s
@@ -77,14 +77,14 @@ class U extends(A = O.ZP.Store) {
       pendingBio: l,
       pendingPronouns: u,
       pendingAccentColor: _,
-      pendingThemeColors: d,
+      pendingThemeColors: c,
       pendingAvatarDecoration: s,
       pendingProfileEffectId: o,
       pendingGlobalName: r
     }
   }
   getTryItOutThemeColors() {
-    return c
+    return d
   }
   getTryItOutAvatar() {
     return E
@@ -100,7 +100,7 @@ class U extends(A = O.ZP.Store) {
   }
   getAllTryItOut() {
     return {
-      tryItOutThemeColors: c,
+      tryItOutThemeColors: d,
       tryItOutAvatar: E,
       tryItOutAvatarDecoration: I,
       tryItOutProfileEffectId: T,
@@ -114,26 +114,26 @@ N = "UserSettingsAccountStore", (f = "displayName") in(S = U) ? Object.definePro
   configurable: !0,
   writable: !0
 }) : S[f] = N, t.Z = new U(R.Z, {
-  USER_SETTINGS_ACCOUNT_INIT: L,
-  USER_SETTINGS_MODAL_INIT: L,
-  USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: L,
+  USER_SETTINGS_ACCOUNT_INIT: v,
+  USER_SETTINGS_MODAL_INIT: v,
+  USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: v,
   USER_SETTINGS_MODAL_SET_SECTION: function(e) {
     let {
       section: t
     } = e;
-    return t === C.oAB.ACCOUNT && L()
+    return t === p.oAB.ACCOUNT && v()
   },
-  USER_SETTINGS_ACCOUNT_CLOSE: v,
+  USER_SETTINGS_ACCOUNT_CLOSE: L,
   USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: function() {
-    D(), y(), v()
+    D(), y(), L()
   },
   USER_SETTINGS_ACCOUNT_SUBMIT: function() {
-    p = C.QZA.SUBMITTING, g = {}
+    g = p.QZA.SUBMITTING, C = {}
   },
   USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: function(e) {
     var t;
-    if (p !== C.QZA.SUBMITTING) return !1;
-    p = C.QZA.OPEN, g = null !== (t = e.errors) && void 0 !== t ? t : {}
+    if (g !== p.QZA.SUBMITTING) return !1;
+    g = p.QZA.OPEN, C = null !== (t = e.errors) && void 0 !== t ? t : {}
   },
   USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: function(e) {
     let {
@@ -193,7 +193,7 @@ N = "UserSettingsAccountStore", (f = "displayName") in(S = U) ? Object.definePro
     let {
       themeColors: t
     } = e;
-    d = t
+    c = t
   },
   USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR: function(e) {
     let {
@@ -223,10 +223,10 @@ N = "UserSettingsAccountStore", (f = "displayName") in(S = U) ? Object.definePro
     let {
       themeColors: t
     } = e;
-    c = t
+    d = t
   },
   USER_SETTINGS_CLEAR_ERRORS: function() {
-    g = {}
+    C = {}
   },
   USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: M,
   USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: P,

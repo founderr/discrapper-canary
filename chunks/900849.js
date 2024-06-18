@@ -4,7 +4,7 @@ n.d(t, {
     return A
   },
   Eg: function() {
-    return g
+    return C
   },
   IZ: function() {
     return m
@@ -25,13 +25,13 @@ n.d(t, {
     return N
   },
   c6: function() {
-    return C
+    return p
   },
   j$: function() {
     return R
   },
   mT: function() {
-    return p
+    return g
   },
   sq: function() {
     return T
@@ -46,8 +46,8 @@ var i, r, s = n(664751),
   l = n(41776),
   u = n(703656),
   _ = n(769654),
-  d = n(650774),
-  c = n(430824),
+  c = n(650774),
+  d = n(430824),
   E = n(626135),
   I = n(981631);
 (r = i || (i = {})).SEARCH = "Search", r.RECOMMENDED = "Recommended", r.POPULAR = "Popular", r.RECOMMENDED_E3 = "Recommended - E3", r.HEADER = "Header";
@@ -59,13 +59,13 @@ async function h(e, t) {
       onSuccess: r,
       joinSource: s,
       loadId: o,
-      setsHistorySnapshot: d = !0
+      setsHistorySnapshot: c = !0
     } = n,
     E = (0, u.s1)();
-  d && l.Z.setHistorySnapshot({
+  c && l.Z.setHistorySnapshot({
     ...E
   });
-  let I = c.Z.getGuild(e),
+  let I = d.Z.getGuild(e),
     T = {
       state: {
         analyticsSource: t
@@ -206,7 +206,7 @@ function R(e, t, n, i) {
   })
 }
 
-function C(e) {
+function p(e) {
   let {
     loadId: t,
     searchId: n,
@@ -228,15 +228,15 @@ function C(e) {
   })
 }
 
-function p(e) {
+function g(e) {
   let t = l.Z.getLoadId(e);
   E.default.track(I.rMx.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
     guild_id: e,
     load_id: t,
-    guild_size: d.Z.getMemberCount(e)
+    guild_size: c.Z.getMemberCount(e)
   })
 }
-async function g(e) {
+async function C(e) {
   try {
     var t, n;
     let i = await o.tn.get({

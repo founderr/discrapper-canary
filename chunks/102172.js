@@ -22,8 +22,8 @@ var i, r, s = n(442837),
   l = n(984933),
   u = n(430824),
   _ = n(496675),
-  d = n(979651),
-  c = n(934415),
+  c = n(979651),
+  d = n(934415),
   E = n(981631),
   I = n(689938);
 let T = (e, t) => (0, a.hv)(e.type) || t.canBasicChannel(E.S7T.CONNECT | E.S7T.VIEW_CHANNEL, e);
@@ -54,14 +54,14 @@ function f(e, t, n, i, r) {
   let s;
   if (null == e) return [!1, 2];
   let o = t.isInChannel(e.id),
-    l = e instanceof a.Sf && (0, c.rY)(e, t, n),
+    l = e instanceof a.Sf && (0, d.rY)(e, t, n),
     u = T(e, i),
     _ = null != r.getAwaitingRemoteSessionInfo() || null != r.getRemoteSessionId();
   return _ ? s = 0 : u || o ? l && !o && (s = 1) : s = 2, [!__OVERLAY__ && !_ && (o || u && !l), s]
 }
 
 function N(e) {
-  return (0, s.Wu)([d.Z, u.Z, _.Z, o.Z], () => f(e, d.Z, u.Z, _.Z, o.Z))
+  return (0, s.Wu)([c.Z, u.Z, _.Z, o.Z], () => f(e, c.Z, u.Z, _.Z, o.Z))
 }
 
 function A(e, t, n) {

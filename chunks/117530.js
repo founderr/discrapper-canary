@@ -4,8 +4,8 @@ var i, r, s, o, a = n(392711),
   l = n.n(a),
   u = n(442837),
   _ = n(570140),
-  d = n(668781),
-  c = n(141795),
+  c = n(668781),
+  d = n(141795),
   E = n(596956),
   I = n(703558),
   T = n(981631),
@@ -70,7 +70,7 @@ o = "UploadAttachmentStore", (s = "displayName") in(r = O) ? Object.defineProper
       draftType: r
     } = e, s = [...N(n, r)];
     if (s.length + t.length > T.dN1 && r !== I.d.SlashCommand && r !== I.d.ApplicationLauncherCommand) {
-      d.Z.show({
+      c.Z.show({
         title: h.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
         body: h.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
           limit: T.dN1
@@ -79,7 +79,7 @@ o = "UploadAttachmentStore", (s = "displayName") in(r = O) ? Object.defineProper
       return
     }
     l().forEach(t, e => {
-      let t = new c.n(e, n, i, s.length);
+      let t = new d.n(e, n, i, s.length);
       t.upload(), s.push(t)
     }), m(n, r, s)
   },
@@ -138,7 +138,7 @@ o = "UploadAttachmentStore", (s = "displayName") in(r = O) ? Object.defineProper
       id: n,
       file: i,
       draftType: r
-    } = e, s = [...N(t, r)].filter(e => e.id !== n), o = new c.n(i, t);
+    } = e, s = [...N(t, r)].filter(e => e.id !== n), o = new d.n(i, t);
     o.upload(), s.push(o), m(t, r, s)
   },
   SIDEBAR_CLOSE: function(e) {

@@ -18,20 +18,20 @@ function s(e) {
     component: t,
     children: n,
     forceLevel: s
-  } = e, o = r.useContext(a), [l, u] = r.useState(null != t), _ = 1, d = 1;
-  null != s ? null != t ? (_ = s, d = s + 1) : d = s : null != t ? (_ = o.level, d = o.level + 1) : d = o.level + (l ? 1 : 0);
-  let c = r.useCallback(() => (u(!0), _), [_]),
-    E = r.useCallback(() => (u(!0), d), [d]);
+  } = e, o = r.useContext(a), [l, u] = r.useState(null != t), _ = 1, c = 1;
+  null != s ? null != t ? (_ = s, c = s + 1) : c = s : null != t ? (_ = o.level, c = o.level + 1) : c = o.level + (l ? 1 : 0);
+  let d = r.useCallback(() => (u(!0), _), [_]),
+    E = r.useCallback(() => (u(!0), c), [c]);
   return (0, i.jsxs)(i.Fragment, {
     children: [null != t ? (0, i.jsx)(a.Provider, {
       value: {
         level: _,
-        getLevelAndMarkUsed: c
+        getLevelAndMarkUsed: d
       },
       children: t
     }) : null, (0, i.jsx)(a.Provider, {
       value: {
-        level: d,
+        level: c,
         getLevelAndMarkUsed: E
       },
       children: n

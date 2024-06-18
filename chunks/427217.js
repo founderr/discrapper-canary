@@ -19,8 +19,8 @@ function l(e) {
     textClassName: l,
     placeholderText: u,
     soloEmojiClassName: _,
-    animate: d = !0,
-    hideTooltip: c = !1,
+    animate: c = !0,
+    hideTooltip: d = !1,
     hideEmoji: E = !1,
     children: I
   } = e;
@@ -35,8 +35,8 @@ function l(e) {
       className: s()(a.emoji, r, null != _ ? {
         [_]: null == h || "" === h
       } : null),
-      animate: d,
-      hideTooltip: c
+      animate: c,
+      hideTooltip: d
     }), null != h && h.length > 0 ? (0, i.jsx)("span", {
       className: l,
       children: h

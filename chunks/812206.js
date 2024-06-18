@@ -4,13 +4,13 @@ var i, r, s, o, a = n(442837),
   l = n(570140),
   u = n(973616);
 let _ = [],
-  d = {},
   c = {},
+  d = {},
   E = {},
   I = {};
 
 function T(e) {
-  for (let t of (d[e.id] = e, E[e.name.toLowerCase()] = e, e.aliases)) E[t.toLowerCase()] = e;
+  for (let t of (c[e.id] = e, E[e.name.toLowerCase()] = e, e.aliases)) E[t.toLowerCase()] = e;
   delete I[e.id]
 }
 
@@ -26,20 +26,20 @@ function h(e) {
 }
 class S extends(i = a.ZP.Store) {
   _getAllApplications() {
-    return Object.values(d)
+    return Object.values(c)
   }
   getGuildApplication(e, t) {
     if (null != e) {
-      for (let n of Object.values(d))
+      for (let n of Object.values(c))
         if (n.guildId === e && n.type === t) return n
     }
   }
   getGuildApplicationIds(e) {
     var t;
-    return null == e ? _ : null !== (t = c[e]) && void 0 !== t ? t : _
+    return null == e ? _ : null !== (t = d[e]) && void 0 !== t ? t : _
   }
   getApplication(e) {
-    return d[e]
+    return c[e]
   }
   getApplicationByName(e) {
     if (null == e) return;
@@ -63,7 +63,7 @@ o = "ApplicationStore", (s = "displayName") in(r = S) ? Object.defineProperty(r,
   writable: !0
 }) : r[s] = o, t.Z = new S(l.Z, {
   LOGOUT: function() {
-    d = {}, c = {}, E = {}, I = {}
+    c = {}, d = {}, E = {}, I = {}
   },
   OVERLAY_INITIALIZE: function(e) {
     let {
@@ -127,7 +127,7 @@ o = "ApplicationStore", (s = "displayName") in(r = S) ? Object.defineProperty(r,
         application: e
       }
       of t) null != e && (T(e), r.push(e.id), i = !0);
-    return i && (c[n] = r), i
+    return i && (d[n] = r), i
   },
   GUILD_APPLICATIONS_FETCH_SUCCESS: function(e) {
     let {
@@ -135,7 +135,7 @@ o = "ApplicationStore", (s = "displayName") in(r = S) ? Object.defineProperty(r,
       applications: n
     } = e, i = [];
     for (let e of n) i.push(e.id), T(u.Z.createFromServer(e));
-    c[t] = i
+    d[t] = i
   },
   BILLING_PAYMENTS_FETCH_SUCCESS: function(e) {
     let {

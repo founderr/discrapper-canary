@@ -10,7 +10,7 @@ n.d(t, {
     return H
   },
   WH: function() {
-    return v
+    return L
   },
   aP: function() {
     return G
@@ -51,8 +51,8 @@ var i = n(512722),
   l = n(258609),
   u = n(569545),
   _ = n(525925),
-  d = n(522474),
-  c = n(199902),
+  c = n(522474),
+  d = n(199902),
   E = n(314897),
   I = n(592125),
   T = n(430824),
@@ -64,18 +64,18 @@ var i = n(512722),
   m = n(573261),
   O = n(26151),
   R = n(493683),
-  C = n(475179),
-  p = n(287734),
-  g = n(981631),
-  L = n(70722);
+  p = n(475179),
+  g = n(287734),
+  C = n(981631),
+  v = n(70722);
 
-function v(e, t, n) {
+function L(e, t, n) {
   a.Z.dispatch({
     type: "STREAM_START",
-    streamType: null != e ? L.lo.GUILD : L.lo.CALL,
+    streamType: null != e ? v.lo.GUILD : v.lo.CALL,
     guildId: e,
     channelId: t,
-    appContext: __OVERLAY__ ? g.IlC.OVERLAY : g.IlC.APP,
+    appContext: __OVERLAY__ ? C.IlC.OVERLAY : C.IlC.APP,
     ...n
   })
 }
@@ -102,7 +102,7 @@ function P(e, t) {
   } = e;
   if (null != n && M(n, i)) return;
   let r = (0, u.V9)(e),
-    s = (null == t ? void 0 : t.forceMultiple) || c.Z.getAllActiveStreamsForChannel(i).filter(e => {
+    s = (null == t ? void 0 : t.forceMultiple) || d.Z.getAllActiveStreamsForChannel(i).filter(e => {
       let {
         ownerId: t
       } = e;
@@ -112,7 +112,7 @@ function P(e, t) {
     type: "STREAM_WATCH",
     streamKey: r,
     allowMultiple: s
-  }), !s && (null == t || !t.noFocus) && C.Z.selectParticipant(e.channelId, r)
+  }), !s && (null == t || !t.noFocus) && p.Z.selectParticipant(e.channelId, r)
 }
 
 function y(e, t) {
@@ -130,7 +130,7 @@ function U(e, t) {
   } = e;
   if (null != n && M(n, i)) return;
   P(e, t);
-  let r = d.Z.getWindowOpen(g.KJ3.CHANNEL_CALL_POPOUT),
+  let r = c.Z.getWindowOpen(C.KJ3.CHANNEL_CALL_POPOUT),
     s = h.Z.getVoiceChannelId();
   if (!r || s !== i)(0, _.Z)(e)
 }
@@ -140,7 +140,7 @@ function b(e) {
   G(e, t), a.Z.dispatch({
     type: "STREAM_STOP",
     streamKey: e,
-    appContext: __OVERLAY__ ? g.IlC.OVERLAY : g.IlC.APP
+    appContext: __OVERLAY__ ? C.IlC.OVERLAY : C.IlC.APP
   })
 }
 
@@ -154,7 +154,7 @@ function G(e) {
 }
 async function w(e, t, n) {
   let i = (0, u.V9)({
-    streamType: null != e ? L.lo.GUILD : L.lo.CALL,
+    streamType: null != e ? v.lo.GUILD : v.lo.CALL,
     guildId: e,
     channelId: t,
     ownerId: n
@@ -165,7 +165,7 @@ async function w(e, t, n) {
   });
   try {
     let e = await o.tn.get({
-      url: g.ANM.STREAM_PREVIEW(i),
+      url: C.ANM.STREAM_PREVIEW(i),
       query: {
         version: Date.now()
       },
@@ -188,7 +188,7 @@ async function w(e, t, n) {
 async function k(e) {
   try {
     await m.Z.post({
-      url: g.ANM.STREAM_NOTIFY(e),
+      url: C.ANM.STREAM_NOTIFY(e),
       oldFormErrors: !0,
       trackedActionData: {
         event: s.NetworkActionNames.STREAM_NOTIFY
@@ -206,7 +206,7 @@ function B(e) {
 
 function x(e, t) {
   o.tn.patch({
-    url: g.ANM.STREAM(e),
+    url: C.ANM.STREAM(e),
     body: {
       region: t
     },
@@ -216,7 +216,7 @@ function x(e, t) {
 
 function V() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-    t = c.Z.getCurrentUserActiveStream();
+    t = d.Z.getCurrentUserActiveStream();
   null != t && b((0, u.V9)(t), e)
 }
 
@@ -234,7 +234,7 @@ function Z(e) {
       sourceId: i,
       sourceName: r
     }
-  }), null == t ? R.Z.createBroadcastPrivateChannel() : v(null, t, {
+  }), null == t ? R.Z.createBroadcastPrivateChannel() : L(null, t, {
     pid: n,
     sourceId: i,
     sourceName: r
@@ -245,7 +245,7 @@ function H(e, t) {
   let n = E.default.getId(),
     i = (0, u.my)(t),
     r = h.Z.getVoiceChannelId();
-  null != r && r !== e && p.default.disconnect(), R.Z.addRecipient(e, n, void 0, () => {
+  null != r && r !== e && g.default.disconnect(), R.Z.addRecipient(e, n, void 0, () => {
     O.Z.call(e, !1, !1, null, () => {
       U(i)
     })

@@ -21,16 +21,16 @@ function u(e, t) {
   });
   let {
     openInPopoutEnabled: _,
-    ...d
-  } = e, c = s.Z.getWindowOpen(l.KJ3.CHANNEL_CALL_POPOUT) && null != _ && _;
-  c && (0, o.Z)(l.KJ3.CHANNEL_CALL_POPOUT);
-  let E = c ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
+    ...c
+  } = e, d = s.Z.getWindowOpen(l.KJ3.CHANNEL_CALL_POPOUT) && null != _ && _;
+  d && (0, o.Z)(l.KJ3.CHANNEL_CALL_POPOUT);
+  let E = d ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
   (0, r.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([n.e("49237"), n.e("99387"), n.e("29549"), n.e("89675")]).then(n.bind(n, 146747));
     return t => (0, i.jsx)(e, {
-      ...d,
+      ...c,
       ...t
     })
   }, {

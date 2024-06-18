@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return c
+    return d
   }
 });
 var i = n(735250);
@@ -13,13 +13,13 @@ var r = n(442837),
   l = n(513099),
   u = n(228168),
   _ = n(981631),
-  d = n(170022);
+  c = n(170022);
 
-function c(e) {
+function d(e) {
   let {
     user: t,
     displayProfile: n,
-    guildId: c,
+    guildId: d,
     channelId: E,
     onOpenProfile: I
   } = e, T = (0, r.e7)([s.Z], () => s.Z.findActivity(t.id, e => {
@@ -29,17 +29,17 @@ function c(e) {
     return t === _.IIU.CUSTOM_STATUS
   }));
   return (0, i.jsxs)("header", {
-    className: d.header,
+    className: c.header,
     children: [(0, i.jsx)(o.Z, {
       user: t,
       displayProfile: n,
-      guildId: c,
+      guildId: d,
       profileType: u.y0.BITE_SIZE,
       hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null
     }), (0, i.jsx)(l.Z, {
       user: t,
       displayProfile: n,
-      guildId: c,
+      guildId: d,
       channelId: E,
       onOpenProfile: I
     }), (0, i.jsx)(a.J, {

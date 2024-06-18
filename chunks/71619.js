@@ -7,7 +7,7 @@ n.d(t, {
     return _
   },
   s5: function() {
-    return d
+    return c
   }
 });
 var i = n(442837),
@@ -33,6 +33,6 @@ function _(e, t) {
   return u((0, i.e7)([r.ZP], () => l(e, t, r.ZP), [t, e]))
 }
 
-function d(e, t) {
+function c(e, t) {
   return u(l(e, t, r.ZP))
 }

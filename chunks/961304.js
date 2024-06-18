@@ -4,7 +4,7 @@ n.d(t, {
     return r
   },
   Z: function() {
-    return c
+    return d
   }
 });
 var i, r, s = n(259443),
@@ -21,9 +21,9 @@ function _(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let d = new s.Y("Output");
+let c = new s.Y("Output");
 (i = r || (r = {})).InteractionRequired = "interactionrequired", i.Speaking = "speaking", i.Video = "video";
-class c extends o.Z {
+class d extends o.Z {
   play() {
     var e;
     null === (e = this.audioElement) || void 0 === e || e.play()
@@ -47,7 +47,7 @@ class c extends o.Z {
           this.emit("speaking", e.data)
         }, null != this.streamSourceNode && this.streamSourceNode.connect(this.levelNode)
       } catch (e) {
-        d.warn("Output#Failed to setup speaking indicator: ".concat(e))
+        c.warn("Output#Failed to setup speaking indicator: ".concat(e))
       }
     }
     return "video" === e.kind && (null != this.videoStreamId && (0, l.jC)(this.videoStreamId), this.stream.getVideoTracks().forEach(t => {

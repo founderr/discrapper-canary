@@ -12,7 +12,7 @@ function a(e) {
   return {
     transitions: (0, l.useTransition)(t, {
       keys: e => e ? "shown" : "hidden",
-      config: i,
+      config: r,
       from: {
         opacity: 0
       },
@@ -28,7 +28,7 @@ function a(e) {
     setVisible: n
   }
 }
-let i = {
+let r = {
   mass: 1,
   tension: 250,
   friction: 18,

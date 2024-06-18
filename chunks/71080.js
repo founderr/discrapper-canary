@@ -16,8 +16,8 @@ n.d(t, {
     return l
   }
 });
-var i, r, s, o, a, l, u, _, d = n(230711),
-  c = n(197062),
+var i, r, s, o, a, l, u, _, c = n(230711),
+  d = n(197062),
   E = n(727866),
   I = n(63063),
   T = n(981631),
@@ -102,7 +102,7 @@ function N(e, t, n, i) {
           case T.d4z.GUILD_CATEGORY:
             return n ? h.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_FORUMS_DESCRIPTION_CATEGORY : h.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION_CATEGORY;
           case T.d4z.GUILD_FORUM:
-            return (null == i ? void 0 : i.createPostsDisabled) && !e.isMediaChannel() ? c.Z.getForumChannelPermissionText() : h.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_FORUMS_DESCRIPTION_TEXT;
+            return (null == i ? void 0 : i.createPostsDisabled) && !e.isMediaChannel() ? d.Z.getForumChannelPermissionText() : h.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_FORUMS_DESCRIPTION_TEXT;
           case T.d4z.GUILD_MEDIA:
             return h.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_FORUMS_DESCRIPTION_TEXT;
           case T.d4z.GUILD_ANNOUNCEMENT:
@@ -361,7 +361,7 @@ function N(e, t, n, i) {
         let e = {
           keybind: h.Z.Messages.KEYBIND_PUSH_TO_TALK_PRIORITY,
           onClick: () => {
-            d.Z.open(T.oAB.KEYBINDS)
+            c.Z.open(T.oAB.KEYBINDS)
           }
         };
         switch (r) {

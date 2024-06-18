@@ -8,15 +8,15 @@ t.Z = r.memo(function(e) {
   let {
     user: u,
     size: _ = s.AvatarSizes.SIZE_32,
-    animate: d = !1,
-    "aria-hidden": c = !1,
+    animate: c = !1,
+    "aria-hidden": d = !1,
     ...E
   } = e, I = r.useContext(o.Z);
   return (0, i.jsx)(s.Avatar, {
-    src: (t = u, n = (0, s.getAvatarSize)(_), a = d, l = I, t.getAvatarURL(l, n, a)),
+    src: (t = u, n = (0, s.getAvatarSize)(_), a = c, l = I, t.getAvatarURL(l, n, a)),
     size: _,
-    "aria-label": c ? void 0 : u.username,
-    "aria-hidden": c,
+    "aria-label": d ? void 0 : u.username,
+    "aria-hidden": d,
     ...E
   })
 })

@@ -8,7 +8,7 @@ n.d(t, {
     return _
   },
   SJ: function() {
-    return d
+    return c
   },
   X7: function() {
     return a
@@ -33,4 +33,4 @@ let a = [7, 8, 9, 10],
     width: 1280,
     height: 720
   },
-  d = 10485760
+  c = 10485760

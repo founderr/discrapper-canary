@@ -16,8 +16,8 @@ var i, r, s = n(570140),
   l = n(594190),
   u = n(77498),
   _ = n(594174),
-  d = n(626135),
-  c = n(358085),
+  c = n(626135),
+  d = n(358085),
   E = n(998502),
   I = n(96592),
   T = n(981631);
@@ -33,7 +33,7 @@ function S() {
   return !(null === E.ZP || void 0 === E.ZP ? void 0 : null === (e = E.ZP.isModuleVersionAtLeast) || void 0 === e ? void 0 : e.call(E.ZP, "discord_hook", h))
 }
 async function f() {
-  if (!(0, c.isWindows)()) return Promise.reject(Error("Hook is only available on Windows"));
+  if (!(0, d.isWindows)()) return Promise.reject(Error("Hook is only available on Windows"));
   if (S()) return Promise.reject(Error("Hook module is too old"));
   await E.ZP.ensureModule("discord_hook");
   let e = await E.ZP.requireModule("discord_hook");
@@ -56,16 +56,16 @@ function N(e, t) {
     var i;
     let r = null === (i = l.ZP.getGameForPID(e)) || void 0 === i ? void 0 : i.name,
       _ = u.Z.getGameByName(r),
-      c = null;
+      d = null;
     return new Promise(i => {
       let u = (e, n) => {
-          d.default.track(T.rMx.HOOK_RESULT, {
+          c.default.track(T.rMx.HOOK_RESULT, {
             game_name: r,
             game_id: null == _ ? null : _.id,
             success: n,
             error: e,
             ...t
-          }), null != c && (clearTimeout(c), c = null), n ? i() : i(e = null != e ? e : "Unknown hook error")
+          }), null != d && (clearTimeout(d), d = null), n ? i() : i(e = null != e ? e : "Unknown hook error")
         },
         E = l.ZP.getOverlayOptionsForPID(e),
         I = {
@@ -73,7 +73,7 @@ function N(e, t) {
           ...E,
           elevate: l.ZP.shouldElevateProcessForPID(e)
         };
-      null == I.allowHook || I.allowHook ? (c = setTimeout(() => {
+      null == I.allowHook || I.allowHook ? (d = setTimeout(() => {
         n.cancelAttachToProcess(e), u("Timed out waiting for hook response", !1)
       }, 12e4), n.attachToProcess(e, I, u), s.Z.wait(() => o.Z.clearElevatedProcess())) : i("Hook is disabled for this game")
     })

@@ -4,10 +4,10 @@ var i, r, s, o, a = n(392711),
   l = n.n(a),
   u = n(442837),
   _ = n(570140),
-  d = n(601635),
-  c = n(592125),
+  c = n(601635),
+  d = n(592125),
   E = n(271383);
-let I = new d.Z(E.ZP.isMember, (e, t) => {
+let I = new c.Z(E.ZP.isMember, (e, t) => {
   _.Z.dispatch({
     type: "GUILD_MEMBERS_REQUEST",
     guildIds: [e],
@@ -37,7 +37,7 @@ function f(e) {
   let {
     channelId: t,
     messages: n
-  } = e, i = c.Z.getChannel(t);
+  } = e, i = d.Z.getChannel(t);
   return null != i && null != i.guild_id && S(i.guild_id, n)
 }
 
@@ -50,7 +50,7 @@ function N(e) {
 }
 class A extends(i = u.ZP.Store) {
   initialize() {
-    this.waitFor(c.Z, E.ZP)
+    this.waitFor(d.Z, E.ZP)
   }
   requestMember(e, t) {
     h(e, t)

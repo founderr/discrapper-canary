@@ -12,8 +12,8 @@ var i = n(470079),
   l = n(53529),
   u = n(436660),
   _ = n(887490),
-  d = n(515270),
-  c = n(847302),
+  c = n(515270),
+  d = n(847302),
   E = n(42530);
 let I = (e, t, n) => ({
   getSlateEditor: () => e,
@@ -28,7 +28,7 @@ let I = (e, t, n) => ({
   },
   getCurrentWord() {
     let t = e.selection;
-    if (null == t || !_.Ew.isValid(e, t) || _.M8.isExpanded(t) || (0, d.L6)(e)) return {
+    if (null == t || !_.Ew.isValid(e, t) || _.M8.isExpanded(t) || (0, c.L6)(e)) return {
       word: null,
       isAtStart: !1
     };
@@ -89,7 +89,7 @@ let I = (e, t, n) => ({
         let n = a.cr(e);
         if (s = _.q.updateElement(e, s), null != n) {
           let i = _.q.markdown(n[0], t.guild_id);
-          (0, c.Gg)(e, s, t.id, i) && (s = _.q.updateElement(e, s))
+          (0, d.Gg)(e, s, t.id, i) && (s = _.q.updateElement(e, s))
         }
         a.xi(e, t.guild_id, t.id, _.q.updateElement(e, s), !1), u.Q.selectNextCommandOption(e)
       }

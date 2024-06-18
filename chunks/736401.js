@@ -9,7 +9,7 @@ var i = n(433517),
   u = n(776319),
   _ = n(801461);
 
-function d(e, t, n) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -17,12 +17,12 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let c = "lastSawPomelo";
+let d = "lastSawPomelo";
 class E extends r.Z {
   constructor(...e) {
-    super(...e), d(this, "actions", {
+    super(...e), c(this, "actions", {
       POST_CONNECTION_OPEN: () => this.onPostConnectionOpen()
-    }), d(this, "onPostConnectionOpen", () => {
+    }), c(this, "onPostConnectionOpen", () => {
       if (function() {
           if (!o.w8.getCurrentConfig({
               location: "b9eb97_1"
@@ -32,7 +32,7 @@ class E extends r.Z {
           let e = s.default.getCurrentUser();
           if (null == e || e.isPomelo() || !e.hasVerifiedEmailOrPhone()) return !1;
           let t = (0, l.ov)(),
-            n = i.K.get(t ? "lastSawPomeloMigration" : c);
+            n = i.K.get(t ? "lastSawPomeloMigration" : d);
           return !(null != n && Date.now() - n < 6048e5) && !0
         }()) {
         let e = u.Z.getCurrentConfig({
@@ -40,7 +40,7 @@ class E extends r.Z {
         }, {
           autoTrackExposure: !1
         }).enabled;
-        (0, a.a)(_.Kq.APP_START, e, !1) && i.K.set(c, Date.now())
+        (0, a.a)(_.Kq.APP_START, e, !1) && i.K.set(d, Date.now())
       }
     })
   }

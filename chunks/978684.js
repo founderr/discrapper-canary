@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   J: function() {
-    return d
+    return c
   }
 }), n(47120);
 var i = n(298444),
@@ -20,14 +20,14 @@ function _(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let d = "guestInviteToAccept";
-class c extends o.Z {
+let c = "guestInviteToAccept";
+class d extends o.Z {
   constructor(...e) {
     super(...e), _(this, "actions", {
       POST_CONNECTION_OPEN: () => this.handleConnectionOpen()
     }), _(this, "handleConnectionOpen", async () => {
       if ((0, l.isWeb)()) {
-        let e = i.x.get(d);
+        let e = i.x.get(c);
         if (null != e && "string" == typeof e && a.default.isAuthenticated()) {
           let {
             invite: t
@@ -37,10 +37,10 @@ class c extends o.Z {
             invite: t,
             code: e,
             context: u.IlC.APP
-          }), i.x.remove(d))
+          }), i.x.remove(c))
         }
       }
     })
   }
 }
-t.Z = new c
+t.Z = new d

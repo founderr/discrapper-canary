@@ -8,9 +8,9 @@ var i = n(348326),
   l = n(59480),
   u = n(40455),
   _ = n(989263),
-  d = n(513418);
+  c = n(513418);
 
-function c(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -21,7 +21,7 @@ function c(e, t, n) {
 let E = new r.Z("Messages");
 class I {
   static computeUsersAndMembers(e) {
-    (0, d.Z)(e);
+    (0, c.Z)(e);
     let t = new Map,
       n = new Map;
     for (let i of e) this.addIntoMap(t, i.users, e => e.id), this.addIntoMap(n, i.members, e => e.userId);
@@ -35,7 +35,7 @@ class I {
     }
   }
   constructor(e) {
-    if (c(this, "connectionId", null), c(this, "users", []), c(this, "members", []), c(this, "messages", []), e.length > 0) {
+    if (d(this, "connectionId", null), d(this, "users", []), d(this, "members", []), d(this, "messages", []), e.length > 0) {
       var t;
       let n = null === (t = e[0]) || void 0 === t ? void 0 : t.connectionId,
         [i, r] = I.computeUsersAndMembers(e);
@@ -123,7 +123,7 @@ t.ZP = new class e {
     a.Z.messagesTransaction(t).deleteGuild(e)
   }
   constructor() {
-    c(this, "actions", {
+    d(this, "actions", {
       CHANNEL_DELETE: (e, t) => this.handleChannelDelete(e, t),
       GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),
       LOAD_MESSAGES_SUCCESS: (e, t) => this.handleLoadMessagesSuccess(e, t),

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 });
 var i = n(735250);
@@ -61,19 +61,19 @@ let u = e => {
     }
   };
 
-function d(e) {
+function c(e) {
   let {
     children: t,
     profileType: n,
     isPremium: r,
     hasThemeColors: u,
-    hasBanner: d,
-    overrideBannerWidth: c,
+    hasBanner: c,
+    overrideBannerWidth: d,
     hasProfileEffect: E = !1
-  } = e, I = (0, s.Dt)(), T = null != c ? c : (0, o.e7)(n), h = (0, o.Wo)({
+  } = e, I = (0, s.Dt)(), T = null != d ? d : (0, o.e7)(n), h = (0, o.Wo)({
     profileType: n,
     user: {
-      hasBanner: d,
+      hasBanner: c,
       isPremium: r,
       hasProfileEffect: E
     }

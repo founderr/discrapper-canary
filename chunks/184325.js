@@ -4,7 +4,7 @@ n.d(t, {
     return i
   },
   Z: function() {
-    return p
+    return g
   }
 }), n(653041);
 var i, r, s = n(735250);
@@ -14,8 +14,8 @@ var o = n(120356),
   l = n(481060),
   u = n(315263),
   _ = n(100527),
-  d = n(906732),
-  c = n(688465),
+  c = n(906732),
+  d = n(688465),
   E = n(617136),
   I = n(497505),
   T = n(626135),
@@ -27,24 +27,24 @@ var o = n(120356),
   m = n(981631),
   O = n(689938),
   R = n(896599),
-  C = n(839973);
+  p = n(839973);
 
-function p(e) {
+function g(e) {
   let {
     user: t,
     guildId: n,
     className: i,
     shrinkAtCount: r,
     shrinkToSize: o,
-    isTryItOutFlow: p,
-    onBadgeClick: g,
-    size: L = 0
-  } = e, v = (0, N.ZP)(t.id, n), {
+    isTryItOutFlow: g,
+    onBadgeClick: C,
+    size: v = 0
+  } = e, L = (0, N.ZP)(t.id, n), {
     analyticsLocations: D
-  } = (0, d.ZP)(_.Z.BADGE), {
+  } = (0, c.ZP)(_.Z.BADGE), {
     trackUserProfileAction: M,
     ...P
-  } = (0, h.KZ)(), y = (0, f.Z)(v).map(e => ({
+  } = (0, h.KZ)(), y = (0, f.Z)(L).map(e => ({
     ...e,
     src: (0, A.jC)(e.icon)
   }));
@@ -52,17 +52,17 @@ function p(e) {
     className: a()(i, R.container, R.clydeBadgeList),
     "aria-label": O.Z.Messages.PROFILE_USER_BADGES,
     role: "group",
-    children: (0, s.jsx)(c.Z, {})
+    children: (0, s.jsx)(d.Z, {})
   });
-  p && null == y.find(e => "premium" === e.id) && y.push({
+  g && null == y.find(e => "premium" === e.id) && y.push({
     id: "premium",
-    src: C,
+    src: p,
     description: O.Z.Messages.PREMIUM_BADGE_TOOLTIP.format({
       date: new Date
     })
   });
-  let U = null != r && null != o && y.length > r ? o : L;
-  return (0, s.jsx)(d.Gt, {
+  let U = null != r && null != o && y.length > r ? o : v;
+  return (0, s.jsx)(c.Gt, {
     value: D,
     children: (0, s.jsx)("div", {
       className: a()(i, y.length > 0 ? R.containerWithContent : R.container),
@@ -86,7 +86,7 @@ function p(e) {
             let r = null != e.link ? (0, u.default)(e.link, {
               analyticsLocations: D
             }) : null;
-            if (null != r) return null == g || g(), r(n)
+            if (null != r) return null == C || C(), r(n)
           },
           onMouseEnter: () => {
             var n;

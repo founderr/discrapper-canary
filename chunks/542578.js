@@ -7,7 +7,7 @@ var i, r = n(442837),
   u = n(592125),
   _ = n(594174);
 
-function d(e, t, n) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -15,15 +15,15 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let c = {};
+let d = {};
 class E {
   static ensure(e, t, n) {
     var i, r;
     let s = "".concat(e, ":").concat(t.name, ":").concat(null !== (i = t.id) && void 0 !== i ? i : "", ":").concat(n);
-    return c[s] = null !== (r = c[s]) && void 0 !== r ? r : new E
+    return d[s] = null !== (r = d[s]) && void 0 !== r ? r : new E
   }
   constructor() {
-    d(this, "users", void 0), d(this, "fetched", void 0), this.fetched = !1, this.users = {}
+    c(this, "users", void 0), c(this, "fetched", void 0), this.fetched = !1, this.users = {}
   }
 }
 
@@ -58,9 +58,9 @@ class T extends(i = r.ZP.Store) {
     return s.users
   }
 }
-d(T, "displayName", "MessageReactionsStore"), t.Z = new T(s.Z, {
+c(T, "displayName", "MessageReactionsStore"), t.Z = new T(s.Z, {
   CONNECTION_OPEN: function() {
-    c = {}
+    d = {}
   },
   MESSAGE_REACTION_ADD: I,
   MESSAGE_REACTION_REMOVE: I,

@@ -25,8 +25,8 @@ function _(e, t) {
     });
   return r.forwardRef(function(t, _) {
     let {
-      children: d,
-      className: c,
+      children: c,
+      className: d,
       onResize: E,
       contentClassName: I,
       onScroll: T,
@@ -35,23 +35,23 @@ function _(e, t) {
       customTheme: f = !1,
       style: N,
       ...A
-    } = t, m = r.useRef(null), O = r.useRef(null), [R, C] = r.useState(!1), {
-      scrollerRef: p,
-      getScrollerState: g
-    } = (0, l.Ke)(), L = (0, l.t2)(p);
+    } = t, m = r.useRef(null), O = r.useRef(null), [R, p] = r.useState(!1), {
+      scrollerRef: g,
+      getScrollerState: C
+    } = (0, l.Ke)(), v = (0, l.t2)(g);
     r.useImperativeHandle(_, () => ({
-      getScrollerNode: () => p.current,
+      getScrollerNode: () => g.current,
       isScrolling: () => null != m.current,
-      getScrollerState: g,
-      ...(0, l.Ue)(p, g, L)
-    }), [p, g, L]);
-    let v = r.useCallback(e => {
-      null == m.current ? C(!0) : clearTimeout(m.current), m.current = setTimeout(() => {
-        m.current = null, C(!1)
+      getScrollerState: C,
+      ...(0, l.Ue)(g, C, v)
+    }), [g, C, v]);
+    let L = r.useCallback(e => {
+      null == m.current ? p(!0) : clearTimeout(m.current), m.current = setTimeout(() => {
+        m.current = null, p(!1)
       }, 200), null != T && T(e)
     }, [T]);
     return r.useEffect(() => () => clearTimeout(m.current), []), (0, l.zn)({
-      ref: p,
+      ref: g,
       key: "container",
       onUpdate: E,
       resizeObserver: s,
@@ -63,8 +63,8 @@ function _(e, t) {
       resizeObserver: s,
       listenerMap: n
     }), (0, i.jsx)("div", {
-      ref: p,
-      className: o()(c, {
+      ref: g,
+      className: o()(d, {
         [u.fade]: S,
         [u.customTheme]: f,
         [e]: !0,
@@ -73,14 +73,14 @@ function _(e, t) {
       }),
       style: N,
       dir: h,
-      onScroll: v,
+      onScroll: L,
       ...A,
       children: (0, i.jsx)(a.J, {
         containerRef: O,
         children: (0, i.jsxs)("div", {
           ref: O,
           className: o()(I, u.content),
-          children: [d, R && (0, i.jsx)("div", {
+          children: [c, R && (0, i.jsx)("div", {
             className: u.pointerCover
           })]
         })

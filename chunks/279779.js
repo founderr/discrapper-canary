@@ -6,8 +6,8 @@ var i, r, s = n(392711),
   l = n(147913),
   u = n(131704),
   _ = n(592125),
-  d = n(271383),
-  c = n(699516),
+  c = n(271383),
+  d = n(699516),
   E = n(594174),
   I = n(823379),
   T = n(709054),
@@ -23,12 +23,12 @@ function S(e, t, n) {
 }
 
 function f(e) {
-  if (null == e || c.Z.isBlocked(e.id)) return null;
+  if (null == e || d.Z.isBlocked(e.id)) return null;
   let t = {
     id: e.id,
     username: "0" !== e.discriminator ? "".concat(e.username, "#").concat(e.discriminator) : e.username
   };
-  return null != h.ZP.getGlobalName(e) && (t.globalName = e.globalName), e.bot && (t.isBot = !0), c.Z.isFriend(e.id) && (t.isFriend = !0, t.friendNickname = c.Z.getNickname(e.id)), t
+  return null != h.ZP.getGlobalName(e) && (t.globalName = e.globalName), e.bot && (t.isBot = !0), d.Z.isFriend(e.id) && (t.isFriend = !0, t.friendNickname = d.Z.getNickname(e.id)), t
 }
 
 function N(e, t, n) {
@@ -156,7 +156,7 @@ class R extends l.Z {
         Object.values(E.default.getUsers()).forEach(e => {
           n[e.id] = f(e)
         });
-        let i = d.ZP.getMutableAllGuildsAndMembers();
+        let i = c.ZP.getMutableAllGuildsAndMembers();
         for (let e in i)
           for (let t in i[e]) {
             var r, s;

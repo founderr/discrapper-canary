@@ -15,10 +15,10 @@ let o = (e, t) => {
     deleteForward: l,
     setFragmentData: u,
     insertData: _,
-    insertFragmentData: d,
-    insertTextData: c
+    insertFragmentData: c,
+    insertTextData: d
   } = e;
-  return (e = (0, i.BU)(e)).addMark = n, e.removeMark = o, e.setFragmentData = u, e.insertData = _, e.insertFragmentData = d, e.insertTextData = c, e.deleteBackward = n => {
+  return (e = (0, i.BU)(e)).addMark = n, e.removeMark = o, e.setFragmentData = u, e.insertData = _, e.insertFragmentData = c, e.insertTextData = d, e.deleteBackward = n => {
     if ("line" !== n || t) a(n);
     else {
       let t = s.lP.getLineActionRange(e, !0);

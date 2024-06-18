@@ -3,8 +3,8 @@ let i, r;
 n(47120);
 var s, o, a, l, u = n(348327),
   _ = n.n(u),
-  d = n(392711),
-  c = n.n(d),
+  c = n(392711),
+  d = n.n(c),
   E = n(442837),
   I = n(570140),
   T = n(503438),
@@ -16,11 +16,11 @@ var s, o, a, l, u = n(348327),
   m = n(780570),
   O = n(314897),
   R = n(77498),
-  C = n(517100),
-  p = n(283595),
-  g = n(293273),
-  L = n(158776),
-  v = n(797258),
+  p = n(517100),
+  g = n(283595),
+  C = n(293273),
+  v = n(158776),
+  L = n(797258),
   D = n(981631);
 let M = !1,
   P = D.Skl.ONLINE,
@@ -33,7 +33,7 @@ let M = !1,
   B = [];
 
 function x(e) {
-  return (0, m.OT)(e, p.Z)
+  return (0, m.OT)(e, g.Z)
 }
 
 function V(e) {
@@ -56,7 +56,7 @@ function V(e) {
 
 function Z() {
   var e;
-  if (U = null !== (e = C.Z.getIdleSince()) && void 0 !== e ? e : 0, G = C.Z.isAFK(), w) P = y, H();
+  if (U = null !== (e = p.Z.getIdleSince()) && void 0 !== e ? e : 0, G = p.Z.isAFK(), w) P = y, H();
   else if (M) P = D.Skl.INVISIBLE;
   else {
     let e = f.co.getSetting();
@@ -64,12 +64,12 @@ function Z() {
   }
   P === D.Skl.ONLINE && U > 0 && (P = D.Skl.IDLE);
   let t = !1,
-    n = w || P === D.Skl.INVISIBLE ? [] : g.Z.getActivities().filter(V);
+    n = w || P === D.Skl.INVISIBLE ? [] : C.Z.getActivities().filter(V);
   !_()(b, n) && (b = n, t = !0);
-  let i = v.Z.getRemoteActivities();
+  let i = L.Z.getRemoteActivities();
   if (k !== i && (k = i, t = !0), t) {
     let e = b.find(e => e.type === D.IIU.CUSTOM_STATUS);
-    B = b.filter(e => e.type !== D.IIU.CUSTOM_STATUS).length > 0 ? b : null != e ? [e, ...c()(k).filter(e => e.type !== D.IIU.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : c().uniqBy(k, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
+    B = b.filter(e => e.type !== D.IIU.CUSTOM_STATUS).length > 0 ? b : null != e ? [e, ...d()(k).filter(e => e.type !== D.IIU.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : d().uniqBy(k, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
   }
 }
 
@@ -78,11 +78,11 @@ function H() {
 }
 
 function F() {
-  w = !1, y = D.Skl.UNKNOWN, Z(), L.Z.setCurrentUserOnConnectionOpen(P, B)
+  w = !1, y = D.Skl.UNKNOWN, Z(), v.Z.setCurrentUserOnConnectionOpen(P, B)
 }
 class Y extends(s = E.ZP.Store) {
   initialize() {
-    this.waitFor(C.Z, N.Z, g.Z, v.Z, p.Z, R.Z), this.syncWith([g.Z], Z)
+    this.waitFor(p.Z, N.Z, C.Z, L.Z, g.Z, R.Z), this.syncWith([C.Z], Z)
   }
   getLocalPresence() {
     return {

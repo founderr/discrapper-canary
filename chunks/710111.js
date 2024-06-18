@@ -23,10 +23,10 @@ n.d(t, {
     return o
   },
   hY: function() {
-    return d
+    return c
   },
   zb: function() {
-    return c
+    return d
   }
 }), n(47120);
 let s = 32,
@@ -40,6 +40,6 @@ let l = 12633 == n.j ? {
   } : null,
   u = "ctrl+`",
   _ = [],
-  d = "0",
-  c = 6,
+  c = "0",
+  d = 6,
   E = 6

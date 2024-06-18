@@ -11,8 +11,8 @@ let u = r.forwardRef(function(e, t) {
     store: n,
     hasSearchResults: u,
     listPadding: _,
-    renderRow: d,
-    renderSection: c,
+    renderRow: c,
+    renderSection: d,
     renderSectionHeader: E,
     renderSectionFooter: I,
     renderInspector: T,
@@ -22,17 +22,17 @@ let u = r.forwardRef(function(e, t) {
     rowHeight: N,
     sectionHeaderHeight: A,
     sectionFooterHeight: m
-  } = e, O = r.useRef(!1), R = r.useRef(null), C = (0, o.Iu)(e => e.searchQuery), p = n.useStore(e => e.activeCategoryIndex), g = (0, a.Qs)({
-    activeCategoryIndex: p,
+  } = e, O = r.useRef(!1), R = r.useRef(null), p = (0, o.Iu)(e => e.searchQuery), g = n.useStore(e => e.activeCategoryIndex), C = (0, a.Qs)({
+    activeCategoryIndex: g,
     isScrolling: O,
     listRef: R,
     onActiveCategoryIndexChange: n.setActiveCategoryIndex,
     scrollOffset: 20,
-    searchQuery: C
+    searchQuery: p
   });
   return (0, a.Xs)({
-    searchQuery: C,
-    activeCategoryIndex: p,
+    searchQuery: p,
+    activeCategoryIndex: g,
     listRef: R
   }), r.useImperativeHandle(t, () => ({
     scrollTo: function() {
@@ -72,12 +72,12 @@ let u = r.forwardRef(function(e, t) {
     }
   }), []), (0, i.jsxs)("div", {
     className: l.wrapper,
-    children: [C.length > 0 && !u && null != h ? h() : (0, i.jsx)(s.Z, {
+    children: [p.length > 0 && !u && null != h ? h() : (0, i.jsx)(s.Z, {
       role: "none presentation",
       listPadding: _,
-      onScroll: g,
-      renderRow: d,
-      renderSection: c,
+      onScroll: C,
+      renderRow: c,
+      renderSection: d,
       renderSectionHeader: E,
       renderSectionFooter: I,
       rowCount: S,

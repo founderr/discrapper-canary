@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   $X: function() {
-    return d
+    return c
   },
   IO: function() {
     return i
@@ -19,7 +19,7 @@ n.d(t, {
     return u
   },
   mu: function() {
-    return c
+    return d
   },
   tA: function() {
     return I
@@ -34,8 +34,8 @@ let a = "publicSuccessModalSeen",
   l = "667560445975986187",
   u = "669627189624307712",
   _ = "1",
-  d = [o.Plq.ADMINISTRATOR, o.Plq.KICK_MEMBERS, o.Plq.BAN_MEMBERS, o.Plq.MANAGE_GUILD, o.Plq.MANAGE_CHANNELS, o.Plq.MANAGE_ROLES, o.Plq.MANAGE_MESSAGES, o.Plq.MANAGE_GUILD_EXPRESSIONS, o.Plq.CREATE_GUILD_EXPRESSIONS, o.Plq.MANAGE_EVENTS, o.Plq.CREATE_EVENTS, o.Plq.MODERATE_MEMBERS, o.Plq.MENTION_EVERYONE],
-  c = s.$e(...d),
+  c = [o.Plq.ADMINISTRATOR, o.Plq.KICK_MEMBERS, o.Plq.BAN_MEMBERS, o.Plq.MANAGE_GUILD, o.Plq.MANAGE_CHANNELS, o.Plq.MANAGE_ROLES, o.Plq.MANAGE_MESSAGES, o.Plq.MANAGE_GUILD_EXPRESSIONS, o.Plq.CREATE_GUILD_EXPRESSIONS, o.Plq.MANAGE_EVENTS, o.Plq.CREATE_EVENTS, o.Plq.MODERATE_MEMBERS, o.Plq.MENTION_EVERYONE],
+  d = s.$e(...c),
   E = 1e3,
   I = "Enable Community Modal";
 (r = i || (i = {})).SAFETY_CHECK = "safety_check", r.BASICS = "basics", r.FINISH = "finish"

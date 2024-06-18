@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(166459),
   u = n(53281),
   _ = n(476326),
-  d = n(703558),
-  c = n(117530),
+  c = n(703558),
+  d = n(117530),
   E = n(859235),
   I = n(898463),
   T = n(981631),
@@ -25,11 +25,11 @@ function f(e) {
     channelId: t,
     option: n,
     keyboardModeEnabled: s
-  } = e, f = r.useRef(null), [N, A] = r.useState(!1), m = c.Z.getUpload(t, n.name, d.d.SlashCommand), O = r.useRef(null), R = r.useCallback(() => {
+  } = e, f = r.useRef(null), [N, A] = r.useState(!1), m = d.Z.getUpload(t, n.name, c.d.SlashCommand), O = r.useRef(null), R = r.useCallback(() => {
     A(!0)
-  }, []), C = r.useCallback(() => {
+  }, []), p = r.useCallback(() => {
     A(!1)
-  }, []), p = r.useCallback(e => {
+  }, []), g = r.useCallback(e => {
     var i;
     A(!1);
     let r = {
@@ -41,19 +41,19 @@ function f(e) {
       channelId: t,
       id: n.name,
       file: r,
-      draftType: d.d.SlashCommand
+      draftType: c.d.SlashCommand
     })
   }, [t, n]);
   return (r.useEffect(() => {
     let e = O.current;
-    return null == m && (null == e || e.addEventListener("dragover", R, !1), null == e || e.addEventListener("dragleave", C, !1), null == e || e.addEventListener("drop", p, !1)), () => {
-      null == e || e.removeEventListener("dragover", R, !1), null == e || e.removeEventListener("dragleave", C, !1), null == e || e.removeEventListener("drop", p, !1)
+    return null == m && (null == e || e.addEventListener("dragover", R, !1), null == e || e.addEventListener("dragleave", p, !1), null == e || e.addEventListener("drop", g, !1)), () => {
+      null == e || e.removeEventListener("dragover", R, !1), null == e || e.removeEventListener("dragleave", p, !1), null == e || e.removeEventListener("drop", g, !1)
     }
-  }, [m, R, C, p]), null != m) ? (0, i.jsx)(I.Z, {
+  }, [m, R, p, g]), null != m) ? (0, i.jsx)(I.Z, {
     channelId: t,
     upload: m,
     keyboardModeEnabled: s,
-    draftType: d.d.SlashCommand,
+    draftType: c.d.SlashCommand,
     label: (0, i.jsxs)(r.Fragment, {
       children: [(0, i.jsxs)(a.Text, {
         tag: "span",
@@ -80,7 +80,7 @@ function f(e) {
     className: o()(h.emptyOption, {
       [h.emptyOptionActive]: N
     }),
-    draftType: d.d.SlashCommand,
+    draftType: c.d.SlashCommand,
     ref: O,
     children: [(0, i.jsx)("span", {
       className: o()(h.optionName, {
@@ -117,7 +117,7 @@ function f(e) {
                 channelId: t,
                 id: n.name,
                 file: i,
-                draftType: d.d.SlashCommand
+                draftType: c.d.SlashCommand
               }), e.currentTarget.value = ""
             }
           },

@@ -13,8 +13,8 @@ let {
   strong: l,
   u,
   br: _,
-  em: d,
-  image: c,
+  em: c,
+  image: d,
   text: E
 } = i.defaultRules, I = {
   newline: r,
@@ -30,8 +30,8 @@ let {
   strong: l,
   u,
   br: _,
-  em: d,
-  image: c,
+  em: c,
+  image: d,
   hook: {
     order: E.order,
     match: (0, i.inlineRegex)(/^\$\[(.*?)\]\((\w+)\)/),

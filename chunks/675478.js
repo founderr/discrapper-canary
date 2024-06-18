@@ -1,16 +1,16 @@
 "use strict";
 n.d(t, {
   BU: function() {
-    return L
+    return v
   },
   DZ: function() {
-    return C
+    return p
   },
   PS: function() {
-    return g
+    return C
   },
   aj: function() {
-    return p
+    return g
   },
   bE: function() {
     return P
@@ -22,7 +22,7 @@ n.d(t, {
     return R
   },
   nm: function() {
-    return v
+    return L
   },
   sr: function() {
     return M
@@ -39,8 +39,8 @@ var i = n(512722),
   l = n(377108),
   u = n(524437),
   _ = n(433517),
-  d = n(570140),
-  c = n(70956),
+  c = n(570140),
+  d = n(70956),
   E = n(915486),
   I = n(262847),
   T = n(581883),
@@ -58,9 +58,9 @@ function N(e, t, n) {
 }
 let A = "UserSettingsProtoLastWriteTimes",
   m = Date.now();
-d.Z.subscribe("CONNECTION_OPEN", () => {
+c.Z.subscribe("CONNECTION_OPEN", () => {
   Date.now()
-}), d.Z.subscribe("CONNECTION_CLOSED", () => {
+}), c.Z.subscribe("CONNECTION_CLOSED", () => {
   Date.now()
 }), "undefined" != typeof document && (document.addEventListener("mousedown", () => {}), document.addEventListener("keydown", () => {}));
 class O {
@@ -79,7 +79,7 @@ class O {
       o = null != s ? r.fromBinary(r.toBinary(s), h.Uc) : r.create();
     if (!1 === t(o)) return;
     let a = this.ProtoClass.create();
-    a[e] = o, __OVERLAY__ ? d.Z.dispatch({
+    a[e] = o, __OVERLAY__ ? c.Z.dispatch({
       type: "USER_SETTINGS_PROTO_ENQUEUE_UPDATE",
       settings: {
         type: this.type,
@@ -104,7 +104,7 @@ class O {
       timeout: i.timeout
     };
     if (!i.loaded) throw Error("Cannot edit user settings proto because we have not yet loaded the stored version from the DB");
-    !1 !== t.dispatch && d.Z.dispatch({
+    !1 !== t.dispatch && c.Z.dispatch({
       type: "USER_SETTINGS_PROTO_UPDATE",
       settings: {
         type: this.type,
@@ -115,13 +115,13 @@ class O {
     });
     let o = null !== (n = t.delaySeconds) && void 0 !== n ? n : 0;
     if (null != s.timeout && o < i.timeoutDelay && !i.rateLimited && (clearTimeout(s.timeout), s.timeout = void 0), null == s.timeout) {
-      let e = o * c.Z.Millis.SECOND;
-      t.jitter && (e += Math.floor(Math.random() * Math.min(e, 30 * c.Z.Millis.SECOND))), this.logger.log("Scheduling save from markDirty"), s.timeout = setTimeout(this.persistChanges, e), s.timeoutDelay = o
+      let e = o * d.Z.Millis.SECOND;
+      t.jitter && (e += Math.floor(Math.random() * Math.min(e, 30 * d.Z.Millis.SECOND))), this.logger.log("Scheduling save from markDirty"), s.timeout = setTimeout(this.persistChanges, e), s.timeoutDelay = o
     }
     null != t.cleanup && (s.cleanupFuncs = [...i.cleanupFuncs, ...t.cleanup]), null == i.protoToSave ? s.protoToSave = e : s.protoToSave = (0, h.re)(this.ProtoClass, i.protoToSave, e), this.dispatchChanges(s)
   }
   dispatchChanges(e) {
-    d.Z.dispatch({
+    c.Z.dispatch({
       type: "USER_SETTINGS_PROTO_UPDATE_EDIT_INFO",
       settings: {
         changes: e,
@@ -136,7 +136,7 @@ class O {
   }
   async loadIfNecessary(e) {
     if (__OVERLAY__) {
-      d.Z.dispatch({
+      c.Z.dispatch({
         type: "USER_SETTINGS_PROTO_LOAD_IF_NECESSARY",
         settingsType: this.type
       });
@@ -170,7 +170,7 @@ class O {
             isDirty: s,
             cleanupFuncs: a
           } = (0, h.xt)(n, i);
-        return await d.Z.dispatch({
+        return await c.Z.dispatch({
           type: "USER_SETTINGS_PROTO_UPDATE",
           settings: {
             type: this.type,
@@ -254,7 +254,7 @@ class O {
         n.out_of_date && this.logger.log("Proto was out of date, discarding changes"), this.getEditInfo().editInfo.cleanupFuncs.forEach(e => e());
         let i = (0, h.d5)(this.ProtoClass, n.settings);
         if (null == i) return;
-        d.Z.dispatch({
+        c.Z.dispatch({
           type: "USER_SETTINGS_PROTO_UPDATE",
           settings: {
             proto: i,
@@ -268,7 +268,7 @@ class O {
         var n, i;
         if (429 === e.status) {
           this.logger.log("Rate limited, scheduling retry");
-          let t = setTimeout(this.persistChanges, Math.min(30 * c.Z.Millis.SECOND, (null !== (i = e.body.retry_after) && void 0 !== i ? i : 60) * c.Z.Millis.SECOND));
+          let t = setTimeout(this.persistChanges, Math.min(30 * d.Z.Millis.SECOND, (null !== (i = e.body.retry_after) && void 0 !== i ? i : 60) * d.Z.Millis.SECOND));
           this.dispatchChanges({
             rateLimited: !0,
             timeout: t
@@ -280,21 +280,21 @@ class O {
   }
 }
 let R = new O(u.o8, S.yP.PRELOADED_USER_SETTINGS),
-  C = new O(l.ji, S.yP.FRECENCY_AND_FAVORITES_SETTINGS),
-  p = {
+  p = new O(l.ji, S.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+  g = {
     [S.yP.PRELOADED_USER_SETTINGS]: R,
-    [S.yP.FRECENCY_AND_FAVORITES_SETTINGS]: C
+    [S.yP.FRECENCY_AND_FAVORITES_SETTINGS]: p
   };
 
-function g(e, t, n) {
+function C(e, t, n) {
   return R.updateAsync("guilds", n => (0, h.u0)(n, e, t), n)
 }
 
-function L(e, t, n, i) {
-  return g(e, e => (0, h.uL)(e, t, n), i)
+function v(e, t, n, i) {
+  return C(e, e => (0, h.uL)(e, t, n), i)
 }
 
-function v(e) {
+function L(e) {
   return R.updateAsync("userContent", t => {
     if ((0, E.jl)(t.dismissedContents, e)) return !1;
     t.dismissedContents = (0, E.GV)(t.dismissedContents, e)

@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(481060),
   u = n(239091),
   _ = n(40851),
-  d = n(213609),
-  c = n(210887),
+  c = n(213609),
+  d = n(210887),
   E = n(574254),
   I = n(153850),
   T = n(585483),
@@ -33,7 +33,7 @@ let f = e => {
     close: n,
     onUnmount: a,
     target: u,
-    rect: c,
+    rect: d,
     position: E,
     align: T,
     impressionName: S,
@@ -62,7 +62,7 @@ let f = e => {
   }, []), r.useLayoutEffect(() => {
     var e;
     null === (e = N.current) || void 0 === e || e.updatePosition()
-  }), (0, d.Z)({
+  }), (0, c.Z)({
     type: o.ImpressionTypes.MENU,
     name: S,
     properties: f
@@ -71,14 +71,14 @@ let f = e => {
     R = r.useCallback(() => {
       O.dispatch(h.CkL.POPOUT_SHOW)
     }, [O]),
-    C = r.useCallback(() => {
+    p = r.useCallback(() => {
       O.dispatch(h.CkL.POPOUT_HIDE)
     }, [O]);
   return (0, i.jsx)(I.W5, {
     onMount: R,
-    onUnmount: C,
+    onUnmount: p,
     targetRef: A,
-    overrideTargetRect: c,
+    overrideTargetRect: d,
     position: null != E ? E : "right",
     align: null != T ? T : "top",
     autoInvert: !0,
@@ -182,7 +182,7 @@ function A() {
     contextMenu: E.Z.getContextMenu(),
     version: E.Z.version,
     isOpen: E.Z.isOpen()
-  })), s = (0, a.e7)([c.Z], () => c.Z.theme), {
+  })), s = (0, a.e7)([d.Z], () => d.Z.theme), {
     appContext: o,
     renderWindow: l
   } = r.useContext(_.ZP);

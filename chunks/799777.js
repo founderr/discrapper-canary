@@ -3,8 +3,8 @@ let i;
 var r, s, o, a, l = n(392711),
   u = n.n(l),
   _ = n(442837),
-  d = n(433517),
-  c = n(570140),
+  c = n(433517),
+  d = n(570140),
   E = n(981631);
 let I = "GameLibraryViewStore",
   T = E.sHY.ASCENDING,
@@ -16,7 +16,7 @@ let I = "GameLibraryViewStore",
 class N extends(a = _.ZP.Store) {
   initialize() {
     var e;
-    let t = null !== (e = d.K.get(I)) && void 0 !== e ? e : {};
+    let t = null !== (e = c.K.get(I)) && void 0 !== e ? e : {};
     null != t.sortDirection && null != t.sortKey && (T = t.sortDirection, h = t.sortKey)
   }
   get sortDirection() {
@@ -38,13 +38,13 @@ o = "GameLibraryViewStore", (s = "displayName") in(r = N) ? Object.definePropert
   configurable: !0,
   writable: !0
 }) : r[s] = o;
-let A = new N(c.Z, {
+let A = new N(d.Z, {
   LIBRARY_TABLE_SORT_UPDATE: function(e) {
     let {
       direction: t,
       key: n
     } = e;
-    T = t, h = n, d.K.set(I, {
+    T = t, h = n, c.K.set(I, {
       sortDirection: T,
       sortKey: h
     })

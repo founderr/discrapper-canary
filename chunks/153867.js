@@ -15,8 +15,8 @@ var i = n(524437),
   l = n(210887),
   u = n(695346),
   _ = n(675478),
-  d = n(981631),
-  c = n(874893);
+  c = n(981631),
+  d = n(874893);
 
 function E(e) {
   return _.hW.updateAsync("guildFolders", t => {
@@ -37,13 +37,13 @@ function E(e) {
 
 function I(e) {
   switch (e) {
-    case d.BRd.DARK:
+    case c.BRd.DARK:
       return i.Q2.DARK;
-    case d.BRd.LIGHT:
+    case c.BRd.LIGHT:
       return i.Q2.LIGHT;
-    case d.BRd.DARKER:
+    case c.BRd.DARKER:
       return i.Q2.DARKER;
-    case d.BRd.MIDNIGHT:
+    case c.BRd.MIDNIGHT:
       return i.Q2.MIDNIGHT;
     default:
       return i.Q2.DARK
@@ -58,7 +58,7 @@ function T(e) {
   if (s.Z.dispatch({
       type: "UNSYNCED_USER_SETTINGS_UPDATE",
       settings: {
-        useSystemTheme: "system" === n ? c.K.ON : c.K.OFF
+        useSystemTheme: "system" === n ? d.K.ON : d.K.OFF
       }
     }), s.Z.dispatch({
       type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",

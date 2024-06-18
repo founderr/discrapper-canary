@@ -10,7 +10,7 @@ n.d(t, {
     return I
   },
   ZP: function() {
-    return c
+    return d
   },
   ij: function() {
     return h
@@ -24,9 +24,9 @@ var i = n(512722),
   l = n(430824),
   u = n(699516),
   _ = n(594174),
-  d = n(51144);
+  c = n(51144);
 
-function c(e) {
+function d(e) {
   let t = E(e);
   return r()(null != t, "Result cannot be null because the message is not null"), t
 }
@@ -36,9 +36,9 @@ function E(e) {
   let n = (0, s.e7)([o.Z], () => null == e ? null : o.Z.getChannel(e.channel_id)),
     i = null == e ? void 0 : null === (t = e.author) || void 0 === t ? void 0 : t.id,
     r = null == n ? void 0 : n.guild_id,
-    c = (0, s.e7)([a.ZP], () => null == r || null == i ? null : a.ZP.getMember(r, i)),
+    d = (0, s.e7)([a.ZP], () => null == r || null == i ? null : a.ZP.getMember(r, i)),
     E = (0, s.e7)([_.default], () => _.default.getUser(i), [i]),
-    I = d.ZP.useName((null == e ? void 0 : e.author.bot) ? null == e ? void 0 : e.author : E),
+    I = c.ZP.useName((null == e ? void 0 : e.author.bot) ? null == e ? void 0 : e.author : E),
     {
       guild: T,
       guildRoles: h
@@ -57,7 +57,7 @@ function E(e) {
     guild: T,
     guildRoles: h,
     userName: I,
-    member: c,
+    member: d,
     friendNickname: f
   })
 }
@@ -82,8 +82,8 @@ function T(e, t) {
         guildRoles: t
       }
     }, [i]),
-    c = (0, s.e7)([u.Z], () => null != n && (null == t ? void 0 : t.isPrivate()) ? u.Z.getNickname(n) : null),
-    E = d.ZP.useName(e);
+    d = (0, s.e7)([u.Z], () => null != n && (null == t ? void 0 : t.isPrivate()) ? u.Z.getNickname(n) : null),
+    E = c.ZP.useName(e);
   return S({
     user: e,
     channel: t,
@@ -91,7 +91,7 @@ function T(e, t) {
     guildRoles: _,
     member: r,
     userName: E,
-    friendNickname: c
+    friendNickname: d
   })
 }
 
@@ -121,13 +121,13 @@ function S(e) {
     guildRoles: l,
     member: u,
     userName: _,
-    friendNickname: c
-  } = e, E = null == s ? "???" : null != _ ? _ : d.ZP.getName(s);
+    friendNickname: d
+  } = e, E = null == s ? "???" : null != _ ? _ : c.ZP.getName(s);
   return (null == s ? void 0 : s.id) == null || null == o ? {
     nick: E,
     colorString: void 0
   } : (null == a ? void 0 : a.id) == null ? {
-    nick: null != c ? c : E,
+    nick: null != d ? d : E,
     colorString: void 0
   } : null == u ? {
     nick: E,

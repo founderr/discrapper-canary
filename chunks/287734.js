@@ -9,8 +9,8 @@ var o = n(788983),
   l = n(700615),
   u = n(592125),
   _ = n(731290),
-  d = n(131951),
-  c = n(944486),
+  c = n(131951),
+  d = n(944486),
   E = n(914010),
   I = n(594174),
   T = n(934415),
@@ -49,14 +49,14 @@ t.default = {
       (0, a.uL)(S.Z5c.CHANNEL(s, e));
       return
     }
-    d.Z.isSupported() && (null != e && d.Z.getMediaEngine().interact(), (0, h.h)(e, s, n, i))
+    c.Z.isSupported() && (null != e && c.Z.getMediaEngine().interact(), (0, h.h)(e, s, n, i))
   },
   disconnect() {
     let e = s.Z.getRemoteSessionId();
     if (null != e && r._(e), (0, l.ur)()) this.selectVoiceChannel(null);
     else {
-      let e = u.Z.getChannel(c.Z.getChannelId()),
-        t = c.Z.getChannelId() === c.Z.getVoiceChannelId() && (null == e ? void 0 : e.isThread()) === !0;
+      let e = u.Z.getChannel(d.Z.getChannelId()),
+        t = d.Z.getChannelId() === d.Z.getVoiceChannelId() && (null == e ? void 0 : e.isThread()) === !0;
       if (this.selectVoiceChannel(null), o.xv(S.KJ3.CHANNEL_CALL_POPOUT), t) {
         let e = E.Z.getGuildId();
         null != e && (0, a.uL)((0, T.LY)(e))

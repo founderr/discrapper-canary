@@ -4,8 +4,8 @@ var i, r, s, o, a = n(442837),
   l = n(46973),
   u = n(570140),
   _ = n(581883),
-  d = n(131951),
-  c = n(944486),
+  c = n(131951),
+  d = n(944486),
   E = n(594174),
   I = n(647177);
 let T = !1,
@@ -18,15 +18,15 @@ function N(e) {
   let n = E.default.getCurrentUser();
   if (null == n) return !1;
   let i = null != e ? e : (0, I.Gx)(null === (t = _.Z.settings.voiceAndVideo) || void 0 === t ? void 0 : t.videoBackgroundFilterDesktop, n.id);
-  return null != c.Z.getVoiceChannelId() && d.Z.isVideoEnabled() && null != i
+  return null != d.Z.getVoiceChannelId() && c.Z.isVideoEnabled() && null != i
 }
 
 function A() {
-  h !== c.Z.getVoiceChannelId() && (S = !1), N() && (S = !0), h = c.Z.getVoiceChannelId()
+  h !== d.Z.getVoiceChannelId() && (S = !1), N() && (S = !0), h = d.Z.getVoiceChannelId()
 }
 class m extends(i = a.ZP.Store) {
   initialize() {
-    this.waitFor(_.Z, c.Z, d.Z), this.syncWith([c.Z, d.Z], A)
+    this.waitFor(_.Z, d.Z, c.Z), this.syncWith([d.Z, c.Z], A)
   }
   get videoFilterAssets() {
     return f

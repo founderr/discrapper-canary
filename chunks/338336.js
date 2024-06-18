@@ -17,8 +17,8 @@ function l(e, t, n) {
     featureEnabled: l,
     windowLength: u,
     allowedPoorFpsRatio: _,
-    fpsThreshold: d,
-    backoffTimeSec: c
+    fpsThreshold: c,
+    backoffTimeSec: d
   } = o.Z.getConfig(!1);
   s.default.track(a.rMx.VIDEO_TOGGLED, {
     video_toggle_reason: t,
@@ -27,9 +27,9 @@ function l(e, t, n) {
     media_session_id: null == r ? void 0 : r(),
     video_health_manager_window_length: l ? u : null,
     video_health_manager_poor_fps_ratio: l ? _ : null,
-    video_health_manager_fps_threshold: l ? d : null,
+    video_health_manager_fps_threshold: l ? c : null,
     is_video_shown: n,
-    video_health_manager_backoff_time_seconds: l ? c : null
+    video_health_manager_backoff_time_seconds: l ? d : null
   })
 }
 

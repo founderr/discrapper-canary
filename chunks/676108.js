@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return c
+    return d
   }
 });
 var i = n(735250),
@@ -12,13 +12,13 @@ var i = n(735250),
   l = n(401227),
   u = n(872635),
   _ = n(185923),
-  d = n(364610);
+  c = n(364610);
 
-function c(e) {
+function d(e) {
   var t;
   let {
     editorRef: n,
-    options: c,
+    options: d,
     channel: E
   } = e, I = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor(), T = r.useCallback((e, t) => {
     let i = n.current;
@@ -26,14 +26,14 @@ function c(e) {
   }, [n]);
   return null == I ? null : (0, i.jsxs)("div", {
     id: "slate-toolbar",
-    className: d.staticToolbar,
+    className: c.staticToolbar,
     children: [(0, i.jsx)("div", {
-      className: d.staticButtons,
+      className: c.staticButtons,
       children: (0, i.jsx)(u.I, {
         editorRef: n,
-        options: c,
-        iconClassName: d.staticIcon,
-        dividerClassName: d.staticDivider
+        options: d,
+        iconClassName: c.staticIcon,
+        dividerClassName: c.staticDivider
       })
     }), (0, i.jsx)(s.Popout, {
       renderPopout: e => {
@@ -60,7 +60,7 @@ function c(e) {
         return (0, i.jsx)(l.Z, {
           ...e,
           active: n,
-          className: d.emojiButton,
+          className: c.emojiButton,
           tabIndex: 0
         })
       }

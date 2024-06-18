@@ -6,8 +6,8 @@ var r, s, o = n(442837),
   l = n(570140),
   u = n(642047),
   _ = n(695346),
-  d = n(973616),
-  c = n(358085);
+  c = n(973616),
+  d = n(358085);
 
 function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -40,9 +40,9 @@ function m(e) {
 }
 
 function O(e) {
-  let t = e instanceof d.Z ? m(e) : e;
+  let t = e instanceof c.Z ? m(e) : e;
   for (let n of (T.set(e.id, t), h[e.name.toLowerCase()] = t, e.aliases)) h[n.toLowerCase()] = t;
-  if ((0, c.isDesktop)())
+  if ((0, d.isDesktop)())
     for (let n of e.executables) S[n.name] = t
 }
 class R extends(s = o.ZP.PersistedStore) {
@@ -51,7 +51,7 @@ class R extends(s = o.ZP.PersistedStore) {
     null != e && (null != e.detectableGamesEtag && (N = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach(e => O(e)))
   }
   getState() {
-    return (0, c.isDesktop)() ? {
+    return (0, d.isDesktop)() ? {
       detectableGamesEtag: N,
       detectableGames: T.values()
     } : {
@@ -116,9 +116,9 @@ E(R, "displayName", "GameStore"), E(R, "persistKey", "GameStore"), E(R, "migrati
   };
   return {
     detectableGamesEtag: e.detectableGamesEtag,
-    detectableGames: null !== (n = null === (t = e.detectableGames) || void 0 === t ? void 0 : t.map(e => m(new d.Z(e)))) && void 0 !== n ? n : []
+    detectableGames: null !== (n = null === (t = e.detectableGames) || void 0 === t ? void 0 : t.map(e => m(new c.Z(e)))) && void 0 !== n ? n : []
   }
-}, e => (0, c.isDesktop)() ? e : {
+}, e => (0, d.isDesktop)() ? e : {
   detectableGamesEtag: "",
   detectableGames: []
 }]), t.Z = new R(l.Z, {
@@ -144,13 +144,13 @@ E(R, "displayName", "GameStore"), E(R, "persistKey", "GameStore"), E(R, "migrati
       return {
         id: e.id,
         name: e.name,
-        executables: (null !== (t = e.executables) && void 0 !== t ? t : []).map(d.B),
+        executables: (null !== (t = e.executables) && void 0 !== t ? t : []).map(c.B),
         overlay: null !== (n = e.overlay) && void 0 !== n && n,
         overlayWarn: null !== (i = e.overlay_warn) && void 0 !== i && i,
         overlayCompatibilityHook: null !== (r = e.overlay_compatibility_hook) && void 0 !== r && r,
         hook: null === (s = e.hook) || void 0 === s || s,
         aliases: null !== (o = e.aliases) && void 0 !== o ? o : [],
-        supportsOutOfProcessOverlay: d.Z.supportsOutOfProcessOverlay(e.overlay_methods)
+        supportsOutOfProcessOverlay: c.Z.supportsOutOfProcessOverlay(e.overlay_methods)
       }
     }(e));
     i = void 0, A = Date.now()

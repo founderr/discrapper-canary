@@ -18,12 +18,12 @@ var i = n(570140),
   l = n(931619),
   u = n(358085),
   _ = n(548570),
-  d = n(616810),
-  c = n(755278);
+  c = n(616810),
+  d = n(755278);
 let E = new s.Z("ConnectionStore"),
   I = new _.Z,
-  T = new d.Z(I),
-  h = new c.Z(I);
+  T = new c.Z(I),
+  h = new d.Z(I);
 I.handleIdentify = () => {
   let e = o.default.getToken();
   return (E.verbose("handleIdentify called", {

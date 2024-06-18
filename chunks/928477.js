@@ -28,8 +28,8 @@ var i, r, s = n(470079),
   l = n(668781),
   u = n(430742),
   _ = n(904245),
-  d = n(166459),
-  c = n(238349),
+  c = n(166459),
+  d = n(238349),
   E = n(228392),
   I = n(957730),
   T = n(467798),
@@ -41,15 +41,15 @@ var i, r, s = n(470079),
   m = n(630388),
   O = n(709054),
   R = n(968437),
-  C = n(665906),
-  p = n(456077),
-  g = n(124368),
-  L = n(981631),
-  v = n(689938);
+  p = n(665906),
+  g = n(456077),
+  C = n(124368),
+  v = n(981631),
+  L = n(689938);
 
 function D(e) {
-  let t = (0, C.NE)(e);
-  return (0, C.Xu)(e) ? t ? 2 : 3 : 1
+  let t = (0, p.NE)(e);
+  return (0, p.Xu)(e) ? t ? 2 : 3 : 1
 }
 
 function M(e, t) {
@@ -65,7 +65,7 @@ function P(e, t) {
   if ("" !== a) return a.length > 40 ? a.substring(0, 40) + "..." : a;
   {
     let t = I.ZP.unparse(null !== (s = null == o ? void 0 : o.content) && void 0 !== s ? s : "", e.id, !0),
-      n = (0, p.Z)(t.split("\n")[0], !0);
+      n = (0, g.Z)(t.split("\n")[0], !0);
     n = n.replace(/^[ #-]+/, "");
     let i = [];
     for (;;) {
@@ -94,7 +94,7 @@ function y(e) {
     privateThreadMode: r,
     location: a,
     onThreadCreated: l,
-    useDefaultThreadName: c,
+    useDefaultThreadName: d,
     uploadHandler: E
   } = e;
   return s.useCallback(async (e, s, T) => {
@@ -102,35 +102,35 @@ function y(e) {
     let N = null == n,
       A = M(i, r),
       m = null !== (f = i.name) && void 0 !== f ? f : "";
-    if ("" === m && c) {
+    if ("" === m && d) {
       let e = P(t, n);
-      m = "" !== e ? e : v.Z.Messages.THREAD
+      m = "" !== e ? e : L.Z.Messages.THREAD
     }
-    let C = (0, R.WD)(t),
-      p = h.Z.getChannel(O.default.castMessageIdAsChannelId(n)),
-      g = await G(t, () => {
-        let e = null != n ? L.ANM.CHANNEL_MESSAGE_THREADS(t.id, n) : L.ANM.CHANNEL_THREADS(t.id);
+    let p = (0, R.WD)(t),
+      g = h.Z.getChannel(O.default.castMessageIdAsChannelId(n)),
+      C = await G(t, () => {
+        let e = null != n ? v.ANM.CHANNEL_MESSAGE_THREADS(t.id, n) : v.ANM.CHANNEL_THREADS(t.id);
         return o.tn.post({
           url: e,
           body: {
             name: m,
-            type: A ? L.d4z.PRIVATE_THREAD : t.type === L.d4z.GUILD_ANNOUNCEMENT ? L.d4z.ANNOUNCEMENT_THREAD : L.d4z.PUBLIC_THREAD,
-            auto_archive_duration: C,
+            type: A ? v.d4z.PRIVATE_THREAD : t.type === v.d4z.GUILD_ANNOUNCEMENT ? v.d4z.ANNOUNCEMENT_THREAD : v.d4z.PUBLIC_THREAD,
+            auto_archive_duration: p,
             location: a
           }
         })
       });
-    g !== p && (u.Z.clearDraft(t.id, S.d.ThreadSettings), u.Z.clearDraft(t.id, S.d.FirstThreadMessage), null == l || l(g), (N || e.length > 0 || null != s && s.length > 0 || null != T && T.length > 0) && function(e, t, n, i, r) {
+    C !== g && (u.Z.clearDraft(t.id, S.d.ThreadSettings), u.Z.clearDraft(t.id, S.d.FirstThreadMessage), null == l || l(C), (N || e.length > 0 || null != s && s.length > 0 || null != T && T.length > 0) && function(e, t, n, i, r) {
       if (null != r && null != i && i.length > 0) r(e, i, t, n);
       else if (null != n && n.length > 0) _.Z.sendStickers(e.id, n, t);
       else _.Z.sendMessage(e.id, I.ZP.parse(e, t))
-    }(g, e, s, T, E)), d.Z.clearAll(t.id, S.d.FirstThreadMessage)
-  }, [t, n, i, l, r, a, c, E])
+    }(C, e, s, T, E)), c.Z.clearAll(t.id, S.d.FirstThreadMessage)
+  }, [t, n, i, l, r, a, d, E])
 }
 
 function U(e, t, n, i, r) {
   return G(e, () => o.tn.post({
-    url: L.ANM.CHANNEL_THREADS(e.id),
+    url: v.ANM.CHANNEL_THREADS(e.id),
     body: {
       name: t,
       type: n,
@@ -150,10 +150,10 @@ function b(e) {
   } = e;
   return s.useCallback(async (e, s, l) => {
     let _ = 0,
-      [c, I] = (0, T.ZP)(e);
-    c && (e = I, _ = (0, m.pj)(_, L.iLy.SUPPRESS_NOTIFICATIONS));
+      [d, I] = (0, T.ZP)(e);
+    d && (e = I, _ = (0, m.pj)(_, v.iLy.SUPPRESS_NOTIFICATIONS));
     let h = (0, R.WD)(t, null),
-      f = L.ANM.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
+      f = v.ANM.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
       N = {
         name: n,
         auto_archive_duration: h,
@@ -168,7 +168,7 @@ function b(e) {
         url: f,
         body: N
       }));
-    return u.Z.clearDraft(t.id, S.d.ThreadSettings), u.Z.clearDraft(t.id, S.d.FirstThreadMessage), d.Z.clearAll(t.id, S.d.FirstThreadMessage), (0, E.Je)({
+    return u.Z.clearDraft(t.id, S.d.ThreadSettings), u.Z.clearDraft(t.id, S.d.FirstThreadMessage), c.Z.clearAll(t.id, S.d.FirstThreadMessage), (0, E.Je)({
       guildId: t.guild_id,
       channelId: t.id,
       postId: A.id
@@ -180,8 +180,8 @@ async function G(e, t) {
   let i = e.isForumLikeChannel();
   try {
     n = await t(), null == n.body ? l.Z.show({
-      title: v.Z.Messages.ERROR,
-      body: v.Z.Messages.ERROR_OCCURRED_TRY_AGAIN
+      title: L.Z.Messages.ERROR,
+      body: L.Z.Messages.ERROR_OCCURRED_TRY_AGAIN
     }) : (a.Z.dispatch({
       type: "SLOWMODE_RESET_COOLDOWN",
       slowmodeType: N.S.CreateThread,
@@ -191,17 +191,17 @@ async function G(e, t) {
       channelId: n.body.id
     }))
   } catch (t) {
-    var r, s, o, u, _, d;
-    if ((null === (r = t.body) || void 0 === r ? void 0 : r.code) === L.evJ.TOO_MANY_THREADS) l.Z.show({
-      title: i ? v.Z.Messages.CANNOT_CREATE_FORUM_POST : v.Z.Messages.CANNOT_CREATE_THREAD,
-      body: i ? v.Z.Messages.TOO_MANY_FORUM_POSTS_MESSAGE : v.Z.Messages.TOO_MANY_THREADS_MESSAGE
+    var r, s, o, u, _, c;
+    if ((null === (r = t.body) || void 0 === r ? void 0 : r.code) === v.evJ.TOO_MANY_THREADS) l.Z.show({
+      title: i ? L.Z.Messages.CANNOT_CREATE_FORUM_POST : L.Z.Messages.CANNOT_CREATE_THREAD,
+      body: i ? L.Z.Messages.TOO_MANY_FORUM_POSTS_MESSAGE : L.Z.Messages.TOO_MANY_THREADS_MESSAGE
     });
-    else if ((null === (s = t.body) || void 0 === s ? void 0 : s.code) === L.evJ.TOO_MANY_ANNOUNCEMENT_THREADS) l.Z.show({
-      title: v.Z.Messages.CANNOT_CREATE_THREAD,
-      body: v.Z.Messages.TOO_MANY_ANNOUNCEMENT_THREADS_MESSAGE
+    else if ((null === (s = t.body) || void 0 === s ? void 0 : s.code) === v.evJ.TOO_MANY_ANNOUNCEMENT_THREADS) l.Z.show({
+      title: L.Z.Messages.CANNOT_CREATE_THREAD,
+      body: L.Z.Messages.TOO_MANY_ANNOUNCEMENT_THREADS_MESSAGE
     });
-    else if ((null === (o = t.body) || void 0 === o ? void 0 : o.code) === L.evJ.SLOWMODE_RATE_LIMITED) {
-      let n = null !== (d = t.body.retry_after) && void 0 !== d ? d : 0;
+    else if ((null === (o = t.body) || void 0 === o ? void 0 : o.code) === v.evJ.SLOWMODE_RATE_LIMITED) {
+      let n = null !== (c = t.body.retry_after) && void 0 !== c ? c : 0;
       n > 0 && a.Z.dispatch({
         type: "SLOWMODE_SET_COOLDOWN",
         channelId: e.id,
@@ -209,14 +209,14 @@ async function G(e, t) {
         cooldownMs: n * A.Z.Millis.SECOND
       })
     } else if (429 === t.status) l.Z.show({
-      title: i ? v.Z.Messages.CANNOT_CREATE_FORUM_POST : v.Z.Messages.CANNOT_CREATE_THREAD,
-      body: v.Z.Messages.RATE_LIMITED
+      title: i ? L.Z.Messages.CANNOT_CREATE_FORUM_POST : L.Z.Messages.CANNOT_CREATE_THREAD,
+      body: L.Z.Messages.RATE_LIMITED
     });
-    else if (g.fZ.has(null === (u = t.body) || void 0 === u ? void 0 : u.code)) throw t;
+    else if (C.fZ.has(null === (u = t.body) || void 0 === u ? void 0 : u.code)) throw t;
     else {
-      if (g.RN.has(null === (_ = t.body) || void 0 === _ ? void 0 : _.code)) return new Promise((e, n) => {
-        null == t.body && n(), c.Z.addConditionalChangeListener(() => {
-          let t = c.Z.getAndDeleteMostRecentUserCreatedThreadId();
+      if (C.RN.has(null === (_ = t.body) || void 0 === _ ? void 0 : _.code)) return new Promise((e, n) => {
+        null == t.body && n(), d.Z.addConditionalChangeListener(() => {
+          let t = d.Z.getAndDeleteMostRecentUserCreatedThreadId();
           if (null != t) {
             let i = h.Z.getChannel(t);
             return a.Z.wait(() => {
@@ -226,8 +226,8 @@ async function G(e, t) {
         })
       });
       l.Z.show({
-        title: v.Z.Messages.ERROR,
-        body: v.Z.Messages.ERROR_OCCURRED_TRY_AGAIN
+        title: L.Z.Messages.ERROR,
+        body: L.Z.Messages.ERROR_OCCURRED_TRY_AGAIN
       })
     }
   }

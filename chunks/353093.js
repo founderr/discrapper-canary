@@ -37,8 +37,8 @@ var i = n(108131),
   u = n(594174);
 n(963202);
 var _ = n(954138),
-  d = n(308083),
-  c = n(981631),
+  c = n(308083),
+  d = n(981631),
   E = n(689938);
 
 function I(e, t) {
@@ -58,7 +58,7 @@ function T(e) {
 }
 
 function h(e) {
-  return null != e && e.hasFeature(c.oNc.CLAN)
+  return null != e && e.hasFeature(d.oNc.CLAN)
 }
 
 function S(e, t) {
@@ -95,15 +95,15 @@ let N = (e, t) => {
     }
   },
   A = {
-    [d.NC.SIZE_12]: 16,
-    [d.NC.SIZE_16]: 16,
-    [d.NC.SIZE_24]: 24,
-    [d.NC.SIZE_32]: 32,
-    [d.NC.SIZE_36]: 40
+    [c.NC.SIZE_12]: 16,
+    [c.NC.SIZE_16]: 16,
+    [c.NC.SIZE_24]: 24,
+    [c.NC.SIZE_32]: 32,
+    [c.NC.SIZE_36]: 40
   };
 
 function m(e, t) {
-  let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.NC.SIZE_12;
+  let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.NC.SIZE_12;
   if (null == t) return;
   let {
     CDN_HOST: i
@@ -128,9 +128,9 @@ function R(e, t) {
       return (0, a.EY)(n)
     }, [t, e]),
     {
-      tag: d,
-      guildId: c
+      tag: c,
+      guildId: d
     } = T(null == i ? void 0 : i.clan),
     E = (0, _.Z)("clan_tag_chiplet");
-  return !n && !!E && null != c && null != d && !r && !0
+  return !n && !!E && null != d && null != c && !r && !0
 }

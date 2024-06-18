@@ -4,8 +4,8 @@ var i, r, s, o, a = n(392711),
   l = n.n(a),
   u = n(442837),
   _ = n(846519),
-  d = n(570140),
-  c = n(274616),
+  c = n(570140),
+  d = n(274616),
   E = n(57513),
   I = n(51025),
   T = n(812206),
@@ -17,26 +17,26 @@ var i, r, s, o, a = n(392711),
   m = n(804739);
 let O = new Set,
   R = {},
+  p = new Set,
+  g = {},
   C = new Set,
-  p = {},
-  g = new Set,
-  L = {},
-  v = 10 * N.Z.Millis.MINUTE,
+  v = {},
+  L = 10 * N.Z.Millis.MINUTE,
   D = 6 * N.Z.Millis.HOUR,
   M = 10 * N.Z.Millis.MINUTE,
   P = new _.V7;
 
 function y(e) {
-  P.start(e + Math.random() * v, c.o)
+  P.start(e + Math.random() * L, d.o)
 }
 
 function U() {
   if (!(0, m.Q)()) return !1;
   let e = h.Z.entitledBranchIds,
     t = [];
-  for (let n of e) !L.hasOwnProperty(n) && (L[n] = null, t.push(n));
+  for (let n of e) !v.hasOwnProperty(n) && (v[n] = null, t.push(n));
   if (0 === t.length) return !1;
-  d.Z.wait(() => c.o(t))
+  c.Z.wait(() => d.o(t))
 }
 
 function b(e, t) {
@@ -44,9 +44,9 @@ function b(e, t) {
     let n = R[t],
       i = n.manifestIds,
       r = S.Z.getState(e, t);
-    null != r && r.shouldPatch && (r.buildId !== n.id || !l().isEqual(r.manifestIds, i)) && d.Z.wait(() => {
+    null != r && r.shouldPatch && (r.buildId !== n.id || !l().isEqual(r.manifestIds, i)) && c.Z.wait(() => {
       let r = T.Z.getApplication(e);
-      null != r ? (g.delete((0, A.Tu)(e, t)), (0, I.li)(r, t, n.id, i, !0)) : g.add((0, A.Tu)(e, t))
+      null != r ? (C.delete((0, A.Tu)(e, t)), (0, I.li)(r, t, n.id, i, !0)) : C.add((0, A.Tu)(e, t))
     })
   }
 }
@@ -65,16 +65,16 @@ class w extends(i = u.ZP.Store) {
     return null == R[t] ? null : R[t].manifestIds
   }
   hasNoBuild(e, t) {
-    return C.has(t)
+    return p.has(t)
   }
   isFetching(e, t) {
     return O.has(t)
   }
   needsToFetchBuildSize(e) {
-    return !p.hasOwnProperty(e)
+    return !g.hasOwnProperty(e)
   }
   getBuildSize(e) {
-    return p[e]
+    return g[e]
   }
 }
 o = "ApplicationBuildStore", (s = "displayName") in(r = w) ? Object.defineProperty(r, s, {
@@ -82,18 +82,18 @@ o = "ApplicationBuildStore", (s = "displayName") in(r = w) ? Object.defineProper
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = o, t.Z = new w(d.Z, {
+}) : r[s] = o, t.Z = new w(c.Z, {
   CONNECTION_OPEN: function() {
     return y(D), U()
   },
   GAMES_DATABASE_UPDATE: function() {
     if (!(0, m.Q)()) return !1;
-    for (let e of g) {
+    for (let e of C) {
       let {
         applicationId: t,
         branchId: n
       } = (0, A.CP)(e);
-      null != T.Z.getApplication(t) && (g.delete(e), b(t, n))
+      null != T.Z.getApplication(t) && (C.delete(e), b(t, n))
     }
   },
   APPLICATION_BUILD_FETCH_START: function(e) {
@@ -117,7 +117,7 @@ o = "ApplicationBuildStore", (s = "displayName") in(r = w) ? Object.defineProper
         return t
       }),
       o = r.id;
-    C.delete(n), R[n] = {
+    p.delete(n), R[n] = {
       id: o,
       applicationId: t,
       branchId: n,
@@ -129,26 +129,26 @@ o = "ApplicationBuildStore", (s = "displayName") in(r = w) ? Object.defineProper
     let {
       branchId: t
     } = e;
-    O.delete(t), C.add(t)
+    O.delete(t), p.add(t)
   },
   APPLICATION_BUILD_SIZE_FETCH_START: function(e) {
     let {
       buildId: t
     } = e;
-    !p.hasOwnProperty(t) && (p[t] = null)
+    !g.hasOwnProperty(t) && (g[t] = null)
   },
   APPLICATION_BUILD_SIZE_FETCH_SUCCESS: function(e) {
     let {
       buildId: t,
       sizeKB: n
     } = e;
-    p[t] = n
+    g[t] = n
   },
   APPLICATION_BUILD_SIZE_FETCH_FAIL: function(e) {
     let {
       buildId: t
     } = e;
-    null == p[t] && delete p[t]
+    null == g[t] && delete g[t]
   },
   APPLICATION_BRANCHES_FETCH_SUCCESS: function(e) {
     let {
@@ -163,11 +163,11 @@ o = "ApplicationBuildStore", (s = "displayName") in(r = w) ? Object.defineProper
         id: t,
         liveBuildId: i
       } = e;
-      if (i !== L[t]) {
+      if (i !== v[t]) {
         let e = n[t];
-        null != e && d.Z.wait(() => E.l(e.id, e.branchId, !0))
+        null != e && c.Z.wait(() => E.l(e.id, e.branchId, !0))
       }
-      L[t] = i
+      v[t] = i
     }
     y(D)
   },
@@ -185,7 +185,7 @@ o = "ApplicationBuildStore", (s = "displayName") in(r = w) ? Object.defineProper
     for (let e of t) n.add(e.application_id);
     for (let e in h.Z.libraryApplications) {
       let t = h.Z.libraryApplications[e];
-      n.has(t.id) && (0, A.Je)(t) && d.Z.wait(() => E.l(t.id, t.branchId))
+      n.has(t.id) && (0, A.Je)(t) && c.Z.wait(() => E.l(t.id, t.branchId))
     }
   }
 })

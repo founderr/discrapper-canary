@@ -10,13 +10,13 @@ n.d(t, {
     return E
   },
   WA: function() {
-    return c
+    return d
   },
   _2: function() {
     return I
   },
   f5: function() {
-    return d
+    return c
   },
   fG: function() {
     return _
@@ -45,12 +45,12 @@ async function _(e) {
   let t = await l;
   if (null != t) t.setLearnedWords(e)
 }
-async function d(e) {
+async function c(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = await l;
   return null != n && n.isMisspelled(e, t)
 }
-async function c(e) {
+async function d(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 5,
     i = await l;

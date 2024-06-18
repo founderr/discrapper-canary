@@ -21,8 +21,8 @@ var i = n(749210),
   l = n(199902),
   u = n(592125),
   _ = n(430824),
-  d = n(496675),
-  c = n(944486),
+  c = n(496675),
+  d = n(944486),
   E = n(881824),
   I = n(107511),
   T = n(146085),
@@ -45,9 +45,9 @@ function S(e, t) {
 function f(e) {
   var t, n;
   let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    o = c.Z.getVoiceChannelId();
-  if (!i && (t = e, n = o, !d.Z.can(T.gl, t) || E.Zl(t.id) && n !== t.id && (E.vu(t, () => N(t, !0)), 1))) return !1;
-  if (I.Z.initialize(), r.default.selectVoiceChannel(e.id), (o = c.Z.getVoiceChannelId()) !== e.id) return !1;
+    o = d.Z.getVoiceChannelId();
+  if (!i && (t = e, n = o, !c.Z.can(T.gl, t) || E.Zl(t.id) && n !== t.id && (E.vu(t, () => N(t, !0)), 1))) return !1;
+  if (I.Z.initialize(), r.default.selectVoiceChannel(e.id), (o = d.Z.getVoiceChannelId()) !== e.id) return !1;
   let a = l.Z.getAllApplicationStreamsForChannel(e.id);
   return a.length > 0 && (0, s.rn)(a[0], {
     noFocus: !1
@@ -58,7 +58,7 @@ function N(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-    r = c.Z.getVoiceChannelId();
+    r = d.Z.getVoiceChannelId();
   if (!(!i && r !== e.id && (0, o._)(e) && E.Gy(e, () => N(e, t, n, !0)))) f(e, t) && A(e, r, n)
 }
 

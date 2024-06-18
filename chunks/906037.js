@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   CR: function() {
-    return a
+    return o
   },
   eM: function() {
     return l
   },
   m3: function() {
-    return o
+    return a
   }
 });
 var i = n(570140),
@@ -17,20 +17,20 @@ function l(e) {
   return !e.isPreviewingInGame && !e.locked || e.pinned
 }
 
-function a(e, t, n) {
-  (e.locked !== t.locked || e.pinned !== t.pinned || n(e) !== n(t) || l(e) !== l(t)) && o(t, n(t))
+function o(e, t, n) {
+  (e.locked !== t.locked || e.pinned !== t.pinned || n(e) !== n(t) || l(e) !== l(t)) && a(t, n(t))
 }
 
-function o(e, t) {
-  var n, a;
-  let o = l(e),
+function a(e, t) {
+  var n, o;
+  let a = l(e),
     r = s.Z.getGame();
   i.Z.dispatch({
     type: "OVERLAY_WIDGET_CHANGED",
     gameName: null !== (n = null == r ? void 0 : r.name) && void 0 !== n ? n : null,
-    gameId: null !== (a = null == r ? void 0 : r.id) && void 0 !== a ? a : null,
+    gameId: null !== (o = null == r ? void 0 : r.id) && void 0 !== o ? o : null,
     widgetType: e.widget,
-    visible: o && t,
+    visible: a && t,
     locked: e.locked,
     pinned: e.pinned
   })

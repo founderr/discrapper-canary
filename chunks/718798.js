@@ -12,8 +12,8 @@ var i = n(735250),
   l = n.n(a),
   u = n(992774),
   _ = n(672784),
-  d = n(369711),
-  c = n(649754);
+  c = n(369711),
+  d = n(649754);
 
 function E(e) {
   let {
@@ -44,13 +44,13 @@ function E(e) {
         let n = function(e) {
           var t, n, i, r;
           let s = null === (r = window) || void 0 === r ? void 0 : null === (i = r.DiscordNative) || void 0 === i ? void 0 : null === (n = i.app) || void 0 === n ? void 0 : null === (t = n.getReleaseChannel) || void 0 === t ? void 0 : t.call(n);
-          return "canary" === s || "development" === s ? (0, d.m)(e) : (0, _.y)(e)
+          return "canary" === s || "development" === s ? (0, c.m)(e) : (0, _.y)(e)
         }(e);
         if (null == n) return;
-        return c.Z.addSink(t, T, e => {
+        return d.Z.addSink(t, T, e => {
           i(e.width, e.height), n.render(e)
         }), () => {
-          c.Z.removeSink(t, T)
+          d.Z.removeSink(t, T)
         }
       }
     }

@@ -12,8 +12,8 @@ let _ = r.forwardRef(function(e, t) {
     avatar: r,
     name: s,
     children: _,
-    subText: d,
-    decorators: c,
+    subText: c,
+    decorators: d,
     onClick: E,
     selected: I,
     muted: T,
@@ -32,7 +32,7 @@ let _ = r.forwardRef(function(e, t) {
     [null != f ? f : ""]: I,
     [u.clickable]: !I && (null != h || null != E)
   }), R["aria-selected"] = null !== (n = R["aria-selected"]) && void 0 !== n ? n : I;
-  let C = (0, i.jsxs)("div", {
+  let p = (0, i.jsxs)("div", {
     className: o()(N, u.layout, {
       [u.muted]: !I && T,
       [u.wrappedLayout]: A
@@ -49,10 +49,10 @@ let _ = r.forwardRef(function(e, t) {
             [u.wrappedName]: A
           }),
           children: s
-        }), c]
-      }), null != d ? (0, i.jsx)("div", {
+        }), d]
+      }), null != c ? (0, i.jsx)("div", {
         className: u.subText,
-        children: d
+        children: c
       }) : null]
     }), null != _ ? (0, i.jsx)("div", {
       className: u.children,
@@ -67,7 +67,7 @@ let _ = r.forwardRef(function(e, t) {
       ...R,
       role: "listitem",
       ref: t,
-      children: C
+      children: p
     })
   }) : null != E ? (0, i.jsx)(l.Clickable, {
     onClick: E,
@@ -75,14 +75,14 @@ let _ = r.forwardRef(function(e, t) {
     ...R,
     role: "listitem",
     innerRef: t,
-    children: C
+    children: p
   }) : (0, i.jsx)(l.FocusRing, {
     ...O,
     children: (0, i.jsx)("div", {
       ...R,
       role: "listitem",
       ref: t,
-      children: C
+      children: p
     })
   })
 });

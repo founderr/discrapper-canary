@@ -4,7 +4,7 @@ n.d(t, {
     return i
   },
   Z: function() {
-    return d
+    return c
   }
 }), n(653041), n(47120), n(411104);
 var i, r, s = n(536895);
@@ -49,7 +49,7 @@ function _(e) {
   return null == n ? -1 : o(n, t)
 }
 
-function d(e, t) {
+function c(e, t) {
   switch (t.type) {
     case s.Us.NAVIGATE_UP:
       return function(e, t) {
@@ -92,13 +92,13 @@ function d(e, t) {
         let s = r[o(r, i)],
           u = null == s ? void 0 : null === (n = s.children) || void 0 === n ? void 0 : n[0];
         if (null == u) return e;
-        let d = {
+        let c = {
           ...e,
           focusPath: [...e.focusPath, u.key]
         };
         return {
-          ...d,
-          focusIndex: _(d)
+          ...c,
+          focusIndex: _(c)
         }
       }(e, 0);
     case s.Us.NAVIGATE_OUT:

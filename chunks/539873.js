@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(605236),
   u = n(837741),
   _ = n(804545),
-  d = n(587446),
-  c = n(996073),
+  c = n(587446),
+  d = n(996073),
   E = n(153124),
   I = n(327943),
   T = n(997945),
@@ -29,14 +29,14 @@ function O(e) {
     className: t,
     disabled: n,
     renderCTAButtons: O
-  } = e, [R, C] = (0, s.Wu)([I.Z], () => [I.Z.getCurrentDesktopIcon(), I.Z.isEditorOpen]), p = r.useRef(null);
-  (0, c.Z)(p, N.h1.CUSTOM_APP_ICONS);
-  let g = (0, E.Dt)(),
-    L = (0, o.useRadioGroup)({
+  } = e, [R, p] = (0, s.Wu)([I.Z], () => [I.Z.getCurrentDesktopIcon(), I.Z.isEditorOpen]), g = r.useRef(null);
+  (0, d.Z)(g, N.h1.CUSTOM_APP_ICONS);
+  let C = (0, E.Dt)(),
+    v = (0, o.useRadioGroup)({
       orientation: "horizontal",
-      labelledBy: g
+      labelledBy: C
     }),
-    v = e => {
+    L = e => {
       a.Z.dispatch({
         type: "APP_ICON_UPDATED",
         id: e
@@ -81,9 +81,9 @@ function O(e) {
       }), 5e3), i
     }, [n]);
   return (0, i.jsx)("div", {
-    ref: p,
+    ref: g,
     children: (0, i.jsx)("div", {
-      ...L,
+      ...v,
       className: m.__invalid_container,
       children: (0, i.jsxs)("div", {
         className: t,
@@ -91,12 +91,12 @@ function O(e) {
           className: m.header,
           children: [(0, i.jsxs)("div", {
             className: m.headings,
-            children: [C ? null : (0, i.jsxs)("div", {
+            children: [p ? null : (0, i.jsxs)("div", {
               className: m.title,
               children: [(0, i.jsx)(o.Heading, {
                 variant: "text-md/medium",
                 children: A.Z.Messages.APP_ICON_SETTINGS_TITLE
-              }), (0, i.jsx)(d.Z, {
+              }), (0, i.jsx)(c.Z, {
                 className: m.premiumIcon
               })]
             }), (0, i.jsx)(o.Heading, {
@@ -115,7 +115,7 @@ function O(e) {
           }).map((e, t) => (0, i.jsx)(h.Z, {
             icon: e,
             isSelected: R === e.id,
-            onSelect: e => v(e),
+            onSelect: e => L(e),
             disabled: n,
             tabIndex: 0 !== t || n ? void 0 : 0,
             isNew: U(e.id)

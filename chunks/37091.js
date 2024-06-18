@@ -5,12 +5,12 @@ let u = {
     enabled: !1
   },
   _ = {},
-  d = {},
-  c = !1;
+  c = {},
+  d = !1;
 class E extends(o = a.ZP.DeviceSettingsStore) {
   initialize() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u;
-    c = e.enabled
+    d = e.enabled
   }
   getWaitingHighFive(e, t) {
     var n;
@@ -18,14 +18,14 @@ class E extends(o = a.ZP.DeviceSettingsStore) {
   }
   getCompletedHighFive(e, t) {
     var n;
-    return null === (n = d[e]) || void 0 === n ? void 0 : n[t]
+    return null === (n = c[e]) || void 0 === n ? void 0 : n[t]
   }
   getEnabled() {
-    return c
+    return d
   }
   getUserAgnosticState() {
     return {
-      enabled: c
+      enabled: d
     }
   }
 }
@@ -58,7 +58,7 @@ s = "HighFiveStore", (r = "persistKey") in(i = E) ? Object.defineProperty(i, r, 
     let {
       enabled: t
     } = e;
-    c = t
+    d = t
   },
   HIGH_FIVE_COMPLETE: function(e) {
     var t;
@@ -69,8 +69,8 @@ s = "HighFiveStore", (r = "persistKey") in(i = E) ? Object.defineProperty(i, r, 
       channelId: s
     } = e, o = null !== (t = _[s]) && void 0 !== t ? t : {}, a = o[r];
     if (delete o[r], null == a) return !1;
-    d[s] = {
-      ...d[s],
+    c[s] = {
+      ...c[s],
       [r]: [a, n],
       [i]: [n, a]
     }
@@ -81,7 +81,7 @@ s = "HighFiveStore", (r = "persistKey") in(i = E) ? Object.defineProperty(i, r, 
       firstUserId: n,
       secondUserId: i,
       channelId: r
-    } = e, s = null !== (t = d[r]) && void 0 !== t ? t : {};
+    } = e, s = null !== (t = c[r]) && void 0 !== t ? t : {};
     delete s[n], delete s[i]
   }
 })

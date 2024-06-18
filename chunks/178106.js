@@ -7,8 +7,8 @@ var i, r = n(392711),
   l = n(442837),
   u = n(570140),
   _ = n(704907),
-  d = n(581883),
-  c = n(594174),
+  c = n(581883),
+  d = n(594174),
   E = n(164878),
   I = n(763296),
   T = n(697426),
@@ -41,7 +41,7 @@ let N = [],
 function O() {
   var e, t;
   if (!R()) return;
-  let n = null === (e = d.Z.frecencyWithoutFetchingLatest.playedSoundFrecency) || void 0 === e ? void 0 : e.playedSounds;
+  let n = null === (e = c.Z.frecencyWithoutFetchingLatest.playedSoundFrecency) || void 0 === e ? void 0 : e.playedSounds;
   m.overwriteHistory((t = null != n ? n : {}, s().mapValues(t, e => ({
     ...e,
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
@@ -54,9 +54,9 @@ function R() {
     autoTrackExposure: !1
   }).canSeeFrequentlyPlayed
 }
-class C extends(i = l.ZP.PersistedStore) {
+class p extends(i = l.ZP.PersistedStore) {
   initialize(e) {
-    this.waitFor(c.default, I.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && A.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (N = e.playedEventsPendingFlush), this.syncWith([d.Z], O)
+    this.waitFor(d.default, I.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && A.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (N = e.playedEventsPendingFlush), this.syncWith([c.Z], O)
   }
   getState() {
     return {
@@ -77,7 +77,7 @@ class C extends(i = l.ZP.PersistedStore) {
     return m.frequently
   }
 }
-f(C, "displayName", "SoundboardEventStore"), f(C, "persistKey", "SoundboardEventStore"), t.Z = new C(u.Z, {
+f(p, "displayName", "SoundboardEventStore"), f(p, "persistKey", "SoundboardEventStore"), t.Z = new p(u.Z, {
   GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: function(e) {
     let {
       sound: t,
@@ -105,7 +105,7 @@ f(C, "displayName", "SoundboardEventStore"), f(C, "persistKey", "SoundboardEvent
         }).canSeeRecentlyHeard
       }()) return;
     let r = n.toString();
-    i !== (null === (t = c.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && function(e) {
+    i !== (null === (t = d.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && function(e) {
       for (let t of I.Z.getSounds().values())
         if (null != t.find(t => t.soundId.toString() === e)) return !0;
       return !1

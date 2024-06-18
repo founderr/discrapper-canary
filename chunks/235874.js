@@ -12,9 +12,9 @@ var i, r, s, o = n(735250),
   l = n(922770),
   u = n(930295),
   _ = n(126306),
-  d = n(900975);
+  c = n(900975);
 
-function c(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -39,8 +39,8 @@ class I extends(r = a.Component) {
       autoInvert: a,
       fixed: l,
       nudgeAlignIntoViewport: _,
-      useRawTargetDimensions: d,
-      spacing: c,
+      useRawTargetDimensions: c,
+      spacing: d,
       onShiftClick: E,
       positionKey: I,
       preload: T,
@@ -72,9 +72,9 @@ class I extends(r = a.Component) {
       autoInvert: a,
       fixed: l,
       nudgeAlignIntoViewport: _,
-      useRawTargetDimensions: d,
+      useRawTargetDimensions: c,
       renderPopout: this.renderPopout,
-      spacing: c,
+      spacing: d,
       shouldShow: null != A && t,
       onRequestOpen: i,
       onRequestClose: r,
@@ -89,7 +89,7 @@ class I extends(r = a.Component) {
     })
   }
   constructor(...e) {
-    super(...e), c(this, "ref", a.createRef()), c(this, "renderPopout", e => {
+    super(...e), d(this, "ref", a.createRef()), d(this, "renderPopout", e => {
       let {
         renderPopout: t,
         animation: n,
@@ -119,7 +119,7 @@ function T(e) {
   } = e, i = a.useRef(null), [r, s] = a.useState(0);
 
   function u() {
-    return c(), (0, o.jsx)(o.Fragment, {})
+    return d(), (0, o.jsx)(o.Fragment, {})
   }
   a.useLayoutEffect(() => {
     if (r > 0) {
@@ -131,7 +131,7 @@ function T(e) {
     return () => clearTimeout(e)
   }, []);
   let _ = a.useRef(!1);
-  async function c() {
+  async function d() {
     if (!_.current) {
       _.current = !0;
       let e = setTimeout(() => {
@@ -147,7 +147,7 @@ function T(e) {
     let s = null === (r = i.current) || void 0 === r ? void 0 : null === (n = r.ref) || void 0 === n ? void 0 : null === (t = n.current) || void 0 === t ? void 0 : null === (e = t.domElementRef) || void 0 === e ? void 0 : e.current,
       a = Math.max(100, null == s ? 100 : s.offsetWidth - 20);
     return (0, o.jsx)("div", {
-      className: d.loader,
+      className: c.loader,
       style: {
         width: a
       },
@@ -165,7 +165,7 @@ function T(e) {
     renderPopout: T
   })
 }
-c(I, "Animation", i), c(I, "defaultProps", {
+d(I, "Animation", i), d(I, "defaultProps", {
   position: "right",
   autoInvert: !0,
   nudgeAlignIntoViewport: !0,

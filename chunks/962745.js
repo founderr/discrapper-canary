@@ -8,9 +8,9 @@ var i = n(735250),
   l = n(229588),
   u = n(586576),
   _ = n(689938),
-  d = n(997042);
+  c = n(997042);
 
-function c(e) {
+function d(e) {
   let {
     locale: t,
     children: n
@@ -23,7 +23,7 @@ function c(e) {
       children: o.message
     })
   }) : r ? __OVERLAY__ ? null : (0, i.jsx)("div", {
-    className: d.loading
+    className: c.loading
   }) : n
 }
 class E extends r.Component {
@@ -32,7 +32,7 @@ class E extends r.Component {
       locale: e,
       children: t
     } = this.props;
-    return (0, i.jsx)(c, {
+    return (0, i.jsx)(d, {
       locale: e,
       children: t
     })

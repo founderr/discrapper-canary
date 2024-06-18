@@ -13,7 +13,7 @@ function o(e) {
     applicationId: t,
     size: n,
     names: o = s
-  } = e, [a, l] = i.useState(null), [u, _] = i.useState(!0), d = (0, r.getAssetImage)(t, a, n);
+  } = e, [a, l] = i.useState(null), [u, _] = i.useState(!0), c = (0, r.getAssetImage)(t, a, n);
   return i.useEffect(() => {
     (0, r.getAssets)(t).then(e => {
       for (let [t, n] of(_(!1), Object.entries(e)))
@@ -23,7 +23,7 @@ function o(e) {
         }
     })
   }, [t]), {
-    url: d,
-    state: u ? "loading" : null != d ? "fetched" : "not-found"
+    url: c,
+    state: u ? "loading" : null != c ? "fetched" : "not-found"
   }
 }

@@ -6,8 +6,8 @@ var i, r = n(442837),
   l = n(74538),
   u = n(997945),
   _ = n(981631),
-  d = n(921944),
-  c = n(474936);
+  c = n(921944),
+  d = n(474936);
 
 function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ let I = {
       a.default.track(_.rMx.APP_ICON_UPDATED, {
         icon_id: e,
         user_premium_tier: null === (t = o.default.getCurrentUser()) || void 0 === t ? void 0 : t.premiumType,
-        icon_premium_tier: e !== u.aH.DEFAULT ? c.p9.TIER_2 : null
+        icon_premium_tier: e !== u.aH.DEFAULT ? d.p9.TIER_2 : null
       })
     }
   };
@@ -78,6 +78,6 @@ E(A, "displayName", "AppIconPersistedStoreState"), E(A, "persistKey", "AppIconPe
     let {
       markAsDismissed: t
     } = e;
-    I.client.coachmarkImpressions += 1, I.client.coachmarkImpressions >= 2 && (null == t || t(d.L.UNKNOWN), N())
+    I.client.coachmarkImpressions += 1, I.client.coachmarkImpressions >= 2 && (null == t || t(c.L.UNKNOWN), N())
   }
 })

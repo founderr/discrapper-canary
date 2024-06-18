@@ -51,8 +51,8 @@ function _(e, t) {
     null != t && u.searchParams.set(e, t)
   }
   let _ = encodeURIComponent(u.toString()),
-    d = encodeURIComponent((0, o.Z)()),
-    c = ! function() {
+    c = encodeURIComponent((0, o.Z)()),
+    d = ! function() {
       var e, t;
       let n = RegExp("(".concat("WebView|(iPhone|iPod|iPad)(?!.*Safari/)", ")"), "ig"),
         i = (null === r() || void 0 === r() ? void 0 : null === (e = r().ua) || void 0 === e ? void 0 : e.match(n)) != null,
@@ -61,6 +61,6 @@ function _(e, t) {
     }() ? 0 : 1,
     E = null != i ? encodeURIComponent(i) : null,
     I = null != s ? encodeURIComponent(s) : null,
-    T = "".concat(a, "/?link=").concat(_, "&utm_source=").concat(n, "&apn=").concat("com.discord", "&isi=").concat(985746746, "&ibi=").concat("com.hammerandchisel.discord", "&sd=").concat(d, "&efr=").concat(c);
+    T = "".concat(a, "/?link=").concat(_, "&utm_source=").concat(n, "&apn=").concat("com.discord", "&isi=").concat(985746746, "&ibi=").concat("com.hammerandchisel.discord", "&sd=").concat(c, "&efr=").concat(d);
   return null != E && (T += "&afl=".concat(E)), null != I && (T += "&ifl=".concat(I)), T
 }

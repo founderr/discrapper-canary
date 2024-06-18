@@ -26,14 +26,14 @@ let a = /^[0]+/,
   l = /:00/,
   u = /(AM|ΠΜ|सुबह)/i,
   _ = /(PM|ΜΜ|शाम)/i,
-  d = /\s+/,
-  c = e => e.replace(a, "").replace(l, "").replace(u, "").replace(d, ""),
-  E = e => e.replace(a, "").replace(_, "").replace(d, ""),
+  c = /\s+/,
+  d = e => e.replace(a, "").replace(l, "").replace(u, "").replace(c, ""),
+  E = e => e.replace(a, "").replace(_, "").replace(c, ""),
   I = (e, t) => {
     let n = t.toUpperCase().trim();
     if (n.length > 0) {
       let t = r()("".concat(null == e ? void 0 : e.format("YYYY-MM-DD"), " ").concat(n), "YYYY-MM-DD LT");
-      if (c(t.format("LT")) === c(n)) return t
+      if (d(t.format("LT")) === d(n)) return t
     }
   },
   T = r()("2021-04-12T00:00:00"),

@@ -10,7 +10,7 @@ n.d(t, {
     return f
   },
   W4: function() {
-    return c
+    return d
   },
   Wz: function() {
     return E
@@ -19,13 +19,13 @@ n.d(t, {
     return I
   },
   ZR: function() {
-    return d
+    return c
   },
   am: function() {
     return S
   },
   av: function() {
-    return g
+    return C
   },
   cq: function() {
     return A
@@ -34,7 +34,7 @@ n.d(t, {
     return o
   },
   k3: function() {
-    return v
+    return L
   },
   kb: function() {
     return D
@@ -46,16 +46,16 @@ n.d(t, {
     return s
   },
   pw: function() {
-    return p
+    return g
   },
   rk: function() {
-    return C
+    return p
   },
   tB: function() {
     return O
   },
   uo: function() {
-    return L
+    return v
   },
   vD: function() {
     return m
@@ -68,8 +68,8 @@ var i, r, s, o, a = n(592125),
   l = n(823379),
   u = n(700785),
   _ = n(981631);
-let d = 7,
-  c = 300,
+let c = 7,
+  d = 300,
   E = 7,
   I = 60,
   T = 5,
@@ -139,7 +139,7 @@ function R(e, t) {
   } = t, _ = {
     author_ids: null !== (n = null == r ? void 0 : r.authorIds) && void 0 !== n ? n : [],
     message: null !== (i = null == r ? void 0 : r.message) && void 0 !== i ? i : ""
-  }, d = (null != s ? s : []).filter(e => (0, l.lm)(a.Z.getChannel(e.channelId))).map(e => {
+  }, c = (null != s ? s : []).filter(e => (0, l.lm)(a.Z.getChannel(e.channelId))).map(e => {
     var t, n, i, r, s, o, a;
     return {
       channel_id: e.channelId,
@@ -157,7 +157,7 @@ function R(e, t) {
   return {
     guild_id: e,
     welcome_message: _,
-    new_member_actions: d,
+    new_member_actions: c,
     resource_channels: (null != o ? o : []).filter(e => (0, l.lm)(a.Z.getChannel(e.channelId))).map(e => {
       var t, n, i, r, s, o, a;
       return {
@@ -175,27 +175,27 @@ function R(e, t) {
     enabled: u
   }
 }(i = s || (s = {}))[i.VIEW = 0] = "VIEW", i[i.CHAT = 1] = "CHAT";
-let C = e => {
+let p = e => {
   if (null == e) return null;
   let t = {};
   for (let n in e.channel_actions) t[n] = e.channel_actions[n].completed;
   return t
 };
 
-function p(e) {
+function g(e) {
   return null == e || (null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)) && !0
 }
 
-function g(e) {
-  return null == e || !!p(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)) && !0
-}
-
-function L(e) {
-  var t, n;
-  return null != e && (!!g(e) || (null === (t = e.welcomeMessage) || void 0 === t ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < d) && (null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < 3) && !0)
+function C(e) {
+  return null == e || !!g(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)) && !0
 }
 
 function v(e) {
+  var t, n;
+  return null != e && (!!C(e) || (null === (t = e.welcomeMessage) || void 0 === t ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < c) && (null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < 3) && !0)
+}
+
+function L(e) {
   return e.type === _.d4z.GUILD_TEXT && !u.Uu(_.Plq.SEND_MESSAGES, e) && u.Uu(_.Plq.VIEW_CHANNEL, e)
 }
 

@@ -15,16 +15,16 @@ function _(e, t) {
   }), (0, l.Z)([e, ...t, n])
 }
 u = n(878611).Z;
-let d = {
+let c = {
     enableBuildOverrides: !1,
     enableEmojiClick: !0
   },
-  c = _(a.Z.RULES, [(0, o.Z)({
+  d = _(a.Z.RULES, [(0, o.Z)({
     enableBuildOverrides: !0
   })]),
-  E = r().omit(_(a.Z.RULES, [(0, o.Z)(d)]), "paragraph", "newline"),
+  E = r().omit(_(a.Z.RULES, [(0, o.Z)(c)]), "paragraph", "newline"),
   I = _(a.Z.CHANNEL_TOPIC_RULES, [(0, o.Z)({
-    ...d,
+    ...c,
     emojiTooltipPosition: "bottom"
   }), {
     codeBlock: {
@@ -32,24 +32,24 @@ let d = {
     }
   }]),
   T = _(a.Z.VOICE_CHANNEL_STATUS_RULES, [(0, o.Z)({
-    ...d,
+    ...c,
     enableEmojiClick: !1
   })]),
-  h = _(a.Z.EMBED_TITLE_RULES, [(0, o.Z)(d)]),
-  S = _(a.Z.INLINE_REPLY_RULES, [(0, o.Z)(d)]),
-  f = _(a.Z.GUILD_VERIFICATION_FORM_RULES, [(0, o.Z)(d)]),
-  N = _(a.Z.GUILD_EVENT_RULES, [(0, o.Z)(d)]),
+  h = _(a.Z.EMBED_TITLE_RULES, [(0, o.Z)(c)]),
+  S = _(a.Z.INLINE_REPLY_RULES, [(0, o.Z)(c)]),
+  f = _(a.Z.GUILD_VERIFICATION_FORM_RULES, [(0, o.Z)(c)]),
+  N = _(a.Z.GUILD_EVENT_RULES, [(0, o.Z)(c)]),
   A = _(a.Z.INLINE_REPLY_RULES, [(0, o.Z)({
-    ...d,
+    ...c,
     emoji: {
       height: 14,
       width: 14,
       lineHeight: 18
     }
   })]),
-  m = _(a.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, o.Z)(d)]),
+  m = _(a.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, o.Z)(c)]),
   O = r().omit(_(a.Z.RULES, [(0, o.Z)({
-    ...d,
+    ...c,
     emoji: {
       height: 14,
       width: 14
@@ -61,14 +61,14 @@ let d = {
 t.Z = {
   combineAndInjectMentionRule: _,
   createReactRules: o.Z,
-  defaultReactRuleOptions: d,
-  defaultRules: c,
+  defaultReactRuleOptions: c,
+  defaultRules: d,
   guildEventRules: N,
   notifCenterV2MessagePreviewRules: O,
   lockscreenWidgetMessageRules: R,
   astParserFor: s._p,
   reactParserFor: s.w4,
-  parse: s.w4(c),
+  parse: s.w4(d),
   parseTopic: s.w4(I),
   parseVoiceChannelStatus: s.w4(T),
   parseEmbedTitle: s.w4(h),
@@ -79,7 +79,7 @@ t.Z = {
   parseForumPostGuidelines: s.w4(E),
   parseForumPostMostRecentMessage: s.w4(A),
   parseNotifCenterMessagePreview: s.w4(O),
-  parseToAST: s._p(c),
+  parseToAST: s._p(d),
   parseTopicToAST: s._p(I),
   parseEmbedTitleToAST: s._p(h),
   parseInlineReplyToAST: s._p(S),

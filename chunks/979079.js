@@ -1,5 +1,5 @@
-var t = E(685347),
-  I = E(757009)(function(n, e, E) {
-    t(n, E, e)
+var t = e(685347),
+  I = e(757009)(function(n, E, e) {
+    t(n, e, E)
   });
 n.exports = I

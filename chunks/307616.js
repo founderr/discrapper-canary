@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   n: function() {
-    return C
+    return p
   },
   v: function() {
     return O
@@ -15,8 +15,8 @@ var i = n(735250),
   l = n.n(a),
   u = n(215569),
   _ = n(481060),
-  d = n(40851),
-  c = n(153850),
+  c = n(40851),
+  d = n(153850),
   E = n(78415),
   I = n(585483),
   T = n(952265),
@@ -32,7 +32,7 @@ function N(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = [c.ZP, E.ZP];
+let A = [d.ZP, E.ZP];
 class m extends r.PureComponent {
   render() {
     let {
@@ -87,11 +87,11 @@ class m extends r.PureComponent {
 }
 
 function O() {
-  return (0, T.Vn)((0, d.bp)())
+  return (0, T.Vn)((0, c.bp)())
 }
 let R = [];
 
-function C() {
+function p() {
   let e = O(),
     t = (0, T.s9)(t => void 0 !== t[e] ? t[e] : R),
     n = r.useRef();
@@ -116,14 +116,14 @@ function C() {
     a = r.useCallback(t => {
       (0, T.Mr)(t, e)
     }, [e]),
-    d = A.map(e => t.some(t => t.Layer === e || null == t.Layer && e === c.ZP));
+    c = A.map(e => t.some(t => t.Layer === e || null == t.Layer && e === d.ZP));
   return (0, i.jsxs)(u.W, {
     component: r.Fragment,
     children: [A.map((e, n) => {
       var r;
-      let s = l().findLast(t, t => t.Layer === e || null == t.Layer && e === c.ZP);
+      let s = l().findLast(t, t => t.Layer === e || null == t.Layer && e === d.ZP);
       return (0, i.jsx)(_.Backdrop, {
-        isVisible: d[n],
+        isVisible: c[n],
         backdropStyle: null !== (r = null == s ? void 0 : s.backdropStyle) && void 0 !== r ? r : _.BackdropStyles.DARK,
         onClose: o,
         LayerComponent: e,
@@ -138,7 +138,7 @@ function C() {
       } = e;
       return (0, i.jsx)(m, {
         modalKey: r,
-        LayerComponent: null != s ? s : c.ZP,
+        LayerComponent: null != s ? s : d.ZP,
         isTopModal: n === t.length - 1,
         render: o,
         closeModal: a,

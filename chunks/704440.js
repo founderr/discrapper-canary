@@ -12,8 +12,8 @@ var i = n(735250),
   l = n.n(a),
   u = n(235874),
   _ = n(481060),
-  d = n(37234),
-  c = n(100527),
+  c = n(37234),
+  d = n(100527),
   E = n(906732),
   I = n(626135),
   T = n(55935),
@@ -25,23 +25,23 @@ var i = n(735250),
   m = n(689938),
   O = n(305800),
   R = n(751599),
-  C = n(397293),
-  p = n(352175),
-  g = n(90351);
-let L = async (e, t, n) => {
+  p = n(397293),
+  g = n(352175),
+  C = n(90351);
+let v = async (e, t, n) => {
   n(!0), await (0, S.Eo)(e).then(() => {
-    t(), (0, d.Ou)()
+    t(), (0, c.Ou)()
   }).finally(() => {
     n(!1)
   })
-}, v = e => {
+}, L = e => {
   let {
     onClose: t,
     referralsRemaining: n,
     recipient: s,
     analyticsLocations: a,
     shouldShowBirthdayUX: l
-  } = e, [u, d] = r.useState(!1), c = n - 1;
+  } = e, [u, c] = r.useState(!1), d = n - 1;
   return (0, i.jsxs)("div", {
     className: O.confirmationContainer,
     children: [(0, i.jsxs)("div", {
@@ -54,7 +54,7 @@ let L = async (e, t, n) => {
         className: O.closeButton
       }), (0, i.jsx)("img", {
         alt: "",
-        src: l ? C : p,
+        src: l ? p : g,
         className: O.confirmationImage
       }), (0, i.jsx)(_.Heading, {
         variant: "heading-xl/bold",
@@ -65,8 +65,8 @@ let L = async (e, t, n) => {
         className: O.confirmationBodyCopy,
         variant: "text-md/medium",
         color: "header-primary",
-        children: c > 0 ? m.Z.Messages.SHARE_NITRO_MODAL_CONFIRMATION_GENERAL.format({
-          count: c
+        children: d > 0 ? m.Z.Messages.SHARE_NITRO_MODAL_CONFIRMATION_GENERAL.format({
+          count: d
         }) : m.Z.Messages.SHARE_NITRO_MODAL_CONFIRMATION_GENERAL_LAST_REFERRAL
       }), (0, i.jsx)("hr", {
         className: O.confirmationBodySeparator
@@ -77,7 +77,7 @@ let L = async (e, t, n) => {
         className: O.confirmationShareButton,
         submitting: u,
         onClick: () => {
-          L(s, t, d), I.default.track(A.rMx.SHARE_NITRO_FLOW_STEPS, {
+          v(s, t, c), I.default.track(A.rMx.SHARE_NITRO_FLOW_STEPS, {
             location_stack: a,
             step: N.fz.FLOW_COMPLETED,
             other_user_id: Number(s)
@@ -105,16 +105,16 @@ function D(e) {
     channel: n,
     onClose: s,
     isResending: a
-  } = e, [u, d] = r.useState(!1), [S, p] = r.useState(!1), D = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null, {
+  } = e, [u, c] = r.useState(!1), [S, g] = r.useState(!1), D = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null, {
     analyticsLocations: M
-  } = (0, E.ZP)(c.Z.REFERRAL_TRIALS_POPOUT), {
+  } = (0, E.ZP)(d.Z.REFERRAL_TRIALS_POPOUT), {
     enabled: P
   } = f.Z.useExperiment({
     location: "200c24_1"
   }, {
     autoTrackExposure: !0
   }), y = new Date("2023-06-15T08:00:00-08:00");
-  return null == D ? null : u ? (0, i.jsx)(v, {
+  return null == D ? null : u ? (0, i.jsx)(L, {
     onClose: s,
     referralsRemaining: t,
     recipient: D,
@@ -126,7 +126,7 @@ function D(e) {
       className: O.generalBodyContainer,
       children: [(0, i.jsx)("img", {
         alt: "",
-        src: P ? C : g,
+        src: P ? p : C,
         className: O.generalBodyImage
       }), (0, i.jsxs)("div", {
         className: O.innerContent,
@@ -168,7 +168,7 @@ function D(e) {
         className: O.generalShareButton,
         submitting: S,
         onClick: () => {
-          a ? L(D, s, p) : (d(!0), I.default.track(A.rMx.SHARE_NITRO_FLOW_STEPS, {
+          a ? v(D, s, g) : (c(!0), I.default.track(A.rMx.SHARE_NITRO_FLOW_STEPS, {
             location_stack: M,
             step: N.fz.FLOW_STARTED,
             other_user_id: Number(D)

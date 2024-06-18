@@ -4,8 +4,8 @@ n(47120);
 var r, s, o, a, l = n(392711),
   u = n.n(l),
   _ = n(442837),
-  d = n(570140),
-  c = n(177523),
+  c = n(570140),
+  d = n(177523),
   E = n(353926),
   I = n(480384),
   T = n(653733),
@@ -17,14 +17,14 @@ var r, s, o, a, l = n(392711),
   m = n(486472),
   O = n(271383),
   R = n(430824),
-  C = n(19780),
-  p = n(699516),
-  g = n(944486),
-  L = n(914010),
-  v = n(981631);
-let D = new c.ZP(e => {
+  p = n(19780),
+  g = n(699516),
+  C = n(944486),
+  v = n(914010),
+  L = n(981631);
+let D = new d.ZP(e => {
   for (let t in e) null == R.Z.getGuild(t) && !m.Z.isUnavailable(t) && delete e[t];
-  d.Z.dispatch({
+  c.Z.dispatch({
     type: "GUILD_SUBSCRIPTIONS_FLUSH",
     subscriptions: e
   })
@@ -34,15 +34,15 @@ function M(e, t) {
   let n = {};
   D.forEach(r => {
     var s;
-    r !== L.Z.getGuildId() && r !== C.Z.getGuildId() && r !== (null === (s = A.Z.getChannel(g.Z.getChannelId())) || void 0 === s ? void 0 : s.getGuildId()) && !(0, T.h)(r).shouldPrioritizeSubscription && (null == i || i.guildId !== r) && (D.clearWithoutFlushing(r, e), t && (n[r] = D.get(r)))
-  }), !u().isEmpty(n) && d.Z.dispatch({
+    r !== v.Z.getGuildId() && r !== p.Z.getGuildId() && r !== (null === (s = A.Z.getChannel(C.Z.getChannelId())) || void 0 === s ? void 0 : s.getGuildId()) && !(0, T.h)(r).shouldPrioritizeSubscription && (null == i || i.guildId !== r) && (D.clearWithoutFlushing(r, e), t && (n[r] = D.get(r)))
+  }), !u().isEmpty(n) && c.Z.dispatch({
     type: "GUILD_SUBSCRIPTIONS_FLUSH",
     subscriptions: n
   })
 }
 
 function P(e, t) {
-  return D.subscribeToGuild(e), null != t && N.ZP.getSection(t) === v.ULH.MEMBERS && y(e, t, c.KV)
+  return D.subscribeToGuild(e), null != t && N.ZP.getSection(t) === L.ULH.MEMBERS && y(e, t, d.KV)
 }
 
 function y(e, t, n) {
@@ -50,7 +50,7 @@ function y(e, t, n) {
   let i = A.Z.getChannel(t);
   if (null == i) return !1;
   let r = i.getGuildId();
-  return (r !== e && e === v.I_8 && D.subscribeToGuild(r), null != i && i.isThread()) ? i.type === v.d4z.ANNOUNCEMENT_THREAD ? D.subscribeChannel(r, i.parent_id, n) : !!i.isActiveThread() && D.subscribeThreadMemberList(r, t, g.Z.getChannelId()) : D.subscribeChannel(r, t, n)
+  return (r !== e && e === L.I_8 && D.subscribeToGuild(r), null != i && i.isThread()) ? i.type === L.d4z.ANNOUNCEMENT_THREAD ? D.subscribeChannel(r, i.parent_id, n) : !!i.isActiveThread() && D.subscribeThreadMemberList(r, t, C.Z.getChannelId()) : D.subscribeChannel(r, t, n)
 }
 
 function U(e) {
@@ -58,14 +58,14 @@ function U(e) {
     type: t
   } = e;
   "CONNECTION_OPEN" === t && M(!0, !1), Object.keys(R.Z.getGuilds()).forEach(e => {
-    (0, T.h)(e).shouldPrioritizeSubscription && y(e, f.oL, c.KV)
+    (0, T.h)(e).shouldPrioritizeSubscription && y(e, f.oL, d.KV)
   });
-  let n = L.Z.getGuildId();
-  null != n && P(n, g.Z.getChannelId(n));
+  let n = v.Z.getGuildId();
+  null != n && P(n, C.Z.getChannelId(n));
   let i = {};
   D.forEach(e => {
     null == R.Z.getGuild(e) ? D.clearWithoutFlushing(e, !0) : i[e] = D.get(e)
-  }), !u().isEmpty(i) && d.Z.dispatch({
+  }), !u().isEmpty(i) && c.Z.dispatch({
     type: "GUILD_SUBSCRIPTIONS_FLUSH",
     subscriptions: i
   })
@@ -80,7 +80,7 @@ function b(e) {
 }
 
 function G() {
-  return P(L.Z.getGuildId(), g.Z.getChannelId())
+  return P(v.Z.getGuildId(), C.Z.getChannelId())
 }
 
 function w() {
@@ -90,7 +90,7 @@ function w() {
     let {
       userId: t
     } = e;
-    if (null != i && i.userId === t || p.Z.isFriend(t)) return !1;
+    if (null != i && i.userId === t || g.Z.isFriend(t)) return !1;
     let n = O.ZP.memberOf(t);
     if (0 === n.length) return !1;
     let [r] = n;
@@ -103,7 +103,7 @@ function w() {
 }
 class k extends(r = _.ZP.Store) {
   initialize() {
-    this.waitFor(A.Z, R.Z, L.Z, g.Z, C.Z, S.default, N.ZP, E.Z, I.Z), this.syncWith([h.Z], w), this.syncWith([N.ZP], G)
+    this.waitFor(A.Z, R.Z, v.Z, C.Z, p.Z, S.default, N.ZP, E.Z, I.Z), this.syncWith([h.Z], w), this.syncWith([N.ZP], G)
   }
   getSubscribedThreadIds() {
     return D.getSubscribedThreadIds()
@@ -127,7 +127,7 @@ a = "GuildSubscriptionsStore", (o = "displayName") in(s = k) ? Object.defineProp
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[o] = a, t.Z = new k(d.Z, {
+}) : s[o] = a, t.Z = new k(c.Z, {
   CONNECTION_OPEN: U,
   CONNECTION_RESUMED: U,
   CONNECTION_CLOSED: function() {
@@ -149,7 +149,7 @@ a = "GuildSubscriptionsStore", (o = "displayName") in(s = k) ? Object.defineProp
     let {
       guild: t
     } = e;
-    t.id === L.Z.getGuildId() && G()
+    t.id === v.Z.getGuildId() && G()
   },
   GUILD_DELETE: function(e) {
     let {
@@ -219,7 +219,7 @@ a = "GuildSubscriptionsStore", (o = "displayName") in(s = k) ? Object.defineProp
     let {
       channel: t
     } = e;
-    return t.isArchivedThread() ? D.unsubscribeThreadMemberList(t.guild_id, t.id) : !!t.isActiveThread() && g.Z.getChannelId() === t.id && void D.subscribeThreadMemberList(t.guild_id, t.id, g.Z.getChannelId())
+    return t.isArchivedThread() ? D.unsubscribeThreadMemberList(t.guild_id, t.id) : !!t.isActiveThread() && C.Z.getChannelId() === t.id && void D.subscribeThreadMemberList(t.guild_id, t.id, C.Z.getChannelId())
   },
   THREAD_DELETE: function(e) {
     let {

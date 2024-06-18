@@ -23,36 +23,36 @@ function _() {
     filter: ""
   }
 }
-let d = _(),
-  c = null,
+let c = _(),
+  d = null,
   E = [];
 class I extends(i = r.ZP.PersistedStore) {
   initialize(e) {
-    d = {
+    c = {
       ..._(),
       ...null != e ? e : {}
     }
   }
   getState() {
-    return d
+    return c
   }
   getIsEnabled() {
     return o.Sb.getSetting() && E.length > 0
   }
   getLastUsedObject() {
-    return d.lastUsedObject
+    return c.lastUsedObject
   }
   getUseActivityUrlOverride() {
-    return this.getIsEnabled() && d.useActivityUrlOverride
+    return this.getIsEnabled() && c.useActivityUrlOverride
   }
   getActivityUrlOverride() {
-    return this.getIsEnabled() ? d.activityUrlOverride : null
+    return this.getIsEnabled() ? c.activityUrlOverride : null
   }
   getFetchState() {
-    return c
+    return d
   }
   getFilter() {
-    return this.getIsEnabled() ? d.filter : ""
+    return this.getIsEnabled() ? c.filter : ""
   }
   getDeveloperShelfItems() {
     return this.getIsEnabled() ? E : []
@@ -65,16 +65,16 @@ u(I, "displayName", "DeveloperActivityShelfStore"), u(I, "persistKey", "Develope
   ...e
 })]), t.Z = new I(s.Z, {
   LOGOUT: function() {
-    d = _(), c = null, E = []
+    c = _(), d = null, E = []
   },
   DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: function() {
-    d.useActivityUrlOverride = !d.useActivityUrlOverride
+    c.useActivityUrlOverride = !c.useActivityUrlOverride
   },
   DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE: function(e) {
     let {
       activityUrlOverride: t
     } = e;
-    d.activityUrlOverride = t
+    c.activityUrlOverride = t
   },
   DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED: function(e) {
     let {
@@ -82,28 +82,28 @@ u(I, "displayName", "DeveloperActivityShelfStore"), u(I, "persistKey", "Develope
       timestamp: n
     } = e;
     if (null == E.find(e => e.id === t)) return !1;
-    d.lastUsedObject[t] = n
+    c.lastUsedObject[t] = n
   },
   DEVELOPER_ACTIVITY_SHELF_FETCH_START() {
-    c = "loading"
+    d = "loading"
   },
   DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: function(e) {
     let {
       applications: t
     } = e;
-    c = "loaded", E = t.filter(e => null != e.flags && (0, a.yE)(e.flags, l.udG.EMBEDDED))
+    d = "loaded", E = t.filter(e => null != e.flags && (0, a.yE)(e.flags, l.udG.EMBEDDED))
   },
   DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL: function(e) {
     let {
       type: t
     } = e;
-    c = "errored"
+    d = "errored"
   },
   DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER: function(e) {
     let {
       filter: t
     } = e;
-    d.filter = t
+    c.filter = t
   },
   USER_SETTINGS_PROTO_UPDATE() {}
 })

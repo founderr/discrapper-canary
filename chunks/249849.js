@@ -24,9 +24,9 @@ function o(e) {
     secondaryTintColor: a,
     secondaryTintLuminances: l,
     secondaryLuminanceWeights: u
-  } = e, _ = null != n ? s(i, n, r) : t, d = [];
-  return null != o && null != l && null != u && (d = null != a ? s(l, a, u) : o), {
+  } = e, _ = null != n ? s(i, n, r) : t, c = [];
+  return null != o && null != l && null != u && (c = null != a ? s(l, a, u) : o), {
     primaryColorsTransformed: _,
-    secondaryColorsTransformed: d
+    secondaryColorsTransformed: c
   }
 }

@@ -18,8 +18,8 @@ function _(e) {
     disabled: n,
     isFocused: s,
     showDefaultFocus: _ = !1,
-    menuItemProps: d,
-    children: c
+    menuItemProps: c,
+    children: d
   } = e, E = r.useRef(null);
   return r.useLayoutEffect(() => {
     if (!s) return;
@@ -36,7 +36,7 @@ function _(e) {
       [u.hideInteraction]: !_
     }),
     "aria-disabled": n,
-    ...d,
-    children: c
+    ...c,
+    children: d
   })
 }

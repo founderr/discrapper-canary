@@ -10,13 +10,13 @@ t.Z = e => {
       button: n,
       submitting: u,
       disableNext: _,
-      onClick: d,
-      canNavigateBack: c,
+      onClick: c,
+      canNavigateBack: d,
       onBackClicked: E
     } = e,
     I = r.useRef(null),
     T = null != n && "cancel" !== n.type,
-    h = c && (null == n ? void 0 : n.type) !== "done",
+    h = d && (null == n ? void 0 : n.type) !== "done",
     S = T || h;
   if (r.useEffect(() => {
       if ((null == n ? void 0 : n.type) === "submit" || (null == n ? void 0 : n.type) === "done") {
@@ -34,7 +34,7 @@ t.Z = e => {
       children: a.Z.Messages.BACK
     }), T && (0, i.jsx)(s.Button, {
       onClick: () => {
-        if (null != n) d(n)
+        if (null != n) c(n)
       },
       color: t,
       className: l.actionButton,

@@ -12,9 +12,9 @@ var i = n(392711),
   l = n(740900),
   u = n(823596),
   _ = n(993374),
-  d = n(331551);
+  c = n(331551);
 
-function c(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -166,7 +166,7 @@ class I {
       let n = (0, i.cloneDeep)(this.getMembersByIndex(l.R_.CURRENT_GUILD_MEMBER)[0]);
       [...n, ...(0, i.cloneDeep)(this.getMembersByIndex(l.R_.NEW_GUILD_MEMBER)[0])].forEach(t => {
         var n, i, r;
-        let s = (0, d.b)(t, e),
+        let s = (0, c.b)(t, e),
           o = null !== (r = null === (n = this._search) || void 0 === n ? void 0 : n.isMemberIncludedInSearchResults(t)) && void 0 !== r && r;
         null === (i = this._members) || void 0 === i || i.updateMember(t, {
           sort: s,
@@ -278,6 +278,6 @@ class I {
     })
   }
   constructor(e) {
-    c(this, "guildId", void 0), c(this, "lastRefreshTimestamp", 0), c(this, "lastCursorTimestamp", Date.now()), c(this, "_initialized", void 0), c(this, "_pagination", void 0), c(this, "_search", void 0), c(this, "_members", void 0), c(this, "_lastRefreshTimer", null), c(this, "_defaultSearchTotalResultsCount", void 0), this.guildId = e, this._initialized = !1, this._members = null, this._pagination = null, this._search = null
+    d(this, "guildId", void 0), d(this, "lastRefreshTimestamp", 0), d(this, "lastCursorTimestamp", Date.now()), d(this, "_initialized", void 0), d(this, "_pagination", void 0), d(this, "_search", void 0), d(this, "_members", void 0), d(this, "_lastRefreshTimer", null), d(this, "_defaultSearchTotalResultsCount", void 0), this.guildId = e, this._initialized = !1, this._members = null, this._pagination = null, this._search = null
   }
 }

@@ -12,9 +12,9 @@ var i, r = n(392711),
   u = n(704907),
   _ = n(581883);
 n(689079);
-var d = n(526761);
+var c = n(526761);
 
-function c(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -73,7 +73,7 @@ class f extends(i = o.ZP.PersistedStore) {
     return I.frequently
   }
 }
-c(f, "displayName", "ApplicationCommandFrecencyStore"), c(f, "persistKey", "ApplicationCommandFrecencyV2"), t.ZP = new f(a.Z, {
+d(f, "displayName", "ApplicationCommandFrecencyStore"), d(f, "persistKey", "ApplicationCommandFrecencyV2"), t.ZP = new f(a.Z, {
   APPLICATION_COMMAND_USED: function(e) {
     let {
       command: t,
@@ -93,7 +93,7 @@ c(f, "displayName", "ApplicationCommandFrecencyStore"), c(f, "persistKey", "Appl
       },
       wasSaved: n
     } = e;
-    if (t !== d.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+    if (t !== c.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
     E.pendingUsages = []
   }
 })

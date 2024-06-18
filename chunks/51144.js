@@ -36,14 +36,14 @@ let l = e => "".concat(e[0], "..."),
     forcePomelo: !1
   };
 
-function d(e) {
+function c(e) {
   return !!(null != e && e.length > 0)
 }
 
-function c(e) {
-  if (d(e.global_name)) return e.global_name;
-  if (d(e.globalName)) return e.globalName;
-  if (d(e.username)) return e.username;
+function d(e) {
+  if (c(e.global_name)) return e.global_name;
+  if (c(e.globalName)) return e.globalName;
+  if (c(e.username)) return e.username;
   else return "???"
 }
 
@@ -51,7 +51,7 @@ function E(e) {
   var t;
   if (null == e) return;
   let n = r.Z.hidePersonalInformation,
-    i = c(e);
+    i = d(e);
   return n && i.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && "0" === e.discriminator && (i = l(i)), i
 }
 
@@ -59,14 +59,14 @@ function I(e) {
   var t;
   let n = (0, i.e7)([r.Z], () => r.Z.hidePersonalInformation);
   if (null == e) return;
-  let s = c(e);
+  let s = d(e);
   return n && s.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && "0" === e.discriminator && (s = l(s)), s
 }
 
 function T(e) {
   if (null != e) {
-    if (d(e.globalName)) return e.globalName;
-    else if (d(e.global_name)) return e.global_name;
+    if (c(e.globalName)) return e.globalName;
+    else if (c(e.global_name)) return e.global_name;
     else return
   }
 }
@@ -118,7 +118,7 @@ function N(e) {
 
 function A(e, t, n) {
   if (null == e) return a.Z.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER;
-  if (!d(e.username)) return "???";
+  if (!c(e.username)) return "???";
   let i = n;
   if ("always" === t.identifiable ? i = !1 : "never" === t.identifiable && (i = !0), "0" !== e.discriminator && e.discriminator !== o.fo$ && !t.forcePomelo) return "username" === t.mode ? e.username : i ? e.username : "".concat(e.username, "#").concat(e.discriminator);
   let r = i ? l(e.username) : e.username;

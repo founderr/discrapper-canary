@@ -4,8 +4,8 @@ var i, r, s, o, a = n(392711),
   l = n.n(a),
   u = n(442837),
   _ = n(570140),
-  d = n(872810),
-  c = n(569545),
+  c = n(872810),
+  d = n(569545),
   E = n(70722);
 let I = {},
   T = {},
@@ -16,7 +16,7 @@ function S() {
 }
 class f extends(i = u.ZP.Store) {
   getPreviewURL(e, t, n) {
-    let i = (0, c.V9)({
+    let i = (0, d.V9)({
         streamType: null != e ? E.lo.GUILD : E.lo.CALL,
         guildId: e,
         channelId: t,
@@ -24,7 +24,7 @@ class f extends(i = u.ZP.Store) {
       }),
       r = I[i];
     return null == r || Date.now() > r.expires ? (!h.has(i) && (h.add(i), Promise.resolve().then(() => {
-      (0, d.n9)(e, t, n)
+      (0, c.n9)(e, t, n)
     })), null) : r.url
   }
   getPreviewURLForStreamKey(e) {
@@ -32,11 +32,11 @@ class f extends(i = u.ZP.Store) {
       guildId: t,
       channelId: n,
       ownerId: i
-    } = (0, c.my)(e);
+    } = (0, d.my)(e);
     return this.getPreviewURL(t, n, i)
   }
   getIsPreviewLoading(e, t, n) {
-    let i = (0, c.V9)({
+    let i = (0, d.V9)({
       streamType: null != e ? E.lo.GUILD : E.lo.CALL,
       guildId: e,
       channelId: t,
@@ -92,7 +92,7 @@ o = "ApplicationStreamPreviewStore", (s = "displayName") in(r = f) ? Object.defi
         selfStream: s
       } = t;
       if (s) return e;
-      let o = (0, c.V9)({
+      let o = (0, d.V9)({
         streamType: null != i ? E.lo.GUILD : E.lo.CALL,
         guildId: i,
         channelId: r,

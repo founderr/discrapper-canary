@@ -4,7 +4,7 @@ n.d(t, {
     return I
   },
   i: function() {
-    return c
+    return d
   }
 });
 var i = n(735250),
@@ -15,9 +15,9 @@ var i = n(735250),
   l = n(981631),
   u = n(921944),
   _ = n(689938),
-  d = n(628842);
+  c = n(628842);
 
-function c(e) {
+function d(e) {
   return e || !(s.tq || s.Em) ? _.Z.Messages.SEASONAL_GIFTING_DM_POPUP_BODY : _.Z.Messages.SEASONAL_GIFTING_MAKE_SOMEONES_DAY_TOOLTIP
 }
 
@@ -37,37 +37,37 @@ function E(e) {
     h = T ? _.Z.Messages.SEASONAL_GIFTING_DM_POPUP_HEADER : _.Z.Messages.SEASONAL_GIFTING_POPUP_HEADER,
     S = T ? _.Z.Messages.SEASONAL_GIFTING_DM_POPUP_CTA : _.Z.Messages.SEASONAL_GIFTING_SEND_GIFT_CTA;
   return (0, i.jsxs)("div", {
-    className: d.container,
+    className: c.container,
     children: [(0, i.jsx)(o.ChainedLottieAnimation, {
-      className: d.image,
+      className: c.image,
       animationData: I
     }), (0, i.jsxs)("div", {
-      className: d.body,
+      className: c.body,
       children: [(0, i.jsx)(o.Heading, {
-        className: d.text,
+        className: c.text,
         variant: "heading-sm/semibold",
         children: h
       }), (0, i.jsx)(o.Text, {
-        className: d.text,
+        className: c.text,
         variant: "text-sm/normal",
-        children: c(E)
+        children: d(E)
       })]
     }), (0, i.jsxs)("div", {
-      className: d.dmButtonContainer,
+      className: c.dmButtonContainer,
       children: [(0, i.jsx)(o.Button, {
-        className: d.dmButton,
+        className: c.dmButton,
         look: o.Button.Looks.FILLED,
         color: o.Button.Colors.BRAND,
         onClick: () => t(),
         children: _.Z.Messages.GOT_IT
       }), (0, i.jsx)(o.Button, {
-        className: d.dmButton,
+        className: c.dmButton,
         color: o.Button.Colors.BRAND_INVERTED,
         onClick: () => u(),
         children: S
       })]
     }), (0, i.jsx)("div", {
-      className: d.pointer
+      className: c.pointer
     })]
   })
 }
@@ -98,7 +98,7 @@ function I(e) {
     closeOnScroll: !1,
     ignoreModalClicks: !0,
     children: () => (0, i.jsx)("div", {
-      className: d.popoutTarget
+      className: c.popoutTarget
     })
   })
 }

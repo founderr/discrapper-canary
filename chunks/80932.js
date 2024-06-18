@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   $K: function() {
-    return L
+    return v
   },
   OQ: function() {
     return m
@@ -10,10 +10,10 @@ n.d(t, {
     return R
   },
   Xe: function() {
-    return v
+    return L
   },
   dv: function() {
-    return C
+    return p
   },
   rS: function() {
     return O
@@ -30,8 +30,8 @@ var i = n(392711),
   l = n(479531),
   u = n(339085),
   _ = n(633302),
-  d = n(347374),
-  c = n(38618),
+  c = n(347374),
+  d = n(38618),
   E = n(675478),
   I = n(486472),
   T = n(823379),
@@ -100,7 +100,7 @@ function R(e, t) {
     oldFormErrors: !0
   })
 }
-async function C(e) {
+async function p(e) {
   let {
     guildId: t,
     emojiId: n,
@@ -121,23 +121,23 @@ async function C(e) {
   }
 }
 
-function p(e) {
-  if (I.Z.totalUnavailableGuilds > 0 || !c.Z.isConnected()) return e;
+function g(e) {
+  if (I.Z.totalUnavailableGuilds > 0 || !d.Z.isConnected()) return e;
   let t = e.map(e => {
     var t;
     return null !== (t = u.Z.getCustomEmojiById(e)) && void 0 !== t ? t : _.ZP.getByName(e)
   }).filter(T.lm);
-  return [...(0, d.Z)(t).keys()]
+  return [...(0, c.Z)(t).keys()]
 }
 
-function g(e) {
+function C(e) {
   var t, n, i;
   return null == e ? null : null !== (i = null !== (n = e.id) && void 0 !== n ? n : null === (t = _.ZP.convertSurrogateToBase(e.surrogates)) || void 0 === t ? void 0 : t.name) && void 0 !== i ? i : e.name
 }
 
-function L(e) {
-  let t = g(e);
-  if (null != t) E.DZ.updateAsync("favoriteEmojis", e => (e.emojis = p(e.emojis), r().size(e.emojis) >= f.oX) ? (h.Z.show({
+function v(e) {
+  let t = C(e);
+  if (null != t) E.DZ.updateAsync("favoriteEmojis", e => (e.emojis = g(e.emojis), r().size(e.emojis) >= f.oX) ? (h.Z.show({
     title: N.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
     body: N.Z.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
       count: f.oX
@@ -145,10 +145,10 @@ function L(e) {
   }), !1) : !e.emojis.includes(t) && void e.emojis.push(t), f.fy.INFREQUENT_USER_ACTION)
 }
 
-function v(e) {
-  let t = g(e);
+function L(e) {
+  let t = C(e);
   if (null != t) E.DZ.updateAsync("favoriteEmojis", e => {
-    if (e.emojis = p(e.emojis), !e.emojis.includes(t)) return !1;
+    if (e.emojis = g(e.emojis), !e.emojis.includes(t)) return !1;
     e.emojis = e.emojis.filter(e => t !== e)
   }, f.fy.INFREQUENT_USER_ACTION)
 }

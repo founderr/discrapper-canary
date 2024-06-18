@@ -5,7 +5,7 @@ var a = t(481060);
 s.Z = e => {
   let {
     product: s,
-    analyticsLocations: i
+    analyticsLocations: r
   } = e;
   (0, a.openModalLazy)(async () => {
     let {
@@ -13,7 +13,7 @@ s.Z = e => {
     } = await Promise.all([t.e("99387"), t.e("87624"), t.e("19452")]).then(t.bind(t, 331042));
     return t => (0, n.jsx)(e, {
       product: s,
-      analyticsLocations: i,
+      analyticsLocations: r,
       ...t
     })
   })

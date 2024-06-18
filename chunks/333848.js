@@ -8,8 +8,8 @@ var i = n(990547),
   l = n(621600),
   u = n(573261),
   _ = n(92114),
-  d = n(981631),
-  c = n(526761);
+  c = n(981631),
+  d = n(526761);
 t.Z = {
   createChannel(e) {
     let {
@@ -31,12 +31,12 @@ t.Z = {
       name: E,
       permission_overwrites: I
     };
-    if (null != T && T !== d.epw && (A.bitrate = T), null != h && h > 0 && (A.user_limit = h), null != S && (A.parent_id = S), n === d.d4z.GUILD_STORE) {
+    if (null != T && T !== c.epw && (A.bitrate = T), null != h && h > 0 && (A.user_limit = h), null != S && (A.parent_id = S), n === c.d4z.GUILD_STORE) {
       if (null == f) throw Error("Unexpected missing SKU");
       A.sku_id = f, A.branch_id = N
     }
     return u.Z.post({
-      url: d.ANM.GUILD_CHANNELS(t),
+      url: c.ANM.GUILD_CHANNELS(t),
       body: A,
       oldFormErrors: !0,
       trackedActionData: {
@@ -51,7 +51,7 @@ t.Z = {
         }
       }
     }).then(e => (a.ZP.isOptInEnabled(t) && _.Z.updateChannelOverrideSettings(t, e.body.id, {
-      flags: c.ic.OPT_IN_ENABLED
+      flags: d.ic.OPT_IN_ENABLED
     }, l.ZB.OptedIn), o.Z.checkGuildTemplateDirty(t), e), e => {
       throw s.Z.dispatch({
         type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE",
@@ -60,7 +60,7 @@ t.Z = {
     })
   },
   createRoleSubscriptionTemplateChannel: (e, t, n, s) => u.Z.post({
-    url: d.ANM.GUILD_CHANNELS(e),
+    url: c.ANM.GUILD_CHANNELS(e),
     body: {
       name: t,
       type: n,

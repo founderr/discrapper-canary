@@ -104,7 +104,7 @@ class _ extends l.C {
   }
 }
 new _;
-class d extends l.C {
+class c extends l.C {
   create(e) {
     let t = {
       disclosureType: 0
@@ -154,7 +154,7 @@ class d extends l.C {
     }])
   }
 }
-let c = new d;
+let d = new c;
 class E extends l.C {
   create(e) {
     let t = {
@@ -170,7 +170,7 @@ class E extends l.C {
       o = e.pos + t;
     for (; e.pos < o;) {
       let [t, i] = e.tag();
-      if (1 === t) r.ackedDisclosures.push(c.internalBinaryRead(e, e.uint32(), n));
+      if (1 === t) r.ackedDisclosures.push(d.internalBinaryRead(e, e.uint32(), n));
       else {
         let o = n.readUnknownField;
         if ("throw" === o) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName));
@@ -181,7 +181,7 @@ class E extends l.C {
     return r
   }
   internalBinaryWrite(e, t, n) {
-    for (let i = 0; i < e.ackedDisclosures.length; i++) c.internalBinaryWrite(e.ackedDisclosures[i], t.tag(1, s.TD.LengthDelimited).fork(), n).join();
+    for (let i = 0; i < e.ackedDisclosures.length; i++) d.internalBinaryWrite(e.ackedDisclosures[i], t.tag(1, s.TD.LengthDelimited).fork(), n).join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t
   }
@@ -191,7 +191,7 @@ class E extends l.C {
       name: "acked_disclosures",
       kind: "message",
       repeat: 1,
-      T: () => c
+      T: () => d
     }])
   }
 }

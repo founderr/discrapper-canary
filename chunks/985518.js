@@ -7,7 +7,7 @@ n.d(t, {
     return l
   },
   ZP: function() {
-    return d
+    return c
   },
   rj: function() {
     return u
@@ -38,7 +38,7 @@ function u(e, t, n) {
 function _(e, t, n) {
   (0, i.FL)(l(e), t, n)
 }
-class d extends r.zQ {
+class c extends r.zQ {
   constructor({
     guildId: e,
     channelId: t,

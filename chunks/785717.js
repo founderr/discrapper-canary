@@ -22,8 +22,8 @@ let a = r.createContext({}),
       userId: l,
       guildId: u,
       channelId: _,
-      messageId: d,
-      roleId: c,
+      messageId: c,
+      roleId: d,
       showGuildProfile: E = !0,
       shouldTrackViewOnMount: I = !0
     } = e, {
@@ -33,10 +33,10 @@ let a = r.createContext({}),
       userId: l,
       guildId: u,
       channelId: _,
-      messageId: d,
-      roleId: c,
+      messageId: c,
+      roleId: d,
       showGuildProfile: E
-    }), [n, l, u, _, d, c, E]);
+    }), [n, l, u, _, c, d, E]);
     return r.useEffect(() => {
       if (!!I && null != n && null != l)(0, o.pQ)({
         action: "VIEW",
@@ -44,8 +44,8 @@ let a = r.createContext({}),
         userId: l,
         guildId: u,
         channelId: _,
-        messageId: d,
-        roleId: c,
+        messageId: c,
+        roleId: d,
         showGuildProfile: E,
         analyticsLocations: T
       })

@@ -13,8 +13,8 @@ var r = n(481060),
   l = n(928518),
   u = n(120522),
   _ = n(933843),
-  d = n(614011),
-  c = n(430824),
+  c = n(614011),
+  d = n(430824),
   E = n(131951),
   I = n(594174),
   T = n(358085),
@@ -26,16 +26,16 @@ function f(e, t, f) {
   if ((0, a.Z)(N), T.isPlatformEmbedded)(0, r.openModalLazy)(async () => {
     let {
       default: t
-    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("79477"), n.e("12977")]).then(n.bind(n, 60594));
+    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("79477"), n.e("95093")]).then(n.bind(n, 60594));
     return n => (0, i.jsx)(t, {
       ...n,
       guildId: e,
       analyticsLocation: f
     })
-  }), (0, _.F4)() && ((0, u.z)(), (0, d.O)());
+  }), (0, _.F4)() && ((0, u.z)(), (0, c.O)());
   else {
     var A;
-    let n = (0, o.Z)(S.tI.PRESET_CUSTOM, S.LY.RESOLUTION_1080, S.ws.FPS_30, I.default.getCurrentUser(), null === (A = c.Z.getGuild(e)) || void 0 === A ? void 0 : A.premiumTier) ? {
+    let n = (0, o.Z)(S.tI.PRESET_CUSTOM, S.LY.RESOLUTION_1080, S.ws.FPS_30, I.default.getCurrentUser(), null === (A = d.Z.getGuild(e)) || void 0 === A ? void 0 : A.premiumTier) ? {
       width: 1920,
       height: 1080
     } : {

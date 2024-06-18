@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   Dd: function() {
-    return d
+    return c
   },
   Sw: function() {
-    return c
+    return d
   },
   To: function() {
     return E
@@ -19,8 +19,8 @@ var r = n(120356),
   l = n(534542),
   u = n(512983),
   _ = n(723945);
-let d = o.Z.Types,
-  c = {
+let c = o.Z.Types,
+  d = {
     LEFT: "left",
     RIGHT: "right"
   };
@@ -28,7 +28,7 @@ let d = o.Z.Types,
 function E(e) {
   let t, n, {
       type: r = o.Z.Types.DANGER,
-      imageData: d,
+      imageData: c,
       button: E,
       className: I,
       iconClassName: T,
@@ -38,11 +38,11 @@ function E(e) {
       align: N = a.Z.Align.START
     } = e,
     A = a.Z.Direction.HORIZONTAL;
-  if (null != d) {
+  if (null != c) {
     let {
       position: e,
       ...n
-    } = d;
+    } = c;
     t = (0, i.jsx)(a.Z.Child, {
       grow: 0,
       shrink: 0,
@@ -51,7 +51,7 @@ function E(e) {
         className: s()(_.icon, T),
         ...n
       })
-    }), e === c.RIGHT && (A = a.Z.Direction.HORIZONTAL_REVERSE)
+    }), e === d.RIGHT && (A = a.Z.Direction.HORIZONTAL_REVERSE)
   } else null != E && (n = E);
   let m = !0;
   return r === o.Z.Types.PRIMARY && (m = !1), (0, i.jsx)(o.Z, {

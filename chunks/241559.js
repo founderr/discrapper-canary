@@ -4,7 +4,7 @@ n.d(t, {
     return S
   },
   lv: function() {
-    return c
+    return d
   },
   n2: function() {
     return I
@@ -27,7 +27,7 @@ var i = n(149765),
   l = n(700785),
   u = n(478743),
   _ = n(981631);
-let d = function(e) {
+let c = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.Z, a.default],
       [n, i] = t,
       r = n.getGuild(e);
@@ -36,9 +36,9 @@ let d = function(e) {
       guild: r
     }
   },
-  c = function(e) {
+  d = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.Z, a.default],
-      n = d(e, t);
+      n = c(e, t);
     return null != n && i.Db(l.uB({
       user: n.user,
       context: n.guild,
@@ -47,12 +47,12 @@ let d = function(e) {
   },
   E = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.Z, a.default],
-      n = d(e, t);
+      n = c(e, t);
     return null != n && o.Z.can(_.Plq.MANAGE_GUILD, n.guild) && o.Z.can(_.Plq.BAN_MEMBERS, n.guild)
   };
 
 function I(e) {
-  return (0, r.e7)([s.Z, a.default], () => c(e, [s.Z, a.default]), [e])
+  return (0, r.e7)([s.Z, a.default], () => d(e, [s.Z, a.default]), [e])
 }
 
 function T(e) {

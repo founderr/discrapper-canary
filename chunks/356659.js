@@ -34,16 +34,16 @@ n.d(t, {
     return y
   },
   MG: function() {
-    return p
+    return g
   },
   OT: function() {
     return a
   },
   Qr: function() {
-    return L
+    return v
   },
   Ut: function() {
-    return g
+    return C
   },
   WM: function() {
     return f
@@ -52,7 +52,7 @@ n.d(t, {
     return u
   },
   XH: function() {
-    return C
+    return p
   },
   _U: function() {
     return k
@@ -61,7 +61,7 @@ n.d(t, {
     return l
   },
   f_: function() {
-    return v
+    return L
   },
   i$: function() {
     return G
@@ -94,12 +94,12 @@ n.d(t, {
     return P
   }
 });
-var i, r, s, o, a, l, u, _, d = n(710845),
-  c = n(70956);
-(i = a || (a = {}))[i.SECONDS_30 = 30 * c.Z.Millis.SECOND] = "SECONDS_30", i[i.MINUTES_1 = c.Z.Millis.MINUTE] = "MINUTES_1", i[i.MINUTES_2 = 2 * c.Z.Millis.MINUTE] = "MINUTES_2", (r = l || (l = {}))[r.ALL = 0] = "ALL", r[r.FRIENDS = 1] = "FRIENDS", (s = u || (u = {})).DECOUPLED = "decoupled", s.VIEWER = "viewer", s.STREAMER = "streamer", (o = _ || (_ = {}))[o.Error = 0] = "Error", o[o.Disabled = 1] = "Disabled", o[o.Enabled = 2] = "Enabled";
+var i, r, s, o, a, l, u, _, c = n(710845),
+  d = n(70956);
+(i = a || (a = {}))[i.SECONDS_30 = 30 * d.Z.Millis.SECOND] = "SECONDS_30", i[i.MINUTES_1 = d.Z.Millis.MINUTE] = "MINUTES_1", i[i.MINUTES_2 = 2 * d.Z.Millis.MINUTE] = "MINUTES_2", (r = l || (l = {}))[r.ALL = 0] = "ALL", r[r.FRIENDS = 1] = "FRIENDS", (s = u || (u = {})).DECOUPLED = "decoupled", s.VIEWER = "viewer", s.STREAMER = "streamer", (o = _ || (_ = {}))[o.Error = 0] = "Error", o[o.Disabled = 1] = "Disabled", o[o.Enabled = 2] = "Enabled";
 let E = "alt+c",
-  I = 6 * c.Z.Millis.SECOND,
-  T = new d.Z("Clips"),
+  I = 6 * d.Z.Millis.SECOND,
+  T = new c.Z("Clips"),
   h = e => "Discord_Clip_".concat(e, ".mp4"),
   S = 3,
   f = 1,
@@ -108,11 +108,11 @@ let E = "alt+c",
   m = /(Apple M[12].*)/,
   O = .1,
   R = 25,
-  C = 0,
-  p = 200,
-  g = "clips-edit",
-  L = "clips-gallery",
-  v = 640,
+  p = 0,
+  g = 200,
+  C = "clips-edit",
+  v = "clips-gallery",
+  L = 640,
   D = 360,
   M = 100,
   P = e => "Clip - ".concat(new Date(e).toLocaleString()),
@@ -120,7 +120,7 @@ let E = "alt+c",
   U = 3e4,
   b = 30,
   G = 10,
-  w = 14 * c.Z.Millis.DAY,
+  w = 14 * d.Z.Millis.DAY,
   k = 5,
   B = 5,
   x = 1

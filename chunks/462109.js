@@ -16,13 +16,13 @@ let l = e => {
     stickersListRef: l,
     store: u,
     gridNavigatorId: _,
-    setInspectedStickerPosition: d,
-    onGridItemSelect: c
+    setInspectedStickerPosition: c,
+    onGridItemSelect: d
   } = e, E = (0, s.O)(), I = i.useCallback(e => {
-    c(e, E)
-  }, [c, E]), T = i.useCallback((e, t) => {
-    d(e, t, o.u.GRID_NAVIGATOR_EVENT)
-  }, [d]), {
+    d(e, E)
+  }, [d, E]), T = i.useCallback((e, t) => {
+    c(e, t, o.u.GRID_NAVIGATOR_EVENT)
+  }, [c]), {
     gridDispatch: h,
     getItemProps: S,
     getRowProps: f,

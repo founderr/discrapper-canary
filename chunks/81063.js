@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   fetchAssetIds: function() {
-    return p
+    return g
   },
   getAssetFromImageURL: function() {
     return N
   },
   getAssetIds: function() {
-    return g
+    return C
   },
   getAssetImage: function() {
     return A
@@ -24,18 +24,18 @@ var i = n(512722),
   l = n(710845),
   u = n(134432),
   _ = n(981631);
-let d = "https://i.scdn.co/image/",
-  c = (e, t, n) => "https://static-cdn.jtvnw.net/previews-ttv/live_user_".concat(e, "-").concat(t, "x").concat(n, ".jpg"),
+let c = "https://i.scdn.co/image/",
+  d = (e, t, n) => "https://static-cdn.jtvnw.net/previews-ttv/live_user_".concat(e, "-").concat(t, "x").concat(n, ".jpg"),
   E = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/,
   I = e => "https://i.ytimg.com/vi/".concat(e, "/hqdefault_live.jpg"),
   T = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/,
   h = {
     [_.ABu.SPOTIFY]: {
-      deserialize: e => "".concat(d).concat(encodeURIComponent(e)),
-      serialize: e => e.split(d)[1]
+      deserialize: e => "".concat(c).concat(encodeURIComponent(e)),
+      serialize: e => e.split(c)[1]
     },
     [_.ABu.TWITCH]: {
-      deserialize: (e, t) => c(encodeURIComponent(e), t[0], t[1]),
+      deserialize: (e, t) => d(encodeURIComponent(e), t[0], t[1]),
       serialize: e => {
         let t = e.match(E);
         return null != t ? t[1] : null
@@ -131,7 +131,7 @@ function R(e, t) {
   return n === e.length
 }
 
-function C(e, t, n, i) {
+function p(e, t, n, i) {
   let r = !1;
   for (let s = 0; s < e.length; s++) {
     let o = e[s];
@@ -148,7 +148,7 @@ function C(e, t, n, i) {
   }
   return r
 }
-async function p(e, t) {
+async function g(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
   o.Z.dispatch({
     type: "APPLICATION_ASSETS_FETCH",
@@ -159,15 +159,15 @@ async function p(e, t) {
   return (r.length > 0 && await O(e, r), R(t, i)) ? (o.Z.dispatch({
     type: "APPLICATION_ASSETS_FETCH_SUCCESS",
     applicationId: e
-  }), i) : C(t, i, await m(e), n) ? f(e).then(() => p(e, t, n - 1)) : (o.Z.dispatch({
+  }), i) : p(t, i, await m(e), n) ? f(e).then(() => g(e, t, n - 1)) : (o.Z.dispatch({
     type: "APPLICATION_ASSETS_FETCH_SUCCESS",
     applicationId: e
   }), i)
 }
 
-function g(e, t) {
+function C(e, t) {
   let n = [];
   if (R(t, n)) return n;
   let i = a.Z.getApplicationAssets(e);
-  return null == i ? n : (C(t, n, i), n)
+  return null == i ? n : (p(t, n, i), n)
 }

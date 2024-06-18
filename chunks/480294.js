@@ -3,11 +3,11 @@ var i, r, s, o, a = n(442837),
   l = n(570140);
 let u = !1,
   _ = !1,
-  d = {},
-  c = null;
+  c = {},
+  d = null;
 class E extends(o = a.ZP.Store) {
   hasConsented(e) {
-    return null != d[e] && d[e].consented
+    return null != c[e] && c[e].consented
   }
   get fetchedConsents() {
     return u
@@ -16,7 +16,7 @@ class E extends(o = a.ZP.Store) {
     return _
   }
   getAuthenticationConsentRequired() {
-    return c
+    return d
   }
 }
 s = "ConsentStore", (r = "displayName") in(i = E) ? Object.defineProperty(i, r, {
@@ -29,8 +29,8 @@ s = "ConsentStore", (r = "displayName") in(i = E) ? Object.defineProperty(i, r, 
     let {
       consents: t
     } = e;
-    null != t && (d = {
-      ...d,
+    null != t && (c = {
+      ...c,
       ...t
     }, _ = !0)
   },
@@ -38,14 +38,14 @@ s = "ConsentStore", (r = "displayName") in(i = E) ? Object.defineProperty(i, r, 
     let {
       consents: t
     } = e;
-    d = {
+    c = {
       ...t
     }, u = !0
   },
   SET_CONSENT_REQUIRED: function(e) {
-    c = e.consentRequired
+    d = e.consentRequired
   },
   LOGOUT: function() {
-    c = null
+    d = null
   }
 })

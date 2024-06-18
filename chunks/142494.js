@@ -5,7 +5,7 @@ n.d(t, {
     return I
   },
   _H: function() {
-    return c
+    return d
   },
   yR: function() {
     return E
@@ -18,7 +18,7 @@ var s = n(400053),
   u = n(20970),
   _ = n(959525);
 
-function d(e, t, n) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -26,7 +26,7 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class c {
+class d {
   format(e) {
     if (!this.hasMarkdown) return this.intlMessage.format(e);
     let [t, n] = this.getContext(e);
@@ -49,7 +49,7 @@ class c {
     return [e, n]
   }
   constructor(e, t, n) {
-    d(this, "message", void 0), d(this, "hasMarkdown", void 0), d(this, "intlMessage", void 0), this.message = n ? e : e.replace(_.hN, ""), this.hasMarkdown = n, this.intlMessage = new(o())(this.message, t)
+    c(this, "message", void 0), c(this, "hasMarkdown", void 0), c(this, "intlMessage", void 0), this.message = n ? e : e.replace(_.hN, ""), this.hasMarkdown = n, this.intlMessage = new(o())(this.message, t)
   }
 }
 
@@ -80,5 +80,5 @@ function I(e, t) {
   null == i && E(n(281071).Z), e = e.replace(/^\n+|\n+$/g, "");
   let r = _.aT.test(e),
     s = _.b9.test(e);
-  return r || s ? new c(e, t, s) : e
+  return r || s ? new d(e, t, s) : e
 }

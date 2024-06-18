@@ -16,10 +16,10 @@ n.d(t, {
     return u
   },
   m1: function() {
-    return c
+    return d
   },
   n8: function() {
-    return d
+    return c
   }
 });
 var i = n(367907),
@@ -67,12 +67,12 @@ let u = e => {
       is_custom: (0, s.z)(n.type)
     })
   },
-  d = () => {
+  c = () => {
     r.default.track(o.rMx.SEARCH_STARTED, {
       search_type: o.aib.STICKER
     })
   },
-  c = (e, t, n) => {
+  d = (e, t, n) => {
     i.ZP.trackWithMetadata(o.rMx.SEARCH_RESULT_VIEWED, {
       search_type: o.aib.STICKER,
       total_results: t,

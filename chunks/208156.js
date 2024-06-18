@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(772848),
   u = n(442837),
   _ = n(928518),
-  d = n(631467),
-  c = n(210887),
+  c = n(631467),
+  d = n(210887),
   E = n(585483),
   I = n(53289),
   T = n(953101),
@@ -31,11 +31,11 @@ function N(e) {
     queryParams: N,
     allowPopups: A = !1,
     referrerPolicy: m = "origin"
-  } = e, O = (0, u.e7)([_.Z], () => _.Z.getWindow(S.KJ3.CHANNEL_CALL_POPOUT)), R = (0, a.useMemoOne)(() => (0, l.Z)(), [t]), C = r.useRef(null), p = (0, I.Z)(C, f, null == O ? window : O), g = {
+  } = e, O = (0, u.e7)([_.Z], () => _.Z.getWindow(S.KJ3.CHANNEL_CALL_POPOUT)), R = (0, a.useMemoOne)(() => (0, l.Z)(), [t]), p = r.useRef(null), g = (0, I.Z)(p, f, null == O ? window : O), C = {
     ...N,
     frame_id: R,
     platform: h.S4.DESKTOP
-  }, [L, v] = r.useState(!1), D = c.Z.theme, M = {
+  }, [v, L] = r.useState(!1), D = d.Z.theme, M = {
     ...s
   };
   return D === S.BRd.LIGHT ? M.colorScheme = "light" : M.colorScheme = "dark", r.useEffect(() => (E.S.dispatch(S.CkL.IFRAME_MOUNT, {
@@ -49,24 +49,24 @@ function N(e) {
       let {
         resizing: t
       } = e;
-      v(t)
+      L(t)
     };
     return E.S.subscribe(S.CkL.MANUAL_IFRAME_RESIZING, e), () => {
       E.S.unsubscribe(S.CkL.MANUAL_IFRAME_RESIZING, e)
     }
-  }, []), L && (M.pointerEvents = "none"), null != t ? (0, i.jsx)("iframe", {
+  }, []), v && (M.pointerEvents = "none"), null != t ? (0, i.jsx)("iframe", {
     style: M,
     allow: "autoplay; encrypted-media",
     referrerPolicy: m,
     onLoad: function(e) {
       var n;
-      null == o || o(e.target), C.current = e.target, p(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([d.Z.HELLO, g], null != t ? t : "")
+      null == o || o(e.target), p.current = e.target, g(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([c.Z.HELLO, C], null != t ? t : "")
     },
     sandbox: (0, T.Z)({
       allowPopups: A
     }),
     className: n,
-    src: "".concat(t, "?").concat(new URLSearchParams(g))
+    src: "".concat(t, "?").concat(new URLSearchParams(C))
   }) : null
 }
 

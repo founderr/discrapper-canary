@@ -7,7 +7,7 @@ n.d(t, {
     return _
   },
   yQ: function() {
-    return d
+    return c
   }
 }), n(653041), n(733860);
 var i, r, s, o, a = n(65154);
@@ -51,19 +51,19 @@ function _(e) {
   }), t
 }
 
-function d(e, t) {
+function c(e, t) {
   return "string" == typeof e ? u(JSON.parse(e).map(e => ({
-    codec: c(e.codec),
+    codec: d(e.codec),
     encode: e.encode,
     decode: e.decode
   })), t) : u(e.map(e => ({
-    codec: c(e),
+    codec: d(e),
     encode: !0,
     decode: !0
   })), t)
 }
 
-function c(e) {
+function d(e) {
   return "AV1X" === e ? "AV1" : e
 }
 

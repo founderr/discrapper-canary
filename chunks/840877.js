@@ -4,7 +4,7 @@ n.d(t, {
     return _
   },
   tJ: function() {
-    return d
+    return c
   }
 }), n(411104);
 var i = n(664751),
@@ -73,7 +73,7 @@ class _ extends u {
     })
   }
 }
-class d extends u {
+class c extends u {
   getEndpoint() {
     switch (this.searchType) {
       case a.aib.DMS:

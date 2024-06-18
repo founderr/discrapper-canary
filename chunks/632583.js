@@ -55,7 +55,7 @@ let a = "currentColor",
       })]
     })
   },
-  d = e => {
+  c = e => {
     let {
       fillColor: t
     } = e;
@@ -68,7 +68,7 @@ let a = "currentColor",
       })
     })
   },
-  c = (e, t, n, i, r) => {
+  d = (e, t, n, i, r) => {
     if (!t || i) return e ? "url(#nitro_hover)" : a;
     let s = n ? [...u.keys()].filter(e => e !== r) : [...l.keys()].filter(e => e !== r),
       o = Math.floor(Math.random() * s.length);
@@ -88,13 +88,13 @@ function E(e) {
     ...f
   } = e, [N, A] = r.useState(a), m = null !== (t = l.get(N)) && void 0 !== t ? t : null;
   return r.useEffect(() => {
-    T ? A(e => c(T, h, S, I, e)) : I && A(a)
+    T ? A(e => d(T, h, S, I, e)) : I && A(a)
   }, [T, h, S, I]), (0, i.jsxs)("svg", {
     width: n,
     height: u,
     ...(0, o.Z)(f),
     xmlns: "http://www.w3.org/2000/svg",
-    children: [I ? (0, i.jsx)(d, {
+    children: [I ? (0, i.jsx)(c, {
       fillColor: N
     }) : (0, i.jsx)(_, {
       referralsRemaining: E,

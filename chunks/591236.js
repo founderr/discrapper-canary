@@ -7,8 +7,8 @@ var i = n(496675),
   l = n(665692),
   u = n(981631),
   _ = n(185923),
-  d = n(689938);
-let c = {
+  c = n(689938);
+let d = {
   sentinel: l.a4,
   matches(e, t, n, r, s) {
     var o, a;
@@ -44,8 +44,8 @@ let c = {
       autocompletes: t,
       onHover: s,
       onClick: a,
-      titleWithQuery: d.Z.Messages.REACTIONS_MATCHING,
-      titleWithoutQuery: d.Z.Messages.EMOJI,
+      titleWithQuery: c.Z.Messages.REACTIONS_MATCHING,
+      titleWithoutQuery: c.Z.Messages.EMOJI,
       Component: r.ZP.Emoji,
       getProps: e => ({
         emoji: e,
@@ -71,4 +71,4 @@ let c = {
     }
   }
 };
-t.Z = c
+t.Z = d

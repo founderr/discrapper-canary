@@ -37,7 +37,7 @@ let _ = {
       dotPosition: 0
     }
   },
-  d = {
+  c = {
     config: {
       duration: 2400
     },
@@ -47,7 +47,7 @@ let _ = {
     reset: !0
   };
 
-function c(e) {
+function d(e) {
   let t = e % 2;
   return t > 1 ? 1 - (t - 1) : t
 }
@@ -60,7 +60,7 @@ let E = r.memo(function(e) {
     } = e, l = r.useRef(u()), _ = r.useRef(!0);
     r.useEffect(() => () => void(_.current = !1), []);
     let [E] = (0, a.useSpring)(() => ({
-      ...d,
+      ...c,
       to: async e => {
         let t = 2.8;
         for (; _.current;) {
@@ -82,10 +82,10 @@ let E = r.memo(function(e) {
         return (0, i.jsx)(a.animated.circle, {
           cx: n ? n.to([0, 1], [I, u]) : u,
           cy: t,
-          r: E.dotCycle.to(e => c(e - r)).to([0, .4, .8, 1], [.8 * t, .8 * t, t, t]).to(e => l.current ? e : t),
+          r: E.dotCycle.to(e => d(e - r)).to([0, .4, .8, 1], [.8 * t, .8 * t, t, t]).to(e => l.current ? e : t),
           fill: s,
           style: {
-            opacity: E.dotCycle.to(e => c(e - r)).to([0, .4, .8, 1], [.3, .3, 1, 1]).to(e => l.current ? e : 1)
+            opacity: E.dotCycle.to(e => d(e - r)).to([0, .4, .8, 1], [.3, .3, 1, 1]).to(e => l.current ? e : 1)
           }
         }, e)
       })
@@ -96,17 +96,17 @@ let E = r.memo(function(e) {
       dotRadius: n,
       x: r,
       y: s,
-      hide: d = !1,
-      themed: c = !1,
+      hide: c = !1,
+      themed: d = !1,
       className: I
     } = e;
-    return (0, a.useTransition)(d, {
+    return (0, a.useTransition)(c, {
       ..._,
       key: e => e ? "true" : "false",
       immediate: !u()
     })((e, u, _) => {
       let {
-        dotPosition: d
+        dotPosition: c
       } = e, {
         key: T
       } = _;
@@ -116,14 +116,14 @@ let E = r.memo(function(e) {
         y: s,
         width: 6 * n + n / 2 * 2,
         height: 2 * n,
-        className: o()(I, l.dots, c ? l.themed : null),
+        className: o()(I, l.dots, d ? l.themed : null),
         children: (0, i.jsx)(a.animated.g, {
           style: {
-            opacity: d.to(e => Math.min(1, Math.max(e, 0)))
+            opacity: c.to(e => Math.min(1, Math.max(e, 0)))
           },
           children: (0, i.jsx)(E, {
             dotRadius: n,
-            dotPosition: d
+            dotPosition: c
           })
         })
       }, T)

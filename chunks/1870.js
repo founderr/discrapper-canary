@@ -2,12 +2,12 @@
 let i, r, s;
 n(47120);
 var o, a, l, u, _ = n(392711),
-  d = n(442837),
-  c = n(570140);
+  c = n(442837),
+  d = n(570140);
 let E = new Map,
   I = E,
   T = !1;
-class h extends(o = d.ZP.Store) {
+class h extends(o = c.ZP.Store) {
   get isFetching() {
     return T
   }
@@ -32,7 +32,7 @@ u = "CollectiblesPurchaseStore", (l = "displayName") in(a = h) ? Object.definePr
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = u, t.Z = new h(c.Z, {
+}) : a[l] = u, t.Z = new h(d.Z, {
   COLLECTIBLES_PURCHASES_FETCH: e => {
     T = !0, r = void 0
   },

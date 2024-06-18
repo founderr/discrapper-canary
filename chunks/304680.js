@@ -10,7 +10,7 @@ n.d(t, {
     return s
   },
   gl: function() {
-    return d
+    return c
   },
   xv: function() {
     return o
@@ -69,7 +69,7 @@ function _(e, t, n) {
   })
 }
 
-function d() {
+function c() {
   r.Z.fileManager.showOpenDialog({
     filters: [{
       name: "All Files",

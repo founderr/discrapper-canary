@@ -8,13 +8,13 @@ var i = n(735250),
   l = n(689938),
   u = n(419076),
   _ = n(611273);
-let d = e => {
+let c = e => {
   let {
     data: {
       title: t,
       subtitle: n,
-      placeholder: d,
-      rows: c,
+      placeholder: c,
+      rows: d,
       character_limit: E,
       pattern: I
     },
@@ -55,8 +55,8 @@ let d = e => {
       onChange: R,
       value: N,
       error: m,
-      rows: c,
-      placeholder: d,
+      rows: d,
+      placeholder: c,
       autoFocus: !0
     }), null != n && (0, i.jsx)("div", {
       children: (0, i.jsx)(s.Text, {
@@ -74,7 +74,7 @@ t.Z = e => {
   } = e, s = t.map(e => {
     var t;
     let s = e.name;
-    return (0, i.jsx)(d, {
+    return (0, i.jsx)(c, {
       data: e.data,
       onChange: e => n(s, e.value, e.isValid),
       initialText: null !== (t = null == r ? void 0 : r[s]) && void 0 !== t ? t : void 0,

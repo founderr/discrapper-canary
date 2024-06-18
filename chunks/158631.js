@@ -10,10 +10,10 @@ n.d(t, {
     return E
   },
   tA: function() {
-    return c
+    return d
   },
   zW: function() {
-    return d
+    return c
   }
 });
 var i = n(442837),
@@ -42,13 +42,13 @@ function _() {
   return null != u()
 }
 
-function d(e) {
+function c(e) {
   let t = u(),
     n = (0, i.e7)([o.Z], () => o.Z.getChannel(e));
   return null != t && null != n && n.ownerId === t.userId && n.isBroadcastChannel()
 }
 
-function c(e) {
+function d(e) {
   let t = s.default.getId(),
     {
       canBroadcast: n

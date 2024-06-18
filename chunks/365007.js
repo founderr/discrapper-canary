@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   L$: function() {
-    return d
+    return c
   },
   Sr: function() {
-    return c
+    return d
   },
   WQ: function() {
     return _
@@ -70,7 +70,7 @@ async function _(e, t) {
     credential: n.body
   })
 }
-async function d() {
+async function c() {
   let {
     body: {
       ticket: e,
@@ -85,7 +85,7 @@ async function d() {
     challenge: t
   }
 }
-async function c(e, t, n) {
+async function d(e, t, n) {
   let o = await i.tn.post({
     url: s.ANM.MFA_WEBAUTHN_CREDENTIALS,
     body: {

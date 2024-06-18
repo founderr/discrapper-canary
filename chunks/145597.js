@@ -14,7 +14,7 @@ n.d(t, {
     return _
   },
   QF: function() {
-    return c
+    return d
   },
   Te: function() {
     return T
@@ -51,9 +51,9 @@ let o = 2,
   },
   u = "overlay_default",
   _ = -2,
-  d = !1;
+  c = !1;
 
-function c() {
+function d() {
   var e;
   if (void 0 !== i) return i;
   let t = parseInt(null !== (e = new URLSearchParams(window.location.search).get("pid")) && void 0 !== e ? e : "", 10);
@@ -73,11 +73,11 @@ function T(e) {
 }
 
 function h(e) {
-  d = e
+  c = e
 }
 
 function S() {
-  return d
+  return c
 }
 
 function f() {

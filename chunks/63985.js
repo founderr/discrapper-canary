@@ -7,8 +7,8 @@ var i = n(678916),
   l = n(912855),
   u = n(320236),
   _ = n(502058),
-  d = n(794951),
-  c = n(655142),
+  c = n(794951),
+  d = n(655142),
   E = n(166453);
 t.Z = () => ({
   [i.dp.OPTION_1]: {
@@ -23,12 +23,12 @@ t.Z = () => ({
   },
   [i.dp.OPTION_3]: {
     id: i.dp.OPTION_3,
-    source: d,
+    source: c,
     name: s.Z.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_3
   },
   [i.dp.OPTION_4]: {
     id: i.dp.OPTION_4,
-    source: c,
+    source: d,
     name: s.Z.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_4
   },
   [i.dp.OPTION_7]: {

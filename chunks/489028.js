@@ -18,8 +18,8 @@ var n = t(735250),
   S = t(723047),
   h = t(416867),
   g = t(903773),
-  x = t(215124),
-  C = t(326578),
+  C = t(215124),
+  x = t(326578),
   R = t(981631),
   L = t(674563),
   O = t(829857),
@@ -59,7 +59,7 @@ function f(e) {
     value: e.id
   })), [t]), N = async () => {
     await d(s, r, L.wW.GUILD_ROLE_SUBSCRIPTIONS) && (_(s.id), (0, h.B)({
-      Icon: C.Z,
+      Icon: x.Z,
       title: A.Z.Messages.GUILD_MONETIZATION_ENABLE_CONFIRMATION_TITLE,
       body: A.Z.Messages.GUILD_MONETIZATION_ENABLE_CONFIRMATION_SUBTITLE
     }))
@@ -94,26 +94,26 @@ s.Z = e => {
     guild: s
   } = e, t = (0, l.e7)([_.default], () => _.default.getCurrentUser()), c = s.isOwner(t), m = (0, o.Ob)(s), S = (0, l.e7)([I.Z], () => I.Z.isFocused()), {
     teams: h,
-    loading: C
+    loading: x
   } = (0, E.Z)({
     refreshOnDepChange: S
   }), L = i.useMemo(() => h.filter(e => {
     var s;
     return e.payout_account_status !== O.C.BLOCKED && (0, u.Z)(null !== (s = null == t ? void 0 : t.id) && void 0 !== s ? s : R.lds, e)
-  }), [h, t]), v = L.length > 0, D = i.useCallback(async () => {
+  }), [h, t]), D = L.length > 0, v = i.useCallback(async () => {
     N.default.track(R.rMx.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
       is_onboarding_v2: m,
-      has_eligible_team: v,
+      has_eligible_team: D,
       guild_id: s.id,
       is_owner: c
     });
     let e = await (0, d.$)(R.E07.DEVELOPER_PORTAL_TEAMS);
     (0, r.Z)(e)
-  }, [s, c, m, v]), Z = i.useCallback(e => c ? (0, n.jsx)(T.Z, {
-    onClick: D,
+  }, [s, c, m, D]), j = i.useCallback(e => c ? (0, n.jsx)(T.Z, {
+    onClick: v,
     children: e
-  }) : e, [D, c]);
-  return C ? (0, n.jsx)(a.Spinner, {}) : (0, n.jsxs)(n.Fragment, {
+  }) : e, [v, c]);
+  return x ? (0, n.jsx)(a.Spinner, {}) : (0, n.jsxs)(n.Fragment, {
     children: [!c && (0, n.jsx)(g.Z, {
       className: p.nonOwnerNotice,
       children: A.Z.Messages.GUILD_MONETIZATION_ENABLE_NON_OWNER_WARNING
@@ -125,20 +125,20 @@ s.Z = e => {
         className: p.description,
         disabled: !c,
         children: A.Z.Messages.GUILD_MONETIZATION_ENABLE_DESCRIPTION.format({
-          onCreateTeamHook: Z
+          onCreateTeamHook: j
         })
-      }), v ? (0, n.jsx)(f, {
+      }), D ? (0, n.jsx)(f, {
         guild: s,
         eligibleTeams: L,
         isGuildOwner: c
       }) : (0, n.jsx)(M, {
-        onCreateTeamClick: D,
+        onCreateTeamClick: v,
         isGuildOwner: c
       })]
     }), (0, n.jsx)(a.FormSection, {
       title: A.Z.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_TITLE,
       className: p.selfDemonetization,
-      children: (0, n.jsx)(x.Z, {
+      children: (0, n.jsx)(C.Z, {
         guildId: s.id,
         allPeriods: []
       })

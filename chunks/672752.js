@@ -47,7 +47,7 @@ let a = Object.freeze({
       stopColor: o.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css
     })]
   }),
-  d = () => (0, i.jsxs)("linearGradient", {
+  c = () => (0, i.jsxs)("linearGradient", {
     id: a.PREMIUM_TIER_2,
     children: [(0, i.jsx)("stop", {
       stopColor: o.Z.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS.css
@@ -59,7 +59,7 @@ let a = Object.freeze({
       stopColor: o.Z.unsafe_rawColors.PREMIUM_TIER_2_PINK_FOR_GRADIENTS.css
     })]
   }),
-  c = () => (0, i.jsxs)("linearGradient", {
+  d = () => (0, i.jsxs)("linearGradient", {
     id: a.PREMIUM_GUILD,
     children: [(0, i.jsx)("stop", {
       stopColor: o.Z.unsafe_rawColors.GUILD_BOOSTING_BLUE.css
@@ -91,7 +91,7 @@ let a = Object.freeze({
         height: 1
       },
       "aria-hidden": !0,
-      children: [u(), _(), d(), c(), E()]
+      children: [u(), _(), c(), d(), E()]
     })
   }, () => !0);
 t.ZP = I

@@ -4,8 +4,8 @@ var i, r, s, o, a = n(442837),
   l = n(570140),
   u = n(70956);
 let _ = [],
-  d = new Set,
-  c = 0;
+  c = new Set,
+  d = 0;
 class E extends(i = a.ZP.Store) {
   initialize() {
     setInterval(() => {
@@ -23,10 +23,10 @@ class E extends(i = a.ZP.Store) {
     return _.filter(e => null == e.dueAt || new Date > e.dueAt).length
   }
   recentlyFetched() {
-    return new Date().getTime() - c < 1 * u.Z.Millis.MINUTE
+    return new Date().getTime() - d < 1 * u.Z.Millis.MINUTE
   }
   hasSentNotification(e) {
-    return d.has(e)
+    return c.has(e)
   }
   getState() {
     return {
@@ -44,11 +44,11 @@ o = "MessageRemindersStore", (s = "displayName") in(r = E) ? Object.defineProper
     let {
       messages: t
     } = e;
-    c = new Date().getTime(), _ = t.map(e => ({
+    d = new Date().getTime(), _ = t.map(e => ({
       ...e,
       complete: !1
     })), t.forEach(e => {
-      null != e.dueAt && e.dueAt > new Date && d.delete(e.messageId), null != e.dueAt && e.dueAt < new Date && d.add(e.messageId)
+      null != e.dueAt && e.dueAt > new Date && c.delete(e.messageId), null != e.dueAt && e.dueAt < new Date && c.add(e.messageId)
     })
   },
   MESSAGE_REMINDER_TOGGLE: function(e) {
@@ -66,6 +66,6 @@ o = "MessageRemindersStore", (s = "displayName") in(r = E) ? Object.defineProper
     let {
       messageId: t
     } = e;
-    d.add(t)
+    c.add(t)
   }
 })

@@ -12,24 +12,24 @@ var i, r, s, o, a = n(442837),
   u = n(592125);
 let _ = 5 * n(70956).Z.Millis.SECOND;
 (s = i || (i = {}))[s.STRANGER_DANGER = 1] = "STRANGER_DANGER", s[s.INAPPROPRIATE_CONVERSATION_TIER_1 = 2] = "INAPPROPRIATE_CONVERSATION_TIER_1", s[s.INAPPROPRIATE_CONVERSATION_TIER_2 = 3] = "INAPPROPRIATE_CONVERSATION_TIER_2", (o = r || (r = {}))[o.UPVOTE = 0] = "UPVOTE", o[o.DOWNVOTE = 1] = "DOWNVOTE";
-let d = [],
-  c = {},
+let c = [],
+  d = {},
   E = new Set;
 
 function I(e) {
   let {
     safetyWarnings: t
   } = e;
-  null != t && (c[e.id] = t, t.some(e => {
+  null != t && (d[e.id] = t, t.some(e => {
     var t;
     return (2 === (t = e).type || 3 === t.type) && null != e.dismiss_timestamp && ! function(e) {
       return new Date(e).getTime() > Date.now() - _
     }(e.dismiss_timestamp)
-  }) ? E.add(e.id) : E.delete(e.id)), null == t && (null != c[e.id] && delete c[e.id], E.delete(e.id))
+  }) ? E.add(e.id) : E.delete(e.id)), null == t && (null != d[e.id] && delete d[e.id], E.delete(e.id))
 }
 
 function T() {
-  c = {}, Object.values(u.Z.getMutablePrivateChannels()).forEach(e => {
+  d = {}, Object.values(u.Z.getMutablePrivateChannels()).forEach(e => {
     I(e)
   })
 }
@@ -39,11 +39,11 @@ class h extends a.ZP.Store {
   }
   getChannelSafetyWarning(e, t) {
     var n;
-    return null === (n = c[e]) || void 0 === n ? void 0 : n.find(e => e.id === t)
+    return null === (n = d[e]) || void 0 === n ? void 0 : n.find(e => e.id === t)
   }
   getChannelSafetyWarnings(e) {
     var t;
-    return null !== (t = c[e]) && void 0 !== t ? t : d
+    return null !== (t = d[e]) && void 0 !== t ? t : c
   }
   hasShownInitialTooltipForChannel(e) {
     return E.has(e)
@@ -57,7 +57,7 @@ t.ZP = new h(l.Z, {
     let {
       channel: t
     } = e;
-    null != c[t.id] && delete c[t.id], E.delete(t.id)
+    null != d[t.id] && delete d[t.id], E.delete(t.id)
   },
   CHANNEL_UPDATES: function(e) {
     e.channels.forEach(e => {
@@ -71,8 +71,8 @@ t.ZP = new h(l.Z, {
       channelId: t,
       warningId: n,
       feedbackType: i
-    } = e, r = c[t];
-    if (null != r) c[t] = r.map(e => e.id === n ? {
+    } = e, r = d[t];
+    if (null != r) d[t] = r.map(e => e.id === n ? {
       ...e,
       feedback_type: i
     } : e)
@@ -80,8 +80,8 @@ t.ZP = new h(l.Z, {
   CLEAR_CHANNEL_SAFETY_WARNINGS: function(e) {
     let {
       channelId: t
-    } = e, n = c[t];
-    if (E.delete(t), null != n) c[t] = n.map(e => ({
+    } = e, n = d[t];
+    if (E.delete(t), null != n) d[t] = n.map(e => ({
       ...e,
       dismiss_timestamp: void 0
     }))
@@ -90,10 +90,10 @@ t.ZP = new h(l.Z, {
     let {
       channelId: t,
       warningIds: n
-    } = e, i = c[t];
+    } = e, i = d[t];
     if (null == i) return;
     let r = new Date().toISOString();
-    c[t] = i.map(e => n.includes(e.id) ? {
+    d[t] = i.map(e => n.includes(e.id) ? {
       ...e,
       dismiss_timestamp: r
     } : e)

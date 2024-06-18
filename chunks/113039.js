@@ -15,14 +15,14 @@ var i = n(735250),
   l = n.n(a),
   u = n(902704),
   _ = n(453687),
-  d = n(534761),
-  c = n(981631),
+  c = n(534761),
+  d = n(981631),
   E = n(689938),
   I = n(946278),
   T = n(822545);
 
 function h(e, t) {
-  return e.type === c.uaV.VOICE_HANGOUT_INVITE ? "" : e.hasFlag(c.iLy.SOURCE_MESSAGE_DELETED) ? E.Z.Messages.SOURCE_MESSAGE_DELETED : t
+  return e.type === d.uaV.VOICE_HANGOUT_INVITE ? "" : e.hasFlag(d.iLy.SOURCE_MESSAGE_DELETED) ? E.Z.Messages.SOURCE_MESSAGE_DELETED : t
 }
 
 function S(e, t) {
@@ -43,9 +43,9 @@ t.ZP = r.memo(function(e) {
     content: u,
     onUpdate: S,
     contentRef: f
-  } = e, N = s.isEdited(), A = s.state === c.yb.SEND_FAILED, m = s.state === c.yb.SENDING, O = s.isCommandType(), R = null === (t = s.editedTimestamp) || void 0 === t ? void 0 : t.toString(), C = r.useRef(!1);
+  } = e, N = s.isEdited(), A = s.state === d.yb.SEND_FAILED, m = s.state === d.yb.SENDING, O = s.isCommandType(), R = null === (t = s.editedTimestamp) || void 0 === t ? void 0 : t.toString(), p = r.useRef(!1);
   return r.useLayoutEffect(() => {
-    C.current ? null != S && S() : C.current = !0
+    p.current ? null != S && S() : p.current = !0
   }, [S, s.content, u, R, a]), (0, i.jsxs)("div", {
     id: (0, _.ut)(s),
     ref: f,
@@ -57,7 +57,7 @@ t.ZP = r.memo(function(e) {
       [T.isUnsupported]: s.isUnsupported
     }),
     children: [null != a ? a : h(s, u), N && null != s.editedTimestamp && (0, i.jsxs)(i.Fragment, {
-      children: [" ", (0, i.jsx)(d.Z, {
+      children: [" ", (0, i.jsx)(c.Z, {
         timestamp: s.editedTimestamp,
         isEdited: !0,
         isInline: !1,

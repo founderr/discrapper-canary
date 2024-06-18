@@ -4,7 +4,7 @@ n.d(t, {
     return r
   },
   X2: function() {
-    return c
+    return d
   },
   cg: function() {
     return I
@@ -19,19 +19,19 @@ var i, r, s = n(314897),
   l = n(79874),
   u = n(854698),
   _ = n(765305),
-  d = n(689938);
+  c = n(689938);
 
-function c(e, t) {
+function d(e, t) {
   let n = s.default.getId();
   return o.ZP.getRsvp(e, t, n)
 }
 
 function E() {
   return [{
-    name: d.Z.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_SERIES,
+    name: c.Z.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_SERIES,
     value: 0
   }, {
-    name: d.Z.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_RECURRENCE,
+    name: c.Z.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_RECURRENCE,
     value: 1
   }]
 }
@@ -43,7 +43,7 @@ function I(e) {
     guildId: i,
     updateRsvp: r,
     openRsvpPicker: s,
-    onRsvp: d
+    onRsvp: c
   } = e, E = o.ZP.getGuildScheduledEvent(t);
   if (null == E) return;
   let I = (0, a.c)(n, t),
@@ -52,7 +52,7 @@ function I(e) {
     } = (0, l.Kq)(E, n),
     h = (null == E ? void 0 : E.scheduled_start_time) != null ? (0, u.lh)(I, T, new Date(null == E ? void 0 : E.scheduled_start_time)) : null,
     S = null != h && _.$I.has(h) ? null : null != n ? n : (0, u.DK)(E),
-    f = c(E.id),
-    N = c(E.id, S);
-  null == S ? (r(t, null, i, null != f ? _.gv.UNINTERESTED : _.gv.INTERESTED), null == d || d()) : null != N ? (r(t, S, i, null != f ? _.gv.INTERESTED : _.gv.UNINTERESTED), null == d || d()) : s(E, S)
+    f = d(E.id),
+    N = d(E.id, S);
+  null == S ? (r(t, null, i, null != f ? _.gv.UNINTERESTED : _.gv.INTERESTED), null == c || c()) : null != N ? (r(t, S, i, null != f ? _.gv.INTERESTED : _.gv.UNINTERESTED), null == c || c()) : s(E, S)
 }(i = r || (r = {}))[i.SERIES = 0] = "SERIES", i[i.RECURRENCE = 1] = "RECURRENCE"

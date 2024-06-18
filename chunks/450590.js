@@ -6,8 +6,8 @@ var i, r = n(735250),
   l = n(692547),
   u = n(477690),
   _ = n(481060),
-  d = n(585483),
-  c = n(624138),
+  c = n(585483),
+  d = n(624138),
   E = n(989823),
   I = n(713308),
   T = n(520687),
@@ -23,7 +23,7 @@ function N(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = (0, c.Mg)(u.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
+let A = (0, d.Mg)(u.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
   m = 1 / 120;
 class O extends(i = s.Component) {
   componentDidMount() {
@@ -45,10 +45,10 @@ class O extends(i = s.Component) {
     this.pause(), this.unbindEvents(), this.children.forEach(e => e.terminate())
   }
   bindEvents() {
-    window.addEventListener("resize", this.resizeCanvas, !1), window.addEventListener("blur", this.delayedPause, !1), window.addEventListener("focus", this.play, !1), document.addEventListener("visibilitychange", this.handleVisibilityChange, !1), d.S.subscribe(S.CkL.WAVE_EMPHASIZE, this.handleWaveEmphasize)
+    window.addEventListener("resize", this.resizeCanvas, !1), window.addEventListener("blur", this.delayedPause, !1), window.addEventListener("focus", this.play, !1), document.addEventListener("visibilitychange", this.handleVisibilityChange, !1), c.S.subscribe(S.CkL.WAVE_EMPHASIZE, this.handleWaveEmphasize)
   }
   unbindEvents() {
-    window.removeEventListener("resize", this.resizeCanvas, !1), window.removeEventListener("blur", this.delayedPause, !1), window.removeEventListener("focus", this.play, !1), document.removeEventListener("visibilitychange", this.handleVisibilityChange, !1), d.S.unsubscribe(S.CkL.WAVE_EMPHASIZE, this.handleWaveEmphasize)
+    window.removeEventListener("resize", this.resizeCanvas, !1), window.removeEventListener("blur", this.delayedPause, !1), window.removeEventListener("focus", this.play, !1), document.removeEventListener("visibilitychange", this.handleVisibilityChange, !1), c.S.unsubscribe(S.CkL.WAVE_EMPHASIZE, this.handleWaveEmphasize)
   }
   advanceTransitionalState() {
     let {

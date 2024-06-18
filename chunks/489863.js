@@ -10,7 +10,7 @@ n.d(t, {
     return u
   },
   c$: function() {
-    return d
+    return c
   },
   g: function() {
     return a
@@ -22,7 +22,7 @@ n.d(t, {
     return E
   },
   tV: function() {
-    return c
+    return d
   }
 });
 var i = n(860911),
@@ -49,8 +49,8 @@ async function l(e) {
     codeChallenge: l,
     codeChallengeMethod: u,
     state: _,
-    permissions: d,
-    guildId: c,
+    permissions: c,
+    guildId: d,
     channelId: E,
     integrationType: I,
     nonce: T
@@ -68,10 +68,10 @@ async function l(e) {
       nonce: T
     },
     body: {
-      guild_id: c,
-      webhook_channel_id: null != c && null != E ? E : void 0,
-      channel_id: null == c && null != E ? E : void 0,
-      permissions: d,
+      guild_id: d,
+      webhook_channel_id: null != d && null != E ? E : void 0,
+      channel_id: null == d && null != E ? E : void 0,
+      permissions: c,
       authorize: t,
       integration_type: I
     },
@@ -88,7 +88,7 @@ async function u(e) {
     codeChallengeMethod: l,
     state: u,
     integrationType: _,
-    nonce: d
+    nonce: c
   } = e;
   return (await r.tn.get({
     url: o.ANM.OAUTH2_AUTHORIZE,
@@ -101,7 +101,7 @@ async function u(e) {
       scope: n.join(" "),
       state: u,
       integration_type: _,
-      nonce: d
+      nonce: c
     },
     retries: 3,
     oldFormErrors: !0
@@ -120,10 +120,10 @@ async function _(e) {
   return t
 }
 
-function d(e) {
+function c(e) {
   s.Z.logout((0, i.U)(e.pathname + e.search, !1))
 }
-async function c(e) {
+async function d(e) {
   return await r.tn.post({
     url: o.ANM.OAUTH2_DEVICE_VERIFY,
     body: {

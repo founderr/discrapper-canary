@@ -3,8 +3,8 @@ var i, r, s, o, a = n(442837),
   l = n(570140),
   u = n(314897),
   _ = n(592125),
-  d = n(131951),
-  c = n(496675),
+  c = n(131951),
+  d = n(496675),
   E = n(19780),
   I = n(979651),
   T = n(981631);
@@ -19,7 +19,7 @@ function f() {
     var n;
     let i = _.Z.getChannel(t),
       r = I.Z.getVoiceState(null == i ? void 0 : i.getGuildId(), u.default.getId());
-    e = d.Z.getMode() !== T.pM4.VOICE_ACTIVITY || null == i || i.isPrivate() || i.isGuildStageVoice() || c.Z.can(T.Plq.USE_VAD, i) || null == (n = r) || !!n.suppress || null != n.requestToSpeakTimestamp || !1
+    e = c.Z.getMode() !== T.pM4.VOICE_ACTIVITY || null == i || i.isPrivate() || i.isGuildStageVoice() || d.Z.can(T.Plq.USE_VAD, i) || null == (n = r) || !!n.suppress || null != n.requestToSpeakTimestamp || !1
   }
   if (h === e) return !1;
   S = e, h = e, l.Z.dispatch({
@@ -29,7 +29,7 @@ function f() {
 }
 class N extends(o = a.ZP.Store) {
   initialize() {
-    this.waitFor(c.Z, d.Z, E.Z, I.Z)
+    this.waitFor(d.Z, c.Z, E.Z, I.Z)
   }
   shouldShowWarning() {
     return !S

@@ -10,7 +10,7 @@ n.d(t, {
     return m
   },
   Jf: function() {
-    return p
+    return g
   },
   SA: function() {
     return D
@@ -19,19 +19,19 @@ n.d(t, {
     return R
   },
   eu: function() {
-    return g
+    return C
   },
   hW: function() {
     return M
   },
   lY: function() {
-    return C
+    return p
   },
   pk: function() {
     return O
   },
   qB: function() {
-    return L
+    return v
   }
 }), n(653041);
 var i = n(392711),
@@ -42,8 +42,8 @@ var i = n(392711),
   l = n(38618),
   u = n(706454),
   _ = n(675478),
-  d = n(598077),
-  c = n(486472),
+  c = n(598077),
+  d = n(486472),
   E = n(594174),
   I = n(73346),
   T = n(926491),
@@ -105,14 +105,14 @@ let N = async (e, t) => {
     guildId: e,
     stickers: t.map(e => null != e.user ? {
       ...e,
-      user: new d.Z(e.user)
+      user: new c.Z(e.user)
     } : e)
   })
 }, R = async e => {
   await s.tn.del({
     url: h.ANM.GUILD_STICKER(e.guild_id, e.id)
   })
-}, C = async (e, t) => {
+}, p = async (e, t) => {
   let n = await s.tn.post({
     url: h.ANM.GUILD_STICKER_PACKS(e),
     body: t
@@ -125,12 +125,12 @@ let N = async (e, t) => {
       user: E.default.getCurrentUser()
     }
   }), n.body
-}, p = async (e, t, n) => (await s.tn.patch({
+}, g = async (e, t, n) => (await s.tn.patch({
   url: h.ANM.GUILD_STICKER(e, t),
   body: n
 })).body;
 
-function g(e, t, n) {
+function C(e, t, n) {
   o.Z.dispatch({
     type: "ADD_STICKER_PREVIEW",
     channelId: e,
@@ -139,7 +139,7 @@ function g(e, t, n) {
   })
 }
 
-function L(e, t) {
+function v(e, t) {
   o.Z.dispatch({
     type: "CLEAR_STICKER_PREVIEW",
     channelId: e,
@@ -147,12 +147,12 @@ function L(e, t) {
   })
 }
 
-function v(e) {
-  return c.Z.totalUnavailableGuilds > 0 || !l.Z.isConnected() ? e : e.filter(e => null != T.Z.getStickerById(e))
+function L(e) {
+  return d.Z.totalUnavailableGuilds > 0 || !l.Z.isConnected() ? e : e.filter(e => null != T.Z.getStickerById(e))
 }
 
 function D(e) {
-  _.DZ.updateAsync("favoriteStickers", t => (t.stickerIds = v(t.stickerIds), r().size(t.stickerIds) >= S.oX) ? (a.Z.show({
+  _.DZ.updateAsync("favoriteStickers", t => (t.stickerIds = L(t.stickerIds), r().size(t.stickerIds) >= S.oX) ? (a.Z.show({
     title: f.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
     body: f.Z.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
       count: S.oX
@@ -162,6 +162,6 @@ function D(e) {
 
 function M(e) {
   _.DZ.updateAsync("favoriteStickers", t => {
-    t.stickerIds = t.stickerIds.filter(t => t !== e), t.stickerIds = v(t.stickerIds)
+    t.stickerIds = t.stickerIds.filter(t => t !== e), t.stickerIds = L(t.stickerIds)
   }, S.fy.INFREQUENT_USER_ACTION)
 }

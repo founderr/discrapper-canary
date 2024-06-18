@@ -15,8 +15,8 @@ var i = n(512722),
   l = n(503438),
   u = n(693824),
   _ = n(690725),
-  d = n(592125),
-  c = n(81063),
+  c = n(592125),
+  d = n(81063),
   E = n(176354),
   I = n(201133),
   T = n(55e3),
@@ -40,7 +40,7 @@ let N = async e => {
     reply: t,
     altText: n,
     ...i
-  } = e, o = await O(i), a = await s.Z.openPrivateChannel(i.user.id, !1, !1), l = d.Z.getChannel(a);
+  } = e, o = await O(i), a = await s.Z.openPrivateChannel(i.user.id, !1, !1), l = c.Z.getChannel(a);
   r()(null != l, "Channel cannot be null"), (0, I.B)({
     file: o,
     altText: n,
@@ -58,7 +58,7 @@ let N = async e => {
   } = (0, h.j3)(s, "black"), a = "dark" === o, l = (0, h.ZH)(i), {
     assets: u,
     application_id: _
-  } = i, d = (0, c.getAssetImage)(_, null == u ? void 0 : u.large_image, 64), I = null == r ? void 0 : r.getIconURL(64), T = null != l ? a ? l.icon.darkPNG : l.icon.lightPNG : i.type === S.IIU.PLAYING ? a ? n(414575) : n(807612) : null, f = i.type === S.IIU.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, E.qc)({
+  } = i, c = (0, d.getAssetImage)(_, null == u ? void 0 : u.large_image, 64), I = null == r ? void 0 : r.getIconURL(64), T = null != l ? a ? l.icon.darkPNG : l.icon.lightPNG : i.type === S.IIU.PLAYING ? a ? n(414575) : n(807612) : null, f = i.type === S.IIU.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, E.qc)({
     id: i.emoji.id,
     name: i.emoji.name,
     animated: !1
@@ -67,8 +67,8 @@ let N = async e => {
     ...null != T && {
       Platform: T
     },
-    ...null != d && {
-      AssetImage: d.includes("http") ? d : n(869469)(d)
+    ...null != c && {
+      AssetImage: c.includes("http") ? c : n(869469)(c)
     },
     ...null != I && {
       ApplicationImage: I
@@ -83,18 +83,18 @@ let N = async e => {
     activity: n,
     application: i,
     stream: r
-  } = e, d = await s.Z.openPrivateChannel(t.id, !1, !1), c = m({
+  } = e, c = await s.Z.openPrivateChannel(t.id, !1, !1), d = m({
     activity: n,
     application: i,
     user: t
   });
   return await (0, _.f)({
-    assetsToLoad: c,
+    assetsToLoad: d,
     drawImage: e => {
       var i;
       e.setFont({
         truncate: u.GX.Truncate
-      }), null != r ? v(e, n, t) : (0, l.Z)(n) ? p(e, n, t) : (0, a.Z)(n) && n.name === o.Z.get(S.ABu.LEAGUE_OF_LEGENDS).name ? L(e, n, t) : n.type === S.IIU.HANG_STATUS ? g(e, n, t) : C(e, n, t), (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("Platform")) && e.drawImage("Platform", {
+      }), null != r ? L(e, n, t) : (0, l.Z)(n) ? g(e, n, t) : (0, a.Z)(n) && n.name === o.Z.get(S.ABu.LEAGUE_OF_LEGENDS).name ? v(e, n, t) : n.type === S.IIU.HANG_STATUS ? C(e, n, t) : p(e, n, t), (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("Platform")) && e.drawImage("Platform", {
         x: T.En - T.o3 - T.ez,
         y: T.o3
       }, {
@@ -107,7 +107,7 @@ let N = async e => {
       quality: 1,
       fileName: "user-reacting-to-".concat(n.name, ".png").toLowerCase(),
       fileType: "png",
-      channelId: d
+      channelId: c
     }
   })
 }, R = (e, t) => {
@@ -115,7 +115,7 @@ let N = async e => {
     x: T.o3,
     y: T.o3
   }, !0, 2 + 2 / 3)
-}, C = (e, t, n) => {
+}, p = (e, t, n) => {
   var i, r, s;
   e.setSize({
     w: T.En,
@@ -164,7 +164,7 @@ let N = async e => {
     x: l,
     y: T.SG + 2 * T.Nv
   }, !0))
-}, p = (e, t, n) => {
+}, g = (e, t, n) => {
   var i, r;
   e.setSize({
     w: T.En,
@@ -207,7 +207,7 @@ let N = async e => {
     x: a,
     y: T.SG + 2 * T.Nv
   }, !0)
-}, g = (e, t, i) => {
+}, C = (e, t, i) => {
   var r, s;
   e.setSize({
     w: T.En,
@@ -252,7 +252,7 @@ let N = async e => {
     x: l,
     y: T.SG + 2 * T.Nv
   }, !0)
-}, L = (e, t, n) => {
+}, v = (e, t, n) => {
   var i;
   e.setSize({
     w: T.En,
@@ -298,7 +298,7 @@ let N = async e => {
     x: o,
     y: T.SG + 2 * T.Nv
   }, !0)
-}, v = (e, t, n) => {
+}, L = (e, t, n) => {
   var i, r, s;
   e.setSize({
     w: T.En,

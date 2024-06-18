@@ -8,21 +8,21 @@ var i = n(913527),
   l = n(924658),
   u = n.n(l),
   _ = n(539590),
-  d = n.n(_);
-let c = e => ({
+  c = n.n(_);
+let d = e => ({
     ...u(),
-    ...d(),
+    ...c(),
     ...e
   }),
   E = new s.ZP({
     getMessages: e => {
-      if ("en-US" === e) return c(a());
+      if ("en-US" === e) return d(a());
       return n(385007)("./".concat(e, ".jsona")).then(e => {
         let {
           default: t
         } = e;
         return t
-      }).then(c)
+      }).then(d)
     },
     getLanguages: () => n(515297)
   });

@@ -15,8 +15,8 @@ var i = n(735250),
   l = n.n(a),
   u = n(481060),
   _ = n(37234),
-  d = n(230711),
-  c = n(454585),
+  c = n(230711),
+  d = n(454585),
   E = n(703656),
   I = n(626135),
   T = n(981631),
@@ -32,12 +32,12 @@ let S = l().defaultRules.link,
       children: s,
       className: a = null,
       styleSheet: l = {}
-    } = e, _ = (0, u.usePrivateHeadingLevel)(), d = parseInt(i, 10), c = isNaN(d) ? 1 : d;
-    return r.createElement("h".concat(_ + c - 1), {
+    } = e, _ = (0, u.usePrivateHeadingLevel)(), c = parseInt(i, 10), d = isNaN(c) ? 1 : c;
+    return r.createElement("h".concat(_ + d - 1), {
       className: o()(...(t = l, null == (n = a) ? [] : n.split(" ").map(e => t[e])))
     }, s)
   },
-  A = null != c.Z ? c.Z.defaultRules : null,
+  A = null != d.Z ? d.Z.defaultRules : null,
   m = {
     link: {
       parse(e, t, n) {
@@ -49,7 +49,7 @@ let S = l().defaultRules.link,
         return i = s || o ? e => {
           I.default.track(T.rMx.PREMIUM_PROMOTION_OPENED, {
             location: f
-          }), s ? d.Z.open(T.oAB.PREMIUM) : o && d.Z.open(T.oAB.HYPESQUAD_ONLINE), n.changeLog.track(T.rMx.CHANGE_LOG_CTA_CLICKED, {
+          }), s ? c.Z.open(T.oAB.PREMIUM) : o && c.Z.open(T.oAB.HYPESQUAD_ONLINE), n.changeLog.track(T.rMx.CHANGE_LOG_CTA_CLICKED, {
             cta_type: "nitro"
           }), (0, u.closeModal)(h.Xd), e.preventDefault()
         } : a ? e => {

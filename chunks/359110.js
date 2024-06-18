@@ -4,7 +4,7 @@ n.d(t, {
     return _
   },
   ad: function() {
-    return d
+    return c
   }
 });
 var i = n(512722),
@@ -22,7 +22,7 @@ function _(e, t, n) {
   s.Z.preload(i.guild_id, i.id), (0, l.uL)(u.Z5c.CHANNEL(r, i.id), t, n)
 }
 
-function d(e, t, n) {
+function c(e, t, n) {
   r()(null != e.parent_id, "Thread must have a parent ID.");
   let i = (0, o.e)(e);
   (0, l.uL)(u.Z5c.CHANNEL(i, e.id), n, t)

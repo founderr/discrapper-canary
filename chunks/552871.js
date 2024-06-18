@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   u: function() {
-    return d
+    return c
   }
 }), n(47120);
 var i = n(259443),
@@ -12,7 +12,7 @@ var i = n(259443),
   l = n(579806),
   u = n(981631);
 let _ = new i.Y("uploadRtcLogFiles");
-async function d(e, t) {
+async function c(e, t) {
   let n;
   if (null == l.Z.fileManager.readLogFiles) throw new s.n0(s.cz.GENERAL);
   let i = [];
@@ -43,7 +43,7 @@ async function d(e, t) {
     if (429 === e.status) throw new s.n0(s.cz.PROGRESS);
     throw _.error("Debug log upload error: status: ".concat(e.status, ", message: ").concat(e.message)), new s.n0(s.cz.UPLOAD)
   }
-  let d = i.length + 1;
-  if ("success_count" in n.body && n.body.success_count !== d) throw _.error("Debug log upload: stored files ".concat(n.body.success_count, " !== ").concat(d)), new s.n0(s.cz.GENERAL);
+  let c = i.length + 1;
+  if ("success_count" in n.body && n.body.success_count !== c) throw _.error("Debug log upload: stored files ".concat(n.body.success_count, " !== ").concat(c)), new s.n0(s.cz.GENERAL);
   if ("store_success" in n.body && !n.body.store_success || "id_match" in n.body && !n.body.id_match || "all_success" in n.body && !n.body.all_success) throw _.error("Debug log upload: store_success: ".concat(n.body.store_success, " / ") + "id_match: ".concat(n.body.id_match, " / ") + "all_success: ".concat(n.body.all_success)), new s.n0(s.cz.GENERAL)
 }

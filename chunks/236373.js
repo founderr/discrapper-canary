@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   Gb: function() {
-    return c
+    return d
   },
   J1: function() {
     return _
   },
   KV: function() {
-    return d
+    return c
   },
   Ql: function() {
     return u
@@ -41,7 +41,7 @@ function _(e) {
   }
 }
 
-function d(e) {
+function c(e) {
   return null == e ? null : {
     start: new Date(e.start).toISOString(),
     end: null != e.end ? new Date(e.end).toISOString() : null,
@@ -56,15 +56,15 @@ function d(e) {
   }
 }(i = r || (r = {})).CHANNEL_SELECTOR = "ChannelSelector", i.DETAILS = "Details", i.PREVIEW = "Preview";
 
-function c(e, t, n) {
+function d(e, t, n) {
   let {
     name: i,
     description: r,
     privacyLevel: o,
     channelId: a,
     scheduledStartTime: u,
-    scheduledEndTime: d,
-    entityType: c,
+    scheduledEndTime: c,
+    entityType: d,
     entityMetadata: E,
     image: I,
     recurrenceRule: T,
@@ -76,8 +76,8 @@ function c(e, t, n) {
     description: null != r ? r : null,
     privacy_level: o,
     scheduled_start_time: u,
-    scheduled_end_time: d,
-    entity_type: c,
+    scheduled_end_time: c,
+    entity_type: d,
     entity_metadata: null != E ? E : null,
     image: null != I ? I : void 0,
     channel_id: a,
@@ -97,7 +97,7 @@ function c(e, t, n) {
 }
 
 function E(e, t) {
-  var n, i, r, s, u, _, c, E;
+  var n, i, r, s, u, _, d, E;
   let I = {
     name: null !== (n = null == e ? void 0 : e.name) && void 0 !== n ? n : "",
     privacyLevel: null !== (i = null == e ? void 0 : e.privacy_level) && void 0 !== i ? i : l.j8.GUILD_ONLY,
@@ -109,8 +109,8 @@ function E(e, t) {
     creatorId: null == e ? void 0 : e.creator_id,
     image: null == e ? void 0 : e.image,
     scheduledEndTime: null == e ? void 0 : e.scheduled_end_time,
-    recurrenceRule: d(null == e ? void 0 : e.recurrence_rule),
-    eventExceptions: (null !== (c = null == e ? void 0 : e.guild_scheduled_event_exceptions) && void 0 !== c ? c : []).map(e => ({
+    recurrenceRule: c(null == e ? void 0 : e.recurrence_rule),
+    eventExceptions: (null !== (d = null == e ? void 0 : e.guild_scheduled_event_exceptions) && void 0 !== d ? d : []).map(e => ({
       eventExceptionId: e.event_exception_id,
       eventId: e.event_id,
       guildId: e.guild_id,

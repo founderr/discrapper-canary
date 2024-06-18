@@ -19,8 +19,8 @@ t.Z = e => {
     nameColor: a,
     className: u,
     botType: _,
-    usernameClass: d,
-    discriminatorClass: c,
+    usernameClass: c,
+    discriminatorClass: d,
     botClass: E,
     botVerified: I = !1,
     style: T,
@@ -31,13 +31,13 @@ t.Z = e => {
     className: s()(u, l.nameTag),
     style: T,
     children: [(0, i.jsxs)("span", {
-      className: s()(l.username, d),
+      className: s()(l.username, c),
       style: null != a ? {
         color: a
       } : void 0,
       children: [S, t]
     }), null != n ? (0, i.jsxs)("span", {
-      className: null != c ? c : void 0,
+      className: null != d ? d : void 0,
       children: ["#", n]
     }) : null, null != _ ? (0, i.jsx)(o.Z, {
       type: _,

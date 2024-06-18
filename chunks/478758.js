@@ -34,20 +34,20 @@ t.Z = e => {
     maxAvatarsShown: o = 2,
     guildId: a
   } = e, {
-    totalSize: d,
-    knownSize: c
+    totalSize: c,
+    knownSize: d
   } = t;
-  if (d < r) return null;
+  if (c < r) return null;
   let E = s()(n).filter(l.lm).take(o).map(e => (0, i.jsx)(_, {
       member: e,
       guildId: a
     }, e.id)).value(),
-    I = d - c;
+    I = c - d;
   for (let e = 0; e < I && E.length < o; e++) E.push((0, i.jsx)(_, {
     empty: !0,
     guildId: a
   }, "empty-member-".concat(e)));
-  let T = Math.max(Math.min(d - E.length, 99), 0);
+  let T = Math.max(Math.min(c - E.length, 99), 0);
   if (1 === T) {
     let e = n[o];
     E.push((0, i.jsx)(_, {

@@ -4,7 +4,7 @@ n.d(t, {
     return _
   },
   l: function() {
-    return d
+    return c
   }
 }), n(47120);
 var i = n(652874),
@@ -37,6 +37,6 @@ function _(e) {
   return [!t.has(e), n]
 }
 
-function d(e) {
+function c(e) {
   return l.getState().resetNotification(e)
 }

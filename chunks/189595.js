@@ -15,11 +15,11 @@ function _(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let d = {
+let c = {
     friction: 14,
     tension: 200
   },
-  c = {
+  d = {
     DURATION: "DURATION",
     VOLUME: "VOLUME"
   };
@@ -59,7 +59,7 @@ class I extends(i = s.Component) {
       } = this.state;
     t ? l.Z.spring(n, {
       toValue: e,
-      ...d
+      ...c
     }).start() : n.setValue(e)
   }
   calculatePercentage(e, t) {
@@ -76,7 +76,7 @@ class I extends(i = s.Component) {
       bottom: o,
       height: a
     } = n.getBoundingClientRect();
-    return Math.min(1, Math.max(0, i === c.VOLUME ? (o - t) / a : (e - r) / s))
+    return Math.min(1, Math.max(0, i === d.VOLUME ? (o - t) / a : (e - r) / s))
   }
   render() {
     let {
@@ -88,16 +88,16 @@ class I extends(i = s.Component) {
       dragging: s,
       previewWidth: o,
       animatedProgress: _
-    } = this.state, d = s ? _ : o;
+    } = this.state, c = s ? _ : o;
     return (0, r.jsx)("div", {
-      className: a()(n, t === c.VOLUME ? u.vertical : u.horizontal),
+      className: a()(n, t === d.VOLUME ? u.vertical : u.horizontal),
       children: (0, r.jsx)("div", {
-        className: a()(i, s ? u.mediaBarInteractionDragging : u.mediaBarInteraction, t === c.VOLUME ? u.mediaBarInteractionVolume : null),
+        className: a()(i, s ? u.mediaBarInteractionDragging : u.mediaBarInteraction, t === d.VOLUME ? u.mediaBarInteractionVolume : null),
         onMouseDown: this.handleDragStart,
         onMouseMove: this.handleMouseMove,
         ref: e => this.wrapper = e,
         children: (0, r.jsxs)("div", {
-          className: a()(u.mediaBarWrapper, t === c.VOLUME ? u.mediaBarWrapperVolume : null),
+          className: a()(u.mediaBarWrapper, t === d.VOLUME ? u.mediaBarWrapperVolume : null),
           children: [null != e ? e.map((e, t) => {
             let [n, i] = e;
             return (0, r.jsx)("div", {
@@ -107,7 +107,7 @@ class I extends(i = s.Component) {
                 left: "".concat(100 * n, "%")
               }
             }, t)
-          }) : null, t === c.DURATION ? (0, r.jsx)(l.Z.div, {
+          }) : null, t === d.DURATION ? (0, r.jsx)(l.Z.div, {
             className: u.mediaBarPreview,
             style: {
               width: o.interpolate({
@@ -126,11 +126,11 @@ class I extends(i = s.Component) {
             children: (0, r.jsx)("span", {
               className: u.mediaBarGrabber
             })
-          }), t === c.DURATION ? (0, r.jsx)(l.Z.div, {
+          }), t === d.DURATION ? (0, r.jsx)(l.Z.div, {
             ref: this.setBubbleRef,
             className: u.bubble,
             style: {
-              left: d.interpolate({
+              left: c.interpolate({
                 inputRange: [0, 1],
                 outputRange: ["0%", "100%"]
               })
@@ -226,6 +226,6 @@ class I extends(i = s.Component) {
     })
   }
 }
-_(I, "Types", c), _(I, "defaultProps", {
+_(I, "Types", d), _(I, "defaultProps", {
   currentWindow: window
 }), t.Z = I

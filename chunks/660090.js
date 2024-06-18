@@ -18,7 +18,7 @@ function a(e) {
     return null !== (i = null === (e = n.find(e => e.section.id === t)) || void 0 === e ? void 0 : e.data) && void 0 !== i ? i : []
   }, [n, t]), {
     popularSortedCommands: _,
-    canSort: d
+    canSort: c
   } = function(e) {
     let {
       alphabeticalSortedCommands: t
@@ -62,20 +62,20 @@ function a(e) {
       dontRefetchMs: s.Z.Millis.DAY
     })
   }, [t]), i.useEffect(() => {
-    if (!!d) l(o.bS.POPULAR)
-  }, [d]);
-  let c = u;
+    if (!!c) l(o.bS.POPULAR)
+  }, [c]);
+  let d = u;
   switch (a) {
     case o.bS.POPULAR:
-      c = _;
+      d = _;
       break;
     case o.bS.ALPHABETICAL:
-      c = u
+      d = u
   }
   return {
     sortOrder: a,
     setSortOrder: l,
-    commands: c,
-    canSort: d
+    commands: d,
+    canSort: c
   }
 }

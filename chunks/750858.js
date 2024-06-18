@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return g
+    return C
   },
   a: function() {
     return r
@@ -13,8 +13,8 @@ var i, r, s = n(735250),
   l = n.n(a),
   u = n(873546),
   _ = n(442837),
-  d = n(481060),
-  c = n(607070),
+  c = n(481060),
+  d = n(607070),
   E = n(100527),
   I = n(906732),
   T = n(979264),
@@ -26,29 +26,29 @@ var i, r, s = n(735250),
   m = n(768581),
   O = n(51063),
   R = n(981631),
-  C = n(822545);
+  p = n(822545);
 
-function p(e) {
+function g(e) {
   let {
     compact: t
   } = e;
   return (0, s.jsx)(A.Z, {
-    className: t ? C.botTagCompact : C.botTagCozy,
+    className: t ? p.botTagCompact : p.botTagCozy,
     type: A.Z.Types.REMIX,
     useRemSizes: !0
   })
 }
 
-function g(e) {
+function C(e) {
   var t;
   let n, {
       author: i,
       message: r,
       channel: a,
       userOverride: A,
-      compact: g = !1,
-      withMentionPrefix: L = !1,
-      showPopout: v = !1,
+      compact: C = !1,
+      withMentionPrefix: v = !1,
+      showPopout: L = !1,
       className: D,
       onClick: M,
       onContextMenu: P,
@@ -68,7 +68,7 @@ function g(e) {
       colorRoleName: Z
     } = i,
     H = null != r.messageReference && null != r.webhookId && r.hasFlag(R.iLy.IS_CROSSPOST),
-    F = (0, _.e7)([c.Z], () => c.Z.roleStyle),
+    F = (0, _.e7)([d.Z], () => d.Z.roleStyle),
     Y = (0, f.X$)(),
     j = o.useMemo(() => ({
       source: R.jXE.CHANNEL,
@@ -76,24 +76,24 @@ function g(e) {
       tagUserId: r.author.id
     }), [r.id, r.author.id]),
     W = {
-      className: C.username,
+      className: p.username,
       style: "username" === F && null != V ? {
         color: V
       } : void 0,
       onClick: M,
       onContextMenu: P,
       children: (0, s.jsx)(s.Fragment, {
-        children: (L ? "@" : "") + x
+        children: (v ? "@" : "") + x
       })
     },
-    K = o.useMemo(() => g ? (0, s.jsx)(T.ZP, {
+    K = o.useMemo(() => C ? (0, s.jsx)(T.ZP, {
       clan: i.clan,
       userId: r.author.id,
       contextGuildId: k,
-      className: C.clanTagChiplet,
+      className: p.clanTagChiplet,
       profileViewedAnalytics: j
-    }) : null, [g, j, i.clan, k, r.author.id]);
-  n = null != U && null != v ? (0, s.jsx)(d.Popout, {
+    }) : null, [C, j, i.clan, k, r.author.id]);
+  n = null != U && null != L ? (0, s.jsx)(c.Popout, {
     preload: H ? void 0 : function() {
       let e = null != A ? A : r.author;
       return (0, N.W)(e.id, null != i.guildMemberAvatar && null != k ? (0, m.JM)({
@@ -107,7 +107,7 @@ function g(e) {
       })
     },
     renderPopout: U,
-    shouldShow: v,
+    shouldShow: L,
     position: u.tq ? "window_center" : "right",
     onRequestClose: y,
     children: e => {
@@ -116,16 +116,16 @@ function g(e) {
         ...n
       } = e;
       return (0, s.jsxs)(s.Fragment, {
-        children: [(0, s.jsx)(d.Clickable, {
+        children: [(0, s.jsx)(c.Clickable, {
           tag: "span",
           ...n,
           ...W,
-          className: l()(W.className, C.clickable, D)
+          className: l()(W.className, p.clickable, D)
         }), K]
       })
     }
   }) : (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(d.Clickable, {
+    children: [(0, s.jsx)(c.Clickable, {
       ...W,
       className: l()(W.className, D)
     }), K]
@@ -134,24 +134,24 @@ function g(e) {
     q = null != G ? G[1] : null;
   return (0, s.jsxs)(I.Gt, {
     value: B,
-    children: [null != z && g ? (0, s.jsxs)(s.Fragment, {
+    children: [null != z && C ? (0, s.jsxs)(s.Fragment, {
       children: [" ", z, " "]
-    }) : null, "dot" === F ? (0, s.jsx)(d.RoleDot, {
+    }) : null, "dot" === F ? (0, s.jsx)(c.RoleDot, {
       color: V,
       name: Z,
-      className: C.roleDot
-    }) : null, n, !g && (0, s.jsxs)(s.Fragment, {
+      className: p.roleDot
+    }) : null, n, !C && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(T.ZP, {
         clan: i.clan,
         userId: r.author.id,
         contextGuildId: k,
-        className: C.clanTagChiplet,
+        className: p.clanTagChiplet,
         profileViewedAnalytics: j
       }), (0, s.jsx)(O.Z, {
         message: r
       })]
     }), null != q ? (0, s.jsx)(s.Fragment, {
       children: q
-    }) : null, null == z || g ? null : z, null != r && (0, S.f)(r) && Y && b ? (0, s.jsx)(p, {}) : null]
+    }) : null, null == z || C ? null : z, null != r && (0, S.f)(r) && Y && b ? (0, s.jsx)(g, {}) : null]
   })
 }(i = r || (r = {}))[i.SYSTEM_TAG = 0] = "SYSTEM_TAG", i[i.BADGES = 1] = "BADGES"

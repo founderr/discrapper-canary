@@ -17,10 +17,10 @@ function l(e) {
     guildId: l,
     channelId: u,
     allowEmptyValues: _,
-    commandOrigin: d = r.bB.CHAT
-  } = e, c = null != n ? (0, i.KF)({
+    commandOrigin: c = r.bB.CHAT
+  } = e, d = null != n ? (0, i.KF)({
     content: n
-  }, "content").trim() : "", E = t.required, I = "" === c;
+  }, "content").trim() : "", E = t.required, I = "" === d;
   if (!(null != n)) return E ? {
     success: !1,
     error: a.Z.Messages.COMMAND_VALIDATION_REQUIRED_ERROR
@@ -38,8 +38,8 @@ function l(e) {
   };
   let T = n.length > 1 ? {
       type: "text",
-      text: c
+      text: d
     } : n[0],
-    h = s.Z[t.type](T, t, u, l, d);
+    h = s.Z[t.type](T, t, u, l, c);
   return !h.success && null == h.error && (h.error = (0, o.al)(t)), h
 }

@@ -8,19 +8,19 @@ var i = n(735250);
 n(470079);
 var s = n(13245),
   l = n(237997),
-  a = n(454902),
-  o = n(312839),
+  o = n(454902),
+  a = n(312839),
   r = n(987650),
-  d = n(689938);
-let c = () => ({
+  c = n(689938);
+let d = () => ({
     icon: n(328756),
-    title: d.Z.Messages.OVERLAY_LAUNCH_TITLE,
+    title: c.Z.Messages.OVERLAY_LAUNCH_TITLE,
     body: null,
     hint: u,
-    colorScheme: a.IC.PRIMARY,
+    colorScheme: o.IC.PRIMARY,
     notifType: r.n0.WelcomeNudge
   }),
-  u = e => (0, a.QR)(e, (0, o.P)(), d.Z.Messages.OVERLAY_LAUNCH_OPEN_TIP);
+  u = e => (0, o.QR)(e, (0, a.P)(), c.Z.Messages.OVERLAY_LAUNCH_OPEN_TIP);
 
 function h(e) {
   let {
@@ -34,21 +34,21 @@ function h(e) {
     notifType: E
   } = function(e, t) {
     if (t.type === r.nc.NEWS) {
-      var n, i, s, l, o, d, c, u;
+      var n, i, s, l, a, c, d, u;
       return {
-        icon: null !== (o = null === (n = t.news) || void 0 === n ? void 0 : n.icon) && void 0 !== o ? o : e.icon,
-        title: null !== (d = null === (i = t.news) || void 0 === i ? void 0 : i.title) && void 0 !== d ? d : e.title,
-        body: null !== (c = null === (s = t.news) || void 0 === s ? void 0 : s.body) && void 0 !== c ? c : e.body,
+        icon: null !== (a = null === (n = t.news) || void 0 === n ? void 0 : n.icon) && void 0 !== a ? a : e.icon,
+        title: null !== (c = null === (i = t.news) || void 0 === i ? void 0 : i.title) && void 0 !== c ? c : e.title,
+        body: null !== (d = null === (s = t.news) || void 0 === s ? void 0 : s.body) && void 0 !== d ? d : e.body,
         hint: null !== (u = null === (l = t.news) || void 0 === l ? void 0 : l.hint) && void 0 !== u ? u : e.hint,
-        colorScheme: null != t.news ? a.IC.BRAND : e.colorScheme,
+        colorScheme: null != t.news ? o.IC.BRAND : e.colorScheme,
         notifType: null != t.news ? r.n0.NewsNudge : e.notifType
       }
     }
     return e
-  }(c(), e), {
-    trackView: Z,
-    trackClick: g
-  } = (0, o.R)(E, {
+  }(d(), e), {
+    trackView: g,
+    trackClick: m
+  } = (0, a.R)(E, {
     notif_type: E
   });
   return {
@@ -62,16 +62,16 @@ function h(e) {
         textAlign: "center",
         padding: 2
       },
-      children: d.Z.Messages.OVERLAY_CLICK_TO_UNLOCK
+      children: c.Z.Messages.OVERLAY_CLICK_TO_UNLOCK
     }),
     onNotificationShow: () => {
-      Z()
+      g()
     },
     onNotificationClick: (e, n) => {
-      g("unlock"), t === r.nc.NEWS && s.Z.updateNotificationStatus(n), l.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1)
+      m("unlock"), t === r.nc.NEWS && s.Z.updateNotificationStatus(n), l.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1)
     },
     onDismissClick: () => {
-      g("dismiss")
+      m("dismiss")
     }
   }
 }

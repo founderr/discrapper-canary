@@ -17,8 +17,8 @@ let l = {
   },
   u = l,
   _ = !1,
-  d = null;
-class c extends(i = r.ZP.PersistedStore) {
+  c = null;
+class d extends(i = r.ZP.PersistedStore) {
   initialize(e) {
     u = null != e ? {
       captionsById: new Map(e.captionsById)
@@ -38,18 +38,18 @@ class c extends(i = r.ZP.PersistedStore) {
     return _
   }
   getEmojiCaptionsTTL() {
-    return d
+    return c
   }
   hasPersistedState() {
     return u.captionsById.size > 0
   }
   clear() {
-    u = l, _ = !1, d = null
+    u = l, _ = !1, c = null
   }
 }
-a(c, "displayName", "EmojiCaptionsStore"), a(c, "persistKey", "EmojiCaptionsStore"), t.Z = new c(s.Z, {
+a(d, "displayName", "EmojiCaptionsStore"), a(d, "persistKey", "EmojiCaptionsStore"), t.Z = new d(s.Z, {
   LOGOUT: function() {
-    u = l, _ = !1, d = null
+    u = l, _ = !1, c = null
   },
   EMOJI_CAPTIONS_FETCH: function(e) {
     let {} = e;
@@ -59,14 +59,14 @@ a(c, "displayName", "EmojiCaptionsStore"), a(c, "persistKey", "EmojiCaptionsStor
     let {
       emojiCaptions: t
     } = e;
-    u.captionsById = new Map(Object.entries(t)), _ = !1, d = Date.now() + 360 * o.Z.Millis.MINUTE
+    u.captionsById = new Map(Object.entries(t)), _ = !1, c = Date.now() + 360 * o.Z.Millis.MINUTE
   },
   EMOJI_CAPTIONS_FETCH_ERROR: function(e) {
     let {
       is4XXError: t
     } = e;
     _ = !1;
-    d = Date.now() + (t ? 10 : 1) * o.Z.Millis.MINUTE
+    c = Date.now() + (t ? 10 : 1) * o.Z.Millis.MINUTE
   },
   POST_CONNECTION_OPEN: function(e) {
     let {} = e;

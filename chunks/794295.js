@@ -12,8 +12,8 @@ t.Z = r.memo(function(e) {
     onClick: t,
     trusted: n,
     title: s,
-    href: d,
-    children: c,
+    href: c,
+    children: d,
     messageId: E,
     channelId: I,
     ...T
@@ -21,7 +21,7 @@ t.Z = r.memo(function(e) {
     analyticsLocations: h
   } = (0, u.ZP)(l.Z.MASKED_LINK), S = r.useCallback(t => (0, _.q)(e, t, h), [h, e]), f = r.useCallback(e => {
     1 === e.button && S(e)
-  }, [S]), N = o().sanitizeUrl(d);
+  }, [S]), N = o().sanitizeUrl(c);
   return (0, i.jsx)(a.Anchor, {
     ...T,
     title: s,
@@ -30,6 +30,6 @@ t.Z = r.memo(function(e) {
     href: N,
     onClick: S,
     onAuxClick: f,
-    children: null != c ? c : s
+    children: null != d ? d : s
   })
 })

@@ -10,8 +10,8 @@ var i, r, s = n(735250),
   l = n.n(a),
   u = n(91192),
   _ = n(481060),
-  d = n(166459),
-  c = n(404975),
+  c = n(166459),
+  d = n(404975),
   E = n(585483),
   I = n(43085),
   T = n(981631),
@@ -34,28 +34,28 @@ t.Z = o.forwardRef(function(e, t) {
     draftType: O,
     size: R = 1
   } = e, {
-    onFocus: C,
-    ...p
+    onFocus: p,
+    ...g
   } = (0, u.JA)(n), {
-    handleFocus: g,
-    handleBlur: L
-  } = (0, I.b)(C), v = 0 === R, D = null != a;
+    handleFocus: C,
+    handleBlur: v
+  } = (0, I.b)(p), L = 0 === R, D = null != a;
   return (0, s.jsx)(_.FocusRing, {
     children: (0, s.jsx)("li", {
-      ...p,
-      onFocus: g,
-      onBlur: L,
+      ...g,
+      onFocus: C,
+      onBlur: v,
       onKeyDown: e => {
         if (!!A) {
           switch (e.which) {
             case T.yXg.D:
-              e.preventDefault(), d.Z.remove(i, n, O);
+              e.preventDefault(), c.Z.remove(i, n, O);
               return;
             case T.yXg.E:
               null != N && (e.preventDefault(), N(e));
               return;
             case T.yXg.BACKSPACE:
-              e.ctrlKey ? (e.preventDefault(), d.Z.clearAll(i, O)) : (e.preventDefault(), d.Z.remove(i, n, O));
+              e.ctrlKey ? (e.preventDefault(), c.Z.clearAll(i, O)) : (e.preventDefault(), c.Z.remove(i, n, O));
               return;
             case T.yXg.ARROW_UP:
               if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
@@ -76,13 +76,13 @@ t.Z = o.forwardRef(function(e, t) {
           className: S.actionBarContainer,
           children: (0, s.jsx)("div", {
             className: l()(S.actionBar, {
-              [S.smallActionBar]: v
+              [S.smallActionBar]: L
             }),
             onContextMenu: f,
             "aria-label": h.Z.Messages.ATTACHMENT_UTILITIES,
-            children: (0, s.jsx)(c.ZP, {
+            children: (0, s.jsx)(d.ZP, {
               className: l()({
-                [S.miniPopover]: v
+                [S.miniPopover]: L
               }),
               children: a
             })

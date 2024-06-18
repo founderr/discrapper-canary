@@ -15,9 +15,9 @@ var i = n(470079),
 function _(e, t) {
   let {
     currentPreviewRef: n
-  } = i.useContext(s.Z), _ = (0, r.e7)([o.Z], () => o.Z.isPlayingSound(e.soundId), [e]), d = i.useCallback(i => {
+  } = i.useContext(s.Z), _ = (0, r.e7)([o.Z], () => o.Z.isPlayingSound(e.soundId), [e]), c = i.useCallback(i => {
     null != n.current && n.current.pause(), null != t && (0, a.GN)(e, t, i)
-  }, [e, n, t]), c = i.useCallback(() => {
+  }, [e, n, t]), d = i.useCallback(() => {
     let t = new Audio((0, l.Z)(e.soundId));
     null != n.current && n.current.pause(), n.current = t, t.currentTime = 0, t.volume = (0, u.Z)(e.volume), t.play()
   }, [e, n]);
@@ -25,8 +25,8 @@ function _(e, t) {
     var e;
     return null === (e = n.current) || void 0 === e ? void 0 : e.pause()
   }, [n]), {
-    playSoundboardSound: d,
+    playSoundboardSound: c,
     isPlayingSound: _,
-    previewSound: c
+    previewSound: d
   }
 }

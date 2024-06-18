@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return c
   }
 });
 var i = n(735250);
@@ -14,23 +14,23 @@ var r = n(481060),
   u = n(202120),
   _ = n(981631);
 
-function d(e) {
+function c(e) {
   let {
     platformType: t,
-    location: d,
-    overrideUrl: c,
+    location: c,
+    overrideUrl: d,
     successRedirect: E
   } = e;
   if (t === _.ABu.LEAGUE_OF_LEGENDS && (t = _.ABu.RIOT_GAMES), t === _.ABu.CRUNCHYROLL) {
-    s.K([null != d ? d : "unknown"]);
+    s.K([null != c ? c : "unknown"]);
     return
   }
   if (t === _.ABu.XBOX) {
-    a.K([null != d ? d : "unknown"]);
+    a.K([null != c ? c : "unknown"]);
     return
   }
   if (t === _.ABu.PLAYSTATION || t === _.ABu.PLAYSTATION_STAGING) {
-    o.K([null != d ? d : "unknown"], t);
+    o.K([null != c ? c : "unknown"], t);
     return
   }
   if (t === _.ABu.DOMAIN) {
@@ -39,26 +39,26 @@ function d(e) {
         default: e
       } = await Promise.all([n.e("99387"), n.e("64941")]).then(n.bind(n, 414402));
       return t => (0, i.jsx)(e, {
-        analyticsLocation: [null != d ? d : "unknown"],
+        analyticsLocation: [null != c ? c : "unknown"],
         ...t
       })
     });
     return
   }
-  if (null != c) {
+  if (null != d) {
     (0, l.q)({
       shouldConfirm: !0,
-      href: c,
+      href: d,
       onConfirm: () => {
         (0, u.H)(t, {
-          location: d,
+          location: c,
           successRedirect: E
-        }, c)
+        }, d)
       }
     });
     return
   }(0, u.H)(t, {
-    location: d,
+    location: c,
     successRedirect: E
   })
 }

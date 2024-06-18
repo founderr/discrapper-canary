@@ -7,7 +7,7 @@ n.d(t, {
     return r
   },
   zQ: function() {
-    return d
+    return c
   }
 }), n(653041), n(47120);
 var i, r, s, o = n(512722),
@@ -60,7 +60,7 @@ class _ {
     u(this, "seenIntervals", void 0), this.seenIntervals = []
   }
 }
-class d {
+class c {
   maybeFlushSeenItems(e) {
     if (null == e && Date.now() - this._lastFlushTimeMillis < 6e4 || 1 === e && Date.now() - this._lastFlushTimeMillis < 3e3) return Promise.resolve();
     let t = this.createFlushSeenItemsFunction(e);

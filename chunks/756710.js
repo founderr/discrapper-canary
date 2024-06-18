@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   o: function() {
-    return d
+    return c
   }
 });
 var i = n(735250),
@@ -13,13 +13,13 @@ var i = n(735250),
   u = n(939350),
   _ = n(768160);
 
-function d(e) {
+function c(e) {
   let {
     children: t,
     color: n = "default",
     isFocused: s = !1,
-    disabled: d = !1,
-    keepItemStyles: c = !1,
+    disabled: c = !1,
+    keepItemStyles: d = !1,
     menuItemProps: E,
     action: I,
     dontCloseOnActionIfHoldingShiftKey: T,
@@ -33,18 +33,18 @@ function d(e) {
       if (null == I) return !1;
       !(e.shiftKey && T) && !h && S(), e.persist(), requestAnimationFrame(() => I(e))
     }, [I, S, T, h]),
-    A = c ? o()(_.item, u._[n], {
+    A = d ? o()(_.item, u._[n], {
       [_.focused]: s
     }) : _.customItem;
   return (0, i.jsx)(a.P, {
     innerRef: f,
     className: A,
-    onClick: d ? void 0 : N,
-    "aria-disabled": d,
+    onClick: c ? void 0 : N,
+    "aria-disabled": c,
     ...E,
     children: t({
       color: n,
-      disabled: d,
+      disabled: c,
       isFocused: s
     })
   })

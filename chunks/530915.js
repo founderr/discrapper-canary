@@ -4,10 +4,10 @@ t.d(s, {
     return N
   }
 }), t(47120);
-var n, a, i = t(735250),
+var n, a, r = t(735250),
   l = t(470079),
-  r = t(120356),
-  o = t.n(r),
+  i = t(120356),
+  o = t.n(i),
   c = t(954955),
   u = t.n(c),
   d = t(717888),
@@ -18,9 +18,9 @@ var n, a, i = t(735250),
   p = t(451478),
   g = t(259580),
   h = t(305271),
-  x = t(689938),
+  I = t(689938),
   _ = t(816124);
-let I = {
+let x = {
   mass: 1,
   tension: 200,
   friction: 30,
@@ -36,45 +36,45 @@ let T = e => {
       onNext: n,
       onPrevious: a,
       onIndicatorClick: l,
-      className: r,
+      className: i,
       paginationButtonClassName: c
     } = e, u = o()(_.paginationButton, c);
-    return (0, i.jsxs)("div", {
-      className: o()(_.controls, r),
-      children: [(0, i.jsx)(m.Button, {
+    return (0, r.jsxs)("div", {
+      className: o()(_.controls, i),
+      children: [(0, r.jsx)(m.Button, {
         look: m.Button.Looks.FILLED,
         color: m.Button.Colors.PRIMARY,
         className: u,
         onClick: a,
-        "aria-label": x.Z.Messages.PAGINATION_PREVIOUS,
-        children: (0, i.jsx)(g.Z, {
+        "aria-label": I.Z.Messages.PAGINATION_PREVIOUS,
+        children: (0, r.jsx)(g.Z, {
           direction: g.Z.Directions.LEFT
         })
-      }), (0, i.jsx)("div", {
+      }), (0, r.jsx)("div", {
         className: _.paginationIndicatorContainer,
-        children: C()(t, e => (0, i.jsx)(m.Button, {
+        children: C()(t, e => (0, r.jsx)(m.Button, {
           look: m.Button.Looks.BLANK,
           size: m.Button.Sizes.NONE,
           onClick: () => l(e),
           className: o()(_.paginationIndicatorButton, {
             [_.selected]: e === s
           }),
-          "aria-label": x.Z.Messages.PAGINATION_SLIDE_LABEL.format({
+          "aria-label": I.Z.Messages.PAGINATION_SLIDE_LABEL.format({
             pageNumber: e + 1
           }),
-          children: (0, i.jsx)("div", {
+          children: (0, r.jsx)("div", {
             className: o()(_.paginationIndicator, {
               [_.selected]: e === s
             })
           })
         }, "slide-indicator-".concat(e)))
-      }), (0, i.jsx)(m.Button, {
+      }), (0, r.jsx)(m.Button, {
         look: m.Button.Looks.FILLED,
         color: m.Button.Colors.PRIMARY,
         className: u,
         onClick: n,
-        "aria-label": x.Z.Messages.PAGINATION_NEXT,
-        children: (0, i.jsx)(g.Z, {
+        "aria-label": I.Z.Messages.PAGINATION_NEXT,
+        children: (0, r.jsx)(g.Z, {
           direction: g.Z.Directions.RIGHT
         })
       })]
@@ -86,47 +86,47 @@ let T = e => {
       items: t = [],
       renderItem: n,
       getItemId: a,
-      onIntentionalChange: r,
+      onIntentionalChange: i,
       onChangeItem: c,
       className: d,
       controlsClassName: C,
       paginationButtonClassName: E,
       springConfig: g,
-      delay: x,
+      delay: I,
       initialPaused: N = !1,
       unidirectional: S = !1,
       analyticsLocations: L
     } = e, {
       trackSlideView: b,
       trackPagination: v
-    } = (0, h.X)(s, L), [O, Z] = (0, l.useState)(0), [A, R] = (0, l.useState)(!1), [j, P] = (0, l.useState)(!1), M = l.useCallback(() => P(!0), []), k = l.useCallback(() => P(!1), []), B = (0, f.e7)([p.Z], () => p.Z.isFocused()), y = null != x && !N && !j && B, F = l.useCallback(e => (t.length + O + e) % t.length, [t, O]), D = l.useCallback(u()((e, s, n) => {
-      null != n && (null == r || r(t[e], s, e, n), v(e, O, a(e), a(s))), R("GO_TO_SLIDE" === n), null == c || c(t[e], s, e), Z(e)
-    }, 200), [t, r, c]);
+    } = (0, h.X)(s, L), [O, A] = (0, l.useState)(0), [Z, R] = (0, l.useState)(!1), [j, P] = (0, l.useState)(!1), M = l.useCallback(() => P(!0), []), k = l.useCallback(() => P(!1), []), B = (0, f.e7)([p.Z], () => p.Z.isFocused()), y = null != I && !N && !j && B, F = l.useCallback(e => (t.length + O + e) % t.length, [t, O]), D = l.useCallback(u()((e, s, n) => {
+      null != n && (null == i || i(t[e], s, e, n), v(e, O, a(e), a(s))), R("GO_TO_SLIDE" === n), null == c || c(t[e], s, e), A(e)
+    }, 200), [t, i, c]);
     return (0, l.useEffect)(() => {
       b(O, a(O))
     }, [b, O, a]), (0, l.useEffect)(() => {
       if (y) {
         let e = F(1),
-          s = setInterval(() => D(e, O), x);
+          s = setInterval(() => D(e, O), I);
         return () => clearInterval(s)
       }
-    }, [y, x, O, F, D]), (0, i.jsxs)("div", {
+    }, [y, I, O, F, D]), (0, r.jsxs)("div", {
       className: o()(_.carouselContainer, d),
       onMouseEnter: M,
       onMouseLeave: k,
-      children: [(0, i.jsx)(m.Slides, {
+      children: [(0, r.jsx)(m.Slides, {
         activeSlide: String(O),
-        springConfig: null != g ? g : I,
-        directionOverride: S && !A ? "forwards" : void 0,
+        springConfig: null != g ? g : x,
+        directionOverride: S && !Z ? "forwards" : void 0,
         fadeInOut: !0,
-        children: t.map((e, s) => (0, i.jsx)(m.Slide, {
+        children: t.map((e, s) => (0, r.jsx)(m.Slide, {
           id: String(s),
-          children: (0, i.jsx)("div", {
+          children: (0, r.jsx)("div", {
             className: o()(_.carousel),
             children: n(e, s)
           })
         }, String(s)))
-      }), t.length > 1 && (0, i.jsx)(T, {
+      }), t.length > 1 && (0, r.jsx)(T, {
         className: C,
         paginationButtonClassName: E,
         currentSlideIndex: O,

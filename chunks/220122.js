@@ -7,8 +7,8 @@ var i = n(481060),
   l = n(924557),
   u = n(474639),
   _ = n(435064),
-  d = n(779618),
-  c = n(39604),
+  c = n(779618),
+  d = n(39604),
   E = n(356659),
   I = n(689938);
 class T extends u.Z {
@@ -23,7 +23,7 @@ class T extends u.Z {
     })
   }
   applyNativeClipsSettings(e) {
-    if (!(0, d.Z)(a.Z)) return;
+    if (!(0, c.Z)(a.Z)) return;
     let t = (0, l.ln)(),
       n = _.Z.getSettings(),
       i = (n.clipsEnabled || n.decoupledClipsEnabled) && t,
@@ -45,7 +45,7 @@ class T extends u.Z {
     if (null != t) e.added.find(e => e.pid === t.pid) ? setTimeout(() => this.fireClipsInitEvent(), E.jp) : this.fireClipsInitEvent()
   }
   fireClipsInitEvent() {
-    if (!(0, d.Z)(a.Z)) return;
+    if (!(0, c.Z)(a.Z)) return;
     let e = (0, l.ln)(),
       t = _.Z.getSettings();
     if (!(t.clipsEnabled && e) || null != o.Z.getCurrentUserActiveStream()) return;
@@ -65,13 +65,13 @@ class T extends u.Z {
       let {
         clipsEnabled: e
       } = _.Z.getSettings();
-      e && c.em({
+      e && d.em({
         clipsEnabled: !1
       })
     }
   }
   disableClips() {
-    c.em({
+    d.em({
       clipsEnabled: !1,
       trackAnalytics: !1
     })

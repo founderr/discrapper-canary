@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return c
+    return d
   }
 });
 var i = n(735250),
@@ -12,13 +12,13 @@ var i = n(735250),
   l = n(422034),
   u = n(182294),
   _ = n(689938),
-  d = n(600541);
+  c = n(600541);
 
-function c(e) {
+function d(e) {
   let {
     affinities: t,
     className: n
-  } = e, s = e => null != e.globalName ? e.globalName : e.username, c = r.useMemo(() => t.length > 1 ? _.Z.Messages.NITRO_AFFINITY_UPSELL.format({
+  } = e, s = e => null != e.globalName ? e.globalName : e.username, d = r.useMemo(() => t.length > 1 ? _.Z.Messages.NITRO_AFFINITY_UPSELL.format({
     username: s(t[0]),
     numFriends: t.length - 1
   }) : "", [t]);
@@ -29,15 +29,15 @@ function c(e) {
     size: u.EF.SIZE_20
   }, e.id));
   return (0, i.jsxs)("div", {
-    className: o()(d.container, n),
+    className: o()(c.container, n),
     children: [(0, i.jsx)("div", {
-      className: d.iconContainer,
+      className: c.iconContainer,
       children: E
     }), (0, i.jsx)("div", {
-      className: d.textContainer,
+      className: c.textContainer,
       children: (0, i.jsx)(a.x, {
         variant: "text-sm/medium",
-        children: c
+        children: d
       })
     })]
   })

@@ -3,23 +3,23 @@ let i, r;
 n(47120);
 var s, o, a, l, u = n(442837),
   _ = n(570140);
-let d = new Map,
-  c = new Map,
+let c = new Map,
+  d = new Map,
   E = !1,
   I = !1;
 
 function T(e) {
-  e(d), d = new Map(d)
+  e(c), c = new Map(c)
 }
 class h extends(s = u.ZP.Store) {
   getFeeds() {
-    return d
+    return c
   }
   getFeed(e) {
-    return d.get(e)
+    return c.get(e)
   }
   getFeedState(e) {
-    return c.get(e)
+    return d.get(e)
   }
   getLastFeedFetchDate() {
     return i
@@ -45,7 +45,7 @@ l = "ContentInventoryStore", (a = "displayName") in(o = h) ? Object.defineProper
   writable: !0
 }) : o[a] = l, t.Z = new h(_.Z, {
   CONNECTION_OPEN: function() {
-    d = new Map, E = !1
+    c = new Map, E = !1
   },
   CONTENT_INVENTORY_SET_FEED: function(e) {
     let {
@@ -59,7 +59,7 @@ l = "ContentInventoryStore", (a = "displayName") in(o = h) ? Object.defineProper
       feedId: t,
       state: n
     } = e;
-    c.set(t, n)
+    d.set(t, n)
   },
   CONTENT_INVENTORY_SET_FILTERS: function(e) {
     let {
@@ -71,7 +71,7 @@ l = "ContentInventoryStore", (a = "displayName") in(o = h) ? Object.defineProper
     let {
       feedId: t
     } = e;
-    if (!d.has(t)) return !1;
+    if (!c.has(t)) return !1;
     T(e => e.delete(t))
   },
   CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: function() {

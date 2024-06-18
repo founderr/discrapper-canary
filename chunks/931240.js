@@ -7,7 +7,7 @@ n.d(t, {
     return E
   },
   WJ: function() {
-    return d
+    return c
   },
   Zx: function() {
     return A
@@ -22,7 +22,7 @@ n.d(t, {
     return T
   },
   nE: function() {
-    return c
+    return d
   },
   nr: function() {
     return N
@@ -76,13 +76,13 @@ async function _(e, t) {
     }), t
   }
 }
-async function d(e) {
+async function c(e) {
   let t = await i.tn.get({
     url: l.ANM.GUILD_CLAN_DISCOVERY_INFO(e)
   });
   return (0, u.Gh)(t.body)
 }
-async function c(e, t, n) {
+async function d(e, t, n) {
   try {
     null != e && !0 === t && (0, a.hx)({
       guildId: e,

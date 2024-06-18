@@ -16,7 +16,7 @@ n.d(t, {
     return h
   },
   aj: function() {
-    return d
+    return c
   },
   bN: function() {
     return _
@@ -25,7 +25,7 @@ n.d(t, {
     return m
   },
   q: function() {
-    return c
+    return d
   }
 }), n(47120);
 var i = n(512722),
@@ -48,12 +48,12 @@ let _ = {
     ...o.F3,
     richValue: e => e.children,
     blocks: e => _.richValue(e).map((e, t) => [e, [t]]),
-    isBlock: (e, t) => c.isElement(t) && s.ML.isBlock(e, t),
-    isInline: (e, t) => c.isElement(t) && s.ML.isInline(e, t),
-    isVoid: (e, t) => c.isElement(t) && s.ML.isVoid(e, t),
+    isBlock: (e, t) => d.isElement(t) && s.ML.isBlock(e, t),
+    isInline: (e, t) => d.isElement(t) && s.ML.isInline(e, t),
+    isVoid: (e, t) => d.isElement(t) && s.ML.isVoid(e, t),
     isEditorEmpty(e) {
       let t = _.richValue(e);
-      return !(t.length > 1) && (0 === t.length || "line" === t[0].type && c.isEmpty(t[0]))
+      return !(t.length > 1) && (0 === t.length || "line" === t[0].type && d.isEmpty(t[0]))
     },
     getFirstText(e) {
       let t = _.node(e, l.u9);
@@ -79,7 +79,7 @@ let _ = {
       var n;
       return null !== (n = _.above(e, {
         at: t,
-        match: t => c.isElement(t) && _.isBlock(e, t),
+        match: t => d.isElement(t) && _.isBlock(e, t),
         mode: "lowest"
       })) && void 0 !== n ? n : null
     },
@@ -87,7 +87,7 @@ let _ = {
       var n;
       return null !== (n = _.above(e, {
         at: t,
-        match: e => c.isElement(e),
+        match: e => d.isElement(e),
         mode: "lowest"
       })) && void 0 !== n ? n : null
     },
@@ -179,7 +179,7 @@ let _ = {
       if (I.isPath(t)) {
         let n = _.range(e, t),
           [i] = _.node(e, t);
-        if (c.isElement(i)) {
+        if (d.isElement(i)) {
           let i = _.before(e, t),
             r = _.after(e, t);
           t = {
@@ -195,16 +195,16 @@ let _ = {
       }
     }
   },
-  d = {
+  c = {
     ...s.NB,
     isType: (e, t) => s.W_.isElement(e) && e.type === t,
     isInTypes: (e, t) => s.W_.isElement(e) && t.has(e.type)
   },
-  c = {
+  d = {
     ...s.W_,
     updateElement(e, t) {
       let n = _.node(e, t[1]);
-      return r()(!_.isEditor(t[0]), "Element is the root node"), r()(null != n, "Failed to find element"), r()(c.isElement(n[0]), "Node at this path is no longer an element"), r()(n[0].type === t[0].type, "Node at this path is a different type"), n
+      return r()(!_.isEditor(t[0]), "Element is the root node"), r()(null != n, "Failed to find element"), r()(d.isElement(n[0]), "Node at this path is no longer an element"), r()(n[0].type === t[0].type, "Node at this path is a different type"), n
     },
     markdown(e, t, n) {
       var i;

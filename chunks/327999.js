@@ -4,10 +4,10 @@ n.d(t, {
     return R
   },
   Ph: function() {
-    return C
+    return p
   },
   _2: function() {
-    return g
+    return C
   },
   bE: function() {
     return O
@@ -21,8 +21,8 @@ n.d(t, {
 }), n(653041);
 var i, r, s, o, a, l, u = n(544891),
   _ = n(780384),
-  d = n(410030),
-  c = n(726542),
+  c = n(410030),
+  d = n(726542),
   E = n(122021),
   I = n(981631),
   T = n(689938);
@@ -87,13 +87,13 @@ let R = e => {
         return T.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION
     }
   },
-  C = e => {
-    let t = c.Z.get((0, E.rR)(e)),
-      n = (0, d.ZP)();
+  p = e => {
+    let t = d.Z.get((0, E.rR)(e)),
+      n = (0, c.ZP)();
     return null != t && ["twitch", "youtube"].includes(e) ? "url('".concat((0, _.wj)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')") : null
   };
 
-function p(e) {
+function g(e) {
   return {
     userId: e.user_id,
     sourceInviteCode: e.source_invite_code,
@@ -102,7 +102,7 @@ function p(e) {
     integrationType: e.integration_type
   }
 }
-async function g(e, t) {
+async function C(e, t) {
   let n = f(e, t),
     i = n.filter(e => h[e] <= 1).map(N);
   if (0 === i.length) return [];
@@ -115,7 +115,7 @@ async function g(e, t) {
       }
     });
     if (!Array.isArray(t.body)) return A(n, 0), [];
-    let r = t.body.map(p),
+    let r = t.body.map(g),
       s = [];
     r.forEach(e => {
       let {

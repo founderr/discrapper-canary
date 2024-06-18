@@ -16,9 +16,9 @@ var i, r, s = n(392711),
   l = n(22382),
   u = n(747071),
   _ = n(131951),
-  d = n(358085);
+  c = n(358085);
 
-function c(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -56,7 +56,7 @@ function N() {
     I = E
   })
 }
-d.isPlatformEmbedded && (_.Z.addChangeListener(N), N());
+c.isPlatformEmbedded && (_.Z.addChangeListener(N), N());
 class A {
   get volume() {
     return this._volume
@@ -99,12 +99,12 @@ class A {
     return this._audio = null !== (e = this._audio) && void 0 !== e ? e : new Promise((e, t) => {
       let i = new Audio;
       i.src = n(451343)("./".concat(this.name, ".mp3")), i.onloadeddata = () => {
-        i.volume = Math.min(_.Z.getOutputVolume() / 100 * this._volume, 1), d.isPlatformEmbedded && i.setSinkId(I), e(i)
+        i.volume = Math.min(_.Z.getOutputVolume() / 100 * this._volume, 1), c.isPlatformEmbedded && i.setSinkId(I), e(i)
       }, i.onerror = () => t(Error("could not play audio")), i.onended = () => this._destroyAudio(), i.load()
     }), this._audio
   }
   constructor(e, t, n) {
-    c(this, "name", void 0), c(this, "_volume", void 0), c(this, "_audio", void 0), this.name = e, this._volume = n
+    d(this, "name", void 0), d(this, "_volume", void 0), d(this, "_audio", void 0), this.name = e, this._volume = n
   }
 }
 class m {
@@ -158,7 +158,7 @@ class m {
   async _ensureAudio() {
     if (null == this._ensureAudioPromise) {
       let e = Math.min(_.Z.getOutputVolume() / 100 * this._volume, 1);
-      this._ensureAudioPromise = S(this.name).then(t => null == t ? Promise.reject(Error("Failed to load audio: ".concat(this.name))) : (this._audioContext = (0, a.N)(), this._gain = new GainNode(this._audioContext), this._gain.gain.value = e, d.isPlatformEmbedded && this._audioContext.setSinkId(I), this._buffer = t, this._source = this._audioContext.createBufferSource(), this._source.buffer = t, this._source.connect(this._gain).connect(this._audioContext.destination), this._source.loop = !1, this._source.onended = () => this._destroyAudio(), Promise.resolve({
+      this._ensureAudioPromise = S(this.name).then(t => null == t ? Promise.reject(Error("Failed to load audio: ".concat(this.name))) : (this._audioContext = (0, a.N)(), this._gain = new GainNode(this._audioContext), this._gain.gain.value = e, c.isPlatformEmbedded && this._audioContext.setSinkId(I), this._buffer = t, this._source = this._audioContext.createBufferSource(), this._source.buffer = t, this._source.connect(this._gain).connect(this._audioContext.destination), this._source.loop = !1, this._source.onended = () => this._destroyAudio(), Promise.resolve({
         context: this._audioContext,
         gainNode: this._gain,
         source: this._source
@@ -167,6 +167,6 @@ class m {
     return await this._ensureAudioPromise
   }
   constructor(e, t, n) {
-    c(this, "name", void 0), c(this, "_volume", void 0), c(this, "_audioContext", void 0), c(this, "_buffer", void 0), c(this, "_source", void 0), c(this, "_gain", void 0), c(this, "_state", void 0), c(this, "_ensureAudioPromise", void 0), this.name = e, this._volume = n, this._audioContext = null, this._buffer = null, this._source = null, this._state = "stopped", this._ensureAudioPromise = null
+    d(this, "name", void 0), d(this, "_volume", void 0), d(this, "_audioContext", void 0), d(this, "_buffer", void 0), d(this, "_source", void 0), d(this, "_gain", void 0), d(this, "_state", void 0), d(this, "_ensureAudioPromise", void 0), this.name = e, this._volume = n, this._audioContext = null, this._buffer = null, this._source = null, this._state = "stopped", this._ensureAudioPromise = null
   }
 }

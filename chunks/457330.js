@@ -8,9 +8,9 @@ var i = n(990547),
   l = n(626135),
   u = n(573261),
   _ = n(981631);
-let d = new a.Z("ConnectedAccounts");
+let c = new a.Z("ConnectedAccounts");
 
-function c(e, t) {
+function d(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   return r.tn.post({
     url: _.ANM.CONNECTIONS_CALLBACK(e),
@@ -54,7 +54,7 @@ t.Z = {
       oldFormErrors: !0
     })
   },
-  callback: c,
+  callback: d,
   connect(e, t, n, r, s) {
     var o;
     return u.Z.put({
@@ -169,7 +169,7 @@ t.Z = {
   }),
   async completeTwoWayLink(e, t, n, i, r) {
     if (null == t) {
-      d.error("Two-way link: missing authorize location");
+      c.error("Two-way link: missing authorize location");
       return
     }
     let {
@@ -178,13 +178,13 @@ t.Z = {
       errorDescription: l
     } = (0, o.xp)(t);
     if (null != a) {
-      d.error("Two-way link: missing authorize code", {
+      c.error("Two-way link: missing authorize code", {
         error: a,
         errorDescription: l
       });
       return
     }
-    return await c(e, {
+    return await d(e, {
       code: n,
       state: i,
       two_way_link_code: s,

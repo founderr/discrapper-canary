@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   NK: function() {
-    return p
+    return g
   },
   R6: function() {
     return R
@@ -10,7 +10,7 @@ n.d(t, {
     return O
   },
   vN: function() {
-    return C
+    return p
   }
 });
 var i = n(512722),
@@ -21,8 +21,8 @@ var i = n(512722),
   l = n(430742),
   u = n(40851),
   _ = n(367907),
-  d = n(727429),
-  c = n(703656),
+  c = n(727429),
+  d = n(703656),
   E = n(359110),
   I = n(695346),
   T = n(703558),
@@ -45,7 +45,7 @@ function O(e, t, n) {
   }
   r()(null != e.parent_id, "all threads must have parents");
   let s = h.Z.getChannelId();
-  e.parent_id !== s && !(0, m.ME)(s) && (0, E.Kh)(e.parent_id), (0, c.uL)(A.Z5c.CHANNEL_THREAD_VIEW((0, d.e)(e), (0, m.ME)(s) ? m.oC.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? N.on.FORUM : void 0), setTimeout(() => {
+  e.parent_id !== s && !(0, m.ME)(s) && (0, E.Kh)(e.parent_id), (0, d.uL)(A.Z5c.CHANNEL_THREAD_VIEW((0, c.e)(e), (0, m.ME)(s) ? m.oC.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? N.on.FORUM : void 0), setTimeout(() => {
     f.S.dispatch(A.CkL.FOCUS_CHANNEL_TEXT_AREA, {
       channelId: e.id
     })
@@ -71,14 +71,14 @@ function R(e, t, n) {
   }, 0)
 }
 
-function C(e, t) {
-  (0, c.uL)(A.Z5c.CHANNEL(e, (0, m.ME)(t) ? m.oC.GUILD_HOME : t)), a.Z.dispatch({
+function p(e, t) {
+  (0, d.uL)(A.Z5c.CHANNEL(e, (0, m.ME)(t) ? m.oC.GUILD_HOME : t)), a.Z.dispatch({
     type: "SIDEBAR_CLOSE",
     baseChannelId: t
   })
 }
 
-function p(e) {
+function g(e) {
   a.Z.dispatch({
     type: "SIDEBAR_CLOSE",
     baseChannelId: e

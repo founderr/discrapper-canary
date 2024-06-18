@@ -4,7 +4,7 @@ n.d(t, {
     return A
   },
   MO: function() {
-    return c
+    return d
   },
   k5: function() {
     return f
@@ -20,9 +20,9 @@ var i, r = n(544891),
   l = n(981631);
 let u = new Set([window.GLOBAL_ENV.CDN_HOST, null === (i = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === i ? void 0 : i.substring(2)]),
   _ = new Set(["/attachments/", "/ephemeral-attachments/"]),
-  d = 1 * s.Z.Millis.HOUR;
+  c = 1 * s.Z.Millis.HOUR;
 
-function c(e) {
+function d(e) {
   return u.has(e.hostname) && Array.from(_).some(t => e.pathname.startsWith(t))
 }
 
@@ -39,7 +39,7 @@ function I(e) {
       n = parseInt(null != t ? t : "", 16);
     return isNaN(n) ? void 0 : n * s.Z.Millis.SECOND
   }(e);
-  return null == t || t <= Date.now() + d
+  return null == t || t <= Date.now() + c
 }
 
 function T(e) {
@@ -50,7 +50,7 @@ function T(e) {
 function h(e) {
   if (null == e) return !1;
   let t = o.Z.toURLSafe(e.url);
-  return !!(null != t && c(t)) && I(t)
+  return !!(null != t && d(t)) && I(t)
 }
 
 function S(e) {

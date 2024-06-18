@@ -13,7 +13,7 @@ n.d(t, {
     return l
   },
   Tk: function() {
-    return c
+    return d
   },
   cO: function() {
     return u
@@ -22,7 +22,7 @@ n.d(t, {
     return s
   },
   qu: function() {
-    return d
+    return c
   }
 }), n(411104);
 var i = n(654861),
@@ -51,10 +51,10 @@ function _(e) {
   return Date.now() - o(e)
 }
 
-function d(e, t) {
+function c(e, t) {
   return e === t ? 0 : null == t ? 1 : null == e ? -1 : e.length > t.length ? 1 : e.length < t.length ? -1 : e > t ? 1 : -1
 }
-class c {
+class d {
   next() {
     if (this.seq > 4095) throw Error("Snowflake sequence number overflow: ".concat(this.seq));
     return this.seq++

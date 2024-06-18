@@ -18,13 +18,13 @@ var n = t(735250),
   S = t(259580),
   h = t(154921),
   g = t(934415),
-  x = t(51144),
-  C = t(884737),
+  C = t(51144),
+  x = t(884737),
   R = t(981631),
   L = t(848051);
 
 function O(e, s) {
-  let t = C.vc[e.targetType];
+  let t = x.vc[e.targetType];
   return null != t && !0 === t[s.key]
 }
 class A extends i.PureComponent {
@@ -57,7 +57,7 @@ class A extends i.PureComponent {
           className: L.username,
           children: [(0, n.jsx)(d.Text, {
             variant: "text-sm/normal",
-            children: x.ZP.getUserTag(e, {
+            children: C.ZP.getUserTag(e, {
               mode: "username",
               identifiable: s ? "never" : "always"
             })
@@ -106,7 +106,7 @@ class p extends i.PureComponent {
       user: a,
       target: r,
       options: o
-    } = e, c = C.N5(e), u = C.of(e);
+    } = e, c = x.N5(e), u = x.of(e);
     return null != c ? (0, n.jsx)(d.Text, {
       className: L.overflowEllipsis,
       variant: "text-sm/normal",
@@ -161,7 +161,7 @@ class p extends i.PureComponent {
       newValue: s
     } = e;
     return Array.isArray(s) ? s.map(e => {
-      if (null != C.hQ(e, this.props.log)) return (0, n.jsxs)("div", {
+      if (null != x.hQ(e, this.props.log)) return (0, n.jsxs)("div", {
         className: L.subListItem,
         children: [(0, n.jsx)(d.Text, {
           className: L.bullet,
@@ -171,7 +171,7 @@ class p extends i.PureComponent {
         }), (0, n.jsx)(d.Text, {
           variant: "text-xs/normal",
           color: "text-normal",
-          children: C.hQ(e, this.props.log)
+          children: x.hQ(e, this.props.log)
         })]
       }, e)
     }) : null
@@ -201,7 +201,7 @@ class p extends i.PureComponent {
         if ("function" == typeof u && (u = u(t)), null != u && "object" == typeof u) {
           if (null == u.format) {
             let e = u[t.newValue];
-            null == e && null != u[C.Et] ? u = u[C.Et] : null != e && (u = e)
+            null == e && null != u[x.Et] ? u = u[x.Et] : null != e && (u = e)
           }
           if (null != u && null != u.format) {
             var E, _;
@@ -271,32 +271,32 @@ class p extends i.PureComponent {
     } = this.props;
     if (e) switch (s.targetType) {
       case R.KFR.GUILD:
-        return this.renderChangeDetails(C.pY());
+        return this.renderChangeDetails(x.pY());
       case R.KFR.CHANNEL:
       case R.KFR.CHANNEL_OVERWRITE:
-        return this.renderChangeDetails(C.ML());
+        return this.renderChangeDetails(x.ML());
       case R.KFR.USER:
-        return this.renderChangeDetails(C.lU());
+        return this.renderChangeDetails(x.lU());
       case R.KFR.ROLE:
-        return this.renderChangeDetails(C.HE());
+        return this.renderChangeDetails(x.HE());
       case R.KFR.INVITE:
-        return this.renderChangeDetails(C.HN());
+        return this.renderChangeDetails(x.HN());
       case R.KFR.WEBHOOK:
-        return this.renderChangeDetails(C.lR());
+        return this.renderChangeDetails(x.lR());
       case R.KFR.EMOJI:
-        return this.renderChangeDetails(C.N$());
+        return this.renderChangeDetails(x.N$());
       case R.KFR.STICKER:
-        return this.renderChangeDetails(C.Bq());
+        return this.renderChangeDetails(x.Bq());
       case R.KFR.INTEGRATION:
-        return this.renderChangeDetails(C.K());
+        return this.renderChangeDetails(x.K());
       case R.KFR.STAGE_INSTANCE:
-        return this.renderChangeDetails(C.C2());
+        return this.renderChangeDetails(x.C2());
       case R.KFR.GUILD_SCHEDULED_EVENT:
-        return this.renderChangeDetails(C.uB());
+        return this.renderChangeDetails(x.uB());
       case R.KFR.THREAD:
-        return this.renderChangeDetails(C.pA());
+        return this.renderChangeDetails(x.pA());
       case R.KFR.APPLICATION_COMMAND:
-        return this.renderChangeDetails(C.vm(s.changes))
+        return this.renderChangeDetails(x.vm(s.changes))
     }
     return null
   }

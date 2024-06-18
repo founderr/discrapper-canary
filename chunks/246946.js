@@ -20,7 +20,7 @@ function _(e, t) {
     automatic: t
   })
 }
-let d = {
+let c = {
     enabled: !1,
     autoToggle: !0,
     hideInstantInvites: !0,
@@ -29,24 +29,24 @@ let d = {
     disableNotifications: !0,
     enableContentProtection: !1
   },
-  c = {},
+  d = {},
   E = {
-    ...d
+    ...c
   };
 class I extends(i = r.ZP.PersistedStore) {
   initialize(e) {
-    Object.assign(c, e), this.syncWith([a.default], () => {
+    Object.assign(d, e), this.syncWith([a.default], () => {
       var e;
       let t, n = a.default.getId();
-      E = null != n ? (null == (t = c[e = n]) && (t = c[e] = {
-        ...d
+      E = null != n ? (null == (t = d[e = n]) && (t = d[e] = {
+        ...c
       }), t) : {
-        ...d
+        ...c
       }
     })
   }
   getState() {
-    return c
+    return d
   }
   getSettings() {
     return E
@@ -82,10 +82,10 @@ u(I, "displayName", "StreamerModeStore"), u(I, "persistKey", "StreamerModeStore"
   }
 }]), t.Z = new I(s.Z, {
   LOGOUT: function(e) {
-    !e.isSwitchingAccount && (c = {})
+    !e.isSwitchingAccount && (d = {})
   },
   MULTI_ACCOUNT_REMOVE_ACCOUNT: function(e) {
-    e.userId in c && delete c[e.userId]
+    e.userId in d && delete d[e.userId]
   },
   STREAMER_MODE_UPDATE: function(e) {
     let t = {

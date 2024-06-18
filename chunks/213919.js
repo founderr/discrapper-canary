@@ -2,7 +2,7 @@
 let i, r;
 n.r(t), n.d(t, {
   encryptAndStoreTokens: function() {
-    return p
+    return g
   },
   getToken: function() {
     return A
@@ -14,7 +14,7 @@ n.r(t), n.d(t, {
     return N
   },
   removeToken: function() {
-    return C
+    return p
   },
   setToken: function() {
     return m
@@ -36,8 +36,8 @@ function l(e) {
 let u = null,
   _ = window.DiscordNative;
 null != _ && (u = _.safeStorage);
-let d = !1,
-  c = {},
+let c = !1,
+  d = {},
   E = {},
   I = !1,
   T = !1;
@@ -74,12 +74,12 @@ function N() {
     decryptedToken: e,
     wasEncrypted: t
   } = S(r);
-  d = t, i = e, c = l(Object.entries(E).map(e => {
+  c = t, i = e, d = l(Object.entries(E).map(e => {
     let [t, n] = e, {
       decryptedToken: i,
       wasEncrypted: r
     } = S(n);
-    return d = r || d, [t, i]
+    return c = r || c, [t, i]
   }).filter(e => {
     let [t, n] = e;
     return null != n
@@ -87,15 +87,15 @@ function N() {
 }
 
 function A(e) {
-  return (N(), null != e) ? c[e] : i
+  return (N(), null != e) ? d[e] : i
 }
 
 function m(e, t) {
   if (null == e) {
-    C(t);
+    p(t);
     return
   }
-  i = e, null != t && (c[t] = e), d ? p() : (r = i, E = c, h())
+  i = e, null != t && (d[t] = e), c ? g() : (r = i, E = d, h())
 }
 
 function O() {
@@ -106,14 +106,14 @@ function R() {
   if (!!I) I = !1, h()
 }
 
-function C(e) {
+function p(e) {
   let t = i;
-  return null != e && (t = c[e], delete c[e], delete E[e]), t === i && (i = null, r = null), h(), null != t
+  return null != e && (t = d[e], delete d[e], delete E[e]), t === i && (i = null, r = null), h(), null != t
 }
 
-function p() {
-  (null == u ? void 0 : u.isEncryptionAvailable()) ? (null != i && (r = f(i)), E = l(Object.entries(c).map(e => {
+function g() {
+  (null == u ? void 0 : u.isEncryptionAvailable()) ? (null != i && (r = f(i)), E = l(Object.entries(d).map(e => {
     let [t, n] = e;
     return [t, f(n)]
-  })), d = !0) : (r = i, E = c), h()
+  })), c = !0) : (r = i, E = d), h()
 }

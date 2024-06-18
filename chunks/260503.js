@@ -12,8 +12,8 @@ function a(e) {
     listRef: t,
     padding: n,
     channel: a,
-    isEnabled: i
-  } = e, r = s.useCallback(e => {
+    isEnabled: r
+  } = e, i = s.useCallback(e => {
     let s = t.current,
       l = document.querySelector(e);
     null != l && (null == s || s.scrollIntoViewNode({
@@ -39,9 +39,9 @@ function a(e) {
   }), []);
   return (0, l.ZP)({
     id: "forum-channel-list-".concat(a.id),
-    isEnabled: i,
+    isEnabled: r,
     scrollToStart: o,
     scrollToEnd: c,
-    setFocus: r
+    setFocus: i
   })
 }

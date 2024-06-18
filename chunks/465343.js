@@ -15,24 +15,24 @@ var i = n(933557),
   l = n(592125),
   u = n(984933),
   _ = n(271383),
-  d = n(430824),
-  c = n(594174),
+  c = n(430824),
+  d = n(594174),
   E = n(483360),
   I = n(709054),
   T = n(752305),
   h = n(377668);
 
-function S(e, t, n, c) {
+function S(e, t, n, d) {
   let {
     allowUsers: T = !0,
     allowRoles: S = !0
-  } = null != c ? c : {};
+  } = null != d ? d : {};
   switch (e[0]) {
     case "@":
       return function(e, t, n, i, s) {
-        let [o, a] = e.slice(1).split("#", 2), u = null != t ? d.Z.getGuild(t) : null, c = (0, r.M9)(u);
+        let [o, a] = e.slice(1).split("#", 2), u = null != t ? c.Z.getGuild(t) : null, d = (0, r.M9)(u);
         if (s && null == a && null != u) {
-          for (let e of Object.values(d.Z.getRoles(u.id)))
+          for (let e of Object.values(c.Z.getRoles(u.id)))
             if (o === e.name) return {
               type: "roleMention",
               roleId: e.id,
@@ -65,7 +65,7 @@ function S(e, t, n, c) {
                     text: ""
                   }]
                 };
-              if (c && N(o, a, h.fL)) return {
+              if (d && N(o, a, h.fL)) return {
                 type: "userMention",
                 userId: h.fL,
                 children: [{
@@ -155,6 +155,6 @@ function f(e, t, n, i) {
 }
 
 function N(e, t, n) {
-  let i = c.default.getUser(n);
+  let i = d.default.getUser(n);
   return null != i && (n === h.fL && "clyde" === e.toLowerCase() || i.username === e && i.discriminator === (null != t ? t : "0"))
 }

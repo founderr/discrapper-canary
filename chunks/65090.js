@@ -7,10 +7,10 @@ var i = n(735250),
   l = n(51144),
   u = n(877565),
   _ = n(590921),
-  d = n(665692),
-  c = n(689938);
+  c = n(665692),
+  d = n(689938);
 let E = {
-  sentinel: d.ME,
+  sentinel: c.ME,
   stores: [s.ZP],
   matches: (e, t, n, i, r) => (r.mentions.user !== _.h3.DENY || r.mentions.role !== _.Fw.DENY || r.mentions.global !== _.VV.DENY) && !0,
   queryResults(e, t, n, i, r) {
@@ -18,8 +18,8 @@ let E = {
       o = i.mentions.global === _.VV.ALLOW_EVERYONE_OR_HERE,
       l = i.mentions.user !== _.h3.DENY,
       u = i.mentions.role !== _.Fw.DENY,
-      d = i.mentions.user === _.h3.ALLOW_GUILD,
-      c = i.mentions.role === _.Fw.ALLOW_ALL;
+      c = i.mentions.user === _.h3.ALLOW_GUILD,
+      d = i.mentions.role === _.Fw.ALLOW_ALL;
     return {
       results: a.ZP.queryMentionResults({
         query: n,
@@ -28,8 +28,8 @@ let E = {
         canMentionHere: o,
         canMentionUsers: l,
         canMentionRoles: u,
-        includeAllGuildUsers: d,
-        includeNonMentionableRoles: c,
+        includeAllGuildUsers: c,
+        includeNonMentionableRoles: d,
         request: r
       })
     }
@@ -76,12 +76,12 @@ let E = {
         role: e,
         hideDescription: h.hideMentionDescription
       }, e.id));
-    return h.mentions.user === _.h3.DENY ? (t = c.Z.Messages.ROLES_MATCHING, n = c.Z.Messages.ROLES) : (t = c.Z.Messages.MEMBERS_MATCHING, n = c.Z.Messages.MEMBERS), (0, i.jsxs)(r.Fragment, {
+    return h.mentions.user === _.h3.DENY ? (t = d.Z.Messages.ROLES_MATCHING, n = d.Z.Messages.ROLES) : (t = d.Z.Messages.MEMBERS_MATCHING, n = d.Z.Messages.MEMBERS), (0, i.jsxs)(r.Fragment, {
       children: [(0, u.gm)({
         titleWithQuery: t,
         titleWithoutQuery: n,
         query: T,
-        getQuery: e => "".concat(d.ME).concat(e)
+        getQuery: e => "".concat(c.ME).concat(e)
       }), N, s.length > 0 && a.length > 0 ? (0, i.jsx)(o.ZP.Divider, {}) : null, A, s.length > 0 && l.length > 0 || a.length > 0 && l.length > 0 ? (0, i.jsx)(o.ZP.Divider, {}) : null, m]
     }, "mentions")
   },
@@ -95,17 +95,17 @@ let E = {
       index: r,
       options: s,
       channel: o
-    } = e, u = t[r], c = n[r - t.length], E = i[r - t.length - n.length];
+    } = e, u = t[r], d = n[r - t.length], E = i[r - t.length - n.length];
     return null != u ? s.insertText(function(e, t, n) {
-      return a.ZP.hasSameRoleAsUsername(t, e) ? "".concat(d.ME).concat(e.tag) : "".concat(d.ME).concat(l.ZP.getUserTag(e, {
+      return a.ZP.hasSameRoleAsUsername(t, e) ? "".concat(c.ME).concat(e.tag) : "".concat(c.ME).concat(l.ZP.getUserTag(e, {
         identifiable: n ? "never" : "always"
       }))
     }(u.user, o, s.hidePersonalInformation), function(e) {
       return "<@".concat(e.id, ">")
-    }(u.user)) : null != c ? s.insertText(function(e) {
+    }(u.user)) : null != d ? s.insertText(function(e) {
       return e.text
-    }(c)) : null != E && s.insertText(function(e) {
-      return "".concat(d.ME).concat(e.name)
+    }(d)) : null != E && s.insertText(function(e) {
+      return "".concat(c.ME).concat(e.name)
     }(E), function(e) {
       return "<@&".concat(e.id, ">")
     }(E)), {

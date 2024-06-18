@@ -21,15 +21,15 @@ function u(e, t, n) {
   }) : e[t] = n, e
 }
 let _ = [],
-  d = !1,
-  c = new Promise(e => {
+  c = !1,
+  d = new Promise(e => {
     i = () => {
       e(), i = null
     }
   });
 class E {
   static initialize() {
-    d = !0, _.forEach(e => e.initializeIfNeeded()), null != i && i()
+    c = !0, _.forEach(e => e.initializeIfNeeded()), null != i && i()
   }
   static destroy() {
     _.length = 0, l.Z.destroy()
@@ -97,7 +97,7 @@ class E {
   }
   constructor(e, t, n) {
     u(this, "_changeCallbacks", new a.Z), u(this, "_reactChangeCallbacks", new a.Z), u(this, "_syncWiths", []), u(this, "_dispatchToken", void 0), u(this, "_dispatcher", void 0), u(this, "_mustEmitChanges", void 0), u(this, "_isInitialized", !1), u(this, "__getLocalVars", void 0), u(this, "addChangeListener", this._changeCallbacks.add), u(this, "addConditionalChangeListener", this._changeCallbacks.addConditional), u(this, "removeChangeListener", this._changeCallbacks.remove), u(this, "addReactChangeListener", this._reactChangeCallbacks.add), u(this, "removeReactChangeListener", this._reactChangeCallbacks.remove), this._dispatcher = e, this._dispatchToken = this._dispatcher.createToken(), this.registerActionHandlers(null != t ? t : {}, n), _.push(this);
-    d && this.initializeIfNeeded()
+    c && this.initializeIfNeeded()
   }
 }
-u(E, "displayName", void 0), u(E, "initialized", c)
+u(E, "displayName", void 0), u(E, "initialized", d)

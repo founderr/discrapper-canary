@@ -1,7 +1,7 @@
 "use strict";
 t.d(s, {
   Z: function() {
-    return C
+    return x
   }
 });
 var n = t(735250),
@@ -22,14 +22,14 @@ var n = t(735250),
   S = t(598622),
   h = t(921944),
   g = t(689938),
-  x = t(212723);
+  C = t(212723);
 
-function C(e) {
+function x(e) {
   let s, {
       hideChangelog: t
     } = e,
-    C = (0, l.e7)([E.Z], () => E.Z.getGuildId()),
-    R = (0, l.e7)([d.Z], () => d.Z.getGuild(C)),
+    x = (0, l.e7)([E.Z], () => E.Z.getGuildId()),
+    R = (0, l.e7)([d.Z], () => d.Z.getGuild(x)),
     L = (0, l.e7)([I.Z], () => I.Z.getCurrentPage());
   if (i.useEffect(() => {
       (0, o.EW)(a.z.COMMUNITY_GUILD_SETTINGS_SAFETY, {
@@ -69,15 +69,15 @@ function C(e) {
   }
   return (0, n.jsxs)(n.Fragment, {
     children: [L !== T.u.OVERVIEW && (0, n.jsxs)(r.Button, {
-      className: x.back,
-      innerClassName: x.backButton,
+      className: C.back,
+      innerClassName: C.backButton,
       look: r.Button.Looks.BLANK,
       size: r.Button.Sizes.MIN,
       onClick: () => {
         (0, _.K)(T.u.OVERVIEW)
       },
       children: [(0, n.jsx)(u.Z, {
-        className: x.__invalid_arrow,
+        className: C.__invalid_arrow,
         direction: u.Z.Directions.LEFT
       }), (0, n.jsx)(r.Text, {
         variant: "text-sm/semibold",

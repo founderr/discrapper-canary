@@ -21,7 +21,7 @@ s.Z = i.memo(function(e) {
     setEditingRule: N
   } = (0, r.V)(), {
     isLoading: m
-  } = (0, r.w)(), [S] = i.useState(() => !(0, l.Vb)(s)), h = (null == I ? void 0 : I.id) === s.id || t, g = (0, a.U)(null == s ? void 0 : s.id), x = h && null != I ? I : s, C = i.useMemo(() => (0, o.af)(s.name), [null == s ? void 0 : s.name]), R = i.useCallback(() => {
+  } = (0, r.w)(), [S] = i.useState(() => !(0, l.Vb)(s)), h = (null == I ? void 0 : I.id) === s.id || t, g = (0, a.U)(null == s ? void 0 : s.id), C = h && null != I ? I : s, x = i.useMemo(() => (0, o.af)(s.name), [null == s ? void 0 : s.name]), R = i.useCallback(() => {
     T(s.guildId, s.triggerType)
   }, [s.guildId, s.triggerType, T]), L = i.useCallback(e => {
     if (!m) N(e, !0)
@@ -30,13 +30,13 @@ s.Z = i.memo(function(e) {
     E && N(s, !0)
   }, [E, s, N]);
   let O = i.useCallback(() => {
-    h ? !_ && N(null) : _ ? C(() => {
+    h ? !_ && N(null) : _ ? x(() => {
       N(s)
     }) : N(s)
-  }, [h, _, C, s, N]);
+  }, [h, _, x, s, N]);
   return (0, n.jsx)(d.Z, {
     renderHeader: (0, n.jsx)(u.Z, {
-      rule: x,
+      rule: C,
       forceSetup: S && !h && !g,
       triggerType: s.triggerType,
       isEditMode: h,
@@ -48,7 +48,7 @@ s.Z = i.memo(function(e) {
     isExpanded: h,
     onExpand: O,
     children: h && (0, n.jsx)(c.Z, {
-      rule: x,
+      rule: C,
       isLoading: m,
       onChangeRule: L
     })

@@ -19,18 +19,18 @@ function _() {
     })),
     t = (0, r.e7)([l.Z], () => l.Z.isOpen()),
     n = (0, r.e7)([a.Z], () => a.Z.hasLayers()),
-    [_, d] = i.useState(!1),
-    c = (0, o.Aq)();
+    [_, c] = i.useState(!1),
+    d = (0, o.Aq)();
   return i.useEffect(() => {
     function e() {
-      d(!0)
+      c(!0)
     }
 
     function t() {
-      d(!1)
+      c(!1)
     }
-    return c.subscribe(u.CkL.POPOUT_SHOW, e), c.subscribe(u.CkL.POPOUT_HIDE, t), () => {
-      c.unsubscribe(u.CkL.POPOUT_SHOW, e), c.unsubscribe(u.CkL.POPOUT_HIDE, t)
+    return d.subscribe(u.CkL.POPOUT_SHOW, e), d.subscribe(u.CkL.POPOUT_HIDE, t), () => {
+      d.unsubscribe(u.CkL.POPOUT_SHOW, e), d.unsubscribe(u.CkL.POPOUT_HIDE, t)
     }
-  }, [c]), e || t || _ || n
+  }, [d]), e || t || _ || n
 }

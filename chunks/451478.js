@@ -4,8 +4,8 @@ var i, r, s, o, a = n(512722),
   l = n.n(a),
   u = n(442837),
   _ = n(570140),
-  d = n(830917);
-let c = null,
+  c = n(830917);
+let d = null,
   E = new Map;
 
 function I(e) {
@@ -22,11 +22,11 @@ function I(e) {
 }
 class T extends(i = u.ZP.Store) {
   isFocused() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, d.UU)();
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, c.UU)();
     return I(e).focused
   }
   isVisible() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, d.UU)();
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, c.UU)();
     return I(e).visible
   }
   getFocusedWindowId() {
@@ -36,14 +36,14 @@ class T extends(i = u.ZP.Store) {
     }), e
   }
   getLastFocusedWindowId() {
-    return c
+    return d
   }
   isElementFullScreen() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, d.UU)();
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, c.UU)();
     return I(e).isElementFullscreen
   }
   windowSize() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, d.UU)();
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, c.UU)();
     return I(e).windowSize
   }
 }
@@ -71,7 +71,7 @@ let h = new T(_.Z, {
       isElementFullscreen: i,
       focused: r,
       visible: s
-    }), r && (c = e.windowId), !0
+    }), r && (d = e.windowId), !0
   },
   WINDOW_FULLSCREEN_CHANGE: function(e) {
     let t = I(e.windowId);
@@ -82,7 +82,7 @@ let h = new T(_.Z, {
   },
   WINDOW_FOCUS: function(e) {
     let t = I(e.windowId);
-    return t.focused !== e.focused && (e.focused && (c = e.windowId), E.set(e.windowId, {
+    return t.focused !== e.focused && (e.focused && (d = e.windowId), E.set(e.windowId, {
       ...t,
       focused: e.focused
     }), !0)
@@ -98,7 +98,7 @@ let h = new T(_.Z, {
     }), !0)
   },
   WINDOW_UNLOAD: function(e) {
-    return E.delete(e.windowId), c === e.windowId && (c = null), !0
+    return E.delete(e.windowId), d === e.windowId && (d = null), !0
   },
   WINDOW_VISIBILITY_CHANGE: function(e) {
     let t = I(e.windowId);

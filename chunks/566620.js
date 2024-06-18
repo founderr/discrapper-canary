@@ -48,8 +48,8 @@ var i = n(990547),
   l = n(447543),
   u = n(904245),
   _ = n(479531),
-  d = n(812236),
-  c = n(812206),
+  c = n(812236),
+  d = n(812206),
   E = n(358221),
   I = n(188597),
   T = n(973616),
@@ -61,11 +61,11 @@ var i = n(990547),
   m = n(573261),
   O = n(867176),
   R = n(317381),
-  C = n(844797),
-  p = n(672181),
-  g = n(917107),
-  L = n(981631),
-  v = n(674563),
+  p = n(844797),
+  g = n(672181),
+  C = n(917107),
+  v = n(981631),
+  L = n(674563),
   D = n(245335);
 
 function M(e, t, n) {
@@ -81,7 +81,7 @@ function M(e, t, n) {
     channelId: e,
     applicationId: t,
     analyticsLocations: n
-  }), (0, g.Z)(e) ? (a.Z.selectParticipant(e, t), a.Z.updateLayout(e, L.AEg.NO_CHAT)) : (0, p.Z)(e)
+  }), (0, C.Z)(e) ? (a.Z.selectParticipant(e, t), a.Z.updateLayout(e, v.AEg.NO_CHAT)) : (0, g.Z)(e)
 }
 async function P(e) {
   var t, n;
@@ -97,14 +97,14 @@ async function P(e) {
       embeddedActivity: a
     });
     let t = R.ZP.getEmbeddedActivitiesForChannel(e).some(e => e.applicationId === a.applicationId),
-      n = v.Yq.includes(a.applicationId),
+      n = L.Yq.includes(a.applicationId),
       u = (null == r ? void 0 : r.isPrivate()) && (0, O.WS)(r, !t, "EmbeddedActivitiesActionCreators#launchEmbeddedActivity");
-    if (!t && ((0, C.TX)(e, a.applicationId, f.Z, S.Z) || n || u)) {
+    if (!t && ((0, p.TX)(e, a.applicationId, f.Z, S.Z) || n || u)) {
       let t;
       try {
-        n && (t = await (0, d.ZP)(e, a.applicationId))
+        n && (t = await (0, c.ZP)(e, a.applicationId))
       } catch (e) {
-        if (e.message !== d.sV) throw e
+        if (e.message !== c.sV) throw e
       }
       await (0, I.qn)({
         applicationId: a.applicationId,
@@ -113,7 +113,7 @@ async function P(e) {
         command: t
       })
     } else await m.Z.post({
-      url: L.ANM.ACTIVITY_CHANNEL_LAUNCH(e, a.applicationId),
+      url: v.ANM.ACTIVITY_CHANNEL_LAUNCH(e, a.applicationId),
       body: {
         session_id: l,
         guild_id: null != o ? o : void 0
@@ -183,7 +183,7 @@ async function b() {
       type: "DEVELOPER_ACTIVITY_SHELF_FETCH_START"
     });
     let e = await r.tn.get({
-        url: L.ANM.APPLICATIONS_WITH_ASSETS,
+        url: v.ANM.APPLICATIONS_WITH_ASSETS,
         query: {
           with_team_applications: !0
         },
@@ -207,7 +207,7 @@ async function G(e, t, n) {
       type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_START"
     });
     let i = await r.tn.post({
-      url: L.ANM.APPLICATION_UPLOAD_ATTACHMENT(e),
+      url: v.ANM.APPLICATION_UPLOAD_ATTACHMENT(e),
       query: {
         channel_id: t
       },
@@ -237,7 +237,7 @@ async function k(e) {
   let {
     guildId: a,
     force: l = !1
-  } = e, u = R.ZP.getShelfActivities(a), _ = u.map(e => c.Z.getApplication(e.application_id)).filter(A.lm);
+  } = e, u = R.ZP.getShelfActivities(a), _ = u.map(e => d.Z.getApplication(e.application_id)).filter(A.lm);
   if (!l && !R.ZP.shouldFetchShelf(a)) {
     if (null === (t = R.ZP.getShelfFetchStatus(a)) || void 0 === t ? void 0 : t.isFetching) {
       let e, t;
@@ -263,7 +263,7 @@ async function k(e) {
         guild_id: a
       } : void 0,
       t = await m.Z.get({
-        url: L.ANM.ACTIVITY_SHELF,
+        url: v.ANM.ACTIVITY_SHELF,
         query: e,
         trackedActionData: {
           event: i.NetworkActionNames.EMBEDDED_ACTIVITIES_FETCH_SHELF,
@@ -333,7 +333,7 @@ function V() {
   })
 }
 async function Z(e) {
-  let t = L.ANM.ACTIVITY_TEST_MODE(e);
+  let t = v.ANM.ACTIVITY_TEST_MODE(e);
   try {
     return await r.tn.get({
       url: t,
