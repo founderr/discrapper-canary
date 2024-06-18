@@ -44,7 +44,11 @@ function u(e, t) {
 
 function _(e) {
   let t = [];
-  return e.has(a.V8.SIGNAL_AV1_SUPPORT) && t.unshift({
+  return e.has(a.V8.SIGNAL_AV1_DECODE) ? t.unshift({
+    name: "AV1",
+    encode: !1,
+    decode: !0
+  }) : e.has(a.V8.SIGNAL_AV1) && t.unshift({
     name: "AV1",
     encode: !0,
     decode: !0

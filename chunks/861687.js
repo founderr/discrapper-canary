@@ -518,7 +518,7 @@ class ea extends c.Z {
       this._backoff.succeed()
     }), l.on(d.Sh.VideoEncoderFallback, t => {
       let n = t.filter(e => "video" === e.type).map(e => e.name).join(",");
-      this.logger.info("The originally selected video encoder is not working, fallback to the other available encoders:" + n), e.updateSession({
+      this.logger.info("The originally selected video encoder is not working, fallback to the other available encoders: ".concat(n)), e.updateSession({
         codecs: t
       })
     }), l.on(d.Sh.Error, t => {

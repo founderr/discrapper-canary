@@ -109,8 +109,9 @@ class v extends E.Z {
         port: l
       } = s;
       this.logger.info("Connected with local address ".concat(a, ":").concat(l, " and protocol: ").concat(o)), i(i => {
+        this.logger.info("Available codecs: ".concat(JSON.stringify(i)));
         let r = (0, S.DY)(this.experimentFlags);
-        this.codecs = [{
+        this.logger.info("Experimental codecs: ".concat(JSON.stringify(r))), this.codecs = [{
           type: "audio",
           name: R.ad.OPUS,
           priority: 1,
@@ -760,7 +761,7 @@ class v extends E.Z {
     }), p(this, "handlePingTimeout", (e, t, n, i) => {
       this.emit(h.Sh.PingTimeout, n, i > 0 ? i : 4e3)
     }), p(this, "handleVideoEncoderFallback", e => {
-      if (!this.videoEncoderFallbackPending) this.logger.info("Falling back from current video encoder:" + e), this.codecs = this.codecs.map(t => ((e === t.name || "AV1" === t.name && "AV1X" === e) && (t.encode = !1), t)).filter(e => !("video" === e.type && !1 === e.encode && !1 === e.decode)), this.emit(h.Sh.VideoEncoderFallback, this.codecs), this.videoEncoderFallbackPending = !0
+      if (!this.videoEncoderFallbackPending) this.logger.info("Falling back from current video encoder: ".concat(e)), this.codecs = this.codecs.map(t => ((e === t.name || "AV1" === t.name && "AV1X" === e) && (t.encode = !1), t)).filter(e => !("video" === e.type && !1 === e.encode && !1 === e.decode)), this.emit(h.Sh.VideoEncoderFallback, this.codecs), this.videoEncoderFallbackPending = !0
     }), p(this, "handleVideo", (e, t, n, i) => {
       let r = o()(this.videoStreamParameters);
       e === this.userId ? null != i && Array.isArray(i) && i.length > 0 ? i.forEach(e => {
