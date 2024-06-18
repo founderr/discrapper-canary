@@ -53,7 +53,7 @@ function V() {
 
 function Z() {
   c.Z.forEach(e => {
-    c.Z.commit(e.reset(e.map(e => e.set("blocked", P.Z.isBlocked(e.author.id)))))
+    c.Z.commit(e.reset(e.map(e => e.set("blocked", P.Z.isBlockedForMessage(e)))))
   })
 }
 
