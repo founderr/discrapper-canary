@@ -2,7 +2,7 @@
 var i = n(735250);
 n(470079);
 var r = n(481060),
-  s = n(590095);
+  s = n(996777);
 t.Z = function() {
   return (0, i.jsx)(r.ChevronSmallRightIcon, {
     size: "md",
