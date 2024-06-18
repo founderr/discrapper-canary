@@ -28,7 +28,7 @@ let E = (e, t) => ({
     let t = (0, s.P)(d.default.getCurrentUser());
     return {
       video_device_name: null === (e = u.Z.getVideoDevices()[u.Z.getVideoDeviceId()]) || void 0 === e ? void 0 : e.name,
-      video_hardware_scaling_enabled: u.Z.getHardwareH264(),
+      video_hardware_scaling_enabled: u.Z.getHardwareEncoding(),
       video_effect_type: (0, a.TA)(t),
       video_effect_detail: (0, a.V$)(t)
     }

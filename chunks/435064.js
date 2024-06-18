@@ -177,7 +177,7 @@ T(M, "displayName", "ClipsStore"), T(M, "persistKey", "ClipsStore"), T(M, "migra
   }
 }, e => {
   var t;
-  let i = null === (t = n(131951).Z) || void 0 === t ? void 0 : t.getHardwareH264();
+  let i = null === (t = n(131951).Z) || void 0 === t ? void 0 : t.getHardwareEncoding();
   return {
     ...e,
     clipsSettings: {

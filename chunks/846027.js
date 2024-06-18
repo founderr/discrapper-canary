@@ -231,9 +231,9 @@ t.Z = {
       enabled: e
     })
   },
-  setHardwareH264(e) {
+  setHardwareEncoding(e) {
     !S() && i.Z.dispatch({
-      type: "MEDIA_ENGINE_SET_HARDWARE_H264",
+      type: "MEDIA_ENGINE_SET_HARDWARE_ENCODING",
       enabled: e
     })
   },

@@ -349,6 +349,11 @@ class v extends E.Z {
       hardwareH264: this.hardwareH264
     })
   }
+  setSoftwareH264(e) {
+    this.softwareH264 = e, this.conn.setTransportOptions({
+      softwareH264: this.softwareH264
+    })
+  }
   setQoS(e) {
     this.qos = e, this.conn.setTransportOptions({
       qos: this.qos
@@ -629,7 +634,8 @@ class v extends E.Z {
       "level-asymmetry-allowed": "1",
       "packetization-mode": "1",
       "profile-level-id": "android" === (0, N.zS)().platform ? "42e01f" : "4d0033",
-      "hardware-h264": this.hardwareH264 && this.useElectronVideo && m.Z.useDirectVideo ? "1" : "0"
+      "hardware-h264": this.hardwareH264 && this.useElectronVideo && m.Z.useDirectVideo ? "1" : "0",
+      "software-h264": this.softwareH264 ? "1" : "0"
     }
   }
   getCodecOptions(e, t, n) {
@@ -702,6 +708,7 @@ class v extends E.Z {
       encodingVideoDegradationPreference: this.videoDegradationPreference,
       experimentalEncoders: this.experimentalEncoders,
       hardwareH264: this.hardwareH264,
+      softwareH264: this.softwareH264,
       reconnectInterval: this.reconnectInterval
     };
     return (0, N.eJ)(R.eR.VIDEO_EFFECTS) && this.context === R.Yn.STREAM && (e.enableVideoEffects = !0), this.experimentFlags.has(O.V8.MUTE_BEFORE_PROCESSING) && (e.muteBeforeProcessing = !0), this.experimentFlags.has(O.V8.PTT_BEFORE_PROCESSING) && (e.pttBeforeProcessing = !0), this.experimentFlags.has(O.V8.SKIP_ENCODE) && (e.skipEncode = !0), e
@@ -743,7 +750,7 @@ class v extends E.Z {
     null === (i = (r = this.conn).processMLSWelcome) || void 0 === i || i.call(r, e, t, n)
   }
   constructor(e, t, n) {
-    super(e, t), p(this, "mediaEngineConnectionId", "Native-".concat(g++)), p(this, "goLiveSourceIdentifier", void 0), p(this, "selfMute", !1), p(this, "selfVideo", !1), p(this, "forceAudioNormal", !1), p(this, "forceAudioPriority", !1), p(this, "codecs", []), p(this, "videoEncoderFallbackPending", !1), p(this, "desktopDegradationPreference", (0, N.zS)().DegradationPreference.MAINTAIN_FRAMERATE), p(this, "sourceDesktopDegradationPreference", (0, N.zS)().DegradationPreference.DISABLED), p(this, "videoDegradationPreference", (0, N.zS)().DegradationPreference.BALANCED), p(this, "localPans", {}), p(this, "remoteAudioSSRCs", {}), p(this, "remoteVideoSSRCs", {}), p(this, "inputMode", R.pM.VOICE_ACTIVITY), p(this, "vadThreshold", -40), p(this, "vadAutoThreshold", !0), p(this, "vadUseKrisp", !0), p(this, "vadLeading", 5), p(this, "vadTrailing", 25), p(this, "pttReleaseDelay", 20), p(this, "soundshareActive", !1), p(this, "soundshareId", null), p(this, "soundshareSentSpeakingEvent", !1), p(this, "echoCancellation", !0), p(this, "noiseSuppression", !0), p(this, "automaticGainControl", !0), p(this, "noiseCancellation", !1), p(this, "experimentalEncoders", !1), p(this, "hardwareH264", !0), p(this, "attenuationFactor", .5), p(this, "attenuateWhileSpeakingSelf", !1), p(this, "attenuateWhileSpeakingOthers", !0), p(this, "qos", !0), p(this, "conn", void 0), p(this, "minimumJitterBufferLevel", 0), p(this, "postponeDecodeLevel", 100), p(this, "reconnectInterval", 6e4), p(this, "keyframeInterval", 0), p(this, "clipsKeyFrameInterval", 0), p(this, "videoQualityMeasurement", ""), p(this, "videoEncoderExperiments", ""), p(this, "numFastUdpReconnects", 0), p(this, "logger", void 0), p(this, "handleSpeakingNative", (e, t) => {
+    super(e, t), p(this, "mediaEngineConnectionId", "Native-".concat(g++)), p(this, "goLiveSourceIdentifier", void 0), p(this, "selfMute", !1), p(this, "selfVideo", !1), p(this, "forceAudioNormal", !1), p(this, "forceAudioPriority", !1), p(this, "codecs", []), p(this, "videoEncoderFallbackPending", !1), p(this, "desktopDegradationPreference", (0, N.zS)().DegradationPreference.MAINTAIN_FRAMERATE), p(this, "sourceDesktopDegradationPreference", (0, N.zS)().DegradationPreference.DISABLED), p(this, "videoDegradationPreference", (0, N.zS)().DegradationPreference.BALANCED), p(this, "localPans", {}), p(this, "remoteAudioSSRCs", {}), p(this, "remoteVideoSSRCs", {}), p(this, "inputMode", R.pM.VOICE_ACTIVITY), p(this, "vadThreshold", -40), p(this, "vadAutoThreshold", !0), p(this, "vadUseKrisp", !0), p(this, "vadLeading", 5), p(this, "vadTrailing", 25), p(this, "pttReleaseDelay", 20), p(this, "soundshareActive", !1), p(this, "soundshareId", null), p(this, "soundshareSentSpeakingEvent", !1), p(this, "echoCancellation", !0), p(this, "noiseSuppression", !0), p(this, "automaticGainControl", !0), p(this, "noiseCancellation", !1), p(this, "experimentalEncoders", !1), p(this, "hardwareH264", !0), p(this, "softwareH264", !0), p(this, "attenuationFactor", .5), p(this, "attenuateWhileSpeakingSelf", !1), p(this, "attenuateWhileSpeakingOthers", !0), p(this, "qos", !0), p(this, "conn", void 0), p(this, "minimumJitterBufferLevel", 0), p(this, "postponeDecodeLevel", 100), p(this, "reconnectInterval", 6e4), p(this, "keyframeInterval", 0), p(this, "clipsKeyFrameInterval", 0), p(this, "videoQualityMeasurement", ""), p(this, "videoEncoderExperiments", ""), p(this, "numFastUdpReconnects", 0), p(this, "logger", void 0), p(this, "handleSpeakingNative", (e, t) => {
       let n = R.Dg.NONE;
       n = "boolean" == typeof t ? t ? R.Dg.VOICE : R.Dg.NONE : t, this.handleSpeakingFlags(e, n)
     }), p(this, "handleNativeMuteToggled", () => {

@@ -293,7 +293,7 @@ class M extends a.Z {
         reason: e,
         max_viewers: this.analyticsContext.maxViewers,
         hostname: this.hostname,
-        hardware_enabled: S.Z.getHardwareH264(),
+        hardware_enabled: S.Z.getHardwareEncoding(),
         device_performance_class: this.isOwner ? (0, c.R)() : null
       })
     }), o.getInboundParticipants().forEach(t => {
@@ -312,7 +312,7 @@ class M extends a.Z {
         reason: e,
         max_viewers: this.analyticsContext.maxViewers,
         hostname: this.hostname,
-        hardware_enabled: S.Z.getHardwareH264(),
+        hardware_enabled: S.Z.getHardwareEncoding(),
         device_performance_class: this.isOwner ? (0, c.R)() : null
       })
     })

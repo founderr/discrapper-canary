@@ -183,6 +183,7 @@ class f extends u.Z {
   setLocalPan(e, t, n) {}
   setExperimentalEncoders(e) {}
   setHardwareH264(e) {}
+  setSoftwareH264(e) {}
   setQoS(e) {}
   isAttenuating() {
     return !1

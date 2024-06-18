@@ -57,7 +57,7 @@ class T extends u.Z {
       quality: t.clipsQuality
     })
   }
-  handleMediaEngineSetHardwareH264(e) {
+  handleMediaEngineSetHardwareEncoding(e) {
     let {
       enabled: t
     } = e;

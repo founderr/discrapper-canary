@@ -220,7 +220,7 @@ function X(e) {
     ea = !!(null == t ? void 0 : t.id.startsWith("camera")),
     ei = null != ee && ee.verified && !ee.bot,
     er = null != z && !(0, d.Yk)(z),
-    eo = !(0, r.e7)([Z.Z], () => Z.Z.getHardwareH264());
+    eo = !(0, r.e7)([Z.Z], () => Z.Z.getHardwareEncoding());
   return (0, l.jsxs)(s.Fragment, {
     children: [ea ? (0, l.jsx)(G.Z, {
       selectedSource: t,
