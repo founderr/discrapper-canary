@@ -338,7 +338,7 @@ let k = e => {
     }
   },
   B = e => w(e.config.assets.hero, "".concat(g).concat(e.id, "/").concat(e.config.assets.hero)),
-  x = e => e.config.assets.questBarHero.startsWith("data") ? e.config.assets.questBarHero : w(e.config.assets.questBarHero, "".concat(g).concat(e.id, "/").concat(e.config.assets.questBarHero)),
+  x = e => w(e.config.assets.questBarHero, "".concat(g).concat(e.id, "/").concat(e.config.assets.questBarHero)),
   V = (e, t) => w(e.config.assets.gameTile, "".concat(g).concat(e.id, "/").concat(t, "/").concat(e.config.assets.gameTile)),
   Z = (e, t) => w(e.config.assets.logotype, "".concat(g).concat(e.id, "/").concat(t, "/").concat(e.config.assets.logotype)),
   H = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
