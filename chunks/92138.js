@@ -20,6 +20,6 @@ var h = n(981631),
   S = n(689938);
 (0, l.yR)(_.Z), (0, s.Y)(S.Z, r, c.Z), a.ZP.Emitter.injectBatchEmitChanges(o.j), a.ZP.PersistedStore.disableWrites = __OVERLAY__, a.ZP.initialize();
 let f = window.GLOBAL_ENV.RELEASE_CHANNEL;
-new T.Z().log("[BUILD INFO] Release Channel: ".concat(f, ", Build Number: ").concat("302904", ", Version Hash: ").concat("1b81f194d52646ed70d88216fb810649cd033ec1")), i.Z.setTags({
+new T.Z().log("[BUILD INFO] Release Channel: ".concat(f, ", Build Number: ").concat("302974", ", Version Hash: ").concat("a8266b6141e1c82ea58401fffd8af7b1c2448df1")), i.Z.setTags({
   appContext: h.e3s
 }), d.Z.initBasic(), E.Z.init(), u.d.init(), I.S1()
