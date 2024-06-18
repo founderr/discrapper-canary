@@ -26,4 +26,4 @@ n.d(t, {
 let d = "2023-10_triggerdebuggingaa",
   c = "2023-10_guildaa",
   E = [d, c];
-(_ = o || (o = {}))[_.NONE = 0] = "NONE", _[_.POST_CONNECTION_OPEN = 1] = "POST_CONNECTION_OPEN"
+(_ = o || (o = {}))[_.NONE = 0] = "NONE", _[_.POST_CONNECTION_OPEN = 1] = "POST_CONNECTION_OPEN", _[_.VOICE_CALL = 2] = "VOICE_CALL"
