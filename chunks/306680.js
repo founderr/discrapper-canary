@@ -105,7 +105,7 @@ function eg(e) {
 
 function eC(e, t) {
   let n = j.Z.getChannel(e.channel_id);
-  return !(null == n || J.Z.isBlocked(e.author.id)) && (!!((0, v.ZP)({
+  return !(null == n || J.Z.isBlockedForMessage(e)) && (!!((0, v.ZP)({
     message: e,
     userId: t.id,
     suppressEveryone: ee.ZP.isSuppressEveryoneEnabled(n.guild_id),
@@ -1119,7 +1119,7 @@ let e$ = new eJ(T.Z, {
     if (d && eM(a) && !o || null != i && i.isInstanceFocused() && d && i.isInstanceUILocked() && i.isPinned(ei.Odu.TEXT)) return a.ack({
       messageId: s.id
     });
-    (null == a.oldestUnreadMessageId || a.oldestUnreadMessageIdStale) && (a.oldestUnreadMessageId = s.id), a.unreadCount++, !(null != s.author && J.Z.isBlocked(s.author.id) || s.type === ei.uaV.RECIPIENT_REMOVE && (null == u ? void 0 : u.type) === ei.d4z.GROUP_DM) && function(e, t, n) {
+    (null == a.oldestUnreadMessageId || a.oldestUnreadMessageIdStale) && (a.oldestUnreadMessageId = s.id), a.unreadCount++, !(J.Z.isBlockedForMessage(s) || s.type === ei.uaV.RECIPIENT_REMOVE && (null == u ? void 0 : u.type) === ei.d4z.GROUP_DM) && function(e, t, n) {
       if (null != t && (0, v.Hl)({
           rawMessage: e,
           userId: t.id,

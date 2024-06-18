@@ -70,7 +70,7 @@ function O(e) {
     ...v.toJS(),
     author: G,
     webhookId: e.webhook_id,
-    blocked: E.Z.isBlocked(G.id) || null != B && E.Z.isBlocked(B),
+    blocked: E.Z.isBlockedForMessage(e) || null != B && E.Z.isBlocked(B),
     mentionEveryone: e.mention_everyone,
     mentions: M,
     mentionRoles: P,
