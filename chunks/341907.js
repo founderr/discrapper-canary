@@ -1,18 +1,25 @@
 "use strict";
 n.d(t, {
-  a: function() {
-    return a
+  az: function() {
+    return c
   },
-  h: function() {
-    return o
+  gI: function() {
+    return d
+  },
+  hp: function() {
+    return _
   }
-});
+}), n(47120);
 var i = n(735250);
 n(470079);
 var r = n(481060),
-  s = n(617136);
+  s = n(570140),
+  o = n(230711),
+  a = n(327192),
+  l = n(617136),
+  u = n(981631);
 
-function o(e) {
+function _(e) {
   let {
     questId: t,
     location: s,
@@ -31,8 +38,8 @@ function o(e) {
   })
 }
 
-function a(e, t) {
-  (0, s._3)({
+function c(e, t) {
+  (0, l._3)({
     questId: e.id,
     questContent: t.content,
     questContentPosition: t.position,
@@ -46,5 +53,16 @@ function a(e, t) {
       questContent: t.content,
       quest: e
     })
+  })
+}
+
+function d(e) {
+  let {
+    showInline: t
+  } = e;
+  !t && o.Z.open(u.oAB.CONNECTIONS), s.Z.dispatch({
+    type: "CONNECTIONS_GRID_MODAL_SHOW",
+    onComplete: a.q,
+    includedPlatformTypes: new Set([u.ABu.XBOX, u.ABu.PLAYSTATION])
   })
 }

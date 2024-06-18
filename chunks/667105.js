@@ -38,7 +38,7 @@ function T(e) {
       questContent: n,
       questContentCTA: _.jZ.CLAIM_REWARD,
       questContentPosition: i
-    }), s ? (0, c.Xv)(t.config) ? (0, d.openCollectibleRewardModal)(t, n) : (0, I.h)({
+    }), s ? (0, c.Xv)(t.config) ? (0, d.openCollectibleRewardModal)(t, n) : (0, I.hp)({
       questId: t.id,
       location: n,
       questContentPosition: i
@@ -56,20 +56,17 @@ function h(e) {
 let S = e => {
   let {
     useReducedMotion: t,
-    className: n,
-    size: o = 16
-  } = e, [l, u] = (0, s.useSpring)(() => ({})), _ = r.useRef(!1), c = (0, s.animated)(a.RefreshIcon);
+    className: n
+  } = e, [o, l] = (0, s.useSpring)(() => ({})), u = r.useRef(!1), _ = (0, s.animated)(a.RefreshIcon);
   return {
-    render: () => (0, i.jsx)(c, {
+    render: () => (0, i.jsx)(_, {
       className: n,
-      style: t ? void 0 : l,
-      height: null != o ? o : 24,
-      width: null != o ? o : 24,
+      style: t ? void 0 : o,
       color: "currentColor",
-      size: "custom"
+      size: "xs"
     }),
     startAnimation: () => {
-      _.current = !0, u({
+      u.current = !0, l({
         from: {
           rotate: "0deg"
         },
@@ -81,12 +78,12 @@ let S = e => {
           mass: 5,
           friction: 100
         },
-        loop: () => _.current,
+        loop: () => u.current,
         immediate: t
       })
     },
     stopAnimation: () => {
-      _.current = !1
+      u.current = !1
     }
   }
 }
