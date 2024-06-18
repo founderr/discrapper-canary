@@ -7,7 +7,7 @@ n.d(t, {
     return I
   },
   IG: function() {
-    return c
+    return d
   },
   NG: function() {
     return _
@@ -22,7 +22,7 @@ n.d(t, {
     return E
   },
   mA: function() {
-    return d
+    return c
   }
 });
 var i = n(735250);
@@ -45,18 +45,18 @@ function u(e) {
 function _(e) {
   return e < 1e3 ? "".concat(e) : "".concat(Math.min(Math.floor(e / 1e3), 9), "k+")
 }
-let d = e => {
+let c = e => {
     let {
       count: t,
       color: n = o.Z.STATUS_DANGER,
       disableColor: r = !1,
-      shape: d = l.ROUND,
-      className: c,
+      shape: c = l.ROUND,
+      className: d,
       style: E,
       ...I
     } = e;
     return (0, i.jsx)("div", {
-      className: s()(c, a.numberBadge, d),
+      className: s()(d, a.numberBadge, c),
       style: {
         backgroundColor: r ? void 0 : n,
         width: u(t),
@@ -76,23 +76,23 @@ let d = e => {
       children: _(t)
     })
   },
-  c = e => {
+  d = e => {
     let {
       text: t,
       className: n,
       color: r = o.Z.STATUS_DANGER,
       shape: u = l.ROUND,
       disableColor: _ = !1,
-      style: d,
-      ...c
+      style: c,
+      ...d
     } = e;
     return (0, i.jsx)("div", {
       className: s()(n, a.textBadge, u),
       style: {
         backgroundColor: _ ? void 0 : r,
-        ...d
+        ...c
       },
-      ...c,
+      ...d,
       children: t
     })
   },
@@ -102,7 +102,7 @@ let d = e => {
       className: n,
       ...r
     } = e;
-    return (0, i.jsx)(c, {
+    return (0, i.jsx)(d, {
       className: s()(a.premiumBadge, n),
       text: t,
       ...r
@@ -115,16 +115,17 @@ let d = e => {
       color: r = o.Z.STATUS_DANGER,
       shape: u = l.ROUND,
       disableColor: _ = !1,
-      style: d
+      style: c
     } = e;
     return (0, i.jsx)("div", {
       className: s()(n, a.iconBadge, u),
       style: {
         backgroundColor: _ ? void 0 : r,
-        ...d
+        ...c
       },
       children: (0, i.jsx)(t, {
-        className: a.icon
+        className: a.icon,
+        color: "currentColor"
       })
     })
   },
@@ -135,7 +136,7 @@ let d = e => {
       shape: r = l.ROUND,
       disableColor: u = !1,
       style: _,
-      ...d
+      ...c
     } = e;
     return (0, i.jsx)("div", {
       className: s()(t, a.circleBadge, r),
@@ -143,6 +144,6 @@ let d = e => {
         backgroundColor: u ? void 0 : n,
         ..._
       },
-      ...d
+      ...c
     })
   }

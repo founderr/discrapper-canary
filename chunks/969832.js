@@ -2,7 +2,7 @@
 let i, r;
 n.d(t, {
   o: function() {
-    return S
+    return h
   }
 }), n(47120);
 var s = n(735250),
@@ -11,58 +11,57 @@ var s = n(735250),
   l = n.n(a),
   u = n(846519),
   _ = n(481060),
-  d = n(626135),
-  c = n(572004),
-  E = n(757206),
-  I = n(981631),
-  T = n(689938),
-  h = n(167974);
+  c = n(626135),
+  d = n(572004),
+  E = n(981631),
+  I = n(689938),
+  T = n(167974);
 
-function S(e) {
+function h(e) {
   var t;
   let {
     className: n,
     copyValue: a,
-    copyMetaData: S,
-    copyTooltip: f,
-    copyTooltipDelay: N = 500,
-    children: A,
-    disableCopy: m,
-    showCopyIcon: O,
-    "aria-label": R,
-    onCopy: C
-  } = e, [p, g] = o.useState(0), [L, v] = o.useState(!1), [D, M] = o.useState(!1);
+    copyMetaData: h,
+    copyTooltip: S,
+    copyTooltipDelay: f = 500,
+    children: N,
+    disableCopy: A,
+    showCopyIcon: m,
+    "aria-label": O,
+    onCopy: R
+  } = e, [p, g] = o.useState(0), [C, v] = o.useState(!1), [L, D] = o.useState(!1);
   if (o.useEffect(() => (i = new u.V7, r = new u.V7, function() {
       i.stop(), r.stop()
-    }), []), !c.wS || m) return (0, s.jsx)(s.Fragment, {
-    children: A
+    }), []), !d.wS || A) return (0, s.jsx)(s.Fragment, {
+    children: N
   });
-  let P = [T.Z.Messages.COPY_SUCCESS_1, T.Z.Messages.COPY_SUCCESS_2, T.Z.Messages.COPY_SUCCESS_3, T.Z.Messages.COPY_SUCCESS_4, T.Z.Messages.COPY_SUCCESS_5, T.Z.Messages.COPY_SUCCESS_6, T.Z.Messages.COPY_SUCCESS_7, T.Z.Messages.COPY_SUCCESS_8, T.Z.Messages.COPY_SUCCESS_9, T.Z.Messages.COPY_SUCCESS_10, T.Z.Messages.COPY_SUCCESS_11],
-    y = Math.min(Math.max(p - 1, 0), P.length - 1),
-    U = null !== (t = P[y]) && void 0 !== t ? t : P[0],
-    b = p >= P.length - 1,
-    G = b ? _.TooltipColors.RED : _.TooltipColors.GREEN,
-    w = L ? G : _.TooltipColors.PRIMARY,
-    k = () => {
-      i.stop(), M(!1)
+  let M = [I.Z.Messages.COPY_SUCCESS_1, I.Z.Messages.COPY_SUCCESS_2, I.Z.Messages.COPY_SUCCESS_3, I.Z.Messages.COPY_SUCCESS_4, I.Z.Messages.COPY_SUCCESS_5, I.Z.Messages.COPY_SUCCESS_6, I.Z.Messages.COPY_SUCCESS_7, I.Z.Messages.COPY_SUCCESS_8, I.Z.Messages.COPY_SUCCESS_9, I.Z.Messages.COPY_SUCCESS_10, I.Z.Messages.COPY_SUCCESS_11],
+    P = Math.min(Math.max(p - 1, 0), M.length - 1),
+    y = null !== (t = M[P]) && void 0 !== t ? t : M[0],
+    U = p >= M.length - 1,
+    b = U ? _.TooltipColors.RED : _.TooltipColors.GREEN,
+    G = C ? b : _.TooltipColors.PRIMARY,
+    w = () => {
+      i.stop(), D(!1)
     },
-    B = e => {
-      null == C || C(), (0, c.JG)(a), d.default.track(I.rMx.TEXT_COPIED, {
-        type: S
-      }), "function" == typeof e && e(), !D && g(p + 1), M(!0), v(!0), i.start(1e3, () => M(!1)), r.start(2e3, () => g(0))
+    k = e => {
+      null == R || R(), (0, d.JG)(a), c.default.track(E.rMx.TEXT_COPIED, {
+        type: h
+      }), "function" == typeof e && e(), !L && g(p + 1), D(!0), v(!0), i.start(1e3, () => D(!1)), r.start(2e3, () => g(0))
     };
   return (0, s.jsx)(_.Tooltip, {
-    delay: N,
-    color: w,
-    forceOpen: D,
-    text: L ? (0, s.jsx)(_.Shaker, {
-      isShaking: b,
-      children: U
-    }) : f,
+    delay: f,
+    color: G,
+    forceOpen: L,
+    text: C ? (0, s.jsx)(_.Shaker, {
+      isShaking: U,
+      children: y
+    }) : S,
     onAnimationRest: (e, t) => {
-      !D && L && t.phase === I.UkZ.LEAVE && v(!1)
+      !L && C && t.phase === E.UkZ.LEAVE && v(!1)
     },
-    "aria-label": f,
+    "aria-label": S,
     children: e => {
       let {
         onClick: t,
@@ -71,25 +70,25 @@ function S(e) {
       } = e;
       return (0, s.jsx)(_.Clickable, {
         ...r,
-        className: h.clickTarget,
-        "aria-label": R,
+        className: T.clickTarget,
+        "aria-label": O,
         onMouseEnter: () => {
-          L ? k() : "function" == typeof i && i()
+          C ? w() : "function" == typeof i && i()
         },
         onClick: () => {
-          B(t)
+          k(t)
         },
         children: (0, s.jsxs)("div", {
-          className: l()(n, h.copiableWrapper),
+          className: l()(n, T.copiableWrapper),
           children: [(0, s.jsx)("div", {
-            className: h.childWrapper,
-            children: A
-          }), O ? (0, s.jsx)("div", {
-            className: h.__invalid_copyIconWrapper,
-            children: (0, s.jsx)(E.Z, {
-              width: 18,
-              height: 18,
-              className: h.copyIcon
+            className: T.childWrapper,
+            children: N
+          }), m ? (0, s.jsx)("div", {
+            className: T.__invalid_copyIconWrapper,
+            children: (0, s.jsx)(_.CopyIcon, {
+              size: "sm",
+              color: "currentColor",
+              className: T.copyIcon
             })
           }) : null]
         })

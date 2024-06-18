@@ -3,92 +3,90 @@ n(47120);
 var s = n(735250),
   l = n(470079),
   a = n(120356),
-  i = n.n(a),
-  r = n(920906),
+  r = n.n(a),
+  i = n(920906),
   o = n(442837),
   c = n(481060),
   d = n(787014),
   u = n(607070),
-  h = n(454585),
-  m = n(814550),
-  g = n(465670),
-  x = n(928457),
-  _ = n(185403),
-  f = n(456269),
-  E = n(470623),
-  N = n(981631),
-  T = n(689938),
-  C = n(411900),
-  p = n(946278);
+  m = n(454585),
+  h = n(456269),
+  g = n(470623),
+  x = n(981631),
+  _ = n(689938),
+  E = n(411900),
+  f = n(946278);
 t.Z = l.memo(function(e) {
   let {
     channel: t,
     onChange: a
-  } = e, v = (0, E.AF)(), {
-    guidelinesOpen: M
-  } = (0, E.xH)(e => {
+  } = e, C = (0, g.AF)(), {
+    guidelinesOpen: T
+  } = (0, g.xH)(e => {
     let {
       guidelinesOpen: t
     } = e;
     return {
       guidelinesOpen: t
     }
-  }), S = (0, f.r_)(t), [I, j] = l.useState(!1), A = l.useCallback(e => {
+  }), N = (0, h.r_)(t), [I, S] = l.useState(!1), p = l.useCallback(e => {
     if (null == e) return;
     let t = e.clientHeight >= 220;
-    t !== I && j(t)
+    t !== I && S(t)
   }, [I]);
   l.useLayoutEffect(() => {
     setTimeout(a, 350)
-  }, [M, a]);
-  let R = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-    [Z, O] = l.useState(!M),
-    b = (0, r.useSpring)({
-      opacity: M ? 1 : 0,
-      maxHeight: M ? 500 : 0,
+  }, [T, a]);
+  let v = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+    [M, j] = l.useState(!T),
+    A = (0, i.useSpring)({
+      opacity: T ? 1 : 0,
+      maxHeight: T ? 500 : 0,
       config: {
         duration: 300
       },
-      immediate: R,
-      onRest: () => O(!M)
+      immediate: v,
+      onRest: () => j(!T)
     });
-  return null != t.topic && t.topic.length > 0 ? (0, s.jsx)(r.animated.div, {
-    style: b,
-    className: Z ? C.hiddenVisually : void 0,
+  return null != t.topic && t.topic.length > 0 ? (0, s.jsx)(i.animated.div, {
+    style: A,
+    className: M ? E.hiddenVisually : void 0,
     children: (0, s.jsxs)("div", {
-      className: C.container,
+      className: E.container,
       children: [(0, s.jsxs)("div", {
-        className: C.headerContainer,
+        className: E.headerContainer,
         children: [(0, s.jsxs)(c.Heading, {
           variant: "heading-lg/semibold",
-          className: C.guidelinesHeader,
-          children: [(0, s.jsx)(m.Z, {
+          className: E.guidelinesHeader,
+          children: [(0, s.jsx)(c.BookCheckIcon, {
+            size: "custom",
+            color: "currentColor",
             width: 20,
             height: 20
-          }), T.Z.Messages.FORUM_POST_GUIDELINES_TITLE, S && (0, s.jsx)(c.Clickable, {
+          }), _.Z.Messages.FORUM_POST_GUIDELINES_TITLE, N && (0, s.jsx)(c.Clickable, {
             onClick: () => {
-              d.ZP.open(t.id, void 0, N.ZfP.TOPIC)
+              d.ZP.open(t.id, void 0, x.ZfP.TOPIC)
             },
             tag: "span",
-            className: C.clickable,
-            children: (0, s.jsx)(_.Z, {
-              width: 16,
-              height: 16
+            className: E.clickable,
+            children: (0, s.jsx)(c.PencilIcon, {
+              size: "xs",
+              color: "currentColor"
             })
           })]
         }), (0, s.jsx)(c.Clickable, {
-          "aria-label": T.Z.Messages.CLOSE,
-          className: C.clickable,
+          "aria-label": _.Z.Messages.CLOSE,
+          className: E.clickable,
           onClick: () => {
-            v.getState().setGuidelinesOpen(!1)
+            C.getState().setGuidelinesOpen(!1)
           },
-          children: (0, s.jsx)(g.Z, {
-            width: 16,
-            height: 16
+          children: (0, s.jsx)(c.CloseSmallIcon, {
+            size: "xs",
+            color: "currentColor"
           })
         })]
       }), (0, s.jsxs)("div", {
-        className: C.descriptionContainer,
+        className: E.descriptionContainer,
         children: [(0, s.jsx)(c.Text, {
           selectable: !0,
           variant: "text-sm/normal",
@@ -96,23 +94,23 @@ t.Z = l.memo(function(e) {
           style: {
             maxHeight: 220
           },
-          className: i()(C.guidelines, p.markup),
+          className: r()(E.guidelines, f.markup),
           children: (0, s.jsx)("div", {
-            ref: A,
-            children: h.Z.parseForumPostGuidelines(t.topic, !0, {
+            ref: p,
+            children: m.Z.parseForumPostGuidelines(t.topic, !0, {
               channelId: t.id,
               allowHeading: !0,
               allowList: !0
             })
           })
         }), I && (0, s.jsxs)("div", {
-          className: C.showMore,
+          className: E.showMore,
           children: [(0, s.jsx)("div", {
-            className: C.gradient
+            className: E.gradient
           }), (0, s.jsx)("div", {
-            className: C.linkContainer,
+            className: E.linkContainer,
             children: (0, s.jsx)(c.Clickable, {
-              className: C.showMoreLink,
+              className: E.showMoreLink,
               onClick: () => {
                 (0, c.openModalLazy)(async () => {
                   let {
@@ -127,9 +125,11 @@ t.Z = l.memo(function(e) {
               children: (0, s.jsxs)(c.Text, {
                 variant: "text-sm/semibold",
                 color: "text-brand",
-                className: C.showMoreText,
-                children: [T.Z.Messages.FORUM_CHANNEL_TOPIC_VIEW_ALL, (0, s.jsx)(x.Z, {
-                  className: C.showMoreIcon
+                className: E.showMoreText,
+                children: [_.Z.Messages.FORUM_CHANNEL_TOPIC_VIEW_ALL, (0, s.jsx)(c.MaximizeIcon, {
+                  size: "xs",
+                  color: "currentColor",
+                  className: E.showMoreIcon
                 })]
               })
             })

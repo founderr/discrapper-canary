@@ -5,60 +5,62 @@ var i = n(735250),
   s = n(120356),
   o = n.n(s),
   a = n(481060),
-  l = n(729285),
-  u = n(150954),
-  _ = n(63063),
-  d = n(981631),
-  c = n(689938),
-  E = n(333110);
-let I = [{
-  getQuestion: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_1,
-  getAnswer: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_1
+  l = n(63063),
+  u = n(981631),
+  _ = n(689938),
+  c = n(333110);
+let d = [{
+  getQuestion: () => _.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_1,
+  getAnswer: () => _.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_1
 }, {
-  getQuestion: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_2,
-  getAnswer: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_2.format({
-    helpCenterUrl: _.Z.getArticleURL(d.BhN.GUILD_BOOSTING_FAQ)
+  getQuestion: () => _.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_2,
+  getAnswer: () => _.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_2.format({
+    helpCenterUrl: l.Z.getArticleURL(u.BhN.GUILD_BOOSTING_FAQ)
   })
 }, {
-  getQuestion: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_3,
-  getAnswer: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_3
+  getQuestion: () => _.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_3,
+  getAnswer: () => _.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_3
 }, {
-  getQuestion: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_4,
-  getAnswer: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_4
+  getQuestion: () => _.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_4,
+  getAnswer: () => _.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_4
 }];
 t.Z = function(e) {
   let {
     className: t
   } = e, [n, s] = r.useState(null);
   return (0, i.jsxs)("div", {
-    className: o()(E.wrapper, t),
+    className: o()(c.wrapper, t),
     children: [(0, i.jsx)(a.Heading, {
-      className: E.heading,
+      className: c.heading,
       variant: "heading-xxl/bold",
-      children: c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_HEADING
+      children: _.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_HEADING
     }), (0, i.jsx)("ul", {
-      className: E.list,
-      children: I.map((e, t) => {
+      className: c.list,
+      children: d.map((e, t) => {
         let r = n === t;
         return (0, i.jsxs)("div", {
-          className: E.listItem,
+          className: c.listItem,
           children: [(0, i.jsxs)(a.Clickable, {
-            className: o()(E.questionWrapper, {
-              [E.questionWrapperExpanded]: r
+            className: o()(c.questionWrapper, {
+              [c.questionWrapperExpanded]: r
             }),
             onClick: () => s(e => e === t ? null : t),
             tag: "li",
             children: [(0, i.jsx)(a.Text, {
-              className: E.question,
+              className: c.question,
               variant: "text-lg/normal",
               children: e.getQuestion()
-            }), r ? (0, i.jsx)(u.Z, {
-              className: E.questionIcon
-            }) : (0, i.jsx)(l.Z, {
-              className: E.questionIcon
+            }), r ? (0, i.jsx)(a.MinusIcon, {
+              size: "md",
+              color: "currentColor",
+              className: c.questionIcon
+            }) : (0, i.jsx)(a.PlusSmallIcon, {
+              size: "md",
+              color: "currentColor",
+              className: c.questionIcon
             })]
           }), r && (0, i.jsx)(a.Text, {
-            className: E.answer,
+            className: c.answer,
             color: "text-normal",
             variant: "text-md/normal",
             children: e.getAnswer()

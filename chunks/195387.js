@@ -7,14 +7,14 @@ n.d(t, {
 var i = n(735250);
 n(470079);
 var r = n(442837),
-  s = n(671290),
+  s = n(481060),
   o = n(906732),
   a = n(189432),
   l = n(189357),
   u = n(314897),
   _ = n(944486),
-  d = n(785717),
-  c = n(993409),
+  c = n(785717),
+  d = n(993409),
   E = n(176505),
   I = n(50493),
   T = n(689938);
@@ -27,12 +27,12 @@ function h(e) {
     onClose: S
   } = e, {
     trackUserProfileAction: f
-  } = (0, d.KZ)(), {
+  } = (0, c.KZ)(), {
     newestAnalyticsLocation: N
   } = (0, o.ZP)(), A = (0, r.e7)([u.default], () => u.default.getId() === (null == t ? void 0 : t.id)), m = (0, l.ms)(null != n ? n : null, !0), O = (0, r.e7)([_.Z], () => null != h ? h : _.Z.getChannelId(n, !0), [h, n]);
-  return null == n || !m || A ? null : (0, i.jsx)(c.Z, {
+  return null == n || !m || A ? null : (0, i.jsx)(d.Z, {
     variant: "banner",
-    icon: s.H,
+    icon: s.ModerationIcon,
     text: T.Z.Messages.GUILD_MEMBER_MOD_VIEW_TITLE,
     onClick: () => {
       f({

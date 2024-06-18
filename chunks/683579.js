@@ -32,8 +32,8 @@ function u(e) {
     children: [(0, n.jsx)("div", {
       className: d.actionIconContainer,
       children: (0, n.jsx)(E, {
-        width: 24,
-        height: 24,
+        size: "md",
+        color: "currentColor",
         className: d.actionIcon
       })
     }), (0, n.jsxs)("div", {

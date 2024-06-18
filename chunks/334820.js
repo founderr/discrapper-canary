@@ -1,13 +1,13 @@
 "use strict";
 t.d(s, {
   Fd: function() {
-    return I
+    return _
   },
   GN: function() {
-    return T
+    return I
   },
   rM: function() {
-    return _
+    return E
   }
 }), t(47120), t(653041);
 var n = t(735250),
@@ -17,14 +17,13 @@ var n = t(735250),
   r = t(512722),
   o = t.n(r),
   c = t(481060),
-  d = t(692437),
-  u = t(755930),
-  E = t(306787);
+  d = t(755930),
+  u = t(306787);
 
-function _(e, s) {
+function E(e, s) {
   let {
     expandableToggleColumnKey: t
-  } = s, i = (0, u.Yn)(e.map(e => ({
+  } = s, i = (0, d.Yn)(e.map(e => ({
     ...e,
     sort: !1,
     renderHeader() {
@@ -43,7 +42,7 @@ function _(e, s) {
     } = e;
     return {
       key: s,
-      cellClassName: E.toggleExpandColumn,
+      cellClassName: u.toggleExpandColumn,
       renderHeader: () => null,
       render(e, s) {
         if (o()(null != s, "Cell props missing; did you use the hook?"), e.isExpandedItem) return null;
@@ -52,12 +51,14 @@ function _(e, s) {
           onToggleExpandRow: i
         } = s, l = t.has(e.key);
         return (0, n.jsx)(c.Clickable, {
-          className: E.toggleExpandCell,
+          className: u.toggleExpandCell,
           onClick: () => i(e.key),
-          children: (0, n.jsx)(u.bL, {
-            children: (0, n.jsx)(d.Z, {
-              className: a()(E.caretIcon, {
-                [E.caretDownIcon]: l
+          children: (0, n.jsx)(d.bL, {
+            children: (0, n.jsx)(c.ChevronSmallRightIcon, {
+              size: "md",
+              color: "currentColor",
+              className: a()(u.caretIcon, {
+                [u.caretDownIcon]: l
               })
             })
           })
@@ -69,18 +70,18 @@ function _(e, s) {
   }), ...i]
 }
 
-function I(e) {
+function _(e) {
   let {
     renderExpandedContent: s,
     ...t
   } = e;
   return {
-    ...(0, u.wy)(t),
+    ...(0, d.wy)(t),
     renderExpandedContent: s
   }
 }
 
-function T(e, s) {
+function I(e, s) {
   let {
     generateExpandedRows: t
   } = s, n = function() {

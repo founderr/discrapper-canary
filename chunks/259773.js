@@ -6,48 +6,51 @@ var r = n(120356),
   o = n(481060),
   a = n(278297),
   l = n(138599),
-  u = n(897353),
-  _ = n(689938),
-  d = n(875170);
+  u = n(689938),
+  _ = n(875170);
 t.Z = e => {
   let {
     onPlay: t,
     externalURL: n,
     className: r,
     renderLinkComponent: c,
-    inactive: E,
-    messageId: I,
-    channelId: T
+    inactive: d,
+    messageId: E,
+    channelId: I
   } = e;
   return (0, i.jsx)(a.G.Consumer, {
     children: e => (0, i.jsxs)("div", {
-      className: s()(r, d.wrapper, {
-        [d.disableInteractions]: e.disableInteractions
+      className: s()(r, _.wrapper, {
+        [_.disableInteractions]: e.disableInteractions
       }),
-      children: [E && null == t ? (0, i.jsx)("div", {
-        className: d.iconWrapper,
-        children: (0, i.jsx)(u.Z, {
-          className: d.iconPlay
+      children: [d && null == t ? (0, i.jsx)("div", {
+        className: _.iconWrapper,
+        children: (0, i.jsx)(o.PlayIcon, {
+          size: "xs",
+          color: "currentColor",
+          className: _.iconPlay
         })
       }) : null, null != t ? (0, i.jsx)(o.Clickable, {
         onClick: t,
-        className: s()(d.iconWrapperActive),
-        tabIndex: E ? -1 : 0,
-        "aria-label": _.Z.Messages.PLAY,
-        children: (0, i.jsx)(u.Z, {
-          className: d.iconPlay
+        className: s()(_.iconWrapperActive),
+        tabIndex: d ? -1 : 0,
+        "aria-label": u.Z.Messages.PLAY,
+        children: (0, i.jsx)(o.PlayIcon, {
+          size: "xs",
+          color: "currentColor",
+          className: _.iconPlay
         })
       }) : null, null != n ? c({
         href: n,
         target: "_blank",
         rel: "noreferrer noopener",
-        className: d.iconWrapperActive,
+        className: _.iconWrapperActive,
         children: (0, i.jsx)(l.Z, {
-          "aria-label": _.Z.Messages.OPEN_LINK,
-          className: null != t ? d.iconExternalMargins : d.iconExternal
+          "aria-label": u.Z.Messages.OPEN_LINK,
+          className: null != t ? _.iconExternalMargins : _.iconExternal
         }),
-        messageId: I,
-        channelId: T
+        messageId: E,
+        channelId: I
       }) : null]
     })
   })

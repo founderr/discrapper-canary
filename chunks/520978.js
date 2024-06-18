@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return A
+    return f
   }
 });
 var i = n(735250);
@@ -13,83 +13,81 @@ var r = n(243814),
   l = n(69580),
   u = n(556084),
   _ = n(592125),
-  d = n(944486),
-  c = n(441957),
-  E = n(151785),
-  I = n(572004),
-  T = n(591759),
-  h = n(135431),
-  S = n(981631),
-  f = n(689938),
-  N = n(731208);
+  c = n(944486),
+  d = n(572004),
+  E = n(591759),
+  I = n(135431),
+  T = n(981631),
+  h = n(689938),
+  S = n(731208);
 
-function A(e) {
+function f(e) {
   var t;
   let {
     application: n,
-    className: A
-  } = e, m = _.Z.getChannel(d.Z.getChannelId()), {
-    appsInGDMEnabled: O,
-    availableApplications: R
+    className: f
+  } = e, N = _.Z.getChannel(c.Z.getChannelId()), {
+    appsInGDMEnabled: A,
+    availableApplications: m
   } = (0, u.j)({
-    channelId: null !== (t = null == m ? void 0 : m.id) && void 0 !== t ? t : S.lds
+    channelId: null !== (t = null == N ? void 0 : N.id) && void 0 !== t ? t : T.lds
   });
-  if (!(0, h.E)({
+  if (!(0, I.E)({
       customInstallUrl: n.customInstallUrl,
       installParams: n.installParams,
       integrationTypesConfig: n.integrationTypesConfig
     })) return null;
-  let C = O && null != R.find(e => e.id === (null == n ? void 0 : n.id)),
-    p = null != n.customInstallUrl && !T.Z.isDiscordUrl(n.customInstallUrl);
+  let O = A && null != m.find(e => e.id === (null == n ? void 0 : n.id)),
+    R = null != n.customInstallUrl && !E.Z.isDiscordUrl(n.customInstallUrl);
   return (0, i.jsx)(s.Button, {
     color: s.Button.Colors.PRIMARY,
     look: s.Button.Looks.FILLED,
     size: s.Button.Sizes.SMALL,
-    onContextMenu: I.wS ? e => {
+    onContextMenu: d.wS ? e => {
       (0, o.vq)(e, e => (0, i.jsx)(s.Menu, {
         navId: "component-button",
         onClose: o.Zy,
-        "aria-label": f.Z.Messages.APPLICATION_ADD_BUTTON_ACTIONS,
+        "aria-label": h.Z.Messages.APPLICATION_ADD_BUTTON_ACTIONS,
         onSelect: void 0,
         ...e,
         children: (0, i.jsx)(s.MenuGroup, {
           children: (0, i.jsx)(s.MenuItem, {
             id: "copy",
-            label: f.Z.Messages.APPLICATION_ADD_BUTTON_ACTIONS_COPY,
-            action: () => (0, I.JG)((0, a.J)(n))
+            label: h.Z.Messages.APPLICATION_ADD_BUTTON_ACTIONS_COPY,
+            action: () => (0, d.JG)((0, a.J)(n))
           })
         })
       }))
     } : void 0,
     onClick: () => {
-      C ? (0, l.openOAuth2Modal)({
+      O ? (0, l.openOAuth2Modal)({
         clientId: n.id,
         scopes: [r.x.APPLICATIONS_COMMANDS],
-        channelId: m.id,
+        channelId: N.id,
         disableGuildSelect: !0
-      }) : (0, h.L)({
+      }) : (0, I.L)({
         applicationId: n.id,
         customInstallUrl: n.customInstallUrl,
         installParams: n.installParams,
         integrationTypesConfig: n.integrationTypesConfig
       })
     },
-    className: A,
+    className: f,
     children: (0, i.jsxs)("div", {
-      className: N.applicationInstallButtonContent,
-      children: [!p && (0, i.jsx)(E.Z, {
-        width: 16,
-        height: 16
+      className: S.applicationInstallButtonContent,
+      children: [!R && (0, i.jsx)(s.CirclePlusIcon, {
+        size: "xs",
+        color: "currentColor"
       }), (0, i.jsx)(s.Spacer, {
         size: 4,
         horizontal: !0
       }), (0, i.jsx)("span", {
-        className: N.applicationInstallButtonText,
-        children: C ? f.Z.Messages.ADD : f.Z.Messages.APPLICATION_ADD_BUTTON
-      }), p && (0, i.jsx)(c.Z, {
-        className: N.launchIcon,
-        width: 16,
-        height: 16
+        className: S.applicationInstallButtonText,
+        children: O ? h.Z.Messages.ADD : h.Z.Messages.APPLICATION_ADD_BUTTON
+      }), R && (0, i.jsx)(s.WindowLaunchIcon, {
+        size: "xs",
+        color: "currentColor",
+        className: S.launchIcon
       })]
     })
   })

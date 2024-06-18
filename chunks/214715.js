@@ -12,8 +12,8 @@ let u = r.memo(function(e) {
     color: s = "text-normal",
     icon: u,
     className: _,
-    selected: d,
-    onMouseEnter: c,
+    selected: c,
+    onMouseEnter: d,
     onMouseLeave: E,
     onClick: I
   } = e, T = r.useMemo(() => {
@@ -21,16 +21,16 @@ let u = r.memo(function(e) {
   }, [I, t]);
   return (0, i.jsxs)(a.Clickable, {
     className: o()(l.trait, {
-      [l.selected]: d,
+      [l.selected]: c,
       [l.selectable]: null != T,
       [l.clickable]: null != T
     }, _),
-    onMouseEnter: c,
+    onMouseEnter: d,
     onMouseLeave: E,
     onClick: T,
     children: [null != u && (0, i.jsx)(u, {
-      height: 16,
-      width: 16
+      size: "xs",
+      color: "currentColor"
     }), (0, i.jsx)(a.Text, {
       variant: n,
       color: s,

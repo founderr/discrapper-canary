@@ -3,18 +3,18 @@ var i = n(735250);
 n(470079);
 var r = n(120356),
   s = n.n(r),
-  o = n(829968),
-  a = n(346656),
-  l = n(438071),
+  o = n(481060),
+  a = n(829968),
+  l = n(346656),
   u = n(474936),
   _ = n(689938),
-  d = n(458217);
-let c = {
-    XXSMALL: d.xxsmall,
-    XSMALL: d.xsmall,
-    SMALL: d.small,
-    MEDIUM: d.medium,
-    LARGE: d.large
+  c = n(458217);
+let d = {
+    XXSMALL: c.xxsmall,
+    XSMALL: c.xsmall,
+    SMALL: c.small,
+    MEDIUM: c.medium,
+    LARGE: c.large
   },
   E = e => {
     let t, {
@@ -24,7 +24,7 @@ let c = {
       pid: T,
       className: h,
       guildClassName: S,
-      size: f = c.MEDIUM
+      size: f = d.MEDIUM
     } = e;
     if (null != I && (t = function(e) {
         if (null == e) return null;
@@ -43,41 +43,43 @@ let c = {
         }
       }(I)), null != r && null == t && (t = r.getIconURL(function(e) {
         switch (e) {
-          case c.XXSMALL:
+          case d.XXSMALL:
             return 16;
-          case c.XSMALL:
+          case d.XSMALL:
             return 24;
-          case c.SMALL:
+          case d.SMALL:
             return 30;
-          case c.MEDIUM:
+          case d.MEDIUM:
             return 40;
-          case c.LARGE:
+          case d.LARGE:
             return 60;
           default:
             return 80
         }
-      }(f))), null == (t = (0, o.Z)(T, t)) && null != E) {
+      }(f))), null == (t = (0, a.Z)(T, t)) && null != E) {
       let e = function(e) {
         switch (e) {
-          case c.XSMALL:
-            return a.Z.Sizes.SMALLER;
-          case c.SMALL:
-            return a.Z.Sizes.SMALL;
-          case c.LARGE:
-            return a.Z.Sizes.LARGE;
+          case d.XSMALL:
+            return l.Z.Sizes.SMALLER;
+          case d.SMALL:
+            return l.Z.Sizes.SMALL;
+          case d.LARGE:
+            return l.Z.Sizes.LARGE;
           default:
-          case c.MEDIUM:
-            return a.Z.Sizes.MEDIUM
+          case d.MEDIUM:
+            return l.Z.Sizes.MEDIUM
         }
       }(f);
-      return (0, i.jsx)(a.Z, {
-        className: s()(d.gameIcon, S, h),
+      return (0, i.jsx)(l.Z, {
+        className: s()(c.gameIcon, S, h),
         guild: E,
         size: e
       })
     }
-    if (null == t) return (0, i.jsx)(l.Z, {
-      className: s()(d.gameIcon, f, h)
+    if (null == t) return (0, i.jsx)(o.UnknownGameIcon, {
+      size: "md",
+      color: "currentColor",
+      className: s()(c.gameIcon, f, h)
     });
     let N = null == r ? void 0 : r.name,
       A = null != N && "" !== N ? _.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({
@@ -86,7 +88,7 @@ let c = {
     return (0, i.jsx)("img", {
       alt: A,
       src: t,
-      className: s()(d.gameIcon, f, h)
+      className: s()(c.gameIcon, f, h)
     })
   };
-E.Sizes = c, t.Z = E
+E.Sizes = d, t.Z = E

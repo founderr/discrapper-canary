@@ -8,7 +8,7 @@ var i = n(735250);
 n(470079);
 var r = n(120356),
   s = n.n(r),
-  o = n(441957),
+  o = n(481060),
   a = n(871499),
   l = n(689938),
   u = n(188156);
@@ -19,11 +19,11 @@ function _(e) {
     onClosePopout: n,
     onOpenPopout: r,
     ..._
-  } = e, d = t ? l.Z.Messages.POPOUT_RETURN : l.Z.Messages.POPOUT_PLAYER;
+  } = e, c = t ? l.Z.Messages.POPOUT_RETURN : l.Z.Messages.POPOUT_PLAYER;
   return (0, i.jsx)(a.Z, {
-    label: d,
+    label: c,
     onClick: t ? n : r,
-    iconComponent: o.Z,
+    iconComponent: o.WindowLaunchIcon,
     iconClassName: s()({
       [u.popIn]: t
     }),

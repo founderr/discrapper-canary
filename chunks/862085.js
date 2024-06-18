@@ -29,8 +29,8 @@ function o(e) {
     children: [(0, n.jsx)("div", {
       className: r.actionIconContainer,
       children: (0, n.jsx)(I, {
-        width: 24,
-        height: 24,
+        size: "custom",
+        color: "currentColor",
         className: r.actionIcon
       })
     }), (0, n.jsxs)("div", {

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return g
+    return C
   }
 }), n(47120);
 var i = n(735250),
@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(911969),
   u = n(555573),
   _ = n(10718),
-  d = n(895924),
-  c = n(585483),
+  c = n(895924),
+  d = n(585483),
   E = n(499254),
   I = n(496158),
   T = n(676161),
@@ -37,8 +37,8 @@ function R(e) {
       channelId: o.id,
       command: l,
       section: _,
-      location: d.Vh.APP_LAUNCHER_APPLICATION_VIEW
-    }), c.S.dispatch(N.CkL.FOCUS_CHANNEL_TEXT_AREA, {
+      location: c.Vh.APP_LAUNCHER_APPLICATION_VIEW
+    }), d.S.dispatch(N.CkL.FOCUS_CHANNEL_TEXT_AREA, {
       channelId: o.id
     })
   }, [o, l, _]), h = (null !== (n = null === (t = l.options) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0) > 0;
@@ -57,10 +57,7 @@ function R(e) {
         lineClamp: 1,
         children: l.displayDescription
       })]
-    }), h ? (0, i.jsx)(s.F, {
-      width: 24,
-      height: 24
-    }) : (0, i.jsx)(C, {
+    }), h ? (0, i.jsx)(s.F, {}) : (0, i.jsx)(p, {
       channel: o,
       command: l,
       sectionName: I
@@ -68,12 +65,12 @@ function R(e) {
   })
 }
 
-function C(e) {
+function p(e) {
   let {
     channel: t,
     command: n,
     sectionName: s
-  } = e, l = (0, I.D)(t), [u, _] = r.useState(!1), d = r.useCallback(async e => {
+  } = e, l = (0, I.D)(t), [u, _] = r.useState(!1), c = r.useCallback(async e => {
     e.stopPropagation();
     try {
       await (0, S.Y$)({
@@ -88,7 +85,7 @@ function C(e) {
   }, [n, l, s]);
   return (0, i.jsxs)(a.Button, {
     type: "submit",
-    onClick: d,
+    onClick: c,
     disabled: u,
     size: a.ButtonSizes.ICON,
     color: a.Button.Colors.PRIMARY,
@@ -99,14 +96,13 @@ function C(e) {
       color: "redesign-button-primary-text",
       children: m.Z.Messages.SEND
     }), (0, i.jsx)(o.U, {
-      width: 16,
-      height: 16,
+      size: "xs",
       color: a.tokens.colors.REDESIGN_BUTTON_PRIMARY_TEXT
     })]
   })
 }
 
-function p(e) {
+function g(e) {
   let {
     channel: t,
     commands: n,
@@ -134,7 +130,7 @@ function p(e) {
   })
 }
 
-function g(e) {
+function C(e) {
   var t;
   let {
     channel: n,
@@ -143,14 +139,14 @@ function g(e) {
   } = e, {
     filterSection: a,
     commandsByActiveSection: u,
-    sectionDescriptors: d
+    sectionDescriptors: c
   } = _.wi(n, {
     commandType: l.yU.CHAT
   }, {
     placeholderCount: 0,
     limit: A.tn,
     includeFrecency: !0
-  }), c = null !== (t = d.find(e => e.id === s.id)) && void 0 !== t ? t : null, {
+  }), d = null !== (t = c.find(e => e.id === s.id)) && void 0 !== t ? t : null, {
     sortOrder: E,
     setSortOrder: I,
     commands: S,
@@ -169,15 +165,15 @@ function g(e) {
   });
   return (0, i.jsxs)("ul", {
     className: O.contentContainer,
-    children: [(0, i.jsx)(p, {
+    children: [(0, i.jsx)(g, {
       channel: n,
-      section: c,
+      section: d,
       commands: R,
       headerName: m.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
       sectionName: o
-    }), (0, i.jsx)(p, {
+    }), (0, i.jsx)(g, {
       channel: n,
-      section: c,
+      section: d,
       commands: S,
       headerName: m.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
       sectionName: o,

@@ -9,11 +9,7 @@ n(470079);
 var o = n(120356),
   a = n.n(o),
   l = n(481060),
-  u = n(263704),
-  _ = n(696202),
-  d = n(41542),
-  c = n(759231),
-  E = n(364366);
+  u = n(364366);
 (i = r || (r = {}))[i.WARNING = 0] = "WARNING", i[i.INFO = 1] = "INFO", i[i.ERROR = 2] = "ERROR", i[i.POSITIVE = 3] = "POSITIVE";
 t.Z = function(e) {
   let {
@@ -22,38 +18,38 @@ t.Z = function(e) {
     className: i,
     textColor: r = "text-normal",
     textVariant: o = "text-sm/medium"
-  } = e, I = function(e) {
+  } = e, _ = function(e) {
     switch (e) {
       case 0:
-        return c.Z;
+        return l.CircleExclamationPointIcon;
       case 1:
-        return d.Z;
+        return l.CircleInformationIcon;
       case 2:
-        return _.Z;
+        return l.CircleXIcon;
       case 3:
-        return u.Z
+        return l.CheckmarkLargeIcon
     }
-  }(n), T = function(e) {
+  }(n), c = function(e) {
     switch (e) {
       case 0:
-        return E.warning;
+        return u.warning;
       case 1:
-        return E.info;
+        return u.info;
       case 2:
-        return E.error;
+        return u.error;
       case 3:
-        return E.positive
+        return u.positive
     }
   }(n);
   return (0, s.jsxs)("div", {
-    className: a()(E.container, T, i),
+    className: a()(u.container, c, i),
     children: [(0, s.jsx)("div", {
-      className: E.iconDiv,
-      children: (0, s.jsx)(I, {
-        className: E.icon
+      className: u.iconDiv,
+      children: (0, s.jsx)(_, {
+        className: u.icon
       })
     }), (0, s.jsx)(l.Text, {
-      className: E.text,
+      className: u.text,
       color: r,
       variant: o,
       children: t

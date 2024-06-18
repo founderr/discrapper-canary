@@ -30,16 +30,16 @@ function _(e) {
   if (null == m) return null;
   let {
     headerText: g,
-    descriptionText: x,
-    icon: C
+    descriptionText: C,
+    icon: x
   } = m;
   return (0, n.jsxs)("div", {
     className: E.actionContainer,
     children: [(0, n.jsx)("div", {
       className: E.actionIconContainer,
-      children: (0, n.jsx)(C, {
-        width: 24,
-        height: 24,
+      children: (0, n.jsx)(x, {
+        size: "md",
+        color: "currentColor",
         className: E.actionIcon
       })
     }), (0, n.jsxs)("div", {
@@ -50,7 +50,7 @@ function _(e) {
       }), (0, n.jsx)(l.Text, {
         color: "interactive-normal",
         variant: "text-xs/medium",
-        children: x
+        children: C
       }), I && (0, n.jsxs)(l.Text, {
         color: "text-muted",
         variant: "text-xs/medium",

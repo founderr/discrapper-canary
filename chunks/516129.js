@@ -1,7 +1,7 @@
 "use strict";
 t.d(s, {
   Z: function() {
-    return N
+    return T
   }
 });
 var n = t(735250);
@@ -9,45 +9,46 @@ t(470079);
 var i = t(120356),
   l = t.n(i),
   a = t(780384),
-  r = t(410030),
-  o = t(44315),
-  c = t(586791),
-  d = t(54264),
-  u = t(208567),
-  E = t(981631),
-  _ = t(221272);
-let I = E.Ilk.PRIMARY_400,
-  T = E.Ilk.PRIMARY_500;
+  r = t(481060),
+  o = t(410030),
+  c = t(44315),
+  d = t(208567),
+  u = t(981631),
+  E = t(221272);
+let _ = u.Ilk.PRIMARY_400,
+  I = u.Ilk.PRIMARY_500;
 
-function N(e) {
+function T(e) {
   let {
     enabled: s,
     imageClassName: t,
     iconWrapperClassName: i,
-    ...E
-  } = e, N = (0, r.ZP)(), m = (0, a.wj)(N) ? I : T, S = {
+    ...u
+  } = e, T = (0, o.ZP)(), N = (0, a.wj)(T) ? _ : I, m = {
     height: 18,
     width: 18,
-    color: (0, o.Lq)(m)
+    color: (0, c.Lq)(N)
   };
-  return (0, n.jsx)(u.Z, {
+  return (0, n.jsx)(d.Z, {
     className: l()({
-      [_.avatarUploader]: s,
-      [_.avatarUploaderDisabled]: !s
+      [E.avatarUploader]: s,
+      [E.avatarUploaderDisabled]: !s
     }),
-    imageClassName: l()(t, _.avatarUploaderInnerSquare, {
-      [_.avatarUploaderInnerSquareDisabled]: !s
+    imageClassName: l()(t, E.avatarUploaderInnerSquare, {
+      [E.avatarUploaderInnerSquareDisabled]: !s
     }),
-    icon: null != E.image && "" !== E.image ? (0, n.jsx)(c.Z, {
-      ...S
-    }) : (0, n.jsx)(d.Z, {
-      ...S
+    icon: null != u.image && "" !== u.image ? (0, n.jsx)(r.PencilIcon, {
+      size: "custom",
+      ...m
+    }) : (0, n.jsx)(r.ImagePlusIcon, {
+      size: "custom",
+      ...m
     }),
-    iconClassName: l()(_.avatarUploadIcon, _.hideDefaultIcon),
+    iconClassName: l()(E.avatarUploadIcon, E.hideDefaultIcon),
     iconWrapperClassName: i,
     showIcon: !0,
     showIconDisabled: !0,
     hideSize: !0,
-    ...E
+    ...u
   })
 }

@@ -4,12 +4,10 @@ var i, r, s, o = n(735250),
   l = n(120356),
   u = n.n(l),
   _ = n(481060),
-  d = n(381238),
-  c = n(779863),
-  E = n(806519),
-  I = n(52244);
+  c = n(806519),
+  d = n(52244);
 
-function T(e, t, n) {
+function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -17,14 +15,14 @@ function T(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(i = r || (r = {}))[i.OUTGOING = 0] = "OUTGOING", i[i.INCOMING = 1] = "INCOMING";
-class h extends(s = a.PureComponent) {
+class I extends(s = a.PureComponent) {
   renderStatus() {
     let {
       muted: e,
       deafen: t
-    } = this.props, n = t ? d.Z : c.Z;
+    } = this.props, n = t ? _.HeadphonesSlashIcon : _.MicrophoneSlashIcon;
     return e || t ? (0, o.jsx)(n, {
-      className: I.status
+      className: d.status
     }, "status") : null
   }
   renderBorder() {
@@ -32,8 +30,8 @@ class h extends(s = a.PureComponent) {
       speaking: e
     } = this.props;
     return (0, o.jsx)("div", {
-      className: u()(I.border, {
-        [I.speaking]: e
+      className: u()(d.border, {
+        [d.speaking]: e
       })
     }, "border")
   }
@@ -61,24 +59,24 @@ class h extends(s = a.PureComponent) {
       muted: s,
       deafen: a,
       size: l,
-      renderIcon: d
-    } = this.props, c = (0, _.getAvatarSize)(l), T = (0, o.jsx)("img", {
+      renderIcon: E
+    } = this.props, I = (0, _.getAvatarSize)(l), T = (0, o.jsx)("img", {
       src: e,
       alt: " ",
-      className: u()(I.voiceAvatar, r, {
-        [I.ringingOutgoing]: n && 0 === i
+      className: u()(d.voiceAvatar, r, {
+        [d.ringingOutgoing]: n && 0 === i
       })
     });
     if (t) return T;
-    let h = E.QS.AVATAR_DEFAULT;
-    return null != d ? h = l === _.AvatarSizes.SIZE_32 ? E.QS.AVATAR_CALL_ICON_32 : E.QS.AVATAR_CALL_ICON : (s || a) && (h = E.QS.AVATAR_VOICE_CALL_80), (0, o.jsxs)("div", {
-      className: I.callAvatarMaskContainer,
-      children: [(0, o.jsxs)(E.ZP, {
-        className: I.callAvatarMask,
-        width: c,
-        height: c,
+    let h = c.QS.AVATAR_DEFAULT;
+    return null != E ? h = l === _.AvatarSizes.SIZE_32 ? c.QS.AVATAR_CALL_ICON_32 : c.QS.AVATAR_CALL_ICON : (s || a) && (h = c.QS.AVATAR_VOICE_CALL_80), (0, o.jsxs)("div", {
+      className: d.callAvatarMaskContainer,
+      children: [(0, o.jsxs)(c.ZP, {
+        className: d.callAvatarMask,
+        width: I,
+        height: I,
         mask: h,
-        children: [null == d ? void 0 : d(), T]
+        children: [null == E ? void 0 : E(), T]
       }), this.renderMask()]
     })
   }
@@ -91,24 +89,24 @@ class h extends(s = a.PureComponent) {
       className: r,
       ringingType: s,
       ringing: a
-    } = this.props, l = u()(I.wrapper, {
-      [I.clickable]: null != t,
-      [I.ringingOutgoing]: a && 0 === s,
-      [I.ringingIncoming]: a && 1 === s
-    }, r), d = (0, _.getAvatarSize)(e), c = {
-      height: d,
-      width: d,
+    } = this.props, l = u()(d.wrapper, {
+      [d.clickable]: null != t,
+      [d.ringingOutgoing]: a && 0 === s,
+      [d.ringingIncoming]: a && 1 === s
+    }, r), c = (0, _.getAvatarSize)(e), E = {
+      height: c,
+      width: c,
       ...n
     };
     return (0, o.jsx)("div", {
-      style: c,
+      style: E,
       onContextMenu: i,
       className: l,
       children: this.renderVoiceCallAvatar()
     })
   }
 }
-T(h, "defaultProps", {
+E(I, "defaultProps", {
   size: _.AvatarSizes.SIZE_80,
   ringingType: 0,
   speaking: !1,
@@ -120,4 +118,4 @@ T(h, "defaultProps", {
   mirror: !1,
   disabled: !1,
   paused: !1
-}), T(h, "RingingType", r), t.Z = h
+}), E(I, "RingingType", r), t.Z = I

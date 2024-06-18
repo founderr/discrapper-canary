@@ -10,37 +10,38 @@ var i = n(735250),
   o = n.n(s),
   a = n(481060),
   l = n(278297),
-  u = n(897353),
-  _ = n(689938),
-  d = n(954886);
+  u = n(689938),
+  _ = n(954886);
 
 function c(e) {
   let {
     onPlay: t,
     className: n,
     inactive: s
-  } = e, c = r.useRef(null), E = (0, i.jsx)("div", {
-    className: d.iconWrapper,
+  } = e, c = r.useRef(null), d = (0, i.jsx)("div", {
+    className: _.iconWrapper,
     ref: c,
-    children: (0, i.jsx)(u.Z, {
-      className: o()(d.icon)
+    children: (0, i.jsx)(a.PlayIcon, {
+      size: "xs",
+      color: "currentColor",
+      className: o()(_.icon)
     })
   });
   return (0, i.jsx)(l.G.Consumer, {
     children: e => s || null == t ? (0, i.jsx)("div", {
-      className: d.cover,
-      children: E
+      className: _.cover,
+      children: d
     }) : (0, i.jsx)(a.Clickable, {
-      className: o()(n, d.cover, {
-        [d.active]: !e.disableInteractions
+      className: o()(n, _.cover, {
+        [_.active]: !e.disableInteractions
       }),
       onClick: t,
       tabIndex: 0,
-      "aria-label": _.Z.Messages.PLAY,
+      "aria-label": u.Z.Messages.PLAY,
       focusProps: {
         ringTarget: c
       },
-      children: E
+      children: d
     })
   })
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return A
+    return f
   }
 }), n(47120);
 var i = n(735250);
@@ -13,68 +13,70 @@ var r = n(442837),
   l = n(872810),
   u = n(40851),
   _ = n(102172),
-  d = n(199902),
-  c = n(592125),
-  E = n(167580),
-  I = n(761374),
-  T = n(585483),
-  h = n(915863),
-  S = n(981631),
-  f = n(689938),
-  N = n(663237);
+  c = n(199902),
+  d = n(592125),
+  E = n(585483),
+  I = n(915863),
+  T = n(981631),
+  h = n(689938),
+  S = n(663237);
 
-function A(e) {
+function f(e) {
   let {
     isCurrentUser: t,
     color: n,
-    look: A,
-    applicationStream: m,
-    onAction: O
+    look: f,
+    applicationStream: N,
+    onAction: A
   } = e, {
-    activeStream: R,
-    watchingOtherStream: C
-  } = (0, r.cj)([d.Z], () => ({
-    activeStream: d.Z.getActiveStreamForApplicationStream(m),
-    watchingOtherStream: null != m && d.Z.getAllActiveStreamsForChannel(m.channelId).filter(e => {
+    activeStream: m,
+    watchingOtherStream: O
+  } = (0, r.cj)([c.Z], () => ({
+    activeStream: c.Z.getActiveStreamForApplicationStream(N),
+    watchingOtherStream: null != N && c.Z.getAllActiveStreamsForChannel(N.channelId).filter(e => {
       let {
         ownerId: t
       } = e;
-      return t !== m.ownerId
+      return t !== N.ownerId
     }).length > 0
-  })), p = (0, r.e7)([c.Z], () => c.Z.getChannel(null == m ? void 0 : m.channelId)), [g, L] = (0, _.wq)(p), v = (0, u.Aq)(), D = null != R && null != m && R.state !== S.jm8.ENDED && R.ownerId === m.ownerId, M = e => {
-    if (null != m) null == O || O(), a.default.selectVoiceChannel(m.channelId), !D && (0, l.iV)(m, {
+  })), R = (0, r.e7)([d.Z], () => d.Z.getChannel(null == N ? void 0 : N.channelId)), [p, g] = (0, _.wq)(R), C = (0, u.Aq)(), v = null != m && null != N && m.state !== T.jm8.ENDED && m.ownerId === N.ownerId, L = e => {
+    if (null != N) null == A || A(), a.default.selectVoiceChannel(N.channelId), !v && (0, l.iV)(N, {
       forceMultiple: e
-    }), v.dispatch(S.CkL.POPOUT_CLOSE), T.S.dispatch(S.CkL.MODAL_CLOSE), o.Z.popAll()
+    }), C.dispatch(T.CkL.POPOUT_CLOSE), E.S.dispatch(T.CkL.MODAL_CLOSE), o.Z.popAll()
   };
-  if (null == m) return null;
-  let P = (0, _.P9)(L);
-  t ? P = f.Z.Messages.WATCH_STREAM_STREAMING : D && (P = f.Z.Messages.WATCH_STREAM_WATCHING);
-  let y = {
+  if (null == N) return null;
+  let D = (0, _.P9)(g);
+  t ? D = h.Z.Messages.WATCH_STREAM_STREAMING : v && (D = h.Z.Messages.WATCH_STREAM_WATCHING);
+  let M = {
     color: n,
-    look: A
+    look: f
   };
   return (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsxs)(h.Z, {
-      disabled: t || D || !g,
-      onClick: () => M(!1),
-      ...y,
+    children: [(0, i.jsxs)(I.Z, {
+      disabled: t || v || !p,
+      onClick: () => L(!1),
+      ...M,
       fullWidth: !0,
-      children: [(0, i.jsx)(I.Z, {
-        className: N.streamIcon
-      }), P]
-    }, "play"), C && !D ? (0, i.jsx)(s.Tooltip, {
-      text: f.Z.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
-      children: e => (0, i.jsx)(h.Z, {
+      children: [(0, i.jsx)(s.ScreenArrowIcon, {
+        size: "md",
+        color: "currentColor",
+        className: S.streamIcon
+      }), D]
+    }, "play"), O && !v ? (0, i.jsx)(s.Tooltip, {
+      text: h.Z.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
+      children: e => (0, i.jsx)(I.Z, {
         ...e,
         onClick: () => {
           var t;
-          null === (t = e.onClick) || void 0 === t || t.call(e), M(!0)
+          null === (t = e.onClick) || void 0 === t || t.call(e), L(!0)
         },
-        ...y,
-        className: N.iconButton,
-        size: N.iconButtonSize,
-        children: (0, i.jsx)(E.Z, {
-          className: N.iconSize
+        ...M,
+        className: S.iconButton,
+        size: S.iconButtonSize,
+        children: (0, i.jsx)(s.EyePlusIcon, {
+          size: "xs",
+          color: "currentColor",
+          className: S.iconSize
         })
       })
     }) : null]

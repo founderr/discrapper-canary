@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return _
   }
 });
 var i = n(735250);
@@ -9,53 +9,52 @@ n(470079);
 var r = n(120356),
   s = n.n(r),
   o = n(481060),
-  a = n(432247),
-  l = n(5192),
-  u = n(829820),
-  _ = n(22387);
+  a = n(5192),
+  l = n(829820),
+  u = n(22387);
 
-function d(e) {
+function _(e) {
   let {
     activity: t,
     user: n,
     channelId: r,
-    guildId: d,
+    guildId: _,
     source: c,
-    size: E,
-    look: I,
-    color: T,
-    className: h,
-    onAction: S
+    size: d,
+    look: E,
+    color: I,
+    className: T,
+    onAction: h
   } = e, {
-    tooltip: f,
-    loading: N,
-    disabled: A,
-    onClick: m
-  } = (0, u.Fe)(t, n, c, l.ZP.getNickname(d, r, n)), O = () => {
-    null == S || S(), m()
+    tooltip: S,
+    loading: f,
+    disabled: N,
+    onClick: A
+  } = (0, l.Fe)(t, n, c, a.ZP.getNickname(_, r, n)), m = () => {
+    null == h || h(), A()
   };
   return (0, i.jsx)(o.Tooltip, {
-    text: f,
+    text: S,
     children: e => {
       let {
         onMouseEnter: n,
         onMouseLeave: r
       } = e;
       return (0, i.jsx)(o.Button, {
-        size: E,
-        className: s()(_.syncButton, h),
-        innerClassName: _.syncButtonInner,
-        look: I,
-        color: T,
-        onClick: O,
+        size: d,
+        className: s()(u.syncButton, T),
+        innerClassName: u.syncButtonInner,
+        look: E,
+        color: I,
+        onClick: m,
         onMouseEnter: n,
         onMouseLeave: r,
-        disabled: A,
-        submitting: N,
-        "aria-label": null != f ? f : t.name,
-        children: (0, i.jsx)(a.Z, {
-          width: 16,
-          height: 16
+        disabled: N,
+        submitting: f,
+        "aria-label": null != S ? S : t.name,
+        children: (0, i.jsx)(o.UserPlayIcon, {
+          size: "xs",
+          color: "currentColor"
         })
       })
     }

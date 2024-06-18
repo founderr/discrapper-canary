@@ -1,13 +1,13 @@
 "use strict";
 t.d(s, {
   av: function() {
-    return P
+    return v
   },
   bL: function() {
-    return D
+    return A
   },
   kA: function() {
-    return Z
+    return p
   }
 }), t(653041), t(47120);
 var n, i, l = t(735250),
@@ -20,171 +20,180 @@ var n, i, l = t(735250),
   E = t(481060),
   _ = t(766434),
   I = t(151011),
-  T = t(441674),
-  N = t(696202),
-  m = t(41542),
-  S = t(964309),
-  h = t(692437),
-  g = t(937615),
-  x = t(289393),
-  C = t(264451),
-  R = t(759178),
-  L = t(462087),
-  O = t(685201),
-  A = t(981631),
-  p = t(198139),
-  M = t(689938),
-  f = t(225278);
+  T = t(937615),
+  N = t(289393),
+  m = t(264451),
+  S = t(759178),
+  h = t(462087),
+  g = t(685201),
+  C = t(981631),
+  x = t(198139),
+  R = t(689938),
+  L = t(225278);
 (i = n || (n = {})).DROPDOWN = "dropdown", i.PERIOD = "period", i.SUBSCRIBERS = "subscribers", i.AMOUNT = "amount", i.STATUS = "status";
-let v = (e, s, t, n) => {
+let O = (e, s, t, n) => {
     let i = null != n ? d()(n).add(15, "days").toISOString() : void 0,
-      a = (0, C.Zo)(i, "MMM D");
+      a = (0, m.Zo)(i, "MMM D");
     switch (e) {
-      case p.x_.OPEN:
+      case x.x_.OPEN:
         return (0, l.jsxs)(l.Fragment, {
-          children: [null != a ? M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING_OR_SCHEDULED_WITH_DATE.format({
+          children: [null != a ? R.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING_OR_SCHEDULED_WITH_DATE.format({
             payoutDate: a
-          }) : M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING, (0, l.jsx)(L.Z, {
-            className: f.statusScheduledIcon
+          }) : R.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING, (0, l.jsx)(h.Z, {
+            className: L.statusScheduledIcon
           })]
         });
-      case p.x_.CANCELED:
+      case x.x_.CANCELED:
         return (0, l.jsxs)(l.Fragment, {
-          children: [M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_CANCELLED, (0, l.jsx)(N.Z, {
-            className: f.statusErrorIcon
+          children: [R.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_CANCELLED, (0, l.jsx)(E.CircleXIcon, {
+            size: "md",
+            color: "currentColor",
+            className: L.statusErrorIcon
           })]
         });
-      case p.x_.PAYOUT_DEFERRED:
-        if ((null == t ? void 0 : t.includes(p.XL.PAYOUT_SEIZED)) === !0) return (0, l.jsxs)(l.Fragment, {
-          children: [M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_CANCELLED, (0, l.jsx)(N.Z, {
-            className: f.statusErrorIcon
+      case x.x_.PAYOUT_DEFERRED:
+        if ((null == t ? void 0 : t.includes(x.XL.PAYOUT_SEIZED)) === !0) return (0, l.jsxs)(l.Fragment, {
+          children: [R.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_CANCELLED, (0, l.jsx)(E.CircleXIcon, {
+            size: "md",
+            color: "currentColor",
+            className: L.statusErrorIcon
           })]
         });
         return (0, l.jsxs)(l.Fragment, {
-          children: [M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_DEFERRED, (0, l.jsx)(O.Z, {
-            className: f.statusDeferredIcon
+          children: [R.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_DEFERRED, (0, l.jsx)(g.Z, {
+            className: L.statusDeferredIcon
           })]
         })
     }
     switch (s) {
-      case p.jw.MANUAL:
-      case p.jw.OPEN:
-      case p.jw.PENDING:
-      case p.jw.PROCESSING:
-      case p.jw.SUBMITTED:
-      case p.jw.PENDING_FUNDS:
-      case p.jw.CANCELED:
-      case p.jw.ERROR:
+      case x.jw.MANUAL:
+      case x.jw.OPEN:
+      case x.jw.PENDING:
+      case x.jw.PROCESSING:
+      case x.jw.SUBMITTED:
+      case x.jw.PENDING_FUNDS:
+      case x.jw.CANCELED:
+      case x.jw.ERROR:
         return (0, l.jsxs)(l.Fragment, {
-          children: [null != a ? M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING_OR_SCHEDULED_WITH_DATE.format({
+          children: [null != a ? R.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING_OR_SCHEDULED_WITH_DATE.format({
             payoutDate: a
-          }) : M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_SCHEDULED, (0, l.jsx)(L.Z, {
-            className: f.statusScheduledIcon
+          }) : R.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_SCHEDULED, (0, l.jsx)(h.Z, {
+            className: L.statusScheduledIcon
           })]
         });
-      case p.jw.PAID:
+      case x.jw.PAID:
         return (0, l.jsxs)(l.Fragment, {
-          children: [M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PAID, (0, l.jsx)(T.Z, {
-            className: f.statusPaidIcon
+          children: [R.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PAID, (0, l.jsx)(E.CircleCheckIcon, {
+            size: "md",
+            color: "currentColor",
+            className: L.statusPaidIcon
           })]
         });
-      case p.jw.DEFERRED:
-      case p.jw.DEFERRED_INTERNAL:
-      case p.jw.REJECTED:
-      case p.jw.RISK_REVIEW:
+      case x.jw.DEFERRED:
+      case x.jw.DEFERRED_INTERNAL:
+      case x.jw.REJECTED:
+      case x.jw.RISK_REVIEW:
         return (0, l.jsxs)(l.Fragment, {
-          children: [R.Z.getStatusErrorText(s), (0, l.jsx)(N.Z, {
-            className: f.statusErrorIcon
+          children: [S.Z.getStatusErrorText(s), (0, l.jsx)(E.CircleXIcon, {
+            size: "md",
+            color: "currentColor",
+            className: L.statusErrorIcon
           })]
         })
     }
     return null
   },
-  D = e => {
+  A = e => {
     let {
       children: s,
       className: t
     } = e;
     return (0, l.jsx)("div", {
-      className: o()(f.cell, t),
+      className: o()(L.cell, t),
       children: s
     })
   },
-  Z = e => {
+  p = e => {
     let {
       children: s
     } = e;
     return (0, l.jsx)("div", {
-      className: f.cell,
-      children: (0, g.T4)(null != s ? s : 0, A.pKx.USD)
+      className: L.cell,
+      children: (0, T.T4)(null != s ? s : 0, C.pKx.USD)
     })
   },
-  j = e => {
+  M = e => {
     let {
       children: s
     } = e;
-    return (0, l.jsx)(D, {
-      className: f.statusCell,
+    return (0, l.jsx)(A, {
+      className: L.statusCell,
       children: null != s ? s : "-"
     })
   },
-  U = e => {
+  f = e => {
     let {
       children: s
     } = e;
-    return (0, l.jsx)(D, {
-      className: f.periodCell,
+    return (0, l.jsx)(A, {
+      className: L.periodCell,
       children: d()(s).utc().format("MMMM YYYY")
     })
   },
-  G = e => {
+  D = e => {
     var s;
     let {
       listingId: t
-    } = e, n = (0, u.e7)([x.Z], () => x.Z.getSubscriptionListing(t)), i = null !== (s = null == n ? void 0 : n.name) && void 0 !== s ? s : "[".concat(M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_TIER_DELETED, "]");
-    return (0, l.jsx)(D, {
+    } = e, n = (0, u.e7)([N.Z], () => N.Z.getSubscriptionListing(t)), i = null !== (s = null == n ? void 0 : n.name) && void 0 !== s ? s : "[".concat(R.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_TIER_DELETED, "]");
+    return (0, l.jsx)(A, {
       children: i
     })
   },
-  P = e => {
+  v = e => {
     let {
       children: s
     } = e;
-    return (0, l.jsxs)(D, {
-      className: f.subscribersCell,
-      children: [null != s ? s : "-", " ", (0, l.jsx)(S.Z, {
-        className: f.subscribersIcon,
+    return (0, l.jsxs)(A, {
+      className: L.subscribersCell,
+      children: [null != s ? s : "-", " ", (0, l.jsx)(E.UserIcon, {
+        size: "md",
+        color: "currentColor",
+        className: L.subscribersIcon,
         "aria-hidden": !0
       })]
     })
   },
-  b = () => {
+  j = () => {
     let e = (0, l.jsx)(E.Tooltip, {
-      text: M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_AMOUNT_DISCLAIMER,
-      children: e => (0, l.jsx)(m.Z, {
-        className: f.amountDisclaimer,
+      text: R.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_AMOUNT_DISCLAIMER,
+      children: e => (0, l.jsx)(E.CircleInformationIcon, {
+        size: "xs",
+        color: "currentColor",
+        className: L.amountDisclaimer,
         ...e
       })
     });
     return (0, l.jsxs)(l.Fragment, {
-      children: [M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_AMOUNT, " ", e]
+      children: [R.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_AMOUNT, " ", e]
     })
   },
-  B = () => {
+  Z = () => {
     let e = (0, l.jsx)(E.Tooltip, {
-      text: M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_NEXT_PAYMENT_DISCLAIMER,
-      children: e => (0, l.jsx)(m.Z, {
-        className: f.statusDisclaimer,
+      text: R.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_NEXT_PAYMENT_DISCLAIMER,
+      children: e => (0, l.jsx)(E.CircleInformationIcon, {
+        size: "xs",
+        color: "currentColor",
+        className: L.statusDisclaimer,
         ...e
       })
     });
     return (0, l.jsxs)(l.Fragment, {
-      children: [M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS, " ", e]
+      children: [R.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS, " ", e]
     })
   },
-  y = [{
+  U = [{
     key: "dropdown",
-    cellClassName: f.toggleExpandColumn,
+    cellClassName: L.toggleExpandColumn,
     renderHeader: () => null,
     render(e, s) {
       let {
@@ -192,45 +201,47 @@ let v = (e, s, t, n) => {
         onToggleExpandRow: n
       } = s, i = t.has(e.key);
       return (0, l.jsx)(E.Clickable, {
-        className: o()(f.cell, f.toggleExpandCell),
+        className: o()(L.cell, L.toggleExpandCell),
         onClick: () => n(e.key),
-        children: (0, l.jsx)(h.Z, {
-          className: o()(f.caretIcon, {
-            [f.caretDownIcon]: i
+        children: (0, l.jsx)(E.ChevronSmallRightIcon, {
+          size: "md",
+          color: "currentColor",
+          className: o()(L.caretIcon, {
+            [L.caretDownIcon]: i
           })
         })
       })
     }
   }, {
     key: "period",
-    cellClassName: f.periodColumn,
-    renderHeader: () => M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_PERIOD,
+    cellClassName: L.periodColumn,
+    renderHeader: () => R.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_PERIOD,
     render(e, s) {
       let {
         expandedRows: t
-      } = s, n = [(0, l.jsx)(U, {
+      } = s, n = [(0, l.jsx)(f, {
         children: e.periodStartingAt
       }, e.key)];
       if (t.has(e.key))
-        for (let s in e.ppgs) n.push((0, l.jsx)(G, {
+        for (let s in e.ppgs) n.push((0, l.jsx)(D, {
           listingId: s
         }, s));
       return n
     }
   }, {
     key: "amount",
-    cellClassName: o()(f.amountColumn, f.cellAlignRight),
-    renderHeader: () => (0, l.jsx)(b, {}),
+    cellClassName: o()(L.amountColumn, L.cellAlignRight),
+    renderHeader: () => (0, l.jsx)(j, {}),
     render(e, s) {
       let {
         expandedRows: t
-      } = s, n = [(0, l.jsx)(Z, {
+      } = s, n = [(0, l.jsx)(p, {
         children: e.amount
       }, e.key)];
       if (t.has(e.key))
         for (let s in e.ppgs) {
           let t = e.ppgs[s];
-          n.push((0, l.jsx)(Z, {
+          n.push((0, l.jsx)(p, {
             children: null == t ? void 0 : t.amount
           }, s))
         }
@@ -238,8 +249,8 @@ let v = (e, s, t, n) => {
     }
   }, {
     key: "status",
-    cellClassName: o()(f.statusColumn, f.cellAlignRight),
-    renderHeader: () => (0, l.jsx)(B, {}),
+    cellClassName: o()(L.statusColumn, L.cellAlignRight),
+    renderHeader: () => (0, l.jsx)(Z, {}),
     render(e) {
       let {
         ppgStatus: s,
@@ -247,8 +258,8 @@ let v = (e, s, t, n) => {
         ppgDeferralReasons: n,
         periodEndDate: i
       } = (0, _.j0)(e);
-      return (0, l.jsx)(j, {
-        children: v(s, t, n, i)
+      return (0, l.jsx)(M, {
+        children: O(s, t, n, i)
       })
     }
   }];
@@ -257,13 +268,13 @@ s.ZP = e => {
     payoutsByPeriod: s
   } = e, [t, n] = a.useState(new Set);
   return (0, l.jsx)("div", {
-    className: f.tableContainer,
+    className: L.tableContainer,
     children: (0, l.jsx)(I.Z, {
-      columns: y,
+      columns: U,
       data: s,
-      className: f.table,
-      rowClassName: f.row,
-      headerClassName: f.header,
+      className: L.table,
+      rowClassName: L.row,
+      headerClassName: L.header,
       cellProps: {
         onToggleExpandRow: e => {
           n(s => {

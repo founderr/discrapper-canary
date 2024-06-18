@@ -1,10 +1,10 @@
 "use strict";
 t.d(s, {
   T: function() {
-    return eE
+    return el
   },
   Z: function() {
-    return ed
+    return en
   }
 }), t(47120);
 var n = t(735250),
@@ -25,40 +25,33 @@ var n = t(735250),
   S = t(734893),
   h = t(305762),
   g = t(150512),
-  x = t(516129),
-  C = t(813197),
+  C = t(516129),
+  x = t(813197),
   R = t(210887),
   L = t(314897),
   O = t(592125),
   A = t(984933),
   p = t(430824),
-  M = t(93879),
-  f = t(263704),
-  v = t(465670),
-  D = t(548343),
-  Z = t(586791),
-  j = t(709586),
-  U = t(151785),
-  G = t(931468),
-  P = t(768581),
-  b = t(700785),
-  B = t(434404),
-  y = t(999382),
-  F = t(8426),
-  w = t(969632),
-  k = t(535907),
-  H = t(981631),
-  V = t(30513),
-  Y = t(486324),
-  W = t(200299),
-  K = t(689938),
-  z = t(94078),
-  q = t(91716),
-  X = t(470264),
-  Q = t(710043),
-  J = t(847950);
+  M = t(709586),
+  f = t(768581),
+  D = t(700785),
+  v = t(434404),
+  j = t(999382),
+  Z = t(8426),
+  U = t(969632),
+  G = t(535907),
+  P = t(981631),
+  b = t(30513),
+  B = t(486324),
+  y = t(200299),
+  F = t(689938),
+  k = t(94078),
+  H = t(91716),
+  w = t(470264),
+  V = t(710043),
+  Y = t(847950);
 
-function $(e) {
+function W(e) {
   let {
     guildId: s,
     welcomeMessage: l
@@ -71,7 +64,7 @@ function $(e) {
         ...t,
         guildId: s,
         welcomeMessage: l,
-        onSave: e => (0, F._N)(e)
+        onSave: e => (0, Z._N)(e)
       })
     })
   }, [s, l]), d = (0, r.e7)([L.default], () => L.default.getId());
@@ -80,10 +73,10 @@ function $(e) {
     onClick: o,
     children: (0, n.jsx)(c.Text, {
       variant: "text-sm/medium",
-      children: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_SETUP_WELCOME
+      children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_SETUP_WELCOME
     })
   }) : (0, n.jsxs)(c.Clickable, {
-    className: z.editWelcomeSection,
+    className: k.editWelcomeSection,
     onClick: o,
     children: [(0, n.jsx)(g.Z, {
       guildId: s,
@@ -92,50 +85,53 @@ function $(e) {
         message: l.message
       }
     }), (0, n.jsx)(c.Tooltip, {
-      text: K.Z.Messages.EDIT,
+      text: F.Z.Messages.EDIT,
       children: e => (0, n.jsxs)("div", {
         ...e,
-        className: a()(z.actionItemEditButton, z.editWelcomeButton),
-        children: [(0, n.jsx)(Z.Z, {}), (0, n.jsx)(c.HiddenVisually, {
-          children: K.Z.Messages.EDIT
+        className: a()(k.actionItemEditButton, k.editWelcomeButton),
+        children: [(0, n.jsx)(c.PencilIcon, {
+          size: "md",
+          color: "currentColor"
+        }), (0, n.jsx)(c.HiddenVisually, {
+          children: F.Z.Messages.EDIT
         })]
       })
     })]
   })
 }
 
-function ee(e) {
+function z(e) {
   var s, l, o, d, u;
   let {
     guildId: I,
     action: T,
     actionIndex: N,
     onChange: g,
-    onDelete: x,
-    onDragStart: C,
+    onDelete: C,
+    onDragStart: x,
     onDragComplete: R,
     onDragReset: L
-  } = e, A = (0, r.e7)([O.Z], () => O.Z.getChannel(T.channelId)), f = (0, r.e7)([p.Z], () => p.Z.getGuild(I)), {
-    customEmoji: v,
-    unicodeEmoji: j
-  } = (0, m.Z)(null === (s = T.emoji) || void 0 === s ? void 0 : s.id, null === (l = T.emoji) || void 0 === l ? void 0 : l.name), U = null == T.emoji || null != v || null != j, G = P.ZP.getNewMemberActionIconURL({
+  } = e, A = (0, r.e7)([O.Z], () => O.Z.getChannel(T.channelId)), M = (0, r.e7)([p.Z], () => p.Z.getGuild(I)), {
+    customEmoji: D,
+    unicodeEmoji: v
+  } = (0, m.Z)(null === (s = T.emoji) || void 0 === s ? void 0 : s.id, null === (l = T.emoji) || void 0 === l ? void 0 : l.name), j = null == T.emoji || null != D || null != v, Z = f.ZP.getNewMemberActionIconURL({
     channelId: T.channelId,
     icon: T.icon
-  }), b = null;
-  null != A && (0, S.kb)(A) ? !U && (b = K.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL_EMOJI) : b = K.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL;
+  }), U = null;
+  null != A && (0, S.kb)(A) ? !j && (U = F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL_EMOJI) : U = F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL;
   let {
-    drag: B,
-    dragSourcePosition: y,
-    drop: F,
-    setIsDraggable: w
+    drag: G,
+    dragSourcePosition: P,
+    drop: b,
+    setIsDraggable: B
   } = (0, _.Z)({
     type: "NEW_MEMBER_ACTION",
     index: N,
     optionId: T.channelId,
-    onDragStart: C,
+    onDragStart: x,
     onDragComplete: R,
     onDragReset: L
-  }), k = i.useCallback(() => {
+  }), y = i.useCallback(() => {
     if (null != I) return (0, c.openModalLazy)(async () => {
       let {
         default: e
@@ -145,40 +141,42 @@ function ee(e) {
         guildId: I,
         action: T,
         onSave: (e, s, t) => g(N, e, s, t),
-        onDelete: () => x(N)
+        onDelete: () => C(N)
       })
     })
-  }, [I, T, N, g, x]);
-  if (null == A || null == f) return null;
-  let H = null !== (u = (0, E.KS)(A)) && void 0 !== u ? u : M.Z;
+  }, [I, T, N, g, C]);
+  if (null == A || null == M) return null;
+  let H = null !== (u = (0, E.KS)(A)) && void 0 !== u ? u : c.TextIcon;
   return (0, n.jsxs)("div", {
-    className: a()(z.actionItemContainer),
+    className: a()(k.actionItemContainer),
     children: [(0, n.jsxs)("div", {
-      className: a()(z.actionItem, {
-        [z.dropIndicatorBefore]: null != y && N < y,
-        [z.dropIndicatorAfter]: null != y && N > y,
-        [z.actionItemError]: null != b
+      className: a()(k.actionItem, {
+        [k.dropIndicatorBefore]: null != P && N < P,
+        [k.dropIndicatorAfter]: null != P && N > P,
+        [k.actionItemError]: null != U
       }),
-      ref: e => B(F(e)),
+      ref: e => G(b(e)),
       children: [(0, n.jsx)("div", {
-        className: z.dragContainer,
-        onMouseEnter: () => w(!0),
-        onMouseLeave: () => w(!1),
-        children: (0, n.jsx)(D.Z, {
-          className: z.dragIcon
+        className: k.dragContainer,
+        onMouseEnter: () => B(!0),
+        onMouseLeave: () => B(!1),
+        children: (0, n.jsx)(c.DragIcon, {
+          size: "xs",
+          color: "currentColor",
+          className: k.dragIcon
         })
-      }), null != G ? (0, n.jsx)("div", {
-        className: z.iconWrapper,
+      }), null != Z ? (0, n.jsx)("div", {
+        className: k.iconWrapper,
         children: (0, n.jsx)("img", {
-          src: G,
-          className: z.icon,
+          src: Z,
+          className: k.icon,
           width: 48,
           height: 48,
           alt: "",
           "aria-hidden": !0
         })
       }) : (0, n.jsx)("div", {
-        className: z.actionItemEmojiWrapper,
+        className: k.actionItemEmojiWrapper,
         children: (0, n.jsx)(h.Z, {
           emojiId: null === (o = T.emoji) || void 0 === o ? void 0 : o.id,
           emojiName: null === (d = T.emoji) || void 0 === d ? void 0 : d.name,
@@ -186,7 +184,7 @@ function ee(e) {
           defaultComponent: (0, n.jsx)(H, {})
         })
       }), (0, n.jsxs)("div", {
-        className: z.actionItemText,
+        className: k.actionItemText,
         children: [(0, n.jsx)(c.Text, {
           variant: "text-md/semibold",
           color: "header-primary",
@@ -194,77 +192,80 @@ function ee(e) {
         }), (0, n.jsx)(c.Text, {
           variant: "text-xs/medium",
           color: "header-secondary",
-          children: K.Z.Messages.NEW_MEMBER_ACTION_CHANNEL.format({
+          children: F.Z.Messages.NEW_MEMBER_ACTION_CHANNEL.format({
             channelName: A.name
           })
         })]
       }), (0, n.jsx)(c.Tooltip, {
-        text: K.Z.Messages.EDIT,
+        text: F.Z.Messages.EDIT,
         children: e => (0, n.jsxs)(c.Button, {
           ...e,
-          className: z.actionItemEditButton,
-          innerClassName: z.actionItemEditButtonInner,
+          className: k.actionItemEditButton,
+          innerClassName: k.actionItemEditButtonInner,
           size: c.Button.Sizes.MIN,
-          onClick: k,
-          children: [(0, n.jsx)(Z.Z, {}), (0, n.jsx)(c.HiddenVisually, {
-            children: K.Z.Messages.EDIT
+          onClick: y,
+          children: [(0, n.jsx)(c.PencilIcon, {
+            size: "md",
+            color: "currentColor"
+          }), (0, n.jsx)(c.HiddenVisually, {
+            children: F.Z.Messages.EDIT
           })]
         })
       })]
-    }), null != b && (0, n.jsx)(c.Text, {
+    }), null != U && (0, n.jsx)(c.Text, {
       variant: "text-xs/medium",
       color: "text-danger",
-      children: b
+      children: U
     })]
   })
 }
 
-function es(e) {
+function K(e) {
   let {
     guildId: s
-  } = e, t = (0, r.Wu)([w.Z], () => {
+  } = e, t = (0, r.Wu)([U.Z], () => {
     var e;
-    return null !== (e = w.Z.getSettings().newMemberActions) && void 0 !== e ? e : []
+    return null !== (e = U.Z.getSettings().newMemberActions) && void 0 !== e ? e : []
   }), l = i.useCallback((e, t) => {
     if (null == s) return;
-    (0, F.vR)(e);
-    let n = w.Z.getSettings();
+    (0, Z.vR)(e);
+    let n = U.Z.getSettings();
     if (null == n) return;
     let {
       channelId: i
     } = e;
-    (0, F.oo)(s, n, !0).then(() => {
-      null != t && (0, F.ad)(s, i, t, !0)
+    (0, Z.oo)(s, n, !0).then(() => {
+      null != t && (0, Z.ad)(s, i, t, !0)
     })
   }, [s]), a = i.useCallback((e, n, i, l) => {
     var a;
     if (null == s) return;
     let r = null === (a = t[e]) || void 0 === a ? void 0 : a.channelId;
     if (null == r) return;
-    let o = w.Z.getSettings();
-    null != o && ((0, F.el)(r, n), (0, F.oo)(s, o, !0).then(() => {
-      (0, F.ad)(s, r, i, l)
+    let o = U.Z.getSettings();
+    null != o && ((0, Z.el)(r, n), (0, Z.oo)(s, o, !0).then(() => {
+      (0, Z.ad)(s, r, i, l)
     }))
   }, [t, s]), o = i.useCallback(e => {
     var s;
     let n = null === (s = t[e]) || void 0 === s ? void 0 : s.channelId;
-    null != n && (0, F.Hr)(n)
+    null != n && (0, Z.Hr)(n)
   }, [t]), c = t.map(e => ({
     ...e,
     id: e.channelId
   })), d = i.useCallback(e => {
     if (null == s) return;
-    (0, F.hS)(e);
-    let t = w.Z.getSettings();
-    null != t && (0, F.oo)(s, t, !0)
+    (0, Z.hS)(e);
+    let t = U.Z.getSettings();
+    null != t && (0, Z.oo)(s, t, !0)
   }, [s]), {
     handleDragStart: u,
     handleDragReset: E,
     handleDragComplete: _
   } = (0, I.Z)(c, d);
   return null == s ? null : (0, n.jsxs)("div", {
-    className: z.section,
-    children: [t.map((e, t) => (0, n.jsx)(ee, {
+    className: k.section,
+    children: [t.map((e, t) => (0, n.jsx)(z, {
       guildId: s,
       action: e,
       actionIndex: t,
@@ -273,37 +274,39 @@ function es(e) {
       onDragStart: u,
       onDragReset: E,
       onDragComplete: _
-    }, e.channelId)), (0, n.jsx)(et, {}), t.length < S.O9 && (0, n.jsx)(en, {
+    }, e.channelId)), (0, n.jsx)(q, {}), t.length < S.O9 && (0, n.jsx)(X, {
       guildId: s,
       onAddAction: l
     })]
   })
 }
 
-function et() {
+function q() {
   return (0, n.jsx)("div", {
-    className: z.actionItemContainer,
+    className: k.actionItemContainer,
     children: (0, n.jsxs)("div", {
-      className: z.actionItem,
+      className: k.actionItem,
       children: [(0, n.jsx)("div", {
-        className: z.actionItemEmojiWrapper,
-        children: (0, n.jsx)(G.Z, {
+        className: k.actionItemEmojiWrapper,
+        children: (0, n.jsx)(c.BookCheckIcon, {
+          size: "custom",
+          color: "currentColor",
           height: 20,
           width: 22
         })
       }), (0, n.jsx)("div", {
-        className: z.actionItemText,
+        className: k.actionItemText,
         children: (0, n.jsx)(c.Text, {
           variant: "text-md/semibold",
           color: "header-primary",
-          children: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_RULES_ACTION
+          children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_RULES_ACTION
         })
       })]
     })
   })
 }
 
-function en(e) {
+function X(e) {
   let {
     guildId: s,
     onAddAction: l
@@ -320,51 +323,57 @@ function en(e) {
     })
   }, [s, l]);
   return (0, n.jsxs)(c.Clickable, {
-    className: z.addActionItem,
+    className: k.addActionItem,
     onClick: a,
-    children: [(0, n.jsx)(U.Z, {}), (0, n.jsx)(c.Text, {
+    children: [(0, n.jsx)(c.CirclePlusIcon, {
+      size: "xs",
+      color: "currentColor"
+    }), (0, n.jsx)(c.Text, {
       variant: "text-md/normal",
       color: "none",
-      children: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_ADD_A_TASK
+      children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_ADD_A_TASK
     })]
   })
 }
 
-function ei() {
+function Q() {
   return (0, n.jsxs)("div", {
-    className: z.badExample,
+    className: k.badExample,
     children: [(0, n.jsx)(c.Text, {
       variant: "eyebrow",
       color: "header-secondary",
-      children: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_TODOS_BAD_EXAMPLE_REASON
+      children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_TODOS_BAD_EXAMPLE_REASON
     }), (0, n.jsxs)("div", {
-      className: z.example,
+      className: k.example,
       children: [(0, n.jsx)("div", {
-        className: z.badExampleIcon,
-        children: (0, n.jsx)(v.Z, {})
+        className: k.badExampleIcon,
+        children: (0, n.jsx)(c.CloseSmallIcon, {
+          size: "md",
+          color: "currentColor"
+        })
       }), (0, n.jsxs)("div", {
         children: [(0, n.jsx)(c.Text, {
           variant: "text-md/semibold",
           color: "header-primary",
-          children: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_TODOS_BAD_EXAMPLE_TITLE
+          children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_TODOS_BAD_EXAMPLE_TITLE
         }), (0, n.jsx)(c.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
-          children: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_TODOS_BAD_EXAMPLE_CHANNEL
+          children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_TODOS_BAD_EXAMPLE_CHANNEL
         })]
       })]
     })]
   })
 }
 
-function el(e) {
+function J(e) {
   var s;
   let {
     guildId: l
-  } = e, a = (0, r.e7)([p.Z], () => p.Z.getGuild(l)), o = null !== (s = null == a ? void 0 : a.hasFeature(H.oNc.BANNER)) && void 0 !== s && s, d = i.useCallback((e, s) => {
+  } = e, a = (0, r.e7)([p.Z], () => p.Z.getGuild(l)), o = null !== (s = null == a ? void 0 : a.hasFeature(P.oNc.BANNER)) && void 0 !== s && s, d = i.useCallback((e, s) => {
     if (null != l) {
       if (null == e || void 0 === s) {
-        B.Z.saveGuild(l, {
+        v.Z.saveGuild(l, {
           homeHeader: null
         });
         return
@@ -375,73 +384,73 @@ function el(e) {
         return t => (0, n.jsx)(i, {
           imgURI: e,
           file: s,
-          onCrop: e => B.Z.saveGuild(l, {
+          onCrop: e => v.Z.saveGuild(l, {
             homeHeader: e
           }),
-          uploadType: Y.pC.HOME_HEADER,
+          uploadType: B.pC.HOME_HEADER,
           ...t
         })
       })
     }
   }, [l]), E = i.useCallback(e => {
-    e.preventDefault(), e.stopPropagation(), null != a && ((0, u.yw)(H.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+    e.preventDefault(), e.stopPropagation(), null != a && ((0, u.yw)(P.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
       location: {
-        section: H.jXE.GUILD_SETTINGS_ONBOARDING,
-        object: H.qAy.LEARN_MORE
+        section: P.jXE.GUILD_SETTINGS_ONBOARDING,
+        object: P.qAy.LEARN_MORE
       },
       guild_id: null == a ? void 0 : a.id,
       location_stack: []
     }), (0, N.Z)({
       analyticsLocations: [],
       analyticsSourceLocation: {
-        section: H.jXE.GUILD_SETTINGS_ONBOARDING,
-        object: H.qAy.ONBOARDING_EDIT,
-        page: H.ZY5.GUILD_SETTINGS
+        section: P.jXE.GUILD_SETTINGS_ONBOARDING,
+        object: P.qAy.ONBOARDING_EDIT,
+        page: P.ZY5.GUILD_SETTINGS
       },
       guild: a,
-      perks: (0, V.XO)()
+      perks: (0, b.XO)()
     }))
   }, [a]);
   if (null == a) return null;
-  let _ = (0, n.jsx)(x.Z, {
+  let _ = (0, n.jsx)(C.Z, {
     image: a.homeHeader,
-    makeURL: e => null != e ? P.ZP.getGuildHomeHeaderURL({
+    makeURL: e => null != e ? f.ZP.getGuildHomeHeaderURL({
       id: a.id,
       homeHeader: e
     }) : null,
     disabled: !o,
     onChange: d,
-    hint: K.Z.Messages.CHANGE_HOME_HEADER,
+    hint: F.Z.Messages.CHANGE_HOME_HEADER,
     enabled: o,
-    maxFileSizeBytes: W.B
+    maxFileSizeBytes: y.B
   });
   return o ? (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {
-      className: z.sectionHeader,
+      className: k.sectionHeader,
       children: [(0, n.jsx)(c.Heading, {
-        className: z.header,
+        className: k.header,
         variant: "heading-lg/extrabold",
-        children: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_BANNER
+        children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_BANNER
       }), (0, n.jsx)(T.Z, {
-        className: z.boostIndicator,
+        className: k.boostIndicator,
         guild: a,
-        guildFeature: H.oNc.BANNER,
+        guildFeature: P.oNc.BANNER,
         onClick: E
       })]
     }), (0, n.jsxs)("div", {
-      className: z.section,
+      className: k.section,
       children: [(0, n.jsxs)("div", {
-        className: z.homeBannerExplainer,
+        className: k.homeBannerExplainer,
         children: [(0, n.jsx)(c.Text, {
           variant: "text-sm/normal",
           color: "header-secondary",
-          children: K.Z.Messages.GUILD_SETTINGS_HOME_HEADER_RECOMMEND
+          children: F.Z.Messages.GUILD_SETTINGS_HOME_HEADER_RECOMMEND
         }), (0, n.jsxs)(c.Button, {
           color: c.ButtonColors.BRAND,
-          className: z.uploadButton,
-          children: [K.Z.Messages.UPLOAD_BACKGROUND, (0, n.jsx)(C.ZP, {
+          className: k.uploadButton,
+          children: [F.Z.Messages.UPLOAD_BACKGROUND, (0, n.jsx)(x.ZP, {
             onChange: d,
-            maxFileSizeBytes: W.B
+            maxFileSizeBytes: y.B
           })]
         })]
       }), (0, n.jsx)("div", {
@@ -450,37 +459,37 @@ function el(e) {
     })]
   }) : (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {
-      className: z.sectionHeader,
+      className: k.sectionHeader,
       children: [(0, n.jsx)(c.Heading, {
-        className: z.header,
+        className: k.header,
         variant: "heading-lg/extrabold",
-        children: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_BANNER
+        children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_BANNER
       }), (0, n.jsx)(T.Z, {
-        className: z.boostIndicator,
+        className: k.boostIndicator,
         guild: a,
-        guildFeature: H.oNc.BANNER,
+        guildFeature: P.oNc.BANNER,
         onClick: E
       })]
     }), (0, n.jsxs)("div", {
-      className: z.section,
+      className: k.section,
       children: [(0, n.jsxs)("div", {
-        className: z.homeBannerExplainer,
+        className: k.homeBannerExplainer,
         children: [(0, n.jsx)(c.Text, {
           variant: "text-sm/normal",
           color: "header-secondary",
-          children: K.Z.Messages.GUILD_SETTINGS_HOME_HEADER_RECOMMEND
+          children: F.Z.Messages.GUILD_SETTINGS_HOME_HEADER_RECOMMEND
         }), (0, n.jsxs)(c.ShinyButton, {
-          className: z.upsellButton,
-          innerClassName: z.upsellButtonInner,
+          className: k.upsellButton,
+          innerClassName: k.upsellButtonInner,
           color: c.Button.Colors.GREEN,
           onClick: E,
-          children: [(0, n.jsx)(j.Z, {
+          children: [(0, n.jsx)(M.Z, {
             height: 16,
             width: 16
           }), (0, n.jsx)(c.Text, {
             variant: "text-sm/medium",
             color: "text-normal",
-            children: K.Z.Messages.PREMIUM_GUILD_UNLOCK_WTH_BOOSTING_CTA
+            children: F.Z.Messages.PREMIUM_GUILD_UNLOCK_WTH_BOOSTING_CTA
           })]
         })]
       }), (0, n.jsx)("div", {
@@ -495,7 +504,7 @@ function el(e) {
   })
 }
 
-function ea(e) {
+function $(e) {
   let {
     guildId: s,
     resourceChannel: l,
@@ -508,9 +517,9 @@ function ea(e) {
     channelId: N,
     description: m
   } = l, h = O.Z.getChannel(N), g = null;
-  (null == h || !(0, S.k3)(h)) && (g = K.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_RESOURCE_CHANNEL);
-  let x = null == m || 0 === m.length,
-    C = P.ZP.getResourceChannelIconURL({
+  (null == h || !(0, S.k3)(h)) && (g = F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_RESOURCE_CHANNEL);
+  let C = null == m || 0 === m.length,
+    x = f.ZP.getResourceChannelIconURL({
       channelId: l.channelId,
       icon: l.icon
     }),
@@ -527,14 +536,14 @@ function ea(e) {
       onDragComplete: d,
       onDragReset: E
     }),
-    f = i.useCallback(e => {
-      (0, F.XG)(l.channelId, e)
+    D = i.useCallback(e => {
+      (0, Z.XG)(l.channelId, e)
     }, [l.channelId]),
     v = i.useCallback((e, t) => {
       if (null == s) return;
-      let n = w.Z.getSettings();
-      null != n && ((0, F.XG)(l.channelId, e), (0, F.oo)(s, n).then(() => {
-        (0, F.mM)(s, e.channelId, t)
+      let n = U.Z.getSettings();
+      null != n && ((0, Z.XG)(l.channelId, e), (0, Z.oo)(s, n).then(() => {
+        (0, Z.mM)(s, e.channelId, t)
       }))
     }, [s, l]),
     j = i.useCallback(() => {
@@ -546,62 +555,67 @@ function ea(e) {
           ...t,
           guildId: s,
           resourceChannel: l,
-          onSave: f,
-          onDelete: () => (0, F.Hz)(l.channelId),
+          onSave: D,
+          onDelete: () => (0, Z.Hz)(l.channelId),
           onIconUpload: v
         })
       })
-    }, [s, l, f, v]);
+    }, [s, l, D, v]);
   return null == I || null == h ? null : (0, n.jsxs)("div", {
-    className: a()(z.resourceChannelContainer),
+    className: a()(k.resourceChannelContainer),
     children: [(0, n.jsxs)("div", {
-      className: a()(z.resourceChannel, {
-        [z.dropIndicatorBefore]: null != L && o < L,
-        [z.dropIndicatorAfter]: null != L && o > L,
-        [z.resourceChannelError]: null != g
+      className: a()(k.resourceChannel, {
+        [k.dropIndicatorBefore]: null != L && o < L,
+        [k.dropIndicatorAfter]: null != L && o > L,
+        [k.resourceChannelError]: null != g
       }),
       ref: e => R(A(e)),
       children: [(0, n.jsx)("div", {
-        className: z.dragContainer,
+        className: k.dragContainer,
         onMouseEnter: () => M(!0),
         onMouseLeave: () => M(!1),
-        children: (0, n.jsx)(D.Z, {
-          className: z.dragIcon
+        children: (0, n.jsx)(c.DragIcon, {
+          size: "xs",
+          color: "currentColor",
+          className: k.dragIcon
         })
-      }), null != C && (0, n.jsx)("div", {
-        className: z.iconWrapper,
+      }), null != x && (0, n.jsx)("div", {
+        className: k.iconWrapper,
         children: (0, n.jsx)("img", {
-          src: C,
-          className: z.icon,
+          src: x,
+          className: k.icon,
           width: 32,
           height: 32,
           alt: "",
           "aria-hidden": !0
         })
       }), (0, n.jsxs)("div", {
-        className: z.resourceChannelContent,
+        className: k.resourceChannelContent,
         children: [(0, n.jsx)(c.Text, {
-          className: z.resourceChannelTitle,
+          className: k.resourceChannelTitle,
           variant: "text-md/semibold",
           color: "header-primary",
           children: T
-        }), !x && (0, n.jsx)(c.Text, {
-          className: z.resourceChannelDescription,
+        }), !C && (0, n.jsx)(c.Text, {
+          className: k.resourceChannelDescription,
           variant: "text-xs/medium",
           color: "text-muted",
           lineClamp: 1,
           children: m
         })]
       }), (0, n.jsx)(c.Tooltip, {
-        text: K.Z.Messages.EDIT,
+        text: F.Z.Messages.EDIT,
         children: e => (0, n.jsxs)(c.Button, {
           ...e,
-          className: z.resourceChannelEditButton,
-          innerClassName: z.resourceChannelEditButtonInner,
+          className: k.resourceChannelEditButton,
+          innerClassName: k.resourceChannelEditButtonInner,
           size: c.Button.Sizes.MIN,
           onClick: j,
-          children: [(0, n.jsx)(Z.Z, {}), (0, n.jsx)(c.HiddenVisually, {
-            children: K.Z.Messages.EDIT
+          children: [(0, n.jsx)(c.PencilIcon, {
+            size: "md",
+            color: "currentColor"
+          }), (0, n.jsx)(c.HiddenVisually, {
+            children: F.Z.Messages.EDIT
           })]
         })
       })]
@@ -613,97 +627,99 @@ function ea(e) {
   })
 }
 
-function er(e) {
+function ee(e) {
   var s;
   let {
     channel: t,
     isLast: l
   } = e, a = i.useCallback(() => {
-    (0, F.r2)({
+    (0, Z.r2)({
       channelId: t.id,
       title: t.name,
       description: "",
       emoji: null,
       icon: null
     })
-  }, [t]), r = null !== (s = (0, E.KS)(t)) && void 0 !== s ? s : M.Z;
+  }, [t]), r = null !== (s = (0, E.KS)(t)) && void 0 !== s ? s : c.TextIcon;
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {
-      className: z.suggestedChannel,
+      className: k.suggestedChannel,
       children: [(0, n.jsx)(r, {
-        className: z.suggestedChannelIcon
+        className: k.suggestedChannelIcon
       }), (0, n.jsx)(c.Text, {
-        className: z.suggestedChannelText,
+        className: k.suggestedChannelText,
         variant: "text-sm/normal",
         children: t.name
       }), (0, n.jsx)(c.Button, {
-        className: z.suggestedChannelButton,
+        className: k.suggestedChannelButton,
         size: c.Button.Sizes.MIN,
         onClick: a,
         children: (0, n.jsx)(c.Text, {
           variant: "text-sm/semibold",
           color: "always-white",
-          children: K.Z.Messages.ADD
+          children: F.Z.Messages.ADD
         })
       })]
     }), l && (0, n.jsx)("div", {
-      className: z.suggestedSeparator
+      className: k.suggestedSeparator
     })]
   })
 }
 
-function eo(e) {
+function es(e) {
   let {
     guildId: s
-  } = e, t = (0, r.e7)([p.Z], () => p.Z.getGuild(s)), l = (0, r.Wu)([w.Z], () => {
+  } = e, t = (0, r.e7)([p.Z], () => p.Z.getGuild(s)), l = (0, r.Wu)([U.Z], () => {
     var e, s;
-    return null !== (s = null === (e = w.Z.getSettings().resourceChannels) || void 0 === e ? void 0 : e.map(e => e.channelId)) && void 0 !== s ? s : []
-  }), a = (0, r.Wu)([w.Z], () => w.Z.getDismissedSuggestedChannelIds(s)), o = (0, r.e7)([A.ZP], () => null == s ? [] : A.ZP.getSelectableChannels(s)).filter(e => !a.includes(e.channel.id) && !l.includes(e.channel.id) && e.channel.type === H.d4z.GUILD_TEXT && b.Uu(H.Plq.VIEW_CHANNEL, e.channel) && !b.Uu(H.Plq.SEND_MESSAGES, e.channel) && e.channel.id !== (null == t ? void 0 : t.rulesChannelId)).slice(0, 5), d = i.useCallback(() => {
+    return null !== (s = null === (e = U.Z.getSettings().resourceChannels) || void 0 === e ? void 0 : e.map(e => e.channelId)) && void 0 !== s ? s : []
+  }), a = (0, r.Wu)([U.Z], () => U.Z.getDismissedSuggestedChannelIds(s)), o = (0, r.e7)([A.ZP], () => null == s ? [] : A.ZP.getSelectableChannels(s)).filter(e => !a.includes(e.channel.id) && !l.includes(e.channel.id) && e.channel.type === P.d4z.GUILD_TEXT && D.Uu(P.Plq.VIEW_CHANNEL, e.channel) && !D.Uu(P.Plq.SEND_MESSAGES, e.channel) && e.channel.id !== (null == t ? void 0 : t.rulesChannelId)).slice(0, 5), d = i.useCallback(() => {
     let e = o.map(e => e.channel.id);
-    (0, F.q6)(s, e)
+    (0, Z.q6)(s, e)
   }, [s, o]);
   return o.length <= 0 || l.length >= S.x3 ? null : (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {
-      className: z.suggestedChannelsSection,
+      className: k.suggestedChannelsSection,
       children: [(0, n.jsx)(c.Text, {
         variant: "text-md/semibold",
-        children: K.Z.Messages.RECOMMENDED
+        children: F.Z.Messages.RECOMMENDED
       }), (0, n.jsxs)("div", {
-        className: z.suggestedChannelsHeader,
+        className: k.suggestedChannelsHeader,
         children: [(0, n.jsx)(c.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
-          children: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_SUGGESTED_RESOURCES_EXPLAINER
+          children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_SUGGESTED_RESOURCES_EXPLAINER
         }), (0, n.jsxs)(c.Clickable, {
-          className: z.suggestedChannelsDismiss,
+          className: k.suggestedChannelsDismiss,
           onClick: d,
-          children: [(0, n.jsx)(f.Z, {
-            className: z.suggestedChannelsDismissCheck
+          children: [(0, n.jsx)(c.CheckmarkLargeIcon, {
+            size: "md",
+            color: "currentColor",
+            className: k.suggestedChannelsDismissCheck
           }), (0, n.jsx)(c.Text, {
             variant: "text-xs/semibold",
             color: "text-brand",
-            children: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_SUGGESTED_RESOURCES_DISMISS
+            children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_SUGGESTED_RESOURCES_DISMISS
           })]
         })]
       }), (0, n.jsx)("div", {
-        className: z.suggestedChannels,
-        children: o.map((e, s) => (0, n.jsx)(er, {
+        className: k.suggestedChannels,
+        children: o.map((e, s) => (0, n.jsx)(ee, {
           channel: e.channel,
           isLast: s < o.length - 1
         }, e.channel.id))
       })]
     }), (0, n.jsx)("div", {
-      className: z.sectionSeparator
+      className: k.sectionSeparator
     })]
   })
 }
 
-function ec(e) {
+function et(e) {
   let {
     guildId: s
-  } = e, l = (0, r.Wu)([w.Z], () => {
+  } = e, l = (0, r.Wu)([U.Z], () => {
     var e;
-    return null !== (e = w.Z.getSettings().resourceChannels) && void 0 !== e ? e : []
+    return null !== (e = U.Z.getSettings().resourceChannels) && void 0 !== e ? e : []
   }), a = l.map(e => ({
     ...e,
     id: e.channelId
@@ -711,11 +727,11 @@ function ec(e) {
     handleDragStart: o,
     handleDragReset: d,
     handleDragComplete: u
-  } = (0, I.Z)(a, F.lq), E = i.useCallback((e, t) => {
+  } = (0, I.Z)(a, Z.lq), E = i.useCallback((e, t) => {
     if (null == s) return;
-    let n = w.Z.getSettings();
-    null != n && ((0, F.r2)(e), (0, F.oo)(s, n).then(() => {
-      (0, F.mM)(s, e.channelId, t)
+    let n = U.Z.getSettings();
+    null != n && ((0, Z.r2)(e), (0, Z.oo)(s, n).then(() => {
+      (0, Z.mM)(s, e.channelId, t)
     }))
   }, [s]), _ = i.useCallback(() => {
     if (null != s) return (0, c.openModalLazy)(async () => {
@@ -725,14 +741,14 @@ function ec(e) {
       return t => (0, n.jsx)(e, {
         ...t,
         guildId: s,
-        onSave: F.r2,
+        onSave: Z.r2,
         onIconUpload: E
       })
     })
   }, [s, E]);
   return (0, n.jsxs)("div", {
-    className: z.editResources,
-    children: [l.map((e, t) => (0, n.jsx)(ea, {
+    className: k.editResources,
+    children: [l.map((e, t) => (0, n.jsx)($, {
       guildId: s,
       resourceChannel: e,
       index: t,
@@ -740,146 +756,149 @@ function ec(e) {
       onDragReset: d,
       onDragComplete: u
     }, e.channelId)), l.length < S.x3 && (0, n.jsxs)(c.Clickable, {
-      className: z.addActionItem,
+      className: k.addActionItem,
       onClick: _,
-      children: [(0, n.jsx)(U.Z, {}), (0, n.jsx)(c.Text, {
+      children: [(0, n.jsx)(c.CirclePlusIcon, {
+        size: "xs",
+        color: "currentColor"
+      }), (0, n.jsx)(c.Text, {
         variant: "text-md/normal",
         color: "none",
-        children: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_ADD_A_RESOURCE
+        children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_ADD_A_RESOURCE
       })]
     })]
   })
 }
 
-function ed(e) {
+function en(e) {
   let {
     saveOnClose: s
-  } = e, t = (0, r.e7)([y.Z], () => y.Z.getGuildId());
-  return null == t ? null : (0, n.jsx)(eu, {
+  } = e, t = (0, r.e7)([j.Z], () => j.Z.getGuildId());
+  return null == t ? null : (0, n.jsx)(ei, {
     guildId: t,
     saveOnClose: s
   })
 }
 
-function eu(e) {
+function ei(e) {
   let {
     saveOnClose: s,
     guildId: t
-  } = e, l = (0, r.cj)([w.Z], () => {
+  } = e, l = (0, r.cj)([U.Z], () => {
     var e;
-    return null !== (e = w.Z.getSettings().welcomeMessage) && void 0 !== e ? e : k.z
+    return null !== (e = U.Z.getSettings().welcomeMessage) && void 0 !== e ? e : G.z
   }), [a, d] = i.useState("new"), u = [{
     value: "new",
-    name: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_NEW_MEMBER_EXAMPLE
+    name: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_NEW_MEMBER_EXAMPLE
   }, {
     value: "existing",
-    name: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_EXISTING_MEMBER_EXAMPLE
+    name: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_EXISTING_MEMBER_EXAMPLE
   }], E = (0, r.e7)([R.Z], () => R.Z.theme);
   return i.useEffect(() => () => {
     if (null == t) return;
-    let e = w.Z.getSettings();
-    (0, F.oo)(t, e)
+    let e = U.Z.getSettings();
+    (0, Z.oo)(t, e)
   }, [s, t]), (0, n.jsxs)("div", {
-    className: z.page,
+    className: k.page,
     children: [(0, n.jsxs)("div", {
-      className: z.leftColumn,
+      className: k.leftColumn,
       children: [(0, n.jsx)(c.Heading, {
-        className: z.header,
+        className: k.header,
         variant: "heading-lg/extrabold",
-        children: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_WELCOME_TITLE
+        children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_WELCOME_TITLE
       }), (0, n.jsx)("div", {
-        className: z.descriptionSection,
+        className: k.descriptionSection,
         children: (0, n.jsx)(c.Text, {
           variant: "text-sm/medium",
           color: "header-secondary",
-          children: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_WELCOME_DESCRIPTION
+          children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_WELCOME_DESCRIPTION
         })
       }), (0, n.jsx)("div", {
-        className: z.section,
-        children: (0, n.jsx)($, {
+        className: k.section,
+        children: (0, n.jsx)(W, {
           guildId: t,
           welcomeMessage: l
         })
       }), (0, n.jsx)("div", {
-        className: z.sectionSeparator
+        className: k.sectionSeparator
       }), (0, n.jsx)(c.Heading, {
-        className: z.header,
+        className: k.header,
         variant: "heading-lg/extrabold",
-        children: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_TODOS_TITLE
+        children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_TODOS_TITLE
       }), (0, n.jsx)("div", {
-        className: z.descriptionSection,
+        className: k.descriptionSection,
         children: (0, n.jsx)(c.Text, {
           variant: "text-sm/medium",
           color: "header-secondary",
-          children: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_TODOS_DESCRIPTION.format()
+          children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_TODOS_DESCRIPTION.format()
         })
       }), (0, n.jsx)("div", {
-        className: z.section,
-        children: (0, n.jsx)(ei, {})
-      }), (0, n.jsx)(es, {
+        className: k.section,
+        children: (0, n.jsx)(Q, {})
+      }), (0, n.jsx)(K, {
         guildId: t
       }), (0, n.jsx)("div", {
-        className: z.sectionSeparator
+        className: k.sectionSeparator
       }), (0, n.jsx)(c.Heading, {
-        className: z.header,
+        className: k.header,
         variant: "heading-lg/extrabold",
-        children: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESOURCES_TITLE
+        children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESOURCES_TITLE
       }), (0, n.jsxs)("div", {
-        className: z.descriptionSection,
+        className: k.descriptionSection,
         children: [(0, n.jsx)(c.Text, {
           variant: "text-sm/medium",
           color: "header-secondary",
-          children: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESOURCES_DESCRIPTION
+          children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESOURCES_DESCRIPTION
         }), (0, n.jsxs)("ul", {
-          className: z.bulletList,
+          className: k.bulletList,
           children: [(0, n.jsx)("li", {
             children: (0, n.jsx)(c.Text, {
               tag: "span",
               variant: "text-sm/medium",
               color: "header-secondary",
-              children: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESOURCE_BULLET_1
+              children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESOURCE_BULLET_1
             })
           }), (0, n.jsx)("li", {
             children: (0, n.jsx)(c.Text, {
               tag: "span",
               variant: "text-sm/medium",
               color: "header-secondary",
-              children: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESOURCE_BULLET_2
+              children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESOURCE_BULLET_2
             })
           }), (0, n.jsx)("li", {
             children: (0, n.jsx)(c.Text, {
               tag: "span",
               variant: "text-sm/medium",
               color: "header-secondary",
-              children: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESOURCE_BULLET_3
+              children: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESOURCE_BULLET_3
             })
           })]
         })]
       }), (0, n.jsxs)("div", {
-        className: z.section,
-        children: [(0, n.jsx)(eo, {
+        className: k.section,
+        children: [(0, n.jsx)(es, {
           guildId: t
-        }), (0, n.jsx)(ec, {
+        }), (0, n.jsx)(et, {
           guildId: t
         })]
       }), (0, n.jsx)("div", {
-        className: z.sectionSeparator
-      }), (0, n.jsx)(el, {
+        className: k.sectionSeparator
+      }), (0, n.jsx)(J, {
         guildId: t
       })]
     }), (0, n.jsxs)("div", {
-      className: z.rightColumn,
+      className: k.rightColumn,
       children: [(0, n.jsx)("div", {
-        className: z.centeredSection,
+        className: k.centeredSection,
         children: (0, n.jsx)(c.Text, {
           variant: "text-sm/medium",
           color: "header-secondary",
-          children: K.Z.Messages.EXAMPLE
+          children: F.Z.Messages.EXAMPLE
         })
       }), (0, n.jsx)("img", {
-        className: z.previewImage,
-        src: (0, o.ap)(E) ? "existing" === a ? X : J : "existing" === a ? q : Q,
-        alt: K.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_GUIDE_EXAMPLE_ALT
+        className: k.previewImage,
+        src: (0, o.ap)(E) ? "existing" === a ? w : Y : "existing" === a ? H : V,
+        alt: F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_GUIDE_EXAMPLE_ALT
       }), (0, n.jsx)(c.SegmentedControl, {
         options: u,
         value: a,
@@ -895,18 +914,18 @@ function eu(e) {
   })
 }
 
-function eE() {
-  let e = (0, r.e7)([y.Z], () => y.Z.getGuild()),
-    s = (0, r.e7)([w.Z], () => w.Z.getSettings()),
-    t = (0, r.e7)([w.Z], () => w.Z.getSubmitting());
+function el() {
+  let e = (0, r.e7)([j.Z], () => j.Z.getGuild()),
+    s = (0, r.e7)([U.Z], () => U.Z.getSettings()),
+    t = (0, r.e7)([U.Z], () => U.Z.getSubmitting());
   return null == e ? null : (0, n.jsx)(d.Z, {
     onSave: () => {
       try {
-        (0, F.oo)(e.id, s)
+        (0, Z.oo)(e.id, s)
       } catch {}
     },
-    onReset: F.bj,
+    onReset: Z.bj,
     submitting: t,
-    onSaveText: K.Z.Messages.SAVE
+    onSaveText: F.Z.Messages.SAVE
   })
 }

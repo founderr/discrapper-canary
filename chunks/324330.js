@@ -1,10 +1,10 @@
 "use strict";
 t.d(s, {
   $: function() {
-    return N
+    return T
   },
   Z: function() {
-    return m
+    return N
   }
 });
 var n = t(735250);
@@ -15,37 +15,38 @@ var i = t(392711),
   r = t(241559),
   o = t(527379),
   c = t(313364),
-  d = t(441957),
-  u = t(434404),
-  E = t(999382),
-  _ = t(981631),
-  I = t(689938),
-  T = t(126197);
+  d = t(434404),
+  u = t(999382),
+  E = t(981631),
+  _ = t(689938),
+  I = t(126197);
 
-function N() {
+function T() {
   var e;
-  let s = (0, l.e7)([E.Z], () => E.Z.getProps().guild, []),
+  let s = (0, l.e7)([u.Z], () => u.Z.getProps().guild, []),
     t = null !== (e = null == s ? void 0 : s.isCommunity()) && void 0 !== e && e;
   return (0, n.jsxs)(a.Clickable, {
     onClick: e => {
-      if (null != s) t ? (e.preventDefault(), u.Z.close(), (0, o._X)(s.id)) : u.Z.open(s.id, _.pNK.MEMBERS)
+      if (null != s) t ? (e.preventDefault(), d.Z.close(), (0, o._X)(s.id)) : d.Z.open(s.id, E.pNK.MEMBERS)
     },
-    className: T.rowContainer,
+    className: I.rowContainer,
     children: [(0, n.jsx)("div", {
-      children: I.Z.Messages.MEMBERS
-    }), t && (0, n.jsx)(d.Z, {
-      className: T.linkIcon,
+      children: _.Z.Messages.MEMBERS
+    }), t && (0, n.jsx)(a.WindowLaunchIcon, {
+      size: "custom",
+      color: "currentColor",
+      className: I.linkIcon,
       width: 16,
       height: 16
     })]
   })
 }
 
-function m() {
+function N() {
   var e;
   let {
     guild: s
-  } = (0, l.e7)([E.Z], () => E.Z.getProps(), [], i.isEqual), t = null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : _.lds;
+  } = (0, l.e7)([u.Z], () => u.Z.getProps(), [], i.isEqual), t = null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : E.lds;
   return (0, r.n2)(t) ? (0, n.jsx)(c.Z, {
     guildId: t
   }) : null

@@ -14,12 +14,12 @@ var i = n(735250),
   r = n(470079),
   s = n(920906),
   o = n(442837),
-  a = n(594190),
-  l = n(594174),
-  u = n(869472),
+  a = n(481060),
+  l = n(594190),
+  u = n(594174),
   _ = n(617136),
-  d = n(918701),
-  c = n(920916),
+  c = n(918701),
+  d = n(920916),
   E = n(669041),
   I = n(341907);
 
@@ -28,9 +28,9 @@ function T(e) {
     quest: t,
     location: n,
     questContentPosition: i
-  } = e, s = (0, o.e7)([l.default], () => {
+  } = e, s = (0, o.e7)([u.default], () => {
     var e;
-    return null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.verified
+    return null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.verified
   });
   return r.useCallback(() => {
     null != t && ((0, _._3)({
@@ -38,7 +38,7 @@ function T(e) {
       questContent: n,
       questContentCTA: _.jZ.CLAIM_REWARD,
       questContentPosition: i
-    }), s ? (0, d.Xv)(t.config) ? (0, c.openCollectibleRewardModal)(t, n) : (0, I.h)({
+    }), s ? (0, c.Xv)(t.config) ? (0, d.openCollectibleRewardModal)(t, n) : (0, I.h)({
       questId: t.id,
       location: n,
       questContentPosition: i
@@ -48,7 +48,7 @@ function T(e) {
 
 function h(e) {
   var t;
-  let n = (0, o.Wu)([a.ZP], () => a.ZP.getGamesSeen(!1)).find(t => (null == t ? void 0 : t.id) === e);
+  let n = (0, o.Wu)([l.ZP], () => l.ZP.getGamesSeen(!1)).find(t => (null == t ? void 0 : t.id) === e);
   if (null == n) return !1;
   let i = Date.now() - 2592e7;
   return i <= (null !== (t = n.lastLaunched) && void 0 !== t ? t : 0)
@@ -58,16 +58,18 @@ let S = e => {
     useReducedMotion: t,
     className: n,
     size: o = 16
-  } = e, [a, l] = (0, s.useSpring)(() => ({})), _ = r.useRef(!1), d = (0, s.animated)(u.Z);
+  } = e, [l, u] = (0, s.useSpring)(() => ({})), _ = r.useRef(!1), c = (0, s.animated)(a.RefreshIcon);
   return {
-    render: () => (0, i.jsx)(d, {
+    render: () => (0, i.jsx)(c, {
       className: n,
-      style: t ? void 0 : a,
-      height: o,
-      width: o
+      style: t ? void 0 : l,
+      height: null != o ? o : 24,
+      width: null != o ? o : 24,
+      color: "currentColor",
+      size: "custom"
     }),
     startAnimation: () => {
-      _.current = !0, l({
+      _.current = !0, u({
         from: {
           rotate: "0deg"
         },

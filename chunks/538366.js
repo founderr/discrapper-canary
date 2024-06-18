@@ -1,75 +1,77 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return _
+    return g
   }
 });
 var s = n(735250),
   l = n(470079),
   a = n(481060),
-  i = n(665906),
-  r = n(634648),
-  o = n(499033),
-  c = n(692437),
-  d = n(585483),
-  u = n(456269),
-  h = n(228392),
-  m = n(981631),
-  g = n(689938),
-  x = n(737472);
+  r = n(665906),
+  i = n(499033),
+  o = n(585483),
+  c = n(456269),
+  d = n(228392),
+  u = n(981631),
+  m = n(689938),
+  h = n(737472);
 
-function _(e) {
+function g(e) {
   let {
     channelName: t,
-    guildId: _,
-    tagFilter: f,
-    channel: E
-  } = e, N = (0, u.r_)(E), T = (0, i.cD)(E), C = E.isMediaChannel(), p = l.useCallback(() => {
-    (0, h.qz)(), (0, a.openModalLazy)(async () => {
+    guildId: g,
+    tagFilter: x,
+    channel: _
+  } = e, E = (0, c.r_)(_), f = (0, r.cD)(_), C = _.isMediaChannel(), T = l.useCallback(() => {
+    (0, d.qz)(), (0, a.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("18417")]).then(n.bind(n, 740696));
       return t => (0, s.jsx)(e, {
         ...t,
-        guildId: _
+        guildId: g
       })
     })
-  }, [_]), v = f.size > 0, M = T || N, S = !v && N && !C, I = l.useCallback(() => S ? p() : T ? void d.S.dispatch(m.CkL.FOCUS_COMPOSER_TITLE) : (0, m.VqG)(), [p, S, T]);
+  }, [g]), N = x.size > 0, I = f || E, S = !N && E && !C, p = l.useCallback(() => S ? T() : f ? void o.S.dispatch(u.CkL.FOCUS_COMPOSER_TITLE) : (0, u.VqG)(), [T, S, f]);
   return (0, s.jsxs)("div", {
-    className: x.container,
+    className: h.container,
     children: [(0, s.jsxs)("div", {
-      className: x.iconContainer,
+      className: h.iconContainer,
       children: [(0, s.jsx)("div", {
-        className: x.icon,
-        children: (0, s.jsx)(r.Z, {
+        className: h.icon,
+        children: (0, s.jsx)(a.ChatIcon, {
+          size: "custom",
+          color: "currentColor",
           width: 30,
           height: 30
         })
-      }), (0, s.jsx)(o.Z, {
-        className: x.stars
+      }), (0, s.jsx)(i.Z, {
+        className: h.stars
       })]
     }), (0, s.jsx)(a.Heading, {
-      className: x.header,
+      className: h.header,
       variant: "heading-md/semibold",
-      children: v ? g.Z.Messages.FORUM_NO_POST_WITH_TAG_TITLE.format({
-        numTags: f.size
-      }) : g.Z.Messages.FORUM_EMPTY_STATE_TITLE
+      children: N ? m.Z.Messages.FORUM_NO_POST_WITH_TAG_TITLE.format({
+        numTags: x.size
+      }) : m.Z.Messages.FORUM_EMPTY_STATE_TITLE
     }), (0, s.jsx)(a.Text, {
       color: "header-secondary",
       variant: "text-sm/normal",
-      children: v ? g.Z.Messages.FORUM_NO_POST_WITH_TAG_DESCRIPTION.format({
-        numTags: f.size
-      }) : g.Z.Messages.FORUM_EMPTY_STATE_DESCRIPTION.format({
+      children: N ? m.Z.Messages.FORUM_NO_POST_WITH_TAG_DESCRIPTION.format({
+        numTags: x.size
+      }) : m.Z.Messages.FORUM_EMPTY_STATE_DESCRIPTION.format({
         channelName: t
       })
-    }), M && (0, s.jsxs)(a.Button, {
+    }), I && (0, s.jsxs)(a.Button, {
       look: a.Button.Looks.BLANK,
       size: a.Button.Sizes.MIN,
       color: a.Button.Colors.GREEN,
-      onClick: I,
-      className: x.cta,
-      innerClassName: x.button,
-      children: [S ? g.Z.Messages.FORUM_EMPTY_STATE_CTA : g.Z.Messages.FORUM_EMPTY_STATE_CREATE_POST_CTA, (0, s.jsx)(c.Z, {
+      onClick: p,
+      className: h.cta,
+      innerClassName: h.button,
+      children: [S ? m.Z.Messages.FORUM_EMPTY_STATE_CTA : m.Z.Messages.FORUM_EMPTY_STATE_CREATE_POST_CTA, (0, s.jsx)(a.ChevronSmallRightIcon, {
+        size: "custom",
+        color: "currentColor",
         width: 12
       })]
     })]

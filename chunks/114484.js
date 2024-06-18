@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   c4: function() {
-    return f
+    return S
   },
   st: function() {
-    return N
+    return f
   }
 });
 var i = n(735250),
@@ -15,37 +15,36 @@ var i = n(735250),
   l = n(442837),
   u = n(481060),
   _ = n(292419),
-  d = n(282397),
-  c = n(188597),
-  E = n(759231),
-  I = n(981631),
-  T = n(689938),
-  h = n(702149);
+  c = n(282397),
+  d = n(188597),
+  E = n(981631),
+  I = n(689938),
+  T = n(702149);
 
-function S(e) {
+function h(e) {
   return {
     text: e,
     icon: (0, i.jsx)(u.Dots, {
-      className: h.icon,
+      className: T.icon,
       dotRadius: 3.5,
       themed: !0
     })
   }
 }
 
-function f(e) {
+function S(e) {
   return {
-    text: null != e ? e : T.Z.Messages.APPLICATION_COMMAND_FAILED,
+    text: null != e ? e : I.Z.Messages.APPLICATION_COMMAND_FAILED,
     color: "text-danger",
-    icon: (0, i.jsx)(E.Z, {
-      width: 16,
-      height: 16,
-      className: o()(h.icon, h.errorIcon)
+    icon: (0, i.jsx)(u.CircleExclamationPointIcon, {
+      size: "xs",
+      color: "currentColor",
+      className: o()(T.icon, T.errorIcon)
     })
   }
 }
 
-function N(e) {
+function f(e) {
   let {
     className: t,
     icon: n,
@@ -53,7 +52,7 @@ function N(e) {
     color: s
   } = e;
   return (0, i.jsxs)("div", {
-    className: o()(h.wrapper, t),
+    className: o()(T.wrapper, t),
     children: [n, (0, i.jsx)(u.Text, {
       variant: "text-md/normal",
       color: s,
@@ -67,45 +66,45 @@ t.ZP = r.memo(function(e) {
     message: t,
     className: n,
     component: s
-  } = e, o = (0, a.Z)(), u = (0, l.e7)([d.Z], () => d.Z.getInteraction(t), [t]);
+  } = e, o = (0, a.Z)(), u = (0, l.e7)([c.Z], () => c.Z.getInteraction(t), [t]);
   r.useEffect(() => {
     let e = null;
-    if (t.hasFlag(I.iLy.LOADING) && null != u) {
-      let n = (0, c.ow)(t.id) - Date.now();
+    if (t.hasFlag(E.iLy.LOADING) && null != u) {
+      let n = (0, d.ow)(t.id) - Date.now();
       n > 0 && (e = setTimeout(() => o(), 1e3 + n))
     }
     return () => {
       clearTimeout(e)
     }
   }, [o, u, t]);
-  let E = null;
-  if (null == s) E = function(e, t) {
-    switch ((0, c.t$)(t, e)) {
-      case c.rQ.SENDING:
-        return S(T.Z.Messages.APPLICATION_COMMAND_SENDING);
-      case c.rQ.CREATED:
-        return S(T.Z.Messages.APPLICATION_COMMAND_WAITING.format({
+  let T = null;
+  if (null == s) T = function(e, t) {
+    switch ((0, d.t$)(t, e)) {
+      case d.rQ.SENDING:
+        return h(I.Z.Messages.APPLICATION_COMMAND_SENDING);
+      case d.rQ.CREATED:
+        return h(I.Z.Messages.APPLICATION_COMMAND_WAITING.format({
           applicationName: t.author.username
         }));
-      case c.rQ.TIMED_OUT:
-        return f(T.Z.Messages.APPLICATION_COMMAND_TIMED_OUT);
-      case c.rQ.FAILED:
-        return f(t.interactionError)
+      case d.rQ.TIMED_OUT:
+        return S(I.Z.Messages.APPLICATION_COMMAND_TIMED_OUT);
+      case d.rQ.FAILED:
+        return S(t.interactionError)
     }
   }(u, t);
   else {
     let e = (0, _.SD)(u, t, s);
-    null != e && (E = f(e))
+    null != e && (T = S(e))
   }
-  if (null == E) return null;
+  if (null == T) return null;
   let {
-    text: h,
+    text: N,
     icon: A,
     color: m
-  } = E;
-  return (0, i.jsx)(N, {
+  } = T;
+  return (0, i.jsx)(f, {
     icon: A,
-    text: h,
+    text: N,
     className: n,
     color: m
   })

@@ -1,10 +1,10 @@
 "use strict";
 t.d(s, {
   DI: function() {
-    return A
+    return O
   },
   x3: function() {
-    return O
+    return L
   }
 }), t(47120);
 var n = t(735250),
@@ -22,13 +22,12 @@ var n = t(735250),
   T = t(285952),
   N = t(474333),
   m = t(153124),
-  S = t(740727),
-  h = t(691886),
-  g = t(185923),
-  x = t(689938),
+  S = t(691886),
+  h = t(185923),
+  g = t(689938),
   C = t(643738);
 
-function R(e) {
+function x(e) {
   let {
     guildId: s,
     emojiData: t,
@@ -39,7 +38,7 @@ function R(e) {
       closePopout: s
     } = e;
     return (0, n.jsx)(d.Z, {
-      pickerIntention: g.Hz.GUILD_ROLE_BENEFIT_EMOJI,
+      pickerIntention: h.Hz.GUILD_ROLE_BENEFIT_EMOJI,
       channel: N,
       closePopout: s,
       onNavigateAway: s,
@@ -60,8 +59,8 @@ function R(e) {
       emojiName: t.name,
       animated: null == T ? void 0 : T.animated
     })
-  }, [t, T]), h = "";
-  return null != T ? h = ":".concat(T.name, ":") : null != t.name && (h = E.ZP.convertSurrogateToName(t.name)), (0, n.jsx)(o.Popout, {
+  }, [t, T]), x = "";
+  return null != T ? x = ":".concat(T.name, ":") : null != t.name && (x = E.ZP.convertSurrogateToName(t.name)), (0, n.jsx)(o.Popout, {
     animation: o.Popout.Animation.NONE,
     position: "top",
     renderPopout: m,
@@ -79,8 +78,8 @@ function R(e) {
           renderButtonContents: S
         }), (0, n.jsx)(o.TextInput, {
           inputClassName: C.emojiText,
-          placeholder: x.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_EMOJI_PLACEHOLDER,
-          value: h,
+          placeholder: g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_EMOJI_PLACEHOLDER,
+          value: x,
           "aria-labelledby": l,
           readOnly: !0
         })]
@@ -89,7 +88,7 @@ function R(e) {
   })
 }
 
-function L(e) {
+function R(e) {
   var s;
   let {
     guildId: t,
@@ -101,16 +100,16 @@ function L(e) {
     onDelete: u,
     transitionState: E,
     onClose: _
-  } = e, I = (0, m.Dt)(), N = (0, m.Dt)(), h = (0, m.Dt)(), [g, L] = i.useState(null !== (s = null == l ? void 0 : l.description) && void 0 !== s ? s : ""), [O, A] = i.useState(() => ({
+  } = e, I = (0, m.Dt)(), N = (0, m.Dt)(), S = (0, m.Dt)(), [h, R] = i.useState(null !== (s = null == l ? void 0 : l.description) && void 0 !== s ? s : ""), [L, O] = i.useState(() => ({
     id: null == l ? void 0 : l.emoji_id,
     name: null == l ? void 0 : l.emoji_name
-  })), p = c && "" !== g && (null != O.id || null != O.name);
+  })), A = c && "" !== h && (null != L.id || null != L.name);
   return (0, n.jsx)("form", {
     onSubmit: function(e) {
-      e.preventDefault(), p && (d({
-        description: g,
-        emojiId: O.id,
-        emojiName: O.name
+      e.preventDefault(), A && (d({
+        description: h,
+        emojiId: L.id,
+        emojiName: L.name
       }), _())
     },
     children: (0, n.jsxs)(o.ModalRoot, {
@@ -120,7 +119,7 @@ function L(e) {
         children: [(0, n.jsx)(o.Heading, {
           id: I,
           variant: "heading-md/semibold",
-          children: x.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_INTANGIBLE_MODAL_TITLE
+          children: g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_INTANGIBLE_MODAL_TITLE
         }), (0, n.jsx)(o.ModalCloseButton, {
           className: C.closeButton,
           onClick: _
@@ -130,26 +129,26 @@ function L(e) {
         children: [a, (0, n.jsx)(o.Spacer, {
           size: 24
         }), (0, n.jsx)(o.FormSection, {
-          title: x.Z.Messages.DESCRIPTION,
+          title: g.Z.Messages.DESCRIPTION,
           titleId: N,
           children: (0, n.jsx)(o.TextArea, {
             placeholder: r,
-            value: g,
+            value: h,
             rows: 1,
             autosize: !0,
-            onChange: L,
+            onChange: R,
             "aria-labelledby": N
           })
         }), (0, n.jsx)(o.Spacer, {
           size: 24
         }), (0, n.jsx)(o.FormSection, {
-          title: x.Z.Messages.EMOJI,
-          titleId: h,
-          children: (0, n.jsx)(R, {
+          title: g.Z.Messages.EMOJI,
+          titleId: S,
+          children: (0, n.jsx)(x, {
             guildId: t,
-            emojiData: O,
-            onSelectEmoji: A,
-            "aria-labelledby": h
+            emojiData: L,
+            onSelectEmoji: O,
+            "aria-labelledby": S
           })
         })]
       }), (0, n.jsxs)(o.ModalFooter, {
@@ -158,8 +157,8 @@ function L(e) {
           className: C.primaryButtons,
           children: [(0, n.jsx)(o.Button, {
             type: "submit",
-            disabled: !p,
-            children: null == l ? x.Z.Messages.ADD : x.Z.Messages.SAVE
+            disabled: !A,
+            children: null == l ? g.Z.Messages.ADD : g.Z.Messages.SAVE
           }), null != u && (0, n.jsx)(o.Button, {
             look: o.Button.Looks.BLANK,
             size: o.Button.Sizes.ICON,
@@ -167,8 +166,10 @@ function L(e) {
             onClick: () => {
               u(), _()
             },
-            children: (0, n.jsx)(S.Z, {
-              "aria-label": x.Z.Messages.DELETE
+            children: (0, n.jsx)(o.TrashIcon, {
+              size: "md",
+              color: "currentColor",
+              "aria-label": g.Z.Messages.DELETE
             })
           })]
         }), (0, n.jsx)(o.Button, {
@@ -176,14 +177,14 @@ function L(e) {
           color: o.Button.Colors.PRIMARY,
           className: C.cancelButton,
           onClick: _,
-          children: x.Z.Messages.CANCEL
+          children: g.Z.Messages.CANCEL
         })]
       })]
     })
   })
 }
 
-function O(e) {
+function L(e) {
   let {
     guildId: s,
     omitChannelIds: t,
@@ -195,13 +196,13 @@ function O(e) {
   } = e, [E, _] = i.useState(null == l ? void 0 : l.ref_id), I = (0, m.Dt)(), T = (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(N.Z, {
       messageType: N.Q.WARNING,
-      children: x.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_MODAL_WARNING
+      children: g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_MODAL_WARNING
     }), (0, n.jsx)(o.Spacer, {
       size: 24
     }), (0, n.jsx)(o.FormSection, {
-      title: x.Z.Messages.CHANNEL,
+      title: g.Z.Messages.CHANNEL,
       titleId: I,
-      children: (0, n.jsx)(h.Z, {
+      children: (0, n.jsx)(S.Z, {
         guildId: s,
         value: E,
         initialChannelId: null == l ? void 0 : l.ref_id,
@@ -213,11 +214,11 @@ function O(e) {
       })
     })]
   });
-  return (0, n.jsx)(L, {
+  return (0, n.jsx)(R, {
     guildId: s,
     initialData: l,
     benefitTypeInput: T,
-    descriptionPlaceholder: x.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_DESCRIPTION_PLACEHOLDER,
+    descriptionPlaceholder: g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_DESCRIPTION_PLACEHOLDER,
     canSubmit: null != E,
     onSave: function(e) {
       a()(null != E, "Cannot submit null channel"), r({
@@ -231,7 +232,7 @@ function O(e) {
   })
 }
 
-function A(e) {
+function O(e) {
   var s;
   let {
     initialData: t,
@@ -241,10 +242,10 @@ function A(e) {
     onDelete: d,
     guildId: u
   } = e, [E, _] = i.useState(null !== (s = null == t ? void 0 : t.name) && void 0 !== s ? s : ""), I = (0, m.Dt)(), T = (0, n.jsx)(o.FormSection, {
-    title: x.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_INTANGIBLE_NAME_TITLE,
+    title: g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_INTANGIBLE_NAME_TITLE,
     titleId: I,
     children: (0, n.jsx)(o.TextArea, {
-      placeholder: x.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_INTANGIBLE_NAME_TITLE,
+      placeholder: g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_INTANGIBLE_NAME_TITLE,
       value: E,
       rows: 1,
       onChange: function(e) {
@@ -253,11 +254,11 @@ function A(e) {
       "aria-labelledby": I
     })
   });
-  return (0, n.jsx)(L, {
+  return (0, n.jsx)(R, {
     guildId: u,
     initialData: t,
     benefitTypeInput: T,
-    descriptionPlaceholder: x.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_INTANGIBLE_DESCRIPTION_PLACEHOLDER,
+    descriptionPlaceholder: g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_INTANGIBLE_DESCRIPTION_PLACEHOLDER,
     canSubmit: "" !== E,
     onSave: function(e) {
       a()("" !== E, "Cannot submit empty name"), l({

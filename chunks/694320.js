@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return C
+    return R
   }
 });
 var i = n(735250),
@@ -12,20 +12,19 @@ var i = n(735250),
   l = n(481060),
   u = n(100527),
   _ = n(906732),
-  d = n(104494),
-  c = n(639119),
+  c = n(104494),
+  d = n(639119),
   E = n(165583),
   I = n(592125),
   T = n(944486),
   h = n(672752),
-  S = n(466111),
-  f = n(626135),
-  N = n(981631),
-  A = n(474936),
-  m = n(689938),
-  O = n(133215);
+  S = n(626135),
+  f = n(981631),
+  N = n(474936),
+  A = n(689938),
+  m = n(133215);
 
-function R() {
+function O() {
   (0, l.openModalLazy)(async () => {
     let {
       default: e
@@ -37,57 +36,60 @@ function R() {
   })
 }
 
-function C(e) {
+function R(e) {
   var t;
   let {
     className: n,
     iconOnly: s,
-    remaining: C
+    remaining: R
   } = e, p = (0, a.e7)([T.Z, I.Z], () => {
     let e = I.Z.getChannel(T.Z.getChannelId());
-    return (null == e ? void 0 : e.isPrivate()) ? N.ZY5.DM_CHANNEL : N.ZY5.GUILD_CHANNEL
+    return (null == e ? void 0 : e.isPrivate()) ? f.ZY5.DM_CHANNEL : f.ZY5.GUILD_CHANNEL
   }), {
     analyticsLocations: g
-  } = (0, _.ZP)(u.Z.PREMIUM_UPSELL), L = (0, d.Ng)(), v = (0, c.N)(), D = (0, d.Wp)(L, A.Si.TIER_2), M = (null == v ? void 0 : null === (t = v.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === A.Si.TIER_2;
+  } = (0, _.ZP)(u.Z.PREMIUM_UPSELL), C = (0, c.Ng)(), v = (0, d.N)(), L = (0, c.Wp)(C, N.Si.TIER_2), D = (null == v ? void 0 : null === (t = v.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === N.Si.TIER_2;
   return (r.useEffect(() => {
-    f.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
+    S.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
       type: "longer messages inline",
       location: {
         location_page: p,
-        location_section: N.jXE.CHANNEL_TEXT_AREA
+        location_section: f.jXE.CHANNEL_TEXT_AREA
       },
       location_stack: g
     })
-  }, [p, g]), (M || D) && C < 0) ? (0, i.jsx)(E.ZP, {
-    type: A.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
-    subscriptionTier: A.Si.TIER_2,
-    context: C,
-    discountOffer: L,
+  }, [p, g]), (D || L) && R < 0) ? (0, i.jsx)(E.ZP, {
+    type: N.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
+    subscriptionTier: N.Si.TIER_2,
+    context: R,
+    discountOffer: C,
     trialOffer: v,
-    children: m.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
-      onLearnMore: R
+    children: A.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
+      onLearnMore: O
     })
   }) : s ? (0, i.jsx)(l.Clickable, {
-    className: O.iconOnly,
-    onClick: () => R(),
+    className: m.iconOnly,
+    onClick: () => O(),
     children: (0, i.jsx)(l.Tooltip, {
-      text: m.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP_WITHOUT_LINK,
+      text: A.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP_WITHOUT_LINK,
       position: "top",
-      children: e => (0, i.jsx)(S.Z, {
-        className: O.premium,
+      children: e => (0, i.jsx)(l.NitroWheelIcon, {
+        size: "md",
+        color: "currentColor",
+        className: m.premium,
         ...e
       })
     })
   }) : (0, i.jsxs)("div", {
-    className: o()(O.root, n),
-    children: [(0, i.jsx)(S.Z, {
-      className: O.premium,
+    className: o()(m.root, n),
+    children: [(0, i.jsx)(l.NitroWheelIcon, {
+      size: "md",
+      className: m.premium,
       color: h.JX.PREMIUM_TIER_2
     }), (0, i.jsx)(l.Text, {
-      className: O.text,
+      className: m.text,
       variant: "text-sm/normal",
-      children: m.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
-        onLearnMore: R
+      children: A.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
+        onLearnMore: O
       })
     })]
   })

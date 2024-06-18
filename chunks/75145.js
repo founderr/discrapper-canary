@@ -3,7 +3,7 @@ var i = n(735250);
 n(470079);
 var r = n(120356),
   s = n.n(r),
-  o = n(242411),
+  o = n(481060),
   a = n(12517);
 t.Z = function(e) {
   let {
@@ -25,9 +25,8 @@ t.Z = function(e) {
         className: a.nitroTopDividerLockBorder
       }), (0, i.jsx)("div", {
         className: a.nitroTopDividerLockCircle,
-        children: (0, i.jsx)(o.Z, {
-          width: 16,
-          height: 16,
+        children: (0, i.jsx)(o.LockIcon, {
+          size: "xs",
           color: "white"
         })
       }), (0, i.jsx)("div", {

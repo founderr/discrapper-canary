@@ -1,7 +1,7 @@
 "use strict";
 t.d(s, {
   Z: function() {
-    return u
+    return c
   }
 });
 var n = t(735250);
@@ -9,62 +9,64 @@ t(470079);
 var i = t(120356),
   l = t.n(i),
   a = t(481060),
-  r = t(263704),
-  o = t(185403),
-  c = t(689938),
-  d = t(348621);
+  r = t(689938),
+  o = t(348621);
 
-function u(e) {
+function c(e) {
   let {
     className: s,
     enabled: t,
     previewCTA: i,
-    onPreview: u,
-    onToggle: E,
-    animateStatus: _,
-    firstLine: I,
-    secondLine: T,
-    disabled: N
+    onPreview: c,
+    onToggle: d,
+    animateStatus: u,
+    firstLine: E,
+    secondLine: _,
+    disabled: I
   } = e;
   return (0, n.jsxs)("div", {
-    className: l()(s, d.enableContainer),
-    children: [t ? (0, n.jsx)(r.Z, {
+    className: l()(s, o.enableContainer),
+    children: [t ? (0, n.jsx)(a.CheckmarkLargeIcon, {
+      size: "custom",
+      color: "currentColor",
       width: 24,
       height: 24,
-      className: l()(d.activeCircle, {
-        [d.animate]: _
+      className: l()(o.activeCircle, {
+        [o.animate]: u
       })
-    }) : (0, n.jsx)(o.Z, {
+    }) : (0, n.jsx)(a.PencilIcon, {
+      size: "custom",
+      color: "currentColor",
       width: 24,
       height: 24,
-      className: l()(d.editCircle, {
-        [d.animate]: _
+      className: l()(o.editCircle, {
+        [o.animate]: u
       })
     }), (0, n.jsxs)("div", {
-      className: d.enableDescription,
+      className: o.enableDescription,
       children: [(0, n.jsx)(a.Text, {
         variant: "text-sm/normal",
-        children: I
+        children: E
       }), (0, n.jsx)(a.Text, {
         variant: "text-sm/normal",
-        children: T
+        children: _
       })]
     }), (0, n.jsxs)("div", {
-      className: d.buttonContainer,
-      children: [null == u ? null : (0, n.jsx)(a.Button, {
-        className: d.previewButton,
+      className: o.buttonContainer,
+      children: [null == c ? null : (0, n.jsx)(a.Button, {
+        className: o.previewButton,
         look: a.Button.Looks.LINK,
         size: a.Button.Sizes.SMALL,
-        onClick: u,
-        disabled: N,
+        onClick: c,
+        disabled: I,
         color: a.Button.Colors.PRIMARY,
-        children: null != i ? i : c.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PREVIEW
+        children: null != i ? i : r.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PREVIEW
       }), (0, n.jsx)(a.Button, {
-        disabled: null == E || N,
+        disabled: null == d || I,
         size: a.Button.Sizes.SMALL,
         color: t ? a.Button.Colors.RED : a.Button.Colors.BRAND,
-        onClick: E,
-        children: t ? c.Z.Messages.DISABLE : c.Z.Messages.ENABLE
+        onClick: d,
+        children: t ? r.Z.Messages.DISABLE : r.Z.Messages.ENABLE
       })]
     })]
   })

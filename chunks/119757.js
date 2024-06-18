@@ -17,8 +17,8 @@ let o = e => {
   return (0, i.jsxs)("div", {
     className: s.wrapper,
     children: [null != o && (0, i.jsx)(o, {
-      width: 16,
-      height: 16,
+      size: "xs",
+      color: "currentColor",
       className: s.icon
     }), (0, i.jsx)(r.Text, {
       variant: "text-md/normal",

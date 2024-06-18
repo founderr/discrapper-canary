@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return _
+    return m
   },
   z: function() {
     return s
@@ -12,31 +12,29 @@ n(470079);
 var i = n(120356),
   r = n.n(i),
   o = n(481060),
-  u = n(507893),
-  c = n(759231),
-  d = n(239260);
+  u = n(239260);
 (l = s || (s = {})).INFO = "info", l.WARNING = "warning";
-let m = {
-    info: d.info,
-    warning: d.warning
+let c = {
+    info: u.info,
+    warning: u.warning
   },
-  E = {
-    info: u.Z,
-    warning: c.Z
+  d = {
+    info: o.CircleInformationIcon,
+    warning: o.CircleExclamationPointIcon
   };
 
-function _(e) {
+function m(e) {
   let {
     children: t,
     className: n,
     look: l = "info"
-  } = e, s = E[l];
+  } = e, s = d[l];
   return (0, a.jsxs)("div", {
-    className: r()(d.root, n, m[l]),
+    className: r()(u.root, n, c[l]),
     children: [(0, a.jsx)(s, {
-      className: d.icon
+      className: u.icon
     }), (0, a.jsx)(o.Text, {
-      className: d.text,
+      className: u.text,
       variant: "text-sm/medium",
       color: "text-normal",
       children: t

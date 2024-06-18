@@ -1,31 +1,31 @@
 "use strict";
 t.d(s, {
   GW: function() {
-    return g
-  },
-  Qg: function() {
-    return T
-  },
-  Yn: function() {
-    return x
-  },
-  ZP: function() {
-    return A
-  },
-  bL: function() {
-    return R
-  },
-  i$: function() {
     return h
   },
-  nn: function() {
+  Qg: function() {
+    return I
+  },
+  Yn: function() {
+    return g
+  },
+  ZP: function() {
+    return O
+  },
+  bL: function() {
+    return x
+  },
+  i$: function() {
     return S
+  },
+  nn: function() {
+    return m
   },
   qN: function() {
     return C
   },
   wy: function() {
-    return N
+    return T
   }
 }), t(47120);
 var n = t(735250),
@@ -35,14 +35,13 @@ var n = t(735250),
 t(913527);
 var r = t(481060),
   o = t(151011),
-  c = t(964309),
-  d = t(937615),
-  u = t(809086),
-  E = t(981631),
-  _ = t(689938),
-  I = t(488287);
+  c = t(937615),
+  d = t(809086),
+  u = t(981631),
+  E = t(689938),
+  _ = t(488287);
 
-function T(e) {
+function I(e) {
   return (s, t, n) => {
     let i = e(s),
       l = e(t);
@@ -50,7 +49,7 @@ function T(e) {
   }
 }
 
-function N(e) {
+function T(e) {
   let {
     key: s,
     cellClassName: t,
@@ -60,7 +59,7 @@ function N(e) {
   } = e;
   return {
     key: s,
-    bodyCellClassName: I.cell,
+    bodyCellClassName: _.cell,
     cellClassName: t,
     renderHeader: n,
     render: i,
@@ -68,22 +67,22 @@ function N(e) {
   }
 }
 
-function m() {
+function N() {
   return (0, n.jsx)(r.Text, {
     variant: "text-xs/medium",
-    className: I.unpublishedBadge,
-    children: _.Z.Messages.GUILD_PRODUCT_UNPUBLISHED_TITLE
+    className: _.unpublishedBadge,
+    children: E.Z.Messages.GUILD_PRODUCT_UNPUBLISHED_TITLE
   })
 }
 
-function S(e) {
+function m(e) {
   let {
     cellClassName: s,
     key: t,
     renderHeader: i,
     ...l
   } = e;
-  return N({
+  return T({
     cellClassName: s,
     key: t,
     renderHeader: i,
@@ -92,19 +91,19 @@ function S(e) {
         listing: s
       } = e, t = null;
       return null != s && (t = (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(u.Z, {
+        children: [(0, n.jsx)(d.Z, {
           listing: s,
           imageSize: 128,
           alt: "",
-          className: I.listingImage
+          className: _.listingImage
         }), (0, n.jsxs)(r.Text, {
           variant: "text-md/medium",
           color: "header-primary",
-          className: I.listingNameLabel,
-          children: [s.name, !s.published && (0, n.jsx)(m, {})]
+          className: _.listingNameLabel,
+          children: [s.name, !s.published && (0, n.jsx)(N, {})]
         })]
-      })), (0, n.jsx)(R, {
-        className: I.listingNameCell,
+      })), (0, n.jsx)(x, {
+        className: _.listingNameCell,
         children: t
       })
     },
@@ -112,7 +111,7 @@ function S(e) {
   })
 }
 
-function h(e) {
+function S(e) {
   let {
     cellClassName: s,
     getAmount: t,
@@ -120,7 +119,29 @@ function h(e) {
     renderHeader: l,
     ...a
   } = e;
-  return N({
+  return T({
+    key: i,
+    cellClassName: s,
+    renderHeader: l,
+    renderContent(e) {
+      let s = t(e);
+      return (0, n.jsx)(R, {
+        children: s
+      })
+    },
+    ...a
+  })
+}
+
+function h(e) {
+  let {
+    cellClassName: s,
+    getCount: t,
+    key: i,
+    renderHeader: l,
+    ...a
+  } = e;
+  return T({
     key: i,
     cellClassName: s,
     renderHeader: l,
@@ -135,34 +156,12 @@ function h(e) {
 }
 
 function g(e) {
-  let {
-    cellClassName: s,
-    getCount: t,
-    key: i,
-    renderHeader: l,
-    ...a
-  } = e;
-  return N({
-    key: i,
-    cellClassName: s,
-    renderHeader: l,
-    renderContent(e) {
-      let s = t(e);
-      return (0, n.jsx)(O, {
-        children: s
-      })
-    },
-    ...a
-  })
-}
-
-function x(e) {
   let s = [...e];
   for (let t = 1; t < e.length; ++t) {
     let n = e[t];
     s[t] = {
       ...n,
-      cellClassName: a()(n.cellClassName, I.cellAlignRight)
+      cellClassName: a()(n.cellClassName, _.cellAlignRight)
     }
   }
   return s
@@ -172,14 +171,14 @@ let C = e => {
       children: s
     } = e;
     return (0, n.jsx)(r.Text, {
-      className: I.headerCell,
+      className: _.headerCell,
       variant: "text-xs/medium",
       color: "interactive-normal",
       "aria-hidden": !0,
       children: s
     })
   },
-  R = e => {
+  x = e => {
     let {
       children: s,
       className: t
@@ -191,55 +190,57 @@ let C = e => {
       children: s
     })
   },
+  R = e => {
+    let {
+      children: s
+    } = e;
+    return (0, n.jsx)(x, {
+      children: (0, c.T4)(null != s ? s : 0, u.pKx.USD)
+    })
+  },
   L = e => {
     let {
       children: s
     } = e;
-    return (0, n.jsx)(R, {
-      children: (0, d.T4)(null != s ? s : 0, E.pKx.USD)
-    })
-  },
-  O = e => {
-    let {
-      children: s
-    } = e;
-    return (0, n.jsxs)(R, {
-      className: I.personCountCell,
-      children: [null != s ? s : "-", " ", (0, n.jsx)(c.Z, {
-        className: I.personCountIcon,
+    return (0, n.jsxs)(x, {
+      className: _.personCountCell,
+      children: [null != s ? s : "-", " ", (0, n.jsx)(r.UserIcon, {
+        size: "md",
+        color: "currentColor",
+        className: _.personCountIcon,
         "aria-hidden": !0
       })]
     })
   };
 
-function A(e) {
+function O(e) {
   let {
     className: s,
     headerClassName: t,
     rowClassName: l,
     enableRowSeparators: r = !1,
     initialSortKey: c,
-    initialSortDirection: d = E.sHY.ASCENDING,
-    ...u
-  } = e, [_, T] = i.useState(c), [N, m] = i.useState(d);
+    initialSortDirection: d = u.sHY.ASCENDING,
+    ...E
+  } = e, [I, T] = i.useState(c), [N, m] = i.useState(d);
   return (0, n.jsx)("div", {
-    className: a()(I.tableContainer, s),
+    className: a()(_.tableContainer, s),
     children: (0, n.jsx)(o.Z, {
       className: a()({
-        [I.tableWithoutSeparators]: !r
-      }, I.table),
+        [_.tableWithoutSeparators]: !r
+      }, _.table),
       rowClassName: a()({
-        [I.rowWithSeparators]: r
+        [_.rowWithSeparators]: r
       }, l),
-      headerClassName: a()(I.header, {
-        [I.headerWithoutSeparators]: !r
+      headerClassName: a()(_.header, {
+        [_.headerWithoutSeparators]: !r
       }, t),
-      sortKey: _,
+      sortKey: I,
       sortDirection: N,
       onSort: (e, s) => {
         T(e), m(s)
       },
-      ...u
+      ...E
     })
   })
 }

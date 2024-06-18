@@ -7,50 +7,48 @@ var i = n(735250),
   a = n(481060),
   l = n(68405),
   u = n(985375),
-  _ = n(225196),
-  d = n(887208),
-  c = n(585483),
-  E = n(981631),
-  I = n(689938),
-  T = n(480710);
+  _ = n(585483),
+  c = n(981631),
+  d = n(689938),
+  E = n(480710);
 t.Z = r.memo(function(e) {
   let {
     width: t,
     height: n,
     src: s,
-    url: h,
-    format: S,
-    className: f
-  } = e, [N, A] = r.useState(!1), m = (0, u.hb)((0, l.iy)(h)), O = m ? I.Z.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES : I.Z.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES, R = m ? d.Z : _.Z;
+    url: I,
+    format: T,
+    className: h
+  } = e, [S, f] = r.useState(!1), N = (0, u.hb)((0, l.iy)(I)), A = N ? d.Z.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES : d.Z.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES, m = N ? a.StarIcon : a.StarOutlineIcon;
   r.useEffect(() => {
-    if (!N) return;
+    if (!S) return;
     let e = setTimeout(() => {
-      A(!1)
+      f(!1)
     }, 500);
     return () => clearTimeout(e)
-  }, [N]);
-  let C = e => {
-    e.preventDefault(), e.stopPropagation(), A(!0), m ? (0, l.PF)(h) : ((0, l.uL)({
-      url: h,
+  }, [S]);
+  let O = e => {
+    e.preventDefault(), e.stopPropagation(), f(!0), N ? (0, l.PF)(I) : ((0, l.uL)({
+      url: I,
       src: s,
       width: t,
       height: n,
-      format: S
-    }), c.S.dispatch(E.CkL.FAVORITE_GIF))
+      format: T
+    }), _.S.dispatch(c.CkL.FAVORITE_GIF))
   };
   return (0, i.jsx)(a.Tooltip, {
-    text: O,
+    text: A,
     children: e => (0, i.jsx)(a.Clickable, {
       ...e,
-      className: o()(f, T.size, T.gifFavoriteButton, {
-        [T.selected]: m,
-        [T.showPulse]: N
+      className: o()(h, E.size, E.gifFavoriteButton, {
+        [E.selected]: N,
+        [E.showPulse]: S
       }),
       onMouseDown: e => e.preventDefault(),
-      onClick: C,
+      onClick: O,
       onDoubleClick: e => e.preventDefault(),
-      children: (0, i.jsx)(R, {
-        className: T.icon
+      children: (0, i.jsx)(m, {
+        className: E.icon
       })
     })
   })

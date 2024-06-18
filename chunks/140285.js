@@ -37,12 +37,12 @@ function E(e) {
     options: [{
       name: d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_BENEFITS_SELECT_CHANNELS_MANUALLY_LABEL,
       value: a.I.SOME_CHANNELS_ACCESS,
-      icon: c.Z,
+      icon: (0, i.makeIconCompat)(c.Z),
       radioBarClassName: u.__invalid_channelAccessSelectRadioBar
     }, {
       name: d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_BENEFITS_INCLUDE_ALL_CHANNELS_LABEL,
       value: a.I.ALL_CHANNELS_ACCESS,
-      icon: o.Z,
+      icon: (0, i.makeIconCompat)(o.Z),
       radioBarClassName: u.__invalid_channelAccessSelectRadioBar
     }],
     value: I,

@@ -1,10 +1,10 @@
 "use strict";
 t.d(s, {
   R: function() {
-    return S
+    return N
   },
   Z: function() {
-    return h
+    return m
   }
 });
 var n = t(735250);
@@ -16,58 +16,60 @@ var i = t(120356),
   o = t(481060),
   c = t(430824),
   d = t(496675),
-  u = t(441674),
-  E = t(759231),
-  _ = t(700785),
-  I = t(647086),
-  T = t(135899),
-  N = t(689938),
-  m = t(212723);
+  u = t(700785),
+  E = t(647086),
+  _ = t(135899),
+  I = t(689938),
+  T = t(212723);
 
-function S(e) {
-  return T.$X.filter(s => (null == e ? void 0 : e.id) !== I._ && _.oz(s, e))
+function N(e) {
+  return _.$X.filter(s => (null == e ? void 0 : e.id) !== E._ && u.oz(s, e))
 }
 
-function h(e) {
+function m(e) {
   let {
     guild: s
-  } = e, i = (0, r.e7)([c.Z], () => c.Z.getRole(s.id, s.getEveryoneRoleId())), _ = S(s), I = _.length > 0, h = T.$X.some(e => !d.Z.can(e, s, null, {
+  } = e, i = (0, r.e7)([c.Z], () => c.Z.getRole(s.id, s.getEveryoneRoleId())), u = N(s), E = u.length > 0, m = _.$X.some(e => !d.Z.can(e, s, null, {
     [i.id]: {
       ...i,
       permissions: a.Od(i.permissions, e)
     }
-  })), g = (0, n.jsxs)(n.Fragment, {
+  })), S = (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {
-      className: m.itemContent,
+      className: T.itemContent,
       children: [(0, n.jsx)(o.Heading, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: N.Z.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS
+        children: I.Z.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS
       }), (0, n.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: N.Z.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS_DETAILS.format({
-          numPerms: _.length
+        children: I.Z.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS_DETAILS.format({
+          numPerms: u.length
         })
       })]
-    }), I ? (0, n.jsx)(E.Z, {
+    }), E ? (0, n.jsx)(o.CircleExclamationPointIcon, {
+      size: "custom",
+      color: "currentColor",
       height: 24,
       width: 24,
-      className: m.warning,
-      "aria-label": N.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_ARIA_LABEL
-    }) : (0, n.jsx)(u.Z, {
+      className: T.warning,
+      "aria-label": I.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_ARIA_LABEL
+    }) : (0, n.jsx)(o.CircleCheckIcon, {
+      size: "custom",
+      color: "currentColor",
       height: 24,
       width: 24,
-      className: m.check,
-      "aria-label": N.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_ARIA_LABEL_COMPLETE
+      className: T.check,
+      "aria-label": I.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_ARIA_LABEL_COMPLETE
     })]
   });
-  return I ? h ? (0, n.jsx)(o.Tooltip, {
-    text: N.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_WARNING,
+  return E ? m ? (0, n.jsx)(o.Tooltip, {
+    text: I.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_WARNING,
     children: e => (0, n.jsx)("div", {
-      className: l()(m.simpleItemWrapper, m.disabled),
+      className: l()(T.simpleItemWrapper, T.disabled),
       ...e,
-      children: g
+      children: S
     })
   }) : (0, n.jsx)(o.Clickable, {
     onClick: () => {
@@ -81,10 +83,10 @@ function h(e) {
         })
       })
     },
-    className: l()(m.simpleItemWrapper, m.clickable),
-    children: g
+    className: l()(T.simpleItemWrapper, T.clickable),
+    children: S
   }) : (0, n.jsx)("div", {
-    className: m.simpleItemWrapper,
-    children: g
+    className: T.simpleItemWrapper,
+    children: S
   })
 }

@@ -1,23 +1,24 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return l
+    return a
   }
 });
 var i = n(735250);
 n(470079);
 var r = n(481060),
-  s = n(55178),
-  o = n(689938),
-  a = n(12050);
+  s = n(689938),
+  o = n(12050);
 
-function l() {
+function a() {
   return (0, i.jsx)(r.Tooltip, {
-    text: o.Z.Messages.SUPPRESS_NOTIFICATIONS_TOOLTIP,
+    text: s.Z.Messages.SUPPRESS_NOTIFICATIONS_TOOLTIP,
     children: e => (0, i.jsx)("div", {
-      className: a.badge,
+      className: o.badge,
       ...e,
-      children: (0, i.jsx)(s.Z, {
+      children: (0, i.jsx)(r.BellZIcon, {
+        color: "currentColor",
+        size: "custom",
         width: "1rem",
         height: "1rem"
       })

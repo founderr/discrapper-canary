@@ -1,13 +1,13 @@
 "use strict";
 t.d(s, {
   Q5: function() {
-    return v
+    return M
   },
   Sf: function() {
-    return f
+    return p
   },
   ZP: function() {
-    return D
+    return f
   }
 }), t(47120);
 var n, i = t(735250),
@@ -26,15 +26,13 @@ var n, i = t(735250),
   m = t(751189),
   S = t(409059),
   h = t(518936),
-  g = t(441674),
-  x = t(696202),
-  C = t(999382),
-  R = t(58346),
-  L = t(689938),
-  O = t(657478),
-  A = t(611273);
+  g = t(999382),
+  C = t(58346),
+  x = t(689938),
+  R = t(657478),
+  L = t(611273);
 
-function p(e, s, t) {
+function O(e, s, t) {
   return s in e ? Object.defineProperty(e, s, {
     value: t,
     enumerable: !0,
@@ -42,75 +40,75 @@ function p(e, s, t) {
     writable: !0
   }) : e[s] = t, e
 }
-class M extends(n = d.ZP.Store) {
+class A extends(n = d.ZP.Store) {
   getTemplate() {
-    let e = C.Z.getProps().guild;
+    let e = g.Z.getProps().guild;
     if (null == e) return null;
     let s = S.Z.getForGuild(e.id);
-    return null != s && s.state !== R.Rj.RESOLVING ? s : null
+    return null != s && s.state !== C.Rj.RESOLVING ? s : null
   }
   showNotice() {
     let e = this.getTemplate();
     return null != e && null != this.name && "" !== this.name && (this.name.trim() !== e.name || this.description.trim() !== e.description)
   }
   constructor(...e) {
-    super(...e), p(this, "name", ""), p(this, "description", ""), p(this, "error", null), p(this, "reset", () => {
+    super(...e), O(this, "name", ""), O(this, "description", ""), O(this, "error", null), O(this, "reset", () => {
       let e = this.getTemplate();
       if (null != e) {
         var s, t;
         this.name = null !== (s = e.name) && void 0 !== s ? s : this.name, this.description = null !== (t = e.description) && void 0 !== t ? t : this.description
       } else this.name = "", this.description = "";
       this.emitChange()
-    }), p(this, "setName", e => {
+    }), O(this, "setName", e => {
       this.name = e, this.emitChange()
-    }), p(this, "setDescription", e => {
+    }), O(this, "setDescription", e => {
       this.description = e, this.emitChange()
-    }), p(this, "setError", e => {
+    }), O(this, "setError", e => {
       this.error = e, this.emitChange()
-    }), p(this, "save", async () => {
-      await m.Z.updateGuildTemplate(C.Z.getProps().guild.id, this.getTemplate().code, this.name, this.description), this.emitChange()
+    }), O(this, "save", async () => {
+      await m.Z.updateGuildTemplate(g.Z.getProps().guild.id, this.getTemplate().code, this.name, this.description), this.emitChange()
     })
   }
 }
-p(M, "displayName", "GuildSettingsTemplateMetadataStore_");
-let f = new M(_.Z);
+O(A, "displayName", "GuildSettingsTemplateMetadataStore_");
+let p = new A(_.Z);
 
-function v() {
+function M() {
   let [e, s] = l.useState(!1), t = async () => {
-    s(!0), await f.save(), s(!1)
+    s(!0), await p.save(), s(!1)
   };
   return (0, i.jsx)(T.Z, {
     submitting: e,
-    onReset: f.reset,
+    onReset: p.reset,
     onSave: t
   })
 }
 
-function D() {
+function f() {
   return (0, i.jsx)(E.FormSection, {
-    className: A.marginBottom4,
+    className: L.marginBottom4,
     children: (0, i.jsxs)(E.HeadingLevel, {
       component: (0, i.jsx)(E.FormTitle, {
         tag: E.FormTitleTags.H1,
-        children: L.Z.Messages.GUILD_TEMPLATES
+        children: x.Z.Messages.GUILD_TEMPLATES
       }),
       children: [(0, i.jsx)(E.FormText, {
-        className: A.marginBottom20,
+        className: L.marginBottom20,
         type: E.FormTextTypes.DESCRIPTION,
-        children: L.Z.Messages.GUILD_TEMPLATE_SETTINGS_DESCRIPTION.format()
-      }), (0, i.jsx)(j, {}), (0, i.jsx)(E.FormDivider, {
-        className: O.divider
-      }), (0, i.jsx)(Z, {})]
+        children: x.Z.Messages.GUILD_TEMPLATE_SETTINGS_DESCRIPTION.format()
+      }), (0, i.jsx)(v, {}), (0, i.jsx)(E.FormDivider, {
+        className: R.divider
+      }), (0, i.jsx)(D, {})]
     })
   })
 }
 
-function Z() {
+function D() {
   let {
     guild: e
-  } = C.Z.getProps();
+  } = g.Z.getProps();
   c()(null != e, "guild cannot be null");
-  let s = (0, d.e7)([f], () => f.error),
+  let s = (0, d.e7)([p], () => p.error),
     [t, n] = l.useState(!0),
     {
       loading: a,
@@ -123,7 +121,7 @@ function Z() {
           try {
             await m.Z.loadTemplatesForGuild(e), t(!1)
           } catch (e) {
-            f.setError(new N.Hx(e))
+            p.setError(new N.Hx(e))
           }
         })()
       }, [e]), {
@@ -135,26 +133,26 @@ function Z() {
       if (!!t && !a) {
         if (null != r) {
           var e, s;
-          f.setName(null !== (e = r.name) && void 0 !== e ? e : ""), f.setDescription(null !== (s = r.description) && void 0 !== s ? s : "")
+          p.setName(null !== (e = r.name) && void 0 !== e ? e : ""), p.setDescription(null !== (s = r.description) && void 0 !== s ? s : "")
         }
         n(!1)
       }
     }, [t, r, a]), l.useEffect(() => () => {
-      f.reset(), f.setError(null)
+      p.reset(), p.setError(null)
     }, []), t) return null != s ? (0, i.jsx)(E.Text, {
     color: "text-danger",
     variant: "text-sm/normal",
     children: s.message
   }) : (0, i.jsx)(E.Spinner, {
-    className: A.marginTop40
+    className: L.marginTop40
   });
   let o = null != s && null == s.getFirstFieldErrorMessage("name") && null == s.getFirstFieldErrorMessage("description");
   return (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(G, {}), (0, i.jsx)(P, {
+    children: [(0, i.jsx)(Z, {}), (0, i.jsx)(U, {
       guild: e,
       guildTemplate: r
     }), o ? (0, i.jsx)(E.Text, {
-      className: A.marginTop8,
+      className: L.marginTop8,
       color: "text-danger",
       variant: "text-sm/normal",
       children: s.getAnyErrorMessage()
@@ -162,126 +160,132 @@ function Z() {
   })
 }
 
-function j() {
+function v() {
   return (0, i.jsxs)("div", {
-    className: O.descriptionBox,
+    className: R.descriptionBox,
     children: [(0, i.jsxs)("div", {
-      className: O.descriptionSection,
+      className: R.descriptionSection,
       children: [(0, i.jsx)(E.Heading, {
         variant: "eyebrow",
-        children: L.Z.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_WILL_COPY
+        children: x.Z.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_WILL_COPY
       }), (0, i.jsxs)("div", {
-        className: O.descriptionRow,
-        children: [(0, i.jsx)(g.Z, {
-          className: O.descriptionIcon,
+        className: R.descriptionRow,
+        children: [(0, i.jsx)(E.CircleCheckIcon, {
+          size: "md",
+          className: R.descriptionIcon,
           color: u.Z.unsafe_rawColors.GREEN_360.css,
-          backgroundColor: u.Z.unsafe_rawColors.WHITE_500.css
-        }), L.Z.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_CHANNELS]
+          secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
+        }), x.Z.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_CHANNELS]
       }), (0, i.jsxs)("div", {
-        className: O.descriptionRow,
-        children: [(0, i.jsx)(g.Z, {
-          className: O.descriptionIcon,
+        className: R.descriptionRow,
+        children: [(0, i.jsx)(E.CircleCheckIcon, {
+          size: "md",
+          className: R.descriptionIcon,
           color: u.Z.unsafe_rawColors.GREEN_360.css,
-          backgroundColor: u.Z.unsafe_rawColors.WHITE_500.css
-        }), L.Z.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_ROLES]
+          secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
+        }), x.Z.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_ROLES]
       }), (0, i.jsxs)("div", {
-        className: O.descriptionRow,
-        children: [(0, i.jsx)(g.Z, {
-          className: O.descriptionIcon,
+        className: R.descriptionRow,
+        children: [(0, i.jsx)(E.CircleCheckIcon, {
+          size: "md",
+          className: R.descriptionIcon,
           color: u.Z.unsafe_rawColors.GREEN_360.css,
-          backgroundColor: u.Z.unsafe_rawColors.WHITE_500.css
-        }), L.Z.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_SETTINGS]
+          secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
+        }), x.Z.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_SETTINGS]
       })]
     }), (0, i.jsxs)("div", {
-      className: O.descriptionSection,
+      className: R.descriptionSection,
       children: [(0, i.jsx)(E.Heading, {
         variant: "eyebrow",
-        children: L.Z.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_WONT_COPY
+        children: x.Z.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_WONT_COPY
       }), (0, i.jsxs)("div", {
-        className: O.descriptionRow,
-        children: [(0, i.jsx)(x.Z, {
-          className: O.descriptionIcon,
+        className: R.descriptionRow,
+        children: [(0, i.jsx)(E.CircleXIcon, {
+          size: "md",
+          className: R.descriptionIcon,
           color: u.Z.unsafe_rawColors.RED_400.css,
-          backgroundColor: u.Z.unsafe_rawColors.WHITE_500.css
-        }), L.Z.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_MESSAGES]
+          secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
+        }), x.Z.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_MESSAGES]
       }), (0, i.jsxs)("div", {
-        className: O.descriptionRow,
-        children: [(0, i.jsx)(x.Z, {
-          className: O.descriptionIcon,
+        className: R.descriptionRow,
+        children: [(0, i.jsx)(E.CircleXIcon, {
+          size: "md",
+          className: R.descriptionIcon,
           color: u.Z.unsafe_rawColors.RED_400.css,
-          backgroundColor: u.Z.unsafe_rawColors.WHITE_500.css
-        }), L.Z.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_MEMBERS]
+          secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
+        }), x.Z.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_MEMBERS]
       }), (0, i.jsxs)("div", {
-        className: O.descriptionRow,
-        children: [(0, i.jsx)(x.Z, {
-          className: O.descriptionIcon,
+        className: R.descriptionRow,
+        children: [(0, i.jsx)(E.CircleXIcon, {
+          size: "md",
+          className: R.descriptionIcon,
           color: u.Z.unsafe_rawColors.RED_400.css,
-          backgroundColor: u.Z.unsafe_rawColors.WHITE_500.css
-        }), L.Z.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_PERKS]
+          secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
+        }), x.Z.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_PERKS]
       })]
     })]
   })
 }
 
-function U(e) {
+function j(e) {
   let {
     cancel: s,
     confirm: t
   } = e;
   return (0, i.jsx)(E.DeclarativeConfirmModal, {
     dismissable: !0,
-    header: L.Z.Messages.GUILD_TEMPLATES_DELETE_TEMPLATE,
-    confirmText: L.Z.Messages.GUILD_TEMPLATES_DELETE_TEMPLATE,
-    cancelText: L.Z.Messages.CANCEL,
+    header: x.Z.Messages.GUILD_TEMPLATES_DELETE_TEMPLATE,
+    confirmText: x.Z.Messages.GUILD_TEMPLATES_DELETE_TEMPLATE,
+    cancelText: x.Z.Messages.CANCEL,
     onCancel: s,
     onConfirm: t,
     children: (0, i.jsx)(E.Text, {
       variant: "text-md/normal",
       color: "text-normal",
-      children: L.Z.Messages.GUILD_TEMPLATES_DELETE_DESCRIPTION
+      children: x.Z.Messages.GUILD_TEMPLATES_DELETE_DESCRIPTION
     })
   })
 }
 
-function G() {
-  let e = (0, d.e7)([f], () => f.name),
-    s = (0, d.e7)([f], () => f.description),
-    t = (0, d.e7)([f], () => f.error);
+function Z() {
+  let e = (0, d.e7)([p], () => p.name),
+    s = (0, d.e7)([p], () => p.description),
+    t = (0, d.e7)([p], () => p.error);
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(E.FormItem, {
-      className: A.marginBottom20,
-      title: L.Z.Messages.GUILD_TEMPLATES_FORM_LABEL_NAME,
+      className: L.marginBottom20,
+      title: x.Z.Messages.GUILD_TEMPLATES_FORM_LABEL_NAME,
       error: null == t ? void 0 : t.getFirstFieldErrorMessage("name"),
       children: (0, i.jsx)(E.TextInput, {
         value: e,
-        onChange: e => f.setName(e),
-        placeholder: L.Z.Messages.GUILD_TEMPLATES_FORM_PLACEHOLDER_NAME,
+        onChange: e => p.setName(e),
+        placeholder: x.Z.Messages.GUILD_TEMPLATES_FORM_PLACEHOLDER_NAME,
         maxLength: 100
       })
     }), (0, i.jsx)(E.FormItem, {
-      className: A.marginBottom20,
-      title: L.Z.Messages.GUILD_TEMPLATES_FORM_LABEL_DESCRIPTION,
+      className: L.marginBottom20,
+      title: x.Z.Messages.GUILD_TEMPLATES_FORM_LABEL_DESCRIPTION,
       error: null == t ? void 0 : t.getFirstFieldErrorMessage("description"),
       children: (0, i.jsx)(E.TextArea, {
         value: s,
-        onChange: e => f.setDescription(e),
-        placeholder: L.Z.Messages.GUILD_TEMPLATES_FORM_PLACEHOLDER_DESCRIPTION,
+        onChange: e => p.setDescription(e),
+        placeholder: x.Z.Messages.GUILD_TEMPLATES_FORM_PLACEHOLDER_DESCRIPTION,
         maxLength: 120
       })
     })]
   })
 }
 
-function P(e) {
+function U(e) {
   let {
     guild: s,
     guildTemplate: t
   } = e;
-  return null == t ? (0, i.jsx)(b, {
+  return null == t ? (0, i.jsx)(G, {
     guild: s
   }) : (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(E.FormItem, {
-      title: L.Z.Messages.GUILD_TEMPLATES_FORM_LABEL_LINK,
+      title: x.Z.Messages.GUILD_TEMPLATES_FORM_LABEL_LINK,
       children: (0, i.jsx)(I.Z, {
         buttonLook: E.Button.Looks.FILLED,
         buttonColor: E.Button.Colors.BRAND,
@@ -289,42 +293,42 @@ function P(e) {
       })
     }), t.isDirty && (0, i.jsx)(E.Text, {
       color: "text-warning",
-      className: A.marginTop8,
+      className: L.marginTop8,
       variant: "text-sm/normal",
-      children: L.Z.Messages.GUILD_TEMPLATES_UNSYNCED_WARNING
+      children: x.Z.Messages.GUILD_TEMPLATES_UNSYNCED_WARNING
     }), (0, i.jsxs)("div", {
-      className: r()(A.marginTop20, O.buttonContainer),
-      children: [t.isDirty && (0, i.jsx)(B, {
+      className: r()(L.marginTop20, R.buttonContainer),
+      children: [t.isDirty && (0, i.jsx)(P, {
         guild: s,
         guildTemplate: t
       }), (0, i.jsxs)("div", {
-        className: O.rightButtonContainer,
-        children: [(0, i.jsx)(y, {
+        className: R.rightButtonContainer,
+        children: [(0, i.jsx)(b, {
           guild: s,
           guildTemplate: t
-        }), (0, i.jsx)(F, {
+        }), (0, i.jsx)(B, {
           guildTemplate: t
         })]
       })]
     }), t.isDirty && (0, i.jsx)("div", {
-      className: O.lastSync,
-      children: L.Z.Messages.GUILD_TEMPLATES_LAST_SYNC.format({
+      className: R.lastSync,
+      children: x.Z.Messages.GUILD_TEMPLATES_LAST_SYNC.format({
         timestamp: new Date(t.updatedAt)
       })
     })]
   })
 }
 
-function b(e) {
+function G(e) {
   var s;
   let {
     guild: t
-  } = e, n = (0, d.e7)([f], () => f.name), [a, r] = l.useState(!1), o = async () => {
-    f.setError(null), r(!0);
+  } = e, n = (0, d.e7)([p], () => p.name), [a, r] = l.useState(!1), o = async () => {
+    p.setError(null), r(!0);
     try {
-      await m.Z.createGuildTemplate(t.id, f.name, f.description)
+      await m.Z.createGuildTemplate(t.id, p.name, p.description)
     } catch (e) {
-      f.setError(new N.Hx(e))
+      p.setError(new N.Hx(e))
     }
     r(!1)
   };
@@ -333,65 +337,65 @@ function b(e) {
     disabled: !(null != (s = n) && s.trim().length >= 2),
     color: E.Button.Colors.BRAND,
     onClick: o,
-    children: L.Z.Messages.GUILD_TEMPLATES_CREATE_LINK
+    children: x.Z.Messages.GUILD_TEMPLATES_CREATE_LINK
   })
 }
 
-function B(e) {
+function P(e) {
   let {
     guild: s,
     guildTemplate: t
   } = e, [n, a] = l.useState(!1), r = async () => {
-    f.setError(null), a(!0);
+    p.setError(null), a(!0);
     try {
       await m.Z.syncGuildTemplate(s.id, t.code)
     } catch (e) {
-      f.setError(new N.Hx(e))
+      p.setError(new N.Hx(e))
     }
     a(!1)
   };
   return (0, i.jsx)(E.Button, {
     submitting: n,
-    className: O.button,
+    className: R.button,
     onClick: r,
-    children: L.Z.Messages.GUILD_TEMPLATES_SYNC_TEMPLATE
+    children: x.Z.Messages.GUILD_TEMPLATES_SYNC_TEMPLATE
   })
 }
 
-function y(e) {
+function b(e) {
   let {
     guild: s,
     guildTemplate: t
   } = e, [n, a] = l.useState(!1), r = async () => {
-    f.setError(null);
+    p.setError(null);
     try {
-      await m.Z.deleteGuildTemplate(s.id, t.code), f.setName(""), f.setDescription("")
+      await m.Z.deleteGuildTemplate(s.id, t.code), p.setName(""), p.setDescription("")
     } catch (e) {
-      f.setError(new N.Hx(e))
+      p.setError(new N.Hx(e))
     }
     a(!1)
   };
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(E.Button, {
       look: E.Button.Looks.OUTLINED,
-      className: O.button,
+      className: R.button,
       color: E.Button.Colors.RED,
       onClick: () => a(!0),
-      children: L.Z.Messages.GUILD_TEMPLATES_DELETE_TEMPLATE
-    }), n ? (0, i.jsx)(U, {
+      children: x.Z.Messages.GUILD_TEMPLATES_DELETE_TEMPLATE
+    }), n ? (0, i.jsx)(j, {
       confirm: r,
       cancel: () => a(!1)
     }) : null]
   })
 }
 
-function F(e) {
+function B(e) {
   let {
     guildTemplate: s
   } = e;
   return (0, i.jsx)(E.Button, {
     color: E.Button.Colors.PRIMARY,
-    className: O.button,
+    className: R.button,
     onClick: () => (0, E.openModalLazy)(async () => {
       let {
         default: e
@@ -401,6 +405,6 @@ function F(e) {
         guildTemplate: s
       })
     }),
-    children: L.Z.Messages.GUILD_TEMPLATES_PREVIEW_TEMPLATE
+    children: x.Z.Messages.GUILD_TEMPLATES_PREVIEW_TEMPLATE
   })
 }

@@ -9,42 +9,41 @@ var r = n(442837),
   l = n(519938),
   u = n(317381),
   _ = n(812206),
-  d = n(358221),
-  c = n(199902),
+  c = n(358221),
+  d = n(199902),
   E = n(366050),
   I = n(594174),
-  T = n(621113),
-  h = n(981631),
-  S = n(354459),
-  f = n(689938),
-  N = n(376838);
+  T = n(981631),
+  h = n(354459),
+  S = n(689938),
+  f = n(376838);
 
-function A(e) {
+function N(e) {
   let {
     closePopout: t,
     idle: n,
     pipWindows: s,
     voiceChannelId: I,
-    onSelect: T
+    onSelect: f
   } = e;
   n && t();
   let N = (0, r.e7)([u.ZP], () => u.ZP.getSelfEmbeddedActivityForChannel(I)),
     A = (0, r.e7)([E.Z], () => E.Z.pipWindow),
-    m = (0, r.e7)([d.Z], () => d.Z.getSelectedParticipant(I)),
-    O = (0, r.e7)([d.Z], () => d.Z.getStreamParticipants(I));
+    m = (0, r.e7)([c.Z], () => c.Z.getSelectedParticipant(I)),
+    O = (0, r.e7)([c.Z], () => c.Z.getStreamParticipants(I));
   return (0, i.jsx)(o.Menu, {
     navId: "pip-menu",
     "aria-label": "switch PIP",
     onClose: t,
-    onSelect: T,
+    onSelect: f,
     children: (function() {
-      let e = s.find(e => e.component === h.NYg.EMBED_IFRAME),
-        t = s.find(e => e.component === h.NYg.VIDEO),
+      let e = s.find(e => e.component === T.NYg.EMBED_IFRAME),
+        t = s.find(e => e.component === T.NYg.VIDEO),
         n = [];
       return null != e && (null == A ? void 0 : A.id) !== e.id && n.push({
         pipWindow: e
       }), null != t && O.forEach(e => {
-        let i = c.Z.getActiveStreamForApplicationStream(e.stream),
+        let i = d.Z.getActiveStreamForApplicationStream(e.stream),
           r = e.id === (null == m ? void 0 : m.id) && (null == A ? void 0 : A.id) === t.id;
         null != i && !r && n.push({
           pipWindow: t,
@@ -57,14 +56,14 @@ function A(e) {
       let n = e.pipWindow.id,
         r = null === (t = e.participant) || void 0 === t ? void 0 : t.id,
         s = function(e) {
-          if (e.pipWindow.component === h.NYg.EMBED_IFRAME && null != N) {
+          if (e.pipWindow.component === T.NYg.EMBED_IFRAME && null != N) {
             var t;
             let e = null === (t = _.Z.getApplication(N.applicationId)) || void 0 === t ? void 0 : t.name;
-            return null == e ? f.Z.Messages.SWITCH_PIP_TO_ACTIVITY : f.Z.Messages.SWITCH_PIP_TO_ACTIVITY_NAME.format({
+            return null == e ? S.Z.Messages.SWITCH_PIP_TO_ACTIVITY : S.Z.Messages.SWITCH_PIP_TO_ACTIVITY_NAME.format({
               activityName: e
             })
           }
-          return null == e.participant || e.participant.type !== S.fO.STREAM ? f.Z.Messages.SWITCH_PIP_TO_GO_LIVE : f.Z.Messages.SWITCH_PIP_TO_USER_STREAM.format({
+          return null == e.participant || e.participant.type !== h.fO.STREAM ? S.Z.Messages.SWITCH_PIP_TO_GO_LIVE : S.Z.Messages.SWITCH_PIP_TO_USER_STREAM.format({
             username: e.participant.userNick
           })
         }(e),
@@ -75,7 +74,7 @@ function A(e) {
         action: () => (function(e) {
           (null == A ? void 0 : A.id) !== e.pipWindow.id && (0, l.k3)(e.pipWindow.id);
           let t = e.participant;
-          null != t && t.type !== S.fO.ACTIVITY && a.Z.selectParticipant(I, t.id)
+          null != t && t.type !== h.fO.ACTIVITY && a.Z.selectParticipant(I, t.id)
         })(e)
       }, u)
     })
@@ -85,22 +84,23 @@ t.Z = function(e) {
   let {
     voiceChannelId: t,
     idle: n
-  } = e, a = Array.from((0, r.e7)([E.Z], () => E.Z.pipWindows).values()), l = (0, r.Wu)([c.Z], () => c.Z.getAllActiveStreamsForChannel(t)).filter(e => {
+  } = e, a = Array.from((0, r.e7)([E.Z], () => E.Z.pipWindows).values()), l = (0, r.Wu)([d.Z], () => d.Z.getAllActiveStreamsForChannel(t)).filter(e => {
     var n;
     return e.ownerId !== (null === (n = I.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && e.channelId === t
-  }), u = 1 === a.length && a[0].component === h.NYg.EMBED_IFRAME || 0 === l.length, _ = 1 === a.length && l.length <= 1;
+  }), u = 1 === a.length && a[0].component === T.NYg.EMBED_IFRAME || 0 === l.length, _ = 1 === a.length && l.length <= 1;
   return u || _ ? null : (0, i.jsx)(o.Popout, {
     position: "bottom",
-    renderPopout: e => (0, i.jsx)(A, {
+    renderPopout: e => (0, i.jsx)(N, {
       voiceChannelId: t,
       pipWindows: a,
       idle: n,
       ...e
     }),
     children: e => (0, i.jsx)(o.Clickable, {
-      className: N.menuIcon,
+      className: f.menuIcon,
       ...e,
-      children: (0, i.jsx)(T.Z, {
+      children: (0, i.jsx)(o.MoreVerticalIcon, {
+        size: "md",
         color: s.Z.unsafe_rawColors.WHITE_500.css
       })
     })

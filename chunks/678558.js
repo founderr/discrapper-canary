@@ -4,75 +4,73 @@ var i = n(735250),
   r = n(470079),
   s = n(120356),
   o = n.n(s),
-  a = n(824385),
-  l = n(481060),
-  u = n(40851),
-  _ = n(906732),
-  d = n(78839),
+  a = n(481060),
+  l = n(40851),
+  u = n(906732),
+  _ = n(78839),
   c = n(267642),
-  E = n(879892),
-  I = n(981631),
-  T = n(689938),
-  h = n(658088);
+  d = n(879892),
+  E = n(981631),
+  I = n(689938),
+  T = n(658088);
 t.Z = e => {
   let {
     analyticsLocation: t,
     analyticsSourceLocation: n,
     guild: s,
-    buttonText: S,
-    targetBoostedGuildTier: f,
-    onClose: N = () => {},
-    closeLayer: A = () => {},
-    pauseAnimation: m = !1,
-    applicationId: O,
-    handleSubscribeModalClose: R,
-    withHighlight: C = !1,
+    buttonText: h,
+    targetBoostedGuildTier: S,
+    onClose: f = () => {},
+    closeLayer: N = () => {},
+    pauseAnimation: A = !1,
+    applicationId: m,
+    handleSubscribeModalClose: O,
+    withHighlight: R = !1,
     ...p
   } = e, {
     analyticsLocations: g
-  } = (0, _.ZP)(), L = (0, u.bp)() === I.IlC.POPOUT, [v, D] = r.useState(!1), M = null != f ? Math.max((0, c.KK)(s, f), 1) : 1, P = (0, c.aq)(), y = async () => {
-    D(!0), await (0, E.u)({
+  } = (0, u.ZP)(), C = (0, l.bp)() === E.IlC.POPOUT, [v, L] = r.useState(!1), D = null != S ? Math.max((0, c.KK)(s, S), 1) : 1, M = (0, c.aq)(), P = async () => {
+    L(!0), await (0, d.u)({
       analyticsLocations: g,
       analyticsLocation: t,
       analyticsSourceLocation: n,
       guild: s,
-      numberOfBoostsToAdd: M,
-      onClose: N,
-      closeLayer: A,
-      inPopout: L,
-      applicationId: O,
-      handleSubscribeModalClose: R
-    }), D(!1)
-  }, U = d.ZP.getPremiumTypeSubscription(), b = (0, i.jsx)("span", {
-    children: null != S ? S : T.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_SUBSCRIBE_THIS_SERVER
+      numberOfBoostsToAdd: D,
+      onClose: f,
+      closeLayer: N,
+      inPopout: C,
+      applicationId: m,
+      handleSubscribeModalClose: O
+    }), L(!1)
+  }, y = _.ZP.getPremiumTypeSubscription(), U = (0, i.jsx)("span", {
+    children: null != h ? h : I.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_SUBSCRIBE_THIS_SERVER
   });
-  return ((null == U ? void 0 : U.isPausedOrPausePending) && (b = (0, i.jsxs)("div", {
-    className: h.pausedButton,
-    children: [(0, i.jsx)(a.m, {
-      className: h.lockIcon,
-      width: 16,
-      height: 16
-    }), " ", b]
-  }), p.disabled = !0), null != P) ? (0, i.jsx)(l.Tooltip, {
-    text: P,
+  return ((null == y ? void 0 : y.isPausedOrPausePending) && (U = (0, i.jsxs)("div", {
+    className: T.pausedButton,
+    children: [(0, i.jsx)(a.LockIcon, {
+      size: "xs",
+      className: T.lockIcon
+    }), " ", U]
+  }), p.disabled = !0), null != M) ? (0, i.jsx)(a.Tooltip, {
+    text: M,
     "aria-label": !1,
-    children: e => (0, i.jsx)(l.ShinyButton, {
+    children: e => (0, i.jsx)(a.ShinyButton, {
       ...e,
       disabled: !0,
-      size: l.Button.Sizes.SMALL,
-      pauseAnimation: m,
+      size: a.Button.Sizes.SMALL,
+      pauseAnimation: A,
       ...p,
-      children: b
+      children: U
     })
-  }) : (0, i.jsx)(l.ShinyButton, {
-    size: l.Button.Sizes.SMALL,
+  }) : (0, i.jsx)(a.ShinyButton, {
+    size: a.Button.Sizes.SMALL,
     ...p,
     className: o()(p.className, {
-      [h.buttonHighlighted]: C
+      [T.buttonHighlighted]: R
     }),
     submitting: v,
-    onClick: y,
-    pauseAnimation: m,
-    children: b
+    onClick: P,
+    pauseAnimation: A,
+    children: U
   })
 }

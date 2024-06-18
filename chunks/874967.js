@@ -8,9 +8,9 @@ var i = n(735250),
   l = n.n(a),
   u = n(866442),
   _ = n(692547),
-  d = n(84735),
-  c = n(285952),
-  E = n(263704),
+  c = n(84735),
+  d = n(481060),
+  E = n(285952),
   I = n(981631),
   T = n(235098),
   h = n(611273);
@@ -45,34 +45,35 @@ class N extends r.PureComponent {
       background: null != n ? n : _.Z.unsafe_rawColors.BRAND_500.css
     } : null != n && (e = {
       color: n
-    }), (0, i.jsx)(d.t, {
+    }), (0, i.jsx)(c.t, {
       offset: {
         left: 4
       },
-      children: (0, i.jsxs)(c.Z, {
+      children: (0, i.jsxs)(E.Z, {
         className: o()(T.selectableItem, r, {
           [T.selected]: t
         }),
         onClick: this.handleClick,
         onKeyUp: this.handleKeyUp,
-        align: c.Z.Align.CENTER,
+        align: E.Z.Align.CENTER,
         style: {
           ...e,
           ...this.props.style
         },
         role: "button",
         tabIndex: 0,
-        children: [(0, i.jsx)(c.Z, {
-          align: c.Z.Align.CENTER,
+        children: [(0, i.jsx)(E.Z, {
+          align: E.Z.Align.CENTER,
           className: T.selectableItemLabel,
           shrink: 1,
           children: s
-        }), t && (0, i.jsx)(c.Z, {
-          wrap: c.Z.Wrap.WRAP,
+        }), t && (0, i.jsx)(E.Z, {
+          wrap: E.Z.Wrap.WRAP,
           className: h.marginReset,
           grow: 0,
           shrink: 0,
-          children: (0, i.jsx)(E.Z, {
+          children: (0, i.jsx)(d.CheckmarkLargeIcon, {
+            size: "md",
             color: a
           })
         })]

@@ -6,24 +6,23 @@ var r = n(120356),
   o = n(481060),
   a = n(28531),
   l = n(819758),
-  u = n(898140),
-  _ = n(149203),
-  d = n(689938),
+  u = n(149203),
+  _ = n(689938),
   c = n(181710);
-let E = e => {
+let d = e => {
   let {
     emojiSubCategory: t
   } = e;
   return (0, i.jsxs)("div", {
-    className: s()(c.badgeLabel, t === _.t0.TOP_GUILD_EMOJI ? c.topGuildEmojiBadge : c.newlyAddedBadge),
-    children: [t === _.t0.TOP_GUILD_EMOJI ? (0, i.jsx)(a.Z, {
+    className: s()(c.badgeLabel, t === u.t0.TOP_GUILD_EMOJI ? c.topGuildEmojiBadge : c.newlyAddedBadge),
+    children: [t === u.t0.TOP_GUILD_EMOJI ? (0, i.jsx)(a.Z, {
       foreground: c.newlyAddedBadgeIcon
     }) : (0, i.jsx)(l.Z, {
       foreground: c.newlyAddedBadgeIcon
     }), (0, i.jsx)(o.Text, {
       variant: "text-sm/semibold",
       color: "always-white",
-      children: t === _.t0.TOP_GUILD_EMOJI ? d.Z.Messages.TOP_GUILD_EMOJI_BADGE : d.Z.Messages.NEWLY_ADDED_GUILD_EMOJI_BADGE
+      children: t === u.t0.TOP_GUILD_EMOJI ? _.Z.Messages.TOP_GUILD_EMOJI_BADGE : _.Z.Messages.NEWLY_ADDED_GUILD_EMOJI_BADGE
     })]
   })
 };
@@ -34,8 +33,8 @@ t.Z = e => {
     graphicSecondary: r,
     titlePrimary: a,
     titleSecondary: l,
-    isFavorite: I = !1,
-    emojiSubCategory: T = _.t0.NONE
+    isFavorite: E = !1,
+    emojiSubCategory: I = u.t0.NONE
   } = e;
   return (0, i.jsxs)("div", {
     className: s()(c.inspector, t),
@@ -48,8 +47,10 @@ t.Z = e => {
       children: [(0, i.jsxs)(o.Text, {
         className: c.titlePrimary,
         variant: "text-md/semibold",
-        children: [I ? (0, i.jsx)(u.Z, {
-          "aria-label": I ? d.Z.Messages.EMOJI_IS_FAVORITE_ARIA_LABEL.format({
+        children: [E ? (0, i.jsx)(o.StarIcon, {
+          size: "custom",
+          color: "currentColor",
+          "aria-label": E ? _.Z.Messages.EMOJI_IS_FAVORITE_ARIA_LABEL.format({
             names: a
           }) : void 0,
           width: 15,
@@ -61,12 +62,12 @@ t.Z = e => {
         variant: "text-xs/normal",
         children: l
       })]
-    }), T === _.t0.NONE ? null != r && (0, i.jsx)("div", {
+    }), I === u.t0.NONE ? null != r && (0, i.jsx)("div", {
       className: c.graphicSecondary,
       "aria-hidden": !0,
       children: r
-    }) : (0, i.jsx)(E, {
-      emojiSubCategory: T
+    }) : (0, i.jsx)(d, {
+      emojiSubCategory: I
     })]
   })
 }

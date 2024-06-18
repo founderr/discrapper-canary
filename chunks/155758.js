@@ -1,10 +1,10 @@
 "use strict";
 t.d(s, {
   p: function() {
-    return C
+    return h
   },
   s: function() {
-    return R
+    return g
   }
 });
 var n = t(735250),
@@ -14,60 +14,59 @@ var n = t(735250),
   r = t(294796),
   o = t(481060),
   c = t(153124),
-  d = t(548343),
-  u = t(185403),
-  E = t(151785),
-  _ = t(817460),
-  I = t(723047),
-  T = t(528027),
-  N = t(686807),
-  m = t(157018),
-  S = t(828656),
-  h = t(689938),
-  g = t(561555);
+  d = t(817460),
+  u = t(723047),
+  E = t(528027),
+  _ = t(686807),
+  I = t(157018),
+  T = t(828656),
+  N = t(689938),
+  m = t(561555);
 
-function x(e) {
+function S(e) {
   let {
     guildId: s,
     emojiId: t,
     emojiName: l,
     title: r,
     description: c,
-    targetType: E,
-    index: _,
-    dndName: I,
-    onEdit: N,
-    onMove: m,
-    disabled: x = !1
-  } = e, C = i.useRef(null), R = i.useRef(null), {
-    drag: L,
-    dragPreview: O,
-    drop: A,
-    isDragging: p
-  } = (0, S.Z)(C, E, _, m);
-  return L(R), O(A(C)), (0, n.jsxs)("div", {
-    ref: C,
-    className: a()(g.card, {
-      [g.cardDragging]: p,
-      [g.disabled]: x
+    targetType: d,
+    index: u,
+    dndName: _,
+    onEdit: I,
+    onMove: S,
+    disabled: h = !1
+  } = e, g = i.useRef(null), C = i.useRef(null), {
+    drag: x,
+    dragPreview: R,
+    drop: L,
+    isDragging: O
+  } = (0, T.Z)(g, d, u, S);
+  return x(C), R(L(g)), (0, n.jsxs)("div", {
+    ref: g,
+    className: a()(m.card, {
+      [m.cardDragging]: O,
+      [m.disabled]: h
     }),
     children: [(0, n.jsxs)("div", {
-      className: g.emojiWrapper,
-      children: [(0, n.jsx)(T.Z, {
+      className: m.emojiWrapper,
+      children: [(0, n.jsx)(E.Z, {
         guildId: s,
         emojiId: t,
         emojiName: l,
-        className: g.emoji
-      }), !x && (0, n.jsx)("div", {
-        ref: R,
-        className: g.dragIconWrapper,
-        "data-dnd-name": I,
-        children: (0, n.jsx)(d.Z, {
-          className: g.dragIcon
+        className: m.emoji
+      }), !h && (0, n.jsx)("div", {
+        ref: C,
+        className: m.dragIconWrapper,
+        "data-dnd-name": _,
+        children: (0, n.jsx)(o.DragIcon, {
+          size: "xs",
+          color: "currentColor",
+          className: m.dragIcon
         })
       })]
     }), (0, n.jsxs)("div", {
-      className: g.cardText,
+      className: m.cardText,
       children: [(0, n.jsx)(o.Text, {
         color: "header-primary",
         variant: "text-md/semibold",
@@ -78,76 +77,80 @@ function x(e) {
         children: c
       })]
     }), (0, n.jsx)("div", {
-      className: g.cardActions,
-      children: !x && (0, n.jsx)(o.Clickable, {
-        className: g.cardActionButton,
-        onClick: x ? void 0 : N,
-        "aria-label": h.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_EDIT_ARIA_LABEL,
-        "aria-disabled": x,
-        children: (0, n.jsx)(u.Z, {
-          className: g.cardActionButtonIcon
+      className: m.cardActions,
+      children: !h && (0, n.jsx)(o.Clickable, {
+        className: m.cardActionButton,
+        onClick: h ? void 0 : I,
+        "aria-label": N.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_EDIT_ARIA_LABEL,
+        "aria-disabled": h,
+        children: (0, n.jsx)(o.PencilIcon, {
+          size: "xs",
+          color: "currentColor",
+          className: m.cardActionButtonIcon
         })
       })
     })]
   })
 }
 
-function C(e) {
+function h(e) {
   let {
     benefits: s,
     onEdit: t,
     onMove: l,
     guildId: o
-  } = e, d = (0, c.Dt)(), {
-    isDragging: u
+  } = e, E = (0, c.Dt)(), {
+    isDragging: T
   } = (0, r.f)(e => ({
-    isDragging: e.getItemType() === d
-  })), E = (0, I.mY)();
+    isDragging: e.getItemType() === E
+  })), N = (0, u.mY)();
   return 0 === s.length ? null : (0, n.jsx)("div", {
-    className: a()(g.container, {
-      [g.isDragging]: u
+    className: a()(m.container, {
+      [m.isDragging]: T
     }),
     children: s.map((e, s) => (0, n.jsxs)(i.Fragment, {
       children: [s > 0 ? (0, n.jsx)("div", {
-        className: g.divider
-      }) : null, (0, n.jsx)(x, {
+        className: m.divider
+      }) : null, (0, n.jsx)(S, {
         guildId: o,
         emojiId: e.emoji_id,
         emojiName: e.emoji_name,
-        title: (0, N.Z)(e),
+        title: (0, _.Z)(e),
         description: e.description,
-        targetType: d,
+        targetType: E,
         index: s,
-        dndName: (0, m.Z)(e),
+        dndName: (0, I.Z)(e),
         onEdit: () => t(s),
         onMove: l,
-        disabled: E
+        disabled: N
       })]
-    }, (0, _.ab)(e)))
+    }, (0, d.ab)(e)))
   })
 }
 
-function R(e) {
+function g(e) {
   let {
     onClick: s,
     children: t,
     disabled: i = !1
   } = e;
   return (0, n.jsx)(o.Clickable, {
-    className: g.container,
+    className: m.container,
     onClick: i ? void 0 : s,
     "aria-disabled": i,
     children: (0, n.jsxs)("div", {
-      className: a()(g.card, g.addBenefit, {
-        [g.disabled]: i
+      className: a()(m.card, m.addBenefit, {
+        [m.disabled]: i
       }),
       children: [(0, n.jsx)("div", {
-        className: g.emojiWrapper,
-        children: (0, n.jsx)(E.Z, {
-          className: g.addBenefitIcon
+        className: m.emojiWrapper,
+        children: (0, n.jsx)(o.CirclePlusIcon, {
+          size: "xs",
+          color: "currentColor",
+          className: m.addBenefitIcon
         })
       }), (0, n.jsx)("div", {
-        className: g.cardText,
+        className: m.cardText,
         children: (0, n.jsx)(o.Text, {
           color: "header-primary",
           variant: "text-md/normal",

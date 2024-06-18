@@ -7,13 +7,13 @@ n.d(t, {
 var i, r, s, o, a, l = n(735250),
   u = n(470079),
   _ = n(120356),
-  d = n.n(_),
-  c = n(512722),
-  E = n.n(c),
+  c = n.n(_),
+  d = n(512722),
+  E = n.n(d),
   I = n(866442),
   T = n(692547),
   h = n(84735),
-  S = n(263704),
+  S = n(481060),
   f = n(981631),
   N = n(780150);
 
@@ -94,25 +94,25 @@ class R extends(s = u.PureComponent) {
       children: a,
       size: u,
       reverse: _,
-      checkboxColor: c,
+      checkboxColor: d,
       displayOnly: E,
       type: I,
       onClick: T
     } = this.props, A = null != a ? (0, l.jsx)("div", {
-      className: d()(N.label, e ? N.labelDisabled : N.labelClickable, _ ? N.labelReversed : N.labelForward),
+      className: c()(N.label, e ? N.labelDisabled : N.labelClickable, _ ? N.labelReversed : N.labelForward),
       style: {
         lineHeight: "".concat(u, "px")
       },
       children: a
     }) : null, m = this.props.disabled ? N.inputDisabled : this.props.readOnly ? N.inputReadonly : N.inputDefault;
     return (0, l.jsxs)(E ? "span" : "label", {
-      className: d()(e ? N.checkboxWrapperDisabled : N.checkboxWrapper, O[r], s, {
+      className: c()(e ? N.checkboxWrapperDisabled : N.checkboxWrapper, O[r], s, {
         [N.row]: "row" === I,
         [N.checked]: n
       }),
       children: [_ ? A : null, !E && (0, l.jsx)(h.t, {
         children: (0, l.jsx)("input", {
-          className: d()(o, m),
+          className: c()(o, m),
           type: "checkbox",
           onClick: T,
           onChange: e || t ? f.dG4 : this.handleChange,
@@ -123,18 +123,17 @@ class R extends(s = u.PureComponent) {
           }
         })
       }), (0, l.jsx)("div", {
-        className: d()(N.checkbox, i, {
+        className: c()(N.checkbox, i, {
           [N.checked]: n
         }),
         style: {
           width: u,
           height: u,
-          borderColor: c,
+          borderColor: d,
           ...this.getStyle()
         },
-        children: (0, l.jsx)(S.Z, {
-          width: 18,
-          height: 18,
+        children: (0, l.jsx)(S.CheckmarkLargeIcon, {
+          size: "sm",
           color: this.getColor(),
           "aria-hidden": !0
         })

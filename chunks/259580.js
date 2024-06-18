@@ -3,59 +3,56 @@ var i = n(735250);
 n(470079);
 var r = n(120356),
   s = n.n(r),
-  o = n(531057),
-  a = n(605260),
-  l = n(465270),
-  u = n(865824),
-  _ = n(481060),
-  d = n(325767),
-  c = n(199813);
-let E = {
-    UP: c.directionUp,
-    RIGHT: c.directionRight,
-    DOWN: c.directionDown,
-    LEFT: c.directionLeft
+  o = n(481060),
+  a = n(325767),
+  l = n(199813);
+let u = {
+    UP: l.directionUp,
+    RIGHT: l.directionRight,
+    DOWN: l.directionDown,
+    LEFT: l.directionLeft
   },
-  I = e => {
+  _ = e => {
     let {
-      direction: t = E.DOWN,
+      direction: t = u.DOWN,
       width: n = 24,
       height: r = 24,
-      color: I = "currentColor",
-      transition: T = c.transition,
-      className: h,
-      foreground: S,
-      expanded: f,
-      ...N
+      color: _ = "currentColor",
+      transition: c = l.transition,
+      className: d,
+      foreground: E,
+      expanded: I,
+      ...T
     } = e, {
-      enabled: A
-    } = (0, _.useRedesignIconContext)(), m = t;
-    if (!0 === f ? m = E.DOWN : !1 === f && (m = E.RIGHT), A) {
+      enabled: h
+    } = (0, o.useRedesignIconContext)(), S = t;
+    if (!0 === I ? S = u.DOWN : !1 === I && (S = u.RIGHT), h) {
       let e = {
-        [E.UP]: u.u,
-        [E.DOWN]: o.C,
-        [E.LEFT]: a.V,
-        [E.RIGHT]: l.F
-      } [m];
+        [u.UP]: o.ChevronSmallUpIcon,
+        [u.DOWN]: o.ChevronSmallDownIcon,
+        [u.LEFT]: o.ChevronSmallLeftIcon,
+        [u.RIGHT]: o.ChevronSmallRightIcon
+      } [S];
       return (0, i.jsx)(e, {
-        ...N,
-        className: h,
+        ...T,
+        className: d,
+        size: "custom",
         width: n,
         height: r,
-        color: I,
-        colorClass: S
+        color: null != _ ? _ : "currentColor",
+        colorClass: E
       })
     }
     return (0, i.jsx)("svg", {
-      className: s()(h, T, m),
+      className: s()(d, c, S),
       width: n,
       height: r,
       viewBox: "0 0 24 24",
-      ...(0, d.Z)(N),
+      ...(0, a.Z)(T),
       children: (0, i.jsx)("path", {
-        className: S,
+        className: E,
         fill: "none",
-        stroke: I,
+        stroke: _,
         strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -64,4 +61,4 @@ let E = {
       })
     })
   };
-I.Directions = E, t.Z = I
+_.Directions = u, t.Z = _

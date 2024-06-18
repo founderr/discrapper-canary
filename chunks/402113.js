@@ -6,8 +6,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var r = n(566620),
-  s = n(87086),
+var r = n(481060),
+  s = n(566620),
   o = n(871499),
   a = n(689938);
 
@@ -21,12 +21,12 @@ function l(e) {
   return (0, i.jsx)(_, {
     ...u,
     onClick: () => {
-      (0, r.mW)({
+      (0, s.mW)({
         channelId: t,
         applicationId: n
       })
     },
-    iconComponent: s.Z,
+    iconComponent: r.DoorExitIcon,
     label: a.Z.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY
   })
 }

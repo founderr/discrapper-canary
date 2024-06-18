@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return m
+    return f
   }
 });
 var i = n(735250),
@@ -10,93 +10,92 @@ var i = n(735250),
   o = n.n(s),
   a = n(373793),
   l = n(974674),
-  u = n(40146),
-  _ = n(780014),
-  d = n(481060),
-  c = n(688465),
-  E = n(692437),
-  I = n(768581),
-  T = n(63063),
-  h = n(981631),
-  S = n(182294),
-  f = n(689079),
-  N = n(689938),
-  A = n(844703);
+  u = n(481060),
+  _ = n(688465),
+  c = n(768581),
+  d = n(63063),
+  E = n(981631),
+  I = n(182294),
+  T = n(689079),
+  h = n(689938),
+  S = n(844703);
 
-function m(e) {
+function f(e) {
   let {
     inApp: t,
     application: n,
     onSelect: s
-  } = e, m = r.useMemo(() => I.ZP.getApplicationIconURL({
+  } = e, f = r.useMemo(() => c.ZP.getApplicationIconURL({
     id: n.id,
     icon: n.icon
-  }), [n.icon, n.id]), O = r.useMemo(() => [{
+  }), [n.icon, n.id]), N = r.useMemo(() => [{
     type: a.Y.USER_INSTALL,
-    icon: _.o,
-    title: N.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER,
-    subtitle: N.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE,
+    icon: u.UserPlusIcon,
+    title: h.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER,
+    subtitle: h.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE,
     beta: !0
   }, {
     type: a.Y.GUILD_INSTALL,
-    icon: u.Q,
-    title: N.Z.Messages.OAUTH2_INTEGRATION_SELECT_GUILD,
-    subtitle: N.Z.Messages.OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE,
+    icon: u.ServerIcon,
+    title: h.Z.Messages.OAUTH2_INTEGRATION_SELECT_GUILD,
+    subtitle: h.Z.Messages.OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE,
     beta: !1
   }].filter(e => {
     var t, i;
     return (null === (i = n.integrationTypesConfig) || void 0 === i ? void 0 : null === (t = i[e.type]) || void 0 === t ? void 0 : t.oauth2InstallParams) != null
   }), [n.integrationTypesConfig]);
   return (0, i.jsxs)("div", {
-    className: A.container,
+    className: S.container,
     children: [(0, i.jsxs)("div", {
-      className: A.header,
+      className: S.header,
       children: [(0, i.jsx)(l.qE, {
-        src: m,
-        size: S.EF.SIZE_80,
+        src: f,
+        size: I.EF.SIZE_80,
         "aria-label": n.name
-      }), (0, i.jsx)(d.Heading, {
+      }), (0, i.jsx)(u.Heading, {
         variant: "heading-xl/bold",
         color: "header-primary",
         children: n.name
       })]
     }), (0, i.jsx)("ul", {
-      className: A.rows,
-      children: O.map(e => (0, i.jsxs)(d.Clickable, {
+      className: S.rows,
+      children: N.map(e => (0, i.jsxs)(u.Clickable, {
         tag: "li",
-        className: o()(A.row, {
-          [A.inApp]: t
+        className: o()(S.row, {
+          [S.inApp]: t
         }),
         onClick: () => s(e.type),
         children: [(0, i.jsx)(e.icon, {
-          width: 24,
-          height: 24,
-          className: A.leftIcon
+          size: "md",
+          color: "currentColor",
+          className: S.leftIcon
         }), (0, i.jsxs)("div", {
-          className: A.rowInner,
+          className: S.rowInner,
           children: [(0, i.jsxs)("div", {
-            className: A.rowDetails,
-            children: [(0, i.jsx)(d.Text, {
+            className: S.rowDetails,
+            children: [(0, i.jsx)(u.Text, {
               variant: "text-md/medium",
               color: "interactive-active",
               children: e.title
-            }), (0, i.jsx)(d.Text, {
+            }), (0, i.jsx)(u.Text, {
               variant: "text-xs/medium",
               color: "text-muted",
               children: e.subtitle
             })]
-          }), e.beta && (0, i.jsx)(c.Z, {}), (0, i.jsx)(E.Z, {
-            className: A.rightIcon
+          }), e.beta && (0, i.jsx)(_.Z, {}), (0, i.jsx)(u.ChevronSmallRightIcon, {
+            size: "md",
+            color: "currentColor",
+            className: S.rightIcon
           })]
         })]
       }, e.type))
-    }), (0, i.jsx)(d.Text, {
+    }), (0, i.jsx)(u.Text, {
       variant: "text-xs/normal",
       color: "text-muted",
-      className: A.learnMore,
-      children: N.Z.Messages.OAUTH2_INTEGRATION_SELECT_DETAILS.format({
-        betaUserLimit: f.um,
-        learnMoreUrl: T.Z.getArticleURL(h.BhN.USING_APPS_FAQ)
+      className: S.learnMore,
+      children: h.Z.Messages.OAUTH2_INTEGRATION_SELECT_DETAILS.format({
+        betaUserLimit: T.um,
+        learnMoreUrl: d.Z.getArticleURL(E.BhN.USING_APPS_FAQ)
       })
     })]
   })

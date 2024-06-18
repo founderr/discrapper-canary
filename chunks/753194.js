@@ -12,34 +12,34 @@ var r = n(866442),
   a = n(481060),
   l = n(607070),
   u = n(797717),
-  _ = n(507957),
-  d = n(689938);
+  _ = n(689938);
 
 function c(e) {
   let t, {
       color: n,
       size: c,
-      forcedIconColor: E,
-      className: I,
-      iconClassName: T,
-      tooltipText: h
+      forcedIconColor: d,
+      className: E,
+      iconClassName: I,
+      tooltipText: T
     } = e,
-    [S, f] = (0, s.Wu)([l.Z], () => [l.Z.desaturateUserColors, l.Z.saturation]),
-    N = (0, a.useToken)(o.Z.unsafe_rawColors.PRIMARY_300).hex(),
-    A = (0, r._i)(null != n ? n : N),
-    m = (0, r.ho)(A, !1, S ? f : null);
-  return t = null != E ? E : .3 > (0, r.Bd)(A) ? o.Z.unsafe_rawColors.PRIMARY_630.css : o.Z.unsafe_rawColors.WHITE_500.css, (0, i.jsx)(a.Tooltip, {
-    text: null != h ? h : d.Z.Messages.CONNECTIONS_ROLE_OFFICIAL_ICON_TOOLTIP,
+    [h, S] = (0, s.Wu)([l.Z], () => [l.Z.desaturateUserColors, l.Z.saturation]),
+    f = (0, a.useToken)(o.Z.unsafe_rawColors.PRIMARY_300).hex(),
+    N = (0, r._i)(null != n ? n : f),
+    A = (0, r.ho)(N, !1, h ? S : null);
+  return t = null != d ? d : .3 > (0, r.Bd)(N) ? o.Z.unsafe_rawColors.PRIMARY_630.css : o.Z.unsafe_rawColors.WHITE_500.css, (0, i.jsx)(a.Tooltip, {
+    text: null != T ? T : _.Z.Messages.CONNECTIONS_ROLE_OFFICIAL_ICON_TOOLTIP,
     children: e => (0, i.jsx)(u.Z, {
       ...e,
-      className: I,
-      color: m,
+      className: E,
+      color: A,
       size: c,
-      children: (0, i.jsx)(_.Z, {
+      children: (0, i.jsx)(a.CheckmarkSmallIcon, {
+        size: "custom",
         color: t,
         height: c,
         width: c,
-        className: T
+        className: I
       })
     })
   })

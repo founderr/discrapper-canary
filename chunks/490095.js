@@ -1,7 +1,7 @@
 "use strict";
 var i = n(735250);
 n(470079);
-var r = n(630641),
+var r = n(481060),
   s = n(383015);
 t.Z = e => {
   let {
@@ -13,9 +13,9 @@ t.Z = e => {
       width: t,
       height: t
     },
-    children: (0, i.jsx)(r.Z, {
-      width: 12,
-      height: 12,
+    children: (0, i.jsx)(r.LockIcon, {
+      size: "xxs",
+      color: "currentColor",
       className: s.unownedStickerLockIcon
     })
   })

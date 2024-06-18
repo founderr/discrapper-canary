@@ -1,7 +1,7 @@
 "use strict";
 t.d(s, {
   H: function() {
-    return E
+    return u
   }
 });
 var n = t(735250);
@@ -9,12 +9,11 @@ t(470079);
 var i = t(120356),
   l = t.n(i),
   a = t(481060),
-  r = t(41542),
-  o = t(264451),
-  c = t(75775),
-  d = t(689938),
-  u = t(364141);
-let E = e => {
+  r = t(264451),
+  o = t(75775),
+  c = t(689938),
+  d = t(364141);
+let u = e => {
   let {
     value: s,
     isPercent: t
@@ -22,18 +21,18 @@ let E = e => {
   if (null == s) return null;
   let {
     formattedValue: i,
-    isPositive: r
-  } = (0, o.m5)(s, t);
+    isPositive: u
+  } = (0, r.m5)(s, t);
   return (0, n.jsxs)("div", {
-    className: u.trendContainer,
-    children: [(0, n.jsx)(c.Z, {
-      className: l()(u.chartLineIcon, {
-        [u.chartLineIconNegative]: !r
+    className: d.trendContainer,
+    children: [(0, n.jsx)(o.Z, {
+      className: l()(d.chartLineIcon, {
+        [d.chartLineIconNegative]: !u
       })
     }), (0, n.jsx)(a.Text, {
       variant: "text-md/normal",
-      className: u.trendDescription,
-      children: d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_TREND_DESCRIPTION.format({
+      className: d.trendDescription,
+      children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_TREND_DESCRIPTION.format({
         value: i
       })
     })]
@@ -45,30 +44,32 @@ s.Z = e => {
     sublabel: t,
     value: i,
     additionalContent: l,
-    tooltip: o
+    tooltip: r
   } = e;
   return (0, n.jsxs)("div", {
-    className: u.container,
+    className: d.container,
     children: [(0, n.jsxs)("div", {
       children: [(0, n.jsxs)("div", {
-        className: u.labelContainer,
+        className: d.labelContainer,
         children: [(0, n.jsx)(a.Text, {
           variant: "text-xs/medium",
-          className: u.label,
+          className: d.label,
           children: s
-        }), null != o && (0, n.jsx)(a.Tooltip, {
-          text: o,
-          children: e => (0, n.jsx)(r.Z, {
-            className: u.labelTooltipIcon,
+        }), null != r && (0, n.jsx)(a.Tooltip, {
+          text: r,
+          children: e => (0, n.jsx)(a.CircleInformationIcon, {
+            size: "xs",
+            color: "currentColor",
+            className: d.labelTooltipIcon,
             ...e
           })
         }), null != t ? (0, n.jsx)(a.Text, {
           variant: "text-xs/normal",
-          className: u.sublabel,
+          className: d.sublabel,
           children: t
         }) : null]
       }), (0, n.jsx)(a.Text, {
-        className: u.value,
+        className: d.value,
         variant: "text-sm/normal",
         children: i
       })]

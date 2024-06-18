@@ -10,10 +10,9 @@ var r = n(120356),
   s = n.n(r),
   o = n(481060),
   a = n(889161),
-  l = n(729285),
-  u = n(343747),
-  _ = n(689938),
-  d = n(630916);
+  l = n(343747),
+  u = n(689938),
+  _ = n(630916);
 
 function c(e) {
   let {
@@ -24,27 +23,29 @@ function c(e) {
     canCreateExpressions: c
   } = (0, a.XJ)(t);
   return (0, i.jsx)(o.Tooltip, {
-    text: _.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_BUTTON_DISABLED,
+    text: u.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_BUTTON_DISABLED,
     shouldShow: !c,
     children: e => (0, i.jsx)("li", {
-      className: d.soundButtonWrapper,
+      className: _.soundButtonWrapper,
       ...e,
       children: (0, i.jsxs)(o.ClickableContainer, {
         ...r,
-        "aria-label": _.Z.Messages.SOUNDBOARD_UPLOAD_SOUND_FOR_GUILD.format({
+        "aria-label": u.Z.Messages.SOUNDBOARD_UPLOAD_SOUND_FOR_GUILD.format({
           guildName: t.name
         }),
-        className: s()(d.soundAddButton, {
-          [d.focused]: n,
-          [d.disabled]: !c
+        className: s()(_.soundAddButton, {
+          [_.focused]: n,
+          [_.disabled]: !c
         }),
-        onClick: () => (0, u.Z)(t.id),
-        children: [(0, i.jsx)(l.Z, {
-          className: d.soundAddIcon
+        onClick: () => (0, l.Z)(t.id),
+        children: [(0, i.jsx)(o.PlusSmallIcon, {
+          size: "md",
+          color: "currentColor",
+          className: _.soundAddIcon
         }), (0, i.jsx)(o.Text, {
           variant: "text-xs/normal",
           color: c ? "header-primary" : "text-muted",
-          children: _.Z.Messages.SOUNDBOARD_SOUND_ADD_SOUND
+          children: u.Z.Messages.SOUNDBOARD_SOUND_ADD_SOUND
         })]
       })
     })

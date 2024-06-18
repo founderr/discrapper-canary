@@ -2,9 +2,9 @@
 t(47120);
 var n = t(735250),
   a = t(470079),
-  i = t(120356),
-  l = t.n(i),
-  r = t(887024),
+  r = t(120356),
+  l = t.n(r),
+  i = t(887024),
   o = t(512722),
   c = t.n(o),
   u = t(772848),
@@ -16,9 +16,9 @@ var n = t(735250),
   p = t(570140),
   g = t(37234),
   h = t(727637),
-  x = t(607070),
+  I = t(607070),
   _ = t(100527),
-  I = t(906732),
+  x = t(906732),
   T = t(1585),
   N = t(125988),
   S = t(377171),
@@ -26,38 +26,34 @@ var n = t(735250),
   b = t(107091),
   v = t(197115),
   O = t(300284),
-  Z = t(876917),
-  A = t(642619),
+  A = t(876917),
+  Z = t(642619),
   R = t(210887),
-  j = t(725808),
-  P = t(465670),
-  M = t(794358),
-  k = t(466111),
-  B = t(626135),
-  y = t(74538),
-  F = t(998502),
-  D = t(335131),
-  U = t(1870),
-  H = t(884697),
-  w = t(266386),
-  G = t(724994),
-  W = t(624377),
-  V = t(390698),
-  Y = t(813083),
-  z = t(680942),
-  K = t(558060),
-  X = t(237031),
-  q = t(832149),
-  Q = t(981631),
-  $ = t(474936),
-  J = t(689938),
-  ee = t(638075),
-  es = t(42615);
-let et = F.ZP.getEnableHardwareAcceleration() ? m.AnimatedAvatar : m.Avatar,
-  en = m.AvatarSizes.SIZE_152,
-  ea = m.AvatarSizes.SIZE_120,
-  ei = (0, T.y9)(en),
-  el = e => {
+  j = t(626135),
+  P = t(74538),
+  M = t(998502),
+  k = t(335131),
+  B = t(1870),
+  y = t(884697),
+  F = t(266386),
+  D = t(724994),
+  U = t(624377),
+  H = t(390698),
+  w = t(813083),
+  G = t(680942),
+  W = t(558060),
+  V = t(237031),
+  Y = t(832149),
+  z = t(981631),
+  K = t(474936),
+  X = t(689938),
+  q = t(638075),
+  Q = t(42615);
+let $ = M.ZP.getEnableHardwareAcceleration() ? m.AnimatedAvatar : m.Avatar,
+  J = m.AvatarSizes.SIZE_152,
+  ee = m.AvatarSizes.SIZE_120,
+  es = (0, T.y9)(J),
+  et = e => {
     let {
       children: s,
       onClick: t,
@@ -73,7 +69,7 @@ let et = F.ZP.getEnableHardwareAcceleration() ? m.AnimatedAvatar : m.Avatar,
       children: s
     })
   },
-  er = e => {
+  en = e => {
     let {
       className: s,
       ...t
@@ -82,13 +78,13 @@ let et = F.ZP.getEnableHardwareAcceleration() ? m.AnimatedAvatar : m.Avatar,
       color: m.ButtonColors.BRAND,
       look: m.Button.Looks.FILLED,
       size: m.ButtonSizes.ICON,
-      className: l()(ee.previewButton, s),
-      innerClassName: ee.previewButtonInner,
-      "aria-label": J.Z.Messages.PREVIEW,
+      className: l()(q.previewButton, s),
+      innerClassName: q.previewButtonInner,
+      "aria-label": X.Z.Messages.PREVIEW,
       ...t,
-      children: (0, n.jsx)(M.Z, {
-        width: 24,
-        height: 24
+      children: (0, n.jsx)(m.EyeIcon, {
+        size: "md",
+        color: "currentColor"
       })
     })
   };
@@ -96,248 +92,250 @@ s.Z = function(e) {
   let {
     product: s,
     user: t,
-    category: i,
+    category: r,
     onMount: o,
     isGiftEasterEggEnabled: M
-  } = e, F = a.useRef(null), {
-    analyticsLocations: eo
-  } = (0, I.ZP)(_.Z.COLLECTIBLES_SHOP_CARD), ec = a.useRef(null), eu = a.useRef(null), ed = (0, h.Z)(ec), {
-    defaultPaymentSource: eC
+  } = e, ea = a.useRef(null), {
+    analyticsLocations: er
+  } = (0, x.ZP)(_.Z.COLLECTIBLES_SHOP_CARD), el = a.useRef(null), ei = a.useRef(null), eo = (0, h.Z)(el), {
+    defaultPaymentSource: ec
   } = (0, L.Z)({
     isGift: !1,
     activeSubscription: null
-  }), [eE, ef] = a.useState(!1), em = ed || eE, [ep] = s.items, {
-    avatarDecorationSrc: eg,
-    eventHandlers: eh,
-    avatarPlaceholderSrc: ex
+  }), [eu, ed] = a.useState(!1), eC = eo || eu, [eE] = s.items, {
+    avatarDecorationSrc: ef,
+    eventHandlers: em,
+    avatarPlaceholderSrc: ep
   } = (0, N.Z)({
     user: t,
-    avatarDecorationOverride: (null == ep ? void 0 : ep.type) === d.Z.AVATAR_DECORATION ? ep : void 0,
-    size: ei,
-    animateOnHover: !em
+    avatarDecorationOverride: (null == eE ? void 0 : eE.type) === d.Z.AVATAR_DECORATION ? eE : void 0,
+    size: es,
+    animateOnHover: !eC
   }), {
-    backgroundColors: e_,
-    buttonColors: eI
-  } = (0, W.Z)(s.styles), eT = a.useMemo(() => y.ZP.canUseCollectibles(t), [t]), eN = (0, H.XM)(s, eT, !1), eS = a.useMemo(() => (0, H.BH)(s, eT), [s, eT]), eL = (0, H.G1)(s), eb = (0, H.rN)(s), {
-    isPurchased: ev
-  } = (0, G.L)(s), [eO, eZ] = (0, C.Wu)([U.Z], () => [U.Z.isClaiming === s.skuId, null != U.Z.isClaiming && U.Z.isClaiming !== s.skuId]), eA = (0, C.e7)([R.Z], () => (0, f.w)(R.Z.theme)), eR = (0, H.Yq)(s.skuId), ej = (0, w.c)("CollectiblesShopTallCard"), [eP, eM] = a.useState(!1), ek = a.useRef(null), eB = a.useRef(new r.qA), [ey, eF] = a.useState(!1), [eD, eU] = a.useState(null), eH = ev || ey, ew = (0, O.Z)({
-    analyticsLocations: eo
-  }), eG = a.useRef(null), eW = a.useMemo(() => ({
+    backgroundColors: eg,
+    buttonColors: eh
+  } = (0, U.Z)(s.styles), eI = a.useMemo(() => P.ZP.canUseCollectibles(t), [t]), e_ = (0, y.XM)(s, eI, !1), ex = a.useMemo(() => (0, y.BH)(s, eI), [s, eI]), eT = (0, y.G1)(s), eN = (0, y.rN)(s), {
+    isPurchased: eS
+  } = (0, D.L)(s), [eL, eb] = (0, C.Wu)([B.Z], () => [B.Z.isClaiming === s.skuId, null != B.Z.isClaiming && B.Z.isClaiming !== s.skuId]), ev = (0, C.e7)([R.Z], () => (0, f.w)(R.Z.theme)), eO = (0, y.Yq)(s.skuId), eA = (0, F.c)("CollectiblesShopTallCard"), [eZ, eR] = a.useState(!1), ej = a.useRef(null), eP = a.useRef(new i.qA), [eM, ek] = a.useState(!1), [eB, ey] = a.useState(null), eF = eS || eM, eD = (0, O.Z)({
+    analyticsLocations: er
+  }), eU = a.useRef(null), eH = a.useMemo(() => ({
     sku_id: s.skuId,
-    location: Q.Sbl.COLLECTIBLES_LIGHTNING_CHECKOUT
-  }), [s]), eV = () => {
-    if ((0, g.xf)(), ew(), (null == ep ? void 0 : ep.type) === d.Z.AVATAR_DECORATION) {
+    location: z.Sbl.COLLECTIBLES_LIGHTNING_CHECKOUT
+  }), [s]), ew = () => {
+    if ((0, g.xf)(), eD(), (null == eE ? void 0 : eE.type) === d.Z.AVATAR_DECORATION) {
       (0, T.ps)({
-        initialSelectedDecoration: ep,
-        analyticsLocations: eo
+        initialSelectedDecoration: eE,
+        analyticsLocations: er
       });
       return
-    }(null == ep ? void 0 : ep.type) === d.Z.PROFILE_EFFECT && (0, A.H)({
-      initialSelectedEffectId: ep.id,
-      analyticsLocations: eo
+    }(null == eE ? void 0 : eE.type) === d.Z.PROFILE_EFFECT && (0, Z.H)({
+      initialSelectedEffectId: eE.id,
+      analyticsLocations: er
     })
-  }, eY = e => {
-    if (!eP) return t => {
-      eG.current = t.currentTarget, (0, X.T)({
+  }, eG = e => {
+    if (!eZ) return t => {
+      eU.current = t.currentTarget, (0, V.T)({
         product: s,
-        category: i,
-        analyticsLocations: eo,
+        category: r,
+        analyticsLocations: er,
         analyticsSource: e,
-        returnRef: eG
+        returnRef: eU
       })
     }
-  }, ez = eY(_.Z.COLLECTIBLES_SHOP_CARD), eK = eY(_.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON), eX = () => (0, n.jsx)("div", {
-    className: ee.hoverUpsellContainer,
+  }, eW = eG(_.Z.COLLECTIBLES_SHOP_CARD), eV = eG(_.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON), eY = () => (0, n.jsx)("div", {
+    className: q.hoverUpsellContainer,
     children: (0, n.jsx)(v.Z, {
       fullWidth: !0,
-      className: ee.__invalid_premiumSubscribeButton,
-      disabled: eZ,
+      className: q.__invalid_premiumSubscribeButton,
+      disabled: eb,
       onClick: e => e.stopPropagation(),
-      buttonText: J.Z.Messages.UNLOCK_WITH_NITRO,
-      subscriptionTier: $.Si.TIER_2
+      buttonText: X.Z.Messages.UNLOCK_WITH_NITRO,
+      subscriptionTier: K.Si.TIER_2
     })
   });
   a.useEffect(() => {
-    null == o || o(ec)
+    null == o || o(el)
   }, [o]), a.useEffect(() => {
-    if (!x.Z.useReducedMotion && null !== eD) {
+    if (!I.Z.useReducedMotion && null !== eB) {
       let {
         current: e
-      } = eu;
+      } = ei;
       c()(null != e, "Shakeable is shaken when not mounted"), e.shake(300, 2)
     }
-  }, [eD]);
-  let eq = () => eH ? (0, n.jsx)(V.U, {
-      className: ee.priceTag,
+  }, [eB]);
+  let ez = () => eF ? (0, n.jsx)(H.U, {
+      className: q.priceTag,
       isPartiallyPurchased: !1
-    }) : eL ? (0, n.jsx)(m.Text, {
+    }) : eT ? (0, n.jsx)(m.Text, {
       variant: "text-md/semibold",
-      className: ee.priceTag,
-      children: J.Z.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
-    }) : (0, n.jsx)(K.Z, {
+      className: q.priceTag,
+      children: X.Z.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
+    }) : (0, n.jsx)(W.Z, {
       product: s,
-      discount: eS,
-      isPremiumUser: eT,
-      className: ee.priceTag
+      discount: ex,
+      isPremiumUser: eI,
+      className: q.priceTag
     }),
-    eQ = () => eL ? null : eb ? (0, n.jsx)(er, {
-      onClick: eK
-    }) : (0, n.jsx)(z.Z, {
+    eK = () => eT ? null : eN ? (0, n.jsx)(en, {
+      onClick: eV
+    }) : (0, n.jsx)(G.Z, {
       product: s,
-      returnRef: ec,
+      returnRef: el,
       isGiftEasterEggEnabled: M,
       disableCustomColor: !0,
       tooltipDelay: 250
     }),
-    e$ = () => {
-      if (eL && !eT && !eb) return eX();
-      let e = eL ? {
-        submitting: eO,
-        submittingStartedLabel: J.Z.Messages.COLLECTIBLES_COLLECTING,
-        submittingFinishedLabel: J.Z.Messages.COLLECTIBLES_COLLECTING_FINISHED,
+    eX = () => {
+      if (eT && !eI && !eN) return eY();
+      let e = eT ? {
+        submitting: eL,
+        submittingStartedLabel: X.Z.Messages.COLLECTIBLES_COLLECTING,
+        submittingFinishedLabel: X.Z.Messages.COLLECTIBLES_COLLECTING_FINISHED,
         onClick: async () => {
-          await (0, D.fK)(s.skuId), (0, q.Z)({
+          await (0, k.fK)(s.skuId), (0, Y.Z)({
             product: s,
-            analyticsLocations: eo
+            analyticsLocations: er
           })
         }
       } : {
-        onClick: e1
+        onClick: e$
       };
       return (0, n.jsxs)("div", {
-        className: ee.buttonsContainer,
-        children: [eH ? (0, n.jsx)(el, {
-          disabled: eZ,
-          onClick: eV,
-          children: J.Z.Messages.COLLECTIBLES_USE_NOW
-        }) : (0, n.jsx)(el, {
-          disabled: eZ,
-          className: ee.purchaseButton,
+        className: q.buttonsContainer,
+        children: [eF ? (0, n.jsx)(et, {
+          disabled: eb,
+          onClick: ew,
+          children: X.Z.Messages.COLLECTIBLES_USE_NOW
+        }) : (0, n.jsx)(et, {
+          disabled: eb,
+          className: q.purchaseButton,
           ...e,
-          children: eL ? J.Z.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION : J.Z.Messages.COLLECTIBLES_PURCHASE.format({
-            price: eN
+          children: eT ? X.Z.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION : X.Z.Messages.COLLECTIBLES_PURCHASE.format({
+            price: e_
           })
-        }), eQ()]
+        }), eK()]
       })
     },
-    eJ = () => eP && null !== eD ? (0, n.jsx)("div", {
-      className: ee.avatarContainer,
+    eq = () => eZ && null !== eB ? (0, n.jsx)("div", {
+      className: q.avatarContainer,
       children: (0, n.jsx)("img", {
-        src: es,
+        src: Q,
         alt: "error",
-        className: ee.errorImg
+        className: q.errorImg
       })
     }) : (0, n.jsxs)(n.Fragment, {
-      children: [eL && (0, n.jsx)(m.Tooltip, {
-        tooltipContentClassName: ee.premiumWheelTooltipContent,
+      children: [eT && (0, n.jsx)(m.Tooltip, {
+        tooltipContentClassName: q.premiumWheelTooltipContent,
         color: m.Tooltip.Colors.PRIMARY,
-        text: J.Z.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER,
+        text: X.Z.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER,
         children: e => (0, n.jsx)(m.TextBadge, {
           ...e,
-          className: ee.premiumWheelBadge,
-          text: (0, n.jsx)(k.Z, {
-            className: ee.premiumWheel
+          className: q.premiumWheelBadge,
+          text: (0, n.jsx)(m.NitroWheelIcon, {
+            size: "md",
+            color: "currentColor",
+            className: q.premiumWheel
           })
         })
-      }), (null == ep ? void 0 : ep.type) === d.Z.PROFILE_EFFECT && (0, n.jsx)("div", {
-        className: ee.profileEffectShopPreview,
-        children: (0, n.jsx)(Z.Z, {
-          isHovering: em,
-          profileEffectId: ep.id,
-          isPurchased: eH,
+      }), (null == eE ? void 0 : eE.type) === d.Z.PROFILE_EFFECT && (0, n.jsx)("div", {
+        className: q.profileEffectShopPreview,
+        children: (0, n.jsx)(A.Z, {
+          isHovering: eC,
+          profileEffectId: eE.id,
+          isPurchased: eF,
           removeSetHeight: !0
         })
-      }), (null == ep ? void 0 : ep.type) === d.Z.AVATAR_DECORATION && (0, n.jsx)("div", {
-        className: ee.avatarContainer,
-        children: (0, n.jsx)(et, {
-          ...eh,
-          avatarDecoration: eg,
-          src: ej && em ? null == t ? void 0 : t.getAvatarURL(void 0, 152, !0) : ex,
-          imageClassName: ej && em ? ee.fadeInAvatarImg : void 0,
-          className: l()(ee.avatar, {
-            [ee.avatarPurchased]: eH && !eP
+      }), (null == eE ? void 0 : eE.type) === d.Z.AVATAR_DECORATION && (0, n.jsx)("div", {
+        className: q.avatarContainer,
+        children: (0, n.jsx)($, {
+          ...em,
+          avatarDecoration: ef,
+          src: eA && eC ? null == t ? void 0 : t.getAvatarURL(void 0, 152, !0) : ep,
+          imageClassName: eA && eC ? q.fadeInAvatarImg : void 0,
+          className: l()(q.avatar, {
+            [q.avatarPurchased]: eF && !eZ
           }),
-          size: eP ? ea : en,
-          "aria-label": J.Z.Messages.USER_SETTINGS_AVATAR
+          size: eZ ? ee : J,
+          "aria-label": X.Z.Messages.USER_SETTINGS_AVATAR
         })
       })]
     }),
-    e0 = () => (c()(null != eC, "default payment source must be set"), (0, n.jsxs)("div", {
-      className: l()(ee.cardText, {
-        [ee.cardTextBlur]: (null == ep ? void 0 : ep.type) === d.Z.PROFILE_EFFECT
+    eQ = () => (c()(null != ec, "default payment source must be set"), (0, n.jsxs)("div", {
+      className: l()(q.cardText, {
+        [q.cardTextBlur]: (null == eE ? void 0 : eE.type) === d.Z.PROFILE_EFFECT
       }),
       children: [(0, n.jsx)("div", {
-        className: l()(ee.cardBackground, eA ? ee.darkCardBackground : ee.lightCardBackground, (null == ep ? void 0 : ep.type) === d.Z.PROFILE_EFFECT ? ee.cardLowOpacity : null)
-      }), eP ? (0, n.jsx)(b.Z, {
+        className: l()(q.cardBackground, ev ? q.darkCardBackground : q.lightCardBackground, (null == eE ? void 0 : eE.type) === d.Z.PROFILE_EFFECT ? q.cardLowOpacity : null)
+      }), eZ ? (0, n.jsx)(b.Z, {
         product: s,
-        paymentSource: eC,
-        itemPreview: eJ(),
+        paymentSource: ec,
+        itemPreview: eq(),
         onPurchaseComplete: () => {
-          eF(!0), B.default.track(Q.rMx.PAYMENT_FLOW_SUCCEEDED, {
-            ...eW,
-            load_id: F.current
+          ek(!0), j.default.track(z.rMx.PAYMENT_FLOW_SUCCEEDED, {
+            ...eH,
+            load_id: ea.current
           })
         },
-        onUse: e7,
+        onUse: eJ,
         onError: e => {
-          eU(e), B.default.track(Q.rMx.PAYMENT_FLOW_FAILED, {
-            ...eW,
-            load_id: F.current
+          ey(e), j.default.track(z.rMx.PAYMENT_FLOW_FAILED, {
+            ...eH,
+            load_id: ea.current
           })
         },
-        onReviewPurchase: e7,
-        confettiCanvas: ek.current,
-        loadId: F.current,
-        baseAnalyticsData: eW
+        onReviewPurchase: eJ,
+        confettiCanvas: ej.current,
+        loadId: ea.current,
+        baseAnalyticsData: eH
       }) : (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(m.Text, {
           variant: "text-lg/bold",
-          className: ee.productName,
+          className: q.productName,
           children: s.name
         }), (0, n.jsxs)("div", {
-          className: ee.detailsWrapper,
+          className: q.detailsWrapper,
           children: [(0, n.jsx)("div", {
-            className: ee.innerBlur,
-            children: eq()
+            className: q.innerBlur,
+            children: ez()
           }), (0, n.jsx)("div", {
-            className: ee.innerHover,
-            children: e$()
+            className: q.innerHover,
+            children: eX()
           })]
         })]
       })]
     })),
-    e1 = () => {
-      F.current = (0, u.Z)(), eU(null), eM(!0), ef(!0), p.Z.dispatch({
+    e$ = () => {
+      ea.current = (0, u.Z)(), ey(null), eR(!0), ed(!0), p.Z.dispatch({
         type: "LIGHTNING_CHECKOUT_OPEN"
-      }), B.default.track(Q.rMx.PAYMENT_FLOW_STARTED, {
-        ...eW,
-        load_id: F.current
+      }), j.default.track(z.rMx.PAYMENT_FLOW_STARTED, {
+        ...eH,
+        load_id: ea.current
       })
     },
-    e7 = a.useCallback(() => {
-      eM(!1), ef(!1), p.Z.dispatch({
+    eJ = a.useCallback(() => {
+      eR(!1), ed(!1), p.Z.dispatch({
         type: "LIGHTNING_CHECKOUT_CLOSE"
-      }), B.default.track(Q.rMx.PAYMENT_FLOW_CANCELED, {
-        ...eW,
-        load_id: F.current
+      }), j.default.track(z.rMx.PAYMENT_FLOW_CANCELED, {
+        ...eH,
+        load_id: ea.current
       })
-    }, [eM, eW]),
-    e4 = eA ? "0 0 15px 1px ".concat(E.Z.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)",
-    e2 = null != e_ ? {
-      backgroundColor: eA ? "var(--background-floating)" : "var(--background-secondary)",
+    }, [eR, eH]),
+    e0 = ev ? "0 0 15px 1px ".concat(E.Z.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)",
+    e1 = null != eg ? {
+      backgroundColor: ev ? "var(--background-floating)" : "var(--background-secondary)",
       borderColor: "var(--chat-border)",
-      boxShadow: em ? e4 : "none"
+      boxShadow: eC ? e0 : "none"
     } : void 0,
-    e8 = null != eI && eP ? {
-      boxShadow: "0px 4px 50px 0px " + eI.primary.toHexString()
+    e7 = null != eh && eZ ? {
+      boxShadow: "0px 4px 50px 0px " + eh.primary.toHexString()
     } : {},
-    e3 = eP && eD ? {
-      boxShadow: "0px 4px 50px 0px " + (eA ? S.Z.WHITE : S.Z.BLACK)
-    } : e8;
+    e4 = eZ && eB ? {
+      boxShadow: "0px 4px 50px 0px " + (ev ? S.Z.WHITE : S.Z.BLACK)
+    } : e7;
   return a.useEffect(() => {
-    if (eP) {
-      c()(null !== ec.current, "cardRef can not be null");
-      let e = ec.current,
+    if (eZ) {
+      c()(null !== el.current, "cardRef can not be null");
+      let e = el.current,
         s = e.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
       if (s.length < 1) return;
       let t = s[0],
@@ -345,69 +343,70 @@ s.Z = function(e) {
         a = e => {
           "Tab" === e.key && (e.shiftKey && document.activeElement === t ? (e.preventDefault(), null == n || n.focus()) : !e.shiftKey && document.activeElement === n && (e.preventDefault(), null == t || t.focus()))
         },
-        i = e => {
-          "Escape" === e.key && e7()
+        r = e => {
+          "Escape" === e.key && eJ()
         };
-      return e.addEventListener("keydown", a), e.addEventListener("keydown", i), () => {
-        e.removeEventListener("keydown", a), e.removeEventListener("keydown", i)
+      return e.addEventListener("keydown", a), e.addEventListener("keydown", r), () => {
+        e.removeEventListener("keydown", a), e.removeEventListener("keydown", r)
       }
     }
-  }, [eP, e7]), (0, n.jsxs)(n.Fragment, {
-    children: [eP && (0, n.jsx)("div", {
-      className: ee.backdrop,
-      onClick: e7,
+  }, [eZ, eJ]), (0, n.jsxs)(n.Fragment, {
+    children: [eZ && (0, n.jsx)("div", {
+      className: q.backdrop,
+      onClick: eJ,
       "aria-hidden": !0
     }), (0, n.jsx)(m.FocusRing, {
       children: (0, n.jsx)(m.Shakeable, {
         className: l()({
-          [ee.shaker]: eP
+          [q.shaker]: eZ
         }),
-        ref: eu,
+        ref: ei,
         children: (0, n.jsxs)("div", {
-          className: l()(ee.overflowContainer, {
-            [ee.lightningCheckout]: eP
+          className: l()(q.overflowContainer, {
+            [q.lightningCheckout]: eZ
           }),
-          style: e3,
+          style: e4,
           role: "dialog",
           "aria-modal": "true",
-          children: [(0, n.jsx)(r.O_, {
-            ref: ek,
-            className: ee.confettiCanvas,
-            environment: eB.current
+          children: [(0, n.jsx)(i.O_, {
+            ref: ej,
+            className: q.confettiCanvas,
+            environment: eP.current
           }), (0, n.jsxs)(m.Clickable, {
-            innerRef: ec,
-            className: l()(ee.shopCard, ee.shopCardAnimation),
-            onBlur: () => ef(!1),
-            onClick: ez,
-            style: e2,
+            innerRef: el,
+            className: l()(q.shopCard, q.shopCardAnimation),
+            onBlur: () => ed(!1),
+            onClick: eW,
+            style: e1,
             id: "shop-item-".concat(s.skuId),
             "aria-hidden": !0,
-            children: [eP && (0, n.jsx)(m.Button, {
-              className: ee.closeButton,
-              "aria-label": J.Z.Messages.CLOSE,
+            children: [eZ && (0, n.jsx)(m.Button, {
+              className: q.closeButton,
+              "aria-label": X.Z.Messages.CLOSE,
               look: m.Button.Looks.BLANK,
               size: m.Button.Sizes.NONE,
-              onClick: e7,
-              children: (0, n.jsx)(P.Z, {
-                width: 16,
-                height: 16,
-                color: eA ? S.Z.WHITE : S.Z.BLACK
+              onClick: eJ,
+              children: (0, n.jsx)(m.CloseSmallIcon, {
+                size: "xs",
+                color: ev ? S.Z.WHITE : S.Z.BLACK
               })
-            }), eH && !eP && (0, n.jsx)("div", {
-              className: ee.checkmarkWrapper,
-              children: (0, n.jsx)(j.Z, {
+            }), eF && !eZ && (0, n.jsx)("div", {
+              className: q.checkmarkWrapper,
+              children: (0, n.jsx)(m.CheckmarkBoldIcon, {
+                size: "custom",
+                color: "currentColor",
                 width: 38,
                 height: 38,
-                className: ee.checkmark
+                className: q.checkmark
               })
-            }), eJ(), e0(), !eP && (0, n.jsx)(Y.Z, {
-              category: i,
-              className: ee.limitedTimeBadge,
+            }), eq(), eQ(), !eZ && (0, n.jsx)(w.Z, {
+              category: r,
+              className: q.limitedTimeBadge,
               display: "card"
-            }), eR && !eP && (0, n.jsx)(m.TextBadge, {
-              text: J.Z.Messages.NEW,
+            }), eO && !eZ && (0, n.jsx)(m.TextBadge, {
+              text: X.Z.Messages.NEW,
               disableColor: !0,
-              className: ee.newBadge
+              className: q.newBadge
             })]
           })]
         })

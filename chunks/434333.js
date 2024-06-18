@@ -4,7 +4,7 @@ n.d(t, {
     return c
   },
   m: function() {
-    return d
+    return _
   }
 });
 var i = n(735250),
@@ -12,13 +12,12 @@ var i = n(735250),
   s = n(120356),
   o = n.n(s),
   a = n(1561),
-  l = n(465670),
-  u = n(759231),
-  _ = n(835023);
-let d = {
-    RED: _.backgroundRed,
-    BACKGROUND_TERTIARY: _.backgroundTertiary,
-    BACKGROUND_ACCENT: _.backgroundAccent
+  l = n(481060),
+  u = n(835023);
+let _ = {
+    RED: u.backgroundRed,
+    BACKGROUND_TERTIARY: u.backgroundTertiary,
+    BACKGROUND_ACCENT: u.backgroundAccent
   },
   c = r.forwardRef(function(e, t) {
     let {
@@ -26,24 +25,27 @@ let d = {
       children: r,
       className: s,
       onDismiss: c,
-      backgroundColor: E = d.RED,
-      icon: I = u.Z,
-      iconClassName: T
+      backgroundColor: d = _.RED,
+      icon: E = l.CircleExclamationPointIcon,
+      iconClassName: I
     } = e;
     return (0, i.jsxs)("div", {
-      className: o()(_.error, s, E),
+      className: o()(u.error, s, d),
       ref: t,
-      children: [(0, i.jsx)(I, {
-        className: o()(_.icon, T)
+      children: [(0, i.jsx)(E, {
+        className: o()(u.icon, I),
+        color: "currentColor"
       }), (0, i.jsx)("div", {
         role: n,
-        className: _.text,
+        className: u.text,
         children: r
       }), null != c ? (0, i.jsx)(a.P, {
         onClick: c,
-        className: _.errorClose,
-        children: (0, i.jsx)(l.Z, {
-          className: _.errorCloseIcon
+        className: u.errorClose,
+        children: (0, i.jsx)(l.CloseSmallIcon, {
+          size: "md",
+          color: "currentColor",
+          className: u.errorCloseIcon
         })
       }) : null]
     })

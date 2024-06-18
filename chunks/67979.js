@@ -12,9 +12,9 @@ var r = n(120356),
   a = n(1561),
   l = n(507274),
   u = n(235874),
-  _ = n(305878),
-  d = n(745206),
-  c = n(12349);
+  _ = n(481060),
+  c = n(745206),
+  d = n(12349);
 
 function E(e) {
   let {
@@ -38,7 +38,7 @@ function E(e) {
           onSelect: e => {
             n(e), r()
           },
-          calendarClassName: d.calendarContainer,
+          calendarClassName: c.calendarContainer,
           onClickOutside: r,
           autoFocus: !0
         })
@@ -52,19 +52,21 @@ function E(e) {
       } = e;
       return (0, i.jsx)(a.P, {
         ...o,
-        className: s()(c.inputDefault, d.container, {
-          [c.disabled]: T,
-          [d.disabled]: T
+        className: s()(d.inputDefault, c.container, {
+          [d.disabled]: T,
+          [c.disabled]: T
         }),
         onClick: T ? void 0 : n,
         "aria-disabled": T,
         children: (0, i.jsxs)("div", {
-          className: d.content,
+          className: c.content,
           children: [(0, i.jsx)("div", {
-            className: d.text,
+            className: c.text,
             children: null == t ? void 0 : t.format(r)
-          }), (0, i.jsx)(_.Z, {
-            className: d.icon
+          }), (0, i.jsx)(_.CalendarIcon, {
+            size: "md",
+            color: "currentColor",
+            className: c.icon
           })]
         })
       })

@@ -1,7 +1,7 @@
 "use strict";
 t.d(s, {
   Z: function() {
-    return x
+    return g
   }
 }), t(47120);
 var n = t(735250),
@@ -14,23 +14,22 @@ var n = t(735250),
   d = t(603211),
   u = t(710344),
   E = t(430824),
-  _ = t(151785),
-  I = t(570961),
-  T = t(208665),
-  N = t(959508),
-  m = t(290511),
-  S = t(689938),
-  h = t(82591);
+  _ = t(570961),
+  I = t(208665),
+  T = t(959508),
+  N = t(290511),
+  m = t(689938),
+  S = t(82591);
 
-function g(e) {
+function h(e) {
   let {
     guild: s,
     prejoinOnly: t,
     postjoinOnly: l
-  } = e, c = (0, r.e7)([T.Z], () => T.Z.editedOnboardingPrompts), u = c.filter(e => e.inOnboarding), E = u.length, {
-    drag: N,
-    drop: g,
-    dragSourcePosition: x,
+  } = e, c = (0, r.e7)([I.Z], () => I.Z.editedOnboardingPrompts), u = c.filter(e => e.inOnboarding), E = u.length, {
+    drag: T,
+    drop: h,
+    dragSourcePosition: g,
     setIsDraggable: C
   } = (0, d.Z)({
     type: "ONBOARDING_PROMPT_CARD",
@@ -39,66 +38,68 @@ function g(e) {
     onDragStart: () => {},
     onDragComplete: () => {},
     onDragReset: () => {}
-  }), R = i.useRef(null);
+  }), x = i.useRef(null);
   return i.useEffect(() => {
     C(!1)
   }, [C]), i.useEffect(() => {
-    N(g(R))
-  }, [N, g, R]), (0, n.jsxs)("div", {
-    ref: R,
-    className: a()(h.separatorSection, {
-      [h.dropIndicatorBefore]: null != x && E < x,
-      [h.dropIndicatorAfter]: null != x && E > x
+    T(h(x))
+  }, [T, h, x]), (0, n.jsxs)("div", {
+    ref: x,
+    className: a()(S.separatorSection, {
+      [S.dropIndicatorBefore]: null != g && E < g,
+      [S.dropIndicatorAfter]: null != g && E > g
     }),
-    children: [!l && u.length < m.b3 ? (0, n.jsxs)(o.Clickable, {
-      className: h.addPrompt,
-      onClick: () => (0, I.tS)(s, [...c, (0, m.yZ)(!0)], !1),
-      children: [(0, n.jsx)(_.Z, {
-        className: h.plusIcon,
+    children: [!l && u.length < N.b3 ? (0, n.jsxs)(o.Clickable, {
+      className: S.addPrompt,
+      onClick: () => (0, _.tS)(s, [...c, (0, N.yZ)(!0)], !1),
+      children: [(0, n.jsx)(o.CirclePlusIcon, {
+        size: "custom",
+        color: "currentColor",
+        className: S.plusIcon,
         width: 20,
         height: 20
       }), (0, n.jsx)(o.Text, {
         variant: "text-md/medium",
         color: "text-brand",
-        children: S.Z.Messages.ONBOARDING_PROMPT_ADD_PROMPT
+        children: m.Z.Messages.ONBOARDING_PROMPT_ADD_PROMPT
       })]
     }) : null, t ? null : (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)("div", {
-        className: h.divider
+        className: S.divider
       }), (0, n.jsx)(o.Heading, {
         variant: "heading-md/bold",
-        children: S.Z.Messages.ONBOARDING_QUESTIONS_POST_JOIN_HEADER
+        children: m.Z.Messages.ONBOARDING_QUESTIONS_POST_JOIN_HEADER
       }), (0, n.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
-        className: h.subtitle,
-        children: S.Z.Messages.ONBOARDING_QUESTIONS_POST_JOIN_SUBHEADER
+        className: S.subtitle,
+        children: m.Z.Messages.ONBOARDING_QUESTIONS_POST_JOIN_SUBHEADER
       })]
     })]
   })
 }
 
-function x(e) {
+function g(e) {
   let {
     guildId: s,
     prejoinOnly: t,
     postjoinOnly: i,
     includeCount: l,
     singleColumn: a
-  } = e, d = (0, r.e7)([E.Z], () => E.Z.getGuild(s)), x = (0, r.e7)([T.Z], () => T.Z.editedOnboardingPrompts), C = x.filter(e => e.inOnboarding), R = x.filter(e => !0 !== e.inOnboarding), L = [...C.map(e => ({
+  } = e, d = (0, r.e7)([E.Z], () => E.Z.getGuild(s)), g = (0, r.e7)([I.Z], () => I.Z.editedOnboardingPrompts), C = g.filter(e => e.inOnboarding), x = g.filter(e => !0 !== e.inOnboarding), R = [...C.map(e => ({
     id: e.id,
     data: e
   })), {
     id: "separator",
-    data: (0, m.ae)()
-  }, ...R.map(e => ({
+    data: (0, N.ae)()
+  }, ...x.map(e => ({
     id: e.id,
     data: e
   }))], {
-    handleDragStart: O,
-    handleDragReset: A,
-    handleDragComplete: p
-  } = (0, u.Z)(L, e => {
+    handleDragStart: L,
+    handleDragReset: O,
+    handleDragComplete: A
+  } = (0, u.Z)(R, e => {
     let s = e.findIndex(e => "separator" === e.id),
       t = e.slice(0, s).map(e => ({
         ...e.data,
@@ -109,29 +110,29 @@ function x(e) {
         inOnboarding: !1,
         required: !1
       }));
-    if (t.length > m.b3) {
+    if (t.length > N.b3) {
       c.Z.show({
-        title: S.Z.Messages.ONBOARDING_QUESTIONS_CANNOT_MOVE,
-        body: S.Z.Messages.ONBOARDING_QUESTIONS_SAVE_TOO_MANY_PROMPTS_IN_ONBOARDING.format({
-          numQuestions: m.b3
+        title: m.Z.Messages.ONBOARDING_QUESTIONS_CANNOT_MOVE,
+        body: m.Z.Messages.ONBOARDING_QUESTIONS_SAVE_TOO_MANY_PROMPTS_IN_ONBOARDING.format({
+          numQuestions: N.b3
         })
       });
       return
-    }(0, I.tS)(d, [...t, ...n])
+    }(0, _.tS)(d, [...t, ...n])
   });
   return null == d ? null : (0, n.jsxs)(n.Fragment, {
     children: [i ? null : (0, n.jsxs)(n.Fragment, {
       children: [t ? null : (0, n.jsxs)("div", {
         children: [(0, n.jsx)(o.Heading, {
           variant: "heading-md/bold",
-          children: S.Z.Messages.ONBOARDING_QUESTIONS_PRE_JOIN_HEADER
+          children: m.Z.Messages.ONBOARDING_QUESTIONS_PRE_JOIN_HEADER
         }), (0, n.jsx)(o.Text, {
           variant: "text-sm/normal",
           color: "header-secondary",
-          className: h.subtitle,
-          children: S.Z.Messages.ONBOARDING_QUESTIONS_PRE_JOIN_SUBHEADER
+          className: S.subtitle,
+          children: m.Z.Messages.ONBOARDING_QUESTIONS_PRE_JOIN_SUBHEADER
         })]
-      }), C.map((e, s) => (0, n.jsx)(N.Z, {
+      }), C.map((e, s) => (0, n.jsx)(T.Z, {
         guild: d,
         prompt: e,
         disableAutofocus: t,
@@ -139,34 +140,36 @@ function x(e) {
         singleColumn: a,
         promptIndex: s,
         dragIndex: s,
-        onPromptDragStart: O,
-        onPromptDragReset: A,
-        onPromptDragComplete: p
+        onPromptDragStart: L,
+        onPromptDragReset: O,
+        onPromptDragComplete: A
       }, e.id))]
-    }), (0, n.jsx)(g, {
+    }), (0, n.jsx)(h, {
       guild: d,
       prejoinOnly: t,
       postjoinOnly: i
     }), t ? null : (0, n.jsxs)(n.Fragment, {
-      children: [R.map((e, s) => (0, n.jsx)(N.Z, {
+      children: [x.map((e, s) => (0, n.jsx)(T.Z, {
         guild: d,
         prompt: e,
         promptIndex: s + C.length,
         dragIndex: s + C.length + 1,
-        onPromptDragStart: O,
-        onPromptDragReset: A,
-        onPromptDragComplete: p
-      }, e.id)), x.length < m.YW ? (0, n.jsxs)(o.Clickable, {
-        className: h.addPrompt,
-        onClick: () => (0, I.tS)(d, [...x, (0, m.yZ)(!1)], !1),
-        children: [(0, n.jsx)(_.Z, {
-          className: h.plusIcon,
+        onPromptDragStart: L,
+        onPromptDragReset: O,
+        onPromptDragComplete: A
+      }, e.id)), g.length < N.YW ? (0, n.jsxs)(o.Clickable, {
+        className: S.addPrompt,
+        onClick: () => (0, _.tS)(d, [...g, (0, N.yZ)(!1)], !1),
+        children: [(0, n.jsx)(o.CirclePlusIcon, {
+          size: "custom",
+          color: "currentColor",
+          className: S.plusIcon,
           width: 20,
           height: 20
         }), (0, n.jsx)(o.Text, {
           variant: "text-md/medium",
           color: "text-brand",
-          children: S.Z.Messages.ONBOARDING_PROMPT_ADD_PROMPT
+          children: m.Z.Messages.ONBOARDING_PROMPT_ADD_PROMPT
         })]
       }) : null]
     })]

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return E
+    return d
   }
 }), n(47120);
 var i = n(735250);
@@ -13,39 +13,39 @@ var r = n(120356),
   l = n(692547),
   u = n(481060),
   _ = n(607070),
-  d = n(757698),
   c = n(997624);
 
-function E(e) {
+function d(e) {
   let t, {
       color: n,
       size: r,
-      forcedIconColor: E,
-      className: I,
-      iconClassName: T
+      forcedIconColor: d,
+      className: E,
+      iconClassName: I
     } = e,
-    [h, S] = (0, a.Wu)([_.Z], () => [_.Z.desaturateUserColors, _.Z.saturation]),
-    f = (0, u.useToken)(l.Z.unsafe_rawColors.PRIMARY_300).hex(),
-    N = (0, o._i)(null != n ? n : f),
-    A = (0, o.ho)(N, !1, h ? S : null);
-  t = null != E ? E : .3 > (0, o.Bd)(N) ? l.Z.unsafe_rawColors.PRIMARY_630.css : l.Z.unsafe_rawColors.WHITE_500.css;
-  let m = r / 8;
+    [T, h] = (0, a.Wu)([_.Z], () => [_.Z.desaturateUserColors, _.Z.saturation]),
+    S = (0, u.useToken)(l.Z.unsafe_rawColors.PRIMARY_300).hex(),
+    f = (0, o._i)(null != n ? n : S),
+    N = (0, o.ho)(f, !1, T ? h : null);
+  t = null != d ? d : .3 > (0, o.Bd)(f) ? l.Z.unsafe_rawColors.PRIMARY_630.css : l.Z.unsafe_rawColors.WHITE_500.css;
+  let A = r / 8;
   return (0, i.jsx)("div", {
     style: {
-      background: A,
+      background: N,
       width: r,
       height: r,
       borderRadius: r,
       lineHeight: "".concat(r, "px")
     },
-    className: I,
-    children: (0, i.jsx)(d.Z, {
+    className: E,
+    children: (0, i.jsx)(u.LinkIcon, {
+      size: "custom",
       color: t,
-      className: s()(c.linkIcon, T),
-      width: r - 2 * m,
-      height: r - 2 * m,
+      className: s()(c.linkIcon, I),
+      width: r - 2 * A,
+      height: r - 2 * A,
       style: {
-        margin: m
+        margin: A
       }
     })
   })

@@ -1,31 +1,26 @@
 "use strict";
 n.d(t, {
   F: function() {
-    return h
+    return c
   },
   Y: function() {
-    return T
+    return _
   }
 });
 var i = n(735250),
   r = n(470079),
   s = n(772848),
-  o = n(280748),
-  a = n(632140),
-  l = n(993365),
-  u = n(481060),
-  _ = n(529653),
-  d = n(502283),
-  c = n(525241),
-  E = n(561466),
-  I = n(140139);
+  o = n(993365),
+  a = n(481060),
+  l = n(561466),
+  u = n(140139);
 
-function T(e, t) {
-  let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E.si,
+function _(e, t) {
+  let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.si,
     {
-      position: i = E.si.position,
-      component: r = E.si.component,
-      duration: o = E.si.duration
+      position: i = l.si.position,
+      component: r = l.si.component,
+      duration: o = l.si.duration
     } = n;
   return {
     message: e,
@@ -38,52 +33,55 @@ function T(e, t) {
     }
   }
 }
-let h = r.memo(function(e) {
+let c = r.memo(function(e) {
   let {
     message: t,
     type: n,
     id: r,
     options: {
-      component: s = E.si.component
-    } = E.si
+      component: s = l.si.component
+    } = l.si
   } = e;
   return null != s ? (0, i.jsx)(i.Fragment, {
     children: s
   }) : (0, i.jsxs)("div", {
     id: r,
-    className: I.toast,
+    className: u.toast,
     children: [function(e) {
       switch (e) {
-        case E.pC.SUCCESS:
-          return (0, i.jsx)(c.Z, {
-            className: I.icon,
-            color: u.tokens.colors.STATUS_POSITIVE.css
+        case l.pC.SUCCESS:
+          return (0, i.jsx)(a.CheckmarkLargeIcon, {
+            size: "md",
+            className: u.icon,
+            color: a.tokens.colors.STATUS_POSITIVE.css
           });
-        case E.pC.FAILURE:
-          return (0, i.jsx)(d.Z, {
-            className: I.icon,
-            color: u.tokens.colors.STATUS_DANGER.css
+        case l.pC.FAILURE:
+          return (0, i.jsx)(a.CloseLargeIcon, {
+            size: "md",
+            className: u.icon,
+            color: a.tokens.colors.STATUS_DANGER.css
           });
-        case E.pC.CLIP:
-          return (0, i.jsx)(_.Z, {
-            className: I.clipIcon,
-            color: u.tokens.colors.HEADER_PRIMARY.css
+        case l.pC.CLIP:
+          return (0, i.jsx)(a.ClipsIcon, {
+            size: "xs",
+            className: u.clipIcon,
+            color: a.tokens.colors.HEADER_PRIMARY.css
           });
-        case E.pC.LINK:
-          return (0, i.jsx)(a.x, {
-            className: I.icon,
-            color: u.tokens.colors.HEADER_PRIMARY.css
+        case l.pC.LINK:
+          return (0, i.jsx)(a.LinkIcon, {
+            className: u.icon,
+            color: a.tokens.colors.HEADER_PRIMARY.css
           });
-        case E.pC.FORWARD:
-          return (0, i.jsx)(o.a, {
-            className: I.icon,
-            color: u.tokens.colors.STATUS_POSITIVE.css
+        case l.pC.FORWARD:
+          return (0, i.jsx)(a.ChatArrowRightIcon, {
+            className: u.icon,
+            color: a.tokens.colors.STATUS_POSITIVE.css
           });
         default:
           return null
       }
-    }(n), (0, i.jsx)(l.x, {
-      className: I.__invalid_content,
+    }(n), (0, i.jsx)(o.x, {
+      className: u.__invalid_content,
       color: "header-primary",
       variant: "text-md/normal",
       children: t

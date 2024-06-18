@@ -7,8 +7,8 @@ var i = n(990547),
   l = n(655006),
   u = n(408987),
   _ = n(962086),
-  d = n(160404),
-  c = n(41776),
+  c = n(160404),
+  d = n(41776),
   E = n(314897),
   I = n(271383),
   T = n(430824),
@@ -31,7 +31,7 @@ let O = new a.Z("GuildSettingsActionCreators"),
     },
     async open(e, t, i, r) {
       var s;
-      await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("23755"), n.e("89350"), n.e("11751"), n.e("29549"), n.e("7654"), n.e("31605"), n.e("33053"), n.e("4970"), n.e("32493"), n.e("75475"), n.e("90508"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("3084"), n.e("12549"), n.e("43502"), n.e("83256"), n.e("46388"), n.e("1187"), n.e("90144"), n.e("11623"), n.e("92557"), n.e("3619")]).then(n.bind(n, 994763)), (null === (s = T.Z.getGuild(e)) || void 0 === s ? void 0 : s.hasFeature(N.oNc.COMMUNITY)) && (t === N.pNK.GUILD_AUTOMOD && (t = N.pNK.SAFETY, r = N.KsC.SAFETY_AUTOMOD), t === N.pNK.MEMBER_VERIFICATION && (t = N.pNK.SAFETY, r = N.KsC.SAFETY_DM_AND_SPAM_PROTECTION)), R.init(e, t, i, r);
+      await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("23755"), n.e("89350"), n.e("11751"), n.e("29549"), n.e("7654"), n.e("31605"), n.e("33053"), n.e("65840"), n.e("45397"), n.e("75475"), n.e("90508"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("3084"), n.e("12549"), n.e("43502"), n.e("47523"), n.e("77594"), n.e("1187"), n.e("19589"), n.e("41889"), n.e("92557"), n.e("96936")]).then(n.bind(n, 994763)), (null === (s = T.Z.getGuild(e)) || void 0 === s ? void 0 : s.hasFeature(N.oNc.COMMUNITY)) && (t === N.pNK.GUILD_AUTOMOD && (t = N.pNK.SAFETY, r = N.KsC.SAFETY_AUTOMOD), t === N.pNK.MEMBER_VERIFICATION && (t = N.pNK.SAFETY, r = N.KsC.SAFETY_DM_AND_SPAM_PROTECTION)), R.init(e, t, i, r);
       (0, o.jN)(N.S9g.GUILD_SETTINGS)
     },
     close() {
@@ -159,8 +159,8 @@ let O = new a.Z("GuildSettingsActionCreators"),
         splash: a,
         banner: l,
         homeHeader: _,
-        afkChannelId: d,
-        afkTimeout: c,
+        afkChannelId: c,
+        afkTimeout: d,
         systemChannelId: E,
         verificationLevel: I,
         defaultMessageNotifications: T,
@@ -169,11 +169,11 @@ let O = new a.Z("GuildSettingsActionCreators"),
         systemChannelFlags: f,
         preferredLocale: m,
         rulesChannelId: R,
-        safetyAlertsChannelId: C,
-        discoverySplash: p,
-        publicUpdatesChannelId: g,
-        premiumProgressBarEnabled: L,
-        clan: v
+        safetyAlertsChannelId: p,
+        discoverySplash: g,
+        publicUpdatesChannelId: C,
+        premiumProgressBarEnabled: v,
+        clan: L
       } = t, D = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, M = {
         name: n,
         description: i,
@@ -183,21 +183,21 @@ let O = new a.Z("GuildSettingsActionCreators"),
         home_header: _,
         features: S,
         preferred_locale: m,
-        afk_channel_id: d,
-        afk_timeout: c,
+        afk_channel_id: c,
+        afk_timeout: d,
         system_channel_id: E,
         verification_level: I,
         default_message_notifications: T,
         explicit_content_filter: h,
         system_channel_flags: f,
         rules_channel_id: R,
-        discovery_splash: p,
-        public_updates_channel_id: g,
-        safety_alerts_channel_id: C,
-        ...null != L ? {
-          premium_progress_bar_enabled: L
+        discovery_splash: g,
+        public_updates_channel_id: C,
+        safety_alerts_channel_id: p,
+        ...null != v ? {
+          premium_progress_bar_enabled: v
         } : null,
-        clan: null != v ? (0, A.A9)(v) : v
+        clan: null != L ? (0, A.A9)(L) : L
       };
       return s.Z.dispatch({
         type: "GUILD_SETTINGS_SUBMIT"
@@ -290,13 +290,13 @@ let O = new a.Z("GuildSettingsActionCreators"),
       await r.tn.del({
         url: N.ANM.GUILD_LEAVE(e),
         body: {
-          lurking: c.Z.isLurking(e) || I.ZP.isCurrentUserGuest(e)
+          lurking: d.Z.isLurking(e) || I.ZP.isCurrentUserGuest(e)
         },
         oldFormErrors: !0
       }), R.close()
     },
     async updateMemberRoles(e, t, n, i, o) {
-      if (d.Z.isFullServerPreview(e) && t === E.default.getId()) {
+      if (c.Z.isFullServerPreview(e) && t === E.default.getId()) {
         (0, _.og)(e, n);
         return
       }

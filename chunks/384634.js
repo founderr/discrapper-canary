@@ -1,36 +1,39 @@
 "use strict";
-t.d(n, {
+n.d(t, {
   w: function() {
-    return i
+    return a
   }
 });
-var l = t(735250);
-t(470079);
-var a = t(692547),
-  s = t(331595);
-let i = e => {
+var i = n(735250);
+n(470079);
+var r = n(692547),
+  s = n(331595),
+  o = n(267843);
+let a = e => {
+  var t, n;
   let {
-    width: n = 24,
-    height: t = 24,
-    color: i = a.Z.colors.INTERACTIVE_NORMAL,
-    colorClass: r = "",
-    ...u
-  } = e;
-  return (0, l.jsx)("svg", {
-    ...(0, s.Z)(u),
+    size: a = "md",
+    width: l,
+    height: u,
+    color: _ = r.Z.colors.INTERACTIVE_NORMAL,
+    colorClass: c = "",
+    ...d
+  } = e, E = (0, o.m)(a), I = null !== (t = null == E ? void 0 : E.width) && void 0 !== t ? t : l, T = null !== (n = null == E ? void 0 : E.height) && void 0 !== n ? n : u;
+  return (0, i.jsx)("svg", {
+    ...(0, s.Z)(d),
     xmlns: "http://www.w3.org/2000/svg",
-    width: n,
-    height: t,
+    width: I,
+    height: T,
     fill: "none",
     viewBox: "0 0 24 24",
-    children: (0, l.jsx)("rect", {
-      width: n,
-      height: t,
+    children: (0, i.jsx)("rect", {
+      width: I,
+      height: T,
       x: "3",
       y: "3",
-      fill: "string" == typeof i ? i : i.css,
+      fill: "string" == typeof _ ? _ : _.css,
       rx: "3",
-      className: r
+      className: c
     })
   })
 }

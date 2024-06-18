@@ -1,7 +1,7 @@
 "use strict";
 t.d(s, {
   Z: function() {
-    return p
+    return A
   }
 }), t(47120);
 var n = t(735250),
@@ -14,22 +14,21 @@ var n = t(735250),
   d = t(481060),
   u = t(852860),
   E = t(999382),
-  _ = t(151785),
-  I = t(644542),
-  T = t(923726),
-  N = t(584825),
-  m = t(295141),
-  S = t(723047),
-  h = t(290348),
-  g = t(450215),
-  x = t(981631),
+  _ = t(644542),
+  I = t(923726),
+  T = t(584825),
+  N = t(295141),
+  m = t(723047),
+  S = t(290348),
+  h = t(450215),
+  g = t(981631),
   C = t(689938),
-  R = t(321809);
-let L = "guild-role-subscription-tier-template-selector",
-  O = e => {
+  x = t(321809);
+let R = "guild-role-subscription-tier-template-selector",
+  L = e => {
     let [s, t] = i.useState(!0), [n, l] = i.useState();
     return i.useEffect(() => {
-      t(!0), (0, m.X)(e).then(e => {
+      t(!0), (0, N.X)(e).then(e => {
         l(e), t(!1)
       })
     }, [e]), {
@@ -38,70 +37,72 @@ let L = "guild-role-subscription-tier-template-selector",
     }
   };
 
-function A(e) {
+function O(e) {
   let {
     guildId: s,
     priceTiers: l,
-    groupListingId: m
-  } = e, O = (0, N._k)(m), {
-    editStateIds: A,
-    addNewEditStateId: p,
-    addNewEditStateFromTemplate: M,
-    removeEditStateId: f
-  } = h.B7(m, s, {
+    groupListingId: N
+  } = e, L = (0, T._k)(N), {
+    editStateIds: O,
+    addNewEditStateId: A,
+    addNewEditStateFromTemplate: p,
+    removeEditStateId: M
+  } = S.B7(N, s, {
     includeSoftDeleted: !0
-  }), [v, D] = i.useState({}), Z = i.useMemo(() => {
-    let e = A.map(e => {
+  }), [f, D] = i.useState({}), v = i.useMemo(() => {
+    let e = O.map(e => {
       var s;
-      return null !== (s = v[e]) && void 0 !== s ? s : e
+      return null !== (s = f[e]) && void 0 !== s ? s : e
     });
     return (0, r.uniq)(e)
-  }, [A, v]), j = (e, s) => {
+  }, [O, f]), j = (e, s) => {
     D(t => ({
       ...t,
       [e]: s
     }))
-  }, U = (0, T.ss)(s), G = (0, T.Gp)(), P = i.useCallback(() => {
-    G && I.jJ.trackExposure({
+  }, Z = (0, I.ss)(s), U = (0, I.Gp)(), G = i.useCallback(() => {
+    U && _.jJ.trackExposure({
       guildId: s,
       location: "b2d9de_1"
-    }), G && U ? (0, d.openModalLazy)(async () => {
+    }), U && Z ? (0, d.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([t.e("99387"), t.e("9558")]).then(t.bind(t, 34460));
       return t => (0, n.jsx)(e, {
         ...t,
         guildId: s,
-        addNewEditStateFromTemplate: M,
-        addNewEditStateFromScratch: p,
+        addNewEditStateFromTemplate: p,
+        addNewEditStateFromScratch: A,
         priceTiers: l
       })
     }, {
-      modalKey: L
-    }) : p()
-  }, [s, M, p, l, G, U]), b = h.Lo(Z), B = i.useCallback(() => Z.forEach(h.GM), [Z]), y = (0, S.mY)(), F = (0, o.e7)([E.Z], () => E.Z.getProps().subsection);
-  return i.useEffect(() => (F === x.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && P(), () => {
-    (0, d.closeModal)(L)
-  }), [F, P]), (0, n.jsxs)(n.Fragment, {
+      modalKey: R
+    }) : A()
+  }, [s, p, A, l, U, Z]), P = S.Lo(v), b = i.useCallback(() => v.forEach(S.GM), [v]), B = (0, m.mY)(), y = (0, o.e7)([E.Z], () => E.Z.getProps().subsection);
+  return i.useEffect(() => (y === g.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && G(), () => {
+    (0, d.closeModal)(R)
+  }), [y, G]), (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {
-      className: R.groupListings,
-      children: [Z.map(e => (0, n.jsx)(g.Z, {
+      className: x.groupListings,
+      children: [v.map(e => (0, n.jsx)(h.Z, {
         guildId: s,
         initialEditStateId: e,
-        allSubscriptionListings: O,
+        allSubscriptionListings: L,
         priceTiers: l,
-        groupListingId: m,
-        onDeleteEditState: () => f(e),
+        groupListingId: N,
+        onDeleteEditState: () => M(e),
         onBeforeDispatchNewListing: s => j(s.id, e),
-        onAfterDispatchNewListing: () => f(e)
+        onAfterDispatchNewListing: () => M(e)
       }, e)), (0, n.jsxs)(d.Clickable, {
-        onClick: y ? void 0 : P,
-        className: a()(R.createTierButton, {
-          [R.disabled]: y
+        onClick: B ? void 0 : G,
+        className: a()(x.createTierButton, {
+          [x.disabled]: B
         }),
-        "aria-disabled": y,
-        children: [(0, n.jsx)(_.Z, {
-          className: R.createTierIcon
+        "aria-disabled": B,
+        children: [(0, n.jsx)(d.CirclePlusIcon, {
+          size: "xs",
+          color: "currentColor",
+          className: x.createTierIcon
         }), (0, n.jsx)(d.Text, {
           variant: "text-md/normal",
           color: "interactive-active",
@@ -110,27 +111,27 @@ function A(e) {
       })]
     }), (0, n.jsx)(c.W, {
       component: "div",
-      className: R.contentRegion,
-      children: b && (0, n.jsx)(d.SlideIn, {
+      className: x.contentRegion,
+      children: P && (0, n.jsx)(d.SlideIn, {
         children: (0, n.jsx)(u.Z, {
-          onReset: B
+          onReset: b
         })
       })
     })]
   })
 }
 
-function p(e) {
+function A(e) {
   let {
     guildId: s
   } = e, {
     priceTiers: t
-  } = O(s), i = (0, N.GG)(s), {
+  } = L(s), i = (0, T.GG)(s), {
     maxTiers: l
-  } = (0, T.s1)(s), a = i.map(e => e.id);
+  } = (0, I.s1)(s), a = i.map(e => e.id);
   return (0, n.jsxs)(d.FormSection, {
     title: C.Z.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIERS_TAB_TITLE,
-    className: R.container,
+    className: x.container,
     children: [(0, n.jsx)(d.FormText, {
       type: d.FormText.Types.DESCRIPTION,
       children: C.Z.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIERS_TAB_DESCRIPTION.format({
@@ -138,7 +139,7 @@ function p(e) {
       })
     }), (0, n.jsx)(d.Spacer, {
       size: 16
-    }), (0, n.jsx)(A, {
+    }), (0, n.jsx)(O, {
       priceTiers: t,
       guildId: s,
       groupListingId: a[0]

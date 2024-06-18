@@ -1,7 +1,7 @@
 "use strict";
 t.d(s, {
   M: function() {
-    return N
+    return I
   }
 }), t(47120), t(757143);
 var n = t(735250),
@@ -11,102 +11,104 @@ var n = t(735250),
   r = t(461745),
   o = t(349033),
   c = t(999650),
-  d = t(487989),
-  u = t(135163),
-  E = t(72006),
-  _ = t(405656),
-  I = t(689938),
-  T = t(679473);
+  d = t(72006),
+  u = t(405656),
+  E = t(689938),
+  _ = t(679473);
 t(436967);
 
-function N(e) {
+function I(e) {
   let {
     className: s
   } = e;
   i.useEffect(() => {
-    _.WU()
+    u.WU()
   }, []);
-  let [t, N] = i.useState({
-    editorState: E.nR([])
+  let [t, I] = i.useState({
+    editorState: d.nR([])
   }), {
-    editorState: m
-  } = t, [S, h] = i.useState(!0), g = null, x = e => {
-    N(s => ({
+    editorState: T
+  } = t, [N, m] = i.useState(!0), S = null, h = e => {
+    I(s => ({
       ...s,
       editorState: e
     }))
-  }, C = e => {
-    let s = _.kG(E.Sq(e)).filter(e => e.type !== o.ZP.NON_TOKEN_TYPE);
-    return E.lv(s, e, c.ZP)
-  }, R = () => {}, L = () => {
-    null != g && Promise.resolve().then(() => null == g ? void 0 : g.focus())
+  }, g = e => {
+    let s = u.kG(d.Sq(e)).filter(e => e.type !== o.ZP.NON_TOKEN_TYPE);
+    return d.lv(s, e, c.ZP)
+  }, C = () => {}, x = () => {
+    null != S && Promise.resolve().then(() => null == S ? void 0 : S.focus())
+  }, R = () => {
+    null == S || S.blur()
+  }, L = e => {
+    S = e
   }, O = () => {
-    null == g || g.blur()
-  }, A = e => {
-    g = e
-  }, p = () => {
-    h(!0)
-  }, M = () => {
-    h(!1), null != m && E.xb(m) && R()
-  }, f = e => {
-    if (null == m) return;
-    if (E.Sq(m).length >= 512) return !0;
-    let s = m;
-    return s = E.x0(e, s), x(s = C(s = E.Hl(s, 512))), !S && h(!0), !0
-  }, v = e => (e.preventDefault(), !0), D = e => {
-    if (e = null != e ? e.replace(/\n/g, "") : "", null == m) return;
-    let s = m;
-    return s = E.x0(e, s), s = C(s = E.Hl(s, 512)), !S && h(!0), x(s), !0
-  }, Z = null != m && E.Sq(m).length > 0;
+    m(!0)
+  }, A = () => {
+    m(!1), null != T && d.xb(T) && C()
+  }, p = e => {
+    if (null == T) return;
+    if (d.Sq(T).length >= 512) return !0;
+    let s = T;
+    return s = d.x0(e, s), h(s = g(s = d.Hl(s, 512))), !N && m(!0), !0
+  }, M = e => (e.preventDefault(), !0), f = e => {
+    if (e = null != e ? e.replace(/\n/g, "") : "", null == T) return;
+    let s = T;
+    return s = d.x0(e, s), s = g(s = d.Hl(s, 512)), !N && m(!0), h(s), !0
+  }, D = null != T && d.Sq(T).length > 0;
   return (0, n.jsx)("div", {
     className: s,
     children: (0, n.jsxs)("div", {
-      className: T.search,
+      className: _.search,
       children: [(0, n.jsxs)("div", {
-        className: T.searchBar,
+        className: _.searchBar,
         children: [(0, n.jsx)(l.Editor, {
-          ref: A,
-          onBlur: M,
-          onFocus: p,
-          handleReturn: v,
-          handleBeforeInput: f,
-          handlePastedText: D,
-          placeholder: I.Z.Messages.SEARCH,
-          editorState: m,
-          onChange: x,
+          ref: L,
+          onBlur: A,
+          onFocus: O,
+          handleReturn: M,
+          handleBeforeInput: p,
+          handlePastedText: f,
+          placeholder: E.Z.Messages.SEARCH,
+          editorState: T,
+          onChange: h,
           role: "combobox",
-          ariaLabel: I.Z.Messages.SEARCH
+          ariaLabel: E.Z.Messages.SEARCH
         }), (0, n.jsx)(r.BK, {
           onClear: e => {
-            if (null == m) return;
-            if (e.preventDefault(), e.stopPropagation(), "" === E.Sq(m)) {
-              L();
+            if (null == T) return;
+            if (e.preventDefault(), e.stopPropagation(), "" === d.Sq(T)) {
+              x();
               return
             }
-            let s = m;
-            x(s = E.Hl(s, 0)), !S && Promise.resolve().then(() => O())
+            let s = T;
+            h(s = d.Hl(s, 0)), !N && Promise.resolve().then(() => R())
           },
-          hasContent: Z,
-          className: T.searchIcon
+          hasContent: D,
+          className: _.searchIcon
         }), (0, n.jsxs)(a.Button, {
           look: a.Button.Looks.BLANK,
-          className: T.filter,
-          innerClassName: T.filterButton,
+          className: _.filter,
+          innerClassName: _.filterButton,
           onClick: () => {},
-          children: [I.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_FILTER, (0, n.jsx)(d.Z, {
-            className: T.filterIcon,
+          children: [E.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_FILTER, (0, n.jsx)(a.FiltersHorizontalIcon, {
+            size: "custom",
+            color: "currentColor",
+            className: _.filterIcon,
             width: 16,
             height: 16
           })]
         })]
       }), (0, n.jsxs)(a.Button, {
         color: a.Button.Colors.PRIMARY,
-        className: T.sort,
-        innerClassName: T.sortButton,
+        className: _.sort,
+        innerClassName: _.sortButton,
         size: a.Button.Sizes.SMALL,
         onClick: () => {},
-        children: [I.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_SORT, (0, n.jsx)(u.Z, {
-          className: T.sortIcon,
+        children: [E.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_SORT, (0, n.jsx)(a.ArrowsUpDownIcon, {
+          size: "custom",
+          color: "currentColor",
+          className: _.sortIcon,
           width: 16,
           height: 16
         })]

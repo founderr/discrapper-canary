@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return T
+    return I
   }
 });
 var i = n(735250);
@@ -13,54 +13,57 @@ var r = n(399606),
   l = n(271383),
   u = n(430824),
   _ = n(346656),
-  d = n(68972),
   c = n(709054),
-  E = n(689938),
-  I = n(60963);
+  d = n(689938),
+  E = n(60963);
 
-function T(e) {
+function I(e) {
   let {
     userId: t,
     guildId: n,
-    textClassName: T,
-    tooltipDelay: h
-  } = e, S = (0, r.e7)([a.default], () => a.default.locale), f = (0, r.e7)([u.Z], () => null != n ? u.Z.getGuild(n) : null), N = (0, r.e7)([l.ZP], () => null != n ? l.ZP.getMember(n, t) : null), A = (0, o.FI)(c.default.extractTimestamp(t), S), m = (0, o.FI)(null == N ? void 0 : N.joinedAt, S);
-  return null == f || null == N ? (0, i.jsx)(s.Text, {
+    textClassName: I,
+    tooltipDelay: T
+  } = e, h = (0, r.e7)([a.default], () => a.default.locale), S = (0, r.e7)([u.Z], () => null != n ? u.Z.getGuild(n) : null), f = (0, r.e7)([l.ZP], () => null != n ? l.ZP.getMember(n, t) : null), N = (0, o.FI)(c.default.extractTimestamp(t), h), A = (0, o.FI)(null == f ? void 0 : f.joinedAt, h);
+  return null == S || null == f ? (0, i.jsx)(s.Text, {
     variant: "text-sm/normal",
-    className: T,
-    children: A
+    className: I,
+    children: N
   }) : (0, i.jsxs)("div", {
-    className: I.memberSinceWrapper,
+    className: E.memberSinceWrapper,
     children: [(0, i.jsxs)("div", {
-      className: I.memberSince,
+      className: E.memberSince,
       children: [(0, i.jsx)(s.Tooltip, {
-        text: E.Z.Messages.DISCORD_NAME,
-        delay: h,
-        children: e => (0, i.jsx)(d.Z, {
+        text: d.Z.Messages.DISCORD_NAME,
+        delay: T,
+        children: e => (0, i.jsx)(s.ClydeIcon, {
+          size: "custom",
+          width: 28,
+          height: 28,
+          color: "currentColor",
           ...e,
-          className: I.discordIcon
+          className: E.discordIcon
         })
       }), (0, i.jsx)(s.Text, {
         variant: "text-sm/normal",
-        className: T,
-        children: A
+        className: I,
+        children: N
       })]
     }), (0, i.jsx)("div", {
-      className: I.divider
+      className: E.divider
     }), (0, i.jsxs)("div", {
-      className: I.memberSince,
+      className: E.memberSince,
       children: [(0, i.jsx)(s.Tooltip, {
-        text: f.name,
-        delay: h,
+        text: S.name,
+        delay: T,
         children: e => (0, i.jsx)(_.Z, {
           ...e,
-          guild: f,
+          guild: S,
           size: _.Z.Sizes.SMOL
         })
       }), (0, i.jsx)(s.Text, {
         variant: "text-sm/normal",
-        className: T,
-        children: m
+        className: I,
+        children: A
       })]
     })]
   })

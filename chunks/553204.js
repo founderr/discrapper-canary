@@ -1,7 +1,7 @@
 "use strict";
 t.d(s, {
   Z: function() {
-    return m
+    return N
   }
 });
 var n = t(735250),
@@ -12,42 +12,43 @@ var n = t(735250),
   o = t(481060),
   c = t(518738),
   d = t(208567),
-  u = t(54264),
-  E = t(176278),
-  _ = t(624138),
-  I = t(689938),
-  T = t(3827);
-let N = (0, _.Mg)(r.Z.ROLE_ICON_UPLOADER_ICON_SIZE);
+  u = t(176278),
+  E = t(624138),
+  _ = t(689938),
+  I = t(3827);
+let T = (0, E.Mg)(r.Z.ROLE_ICON_UPLOADER_ICON_SIZE);
 
-function m(e) {
+function N(e) {
   let {
     role: s,
-    "aria-label": t = I.Z.Messages.UPLOAD_IMAGE,
+    "aria-label": t = _.Z.Messages.UPLOAD_IMAGE,
     className: l,
     onClick: r,
-    disabled: _ = !1
-  } = e, m = i.useRef(null), S = i.useMemo(() => null != s ? (0, c.Kz)(s, N) : null, [s]), h = null != S ? (0, n.jsx)(E.Z, {
+    disabled: E = !1
+  } = e, N = i.useRef(null), m = i.useMemo(() => null != s ? (0, c.Kz)(s, T) : null, [s]), S = null != m ? (0, n.jsx)(u.Z, {
     enableTooltip: !1,
-    className: T.icon,
-    ...S
-  }) : (0, n.jsx)(u.Z, {
-    className: T.icon
+    className: I.icon,
+    ...m
+  }) : (0, n.jsx)(o.ImagePlusIcon, {
+    size: "md",
+    color: "currentColor",
+    className: I.icon
   });
   return (0, n.jsx)(o.FocusRing, {
-    ringTarget: m,
+    ringTarget: N,
     children: (0, n.jsxs)(o.Clickable, {
       "aria-label": t,
-      className: a()(T.container, l, {
-        [T.disabled]: _
+      className: a()(I.container, l, {
+        [I.disabled]: E
       }),
-      onClick: _ ? void 0 : r,
-      "aria-disabled": _,
+      onClick: E ? void 0 : r,
+      "aria-disabled": E,
       children: [(0, n.jsx)("div", {
-        ref: m,
-        className: T.preview,
-        children: h
-      }), null != S ? (0, n.jsx)(d.S, {
-        className: T.uploaderIcon
+        ref: N,
+        className: I.preview,
+        children: S
+      }), null != m ? (0, n.jsx)(d.S, {
+        className: I.uploaderIcon
       }) : null]
     })
   })

@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   E: function() {
-    return O
+    return N
   },
   Z: function() {
-    return R
+    return A
   }
 });
 var i = n(735250);
@@ -16,87 +16,84 @@ var r = n(442837),
   l = n(418469),
   u = n(776031),
   _ = n(803647),
-  d = n(199902),
-  c = n(131951),
+  c = n(199902),
+  d = n(131951),
   E = n(594174),
-  I = n(645284),
-  T = n(990138),
-  h = n(948573),
-  S = n(5192),
-  f = n(358085),
-  N = n(981631),
-  A = n(65154),
-  m = n(689938);
+  I = n(5192),
+  T = n(358085),
+  h = n(981631),
+  S = n(65154),
+  f = n(689938);
 
-function O(e, t, n) {
+function N(e, t, n) {
   let i = (0, r.e7)([a.Z], () => a.Z.getSelectedParticipantId(e.id)),
-    s = (0, r.e7)([d.Z], () => null != i ? d.Z.getActiveStreamForStreamKey(i) : null, [i]);
+    s = (0, r.e7)([c.Z], () => null != i ? c.Z.getActiveStreamForStreamKey(i) : null, [i]);
   return (0, r.Wu)([E.default], () => {
     let i = n.filter(e => e.ownerId !== (null == t ? void 0 : t.id)).map(t => ({
       stream: t,
-      username: S.ZP.getName(e.getGuildId(), e.id, E.default.getUser(t.ownerId))
+      username: I.ZP.getName(e.getGuildId(), e.id, E.default.getUser(t.ownerId))
     }));
     return 1 === i.length && i[0].stream.ownerId === (null == s ? void 0 : s.ownerId) ? [] : i
   }, [e, s, n, t])
 }
 
-function R(e) {
+function A(e) {
   var t;
   let {
     channel: n,
     currentUser: r,
     activeStreams: a,
-    hideSelfOptions: d = !1,
+    hideSelfOptions: c = !1,
     showReportOption: E = !1,
-    handleGoLive: S,
-    onClose: R,
-    onSelect: C,
-    appContext: p = N.IlC.APP
-  } = e, g = c.Z.supports(A.AN.DESKTOP_CAPTURE_APPLICATIONS), L = null !== (t = a.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, v = O(n, r, a), D = (0, u.Z)(L, p), M = (0, l.Z)(L, p, N.VqG), P = null == L ? (0, i.jsx)(s.MenuItem, {
+    handleGoLive: I,
+    onClose: A,
+    onSelect: m,
+    appContext: O = h.IlC.APP
+  } = e, R = d.Z.supports(S.AN.DESKTOP_CAPTURE_APPLICATIONS), p = null !== (t = a.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, g = N(n, r, a), C = (0, u.Z)(p, O), v = (0, l.Z)(p, O, h.VqG), L = null == p ? (0, i.jsx)(s.MenuItem, {
     id: "share-your-screen",
-    label: m.Z.Messages.SHARE_YOUR_SCREEN,
-    icon: I.Z,
-    action: S
+    label: f.Z.Messages.SHARE_YOUR_SCREEN,
+    icon: s.ScreenArrowIcon,
+    action: I
   }) : (0, i.jsxs)(i.Fragment, {
-    children: [f.isPlatformEmbedded ? (0, i.jsx)(s.MenuItem, {
+    children: [T.isPlatformEmbedded ? (0, i.jsx)(s.MenuItem, {
       id: "stream-settings",
-      label: m.Z.Messages.SCREENSHARE_STREAM_QUALITY,
-      children: D
-    }) : null, E ? M : null, g ? (0, i.jsx)(s.MenuItem, {
+      label: f.Z.Messages.SCREENSHARE_STREAM_QUALITY,
+      children: C
+    }) : null, E ? v : null, R ? (0, i.jsx)(s.MenuItem, {
       id: "change-windows",
-      label: m.Z.Messages.SCREENSHARE_CHANGE_WINDOWS,
-      icon: I.Z,
-      action: S
+      label: f.Z.Messages.SCREENSHARE_CHANGE_WINDOWS,
+      icon: s.ScreenArrowIcon,
+      action: I
     }) : null, (0, i.jsx)(s.MenuItem, {
       id: "stop-streaming",
-      label: m.Z.Messages.STOP_STREAMING,
-      icon: T.Z,
-      action: () => (0, _.Z)(L)
+      label: f.Z.Messages.STOP_STREAMING,
+      icon: s.ScreenXIcon,
+      action: () => (0, _.Z)(p)
     })]
   });
   return (0, i.jsx)(o.Z, {
-    section: N.jXE.CONTEXT_MENU,
+    section: h.jXE.CONTEXT_MENU,
     children: (0, i.jsxs)(s.Menu, {
-      onSelect: C,
+      onSelect: m,
       navId: "manage-streams",
-      onClose: R,
-      "aria-label": null != L ? m.Z.Messages.STOP_STREAMING : m.Z.Messages.SHARE_YOUR_SCREEN,
+      onClose: A,
+      "aria-label": null != p ? f.Z.Messages.STOP_STREAMING : f.Z.Messages.SHARE_YOUR_SCREEN,
       children: [(0, i.jsx)(s.MenuGroup, {
-        children: v.map(e => {
+        children: g.map(e => {
           let {
             stream: t,
             username: n
           } = e;
           return (0, i.jsx)(s.MenuItem, {
             id: t.ownerId,
-            label: m.Z.Messages.STOP_WATCHING_USER.format({
+            label: f.Z.Messages.STOP_WATCHING_USER.format({
               username: n
             }),
-            icon: h.Z,
+            icon: s.ScreenXIcon,
             action: () => (0, _.Z)(t)
           }, "manage-stream-menu".concat(t.ownerId))
         })
-      }), d ? null : P]
+      }), c ? null : L]
     })
   })
 }

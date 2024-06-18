@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return O
+    return A
   }
 });
 var i = n(735250),
@@ -12,25 +12,23 @@ var i = n(735250),
   l = n(481060),
   u = n(367907),
   _ = n(739566),
-  d = n(623292),
-  c = n(703656),
+  c = n(623292),
+  d = n(703656),
   E = n(665906),
   I = n(488131),
   T = n(375954),
-  h = n(36082),
-  S = n(696202),
-  f = n(981631),
-  N = n(689938),
-  A = n(98482);
+  h = n(981631),
+  S = n(689938),
+  f = n(98482);
 
-function m(e) {
+function N(e) {
   let {
     channel: t,
     message: n,
     replyChainLength: s
   } = e;
   return r.useEffect(() => {
-    (0, u.yw)(f.rMx.THREAD_NUDGE_SHOWN, {
+    (0, u.yw)(h.rMx.THREAD_NUDGE_SHOWN, {
       type: "Reply Chain (".concat(3, ")"),
       reply_chain_length: s + 1,
       channel_id: t.id,
@@ -38,9 +36,9 @@ function m(e) {
     })
   }, [t]), (0, i.jsxs)(l.Clickable, {
     onClick: function() {
-      (0, d.A6)(t.id), (0, I.R6)(t, n, "Reply Chain Nudge")
+      (0, c.A6)(t.id), (0, I.R6)(t, n, "Reply Chain Nudge")
     },
-    className: A.threadSuggestionBar,
+    className: f.threadSuggestionBar,
     focusProps: {
       offset: {
         right: -4,
@@ -49,21 +47,21 @@ function m(e) {
     },
     children: [(0, i.jsx)(l.Text, {
       color: "header-secondary",
-      className: A.text,
+      className: f.text,
       variant: "text-sm/normal",
-      children: N.Z.Messages.THREAD_REPLY_SUGGESTION.format({
+      children: S.Z.Messages.THREAD_REPLY_SUGGESTION.format({
         count: Math.min(10, s + 1)
       })
     }), (0, i.jsx)(l.Text, {
       color: "text-link",
-      className: A.createThreadButton,
+      className: f.createThreadButton,
       variant: "text-sm/semibold",
-      children: N.Z.Messages.CREATE_THREAD
+      children: S.Z.Messages.CREATE_THREAD
     })]
   })
 }
 
-function O(e) {
+function A(e) {
   let {
     reply: t,
     chatInputType: n
@@ -73,34 +71,34 @@ function O(e) {
     shouldMention: u,
     showMentionToggle: I
   } = t, {
-    nick: O,
-    colorString: R,
-    colorRoleName: C
-  } = (0, _.ZP)(s), p = function(e, t) {
+    nick: A,
+    colorString: m,
+    colorRoleName: O
+  } = (0, _.ZP)(s), R = function(e, t) {
     let n = e.id,
       i = t.id;
     return (0, a.e7)([T.Z], () => {
       let e = i;
       for (let t = 0; t < 10; t++) {
         let i = T.Z.getMessage(n, e);
-        if ((null == i ? void 0 : i.type) !== f.uaV.REPLY || null == i.messageReference) return t;
+        if ((null == i ? void 0 : i.type) !== h.uaV.REPLY || null == i.messageReference) return t;
         e = i.messageReference.message_id
       }
       return 10
     }, [n, i])
-  }(r, s), g = (0, E.NE)(r, s), L = n.showThreadPromptOnReply && p >= 2 && g;
+  }(r, s), p = (0, E.NE)(r, s), g = n.showThreadPromptOnReply && R >= 2 && p;
 
-  function v(e) {
-    e.stopPropagation(), (0, d.qx)(r.id, !u)
+  function C(e) {
+    e.stopPropagation(), (0, c.qx)(r.id, !u)
   }
   return (0, i.jsx)("div", {
-    className: A.clipContainer,
+    className: f.clipContainer,
     children: (0, i.jsxs)("div", {
-      className: A.container,
+      className: f.container,
       children: [(0, i.jsxs)("div", {
-        className: A.replyBar,
+        className: f.replyBar,
         children: [(0, i.jsx)(l.Clickable, {
-          onClick: () => (0, c.uL)(f.Z5c.CHANNEL(r.getGuildId(), r.id, s.id)),
+          onClick: () => (0, d.uL)(h.Z5c.CHANNEL(r.getGuildId(), r.id, s.id)),
           focusProps: {
             offset: {
               top: -8,
@@ -111,22 +109,22 @@ function O(e) {
           },
           children: (0, i.jsx)(l.Text, {
             color: "header-secondary",
-            className: o()(A.text, A.replyLabel),
+            className: o()(f.text, f.replyLabel),
             variant: "text-sm/normal",
-            children: N.Z.Messages.REPLYING_TO.format({
+            children: S.Z.Messages.REPLYING_TO.format({
               userHook: (e, t) => (0, i.jsx)(l.NameWithRole, {
-                className: A.name,
-                name: O,
-                color: R,
-                roleName: C
+                className: f.name,
+                name: A,
+                color: m,
+                roleName: O
               }, t)
             })
           })
         }), (0, i.jsxs)("div", {
-          className: A.actions,
+          className: f.actions,
           children: [I && (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(l.Tooltip, {
-              text: u ? N.Z.Messages.REPLY_MENTION_ON_TOOLTIP : N.Z.Messages.REPLY_MENTION_OFF_TOOLTIP,
+              text: u ? S.Z.Messages.REPLY_MENTION_ON_TOOLTIP : S.Z.Messages.REPLY_MENTION_OFF_TOOLTIP,
               children: e => {
                 let {
                   onMouseEnter: t,
@@ -137,7 +135,7 @@ function O(e) {
                 return (0, i.jsx)(l.Clickable, {
                   role: "switch",
                   "aria-checked": u,
-                  onClick: v,
+                  onClick: C,
                   onMouseEnter: t,
                   onMouseLeave: n,
                   onFocus: r,
@@ -145,32 +143,36 @@ function O(e) {
                   children: (0, i.jsxs)(l.Text, {
                     variant: "text-sm/bold",
                     color: u ? "text-link" : "text-muted",
-                    className: A.mentionButton,
-                    children: [(0, i.jsx)(h.Z, {
-                      "aria-label": N.Z.Messages.MENTION,
-                      className: A.mentionIcon
-                    }), u ? N.Z.Messages.REPLY_MENTION_ON : N.Z.Messages.REPLY_MENTION_OFF]
+                    className: f.mentionButton,
+                    children: [(0, i.jsx)(l.AtIcon, {
+                      size: "md",
+                      color: "currentColor",
+                      "aria-label": S.Z.Messages.MENTION,
+                      className: f.mentionIcon
+                    }), u ? S.Z.Messages.REPLY_MENTION_ON : S.Z.Messages.REPLY_MENTION_OFF]
                   })
                 })
               }
             }), (0, i.jsx)("div", {
-              className: A.separator,
+              className: f.separator,
               "aria-hidden": !0
             })]
           }), (0, i.jsx)(l.Clickable, {
-            className: A.closeButton,
+            className: f.closeButton,
             onClick: function(e) {
-              e.stopPropagation(), (0, d.A6)(r.id)
+              e.stopPropagation(), (0, c.A6)(r.id)
             },
-            children: (0, i.jsx)(S.Z, {
-              className: A.closeIcon
+            children: (0, i.jsx)(l.CircleXIcon, {
+              size: "md",
+              color: "currentColor",
+              className: f.closeIcon
             })
           })]
         })]
-      }), L && (0, i.jsx)(m, {
+      }), g && (0, i.jsx)(N, {
         channel: r,
         message: s,
-        replyChainLength: p
+        replyChainLength: R
       })]
     })
   })

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return A
+    return N
   }
 });
 var i = n(735250);
@@ -13,63 +13,64 @@ var r = n(120356),
   l = n(100527),
   u = n(906732),
   _ = n(849522),
-  d = n(639119),
-  c = n(594174),
-  E = n(466111),
-  I = n(74538),
-  T = n(694320),
-  h = n(981631),
-  S = n(474936),
-  f = n(689938),
-  N = n(251827);
+  c = n(639119),
+  d = n(594174),
+  E = n(74538),
+  I = n(694320),
+  T = n(981631),
+  h = n(474936),
+  S = n(689938),
+  f = n(251827);
 
-function A(e) {
-  var t, n, r, A;
+function N(e) {
+  var t, n, r, N;
   let {
-    type: m,
-    textValue: O,
-    maxCharacterCount: R,
-    showRemainingCharsAfterCount: C,
+    type: A,
+    textValue: m,
+    maxCharacterCount: O,
+    showRemainingCharsAfterCount: R,
     className: p
-  } = e, g = (0, o.e7)([c.default], () => I.ZP.canUseIncreasedMessageLength(c.default.getCurrentUser())), L = (0, _.Z)(), v = null != R ? R : L, D = null !== (A = null != C ? C : R) && void 0 !== A ? A : L / 10, M = O.length, P = null != m.upsellLongMessages && (null != M ? M : 0) > h.J6R && g, y = null != m.upsellLongMessages && !g, U = (null === (n = (0, d.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === S.Si.TIER_2, b = v - M, G = b > D, w = b < 0 && U, k = 0 === b ? f.Z.Messages.CHARACTER_COUNT_AT_LIMIT : b > 0 ? f.Z.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
-    count: b
-  }) : f.Z.Messages.CHARACTER_COUNT_OVER_LIMIT, {
-    analyticsLocations: B
+  } = e, g = (0, o.e7)([d.default], () => E.ZP.canUseIncreasedMessageLength(d.default.getCurrentUser())), C = (0, _.Z)(), v = null != O ? O : C, L = null !== (N = null != R ? R : O) && void 0 !== N ? N : C / 10, D = m.length, M = null != A.upsellLongMessages && (null != D ? D : 0) > T.J6R && g, P = null != A.upsellLongMessages && !g, y = (null === (n = (0, c.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === h.Si.TIER_2, U = v - D, b = U > L, G = U < 0 && y, w = 0 === U ? S.Z.Messages.CHARACTER_COUNT_AT_LIMIT : U > 0 ? S.Z.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
+    count: U
+  }) : S.Z.Messages.CHARACTER_COUNT_OVER_LIMIT, {
+    analyticsLocations: k
   } = (0, u.ZP)(l.Z.CHARACTER_COUNT);
-  return P && b >= 0 || !G || y && !G ? (0, i.jsx)(u.Gt, {
-    value: B,
+  return M && U >= 0 || !b || P && !b ? (0, i.jsx)(u.Gt, {
+    value: k,
     children: (0, i.jsxs)("div", {
-      className: s()(p, N.characterCount, {
-        [N.error]: b < 0
+      className: s()(p, f.characterCount, {
+        [f.error]: U < 0
       }),
       children: [(0, i.jsxs)("div", {
-        className: N.flairContainer,
-        children: [P && b >= 0 ? (0, i.jsx)(a.Tooltip, {
-          text: f.Z.Messages.PREMIUM_MESSAGE_LENGTH_CHATBOX_FLAIR.format({
+        className: f.flairContainer,
+        children: [M && U >= 0 ? (0, i.jsx)(a.Tooltip, {
+          text: S.Z.Messages.PREMIUM_MESSAGE_LENGTH_CHATBOX_FLAIR.format({
             maxLength: v
           }),
           position: "top",
-          children: e => (0, i.jsx)(E.Z, {
-            className: N.premiumFlair,
+          children: e => (0, i.jsx)(a.NitroWheelIcon, {
+            size: "md",
+            color: "currentColor",
+            className: f.premiumFlair,
             ...e
           })
-        }) : null, G || w ? null : (0, i.jsx)(a.Tooltip, {
-          text: k,
+        }) : null, b || G ? null : (0, i.jsx)(a.Tooltip, {
+          text: w,
           position: "top",
           children: e => (0, i.jsx)("span", {
             "aria-hidden": !0,
             ...e,
-            children: b
+            children: U
           })
         })]
       }), (0, i.jsx)(a.HiddenVisually, {
-        children: f.Z.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
-          count: b
+        children: S.Z.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
+          count: U
         })
-      }), y && !G ? (0, i.jsx)(T.Z, {
-        className: N.upsell,
-        iconOnly: (null === (r = m.upsellLongMessages) || void 0 === r ? void 0 : r.iconOnly) || !1,
-        remaining: b
+      }), P && !b ? (0, i.jsx)(I.Z, {
+        className: f.upsell,
+        iconOnly: (null === (r = A.upsellLongMessages) || void 0 === r ? void 0 : r.iconOnly) || !1,
+        remaining: U
       }) : null]
     })
   }) : null

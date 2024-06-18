@@ -1,32 +1,35 @@
 "use strict";
 n.d(t, {
   X: function() {
-    return o
+    return a
   }
 });
 var i = n(735250);
 n(470079);
 var r = n(692547),
-  s = n(331595);
-let o = e => {
+  s = n(331595),
+  o = n(267843);
+let a = e => {
+  var t, n;
   let {
-    width: t = 24,
-    height: n = 24,
-    color: o = r.Z.colors.INTERACTIVE_NORMAL,
-    colorClass: a = "",
-    ...l
-  } = e;
+    size: a = "md",
+    width: l,
+    height: u,
+    color: _ = r.Z.colors.INTERACTIVE_NORMAL,
+    colorClass: c = "",
+    ...d
+  } = e, E = (0, o.m)(a), I = null !== (t = null == E ? void 0 : E.width) && void 0 !== t ? t : l, T = null !== (n = null == E ? void 0 : E.height) && void 0 !== n ? n : u;
   return (0, i.jsx)("svg", {
-    ...(0, s.Z)(l),
+    ...(0, s.Z)(d),
     xmlns: "http://www.w3.org/2000/svg",
-    width: t,
-    height: n,
+    width: I,
+    height: T,
     fill: "none",
     viewBox: "0 0 24 24",
     children: (0, i.jsx)("path", {
-      fill: "string" == typeof o ? o : o.css,
+      fill: "string" == typeof _ ? _ : _.css,
       d: "M12 3a1 1 0 0 0-1-1h-.06a1 1 0 0 0-.74.32L5.92 7H3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2.92l4.28 4.68a1 1 0 0 0 .74.32H11a1 1 0 0 0 1-1V3ZM15.18 15.36c-.55.35-1.18-.12-1.18-.78v-.27c0-.36.2-.67.45-.93a2 2 0 0 0 0-2.76c-.24-.26-.45-.57-.45-.93v-.27c0-.66.63-1.13 1.18-.78a4 4 0 0 1 0 6.72Z",
-      className: a
+      className: c
     })
   })
 }

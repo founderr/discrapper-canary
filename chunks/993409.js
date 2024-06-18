@@ -19,8 +19,8 @@ function u(e) {
     icon: r,
     tooltipDelay: u,
     tooltipClassName: _,
-    className: d,
-    innerClassName: c,
+    className: c,
+    innerClassName: d,
     ...E
   } = e, I = {
     [l.text]: "text" === t,
@@ -34,16 +34,15 @@ function u(e) {
     tooltipClassName: _,
     shouldShow: "text" !== t,
     children: (0, i.jsxs)(o.zx, {
-      className: s()(l.button, I, d),
-      innerClassName: s()(l.buttonInner, I, c),
+      className: s()(l.button, I, c),
+      innerClassName: s()(l.buttonInner, I, d),
       color: s()(o.Tt.PRIMARY, l.color, I),
       look: o.zx.Looks.FILLED,
       size: "text" === t ? o.zx.Sizes.SMALL : o.zx.Sizes.NONE,
       grow: "text" === t,
       ...E,
       children: [null != r && (0, i.jsx)(r, {
-        width: 16,
-        height: 16,
+        size: "xs",
         color: "currentColor"
       }), "text" === t && n]
     })

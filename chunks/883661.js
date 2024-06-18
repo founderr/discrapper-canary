@@ -1,56 +1,46 @@
 "use strict";
 var i = n(735250),
   r = n(470079),
-  s = n(932125),
-  o = n(489785),
-  a = n(902781),
-  l = n(497309),
-  u = n(478803),
-  _ = n(407626),
-  d = n(869555),
-  c = n(219541),
-  E = n(593552),
-  I = n(466111),
-  T = n(898140),
-  h = n(339487),
-  S = n(149203);
-let f = e => {
+  s = n(481060),
+  o = n(149203);
+let a = e => {
     switch (e) {
-      case S.UX.RECENT:
-        return l.Z;
-      case S.UX.FAVORITES:
-        return T.Z;
-      case S.UX.TOP_GUILD_EMOJI:
-        return h.Z;
-      case S.UX.PEOPLE:
-        return d.Z;
-      case S.UX.NATURE:
-        return u.Z;
-      case S.UX.FOOD:
-        return a.Z;
-      case S.UX.ACTIVITY:
-        return s.Z;
-      case S.UX.TRAVEL:
-        return E.Z;
-      case S.UX.OBJECTS:
-        return _.Z;
-      case S.UX.SYMBOLS:
-        return c.Z;
-      case S.UX.FLAGS:
-        return o.Z;
-      case S.UX.PREMIUM_UPSELL:
-        return I.Z;
+      case o.UX.RECENT:
+        return s.ClockIcon;
+      case o.UX.FAVORITES:
+        return s.StarIcon;
+      case o.UX.TOP_GUILD_EMOJI:
+        return s.TrophyIcon;
+      case o.UX.PEOPLE:
+        return s.ReactionIcon;
+      case o.UX.NATURE:
+        return s.NatureIcon;
+      case o.UX.FOOD:
+        return s.FoodIcon;
+      case o.UX.ACTIVITY:
+        return s.GameControllerIcon;
+      case o.UX.TRAVEL:
+        return s.BicycleIcon;
+      case o.UX.OBJECTS:
+        return s.ObjectIcon;
+      case o.UX.SYMBOLS:
+        return s.HeartIcon;
+      case o.UX.FLAGS:
+        return s.FlagIcon;
+      case o.UX.PREMIUM_UPSELL:
+        return s.NitroWheelIcon;
       default:
         return
     }
   },
-  N = r.memo(function(e) {
+  l = r.memo(function(e) {
     let {
       categoryId: t,
       ...n
-    } = e, r = f(t);
+    } = e, r = a(t);
     return null == r ? null : (0, i.jsx)(r, {
+      color: "currentColor",
       ...n
     })
   });
-t.Z = N
+t.Z = l

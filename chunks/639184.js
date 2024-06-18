@@ -1,90 +1,93 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return N
+    return _
   }
 });
 var s = n(735250);
 n(470079);
 var l = n(120356),
   a = n.n(l),
-  i = n(481060),
-  r = n(465670),
-  o = n(68972),
-  c = n(507893),
-  d = n(228392),
-  u = n(404616),
-  h = n(710352),
-  m = n(921944),
-  g = n(689938),
-  x = n(993772),
-  _ = n(385092),
-  f = n(861186),
-  E = n(504764);
+  r = n(481060),
+  i = n(228392),
+  o = n(404616),
+  c = n(710352),
+  d = n(921944),
+  u = n(689938),
+  m = n(993772),
+  h = n(385092),
+  g = n(861186),
+  x = n(504764);
 
-function N(e) {
+function _(e) {
   let {
     onDismiss: t
   } = e;
-  return (0, s.jsxs)(i.Clickable, {
+  return (0, s.jsxs)(r.Clickable, {
     onClick: () => {
-      open(h.V8), (0, d.GX)({
+      open(c.V8), (0, i.GX)({
         readGuideCta: !0
       })
     },
-    className: a()(f.container, _.container, x.mainCard),
+    className: a()(g.container, h.container, m.mainCard),
     children: [(0, s.jsxs)("div", {
-      className: _.inline,
+      className: h.inline,
       children: [(0, s.jsxs)("div", {
-        className: _.author,
-        children: [(0, s.jsx)(o.Z, {
-          className: _.discordIcon
-        }), (0, s.jsx)(i.Text, {
+        className: h.author,
+        children: [(0, s.jsx)(r.ClydeIcon, {
+          size: "custom",
+          width: 28,
+          height: 28,
+          color: "currentColor",
+          className: h.discordIcon
+        }), (0, s.jsx)(r.Text, {
           variant: "text-sm/semibold",
           color: "header-primary",
-          children: g.Z.Messages.DISCORD_NAME
+          children: u.Z.Messages.DISCORD_NAME
         }), (0, s.jsxs)("div", {
-          className: _.notice,
-          children: [(0, s.jsx)(c.Z, {
-            className: _.infoIcon
-          }), (0, s.jsx)(i.Text, {
+          className: h.notice,
+          children: [(0, s.jsx)(r.CircleInformationIcon, {
+            size: "md",
+            color: "currentColor",
+            className: h.infoIcon
+          }), (0, s.jsx)(r.Text, {
             variant: "text-sm/normal",
             color: "header-secondary",
-            children: g.Z.Messages.FORUM_HELPER_CARD_NOTICE
+            children: u.Z.Messages.FORUM_HELPER_CARD_NOTICE
           })]
         })]
-      }), (0, s.jsx)(i.Clickable, {
+      }), (0, s.jsx)(r.Clickable, {
         onClick: e => {
-          e.stopPropagation(), t(m.L.DISMISS), (0, d.GX)({
+          e.stopPropagation(), t(d.L.DISMISS), (0, i.GX)({
             readGuideCta: !1
           })
         },
-        children: (0, s.jsx)(r.Z, {
-          className: _.closeIcon,
-          width: 16,
-          height: 16
+        children: (0, s.jsx)(r.CloseSmallIcon, {
+          size: "xs",
+          color: "currentColor",
+          className: h.closeIcon
         })
       })]
     }), (0, s.jsx)("hr", {
-      className: _.separator
+      className: h.separator
     }), (0, s.jsxs)("div", {
-      className: _.inline,
+      className: h.inline,
       children: [(0, s.jsxs)("div", {
-        children: [(0, s.jsx)(i.Heading, {
-          className: a()(f.__invalid_channelName, _.title),
+        children: [(0, s.jsx)(r.Heading, {
+          className: a()(g.__invalid_channelName, h.title),
           variant: "heading-lg/semibold",
           color: "header-primary",
-          children: g.Z.Messages.FORUM_HELPER_CARD_TITLE
-        }), (0, s.jsx)(i.Text, {
+          children: u.Z.Messages.FORUM_HELPER_CARD_TITLE
+        }), (0, s.jsx)(r.Text, {
           variant: "text-sm/normal",
           color: "header-secondary",
-          children: g.Z.Messages.FORUM_HELPER_CARD_BODY
+          children: u.Z.Messages.FORUM_HELPER_CARD_BODY
         })]
       }), (0, s.jsx)("img", {
-        src: E,
-        alt: g.Z.Messages.FORUM_HELPER_CARD_ALT_TEXT,
-        width: u.TJ,
-        height: u.TJ
+        src: x,
+        alt: u.Z.Messages.FORUM_HELPER_CARD_ALT_TEXT,
+        width: o.TJ,
+        height: o.TJ
       })]
     })]
   })

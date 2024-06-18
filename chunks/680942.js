@@ -1,17 +1,16 @@
 "use strict";
 var n = t(735250),
   a = t(470079),
-  i = t(481060),
+  r = t(481060),
   l = t(727637),
-  r = t(906732),
+  i = t(906732),
   o = t(241553),
   c = t(333867),
-  u = t(559629),
-  d = t(884697),
-  C = t(231338),
-  E = t(689938),
-  f = t(46309);
-let m = {
+  u = t(884697),
+  d = t(231338),
+  C = t(689938),
+  E = t(46309);
+let f = {
   dark: [{
     box: "#FFF19E",
     ribbon: "#FF484B"
@@ -61,44 +60,44 @@ s.Z = e => {
   let {
     product: s,
     returnRef: t,
-    onSuccess: p,
-    tooltipDelay: g,
-    isGiftEasterEggEnabled: h,
-    disableCustomColor: x = !1
+    onSuccess: m,
+    tooltipDelay: p,
+    isGiftEasterEggEnabled: g,
+    disableCustomColor: h = !1
   } = e, {
-    analyticsLocations: _
-  } = (0, r.ZP)(), I = a.useRef(null), T = (0, l.Z)(I), N = x ? C.BR.DARK : C.BR.LIGHT;
-  return (0, d.x6)(s) ? null : (0, n.jsx)(i.Tooltip, {
-    text: E.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
-    delay: g,
-    children: e => (0, n.jsx)(i.Button, {
+    analyticsLocations: I
+  } = (0, i.ZP)(), _ = a.useRef(null), x = (0, l.Z)(_), T = h ? d.BR.DARK : d.BR.LIGHT;
+  return (0, u.x6)(s) ? null : (0, n.jsx)(r.Tooltip, {
+    text: C.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
+    delay: p,
+    children: e => (0, n.jsx)(r.Button, {
       ...e,
-      buttonRef: I,
-      className: f.giftButton,
-      color: x ? i.ButtonColors.BRAND : i.ButtonColors.CUSTOM,
-      look: i.Button.Looks.FILLED,
-      size: i.ButtonSizes.ICON,
-      innerClassName: f.giftButtonInner,
-      "aria-label": E.Z.Messages.PREMIUM_GIFTING_BUTTON,
+      buttonRef: _,
+      className: E.giftButton,
+      color: h ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
+      look: r.Button.Looks.FILLED,
+      size: r.ButtonSizes.ICON,
+      innerClassName: E.giftButtonInner,
+      "aria-label": C.Z.Messages.PREMIUM_GIFTING_BUTTON,
       onClick: e => {
         e.stopPropagation(), (0, c.Z)({
           skuId: s.skuId,
           isGift: !0,
-          analyticsLocations: _,
+          analyticsLocations: I,
           returnRef: t,
-          onClose: null != p ? e => {
-            e && p()
+          onClose: null != m ? e => {
+            e && m()
           } : void 0
         })
       },
-      children: h ? (0, n.jsx)(o.e, {
-        hovered: T,
+      children: g ? (0, n.jsx)(o.e, {
+        hovered: x,
         isContentDismissed: !0,
-        themeOverride: N,
-        boxColors: m
-      }) : (0, n.jsx)(u.Z, {
-        width: 24,
-        height: 24
+        themeOverride: T,
+        boxColors: f
+      }) : (0, n.jsx)(r.GiftIcon, {
+        size: "md",
+        color: "currentColor"
       })
     })
   })

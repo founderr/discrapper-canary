@@ -10,31 +10,30 @@ var n = t(735250),
   d = t(296386),
   u = t(907040),
   E = t(401227),
-  _ = t(696202),
-  I = t(999382),
-  T = t(185923),
-  N = t(689938),
-  m = t(84815);
-let S = e => {
+  _ = t(999382),
+  I = t(185923),
+  T = t(689938),
+  N = t(84815);
+let m = e => {
   var s;
   let {
     reason: t = "",
     emoji_name: l,
     onSetReason: d,
-    onSelectEmoji: N,
-    onClearPressed: S,
-    reasonMinLength: h,
-    reasonMaxLength: g,
-    placeholder: x,
+    onSelectEmoji: T,
+    onClearPressed: m,
+    reasonMinLength: S,
+    reasonMaxLength: h,
+    placeholder: g,
     position: C
-  } = e, [R, L] = i.useState(!1), O = (0, r.e7)([I.Z], () => I.Z.isGuildMetadataLoaded());
+  } = e, [x, R] = i.useState(!1), L = (0, r.e7)([_.Z], () => _.Z.isGuildMetadataLoaded());
   return (0, n.jsxs)("div", {
-    className: a()(m.reasonContainer),
+    className: a()(N.reasonContainer),
     children: [(0, n.jsx)(o.Popout, {
       onRequestClose: () => {
-        L(!1)
+        R(!1)
       },
-      shouldShow: R,
+      shouldShow: x,
       position: "right",
       align: "top",
       animation: o.Popout.Animation.NONE,
@@ -43,19 +42,19 @@ let S = e => {
           closePopout: s
         } = e;
         return (0, n.jsx)(u.Z, {
-          pickerIntention: T.Hz.COMMUNITY_CONTENT,
+          pickerIntention: I.Hz.COMMUNITY_CONTENT,
           closePopout: s,
           onSelectEmoji: (e, t) => {
-            null != e && N(e), t && s()
+            null != e && T(e), t && s()
           }
         })
       },
       children: () => (0, n.jsx)("div", {
-        className: m.background,
+        className: N.background,
         children: (0, n.jsx)(E.Z, {
           active: !1,
           onClick: () => {
-            L(!0)
+            R(!0)
           },
           tabIndex: 0,
           renderButtonContents: null != l ? () => (0, n.jsx)(c.Z, {
@@ -65,26 +64,28 @@ let S = e => {
         })
       })
     }), (0, n.jsxs)("div", {
-      className: m.inputContainer,
+      className: N.inputContainer,
       children: [(0, n.jsx)(o.TextInput, {
-        inputClassName: m.reason,
-        placeholder: x,
+        inputClassName: N.reason,
+        placeholder: g,
         value: t,
-        minLength: h,
-        maxLength: g,
+        minLength: S,
+        maxLength: h,
         onChange: e => {
           d(e)
         },
         defaultDirty: (null == t ? void 0 : t.length) > 0
-      }, "text-input-".concat(C, "-").concat(O)), (null !== (s = null == t ? void 0 : t.length) && void 0 !== s ? s : 0) > 0 || null != l ? (0, n.jsx)(o.Button, {
-        className: m.clearStatusButton,
-        onClick: S,
+      }, "text-input-".concat(C, "-").concat(L)), (null !== (s = null == t ? void 0 : t.length) && void 0 !== s ? s : 0) > 0 || null != l ? (0, n.jsx)(o.Button, {
+        className: N.clearStatusButton,
+        onClick: m,
         look: o.Button.Looks.BLANK,
         size: o.Button.Sizes.NONE,
         tabIndex: -1,
         "aria-hidden": !0,
-        children: (0, n.jsx)(_.Z, {
-          className: m.clearStatusIcon
+        children: (0, n.jsx)(o.CircleXIcon, {
+          size: "md",
+          color: "currentColor",
+          className: N.clearStatusIcon
         })
       }) : null]
     })]
@@ -96,8 +97,8 @@ s.Z = e => {
     reasonMaxLength: t,
     guildId: i,
     reasons: l
-  } = e, a = [N.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_ONE, N.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_TWO, N.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_THREE, N.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_FOUR], r = [];
-  for (let e = 0; e < 4; e++) r.push((0, n.jsx)(S, {
+  } = e, a = [T.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_ONE, T.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_TWO, T.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_THREE, T.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_FOUR], r = [];
+  for (let e = 0; e < 4; e++) r.push((0, n.jsx)(m, {
     position: e,
     placeholder: a[e],
     ...l[e],

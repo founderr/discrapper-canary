@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   CF: function() {
-    return H
+    return Z
   },
   ZP: function() {
-    return W
+    return j
   },
   nD: function() {
-    return F
+    return H
   }
 }), n(47120), n(653041), n(789020);
 var i = n(735250),
@@ -18,8 +18,8 @@ var i = n(735250),
   l = n(442837),
   u = n(481060),
   _ = n(100527),
-  d = n(906732),
-  c = n(366030),
+  c = n(906732),
+  d = n(366030),
   E = n(71619),
   I = n(340797),
   T = n(276554),
@@ -31,25 +31,24 @@ var i = n(735250),
   m = n(621853),
   O = n(484459),
   R = n(204197),
-  C = n(740492),
-  p = n(430824),
-  g = n(496675),
-  L = n(594174),
-  v = n(789695),
-  D = n(176278),
-  M = n(768581),
-  P = n(585483),
-  y = n(630388),
-  U = n(74538),
-  b = n(534761),
-  G = n(307187),
-  w = n(750858),
-  k = n(981631),
-  B = n(689938),
-  x = n(822545),
-  V = n(255963);
+  p = n(740492),
+  g = n(430824),
+  C = n(496675),
+  v = n(594174),
+  L = n(176278),
+  D = n(768581),
+  M = n(585483),
+  P = n(630388),
+  y = n(74538),
+  U = n(534761),
+  b = n(307187),
+  G = n(750858),
+  w = n(981631),
+  k = n(689938),
+  B = n(822545),
+  x = n(255963);
 
-function Z(e) {
+function V(e) {
   let {
     avatarSrc: t,
     avatarDecorationSrc: n,
@@ -59,8 +58,8 @@ function Z(e) {
     onMouseDown: l,
     onMouseEnter: u,
     onMouseLeave: _,
-    onKeyDown: d,
-    showCommunicationDisabledStyles: c = !1,
+    onKeyDown: c,
+    showCommunicationDisabledStyles: d = !1,
     className: E
   } = e;
   return (0, i.jsxs)(i.Fragment, {
@@ -68,19 +67,19 @@ function Z(e) {
       onClick: s,
       onContextMenu: a,
       onMouseDown: l,
-      onKeyDown: d,
+      onKeyDown: c,
       onMouseEnter: u,
       onMouseLeave: _,
       src: t,
       "aria-hidden": !0,
-      className: o()(E, x.avatar, {
-        [x.compact]: r,
-        [x.clickable]: null != s,
-        [x.communicationDisabledOpacity]: c
+      className: o()(E, B.avatar, {
+        [B.compact]: r,
+        [B.clickable]: null != s,
+        [B.communicationDisabledOpacity]: d
       }),
       alt: " "
     }), null == n || r ? null : (0, i.jsx)("img", {
-      className: x.avatarDecoration,
+      className: B.avatarDecoration,
       src: n,
       alt: " ",
       "aria-hidden": !0
@@ -88,7 +87,7 @@ function Z(e) {
   })
 }
 
-function H(e, t, n) {
+function Z(e, t, n) {
   let {
     message: r,
     channel: s,
@@ -97,11 +96,11 @@ function H(e, t, n) {
     onContextMenu: l,
     showUsernamePopout: u,
     roleIcon: _,
-    onClickUsername: d,
-    onPopoutRequestClose: c
+    onClickUsername: c,
+    onPopoutRequestClose: d
   } = e;
   return (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(w.Z, {
+    children: [(0, i.jsx)(G.Z, {
       message: r,
       channel: s,
       author: o,
@@ -109,21 +108,21 @@ function H(e, t, n) {
       roleIcon: _,
       showPopout: u,
       renderPopout: t,
-      onClick: d,
+      onClick: c,
       onContextMenu: l,
-      onPopoutRequestClose: c,
+      onPopoutRequestClose: d,
       decorations: n,
       renderRemixTag: !0
     }), a && (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)("i", {
-        className: x.separator,
+        className: B.separator,
         children: ":"
       }), " "]
     })]
   })
 }
 
-function F(e) {
+function H(e) {
   let {
     message: t,
     avatar: n,
@@ -132,8 +131,8 @@ function F(e) {
     usernameClassName: a,
     compact: l,
     showTimestamp: _,
-    showTimestampOnHover: d,
-    ariaLabelledBy: c,
+    showTimestampOnHover: c,
+    ariaLabelledBy: d,
     ariaDescribedBy: E,
     className: I,
     messageClassname: T,
@@ -141,36 +140,36 @@ function F(e) {
   } = e;
   return (0, i.jsxs)(i.Fragment, {
     children: [!l && n, (0, i.jsxs)(u.H, {
-      className: o()(x.header, I),
+      className: o()(B.header, I),
       "aria-describedby": E,
-      "aria-labelledby": c,
-      children: [_ && l && (0, i.jsx)(b.Z, {
+      "aria-labelledby": d,
+      children: [_ && l && (0, i.jsx)(U.Z, {
         id: (0, h.Dv)(t),
         compact: !0,
         timestamp: t.timestamp,
-        isVisibleOnlyOnHover: d,
+        isVisibleOnlyOnHover: c,
         className: T,
         isInline: !1
       }), l && n, (0, i.jsx)("span", {
         id: s,
         className: a,
         children: r
-      }), _ && !l && (0, i.jsx)(b.Z, {
+      }), _ && !l && (0, i.jsx)(U.Z, {
         id: (0, h.Dv)(t),
         timestamp: t.timestamp,
         className: T
       }), null != S && S.length > 0 ? (0, i.jsx)("div", {
-        className: x.badgesContainer,
+        className: B.badgesContainer,
         children: S
       }) : null]
     })]
   })
 }
-let Y = e => {
+let F = e => {
   !e && (0, f.z)()
 };
 
-function j(e) {
+function Y(e) {
   let {
     currentUserIsPremium: t,
     author: n
@@ -179,46 +178,46 @@ function j(e) {
     return null === (e = m.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.premiumSince
   });
   return (0, i.jsx)(u.Tooltip, {
-    tooltipClassName: x.nitroAuthorBadgeTootip,
+    tooltipClassName: B.nitroAuthorBadgeTootip,
     shouldShow: null != r,
-    text: B.Z.Messages.PREMIUM_BADGE_TOOLTIP.format({
+    text: k.Z.Messages.PREMIUM_BADGE_TOOLTIP.format({
       date: r
     }),
     onTooltipShow: () => (0, O.Z)(n.id),
     children: e => (0, i.jsx)(u.Clickable, {
-      className: x.nitroAuthorBadgeContainer,
-      onClick: () => Y(t),
-      "aria-label": B.Z.Messages.PREMIUM_BADGE_TOOLTIP.format({
+      className: B.nitroAuthorBadgeContainer,
+      onClick: () => F(t),
+      "aria-label": k.Z.Messages.PREMIUM_BADGE_TOOLTIP.format({
         date: r
       }),
       children: (0, i.jsx)("img", {
         alt: "",
-        className: x.nitroBadgeSvg,
-        src: V,
+        className: B.nitroBadgeSvg,
+        src: x,
         ...e
       })
     })
   })
 }
 
-function W(e) {
+function j(e) {
   let {
     message: t,
     repliedMessage: n,
     compact: s = !1,
     renderPopout: f,
     showTimestampOnHover: m,
-    roleIcon: b,
-    subscribeToGroupId: V,
-    hideTimestamp: Y,
-    className: W,
-    channel: K
-  } = e, z = r.useMemo(() => null != f ? e => f(e, t) : void 0, [f, t]), [, q] = (0, E.ZP)(t.author.id, e.guildId), X = (0, l.e7)([p.Z], () => p.Z.getGuild(e.guildId), [e.guildId]), Q = null != t.author && null != X && g.Z.canManageUser(k.Plq.MODERATE_MEMBERS, t.author, X), J = q && Q, $ = function(e) {
+    roleIcon: U,
+    subscribeToGroupId: x,
+    hideTimestamp: F,
+    className: j,
+    channel: W
+  } = e, K = r.useMemo(() => null != f ? e => f(e, t) : void 0, [f, t]), [, z] = (0, E.ZP)(t.author.id, e.guildId), q = (0, l.e7)([g.Z], () => g.Z.getGuild(e.guildId), [e.guildId]), X = null != t.author && null != q && C.Z.canManageUser(w.Plq.MODERATE_MEMBERS, t.author, q), Q = z && X, J = function(e) {
     var t, n;
     let {
       props: s,
       guildId: o,
-      handleRenderPopout: c,
+      handleRenderPopout: d,
       showCommunicationDisabledStyles: E = !1,
       className: I
     } = e, {
@@ -229,41 +228,41 @@ function W(e) {
       animate: N = !0,
       onContextMenu: A,
       onClickAvatar: m,
-      onPopoutRequestClose: p,
-      showAvatarPopout: g
-    } = s, [L, v] = r.useState(!1), {
-      analyticsLocations: D
-    } = (0, d.ZP)(_.Z.AVATAR), y = (0, l.e7)([C.ZP], () => {
+      onPopoutRequestClose: g,
+      showAvatarPopout: C
+    } = s, [v, L] = r.useState(!1), {
+      analyticsLocations: P
+    } = (0, c.ZP)(_.Z.AVATAR), y = (0, l.e7)([p.ZP], () => {
       var e;
-      return null !== (e = s.displayCompactAvatars) && void 0 !== e ? e : C.ZP.displayCompactAvatars
-    }), U = null != T.messageReference && null != T.webhookId && T.hasFlag(k.iLy.IS_CROSSPOST), b = T.author, {
+      return null !== (e = s.displayCompactAvatars) && void 0 !== e ? e : p.ZP.displayCompactAvatars
+    }), U = null != T.messageReference && null != T.webhookId && T.hasFlag(w.iLy.IS_CROSSPOST), b = T.author, {
       id: G
-    } = b, w = S ? 32 : 80, {
+    } = b, k = S ? 32 : 80, {
       avatarSrc: B,
       avatarDecorationSrc: x,
-      eventHandlers: V
+      eventHandlers: Z
     } = (0, R.Z)({
       user: b,
       guildId: o,
-      size: w,
-      animateOnHover: null != f ? !L : !N,
+      size: k,
+      animateOnHover: null != f ? !v : !N,
       showPending: !0
     }), H = T.isInteractionPlaceholder(), F = r.useMemo(() => {
       var e, t;
-      return H && null == b.avatar && (null === (e = T.application) || void 0 === e ? void 0 : e.icon) != null ? null !== (t = M.ZP.getApplicationIconURL({
+      return H && null == b.avatar && (null === (e = T.application) || void 0 === e ? void 0 : e.icon) != null ? null !== (t = D.ZP.getApplicationIconURL({
         id: T.application.id,
         icon: T.application.icon,
-        size: w,
+        size: k,
         fallbackAvatar: !1
       })) && void 0 !== t ? t : B : B
-    }, [H, null === (t = T.application) || void 0 === t ? void 0 : t.icon, null === (n = T.application) || void 0 === n ? void 0 : n.id, b.avatar, w, B]);
+    }, [H, null === (t = T.application) || void 0 === t ? void 0 : t.icon, null === (n = T.application) || void 0 === n ? void 0 : n.id, b.avatar, k, B]);
     return (r.useEffect(() => {
-      if (null != f) return P.S.subscribeKeyed(k.LPv.ANIMATE_CHAT_AVATAR, "".concat(f, ":").concat(G), v), () => void P.S.unsubscribeKeyed(k.LPv.ANIMATE_CHAT_AVATAR, "".concat(f, ":").concat(G), v)
-    }, [G, f]), S && !y) ? void 0 : null != c && null != g ? (0, i.jsx)(d.Gt, {
-      value: D,
+      if (null != f) return M.S.subscribeKeyed(w.LPv.ANIMATE_CHAT_AVATAR, "".concat(f, ":").concat(G), L), () => void M.S.unsubscribeKeyed(w.LPv.ANIMATE_CHAT_AVATAR, "".concat(f, ":").concat(G), L)
+    }, [G, f]), S && !y) ? void 0 : null != d && null != C ? (0, i.jsx)(c.Gt, {
+      value: P,
       children: (0, i.jsx)(u.Popout, {
         preload: U ? void 0 : function() {
-          return (0, O.W)(T.author.id, null != h.guildMemberAvatar && null != o ? M.ZP.getGuildMemberAvatarURLSimple({
+          return (0, O.W)(T.author.id, null != h.guildMemberAvatar && null != o ? D.ZP.getGuildMemberAvatarURLSimple({
             guildId: o,
             userId: T.author.id,
             avatar: h.guildMemberAvatar,
@@ -273,12 +272,12 @@ function W(e) {
             channelId: T.channel_id
           })
         },
-        renderPopout: c,
-        shouldShow: g,
+        renderPopout: d,
+        shouldShow: C,
         position: a.tq ? "window_center" : "right",
-        onRequestClose: p,
-        children: e => Z({
-          ...V,
+        onRequestClose: g,
+        children: e => V({
+          ...Z,
           avatarSrc: F,
           avatarDecorationSrc: x,
           compact: S,
@@ -290,10 +289,10 @@ function W(e) {
           className: I
         })
       })
-    }) : (0, i.jsx)(d.Gt, {
-      value: D,
-      children: Z({
-        ...V,
+    }) : (0, i.jsx)(c.Gt, {
+      value: P,
+      children: V({
+        ...Z,
         avatarSrc: F,
         avatarDecorationSrc: x,
         compact: S,
@@ -308,91 +307,91 @@ function W(e) {
   }({
     props: e,
     guildId: e.guildId,
-    handleRenderPopout: z,
-    showCommunicationDisabledStyles: J
-  }), ee = (0, l.e7)([C.ZP], () => {
+    handleRenderPopout: K,
+    showCommunicationDisabledStyles: Q
+  }), $ = (0, l.e7)([p.ZP], () => {
     var t;
-    return null !== (t = e.displayCompactAvatars) && void 0 !== t ? t : C.ZP.displayCompactAvatars
-  }), et = (!s || ee) && null != b && null != X ? (0, i.jsx)(u.Popout, {
+    return null !== (t = e.displayCompactAvatars) && void 0 !== t ? t : p.ZP.displayCompactAvatars
+  }), ee = (!s || $) && null != U && null != q ? (0, i.jsx)(u.Popout, {
     animation: u.Popout.Animation.TRANSLATE,
     align: "center",
     autoInvert: !0,
     nudgeAlignIntoViewport: !0,
     position: "right",
     renderPopout: () => (0, i.jsx)(S.Z, {
-      roleIcon: b,
-      guild: X
+      roleIcon: U,
+      guild: q
     }),
     children: e => {
       let {
         onClick: t
       } = e;
-      return (0, i.jsx)(D.Z, {
-        ...b,
-        className: x.roleIcon,
+      return (0, i.jsx)(L.Z, {
+        ...U,
+        className: B.roleIcon,
         onClick: t
       })
     }
-  }, "role-icon-children") : (!s || ee) && null != b ? (0, i.jsx)(D.Z, {
-    ...b,
-    className: x.roleIcon
-  }, "role-icon-children") : null, en = (0, G.x)({
+  }, "role-icon-children") : (!s || $) && null != U ? (0, i.jsx)(L.Z, {
+    ...U,
+    className: B.roleIcon
+  }, "role-icon-children") : null, et = (0, b.x)({
     message: t,
-    channel: K,
+    channel: W,
     user: null == t ? void 0 : t.author,
     compact: s,
     isRepliedMessage: !1
-  }), ei = [], er = L.default.getCurrentUser(), es = U.ZP.isPremium(t.author), eo = U.ZP.isPremium(er), ea = null == K ? void 0 : K.isPrivate();
-  (0, T.R)(null != b, "Message Username") && es && !s && !ea && ei.push((0, i.jsx)(j, {
-    currentUserIsPremium: eo,
+  }), en = [], ei = v.default.getCurrentUser(), er = y.ZP.isPremium(t.author), es = y.ZP.isPremium(ei), eo = null == W ? void 0 : W.isPrivate();
+  (0, T.R)(null != U, "Message Username") && er && !s && !eo && en.push((0, i.jsx)(Y, {
+    currentUserIsPremium: es,
     author: t.author
-  }, "nitro-author")), null != et && ei.push(et), null != X && ei.push((0, i.jsx)(I.Z, {
-    guild: X,
+  }, "nitro-author")), null != ee && en.push(ee), null != q && en.push((0, i.jsx)(I.Z, {
+    guild: q,
     message: t
-  }, "new-member")), null != K && null != X && ei.push((0, i.jsx)(c.Z, {
-    guild: X,
-    channel: K,
+  }, "new-member")), null != W && null != q && en.push((0, i.jsx)(d.Z, {
+    guild: q,
+    channel: W,
     userId: t.author.id,
     messageId: t.id
   }, "connections"));
-  let el = [];
-  (0, y.yE)(t.flags, k.iLy.SUPPRESS_NOTIFICATIONS) && el.push((0, i.jsx)(A.Z, {}, "suppress-notifications"));
-  let eu = {};
-  eu[w.a.SYSTEM_TAG] = en, eu[w.a.BADGES] = ei;
-  let e_ = H(e, z, eu),
-    ed = (0, h.XX)(t, V),
+  let ea = [];
+  (0, P.yE)(t.flags, w.iLy.SUPPRESS_NOTIFICATIONS) && ea.push((0, i.jsx)(A.Z, {}, "suppress-notifications"));
+  let el = {};
+  el[G.a.SYSTEM_TAG] = et, el[G.a.BADGES] = en;
+  let eu = Z(e, K, el),
+    e_ = (0, h.XX)(t, x),
     ec = (0, h.Dv)(t),
-    eE = Y ? "".concat(ed) : "".concat(ed, " ").concat(ec),
-    eI = (null == n ? void 0 : n.state) === N.Y.LOADED ? (0, h.Gq)(t) : void 0;
-  return (0, i.jsx)(F, {
+    ed = F ? "".concat(e_) : "".concat(e_, " ").concat(ec),
+    eE = (null == n ? void 0 : n.state) === N.Y.LOADED ? (0, h.Gq)(t) : void 0;
+  return (0, i.jsx)(H, {
     message: t,
-    avatar: $,
+    avatar: J,
     username: (0, i.jsxs)(i.Fragment, {
-      children: [J && (0, i.jsx)(u.Tooltip, {
-        text: B.Z.Messages.GUILD_COMMUNICATION_DISABLED_ICON_TOOLTIP_BODY,
+      children: [Q && (0, i.jsx)(u.Tooltip, {
+        text: k.Z.Messages.GUILD_COMMUNICATION_DISABLED_ICON_TOOLTIP_BODY,
         children: e => (0, i.jsxs)(i.Fragment, {
-          children: [(0, i.jsx)(v.Z, {
+          children: [(0, i.jsx)(u.ClockWarningIcon, {
+            size: "xxs",
+            color: "currentColor",
             ...e,
-            width: 12,
-            height: 12,
-            className: s ? x.compactCommunicationDisabled : x.communicationDisabled
+            className: s ? B.compactCommunicationDisabled : B.communicationDisabled
           }), (0, i.jsx)(u.HiddenVisually, {
-            children: B.Z.Messages.GUILD_COMMUNICATION_DISABLED_BOTTOM_SHEET_TITLE
+            children: k.Z.Messages.GUILD_COMMUNICATION_DISABLED_BOTTOM_SHEET_TITLE
           })]
         })
-      }), e_]
+      }), eu]
     }),
-    usernameSpanId: (0, h.XX)(t, V),
-    usernameClassName: o()(x.headerText, {
-      [x.hasRoleIcon]: null != et,
-      [x.hasBadges]: null != en || el.length > 0
+    usernameSpanId: (0, h.XX)(t, x),
+    usernameClassName: o()(B.headerText, {
+      [B.hasRoleIcon]: null != ee,
+      [B.hasBadges]: null != et || ea.length > 0
     }),
     compact: s,
-    showTimestamp: !0 !== Y,
+    showTimestamp: !0 !== F,
     showTimestampOnHover: m,
-    ariaLabelledBy: eE,
-    ariaDescribedBy: eI,
-    className: W,
-    badges: el
+    ariaLabelledBy: ed,
+    ariaDescribedBy: eE,
+    className: j,
+    badges: ea
   })
 }

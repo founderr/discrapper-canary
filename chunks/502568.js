@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
   JO: function() {
-    return T
+    return E
   },
   iz: function() {
-    return h
+    return I
   }
 });
 var i = n(735250),
@@ -15,11 +15,9 @@ var i = n(735250),
   l = n(873546),
   u = n(481060),
   _ = n(290297),
-  d = n(292937),
-  c = n(692437),
-  E = n(806519),
-  I = n(627267);
-let T = e => {
+  c = n(806519),
+  d = n(627267);
+let E = e => {
     let {
       className: t,
       iconClassName: n,
@@ -28,8 +26,8 @@ let T = e => {
       disabled: a = !1,
       showBadge: l = !1,
       color: _,
-      foreground: d,
-      background: c,
+      foreground: E,
+      background: I,
       icon: T,
       onClick: h,
       onContextMenu: S,
@@ -39,21 +37,22 @@ let T = e => {
       tooltipDisabled: m,
       hideOnClick: O = !0,
       role: R,
-      "aria-label": C,
-      "aria-hidden": p,
-      "aria-checked": g,
-      "aria-expanded": L,
-      "aria-haspopup": v
+      "aria-label": p,
+      "aria-hidden": g,
+      "aria-checked": C,
+      "aria-expanded": v,
+      "aria-haspopup": L
     } = e, D = (0, i.jsx)(T, {
       x: 0,
       y: 0,
       width: 24,
       height: 24,
-      className: o()(n, I.icon),
-      foreground: null != d ? d : void 0,
-      background: null != c ? c : void 0,
-      color: _
-    }), M = C;
+      size: "custom",
+      className: o()(n, d.icon),
+      colorClass: null != E ? E : void 0,
+      secondaryColorClass: null != I ? I : void 0,
+      color: null != _ ? _ : "currentColor"
+    }), M = p;
     return null == M && "string" == typeof f && (M = f), (0, i.jsx)(u.Tooltip, {
       text: f,
       color: N,
@@ -68,17 +67,18 @@ let T = e => {
           onBlur: m
         } = e;
         return null == h ? (0, i.jsx)("div", {
-          className: o()(t, [I.iconWrapper]),
+          className: o()(t, [d.iconWrapper]),
           children: (0, i.jsx)(T, {
             x: 0,
             y: 0,
             width: 24,
             height: 24,
-            className: o()(n, I.icon),
-            foreground: null != d ? d : void 0,
-            background: null != c ? c : void 0,
-            color: _,
-            "aria-hidden": p,
+            size: "custom",
+            className: o()(n, d.icon),
+            colorClass: null != E ? E : void 0,
+            secondaryColorClass: null != I ? I : void 0,
+            color: null != _ ? _ : "currentColor",
+            "aria-hidden": g,
             onMouseEnter: f,
             onMouseLeave: N,
             onFocus: A,
@@ -93,43 +93,43 @@ let T = e => {
           onFocus: A,
           onBlur: m,
           className: o()(t, {
-            [I.iconWrapper]: !0,
-            [I.clickable]: !a && null != h,
-            [I.selected]: s
+            [d.iconWrapper]: !0,
+            [d.clickable]: !a && null != h,
+            [d.selected]: s
           }),
           role: R,
           "aria-label": M,
-          "aria-hidden": p,
-          "aria-checked": g,
-          "aria-haspopup": v,
-          "aria-expanded": L,
+          "aria-hidden": g,
+          "aria-checked": C,
+          "aria-haspopup": L,
+          "aria-expanded": v,
           tabIndex: a || null == h ? -1 : 0,
-          children: [l ? (0, i.jsx)(E.ZP, {
-            mask: E.ZP.Masks.HEADER_BAR_BADGE,
+          children: [l ? (0, i.jsx)(c.ZP, {
+            mask: c.ZP.Masks.HEADER_BAR_BADGE,
             children: D
           }) : D, l ? (0, i.jsx)("span", {
-            className: I.iconBadge
+            className: d.iconBadge
           }) : null, r]
         })
       }
     })
   },
-  h = e => {
+  I = e => {
     let {
       className: t
     } = e;
     return (0, i.jsx)("div", {
-      className: o()(I.divider, t)
+      className: o()(d.divider, t)
     })
   },
-  S = e => {
+  T = e => {
     let {
       className: t,
       innerClassName: n,
       children: s,
-      childrenBottom: d,
-      toolbar: c,
-      onDoubleClick: E,
+      childrenBottom: c,
+      toolbar: E,
+      onDoubleClick: I,
       "aria-label": T,
       "aria-labelledby": h,
       role: S,
@@ -137,10 +137,10 @@ let T = e => {
       transparent: N = !1
     } = e, A = r.useRef(null), m = r.useContext(_.Z);
     return (0, i.jsx)("section", {
-      className: o()(t, I.container, {
-        [I.themed]: !N,
-        [I.transparent]: N,
-        [I.themedMobile]: l.tq
+      className: o()(t, d.container, {
+        [d.themed]: !N,
+        [d.transparent]: N,
+        [d.themedMobile]: l.tq
       }),
       "aria-label": T,
       "aria-labelledby": h,
@@ -149,25 +149,25 @@ let T = e => {
       children: (0, i.jsxs)(u.FocusRingScope, {
         containerRef: A,
         children: [(0, i.jsxs)("div", {
-          className: I.upperContainer,
+          className: d.upperContainer,
           children: [(0, i.jsxs)("div", {
-            className: o()(I.children, n, {
-              [I.scrollable]: f
+            className: o()(d.children, n, {
+              [d.scrollable]: f
             }),
-            onDoubleClick: E,
+            onDoubleClick: I,
             children: [l.tq && null != m ? (0, i.jsx)(a.r, {
               onClick: m,
-              className: I.hamburger
+              className: d.hamburger
             }) : null, s]
-          }), null != c ? (0, i.jsx)("div", {
-            className: I.toolbar,
-            children: c
+          }), null != E ? (0, i.jsx)("div", {
+            className: d.toolbar,
+            children: E
           }) : null]
-        }), d]
+        }), c]
       })
     })
   };
-S.Icon = T, S.Title = e => {
+T.Icon = E, T.Title = e => {
   let {
     className: t,
     wrapperClassName: n,
@@ -176,13 +176,13 @@ S.Icon = T, S.Title = e => {
     onClick: a,
     id: l,
     muted: _ = !1,
-    level: d = 1
-  } = e, c = (0, i.jsx)(u.HeadingLevel, {
-    forceLevel: d,
+    level: c = 1
+  } = e, E = (0, i.jsx)(u.HeadingLevel, {
+    forceLevel: c,
     children: (0, i.jsx)(u.Heading, {
       variant: "heading-md/semibold",
       color: _ ? "header-secondary" : void 0,
-      className: o()(t, I.title),
+      className: o()(t, d.title),
       id: l,
       children: r
     })
@@ -190,20 +190,24 @@ S.Icon = T, S.Title = e => {
   return null != a ? (0, i.jsx)(u.Clickable, {
     onClick: a,
     onContextMenu: s,
-    className: o()(n, I.titleWrapper),
-    children: c
+    className: o()(n, d.titleWrapper),
+    children: E
   }) : (0, i.jsx)("div", {
-    className: o()(n, I.titleWrapper),
+    className: o()(n, d.titleWrapper),
     onContextMenu: s,
-    children: c
+    children: E
   })
-}, S.Divider = h, S.Caret = function(e) {
+}, T.Divider = I, T.Caret = function(e) {
   let {
     direction: t = "right"
   } = e;
-  return "right" === t ? (0, i.jsx)(c.Z, {
-    className: I.caret
-  }) : (0, i.jsx)(d.Z, {
-    className: I.caret
+  return "right" === t ? (0, i.jsx)(u.ChevronSmallRightIcon, {
+    size: "md",
+    color: "currentColor",
+    className: d.caret
+  }) : (0, i.jsx)(u.ChevronSmallLeftIcon, {
+    size: "md",
+    color: "currentColor",
+    className: d.caret
   })
-}, t.ZP = S
+}, t.ZP = T

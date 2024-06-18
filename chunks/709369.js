@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return I
+    return E
   }
 });
 var i = n(735250);
@@ -11,30 +11,29 @@ var r = n(442837),
   o = n(40851),
   a = n(776031),
   l = n(199902),
-  u = n(937482),
-  _ = n(358085),
-  d = n(134598),
+  u = n(358085),
+  _ = n(134598),
   c = n(981631),
-  E = n(689938);
+  d = n(689938);
 
-function I(e) {
+function E(e) {
   let {
     onClose: t
-  } = e, n = (0, o.bp)(), I = (0, r.e7)([l.Z], () => l.Z.getCurrentUserActiveStream()), T = (0, a.Z)(I, n);
+  } = e, n = (0, o.bp)(), E = (0, r.e7)([l.Z], () => l.Z.getCurrentUserActiveStream()), I = (0, a.Z)(E, n);
   return (0, i.jsxs)(s.Menu, {
     onSelect: c.VqG,
     navId: "manage-broadcast",
     onClose: t,
-    "aria-label": E.Z.Messages.SETTINGS,
-    children: [_.isPlatformEmbedded && null != I ? (0, i.jsx)(s.MenuItem, {
+    "aria-label": d.Z.Messages.SETTINGS,
+    children: [u.isPlatformEmbedded && null != E ? (0, i.jsx)(s.MenuItem, {
       id: "stream-settings",
-      label: E.Z.Messages.SCREENSHARE_STREAM_QUALITY,
-      children: T
+      label: d.Z.Messages.SCREENSHARE_STREAM_QUALITY,
+      children: I
     }) : null, (0, i.jsx)(s.MenuItem, {
       id: "broadcast-settings",
-      label: E.Z.Messages.BROADCAST_SETTINGS,
-      icon: u.Z,
-      action: () => (0, d.X)()
+      label: d.Z.Messages.BROADCAST_SETTINGS,
+      icon: s.SettingsIcon,
+      action: () => (0, _.X)()
     })]
   })
 }

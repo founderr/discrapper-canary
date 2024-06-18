@@ -10,8 +10,8 @@ var i, r, s = n(735250),
   l = n.n(a),
   u = n(920906),
   _ = n(481060),
-  d = n(855981),
-  c = n(55543),
+  c = n(855981),
+  d = n(55543),
   E = n(806519),
   I = n(329196);
 (i = r || (r = {}))[i.UPDATE = 0] = "UPDATE", i[i.NEW = 1] = "NEW";
@@ -54,11 +54,11 @@ t.Z = o.memo(function(e) {
     onFocus: m,
     onBlur: O,
     pulse: R,
-    sparkle: C,
-    notification: p,
-    "aria-label": g,
-    "aria-expanded": L,
-    "aria-haspopup": v,
+    sparkle: p,
+    notification: g,
+    "aria-label": C,
+    "aria-expanded": v,
+    "aria-haspopup": L,
     "aria-controls": D
   } = e, M = (0, u.useTransition)(null != h, {
     ...T,
@@ -67,7 +67,7 @@ t.Z = o.memo(function(e) {
     let {
       component: t
     } = e;
-    return null != p ? (0, s.jsxs)("div", {
+    return null != g ? (0, s.jsxs)("div", {
       className: I.buttonContent,
       children: [(0, s.jsx)(E.ZP, {
         className: I.iconMask,
@@ -83,9 +83,9 @@ t.Z = o.memo(function(e) {
   return (0, s.jsxs)(_.Button, {
     look: _.Button.Looks.BLANK,
     size: _.Button.Sizes.NONE,
-    "aria-label": g,
-    "aria-expanded": L,
-    "aria-haspopup": v,
+    "aria-label": C,
+    "aria-expanded": v,
+    "aria-haspopup": L,
     "aria-controls": D,
     disabled: n,
     className: l()(t, {
@@ -122,15 +122,16 @@ t.Z = o.memo(function(e) {
           component: (0, s.jsx)(a, {
             className: l()(I.icon, o, {
               [I.pulseIcon]: R
-            })
+            }),
+            color: "currentColor"
           })
         })
       }, i) : void 0
-    }), C && (0, s.jsxs)("div", {
+    }), p && (0, s.jsxs)("div", {
       className: I.sparkleContainer,
-      children: [(0, s.jsx)(c.Z, {
+      children: [(0, s.jsx)(d.Z, {
         className: I.sparkleStar
-      }), (0, s.jsx)(d.Z, {
+      }), (0, s.jsx)(c.Z, {
         className: I.sparklePlus
       })]
     })]

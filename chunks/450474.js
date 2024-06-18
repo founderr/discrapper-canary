@@ -5,29 +5,28 @@ var i = t(481060),
   l = t(296386),
   a = t(150192),
   r = t(987134),
-  o = t(465670),
-  c = t(203377),
-  d = t(71988);
+  o = t(203377),
+  c = t(71988);
 s.Z = e => {
   let {
     guild: s,
     guildMetadata: t,
-    menuPlacement: u,
-    disabled: E
-  } = e, _ = e => {
+    menuPlacement: d,
+    disabled: u
+  } = e, E = e => {
     let {
       secondaryCategoryIds: n
     } = t, i = e.map(e => e.value);
     if (e.length < n.length) n.filter(e => !i.includes(e)).forEach(e => (0, l.K0)(s.id, e));
     else {
-      if (n.length >= c.Pg) return;
+      if (n.length >= o.Pg) return;
       i.filter(e => !n.includes(e)).forEach(e => (0, l.Kq)(s.id, e))
     }
-  }, I = e => {
+  }, _ = e => {
     (0, l.K0)(s.id, e)
-  }, T = e => {
+  }, I = e => {
     e.preventDefault(), e.stopPropagation()
-  }, N = a.Z.getAllCategories().map(e => {
+  }, T = a.Z.getAllCategories().map(e => {
     let {
       categoryId: s,
       name: t
@@ -41,29 +40,29 @@ s.Z = e => {
     value: t.secondaryCategoryIds,
     searchable: !0,
     clearable: !1,
-    options: N,
-    onChange: e => _(e),
+    options: T,
+    onChange: e => E(e),
     multiValueRenderer: e => {
       let {
         label: s,
         value: t
       } = e;
       return (0, n.jsxs)("span", {
-        className: d.subcategory,
-        onMouseDown: T,
+        className: c.subcategory,
+        onMouseDown: I,
         children: [s, (0, n.jsx)(i.Clickable, {
-          className: d.closeWrapper,
-          onClick: () => I(t),
-          children: (0, n.jsx)(o.Z, {
-            width: 16,
-            height: 16,
-            className: d.close
+          className: c.closeWrapper,
+          onClick: () => _(t),
+          children: (0, n.jsx)(i.CloseSmallIcon, {
+            size: "xs",
+            color: "currentColor",
+            className: c.close
           })
         })]
       })
     },
-    menuPlacement: u,
-    disabled: E,
+    menuPlacement: d,
+    disabled: u,
     isMulti: !0
   })
 }

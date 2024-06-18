@@ -8,7 +8,7 @@ var i = n(735250);
 n(470079);
 var r = n(120356),
   s = n.n(r),
-  o = n(465670),
+  o = n(481060),
   a = n(436088),
   l = n(806519),
   u = n(186443);
@@ -29,7 +29,9 @@ function _(e) {
         width: t,
         height: n
       })
-    }), (0, i.jsx)(o.Z, {
+    }), (0, i.jsx)(o.CloseSmallIcon, {
+      size: "md",
+      color: "currentColor",
       className: u.badge
     })]
   })

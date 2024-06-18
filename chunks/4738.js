@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   D: function() {
-    return S
+    return h
   }
 }), n(47120);
 var i = n(735250),
@@ -12,48 +12,47 @@ var i = n(735250),
   l = n(1561),
   u = n(260034),
   _ = n(463208),
-  d = n(292937),
-  c = n(692437),
-  E = n(889963),
-  I = n(689938),
-  T = n(819234);
+  c = n(481060),
+  d = n(889963),
+  E = n(689938),
+  I = n(819234);
 
-function h(e) {
+function T(e) {
   let {
     page: t,
     totalPageCount: n,
     disabled: s,
     onPageChange: a
-  } = e, [d, c] = r.useState(!1), [E, I] = r.useState(null), h = null != E && E >= 1 && E <= n;
+  } = e, [c, d] = r.useState(!1), [E, T] = r.useState(null), h = null != E && E >= 1 && E <= n;
   return s ? (0, i.jsx)(u.X, {
-    className: T.gap,
+    className: I.gap,
     "aria-hidden": !0,
     variant: "heading-sm/semibold",
     children: "…"
-  }, t.key) : d ? (0, i.jsx)(_.o, {
+  }, t.key) : c ? (0, i.jsx)(_.o, {
     autoFocus: !0,
-    className: T.jumpToPageInlineInput,
+    className: I.jumpToPageInlineInput,
     size: _.o.Sizes.MINI,
     value: null == E ? "" : "".concat(E),
     onChange: e => {
       let t = parseInt(e);
       if ("" === e || isNaN(t)) {
-        I(null);
+        T(null);
         return
       }
-      I(t)
+      T(t)
     },
     onBlur: () => {
-      c(!1), I(null)
+      d(!1), T(null)
     },
     onKeyPress: e => {
-      "Enter" === e.key && null != E && h && (a(E), c(!1), I(null))
+      "Enter" === e.key && null != E && h && (a(E), d(!1), T(null))
     },
     disabled: s
   }, t.key) : (0, i.jsx)(l.P, {
-    onClick: () => c(!0),
+    onClick: () => d(!0),
     children: (0, i.jsx)(u.X, {
-      className: o()(T.roundButton, T.gap),
+      className: o()(I.roundButton, I.gap),
       "aria-hidden": !0,
       variant: "heading-sm/semibold",
       children: "…"
@@ -61,7 +60,7 @@ function h(e) {
   }, t.key)
 }
 
-function S(e) {
+function h(e) {
   let {
     currentPage: t,
     totalCount: n,
@@ -69,14 +68,14 @@ function S(e) {
     maxVisiblePages: s,
     disablePaginationGap: u,
     onPageChange: _,
-    hideMaxPage: S = !1,
-    className: f
-  } = e, N = Math.ceil(n / r);
-  return (0, i.jsx)(E.W, {
-    totalPageCount: N,
+    hideMaxPage: h = !1,
+    className: S
+  } = e, f = Math.ceil(n / r);
+  return (0, i.jsx)(d.W, {
+    totalPageCount: f,
     selectedPage: t,
     maxVisiblePages: s,
-    hideMaxPage: S,
+    hideMaxPage: h,
     onPageChange: function(e) {
       null != _ && _(e)
     },
@@ -86,13 +85,13 @@ function S(e) {
         hasMultiplePages: n
       } = e;
       return n ? (0, i.jsx)("div", {
-        className: o()(T.pageControlContainer, f),
+        className: o()(I.pageControlContainer, S),
         children: (0, i.jsx)("nav", {
-          className: T.pageControl,
+          className: I.pageControl,
           children: t.map(e => {
             var t, n;
             switch (e.type) {
-              case E.s.BACK:
+              case d.s.BACK:
                 return function(e) {
                   let {
                     key: t,
@@ -100,29 +99,31 @@ function S(e) {
                     navigateToPage: r
                   } = e;
                   return (0, i.jsxs)(a.zx, {
-                    className: T.endButton,
-                    innerClassName: T.endButtonInner,
+                    className: I.endButton,
+                    innerClassName: I.endButtonInner,
                     look: a.zx.Looks.BLANK,
                     color: a.zx.Colors.TRANSPARENT,
                     onClick: r,
                     disabled: n,
                     rel: "prev",
-                    children: [(0, i.jsx)(d.Z, {
-                      className: T.iconCaret,
+                    children: [(0, i.jsx)(c.ChevronSmallLeftIcon, {
+                      size: "md",
+                      color: "currentColor",
+                      className: I.iconCaret,
                       "aria-hidden": !0
                     }), (0, i.jsx)("span", {
-                      children: I.Z.Messages.BACK
+                      children: E.Z.Messages.BACK
                     })]
                   }, t)
                 }(e);
-              case E.s.PAGE:
+              case d.s.PAGE:
                 ;
                 return t = e, (0, i.jsx)(l.P, {
-                  className: o()(T.roundButton, {
-                    [T.activeButton]: t.selected
+                  className: o()(I.roundButton, {
+                    [I.activeButton]: t.selected
                   }),
                   onClick: t.selected ? void 0 : t.navigateToPage,
-                  "aria-label": I.Z.Messages.PAGINATION_PAGE_LABEL.format({
+                  "aria-label": E.Z.Messages.PAGINATION_PAGE_LABEL.format({
                     pageNumber: t.targetPage
                   }),
                   "aria-current": t.selected ? "page" : void 0,
@@ -130,15 +131,15 @@ function S(e) {
                     children: t.targetPage
                   })
                 }, t.key);
-              case E.s.GAP:
+              case d.s.GAP:
                 ;
-                return n = e, (0, i.jsx)(h, {
+                return n = e, (0, i.jsx)(T, {
                   page: n,
-                  totalPageCount: N,
+                  totalPageCount: f,
                   disabled: !!u,
                   onPageChange: _
                 }, n.key);
-              case E.s.NEXT:
+              case d.s.NEXT:
                 return function(e) {
                   let {
                     key: t,
@@ -146,17 +147,19 @@ function S(e) {
                     navigateToPage: r
                   } = e;
                   return (0, i.jsxs)(a.zx, {
-                    className: T.endButton,
-                    innerClassName: T.endButtonInner,
+                    className: I.endButton,
+                    innerClassName: I.endButtonInner,
                     look: a.zx.Looks.BLANK,
                     color: a.zx.Colors.TRANSPARENT,
                     onClick: r,
                     disabled: n,
                     rel: "next",
                     children: [(0, i.jsx)("span", {
-                      children: I.Z.Messages.NEXT
-                    }), (0, i.jsx)(c.Z, {
-                      className: T.iconCaret,
+                      children: E.Z.Messages.NEXT
+                    }), (0, i.jsx)(c.ChevronSmallRightIcon, {
+                      size: "md",
+                      color: "currentColor",
+                      className: I.iconCaret,
                       "aria-hidden": !0
                     })]
                   }, t)

@@ -1,36 +1,39 @@
 "use strict";
 n.d(t, {
   C: function() {
-    return o
+    return a
   }
 });
 var i = n(735250);
 n(470079);
 var r = n(692547),
-  s = n(331595);
-let o = e => {
+  s = n(331595),
+  o = n(267843);
+let a = e => {
+  var t, n;
   let {
-    width: t = 24,
-    height: n = 24,
-    color: o = r.Z.colors.INTERACTIVE_NORMAL,
-    colorClass: a = "",
-    ...l
-  } = e;
+    size: a = "md",
+    width: l,
+    height: u,
+    color: _ = r.Z.colors.INTERACTIVE_NORMAL,
+    colorClass: c = "",
+    ...d
+  } = e, E = (0, o.m)(a), I = null !== (t = null == E ? void 0 : E.width) && void 0 !== t ? t : l, T = null !== (n = null == E ? void 0 : E.height) && void 0 !== n ? n : u;
   return (0, i.jsxs)("svg", {
-    ...(0, s.Z)(l),
+    ...(0, s.Z)(d),
     xmlns: "http://www.w3.org/2000/svg",
-    width: t,
-    height: n,
+    width: I,
+    height: T,
     fill: "none",
     viewBox: "0 0 24 24",
     children: [(0, i.jsx)("path", {
-      fill: "string" == typeof o ? o : o.css,
+      fill: "string" == typeof _ ? _ : _.css,
       d: "M2 7.4A5.4 5.4 0 0 1 7.4 2c.36 0 .7.22.83.55l1.93 4.64a1 1 0 0 1-.43 1.25L7 10a8.52 8.52 0 0 0 7 7l1.12-2.24a1 1 0 0 1 1.19-.51l5.06 1.56c.38.11.63.46.63.85C22 19.6 19.6 22 16.66 22h-.37C8.39 22 2 15.6 2 7.71V7.4ZM13 3a1 1 0 0 1 1-1 8 8 0 0 1 8 8 1 1 0 1 1-2 0 6 6 0 0 0-6-6 1 1 0 0 1-1-1Z",
-      className: a
+      className: c
     }), (0, i.jsx)("path", {
-      fill: "string" == typeof o ? o : o.css,
+      fill: "string" == typeof _ ? _ : _.css,
       d: "M13 7a1 1 0 0 1 1-1 4 4 0 0 1 4 4 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 0 1-1-1Z",
-      className: a
+      className: c
     })]
   })
 }

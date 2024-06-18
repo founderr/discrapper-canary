@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return _
+    return u
   }
 });
 var i = n(735250);
@@ -10,30 +10,29 @@ var r = n(512722),
   s = n.n(r),
   o = n(481060),
   a = n(695346),
-  l = n(754424),
-  u = n(572004);
+  l = n(572004);
 
-function _(e) {
+function u(e) {
   let {
     id: t,
     label: n,
     onSuccess: r,
-    shiftId: _,
-    showIconFirst: d,
+    shiftId: u,
+    showIconFirst: _,
     showWithoutDeveloperMode: c,
-    focusedClassName: E
-  } = e, I = a.Sb.useSetting();
-  if (__OVERLAY__ || !(c || I) || !u.wS || null == t) return null;
-  let T = "devmode-copy-id-".concat(t);
+    focusedClassName: d
+  } = e, E = a.Sb.useSetting();
+  if (__OVERLAY__ || !(c || E) || !l.wS || null == t) return null;
+  let I = "devmode-copy-id-".concat(t);
   return (0, i.jsx)(o.MenuItem, {
-    id: T,
+    id: I,
     label: n,
     action: function(e) {
-      let n = null != _ && e.shiftKey ? _ : t;
-      s()(null != n, "cannot copy null text"), (0, u.JG)(n), null == r || r()
+      let n = null != u && e.shiftKey ? u : t;
+      s()(null != n, "cannot copy null text"), (0, l.JG)(n), null == r || r()
     },
-    icon: l.Z,
-    showIconFirst: d,
-    focusedClassName: E
-  }, T)
+    icon: o.IdIcon,
+    showIconFirst: _,
+    focusedClassName: d
+  }, I)
 }

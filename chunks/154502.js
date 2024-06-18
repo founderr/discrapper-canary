@@ -28,6 +28,8 @@ function r(e) {
     children: [(0, n.jsx)("div", {
       className: a.actionIconContainer,
       children: (0, n.jsx)(E, {
+        size: "custom",
+        color: "currentColor",
         width: 14,
         height: 14,
         className: a.actionIcon

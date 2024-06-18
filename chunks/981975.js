@@ -1,7 +1,7 @@
 "use strict";
 t.d(s, {
   Z: function() {
-    return Z
+    return D
   }
 }), t(47120), t(653041), t(536091);
 var n = t(735250),
@@ -15,59 +15,57 @@ var n = t(735250),
   u = t(570140),
   E = t(275759),
   _ = t(153124),
-  I = t(151785),
-  T = t(759231),
-  N = t(63063),
-  m = t(243730),
-  S = t(764260),
-  h = t(946724),
-  g = t(95242),
-  x = t(530198),
-  C = t(420966),
-  R = t(203377),
-  L = t(981631),
-  O = t(856651),
-  A = t(689938),
-  p = t(273879),
-  M = t(585512);
-let f = (0, _.hQ)();
+  I = t(63063),
+  T = t(243730),
+  N = t(764260),
+  m = t(946724),
+  S = t(95242),
+  h = t(530198),
+  g = t(420966),
+  C = t(203377),
+  x = t(981631),
+  R = t(856651),
+  L = t(689938),
+  O = t(273879),
+  A = t(585512);
+let p = (0, _.hQ)();
 
-function v(e, s) {
+function M(e, s) {
   return s !== E.O1.AND ? Object.values(o().groupBy(e, e => "".concat(e.connectionType, ":").concat(e.applicationId))) : 0 === e.length ? [] : [
     [...e]
   ]
 }
 
-function D(e) {
+function f(e) {
   let {
     handleAddVerificationClicked: s,
     locked: t
   } = e;
   return (0, n.jsxs)("div", {
-    className: p.headerNoConfigContainer,
+    className: O.headerNoConfigContainer,
     children: [(0, n.jsx)(d.Heading, {
-      className: p.headerHeading,
+      className: O.headerHeading,
       variant: "eyebrow",
-      children: A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER
+      children: L.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER
     }), (0, n.jsx)(d.Text, {
       variant: "text-sm/normal",
       color: "header-secondary",
-      children: A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_DESCRIPTION_LEARN_MORE.format({
-        helpdeskArticleUrl: N.Z.getArticleURL(L.BhN.CONNECTION_DETAILS_ADMIN)
+      children: L.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_DESCRIPTION_LEARN_MORE.format({
+        helpdeskArticleUrl: I.Z.getArticleURL(x.BhN.CONNECTION_DETAILS_ADMIN)
       })
     }), (0, n.jsx)(d.Button, {
       disabled: t,
-      className: p.addVerificationButton,
+      className: O.addVerificationButton,
       size: d.Button.Sizes.MEDIUM,
       look: d.Button.Looks.FILLED,
       color: d.Button.Colors.BRAND,
       onClick: s,
-      children: A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_ADD_CONNECTION
+      children: L.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_ADD_CONNECTION
     })]
   })
 }
 
-function Z(e) {
+function D(e) {
   let {
     guild: s,
     role: t,
@@ -76,103 +74,106 @@ function Z(e) {
     integrations: o
   } = e, {
     headerHeight: _,
-    headerRef: Z
-  } = (0, g.Z)(0), {
-    scrolledToTop: j,
-    handleScroll: U
-  } = (0, C.V)(), G = (0, c.e7)([m.Z], () => {
+    headerRef: D
+  } = (0, S.Z)(0), {
+    scrolledToTop: v,
+    handleScroll: j
+  } = (0, g.V)(), Z = (0, c.e7)([T.Z], () => {
     var e;
-    return null === (e = m.Z.getRoleMemberCount(s.id)) || void 0 === e ? void 0 : e[t.id]
-  }, [t.id, s.id]), P = (0, c.Wu)([h.Z], () => {
+    return null === (e = T.Z.getRoleMemberCount(s.id)) || void 0 === e ? void 0 : e[t.id]
+  }, [t.id, s.id]), U = (0, c.Wu)([m.Z], () => {
     var e;
-    return null !== (e = h.Z.getEditedRoleConnectionConfigurationsMap().get(t.id)) && void 0 !== e ? e : []
-  }), b = P.length > 1 ? E.O1.OR : E.O1.AND, B = i.useMemo(() => b === E.O1.OR ? P.flat() : null != P && P.length > 0 ? P[0] : [], [b, P]), y = i.useMemo(() => new Set(B.map(e => e.connectionType)), [B]);
+    return null !== (e = m.Z.getEditedRoleConnectionConfigurationsMap().get(t.id)) && void 0 !== e ? e : []
+  }), G = U.length > 1 ? E.O1.OR : E.O1.AND, P = i.useMemo(() => G === E.O1.OR ? U.flat() : null != U && U.length > 0 ? U[0] : [], [G, U]), b = i.useMemo(() => new Set(P.map(e => e.connectionType)), [P]);
 
-  function F(e) {
+  function B(e) {
     let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-      n = [...B];
+      n = [...P];
     n.push({
       connectionType: e,
       connectionMetadataField: void 0,
       applicationId: s,
       operator: void 0,
       value: void 0
-    }), (0, S.d_)(t.id, v(n, b))
+    }), (0, N.d_)(t.id, M(n, G))
   }
 
-  function w() {
+  function y() {
     u.Z.dispatch({
       type: "CONNECTIONS_GRID_MODAL_SHOW",
-      onComplete: e => F(e),
-      excludedPlatformTypes: y,
+      onComplete: e => B(e),
+      excludedPlatformTypes: b,
       integrations: o,
-      onCompleteApplication: e => F(O.Kt, e)
+      onCompleteApplication: e => B(R.Kt, e)
     })
   }
-  let k = null;
-  if (0 === B.length) k = (0, n.jsx)(D, {
-    handleAddVerificationClicked: w,
+  let F = null;
+  if (0 === P.length) F = (0, n.jsx)(f, {
+    handleAddVerificationClicked: y,
     locked: l
   });
-  else if (B.length > 0) {
-    var H, V;
+  else if (P.length > 0) {
+    var k, H;
     let e = null;
-    B.length < 10 && (e = (0, n.jsx)(d.Button, {
-      className: a()(p.addVerificationButton, p.addVerificationButtonAppend),
+    P.length < 10 && (e = (0, n.jsx)(d.Button, {
+      className: a()(O.addVerificationButton, O.addVerificationButtonAppend),
       size: d.Button.Sizes.LARGE,
       look: d.Button.Looks.BLANK,
       color: d.Button.Colors.LINK,
-      onClick: w,
+      onClick: y,
       disabled: l,
       children: (0, n.jsxs)("div", {
-        className: p.addVerificationButtonAppendTextContainer,
-        children: [(0, n.jsx)(I.Z, {}), A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_ADD_CONNECTION]
+        className: O.addVerificationButtonAppendTextContainer,
+        children: [(0, n.jsx)(d.CirclePlusIcon, {
+          size: "xs",
+          color: "currentColor"
+        }), L.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_ADD_CONNECTION]
       })
-    })), k = (0, n.jsxs)(n.Fragment, {
-      children: [(H = () => (0, S.d_)(t.id, []), V = l, (0, n.jsxs)(n.Fragment, {
+    })), F = (0, n.jsxs)(n.Fragment, {
+      children: [(k = () => (0, N.d_)(t.id, []), H = l, (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsxs)("div", {
-          className: p.headerTitleContainer,
+          className: O.headerTitleContainer,
           children: [(0, n.jsx)("div", {
-            className: p.headerTitleTextContainer,
+            className: O.headerTitleTextContainer,
             children: (0, n.jsx)(d.Heading, {
               variant: "eyebrow",
-              children: A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER
+              children: L.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER
             })
           }), (0, n.jsx)(d.Button, {
-            className: p.headerTitleButton,
+            className: O.headerTitleButton,
             size: d.Button.Sizes.TINY,
             look: d.Button.Looks.LINK,
             color: d.Button.Colors.LINK,
-            onClick: H,
-            disabled: V,
-            children: A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_CLEAR_ALL
+            onClick: k,
+            disabled: H,
+            children: L.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_CLEAR_ALL
           })]
         }), (0, n.jsx)(d.Text, {
           variant: "text-sm/normal",
-          children: A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_DESCRIPTION_LEARN_MORE.format({
-            helpdeskArticleUrl: N.Z.getArticleURL(L.BhN.CONNECTION_DETAILS_ADMIN)
+          children: L.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_DESCRIPTION_LEARN_MORE.format({
+            helpdeskArticleUrl: I.Z.getArticleURL(x.BhN.CONNECTION_DETAILS_ADMIN)
           })
         })]
       })), function(e, s, t, i, l) {
-        let a = v(i, E.O1.OR);
+        let a = M(i, E.O1.OR);
         return (0, n.jsx)(d.FormItem, {
-          className: p.operatorContainer,
-          title: A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_REQUIREMENTS,
+          className: O.operatorContainer,
+          title: L.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_REQUIREMENTS,
           children: (0, n.jsx)(d.RadioGroup, {
             options: [{
-              name: A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_OR_DESCRIPTION,
+              name: L.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_OR_DESCRIPTION,
               value: E.O1.OR
             }, {
-              name: A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_AND_DESCRIPTION,
+              name: L.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_AND_DESCRIPTION,
               value: E.O1.AND
             }],
             onChange: e => l(i, e.value),
             value: t,
             disabled: e || a.length < 2,
-            "aria-labelledby": f
+            "aria-labelledby": p
           })
         })
-      }(l, t.id, b, B, (e, s) => (0, S.d_)(t.id, v(e, s))), function(e, s, t, i, l) {
+      }(l, t.id, G, P, (e, s) => (0, N.d_)(t.id, M(e, s))), function(e, s, t, i, l) {
         function a(t, n) {
           let i = [];
           for (let s of e) i.push({
@@ -217,46 +218,50 @@ function Z(e) {
           })
         }
         return (0, n.jsx)("div", {
-          className: p.configurationsContainer,
-          children: Array.from(r.values()).map(e => (0, n.jsx)(x.Z, {
+          className: O.configurationsContainer,
+          children: Array.from(r.values()).map(e => (0, n.jsx)(h.Z, {
             configurationItems: e,
             onConfigurationChange: a,
             locked: t,
             integrations: l
           }, e[0].configuration.connectionType + ":" + e[0].index))
         })
-      }(B, e => (0, S.d_)(t.id, v(e, b)), l, t.id, o), e]
+      }(P, e => (0, N.d_)(t.id, M(e, G)), l, t.id, o), e]
     })
   }
   return (0, n.jsx)(d.AdvancedScrollerAuto, {
-    className: p.scroller,
+    className: O.scroller,
     style: {
       scrollPaddingTop: _
     },
-    onScroll: U,
+    onScroll: j,
     children: (0, n.jsxs)("div", {
-      className: M.contentWidth,
+      className: A.contentWidth,
       children: [(0, n.jsx)("div", {
-        className: a()(M.header, M.stickyHeader, {
-          [M.stickyHeaderElevated]: !j
+        className: a()(A.header, A.stickyHeader, {
+          [A.stickyHeaderElevated]: !v
         }),
-        ref: Z,
-        children: (0, n.jsx)(C.Z, {
+        ref: D,
+        children: (0, n.jsx)(g.Z, {
           guild: s,
           role: t,
-          selectedSection: R.ZI.VERIFICATIONS,
+          selectedSection: C.ZI.VERIFICATIONS,
           setSelectedSection: r
         })
-      }), (null != G ? G : 0) > 0 ? (0, n.jsxs)("div", {
-        className: p.warningContainer,
-        children: [(0, n.jsx)(T.Z, {
-          className: p.warningIcon
+      }), (null != Z ? Z : 0) > 0 ? (0, n.jsxs)("div", {
+        className: O.warningContainer,
+        children: [(0, n.jsx)(d.CircleExclamationPointIcon, {
+          size: "custom",
+          width: 20,
+          height: 20,
+          color: "currentColor",
+          className: O.warningIcon
         }), (0, n.jsx)(d.Text, {
           variant: "text-sm/normal",
           color: "text-normal",
-          children: A.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MEMBERS_WARNING
+          children: L.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MEMBERS_WARNING
         })]
-      }) : null, k]
+      }) : null, F]
     })
   })
 }

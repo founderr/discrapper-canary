@@ -1,22 +1,22 @@
 "use strict";
 n.d(t, {
   DM: function() {
-    return E
+    return d
   },
   Ey: function() {
-    return I
+    return E
   },
   No: function() {
-    return T
+    return I
   },
   Ry: function() {
-    return S
+    return h
   },
   qX: function() {
-    return f
+    return S
   },
   u3: function() {
-    return h
+    return T
   }
 });
 var i = n(735250);
@@ -25,12 +25,11 @@ var r = n(120356),
   s = n.n(r),
   o = n(873546),
   a = n(481060),
-  l = n(465670),
-  u = n(626135),
-  _ = n(981631),
-  d = n(689938),
+  l = n(626135),
+  u = n(981631),
+  _ = n(689938),
   c = n(988920);
-let E = Object.freeze({
+let d = Object.freeze({
   DEFAULT: c.colorDefault,
   NEUTRAL: c.colorNeutral,
   BRAND: c.colorBrand,
@@ -46,7 +45,7 @@ let E = Object.freeze({
   PREMIUM_TIER_2: c.colorPremiumTier2
 });
 
-function I(e) {
+function E(e) {
   let {
     children: t,
     className: n,
@@ -64,18 +63,18 @@ function I(e) {
   })
 }
 
-function T(e) {
+function I(e) {
   let {
     children: t,
     noticeType: n,
     additionalTrackingProps: r,
     ...s
   } = e;
-  return (0, i.jsx)(I, {
+  return (0, i.jsx)(E, {
     ...s,
     onClick: e => {
       var t, i;
-      null != s.onClick && s.onClick(e), t = n, i = r, null != t && u.default.track(_.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
+      null != s.onClick && s.onClick(e), t = n, i = r, null != t && l.default.track(u.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
         notice_type: t,
         ...i
       })
@@ -84,7 +83,7 @@ function T(e) {
   })
 }
 
-function h(e) {
+function T(e) {
   let {
     children: t,
     href: n,
@@ -98,7 +97,7 @@ function h(e) {
   })
 }
 
-function S(e) {
+function h(e) {
   let {
     onClick: t,
     noticeType: n
@@ -110,22 +109,22 @@ function S(e) {
     className: c.closeButton,
     onClick: () => {
       var e;
-      t(), null != (e = n) && u.default.track(_.rMx.APP_NOTICE_CLOSED, {
+      t(), null != (e = n) && l.default.track(u.rMx.APP_NOTICE_CLOSED, {
         notice_type: e
       })
     },
-    "aria-label": d.Z.Messages.DISMISS,
-    children: (0, i.jsx)(l.Z, {
-      className: c.closeIcon,
-      width: 18,
-      height: 18
+    "aria-label": _.Z.Messages.DISMISS,
+    children: (0, i.jsx)(a.CloseSmallIcon, {
+      size: "sm",
+      color: "currentColor",
+      className: c.closeIcon
     })
   })
 }
 
-function f(e) {
+function S(e) {
   let {
-    color: t = E.DEFAULT,
+    color: t = d.DEFAULT,
     className: n,
     style: r,
     children: a

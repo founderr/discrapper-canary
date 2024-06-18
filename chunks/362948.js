@@ -7,98 +7,96 @@ var i = n(735250),
   a = n(780384),
   l = n(481060),
   u = n(410030),
-  _ = n(263704),
-  d = n(465670),
-  c = n(981631),
-  E = n(474936),
-  I = n(689938),
-  T = n(169709);
-let h = [{
-  getPerkHeading: () => I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_EMOJI_SLOTS,
+  _ = n(981631),
+  c = n(474936),
+  d = n(689938),
+  E = n(169709);
+let I = [{
+  getPerkHeading: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_EMOJI_SLOTS,
   getPerkPreviewLightTheme: () => n(414102),
   getPerkPreviewDarkTheme: () => n(614600),
-  getTier0Value: () => E.HO[c.Eu4.NONE].limits.emoji,
-  getTier1Value: () => E.HO[c.Eu4.TIER_1].limits.emoji,
-  getTier2Value: () => E.HO[c.Eu4.TIER_2].limits.emoji,
-  getTier3Value: () => E.HO[c.Eu4.TIER_3].limits.emoji
+  getTier0Value: () => c.HO[_.Eu4.NONE].limits.emoji,
+  getTier1Value: () => c.HO[_.Eu4.TIER_1].limits.emoji,
+  getTier2Value: () => c.HO[_.Eu4.TIER_2].limits.emoji,
+  getTier3Value: () => c.HO[_.Eu4.TIER_3].limits.emoji
 }, {
-  getPerkHeading: () => I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_STICKER_SLOTS,
+  getPerkHeading: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_STICKER_SLOTS,
   getPerkPreviewLightTheme: () => n(73541),
   getPerkPreviewDarkTheme: () => n(43735),
-  getTier0Value: () => E.HO[c.Eu4.NONE].limits.stickers,
-  getTier1Value: () => E.HO[c.Eu4.TIER_1].limits.stickers,
-  getTier2Value: () => E.HO[c.Eu4.TIER_2].limits.stickers,
-  getTier3Value: () => E.HO[c.Eu4.TIER_3].limits.stickers
+  getTier0Value: () => c.HO[_.Eu4.NONE].limits.stickers,
+  getTier1Value: () => c.HO[_.Eu4.TIER_1].limits.stickers,
+  getTier2Value: () => c.HO[_.Eu4.TIER_2].limits.stickers,
+  getTier3Value: () => c.HO[_.Eu4.TIER_3].limits.stickers
 }, {
-  getPerkHeading: () => I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_SOUNDBOARD_SLOTS,
+  getPerkHeading: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_SOUNDBOARD_SLOTS,
   getPerkPreviewLightTheme: () => n(69098),
   getPerkPreviewDarkTheme: () => n(881755),
-  getTier0Value: () => E.HO[c.Eu4.NONE].limits.soundboardSounds,
-  getTier1Value: () => E.HO[c.Eu4.TIER_1].limits.soundboardSounds,
-  getTier2Value: () => E.HO[c.Eu4.TIER_2].limits.soundboardSounds,
-  getTier3Value: () => E.HO[c.Eu4.TIER_3].limits.soundboardSounds
+  getTier0Value: () => c.HO[_.Eu4.NONE].limits.soundboardSounds,
+  getTier1Value: () => c.HO[_.Eu4.TIER_1].limits.soundboardSounds,
+  getTier2Value: () => c.HO[_.Eu4.TIER_2].limits.soundboardSounds,
+  getTier3Value: () => c.HO[_.Eu4.TIER_3].limits.soundboardSounds
 }, {
-  getPerkHeading: () => I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_STREAM_QUALITY,
+  getPerkHeading: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_STREAM_QUALITY,
   getPerkPreviewLightTheme: () => n(989015),
   getPerkPreviewDarkTheme: () => n(815152),
-  getTier0Value: () => I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_STREAM_QUALITY.format({
-    resolution: E.HO[c.Eu4.NONE].limits.screenShareQualityResolution,
-    framerate: E.HO[c.Eu4.NONE].limits.screenShareQualityFramerate
+  getTier0Value: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_STREAM_QUALITY.format({
+    resolution: c.HO[_.Eu4.NONE].limits.screenShareQualityResolution,
+    framerate: c.HO[_.Eu4.NONE].limits.screenShareQualityFramerate
   }),
-  getTier1Value: () => I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_STREAM_QUALITY.format({
-    resolution: E.HO[c.Eu4.TIER_1].limits.screenShareQualityResolution,
-    framerate: E.HO[c.Eu4.TIER_1].limits.screenShareQualityFramerate
+  getTier1Value: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_STREAM_QUALITY.format({
+    resolution: c.HO[_.Eu4.TIER_1].limits.screenShareQualityResolution,
+    framerate: c.HO[_.Eu4.TIER_1].limits.screenShareQualityFramerate
   }),
-  getTier2Value: () => I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_STREAM_QUALITY.format({
-    resolution: E.HO[c.Eu4.TIER_2].limits.screenShareQualityResolution,
-    framerate: E.HO[c.Eu4.TIER_2].limits.screenShareQualityFramerate
+  getTier2Value: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_STREAM_QUALITY.format({
+    resolution: c.HO[_.Eu4.TIER_2].limits.screenShareQualityResolution,
+    framerate: c.HO[_.Eu4.TIER_2].limits.screenShareQualityFramerate
   }),
-  getTier3Value: () => I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_STREAM_QUALITY.format({
-    resolution: E.HO[c.Eu4.TIER_3].limits.screenShareQualityResolution,
-    framerate: E.HO[c.Eu4.TIER_3].limits.screenShareQualityFramerate
+  getTier3Value: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_STREAM_QUALITY.format({
+    resolution: c.HO[_.Eu4.TIER_3].limits.screenShareQualityResolution,
+    framerate: c.HO[_.Eu4.TIER_3].limits.screenShareQualityFramerate
   })
 }, {
-  getPerkHeading: () => I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_VOICE_QUALITY,
+  getPerkHeading: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_VOICE_QUALITY,
   getPerkPreviewLightTheme: () => n(222185),
   getPerkPreviewDarkTheme: () => n(415480),
-  getTier0Value: () => I.Z.Messages.BITRATE_KBPS_NO_SPACE.format({
-    bitrate: E.HO[c.Eu4.NONE].limits.bitrate / 1e3
+  getTier0Value: () => d.Z.Messages.BITRATE_KBPS_NO_SPACE.format({
+    bitrate: c.HO[_.Eu4.NONE].limits.bitrate / 1e3
   }),
-  getTier1Value: () => I.Z.Messages.BITRATE_KBPS_NO_SPACE.format({
-    bitrate: E.HO[c.Eu4.TIER_1].limits.bitrate / 1e3
+  getTier1Value: () => d.Z.Messages.BITRATE_KBPS_NO_SPACE.format({
+    bitrate: c.HO[_.Eu4.TIER_1].limits.bitrate / 1e3
   }),
-  getTier2Value: () => I.Z.Messages.BITRATE_KBPS_NO_SPACE.format({
-    bitrate: E.HO[c.Eu4.TIER_2].limits.bitrate / 1e3
+  getTier2Value: () => d.Z.Messages.BITRATE_KBPS_NO_SPACE.format({
+    bitrate: c.HO[_.Eu4.TIER_2].limits.bitrate / 1e3
   }),
-  getTier3Value: () => I.Z.Messages.BITRATE_KBPS_NO_SPACE.format({
-    bitrate: E.HO[c.Eu4.TIER_3].limits.bitrate / 1e3
+  getTier3Value: () => d.Z.Messages.BITRATE_KBPS_NO_SPACE.format({
+    bitrate: c.HO[_.Eu4.TIER_3].limits.bitrate / 1e3
   })
 }, {
-  getPerkHeading: () => I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_UPLOAD_SIZE_LIMIT,
+  getPerkHeading: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_UPLOAD_SIZE_LIMIT,
   getPerkPreviewLightTheme: () => n(825588),
   getPerkPreviewDarkTheme: () => n(954499),
-  getTier0Value: () => I.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({
-    size: E.HO[c.Eu4.NONE].limits.fileSize / 1024 / 1024
+  getTier0Value: () => d.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({
+    size: c.HO[_.Eu4.NONE].limits.fileSize / 1024 / 1024
   }),
-  getTier1Value: () => I.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({
-    size: E.HO[c.Eu4.TIER_1].limits.fileSize / 1024 / 1024
+  getTier1Value: () => d.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({
+    size: c.HO[_.Eu4.TIER_1].limits.fileSize / 1024 / 1024
   }),
-  getTier2Value: () => I.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({
-    size: E.HO[c.Eu4.TIER_2].limits.fileSize / 1024 / 1024
+  getTier2Value: () => d.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({
+    size: c.HO[_.Eu4.TIER_2].limits.fileSize / 1024 / 1024
   }),
-  getTier3Value: () => I.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({
-    size: E.HO[c.Eu4.TIER_3].limits.fileSize / 1024 / 1024
+  getTier3Value: () => d.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({
+    size: c.HO[_.Eu4.TIER_3].limits.fileSize / 1024 / 1024
   })
 }, {
-  getPerkHeading: () => I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_VIDEO_STAGE_SEATS,
+  getPerkHeading: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_VIDEO_STAGE_SEATS,
   getPerkPreviewLightTheme: () => n(241190),
   getPerkPreviewDarkTheme: () => n(879846),
-  getTier0Value: () => E.HO[c.Eu4.NONE].limits.stageVideoUsers,
-  getTier1Value: () => E.HO[c.Eu4.TIER_1].limits.stageVideoUsers,
-  getTier2Value: () => E.HO[c.Eu4.TIER_2].limits.stageVideoUsers,
-  getTier3Value: () => E.HO[c.Eu4.TIER_3].limits.stageVideoUsers
+  getTier0Value: () => c.HO[_.Eu4.NONE].limits.stageVideoUsers,
+  getTier1Value: () => c.HO[_.Eu4.TIER_1].limits.stageVideoUsers,
+  getTier2Value: () => c.HO[_.Eu4.TIER_2].limits.stageVideoUsers,
+  getTier3Value: () => c.HO[_.Eu4.TIER_3].limits.stageVideoUsers
 }, {
-  getPerkHeading: () => I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_ANIMATED_GUILD_ICON,
+  getPerkHeading: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_ANIMATED_GUILD_ICON,
   getPerkPreviewLightTheme: () => n(499059),
   getPerkPreviewDarkTheme: () => n(488349),
   getTier0Value: () => !1,
@@ -106,7 +104,7 @@ let h = [{
   getTier2Value: () => !0,
   getTier3Value: () => !0
 }, {
-  getPerkHeading: () => I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_GUILD_INVITE_BACKGROUND,
+  getPerkHeading: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_GUILD_INVITE_BACKGROUND,
   getPerkPreviewLightTheme: () => n(136631),
   getPerkPreviewDarkTheme: () => n(692079),
   getTier0Value: () => !1,
@@ -114,15 +112,15 @@ let h = [{
   getTier2Value: () => !0,
   getTier3Value: () => !0
 }, {
-  getPerkHeading: () => I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_GUILD_BANNER,
+  getPerkHeading: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_GUILD_BANNER,
   getPerkPreviewLightTheme: () => n(277822),
   getPerkPreviewDarkTheme: () => n(866919),
   getTier0Value: () => !1,
   getTier1Value: () => !1,
-  getTier2Value: () => I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_GUILD_BANNER_STATIC,
-  getTier3Value: () => I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_GUILD_BANNER_ANIMATED
+  getTier2Value: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_GUILD_BANNER_STATIC,
+  getTier3Value: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_GUILD_BANNER_ANIMATED
 }, {
-  getPerkHeading: () => I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_CUSTOM_ROLE_ICONS,
+  getPerkHeading: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_CUSTOM_ROLE_ICONS,
   getPerkPreviewLightTheme: () => n(872259),
   getPerkPreviewDarkTheme: () => n(876049),
   getTier0Value: () => !1,
@@ -130,7 +128,7 @@ let h = [{
   getTier2Value: () => !0,
   getTier3Value: () => !0
 }, {
-  getPerkHeading: () => I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_VANITY_URL,
+  getPerkHeading: () => d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_VANITY_URL,
   getPerkPreviewLightTheme: () => n(710717),
   getPerkPreviewDarkTheme: () => n(945198),
   getTier0Value: () => !1,
@@ -139,14 +137,14 @@ let h = [{
   getTier3Value: () => !0
 }];
 
-function S(e) {
+function T(e) {
   let {
     children: t,
     className: n,
     tier: r
-  } = e, s = r === c.Eu4.NONE ? "text-muted" : "header-primary", a = r === c.Eu4.NONE || null == r ? "heading-xl/normal" : "heading-xl/bold";
+  } = e, s = r === _.Eu4.NONE ? "text-muted" : "header-primary", a = r === _.Eu4.NONE || null == r ? "heading-xl/normal" : "heading-xl/bold";
   return (0, i.jsxs)("th", {
-    className: o()(T.columnHeading, n),
+    className: o()(E.columnHeading, n),
     scope: "col",
     children: [(0, i.jsx)(l.Heading, {
       color: s,
@@ -155,14 +153,14 @@ function S(e) {
     }), null != r && (0, i.jsx)(l.Text, {
       color: s,
       variant: "text-md/normal",
-      children: I.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format({
-        subscriptions: c.oCV[r]
+      children: d.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format({
+        subscriptions: _.oCV[r]
       })
     })]
   })
 }
 
-function f(e) {
+function h(e) {
   let t;
   let {
     className: n,
@@ -170,12 +168,16 @@ function f(e) {
     value: s
   } = e;
   if ("boolean" == typeof s) {
-    let e = o()(T.booleanValueIcon, {
-      [T.booleanValueTrue]: s
+    let e = o()(E.booleanValueIcon, {
+      [E.booleanValueTrue]: s
     });
-    t = s ? (0, i.jsx)(_.Z, {
+    t = s ? (0, i.jsx)(l.CheckmarkLargeIcon, {
+      size: "md",
+      color: "currentColor",
       className: e
-    }) : (0, i.jsx)(d.Z, {
+    }) : (0, i.jsx)(l.CloseSmallIcon, {
+      size: "md",
+      color: "currentColor",
       className: e
     })
   } else t = (0, i.jsx)(l.Text, {
@@ -184,36 +186,36 @@ function f(e) {
     children: s
   });
   return (0, i.jsx)("td", {
-    className: o()(T.tableCell, n),
+    className: o()(E.tableCell, n),
     children: t
   })
 }
 
-function N(e) {
+function S(e) {
   let {
     currentTier: t
   } = e, n = function(e) {
     switch (e) {
-      case c.Eu4.NONE:
-      case c.Eu4.TIER_1:
-        return c.Eu4.TIER_2;
-      case c.Eu4.TIER_2:
-      case c.Eu4.TIER_3:
-        return c.Eu4.TIER_3;
+      case _.Eu4.NONE:
+      case _.Eu4.TIER_1:
+        return _.Eu4.TIER_2;
+      case _.Eu4.TIER_2:
+      case _.Eu4.TIER_3:
+        return _.Eu4.TIER_3;
       default:
         return null
     }
   }(t);
   return null == n ? null : (0, i.jsx)("div", {
-    className: o()(T.recommendedTierHighlight, {
-      [T.recommendedTierHighlightTier2]: n === c.Eu4.TIER_2,
-      [T.recommendedTierHighlightTier3]: n === c.Eu4.TIER_3
+    className: o()(E.recommendedTierHighlight, {
+      [E.recommendedTierHighlightTier2]: n === _.Eu4.TIER_2,
+      [E.recommendedTierHighlightTier3]: n === _.Eu4.TIER_3
     }),
     children: (0, i.jsx)(l.Text, {
-      className: T.recommendedTierHighlightTag,
+      className: E.recommendedTierHighlightTag,
       color: "always-white",
       variant: "text-xs/bold",
-      children: t === c.Eu4.TIER_3 ? I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CURRENT_TAG : I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_RECOMMENDED_TAG
+      children: t === _.Eu4.TIER_3 ? d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CURRENT_TAG : d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_RECOMMENDED_TAG
     })
   })
 }
@@ -221,9 +223,9 @@ t.Z = function(e) {
   let t = (0, u.ZP)(),
     [n, s] = r.useState(null),
     {
-      className: _,
-      guild: d,
-      hideHeading: E,
+      className: c,
+      guild: f,
+      hideHeading: N,
       hideTier0: A
     } = e;
 
@@ -231,54 +233,54 @@ t.Z = function(e) {
     s(null)
   }
   return (0, i.jsxs)("div", {
-    className: _,
-    children: [!E && (0, i.jsx)(l.Heading, {
-      className: T.heading,
+    className: c,
+    children: [!N && (0, i.jsx)(l.Heading, {
+      className: E.heading,
       variant: "heading-xxl/extrabold",
-      children: I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_HEADING
+      children: d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_HEADING
     }), (0, i.jsxs)("div", {
-      className: T.tableWrapper,
-      children: [null != d && (0, i.jsx)(N, {
-        currentTier: d.premiumTier
+      className: E.tableWrapper,
+      children: [null != f && (0, i.jsx)(S, {
+        currentTier: f.premiumTier
       }), (0, i.jsxs)("table", {
-        className: T.table,
+        className: E.table,
         cellPadding: 0,
         cellSpacing: 0,
         children: [(0, i.jsx)("thead", {
           children: (0, i.jsxs)("tr", {
-            className: T.__invalid_tableRow,
-            children: [(0, i.jsx)(S, {
-              className: T.tableRowHeading,
-              children: I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_COLUMN_HEADING_PERKS
-            }), !A && (0, i.jsx)(S, {
-              tier: c.Eu4.NONE,
-              children: I.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_NONE_NAME
-            }), (0, i.jsx)(S, {
-              tier: c.Eu4.TIER_1,
-              children: I.Z.Messages.PREMIUM_GUILD_TIER_1
-            }), (0, i.jsx)(S, {
-              tier: c.Eu4.TIER_2,
-              children: I.Z.Messages.PREMIUM_GUILD_TIER_2
-            }), (0, i.jsx)(S, {
-              tier: c.Eu4.TIER_3,
-              children: I.Z.Messages.PREMIUM_GUILD_TIER_3
+            className: E.__invalid_tableRow,
+            children: [(0, i.jsx)(T, {
+              className: E.tableRowHeading,
+              children: d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_COLUMN_HEADING_PERKS
+            }), !A && (0, i.jsx)(T, {
+              tier: _.Eu4.NONE,
+              children: d.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_NONE_NAME
+            }), (0, i.jsx)(T, {
+              tier: _.Eu4.TIER_1,
+              children: d.Z.Messages.PREMIUM_GUILD_TIER_1
+            }), (0, i.jsx)(T, {
+              tier: _.Eu4.TIER_2,
+              children: d.Z.Messages.PREMIUM_GUILD_TIER_2
+            }), (0, i.jsx)(T, {
+              tier: _.Eu4.TIER_3,
+              children: d.Z.Messages.PREMIUM_GUILD_TIER_3
             })]
           })
         }), (0, i.jsx)("tbody", {
-          className: T.__invalid_tableBody,
-          children: h.map((e, r) => {
+          className: E.__invalid_tableBody,
+          children: I.map((e, r) => {
             let u = n === r;
 
             function _() {
               s(r)
             }
             return void 0 === e.predicate ? (0, i.jsxs)("tr", {
-              className: T.__invalid_tableRow,
+              className: E.__invalid_tableRow,
               children: [(0, i.jsx)("th", {
-                className: o()(T.tableCell, T.tableCellWrapper),
+                className: o()(E.tableCell, E.tableCellWrapper),
                 scope: "row",
                 children: (0, i.jsx)(l.Clickable, {
-                  className: o()(T.tableRowHeading, T.tableCell, T.tableCellInner),
+                  className: o()(E.tableRowHeading, E.tableCell, E.tableCellInner),
                   onFocus: _,
                   onBlur: m,
                   onMouseEnter: _,
@@ -289,7 +291,7 @@ t.Z = function(e) {
                     nudgeAlignIntoViewport: !0,
                     position: "bottom",
                     renderPopout: () => (0, i.jsx)("img", {
-                      className: T.perkPreviewImage,
+                      className: E.perkPreviewImage,
                       src: (0, a.wj)(t) ? e.getPerkPreviewDarkTheme() : e.getPerkPreviewLightTheme(),
                       alt: ""
                     }),
@@ -301,14 +303,14 @@ t.Z = function(e) {
                     })
                   })
                 })
-              }), !A && (0, i.jsx)(f, {
+              }), !A && (0, i.jsx)(h, {
                 textVariant: "text-md/normal",
                 value: e.getTier0Value()
-              }), (0, i.jsx)(f, {
+              }), (0, i.jsx)(h, {
                 value: e.getTier1Value()
-              }), (0, i.jsx)(f, {
+              }), (0, i.jsx)(h, {
                 value: e.getTier2Value()
-              }), (0, i.jsx)(f, {
+              }), (0, i.jsx)(h, {
                 value: e.getTier3Value()
               })]
             }, r) : null

@@ -1,33 +1,32 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return S
+    return h
   }
 });
 var i = n(735250);
 n(470079);
 var r = n(120356),
   s = n.n(r),
-  o = n(700111),
-  a = n(481060),
-  l = n(239091),
-  u = n(782568),
-  _ = n(364640),
-  d = n(198620),
+  o = n(481060),
+  a = n(239091),
+  l = n(782568),
+  u = n(364640),
+  _ = n(198620),
   c = n(797053),
-  E = n(746878),
-  I = n(981631),
-  T = n(261805),
-  h = n(504649);
+  d = n(746878),
+  E = n(981631),
+  I = n(261805),
+  T = n(504649);
 
-function S(e) {
+function h(e) {
   return {
-    react(t, r, S) {
-      let f = S.noStyleAndInteraction ? void 0 : async n => {
-        let i = await (0, d.B_)(t.attachmentUrl);
-        e.shouldStopPropagation && (null == n || n.stopPropagation()), _.Z.trackLinkClicked(i), e.shouldCloseDefaultModals && (0, a.closeAllModals)(), (0, u.Z)(i)
-      }, N = S.noStyleAndInteraction ? I.dG4 : e => {
-        (0, l.jW)(e, async () => {
+    react(t, r, h) {
+      let S = h.noStyleAndInteraction ? void 0 : async n => {
+        let i = await (0, _.B_)(t.attachmentUrl);
+        e.shouldStopPropagation && (null == n || n.stopPropagation()), u.Z.trackLinkClicked(i), e.shouldCloseDefaultModals && (0, o.closeAllModals)(), (0, l.Z)(i)
+      }, f = h.noStyleAndInteraction ? E.dG4 : e => {
+        (0, a.jW)(e, async () => {
           let {
             default: e
           } = await n.e("98466").then(n.bind(n, 151578));
@@ -41,16 +40,15 @@ function S(e) {
       return (0, i.jsxs)(c.Z, {
         role: "link",
         href: t.attachmentUrl,
-        onClick: f,
-        onContextMenu: N,
+        onClick: S,
+        onContextMenu: f,
         className: "attachmentLink",
-        children: [(0, i.jsx)(o.U, {
-          className: s()(h.icon, T.icon),
-          color: a.tokens.colors.MENTION_FOREGROUND,
-          width: 16,
-          height: 16
-        }), (0, E.S)(t, r, S)]
-      }, S.key)
+        children: [(0, i.jsx)(o.AttachmentIcon, {
+          size: "xs",
+          className: s()(T.icon, I.icon),
+          color: o.tokens.colors.MENTION_FOREGROUND
+        }), (0, d.S)(t, r, h)]
+      }, h.key)
     }
   }
 }

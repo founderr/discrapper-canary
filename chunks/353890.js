@@ -1,7 +1,7 @@
 "use strict";
 t.d(s, {
   Z: function() {
-    return S
+    return m
   }
 });
 var n = t(735250);
@@ -15,68 +15,67 @@ var i = t(120356),
   d = t(637853),
   u = t(816436),
   E = t(259580),
-  _ = t(93879),
-  I = t(889369),
-  T = t(838324),
-  N = t(689938),
-  m = t(521763);
+  _ = t(889369),
+  I = t(838324),
+  T = t(689938),
+  N = t(521763);
 
-function S(e) {
+function m(e) {
   let {
     guild: s,
     scrollToQuestions: t
-  } = e, i = (0, a.e7)([I.Z], () => I.Z.editedDefaultChannelIds), l = (0, u.b)(s.id, i).filter(e => e.isCategory() || (0, c.s)(e.guild_id, e.id));
+  } = e, i = (0, a.e7)([_.Z], () => _.Z.editedDefaultChannelIds), l = (0, u.b)(s.id, i).filter(e => e.isCategory() || (0, c.s)(e.guild_id, e.id));
   return (0, n.jsxs)("div", {
-    className: m.container,
+    className: N.container,
     children: [(0, n.jsx)("div", {
-      className: m.header,
-      children: (0, n.jsx)(T.Z, {
+      className: N.header,
+      children: (0, n.jsx)(I.Z, {
         guildId: s.id,
         scrollToQuestions: t
       })
     }), (0, n.jsxs)("div", {
-      className: m.channelList,
-      children: [(0, n.jsx)(x, {}), 0 === l.length && (0, n.jsx)(h, {}), (0, n.jsx)(g, {
+      className: N.channelList,
+      children: [(0, n.jsx)(g, {}), 0 === l.length && (0, n.jsx)(S, {}), (0, n.jsx)(h, {
         channels: l
       })]
     })]
   })
 }
 
-function h() {
+function S() {
   return (0, n.jsxs)("div", {
-    className: m.emptyState,
+    className: N.emptyState,
     children: [(0, n.jsx)("div", {
-      className: m.emptyStateIcon,
-      children: (0, n.jsx)(_.Z, {
-        width: 24,
-        height: 24
+      className: N.emptyStateIcon,
+      children: (0, n.jsx)(r.TextIcon, {
+        size: "md",
+        color: "currentColor"
       })
     }), (0, n.jsx)(r.Text, {
-      className: m.channelName,
+      className: N.channelName,
       variant: "text-md/normal",
       color: "text-muted",
-      children: N.Z.Messages.DEFAULT_CHANNELS_PREVIEW_EMPTY_STATE
+      children: T.Z.Messages.DEFAULT_CHANNELS_PREVIEW_EMPTY_STATE
     })]
   })
 }
 
-function g(e) {
+function h(e) {
   let {
     channels: s
   } = e;
   return (0, n.jsx)(n.Fragment, {
     children: s.map(e => e.isCategory() ? (0, n.jsx)(C, {
       label: e.name
-    }, e.id) : (0, n.jsx)(R, {
+    }, e.id) : (0, n.jsx)(x, {
       channel: e
     }, e.id))
   })
 }
 
-function x() {
+function g() {
   return (0, n.jsx)("div", {
-    className: m.divider
+    className: N.divider
   })
 }
 
@@ -85,9 +84,9 @@ function C(e) {
     label: s
   } = e;
   return (0, n.jsxs)("div", {
-    className: m.category,
+    className: N.category,
     children: [(0, n.jsx)(E.Z, {
-      className: m.caret,
+      className: N.caret,
       width: 12,
       height: 12,
       direction: E.Z.Directions.DOWN
@@ -100,26 +99,26 @@ function C(e) {
   })
 }
 
-function R(e) {
+function x(e) {
   var s;
   let {
     channel: t
-  } = e, i = (0, d.iF)(t), a = null !== (s = (0, o.KS)(t)) && void 0 !== s ? s : _.Z;
+  } = e, i = (0, d.iF)(t), a = null !== (s = (0, o.KS)(t)) && void 0 !== s ? s : r.TextIcon;
   return (0, n.jsxs)("div", {
-    className: m.channel,
+    className: N.channel,
     children: [(0, n.jsx)(a, {
-      className: m.channelIcon,
-      width: 16,
-      height: 16
+      className: N.channelIcon,
+      size: "xs",
+      color: "currentColor"
     }), (0, n.jsx)(r.Text, {
-      className: m.channelName,
+      className: N.channelName,
       variant: "text-md/normal",
       color: "text-muted",
       lineClamp: 1,
       children: t.name
     }), (0, n.jsx)("div", {
       className: l()({
-        [m.chattableIndicator]: i
+        [N.chattableIndicator]: i
       })
     })]
   })

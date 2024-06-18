@@ -1,49 +1,50 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return _
+    return u
   }
 });
 var i = n(735250);
 n(470079);
 var r = n(481060),
   s = n(782568),
-  o = n(441957),
-  a = n(689938),
-  l = n(831124);
-let u = e => {
+  o = n(689938),
+  a = n(831124);
+let l = e => {
   let {
     data: {
       url: t,
       link_text: n,
-      link_description: a,
-      is_localized: u
+      link_description: o,
+      is_localized: l
     }
   } = e;
-  return u ? (0, i.jsxs)(r.Clickable, {
+  return l ? (0, i.jsxs)(r.Clickable, {
     role: "link",
-    className: l.linkButton,
+    className: a.linkButton,
     onClick: () => {
       (0, s.Z)(t)
     },
     children: [(0, i.jsxs)("div", {
-      className: l.linkTextContainer,
+      className: a.linkTextContainer,
       children: [(0, i.jsx)(r.Text, {
-        className: l.__invalid_linkText,
+        className: a.__invalid_linkText,
         variant: "text-md/semibold",
         children: n
-      }), null != a && "" !== a && (0, i.jsx)(r.Text, {
+      }), null != o && "" !== o && (0, i.jsx)(r.Text, {
         variant: "text-md/normal",
         color: "text-muted",
-        children: a
+        children: o
       })]
-    }), (0, i.jsx)(o.Z, {
-      className: l.linkIcon
+    }), (0, i.jsx)(r.WindowLaunchIcon, {
+      size: "md",
+      color: "currentColor",
+      className: a.linkIcon
     })]
   }) : null
 };
 
-function _(e) {
+function u(e) {
   let {
     elements: t
   } = e;
@@ -57,7 +58,7 @@ function _(e) {
       let {
         data: n
       } = e;
-      return (0, i.jsx)(u, {
+      return (0, i.jsx)(l, {
         data: n
       }, "external-link+".concat(t))
     }),
@@ -68,12 +69,12 @@ function _(e) {
       return t.is_header_hidden
     });
   return (0, i.jsxs)("div", {
-    className: l.linksContainer,
+    className: a.linksContainer,
     children: [!s && (0, i.jsx)(r.Heading, {
       variant: "heading-sm/semibold",
       color: "header-secondary",
-      className: l.header,
-      children: a.Z.Messages.LEARN_MORE
+      className: a.header,
+      children: o.Z.Messages.LEARN_MORE
     }), n]
   })
 }

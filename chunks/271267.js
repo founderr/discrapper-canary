@@ -1,36 +1,35 @@
 "use strict";
 t.d(s, {
   Q: function() {
-    return _
+    return E
   },
   Z: function() {
-    return m
+    return N
   }
 }), t(47120);
 var n = t(735250),
   i = t(470079),
   l = t(481060),
   a = t(957011),
-  r = t(759231),
-  o = t(587431),
-  c = t(756066),
-  d = t(689938),
-  u = t(843804),
-  E = t(270395);
-let _ = "role_subscriptions_eligibility_modal";
+  r = t(587431),
+  o = t(756066),
+  c = t(689938),
+  d = t(843804),
+  u = t(270395);
+let E = "role_subscriptions_eligibility_modal";
 
-function I(e) {
+function _(e) {
   let {
     guild: s,
     eligibility: i,
     eligibilityLoading: a,
-    eligibilityError: o,
-    refreshEligibility: c
+    eligibilityError: r,
+    refreshEligibility: o
   } = e;
   return (0, n.jsxs)(l.Button, {
     color: l.ButtonColors.CUSTOM,
-    className: u.ineligibleButton,
-    innerClassName: u.ineligibleButtonContent,
+    className: d.ineligibleButton,
+    innerClassName: d.ineligibleButtonContent,
     grow: !0,
     onClick: function() {
       (0, l.openModalLazy)(async () => {
@@ -41,29 +40,29 @@ function I(e) {
           ...t,
           eligibility: i,
           eligibilityLoading: a,
-          eligibilityError: o,
-          refreshEligibility: c,
+          eligibilityError: r,
+          refreshEligibility: o,
           guildId: s.id
         })
       }, {
-        modalKey: _
+        modalKey: E
       })
     },
     size: l.Button.Sizes.LARGE,
-    children: [(0, n.jsx)(r.Z, {
-      height: 16,
-      width: 16
-    }), d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_START_EARNING_CTA]
+    children: [(0, n.jsx)(l.CircleExclamationPointIcon, {
+      size: "xs",
+      color: "currentColor"
+    }), c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_START_EARNING_CTA]
   })
 }
 
-function T(e) {
+function I(e) {
   let {
     guild: s,
     checkboxText: t
   } = e, {
-    canSubmitAcceptance: r,
-    error: c,
+    canSubmitAcceptance: o,
+    error: u,
     loading: E,
     submitAcceptTermsRequest: _
   } = (0, a.Z)(s.id), [I, T] = i.useState(!1);
@@ -83,24 +82,24 @@ function T(e) {
     }), (0, n.jsx)(l.Spacer, {
       size: 24
     }), (0, n.jsx)(l.Button, {
-      className: u.ctaButton,
-      disabled: !I || !r,
+      className: d.ctaButton,
+      disabled: !I || !o,
       grow: !0,
       onClick: _,
       size: l.Button.Sizes.LARGE,
       submitting: E,
-      children: d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_START_EARNING_CTA
-    }), null != c && (0, n.jsxs)(n.Fragment, {
+      children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_START_EARNING_CTA
+    }), null != u && (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)(l.Spacer, {
         size: 24
-      }), (0, n.jsx)(o.Z, {
-        children: c.getAnyErrorMessage()
+      }), (0, n.jsx)(r.Z, {
+        children: u.getAnyErrorMessage()
       })]
     })]
   })
 }
 
-function N(e) {
+function T(e) {
   let {
     guild: s,
     monetizationEligibility: t
@@ -109,16 +108,16 @@ function N(e) {
     eligibilityError: l,
     refreshEligibility: a,
     eligibility: r,
-    eligibleForMonetization: o,
+    eligibleForMonetization: c,
     acceptTermsCheckboxText: d,
     wasRejectedInV1: u
   } = t;
-  return o ? u ? (0, n.jsx)(c.Z, {
+  return c ? u ? (0, n.jsx)(o.Z, {
     ...t
-  }) : (0, n.jsx)(T, {
+  }) : (0, n.jsx)(I, {
     guild: s,
     checkboxText: d
-  }) : (0, n.jsx)(I, {
+  }) : (0, n.jsx)(_, {
     guild: s,
     eligibility: r,
     eligibilityLoading: i,
@@ -127,32 +126,32 @@ function N(e) {
   })
 }
 
-function m(e) {
+function N(e) {
   let {
     guild: s,
     monetizationEligibility: t
   } = e;
   return (0, n.jsxs)("div", {
-    className: u.ctaContainer,
+    className: d.ctaContainer,
     children: [(0, n.jsx)("img", {
-      className: u.heroBanner,
-      src: E,
-      alt: d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_HERO_BANNER_ALT
+      className: d.heroBanner,
+      src: u,
+      alt: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_HERO_BANNER_ALT
     }), (0, n.jsxs)("div", {
-      className: u.ctaContent,
+      className: d.ctaContent,
       children: [(0, n.jsx)(l.Heading, {
         variant: "heading-xl/semibold",
         color: "header-primary",
-        children: d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_DESKTOP_V2_TITLE
+        children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_DESKTOP_V2_TITLE
       }), (0, n.jsx)(l.Spacer, {
         size: 12
       }), (0, n.jsx)(l.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
-        children: d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_V2_SUBTITLE
+        children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_V2_SUBTITLE
       }), (0, n.jsx)(l.Spacer, {
         size: 24
-      }), (0, n.jsx)(N, {
+      }), (0, n.jsx)(T, {
         guild: s,
         monetizationEligibility: t
       })]

@@ -18,6 +18,8 @@ function o(e) {
   return (0, s.jsxs)("div", {
     className: l.channelInfoContainer,
     children: [null != n ? (0, s.jsx)(n, {
+      color: "currentColor",
+      size: "custom",
       width: 20,
       height: 20
     }) : null, (0, s.jsx)(r.Text, {

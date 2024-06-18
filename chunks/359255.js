@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   F: function() {
-    return c
+    return _
   }
 }), n(47120);
 var i = n(735250),
@@ -9,59 +9,61 @@ var i = n(735250),
   s = n(120356),
   o = n.n(s),
   a = n(481060),
-  l = n(729285),
-  u = n(150954),
-  _ = n(761221);
+  l = n(761221);
 
-function d(e) {
+function u(e) {
   return "" === e || "-" === e
 }
-let c = e => {
+let _ = e => {
   let {
     value: t,
     onChange: n,
     className: s,
-    minValue: c,
-    maxValue: E
-  } = e, [I, T] = r.useState(t), h = d(I) || null != c && I <= c, S = d(I) || null != E && I >= E, f = e => {
-    n(d(e) ? null != c ? c : 0 : e), T(e)
+    minValue: _,
+    maxValue: c
+  } = e, [d, E] = r.useState(t), I = u(d) || null != _ && d <= _, T = u(d) || null != c && d >= c, h = e => {
+    n(u(e) ? null != _ ? _ : 0 : e), E(e)
   };
   return (0, i.jsx)(a.FocusRing, {
     within: !0,
     children: (0, i.jsxs)("div", {
-      className: o()(_.actions, s),
+      className: o()(l.actions, s),
       children: [(0, i.jsx)(a.Clickable, {
         onClick: e => {
-          if (e.stopPropagation(), !h) f(I - 1)
+          if (e.stopPropagation(), !I) h(d - 1)
         },
         tabIndex: -1,
-        className: o()(_.iconWrapper, _.__invalid_subtract, {
-          [_.disabled]: h
+        className: o()(l.iconWrapper, l.__invalid_subtract, {
+          [l.disabled]: I
         }),
-        children: (0, i.jsx)(u.Z, {
-          className: o()(_.icon, {
-            [_.disabled]: h
+        children: (0, i.jsx)(a.MinusIcon, {
+          size: "md",
+          color: "currentColor",
+          className: o()(l.icon, {
+            [l.disabled]: I
           })
         })
       }), (0, i.jsx)(a.TextInput, {
-        value: "".concat(I),
+        value: "".concat(d),
         onChange: e => {
-          if (d(e)) return f(e);
+          if (u(e)) return h(e);
           let t = parseInt(e);
-          return isNaN(t) ? void 0 : null != E && t >= E ? f(E) : null != c && t <= c ? f(c) : f(t)
+          return isNaN(t) ? void 0 : null != c && t >= c ? h(c) : null != _ && t <= _ ? h(_) : h(t)
         },
-        inputClassName: _.value
+        inputClassName: l.value
       }), (0, i.jsx)(a.Clickable, {
         onClick: e => {
-          if (e.stopPropagation(), !S) f(I + 1)
+          if (e.stopPropagation(), !T) h(d + 1)
         },
         tabIndex: -1,
-        className: o()(_.iconWrapper, _.__invalid_add, {
-          [_.disabled]: S
+        className: o()(l.iconWrapper, l.__invalid_add, {
+          [l.disabled]: T
         }),
-        children: (0, i.jsx)(l.Z, {
-          className: o()(_.icon, {
-            [_.disabled]: S
+        children: (0, i.jsx)(a.PlusSmallIcon, {
+          size: "md",
+          color: "currentColor",
+          className: o()(l.icon, {
+            [l.disabled]: T
           })
         })
       })]

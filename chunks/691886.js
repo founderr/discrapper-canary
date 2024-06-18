@@ -1,7 +1,7 @@
 "use strict";
 t.d(s, {
   Z: function() {
-    return O
+    return L
   }
 }), t(653041), t(47120);
 var n = t(735250),
@@ -16,17 +16,16 @@ var n = t(735250),
   E = t(324067),
   _ = t(699516),
   I = t(594174),
-  T = t(729285),
-  N = t(303737),
-  m = t(981631),
-  S = t(689938),
-  h = t(652144);
+  T = t(303737),
+  N = t(981631),
+  m = t(689938),
+  S = t(652144);
 
-function g(e) {
+function h(e) {
   return String(e)
 }
 
-function x(e) {
+function g(e) {
   let {
     icon: s,
     title: t,
@@ -34,18 +33,18 @@ function x(e) {
     className: l
   } = e;
   return (0, n.jsxs)("div", {
-    className: a()(h.label, l),
+    className: a()(S.label, l),
     children: [s, (0, n.jsxs)("div", {
-      className: h.labelText,
+      className: S.labelText,
       children: [(0, n.jsx)(o.Text, {
         variant: "text-md/normal",
         color: "none",
-        className: h.labelTitle,
+        className: S.labelTitle,
         children: t
       }), null != i && "" !== i ? (0, n.jsx)(o.Text, {
         variant: "text-xs/semibold",
         color: "text-muted",
-        className: h.labelSubtitle,
+        className: S.labelSubtitle,
         children: i
       }) : null]
     })]
@@ -53,73 +52,75 @@ function x(e) {
 }
 
 function C() {
-  return (0, n.jsx)(x, {
-    icon: (0, n.jsx)(T.Z, {
-      className: h.labelIcon
+  return (0, n.jsx)(g, {
+    icon: (0, n.jsx)(o.PlusSmallIcon, {
+      size: "md",
+      color: "currentColor",
+      className: S.labelIcon
     }),
-    title: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL,
-    className: h.createLabel
+    title: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL,
+    className: S.createLabel
   })
 }
 
-function R(e) {
+function x(e) {
   var s;
   let {
     channelId: t
-  } = e, i = (0, N.m7)(t), l = (0, N.m7)(null !== (s = null == i ? void 0 : i.parent_id) && void 0 !== s ? s : m.lds);
+  } = e, i = (0, T.m7)(t), l = (0, T.m7)(null !== (s = null == i ? void 0 : i.parent_id) && void 0 !== s ? s : N.lds);
   if (null == i) return null;
   let a = (0, d.KS)(i),
     r = (0, c.F6)(i, I.default, _.Z),
     o = null != l ? (0, c.F6)(l, I.default, _.Z) : void 0;
-  return (0, n.jsx)(x, {
+  return (0, n.jsx)(g, {
     icon: null != a && (0, n.jsx)(a, {
-      className: h.labelIcon
+      className: S.labelIcon
     }),
     title: r,
     subtitle: o
   })
 }
 
-function L(e) {
+function R(e) {
   let {
     value: s
   } = e;
-  return null != s ? (0, n.jsx)(R, {
+  return null != s ? (0, n.jsx)(x, {
     channelId: s
   }) : (0, n.jsx)(C, {})
 }
 
-function O(e) {
+function L(e) {
   let {
     guildId: s,
     value: l,
     initialChannelId: a,
     omitChannelIds: d,
-    "aria-labelledby": T,
-    onChange: h
-  } = e, x = S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL, C = (0, r.e7)([E.Z], () => E.Z.getCategories(s), [s]), R = (0, N.m7)(null != l ? l : m.lds), O = i.useMemo(() => {
+    "aria-labelledby": S,
+    onChange: g
+  } = e, C = m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL, x = (0, r.e7)([E.Z], () => E.Z.getCategories(s), [s]), L = (0, T.m7)(null != l ? l : N.lds), O = i.useMemo(() => {
     let e = [{
         value: null,
-        label: x
+        label: C
       }],
       s = !1;
-    for (let t of C._categories)
+    for (let t of x._categories)
       for (let {
           channel: n
         }
-        of C[t.channel.id]) {
+        of x[t.channel.id]) {
         if (!!(0, u.r8)(n.type) || !!(0, u.bw)(n.type))(!(n.id !== l && (null == d ? void 0 : d.has(n.id))) || n.id === a && l !== a) && (l === n.id && (s = !0), e.push({
           value: n.id,
           label: (0, c.F6)(n, I.default, _.Z)
         }))
       }
-    return null != l && !s && null != R && e.push({
+    return null != l && !s && null != L && e.push({
       value: l,
-      label: R.name
+      label: L.name
     }), e
-  }, [x, l, R, C, d, a]);
+  }, [C, l, L, x, d, a]);
   return (0, n.jsx)(o.Select, {
-    placeholder: S.Z.Messages.CHANNEL_SELECT,
+    placeholder: m.Z.Messages.CHANNEL_SELECT,
     options: O,
     select: function(e) {
       null == e ? (0, o.openModalLazy)(async () => {
@@ -129,17 +130,17 @@ function O(e) {
         return t => (0, n.jsx)(e, {
           ...t,
           guildId: s,
-          onSubmit: h
+          onSubmit: g
         })
-      }) : h(e)
+      }) : g(e)
     },
-    isSelected: e => null != l && g(e) === g(l),
-    serialize: g,
-    renderOptionLabel: L,
+    isSelected: e => null != l && h(e) === h(l),
+    serialize: h,
+    renderOptionLabel: R,
     renderOptionValue: e => {
       let [s] = e;
-      return L(s)
+      return R(s)
     },
-    "aria-labelledby": T
+    "aria-labelledby": S
   })
 }

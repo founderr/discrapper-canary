@@ -1,7 +1,7 @@
 "use strict";
 t.d(s, {
   Z: function() {
-    return T
+    return _
   }
 });
 var n = t(735250),
@@ -11,16 +11,14 @@ var n = t(735250),
   r = t(481060),
   o = t(456935),
   c = t(259580),
-  d = t(916187),
-  u = t(736921),
-  E = t(981631),
-  _ = t(689938),
-  I = t(212723);
+  d = t(981631),
+  u = t(689938),
+  E = t(212723);
 
-function T(e) {
+function _(e) {
   let {
     guild: s
-  } = e, l = s.verificationLevel, T = i.useMemo(() => (0, o.I9)(l), [l]);
+  } = e, l = s.verificationLevel, _ = i.useMemo(() => (0, o.I9)(l), [l]);
   return (0, n.jsxs)(r.Clickable, {
     onClick: () => (0, r.openModalLazy)(async () => {
       let {
@@ -32,37 +30,41 @@ function T(e) {
         hideColors: !0
       })
     }),
-    className: a()(I.simpleItemWrapper, I.clickable),
+    className: a()(E.simpleItemWrapper, E.clickable),
     children: [(0, n.jsxs)("div", {
-      className: I.itemContent,
+      className: E.itemContent,
       children: [(0, n.jsx)(r.Heading, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: _.Z.Messages.FORM_LABEL_VERIFICATION_LEVEL
+        children: u.Z.Messages.FORM_LABEL_VERIFICATION_LEVEL
       }), (0, n.jsx)(r.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: _.Z.Messages.GUILD_SETTINGS_SAFETY_VERIFICATION_DESCRIPTION
+        children: u.Z.Messages.GUILD_SETTINGS_SAFETY_VERIFICATION_DESCRIPTION
       }), (0, n.jsx)("div", {
-        className: I.__invalid_pillRow,
+        className: E.__invalid_pillRow,
         children: (0, n.jsxs)(r.Text, {
           variant: "text-xs/medium",
           color: "interactive-normal",
-          className: I.valuePill,
-          children: [l === E.sFg.VERY_HIGH ? (0, n.jsx)(u.Z, {
+          className: E.valuePill,
+          children: [l === d.sFg.VERY_HIGH ? (0, n.jsx)(r.MobilePhoneIcon, {
+            size: "custom",
+            color: "currentColor",
             width: 16,
             height: 16
-          }) : (0, n.jsx)(d.Z, {
+          }) : (0, n.jsx)(r.EnvelopeIcon, {
+            size: "custom",
+            color: "currentColor",
             width: 16,
             height: 16
-          }), T]
+          }), _]
         })
       })]
     }), (0, n.jsx)(c.Z, {
       height: 24,
       width: 24,
       direction: c.Z.Directions.RIGHT,
-      className: I.caret
+      className: E.caret
     })]
   })
 }

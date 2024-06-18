@@ -1,43 +1,44 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return x
+    return g
   }
 });
 var s = n(735250);
 n(470079);
 var l = n(658722),
   a = n.n(l),
-  i = n(442837),
-  r = n(481060),
+  r = n(442837),
+  i = n(481060),
   o = n(596454),
   c = n(339085),
-  d = n(548420),
-  u = n(456269),
-  h = n(689938),
+  d = n(456269),
+  u = n(689938),
   m = n(451379);
-let g = e => {
+let h = e => {
   let {
     tag: t
   } = e, {
     id: n,
     name: l,
     emojiId: a,
-    emojiName: u
-  } = t, h = (0, i.e7)([c.Z], () => null != a ? c.Z.getUsableCustomEmojiById(a) : null), g = null != a || null != u;
-  return (0, s.jsx)(r.ComboboxItem, {
+    emojiName: d
+  } = t, u = (0, r.e7)([c.Z], () => null != a ? c.Z.getUsableCustomEmojiById(a) : null), h = null != a || null != d;
+  return (0, s.jsx)(i.ComboboxItem, {
     value: n,
-    children: (0, s.jsx)(r.ComboboxItem.Label, {
+    children: (0, s.jsx)(i.ComboboxItem.Label, {
       children: (0, s.jsxs)("div", {
         className: m.row,
-        children: [g ? (0, s.jsx)(o.Z, {
+        children: [h ? (0, s.jsx)(o.Z, {
           className: m.__invalid_emoji,
           emojiId: a,
-          emojiName: u,
-          animated: !!(null == h ? void 0 : h.animated)
-        }) : (0, s.jsx)(d.Z, {
+          emojiName: d,
+          animated: !!(null == u ? void 0 : u.animated)
+        }) : (0, s.jsx)(i.TagIcon, {
+          size: "md",
+          color: "currentColor",
           className: m.__invalid_emoji
-        }), (0, s.jsx)(r.Text, {
+        }), (0, s.jsx)(i.Text, {
           variant: "text-md/semibold",
           color: "header-secondary",
           children: l
@@ -47,23 +48,23 @@ let g = e => {
   }, n)
 };
 
-function x(e) {
+function g(e) {
   let {
     parentChannel: t,
     appliedTags: n,
     maxTagsApplied: l,
-    onSelectTag: i,
+    onSelectTag: r,
     onClose: o
-  } = e, c = (0, u.Vm)(t), d = (e, t) => t.filter(t => a()(e.toLowerCase(), t.name.toLowerCase()));
-  return (0, s.jsx)(r.ComboboxPopout, {
+  } = e, c = (0, d.Vm)(t), m = (e, t) => t.filter(t => a()(e.toLowerCase(), t.name.toLowerCase()));
+  return (0, s.jsx)(i.ComboboxPopout, {
     showScrollbar: !0,
     value: n,
     onChange: e => {
-      if (!l || !!n.has(e)) i(e), o()
+      if (!l || !!n.has(e)) r(e), o()
     },
-    placeholder: h.Z.Messages.FORUM_TAG_POST_SEARCH_PLACEHOLDER,
-    "aria-label": h.Z.Messages.FORUM_TAG_POST_SEARCH_PLACEHOLDER,
-    children: e => d(e, c).map(e => (0, s.jsx)(g, {
+    placeholder: u.Z.Messages.FORUM_TAG_POST_SEARCH_PLACEHOLDER,
+    "aria-label": u.Z.Messages.FORUM_TAG_POST_SEARCH_PLACEHOLDER,
+    children: e => m(e, c).map(e => (0, s.jsx)(h, {
       tag: e
     }, e.id))
   })

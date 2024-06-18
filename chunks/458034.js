@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
   Am: function() {
-    return d
+    return _
   },
   ZP: function() {
     return c
   },
   s$: function() {
-    return _
+    return u
   }
 });
 var i = n(735250);
@@ -15,12 +15,11 @@ n(470079);
 var r = n(442837),
   s = n(481060),
   o = n(430824),
-  a = n(757698),
-  l = n(275759),
-  u = n(689938);
-let _ = "guild-connection-roles";
+  a = n(275759),
+  l = n(689938);
+let u = "guild-connection-roles";
 
-function d(e) {
+function _(e) {
   (0, s.openModalLazy)(async () => {
     let {
       default: t
@@ -30,19 +29,19 @@ function d(e) {
       guildId: e
     })
   }, {
-    modalKey: _,
+    modalKey: u,
     contextKey: s.DEFAULT_MODAL_CONTEXT,
     onCloseRequest: () => {
-      (0, s.closeModal)(_, s.DEFAULT_MODAL_CONTEXT)
+      (0, s.closeModal)(u, s.DEFAULT_MODAL_CONTEXT)
     }
   })
 }
 
 function c(e) {
-  return (0, r.e7)([o.Z], () => (0, l.kQ)(e, o.Z.getRoles(e.id)), [e]) ? (0, i.jsx)(s.MenuItem, {
+  return (0, r.e7)([o.Z], () => (0, a.kQ)(e, o.Z.getRoles(e.id)), [e]) ? (0, i.jsx)(s.MenuItem, {
     id: "guild-connection-roles",
-    label: u.Z.Messages.CONNECTIONS_ROLES_CHANNEL_NAME,
-    icon: a.Z,
-    action: () => d(e.id)
+    label: l.Z.Messages.CONNECTIONS_ROLES_CHANNEL_NAME,
+    icon: s.LinkIcon,
+    action: () => _(e.id)
   }) : null
 }

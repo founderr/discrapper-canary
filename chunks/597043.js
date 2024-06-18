@@ -12,7 +12,9 @@ class c extends i.Component {
       ...s
     } = this.props;
     return (0, n.jsx)(e, {
-      ...s
+      size: "md",
+      ...s,
+      color: "currentColor"
     })
   }
 }

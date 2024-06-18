@@ -1,38 +1,41 @@
 "use strict";
 n.d(t, {
   X: function() {
-    return o
+    return a
   }
 });
 var i = n(735250);
 n(470079);
 var r = n(692547),
-  s = n(331595);
-let o = e => {
+  s = n(331595),
+  o = n(267843);
+let a = e => {
+  var t, n;
   let {
-    width: t = 24,
-    height: n = 24,
-    color: o = r.Z.colors.INTERACTIVE_NORMAL,
-    colorClass: a = "",
-    ...l
-  } = e;
+    size: a = "md",
+    width: l,
+    height: u,
+    color: _ = r.Z.colors.INTERACTIVE_NORMAL,
+    colorClass: c = "",
+    ...d
+  } = e, E = (0, o.m)(a), I = null !== (t = null == E ? void 0 : E.width) && void 0 !== t ? t : l, T = null !== (n = null == E ? void 0 : E.height) && void 0 !== n ? n : u;
   return (0, i.jsxs)("svg", {
-    ...(0, s.Z)(l),
+    ...(0, s.Z)(d),
     xmlns: "http://www.w3.org/2000/svg",
-    width: t,
-    height: n,
+    width: I,
+    height: T,
     fill: "none",
     viewBox: "0 0 24 24",
     children: [(0, i.jsx)("path", {
-      fill: "string" == typeof o ? o : o.css,
+      fill: "string" == typeof _ ? _ : _.css,
       d: "M14.25 1c.41 0 .75.34.75.75V3h5.25c.41 0 .75.34.75.75v.5c0 .41-.34.75-.75.75H3.75A.75.75 0 0 1 3 4.25v-.5c0-.41.34-.75.75-.75H9V1.75c0-.41.34-.75.75-.75h4.5Z",
-      className: a
+      className: c
     }), (0, i.jsx)("path", {
-      fill: "string" == typeof o ? o : o.css,
+      fill: "string" == typeof _ ? _ : _.css,
       fillRule: "evenodd",
       d: "M5.06 7a1 1 0 0 0-1 1.06l.76 12.13a3 3 0 0 0 3 2.81h8.36a3 3 0 0 0 3-2.81l.75-12.13a1 1 0 0 0-1-1.06H5.07ZM11 12a1 1 0 1 0-2 0v6a1 1 0 1 0 2 0v-6Zm3-1a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0v-6a1 1 0 0 1 1-1Z",
       clipRule: "evenodd",
-      className: a
+      className: c
     })]
   })
 }

@@ -8,52 +8,50 @@ var r = n(120356),
   l = n(230711),
   u = n(906732),
   _ = n(543241),
-  d = n(963249),
-  c = n(703656),
+  c = n(963249),
+  d = n(703656),
   E = n(301766),
   I = n(594174),
   T = n(78839),
   h = n(451478),
-  S = n(559629),
-  f = n(466111),
-  N = n(74538),
-  A = n(474936),
-  m = n(981631),
-  O = n(689938),
-  R = n(928069);
+  S = n(74538),
+  f = n(474936),
+  N = n(981631),
+  A = n(689938),
+  m = n(928069);
 t.Z = function(e) {
   let {
     isGift: t,
     subscriptionTier: r,
-    onClick: C,
-    size: p,
-    className: g,
-    trialId: L,
-    isTrialCTA: v,
-    buttonText: D,
-    buttonTextClassName: M,
-    iconClassName: P,
-    postSuccessGuild: y,
-    onSubscribeModalClose: U,
-    premiumModalAnalyticsLocation: b,
-    showIcon: G = !0,
-    disableShine: w,
-    applicationId: k,
-    giftMessage: B,
-    overrideDisabledButtonText: x,
-    shinyButtonClassName: V,
-    onClickOverride: Z,
-    showGradient: H = !1,
-    ...F
-  } = e, Y = (0, o.e7)([I.default], () => I.default.getCurrentUser()), j = (0, o.e7)([h.Z], () => h.Z.isFocused()), W = (0, o.e7)([T.ZP], () => T.ZP.getPremiumTypeSubscription()), {
-    analyticsLocations: K
-  } = (0, u.ZP)(), z = e => {
-    if (e.preventDefault(), null == Y) {
-      (0, c.uL)(m.Z5c.LOGIN);
+    onClick: O,
+    size: R,
+    className: p,
+    trialId: g,
+    isTrialCTA: C,
+    buttonText: v,
+    buttonTextClassName: L,
+    iconClassName: D,
+    postSuccessGuild: M,
+    onSubscribeModalClose: P,
+    premiumModalAnalyticsLocation: y,
+    showIcon: U = !0,
+    disableShine: b,
+    applicationId: G,
+    giftMessage: w,
+    overrideDisabledButtonText: k,
+    shinyButtonClassName: B,
+    onClickOverride: x,
+    showGradient: V = !1,
+    ...Z
+  } = e, H = (0, o.e7)([I.default], () => I.default.getCurrentUser()), F = (0, o.e7)([h.Z], () => h.Z.isFocused()), Y = (0, o.e7)([T.ZP], () => T.ZP.getPremiumTypeSubscription()), {
+    analyticsLocations: j
+  } = (0, u.ZP)(), W = e => {
+    if (e.preventDefault(), null == H) {
+      (0, d.uL)(N.Z5c.LOGIN);
       return
     }
-    if (null == C || C(e), (null == W ? void 0 : W.status) === m.O0b.ACCOUNT_HOLD) {
-      (0, _.A3)(), l.Z.open(m.oAB.PREMIUM), null == U || U(!1);
+    if (null == O || O(e), (null == Y ? void 0 : Y.status) === N.O0b.ACCOUNT_HOLD) {
+      (0, _.A3)(), l.Z.open(N.oAB.PREMIUM), null == P || P(!1);
       return
     }! function(e) {
       let {
@@ -64,7 +62,7 @@ t.Z = function(e) {
         trialId: l,
         postSuccessGuild: u,
         onSubscribeModalClose: _,
-        analyticsLocations: c,
+        analyticsLocations: d,
         premiumModalAnalyticsLocation: E,
         applicationId: I,
         giftMessage: T
@@ -105,14 +103,14 @@ t.Z = function(e) {
         });
         return
       }
-      let h = m.Qqv.BUY;
-      null != l ? h = m.Qqv.TRIAL : s && (h = m.Qqv.GIFT), (0, d.Z)({
+      let h = N.Qqv.BUY;
+      null != l ? h = N.Qqv.TRIAL : s && (h = N.Qqv.GIFT), (0, c.Z)({
         isGift: s,
         initialPlanId: null,
         subscriptionTier: o,
-        analyticsLocations: c,
+        analyticsLocations: d,
         analyticsObject: {
-          object: m.qAy.BUTTON_CTA,
+          object: N.qAy.BUTTON_CTA,
           objectType: h,
           ...E
         },
@@ -123,100 +121,106 @@ t.Z = function(e) {
         giftMessage: T
       })
     }({
-      isClaimed: Y.isClaimed(),
-      isVerified: Y.verified,
+      isClaimed: H.isClaimed(),
+      isVerified: H.verified,
       isGift: t,
       subscriptionTier: r,
-      trialId: L,
-      postSuccessGuild: y,
-      onSubscribeModalClose: U,
-      analyticsLocations: K,
-      premiumModalAnalyticsLocation: b,
-      applicationId: k,
-      giftMessage: B
+      trialId: g,
+      postSuccessGuild: M,
+      onSubscribeModalClose: P,
+      analyticsLocations: j,
+      premiumModalAnalyticsLocation: y,
+      applicationId: G,
+      giftMessage: w
     })
   };
-  if (v) return (0, i.jsxs)(a.Button, {
-    size: p,
-    className: g,
-    innerClassName: R.premiumSubscribeButton,
+  if (C) return (0, i.jsxs)(a.Button, {
+    size: R,
+    className: p,
+    innerClassName: m.premiumSubscribeButton,
     color: a.Button.Colors.BRAND_INVERTED,
-    onClick: null != Z ? Z : z,
-    ...F,
-    children: [G && (0, i.jsx)(f.Z, {
-      className: R.premiumIcon
+    onClick: null != x ? x : W,
+    ...Z,
+    children: [U && (0, i.jsx)(a.NitroWheelIcon, {
+      size: "md",
+      color: "currentColor",
+      className: m.premiumIcon
     }), (0, i.jsx)("span", {
-      className: s()(R.buttonText, M),
-      children: null != D ? D : O.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT
+      className: s()(m.buttonText, L),
+      children: null != v ? v : A.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT
     })]
   });
   if (t) return (0, i.jsxs)(a.Button, {
-    size: p,
-    className: g,
-    innerClassName: R.giftButton,
+    size: R,
+    className: p,
+    innerClassName: m.giftButton,
     color: a.Button.Colors.PRIMARY,
-    onClick: null != Z ? Z : z,
-    ...F,
-    children: [(0, i.jsx)(S.Z, {
-      className: R.giftIcon
+    onClick: null != x ? x : W,
+    ...Z,
+    children: [(0, i.jsx)(a.GiftIcon, {
+      size: "md",
+      color: "currentColor",
+      className: m.giftIcon
     }), (0, i.jsx)("span", {
-      className: s()(R.buttonText, M),
-      children: null != D ? D : O.Z.Messages.PREMIUM_GIFTING_BUTTON
+      className: s()(m.buttonText, L),
+      children: null != v ? v : A.Z.Messages.PREMIUM_GIFTING_BUTTON
     })]
   });
-  let q = O.Z.Messages.APPLICATION_STORE_GET_PREMIUM,
-    X = null != W ? (0, N.Af)(W) : null,
-    Q = null != X ? N.ZP.getPremiumType(X.planId) : null == Y ? void 0 : Y.premiumType,
-    J = r === A.Si.TIER_2 && null != Q && [A.p9.TIER_0, A.p9.TIER_1].includes(Q);
-  J && (q = O.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE);
-  let $ = null != W && W.status !== m.O0b.ACCOUNT_HOLD && !(0, E.Q0)(W.planId) && !J,
-    ee = $ ? null != x ? x : function(e) {
+  let K = A.Z.Messages.APPLICATION_STORE_GET_PREMIUM,
+    z = null != Y ? (0, S.Af)(Y) : null,
+    q = null != z ? S.ZP.getPremiumType(z.planId) : null == H ? void 0 : H.premiumType,
+    X = r === f.Si.TIER_2 && null != q && [f.p9.TIER_0, f.p9.TIER_1].includes(q);
+  X && (K = A.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE);
+  let Q = null != Y && Y.status !== N.O0b.ACCOUNT_HOLD && !(0, E.Q0)(Y.planId) && !X,
+    J = Q ? null != k ? k : function(e) {
       let {
         ctaSubscriptionSkuId: t,
         currentPremiumType: n
       } = e, i = null, r = null;
-      if (null != t && t !== A.Si.LEGACY && t !== A.Si.TIER_0 && t !== A.Si.TIER_1 && t !== A.Si.TIER_2) return {
+      if (null != t && t !== f.Si.LEGACY && t !== f.Si.TIER_0 && t !== f.Si.TIER_1 && t !== f.Si.TIER_2) return {
         disabledButtonText: i,
         disabledButtonTooltipText: r
       };
-      let s = null != t ? A.y7[(0, N.Wz)(t)] : null,
-        o = null != s ? A.$e[s] : null,
-        a = null != n ? A.$e[n] : null;
-      return null != a && null != o && o < a ? (i = O.Z.Messages.APPLICATION_STORE_GET_PREMIUM, r = O.Z.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP) : null != s && null != n && s === n ? (i = O.Z.Messages.BILLING_SWITCH_PLAN_CURRENT_PLAN, r = O.Z.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP) : null == s && null != n && n === A.p9.TIER_2 && (r = O.Z.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP), {
+      let s = null != t ? f.y7[(0, S.Wz)(t)] : null,
+        o = null != s ? f.$e[s] : null,
+        a = null != n ? f.$e[n] : null;
+      return null != a && null != o && o < a ? (i = A.Z.Messages.APPLICATION_STORE_GET_PREMIUM, r = A.Z.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP) : null != s && null != n && s === n ? (i = A.Z.Messages.BILLING_SWITCH_PLAN_CURRENT_PLAN, r = A.Z.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP) : null == s && null != n && n === f.p9.TIER_2 && (r = A.Z.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP), {
         disabledButtonText: i,
         disabledButtonTooltipText: r
       }
     }({
       ctaSubscriptionSkuId: r,
-      currentPremiumType: Q
+      currentPremiumType: q
     }) : null;
 
-  function et(e) {
+  function $(e) {
     var t, n;
     return (0, i.jsxs)(a.ShinyButton, {
-      disabled: $,
-      onClick: null != Z ? Z : z,
-      innerClassName: R.premiumSubscribeButton,
-      color: r === A.Si.TIER_1 ? a.Button.Colors.PRIMARY : a.Button.Colors.GREEN,
-      size: p,
-      className: V,
+      disabled: Q,
+      onClick: null != x ? x : W,
+      innerClassName: m.premiumSubscribeButton,
+      color: r === f.Si.TIER_1 ? a.Button.Colors.PRIMARY : a.Button.Colors.GREEN,
+      size: R,
+      className: B,
       wrapperClassName: s()({
-        [R.tier2Gradient]: H && r === A.Si.TIER_2,
-        [R.tier1Gradient]: H && r === A.Si.TIER_1
-      }, g),
-      pauseAnimation: !j || w,
-      ...F,
+        [m.tier2Gradient]: V && r === f.Si.TIER_2,
+        [m.tier1Gradient]: V && r === f.Si.TIER_1
+      }, p),
+      pauseAnimation: !F || b,
+      ...Z,
       ...e,
-      children: [G && (0, i.jsx)(f.Z, {
-        className: s()(R.premiumIcon, P)
+      children: [U && (0, i.jsx)(a.NitroWheelIcon, {
+        size: "md",
+        color: "currentColor",
+        className: s()(m.premiumIcon, D)
       }), (0, i.jsx)("span", {
-        className: s()(R.buttonText, M),
-        children: null !== (n = null !== (t = null == ee ? void 0 : ee.disabledButtonText) && void 0 !== t ? t : D) && void 0 !== n ? n : q
+        className: s()(m.buttonText, L),
+        children: null !== (n = null !== (t = null == J ? void 0 : J.disabledButtonText) && void 0 !== t ? t : v) && void 0 !== n ? n : K
       })]
     })
   }
-  return (null == ee ? void 0 : ee.disabledButtonTooltipText) != null ? (0, i.jsx)(a.Tooltip, {
-    text: ee.disabledButtonTooltipText,
-    children: et
-  }) : et()
+  return (null == J ? void 0 : J.disabledButtonTooltipText) != null ? (0, i.jsx)(a.Tooltip, {
+    text: J.disabledButtonTooltipText,
+    children: $
+  }) : $()
 }

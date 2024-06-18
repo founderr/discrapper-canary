@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   P: function() {
-    return N
+    return f
   }
 }), n(411104);
 var i = n(735250);
@@ -13,118 +13,119 @@ var r = n(120356),
   l = n(481060),
   u = n(607070),
   _ = n(906732),
-  d = n(471885),
-  c = n(263704),
-  E = n(267642),
-  I = n(879892),
-  T = n(198466),
-  h = n(981631),
-  S = n(689938),
-  f = n(598693);
-let N = {
-  [h.Eu4.NONE]: 0,
-  [h.Eu4.TIER_1]: 1 / 3,
-  [h.Eu4.TIER_2]: 2 / 3,
-  [h.Eu4.TIER_3]: 1
+  c = n(471885),
+  d = n(267642),
+  E = n(879892),
+  I = n(198466),
+  T = n(981631),
+  h = n(689938),
+  S = n(598693);
+let f = {
+  [T.Eu4.NONE]: 0,
+  [T.Eu4.TIER_1]: 1 / 3,
+  [T.Eu4.TIER_2]: 2 / 3,
+  [T.Eu4.TIER_3]: 1
 };
 t.Z = function(e) {
   let {
     children: t,
     confettiTriggerRef: n,
     guild: r,
-    isProgressBarAnimationComplete: A,
-    setConfettiCount: m,
-    setShouldFireConfetti: O,
-    tier: R,
-    tierMarkerAnimationPosition: C
+    isProgressBarAnimationComplete: N,
+    setConfettiCount: A,
+    setShouldFireConfetti: m,
+    tier: O,
+    tierMarkerAnimationPosition: R
   } = e, p = (0, a.e7)([u.Z], () => u.Z.useReducedMotion), {
     analyticsLocations: g
-  } = (0, _.ZP)(), L = h.oCV[R] - r.premiumSubscriberCount, v = R <= C || A, D = v && R <= r.premiumTier, M = v && R < r.premiumTier, P = v && R === r.premiumTier, {
-    scaleFactor: y
+  } = (0, _.ZP)(), C = T.oCV[O] - r.premiumSubscriberCount, v = O <= R || N, L = v && O <= r.premiumTier, D = v && O < r.premiumTier, M = v && O === r.premiumTier, {
+    scaleFactor: P
   } = (0, o.useSpring)({
     from: {
       scaleFactor: 0
     },
     to: {
-      scaleFactor: C >= R || A && C + 1 === R || A && -1 === C && R === h.Eu4.NONE ? 1 : 0
+      scaleFactor: R >= O || N && R + 1 === O || N && -1 === R && O === T.Eu4.NONE ? 1 : 0
     },
     config: {
       tension: 360,
       friction: 12
     },
     immediate: p
-  }), U = (0, i.jsxs)(i.Fragment, {
+  }), y = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(o.animated.div, {
-      className: f.progressBarMarkerIndicator,
+      className: S.progressBarMarkerIndicator,
       style: {
-        transform: y.to(e => "translate(-50%, -50%) scale(".concat(e, ")"))
+        transform: P.to(e => "translate(-50%, -50%) scale(".concat(e, ")"))
       }
-    }), R !== h.Eu4.NONE && (0, i.jsx)(d.Z, {
-      tier: R,
-      className: f.boostedTierIcon
+    }), O !== T.Eu4.NONE && (0, i.jsx)(c.Z, {
+      tier: O,
+      className: S.boostedTierIcon
     })]
-  }), b = D ? "div" : l.Clickable, G = D ? {} : {
+  }), U = L ? "div" : l.Clickable, b = L ? {} : {
     onClick: function() {
-      v && (0, I.u)({
+      v && (0, E.u)({
         analyticsLocations: g,
         analyticsLocation: {
-          page: h.ZY5.PREMIUM_GUILD_USER_MODAL,
-          section: h.jXE.PREMIUM_GUILD_USER_MODAL_PROGRESS_BAR,
-          object: h.qAy.SUBSCRIBE_TO_TIER_BUTTON,
+          page: T.ZY5.PREMIUM_GUILD_USER_MODAL,
+          section: T.jXE.PREMIUM_GUILD_USER_MODAL_PROGRESS_BAR,
+          object: T.qAy.SUBSCRIBE_TO_TIER_BUTTON,
           objectType: function(e) {
             switch (e) {
-              case h.Eu4.TIER_3:
-                return h.Qqv.TIER_3;
-              case h.Eu4.TIER_2:
-                return h.Qqv.TIER_2;
-              case h.Eu4.TIER_1:
-                return h.Qqv.TIER_1;
+              case T.Eu4.TIER_3:
+                return T.Qqv.TIER_3;
+              case T.Eu4.TIER_2:
+                return T.Qqv.TIER_2;
+              case T.Eu4.TIER_1:
+                return T.Qqv.TIER_1;
               default:
                 throw Error("Unsupported Boosting tier: ".concat(e))
             }
-          }(R)
+          }(O)
         },
-        numberOfBoostsToAdd: L,
+        numberOfBoostsToAdd: C,
         guild: r
       })
     }
   };
   return (0, i.jsx)(l.Tooltip, {
-    text: D ? S.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_TIER_UNLOCKED.format({
-      tierName: (0, E.nW)(R, {
+    text: L ? h.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_TIER_UNLOCKED.format({
+      tierName: (0, d.nW)(O, {
         useLevels: !1
       })
-    }) : S.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_REMAINING_FOR_TIER.format({
-      numBoostsRequired: L,
-      tierName: (0, E.nW)(R, {
+    }) : h.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_REMAINING_FOR_TIER.format({
+      numBoostsRequired: C,
+      tierName: (0, d.nW)(O, {
         useLevels: !1
       })
     }),
-    shouldShow: R !== h.Eu4.NONE,
-    children: e => (0, i.jsxs)(b, {
-      className: s()(f.progressBarMarker, {
-        [f.progressBarMarkerUnlocked]: D,
-        [f.progressBarMarkerLocked]: !D,
-        [f.progressBarMarkerLower]: M,
-        [f.progressBarMarkerCurrent]: P
+    shouldShow: O !== T.Eu4.NONE,
+    children: e => (0, i.jsxs)(U, {
+      className: s()(S.progressBarMarker, {
+        [S.progressBarMarkerUnlocked]: L,
+        [S.progressBarMarkerLocked]: !L,
+        [S.progressBarMarkerLower]: D,
+        [S.progressBarMarkerCurrent]: M
       }),
       style: {
-        left: "".concat(100 * N[R], "%")
+        left: "".concat(100 * f[O], "%")
       },
       ...e,
-      ...G,
-      children: [!D && (0, i.jsx)("div", {
-        className: f.boostedTierIconBackground
-      }), D && R === h.Eu4.TIER_3 ? (0, i.jsx)(T.m, {
+      ...b,
+      children: [!L && (0, i.jsx)("div", {
+        className: S.boostedTierIconBackground
+      }), L && O === T.Eu4.TIER_3 ? (0, i.jsx)(I.m, {
         confettiTriggerRef: n,
-        setConfettiCount: m,
-        setShouldFireConfetti: O,
-        children: U
-      }) : U, (0, i.jsxs)(l.Text, {
-        className: f.progressBarMarkerLabel,
+        setConfettiCount: A,
+        setShouldFireConfetti: m,
+        children: y
+      }) : y, (0, i.jsxs)(l.Text, {
+        className: S.progressBarMarkerLabel,
         variant: "text-md/normal",
-        children: [D && R !== h.Eu4.NONE && (0, i.jsx)(c.Z, {
-          className: f.progressBarMarkerUnlockedIcon
+        children: [L && O !== T.Eu4.NONE && (0, i.jsx)(l.CheckmarkLargeIcon, {
+          size: "md",
+          color: "currentColor",
+          className: S.progressBarMarkerUnlockedIcon
         }), t]
       })]
     })

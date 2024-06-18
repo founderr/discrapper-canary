@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return h
+    return T
   }
 });
 var i = n(735250);
@@ -11,37 +11,36 @@ var r = n(442837),
   o = n(300284),
   a = n(314897),
   l = n(430824),
-  u = n(185403),
-  _ = n(877485),
-  d = n(785717),
+  u = n(877485),
+  _ = n(785717),
   c = n(841040),
-  E = n(993409),
-  I = n(228168),
-  T = n(689938);
+  d = n(993409),
+  E = n(228168),
+  I = n(689938);
 
-function h(e) {
+function T(e) {
   let {
     user: t,
     guildId: n,
-    profileType: h,
-    onClose: S
-  } = e, f = (0, r.e7)([a.default], () => a.default.getId() === t.id), N = (0, r.e7)([l.Z], () => null != n ? l.Z.getGuild(n) : null), {
-    originalFriendingEnabled: A
-  } = (0, _.V)({
+    profileType: T,
+    onClose: h
+  } = e, S = (0, r.e7)([a.default], () => a.default.getId() === t.id), f = (0, r.e7)([l.Z], () => null != n ? l.Z.getGuild(n) : null), {
+    originalFriendingEnabled: N
+  } = (0, u.V)({
     location: "UserProfileEditMenuButton"
   }), {
-    trackUserProfileAction: m
-  } = (0, d.KZ)(), O = (0, o.Z)(), R = A && h === I.y0.FULL_SIZE ? void 0 : u.Z;
-  return f ? null == N ? (0, i.jsx)(E.Z, {
+    trackUserProfileAction: A
+  } = (0, _.KZ)(), m = (0, o.Z)(), O = N && T === E.y0.FULL_SIZE ? void 0 : s.PencilIcon;
+  return S ? null == f ? (0, i.jsx)(d.Z, {
     variant: "text",
-    icon: R,
-    text: T.Z.Messages.EDIT_PROFILE,
+    icon: O,
+    text: I.Z.Messages.EDIT_PROFILE,
     autoFocus: !0,
     fullWidth: !0,
     onClick: () => {
-      m({
+      A({
         action: "EDIT_PROFILE"
-      }), null == S || S(), O()
+      }), null == h || h(), m()
     }
   }) : (0, i.jsx)(s.Popout, {
     renderPopout: e => {
@@ -49,16 +48,16 @@ function h(e) {
         closePopout: t
       } = e;
       return (0, i.jsx)(c.Z, {
-        guild: N,
+        guild: f,
         onClose: () => {
-          t(), null == S || S()
+          t(), null == h || h()
         }
       })
     },
-    children: e => (0, i.jsx)(E.Z, {
+    children: e => (0, i.jsx)(d.Z, {
       variant: "text",
-      icon: R,
-      text: T.Z.Messages.EDIT_PROFILE,
+      icon: O,
+      text: I.Z.Messages.EDIT_PROFILE,
       autoFocus: !0,
       fullWidth: !0,
       ...e

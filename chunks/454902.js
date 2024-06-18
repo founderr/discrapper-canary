@@ -10,18 +10,17 @@ n.d(t, {
     return S
   }
 });
-var i, s, l, a = n(735250),
-  o = n(470079),
+var i, s, l, o = n(735250),
+  a = n(470079),
   r = n(120356),
-  d = n.n(r),
-  c = n(481060),
+  c = n.n(r),
+  d = n(481060),
   u = n(376218),
-  h = n(465670),
-  p = n(689938),
-  f = n(297505),
-  E = n(611273);
+  h = n(689938),
+  p = n(297505),
+  f = n(611273);
 
-function Z(e, t, n) {
+function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -30,31 +29,31 @@ function Z(e, t, n) {
   }) : e[t] = n, e
 }
 let g = e => e.stopPropagation(),
-  m = () => (0, a.jsx)("div", {
-    className: f.clickBlocker,
+  m = () => (0, o.jsx)("div", {
+    className: p.clickBlocker,
     onClick: g,
     onMouseEnter: g,
     onMouseOver: g
   }),
-  _ = () => (0, a.jsx)("div", {
-    className: f.divider
+  Z = () => (0, o.jsx)("div", {
+    className: p.divider
   }),
-  I = (e, t, n) => (0, a.jsx)("div", {
-    className: f.keybindMessage,
+  I = (e, t, n) => (0, o.jsx)("div", {
+    className: p.keybindMessage,
     children: n.format({
       keybind: t,
-      keybindHook: (e, n) => (0, a.jsx)(u.Z, {
+      keybindHook: (e, n) => (0, o.jsx)(u.Z, {
         keybind: t,
-        className: f.keybind
+        className: p.keybind
       }, n)
     })
   }),
-  S = (e, t) => (0, a.jsx)("div", {
-    className: f.hintSubtleText,
+  S = (e, t) => (0, o.jsx)("div", {
+    className: p.hintSubtleText,
     children: t
   });
 (i = s || (s = {})).PRIMARY = "PRIMARY", i.BRAND = "BRAND", i.DANGER = "DANGER";
-class v extends(l = o.PureComponent) {
+class _ extends(l = a.PureComponent) {
   static getDerivedStateFromProps(e, t) {
     let {
       expand: n
@@ -78,16 +77,16 @@ class v extends(l = o.PureComponent) {
     null != t && null == e.onNotificationShow && t()
   }
   renderCloseButton() {
-    return (0, a.jsx)(c.Button, {
-      look: c.Button.Looks.BLANK,
-      size: c.Button.Sizes.NONE,
+    return (0, o.jsx)(d.Button, {
+      look: d.Button.Looks.BLANK,
+      size: d.Button.Sizes.NONE,
       onClick: this.handleDismiss,
-      className: f.dismissButton,
-      "aria-label": p.Z.Messages.NOTIFICATION_DISMISS,
-      children: (0, a.jsx)(h.Z, {
-        width: 16,
-        height: 16,
-        className: f.dismissIcon
+      className: p.dismissButton,
+      "aria-label": h.Z.Messages.NOTIFICATION_DISMISS,
+      children: (0, o.jsx)(d.CloseSmallIcon, {
+        size: "xs",
+        color: "currentColor",
+        className: p.dismissIcon
       })
     })
   }
@@ -104,13 +103,13 @@ class v extends(l = o.PureComponent) {
     if (null == e) return null;
     if ("function" == typeof e) {
       let i = e(n, t);
-      return null != i ? (0, a.jsxs)(o.Fragment, {
-        children: [(0, a.jsx)(_, {}), i]
+      return null != i ? (0, o.jsxs)(a.Fragment, {
+        children: [(0, o.jsx)(Z, {}), i]
       }, "hint-custom") : null
     }
-    return (0, a.jsxs)(o.Fragment, {
-      children: [(0, a.jsx)(_, {}), (0, a.jsx)("div", {
-        className: "string" == typeof e ? f.hintText : void 0,
+    return (0, o.jsxs)(a.Fragment, {
+      children: [(0, o.jsx)(Z, {}), (0, o.jsx)("div", {
+        className: "string" == typeof e ? p.hintText : void 0,
         children: e
       }, "hint-text")]
     }, "hint-text")
@@ -127,44 +126,44 @@ class v extends(l = o.PureComponent) {
         colorScheme: r
       },
       state: {
-        expanded: d
+        expanded: c
       }
     } = this;
-    if (!d) return null != l ? this.renderHint() : null;
+    if (!c) return null != l ? this.renderHint() : null;
     if (null != e) {
-      let t = e(d, r);
-      return null != t ? (0, a.jsxs)(o.Fragment, {
-        children: [(0, a.jsx)(_, {}), t]
+      let t = e(c, r);
+      return null != t ? (0, o.jsxs)(a.Fragment, {
+        children: [(0, o.jsx)(Z, {}), t]
       }, "footer-custom-content") : null
     }
     if (null != i || null != s) {
-      let e = c.Button.Colors.GREEN,
-        l = c.Button.Colors.PRIMARY,
-        d = c.Button.Looks.FILLED;
+      let e = d.Button.Colors.GREEN,
+        l = d.Button.Colors.PRIMARY,
+        c = d.Button.Looks.FILLED;
       switch (r) {
         case "DANGER":
         case "BRAND":
-          e = l = c.Button.Colors.WHITE, d = c.Button.Looks.OUTLINED
+          e = l = d.Button.Colors.WHITE, c = d.Button.Looks.OUTLINED
       }
-      return (0, a.jsxs)(o.Fragment, {
-        children: [(0, a.jsx)(_, {}), (0, a.jsxs)("div", {
-          className: f.buttonContainer,
-          children: [null != i ? (0, a.jsx)(c.Button, {
+      return (0, o.jsxs)(a.Fragment, {
+        children: [(0, o.jsx)(Z, {}), (0, o.jsxs)("div", {
+          className: p.buttonContainer,
+          children: [null != i ? (0, o.jsx)(d.Button, {
             fullWidth: !0,
-            size: c.Button.Sizes.SMALL,
+            size: d.Button.Sizes.SMALL,
             color: e,
             onClick: this.handleConfirmClick,
-            className: f.button,
-            innerClassName: f.innerText,
-            children: null != n ? n : p.Z.Messages.OKAY
-          }) : null, null != s ? (0, a.jsx)(c.Button, {
+            className: p.button,
+            innerClassName: p.innerText,
+            children: null != n ? n : h.Z.Messages.OKAY
+          }) : null, null != s ? (0, o.jsx)(d.Button, {
             fullWidth: !0,
-            size: c.Button.Sizes.SMALL,
-            look: d,
+            size: d.Button.Sizes.SMALL,
+            look: c,
             color: l,
             onClick: this.handleCancelClick,
-            className: f.button,
-            children: null != t ? t : p.Z.Messages.CANCEL
+            className: p.button,
+            children: null != t ? t : h.Z.Messages.CANCEL
           }) : null]
         })]
       }, "footer-button-content")
@@ -175,13 +174,13 @@ class v extends(l = o.PureComponent) {
     let {
       icon: e
     } = this.props;
-    return null == e ? null : "string" == typeof e ? (0, a.jsx)(c.Avatar, {
+    return null == e ? null : "string" == typeof e ? (0, o.jsx)(d.Avatar, {
       src: e,
-      size: c.AvatarSizes.SIZE_40,
-      className: f.avatar,
+      size: d.AvatarSizes.SIZE_40,
+      className: p.avatar,
       "aria-hidden": !0
-    }) : (0, a.jsx)("div", {
-      className: f.avatar,
+    }) : (0, o.jsx)("div", {
+      className: p.avatar,
       children: e
     })
   }
@@ -191,15 +190,15 @@ class v extends(l = o.PureComponent) {
       title: t,
       maxBodyLines: n
     } = this.props;
-    return (0, a.jsxs)("div", {
-      className: f.content,
-      children: [this.renderIcon(), (0, a.jsxs)("div", {
-        className: f.details,
-        children: [(0, a.jsx)("div", {
-          className: f.title,
+    return (0, o.jsxs)("div", {
+      className: p.content,
+      children: [this.renderIcon(), (0, o.jsxs)("div", {
+        className: p.details,
+        children: [(0, o.jsx)("div", {
+          className: p.title,
           children: t
-        }), null != e ? (0, a.jsx)("div", {
-          className: d()(f.body, E.marginTop4),
+        }), null != e ? (0, o.jsx)("div", {
+          className: c()(p.body, f.marginTop4),
           style: {
             WebkitLineClamp: n,
             lineClamp: n
@@ -219,40 +218,40 @@ class v extends(l = o.PureComponent) {
       state: {
         expanded: i
       }
-    } = this, s = null != e ? c.Clickable : "div";
-    return (0, a.jsxs)(s, {
+    } = this, s = null != e ? d.Clickable : "div";
+    return (0, o.jsxs)(s, {
       onMouseOver: i ? null : this.handleMouseEnter,
       onFocus: i ? null : this.handleMouseEnter,
       onClick: e,
-      className: d()(f.container, {
-        [f.themePrimary]: "PRIMARY" === t,
-        [f.themeBrand]: "BRAND" === t,
-        [f.themeDanger]: "DANGER" === t,
-        [f.clickable]: null != e && !n
+      className: c()(p.container, {
+        [p.themePrimary]: "PRIMARY" === t,
+        [p.themeBrand]: "BRAND" === t,
+        [p.themeDanger]: "DANGER" === t,
+        [p.clickable]: null != e && !n
       }),
-      children: [this.renderCloseButton(), this.renderContent(), this.renderFooter(), n ? (0, a.jsx)(m, {}) : null]
+      children: [this.renderCloseButton(), this.renderContent(), this.renderFooter(), n ? (0, o.jsx)(m, {}) : null]
     })
   }
   constructor(e) {
-    super(e), Z(this, "handleDismiss", e => {
+    super(e), E(this, "handleDismiss", e => {
       e.stopPropagation();
       let {
         onDismissClick: t
       } = this.props;
       null == t || t(e)
-    }), Z(this, "handleConfirmClick", e => {
+    }), E(this, "handleConfirmClick", e => {
       e.stopPropagation();
       let {
         onConfirmClick: t
       } = this.props;
       null == t || t(e)
-    }), Z(this, "handleCancelClick", e => {
+    }), E(this, "handleCancelClick", e => {
       e.stopPropagation();
       let {
         onCancelClick: t
       } = this.props;
       null == t || t(e)
-    }), Z(this, "handleMouseEnter", () => {
+    }), E(this, "handleMouseEnter", () => {
       !this.props.disabled && this.setState({
         expanded: !0
       })
@@ -265,9 +264,9 @@ class v extends(l = o.PureComponent) {
     }
   }
 }
-Z(v, "ColorSchemes", s), Z(v, "defaultProps", {
+E(_, "ColorSchemes", s), E(_, "defaultProps", {
   maxBodyLines: void 0,
   colorScheme: "PRIMARY",
   expand: !1,
   disabled: !1
-}), t.ZP = v
+}), t.ZP = _

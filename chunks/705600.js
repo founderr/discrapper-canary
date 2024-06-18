@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return b
+    return M
   }
 });
 var i = n(735250),
@@ -12,8 +12,8 @@ var i = n(735250),
   l = n(692547),
   u = n(780384),
   _ = n(481060),
-  d = n(353093),
-  c = n(979264),
+  c = n(353093),
+  d = n(979264),
   E = n(284363),
   I = n(854218),
   T = n(623624),
@@ -24,45 +24,41 @@ var i = n(735250),
   A = n(797717),
   m = n(672752),
   O = n(665786),
-  R = n(639740),
-  C = n(433564),
-  p = n(697725),
-  g = n(192091),
-  L = n(507957),
-  v = n(981631),
-  D = n(689938),
-  M = n(530393);
-let P = {
+  R = n(697725),
+  p = n(981631),
+  g = n(689938),
+  C = n(530393);
+let v = {
   [E.Q.STAFF]: {
-    IconComponent: g.Z,
+    IconComponent: _.StaffBadgeIcon,
     foregroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
     foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
     backgroundDarkColor: l.Z.unsafe_rawColors.GREEN_360.css,
     backgroundLightColor: l.Z.unsafe_rawColors.GREEN_360.css
   },
   [E.Q.VERIFIED_AND_PARTNERED]: {
-    IconComponent: L.Z,
+    IconComponent: _.CheckmarkSmallIcon,
     foregroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
     foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
     backgroundDarkColor: l.Z.unsafe_rawColors.GREEN_360.css,
     backgroundLightColor: l.Z.unsafe_rawColors.GREEN_360.css
   },
   [E.Q.VERIFIED]: {
-    IconComponent: L.Z,
+    IconComponent: _.CheckmarkSmallIcon,
     foregroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
     foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
     backgroundDarkColor: l.Z.unsafe_rawColors.GREEN_360.css,
     backgroundLightColor: l.Z.unsafe_rawColors.GREEN_360.css
   },
   [E.Q.PARTNERED]: {
-    IconComponent: O.Z,
+    IconComponent: (0, _.makeIconCompat)(O.Z),
     foregroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
     foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
     backgroundDarkColor: l.Z.unsafe_rawColors.BRAND_500.css,
     backgroundLightColor: l.Z.unsafe_rawColors.BRAND_500.css
   },
   [E.Q.COMMUNITY]: {
-    IconComponent: R.Z,
+    IconComponent: _.HomeIcon,
     foregroundDarkColor: l.Z.unsafe_rawColors.PRIMARY_500.css,
     foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
     backgroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
@@ -71,7 +67,7 @@ let P = {
     premiumForegroundColor: l.Z.unsafe_rawColors.WHITE_400.css
   },
   [E.Q.DISCOVERABLE]: {
-    IconComponent: C.Z,
+    IconComponent: _.GlobeEarthIcon,
     foregroundDarkColor: l.Z.unsafe_rawColors.PRIMARY_500.css,
     foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
     backgroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
@@ -83,29 +79,29 @@ let P = {
   [E.Q.NONE]: {}
 };
 
-function y(e) {
+function L(e) {
   let {
     guildTraits: t
   } = e;
   return (0, i.jsxs)("div", {
-    className: M.tooltipPremiumFooterContainer,
+    className: C.tooltipPremiumFooterContainer,
     children: [(0, i.jsxs)("div", {
-      className: o()(M.tooltipPremiumFooterSegment, M.tooltipPremiumFooterTierSegment),
-      children: [(0, i.jsx)(p.Z, {
+      className: o()(C.tooltipPremiumFooterSegment, C.tooltipPremiumFooterTierSegment),
+      children: [(0, i.jsx)(R.Z, {
         width: 18,
         height: 18,
-        className: M.gemIcon
+        className: C.gemIcon
       }), (0, i.jsx)(_.Text, {
         variant: "text-xs/semibold",
         color: "always-white",
         children: N.nW(t.premiumTier)
       })]
     }), (0, i.jsx)("div", {
-      className: o()(M.tooltipPremiumFooterSegment),
+      className: o()(C.tooltipPremiumFooterSegment),
       children: (0, i.jsx)(_.Text, {
         variant: "text-xs/semibold",
         color: "always-white",
-        children: D.Z.Messages.SERVER_BADGE_PREMIUM_FOOTER_BOOST_COUNT.format({
+        children: g.Z.Messages.SERVER_BADGE_PREMIUM_FOOTER_BOOST_COUNT.format({
           count: t.premiumSubscriberCount
         })
       })
@@ -113,7 +109,7 @@ function y(e) {
   })
 }
 
-function U(e) {
+function D(e) {
   let {
     badgeType: t,
     guildTraits: n
@@ -122,45 +118,45 @@ function U(e) {
     tooltipSubtitle: s,
     tooltipDescription: o
   } = function(e, t) {
-    let n = t === I.PZ.PUBLIC ? D.Z.Messages.SERVER_BADGE_DESCRIPTION_ANYONE_CAN_JOIN : D.Z.Messages.SERVER_BADGE_DESCRIPTION_INVITE_ONLY;
+    let n = t === I.PZ.PUBLIC ? g.Z.Messages.SERVER_BADGE_DESCRIPTION_ANYONE_CAN_JOIN : g.Z.Messages.SERVER_BADGE_DESCRIPTION_INVITE_ONLY;
     switch (e) {
       case E.Q.STAFF:
         return {
-          tooltipTitle: D.Z.Messages.INTERNAL_EMPLOYEE_ONLY, tooltipSubtitle: D.Z.Messages.INTERNAL_EMPLOYEE_ONLY, tooltipDescription: D.Z.Messages.INTERNAL_EMPLOYEE_ONLY
+          tooltipTitle: g.Z.Messages.INTERNAL_EMPLOYEE_ONLY, tooltipSubtitle: g.Z.Messages.INTERNAL_EMPLOYEE_ONLY, tooltipDescription: g.Z.Messages.INTERNAL_EMPLOYEE_ONLY
         };
       case E.Q.VERIFIED:
         return {
-          tooltipTitle: D.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY, tooltipSubtitle: D.Z.Messages.GUILD_VERIFIED, tooltipDescription: n
+          tooltipTitle: g.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY, tooltipSubtitle: g.Z.Messages.GUILD_VERIFIED, tooltipDescription: n
         };
       case E.Q.PARTNERED:
         return {
-          tooltipTitle: D.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY, tooltipSubtitle: D.Z.Messages.GUILD_PARTNERED, tooltipDescription: n
+          tooltipTitle: g.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY, tooltipSubtitle: g.Z.Messages.GUILD_PARTNERED, tooltipDescription: n
         };
       case E.Q.VERIFIED_AND_PARTNERED:
         return {
-          tooltipTitle: D.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY, tooltipSubtitle: D.Z.Messages.GUILD_VERIFIED_AND_PARTNERED, tooltipDescription: n
+          tooltipTitle: g.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY, tooltipSubtitle: g.Z.Messages.GUILD_VERIFIED_AND_PARTNERED, tooltipDescription: n
         };
       case E.Q.COMMUNITY:
         return {
-          tooltipTitle: D.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY, tooltipDescription: D.Z.Messages.SERVER_BADGE_DESCRIPTION_INVITE_ONLY
+          tooltipTitle: g.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY, tooltipDescription: g.Z.Messages.SERVER_BADGE_DESCRIPTION_INVITE_ONLY
         };
       case E.Q.DISCOVERABLE:
         return {
-          tooltipTitle: D.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY, tooltipDescription: D.Z.Messages.SERVER_BADGE_DESCRIPTION_ANYONE_CAN_JOIN
+          tooltipTitle: g.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY, tooltipDescription: g.Z.Messages.SERVER_BADGE_DESCRIPTION_ANYONE_CAN_JOIN
         };
       case E.Q.CLAN:
         return {
-          tooltipTitle: D.Z.Messages.SERVER_BADGE_TITLE_CLAN, tooltipDescription: D.Z.Messages.SERVER_BADGE_DESCRIPTION_APPLICATION_REQUIRED
+          tooltipTitle: g.Z.Messages.SERVER_BADGE_TITLE_CLAN, tooltipDescription: g.Z.Messages.SERVER_BADGE_DESCRIPTION_APPLICATION_REQUIRED
         };
       default:
         return {
-          tooltipTitle: D.Z.Messages.SERVER_BADGE_TITLE_UNKNOWN
+          tooltipTitle: g.Z.Messages.SERVER_BADGE_TITLE_UNKNOWN
         }
     }
   }(t, n.visibility);
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsxs)("div", {
-      className: M.tooltipBodyContainer,
+      className: C.tooltipBodyContainer,
       children: [(0, i.jsx)(_.Text, {
         color: "interactive-active",
         variant: "text-xs/bold",
@@ -174,13 +170,13 @@ function U(e) {
         variant: "text-xs/medium",
         children: o
       }) : null]
-    }), n.premium ? (0, i.jsx)(y, {
+    }), n.premium ? (0, i.jsx)(L, {
       guildTraits: n
     }) : null]
   })
 }
 
-function b(e) {
+function M(e) {
   let t, n, {
       guild: s,
       tooltipColor: l = _.Tooltip.Colors.BRAND,
@@ -188,13 +184,13 @@ function b(e) {
       className: m,
       flowerStarClassName: O,
       iconClassName: R,
-      badgeStrokeColor: C,
-      badgeColor: p,
-      size: g = 16,
-      disableBoostClick: L,
-      "aria-label": D = !1
+      badgeStrokeColor: g,
+      badgeColor: L,
+      size: M = 16,
+      disableBoostClick: P,
+      "aria-label": y = !1
     } = e,
-    y = (0, a.e7)([f.default, S.ZP], () => {
+    U = (0, a.e7)([f.default, S.ZP], () => {
       let e = f.default.getCurrentUser();
       return S.ZP.isMember(null == s ? void 0 : s.id, null == e ? void 0 : e.id)
     }),
@@ -202,34 +198,34 @@ function b(e) {
     G = (0, I.XX)(s),
     w = (0, E.i)(G),
     k = r.useCallback(e => {
-      G.premium && y && !L && (e.stopPropagation(), e.preventDefault(), (0, T.f)({
+      G.premium && U && !P && (e.stopPropagation(), e.preventDefault(), (0, T.f)({
         guildId: s.id,
         location: {
-          section: v.jXE.GUILD_HEADER,
-          object: v.qAy.BOOST_GEM_ICON
+          section: p.jXE.GUILD_HEADER,
+          object: p.qAy.BOOST_GEM_ICON
         }
       }))
-    }, [G.premium, y, L, s.id]);
+    }, [G.premium, U, P, s.id]);
   if (w === E.Q.NONE) return null;
   if (w === E.Q.CLAN) {
     var B;
-    let e = (0, d.ky)(s.id, null === (B = s.clan) || void 0 === B ? void 0 : B.badge, g);
+    let e = (0, c.ky)(s.id, null === (B = s.clan) || void 0 === B ? void 0 : B.badge, M);
     return (0, i.jsx)(_.Tooltip, {
       color: l,
       position: N,
-      "aria-label": D,
-      text: (0, i.jsx)(U, {
+      "aria-label": y,
+      text: (0, i.jsx)(D, {
         badgeType: w,
         guildTraits: G
       }),
-      tooltipContentClassName: M.tooltipRemovePadding,
+      tooltipContentClassName: C.tooltipRemovePadding,
       children: t => (0, i.jsx)(_.Clickable, {
         ...t,
         onClick: k,
-        className: o()(M.clanBadgeContainer, m),
-        children: (0, i.jsx)(c.KQ, {
+        className: o()(C.clanBadgeContainer, m),
+        children: (0, i.jsx)(d.KQ, {
           src: e,
-          size: g
+          size: M
         })
       })
     })
@@ -242,7 +238,7 @@ function b(e) {
     foregroundLightColor: F,
     premiumBackgroundColor: Y,
     premiumForegroundColor: j
-  } = P[w];
+  } = v[w];
   if (null == x) return null;
   G.premium && (t = j, n = Y);
   let W = (0, u.wj)(b) ? H : F,
@@ -250,24 +246,24 @@ function b(e) {
   return t = null != t ? t : W, n = null != n ? n : K, (0, i.jsx)(_.Tooltip, {
     color: l,
     position: N,
-    "aria-label": D,
-    text: (0, i.jsx)(U, {
+    "aria-label": y,
+    text: (0, i.jsx)(D, {
       badgeType: w,
       guildTraits: G
     }),
-    tooltipContentClassName: M.tooltipRemovePadding,
+    tooltipContentClassName: C.tooltipRemovePadding,
     children: e => (0, i.jsx)(_.Clickable, {
       onClick: k,
       children: (0, i.jsx)(A.Z, {
         ...e,
         className: m,
         flowerStarClassName: O,
-        color: null != n ? n : p,
-        stroke: C,
-        size: g,
+        color: null != n ? n : L,
+        stroke: g,
+        size: M,
         children: (0, i.jsx)(x, {
           className: R,
-          color: t
+          color: null != t ? t : "currentColor"
         })
       })
     })
