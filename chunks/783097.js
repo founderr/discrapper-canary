@@ -1,13 +1,22 @@
 "use strict";
 n.d(t, {
-  BQ: function() {
-    return d
+  $d: function() {
+    return T
   },
-  Y$: function() {
+  BQ: function() {
     return I
   },
-  ye: function() {
+  Wx: function() {
     return E
+  },
+  Y$: function() {
+    return S
+  },
+  sl: function() {
+    return f
+  },
+  ye: function() {
+    return h
   }
 }), n(789020);
 var i = n(668781),
@@ -15,31 +24,39 @@ var i = n(668781),
   s = n(895924),
   o = n(667204),
   a = n(957730),
-  l = n(630388),
-  u = n(981631),
-  _ = n(689079),
-  c = n(689938);
+  l = n(768581),
+  u = n(630388),
+  _ = n(981631),
+  c = n(689079),
+  d = n(689938);
+let E = {
+  id: c.bi.BUILT_IN
+};
 
-function d(e) {
-  return e.id !== _.bi.BUILT_IN
+function I(e) {
+  return e.id !== c.bi.BUILT_IN
 }
 
-function E(e) {
+function T(e) {
+  return I(e) ? e.name : d.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME
+}
+
+function h(e) {
   var t;
   let {
     application: n
   } = e;
-  return d(n) && (0, l.yE)(null !== (t = n.flags) && void 0 !== t ? t : 0, u.udG.EMBEDDED)
+  return I(n) && (0, u.yE)(null !== (t = n.flags) && void 0 !== t ? t : 0, _.udG.EMBEDDED)
 }
 
-function I(e) {
+function S(e) {
   let {
     command: t,
     optionValues: n,
     context: l,
     commandTargetId: u,
     maxSizeCallback: _,
-    sectionName: d
+    sectionName: c
   } = e, {
     channel: E
   } = l, I = async () => {
@@ -51,7 +68,7 @@ function I(e) {
         commandTargetId: u,
         maxSizeCallback: _,
         commandOrigin: s.bB.APPLICATION_LAUNCHER,
-        sectionName: d
+        sectionName: c
       });
       if (t.inputType === s.iw.BUILT_IN_TEXT && null != i) {
         var e;
@@ -60,13 +77,34 @@ function I(e) {
       }
     } catch (e) {
       throw i.Z.show({
-        title: c.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_TITLE,
-        body: c.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_BODY,
-        confirmText: c.Z.Messages.RETRY,
+        title: d.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_TITLE,
+        body: d.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_BODY,
+        confirmText: d.Z.Messages.RETRY,
         onConfirm: () => I()
       }), e
     }
   };
   return I()
 }
-_.bi.BUILT_IN
+
+function f(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+    {
+      fakeAppIconURL: n,
+      ...i
+    } = t;
+  return I(e) ? {
+    iconURL: l.ZP.getApplicationIconURL({
+      ...i,
+      id: e.id,
+      icon: e.icon,
+      bot: e.bot
+    }),
+    name: e.name,
+    description: e.description
+  } : {
+    iconURL: null != n ? n : null,
+    name: d.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME,
+    description: d.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
+  }
+}

@@ -11,14 +11,15 @@ var i = n(735250),
 t.Z = r.memo(function(e) {
   let t, {
       drawerRef: n,
-      channel: c
+      channel: c,
+      entrypoint: d
     } = e,
     {
-      history: d,
-      setHistory: E,
-      currentView: I,
-      pushHistory: T,
-      goBack: h
+      history: E,
+      setHistory: I,
+      currentView: T,
+      pushHistory: h,
+      goBack: S
     } = function() {
       let [e, t] = r.useState([{
         type: o.gc.HOME
@@ -37,31 +38,32 @@ t.Z = r.memo(function(e) {
         }
       }
     }(),
-    S = s.K.useExperiment({
+    f = s.K.useExperiment({
       location: "App Launcher Root"
     }, {
       autoTrackExposure: !0
     });
-  switch (null == I ? void 0 : I.type) {
+  switch (null == T ? void 0 : T.type) {
     case o.gc.HOME:
       t = (0, i.jsx)(l.Z, {
         channel: c,
-        enableRecommendations: S.recommendationsEnabled,
-        enableRecents: S.recentsDropdownEnabled
+        entrypoint: d,
+        enableRecommendations: f.recommendationsEnabled,
+        enableRecents: f.recentsDropdownEnabled
       });
       break;
     case o.gc.LIST:
       t = (0, i.jsx)(u.Z, {
-        title: I.title,
-        look: I.look,
-        items: I.items
+        title: T.title,
+        look: T.look,
+        items: T.items
       });
       break;
     case o.gc.APPLICATION:
       t = (0, i.jsx)(a.Z, {
         channel: c,
-        application: I.application,
-        sectionName: I.sectionName
+        application: T.application,
+        sectionName: T.sectionName
       });
       break;
     default:
@@ -74,11 +76,11 @@ t.Z = r.memo(function(e) {
       className: _.contentWrapper,
       children: (0, i.jsx)(o.uX.Provider, {
         value: {
-          history: d,
-          setHistory: E,
-          currentView: I,
-          pushHistory: T,
-          goBack: h
+          history: E,
+          setHistory: I,
+          currentView: T,
+          pushHistory: h,
+          goBack: S
         },
         children: t
       })

@@ -8,15 +8,14 @@ var i, r, s = n(735250),
   c = n(182906),
   d = n(220082),
   E = n(318661),
-  I = n(768581),
-  T = n(792125),
-  h = n(783097),
-  S = n(753972),
-  f = n(231338),
-  N = n(689938),
-  A = n(741382);
+  I = n(792125),
+  T = n(783097),
+  h = n(753972),
+  S = n(231338),
+  f = n(689938),
+  N = n(741382);
 
-function m(e) {
+function A(e) {
   let {
     application: t,
     look: n = "large_banner",
@@ -26,48 +25,37 @@ function m(e) {
     iconURL: a,
     name: _,
     description: c
-  } = o.useMemo(() => (0, h.BQ)(t) ? {
-    iconURL: I.ZP.getApplicationIconURL({
-      id: t.id,
-      icon: t.icon,
-      bot: t.bot,
-      botIconFirst: !0
-    }),
-    name: t.name,
-    description: t.description
-  } : {
-    iconURL: null,
-    name: N.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME,
-    description: N.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
-  }, [t]), E = (0, d.ZP)(a, "");
+  } = o.useMemo(() => (0, T.sl)(t, {
+    botIconFirst: !0
+  }), [t]), E = (0, d.ZP)(a, "");
   return (0, s.jsxs)(u.Clickable, {
-    className: A.container,
+    className: N.container,
     onClick: r,
     children: [(0, s.jsxs)("div", {
-      className: l()(A.bannerImageContainer, {
-        [A.mediumBanner]: "medium_banner" === n,
-        [A.largeBanner]: "large_banner" === n
+      className: l()(N.bannerImageContainer, {
+        [N.mediumBanner]: "medium_banner" === n,
+        [N.largeBanner]: "large_banner" === n
       }),
-      children: [(0, s.jsx)(O, {
+      children: [(0, s.jsx)(m, {
         application: t,
         fallbackColor: E
       }), i && (0, s.jsx)("div", {
-        className: A.partnerLabelWrapper,
+        className: N.partnerLabelWrapper,
         children: (0, s.jsx)(u.Text, {
-          className: (0, T.Q)(f.BR.DARK),
+          className: (0, I.Q)(S.BR.DARK),
           variant: "text-sm/medium",
           color: "text-normal",
-          children: N.Z.Messages.APP_DIRECTORY_PARTNER
+          children: f.Z.Messages.APP_DIRECTORY_PARTNER
         })
       })]
     }), (0, s.jsxs)("div", {
-      className: A.appDetailsContainer,
-      children: [null != a && (0, s.jsx)(S.Z, {
+      className: N.appDetailsContainer,
+      children: [null != a && (0, s.jsx)(h.Z, {
         src: a,
-        className: A.icon,
+        className: N.icon,
         "aria-hidden": !0
       }), (0, s.jsxs)("div", {
-        className: A.appDetails,
+        className: N.appDetails,
         children: [(0, s.jsx)(u.Heading, {
           variant: "heading-md/semibold",
           color: "header-primary",
@@ -84,30 +72,30 @@ function m(e) {
   })
 }
 
-function O(e) {
+function m(e) {
   let {
     application: t,
     fallbackColor: n
   } = e;
-  if ((0, h.BQ)(t)) {
-    if ((0, h.ye)({
+  if ((0, T.BQ)(t)) {
+    if ((0, T.ye)({
         application: t
-      })) return (0, s.jsx)(R, {
+      })) return (0, s.jsx)(O, {
       application: t
     });
-    if (null != t.bot) return (0, s.jsx)(p, {
+    if (null != t.bot) return (0, s.jsx)(R, {
       bot: t.bot
     })
   }
   return (0, s.jsx)("div", {
-    className: A.bannerImage,
+    className: N.bannerImage,
     style: {
       backgroundColor: n
     }
   })
 }
 
-function R(e) {
+function O(e) {
   let {
     application: t
   } = e, n = (0, _.Z)({
@@ -118,12 +106,12 @@ function R(e) {
   return (0, s.jsx)(c.Z, {
     imageBackground: n,
     applicationName: t.name,
-    imageClassName: A.bannerImage,
-    imageNotFoundClassName: A.bannerImage
+    imageClassName: N.bannerImage,
+    imageNotFoundClassName: N.bannerImage
   })
 }
 
-function p(e) {
+function R(e) {
   let {
     bot: t
   } = e, n = (0, E.ZP)(t.id), i = o.useMemo(() => null == n ? void 0 : n.getBannerURL({
@@ -133,6 +121,6 @@ function p(e) {
   return (0, s.jsx)("img", {
     src: i,
     alt: "",
-    className: A.bannerImage
+    className: N.bannerImage
   })
-}(i = r || (r = {})).NO_BANNER = "no_banner", i.MEDIUM_BANNER = "medium_banner", i.LARGE_BANNER = "large_banner", t.Z = m, m.Looks = r
+}(i = r || (r = {})).NO_BANNER = "no_banner", i.MEDIUM_BANNER = "medium_banner", i.LARGE_BANNER = "large_banner", t.Z = A, A.Looks = r

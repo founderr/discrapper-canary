@@ -1,46 +1,51 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return d
+    return T
   }
 });
 var i = n(735250),
   r = n(470079),
-  s = n(481060),
-  o = n(782568),
-  a = n(63063),
-  l = n(981631),
-  u = n(689938),
-  _ = n(54674),
-  c = n(224275);
+  s = n(780384),
+  o = n(481060),
+  a = n(410030),
+  l = n(782568),
+  u = n(63063),
+  _ = n(981631),
+  c = n(689938),
+  d = n(54674),
+  E = n(983008),
+  I = n(478408);
 
-function d() {
-  let e = r.useCallback(() => {
-    (0, o.Z)(a.Z.getArticleURL(l.BhN.LAUNCHING_APPS_WITH_SHAPES_BUTTON))
-  }, []);
+function T() {
+  let e = (0, a.ZP)(),
+    t = (0, s.ap)(e) ? I : E,
+    n = r.useCallback(() => {
+      (0, l.Z)(u.Z.getArticleURL(_.BhN.LAUNCHING_APPS_WITH_SHAPES_BUTTON))
+    }, []);
   return (0, i.jsxs)("div", {
-    className: _.container,
+    className: d.container,
     children: [(0, i.jsx)("img", {
-      className: _.image,
-      src: c,
+      className: d.image,
+      src: t,
       alt: "",
       "aria-hidden": !0
     }), (0, i.jsxs)("div", {
-      className: _.body,
-      children: [(0, i.jsx)(s.Heading, {
+      className: d.body,
+      children: [(0, i.jsx)(o.Heading, {
         variant: "heading-lg/bold",
         color: "header-primary",
-        children: u.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE
-      }), (0, i.jsx)(s.Text, {
+        children: c.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE
+      }), (0, i.jsx)(o.Text, {
         variant: "text-xs/normal",
         color: "text-normal",
-        children: u.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_BODY
+        children: c.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_BODY
       })]
-    }), (0, i.jsx)(s.Button, {
-      size: s.Button.Sizes.MEDIUM,
-      "aria-label": u.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE,
-      onClick: e,
-      children: u.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_LEARN_MORE
+    }), (0, i.jsx)(o.Button, {
+      size: o.Button.Sizes.MEDIUM,
+      "aria-label": c.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE,
+      onClick: n,
+      children: c.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_LEARN_MORE
     })]
   })
 }

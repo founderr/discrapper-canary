@@ -1,5 +1,8 @@
 "use strict";
 n.d(t, {
+  If: function() {
+    return ec
+  },
   JK: function() {
     return $
   },
@@ -11,6 +14,9 @@ n.d(t, {
   },
   em: function() {
     return X
+  },
+  un: function() {
+    return e_
   },
   v1: function() {
     return et
@@ -797,4 +803,42 @@ function el(e, t) {
 
 function eu(e, t) {
   return q.collator.compare(e, t)
+}
+
+function e_(e, t) {
+  return eu(e, t)
+}
+
+function ec(e, t) {
+  var n, i, r, s;
+  let o, a;
+  if (t === P.bi.BUILT_IN) return {
+    descriptor: O.Tm[P.bi.BUILT_IN],
+    sectionCommands: (0, O.Kh)(E.yU.CHAT, !0, !1),
+    isGuildInstalled: !0,
+    isUserInstalled: !0
+  };
+  let l = q.getContextState(e),
+    u = q.getUserState(),
+    _ = null !== (r = null === (n = l.result) || void 0 === n ? void 0 : n.sections) && void 0 !== r ? r : {},
+    c = null !== (s = null === (i = u.result) || void 0 === i ? void 0 : i.sections) && void 0 !== s ? s : {},
+    d = _[t],
+    I = c[t];
+  if (null != d && null != I) {
+    for (let e in o = I.descriptor, a = [], I.commands) {
+      let t = I.commands[e];
+      a.push(t)
+    }
+    for (let e in d.commands)
+      if (!(e in I.commands)) {
+        let t = d.commands[e];
+        a.push(t)
+      }
+  } else null != d ? (o = d.descriptor, a = Object.values(d.commands)) : null != I && (o = I.descriptor, a = Object.values(I.commands));
+  return {
+    descriptor: o,
+    sectionCommands: a,
+    isGuildInstalled: null != d,
+    isUserInstalled: null != I
+  }
 }
