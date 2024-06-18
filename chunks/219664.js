@@ -298,7 +298,8 @@ let G = e => e.preventDefault(),
         height: e.height,
         alt: null != e.alt && a ? m : e.alt,
         onClick: G,
-        shouldRenderAccessory: !_ && !u
+        shouldRenderAccessory: !_ && !u,
+        renderForwardComponent: w.VqG
       }, C = (0, g.d$)(e.src) ? "".concat(e.src, "?format=png") : e.src, p = o && !a ? e.src : C;
       return (0, s.jsxs)("div", {
         className: U.bodyMediaFrame,

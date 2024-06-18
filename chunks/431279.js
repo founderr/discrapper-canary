@@ -13,10 +13,11 @@ var i, r = n(735250),
   _ = n(926836),
   d = n(956664),
   c = n(506071),
-  E = n(689938),
-  I = n(381237);
+  E = n(503349),
+  I = n(689938),
+  T = n(381237);
 
-function T(e, t, n) {
+function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -24,7 +25,6 @@ function T(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let h = "Zoomed Lazy Image Modal";
 class S extends(i = s.PureComponent) {
   render() {
     let {
@@ -40,7 +40,7 @@ class S extends(i = s.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), T(this, "onMouseEnter", (e, t) => {
+    super(...e), h(this, "onMouseEnter", (e, t) => {
       let {
         preloadImage: n
       } = t, {
@@ -48,9 +48,9 @@ class S extends(i = s.PureComponent) {
         height: r
       } = this.props;
       n((0, d.zp)(i, r))
-    }), T(this, "modalContext", (0, a.modalContextFromAppContext)(this.props.appContext)), T(this, "onCloseImage", () => {
-      (0, a.closeModal)(h, this.modalContext)
-    }), T(this, "onZoom", (e, t) => {
+    }), h(this, "modalContext", (0, a.modalContextFromAppContext)(this.props.appContext)), h(this, "onCloseImage", () => {
+      (0, a.closeModal)(E.c, this.modalContext)
+    }), h(this, "onZoom", (e, t) => {
       let {
         zoomThumbnailPlaceholder: n,
         trigger: i
@@ -62,40 +62,42 @@ class S extends(i = s.PureComponent) {
         original: u,
         width: d,
         height: c,
-        animated: T,
+        animated: h,
         children: S,
         renderLinkComponent: f,
-        isWindowFocused: N,
-        shouldHideMediaOptions: A = !1
-      } = this.props, m = {
+        renderForwardComponent: N,
+        isWindowFocused: A,
+        shouldHideMediaOptions: m = !1
+      } = this.props, O = {
         alt: s,
         src: l,
         original: null != u ? u : l,
         width: d,
         height: c,
-        animated: T,
+        animated: h,
         children: S,
         zoomThumbnailPlaceholder: n,
         renderLinkComponent: f,
-        onContextMenu: A ? e => {
+        renderForwardComponent: N,
+        onContextMenu: m ? e => {
           e.stopPropagation(), e.preventDefault()
         } : void 0,
         trigger: i
       };
       (0, o.k)(e.currentTarget) && e.currentTarget.blur(), (0, a.openModal)(e => (0, r.jsx)(a.ModalRoot, {
-        className: I.modal,
+        className: T.modal,
         ...e,
         size: a.ModalSize.DYNAMIC,
-        "aria-label": E.Z.Messages.IMAGE,
+        "aria-label": I.Z.Messages.IMAGE,
         children: (0, r.jsx)(_.y, {
-          ...m,
-          className: I.image,
-          shouldAnimate: N,
+          ...O,
+          className: T.image,
+          shouldAnimate: A,
           onClose: this.onCloseImage,
-          shouldHideMediaOptions: A
+          shouldHideMediaOptions: m
         })
       }), {
-        modalKey: h
+        modalKey: E.c
       }, this.modalContext)
     })
   }
@@ -110,7 +112,7 @@ function f(e) {
     appContext: t
   })
 }
-T(S, "defaultProps", {
+h(S, "defaultProps", {
   shouldLink: !0,
   autoPlay: !1,
   animated: !1

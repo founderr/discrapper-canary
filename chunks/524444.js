@@ -179,8 +179,9 @@ function ee(e) {
     imageContainerClassName: a,
     disableAltTextDisplay: u = !1,
     mediaLayoutType: _,
-    imageContainerStyle: d
-  } = e, c = _ === j.hV.MOSAIC, I = !u && C.H1.getSetting() && null != t && "" !== t && !0 !== n, T = e => {
+    imageContainerStyle: d,
+    renderForwardComponent: c
+  } = e, I = _ === j.hV.MOSAIC, T = !u && C.H1.getSetting() && null != t && "" !== t && !0 !== n, S = e => {
     let {
       altText: t
     } = e;
@@ -190,7 +191,7 @@ function ee(e) {
       onKeyDown: e => {
         e.key === F.mR.Escape && setTimeout(() => {
           var e;
-          return null === (e = S.current) || void 0 === e ? void 0 : e.focus()
+          return null === (e = f.current) || void 0 === e ? void 0 : e.focus()
         }, 0)
       },
       children: [(0, s.jsx)("span", {
@@ -201,7 +202,7 @@ function ee(e) {
         children: t
       })]
     })
-  }, S = o.createRef();
+  }, f = o.createRef();
   return (0, s.jsxs)("div", {
     className: l()(K.imageContent, r),
     children: [(0, s.jsxs)("div", {
@@ -209,13 +210,14 @@ function ee(e) {
       style: d,
       children: [(0, s.jsx)(h.Z, {
         ...e,
-        renderLinkComponent: et
+        renderLinkComponent: et,
+        renderForwardComponent: null != c ? c : H.VqG
       }), null != i && i()]
-    }), c && I && (0, s.jsx)("div", {
+    }), I && T && (0, s.jsx)("div", {
       className: K.mediaMosaicAltTextContainer,
       children: (0, s.jsx)(E.Popout, {
         animation: E.Popout.Animation.FADE,
-        renderPopout: () => (0, s.jsx)(T, {
+        renderPopout: () => (0, s.jsx)(S, {
           altText: t
         }),
         children: e => (0, s.jsx)(E.FocusRing, {
@@ -223,14 +225,14 @@ function ee(e) {
           children: (0, s.jsx)("button", {
             ...e,
             type: "button",
-            ref: S,
+            ref: f,
             "aria-label": W.Z.Messages.MEDIA_MOSAIC_ALT_TEXT_POPOUT_TITLE,
             className: K.mediaMosaicAltText,
             children: W.Z.Messages.MEDIA_MOSAIC_ALT_TEXT_CTA
           })
         })
       })
-    }), !c && I && (0, s.jsx)("span", {
+    }), !I && T && (0, s.jsx)("span", {
       className: K.altText,
       children: t
     })]
