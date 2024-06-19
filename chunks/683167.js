@@ -42,6 +42,12 @@ let l = (0, i.B)({
       config: {
         coachtipEdition: s.LM.ARCADE
       }
+    }, {
+      id: 6,
+      label: "Tide",
+      config: {
+        coachtipEdition: s.LM.TIDE
+      }
     }]
   }),
   a = e => l.useExperiment({

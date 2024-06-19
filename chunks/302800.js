@@ -28,7 +28,7 @@ var s, a, i, l, r = n(278074),
   C = n(186077),
   g = n(376477),
   p = n(224941);
-(i = s || (s = {}))[i.NONE = 0] = "NONE", i[i.TOOLTIP = 1] = "TOOLTIP", i[i.COACHTIP = 2] = "COACHTIP", (l = a || (a = {})).NONE = "NONE", l.SHY = "SHY", l.LOFI_VIBES = "LOFI_VIBES", l.GALAXY = "GALAXY", l.RETRO_AND_PIRATES = "RETRO_AND_PIRATES", l.ARCADE = "ARCADE";
+(i = s || (s = {}))[i.NONE = 0] = "NONE", i[i.TOOLTIP = 1] = "TOOLTIP", i[i.COACHTIP = 2] = "COACHTIP", (l = a || (a = {})).NONE = "NONE", l.SHY = "SHY", l.LOFI_VIBES = "LOFI_VIBES", l.GALAXY = "GALAXY", l.RETRO_AND_PIRATES = "RETRO_AND_PIRATES", l.ARCADE = "ARCADE", l.TIDE = "TIDE";
 let N = {
     [c.z.COLLECTIBLES_SHOP_SHY_COACHTIP]: {
       type: 2,
