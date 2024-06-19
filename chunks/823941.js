@@ -4,78 +4,100 @@ t.d(s, {
     return A
   },
   n: function() {
-    return L
+    return S
   }
 });
 var n = t(735250),
   a = t(470079),
   r = t(120356),
-  l = t.n(r),
-  i = t(180650),
+  i = t.n(r),
+  l = t(180650),
   o = t(399606),
   c = t(481060),
   u = t(906732),
   d = t(963249),
   C = t(594174),
-  E = t(754347),
-  f = t(74538),
-  m = t(884697),
-  p = t(624377),
-  g = t(141011),
-  h = t(813083),
-  I = t(372654),
-  _ = t(994896),
-  x = t(215023),
+  f = t(754347),
+  E = t(74538),
+  p = t(884697),
+  g = t(624377),
+  m = t(141011),
+  x = t(813083),
+  h = t(372654),
+  I = t(994896),
+  _ = t(215023),
   T = t(474936),
   N = t(689938),
-  S = t(12900);
-let L = (0, m.IC)(96),
+  L = t(12900);
+let S = (0, p.IC)(96),
   b = {
-    [i.T.DISXCORE]: {
+    [l.T.DISXCORE]: {
       left: () => t(136648),
-      right: () => t(850298)
+      right: () => t(850298),
+      leftLogo: () => t(407848),
+      rightLogo: () => t(457734)
     },
-    [i.T.FANTASY]: {
+    [l.T.FANTASY]: {
       left: () => t(44602),
-      right: () => t(862392)
+      right: () => t(862392),
+      leftLogo: () => t(150218),
+      rightLogo: () => t(625591)
     },
-    [i.T.CYBERPUNK]: {
+    [l.T.CYBERPUNK]: {
       left: () => t(862358),
-      right: () => t(604083)
+      right: () => t(604083),
+      leftLogo: () => t(519293),
+      rightLogo: () => t(769307)
     },
-    [i.T.ELEMENTS]: {
+    [l.T.ELEMENTS]: {
       left: () => t(534572),
       right: () => t(905911),
       leftOverflow: () => t(149653),
-      rightOverflow: () => t(183749)
+      rightOverflow: () => t(183749),
+      leftLogo: () => t(201651),
+      rightLogo: () => t(47227)
     },
-    [i.T.ANIME_V2]: {
+    [l.T.ANIME_V2]: {
       left: () => t(607668),
-      right: () => t(381436)
+      right: () => t(381436),
+      leftLogo: () => t(384970),
+      rightLogo: () => t(906935)
     },
-    [i.T.SPRINGTOONS]: {
+    [l.T.SPRINGTOONS]: {
       left: () => t(138272),
-      right: () => t(392425)
+      right: () => t(392425),
+      leftLogo: () => t(547470),
+      rightLogo: () => t(204641)
     },
-    [i.T.LOFI_VIBES]: {
+    [l.T.LOFI_VIBES]: {
       left: () => t(659813),
-      right: () => t(722603)
+      right: () => t(722603),
+      leftLogo: () => t(678747),
+      rightLogo: () => t(178466)
     },
-    [i.T.GALAXY]: {
+    [l.T.GALAXY]: {
       left: () => t(236801),
-      right: () => t(537085)
+      right: () => t(537085),
+      leftLogo: () => t(818198),
+      rightLogo: () => t(959177)
     },
-    [i.T.FEELIN_RETRO]: {
+    [l.T.FEELIN_RETRO]: {
       left: () => t(616442),
-      right: () => t(250440)
+      right: () => t(250440),
+      leftLogo: () => t(662232),
+      rightLogo: () => t(226107)
     },
-    [i.T.PIRATES]: {
+    [l.T.PIRATES]: {
       left: () => t(519741),
-      right: () => t(980112)
+      right: () => t(980112),
+      leftLogo: () => t(379545),
+      rightLogo: () => t(31847)
     },
-    [i.T.ARCADE]: {
+    [l.T.ARCADE]: {
       left: () => t(6414),
-      right: () => t(959436)
+      right: () => t(959436),
+      leftLogo: () => t(23695),
+      rightLogo: () => t(2235)
     }
   },
   v = e => {
@@ -83,14 +105,14 @@ let L = (0, m.IC)(96),
       category: s
     } = e, {
       analyticsLocations: t
-    } = (0, u.ZP)(), r = a.useRef(null), l = (0, o.e7)([C.default], () => C.default.getCurrentUser());
-    return f.ZP.canUseCollectibles(l) ? (0, n.jsx)(n.Fragment, {
+    } = (0, u.ZP)(), r = a.useRef(null), i = (0, o.e7)([C.default], () => C.default.getCurrentUser());
+    return E.ZP.canUseCollectibles(i) ? (0, n.jsx)(n.Fragment, {
       children: s.summary
     }) : (0, n.jsx)(n.Fragment, {
       children: N.Z.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
         getPremium: e => (0, n.jsx)(c.Clickable, {
           innerRef: r,
-          className: S.getPremiumHook,
+          className: L.getPremiumHook,
           onClick: () => {
             (0, d.Z)({
               subscriptionTier: T.Si.TIER_2,
@@ -111,48 +133,49 @@ let L = (0, m.IC)(96),
   };
 
 function O(e) {
-  var s, t, a, r;
+  var s, t, a;
   let {
-    category: i,
-    index: o
-  } = e, c = b[i.skuId], u = o % 2 == 1, d = null !== (r = u ? null == c ? void 0 : c.left() : null == c ? void 0 : c.right()) && void 0 !== r ? r : (0, m.uV)(i.banner, {
-    size: I.yV,
-    format: "jpg"
-  }), C = u ? null == c ? void 0 : null === (s = c.leftOverflow) || void 0 === s ? void 0 : s.call(c) : null == c ? void 0 : null === (t = c.rightOverflow) || void 0 === t ? void 0 : t.call(c), {
-    backgroundColors: E
-  } = (0, p.Z)(i.styles), f = {
-    objectPosition: u ? "left" : "right",
-    background: null != E ? "".concat((0, I.nH)(E), " border-box border-box") : void 0,
-    outlineColor: null != E ? E.border.toHslString() : void 0
-  };
+    category: r,
+    index: l
+  } = e, {
+    backgroundColors: o
+  } = (0, g.Z)(r.styles), c = b[r.skuId];
+  if (null == c) return null;
+  let u = l % 2 == 1,
+    d = null !== (a = u ? c.left() : c.right()) && void 0 !== a ? a : (0, p.uV)(r.banner, {
+      size: h.yV,
+      format: "jpg"
+    }),
+    C = u ? null === (s = c.leftOverflow) || void 0 === s ? void 0 : s.call(c) : null === (t = c.rightOverflow) || void 0 === t ? void 0 : t.call(c),
+    f = u ? c.rightLogo() : c.leftLogo(),
+    E = {
+      objectPosition: u ? "left" : "right",
+      background: null != o ? "".concat((0, h.nH)(o), " border-box border-box") : void 0,
+      outlineColor: null != o ? o.border.toHslString() : void 0
+    };
   return (0, n.jsxs)("div", {
-    className: l()(S.condensedBannerContainer),
+    className: i()(L.condensedBannerContainer),
     children: [(0, n.jsx)("img", {
       src: d,
-      style: f,
-      className: S.condensedBannerImage,
+      style: E,
+      className: L.condensedBannerImage,
       alt: ""
     }), null != C && (0, n.jsx)("img", {
       src: C,
-      className: l()(S.overflowImage, {
-        [S.overflowImageLeft]: u
+      className: i()(L.overflowImage, {
+        [L.overflowImageLeft]: u
       }),
       alt: ""
     }), (0, n.jsx)("img", {
-      className: l()(S.condensedCategoryLogo, {
-        [S.condensedCategoryLogoLeft]: !u
+      className: i()(L.condensedCategoryLogo, {
+        [L.condensedCategoryLogoLeft]: !u
       }),
-      src: (0, m.uV)(i.logo, {
-        size: L
-      }),
-      alt: i.name,
-      style: {
-        maxWidth: null === (a = x.Ve[i.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth
-      }
-    }), (0, n.jsx)(h.Z, {
-      category: i,
-      className: l()(S.limitedTimeBadge, {
-        [S.limitedTimeBadgeLeft]: u
+      src: f,
+      alt: r.name
+    }), (0, n.jsx)(x.Z, {
+      category: r,
+      className: i()(L.limitedTimeBadge, {
+        [L.limitedTimeBadgeLeft]: u
       }),
       display: "banner"
     })]
@@ -168,52 +191,52 @@ function A(e) {
     index: u = 0
   } = e, {
     backgroundColors: d
-  } = (0, p.Z)(a.styles), C = !!(null === (s = x.Ve[a.skuId]) || void 0 === s ? void 0 : s.showDarkBannerText), {
-    condensedBannersEnabled: f
-  } = (0, _.O)({
+  } = (0, g.Z)(a.styles), C = !!(null === (s = _.Ve[a.skuId]) || void 0 === s ? void 0 : s.showDarkBannerText), {
+    condensedBannersEnabled: E
+  } = (0, I.O)({
     location: "Collectibles Shop Banner"
   });
-  return f ? (0, n.jsx)(O, {
+  return E ? (0, n.jsx)(O, {
     category: a,
     index: u
-  }) : (0, n.jsxs)(g.Z, {
+  }) : (0, n.jsxs)(m.Z, {
     asset: a.banner,
-    className: l()(S.shopBanner, r),
+    className: i()(L.shopBanner, r),
     style: null != d ? {
-      background: "".concat((0, I.nH)(d), " border-box border-box"),
+      background: "".concat((0, h.nH)(d), " border-box border-box"),
       outlineColor: d.border.toHslString()
     } : void 0,
     children: [(0, n.jsxs)("div", {
-      className: S.discordLogo,
+      className: L.discordLogo,
       children: [(0, n.jsx)(c.ClydeIcon, {
         size: "custom",
         width: 28,
         height: 28,
         color: "currentColor",
-        className: S.discordIcon
-      }), (0, n.jsx)(E.Z, {
-        className: S.discordWordmark
+        className: L.discordIcon
+      }), (0, n.jsx)(f.Z, {
+        className: L.discordWordmark
       })]
     }), (0, n.jsx)("img", {
-      className: S.categoryLogo,
-      src: (0, m.uV)(a.logo, {
-        size: L
+      className: L.categoryLogo,
+      src: (0, p.uV)(a.logo, {
+        size: S
       }),
       alt: a.name,
       style: {
-        maxWidth: null === (t = x.Ve[a.skuId]) || void 0 === t ? void 0 : t.logoMaxWidth
+        maxWidth: null === (t = _.Ve[a.skuId]) || void 0 === t ? void 0 : t.logoMaxWidth
       }
     }), (0, n.jsx)(c.Text, {
-      className: l()(S.summary, {
-        [S.blackSummary]: C
+      className: i()(L.summary, {
+        [L.blackSummary]: C
       }),
       variant: "text-md/normal",
-      children: a.skuId === i.T.DISXCORE ? (0, n.jsx)(v, {
+      children: a.skuId === l.T.DISXCORE ? (0, n.jsx)(v, {
         category: a
       }) : a.summary
-    }), !o && (0, n.jsx)(h.Z, {
+    }), !o && (0, n.jsx)(x.Z, {
       category: a,
-      className: S.limitedTimeBadge,
+      className: L.limitedTimeBadge,
       display: "banner"
     })]
   })
