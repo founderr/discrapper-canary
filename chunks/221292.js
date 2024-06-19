@@ -85,7 +85,8 @@ let h = e => {
       avatar_decoration_sku_id: null === (n = _.avatarDecoration) || void 0 === n ? void 0 : n.skuId,
       profile_effect_sku_id: null == c ? void 0 : c.profileEffectId,
       user_status: S(_.id),
-      is_guild_profile: (null == c ? void 0 : c.guildId) != null
+      is_guild_profile: (null == c ? void 0 : c.guildId) != null,
+      is_bot_profile: _.bot
     }
   },
   A = e => {
