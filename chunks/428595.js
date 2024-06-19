@@ -157,7 +157,7 @@ let b = e => {
         return {
           lang: null !== (i = e[1]) && void 0 !== i ? i : "",
           content: null !== (r = e[2]) && void 0 !== r ? r : "",
-          inQuote: n.inQuote || !1
+          inQuote: n.inQuote || n.formatInline || !1
         }
       }
     },
