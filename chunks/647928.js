@@ -1,0 +1,1 @@
+e.exports = n.p + "99082616aedacf616a06.svg"

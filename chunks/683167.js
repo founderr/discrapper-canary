@@ -1,0 +1,49 @@
+n.d(t, {
+  I: function() {
+    return a
+  }
+});
+var i = n(818083),
+  s = n(302800);
+let l = (0, i.B)({
+    kind: "user",
+    id: "2024-04_shop_marketing_badge",
+    label: "Shop Marketing New Badge Design Experiment",
+    defaultConfig: {
+      coachtipEdition: s.LM.NONE
+    },
+    treatments: [{
+      id: 1,
+      label: "Shy",
+      config: {
+        coachtipEdition: s.LM.SHY
+      }
+    }, {
+      id: 2,
+      label: "Lofi Vibes",
+      config: {
+        coachtipEdition: s.LM.LOFI_VIBES
+      }
+    }, {
+      id: 3,
+      label: "Galaxy",
+      config: {
+        coachtipEdition: s.LM.GALAXY
+      }
+    }, {
+      id: 4,
+      label: "Retro & Pirates",
+      config: {
+        coachtipEdition: s.LM.RETRO_AND_PIRATES
+      }
+    }, {
+      id: 5,
+      label: "Arcade",
+      config: {
+        coachtipEdition: s.LM.ARCADE
+      }
+    }]
+  }),
+  a = e => l.useExperiment({
+    location: e
+  }).coachtipEdition

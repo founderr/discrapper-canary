@@ -1,0 +1,20 @@
+n.d(t, {
+  L: function() {
+    return a
+  }
+});
+var l = n(626135),
+  i = n(206583),
+  s = n(981631);
+let a = (e, t) => {
+  l.default.track(s.rMx.RANKING_ITEM_INTERACTED, {
+    request_id: t.requestId,
+    item_id: t.entry.id,
+    surface_type: i.Kd.GUILD_MEMBER_LIST,
+    channel_id: t.channelId,
+    guild_id: t.guildId,
+    interaction_type: e,
+    destination_channel_id: t.destinationChannelId,
+    destination_guild_id: t.destinationGuildId
+  })
+}

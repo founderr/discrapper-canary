@@ -1,0 +1,1 @@
+e.exports = s.p + "090652a5e6f673e62f8a.svg"

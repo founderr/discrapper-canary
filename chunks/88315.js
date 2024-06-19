@@ -1,0 +1,79 @@
+n.d(t, {
+  P7: function() {
+    return p
+  },
+  RR: function() {
+    return m
+  },
+  UN: function() {
+    return u
+  },
+  bg: function() {
+    return E
+  },
+  hn: function() {
+    return d
+  },
+  np: function() {
+    return h
+  }
+});
+var l = n(979590),
+  i = n.n(l),
+  s = n(866442),
+  a = n(220082),
+  r = n(594174),
+  o = n(292793),
+  c = n(813900);
+
+function u(e) {
+  let t = e.current,
+    n = null == t ? void 0 : t.getContext("2d");
+  if (null != t && null != n) n.clearRect(0, 0, t.width, t.height)
+}
+
+function d(e, t) {
+  let {
+    width: n,
+    height: l,
+    left: i,
+    top: s
+  } = e.getBoundingClientRect(), a = (t.clientX - i) / n;
+  return {
+    x: a,
+    y: (t.clientY - s) / l
+  }
+}
+
+function h(e, t) {
+  return Math.round(e * t * window.devicePixelRatio)
+}
+
+function m(e, t, n) {
+  return {
+    x: h(e.x, t),
+    y: h(e.y, n),
+    deltaTime: e.deltaTime
+  }
+}
+
+function p(e) {
+  return e.type === o.W.LINE
+}
+
+function E(e, t, n, l) {
+  var o;
+  let u = r.default.getUser(e),
+    d = null == u ? void 0 : u.getAvatarURL(null, c.Ks),
+    h = null != d ? null === (o = a.SR.getState().palette[d]) || void 0 === o ? void 0 : o[0] : null,
+    m = null != h ? "#".concat(i()({
+      r: h[0],
+      g: h[1],
+      b: h[2]
+    }).toHex()) : l,
+    p = (0, s.Bd)((0, s._i)(m)) > .5 ? n : t;
+  return {
+    fillColor: m,
+    outlineColor: p
+  }
+}

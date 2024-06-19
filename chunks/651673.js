@@ -1,16 +1,15 @@
-"use strict";
-var n = r(926515),
+var e = r(926515),
   i = r(24033),
-  o = r(354848),
-  u = r(332916),
-  c = r(213265),
-  a = TypeError;
-t.exports = function(t, e) {
-  var r = t.exec;
-  if (o(r)) {
-    var s = n(r, t, e);
+  u = r(354848),
+  o = r(332916),
+  a = r(213265),
+  c = TypeError;
+n.exports = function(n, t) {
+  var r = n.exec;
+  if (u(r)) {
+    var s = e(r, n, t);
     return null !== s && i(s), s
   }
-  if ("RegExp" === u(t)) return n(c, t, e);
-  throw a("RegExp#exec called on incompatible receiver")
+  if ("RegExp" === o(n)) return e(a, n, t);
+  throw c("RegExp#exec called on incompatible receiver")
 }

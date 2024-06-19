@@ -1,0 +1,58 @@
+n(47120), n(315314), n(610138), n(216116), n(78328), n(815648);
+var i = n(443684),
+  s = n(12647),
+  l = n(49012),
+  a = n(358085),
+  r = n(996106),
+  o = n(914946),
+  c = n(452426),
+  u = n(186901),
+  d = n(981631),
+  E = n(701488);
+let h = new Set([E.Fu, E.JT]);
+t.Z = {
+  [d.Etm.OPEN_EXTERNAL_LINK]: {
+    scope: {
+      [u.Gp.ANY]: [u.wE]
+    },
+    validation: e => (0, c.Z)(e).required().keys({
+      url: e.string().required()
+    }),
+    handler(e) {
+      let {
+        socket: t,
+        args: {
+          url: n
+        }
+      } = e;
+      (0, o.bu)(t.transport);
+      try {
+        let e = new URL(n);
+        a.isPlatformEmbedded && s.Z.focus(null, !0), (0, l.q)({
+          href: e.toString()
+        })
+      } catch (e) {
+        throw new r.Z({
+          errorCode: d.lTL.INVALID_COMMAND
+        }, "Invalid URL: ".concat(n))
+      }
+    }
+  },
+  [d.Etm.NAVIGATE_TO_CONNECTIONS]: {
+    validation: e => (0, c.Z)(e),
+    scope: {
+      [u.Gp.ANY]: [u.wE]
+    },
+    handler(e) {
+      let {
+        socket: t
+      } = e;
+      (0, o.bu)(t.transport);
+      let n = (0, o._f)(t.application);
+      if (!h.has(n)) throw new r.Z({
+        errorCode: d.lTL.UNAUTHORIZED_FOR_APPLICATION
+      }, "Command not available for this application");
+      (0, i.Z)(d.oAB.CONNECTIONS)
+    }
+  }
+}

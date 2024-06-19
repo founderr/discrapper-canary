@@ -1,28 +1,27 @@
-"use strict";
-t.d(s, {
+t.d(n, {
   Gf: function() {
-    return T
+    return S
   },
   OW: function() {
-    return u
+    return I
   },
   S1: function() {
-    return r
+    return l
   },
   TY: function() {
     return c
   },
   Uv: function() {
-    return d
-  },
-  _l: function() {
     return _
   },
+  _l: function() {
+    return d
+  },
   d_: function() {
-    return I
+    return N
   },
   lO: function() {
-    return o
+    return r
   },
   sI: function() {
     return a
@@ -31,89 +30,89 @@ t.d(s, {
     return E
   }
 }), t(47120);
-var n = t(570140),
+var s = t(570140),
   i = t(749210),
-  l = t(228643);
+  o = t(228643);
 
 function a(e) {
-  n.Z.dispatch({
+  s.Z.dispatch({
     type: "GUILD_SETTINGS_ROLES_SORT_UPDATE",
     roles: e
   })
 }
 
-function r() {
-  n.Z.dispatch({
+function l() {
+  s.Z.dispatch({
     type: "GUILD_SETTINGS_ROLES_INIT"
   })
 }
 
-function o(e, s, t) {
-  n.Z.dispatch({
+function r(e, n, t) {
+  s.Z.dispatch({
     type: "GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS",
     id: e,
-    flag: s,
+    flag: n,
     allow: t
   })
 }
 
 function c(e) {
-  n.Z.dispatch({
+  s.Z.dispatch({
     type: "GUILD_SETTINGS_ROLES_CLEAR_PERMISSIONS",
     id: e
   })
 }
 
-function d(e, s) {
-  n.Z.dispatch({
+function _(e, n) {
+  s.Z.dispatch({
     type: "GUILD_SETTINGS_ROLES_UPDATE_NAME",
     id: e,
-    name: s
+    name: n
   })
 }
 
-function u(e, s) {
-  n.Z.dispatch({
+function I(e, n) {
+  s.Z.dispatch({
     type: "GUILD_SETTINGS_ROLES_UPDATE_COLOR",
     id: e,
-    color: s
+    color: n
   })
 }
 
-function E(e, s, t) {
-  n.Z.dispatch({
+function E(e, n, t) {
+  s.Z.dispatch({
     type: "GUILD_SETTINGS_ROLES_UPDATE_SETTINGS",
     id: e,
-    hoist: s,
+    hoist: n,
     mentionable: t
   })
 }
 
-function _(e, s, t) {
-  n.Z.dispatch({
+function d(e, n, t) {
+  s.Z.dispatch({
     type: "GUILD_SETTINGS_ROLES_UPDATE_ROLE_ICON",
     id: e,
-    icon: s,
+    icon: n,
     unicodeEmoji: t
   })
 }
 
-function I(e, s) {
-  n.Z.dispatch({
+function N(e, n) {
+  s.Z.dispatch({
     type: "GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS",
     roleId: e,
-    roleConnectionConfigurations: s
+    roleConnectionConfigurations: n
   })
 }
-async function T(e, s, t, a, r) {
-  n.Z.dispatch({
+async function S(e, n, t, a, l) {
+  s.Z.dispatch({
     type: "GUILD_SETTINGS_ROLES_SUBMITTING"
   });
   try {
-    let n = async () => {
-      if (null == s || 0 === s.length) return;
-      let t = s.pop();
-      if (null == t || "" === t.name) return n();
+    let s = async () => {
+      if (null == n || 0 === n.length) return;
+      let t = n.pop();
+      if (null == t || "" === t.name) return s();
       await i.Z.updateRole(e, t.id, {
         name: t.name,
         description: t.description,
@@ -123,22 +122,22 @@ async function T(e, s, t, a, r) {
         mentionable: t.mentionable,
         icon: t.icon,
         unicodeEmoji: t.unicodeEmoji
-      }).then(n, n)
+      }).then(s, s)
     };
-    if (null != t && t.length > 0 ? await i.Z.batchRoleUpdate(e, t).then(n, n) : await n(), null != r && null != a)
-      for await (let s of a) {
-        let t = r.get(s);
-        await (0, l.L_)(e, s, null != t ? t : [])
+    if (null != t && t.length > 0 ? await i.Z.batchRoleUpdate(e, t).then(s, s) : await s(), null != l && null != a)
+      for await (let n of a) {
+        let t = l.get(n);
+        await (0, o.L_)(e, n, null != t ? t : [])
       }
   } catch (e) {
-    var o, c;
-    n.Z.dispatch({
+    var r, c;
+    s.Z.dispatch({
       type: "GUILD_SETTINGS_ROLES_SAVE_FAIL",
-      message: null !== (c = null === (o = e.body) || void 0 === o ? void 0 : o.message) && void 0 !== c ? c : Object.values(e.body)[0]
+      message: null !== (c = null === (r = e.body) || void 0 === r ? void 0 : r.message) && void 0 !== c ? c : Object.values(e.body)[0]
     });
     return
   }
-  n.Z.dispatch({
+  s.Z.dispatch({
     type: "GUILD_SETTINGS_ROLES_SAVE_SUCCESS"
   })
 }

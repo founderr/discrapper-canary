@@ -1,0 +1,1 @@
+e.exports = t.p + "a18766a93fcabeb09883.svg"

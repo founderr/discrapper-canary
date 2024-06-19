@@ -1,0 +1,23 @@
+n.d(t, {
+  Z: function() {
+    return s
+  }
+});
+var l = n(981631),
+  i = n(689938);
+
+function s(e) {
+  let {
+    channel: t,
+    embeddedApps: n
+  } = e;
+  if (t.type === l.d4z.GUILD_VOICE) {
+    if (null == n || !(n.length > 0)) return;
+    {
+      let e = n.map(e => e.application.name);
+      return i.Z.Messages.GUILD_SIDEBAR_VOICE_CHANNEL_DESCRIBED_BY_LABEL_ACTIVITIES.format({
+        activeActivities: e.join(", ")
+      })
+    }
+  }
+}

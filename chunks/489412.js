@@ -1,19 +1,18 @@
-"use strict";
-var n = r(936940),
+var e = r(936940),
   i = r(161581).RegExp,
-  o = n(function() {
-    var t = i("a", "y");
-    return t.lastIndex = 2, null !== t.exec("abcd")
+  u = e(function() {
+    var n = i("a", "y");
+    return n.lastIndex = 2, null !== n.exec("abcd")
   }),
-  u = o || n(function() {
+  o = u || e(function() {
     return !i("a", "y").sticky
   }),
-  c = o || n(function() {
-    var t = i("^r", "gy");
-    return t.lastIndex = 2, null !== t.exec("str")
+  a = u || e(function() {
+    var n = i("^r", "gy");
+    return n.lastIndex = 2, null !== n.exec("str")
   });
-t.exports = {
-  BROKEN_CARET: c,
-  MISSED_STICKY: u,
-  UNSUPPORTED_Y: o
+n.exports = {
+  BROKEN_CARET: a,
+  MISSED_STICKY: o,
+  UNSUPPORTED_Y: u
 }

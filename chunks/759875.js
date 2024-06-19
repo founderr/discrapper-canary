@@ -1,0 +1,29 @@
+t.d(n, {
+  Z: function() {
+    return s
+  }
+});
+var i = t(735250);
+t(470079);
+var a = t(481060),
+  l = t(346610),
+  r = t(868643),
+  o = t(996861),
+  u = t(689938);
+
+function s(e, n) {
+  let t = (0, r.a)(e),
+    {
+      canForwardMessages: s
+    } = l.w.useExperiment({
+      location: "MessageActionsMenu"
+    });
+  return t && s ? (0, i.jsx)(a.MenuItem, {
+    id: "forward",
+    label: u.Z.Messages.MESSAGE_ACTION_FORWARD,
+    icon: a.ChatArrowRightIcon,
+    action: () => {
+      (0, o.ts)(n, e)
+    }
+  }) : null
+}

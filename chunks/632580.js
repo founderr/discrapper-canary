@@ -1,0 +1,118 @@
+s.d(n, {
+  H: function() {
+    return p
+  }
+}), s(47120);
+var l = s(512722),
+  t = s.n(l),
+  i = s(570140),
+  r = s(355467),
+  a = s(976255),
+  c = s(366939),
+  o = s(16084),
+  u = s(255078),
+  d = s(626135),
+  _ = s(74538),
+  m = s(45572),
+  I = s(981631),
+  E = s(474936);
+async function p(e) {
+  let {
+    setPurchaseState: n,
+    setHasAcceptedTerms: s,
+    setIsSubmitting: l,
+    setPurchaseError: p,
+    hasRedirectURL: N,
+    setHasRedirectURL: T,
+    isGift: S,
+    baseAnalyticsData: x,
+    analyticsLocation: h,
+    analyticsLocations: P,
+    flowStartTime: v,
+    subscriptionPlan: A,
+    planGroup: f,
+    trialId: M,
+    priceOptions: g,
+    paymentSource: C,
+    isPrepaidPaymentPastDue: L,
+    openInvoiceId: R,
+    premiumSubscription: O,
+    onNext: j,
+    metadata: y,
+    sku: Z,
+    skuPricePreview: b,
+    purchaseType: D,
+    referralCode: G,
+    loadId: U,
+    giftInfoOptions: w,
+    invoicePreview: F
+  } = e;
+  n(m.A.PURCHASING), s(!0), l(!0), i.Z.wait(a.fw), p(null);
+  try {
+    let e, s, l;
+    if (d.default.track(I.rMx.PAYMENT_FLOW_COMPLETED, {
+        ...x,
+        subtotal: null == F ? void 0 : F.subtotal,
+        tax: null == F ? void 0 : F.tax,
+        expected_amount: null == F ? void 0 : F.total,
+        expected_currency: null == F ? void 0 : F.currency,
+        duration_ms: Date.now() - v
+      }), N) return;
+    if (D === I.GZQ.ONE_TIME) t()(null != Z, "SKU must exist and be fetched."), t()(null != b, "SKUPricePreview must exist."), e = await (0, o.ZZ)(Z.applicationId, Z.id, {
+      expectedAmount: b.amount,
+      expectedCurrency: b.currency,
+      isGift: S,
+      paymentSource: C,
+      loadId: U,
+      giftInfoOptions: w
+    });
+    else if (t()(null != A, "Missing subscriptionPlan"), S) {
+      t()(null != F, "Missing invoicePreview");
+      let n = F.total,
+        s = F.currency;
+      e = await (0, o.ZZ)(E.RQ, A.skuId, {
+        expectedAmount: n,
+        expectedCurrency: s,
+        paymentSource: C,
+        subscriptionPlanId: A.id,
+        isGift: !0,
+        loadId: U,
+        giftInfoOptions: w
+      })
+    } else if (L && null != R && null != C && null != O) e = I.Uk1.has(C.type) ? await (0, r.G)(O, R, C, g.currency) : await (0, r.Mg)(O, {
+      paymentSource: C,
+      currency: g.currency
+    }, P, h, U);
+    else if (null != O) {
+      let n = (0, _.al)(O, A.id, 1, new Set(f)),
+        s = {
+          paymentSource: C,
+          currency: g.currency
+        };
+      O.status === I.O0b.PAUSED ? s.status = I.O0b.ACTIVE : s.items = n, e = await (0, r.Mg)(O, s, P, h, U)
+    } else e = await (0, c.Ld)({
+      planId: A.id,
+      currency: g.currency,
+      paymentSource: C,
+      trialId: M,
+      metadata: y,
+      referralCode: G,
+      loadId: U
+    });
+    if (e.redirectConfirmation) {
+      T(null != e.redirectURL);
+      return
+    }
+    n(m.A.COMPLETED), "subscription" in e ? s = null != e.subscription ? u.Z.createFromServer(e.subscription) : null : "entitlements" in e && (l = null != e.entitlements ? e.entitlements : void 0), j(s, l)
+  } catch (e) {
+    n(m.A.FAIL), p(e), d.default.track(I.rMx.PAYMENT_FLOW_FAILED, {
+      ...x,
+      payment_error_code: null == e ? void 0 : e.code,
+      payment_source_id: null == C ? void 0 : C.id,
+      payment_source_type: null == C ? void 0 : C.type,
+      duration_ms: Date.now() - v
+    })
+  } finally {
+    !N && l(!1)
+  }
+}

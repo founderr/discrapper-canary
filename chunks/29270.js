@@ -1,0 +1,10 @@
+n.d(t, {
+  Z: function() {
+    return s
+  }
+});
+
+function s(e) {
+  let t = Number(e.content);
+  return isNaN(t) || 0 === t ? 1 : t
+}

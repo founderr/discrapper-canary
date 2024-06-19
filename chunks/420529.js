@@ -1,0 +1,78 @@
+t.d(n, {
+  Z: function() {
+    return _
+  }
+});
+var l = t(735250);
+t(470079);
+var i = t(399606),
+  u = t(481060),
+  r = t(231757),
+  a = t(397639),
+  o = t(19780),
+  s = t(979651),
+  d = t(951206),
+  c = t(446226),
+  E = t(937393),
+  C = t(721351),
+  f = t(981631),
+  N = t(689938);
+
+function _(e) {
+  let n = (0, i.e7)([o.Z], () => o.Z.getChannelId() === e.id),
+    _ = (0, c.Z)(),
+    Z = (null == _ ? void 0 : _.channelId) === e.id,
+    I = (0, a.V)(e) && !e.isPrivate(),
+    T = (0, a.Z)(e),
+    h = !(0, i.e7)([s.Z], () => s.Z.isInChannel(e.id)) && T || I,
+    S = (0, E.Z)();
+  if (!Z && 0 === S.length) return null;
+  let g = n => {
+    if (!n.twoWayLink || n.revoked) {
+      (0, r.Z)({
+        platformType: n.type,
+        location: "Console Transfer Item"
+      });
+      return
+    }
+    n.type === f.ABu.XBOX ? (0, u.openModalLazy)(async () => {
+      let {
+        default: n
+      } = await Promise.all([t.e("49237"), t.e("99387"), t.e("49368"), t.e("522")]).then(t.bind(t, 200623));
+      return t => (0, l.jsx)(n, {
+        ...t,
+        channel: e
+      })
+    }) : (n.type === f.ABu.PLAYSTATION || n.type === f.ABu.PLAYSTATION_STAGING) && (0, u.openModalLazy)(async () => {
+      let {
+        default: i
+      } = await Promise.all([t.e("99387"), t.e("638")]).then(t.bind(t, 543974));
+      return t => (0, l.jsx)(i, {
+        ...t,
+        platform: n.type,
+        channel: e
+      })
+    })
+  };
+  return (0, l.jsx)(l.Fragment, {
+    children: Z ? (0, l.jsx)(u.MenuItem, {
+      label: N.Z.Messages.TRANSFER_VOICE_TO_DEVICE,
+      id: "handoff",
+      action: () => {
+        (0, d.F)(_)
+      },
+      icon: (0, C.Z)(void 0),
+      disabled: h
+    }) : S.map(e => (0, l.jsx)(u.MenuItem, {
+      id: "transfer-".concat(e.type, "-").concat(e.id),
+      label: function(e, n) {
+        if (e === f.ABu.XBOX) return n ? N.Z.Messages.TRANSFER_VOICE_TO_XBOX : N.Z.Messages.JOIN_ON_XBOX;
+        if (e === f.ABu.PLAYSTATION) return n ? N.Z.Messages.CONSOLE_PLAYSTATION_TRANSFER_VOICE : N.Z.Messages.CONSOLE_PLAYSTATION_JOIN_VOICE;
+        if (e === f.ABu.PLAYSTATION_STAGING) return n ? N.Z.Messages.CONSOLE_PLAYSTATION_STAGING_TRANSFER_VOICE : N.Z.Messages.CONSOLE_PLAYSTATION_STAGING_JOIN_VOICE
+      }(e.type, n),
+      action: () => g(e),
+      icon: (0, C.Z)(e.type),
+      disabled: h
+    }, e.id))
+  })
+}

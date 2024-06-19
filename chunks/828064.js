@@ -1,0 +1,21 @@
+n.d(t, {
+  Z: function() {
+    return o
+  }
+});
+var r = n(735250);
+n(470079);
+var u = n(481060),
+  s = n(547972),
+  a = n(326528);
+
+function o() {
+  let e = (0, a.b)().map(e => (0, r.jsx)(u.MenuItem, {
+    id: e.id,
+    label: e.title,
+    action: () => (0, s.Z)(e.id)
+  }, e.id));
+  return (0, r.jsx)(r.Fragment, {
+    children: e
+  })
+}

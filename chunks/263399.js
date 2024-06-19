@@ -1,0 +1,28 @@
+t.d(s, {
+  H: function() {
+    return i
+  }
+});
+let n = (0, t(818083).B)({
+    kind: "user",
+    id: "2024-05_server_settings_in_user_settings",
+    label: "Server privacy settings in user settings menu",
+    defaultConfig: {
+      enabled: !1
+    },
+    treatments: [{
+      id: 1,
+      label: "Enable Server Settings in user settings",
+      config: {
+        enabled: !0
+      }
+    }]
+  }),
+  i = e => {
+    let {
+      location: s
+    } = e;
+    return n.useExperiment({
+      location: s
+    }).enabled
+  }

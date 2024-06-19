@@ -1,22 +1,21 @@
-"use strict";
-n.d(t, {
+a.d(e, {
   Z: function() {
-    return i
+    return u
   }
 });
-var o = n(735250);
-n(470079);
-var r = n(906732);
+var t = a(735250);
+a(470079);
+var l = a(906732);
 
-function i(e, t) {
-  return function(n) {
+function u(n, e) {
+  return function(a) {
     let {
-      analyticsLocations: i
-    } = (0, r.ZP)(t);
-    return (0, o.jsx)(r.Gt, {
-      value: i,
-      children: (0, o.jsx)(e, {
-        ...n
+      analyticsLocations: u
+    } = (0, l.ZP)(e);
+    return (0, t.jsx)(l.Gt, {
+      value: u,
+      children: (0, t.jsx)(n, {
+        ...a
       })
     })
   }

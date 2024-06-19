@@ -1,0 +1,87 @@
+n(47120);
+var i = n(735250);
+n(470079);
+var s = n(481060),
+  l = n(570140),
+  a = n(317770),
+  r = n(594174),
+  o = n(295226),
+  c = n(74538),
+  u = n(374023),
+  d = n(913976),
+  E = n(104494),
+  h = n(29920),
+  _ = n(786397),
+  I = n(248042),
+  m = n(318199),
+  g = n(474936);
+
+function p(e, t, n) {
+  return t in e ? Object.defineProperty(e, t, {
+    value: n,
+    enumerable: !0,
+    configurable: !0,
+    writable: !0
+  }) : e[t] = n, e
+}
+let T = "PremiumServerDriveAnnouncementModal";
+class N extends a.Z {
+  _initialize() {
+    l.Z.subscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal), l.Z.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
+  }
+  _terminate() {
+    l.Z.unsubscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal), l.Z.unsubscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
+  }
+  constructor(...e) {
+    super(...e), p(this, "maybeOpenServerDriveAnnouncementModal", (e, t) => {
+      let l = (0, m.extractAnnouncementModalContent)({
+        content: e,
+        isPreview: t
+      });
+      return null != l && ((0, s.closeModal)(T), (0, s.openModalLazy)(async () => {
+        let {
+          default: e
+        } = await Promise.resolve().then(n.bind(n, 318199));
+        return t => (0, i.jsx)(e, {
+          renderModalProps: t,
+          properties: l
+        })
+      }, {
+        modalKey: T
+      }), !0)
+    }), p(this, "handlePreview", e => {
+      let {
+        properties: t
+      } = e;
+      this.maybeOpenServerDriveAnnouncementModal(t, !0)
+    }), p(this, "getOfferFromStore", () => {
+      let e = r.default.getCurrentUser();
+      if ((0, c.I5)(e)) return {};
+      let t = [g.hs, g.RU, g.rB, g.ih].map(e => o.Z.getUserDiscountOffer(e)).filter(e => null != e && !(0, E.kA)(e)).shift();
+      if (null != t) return {
+        userDiscountOffer: t
+      };
+      let n = [g.i_, g.Cn, g.wh, g.AU, g.TL, g.ET, g.C2, g.Hk].map(e => o.Z.getUserTrialOffer(e)).filter(e => null != e && !(0, _.B)(e)).shift();
+      return null != n ? {
+        userTrialOffer: n
+      } : {}
+    }), p(this, "mayShowAnnouncementModal", async () => {
+      if (await (0, I.l2)(), !u.s.isDisallowPopupsSet()) {
+        if (!(0, s.hasAnyModalOpen)() && d.Z.getCurrentConfig({
+            location: "OfferAnnouncementManager"
+          }).enabled) {
+          for (let e of (await (0, h.H)(this.getOfferFromStore())))
+            if (this.maybeOpenServerDriveAnnouncementModal(e, !1)) break
+        }!(0, s.hasAnyModalOpen)() && await (0, I.k)() && (0, s.openModalLazy)(async () => {
+          let {
+            default: e
+          } = await Promise.all([n.e("99387"), n.e("28614")]).then(n.bind(n, 868508));
+          return t => (0, i.jsx)(e, {
+            renderModalProps: t
+          })
+        })
+      }
+    })
+  }
+}
+t.Z = new N

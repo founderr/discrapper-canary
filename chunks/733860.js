@@ -1,37 +1,36 @@
-"use strict";
-var r = n(147018),
-  i = n(339718),
-  a = n(49693),
-  o = n(610148),
-  s = n(708517),
-  u = n(886960),
-  c = 1 !== [].unshift(0);
-r({
+var e = r(147018),
+  i = r(339718),
+  u = r(49693),
+  o = r(610148),
+  a = r(708517),
+  c = r(886960),
+  s = 1 !== [].unshift(0);
+e({
   target: "Array",
   proto: !0,
   arity: 1,
-  forced: c || ! function() {
+  forced: s || ! function() {
     try {
       Object.defineProperty([], "length", {
         writable: !1
       }).unshift()
-    } catch (e) {
-      return e instanceof TypeError
+    } catch (n) {
+      return n instanceof TypeError
     }
   }()
 }, {
-  unshift: function(e) {
+  unshift: function(n) {
     var t = i(this),
-      n = a(t),
-      r = arguments.length;
-    if (r) {
-      u(n + r);
-      for (var c = n; c--;) {
-        var l = c + r;
-        c in t ? t[l] = t[c] : s(t, l)
+      r = u(t),
+      e = arguments.length;
+    if (e) {
+      c(r + e);
+      for (var s = r; s--;) {
+        var f = s + e;
+        s in t ? t[f] = t[s] : a(t, f)
       }
-      for (var d = 0; d < r; d++) t[d] = arguments[d]
+      for (var l = 0; l < e; l++) t[l] = arguments[l]
     }
-    return o(t, n + r)
+    return o(t, r + e)
   }
 })

@@ -1,0 +1,56 @@
+n.d(t, {
+  r: function() {
+    return d
+  }
+});
+var s = n(735250);
+n(470079);
+var a = n(481060),
+  i = n(204197),
+  l = n(998502),
+  r = n(689938),
+  o = n(297676);
+let c = l.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar,
+  d = e => {
+    let {
+      user: t,
+      avatarSize: n = a.AvatarSizes.SIZE_48
+    } = e, {
+      avatarSrc: l,
+      avatarDecorationSrc: d,
+      eventHandlers: u
+    } = (0, i.Z)({
+      user: t,
+      size: n
+    });
+    return (0, s.jsx)("div", {
+      ...u,
+      children: (0, s.jsx)(c, {
+        className: o.__invalid_avatar,
+        src: l,
+        avatarDecoration: d,
+        size: n,
+        "aria-label": r.Z.Messages.FAMILY_CENTER_AVATAR_ARIA.format({
+          name: t.username
+        })
+      })
+    })
+  };
+t.Z = e => {
+  let {
+    currentUser: t,
+    otherUser: n,
+    children: a
+  } = e;
+  return (0, s.jsx)("div", {
+    className: o.avatarPairContainer,
+    children: (0, s.jsxs)("div", {
+      className: o.avatarPair,
+      children: [(0, s.jsx)(d, {
+        user: t
+      }), a, (0, s.jsx)(d, {
+        user: n
+      })]
+    })
+  })
+}

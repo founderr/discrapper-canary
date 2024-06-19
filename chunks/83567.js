@@ -1,0 +1,86 @@
+n(47120);
+var i = n(570140),
+  s = n(457330),
+  l = n(726542),
+  a = n(231757),
+  r = n(553795),
+  o = n(585483),
+  c = n(996106),
+  u = n(914946),
+  d = n(452426),
+  E = n(186901),
+  h = n(981631),
+  _ = n(701488),
+  I = n(231338);
+let m = new Set([_.Fu, _.JT]);
+t.Z = {
+  [I.Et.GET_PROVIDER_ACCESS_TOKEN]: {
+    scope: {
+      [E.Gp.ANY]: [E.wE]
+    },
+    validation: e => (0, d.Z)(e).required().keys({
+      provider: e.string().required(),
+      connection_redirect: e.string()
+    }),
+    handler: e => {
+      let {
+        socket: t,
+        args: {
+          provider: n,
+          connection_redirect: d
+        }
+      } = e;
+      (0, u.bu)(t.transport);
+      let E = (0, u._f)(t.application),
+        _ = l.Z.get(n);
+      if (null == _) throw new c.Z({
+        errorCode: I.lT.INVALID_PROVIDER
+      }, 'Platform not found for provider "'.concat(n, '"'));
+      if (n === h.ABu.AMAZON_MUSIC) {
+        if (!m.has(E)) throw new c.Z({
+          errorCode: I.lT.UNAUTHORIZED_FOR_APPLICATION
+        }, "Command not available for this application")
+      } else throw new c.Z({
+        errorCode: I.lT.UNAUTHORIZED_FOR_APPLICATION
+      }, "Command not available for this application");
+      return new Promise(async (e, t) => {
+        let l = r.Z.getAccount(null, n);
+        if (null == l) {
+          function u(t) {
+            var n;
+            if (null == _) return;
+            let i = (null !== (n = t.accounts) && void 0 !== n ? n : []).find(e => e.type === _.type);
+            null != i && (e({
+              access_token: i.access_token
+            }), m())
+          }
+
+          function E() {
+            t(new c.Z({
+              errorCode: I.lT.OAUTH2_ERROR
+            }, 'OAuth2 setup for "'.concat(n, '" failed'))), m()
+          }
+
+          function m() {
+            i.Z.unsubscribe("USER_CONNECTIONS_UPDATE", u), o.S.unsubscribe(h.CkL.CONNECTIONS_CALLBACK_ERROR, E)
+          }
+          i.Z.subscribe("USER_CONNECTIONS_UPDATE", u), o.S.subscribe(h.CkL.CONNECTIONS_CALLBACK_ERROR, E), (0, a.Z)({
+            platformType: _.type,
+            location: h.Sbl.ACTIVITY_RPC,
+            successRedirect: d
+          })
+        } else try {
+          let t = await s.Z.refreshAccessToken(_.type, l.id);
+          if (null == t) throw new c.Z({
+            errorCode: I.lT.OAUTH2_ERROR
+          }, "Refreshing access token did not return a new access token");
+          e({
+            access_token: t
+          })
+        } catch (e) {
+          t(e)
+        }
+      })
+    }
+  }
+}

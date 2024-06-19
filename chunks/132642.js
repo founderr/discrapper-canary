@@ -1,0 +1,1 @@
+e.exports = a.p + "8cb0243cca07ceea4c6f.svg"

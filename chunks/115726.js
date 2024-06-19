@@ -1,40 +1,39 @@
-"use strict";
-var n = r(581031),
+var e = r(581031),
   i = r(339718),
-  o = Math.floor,
-  u = n("".charAt),
-  c = n("".replace),
-  a = n("".slice),
+  u = Math.floor,
+  o = e("".charAt),
+  a = e("".replace),
+  c = e("".slice),
   s = /\$([$&'`]|\d{1,2}|<[^>]*>)/g,
   f = /\$([$&'`]|\d{1,2})/g;
-t.exports = function(t, e, r, n, l, v) {
-  var p = r + t.length,
-    d = n.length,
-    x = f;
-  return void 0 !== l && (l = i(l), x = s), c(v, x, function(i, c) {
+n.exports = function(n, t, r, e, l, h) {
+  var v = r + n.length,
+    p = e.length,
+    d = f;
+  return void 0 !== l && (l = i(l), d = s), a(h, d, function(i, a) {
     var s;
-    switch (u(c, 0)) {
+    switch (o(a, 0)) {
       case "$":
         return "$";
       case "&":
-        return t;
+        return n;
       case "`":
-        return a(e, 0, r);
+        return c(t, 0, r);
       case "'":
-        return a(e, p);
+        return c(t, v);
       case "<":
-        s = l[a(c, 1, -1)];
+        s = l[c(a, 1, -1)];
         break;
       default:
-        var f = +c;
+        var f = +a;
         if (0 === f) return i;
-        if (f > d) {
-          var v = o(f / 10);
-          if (0 === v) return i;
-          if (v <= d) return void 0 === n[v - 1] ? u(c, 1) : n[v - 1] + u(c, 1);
+        if (f > p) {
+          var h = u(f / 10);
+          if (0 === h) return i;
+          if (h <= p) return void 0 === e[h - 1] ? o(a, 1) : e[h - 1] + o(a, 1);
           return i
         }
-        s = n[f - 1]
+        s = e[f - 1]
     }
     return void 0 === s ? "" : s
   })

@@ -1,18 +1,17 @@
-"use strict";
-t.d(s, {
+i.d(n, {
   Z: function() {
-    return a
+    return t
   }
 });
-var n = t(531643),
-  i = t(403182),
-  l = t(689938);
+var a = i(531643),
+  s = i(403182),
+  l = i(689938);
 
-function a(e) {
-  (0, n.openUploadError)({
+function t(e) {
+  (0, a.openUploadError)({
     title: l.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
     help: l.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
-      maxSize: (0, i.Ng)(e)
+      maxSize: (0, s.Ng)(e)
     })
   })
 }

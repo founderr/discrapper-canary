@@ -1,0 +1,11 @@
+var i = {
+  lastWeek: "eeee 'tuần trước v\xe0o l\xfac' p",
+  yesterday: "'h\xf4m qua v\xe0o l\xfac' p",
+  today: "'h\xf4m nay v\xe0o l\xfac' p",
+  tomorrow: "'ng\xe0y mai v\xe0o l\xfac' p",
+  nextWeek: "eeee 'tới v\xe0o l\xfac' p",
+  other: "P"
+};
+n.Z = function(t, n, e, a) {
+  return i[t]
+}

@@ -1,0 +1,69 @@
+n.d(t, {
+  Z: function() {
+    return h
+  }
+});
+var i = n(735250),
+  s = n(470079),
+  l = n(120356),
+  a = n.n(l),
+  r = n(481060),
+  o = n(63063),
+  c = n(113434),
+  u = n(981631),
+  d = n(689938),
+  E = n(770884);
+
+function h(e) {
+  let {
+    setSelectedFilter: t,
+    selectedFilter: n
+  } = e, l = [{
+    id: c.W6.UNCLAIMED,
+    label: d.Z.Messages.QUESTS_ALL
+  }, {
+    id: c.W6.CLAIMED,
+    label: d.Z.Messages.QUESTS_CLAIMED
+  }], h = s.useCallback(() => {
+    window.open(o.Z.getArticleURL(u.BhN.QUESTS_LEARN_MORE))
+  }, []), _ = s.useCallback(e => {
+    t(e)
+  }, [t]);
+  return (0, i.jsxs)(r.TabBar, {
+    className: a()(E.container),
+    selectedItem: n,
+    onItemSelect: e => _(e),
+    type: "top",
+    "aria-label": d.Z.Messages.QUESTS,
+    orientation: "horizontal",
+    children: [l.map(e => {
+      let t = e.id === n;
+      return (0, i.jsx)(r.TabBar.Item, {
+        id: e.id,
+        className: a()(E.tab, {
+          [E.selected]: t
+        }),
+        "aria-label": e.label,
+        disableItemStyles: !0,
+        children: (0, i.jsx)(r.Text, {
+          variant: "text-md/semibold",
+          color: t ? "text-brand" : "text-primary",
+          children: e.label
+        })
+      }, e.id)
+    }), (0, i.jsxs)(r.Button, {
+      onClick: h,
+      className: E.button,
+      innerClassName: E.innerButton,
+      children: [(0, i.jsx)(r.Text, {
+        variant: "text-md/semibold",
+        color: "text-muted",
+        className: E.externalLinkText,
+        children: d.Z.Messages.LEARN_MORE
+      }), (0, i.jsx)(r.LinkExternalSmallIcon, {
+        className: E.icon,
+        color: "var(--text-muted)"
+      })]
+    })]
+  })
+}
