@@ -5,13 +5,13 @@ n.d(t, {
     return el
   },
   $J: function() {
-    return em
+    return eO
   },
   AV: function() {
     return W
   },
   Bz: function() {
-    return eR
+    return ep
   },
   CE: function() {
     return D
@@ -21,6 +21,9 @@ n.d(t, {
   },
   GN: function() {
     return K
+  },
+  Gh: function() {
+    return eN
   },
   Gs: function() {
     return Z
@@ -68,7 +71,7 @@ n.d(t, {
     return k
   },
   il: function() {
-    return eN
+    return eA
   },
   j8: function() {
     return B
@@ -555,7 +558,7 @@ function ed(e) {
     taskDetails: s
   } = e, o = n.config.messages.gameTitle, a = m.r.build(n.config).defaultReward.messages.nameWithArticle, {
     targetMinutes: l
-  } = null != s ? s : eN({
+  } = null != s ? s : eA({
     quest: n,
     location: i
   }), u = e_(n, R.S7.IN_HOUSE_CONSOLE_QUEST), _ = X(n.config), c = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null;
@@ -567,7 +570,7 @@ function ed(e) {
     rewardNameWithArticle: a,
     duration: _
   });
-  if (em(n)) return null != _ ? p.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
+  if (eO(n)) return null != _ ? p.Z.Messages.QUEST_BAR_SUBTITLE_PLAY_GAME_WITH_EXPIRING_COLLECTIBLE_REWARD.format({
     gameTitle: o,
     targetMinutes: l,
     rewardNameWithArticle: a,
@@ -655,20 +658,35 @@ let eI = (e, t) => {
   ef = e => {
     var t, n;
     let {
-      quest: i
+      quest: i,
+      consoleOnly: r
     } = e;
     for (let e of Object.values(null !== (n = null === (t = i.userStatus) || void 0 === t ? void 0 : t.progress) && void 0 !== n ? n : {}).sort((e, t) => (null == e ? void 0 : e.updatedAt) != null && (null == t ? void 0 : t.updatedAt) != null && e.updatedAt > t.updatedAt ? -1 : 1).filter(I.lm)) {
       let t = eS(e.eventName);
-      if (null != t) return eh({
-        quest: i,
-        taskType: t
-      })
+      if (null != t) {
+        if (!0 !== r || o.T.CONSOLE.has(t)) return eh({
+          quest: i,
+          taskType: t
+        })
+      }
     }
     return eh({
       quest: i
     })
   },
-  eN = e => {
+  eN = e => (0, s.EQ)(e).with({
+    config: {
+      configVersion: 1
+    }
+  }, () => null).with({
+    config: {
+      configVersion: 2
+    }
+  }, e => em(e) ? ef({
+    quest: e,
+    consoleOnly: !0
+  }) : null).exhaustive(),
+  eA = e => {
     let {
       quest: t,
       location: n
@@ -698,7 +716,7 @@ let eI = (e, t) => {
       targetMinutes: 1,
       percentComplete: 0,
       taskType: o.X.STREAM_ON_DESKTOP
-    } : eA(e) ? ef({
+    } : em(e) ? ef({
       quest: e
     }) : el({
       quest: e,
@@ -711,8 +729,8 @@ let eI = (e, t) => {
       taskType: o.X.STREAM_ON_DESKTOP
     })).exhaustive()
   };
-let eA = (i = [o.X.PLAY_ON_XBOX, o.X.PLAY_ON_PLAYSTATION], e => i.some(t => null != e.config.taskConfig.tasks[t])),
-  em = e => (0, s.EQ)(e).with({
+let em = (i = [o.X.PLAY_ON_XBOX, o.X.PLAY_ON_PLAYSTATION], e => i.some(t => null != e.config.taskConfig.tasks[t])),
+  eO = e => (0, s.EQ)(e).with({
     config: {
       configVersion: 1
     }
@@ -720,15 +738,15 @@ let eA = (i = [o.X.PLAY_ON_XBOX, o.X.PLAY_ON_PLAYSTATION], e => i.some(t => null
     config: {
       configVersion: 2
     }
-  }, eA).exhaustive(),
-  eO = (e, t) => {
+  }, em).exhaustive(),
+  eR = (e, t) => {
     var n, i;
     let r = null == e ? void 0 : null === (i = e.progress[t]) || void 0 === i ? void 0 : null === (n = i.heartbeat) || void 0 === n ? void 0 : n.expiresAt;
     if (null == r) return !1;
     let s = new Date(r).valueOf();
     return !isNaN(s) && s > Date.now()
   },
-  eR = e => (0, s.EQ)(e).with({
+  ep = e => (0, s.EQ)(e).with({
     config: {
       configVersion: 1
     }
@@ -736,4 +754,4 @@ let eA = (i = [o.X.PLAY_ON_XBOX, o.X.PLAY_ON_PLAYSTATION], e => i.some(t => null
     config: {
       configVersion: 2
     }
-  }, e => null != e.userStatus && (eO(e.userStatus, o.X.PLAY_ON_XBOX) || eO(e.userStatus, o.X.PLAY_ON_PLAYSTATION))).exhaustive()
+  }, e => null != e.userStatus && (eR(e.userStatus, o.X.PLAY_ON_XBOX) || eR(e.userStatus, o.X.PLAY_ON_PLAYSTATION))).exhaustive()

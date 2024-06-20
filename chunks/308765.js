@@ -328,6 +328,10 @@ let r = {
     actions: ["QUESTS_FETCH_CURRENT_QUESTS_BEGIN", "POST_CONNECTION_OPEN", "RUNNING_GAMES_CHANGE", "USER_SETTINGS_PROTO_UPDATE", "LOGOUT"],
     inlineRequire: () => n(877519).Z
   },
+  ConsoleQuestOptimisticUpdatesManager: {
+    actions: ["QUESTS_FETCH_CURRENT_QUESTS_SUCCESS", "QUESTS_ENROLL_SUCCESS", "QUESTS_CLAIM_REWARD_SUCCESS", "QUESTS_USER_STATUS_UPDATE"],
+    inlineRequire: () => n(705951).Z
+  },
   VoiceChannelGameActivityManager: {
     actions: ["RUNNING_GAMES_CHANGE", "VOICE_CHANNEL_SELECT"],
     inlineRequire: () => n(981668).Z,
