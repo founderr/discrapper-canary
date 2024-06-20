@@ -29,9 +29,9 @@ var i = s(735250),
   j = s(318661),
   Z = s(25990),
   M = s(594174),
-  R = s(626135),
-  D = s(74538),
-  B = s(335131),
+  D = s(626135),
+  B = s(74538),
+  R = s(335131),
   b = s(1870),
   k = s(884697),
   U = s(188584),
@@ -142,12 +142,12 @@ let en = e => {
       returnRef: _
     } = e, {
       analyticsLocations: h
-    } = (0, x.ZP)(), v = D.ZP.canUseCollectibles(r), {
+    } = (0, x.ZP)(), v = B.ZP.canUseCollectibles(r), {
       isPurchased: N,
       isPartiallyPurchased: A
     } = (0, F.L)(n), O = (0, d.e7)([b.Z], () => b.Z.isClaiming === n.skuId), P = (0, p.Z)({
       analyticsLocations: h
-    }), j = (0, L.ZP)(), Z = (0, c.wj)(j), M = (0, k.G1)(n), R = (0, k.ql)(n, ee.tuJ.DEFAULT), H = (null == R ? void 0 : R.amount) === 0, {
+    }), j = (0, L.ZP)(), Z = (0, c.wj)(j), M = (0, k.G1)(n), D = (0, k.ql)(n, ee.tuJ.DEFAULT), H = (null == D ? void 0 : D.amount) === 0, {
       firstAvatarDecoration: V,
       firstProfileEffect: W
     } = (0, w.R)(n), X = l.useMemo(() => (0, k.BH)(n, v), [n, v]), q = l.useCallback(() => {
@@ -242,7 +242,7 @@ let en = e => {
               submittingStartedLabel: ei.Z.Messages.COLLECTIBLES_COLLECTING,
               submittingFinishedLabel: ei.Z.Messages.COLLECTIBLES_COLLECTING_FINISHED,
               onClick: async () => {
-                await (0, B.fK)(n.skuId), I(), (0, J.Z)({
+                await (0, R.fK)(n.skuId), I(), (0, J.Z)({
                   product: n,
                   analyticsLocations: h
                 })
@@ -266,7 +266,7 @@ let en = e => {
         }), (0, i.jsx)(u.Text, {
           className: a()(el.disclaimer, !Z && el.disclaimerLight),
           variant: "text-xxs/normal",
-          children: N ? null : M ? ei.Z.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER : (0, k.x6)(n) ? ei.Z.Messages.COLLECTIBLES_DETAILS_MODAL_PREMIUM_PURCHASE_DISCLAIMER : n.type === o.Z.PROFILE_EFFECT ? ei.Z.Messages.COLLECTIBLES_DETAILS_MODAL_PROFILE_EFFECT_PREMIUM_PURCHASE_DISCLAIMER : ei.Z.Messages.COLLECTIBLES_DETAILS_MODAL_PREMIUM_PURCHASE_DISCLAIMER
+          children: N ? null : M ? ei.Z.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER : (0, k.x6)(n) ? ei.Z.Messages.COLLECTIBLES_DETAILS_MODAL_BUNDLE_PURCHASE_DISCLAIMER : n.type === o.Z.PROFILE_EFFECT ? ei.Z.Messages.COLLECTIBLES_DETAILS_MODAL_PROFILE_EFFECT_PREMIUM_PURCHASE_DISCLAIMER : ei.Z.Messages.COLLECTIBLES_DETAILS_MODAL_PREMIUM_PURCHASE_DISCLAIMER
         })]
       })]
     })
@@ -275,7 +275,7 @@ let en = e => {
     let {
       product: t,
       user: s
-    } = e, l = D.ZP.canUsePremiumProfileCustomization(s), n = (0, d.cj)([Z.Z], () => Z.Z.getAllPending()), a = (0, j.le)(s.id), r = t.type === o.Z.AVATAR_DECORATION, c = !!(null == a ? void 0 : a.getPreviewBio(n.pendingBio).value), [u] = t.items, {
+    } = e, l = B.ZP.canUsePremiumProfileCustomization(s), n = (0, d.cj)([Z.Z], () => Z.Z.getAllPending()), a = (0, j.le)(s.id), r = t.type === o.Z.AVATAR_DECORATION, c = !!(null == a ? void 0 : a.getPreviewBio(n.pendingBio).value), [u] = t.items, {
       firstAvatarDecoration: E,
       firstProfileEffect: C
     } = (0, w.R)(t), m = null != C, {
@@ -370,13 +370,13 @@ t.default = e => {
   let [_] = r.items;
   return (l.useEffect(() => {
     let e = (null == _ ? void 0 : _.type) === o.Z.AVATAR_DECORATION ? "avatar decoration" : "profile effect";
-    R.default.track(ee.rMx.OPEN_MODAL, {
+    D.default.track(ee.rMx.OPEN_MODAL, {
       type: ee.jXE.COLLECTIBLES_SHOP_DETAILS_MODAL,
       source: C,
       location_stack: T,
       sku_id: r.skuId,
       product_type: e
-    }), r.items.map(B.oK)
+    }), r.items.map(R.oK)
   }, [C, T, r.skuId, r.items, null == _ ? void 0 : _.type]), null == L) ? null : (0, i.jsx)(x.Gt, {
     value: T,
     children: (0, i.jsx)(u.ModalRoot, {
