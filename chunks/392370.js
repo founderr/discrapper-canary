@@ -257,6 +257,18 @@ function N(e) {
         return t => (0, I.$d)(t).toLocaleLowerCase().startsWith(e.toLocaleLowerCase())
       }(e = n), function(e) {
         return t => (0, I.$d)(t).toLocaleLowerCase().includes(e.toLocaleLowerCase())
+      }(e), function(e) {
+        return t => {
+          var n, i;
+          let r = null === (n = (0, I.jD)(t)) || void 0 === n ? void 0 : n.toLocaleLowerCase();
+          return null !== (i = null == r ? void 0 : r.startsWith(e.toLocaleLowerCase())) && void 0 !== i && i
+        }
+      }(e), function(e) {
+        return t => {
+          var n, i;
+          let r = null === (n = (0, I.jD)(t)) || void 0 === n ? void 0 : n.toLocaleLowerCase();
+          return null !== (i = null == r ? void 0 : r.includes(e.toLocaleLowerCase())) && void 0 !== i && i
+        }
       }(e)],
       sortComparers: [h, S]
     })

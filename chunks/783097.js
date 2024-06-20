@@ -10,13 +10,16 @@ n.d(t, {
     return E
   },
   Y$: function() {
-    return S
-  },
-  sl: function() {
     return f
   },
-  ye: function() {
+  jD: function() {
     return h
+  },
+  sl: function() {
+    return N
+  },
+  ye: function() {
+    return S
   }
 }), n(789020);
 var i = n(668781),
@@ -42,6 +45,10 @@ function T(e) {
 }
 
 function h(e) {
+  return I(e) ? e.description : d.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
+}
+
+function S(e) {
   var t;
   let {
     application: n
@@ -49,7 +56,7 @@ function h(e) {
   return I(n) && (0, u.yE)(null !== (t = n.flags) && void 0 !== t ? t : 0, _.udG.EMBEDDED)
 }
 
-function S(e) {
+function f(e) {
   let {
     command: t,
     optionValues: n,
@@ -87,7 +94,7 @@ function S(e) {
   return I()
 }
 
-function f(e) {
+function N(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
     {
       fakeAppIconURL: n,
