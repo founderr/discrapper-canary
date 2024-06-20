@@ -70504,7 +70504,9 @@ html .invoiceCancelRow_bca5ca {
 }
 
 .circleSVG_d37103 {
-    overflow: visible
+    overflow: visible;
+    height: 100%;
+    width: 100%
 }
 
 .nitroGemAnimation_ba5739 {

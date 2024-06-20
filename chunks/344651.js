@@ -297,6 +297,7 @@ B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.o.loadGuildIds([e.id
           type: "CONNECTION_OPEN",
           sessionId: e.session_id,
           authSessionIdHash: e.auth_session_id_hash,
+          staticAuthSessionId: e.static_client_session_id,
           user: e.user,
           users: e.users,
           guilds: r,
