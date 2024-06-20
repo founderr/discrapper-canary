@@ -18,7 +18,7 @@ var l = n(735250),
   h = n(475179),
   m = n(904245),
   p = n(372900),
-  E = n(200120),
+  E = n(905405),
   g = n(937889),
   f = n(739566),
   C = n(378233),
@@ -39,7 +39,7 @@ function L(e) {
   var t;
   let {
     message: n
-  } = e, s = (0, c.e7)([x.Z], () => x.Z.isBlockedForMessage(n)), r = (0, f.Uj)(n), o = i.useContext(p.Z), [d, I] = i.useState(!1), Z = (0, E.B)(), S = i.useCallback(e => {
+  } = e, s = (0, c.e7)([x.Z], () => x.Z.isBlockedForMessage(n)), r = (0, f.Uj)(n), o = i.useContext(p.Z), [d, I] = i.useState(!1), Z = (0, E.p)(), S = i.useCallback(e => {
     if ("A" !== e.target.nodeName) h.Z.updateChatOpen(n.channel_id, !0), m.Z.jumpToMessage({
       channelId: n.channel_id,
       messageId: n.id,
@@ -47,7 +47,7 @@ function L(e) {
     })
   }, [n.channel_id, n.id]), v = null != n.content && "" !== n.content ? (0, g.ZP)(n, {
     isInteracting: d,
-    shouldFilterKeywords: null != Z
+    shouldFilterKeywords: Z
   }).content : null, {
     contentPlaceholder: A,
     renderedContent: j,

@@ -6,7 +6,7 @@ n.d(t, {
 var s = n(735250),
   i = n(470079),
   l = n(442837),
-  a = n(200120),
+  a = n(905405),
   r = n(869765),
   o = n(699516),
   c = n(512665),
@@ -19,9 +19,9 @@ let _ = i.memo(function(e) {
     channel: n,
     referencedMessage: E,
     compact: _ = !1
-  } = e, I = E.state === r.Y.LOADED ? E.message : void 0, T = (0, a.B)(), N = i.useMemo(() => (null == I ? void 0 : I.content) != null && "" !== I.content ? (0, u.ZP)(I, {
+  } = e, I = E.state === r.Y.LOADED ? E.message : void 0, T = (0, a.p)(), N = i.useMemo(() => (null == I ? void 0 : I.content) != null && "" !== I.content ? (0, u.ZP)(I, {
     formatInline: !0,
-    shouldFilterKeywords: null != T
+    shouldFilterKeywords: T
   }).content : null, [I, T]), m = (0, l.e7)([o.Z], () => null != I && o.Z.isBlockedForMessage(I), [I]), h = (0, d.Uj)(I), C = (0, d.Uj)(t);
   return (0, s.jsx)(c.Z, {
     repliedAuthor: h,

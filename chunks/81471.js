@@ -4,7 +4,7 @@ var i = n(735250),
   a = n.n(l),
   r = n(442837),
   o = n(481060),
-  c = n(200120),
+  c = n(905405),
   u = n(255269),
   d = n(937889),
   E = n(695346),
@@ -25,12 +25,12 @@ let A = s.memo(function(e) {
     loaded: n,
     error: l,
     message: A
-  } = (0, g.a)(t), f = (0, c.B)(), Z = (0, r.e7)([_.Z], () => null != A && _.Z.isBlockedForMessage(A), [A]), v = (0, r.e7)([h.Z], () => h.Z.can(p.Plq.MANAGE_MESSAGES, t)), L = E.cC.useSetting(), {
+  } = (0, g.a)(t), f = (0, c.p)(), Z = (0, r.e7)([_.Z], () => null != A && _.Z.isBlockedForMessage(A), [A]), v = (0, r.e7)([h.Z], () => h.Z.can(p.Plq.MANAGE_MESSAGES, t)), L = E.cC.useSetting(), {
     content: O
   } = s.useMemo(() => (null == A ? void 0 : A.content) != null && "" !== A.content ? (0, d.ZP)(A, {
     formatInline: !0,
     noStyleAndInteraction: !0,
-    shouldFilterKeywords: null != f
+    shouldFilterKeywords: f
   }) : {
     content: null
   }, [A, f]), R = null;

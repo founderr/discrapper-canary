@@ -7,7 +7,7 @@ var s = n(735250),
   i = n(470079),
   l = n(442837),
   a = n(58540),
-  r = n(200120),
+  r = n(905405),
   o = n(937889),
   c = n(123145),
   u = n(699516),
@@ -19,13 +19,13 @@ function I(e) {
   let {
     message: t,
     channel: n
-  } = e, I = (0, l.e7)([u.Z], () => u.Z.isBlockedForMessage(t)), T = (0, r.B)(), N = i.useMemo(() => ({
+  } = e, I = (0, l.e7)([u.Z], () => u.Z.isBlockedForMessage(t)), T = (0, r.p)(), N = i.useMemo(() => ({
     [n.guild_id]: [t.author.id]
   }), [n.guild_id, t.author.id]);
   (0, a.$)(N);
   let m = i.useMemo(() => null != t.content && "" !== t.content ? (0, o.ZP)(t, {
     formatInline: !0,
-    shouldFilterKeywords: null != T
+    shouldFilterKeywords: T
   }).content : null, [t, T]);
   return (0, s.jsxs)("div", {
     className: _.threadMessageAccessory,

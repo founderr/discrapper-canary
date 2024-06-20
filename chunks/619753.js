@@ -14,7 +14,7 @@ var l = n(735250),
   d = n(607070),
   h = n(933557),
   m = n(995123),
-  p = n(200120),
+  p = n(905405),
   E = n(255269),
   g = n(937889),
   f = n(703656),
@@ -176,7 +176,7 @@ function y(e) {
     jumpToMessage: P,
     listNavigator: y,
     favoriteSearch: b
-  } = e, D = _.cC.useSetting(), U = (0, p.B)(), k = i.useCallback(e => {
+  } = e, D = _.cC.useSetting(), U = (0, p.p)(), k = i.useCallback(e => {
     if (e === S.Z.getChannelId()) return;
     let t = I.Z.getChannel(e);
     if (null != t && !!T.Z.can(j.Plq.VIEW_CHANNEL, t))(0, C.Kh)(t.id)
@@ -187,7 +187,7 @@ function y(e) {
     embeds: []
   }, {
     postProcessor: o,
-    shouldFilterKeywords: null != U
+    shouldFilterKeywords: U
   }), Y = i.useRef(null), [K, q] = i.useState(!1);
   i.useEffect(() => {
     let e = Y.current;

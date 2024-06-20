@@ -9,7 +9,7 @@ var l = n(735250),
   a = n(25209),
   r = n(39154),
   o = n(35125),
-  c = n(200120),
+  c = n(905405),
   u = n(628238),
   d = n(499401),
   h = n(693912),
@@ -33,7 +33,7 @@ let N = i.memo(function(e) {
     referencedUsernameProfile: v,
     referencedAvatarProfile: A,
     setPopout: M
-  } = e, R = N.state === m.Y.LOADED ? N.message : void 0, j = (0, C.Uj)(R), L = (0, c.B)(), O = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = i.useMemo(() => {
+  } = e, R = N.state === m.Y.LOADED ? N.message : void 0, j = (0, C.Uj)(R), L = (0, c.p)(), O = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = i.useMemo(() => {
     if (null == R) return null;
     let e = (0, r.Z)(R);
     if (e.type === x.uaV.USER_JOIN) {
@@ -65,7 +65,7 @@ let N = i.memo(function(e) {
       let t = {
           formatInline: !0,
           allowLinks: !0,
-          shouldFilterKeywords: null != L
+          shouldFilterKeywords: L
         },
         n = e.isFirstMessageInForumPost(Z) ? {
           ...t,

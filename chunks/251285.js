@@ -6,14 +6,14 @@ n.d(t, {
 var l = n(442837),
   i = n(963374),
   s = n(735020),
-  a = n(200120),
+  a = n(905405),
   r = n(786761),
   o = n(937889),
   c = n(699516),
   u = n(768119);
 
 function d(e) {
-  let t = (0, a.B)(),
+  let t = (0, a.p)(),
     n = (0, l.e7)([u.Z, s.Z], () => {
       var n;
       let l = u.Z.getQuery(e),
@@ -30,7 +30,7 @@ function d(e) {
           postProcessor: c,
           allowHeading: !0,
           allowList: !0,
-          shouldFilterKeywords: null != t
+          shouldFilterKeywords: t
         })) : l
       }))
     }, [e, t], l.pF),

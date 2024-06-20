@@ -10,7 +10,7 @@ var a = t(735250),
   i = t(99690),
   o = t(58540),
   c = t(995123),
-  d = t(200120),
+  d = t(905405),
   u = t(937889),
   h = t(739566),
   m = t(271383),
@@ -75,11 +75,11 @@ function C(e) {
       colorString: g
     } = (0, h.ZP)(t),
     I = (0, r.e7)([f.Z], () => f.Z.isBlockedForMessage(t)),
-    x = (0, d.B)(),
+    x = (0, d.p)(),
     N = s.useMemo(() => {
       let e = null != t.content && "" !== t.content ? (0, u.ZP)(t, {
           formatInline: !0,
-          shouldFilterKeywords: null != x
+          shouldFilterKeywords: x
         }).content : null,
         {
           contentPlaceholder: n,

@@ -5,7 +5,7 @@ n.d(t, {
   }
 });
 var i = n(470079),
-  r = n(200120),
+  r = n(905405),
   s = n(626135),
   o = n(937889),
   a = n(761910),
@@ -26,7 +26,7 @@ function c(e, t) {
     allowSubtext: f = !1,
     previewLinkTarget: N = !1,
     viewingChannelId: A
-  } = t, m = (0, r.B)();
+  } = t, m = (0, r.p)();
   return i.useMemo(() => null != e.customRenderedContent ? e.customRenderedContent : e.isUnsupported ? {
     content: u.Z.Messages.MESSAGE_UNSUPPORTED,
     hasSpoilerEmbeds: !1
@@ -45,7 +45,7 @@ function c(e, t) {
     allowSubtext: f,
     allowDevLinks: S,
     previewLinkTarget: N,
-    shouldFilterKeywords: null != m,
+    shouldFilterKeywords: m,
     viewingChannelId: A
   }), [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, n, c, d, E, I, T, h, N, f, m])
 }
