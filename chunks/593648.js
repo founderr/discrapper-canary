@@ -360,7 +360,7 @@ class z extends i.PureComponent {
           onChange: this.handleToggleShowUnreadBadge,
           children: y.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_LABEL
         })
-      }), _ ? (0, n.jsx)(M.F, {
+      }), (0, n.jsx)(M.F, {
         setting: G.s6.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING,
         children: (0, n.jsx)(E.FormSwitch, {
           className: H.marginBottom40,
@@ -369,7 +369,7 @@ class z extends i.PureComponent {
           onChange: this.handleToggleShowFlash,
           children: y.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_FLASH_LABEL
         })
-      }) : null, (0, n.jsx)(q, {}), (0, n.jsx)(M.F, {
+      }), (0, n.jsx)(q, {}), (0, n.jsx)(M.F, {
         setting: G.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT,
         children: (0, n.jsxs)(E.FormItem, {
           title: y.Z.Messages.FORM_LABEL_PUSH_AFK_TIMEOUT,
@@ -482,7 +482,7 @@ function q() {
       autoTrackExposure: !1
     }),
     t = (0, c.e7)([L.ZP], () => L.ZP.useNewNotifications),
-    [a, l] = i.useState(!1);
+    [a, r] = i.useState(!1);
   return e && (t || s) ? (0, n.jsxs)(n.Fragment, {
     children: [t ? (0, n.jsx)(M.F, {
       setting: G.s6.NOTIFICATIONS_UNREAD_SETTINGS,
@@ -494,7 +494,7 @@ function q() {
         value: t,
         disabled: a || !t,
         note: y.Z.Messages.NOTIF_MIGRATION_SETTINGS_SUBTITLE,
-        onChange: () => J(l),
+        onChange: () => J(r),
         children: y.Z.Messages.NOTIF_MIGRATION_SETTINGS_TITLE
       })
     }) : s ? (0, n.jsx)(M.F, {
@@ -507,7 +507,45 @@ function q() {
         onChange: () => (0, R.R)(!0),
         children: y.Z.Messages.NOTIF_MIGRATION_SETTINGS_TITLE
       })
-    }) : null, null]
+    }) : null, (0, n.jsxs)(M.F, {
+      setting: G.s6.NOTIFICATIONS_NEW_SETTINGS,
+      children: [(0, n.jsx)(E.FormItem, {
+        title: "New Notification Settings (Advanced, Staff Only)",
+        children: (0, n.jsxs)("div", {
+          style: {
+            display: "flex",
+            gap: 16
+          },
+          children: [(0, n.jsx)(M.F, {
+            setting: G.s6.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT,
+            children: (0, n.jsx)(E.Button, {
+              onClick: m.KP,
+              children: "Restore most recent snapshot"
+            })
+          }), (0, n.jsx)(M.F, {
+            setting: G.s6.NOTIFICATIONS_LAUNCH_MIGRATION,
+            children: (0, n.jsx)(E.Button, {
+              onClick: () => {
+                (0, R.R)(!0)
+              },
+              children: "Launch Migration"
+            })
+          }), (0, n.jsx)(M.F, {
+            setting: G.s6.NOTIFICATIONS_TOGGLE_NEW_SYSTEM,
+            children: (0, n.jsx)(E.FormSwitch, {
+              hideBorder: !0,
+              value: t,
+              onChange: e => {
+                T.Z.setAccountFlag(V.c.USE_NEW_NOTIFICATIONS, e)
+              },
+              children: "Toggle new system on/off"
+            })
+          })]
+        })
+      }), (0, n.jsx)(E.FormDivider, {
+        className: l()(H.marginTop40, H.marginBottom40)
+      })]
+    })]
   }) : null
 }
 async function J(e) {

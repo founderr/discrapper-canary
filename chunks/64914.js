@@ -80,7 +80,7 @@ function h() {
         note: O.Z.Messages.USER_SETTINGS_SHOW_LIBRARY_NOTE,
         children: O.Z.Messages.USER_SETTINGS_SHOW_LIBRARY
       })
-    }), t && (0, n.jsx)(c.F, {
+    }), (0, n.jsx)(c.F, {
       setting: A.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
       children: (0, n.jsx)(r.FormSwitch, {
         value: null != R,

@@ -3,11 +3,14 @@ n.d(t, {
   $U: function() {
     return l
   },
+  KP: function() {
+    return c
+  },
   Tn: function() {
     return a
   },
   dt: function() {
-    return c
+    return d
   },
   xx: function() {
     return u
@@ -34,7 +37,12 @@ async function u(e) {
 async function _(e) {
   return (await s.tn.del(o.ANM.NOTIFICATION_SNAPSHOT(e))).body
 }
-async function c(e) {
+async function c() {
+  let e = await a(),
+    t = r().sortBy(e, e => new Date(e.recorded_at).getTime());
+  0 !== t.length && await u(t[t.length - 1].id)
+}
+async function d(e) {
   if (e.length > 0) {
     var t;
     let n = r().sum(e.map(e => e.length)),

@@ -929,7 +929,7 @@ let ej = () => {
         section: eL.oAB.NOTIFICATIONS,
         searchableTitle: ef.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_FLASH_LABEL,
         parent: ep.s6.NOTIFICATIONS,
-        predicate: () => G.isPlatformEmbedded && (0, G.isWindows)()
+        predicate: () => (0, G.isWindows)()
       },
       [ep.s6.NOTIFICATIONS_UNREAD_SETTINGS]: {
         section: eL.oAB.NOTIFICATIONS,
