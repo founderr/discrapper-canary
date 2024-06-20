@@ -58,7 +58,8 @@ function c(e) {
         forcePomelo: h,
         className: _.userTag,
         usernameClass: _.userTagUsername,
-        discriminatorClass: _.userTagDiscriminator
+        discriminatorClass: _.userTagDiscriminator,
+        botClass: _.botTag
       })), O && (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)("div", {
           "aria-hidden": "true",
