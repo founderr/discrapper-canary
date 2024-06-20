@@ -402,7 +402,7 @@ function en(e) {
           priceOptions: l,
           textVariant: i ? "heading-lg/normal" : void 0,
           shouldUseModifiedCopy: i,
-          className: i ? K.modifiedPrice : void 0
+          className: i ? s ? K.modifiedPrices : K.modifiedPrice : void 0
         })]
       }), (0, c.jsx)("div", {
         children: (0, c.jsx)(et, {
@@ -607,7 +607,7 @@ function er(e) {
           priceOptions: _,
           textVariant: i ? "heading-lg/normal" : void 0,
           shouldUseModifiedCopy: i,
-          className: K.modifiedPrice
+          className: i ? s ? K.modifiedPrices : K.modifiedPrice : void 0
         })]
       }), (0, c.jsx)("div", {
         children: (0, c.jsx)(ei, {

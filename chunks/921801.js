@@ -14,12 +14,10 @@ let l = e => {
     children: l
   } = e, r = (0, i.Pt)(), o = (0, a.eA)({
     location: "subsettings"
-  }), c = (0, i.Gj)(t);
-  if (!o) return (0, n.jsx)(n.Fragment, {
+  }), c = (0, i.Gj)(t), E = r[t];
+  return null == E.predicate || (null === (s = E.predicate) || void 0 === s ? void 0 : s.call(E)) === !0 ? o ? c.size > 0 && !c.has(t) ? null : (0, n.jsx)(n.Fragment, {
     children: l
-  });
-  let E = r[t];
-  return (null == E.predicate || (null === (s = E.predicate) || void 0 === s ? void 0 : s.call(E)) === !0) && (!(c.size > 0) || c.has(t)) ? (0, n.jsx)(n.Fragment, {
+  }) : (0, n.jsx)(n.Fragment, {
     children: l
   }) : null
 }
