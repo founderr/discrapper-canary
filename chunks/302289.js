@@ -4,30 +4,30 @@ var a = n(481060),
   i = n(785681),
   l = n(130310),
   r = n(689938),
-  o = n(937305),
-  c = n(128216);
+  c = n(937305),
+  o = n(128216);
 t.Z = () => {
   let e = (0, i.o)(r.Z.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_DESCRIPTION_TEEN, r.Z.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_DESCRIPTION_PARENT);
   return (0, s.jsxs)("div", {
-    className: o.container,
+    className: c.container,
     children: [(0, s.jsxs)("div", {
-      className: o.__invalid_content,
+      className: c.__invalid_content,
       children: [(0, s.jsx)(a.Heading, {
-        className: o.header,
+        className: c.header,
         variant: "heading-md/bold",
         children: (0, s.jsx)(a.HeadingLevel, {
           children: r.Z.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_HEADER
         })
       }), (0, s.jsx)(a.Text, {
-        className: o.description,
+        className: c.description,
         variant: "text-sm/medium",
         color: "text-muted",
         children: e
       }), (0, s.jsx)(l.Z, {})]
     }), (0, s.jsx)("div", {
-      className: o.artContainer,
+      className: c.artContainer,
       children: (0, s.jsx)("img", {
-        src: c,
+        src: o,
         alt: r.Z.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_ALT
       })
     })]

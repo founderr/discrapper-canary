@@ -3,7 +3,7 @@ n.d(t, {
     return P
   },
   $w: function() {
-    return y
+    return b
   },
   Og: function() {
     return k
@@ -253,7 +253,7 @@ function U(e) {
   })
 }
 
-function b(e, t) {
+function y(e, t) {
   return null != e ? (0, l.jsx)("div", {
     className: e,
     children: t
@@ -262,7 +262,7 @@ function b(e, t) {
   })
 }
 
-function y(e) {
+function b(e) {
   let {
     media: t,
     containerClassName: n,
@@ -277,12 +277,12 @@ function y(e) {
       var n;
       return e.id === (null === (n = t.attachmentIds) || void 0 === n ? void 0 : n[0])
     });
-    if (null != e) return b(n, (0, l.jsx)(j, {
+    if (null != e) return y(n, (0, l.jsx)(j, {
       className: s,
       attachment: e
     }))
   }
-  return null != t.emoji ? b(n, (0, l.jsx)(U, {
+  return null != t.emoji ? y(n, (0, l.jsx)(U, {
     className: i,
     emoji: t.emoji
   })) : void 0 !== a ? (0, l.jsx)(l.Fragment, {

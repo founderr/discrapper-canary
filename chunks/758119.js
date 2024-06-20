@@ -6,10 +6,10 @@ n.d(t, {
     return r
   },
   qV: function() {
-    return o
+    return c
   },
   qq: function() {
-    return c
+    return o
   }
 });
 var s = n(570140);
@@ -30,7 +30,7 @@ function r(e) {
   })
 }
 
-function o(e) {
+function c(e) {
   s.Z.wait(() => s.Z.dispatch({
     type: "AGE_GATE_MODAL_CLOSE"
   })), void 0 !== e && a.default.track(l.rMx.AGE_GATE_ACTION, {
@@ -39,7 +39,7 @@ function o(e) {
   })
 }
 
-function c(e) {
+function o(e) {
   s.Z.wait(() => {
     s.Z.dispatch({
       type: "AGE_GATE_SUCCESS_MODAL_OPEN"

@@ -2,8 +2,8 @@ var s, a = n(442837),
   i = n(570140),
   l = n(314897),
   r = n(57562),
-  o = n(351780),
-  c = n(843693);
+  c = n(351780),
+  o = n(843693);
 
 function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ let u = {
   };
 class _ extends(s = a.ZP.PersistedStore) {
   initialize(e) {
-    this.waitFor(l.default, c.ZP);
+    this.waitFor(l.default, o.ZP);
     let t = null != e ? e : {
       ...u
     };
@@ -44,7 +44,7 @@ d(_, "displayName", "PoggermodeAchievementStore"), d(_, "persistKey", "Poggermod
     let {
       achievementId: n
     } = e;
-    if (!o.Z.isEnabled()) return !1;
+    if (!c.Z.isEnabled()) return !1;
     t = n, null != E.unlockedAchievements[t] || (E.unlockedAchievements = {
       ...E.unlockedAchievements,
       [t]: {

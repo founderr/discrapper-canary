@@ -1,6 +1,6 @@
 n.d(t, {
   N: function() {
-    return c
+    return o
   }
 });
 var s = n(544891),
@@ -8,10 +8,10 @@ var s = n(544891),
   i = n(230307),
   l = n(70956),
   r = n(981631);
-let o = 6 * l.Z.Millis.HOUR;
-async function c() {
+let c = 6 * l.Z.Millis.HOUR;
+async function o() {
   let e = i.Z.lastFetched;
-  if (!(null != e && Date.now() - e < o)) try {
+  if (!(null != e && Date.now() - e < c)) try {
     let e = await s.tn.get({
       url: r.ANM.USER_ACTIVITY_STATISTICS,
       oldFormErrors: !0

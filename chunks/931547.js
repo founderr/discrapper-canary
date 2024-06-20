@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return o
+    return c
   }
 });
 var s = n(735250);
@@ -10,17 +10,17 @@ var a = n(120356),
   l = n(481060),
   r = n(831489);
 
-function o(e) {
+function c(e) {
   let {
     message: t,
     error: n,
     onClick: a,
-    submitting: o,
-    className: c,
+    submitting: c,
+    className: o,
     ctaMessage: d
   } = e;
   return (0, s.jsxs)("div", {
-    className: i()(r.container, c),
+    className: i()(r.container, o),
     children: [(0, s.jsxs)("div", {
       className: r.textContainer,
       children: [(0, s.jsx)(l.CircleExclamationPointIcon, {
@@ -54,7 +54,7 @@ function o(e) {
       look: l.Button.Looks.LINK,
       size: l.Button.Sizes.ICON,
       onClick: a,
-      submitting: o,
+      submitting: c,
       children: d
     })]
   })

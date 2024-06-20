@@ -36,9 +36,9 @@ var s = n(735250),
   D = n(746142);
 let j = (0, x.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
   U = (0, x.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
-  b = (0, x.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
+  y = (0, x.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 
-function y(e) {
+function b(e) {
   let {
     members: t,
     membersOnline: n,
@@ -135,19 +135,19 @@ function k(e) {
     } = u;
   o()(k === Z.Iq.EMBEDDED_APPLICATION && null != G, "invalid application invite");
   let F = i.useRef(null),
-    [w, V] = i.useState(!1),
+    [V, w] = i.useState(!1),
     [H, Y] = i.useState(!1);
   i.useEffect(() => {
     let e = new ResizeObserver(() => (function() {
         var e;
         let t = null === (e = F.current) || void 0 === e ? void 0 : e.offsetWidth;
-        null != t && (V(t < b + U), Y(t <= 2 * j))
+        null != t && (w(t < y + U), Y(t <= 2 * j))
       })()),
       t = F.current;
     return null != t && e.observe(t), () => {
       e.disconnect()
     }
-  }, [F, V, Y]);
+  }, [F, w, Y]);
   let K = (0, c.e7)([p.Z], () => null != u.guild ? p.Z.getGuild(u.guild.id) : null, [u]),
     W = (0, h.Z)([G.id])[0],
     z = (0, c.e7)([_.ZP], () => {
@@ -163,8 +163,8 @@ function k(e) {
         return G.id === t
       })
     }),
-    q = A.Z.getChannel(null === (t = u.channel) || void 0 === t ? void 0 : t.id),
-    X = (0, c.e7)([g.Z], () => null != q && g.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, q), [q]),
+    X = A.Z.getChannel(null === (t = u.channel) || void 0 === t ? void 0 : t.id),
+    q = (0, c.e7)([g.Z], () => null != X && g.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, X), [X]),
     {
       analyticsLocations: J
     } = (0, m.ZP)(N.Z.INVITE_EMBED),
@@ -173,7 +173,7 @@ function k(e) {
       size: j,
       names: ["embedded_cover"]
     }),
-    ee = (0, c.Wu)([_.ZP], () => null != q ? _.ZP.getEmbeddedActivitiesForChannel(q.id).filter(e => e.applicationId === G.id).flatMap(e => Array.from(e.userIds)) : [], [q, G.id]),
+    ee = (0, c.Wu)([_.ZP], () => null != X ? _.ZP.getEmbeddedActivitiesForChannel(X.id).filter(e => e.applicationId === G.id).flatMap(e => Array.from(e.userIds)) : [], [X, G.id]),
     et = (0, c.Wu)([f.default], () => ee.map(e => f.default.getUser(e)), [ee]),
     en = u.state === L.r2o.ACCEPTING,
     es = null != K;
@@ -181,7 +181,7 @@ function k(e) {
     if (null == u.guild) return (0, s.jsx)(v.Z, {});
     K = new S.ZP(u.guild)
   }
-  let ei = es && !X || es && z,
+  let ei = es && !q || es && z,
     el = () => {
       E.Z.acceptInviteAndTransitionToInviteChannel({
         inviteKey: u.code,
@@ -189,29 +189,29 @@ function k(e) {
         analyticsLocations: J
       })
     };
-  return (es && z && (l = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (l = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = z ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !es ? P.Z.Messages.JOIN : P.Z.Messages.START, null == u.code || "" === u.code) ? null : (0, s.jsxs)("div", {
+  return (es && z && (l = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !q && (l = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = z ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !es ? P.Z.Messages.JOIN : P.Z.Messages.START, null == u.code || "" === u.code) ? null : (0, s.jsxs)("div", {
     className: D.container,
     ref: F,
     children: [(0, s.jsx)("div", {
       className: a()(D.imgContainer, {
-        [D.large]: w,
+        [D.large]: V,
         [D.stacked]: H
       }),
       children: (0, s.jsx)(T.Z, {
         imageBackground: $,
         applicationName: null !== (n = null == W ? void 0 : W.name) && void 0 !== n ? n : "",
         imageClassName: a()(D.img, {
-          [D.large]: w,
+          [D.large]: V,
           [D.stacked]: H
         }),
         imageNotFoundClassName: a()(D.brokenImg, {
-          [D.large]: w,
+          [D.large]: V,
           [D.stacked]: H
         })
       })
     }), (0, s.jsxs)(O.Z, {
       className: a()(D.content, {
-        [D.large]: w,
+        [D.large]: V,
         [D.stacked]: H
       }),
       children: [(0, s.jsxs)("div", {
@@ -223,19 +223,19 @@ function k(e) {
           variant: "heading-xl/semibold",
           children: null == W ? void 0 : W.name
         }), (0, s.jsx)(B, {
-          channel: q,
+          channel: X,
           guild: K,
           isStacked: H,
           hasEnded: !Q
         })]
       }), (0, s.jsxs)("div", {
         className: a()(D.currentState, {
-          [D.large]: w,
+          [D.large]: V,
           [D.split]: !Q && H
         }),
         children: [!Q && es ? (0, s.jsxs)("div", {
           className: a()(D.endedNote, {
-            [D.large]: w
+            [D.large]: V
           }),
           children: [(0, s.jsx)(d.Text, {
             variant: "text-xs/medium",
@@ -244,10 +244,10 @@ function k(e) {
             variant: "text-xs/medium",
             children: P.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_START
           })]
-        }) : null, es ? null : (0, s.jsx)(y, {
+        }) : null, es ? null : (0, s.jsx)(b, {
           members: R,
           membersOnline: x,
-          isLarge: w,
+          isLarge: V,
           isStacked: H
         }), (0, s.jsxs)("div", {
           className: D.cta,

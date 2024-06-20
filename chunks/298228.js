@@ -1,13 +1,13 @@
 "use strict";
 t.d(s, {
   O: function() {
-    return l
+    return i
   }
 }), t(47120), t(653041);
 var n = t(470079),
   a = t(399606),
   r = t(1870);
-let l = e => {
+let i = e => {
   let s = (0, a.e7)([r.Z], () => r.Z.purchases);
   return (0, n.useMemo)(() => {
     let t = [],

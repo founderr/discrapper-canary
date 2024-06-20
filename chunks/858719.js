@@ -3,7 +3,7 @@ n.d(t, {
     return r
   },
   kE: function() {
-    return o
+    return c
   },
   ws: function() {
     return l
@@ -21,6 +21,6 @@ function r(e) {
   return (0, s.e7)([a.Z], () => a.Z.getTotalForDisplayType(e))
 }
 
-function o() {
+function c() {
   return (0, s.e7)([a.Z], () => Object.values(i.MY).some(e => a.Z.getTotalForDisplayType(e) > 0))
 }

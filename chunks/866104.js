@@ -102,7 +102,7 @@ function x(e) {
   } = (0, S.s)(), L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [Z, P] = i.useState(1), D = (0, c.Z)("(max-width: 1439px)"), {
     selectedTab: j,
     isPhantomPreview: U
-  } = (0, A.m)(), b = j === p.y.GUILD_PRODUCTS_PREVIEW ? f.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : f.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, y = L ? (0, s.jsxs)(s.Fragment, {
+  } = (0, A.m)(), y = j === p.y.GUILD_PRODUCTS_PREVIEW ? f.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : f.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, b = L ? (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(v, {
       lineClamp: D || 2 === Z ? 2 : 3,
       children: (0, s.jsx)(o.Text, {
@@ -122,7 +122,7 @@ function x(e) {
   }) : (0, s.jsx)(o.Text, {
     variant: "text-sm/normal",
     color: "text-normal",
-    children: U ? b : f.Z.Messages.GUILD_STORE_HERO_DEFAULT_DESCRIPTION
+    children: U ? y : f.Z.Messages.GUILD_STORE_HERO_DEFAULT_DESCRIPTION
   });
   return (0, s.jsxs)("div", {
     className: O.container,
@@ -169,7 +169,7 @@ function x(e) {
             })
           }), (0, s.jsx)(o.Spacer, {
             size: 9
-          }), y]
+          }), b]
         })]
       })]
     }), (0, s.jsx)(M, {

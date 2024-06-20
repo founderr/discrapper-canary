@@ -9,8 +9,8 @@ var a = n(481060),
   i = n(204197),
   l = n(998502),
   r = n(689938),
-  o = n(297676);
-let c = l.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar,
+  c = n(297676);
+let o = l.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar,
   d = e => {
     let {
       user: t,
@@ -25,8 +25,8 @@ let c = l.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar,
     });
     return (0, s.jsx)("div", {
       ...u,
-      children: (0, s.jsx)(c, {
-        className: o.__invalid_avatar,
+      children: (0, s.jsx)(o, {
+        className: c.__invalid_avatar,
         src: l,
         avatarDecoration: d,
         size: n,
@@ -43,9 +43,9 @@ t.Z = e => {
     children: a
   } = e;
   return (0, s.jsx)("div", {
-    className: o.avatarPairContainer,
+    className: c.avatarPairContainer,
     children: (0, s.jsxs)("div", {
-      className: o.avatarPair,
+      className: c.avatarPair,
       children: [(0, s.jsx)(d, {
         user: t
       }), a, (0, s.jsx)(d, {

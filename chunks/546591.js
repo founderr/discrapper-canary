@@ -1,9 +1,9 @@
 var s, a, i, l, r = n(735250),
-  o = n(470079),
-  c = n(120356),
-  d = n.n(c),
+  c = n(470079),
+  o = n(120356),
+  d = n.n(o),
   u = n(592804);
-class E extends(l = o.PureComponent) {
+class E extends(l = c.PureComponent) {
   render() {
     let {
       tag: e,

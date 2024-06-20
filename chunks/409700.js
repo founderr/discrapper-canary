@@ -1,6 +1,6 @@
 n.d(t, {
   I: function() {
-    return c
+    return o
   },
   g: function() {
     return d
@@ -20,12 +20,12 @@ function r(e) {
   }), e.body
 }
 
-function o(e) {
+function c(e) {
   let t;
   throw Error(t = e.status >= 500 && e.status <= 599 ? l.Z.Messages.DATA_PRIVACY_UPDATE_CONSENTS_FAILED : null != e && null != e.body && null != e.body.message ? e.body.message : l.Z.Messages.DATA_PRIVACY_UPDATE_CONSENTS_FAILED)
 }
 
-function c() {
+function o() {
   return s.tn.get({
     url: i.ANM.SETTINGS_CONSENT,
     oldFormErrors: !0
@@ -40,5 +40,5 @@ function d(e, t) {
       revoke: t
     },
     oldFormErrors: !0
-  }).then(r, o)
+  }).then(r, c)
 }

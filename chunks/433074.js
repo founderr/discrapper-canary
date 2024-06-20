@@ -94,7 +94,7 @@ function g(e) {
       resolving: !0
     })]
   });
-  let b = new Intl.NumberFormat(x, {
+  let y = new Intl.NumberFormat(x, {
     notation: "compact",
     compactDisplay: "short"
   }).format(null !== (n = null === (t = O.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0);
@@ -124,7 +124,7 @@ function g(e) {
               height: 16,
               className: p.guildCountIcon
             }), A.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT.format({
-              guildCount: b
+              guildCount: y
             })]
           })
         })]

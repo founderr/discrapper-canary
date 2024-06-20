@@ -1,14 +1,14 @@
 n.d(t, {
   Li: function() {
-    return i
+    return r
   },
   aY: function() {
     return s
   },
   v6: function() {
-    return a
+    return o
   }
 });
 let s = "#00000000",
-  a = "#CDD8FF1A",
-  i = 12
+  o = "#CDD8FF1A",
+  r = 12

@@ -4,27 +4,27 @@ var a = n(481060),
   i = n(785681),
   l = n(841409),
   r = n(880257),
-  o = n(631885),
-  c = n(568671),
+  c = n(631885),
+  o = n(568671),
   d = n(292352),
   u = n(689938),
   E = n(846078),
   _ = n(633488),
   h = n(361848);
-let m = () => {
-  let e = (0, o.mq)(d.ne.ACTIVE),
+let T = () => {
+  let e = (0, c.mq)(d.ne.ACTIVE),
     t = (0, r.Z)(),
     {
       handleTabChange: n
     } = (0, l.Z)();
-  return (0, o.VM)() || t && e.length > 0 ? null : (0, s.jsx)("div", {
+  return (0, c.VM)() || t && e.length > 0 ? null : (0, s.jsx)("div", {
     className: E.button,
     children: t ? (0, s.jsx)(a.Button, {
       fullWidth: !1,
       size: a.ButtonSizes.LARGE,
       onClick: () => n(d.dG.REQUESTS),
       children: u.Z.Messages.GET_STARTED
-    }) : (0, s.jsx)(c.Z, {})
+    }) : (0, s.jsx)(o.Z, {})
   })
 };
 t.Z = () => {
@@ -52,7 +52,7 @@ t.Z = () => {
             children: n
           })]
         })
-      }), (0, s.jsx)(m, {})]
+      }), (0, s.jsx)(T, {})]
     }), (0, s.jsx)("div", {
       className: E.headerImage,
       children: (0, s.jsx)("img", {

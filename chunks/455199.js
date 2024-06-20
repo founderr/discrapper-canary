@@ -32,9 +32,9 @@ let M = "recentMentionFilterSettings",
   D = !1,
   j = 0,
   U = !1,
-  b = !1;
+  y = !1;
 
-function y(e) {
+function b(e) {
   if (e instanceof m.ZP) return e;
   let t = S.Z.getMessage(e.channel_id, e.id);
   return null != t ? t : (0, _.e5)(e)
@@ -48,7 +48,7 @@ function B(e) {
   if (null == n || n.type === R.d4z.DM || P.guildFilter === R.NgX.THIS_SERVER && n.getGuildId() !== g.Z.getGuildId()) return null;
   let s = h.default.getId();
   if (p.Z.isBlockedForMessage(e) || (0, N.Z)(e, s)) return null;
-  e = y(e);
+  e = b(e);
   let i = !P.everyoneFilter,
     l = !P.roleFilter;
   return (0, I.ZP)({
@@ -56,12 +56,12 @@ function B(e) {
     userId: s,
     suppressEveryone: i,
     suppressRoles: l
-  }) ? (b && A.ZP.ackMessageId(n.id) !== e.id && (0, I.ZP)({
+  }) ? (y && A.ZP.ackMessageId(n.id) !== e.id && (0, I.ZP)({
     message: e,
     userId: s,
     suppressEveryone: f.ZP.isSuppressEveryoneEnabled(n.getGuildId()),
     suppressRoles: f.ZP.isSuppressRolesEnabled(n.getGuildId())
-  }) && (b = !1), e) : null
+  }) && (y = !1), e) : null
 }
 
 function k(e) {
@@ -96,11 +96,11 @@ function F(e) {
   }), 0 === (x = i).length && (D = !1)
 }
 
-function w() {
-  x = [], v = {}, D = !1, b = !1
+function V() {
+  x = [], v = {}, D = !1, y = !1
 }
 
-function V() {
+function w() {
   x = x.filter(e => !p.Z.isBlockedForMessage(e))
 }
 
@@ -145,7 +145,7 @@ class Y extends(s = c.ZP.Store) {
     return P.roleFilter
   }
   get mentionsAreStale() {
-    return b
+    return y
   }
 }
 a = "RecentMentionsStore", (l = "displayName") in(i = Y) ? Object.defineProperty(i, l, {
@@ -167,7 +167,7 @@ a = "RecentMentionsStore", (l = "displayName") in(i = Y) ? Object.defineProperty
       hasMoreAfter: t,
       messages: n,
       isAfter: s
-    } = e, i = o().map(n, y);
+    } = e, i = o().map(n, b);
     s ? x = x.concat(i) : (x = i, v = {}), o().forEach(i, e => {
       v[e.id] = !0
     }), L = !1, Z = t, j = (0, d.zO)(), D = !0
@@ -177,7 +177,7 @@ a = "RecentMentionsStore", (l = "displayName") in(i = Y) ? Object.defineProperty
   },
   SET_RECENT_MENTIONS_FILTER: F,
   CLEAR_MENTIONS: function(e) {
-    w()
+    V()
   },
   TRUNCATE_MENTIONS: function(e) {
     let {
@@ -191,7 +191,7 @@ a = "RecentMentionsStore", (l = "displayName") in(i = Y) ? Object.defineProperty
     if (P.guildFilter !== R.NgX.THIS_SERVER) return !1;
     D = !1
   },
-  CONNECTION_OPEN: w,
+  CONNECTION_OPEN: V,
   GUILD_DELETE: function(e) {
     let {
       guild: t
@@ -238,8 +238,8 @@ a = "RecentMentionsStore", (l = "displayName") in(i = Y) ? Object.defineProperty
   },
   CHANNEL_DELETE: H,
   THREAD_DELETE: H,
-  RELATIONSHIP_ADD: V,
-  RELATIONSHIP_REMOVE: V,
+  RELATIONSHIP_ADD: w,
+  RELATIONSHIP_REMOVE: w,
   MENTION_MODAL_OPEN: function() {
     U = !0
   },
@@ -247,6 +247,6 @@ a = "RecentMentionsStore", (l = "displayName") in(i = Y) ? Object.defineProperty
     U = !1
   },
   SET_RECENT_MENTIONS_STALE: function(e) {
-    b = !0
+    y = !0
   }
 })

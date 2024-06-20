@@ -2,15 +2,15 @@
 var n = t(735250),
   a = t(470079),
   r = t(481060),
-  l = t(727637),
-  i = t(906732),
+  i = t(727637),
+  l = t(906732),
   o = t(241553),
   c = t(333867),
   u = t(884697),
   d = t(231338),
   C = t(689938),
-  E = t(521746);
-let f = {
+  f = t(521746);
+let E = {
   dark: [{
     box: "#FFF19E",
     ribbon: "#FF484B"
@@ -60,41 +60,41 @@ s.Z = e => {
   let {
     product: s,
     returnRef: t,
-    onSuccess: m,
-    tooltipDelay: p,
-    isGiftEasterEggEnabled: g,
-    disableCustomColor: h = !1
+    onSuccess: p,
+    tooltipDelay: g,
+    isGiftEasterEggEnabled: m,
+    disableCustomColor: x = !1
   } = e, {
-    analyticsLocations: I
-  } = (0, i.ZP)(), _ = a.useRef(null), x = (0, l.Z)(_), T = h ? d.BR.DARK : d.BR.LIGHT;
+    analyticsLocations: h
+  } = (0, l.ZP)(), I = a.useRef(null), _ = (0, i.Z)(I), T = x ? d.BR.DARK : d.BR.LIGHT;
   return (0, u.x6)(s) ? null : (0, n.jsx)(r.Tooltip, {
     text: C.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
-    delay: p,
+    delay: g,
     children: e => (0, n.jsx)(r.Button, {
       ...e,
-      buttonRef: _,
-      className: E.giftButton,
-      color: h ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
+      buttonRef: I,
+      className: f.giftButton,
+      color: x ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
       look: r.Button.Looks.FILLED,
       size: r.ButtonSizes.ICON,
-      innerClassName: E.giftButtonInner,
+      innerClassName: f.giftButtonInner,
       "aria-label": C.Z.Messages.PREMIUM_GIFTING_BUTTON,
       onClick: e => {
         e.stopPropagation(), (0, c.Z)({
           skuId: s.skuId,
           isGift: !0,
-          analyticsLocations: I,
+          analyticsLocations: h,
           returnRef: t,
-          onClose: null != m ? e => {
-            e && m()
+          onClose: null != p ? e => {
+            e && p()
           } : void 0
         })
       },
-      children: g ? (0, n.jsx)(o.e, {
-        hovered: x,
+      children: m ? (0, n.jsx)(o.e, {
+        hovered: _,
         isContentDismissed: !0,
         themeOverride: T,
-        boxColors: f
+        boxColors: E
       }) : (0, n.jsx)(r.GiftIcon, {
         size: "md",
         color: "currentColor"

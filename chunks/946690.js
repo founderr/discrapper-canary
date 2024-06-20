@@ -9,7 +9,7 @@ t.Z = e => {
     icon: t,
     iconClassName: n,
     header: a,
-    description: o
+    description: c
   } = e;
   return (0, s.jsxs)("div", {
     className: r.container,
@@ -32,7 +32,7 @@ t.Z = e => {
       }), (0, s.jsx)(l.Text, {
         variant: "text-sm/medium",
         color: "text-muted",
-        children: o
+        children: c
       })]
     })]
   })

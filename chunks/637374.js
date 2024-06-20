@@ -32,8 +32,8 @@ var s = n(735250),
   D = n(296848),
   j = n(51144),
   U = n(626799),
-  b = n(981631),
-  y = n(474936),
+  y = n(981631),
+  b = n(474936),
   B = n(689938),
   k = n(366838);
 
@@ -63,7 +63,7 @@ function F(e) {
     })]
   })
 }
-class w extends i.PureComponent {
+class V extends i.PureComponent {
   get isHorizontal() {
     let {
       width: e
@@ -71,7 +71,7 @@ class w extends i.PureComponent {
     return e >= E.aL
   }
   handleViewInventory() {
-    d.Z.open(b.oAB.INVENTORY)
+    d.Z.open(y.oAB.INVENTORY)
   }
   render() {
     return (0, s.jsx)(E.$G, {
@@ -98,7 +98,7 @@ class w extends i.PureComponent {
     })), G(this, "renderTagline", () => this.props.isSelfGift ? B.Z.Messages.GIFT_EMBED_INVALID_TAGLINE_SELF : B.Z.Messages.GIFT_EMBED_INVALID_TAGLINE_OTHER)
   }
 }
-class V extends i.Component {
+class w extends i.Component {
   get analyticsLocation() {
     let {
       analyticsContext: {
@@ -107,7 +107,7 @@ class V extends i.Component {
     } = this.props;
     return {
       ...e,
-      section: b.jXE.GIFT_CODE_EMBED
+      section: y.jXE.GIFT_CODE_EMBED
     }
   }
   renderActions(e) {
@@ -162,7 +162,7 @@ class V extends i.Component {
     let {
       type: e
     } = this.props;
-    return e === b.uaV.CUSTOM_GIFT
+    return e === y.uaV.CUSTOM_GIFT
   }
   renderTitle(e) {
     let {
@@ -219,11 +219,11 @@ class V extends i.Component {
       totalCopies: e.maxUses,
       skuName: r
     });
-    if (e.isSubscription) return null == l ? B.Z.Messages.LOADING : null != i ? (l.interval === y.rV.MONTH ? B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_MONTHS : B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_YEARS).format({
+    if (e.isSubscription) return null == l ? B.Z.Messages.LOADING : null != i ? (l.interval === b.rV.MONTH ? B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_MONTHS : B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_YEARS).format({
       username: j.ZP.getUserTag(i),
       skuName: r,
       intervalCount: l.intervalCount
-    }) : (l.interval === y.rV.MONTH ? B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_NO_USER_DEFAULT_MONTHS : B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_NO_USER_DEFAULT_YEARS).format({
+    }) : (l.interval === b.rV.MONTH ? B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_NO_USER_DEFAULT_MONTHS : B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_NO_USER_DEFAULT_YEARS).format({
       skuName: r,
       intervalCount: l.intervalCount
     });
@@ -246,7 +246,7 @@ class V extends i.Component {
     return null == e ? null : (0, s.jsx)(U.$, {
       skuId: e.skuId,
       onEmbedClick: this.handleEmbedClick,
-      analyticsSection: b.jXE.GIFT_CODE_EMBED,
+      analyticsSection: y.jXE.GIFT_CODE_EMBED,
       renderCustomActions: () => this.renderActions(e),
       renderCustomTitle: () => this.renderTitle(e),
       renderCustomTagline: () => this.renderBody(e),
@@ -264,13 +264,13 @@ class V extends i.Component {
     if (null != e && null != e.promotion) return (0, s.jsx)(U.$, {
       skuId: e.skuId,
       onEmbedClick: this.handleClaimPromotion,
-      analyticsSection: b.jXE.GIFT_CODE_EMBED,
+      analyticsSection: y.jXE.GIFT_CODE_EMBED,
       renderCustomActions: () => this.renderPromotionActions(),
       renderCustomTitle: () => B.Z.Messages.GIFT_EMBED_TITLE_PROMOTION,
       renderCustomTagline: () => B.Z.Messages.GIFT_EMBED_TAGLINE_PROMOTION,
       width: n
     });
-    if (null == e || e.revoked) return t ? (0, s.jsx)(w, {
+    if (null == e || e.revoked) return t ? (0, s.jsx)(V, {
       isSelfGift: i,
       width: n
     }) : (0, s.jsx)(E.OR, {
@@ -286,13 +286,13 @@ class V extends i.Component {
       let {
         libraryApplication: t
       } = this.props;
-      e.preventDefault(), null != t && t.isHidden() ? (0, S.uL)(b.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, S.uL)(b.Z5c.APPLICATION_LIBRARY, {
+      e.preventDefault(), null != t && t.isHidden() ? (0, S.uL)(y.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, S.uL)(y.Z5c.APPLICATION_LIBRARY, {
         state: {
           applicationId: null != t ? t.id : null
         }
       })
     }), G(this, "handleVerificationClick", e => {
-      e.stopPropagation(), e.preventDefault(), d.Z.open(b.oAB.ACCOUNT)
+      e.stopPropagation(), e.preventDefault(), d.Z.open(y.oAB.ACCOUNT)
     }), G(this, "handleAccept", e => {
       let {
         channelId: t,
@@ -301,14 +301,14 @@ class V extends i.Component {
         type: i,
         giftInfo: l
       } = this.props;
-      e.preventDefault(), e.stopPropagation(), L.default.track(b.rMx.OPEN_MODAL, {
+      e.preventDefault(), e.stopPropagation(), L.default.track(y.rMx.OPEN_MODAL, {
         type: "gift_accept",
         location: {
           ...this.analyticsLocation,
-          object: b.qAy.BUTTON_CTA
+          object: y.qAy.BUTTON_CTA
         }
       });
-      let a = i !== b.uaV.CUSTOM_GIFT ? void 0 : s;
+      let a = i !== y.uaV.CUSTOM_GIFT ? void 0 : s;
       (0, h.V)({
         processedCode: n,
         channelContext: t,
@@ -319,19 +319,19 @@ class V extends i.Component {
       let {
         giftCode: t
       } = this.props;
-      null != t && t.isSubscription && (e.preventDefault(), d.Z.open(b.oAB.PREMIUM))
+      null != t && t.isSubscription && (e.preventDefault(), d.Z.open(y.oAB.PREMIUM))
     }), G(this, "handleClaimPromotion", e => {
       var t;
       e.stopPropagation(), e.preventDefault();
       let n = null === (t = this.props.giftCode) || void 0 === t ? void 0 : t.code;
-      if (null != n) window.open(b.Z5c.BILLING_PROMOTION_REDEMPTION(n))
+      if (null != n) window.open(y.Z5c.BILLING_PROMOTION_REDEMPTION(n))
     }), G(this, "renderCustomGiftBox", e => {
       let {
         useReducedMotion: t,
         width: n
       } = this.props;
       if (null == e || null == e.giftStyle) return null;
-      let i = y.jy.includes(e.giftStyle),
+      let i = b.jy.includes(e.giftStyle),
         l = a()(k.customGiftEmbedWrapper, {
           [k.legacySeasonalGiftEmbedWrapper]: i,
           [k.giftEmbedWrapperHorizontal]: n >= E.aL
@@ -344,7 +344,7 @@ class V extends i.Component {
         });
       return (0, s.jsxs)("div", {
         className: l,
-        children: [!t && y.eZ.includes(e.giftStyle) && (0, s.jsx)(v.Z, {
+        children: [!t && b.eZ.includes(e.giftStyle) && (0, s.jsx)(v.Z, {
           className: k.snow,
           wind: 5
         }), i && (0, s.jsx)(x.Z, {
@@ -358,7 +358,7 @@ class V extends i.Component {
     })
   }
 }
-let H = (0, I.Z)((0, _.Z)(V));
+let H = (0, I.Z)((0, _.Z)(w));
 t.Z = c.ZP.connectStores([p.Z, R.Z, f.default, g.Z, O.Z, A.default, T.Z], e => {
   let {
     code: t,

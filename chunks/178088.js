@@ -65,12 +65,12 @@ function f(e) {
     }
   }(Z), U = i.useCallback(() => {
     L(!1), v && (null == n || n())
-  }, [n, v]), b = i.useCallback(() => {
+  }, [n, v]), y = i.useCallback(() => {
     L(!v), v ? null == n || n() : null == t || t()
-  }, [n, t, v]), y = i.useCallback(() => {
-    b(), P(r.X.UNREADS)
-  }, [P, b]);
-  i.useEffect(() => (N.S.subscribe(p.CkL.TOGGLE_INBOX_UNREADS_TAB, y), () => void N.S.unsubscribe(p.CkL.TOGGLE_INBOX_UNREADS_TAB, y)), [y]);
+  }, [n, t, v]), b = i.useCallback(() => {
+    y(), P(r.X.UNREADS)
+  }, [P, y]);
+  i.useEffect(() => (N.S.subscribe(p.CkL.TOGGLE_INBOX_UNREADS_TAB, b), () => void N.S.unsubscribe(p.CkL.TOGGLE_INBOX_UNREADS_TAB, b)), [b]);
   let {
     showReminders: B
   } = E.Z.useExperiment({
@@ -139,7 +139,7 @@ function f(e) {
         let {
           isShown: n
         } = t;
-        return f(b, n, e)
+        return f(y, n, e)
       }
     })
   })

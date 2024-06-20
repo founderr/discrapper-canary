@@ -4,8 +4,8 @@ var s = n(392711),
   i = n(710845),
   l = n(592125),
   r = n(306680),
-  o = n(709054),
-  c = n(287328);
+  c = n(709054),
+  o = n(287328);
 
 function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ let u = new i.Z("ReadStates");
 t.Z = new class e {
   async getAll(e) {
     let t = performance.now(),
-      n = await c.Z.readStates(e).getMany(),
+      n = await o.Z.readStates(e).getMany(),
       s = performance.now();
     return u.log("asynchronously loaded in ".concat(s - t, "ms (readStates: ").concat(n.length, ")")), n
   }
@@ -41,8 +41,8 @@ t.Z = new class e {
         i = "0",
         r = Object.keys(l.Z.getMutablePrivateChannels()),
         d = new Set(r);
-      for (let e of (i = null !== (s = a()(r).sort(o.default.compare).reverse().value()[0]) && void 0 !== s ? s : "0", n)) null != e._lastMessageId && (1 === o.default.compare(e._lastMessageId, t) && (t = e._lastMessageId), d.has(e.channelId) && 1 === o.default.compare(e._lastMessageId, i) && (i = e._lastMessageId));
-      c.Z.nonGuildVersionsTransaction(e).putAll([{
+      for (let e of (i = null !== (s = a()(r).sort(c.default.compare).reverse().value()[0]) && void 0 !== s ? s : "0", n)) null != e._lastMessageId && (1 === c.default.compare(e._lastMessageId, t) && (t = e._lastMessageId), d.has(e.channelId) && 1 === c.default.compare(e._lastMessageId, i) && (i = e._lastMessageId));
+      o.Z.nonGuildVersionsTransaction(e).putAll([{
         id: "highest_last_message_id",
         versionString: t
       }, {
@@ -53,7 +53,7 @@ t.Z = new class e {
         version: this.readStateVersion
       }])
     }
-    let i = c.Z.readStatesTransaction(e);
+    let i = o.Z.readStatesTransaction(e);
     i.delete(), n.forEach(e => i.put("".concat(e.type, "-").concat(e.channelId), e))
   }
   constructor() {

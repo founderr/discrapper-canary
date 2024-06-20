@@ -75,17 +75,17 @@ t.Z = e => {
     expansionSpring: D,
     isAnimating: j,
     isExpanded: U,
-    isInConcurrentQuestExperiment: b,
-    contentPosition: y,
+    isInConcurrentQuestExperiment: y,
+    contentPosition: b,
     toggleExpanded: B
   } = e, {
     ref: k,
     height: G
   } = (0, E.Z)(), {
     ref: F,
-    width: w,
-    scrollWidth: V
-  } = (0, E.Z)(), H = (0, c.e7)([I.Z], () => I.Z.getState().theme), Y = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), K = i.useMemo(() => (0, S.nP)(u.config.assets.hero), [u]), W = i.useRef(null), z = (0, R.uq)(T), Q = T === C.jn.QUESTS_EMBED, q = (0, h.t5)(u, M.dr.QUESTS_CARD), X = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, h.B6)(u.config.expiresAt, {
+    width: V,
+    scrollWidth: w
+  } = (0, E.Z)(), H = (0, c.e7)([I.Z], () => I.Z.getState().theme), Y = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), K = i.useMemo(() => (0, S.nP)(u.config.assets.hero), [u]), W = i.useRef(null), z = (0, R.uq)(T), Q = T === C.jn.QUESTS_EMBED, X = (0, h.t5)(u, M.dr.QUESTS_CARD), q = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, h.B6)(u.config.expiresAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
@@ -98,7 +98,7 @@ t.Z = e => {
       questId: u.id,
       questContent: T,
       questContentCTA: U ? m.jZ.COLLAPSE : m.jZ.EXPAND,
-      questContentPosition: y
+      questContentPosition: b
     })
   };
   i.useEffect(() => {
@@ -182,7 +182,7 @@ t.Z = e => {
                 })]
               }), (0, s.jsx)(d.Text, {
                 variant: "text-xs/medium",
-                children: q
+                children: X
               })]
             })]
           })
@@ -218,7 +218,7 @@ t.Z = e => {
               className: v.questInfo,
               children: [(0, s.jsx)(d.Tooltip, {
                 text: u.config.messages.questName,
-                shouldShow: null != w && null != V && w < V,
+                shouldShow: null != V && null != w && V < w,
                 children: e => (0, s.jsx)(d.Heading, {
                   ref: F,
                   variant: "lg" === N ? "heading-xxl/bold" : "sm" === N ? "heading-xl/bold" : "heading-lg/bold",
@@ -230,7 +230,7 @@ t.Z = e => {
                 })
               }), (0, s.jsx)(d.Text, {
                 variant: "text-xs/normal",
-                children: X ? x.Z.Messages.QUESTS_CLAIM_BY_DATE.format({
+                children: q ? x.Z.Messages.QUESTS_CLAIM_BY_DATE.format({
                   expirationDate: $
                 }) : l ? x.Z.Messages.QUESTS_EXPIRED_ON.format({
                   expirationDate: J
@@ -242,7 +242,7 @@ t.Z = e => {
           }), !l && z && (0, s.jsx)(P, {
             quest: u,
             location: T,
-            questContentPosition: y
+            questContentPosition: b
           })]
         })]
       }), (0, s.jsxs)(r.animated.div, {
@@ -256,7 +256,7 @@ t.Z = e => {
         children: [(0, s.jsx)(O.r, {
           questContent: T,
           quest: u,
-          questContentPosition: y,
+          questContentPosition: b,
           shouldShowDisclosure: !0,
           hideLearnMore: z,
           showShareLink: !l && Q,
@@ -276,7 +276,7 @@ t.Z = e => {
               })
             })
           })
-        }), b && !(0, R.W_)(T) && (0, s.jsx)(d.Clickable, {
+        }), y && !(0, R.W_)(T) && (0, s.jsx)(d.Clickable, {
           onClick: ee,
           className: v.iconWrapper,
           "aria-label": U ? x.Z.Messages.COLLAPSE : x.Z.Messages.EXPAND,

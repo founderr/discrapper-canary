@@ -12,20 +12,20 @@ n.d(t, {
     return r
   },
   o2: function() {
-    return o
+    return c
   },
   t1: function() {
-    return m
+    return T
   },
   v0: function() {
     return l
   }
 });
-var s, a, i, l, r, o, c = n(652874),
+var s, a, i, l, r, c, o = n(652874),
   d = n(868888),
   u = n(433517);
-(s = l || (l = {})).ADMIN_UPSELL = "admin_upsell", s.GET_STARTED = "get_started", s.DISCOVERY = "discovery", s.PLAYSTYLE = "playstyle", s.TRAITS = "traits", s.GAMES = "games", (a = r || (r = {})).VALORANT = "valorant", a.GENSHIN = "genshin", (i = o || (o = {})).USER_UPSELL = "user_upsell", i.USER_ONBOARDING = "user_onboarding";
-let E = (0, c.Z)((0, d.tJ)(e => ({
+(s = l || (l = {})).ADMIN_UPSELL = "admin_upsell", s.GET_STARTED = "get_started", s.DISCOVERY = "discovery", s.PLAYSTYLE = "playstyle", s.TRAITS = "traits", s.GAMES = "games", (a = r || (r = {})).VALORANT = "valorant", a.GENSHIN = "genshin", (i = c || (c = {})).USER_UPSELL = "user_upsell", i.USER_ONBOARDING = "user_onboarding";
+let E = (0, o.Z)((0, d.tJ)(e => ({
   mode: "admin_upsell",
   previousMode: "admin_upsell",
   game: "valorant",
@@ -95,7 +95,7 @@ function h() {
   })
 }
 
-function m(e) {
+function T(e) {
   var t;
   let n = e.selectedGames,
     s = null !== (t = e.selectedPlaystyle) && void 0 !== t ? t : void 0;

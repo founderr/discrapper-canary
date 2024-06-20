@@ -1,9 +1,9 @@
 n.d(t, {
   P: function() {
-    return l
+    return i
   },
   i: function() {
-    return i
+    return o
   }
 });
 let s = (0, n(818083).B)({
@@ -27,7 +27,7 @@ let s = (0, n(818083).B)({
       }
     }]
   }),
-  i = e => {
+  o = e => {
     let {
       location: t,
       autoTrackExposure: n = !1
@@ -38,16 +38,16 @@ let s = (0, n(818083).B)({
       autoTrackExposure: n
     }).enabled
   },
-  l = e => {
+  i = e => {
     let {
       location: t,
       autoTrackExposure: n = !1
     } = e, {
-      enabled: i
+      enabled: o
     } = s.useExperiment({
       location: t
     }, {
       autoTrackExposure: n
     });
-    return i
+    return o
   }

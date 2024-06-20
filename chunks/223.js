@@ -36,8 +36,8 @@ var s = n(735250),
   D = n(51144),
   j = n(787374),
   U = n(981631),
-  b = n(674563),
-  y = n(590433),
+  y = n(674563),
+  b = n(590433),
   B = n(959517),
   k = n(689938),
   G = n(121802);
@@ -68,7 +68,7 @@ function F(e, t) {
   }
 }
 
-function w(e, t) {
+function V(e, t) {
   return i.useMemo(() => {
     if (null != t) return n => (0, s.jsx)(f.Z, {
       ...n,
@@ -81,7 +81,7 @@ function w(e, t) {
   }, [e, t])
 }
 
-function V(e) {
+function w(e) {
   let {
     children: t,
     className: n,
@@ -202,7 +202,7 @@ let z = i.memo(function(e) {
       interactionUserId: r
     } = e,
     o = F(n, i),
-    c = w(i, n.author),
+    c = V(i, n.author),
     u = (0, S.ZP)(n),
     d = (0, L.CF)({
       message: n,
@@ -214,7 +214,7 @@ let z = i.memo(function(e) {
     }, c),
     _ = R.default.getUser(r),
     I = F(n, i),
-    N = w(i, _);
+    N = V(i, _);
   if (null != _) {
     let e = (0, S.ij)(_, i),
       s = (0, L.CF)({
@@ -263,28 +263,28 @@ function Q(e) {
     handleFocus: x,
     handleBlur: P
   } = (0, p.bb)(g), D = (0, d.e7)([_.Z], () => _.Z.keyboardModeEnabled), B = (0, d.e7)([O.Z], () => O.Z.can(U.Plq.MANAGE_MESSAGES, r), [r]), {
-    ruleName: w,
+    ruleName: V,
     embedChannel: Y,
     decisionId: K,
     keywordMatchedContent: Q,
-    keyword: q,
-    content: X,
+    keyword: X,
+    content: q,
     flaggedMessageId: J,
     timeoutDuration: $,
     decisionReason: ee,
     alertActionsExecution: et,
     quarantineType: en,
     interactionUserId: es
-  } = (0, T.ZP)(l), ei = i.useMemo(() => (0, C.k$)(X, Q, r.id), [X, Q, r]), {
+  } = (0, T.ZP)(l), ei = i.useMemo(() => (0, C.k$)(q, Q, r.id), [q, Q, r]), {
     selected: el,
     ...ea
   } = F(l, r), er = i.useCallback(() => {
-    (0, N._s)(l.id, X, K, r)
-  }, [l.id, X, K, r]), eo = i.useCallback(e => {
+    (0, N._s)(l.id, q, K, r)
+  }, [l.id, q, K, r]), eo = i.useCallback(e => {
     if (null != J && null != Y) e.stopPropagation(), e.preventDefault(), (0, h.Z)(U.Z5c.CHANNEL(null == Y ? void 0 : Y.guild_id, null == Y ? void 0 : Y.id, J))
   }, [Y, J]), ec = i.useCallback(() => {
     (0, m.Xx)(l.id, r, I.d.DELETE_USER_MESSAGE)
-  }, [r, l.id]), eu = (0, y.L9)(Number($)), ed = null != ee, eE = B && null != J && (null == et || !et.actions.hasOwnProperty(I.d.DELETE_USER_MESSAGE));
+  }, [r, l.id]), eu = (0, b.L9)(Number($)), ed = null != ee, eE = B && null != J && (null == et || !et.actions.hasOwnProperty(I.d.DELETE_USER_MESSAGE));
   return (0, s.jsx)("div", {
     onMouseEnter: S,
     onMouseLeave: A,
@@ -316,7 +316,7 @@ function Q(e) {
               className: G.username,
               children: k.Z.Messages.GUILD_AUTOMOD_USERNAME
             }), (0, s.jsx)(M.Z, {
-              type: b.Hb.SYSTEM_DM,
+              type: y.Hb.SYSTEM_DM,
               className: G.systemTag
             }), (0, s.jsx)(z, {
               message: l,
@@ -348,23 +348,23 @@ function Q(e) {
             childrenAccessories: (0, s.jsxs)(s.Fragment, {
               children: [(0, s.jsxs)("div", {
                 className: G.centeredRowContainer,
-                children: [null != q && (0, s.jsxs)(s.Fragment, {
+                children: [null != X && (0, s.jsxs)(s.Fragment, {
                   children: [(0, s.jsx)(E.Text, {
                     variant: "text-xs/medium",
                     color: "text-muted",
                     tag: "span",
                     children: k.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_KEYWORD.format({
-                      keyword: q
+                      keyword: X
                     })
                   }), (0, s.jsx)("div", {
                     className: a()(G.dot, G.dotMargin)
                   })]
-                }), null != w && (0, s.jsx)(E.Text, {
+                }), null != V && (0, s.jsx)(E.Text, {
                   variant: "text-xs/medium",
                   color: "text-muted",
                   tag: "span",
                   children: k.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_RULE_NAME.format({
-                    ruleName: w
+                    ruleName: V
                   })
                 }), null != eu && (0, s.jsxs)(s.Fragment, {
                   children: [(0, s.jsx)("div", {
@@ -406,7 +406,7 @@ function Q(e) {
             onBlur: P,
             onClick: eo
           })
-        }), (0, s.jsx)(V, {
+        }), (0, s.jsx)(w, {
           compact: n,
           children: (0, s.jsxs)("div", {
             className: a()(G.centeredRowContainer, G.buttonContainer, {

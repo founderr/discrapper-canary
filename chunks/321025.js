@@ -1,23 +1,23 @@
 n.d(t, {
   Z: function() {
-    return o
+    return i
   }
 });
 var s = n(735250),
-  a = n(470079),
-  i = n(920906),
-  l = n(130653),
-  r = n(613087);
+  o = n(470079),
+  r = n(920906),
+  a = n(130653),
+  l = n(613087);
 
-function o(e) {
+function i(e) {
   let {
     expansionSpring: t,
     isExpanded: n
   } = e, {
-    animatedComponentProps: o,
+    animatedComponentProps: i,
     recalculateAnimationPositions: c
-  } = a.useContext(r.B$), d = a.useContext(l.T);
-  return a.useEffect(() => {
+  } = o.useContext(l.B$), u = o.useContext(a.T);
+  return o.useEffect(() => {
     c()
   }, [c, n]), (0, s.jsx)("div", {
     style: {
@@ -28,29 +28,29 @@ function o(e) {
       width: "100%",
       height: "100%"
     },
-    children: o.map(e => {
+    children: i.map(e => {
       let {
         id: n,
-        collapsedLeft: a,
-        expandedLeft: l,
-        collapsedTop: r,
-        expandedTop: o,
+        collapsedLeft: o,
+        expandedLeft: a,
+        collapsedTop: l,
+        expandedTop: i,
         collapsedRight: c,
-        expandedRight: u
+        expandedRight: d
       } = e;
-      return (0, s.jsx)(i.animated.div, {
-        id: d ? "quest-bar-v2-preview-" + n : "quest-bar-v2-" + n,
+      return (0, s.jsx)(r.animated.div, {
+        id: u ? "quest-bar-v2-preview-" + n : "quest-bar-v2-" + n,
         style: {
           zIndex: 2,
           position: "absolute",
           top: t.to({
             range: [0, 1],
-            output: [r, o]
+            output: [l, i]
           }),
-          right: Math.min(c, u),
+          right: Math.min(c, d),
           left: t.to({
             range: [0, 1],
-            output: [a, l]
+            output: [o, a]
           })
         }
       }, n)

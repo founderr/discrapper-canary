@@ -191,11 +191,11 @@ let D = e => {
             partnerGame: R
           });
         case l.z.QUEST_1_ENDED_INCOMPLETE:
-          let b = null == j ? void 0 : null === (i = j.metadata) || void 0 === i ? void 0 : i.partnerGame;
+          let y = null == j ? void 0 : null === (i = j.metadata) || void 0 === i ? void 0 : i.partnerGame;
           return (0, s.jsx)(_.Z, {
             noticeType: D,
             markAsDismissed: () => g(M.L.UNKNOWN),
-            partnerGame: b
+            partnerGame: y
           });
         case l.z.NAGBAR_BOUNCED_EMAIL_NOTICE:
           return (0, s.jsxs)(a.Notice, {
@@ -212,7 +212,7 @@ let D = e => {
             })]
           });
         case l.z.NAGBAR_ACTIVATE_SERVER_SUBSCRIPTION:
-          let y = E.Z.getEligibleGuildsForNagActivate();
+          let b = E.Z.getEligibleGuildsForNagActivate();
           return (0, s.jsxs)(a.Notice, {
             color: a.NoticeColors.DEFAULT,
             children: [(0, s.jsx)(a.NoticeCloseButton, {
@@ -221,7 +221,7 @@ let D = e => {
             }), Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_NAGBAR_TEXT, (0, s.jsx)(a.PrimaryCTANoticeButton, {
               noticeType: D,
               onClick: () => {
-                g(M.L.PRIMARY), (0, A.uL)(1 === y.length ? x.Z5c.GUILD_SETTINGS(y[0], "role-subscriptions") : x.Z5c.PICK_GUILD_SETTINGS("role-subscriptions", void 0, "server-subscriptions-finish-setting-up"))
+                g(M.L.PRIMARY), (0, A.uL)(1 === b.length ? x.Z5c.GUILD_SETTINGS(b[0], "role-subscriptions") : x.Z5c.PICK_GUILD_SETTINGS("role-subscriptions", void 0, "server-subscriptions-finish-setting-up"))
               },
               children: Z.Z.Messages.LETS_GO
             })]

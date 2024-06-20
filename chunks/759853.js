@@ -1,44 +1,44 @@
 n(47120);
 var s = n(735250),
-  a = n(470079),
-  i = n(887024),
-  l = n(920906),
-  r = n(442837),
-  o = n(110924),
+  o = n(470079),
+  r = n(887024),
+  a = n(920906),
+  l = n(442837),
+  i = n(110924),
   c = n(607070),
-  d = n(819640),
-  u = n(569379),
-  E = n(675654),
-  _ = n(251217),
-  h = n(197857);
-let m = ["#51BC9D"];
+  u = n(819640),
+  d = n(569379),
+  p = n(675654),
+  x = n(251217),
+  m = n(197857);
+let g = ["#51BC9D"];
 t.Z = e => {
   var t;
   let {
     quest: n,
-    progressBarRef: T,
-    isExpanded: C
+    progressBarRef: C,
+    isExpanded: h
   } = e, {
-    completionSpring: g,
-    startCompletionAnimation: p
-  } = (0, u.GX)(), N = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, I = a.useRef(!1), A = (0, r.e7)([c.Z], () => c.Z.useReducedMotion), f = a.useRef(null), x = (0, r.e7)([d.Z], () => d.Z.hasLayers()), S = (0, o.Z)(x), [v, R] = a.useState(null), [M, O] = a.useState(null), L = a.useRef(new i.qA({
+    completionSpring: S,
+    startCompletionAnimation: E
+  } = (0, d.GX)(), f = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, N = o.useRef(!1), T = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), v = o.useRef(null), j = (0, l.e7)([u.Z], () => u.Z.hasLayers()), _ = (0, i.Z)(j), [A, B] = o.useState(null), [R, M] = o.useState(null), y = o.useRef(new r.qA({
     gravity: 0,
     wind: 0
-  })), Z = (0, i.uR)(v, M), j = a.useCallback(() => {
-    if (A) return;
-    let e = T.current,
-      t = f.current;
-    if (null != t && null != e && Z.isReady) {
-      var n, s, a, i;
+  })), O = (0, r.uR)(A, R), U = o.useCallback(() => {
+    if (T) return;
+    let e = C.current,
+      t = v.current;
+    if (null != t && null != e && O.isReady) {
+      var n, s, o, r;
       let {
-        x: l,
-        y: r
+        x: a,
+        y: l
       } = e.getBoundingClientRect(), {
-        x: o,
+        x: i,
         y: c
       } = t.getBoundingClientRect();
-      Z.createMultipleConfetti((n = l - o, s = r - c, a = e.clientHeight, i = e.clientWidth, {
-        ...E.We,
+      O.createMultipleConfetti((n = a - i, s = l - c, o = e.clientHeight, r = e.clientWidth, {
+        ...p.We,
         position: {
           type: "static-random",
           minValue: {
@@ -46,8 +46,8 @@ t.Z = e => {
             y: s
           },
           maxValue: {
-            x: n + a,
-            y: s + i
+            x: n + o,
+            y: s + r
           }
         },
         velocity: {
@@ -77,34 +77,34 @@ t.Z = e => {
         }
       }), 100)
     }
-  }, [T, f, Z, A]), y = (0, o.Z)(C);
-  return (a.useEffect(() => {
-    N && C && !y && (p(), j())
-  }, [C, N, p, j, y]), a.useEffect(() => {
-    N && !x && S && setTimeout(() => {
-      p(), j()
+  }, [C, v, O, T]), Z = (0, i.Z)(h);
+  return (o.useEffect(() => {
+    f && h && !Z && (E(), U())
+  }, [h, f, E, U, Z]), o.useEffect(() => {
+    f && !j && _ && setTimeout(() => {
+      E(), U()
     }, 200)
-  }, [N, S, x, p, j]), a.useEffect(() => {
-    if (!!Z.isReady) !I.current && N && (p(), j()), I.current = N
-  }, [N, I, j, p, Z]), A) ? null : (0, s.jsxs)("div", {
-    className: _.wrapper,
+  }, [f, _, j, E, U]), o.useEffect(() => {
+    if (!!O.isReady) !N.current && f && (E(), U()), N.current = f
+  }, [f, N, U, E, O]), T) ? null : (0, s.jsxs)("div", {
+    className: x.wrapper,
     "aria-hidden": "true",
-    ref: f,
-    children: [(0, s.jsx)(l.animated.div, {
-      className: _.background,
+    ref: v,
+    children: [(0, s.jsx)(a.animated.div, {
+      className: x.background,
       style: {
-        opacity: g
+        opacity: S
       }
-    }), (0, s.jsx)(i.O_, {
-      ref: R,
-      className: _.confetti,
-      environment: L.current
-    }), (0, s.jsx)(i.Ji, {
-      ref: O,
-      sprites: [h],
-      colors: m,
-      spriteWidth: E.Ko,
-      spriteHeight: E.Ko
+    }), (0, s.jsx)(r.O_, {
+      ref: B,
+      className: x.confetti,
+      environment: y.current
+    }), (0, s.jsx)(r.Ji, {
+      ref: M,
+      sprites: [m],
+      colors: g,
+      spriteWidth: p.Ko,
+      spriteHeight: p.Ko
     })]
   })
 }

@@ -31,8 +31,8 @@ var s, i = n(735250),
   D = n(358085),
   j = n(804739),
   U = n(410575),
-  b = n(981631),
-  y = n(701488);
+  y = n(981631),
+  b = n(701488);
 
 function B(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -61,7 +61,7 @@ class G extends(s = l.PureComponent) {
     return null == n || n instanceof A.ZP ? null : P.ZP.getApplicationIconURL({
       id: n.id,
       icon: null != t ? t.coverImage : n.coverImage,
-      size: y.cc
+      size: b.cc
     })
   }
   handleOpenSpotifyTrack(e) {
@@ -106,8 +106,8 @@ class G extends(s = l.PureComponent) {
           channelId: i,
           messageId: s.id
         }), (0, I.Z)({
-          type: b.q5t.JOIN,
-          source: b.Sbl.MESSAGE_EMBED,
+          type: y.q5t.JOIN,
+          source: y.Sbl.MESSAGE_EMBED,
           userId: n,
           applicationId: e.application_id,
           partyId: null === (l = e.party) || void 0 === l ? void 0 : l.id,
@@ -124,10 +124,10 @@ class G extends(s = l.PureComponent) {
         this.setState({
           sending: !0
         }), await o.Z.sendActivityInvite({
-          type: b.mFx.JOIN,
+          type: y.mFx.JOIN,
           channelId: t,
           activity: e,
-          location: b.Sbl.MESSAGE_EMBED
+          location: y.Sbl.MESSAGE_EMBED
         })
       } finally {
         this.setState({
@@ -178,7 +178,7 @@ class G extends(s = l.PureComponent) {
       } = this.props;
       return (0, i.jsx)(d.Z, {
         ...e,
-        source: b.Sbl.MESSAGE_EMBED,
+        source: y.Sbl.MESSAGE_EMBED,
         application: t
       })
     }), B(this, "renderEmbed", () => {
@@ -252,8 +252,8 @@ B(G, "defaultProps", {
     guildId: a
   } = e, {
     id: r
-  } = null != s ? s : {}, o = null != t && null != t.party && t.party.id === i ? f.Z.getParty(t.party.id) : null, c = null != r ? M.Z.getApplicationActivity(r) : M.Z.findActivity(e => e.type === b.IIU.LISTENING), u = !1;
-  null != r && (u = v.Z.getState(r, b.mFx.JOIN) === b.OcF.LOADING);
+  } = null != s ? s : {}, o = null != t && null != t.party && t.party.id === i ? f.Z.getParty(t.party.id) : null, c = null != r ? M.Z.getApplicationActivity(r) : M.Z.findActivity(e => e.type === y.IIU.LISTENING), u = !1;
+  null != r && (u = v.Z.getState(r, y.mFx.JOIN) === y.OcF.LOADING);
   let d = Array.from(null != o ? o : []).map(e => {
       let t = null != a ? O.ZP.getMember(a, e) : null,
         n = null != t ? t.nick : null,

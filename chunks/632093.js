@@ -4,13 +4,13 @@ var s = n(392711),
   i = n(710845),
   l = n(9156),
   r = n(287328);
-let o = new i.Z("ReadStates");
+let c = new i.Z("ReadStates");
 t.Z = new class e {
   async getAll(e) {
     let t = performance.now(),
       n = await r.Z.userGuildSettings(e).getMany(),
       s = performance.now();
-    return o.log("asynchronously loaded in ".concat(s - t, "ms (userGuildSettings: ").concat(n.length, ")")), n
+    return c.log("asynchronously loaded in ".concat(s - t, "ms (userGuildSettings: ").concat(n.length, ")")), n
   }
   resetInMemoryState() {}
   handleConnectionOpen(e, t) {

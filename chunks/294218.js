@@ -38,29 +38,29 @@ t.Z = i.memo(function(e) {
     hideSimpleEmbedContent: D = !0,
     channel: j,
     isGroupStart: U,
-    animateAvatar: b,
-    subscribeToComponentDispatch: y,
+    animateAvatar: y,
+    subscribeToComponentDispatch: b,
     renderThreadAccessory: B,
     trackAnnouncementViews: k = !1,
     ...G
-  } = e, F = n.isFirstMessageInForumPost(j), w = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), {
-    content: V,
+  } = e, F = n.isFirstMessageInForumPost(j), V = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), {
+    content: w,
     hasSpoilerEmbeds: H
   } = (0, S.Z)(n, {
     hideSimpleEmbedContent: D,
-    allowList: F || w,
-    allowHeading: F || w,
+    allowList: F || V,
+    allowHeading: F || V,
     allowLinks: !0,
     previewLinkTarget: !0
-  }), Y = n.type === x.uaV.REPLY ? n.messageReference : void 0, K = (0, o.e7)([d.Z], () => d.Z.getMessageByReference(Y)), W = (0, r.JA)(n.id), z = (0, h.ZP)(n), Q = (0, o.e7)([E.Z], () => n.hasFlag(x.iLy.HAS_THREAD) && E.Z.getChannel(N.default.castMessageIdAsChannelId(n.id))), q = (0, c.p9)({
+  }), Y = n.type === x.uaV.REPLY ? n.messageReference : void 0, K = (0, o.e7)([d.Z], () => d.Z.getMessageByReference(Y)), W = (0, r.JA)(n.id), z = (0, h.ZP)(n), Q = (0, o.e7)([E.Z], () => n.hasFlag(x.iLy.HAS_THREAD) && E.Z.getChannel(N.default.castMessageIdAsChannelId(n.id))), X = (0, c.p9)({
     guildId: j.guild_id,
     roleId: z.iconRoleId
-  }), X = (0, o.e7)([_.Z], () => _.Z.can(x.Plq.CREATE_INSTANT_INVITE, j)), J = (0, A.Z)({
+  }), q = (0, o.e7)([_.Z], () => _.Z.can(x.Plq.CREATE_INSTANT_INVITE, j)), J = (0, A.Z)({
     message: n,
     channel: j,
     enabled: k
   });
-  if ((0, m.Z)(n, X)) return null;
+  if ((0, m.Z)(n, q)) return null;
   let $ = (0, C.iG)(n),
     ee = (0, C.Gx)(n);
   return (0, s.jsx)(I.Z, {
@@ -76,10 +76,10 @@ t.Z = i.memo(function(e) {
       ...e,
       guildId: j.guild_id,
       author: z,
-      roleIcon: q
+      roleIcon: X
     }),
     childrenAccessories: e.hideAccessories ? void 0 : (0, p.Q)(e, H),
-    childrenMessageContent: (0, g.Z)(e, V),
+    childrenMessageContent: (0, g.Z)(e, w),
     childrenSystemMessage: (0, O.Z)(e),
     onContextMenu: L,
     onClick: Z,

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return o
+    return c
   }
 });
 var s = n(735250);
@@ -10,13 +10,13 @@ var a = n(120356),
   l = n(481060),
   r = n(542037);
 
-function o(e) {
+function c(e) {
   let {
     icon: t,
     tooltip: n,
     onClick: a,
-    className: o
-  } = e, c = e => {
+    className: c
+  } = e, o = e => {
     e.preventDefault(), e.stopPropagation(), a(e)
   };
   return (0, s.jsx)(l.Tooltip, {
@@ -24,8 +24,8 @@ function o(e) {
     children: e => (0, s.jsx)(l.Clickable, {
       ...e,
       "aria-label": n,
-      onClick: c,
-      className: i()(r.actionButton, o),
+      onClick: o,
+      className: i()(r.actionButton, c),
       children: (0, s.jsx)(t, {
         className: r.icon,
         color: "currentColor"

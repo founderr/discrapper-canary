@@ -4,8 +4,8 @@ var s = n(392711),
   i = n(710845),
   l = n(581883),
   r = n(314897),
-  o = n(287328),
-  c = n(261875);
+  c = n(287328),
+  o = n(261875);
 
 function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ let u = new i.Z("UserSettingsProto");
 t.Z = new class e {
   async getAll(e) {
     let t = performance.now(),
-      n = await o.Z.userSettings(e).getMany(),
+      n = await c.Z.userSettings(e).getMany(),
       s = performance.now();
     u.verbose("loaded in ".concat(s - t, "ms (settings: ").concat(n.length, ")"));
     let a = {};
@@ -35,17 +35,17 @@ t.Z = new class e {
       USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: () => this.throttledOnChange()
     }), d(this, "handleUserSettingsProtoChange", () => {
       let e = r.default.getId(),
-        t = c.Z.database(e);
+        t = o.Z.database(e);
       null == t || t.transaction(e => {
         var t, n;
         let s = l.Z.computeState(),
-          a = o.Z.userSettingsTransaction(e);
+          a = c.Z.userSettingsTransaction(e);
         for (let e in s) a.put({
           id: Number(e),
           value: s[e]
         });
         let i = null !== (n = null === (t = l.Z.settings.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n ? n : -1;
-        o.Z.nonGuildVersionsTransaction(e).put({
+        c.Z.nonGuildVersionsTransaction(e).put({
           id: "user_settings_version",
           version: i
         })

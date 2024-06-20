@@ -1,14 +1,14 @@
 n.d(t, {
   _: function() {
-    return m
+    return T
   }
 }), n(47120);
 var s, a = n(735250),
   i = n(470079),
   l = n(120356),
   r = n.n(l),
-  o = n(692547),
-  c = n(477690),
+  c = n(692547),
+  o = n(477690),
   d = n(624138),
   u = n(162168),
   E = n(937459);
@@ -21,12 +21,12 @@ function _(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let h = (0, d.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH),
-  m = Object.freeze({
+let h = (0, d.Mg)(o.Z.GRADIENT_PROGRESS_NOTCH_WIDTH),
+  T = Object.freeze({
     BLACK: E.black,
     GRAY: E.gray
   });
-class T extends(s = i.Component) {
+class I extends(s = i.Component) {
   componentDidMount() {
     this.computeBars(), window.addEventListener("resize", this.computeBars)
   }
@@ -95,7 +95,7 @@ class T extends(s = i.Component) {
     })
   }
 }
-_(T, "defaultProps", {
-  gradientStart: o.Z.unsafe_rawColors.YELLOW_260.css,
-  gradientEnd: o.Z.unsafe_rawColors.GREEN_360.css
-}), t.Z = T
+_(I, "defaultProps", {
+  gradientStart: c.Z.unsafe_rawColors.YELLOW_260.css,
+  gradientEnd: c.Z.unsafe_rawColors.GREEN_360.css
+}), t.Z = I

@@ -10,52 +10,52 @@ t.d(s, {
 var n = t(735250),
   a = t(470079),
   r = t(512722),
-  l = t.n(r),
-  i = t(481060),
+  i = t.n(r),
+  l = t(481060),
   o = t(16084),
   c = t(244526),
   u = t(881052),
   d = t(128069),
   C = t(906732),
-  E = t(176919),
-  f = t(626135),
-  m = t(63063),
-  p = t(937615),
-  g = t(598),
-  h = t(409813),
-  I = t(333867),
-  _ = t(74179),
-  x = t(981631),
+  f = t(176919),
+  E = t(626135),
+  p = t(63063),
+  g = t(937615),
+  m = t(598),
+  x = t(409813),
+  h = t(333867),
+  I = t(74179),
+  _ = t(981631),
   T = t(689938),
   N = t(764578);
-let S = e => {
+let L = e => {
     let {
       children: s,
       style: t,
       className: a,
       ...r
     } = e;
-    return (0, n.jsx)(i.Button, {
-      size: i.ButtonSizes.SMALL,
+    return (0, n.jsx)(l.Button, {
+      size: l.ButtonSizes.SMALL,
       fullWidth: !0,
-      look: i.Button.Looks.FILLED,
-      color: i.ButtonColors.GREEN,
+      look: l.Button.Looks.FILLED,
+      color: l.ButtonColors.GREEN,
       style: t,
       className: a,
       ...r,
       children: s
     })
   },
-  L = e => {
+  S = e => {
     let {
       children: s,
       className: t,
       ...a
     } = e;
-    return (0, n.jsx)(i.Button, {
-      size: i.ButtonSizes.SMALL,
-      look: i.ButtonLooks.BLANK,
-      color: i.ButtonColors.TRANSPARENT,
+    return (0, n.jsx)(l.Button, {
+      size: l.ButtonSizes.SMALL,
+      look: l.ButtonLooks.BLANK,
+      color: l.ButtonColors.TRANSPARENT,
       className: t,
       fullWidth: !0,
       ...a,
@@ -66,12 +66,12 @@ let S = e => {
 function b() {
   let {
     defaultPaymentSource: e
-  } = (0, _.Z)({
+  } = (0, I.Z)({
     isGift: !1,
     activeSubscription: null
   });
   return {
-    userIsEligible: null !== e && !x.j8d.has(e.type)
+    userIsEligible: null !== e && !_.j8d.has(e.type)
   }
 }
 
@@ -80,7 +80,7 @@ function v(e) {
     onPurchaseComplete: s,
     onError: t,
     onReviewPurchase: r,
-    paymentSource: _,
+    paymentSource: I,
     loadId: b,
     skuId: v,
     isGift: O = !1,
@@ -92,28 +92,28 @@ function v(e) {
     paymentAuthenticationState: P,
     application: M,
     skuPricePreviewsById: k
-  } = (0, g.usePaymentContext)(), {
+  } = (0, m.usePaymentContext)(), {
     analyticsLocations: B
-  } = (0, C.ZP)(), [y, F] = a.useState(!1), D = a.useRef(null), U = k[v], H = null != U ? U[_.id] : null, w = null != H ? (0, p.T4)(null == H ? void 0 : H.amount, null == H ? void 0 : H.currency) : null, G = a.useMemo(() => ({
+  } = (0, C.ZP)(), [y, F] = a.useState(!1), D = a.useRef(null), U = k[v], H = null != U ? U[I.id] : null, w = null != H ? (0, g.T4)(null == H ? void 0 : H.amount, null == H ? void 0 : H.currency) : null, G = a.useMemo(() => ({
     ...A,
     load_id: b,
-    payment_type: x.Zuq[x.GZQ.ONE_TIME],
+    payment_type: _.Zuq[_.GZQ.ONE_TIME],
     price: null == H ? void 0 : H.amount,
     currency: null == H ? void 0 : H.currency
   }), [A, H, b]);
   a.useEffect(() => {
-    Z !== h.h8.REVIEW && R(h.h8.REVIEW)
+    Z !== x.h8.REVIEW && R(x.h8.REVIEW)
   }), a.useEffect(() => {
-    P === E.wr.ERROR && t(j)
+    P === f.wr.ERROR && t(j)
   }, [t, j, P]);
   let W = async () => {
-    await f.default.track(x.rMx.PAYMENT_FLOW_COMPLETED, G), l()(null != H, "skuPricePreview can't be null"), l()(null != M, "application can't be null");
+    await E.default.track(_.rMx.PAYMENT_FLOW_COMPLETED, G), i()(null != H, "skuPricePreview can't be null"), i()(null != M, "application can't be null");
     try {
       await (0, o.ZZ)(M.id, v, {
         expectedAmount: H.amount,
         expectedCurrency: H.currency,
         isGift: O,
-        paymentSource: _,
+        paymentSource: I,
         loadId: b
       }), F(!1), s()
     } catch (s) {
@@ -121,17 +121,17 @@ function v(e) {
       e.code !== d.SM.CONFIRMATION_REQUIRED && e.code !== d.SM.AUTHENTICATION_REQUIRED && t(s)
     }
   }, V = a.useCallback(e => {
-    f.default.track(x.rMx.PAYMENT_FLOW_STEP, {
+    E.default.track(_.rMx.PAYMENT_FLOW_STEP, {
       ...G,
       to_step: e
-    }), e === h.h8.CONFIRM && (F(!1), s()), R(e)
+    }), e === x.h8.CONFIRM && (F(!1), s()), R(e)
   }, [G, R, s]);
-  return (0, E.bp)(Z, P, V), (0, n.jsxs)("div", {
+  return (0, f.bp)(Z, P, V), (0, n.jsxs)("div", {
     className: N.reviewContainer,
-    children: [(0, n.jsx)(i.FormSection, {
-      children: (0, n.jsx)(i.FormItem, {
+    children: [(0, n.jsx)(l.FormSection, {
+      children: (0, n.jsx)(l.FormItem, {
         children: (0, n.jsx)(c.Z, {
-          paymentSource: _,
+          paymentSource: I,
           isDefault: !0,
           showSubtext: !1,
           showPaymentSourceIcon: !1,
@@ -143,10 +143,10 @@ function v(e) {
       className: N.legalTerms,
       children: (0, n.jsx)("p", {
         children: T.Z.Messages.LIGHTNING_CHECKOUT_NON_REFUNDABLE_DISCLAIMER.format({
-          paidURL: m.Z.getArticleURL(x.BhN.PAID_TERMS)
+          paidURL: p.Z.getArticleURL(_.BhN.PAID_TERMS)
         })
       })
-    }), (0, n.jsx)(S, {
+    }), (0, n.jsx)(L, {
       className: N.buyButton,
       submitting: y,
       submittingStartedLabel: "Payment Processing",
@@ -155,13 +155,13 @@ function v(e) {
       },
       children: null !== w ? T.Z.Messages.LIGHTNING_CHECKOUT_PAY_CTA.format({
         price: w
-      }) : (0, n.jsx)(i.Spinner, {
-        type: i.Spinner.Type.PULSING_ELLIPSIS
+      }) : (0, n.jsx)(l.Spinner, {
+        type: l.Spinner.Type.PULSING_ELLIPSIS
       })
-    }), !y && (0, n.jsx)(L, {
+    }), !y && (0, n.jsx)(S, {
       className: N.reviewButton,
       onClick: () => {
-        r(), (0, I.Z)({
+        r(), (0, h.Z)({
           skuId: v,
           analyticsLocations: B,
           returnRef: D

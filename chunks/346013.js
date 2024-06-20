@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return y
+    return b
   }
 }), n(47120);
 var s = n(735250),
@@ -36,23 +36,23 @@ var s = n(735250),
   D = n(959517),
   j = n(689938),
   U = n(84427),
-  b = n(527455);
+  y = n(527455);
 
-function y(e) {
+function b(e) {
   var t, n, l;
   let {
     embedUrl: r,
-    message: y,
+    message: b,
     channel: B
-  } = e, k = (0, Z.J)(r, y), {
+  } = e, k = (0, Z.J)(r, b), {
     setPopout: G
-  } = (0, A.Z)(y.id, D.d$), F = (0, S.qo)(y, B, G, !0), w = f.QK.useSetting(), V = (0, v.n)(), [H, Y] = i.useState(!1), [K, W] = i.useState((null == k ? void 0 : k.coverImage) == null), z = (0, d.e7)([_.Z], () => _.Z.useReducedMotion), Q = (0, d.e7)([O.ZP, R.default], () => {
+  } = (0, A.Z)(b.id, D.d$), F = (0, S.qo)(b, B, G, !0), V = f.QK.useSetting(), w = (0, v.n)(), [H, Y] = i.useState(!1), [K, W] = i.useState((null == k ? void 0 : k.coverImage) == null), z = (0, d.e7)([_.Z], () => _.Z.useReducedMotion), Q = (0, d.e7)([O.ZP, R.default], () => {
     var e;
     return O.ZP.isMember(null == k ? void 0 : k.guildId, null === (e = R.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
-  }, [k]), q = (0, d.e7)([O.ZP], () => (null == k ? void 0 : k.authorId) != null ? O.ZP.getMember(k.guildId, k.authorId) : null), [X, J] = i.useMemo(() => {
+  }, [k]), X = (0, d.e7)([O.ZP], () => (null == k ? void 0 : k.authorId) != null ? O.ZP.getMember(k.guildId, k.authorId) : null), [q, J] = i.useMemo(() => {
     var e;
-    return [null !== (e = null == q ? void 0 : q.colorString) && void 0 !== e ? e : "inherit", null == q ? void 0 : q.colorRoleId]
-  }, [q]), {
+    return [null !== (e = null == X ? void 0 : X.colorString) && void 0 !== e ? e : "inherit", null == X ? void 0 : X.colorRoleId]
+  }, [X]), {
     reducedMotion: $
   } = i.useContext(E.AccessibilityPreferencesContext), [ee, et] = i.useState(!1), en = i.useCallback(() => {
     Y(!0)
@@ -78,12 +78,12 @@ function y(e) {
       userId: k.authorId,
       guildId: k.guildId,
       channelId: B.id,
-      messageId: y.id,
+      messageId: b.id,
       roleId: J,
       newAnalyticsLocations: t
     })),
     er = (0, M.NZ)({
-      avatarDecoration: (null == q ? void 0 : q.avatarDecoration) != null ? null == q ? void 0 : q.avatarDecoration : null === (t = k.user) || void 0 === t ? void 0 : t.avatarDecoration,
+      avatarDecoration: (null == X ? void 0 : X.avatarDecoration) != null ? null == X ? void 0 : X.avatarDecoration : null === (t = k.user) || void 0 === t ? void 0 : t.avatarDecoration,
       size: (0, N.y9)(E.AvatarSizes.SIZE_40),
       canAnimate: ee
     }),
@@ -100,7 +100,7 @@ function y(e) {
       onMouseEnter: en,
       onMouseLeave: es,
       children: [!K && (!0 === k.shouldShowBlurredThumbnailImage ? (0, s.jsx)("img", {
-        src: b,
+        src: y,
         alt: j.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
         className: a()(U.thumbnail, {
           [U.spoiler]: k.shouldSpoiler
@@ -108,7 +108,7 @@ function y(e) {
         onContextMenu: F,
         onError: () => W(!0)
       }) : (0, s.jsx)(m.Z, {
-        src: !(V && (w || H)) && ed ? "".concat(eu, "?format=png") : eu,
+        src: !(w && (V || H)) && ed ? "".concat(eu, "?format=png") : eu,
         backgroundSrc: "".concat(eu, "?format=png"),
         alt: j.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
         aspectRatio: 16 / 9,
@@ -197,7 +197,7 @@ function y(e) {
                 children: e => (0, s.jsx)(E.NameWithRoleAnchor, {
                   ...e,
                   name: k.authorName,
-                  color: X,
+                  color: q,
                   className: U.authorName
                 })
               }, (0, c.Z)())

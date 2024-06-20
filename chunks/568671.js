@@ -9,8 +9,8 @@ var a = n(481060),
   i = n(626135),
   l = n(503899),
   r = n(292352),
-  o = n(981631),
-  c = n(689938),
+  c = n(981631),
+  o = n(689938),
   d = n(87562);
 
 function u() {
@@ -25,10 +25,10 @@ function u() {
         return t => (0, s.jsx)(e, {
           ...t
         })
-      }), i.default.track(o.rMx.FAMILY_CENTER_ACTION, {
+      }), i.default.track(c.rMx.FAMILY_CENTER_ACTION, {
         action: r.YC.ShowQRCodeModal
       })
     },
-    children: [(0, s.jsx)(l.Z, {}), c.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_BUTTON]
+    children: [(0, s.jsx)(l.Z, {}), o.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_BUTTON]
   })
 }

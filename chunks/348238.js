@@ -3,7 +3,7 @@ n.d(t, {
     return G
   },
   Go: function() {
-    return y
+    return b
   },
   NU: function() {
     return P
@@ -36,7 +36,7 @@ n.d(t, {
     return Z
   },
   sR: function() {
-    return b
+    return y
   },
   tn: function() {
     return B
@@ -199,7 +199,7 @@ function U(e, t, n) {
   }, [e, t, n])
 }
 
-function b(e, t) {
+function y(e, t) {
   return i.useCallback(n => {
     let s = _.default.getUser(e),
       i = u.Z.getChannel(t);
@@ -207,7 +207,7 @@ function b(e, t) {
   }, [e, t])
 }
 
-function y(e, t) {
+function b(e, t) {
   let {
     id: n
   } = e, {

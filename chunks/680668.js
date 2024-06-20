@@ -40,8 +40,8 @@ function m(e) {
     D = null != g,
     j = null != P,
     U = null != P && P.isGuildVocal(),
-    b = null != P && P.isGuildStageVoice(),
-    y = (0, c.yE)(null !== (t = f.flags) && void 0 !== t ? t : 0, i.$.IS_GUEST_INVITE),
+    y = null != P && P.isGuildStageVoice(),
+    b = (0, c.yE)(null !== (t = f.flags) && void 0 !== t ? t : 0, i.$.IS_GUEST_INVITE),
     B = null !== (m = null == g ? void 0 : g.hasFeature(I.oNc.HUB)) && void 0 !== m && m;
   if (null == g) {
     if (null == f.guild) return (0, s.jsx)(_.Z, {});
@@ -53,9 +53,9 @@ function m(e) {
     G = (0, E.e)({
       isVoiceChannel: U,
       isOwnInvite: M,
-      isGuest: y,
+      isGuest: b,
       isHubGuild: B,
-      isStage: b,
+      isStage: y,
       isStream: !1
     });
   return C = (0, s.jsxs)("span", {
@@ -70,7 +70,7 @@ function m(e) {
         disableBoostClick: !0
       })
     })]
-  }), y && (S = (0, s.jsx)(l.TooltipContainer, {
+  }), b && (S = (0, s.jsx)(l.TooltipContainer, {
     className: N.tooltipContainer,
     text: T.Z.Messages.GUEST_MEMBERSHIP_EXPLANATION,
     children: (0, s.jsx)(l.CircleInformationIcon, {
@@ -117,7 +117,7 @@ function m(e) {
         onClick: k,
         submitting: Z,
         color: o.Z.Button.Colors.GREEN,
-        children: U ? b ? T.Z.Messages.STAGE_CHANNEL_JOIN : T.Z.Messages.INVITE_VOICE_CHANNEL_JOIN : D ? T.Z.Messages.JOINED_GUILD : T.Z.Messages.JOIN_GUILD
+        children: U ? y ? T.Z.Messages.STAGE_CHANNEL_JOIN : T.Z.Messages.INVITE_VOICE_CHANNEL_JOIN : D ? T.Z.Messages.JOINED_GUILD : T.Z.Messages.JOIN_GUILD
       })]
     }), g.hasFeature(I.oNc.HUB) && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)("div", {

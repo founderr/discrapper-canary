@@ -49,7 +49,7 @@ function U(e) {
   }), (0, T.z)()
 }
 
-function b(e) {
+function y(e) {
   let {
     sticker: t,
     description: n
@@ -76,7 +76,7 @@ function b(e) {
     })]
   })
 }
-let y = e => {
+let b = e => {
     let {
       closePopout: t,
       sticker: n,
@@ -141,11 +141,11 @@ let y = e => {
       [O, M] = i.useState(!1),
       D = h.default.getCurrentUser(),
       j = p.ZP.canUseCustomStickersEverywhere(D),
-      y = (0, r.e7)([m.Z], () => m.Z.getGuild(n.guild_id)),
-      B = null != y,
+      b = (0, r.e7)([m.Z], () => m.Z.getGuild(n.guild_id)),
+      B = null != b,
       [k, G] = i.useState(!1),
-      [F, w] = i.useState(null),
-      V = i.useMemo(() => ({
+      [F, V] = i.useState(null),
+      w = i.useMemo(() => ({
         page: null != l.guild_id ? x.ZY5.GUILD_CHANNEL : x.ZY5.DM_CHANNEL,
         section: x.jXE.STICKER_POPOUT
       }), [l.guild_id]),
@@ -157,7 +157,7 @@ let y = e => {
       });
     i.useEffect(() => {
       (async () => {
-        (null == y || y.hasFeature(x.oNc.DISCOVERABLE)) && f(await (0, E.Z)(n.id)), M(!0)
+        (null == b || b.hasFeature(x.oNc.DISCOVERABLE)) && f(await (0, E.Z)(n.id)), M(!0)
       })()
     }, [n.id, B]);
     let Y = n.guild_id === l.getGuildId(),
@@ -190,7 +190,7 @@ let y = e => {
         };
         return (0, s.jsxs)("div", {
           className: P.emojiSection,
-          children: [(0, s.jsx)(b, {
+          children: [(0, s.jsx)(y, {
             description: t,
             sticker: n
           }), W && (0, s.jsx)(N.Z, {
@@ -201,7 +201,7 @@ let y = e => {
             buttonText: L.Z.Messages.EMOJI_POPOUT_PREMIUM_CTA,
             onSubscribeModalClose: t => t ? e() : T(),
             postSuccessGuild: B || null == g ? void 0 : g,
-            premiumModalAnalyticsLocation: V
+            premiumModalAnalyticsLocation: w
           }), Q && (0, s.jsx)(o.Button, {
             size: o.Button.Sizes.SMALL,
             className: P.ctaButton,
@@ -210,11 +210,11 @@ let y = e => {
             children: L.Z.Messages.GUILD_PROFILE_JOIN_SERVER_BUTTON
           })]
         })
-      })(), (null != y || null != g) && (() => {
+      })(), (null != b || null != g) && (() => {
         var e;
         if (!K && !B) return;
         let t = (null !== (e = null == g ? void 0 : g.stickers) && void 0 !== e ? e : []).slice(0, 13).filter(e => e.id !== n.id).slice(0, 12),
-          i = null != g ? d.Z.createFromDiscoverableGuild(g) : d.Z.createFromGuildRecord(y);
+          i = null != g ? d.Z.createFromDiscoverableGuild(g) : d.Z.createFromGuildRecord(b);
         return (0, s.jsxs)("div", {
           className: P.guildSection,
           children: [(0, s.jsx)(o.FormTitle, {
@@ -263,10 +263,10 @@ let y = e => {
                       [Z.nonInteractingSticker]: null != F && F !== e.id
                     }),
                     onMouseEnter: () => {
-                      null == n || n(), w(e.id)
+                      null == n || n(), V(e.id)
                     },
                     onMouseLeave: () => {
-                      null == i || i(), w(null)
+                      null == i || i(), V(null)
                     },
                     ...l,
                     children: (0, s.jsx)(R.ZP, {
@@ -297,7 +297,7 @@ function k(e) {
   } = e;
   return (0, s.jsx)(I.W_, {
     className: Z.popoutContent,
-    children: (0, s.jsx)(b, {
+    children: (0, s.jsx)(y, {
       sticker: i,
       description: L.Z.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
         openPremiumSettings: () => {
@@ -314,7 +314,7 @@ t.Z = e => {
     closePopout: i,
     refreshPositionKey: l
   } = e, [a, r] = (0, g.XW)(t, !0);
-  if (null != a && (0, O.jl)(a)) return (0, s.jsx)(y, {
+  if (null != a && (0, O.jl)(a)) return (0, s.jsx)(b, {
     sticker: a,
     closePopout: i,
     channel: n,

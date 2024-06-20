@@ -7,20 +7,20 @@ t.d(s, {
 var n = t(470079),
   a = t(772848),
   r = t(638730),
-  l = t(626135);
-let i = (e, s, t, n) => {
+  i = t(626135);
+let l = (e, s, t, n) => {
     let {
       scrollTop: a = 0,
       scrollOffset: r = 0,
-      scrollHeight: i = 0,
+      scrollHeight: l = 0,
       scrollWidth: o = 0
     } = n;
-    if (i > 0) {
-      let n = (a + r) / i;
-      n > 0 && l.default.track(e, {
+    if (l > 0) {
+      let n = (a + r) / l;
+      n > 0 && i.default.track(e, {
         scroll_visible_percent: n,
         source: t,
-        page_height: Math.round(i),
+        page_height: Math.round(l),
         page_width: Math.round(o),
         page_session_id: s
       })
@@ -28,14 +28,14 @@ let i = (e, s, t, n) => {
   },
   o = (e, s) => {
     let t = n.useRef(null),
-      l = n.useRef((0, a.Z)()),
-      o = (0, r.h)(i, 5e3, [], {
+      i = n.useRef((0, a.Z)()),
+      o = (0, r.h)(l, 5e3, [], {
         trailing: !0
       }),
       c = n.useCallback(() => {
         var n;
         let a = null === (n = t.current) || void 0 === n ? void 0 : n.getScrollerNode();
-        null != a && o(e, l.current, s, {
+        null != a && o(e, i.current, s, {
           scrollTop: a.scrollTop,
           scrollOffset: a.offsetHeight,
           scrollHeight: a.scrollHeight,
@@ -45,6 +45,6 @@ let i = (e, s, t, n) => {
     return {
       scrollerRef: t,
       scrollHandler: c,
-      sessionId: l.current
+      sessionId: i.current
     }
   }

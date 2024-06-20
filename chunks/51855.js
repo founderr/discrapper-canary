@@ -7,8 +7,8 @@ t.d(s, {
 var n = t(470079),
   a = t(100527),
   r = t(818083),
-  l = t(329067);
-let i = (0, r.B)({
+  i = t(329067);
+let l = (0, r.B)({
     kind: "user",
     id: "2024-04_lightning_checkout",
     label: "Lightning Checkout Experiment",
@@ -24,16 +24,16 @@ let i = (0, r.B)({
     }]
   }),
   o = () => {
-    let e = i.useExperiment({
+    let e = l.useExperiment({
         location: a.Z.COLLECTIBLES_SHOP
       }, {
         autoTrackExposure: !1
       }),
       {
         userIsEligible: s
-      } = (0, l.N)();
+      } = (0, i.N)();
     return n.useEffect(() => {
-      s && i.trackExposure({
+      s && l.trackExposure({
         location: a.Z.COLLECTIBLES_SHOP
       })
     }, [s]), e.enabled && s

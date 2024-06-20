@@ -110,19 +110,19 @@ function U(e) {
   })
 }
 
-function b(e) {
+function y(e) {
   let {
     channelId: t,
     messageId: n
   } = e, s = g.Z.getMessage(t, n);
   return null == s ? [] : s.reactions.flatMap(e => !0 === e.me_vote ? e.emoji.name : [])
 }
-async function y(e) {
+async function b(e) {
   let {
     channelId: t,
     messageId: n,
     answerIds: s
-  } = e, i = b({
+  } = e, i = y({
     channelId: t,
     messageId: n
   }), l = a().difference(i, s), r = a().difference(s, i), u = C.default.getId(), d = [...l.map(e => ({
@@ -176,7 +176,7 @@ async function B(e) {
   }
   let l = (0, x.fU)(t, n);
   i()(null != l, "Must not be able to vote without existing state!");
-  let a = b({
+  let a = y({
     channelId: t,
     messageId: n
   });
@@ -186,7 +186,7 @@ async function B(e) {
       ...e,
       submitting: !0,
       editing: !1
-    })), await y({
+    })), await b({
       channelId: t,
       messageId: n,
       answerIds: e
@@ -200,7 +200,7 @@ async function B(e) {
     u.Z.show({
       title: Z.Z.Messages.GENERIC_ERROR_TITLE,
       body: null !== (c = null !== (o = null === (r = e.getAnyErrorMessage) || void 0 === r ? void 0 : r.call(e)) && void 0 !== o ? o : e.message) && void 0 !== c ? c : Z.Z.Messages.GENERIC_ERROR_BODY
-    }), await y({
+    }), await b({
       channelId: t,
       messageId: n,
       answerIds: a
@@ -366,7 +366,7 @@ async function F(e) {
     throw e
   }
 }
-async function w(e) {
+async function V(e) {
   let {
     channelId: t,
     messageId: n
@@ -469,5 +469,5 @@ t.Z = {
   handleUpdateVoteEditingState: U,
   handlePollActionTapped: G,
   createPoll: F,
-  endPollEarly: w
+  endPollEarly: V
 }

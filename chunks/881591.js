@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return y
+    return b
   }
 }), n(47120);
 var s = n(735250),
@@ -36,14 +36,14 @@ var s = n(735250),
   D = n(689938),
   j = n(111212),
   U = n(174766);
-let b = {
+let y = {
   offset: {
     left: 4,
     right: -12
   }
 };
 
-function y(e) {
+function b(e) {
   let {
     setTab: t,
     closePopout: n
@@ -100,7 +100,7 @@ function B(e) {
     A = R.Z.getChannel(S.id),
     L = (0, m.ZP)(A, !0),
     Z = null != L ? L : S.name,
-    y = (0, d.e7)([M.Z], () => M.Z.getGuild(null == S ? void 0 : S.guild_id)),
+    b = (0, d.e7)([M.Z], () => M.Z.getGuild(null == S ? void 0 : S.guild_id)),
     B = null != S ? (0, N.x)(S) : null,
     k = null;
   return null != l.dueAt && (l.dueAt > new Date ? (t = "text-muted", k = D.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({
@@ -114,9 +114,9 @@ function B(e) {
       children: [(0, s.jsxs)("div", {
         children: [(0, s.jsxs)("div", {
           className: j.messageInfo,
-          children: [null != y ? (0, s.jsx)(v.Z, {
+          children: [null != b ? (0, s.jsx)(v.Z, {
             className: j.guildIcon,
-            guild: y,
+            guild: b,
             size: v.Z.Sizes.SMALL,
             active: !0
           }) : (0, s.jsx)(_.Avatar, {
@@ -186,7 +186,7 @@ function B(e) {
         className: U.message,
         compact: O.jU.getSetting(),
         animateAvatar: !1,
-        focusProps: b,
+        focusProps: y,
         trackAnnouncementViews: !0
       }, E.id), (0, s.jsxs)("div", {
         className: j.actions,

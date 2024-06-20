@@ -5,19 +5,19 @@ t.d(s, {
   }
 }), t(610138), t(216116), t(78328), t(815648), t(47120);
 var n, a, r = t(470079),
-  l = t(266067),
-  i = t(37234),
+  i = t(266067),
+  l = t(37234),
   o = t(703656),
   c = t(981631);
 
 function u() {
   let {
     search: e
-  } = (0, l.TH)(), s = (0, l.UO)(), t = r.useMemo(() => new URLSearchParams(e), [e]).get("source"), n = null != t ? parseInt(t, 10) : null;
+  } = (0, i.TH)(), s = (0, i.UO)(), t = r.useMemo(() => new URLSearchParams(e), [e]).get("source"), n = null != t ? parseInt(t, 10) : null;
   return {
     onClose: r.useCallback(() => {
       if (0 === n) {
-        (0, o.op)(), (0, i.jN)(c.S9g.USER_SETTINGS);
+        (0, o.op)(), (0, l.jN)(c.S9g.USER_SETTINGS);
         return
       }
       if ((0, o.uv)()) {

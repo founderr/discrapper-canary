@@ -4,7 +4,7 @@ var a = n(120356),
   i = n.n(a),
   l = n(481060),
   r = n(51144),
-  o = n(452183);
+  c = n(452183);
 t.Z = e => {
   let {
     user: t,
@@ -13,15 +13,15 @@ t.Z = e => {
     decoration: "never"
   }), ")");
   return (0, s.jsxs)(l.Text, {
-    className: i()([o.text, {
-      [o.fill]: n
+    className: i()([c.text, {
+      [c.fill]: n
     }]),
     variant: "text-md/medium",
     children: [(0, s.jsx)("span", {
-      className: o.username,
+      className: c.username,
       children: r.ZP.getName(t)
     }), (0, s.jsx)("span", {
-      className: o.discriminator,
+      className: c.discriminator,
       children: a
     })]
   })

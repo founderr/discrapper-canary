@@ -4,7 +4,7 @@ var s, a = n(442837),
   l = n(381496),
   r = n(430824);
 
-function o(e, t, n) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -12,9 +12,9 @@ function o(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let c = {},
+let o = {},
   d = () => {
-    c = {
+    o = {
       guildAffinitiesByGuildId: {},
       guildAffinities: [],
       lastFetched: 0
@@ -23,30 +23,30 @@ let c = {},
 d();
 class u extends(s = a.ZP.PersistedStore) {
   initialize(e) {
-    null != e && (c = e), this.waitFor(r.Z)
+    null != e && (o = e), this.waitFor(r.Z)
   }
   getState() {
-    return c
+    return o
   }
   getGuildAffinity(e) {
-    return c.guildAffinitiesByGuildId[e]
+    return o.guildAffinitiesByGuildId[e]
   }
   get affinities() {
-    return c.guildAffinities
+    return o.guildAffinities
   }
   get hasRequestResolved() {
-    return 0 !== c.lastFetched
+    return 0 !== o.lastFetched
   }
 }
-o(u, "displayName", "GuildAffinitiesStore"), o(u, "persistKey", "GuildAffinitiesStore"), t.Z = new u(i.Z, {
+c(u, "displayName", "GuildAffinitiesStore"), c(u, "persistKey", "GuildAffinitiesStore"), t.Z = new u(i.Z, {
   CONNECTION_OPEN: function() {
-    return Date.now() - c.lastFetched > 864e5 && (0, l.j)(), !1
+    return Date.now() - o.lastFetched > 864e5 && (0, l.j)(), !1
   },
   LOAD_GUILD_AFFINITIES_SUCCESS: function(e) {
     let {
       guildAffinities: t
     } = e;
-    c.guildAffinities = [], c.guildAffinitiesByGuildId = {}, c.lastFetched = Date.now(), t.forEach((e, t) => {
+    o.guildAffinities = [], o.guildAffinitiesByGuildId = {}, o.lastFetched = Date.now(), t.forEach((e, t) => {
       let {
         affinity: n,
         guild_id: s
@@ -55,7 +55,7 @@ o(u, "displayName", "GuildAffinitiesStore"), o(u, "persistKey", "GuildAffinities
         guildId: s,
         index: t
       };
-      c.guildAffinitiesByGuildId[s] = a, c.guildAffinities.push(a)
+      o.guildAffinitiesByGuildId[s] = a, o.guildAffinities.push(a)
     })
   },
   LOGOUT: function() {

@@ -1,13 +1,13 @@
 n.d(t, {
   k: function() {
-    return g
+    return N
   }
 });
 var s, a, i = n(735250),
   l = n(470079),
   r = n(557533),
-  o = n.n(r),
-  c = n(569252),
+  c = n.n(r),
+  o = n(569252),
   d = n(593334);
 
 function u(e, t, n) {
@@ -19,29 +19,29 @@ function u(e, t, n) {
   }) : e[t] = n, e
 }
 let E = {
-    VERTICAL: c.flexVertical,
-    HORIZONTAL: c.flexHorizontal,
-    HORIZONTAL_REVERSE: c.flexHorizontalReverse
+    VERTICAL: o.flexVertical,
+    HORIZONTAL: o.flexHorizontal,
+    HORIZONTAL_REVERSE: o.flexHorizontalReverse
   },
   _ = {
-    START: c.flexJustifyStart,
-    END: c.flexJustifyEnd,
-    CENTER: c.flexJustifyCenter,
-    BETWEEN: c.flexJustifyBetween,
-    AROUND: c.flexJustifyAround
+    START: o.flexJustifyStart,
+    END: o.flexJustifyEnd,
+    CENTER: o.flexJustifyCenter,
+    BETWEEN: o.flexJustifyBetween,
+    AROUND: o.flexJustifyAround
   },
   h = {
-    NO_WRAP: c.flexNowrap,
-    WRAP: c.flexWrap,
-    WRAP_REVERSE: c.flexWrapReverse
-  },
-  m = {
-    START: c.flexAlignStart,
-    END: c.flexAlignEnd,
-    CENTER: c.flexAlignCenter,
-    STRETCH: c.flexAlignStretch
+    NO_WRAP: o.flexNowrap,
+    WRAP: o.flexWrap,
+    WRAP_REVERSE: o.flexWrapReverse
   },
   T = {
+    START: o.flexAlignStart,
+    END: o.flexAlignEnd,
+    CENTER: o.flexAlignCenter,
+    STRETCH: o.flexAlignStretch
+  },
+  I = {
     SMALL: d.flexGutterSmall,
     LARGE: d.flexGutterLarge
   };
@@ -54,7 +54,7 @@ class C extends(s = l.PureComponent) {
       grow: s,
       basis: a,
       style: r,
-      wrap: c,
+      wrap: o,
       ...u
     } = this.props, E = {
       style: {
@@ -63,15 +63,15 @@ class C extends(s = l.PureComponent) {
         flexBasis: a,
         ...r
       },
-      className: t === d.flexChild ? t : o()(d.flexChild, t),
+      className: t === d.flexChild ? t : c()(d.flexChild, t),
       ...u
     };
-    if (!c && "string" != typeof e && 1 === l.Children.count(e)) {
+    if (!o && "string" != typeof e && 1 === l.Children.count(e)) {
       let n = l.Children.only(e);
       return E.style = {
         ...E.style,
         ...n.props.style
-      }, E.className = o()(n.props.className, t), l.cloneElement(n, E)
+      }, E.className = c()(n.props.className, t), l.cloneElement(n, E)
     }
     return (0, i.jsx)("div", {
       ...E,
@@ -84,7 +84,7 @@ u(C, "defaultProps", {
   style: {},
   wrap: !1
 });
-class g extends(a = l.PureComponent) {
+class N extends(a = l.PureComponent) {
   render() {
     let {
       children: e,
@@ -94,29 +94,29 @@ class g extends(a = l.PureComponent) {
       align: a,
       wrap: l,
       shrink: r,
-      grow: c,
+      grow: o,
       basis: u,
       style: E,
       gutter: _,
       ...h
-    } = this.props, m = {
+    } = this.props, T = {
       flexShrink: r,
-      flexGrow: c,
+      flexGrow: o,
       flexBasis: u,
       ...E
     };
     return (0, i.jsx)("div", {
-      style: m,
-      className: o()(d.flex, n, s, a, l, _, t),
+      style: T,
+      className: c()(d.flex, n, s, a, l, _, t),
       ...h,
       children: e
     })
   }
 }
-u(g, "Child", C), u(g, "Direction", E), u(g, "Align", m), u(g, "Justify", _), u(g, "Wrap", h), u(g, "Gutter", T), u(g, "defaultProps", {
+u(N, "Child", C), u(N, "Direction", E), u(N, "Align", T), u(N, "Justify", _), u(N, "Wrap", h), u(N, "Gutter", I), u(N, "defaultProps", {
   direction: E.HORIZONTAL,
   justify: _.START,
-  align: m.STRETCH,
+  align: T.STRETCH,
   wrap: h.WRAP,
   shrink: 1,
   grow: 1,

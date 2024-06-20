@@ -9,8 +9,8 @@ var a = n(780384),
   i = n(481060),
   l = n(410030),
   r = n(44315),
-  o = n(889901),
-  c = n(955204),
+  c = n(889901),
+  o = n(955204),
   d = n(231338),
   u = n(958557);
 let E = {
@@ -30,26 +30,26 @@ function h(e) {
     achievementId: n,
     unlocked: d,
     size: h = i.AvatarSizes.SIZE_40
-  } = e, m = (0, l.ZP)(), T = (0, c.oX)(n);
-  if (null == T) return null;
+  } = e, T = (0, l.ZP)(), I = (0, o.oX)(n);
+  if (null == I) return null;
   let C = (0, i.getAvatarSpecs)(h),
     {
-      name: g,
-      rarity: p
-    } = T,
+      name: N,
+      rarity: g
+    } = I,
     {
-      color: N
-    } = (0, c.F7)(p),
-    I = (0, a.wj)(m) ? E : _,
-    A = (C.size - C.offset - 2 * C.stroke) * .8,
-    f = C.size - C.stroke,
-    x = {
-      width: .4 * A,
-      height: .4 * A
+      color: A
+    } = (0, o.F7)(g),
+    m = (0, a.wj)(T) ? E : _,
+    f = (C.size - C.offset - 2 * C.stroke) * .8,
+    p = C.size - C.stroke,
+    R = {
+      width: .4 * f,
+      height: .4 * f
     },
-    S = {
-      width: x.width + 1,
-      height: x.height + 1,
+    M = {
+      width: R.width + 1,
+      height: R.height + 1,
       right: C.stroke + 1,
       bottom: C.stroke + 1,
       padding: 0
@@ -57,33 +57,33 @@ function h(e) {
   return (0, s.jsxs)("div", {
     className: u.container,
     style: {
-      width: f,
-      height: f,
+      width: p,
+      height: p,
       padding: C.stroke
     },
-    "aria-label": "".concat(null !== (t = g()) && void 0 !== t ? t : ""),
+    "aria-label": "".concat(null !== (t = N()) && void 0 !== t ? t : ""),
     children: [(0, s.jsx)("div", {
       className: u.trophyIconContainer,
       children: (0, s.jsx)(i.TrophyIcon, {
         size: "custom",
-        color: d ? N : (0, r.Lq)(I.trophy),
-        width: A,
-        height: A
+        color: d ? A : (0, r.Lq)(m.trophy),
+        width: f,
+        height: f
       })
     }), !d && (0, s.jsx)("div", {
       className: u.lockContainer,
-      style: S,
+      style: M,
       children: (0, s.jsx)(i.LockIcon, {
         size: "custom",
-        color: (0, r.Lq)(I.locked),
-        ...x
+        color: (0, r.Lq)(m.locked),
+        ...R
       })
-    }), d && p === c.EP.LEGENDARY && (0, s.jsx)("div", {
+    }), d && g === o.EP.LEGENDARY && (0, s.jsx)("div", {
       className: u.lockContainer,
-      style: S,
-      children: (0, s.jsx)(o.Z, {
+      style: M,
+      children: (0, s.jsx)(c.Z, {
         className: u.confettiIcon,
-        ...x
+        ...R
       })
     })]
   })

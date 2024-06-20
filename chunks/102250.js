@@ -36,11 +36,11 @@ var s = n(735250),
   D = n(981631),
   j = n(674563),
   U = n(689938),
-  b = n(923255);
+  y = n(923255);
 
-function y() {
+function b() {
   return (0, s.jsx)("div", {
-    className: b.dot
+    className: y.dot
   })
 }
 
@@ -54,12 +54,12 @@ function B(e) {
   switch (i) {
     case C.nj:
     case u.p.RAID:
-      return (0, s.jsx)(w, {
+      return (0, s.jsx)(V, {
         message: t,
         compact: n
       });
     case u.p.MENTION_RAID:
-      return (0, s.jsx)(V, {
+      return (0, s.jsx)(w, {
         message: t,
         compact: n
       });
@@ -154,9 +154,9 @@ function F(e) {
       })]
     }),
     subheader: (0, s.jsxs)("div", {
-      className: b.dotSeparatedRow,
+      className: y.dotSeparatedRow,
       children: [(0, s.jsx)("div", {
-        className: b.alertsEnabledSubHeader,
+        className: y.alertsEnabledSubHeader,
         children: null != c && null != a && (0, s.jsxs)(i.Fragment, {
           children: [(0, s.jsx)(I.Text, {
             variant: "text-xs/medium",
@@ -175,7 +175,7 @@ function F(e) {
               })
             },
             children: e => (0, s.jsxs)(I.Clickable, {
-              className: b.alertsEnabledSubHeaderAvatarUsername,
+              className: y.alertsEnabledSubHeaderAvatarUsername,
               ...e,
               children: [(0, s.jsx)("div", {
                 ...E,
@@ -195,7 +195,7 @@ function F(e) {
             })
           })]
         })
-      }), (0, s.jsx)(y, {}), (0, s.jsx)(I.Text, {
+      }), (0, s.jsx)(b, {}), (0, s.jsx)(I.Text, {
         variant: "text-xs/medium",
         color: "text-normal",
         children: o()(n.timestamp).fromNow()
@@ -209,7 +209,7 @@ function F(e) {
   })
 }
 
-function w(e) {
+function V(e) {
   var t;
   let {
     message: l,
@@ -240,7 +240,7 @@ function w(e) {
       })]
     }),
     subheader: (0, s.jsxs)("div", {
-      className: b.dotSeparatedRow,
+      className: y.dotSeparatedRow,
       children: [null != r && (0, s.jsx)(I.Text, {
         variant: "text-xs/medium",
         color: "text-normal",
@@ -254,7 +254,7 @@ function w(e) {
           dmsSent: T
         })
       }), null != u && (0, s.jsxs)(i.Fragment, {
-        children: [(0, s.jsx)(y, {}), (0, s.jsx)(I.Text, {
+        children: [(0, s.jsx)(b, {}), (0, s.jsx)(I.Text, {
           variant: "text-xs/medium",
           color: "text-normal",
           children: o()(u).fromNow()
@@ -269,7 +269,7 @@ function w(e) {
       })
     }) : null,
     footerButtons: (0, s.jsxs)("div", {
-      className: b.dotSeparatedRow,
+      className: y.dotSeparatedRow,
       children: [(0, s.jsx)(I.Button, {
         onClick: e => {
           if (null != O && x) {
@@ -293,14 +293,14 @@ function w(e) {
         color: I.Button.Colors.LINK,
         look: I.Button.Looks.LINK,
         size: I.Button.Sizes.SMALL,
-        className: b.buttonStyle,
+        className: y.buttonStyle,
         children: (0, s.jsx)("div", {
-          className: b.footerAction,
+          className: y.footerAction,
           children: x ? (0, s.jsxs)(s.Fragment, {
             children: [(0, s.jsx)(I.LockIcon, {
               size: "xs",
               color: c.Z.BLUE_345,
-              className: b.footerIcon
+              className: y.footerIcon
             }), (0, s.jsx)(I.Text, {
               variant: "text-xs/medium",
               color: "text-link",
@@ -310,7 +310,7 @@ function w(e) {
             children: [(0, s.jsx)(I.ShieldIcon, {
               size: "xs",
               color: c.Z.BLUE_345,
-              className: b.footerIcon
+              className: y.footerIcon
             }), (0, s.jsx)(I.Text, {
               variant: "text-xs/medium",
               color: "text-link",
@@ -318,14 +318,14 @@ function w(e) {
             })]
           })
         })
-      }), (0, s.jsx)(y, {}), (0, s.jsx)(I.Button, {
+      }), (0, s.jsx)(b, {}), (0, s.jsx)(I.Button, {
         onClick: L,
         color: I.Button.Colors.LINK,
         look: I.Button.Looks.LINK,
         size: I.Button.Sizes.SMALL,
-        className: b.buttonStyle,
+        className: y.buttonStyle,
         children: (0, s.jsx)("div", {
-          className: b.footerAction,
+          className: y.footerAction,
           children: (0, s.jsx)(I.Text, {
             variant: "text-xs/medium",
             color: "text-link",
@@ -337,7 +337,7 @@ function w(e) {
   })
 }
 
-function V(e) {
+function w(e) {
   var t;
   let {
     message: n,
@@ -360,7 +360,7 @@ function V(e) {
       })]
     }),
     subheader: (0, s.jsx)("div", {
-      className: b.dotSeparatedRow,
+      className: y.dotSeparatedRow,
       children: null != r && (0, s.jsx)(I.Text, {
         variant: "text-xs/medium",
         color: "text-normal",
@@ -373,7 +373,7 @@ function V(e) {
       children: U.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_MENTION_RAID_DESCRIPTION
     }),
     footerButtons: (0, s.jsxs)("div", {
-      className: b.dotSeparatedRow,
+      className: y.dotSeparatedRow,
       children: [(0, s.jsx)(I.Button, {
         onClick: function() {
           null != a && null != c && (0, A.UE)(a, c, () => {
@@ -383,25 +383,25 @@ function V(e) {
         color: I.Button.Colors.LINK,
         look: I.Button.Looks.LINK,
         size: I.Button.Sizes.SMALL,
-        className: b.buttonStyle,
+        className: y.buttonStyle,
         children: (0, s.jsx)("div", {
-          className: b.footerAction,
+          className: y.footerAction,
           children: (0, s.jsx)(I.Text, {
             variant: "text-xs/medium",
             color: "text-link",
             children: U.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
           })
         })
-      }), (0, s.jsx)(y, {}), (0, s.jsx)(I.Button, {
+      }), (0, s.jsx)(b, {}), (0, s.jsx)(I.Button, {
         onClick: function() {
           null != a && p.Z.open(a, D.pNK.GUILD_AUTOMOD, void 0, D.KsC.AUTOMOD_MENTION_SPAM)
         },
         color: I.Button.Colors.LINK,
         look: I.Button.Looks.LINK,
         size: I.Button.Sizes.SMALL,
-        className: b.buttonStyle,
+        className: y.buttonStyle,
         children: (0, s.jsx)("div", {
-          className: b.footerAction,
+          className: y.footerAction,
           children: (0, s.jsx)(I.Text, {
             variant: "text-xs/medium",
             color: "text-link",
@@ -423,24 +423,24 @@ function H(e) {
   } = e;
   return (0, s.jsx)(s.Fragment, {
     children: (0, s.jsxs)("div", {
-      className: a()(b.embedCard, {
-        [b.compact]: t
+      className: a()(y.embedCard, {
+        [y.compact]: t
       }),
       children: [(0, s.jsxs)("div", {
-        className: b.cardContent,
+        className: y.cardContent,
         children: [(0, s.jsxs)("div", {
-          className: b.cardHeaderContianer,
+          className: y.cardHeaderContianer,
           children: [(0, s.jsx)("div", {
-            className: b.cardHeader,
+            className: y.cardHeader,
             children: n
           }), null != i && (0, s.jsx)("div", {
-            className: b.subheader,
+            className: y.subheader,
             children: i
           })]
         }), l]
       }), null != r && (0, s.jsx)("div", {
-        className: a()(b.centeredRowContainer, b.cardFooter, {
-          [b.compact]: t
+        className: a()(y.centeredRowContainer, y.cardFooter, {
+          [y.compact]: t
         }),
         children: r
       })]
@@ -467,47 +467,47 @@ function Y(e) {
     onMouseEnter: o,
     onMouseLeave: c,
     children: (0, s.jsx)(Z.Z, {
-      className: a()(b.mainContainer, {
-        [b.compact]: n
+      className: a()(y.mainContainer, {
+        [y.compact]: n
       }),
       iconNode: n ? null : (0, s.jsx)(P.S, {
         src: r
       }),
-      iconContainerClassName: b.iconContainer,
+      iconContainerClassName: y.iconContainer,
       compact: n,
       children: (0, s.jsxs)("div", {
-        className: a()(b.content, {
-          [b.compact]: n
+        className: a()(y.content, {
+          [y.compact]: n
         }),
         children: [(0, s.jsx)(L.nD, {
           message: i,
-          messageClassname: b.spanCorrection,
-          className: a()(b.usernameContainer, b.spanCorrection, {
-            [b.compact]: n
+          messageClassname: y.spanCorrection,
+          className: a()(y.usernameContainer, y.spanCorrection, {
+            [y.compact]: n
           }),
           username: (0, s.jsxs)("div", {
-            className: b.spanCorrection,
+            className: y.spanCorrection,
             children: [(0, s.jsx)(I.Text, {
               variant: "text-md/normal",
               color: "text-brand",
               tag: "span",
-              className: b.username,
+              className: y.username,
               children: U.Z.Messages.GUILD_AUTOMOD_USERNAME
             }), (0, s.jsx)(v.Z, {
               type: j.Hb.SYSTEM_DM,
-              className: b.systemTag
+              className: y.systemTag
             }), E && (0, s.jsx)(I.Text, {
               variant: "text-md/normal",
               color: "header-primary",
               tag: "span",
-              className: b.spanCorrection,
+              className: y.spanCorrection,
               children: U.Z.Messages.GUILD_AUTOMOD_NOTFICATION_ALERT_TITLE
             })]
           }),
           compact: n,
           showTimestamp: !0
         }), (0, s.jsx)("div", {
-          className: b.flexLineBreak
+          className: y.flexLineBreak
         }), (0, s.jsx)(B, {
           message: i,
           compact: n

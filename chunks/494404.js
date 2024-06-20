@@ -1,6 +1,6 @@
 n.d(t, {
   ZP: function() {
-    return b
+    return y
   },
   h4: function() {
     return Z
@@ -192,15 +192,15 @@ function U(e) {
       let t = null === (e = Z.current) || void 0 === e ? void 0 : e.getScrollerState();
       null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && l && !r && (null == E || E())
     }, [l, E, r]),
-    b = [],
-    y = !0;
-  null == n ? b = [(0, s.jsx)("div", {
+    y = [],
+    b = !0;
+  null == n ? y = [(0, s.jsx)("div", {
     className: a()(x.emptyPlaceholder, x.loadingPlaceholder),
     children: (0, s.jsx)(d.Spinner, {})
-  }, "spinner")] : 0 === n.length ? b.push((0, s.jsx)(i.Fragment, {
+  }, "spinner")] : 0 === n.length ? y.push((0, s.jsx)(i.Fragment, {
     children: T(m.Z.theme)
-  }, "empty-state")) : (y = !1, b = [], o().each(n, e => {
-    b.push(...N(e))
+  }, "empty-state")) : (b = !1, y = [], o().each(n, e => {
+    y.push(...N(e))
   }));
   let B = null;
   null != n && n.length > 0 && null != E && (B = r ? (0, s.jsx)("div", {
@@ -220,7 +220,7 @@ function U(e) {
     children: T(m.Z.theme)
   }));
   let k = null == h ? void 0 : h(),
-    G = y && null != k ? (0, s.jsx)("div", {
+    G = b && null != k ? (0, s.jsx)("div", {
       className: x.footer,
       children: (0, s.jsx)(g.Z, {
         style: {
@@ -235,7 +235,7 @@ function U(e) {
       maxHeight: j.height - 43 - 25
     };
   D && (F.maxHeight -= 40);
-  let w = null != E && l;
+  let V = null != E && l;
   return (0, s.jsx)("div", {
     className: a()(S, x.messagesPopoutWrap),
     style: F,
@@ -246,7 +246,7 @@ function U(e) {
       component: _(),
       children: [(0, s.jsxs)(d.AdvancedScroller, {
         className: a()(x.messagesPopout, C),
-        onScroll: w ? U : void 0,
+        onScroll: V ? U : void 0,
         ref: Z,
         children: [(0, s.jsx)(c.bG, {
           navigator: P,
@@ -259,7 +259,7 @@ function U(e) {
               return (0, s.jsx)("div", {
                 ref: t,
                 ...n,
-                children: b
+                children: y
               })
             }
           })
@@ -269,7 +269,7 @@ function U(e) {
   })
 }
 
-function b(e) {
+function y(e) {
   let {
     analyticsName: t,
     onFetch: n,

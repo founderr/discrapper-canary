@@ -56,7 +56,7 @@ function U(e) {
   })
 }(i = s || (s = {}))[i.UNACCEPTED = 0] = "UNACCEPTED", i[i.ACCEPTED = 1] = "ACCEPTED", i[i.IN_PROGRESS = 2] = "IN_PROGRESS", i[i.COMPLETED = 3] = "COMPLETED", i[i.CLAIMED = 4] = "CLAIMED";
 
-function b(e) {
+function y(e) {
   let {
     quest: t,
     useReducedMotion: n
@@ -115,7 +115,7 @@ function b(e) {
   }, E)
 }
 
-function y(e) {
+function b(e) {
   let {
     isQuestComplete: t,
     useReducedMotion: n,
@@ -170,9 +170,9 @@ t.Z = e => {
     if (r) return 2;
     else if (i) return 1;
     else return 0
-  }(t), w = F >= 1, V = F >= 3, H = F >= 4, Y = (0, A.Xv)(t.config), K = (0, A.zK)(t, L.S7.IN_HOUSE_CONSOLE_QUEST), W = (0, A.$J)(t), z = (0, x.uq)(n), Q = n === S.jn.QUESTS_EMBED, q = B || k, {
-    xboxAndPlaystationAccounts: X
-  } = (0, h.z6)(), J = (0, h.t5)(t, L.dr.QUESTS_CARD), $ = w && !H && z, ee = X.length > 0, et = (0, A.Bz)(t), en = w && W && !ee, es = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), ei = function(e) {
+  }(t), V = F >= 1, w = F >= 3, H = F >= 4, Y = (0, A.Xv)(t.config), K = (0, A.zK)(t, L.S7.IN_HOUSE_CONSOLE_QUEST), W = (0, A.$J)(t), z = (0, x.uq)(n), Q = n === S.jn.QUESTS_EMBED, X = B || k, {
+    xboxAndPlaystationAccounts: q
+  } = (0, h.z6)(), J = (0, h.t5)(t, L.dr.QUESTS_CARD), $ = V && !H && z, ee = q.length > 0, et = (0, A.Bz)(t), en = V && W && !ee, es = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), ei = function(e) {
     let {
       progressState: t,
       isCollectibleQuest: n,
@@ -201,11 +201,11 @@ t.Z = e => {
     isInHouseQuest: K,
     inGiftInventory: z,
     waitingForConsoleConnection: en
-  }), el = K && z && V ? P.Z.Messages.QUESTS_IN_HOUSE_REWARD_TOOLTIP : w ? P.Z.Messages.QUESTS_IN_PROGRESS_TOOLTIP : P.Z.Messages.QUESTS_ACCEPT_TOOLTIP, ea = (0, R.hf)({
+  }), el = K && z && w ? P.Z.Messages.QUESTS_IN_HOUSE_REWARD_TOOLTIP : V ? P.Z.Messages.QUESTS_IN_PROGRESS_TOOLTIP : P.Z.Messages.QUESTS_ACCEPT_TOOLTIP, ea = (0, R.hf)({
     quest: t,
     location: n,
     questContentPosition: G
-  }), er = a.useMemo(() => W && z && !ee ? 2 === F : w && !V, [W, z, w, V, F, ee]), eo = (0, c.e7)([C.Z], () => C.Z.isEnrolling(t.id)), ec = () => {
+  }), er = a.useMemo(() => W && z && !ee ? 2 === F : V && !w, [W, z, V, w, F, ee]), eo = (0, c.e7)([C.Z], () => C.Z.isEnrolling(t.id)), ec = () => {
     if (en && z) {
       let e = (0, p.i)({
         location: L.dr.QUESTS_CARD
@@ -214,13 +214,13 @@ t.Z = e => {
         showInline: e
       })
     }
-    if (!w) return (0, m.AH)(t.id, {
+    if (!V) return (0, m.AH)(t.id, {
       questContent: n,
       questContentCTA: N.jZ.ACCEPT_QUEST,
       questContentPosition: G
     });
     ea()
-  }, eu = (0, c.e7)([_.default], () => _.default.locale), ed = z && Y, eE = r && !V, e_ = (0, l.jsx)(O.Z, {
+  }, eu = (0, c.e7)([_.default], () => _.default.locale), ed = z && Y, eE = r && !w, e_ = (0, l.jsx)(O.Z, {
     autoplay: i,
     className: o()(D.gridImg, {
       [D.questRewardGiftInventory]: z && "lg" === s,
@@ -240,9 +240,9 @@ t.Z = e => {
       [D.outerContainerNoProgress]: !$
     }),
     style: {
-      visibility: q ? "visible" : "hidden"
+      visibility: X ? "visible" : "hidden"
     },
-    "aria-hidden": !q,
+    "aria-hidden": !X,
     children: [(0, l.jsx)(u.Tooltip, {
       text: eE ? P.Z.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
       tooltipContentClassName: D.rewardTileExpirationTooltip,
@@ -264,7 +264,7 @@ t.Z = e => {
     }), (0, l.jsxs)("div", {
       className: o()(D.gridText, D.taskDetails),
       children: [(0, l.jsx)(u.Text, {
-        variant: j(n, s, w),
+        variant: j(n, s, V),
         className: D.taskInstructions,
         children: r ? P.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_HEADING.format({
           questName: t.config.messages.questName
@@ -368,16 +368,16 @@ t.Z = e => {
           })
         },
         children: P.Z.Messages.QUESTS_LEARN_MORE_V2
-      }), r && !V ? null : W && z && w && ee && !et ? (0, l.jsx)(b, {
+      }), r && !w ? null : W && z && V && ee && !et ? (0, l.jsx)(y, {
         quest: t,
         useReducedMotion: es
       }) : (0, l.jsx)(u.Tooltip, {
         text: el,
         tooltipContentClassName: D.ctaTooltipText,
-        shouldShow: !V || V && W && z,
-        children: e => (0, l.jsx)(y, {
+        shouldShow: !w || w && W && z,
+        children: e => (0, l.jsx)(b, {
           ...e,
-          isQuestComplete: V,
+          isQuestComplete: w,
           useReducedMotion: es,
           isInHouseQuest: K,
           inGiftInventory: z,
@@ -389,7 +389,7 @@ t.Z = e => {
       }, el)]
     }), $ && (0, l.jsx)(f.Z, {
       className: D.gridProgressBar,
-      color: V ? u.tokens.colors.TEXT_POSITIVE : u.tokens.colors.BG_BRAND,
+      color: w ? u.tokens.colors.TEXT_POSITIVE : u.tokens.colors.BG_BRAND,
       quest: t,
       isInventory: z
     })]

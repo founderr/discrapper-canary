@@ -4,17 +4,17 @@ var s = n(710845),
   i = n(430824),
   l = n(411198),
   r = n(625137),
-  o = n(287328);
-let c = new s.Z("Guilds");
+  c = n(287328);
+let o = new s.Z("Guilds");
 t.Z = new class e {
   async getAsync(e) {
     let t = performance.now(),
-      n = await o.Z.guilds(e).getMany(),
+      n = await c.Z.guilds(e).getMany(),
       s = performance.now();
-    return c.verbose("loaded in ".concat(s - t, "ms (guilds: ").concat(n.length, ")")), n
+    return o.verbose("loaded in ".concat(s - t, "ms (guilds: ").concat(n.length, ")")), n
   }
   async getOneAsync(e, t) {
-    return await o.Z.guilds(e).get(t)
+    return await c.Z.guilds(e).get(t)
   }
   handleBackgroundSync(e, t) {
     for (let n of e.guilds) {
@@ -63,13 +63,13 @@ t.Z = new class e {
     this.put(s, t)
   }
   put(e, t) {
-    o.Z.guildsTransaction(t).put(e)
+    c.Z.guildsTransaction(t).put(e)
   }
   delete(e, t) {
-    o.Z.guildsTransaction(t).delete(e)
+    c.Z.guildsTransaction(t).delete(e)
   }
   clear(e) {
-    o.Z.guildsTransaction(e).delete()
+    c.Z.guildsTransaction(e).delete()
   }
   constructor() {
     var e, t, n;

@@ -1,14 +1,14 @@
 n.d(t, {
   P: function() {
-    return a
+    return o
   },
   u: function() {
-    return l
+    return a
   }
 });
-var s, a, i = n(818083);
-(s = a || (a = {}))[s.V1 = 0] = "V1", s[s.V2 = 1] = "V2";
-let l = (0, i.B)({
+var s, o, r = n(818083);
+(s = o || (o = {}))[s.V1 = 0] = "V1", s[s.V2 = 1] = "V2";
+let a = (0, r.B)({
   id: "2024-05_quest_bar",
   kind: "user",
   label: "Quest Bar",

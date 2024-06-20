@@ -1,21 +1,21 @@
 "use strict";
 t.d(s, {
   T: function() {
-    return l
+    return i
   },
   v: function() {
-    return i
+    return l
   }
 });
 var n = t(735250);
 t(470079);
 var a = t(481060);
 let r = "collectibles shop product details modal",
-  l = e => {
+  i = e => {
     let {
       product: s,
-      category: l,
-      analyticsSource: i,
+      category: i,
+      analyticsSource: l,
       analyticsLocations: o,
       returnRef: c
     } = e;
@@ -26,8 +26,8 @@ let r = "collectibles shop product details modal",
       return t => (0, n.jsx)(e, {
         ...t,
         product: s,
-        category: l,
-        analyticsSource: i,
+        category: i,
+        analyticsSource: l,
         analyticsLocations: o,
         returnRef: c
       })
@@ -35,6 +35,6 @@ let r = "collectibles shop product details modal",
       modalKey: r
     })
   },
-  i = () => {
+  l = () => {
     (0, a.closeModal)(r)
   }

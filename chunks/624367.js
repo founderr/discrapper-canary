@@ -42,26 +42,26 @@ function D(e) {
     message: j
   } = e, {
     analyticsLocations: U
-  } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK), b = (0, c.O)(), y = j.channel_id, B = (0, l.e7)([T.Z], () => T.Z.getChannel(y), [y]), k = null == B ? void 0 : B.guild_id, G = null != B && (B.isGuildVoice() || B.isPrivate()), F = (0, l.e7)([A.ZP], () => A.ZP.getSelfEmbeddedActivityForChannel(y)), w = (null == F ? void 0 : F.applicationId) === D, [V, H] = (0, E.Z)([D, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : ""]), Y = (0, f.Z)(null !== (a = null == V ? void 0 : V.maxParticipants) && void 0 !== a ? a : 0), [K] = (0, l.Wu)([A.ZP], () => G ? A.ZP.getEmbeddedActivitiesForChannel(y).filter(e => e.applicationId === D) : [], [D, y, G]), W = Array.from(null !== (S = null == K ? void 0 : K.userIds) && void 0 !== S ? S : []), z = (0, l.Wu)([N.default], () => W.map(e => N.default.getUser(e)).filter(C.lm), [W]), Q = (0, O.Z)({
+  } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK), y = (0, c.O)(), b = j.channel_id, B = (0, l.e7)([T.Z], () => T.Z.getChannel(b), [b]), k = null == B ? void 0 : B.guild_id, G = null != B && (B.isGuildVoice() || B.isPrivate()), F = (0, l.e7)([A.ZP], () => A.ZP.getSelfEmbeddedActivityForChannel(b)), V = (null == F ? void 0 : F.applicationId) === D, [w, H] = (0, E.Z)([D, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : ""]), Y = (0, f.Z)(null !== (a = null == w ? void 0 : w.maxParticipants) && void 0 !== a ? a : 0), [K] = (0, l.Wu)([A.ZP], () => G ? A.ZP.getEmbeddedActivitiesForChannel(b).filter(e => e.applicationId === D) : [], [D, b, G]), W = Array.from(null !== (S = null == K ? void 0 : K.userIds) && void 0 !== S ? S : []), z = (0, l.Wu)([N.default], () => W.map(e => N.default.getUser(e)).filter(C.lm), [W]), Q = (0, O.Z)({
     applicationId: D,
     size: P,
     names: ["embedded_cover"]
-  }), q = _.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT), X = z.length > 0 ? L.Z.Messages.JOIN : L.Z.Messages.START, J = async () => {
+  }), X = _.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT), q = z.length > 0 ? L.Z.Messages.JOIN : L.Z.Messages.START, J = async () => {
     if (G) {
       if (null != K && z.length > 0) await (0, p.Z)({
         applicationId: K.applicationId,
         currentEmbeddedApplication: H,
-        activityChannelId: y,
+        activityChannelId: b,
         embeddedActivitiesManager: R.Z,
-        locationObject: b.location,
+        locationObject: y.location,
         analyticsLocations: U
       });
       else {
-        let e = B.isPrivate() && !I.Z.isCallActive(y),
+        let e = B.isPrivate() && !I.Z.isCallActive(b),
           t = () => (0, g.Z)({
             targetApplicationId: D,
             currentEmbeddedApplication: H,
-            channelId: y,
+            channelId: b,
             guildId: k,
             embeddedActivitiesManager: R.Z,
             analyticsLocations: U
@@ -76,14 +76,14 @@ function D(e) {
       }
     } else(0, M.Z)({
       guildId: k,
-      locationObject: b.location,
-      openInPopout: q,
+      locationObject: y.location,
+      openInPopout: X,
       initialSelectedApplicationId: D,
       initialSlide: x.ag.SELECT_CHANNEL,
       analyticsLocations: U
     })
   };
-  return null != V && (0, h.yE)(V.flags, v.udG.EMBEDDED) ? (0, s.jsx)(d.Gt, {
+  return null != w && (0, h.yE)(w.flags, v.udG.EMBEDDED) ? (0, s.jsx)(d.Gt, {
     value: U,
     children: (0, s.jsxs)("div", {
       className: Z.container,
@@ -91,7 +91,7 @@ function D(e) {
         className: Z.imgContainer,
         children: (0, s.jsx)("img", {
           className: Z.img,
-          alt: V.name,
+          alt: w.name,
           src: Q.url
         })
       }), (0, s.jsxs)("div", {
@@ -99,11 +99,11 @@ function D(e) {
         children: [(0, s.jsx)(r.Heading, {
           className: Z.heading,
           variant: "heading-xl/semibold",
-          children: V.name
+          children: w.name
         }), (0, s.jsx)(r.Heading, {
           className: Z.description,
           variant: "heading-sm/medium",
-          children: null === (t = V.description) || void 0 === t ? void 0 : t.trim()
+          children: null === (t = w.description) || void 0 === t ? void 0 : t.trim()
         }), (0, s.jsx)(r.Heading, {
           className: Z.learnMore,
           variant: "heading-sm/medium",
@@ -136,8 +136,8 @@ function D(e) {
               onClick: J,
               className: Z.button,
               color: r.ButtonColors.GREEN,
-              disabled: w,
-              children: X
+              disabled: V,
+              children: q
             })
           })]
         })]

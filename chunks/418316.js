@@ -43,8 +43,8 @@ function E(e) {
         D = null != P ? s.ZP.getGuildScheduledEvent(P) : null,
         j = null == D ? void 0 : D.name,
         U = null === (p = i.Z.getGuild(null == D ? void 0 : D.guild_id)) || void 0 === p ? void 0 : p.name,
-        b = (0, s.Z2)(null != D ? D : void 0);
-      return (0, r.Ew)(U) || (0, r.Ew)(j) || !b ? null !== (g = e.body) && void 0 !== g ? g : "" : d.Z.Messages.NOTIFICATION_CENTER_GUILD_SCHEDULED_EVENT_ENDED.format({
+        y = (0, s.Z2)(null != D ? D : void 0);
+      return (0, r.Ew)(U) || (0, r.Ew)(j) || !y ? null !== (g = e.body) && void 0 !== g ? g : "" : d.Z.Messages.NOTIFICATION_CENTER_GUILD_SCHEDULED_EVENT_ENDED.format({
         event_name: j,
         guild_name: U
       });

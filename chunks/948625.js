@@ -10,30 +10,30 @@ t.d(s, {
 var n = t(180650),
   a = t(44315),
   r = t(981631),
-  l = t(689938),
-  i = t(994745),
+  i = t(689938),
+  l = t(994745),
   o = t(341364),
   c = t(763542),
   u = t(354873),
   d = t(525071),
   C = t(737140),
-  E = t(194349),
-  f = t(523569),
-  m = t(55817),
-  p = t(696228),
-  g = t(202796),
-  h = t(570593),
-  I = t(199546),
-  _ = t(613540),
-  x = t(769411);
-let T = () => l.Z.Messages.MOST_POPULAR,
-  N = () => l.Z.Messages.APPLICATION_STORE_NEW_RELEASE,
-  S = () => l.Z.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
-  L = () => l.Z.Messages.TAKE_ME_THERE,
+  f = t(194349),
+  E = t(523569),
+  p = t(55817),
+  g = t(696228),
+  m = t(202796),
+  x = t(570593),
+  h = t(199546),
+  I = t(613540),
+  _ = t(769411);
+let T = () => i.Z.Messages.MOST_POPULAR,
+  N = () => i.Z.Messages.APPLICATION_STORE_NEW_RELEASE,
+  L = () => i.Z.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
+  S = () => i.Z.Messages.TAKE_ME_THERE,
   b = [{
     id: "category_anime",
     backgroundStaticSrc: C,
-    backgroundVideoSrc: i,
+    backgroundVideoSrc: l,
     overflowSrcStatic: d,
     overflowSrcAnimatedBackground: u,
     overflowSrcAnimated: c,
@@ -43,47 +43,47 @@ let T = () => l.Z.Messages.MOST_POPULAR,
       label: T
     },
     cta: {
-      label: L,
+      label: S,
       categorySkuId: n.T.ANIME_V2
     }
   }, {
     id: "category_galaxy",
-    backgroundStaticSrc: x,
-    backgroundVideoSrc: I,
-    logoSrc: _,
+    backgroundStaticSrc: _,
+    backgroundVideoSrc: h,
+    logoSrc: I,
     textColor: (0, a.Lq)(r.Ilk.WHITE_100),
     badge: {
       label: N,
       date: new Date
     },
     cta: {
-      label: L,
+      label: S,
       categorySkuId: n.T.GALAXY
     }
   }, {
     id: "category_disxcore",
-    backgroundStaticSrc: h,
-    overflowSrcStatic: g,
-    logoSrc: p,
+    backgroundStaticSrc: x,
+    overflowSrcStatic: m,
+    logoSrc: g,
     textColor: (0, a.Lq)(r.Ilk.WHITE_100),
     badge: {
-      label: S
+      label: L
     },
     cta: {
-      label: L,
+      label: S,
       categorySkuId: n.T.DISXCORE
     }
   }, {
     id: "category_cyberpunk",
-    backgroundStaticSrc: m,
-    backgroundVideoSrc: E,
-    logoSrc: f,
+    backgroundStaticSrc: p,
+    backgroundVideoSrc: f,
+    logoSrc: E,
     textColor: (0, a.Lq)(r.Ilk.WHITE_100),
     badge: {
       label: T
     },
     cta: {
-      label: L,
+      label: S,
       categorySkuId: n.T.CYBERPUNK
     }
   }],

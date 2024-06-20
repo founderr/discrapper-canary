@@ -59,7 +59,7 @@ function M(e) {
     U = () => {
       null != L.channel && a.Z.transitionToInviteSync(L)
     },
-    b = () => {
+    y = () => {
       (0, E.yU)() ? (0, _.Z)({
         analyticsSource: {
           page: R.ZY5.INVITE_EMBED
@@ -74,9 +74,9 @@ function M(e) {
         context: M("Invite Button Embed")
       })
     },
-    y = (0, s.jsx)(A.Z, {
+    b = (0, s.jsx)(A.Z, {
       onTransitionToInviteChannel: U,
-      onAcceptInstantInvite: b,
+      onAcceptInstantInvite: y,
       currentUserId: D,
       guild: P,
       invite: L,
@@ -84,17 +84,17 @@ function M(e) {
     });
   switch (L.state) {
     case R.r2o.RESOLVING:
-      y = (0, s.jsx)(g.Z, {});
+      b = (0, s.jsx)(g.Z, {});
       break;
     case R.r2o.EXPIRED:
     case R.r2o.BANNED:
-      y = (0, s.jsx)(p.Z, {
+      b = (0, s.jsx)(p.Z, {
         banned: L.state === R.r2o.BANNED,
         author: n
       });
       break;
     case R.r2o.ERROR:
-      y = (0, s.jsx)(h.Z, {
+      b = (0, s.jsx)(h.Z, {
         author: n,
         inviteError: v
       });
@@ -102,16 +102,16 @@ function M(e) {
     default:
       switch ((0, d.VR)(L)) {
         case d.wx.GROUP_DM:
-          y = (0, s.jsx)(S.Z, {
+          b = (0, s.jsx)(S.Z, {
             onTransitionToInviteChannel: U,
-            onAcceptInstantInvite: b,
+            onAcceptInstantInvite: y,
             currentUserId: D,
             invite: L,
             author: n
           });
           break;
         case d.wx.FRIEND:
-          y = (0, s.jsx)(C.Z, {
+          b = (0, s.jsx)(C.Z, {
             invite: L,
             author: n,
             getAcceptInviteContext: M
@@ -119,9 +119,9 @@ function M(e) {
           break;
         default:
           if ((0, d.TY)(L)) {
-            y = (0, s.jsx)(O.Z, {
+            b = (0, s.jsx)(O.Z, {
               onTransitionToInviteChannel: U,
-              onAcceptInstantInvite: b,
+              onAcceptInstantInvite: y,
               currentUserId: D,
               guild: P,
               invite: L
@@ -129,26 +129,26 @@ function M(e) {
             break
           }
           if ((0, d.Tx)(L)) {
-            y = (0, s.jsx)(u.ZP, {
+            b = (0, s.jsx)(u.ZP, {
               guildScheduledEvent: j,
               guild: L.guild,
               channel: L.channel,
               isMember: null != P,
-              onAcceptInstantInvite: b,
+              onAcceptInstantInvite: y,
               onTransitionToInviteChannel: U
             });
             break
           }
           if ((0, d.$P)(L)) {
-            y = (0, s.jsx)(f.Z, {
+            b = (0, s.jsx)(f.Z, {
               stageInstance: L.stage_instance,
               guild: L.guild,
               isMember: null != P,
               onTransitionToInviteChannel: U,
-              onAcceptInstantInvite: b
+              onAcceptInstantInvite: y
             });
             break
-          }(0, d.P1)(L) && (y = (0, s.jsx)(m.Z, {
+          }(0, d.P1)(L) && (b = (0, s.jsx)(m.Z, {
             invite: L,
             getAcceptInviteContext: M
           }))
@@ -156,6 +156,6 @@ function M(e) {
   }
   return (0, s.jsx)(r.Z, {
     section: R.jXE.INVITE_LINK,
-    children: y
+    children: b
   })
 }

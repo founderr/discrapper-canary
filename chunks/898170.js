@@ -1,81 +1,81 @@
 n.d(t, {
   Z: function() {
-    return C
+    return h
   }
 }), n(47120), n(724458);
 var s = n(735250),
-  a = n(470079),
-  i = n(120356),
-  l = n.n(i),
-  r = n(392711),
-  o = n.n(r),
+  o = n(470079),
+  r = n(120356),
+  a = n.n(r),
+  l = n(392711),
+  i = n.n(l),
   c = n(442837),
-  d = n(481060),
-  u = n(451478),
-  E = n(302221),
-  _ = n(261345);
-let h = [0, .5, 1],
-  m = {
+  u = n(481060),
+  d = n(451478),
+  p = n(302221),
+  x = n(261345);
+let m = [0, .5, 1],
+  g = {
     "layers[1].shapes[1].g.k.k": [0, .522, .278, .776, .5, .522, .278, .776, 1, .522, .278, .776],
     "layers[2].shapes[1].g.k.k": [0, .714, .271, .757, .5, .714, .271, .757, 1, .714, .271, .757]
   };
-async function T(e, t) {
+async function C(e, t) {
   let s = (await n.e("30166").then(n.t.bind(n, 235630, 19))).default;
   return function(e, t, n) {
     for (let s in t) {
-      let t = o().get(e, s);
+      let t = i().get(e, s);
       if (null == t) continue;
-      let a = t.map((e, t) => {
+      let o = t.map((e, t) => {
         var s;
         return null !== (s = n[t]) && void 0 !== s ? s : e
       });
-      o().set(e, s, a)
+      i().set(e, s, o)
     }
-  }(s, m, t), s
+  }(s, g, t), s
 }
 
-function C(e) {
+function h(e) {
   var t;
   let {
     animationClassName: n,
-    className: i,
-    quest: r,
-    useReducedMotion: o
-  } = e, m = (0, c.e7)([u.Z], () => u.Z.isFocused()), C = a.useRef(null), [g, p] = a.useState(!1), N = a.useMemo(() => {
-    if (null == r) return null;
-    let e = (0, E.oo)(r.config.colors.primary),
+    className: r,
+    quest: l,
+    useReducedMotion: i
+  } = e, g = (0, c.e7)([d.Z], () => d.Z.isFocused()), h = o.useRef(null), [S, E] = o.useState(!1), f = o.useMemo(() => {
+    if (null == l) return null;
+    let e = (0, p.oo)(l.config.colors.primary),
       t = {
         r: e.r / 255,
         g: e.g / 255,
         b: e.b / 255
       },
-      n = h.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
-    return T(r.id, n)
-  }, [r]), I = (null === (t = r.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, A = !o && m;
-  a.useEffect(() => {
+      n = m.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
+    return C(l.id, n)
+  }, [l]), N = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = !i && g;
+  o.useEffect(() => {
     var e, t, n, s;
-    m ? A && (null === (s = C.current) || void 0 === s || null === (n = s.animation) || void 0 === n || n.play()) : null === (t = C.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
-  }, [A, m]);
-  let f = a.useCallback(() => {
-    p(!0)
+    g ? T && (null === (s = h.current) || void 0 === s || null === (n = s.animation) || void 0 === n || n.play()) : null === (t = h.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
+  }, [T, g]);
+  let v = o.useCallback(() => {
+    E(!0)
   }, []);
-  return null == N || I ? (0, s.jsx)("div", {
-    className: _.backgroundFallback,
+  return null == f || N ? (0, s.jsx)("div", {
+    className: x.backgroundFallback,
     style: {
-      backgroundImage: "linear-gradient(90deg, ".concat(r.config.colors.primary, ", ").concat(r.config.colors.secondary, ")")
+      backgroundImage: "linear-gradient(90deg, ".concat(l.config.colors.primary, ", ").concat(l.config.colors.secondary, ")")
     }
   }) : (0, s.jsx)("div", {
-    className: l()(_.lottieAnimationBackgroundWrapper, i),
-    children: (0, s.jsx)(d.LottieAnimation, {
-      ref: C,
-      onComplete: f,
-      importData: () => N,
-      shouldAnimate: !g && A,
-      className: l()(_.lottieAnimation, _.lottieAnimationBackground, n),
+    className: a()(x.lottieAnimationBackgroundWrapper, r),
+    children: (0, s.jsx)(u.LottieAnimation, {
+      ref: h,
+      onComplete: v,
+      importData: () => f,
+      shouldAnimate: !S && T,
+      className: a()(x.lottieAnimation, x.lottieAnimationBackground, n),
       loop: 0,
       rendererSettings: {
         preserveAspectRatio: "none"
       }
-    }, r.config.colors.primary)
+    }, l.config.colors.primary)
   })
 }

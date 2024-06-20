@@ -41,7 +41,7 @@ function D(e, t, n) {
 n(72385);
 let j = (0, g.hQ)(),
   U = c()(E.yC, 500);
-class b extends i.PureComponent {
+class y extends i.PureComponent {
   componentDidMount() {
     var e, t;
     f.S.subscribe(L.CkL.PERFORM_SEARCH, this.search), f.S.subscribe(L.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), f.S.subscribe(L.CkL.FOCUS_SEARCH, this.handleFocusSearch), null === (t = this._editorRef) || void 0 === t || null === (e = t.editor) || void 0 === e || e.setAttribute("aria-haspopup", "listbox")
@@ -381,4 +381,4 @@ t.Z = u.ZP.connectStores([m.Z, A.Z], () => {
     hasResults: A.Z.hasResults(t),
     keyboardModeEnabled: l
   }
-})(b)
+})(y)

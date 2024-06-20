@@ -1,40 +1,40 @@
 var s = n(735250),
-  a = n(470079),
-  i = n(569379),
-  l = n(581292);
-t.Z = a.forwardRef((e, t) => {
+  o = n(470079),
+  r = n(569379),
+  a = n(581292);
+t.Z = o.forwardRef((e, t) => {
   let {
     percentComplete: n,
-    size: a = 42,
-    strokeWidth: r = 3,
-    glowBlur: o = .4,
+    size: o = 42,
+    strokeWidth: l = 3,
+    glowBlur: i = .4,
     children: c
-  } = e, d = (0, i.EK)(n > 0), u = a / 2, E = a / 2 - r / 2, _ = 2 * Math.PI * E, h = _ - n * _, m = {
-    strokeDasharray: "".concat(_, " ").concat(_),
-    strokeDashoffset: h
-  }, T = {
-    strokeDasharray: "".concat(_, " ").concat(_),
-    strokeDashoffset: -n * _
+  } = e, u = (0, r.EK)(n > 0), d = o / 2, p = o / 2 - l / 2, x = 2 * Math.PI * p, m = x - n * x, g = {
+    strokeDasharray: "".concat(x, " ").concat(x),
+    strokeDashoffset: m
   }, C = {
-    boxShadow: "0 0 30px 0px ".concat(d.glow)
+    strokeDasharray: "".concat(x, " ").concat(x),
+    strokeDashoffset: -n * x
+  }, h = {
+    boxShadow: "0 0 30px 0px ".concat(u.glow)
   };
   return (0, s.jsxs)("div", {
-    className: l.outer,
+    className: a.outer,
     ref: t,
     children: [(0, s.jsx)("div", {
-      className: l.inner,
-      style: C,
+      className: a.inner,
+      style: h,
       children: c
     }), (0, s.jsxs)("svg", {
-      className: l.progressBar,
-      height: a,
-      width: a,
+      className: a.progressBar,
+      height: o,
+      width: o,
       children: [(0, s.jsxs)("defs", {
         children: [(0, s.jsxs)("filter", {
           id: "glow",
           children: [(0, s.jsx)("feGaussianBlur", {
             result: "coloredBlur",
-            stdDeviation: o
+            stdDeviation: i
           }), (0, s.jsxs)("feMerge", {
             children: [(0, s.jsx)("feMergeNode", {
               in: "coloredBlur"
@@ -54,30 +54,30 @@ t.Z = a.forwardRef((e, t) => {
           y2: "0%",
           children: [(0, s.jsx)("stop", {
             offset: "0%",
-            stopColor: d.backgroundTop
+            stopColor: u.backgroundTop
           }), (0, s.jsx)("stop", {
             offset: "100%",
-            stopColor: d.backgroundBottom
+            stopColor: u.backgroundBottom
           })]
         })]
       }), (0, s.jsx)("circle", {
-        className: l.progress,
-        strokeWidth: r,
+        className: a.progress,
+        strokeWidth: l,
         fill: "transparent",
-        r: E,
-        cx: u,
-        cy: u,
+        r: p,
+        cx: d,
+        cy: d,
         stroke: "url(#linear)",
-        style: T
+        style: C
       }), (0, s.jsx)("circle", {
-        className: l.progress,
-        strokeWidth: r,
+        className: a.progress,
+        strokeWidth: l,
         fill: "transparent",
-        r: E,
-        cx: u,
-        cy: u,
-        stroke: d.foreground,
-        style: m
+        r: p,
+        cx: d,
+        cy: d,
+        stroke: u.foreground,
+        style: g
       })]
     })]
   })
