@@ -29,7 +29,7 @@ function h(e) {
     textColor: N,
     userId: A
   } = e, m = r.useMemo(() => null != t ? (0, u.YP)(t) : null, [t]);
-  if (null == t && null == A) return null;
+  if (null == t && null == A && !(0, l.Z)(A)) return null;
   if ((0, l.Z)(A)) {
     let e = () => {
       c.default.track(d.rMx.CHANGE_LOG_CTA_CLICKED, {

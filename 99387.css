@@ -43945,6 +43945,10 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     padding: 0 12px
 }
 
+.botBioScroller_d2b491 {
+    padding-bottom: 16px
+}
+
 .scroller_d2b491::-webkit-scrollbar-track {
     margin-bottom: 4px
 }
