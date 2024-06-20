@@ -722,7 +722,7 @@ class ea extends c.Z {
   }
   _handlePing(e) {
     var t;
-    if (null === (t = this._socket) || void 0 === t || t.sendHeartbeatIfOverdue(), void 0 !== e) {
+    if (this.logger.info("Handling ping: ".concat(e)), null === (t = this._socket) || void 0 === t || t.sendHeartbeatIfOverdue(), void 0 !== e) {
       for (this._pings.push({
           time: Date.now(),
           value: e
