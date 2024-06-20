@@ -6,8 +6,8 @@ r.d(n, {
 var i = r(735250);
 r(470079);
 var t = r(442837),
-  s = r(692547),
-  a = r(481060),
+  a = r(692547),
+  s = r(481060),
   l = r(493683),
   u = r(129861),
   d = r(700582),
@@ -54,13 +54,13 @@ function f(e) {
 
 function m(e, n) {
   let r = (0, t.e7)([o.default], () => o.default.getCurrentUser());
-  return null == r || n.ownerId !== r.id || e.id === r.id || (null == n ? void 0 : n.isBroadcastChannel()) ? null : (0, i.jsx)(a.MenuItem, {
+  return null == r || n.ownerId !== r.id || e.id === r.id || (null == n ? void 0 : n.isBroadcastChannel()) ? null : (0, i.jsx)(s.MenuItem, {
     id: "make-dm-owner",
     color: "danger",
     label: c.Z.Messages.CHANGE_DM_OWNER,
     action: () => {
       var t;
-      return t = r, void(0, a.openModal)(r => (0, i.jsxs)(a.ConfirmModal, {
+      return t = r, void(0, s.openModal)(r => (0, i.jsxs)(s.ConfirmModal, {
         bodyClassName: Z.confirmModal,
         header: c.Z.Messages.TRANSFER_GROUP_OWNERSHIP,
         confirmText: c.Z.Messages.CONFIRM,
@@ -68,30 +68,30 @@ function m(e, n) {
         onConfirm: () => l.Z.setDMOwner(n.id, e.id),
         ...r,
         children: [(0, i.jsx)(f, {
-          color: s.Z.unsafe_rawColors.PRIMARY_300.css
+          color: a.Z.unsafe_rawColors.PRIMARY_300.css
         }), (0, i.jsxs)("div", {
           className: Z.fromToWrapper,
           children: [(0, i.jsx)("div", {
             className: Z.from,
             children: (0, i.jsx)(d.Z, {
               user: t,
-              size: a.AvatarSizes.SIZE_80
+              size: s.AvatarSizes.SIZE_80
             })
           }), (0, i.jsx)("div", {
             className: Z.to,
             children: (0, i.jsx)(d.Z, {
               user: e,
-              size: a.AvatarSizes.SIZE_80
+              size: s.AvatarSizes.SIZE_80
             })
           })]
-        }), (0, i.jsx)(a.Text, {
+        }), (0, i.jsx)(s.Text, {
           variant: "text-md/normal",
           children: c.Z.Messages.CONFIRM_CHANGE_DM_OWNER.format({
             usernameHook: (n, r) => (0, i.jsx)(u.Z, {
-              usernameIcon: (0, i.jsx)(a.Avatar, {
+              usernameIcon: (0, i.jsx)(s.Avatar, {
                 className: Z.avatarIcon,
                 src: e.getAvatarURL(void 0, 16),
-                size: a.AvatarSizes.SIZE_16,
+                size: s.AvatarSizes.SIZE_16,
                 "aria-hidden": !0
               }),
               className: Z.discordTag,

@@ -2,8 +2,8 @@ r.r(n);
 var i = r(735250);
 r(470079);
 var t = r(481060),
-  s = r(239091),
-  a = r(883385),
+  a = r(239091),
+  s = r(883385),
   l = r(108843),
   u = r(911969),
   d = r(947440),
@@ -13,77 +13,77 @@ var t = r(481060),
   f = r(737013),
   m = r(145474),
   g = r(299206),
-  _ = r(819403),
+  M = r(819403),
   v = r(777658),
   E = r(858488),
-  M = r(185457),
+  _ = r(185457),
   h = r(570870),
-  I = r(389052),
-  x = r(24311),
-  S = r(915193),
-  p = r(332576),
-  C = r(710631),
+  x = r(389052),
+  I = r(24311),
+  p = r(915193),
+  C = r(332576),
+  S = r(710631),
   N = r(297047),
   j = r(88966),
   R = r(397616),
   A = r(558924),
-  U = r(991307),
-  O = r(725119),
-  T = r(700994),
+  T = r(991307),
+  U = r(725119),
+  O = r(700994),
   P = r(332031),
   b = r(981631),
   G = r(689938);
-n.default = (0, l.Z)((0, a.Z)(function(e) {
+n.default = (0, l.Z)((0, s.Z)(function(e) {
   var n;
   let {
     user: r,
-    channel: a,
+    channel: s,
     context: l,
     showChatItems: o = !0,
     showMediaItems: b = !1,
     showChannelCallItems: F = !1,
-    showModalItems: k = !0,
-    onSelect: w,
-    onHeightUpdate: L
-  } = e, y = (0, O.Z)(r.id, null), V = (0, N.Z)(r, null, l), z = (0, A.Z)(r.id, a.id), D = (0, j.Z)(r.id, l), W = (0, x.Z)(r, l), H = (0, M.Z)({
+    showModalItems: w = !0,
+    onSelect: L,
+    onHeightUpdate: k
+  } = e, y = (0, U.Z)(r.id, null), z = (0, N.Z)(r, null, l), V = (0, A.Z)(r.id, s.id), D = (0, j.Z)(r.id, l), W = (0, I.Z)(r, l), H = (0, _.Z)({
     user: r,
     context: l
   }), K = (0, E.Z)({
     user: r
-  }), B = (0, T.Z)(r.id), Y = (0, R.Z)(r.id, a.id), J = (0, U.Z)(r.id), X = (0, m.P)(r.id, a.id), q = (0, p.Z)(r.id, a.id), Q = (0, C.Z)({
+  }), B = (0, O.Z)(r.id), Y = (0, R.Z)(r.id, s.id), J = (0, T.Z)(r.id), X = (0, m.P)(r.id, s.id), q = (0, C.Z)(r.id, s.id), Q = (0, S.Z)({
     user: r
-  }), $ = (0, d.Z)(null, r), ee = (0, v.Z)(r), en = (0, I.Z)({
+  }), $ = (0, d.Z)(null, r), ee = (0, v.Z)(r), en = (0, x.Z)({
     user: r
   }), er = (0, g.Z)({
     id: r.id,
     label: G.Z.Messages.COPY_ID_USER
-  }), ei = (0, P.Z)(r.id), et = (0, Z.Z)(r.id), es = (0, c.Z)(a.id), ea = (0, _.Z)(r), el = (0, f.Z)(r.id), eu = (0, h.Z)({
+  }), ei = (0, P.Z)(r.id), et = (0, Z.Z)(r.id), ea = (0, c.Z)(s.id), es = (0, M.Z)(r), el = (0, f.Z)(r.id), eu = (0, h.Z)({
     commandType: u.yU.USER,
     commandTargetId: r.id,
-    channel: a,
+    channel: s,
     guildId: void 0,
-    onHeightUpdate: L
-  }), ed = (0, S.Z)(r, a), eo = r.isNonUserBot(), ec = a.isManaged(), eZ = null === (n = a.recipients) || void 0 === n ? void 0 : n.includes(r.id);
+    onHeightUpdate: k
+  }), ed = (0, p.Z)(r, s), eo = r.isNonUserBot(), ec = s.isManaged(), eZ = null === (n = s.recipients) || void 0 === n ? void 0 : n.includes(r.id);
   return (0, i.jsxs)(t.Menu, {
     navId: "user-context",
-    onClose: s.Zy,
+    onClose: a.Zy,
     "aria-label": G.Z.Messages.USER_ACTIONS_MENU_LABEL,
-    onSelect: w,
+    onSelect: L,
     children: [!eo && (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(t.MenuGroup, {
-        children: ea
+        children: es
       }), (0, i.jsxs)(t.MenuGroup, {
-        children: [k && y, o && V, D, W, !ec && z, k && H, k && K, ei]
+        children: [w && y, o && z, D, W, !ec && V, w && H, w && K, ei]
       }), b && (0, i.jsx)(t.MenuGroup, {
         children: B
       }), eZ && (0, i.jsxs)(t.MenuGroup, {
         children: [!ec && Y, ed]
       }), (0, i.jsx)(t.MenuGroup, {
-        children: k && $
+        children: w && $
       }), (0, i.jsxs)(t.MenuGroup, {
-        children: [b && J, b && X, b && q, eu, k && Q, ee, k && en, b && el]
+        children: [b && J, b && X, b && q, eu, w && Q, ee, w && en, b && el]
       }), F && (0, i.jsxs)(t.MenuGroup, {
-        children: [es, et]
+        children: [ea, et]
       })]
     }), (0, i.jsx)(t.MenuGroup, {
       children: er

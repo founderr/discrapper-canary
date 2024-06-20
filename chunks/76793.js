@@ -27,7 +27,7 @@ function m(e) {
     userId: s,
     count: t
   } = e, c = (0, a.e7)([S.default], () => S.default.getUser(s)), E = I.ZP.getFormattedName(c), _ = i.useCallback(() => {
-    (0, d.NV)(s)
+    (0, d.Dz)(s)
   }, [s]), u = i.useCallback(() => (0, T.openUserProfileModal)({
     userId: s
   }), [s]);
@@ -73,7 +73,7 @@ function h(e) {
     verification: a,
     index: r
   } = e, o = (0, d.bo)(a.timestamp), c = i.useCallback(() => {
-    (0, d.td)(t, a.fingerprint)
+    (0, d.KF)(t, a.fingerprint)
   }, [a.fingerprint, t]);
   return (0, n.jsxs)("div", {
     className: s,

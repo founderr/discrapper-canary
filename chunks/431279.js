@@ -9,8 +9,8 @@ var i, r = n(735250),
   o = n(374470),
   a = n(481060),
   l = n(40851),
-  u = n(261922),
-  _ = n(926836),
+  u = n(751586),
+  _ = n(261922),
   c = n(626135),
   d = n(956664),
   E = n(506071),
@@ -34,7 +34,7 @@ class N extends(i = s.PureComponent) {
       isWindowFocused: t,
       ...n
     } = this.props;
-    return (0, r.jsx)(u.Z, {
+    return (0, r.jsx)(_.Z, {
       ...n,
       onZoom: this.onZoom,
       onMouseEnter: this.onMouseEnter,
@@ -61,7 +61,7 @@ class N extends(i = s.PureComponent) {
       let {
         alt: s,
         src: l,
-        original: u,
+        original: _,
         width: d,
         height: E,
         animated: f,
@@ -73,7 +73,7 @@ class N extends(i = s.PureComponent) {
       } = this.props, p = {
         alt: s,
         src: l,
-        original: null != u ? u : l,
+        original: null != _ ? _ : l,
         width: d,
         height: E,
         animated: f,
@@ -93,7 +93,7 @@ class N extends(i = s.PureComponent) {
         ...e,
         size: a.ModalSize.DYNAMIC,
         "aria-label": h.Z.Messages.IMAGE,
-        children: (0, r.jsx)(_.y, {
+        children: (0, r.jsx)(u.y, {
           ...p,
           className: S.image,
           shouldAnimate: O,

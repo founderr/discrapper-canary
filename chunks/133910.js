@@ -6,9 +6,9 @@ n.d(t, {
 });
 var i = n(735250),
   r = n(470079),
-  s = n(403182),
-  o = n(261922),
-  a = n(715246),
+  s = n(640108),
+  o = n(403182),
+  a = n(261922),
   l = n(981631),
   u = n(689938);
 class _ extends r.Component {
@@ -43,40 +43,40 @@ class _ extends r.Component {
       alt: y = u.Z.Messages.VIDEO,
       ...U
     } = this.props;
-    return (0, i.jsx)(o.Z, {
+    return (0, i.jsx)(a.Z, {
       alt: y,
       className: n,
       src: _,
       ...U,
-      minWidth: a.ZP.minWidth,
-      minHeight: a.ZP.minHeight,
+      minWidth: s.ZP.minWidth,
+      minHeight: s.ZP.minHeight,
       shouldLink: !1,
       shouldAnimate: !1,
       mediaLayoutType: A,
       responsive: N,
       children: n => {
         let {
-          src: o,
+          src: a,
           size: {
             width: u,
             height: _
           }
         } = n, y = !(d <= l.N_j && E <= l.XKF || d <= l.XKF && E <= l.N_j);
-        return (0, i.jsx)(a.ZP, {
+        return (0, i.jsx)(s.ZP, {
           className: r,
           forceExternal: y,
           src: e,
-          poster: o,
+          poster: a,
           width: u,
           height: _,
           responsive: N,
           volume: h,
           autoPlay: null != S && S,
           autoMute: null != f && f,
-          type: a.ZP.Types.VIDEO,
+          type: s.ZP.Types.VIDEO,
           mediaLayoutType: A,
           fileName: c,
-          fileSize: null == t ? void 0 : (0, s.Ng)(t),
+          fileSize: null == t ? void 0 : (0, o.Ng)(t),
           fileSizeBytes: null == t ? void 0 : t,
           playable: I,
           renderLinkComponent: R,

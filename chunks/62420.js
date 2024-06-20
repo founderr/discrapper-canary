@@ -5,8 +5,8 @@ t.d(n, {
 }), t(653041), t(47120);
 var i = t(735250);
 t(470079);
-var l = t(481060),
-  a = t(117984),
+var a = t(481060),
+  l = t(117984),
   r = t(593214),
   u = t(362658),
   s = t(689938);
@@ -26,28 +26,28 @@ function o(e) {
     return [t, n]
   }(o.filter(e => e.id !== (null == t ? void 0 : t.parentId)));
 
-  function I(e) {
-    null != t && (0, a.uA)(t.id, e)
+  function M(e) {
+    null != t && (0, l.uA)(t.id, e)
   }
-  return null == c && 0 === _.length ? null : (0, i.jsxs)(l.MenuItem, {
+  return null == c && 0 === _.length ? null : (0, i.jsxs)(a.MenuItem, {
     id: "move-to-category",
     label: s.Z.Messages.MOVE_TO,
-    children: [null != c && (0, i.jsx)(l.MenuGroup, {
-      children: (0, i.jsx)(l.MenuItem, {
+    children: [null != c && (0, i.jsx)(a.MenuGroup, {
+      children: (0, i.jsx)(a.MenuItem, {
         id: "favorite-uncategorized",
         label: c.name,
-        action: () => I(c.id)
+        action: () => M(c.id)
       })
-    }), _.length > 0 && (0, i.jsx)(l.MenuGroup, {
+    }), _.length > 0 && (0, i.jsx)(a.MenuGroup, {
       children: _.map(e => {
         let {
           id: n,
           name: t
         } = e;
-        return (0, i.jsx)(l.MenuItem, {
+        return (0, i.jsx)(a.MenuItem, {
           id: "favorite-".concat(n),
           label: t,
-          action: () => I(n)
+          action: () => M(n)
         }, n)
       })
     })]

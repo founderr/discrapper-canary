@@ -19,9 +19,9 @@ var r = n(374470),
   s = n(794295),
   a = n(163268),
   o = n(768494),
-  u = n(254109),
-  d = n(118139),
-  h = n(926836),
+  u = n(751586),
+  d = n(254109),
+  h = n(118139),
   c = n(52824),
   m = n(626135),
   p = n(591759),
@@ -34,7 +34,7 @@ function b(e, l) {
     height: r
   } = e, i = (0, c.q)(e);
   return {
-    component: (0, t.jsx)(h.y, {
+    component: (0, t.jsx)(u.y, {
       width: n,
       height: r,
       original: e.url,
@@ -57,16 +57,16 @@ function x(e, l) {
       var n, r;
       let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (!(0, d.tw)(e.contentType)) return null;
-      let u = null !== (n = e.width) && void 0 !== n ? n : 0,
+      if (!(0, h.tw)(e.contentType)) return null;
+      let d = null !== (n = e.width) && void 0 !== n ? n : 0,
         m = null !== (r = e.height) && void 0 !== r ? r : 0,
         p = (0, c.q)({
           proxyURL: e.proxyUrl,
           url: e.url
         });
       return {
-        component: (0, t.jsx)(h.y, {
-          width: u,
+        component: (0, t.jsx)(u.y, {
+          width: d,
           height: m,
           original: e.url,
           renderLinkComponent: e => (0, t.jsx)(s.Z, {
@@ -80,7 +80,7 @@ function x(e, l) {
             media: e
           }, o)
         }),
-        width: u,
+        width: d,
         height: m,
         src: p
       }
@@ -90,8 +90,8 @@ function x(e, l) {
     var n, r;
     let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
       o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-    if (!(0, d.X2)(e.contentType)) return null;
-    let u = null !== (n = e.width) && void 0 !== n ? n : 0,
+    if (!(0, h.X2)(e.contentType)) return null;
+    let d = null !== (n = e.width) && void 0 !== n ? n : 0,
       m = null !== (r = e.height) && void 0 !== r ? r : 0,
       g = (0, c.q)({
         proxyURL: e.proxyUrl,
@@ -99,11 +99,11 @@ function x(e, l) {
       }),
       f = p.Z.toURLSafe(e.proxyUrl);
     return null == f ? null : (f.searchParams.append("format", "jpeg"), {
-      component: (0, t.jsx)(h.K, {
-        width: u,
+      component: (0, t.jsx)(u.K, {
+        width: d,
         height: m,
         poster: f.toString(),
-        naturalWidth: u,
+        naturalWidth: d,
         naturalHeight: m,
         renderLinkComponent: e => (0, t.jsx)(s.Z, {
           ...e
@@ -116,7 +116,7 @@ function x(e, l) {
           media: e
         }, o)
       }),
-      width: u,
+      width: d,
       height: m,
       src: g
     })
@@ -138,7 +138,7 @@ function y(e, l) {
       ...a
     }, {
       throttlePercent: .01
-    }), (0, u.fS)(a.guild_id, a.channel_id, a.channel_type, l.length)), (0, i.openModalLazy)(async () => {
+    }), (0, d.fS)(a.guild_id, a.channel_id, a.channel_type, l.length)), (0, i.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([n.e("49237"), n.e("99387"), n.e("99857")]).then(n.bind(n, 895023));
@@ -148,7 +148,7 @@ function y(e, l) {
         } = n;
         return (0, t.jsx)(e, {
           ...r,
-          onIndexChange: null != a ? u.f0 : void 0,
+          onIndexChange: null != a ? d.f0 : void 0,
           className: f.zoomedCarouselModalRoot,
           items: l,
           modalCarouselClassName: f.modalCarouselWrapper,
@@ -156,7 +156,7 @@ function y(e, l) {
         })
       }
     }, {
-      onCloseCallback: null != a ? u.VO : void 0
+      onCloseCallback: null != a ? d.VO : void 0
     })
   })(s, e, a, l);
   return s
