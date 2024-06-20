@@ -1,6 +1,6 @@
-var l, i;
-n.d(t, {
+var l, a;
+t.d(n, {
   z: function() {
     return l
   }
-}), (i = l || (l = {}))[i.DESKTOP = 0] = "DESKTOP", i[i.XBOX = 1] = "XBOX", i[i.PLAYSTATION = 2] = "PLAYSTATION", i[i.IOS = 3] = "IOS", i[i.ANDROID = 4] = "ANDROID", i[i.NINTENDO = 5] = "NINTENDO", i[i.LINUX = 6] = "LINUX", i[i.MACOS = 7] = "MACOS"
+}), (a = l || (l = {}))[a.DESKTOP = 0] = "DESKTOP", a[a.XBOX = 1] = "XBOX", a[a.PLAYSTATION = 2] = "PLAYSTATION", a[a.IOS = 3] = "IOS", a[a.ANDROID = 4] = "ANDROID", a[a.NINTENDO = 5] = "NINTENDO", a[a.LINUX = 6] = "LINUX", a[a.MACOS = 7] = "MACOS"

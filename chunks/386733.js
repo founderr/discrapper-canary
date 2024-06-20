@@ -19,8 +19,8 @@ var n = t(735250),
   N = t(119269),
   p = t(981631),
   m = t(689938),
-  g = t(695314),
-  C = t(691766);
+  C = t(695314),
+  g = t(691766);
 let f = e => {
     let {
       userRecord: s,
@@ -39,15 +39,15 @@ let f = e => {
       ...r
     }) : (0, n.jsx)(o.Heading, {
       variant: "heading-md/semibold",
-      className: g.userAvatarProgressBarUnitNum,
+      className: C.userAvatarProgressBarUnitNum,
       children: t
     });
     return (0, n.jsx)(o.Tooltip, {
       text: m.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_UNSENT_TOOLTIP,
       shouldShow: !i,
-      tooltipContentClassName: g.unsentTooltipContent,
+      tooltipContentClassName: C.unsentTooltipContent,
       children: e => (0, n.jsx)("div", {
-        className: g.userAvatarProgressBarUnit,
+        className: C.userAvatarProgressBarUnit,
         ...e,
         children: l
       })
@@ -59,13 +59,13 @@ let f = e => {
       placement: t
     } = e;
     return (0, n.jsxs)("div", {
-      className: g.avatarProgressBarUnitConnectorContainer,
+      className: C.avatarProgressBarUnitConnectorContainer,
       children: [(0, n.jsx)("div", {
-        className: g.avatarProgressBarUnitConnectorBase
+        className: C.avatarProgressBarUnitConnectorBase
       }), (0, n.jsx)("div", {
         className: i()({
-          [g.fullHighlight]: s > t,
-          [g.halfHighlight]: s === t
+          [C.fullHighlight]: s > t,
+          [C.halfHighlight]: s === t
         })
       })]
     })
@@ -75,7 +75,7 @@ let f = e => {
       userRecords: s
     } = e, t = s.length, a = t < 1 ? null : s[0], r = t < 2 ? null : s[1], i = t < 3 ? null : s[2];
     return (0, n.jsxs)("div", {
-      className: g.userAvatarProgressBarContainer,
+      className: C.userAvatarProgressBarContainer,
       children: [(0, n.jsx)(f, {
         userRecord: a,
         placement: 1
@@ -143,14 +143,14 @@ s.Z = e => {
       percentage: L / 3 * 100,
       progressCircleVariation: N.Q.NITRO_LOGO,
       iconClassName: i()({
-        [g.referralProgressBarIcon]: !s,
-        [g.referralProgressBarIconSettings]: s
+        [C.referralProgressBarIcon]: !s,
+        [C.referralProgressBarIconSettings]: s
       })
     }), (0, n.jsxs)("div", {
-      className: g.expandedProgressBarContent,
+      className: C.expandedProgressBarContent,
       children: [(0, n.jsx)(o.Heading, {
         variant: s ? "heading-xl/extrabold" : "heading-xxl/extrabold",
-        className: g.expandedProgressBarHeader,
+        className: C.expandedProgressBarHeader,
         children: Z
       }), (0, n.jsx)(O, {
         userRecords: f
@@ -158,21 +158,21 @@ s.Z = e => {
         variant: s ? "text-sm/normal" : "text-lg/medium",
         children: x(b, L > 0, r.length, v)
       }), (0, n.jsxs)("div", {
-        className: i()(g.expandedProgressBarButtonContainer, {
-          [g.expandedProgressBarButtonContainerMinLayout]: B && !s,
-          [g.expandedProgressBarButtonContainerLayout]: !B && !s
+        className: i()(C.expandedProgressBarButtonContainer, {
+          [C.expandedProgressBarButtonContainerMinLayout]: B && !s,
+          [C.expandedProgressBarButtonContainerLayout]: !B && !s
         }),
         children: [!s && !h && (0, n.jsx)(S.Z, {
           color: o.ButtonColors.CUSTOM,
           buttonText: m.Z.Messages.GIFT_NITRO,
-          className: i()(g.expandedProgressBarGiftingCTA, {
-            [g.expandedProgressBarGiftingCTAMinLayout]: B && !s,
-            [g.expandedProgressBarGiftingCTALayout]: !B && !s
+          className: i()(C.expandedProgressBarGiftingCTA, {
+            [C.expandedProgressBarGiftingCTAMinLayout]: B && !s,
+            [C.expandedProgressBarGiftingCTALayout]: !B && !s
           }),
           look: o.ButtonLooks.OUTLINED,
           isGift: !0
         }), (0, n.jsx)(o.ShinyButton, {
-          className: g.expandedProgressBarSelectFriendsCTA,
+          className: C.expandedProgressBarSelectFriendsCTA,
           color: o.ButtonColors.CUSTOM,
           onClick: () => {
             I.default.track(p.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
@@ -189,11 +189,11 @@ s.Z = e => {
           },
           onlyShineOnHover: !0,
           children: (0, n.jsxs)("div", {
-            className: g.expandedProgressBarSelectFriendsCTAInner,
+            className: C.expandedProgressBarSelectFriendsCTAInner,
             children: [(0, n.jsx)("img", {
-              src: C,
+              src: g,
               alt: "",
-              className: g.expandedProgressBarSelectFriendsIcon
+              className: C.expandedProgressBarSelectFriendsIcon
             }), b ? m.Z.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : m.Z.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS]
           })
         })]
@@ -205,11 +205,11 @@ s.Z = e => {
     children: (0, n.jsx)("div", {
       ref: U,
       className: i()({
-        [g.expandedProgressBarContainer]: !s,
-        [g.expandedProgressBarContainerSettingsPage]: s,
-        [g.expandedProgressBarContainerVariant1]: !h && !s,
-        [g.expandedProgressBarContainerVariant2]: h && !s,
-        [g.allReferralsSentBorder]: 3 === r.length
+        [C.expandedProgressBarContainer]: !s,
+        [C.expandedProgressBarContainerSettingsPage]: s,
+        [C.expandedProgressBarContainerVariant1]: !h && !s,
+        [C.expandedProgressBarContainerVariant2]: h && !s,
+        [C.allReferralsSentBorder]: 3 === r.length
       }),
       children: H
     })

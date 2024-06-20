@@ -19,8 +19,8 @@ var n = t(735250),
   N = t(75077),
   p = t(981631),
   m = t(689938),
-  g = t(455879),
-  C = t(865215);
+  C = t(455879),
+  g = t(865215);
 s.Z = e => {
   let s, t, {
       isAllPerksVisible: r,
@@ -44,17 +44,17 @@ s.Z = e => {
     U = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
     B = (0, N.mN)();
   return L === I.mJ.DEFAULT ? (s = m.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE, t = m.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD) : (s = m.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD, t = m.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (0, n.jsx)(_.AdvancedScrollerAuto, {
-    className: i()(g.allPerksScroller, {
-      [g.open]: r,
-      [g.openCloseReduceMotion]: U
+    className: i()(C.allPerksScroller, {
+      [C.open]: r,
+      [C.openCloseReduceMotion]: U
     }),
     ref: x,
     children: (0, n.jsx)("div", {
-      className: g.container,
+      className: C.container,
       children: (0, n.jsxs)(u.Gt, {
         value: b,
         children: [(0, n.jsx)(T.Z, {
-          className: g.heroHeading,
+          className: C.heroHeading,
           onBackClick: () => {
             f(!1), R.default.track(p.rMx.NITRO_HOME_NAVIGATION, {
               current_component: S.MQ.SEE_ALL,
@@ -63,14 +63,14 @@ s.Z = e => {
             })
           }
         }), (0, n.jsxs)("div", {
-          className: g.column,
+          className: C.column,
           children: [(0, n.jsx)(_.Heading, {
             variant: "heading-xxl/extrabold",
             color: "header-primary",
-            className: g.heading,
+            className: C.heading,
             children: s
           }), (0, n.jsx)(A.Z, {
-            className: g.cardCarousel,
+            className: C.cardCarousel,
             cards: (0, N.sP)({
               perksCards: h,
               variant: S.R0.CARD_CAROUSEL_FIRST_ROW,
@@ -83,10 +83,10 @@ s.Z = e => {
           }), (0, n.jsx)(_.Heading, {
             variant: "heading-xxl/extrabold",
             color: "header-primary",
-            className: g.heading,
+            className: C.heading,
             children: t
           }), (0, n.jsx)(A.Z, {
-            className: g.cardCarousel,
+            className: C.cardCarousel,
             cards: (0, N.sP)({
               perksCards: h,
               variant: S.R0.CARD_CAROUSEL_SECOND_ROW,
@@ -99,10 +99,10 @@ s.Z = e => {
           }), (0, n.jsx)(_.Heading, {
             variant: "heading-xxl/extrabold",
             color: "header-primary",
-            className: g.heading,
+            className: C.heading,
             children: m.Z.Messages.NITRO_HOME_SHOW_UP_HOW_YOU_WANT
           }), (0, n.jsx)(A.Z, {
-            className: g.cardCarousel,
+            className: C.cardCarousel,
             cards: (0, N.sP)({
               perksCards: h,
               variant: S.R0.CARD_CAROUSEL_THIRD_ROW,
@@ -114,7 +114,7 @@ s.Z = e => {
             cardType: S.R0.CARD_CAROUSEL_THIRD_ROW
           })]
         }), (0, n.jsx)("div", {
-          className: g.footerSpacing
+          className: C.footerSpacing
         }), (0, n.jsx)(o.$, {
           onChange: e => {
             e && !v && (R.default.track(p.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
@@ -122,11 +122,11 @@ s.Z = e => {
             }), Z(!0))
           },
           children: (0, n.jsx)("div", {
-            className: g.bottomOfPageVisibilitySensor
+            className: C.bottomOfPageVisibilitySensor
           })
         }), (0, n.jsx)(_.Image, {
-          src: C,
-          className: g.bottomIllustration,
+          src: g,
+          className: C.bottomIllustration,
           width: 112,
           height: 85,
           zoomable: !1

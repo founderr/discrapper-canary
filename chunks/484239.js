@@ -22,11 +22,11 @@ s.Z = e => {
       onCtaClick: N,
       perkComponent: p,
       subtitle: m = "",
-      descriptionCta: g = "",
-      cardVariant: C,
+      descriptionCta: C = "",
+      cardVariant: g,
       subtitleClassName: f
     } = e,
-    P = (0, o._)(C),
+    P = (0, o._)(g),
     O = (0, l.yQ)(),
     x = (null == O ? void 0 : O.nitroTenureStatus) === c.EB.REDEEMABLE;
   switch (null == O ? void 0 : O.nitroTenureStatus) {
@@ -65,7 +65,7 @@ s.Z = e => {
         children: [(0, n.jsx)("div", {
           className: E.cardComponent,
           children: p
-        }), 0 !== g.length && null != N && (0, n.jsx)(i.Button, {
+        }), 0 !== C.length && null != N && (0, n.jsx)(i.Button, {
           className: A,
           disabled: !x,
           fullWidth: !0,
@@ -75,7 +75,7 @@ s.Z = e => {
             children: [(0, n.jsx)("img", {
               alt: a,
               src: t
-            }), g]
+            }), C]
           })
         })]
       })

@@ -24,8 +24,8 @@ s.Z = e => {
     description: N = "",
     descriptionCta: p = "",
     isPremiumGetCta: m,
-    onCtaClick: g,
-    cardVariant: C
+    onCtaClick: C,
+    cardVariant: g
   } = e, f = (0, c.N)(), P = null == f ? void 0 : f.subscription_trial, O = (0, _.Ng)(), x = (0, l.Rt)({
     intervalType: null == P ? void 0 : P.interval,
     intervalCount: null == P ? void 0 : P.interval_count
@@ -37,7 +37,7 @@ s.Z = e => {
     onDiscountOffer: I.Z.Messages.PREMIUM_DISCOUNT_CTA.format({
       percent: null == O ? void 0 : O.discount.amount
     })
-  }), L = (0, E._)(C);
+  }), L = (0, E._)(g);
   return (0, n.jsxs)("div", {
     className: r()(T.cardDescription, null == L ? void 0 : null === (s = L.description) || void 0 === s ? void 0 : s.className),
     children: [(0, n.jsx)(u.Z, {
@@ -52,9 +52,9 @@ s.Z = e => {
       buttonText: h,
       color: i.Button.Colors.GREEN,
       look: i.Button.Looks.FILLED
-    }), 0 !== p.length && (null == (t = null == L ? void 0 : L.descriptionCta) ? void 0 : t.hideOnHoverComponent) !== !0 && null != g && (0, n.jsx)(i.Button, {
+    }), 0 !== p.length && (null == (t = null == L ? void 0 : L.descriptionCta) ? void 0 : t.hideOnHoverComponent) !== !0 && null != C && (0, n.jsx)(i.Button, {
       className: M,
-      onClick: g,
+      onClick: C,
       children: p
     })]
   })

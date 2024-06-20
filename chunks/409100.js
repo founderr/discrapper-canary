@@ -42,28 +42,28 @@ s.Z = e => {
     isPersistentCTA: M = !1,
     useShorterCTA: S = !1,
     ...N
-  } = e, p = (0, i.ZP)(), m = (0, a.wj)(p) || s, g = (0, c.N)(), C = null == g ? void 0 : g.subscription_trial, f = (0, l.a5)({
-    intervalType: null == C ? void 0 : C.interval,
-    intervalCount: null == C ? void 0 : C.interval_count
-  }), P = (0, _.Ng)(), O = null != C && t === C.sku_id, {
+  } = e, p = (0, i.ZP)(), m = (0, a.wj)(p) || s, C = (0, c.N)(), g = null == C ? void 0 : C.subscription_trial, f = (0, l.a5)({
+    intervalType: null == g ? void 0 : g.interval,
+    intervalCount: null == g ? void 0 : g.interval_count
+  }), P = (0, _.Ng)(), O = null != g && t === g.sku_id, {
     enabled: x
   } = o._.useExperiment({
     location: "SubscribeButton"
   }, {
     autoTrackExposure: !1
-  }), h = x && (null == g ? void 0 : g.trial_id) === u.a7, L = A ? d.Z.Messages.BOGO_CLAIM_OFFER : null != P ? T(t, S, M, P.discount.amount) : I({
+  }), h = x && (null == C ? void 0 : C.trial_id) === u.a7, L = A ? d.Z.Messages.BOGO_CLAIM_OFFER : null != P ? T(t, S, M, P.discount.amount) : I({
     showTrialCTA: O,
     subscriptionTier: t,
     shouldShowUpsells: !1,
     trialDurationCopy: f,
     isPersistentCTA: M,
     shouldShowReferralTrialCopy: h,
-    subscriptionTrial: C
+    subscriptionTrial: g
   });
   return (0, n.jsx)(E.Z, {
     color: m ? r.ButtonColors.BRAND_INVERTED : r.ButtonColors.BRAND,
     buttonShineClassName: "buttonShineClassName" in N ? N.buttonShineClassName : m ? R.brandShine : void 0,
-    trialId: null == C ? void 0 : C.id,
+    trialId: null == g ? void 0 : g.id,
     buttonText: L,
     buttonTextClassName: O ? R.freeTrialText : void 0,
     onlyShineOnHover: !0,

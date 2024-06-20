@@ -1,6 +1,6 @@
 t.d(n, {
   QC: function() {
-    return Z
+    return S
   },
   SO: function() {
     return R
@@ -18,14 +18,14 @@ var l = t(512722),
   E = t(690725),
   _ = t(706454),
   f = t(594174),
-  m = t(70956),
-  v = t(709054),
-  T = t(561308),
+  T = t(70956),
+  m = t(709054),
+  v = t(561308),
   x = t(206295),
-  g = t(737583),
-  N = t(438226),
-  h = t(169040),
-  I = t(689938);
+  N = t(737583),
+  g = t(438226),
+  I = t(169040),
+  h = t(689938);
 let M = (e, n) => ({
     AvatarImage1: e[0],
     ...null != e[1] && {
@@ -38,52 +38,52 @@ let M = (e, n) => ({
       ApplicationImage: n
     }
   }),
-  C = (e, n) => {
+  A = (e, n) => {
     let t = [{
-        iconPath: h.NM,
+        iconPath: I.NM,
         text: n
       }],
-      l = v.default.extractTimestamp(e.extra.application_id);
+      l = m.default.extractTimestamp(e.extra.application_id);
     if (7 >= o()().diff(o()(l), "days") && t.push({
-        iconPath: h.As,
-        text: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
-      }), (0, T.Ol)(e) && t.push({
-        iconPath: h.fO,
-        text: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
-      }), (0, T.q_)(e)) {
-      let n = (0, T.vU)(e);
+        iconPath: I.As,
+        text: h.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
+      }), (0, v.Ol)(e) && t.push({
+        iconPath: I.fO,
+        text: h.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
+      }), (0, v.q_)(e)) {
+      let n = (0, v.vU)(e);
       t.push({
-        iconPath: h.t1,
-        text: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
+        iconPath: I.t1,
+        text: h.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
           days: n
         })
       })
-    }(0, T.ig)(e) === i.o.GLOBAL && t.push({
-      iconPath: h.Op,
-      text: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
+    }(0, v.ig)(e) === i.o.GLOBAL && t.push({
+      iconPath: I.Op,
+      text: h.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
     });
-    let a = (0, T.dw)(e);
+    let a = (0, v.dw)(e);
     if (null != a && t.push({
-        iconPath: h.Z,
-        text: (0, T.GE)(a)
-      }), (0, T.V5)(e) && t.push({
-        iconPath: h.Md,
-        text: (0, T.kr)(e) ? (0, T.z5)(e) : (0, T.nB)(e)
-      }), (0, T.Jd)(e)) {
-      let n = (0, T.yA)(e);
+        iconPath: I.Z,
+        text: (0, v.GE)(a)
+      }), (0, v.V5)(e) && t.push({
+        iconPath: I.Md,
+        text: (0, v.kr)(e) ? (0, v.z5)(e) : (0, v.nB)(e)
+      }), (0, v.Jd)(e)) {
+      let n = (0, v.yA)(e);
       if (null != n) {
-        let e = I.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({
-          hours: Math.round(n / m.Z.Seconds.HOUR)
+        let e = h.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({
+          hours: Math.round(n / T.Z.Seconds.HOUR)
         });
         return [{
-          iconPath: h.eF,
-          text: "".concat(I.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, " — ").concat(e)
+          iconPath: I.eF,
+          text: "".concat(h.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, " — ").concat(e)
         }]
       }
     }
     return t
   },
-  A = (e, n) => {
+  C = (e, n) => {
     let {
       timestamp: t,
       colors: l,
@@ -95,66 +95,66 @@ let M = (e, n) => ({
       stop: n
     }));
     e.setSize({
-      w: h.nx,
-      h: h.bg
+      w: I.nx,
+      h: I.bg
     }, 4), e.drawRoundedGradientRect(i, {
       x: 0,
-      y: h.bg
+      y: I.bg
     }, {
-      x: h.nx,
+      x: I.nx,
       y: 0
     }, {
       x: 0,
       y: 0,
-      h: h.bg,
-      w: h.nx
+      h: I.bg,
+      w: I.nx
     }, 8), e.setColor("rgba(108, 111, 124, 0.24)"), e.drawRoundedRect({
-      x: h.nx - h.sB - h.if,
-      y: h.sB,
-      w: h.if,
-      h: h.wI
+      x: I.nx - I.sB - I.if,
+      y: I.sB,
+      w: I.if,
+      h: I.wI
     }, 4, !0), e.setColor("rgba(255, 255, 255, 0.5)");
     e.setFont({
       size: 12,
       family: ["gg sans", "sans-serif"],
       weight: 500,
       truncate: d.GX.None
-    }), e.drawText(I.Z.Messages.BETA, {
-      x: h.nx - h.sB - 29,
-      y: h.sB + 12 + 2
+    }), e.drawText(h.Z.Messages.BETA, {
+      x: I.nx - I.sB - 29,
+      y: I.sB + 12 + 2
     }, !0), e.setColor("white"), e.drawRoundedImage("ApplicationImage", {
-      x: h.sB,
-      y: h.sB
+      x: I.sB,
+      y: I.sB
     }, {
-      w: h.Pu,
-      h: h.Pu
+      w: I.Pu,
+      h: I.Pu
     }, 8) === d.vP.Failure && e.drawPath(s.Cv, {
-      x: h.sB,
-      y: h.sB
+      x: I.sB,
+      y: I.sB
     }, !0, 2 + 2 / 3);
-    (0, g.l)({
+    (0, N.l)({
       canvas: e,
       avatarSrcs: ["AvatarImage1", "AvatarImage2", "AvatarImage3"].slice(0, o),
       position: {
-        x: h.Iq,
-        y: h.sB
+        x: I.Iq,
+        y: I.sB
       },
-      avatarImageSize: h.$S
+      avatarImageSize: I.$S
     }), e.setColor("white"), e.setFont({
       size: 16,
       truncate: d.GX.Wrap
     }), e.drawText(a, {
-      x: h.Iq,
+      x: I.Iq,
       y: 64,
       h: 32,
-      w: h.kC
+      w: I.kC
     }, !0);
-    let u = C(r, t);
-    (0, g.J)({
+    let u = A(r, t);
+    (0, N.J)({
       canvas: e,
       badges: u,
-      startPosition: h.Iq,
-      maxWidth: h.kC
+      startPosition: I.Iq,
+      maxWidth: I.kC
     })
   },
   R = async e => {
@@ -169,7 +169,7 @@ let M = (e, n) => ({
     } = e, u = t.extra.game_name, s = M(l, n);
     return await (0, E.f)({
       assetsToLoad: s,
-      drawImage: e => A(e, {
+      drawImage: e => C(e, {
         timestamp: r,
         colors: o,
         description: a,
@@ -184,7 +184,7 @@ let M = (e, n) => ({
         channelId: i
       }
     })
-  }, Z = async (e, n) => {
+  }, S = async (e, n) => {
     let t = e.extra.game_name,
       l = u.Z.getApplication(e.extra.application_id),
       r = null == l ? void 0 : l.getIconURL(128),
@@ -192,19 +192,19 @@ let M = (e, n) => ({
     a()(null != o, "Author must not be null"), await (0, c.vM)(null != r ? r : "");
     let i = [null == o ? void 0 : o.getAvatarURL(n.guild_id, 128)],
       s = M(i, r),
-      m = _.default.locale,
-      v = (0, T.yh)(e, m),
+      T = _.default.locale,
+      m = (0, v.yh)(e, T),
       {
-        primaryColor: g,
-        secondaryColor: h
+        primaryColor: N,
+        secondaryColor: I
       } = (0, x.w)(null != r ? r : ""),
-      I = (0, N.HV)(e, n, o);
+      h = (0, g.HV)(e, n, o);
     return await (0, E.f)({
       assetsToLoad: s,
-      drawImage: n => A(n, {
-        timestamp: v,
-        colors: [g, h],
-        description: I,
+      drawImage: n => C(n, {
+        timestamp: m,
+        colors: [N, I],
+        description: h,
         entry: e,
         numAvatars: i.length
       }),

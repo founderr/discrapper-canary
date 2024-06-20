@@ -19,8 +19,8 @@ var n = t(735250),
   N = t(238108),
   p = t(32173),
   m = t(391110),
-  g = t(484239),
-  C = t(658370),
+  C = t(484239),
+  g = t(658370),
   f = t(735825),
   P = t(981631),
   O = t(921944),
@@ -38,8 +38,8 @@ let L = {
       canReveal: t = !0,
       dismissibleContentType: r,
       forceShadow: S,
-      cardType: g,
-      confettiCanvas: C
+      cardType: C,
+      confettiCanvas: g
     } = e, Z = null == e ? void 0 : e.onCtaClick, D = (0, _.e7)([u.Z], () => u.Z.useReducedMotion), [U, B] = a.useState(!1), [j, G] = a.useState(!1), H = (0, A.yQ)(), W = (0, A.IB)(), [k, K] = a.useState(!1), [F, w] = a.useState(s === p.u.FREE_BOOST && W && (null == H ? void 0 : H.nitroTenureStatus) === f.EB.REDEEMABLE);
     a.useEffect(() => {
       s === p.u.FREE_BOOST && W && (null == H ? void 0 : H.nitroTenureStatus) === f.EB.REDEEMABLE && w(!0)
@@ -47,7 +47,7 @@ let L = {
     let V = a.useCallback(() => {
         K(!0)
       }, []),
-      y = g === m.R0.CARD_CAROUSEL_FIRST_ROW || g === m.R0.CARD_CAROUSEL_SECOND_ROW || g === m.R0.CARD_CAROUSEL_THIRD_ROW,
+      y = C === m.R0.CARD_CAROUSEL_FIRST_ROW || C === m.R0.CARD_CAROUSEL_SECOND_ROW || C === m.R0.CARD_CAROUSEL_THIRD_ROW,
       Y = (0, p.Z)(),
       [z, Q] = (0, I.c)(null != r && t || r === c.z.TENURE_REWARD_REDEEMABLE_CONFETTI ? [r] : []);
     a.useEffect(() => () => {
@@ -151,7 +151,7 @@ let L = {
           offsetXPercentageMin: -70,
           offsetYPercentageMax: 40,
           offsetYPercentageMin: 20,
-          customConfettiCanvas: C,
+          customConfettiCanvas: g,
           dragCoefficientValue: 1e-5,
           onAnimationEnd: V
         })]
@@ -244,7 +244,7 @@ let v = a.forwardRef((e, s) => {
       children: P
     }), (0, n.jsx)("div", {
       ref: s
-    }), (0, n.jsx)(g.Z, {
+    }), (0, n.jsx)(C.Z, {
       title: r,
       titleClassName: l,
       subtitle: o,
@@ -255,7 +255,7 @@ let v = a.forwardRef((e, s) => {
       perkComponent: T,
       subtitleClassName: h.cardSubtitle,
       cardVariant: M
-    }), L && (0, n.jsx)(C.Z, {
+    }), L && (0, n.jsx)(g.Z, {
       title: r,
       titleClassName: l,
       subtitle: o,

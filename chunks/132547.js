@@ -25,7 +25,7 @@ s.Z = () => {
     {
       analyticsLocations: r
     } = (0, c.ZP)(_.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-    [g, C] = a.useState(!1);
+    [C, g] = a.useState(!1);
   (0, u.FM)();
   let f = (0, T.b)("SubscriberNitroHome");
   return (0, n.jsxs)(n.Fragment, {
@@ -65,9 +65,9 @@ s.Z = () => {
             className: p.footerSpacing
           }), (0, n.jsx)(l.$, {
             onChange: e => {
-              e && !g && (E.default.track(N.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+              e && !C && (E.default.track(N.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                 location_stack: r
-              }), C(!0))
+              }), g(!0))
             },
             children: (0, n.jsx)("div", {
               className: p.bottomOfPageVisibilitySensor

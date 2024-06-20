@@ -85,7 +85,7 @@ s.Z = e => {
     styles: S
   }), d = (0, l.e7)([_.Z], () => _.Z.useReducedMotion), {
     analyticsLocations: M
-  } = (0, E.ZP)(), g = (0, R._f)(), C = [u.emoji, u.streaming, u.upload, u.customAppIcons, u.soundboard, g ? u.remix : u.videoBackground, u.superReactions, u.stickersPerkDiscoverability, u.badgeAlt];
+  } = (0, E.ZP)(), C = (0, R._f)(), g = [u.emoji, u.streaming, u.upload, u.customAppIcons, u.soundboard, C ? u.remix : u.videoBackground, u.superReactions, u.stickersPerkDiscoverability, u.badgeAlt];
   return (0, n.jsxs)("div", {
     className: i()(S.perksContainer, s, {
       [S.partiallyHidden]: t && !r,
@@ -100,7 +100,7 @@ s.Z = e => {
       className: i()(S.perkCardContainer, {
         [S.perkCardContainerExpanded]: r
       }),
-      children: C.map(e => null != e && (0, n.jsx)(m, {
+      children: g.map(e => null != e && (0, n.jsx)(m, {
         ...e
       }, e.title))
     }), t && (0, n.jsxs)(n.Fragment, {

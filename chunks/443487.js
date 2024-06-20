@@ -1,15 +1,15 @@
 t.d(n, {
   F9: function() {
-    return g
+    return N
   },
   Zb: function() {
-    return v
+    return m
   },
   e$: function() {
-    return T
+    return v
   },
   ll: function() {
-    return N
+    return g
   }
 });
 var l = t(735250);
@@ -25,9 +25,9 @@ var a = t(120356),
   E = t(5192),
   _ = t(192918),
   f = t(687694),
-  m = t(41899);
+  T = t(41899);
 
-function v(e) {
+function m(e) {
   let {
     children: n,
     selected: t
@@ -38,28 +38,28 @@ function v(e) {
     location: "ContentCard"
   });
   return (0, l.jsxs)("div", {
-    className: r()(m.container, {
-      [m.selected]: t
+    className: r()(T.container, {
+      [T.selected]: t
     }, {
-      [m.openOnHover]: o
+      [T.openOnHover]: o
     }),
     children: [n, a && (0, l.jsx)("div", {
-      className: m.reply,
+      className: T.reply,
       children: (0, l.jsx)(i.ArrowAngleLeftUpIcon, {
         size: "md",
         color: "currentColor",
-        className: m.icon
+        className: T.icon
       })
     })]
   })
 }
 
-function T(e) {
+function v(e) {
   let {
     children: n
   } = e;
   return (0, l.jsx)("div", {
-    className: m.infoSection,
+    className: T.infoSection,
     children: n
   })
 }
@@ -70,7 +70,7 @@ function x(e) {
     guildId: t
   } = e;
   return (0, l.jsx)("div", {
-    className: m.facePile,
+    className: T.facePile,
     children: n.map((e, a) => {
       let r = (0, l.jsx)(i.Avatar, {
         src: e.getAvatarURL(t, 80),
@@ -78,12 +78,12 @@ function x(e) {
         "aria-label": "avatar"
       });
       return a === n.length - 1 ? (0, l.jsx)("div", {
-        className: m.facePileItem,
+        className: T.facePileItem,
         children: r
       }, e.id) : (0, l.jsx)(d.ZP, {
         width: 16,
         height: 16,
-        className: m.facePileItem,
+        className: T.facePileItem,
         mask: d.ZP.Masks.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR,
         children: r
       }, e.id)
@@ -91,51 +91,51 @@ function x(e) {
   })
 }
 
-function g(e) {
+function N(e) {
   let {
     guildId: n,
     channelId: t,
     entry: a,
     maxAvatars: r = 3
   } = e, d = a.author_id, f = (0, o.e7)([c.default], () => c.default.getUser(d)), {
-    displayParticipants: v,
-    numOtherParticipants: T
-  } = (0, _.Z)(a, r), g = (0, o.e7)([u.ZP], () => u.ZP.getMember(n, d)), N = (0, o.e7)([s.Z], () => {
+    displayParticipants: m,
+    numOtherParticipants: v
+  } = (0, _.Z)(a, r), N = (0, o.e7)([u.ZP], () => u.ZP.getMember(n, d)), g = (0, o.e7)([s.Z], () => {
     var e;
-    return (null == g ? void 0 : g.colorRoleId) != null ? null === (e = s.Z.getRole(n, g.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
-  }, [n, g]);
+    return (null == N ? void 0 : N.colorRoleId) != null ? null === (e = s.Z.getRole(n, N.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
+  }, [n, N]);
   if (null == f) return null;
-  let h = null == g ? void 0 : g.colorString,
-    I = E.ZP.getName(n, t, f);
+  let I = null == N ? void 0 : N.colorString,
+    h = E.ZP.getName(n, t, f);
   return (0, l.jsxs)("div", {
-    className: m.userSection,
+    className: T.userSection,
     children: [(0, l.jsx)(x, {
-      users: v,
+      users: m,
       guildId: n
     }), (0, l.jsx)(i.NameWithRole, {
-      color: null != h ? h : void 0,
-      roleName: N,
-      name: I,
-      className: m.userName
-    }), T > 0 ? (0, l.jsx)("div", {
-      className: m.additionalParticipantBadge,
+      color: null != I ? I : void 0,
+      roleName: g,
+      name: h,
+      className: T.userName
+    }), v > 0 ? (0, l.jsx)("div", {
+      className: T.additionalParticipantBadge,
       children: (0, l.jsxs)(i.Text, {
         variant: "text-xxs/medium",
         color: "text-normal",
-        className: m.additionalParticipantBadgeText,
-        children: ["+", T]
+        className: T.additionalParticipantBadgeText,
+        children: ["+", v]
       })
     }) : null]
   })
 }
 
-function N(e) {
+function g(e) {
   let {
     children: n
   } = e;
   return (0, l.jsx)(i.Heading, {
     variant: "heading-sm/normal",
-    className: m.contentDescription,
+    className: T.contentDescription,
     lineClamp: 1,
     children: n
   })

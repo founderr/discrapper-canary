@@ -24,44 +24,44 @@ function E(e) {
 }
 let _ = (0, r.Z)(E),
   f = e => {
-    var n, t, r, f, m, v;
-    let T = (0, a.e7)([o.default], () => o.default.locale),
+    var n, t, r, f, T, m;
+    let v = (0, a.e7)([o.default], () => o.default.locale),
       x = (0, a.e7)([i.default], () => i.default.getUser(e.author_id)),
       {
-        activity: g,
-        activityApplication: N,
-        fallbackApplication: h
+        activity: N,
+        activityApplication: g,
+        fallbackApplication: I
       } = (0, c.qy)(e),
-      I = (0, s.wh)("useGamingContentData"),
-      M = null !== (f = null === (n = null != h ? h : N) || void 0 === n ? void 0 : n.getIconURL(d.Si.LARGE)) && void 0 !== f ? f : void 0;
-    if (!I || null == g) return {
+      h = (0, s.wh)("useGamingContentData"),
+      M = null !== (f = null === (n = null != I ? I : g) || void 0 === n ? void 0 : n.getIconURL(d.Si.LARGE)) && void 0 !== f ? f : void 0;
+    if (!h || null == N) return {
       iconUrl: M,
       gameTitle: e.extra.game_name,
       user: x,
-      inExperiment: I
+      inExperiment: h
     };
-    let C = null != N && (null === (t = g.assets) || void 0 === t ? void 0 : t.large_image) != null ? (0, u.getAssetImage)(N.id, g.assets.large_image, [d.Si.LARGE, d.Si.LARGE]) : void 0,
-      A = null !== (m = null === (r = g.assets) || void 0 === r ? void 0 : r.large_text) && void 0 !== m ? m : void 0,
-      R = null !== (v = g.name) && void 0 !== v ? v : e.extra.game_name,
-      Z = g.details,
-      p = g.state,
-      S = g.party,
-      O = null != g.timestamps ? (0, l.jsx)(_, {
-        timestamps: g.timestamps
+    let A = null != g && (null === (t = N.assets) || void 0 === t ? void 0 : t.large_image) != null ? (0, u.getAssetImage)(g.id, N.assets.large_image, [d.Si.LARGE, d.Si.LARGE]) : void 0,
+      C = null !== (T = null === (r = N.assets) || void 0 === r ? void 0 : r.large_text) && void 0 !== T ? T : void 0,
+      R = null !== (m = N.name) && void 0 !== m ? m : e.extra.game_name,
+      S = N.details,
+      Z = N.state,
+      p = N.party,
+      O = null != N.timestamps ? (0, l.jsx)(_, {
+        timestamps: N.timestamps
       }) : (0, l.jsx)(E, {
-        message: (0, c.yh)(e, T)
+        message: (0, c.yh)(e, v)
       });
     return {
-      iconUrl: null != C ? C : M,
-      iconFallbackUrl: null != C ? M : void 0,
-      iconTitle: A,
+      iconUrl: null != A ? A : M,
+      iconFallbackUrl: null != A ? M : void 0,
+      iconTitle: C,
       user: x,
-      activity: g,
-      state: p,
-      details: Z,
-      party: S,
+      activity: N,
+      state: Z,
+      details: S,
+      party: p,
       gameTitle: R,
       gameTime: O,
-      inExperiment: I
+      inExperiment: h
     }
   }

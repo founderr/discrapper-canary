@@ -22,8 +22,8 @@ var i = t(399606),
   N = t(528865),
   p = t(781922),
   m = t(885462),
-  g = t(494127),
-  C = t(314684),
+  C = t(494127),
+  g = t(314684),
   f = t(687362),
   P = t(119269),
   O = t(391110),
@@ -68,9 +68,9 @@ s.Z = () => {
     analyticsLocations: e
   } = (0, E.ZP)(c.Z.PREMIUM_MARKETING_PERK_CARD), s = (0, _.ZP)(), t = Z.Z.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, n = (0, i.e7)([A.ZP], () => A.ZP.getPremiumTypeSubscription()), a = null != n ? S.ZP.getPremiumPlanItem(n) : null, e_ = null != a ? S.ZP.getSkuIdForPlan(a.planId) : null, ec = e_ === h.Si.TIER_2, eE = e_ === h.Si.TIER_0, {
     flipped: eu
-  } = (0, g.JP)(), {
+  } = (0, C.JP)(), {
     flipped: ed
-  } = (0, g.as)(), eR = (0, C.nY)({
+  } = (0, C.as)(), eR = (0, g.nY)({
     showAnimations: !0
   }), eI = null != eR ? eR.initialPercentage : void 0, eT = null != eR ? eR.percentage : void 0, eA = (0, u.Z)(T.Z), eM = (0, f.Z)(), {
     canFlipCard: eS
@@ -93,12 +93,12 @@ s.Z = () => {
   }), em = (0, d.Z)({
     scrollPosition: b.Y_.TRY_IT_OUT,
     analyticsLocations: e
-  }), eg = () => {
+  }), eC = () => {
     o.Z.open(L.oAB.VOICE, b.GA, {
       openWithoutBackstack: !0,
       analyticsLocations: e
     })
-  }, eC = () => {
+  }, eg = () => {
     (0, R.uL)(L.Z5c.COLLECTIBLES_SHOP)
   }, ef = () => {
     o.Z.open(L.oAB.APPEARANCE, null, {
@@ -111,7 +111,7 @@ s.Z = () => {
       subtitle: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_SUB,
       description: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_SUB,
       descriptionCta: Z.Z.Messages.VISIT_THE_SHOP_CTA,
-      onCtaClick: eC,
+      onCtaClick: eg,
       pillText: Z.Z.Messages.EARLY_ACCESS,
       perkImage: k,
       canReveal: eu,
@@ -198,7 +198,7 @@ s.Z = () => {
       subtitle: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
       description: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
       descriptionCta: Z.Z.Messages.TAKE_ME_THERE,
-      onCtaClick: eg,
+      onCtaClick: eC,
       perkImage: Y
     } : {
       name: "entranceSounds",
@@ -213,7 +213,7 @@ s.Z = () => {
       subtitle: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
       description: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
       descriptionCta: Z.Z.Messages.TAKE_ME_THERE,
-      onCtaClick: eg,
+      onCtaClick: eC,
       perkImage: z
     } : {
       name: "entranceSoundsSeeAllVariation",
@@ -228,7 +228,7 @@ s.Z = () => {
       subtitle: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_SUBTITLE,
       description: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_SUB,
       descriptionCta: Z.Z.Messages.VISIT_THE_SHOP_CTA,
-      onCtaClick: eC,
+      onCtaClick: eg,
       pillText: Z.Z.Messages.EARLY_ACCESS,
       perkImage: J,
       canReveal: ed,
@@ -288,7 +288,7 @@ s.Z = () => {
       subtitle: Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
       description: Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
       descriptionCta: Z.Z.Messages.VISIT_THE_SHOP_CTA,
-      onCtaClick: eC,
+      onCtaClick: eg,
       perkImage: es
     } : {
       name: "specialMemberPricing",
@@ -304,7 +304,7 @@ s.Z = () => {
       subtitle: Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
       description: Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
       descriptionCta: Z.Z.Messages.VISIT_THE_SHOP_CTA,
-      onCtaClick: eC,
+      onCtaClick: eg,
       perkImage: et
     } : {
       name: "specialMemberPricingSeeAllVariant",
@@ -320,7 +320,7 @@ s.Z = () => {
       subtitle: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
       description: Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
       descriptionCta: Z.Z.Messages.VISIT_THE_SHOP_CTA,
-      onCtaClick: eC,
+      onCtaClick: eg,
       perkImage: es
     } : {
       name: "specialShopPerks",
@@ -328,7 +328,7 @@ s.Z = () => {
       subtitle: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
       description: Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
       descriptionCta: Z.Z.Messages.VISIT_THE_SHOP_CTA,
-      onCtaClick: eC,
+      onCtaClick: eg,
       perkImage: es
     },
     unlimitedSuperReactions: ec ? {

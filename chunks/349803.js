@@ -26,7 +26,7 @@ s.Z = function(e) {
       friction: 12
     },
     immediate: p
-  }), g = {
+  }), C = {
     section: R.jXE.MARKETING_FLOATING_CTA
   };
   return (0, n.jsx)(i.animated.div, {
@@ -40,11 +40,11 @@ s.Z = function(e) {
       children: [(0, n.jsx)(u.Z, {
         className: I.button,
         subscriptionTier: null !== (t = null != A ? A : null == M ? void 0 : M.sku_id) && void 0 !== t ? t : N,
-        premiumModalAnalyticsLocation: g,
+        premiumModalAnalyticsLocation: C,
         isPersistentCTA: !0
       }), (0, n.jsx)(E.Z, {
         className: I.button,
-        premiumModalAnalyticsLocation: g
+        premiumModalAnalyticsLocation: C
       })]
     })
   })

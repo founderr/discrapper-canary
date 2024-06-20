@@ -1,6 +1,6 @@
 t.d(s, {
   ZR: function() {
-    return C
+    return g
   },
   e0: function() {
     return O
@@ -113,7 +113,7 @@ let T = "getWhatsNewBadgeCount",
     }), s = (0, r.wE)(a.z.WHATS_NEW_SERVER_PROFILE_BADGE);
     return e && !s
   },
-  g = () => {
+  C = () => {
     let {
       canFlipCard: e
     } = d.e.getCurrentConfig({
@@ -123,7 +123,7 @@ let T = "getWhatsNewBadgeCount",
     }), s = (0, r.un)(a.z.WHATS_NEW_SERVER_PROFILE_BADGE);
     return e && !s
   },
-  C = () => {
+  g = () => {
     let e = N(),
       s = m();
     return s ? (d.e.trackExposure({
@@ -145,7 +145,7 @@ let T = "getWhatsNewBadgeCount",
   },
   P = () => {
     let e = p(),
-      s = g();
+      s = C();
     return e || s
   },
   O = () => {

@@ -1,45 +1,45 @@
-var n = s(735250);
-s(470079);
-var a = s(643872),
-  t = s(481060),
-  i = s(689938),
-  o = s(997844);
-let r = [a.p.OFFICIAL, a.p.TWITTER, a.p.YOUTUBE];
+var s = n(735250);
+n(470079);
+var t = n(643872),
+  a = n(481060),
+  i = n(689938),
+  r = n(997844);
+let o = [t.p.OFFICIAL, t.p.TWITTER, t.p.YOUTUBE];
 l.Z = e => {
   let {
     websites: l
   } = e;
-  return null == l || 0 === l.length ? null : (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)(t.Text, {
+  return null == l || 0 === l.length ? null : (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsx)(a.Text, {
       variant: "text-xs/semibold",
       children: i.Z.Messages.GAME_PROFILE_LINKS
-    }), (0, n.jsx)("div", {
-      className: o.row,
+    }), (0, s.jsx)("div", {
+      className: r.row,
       children: l.filter(e => {
         let {
           category: l
         } = e;
-        return r.includes(l)
+        return o.includes(l)
       }).sort((e, l) => e.category - l.category).map(e => {
         let {
           category: l,
-          url: s
+          url: n
         } = e, i = null;
         switch (l) {
-          case a.p.OFFICIAL:
-            i = (0, n.jsx)(t.GlobeEarthIcon, {});
+          case t.p.OFFICIAL:
+            i = (0, s.jsx)(a.GlobeEarthIcon, {});
             break;
-          case a.p.TWITTER:
-            i = (0, n.jsx)(t.XNeutralIcon, {});
+          case t.p.TWITTER:
+            i = (0, s.jsx)(a.XNeutralIcon, {});
             break;
-          case a.p.YOUTUBE:
-            i = (0, n.jsx)(t.YouTubeIcon, {})
+          case t.p.YOUTUBE:
+            i = (0, s.jsx)(a.YouTubeIcon, {})
         }
-        return null != i ? (0, n.jsx)(t.Anchor, {
-          href: s,
+        return null != i ? (0, s.jsx)(a.Anchor, {
+          href: n,
           target: "_blank",
           children: i
-        }, s) : null
+        }, n) : null
       })
     })]
   })

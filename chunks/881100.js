@@ -23,8 +23,8 @@ var n = t(399606),
   N = t(680313),
   p = t(926433),
   m = t(302036),
-  g = t(994554),
-  C = t(1549),
+  C = t(994554),
+  g = t(1549),
   f = t(13327),
   P = t(59137),
   O = t(405991),
@@ -129,19 +129,19 @@ let j = (e, s, t) => (0, a.wj)(e) ? s : t,
       stickers: {
         title: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE_OLD,
         description: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-        imageSource: j(t, g, D),
+        imageSource: j(t, C, D),
         imageClassName: s.stickersImage
       },
       stickersBurst: {
         title: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
         description: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-        imageSource: j(t, g, D),
+        imageSource: j(t, C, D),
         imageClassName: s.stickersImage
       },
       stickersPerkDiscoverability: {
         title: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
         description: E.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-        imageSource: j(t, g, D),
+        imageSource: j(t, C, D),
         imageClassName: s.stickersImage
       },
       streaming: {
@@ -153,7 +153,7 @@ let j = (e, s, t) => (0, a.wj)(e) ? s : t,
       superReactions: {
         title: E.Z.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_V2,
         description: E.Z.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION_V2,
-        imageSource: j(t, C, f),
+        imageSource: j(t, g, f),
         imageClassName: s.superReactionsImage
       },
       upload: {

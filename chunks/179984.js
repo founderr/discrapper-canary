@@ -19,8 +19,8 @@ var n = t(735250),
   N = t(639119),
   p = t(230916),
   m = t(248042),
-  g = t(823188),
-  C = t(21023),
+  C = t(823188),
+  g = t(21023),
   f = t(318747),
   P = t(409100),
   O = t(474936),
@@ -34,10 +34,10 @@ let D = e => {
     let {
       isLightTheme: s
     } = e, t = (0, m.W1)();
-    return (0, n.jsx)(g.Cy, {
+    return (0, n.jsx)(C.Cy, {
       text: t,
       className: h.bogoPillWithSparkles,
-      colorOptions: s ? g.VE.PREMIUM_TIER_2_WHITE_FILL : g.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+      colorOptions: s ? C.VE.PREMIUM_TIER_2_WHITE_FILL : C.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
     })
   },
   U = () => (0, n.jsx)("div", {
@@ -158,7 +158,7 @@ s.Z = e => {
     ee = "".concat(q, "/").concat((0, A.eP)(O.rV.MONTH)),
     es = (0, A.CY)(O.Xh.PREMIUM_MONTH_TIER_0),
     et = (0, A.CY)(O.Xh.PREMIUM_MONTH_TIER_2),
-    en = (0, C.n)(es, et, $, ee),
+    en = (0, g.n)(es, et, $, ee),
     ea = (0, m.Vi)();
   if (!k || !K) return null;
   let er = {
@@ -222,10 +222,10 @@ s.Z = e => {
     withBottomBorder: !1,
     withBottomBorderRadius: !0,
     buttonsRow: null == Q
-  }), t = v ? null : null != Q || null != X ? (0, n.jsx)(g.Cy, {
+  }), t = v ? null : null != Q || null != X ? (0, n.jsx)(C.Cy, {
     text: null != Q ? x.Z.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : x.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
     className: h.freeTrialPillWithSparkles,
-    colorOptions: Q === O.Si.TIER_0 ? V ? g.VE.PREMIUM_TIER_0_GRADIENT_FILL : g.VE.PREMIUM_TIER_0_WHITE_FILL : V ? Y ? g.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : g.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : g.VE.PREMIUM_TIER_2_WHITE_FILL
+    colorOptions: Q === O.Si.TIER_0 ? V ? C.VE.PREMIUM_TIER_0_GRADIENT_FILL : C.VE.PREMIUM_TIER_0_WHITE_FILL : V ? Y ? C.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : C.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : C.VE.PREMIUM_TIER_2_WHITE_FILL
   }) : ea ? (0, n.jsx)(D, {
     isLightTheme: V
   }) : (0, n.jsx)(U, {});

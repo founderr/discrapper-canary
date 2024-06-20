@@ -49,8 +49,8 @@ s.Z = e => {
     noBackground: N = !1,
     leftAlignHeaders: p = !1,
     showAllPerksButton: m,
-    headerClassname: g,
-    isFullScreen: C = !0
+    headerClassname: C,
+    isFullScreen: g = !0
   } = e, f = a.useRef(null), P = (0, E.yQ)(), [O, x] = a.useState(!1), h = (0, u.Ag)(P) || O, L = (0, _.ZP)("perks-discoverability");
   a.useLayoutEffect(() => {
     x((0, R.i3)())
@@ -81,7 +81,7 @@ s.Z = e => {
       perksCards: U,
       variant: r,
       shopMarketingVariation: L,
-      isFullScreen: C,
+      isFullScreen: g,
       showTenureCard: null == P ? void 0 : P.showCard,
       tileOrderVariant: b,
       isPremiumSubscriber: B
@@ -104,7 +104,7 @@ s.Z = e => {
         showAllPerksButton: m,
         leftAlignHeaders: p,
         title: D.title,
-        headerClassname: g
+        headerClassname: C
       }), (0, n.jsx)(o.Text, {
         variant: "text-lg/normal",
         color: "header-primary",
@@ -122,8 +122,8 @@ s.Z = e => {
         children: m
       }), (0, n.jsx)("div", {
         className: i()({
-          [M.cardContainer]: C,
-          [M.cardContainerNarrowWidth]: !C
+          [M.cardContainer]: g,
+          [M.cardContainerNarrowWidth]: !g
         }),
         children: j.map((e, s) => (0, n.jsx)(A.Z, {
           confettiCanvas: e.name === d.u.FREE_BOOST ? H : void 0,

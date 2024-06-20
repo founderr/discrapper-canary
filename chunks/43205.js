@@ -18,8 +18,8 @@ function c(e) {
     className: r,
     alt: c = "icon",
     fallbackSrc: d
-  } = e, E = (0, u.ZP)(), [_, f] = a.useState(!1), [m, v] = a.useState(!1), T = null == d || m;
-  return null == n || _ && T ? (0, l.jsx)(i.UnknownGameIcon, {
+  } = e, E = (0, u.ZP)(), [_, f] = a.useState(!1), [T, m] = a.useState(!1), v = null == d || T;
+  return null == n || _ && v ? (0, l.jsx)(i.UnknownGameIcon, {
     size: "custom",
     width: t,
     height: t,
@@ -33,6 +33,6 @@ function c(e) {
     className: o()(s.contentImage, r),
     src: _ && null != d ? d : n,
     alt: c,
-    onError: e => _ ? v(!0) : f(!0)
+    onError: e => _ ? m(!0) : f(!0)
   })
 }
