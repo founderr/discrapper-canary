@@ -28,13 +28,22 @@ let r = (0, i.B)({
     id: "2024-06_desktop_app_launcher_in_activities_shelf",
     label: "Desktop App Launcher In Activities Shelf",
     defaultConfig: {
-      enabled: !1
+      enabled: !1,
+      clickOnHomeActivityOpensAppDetail: !1
     },
     treatments: [{
       id: 1,
-      label: "Enable the desktop app launcher in activities shelf",
+      label: "Enable the desktop app launcher in activities shelf: On home screen, clicking activity card -> performs activity action (i.e. launch)",
       config: {
-        enabled: !0
+        enabled: !0,
+        clickOnHomeActivityOpensAppDetail: !1
+      }
+    }, {
+      id: 2,
+      label: "Enable the desktop app launcher in activities shelf: On home screen, clicking activity card -> activity detail page",
+      config: {
+        enabled: !0,
+        clickOnHomeActivityOpensAppDetail: !0
       }
     }]
   });

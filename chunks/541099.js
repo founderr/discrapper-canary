@@ -18,6 +18,9 @@ class d extends(o = a.ZP.Store) {
   shouldShowModal() {
     return _.show && _.entrypoint === u._.VOICE
   }
+  entrypoint() {
+    return _.entrypoint
+  }
 }
 s = "AppLauncherStore", (r = "displayName") in(i = d) ? Object.defineProperty(i, r, {
   value: s,

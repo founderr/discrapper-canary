@@ -1,54 +1,57 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return u
+    return c
   }
 });
 var i = n(735250),
-  r = n(481060),
-  s = n(695676),
-  o = n(98880),
-  a = n(772606),
-  l = n(838246);
+  r = n(470079),
+  s = n(481060),
+  o = n(424602),
+  a = n(827498),
+  l = n(98880),
+  u = n(772606),
+  _ = n(838246);
 
-function u(e) {
+function c(e) {
   let {
-    title: t,
-    look: n,
-    items: u
+    channel: t,
+    entrypoint: n,
+    title: c,
+    look: d,
+    items: E
   } = e, {
-    pushHistory: _
-  } = (0, s.hH)();
+    clickOnHomeActivityOpensAppDetail: I
+  } = o.m1.getCurrentConfig({
+    location: "AppLauncherApplicationListViewScreen"
+  }, {
+    autoTrackExposure: !1
+  }), T = r.useMemo(() => n === a._.TEXT || I ? l.kA : l.qR, [I, n]);
   return (0, i.jsxs)("div", {
-    className: l.container,
+    className: _.container,
     children: [(0, i.jsxs)("div", {
-      className: l.header,
-      children: [(0, i.jsx)(a.Z, {
-        className: l.backButton
-      }), (0, i.jsx)(r.Heading, {
+      className: _.header,
+      children: [(0, i.jsx)(u.Z, {
+        className: _.backButton
+      }), (0, i.jsx)(s.Heading, {
         variant: "heading-md/medium",
         color: "header-primary",
-        children: t
+        children: c
       })]
-    }), (0, i.jsx)(r.Scroller, {
+    }), (0, i.jsx)(s.Scroller, {
       children: (0, i.jsx)("div", {
-        className: l.appGrid,
-        children: u.map(e => {
+        className: _.appGrid,
+        children: E.map(e => {
           let {
-            application: t,
+            application: n,
             isPartner: r
           } = e;
-          return (0, i.jsx)(o.Z, {
-            application: t,
-            look: n,
-            onClick: e => {
-              e.stopPropagation(), _({
-                type: s.gc.APPLICATION,
-                application: t
-              })
-            },
+          return (0, i.jsx)(T, {
+            channel: t,
+            application: n,
+            look: d,
             isPartner: r
-          }, t.id)
+          }, n.id)
         })
       })
     })]

@@ -54,6 +54,8 @@ t.Z = r.memo(function(e) {
       break;
     case o.gc.LIST:
       t = (0, i.jsx)(u.Z, {
+        channel: c,
+        entrypoint: d,
         title: T.title,
         look: T.look,
         items: T.items

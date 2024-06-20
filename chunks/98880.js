@@ -1,126 +1,203 @@
 "use strict";
+n.d(t, {
+  U4: function() {
+    return i
+  },
+  kA: function() {
+    return v
+  },
+  qR: function() {
+    return L
+  }
+}), n(411104);
 var i, r, s = n(735250),
   o = n(470079),
   a = n(120356),
   l = n.n(a),
   u = n(481060),
-  _ = n(778569),
-  c = n(182906),
-  d = n(220082),
-  E = n(318661),
-  I = n(792125),
-  T = n(783097),
-  h = n(753972),
-  S = n(231338),
-  f = n(689938),
-  N = n(599632);
+  _ = n(542094),
+  c = n(778569),
+  d = n(182906),
+  E = n(220082),
+  I = n(318661),
+  T = n(792125),
+  h = n(783097),
+  S = n(695676),
+  f = n(176412),
+  N = n(753972),
+  A = n(231338),
+  m = n(689938),
+  O = n(599632);
 
-function A(e) {
+function R(e) {
   let {
     application: t,
     look: n = "large_banner",
     isPartner: i,
-    onClick: r
+    onClick: r,
+    bannerImageStyle: a,
+    children: _
   } = e, {
-    iconURL: a,
-    name: _,
-    description: c
-  } = o.useMemo(() => (0, T.sl)(t, {
+    iconURL: c,
+    name: d,
+    description: I
+  } = o.useMemo(() => (0, h.sl)(t, {
     botIconFirst: !0
-  }), [t]), E = (0, d.ZP)(a, "");
+  }), [t]), S = (0, E.ZP)(c, "");
   return (0, s.jsxs)(u.Clickable, {
-    className: N.container,
+    className: O.container,
     onClick: r,
     children: [(0, s.jsxs)("div", {
-      className: l()(N.bannerImageContainer, {
-        [N.mediumBanner]: "medium_banner" === n,
-        [N.largeBanner]: "large_banner" === n
+      className: l()(O.bannerImageContainer, {
+        [O.mediumBanner]: "medium_banner" === n,
+        [O.largeBanner]: "large_banner" === n
       }),
-      children: [(0, s.jsx)(m, {
-        application: t,
-        fallbackColor: E
+      children: [(0, s.jsx)("span", {
+        className: a,
+        children: (0, s.jsx)(p, {
+          application: t,
+          fallbackColor: S
+        })
       }), i && (0, s.jsx)("div", {
-        className: N.partnerLabelWrapper,
+        className: O.partnerLabelWrapper,
         children: (0, s.jsx)(u.Text, {
-          className: (0, I.Q)(S.BR.DARK),
+          className: (0, T.Q)(A.BR.DARK),
           variant: "text-sm/medium",
           color: "text-normal",
-          children: f.Z.Messages.APP_DIRECTORY_PARTNER
+          children: m.Z.Messages.APP_DIRECTORY_PARTNER
         })
-      })]
+      }), "large_banner" === n || "medium_banner" === n ? (0, s.jsx)("div", {
+        className: O.bannerImageChildContainer,
+        children: _
+      }) : null]
     }), (0, s.jsxs)("div", {
-      className: N.appDetailsContainer,
-      children: [null != a && (0, s.jsx)(h.Z, {
-        src: a,
-        className: N.icon,
+      className: O.appDetailsContainer,
+      children: [null != c && (0, s.jsx)(N.Z, {
+        src: c,
+        className: O.icon,
         "aria-hidden": !0
       }), (0, s.jsxs)("div", {
-        className: N.appDetails,
+        className: O.appDetails,
         children: [(0, s.jsx)(u.Heading, {
           variant: "heading-md/semibold",
           color: "header-primary",
           lineClamp: 1,
-          children: _
+          children: d
         }), (0, s.jsx)(u.Text, {
           variant: "text-sm/normal",
           color: "text-secondary",
           lineClamp: 1,
-          children: c
+          children: I
         })]
       })]
     })]
   })
 }
 
-function m(e) {
+function p(e) {
   let {
     application: t,
     fallbackColor: n
   } = e;
-  if ((0, T.BQ)(t)) {
-    if ((0, T.ye)({
+  if ((0, h.BQ)(t)) {
+    if ((0, h.ye)({
         application: t
-      })) return (0, s.jsx)(O, {
+      })) return (0, s.jsx)(g, {
       application: t
     });
-    if (null != t.bot) return (0, s.jsx)(R, {
+    if (null != t.bot) return (0, s.jsx)(C, {
       bot: t.bot
     })
   }
   return (0, s.jsx)("div", {
-    className: N.bannerImage,
+    className: O.bannerImage,
     style: {
       backgroundColor: n
     }
   })
 }
 
-function O(e) {
+function g(e) {
   let {
     application: t
-  } = e, n = (0, _.Z)({
+  } = e, n = (0, c.Z)({
     applicationId: t.id,
     size: 600,
     names: ["embedded_cover"]
   });
-  return (0, s.jsx)(c.Z, {
+  return (0, s.jsx)(d.Z, {
     imageBackground: n,
     applicationName: t.name,
-    imageClassName: N.bannerImage,
-    imageNotFoundClassName: N.bannerImage
+    imageClassName: O.bannerImage,
+    imageNotFoundClassName: O.bannerImage
   })
 }
 
-function R(e) {
+function C(e) {
   let {
     bot: t
-  } = e, n = (0, E.ZP)(t.id), i = o.useMemo(() => null == n ? void 0 : n.getBannerURL({
+  } = e, n = (0, I.ZP)(t.id), i = o.useMemo(() => null == n ? void 0 : n.getBannerURL({
     canAnimate: !1,
     size: 600
   }), [n]);
   return (0, s.jsx)("img", {
     src: i,
     alt: "",
-    className: N.bannerImage
+    className: O.bannerImage
   })
-}(i = r || (r = {})).NO_BANNER = "no_banner", i.MEDIUM_BANNER = "medium_banner", i.LARGE_BANNER = "large_banner", t.Z = A, A.Looks = r
+}
+
+function v(e) {
+  let {
+    pushHistory: t
+  } = (0, S.hH)();
+  return (0, s.jsx)(R, {
+    ...e,
+    onClick: n => {
+      n.stopPropagation(), t({
+        type: S.gc.APPLICATION,
+        application: e.application
+      })
+    }
+  })
+}
+
+function L(e) {
+  let {
+    channel: t,
+    application: n,
+    sectionName: i,
+    ...r
+  } = e;
+  if (!(0, h.BQ)(n)) throw Error("PerformActivityActionAppCard was passed the Built-in App, which is not supported.");
+  let {
+    onActivityItemSelected: o,
+    activityAction: a,
+    buttonColor: l,
+    buttonText: c
+  } = (0, f.P)(t, n, i);
+  return a === _.JS.START ? (0, s.jsx)(R, {
+    ...r,
+    application: n,
+    onClick: o
+  }) : (0, s.jsx)(R, {
+    ...r,
+    application: n,
+    onClick: e => {
+      e.stopPropagation()
+    },
+    bannerImageStyle: O.darkenBannerImage,
+    children: (0, s.jsx)("div", {
+      className: O.voiceLauncherAppCardContainer,
+      children: (0, s.jsx)(u.Button, {
+        className: O.voiceLauncherAppCardButton,
+        type: "submit",
+        size: u.Button.Sizes.LARGE,
+        color: l,
+        disabled: !1,
+        onClick: o,
+        children: c
+      })
+    })
+  })
+}(r = i || (i = {})).NO_BANNER = "no_banner", r.MEDIUM_BANNER = "medium_banner", r.LARGE_BANNER = "large_banner"
