@@ -105308,10 +105308,6 @@ div:has(>div>.container_d99f08) {
     text-align: center
 }
 
-.summary_e881fc {
-    margin-bottom: var(--custom-spacing)
-}
-
 .imageScroller_e881fc {
     --custom-image-height: 140px;
     min-height: 156px;
