@@ -1,7 +1,7 @@
 "use strict";
 n(47120);
-var i = n(695346),
-  r = n(412788),
+var i = n(412788),
+  r = n(131681),
   s = n(932941),
   o = n(363072),
   a = n(526761);
@@ -17,12 +17,8 @@ function l(e, t, n) {
 let u = null;
 
 function _() {
-  let {
-    profanity: e = !1,
-    slurs: t = !1,
-    sexualContent: n = !1
-  } = i.gw.getSetting(), r = [...e ? s.pF : [], ...t ? s.wq : [], ...n ? s.$u : []];
-  (u = new o.B).addWords(r)
+  let e = (0, r.U)() ? [...s.pF, ...s.wq, ...s.$u] : [];
+  (u = new o.B).addWords(e)
 }
 
 function c() {
@@ -41,7 +37,7 @@ function E(e) {
   if (!t || n.type !== a.yP.PRELOADED_USER_SETTINGS) return !1;
   null != u && u.clear(), _()
 }
-class I extends r.Z {
+class I extends i.Z {
   loadCache() {
     let e = this.readSnapshot(I.LATEST_SNAPSHOT_VERSION);
     null != e && (u = null != e.keywordTrie ? o.B.fromSnapshot(e.keywordTrie) : null)
