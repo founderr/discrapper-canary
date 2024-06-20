@@ -290,6 +290,10 @@ let ev = e => (0, i.jsx)(eA, {
         return (0, i.jsx)(r.l_, {
           to: ed.Z5c.SETTINGS("privacy-and-safety", "account-standing")
         });
+      case "authorized-apps":
+        return (0, i.jsx)(r.l_, {
+          to: ed.Z5c.SETTINGS("authorized-apps")
+        });
       default:
         return (0, i.jsx)(r.l_, {
           to: ed.Z5c.ME
