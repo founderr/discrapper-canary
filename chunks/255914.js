@@ -6,6 +6,9 @@ n.d(t, {
   Su: function() {
     return r
   },
+  gr: function() {
+    return s
+  },
   lG: function() {
     return m
   },
@@ -38,7 +41,7 @@ let T = [0, 5e5, 1e6, 15e5, 2e6, 3e6, 4e6, 5e6, 6e6, 7e6, 8e6],
   h = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60],
   S = [720, 480, 360],
   f = ["framesCodec", "framesNetwork", "packets", "packetsLost", "framesDropped", "framesCodecError", "bytes", "nackCount", "pliCount", "qpSum", "freezeCount", "pauseCount", "totalFreezesDuration", "totalPausesDuration", "totalFramesDuration", "keyframes", "passthroughCount", "cryptorSuccessCount", "cryptorFailureCount", "cryptorDuration", "cryptorAttempts", "qualityDecodeErrors", "qualityDecoderReboots", "qualityScoreErrors", "qualityFrameDrops", "qualitySizeMismatches"];
-(a = i || (i = {})).H264 = "H264", a.H265 = "H265", a.VP8 = "VP8", a.VP9 = "VP9", a.AV1 = "AV1", a.UNKNOWN = "UNKNOWN", (l = r || (r = {})).NVIDIA_CUDA = "nvidia_cuda", l.NVIDIA_DIRECT_3D = "nvidia_direct_3d", l.OPENH264 = "openh264", l.VIDEOTOOLBOX = "videotoolbox", l.AMD_DIRECT_3D = "amd_direct_3d", l.INTEL = "intel", l.INTEL_DIRECT_3D = "intel_direct_3d", l.VP8_LIBVPX = "vp8_libvpx", l.UNCATEGORIZED = "uncategorized", l.UNKNOWN = "unknown", (u = s || (s = {})).NVIDIA_DIRECT_3D = "nvidia_direct_3d", u.OPENH264 = "openh264", u.VIDEOTOOLBOX = "videotoolbox", u.AMD_DIRECT_3D = "amd_direct_3d", u.INTEL = "intel", u.INTEL_DIRECT_3D = "intel_direct_3d", u.VP8_LIBVPX = "vp8_libvpx", u.UNCATEGORIZED = "uncategorized", u.UNKNOWN = "unknown";
+(a = i || (i = {})).H264 = "H264", a.H265 = "H265", a.VP8 = "VP8", a.VP9 = "VP9", a.AV1 = "AV1", a.UNKNOWN = "UNKNOWN", (l = r || (r = {})).NVIDIA_CUDA = "nvidia_cuda", l.NVIDIA_DIRECT_3D = "nvidia_direct_3d", l.OPENH264 = "openh264", l.VIDEOTOOLBOX = "videotoolbox", l.AMD_DIRECT_3D = "amd_direct_3d", l.INTEL = "intel", l.INTEL_DIRECT_3D = "intel_direct_3d", l.VP8_LIBVPX = "vp8_libvpx", l.UNCATEGORIZED = "uncategorized", l.UNKNOWN = "unknown", (u = s || (s = {})).VIDEOTOOLBOX = "videotoolbox", u.VP8_LIBVPX = "vp8_libvpx", u.ELECTRON = "electron", u.FFMPEG = "ffmpeg", u.DAV1D = "dav1d", u.UNCATEGORIZED = "uncategorized", u.UNKNOWN = "unknown";
 let N = Object.freeze({
     "nvidia: cuda": "nvidia_cuda",
     "nvidia: direct3d": "nvidia_direct_3d",
@@ -46,17 +49,14 @@ let N = Object.freeze({
     "intel: direct3d": "intel_direct_3d",
     intel: "intel",
     VideoToolbox: "videotoolbox",
-    OpenH264: "openh264",
     libvpx: "vp8_libvpx"
   }),
   A = Object.freeze({
-    "nvidia: direct3d": "nvidia_direct_3d",
-    "amd: direct3d": "amd_direct_3d",
-    "intel: direct3d": "intel_direct_3d",
-    intel: "intel",
     VideoToolbox: "videotoolbox",
-    OpenH264: "openh264",
-    libvpx: "vp8_libvpx"
+    libvpx: "vp8_libvpx",
+    electron: "electron",
+    ffmpeg: "ffmpeg",
+    dav1d: "dav1d"
   });
 
 function m(e) {
@@ -210,13 +210,11 @@ class p {
   }
   constructor(e) {
     I(this, "decoderBuckets", {
-      nvidia_direct_3d: 0,
-      openh264: 0,
-      videotoolbox: 0,
-      amd_direct_3d: 0,
-      intel: 0,
-      intel_direct_3d: 0,
       vp8_libvpx: 0,
+      dav1d: 0,
+      ffmpeg: 0,
+      electron: 0,
+      videotoolbox: 0,
       uncategorized: 0,
       unknown: 0
     }), I(this, "codecBuckets", {
