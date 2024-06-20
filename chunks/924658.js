@@ -602,5 +602,7 @@ e.exports = Object.freeze({
   E2EE_USER_VERIFIED_HOURS_AGO: "Verified {count} {count, plural, =1 {hour} other {hours}} ago",
   E2EE_USER_VERIFIED_MINUTES_AGO: "Verified {count} {count, plural, =1 {minute} other {minutes}} ago",
   E2EE_USER_VERIFIED_SECONDS_AGO: "Verified {count} {count, plural, =1 {second} other {seconds}} ago",
-  E2EE_DEVICES_COUNT: "{count} {count, plural, =1 {device} other {devices}}"
+  E2EE_DEVICES_COUNT: "{count} {count, plural, =1 {device} other {devices}}",
+  E2EE_CLEAR_VERIFICATION_FOR_ALL: "Clear all verifications",
+  E2EE_CLEAR_VERIFICATION_SUBTITLE: "You will have to verify these devices again"
 })
