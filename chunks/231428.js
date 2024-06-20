@@ -55,7 +55,7 @@ function D(e) {
   let C = i.useCallback(e => {
       d(e);
       let t = s[s.length - 1].id;
-      e === l - 1 && _ !== t && ((0, p.cQ)(10, t), I(t))
+      e >= l - 2 && _ !== t && ((0, p.cQ)(10, t), I(t))
     }, [s, l, _]),
     h = (0, N.Z)("billing-history", o);
   return (0, a.jsx)(u.bG, {
@@ -71,6 +71,7 @@ function D(e) {
           currentPageIndex: c,
           onChangePage: C,
           numPages: l,
+          showPageCount: !1,
           ref: s,
           ...i,
           children: (0, a.jsx)(E.AdvancedScroller, {
@@ -94,7 +95,7 @@ class y extends(n = i.PureComponent) {
   }
   componentDidMount() {
     _.Z.wait(() => {
-      (0, I.N)(), (0, p.cQ)(20)
+      (0, I.N)(), (0, p.cQ)(30)
     })
   }
   renderPremiumExternalSubscription(e) {
