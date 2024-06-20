@@ -61,9 +61,12 @@ o = "DetectableGameSupplementalStore", (s = "displayName") in(r = d) ? Object.de
         websites: r,
         themes: s,
         genres: o,
-        artwork_urls: a,
-        cover_image_url: l,
-        first_release_date: _
+        platforms: a,
+        artwork_urls: l,
+        cover_image_url: _,
+        first_release_date: c,
+        publisher_names: d,
+        developer_names: E
       } = e;
       u.set(t, {
         name: n,
@@ -71,9 +74,12 @@ o = "DetectableGameSupplementalStore", (s = "displayName") in(r = d) ? Object.de
         websites: r,
         themes: s,
         genres: o,
-        artwork: a,
-        coverImageUrl: l,
-        firstReleaseDate: _
+        platforms: a,
+        artwork: l,
+        coverImageUrl: _,
+        firstReleaseDate: c,
+        publishers: null != d ? d : [],
+        developers: null != E ? E : []
       })
     })
   },

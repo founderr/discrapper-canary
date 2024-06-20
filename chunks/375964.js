@@ -17490,6 +17490,7 @@ e.exports = Object.freeze({
   CONTENT_INVENTORY_GAME_STATE_SIZE: "{count} of {max}",
   GAME_PROFILE_ALSO_PLAYING: "Similar Games",
   GAME_PROFILE_PUBLISHER: "Publisher",
+  GAME_PROFILE_PLATFORMS: "Platforms",
   GAME_PROFILE_LINKS: "Links",
   GAME_PROFILE_GUILDS_TAB: "Guilds",
   GAME_PROFILE_FRIENDS_WHO_PLAY_TAB: "Friends Who Play",
