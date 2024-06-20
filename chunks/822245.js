@@ -1,9 +1,5 @@
 "use strict";
-n.d(t, {
-  y: function() {
-    return E
-  }
-}), n(653041);
+n(653041);
 var i, r = n(392711),
   s = n.n(r),
   o = n(442837),
@@ -11,9 +7,10 @@ var i, r = n(392711),
   l = n(911969),
   u = n(704907),
   _ = n(581883),
-  c = n(526761);
+  c = n(674563),
+  d = n(526761);
 
-function d(e, t, n) {
+function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -21,16 +18,15 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let E = 250,
-  I = {
+let I = {
     pendingUsages: []
   },
   T = new u.Z({
     computeBonus: () => 100,
-    computeWeight: e => e <= 3 ? 100 : e <= 15 ? 70 : e <= 30 ? 50 : e <= 45 ? 30 : e <= 80 ? 10 : 0,
+    computeWeight: e => e <= 3 ? 100 : e <= 15 ? 70 : e <= 30 ? 50 : e <= 45 ? 30 : e <= 80 ? 10 : 1,
     lookupKey: e => e,
     afterCompute: () => {},
-    numFrequentlyItems: E
+    numFrequentlyItems: c.yP
   });
 
 function h(e) {
@@ -69,7 +65,7 @@ class f extends(i = o.ZP.PersistedStore) {
     return T.frequently
   }
 }
-d(f, "displayName", "ApplicationFrecencyStore"), d(f, "persistKey", "ApplicationFrecency"), t.Z = new f(a.Z, {
+E(f, "displayName", "ApplicationFrecencyStore"), E(f, "persistKey", "ApplicationFrecency"), t.Z = new f(a.Z, {
   APPLICATION_COMMAND_USED: function(e) {
     let {
       command: t
@@ -90,7 +86,7 @@ d(f, "displayName", "ApplicationFrecencyStore"), d(f, "persistKey", "Application
       },
       wasSaved: n
     } = e;
-    if (t !== c.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+    if (t !== d.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
     I.pendingUsages = []
   }
 })

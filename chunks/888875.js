@@ -15,18 +15,19 @@ var i = n(392711),
   T = n(675478),
   h = n(581883),
   S = n(48481),
-  f = n(526761);
-let N = "lastFrecencySavedTime",
-  A = Math.random() * (5 * I.Z.Millis.MINUTE),
-  m = 1 * I.Z.Millis.DAY + Math.floor(Math.random() * (1 * I.Z.Millis.HOUR)),
-  O = null,
-  R = Date.now();
-class p extends a.Z {
+  f = n(526761),
+  N = n(674563);
+let A = "lastFrecencySavedTime",
+  m = Math.random() * (5 * I.Z.Millis.MINUTE),
+  O = 1 * I.Z.Millis.DAY + Math.floor(Math.random() * (1 * I.Z.Millis.HOUR)),
+  R = null,
+  p = Date.now();
+class g extends a.Z {
   _initialize() {
     T.DZ.beforeSendCallbacks.push({
       hasChanges: () => !1,
       processProto: () => {
-        L(!0)
+        D(!0)
       }
     }), T.DZ.beforeSendCallbacks.push({
       hasChanges: () => d.Z.hasPendingUsage() && h.Z.hasLoaded(f.yP.FRECENCY_AND_FAVORITES_SETTINGS),
@@ -51,7 +52,7 @@ class p extends a.Z {
     }), T.DZ.beforeSendCallbacks.push({
       hasChanges: () => u.Z.hasPendingUsage() && h.Z.hasLoaded(f.yP.FRECENCY_AND_FAVORITES_SETTINGS),
       processProto: e => {
-        if (!!u.Z.hasPendingUsage()) h.Z.hasLoaded(f.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (e.applicationFrecency = s.UY.create(), e.applicationFrecency.applications = (0, S.tU)(u.Z.getApplicationFrecencyWithoutLoadingLatest().usageHistory, u.y))
+        if (!!u.Z.hasPendingUsage()) h.Z.hasLoaded(f.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (e.applicationFrecency = s.UY.create(), e.applicationFrecency.applications = (0, S.tU)(u.Z.getApplicationFrecencyWithoutLoadingLatest().usageHistory, N.yP))
       }
     }), T.DZ.beforeSendCallbacks.push({
       hasChanges: () => E.Z.hasPendingUsage() && h.Z.hasLoaded(f.yP.FRECENCY_AND_FAVORITES_SETTINGS),
@@ -63,9 +64,9 @@ class p extends a.Z {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
-      POST_CONNECTION_OPEN: g,
-      CONNECTION_RESUMED: g,
-      CONNECTION_CLOSED: C
+      POST_CONNECTION_OPEN: C,
+      CONNECTION_RESUMED: C,
+      CONNECTION_CLOSED: v
     }, n in t ? Object.defineProperty(t, n, {
       value: i,
       enumerable: !0,
@@ -75,21 +76,21 @@ class p extends a.Z {
   }
 }
 
-function g() {
+function C() {
   var e;
-  R = null !== (e = o.K.get(N)) && void 0 !== e ? e : Date.now(), L(!1)
+  p = null !== (e = o.K.get(A)) && void 0 !== e ? e : Date.now(), D(!1)
 }
 
-function C() {
-  clearTimeout(O), O = null
+function v() {
+  clearTimeout(R), R = null
 }
-async function v() {
-  R = Date.now(), L(!0), !h.Z.hasLoaded(f.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (d.Z.hasPendingUsage() || _.Z.hasPendingUsage() || l.ZP.hasPendingUsage() || u.Z.hasPendingUsage() || E.Z.hasPendingUsage()) && await T.DZ.loadIfNecessary(), r().forEach(T.aj, e => {
+async function L() {
+  p = Date.now(), D(!0), !h.Z.hasLoaded(f.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (d.Z.hasPendingUsage() || _.Z.hasPendingUsage() || l.ZP.hasPendingUsage() || u.Z.hasPendingUsage() || E.Z.hasPendingUsage()) && await T.DZ.loadIfNecessary(), r().forEach(T.aj, e => {
     e.markDirtyIfHasPendingChange()
   })
 }
 
-function L(e) {
-  e && (R = Date.now(), o.K.set(N, R)), null != O && clearTimeout(O), O = setTimeout(v, Math.max(A, m - (Date.now() - R)))
+function D(e) {
+  e && (p = Date.now(), o.K.set(A, p)), null != R && clearTimeout(R), R = setTimeout(L, Math.max(m, O - (Date.now() - p)))
 }
-t.Z = new p
+t.Z = new g
