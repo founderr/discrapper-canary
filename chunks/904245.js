@@ -991,7 +991,8 @@ let eS = {
     },
     crosspostMessage: (e, t) => r.tn.post({
       url: el.ANM.MESSAGE_CROSSPOST(e, t),
-      oldFormErrors: !0
+      oldFormErrors: !0,
+      failImmediatelyWhenRateLimited: !0
     }).catch(e => {
       let t;
       t = 429 === e.status ? ec.Z.Messages.PUBLISH_FOLLOWED_NEWS_FAIL_BODY.format({

@@ -68,7 +68,8 @@ async function f(e) {
       url: h.ANM.QUEST_ON_CONSOLE_START(e),
       query: t ? {
         preview: t
-      } : void 0
+      } : void 0,
+      failImmediatelyWhenRateLimited: !0
     })).body;
     if (null != n.quest_user_status) s.Z.dispatch({
       type: "QUESTS_USER_STATUS_UPDATE",
