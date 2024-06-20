@@ -604,5 +604,11 @@ e.exports = Object.freeze({
   E2EE_USER_VERIFIED_SECONDS_AGO: "Verified {count} {count, plural, =1 {second} other {seconds}} ago",
   E2EE_DEVICES_COUNT: "{count} {count, plural, =1 {device} other {devices}}",
   E2EE_CLEAR_VERIFICATION_FOR_ALL: "Clear all verifications",
-  E2EE_CLEAR_VERIFICATION_SUBTITLE: "You will have to verify these devices again"
+  E2EE_CLEAR_VERIFICATION_SUBTITLE: "You will have to verify these devices again",
+  E2EE_CLEAR_VERIFICATION_CONFIRM_TITLE: "Clear verification",
+  E2EE_CLEAR_VERIFICATION_CONFIRM_SUBTITLE: "You will have to verify this device again.",
+  E2EE_CLEAR_USER_VERIFICATION_CONFIRM_TITLE: "Clear verification for {username}'s devices",
+  E2EE_CLEAR_USER_VERIFICATION_CONFIRM_SUBTITLE: "To see a verified label, you will need to verify these devices again.",
+  E2EE_DISABLE_PERSISTENT_KEYS_CONFIRM_TITLE: "Disable persistent keys?",
+  E2EE_DISABLE_PERSISTENT_KEYS_CONFIRM_SUBTITLE: "This will clear verification for all devices that you have verified."
 })
