@@ -10,7 +10,7 @@ t.Z = e => {
     applicationId: n = ""
   } = e, l = (0, a.x)(t);
   i.useEffect(() => {
-    l && s.Z.getDetectableGamesSupplemental([n])
+    l && null != n && "" !== n && s.Z.getDetectableGamesSupplemental([n])
   }, [n, l]);
   let u = (0, r.e7)([o.Z], () => o.Z.getGame(n));
   return l && null != u && null != u.summary && u.summary.length > 0

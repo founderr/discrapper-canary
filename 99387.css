@@ -47207,8 +47207,8 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
 
 .message_b6cd66 {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -105302,8 +105302,8 @@ div:has(>div>.container_d99f08) {
 }
 
 .similarGames_e881fc {
-    height: 44px;
-    width: 34px;
+    height: 112px;
+    width: 86px;
     border-radius: 4px
 }
 
