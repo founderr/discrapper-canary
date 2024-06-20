@@ -3,18 +3,18 @@ a.r(s), a.d(s, {
     return T
   }
 });
-var t = a(735250),
-  n = a(470079),
+var n = a(735250),
+  t = a(470079),
   r = a(481060),
-  o = a(285952),
-  c = a(63063),
+  c = a(285952),
+  o = a(63063),
   i = a(497505),
   l = a(918701),
   S = a(46140),
   d = a(981631),
   E = a(689938),
-  m = a(988094),
-  _ = a(708901);
+  _ = a(988094),
+  m = a(708901);
 
 function T(e) {
   let {
@@ -22,56 +22,56 @@ function T(e) {
     onClose: a,
     questContent: T,
     quest: u
-  } = e, g = (0, l.zK)(u, S.S7.IN_HOUSE_CONSOLE_QUEST), x = n.useMemo(() => g ? T === i.jn.QUEST_BAR ? E.Z.Messages.QUESTS_DISCLOSURE_IN_HOUSE_QUEST_BAR : E.Z.Messages.QUESTS_DISCLOSURE_IN_HOUSE : T === i.jn.QUEST_BAR ? E.Z.Messages.QUESTS_DISCLOSURE_PUBLISHER_TARGETING.format({
+  } = e, g = (0, l.zK)(u, S.S7.IN_HOUSE_CONSOLE_QUEST), x = t.useMemo(() => g ? T === i.jn.QUEST_BAR || T === i.jn.QUEST_BAR_V2 ? E.Z.Messages.QUESTS_DISCLOSURE_IN_HOUSE_QUEST_BAR : E.Z.Messages.QUESTS_DISCLOSURE_IN_HOUSE : T === i.jn.QUEST_BAR || T === i.jn.QUEST_BAR_V2 ? E.Z.Messages.QUESTS_DISCLOSURE_PUBLISHER_TARGETING.format({
     gamePublisher: g ? "Discord" : u.config.messages.gamePublisher
   }) : E.Z.Messages.QUESTS_DISCLOSURE_PUBLISHER_PROMOTING.format({
     gamePublisher: u.config.messages.gamePublisher,
     gameTitle: u.config.messages.gameTitle
   }), [u, T, g]);
-  return (0, t.jsxs)(r.ModalRoot, {
+  return (0, n.jsxs)(r.ModalRoot, {
     transitionState: s,
     size: r.ModalSize.DYNAMIC,
-    className: m.modalRoot,
-    children: [(0, t.jsxs)(r.ModalHeader, {
-      direction: o.Z.Direction.VERTICAL,
+    className: _.modalRoot,
+    children: [(0, n.jsxs)(r.ModalHeader, {
+      direction: c.Z.Direction.VERTICAL,
       separator: !1,
-      className: m.modalHeader,
-      children: [(0, t.jsxs)("div", {
-        className: m.modalTop,
-        children: [(0, t.jsx)("div", {
-          className: m.iconFrame,
-          children: (0, t.jsx)("img", {
-            className: m.icon,
+      className: _.modalHeader,
+      children: [(0, n.jsxs)("div", {
+        className: _.modalTop,
+        children: [(0, n.jsx)("div", {
+          className: _.iconFrame,
+          children: (0, n.jsx)("img", {
+            className: _.icon,
             alt: "",
-            src: _
+            src: m
           })
-        }), (0, t.jsx)(r.ModalCloseButton, {
-          className: m.closeBtn,
+        }), (0, n.jsx)(r.ModalCloseButton, {
+          className: _.closeBtn,
           onClick: a
         })]
-      }), (0, t.jsx)(r.Heading, {
+      }), (0, n.jsx)(r.Heading, {
         variant: "heading-xl/bold",
         children: E.Z.Messages.QUESTS_DISCLOSURE_LABEL
       })]
-    }), (0, t.jsxs)(r.ModalContent, {
-      className: m.modalContent,
-      children: [(0, t.jsx)(r.Text, {
+    }), (0, n.jsxs)(r.ModalContent, {
+      className: _.modalContent,
+      children: [(0, n.jsx)(r.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        className: m.upperBodyText,
+        className: _.upperBodyText,
         children: x
-      }), (0, t.jsx)(U, {
+      }), (0, n.jsx)(U, {
         questContent: T
-      }), (0, t.jsx)(r.Text, {
+      }), (0, n.jsx)(r.Text, {
         variant: "text-xs/medium",
         color: "text-muted",
         children: E.Z.Messages.QUESTS_DISCLOSURE_LEARN_MORE.format({
-          privacySettingsUrl: c.Z.getArticleURL(d.BhN.QUESTS_PRIVACY_CONTROLS)
+          privacySettingsUrl: o.Z.getArticleURL(d.BhN.QUESTS_PRIVACY_CONTROLS)
         })
       })]
-    }), (0, t.jsx)(r.ModalFooter, {
-      className: m.footer,
-      children: (0, t.jsx)(r.Button, {
+    }), (0, n.jsx)(r.ModalFooter, {
+      className: _.footer,
+      children: (0, n.jsx)(r.Button, {
         onClick: a,
         children: E.Z.Messages.CLOSE
       })
@@ -85,15 +85,16 @@ function U(e) {
   } = e;
   switch (s) {
     case i.jn.QUEST_BAR:
-      return (0, t.jsxs)("ul", {
-        className: m.targetList,
-        children: [(0, t.jsx)(u, {
+    case i.jn.QUEST_BAR_V2:
+      return (0, n.jsxs)("ul", {
+        className: _.targetList,
+        children: [(0, n.jsx)(u, {
           icon: r.GlobeEarthIcon,
           children: E.Z.Messages.QUESTS_DISCLOSURE_LOCATION
-        }), (0, t.jsx)(u, {
+        }), (0, n.jsx)(u, {
           icon: r.UserIcon,
           children: E.Z.Messages.QUESTS_DISCLOSURE_AGE
-        }), (0, t.jsx)(u, {
+        }), (0, n.jsx)(u, {
           icon: r.GameControllerIcon,
           children: E.Z.Messages.QUESTS_DISCLOSURE_ACTIVITY
         })]
@@ -101,9 +102,9 @@ function U(e) {
     case i.jn.ACTIVITY_PANEL:
     case i.jn.QUESTS_EMBED:
     case i.jn.QUEST_LIVE_STREAM:
-      return (0, t.jsx)("ul", {
-        className: m.targetList,
-        children: (0, t.jsx)(u, {
+      return (0, n.jsx)("ul", {
+        className: _.targetList,
+        children: (0, n.jsx)(u, {
           icon: r.GameControllerIcon,
           children: E.Z.Messages.QUESTS_DISCLOSURE_ACTIVITY
         })
@@ -118,11 +119,11 @@ function u(e) {
     icon: s,
     children: a
   } = e;
-  return (0, t.jsxs)(r.Text, {
+  return (0, n.jsxs)(r.Text, {
     variant: "text-sm/medium",
     tag: "li",
-    className: m.targetItem,
-    children: [(0, t.jsx)(s, {
+    className: _.targetItem,
+    children: [(0, n.jsx)(s, {
       size: "xs",
       color: "currentColor"
     }), a]
