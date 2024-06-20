@@ -17325,6 +17325,7 @@ e.exports = Object.freeze({
   QUESTS_SHOW_CONNECTIONS: "Show Connections",
   QUESTS_XBOX_ID: "Xbox ID",
   QUESTS_PSN_ONLINE_ID: "PSN Online ID",
+  QUESTS_PSN_ONLINE_ID_V2: "PSN online ID",
   QUESTS_CONNECTED: "Connected",
   QUESTS_VIEW_MORE_ACCOUNTS: "View more accounts",
   QUESTS_SELECT_TO_START: "Select to start",
