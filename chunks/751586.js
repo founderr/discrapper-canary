@@ -15,15 +15,15 @@ var i = n(735250),
   l = n(481060),
   u = n(425493),
   _ = n(169525),
-  c = n(585483),
-  d = n(956664),
-  E = n(589530),
-  I = n(261922),
-  T = n(133910),
-  h = n(68588),
+  c = n(261922),
+  d = n(133910),
+  E = n(68588),
+  I = n(585483),
+  T = n(956664),
+  h = n(589530),
   S = n(981631),
   f = n(689938),
-  N = n(303536);
+  N = n(626729);
 
 function A(e) {
   let {
@@ -52,10 +52,10 @@ let m = e => {
   } = e, [l, u] = r.useState(!1), c = r.useRef(a);
   return (r.useEffect(() => {
     a !== c.current && u(!s)
-  }, [a, s]), s) ? (0, i.jsx)(h.a.Provider, {
+  }, [a, s]), s) ? (0, i.jsx)(E.a.Provider, {
     value: l,
-    children: (0, i.jsx)(h.Z, {
-      type: h.Z.Types.ATTACHMENT,
+    children: (0, i.jsx)(E.Z, {
+      type: E.Z.Types.ATTACHMENT,
       reason: _.wk.EXPLICIT_CONTENT,
       className: N.obscureContainer,
       obscured: !0,
@@ -109,8 +109,8 @@ function R(e) {
     height: l,
     animated: u,
     children: _,
-    responsive: E,
-    renderLinkComponent: T,
+    responsive: d,
+    renderLinkComponent: E,
     renderForwardComponent: h,
     maxWidth: f,
     maxHeight: R,
@@ -122,10 +122,10 @@ function R(e) {
   } = e, {
     width: D,
     height: M
-  } = (0, d.zp)(o, l), P = a.tq && null != g;
+  } = (0, T.zp)(o, l), P = a.tq && null != g;
   r.useEffect(() => {
-    if (null != g) return c.S.subscribe(S.CkL.MEDIA_MODAL_CLOSE, g), () => {
-      c.S.unsubscribe(S.CkL.MEDIA_MODAL_CLOSE, g)
+    if (null != g) return I.S.subscribe(S.CkL.MEDIA_MODAL_CLOSE, g), () => {
+      I.S.unsubscribe(S.CkL.MEDIA_MODAL_CLOSE, g)
     }
   }, [g]);
   let y = C ? e => {
@@ -138,7 +138,7 @@ function R(e) {
     }) : null, (0, i.jsx)(m, {
       isObscured: v,
       src: t,
-      children: e => (0, i.jsx)(I.Z, {
+      children: e => (0, i.jsx)(c.Z, {
         src: t,
         placeholder: s,
         shouldLink: !1,
@@ -149,13 +149,13 @@ function R(e) {
         children: _,
         animated: !e && u,
         autoPlay: !e,
-        responsive: E,
+        responsive: d,
         onContextMenu: y,
         ...L
       }, t)
     }), null == n || C ? null : (0, i.jsx)(O, {
       src: n,
-      renderLinkComponent: T,
+      renderLinkComponent: E,
       renderForwardComponent: h
     })]
   })
@@ -171,13 +171,13 @@ function p(e) {
     renderForwardComponent: u,
     shouldHideMediaOptions: _ = !1,
     obscure: c = !1,
-    ...I
+    ...E
   } = e, {
-    width: h,
+    width: I,
     height: S
-  } = (0, d.zp)(n, r), f = a.tq && null != s, R = _ ? e => {
+  } = (0, T.zp)(n, r), f = a.tq && null != s, R = _ ? e => {
     e.stopPropagation(), e.preventDefault()
-  } : I.onContextMenu;
+  } : E.onContextMenu;
   return (0, i.jsxs)("div", {
     className: o()(N.wrapper, N.videoWrapper),
     children: [f ? (0, i.jsx)(A, {
@@ -186,20 +186,20 @@ function p(e) {
       hasMediaControls: !0,
       isObscured: c,
       src: t,
-      children: e => (0, i.jsx)(T.Z, {
+      children: e => (0, i.jsx)(d.Z, {
         src: t,
         width: n,
         height: r,
-        maxWidth: h,
+        maxWidth: I,
         maxHeight: S,
         renderLinkComponent: l,
-        volume: E.FC,
-        autoMute: E.rs,
-        onVolumeChange: E.jA,
-        onMute: E.Zj,
+        volume: h.FC,
+        autoMute: h.rs,
+        onVolumeChange: h.jA,
+        onMute: h.Zj,
         autoPlay: !e,
         onContextMenu: R,
-        ...I
+        ...E
       }, t)
     }), _ ? null : (0, i.jsx)(O, {
       src: t,
