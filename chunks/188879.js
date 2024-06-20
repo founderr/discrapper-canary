@@ -68,7 +68,9 @@ let S = e => {
             variant: "heading-md/normal",
             color: "text-normal",
             children: C.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_VIOLATION_ACCOUNT_STATUS.format({
-              expirationDate: n.toLocaleDateString(a)
+              expirationDate: n.toLocaleDateString(a, {
+                dateStyle: "medium"
+              })
             })
           })
         }, "expiration") : null]
