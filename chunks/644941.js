@@ -100,11 +100,11 @@ let T = function() {
       null != e && Z(e.scrollHeight - e.clientHeight > 1)
     }, [b, C, R]);
     let {
-      entries: D
-    } = (0, v.Z)(), G = t.useMemo(() => {
+      entries: G
+    } = (0, v.Z)(), D = t.useMemo(() => {
       var e;
-      return null !== (e = null == D ? void 0 : D.filter(e => (0, h.d)(e) && e.extra.application_id === a)) && void 0 !== e ? e : []
-    }, [D, a]), F = t.useMemo(() => T(D, a), [D, a]);
+      return null !== (e = null == G ? void 0 : G.filter(e => (0, h.d)(e) && e.extra.application_id === a)) && void 0 !== e ? e : []
+    }, [G, a]), F = t.useMemo(() => T(G, a), [G, a]);
     t.useEffect(() => {
       d.Z.getDetectableGamesSupplemental([a, ...F])
     }, [a, F]);
@@ -200,17 +200,14 @@ let T = function() {
               children: O.Z.Messages.GAME_PROFILE_FRIENDS_WHO_PLAY_TAB
             }), (0, s.jsxs)("div", {
               className: p.section,
-              children: [0 === G.length && (0, s.jsx)(c.Text, {
+              children: [0 === D.length && (0, s.jsx)(c.Text, {
                 variant: "text-xs/semibold",
                 color: "text-primary",
                 className: p.emptyFriendsWhoPlay,
                 children: O.Z.Messages.GAME_PROFILE_EMPTY_FRIENDS_WHO_PLAY
               }), (0, s.jsx)("div", {
                 className: i()(p.column, p.gapNone),
-                children: null == G ? void 0 : G.map((e, l) => (0, s.jsx)(j.Z, {
-                  style: {
-                    animationDelay: "".concat(.5 + .15 * l, "s")
-                  },
+                children: null == D ? void 0 : D.map(e => (0, s.jsx)(j.Z, {
                   entry: e,
                   channel: r,
                   onClose: S
