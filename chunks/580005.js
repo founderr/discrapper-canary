@@ -29,7 +29,7 @@ let S = 100,
   f = new l.Z({
     computeBonus: () => 100,
     computeWeight: e => {
-      let t = 0;
+      let t = 1;
       return 0 === e ? t = 100 : e >= 1 && e < 2 ? t = 70 : e >= 2 && e < 4 ? t = 50 : e >= 4 && e < 7 ? t = 30 : e >= 7 && (t = 10), t
     },
     lookupKey: e => {
