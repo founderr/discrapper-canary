@@ -133,22 +133,22 @@ class M extends a.Z {
           streamKey: this._streamKey
         })), e === C.hes.RTC_CONNECTED) {
         var i;
-        null === (i = this._connection) || void 0 === i || i.on(s.Sh.ScreenshareFinish, (e, t, n, i, r, s, o, a, l, u, _, c, I, T) => {
-          let h = this.getMediaSessionId(),
-            S = this.getRTCConnectionId(),
-            f = this.getGoLiveSource();
-          (0, m.q)().then(N => {
-            var A, m, R;
-            let p = null;
-            if (null != N) {
+        null === (i = this._connection) || void 0 === i || i.on(s.Sh.ScreenshareFinish, (e, t, n, i, r, s, o, a, l, u, _, c, I, T, h, S) => {
+          let f = this.getMediaSessionId(),
+            N = this.getRTCConnectionId(),
+            A = this.getGoLiveSource();
+          (0, m.q)().then(m => {
+            var R, p, g;
+            let L = null;
+            if (null != m) {
               let {
                 cpu_brand: e,
                 cpu_vendor: t,
                 cpu_memory: n,
                 gpu_brand: i,
                 gpu_memory: r
-              } = N;
-              p = {
+              } = m;
+              L = {
                 cpu_brand: e,
                 cpu_vendor: t,
                 cpu_memory: n,
@@ -156,14 +156,14 @@ class M extends a.Z {
                 gpu_memory: r
               }
             }
-            let g = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != i ? i : 0) + (null != r ? r : 0) + (null != s ? s : 0) + (null != a ? a : 0) + (null != T ? T : 0) + (null != I ? I : 0),
-              L = (null == f ? void 0 : null === (A = f.desktopSource) || void 0 === A ? void 0 : A.sourcePid) != null ? E.ZP.getGameForPID(f.desktopSource.sourcePid) : null,
+            let D = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != i ? i : 0) + (null != r ? r : 0) + (null != s ? s : 0) + (null != u ? u : 0) + (null != S ? S : 0) + (null != h ? h : 0),
+              M = (null == A ? void 0 : null === (R = A.desktopSource) || void 0 === R ? void 0 : R.sourcePid) != null ? E.ZP.getGameForPID(A.desktopSource.sourcePid) : null,
               {
-                gameName: D,
-                gameId: M,
-                exe: P,
-                distributor: y
-              } = (0, d.G8)(L);
+                gameName: P,
+                gameId: y,
+                exe: U,
+                distributor: b
+              } = (0, d.G8)(M);
             O.default.track(C.rMx.SCREENSHARE_FINISHED, {
               screenshare_frames: e,
               videohook_frames: t,
@@ -172,23 +172,25 @@ class M extends a.Z {
               hybrid_videohook_frames: r,
               hybrid_graphics_capture_frames: s,
               hybrid_capture_method_switches: o,
-              quartz_frames: a,
-              screencapturekit_frames: T,
-              go_live_camera_frames: I,
-              total_frames: g,
-              desktop_capturer_type: l,
-              media_session_id: h,
-              rtc_connection_id: S,
+              hybrid_gdi_bitblt_frames: a,
+              hybrid_gdi_printwindow_frames: l,
+              quartz_frames: u,
+              screencapturekit_frames: S,
+              go_live_camera_frames: h,
+              total_frames: D,
+              desktop_capturer_type: _,
+              media_session_id: f,
+              rtc_connection_id: N,
               context: v.Yn.STREAM,
-              screens: u,
-              windows: _,
-              activity: c,
-              soundshare_session: null !== (R = null == f ? void 0 : null === (m = f.desktopSource) || void 0 === m ? void 0 : m.soundshareSession) && void 0 !== R ? R : void 0,
-              share_game_name: D,
-              share_game_id: M,
-              share_game_exe: P,
-              share_game_distributor: y,
-              ...p
+              screens: c,
+              windows: I,
+              activity: T,
+              soundshare_session: null !== (g = null == A ? void 0 : null === (p = A.desktopSource) || void 0 === p ? void 0 : p.soundshareSession) && void 0 !== g ? g : void 0,
+              share_game_name: P,
+              share_game_id: y,
+              share_game_exe: U,
+              share_game_distributor: b,
+              ...L
             })
           })
         })
