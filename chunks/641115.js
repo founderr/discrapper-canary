@@ -16,8 +16,8 @@ var l = t(735250),
   E = t(2052),
   _ = t(924557),
   S = t(736871),
-  h = t(351742),
-  g = t(386542),
+  h = t(386542),
+  g = t(1163),
   C = t(594174),
   I = t(285952),
   Z = t(74538),
@@ -157,7 +157,7 @@ function D(e) {
     autoTrackExposure: !0,
     disable: V
   });
-  h.Z.useExperiment({
+  g.Z.useExperiment({
     location: "Go Live Modal"
   }, {
     autoTrackExposure: !0,
@@ -166,7 +166,7 @@ function D(e) {
   let {
     available: W,
     hqStreamingState: z
-  } = (0, g.k)(u.q.STREAM_HIGH_QUALITY), K = !k && !H && !W, [Y, q] = s.useState(!1), [Q, J] = s.useState(!1);
+  } = (0, h.k)(u.q.STREAM_HIGH_QUALITY), K = !k && !H && !W, [Y, q] = s.useState(!1), [Q, J] = s.useState(!1);
   s.useEffect(() => {
     let e = 0;
     return W && z.hqStreamingUnlockAnimationPlayed && (e = setTimeout(() => {

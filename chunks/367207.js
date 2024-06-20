@@ -21,10 +21,10 @@ var i = n(392711),
   N = n(736871),
   Z = n(6242),
   S = n(757692),
-  x = n(351742),
-  T = n(114064),
-  L = n(937579),
-  v = n(485731),
+  x = n(114064),
+  T = n(937579),
+  L = n(485731),
+  v = n(1163),
   A = n(841174),
   M = n(11352),
   R = n(474936),
@@ -103,26 +103,26 @@ class y extends u.Z {
       autoTrackExposure: !1
     }), {
       enabled: l
-    } = x.Z.getCurrentConfig({
+    } = v.Z.getCurrentConfig({
       location: "PremiumManager"
     }, {
       autoTrackExposure: !1
     });
     if (!n || !l || e.state !== O.hes.DISCONNECTED || e.willReconnect) return;
     let i = g.Z.getChannel(e.channelId);
-    if (null == i || !(null === (t = T.Z.getPerksDemos()) || void 0 === t ? void 0 : t[s.q.STREAM_HIGH_QUALITY])) return;
-    let r = T.Z.getActivated()[s.q.STREAM_HIGH_QUALITY];
+    if (null == i || !(null === (t = x.Z.getPerksDemos()) || void 0 === t ? void 0 : t[s.q.STREAM_HIGH_QUALITY])) return;
+    let r = x.Z.getActivated()[s.q.STREAM_HIGH_QUALITY];
     if (r && a.Z.dispatch({
         type: "PREMIUM_PERKS_DEMO_COMPLETE",
         perkType: s.q.STREAM_HIGH_QUALITY
-      }), !!r && !!v.j$.getState().hqStreamingDidEnable)(0, A.Z)(i.guild_id)
+      }), !!r && !!L.j$.getState().hqStreamingDidEnable)(0, A.Z)(i.guild_id)
   }
   constructor(...e) {
     super(...e), D(this, "_premiumPaymentModalCloseResolve", null), D(this, "_premiumPaymentModalCloseReject", null), D(this, "_lastStreamingChannelId", null), D(this, "_maybeFetchPremiumOffer", async () => {
       let e = m.default.getCurrentUser();
       if (null != e && e.verified) {
         let t = !(0, f.I5)(e) && C.Z.shouldFetchOffer();
-        await (0, L.Tf)(t)
+        await (0, T.Tf)(t)
       }
       a.Z.dispatch({
         type: "PREMIUM_MARKETING_DATA_READY"
