@@ -9,8 +9,8 @@ var s = n(735250),
   d = n(493683),
   u = n(220779),
   m = n(201133),
-  x = n(919394),
-  h = n(91140),
+  h = n(919394),
+  x = n(91140),
   g = n(297781),
   I = n(359110),
   E = n(592125),
@@ -24,7 +24,7 @@ l.Z = e => {
     channel: n,
     style: a = {},
     onClose: r
-  } = e, p = v.default.getUser(l.author_id), T = j.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, p), N = null == p ? void 0 : p.getAvatarURL(null == n ? void 0 : n.guild_id, 48, !1), [_, M] = t.useState(null), [S, C] = t.useState(!1);
+  } = e, p = v.default.getUser(l.author_id), T = j.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, p), N = null == p ? void 0 : p.getAvatarURL(null == n ? void 0 : n.guild_id, 48, !1), [M, _] = t.useState(null), [S, f] = t.useState(!1);
   return (0, s.jsxs)("div", {
     className: O.profileEntryCard,
     style: a,
@@ -49,7 +49,7 @@ l.Z = e => {
         children: [T.slice(0, 18), " ", T.length > 18 ? "..." : ""]
       }), (0, s.jsx)(g.Gk, {
         location: g.Gt.CARD,
-        children: h.W.slice(0, 1).map((e, n) => (0, s.jsx)(e, {
+        children: x.W.slice(0, 1).map((e, n) => (0, s.jsx)(e, {
           entry: l
         }, n))
       })]
@@ -62,12 +62,12 @@ l.Z = e => {
         className: O.input,
         children: (0, s.jsx)(u.A7, {
           autoFocus: !1,
-          setEditorRef: e => M(e),
+          setEditorRef: e => _(e),
           onEnter: async e => {
             let n = await d.Z.getOrEnsurePrivateChannel(l.author_id),
               s = E.Z.getChannel(n);
             o()(null != s, "DM channel cannot be null");
-            let t = await (0, x.QC)(l, s);
+            let t = await (0, h.QC)(l, s);
             o()(null != t, "No image was generated"), (0, m.B)({
               file: t,
               channel: s,
@@ -82,7 +82,7 @@ l.Z = e => {
         className: O.actionButton,
         tooltip: A.Z.Messages.CLOSE,
         onClick: () => {
-          C(!1)
+          f(!1)
         },
         icon: (0, s.jsx)(c.CloseSmallIcon, {}),
         focusProps: {
@@ -103,7 +103,7 @@ l.Z = e => {
         className: i()(O.actionButton, O.messageButton),
         tooltip: A.Z.Messages.COMMAND_MSG_DESCRIPTION,
         onClick: () => {
-          !S && (null == _ || _.focus(), C(!0))
+          !S && (null == M || M.focus(), f(!0))
         },
         icon: (0, s.jsx)(c.ChatIcon, {})
       })
