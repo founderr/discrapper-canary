@@ -367,26 +367,8 @@ let ej = () => {
       },
       [ep.s6.PRIVACY_KEYWORD_FILTER]: {
         section: eL.oAB.PRIVACY_AND_SAFETY,
-        searchableTitle: ef.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION,
+        searchableTitle: ef.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_SEARCHABLE,
         parent: ep.s6.PRIVACY_USER_SETTINGS,
-        predicate: () => ey
-      },
-      [ep.s6.PRIVACY_KEYWORD_FILTER_PROFANITY]: {
-        section: eL.oAB.PRIVACY_AND_SAFETY,
-        searchableTitle: ef.Z.Messages.USER_KEYWORD_FILTERS_PROFANITY_TITLE,
-        parent: ep.s6.PRIVACY_KEYWORD_FILTER,
-        predicate: () => ey
-      },
-      [ep.s6.PRIVACY_KEYWORD_FILTER_INSULTS_SLURS]: {
-        section: eL.oAB.PRIVACY_AND_SAFETY,
-        searchableTitle: ef.Z.Messages.USER_KEYWORD_FILTERS_SLURS_TITLE,
-        parent: ep.s6.PRIVACY_KEYWORD_FILTER,
-        predicate: () => ey
-      },
-      [ep.s6.PRIVACY_KEYWORD_FILTER_SEXUAL_CONTENT]: {
-        section: eL.oAB.PRIVACY_AND_SAFETY,
-        searchableTitle: ef.Z.Messages.USER_KEYWORD_FILTERS_SEXUAL_CONTENT_TITLE,
-        parent: ep.s6.PRIVACY_KEYWORD_FILTER,
         predicate: () => ey
       },
       [ep.s6.PRIVACY_TERMS_POLICY]: {

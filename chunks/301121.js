@@ -115,9 +115,7 @@ function eT() {
     i = (0, J.a)(ei.to.DM_SAFETY_ALERTS);
   return s || !t ? null : (0, a.jsxs)(G.F, {
     setting: ea.s6.PRIVACY_SAFETY_ALERTS,
-    children: [(0, a.jsx)(u.FormDivider, {
-      className: eE.marginBottom20
-    }), (0, a.jsx)(u.FormSection, {
+    children: [(0, a.jsx)(u.FormSection, {
       ref: i,
       children: (0, a.jsxs)(u.FormItem, {
         className: o()(ec.settingsBackgroundFlashElement),
@@ -506,6 +504,8 @@ class eO extends l.PureComponent {
             })]
           })
         })]
+      }), (0, a.jsx)(u.FormDivider, {
+        className: eE.marginBottom20
       }), (0, a.jsx)(eT, {})]
     }) : (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)(u.FormSection, {
@@ -533,66 +533,34 @@ class eO extends l.PureComponent {
             }
           })]
         })]
+      }), (0, a.jsx)(u.FormDivider, {
+        className: eE.marginBottom20
       }), (0, a.jsx)(eT, {})]
     })
   }
   renderKeywordFiltering() {
-    if (!this.props.keywordFilteringEnabled) return null;
-    let {
-      profanity: e,
-      slurs: s,
-      sexualContent: t
-    } = this.props.keywordFilter;
-    return (0, a.jsx)(a.Fragment, {
-      children: (0, a.jsxs)(u.FormSection, {
-        tag: u.FormTitleTags.H3,
-        className: eE.marginBottom20,
-        children: [(0, a.jsx)(u.FormTitle, {
-          tag: u.FormTitleTags.H5,
-          className: eE.marginBottom8,
-          children: eo.Z.Messages.USER_KEYWORD_FILTERS_TITLE
-        }), (0, a.jsx)(u.FormText, {
-          type: u.FormTextTypes.DESCRIPTION,
-          className: eE.marginBottom8,
-          children: eo.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION
-        }), (0, a.jsx)(G.F, {
-          setting: ea.s6.PRIVACY_KEYWORD_FILTER_PROFANITY,
-          children: (0, a.jsx)(u.FormSwitch, {
-            value: e,
-            note: eo.Z.Messages.USER_KEYWORD_FILTERS_PROFANITY_DESCRIPTION,
-            onChange: e => q.gw.updateSetting({
-              profanity: e,
-              slurs: s,
-              sexualContent: t
-            }),
-            children: eo.Z.Messages.USER_KEYWORD_FILTERS_PROFANITY_TITLE
-          })
-        }), (0, a.jsx)(G.F, {
-          setting: ea.s6.PRIVACY_KEYWORD_FILTER_INSULTS_SLURS,
-          children: (0, a.jsx)(u.FormSwitch, {
-            value: s,
-            note: eo.Z.Messages.USER_KEYWORD_FILTERS_SLURS_DESCRIPTION,
-            onChange: s => q.gw.updateSetting({
-              profanity: e,
-              slurs: s,
-              sexualContent: t
-            }),
-            children: eo.Z.Messages.USER_KEYWORD_FILTERS_SLURS_TITLE
-          })
-        }), (0, a.jsx)(G.F, {
-          setting: ea.s6.PRIVACY_KEYWORD_FILTER_SEXUAL_CONTENT,
-          children: (0, a.jsx)(u.FormSwitch, {
-            value: t,
-            note: eo.Z.Messages.USER_KEYWORD_FILTERS_SEXUAL_CONTENT_DESCRIPTION,
-            onChange: t => q.gw.updateSetting({
-              profanity: e,
-              slurs: s,
-              sexualContent: t
-            }),
-            children: eo.Z.Messages.USER_KEYWORD_FILTERS_SEXUAL_CONTENT_TITLE
-          })
-        })]
-      })
+    return (0, a.jsxs)(u.FormSection, {
+      tag: u.FormTitleTags.H3,
+      className: eE.marginBottom20,
+      children: [(0, a.jsx)(u.FormTitle, {
+        tag: u.FormTitleTags.H5,
+        className: eE.marginBottom8,
+        children: eo.Z.Messages.USER_KEYWORD_FILTERS_TITLE
+      }), (0, a.jsx)(G.F, {
+        setting: ea.s6.PRIVACY_KEYWORD_FILTER,
+        children: (0, a.jsx)(u.FormSwitch, {
+          value: this.props.keywordFilter,
+          note: eo.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_V2.format({
+            learnMoreLink: W.Z.getArticleURL(el.BhN.KEYWORD_FILTERS)
+          }),
+          onChange: e => q.gw.updateSetting({
+            profanity: e,
+            slurs: e,
+            sexualContent: e
+          }),
+          children: eo.Z.Messages.USER_KEYWORD_FILTERS_TOGGLE_TITLE
+        })
+      })]
     })
   }
   renderServerPrivacy() {
@@ -990,7 +958,7 @@ function em() {
       hasSearchResults: r,
       searchResults: o
     } = (0, es.E)(),
-    c = (0, p.g)(),
+    c = (0, p.p)(),
     d = (0, P.Z)(),
     _ = (0, X.H)({
       location: "user_settings_privacy_safety"
@@ -1013,7 +981,7 @@ function em() {
     dropsOptedOut: q.bh.useSetting(),
     safetyHubFetchError: t,
     mediaRedactionIsEnabled: i,
-    keywordFilteringEnabled: l,
+    keywordFilteringExperimentEnabled: l,
     userIsConsideredAdult: null == d || d,
     subsection: n,
     guildPrivacySettingsEnabled: _,
