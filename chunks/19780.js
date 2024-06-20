@@ -70,6 +70,15 @@ function v(e, t) {
         context: s.context
       })
     })
+  }), s.on(c.z.ClientConnect, e => {
+    _.Z.wait(() => {
+      _.Z.dispatch({
+        type: "RTC_CONNECTION_CLIENT_CONNECT",
+        userIds: e,
+        guildId: s.guildId,
+        channelId: s.channelId
+      })
+    })
   }), s.on(c.z.ClientDisconnect, e => {
     _.Z.wait(() => {
       _.Z.dispatch({

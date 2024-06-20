@@ -67,39 +67,42 @@ a = "RTCConnectionDesyncStore", (s = "displayName") in(i = Z) ? Object.definePro
       return null != l && l === T && !!N(n) || e
     }, !1)
   },
-  RTC_CONNECTION_FLAGS: function(e) {
+  RTC_CONNECTION_CLIENT_CONNECT: function(e) {
     let {
-      userId: t,
+      userIds: t,
       guildId: n,
       channelId: l
-    } = e, i = m.Z.getVoiceStateForUser(t);
-    if ((null == i ? void 0 : i.channelId) === l && l === T) return !1;
-    let s = h.default.getUser(t);
-    if (null == s) return !1;
-    let a = new u.Z({
-        userId: t,
-        channelId: l
-      }),
-      r = (0, p.PH)(a, null != n ? n : E.ME, t);
-    I.set(t, r);
-    let o = {
-      type: g.fO.USER,
-      user: s,
-      id: s.id,
-      streamId: null,
-      voiceState: new u.Z({
-        userId: t,
-        channelId: l
-      }),
-      voicePlatform: null,
-      speaking: !1,
-      lastSpoke: 0,
-      soundsharing: !1,
-      ringing: !1,
-      userNick: d.ZP.getName(n, l, s),
-      localVideoDisabled: !1
-    };
-    x.set(t, o)
+    } = e;
+    return t.reduce((e, t) => {
+      let i = m.Z.getVoiceStateForUser(t);
+      if ((null == i ? void 0 : i.channelId) === l && l === T) return e;
+      let s = h.default.getUser(t);
+      if (null == s) return e;
+      let a = new u.Z({
+          userId: t,
+          channelId: l
+        }),
+        r = (0, p.PH)(a, null != n ? n : E.ME, t);
+      I.set(t, r);
+      let o = {
+        type: g.fO.USER,
+        user: s,
+        id: s.id,
+        streamId: null,
+        voiceState: new u.Z({
+          userId: t,
+          channelId: l
+        }),
+        voicePlatform: null,
+        speaking: !1,
+        lastSpoke: 0,
+        soundsharing: !1,
+        ringing: !1,
+        userNick: d.ZP.getName(n, l, s),
+        localVideoDisabled: !1
+      };
+      return x.set(t, o), !0
+    }, !1)
   },
   RTC_CONNECTION_CLIENT_DISCONNECT: function(e) {
     let {
