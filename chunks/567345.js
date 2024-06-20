@@ -4,7 +4,5 @@ e.exports = {
   percentCompleteLabel: "percentCompleteLabel_d572e7",
   progressBar: "progressBar_d572e7",
   progressBarFill: "progressBarFill_d572e7",
-  percentCompleteLabelOffset: "percentCompleteLabelOffset_d572e7",
-  desktopTooltip: "desktopTooltip_d572e7",
-  infoIcon: "infoIcon_d572e7"
+  percentCompleteLabelOffset: "percentCompleteLabelOffset_d572e7"
 }

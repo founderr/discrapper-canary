@@ -1,64 +1,64 @@
 var s = n(735250);
 n(470079);
-var a = n(481060),
-  i = n(113434),
-  l = n(497505),
-  r = n(644646),
-  o = n(613087),
+var o = n(481060),
+  r = n(113434),
+  a = n(497505),
+  l = n(644646),
+  i = n(613087),
   c = n(472144),
-  d = n(569379),
-  u = n(46140),
-  E = n(232604);
+  u = n(569379),
+  d = n(46140),
+  p = n(232604);
 t.Z = e => {
   let {
     quest: t,
     progressBarRef: n,
-    isExpanded: _
+    isExpanded: x
   } = e, {
-    percentComplete: h
-  } = (0, i.Rf)({
+    percentComplete: m
+  } = (0, r.Rf)({
     quest: t,
-    location: u.dr.QUESTS_BAR
-  }), m = (0, d.eQ)(t), T = (0, d.vf)(t, _), C = _ ? "expanded" : "collapsed";
+    location: d.dr.QUESTS_BAR
+  }), g = (0, u.eQ)(t), C = (0, u.vf)(t, x), h = x ? "expanded" : "collapsed";
   return (0, s.jsxs)("div", {
-    className: E.questProgressWrapper,
-    children: [(0, s.jsx)(o.l7, {
-      inState: C,
+    className: p.questProgressWrapper,
+    children: [(0, s.jsx)(i.l7, {
+      inState: h,
       id: "progress-bar",
       ref: n,
       children: e => (0, s.jsx)(c.Z, {
         ref: e,
-        percentComplete: h,
+        percentComplete: m,
         size: 42,
         strokeWidth: 3,
-        children: (0, s.jsx)(r.Z, {
-          className: E.questProgressRewardTile,
+        children: (0, s.jsx)(l.Z, {
+          className: p.questProgressRewardTile,
           quest: t,
-          questContent: l.jn.QUEST_BAR,
+          questContent: a.jn.QUEST_BAR_V2,
           autoplay: !1
         })
       })
     }), (0, s.jsxs)("div", {
-      children: [(0, s.jsx)(o.l7, {
-        inState: C,
+      children: [(0, s.jsx)(i.l7, {
+        inState: h,
         id: "progress-title",
-        children: e => (0, s.jsx)(a.Text, {
+        children: e => (0, s.jsx)(o.Text, {
           ref: e,
-          className: E.questProgressHint,
+          className: p.questProgressHint,
           color: "header-primary",
           variant: "text-sm/semibold",
-          children: m
+          children: g
         })
-      }), (0, s.jsx)(o.l7, {
-        inState: C,
+      }), (0, s.jsx)(i.l7, {
+        inState: h,
         id: "progress-subtitle",
         isTextTransition: !0,
-        children: e => (0, s.jsx)(a.Text, {
+        children: e => (0, s.jsx)(o.Text, {
           ref: e,
-          className: E.questProgressHint,
+          className: p.questProgressHint,
           color: "text-muted",
           variant: "text-xs/normal",
-          children: T
+          children: C
         })
       })]
     })]

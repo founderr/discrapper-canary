@@ -386,7 +386,7 @@ function W(e) {
 }
 
 function K(e) {
-  return Object.keys(R.a_).includes(N.jn[e])
+  return e === N.jn.QUEST_BAR_V2 || Object.keys(R.a_).includes(N.jn[e])
 }
 
 function z(e, t) {

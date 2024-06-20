@@ -1,23 +1,24 @@
 n.d(t, {
   B: function() {
-    return o
+    return c
   }
 });
 var s = n(470079),
-  a = n(988303),
-  i = n(658590),
+  o = n(918701),
+  r = n(988303),
+  a = n(658590),
   l = n(448018),
-  r = n(46140);
-let o = (e, t) => {
-  let n = 2 === e.config.configVersion && e.config.features.includes(r.S7.QUEST_BAR_V2),
-    o = (0, i.a)(e),
+  i = n(46140);
+let c = (e, t) => {
+  let n = (0, o.zK)(e, i.S7.QUEST_BAR_V2),
+    c = (0, a.a)(e),
     {
-      primaryVariant: c,
+      primaryVariant: u,
       progressVariant: d
-    } = a.u.useExperiment({
-      location: r.dr.QUESTS_BAR
+    } = r.u.useExperiment({
+      location: i.dr.QUESTS_BAR
     }, {
       autoTrackExposure: t && n
     });
-  return s.useMemo(() => o ? (0, l.v)(e, a.P.V2, a.P.V2) : n ? (0, l.v)(e, c, d) : (0, l.v)(e, a.P.V1, a.P.V1), [o, c, d, e, n])
+  return s.useMemo(() => c ? (0, l.v)(e, r.P.V2, r.P.V2) : n ? (0, l.v)(e, u, d) : (0, l.v)(e, r.P.V1, r.P.V1), [c, u, d, e, n])
 }
