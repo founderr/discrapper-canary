@@ -24,12 +24,12 @@ l.Z = e => {
     channel: n,
     style: a = {},
     onClose: r
-  } = e, p = v.default.getUser(l.author_id), T = j.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, p), N = null == p ? void 0 : p.getAvatarURL(null == n ? void 0 : n.guild_id, 48, !1), [M, _] = t.useState(null), [S, f] = t.useState(!1);
+  } = e, N = v.default.getUser(l.author_id), T = j.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, N), p = null == N ? void 0 : N.getAvatarURL(null == n ? void 0 : n.guild_id, 48, !1), [M, _] = t.useState(null), [S, f] = t.useState(!1);
   return (0, s.jsxs)("div", {
     className: O.profileEntryCard,
     style: a,
     children: [(0, s.jsx)("img", {
-      src: N,
+      src: p,
       style: {
         height: 24,
         width: 24,
