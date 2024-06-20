@@ -10,20 +10,18 @@ var a = t(120356),
   E = t(357355),
   u = t(140465),
   d = t(775412),
-  R = t(926501),
-  I = t(650032),
-  T = t(105759),
-  A = t(248042),
-  M = t(422034),
-  S = t(206127),
-  N = t(710220),
-  p = t(318747),
-  m = t(409100),
-  g = t(474936),
+  R = t(650032),
+  I = t(105759),
+  T = t(248042),
+  A = t(422034),
+  M = t(206127),
+  S = t(710220),
+  N = t(318747),
+  p = t(409100),
+  m = t(474936),
   C = t(689938),
-  f = t(228913);
-let P = "HeroHeading",
-  O = e => {
+  g = t(228913);
+let f = e => {
     let {
       inOfferExperience: s,
       inTrial: t,
@@ -31,54 +29,54 @@ let P = "HeroHeading",
       buttonClassName: i
     } = e, l = null;
     !s && (l = (0, n.jsxs)("div", {
-      className: f.buttonContainer,
-      children: [(0, n.jsx)(m.Z, {
+      className: g.buttonContainer,
+      children: [(0, n.jsx)(p.Z, {
         forceInverted: !0,
-        className: r()(f.button, i),
+        className: r()(g.button, i),
         subscriptionTier: a
-      }), (0, n.jsx)(p.Z, {
-        className: r()(f.button, i),
+      }), (0, n.jsx)(N.Z, {
+        className: r()(g.button, i),
         forceWhite: !0
       })]
     }));
     let o = null;
     return t && (o = (0, n.jsx)("div", {
-      className: f.buttonContainer,
-      children: (0, n.jsx)(p.Z, {
-        className: r()(f.button, i),
+      className: g.buttonContainer,
+      children: (0, n.jsx)(N.Z, {
+        className: r()(g.button, i),
         forceWhite: !0
       })
     })), (0, n.jsxs)(n.Fragment, {
       children: [l, " ", o]
     })
   },
-  x = e => {
+  P = e => {
     let {
       isFullscreen: s
     } = e;
     return (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)(c.A, {
-        className: s ? f.fullscreenSparkleStar1 : f.settingsSparkleStar1
+        className: s ? g.fullscreenSparkleStar1 : g.settingsSparkleStar1
       }), (0, n.jsx)(c.A, {
-        className: s ? f.fullscreenSparkleStar2 : f.settingsSparkleStar2
+        className: s ? g.fullscreenSparkleStar2 : g.settingsSparkleStar2
       }), (0, n.jsx)(c.A, {
-        className: s ? f.fullscreenSparkleStar3 : f.settingsSparkleStar3
+        className: s ? g.fullscreenSparkleStar3 : g.settingsSparkleStar3
       }), (0, n.jsx)(c.A, {
-        className: s ? f.fullscreenSparkleStar4 : f.settingsSparkleStar4
+        className: s ? g.fullscreenSparkleStar4 : g.settingsSparkleStar4
       })]
     })
   };
 
-function h(e) {
+function O(e) {
   let {
     variant: s = "text-lg/normal",
     withBottomMargin: t = !0
-  } = e, a = (0, S.$)();
+  } = e, a = (0, M.$)();
   return (0, n.jsx)(l.Text, {
     variant: s,
     color: "always-white",
-    className: r()(f.description, {
-      [f.descriptionBottomMargin]: t
+    className: r()(g.description, {
+      [g.descriptionBottomMargin]: t
     }),
     children: C.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({
       cheapestMonthlyPrice: a
@@ -91,58 +89,56 @@ s.Z = e => {
     className: t,
     buttonClassName: a,
     subscriptionTier: c,
-    hideSparkles: S,
-    hideSubscribeAndGiftButton: m,
-    entrypoint: L
+    hideSparkles: M,
+    hideSubscribeAndGiftButton: p,
+    entrypoint: x
   } = e, {
-    analyticsLocations: b
-  } = (0, _.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA), v = (0, d._O)(), Z = (0, u.Nx)(), D = (0, A.Vi)(), U = (0, i.e7)([E.Z], () => E.Z.affinities), B = (0, T.Z)(), {
-    enabled: j
-  } = I._.useExperiment({
-    location: P
+    analyticsLocations: h
+  } = (0, _.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA), L = (0, d._O)(), b = (0, u.Nx)(), v = (0, T.Vi)(), Z = (0, i.e7)([E.Z], () => E.Z.affinities), D = (0, I.Z)(), {
+    enabled: U
+  } = R._.useExperiment({
+    location: "HeroHeading"
   }, {
     autoTrackExposure: !1
-  }), G = L === g.EZ.ApplicationStoreHome && null != B && j, H = U.length > 0, W = (0, R.p)({
-    location: P
-  });
+  }), B = x === m.EZ.ApplicationStoreHome && null != D && U, j = Z.length > 0;
   return (0, n.jsx)(_.Gt, {
-    value: b,
+    value: h,
     children: (0, n.jsxs)("div", {
-      className: r()(f.container, t, {
-        [f.settingsContainer]: !s,
-        [f.affinityHeight]: !s && H
+      className: r()(g.container, t, {
+        [g.settingsContainer]: !s,
+        [g.affinityHeight]: !s && j
       }),
       "data-testid": "v2-marketing-page-hero-header",
       children: [(0, n.jsxs)("div", {
-        className: s ? f.fullscreenTextContainer : f.settingsTextContainer,
+        className: s ? g.fullscreenTextContainer : g.settingsTextContainer,
         children: [(0, n.jsx)(l.Heading, {
           variant: s ? "display-lg" : "display-md",
           color: "always-white",
-          children: W ? C.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE_V2 : C.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
-        }), G ? (0, n.jsx)(N.Z, {
-          referrer: B
-        }) : H ? (0, n.jsx)("div", {
-          className: r()(f.affinityDescription),
-          children: (0, n.jsx)(M.Z, {
+          children: C.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE_V2
+        }), B ? (0, n.jsx)(S.Z, {
+          referrer: D
+        }) : j ? (0, n.jsx)("div", {
+          className: r()(g.affinityDescription),
+          children: (0, n.jsx)(A.Z, {
             textColor: "always-white",
             smallerText: !s
           })
-        }) : (0, n.jsx)(h, {}), D ? (0, n.jsx)("div", {
-          className: f.buttonContainer,
-          children: (0, n.jsx)(p.Z, {
-            className: r()(f.button, a),
+        }) : (0, n.jsx)(O, {}), v ? (0, n.jsx)("div", {
+          className: g.buttonContainer,
+          children: (0, n.jsx)(N.Z, {
+            className: r()(g.button, a),
             forceWhite: !0
           })
-        }) : m ? null : (0, n.jsx)(O, {
+        }) : p ? null : (0, n.jsx)(f, {
           subscriptionTier: c,
-          inOfferExperience: Z,
-          inTrial: v,
+          inOfferExperience: b,
+          inTrial: L,
           buttonClassName: a
-        }), H && !G && (0, n.jsx)(h, {
+        }), j && !B && (0, n.jsx)(O, {
           variant: "text-md/normal",
           withBottomMargin: !1
         })]
-      }), !(Z || S) && (0, n.jsx)(x, {
+      }), !(b || M) && (0, n.jsx)(P, {
         isFullscreen: s
       })]
     })
