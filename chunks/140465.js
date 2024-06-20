@@ -61,6 +61,14 @@ let h = () => {
         return {
           duration: 1, percentage: 40
         };
+      case E.gW:
+        return {
+          duration: 1, percentage: 20
+        };
+      case E.Nl:
+        return {
+          duration: 1, percentage: 25
+        };
       default:
         return
     }

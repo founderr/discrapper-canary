@@ -18,6 +18,9 @@ n.d(t, {
   AU: function() {
     return ef
   },
+  Bo: function() {
+    return e0
+  },
   C2: function() {
     return em
   },
@@ -641,4 +644,5 @@ let eW = new Set(["PL", "TR"]),
   eX = eq.concat(eK),
   eQ = 190,
   eJ = 3,
-  e$ = 30
+  e$ = 30,
+  e0 = 20
