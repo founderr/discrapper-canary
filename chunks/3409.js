@@ -342,7 +342,10 @@ function eh(e) {
   } = p;
 
   function e$(e) {
-    eL(e.id), C(eP, e), eg(_, !1)
+    var a;
+    eL(e.id), a = e, (0, c.showToast)((0, c.createToast)(W.Z.Messages.PAYMENT_SOURCE_ADD_SUCCESS_TOAST, c.ToastType.SUCCESS, {
+      position: c.ToastPosition.BOTTOM
+    })), C(eP, a), eg(_, !1)
   }
   let e0 = w && (0, y.q1)().enabled;
   switch (eP) {
