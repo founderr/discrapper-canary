@@ -13,21 +13,21 @@ var t = n(735250),
   d = n(169525),
   m = n(786761),
   u = n(3148),
-  h = n(492593),
-  _ = n(219797),
-  A = n(524444),
-  p = n(884182),
-  x = n(546432),
-  I = n(25015),
-  E = n(963550),
-  T = n(845080),
-  g = n(594174),
+  h = n(219797),
+  _ = n(524444),
+  A = n(25015),
+  p = n(963550),
+  x = n(845080),
+  I = n(594174),
+  E = n(998951),
+  T = n(310043),
+  g = n(69750),
   C = n(956664),
   f = n(709054),
   S = n(788080),
   v = n(800530),
   N = n(981631),
-  L = n(217702),
+  L = n(768760),
   j = n(554958);
 let y = (e, i) => {
     let n = e.attachments.map(e => {
@@ -96,7 +96,7 @@ let y = (e, i) => {
             fileName: i.filename,
             fileSize: null == i.size ? void 0 : i.size.toString(),
             playable: !0,
-            renderLinkComponent: A.iT,
+            renderLinkComponent: _.iT,
             onClick: e.onClick,
             onPlay: e.onPlay,
             onEnded: e.onEnded,
@@ -113,12 +113,12 @@ let y = (e, i) => {
     }
     return (0, t.jsx)("div", {
       className: j.classificationEvidenceMessageAttachment,
-      children: (0, t.jsx)(p.Z, {
+      children: (0, t.jsx)(T.Z, {
         items: n.map(e => ({
           item: {
             uniqueId: e.id,
             originalItem: e,
-            type: (0, x.aw)(e, !0),
+            type: (0, g.aw)(e, !0),
             downloadUrl: e.proxy_url,
             height: e.height,
             width: e.width,
@@ -132,16 +132,16 @@ let y = (e, i) => {
           isSingleMosaicItem: s,
           onRemoveItem: l.noop,
           renderVideoComponent: i => a(i, e, s),
-          renderImageComponent: e => (0, t.jsx)(_.dS, {
+          renderImageComponent: e => (0, t.jsx)(h.dS, {
             ...e,
             hiddenSpoilers: !0,
             shouldHideMediaOptions: !0,
             shouldLink: !1
           }),
-          renderAudioComponent: _.q7,
-          renderPlaintextFilePreview: _.d4,
-          renderGenericFileComponent: _.ZK,
-          renderMosaicItemFooter: _.L9,
+          renderAudioComponent: h.q7,
+          renderPlaintextFilePreview: h.d4,
+          renderGenericFileComponent: h.ZK,
+          renderMosaicItemFooter: h.L9,
           getObscureReason: o,
           gifFavoriteButton: () => null
         }))
@@ -153,7 +153,7 @@ function D(e) {
   var i;
   let {
     flaggedContent: n
-  } = e, l = (0, s.e7)([g.default], () => g.default.getCurrentUser()), [r, d] = a.useState({}), [m, u] = a.useState(!0), _ = n[0], A = y(_, r), p = (0, I.Z)(A, {
+  } = e, l = (0, s.e7)([I.default], () => I.default.getCurrentUser()), [r, d] = a.useState({}), [m, u] = a.useState(!0), h = n[0], _ = y(h, r), T = (0, A.Z)(_, {
     hideSimpleEmbedContent: !1,
     allowList: !1,
     allowHeading: !1,
@@ -161,7 +161,7 @@ function D(e) {
     previewLinkTarget: !1
   });
   return (a.useEffect(() => {
-    Promise.all(_.attachments.filter(e => {
+    Promise.all(h.attachments.filter(e => {
       let {
         filename: i
       } = e;
@@ -196,17 +196,17 @@ function D(e) {
         [e.id]: i
       })))
     })).finally(() => u(!1))
-  }, [_.attachments]), "" === A.content && 0 === A.attachments.length) ? null : (0, t.jsx)("div", {
+  }, [h.attachments]), "" === _.content && 0 === _.attachments.length) ? null : (0, t.jsx)("div", {
     className: j.classificationEvidenceCard,
-    children: m ? (0, t.jsx)(o.Spinner, {}) : (0, t.jsx)(h.Z, {
+    children: m ? (0, t.jsx)(o.Spinner, {}) : (0, t.jsx)(E.Z, {
       compact: !1,
-      childrenHeader: (0, T.Z)({
+      childrenHeader: (0, x.Z)({
         author: {
           ...l,
           colorString: "",
           nick: null !== (i = null == l ? void 0 : l.username) && void 0 !== i ? i : ""
         },
-        message: A,
+        message: _,
         channel: void 0,
         guildId: void 0,
         compact: !1,
@@ -216,11 +216,11 @@ function D(e) {
         hideTimestamp: !1
       }),
       childrenAccessories: (0, t.jsx)(O, {
-        message: A
+        message: _
       }),
-      childrenMessageContent: (0, E.Z)({
-        message: A
-      }, p.content),
+      childrenMessageContent: (0, p.Z)({
+        message: _
+      }, T.content),
       hasThread: !1,
       hasReply: !1
     })

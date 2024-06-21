@@ -35,11 +35,11 @@ var i = n(120356),
   L = n(221888),
   O = n(339340),
   P = n(354459),
-  y = n(981631),
-  b = n(231338),
+  b = n(981631),
+  y = n(231338),
   D = n(689938),
   U = n(254772),
-  k = n(25450);
+  k = n(622322);
 
 function w(e) {
   let {
@@ -53,7 +53,7 @@ function w(e) {
       maxVisibleUsers: 5,
       guildId: n.getGuildId(),
       channelId: n.id,
-      disableInteraction: i === y.IlC.POPOUT || s === y.AEg.FULL_SCREEN
+      disableInteraction: i === b.IlC.POPOUT || s === b.AEg.FULL_SCREEN
     })
   })
 }
@@ -197,10 +197,10 @@ function G(e) {
     children: [(0, l.jsxs)(S.ZP, {
       onDoubleClick: C.O,
       transparent: !0,
-      className: (0, v.Q)(b.BR.DARK),
+      className: (0, v.Q)(y.BR.DARK),
       childrenBottom: H,
       toolbar: (0, l.jsx)(j.Z, {
-        inPopout: o === y.IlC.POPOUT,
+        inPopout: o === b.IlC.POPOUT,
         channel: t,
         appContext: o,
         inCall: c,

@@ -15,7 +15,7 @@ var s = n(735250),
   x = n(981631),
   _ = n(689938),
   E = n(782197),
-  f = n(25450);
+  f = n(622322);
 t.Z = l.memo(function(e) {
   let {
     channel: t,

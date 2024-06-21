@@ -31,8 +31,8 @@ var t, r = n(735250),
   N = n(592256),
   S = n(981631),
   T = n(689938),
-  M = n(140061),
-  k = n(25450),
+  M = n(622322),
+  k = n(140061),
   L = n(928959);
 
 function P(e, l, n) {
@@ -65,7 +65,7 @@ function A(e) {
     volume: j,
     onPlay: N,
     onPause: T,
-    onEnded: k,
+    onEnded: M,
     onControlsHide: L,
     onControlsShow: P,
     onVolumeChange: A,
@@ -95,7 +95,7 @@ function A(e) {
   G = Math.max(K.width, 150), q = Math.max(K.height, 144);
   let Y = (0, E.q)(o);
   if (null != u && null != u.proxyURL) return (0, r.jsx)("div", {
-    className: a()(M.embedVideo, l),
+    className: a()(k.embedVideo, l),
     children: b({
       poster: Y,
       src: u.proxyURL,
@@ -105,7 +105,7 @@ function A(e) {
       height: q,
       responsive: m,
       autoPlay: w,
-      onEnded: k,
+      onEnded: M,
       naturalWidth: u.width,
       naturalHeight: u.height,
       onVolumeChange: A,
@@ -153,7 +153,7 @@ function A(e) {
       className: l,
       style: o,
       children: (0, r.jsx)("div", {
-        className: a()(M.embedVideo, n),
+        className: a()(k.embedVideo, n),
         style: h,
         children: (0, r.jsx)(f.ZP, {
           provider: d,
@@ -168,7 +168,7 @@ function A(e) {
     })
   }
   return (0, r.jsxs)("div", {
-    className: a()(M.embedVideo, l),
+    className: a()(k.embedVideo, l),
     style: m ? {
       maxWidth: G
     } : {
@@ -182,16 +182,16 @@ function A(e) {
       maxWidth: G,
       maxHeight: q,
       responsive: m,
-      containerClassName: M.embedVideoImageComponent,
-      imageClassName: M.embedVideoImageComponentInner,
+      containerClassName: k.embedVideoImageComponent,
+      imageClassName: k.embedVideoImageComponentInner,
       placeholder: B,
       placeholderVersion: O,
       onClick: y && null != u ? U : null,
       renderForwardComponent: v
     }), (0, r.jsx)("div", {
-      className: M.embedVideoActions,
+      className: k.embedVideoActions,
       children: (0, r.jsx)("div", {
-        className: M.centerContent,
+        className: k.centerContent,
         children: y ? (0, r.jsx)(C.Z, {
           onPlay: null != u ? U : null,
           externalURL: H,
@@ -224,7 +224,7 @@ function _(e) {
     placeholderVersion: v
   } = e;
   return (0, r.jsx)(x.Z, {
-    className: a()(M.embedVideo, l),
+    className: a()(k.embedVideo, l),
     original: n,
     poster: (0, E.q)(o),
     src: (0, E.q)(u),
@@ -258,9 +258,9 @@ class H extends(t = i.PureComponent) {
         channelId: i
       } = this.props;
     return null == l ? null : (0, r.jsx)("div", {
-      className: a()(M.embedProvider, M.embedMargin),
+      className: a()(k.embedProvider, k.embedMargin),
       children: null != l.url ? n({
-        className: M.embedLink,
+        className: k.embedLink,
         href: l.url,
         tabIndex: e ? 0 : -1,
         children: l.name,
@@ -284,13 +284,13 @@ class H extends(t = i.PureComponent) {
         channelId: i
       } = this.props;
     return null == l ? null : (0, r.jsxs)("div", {
-      className: a()(M.embedAuthor, M.embedMargin),
+      className: a()(k.embedAuthor, k.embedMargin),
       children: [null != l.iconProxyURL ? (0, r.jsx)("img", {
         alt: "",
-        className: M.embedAuthorIcon,
+        className: k.embedAuthorIcon,
         src: l.iconProxyURL
       }) : null, null != l.url ? n({
-        className: M.embedAuthorNameLink,
+        className: k.embedAuthorNameLink,
         href: l.url,
         tabIndex: e ? 0 : -1,
         children: l.name,
@@ -299,7 +299,7 @@ class H extends(t = i.PureComponent) {
         messageId: t,
         channelId: i
       }) : (0, r.jsx)("span", {
-        className: M.embedAuthorName,
+        className: k.embedAuthorName,
         children: l.name
       })]
     })
@@ -318,9 +318,9 @@ class H extends(t = i.PureComponent) {
         url: u
       } = l;
     return null == o ? null : (0, r.jsx)("div", {
-      className: a()(M.embedTitle, M.embedMargin),
+      className: a()(k.embedTitle, k.embedMargin),
       children: null != u ? n({
-        className: M.embedTitleLink,
+        className: k.embedTitleLink,
         href: u,
         tabIndex: e ? 0 : -1,
         children: t(l, o),
@@ -339,7 +339,7 @@ class H extends(t = i.PureComponent) {
       rawDescription: n
     } = e;
     return null == n ? null : (0, r.jsx)("div", {
-      className: a()(M.embedDescription, M.embedMargin),
+      className: a()(k.embedDescription, k.embedMargin),
       children: l(e, n, !1)
     })
   }
@@ -361,7 +361,7 @@ class H extends(t = i.PureComponent) {
           disableAnimations: o
         } = r;
         return i({
-          containerClassName: M.embedThumbnail,
+          containerClassName: k.embedThumbnail,
           src: (0, E.q)(l),
           original: l.url,
           width: l.width,
@@ -392,7 +392,7 @@ class H extends(t = i.PureComponent) {
       } = l;
       !s && null != t && (n.push(t), t = null), null == t && (t = []), t.push([this.props.renderTitle(e, r), this.props.renderDescription(e, i, !0)]), (3 === t.length || !s) && (n.push(t), t = null)
     }), null != t && n.push(t), (0, r.jsx)("div", {
-      className: M.embedFields,
+      className: k.embedFields,
       children: n.map((e, l) => {
         let {
           length: n
@@ -400,7 +400,7 @@ class H extends(t = i.PureComponent) {
         return e.map((e, t) => {
           let [i, s] = e;
           return (0, r.jsxs)("div", {
-            className: M.embedField,
+            className: k.embedField,
             style: {
               gridColumn: function(e, l) {
                 let n = 12 / l,
@@ -409,10 +409,10 @@ class H extends(t = i.PureComponent) {
               }(t, n)
             },
             children: [(0, r.jsx)("div", {
-              className: M.embedFieldName,
+              className: k.embedFieldName,
               children: i
             }), (0, r.jsx)("div", {
-              className: M.embedFieldValue,
+              className: k.embedFieldValue,
               children: s
             })]
           }, "".concat(l, "-").concat(t))
@@ -438,15 +438,15 @@ class H extends(t = i.PureComponent) {
       allImages: n.images
     }));
     return null == i && null == s && null == a && null == o ? null : (0, r.jsxs)("div", {
-      className: M.embedGalleryImagesWrapper,
+      className: k.embedGalleryImagesWrapper,
       style: {
         height: t
       },
       children: [(0, r.jsxs)("div", {
-        className: M.embedGallerySide,
+        className: k.embedGallerySide,
         children: [i, null != o && a]
       }), (0, r.jsxs)("div", {
-        className: M.embedGallerySide,
+        className: k.embedGallerySide,
         children: [s, null == o && null != a && a, null != o && o]
       })]
     })
@@ -478,12 +478,12 @@ class H extends(t = i.PureComponent) {
       }),
       b = {
         containerClassName: a()(u, {
-          [M.embedMedia]: !t,
-          [M.embedImage]: !t,
-          [M.galleryImage]: t
+          [k.embedMedia]: !t,
+          [k.embedImage]: !t,
+          [k.galleryImage]: t
         }),
-        imageContainerClassName: t ? M.galleryImageContainer : void 0,
-        imageClassName: t ? M.embedGalleryImageElement : void 0,
+        imageContainerClassName: t ? k.galleryImageContainer : void 0,
+        imageClassName: t ? k.embedGalleryImageElement : void 0,
         src: (0, E.q)(n),
         alt: i,
         responsive: !0,
@@ -547,7 +547,7 @@ class H extends(t = i.PureComponent) {
           disableAnimations: a
         } = e;
         return (0, r.jsx)(_, {
-          className: M.embedMedia,
+          className: k.embedMedia,
           href: t,
           thumbnail: i,
           video: s,
@@ -566,7 +566,7 @@ class H extends(t = i.PureComponent) {
       }
     });
     return (0, r.jsx)(A, {
-      className: M.embedMedia,
+      className: k.embedMedia,
       href: t,
       allowFullScreen: c,
       thumbnail: i,
@@ -604,24 +604,24 @@ class H extends(t = i.PureComponent) {
     if (null != e) {
       let n = null != e.iconProxyURL && "" !== e.iconProxyURL ? e.iconProxyURL : e.iconURL;
       return (0, r.jsxs)("div", {
-        className: a()(M.embedFooter, M.embedMargin),
+        className: a()(k.embedFooter, k.embedMargin),
         children: [null != n ? (0, r.jsx)("img", {
           alt: "",
-          className: M.embedFooterIcon,
+          className: k.embedFooterIcon,
           src: n
         }) : null, (0, r.jsxs)("span", {
-          className: M.embedFooterText,
+          className: k.embedFooterText,
           children: [e.text, null != e.text && null != l ? (0, r.jsx)("span", {
-            className: M.embedFooterSeparator,
+            className: k.embedFooterSeparator,
             children: "•"
           }) : null, null != l ? (0, c.Y4)(l) : null]
         })]
       })
     }
     if (null != l) return (0, r.jsx)("div", {
-      className: a()(M.embedFooter, M.embedMargin),
+      className: a()(k.embedFooter, k.embedMargin),
       children: (0, r.jsx)("span", {
-        className: M.embedFooterText,
+        className: k.embedFooterText,
         children: (0, c.Y4)(l)
       })
     })
@@ -728,7 +728,7 @@ class H extends(t = i.PureComponent) {
           bottom: 4
         }
       },
-      className: M.embedSuppressButton,
+      className: k.embedSuppressButton,
       onClick: e,
       "aria-label": T.Z.Messages.SUPPRESS_ALL_EMBEDS,
       children: (0, r.jsx)(o.CloseSmallIcon, {
@@ -806,7 +806,7 @@ class H extends(t = i.PureComponent) {
       isSingleMosaicItem: !0,
       containerStyles: this.getSpoilerStyles(!0),
       obscurityControlClassName: a()({
-        [M.obscureVideoSpacing]: this.state.isVisible && this.state.videoControlsShown
+        [k.obscureVideoSpacing]: this.state.isVisible && this.state.videoControlsShown
       }),
       children: this.renderInlineMediaEmbed
     }) : this.renderInlineMediaEmbed() : null != n ? (0, r.jsx)(y.Z, {
@@ -841,11 +841,11 @@ class H extends(t = i.PureComponent) {
         } = l.props;
       return (0, r.jsx)("div", {
         "aria-hidden": e,
-        className: a()(M.inlineMediaEmbed, t, {
-          [M.spoilerAttachment]: n === u.wk.SPOILER,
-          [M.hiddenExplicitAttachment]: null != n && [u.wk.EXPLICIT_CONTENT, u.wk.POTENTIAL_EXPLICIT_CONTENT].includes(n),
-          [M.isHidden]: e,
-          [M.justifyAuto]: l.usesJustifiedAutoStyle()
+        className: a()(k.inlineMediaEmbed, t, {
+          [k.spoilerAttachment]: n === u.wk.SPOILER,
+          [k.hiddenExplicitAttachment]: null != n && [u.wk.EXPLICIT_CONTENT, u.wk.POTENTIAL_EXPLICIT_CONTENT].includes(n),
+          [k.isHidden]: e,
+          [k.justifyAuto]: l.usesJustifiedAutoStyle()
         }),
         children: l.renderMedia(e)
       })
@@ -867,11 +867,11 @@ class H extends(t = i.PureComponent) {
           footer: g
         } = l.renderAll();
       return (0, r.jsx)("article", {
-        className: a()(n, L.richEmbedWrapper, M.embedFull, k.markup, {
-          [M.isHidden]: e,
-          [M.spoilerEmbed]: i === u.wk.SPOILER,
-          [M.hiddenExplicitEmbed]: null != i && [u.wk.EXPLICIT_CONTENT, u.wk.POTENTIAL_EXPLICIT_CONTENT].includes(i),
-          [M.justifyAuto]: l.usesJustifiedAutoStyle()
+        className: a()(n, L.richEmbedWrapper, k.embedFull, M.markup, {
+          [k.isHidden]: e,
+          [k.spoilerEmbed]: i === u.wk.SPOILER,
+          [k.hiddenExplicitEmbed]: null != i && [u.wk.EXPLICIT_CONTENT, u.wk.POTENTIAL_EXPLICIT_CONTENT].includes(i),
+          [k.justifyAuto]: l.usesJustifiedAutoStyle()
         }),
         "aria-hidden": e,
         style: {
@@ -879,11 +879,11 @@ class H extends(t = i.PureComponent) {
           maxWidth: l.getMaxWidth()
         },
         children: (0, r.jsx)("div", {
-          className: M.gridContainer,
+          className: k.gridContainer,
           children: (0, r.jsxs)("div", {
             className: a()({
-              [M.grid]: !0,
-              [M.hasThumbnail]: null != m
+              [k.grid]: !0,
+              [k.hasThumbnail]: null != m
             }),
             children: [null != t ? l.renderSuppressButton(t) : null, s, o, d, h, c, p, m, g]
           })

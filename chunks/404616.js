@@ -44,15 +44,15 @@ var i = n(735250),
   S = n(443877),
   C = n(524444),
   R = n(287151),
-  Z = n(267128),
-  _ = n(695346),
-  O = n(433355),
-  j = n(592125),
-  A = n(496675),
-  M = n(699516),
-  b = n(451478),
-  P = n(18732),
-  L = n(68588),
+  Z = n(695346),
+  _ = n(433355),
+  O = n(592125),
+  j = n(496675),
+  A = n(699516),
+  M = n(451478),
+  b = n(18732),
+  P = n(68588),
+  L = n(512665),
   y = n(602623),
   U = n(55935),
   w = n(109434),
@@ -68,10 +68,10 @@ var i = n(735250),
   K = n(627896),
   Y = n(883728),
   J = n(981631),
-  q = n(217702),
+  q = n(768760),
   X = n(689938),
   $ = n(804702),
-  Q = n(25450);
+  Q = n(622322);
 let ee = 72,
   et = 72;
 t.ZP = s.memo(function(e) {
@@ -93,9 +93,9 @@ t.ZP = s.memo(function(e) {
     let {
       threadId: t,
       overrideMedia: n
-    } = e, i = (0, h.e7)([j.Z], () => j.Z.getChannel(t));
+    } = e, i = (0, h.e7)([O.Z], () => O.Z.getChannel(t));
     r()(null != i, "the thread should not be null here, a store must have missed an update");
-    let s = (0, h.e7)([O.ZP], () => O.ZP.getCurrentSidebarChannelId(i.parent_id) === i.id),
+    let s = (0, h.e7)([_.ZP], () => _.ZP.getCurrentSidebarChannelId(i.parent_id) === i.id),
       {
         firstMessage: a
       } = (0, D.cl)(i),
@@ -138,7 +138,7 @@ t.ZP = s.memo(function(e) {
       channel: m
     }),
     {
-      role: _,
+      role: j,
       onFocus: A,
       ...M
     } = (0, d.JA)(t),
@@ -271,7 +271,7 @@ let es = s.memo(function(e) {
     content: s,
     hasMediaAttachment: a,
     hasUnreads: o
-  } = e, r = (0, h.e7)([M.Z], () => null != t && M.Z.isBlockedForMessage(t)), u = (0, h.e7)([B.Z], () => B.Z.isLoading(n.id)), c = (0, h.e7)([A.Z], () => A.Z.can(J.Plq.MANAGE_MESSAGES, n)), d = _.cC.useSetting(), m = null;
+  } = e, r = (0, h.e7)([A.Z], () => null != t && A.Z.isBlockedForMessage(t)), u = (0, h.e7)([B.Z], () => B.Z.isLoading(n.id)), c = (0, h.e7)([j.Z], () => j.Z.can(J.Plq.MANAGE_MESSAGES, n)), d = Z.cC.useSetting(), m = null;
   if (r) m = (0, i.jsx)(p.Text, {
     className: $.blockedMessage,
     variant: "text-sm/medium",
@@ -285,7 +285,7 @@ let es = s.memo(function(e) {
     } = null == t ? {
       contentPlaceholder: null,
       renderedContent: null
-    } : (0, Z.f)(t, s, r, l()($.messageContent, Q.inlineFormat, Q.__invalid_smallFontSize), {
+    } : (0, L.f)(t, s, r, l()($.messageContent, Q.inlineFormat, Q.__invalid_smallFontSize), {
       leadingIconClass: $.messageContentLeadingIcon,
       trailingIconClass: $.messageContentTrailingIcon,
       iconSize: q.WW
@@ -302,7 +302,7 @@ let es = s.memo(function(e) {
       children: null == t ? u ? null : X.Z.Messages.REPLY_QUOTE_MESSAGE_DELETED : e
     })
   }
-  return (0, i.jsxs)(L.a.Provider, {
+  return (0, i.jsxs)(P.a.Provider, {
     value: (0, N.Z)(d, c),
     children: [!r && (0, i.jsx)(G.Z, {
       channel: n,
@@ -380,7 +380,7 @@ function el(e) {
         width: n,
         height: n
       })
-    }), "number" == typeof a ? (0, i.jsx)(P.Z, {
+    }), "number" == typeof a ? (0, i.jsx)(b.Z, {
       value: a,
       digitWidth: 9,
       className: $.messageCountText
@@ -402,7 +402,7 @@ function eo(e) {
   let {
     firstMessage: t,
     channel: n
-  } = e, s = (0, h.e7)([j.Z], () => j.Z.getChannel(n.parent_id)), a = (0, k.Bs)(s), {
+  } = e, s = (0, h.e7)([O.Z], () => O.Z.getChannel(n.parent_id)), a = (0, k.Bs)(s), {
     disableReactionCreates: l,
     isLurking: o,
     isPendingMember: r
@@ -496,9 +496,9 @@ function ed(e) {
       channel: s,
       firstMedia: a
     } = e,
-    o = (0, h.e7)([b.Z], () => b.Z.isFocused()),
+    o = (0, h.e7)([M.Z], () => M.Z.isFocused()),
     r = (0, v.d$)(a.src),
-    u = _.QK.useSetting(),
+    u = Z.QK.useSetting(),
     [c, d] = (0, E.hL)({
       media: a,
       channel: s
