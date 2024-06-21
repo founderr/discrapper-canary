@@ -368,7 +368,7 @@ t.Z = e => {
           })
         },
         children: P.Z.Messages.QUESTS_LEARN_MORE_V2
-      }), r && !w ? null : W && z && V && ee && !et ? (0, l.jsx)(y, {
+      }), r && !w ? null : W && z && V && ee && !et && !w ? (0, l.jsx)(y, {
         quest: t,
         useReducedMotion: es
       }) : (0, l.jsx)(u.Tooltip, {
