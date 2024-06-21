@@ -126,6 +126,10 @@ class Z extends(i = o.ZP.PersistedStore) {
     var t;
     return null !== (t = D[e]) && void 0 !== t ? t : null
   }
+  getMessage(e) {
+    let t = D[e];
+    return null == t || t.type !== f.Rr.MESSAGE ? null : t.message
+  }
   getHydratedItems() {
     return D
   }
