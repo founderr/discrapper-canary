@@ -45,6 +45,9 @@ n.d(t, {
   Rd: function() {
     return K
   },
+  Ro: function() {
+    return eG
+  },
   Rt: function() {
     return eO
   },
@@ -64,7 +67,7 @@ n.d(t, {
     return eN
   },
   Wz: function() {
-    return eG
+    return ew
   },
   XK: function() {
     return eD
@@ -804,7 +807,7 @@ function er(e) {
 }
 
 function es(e) {
-  let t = m.Z.getPlanIdsForSkus([eG(U.Si.GUILD)]);
+  let t = m.Z.getPlanIdsForSkus([ew(U.Si.GUILD)]);
   l()(null != t, "Missing guildSubscriptionPlanIds");
   let n = e.find(e => {
     let {
@@ -982,7 +985,7 @@ function ef(e, t, n, i) {
       }
     }), t
   }
-  let o = m.Z.getForSkuAndInterval(eG(U.Si.GUILD), s.interval, s.intervalCount);
+  let o = m.Z.getForSkuAndInterval(ew(U.Si.GUILD), s.interval, s.intervalCount);
   if (null == o) {
     let t = Error("Unsupported plan");
     throw (0, R.q2)(t, {
@@ -1252,6 +1255,11 @@ function eb(e) {
 }
 
 function eG(e) {
+  var t;
+  return null !== (t = I.Z.getActivated()[e]) && void 0 !== t && t
+}
+
+function ew(e) {
   return e
 }
 t.ZP = Object.freeze({
@@ -1453,7 +1461,7 @@ t.ZP = Object.freeze({
         return y.Rj.PREMIUM_TIER_2
     }
   },
-  castPremiumSubscriptionAsSkuId: eG,
+  castPremiumSubscriptionAsSkuId: ew,
   canUseAnimatedEmojis: function(e) {
     return (0, T.ks)(T.g_, e)
   },
@@ -1512,11 +1520,7 @@ t.ZP = Object.freeze({
     return (0, T.ks)(T.uw, e)
   },
   canStreamQuality: function(e, t) {
-    return !! function(e) {
-      var t;
-      let n = I.Z.getPerksDemos();
-      return null !== (t = null == n ? void 0 : n[e]) && void 0 !== t && t
-    }(c.q.STREAM_HIGH_QUALITY) || ("high" === e ? (0, T.ks)(T.O8, t) : "mid" === e && (0, T.ks)(T.g7, t))
+    return !!eG(c.q.STREAM_HIGH_QUALITY) || ("high" === e ? (0, T.ks)(T.O8, t) : "mid" === e && (0, T.ks)(T.g7, t))
   },
   hasFreeBoosts: function(e) {
     return (0, T.ks)(T.$0, e)
