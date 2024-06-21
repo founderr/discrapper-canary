@@ -38,8 +38,8 @@ var i = n(735250),
   b = n(841040),
   G = n(228168),
   w = n(981631),
-  k = n(474936),
-  B = n(689938),
+  B = n(474936),
+  k = n(689938),
   x = n(300388);
 let V = {
     [G.y0.POPOUT]: 18,
@@ -71,7 +71,7 @@ function H(e) {
   } = (0, E.ZP)(d.Z.BADGE);
   return r.useEffect(() => {
     s && !I.current && (I.current = !0, C.default.track(w.rMx.PREMIUM_UPSELL_VIEWED, {
-      type: k.cd.CUSTOM_PROFILES_PROFILE_BANNER_SOCIAL_UPSELL,
+      type: B.cd.CUSTOM_PROFILES_PROFILE_BANNER_SOCIAL_UPSELL,
       location: {
         page: Z[t],
         section: w.jXE.NITRO_BANNER,
@@ -81,7 +81,7 @@ function H(e) {
     }))
   }, [T, s, t]), (0, i.jsx)(_.Tooltip, {
     tooltipContentClassName: x.premiumIconTooltipContent,
-    text: u ? B.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP : B.Z.Messages.USER_SETTINGS_PROFILE_THEMES_USER_PROFILE_ICON_TOOLTIP_UPSELL,
+    text: u ? k.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP : k.Z.Messages.USER_SETTINGS_PROFILE_THEMES_USER_PROFILE_ICON_TOOLTIP_UPSELL,
     children: e => (0, i.jsx)(_.Clickable, {
       ...e,
       onClick: u ? void 0 : () => {
@@ -97,8 +97,8 @@ function H(e) {
             } = n;
             return (0, i.jsx)(t, {
               analyticsLocations: e,
-              title: B.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_TITLE,
-              description: B.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_DESCRIPTION.format({
+              title: k.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_TITLE,
+              description: k.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_DESCRIPTION.format({
                 onAndMoreWithPremiumClick: () => {
                   r(), c.Z.open(w.oAB.PREMIUM, null, {
                     analyticsLocations: e
@@ -166,7 +166,7 @@ function Y(e) {
     allowEdit: Y = !0,
     showPremiumBadgeUpsell: j = !0,
     hasProfileEffect: W = !1
-  } = e, K = (0, l.e7)([m.Z], () => m.Z.getGuild(R)), z = (0, l.e7)([N.default], () => N.default.getId()) === c.id && Y, q = L.ZP.isPremiumAtLeast(null == d ? void 0 : d.premiumType, k.p9.TIER_2), {
+  } = e, K = (0, l.e7)([m.Z], () => m.Z.getGuild(R)), z = (0, l.e7)([N.default], () => N.default.getId()) === c.id && Y, q = L.ZP.isPremiumAtLeast(null == d ? void 0 : d.premiumType, B.p9.TIER_2), {
     trackUserProfileAction: X
   } = (0, D.KZ)(), [Q, J] = r.useState(!1), $ = (0, l.e7)([p.Z], () => p.Z.isFocused()), ee = f.QK.getSetting(), {
     bannerSrc: et,
@@ -212,7 +212,7 @@ function Y(e) {
       children: [z ? null == K ? (0, i.jsx)(F, {
         darkenOnHover: W && V,
         profileType: C,
-        profileLabel: B.Z.Messages.EDIT_PROFILE,
+        profileLabel: k.Z.Messages.EDIT_PROFILE,
         icon: "pencil",
         onClick: () => {
           X({
@@ -234,7 +234,7 @@ function Y(e) {
         },
         children: e => (0, i.jsx)(F, {
           darkenOnHover: W && V,
-          profileLabel: B.Z.Messages.EDIT_PROFILE,
+          profileLabel: k.Z.Messages.EDIT_PROFILE,
           icon: "pencil",
           ...e,
           profileType: C
@@ -249,10 +249,10 @@ function Y(e) {
         }
       }) : null, ed ? C !== G.y0.MODAL ? null : (0, i.jsx)(_.Clickable, {
         onClick: E,
-        "aria-label": B.Z.Messages.BACK,
+        "aria-label": k.Z.Messages.BACK,
         className: x.pencilContainer,
         children: (0, i.jsx)(_.Tooltip, {
-          text: B.Z.Messages.BACK,
+          text: k.Z.Messages.BACK,
           children: e => (0, i.jsx)(_.CloseSmallIcon, {
             size: "md",
             ...e,

@@ -25,7 +25,7 @@ n.d(t, {
     return Y
   },
   eU: function() {
-    return k
+    return B
   },
   em: function() {
     return y
@@ -46,7 +46,7 @@ n.d(t, {
     return w
   },
   yl: function() {
-    return B
+    return k
   },
   zq: function() {
     return j
@@ -166,7 +166,7 @@ function w(e) {
   })
 }
 
-function k(e) {
+function B(e) {
   o.Z.dispatch({
     type: "CLIPS_SETTINGS_UPDATE",
     settings: {
@@ -175,7 +175,7 @@ function k(e) {
   })
 }
 
-function B(e) {
+function k(e) {
   let {
     enabled: t,
     trackAnalytics: n = !1

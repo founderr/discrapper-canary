@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return B
+    return k
   }
 }), n(536091), n(47120);
 var i = n(735250),
@@ -139,7 +139,7 @@ function w(e) {
   })
 }
 
-function k(e) {
+function B(e) {
   let t, {
     onGetRolesClicked: n,
     onOpenProfile: s,
@@ -192,7 +192,7 @@ function k(e) {
   })
 }
 
-function B(e) {
+function k(e) {
   let {
     userId: t,
     messageId: n,
@@ -212,7 +212,7 @@ function B(e) {
         let {
           closePopout: r
         } = e;
-        return null == c ? (0, i.jsx)(i.Fragment, {}) : (o()(null != _, "visibleConnectionsRole is null"), (0, i.jsx)(k, {
+        return null == c ? (0, i.jsx)(i.Fragment, {}) : (o()(null != _, "visibleConnectionsRole is null"), (0, i.jsx)(B, {
           eligibilityStates: c,
           userId: t,
           roleId: _.id,

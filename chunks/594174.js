@@ -207,14 +207,14 @@ function w(e) {
   C(t)
 }
 
-function k(e) {
+function B(e) {
   let {
     messages: t
   } = e;
   return t.forEach(e => L(e, !0)), !1
 }
 
-function B(e) {
+function k(e) {
   let {
     mostRecentMessages: t
   } = e;
@@ -225,7 +225,7 @@ function x(e) {
   let {
     messages: t
   } = e;
-  return t.forEach(e => k({
+  return t.forEach(e => B({
     messages: e
   })), !1
 }
@@ -672,11 +672,11 @@ class eC extends I.Z {
       PRESENCE_UPDATES: X,
       SEARCH_FINISH: x,
       MOD_VIEW_SEARCH_FINISH: x,
-      LOAD_MESSAGES_SUCCESS: k,
-      LOAD_MESSAGES_AROUND_SUCCESS: k,
-      LOAD_PINNED_MESSAGES_SUCCESS: k,
-      LOAD_RECENT_MENTIONS_SUCCESS: k,
-      THREAD_LIST_SYNC: B,
+      LOAD_MESSAGES_SUCCESS: B,
+      LOAD_MESSAGES_AROUND_SUCCESS: B,
+      LOAD_PINNED_MESSAGES_SUCCESS: B,
+      LOAD_RECENT_MENTIONS_SUCCESS: B,
+      THREAD_LIST_SYNC: k,
       MESSAGE_CREATE: W,
       MESSAGE_UPDATE: W,
       GUILD_SETTINGS_LOADED_BANS: Q,

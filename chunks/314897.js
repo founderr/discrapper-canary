@@ -29,8 +29,8 @@ let P = n(952265).nf,
   b = "email_cache",
   G = "user_id_cache",
   w = null,
-  k = null,
   B = null,
+  k = null,
   x = null,
   V = null,
   Z = null,
@@ -150,10 +150,10 @@ function eS(e) {
 }
 class ef extends(s = E.ZP.Store) {
   initialize() {
-    w = T.K.get(G), k = T.K.get(b), eo = T.K.get("login_cache"), null == c.getToken() && ec(), this.addChangeListener(() => (0, N.u)(w))
+    w = T.K.get(G), B = T.K.get(b), eo = T.K.get("login_cache"), null == c.getToken() && ec(), this.addChangeListener(() => (0, N.u)(w))
   }
   getEmail() {
-    return k
+    return B
   }
   getLogin() {
     return eo
@@ -177,7 +177,7 @@ class ef extends(s = E.ZP.Store) {
     return w
   }
   getSessionId() {
-    return B
+    return k
   }
   getAuthSessionIdHash() {
     return x
@@ -280,7 +280,7 @@ l = "AuthenticationStore", (a = "displayName") in(o = ef) ? Object.definePropert
       auth: o,
       staticAuthSessionId: a
     } = e;
-    e_("handleConnectionOpen called"), C.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, R.Z)(n)), B = i, x = r, V = a, F = s, w = n.id, k = n.email, void 0 !== o && (K = o.authenticator_types), T.K.set(b, n.email), T.K.set(G, n.id)
+    e_("handleConnectionOpen called"), C.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, R.Z)(n)), k = i, x = r, V = a, F = s, w = n.id, B = n.email, void 0 !== o && (K = o.authenticator_types), T.K.set(b, n.email), T.K.set(G, n.id)
   },
   OVERLAY_INITIALIZE: function(e) {
     var t;
@@ -290,7 +290,7 @@ l = "AuthenticationStore", (a = "displayName") in(o = ef) ? Object.definePropert
       analyticsToken: r,
       token: s
     } = e;
-    C.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, R.Z)(n)), B = i, F = r, eI(s), eE(), w = n.id, T.K.set(G, n.id)
+    C.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, R.Z)(n)), k = i, F = r, eI(s), eE(), w = n.id, T.K.set(G, n.id)
   },
   CONNECTION_CLOSED: function(e) {
     let {
@@ -477,7 +477,7 @@ l = "AuthenticationStore", (a = "displayName") in(o = ef) ? Object.definePropert
     let {
       user: t
     } = e;
-    w = t.id, k = t.email, void 0 !== t.authenticator_types && (K = t.authenticator_types), T.K.set(b, t.email), T.K.set(G, t.id)
+    w = t.id, B = t.email, void 0 !== t.authenticator_types && (K = t.authenticator_types), T.K.set(b, t.email), T.K.set(G, t.id)
   },
   AGE_GATE_LOGOUT_UNDERAGE_NEW_USER: eh,
   CLEAR_AUTHENTICATION_ERRORS: function() {

@@ -41,7 +41,7 @@ function T(e) {
     returnRef: y,
     subscription: U,
     skipConfirm: b
-  } = null != e ? e : {}, G = !1, w = (0, r.Z)(), k = u.default.getCurrentUser(), B = (0, d.M5)(k, I.p9.TIER_2);
+  } = null != e ? e : {}, G = !1, w = (0, r.Z)(), B = u.default.getCurrentUser(), k = (0, d.M5)(B, I.p9.TIER_2);
   (0, s.openModalLazy)(async () => {
     let {
       default: e
@@ -62,7 +62,7 @@ function T(e) {
         initialPlanId: t,
         followupSKUInfo: T,
         onClose: (e, t) => {
-          r(), null == h || h(e), e && (null == f || f(), !R && null != t && t === I.Si.TIER_2 && !B && c.S.dispatch(E.CkL.PREMIUM_SUBSCRIPTION_CREATED))
+          r(), null == h || h(e), e && (null == f || f(), !R && null != t && t === I.Si.TIER_2 && !k && c.S.dispatch(E.CkL.PREMIUM_SUBSCRIPTION_CREATED))
         },
         onComplete: () => {
           G = !0, null == S || S(), !R && (0, l.H)(!0)

@@ -44,8 +44,8 @@ let v = "SELECTABLE",
     })
   },
   w = x(g.kod),
-  k = [],
-  B = {};
+  B = [],
+  k = {};
 
 function x(e) {
   return {
@@ -248,7 +248,7 @@ class q extends(i = _.ZP.Store) {
         channel: t
       } = e;
       return t.id
-    })) && void 0 !== n ? n : k
+    })) && void 0 !== n ? n : B
   }
   hasSelectableChannel(e, t) {
     return this.getSelectableChannelIds(e).includes(t)
@@ -264,7 +264,7 @@ class q extends(i = _.ZP.Store) {
   }
   getTextChannelNameDisambiguations(e) {
     var t;
-    return null != e && null !== (t = P[e]) && void 0 !== t ? t : B
+    return null != e && null !== (t = P[e]) && void 0 !== t ? t : k
   }
 }
 o = "GuildChannelStore", (s = "displayName") in(r = q) ? Object.defineProperty(r, s, {

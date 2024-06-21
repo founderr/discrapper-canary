@@ -34,8 +34,8 @@ var i = n(735250),
   b = n(814042),
   G = n(15350),
   w = n(611480),
-  k = n(981631),
-  B = n(642631);
+  B = n(981631),
+  k = n(642631);
 let x = (0, O.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
   V = (0, O.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
   Z = (0, O.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
@@ -109,8 +109,8 @@ let x = (0, O.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
         } = t;
         switch (e.type) {
           case L.al.CREATE_STICKER:
-            m.default.track(k.rMx.OPEN_MODAL, {
-              type: k.jXE.CREATE_STICKER_MODAL,
+            m.default.track(B.rMx.OPEN_MODAL, {
+              type: B.jXE.CREATE_STICKER_MODAL,
               location: j
             }), (0, _.openModalLazy)(async () => {
               let {
@@ -169,14 +169,14 @@ let x = (0, O.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
       null === (e = ee.current) || void 0 === e || e.focus()
     }, []);
     let ey = r.useCallback(() => {
-      Y(), m.default.track(k.rMx.PREMIUM_PROMOTION_OPENED, {
-        location_section: k.jXE.STICKER_PICKER_UPSELL
+      Y(), m.default.track(B.rMx.PREMIUM_PROMOTION_OPENED, {
+        location_section: B.jXE.STICKER_PICKER_UPSELL
       }), (0, S.z)()
     }, [Y]);
     return (0, i.jsxs)(E.Gt, {
       value: W,
       children: [!(Q && eo) && (0, i.jsx)("div", {
-        className: B.header,
+        className: k.header,
         children: (0, i.jsx)(U.Z, {
           ref: ee,
           onKeyDown: eD,
@@ -184,12 +184,12 @@ let x = (0, O.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
           channel: u
         })
       }), eo ? (0, i.jsx)(P.Z, {
-        className: B.emptyState,
+        className: k.emptyState,
         onClose: Y
       }) : (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)("div", {
           ref: J,
-          className: B.listWrapper,
+          className: k.listWrapper,
           id: w.Vr,
           ...eL,
           children: null != ea ? (0, i.jsx)(y.Z, {
@@ -218,12 +218,12 @@ let x = (0, O.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     })
   });
 t.Z = r.forwardRef((e, t) => ((0, C.fP)(), (0, i.jsx)("div", {
-  className: B.wrapper,
+  className: k.wrapper,
   id: w.nZ,
   "aria-labelledby": w.ED,
   role: "tabpanel",
   children: e.isLoading ? (0, i.jsx)(_.Spinner, {
-    className: B.loadingIndicator
+    className: k.loadingIndicator
   }) : (0, i.jsx)(Q, {
     ...e,
     ref: t

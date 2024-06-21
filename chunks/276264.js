@@ -46,8 +46,8 @@ t.Z = function(e) {
     nick: b,
     user: G,
     currentUser: w,
-    activities: k,
-    applicationStream: B,
+    activities: B,
+    applicationStream: k,
     status: x,
     shouldAnimateStatus: V = !1,
     isMobile: Z,
@@ -85,7 +85,7 @@ t.Z = function(e) {
   r.useEffect(() => {
     n && eN(!1)
   }, [n]);
-  let eA = (0, E.Fr)(k),
+  let eA = (0, E.Fr)(B),
     em = null != eA && !el && n && !ef && (0, I.dl)(eA),
     eO = () => {
       ec(!0)
@@ -97,7 +97,7 @@ t.Z = function(e) {
       eE(e)
     },
     eg = () => {
-      let e = null != k ? k.find(e => e.type === C.IIU.CUSTOM_STATUS) : null,
+      let e = null != B ? B.find(e => e.type === C.IIU.CUSTOM_STATUS) : null,
         t = null != e && null != G && (0, c.Z)(e, G, F);
       if (null != j && null == e) {
         let e = (0, h.H)(j);
@@ -110,8 +110,8 @@ t.Z = function(e) {
         className: M.activity,
         textClassName: M.activityText,
         emojiClassName: M.activityEmoji,
-        activities: k,
-        applicationStream: B,
+        activities: B,
+        applicationStream: k,
         animate: e_,
         hideEmoji: !t,
         hideTooltip: !0,
@@ -154,7 +154,7 @@ t.Z = function(e) {
     }),
     eM = (e, t) => {
       let n = V ? l.AnimatedAvatar : l.Avatar,
-        r = (0, u.Z)(k) ? C.Skl.STREAMING : x;
+        r = (0, u.Z)(B) ? C.Skl.STREAMING : x;
       return r = t ? void 0 : r, (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(n, {
           ...eh,
@@ -198,7 +198,7 @@ t.Z = function(e) {
     renderPopout: e => (0, i.jsx)(T.Z, {
       quest: eA,
       memberListItemRef: eu,
-      applicationStream: B,
+      applicationStream: k,
       ...e,
       closePopout: () => eN(!0)
     }),

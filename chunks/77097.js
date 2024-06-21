@@ -45,10 +45,10 @@ function g(e) {
       roleId: b
     } = (0, T.KZ)(),
     G = (0, c.Z)(L, C, v),
-    [w, k] = r.useState(new Set),
-    B = (0, a.e7)([h.Z], () => h.Z.getUserProfile(C)),
-    x = null !== (t = null == B ? void 0 : B.connectedAccounts) && void 0 !== t ? t : [],
-    V = null !== (n = null == B ? void 0 : B.applicationRoleConnections) && void 0 !== n ? n : [],
+    [w, B] = r.useState(new Set),
+    k = (0, a.e7)([h.Z], () => h.Z.getUserProfile(C)),
+    x = null !== (t = null == k ? void 0 : k.connectedAccounts) && void 0 !== t ? t : [],
+    V = null !== (n = null == k ? void 0 : k.applicationRoleConnections) && void 0 !== n ? n : [],
     Z = (0, a.e7)([E.Z], () => E.Z.hidePersonalInformation),
     H = (0, a.e7)([d.default], () => d.default.locale);
   if (r.useEffect(() => {
@@ -59,7 +59,7 @@ function g(e) {
               connection_type: e
             }
             of n) t.add(e);
-        k(t)
+        B(t)
       })
     }, [null == L ? void 0 : L.id, null == G ? void 0 : G.id]), Z || null == G) return null;
   let F = Array.from(w).map(e => {

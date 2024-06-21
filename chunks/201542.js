@@ -48,7 +48,7 @@ t.Z = r.memo(function(e) {
       onError: G
     } = e,
     w = r.useRef(null),
-    [k, B] = r.useState(0),
+    [B, k] = r.useState(0),
     [x, V] = r.useState(M),
     [Z, H] = r.useState(!1),
     [F, Y] = r.useState(!1),
@@ -92,13 +92,13 @@ t.Z = r.memo(function(e) {
       W(!0)
     }, []),
     eu = r.useCallback(() => {
-      W(!1), k === x && ei()
-    }, [k, x, ei]),
+      W(!1), B === x && ei()
+    }, [B, x, ei]),
     e_ = r.useCallback(e => {
       let t = w.current;
       if (null == x || null == t) return;
       let n = e * x;
-      B(n), t.currentTime = n, z(!0), clearTimeout($.current), $.current = void 0
+      k(n), t.currentTime = n, z(!0), clearTimeout($.current), $.current = void 0
     }, [x]);
   r.useEffect(() => {
     !K && F && z(!0)
@@ -108,14 +108,14 @@ t.Z = r.memo(function(e) {
     if (K || F) {
       if (F) {
         var e, t;
-        ec.current = performance.now(), null == U || U(!1, k, (null !== (t = null === (e = w.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * I.Z.Millis.SECOND)
+        ec.current = performance.now(), null == U || U(!1, B, (null !== (t = null === (e = w.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * I.Z.Millis.SECOND)
       } else {
         let e = performance.now(),
           t = ec.current;
-        null == b || b(k, null != t ? (e - t) / 1e3 : 0), ec.current = null
+        null == b || b(B, null != t ? (e - t) / 1e3 : 0), ec.current = null
       }
     }
-  }, [F]), t = w, n = F, s = B, r.useEffect(() => {
+  }, [F]), t = w, n = F, s = k, r.useEffect(() => {
     let e;
     return ! function i() {
       let r = t.current;
@@ -200,7 +200,7 @@ t.Z = r.memo(function(e) {
     }), (0, i.jsx)(h.Z, {
       className: N.waveform,
       waveform: D,
-      currentTime: k,
+      currentTime: B,
       duration: null != x ? x : 1,
       playing: F,
       played: K,
@@ -209,7 +209,7 @@ t.Z = r.memo(function(e) {
       onDragEnd: eu
     }), (0, i.jsx)(m, {
       played: K,
-      currentTime: k,
+      currentTime: B,
       duration: x
     }), (0, i.jsx)(d.Z, {
       className: N.volumeButton,

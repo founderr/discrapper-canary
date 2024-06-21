@@ -108,11 +108,11 @@ t.Z = e => {
     location: "ActivityStatus"
   }, {
     autoTrackExposure: !1
-  }), k = (0, d.Sl)(p.Ilk.BRAND_345), B = null, x = w && null != b && A.Z.can(p.Plq.CONNECT, G);
-  x ? B = (0, i.jsx)(h.Z, {
+  }), B = (0, d.Sl)(p.Ilk.BRAND_345), k = null, x = w && null != b && A.Z.can(p.Plq.CONNECT, G);
+  x ? k = (0, i.jsx)(h.Z, {
     className: u,
     hangStatusActivity: b
-  }) : null != y && null != y.emoji && !D && (B = (0, i.jsx)(v, {
+  }) : null != y && null != y.emoji && !D && (k = (0, i.jsx)(v, {
     emoji: y.emoji,
     animate: E,
     hideTooltip: S,
@@ -122,9 +122,9 @@ t.Z = e => {
     Z = null !== V && [p.Skl.OFFLINE, p.Skl.INVISIBLE].includes(V),
     H = null === (t = (0, c.Z)(n, r, void 0, x)) || void 0 === t ? void 0 : t.activityText,
     F = null != H && H.length > 0;
-  return Z || null == B && !F ? null : (0, i.jsxs)("div", {
+  return Z || null == k && !F ? null : (0, i.jsxs)("div", {
     className: s,
-    children: [B, (0, i.jsx)(L, {
+    children: [k, (0, i.jsx)(L, {
       text: H,
       className: o
     }), P && (0, i.jsx)(l.QuestsIcon, {
@@ -132,7 +132,7 @@ t.Z = e => {
       className: g.questsIcon,
       height: C,
       width: C,
-      color: k.hex
+      color: B.hex
     }), null != n && n.some(e => (0, _.Z)(e, x)) ? (0, i.jsx)(R.Z, {
       width: 16,
       height: 16,

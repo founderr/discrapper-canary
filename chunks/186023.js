@@ -66,22 +66,22 @@ t.Z = e => {
       })
     }
     C(null == r ? void 0 : null === (e = r.multiSelect) || void 0 === e ? void 0 : e.state), L(null == r ? void 0 : r.textInput), p(s), M(i), null == T || T("..")
-  }, w = [], k = [];
+  }, w = [], B = [];
   for (let e in N) {
-    var B, x;
+    var k, x;
     let t = N[e];
     if (t.id !== m && t.id !== O && t.id !== A) {
       if (t.key.endsWith("_SUBMIT")) {
-        k.push(t);
+        B.push(t);
         continue
       }
-      if (w.push(t), (null === (B = t.button) || void 0 === B ? void 0 : B.type) === "next") {
+      if (w.push(t), (null === (k = t.button) || void 0 === k ? void 0 : k.type) === "next") {
         let e = null === (x = t.button) || void 0 === x ? void 0 : x.target,
           n = w.indexOf(N[e]); - 1 !== n && (w.splice(n, 1), w.push(N[e]))
       }
     }
   }
-  let V = [N[A], ...w, ...k, N[m], N[O]];
+  let V = [N[A], ...w, ...B, N[m], N[O]];
   return (0, i.jsx)(s.ModalRoot, {
     transitionState: E.transitionState,
     "aria-labelledby": f,

@@ -60,7 +60,7 @@ class O extends(i = s.PureComponent) {
       ...w
     } = this.props;
     if (1 === E && 1 === N) return null;
-    let k = (0, d.Tj)({
+    let B = (0, d.Tj)({
         width: E,
         height: N,
         maxWidth: A,
@@ -68,23 +68,23 @@ class O extends(i = s.PureComponent) {
         minWidth: O,
         minHeight: g
       }),
-      B = 0 !== k.width ? k.width / k.height : 1;
+      k = 0 !== B.width ? B.width / B.height : 1;
     "" !== s && i !== T.zo9.ERROR ? e = P({
       src: s,
-      size: k,
+      size: B,
       alt: _,
       className: n,
       mediaLayoutType: C
     }) : i !== T.zo9.LOADING && (e = (0, r.jsx)(R, {
-      size: k,
+      size: B,
       mediaLayoutType: C,
       alt: _
     })), e = (0, r.jsx)(I.N, {
       readyState: i,
-      aspectRatio: B,
+      aspectRatio: k,
       placeholder: o,
       placeholderVersion: l,
-      placeholderStyle: p(k, C),
+      placeholderStyle: p(B, C),
       children: e
     });
     let x = null != y ? y() : null;
@@ -109,7 +109,7 @@ class O extends(i = s.PureComponent) {
             width: "100%",
             aspectRatio: "".concat(e.width, " / ").concat(e.height)
           } : e
-        }(k, v, G, C),
+        }(B, v, G, C),
         ...w,
         children: [null != M && (0, r.jsx)("a", {
           tabIndex: -1,

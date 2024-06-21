@@ -28,7 +28,7 @@ n.d(t, {
     return U
   },
   sN: function() {
-    return B
+    return k
   },
   tg: function() {
     return H
@@ -37,7 +37,7 @@ n.d(t, {
     return V
   },
   w1: function() {
-    return k
+    return B
   }
 }), n(47120);
 var i = n(990547),
@@ -232,7 +232,7 @@ let w = (e, t, n) => {
   } = n;
   (i === e || null == i && null == e) && t()
 };
-async function k(e) {
+async function B(e) {
   var t, n, r, o;
   let {
     guildId: a,
@@ -300,7 +300,7 @@ async function k(e) {
     }
   }
 }
-async function B(e) {
+async function k(e) {
   let {
     activityChannelId: t,
     invitedChannelId: n,

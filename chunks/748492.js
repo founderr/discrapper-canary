@@ -69,7 +69,7 @@ function y(e) {
     onJumpToChannel: p,
     idle: L,
     selectedParticipant: P
-  } = e, y = (0, u.bp)() === C.IlC.POPOUT, U = (0, o.e7)([O.Z], () => O.Z.isVideoEnabled()), b = (0, o.e7)([O.Z], () => Object.values(O.Z.getVideoDevices())[0]), G = !1 === (null === (t = null == b ? void 0 : b.disabled) || void 0 === t || t), w = (0, _.Z)([s])[0], k = (0, E.Z)(r), B = e => {
+  } = e, y = (0, u.bp)() === C.IlC.POPOUT, U = (0, o.e7)([O.Z], () => O.Z.isVideoEnabled()), b = (0, o.e7)([O.Z], () => Object.values(O.Z.getVideoDevices())[0]), G = !1 === (null === (t = null == b ? void 0 : b.disabled) || void 0 === t || t), w = (0, _.Z)([s])[0], B = (0, E.Z)(r), k = e => {
     l.Z.setVideoEnabled(e)
   };
   return (0, i.jsxs)("div", {
@@ -96,10 +96,10 @@ function y(e) {
           className: D.leftPipIcon,
           enabled: U,
           cameraUnavailable: !G,
-          hasPermission: k,
-          onChange: B,
+          hasPermission: B,
+          onChange: k,
           onCameraUnavailable: () => {
-            G ? B(!0) : (0, I.Z)()
+            G ? k(!0) : (0, I.Z)()
           }
         }), (0, i.jsx)(T.Z, {
           children: (0, i.jsx)(c.Z, {

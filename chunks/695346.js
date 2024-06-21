@@ -145,7 +145,7 @@ n.d(t, {
     return x
   },
   iG: function() {
-    return B
+    return k
   },
   iH: function() {
     return eC
@@ -154,7 +154,7 @@ n.d(t, {
     return F
   },
   kJ: function() {
-    return k
+    return B
   },
   kU: function() {
     return Y
@@ -322,7 +322,7 @@ let f = (0, a.Zc)("notifications", "quietMode", e => {
   }, e => s.D5.create({
     value: e
   })),
-  k = (0, a.Zc)("privacy", "nonSpamRetrainingOptIn", e => null == e ? void 0 : e.value, e => null == e ? void 0 : s.D5.create({
+  B = (0, a.Zc)("privacy", "nonSpamRetrainingOptIn", e => null == e ? void 0 : e.value, e => null == e ? void 0 : s.D5.create({
     value: e
   }));
 (0, a.Zc)("privacy", "contactSyncEnabled", e => {
@@ -331,7 +331,7 @@ let f = (0, a.Zc)("notifications", "quietMode", e => {
 }, e => s.D5.create({
   value: e
 }));
-let B = (0, a.Zc)("privacy", "defaultGuildsRestricted", e => null != e && e, e => e),
+let k = (0, a.Zc)("privacy", "defaultGuildsRestricted", e => null != e && e, e => e),
   x = (0, a.Zc)("privacy", "restrictedGuildIds", e => null != e ? e : [], e => e);
 (0, a.Zc)("privacy", "friendDiscoveryFlags", e => {
   var t;

@@ -63,7 +63,7 @@ let p = o.memo(function(e) {
       var e;
       G((null === (e = P.current) || void 0 === e ? void 0 : e.clientHeight) > 19), U(!0)
     }
-  }, []), k = o.useCallback(e => () => {
+  }, []), B = o.useCallback(e => () => {
     (0, A.openUserProfileModal)({
       userId: t.id,
       sourceAnalyticsLocations: f,
@@ -78,14 +78,14 @@ let p = o.memo(function(e) {
   o.useEffect(() => {
     w()
   }, [w, D]);
-  let B = v.length > 0,
+  let k = v.length > 0,
     x = L.length > 0;
   return (0, s.jsxs)("div", {
     className: l()(R.compactItemContainer, !y && R.hideElement),
     ref: P,
-    children: [B && (() => {
+    children: [k && (() => {
       let e = (0, s.jsxs)(_.Clickable, {
-        onClick: k(m.oh.MUTUAL_FRIENDS),
+        onClick: B(m.oh.MUTUAL_FRIENDS),
         className: l()(R.avatarAndTextContainer, R.__invalid_friendsContainer),
         children: [(0, s.jsx)("div", {
           className: R.__invalid_avatars,
@@ -107,12 +107,12 @@ let p = o.memo(function(e) {
         text: O.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP,
         children: e
       }) : e
-    })(), B && x && (0, s.jsx)("div", {
+    })(), k && x && (0, s.jsx)("div", {
       "aria-hidden": "true",
       className: R.dotSpacer
     }), x && (() => {
       let e = (0, s.jsxs)(_.Clickable, {
-        onClick: k(m.oh.MUTUAL_GUILDS),
+        onClick: B(m.oh.MUTUAL_GUILDS),
         className: l()(R.avatarAndTextContainer, R.serverContainer),
         children: [!b && (0, s.jsx)("div", {
           className: R.__invalid_avatars,

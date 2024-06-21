@@ -59,12 +59,12 @@ let g = (0, E.Z)(function(e) {
     [U, b] = r.useState(S),
     G = E.length > y.length,
     w = T && null != d,
-    k = r.useRef(null),
-    B = r.useRef(null);
+    B = r.useRef(null),
+    k = r.useRef(null);
   r.useLayoutEffect(() => {
     var e, t, n, i, r, s, o, a;
-    let l = null !== (r = null === (t = k.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.width) && void 0 !== r ? r : 0,
-      u = null !== (s = null === (i = B.current) || void 0 === i ? void 0 : null === (n = i.getBoundingClientRect()) || void 0 === n ? void 0 : n.width) && void 0 !== s ? s : 0,
+    let l = null !== (r = null === (t = B.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.width) && void 0 !== r ? r : 0,
+      u = null !== (s = null === (i = k.current) || void 0 === i ? void 0 : null === (n = i.getBoundingClientRect()) || void 0 === n ? void 0 : n.width) && void 0 !== s ? s : 0,
       _ = S - (l > 0 ? l + 4 : 0) - (u > 0 ? u + 4 : 0),
       c = 0;
     for (let e = 0; e < 2; e++) {
@@ -122,7 +122,7 @@ let g = (0, E.Z)(function(e) {
           children: [H, G && (0, i.jsx)(c.TooltipContainer, {
             text: R.Z.Messages.VIEW_ALL_ROLES,
             children: (0, i.jsx)(c.Clickable, {
-              innerRef: k,
+              innerRef: B,
               onClick: C,
               className: p.showMoreButton,
               children: (0, i.jsx)(c.Text, {
@@ -132,7 +132,7 @@ let g = (0, E.Z)(function(e) {
             })
           }), w && (0, i.jsx)(m.Z, {
             variant: E.length > 0 ? "icon" : "text",
-            buttonRef: B,
+            buttonRef: k,
             guild: s,
             guildMember: d,
             highestRole: I,

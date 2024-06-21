@@ -42,8 +42,8 @@ function v(e) {
     glowUp: b,
     modalClassName: G,
     artContainerClassName: w,
-    headerClassName: k,
-    bodyClassName: B,
+    headerClassName: B,
+    bodyClassName: k,
     transitionState: x,
     onClose: V,
     onSubscribeClick: Z,
@@ -123,14 +123,14 @@ function v(e) {
           children: [(0, i.jsx)(l.Heading, {
             className: o()(g.header, {
               [g.enhancedHeader]: Q
-            }, k),
+            }, B),
             variant: "heading-xl/bold",
             children: v
           }), eo ? (0, i.jsx)(A.Z, {
             affinities: es
           }) : void 0, J, (0, i.jsx)(l.Text, {
             variant: "text-md/normal",
-            className: o()(B, g.subHeader),
+            className: o()(k, g.subHeader),
             children: y
           })]
         })

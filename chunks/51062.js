@@ -44,20 +44,20 @@ function N(e, t, n) {
     hidePersonalInformation: d.Z.hidePersonalInformation
   }), [C, v, U]), {
     activeCommand: w,
-    activeCommandOption: k
+    activeCommandOption: B
   } = (0, s.cj)([a.Z], () => ({
     activeCommand: a.Z.getActiveCommand(C.id),
     activeCommandOption: a.Z.getActiveOption(C.id)
-  })), B = (0, T.Z)({
+  })), k = (0, T.Z)({
     navId: "channel-autocomplete",
     scrollerRef: n,
     state: L,
     onFocus: e => Z.setSelectedIndex(e)
   }), x = null === (N = e.editorRef.current) || void 0 === N ? void 0 : N.getCurrentWord(), V = {
     ...e,
-    navigator: B,
+    navigator: k,
     activeCommand: w,
-    activeCommandOption: k,
+    activeCommandOption: B,
     canMentionUsers: null !== (R = null === (A = v.users) || void 0 === A ? void 0 : A.allowMentioning) && void 0 !== R && R,
     canMentionEveryone: b,
     canMentionClyde: y,
@@ -66,9 +66,9 @@ function N(e, t, n) {
     emojiIntention: v === l.I.RULES_INPUT ? f.Hz.COMMUNITY_CONTENT : f.Hz.CHAT,
     currentWord: null !== (p = null == x ? void 0 : x.word) && void 0 !== p ? p : "",
     currentWordIsAtStart: (null == x ? void 0 : x.isAtStart) === !0,
-    optionText: null != k ? (0, o.KF)({
-      [k.name]: null !== (g = null === (m = e.editorRef.current) || void 0 === m ? void 0 : m.getCurrentCommandOptionValue()) && void 0 !== g ? g : []
-    }, k.name) : ""
+    optionText: null != B ? (0, o.KF)({
+      [B.name]: null !== (g = null === (m = e.editorRef.current) || void 0 === m ? void 0 : m.getCurrentCommandOptionValue()) && void 0 !== g ? g : []
+    }, B.name) : ""
   }, [Z] = i.useState(() => new I.Z(V));
   return i.useEffect(() => {
     Z.updateProps(V)
@@ -87,5 +87,5 @@ function N(e, t, n) {
         for (let n of t) n.removeChangeListener(e)
       }
     }
-  }, [Z, null === (O = L.query) || void 0 === O ? void 0 : O.typeInfo]), [L, Z, B]
+  }, [Z, null === (O = L.query) || void 0 === O ? void 0 : O.typeInfo]), [L, Z, k]
 }

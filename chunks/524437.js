@@ -578,8 +578,8 @@ class w extends p.C {
     }])
   }
 }
-let k = new w;
-class B extends p.C {
+let B = new w;
+class k extends p.C {
   create(e) {
     let t = {
       collapsedInInbox: !1
@@ -599,7 +599,7 @@ class B extends p.C {
           r.collapsedInInbox = e.bool();
           break;
         case 2:
-          r.iconEmoji = k.internalBinaryRead(e, e.uint32(), n, r.iconEmoji);
+          r.iconEmoji = B.internalBinaryRead(e, e.uint32(), n, r.iconEmoji);
           break;
         case 3:
           r.customNotificationSoundConfig = Z.internalBinaryRead(e, e.uint32(), n, r.customNotificationSoundConfig);
@@ -614,7 +614,7 @@ class B extends p.C {
     return r
   }
   internalBinaryWrite(e, t, n) {
-    !1 !== e.collapsedInInbox && t.tag(1, m.TD.Varint).bool(e.collapsedInInbox), e.iconEmoji && k.internalBinaryWrite(e.iconEmoji, t.tag(2, m.TD.LengthDelimited).fork(), n).join(), e.customNotificationSoundConfig && Z.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(3, m.TD.LengthDelimited).fork(), n).join();
+    !1 !== e.collapsedInInbox && t.tag(1, m.TD.Varint).bool(e.collapsedInInbox), e.iconEmoji && B.internalBinaryWrite(e.iconEmoji, t.tag(2, m.TD.LengthDelimited).fork(), n).join(), e.customNotificationSoundConfig && Z.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(3, m.TD.LengthDelimited).fork(), n).join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? m.z.onWrite : i)(this.typeName, e, t), t
   }
@@ -628,7 +628,7 @@ class B extends p.C {
       no: 2,
       name: "icon_emoji",
       kind: "message",
-      T: () => k
+      T: () => B
     }, {
       no: 3,
       name: "custom_notification_sound_config",
@@ -637,7 +637,7 @@ class B extends p.C {
     }])
   }
 }
-let x = new B;
+let x = new k;
 class V extends p.C {
   create(e) {
     let t = {};
@@ -901,7 +901,7 @@ class z extends p.C {
           r.nativePhoneIntegrationEnabled = g.D5.internalBinaryRead(e, e.uint32(), n, r.nativePhoneIntegrationEnabled);
           break;
         case 9:
-          r.soundboardSettings = ek.internalBinaryRead(e, e.uint32(), n, r.soundboardSettings);
+          r.soundboardSettings = eB.internalBinaryRead(e, e.uint32(), n, r.soundboardSettings);
           break;
         default:
           let s = n.readUnknownField;
@@ -913,7 +913,7 @@ class z extends p.C {
     return r
   }
   internalBinaryWrite(e, t, n) {
-    "blur" === e.videoBackgroundFilterDesktop.oneofKind && K.internalBinaryWrite(e.videoBackgroundFilterDesktop.blur, t.tag(1, m.TD.LengthDelimited).fork(), n).join(), "presetOption" === e.videoBackgroundFilterDesktop.oneofKind && t.tag(2, m.TD.Varint).uint32(e.videoBackgroundFilterDesktop.presetOption), "customAsset" === e.videoBackgroundFilterDesktop.oneofKind && j.internalBinaryWrite(e.videoBackgroundFilterDesktop.customAsset, t.tag(3, m.TD.LengthDelimited).fork(), n).join(), e.alwaysPreviewVideo && g.D5.internalBinaryWrite(e.alwaysPreviewVideo, t.tag(5, m.TD.LengthDelimited).fork(), n).join(), e.afkTimeout && g.yC.internalBinaryWrite(e.afkTimeout, t.tag(6, m.TD.LengthDelimited).fork(), n).join(), e.streamNotificationsEnabled && g.D5.internalBinaryWrite(e.streamNotificationsEnabled, t.tag(7, m.TD.LengthDelimited).fork(), n).join(), e.nativePhoneIntegrationEnabled && g.D5.internalBinaryWrite(e.nativePhoneIntegrationEnabled, t.tag(8, m.TD.LengthDelimited).fork(), n).join(), e.soundboardSettings && ek.internalBinaryWrite(e.soundboardSettings, t.tag(9, m.TD.LengthDelimited).fork(), n).join();
+    "blur" === e.videoBackgroundFilterDesktop.oneofKind && K.internalBinaryWrite(e.videoBackgroundFilterDesktop.blur, t.tag(1, m.TD.LengthDelimited).fork(), n).join(), "presetOption" === e.videoBackgroundFilterDesktop.oneofKind && t.tag(2, m.TD.Varint).uint32(e.videoBackgroundFilterDesktop.presetOption), "customAsset" === e.videoBackgroundFilterDesktop.oneofKind && j.internalBinaryWrite(e.videoBackgroundFilterDesktop.customAsset, t.tag(3, m.TD.LengthDelimited).fork(), n).join(), e.alwaysPreviewVideo && g.D5.internalBinaryWrite(e.alwaysPreviewVideo, t.tag(5, m.TD.LengthDelimited).fork(), n).join(), e.afkTimeout && g.yC.internalBinaryWrite(e.afkTimeout, t.tag(6, m.TD.LengthDelimited).fork(), n).join(), e.streamNotificationsEnabled && g.D5.internalBinaryWrite(e.streamNotificationsEnabled, t.tag(7, m.TD.LengthDelimited).fork(), n).join(), e.nativePhoneIntegrationEnabled && g.D5.internalBinaryWrite(e.nativePhoneIntegrationEnabled, t.tag(8, m.TD.LengthDelimited).fork(), n).join(), e.soundboardSettings && eB.internalBinaryWrite(e.soundboardSettings, t.tag(9, m.TD.LengthDelimited).fork(), n).join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? m.z.onWrite : i)(this.typeName, e, t), t
   }
@@ -960,7 +960,7 @@ class z extends p.C {
       no: 9,
       name: "soundboard_settings",
       kind: "message",
-      T: () => ek
+      T: () => eB
     }])
   }
 }
@@ -2683,8 +2683,8 @@ class ew extends p.C {
     }])
   }
 }
-let ek = new ew;
-class eB extends p.C {
+let eB = new ew;
+class ek extends p.C {
   create(e) {
     let t = {
       soundId: "0",
@@ -2735,7 +2735,7 @@ class eB extends p.C {
     }])
   }
 }
-let ex = new eB;
+let ex = new ek;
 class eV extends p.C {
   create(e) {
     let t = {

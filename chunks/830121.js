@@ -40,17 +40,17 @@ let S = /^\/([a-zA-Z0-9-]+)$/,
   g = /^\/channels\/([0-9]+)\/shop$/,
   C = /^\/quests\/([0-9-]+)\/?$/,
   v = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
-  L = k(window.GLOBAL_ENV.INVITE_HOST),
-  D = k(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
-  M = k(null !== (i = window.GLOBAL_ENV.WEBAPP_ENDPOINT) && void 0 !== i ? i : "//canary.".concat(h.$R1)),
-  P = k("//canary.".concat(h.$R1)),
-  y = k("//ptb.".concat(h.$R1)),
-  U = k("discordapp.com"),
-  b = k("discord.com"),
+  L = B(window.GLOBAL_ENV.INVITE_HOST),
+  D = B(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
+  M = B(null !== (i = window.GLOBAL_ENV.WEBAPP_ENDPOINT) && void 0 !== i ? i : "//canary.".concat(h.$R1)),
+  P = B("//canary.".concat(h.$R1)),
+  y = B("//ptb.".concat(h.$R1)),
+  U = B("discordapp.com"),
+  b = B("discord.com"),
   G = [E.Z.escape(null !== (r = L.host) && void 0 !== r ? r : ""), E.Z.escape(null !== (s = D.host) && void 0 !== s ? s : ""), E.Z.escape(null !== (o = M.host) && void 0 !== o ? o : ""), E.Z.escape(null !== (a = U.host) && void 0 !== a ? a : ""), E.Z.escape(null !== (l = b.host) && void 0 !== l ? l : "")].filter(Boolean),
   w = RegExp("((https?://[^ ]*)|^|[^/][^/.])(".concat(G.join("|"), ")"), "g");
 
-function k(e) {
+function B(e) {
   if (null == e) return {
     host: null,
     pathPrefix: null
@@ -68,7 +68,7 @@ function k(e) {
   }
 }
 
-function B(e, t) {
+function k(e, t) {
   var n, i, r;
   if ((null === (n = t.host) || void 0 === n ? void 0 : n.replace(/^www[.]/i, "")) !== e.host) return null;
   let s = null !== (i = t.pathname) && void 0 !== i ? i : "",
@@ -80,7 +80,7 @@ function B(e, t) {
 
 function x(e) {
   var t, n, i, r;
-  return null !== (r = null !== (i = null !== (n = null !== (t = B(M, e)) && void 0 !== t ? t : B(P, e)) && void 0 !== n ? n : B(y, e)) && void 0 !== i ? i : B(U, e)) && void 0 !== r ? r : B(b, e)
+  return null !== (r = null !== (i = null !== (n = null !== (t = k(M, e)) && void 0 !== t ? t : k(P, e)) && void 0 !== n ? n : k(y, e)) && void 0 !== i ? i : k(U, e)) && void 0 !== r ? r : k(b, e)
 }
 
 function V(e) {
@@ -92,9 +92,9 @@ function V(e) {
     templateHostRemainingPath: null,
     primaryHostRemainingPath: null
   };
-  let o = B(L, s),
-    a = B(D, s),
-    l = null !== (r = null !== (i = null !== (n = null !== (t = B(M, s)) && void 0 !== t ? t : B(P, s)) && void 0 !== n ? n : B(y, s)) && void 0 !== i ? i : B(U, s)) && void 0 !== r ? r : B(b, s);
+  let o = k(L, s),
+    a = k(D, s),
+    l = null !== (r = null !== (i = null !== (n = null !== (t = k(M, s)) && void 0 !== t ? t : k(P, s)) && void 0 !== n ? n : k(y, s)) && void 0 !== i ? i : k(U, s)) && void 0 !== r ? r : k(b, s);
   return {
     url: s,
     inviteHostRemainingPath: o,

@@ -47,14 +47,14 @@ function w(e) {
   }
 }
 
-function k() {
+function B() {
   L = [], i = null, p = null, g = new Set, C = _.z.LATEST_ACTIVITY, v = 0, M = [], P = u().chain(O), y = u().chain(O), b.clear(), U.clear()
 }
 
-function B() {
+function k() {
   var e;
   let t = f.Z.getChannelId();
-  if (null == t || !(null === (e = h.Z.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return k(), !1;
+  if (null == t || !(null === (e = h.Z.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return B(), !1;
   V({
     refreshThreadIds: !0
   })
@@ -128,16 +128,16 @@ a = "ForumActivePostStore", (o = "displayName") in(s = Z) ? Object.definePropert
   configurable: !0,
   writable: !0
 }) : s[o] = a, t.Z = new Z(d.Z, {
-  CONNECTION_OPEN: B,
-  OVERLAY_INITIALIZE: B,
-  GUILD_CREATE: B,
-  CHANNEL_SELECT: B,
+  CONNECTION_OPEN: k,
+  OVERLAY_INITIALIZE: k,
+  GUILD_CREATE: k,
+  CHANNEL_SELECT: k,
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
     } = e;
     if (null == t.parent_id || t.parent_id !== p) return !1;
-    k()
+    B()
   },
   THREAD_LIST_SYNC: function(e) {
     var t;

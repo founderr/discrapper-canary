@@ -7,7 +7,7 @@ n.d(t, {
     return q
   },
   Fp: function() {
-    return k
+    return B
   },
   JT: function() {
     return z
@@ -22,7 +22,7 @@ n.d(t, {
     return x
   },
   Q_: function() {
-    return B
+    return k
   },
   TO: function() {
     return H
@@ -104,8 +104,8 @@ function G(e) {
 function w(e) {
   return e.replace(/[^A-Za-z0-9]/g, "")
 }
-let k = e => (null == e ? void 0 : e.type) === f.uaV.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === f.hBH.GIFT,
-  B = e => {
+let B = e => (null == e ? void 0 : e.type) === f.uaV.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === f.hBH.GIFT,
+  k = e => {
     let t;
     if (null == e) return [];
     let n = new Set;

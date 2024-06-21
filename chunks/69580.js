@@ -54,8 +54,8 @@ var i, r, s = n(735250),
   b = n(489863),
   G = n(228763),
   w = n(422559),
-  k = n(713938),
-  B = n(166148),
+  B = n(713938),
+  k = n(166148),
   x = n(807989),
   V = n(260430),
   Z = n(668185),
@@ -165,7 +165,7 @@ function et(e) {
   o.useEffect(() => {
     M.default.isAuthenticated() && !eR && N.Z.getExperiments()
   }, [eR]);
-  let [ep, eg] = o.useState(null), [eC, ev] = o.useState(null), [eL, eD] = o.useState(null), [eM, eP] = o.useState(!1), ey = null == ep ? void 0 : ep.guilds, [eU, eb] = o.useState(null != el ? el : null), [eG, ew] = o.useState(null != eu ? eu : null), [ek, eB] = o.useState(P.Hn), ex = o.useMemo(() => (null == ep ? void 0 : ep.user) != null ? new D.Z(ep.user) : null, [null == ep ? void 0 : ep.user]), eV = o.useMemo(() => null == ey ? void 0 : ey.find(e => e.id === eU), [ey, eU]), [eZ, eH] = o.useState(null), eF = o.useMemo(() => {
+  let [ep, eg] = o.useState(null), [eC, ev] = o.useState(null), [eL, eD] = o.useState(null), [eM, eP] = o.useState(!1), ey = null == ep ? void 0 : ep.guilds, [eU, eb] = o.useState(null != el ? el : null), [eG, ew] = o.useState(null != eu ? eu : null), [eB, ek] = o.useState(P.Hn), ex = o.useMemo(() => (null == ep ? void 0 : ep.user) != null ? new D.Z(ep.user) : null, [null == ep ? void 0 : ep.user]), eV = o.useMemo(() => null == ey ? void 0 : ey.find(e => e.id === eU), [ey, eU]), [eZ, eH] = o.useState(null), eF = o.useMemo(() => {
     var e;
     return null == em && null == e_ && (null !== (e = null == eo ? void 0 : eo.length) && void 0 !== e ? e : 0) === 0 && null == $
   }, [em, null == eo ? void 0 : eo.length, $, e_]), [eY, ej] = o.useState(null);
@@ -182,7 +182,7 @@ function et(e) {
     } = o.useMemo(() => {
       let e = eF ? null == eW ? void 0 : eW.scopes : eo,
         t = (0, U.K)(null != e ? e : []),
-        n = k.Qe.filter(e => t.includes(e));
+        n = B.Qe.filter(e => t.includes(e));
       return {
         requestedScopes: t,
         accountScopes: n
@@ -257,7 +257,7 @@ function et(e) {
           state: en,
           nonce: ei,
           integrationType: eZ,
-          permissions: E.Od(eq, ek),
+          permissions: E.Od(eq, eB),
           guildId: eZ === c.Y.GUILD_INSTALL && null != eU ? eU : void 0,
           channelId: eZ === c.Y.GUILD_INSTALL && null != eG ? eG : void 0
         });
@@ -282,7 +282,7 @@ function et(e) {
         let e = t.body;
         (null == e ? void 0 : e.message) != null && "" !== e.message ? eD(Error(e.message)) : eD(e), ev(1), eP(!1)
       }
-    }, [ef, eE, eS, null == ep ? void 0 : ep.application, eV, eN, j, eK, J, $, ee, et, en, ei, eq, ek, eU, eZ, eG, eQ]),
+    }, [ef, eE, eS, null == ep ? void 0 : ep.application, eV, eN, j, eK, J, $, ee, et, en, ei, eq, eB, eU, eZ, eG, eQ]),
     e2 = o.useRef(!1),
     e3 = o.useCallback(async () => {
       if (!M.default.isAuthenticated()) {
@@ -304,7 +304,7 @@ function et(e) {
               nonce: ei,
               integrationType: null != eZ ? eZ : void 0
             });
-            eg((0, G.d)(e)), er === B.s.NONE && e.authorized && !e$ && e1(!0), (0, A.yw)(z.rMx.OAUTH2_AUTHORIZE_VIEWED, {
+            eg((0, G.d)(e)), er === k.s.NONE && e.authorized && !e$ && e1(!0), (0, A.yw)(z.rMx.OAUTH2_AUTHORIZE_VIEWED, {
               application_id: e.application.id
             })
           } catch (n) {
@@ -342,7 +342,7 @@ function et(e) {
     }, [em, e4, eY, eF, e_, eC, eR]), o.useEffect(() => {
       if (null == eZ || null != ep || null != eL) return;
       eZ === c.Y.USER_INSTALL && (eb(null), ew(null));
-      let e = eK.filter(e => !k.ak.includes(e));
+      let e = eK.filter(e => !B.ak.includes(e));
       0 === eK.length ? eD(Error("No scopes were provided.")) : e.length > 0 ? eD(Error("Invalid scope: ".concat(e[0]))) : (0, w._$)(eq) ? eD(Error("Invalid permission(s) provided.")) : e3()
     }, [e$, e3, eK, eq, eZ, ep, eL]), eL instanceof Error) return {
     body: (0, s.jsx)(W.Lk, {
@@ -407,9 +407,9 @@ function et(e) {
       l = (0, s.jsx)(Z.Z, {
         application: ep.application,
         permissions: eq,
-        deniedPermissions: ek,
+        deniedPermissions: eB,
         onPermissionsChange: (e, t) => {
-          eB(n => e ? E.Od(n, t) : E.IH(n, t))
+          ek(n => e ? E.Od(n, t) : E.IH(n, t))
         },
         guild: eV
       }), h = 1

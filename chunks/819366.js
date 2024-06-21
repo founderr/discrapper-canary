@@ -80,7 +80,7 @@ function v(e) {
         guildId: U
       })
     })
-  }, G = p.ZP.useName(P), w = (0, l.e7)([f.Z, N.ZP, m.Z], () => R.ZP.getNickname(U, s, P)), k = A.Z.getGuild(U), B = (0, E.Ib)(k, y) && r === g.fL ? g.jM : null;
+  }, G = p.ZP.useName(P), w = (0, l.e7)([f.Z, N.ZP, m.Z], () => R.ZP.getNickname(U, s, P)), B = A.Z.getGuild(U), k = (0, E.Ib)(B, y) && r === g.fL ? g.jM : null;
   if (null == P) return (0, i.jsx)(C, {
     userId: I,
     className: t,
@@ -89,7 +89,7 @@ function v(e) {
   let x = e => (0, i.jsx)(T.Z, {
     className: t,
     onContextMenu: b,
-    color: B,
+    color: k,
     ...e,
     children: "@".concat(null != w ? w : G)
   });

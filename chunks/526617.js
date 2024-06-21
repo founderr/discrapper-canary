@@ -39,11 +39,11 @@ var i = n(735250),
   G = n(938594);
 let w = [8, 0, 8, 8];
 
-function k(e) {
+function B(e) {
   return 0 === e ? 16 : 32
 }
 
-function B(e) {
+function k(e) {
   let {
     categoryInfo: t,
     collapsed: n,
@@ -242,7 +242,7 @@ function Z(e) {
     buttonOverlay: Z
   }, "row-".concat(t["aria-rowindex"])), [eu, s, X, A, j, es, eo, Z]), ec = r.useCallback((e, t) => {
     let n = "".concat(e.key);
-    return (0, i.jsx)(B, {
+    return (0, i.jsx)(k, {
       categoryInfo: e.categoryInfo,
       toggleCollapsed: () => ea(n),
       collapsed: er.has(n),
@@ -301,7 +301,7 @@ function Z(e) {
       renderCategoryList: eT,
       renderHeaderAccessories: eI,
       rowHeight: 48,
-      sectionHeaderHeight: k,
+      sectionHeaderHeight: B,
       listPadding: w,
       itemNodeWidth: 150,
       gridNavigatorId: J,

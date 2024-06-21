@@ -93,7 +93,7 @@ function w(e, t) {
   return null != s ? [n, i] = s() : p().has(r) ? [n, i] = D(r, "MMMM", "month") : g().has(r) ? [n, i] = D(r, "dddd", "day") : C().has(r) ? [n, i] = D(r, "YYYY", "year") : [n, i] = D(r, O.b2L, "day"), !!(n.isValid() && i.isValid()) && ("before" === t ? (i = n, n = null) : "after" === t && (n = i, i = null), e.setData("start", n), e.setData("end", i), !0)
 }
 
-function k(e) {
+function B(e) {
   let t = e.getMatch(1),
     n = h.Z.getGuildId(),
     i = d.ZP.getChannels(n)[d.sH].concat(d.ZP.getChannels(n)[d.Zb]),
@@ -110,7 +110,7 @@ function k(e) {
   return null != s && (e.setData("channel", s), !0)
 }
 
-function B(e) {
+function k(e) {
   let t = {
     [R.Z.Messages.SEARCH_ANSWER_HAS_LINK]: "link",
     [R.Z.Messages.SEARCH_ANSWER_HAS_EMBED]: "embed",
@@ -255,7 +255,7 @@ function z() {
       [O.dCx.ANSWER_HAS]: {
         regex: RegExp("(?:\\s*-?(".concat(n.map(e => A.Z.escape(e)).join("|"), "))"), "i"),
         follows: [O.dCx.FILTER_HAS],
-        validator: B,
+        validator: k,
         componentType: "ANSWER",
         queryKey: "has"
       },
@@ -371,7 +371,7 @@ function z() {
         mutable: !0,
         follows: [O.dCx.FILTER_IN],
         componentType: "ANSWER",
-        validator: k,
+        validator: B,
         queryKey: "channel_id"
       },
       [O.dCx.FILTER_PINNED]: {

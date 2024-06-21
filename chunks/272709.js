@@ -39,7 +39,7 @@ var i = n(735250),
   G = n(689938),
   w = n(970508);
 
-function k(e) {
+function B(e) {
   let t = (0, p.Z)(e),
     {
       category: n
@@ -47,7 +47,7 @@ function k(e) {
   return (null == t ? void 0 : t.isGuildStageVoice()) ? u.StageIcon : (n === y.L.GAMING || n === y.L.EMBEDDED_ACTIVITY) && e.streamersCount > 0 || n === y.L.HANGOUT && e.streamUserIds.length > 0 ? u.ScreenArrowIcon : n === y.L.EVENT && (null == t ? void 0 : t.isGuildVoice()) ? u.VoiceNormalIcon : null != t && m.Z.hasVideo(t.id) ? u.VideoIcon : u.VoiceNormalIcon
 }
 
-function B(e) {
+function k(e) {
   let {
     users: t,
     othersCount: n,
@@ -240,7 +240,7 @@ function x(e) {
     var r, s, o;
     let {
       category: a
-    } = e, l = (0, p.Z)(e), _ = k(e), {
+    } = e, l = (0, p.Z)(e), _ = B(e), {
       audienceCount: c
     } = (0, C.Es)(l), {
       channelStatus: d,
@@ -448,7 +448,7 @@ function x(e) {
     })
   }(s, _, R), {
     hasChannelStatus: et
-  } = (0, C.CE)(F), en = k(s), ei = L === y.L.HANGOUT && et && null == V, er = (null != Y || !!(null == F ? void 0 : F.isGuildStageVoice())) && K.length > 0, es = L === y.L.HANGOUT && (0 === s.streamUserIds.length || H) && !(null == F ? void 0 : F.isGuildStageVoice()), eo = L === y.L.EMBEDDED_ACTIVITY && s.streamersCount > 0 ? (0, i.jsxs)("div", {
+  } = (0, C.CE)(F), en = B(s), ei = L === y.L.HANGOUT && et && null == V, er = (null != Y || !!(null == F ? void 0 : F.isGuildStageVoice())) && K.length > 0, es = L === y.L.HANGOUT && (0 === s.streamUserIds.length || H) && !(null == F ? void 0 : F.isGuildStageVoice()), eo = L === y.L.EMBEDDED_ACTIVITY && s.streamersCount > 0 ? (0, i.jsxs)("div", {
     className: w.pill,
     children: [(0, i.jsx)(u.ScreenArrowIcon, {
       size: "md",
@@ -483,7 +483,7 @@ function x(e) {
         color: "text-secondary",
         className: w.subtitle,
         children: Q
-      }), !(er || es) && !(null == F ? void 0 : F.isGuildStageVoice()) && j.length > 0 && (0, i.jsx)(B, {
+      }), !(er || es) && !(null == F ? void 0 : F.isGuildStageVoice()) && j.length > 0 && (0, i.jsx)(k, {
         users: j,
         othersCount: W,
         extraPill: eo

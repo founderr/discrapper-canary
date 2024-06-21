@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   UB: function() {
-    return B
+    return k
   },
   ZP: function() {
     return F
@@ -42,7 +42,7 @@ var i = n(735250),
   G = n(371173);
 let w = () => Promise.resolve();
 
-function k(e) {
+function B(e) {
   let {
     userRoles: t,
     position: n,
@@ -80,7 +80,7 @@ function k(e) {
     })]
   })
 }
-let B = r.forwardRef(function(e, t) {
+let k = r.forwardRef(function(e, t) {
   var s, a, l;
   let u;
   let {
@@ -109,8 +109,8 @@ let B = r.forwardRef(function(e, t) {
         label: b.Z.Messages.COPY_ID_ROLE
       })
     })
-  }, [f.id]), U = (0, T.useToken)(I.Z.unsafe_rawColors.PRIMARY_300).hsl(), w = null !== (a = f.colorString) && void 0 !== a ? a : U, k = null !== (l = (0, d.wK)(w, .6)) && void 0 !== l ? l : void 0, B = I.Z.unsafe_rawColors.WHITE_500.css, x = (0, d._i)(w);
-  null != x && .3 > (0, d.Bd)(x) && (B = I.Z.unsafe_rawColors.PRIMARY_630.css), u = P ? (0, i.jsx)(m.Z, {
+  }, [f.id]), U = (0, T.useToken)(I.Z.unsafe_rawColors.PRIMARY_300).hsl(), w = null !== (a = f.colorString) && void 0 !== a ? a : U, B = null !== (l = (0, d.wK)(w, .6)) && void 0 !== l ? l : void 0, k = I.Z.unsafe_rawColors.WHITE_500.css, x = (0, d._i)(w);
+  null != x && .3 > (0, d.Bd)(x) && (k = I.Z.unsafe_rawColors.PRIMARY_630.css), u = P ? (0, i.jsx)(m.Z, {
     className: G.roleFlowerStar,
     iconClassName: c ? G.roleVerifiedIcon : void 0,
     color: w,
@@ -126,10 +126,10 @@ let B = r.forwardRef(function(e, t) {
   let V = r.useMemo(() => {
     var t;
     return {
-      borderColor: p ? void 0 : k,
+      borderColor: p ? void 0 : B,
       ...null !== (t = e.style) && void 0 !== t ? t : {}
     }
-  }, [k, p, e.style]);
+  }, [B, p, e.style]);
   return (0, i.jsx)(T.FocusRing, {
     children: (0, i.jsxs)("div", {
       ref: t,
@@ -153,7 +153,7 @@ let B = r.forwardRef(function(e, t) {
         }),
         children: [u, c ? (0, i.jsx)(T.CloseSmallIcon, {
           size: "md",
-          color: B,
+          color: k,
           className: G.roleRemoveIcon,
           "aria-hidden": !0
         }) : null]
@@ -185,7 +185,7 @@ function x(e) {
       let {
         position: n
       } = t;
-      return (0, i.jsx)(k, {
+      return (0, i.jsx)(B, {
         ...e,
         position: null != n ? n : "top"
       })
@@ -288,10 +288,10 @@ function Z(e) {
     }
     L(t => e < M.length ? e : t)
   }, [d, I, M]);
-  let k = v.default.getCurrentUser();
-  l()(null != k, "MemberRolesList: currentUser cannot be undefined");
+  let B = v.default.getCurrentUser();
+  l()(null != B, "MemberRolesList: currentUser cannot be undefined");
   let Z = !h && C.Z.can(U.Plq.MANAGE_ROLES, s),
-    H = P.e9(s, k.id),
+    H = P.e9(s, B.id),
     F = r.useMemo(() => "roles-".concat((0, u.Z)()), []),
     Y = (0, c.ZP)({
       id: F,
@@ -302,10 +302,10 @@ function Z(e) {
     }),
     j = M.map(e => {
       var t;
-      return (0, i.jsx)(B, {
+      return (0, i.jsx)(k, {
         className: f,
         role: e,
-        canRemove: Z && P.r6(s, k.id, H, e) || (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null && n.id === k.id,
+        canRemove: Z && P.r6(s, B.id, H, e) || (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null && n.id === B.id,
         onRemove: () => m(e),
         ref: t => {
           var n, i;

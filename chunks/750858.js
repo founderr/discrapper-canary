@@ -58,9 +58,9 @@ function C(e) {
       decorations: G
     } = e,
     w = o.useContext(h.Z),
-    k = null !== (t = null == a ? void 0 : a.guild_id) && void 0 !== t ? t : w,
+    B = null !== (t = null == a ? void 0 : a.guild_id) && void 0 !== t ? t : w,
     {
-      analyticsLocations: B
+      analyticsLocations: k
     } = (0, I.ZP)(E.Z.USERNAME),
     {
       nick: x,
@@ -89,20 +89,20 @@ function C(e) {
     K = o.useMemo(() => C ? (0, s.jsx)(T.ZP, {
       clan: i.clan,
       userId: r.author.id,
-      contextGuildId: k,
+      contextGuildId: B,
       className: p.clanTagChiplet,
       profileViewedAnalytics: j
-    }) : null, [C, j, i.clan, k, r.author.id]);
+    }) : null, [C, j, i.clan, B, r.author.id]);
   n = null != U && null != L ? (0, s.jsx)(c.Popout, {
     preload: H ? void 0 : function() {
       let e = null != A ? A : r.author;
-      return (0, N.W)(e.id, null != i.guildMemberAvatar && null != k ? (0, m.JM)({
-        guildId: k,
+      return (0, N.W)(e.id, null != i.guildMemberAvatar && null != B ? (0, m.JM)({
+        guildId: B,
         userId: e.id,
         avatar: i.guildMemberAvatar,
         size: 80
-      }) : e.getAvatarURL(k, 80), {
-        guildId: k,
+      }) : e.getAvatarURL(B, 80), {
+        guildId: B,
         channelId: r.channel_id
       })
     },
@@ -133,7 +133,7 @@ function C(e) {
   let z = null != G ? G[0] : null,
     q = null != G ? G[1] : null;
   return (0, s.jsxs)(I.Gt, {
-    value: B,
+    value: k,
     children: [null != z && C ? (0, s.jsxs)(s.Fragment, {
       children: [" ", z, " "]
     }) : null, "dot" === F ? (0, s.jsx)(c.RoleDot, {
@@ -144,7 +144,7 @@ function C(e) {
       children: [(0, s.jsx)(T.ZP, {
         clan: i.clan,
         userId: r.author.id,
-        contextGuildId: k,
+        contextGuildId: B,
         className: p.clanTagChiplet,
         profileViewedAnalytics: j
       }), (0, s.jsx)(O.Z, {

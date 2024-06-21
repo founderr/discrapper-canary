@@ -83,20 +83,20 @@ t.Z = function(e) {
     location: "UserActivityContainer"
   }, {
     autoTrackExposure: !1
-  }), w = (0, a.e7)([m.Z], () => s ? m.Z.getAnyStreamForUser(n.id) : null), k = G && p.Z.can(D.Plq.CONNECT, b), B = (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && k ? b : null, x = (0, a.e7)([R.Z, g.Z, O.Z], () => {
+  }), w = (0, a.e7)([m.Z], () => s ? m.Z.getAnyStreamForUser(n.id) : null), B = G && p.Z.can(D.Plq.CONNECT, b), k = (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && B ? b : null, x = (0, a.e7)([R.Z, g.Z, O.Z], () => {
     var e, i;
-    return (0, u.Z)(t, D.xjy.EMBEDDED) ? R.Z.getGuild(null === (e = O.Z.getChannel(null === (i = g.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != B ? R.Z.getGuild(B.getGuildId()) : null
+    return (0, u.Z)(t, D.xjy.EMBEDDED) ? R.Z.getGuild(null === (e = O.Z.getChannel(null === (i = g.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != k ? R.Z.getGuild(k.getGuildId()) : null
   }), V = (0, a.e7)([R.Z], () => null != w ? R.Z.getGuild(w.guildId) : null), Z = (0, a.e7)([d.Z], () => {
     if (null != t) return null != t.application_id ? d.Z.getApplication(t.application_id) : d.Z.getApplicationByName(t.name);
     return null
   }), H = (0, E.Z)(), F = (0, f.Z)(n), Y = H && null != t && F;
   return (r.useEffect(() => {
-    (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && k && v.default.track(D.rMx.VIEW_HANG_STATUS, {
+    (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && B && v.default.track(D.rMx.VIEW_HANG_STATUS, {
       source: "UserProfilePopout",
-      guild_id: null == B ? void 0 : B.guild_id,
-      channel_id: null == B ? void 0 : B.id
+      guild_id: null == k ? void 0 : k.guild_id,
+      channel_id: null == k ? void 0 : k.id
     })
-  }, [null == t ? void 0 : t.type, k, B]), (null == t ? void 0 : t.type) !== D.IIU.HANG_STATUS || k) ? (0, i.jsx)(C.Z, {
+  }, [null == t ? void 0 : t.type, B, k]), (null == t ? void 0 : t.type) !== D.IIU.HANG_STATUS || B) ? (0, i.jsx)(C.Z, {
     ...U,
     activity: t,
     user: n,

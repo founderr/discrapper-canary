@@ -179,7 +179,7 @@ function w(e, t) {
   }), !!(n.length > 0) && (b(n, t), !0)
 }
 
-function k(e) {
+function B(e) {
   var t, n, i, r, s, o;
   let {
     message: a
@@ -198,7 +198,7 @@ function k(e) {
   })
 }
 
-function B(e) {
+function k(e) {
   var t, n;
   let {
     channelId: i,
@@ -325,8 +325,8 @@ class K extends u.Z {
       LOAD_FORUM_POSTS: Z,
       LOAD_THREADS_SUCCESS: H,
       LOAD_ARCHIVED_THREADS_SUCCESS: H,
-      MESSAGE_CREATE: B,
-      MESSAGE_UPDATE: k,
+      MESSAGE_CREATE: k,
+      MESSAGE_UPDATE: B,
       LOGOUT: P,
       SEARCH_FINISH: V,
       MOD_VIEW_SEARCH_FINISH: V,

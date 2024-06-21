@@ -38,8 +38,8 @@ let O = (0, l.Mg)(m.__invalid_stickerPickerPreviewDimensions),
       stickerPadding: b = R,
       stickerSize: G = O,
       ownedStickerPacks: w,
-      enlargeOnInteraction: k = !1,
-      channel: B,
+      enlargeOnInteraction: B = !1,
+      channel: k,
       currentUser: x,
       checkSendability: V = !0
     } = e, {
@@ -61,7 +61,7 @@ let O = (0, l.Mg)(m.__invalid_stickerPickerPreviewDimensions),
       children: U.map(e => {
         var c;
         let O = e.visibleRowIndex === (null == C ? void 0 : C.rowIndex) && e.columnIndex === (null == C ? void 0 : C.columnIndex),
-          R = e.type === T.al.STICKER && k && O,
+          R = e.type === T.al.STICKER && B && O,
           p = (0, a.throttle)(() => {
             (null == v ? void 0 : v.current) !== !0 && (null == L ? void 0 : L.current) !== !0 && !O && (null == D || D(e))
           }, 250),
@@ -99,7 +99,7 @@ let O = (0, l.Mg)(m.__invalid_stickerPickerPreviewDimensions),
                   }))
                 },
                 style: Y,
-                children: [!k && (0, i.jsx)("div", {
+                children: [!B && (0, i.jsx)("div", {
                   className: m.inspectedIndicator
                 }), (0, i.jsx)("div", {
                   className: m.iconWrapper,
@@ -148,16 +148,16 @@ let O = (0, l.Mg)(m.__invalid_stickerPickerPreviewDimensions),
                 children: (0, S.Co)(e.sticker)
               }), (0, i.jsxs)("div", {
                 "aria-hidden": !0,
-                children: [!k && (0, i.jsx)("div", {
+                children: [!B && (0, i.jsx)("div", {
                   className: m.inspectedIndicator
                 }), (0, i.jsx)(S.ZP, {
                   className: o()(m.stickerNode, {
-                    [m.stickerNodeDimmed]: k && !O && null != C && -1 !== C.rowIndex && -1 !== C.columnIndex,
+                    [m.stickerNodeDimmed]: B && !O && null != C && -1 !== C.rowIndex && -1 !== C.columnIndex,
                     [m.stickerNodeHidden]: R,
-                    [m.stickerUnsendable]: V && !(0, I.kl)(e.sticker, x, B)
+                    [m.stickerUnsendable]: V && !(0, I.kl)(e.sticker, x, k)
                   }),
                   disableAnimation: !O && !s,
-                  enlargeOnInteraction: k,
+                  enlargeOnInteraction: B,
                   isInteracting: O,
                   maskAsset: O,
                   sticker: e.sticker,

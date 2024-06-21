@@ -170,7 +170,7 @@ function G(e) {
     {
       items: _,
       handleViewMore: d
-    } = B(L.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, R.U4.NO_BANNER, u, 8);
+    } = k(L.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, R.U4.NO_BANNER, u, 8);
   return (0, i.jsxs)("div", {
     children: [(0, i.jsx)(p.Z, {
       title: L.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER,
@@ -238,7 +238,7 @@ function w(e) {
     recommendationsSections: n
   });
   return (0, i.jsx)(i.Fragment, {
-    children: n.map(e => (0, i.jsx)(k, {
+    children: n.map(e => (0, i.jsx)(B, {
       channel: t,
       recommendationsSection: e,
       remainingActivities: s
@@ -246,7 +246,7 @@ function w(e) {
   })
 }
 
-function k(e) {
+function B(e) {
   let {
     channel: t,
     recommendationsSection: n,
@@ -254,7 +254,7 @@ function k(e) {
   } = e, o = n.section_title, a = n.type === l.i.BANNER_CARDS ? R.U4.LARGE_BANNER : R.U4.NO_BANNER, {
     items: u,
     handleViewMore: _
-  } = B(o, a, r.useMemo(() => {
+  } = k(o, a, r.useMemo(() => {
     let e = n.items.map(e => {
       let {
         application: t,
@@ -297,7 +297,7 @@ function k(e) {
   })
 }
 
-function B(e, t, n, i) {
+function k(e, t, n, i) {
   let {
     pushHistory: s
   } = (0, O.hH)();

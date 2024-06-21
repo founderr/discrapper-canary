@@ -30,13 +30,13 @@ let M = {},
   G = {},
   w = [];
 
-function k() {
+function B() {
   d().forEach(G, (e, t) => {
     e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete G[t]
   })
 }
 
-function B(e) {
+function k(e) {
   d().forEach(G, (t, n) => {
     t.updateStats(e)
   }), e.filter(e => {
@@ -146,10 +146,10 @@ l = "StreamRTCConnectionStore", (a = "displayName") in(o = V) ? Object.definePro
   writable: !0
 }) : o[a] = l, t.Z = new V(T.Z, !g.Z.isSupported() || __OVERLAY__ ? {} : {
   CONNECTION_OPEN: function(e) {
-    i = e.sessionId, r = null, k()
+    i = e.sessionId, r = null, B()
   },
   CONNECTION_CLOSED: function() {
-    i = null, r = null, k()
+    i = null, r = null, B()
   },
   RTC_CONNECTION_STATE: x,
   RTC_CONNECTION_PING: x,
@@ -242,7 +242,7 @@ l = "StreamRTCConnectionStore", (a = "displayName") in(o = V) ? Object.definePro
         parentMediaSessionId: v.Z.getMediaSessionId()
       }), G[t] = a
     }
-    w = [], g.Z.getMediaEngine().on(I.aB.ConnectionStats, B)
+    w = [], g.Z.getMediaEngine().on(I.aB.ConnectionStats, k)
   },
   STREAM_SERVER_UPDATE: function(e) {
     let t = G[e.streamKey];
@@ -263,7 +263,7 @@ l = "StreamRTCConnectionStore", (a = "displayName") in(o = V) ? Object.definePro
       streamKey: t
     } = e, n = G[t];
     if (null == n) return !1;
-    t === r && (r = null, g.Z.getMediaEngine().off(I.aB.ConnectionStats, B)), n.destroy("stream-end"), delete G[t]
+    t === r && (r = null, g.Z.getMediaEngine().off(I.aB.ConnectionStats, k)), n.destroy("stream-end"), delete G[t]
   },
   STREAM_STATS_UPDATE: function(e) {
     let {

@@ -38,8 +38,8 @@ var r = n(658722),
   b = n(594174),
   G = n(55563),
   w = n(823379),
-  k = n(892880),
-  B = n(700785),
+  B = n(892880),
+  k = n(700785),
   x = n(226951),
   V = n(709054),
   Z = n(624138),
@@ -228,13 +228,13 @@ t.ZP = {
         let e = eo(l.id, r);
         if (e.length > 0) return e
       }
-      t = C.ZP.getMembers(_.guild_id).filter(ei), s && k.Z.requestMembers(_.guild_id, i, r)
+      t = C.ZP.getMembers(_.guild_id).filter(ei), s && B.Z.requestMembers(_.guild_id, i, r)
     }
     return er({
       query: i,
       members: t,
       limit: r,
-      filter: e => _.isPrivate() || B.BT({
+      filter: e => _.isPrivate() || k.BT({
         permission: F.Plq.VIEW_CHANNEL,
         user: e,
         context: _
@@ -258,7 +258,7 @@ t.ZP = {
       if (e.length > 0) return e
     }
     let l = C.ZP.getMembers(t).filter(ei);
-    return r && n.length > 0 && k.Z.requestMembers(t, n, i), er({
+    return r && n.length > 0 && B.Z.requestMembers(t, n, i), er({
       query: n,
       members: l,
       limit: i,
@@ -270,7 +270,7 @@ t.ZP = {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10,
       n = (arguments.length > 2 && void 0 !== arguments[2] && arguments[2], !(arguments.length > 3) || void 0 === arguments[3] || arguments[3]),
       i = arguments.length > 4 ? arguments[4] : void 0;
-    return n && e.length > 0 && k.Z.requestMembers(null, e, t), er({
+    return n && e.length > 0 && B.Z.requestMembers(null, e, t), er({
       query: e,
       members: a()(b.default.getUsers()).values().value(),
       limit: t,

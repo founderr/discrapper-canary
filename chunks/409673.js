@@ -89,8 +89,8 @@ t.ZP = r.forwardRef(function(e, t) {
     enableSecondaryActions: b = !1,
     suppressPlaySound: G,
     onMouseEnter: w,
-    onSelectItem: k,
-    analyticsLocations: B,
+    onSelectItem: B,
+    analyticsLocations: k,
     buttonOverlay: x = f.Pb.PLAY,
     ...V
   } = e, {
@@ -202,11 +202,11 @@ t.ZP = r.forwardRef(function(e, t) {
       onClick: function() {
         if (en && !$ && (ee.current = Math.min(ee.current + .01, .1), Math.random() < ee.current && X(J.x, J.y, void 0, void 0, {
             sprite: O.vv
-          })), null != k) {
-          k();
+          })), null != B) {
+          B();
           return
         }
-        G || K(B)
+        G || K(k)
       },
       onContextMenu: b && !ea ? W : void 0,
       children: [(0, i.jsxs)("div", {

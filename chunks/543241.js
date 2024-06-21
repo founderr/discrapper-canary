@@ -7,7 +7,7 @@ n.d(t, {
     return V
   },
   DV: function() {
-    return k
+    return B
   },
   Gn: function() {
     return y
@@ -49,7 +49,7 @@ n.d(t, {
     return P
   },
   wC: function() {
-    return B
+    return k
   },
   y$: function() {
     return M
@@ -84,7 +84,7 @@ let C = function(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null == t ? void 0 : t.getGuildId();
     (0, u.O)(n);
     let r = (0, O.Gt)(e),
-      s = B(n),
+      s = k(n),
       a = x(n),
       {
         topEmojis: _,
@@ -383,7 +383,7 @@ let G = (e, t) => {
     }
   };
 
-function k(e, t, n) {
+function B(e, t, n) {
   i.useEffect(() => {
     _.DZ.loadIfNecessary()
   }, []);
@@ -400,7 +400,7 @@ function k(e, t, n) {
   }, [t, n, e, r], o.pF)
 }
 
-function B(e) {
+function k(e) {
   return i.useEffect(() => {
     _.DZ.loadIfNecessary()
   }, []), (0, o.Wu)([l.Z], () => l.Z.getDisambiguatedEmojiContext(e).getFrequentlyUsedEmojisWithoutFetchingLatest())

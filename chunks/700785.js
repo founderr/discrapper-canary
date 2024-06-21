@@ -7,7 +7,7 @@ n.d(t, {
     return A
   },
   Hu: function() {
-    return k
+    return B
   },
   I0: function() {
     return function e(t) {
@@ -96,7 +96,7 @@ n.d(t, {
     return P
   },
   we: function() {
-    return B
+    return k
   },
   ym: function() {
     return v
@@ -247,7 +247,7 @@ function U(e, t) {
     r = {
       ...t.permissionOverwrites
     };
-  return null == i[n] && (i[n] = B(n)), null == r[n] && (r[n] = B(n)), Object.keys(i).length === Object.keys(r).length && !Object.keys(i).some(e => {
+  return null == i[n] && (i[n] = k(n)), null == r[n] && (r[n] = k(n)), Object.keys(i).length === Object.keys(r).length && !Object.keys(i).some(e => {
     let t = i[e],
       n = r[e];
     return !(null != n && s.fS(n.deny, t.deny) && s.fS(n.allow, t.allow)) && !0
@@ -271,11 +271,11 @@ function w(e, t) {
   if (null != n) return r()(h.Z.getRoles(e.id)).filter(e => -1 !== n.roles.indexOf(e.id)).sortBy(e => -e.position).first()
 }
 
-function k(e, t) {
+function B(e, t) {
   return null == t.hoistRoleId ? null : h.Z.getRole(e.id, t.hoistRoleId)
 }
 
-function B(e) {
+function k(e) {
   return {
     id: e,
     type: o.BN.ROLE,

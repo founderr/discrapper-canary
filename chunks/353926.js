@@ -58,12 +58,12 @@ function w(e, t) {
   return e || G.includes(t)
 }
 
-function k(e) {
+function B(e) {
   var t;
   return ((null !== (t = e.flags) && void 0 !== t ? t : 0) & T.xW$.STAFF) === T.xW$.STAFF || null != e.personal_connection_id || !1
 }
 
-function B(e, t, n, i) {
+function k(e, t, n, i) {
   let r = "".concat(t.type, "|").concat(e),
     s = t.triggerDebuggingEnabled && void 0 !== n && n.length > 0;
   if (t.type === I.xY.USER) return s && (r += "|".concat(n), i && (r += "|triggerDebugging")), r;
@@ -79,7 +79,7 @@ function x(e) {
 let V = Date.now();
 
 function Z(e, t, n, i) {
-  let r = R[B(e, t, n, i)];
+  let r = R[k(e, t, n, i)];
   return !(null == r || Date.now() - r.time > 6048e5) && r.hash === x(t)
 }
 
@@ -132,7 +132,7 @@ function H(e) {
       fingerprint: o
     })
   }
-  R[B(t, n, i, u)] = {
+  R[k(t, n, i, u)] = {
     time: Date.now(),
     hash: x(n)
   }, ee(R)
@@ -168,7 +168,7 @@ function Y(e) {
 }
 
 function j(e) {
-  !y && "CONNECTION_OPEN" === e.type && k(e.user) && (y = !0), v = {}, L = {}, D = {};
+  !y && "CONNECTION_OPEN" === e.type && B(e.user) && (y = !0), v = {}, L = {}, D = {};
   let t = "CONNECTION_OPEN" === e.type || null == e.fingerprint || e.fingerprint === _.default.getFingerprint(),
     {
       experiments: i,
@@ -269,7 +269,7 @@ function q(e) {
     serializedExperimentStore: t,
     user: n
   } = e;
-  !y && k(n) && (y = !0), O = t.hasLoadedExperiments, R = t.trackedExposureExperiments, v = t.loadedUserExperiments, M = t.userExperimentOverrides, P = t.guildExperimentOverrides, L = z(t.loadedGuildExperiments), D = {}
+  !y && B(n) && (y = !0), O = t.hasLoadedExperiments, R = t.trackedExposureExperiments, v = t.loadedUserExperiments, M = t.userExperimentOverrides, P = t.guildExperimentOverrides, L = z(t.loadedGuildExperiments), D = {}
 }
 
 function X() {

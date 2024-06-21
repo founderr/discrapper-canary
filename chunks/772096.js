@@ -128,15 +128,15 @@ t.ZP = {
         return n
       })(b).trim().length) return d();
     let w = r().pick(t.rules, P),
-      k = l().parserFor(w)(T.whitespaceSanitized, M),
-      B = R.whitespaceSanitized,
+      B = l().parserFor(w)(T.whitespaceSanitized, M),
+      k = R.whitespaceSanitized,
       {
         target: x
       } = L;
     return {
-      content: k,
+      content: B,
       target: x,
-      title: B
+      title: k
     }
   }
 }

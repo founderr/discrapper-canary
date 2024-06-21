@@ -34,8 +34,8 @@ t.Z = r.forwardRef(function(e, t) {
   }, [v.guild_id]), U = r.useRef(), [b, G, w] = (0, m.Z)({
     ...e,
     guild: y
-  }, t, U), k = (null === (n = L.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? S.ZP : h.ZP, B = (0, I.DJ)(b.selectedIndex);
-  (0, d.KR)(P, b.isVisible, B), f.Z.trackExposure({
+  }, t, U), B = (null === (n = L.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? S.ZP : h.ZP, k = (0, I.DJ)(b.selectedIndex);
+  (0, d.KR)(P, b.isVisible, k), f.Z.trackExposure({
     location: "6e9811_1"
   });
   let {
@@ -108,7 +108,7 @@ t.Z = r.forwardRef(function(e, t) {
       })
     })
   });
-  return null != V ? (0, i.jsx)(k, {
+  return null != V ? (0, i.jsx)(B, {
     children: (0, i.jsx)(u.ReferencePositionLayer, {
       targetRef: e.targetRef,
       overrideTargetRect: V,

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   yv: function() {
-    return k
+    return B
   }
 }), n(653041), n(47120), n(411104);
 var i, r, s = n(735250),
@@ -55,16 +55,16 @@ let U = "-:--",
     backgroundColor: "black"
   };
 
-function k(e) {
+function B(e) {
   let t = 0 | e,
     n = t % 60;
   return "".concat((t - n) / 60, ":").concat(String(n).padStart(2, "0"))
 }
-let B = e => {
+let k = e => {
   let {
     current: t,
     duration: n
-  } = e, i = null != t ? k(t) : U, r = null != n ? k(n) : U;
+  } = e, i = null != t ? B(t) : U, r = null != n ? B(n) : U;
   return i = i.padStart(r.length, "0"), (0, s.jsxs)("div", {
     className: M.durationTimeWrapper,
     children: [(0, s.jsx)("span", {
@@ -181,7 +181,7 @@ class x extends(i = o.Component) {
       onClick: e => e.stopPropagation(),
       onDoubleClick: e => e.stopPropagation(),
       style: this.getAnimatedStyle(),
-      children: [this.renderPlayIcon(), "string" == typeof E || E > 250 ? (0, s.jsx)(B, {
+      children: [this.renderPlayIcon(), "string" == typeof E || E > 250 ? (0, s.jsx)(k, {
         current: n,
         duration: i
       }) : null, (0, s.jsx)(C.Z, {

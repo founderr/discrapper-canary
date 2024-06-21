@@ -161,8 +161,8 @@ function L(e) {
     isSelected: b,
     serialize: G,
     clear: w,
-    hideIcon: k = !1,
-    "aria-label": B,
+    hideIcon: B = !1,
+    "aria-label": k,
     "aria-labelledby": x
   } = e, [V, Z] = r.useState(!1), {
     ref: H,
@@ -252,7 +252,7 @@ function L(e) {
         }),
         "aria-haspopup": "listbox",
         "aria-expanded": c,
-        "aria-label": B,
+        "aria-label": k,
         "aria-labelledby": x,
         children: [X.length > 0 ? (0, i.jsx)("span", {
           className: N.value,
@@ -272,7 +272,7 @@ function L(e) {
               color: "currentColor",
               className: N.clear
             })
-          }) : null, k ? null : (0, i.jsx)(I, {
+          }) : null, B ? null : (0, i.jsx)(I, {
             color: "currentColor",
             size: "custom",
             width: T,

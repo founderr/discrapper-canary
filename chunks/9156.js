@@ -72,9 +72,9 @@ let R = {},
   b = new Set,
   G = new Set,
   w = {},
-  k = {};
+  B = {};
 
-function B(e, t) {
+function k(e, t) {
   var n;
   let i = R[e],
     r = null !== (n = null == i ? void 0 : i.channel_overrides) && void 0 !== n ? n : {},
@@ -102,7 +102,7 @@ function B(e, t) {
         let t = i[e];
         E.yE(t.flags, m.ic.OPT_IN_ENABLED) ? n.add(e) : n.delete(e)
       }
-      Object.keys(i).length > 0 ? k[e] = n : delete k[e]
+      Object.keys(i).length > 0 ? B[e] = n : delete B[e]
     }(e), delete p[e]
 }
 
@@ -130,7 +130,7 @@ function x(e, t) {
 function V(e, t) {
   var n;
   let i = R[e];
-  B(e, {
+  k(e, {
     channel_overrides: null !== (n = null == i ? void 0 : i.channel_overrides) && void 0 !== n ? n : {},
     ...t
   })
@@ -163,7 +163,7 @@ function F(e, t) {
   var n;
   let i = R[e],
     r = null !== (n = null == i ? void 0 : i.channel_overrides) && void 0 !== n ? n : {};
-  B(e, {
+  k(e, {
     channel_overrides: null == i ? t : {
       ...r,
       ...t
@@ -363,7 +363,7 @@ class J extends(i = o.ZP.PersistedStore) {
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (null == e) return !1;
     if (u.Z.isFullServerPreview(e)) return u.Z.isChannelOptedIn(e, t);
-    if (r && null != k[e]) return k[e].has(t);
+    if (r && null != B[e]) return B[e].has(t);
     let s = null !== (i = null === (n = this.getChannelOverrides(e)[t]) || void 0 === n ? void 0 : n.flags) && void 0 !== i ? i : 0;
     return E.yE(s, m.ic.OPT_IN_ENABLED)
   }
@@ -372,7 +372,7 @@ class J extends(i = o.ZP.PersistedStore) {
     return u.Z.isFullServerPreview(e) ? null !== (t = u.Z.getViewingChannels(e)) && void 0 !== t ? t : G : null !== (n = U[e]) && void 0 !== n ? n : G
   }
   getOptedInChannelsWithPendingUpdates(e) {
-    return k[e]
+    return B[e]
   }
   getPendingChannelUpdates(e) {
     return w[e]
@@ -436,7 +436,7 @@ let $ = new J(a.Z, {
       userGuildSettings: t
     } = e;
     t.forEach(e => {
-      B(e.guild_id, {
+      k(e.guild_id, {
         channel_overrides: {},
         ...e
       })
@@ -480,7 +480,7 @@ let $ = new J(a.Z, {
     z(e.notificationSettings), L.reset(), D.reset(), !e.userGuildSettings.partial && (R = {}, y = {}, U = {});
     let t = new Set;
     for (let n in e.userGuildSettings.entries.forEach(e => {
-        !("channel_overrides" in e) && (e.channel_overrides = {}), B(e.guild_id, e), null != e.guild_id && t.add(e.guild_id)
+        !("channel_overrides" in e) && (e.channel_overrides = {}), k(e.guild_id, e), null != e.guild_id && t.add(e.guild_id)
       }), R) !t.has(n) && x(n, R[n])
   },
   CACHE_LOADED: function(e) {
@@ -542,7 +542,7 @@ let $ = new J(a.Z, {
       guildId: t
     } = e;
     if (null == t) return !1;
-    delete w[t], delete k[t]
+    delete w[t], delete B[t]
   },
   NOTIFICATION_SETTINGS_UPDATE: function(e) {
     let {

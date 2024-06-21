@@ -101,7 +101,7 @@ function w() {
   }
   return !1
 }
-class k extends(r = _.ZP.Store) {
+class B extends(r = _.ZP.Store) {
   initialize() {
     this.waitFor(A.Z, R.Z, v.Z, C.Z, p.Z, S.default, N.ZP, E.Z, I.Z), this.syncWith([h.Z], w), this.syncWith([N.ZP], G)
   }
@@ -122,12 +122,12 @@ class k extends(r = _.ZP.Store) {
     return null != t && Object.keys(t).length > 0
   }
 }
-a = "GuildSubscriptionsStore", (o = "displayName") in(s = k) ? Object.defineProperty(s, o, {
+a = "GuildSubscriptionsStore", (o = "displayName") in(s = B) ? Object.defineProperty(s, o, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[o] = a, t.Z = new k(c.Z, {
+}) : s[o] = a, t.Z = new B(c.Z, {
   CONNECTION_OPEN: U,
   CONNECTION_RESUMED: U,
   CONNECTION_CLOSED: function() {

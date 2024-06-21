@@ -40,22 +40,22 @@ let g = new I.Z("GuildMemberStore"),
 function G(e, t) {
   if (null == t.communicationDisabledUntil || !(0, T.b)(t)) return w(e, t.userId);
   let n = x(e, t.userId);
-  L[n] !== t.communicationDisabledUntil && (0, T.b)(t) && (L[n] = t.communicationDisabledUntil, k(n))
+  L[n] !== t.communicationDisabledUntil && (0, T.b)(t) && (L[n] = t.communicationDisabledUntil, B(n))
 }
 
 function w(e, t) {
   if (null != t) {
     let n = x(e, t);
-    null != L[n] && k(n), B(x(e, t))
+    null != L[n] && B(n), k(x(e, t))
   } else
-    for (let t in L) Z(t) === e && (k(t), B(t))
-}
-
-function k(e) {
-  M += 1, y[e] = M
+    for (let t in L) Z(t) === e && (B(t), k(t))
 }
 
 function B(e) {
+  M += 1, y[e] = M
+}
+
+function k(e) {
   V(e) === m.default.getId() && (0, h.l)(Z(e)), delete L[e]
 }
 

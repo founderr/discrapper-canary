@@ -31,7 +31,7 @@ let y = new d.Z("ConnectionStore"),
   b = null,
   G = !0,
   w = null;
-async function k(e) {
+async function B(e) {
   U = Date.now(), b = e.sessionId, C.RR.handleConnectionOpen();
   let t = {},
     n = m.Z.getVoiceChannelId();
@@ -48,7 +48,7 @@ async function k(e) {
   C.GC.update(t, !0), G = !1
 }
 
-function B() {
+function k() {
   C.GC.update()
 }
 
@@ -104,7 +104,7 @@ o = "GatewayConnectionStore", (s = "displayName") in(r = H) ? Object.definePrope
     return e.resetSocket && (C.Wb.close(), C.Wb.dispatcher.clear(), C.Wb.connect()), !1
   },
   CONNECTION_OPEN: e => {
-    k(e)
+    B(e)
   },
   CONNECTION_CLOSED: function() {
     y.verbose("connection closed dispatched"), U = Date.now()
@@ -209,7 +209,7 @@ o = "GatewayConnectionStore", (s = "displayName") in(r = H) ? Object.definePrope
       C.Wb.callConnect(e)
     }), !1
   },
-  STREAM_CREATE: B,
+  STREAM_CREATE: k,
   STREAM_START: function(e) {
     let {
       streamType: t,
@@ -239,7 +239,7 @@ o = "GatewayConnectionStore", (s = "displayName") in(r = H) ? Object.definePrope
     let {
       streamKey: t
     } = e;
-    return Z(t), B(), !1
+    return Z(t), k(), !1
   },
   STREAM_SET_PAUSED: function(e) {
     let {
@@ -289,10 +289,10 @@ o = "GatewayConnectionStore", (s = "displayName") in(r = H) ? Object.definePrope
   RTC_SPEED_TEST_STOP_TEST: function() {
     return C.Wb.isSessionEstablished() && C.Wb.speedTestDelete(), !1
   },
-  CLIPS_SETTINGS_UPDATE: B,
-  RUNNING_GAMES_CHANGE: B,
+  CLIPS_SETTINGS_UPDATE: k,
+  RUNNING_GAMES_CHANGE: k,
   USER_SETTINGS_PROTO_UPDATE: function(e) {
     var t;
-    e.settings.type === M.yP.PRELOADED_USER_SETTINGS && (null === (t = e.settings.proto.clips) || void 0 === t ? void 0 : t.allowVoiceRecording) != null && B()
+    e.settings.type === M.yP.PRELOADED_USER_SETTINGS && (null === (t = e.settings.proto.clips) || void 0 === t ? void 0 : t.allowVoiceRecording) != null && k()
   }
 })

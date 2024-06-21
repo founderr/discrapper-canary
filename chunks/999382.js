@@ -23,8 +23,8 @@ var c, d, E, I, T = n(392711),
   b = n(731455),
   G = n(135899);
 let w = ["name", "description", "icon", "splash", "banner", "homeHeader", "afkChannelId", "afkTimeout", "systemChannelId", "verificationLevel", "defaultMessageNotifications", "explicitContentFilter", "features", "systemChannelFlags", "preferredLocale", "rulesChannelId", "safetyAlertsChannelId", "discoverySplash", "publicUpdatesChannelId", "premiumProgressBarEnabled", "clan"],
-  k = new Set(["icon", "splash", "banner", "discoverySplash", "homeHeader"]),
-  B = !1,
+  B = new Set(["icon", "splash", "banner", "discoverySplash", "homeHeader"]),
+  k = !1,
   x = U.QZA.CLOSED,
   V = {},
   Z = !1,
@@ -77,7 +77,7 @@ function ei(e) {
 }
 
 function er() {
-  B = !1, x = U.QZA.CLOSED, o = a = null, Z = !1, H = null, F = null, Y = 0, Q = null, ee = null, et = null, i = null, r = null, s = null, j = U.BpS.NONE, u = void 0
+  k = !1, x = U.QZA.CLOSED, o = a = null, Z = !1, H = null, F = null, Y = 0, Q = null, ee = null, et = null, i = null, r = null, s = null, j = U.BpS.NONE, u = void 0
 }
 
 function es(e) {
@@ -166,7 +166,7 @@ class el extends(c = N.ZP.Store) {
     return !h().isEqual(a, o) || !h().isEqual(X, q)
   }
   isOpen() {
-    return B
+    return k
   }
   getSavedRouteState() {
     return u
@@ -238,7 +238,7 @@ I = "GuildSettingsStore", (E = "displayName") in(d = el) ? Object.defineProperty
 }) : d[E] = I, t.Z = new el(O.Z, __OVERLAY__ ? {} : {
   GUILD_SETTINGS_INIT: ei,
   GUILD_SETTINGS_OPEN: function(e) {
-    B = !0, ei(e)
+    k = !0, ei(e)
   },
   GUILD_SETTINGS_CLOSE: er,
   GUILD_SETTINGS_UPDATE: function(e) {
@@ -362,7 +362,7 @@ I = "GuildSettingsStore", (E = "displayName") in(d = el) ? Object.defineProperty
       let t = o = e,
         n = a.toJS();
       w.forEach(e => {
-        if (!k.has(e) && ("rulesChannelId" !== e && "publicUpdatesChannelId" !== e || n[e] !== G.b4)) {
+        if (!B.has(e) && ("rulesChannelId" !== e && "publicUpdatesChannelId" !== e || n[e] !== G.b4)) {
           if ("features" === e) {
             t.set(e, new Set(n[e]));
             return

@@ -70,12 +70,12 @@ function T(e) {
       className: I.statusText,
       children: p
     }) : null,
-    k = {
+    B = {
       [I.biteSize]: n === E.y0.BITE_SIZE,
       [I.fullSize]: n === E.y0.FULL_SIZE,
       [I.panel]: n === E.y0.PANEL
     },
-    B = o()(I.statusBubbleOuter, k, {
+    k = o()(I.statusBubbleOuter, B, {
       [I.statusBubbleShape]: !g && v || !M,
       [I.statusBubbleSingleLineWithTextShape]: M && g
     }),
@@ -89,9 +89,9 @@ function T(e) {
     });
   return (0, i.jsxs)("div", {
     children: [(0, i.jsx)("div", {
-      className: o()(I.invisibleContainer, k),
+      className: o()(I.invisibleContainer, B),
       children: (0, i.jsx)("div", {
-        className: B,
+        className: k,
         children: (0, i.jsxs)("span", {
           className: x,
           children: [(0, i.jsxs)("div", {
@@ -110,10 +110,10 @@ function T(e) {
         })
       })
     }), (0, i.jsx)("div", {
-      className: o()(I.visibleContainer, k),
+      className: o()(I.visibleContainer, B),
       children: (0, i.jsx)("div", {
         tabIndex: 0,
-        className: B,
+        className: k,
         onFocus: () => b(!0),
         onBlur: () => b(!1),
         onMouseEnter: () => b(!0),

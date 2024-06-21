@@ -99,8 +99,8 @@ function p(e) {
     messageId: b,
     isBurstReaction: G,
     rowPosition: w,
-    inNitroLockedSection: k
-  } = e, [B, x] = r.useState(""), V = (0, a.e7)([_.Z], () => _.Z.useReducedMotion), Z = (0, a.e7)([c.Z], () => c.Z.getDisambiguatedEmojiContext(I), [I]), H = r.useRef(null), {
+    inNitroLockedSection: B
+  } = e, [k, x] = r.useState(""), V = (0, a.e7)([_.Z], () => _.Z.useReducedMotion), Z = (0, a.e7)([c.Z], () => c.Z.getDisambiguatedEmojiContext(I), [I]), H = r.useRef(null), {
     emoji: F,
     size: Y,
     isDisabled: j,
@@ -138,7 +138,7 @@ function p(e) {
       ..._,
       key: s,
       ref: H
-    }, B !== O(W, d) && (0, i.jsx)(R, {
+    }, k !== O(W, d) && (0, i.jsx)(R, {
       ref: a,
       emoji: F,
       isFavorite: Z.isFavoriteEmojiWithoutFetchingLatest(F),
@@ -167,7 +167,7 @@ function p(e) {
       size: Y,
       surrogateCodePoint: C,
       selectedItemClassName: v,
-      inNitroLockedSection: k
+      inNitroLockedSection: B
     }))
   };
   return g ? (0, i.jsx)(l.Tooltip, {

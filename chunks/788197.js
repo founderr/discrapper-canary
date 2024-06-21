@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return B
+    return k
   }
 }), n(47120);
 var i = n(735250),
@@ -39,15 +39,15 @@ var i = n(735250),
   G = n(616922),
   w = n(530086);
 
-function k(e) {
+function B(e) {
   e.stopPropagation()
 }
 
-function B(e) {
+function k(e) {
   let {
     user: t,
     guildId: n,
-    channelId: B,
+    channelId: k,
     messageId: x,
     roleId: V,
     setNote: Z,
@@ -122,7 +122,7 @@ function B(e) {
         O.default.track(b.rMx.OPEN_POPOUT, {
           type: "Profile Popout",
           guild_id: n,
-          channel_id: B,
+          channel_id: k,
           other_user_id: t.id,
           application_id: null != et ? et.application_id : void 0,
           application_name: null != et ? et.name : void 0,
@@ -153,7 +153,7 @@ function B(e) {
       layout: "POPOUT",
       userId: t.id,
       guildId: n,
-      channelId: B,
+      channelId: k,
       messageId: x,
       roleId: V,
       shouldTrackViewOnMount: null == $ || null != $.fullProfileLoadedTimestamp,
@@ -162,8 +162,8 @@ function B(e) {
         children: (0, i.jsx)(o.Dialog, {
           ref: z,
           "aria-label": t.username,
-          onClick: k,
-          onContextMenu: k,
+          onClick: B,
+          onContextMenu: B,
           style: e_.shouldShow ? {
             marginTop: D.Ao
           } : void 0,
@@ -177,7 +177,7 @@ function B(e) {
               user: t,
               displayProfile: q,
               guildId: n,
-              channelId: B,
+              channelId: k,
               onClose: () => null == H ? void 0 : H(),
               isMobile: er,
               isStreaming: (0, d.Z)(et),
@@ -199,7 +199,7 @@ function B(e) {
                 user: t,
                 guild: J,
                 guildMember: $,
-                channelId: B,
+                channelId: k,
                 onClose: H,
                 setNote: Z,
                 canDM: eu,

@@ -34,8 +34,8 @@ var i = n(735250),
   b = n(913663),
   G = n(268350),
   w = n(378233),
-  k = n(665906),
-  B = n(695346),
+  B = n(665906),
+  k = n(695346),
   x = n(271383),
   V = n(496675),
   Z = n(944486),
@@ -79,8 +79,8 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
     renderAttachButton: eb,
     renderAppLauncherButton: eG,
     renderApplicationCommandIcon: ew,
-    pendingReply: ek,
-    onChange: eB,
+    pendingReply: eB,
+    onChange: ek,
     onResize: ex,
     onBlur: eV,
     onFocus: eZ,
@@ -146,7 +146,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
             _ = (!(null === (r = t.permissions) || void 0 === r ? void 0 : r.requireCreateTherads) || u) && (!(null === (s = t.permissions) || void 0 === s ? void 0 : s.requireSendMessages) || d.e$(l, es.Plq.SEND_MESSAGES)),
             c = _ && d.e$(l, es.Plq.ATTACH_FILES),
             E = null != n,
-            I = (0, k.xl)(e);
+            I = (0, B.xl)(e);
           return {
             disabled: i || o || !a && !_ || I,
             canAttachFiles: !0 === t.attachments && (a || o || c || E),
@@ -161,7 +161,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
       }
     }(eP, ey, ti, eL),
     tc = ey.toolbarType === q.O.STATIC,
-    td = !B.dN.useSetting() && !(0, K.isAndroidWeb)() && null != window.ResizeObserver,
+    td = !k.dN.useSetting() && !(0, K.isAndroidWeb)() && null != window.ResizeObserver,
     tE = !td || !(null === (s = ey.commands) || void 0 === s ? void 0 : s.enabled) || !eU || em !== eo.GI,
     tI = (0, y.Z)(),
     {
@@ -368,8 +368,8 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
     }(tR, e8, tE),
     {
       expressionPickerView: tw,
-      shouldHideExpressionPicker: tk,
-      handleAutocompleteVisibilityChange: tB,
+      shouldHideExpressionPicker: tB,
+      handleAutocompleteVisibilityChange: tk,
       handleOuterClick: tx
     } = function(e, t, n) {
       let [i, s] = (0, v.Iu)(e => [e.activeView, e.activeViewType], _.Z);
@@ -398,7 +398,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
     }).enabled,
     tZ = (0, E.e7)([A.Z], () => A.Z.shouldShowPopup(), []);
   (0, z.S)(tf, eP.guild_id, eP.id);
-  let tH = null != ek,
+  let tH = null != eB,
     tF = ta && !((ts || to) && t_) || tA && (null === (l = ey.submit) || void 0 === l ? void 0 : l.useDisabledStylesOnSubmit),
     tY = null,
     tj = null;
@@ -409,13 +409,13 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
     tK = td && !__OVERLAY__ && null != eO && null == ti && ey.toolbarType !== q.O.NONE,
     tz = function(e, t, n, i) {
       var r, s;
-      let o = B.up.useSetting(),
+      let o = k.up.useSetting(),
         a = (0, E.e7)([b.Z], () => b.Z.getStickerPreview(e.id, t.drafts.type)),
         l = null != a && a.length > 0;
       return o && (null === (r = t.stickers) || void 0 === r ? void 0 : r.autoSuggest) && !l && (null === (s = i.current) || void 0 === s ? void 0 : s.isVisible()) !== !0 && !__OVERLAY__ && null != n
     }(eP, ey, eO, tR),
     tq = (0, p.e)(eP),
-    tX = null != ti || null != ek || tq,
+    tX = null != ti || null != eB || tq,
     tQ = !!(null === (eu = ey.emojis) || void 0 === eu ? void 0 : eu.button) && tP <= 44;
   return (0, i.jsx)(C.f6, {
     value: tf,
@@ -445,7 +445,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
             type: ey,
             channel: eP,
             activeCommand: ti,
-            pendingReply: ek
+            pendingReply: eB
           }), (0, i.jsxs)("div", {
             ref: te,
             onScroll: tM,
@@ -490,7 +490,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
                   maxCharacterCount: null != ez ? ez : tI,
                   allowNewLines: eX,
                   "aria-describedby": eJ,
-                  onChange: eB,
+                  onChange: ek,
                   onResize: ty,
                   onBlur: eV,
                   onFocus: eZ,
@@ -540,9 +540,9 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
             editorRef: e9,
             onSendMessage: tm,
             onSendSticker: tL,
-            onVisibilityChange: tB,
+            onVisibilityChange: tk,
             editorHeight: tP,
-            setValue: (e, t) => null == eB ? void 0 : eB(null, e, t),
+            setValue: (e, t) => null == ek ? void 0 : ek(null, e, t),
             position: e1
           }), (0, i.jsx)(U.Z, {
             textValue: em,
@@ -563,7 +563,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
             submitButtonVisible: (null === (ec = ey.submit) || void 0 === ec ? void 0 : ec.button) && (null !== (eI = null === (ed = ey.submit) || void 0 === ed ? void 0 : ed.ignorePreference) && void 0 !== eI ? eI : tT),
             stickerIconVisible: null !== (eT = null === (eE = ey.stickers) || void 0 === eE ? void 0 : eE.button) && void 0 !== eT && eT
           }) : null, e2]
-        }), tj, tk ? null : (0, i.jsx)(L.Z, {
+        }), tj, tB ? null : (0, i.jsx)(L.Z, {
           positionTargetRef: e6,
           type: ey,
           onSelectGIF: tC,

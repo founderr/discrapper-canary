@@ -92,17 +92,17 @@ let C = (0, h.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
         b = n[s + 1],
         G = null != b && U.type === N.Ih.GUILD && b.type !== N.Ih.GUILD,
         w = U.type === N.Ih.PACK,
-        k = "",
-        B = null;
+        B = "",
+        k = null;
       if (U.type === N.Ih.GUILD || U.type === N.Ih.EMPTY_GUILD_UPSELL) {
         let e = I.Z.getGuild(U.id);
-        null != e && (d = e.id, k = e.name, B = (0, i.jsx)(_.Z, {
+        null != e && (d = e.id, B = e.name, k = (0, i.jsx)(_.Z, {
           guild: e,
           isSelected: y
         }))
       } else if (w) {
         let e = f.Z.getStickerPack(U.id);
-        null != e && (k = e.name, B = (0, i.jsx)(m.ZP, {
+        null != e && (B = e.name, k = (0, i.jsx)(m.ZP, {
           disableAnimation: !y || h,
           size: v,
           sticker: (0, A.Zt)(e)
@@ -111,7 +111,7 @@ let C = (0, h.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
       return (0, i.jsxs)(r.Fragment, {
         children: [(0, i.jsx)(l.Tooltip, {
           position: "right",
-          text: k,
+          text: B,
           tooltipContentClassName: g.__invalid_tooltip,
           children: e => (0, i.jsx)("div", {
             role: "listitem",
@@ -119,7 +119,7 @@ let C = (0, h.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
             "aria-posinset": s,
             children: (0, i.jsx)(l.Clickable, {
               ...e,
-              "aria-label": k,
+              "aria-label": B,
               className: o()(g.stickerCategory, {
                 [g.firstPartyCategory]: w,
                 [g.firstPartyCategorySelected]: !h && y && w
@@ -132,7 +132,7 @@ let C = (0, h.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                   guild_id: d
                 }), a()
               },
-              children: B
+              children: k
             })
           })
         }), G ? (0, i.jsx)("hr", {

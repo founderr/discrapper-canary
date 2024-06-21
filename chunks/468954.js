@@ -42,7 +42,7 @@ function _(e) {
     gridNavigatorId: U,
     gridNotice: b,
     renderHeader: G
-  } = e, w = r.useRef(null), k = r.useRef(null), B = r.useRef(null), x = 0 === t.length, V = (0, s.Iu)(e => e.searchQuery), Z = c.useStore(e => e.inspectedExpressionPosition), H = (0, o.ep)({
+  } = e, w = r.useRef(null), B = r.useRef(null), k = r.useRef(null), x = 0 === t.length, V = (0, s.Iu)(e => e.searchQuery), Z = c.useStore(e => e.inspectedExpressionPosition), H = (0, o.ep)({
     gridWrapperRef: w,
     containerWidth: _,
     showingEmptyState: x
@@ -67,7 +67,7 @@ function _(e) {
     isUsingKeyboardNavigation: J
   } = (0, o.t$)({
     columnCounts: W,
-    expressionsListRef: k,
+    expressionsListRef: B,
     expressionsGrid: F,
     onSelectItem: d,
     store: c,
@@ -84,15 +84,15 @@ function _(e) {
     E(V)
   }, [E, V]), r.useEffect(() => c.resetStoreState, [c.resetStoreState]), r.useLayoutEffect(() => {
     var e;
-    null === (e = B.current) || void 0 === e || e.focus()
+    null === (e = k.current) || void 0 === e || e.focus()
   }, []);
   let er = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(l.Z, {
-      ref: B,
+      ref: k,
       store: c,
       hasSendableExpressions: !0,
       onKeyDown: Q,
-      expressionsListRef: k,
+      expressionsListRef: B,
       gridNavigatorId: U,
       defaultSearchPlaceholder: T,
       emptySearchPlaceholder: h
@@ -103,7 +103,7 @@ function _(e) {
       className: u.header,
       children: [" ", er, " "]
     }), x && null != S ? S(u.emptyState) : (0, i.jsxs)(i.Fragment, {
-      children: [p(k), null != b && (0, i.jsx)("div", {
+      children: [p(B), null != b && (0, i.jsx)("div", {
         className: u.gridNoticeWrapper,
         children: b
       }), (0, i.jsx)("div", {
@@ -112,7 +112,7 @@ function _(e) {
         id: U,
         ...X,
         children: null != H ? (0, i.jsx)(a.Z, {
-          ref: k,
+          ref: B,
           store: c,
           hasSearchResults: I,
           listPadding: y,

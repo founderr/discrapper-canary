@@ -37,8 +37,8 @@ function b(e, t, n) {
 }
 let G = S.Z.get(U.ABu.SPOTIFY),
   w = "hm://pusher/v1/connections/",
-  k = 30 * D.Z.Millis.SECOND,
   B = 30 * D.Z.Millis.SECOND,
+  k = 30 * D.Z.Millis.SECOND,
   x = 5 * D.Z.Millis.MINUTE,
   V = 5 * D.Z.Millis.SECOND,
   Z = 1.5 * D.Z.Millis.SECOND,
@@ -117,7 +117,7 @@ class ea {
     })))
   }
   handleOpen() {
-    W.info("WS Connected"), this.backoff.succeed(), this.pingInterval.start(k, () => this.ping()), (0, P.Ai)(this.accountId, this.accessToken), (0, P.PW)(this.accountId, this.accessToken)
+    W.info("WS Connected"), this.backoff.succeed(), this.pingInterval.start(B, () => this.ping()), (0, P.Ai)(this.accountId, this.accessToken), (0, P.PW)(this.accountId, this.accessToken)
   }
   handleMessage(e) {
     let {
@@ -286,7 +286,7 @@ function eT(e) {
         checkSoundSharing: !0,
         checkSoundboardSounds: !1
       });
-    t && n && null != i ? (K.start(B, eI, !1), z.stop()) : z.start(100, () => K.stop(), !1)
+    t && n && null != i ? (K.start(k, eI, !1), z.stop()) : z.start(100, () => K.stop(), !1)
   }
   return !1
 }
@@ -538,7 +538,7 @@ let eN = new ef(T.Z, {
         null == e ? ($[t].push(l), c = !0) : !(0, E.Z)(e, l) && (Object.assign(e, l), c = !0), e_(t, l.id)
       } else $[t] = [l], c = !0
     }
-    n ? null == en || en.start(B, eI) : (o = null, null == en || en.stop());
+    n ? null == en || en.start(k, eI) : (o = null, null == en || en.stop());
     let d = O.Z.getAccount(t, U.ABu.SPOTIFY);
     if (null == d) return c;
     let I = ee[t],
@@ -650,7 +650,7 @@ let eN = new ef(T.Z, {
         sourceId: e,
         sound: n
       } = null == t ? void 0 : t.desktopSettings;
-      null != e && A.ZP.getObservedAppNameForWindow(e) === G.name && n ? (en = new I.Xp).start(B, eI) : (null == en || en.stop(), en = null)
+      null != e && A.ZP.getObservedAppNameForWindow(e) === G.name && n ? (en = new I.Xp).start(k, eI) : (null == en || en.stop(), en = null)
     } else null == t && (null == en || en.stop(), en = null)
   }
 });

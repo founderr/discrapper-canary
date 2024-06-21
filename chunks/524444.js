@@ -84,8 +84,8 @@ var i, r, s = n(735250),
   b = n(259580),
   G = n(626135),
   w = n(823379),
-  k = n(589530),
-  B = n(709054),
+  B = n(589530),
+  k = n(709054),
   x = n(981631),
   V = n(420212),
   Z = n(814249),
@@ -97,10 +97,10 @@ let j = {
     position: "top"
   },
   W = e => t => {
-    null == e || e(t), (0, k.jA)(t)
+    null == e || e(t), (0, B.jA)(t)
   },
   K = e => t => {
-    null == e || e(t), (0, k.Zj)(t)
+    null == e || e(t), (0, B.Zj)(t)
   };
 
 function z(e) {
@@ -114,7 +114,7 @@ function z(e) {
     renderOverlayContent: u,
     ..._
   } = e, c = W(t), d = K(n);
-  return i = null == i ? k.FC : i, r = null == r ? k.rs : r, (0, s.jsxs)(o.Fragment, {
+  return i = null == i ? B.FC : i, r = null == r ? B.rs : r, (0, s.jsxs)(o.Fragment, {
     children: [(0, s.jsx)(M.Z, {
       ..._,
       alt: a,
@@ -138,7 +138,7 @@ function q(e) {
     renderAdjacentContent: l,
     ...u
   } = e, _ = W(t), c = K(i);
-  return n = null == n ? k.FC : n, (0, s.jsxs)(o.Fragment, {
+  return n = null == n ? B.FC : n, (0, s.jsxs)(o.Fragment, {
     children: [(0, s.jsx)(D.Z, {
       ...u,
       onVolumeChange: _,
@@ -159,7 +159,7 @@ function X(e) {
     onMute: i,
     ...r
   } = e, o = W(t), a = K(i);
-  return n = null == n ? k.FC : n, (0, s.jsx)(g.Z, {
+  return n = null == n ? B.FC : n, (0, s.jsx)(g.Z, {
     ...r,
     onVolumeChange: o,
     onMute: a,
@@ -356,7 +356,7 @@ function ei(e) {
       context: "Mark As Read"
     }) : I.Z.jumpToMessage({
       channelId: n,
-      messageId: B.default.castChannelIdAsMessageId(n),
+      messageId: k.default.castChannelIdAsMessageId(n),
       offset: 1,
       context: "Mark As Read"
     })
@@ -423,7 +423,7 @@ function er(e) {
       channel_type: r.type
     })
   }, [P, y, r.guild_id, r.id, r.type]);
-  let k = (0, d.e7)([v.default], () => {
+  let B = (0, d.e7)([v.default], () => {
       var e;
       return null !== (e = null == P ? void 0 : P.map(e => {
         var t;
@@ -525,10 +525,10 @@ function er(e) {
   let ee = o.useMemo(() => (0, s.jsx)(R.Z, {
       channel: r,
       summaries: P,
-      summariesMembers: k,
+      summariesMembers: B,
       selectTopic: Q,
       setOpen: J
-    }), [P, k, Q, J, r]),
+    }), [P, B, Q, J, r]),
     et = o.useCallback(() => {
       let e = C.ZP.ackMessageId(r.id);
       null != e ? I.Z.jumpToMessage({
@@ -538,7 +538,7 @@ function er(e) {
         context: "Mark As Read"
       }) : I.Z.jumpToMessage({
         channelId: r.id,
-        messageId: B.default.castChannelIdAsMessageId(r.id),
+        messageId: k.default.castChannelIdAsMessageId(r.id),
         offset: 1,
         context: "Mark As Read"
       })
@@ -674,8 +674,8 @@ function eo(e) {
     P = null !== (n = (0, d.e7)([O.Z], () => O.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
     y = null == L ? void 0 : null === (t = L[P]) || void 0 === t ? void 0 : t.topic;
   null == y && null == T && (null == L ? void 0 : L.length) >= 1 && (y = null === (i = L[0]) || void 0 === i ? void 0 : i.topic);
-  let k = o.useMemo(() => _().get(L, P - 1), [P, L]),
-    B = o.useMemo(() => _().get(L, P + 1), [P, L]),
+  let B = o.useMemo(() => _().get(L, P - 1), [P, L]),
+    k = o.useMemo(() => _().get(L, P + 1), [P, L]),
     V = o.useMemo(() => _().debounce(e => {
       var t;
       h(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
@@ -812,7 +812,7 @@ function eo(e) {
           "aria-label": F.Z.Messages.SUMMARY_PILL_NEXT,
           onClick: Q,
           className: l()(Y.topicsPillCaret, Y.topicsCaretLeft, {
-            [Y.topicsPillCaretDisabled]: null == B
+            [Y.topicsPillCaretDisabled]: null == k
           }),
           children: (0, s.jsx)(b.Z, {
             width: 16,
@@ -823,7 +823,7 @@ function eo(e) {
           "aria-label": F.Z.Messages.SUMMARY_PILL_PREVIOUS,
           onClick: X,
           className: l()(Y.topicsPillCaret, Y.topicsCaretRight, {
-            [Y.topicsPillCaretDisabled]: null == k
+            [Y.topicsPillCaretDisabled]: null == B
           }),
           children: (0, s.jsx)(b.Z, {
             width: 16,

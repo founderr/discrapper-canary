@@ -38,8 +38,8 @@ t.Z = r.forwardRef(function(e, t) {
     disabled: b,
     submitting: G,
     placeholder: w,
-    required: k,
-    textAreaPaddingClassName: B,
+    required: B,
+    textAreaPaddingClassName: k,
     onChange: x,
     onPaste: V,
     onResize: Z,
@@ -209,7 +209,7 @@ t.Z = r.forwardRef(function(e, t) {
         editor: em,
         channelId: P.id,
         guildId: P.guild_id,
-        className: o()(M.slateTextArea, B),
+        className: o()(M.slateTextArea, k),
         placeholder: w,
         readOnly: eS,
         spellCheck: J,
@@ -234,7 +234,7 @@ t.Z = r.forwardRef(function(e, t) {
         "aria-describedby": e_,
         "aria-invalid": eu,
         "aria-autocomplete": ed,
-        "aria-required": k
+        "aria-required": B
       })
     })]
   })

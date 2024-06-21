@@ -244,7 +244,7 @@ function G(e) {
 function w() {
   I.clear(), h = {}, S = {}
 }
-class k extends c.Z {
+class B extends c.Z {
   initialize() {
     this.waitFor(d.ZP), this.syncWith([o.default], w)
   }
@@ -276,7 +276,7 @@ class k extends c.Z {
   takeSnapshot() {
     let e = l.default.getId();
     return {
-      version: k.LATEST_SNAPSHOT_VERSION,
+      version: B.LATEST_SNAPSHOT_VERSION,
       data: [{
         userId: e,
         profile: h[e]
@@ -303,7 +303,7 @@ class k extends c.Z {
       USER_UPDATE: G,
       LOGOUT: O
     }), E(this, "loadCache", () => {
-      let e = this.readSnapshot(k.LATEST_SNAPSHOT_VERSION);
+      let e = this.readSnapshot(B.LATEST_SNAPSHOT_VERSION);
       null != e && e.forEach(e => {
         let {
           userId: t,
@@ -314,4 +314,4 @@ class k extends c.Z {
     })
   }
 }
-E(k, "displayName", "UserProfileStore"), E(k, "LATEST_SNAPSHOT_VERSION", 1), t.Z = new k
+E(B, "displayName", "UserProfileStore"), E(B, "LATEST_SNAPSHOT_VERSION", 1), t.Z = new B

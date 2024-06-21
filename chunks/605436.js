@@ -37,7 +37,7 @@ n.d(t, {
     return Z
   },
   _A: function() {
-    return B
+    return k
   },
   aq: function() {
     return m
@@ -61,7 +61,7 @@ n.d(t, {
     return R
   },
   yv: function() {
-    return k
+    return B
   },
   zB: function() {
     return w
@@ -226,7 +226,7 @@ function w(e, t) {
   }
 }
 
-function k(e) {
+function B(e) {
   switch (e) {
     case T.aC.ROLE:
       return S.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
@@ -242,7 +242,7 @@ function k(e) {
   }
 }
 
-function B(e, t, n) {
+function k(e, t, n) {
   let r = e.permissionOverwrites[e.guild_id];
   null == r && (r = d.we(e.guild_id));
   let s = {
@@ -252,7 +252,7 @@ function B(e, t, n) {
 }
 
 function x(e, t, n) {
-  let i = B(e, t, n);
+  let i = k(e, t, n);
   (0, s.kY)(e, i.id, i.allow, i.deny)
 }
 

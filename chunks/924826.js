@@ -129,12 +129,12 @@ function _(e) {
         t = null == e ? void 0 : e.getAttribute(l.ie);
       null != t ? M(t) : null == e && null != I && I()
     }, [P, G, I, M]),
-    k = i.useCallback(async () => {
+    B = i.useCallback(async () => {
       let e = await P.getPreviousFocusableElement(G),
         t = null == e ? void 0 : e.getAttribute(l.ie);
       null != t ? M(t) : null == e && null != E && E()
     }, [P, G, E, M]),
-    B = i.useCallback(e => {
+    k = i.useCallback(e => {
       if (!g.current || !f && !b.current) return;
       let n = A === a.hy.HORIZONTAL ? a.R8.RIGHT : a.R8.DOWN,
         i = A === a.hy.HORIZONTAL ? a.R8.LEFT : a.R8.UP;
@@ -143,7 +143,7 @@ function _(e) {
           e.stopPropagation(), e.preventDefault(), w();
           return;
         case i:
-          e.stopPropagation(), e.preventDefault(), k();
+          e.stopPropagation(), e.preventDefault(), B();
           return;
         case a.R8.HOME:
           e.stopPropagation(), e.preventDefault(), c().then(() => {
@@ -173,7 +173,7 @@ function _(e) {
           }
         }
       }
-    }, [w, k, t, A, d, c, M, f]),
+    }, [w, B, t, A, d, c, M, f]),
     x = i.useCallback(e => {
       let n = null != e ? (0, l.jb)(t, e) : null;
       O.current = n
@@ -181,7 +181,7 @@ function _(e) {
   return i.useMemo(() => ({
     id: t,
     containerProps: {
-      onKeyDown: B,
+      onKeyDown: k,
       ref: p,
       tabIndex: y && S ? -1 : 0
     },
@@ -197,11 +197,11 @@ function _(e) {
       let n = await (0, o.KG)(null !== (e = p.current) && void 0 !== e ? e : document.body, u(t, p));
       null !== n && M(n)
     },
-    focusPreviousItem: k,
+    focusPreviousItem: B,
     focusNextItem: w,
     focusedItemId() {
       let e = O.current;
       return e ? (0, l.x3)(e) : null
     }
-  }), [t, B, A, y, S, x, k, w, M])
+  }), [t, k, A, y, S, x, B, w, M])
 }

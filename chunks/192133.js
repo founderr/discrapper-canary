@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return k
+    return B
   }
 }), n(47120);
 var i = n(735250),
@@ -39,11 +39,11 @@ var i = n(735250),
   G = n(981631),
   w = n(841719);
 
-function k(e) {
+function B(e) {
   var t, n, s;
   let {
-    activity: k,
-    customStatusActivity: B,
+    activity: B,
+    customStatusActivity: k,
     user: x,
     displayProfile: V,
     guild: Z,
@@ -144,7 +144,7 @@ function k(e) {
     }), (0, i.jsxs)(l.HeadingLevel, {
       children: [(0, i.jsx)(v.Z, {
         className: w.customStatusSection,
-        customStatusActivity: B
+        customStatusActivity: k
       }), (0, i.jsx)(A.Z, {
         className: w.divider
       }), (0, i.jsxs)(l.AdvancedScroller, {
@@ -169,7 +169,7 @@ function k(e) {
           userId: x.id,
           guildId: null == Z ? void 0 : Z.id
         }), (0, i.jsx)(O.Z, {
-          activity: k,
+          activity: B,
           user: x,
           guild: Z,
           channelId: F,

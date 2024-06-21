@@ -48,7 +48,7 @@ function v(e) {
     improvedFriendingEnabled: G
   } = (0, d.V)({
     location: "BiteSizeProfileBody"
-  }), w = _.ZP.getName(null == L ? void 0 : L.id, P, t), k = (0, s.e7)([l.Z], () => l.Z.getRelationshipType(t.id)), B = (0, s.e7)([u.Z], () => u.Z.hidePersonalInformation), x = (0, o.Z)("username"), V = r.useMemo(() => ({
+  }), w = _.ZP.getName(null == L ? void 0 : L.id, P, t), B = (0, s.e7)([l.Z], () => l.Z.getRelationshipType(t.id)), k = (0, s.e7)([u.Z], () => u.Z.hidePersonalInformation), x = (0, o.Z)("username"), V = r.useMemo(() => ({
     source: g.jXE.PROFILE_POPOUT,
     tagUserId: t.id
   }), [t.id]);
@@ -72,7 +72,7 @@ function v(e) {
       nicknameIcons: (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(I.Z, {
           userId: t.id
-        }), (U || b || G) && !B && (0, i.jsx)(h.Z, {
+        }), (U || b || G) && !k && (0, i.jsx)(h.Z, {
           user: t,
           isHovering: D,
           onOpenProfile: () => M({
@@ -80,7 +80,7 @@ function v(e) {
           })
         })]
       })
-    }), (G || b) && k === g.OGo.PENDING_INCOMING && (0, i.jsx)(S.Z.Overlay, {
+    }), (G || b) && B === g.OGo.PENDING_INCOMING && (0, i.jsx)(S.Z.Overlay, {
       children: (0, i.jsx)(T.Z, {
         user: t,
         guildId: null == L ? void 0 : L.id,
@@ -99,7 +99,7 @@ function v(e) {
     }), (U || b || G) && (0, i.jsx)(m.Z, {
       user: t,
       bio: null == v ? void 0 : v.bio,
-      hidePersonalInformation: B,
+      hidePersonalInformation: k,
       onClose: y
     }), (0, i.jsx)(A.Z, {
       user: t,

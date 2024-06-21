@@ -33,8 +33,8 @@ var i, r = n(392711),
   b = n(174065),
   G = n(396352),
   w = n(347374),
-  k = n(185923),
-  B = n(981631),
+  B = n(185923),
+  k = n(981631),
   x = n(149203),
   V = n(526761);
 
@@ -257,7 +257,7 @@ class en {
       };
     U.ZP.forEach(n);
     let r = e => {
-      let t = q[null == e ? B.kod : e];
+      let t = q[null == e ? k.kod : e];
       null != t && (s().each(t.usableEmojis, n), s().each(t.emoticons, i))
     };
     for (let e in r(this.guildId), this.newlyAddedEmoji) null != this.newlyAddedEmoji[e] ? this.newlyAddedEmoji[e] = this.newlyAddedEmoji[e].sort((e, t) => P.default.compare(t.id, e.id)).slice(0, 3) : this.newlyAddedEmoji[e] = [];
@@ -436,7 +436,7 @@ class ec extends(i = u.ZP.PersistedStore) {
           intention: s,
           forceIncludeExternalGuilds: o
         });
-        return i === k.Z5.PREMIUM_LOCKED ? e.locked.push(t) : null == i && e.unlocked.push(t), e
+        return i === B.Z5.PREMIUM_LOCKED ? e.locked.push(t) : null == i && e.unlocked.push(t), e
       }, {
         unlocked: [],
         locked: []
@@ -475,7 +475,7 @@ class ec extends(i = u.ZP.PersistedStore) {
         channel: e,
         count: 10,
         query: Q,
-        intention: k.Hz.CHAT
+        intention: B.Hz.CHAT
       });
       return [...n.slice(0, 5), ...t.slice(0, 5)].slice(0, 5)
     }

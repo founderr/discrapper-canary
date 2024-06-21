@@ -4,7 +4,7 @@ n.d(t, {
     return z
   },
   HH: function() {
-    return k
+    return B
   },
   Hc: function() {
     return j
@@ -58,7 +58,7 @@ n.d(t, {
     return K
   },
   zj: function() {
-    return B
+    return k
   }
 }), n(789020);
 var i, r, s, o, a, l, u, _, c = n(286379),
@@ -155,7 +155,7 @@ function w(e) {
   return e === d.Q4.BLUR || e === d.Q4.BLOCK
 }
 
-function k(e) {
+function B(e) {
   var t;
   if (!(0, p.Kh)()) return !1;
   let n = A.default.getCurrentUser();
@@ -169,7 +169,7 @@ function k(e) {
   if (o.isDM() || o.isGroupDM()) return null != e.author && N.Z.getFriendIDs().includes(e.author.id) ? w(r) : w(s);
   return w(i)
 }
-let B = e => {
+let k = e => {
   let t = G();
   S.Sh.updateSetting({
     ...t,
@@ -194,7 +194,7 @@ function x(e, t) {
 }
 
 function V(e) {
-  return k(e) ? {
+  return B(e) ? {
     obscuredAttachments: e.attachments.filter(e => x({
       type: 0,
       media: e

@@ -75,8 +75,8 @@ var i, r, s = n(470079),
   b = n(496675),
   G = n(158776),
   w = n(699516),
-  k = n(594174),
-  B = n(979651),
+  B = n(594174),
+  k = n(979651),
   x = n(938475),
   V = n(626135),
   Z = n(823379),
@@ -107,18 +107,18 @@ function en(e, t) {
   return (i && r.length > 0 ? (0, o.orderBy)(n, [e => {
     var t, n;
     return null !== (n = null === (t = L.Z.getUserAffinity(e)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
-  }], ["desc"]) : n).map(e => k.default.getUser(e)).filter(Z.lm)
+  }], ["desc"]) : n).map(e => B.default.getUser(e)).filter(Z.lm)
 }
 
 function ei(e, t) {
   return function(e, t, n, i) {
     let r;
     let o = eo(e),
-      a = s.useMemo(() => o.map(e => k.default.getUser(e)).filter(Z.lm), [o]),
+      a = s.useMemo(() => o.map(e => B.default.getUser(e)).filter(Z.lm), [o]),
       l = a.slice(0, 6),
       u = Math.max(0, a.length - l.length);
     if (null != i && i.length > 0) {
-      let e = H.ZP.getName(t, n, k.default.getUser(i[0]));
+      let e = H.ZP.getName(t, n, B.default.getUser(i[0]));
       r = 1 === i.length ? z.Z.Messages.GUILD_POPOUT_ACTIVITY_STREAMER.format({
         username: e
       }) : z.Z.Messages.GUILD_POPOUT_USERS_STREAMING.format({
@@ -126,7 +126,7 @@ function ei(e, t) {
         count: i.length - 1
       })
     } else if (l.length > 0) {
-      let e = H.ZP.getName(t, n, k.default.getUser(l[0].id));
+      let e = H.ZP.getName(t, n, B.default.getUser(l[0].id));
       r = 1 === l.length ? z.Z.Messages.GUILD_POPOUT_USER_IN_VOICE.format({
         username: e
       }) : z.Z.Messages.GUILD_POPOUT_USERS_IN_VOICE.format({
@@ -190,7 +190,7 @@ function er(e) {
         }) && t !== e.afkChannelId && _.includes(t)
       })
     }, [S, I, _, h, e.afkChannelId]),
-    N = (0, l.e7)([c.ZP, B.Z, D.Z, G.Z, M.Z], () => f.map(e => {
+    N = (0, l.e7)([c.ZP, k.Z, D.Z, G.Z, M.Z], () => f.map(e => {
       var t;
       let n = D.Z.getAllApplicationStreamsForChannel(e).map(e => e.ownerId),
         i = S[e].filter(Z.lm),
@@ -203,7 +203,7 @@ function er(e) {
           } = e;
           return t.id
         }),
-        l = B.Z.hasVideo(e),
+        l = k.Z.hasVideo(e),
         u = [],
         _ = [];
       for (let e of (r.length > 0 && (s = j.L.EMBEDDED_ACTIVITY), i)) {
@@ -393,7 +393,7 @@ function eu(e, t) {
   let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   let s = (n = e, i = t, n.map(e => {
       var t;
-      let n = k.default.getUser(e);
+      let n = B.default.getUser(e);
       if (null == n) return null;
       let r = U.ZP.getNick(i, n.id);
       return null !== (t = null != r ? r : F.ZP.getGlobalName(n)) && void 0 !== t ? t : F.ZP.getUserTag(n)
@@ -460,7 +460,7 @@ let ed = async (e, t) => {
 }, eE = (e, t) => {
   h.Z.handleVoiceConnect({
     channel: t,
-    connected: B.Z.isInChannel(t.id),
+    connected: k.Z.isInChannel(t.id),
     needSubscriptionToAccess: (0, f.$)(t.id).needSubscriptionToAccess,
     locked: !1
   }), (0, O.XU)(e, t.id)

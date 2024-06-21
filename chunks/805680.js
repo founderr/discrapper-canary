@@ -34,8 +34,8 @@ var i = n(735250),
   b = n(185923),
   G = n(611480),
   w = n(689938),
-  k = n(401867);
-let B = P.Om + U.Su.MEDIUM,
+  B = n(401867);
+let k = P.Om + U.Su.MEDIUM,
   x = r.memo(function(e) {
     let {
       isActive: t,
@@ -57,8 +57,8 @@ let B = P.Om + U.Su.MEDIUM,
         }), (0, M.hr)(r)
       },
       "aria-current": t ? "page" : void 0,
-      className: o()(n, k.navButton, k.navItem, {
-        [k.navButtonActive]: t
+      className: o()(n, B.navButton, B.navItem, {
+        [B.navButtonActive]: t
       }),
       look: E.Button.Looks.BLANK,
       size: E.Button.Sizes.NONE
@@ -176,11 +176,11 @@ t.Z = r.memo(function(e) {
     eI = (null === (n = j.stickers) || void 0 === n ? void 0 : n.allowSending) && null != H,
     eT = !(null === (s = j.expressionPicker) || void 0 === s ? void 0 : s.onlyEmojis) && (eE || eI),
     eh = "left" === K ? "right" : "left",
-    eS = null != z ? z : "left" === K ? k.positionLayerDefaultAlignLeft : k.positionLayerDefaultAlignRight;
+    eS = null != z ? z : "left" === K ? B.positionLayerDefaultAlignLeft : B.positionLayerDefaultAlignRight;
   return (0, i.jsx)(T.Z, {
     section: y.jXE.EXPRESSION_PICKER,
     children: (0, i.jsx)(v.W5, {
-      className: o()(k.positionLayer, eS),
+      className: o()(B.positionLayer, eS),
       targetRef: a,
       position: W,
       align: K,
@@ -191,31 +191,31 @@ t.Z = r.memo(function(e) {
           isPositioned: t
         } = e;
         return (0, i.jsx)("section", {
-          className: o()(k.positionContainer, {
-            [k.positionContainerOnlyEmoji]: !eT
+          className: o()(B.positionContainer, {
+            [B.positionContainerOnlyEmoji]: !eT
           }),
           ref: Q,
           role: "dialog",
           "aria-label": w.Z.Messages.EXPRESSION_PICKER,
           children: t ? (0, i.jsxs)("div", {
-            className: k.drawerSizingWrapper,
+            className: B.drawerSizingWrapper,
             style: {
               width: null == et ? void 0 : et,
               [K]: 0
             },
             ref: ee,
             children: [(0, i.jsx)("div", {
-              className: k.resizeHandle,
+              className: B.resizeHandle,
               onMouseDown: en,
               style: {
                 [eh]: -2
               }
             }), (0, i.jsxs)("div", {
-              className: k.contentWrapper,
+              className: B.contentWrapper,
               children: [eT ? (0, i.jsx)("nav", {
-                className: k.nav,
+                className: B.nav,
                 children: (0, i.jsxs)("div", {
-                  className: k.navList,
+                  className: B.navList,
                   role: "tablist",
                   "aria-label": w.Z.Messages.EXPRESSION_PICKER_CATEGORIES_A11Y_LABEL,
                   children: [eE ? (0, i.jsx)(x, {
@@ -233,7 +233,7 @@ t.Z = r.memo(function(e) {
                     autoFocus: !er,
                     viewType: P.X1.STICKER,
                     children: (0, i.jsx)("div", {
-                      className: k.stickersNavItem,
+                      className: B.stickersNavItem,
                       children: w.Z.Messages.EXPRESSION_PICKER_STICKER
                     })
                   }) : null, (0, i.jsx)(x, {
@@ -271,7 +271,7 @@ t.Z = r.memo(function(e) {
                 channel: Y,
                 containerWidth: et,
                 includeCreateEmojiButton: I,
-                emojiSize: null != et && et < B ? U.Su.MEDIUM : U.Su.LARGE,
+                emojiSize: null != et && et < k ? U.Su.MEDIUM : U.Su.LARGE,
                 pickerIntention: b.Hz.CHAT,
                 closePopout: ed,
                 onSelectEmoji: Z,
@@ -279,7 +279,7 @@ t.Z = r.memo(function(e) {
                   $.current = e
                 }
               }) : null, ei === P.X1.SOUNDBOARD ? (0, i.jsx)("div", {
-                className: k.soundboardContainer,
+                className: B.soundboardContainer,
                 children: (0, i.jsx)(O.Z, {
                   guildId: Y.guild_id,
                   channel: Y,

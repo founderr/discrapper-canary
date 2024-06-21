@@ -99,10 +99,10 @@ function w(e) {
   return e.unread = Object.values(e.unreadByType).some(e => e), e
 }
 
-function k(e, t) {}
+function B(e, t) {}
 
-function B(e, t, n) {
-  return w(t), t.mentionCount = r()(t.mentionCounts).values().sum(), (t.unread !== n.unread || t.mentionCount !== n.mentionCount) && (g[null != e ? e : p] = t, null != e && (t.unread ? C.add(e) : C.delete(e)), v++, M(null != e ? e : p), k(t, n), !0)
+function k(e, t, n) {
+  return w(t), t.mentionCount = r()(t.mentionCounts).values().sum(), (t.unread !== n.unread || t.mentionCount !== n.mentionCount) && (g[null != e ? e : p] = t, null != e && (t.unread ? C.add(e) : C.delete(e)), v++, M(null != e ? e : p), B(t, n), !0)
 }
 
 function x(e, t) {
@@ -124,14 +124,14 @@ function x(e, t) {
     if (!(null != e && !t.includes(e.id) && T.ZP.hasUnread(e.id) && y(e))) return Z(n);
     null != n && C.add(n), r.unreadByType[O.W.CHANNEL] = !0
   }
-  return B(n, r, i)
+  return k(n, r, i)
 }
 
 function V(e, t) {
   if (null == e) return;
   let n = D(e),
     i = G(e, n);
-  return i.unreadByType[O.W.GUILD_EVENT] = b(e, t), B(e, i, n)
+  return i.unreadByType[O.W.GUILD_EVENT] = b(e, t), k(e, i, n)
 }
 
 function Z(e, t) {
@@ -177,7 +177,7 @@ function Z(e, t) {
   }
   w(i);
   let r = D(n);
-  return (i.unread !== r.unread || i.mentionCount !== r.mentionCount) && (g[null != n ? n : p] = i, null != n && (i.unread ? C.add(n) : C.delete(n)), v++, M(null != n ? n : p), k(i, r), !0)
+  return (i.unread !== r.unread || i.mentionCount !== r.mentionCount) && (g[null != n ? n : p] = i, null != n && (i.unread ? C.add(n) : C.delete(n)), v++, M(null != n ? n : p), B(i, r), !0)
 }
 
 function H(e) {

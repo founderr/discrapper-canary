@@ -34,8 +34,8 @@ var i = n(735250),
   b = n(652136),
   G = n(981631),
   w = n(957825),
-  k = n(689938),
-  B = n(449210),
+  B = n(689938),
+  k = n(449210),
   x = n(239840);
 let V = (0, p.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
   Z = (0, p.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
@@ -61,9 +61,9 @@ let V = (0, p.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
       onSuggestionClick: t
     } = e;
     return (0, i.jsx)("div", {
-      className: B.searchSuggestions,
+      className: k.searchSuggestions,
       children: er.map(e => (0, i.jsx)(l.Clickable, {
-        className: B.searchSuggestion,
+        className: k.searchSuggestion,
         onClick: () => t(e),
         children: (0, i.jsx)(l.Text, {
           variant: "text-sm/normal",
@@ -157,7 +157,7 @@ let V = (0, p.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
         onInspect: b,
         onSelect: x,
         rowIndex: e,
-        stickerClassName: B.sticker,
+        stickerClassName: k.sticker,
         stickerDescriptors: t,
         stickerSize: n > V ? q : X,
         preferAnimation: n <= Z,
@@ -189,20 +189,20 @@ let V = (0, p.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
         let r = t.length > 0 && n.length > 0;
         return (0, i.jsxs)(i.Fragment, {
           children: [r ? (0, i.jsx)("div", {
-            className: B.divider,
+            className: k.divider,
             children: (0, i.jsx)(l.FormDivider, {})
           }) : null, (0, i.jsx)(f.Z, {
-            className: B.packHeader,
-            "aria-label": k.Z.Messages.STICKERS_YOU_MIGHT_LIKE_A11Y,
-            children: k.Z.Messages.STICKERS_YOU_MIGHT_LIKE
+            className: k.packHeader,
+            "aria-label": B.Z.Messages.STICKERS_YOU_MIGHT_LIKE_A11Y,
+            children: B.Z.Messages.STICKERS_YOU_MIGHT_LIKE
           }, "stickers-you-might-like-header")]
         })
       }
       switch (n.type) {
         case L.Ih.FAVORITE:
           return (0, i.jsx)(f.Z, {
-            className: B.packHeader,
-            "aria-label": k.Z.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
+            className: k.packHeader,
+            "aria-label": B.Z.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
               categoryName: n.name
             }),
             icon: (0, i.jsx)(l.StarIcon, {
@@ -217,8 +217,8 @@ let V = (0, p.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
           }, "header-".concat(n.id));
         case L.Ih.RECENT:
           return (0, i.jsx)(f.Z, {
-            className: B.packHeader,
-            "aria-label": k.Z.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
+            className: k.packHeader,
+            "aria-label": B.Z.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
               categoryName: n.name
             }),
             icon: (0, i.jsx)(l.ClockIcon, {
@@ -236,8 +236,8 @@ let V = (0, p.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
           let e = A.Z.getGuild(n.id);
           if (null == e) return null;
           return (0, i.jsx)(f.Z, {
-            className: B.packHeader,
-            "aria-label": k.Z.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
+            className: k.packHeader,
+            "aria-label": B.Z.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
               categoryName: e.name
             }),
             icon: (0, i.jsx)(E.Z, {
@@ -254,8 +254,8 @@ let V = (0, p.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
           let e = v.Z.getStickerPack(n.id);
           if (null == e) return null;
           return (0, i.jsx)(f.Z, {
-            className: B.packHeader,
-            "aria-label": k.Z.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
+            className: k.packHeader,
+            "aria-label": B.Z.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
               categoryName: e.name
             }),
             icon: (0, i.jsx)(M.ZP, {
@@ -282,7 +282,7 @@ let V = (0, p.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
       let n = S[e],
         r = t.has(n.id);
       return n.type !== L.Ih.EMPTY_GUILD_UPSELL || null != O || r ? null : (0, i.jsx)(P.Z, {
-        className: B.emptyGuildUpsell,
+        className: k.emptyGuildUpsell,
         guildId: n.id,
         channel: g,
         shouldTrackUpsellViewed: !H,
@@ -392,10 +392,10 @@ let V = (0, p.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     }), []), (0, i.jsx)(d.Gt, {
       value: P,
       children: (0, i.jsxs)("div", {
-        className: B.wrapper,
+        className: k.wrapper,
         children: [null != l && 0 === l.sendable.length && 0 === l.sendableWithPremium.length ? (0, i.jsx)(u.Z, {
-          message: k.Z.Messages.NO_STICKER_SEARCH_RESULTS_WITH_SUGGESTIONS,
-          className: B.__invalid_noSearchResultsContainer,
+          message: B.Z.Messages.NO_STICKER_SEARCH_RESULTS_WITH_SUGGESTIONS,
+          className: k.__invalid_noSearchResultsContainer,
           noResultsImageURL: x,
           suggestions: (0, i.jsx)(es, {
             onSuggestionClick: e => (0, T.ql)(e, !0)

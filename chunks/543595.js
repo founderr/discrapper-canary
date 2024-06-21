@@ -35,8 +35,8 @@ var i, r, s, o = n(735250),
   b = n(346656),
   G = n(514342),
   w = n(366966),
-  k = n(936195),
-  B = n(806519),
+  B = n(936195),
+  k = n(806519),
   x = n(981631),
   V = n(701488),
   Z = n(689938),
@@ -218,8 +218,8 @@ class q extends(r = a.PureComponent) {
     else if ((0, v.dS)(e)) {
       let t = (0, v.rq)(e);
       if (null == t) return null;
-      I = (0, o.jsx)(B.ZP, {
-        mask: B.ZP.Masks.SQUIRCLE,
+      I = (0, o.jsx)(k.ZP, {
+        mask: k.ZP.Masks.SQUIRCLE,
         width: V.Si.SMALL,
         height: V.Si.SMALL,
         children: (0, o.jsx)("img", {
@@ -348,7 +348,7 @@ class q extends(r = a.PureComponent) {
     else if (!(0, N.Z)(e)) {
       if (a = s = i, (0, A.Z)(e) && null != i) s = Z.Z.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
         artists: a,
-        artistsHook: (t, n) => (0, o.jsx)(k.Z, {
+        artistsHook: (t, n) => (0, o.jsx)(B.Z, {
           artists: i,
           linkClassName: H.bodyLink,
           canOpen: null != e.sync_id,

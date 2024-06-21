@@ -30,11 +30,11 @@ let P = {},
     lastRequest: null,
     lastResponse: null
   },
-  k = [],
-  B = [];
+  B = [],
+  k = [];
 
 function x() {
-  k = A.Z.getProps().results.filter(e => e.type === f.h8.TEXT_CHANNEL && 0 === e.record.type).map(e => e.record.id)
+  B = A.Z.getProps().results.filter(e => e.type === f.h8.TEXT_CHANNEL && 0 === e.record.type).map(e => e.record.id)
 }
 class V extends(l = T.ZP.PersistedStore) {
   getState() {
@@ -54,7 +54,7 @@ class V extends(l = T.ZP.PersistedStore) {
   }
   summaries(e) {
     var t;
-    return null !== (t = P[e]) && void 0 !== t ? t : B
+    return null !== (t = P[e]) && void 0 !== t ? t : k
   }
   shouldShowTopicsBar() {
     return i
@@ -108,7 +108,7 @@ class V extends(l = T.ZP.PersistedStore) {
       withUnreads: i,
       numChannels: r = 25
     } = e, s = [];
-    return t && (s = s.concat(k)), n && (s = s.concat(b.map(e => e.channel_id))), i && (s = s.filter(e => {
+    return t && (s = s.concat(B)), n && (s = s.concat(b.map(e => e.channel_id))), i && (s = s.filter(e => {
       let t = m.Z.getChannel(e);
       return null != t && !g.ZP.isChannelMuted(t.guild_id, e) && R.ZP.hasUnread(e)
     })), (s = s.filter(e => {

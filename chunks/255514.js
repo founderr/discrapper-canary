@@ -60,8 +60,8 @@ t.Z = e => {
     reportType: n,
     history: G,
     onSelectChild: w,
-    onModalClose: k,
-    onSubmit: B,
+    onModalClose: B,
+    onSubmit: k,
     multiSelect: x,
     reportId: V,
     textInput: Z
@@ -92,7 +92,7 @@ t.Z = e => {
       if (e === M.evJ.INVALID_FORM_BODY) J(P.Z.Messages.IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR);
       else J(P.Z.Messages.MOBILE_REPORTS_SUBMIT_FAILED)
     },
-    el = () => B({
+    el = () => k({
       nodeRef: t.id,
       destination: ["", e.successNodeId]
     }).then(() => {
@@ -104,11 +104,11 @@ t.Z = e => {
       z(!1)
     });
   return r.useEffect(() => {
-    t.is_auto_submit && !q && (X(!0), B({
+    t.is_auto_submit && !q && (X(!0), k({
       nodeRef: t.id,
       destination: ["", t.id]
     }))
-  }, [t.is_auto_submit, q, B, t.id]), (0, i.jsxs)("div", {
+  }, [t.is_auto_submit, q, k, t.id]), (0, i.jsxs)("div", {
     className: y.container,
     children: [(0, i.jsxs)(s.ModalHeader, {
       separator: !1,
@@ -201,7 +201,7 @@ t.Z = e => {
         switch (e.type) {
           case "done":
           case "cancel":
-            k();
+            B();
             break;
           case "next":
             eo(["", e.target]);
@@ -214,7 +214,7 @@ t.Z = e => {
       canNavigateBack: G.length > 0
     }), (0, i.jsx)(s.ModalCloseButton, {
       className: y.closeButton,
-      onClick: k
+      onClick: B
     })]
   })
 }

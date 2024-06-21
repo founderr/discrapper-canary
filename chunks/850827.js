@@ -41,13 +41,13 @@ t.Z = (0, _.Z)(e => {
     source: b,
     color: G = u.Button.Colors.WHITE,
     look: w = u.Button.Looks.OUTLINED,
-    type: k,
-    onAction: B,
+    type: B,
+    onAction: k,
     isEmbedded: x = !1
   } = e, V = (0, l.e7)([I.default], () => {
     let e = I.default.getCurrentUser();
     return a()(null != e, "UserActivityActions: currentUser cannot be undefined"), e
-  }), Z = k === S.Y.PROFILE || k === S.Y.PROFILE_V2 || k === S.Y.SIMPLIFIED_PROFILE, H = k === S.Y.STREAM_PREVIEW || null != o, F = k === S.Y.SIMPLIFIED_PROFILE || k === S.Y.BITE_SIZE_POPOUT, Y = (0, f.Z)(t), j = Z ? h.Z.Align.END : h.Z.Align.STRETCH, W = Y || H ? h.Z.Direction.HORIZONTAL : h.Z.Direction.VERTICAL, K = (null == t ? void 0 : t.type) === M.IIU.HANG_STATUS, z = (0, l.e7)([T.Z, E.Z], () => {
+  }), Z = B === S.Y.PROFILE || B === S.Y.PROFILE_V2 || B === S.Y.SIMPLIFIED_PROFILE, H = B === S.Y.STREAM_PREVIEW || null != o, F = B === S.Y.SIMPLIFIED_PROFILE || B === S.Y.BITE_SIZE_POPOUT, Y = (0, f.Z)(t), j = Z ? h.Z.Align.END : h.Z.Align.STRETCH, W = Y || H ? h.Z.Direction.HORIZONTAL : h.Z.Direction.VERTICAL, K = (null == t ? void 0 : t.type) === M.IIU.HANG_STATUS, z = (0, l.e7)([T.Z, E.Z], () => {
     var e;
     return K ? E.Z.getChannel(null === (e = T.Z.getVoiceStateForUser(r.id)) || void 0 === e ? void 0 : e.channelId) : null
   }), q = W === h.Z.Direction.VERTICAL;
@@ -62,13 +62,13 @@ t.Z = (0, _.Z)(e => {
         platform: c.Z.get(M.ABu.XBOX),
         look: w,
         color: G,
-        onAction: B
+        onAction: k
       }, "ConnectPlatformActivityButton");
       if ((null == t ? void 0 : t.platform) === M.M7m.PS4 || (null == t ? void 0 : t.platform) === M.M7m.PS5) return (0, i.jsx)(A.Z, {
         look: w,
         color: G,
         platform: c.Z.get(M.ABu.PLAYSTATION),
-        onAction: B
+        onAction: k
       }, "ConnectPlatformActivityButton");
       if (Y) {
         let e = (0, i.jsx)(v.Z, {
@@ -79,7 +79,7 @@ t.Z = (0, _.Z)(e => {
             source: b,
             look: w,
             color: G,
-            onAction: B
+            onAction: k
           }, "spotify-activity-sync-button"),
           n = (0, i.jsx)(C.Z, {
             activity: t,
@@ -87,7 +87,7 @@ t.Z = (0, _.Z)(e => {
             source: b,
             look: w,
             color: G,
-            onAction: B
+            onAction: k
           }, "spotify-activity-play-button");
         return F ? (0, i.jsxs)(i.Fragment, {
           children: [e, n]
@@ -103,7 +103,7 @@ t.Z = (0, _.Z)(e => {
           color: G,
           look: w,
           isProfile: Z,
-          onAction: B
+          onAction: k
         }, e.channelId)
       }
       return H ? (0, i.jsx)(D.Z, {
@@ -111,18 +111,18 @@ t.Z = (0, _.Z)(e => {
         color: G,
         look: w,
         applicationStream: o,
-        onAction: B
+        onAction: k
       }, "watch-button") : K && null != z ? (0, i.jsx)(R.Z, {
         color: G,
         look: w,
         hangStatusChannel: z,
-        onAction: B
+        onAction: k
       }, "hang-status-button") : (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(L.Z, {
           activity: t,
           color: G,
           look: w,
-          onAction: B
+          onAction: k
         }, "watch-button"), (0, i.jsx)(O.Z, {
           activity: t,
           embeddedActivity: n,
@@ -130,19 +130,19 @@ t.Z = (0, _.Z)(e => {
           color: G,
           look: w,
           isEmbedded: x,
-          onAction: B
+          onAction: k
         }, "join-activity-button"), (0, i.jsx)(g.Z, {
           activity: t,
           user: r,
           color: G,
           look: w,
-          onAction: B
+          onAction: k
         }, "notify-button"), (0, i.jsx)(m.Z, {
           user: r,
           color: G,
           look: w,
           activity: t,
-          onAction: B
+          onAction: k
         }, "custom-activity-button")]
       })
     })()

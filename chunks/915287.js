@@ -50,8 +50,8 @@ function d(e, t, n, s) {
       paddingBottom: b,
       fade: G = !1,
       customTheme: w = !1,
-      chunkSize: k,
-      style: B,
+      chunkSize: B,
+      style: k,
       innerId: x,
       innerRole: V,
       innerAriaLabel: Z,
@@ -89,7 +89,7 @@ function d(e, t, n, s) {
       listHeaderHeight: g,
       paddingTop: U,
       paddingBottom: b,
-      chunkSize: k,
+      chunkSize: B,
       getScrollerState: $,
       getAnchorId: y
     }), ea = (0, _.t2)(Q), el = r.useRef(S), eu = r.useRef(f);
@@ -169,7 +169,7 @@ function d(e, t, n, s) {
         [n]: w,
         [c.scrolling]: q
       }),
-      style: (0, _.uT)(B),
+      style: (0, _.uT)(k),
       ...W,
       children: [r.useMemo(() => (0, i.jsx)(j, {
         id: x,

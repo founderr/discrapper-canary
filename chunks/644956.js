@@ -59,11 +59,11 @@ function P(e) {
     inlinePreview: U = !1
   } = e, {
     analyticsLocations: b
-  } = (0, T.ZP)(I.Z.ROLE_MENTION), G = (0, u.e7)([E.Z], () => E.Z.roleStyle), w = null != t && 0 !== t && !U, k = w && "dot" === G, B = e => (0, i.jsxs)(f.Z, {
+  } = (0, T.ZP)(I.Z.ROLE_MENTION), G = (0, u.e7)([E.Z], () => E.Z.roleStyle), w = null != t && 0 !== t && !U, B = w && "dot" === G, k = e => (0, i.jsxs)(f.Z, {
     className: s()(D.roleMention),
     color: "username" === G && w ? t : null,
     ...e,
-    children: [k && (0, i.jsx)(_.RoleDot, {
+    children: [B && (0, i.jsx)(_.RoleDot, {
       color: (0, l.Rf)(t),
       className: L.roleDot,
       background: !1,
@@ -78,7 +78,7 @@ function P(e) {
   });
   return !x || U || null == o || null == P || null == r && "@everyone" !== h ? (0, i.jsx)(T.Gt, {
     value: b,
-    children: B()
+    children: k()
   }) : (0, i.jsx)(T.Gt, {
     value: b,
     children: (0, i.jsx)(_.Popout, {
@@ -163,7 +163,7 @@ function P(e) {
         })
       },
       position: "right",
-      children: B
+      children: k
     })
   })
 }

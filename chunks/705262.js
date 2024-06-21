@@ -39,14 +39,14 @@ var i, r, s = n(735250),
   b = n(921944),
   G = n(474936),
   w = n(874893),
-  k = n(526761),
-  B = n(231338),
+  B = n(526761),
+  k = n(231338),
   x = n(689938),
   V = n(758219);
 (r = i || (i = {})).EDITOR = "EDITOR", r.SETTINGS = "SETTINGS";
 let Z = Object.freeze({
-    EDITOR: k.fy.SLOW_USER_ACTION,
-    SETTINGS: k.fy.INFREQUENT_USER_ACTION
+    EDITOR: B.fy.SLOW_USER_ACTION,
+    SETTINGS: B.fy.INFREQUENT_USER_ACTION
   }),
   H = o.createContext({}),
   F = e => {
@@ -162,22 +162,22 @@ W.Basic = e => {
   return (0, s.jsxs)("section", {
     className: l()(V.presets, t),
     children: [(0, s.jsx)(P.bD, {
-      theme: B.BR.LIGHT,
-      isSelected: a && !u && r === B.BR.LIGHT,
-      onSelect: () => c(B.BR.LIGHT)
+      theme: k.BR.LIGHT,
+      isSelected: a && !u && r === k.BR.LIGHT,
+      onSelect: () => c(k.BR.LIGHT)
     }), (0, s.jsx)(P.bD, {
-      theme: B.BR.DARK,
-      isSelected: a && !u && r === B.BR.DARK,
-      onSelect: () => c(B.BR.DARK)
+      theme: k.BR.DARK,
+      isSelected: a && !u && r === k.BR.DARK,
+      onSelect: () => c(k.BR.DARK)
     }), d && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(P.bD, {
-        theme: B.BR.DARKER,
-        isSelected: a && !u && r === B.BR.DARKER,
-        onSelect: () => c(B.BR.DARKER)
+        theme: k.BR.DARKER,
+        isSelected: a && !u && r === k.BR.DARKER,
+        onSelect: () => c(k.BR.DARKER)
       }), (0, s.jsx)(P.bD, {
-        theme: B.BR.MIDNIGHT,
-        isSelected: a && !u && r === B.BR.MIDNIGHT,
-        onSelect: () => c(B.BR.MIDNIGHT)
+        theme: k.BR.MIDNIGHT,
+        isSelected: a && !u && r === k.BR.MIDNIGHT,
+        onSelect: () => c(k.BR.MIDNIGHT)
       })]
     }), (0, s.jsx)(P.bD, {
       theme: "system",
@@ -199,7 +199,7 @@ W.Basic = e => {
   } = (0, h.ZP)(T.Z.CLIENT_THEMES_THEME_SELECTOR), [g, C, v] = (0, _.Wu)([M.Z], () => {
     var e;
     return [M.Z.isPreview, M.Z.isCoachmark, null === (e = M.Z.gradientPreset) || void 0 === e ? void 0 : e.id]
-  }), [L, U] = o.useState(!1), [k, B] = o.useState(-1), Z = (0, _.e7)([I.Z], () => I.Z.useReducedMotion), {
+  }), [L, U] = o.useState(!1), [B, k] = o.useState(-1), Z = (0, _.e7)([I.Z], () => I.Z.useReducedMotion), {
     enabled: W
   } = (0, N.J)({
     location: "GradientSelectors"
@@ -211,8 +211,8 @@ W.Basic = e => {
     }), 5e3), n
   }, [l]);
   o.useEffect(() => {
-    (k === y.XV.length - (W ? 2 : 3) && "EDITOR" === u || v === c.Us.EASTER_EGG) && U(!0)
-  }, [k, u, v, W]);
+    (B === y.XV.length - (W ? 2 : 3) && "EDITOR" === u || v === c.Us.EASTER_EGG) && U(!0)
+  }, [B, u, v, W]);
   let q = (e, t) => {
     (0, D.zO)(e.id), F({
       isPersisted: !g,
@@ -230,11 +230,11 @@ W.Basic = e => {
         backgroundGradientPresetId: e.id,
         theme: e.theme
       }, S), null != t) {
-      if (L && U(!1), t <= k || 0 === t) {
-        B(0);
+      if (L && U(!1), t <= B || 0 === t) {
+        k(0);
         return
       }
-      B(e => e + 1)
+      k(e => e + 1)
     }
   };
   return (0, s.jsxs)("section", {

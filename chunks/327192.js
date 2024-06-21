@@ -38,8 +38,8 @@ var i = n(735250),
   b = n(494620),
   G = n(205266),
   w = n(216153),
-  k = n(981631),
-  B = n(856651),
+  B = n(981631),
+  k = n(856651),
   x = n(921944),
   V = n(689938),
   Z = n(417276),
@@ -194,9 +194,9 @@ function Y(e) {
       var t;
       let n = f.Z.get(e.type),
         r = f.Z.get(X),
-        s = "1" === (null !== (t = e.metadata) && void 0 !== t ? t : {})[B.PC.TWITTER_VERIFIED],
+        s = "1" === (null !== (t = e.metadata) && void 0 !== t ? t : {})[k.PC.TWITTER_VERIFIED],
         o = null;
-      return n.type === k.ABu.TWITTER && s && (o = (0, i.jsx)(c.Tooltip, {
+      return n.type === B.ABu.TWITTER && s && (o = (0, i.jsx)(c.Tooltip, {
         text: V.Z.Messages.CONNECTION_VERIFIED_ON_TWITTER,
         children: e => (0, i.jsx)(L.Z, {
           ...e,
@@ -245,34 +245,34 @@ function Y(e) {
           })
         })]
       })
-    }(I), (t = I).twoWayLink ? null : t.type === k.ABu.XBOX ? (0, i.jsx)("div", {
+    }(I), (t = I).twoWayLink ? null : t.type === B.ABu.XBOX ? (0, i.jsx)("div", {
       className: Z.upsellWrapper,
       children: (0, i.jsx)(w.Y, {})
-    }) : t.type === k.ABu.PLAYSTATION ? (0, i.jsx)("div", {
+    }) : t.type === B.ABu.PLAYSTATION ? (0, i.jsx)("div", {
       className: Z.upsellWrapper,
       children: (0, i.jsx)(G.t, {})
     }) : null, function(e) {
       var t;
       let n = null !== (t = e.metadata) && void 0 !== t ? t : {},
         r = null,
-        s = (0, A.FI)(n[B.PC.CREATED_AT], S);
+        s = (0, A.FI)(n[k.PC.CREATED_AT], S);
       switch (e.type) {
-        case k.ABu.REDDIT:
+        case B.ABu.REDDIT:
           r = (0, O.oP)(n, Z.metadataItem);
           break;
-        case k.ABu.STEAM:
+        case B.ABu.STEAM:
           r = (0, O.Dq)(n, Z.metadataItem);
           break;
-        case k.ABu.TWITTER:
+        case B.ABu.TWITTER:
           r = (0, O.rJ)(n, Z.metadataItem);
           break;
-        case k.ABu.EBAY:
+        case B.ABu.EBAY:
           r = (0, O.ul)(n, Z.metadataItem);
           break;
-        case k.ABu.PAYPAL:
+        case B.ABu.PAYPAL:
           r = (0, O.li)(n, Z.metadataItem);
           break;
-        case k.ABu.TIKTOK:
+        case B.ABu.TIKTOK:
           r = (0, O.hf)(n, Z.metadataItem)
       }
       null !== s && (null == r && (r = []), null == r || r.push((0, i.jsx)(c.Text, {
@@ -294,7 +294,7 @@ function Y(e) {
           variant: "text-xs/normal",
           className: Z.connectionMetadataUpsellDescription,
           children: V.Z.Messages.CONNECTED_ACCOUNT_ADD_DETAILS_DESCRIPTION.format({
-            helpdeskUrl: P.Z.getArticleURL(k.BhN.CONNECTION_DETAILS)
+            helpdeskUrl: P.Z.getArticleURL(B.BhN.CONNECTION_DETAILS)
           })
         }, "label")], a = V.Z.Messages.CONNECTED_ACCOUNT_ADD_DETAILS
       }
@@ -316,7 +316,7 @@ function Y(e) {
         className: Z.metadataContainer,
         children: r
       })
-    }(I), (n = Q, k.BFP.has(I.type) && (o = (0, i.jsx)(c.FormSwitch, {
+    }(I), (n = Q, B.BFP.has(I.type) && (o = (0, i.jsx)(c.FormSwitch, {
       className: Z.connectionOptionSwitch,
       hideBorder: !0,
       value: R,
@@ -325,7 +325,7 @@ function Y(e) {
         variant: "text-sm/semibold",
         children: V.Z.Messages.SYNC_FRIENDS
       })
-    })), k.vbS.has(I.type) && (a = (0, i.jsx)(c.FormSwitch, {
+    })), B.vbS.has(I.type) && (a = (0, i.jsx)(c.FormSwitch, {
       className: Z.connectionOptionSwitch,
       hideBorder: !0,
       value: M,
@@ -406,7 +406,7 @@ function j() {
       variant: "text-xs/normal",
       color: "header-secondary",
       children: V.Z.Messages.CONNECTIONS_USER_SETTINGS_CONNECT_ACCOUNTS_DESCRIPTION.format({
-        privacyPolicyUrl: k.EYA.PRIVACY
+        privacyPolicyUrl: B.EYA.PRIVACY
       })
     }), (0, i.jsx)(K, {})]
   })
@@ -416,7 +416,7 @@ function W(e) {
   let t = f.Z.get(e);
   (0, m.Z)({
     platformType: t.type
-  }), M.default.track(k.rMx.ACCOUNT_LINK_STEP, {
+  }), M.default.track(B.rMx.ACCOUNT_LINK_STEP, {
     previous_step: "desktop connections",
     current_step: "desktop oauth",
     platform_type: t.type

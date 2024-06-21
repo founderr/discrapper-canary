@@ -29,11 +29,11 @@ let y = "SelectedChannelStore",
   G = {},
   w = new Set;
 
-function k(e) {
+function B(e) {
   return String(e)
 }
 
-function B() {
+function k() {
   !__OVERLAY__ && S.K.set(y, {
     selectedChannelId: s,
     selectedVoiceChannelId: a,
@@ -85,11 +85,11 @@ function H() {
 function F(e, t) {
   if (w.delete(e), null == t) {
     let n = D.Z.getGuildId();
-    U[k(n)] === e && (t = n)
+    U[B(n)] === e && (t = n)
   }
   let n = null != v.Z.getGuild(t) ? t : null,
     i = !1;
-  a === e && (a = null, i = !0), !(0, N.cn)() && (U[k(n)] === e && (U[k(n)] = x(k(n)), D.Z.getGuildId() === n && (0, m.dL)(M.Z5c.CHANNEL(t, U[k(n)])), i = !0), null != n && G[n] === e && (delete G[n], i = !0)), i && B()
+  a === e && (a = null, i = !0), !(0, N.cn)() && (U[B(n)] === e && (U[B(n)] = x(B(n)), D.Z.getGuildId() === n && (0, m.dL)(M.Z5c.CHANNEL(t, U[B(n)])), i = !0), null != n && G[n] === e && (delete G[n], i = !0)), i && k()
 }
 
 function Y(e) {
@@ -123,7 +123,7 @@ class j extends(_ = h.ZP.Store) {
   getChannelId(e) {
     var t, n;
     let i = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-      r = k(e === M.ME ? null : null !== (t = null != e ? e : D.Z.getGuildId()) && void 0 !== t ? t : null);
+      r = B(e === M.ME ? null : null !== (t = null != e ? e : D.Z.getGuildId()) && void 0 !== t ? t : null);
     return i ? null !== (n = U[r]) && void 0 !== n ? n : x(r) : U[r]
   }
   getVoiceChannelId() {
@@ -153,7 +153,7 @@ E = "SelectedChannelStore", (d = "displayName") in(c = j) ? Object.definePropert
   writable: !0
 }) : c[d] = E, t.Z = new j(f.Z, {
   CONNECTION_OPEN: function(e) {
-    i = e.sessionId, null != a && null == g.Z.getChannel(a) && (a = null), H() && B()
+    i = e.sessionId, null != a && null == g.Z.getChannel(a) && (a = null), H() && k()
   },
   OVERLAY_INITIALIZE: function(e) {
     i = e.sessionId, a = e.selectedVoiceChannelId, U = {}, b = {}, s = e.selectedChannelId, U[e.selectedGuildId] = e.selectedChannelId, V(e.selectedGuildId, s), H()
@@ -167,7 +167,7 @@ E = "SelectedChannelStore", (d = "displayName") in(c = j) ? Object.definePropert
       channelId: n
     } = e;
     if (void 0 === t) return !1;
-    null == n && (!(0, N.cn)() || (0, A.Z0)(t)) && (n = x(t)), null != s && n !== s && (r = s), s = n, V(t, n), U[k(t)] !== n && (b[k(t)] = U[k(t)], U[k(t)] = s), B()
+    null == n && (!(0, N.cn)() || (0, A.Z0)(t)) && (n = x(t)), null != s && n !== s && (r = s), s = n, V(t, n), U[B(t)] !== n && (b[B(t)] = U[B(t)], U[B(t)] = s), k()
   },
   CHANNEL_CREATE: function(e) {
     let {
@@ -195,7 +195,7 @@ E = "SelectedChannelStore", (d = "displayName") in(c = j) ? Object.definePropert
     } = e;
     if (null == U[t.id]) {
       let e = x(t.id);
-      U[t.id] = e, V(t.id, e), B()
+      U[t.id] = e, V(t.id, e), k()
     }
   },
   GUILD_DELETE: function(e) {
@@ -206,7 +206,7 @@ E = "SelectedChannelStore", (d = "displayName") in(c = j) ? Object.definePropert
       }
     } = e;
     if (a === U[t] && (a = null), n) return !1;
-    delete G[t], delete U[t], B()
+    delete G[t], delete U[t], k()
   },
   VOICE_CHANNEL_SELECT: function(e) {
     let {
@@ -217,7 +217,7 @@ E = "SelectedChannelStore", (d = "displayName") in(c = j) ? Object.definePropert
         t = null == e ? void 0 : e.guild_id;
       null != t && t !== D.Z.getGuildId() && U[t] === a && (U[t] = x(t))
     }
-    a = t, B()
+    a = t, k()
   },
   VOICE_STATE_UPDATES: function(e) {
     let {
@@ -229,14 +229,14 @@ E = "SelectedChannelStore", (d = "displayName") in(c = j) ? Object.definePropert
         clearInterval(u);
         let e = null === (n = g.Z.getChannel(a)) || void 0 === n ? void 0 : n.getGuildId();
         t.guildId !== e && null == t.channelId || (a = t.channelId), l = Date.now(), null != a && (u = setInterval(() => {
-          l = Date.now(), B()
-        }, 6e4)), B()
+          l = Date.now(), k()
+        }, 6e4)), k()
       } else {
         if (t.userId !== p.default.getId()) return e;
         clearInterval(u), u = void 0, l = 0;
         let n = null === (r = g.Z.getChannel(a)) || void 0 === r ? void 0 : r.getGuildId(),
           i = null === (s = g.Z.getChannel(t.channelId)) || void 0 === s ? void 0 : s.getGuildId();
-        (null != n && i === n || a === t.channelId) && (a = null), B()
+        (null != n && i === n || a === t.channelId) && (a = null), k()
       }
       return !0
     }, !1)
@@ -249,7 +249,7 @@ E = "SelectedChannelStore", (d = "displayName") in(c = j) ? Object.definePropert
     (null == o || t !== o.channelId) && (o = {
       channelId: t,
       guildId: n
-    }, B())
+    }, k())
   },
   LOGOUT: function() {
     U = {}, s = null, r = void 0, G = {}, o = {}, a = null, S.K.remove(y)

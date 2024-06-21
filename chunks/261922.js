@@ -168,7 +168,7 @@ class C extends(r = a.Component) {
       readyState: M,
       hasMouseOver: P,
       hasFocus: y
-    } = this.state, U = null != n, b = this.getRatio(), G = (0, l.clamp)(Math.round(T * b), null != S ? S : 0, null != N ? N : 1 / 0), w = (0, l.clamp)(Math.round(h * b), null != f ? f : 0, null != A ? A : 1 / 0), k = {
+    } = this.state, U = null != n, b = this.getRatio(), G = (0, l.clamp)(Math.round(T * b), null != S ? S : 0, null != N ? N : 1 / 0), w = (0, l.clamp)(Math.round(h * b), null != f ? f : 0, null != A ? A : 1 / 0), B = {
       alt: e,
       readyState: M,
       onContextMenu: null != r ? r : void 0,
@@ -204,16 +204,16 @@ class C extends(r = a.Component) {
       onFocus: this.onFocus,
       onBlur: this.onBlur
     };
-    if (1 === k.width && 1 === k.height) return null;
-    switch ((U || null != m) && (k.onClick = this.onClick), i && (k.original = null != a && "" !== a ? a : k.src), M) {
+    if (1 === B.width && 1 === B.height) return null;
+    switch ((U || null != m) && (B.onClick = this.onClick), i && (B.original = null != a && "" !== a ? a : B.src), M) {
       case O.zo9.LOADING:
-        null != t && (k.src = t);
+        null != t && (B.src = t);
         break;
       case O.zo9.READY:
         if (C.isAnimated(this.props)) {
-          k.onMouseLeave = this.onMouseLeave;
+          B.onMouseLeave = this.onMouseLeave;
           let e = (s || P || y) && (null == I || I) && C.visibilityObserver.isVisible(this);
-          e ? (k.src = this.getSrc(b), k.renderAccessory = R) : (k.src = this.getSrc(b, !E || !s), k.renderAccessory = this.renderAccessory), null != d && (k.children = t => {
+          e ? (B.src = this.getSrc(b), B.renderAccessory = R) : (B.src = this.getSrc(b, !E || !s), B.renderAccessory = this.renderAccessory), null != d && (B.children = t => {
             let {
               src: n,
               size: i,
@@ -228,10 +228,10 @@ class C extends(r = a.Component) {
               mediaLayoutType: s
             })
           })
-        } else k.src = this.getSrc(b)
+        } else B.src = this.getSrc(b)
     }
     return (0, o.jsx)(c.E, {
-      ...k
+      ...B
     })
   }
   async trackLoadingCompleted(e, t, n) {

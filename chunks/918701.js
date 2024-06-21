@@ -68,13 +68,13 @@ n.d(t, {
     return eI
   },
   gO: function() {
-    return k
+    return B
   },
   il: function() {
     return eA
   },
   j8: function() {
-    return B
+    return k
   },
   lQ: function() {
     return L
@@ -327,7 +327,7 @@ function G(e) {
 function w(e, t) {
   return e.startsWith("data") ? e : t
 }
-let k = e => {
+let B = e => {
     var t, n;
     let i = ec({
         quest: e,
@@ -340,7 +340,7 @@ let k = e => {
       url: w(s, "".concat(g).concat(e.id, "/").concat(s))
     }
   },
-  B = e => w(e.config.assets.hero, "".concat(g).concat(e.id, "/").concat(e.config.assets.hero)),
+  k = e => w(e.config.assets.hero, "".concat(g).concat(e.id, "/").concat(e.config.assets.hero)),
   x = e => w(e.config.assets.questBarHero, "".concat(g).concat(e.id, "/").concat(e.config.assets.questBarHero)),
   V = (e, t) => w(e.config.assets.gameTile, "".concat(g).concat(e.id, "/").concat(t, "/").concat(e.config.assets.gameTile)),
   Z = (e, t) => w(e.config.assets.logotype, "".concat(g).concat(e.id, "/").concat(t, "/").concat(e.config.assets.logotype)),

@@ -34,8 +34,8 @@ var i = n(735250),
   b = n(445062),
   G = n(7188),
   w = n(199902),
-  k = n(314897),
-  B = n(131951),
+  B = n(314897),
+  k = n(131951),
   x = n(699516),
   V = n(594174),
   Z = n(248402),
@@ -177,11 +177,11 @@ class ea extends r.PureComponent {
       streamId: t,
       participantOnScreen: n,
       isVideoEnabled: r
-    } = this.props, s = (0, O.F6)(e, V.default, x.Z), a = this.isEmptyBroadcast(), l = (null == n ? void 0 : n.id) === k.default.getId() && r, u = this.renderStreamState(), _ = null;
+    } = this.props, s = (0, O.F6)(e, V.default, x.Z), a = this.isEmptyBroadcast(), l = (null == n ? void 0 : n.id) === B.default.getId() && r, u = this.renderStreamState(), _ = null;
     return (null == n ? void 0 : n.type) !== ei.fO.ACTIVITY && (null != u ? _ = u : ((null == n ? void 0 : n.type) === ei.fO.USER || (null == n ? void 0 : n.type) === ei.fO.STREAM) && (_ = (0, i.jsx)(q.Z, {
       paused: this.streamerPaused,
       streamId: t,
-      component: B.Z.getVideoComponent(),
+      component: k.Z.getVideoComponent(),
       mirror: l,
       children: (0, i.jsx)(Y.Z, {
         size: d.AvatarSizes.SIZE_80,
@@ -315,10 +315,10 @@ class ea extends r.PureComponent {
     })
   }
 }
-t.Z = c.ZP.connectStores([B.Z, N.Z, k.default, Z.Z, H.Z, w.Z, F.Z], e => {
+t.Z = c.ZP.connectStores([k.Z, N.Z, B.default, Z.Z, H.Z, w.Z, F.Z], e => {
   let {
     channel: t
-  } = e, n = Z.Z.getSpeaker(t.id), i = N.Z.getParticipant(t.id, n), r = _()(B.Z.getVideoDevices()).values().first(), s = null == r || r.disabled, o = null != i && i.type !== ei.fO.ACTIVITY && i.type !== ei.fO.HIDDEN_STREAM ? H.Z.getStreamId(i.user.id, t.getGuildId(), (0, A.Z)(i.type)) : null, a = !s && B.Z.isVideoEnabled(), l = (0, p.Z)(B.Z), u = k.default.getId(), c = w.Z.getCurrentUserActiveStream(), d = (0, S.tA)(t.id);
+  } = e, n = Z.Z.getSpeaker(t.id), i = N.Z.getParticipant(t.id, n), r = _()(k.Z.getVideoDevices()).values().first(), s = null == r || r.disabled, o = null != i && i.type !== ei.fO.ACTIVITY && i.type !== ei.fO.HIDDEN_STREAM ? H.Z.getStreamId(i.user.id, t.getGuildId(), (0, A.Z)(i.type)) : null, a = !s && k.Z.isVideoEnabled(), l = (0, p.Z)(k.Z), u = B.default.getId(), c = w.Z.getCurrentUserActiveStream(), d = (0, S.tA)(t.id);
   return {
     channel: t,
     streamId: o,

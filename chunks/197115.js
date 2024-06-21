@@ -38,8 +38,8 @@ t.Z = function(e) {
     disableShine: b,
     applicationId: G,
     giftMessage: w,
-    overrideDisabledButtonText: k,
-    shinyButtonClassName: B,
+    overrideDisabledButtonText: B,
+    shinyButtonClassName: k,
     onClickOverride: x,
     showGradient: V = !1,
     ...Z
@@ -172,7 +172,7 @@ t.Z = function(e) {
     X = r === f.Si.TIER_2 && null != q && [f.p9.TIER_0, f.p9.TIER_1].includes(q);
   X && (K = A.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE);
   let Q = null != Y && Y.status !== N.O0b.ACCOUNT_HOLD && !(0, E.Q0)(Y.planId) && !X,
-    J = Q ? null != k ? k : function(e) {
+    J = Q ? null != B ? B : function(e) {
       let {
         ctaSubscriptionSkuId: t,
         currentPremiumType: n
@@ -201,7 +201,7 @@ t.Z = function(e) {
       innerClassName: m.premiumSubscribeButton,
       color: r === f.Si.TIER_1 ? a.Button.Colors.PRIMARY : a.Button.Colors.GREEN,
       size: R,
-      className: B,
+      className: k,
       wrapperClassName: s()({
         [m.tier2Gradient]: V && r === f.Si.TIER_2,
         [m.tier1Gradient]: V && r === f.Si.TIER_1

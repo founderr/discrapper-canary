@@ -270,12 +270,12 @@ let G = new class e {
 function w() {
   G.reset()
 }
-let k = [];
+let B = [];
 
-function B() {
+function k() {
   let e = S.Z.getAllApplicationStreams(),
-    t = k.concat(e);
-  k = e, t.forEach(e => {
+    t = B.concat(e);
+  B = e, t.forEach(e => {
     G.forEach(null, t => t.rebuildMember(e.ownerId, !0))
   })
 }
@@ -286,7 +286,7 @@ function x() {
 }
 class V extends(r = c.ZP.Store) {
   initialize() {
-    this.waitFor(g.default, O.Z, N.Z, m.ZP, R.Z, p.Z, f.default, A.Z, S.Z, E.Z), this.syncWith([p.Z], x), this.syncWith([S.Z], B)
+    this.waitFor(g.default, O.Z, N.Z, m.ZP, R.Z, p.Z, f.default, A.Z, S.Z, E.Z), this.syncWith([p.Z], x), this.syncWith([S.Z], k)
   }
   getProps(e, t) {
     let n = G.get(e, U(t));

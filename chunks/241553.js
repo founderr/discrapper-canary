@@ -80,8 +80,8 @@ let y = [{
   b = 1 / 300,
   G = R.Z.Millis.DAYS_30,
   w = (0, s.animated)(m.Z),
-  k = (0, s.animated)(O.Z),
-  B = (0, s.animated)(u.GiftIcon);
+  B = (0, s.animated)(O.Z),
+  k = (0, s.animated)(u.GiftIcon);
 
 function x(e) {
   let {
@@ -117,7 +117,7 @@ function x(e) {
       friction: 24
     }
   }), I = o ? d : 0, T = (0, l.wj)(null != t ? t : u) ? a.dark[I] : a.light[I];
-  return !n && o ? (0, i.jsx)(B, {}) : o && _ ? (0, i.jsx)(k, {
+  return !n && o ? (0, i.jsx)(k, {}) : o && _ ? (0, i.jsx)(B, {
     isDark: (0, l.wj)(u),
     style: E
   }) : (0, i.jsx)(w, {
@@ -140,7 +140,7 @@ t.Z = r.memo(function(e) {
     autoTrackExposure: y
   }), b = [];
   U && y && b.push(a.z.SEASONAL_GIFTING_COACHMARK_2023);
-  let [w, k] = (0, T.U)(b), B = null != w, V = (0, g.Ft)(n), Z = null != V;
+  let [w, B] = (0, T.U)(b), k = null != w, V = (0, g.Ft)(n), Z = null != V;
   if (t) return null;
   let H = () => {
       (0, h.Z)({
@@ -165,10 +165,10 @@ t.Z = r.memo(function(e) {
       onMouseLeave: () => {
         c(!1)
       },
-      children: [B && (0, i.jsx)(_.Z, {
+      children: [k && (0, i.jsx)(_.Z, {
         onComplete: () => c(!1),
         onDMCheckItOutClick: H,
-        markAsDismissed: k,
+        markAsDismissed: B,
         isDM: Z
       }), (0, i.jsx)(A.Z, {
         innerClassName: P.button,
@@ -183,12 +183,12 @@ t.Z = r.memo(function(e) {
           className: M.noPointerEvents,
           children: (0, i.jsx)(x, {
             hovered: l,
-            isContentDismissed: !B
+            isContentDismissed: !k
           })
         })
       })]
     });
-  return B ? F : (0, i.jsx)(u.TooltipContainer, {
+  return k ? F : (0, i.jsx)(u.TooltipContainer, {
     className: M.container,
     text: (0, _.i)(Z),
     children: F

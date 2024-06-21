@@ -40,12 +40,12 @@ t.Z = e => {
     isBurstReaction: G,
     inNitroLockedSection: w
   } = e, {
-    enabled: k
+    enabled: B
   } = T.Z.useExperiment({
     location: "EmojiPicker"
   }, {
     autoTrackExposure: !1
-  }), B = c.kJ.getState(), [x, V] = r.useState(B.inspectedExpressionPosition), [Z, H] = (0, l.Z)(null, 300), F = r.useRef(null);
+  }), k = c.kJ.getState(), [x, V] = r.useState(k.inspectedExpressionPosition), [Z, H] = (0, l.Z)(null, 300), F = r.useRef(null);
   r.useEffect(() => c.kJ.useStore.subscribe(e => V(e), e => e.inspectedExpressionPosition), []), r.useEffect(() => {
     E.DZ.loadIfNecessary()
   }, []);
@@ -150,7 +150,7 @@ t.Z = e => {
       children: e.map(W)
     });
   if (y !== f.En.TOP_GUILD_EMOJI) return K(t);
-  let z = t.filter(e => !!k && e.type === h.ld.CREATE_EMOJI || e.subCategory === f.t0.TOP_GUILD_EMOJI || e.subCategory === f.t0.NEWLY_ADDED_EMOJI && e.emoji.type === u.B.GUILD && !_.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
+  let z = t.filter(e => !!B && e.type === h.ld.CREATE_EMOJI || e.subCategory === f.t0.TOP_GUILD_EMOJI || e.subCategory === f.t0.NEWLY_ADDED_EMOJI && e.emoji.type === u.B.GUILD && !_.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
     q = t.filter(e => e.subCategory === f.t0.NEWLY_ADDED_EMOJI && e.emoji.type === u.B.GUILD && _.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
   return 0 === q.length ? K(t) : (0, i.jsxs)("div", {
     className: m.topEmojiSectionContainer,

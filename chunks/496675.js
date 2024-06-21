@@ -70,17 +70,17 @@ function w(e) {
   }
 }
 
-function k() {
+function B() {
   for (let e in D = {}, M = {}, P) P[e] += 1;
   y += 1
 }
 
-function B() {
-  k()
+function k() {
+  B()
 }
 
 function x() {
-  k()
+  B()
 }
 
 function V(e) {
@@ -89,7 +89,7 @@ function V(e) {
     user: n
   } = e;
   if (n.id !== (null === (t = C.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
-  k()
+  B()
 }
 
 function Z() {
@@ -252,11 +252,11 @@ o = "PermissionStore", (s = "displayName") in(r = K) ? Object.defineProperty(r, 
   configurable: !0,
   writable: !0
 }) : r[s] = o, t.Z = new K(c.Z, {
-  BACKGROUND_SYNC: B,
-  CONNECTION_OPEN: B,
-  OVERLAY_INITIALIZE: B,
-  CACHE_LOADED: B,
-  CACHE_LOADED_LAZY: B,
+  BACKGROUND_SYNC: k,
+  CONNECTION_OPEN: k,
+  OVERLAY_INITIALIZE: k,
+  CACHE_LOADED: k,
+  CACHE_LOADED_LAZY: k,
   CONNECTION_CLOSED: function() {
     z()
   },

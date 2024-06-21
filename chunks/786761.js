@@ -61,8 +61,8 @@ function O(e) {
   } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, v = m(e), M = null !== (r = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== r ? r : [], P = null !== (o = e.mention_roles) && void 0 !== o ? o : [], y = null !== (l = e.mention_channels) && void 0 !== l ? l : [], U = e.message_reference, b = e.type === N.uaV.THREAD_CREATED ? [] : (0, s.ZP)(e.content);
   let G = null == (f = e).author ? A : null != f.webhook_id ? new c.Z(f.author) : null !== (O = I.default.getUser(f.author.id)) && void 0 !== O ? O : new c.Z(f.author),
     w = null == e ? void 0 : e.gift_info,
-    k = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
-    B = e.type === N.uaV.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
+    B = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
+    k = e.type === N.uaV.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
     x = e.type === N.uaV.PREMIUM_REFERRAL ? e.content : void 0,
     V = e.content;
   return e.type === N.uaV.PREMIUM_REFERRAL && (V = ""), R = 0, new _.ZP({
@@ -70,7 +70,7 @@ function O(e) {
     ...v.toJS(),
     author: G,
     webhookId: e.webhook_id,
-    blocked: E.Z.isBlockedForMessage(e) || null != B && E.Z.isBlocked(B),
+    blocked: E.Z.isBlockedForMessage(e) || null != k && E.Z.isBlocked(k),
     mentionEveryone: e.mention_everyone,
     mentions: M,
     mentionRoles: P,
@@ -90,7 +90,7 @@ function O(e) {
     call: C(e.call, v.timestamp),
     messageSnapshots: D(e),
     reactions: L(null != p ? p : e.reactions, e.poll),
-    interaction: k,
+    interaction: B,
     interactionData: null != g ? g : e.interaction_data,
     interactionMetadata: e.interaction_metadata,
     roleSubscriptionData: e.role_subscription_data,

@@ -43,8 +43,8 @@ t.Z = function(e) {
     memberListItemRef: m,
     applicationStream: O,
     position: w,
-    closePopout: k,
-    updatePosition: B
+    closePopout: B,
+    updatePosition: k
   } = e, x = (0, a.e7)([N.Z], () => {
     var e;
     return null !== (e = N.Z.getChannel(null == O ? void 0 : O.channelId)) && void 0 !== e ? e : null
@@ -57,21 +57,21 @@ t.Z = function(e) {
   } = (0, E.Z)(), [X, Q] = r.useState(K), J = (0, I.Aq)(), $ = (0, o.eg)();
   r.useEffect(() => {
     let e = $.current;
-    return null == e || e.addEventListener("scroll", k), () => {
-      null == e || e.removeEventListener("scroll", k)
+    return null == e || e.addEventListener("scroll", B), () => {
+      null == e || e.removeEventListener("scroll", B)
     }
-  }, [k, $]), r.useEffect(() => {
+  }, [B, $]), r.useEffect(() => {
     let e = $.current,
       t = m.current;
     if (null == e || null == t) return;
-    let n = new MutationObserver(() => B());
+    let n = new MutationObserver(() => k());
     return n.observe(e, {
       childList: !0,
       subtree: !0
     }), () => {
       n.disconnect()
     }
-  }, [m, $, B]);
+  }, [m, $, k]);
   let ee = (0, s.useSpring)({
       from: {
         height: 0

@@ -4,7 +4,7 @@ n.d(t, {
     return V
   },
   Rc: function() {
-    return B
+    return k
   },
   W1: function() {
     return H
@@ -40,7 +40,7 @@ n.d(t, {
     return D
   },
   xc: function() {
-    return k
+    return B
   }
 });
 var i = n(512722),
@@ -185,7 +185,7 @@ async function w(e, t, n) {
     })
   }
 }
-async function k(e) {
+async function B(e) {
   try {
     await m.Z.post({
       url: C.ANM.STREAM_NOTIFY(e),
@@ -197,7 +197,7 @@ async function k(e) {
   } catch (e) {}
 }
 
-function B(e) {
+function k(e) {
   (0, A.Ye)(e.preset, e.resolution, e.frameRate), a.Z.dispatch({
     type: "STREAM_UPDATE_SETTINGS",
     ...e

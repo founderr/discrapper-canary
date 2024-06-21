@@ -41,7 +41,7 @@ t.Z = r.forwardRef(function(e, t) {
   let {
     channel: n,
     canOnlyUseTextCommands: s
-  } = e, a = r.useRef(!1), l = r.useRef(0), [G, w] = r.useState(0), k = r.useRef(null), [B, x] = r.useState(!1), V = E.Xn.useStore(e => e.activeCategoryIndex);
+  } = e, a = r.useRef(!1), l = r.useRef(0), [G, w] = r.useState(0), B = r.useRef(null), [k, x] = r.useState(!1), V = E.Xn.useStore(e => e.activeCategoryIndex);
   r.useEffect(() => {
     (0, c.yw)(L.rMx.APPLICATION_COMMAND_BROWSER_OPENED)
   }, []);
@@ -65,7 +65,7 @@ t.Z = r.forwardRef(function(e, t) {
   }), q = (0, I.Qs)({
     activeCategoryIndex: V,
     isScrolling: a,
-    listRef: k,
+    listRef: B,
     onActiveCategoryIndexChange: e => {
       let t = H[e];
       if (null != t) {
@@ -86,17 +86,17 @@ t.Z = r.forwardRef(function(e, t) {
   let Q = r.useCallback(e => e !== H.length - 1 || Y ? 16 : 0, [H.length, Y]),
     J = F.map(e => e.data.length);
   r.useEffect(() => {
-    null != k.current && B && null != G && k.current.scrollRowIntoView(G)
-  }, [B, G]), r.useLayoutEffect(() => {
+    null != B.current && k && null != G && B.current.scrollRowIntoView(G)
+  }, [k, G]), r.useLayoutEffect(() => {
     if (null != W) {
       var e;
-      null === (e = k.current) || void 0 === e || e.scrollToSectionTop(0)
+      null === (e = B.current) || void 0 === e || e.scrollToSectionTop(0)
     }
   }, [j, W]);
   let $ = r.useCallback(e => {
       if (e.id === W || e.id === v.bi.FRECENCY) {
         var t;
-        z(null), null === (t = k.current) || void 0 === t || t.scrollToSectionTop(0)
+        z(null), null === (t = B.current) || void 0 === t || t.scrollToSectionTop(0)
       } else z(e.id)
     }, [z, W]),
     ee = r.useCallback((e, t, i) => {
@@ -204,7 +204,7 @@ t.Z = r.forwardRef(function(e, t) {
       filteredSectionId: W,
       activeCategoryIndex: V,
       onSectionClick: $,
-      applicationCommandListRef: k
+      applicationCommandListRef: B
     }), (0, i.jsx)(S.Z, {
       role: "listbox",
       className: M.list,
@@ -218,7 +218,7 @@ t.Z = r.forwardRef(function(e, t) {
       rowHeight: 56,
       sectionHeaderHeight: 32,
       sectionMarginBottom: Q,
-      ref: k,
+      ref: B,
       stickyHeaders: !0
     })]
   })

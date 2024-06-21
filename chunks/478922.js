@@ -48,7 +48,7 @@ function _(e, t, n) {
       style: y,
       maxContentWidth: U,
       ...b
-    } = n, G = r.useRef(null), w = r.useRef(null), [k, B] = r.useState(!1), {
+    } = n, G = r.useRef(null), w = r.useRef(null), [B, k] = r.useState(!1), {
       scrollerRef: x,
       scrollerState: V,
       getScrollerState: Z
@@ -102,8 +102,8 @@ function _(e, t, n) {
       ...(0, l.Ue)(x, Z, X)
     }), [x, Z, Q, X, J]);
     let ee = (0, r.useCallback)(e => {
-      q(1), null == G.current ? B(!0) : clearTimeout(G.current), G.current = setTimeout(() => {
-        G.current = null, B(!1)
+      q(1), null == G.current ? k(!0) : clearTimeout(G.current), G.current = setTimeout(() => {
+        G.current = null, k(!1)
       }, 200), null != E && E(e)
     }, [E, q]);
     return (0, i.jsx)("div", {
@@ -112,7 +112,7 @@ function _(e, t, n) {
       className: o()(P, {
         [e]: !0,
         [t]: M,
-        [u.scrolling]: k
+        [u.scrolling]: B
       }),
       style: (0, l.uT)(y),
       ...b,

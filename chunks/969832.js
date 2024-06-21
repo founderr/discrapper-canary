@@ -45,7 +45,7 @@ function h(e) {
     w = () => {
       i.stop(), D(!1)
     },
-    k = e => {
+    B = e => {
       null == R || R(), (0, d.JG)(a), c.default.track(E.rMx.TEXT_COPIED, {
         type: h
       }), "function" == typeof e && e(), !L && g(p + 1), D(!0), v(!0), i.start(1e3, () => D(!1)), r.start(2e3, () => g(0))
@@ -76,7 +76,7 @@ function h(e) {
           C ? w() : "function" == typeof i && i()
         },
         onClick: () => {
-          k(t)
+          B(t)
         },
         children: (0, s.jsxs)("div", {
           className: l()(n, T.copiableWrapper),

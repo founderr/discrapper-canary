@@ -429,7 +429,7 @@ function v(e) {
     "aria-hidden": P = !1,
     "aria-label": y,
     imageClassName: U
-  } = e, b = (0, _.vj)(C, v), G = r.useId(), w = r.useId(), [k] = r.useState(() => ({
+  } = e, b = (0, _.vj)(C, v), G = r.useId(), w = r.useId(), [B] = r.useState(() => ({
     fill: s,
     ...R({
       size: S,
@@ -437,7 +437,7 @@ function v(e) {
       isMobile: t,
       isTyping: !1
     })
-  })), B = r.useMemo(() => ({
+  })), k = r.useMemo(() => ({
     fill: b,
     ...R({
       size: S,
@@ -456,8 +456,8 @@ function v(e) {
   } = (0, a.useSpring)({
     immediate: !document.hasFocus(),
     config: N,
-    from: k,
-    to: B
+    from: B,
+    to: k
   }), W = (0, I.px)(S), K = (0, I.UC)(S), z = K.status * I.D6, q = K.status * I.EW, X = null != C ? (K.status * I.D6 - K.status) / 2 : 0, Q = K.size - K.status - X - K.offset, J = K.size - q - K.offset, $ = K.size + Math.ceil(X);
   return (0, i.jsx)(p, {
     ...e,

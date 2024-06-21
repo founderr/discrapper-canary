@@ -178,7 +178,7 @@ function b(e, t) {
 }
 let G = (0, c.oH)((e, t) => e.sortedGuildNodes().map(e => e.id)),
   w = (0, c.oH)((e, t) => e.getRoots().map(O)),
-  k = (0, c.oH)((e, t) => {
+  B = (0, c.oH)((e, t) => {
     let n = [];
     return ! function e(t) {
       switch (t.type) {
@@ -189,7 +189,7 @@ let G = (0, c.oH)((e, t) => e.sortedGuildNodes().map(e => e.id)),
       for (let n of t.children) e(n)
     }(e.root), n
   }),
-  B = (0, c.oH)((e, t) => e.root.children.map(O));
+  k = (0, c.oH)((e, t) => e.root.children.map(O));
 class x extends S.Z {
   initialize() {
     this.waitFor(h.Z, f.ZP, _.Z, I.Z, u.Z, E.Z)
@@ -207,10 +207,10 @@ class x extends S.Z {
     return G(m, m.version)
   }
   getFlattenedGuildFolderList() {
-    return k(m, m.version)
+    return B(m, m.version)
   }
   getCompatibleGuildFolders() {
-    return B(m, m.version)
+    return k(m, m.version)
   }
   getFastListGuildFolders() {
     return m.getRoots()

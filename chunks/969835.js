@@ -47,14 +47,14 @@ function v(e) {
     location: "BiteSizeProfilePopout"
   }), {
     analyticsLocations: w
-  } = (0, u.ZP)([...b, l.Z.BITE_SIZE_PROFILE_POPOUT]), k = (0, I.Q1)({
+  } = (0, u.ZP)([...b, l.Z.BITE_SIZE_PROFILE_POPOUT]), B = (0, I.Q1)({
     layout: "BITE_SIZE_POPOUT",
     userId: t.id,
     guildId: v,
     channelId: L,
     messageId: D,
     roleId: M
-  }), B = (0, s.e7)([d.Z], () => null != v ? d.Z.getGuild(v) : null), x = (0, s.e7)([c.ZP], () => null != v ? c.ZP.getMember(v, t.id) : null), V = r.useRef(null), Z = (0, T.ZP)(t.id, v), H = (0, a.Z)(V);
+  }), k = (0, s.e7)([d.Z], () => null != v ? d.Z.getGuild(v) : null), x = (0, s.e7)([c.ZP], () => null != v ? c.ZP.getMember(v, t.id) : null), V = r.useRef(null), Z = (0, T.ZP)(t.id, v), H = (0, a.Z)(V);
   r.useEffect(() => {
     null == y || y(null == V ? void 0 : V.current)
   }, [V, y]);
@@ -105,7 +105,7 @@ function v(e) {
                 id: "view-profile",
                 label: C.Z.Messages.VIEW_FULL_PROFILE,
                 action: () => {
-                  k({
+                  B({
                     action: "PRESS_VIEW_PROFILE",
                     analyticsLocations: w
                   }), F()
@@ -122,7 +122,7 @@ function v(e) {
             user: t,
             currentUser: n,
             displayProfile: Z,
-            guild: B,
+            guild: k,
             isHovering: H,
             onOpenProfile: F,
             channelId: L,

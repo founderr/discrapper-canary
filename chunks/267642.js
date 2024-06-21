@@ -13,7 +13,7 @@ n.d(t, {
     return x
   },
   Qi: function() {
-    return k
+    return B
   },
   Ro: function() {
     return i
@@ -70,7 +70,7 @@ n.d(t, {
     return M
   },
   yw: function() {
-    return B
+    return k
   }
 }), n(411104), n(47120), n(724458);
 var i, r, s = n(392711),
@@ -391,7 +391,7 @@ function w(e, t) {
   return null
 }
 
-function k(e, t) {
+function B(e, t) {
   let n = N(t),
     i = h.indexOf(t);
   if (-1 === i) return 0;
@@ -401,7 +401,7 @@ function k(e, t) {
   return Math.max(0, n - e.slice(s, o).length)
 }
 
-function B(e, t, n) {
+function k(e, t, n) {
   return -1 === h.indexOf(n) ? 0 : Math.max(0, A(n, e) - t.length)
 }
 

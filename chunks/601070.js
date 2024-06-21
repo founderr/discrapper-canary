@@ -113,12 +113,12 @@ function w(e) {
   return G(e.channel.guild_id, e.channel.parent_id, e.channel.id)
 }
 
-function k(e) {
+function B(e) {
   let t = d.Z.getChannel(e.id);
   return !!(null != t && S.Z.isActive(e.guildId, t.parent_id, e.id)) && G(t.guild_id, t.parent_id, t.id)
 }
 
-function B(e) {
+function k(e) {
   let t = d.Z.getChannel(e.channelId);
   if (null == t) x();
   else {
@@ -374,17 +374,17 @@ o = "ActiveJoinedThreadsStore", (s = "displayName") in(r = $) ? Object.definePro
     } = e, n = !1;
     return null != t.guild_id && null != t.parent_id && (t.guild_id in m && t.parent_id in m[t.guild_id] && (delete m[t.guild_id][t.parent_id], n = !0), t.guild_id in O && t.parent_id in O[t.guild_id] && (delete O[t.guild_id][t.parent_id], n = !0), t.guild_id in g && t.parent_id in g[t.guild_id] && (h.default.keys(g[t.guild_id][t.parent_id]).forEach(F), delete g[t.guild_id][t.parent_id], n = !0), t.guild_id in R && t.parent_id in R[t.guild_id] && (delete R[t.guild_id][t.parent_id], n = !0), t.guild_id in p && t.parent_id in p[t.guild_id] && (delete p[t.guild_id][t.parent_id], n = !0), n && b(t.guild_id, t.parent_id)), n
   },
-  THREAD_MEMBER_UPDATE: k,
-  THREAD_MEMBERS_UPDATE: k,
-  LOAD_MESSAGES_SUCCESS: B,
-  MESSAGE_CREATE: B,
-  MESSAGE_DELETE: B,
-  MESSAGE_DELETE_BULK: B,
-  MESSAGE_ACK: B,
-  CHANNEL_ACK: B,
-  CHANNEL_LOCAL_ACK: B,
+  THREAD_MEMBER_UPDATE: B,
+  THREAD_MEMBERS_UPDATE: B,
+  LOAD_MESSAGES_SUCCESS: k,
+  MESSAGE_CREATE: k,
+  MESSAGE_DELETE: k,
+  MESSAGE_DELETE_BULK: k,
+  MESSAGE_ACK: k,
+  CHANNEL_ACK: k,
+  CHANNEL_LOCAL_ACK: k,
   CHANNEL_SELECT: function(e) {
-    B(e), V()
+    k(e), V()
   },
   PASSIVE_UPDATE_V2: function(e) {
     if (e.channels.length > 0) return M(e.guildId)

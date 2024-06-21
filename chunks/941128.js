@@ -28,7 +28,7 @@ let C = [g.ff.AUTHENTICATION_FAILED, g.ff.NOT_ENTITLED],
   G = !1,
   w = null;
 
-function k() {
+function B() {
   let e = {
     queue: L,
     paused: M,
@@ -37,7 +37,7 @@ function k() {
   I.K.set(v, e)
 }
 
-function B() {
+function k() {
   let e = L[0];
   if (null != e) {
     var t, n;
@@ -70,13 +70,13 @@ function V(e, t, n, i) {
     },
     o = D.indexOf(r); - 1 !== o && D.splice(o, 1);
   let a = x(e, t);
-  0 !== a && (n ? -1 === a && (L.push(s), B()) : (a > 0 && L.splice(a, 1), L.unshift(s), B())), !n && M && m.Z.resume(), k()
+  0 !== a && (n ? -1 === a && (L.push(s), k()) : (a > 0 && L.splice(a, 1), L.unshift(s), k())), !n && M && m.Z.resume(), B()
 }
 
 function Z(e, t) {
   let n = (0, A.Tu)(e, t),
     i = D.indexOf(n); - 1 !== i && D.splice(i, 1);
-  let r = x(e, t); - 1 !== r && (L.splice(r, 1), k()), B()
+  let r = x(e, t); - 1 !== r && (L.splice(r, 1), B()), k()
 }
 
 function H(e) {
@@ -178,14 +178,14 @@ _ = "DispatchManagerStore", (u = "displayName") in(l = W) ? Object.definePropert
       branchId: n
     } = e, i = x(t, n);
     if (i < 1) return !1;
-    L.splice(0, 0, L.splice(i, 1)[0]), B(), M && m.Z.resume(), k()
+    L.splice(0, 0, L.splice(i, 1)[0]), k(), M && m.Z.resume(), B()
   },
   DISPATCH_APPLICATION_REMOVE_FINISHED: F,
   DISPATCH_APPLICATION_STATE_UPDATE: function(e) {
     let {
       state: t
     } = e;
-    !U && (U = !0, B(), !M && m.Z.resume());
+    !U && (U = !0, k(), !M && m.Z.resume());
     let n = M;
     M = t.paused, P = t.currentTask, y = t.nextTask;
     let i = !1;
@@ -210,7 +210,7 @@ _ = "DispatchManagerStore", (u = "displayName") in(l = W) ? Object.definePropert
         return i = !0, !1
       }
       return !0
-    }), B(), (i || n !== M) && k()
+    }), k(), (i || n !== M) && B()
   },
   DISPATCH_APPLICATION_ERROR: function(e) {
     let {

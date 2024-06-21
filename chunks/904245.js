@@ -34,8 +34,8 @@ var i = n(278074),
   b = n(646504),
   G = n(64078),
   w = n(351780),
-  k = n(79390),
-  B = n(643266),
+  B = n(79390),
+  k = n(643266),
   x = n(617136);
 n(807092);
 var V = n(869765),
@@ -527,7 +527,7 @@ let eS = {
       let i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       if (t.reaction) return Promise.resolve();
-      let s = await (0, B.Z)(e);
+      let s = await (0, k.Z)(e);
       if (null != s) return ef.sendMessage(s, t, i, r);
       let o = v.ZP.backgroundify(() => ef._sendMessage(e, t, r), void 0),
         a = null !== (n = r.nonce) && void 0 !== n ? n : (0, y.r)();
@@ -627,7 +627,7 @@ let eS = {
     },
     _sendMessage(e, t, n) {
       var i, r, s;
-      let a = (0, B.Z)(e);
+      let a = (0, k.Z)(e);
       if (null != a) return eE.info("Converting channel to a private channel"), a.then(e => {
         eE.info("Finished converting channel to a private channel"), ef._sendMessage(e, t, n)
       });
@@ -663,7 +663,7 @@ let eS = {
           allowedMentions: v,
           flags: 0 !== V ? V : void 0,
           nonce: q,
-          poll: (0, k.x9)(b)
+          poll: (0, B.x9)(b)
         });
         (0, G.EL)(e, t.id), null != g && (t.sticker_items = g.map(e => Z.Z.getStickerById(e)).filter(e => null != e)), ef.receiveMessage(e, t, !0, n)
       }

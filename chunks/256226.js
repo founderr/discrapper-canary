@@ -44,8 +44,8 @@ t.Z = r.forwardRef(function(e, t) {
         label: S.Z.Messages.COPY_ID_ROLE
       })
     })
-  }, [p.id]), G = (0, c.useToken)(_.Z.unsafe_rawColors.PRIMARY_300).hsl(), w = null !== (N = p.colorString) && void 0 !== N ? N : G, k = null !== (A = (0, l.wK)(w, .6)) && void 0 !== A ? A : void 0, B = _.Z.unsafe_rawColors.WHITE_500.css, x = (0, l._i)(w);
-  null != x && .3 > (0, l.Bd)(x) && (B = _.Z.unsafe_rawColors.PRIMARY_630.css), m = U ? (0, i.jsx)(I.Z, {
+  }, [p.id]), G = (0, c.useToken)(_.Z.unsafe_rawColors.PRIMARY_300).hsl(), w = null !== (N = p.colorString) && void 0 !== N ? N : G, B = null !== (A = (0, l.wK)(w, .6)) && void 0 !== A ? A : void 0, k = _.Z.unsafe_rawColors.WHITE_500.css, x = (0, l._i)(w);
+  null != x && .3 > (0, l.Bd)(x) && (k = _.Z.unsafe_rawColors.PRIMARY_630.css), m = U ? (0, i.jsx)(I.Z, {
     className: f.roleFlowerStar,
     iconClassName: O ? f.roleVerifiedIcon : void 0,
     color: w,
@@ -62,10 +62,10 @@ t.Z = r.forwardRef(function(e, t) {
   let V = r.useMemo(() => {
     var t;
     return {
-      borderColor: v ? void 0 : k,
+      borderColor: v ? void 0 : B,
       ...null !== (t = e.style) && void 0 !== t ? t : {}
     }
-  }, [k, v, e.style]);
+  }, [B, v, e.style]);
   return (0, i.jsx)(c.FocusRing, {
     children: (0, i.jsxs)("div", {
       ref: t,
@@ -91,7 +91,7 @@ t.Z = r.forwardRef(function(e, t) {
           }),
           children: [m, (0, i.jsx)(c.CloseSmallIcon, {
             size: "md",
-            color: B,
+            color: k,
             className: f.roleRemoveIcon,
             "aria-hidden": !0
           })]

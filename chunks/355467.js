@@ -22,7 +22,7 @@ n.d(t, {
     return eO
   },
   GV: function() {
-    return B
+    return k
   },
   K2: function() {
     return em
@@ -91,7 +91,7 @@ n.d(t, {
     return K
   },
   lP: function() {
-    return k
+    return B
   },
   ou: function() {
     return q
@@ -595,12 +595,12 @@ function w(e, t, n) {
   })
 }
 
-function k(e, t, n) {
+function B(e, t, n) {
   return L(f.gg$.BRAINTREE, e, t, {
     analyticsLocation: n
   })
 }
-async function B(e, t, n, i) {
+async function k(e, t, n, i) {
   if (null == e) throw D("Stripe not loaded");
   let r = await v(t),
     {

@@ -32,9 +32,9 @@ var i, r, s = n(735250),
 let b = (0, d.Mg)(E.Z.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
   G = (0, d.Mg)(E.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
   w = 2 * G + (0, d.Mg)(E.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * b,
-  k = () => Promise.resolve();
+  B = () => Promise.resolve();
 
-function B(e) {
+function k(e) {
   let {
     isFocused: t,
     isHidden: n,
@@ -139,8 +139,8 @@ t.Z = o.memo(function(e) {
       }, [s]), E = (0, _.ZP)({
         id: "expression-suggestions-stickers",
         isEnabled: !0,
-        scrollToStart: k,
-        scrollToEnd: k,
+        scrollToStart: B,
+        scrollToEnd: B,
         orientation: c.hy.HORIZONTAL,
         setFocus: d,
         useVirtualFocus: !0
@@ -246,7 +246,7 @@ t.Z = o.memo(function(e) {
                     sticker: n,
                     sendability: i
                   } = e;
-                  return (0, s.jsx)(B, {
+                  return (0, s.jsx)(k, {
                     isFocused: x === "".concat(t),
                     isHidden: eu,
                     sendability: i,

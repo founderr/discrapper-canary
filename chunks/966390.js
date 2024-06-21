@@ -39,7 +39,7 @@ async function M(e) {
     } = e,
     G = new E.Z(L.ANM.MESSAGES(d)),
     w = new v.o,
-    k = {
+    B = {
       content: "",
       nonce: "",
       channel_id: d,
@@ -47,21 +47,21 @@ async function M(e) {
       sticker_ids: null == U ? void 0 : U.stickerIds,
       poll: null == U ? void 0 : U.poll
     };
-  null != y && (k.content = null == y ? void 0 : y.content), null != O.Z.getPendingReply(d) && (k.type = L.uaV.REPLY, k.message_reference = U.messageReference, k.allowed_mentions = U.allowedMentions, (0, m.A6)(d));
-  let [B, x] = (0, R.ZP)(k.content);
-  B && (k.content = x, k.flags = (0, C.pj)(null !== (t = k.flags) && void 0 !== t ? t : 0, L.iLy.SUPPRESS_NOTIFICATIONS));
+  null != y && (B.content = null == y ? void 0 : y.content), null != O.Z.getPendingReply(d) && (B.type = L.uaV.REPLY, B.message_reference = U.messageReference, B.allowed_mentions = U.allowedMentions, (0, m.A6)(d));
+  let [k, x] = (0, R.ZP)(B.content);
+  k && (B.content = x, B.flags = (0, C.pj)(null !== (t = B.flags) && void 0 !== t ? t : 0, L.iLy.SUPPRESS_NOTIFICATIONS));
   let V = null !== (n = U.nonce) && void 0 !== n ? n : (0, f.r)(),
     Z = (0, S.ZP)({
       channelId: d,
-      content: k.content,
+      content: B.content,
       tts: null !== (i = null == y ? void 0 : y.tts) && void 0 !== i && i,
-      type: k.type,
-      messageReference: k.message_reference,
-      flags: k.flags,
+      type: B.type,
+      messageReference: B.message_reference,
+      flags: B.flags,
       nonce: V,
       poll: (0, A.x9)(U.poll)
     });
-  return (k.nonce = V, G.on("start", e => {
+  return (B.nonce = V, G.on("start", e => {
     c = (0, h.e5)({
       ...Z,
       id: e.id
@@ -116,7 +116,7 @@ async function M(e) {
     }, t)) : (0, l.openUploadError)({
       title: D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
       help: D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
-    }), "" !== k.content && "" === p.Z.getDraft(d, P) && s.Z.saveDraft(d, k.content, P), 0 === g.Z.getUploadCount(d, P) && a.Z.setUploads({
+    }), "" !== B.content && "" === p.Z.getDraft(d, P) && s.Z.saveDraft(d, B.content, P), 0 === g.Z.getUploadCount(d, P) && a.Z.setUploads({
       channelId: d,
       uploads: M,
       draftType: P
@@ -129,7 +129,7 @@ async function M(e) {
       aborted: G._aborted,
       messageRecord: t
     })
-  }), await G.uploadFiles(M, k), w.resolve(), w.promise
+  }), await G.uploadFiles(M, B), w.resolve(), w.promise
 }
 t.Z = {
   instantBatchUpload: function(e) {

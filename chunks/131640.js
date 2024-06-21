@@ -7,7 +7,7 @@ n.d(t, {
     return x
   },
   tZ: function() {
-    return B
+    return k
   }
 }), n(627341);
 var i = n(735250),
@@ -74,9 +74,9 @@ function w(e) {
     })]
   })
 }
-let k = A.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;
+let B = A.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;
 
-function B(e) {
+function k(e) {
   let {
     user: t,
     displayProfile: n,
@@ -93,7 +93,7 @@ function B(e) {
     hasProfileEffect: C,
     statusTooltipDelay: w
   } = e, {
-    theme: B
+    theme: k
   } = (0, v.z)(), x = r.useContext(f.AnalyticsContext), V = t.isNonUserBot() && !t.isClyde(), Z = N.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.p9.TIER_2), H = r.useMemo(() => (0, I.W)(t, T), [t, T]), {
     analyticsLocations: F
   } = (0, c.ZP)(), {
@@ -112,13 +112,13 @@ function B(e) {
   }), Q = (0, i.jsx)("div", {
     className: U.avatarHoverTarget,
     ...X,
-    children: (0, i.jsx)(k, {
+    children: (0, i.jsx)(B, {
       src: null != s ? s : q,
       avatarDecoration: z,
       size: b,
       "aria-label": t.username,
       status: H ? M.Skl.UNKNOWN : u,
-      statusBackdropColor: Z && !H ? (0, _.getStatusBackdropColor)(B) : void 0,
+      statusBackdropColor: Z && !H ? (0, _.getStatusBackdropColor)(k) : void 0,
       isMobile: d,
       statusTooltip: !0,
       statusTooltipDelay: w
@@ -202,7 +202,7 @@ function x(e) {
       profileEffectId: null == n ? void 0 : n.profileEffectId,
       bannerAdjustment: 0,
       isHovering: c
-    }), (0, i.jsx)(B, {
+    }), (0, i.jsx)(k, {
       user: t,
       displayProfile: n,
       status: l ? M.Skl.STREAMING : u,

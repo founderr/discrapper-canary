@@ -50,8 +50,8 @@ var i = n(735250),
   b = n(806519),
   G = n(626135),
   w = n(768581),
-  k = n(900849),
-  B = n(74538),
+  B = n(900849),
+  k = n(74538),
   x = n(886132),
   V = n(524444),
   Z = n(981631),
@@ -116,7 +116,7 @@ let W = () => ({
       size: 32,
       canAnimate: !0
     }), c = (n = null == n || n) || t.isDiscoverable(), d = () => {
-      t.isDiscoverable() ? (0, k.Ub)(s, {}) : n && (0, C.uL)(Z.Z5c.CHANNEL(s, v.Z.getChannelId(s)))
+      t.isDiscoverable() ? (0, B.Ub)(s, {}) : n && (0, C.uL)(Z.Z5c.CHANNEL(s, v.Z.getChannelId(s)))
     }, E = t.isDiscoverable() && null != t.presenceCount, I = () => {
       let e = !r && !n;
       return (0, i.jsxs)(i.Fragment, {
@@ -238,7 +238,7 @@ let W = () => ({
       guildEmoji: P,
       demoMode: y = !1,
       nonce: b
-    } = e, w = (0, l.e7)([D.default], () => D.default.getCurrentUser()), k = (0, l.e7)([L.Z], () => L.Z.getGuildId()), K = B.ZP.isPremium(w), q = null != k && (k === (null == S ? void 0 : S.id) || k === (null == R ? void 0 : R.id)), X = null != R, J = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
+    } = e, w = (0, l.e7)([D.default], () => D.default.getCurrentUser()), B = (0, l.e7)([L.Z], () => L.Z.getGuildId()), K = k.ZP.isPremium(w), q = null != B && (B === (null == S ? void 0 : S.id) || B === (null == R ? void 0 : R.id)), X = null != R, J = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
     y && (K = !0, J = !0, X = !1, q = !1);
     let $ = W(),
       {
@@ -251,9 +251,9 @@ let W = () => ({
         userIsRoleSubscriber: !1
       } : {
         isRoleSubscriptionEmoji: A.yH(P),
-        isUnusableRoleSubscriptionEmoji: A.Fv(P, null != k ? k : void 0),
+        isUnusableRoleSubscriptionEmoji: A.Fv(P, null != B ? B : void 0),
         userIsRoleSubscriber: m.Z.getUserSubscriptionRoles(P.guildId).size > 0
-      }, [P, k]),
+      }, [P, B]),
       ei = !!et && (0, h.Ol)(null == P ? void 0 : P.guildId),
       {
         analyticsLocations: er
@@ -457,7 +457,7 @@ let W = () => ({
         color: _.ButtonColors.BRAND,
         fullWidth: !0,
         onClick: () => {
-          (0, k.Ub)(r.id, {})
+          (0, B.Ub)(r.id, {})
         },
         children: o.text
       }) : null)]

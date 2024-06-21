@@ -80,8 +80,8 @@ let y = _.Z.RULES,
   b = /^<@!?(\d+)>/,
   G = /^<@&(\d+)>/,
   w = /^<#(\d+)>/,
-  k = /^<a?:(\w+):(\d+)>/,
-  B = /(@everyone|@here|@Clyde)\b/,
+  B = /^<a?:(\w+):(\d+)>/,
+  k = /(@everyone|@here|@Clyde)\b/,
   x = {
     link: M(o().defaultRules.link),
     autolink: M(o().defaultRules.autolink),
@@ -91,7 +91,7 @@ let y = _.Z.RULES,
     rawUserMention: P(b),
     rawRoleMention: P(G),
     rawChannelMention: P(w),
-    rawEmoji: P(k),
+    rawEmoji: P(B),
     mention: {
       match(e, t, n) {
         let i = n.split(" ").pop() + e;
@@ -102,7 +102,7 @@ let y = _.Z.RULES,
             ...e,
             text: e.text.split("#")[0]
           })), "mention"))) return null;
-        let s = B.exec(e);
+        let s = k.exec(e);
         if (null != s && r[0].length <= s[0].length) return null;
         if ("" === n && (0, d.BH)()) {
           let t = d.vD.exec(e);
@@ -265,7 +265,7 @@ let y = _.Z.RULES,
       }
     },
     emoji: {
-      match: o().anyScopeRegex(k),
+      match: o().anyScopeRegex(B),
       parse(e, t, n) {
         let [i, r, s] = e, {
           guild: o

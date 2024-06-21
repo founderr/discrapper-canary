@@ -63,12 +63,12 @@ function w(e, t) {
   return e === L.lo.CALL || null != n && R.Z.canBasicChannel(v.S7T.VIEW_CHANNEL, n)
 }
 
-function k(e) {
+function B(e) {
   if (w(e.streamType, e.channelId)) return !0;
   let t = A.Z.getBasicChannel(e.channelId);
   return null != t && (0, h.p9)(t, C.Z, m.Z, R.Z, E.Z)[0]
 }
-class B extends(a = c.ZP.Store) {
+class k extends(a = c.ZP.Store) {
   initialize() {
     this.syncWith([R.Z], () => !0), this.waitFor(I.ZP, R.Z)
   }
@@ -122,13 +122,13 @@ class B extends(a = c.ZP.Store) {
     var t;
     if (!(0, S.Z)(O.Z)) return null;
     let n = r[e];
-    return null == n ? null : null !== (t = Object.values(n).find(e => k(e))) && void 0 !== t ? t : null
+    return null == n ? null : null !== (t = Object.values(n).find(e => B(e))) && void 0 !== t ? t : null
   }
   getStreamForUser(e, t) {
     var n;
     if (!(0, S.Z)(O.Z)) return null;
     let i = null === (n = r[e]) || void 0 === n ? void 0 : n[null != t ? t : v.kod];
-    return null != i && k(i) ? i : null
+    return null != i && B(i) ? i : null
   }
   getRTCStream(e) {
     var t;
@@ -163,12 +163,12 @@ class B extends(a = c.ZP.Store) {
     }
   }
 }
-_ = "ApplicationStreamingStore", (u = "displayName") in(l = B) ? Object.defineProperty(l, u, {
+_ = "ApplicationStreamingStore", (u = "displayName") in(l = k) ? Object.defineProperty(l, u, {
   value: _,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[u] = _, t.Z = new B(d.Z, {
+}) : l[u] = _, t.Z = new k(d.Z, {
   OVERLAY_INITIALIZE: function(e) {
     let {
       applicationStreamState: t

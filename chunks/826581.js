@@ -52,7 +52,7 @@ function P(e) {
 }
 
 function y(e) {
-  k[e.joinRequestId] = e, L.set(e.joinRequestId, e), (0, T.Nd)(e.applicationStatus) && (M.delete(e.joinRequestId), D.set(e.joinRequestId, e)), (0, T.bk)(e.applicationStatus) && (D.delete(e.joinRequestId), M.set(e.joinRequestId, e))
+  B[e.joinRequestId] = e, L.set(e.joinRequestId, e), (0, T.Nd)(e.applicationStatus) && (M.delete(e.joinRequestId), D.set(e.joinRequestId, e)), (0, T.bk)(e.applicationStatus) && (D.delete(e.joinRequestId), M.set(e.joinRequestId, e))
 }
 
 function U(e) {
@@ -68,11 +68,11 @@ function U(e) {
 let b = {},
   G = {},
   w = {},
-  k = {},
-  B = 10 * I.Z.Seconds.MINUTE;
+  B = {},
+  k = 10 * I.Z.Seconds.MINUTE;
 class x extends(i = u.ZP.Store) {
   getRequest(e) {
-    return k[e]
+    return B[e]
   }
   getRequests(e, t) {
     let n = C(e, t);
@@ -87,7 +87,7 @@ class x extends(i = u.ZP.Store) {
   hasFetched(e) {
     if (!N.has(e)) return !1;
     let t = N.get(e);
-    return null != t && l()().diff(t, "seconds") < B
+    return null != t && l()().diff(t, "seconds") < k
   }
   getSelectedApplicationTab(e) {
     var t;
@@ -157,7 +157,7 @@ o = "GuildJoinRequestStoreV2", (s = "displayName") in(r = x) ? Object.defineProp
     let s = (t = i, L.get(t));
     if (null != s) {
       ;
-      R(r, null, s.applicationStatus), n = i, delete k[n], L.delete(n), D.delete(n), M.delete(n)
+      R(r, null, s.applicationStatus), n = i, delete B[n], L.delete(n), D.delete(n), M.delete(n)
     }
   },
   GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB: function(e) {

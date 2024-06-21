@@ -56,7 +56,7 @@ t.Z = r.memo(function(e) {
     channel: y,
     handleSubmit: U,
     isEmpty: b
-  } = e, G = (0, o.e7)([l.Z], () => l.Z.isSubmitButtonEnabled), w = (0, o.e7)([I.Z], () => I.Z.getStickerPreview(y.id, M.drafts.type)), k = null != w && w.length > 0, B = (0, o.e7)([T.Z], () => T.Z.getUploads(y.id, M.drafts.type)), {
+  } = e, G = (0, o.e7)([l.Z], () => l.Z.isSubmitButtonEnabled), w = (0, o.e7)([I.Z], () => I.Z.getStickerPreview(y.id, M.drafts.type)), B = null != w && w.length > 0, k = (0, o.e7)([T.Z], () => T.Z.getUploads(y.id, M.drafts.type)), {
     activeCommand: x,
     activeCommandOption: V
   } = (0, o.cj)([u.Z], () => ({
@@ -109,7 +109,7 @@ t.Z = r.memo(function(e) {
     type: M
   }, "emoji")), (null === (n = M.submit) || void 0 === n ? void 0 : n.button) != null && ((null === (r = M.submit) || void 0 === r ? void 0 : r.ignorePreference) || G) && H.push((0, i.jsx)(R.Z, {
     onClick: U,
-    disabled: P || 0 === B.length && b && !k
+    disabled: P || 0 === k.length && b && !B
   }, "submit")), 0 === H.length) ? null : (0, i.jsx)("div", {
     className: C.buttons,
     children: H

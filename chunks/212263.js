@@ -34,9 +34,9 @@ t.Z = e => {
     emojiDescriptor: P,
     pickerIntention: y,
     analyticsLocation: U
-  } = e, b = (0, u.ZP)(), [G, w] = r.useState(!1), k = () => {
+  } = e, b = (0, u.ZP)(), [G, w] = r.useState(!1), B = () => {
     (0, m.A3)(M), (0, E.z)(), L()
-  }, B = (0, a.ap)(b) ? n(537381) : n(341048), x = (0, T.N)(), V = (0, I.Ng)(), Z = null != x || null != V, H = (0, d.Iu)(e => e.searchQuery), {
+  }, k = (0, a.ap)(b) ? n(537381) : n(341048), x = (0, T.N)(), V = (0, I.Ng)(), Z = null != x || null != V, H = (0, d.Iu)(e => e.searchQuery), {
     analyticsLocations: F
   } = (0, c.ZP)(_.Z.EMOJI_PICKER);
   return r.useEffect(() => {
@@ -71,20 +71,20 @@ t.Z = e => {
         trialOffer: x,
         discountOffer: V,
         children: C.Z.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
-          onClick: k
+          onClick: B
         })
       }) : (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)("img", {
           alt: "",
           className: v.premiumPromoImage,
-          src: B
+          src: k
         }), (0, i.jsx)("div", {
           className: v.premiumPromoTitle,
           children: C.Z.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL
         }), (0, i.jsx)("div", {
           className: v.premiumPromoDescription,
           children: C.Z.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
-            onClick: k
+            onClick: B
           })
         })]
       }), !Z && (0, i.jsx)(S.Z, {

@@ -61,8 +61,8 @@ function b(e, t, n) {
 }
 let G = new u.Y("ApplicationCommandIndexStore"),
   w = Symbol("currentUser"),
-  k = Symbol("stale"),
-  B = Symbol("current"),
+  B = Symbol("stale"),
+  k = Symbol("current"),
   x = Object.freeze({
     descriptors: [],
     commands: [],
@@ -70,18 +70,18 @@ let G = new u.Y("ApplicationCommandIndexStore"),
     loading: !0
   }),
   V = Object.freeze({
-    serverVersion: B,
+    serverVersion: k,
     fetchState: {
       fetching: !1
     },
     result: {
       sections: {},
       sectionIdsByBotId: {},
-      version: B
+      version: k
     }
   }),
   Z = Object.freeze({
-    serverVersion: k,
+    serverVersion: B,
     fetchState: {
       fetching: !1
     }
@@ -112,7 +112,7 @@ function Y(e, t) {
     ...s,
     ...t
   }) : i && (n = {
-    serverVersion: k,
+    serverVersion: B,
     fetchState: {
       fetching: !1
     },
@@ -135,7 +135,7 @@ function K() {
   Y({
     type: "user"
   }, {
-    serverVersion: k
+    serverVersion: B
   })
 }
 class z extends(i = _.ZP.Store) {
@@ -247,7 +247,7 @@ b(z, "displayName", "ApplicationCommandIndexStore");
 let q = new z(c.Z, {
   LOGOUT: W,
   CONNECTION_OPEN: function() {
-    for (let e of Object.values(q.indices)) e.serverVersion = k
+    for (let e of Object.values(q.indices)) e.serverVersion = B
   },
   APPLICATION_COMMAND_INDEX_FETCH_REQUEST: function(e) {
     var t;
@@ -319,7 +319,7 @@ let q = new z(c.Z, {
       }
       t.commands[e.id] = e
     }
-    let u = null !== (n = r.version) && void 0 !== n ? n : B;
+    let u = null !== (n = r.version) && void 0 !== n ? n : k;
     Y(i, {
       serverVersion: u,
       result: {
@@ -356,16 +356,16 @@ let q = new z(c.Z, {
       type: "channel",
       channelId: n
     }, {
-      serverVersion: k
+      serverVersion: B
     }), q.hasUserStateApplication(t) && Y({
       type: "user"
     }, {
-      serverVersion: k
+      serverVersion: B
     }), q.hasApplicationState(t) && Y({
       type: "application",
       applicationId: t
     }, {
-      serverVersion: k
+      serverVersion: B
     })
   },
   CHANNEL_DELETE: function(e) {
@@ -397,7 +397,7 @@ let q = new z(c.Z, {
       type: "guild",
       guildId: n
     }, {
-      serverVersion: null != i ? i : k
+      serverVersion: null != i ? i : B
     }), s = null == r ? void 0 : null === (t = r.result) || void 0 === t ? void 0 : t.sectionIdsByBotId;
     if (null != s)
       for (let e in s) {
@@ -406,7 +406,7 @@ let q = new z(c.Z, {
           type: "channel",
           channelId: t
         }, {
-          serverVersion: k
+          serverVersion: B
         })
       }
   },
@@ -641,14 +641,14 @@ function en(e) {
     let e = ei(O.Tm[P.bi.BUILT_IN], D, !0, !0, y);
     null != e && M.push(e)
   }
-  let k = M.flatMap(e => e.data.map(t => ({
+  let B = M.flatMap(e => e.data.map(t => ({
     ...t,
     section: e.section
   })));
   if (A === C.p.COMMAND_ONLY || A === C.p.COMMAND_OR_APPLICATION) {
     let e = a.context,
       t = N.Z.getGuild(a.context.guild_id);
-    m.commands.useFrecency && S.DZ.loadIfNecessary(), k.sort((n, i) => {
+    m.commands.useFrecency && S.DZ.loadIfNecessary(), B.sort((n, i) => {
       if (m.commands.useScore) {
         var r, s;
         let e = null !== (r = n.score) && void 0 !== r ? r : 0,
@@ -670,7 +670,7 @@ function en(e) {
     })
   }
   return {
-    commands: k,
+    commands: B,
     descriptors: M.map(e => e.section),
     sectionedCommands: M,
     loading: (null == u ? void 0 : u.fetchState.fetching) === !0 || (null == _ ? void 0 : _.fetchState.fetching) === !0 || null != h && (null === (i = c.get(h)) || void 0 === i ? void 0 : i.fetchState.fetching) === !0

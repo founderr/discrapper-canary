@@ -13,10 +13,10 @@ n.d(t, {
     return P
   },
   kO: function() {
-    return k
+    return B
   },
   oG: function() {
-    return B
+    return k
   },
   v_: function() {
     return U
@@ -125,7 +125,7 @@ function b(e) {
     channel_type: t.type,
     guild_id: t.getGuildId(),
     media_session_id: i,
-    ...k(t.getGuildId(), t.id, n),
+    ...B(t.getGuildId(), t.id, n),
     ...(0, v.V)()
   }
 }
@@ -184,7 +184,7 @@ function w(e) {
   }
 }
 
-function k(e, t, n) {
+function B(e, t, n) {
   let i = {
     voice_state_count: 0,
     video_stream_count: 0,
@@ -195,7 +195,7 @@ function k(e, t, n) {
   }), i
 }
 
-function B(e, t) {
+function k(e, t) {
   let n = {
     custom_status_count: 0
   };
@@ -205,5 +205,5 @@ function B(e, t) {
 }
 t.ZP = {
   trackWithMetadata: G,
-  getVoiceStateMetadata: k
+  getVoiceStateMetadata: B
 }

@@ -52,7 +52,7 @@ let P = r.forwardRef(function(e, t) {
     className: P,
     isDisabled: U = !1,
     maxVisibleItems: w = 7,
-    look: k = C.q.FILLED,
+    look: B = C.q.FILLED,
     autoFocus: V = !1,
     popoutPosition: Z = "bottom",
     filter: H = !0,
@@ -154,13 +154,13 @@ let P = r.forwardRef(function(e, t) {
     eS !== e && !U && (ef(e), e ? null == S || S() : null == N || N())
   }, [U, N, S, eS]), ew = r.useCallback(e => {
     eS && !e && eG(!1)
-  }, [eG, eS]), ek = (0, R.O)(ew);
+  }, [eG, eS]), eB = (0, R.O)(ew);
   r.useImperativeHandle(t, () => ({
     close() {
       eG(!1)
     }
   }));
-  let eB = r.useCallback((e, t) => {
+  let ek = r.useCallback((e, t) => {
       let n = document.querySelector(e),
         i = eR.current;
       eh(t), null != i && null != n && i.scrollIntoViewNode({
@@ -189,7 +189,7 @@ let P = r.forwardRef(function(e, t) {
       isEnabled: eS,
       wrap: !0,
       useVirtualFocus: !0,
-      setFocus: eB,
+      setFocus: ek,
       disableClickOnSpace: !0
     }),
     eH = (0, g.Z)(eZ),
@@ -271,7 +271,7 @@ let P = r.forwardRef(function(e, t) {
   }, [eN]), r.useEffect(() => {
     !eC && em && null !== eN && requestAnimationFrame(() => eZ.focusFirstVisibleItem())
   }, [eC, em, eN]);
-  let ez = d ? x : B,
+  let ez = d ? x : k,
     eq = r.useRef(null),
     {
       focusPreviousItem: eX,
@@ -345,11 +345,11 @@ let P = r.forwardRef(function(e, t) {
                 e.preventDefault()
               },
               ref: e => {
-                ed.current = e, ek.current = e
+                ed.current = e, eB.current = e
               },
               className: o()(L.select, L.searchable, P, {
                 [L.open]: s,
-                [L.lookFilled]: k === C.q.FILLED,
+                [L.lookFilled]: B === C.q.FILLED,
                 [L.disabled]: U,
                 [L.multi]: d,
                 [L.selectPositionTop]: "top" === a
@@ -701,14 +701,14 @@ function w(e) {
     }), " ", null != s && (0, i.jsx)("div", {
       className: L.suffix,
       children: s
-    }), " ", (0, i.jsx)(k, {
+    }), " ", (0, i.jsx)(B, {
       isSelected: l,
       multi: c
     })]
   })
 }
 
-function k(e) {
+function B(e) {
   let {
     isSelected: t,
     multi: n
@@ -734,7 +734,7 @@ function k(e) {
   }) : null
 }
 
-function B(e) {
+function k(e) {
   let {
     selectedOptions: t,
     renderOptionPrefix: n,

@@ -52,8 +52,8 @@ var d = n(120356),
   b = n(140465),
   G = n(650032),
   w = n(104494),
-  k = n(639119),
-  B = n(230916),
+  B = n(639119),
+  k = n(230916),
   x = n(248042),
   V = n(504865),
   Z = n(63802),
@@ -183,7 +183,7 @@ function J(e) {
     defaultPriceString: n,
     subscriptionPlan: i,
     discountOffer: r
-  } = e, s = (0, B.A)(i);
+  } = e, s = (0, k.A)(i);
   return (0, c.jsx)(c.Fragment, {
     children: j.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC.format({
       numMonths: null !== (t = r.discount.user_usage_limit) && void 0 !== t ? t : F.rt,
@@ -204,7 +204,7 @@ function $(e) {
     textVariant: a,
     className: l,
     shouldUseModifiedCopy: u
-  } = e, _ = (0, h.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), d = (0, h.e7)([g.default], () => g.default.getCurrentUser()), E = (0, b.t7)(), I = (0, b.lr)(), S = n === F.p9.TIER_0 ? F.Si.TIER_0 : F.Si.TIER_2, f = (null == _ ? void 0 : _.trialId) != null ? null == d ? void 0 : d.premiumType : E ? F.p9.TIER_2 : null, A = (0, k.N)(), m = (0, w.Ng)(), O = null == A ? void 0 : A.subscription_trial;
+  } = e, _ = (0, h.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), d = (0, h.e7)([g.default], () => g.default.getCurrentUser()), E = (0, b.t7)(), I = (0, b.lr)(), S = n === F.p9.TIER_0 ? F.Si.TIER_0 : F.Si.TIER_2, f = (null == _ ? void 0 : _.trialId) != null ? null == d ? void 0 : d.premiumType : E ? F.p9.TIER_2 : null, A = (0, B.N)(), m = (0, w.Ng)(), O = null == A ? void 0 : A.subscription_trial;
   if (!t && null != f && n === f && null != _ && null != _.planIdFromItems) {
     let e = null != _.trialEndsAt ? T()(null == _ ? void 0 : _.trialEndsAt).diff(T()(), "d") : 0,
       t = F.GP[_.planIdFromItems],
@@ -340,7 +340,7 @@ function et(e) {
     isGift: a = !1,
     priceOptions: l,
     variant: u
-  } = e, _ = (0, h.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), d = (0, h.e7)([g.default], () => g.default.getCurrentUser()), I = (0, k.N)(), T = null == I ? void 0 : null === (t = I.subscription_trial) || void 0 === t ? void 0 : t.sku_id, S = (null == _ ? void 0 : _.trialId) != null, f = (null == _ ? void 0 : _.trialId) != null ? null == d ? void 0 : d.premiumType : null, A = null != T || S;
+  } = e, _ = (0, h.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), d = (0, h.e7)([g.default], () => g.default.getCurrentUser()), I = (0, B.N)(), T = null == I ? void 0 : null === (t = I.subscription_trial) || void 0 === t ? void 0 : t.sku_id, S = (null == _ ? void 0 : _.trialId) != null, f = (null == _ ? void 0 : _.trialId) != null ? null == d ? void 0 : d.premiumType : null, A = null != T || S;
   return (0, c.jsxs)("div", {
     className: E()(W.tier0, W.card, o, {
       [W.withTier0Rim]: !a && A,
@@ -522,7 +522,7 @@ function ei(e) {
     isModal: u = !1,
     priceOptions: _,
     variant: d
-  } = e, I = (0, h.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), T = (0, h.e7)([g.default], () => g.default.getCurrentUser()), S = (0, k.N)(), m = null == S ? void 0 : null === (t = S.subscription_trial) || void 0 === t ? void 0 : t.sku_id, O = (null == I ? void 0 : I.trialId) != null ? null == T ? void 0 : T.premiumType : null, R = (0, b.Nx)(), p = (0, w.Ng)(), v = (0, b.t7)(), D = null != m || null != O ? 0 : null != p || v ? 1 : null, M = (0, x.Vi)(), P = !l && R, y = (0, x.W1)(), U = (0, f.ap)((0, A.ZP)()), B = U ? 5 : 2, {
+  } = e, I = (0, h.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), T = (0, h.e7)([g.default], () => g.default.getCurrentUser()), S = (0, B.N)(), m = null == S ? void 0 : null === (t = S.subscription_trial) || void 0 === t ? void 0 : t.sku_id, O = (null == I ? void 0 : I.trialId) != null ? null == T ? void 0 : T.premiumType : null, R = (0, b.Nx)(), p = (0, w.Ng)(), v = (0, b.t7)(), D = null != m || null != O ? 0 : null != p || v ? 1 : null, M = (0, x.Vi)(), P = !l && R, y = (0, x.W1)(), U = (0, f.ap)((0, A.ZP)()), k = U ? 5 : 2, {
     enabled: V
   } = G._.useExperiment({
     location: "Tier2Card"
@@ -542,7 +542,7 @@ function ei(e) {
           percent: p.discount.amount
         }),
         className: W.topRimPill,
-        colorOptions: B
+        colorOptions: k
       }), (0, c.jsx)("div", {
         className: K
       })]
@@ -550,7 +550,7 @@ function ei(e) {
       children: [(0, c.jsx)(X, {
         text: H,
         className: W.topRimPill,
-        colorOptions: B
+        colorOptions: k
       }), (0, c.jsx)("div", {
         className: K
       })]
@@ -558,7 +558,7 @@ function ei(e) {
       children: [(0, c.jsx)(X, {
         text: j.Z.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
         className: W.topRimPill,
-        colorOptions: B
+        colorOptions: k
       }), (0, c.jsx)("div", {
         className: K
       })]
@@ -566,7 +566,7 @@ function ei(e) {
       children: [(0, c.jsx)(X, {
         text: j.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
         className: W.topRimPill,
-        colorOptions: B
+        colorOptions: k
       }), (0, c.jsx)("div", {
         className: K
       })]

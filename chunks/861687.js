@@ -38,8 +38,8 @@ var y = n(736871),
   b = n(592125),
   G = n(131951),
   w = n(19780),
-  k = n(226961),
-  B = n(936349),
+  B = n(226961),
+  k = n(936349),
   x = n(594174),
   V = n(626135),
   Z = n(931619),
@@ -301,7 +301,7 @@ class ea extends c.Z {
           sender_user_id: this.userId,
           reason: i,
           participant_type: "sender",
-          guild_region: B.Z.getRegion(this.hostname),
+          guild_region: k.Z.getRegion(this.hostname),
           hostname: this.hostname,
           hardware_enabled: G.Z.getHardwareEncoding(),
           ...t,
@@ -319,7 +319,7 @@ class ea extends c.Z {
           sender_user_id: t,
           reason: i,
           participant_type: "receiver",
-          guild_region: B.Z.getRegion(this.hostname),
+          guild_region: k.Z.getRegion(this.hostname),
           hostname: this.hostname,
           hardware_enabled: G.Z.getHardwareEncoding(),
           ...r,
@@ -327,7 +327,7 @@ class ea extends c.Z {
           ...e.getCodecUsageStats("receiver", t)
         })
       }));
-      let t = B.Z.shouldIncludePreferredRegion() ? B.Z.getPreferredRegion() : null,
+      let t = k.Z.shouldIncludePreferredRegion() ? k.Z.getPreferredRegion() : null,
         n = G.Z.getSettings(),
         r = b.Z.getChannel(this.channelId);
       V.default.track(et.rMx.VOICE_DISCONNECT, {
@@ -523,7 +523,7 @@ class ea extends c.Z {
       })
     }), l.on(d.Sh.Error, t => {
       if (e !== this._socket) return;
-      let n = B.Z.shouldIncludePreferredRegion() ? B.Z.getPreferredRegion() : null;
+      let n = k.Z.shouldIncludePreferredRegion() ? k.Z.getPreferredRegion() : null;
       this.logger.error("Error occurred while connecting to RTC server: ".concat(t)), V.default.track(et.rMx.VOICE_CONNECTION_FAILURE, {
         ...this._getAnalyticsProperties(),
         hostname: this.hostname,
@@ -557,7 +557,7 @@ class ea extends c.Z {
       }
       if (n === et.hes.RTC_CONNECTING && this.state === et.hes.RTC_DISCONNECTED ? this.reconnect() : this.state === et.hes.NO_ROUTE && this._backoff.fail(this.reconnect), this.state === et.hes.RTC_CONNECTED) {
         var i, r;
-        let e = B.Z.shouldIncludePreferredRegion() ? B.Z.getPreferredRegion() : null;
+        let e = k.Z.shouldIncludePreferredRegion() ? k.Z.getPreferredRegion() : null;
         this._connecting && V.default.track(et.rMx.VOICE_CONNECTION_SUCCESS, {
           ...this._getAnalyticsProperties(),
           hostname: this.hostname,
@@ -769,7 +769,7 @@ class ea extends c.Z {
         sender_user_id: e,
         reason: "User disconnected",
         participant_type: "receiver",
-        guild_region: B.Z.getRegion(this.hostname),
+        guild_region: k.Z.getRegion(this.hostname),
         hostname: this.hostname,
         hardware_enabled: G.Z.getHardwareEncoding(),
         ...t,
@@ -1006,7 +1006,7 @@ class ea extends c.Z {
         this.logger.info("Go Live Media sink wants: ".concat(JSON.stringify(e))), this._socket.mediaSinkWants(e), null === (t = this._connection) || void 0 === t || t.setLocalVideoSinkWants(e)
       }
     }));
-    this._remoteVideoSinkWants = q.Yy, k.ZP.shouldRecordNextConnection() ? (this._recordingEnabled = !0, h.TC(!1)) : this._recordingEnabled = !1, this._soundshareStats = new X.Z, Z.Z.addOnlineCallback(this._handleNetworkOnline), Z.Z.addOfflineCallback(this._handleNetworkOffline), (0, H.isDesktop)() && (this.powerMonitorListener = Y.Z.remotePowerMonitor.on("resume", this._handlePowerResume)), this._supportedBandwidthEstimationExperiments = [], this._bandwidthEstimationExperiment = null, G.Z.getMediaEngine().getSupportedBandwidthEstimationExperiments(e => {
+    this._remoteVideoSinkWants = q.Yy, B.ZP.shouldRecordNextConnection() ? (this._recordingEnabled = !0, h.TC(!1)) : this._recordingEnabled = !1, this._soundshareStats = new X.Z, Z.Z.addOnlineCallback(this._handleNetworkOnline), Z.Z.addOfflineCallback(this._handleNetworkOffline), (0, H.isDesktop)() && (this.powerMonitorListener = Y.Z.remotePowerMonitor.on("resume", this._handlePowerResume)), this._supportedBandwidthEstimationExperiments = [], this._bandwidthEstimationExperiment = null, G.Z.getMediaEngine().getSupportedBandwidthEstimationExperiments(e => {
       this._supportedBandwidthEstimationExperiments = e
     }), this._mlsFailures = {}
   }

@@ -13,7 +13,7 @@ n.d(t, {
     return y
   },
   HR: function() {
-    return B
+    return k
   },
   Hr: function() {
     return p
@@ -64,7 +64,7 @@ n.d(t, {
     return I
   },
   qz: function() {
-    return k
+    return B
   },
   ws: function() {
     return M
@@ -413,7 +413,7 @@ function w(e) {
   })
 }
 
-function k() {
+function B() {
   i.ZP.trackWithMetadata(E.rMx.OPEN_MODAL, {
     type: "Forum Channel Upsell Modal",
     location: {
@@ -422,7 +422,7 @@ function k() {
   })
 }
 
-function B(e) {
+function k(e) {
   let {
     guildId: t,
     channelId: n

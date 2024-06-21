@@ -38,8 +38,8 @@ var i = n(735250),
   b = n(65154),
   G = n(689938),
   w = n(82872),
-  k = n(972667);
-let B = {
+  B = n(972667);
+let k = {
     width: 232,
     height: 315
   },
@@ -184,7 +184,7 @@ function Y(e) {
         })]
       })]
     }),
-    Y = v ? B : x;
+    Y = v ? k : x;
   return (0, i.jsx)(E.Z, {
     className: w.wrapper,
     selector: ".".concat(w.root),
@@ -198,7 +198,7 @@ function Y(e) {
     dragAnywhere: !0,
     children: (0, i.jsx)(i.Fragment, {
       children: (0, i.jsxs)(a.animated.div, {
-        className: o()(w.root, k.elevationHigh, {
+        className: o()(w.root, B.elevationHigh, {
           [w.previewCamera]: h
         }, h ? (0, M.Q)("dark") : null),
         style: {

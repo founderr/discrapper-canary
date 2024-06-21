@@ -70,8 +70,8 @@ let C = e => {
       },
       G = (0, s.e7)([I.Z], () => null !== b && b.type === l.B.GUILD ? I.Z.getGuild(b.guildId) : null, [b]),
       w = (0, s.e7)([T.Z], () => T.Z.isFocused()),
-      k = (0, s.e7)([a.Z], () => a.Z.useReducedMotion, []),
-      B = E.Yk.useSetting(),
+      B = (0, s.e7)([a.Z], () => a.Z.useReducedMotion, []),
+      k = E.Yk.useSetting(),
       x = (0, f.C1)(L, g(b) ? b : null),
       {
         newlyAddedEmojis: V
@@ -93,7 +93,7 @@ let C = e => {
       var F;
       let e = null != b.id ? h.ZP.getEmojiURL({
         id: b.id,
-        animated: B && b.animated,
+        animated: k && b.animated,
         size: 28
       }) : b.url;
       t = "" === e ? (0, i.jsx)(o.Text, {
@@ -114,7 +114,7 @@ let C = e => {
     let Y = null != G ? (0, i.jsx)(A.Z, {
         className: p.__invalid_guildIcon,
         guild: G,
-        shouldAnimate: !k && w
+        shouldAnimate: !B && w
       }) : null,
       j = P && "CREATE_EMOJI" === b.type ? R.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE_DESCRIPTION : b.allNamesString,
       W = P && "CREATE_EMOJI" === b.type ? R.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE : C({

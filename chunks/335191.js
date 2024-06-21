@@ -93,11 +93,11 @@ function C(e) {
     })
   }));
   let w = (0, u.useToken)(a.Z.colors.INTERACTIVE_MUTED).hex(),
-    k = (0, u.useToken)(a.Z.colors.INTERACTIVE_ACTIVE).hex(),
-    B = E.verified ? (0, i.jsx)(f.Z, {
+    B = (0, u.useToken)(a.Z.colors.INTERACTIVE_ACTIVE).hex(),
+    k = E.verified ? (0, i.jsx)(f.Z, {
       className: g.connectedAccountVerifiedIcon,
       color: null != s ? s : w,
-      forcedIconColor: k,
+      forcedIconColor: B,
       size: 16,
       tooltipText: U
     }) : null;
@@ -131,7 +131,7 @@ function C(e) {
                 className: g.connectedAccountNameText,
                 children: E.name
               })
-            }), B]
+            }), k]
           }), _]
         }), null != P ? (0, i.jsx)(u.Text, {
           variant: "text-xs/normal",

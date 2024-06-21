@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return k
+    return B
   }
 }), n(47120);
 var i = n(735250),
@@ -269,7 +269,7 @@ let w = {
   }
 };
 
-function k(e) {
+function B(e) {
   return {
     ...w,
     link: (0, D.Z)(e),

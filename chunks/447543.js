@@ -38,8 +38,8 @@ var i = n(525654),
   b = n(430824),
   G = n(607744),
   w = n(341165),
-  k = n(496675),
-  B = n(594174),
+  B = n(496675),
+  k = n(594174),
   x = n(626135),
   V = n(70956),
   Z = n(573261),
@@ -83,7 +83,7 @@ function $(e) {
     if ((null == n ? void 0 : n.targetType) === z.Iq.ROLE_SUBSCRIPTIONS_PURCHASE) return W.oC.ROLE_SUBSCRIPTIONS;
     if ((null == n ? void 0 : n.targetType) == null && !D.tx.has(t.type) && (0, N.s)(e)) return W.oC.GUILD_HOME;
     let s = P.Z.getChannel(t.id);
-    return k.Z.can(j.Plq.VIEW_CHANNEL, s) ? t.id : null !== (r = null === (i = y.ZP.getDefaultChannel(e, !0, j.Plq.CREATE_INSTANT_INVITE)) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.id
+    return B.Z.can(j.Plq.VIEW_CHANNEL, s) ? t.id : null !== (r = null === (i = y.ZP.getDefaultChannel(e, !0, j.Plq.CREATE_INSTANT_INVITE)) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.id
   }(t, i, r), {
     targetUserId: u,
     targetType: _,
@@ -105,7 +105,7 @@ function $(e) {
           channelId: l
         }), _ === z.Iq.EMBEDDED_APPLICATION && null != c && ((0, v.uL)(j.Z5c.CHANNEL(null != t ? t : j.ME, l)), (0, I.Z)(l, c, s, null == r ? void 0 : r.intent))
       };
-      (0, f.n)(t, [b.Z, G.Z, B.default, U.ZP]) ? (0, S.hk)(t, o) : o()
+      (0, f.n)(t, [b.Z, G.Z, k.default, U.ZP]) ? (0, S.hk)(t, o) : o()
     })
   }) : (0, E.l5)(a) && _ === z.Iq.EMBEDDED_APPLICATION && null != c && ((0, v.uL)(j.Z5c.CHANNEL(null != t ? t : j.ME, l)), (0, I.Z)(l, c, s, null == r ? void 0 : r.intent)), (function(e, t) {
     let {
@@ -125,7 +125,7 @@ let ee = function(e, t) {
     P.Z.addConditionalChangeListener(() => {
       var i;
       let r = P.Z.getChannel(e),
-        s = B.default.getCurrentUser();
+        s = k.default.getCurrentUser();
       return null == r || null == s || (!r.nsfw || !!s.nsfwAllowed) && ((null == t ? void 0 : t.guildScheduledEvent) != null ? (! function(e) {
         let {
           guildScheduledEvent: t,
@@ -323,7 +323,7 @@ t.Z = {
         ...i,
         invite_guild_scheduled_event_id: r.guildScheduledEventId
       }),
-      h = B.default.getCurrentUser();
+      h = k.default.getCurrentUser();
     return null !== (t = null == h ? void 0 : h.hasFlag(j.xW$.QUARANTINED)) && void 0 !== t && t ? ((0, g.default)(), new Promise((e, t) => t(Error()))) : (_.Z.dispatch({
       type: "INVITE_ACCEPT",
       code: E

@@ -176,7 +176,7 @@ function G(e) {
       secondaryColor: G
     },
     bannerHash: w
-  } = n, k = (0, _.Z)(n.games), B = (0, T.Z)("clan_discovery_card"), [x, V] = r.useState(!1), Z = r.useRef(null), [H, F] = r.useState(!1), Y = r.useCallback(() => {
+  } = n, B = (0, _.Z)(n.games), k = (0, T.Z)("clan_discovery_card"), [x, V] = r.useState(!1), Z = r.useRef(null), [H, F] = r.useState(!1), Y = r.useCallback(() => {
     V(!0)
   }, []), j = r.useCallback(() => {
     V(!1)
@@ -232,7 +232,7 @@ function G(e) {
             children: (0, i.jsx)(a.Tooltip, {
               text: D.Z.Messages.CLAN_DISCOVERY_CARD_TAG_TOOLTIP,
               position: "top",
-              shouldShow: !u && B,
+              shouldShow: !u && k,
               children: e => (0, i.jsxs)("div", {
                 ...e,
                 className: M.clanTagChiplet,
@@ -307,7 +307,7 @@ function G(e) {
       }), (0, i.jsx)("div", {
         className: M.cardFooterGames,
         children: (0, i.jsx)(g.Z, {
-          games: k,
+          games: B,
           prioritizedGameIds: d
         })
       })]

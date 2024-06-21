@@ -349,24 +349,24 @@ let b = e => {
     list: N.Z,
     subtext: A.Z
   },
-  k = (0, p.Z)([w, O.Z]),
-  B = r().omit(k, ["inlineCode", "codeBlock", "br", "blockQuote", "subtext"]),
-  x = r().omit(k, ["inlineCode", "codeBlock", "br", "blockQuote", "url", "attachmentLink", "mention", "roleMention", "channelMention", "channelOrMessageUrl", "mediaPostLink", "subtext"]),
-  V = r().omit(k, ["codeBlock", "br", "mention", "channel", "roleMention", "attachmentLink", "subtext"]),
-  Z = r().omit((0, p.Z)([k, {
+  B = (0, p.Z)([w, O.Z]),
+  k = r().omit(B, ["inlineCode", "codeBlock", "br", "blockQuote", "subtext"]),
+  x = r().omit(B, ["inlineCode", "codeBlock", "br", "blockQuote", "url", "attachmentLink", "mention", "roleMention", "channelMention", "channelOrMessageUrl", "mediaPostLink", "subtext"]),
+  V = r().omit(B, ["codeBlock", "br", "mention", "channel", "roleMention", "attachmentLink", "subtext"]),
+  Z = r().omit((0, p.Z)([B, {
     inlineCode: {
       match(e, t, n) {
-        let i = k.codeBlock.match(e, t, n);
+        let i = B.codeBlock.match(e, t, n);
         if (null != i) return i;
-        let r = k.inlineCode.match(e, t, n);
+        let r = B.inlineCode.match(e, t, n);
         if (null != r) return r
       }
     }
   }]), ["blockQuote", "codeBlock", "br"]),
-  H = r().omit(k, ["codeBlock", "br", "blockQuote"]),
-  F = r().omit(k, ["codeBlock", "br", "attachmentLink", "mention", "roleMention", "channel", "paragraph", "newline", "subtext"]),
-  Y = r().omit(k, ["codeBlock", "blockQuote", "br"]),
-  j = r().omit(k, ["codeBlock", "br", "inlineCode"]);
+  H = r().omit(B, ["codeBlock", "br", "blockQuote"]),
+  F = r().omit(B, ["codeBlock", "br", "attachmentLink", "mention", "roleMention", "channel", "paragraph", "newline", "subtext"]),
+  Y = r().omit(B, ["codeBlock", "blockQuote", "br"]),
+  j = r().omit(B, ["codeBlock", "br", "inlineCode"]);
 
 function W(e, t) {
   return 0 === e.length || 0 === t || "" === e.charAt(t - 1).trim()
@@ -401,10 +401,10 @@ let K = (0, p.Z)([{
       }, ...a]
     }
   }
-}, r().omit(k, ["url"])]);
+}, r().omit(B, ["url"])]);
 t.Z = {
-  RULES: k,
-  CHANNEL_TOPIC_RULES: B,
+  RULES: B,
+  CHANNEL_TOPIC_RULES: k,
   VOICE_CHANNEL_STATUS_RULES: x,
   EMBED_TITLE_RULES: V,
   INLINE_REPLY_RULES: Z,

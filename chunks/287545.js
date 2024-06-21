@@ -41,9 +41,9 @@ var r = n(512722),
   b = n(917107),
   G = n(701488),
   w = n(981631),
-  k = n(689938);
+  B = n(689938);
 
-function B(e, t, n) {
+function k(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -238,7 +238,7 @@ class q extends _.Z {
     N.Z.removeChangeListener(this.handleSelectedChannelUpdate), O.S.unsubscribe(w.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), l.Z.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), l.Z.unsubscribe("EMBEDDED_ACTIVITY_OPEN", H), l.Z.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", F), l.Z.unsubscribe("EMBEDDED_ACTIVITY_UPDATE", Y), l.Z.unsubscribe("EMBEDDED_ACTIVITY_UPDATE_V2", j), l.Z.unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), l.Z.unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), l.Z.unsubscribe("MEDIA_SESSION_JOINED", K), l.Z.unsubscribe("CALL_DELETE", this.handleCallDelete), l.Z.unsubscribe("RTC_CONNECTION_STATE", this.handleRTCConnectionState)
   }
   constructor(...e) {
-    super(...e), B(this, "handleSelectedChannelUpdate", () => {
+    super(...e), k(this, "handleSelectedChannelUpdate", () => {
       let e = N.Z.getVoiceChannelId();
       for (let {
           channelId: t,
@@ -262,39 +262,39 @@ class q extends _.Z {
         })
       }
       i = null != e ? e : void 0
-    }), B(this, "handleActivityWebViewRelease", () => {
+    }), k(this, "handleActivityWebViewRelease", () => {
       this.releaseWebView()
-    }), B(this, "handleActivityLaunchFail", e => {
+    }), k(this, "handleActivityLaunchFail", e => {
       let {
         error: t,
         applicationId: n
       } = e;
       delete V[n];
-      let i = k.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC;
+      let i = B.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC;
       switch (t.code) {
         case w.evJ.INVALID_ACTIVITY_LAUNCH_NO_ACCESS:
-          i = k.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_ACCESS;
+          i = B.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_ACCESS;
           break;
         case w.evJ.INVALID_ACTIVITY_LAUNCH_PREMIUM_TIER:
-          i = k.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_PREMIUM;
+          i = B.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_PREMIUM;
           break;
         case w.evJ.INVALID_ACTIVITY_LAUNCH_CONCURRENT_ACTIVITIES:
-          i = k.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_CONCURRENT;
+          i = B.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_CONCURRENT;
           break;
         case w.evJ.INVALID_PERMISSIONS:
-          i = k.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS;
+          i = B.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS;
           break;
         case w.evJ.INVALID_ACTIVITY_LAUNCH_AFK_CHANNEL:
-          i = k.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_CHANNEL;
+          i = B.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_CHANNEL;
           break;
         case w.evJ.INVALID_ACTIVITY_LAUNCH_AGE_GATED:
-          i = k.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE;
+          i = B.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE;
           break;
         case w.evJ.INVALID_ACTIVITY_LAUNCH_DEV_PREVIEW_GUILD_SIZE:
-          i = k.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE
+          i = B.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE
       }
       this.showLaunchErrorModal(i)
-    }), B(this, "superHandleRPCDisconnect", e => {
+    }), k(this, "superHandleRPCDisconnect", e => {
       let {
         reason: t,
         application: n
@@ -310,22 +310,22 @@ class q extends _.Z {
         });
         t.code !== w.$VG.CLOSE_NORMAL && this.showErrorModal(t, i)
       }
-    }), B(this, "handleCallDelete", e => {
+    }), k(this, "handleCallDelete", e => {
       let {
         channelId: t
       } = e, n = N.Z.getVoiceChannelId();
       null != n && n === t && this.handleCallEnded(t)
-    }), B(this, "handleRTCConnectionState", e => {
+    }), k(this, "handleRTCConnectionState", e => {
       if (e.state !== w.hes.DISCONNECTED) return;
       let t = e.channelId;
       this.handleCallEnded(t)
-    }), B(this, "handleCallEnded", e => {
+    }), k(this, "handleCallEnded", e => {
       let t = C.ZP.getSelfEmbeddedActivityForChannel(e);
       null != t && this.leaveActivity({
         channelId: e,
         applicationId: t.applicationId
       })
-    }), B(this, "handleDeferredOpen", async e => {
+    }), k(this, "handleDeferredOpen", async e => {
       var t, n, i;
       let r;
       let {
@@ -338,11 +338,11 @@ class q extends _.Z {
       if ((null == u ? void 0 : u.applicationId) === o) return;
       let _ = await c.Z.fetchApplication(o);
       if (!(0, M.a)(l)) {
-        this.showLaunchErrorModal(k.Z.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS);
+        this.showLaunchErrorModal(B.Z.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS);
         return
       }
       if (!(0, U.Z)(null == _ ? void 0 : null === (t = _.embedded_activity_config) || void 0 === t ? void 0 : t.supported_platforms)) {
-        this.showLaunchErrorModal(k.Z.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS);
+        this.showLaunchErrorModal(B.Z.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS);
         return
       }
       let E = null == u ? void 0 : u.applicationId;

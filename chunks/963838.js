@@ -4,7 +4,7 @@ n.d(t, {
     return x
   },
   Jw: function() {
-    return k
+    return B
   },
   _r: function() {
     return V
@@ -13,7 +13,7 @@ n.d(t, {
     return H
   },
   lv: function() {
-    return B
+    return k
   },
   v: function() {
     return b
@@ -56,11 +56,11 @@ let b = {
   },
   G = [s],
   w = [o, a, l, u, _, c, d, E, I, T, h, S, f, N, A, m, O, R, p, g, C],
-  k = {
+  B = {
     [y.q.BASIC]: G,
     [y.q.PREMIUM]: w
   },
-  B = r().memoize(e => new Promise(t => {
+  k = r().memoize(e => new Promise(t => {
     let n = new Image;
     n.src = e, n.crossOrigin = "Anonymous", n.onload = () => {
       let i = y.v * (0, L.x_)();
@@ -73,7 +73,7 @@ let b = {
     }
   })),
   x = (e, t) => {
-    let n = k[e];
+    let n = B[e];
     if (null != t && e === y.q.PREMIUM) {
       let e = t.end + 1;
       return Math.floor(Math.random() * (t.start - e) + e)

@@ -56,7 +56,7 @@ function v(e) {
   }), {
     product: y,
     purchase: U
-  } = (0, d.Z)(null == M ? void 0 : M.skuId), b = N.ZP.canUseCollectibles(t), G = r.useRef(null), w = (0, I.Z)(o), k = (0, A.sr)(M, void 0 === v ? D : v), B = () => {
+  } = (0, d.Z)(null == M ? void 0 : M.skuId), b = N.ZP.canUseCollectibles(t), G = r.useRef(null), w = (0, I.Z)(o), B = (0, A.sr)(M, void 0 === v ? D : v), k = () => {
     L(M), u()
   }, x = r.useCallback(e => {
     u(), (0, _.mK)({
@@ -97,8 +97,8 @@ function v(e) {
     }), (0, i.jsxs)(a.ModalFooter, {
       className: C.modalFooter,
       children: [null != U && (!(0, c.qS)(U) || b) || null === M ? (0, i.jsx)(a.Button, {
-        onClick: B,
-        disabled: k,
+        onClick: k,
+        disabled: B,
         children: g.Z.Messages.AVATAR_DECORATION_MODAL_APPLY
       }) : null == U && (b || !(0, c.G1)(y)) ? (0, i.jsx)(a.Button, {
         className: C.modalFooterShopButton,

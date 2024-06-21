@@ -4,7 +4,7 @@ n.d(t, {
     return P
   },
   DU: function() {
-    return k
+    return B
   },
   EH: function() {
     return D
@@ -31,7 +31,7 @@ n.d(t, {
     return G
   },
   kJ: function() {
-    return B
+    return k
   },
   t5: function() {
     return U
@@ -273,7 +273,7 @@ function w(e) {
   return M(i) ? null : i
 }
 
-function k(e) {
+function B(e) {
   var t;
   let n = (0, S.Xv)(e),
     {
@@ -287,7 +287,7 @@ function k(e) {
   }
 }
 
-function B(e) {
+function k(e) {
   return {
     handleComplete: () => (0, I.Wf)(e),
     handleResetStatusClick: () => (0, I.eT)(e),

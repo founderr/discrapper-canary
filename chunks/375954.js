@@ -30,8 +30,8 @@ var i, r, s, o, a = n(392711),
   b = n(594174),
   G = n(981631);
 let w = new Set,
-  k = new E.Z("MessageStore"),
-  B = !1;
+  B = new E.Z("MessageStore"),
+  k = !1;
 
 function x() {
   c.Z.forEach(e => {
@@ -142,7 +142,7 @@ class Y extends(i = u.ZP.Store) {
     return null != this.getMessages(e).findNewest(e => e.author.id === (null == t ? void 0 : t.id))
   }
   hasCurrentUserSentMessageSinceAppStart() {
-    return B
+    return k
   }
 }
 o = "MessageStore", (s = "displayName") in(r = Y) ? Object.defineProperty(r, s, {
@@ -235,7 +235,7 @@ o = "MessageStore", (s = "displayName") in(r = Y) ? Object.defineProperty(r, s, 
       truncateBottom: n,
       truncateTop: i
     } = e;
-    k.log("Truncating messages for ".concat(t, " bottom:").concat(n, " top:").concat(i));
+    B.log("Truncating messages for ".concat(t, " bottom:").concat(n, " top:").concat(i));
     let r = c.Z.getOrCreate(t);
     r = r.truncate(n, i), c.Z.commit(r)
   },
@@ -243,7 +243,7 @@ o = "MessageStore", (s = "displayName") in(r = Y) ? Object.defineProperty(r, s, 
     let {
       channelId: t
     } = e;
-    k.log("Clearing messages for ".concat(t)), c.Z.clear(t), w.clear()
+    B.log("Clearing messages for ".concat(t)), c.Z.clear(t), w.clear()
   },
   MESSAGE_CREATE: function(e) {
     let {
@@ -252,7 +252,7 @@ o = "MessageStore", (s = "displayName") in(r = Y) ? Object.defineProperty(r, s, 
       isPushNotification: i
     } = e, r = c.Z.getOrCreate(t);
     if (i) {
-      k.log("Inserting message tapped on from a push notification", n.id, n.channel_id), c.Z.commit(r.receivePushNotification(n));
+      B.log("Inserting message tapped on from a push notification", n.id, n.channel_id), c.Z.commit(r.receivePushNotification(n));
       return
     }
     if (!r.ready) return !1;
@@ -405,6 +405,6 @@ o = "MessageStore", (s = "displayName") in(r = Y) ? Object.defineProperty(r, s, 
     let {
       message: t
     } = e, n = b.default.getCurrentUser();
-    null != t && null != t.author && null != n && t.author.id === n.id && (B = !0)
+    null != t && null != t.author && null != n && t.author.id === n.id && (k = !0)
   }
 })

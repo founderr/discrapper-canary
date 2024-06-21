@@ -34,10 +34,10 @@ let M = (0, A.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
   b = (0, A.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING),
   G = (0, A.Mg)(D.__invalid_unicodeCategoryShortcutHeight),
   w = (0, A.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
-  k = (0, A.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-  B = y + P + 2 * b,
+  B = (0, A.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
+  k = y + P + 2 * b,
   x = M + P,
-  V = x + (w + 2 * k),
+  V = x + (w + 2 * B),
   Z = y + U + 2 * b;
 
 function H(e) {
@@ -115,7 +115,7 @@ t.Z = e => {
     }, t)
   }), [c, N, A, S, R, C]), M = r.useMemo(() => [8, 8, 0, 8], []), b = r.useCallback((e, t) => {
     let n = A[t];
-    if (n.type === g.En.RECENT) return B;
+    if (n.type === g.En.RECENT) return k;
     if (n.type === g.En.GUILD) {
       let e = A[t + 1];
       return null != e && e.type !== g.En.GUILD ? V : x
@@ -134,7 +134,7 @@ t.Z = e => {
     A.forEach(r => {
       r.type === g.En.GUILD ? (t += 1, n += 1) : r.type === g.En.UNICODE ? i += 1 : (e += 1, t += 1)
     });
-    let r = B + t * x + V;
+    let r = k + t * x + V;
     return {
       nonUnicodeCategoryCount: t,
       firstUnicodeCategoryIndex: t,
@@ -161,7 +161,7 @@ t.Z = e => {
       if (n.type === g.En.RECENT) return t ? 0 : U;
       if (n.type === g.En.GUILD) {
         let n = A[e + 1];
-        return null != n && n.type !== g.En.GUILD ? t ? w + -2 * k + P + i : P : t ? i : P
+        return null != n && n.type !== g.En.GUILD ? t ? w + -2 * B + P + i : P : t ? i : P
       }
       return t ? P + i : 2 * P
     }, [A, K]),

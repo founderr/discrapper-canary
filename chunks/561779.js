@@ -131,9 +131,9 @@ class A extends(r = a.PureComponent) {
       "aria-label": b,
       "aria-labelledby": G,
       "aria-describedby": w
-    } = this.props, k = 0;
-    S ? null != s && (null != l ? k = s[l] : null != a && (k = s[a])) : k = this.scaleValue(t);
-    let B = "".concat(k, "%"),
+    } = this.props, B = 0;
+    S ? null != s && (null != l ? B = s[l] : null != a && (B = s[a])) : B = this.scaleValue(t);
+    let k = "".concat(B, "%"),
       x = null != s && null != r ? s.map((e, t) => {
         let n = r[t],
           i = null != p && p === n,
@@ -157,7 +157,7 @@ class A extends(r = a.PureComponent) {
           })
         }, t)
       }) : null,
-      V = null != C ? C(t) : "".concat(k.toFixed(0), "%"),
+      V = null != C ? C(t) : "".concat(B.toFixed(0), "%"),
       Z = null !== (e = null == L ? void 0 : L(t)) && void 0 !== e ? e : void 0;
     return (0, o.jsx)(E.t, {
       focusTarget: this.containerRef,
@@ -194,7 +194,7 @@ class A extends(r = a.PureComponent) {
             className: h.barFill,
             style: {
               ...m,
-              width: B
+              width: k
             }
           })
         }), N, (0, o.jsx)("div", {
@@ -209,7 +209,7 @@ class A extends(r = a.PureComponent) {
               className: u()(h.grabber, M),
               style: {
                 ...P,
-                left: B
+                left: k
               },
               onMouseDown: this.handleMouseDown,
               ref: this.grabberRef

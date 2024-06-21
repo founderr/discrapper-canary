@@ -87,14 +87,14 @@ function p(e) {
   let b = n(v),
     G = 0 === b.length,
     w = r.useId(),
-    k = r.useCallback(() => new Promise(e => {
+    B = r.useCallback(() => new Promise(e => {
       let t = U.current;
       if (null == t) return e();
       t.scrollToTop({
         callback: () => requestAnimationFrame(() => e())
       })
     }), []),
-    B = r.useCallback(() => new Promise(e => {
+    k = r.useCallback(() => new Promise(e => {
       let t = U.current;
       if (null == t) return e();
       t.scrollToTop({
@@ -113,8 +113,8 @@ function p(e) {
       id: w,
       isEnabled: !0,
       useVirtualFocus: !0,
-      scrollToStart: k,
-      scrollToEnd: B,
+      scrollToStart: B,
+      scrollToEnd: k,
       setFocus: x
     }),
     Z = C ? d.Tv : d.lW;

@@ -197,7 +197,7 @@ function M(e) {
     b = (0, a.e7)([h.Z], () => h.Z.theme),
     G = (0, I.XX)(s),
     w = (0, E.i)(G),
-    k = r.useCallback(e => {
+    B = r.useCallback(e => {
       G.premium && U && !P && (e.stopPropagation(), e.preventDefault(), (0, T.f)({
         guildId: s.id,
         location: {
@@ -208,8 +208,8 @@ function M(e) {
     }, [G.premium, U, P, s.id]);
   if (w === E.Q.NONE) return null;
   if (w === E.Q.CLAN) {
-    var B;
-    let e = (0, c.ky)(s.id, null === (B = s.clan) || void 0 === B ? void 0 : B.badge, M);
+    var k;
+    let e = (0, c.ky)(s.id, null === (k = s.clan) || void 0 === k ? void 0 : k.badge, M);
     return (0, i.jsx)(_.Tooltip, {
       color: l,
       position: N,
@@ -221,7 +221,7 @@ function M(e) {
       tooltipContentClassName: C.tooltipRemovePadding,
       children: t => (0, i.jsx)(_.Clickable, {
         ...t,
-        onClick: k,
+        onClick: B,
         className: o()(C.clanBadgeContainer, m),
         children: (0, i.jsx)(d.KQ, {
           src: e,
@@ -253,7 +253,7 @@ function M(e) {
     }),
     tooltipContentClassName: C.tooltipRemovePadding,
     children: e => (0, i.jsx)(_.Clickable, {
-      onClick: k,
+      onClick: B,
       children: (0, i.jsx)(A.Z, {
         ...e,
         className: m,

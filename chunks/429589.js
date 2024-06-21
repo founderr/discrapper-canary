@@ -38,8 +38,8 @@ var i = n(735250),
   b = n(620662),
   G = n(275920),
   w = n(952561),
-  k = n(513202),
-  B = n(915863),
+  B = n(513202),
+  k = n(915863),
   x = n(701488),
   V = n(981631),
   Z = n(689938);
@@ -52,7 +52,7 @@ function H(e) {
     user: Y,
     onAction: j,
     isEmbedded: W = !1,
-    ButtonComponent: K = B.Z,
+    ButtonComponent: K = k.Z,
     ...z
   } = e, {
     analyticsLocations: q
@@ -127,7 +127,7 @@ function H(e) {
           currentEmbeddedApplication: eu,
           activityChannelId: et,
           locationObject: e_.location,
-          embeddedActivitiesManager: k.Z,
+          embeddedActivitiesManager: B.Z,
           analyticsLocations: q
         })
       }

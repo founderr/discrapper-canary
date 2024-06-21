@@ -4,7 +4,7 @@ n.d(t, {
     return s
   },
   Ni: function() {
-    return k
+    return B
   },
   YH: function() {
     return G
@@ -54,8 +54,8 @@ let G = e => {
     emojiPaddingHorizontal: a,
     emojiSpriteSize: l
   } = e, _ = (0, E.e7)([T.Z], () => T.Z.categories), I = (0, E.e7)([O.Z], () => O.Z.getGuild(null == t ? void 0 : t.getGuildId()), [t]), f = null == t ? null : t.getGuildId(), N = (0, E.e7)([T.Z], () => T.Z.getDisambiguatedEmojiContext(f), [f]), G = (0, D.NJ)(f), w = (0, D.wC)(f), {
-    topEmojis: k,
-    newlyAddedEmojis: B
+    topEmojis: B,
+    newlyAddedEmojis: k
   } = (0, P.Z)(f, r), x = (0, E.Wu)([p.ZP], () => p.ZP.getFlattenedGuildIds(), []), {
     canCreateExpressions: V
   } = (0, A.XJ)(I), Z = (0, E.e7)([g.default], () => g.default.getCurrentUser()), H = (0, v.I5)(Z), F = N.getCustomEmoji(), Y = e => {
@@ -116,7 +116,7 @@ let G = e => {
                   columnIndex: P && t ? n + 1 : n,
                   visibleRowIndex: h,
                   category: o.type,
-                  subCategory: o.sectionId === y.En.TOP_GUILD_EMOJI ? (0, D.IP)(k, B, null !== (r = null !== (i = e.id) && void 0 !== i ? i : e.uniqueName) && void 0 !== r ? r : e.name) : y.t0.NONE
+                  subCategory: o.sectionId === y.En.TOP_GUILD_EMOJI ? (0, D.IP)(B, k, null !== (r = null !== (i = e.id) && void 0 !== i ? i : e.uniqueName) && void 0 !== r ? r : e.name) : y.t0.NONE
                 }
               });
             if (P && t && !_ && (r = [{
@@ -196,8 +196,8 @@ let G = e => {
           let {
             allEmojis: t
           } = (0, M.J)({
-            topEmojis: k,
-            newlyAddedEmojis: B
+            topEmojis: B,
+            newlyAddedEmojis: k
           });
           t.length > 0 && A(t, {
             categoryId: e,
@@ -251,7 +251,7 @@ let G = e => {
       rowCountBySection: e,
       sectionDescriptors: u
     }
-  }, [N, o, l, a, s, n, t, r, _, I, j, x, B, k, w, G, V, i, H, W, K])
+  }, [N, o, l, a, s, n, t, r, _, I, j, x, k, B, w, G, V, i, H, W, K])
 };
 (l = s || (s = {}))[l.PREMIUM = 0] = "PREMIUM", l[l.ROLE_SUBSCRIPTION = 1] = "ROLE_SUBSCRIPTION";
 let w = e => {
@@ -304,7 +304,7 @@ let w = e => {
       }
     }, [n, t, i, r, a, s, o])
   },
-  k = e => {
+  B = e => {
     let {
       emojiListRef: t
     } = e, n = (0, N.Iu)(e => e.searchQuery), i = u.useCallback(e => {

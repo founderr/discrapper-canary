@@ -34,8 +34,8 @@ var i = n(735250),
   b = n(111361),
   G = n(624138),
   w = n(543241),
-  k = n(253696),
-  B = n(199257),
+  B = n(253696),
+  k = n(199257),
   x = n(636411),
   V = n(380331),
   Z = n(170762),
@@ -202,21 +202,21 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
   let eU = null !== (s = null !== (n = null == u ? void 0 : u.getGuildId()) && void 0 !== n ? n : d) && void 0 !== s ? s : null,
     [eb, eG] = r.useState(!1),
     ew = y.default.getCurrentUser(),
-    ek = (0, b.I5)(ew);
+    eB = (0, b.I5)(ew);
   r.useImperativeHandle(t, () => ({
     onPickerOpen: e3
   }));
   let {
-    location: eB
+    location: ek
   } = (0, h.O)(), {
     page: ex,
     section: eV,
     object: eZ,
     openPopoutType: eH
   } = eI, eF = r.useMemo(() => ({
-    ...eB,
+    ...ek,
     section: null != eV ? eV : q.jXE.EMOJI_PICKER_POPOUT
-  }), [eB, eV]), {
+  }), [ek, eV]), {
     analyticsLocations: eY
   } = (0, f.ZP)(S.Z.EMOJI_PICKER), {
     diversitySurrogate: ej
@@ -245,15 +245,15 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
     emojiSpriteSize: g
   }), {
     newlyAddedEmojis: e2
-  } = (0, B.Z)(eU, l);
-  (0, k.b)({
+  } = (0, k.Z)(eU, l);
+  (0, B.b)({
     intention: l,
     isBurstReaction: eb,
     analyticsObject: eZ
   });
   let e3 = r.useCallback(() => {
       let e = e2.length > 0 ? e2[0].id : null;
-      (0, O.pr)(eU, e), (0, k.Z)({
+      (0, O.pr)(eU, e), (0, B.Z)({
         intention: l,
         isBurstReaction: eb,
         analyticsObject: eZ
@@ -353,7 +353,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
     onClose: () => ev(null),
     guildId: eC.guildId,
     emojiId: eC.emojiId
-  }) : eb && !ek && (a = (0, i.jsx)(x.Z, {
+  }) : eb && !eB && (a = (0, i.jsx)(x.Z, {
     onDismiss: () => eG(!1)
   }));
   let ti = (0, i.jsx)(H.Z, {
@@ -383,7 +383,7 @@ t.Z = r.memo(r.forwardRef(function(e, t) {
       role: L ? "tabpanel" : void 0,
       className: o()(J.wrapper, {
         [J.emojiPickerHasTabWrapper]: L,
-        [J.isBurstReactionPicker]: eb && ek
+        [J.isBurstReactionPicker]: eb && eB
       }),
       children: [L ? null : ti, (0, i.jsxs)("div", {
         className: o()(J.emojiPicker, ed),

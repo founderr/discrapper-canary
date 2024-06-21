@@ -65,13 +65,13 @@ async function g(e) {
       user: y
     })) return !1;
   let w = (0, f.Z)(v),
-    k = O.wP.includes(b.type);
+    B = O.wP.includes(b.type);
   if (w) {
     if (!await (0, N.Z)({
         channelId: v,
         bypassChangeModal: null != g
       })) return !1
-  } else if (!(0, d.WS)(b, !0, "handleStartEmbeddedActivity") || !k) return !1;
+  } else if (!(0, d.WS)(b, !0, "handleStartEmbeddedActivity") || !B) return !1;
   return I.J$(v, U.id, M), (0, m.Z)(L, v), (0, A.Z)({
     type: R.q5t.LAUNCH,
     userId: y.id,
