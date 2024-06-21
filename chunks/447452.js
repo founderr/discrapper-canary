@@ -14,8 +14,7 @@ let i = (0, n(818083).B)({
     defaultConfig: {
       basicsEnabled: !1,
       moreUserDetailsEnabled: !1,
-      updatedOnAllSurfaces: !1,
-      botProfilesEnabled: !1
+      updatedOnAllSurfaces: !1
     },
     treatments: [{
       id: 1,
@@ -23,8 +22,7 @@ let i = (0, n(818083).B)({
       config: {
         basicsEnabled: !0,
         moreUserDetailsEnabled: !1,
-        updatedOnAllSurfaces: !1,
-        botProfilesEnabled: !1
+        updatedOnAllSurfaces: !1
       }
     }, {
       id: 2,
@@ -32,8 +30,7 @@ let i = (0, n(818083).B)({
       config: {
         basicsEnabled: !0,
         moreUserDetailsEnabled: !0,
-        updatedOnAllSurfaces: !1,
-        botProfilesEnabled: !1
+        updatedOnAllSurfaces: !1
       }
     }, {
       id: 3,
@@ -41,17 +38,7 @@ let i = (0, n(818083).B)({
       config: {
         basicsEnabled: !0,
         moreUserDetailsEnabled: !0,
-        updatedOnAllSurfaces: !0,
-        botProfilesEnabled: !1
-      }
-    }, {
-      id: 100,
-      label: "Bot profiles",
-      config: {
-        basicsEnabled: !0,
-        moreUserDetailsEnabled: !0,
-        updatedOnAllSurfaces: !0,
-        botProfilesEnabled: !0
+        updatedOnAllSurfaces: !0
       }
     }]
   }),
