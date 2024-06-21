@@ -110,6 +110,7 @@ function P(e) {
           object: I.qAy.AVATAR
         })
       }), !M && (0, n.jsx)(u.J, {
+        user: a,
         profileType: Z.y0.BITE_SIZE,
         statusActivity: z
       })]

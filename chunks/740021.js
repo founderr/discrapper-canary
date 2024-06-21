@@ -1,6 +1,6 @@
 s.d(i, {
   Z: function() {
-    return C
+    return R
   }
 }), s(47120);
 var n = s(735250);
@@ -26,22 +26,22 @@ var l = s(442837),
   N = s(602091),
   g = s(231338),
   T = s(327570);
-let R = I.ZP.getEnableHardwareAcceleration() ? t.Xo : t.qE;
+let C = I.ZP.getEnableHardwareAcceleration() ? t.Xo : t.qE;
 
-function C(e) {
+function R(e) {
   let {
     user: i,
     displayProfile: s,
     activity: t,
     customStatusActivity: I,
-    guildId: C,
+    guildId: R,
     channelId: A,
     transitionState: M,
     viewProfileItem: p,
     onClose: j
   } = e, {
     theme: U
-  } = (0, v.z)(), L = (0, Z.Z)(i.id, C), {
+  } = (0, v.z)(), L = (0, Z.Z)(i.id, R), {
     avatarSrc: O,
     eventHandlers: P,
     avatarDecorationSrc: y
@@ -68,7 +68,7 @@ function C(e) {
       className: T.headerInner,
       children: [(0, n.jsx)("div", {
         ...P,
-        children: (0, n.jsx)(R, {
+        children: (0, n.jsx)(C, {
           src: O,
           avatarDecoration: y,
           size: h.EF.SIZE_120,
@@ -83,7 +83,7 @@ function C(e) {
       }), (0, n.jsx)(m.Z, {
         user: i,
         isCurrentUser: B,
-        guildId: C,
+        guildId: R,
         canDM: L,
         relationshipType: b,
         originalFriendingEnabled: D,
@@ -91,9 +91,11 @@ function C(e) {
         viewProfileItem: p,
         onClose: j
       }), (0, n.jsx)(S.J, {
+        user: i,
         statusActivity: I,
         profileType: x.y0.FULL_SIZE,
-        hasEntered: M === N.Dv.ENTERED
+        hasEntered: M === N.Dv.ENTERED,
+        onClose: j
       })]
     })]
   })

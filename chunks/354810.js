@@ -99,6 +99,7 @@ function S(e) {
         statusTooltipDelay: I.vB
       })
     }), (0, l.jsx)(C.J, {
+      user: t,
       statusActivity: y,
       profileType: I.y0.PANEL
     })]

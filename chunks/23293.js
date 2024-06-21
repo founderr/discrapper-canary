@@ -21,8 +21,9 @@ function d(e) {
     displayProfile: n,
     guildId: d,
     channelId: E,
-    onOpenProfile: I
-  } = e, T = (0, r.e7)([s.Z], () => s.Z.findActivity(t.id, e => {
+    onOpenProfile: I,
+    onClose: T
+  } = e, h = (0, r.e7)([s.Z], () => s.Z.findActivity(t.id, e => {
     let {
       type: t
     } = e;
@@ -43,8 +44,10 @@ function d(e) {
       channelId: E,
       onOpenProfile: I
     }), (0, i.jsx)(a.J, {
-      statusActivity: T,
-      profileType: u.y0.BITE_SIZE
+      user: t,
+      statusActivity: h,
+      profileType: u.y0.BITE_SIZE,
+      onClose: T
     })]
   })
 }

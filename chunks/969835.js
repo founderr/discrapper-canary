@@ -117,7 +117,8 @@ function v(e) {
             displayProfile: Z,
             guildId: v,
             channelId: L,
-            onOpenProfile: U ? void 0 : F
+            onOpenProfile: U ? void 0 : F,
+            onClose: P
           }), (0, i.jsx)(O.Z, {
             user: t,
             currentUser: n,

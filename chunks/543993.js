@@ -157,19 +157,18 @@ function es(e) {
     guildId: l,
     isApplicationStreaming: r,
     onClose: o,
-    onSelect: h,
-    closePopout: w
-  } = e, k = __OVERLAY__, V = (0, v.ZP)(t.id, l), Y = (0, _.O)(), {
-    analyticsLocations: K
-  } = (0, p.ZP)(g.Z.ACCOUNT_PROFILE_POPOUT), es = (0, Z.Q1)({
+    onSelect: h
+  } = e, w = __OVERLAY__, k = (0, v.ZP)(t.id, l), V = (0, _.O)(), {
+    analyticsLocations: Y
+  } = (0, p.ZP)(g.Z.ACCOUNT_PROFILE_POPOUT), K = (0, Z.Q1)({
     layout: "SIMPLIFIED_ACCOUNT_POPOUT",
     userId: t.id,
     guildId: l
-  }), [el, ea] = (0, d.Wu)([B.Z], () => {
+  }), [es, el] = (0, d.Wu)([B.Z], () => {
     var e;
     let n = t.id;
     return "string" != typeof n ? [void 0, X.Skl.UNKNOWN] : [null !== (e = B.Z.findActivity(n, e => e.type !== X.IIU.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, B.Z.getStatus(n)]
-  }), er = function(e, t) {
+  }), ea = function(e, t) {
     let n = C.Y.useExperiment({
         location: "account popout"
       }).expiringStatus,
@@ -253,54 +252,54 @@ function es(e) {
         children: d
       }, "quiet-mode") : null]
     })
-  }(ea, Y), {
-    ref: eo
-  } = (0, I.Z)(), ec = (0, m.Z)(eo);
+  }(el, V), {
+    ref: er
+  } = (0, I.Z)(), eo = (0, m.Z)(er);
   s.useEffect(() => {
     F.default.track(X.rMx.OPEN_POPOUT, {
       type: "User Status Menu",
       has_custom_status: null != n,
       other_user_id: t.id,
-      application_id: null != el ? el.application_id : void 0,
+      application_id: null != es ? es.application_id : void 0,
       is_streaming: r,
-      application_name: null != el ? el.name : void 0,
-      profile_has_nitro_customization: (null == V ? void 0 : V.banner) != null,
-      location: Y.location,
-      has_profile_effect: (null == V ? void 0 : V.profileEffectId) != null
+      application_name: null != es ? es.name : void 0,
+      profile_has_nitro_customization: (null == k ? void 0 : k.banner) != null,
+      location: V.location,
+      has_profile_effect: (null == k ? void 0 : k.profileEffectId) != null
     })
   }, []);
-  let eu = e => {
-      null == w || w(), (0, b.openUserProfileModal)({
-        sourceAnalyticsLocations: K,
+  let ec = e => {
+      null == o || o(), (0, b.openUserProfileModal)({
+        sourceAnalyticsLocations: Y,
         userId: t.id,
         guildId: l,
         ...e
       })
     },
-    ed = (0, S.p)(),
-    eE = ea === X.Skl.DND,
-    eh = (0, q.g)(),
-    e_ = (0, N.o)(null != n ? n : void 0, ee.menuItemFocused),
-    eI = (0, T.Z)({
+    eu = (0, S.p)(),
+    ed = el === X.Skl.DND,
+    eE = (0, q.g)(),
+    eh = (0, N.o)(null != n ? n : void 0, ee.menuItemFocused),
+    e_ = (0, T.Z)({
       id: t.id,
       label: $.Z.Messages.COPY_ID_USER,
       showIconFirst: !0,
       focusedClassName: ee.menuItemFocused
     }),
-    em = (0, d.e7)([H.Z], () => H.Z.hidePersonalInformation);
+    eI = (0, d.e7)([H.Z], () => H.Z.hidePersonalInformation);
   return (0, i.jsx)(p.Gt, {
-    value: K,
+    value: Y,
     children: (0, i.jsx)(Z.Mt, {
       layout: "SIMPLIFIED_ACCOUNT_POPOUT",
       userId: t.id,
       guildId: l,
       children: (0, i.jsx)(E.Dialog, {
-        ref: eo,
+        ref: er,
         "aria-label": t.username,
         children: (0, i.jsxs)(x.Z, {
           className: ee.themeContainer,
           user: t,
-          displayProfile: V,
+          displayProfile: k,
           profileType: J.y0.BITE_SIZE,
           children: [(0, i.jsx)(P.Z, {
             profileType: J.y0.BITE_SIZE,
@@ -309,8 +308,9 @@ function es(e) {
             })
           }), (0, i.jsx)(U.Z, {
             user: t,
-            displayProfile: V,
-            onOpenProfile: k ? void 0 : eu
+            displayProfile: k,
+            onOpenProfile: w ? void 0 : ec,
+            onClose: o
           }), (0, i.jsxs)("div", {
             className: ee.body,
             children: [(0, i.jsx)(M.Z, {
@@ -318,10 +318,10 @@ function es(e) {
               className: ee.username,
               profileType: J.y0.BITE_SIZE,
               nickname: z.ZP.getName(null, null, t),
-              onOpenProfile: eu,
-              pronouns: null == V ? void 0 : V.pronouns,
+              onOpenProfile: ec,
+              pronouns: null == k ? void 0 : k.pronouns,
               tags: (0, i.jsx)(L.Z, {
-                displayProfile: V,
+                displayProfile: k,
                 profileType: J.y0.BITE_SIZE,
                 onClose: o
               }),
@@ -330,13 +330,13 @@ function es(e) {
                   userId: t.id
                 }), (0, i.jsx)(O.Z, {
                   user: t,
-                  isHovering: ec
+                  isHovering: eo
                 })]
               })
             }), (0, i.jsx)(j.Z, {
               user: t,
-              bio: null == V ? void 0 : V.bio,
-              hidePersonalInformation: em,
+              bio: null == k ? void 0 : k.bio,
+              hidePersonalInformation: eI,
               onClose: o
             }), (0, i.jsx)(y.Z, {
               user: t,
@@ -359,16 +359,16 @@ function es(e) {
                         alignItems: "center",
                         justifyContent: "space-between"
                       },
-                      children: [(0, W.u5)(ea), ed || eE ? (0, i.jsx)(E.BellSlashIcon, {
+                      children: [(0, W.u5)(el), eu || ed ? (0, i.jsx)(E.BellSlashIcon, {
                         size: "xxs"
                       }) : null]
                     }),
                     focusedClassName: ee.menuItemFocused,
                     subMenuIconClassName: ee.subMenuIcon,
                     action: u.tq ? function() {
-                      es({
+                      K({
                         action: "PRESS_SET_STATUS",
-                        analyticsLocations: K
+                        analyticsLocations: Y
                       }), (0, E.openModalLazy)(() => new Promise(e => {
                         e(e => (0, i.jsx)(E.ModalRoot, {
                           ...e,
@@ -383,7 +383,7 @@ function es(e) {
                             className: ee.statusPickerModalMenu,
                             onClose: e.onClose,
                             onSelect: e.onClose,
-                            children: er
+                            children: ea
                           })
                         }))
                       }))
@@ -395,16 +395,16 @@ function es(e) {
                         isFocused: n
                       } = e;
                       return (0, i.jsx)(E.Status, {
-                        status: ea,
+                        status: el,
                         size: 12,
                         className: a()(t, ee.mainStatusIcon),
                         color: n ? "currentColor" : void 0
                       })
                     },
-                    children: u.tq ? void 0 : er
+                    children: u.tq ? void 0 : ea
                   }, "status-picker")
                 }), (0, i.jsx)(E.MenuGroup, {
-                  children: e_
+                  children: eh
                 })]
               }), (0, i.jsxs)(E.Menu, {
                 navId: "account",
@@ -422,21 +422,21 @@ function es(e) {
                     icon: E.UserCircleIcon,
                     showIconFirst: !0,
                     action: () => {
-                      es({
+                      K({
                         action: "PRESS_SWITCH_ACCOUNTS",
-                        analyticsLocations: K
+                        analyticsLocations: Y
                       }), (0, Q.Z)()
                     },
-                    children: eh
+                    children: eE
                   })
                 }), (0, i.jsx)(E.MenuGroup, {
-                  children: eI
+                  children: e_
                 })]
               })]
             })]
-          }), (null == V ? void 0 : V.profileEffectId) != null && (0, i.jsx)(f.Z, {
-            profileEffectId: null == V ? void 0 : V.profileEffectId,
-            isHovering: ec
+          }), (null == k ? void 0 : k.profileEffectId) != null && (0, i.jsx)(f.Z, {
+            profileEffectId: null == k ? void 0 : k.profileEffectId,
+            isHovering: eo
           })]
         })
       })
@@ -458,7 +458,6 @@ function el(e) {
       "string" == typeof t && (await (0, h.PR)(t), _(!0))
     }
   }, [c, t]), null == I) ? (E && o()(null != I, "Unexpected missing user"), null) : (0, i.jsx)(es, {
-    closePopout: a,
     user: I,
     customStatus: u,
     guildId: l,

@@ -2,9 +2,9 @@ s.r(t), s(47120);
 var a = s(735250),
   n = s(470079),
   l = s(512722),
-  r = s.n(l),
-  o = s(442837),
-  i = s(481060),
+  o = s.n(l),
+  i = s(442837),
+  r = s(481060),
   u = s(596454),
   c = s(410575),
   S = s(907040),
@@ -35,7 +35,7 @@ let U = Object.values(A.F).filter(e => "number" == typeof e).sort((e, t) => e - 
 function x(e) {
   return (0, a.jsxs)("div", {
     className: j.statusOptionItem,
-    children: [(0, a.jsx)(i.Status, {
+    children: [(0, a.jsx)(r.Status, {
       status: e.value,
       size: 10,
       className: j.statusIcon
@@ -44,30 +44,32 @@ function x(e) {
 }
 let v = [{
   key: 1,
-  value: i.StatusTypes.ONLINE,
-  label: (0, f.u5)(i.StatusTypes.ONLINE)
+  value: r.StatusTypes.ONLINE,
+  label: (0, f.u5)(r.StatusTypes.ONLINE)
 }, {
   key: 2,
-  value: i.StatusTypes.IDLE,
-  label: (0, f.u5)(i.StatusTypes.IDLE)
+  value: r.StatusTypes.IDLE,
+  label: (0, f.u5)(r.StatusTypes.IDLE)
 }, {
   key: 3,
-  value: i.StatusTypes.DND,
-  label: (0, f.u5)(i.StatusTypes.DND)
+  value: r.StatusTypes.DND,
+  label: (0, f.u5)(r.StatusTypes.DND)
 }, {
   key: 4,
-  value: i.StatusTypes.INVISIBLE,
-  label: (0, f.u5)(i.StatusTypes.INVISIBLE)
+  value: r.StatusTypes.INVISIBLE,
+  label: (0, f.u5)(r.StatusTypes.INVISIBLE)
 }];
 class D extends n.PureComponent {
   componentDidMount() {
     let {
-      sourceAnalyticsContext: e
+      sourceAnalyticsLocations: e,
+      sourceAnalyticsContext: t
     } = this.props;
     g.default.track(O.rMx.OPEN_MODAL, {
-      source: e.location,
+      source: null == t ? void 0 : t.location,
       type: O.jXE.CUSTOM_STATUS_MODAL,
-      load_id: e.loadId
+      load_id: null == t ? void 0 : t.loadId,
+      location_stack: e
     })
   }
   get clearAfterOptions() {
@@ -122,7 +124,7 @@ class D extends n.PureComponent {
       text: t,
       emojiInfo: s
     } = this.state;
-    return (0, a.jsx)(i.FormSection, {
+    return (0, a.jsx)(r.FormSection, {
       className: j.formGroup,
       title: _.Z.Messages.CUSTOM_STATUS_MODAL_BODY.format({
         username: e.username
@@ -131,10 +133,10 @@ class D extends n.PureComponent {
         className: j.inputContainer,
         children: [(0, a.jsx)("div", {
           className: j.emojiButtonContainer,
-          children: (0, a.jsx)(i.Popout, {
+          children: (0, a.jsx)(r.Popout, {
             renderPopout: this.renderEmojiPicker,
             position: "left",
-            animation: i.Popout.Animation.NONE,
+            animation: r.Popout.Animation.NONE,
             align: "top",
             children: (e, t) => {
               let {
@@ -149,7 +151,7 @@ class D extends n.PureComponent {
               })
             }
           })
-        }), (0, a.jsx)(i.TextInput, {
+        }), (0, a.jsx)(r.TextInput, {
           maxLength: A.s,
           value: t,
           inputClassName: j.input,
@@ -157,7 +159,7 @@ class D extends n.PureComponent {
           onChange: this.handleStatusChange,
           onKeyPress: this.handleKeyPress,
           autoFocus: !0
-        }), t.length > 0 || null != s ? (0, a.jsx)(i.Button, {
+        }), t.length > 0 || null != s ? (0, a.jsx)(r.Button, {
           focusProps: {
             offset: {
               top: 8,
@@ -168,9 +170,9 @@ class D extends n.PureComponent {
           },
           className: j.clearButton,
           onClick: this.handleClearStatus,
-          look: i.Button.Looks.BLANK,
-          size: i.Button.Sizes.NONE,
-          children: (0, a.jsx)(i.CircleXIcon, {
+          look: r.Button.Looks.BLANK,
+          size: r.Button.Sizes.NONE,
+          children: (0, a.jsx)(r.CircleXIcon, {
             size: "md",
             color: "currentColor",
             className: j.clearIcon
@@ -183,10 +185,10 @@ class D extends n.PureComponent {
     let {
       clearAfter: e
     } = this.state;
-    return (0, a.jsx)(i.FormSection, {
+    return (0, a.jsx)(r.FormSection, {
       className: j.formGroup,
       title: _.Z.Messages.CUSTOM_STATUS_CLEAR_AFTER,
-      children: (0, a.jsx)(i.SingleSelect, {
+      children: (0, a.jsx)(r.SingleSelect, {
         placeholder: _.Z.Messages.CUSTOM_STATUS_CLEAR_AFTER,
         maxVisibleItems: 5,
         value: e,
@@ -199,10 +201,10 @@ class D extends n.PureComponent {
     let {
       status: e
     } = this.state;
-    return (0, a.jsx)(i.FormSection, {
+    return (0, a.jsx)(r.FormSection, {
       className: j.formGroup,
       title: _.Z.Messages.CUSTOM_STATUS_STATUS_TITLE,
-      children: (0, a.jsx)(i.SingleSelect, {
+      children: (0, a.jsx)(r.SingleSelect, {
         maxVisibleItems: 4,
         value: e,
         options: v,
@@ -218,36 +220,36 @@ class D extends n.PureComponent {
     } = this.props;
     return (0, a.jsx)(c.Z, {
       ...this.analyticsLocation,
-      children: (0, a.jsxs)(i.ModalRoot, {
+      children: (0, a.jsxs)(r.ModalRoot, {
         transitionState: e,
         className: j.modalRoot,
         "aria-label": _.Z.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS,
-        children: [(0, a.jsxs)(i.ModalHeader, {
+        children: [(0, a.jsxs)(r.ModalHeader, {
           separator: !1,
           className: j.headerContainer,
           children: [(0, a.jsx)("div", {
             className: j.art
           }), (0, a.jsx)("div", {
             className: j.header,
-            children: (0, a.jsx)(i.H, {
+            children: (0, a.jsx)(r.H, {
               className: j.headerText,
               children: _.Z.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS
             })
-          }), (0, a.jsx)(i.ModalCloseButton, {
+          }), (0, a.jsx)(r.ModalCloseButton, {
             onClick: t,
             className: j.modalCloseButton
           })]
-        }), (0, a.jsxs)(i.ModalContent, {
-          children: [this.renderCustomStatusInput(), this.renderClearAfter(), (0, a.jsx)(i.FormDivider, {
+        }), (0, a.jsxs)(r.ModalContent, {
+          children: [this.renderCustomStatusInput(), this.renderClearAfter(), (0, a.jsx)(r.FormDivider, {
             className: j.formDivider
           }), this.renderStatusInput()]
-        }), (0, a.jsxs)(i.ModalFooter, {
-          children: [(0, a.jsx)(i.Button, {
+        }), (0, a.jsxs)(r.ModalFooter, {
+          children: [(0, a.jsx)(r.Button, {
             onClick: this.handleSubmit,
             children: _.Z.Messages.SAVE
-          }), (0, a.jsx)(i.Button, {
+          }), (0, a.jsx)(r.Button, {
             onClick: t,
-            look: i.Button.Looks.LINK,
+            look: r.Button.Looks.LINK,
             color: j.cancelButton,
             children: _.Z.Messages.CANCEL
           })]
@@ -266,14 +268,14 @@ class D extends n.PureComponent {
         let n = Number(a.expiresAtMs);
         if (isNaN(n)) return A.F.TODAY;
         let l = new Date,
-          r = new Date(n);
-        if (t = l, s = r, t.getFullYear() !== s.getFullYear() || t.getMonth() !== s.getMonth() || t.getDate() !== s.getDate()) return A.F.TODAY;
-        let o = Number(n) - Date.now();
-        return null !== (e = U.find(e => o <= e)) && void 0 !== e ? e : A.F.TODAY
+          o = new Date(n);
+        if (t = l, s = o, t.getFullYear() !== s.getFullYear() || t.getMonth() !== s.getMonth() || t.getDate() !== s.getDate()) return A.F.TODAY;
+        let i = Number(n) - Date.now();
+        return null !== (e = U.find(e => i <= e)) && void 0 !== e ? e : A.F.TODAY
       }(),
       status: function() {
         let e = h.co.getSetting();
-        return v.some(t => t.value === e) ? e : i.StatusTypes.ONLINE
+        return v.some(t => t.value === e) ? e : r.StatusTypes.ONLINE
       }()
     }), N(this, "handleClearStatus", () => {
       this.setState({
@@ -317,8 +319,8 @@ class D extends n.PureComponent {
         text: a,
         clearAfter: n,
         status: l
-      } = this.state, r = h.co.getSetting();
-      r !== l && (0, d.Z)(l, r, e), (0, C.Z)(a, s, n, e), t()
+      } = this.state, o = h.co.getSetting();
+      o !== l && (0, d.Z)(l, o, e), (0, C.Z)(a, s, n, e), t()
     }), N(this, "handleKeyPress", e => {
       e.which === O.yXg.ENTER && this.handleSaveStatus()
     }), N(this, "renderEmojiPicker", e => {
@@ -338,9 +340,9 @@ class D extends n.PureComponent {
     })
   }
 }
-t.default = o.ZP.connectStores([m.Z, T.default], () => {
+t.default = i.ZP.connectStores([m.Z, T.default], () => {
   let e = T.default.getCurrentUser();
-  return r()(null != e, "CustomStatusModal: user cannot be null"), {
+  return o()(null != e, "CustomStatusModal: user cannot be null"), {
     customStatus: m.Z.getCustomStatusActivity(),
     user: e
   }
