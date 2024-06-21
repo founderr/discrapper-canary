@@ -103,10 +103,10 @@ function j(e) {
   let P = i.useCallback(() => {
       N && (0, f.nE)(n, N, v.Sbl.CREATE_JOIN_GUILD_MODAL), O()
     }, [n, O, N]),
-    y = i.useCallback(() => {
+    b = i.useCallback(() => {
       L(!0)
     }, []),
-    b = (0, c.e7)([m.Z], () => m.Z.getGuild(n)),
+    y = (0, c.e7)([m.Z], () => m.Z.getGuild(n)),
     D = (0, c.e7)([p.default], () => p.default.getCurrentUser()),
     U = (0, c.e7)([h.ZP], () => null != D ? h.ZP.getMember(n, D.id) : null),
     k = (0, d.ZP)(),
@@ -116,7 +116,7 @@ function j(e) {
       saturation: 1
     }).hex(),
     B = (0, _.nj)(w, H, "top center");
-  return null == b || null == D || null == U || null == I ? null : (0, l.jsx)(u.ModalRoot, {
+  return null == y || null == D || null == U || null == I ? null : (0, l.jsx)(u.ModalRoot, {
     ...o,
     transitionState: o.transitionState,
     "aria-labelledby": g,
@@ -134,7 +134,7 @@ function j(e) {
             children: (0, l.jsx)(u.Heading, {
               variant: "heading-xxl/medium",
               children: A.Z.Messages.CLAN_JOIN_SUCCESS_TITLE.format({
-                name: b.name
+                name: y.name
               })
             })
           }), (0, l.jsx)(u.Text, {
@@ -152,7 +152,7 @@ function j(e) {
         children: (0, l.jsx)(R, {
           guildId: n,
           clanInfo: I,
-          onSignCharter: y
+          onSignCharter: b
         })
       }), (0, l.jsx)(Z.Z, {
         onClick: P,

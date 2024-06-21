@@ -80,8 +80,8 @@ function O(e) {
   } = e, s = (0, c.e7)([_.Z], () => null != t ? _.Z.getGuild(t.getGuildId()) : null, [t]), h = null != s && S.default.extractTimestamp(s.id) < Date.now() - A._8R, x = (0, c.e7)([C.default], () => (null == s ? void 0 : s.ownerId) === C.default.getId(), [s]), {
     canInvite: O,
     canManageGuild: P,
-    canMessage: y
-  } = (0, E.TE)(t, s), b = (0, c.e7)([I.default], () => {
+    canMessage: b
+  } = (0, E.TE)(t, s), y = (0, c.e7)([I.default], () => {
     var e, t;
     return (null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0
   }), {
@@ -168,7 +168,7 @@ function O(e) {
         }))
       }, [e])
     }
-  }(s), F = !(b || D || U || k), {
+  }(s), F = !(y || D || U || k), {
     titleAnimatedStyle: z,
     opacities: W
   } = function(e) {
@@ -235,7 +235,7 @@ function O(e) {
       completed: k,
       onClick: B
     })
-  }, "customize")), y && K.push((0, l.jsx)(o.Z.div, {
+  }, "customize")), b && K.push((0, l.jsx)(o.Z.div, {
     className: j.cardWrapper,
     style: F ? {
       opacity: W[K.length]
@@ -254,7 +254,7 @@ function O(e) {
     children: (0, l.jsx)(L, {
       iconUrl: n(435921),
       header: R.Z.Messages.WELCOME_CTA_DOWNLOAD_TITLE,
-      completed: b,
+      completed: y,
       onClick: G
     })
   }, "download")), K.push((0, l.jsx)(o.Z.div, {

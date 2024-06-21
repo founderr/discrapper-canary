@@ -50,8 +50,8 @@ var c = n(442837),
   L = n(430824),
   O = n(496675),
   P = n(699516),
-  y = n(9156),
-  b = n(979651),
+  b = n(9156),
+  y = n(979651),
   D = n(938475),
   U = n(346656),
   k = n(409216),
@@ -137,7 +137,7 @@ function ea(e) {
     header: x
   } = e, [T, N] = i.useState(!1), [Z, S] = i.useState(null), v = (0, c.e7)([O.Z], () => O.Z.can($.Plq.SEND_MESSAGES, t)), M = (0, W.a)({
     location: "PopoutReactor"
-  }), [R, b] = i.useState(!1), [w, B] = i.useState(!1), {
+  }), [R, y] = i.useState(!1), [w, B] = i.useState(!1), {
     voiceBar: V,
     joinVoiceButton: F
   } = function(e) {
@@ -151,7 +151,7 @@ function ea(e) {
     } = (0, z.Z)(n), o = (0, c.e7)([L.Z], () => null != r ? L.Z.getGuild(r.guild_id) : void 0), u = (0, c.Wu)([D.ZP], () => null != r ? D.ZP.getVoiceStatesForChannel(r) : [], [r]), m = i.useMemo(() => {
       for (let e of u) {
         let t = j.Z.getDMFromUserId(e.user.id),
-          n = null != t && y.ZP.isChannelMuted(null, t),
+          n = null != t && b.ZP.isChannelMuted(null, t),
           l = P.Z.isBlocked(e.user.id);
         if (n || l) return !0
       }
@@ -265,7 +265,7 @@ function ea(e) {
           guild_id: t.guild_id
         }), M) {
         let i;
-        if ((0, I.EW)(u.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), b(!0), B(!1), T) i = t;
+        if ((0, I.EW)(u.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), y(!0), B(!1), T) i = t;
         else {
           var l;
           let e = await m.Z.getOrEnsurePrivateChannel(n.id);
@@ -276,7 +276,7 @@ function ea(e) {
           sendToChannel: i,
           onComplete: () => {
             B(!0), setTimeout(() => {
-              b(!1), r()
+              y(!1), r()
             }, 600)
           },
           interactionType: J.xP.REACTION_EMOJI_REACT_SENT
@@ -614,7 +614,7 @@ function ed(e) {
     badges: n,
     stream: s,
     ...a
-  } = e, r = (0, c.e7)([j.Z], () => j.Z.getChannel(null == s ? void 0 : s.channelId)), [o] = i.useMemo(() => (0, S.p9)(r, b.Z, L.Z, O.Z, N.Z), [r]);
+  } = e, r = (0, c.e7)([j.Z], () => j.Z.getChannel(null == s ? void 0 : s.channelId)), [o] = i.useMemo(() => (0, S.p9)(r, y.Z, L.Z, O.Z, N.Z), [r]);
   return null == s ? null : (0, l.jsxs)(el, {
     className: et.streamingPopoutHero,
     children: [(0, l.jsx)(eo, {

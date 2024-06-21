@@ -30,8 +30,8 @@ var l = n(735250),
   L = n(516887),
   O = n(974251),
   P = n(893718),
-  y = n(436660),
-  b = n(603009),
+  b = n(436660),
+  y = n(603009),
   D = n(28546),
   U = n(295474),
   k = n(521476),
@@ -414,7 +414,7 @@ class eP extends i.PureComponent {
     }), eR(this, "handleSetValue", e => {
       var t, n;
       let l = null === (t = this.editorRef) || void 0 === t ? void 0 : t.getSlateEditor();
-      null != l && (y.Q.select(l, []), l.insertText(e), null === (n = this.editorRef) || void 0 === n || n.focus())
+      null != l && (b.Q.select(l, []), l.insertText(e), null === (n = this.editorRef) || void 0 === n || n.focus())
     }), eR(this, "renderAttachButton", (e, t) => (0, l.jsx)(O.Z, {
       className: t,
       channel: this.props.channel,
@@ -437,7 +437,7 @@ class eP extends i.PureComponent {
     }))
   }
 }
-class ey extends i.PureComponent {
+class eb extends i.PureComponent {
   static getDerivedStateFromProps(e, t) {
     let {
       channel: n
@@ -568,7 +568,7 @@ class ey extends i.PureComponent {
                 }), (0, l.jsx)(g.Z, {
                   channel: n,
                   poggermodeEnabled: _
-                }), !Z && (0, l.jsx)(b.Z, {})]
+                }), !Z && (0, l.jsx)(y.Z, {})]
               }), (0, l.jsx)(em.kw, {})]
             })]
           })]
@@ -677,7 +677,7 @@ t.Z = i.memo(function(e) {
     var e, t, l;
     return null != m && null !== (l = null === (e = er.ZP.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : ev.lds, null == m ? void 0 : m.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== l && l
   }), E = (0, c.e7)([K.Z], () => K.Z.isEnabled()), g = (0, Q.Z)(t.id), f = (0, G.Z)(t.id);
-  return (0, l.jsx)(ey, {
+  return (0, l.jsx)(eb, {
     channel: t,
     isEditing: null != (0, c.e7)([ea.Z], () => ea.Z.getEditingMessageId(t.id)),
     hasModalOpen: (0, u.useModalsStore)(u.hasAnyModalOpenSelector),

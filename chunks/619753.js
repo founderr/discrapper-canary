@@ -82,7 +82,7 @@ function P(e) {
         startIndex: t
       }), t += 1, n[n.length - 1].results.push(l), e = null == s ? void 0 : s.id, n)
     }, [])
-  }, [E, S]), P = i.useRef([]), b = R.reduce((e, t) => e + 1 + t.results.length, 0), D = i.useCallback((e, t) => {
+  }, [E, S]), P = i.useRef([]), y = R.reduce((e, t) => e + 1 + t.results.length, 0), D = i.useCallback((e, t) => {
     if (!d.Z.keyboardModeEnabled) return;
     let n = P.current,
       l = null != t ? n[t] : void 0;
@@ -97,7 +97,7 @@ function P(e) {
     null == t || t.jumpTo()
   }, []), k = (0, s.ZP)({
     navId: "search-results",
-    itemCount: b,
+    itemCount: y,
     focusedIndex: 0,
     setFocus: D,
     onSelect: U
@@ -107,7 +107,7 @@ function P(e) {
       results: n,
       startIndex: i
     } = e;
-    return (0, l.jsx)(y, {
+    return (0, l.jsx)(b, {
       channel: t,
       results: n,
       highlighter: B,
@@ -160,7 +160,7 @@ function P(e) {
   })
 }
 
-function y(e) {
+function b(e) {
   var t, n;
   let {
     channel: s,
@@ -174,13 +174,13 @@ function y(e) {
     renderEmbeds: M,
     offset: L,
     jumpToMessage: P,
-    listNavigator: y,
-    favoriteSearch: b
+    listNavigator: b,
+    favoriteSearch: y
   } = e, D = _.cC.useSetting(), U = (0, p.p)(), k = i.useCallback(e => {
     if (e === S.Z.getChannelId()) return;
     let t = I.Z.getChannel(e);
     if (null != t && !!T.Z.can(j.Plq.VIEW_CHANNEL, t))(0, C.Kh)(t.id)
-  }, []), w = null != s ? (0, h.F6)(s, v.default, N.Z, !1) : "???", H = b && null != s.guild_id ? null === (t = x.Z.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, B = (null == s ? void 0 : s.parent_id) != null ? I.Z.getChannel(s.parent_id) : null, G = null != B ? B.name : null, V = null !== (n = (0, m.Z)(s)) && void 0 !== n ? n : a.TextIcon, F = null != B ? (0, m.Z)(B) : null, z = T.Z.can(j.Plq.MANAGE_MESSAGES, s), {
+  }, []), w = null != s ? (0, h.F6)(s, v.default, N.Z, !1) : "???", H = y && null != s.guild_id ? null === (t = x.Z.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, B = (null == s ? void 0 : s.parent_id) != null ? I.Z.getChannel(s.parent_id) : null, G = null != B ? B.name : null, V = null !== (n = (0, m.Z)(s)) && void 0 !== n ? n : a.TextIcon, F = null != B ? (0, m.Z)(B) : null, z = T.Z.can(j.Plq.MANAGE_MESSAGES, s), {
     content: W
   } = (0, g.ZP)({
     content: w,
@@ -215,7 +215,7 @@ function y(e) {
               ...e,
               ref: Y,
               className: O.channelNameText,
-              children: [b && null !== H && "".concat(H, " : "), W]
+              children: [y && null !== H && "".concat(H, " : "), W]
             })
           }), null != B && null != G && null != F ? (0, l.jsxs)(a.Clickable, {
             className: O.parentChannelNameClickable,
@@ -247,7 +247,7 @@ function y(e) {
           result: e,
           index: n,
           onJump: P,
-          listItemProps: y.getItemProps({
+          listItemProps: b.getItemProps({
             index: n
           })
         }, "search-result-".concat(n))

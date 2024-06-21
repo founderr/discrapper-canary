@@ -37,7 +37,7 @@ function M(e) {
     guild: _,
     specMap: I,
     categoryTitle: x
-  } = e, T = (0, c.e7)([f.Z], () => f.Z.getRoles(_.id)), v = Z.Plq[o], M = null !== (s = null === (t = I[v.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s ? s : (0, E.wt)(v), R = null !== (r = null === (n = I[v.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : "", j = N._o.has(v), L = N.Qn.includes(o), O = g.length, P = (0, c.e7)([C.Z], () => C.Z.can(Z.Plq.MANAGE_ROLES, _), [_]), y = i.useCallback(async e => {
+  } = e, T = (0, c.e7)([f.Z], () => f.Z.getRoles(_.id)), v = Z.Plq[o], M = null !== (s = null === (t = I[v.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s ? s : (0, E.wt)(v), R = null !== (r = null === (n = I[v.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : "", j = N._o.has(v), L = N.Qn.includes(o), O = g.length, P = (0, c.e7)([C.Z], () => C.Z.can(Z.Plq.MANAGE_ROLES, _), [_]), b = i.useCallback(async e => {
     if (!!P) await p.Z.open(_.id, Z.pNK.ROLES), await p.Z.selectRole(e)
   }, [P, _.id]);
   return (0, l.jsxs)("div", {
@@ -117,7 +117,7 @@ function M(e) {
         className: a()(A.roleTooltipItem, {
           [A.editable]: P && !(0, d.pM)(_.id, e) && !(0, N.Ov)(e, _.id)
         }),
-        onClick: () => y(e),
+        onClick: () => b(e),
         children: (0, N.Ov)(e, _.id) ? (0, l.jsx)("div", {
           className: A.roleChiplet,
           children: (0, l.jsx)(u.Text, {
@@ -146,10 +146,10 @@ function j(e) {
     location: s,
     className: r,
     onNavigate: d
-  } = e, h = (0, c.e7)([_.default], () => _.default.getUser(t), [t]), m = (0, c.e7)([f.Z], () => f.Z.getGuild(n), [n]), p = (0, c.e7)([g.ZP], () => g.ZP.getMember(n, t), [n, t]), C = (0, T.f)(t, n), j = (0, N.B2)(t, n, N.pd), L = Object.keys(j).length, O = i.useMemo(() => null != m ? I.Z.getGuildPermissionSpecMap(m) : null, [m]), P = i.useMemo(() => null != m ? I.Z.generateGuildPermissionSpec(m) : null, [m]), [y, b] = i.useState(""), [D, U] = i.useState(""), k = i.useCallback(o()(U, 300), []), w = i.useCallback(e => {
-    b(e), k(e)
+  } = e, h = (0, c.e7)([_.default], () => _.default.getUser(t), [t]), m = (0, c.e7)([f.Z], () => f.Z.getGuild(n), [n]), p = (0, c.e7)([g.ZP], () => g.ZP.getMember(n, t), [n, t]), C = (0, T.f)(t, n), j = (0, N.B2)(t, n, N.pd), L = Object.keys(j).length, O = i.useMemo(() => null != m ? I.Z.getGuildPermissionSpecMap(m) : null, [m]), P = i.useMemo(() => null != m ? I.Z.generateGuildPermissionSpec(m) : null, [m]), [b, y] = i.useState(""), [D, U] = i.useState(""), k = i.useCallback(o()(U, 300), []), w = i.useCallback(e => {
+    y(e), k(e)
   }, [k]), H = i.useCallback(() => {
-    b(""), U("")
+    y(""), U("")
   }, []), B = i.useMemo(() => {
     if (null == m || null == O || null == p) return null;
     if (0 === L) return (0, l.jsx)("div", {
@@ -211,7 +211,7 @@ function j(e) {
           className: A.permissionsItemContainer,
           children: [(0, l.jsx)(u.SearchBar, {
             className: A.searchBar,
-            query: y,
+            query: b,
             placeholder: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER,
             onChange: w,
             onClear: H,

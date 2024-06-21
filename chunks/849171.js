@@ -35,8 +35,8 @@ var l, i, s = n(735250),
   L = n(602623),
   O = n(823379),
   P = n(5192),
-  y = n(689938),
-  b = n(270486);
+  b = n(689938),
+  y = n(270486);
 (i = l || (l = {}))[i.SMALL = 0] = "SMALL", i[i.MEDIUM = 1] = "MEDIUM", i[i.LARGE = 2] = "LARGE";
 let D = ["embedded_background"];
 
@@ -61,7 +61,7 @@ function U(e) {
         children: (0, s.jsx)("img", {
           src: e.getAvatarURL(n, r),
           alt: t,
-          className: b.avatar
+          className: y.avatar
         }, e.id)
       }, e.id)
     }
@@ -86,33 +86,33 @@ function k(e) {
     application: r
   }) === E.Fw.CAN_JOIN, L = null !== (n = f.getGuildId()) && void 0 !== n ? n : void 0;
   return (0, s.jsxs)("div", {
-    className: b.splash,
+    className: y.splash,
     children: [(0, s.jsx)(U, {
       avatarSize: x,
       guildId: L,
       channelId: f.id,
       users: T
     }), (0, s.jsx)(u.Text, {
-      className: o()(b.subheader, {
-        [b.small]: 0 === _,
-        [b.medium]: 1 === _
+      className: o()(y.subheader, {
+        [y.small]: 0 === _,
+        [y.medium]: 1 === _
       }),
       variant: "text-sm/normal",
-      children: T.length > 1 ? y.Z.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
+      children: T.length > 1 ? b.Z.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
         username: A,
         count: T.length - 1
-      }) : y.Z.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({
+      }) : b.Z.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({
         username: A
       })
     }), (0, s.jsx)(u.Text, {
-      className: o()(b.header, {
-        [b.small]: 0 === _,
-        [b.medium]: 1 === _
+      className: o()(y.header, {
+        [y.small]: 0 === _,
+        [y.medium]: 1 === _
       }),
       variant: "text-sm/normal",
       children: r.name
     }), (0, s.jsx)("div", {
-      className: b.buttons,
+      className: y.buttons,
       children: R ? (0, s.jsx)(u.Button, {
         onClick: function(e) {
           if (e.stopPropagation(), null != N)(0, m.Z)({
@@ -134,9 +134,9 @@ function k(e) {
               return u.Button.Sizes.SMALL
           }
         }(_),
-        className: b.button,
+        className: y.button,
         color: u.Button.Colors.PRIMARY,
-        children: y.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
+        children: b.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
       }) : null
     })]
   })
@@ -171,13 +171,13 @@ function w(e) {
   }, [I, d, L]), (0, s.jsx)(S.Gt, {
     value: o,
     children: (0, s.jsx)("div", {
-      className: b.container,
+      className: y.container,
       children: (0, s.jsxs)(s.Fragment, {
         children: [I && (0, s.jsx)(_.Z, {
-          className: b.iframe,
+          className: y.iframe,
           embedId: (0, T.Z)(r.id, u)
         }), M && null != p && null != E && "" !== E ? (0, s.jsx)("img", {
-          className: b.splashImage,
+          className: y.splashImage,
           alt: p.name,
           src: E
         }) : null, j && null != p && (0, s.jsx)(k, {
@@ -187,7 +187,7 @@ function w(e) {
           application: p,
           currentEmbeddedApplication: m
         }), i || M ? null : (0, s.jsx)("div", {
-          className: b.clickShield
+          className: y.clickShield
         })]
       })
     })

@@ -36,9 +36,9 @@ t.Z = a.memo(function(e) {
     fullHeight: A
   } = e, M = a.useRef(null), [R, j] = a.useState(!1), L = a.useCallback(e => {
     e.preventDefault(), e.stopPropagation(), null == r || r(), j(!0)
-  }, [r]), [O, P] = a.useState(!1), [y, b] = a.useState(!1), D = a.useRef(null), U = a.useCallback(e => {
+  }, [r]), [O, P] = a.useState(!1), [b, y] = a.useState(!1), D = a.useRef(null), U = a.useCallback(e => {
     e && (D.current = setTimeout(() => {
-      b(!0)
+      y(!0)
     }, T))
   }, [T]), k = (0, m.O)(U), w = (0, u.e7)([p.Z], () => p.Z.useReducedMotion), H = (0, u.e7)([E.default], () => E.default.getCurrentUser()), [B, G] = (0, c.useSpring)(() => {
     var e, t;
@@ -57,7 +57,7 @@ t.Z = a.memo(function(e) {
     }
   }));
   a.useEffect(() => {
-    if (y) G({
+    if (b) G({
       ..."left" === S ? {
         right: 68,
         config: c.config.stiff
@@ -69,11 +69,11 @@ t.Z = a.memo(function(e) {
       opacity: 1,
       top: -24
     });
-    y && R && F({
+    b && R && F({
       opacity: 0,
       top: 0
     })
-  }, [y, R, S]), a.useEffect(() => () => {
+  }, [b, R, S]), a.useEffect(() => () => {
     null != D.current && clearTimeout(D.current)
   }, []);
   let z = o()(x.signHintAnimationContainer, O && x.noDisplay, "left" === S ? x.signTextLeft : x.signTextRight),

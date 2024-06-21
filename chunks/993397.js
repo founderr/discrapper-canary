@@ -4,8 +4,8 @@ var l = n(735250),
   s = n(120356),
   a = n.n(s),
   r = n(481060),
-  o = n(702346),
-  c = n(492593),
+  o = n(998951),
+  c = n(702346),
   u = n(534469),
   d = n(511010),
   h = n(981631),
@@ -21,10 +21,10 @@ function g(e) {
     compact: s,
     collapsedReason: a
   } = e;
-  return (0, l.jsx)(c.Z, {
+  return (0, l.jsx)(o.Z, {
     compact: s,
     role: "group",
-    childrenMessageContent: (0, l.jsx)(o.Z, {
+    childrenMessageContent: (0, l.jsx)(c.Z, {
       compact: s,
       className: p.blockedSystemMessage,
       iconNode: (0, l.jsx)(r.CloseSmallIcon, {

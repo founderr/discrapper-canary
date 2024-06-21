@@ -37,10 +37,10 @@ var l = n(735250),
 function P(e) {
   let {
     channel: t
-  } = e, [n, s] = i.useState(!1), r = (0, E.ZP)(t, !0), P = t.guild_id, y = (0, d.e7)([I.Z], () => null != P ? I.Z.getRoles(P) : void 0), b = (0, d.e7)([T.default, I.Z], () => {
+  } = e, [n, s] = i.useState(!1), r = (0, E.ZP)(t, !0), P = t.guild_id, b = (0, d.e7)([I.Z], () => null != P ? I.Z.getRoles(P) : void 0), y = (0, d.e7)([T.default, I.Z], () => {
     var e;
     return T.default.getUser(null === (e = I.Z.getGuild(P)) || void 0 === e ? void 0 : e.ownerId)
-  }), D = i.useMemo(() => null != P ? o()(y).sortBy(e => -e.position).filter(e => !(0, g.pM)(P, e.id)).value() : [], [P, y]), U = i.useMemo(() => o()(D).filter(e => {
+  }), D = i.useMemo(() => null != P ? o()(b).sortBy(e => -e.position).filter(e => !(0, g.pM)(P, e.id)).value() : [], [P, b]), U = i.useMemo(() => o()(D).filter(e => {
     if (null == P) return !1;
     let n = S.I0({
       forceRoles: {
@@ -51,7 +51,7 @@ function P(e) {
     return c.e$(n, j.Plq.ADMINISTRATOR) || c.e$(n, j.Plq.VIEW_CHANNEL)
   }).value(), [t, P, D]), k = (0, d.Wu)([T.default], () => {
     let e = {};
-    for (let n of (null != b && (e[b.id] = b), Object.values(t.permissionOverwrites))) {
+    for (let n of (null != y && (e[y.id] = y), Object.values(t.permissionOverwrites))) {
       if (n.type !== p.BN.MEMBER || null != e[n.id]) continue;
       let t = T.default.getUser(n.id);
       null != t && (e[t.id] = t)
@@ -67,7 +67,7 @@ function P(e) {
         s = c.e$(i.allow, j.Plq.VIEW_CHANNEL);
       return l || s
     }).value()
-  }, [t, b]), w = x.Z.can(j.Plq.MANAGE_CHANNELS, t) || x.Z.can(j.Plq.MANAGE_ROLES, t);
+  }, [t, y]), w = x.Z.can(j.Plq.MANAGE_CHANNELS, t) || x.Z.can(j.Plq.MANAGE_ROLES, t);
 
   function H() {
     m.ZP.open(t.id)

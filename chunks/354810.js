@@ -48,8 +48,8 @@ function S(e) {
     size: Z,
     animateOnHover: !p
   }), P = i.useMemo(() => (0, d.W)(t, a.id), [t, a.id]), {
-    status: y,
-    customStatusActivity: b,
+    status: b,
+    customStatusActivity: y,
     isMobileOnline: D
   } = (0, s.cj)([h.Z, m.Z], () => {
     let e = null != h.Z.getAnyStreamForUser(t.id),
@@ -91,7 +91,7 @@ function S(e) {
         avatarDecoration: O,
         size: Z,
         imageClassName: T.overlay,
-        status: P ? r.StatusTypes.UNKNOWN : y,
+        status: P ? r.StatusTypes.UNKNOWN : b,
         statusBackdropColor: R && !P ? (0, r.getStatusBackdropColor)(v) : void 0,
         "aria-label": t.username,
         isMobile: D,
@@ -99,7 +99,7 @@ function S(e) {
         statusTooltipDelay: I.vB
       })
     }), (0, l.jsx)(C.J, {
-      statusActivity: b,
+      statusActivity: y,
       profileType: I.y0.PANEL
     })]
   })

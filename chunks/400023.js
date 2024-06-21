@@ -30,8 +30,8 @@ var l = n(735250),
   L = n(73274),
   O = n(419388),
   P = n(406534),
-  y = n(981631),
-  b = n(689938),
+  b = n(981631),
+  y = n(689938),
   D = n(601621);
 let U = i.memo(function(e) {
   var t, n;
@@ -83,7 +83,7 @@ let U = i.memo(function(e) {
     keyboardModeEnabled: v,
     hasMoreAfter: g.hasMoreAfter
   });
-  let V = (n = p, (0, o.e7)([E.Z], () => T.Z.can(y.Plq.READ_MESSAGE_HISTORY, n) ? null : E.Z.getViewingRolesTimestamp(n.getGuildId()))),
+  let V = (n = p, (0, o.e7)([E.Z], () => T.Z.can(b.Plq.READ_MESSAGE_HISTORY, n) ? null : E.Z.getViewingRolesTimestamp(n.getGuildId()))),
     {
       channelStreamMarkup: F,
       newMessagesBar: z,
@@ -111,7 +111,7 @@ let U = i.memo(function(e) {
           null === (e = B.ref.current) || void 0 === e || e.scrollToBottom({
             animate: !h.Z.useReducedMotion
           })
-        } else u.Z.jumpToPresent(p.id, y.AQB)
+        } else u.Z.jumpToPresent(p.id, b.AQB)
       }
     });
   ! function(e) {
@@ -132,13 +132,13 @@ let U = i.memo(function(e) {
         })
       }, [e]);
     (0, A.yp)({
-      event: y.CkL.SCROLLTO_PRESENT,
+      event: b.CkL.SCROLLTO_PRESENT,
       handler: t
     }), (0, A.yp)({
-      event: y.CkL.SCROLL_PAGE_UP,
+      event: b.CkL.SCROLL_PAGE_UP,
       handler: n
     }), (0, A.yp)({
-      event: y.CkL.SCROLL_PAGE_DOWN,
+      event: b.CkL.SCROLL_PAGE_DOWN,
       handler: l
     })
   }(B.ref);
@@ -169,7 +169,7 @@ let U = i.memo(function(e) {
         role: "group",
         children: [Y, (0, l.jsxs)("ol", {
           className: D.scrollerInner,
-          "aria-label": b.Z.Messages.CHANNEL_MESSAGES_A11Y_LABEL.format({
+          "aria-label": y.Z.Messages.CHANNEL_MESSAGES_A11Y_LABEL.format({
             channelName: p.name
           }),
           ...Q,
@@ -177,7 +177,7 @@ let U = i.memo(function(e) {
             className: D.navigationDescription,
             id: "messagesNavigationDescription",
             "aria-hidden": !0,
-            children: b.Z.Messages.CHANNEL_MESSAGES_A11Y_DESCRIPTION
+            children: y.Z.Messages.CHANNEL_MESSAGES_A11Y_DESCRIPTION
           }), F, (0, l.jsx)("div", {
             className: a()({
               [D.scrollerSpacer]: !R,
@@ -209,7 +209,7 @@ t.Z = i.memo(function(e) {
         canManageMessages: l,
         permissionVersion: i
       } = (0, o.cj)([T.Z], () => ({
-        canManageMessages: T.Z.can(y.Plq.MANAGE_MESSAGES, e),
+        canManageMessages: T.Z.can(b.Plq.MANAGE_MESSAGES, e),
         permissionVersion: null != t ? T.Z.getGuildVersion(t) : null
       }), [e, t]);
     return {
@@ -222,7 +222,7 @@ t.Z = i.memo(function(e) {
     fontSize: L,
     messageDisplayCompact: O,
     renderSpoilers: P,
-    keyboardModeEnabled: b
+    keyboardModeEnabled: y
   } = function() {
     let e = f.jU.useSetting(),
       t = f.cC.useSetting(),
@@ -268,7 +268,7 @@ t.Z = i.memo(function(e) {
       }, {
         autoTrackExposure: !1
       }),
-      r = null !== (n = null === (t = S.default.getUser(C.default.getId())) || void 0 === t ? void 0 : t.hasFlag(y.xW$.SPAMMER)) && void 0 !== n && n,
+      r = null !== (n = null === (t = S.default.getUser(C.default.getId())) || void 0 === t ? void 0 : t.hasFlag(b.xW$.SPAMMER)) && void 0 !== n && n,
       c = (0, d.ts)(e),
       u = (0, m.Z)("use_topic_dividers_in_chat"),
       h = (0, o.Wu)([g.Z], () => {
@@ -311,7 +311,7 @@ t.Z = i.memo(function(e) {
       canChat: A,
       editingMessageId: H,
       fontSize: L,
-      keyboardModeEnabled: b,
+      keyboardModeEnabled: y,
       showingQuarantineBanner: n,
       hideSummaries: s
     })

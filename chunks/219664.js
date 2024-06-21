@@ -14,12 +14,12 @@ var s = n(735250),
   g = n(406432),
   x = n(169525),
   _ = n(255269),
-  E = n(930282),
-  f = n(524444),
-  C = n(695346),
-  T = n(433355),
-  N = n(592125),
-  I = n(496675),
+  E = n(524444),
+  f = n(695346),
+  C = n(433355),
+  T = n(592125),
+  N = n(496675),
+  I = n(113039),
   S = n(456269),
   p = n(109590),
   v = n(368844),
@@ -47,7 +47,7 @@ function F(e) {
     gridCoords: g,
     gridSectionBoundaries: x,
     observePostVisibilityAnalytics: E
-  } = e, f = (0, o.e7)([N.Z], () => N.Z.getChannel(n.parent_id)), M = n.id, R = l.useRef(null), F = (0, o.e7)([T.ZP], () => T.ZP.getCurrentSidebarChannelId(n.parent_id) === n.id), {
+  } = e, I = (0, o.e7)([T.Z], () => T.Z.getChannel(n.parent_id)), M = n.id, R = l.useRef(null), F = (0, o.e7)([C.ZP], () => C.ZP.getCurrentSidebarChannelId(n.parent_id) === n.id), {
     firstMessage: H,
     loaded: k
   } = (0, p.cl)(n), {
@@ -72,11 +72,11 @@ function F(e) {
   l.useEffect(() => {
     null == E || E(R.current, M)
   }, [E, M]);
-  let J = (0, o.e7)([I.Z], () => I.Z.can(D.Plq.MANAGE_MESSAGES, n)),
-    Q = C.QK.useSetting(),
-    $ = C.cC.useSetting(),
+  let J = (0, o.e7)([N.Z], () => N.Z.can(D.Plq.MANAGE_MESSAGES, n)),
+    Q = f.QK.useSetting(),
+    $ = f.cC.useSetting(),
     ee = (0, _.Z)($, J),
-    et = (0, v.aU)(H, f, !1),
+    et = (0, v.aU)(H, I, !1),
     [en, es] = (0, A.rI)(h.width - 2 * A.LT),
     el = (0, S.xw)(n, i.z.CREATION_DATE, P.R6.POSTED_DURATION_AGO),
     ea = (0, j.NN)(n),
@@ -248,7 +248,7 @@ t.Z = l.memo(function(e) {
     gridCoords: c,
     gridSectionBoundaries: d,
     observePostVisibilityAnalytics: u
-  } = e, m = (0, o.e7)([N.Z], () => N.Z.getChannel(n));
+  } = e, m = (0, o.e7)([T.Z], () => T.Z.getChannel(n));
   return null == m ? null : (0, s.jsx)(F, {
     id: t,
     channel: m,
@@ -264,7 +264,7 @@ t.Z = l.memo(function(e) {
 let H = e => e.preventDefault(),
   k = l.memo(function(e) {
     return (0, s.jsx)(s.Fragment, {
-      children: (0, f.Yi)(e)
+      children: (0, E.Yi)(e)
     })
   }),
   B = l.memo(function(e) {
@@ -420,7 +420,7 @@ function z(e) {
           variant: "text-sm/normal",
           color: o ? "header-secondary" : "text-muted",
           children: y.Z.Messages.REPLY_QUOTE_MESSAGE_DELETED
-        }), a && null != n && (0, s.jsx)(E.ZP, {
+        }), a && null != n && (0, s.jsx)(I.ZP, {
           message: n,
           content: m,
           className: x

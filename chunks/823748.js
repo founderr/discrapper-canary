@@ -30,8 +30,8 @@ var l = n(735250),
   L = n(236091),
   O = n(663993),
   P = n(252618),
-  y = n(201493),
-  b = n(605236),
+  b = n(201493),
+  y = n(605236),
   D = n(174130),
   U = n(588322),
   k = n(517525),
@@ -84,8 +84,8 @@ var l = n(735250),
   eL = n(433355),
   eO = n(592125),
   eP = n(703558),
-  ey = n(486472),
-  eb = n(731290),
+  eb = n(486472),
+  ey = n(731290),
   eD = n(430824),
   eU = n(158776),
   ek = n(768119),
@@ -244,7 +244,7 @@ class e6 extends i.PureComponent {
       guild: n
     });
     if (e.isGuildVocal()) return null;
-    if (e.isDirectory()) return o()(null != n, "directory channels must exist within a guild"), (0, l.jsx)(y.Z, {
+    if (e.isDirectory()) return o()(null != n, "directory channels must exist within a guild"), (0, l.jsx)(b.Z, {
       channel: e,
       guild: n
     });
@@ -758,7 +758,7 @@ t.Z = i.memo(function(e) {
     return S.ZP.getSelfEmbeddedActivityForChannel(null !== (e = null == c ? void 0 : c.id) && void 0 !== e ? e : eJ.lds)
   }), v = (0, m.e7)([S.ZP], () => S.ZP.getActivityPanelMode()), R = null != T && !(0, A.Z)(null == c ? void 0 : c.id) && v === e$.Ez.PANEL, j = (0, m.e7)([eG.Z], () => null != c && c.isVocalThread() && !u().isEmpty(eG.Z.getVoiceStatesForChannel(c.id)), [c]), L = null != c && c.isPrivate() && !R && x, O = (null == c ? void 0 : c.isGuildVocal()) || L || j, {
     welcomeModalChannelId: P
-  } = (0, d.TH)(), y = (0, m.e7)([er.Z], () => null != c && er.Z.isLurking(c.guild_id), [c]), D = (0, m.e7)([eR.Z], () => eR.Z.hasSeen(null == c ? void 0 : c.guild_id, y), [c, y]), U = (0, m.e7)([M.Z, S.ZP], () => null != S.ZP.getConnectedActivityChannelId() && S.ZP.getActivityPanelMode() === e$.Ez.PANEL ? S.ZP.getFocusedLayout() === e$.MI.NO_CHAT ? eJ.AEg.NO_CHAT : eJ.AEg.NORMAL : null != r ? M.Z.getLayout(r) : eJ.AEg.NORMAL, [r]), k = (0, m.e7)([M.Z], () => null != c ? M.Z.getSelectedParticipant(c.id) : null), w = (0, m.e7)([eB.default], () => eB.default.getCurrentUser()), H = (0, es.Z)(_), B = (0, ej.Z)(P, null == _ ? void 0 : _.id), {
+  } = (0, d.TH)(), b = (0, m.e7)([er.Z], () => null != c && er.Z.isLurking(c.guild_id), [c]), D = (0, m.e7)([eR.Z], () => eR.Z.hasSeen(null == c ? void 0 : c.guild_id, b), [c, b]), U = (0, m.e7)([M.Z, S.ZP], () => null != S.ZP.getConnectedActivityChannelId() && S.ZP.getActivityPanelMode() === e$.Ez.PANEL ? S.ZP.getFocusedLayout() === e$.MI.NO_CHAT ? eJ.AEg.NO_CHAT : eJ.AEg.NORMAL : null != r ? M.Z.getLayout(r) : eJ.AEg.NORMAL, [r]), k = (0, m.e7)([M.Z], () => null != c ? M.Z.getSelectedParticipant(c.id) : null), w = (0, m.e7)([eB.default], () => eB.default.getCurrentUser()), H = (0, es.Z)(_), B = (0, ej.Z)(P, null == _ ? void 0 : _.id), {
     section: G,
     channelSidebarState: F
   } = (0, m.cj)([eL.ZP], () => ({
@@ -788,7 +788,7 @@ t.Z = i.memo(function(e) {
   i.useEffect(() => {
     let e = em && !ed,
       t = em && ed && (null == c ? void 0 : c.id) !== ep;
-    (e || t) && (0, b.EW)(p.z.ACTIVITY_GDM_CALL_TOOLTIP, {
+    (e || t) && (0, y.EW)(p.z.ACTIVITY_GDM_CALL_TOOLTIP, {
       dismissAction: e1.L.AUTO
     })
   }, [null == c ? void 0 : c.id, ep, ed, em]);
@@ -803,7 +803,7 @@ t.Z = i.memo(function(e) {
     voiceChannel: g,
     layout: U,
     needSubscriptionToAccess: I,
-    isLurking: y,
+    isLurking: b,
     hasModalOpen: eE,
     section: G,
     channelSidebarState: F,
@@ -812,9 +812,9 @@ t.Z = i.memo(function(e) {
     searchId: (0, m.e7)([ek.Z], () => ek.Z.getCurrentSearchId()),
     showCall: !I && O,
     showActivityPanel: R,
-    nsfwAgree: (0, m.e7)([eb.Z], () => eb.Z.didAgree(null == c ? void 0 : c.guild_id)),
+    nsfwAgree: (0, m.e7)([ey.Z], () => ey.Z.didAgree(null == c ? void 0 : c.guild_id)),
     isMobile: (0, m.e7)([eU.Z], () => (null == c ? void 0 : c.type) === eJ.d4z.DM && eU.Z.isMobileOnline(c.getRecipientId()), [c]),
-    isUnavailable: (0, m.e7)([ey.Z], () => (null == c ? void 0 : c.guild_id) != null && ey.Z.isUnavailable(c.guild_id), [c]),
+    isUnavailable: (0, m.e7)([eb.Z], () => (null == c ? void 0 : c.guild_id) != null && eb.Z.isUnavailable(c.guild_id), [c]),
     showRealNameModal: H,
     showWelcomeModal: !D && B,
     showFollowButton: (null == c ? void 0 : c.type) === eJ.d4z.GUILD_ANNOUNCEMENT && (null == _ ? void 0 : _.hasFeature(eJ.oNc.NEWS)) || !1,

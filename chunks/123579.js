@@ -30,8 +30,8 @@ var l = n(735250),
   L = n(162267),
   O = n(502762),
   P = n(171368),
-  y = n(944546),
-  b = n(470900),
+  b = n(944546),
+  y = n(470900),
   D = n(421486),
   U = n(240328),
   k = n(436478),
@@ -133,7 +133,7 @@ t.Z = e => {
         guild: t,
         nick: i
       } = e;
-      return (0, l.jsx)(b.D, {
+      return (0, l.jsx)(y.D, {
         user: n,
         guild: t,
         nick: i,
@@ -147,7 +147,7 @@ t.Z = e => {
         user: n,
         status: i
       } = e;
-      return (0, l.jsx)(y.T, {
+      return (0, l.jsx)(b.T, {
         user: n,
         status: i,
         onSelect: () => {
@@ -168,9 +168,9 @@ t.Z = e => {
     }, e.application.id)),
     eO = i.useCallback(() => et(!0), []),
     eP = i.useCallback(() => et(!1), []),
-    ey = (0, r.e7)([f.default], () => f.default.getId()),
-    eb = n.id === ey,
-    eD = n.bot || eb,
+    eb = (0, r.e7)([f.default], () => f.default.getId()),
+    ey = n.id === eb,
+    eD = n.bot || ey,
     {
       enabled: eU
     } = (0, S.qI)({

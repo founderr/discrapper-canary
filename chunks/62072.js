@@ -31,9 +31,9 @@ function R(e) {
 t.Z = function(e, t, n) {
   let j = l.useRef(n);
   return j.current = n, l.useCallback(n => {
-    var l, L, O, P, y;
+    var l, L, O, P, b;
     if (!j.current || n.target !== n.currentTarget) return;
-    let b = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
+    let y = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
       D = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
       U = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
       k = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
@@ -44,25 +44,25 @@ t.Z = function(e, t, n) {
     let G = m.default.getId();
     switch (n.key.toLowerCase()) {
       case "backspace":
-        b && (R(B) || H.canDeleteOwnMessage(G)) && (n.preventDefault(), (0, A.$Z)(B, H, n));
+        y && (R(B) || H.canDeleteOwnMessage(G)) && (n.preventDefault(), (0, A.$Z)(B, H, n));
         break;
       case "c":
         ((0, T.isMac)() ? k : U) && I.wS && (n.preventDefault(), (0, I.JG)(H.content));
         break;
       case "e":
-        if (b) {
+        if (y) {
           ;
           if (l = G, L = B, O = H, !L.isSystemDM() && (0, Z.Z)(O, l)) n.preventDefault(), (0, A.Hd)(B, H)
         }
         break;
       case "p":
-        if (b || w) {
+        if (y || w) {
           ;
-          if (P = B, y = H, !P.isSystemDM() && !(0, S.Z)(y) && (R(P) || P.isPrivate())) n.preventDefault(), (0, A.rY)(B, H, n)
+          if (P = B, b = H, !P.isSystemDM() && !(0, S.Z)(b) && (R(P) || P.isPrivate())) n.preventDefault(), (0, A.rY)(B, H, n)
         }
         break;
       case "+":
-        (b || w) && function(e) {
+        (y || w) && function(e) {
           let t = null == e.guild_id || f.Z.canChatInGuild(e.guild_id),
             n = h.nc.getSetting(),
             {
@@ -82,10 +82,10 @@ t.Z = function(e, t, n) {
         }));
         break;
       case "r":
-        (b || w) && (0, c.o)(B, H) && (n.preventDefault(), (0, A.HH)(B, H, n));
+        (y || w) && (0, c.o)(B, H) && (n.preventDefault(), (0, A.HH)(B, H, n));
         break;
       case "f":
-        (b || w) && s.w.getCurrentConfig({
+        (y || w) && s.w.getCurrentConfig({
           location: "keyboard-shortcut"
         }, {
           autoTrackExposure: !1
@@ -96,10 +96,10 @@ t.Z = function(e, t, n) {
         }));
         break;
       case "t":
-        if (b && (0, u.ki)(B, H)) n.preventDefault(), (0, d.R6)(B, H, "Message Shortcut");
+        if (y && (0, u.ki)(B, H)) n.preventDefault(), (0, d.R6)(B, H, "Message Shortcut");
         else if (H.hasFlag(M.iLy.HAS_THREAD)) {
           let e = p.Z.getChannel(N.default.castMessageIdAsChannelId(H.id));
-          null != e && (b || w) && (n.preventDefault(), (0, d.ok)(e, w))
+          null != e && (y || w) && (n.preventDefault(), (0, d.ok)(e, w))
         }
         break;
       case "enter":

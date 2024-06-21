@@ -38,24 +38,24 @@ function S(e) {
     totalNumberOfParticipants: j,
     paused: L = !1
   } = e, O = (0, o.bp)() === N.IlC.POPOUT, P = (0, a.e7)([g.Z], () => g.Z.getGuild(A.guild_id), [A.guild_id]), {
-    dismissedActivityEntryPointTileChannel: y
-  } = (0, x.d)(), b = (0, a.e7)([h.Z], () => h.Z.getUserParticipantCount(A.id), [A]), D = (0, E.bt)(A.id, t), U = i.useCallback(() => {
+    dismissedActivityEntryPointTileChannel: b
+  } = (0, x.d)(), y = (0, a.e7)([h.Z], () => h.Z.getUserParticipantCount(A.id), [A]), D = (0, E.bt)(A.id, t), U = i.useCallback(() => {
     x.d.setState({
       dismissedActivityEntryPointTileChannel: A.id
     })
   }, [A.id]);
   i.useEffect(() => {
-    null != y && A.id !== y && x.d.setState({
+    null != b && A.id !== b && x.d.setState({
       dismissedActivityEntryPointTileChannel: null
     })
-  }, [A.id, y]);
+  }, [A.id, b]);
   let k = (0, a.e7)([f.Z], () => A.isPrivate() || (0, p.b)(f.Z, P, A), [P, A]),
     w = (null == P ? void 0 : P.afkChannelId) === A.id,
     H = A.userLimit <= 0 || A.userLimit > 1,
     B = (0, a.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(A.id).length <= 0),
     G = (0, m.N)(r.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
     V = (0, u.KF)(A.id) !== u.jy.CAN_LAUNCH,
-    F = null != y && y === A.id,
+    F = null != b && b === A.id,
     z = D.map(e => t => (0, l.jsx)(I.ZP, {
       participant: e,
       channel: A,
@@ -79,13 +79,13 @@ function S(e) {
     }
   }, {
     trackOnInitialLoad: !0
-  }, []), null != P && !w && (!(b >= 2) || !B || V || G || F ? H && 1 === b && k && (B && !V ? z.push(e => (0, l.jsx)(_.h, {
+  }, []), null != P && !w && (!(y >= 2) || !B || V || G || F ? H && 1 === y && k && (B && !V ? z.push(e => (0, l.jsx)(_.h, {
     channel: A,
     guild: P,
     width: e,
     inPopout: O,
     handleClose: U,
-    userParticipantCount: b
+    userParticipantCount: y
   })) : z.push(e => (0, l.jsx)(T.Z, {
     width: e,
     channel: A,
@@ -97,7 +97,7 @@ function S(e) {
     width: e,
     inPopout: O,
     handleClose: U,
-    userParticipantCount: b
+    userParticipantCount: y
   })));
   let W = i.useCallback(e => {
     var t, n;

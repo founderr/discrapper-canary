@@ -81,9 +81,9 @@ function O(e) {
     draftType: f,
     editorTextContent: O,
     setValue: P,
-    openClips: y
+    openClips: b
   } = e, {
-    analyticsLocations: b
+    analyticsLocations: y
   } = (0, h.ZP)();
   i.useEffect(() => {
     C.default.track(Z.rMx.OPEN_POPOUT, {
@@ -102,7 +102,7 @@ function O(e) {
   }
 
   function k() {
-    y()
+    b()
   }
 
   function w() {
@@ -137,7 +137,7 @@ function O(e) {
       },
       openInPopout: !1,
       enableSelectedTextChannelInvite: !0,
-      analyticsLocations: b
+      analyticsLocations: y
     }), (0, u.w1)({
       guildId: t.guild_id
     })
@@ -212,7 +212,7 @@ function O(e) {
                 type: "Send Join Invite",
                 application_id: n.application_id,
                 location: Z.jXE.CHANNEL_TEXT_AREA
-              }), R(n, t, Z.mFx.JOIN, b))
+              }), R(n, t, Z.mFx.JOIN, y))
             }
           }, "play");
         case N.r.INVITE_TO_LISTEN:
@@ -224,7 +224,7 @@ function O(e) {
               return n = e.activity, void(C.default.track(Z.rMx.OPEN_MODAL, {
                 type: "Send Listen Invite",
                 location: Z.jXE.CHANNEL_TEXT_AREA
-              }), R(n, t, Z.mFx.LISTEN, b))
+              }), R(n, t, Z.mFx.LISTEN, y))
             }
           }, "listen");
         case N.r.INVITE_TO_WATCH:
@@ -236,7 +236,7 @@ function O(e) {
               return n = e.activity, void(C.default.track(Z.rMx.OPEN_MODAL, {
                 type: "Send Watch Invite",
                 location: Z.jXE.CHANNEL_TEXT_AREA
-              }), R(n, t, Z.mFx.WATCH, b))
+              }), R(n, t, Z.mFx.WATCH, y))
             }
           }, "watch");
         case N.r.CREATE_THREAD:

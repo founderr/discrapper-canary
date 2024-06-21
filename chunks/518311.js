@@ -33,8 +33,8 @@ var l, i = n(735250),
   L = n(131704),
   O = n(592125),
   P = n(341165),
-  y = n(544610),
-  b = n(19780),
+  b = n(544610),
+  y = n(19780),
   D = n(306680),
   U = n(699516),
   k = n(246946),
@@ -593,7 +593,7 @@ class eo extends(l = s.PureComponent) {
     }), en(this, "createNewDM", e => {
       f.Z.openPrivateChannel(e, !1, !1, "New Group DM")
     }), en(this, "pushToExistingDM", (e, t) => {
-      let n = b.Z.getChannelId() === e.id;
+      let n = y.Z.getChannelId() === e.id;
       f.Z.addRecipients(e.id, t, Q.Sbl.ADD_FRIENDS_TO_DM).then(l => {
         if (!!n) {
           if (e.isDM() && l !== e.id) {
@@ -647,12 +647,12 @@ class eo extends(l = s.PureComponent) {
   }
 }
 en(eo, "contextType", Z.ZP);
-let ec = m.ZP.connectStores([y.Z, P.Z, k.Z], e => {
+let ec = m.ZP.connectStores([b.Z, P.Z, k.Z], e => {
   let t, {
     channel: n
   } = e;
   return null != n && null != (t = P.Z.getInvite(n.id)) && t.isExpired() && (t = null), {
-    ...y.Z.getState(),
+    ...b.Z.getState(),
     invite: t,
     hideDiscriminator: k.Z.hidePersonalInformation,
     hideInstantInvites: k.Z.hideInstantInvites

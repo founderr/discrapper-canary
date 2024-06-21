@@ -34,8 +34,8 @@ var l = n(735250),
   L = n(594174),
   O = n(499033),
   P = n(151827),
-  y = n(176278),
-  b = n(626135),
+  b = n(176278),
+  y = n(626135),
   D = n(585483),
   U = n(700785),
   k = n(51144),
@@ -56,7 +56,7 @@ let z = w.ZP.getEnableHardwareAcceleration(),
     } = e, o = (0, h.e7)([j.Z], () => j.Z.isTyping(t.id, a)), u = (0, h.e7)([v.ZP], () => v.ZP.getMember(t.guild_id, a)), g = (0, h.e7)([A.Z], () => {
       var e;
       return (null == u ? void 0 : u.colorRoleId) != null ? null === (e = A.Z.getRole(t.guild_id, u.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
-    }, [t.guild_id, u]), f = (0, h.e7)([L.default], () => L.default.getUser(a)), C = (0, h.e7)([L.default], () => L.default.getCurrentUser()), I = (null == f ? void 0 : f.id) === (null == C ? void 0 : C.id), x = (0, h.e7)([M.Z, R.Z], () => I ? R.Z.getStatus() : M.Z.getStatus(a, t.guild_id)), O = (0, h.e7)([M.Z], () => M.Z.isMobileOnline(a)), P = (0, h.e7)([M.Z, R.Z], () => I ? R.Z.getActivities() : M.Z.getActivities(a, t.guild_id)), y = (0, h.e7)([S.Z], () => S.Z.getAnyStreamForUser(a)), b = (0, c.JA)(a), U = (0, h.e7)([T.Z], () => T.Z.canUserViewChannel(t.id, s, a)), w = (null == f ? void 0 : f.id) != null && f.id === r, V = i.useCallback(e => {
+    }, [t.guild_id, u]), f = (0, h.e7)([L.default], () => L.default.getUser(a)), C = (0, h.e7)([L.default], () => L.default.getCurrentUser()), I = (null == f ? void 0 : f.id) === (null == C ? void 0 : C.id), x = (0, h.e7)([M.Z, R.Z], () => I ? R.Z.getStatus() : M.Z.getStatus(a, t.guild_id)), O = (0, h.e7)([M.Z], () => M.Z.isMobileOnline(a)), P = (0, h.e7)([M.Z, R.Z], () => I ? R.Z.getActivities() : M.Z.getActivities(a, t.guild_id)), b = (0, h.e7)([S.Z], () => S.Z.getAnyStreamForUser(a)), y = (0, c.JA)(a), U = (0, h.e7)([T.Z], () => T.Z.canUserViewChannel(t.id, s, a)), w = (null == f ? void 0 : f.id) != null && f.id === r, V = i.useCallback(e => {
       null != f && (0, p.jW)(e, async () => {
         let {
           default: e
@@ -129,10 +129,10 @@ let z = w.ZP.getEnableHardwareAcceleration(),
           guildId: t.guild_id,
           isMobile: O,
           selected: i,
-          applicationStream: y,
+          applicationStream: b,
           premiumSince: null == Y ? null : new Date(Y),
           onClickPremiumGuildIcon: W,
-          itemProps: b,
+          itemProps: y,
           lostPermissionTooltipText: U ? void 0 : G.Z.Messages.THREAD_MEMBER_WITHOUT_ACCESS,
           isOwner: w,
           ...e
@@ -162,7 +162,7 @@ let z = w.ZP.getEnableHardwareAcceleration(),
         title: n,
         count: i
       }),
-      children: [null != a ? (0, l.jsx)(y.Z, {
+      children: [null != a ? (0, l.jsx)(b.Z, {
         className: F.roleIcon,
         ...a
       }) : null, (0, l.jsxs)("span", {
@@ -255,7 +255,7 @@ function X(e) {
     }
   }(s, W), I = 0 === d.length || d.every(e => 0 === e.userIds.length);
   if (i.useEffect(() => {
-      b.default.track(B.rMx.MEMBER_LIST_VIEWED, {
+      y.default.track(B.rMx.MEMBER_LIST_VIEWED, {
         channel_id: t.id,
         channel_type: t.type,
         guild_id: t.guild_id

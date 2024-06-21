@@ -13,8 +13,8 @@ var i = t(442837),
   o = t(45966),
   c = t(734893),
   d = t(621923),
-  u = t(661824),
-  E = t(430824),
+  u = t(430824),
+  E = t(132338),
   _ = t(626135),
   I = t(983135),
   T = t(8426),
@@ -34,19 +34,19 @@ function L(e) {
   } = e, {
     homeSettingsEnabled: l
   } = (0, d.kZ)(s), c = (0, i.e7)([o.Z], () => o.Z.getEnabled(s)), {
-    location: E
+    location: u
   } = (0, a.O)();
-  E.object = t ? C.qAy.ONBOARDING_EDIT : C.qAy.ONBOARDING_REVIEW;
+  u.object = t ? C.qAy.ONBOARDING_EDIT : C.qAy.ONBOARDING_REVIEW;
   let N = async function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     c ? (await (0, m.$y)(s, !1), _.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
       ...(0, r.hH)(s),
       action_taken: S.W$[S.W$.TOGGLE_DISABLED],
-      location: E
+      location: u
     })) : (await (0, m.$y)(s, !0), e && (0, T.To)(s, !0), t ? _.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
       ...(0, r.hH)(s),
       action_taken: S.W$[S.W$.TOGGLE_ENABLED],
-      location: E
+      location: u
     }) : _.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
       ...(0, r.hH)(s),
       step: S.PG[S.PG.REVIEW],
@@ -58,7 +58,7 @@ function L(e) {
     _.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
       ...(0, r.hH)(s),
       action_taken: S.W$[S.W$.PREVIEW],
-      location: E
+      location: u
     }), (0, I.di)(s)
   }, x = (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(g.ku, {
@@ -67,11 +67,11 @@ function L(e) {
         _.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
           ...(0, r.hH)(s),
           action_taken: S.W$[S.W$.EDIT_DEFAULT_CHANNELS],
-          location: E
+          location: u
         }), (0, I.$K)(S.PG.DEFAULT_CHANNELS)
       },
       disableGoodStatus: t
-    }), (0, n.jsx)(u.Z, {
+    }), (0, n.jsx)(E.Z, {
       className: R.divider
     }), (0, n.jsx)(g.ap, {
       guildId: s,
@@ -79,12 +79,12 @@ function L(e) {
         _.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
           ...(0, r.hH)(s),
           action_taken: S.W$[S.W$.EDIT_CUSTOMIZATION_QUESTIONS],
-          location: E
+          location: u
         }), (0, I.$K)(S.PG.CUSTOMIZATION_QUESTIONS)
       },
       disableGoodStatus: t
     }), l && (0, n.jsxs)(n.Fragment, {
-      children: [(0, n.jsx)(u.Z, {
+      children: [(0, n.jsx)(E.Z, {
         className: R.divider
       }), (0, n.jsx)(g.P_, {
         guildId: s,
@@ -92,7 +92,7 @@ function L(e) {
           _.default.track(C.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
             ...(0, r.hH)(s),
             action_taken: S.W$[S.W$.EDIT_HOME_SETTINGS],
-            location: E
+            location: u
           }), (0, I.$K)(S.PG.HOME_SETTINGS)
         },
         disableGoodStatus: t
@@ -259,7 +259,7 @@ function M(e) {
 function f(e) {
   let {
     guildId: s
-  } = e, t = (0, i.e7)([E.Z], () => E.Z.getGuild(s));
+  } = e, t = (0, i.e7)([u.Z], () => u.Z.getGuild(s));
   return null == t || t.verificationLevel < C.sFg.VERY_HIGH ? null : (0, n.jsxs)("div", {
     className: R.rolesWarning,
     children: [(0, n.jsx)(l.CircleExclamationPointIcon, {

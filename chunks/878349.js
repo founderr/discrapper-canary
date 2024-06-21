@@ -37,7 +37,7 @@ function f(e) {
     ref: O
   } = (0, u.Z)(), {
     width: P = 0,
-    ref: y
+    ref: b
   } = (0, u.Z)();
   return (0, l.jsxs)(c.TooltipContainer, {
     text: (0, l.jsx)(m.X, {
@@ -80,7 +80,7 @@ function f(e) {
         src: j,
         alt: C
       }), (0, l.jsx)("span", {
-        ref: y,
+        ref: b,
         children: (0, l.jsx)(c.Text, {
           className: a()(p.burstText, {
             [p.visuallyHidden]: t && N,

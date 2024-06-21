@@ -41,7 +41,7 @@ function L(e) {
   } = e, {
     ref: O,
     width: P
-  } = (0, u.Z)(), [y, b] = i.useState(3), [D, U] = i.useState(!n), [k, w] = (0, d.Z)(!1, 2e3), H = (0, o.e7)([T.Z], () => T.Z.getChannel(t), [t]), {
+  } = (0, u.Z)(), [b, y] = i.useState(3), [D, U] = i.useState(!n), [k, w] = (0, d.Z)(!1, 2e3), H = (0, o.e7)([T.Z], () => T.Z.getChannel(t), [t]), {
     firstMessage: B
   } = (0, S.cl)(H), G = (0, o.e7)([I.Z], () => I.Z.hasJoined(t)), {
     disableReactionUpdates: V,
@@ -69,7 +69,7 @@ function L(e) {
   });
   let [J, $] = i.useState(!0);
   if (i.useEffect(() => {
-      if (null != P) b(Math.floor((P - 280) / 58)), $(!1)
+      if (null != P) y(Math.floor((P - 280) / 58)), $(!1)
     }, [P]), null == H || null == B) return null;
   let ee = B.reactions.length > 0,
     et = () => {
@@ -119,7 +119,7 @@ function L(e) {
           isLurking: z,
           isGuest: W,
           isPendingMember: Y,
-          maxReactions: y,
+          maxReactions: b,
           className: R.reactions,
           useChatFontScaling: !1,
           isForumToolbar: !0,

@@ -13,16 +13,16 @@ var a = t(735250),
   d = t(905405),
   u = t(937889),
   h = t(739566),
-  m = t(267128),
-  g = t(271383),
-  f = t(306680),
-  E = t(699516),
-  T = t(594174),
+  m = t(271383),
+  g = t(306680),
+  f = t(699516),
+  E = t(594174),
+  T = t(512665),
   Z = t(709054),
   I = t(51144),
   x = t(144140),
   _ = t(91159),
-  v = t(217702),
+  v = t(768760),
   N = t(689938),
   R = t(670914);
 
@@ -66,15 +66,15 @@ function C(e) {
   (0, o.$)({
     [n.guild_id]: [t.author.id]
   });
-  let c = (0, r.e7)([T.default], () => {
+  let c = (0, r.e7)([E.default], () => {
       var e;
-      return null !== (e = T.default.getUser(t.author.id)) && void 0 !== e ? e : t.author
+      return null !== (e = E.default.getUser(t.author.id)) && void 0 !== e ? e : t.author
     }),
     {
-      nick: g,
-      colorString: f
+      nick: m,
+      colorString: g
     } = (0, h.ZP)(t),
-    I = (0, r.e7)([E.Z], () => E.Z.isBlockedForMessage(t)),
+    I = (0, r.e7)([f.Z], () => f.Z.isBlockedForMessage(t)),
     x = (0, d.p)(),
     N = s.useMemo(() => {
       let e = null != t.content && "" !== t.content ? (0, u.ZP)(t, {
@@ -86,7 +86,7 @@ function C(e) {
           renderedContent: s,
           trailingIcon: r,
           leadingIcon: l
-        } = (0, m.f)(t, e, I, R.messageContent, {
+        } = (0, T.f)(t, e, I, R.messageContent, {
           trailingIconClass: R.messageContentTrailingIcon,
           leadingIconClass: R.messageContentLeadingIcon,
           iconSize: v.WW
@@ -106,8 +106,8 @@ function C(e) {
       user: c,
       size: l.AvatarSizes.SIZE_16
     }), (0, a.jsx)(l.NameWithRole, {
-      name: g,
-      color: f,
+      name: m,
+      color: g,
       className: R.authorName
     }), ":\xa0", N, "\xa0 • \xa0", (0, _.Ye)(Z.default.extractTimestamp(t.id))]
   })
@@ -117,18 +117,18 @@ function M(e) {
   var n, t, s;
   let {
     channel: d
-  } = e, u = (0, r.e7)([f.ZP], () => f.ZP.lastMessageId(d.id)), h = null == u ? new Date(null !== (t = null === (n = d.threadMetadata) || void 0 === n ? void 0 : n.archiveTimestamp) && void 0 !== t ? t : Date.now()).getTime() : Z.default.extractTimestamp(u);
+  } = e, u = (0, r.e7)([g.ZP], () => g.ZP.lastMessageId(d.id)), h = null == u ? new Date(null !== (t = null === (n = d.threadMetadata) || void 0 === n ? void 0 : n.archiveTimestamp) && void 0 !== t ? t : Date.now()).getTime() : Z.default.extractTimestamp(u);
   (0, o.$)({
     [d.guild_id]: [d.ownerId]
   });
-  let m = (0, r.e7)([T.default], () => T.default.getUser(d.ownerId)),
-    E = (0, r.e7)([g.ZP], () => g.ZP.getMember(d.guild_id, d.ownerId)),
+  let f = (0, r.e7)([E.default], () => E.default.getUser(d.ownerId)),
+    T = (0, r.e7)([m.ZP], () => m.ZP.getMember(d.guild_id, d.ownerId)),
     x = null !== (s = (0, c.Z)(d)) && void 0 !== s ? s : l.ThreadIcon;
   return (0, a.jsx)(l.Text, {
     className: R.subtext,
     variant: "text-sm/normal",
     color: "header-secondary",
-    children: null == m ? (0, a.jsxs)(a.Fragment, {
+    children: null == f ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("div", {
         className: R.noAvatarIcon,
         children: (0, a.jsx)(x, {
@@ -143,15 +143,15 @@ function M(e) {
     }) : (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(i.Z, {
         className: R.avatar,
-        user: m,
+        user: f,
         size: l.AvatarSizes.SIZE_16
       }), N.Z.Messages.THREAD_BROWSER_STARTED_BY.format({
         authorHook(e, n) {
           var t, s;
           return (0, a.jsx)(l.NameWithRole, {
             className: R.startedByName,
-            color: null !== (t = null == E ? void 0 : E.colorString) && void 0 !== t ? t : void 0,
-            name: null !== (s = null == E ? void 0 : E.nick) && void 0 !== s ? s : I.ZP.getName(m)
+            color: null !== (t = null == T ? void 0 : T.colorString) && void 0 !== t ? t : void 0,
+            name: null !== (s = null == T ? void 0 : T.nick) && void 0 !== s ? s : I.ZP.getName(f)
           }, n)
         }
       }), (0, a.jsx)("span", {

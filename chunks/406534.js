@@ -34,8 +34,8 @@ var l = n(735250),
   L = n(70956),
   O = n(709054),
   P = n(534091),
-  y = n(900164),
-  b = n(554838),
+  b = n(900164),
+  y = n(554838),
   D = n(481369),
   U = n(186877),
   k = n(294218),
@@ -162,7 +162,7 @@ function $(e) {
       }
       if (null != ea && ea > e.content.timestamp.getTime() * L.Z.Millis.SECOND) return;
       let s = S.Z.can(K.Plq.CREATE_INSTANT_INVITE, R);
-      if ((0, y.Z)(e.content, s)) return;
+      if ((0, b.Z)(e.content, s)) return;
       e.type === K.ys_.MESSAGE && null == ex && (ex = e);
       let a = e.groupId === (null == ex ? void 0 : ex.groupId) ? ex.content.id : e.groupId,
         r = e.type === K.ys_.THREAD_STARTER_MESSAGE ? w.Ru : w.ZP;
@@ -180,7 +180,7 @@ function $(e) {
   eT.push(...eN);
   let eZ = en[en.length - 1];
   if (null != ec && el.forEach((e, t) => {
-      let n = 0 === t && (0, b.J)(R, eZ, new Z.ZP({
+      let n = 0 === t && (0, y.J)(R, eZ, new Z.ZP({
         type: K.uaV.DEFAULT,
         author: ec
       }));

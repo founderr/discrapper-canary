@@ -49,7 +49,7 @@ let v = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     friction: 18,
     clamp: !0
   },
-  y = e => {
+  b = e => {
     let t, s, {
         participant: r,
         isUpsellEnabled: o,
@@ -77,10 +77,10 @@ let v = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     }
     let P = t || s,
       {
-        location: y
+        location: b
       } = (0, m.O)(),
-      b = (0, c.e7)([g.default], () => g.default.getCurrentUser()),
-      D = o && !_.ZP.isPremium(b, N.p9.TIER_1) && !_.ZP.canStreamQuality(_.ZP.StreamQuality.MID, b),
+      y = (0, c.e7)([g.default], () => g.default.getCurrentUser()),
+      D = o && !_.ZP.isPremium(y, N.p9.TIER_1) && !_.ZP.canStreamQuality(_.ZP.StreamQuality.MID, y),
       U = i.useCallback(() => {
         D && P && (0, h.openModalLazy)(async () => {
           let {
@@ -88,10 +88,10 @@ let v = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
           } = await Promise.all([n.e("99387"), n.e("28479")]).then(n.bind(n, 78865));
           return t => (0, l.jsx)(e, {
             ...t,
-            analyticsSource: y
+            analyticsSource: b
           })
         })
-      }, [D, P, y]);
+      }, [D, P, b]);
     if (i.useEffect(() => {
         !v && P && (C.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
           type: N.cd.STREAM_QUALITY_INDICATOR,
@@ -169,7 +169,7 @@ t.Z = e => {
       ...i,
       children: [_((e, n) => n ? (0, l.jsx)(r.animated.div, {
         style: e,
-        children: (0, l.jsx)(y, {
+        children: (0, l.jsx)(b, {
           className: S.liveQualityIndicator,
           participant: t,
           size: o,

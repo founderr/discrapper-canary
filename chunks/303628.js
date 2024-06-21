@@ -13,9 +13,9 @@ var i = n(735250),
   E = n(607070),
   I = n(209613),
   T = n(998698),
-  h = n(661824),
-  S = n(703558),
-  f = n(117530),
+  h = n(703558),
+  S = n(117530),
+  f = n(132338),
   N = n(459273),
   A = n(444282),
   m = n(898463),
@@ -28,7 +28,7 @@ function C(e) {
   let {
     channelId: t,
     type: n
-  } = e, s = (0, u.e7)([E.Z], () => E.Z.keyboardModeEnabled), C = (0, I.Z)("attachments", l.hy.HORIZONTAL), v = (0, u.e7)([f.Z], () => f.Z.getUploads(t, n.drafts.type)), {
+  } = e, s = (0, u.e7)([E.Z], () => E.Z.keyboardModeEnabled), C = (0, I.Z)("attachments", l.hy.HORIZONTAL), v = (0, u.e7)([S.Z], () => S.Z.getUploads(t, n.drafts.type)), {
     isApplicationCommand: L,
     commandOptions: D,
     commandOptionStates: M
@@ -100,7 +100,7 @@ function C(e) {
           })
         }
       })
-    }), n.drafts.type === S.d.FirstThreadMessage ? null : (0, i.jsx)(h.Z, {})]
+    }), n.drafts.type === h.d.FirstThreadMessage ? null : (0, i.jsx)(f.Z, {})]
   })
 }
 t.Z = r.memo(function(e) {

@@ -29,8 +29,8 @@ var l = n(735250),
   L = n(448239),
   O = n(404975),
   P = n(626135),
-  y = n(572004),
-  b = n(970257),
+  b = n(572004),
+  y = n(970257),
   D = n(418476),
   U = n(151007),
   k = n(432376),
@@ -169,7 +169,7 @@ function q(e) {
       canManageMessages: j.Z.can(V.Plq.MANAGE_MESSAGES, t)
     }), [t, v]), P = (0, T.U)(t, n), w = (0, N.NE)(t, n), H = (0, N.Ek)(n), B = (0, c.e7)([g.Z], () => null != t.guild_id && g.Z.isLurking(t.guild_id), [t]), F = (0, c.e7)([A.ZP], () => null != t.guild_id && A.ZP.isCurrentUserGuest(t.guild_id), [t]), z = o.id === p, W = (L || n.canDeleteOwnMessage(p)) && E && !V.V$x.UNDELETABLE.has(n.type);
     n.type === V.uaV.AUTO_MODERATION_ACTION && (W = W && L);
-    let Y = (0, b.a4)(n),
+    let Y = (0, y.a4)(n),
       K = (0, U.Z)(n, t, L),
       q = !t.isSystemDM() && (0, D.Z)(n, p) && E && !_,
       {
@@ -215,7 +215,7 @@ function q(e) {
       canStartThread: w,
       canViewThread: H,
       canForward: ee && et,
-      canCopy: y.wS,
+      canCopy: b.wS,
       hasDeveloperMode: x,
       canReact: !X && I,
       canPublish: Q,

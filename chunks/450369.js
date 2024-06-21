@@ -97,18 +97,18 @@ let j = 16 / 9,
       blocked: L
     } = t, O = (0, r.Wu)([_.Z], () => _.Z.getAllActiveStreams(), []), {
       selectedParticipant: P,
-      largeStream: y
+      largeStream: b
     } = (0, r.cj)([m.Z], () => ({
       selectedParticipant: null != s ? m.Z.getSelectedParticipant(s.id) : null,
       largeStream: null != s && m.Z.getStageStreamSize(s.id)
-    })), b = i.useCallback((e, t) => {
+    })), y = i.useCallback((e, t) => {
       if (e.type === M.fO.STREAM && 0 === O.filter(t => (0, E.V9)(t) === e.id && t.state !== A.jm8.ENDED).length) {
         if (!(0, g.p9)(s, T.Z, I.Z, x.Z, p.Z)[0]) return;
         (0, d.rn)((0, E.my)(e.id), {
           forceMultiple: t.shiftKey
         })
-      }(null == P ? void 0 : P.id) === e.id ? y ? (c.Z.selectParticipant(s.id, null), c.Z.updateStageStreamSize(s.id, !1)) : c.Z.updateStageStreamSize(s.id, !0) : (c.Z.updateStageStreamSize(s.id, !1), c.Z.selectParticipant(s.id, e.id))
-    }, [O, s, P, y]);
+      }(null == P ? void 0 : P.id) === e.id ? b ? (c.Z.selectParticipant(s.id, null), c.Z.updateStageStreamSize(s.id, !1)) : c.Z.updateStageStreamSize(s.id, !0) : (c.Z.updateStageStreamSize(s.id, !1), c.Z.selectParticipant(s.id, e.id))
+    }, [O, s, P, b]);
     return (0, l.jsx)(S.Z, {
       participant: n,
       aspectRatio: j,
@@ -118,7 +118,7 @@ let j = 16 / 9,
       className: R.tile,
       inCall: !0,
       inPopout: f,
-      onClick: b,
+      onClick: y,
       onContextMenu: h,
       paused: !1,
       pulseSpeakingIndicator: !C.enabled,

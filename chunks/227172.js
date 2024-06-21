@@ -46,9 +46,9 @@ t.Z = e => {
     user: L,
     details: O,
     gameTitle: P,
-    activity: y
+    activity: b
   } = (0, v.F)(n), {
-    primaryColor: b,
+    primaryColor: y,
     secondaryColor: D
   } = (0, T.Z)(E), U = (0, a.e7)([m.default], () => m.default.locale), {
     streamPreviewUrl: k,
@@ -72,10 +72,10 @@ t.Z = e => {
       avatarSrcs: H.map(e => e.getAvatarURL(t.guild_id, 128)),
       description: l,
       timestamp: (0, _.yh)(n, U),
-      colors: [b, D],
+      colors: [y, D],
       channelId: e
     })
-  }, [E, t, H, n, U, V, B, G, b, D, L]);
+  }, [E, t, H, n, U, V, B, G, y, D, L]);
   if (null == L) return null;
   let W = null != n.extra.platform ? R[n.extra.platform] : null,
     Y = (0, l.jsx)(Z.Gk, {
@@ -107,16 +107,16 @@ t.Z = e => {
       entry: n,
       stream: w
     }),
-    q = (0, o.Z)(y, A.xjy.JOIN) || (0, c.Z)(y) ? (0, l.jsx)(d.Z, {
-      activity: y,
+    q = (0, o.Z)(b, A.xjy.JOIN) || (0, c.Z)(b) ? (0, l.jsx)(d.Z, {
+      activity: b,
       user: L,
       ButtonComponent: e => (0, l.jsx)(S.Ll, {
         IconComponent: r.GameControllerIcon,
         ...e
       })
     }) : null,
-    X = [q, (0, u.Z)(y) ? (0, l.jsx)(h.Z, {
-      activity: y,
+    X = [q, (0, u.Z)(b) ? (0, l.jsx)(h.Z, {
+      activity: b,
       ButtonComponent: e => (0, l.jsx)(S.Ll, {
         IconComponent: r.EyeIcon,
         ...e

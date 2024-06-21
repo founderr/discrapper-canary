@@ -98,7 +98,7 @@ function f(e) {
         })
       }
     })
-  }, [j, R, t]), y = l.useCallback((e, t, n) => {
+  }, [j, R, t]), b = l.useCallback((e, t, n) => {
     let l = (l, i) => {
         i && u.kJ.updateSetting(l), l && null != t && (0, r.zd)(t), j(e.id), d.default.track(g.rMx.MESSAGE_REQUEST_ACTION, {
           action: E.cl.ACCEPT_HAM_CONFIRMATION_PROMPT,
@@ -123,7 +123,7 @@ function f(e) {
     acceptMessageRequest: C ? P : j,
     rejectMessageRequest: L,
     rejectAll: O,
-    markAsNotSpam: y,
+    markAsNotSpam: b,
     isAcceptLoading: _,
     isRejectLoading: x,
     isUserProfileLoading: N,

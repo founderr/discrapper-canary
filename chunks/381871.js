@@ -34,8 +34,8 @@ var l = n(735250),
   L = n(185923),
   O = n(474936),
   P = n(526761),
-  y = n(689938),
-  b = n(471915);
+  b = n(689938),
+  y = n(471915);
 let D = L.Hz.CHAT,
   U = {
     section: R.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
@@ -105,27 +105,27 @@ function w(e) {
       } = e, s = L && t === r.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
       return (0, l.jsx)(o.Popout, {
         position: "left",
-        "aria-label": y.Z.Messages.VOICE_CHANNEL_EFFECTS_MORE,
+        "aria-label": b.Z.Messages.VOICE_CHANNEL_EFFECTS_MORE,
         shouldShow: s,
         renderPopout: () => (0, l.jsx)("div", {
           onMouseEnter: _,
           children: (0, l.jsx)(g.ZP, {
-            className: b.reducedMotionTooltip,
-            header: y.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_TITLE,
-            content: y.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_BODY,
+            className: y.reducedMotionTooltip,
+            header: b.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_TITLE,
+            content: b.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_BODY,
             onClick: () => {
               u.Z.open(R.oAB.ACCESSIBILITY, null, {
                 scrollPosition: P.rP.REDUCED_MOTION
               }), E()
             },
             markAsDismissed: i,
-            buttonCTA: y.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CONFIRM,
-            secondaryButtonCTA: y.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CANCEL,
+            buttonCTA: b.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CONFIRM,
+            secondaryButtonCTA: b.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CANCEL,
             caretPosition: g.DF.RIGHT_CENTER
           })
         }),
         children: () => (0, l.jsx)(A.Z, {
-          title: y.Z.Messages.VOICE_CHANNEL_EFFECTS_HOTBAR_TITLE,
+          title: b.Z.Messages.VOICE_CHANNEL_EFFECTS_HOTBAR_TITLE,
           channel: n,
           closePopout: E,
           onSelectEmoji: Y,
@@ -135,7 +135,7 @@ function w(e) {
           analyticsOverride: U,
           emojiSearchProps: {
             accessory: (0, l.jsx)(S.Z, {
-              labelText: y.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE,
+              labelText: b.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE,
               value: $,
               onChange: () => {
                 if (H) return h.ZP.trackWithMetadata(R.rMx.VOICE_CHANNEL_EFFECT_FANCY_ANIMATION_TOGGLED, {

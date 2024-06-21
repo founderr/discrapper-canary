@@ -34,9 +34,9 @@ var l = n(735250),
   L = n(921944),
   O = n(65154),
   P = n(689938),
-  y = n(745380);
+  b = n(745380);
 
-function b(e, t, n) {
+function y(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -117,7 +117,7 @@ class D extends i.PureComponent {
             return (0, l.jsx)(f.ZP, {
               header: (0, l.jsxs)("div", {
                 children: [(0, l.jsx)(A.Z, {
-                  className: y.tooltipImage,
+                  className: b.tooltipImage,
                   autoPlay: !h,
                   src: "https://cdn.discordapp.com/attachments/860252504826445825/1078051428028924006/mobile_coachmark.mp4",
                   width: 248,
@@ -144,7 +144,7 @@ class D extends i.PureComponent {
               onClick: () => {
                 t(), s(L.L.UNKNOWN)
               },
-              className: y.tooltip
+              className: b.tooltip
             })
           },
           children: () => C
@@ -159,16 +159,16 @@ class D extends i.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), b(this, "handleStartCall", (e, t) => {
+    super(...e), y(this, "handleStartCall", (e, t) => {
       let {
         channel: n,
         notFriend: l,
         appContext: i
       } = this.props, s = l ? n.getRecipientId() : null, a = () => o.Z.call(n.id, t, !l && !n.isManaged() && !(null == e ? void 0 : e.shiftKey), s);
       t ? (0, _.Z)(a, i) : a()
-    }), b(this, "handleJoinCall", e => {
+    }), y(this, "handleJoinCall", e => {
       c.default.selectVoiceChannel(this.props.channel.id, e)
-    }), b(this, "handleVoiceClick", e => {
+    }), y(this, "handleVoiceClick", e => {
       let {
         callUnavailable: t,
         callActive: n,
@@ -179,14 +179,14 @@ class D extends i.PureComponent {
         }), t);
       else if (n) return this.handleJoinCall(!1);
       else return this.handleStartCall(e, !1)
-    }), b(this, "handleStartVideoCall", e => {
+    }), y(this, "handleStartVideoCall", e => {
       this.handleStartCall(e, !0)
-    }), b(this, "handleJoinVideoCall", () => {
+    }), y(this, "handleJoinVideoCall", () => {
       let {
         appContext: e
       } = this.props;
       (0, _.Z)(() => this.handleJoinCall(!0), e)
-    }), b(this, "handleBrowserNotSupported", () => {
+    }), y(this, "handleBrowserNotSupported", () => {
       (0, C.Z)()
     })
   }

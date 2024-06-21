@@ -4,10 +4,10 @@ var i = n(735250),
   r = n(470079),
   s = n(442837),
   o = n(481060),
-  a = n(661824),
-  l = n(913663),
-  u = n(268350),
-  _ = n(419922),
+  a = n(913663),
+  l = n(268350),
+  u = n(419922),
+  _ = n(132338),
   c = n(689938),
   d = n(188972);
 t.Z = r.memo(function(e) {
@@ -15,7 +15,7 @@ t.Z = r.memo(function(e) {
   let {
     channelId: n,
     chatInputType: E
-  } = e, [I, T] = r.useState(null), h = (0, s.e7)([l.Z], () => l.Z.getStickerPreview(n, E.drafts.type));
+  } = e, [I, T] = r.useState(null), h = (0, s.e7)([a.Z], () => a.Z.getStickerPreview(n, E.drafts.type));
   return (null === (t = E.stickers) || void 0 === t ? void 0 : t.allowSending) && null != h && 0 !== h.length ? (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)("div", {
       className: d.stickerPreviews,
@@ -28,7 +28,7 @@ t.Z = r.memo(function(e) {
           "aria-label": c.Z.Messages.GUILD_STICKER_A11Y_REMOVE_STICKER.format({
             name: e.name
           }),
-          onClick: () => (0, u.qB)(n, E.drafts.type),
+          onClick: () => (0, l.qB)(n, E.drafts.type),
           children: (0, i.jsx)("div", {
             className: d.closeIconContainer,
             children: (0, i.jsx)(o.CircleXIcon, {
@@ -37,14 +37,14 @@ t.Z = r.memo(function(e) {
               className: d.closeIcon
             })
           })
-        }), (0, i.jsx)(_.ZP, {
+        }), (0, i.jsx)(u.ZP, {
           isInteracting: I === e.id,
           className: d.stickerPreview,
           size: 48,
           sticker: e
         })]
       }, e.id))
-    }), (0, i.jsx)(a.Z, {
+    }), (0, i.jsx)(_.Z, {
       className: d.stickerPreviewDivider
     })]
   }) : null

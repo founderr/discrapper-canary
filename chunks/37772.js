@@ -14,14 +14,14 @@ var s = n(735250),
   T = n(695346),
   N = n(592125),
   m = n(699516),
-  h = n(702346),
-  C = n(630388),
-  S = n(709054),
-  A = n(493892),
-  p = n(901461),
-  g = n(739566),
-  f = n(443877),
-  O = n(492593),
+  h = n(998951),
+  C = n(702346),
+  S = n(630388),
+  A = n(709054),
+  p = n(493892),
+  g = n(901461),
+  f = n(739566),
+  O = n(443877),
   R = n(938353),
   M = n(25015),
   x = n(689674),
@@ -42,11 +42,11 @@ function B(e) {
     compact: i,
     collapsedReason: l
   } = e;
-  return (0, s.jsx)(O.Z, {
+  return (0, s.jsx)(h.Z, {
     className: t,
     compact: i,
     role: "group",
-    childrenMessageContent: (0, s.jsx)(h.Z, {
+    childrenMessageContent: (0, s.jsx)(C.Z, {
       compact: i,
       className: y.blockedSystemMessage,
       iconNode: (0, s.jsx)(o.CloseSmallIcon, {
@@ -69,7 +69,7 @@ t.Z = i.memo(function e(t) {
   let {
     channel: l,
     message: o,
-    compact: h = !1,
+    compact: C = !1,
     className: y,
     onContextMenu: k,
     onClick: G,
@@ -78,7 +78,7 @@ t.Z = i.memo(function e(t) {
     treatSpam: w
   } = t, H = j.OBS.has(o.type) ? o.messageReference : void 0, Y = (0, r.e7)([I.Z], () => I.Z.getMessageByReference(H)), K = (0, r.e7)([N.Z], () => o.type === j.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED ? N.Z.getChannel(Y.message.channel_id) : null), W = T.x4.useSetting(), z = T.RS.useSetting(), Q = T.NA.useSetting(), X = T.QK.useSetting(), q = (0, d.A)((null !== (n = o.editedTimestamp) && void 0 !== n ? n : o.timestamp).valueOf()), J = (0, E.Z)(null == l ? void 0 : l.id), {
     disableReactionCreates: $
-  } = (0, f.Z)(l), {
+  } = (0, O.Z)(l), {
     content: ee,
     hasSpoilerEmbeds: et
   } = (0, M.Z)(o, {
@@ -87,7 +87,7 @@ t.Z = i.memo(function e(t) {
     allowHeading: q,
     allowLinks: !0,
     previewLinkTarget: !0
-  }), en = (0, g.ZP)(o), es = (0, r.e7)([N.Z], () => o.hasFlag(j.iLy.HAS_THREAD) && N.Z.getChannel(S.default.castMessageIdAsChannelId(o.id))), ei = o.type === j.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED && null != K, el = !ei && void 0 === i, ea = (0, x.Z)({
+  }), en = (0, f.ZP)(o), es = (0, r.e7)([N.Z], () => o.hasFlag(j.iLy.HAS_THREAD) && N.Z.getChannel(A.default.castMessageIdAsChannelId(o.id))), ei = o.type === j.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED && null != K, el = !ei && void 0 === i, ea = (0, x.Z)({
     message: o,
     channel: l,
     enabled: el
@@ -97,19 +97,19 @@ t.Z = i.memo(function e(t) {
     message: Y.message,
     channel: K,
     hasThread: !1
-  }) : (m.Z.isBlockedForMessage(o) ? i = U.Z.Messages.BLOCKED_MESSAGE_COUNT : (0, A.DQ)(o) && w && (i = U.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== i) ? (0, s.jsx)(B, {
+  }) : (m.Z.isBlockedForMessage(o) ? i = U.Z.Messages.BLOCKED_MESSAGE_COUNT : (0, p.DQ)(o) && w && (i = U.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== i) ? (0, s.jsx)(B, {
     className: y,
-    compact: h,
+    compact: C,
     count: 1,
     collapsedReason: i
-  }) : (0, s.jsx)(O.Z, {
-    compact: h,
+  }) : (0, s.jsx)(h.Z, {
+    compact: C,
     className: a()(y, {
-      [b.ephemeral]: (0, C.yE)(o.flags, j.iLy.EPHEMERAL),
+      [b.ephemeral]: (0, S.yE)(o.flags, j.iLy.EPHEMERAL),
       [b.disableInteraction]: F,
       [b.groupStart]: t.isGroupStart
     }),
-    childrenRepliedMessage: (0, D.Z)(o, l, H, Y, h),
+    childrenRepliedMessage: (0, D.Z)(o, l, H, Y, C),
     childrenHeader: (0, L.Z)({
       ...t,
       author: en,
@@ -119,7 +119,7 @@ t.Z = i.memo(function e(t) {
       channel: l,
       message: o,
       hasSpoilerEmbeds: et,
-      compact: h,
+      compact: C,
       canSuppressEmbeds: !1,
       canDeleteAttachments: !1,
       disableReactionReads: !1,
@@ -139,14 +139,14 @@ t.Z = i.memo(function e(t) {
       shouldRenderCtaButton: eo,
       hasInlineForwardButton: !1
     }),
-    childrenExecutedCommand: (0, P.Z)(o, l, h),
+    childrenExecutedCommand: (0, P.Z)(o, l, C),
     childrenMessageContent: (0, v.Z)(t, ee),
     childrenSystemMessage: (0, Z.Z)(t),
     onContextMenu: k,
     onClick: G,
     hasThread: !1 !== V && null != es && o.hasFlag(j.iLy.HAS_THREAD),
     hasReply: o.type === j.uaV.REPLY,
-    isSystemMessage: (0, p.Z)(o),
+    isSystemMessage: (0, g.Z)(o),
     messageRef: ea
   })
 })

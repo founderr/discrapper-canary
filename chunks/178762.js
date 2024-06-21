@@ -141,10 +141,10 @@ t.ZP = i.memo(e => {
         })
       })
     }, [a, C]),
-    y = i.useCallback(() => {
+    b = i.useCallback(() => {
       m(String(Date.now()))
     }, []),
-    b = () => {
+    y = () => {
       x.current = !1, setTimeout(() => {
         !x.current && (N(!1), M(R))
       }, 100)
@@ -155,7 +155,7 @@ t.ZP = i.memo(e => {
         x.current && N(!0), I && (0, g.L)(A.xP.CARD_CLICK, _)
       }, 100)
     },
-    onMouseLeave: b,
+    onMouseLeave: y,
     children: (0, l.jsx)(u.Popout, {
       renderPopout: e => {
         let {
@@ -163,7 +163,7 @@ t.ZP = i.memo(e => {
         } = e;
         return (0, l.jsx)(O, {
           closePopout: t,
-          updatePopoutPosition: y,
+          updatePopoutPosition: b,
           ...a
         })
       },
@@ -172,7 +172,7 @@ t.ZP = i.memo(e => {
       positionKey: o,
       onRequestOpen: () => (0, g.L)(A.xP.CARD_CLICK, _),
       onRequestClose: () => {
-        v && b(), !I && (N(!1), S(!1))
+        v && y(), !I && (N(!1), S(!1))
       },
       spacing: 8,
       children: (e, t) => {

@@ -34,8 +34,8 @@ var l = n(735250),
   L = n(430824),
   O = n(496675),
   P = n(944486),
-  y = n(358085),
-  b = n(792125),
+  b = n(358085),
+  y = n(792125),
   D = n(998502),
   U = n(922482),
   k = n(431328),
@@ -74,7 +74,7 @@ function ei(e) {
     popoutWindow: a,
     popoutWindowAlwaysOnTop: r,
     selectedParticipant: c
-  } = e, u = t.getGuildId(), d = (0, o.e7)([P.Z], () => P.Z.getMostRecentSelectedTextChannelId(u), [u]), h = R.default.getId(), m = !(0, o.e7)([g.Z], () => g.Z.isFullscreenInContext(n)) && (!y.isPlatformEmbedded || y.isPlatformEmbedded && D.ZP.supportsFeature(X.eRX.POPOUT_WINDOWS)), p = null != c && c.type !== Q.fO.ACTIVITY && c.user.id !== h, E = i.useMemo(() => {
+  } = e, u = t.getGuildId(), d = (0, o.e7)([P.Z], () => P.Z.getMostRecentSelectedTextChannelId(u), [u]), h = R.default.getId(), m = !(0, o.e7)([g.Z], () => g.Z.isFullscreenInContext(n)) && (!b.isPlatformEmbedded || b.isPlatformEmbedded && D.ZP.supportsFeature(X.eRX.POPOUT_WINDOWS)), p = null != c && c.type !== Q.fO.ACTIVITY && c.user.id !== h, E = i.useMemo(() => {
     var e;
     return null !== (e = null == a ? void 0 : a.window) && void 0 !== e ? e : window
   }, [a]), C = (0, K.Z)({
@@ -83,7 +83,7 @@ function ei(e) {
     popoutOpen: s,
     popoutWindow: a,
     currentWindow: E
-  }), _ = n === X.IlC.POPOUT && y.isPlatformEmbedded && D.ZP.supportsFeature(X.eRX.POPOUT_WINDOWS);
+  }), _ = n === X.IlC.POPOUT && b.isPlatformEmbedded && D.ZP.supportsFeature(X.eRX.POPOUT_WINDOWS);
   return (0, l.jsxs)(l.Fragment, {
     children: [p ? (0, l.jsx)(M.Z, {
       context: (0, f.Z)(c.type),
@@ -239,7 +239,7 @@ function er(e) {
         className: $.container,
         ref: M,
         children: [(0, l.jsx)("div", {
-          className: a()($.callContainer, (0, b.Q)(X.BRd.DARK), {
+          className: a()($.callContainer, (0, y.Q)(X.BRd.DARK), {
             [$.sidebarVisible]: s,
             [$.sidebarOrChatVisible]: s || S
           }),
