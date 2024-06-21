@@ -34,9 +34,9 @@ var i = n(735250),
   M = n(981631),
   P = n(176505),
   y = n(689938),
-  U = n(520076);
+  U = n(25450),
+  b = n(520076);
 n(942862);
-var b = n(622322);
 
 function G(e) {
   let {
@@ -62,9 +62,9 @@ function G(e) {
 let w = {
   blockQuote: {
     react: (e, t, n) => (0, i.jsxs)("div", {
-      className: b.blockquoteContainer,
+      className: U.blockquoteContainer,
       children: [(0, i.jsx)("div", {
-        className: b.blockquoteDivider
+        className: U.blockquoteDivider
       }), (0, i.jsx)("blockquote", {
         children: t(e.content, n)
       })]
@@ -95,14 +95,14 @@ let w = {
   codeBlock: {
     react(e, t, r) {
       let s = () => (0, i.jsx)("code", {
-        className: o()(U.scrollbarGhostHairline, "hljs"),
+        className: o()(b.scrollbarGhostHairline, "hljs"),
         children: (0, R.S)(e, t, r)
       });
       return (0, i.jsx)("pre", {
         children: (0, i.jsxs)("div", {
-          className: b.codeContainer,
+          className: U.codeContainer,
           children: [m.wS ? (0, i.jsx)("div", {
-            className: b.codeActions,
+            className: U.codeActions,
             children: (0, i.jsx)(G, {
               text: e.content
             })
@@ -115,7 +115,7 @@ let w = {
               {
                 let n = t.highlight(e.lang, e.content, !0);
                 return null == n ? s() : (0, i.jsx)("code", {
-                  className: o()(U.scrollbarGhostHairline, "hljs", n.language),
+                  className: o()(b.scrollbarGhostHairline, "hljs", n.language),
                   dangerouslySetInnerHTML: {
                     __html: n.value
                   }
@@ -217,7 +217,7 @@ let w = {
         r = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
       return (0, a.reactElement)(i, "".concat(n.key), {
         start: e.start,
-        className: n.formatInline ? b.inlineFormat : null,
+        className: n.formatInline ? U.inlineFormat : null,
         style: {
           "--totalCharacters": r
         },
@@ -239,7 +239,7 @@ let w = {
       });
       return (0, a.reactElement)("h" + e.level, (null == n ? void 0 : n.key) != null ? "".concat(n.key) : null, {
         children: i,
-        className: n.formatInline ? b.inlineFormat : null
+        className: n.formatInline ? U.inlineFormat : null
       })
     }
   },
@@ -264,7 +264,7 @@ let w = {
   subtext: {
     react: (e, t, n) => (0, a.reactElement)("small", (null == n ? void 0 : n.key) != null ? "".concat(n.key) : null, {
       children: t(e.content, n),
-      className: n.formatInline ? b.inlineFormat : null
+      className: n.formatInline ? U.inlineFormat : null
     })
   }
 };

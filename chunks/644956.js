@@ -30,8 +30,8 @@ var r = n(120356),
   g = n(285952),
   C = n(151827),
   v = n(689938),
-  L = n(906684),
-  D = n(622322);
+  L = n(25450),
+  D = n(906684);
 let M = (0, h.B)({
   kind: "user",
   id: "2021-07_role_popout",
@@ -60,12 +60,12 @@ function P(e) {
   } = e, {
     analyticsLocations: b
   } = (0, T.ZP)(I.Z.ROLE_MENTION), G = (0, u.e7)([E.Z], () => E.Z.roleStyle), w = null != t && 0 !== t && !U, B = w && "dot" === G, k = e => (0, i.jsxs)(f.Z, {
-    className: s()(D.roleMention),
+    className: s()(L.roleMention),
     color: "username" === G && w ? t : null,
     ...e,
     children: [B && (0, i.jsx)(_.RoleDot, {
       color: (0, l.Rf)(t),
-      className: L.roleDot,
+      className: D.roleDot,
       background: !1,
       tooltip: !1
     }), y]
@@ -144,12 +144,12 @@ function P(e) {
             }, r.id)
           }).value();
         return (0, i.jsx)(g.Z, {
-          className: D.rolePopout,
+          className: L.rolePopout,
           ...e,
           children: (0, i.jsxs)(_.Scroller, {
-            className: D.roleScroller,
+            className: L.roleScroller,
             children: [(0, i.jsx)(C.Z, {
-              className: D.roleHeader,
+              className: L.roleHeader,
               "aria-label": v.Z.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
                 title: u.name,
                 count: E.length
