@@ -196,6 +196,9 @@ let en = i.memo(e => {
         blocked: eE,
         noVideoRender: em || eR,
         pulseSpeakingIndicator: eC
+      }), e3 = (0, l.jsx)(Y.T, {
+        userId: I.user.id,
+        channelId: ea.id
       }), e4 = ee.Z.Messages.CALL_TILE_A11Y_LABEL_USER.format({
         username: I.user.username
       });

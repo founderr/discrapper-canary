@@ -3187,7 +3187,8 @@ input[type=checked]:focus-visible+.label_b7d6f1 {
     top: 8px;
     right: 8px;
     display: flex;
-    align-items: center
+    align-items: center;
+    z-index: 1
 }
 
 .selectedScreen_ba4b17 {

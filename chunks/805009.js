@@ -170,11 +170,12 @@ class R extends(l = s.Component) {
       channelId: D,
       user: U,
       handleHoverHangStatus: k,
-      handleHoverIcons: w
+      handleHoverIcons: w,
+      disconnected: H
     } = this.props;
     if (c || m) return null;
-    let H = [],
-      B = (0, i.jsx)(L, {
+    let B = [],
+      G = (0, i.jsx)(L, {
         iconClassName: E,
         mute: e,
         localMute: t,
@@ -182,7 +183,7 @@ class R extends(l = s.Component) {
         deaf: s,
         serverDeaf: a
       });
-    d && (n ? H.push((0, i.jsx)(o.TooltipContainer, {
+    d && (n ? B.push((0, i.jsx)(o.TooltipContainer, {
       className: S.iconSpacing,
       text: Z.Z.Messages.LOCAL_VIDEO_DISABLED,
       children: (0, i.jsx)(o.VideoSlashIcon, {
@@ -191,7 +192,7 @@ class R extends(l = s.Component) {
         className: r()(S.icon, E),
         colorClass: S.strikethrough
       })
-    }, "video")) : H.push((0, i.jsx)(o.TooltipContainer, {
+    }, "video")) : B.push((0, i.jsx)(o.TooltipContainer, {
       className: S.iconSpacing,
       text: Z.Z.Messages.VIDEO,
       children: (0, i.jsx)(o.VideoIcon, {
@@ -199,7 +200,14 @@ class R extends(l = s.Component) {
         color: "currentColor",
         className: r()(S.icon, E)
       })
-    }, "video"))), null != I && H.push((0, i.jsx)(o.TooltipContainer, {
+    }, "video"))), H && B.push((0, i.jsx)(o.TooltipContainer, {
+      className: S.iconSpacing,
+      text: Z.Z.Messages.NOTICE_USER_DISCONNECTED,
+      children: (0, i.jsx)(o.CircleExclamationPointIcon, {
+        className: r()(S.icon, E),
+        color: o.tokens.colors.STATUS_WARNING_BACKGROUND
+      })
+    }, "disconnected")), null != I && B.push((0, i.jsx)(o.TooltipContainer, {
       text: (0, u.Z)(I.name),
       className: S.iconSpacing,
       children: (0, i.jsx)(o.ActivitiesIcon, {
@@ -207,22 +215,22 @@ class R extends(l = s.Component) {
         color: "currentColor",
         className: r()(S.icon, E)
       })
-    }, "activity")), v === N.YE.XBOX || A === T.wR.XBOX ? H.push((0, i.jsx)("div", {
+    }, "activity")), v === N.YE.XBOX || A === T.wR.XBOX ? B.push((0, i.jsx)("div", {
       className: r()(S.iconSpacing),
       children: (0, i.jsx)(f.Z, {
         className: r()(S.icon, E)
       })
-    }, "xbox")) : (v === N.YE.PLAYSTATION || A === T.wR.PLAYSTATION) && H.push((0, i.jsx)("div", {
+    }, "xbox")) : (v === N.YE.PLAYSTATION || A === T.wR.PLAYSTATION) && B.push((0, i.jsx)("div", {
       className: r()(S.iconSpacing),
       children: (0, i.jsx)(g.Z, {
         className: r()(S.icon, E)
       })
-    }, "playstation")), h ? H.push((0, i.jsx)("div", {
+    }, "playstation")), h ? B.push((0, i.jsx)("div", {
       className: r()(S.iconSpacing, S.liveIconSpacing),
       children: (0, i.jsx)(C.ZP, {
         size: C.ZP.Sizes.SMALL
       })
-    }, "stream")) : p && H.push((0, i.jsx)(o.TooltipContainer, {
+    }, "stream")) : p && B.push((0, i.jsx)(o.TooltipContainer, {
       className: S.iconSpacing,
       text: Z.Z.Messages.WATCH_STREAM_WATCHING,
       children: (0, i.jsx)(o.EyeIcon, {
@@ -231,20 +239,20 @@ class R extends(l = s.Component) {
         className: r()(S.icon, E)
       })
     }, "watch"));
-    let G = null != y && !(0, _.yE)(y.flags, x.udG.EMBEDDED),
-      V = null == R && G;
-    return 0 !== H.length || null != B || O || V ? (0, i.jsxs)("div", {
+    let V = null != y && !(0, _.yE)(y.flags, x.udG.EMBEDDED),
+      F = null == R && V;
+    return 0 !== B.length || null != G || O || F ? (0, i.jsxs)("div", {
       className: S.icons,
       children: [(0, i.jsxs)("div", {
         className: S.iconGroup,
         onMouseEnter: () => null == w ? void 0 : w(!0),
         onMouseLeave: () => null == w ? void 0 : w(!1),
-        children: [B, H]
-      }), O || V ? (0, i.jsx)("div", {
+        children: [G, B]
+      }), O || F ? (0, i.jsx)("div", {
         className: S.iconGroup,
         onMouseEnter: () => null == k ? void 0 : k(!0),
         onMouseLeave: () => null == k ? void 0 : k(!1),
-        children: V ? (0, i.jsx)(j, {
+        children: F ? (0, i.jsx)(j, {
           application: y,
           iconClassName: E,
           guildId: b,

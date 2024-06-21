@@ -201,6 +201,10 @@ class y extends(s = u.ZP.Store) {
   getSecureFramesState() {
     return null == i ? void 0 : i.getSecureFramesState()
   }
+  isUserConnected(e) {
+    let t = null == i ? void 0 : i.getUserIds();
+    return null != t && t.has(e)
+  }
 }
 l = "RTCConnectionStore", (a = "displayName") in(o = y) ? Object.defineProperty(o, a, {
   value: l,
@@ -224,6 +228,8 @@ let U = new y(_.Z, __OVERLAY__ ? {} : {
     return e.connection === i
   },
   RTC_CONNECTION_SECURE_FRAMES_UPDATE: P,
+  RTC_CONNECTION_CLIENT_CONNECT: P,
+  RTC_CONNECTION_CLIENT_DISCONNECT: P,
   VOICE_STATE_UPDATES: function(e) {
     let {
       voiceStates: t

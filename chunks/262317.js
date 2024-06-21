@@ -256,65 +256,67 @@ class w extends(l = s.PureComponent) {
         localMute: o,
         localVideoDisabled: c,
         speaking: d,
-        user: h,
-        deaf: m,
-        priority: p,
-        collapsed: E,
-        isStreaming: g,
-        isGuest: f,
-        nick: _,
-        video: I,
-        serverMute: x,
-        serverDeaf: T,
-        tabIndex: N,
-        embeddedApplication: Z,
-        channel: S,
-        hangStatusActivity: v,
-        showHangStatus: A,
-        isSelf: M,
-        application: R
+        disconnected: h,
+        user: m,
+        deaf: p,
+        priority: E,
+        collapsed: g,
+        isStreaming: f,
+        isGuest: _,
+        nick: I,
+        video: x,
+        serverMute: T,
+        serverDeaf: N,
+        tabIndex: Z,
+        embeddedApplication: S,
+        channel: v,
+        hangStatusActivity: A,
+        showHangStatus: M,
+        isSelf: R,
+        application: L
       } = this.props, {
-        userPopoutOpen: L,
-        isHoveringHangStatus: P
-      } = this.state, D = O.al.has(null != n ? n : ""), U = {
-        user: h,
+        userPopoutOpen: P,
+        isHoveringHangStatus: D
+      } = this.state, U = O.al.has(null != n ? n : ""), k = {
+        user: m,
         speaking: d,
+        disconnected: h,
         mute: a,
         localMute: o,
         localVideoDisabled: c,
-        isStreaming: g,
-        isGuest: f,
-        video: I,
-        priority: p,
-        deaf: m,
-        nick: _,
-        collapsed: E,
-        overlap: E,
-        serverMute: x,
-        serverDeaf: T,
-        tabIndex: N,
+        isStreaming: f,
+        isGuest: _,
+        video: x,
+        priority: E,
+        deaf: p,
+        nick: I,
+        collapsed: g,
+        overlap: g,
+        serverMute: T,
+        serverDeaf: N,
+        tabIndex: Z,
         otherClientSessionType: n,
         voicePlatform: l,
-        embeddedApplication: Z,
+        embeddedApplication: S,
         avatarContainerClass: r()({
           [b.userAvatar]: !0
         }),
-        disabled: t && !D,
-        selected: L,
-        onClick: D ? void 0 : this.handleClickUser,
+        disabled: t && !U,
+        selected: P,
+        onClick: U ? void 0 : this.handleClickUser,
         onDoubleClick: this.handleWatchStream,
         onContextMenu: this.handleUserContextMenu,
-        guildId: S.guild_id,
-        hangStatusActivity: v,
-        showHangStatus: A,
-        isSelf: M,
-        application: R,
-        channelId: S.id
+        guildId: v.guild_id,
+        hangStatusActivity: A,
+        showHangStatus: M,
+        isSelf: R,
+        application: L,
+        channelId: v.id
       };
       if (t) {
-        var k;
+        var w;
         return (0, i.jsx)(u.Tooltip, {
-          text: null !== (k = (0, C.Z)(n)) && void 0 !== k ? k : y.Z.Messages.CONNECTED_ON_ANOTHER_CLIENT,
+          text: null !== (w = (0, C.Z)(n)) && void 0 !== w ? w : y.Z.Messages.CONNECTED_ON_ANOTHER_CLIENT,
           children: e => {
             let {
               onClick: t,
@@ -322,7 +324,7 @@ class w extends(l = s.PureComponent) {
               ...l
             } = e;
             return (0, i.jsx)(j.Z, {
-              ...U,
+              ...k,
               ...l
             })
           }
@@ -330,12 +332,12 @@ class w extends(l = s.PureComponent) {
       }
       return (0, i.jsx)(u.Popout, {
         position: "right",
-        renderPopout: A && P || !g ? this.renderHangStatusPopout : this.renderStreamPopout,
-        shouldShow: s && !L,
+        renderPopout: M && D || !f ? this.renderHangStatusPopout : this.renderStreamPopout,
+        shouldShow: s && !P,
         onRequestClose: this.handleHidePreview,
         spacing: 0,
         children: () => (0, i.jsx)(j.Z, {
-          ...U,
+          ...k,
           onMouseDown: e.onMouseDown,
           onKeyDown: e.onKeyDown,
           handleHoverHangStatus: this.handleHoverHangStatus,
