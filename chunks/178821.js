@@ -28,8 +28,9 @@ function m() {
       let i = performance.now(),
         l = i - r.current;
       if (r.current = i, n.current -= e.current[c.current], e.current[c.current] = l, n.current += l, o.current < h && (o.current += 1), c.current = (c.current + 1) % h, l > u) {
-        let e = Math.floor(l / d);
-        t.current += e
+        let e = 0 === o.current ? d : n.current / o.current,
+          r = Math.floor(l / Math.min(2 * d, e));
+        t.current += r
       }
       m.current = setTimeout(() => requestAnimationFrame(a), 12)
     };
