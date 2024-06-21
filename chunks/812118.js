@@ -12,7 +12,5 @@ e.exports = {
   customStatus: "customStatus_b2ca13",
   strikethrough: "strikethrough_b2ca13",
   emoji: "emoji_b2ca13",
-  withTagAsButton: "withTagAsButton_b2ca13",
-  withTagless: "withTagless_b2ca13",
   accountProfilePopoutWrapper: "accountProfilePopoutWrapper_b2ca13"
 }
