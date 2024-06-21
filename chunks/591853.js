@@ -95,6 +95,7 @@ function el(e) {
     secondaryColor: o
   } = (0, K.Z)(n);
   return (0, l.jsx)("div", {
+    "data-disable-adaptive-theme": !0,
     className: a()(et.hero, "theme-".concat($.BRd.DARK), i),
     style: {
       background: "linear-gradient(45deg, ".concat(r, ", ").concat(o, ")"),
