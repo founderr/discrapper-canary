@@ -550,28 +550,28 @@ function eu(e) {
   } = p, f = (0, V.d)(E), C = (0, Z.Z)({
     location: "ContentPopout",
     applicationId: f ? null === (t = E.extra) || void 0 === t ? void 0 : t.application_id : void 0
-  });
+  }) && f ? () => {
+    (0, h.openModalLazy)(async () => {
+      let {
+        default: e
+      } = await Promise.all([n.e("99387"), n.e("7613")]).then(n.bind(n, 644941));
+      return t => (0, l.jsx)(e, {
+        applicationId: E.extra.application_id,
+        channel: g,
+        ...t
+      })
+    })
+  } : void 0;
   return (0, l.jsxs)(el, {
     backgroundImgSrc: i,
     children: [(0, l.jsx)(eo, {
       ...p
-    }), (0, l.jsx)(ec, {
-      onClick: f && C ? () => {
-        (0, h.openModalLazy)(async () => {
-          let {
-            default: e
-          } = await Promise.all([n.e("99387"), n.e("7613")]).then(n.bind(n, 644941));
-          return t => (0, l.jsx)(e, {
-            applicationId: E.extra.application_id,
-            channel: g,
-            ...t
-          })
-        })
-      } : void 0,
-      children: (0, l.jsxs)("div", {
-        className: et.popoutContentBody,
-        children: [(0, l.jsx)("div", {
-          className: et.popoutThumbnailContainer,
+    }), (0, l.jsxs)("div", {
+      className: et.popoutContentBody,
+      children: [(0, l.jsx)("div", {
+        className: et.popoutThumbnailContainer,
+        children: (0, l.jsx)(ec, {
+          onClick: C,
           children: (0, l.jsx)(X.f, {
             size: 72,
             alt: a,
@@ -579,30 +579,30 @@ function eu(e) {
             fallbackSrc: s,
             className: et.contentImage
           })
-        }), (0, l.jsx)(h.Spacer, {
-          size: 16,
-          horizontal: !0
-        }), (0, l.jsxs)("div", {
-          children: [(0, l.jsx)(ec, {
-            onClick: d,
-            children: (0, l.jsx)(h.Heading, {
-              variant: "heading-md/medium",
-              className: et.popoutTextPrimary,
-              lineClamp: 3,
-              children: r
-            })
-          }), null != o ? (0, l.jsx)(ec, {
-            onClick: m,
-            children: (0, l.jsx)(h.Text, {
-              variant: "text-md/normal",
-              className: et.popoutTextSecondary,
-              children: o
-            })
-          }) : null, (0, l.jsx)(h.Spacer, {
-            size: 8
-          }), c]
-        })]
-      })
+        })
+      }), (0, l.jsx)(h.Spacer, {
+        size: 16,
+        horizontal: !0
+      }), (0, l.jsxs)("div", {
+        children: [(0, l.jsx)(ec, {
+          onClick: null != d ? d : C,
+          children: (0, l.jsx)(h.Heading, {
+            variant: "heading-md/medium",
+            className: et.popoutTextPrimary,
+            lineClamp: 3,
+            children: r
+          })
+        }), null != o ? (0, l.jsx)(ec, {
+          onClick: null != m ? m : C,
+          children: (0, l.jsx)(h.Text, {
+            variant: "text-md/normal",
+            className: et.popoutTextSecondary,
+            children: o
+          })
+        }) : null, (0, l.jsx)(h.Spacer, {
+          size: 8
+        }), c]
+      })]
     }), u]
   })
 }
