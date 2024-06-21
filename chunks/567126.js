@@ -19,9 +19,9 @@ var l = t(735250),
   h = t(918701),
   g = t(977156),
   C = t(433811),
-  I = t(131951),
-  Z = t(449224),
-  N = t(285952),
+  Z = t(131951),
+  N = t(449224),
+  I = t(285952),
   x = t(643095),
   f = t(358085),
   A = t(463727),
@@ -34,8 +34,8 @@ var l = t(735250),
   O = t(689938),
   j = t(946152);
 async function P() {
-  let e = I.Z.getVideoDevices(),
-    n = (0, c.Z)(I.Z.getMediaEngine(), [o.vA.WINDOW, o.vA.SCREEN], {
+  let e = Z.Z.getVideoDevices(),
+    n = (0, c.Z)(Z.Z.getMediaEngine(), [o.vA.WINDOW, o.vA.SCREEN], {
       width: 176,
       height: 99
     }),
@@ -90,7 +90,7 @@ async function D() {
 }
 
 function G(e) {
-  let n = (0, f.isWindows)() ? (0, R.Z)(_.ZP, Z.Z) : null,
+  let n = (0, f.isWindows)() ? (0, R.Z)(_.ZP, N.Z) : null,
     t = _.ZP.getRunningGames();
   return null != n && (0, T.Z)(e.id, n.windowHandle) ? 2 : null != t.find(n => (0, T.Z)(e.id, n.windowHandle)) ? 1 : 0
 }
@@ -103,7 +103,7 @@ function U(e) {
     enableGoLiveCaptureCard: a
   } = A.Z.useExperiment({
     location: "GoLive_Source_Select"
-  }), r = I.Z.supports(M.AN.GO_LIVE_HARDWARE), [c, E] = s.useState(null), [Z, f] = s.useState(null), [R, D] = s.useState(null), U = null != R && R.length > 0, [b, w] = s.useState(o.vA.WINDOW), [y, k] = s.useState(!1), B = s.useRef(null), H = s.useRef(new d.Xp), V = (0, u.e7)([_.ZP], () => _.ZP.getRunningGames()), F = function(e, n, t) {
+  }), r = Z.Z.supports(M.AN.GO_LIVE_HARDWARE), [c, E] = s.useState(null), [N, f] = s.useState(null), [R, D] = s.useState(null), U = null != R && R.length > 0, [b, w] = s.useState(o.vA.WINDOW), [B, y] = s.useState(!1), k = s.useRef(null), V = s.useRef(new d.Xp), H = (0, u.e7)([_.ZP], () => _.ZP.getRunningGames()), W = function(e, n, t) {
     let l = (0, g.Zy)({
       location: p.dr.STREAM_SOURCE_SELECT
     });
@@ -121,9 +121,9 @@ function U(e) {
       }
       return null
     }, [l, e, n, t])
-  }((0, u.e7)([S.Z], () => S.Z.quests), V, Z), W = s.useMemo(() => null == Z ? null : [...Z].sort((e, n) => (null == F ? void 0 : F.source.id) === e.id ? -1 : (null == F ? void 0 : F.source.id) === n.id ? 1 : G(n) - G(e)), [F, Z]);
+  }((0, u.e7)([S.Z], () => S.Z.quests), H, N), F = s.useMemo(() => null == N ? null : [...N].sort((e, n) => (null == W ? void 0 : W.source.id) === e.id ? -1 : (null == W ? void 0 : W.source.id) === n.id ? 1 : G(n) - G(e)), [W, N]);
   s.useEffect(() => {
-    let e = H.current;
+    let e = V.current;
     return P().then(e => {
       let {
         screenSources: n,
@@ -145,23 +145,23 @@ function U(e) {
   let z = s.useCallback(e => {
       if (null !== e) {
         var n;
-        B.current = e, k((n = !e.isScrolledToTop(), n))
+        k.current = e, y((n = !e.isScrolledToTop(), n))
       }
     }, []),
     K = function(e) {
       switch (e) {
         case o.vA.WINDOW:
-          return W;
+          return F;
         case o.vA.SCREEN:
           return c;
         case o.vA.CAMERA:
           return R
       }
     }(b);
-  if (null == K) return (0, l.jsx)(N.Z, {
+  if (null == K) return (0, l.jsx)(I.Z, {
     className: j.spinner,
-    justify: N.Z.Justify.CENTER,
-    align: N.Z.Align.CENTER,
+    justify: I.Z.Justify.CENTER,
+    align: I.Z.Align.CENTER,
     children: (0, l.jsx)(m.Spinner, {})
   });
   let Y = K.map(e => {
@@ -180,15 +180,15 @@ function U(e) {
     }, s)
   });
 
-  function q() {
-    let e = B.current;
-    null != e && k(!e.isScrolledToTop())
+  function Q() {
+    let e = k.current;
+    null != e && y(!e.isScrolledToTop())
   }
   return (0, l.jsxs)(s.Fragment, {
     children: [(0, l.jsxs)("div", {
       className: j.segmentContainer,
       children: [(0, l.jsx)(v.Z, {
-        separator: y
+        separator: B
       }), (0, l.jsx)(m.SegmentedControl, {
         options: function() {
           let e = [{
@@ -218,7 +218,7 @@ function U(e) {
       children: (0, l.jsx)(m.AdvancedScroller, {
         ref: z,
         className: j.sourceScroller,
-        onScroll: q,
+        onScroll: Q,
         children: (0, l.jsx)(x.Z, {
           layout: x.Z.Layout.WRAP,
           columns: 2,
@@ -229,9 +229,9 @@ function U(e) {
     }) : (0, l.jsxs)(m.AdvancedScroller, {
       ref: z,
       className: j.sourceScroller,
-      onScroll: q,
-      children: [b === o.vA.WINDOW && null != F && (0, l.jsx)(C.Z, {
-        quest: F.quest
+      onScroll: Q,
+      children: [b === o.vA.WINDOW && null != W && (0, l.jsx)(C.Z, {
+        quest: W.quest
       }), (0, l.jsx)(x.Z, {
         layout: x.Z.Layout.WRAP,
         columns: 2,

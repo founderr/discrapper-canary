@@ -1,6 +1,6 @@
-var s, t;
+var s, a;
 n.d(l, {
   p: function() {
     return s
   }
-}), (t = s || (s = {}))[t.OFFICIAL = 1] = "OFFICIAL", t[t.WIKIA = 2] = "WIKIA", t[t.WIKIPEDIA = 3] = "WIKIPEDIA", t[t.FACEBOOK = 4] = "FACEBOOK", t[t.TWITTER = 5] = "TWITTER", t[t.TWITCH = 6] = "TWITCH", t[t.INSTAGRAM = 8] = "INSTAGRAM", t[t.YOUTUBE = 9] = "YOUTUBE", t[t.IPHONE = 10] = "IPHONE", t[t.IPAD = 11] = "IPAD", t[t.ANDROID = 12] = "ANDROID", t[t.STEAM = 13] = "STEAM", t[t.REDDIT = 14] = "REDDIT", t[t.ITCH = 15] = "ITCH", t[t.EPICGAMES = 16] = "EPICGAMES", t[t.GOG = 17] = "GOG", t[t.DISCORD = 18] = "DISCORD"
+}), (a = s || (s = {}))[a.OFFICIAL = 1] = "OFFICIAL", a[a.WIKIA = 2] = "WIKIA", a[a.WIKIPEDIA = 3] = "WIKIPEDIA", a[a.FACEBOOK = 4] = "FACEBOOK", a[a.TWITTER = 5] = "TWITTER", a[a.TWITCH = 6] = "TWITCH", a[a.INSTAGRAM = 8] = "INSTAGRAM", a[a.YOUTUBE = 9] = "YOUTUBE", a[a.IPHONE = 10] = "IPHONE", a[a.IPAD = 11] = "IPAD", a[a.ANDROID = 12] = "ANDROID", a[a.STEAM = 13] = "STEAM", a[a.REDDIT = 14] = "REDDIT", a[a.ITCH = 15] = "ITCH", a[a.EPICGAMES = 16] = "EPICGAMES", a[a.GOG = 17] = "GOG", a[a.DISCORD = 18] = "DISCORD"

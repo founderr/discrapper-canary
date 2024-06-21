@@ -46,14 +46,14 @@ async function _(e) {
   if (a.Z.getActivated()[e]) return !0;
   let t = o.default.getCurrentUser();
   try {
-    return await i.tn.post({
-      url: l.ANM.USER_PERKS_DEMOS_ACTIVATE(e)
-    }), c(e), !0
-  } catch {
     if ((0, s.QI)(t) && function(e) {
         var t;
         return (null === (t = a.Z.overrides()[e]) || void 0 === t ? void 0 : t.activateSuccess) === !0
       }(e)) return c(e), !0;
+    return await i.tn.post({
+      url: l.ANM.USER_PERKS_DEMOS_ACTIVATE(e)
+    }), c(e), !0
+  } catch {
     return r.Z.dispatch({
       type: "PREMIUM_PERKS_DEMO_ACTIVATE_FAILURE",
       perkType: e

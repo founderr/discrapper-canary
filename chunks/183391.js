@@ -1,7 +1,7 @@
 var s = n(735250);
 n(470079);
-var t = n(120356),
-  a = n.n(t),
+var a = n(120356),
+  t = n.n(a),
   i = n(643872),
   r = n(481060),
   o = n(689938),
@@ -12,7 +12,7 @@ l.Z = e => {
     websites: l
   } = e;
   return null == l || 0 === l.length ? null : (0, s.jsxs)("div", {
-    className: a()(c.column, c.gapSm),
+    className: t()(c.column, c.gapSm),
     children: [(0, s.jsx)(r.Text, {
       variant: "text-xs/semibold",
       children: o.Z.Messages.GAME_PROFILE_LINKS
@@ -27,21 +27,21 @@ l.Z = e => {
         let {
           category: l,
           url: n
-        } = e, t = null;
+        } = e, a = null;
         switch (l) {
           case i.p.OFFICIAL:
-            t = (0, s.jsx)(r.GlobeEarthIcon, {});
+            a = (0, s.jsx)(r.GlobeEarthIcon, {});
             break;
           case i.p.TWITTER:
-            t = (0, s.jsx)(r.XNeutralIcon, {});
+            a = (0, s.jsx)(r.XNeutralIcon, {});
             break;
           case i.p.YOUTUBE:
-            t = (0, s.jsx)(r.YouTubeIcon, {})
+            a = (0, s.jsx)(r.YouTubeIcon, {})
         }
-        return null != t ? (0, s.jsx)(r.Anchor, {
+        return null != a ? (0, s.jsx)(r.Anchor, {
           href: n,
           target: "_blank",
-          children: t
+          children: a
         }, n) : null
       })
     })]

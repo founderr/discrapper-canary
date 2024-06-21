@@ -15,9 +15,9 @@ var l = t(735250),
   h = t(435064),
   g = t(894694),
   C = t(39604),
-  I = t(981631),
-  Z = t(921944),
-  N = t(689938),
+  Z = t(981631),
+  N = t(921944),
+  I = t(689938),
   x = t(291779),
   f = t(278768);
 let A = e => {
@@ -33,7 +33,7 @@ let A = e => {
     })
   }, [n]);
   let L = (e, n) => {
-    e.stopPropagation(), e.preventDefault(), null == n || n(), R(Z.L.UNKNOWN)
+    e.stopPropagation(), e.preventDefault(), null == n || n(), R(N.L.UNKNOWN)
   };
   return (0, l.jsx)(u.Popout, {
     shouldShow: v,
@@ -49,23 +49,23 @@ let A = e => {
         inlineArt: !0,
         artClassName: x.clipsEducationArt,
         position: "right",
-        header: N.Z.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_TITLE,
+        header: I.Z.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_TITLE,
         headerClassName: x.clipsEducationHeader,
         body: (0, l.jsxs)(l.Fragment, {
           children: [(0, l.jsx)(u.Text, {
             variant: "text-sm/normal",
             color: "always-white",
-            children: N.Z.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_BODY
+            children: I.Z.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_BODY
           }), f ? (0, l.jsx)(u.Text, {
             variant: "text-sm/normal",
             color: "always-white",
             className: x.warningText,
-            children: N.Z.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
-              url: _.Z.getArticleURL(I.BhN.CLIPS)
+            children: I.Z.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
+              url: _.Z.getArticleURL(Z.BhN.CLIPS)
             })
           }) : null]
         }),
-        tryItText: N.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS,
+        tryItText: I.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS,
         onTryFeature: e => {
           (0, C.em)({
             clipsEnabled: !0,
@@ -85,11 +85,11 @@ n.Z = function(e) {
   let {
     isAnimationDone: n,
     guildId: t
-  } = e, s = (0, r.e7)([h.Z], () => h.Z.getSettings().clipsEnabled), a = (0, r.e7)([E.Z], () => E.Z.getKeybindForAction(I.kg4.SAVE_CLIP));
+  } = e, s = (0, r.e7)([h.Z], () => h.Z.getSettings().clipsEnabled), a = (0, r.e7)([E.Z], () => E.Z.getKeybindForAction(Z.kg4.SAVE_CLIP));
   i()(null != a, "Clips keybind should be set");
   let o = S.BB(a.shortcut, !0);
   return (0, l.jsx)(u.FormItem, {
-    title: N.Z.Messages.CLIPS_SETTINGS,
+    title: I.Z.Messages.CLIPS_SETTINGS,
     titleClassName: f.formItemTitle,
     className: f.modalContent,
     children: (0, l.jsxs)("div", {
@@ -107,13 +107,13 @@ n.Z = function(e) {
             trackAnalytics: !0
           }),
           hideBorder: !0,
-          children: N.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
+          children: I.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
         })
       }), (0, l.jsx)(u.Text, {
         variant: "text-xs/normal",
         color: "interactive-normal",
         className: x.description,
-        children: N.Z.Messages.CLIPS_SETTINGS_HELP_IN_GO_LIVE_CTA.format({
+        children: I.Z.Messages.CLIPS_SETTINGS_HELP_IN_GO_LIVE_CTA.format({
           keybind: o,
           keybindHook: () => (0, l.jsx)("span", {
             className: x.keybindHintKeys,

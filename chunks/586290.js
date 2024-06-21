@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-    return I
+    return Z
   }
 }), t(724458), t(47120);
 var l = t(735250),
@@ -20,7 +20,7 @@ var l = t(735250),
   g = t(278768),
   C = t(331651);
 
-function I(e) {
+function Z(e) {
   let {
     selectedSource: n,
     onChangeVideoDeviceSource: t,
@@ -28,16 +28,16 @@ function I(e) {
   } = e;
   i()(null != n, "Camera capture device cannot be null");
   let r = (0, _.Z)(),
-    I = (0, c.e7)([m.Z], () => m.Z.getInputDevices()),
-    [Z, N] = s.useState(function(e, n, t) {
+    Z = (0, c.e7)([m.Z], () => m.Z.getInputDevices()),
+    [N, I] = s.useState(function(e, n, t) {
       if (null != n && null != t) {
         let l = n.find(n => n.id === e);
         if (null == l) return;
         let s = o().reduce(t, (e, n) => (0, u.stringSimilarity)(l.name, n.name) > (0, u.stringSimilarity)(l.name, e.name) ? n : e);
         if (null != s) return s.id
       }
-    }(n.id, r, I));
-  return null != Z && a(Z), (0, l.jsx)(s.Fragment, {
+    }(n.id, r, Z));
+  return null != N && a(N), (0, l.jsx)(s.Fragment, {
     children: (0, l.jsxs)(d.FormItem, {
       title: "Capture Device",
       className: g.modalContent,
@@ -59,12 +59,12 @@ function I(e) {
         className: C.marginTop8,
         title: S.Z.Messages.GO_LIVE_FORM_LABEL_AUDIO_DEVICE,
         children: (0, l.jsx)(d.SingleSelect, {
-          value: Z,
+          value: N,
           className: C.__invalid_marginaTop8,
           onChange: e => {
-            N(e), a(e)
+            I(e), a(e)
           },
-          options: o().map(I, e => {
+          options: o().map(Z, e => {
             let {
               id: n,
               name: t

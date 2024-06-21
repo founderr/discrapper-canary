@@ -44,8 +44,8 @@ var i, s, l = n(512722),
   E = n(798379),
   y = n(398758),
   S = n(22082),
-  m = n(601070),
-  _ = n(569471),
+  _ = n(601070),
+  m = n(569471),
   w = n(131704),
   b = n(680089),
   N = n(592125),
@@ -58,8 +58,8 @@ var i, s, l = n(512722),
   T = n(979651),
   D = n(938475),
   G = n(823379),
-  V = n(709054),
-  M = n(968358),
+  M = n(709054),
+  V = n(968358),
   U = n(203818),
   F = n(443063),
   B = n(981631),
@@ -124,8 +124,8 @@ class Q {
     return {
       selectedChannel: N.Z.getChannel(R.Z.getChannelId()),
       selectedVoiceChannelId: R.Z.getVoiceChannelId(),
-      activeJoinedRelevantThreads: m.Z.getActiveJoinedRelevantThreadsForGuild(this.id),
-      activeJoinedUnreadThreads: m.Z.getActiveJoinedUnreadThreadsForGuild(this.id)
+      activeJoinedRelevantThreads: _.Z.getActiveJoinedRelevantThreadsForGuild(this.id),
+      activeJoinedUnreadThreads: _.Z.getActiveJoinedUnreadThreadsForGuild(this.id)
     }
   }
   invalidate() {
@@ -453,7 +453,7 @@ class ei extends $ {
         return 4 === n || t > 0 && Date.now() - t < ei.MAX_TIMESTAMP_DELTA
       }).sortBy(e => {
         let [, t, n] = e;
-        return -(t - (4 === n ? 0 : V.DISCORD_EPOCH))
+        return -(t - (4 === n ? 0 : M.DISCORD_EPOCH))
       }).take(ei.MAX_RECENT_CHANNELS).sortBy(e => {
         let [, t] = e;
         return -t
@@ -485,7 +485,7 @@ z(ei, "MIN_READABLE_CHANNELS", 7), z(ei, "MAX_RECENT_CHANNELS", 10), z(ei, "MAX_
 class es extends $ {
   updateAllChannels(e) {
     let t = !1;
-    return V.default.keys(this.channels).forEach(n => {
+    return M.default.keys(this.channels).forEach(n => {
       this.updateChannel(this.channels[n].record, e) && (t = !0)
     }), t
   }
@@ -745,7 +745,7 @@ function eC(e, t, n) {
       name: i.name
     };
     let s = D.ZP.getVoiceStatesForChannel(e);
-    if (n && t && (0, M.a)(s)) return {
+    if (n && t && (0, V.a)(s)) return {
       type: "go-live"
     };
     let l = u.Z.getChannelStatus(e);
@@ -773,7 +773,7 @@ function eg(e, t, n, i, s) {
     let e = d().sortBy(Object.values(t), e => -e.joinTimestamp).map(e => e.channel.id);
     if (l) return e;
     if (r) return !(n.id in t) && !(0, f.cn)() && e.unshift(n.id), e;
-    else if (s) return e.filter(e => !_.Z.isMuted(e) || P.ZP.getMentionCount(e) > 0);
+    else if (s) return e.filter(e => !m.Z.isMuted(e) || P.ZP.getMentionCount(e) > 0);
     else return e
   }
   return []
@@ -810,7 +810,7 @@ function eI(e, t, n) {
   if (t.type === B.d4z.GUILD_DIRECTORY || !e.optInEnabled || t.isGuildVocal() || e.optedInChannels.has(t.id) || t.isThread() || null != t.parent_id && e.optedInChannels.has(t.parent_id) || e.hideResourceChannels && t.hasFlag(H.zZ.IS_GUILD_RESOURCE_CHANNEL)) return !1;
   if (null != i && !(0, f.cn)() && (i.id === t.id || i.isThread() && i.parent_id === t.id) || P.ZP.getMentionCount(t.id) > 0) return !0;
   let l = S.Z.getNewChannelIds(e.id),
-    r = Array.from(l).sort((e, t) => V.default.compare(t, e));
+    r = Array.from(l).sort((e, t) => M.default.compare(t, e));
   if (l.has(t.id) && r.indexOf(t.id) < j) return !0;
   for (let e in s[t.id])
     if (P.ZP.getMentionCount(e) > 0 || P.ZP.hasUnread(e) || P.ZP.hasRecentlyVisitedAndRead(e)) return !0;

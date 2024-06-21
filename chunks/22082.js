@@ -14,12 +14,12 @@ var i, s, l, r, a = n(442837),
   E = n(70956),
   y = n(709054),
   S = n(981631);
-let m = new Set,
-  _ = {},
+let _ = new Set,
+  m = {},
   w = {};
 
 function b(e, t) {
-  let n = _[e];
+  let n = m[e];
   if (null != n && null != t && n.has(t)) {
     var i;
     I.ZP.isOptInEnabled(e) && !(null === (i = C.Z.getChannel(t)) || void 0 === i ? void 0 : i.isThread()) && null == v.ZP.ackMessageId(t) && d.Z.wait(() => (0, o.In)(t, !0, !0, y.default.atPreviousMillisecond(t)))
@@ -28,22 +28,22 @@ function b(e, t) {
 
 function N(e) {
   var t;
-  if (null != _[e]) return;
+  if (null != m[e]) return;
   let n = g.ZP.getChannels(e)[g.sH].map(e => e.channel.id),
     i = null === (t = p.ZP.getMember(e, c.default.getId())) || void 0 === t ? void 0 : t.joinedAt;
   if (null == i) return;
-  _[e] = new Set;
+  m[e] = new Set;
   let s = new Date(i).getTime();
-  if (0 !== n.length) _[e] = new Set(n.filter(t => {
+  if (0 !== n.length) m[e] = new Set(n.filter(t => {
     let n = y.default.extractTimestamp(t);
     return null == v.ZP.getTrackedAckMessageId(t) && n > Date.now() - E.Z.Millis.WEEK && n > u.Z.getGuildRecentsDismissedAt(e) && n > s && !I.ZP.isChannelOrParentOptedIn(e, t)
   })), w[e] = Date.now()
 }
 
 function L() {
-  y.default.keys(_).forEach(e => {
-    let t = _[e];
-    _[e] = new Set([...t].filter(t => !I.ZP.isChannelOrParentOptedIn(e, t)))
+  y.default.keys(m).forEach(e => {
+    let t = m[e];
+    m[e] = new Set([...t].filter(t => !I.ZP.isChannelOrParentOptedIn(e, t)))
   })
 }
 class Z extends(i = a.ZP.Store) {
@@ -52,13 +52,13 @@ class Z extends(i = a.ZP.Store) {
   }
   getNewChannelIds(e) {
     var t;
-    return null != e && null == _[e] && N(e), null != e && null !== (t = _[e]) && void 0 !== t ? t : m
+    return null != e && null == m[e] && N(e), null != e && null !== (t = m[e]) && void 0 !== t ? t : _
   }
   shouldIndicateNewChannel(e, t) {
     var n;
     if (null == e) return !1;
     let i = f.Z.getGuild(e);
-    return !!(null != i && i.hasFeature(S.oNc.COMMUNITY)) && (null != e && null == _[e] && N(e), (null === (n = _[e]) || void 0 === n ? void 0 : n.has(t)) && null == v.ZP.getTrackedAckMessageId(t))
+    return !!(null != i && i.hasFeature(S.oNc.COMMUNITY)) && (null != e && null == m[e] && N(e), (null === (n = m[e]) || void 0 === n ? void 0 : n.has(t)) && null == v.ZP.getTrackedAckMessageId(t))
   }
 }
 r = "NewChannelsStore", (l = "displayName") in(s = Z) ? Object.defineProperty(s, l, {
@@ -72,8 +72,8 @@ r = "NewChannelsStore", (l = "displayName") in(s = Z) ? Object.defineProperty(s,
       guildId: t,
       channelIds: n
     } = e;
-    if (null == _[t]) return !1;
-    n.forEach(e => _[t].delete(e)), 0 === _[t].size && delete _[t]
+    if (null == m[t]) return !1;
+    n.forEach(e => m[t].delete(e)), 0 === m[t].size && delete m[t]
   },
   CHANNEL_ACK: () => !0,
   CHANNEL_SELECT: function(e) {
@@ -81,7 +81,7 @@ r = "NewChannelsStore", (l = "displayName") in(s = Z) ? Object.defineProperty(s,
       guildId: t,
       channelId: n
     } = e;
-    return null != t && (null == _[t] || w[t] < Date.now() - E.Z.Millis.HOUR ? (N(t), !0) : (null != n && b(t, n), !1))
+    return null != t && (null == m[t] || w[t] < Date.now() - E.Z.Millis.HOUR ? (N(t), !0) : (null != n && b(t, n), !1))
   },
   SIDEBAR_VIEW_CHANNEL: function(e) {
     let {
@@ -102,13 +102,13 @@ r = "NewChannelsStore", (l = "displayName") in(s = Z) ? Object.defineProperty(s,
     let {
       guild: t
     } = e;
-    delete _[t.id]
+    delete m[t.id]
   },
   CHANNEL_CREATE: function(e) {
     var t;
     let {
       channel: n
     } = e;
-    !n.isVocal() && (_[n.guild_id] = null !== (t = _[n.guild_id]) && void 0 !== t ? t : new Set, _[n.guild_id].add(n.id))
+    !n.isVocal() && (m[n.guild_id] = null !== (t = m[n.guild_id]) && void 0 !== t ? t : new Set, m[n.guild_id].add(n.id))
   }
 })
