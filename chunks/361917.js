@@ -62,7 +62,7 @@ function P(e) {
           query: h,
           entrypoint: n,
           enableGlobalSearch: a,
-          enableShelfSearch: l
+          enableActivitiesSearch: l
         })
       }) : (0, i.jsxs)("div", {
         children: [o && (0, i.jsx)(U, {}), u && (0, i.jsx)(G, {

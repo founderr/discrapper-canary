@@ -41,7 +41,7 @@ function C(e) {
     channel: t,
     query: n,
     entrypoint: r,
-    enableShelfSearch: s
+    enableActivitiesSearch: s
   } = e, {
     pushHistory: o
   } = (0, E.hH)(), {
@@ -54,7 +54,10 @@ function C(e) {
   } = (0, d.pe)({
     channel: t,
     query: n,
-    mode: r === c._.VOICE ? d.pe.Modes.SHELF : s ? d.pe.Modes.CMDS_APPS_SHELF : d.pe.Modes.CMDS_APPS
+    commandLimit: 10,
+    searchesCommands: r === c._.TEXT,
+    searchesBots: r === c._.TEXT,
+    searchesActivities: r === c._.VOICE || s
   });
   return S ? (0, i.jsx)(L, {}) : m ? (0, i.jsx)(D, {
     searchQuery: n
