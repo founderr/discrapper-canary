@@ -297,7 +297,6 @@ function es(e) {
       children: (0, i.jsx)(E.Dialog, {
         ref: eo,
         "aria-label": t.username,
-        className: ee.popoutContainer,
         children: (0, i.jsxs)(x.Z, {
           className: ee.themeContainer,
           user: t,

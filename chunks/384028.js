@@ -12,7 +12,6 @@ e.exports = {
   icon: "icon_d4e7c2",
   description: "description_d4e7c2",
   modal: "modal_d4e7c2",
-  popoutContainer: "popoutContainer_d4e7c2",
   themeContainer: "themeContainer_d4e7c2",
   username: "username_d4e7c2",
   focusModeTitle: "focusModeTitle_d4e7c2"
