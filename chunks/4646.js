@@ -8,18 +8,21 @@ function i(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-async function r(e) {
-  let t = new s,
-    n = [];
-  for (let i of Object.keys(e)) n.push(t.loadRemoteImage(i, e[i]));
-  return await Promise.all(n), t
-}
 n.d(t, {
   k2: function() {
-    return r
+    return s
   }
-}), n(653041), n(47120);
-class s {
+}), n(47120);
+let r = new(n(259443)).Y("AssetMap");
+async function s(e) {
+  let t = new o,
+    n = Object.entries(e).map(e => {
+      let [n, i] = e;
+      return t.loadRemoteImage(n, i).catch(e => r.warn("Failed to load canvas asset", e, n, i))
+    });
+  return await Promise.all(n), t
+}
+class o {
   loadFonts() {
     return Promise.resolve()
   }
