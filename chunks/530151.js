@@ -15,10 +15,10 @@ var i = n(735250),
   m = n(785547),
   g = n(730749),
   p = n(112724),
-  T = n(812206),
-  N = n(44315),
-  S = n(210887),
-  C = n(283595),
+  N = n(812206),
+  T = n(44315),
+  C = n(210887),
+  S = n(283595),
   A = n(417363),
   f = n(941128),
   Z = n(451478),
@@ -272,8 +272,8 @@ class K extends s.PureComponent {
       children: [(0, i.jsx)(E.Progress, {
         percent: t,
         size: E.Progress.Sizes.SMALL,
-        foregroundColor: (0, N.Lq)(n),
-        foregroundGradientColor: null != s ? [(0, N.Lq)(s[0]), (0, N.Lq)(s[1])] : void 0,
+        foregroundColor: (0, T.Lq)(n),
+        foregroundGradientColor: null != s ? [(0, T.Lq)(s[0]), (0, T.Lq)(s[1])] : void 0,
         animate: this.isFocused
       }), (0, i.jsx)("div", {
         className: j.progressCellText,
@@ -637,18 +637,18 @@ function et(e, t, n, i) {
       branchId: r,
       state: c,
       application: o,
-      libraryApplication: C.Z.getLibraryApplication(a, r),
+      libraryApplication: S.Z.getLibraryApplication(a, r),
       finished: t,
       index: l
     }), e
   }, [])
 }
-t.Z = (0, p.Z)(c.ZP.connectStores([T.Z, A.Z, f.Z, S.Z, Z.Z], () => {
-  let e = et(f.Z.activeItems, !1, T.Z, A.Z);
+t.Z = (0, p.Z)(c.ZP.connectStores([N.Z, A.Z, f.Z, C.Z, Z.Z], () => {
+  let e = et(f.Z.activeItems, !1, N.Z, A.Z);
   return {
-    applications: [...e, ...et(f.Z.finishedItems, !0, T.Z, A.Z)],
+    applications: [...e, ...et(f.Z.finishedItems, !0, N.Z, A.Z)],
     paused: f.Z.paused,
     isFocused: Z.Z.isFocused(),
-    theme: S.Z.theme
+    theme: C.Z.theme
   }
 })((0, g.Z)(ee)))

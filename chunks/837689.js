@@ -24,8 +24,8 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let T = "PremiumServerDriveAnnouncementModal";
-class N extends a.Z {
+let N = "PremiumServerDriveAnnouncementModal";
+class T extends a.Z {
   _initialize() {
     l.Z.subscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal), l.Z.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
   }
@@ -38,7 +38,7 @@ class N extends a.Z {
         content: e,
         isPreview: t
       });
-      return null != l && ((0, s.closeModal)(T), (0, s.openModalLazy)(async () => {
+      return null != l && ((0, s.closeModal)(N), (0, s.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.resolve().then(n.bind(n, 318199));
@@ -47,7 +47,7 @@ class N extends a.Z {
           properties: l
         })
       }, {
-        modalKey: T
+        modalKey: N
       }), !0)
     }), p(this, "handlePreview", e => {
       let {
@@ -84,4 +84,4 @@ class N extends a.Z {
     })
   }
 }
-t.Z = new N
+t.Z = new T

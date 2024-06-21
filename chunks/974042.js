@@ -23,7 +23,7 @@ function p(e, t, n) {
   }) : e[t] = n, e
 }
 
-function T(e) {
+function N(e) {
   let t = m.default.getUser(e);
   return {
     user: t,
@@ -31,7 +31,7 @@ function T(e) {
   }
 }
 
-function N(e) {
+function T(e) {
   return {
     status: _.Z.getStatus(e),
     lastOnlineTimestamp: _.Z.getLastOnlineTimestamp(e),
@@ -41,7 +41,7 @@ function N(e) {
   }
 }
 
-function S(e) {
+function C(e) {
   let t = [];
   return l()(E.ZP.memberOf(e)).map(h.Z.getGuild).sortBy(e => null != e ? e.name.toLowerCase() : null).forEach(e => {
     null != e && t.push(e)
@@ -50,7 +50,7 @@ function S(e) {
     mutualGuilds: t.slice(0, 5)
   }
 }
-class C extends c.Z {
+class S extends c.Z {
   get comparator() {
     var e, t, n, i, s;
     return [this.type, null !== (s = null !== (i = null === (e = this.nickname) || void 0 === e ? void 0 : e.toLowerCase()) && void 0 !== i ? i : null === (n = this.user) || void 0 === n ? void 0 : null === (t = n.globalName) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== s ? s : this.usernameLower]
@@ -61,21 +61,21 @@ class C extends c.Z {
 }
 class A {
   reset() {
-    let e = l().map(I.Z.getRelationships(), (e, t) => new C({
+    let e = l().map(I.Z.getRelationships(), (e, t) => new S({
         key: t,
         type: e,
         nickname: I.Z.getNickname(t),
-        ...T(t),
         ...N(t),
-        ...S(t)
+        ...T(t),
+        ...C(t)
       })),
-      t = l().map(u.Z.getSuggestions(), e => new C({
+      t = l().map(u.Z.getSuggestions(), e => new S({
         key: e.key,
         type: 99,
         nickname: e.name,
-        ...T(e.key),
         ...N(e.key),
-        ...S(e.key)
+        ...T(e.key),
+        ...C(e.key)
       }));
     return new A(l().concat(e, t))
   }
@@ -160,7 +160,7 @@ function D(e) {
 }
 class b extends(i = a.ZP.Store) {
   initialize() {
-    this.waitFor(I.Z, _.Z, m.default, h.Z, E.ZP, d.Z, u.Z), this.syncWith([I.Z], P), this.syncWith([u.Z], P), this.syncWith([m.default], D(T)), this.syncWith([_.Z, d.Z], D(N)), M()
+    this.waitFor(I.Z, _.Z, m.default, h.Z, E.ZP, d.Z, u.Z), this.syncWith([I.Z], P), this.syncWith([u.Z], P), this.syncWith([m.default], D(N)), this.syncWith([_.Z, d.Z], D(T)), M()
   }
   getState() {
     return {

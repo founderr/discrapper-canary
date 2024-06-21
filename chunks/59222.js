@@ -1,6 +1,6 @@
 n.d(t, {
   D: function() {
-    return S
+    return C
   }
 }), n(47120);
 var i = n(735250),
@@ -19,10 +19,10 @@ var i = n(735250),
   m = n(749436),
   g = n(650394),
   p = n(731455),
-  T = n(689938),
-  N = n(946496);
-let S = 12,
-  C = () => {
+  N = n(689938),
+  T = n(946496);
+let C = 12,
+  S = () => {
     let e = (0, d.s1)().location.search;
     return null != e && e.length > 0 && e.startsWith("?") ? r.parse(e) : {}
   },
@@ -31,18 +31,18 @@ let S = 12,
       categoryId: t,
       categoryName: n,
       onClick: s
-    } = e, l = t === p.Hk, a = l ? T.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : T.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({
+    } = e, l = t === p.Hk, a = l ? N.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : N.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({
       categoryName: n
-    }), r = l ? T.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : T.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({
+    }), r = l ? N.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : N.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({
       onClick: s
     });
     return (0, i.jsxs)("div", {
-      className: N.emptyContainer,
+      className: T.emptyContainer,
       children: [(0, i.jsx)("div", {
-        className: N.emptyImage
+        className: T.emptyImage
       }), (0, i.jsx)(c.Heading, {
         variant: "heading-xl/semibold",
-        className: N.emptyHeader,
+        className: T.emptyHeader,
         children: a
       }), (0, i.jsx)(c.Text, {
         variant: "text-md/normal",
@@ -52,14 +52,14 @@ let S = 12,
     })
   },
   f = () => (0, i.jsxs)("div", {
-    className: N.emptyContainer,
+    className: T.emptyContainer,
     children: [(0, i.jsx)("div", {
-      className: N.errorImage
+      className: T.errorImage
     }), (0, i.jsx)(c.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: N.emptyHeader,
-      children: T.Z.Messages.GUILD_DISCOVERY_SEARCH_ERROR
+      className: T.emptyHeader,
+      children: N.Z.Messages.GUILD_DISCOVERY_SEARCH_ERROR
     })]
   });
 t.Z = e => {
@@ -85,7 +85,7 @@ t.Z = e => {
     total: G
   } = n, [w, k] = s.useState(!1), {
     tag: B
-  } = C(), [H, V] = s.useState(B), F = (0, o.e7)([E.ZP], () => E.ZP.hasSearchError()), Y = (e, t, n) => {
+  } = S(), [H, V] = s.useState(B), F = (0, o.e7)([E.ZP], () => E.ZP.hasSearchError()), Y = (e, t, n) => {
     u.bR(l, {
       categoryId: n ? p.Hk : R,
       preferredLocale: r.code,
@@ -104,33 +104,33 @@ t.Z = e => {
     let {
       offset: e,
       tag: t
-    } = C(), n = null != e ? Math.floor(parseInt(e, 10) / S) + 1 : 1;
+    } = S(), n = null != e ? Math.floor(parseInt(e, 10) / C) + 1 : 1;
     V(!!t), 1 === n && k(!0)
   }, [l]);
-  let W = R === p.Hk ? T.Z.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
+  let W = R === p.Hk ? N.Z.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
     count: null != G ? G.toLocaleString() : "0",
     query: l
-  }) : T.Z.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_CATEGORY_HEADER.format({
+  }) : N.Z.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_CATEGORY_HEADER.format({
     count: null != G ? G.toLocaleString() : "0",
     query: l,
     category: x
   });
   return (0, i.jsxs)("div", {
-    className: N.container,
+    className: T.container,
     children: [(0, i.jsxs)("div", {
-      className: N.searchHeader,
+      className: T.searchHeader,
       children: [(0, i.jsx)(c.Clickable, {
         onClick: () => {
           u.AQ(), _.IZ(t)
         },
-        className: N.arrow,
-        "aria-label": T.Z.Messages.BACK,
+        className: T.arrow,
+        "aria-label": N.Z.Messages.BACK,
         children: (0, i.jsx)(h.Z, {
           direction: h.Z.Directions.LEFT
         })
       }), (0, i.jsx)(c.Heading, {
         variant: "heading-xl/semibold",
-        className: N.header,
+        className: T.header,
         children: W
       })]
     }), (0, i.jsx)(m.Z, {
@@ -148,16 +148,16 @@ t.Z = e => {
       categoryId: R,
       categoryName: x,
       onClick: () => {
-        u.uY(p.Hk), Y(0, S, !0)
+        u.uY(p.Hk), Y(0, C, !0)
       }
     }) : (0, i.jsx)("div", {
-      className: N.results,
+      className: T.results,
       children: (0, i.jsx)(I.Z, {
-        pageSize: S,
+        pageSize: C,
         totalCount: G,
         resetCurrentPage: w,
         onPageChange: e => {
-          Y((e - 1) * S, S), z()
+          Y((e - 1) * C, C), z()
         },
         children: e => {
           let {
@@ -168,7 +168,7 @@ t.Z = e => {
             children: [(0, i.jsx)(g.Z, {
               guilds: j,
               loading: U,
-              loadingPlaceholderCount: S,
+              loadingPlaceholderCount: C,
               onViewGuild: M,
               loadingGuildId: L,
               theme: O,

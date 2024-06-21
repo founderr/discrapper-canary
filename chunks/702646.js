@@ -22,16 +22,16 @@ function m(e) {
     onClick: c,
     isActive: u,
     autoWidth: d = !1
-  } = e, [h, _] = s.useState(!1), [m, g] = s.useState(!1), p = E.GN.getState().mode, T = p === E.v0.GAMES || p === E.v0.PLAYSTYLE || p === E.v0.TRAITS;
+  } = e, [h, _] = s.useState(!1), [m, g] = s.useState(!1), p = E.GN.getState().mode, N = p === E.v0.GAMES || p === E.v0.PLAYSTYLE || p === E.v0.TRAITS;
   s.useEffect(() => {
-    T && (_(!1), g(!1))
-  }, [T]);
-  let N = u && (m || h),
-    S = s.useMemo(() => (0, i.jsxs)(o.Clickable, {
+    N && (_(!1), g(!1))
+  }, [N]);
+  let T = u && (m || h),
+    C = s.useMemo(() => (0, i.jsxs)(o.Clickable, {
       className: I.tooltipContentWrapper,
       onClick: c,
       onMouseEnter: () => {
-        !T && _(!0)
+        !N && _(!0)
       },
       onMouseLeave: () => {
         _(!1)
@@ -39,13 +39,13 @@ function m(e) {
       children: [(0, i.jsx)("div", {
         className: I.tooltipHoverBridge
       }), r]
-    }), [r, c, T]);
+    }), [r, c, N]);
   return (0, i.jsx)(o.Tooltip, {
-    text: S,
+    text: C,
     position: "bottom",
     "aria-label": l,
-    shouldShow: N,
-    forceOpen: N,
+    shouldShow: T,
+    forceOpen: T,
     allowOverflow: !0,
     disableTooltipPointerEvents: !1,
     tooltipClassName: a()(I.filterTooltip, {
@@ -151,7 +151,7 @@ function p() {
   })
 }
 
-function T() {
+function N() {
   let e = (0, E.GN)(e => e.selectedTraits, r.Z),
     t = s.useCallback(() => {
       (0, E.fH)(E.v0.TRAITS, !0)
@@ -183,7 +183,7 @@ function T() {
   })
 }
 
-function N() {
+function T() {
   let {
     enableClanCreation: e
   } = (0, c.C3)({
@@ -214,10 +214,10 @@ t.Z = function(e) {
     className: a()(I.toolbar, t),
     children: [(0, i.jsx)("div", {
       className: I.addClan,
-      children: (0, i.jsx)(N, {})
+      children: (0, i.jsx)(T, {})
     }), (0, i.jsxs)("div", {
       className: I.preferences,
-      children: [(0, i.jsx)(g, {}), (0, i.jsx)(p, {}), (0, i.jsx)(T, {})]
+      children: [(0, i.jsx)(g, {}), (0, i.jsx)(p, {}), (0, i.jsx)(N, {})]
     }), (0, i.jsx)("div", {
       className: I.actions
     })]

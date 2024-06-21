@@ -19,10 +19,10 @@ var i = n(735250),
   m = n(906732),
   g = n(821982),
   p = n(377171),
-  T = n(633302),
-  N = n(153066),
-  S = n(335131),
-  C = n(141594),
+  N = n(633302),
+  T = n(153066),
+  C = n(335131),
+  S = n(141594),
   A = n(302800),
   f = n(981631),
   Z = n(689938),
@@ -47,7 +47,7 @@ let L = e => {
       ...c
     } = e, d = (0, r.JA)("shop"), h = I.Z.HOME_PAGE_SHOP_TAB, {
       analyticsLocations: _
-    } = (0, m.ZP)(h), g = s.useCallback(() => (0, S.mK)({
+    } = (0, m.ZP)(h), g = s.useCallback(() => (0, C.mK)({
       openInLayer: !1,
       analyticsSource: h,
       analyticsLocations: _
@@ -117,7 +117,7 @@ let L = e => {
       hideOnClick: !1,
       "aria-label": l.title(),
       children: e => (0, i.jsxs)(O, {
-        className: null != l.entryPointClassName ? (0, N.l)(v, l.entryPointClassName) : void 0,
+        className: null != l.entryPointClassName ? (0, T.l)(v, l.entryPointClassName) : void 0,
         selected: t,
         locationState: n,
         ...e,
@@ -143,7 +143,7 @@ let L = e => {
       displayOptions: l
     } = e, a = s.useMemo(() => {
       var e;
-      let t = null != l.emojiName ? null === (e = T.ZP.getByName(l.emojiName)) || void 0 === e ? void 0 : e.surrogates : null;
+      let t = null != l.emojiName ? null === (e = N.ZP.getByName(l.emojiName)) || void 0 === e ? void 0 : e.surrogates : null;
       return (0, i.jsxs)(u.Text, {
         variant: "text-sm/medium",
         className: v.marketingBadgeTooltipContent,
@@ -175,7 +175,7 @@ let L = e => {
       locationState: n
     } = e, {
       collectiblesShopTabNewBadgeDisplayOptions: s
-    } = (0, C.Z)();
+    } = (0, S.Z)();
     if (null != s) switch (s.type) {
       case A.k2.TOOLTIP:
         return (0, i.jsx)(M, {

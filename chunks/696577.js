@@ -24,10 +24,10 @@ function p(e) {
     user: t,
     type: n,
     status: p,
-    isFocused: T
-  } = e, N = s.useContext(d.AnalyticsContext), {
-    analyticsLocations: S
-  } = (0, o.ZP)(), C = e => {
+    isFocused: N
+  } = e, T = s.useContext(d.AnalyticsContext), {
+    analyticsLocations: C
+  } = (0, o.ZP)(), S = e => {
     e.stopPropagation(), r.Z.cancelFriendRequest(t.id, {
       location: "Friends"
     })
@@ -40,12 +40,12 @@ function p(e) {
     })
   }, f = p === I.Skl.OFFLINE ? I.Skl.UNKNOWN : p, Z = n === I.OGo.PENDING_INCOMING ? m.Z.Messages.INCOMING_FRIEND_REQUEST : m.Z.Messages.OUTGOING_FRIEND_REQUEST;
   return (0, i.jsx)(h.Z, {
-    isFocused: T,
+    isFocused: N,
     user: t,
     onClick: () => (0, c.openUserProfileModal)({
       userId: t.id,
-      sourceAnalyticsLocations: S,
-      analyticsLocation: N.location
+      sourceAnalyticsLocations: C,
+      analyticsLocation: T.location
     }),
     children: e => {
       var s;
@@ -66,14 +66,14 @@ function p(e) {
           icon: a.CloseSmallIcon,
           actionType: E.Z.ActionTypes.DENY,
           tooltip: m.Z.Messages.FRIEND_REQUEST_IGNORE,
-          onClick: C,
+          onClick: S,
           shouldHighlight: e
         })]
       }) : (0, i.jsx)(E.Z, {
         icon: a.CloseSmallIcon,
         actionType: E.Z.ActionTypes.DENY,
         tooltip: m.Z.Messages.FRIEND_REQUEST_CANCEL,
-        onClick: C,
+        onClick: S,
         shouldHighlight: e
       });
       return (0, i.jsxs)("div", {

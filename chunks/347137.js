@@ -14,24 +14,24 @@ var i = n(735250),
   m = n(296386),
   g = n(150192),
   p = n(889010),
-  T = n(488905),
-  N = n(731455),
-  S = n(689938),
-  C = n(953310);
+  N = n(488905),
+  T = n(731455),
+  C = n(689938),
+  S = n(953310);
 let A = e => {
   switch (e) {
-    case N.Gj.Activity:
-      return N.fW.Activity;
-    case N.Gj.Music:
-      return N.fW.Music;
-    case N.Gj.Television:
-      return N.fW.Television;
-    case N.Gj.Science:
-      return N.fW.Science;
-    case N.Gj.Education:
-      return N.fW.Education;
+    case T.Gj.Activity:
+      return T.fW.Activity;
+    case T.Gj.Music:
+      return T.fW.Music;
+    case T.Gj.Television:
+      return T.fW.Television;
+    case T.Gj.Science:
+      return T.fW.Science;
+    case T.Gj.Education:
+      return T.fW.Education;
     default:
-      return N.fW.Server
+      return T.fW.Server
   }
 };
 t.Z = function() {
@@ -50,11 +50,11 @@ t.Z = function() {
   return s.useEffect(() => {
     (0, m.le)(!1, !0)
   }, [e]), (0, i.jsxs)(l.Scroller, {
-    children: [(0, i.jsx)(T.V, {
-      text: S.Z.Messages.DISCOVER
+    children: [(0, i.jsx)(N.V, {
+      text: C.Z.Messages.DISCOVER
     }), (0, i.jsx)(I.Z, {
       avatar: (0, i.jsx)(c.Z, {}),
-      name: S.Z.Messages.CLANS,
+      name: C.Z.Messages.CLANS,
       focusProps: {
         offset: {
           right: 4,
@@ -62,12 +62,12 @@ t.Z = function() {
           bottom: 1
         }
       },
-      onClick: () => v(N.Gj.Clans),
+      onClick: () => v(T.Gj.Clans),
       wrapContent: !0,
-      selected: e === N.Gj.Clans,
-      className: C.categoryItem,
-      selectedClassName: C.selectedCategoryItem,
-      innerClassName: C.itemInner
+      selected: e === T.Gj.Clans,
+      className: S.categoryItem,
+      selectedClassName: S.selectedCategoryItem,
+      innerClassName: S.itemInner
     }, "clan-discovery-home"), (0, i.jsx)(p.Z, {
       categories: Z,
       handleCategorySelect: v,
@@ -78,8 +78,8 @@ t.Z = function() {
       currentCategoryId: e,
       shouldDisplaySelectedCategory: !t
     }), n && (0, i.jsx)(E.Z, {
-      onClick: () => v(N.Gj.Quests),
-      isSelected: e === N.Gj.Quests
+      onClick: () => v(T.Gj.Quests),
+      isSelected: e === T.Gj.Quests
     })]
   })
 }

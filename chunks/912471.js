@@ -19,34 +19,34 @@ let I = "LATEST_HEARTBEAST_EVENT_TIMESTAMP",
   m = null,
   g = null,
   p = null,
-  T = !1;
-async function N() {
-  if (T) return;
-  T = !0, (0, h.fr)(!0), E.Z.addBreadcrumb({
+  N = !1;
+async function T() {
+  if (N) return;
+  N = !0, (0, h.fr)(!0), E.Z.addBreadcrumb({
     message: "Start Analytics Heartbeat"
   });
   let e = await i.K.getAfterRefresh(I).then(h.Hg);
-  if (!T) return;
+  if (!N) return;
   let t = Date.now(),
     n = 15 * u.Z.Millis.MINUTE + e - t;
   n > u.Z.Millis.HOUR && E.Z.addBreadcrumb({
     message: "Received invalid Date.now() when generating a heartbeat. Date.now() = ".concat(t, ", timeUntilNextHeartbeat = ").concat(n, ", latestHeartbeatEventTimestamp = ").concat(e)
   }), e > t && (n = 0), E.Z.addBreadcrumb({
     message: "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ".concat(n / 1e3, " seconds. Scheduling Heartbeat")
-  }), S(!1), g = setTimeout(() => {
-    C(), m = setInterval(() => {
-      C()
+  }), C(!1), g = setTimeout(() => {
+    S(), m = setInterval(() => {
+      S()
     }, 15 * u.Z.Millis.MINUTE)
   }, Math.max(n, 0))
 }
 
-function S() {
+function C() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
   null != g && (clearTimeout(g), g = null), null != m && (clearInterval(m), m = null), null != p && e && (E.Z.addBreadcrumb({
     message: "Heartbeat correctly scheduled. Clearing 10s check timeout"
   }), clearTimeout(p), p = null)
 }
-async function C() {
+async function S() {
   let e = Date.now(),
     t = await (0, h.Gg)(),
     n = Date.now();
@@ -54,8 +54,8 @@ async function C() {
     E.Z.captureException(Error("Null session when tracking session heartbeat. Waited ".concat(n - e, "ms")));
     return
   }
-  if (!T) {
-    E.Z.captureException(Error("Heartbeat scheduler not started when tracking session heartbeat.")), S();
+  if (!N) {
+    E.Z.captureException(Error("Heartbeat scheduler not started when tracking session heartbeat.")), C();
     return
   }
   E.Z.addBreadcrumb({
@@ -83,13 +83,13 @@ let A = null,
 
 function Z() {
   if (f || null != A && A !== _.hes.DISCONNECTED && A !== _.hes.RTC_DISCONNECTED) try {
-    N()
+    T()
   } catch (e) {
     E.Z.captureException(e)
   } else ! function() {
-    if (!!T) T = !1, E.Z.addBreadcrumb({
+    if (!!N) N = !1, E.Z.addBreadcrumb({
       message: "Stopping Analytics Heartbeat"
-    }), (0, h.fr)(!1), S(), (0, l.Z)()
+    }), (0, h.fr)(!1), C(), (0, l.Z)()
   }()
 }
 
@@ -100,7 +100,7 @@ function v() {
 }
 
 function L() {
-  C()
+  S()
 }
 
 function O() {

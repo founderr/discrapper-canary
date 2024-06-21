@@ -19,10 +19,10 @@ var i = n(735250),
   m = n(727637),
   g = n(100527),
   p = n(906732),
-  T = n(521868),
-  N = n(299206),
-  S = n(440051),
-  C = n(734934),
+  N = n(521868),
+  T = n(299206),
+  C = n(440051),
+  S = n(734934),
   A = n(158238),
   f = n(680295),
   Z = n(785717),
@@ -170,11 +170,11 @@ function es(e) {
     let n = t.id;
     return "string" != typeof n ? [void 0, X.Skl.UNKNOWN] : [null !== (e = B.Z.findActivity(n, e => e.type !== X.IIU.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, B.Z.getStatus(n)]
   }), er = function(e, t) {
-    let n = S.Y.useExperiment({
+    let n = C.Y.useExperiment({
         location: "account popout"
       }).expiringStatus,
       s = G.Cr.useSetting(),
-      l = (0, C.p)(),
+      l = (0, S.p)(),
       a = A.e.useExperiment({
         location: "account popout"
       }).allowQuietMode || l,
@@ -209,7 +209,7 @@ function es(e) {
             id: "".concat(e, "-").concat(n),
             label: s(),
             action: () => {
-              (0, C.oW)(!0, n)
+              (0, S.oW)(!0, n)
             },
             dontCloseOnAction: !0
           }, n)
@@ -247,7 +247,7 @@ function es(e) {
           })]
         }),
         action: () => {
-          (0, C.oW)(!l)
+          (0, S.oW)(!l)
         },
         dontCloseOnAction: !0,
         children: d
@@ -277,11 +277,11 @@ function es(e) {
         ...e
       })
     },
-    ed = (0, C.p)(),
+    ed = (0, S.p)(),
     eE = ea === X.Skl.DND,
     eh = (0, q.g)(),
-    e_ = (0, T.o)(null != n ? n : void 0, ee.menuItemFocused),
-    eI = (0, N.Z)({
+    e_ = (0, N.o)(null != n ? n : void 0, ee.menuItemFocused),
+    eI = (0, T.Z)({
       id: t.id,
       label: $.Z.Messages.COPY_ID_USER,
       showIconFirst: !0,

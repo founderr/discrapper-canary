@@ -15,10 +15,10 @@ var i = n(735250),
   m = n(704631),
   g = n(819792),
   p = n(919285),
-  T = n(118470),
-  N = n(413307),
-  S = n(849688),
-  C = n(374023),
+  N = n(118470),
+  T = n(413307),
+  C = n(849688),
+  S = n(374023),
   A = n(661599),
   f = n(923608),
   Z = n(617899),
@@ -41,21 +41,21 @@ function D(e) {
     r.K.set(R.Iv, e), I(e)
   }, {
     defaultGameId: p,
-    enableClanCreation: T
+    enableClanCreation: N
   } = (0, o.St)({
     guild: n,
     location: "ChannelNoticesGuard",
     includeConverted: !1
-  }), N = (0, l.Wu)(R.HG, () => R.XN.filter(e => {
+  }), T = (0, l.Wu)(R.HG, () => R.XN.filter(e => {
     let {
       type: t,
       store: i
     } = e;
-    if (t === x.vID.CLAN_ADMIN_UPSELL) return T;
+    if (t === x.vID.CLAN_ADMIN_UPSELL) return N;
     return null == i ? void 0 : i.channelNoticePredicate(n, E)
   }).map(e => e.dismissibleContentType));
   return (0, i.jsx)(d.Z, {
-    contentTypes: N,
+    contentTypes: T,
     groupName: M.R.CHANNEL_NOTICES,
     children: e => {
       let {
@@ -123,7 +123,7 @@ t.Z = e => {
   } = e;
   switch ((0, O.Z)(t)) {
     case O.R.ENABLE_PUBLIC_GUILD:
-      return (0, i.jsx)(N.Z, {
+      return (0, i.jsx)(T.Z, {
         guild: t
       });
     case O.R.APPLIED_GUILD_BOOST_GRACE_PERIOD:
@@ -147,7 +147,7 @@ t.Z = e => {
         guild: t
       });
     case O.R.APPLICATION_SUBSCRIPTION_EXPIRATION:
-      return (0, i.jsx)(T.Z, {
+      return (0, i.jsx)(N.Z, {
         guild: t
       });
     case O.R.HUB_STUDY_ROOM:
@@ -155,11 +155,11 @@ t.Z = e => {
         guild: t
       });
     case O.R.SIGNUP:
-      return (0, i.jsx)(S.Z, {
+      return (0, i.jsx)(C.Z, {
         guild: t
       })
   }
-  return C.s.isDisallowPopupsSet() ? null : (0, i.jsx)(D, {
+  return S.s.isDisallowPopupsSet() ? null : (0, i.jsx)(D, {
     guild: e.guild
   })
 }

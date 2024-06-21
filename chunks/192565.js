@@ -19,9 +19,9 @@ var i = n(735250),
   m = n(363915),
   g = n(359380),
   p = n(308083),
-  T = n(689938);
+  N = n(689938);
 
-function N(e) {
+function T(e) {
   let t = (0, o.Wg)(),
     {
       progress: n,
@@ -40,7 +40,7 @@ function N(e) {
     handleClanUpdate: s.useCallback(t => r._9(e, t), [e])
   }
 }
-let S = {
+let C = {
   [p.Wy.GAMES]: function(e) {
     let {
       guildId: t
@@ -52,10 +52,10 @@ let S = {
       progress: n,
       errors: l,
       handleClanUpdate: r
-    } = N(t);
+    } = T(t);
     return (0, i.jsx)(d.Z, {
-      title: T.Z.Messages.CLAN_SETUP_GAMES_TITLE,
-      description: T.Z.Messages.CLAN_SETUP_GAMES_SUBTITLE,
+      title: N.Z.Messages.CLAN_SETUP_GAMES_TITLE,
+      description: N.Z.Messages.CLAN_SETUP_GAMES_SUBTITLE,
       handleUpdate: e => r({
         gameApplicationIds: e
       }),
@@ -71,10 +71,10 @@ let S = {
       progress: n,
       errors: s,
       handleClanUpdate: l
-    } = N(t);
+    } = T(t);
     return (0, i.jsx)(_.Z, {
-      title: T.Z.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
-      description: T.Z.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
+      title: N.Z.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
+      description: N.Z.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
       handleUpdate: e => l({
         playstyle: e
       }),
@@ -88,11 +88,11 @@ let S = {
     } = e, {
       progress: n,
       handleClanUpdate: s
-    } = N(t);
+    } = T(t);
     return (0, i.jsx)(g.Z, {
       guildId: t,
-      title: T.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
-      description: T.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
+      title: N.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
+      description: N.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
       handleUpdate: e => s({
         interests: e
       }),
@@ -107,7 +107,7 @@ let S = {
       progress: n,
       errors: s,
       handleClanUpdate: l
-    } = N(t);
+    } = T(t);
     return (0, i.jsx)(E.Z, {
       guildId: t,
       handleUpdate: l,
@@ -122,7 +122,7 @@ let S = {
       progress: n,
       errors: s,
       handleClanUpdate: l
-    } = N(t);
+    } = T(t);
     return (0, i.jsx)(u.Z, {
       guildId: t,
       handleUpdate: l,
@@ -137,7 +137,7 @@ let S = {
       progress: n,
       errors: s,
       handleClanUpdate: l
-    } = N(t);
+    } = T(t);
     return (0, i.jsx)(I.Z, {
       handleUpdate: l,
       tag: n.tag,
@@ -154,7 +154,7 @@ let S = {
     } = e, {
       progress: n,
       handleClanUpdate: s
-    } = N(t);
+    } = T(t);
     return (0, i.jsx)(c.Z, {
       handleUpdate: s,
       progress: n,
@@ -166,7 +166,7 @@ let S = {
       guildId: t
     } = e, {
       errors: n
-    } = N(t);
+    } = T(t);
     return (0, i.jsx)(h.Z, {
       guildId: t,
       error: null == n ? void 0 : n.verificationForm
@@ -174,12 +174,12 @@ let S = {
   }
 };
 
-function C(e) {
+function S(e) {
   return e.currentStep.toString()
 }
 
 function A(e) {
-  let t = S[e.currentStep];
+  let t = C[e.currentStep];
   return (0, i.jsx)(t, {
     guildId: e.guildId
   })
@@ -199,6 +199,6 @@ function f(e) {
     currentStep: a,
     items: r,
     renderItem: A,
-    getItemKey: C
+    getItemKey: S
   })
 }

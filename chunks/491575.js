@@ -14,9 +14,9 @@ var i = n(735250),
   m = n(451478),
   g = n(585483),
   p = n(145604),
-  T = n(718813),
-  N = n(981631),
-  S = n(352867);
+  N = n(718813),
+  T = n(981631),
+  C = n(352867);
 t.Z = s.memo(function() {
   let e = s.useRef(null),
     t = s.useCallback(t => {
@@ -30,13 +30,13 @@ t.Z = s.memo(function() {
       } = e;
       a()(null != s, "Shakeable is shaken when not mounted"), s.shake(n, i)
     }, []);
-  return s.useEffect(() => (d.Z.setLayout(u.ZP), d.Z.enable(), () => d.Z.disable()), []), s.useEffect(() => (g.S.subscribe(N.CkL.SHAKE_APP, t), () => {
-    g.S.unsubscribe(N.CkL.SHAKE_APP, t)
+  return s.useEffect(() => (d.Z.setLayout(u.ZP), d.Z.enable(), () => d.Z.disable()), []), s.useEffect(() => (g.S.subscribe(T.CkL.SHAKE_APP, t), () => {
+    g.S.unsubscribe(T.CkL.SHAKE_APP, t)
   }), [t]), (0, h.Z)(), (0, i.jsxs)(r.Shakeable, {
     ref: e,
-    className: S.app,
-    children: [(0, i.jsx)(T.Z, {
-      className: S.layers,
+    className: C.app,
+    children: [(0, i.jsx)(N.Z, {
+      className: C.layers,
       children: (0, i.jsx)(o.Z, {})
     }), (0, i.jsx)(_.Z, {}), (0, i.jsx)(c.Z, {}), (0, i.jsx)(p.Z, {}), (0, i.jsx)(I.Z, {}), (0, i.jsx)(r.DnDKeyboardHelpBar, {})]
   })

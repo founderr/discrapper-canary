@@ -24,18 +24,18 @@ function g(e) {
   let {
     content: g,
     renderModalProps: p,
-    analyticsLocations: T,
-    analyticsLocation: N,
-    isLightTheme: S
-  } = e, C = "AnnouncementModalVariant1_".concat(s.z[Number(g.dismissKey)]), {
+    analyticsLocations: N,
+    analyticsLocation: T,
+    isLightTheme: C
+  } = e, S = "AnnouncementModalVariant1_".concat(s.z[Number(g.dismissKey)]), {
     onClose: A
   } = p, f = null != g.button && "" !== g.button.copy ? g.button.copy : _.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN, Z = (null === (t = g.button) || void 0 === t ? void 0 : t.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", v = (null === (n = g.button) || void 0 === n ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? () => {
     (0, o.uL)(h.Z5c.APPLICATION_STORE), A()
   } : () => (0, r.Z)({
     subscriptionTier: E.Si.TIER_2,
-    analyticsLocations: T,
+    analyticsLocations: N,
     analyticsObject: {
-      ...N,
+      ...T,
       object: h.qAy.BUTTON_CTA,
       objectType: h.Qqv.TIER_2
     },
@@ -52,13 +52,13 @@ function g(e) {
     })
   }) : void 0, O = {
     type: "video",
-    src: S ? g.heroArtVideoLinkLightTheme : g.videoLink
+    src: C ? g.heroArtVideoLinkLightTheme : g.videoLink
   };
   ("" !== g.heroArtImageLinkDarkTheme || "" !== g.heroArtImageLinkLightTheme) && (O = {
     type: "image",
-    src: S ? g.heroArtImageLinkLightTheme : g.heroArtImageLinkDarkTheme
+    src: C ? g.heroArtImageLinkLightTheme : g.heroArtImageLinkDarkTheme
   });
-  let R = S ? d.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : d.VE.PREMIUM_TIER_2_WHITE_FILL,
+  let R = C ? d.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : d.VE.PREMIUM_TIER_2_WHITE_FILL,
     x = "" !== g.modalTopPill ? () => (0, i.jsx)(d.Cy, {
       text: g.modalTopPill,
       className: I.modalTopPill,
@@ -74,10 +74,10 @@ function g(e) {
     featureCards: g.featureCards.map(e => ({
       header: e.header,
       subHeader: e.body,
-      imageSrc: S ? e.imageLinkLightTheme : e.imageLink,
+      imageSrc: C ? e.imageLinkLightTheme : e.imageLink,
       tagText: "" !== e.pill ? e.pill : void 0
     })),
-    changeLogId: C,
+    changeLogId: S,
     button: () => {
       let e = Date.now();
       return (0, i.jsxs)(a.ShinyButton, {
@@ -87,10 +87,10 @@ function g(e) {
         size: a.Button.Sizes.SMALL,
         onClick: () => {
           c.default.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
-            change_log_id: C,
+            change_log_id: S,
             cta_type: Z,
             seconds_open: Math.round((Date.now() - e) / 1e3),
-            target: C
+            target: S
           }), v()
         },
         children: [(0, i.jsx)("img", {

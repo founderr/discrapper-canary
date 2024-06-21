@@ -19,10 +19,10 @@ var i = n(735250),
   m = n(727637),
   g = n(420660),
   p = n(100527),
-  T = n(906732),
-  N = n(521868),
-  S = n(299206),
-  C = n(440051),
+  N = n(906732),
+  T = n(521868),
+  C = n(299206),
+  S = n(440051),
   A = n(734934),
   f = n(158238),
   Z = n(785717),
@@ -154,12 +154,12 @@ function X(e) {
     closePopout: D
   } = e, b = (0, _.O)(), {
     analyticsLocations: j
-  } = (0, T.ZP)(p.Z.ACCOUNT_PROFILE_POPOUT), w = (0, L.ZP)(t.id, l), [B, X, J, $] = (0, d.Wu)([y.Z], () => {
+  } = (0, N.ZP)(p.Z.ACCOUNT_PROFILE_POPOUT), w = (0, L.ZP)(t.id, l), [B, X, J, $] = (0, d.Wu)([y.Z], () => {
     var e;
     let n = t.id;
     return "string" != typeof n ? [void 0, void 0, F.Skl.UNKNOWN, !1] : [null !== (e = y.Z.findActivity(n, e => e.type !== F.IIU.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, y.Z.findActivity(t.id, e => e.type === F.IIU.CUSTOM_STATUS), y.Z.getStatus(n), y.Z.isMobileOnline(n)]
   }), ee = function(e, t) {
-    let n = C.Y.useExperiment({
+    let n = S.Y.useExperiment({
         location: "account popout"
       }).expiringStatus,
       s = P.Cr.useSetting(),
@@ -261,13 +261,13 @@ function X(e) {
   let ei = (0, A.p)(),
     es = J === F.Skl.DND,
     el = (0, H.g)(),
-    ea = (0, N.o)(null != n ? n : void 0, W.menuItemFocused),
-    er = (0, S.Z)({
+    ea = (0, T.o)(null != n ? n : void 0, W.menuItemFocused),
+    er = (0, C.Z)({
       id: t.id,
       label: z.Z.Messages.COPY_ID_USER,
       showIconFirst: !0
     });
-  return (0, i.jsx)(T.Gt, {
+  return (0, i.jsx)(N.Gt, {
     value: j,
     children: (0, i.jsx)(Z.Mt, {
       layout: "ACCOUNT_POPOUT",

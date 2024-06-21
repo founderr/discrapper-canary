@@ -19,10 +19,10 @@ var i = n(735250),
   m = n(430824),
   g = n(351402),
   p = n(730647),
-  T = n(772021),
-  N = n(396828),
-  S = n(475413),
-  C = n(20967),
+  N = n(772021),
+  T = n(396828),
+  C = n(475413),
+  S = n(20967),
   A = n(504762),
   f = n(807152),
   Z = n(176505),
@@ -32,7 +32,7 @@ var i = n(735250),
 function O(e) {
   let {
     guildId: t
-  } = e, n = (0, a.e7)([m.Z], () => m.Z.getGuild(t), [t]), O = (0, a.e7)([_.Z], () => _.Z.isConnected()), R = (0, E.Z)(t), x = (0, T.Z)(t), M = (0, a.e7)([g.Z], () => g.Z.isSubscriptionFetching), P = (0, p.f)(), {
+  } = e, n = (0, a.e7)([m.Z], () => m.Z.getGuild(t), [t]), O = (0, a.e7)([_.Z], () => _.Z.isConnected()), R = (0, E.Z)(t), x = (0, N.Z)(t), M = (0, a.e7)([g.Z], () => g.Z.isSubscriptionFetching), P = (0, p.f)(), {
     shouldHideGuildPurchaseEntryPoints: D,
     restrictionsLoading: b
   } = (0, h.uP)(t), y = null == n || !P || M || b;
@@ -46,8 +46,8 @@ function O(e) {
     }, []), s.useEffect(() => {
       j && !l.tq && (0, d.M)(t, Z.oC.ROLE_SUBSCRIPTIONS)
     }, [t, j]), l.tq && j) {
-    let e = null == n ? C.J.NOT_GUILD_MEMBER : C.J.GUILD_NOT_ELIGIBLE;
-    return (0, i.jsx)(C.z, {
+    let e = null == n ? S.J.NOT_GUILD_MEMBER : S.J.GUILD_NOT_ELIGIBLE;
+    return (0, i.jsx)(S.z, {
       errorType: e
     })
   }
@@ -57,7 +57,7 @@ function O(e) {
       toolbar: (0, i.jsx)(s.Fragment, {}),
       className: L.headerBar,
       children: [(0, i.jsx)(I.Z.Icon, {
-        icon: (0, r.makeIconCompat)(N.Z),
+        icon: (0, r.makeIconCompat)(T.Z),
         "aria-hidden": !0
       }), (0, i.jsx)(I.Z.Title, {
         children: v.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
@@ -70,7 +70,7 @@ function O(e) {
         className: L.scroller,
         children: (0, i.jsx)("div", {
           className: L.scrollerContent,
-          children: y ? (0, i.jsx)(r.Spinner, {}) : (0, i.jsx)(S.Z, {
+          children: y ? (0, i.jsx)(r.Spinner, {}) : (0, i.jsx)(C.Z, {
             guild: n
           })
         })

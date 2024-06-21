@@ -14,10 +14,10 @@ var i, s = n(735250),
   m = n(695346),
   g = n(768581),
   p = n(900849),
-  T = n(940627),
-  N = n(806519),
-  S = n(981631),
-  C = n(689938),
+  N = n(940627),
+  T = n(806519),
+  C = n(981631),
+  S = n(689938),
   A = n(785196),
   f = n(129512),
   Z = n(330065),
@@ -35,9 +35,9 @@ class O extends(i = l.PureComponent) {
   getDefaultSplashURL(e, t) {
     if (t) return v;
     switch (e) {
-      case S.BRd.DARK:
+      case C.BRd.DARK:
         return f;
-      case S.BRd.LIGHT:
+      case C.BRd.LIGHT:
         return Z
     }
   }
@@ -59,7 +59,7 @@ class O extends(i = l.PureComponent) {
       presenceCount: O,
       memberCount: R,
       keywords: x
-    } = t, M = null === (e = t.features) || void 0 === e ? void 0 : e.has(S.oNc.HUB), P = g.ZP.getGuildDiscoverySplashURL({
+    } = t, M = null === (e = t.features) || void 0 === e ? void 0 : e.has(C.oNc.HUB), P = g.ZP.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
       size: 300 * (0, I.x_)()
@@ -132,14 +132,14 @@ class O extends(i = l.PureComponent) {
                 })
               }) : null, (0, s.jsx)("div", {
                 className: A.guildIcon,
-                children: (0, s.jsx)(N.ZP, {
-                  mask: N.ZP.Masks.SQUIRCLE,
+                children: (0, s.jsx)(T.ZP, {
+                  mask: T.ZP.Masks.SQUIRCLE,
                   width: 48,
                   height: 48,
                   children: (0, s.jsx)("div", {
                     className: A.iconMask,
-                    children: (0, s.jsx)(N.ZP, {
-                      mask: N.ZP.Masks.SQUIRCLE,
+                    children: (0, s.jsx)(T.ZP, {
+                      mask: T.ZP.Masks.SQUIRCLE,
                       width: 40,
                       height: 40,
                       children: (0, s.jsx)("img", {
@@ -155,7 +155,7 @@ class O extends(i = l.PureComponent) {
               className: A.guildInfo,
               children: [(0, s.jsxs)("div", {
                 className: A.title,
-                children: [(0, s.jsx)(T.Z, {
+                children: [(0, s.jsx)(N.Z, {
                   className: A.guildBadge,
                   guild: t,
                   tooltipColor: c.Tooltip.Colors.PRIMARY
@@ -183,7 +183,7 @@ class O extends(i = l.PureComponent) {
                   }), (0, s.jsx)(c.Text, {
                     variant: "text-xs/normal",
                     color: "header-secondary",
-                    children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+                    children: S.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
                       membersOnline: O
                     })
                   })]
@@ -194,7 +194,7 @@ class O extends(i = l.PureComponent) {
                   }), (0, s.jsx)(c.Text, {
                     variant: "text-xs/normal",
                     color: "header-secondary",
-                    children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+                    children: S.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                       count: R
                     })
                   })]

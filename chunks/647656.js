@@ -78,16 +78,16 @@ t.Z = {
         p = (0, d.S5)(E, g);
       p > 0 && (E.flags = p), delete E.instance, null === (t = E.party) || void 0 === t || delete t.privacy;
       let {
-        assets: T,
-        party: N,
-        secrets: S,
-        timestamps: C,
+        assets: N,
+        party: T,
+        secrets: C,
+        timestamps: S,
         buttons: A,
         type: f
       } = E;
-      if ((null == f || f !== _.IIU.PLAYING && !g) && (E.type = _.IIU.PLAYING), null != S) {
-        let e = s().values(S).filter(e => !!e);
-        if (null != N && s().intersection(e, [N.id]).length > 0 && !I.includes(i.application.id)) throw new u.Z({
+      if ((null == f || f !== _.IIU.PLAYING && !g) && (E.type = _.IIU.PLAYING), null != C) {
+        let e = s().values(C).filter(e => !!e);
+        if (null != T && s().intersection(e, [T.id]).length > 0 && !I.includes(i.application.id)) throw new u.Z({
           errorCode: _.lTL.INVALID_ACTIVITY_SECRET
         }, "secrets cannot match the party id");
         if (s().uniq(e).length < e.length) throw new u.Z({
@@ -99,17 +99,17 @@ t.Z = {
       }
       if (null != A && (E.metadata = {
           button_urls: A.map(e => e.url)
-        }, E.buttons = A.map(e => e.label)), null != C)
-        for (let e of Object.keys(C)) Date.now().toString().length - C[e].toString().length > 2 && (C[e] = Math.floor(C[e] * c.Z.Millis.SECOND));
-      if (null == T) n = Promise.resolve([]);
+        }, E.buttons = A.map(e => e.label)), null != S)
+        for (let e of Object.keys(S)) Date.now().toString().length - S[e].toString().length > 2 && (S[e] = Math.floor(S[e] * c.Z.Millis.SECOND));
+      if (null == N) n = Promise.resolve([]);
       else {
         if (null == i.application || null == i.application.id) throw Error();
-        n = (0, o.fetchAssetIds)(i.application.id, [T.large_image, T.small_image])
+        n = (0, o.fetchAssetIds)(i.application.id, [N.large_image, N.small_image])
       }
       return n.then(e => {
         var t, n;
         let [s, o] = e;
-        if (null != T && (null != s ? T.large_image = s : delete T.large_image, null != o ? T.small_image = o : delete T.small_image), !m()) return;
+        if (null != N && (null != s ? N.large_image = s : delete N.large_image, null != o ? N.small_image = o : delete N.small_image), !m()) return;
         a.Z.dispatch({
           type: "LOCAL_ACTIVITY_UPDATE",
           socketId: i.id,
@@ -126,7 +126,7 @@ t.Z = {
           details: null !== (t = E.details) && void 0 !== t ? t : "",
           state: null !== (n = E.state) && void 0 !== n ? n : ""
         };
-        return null != c && (d.has_match_secret = !!c.match, d.has_join_secret = !!c.join), null != T && (d.has_images = !!(T.large_image || T.small_image)), null != u && (d.party_max = null != u.size ? u.size[1] : void 0, d.party_id = u.id), r.default.track(_.rMx.ACTIVITY_UPDATED, d), E
+        return null != c && (d.has_match_secret = !!c.match, d.has_join_secret = !!c.join), null != N && (d.has_images = !!(N.large_image || N.small_image)), null != u && (d.party_max = null != u.size ? u.size[1] : void 0, d.party_id = u.id), r.default.track(_.rMx.ACTIVITY_UPDATED, d), E
       })
     }
   }

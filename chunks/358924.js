@@ -13,10 +13,10 @@ var i, s, l = n(735250),
   m = n(655922),
   g = n(122810),
   p = n(833664),
-  T = n(503438),
-  N = n(420660),
-  S = n(74433),
-  C = n(952561),
+  N = n(503438),
+  T = n(420660),
+  C = n(74433),
+  S = n(952561),
   A = n(513202),
   f = n(906732),
   Z = n(812206),
@@ -88,7 +88,7 @@ class $ extends a.Component {
     } = this.props, {
       timestamps: n
     } = t;
-    return null == n || !(0, p.Z)(t) || (0, T.Z)(t) ? null : Q(e = (0, g.Z)(t) ? (0, l.jsx)(X, {
+    return null == n || !(0, p.Z)(t) || (0, N.Z)(t) ? null : Q(e = (0, g.Z)(t) ? (0, l.jsx)(X, {
       timestamps: n
     }) : (0, l.jsx)(y.ZP, {
       start: n.start,
@@ -400,7 +400,7 @@ en.Header = et, en.Body = e => {
       assets: E,
       application_id: h
     } = i;
-  if (null != E && (0, N.Z)(i)) {
+  if (null != E && (0, T.Z)(i)) {
     var I;
     t = (0, l.jsx)(D.Z, {
       className: z.twitchSectionPreviewWrapper,
@@ -462,7 +462,7 @@ en.Header = et, en.Body = e => {
         children: (0, L.P9)(h)
       })
     })]
-  }), I = null !== (n = null === (t = (0, S.Z)(i, a)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : Y.Z.Messages.SHARING_SCREEN;
+  }), I = null !== (n = null === (t = (0, C.Z)(i, a)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : Y.Z.Messages.SHARING_SCREEN;
   return (0, l.jsxs)(J, {
     children: [(0, l.jsxs)("div", {
       className: z.applicationStreamingSection,
@@ -484,7 +484,7 @@ en.Header = et, en.Body = e => {
     channel: n,
     guildId: i,
     participants: s
-  } = e, r = (0, C.Z)(), [o, u] = a.useState(null), E = t.application_id;
+  } = e, r = (0, S.Z)(), [o, u] = a.useState(null), E = t.application_id;
   a.useEffect(() => {
     if (null != E)(0, k.fetchAssetIds)(E, ["embedded_background"]).then(e => {
       let [t] = e;
@@ -499,10 +499,10 @@ en.Header = et, en.Body = e => {
   if (null == E) return null;
   let p = Z.Z.getApplication(E);
   if (null == p) return null;
-  let T = null != t.created_at && t.created_at > 0 ? {
+  let N = null != t.created_at && t.created_at > 0 ? {
       start: t.created_at
     } : void 0,
-    N = (0, k.getAssetImage)(p.id, o, 300);
+    T = (0, k.getAssetImage)(p.id, o, 300);
   return (0, l.jsxs)(J, {
     children: [(0, l.jsxs)("div", {
       className: z.embeddedActivityTopRow,
@@ -516,20 +516,20 @@ en.Header = et, en.Body = e => {
           variant: "text-sm/semibold",
           children: p.name
         })
-      }), null != T ? (0, l.jsx)("div", {
+      }), null != N ? (0, l.jsx)("div", {
         className: z.embeddedActivityTimeElapsed,
         children: (0, l.jsx)(d.Text, {
           color: "text-muted",
           variant: "text-sm/normal",
           children: (0, l.jsx)(X, {
-            timestamps: T
+            timestamps: N
           })
         })
       }) : null]
     }), (0, l.jsxs)("div", {
       className: z.embeddedActivityPlayerContainer,
-      children: [null != N ? (0, l.jsx)("img", {
-        src: N,
+      children: [null != T ? (0, l.jsx)("img", {
+        src: T,
         alt: p.name,
         className: z.embeddedActivityImage
       }) : null, (0, l.jsxs)("div", {

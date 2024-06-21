@@ -19,10 +19,10 @@ var i = n(735250),
   m = n(553795),
   g = n(757266),
   p = n(283595),
-  T = n(417363),
-  N = n(626135),
-  S = n(804739),
-  C = n(346329),
+  N = n(417363),
+  T = n(626135),
+  C = n(804739),
+  S = n(346329),
   A = n(981631),
   f = n(689938);
 let Z = u.Z.get(A.ABu.XBOX).name;
@@ -49,8 +49,8 @@ function v(e) {
   }(e), L = function(e) {
     let {
       currentActivities: t
-    } = e, n = s.useContext(N.AnalyticsContext);
-    return (0, l.Wu)([_.ZP, p.Z, I.Z, T.Z, g.Z], () => t.filter(e => !(0, E.Z)(e.activity)).map(e => {
+    } = e, n = s.useContext(T.AnalyticsContext);
+    return (0, l.Wu)([_.ZP, p.Z, I.Z, N.Z, g.Z], () => t.filter(e => !(0, E.Z)(e.activity)).map(e => {
       let {
         activity: t,
         game: i
@@ -59,10 +59,10 @@ function v(e) {
         ...e,
         libraryApplication: s,
         canJoin: null != t && (0, d.Z)(t, A.xjy.JOIN) && t.type === A.IIU.PLAYING,
-        canPlay: (0, S.t)({
+        canPlay: (0, C.t)({
           LibraryApplicationStore: p.Z,
           LaunchableGameStore: I.Z,
-          DispatchApplicationStore: T.Z,
+          DispatchApplicationStore: N.Z,
           ConnectedAppsStore: g.Z,
           applicationId: i.id,
           branchId: null != s ? s.branchId : null
@@ -120,7 +120,7 @@ function v(e) {
       return (0, i.jsx)(a.MenuItem, {
         id: "play-".concat(n.session_id),
         action: function() {
-          (0, C.playApplication)(s.id, l, {
+          (0, S.playApplication)(s.id, l, {
             analyticsParams: {
               location: {
                 ...r,

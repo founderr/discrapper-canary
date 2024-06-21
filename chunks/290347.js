@@ -19,19 +19,19 @@ var i = n(735250),
   m = n(626135),
   g = n(565216),
   p = n(981631),
-  T = n(921944),
-  N = n(437738);
-let S = e => {
+  N = n(921944),
+  T = n(437738);
+let C = e => {
     let {
       tagText: t,
       className: n
     } = e;
     return (0, i.jsx)(o.TextBadge, {
-      className: a()(N.tag, n),
+      className: a()(T.tag, n),
       text: t
     })
   },
-  C = e => {
+  S = e => {
     let {
       header: t,
       subHeader: n,
@@ -40,23 +40,23 @@ let S = e => {
       wideStyle: r
     } = e;
     return (0, i.jsxs)("div", {
-      className: a()(N.featureCard, {
-        [N.wideStyle]: r
+      className: a()(T.featureCard, {
+        [T.wideStyle]: r
       }),
-      children: [null != l ? (0, i.jsx)(S, {
+      children: [null != l ? (0, i.jsx)(C, {
         tagText: l,
-        className: N.featureCardTag
+        className: T.featureCardTag
       }) : null, (0, i.jsx)("img", {
         alt: "",
-        className: a()(N.featureCardImg, {
-          [N.wideStyle]: r
+        className: a()(T.featureCardImg, {
+          [T.wideStyle]: r
         }),
         src: s
       }), (0, i.jsxs)("div", {
-        className: N.featureCardTextGroup,
+        className: T.featureCardTextGroup,
         children: [(0, i.jsx)(o.Heading, {
           variant: "heading-lg/extrabold",
-          className: N.featureCardTextHeader,
+          className: T.featureCardTextHeader,
           children: t
         }), (0, i.jsx)(o.Text, {
           variant: "text-sm/normal",
@@ -71,7 +71,7 @@ function A(e) {
     className: t,
     renderModalProps: n,
     heroArt: l,
-    heroArtClassName: S,
+    heroArtClassName: C,
     modalDismissibleContent: A,
     modalTopExtra: f,
     header: Z,
@@ -116,26 +116,26 @@ function A(e) {
         change_log_id: x,
         seconds_open: Math.round((Date.now() - e) / 1e3)
       }), null != A && (0, u.EW)(A, {
-        dismissAction: T.L.DISMISS
+        dismissAction: N.L.DISMISS
       })
     }
   }, [A, x]), (0, i.jsxs)(o.ModalRoot, {
-    className: a()(N.root, t),
+    className: a()(T.root, t),
     transitionState: D,
     "aria-labelledby": b,
     children: [(0, i.jsx)(o.ModalCloseButton, {
-      className: N.closeButton,
+      className: T.closeButton,
       onClick: P
     }), (0, i.jsx)(g.Z, {
-      className: N.splash
+      className: T.splash
     }), null == f ? void 0 : f(), (0, i.jsxs)(o.ModalContent, {
-      className: N.content,
+      className: T.content,
       children: [(0, i.jsx)(o.Heading, {
         variant: "display-md",
-        className: a()(N.headerText, v),
+        className: a()(T.headerText, v),
         children: Z
       }), "video" === l.type ? (0, i.jsx)(I.Z, {
-        className: a()(N.video, S),
+        className: a()(T.video, C),
         autoPlay: !j,
         loop: !0,
         muted: !0,
@@ -159,7 +159,7 @@ function A(e) {
         },
         disablePictureInPicture: !0
       }) : "embed" === l.type ? (0, i.jsx)(E.BC, {
-        className: a()(N.video, S),
+        className: a()(T.video, C),
         allowFullScreen: !1,
         href: l.href,
         thumbnail: l.thumbnail,
@@ -178,17 +178,17 @@ function A(e) {
         }
       }) : "image" === l.type ? (0, i.jsx)("img", {
         alt: "",
-        className: a()(N.video, S),
+        className: a()(T.video, C),
         src: l.src
       }) : null, (0, i.jsx)(o.Heading, {
         variant: "heading-lg/extrabold",
-        className: N.bodyText,
+        className: T.bodyText,
         children: L
       }), null == O ? void 0 : O(), (0, i.jsx)("div", {
-        className: a()(N.featureCardGroup, {
-          [N.wideStyle]: y
+        className: a()(T.featureCardGroup, {
+          [T.wideStyle]: y
         }),
-        children: R.map((e, t) => (0, i.jsx)(C, {
+        children: R.map((e, t) => (0, i.jsx)(S, {
           ...e,
           wideStyle: y
         }, "".concat(e.header, "_").concat(t)))

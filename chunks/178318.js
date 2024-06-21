@@ -14,9 +14,9 @@ var l = n(836560),
   m = n(852926),
   g = n(186901),
   p = n(981631),
-  T = n(413135).Buffer;
+  N = n(413135).Buffer;
 
-function N(e, t, n) {
+function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -31,8 +31,8 @@ try {
     i = E.ZP.requireModule("erlpack")
   } catch (e) {}
 }
-let S = E.ZP.requireModule("discord_rpc").RPCWebSocket,
-  C = window.GLOBAL_ENV.MARKETING_ENDPOINT,
+let C = E.ZP.requireModule("discord_rpc").RPCWebSocket,
+  S = window.GLOBAL_ENV.MARKETING_ENDPOINT,
   A = new u.Z("RPCServer:WSS"),
   f = [];
 
@@ -62,7 +62,7 @@ function L(e, t, n) {
       "Access-Control-Allow-Methods": "POST, GET, PUT, PATCH, DELETE",
       "Access-Control-Allow-Headers": "Content-Type, Authorization"
     } : {};
-  n = n ? JSON.stringify(n) : "", i = 200 === i && 0 === n.length ? 204 : i, t.setHeader("Content-Length", T.byteLength(n).toString()), t.setHeader("Content-Type", "application/json"), t.writeHead(i, {
+  n = n ? JSON.stringify(n) : "", i = 200 === i && 0 === n.length ? 204 : i, t.setHeader("Content-Length", N.byteLength(n).toString()), t.setHeader("Content-Type", "application/json"), t.writeHead(i, {
     ...s,
     ...l
   }), t.end(n)
@@ -85,7 +85,7 @@ class R extends I.Z {
     this._socket.close(e, t)
   }
   constructor(e, t, n) {
-    if (super("ws", t, n), N(this, "_socket", void 0), -1 === ["etf", "json"].indexOf(n)) throw new h.Z({
+    if (super("ws", t, n), T(this, "_socket", void 0), -1 === ["etf", "json"].indexOf(n)) throw new h.Z({
       closeCode: p.$VG.INVALID_ENCODING
     }, "Invalid Encoding: ".concat(n));
     if ("etf" === n && null == i) throw new h.Z({
@@ -102,7 +102,7 @@ class x extends I.Z {
     this._closeCallback(t, e)
   }
   constructor(e, t, n, i) {
-    if (super("http", n, i), N(this, "_sendCallback", void 0), N(this, "_closeCallback", void 0), "json" !== i) throw new h.Z({
+    if (super("http", n, i), T(this, "_sendCallback", void 0), T(this, "_closeCallback", void 0), "json" !== i) throw new h.Z({
       closeCode: p.$VG.INVALID_ENCODING
     }, "Invalid Encoding: ".concat(i));
     this._sendCallback = e, this._closeCallback = t
@@ -127,7 +127,7 @@ class M extends l.EventEmitter {
             protocol: i,
             host: s
           } = o.parse(null !== (e = n.get("callback")) && void 0 !== e ? e : "");
-          i === location.protocol && s === location.host ? t.setHeader("Location", n.get("callback")) : t.setHeader("Location", C), t.writeHead(301), t.end()
+          i === location.protocol && s === location.host ? t.setHeader("Location", n.get("callback")) : t.setHeader("Location", S), t.writeHead(301), t.end()
         },
         c = new x(l ? L.bind(null, e, t) : r, l ? O.bind(null, e, t, 400) : r, Number(n.get("v")), s);
       if (l)(0, m.em)(c, Z(e.headers).origin, n.get("client_id")).then(() => {
@@ -186,14 +186,14 @@ class M extends l.EventEmitter {
     var e;
     super();
     let t = 0;
-    (s = S.http.createServer()).on("error", e => {
+    (s = C.http.createServer()).on("error", e => {
       A.error("Error: ".concat(e.message)), ("EADDRINUSE" === e.code || e.message.includes("EADDRINUSE")) && setTimeout(() => v(++t), 1e3)
     }), s.on("request", this.handleRequest.bind(this)), v(t);
     let n = {
       instanceId: null !== (e = s.instanceId) && void 0 !== e ? e : 0,
       server: s
     };
-    new S.ws.Server(n).on("connection", e => this.handleConnection(e))
+    new C.ws.Server(n).on("connection", e => this.handleConnection(e))
   }
 }
 t.Z = new M

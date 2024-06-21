@@ -19,10 +19,10 @@ var i = n(735250),
   m = n(963202),
   g = n(650461),
   p = n(432632),
-  T = n(35313),
-  N = n(284019),
-  S = n(672775),
-  C = n(601463),
+  N = n(35313),
+  T = n(284019),
+  C = n(672775),
+  S = n(601463),
   A = n(192565),
   f = n(641037),
   Z = n(689938),
@@ -49,7 +49,7 @@ function O(e) {
       errors: null === (n = g.ZP.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
       submitting: null === (i = g.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
     }
-  }), P = (0, p.N)(t, "ClanSetupModal"), D = s.useMemo(() => (0, f.G)(x), [x]), [b, y] = s.useState(!1), [j, U] = s.useState(window.innerWidth), [G, w] = s.useState(1), [k, B] = s.useState(!0), H = (0, T.f)(), V = (0, o.useSpring)({
+  }), P = (0, p.N)(t, "ClanSetupModal"), D = s.useMemo(() => (0, f.G)(x), [x]), [b, y] = s.useState(!1), [j, U] = s.useState(window.innerWidth), [G, w] = s.useState(1), [k, B] = s.useState(!0), H = (0, N.f)(), V = (0, o.useSpring)({
     opacity: G,
     config: L,
     onStart: () => B(!0),
@@ -184,7 +184,7 @@ function O(e) {
             className: a()(v.navigationContainer, {
               [v.elevatedNavigationContainer]: !k
             }),
-            children: (0, i.jsx)(S.Z, {
+            children: (0, i.jsx)(C.Z, {
               steps: D,
               progress: R,
               updateCurrentStep: W,
@@ -205,7 +205,7 @@ function O(e) {
           className: a()(v.sidebar, {
             [v.sidebarResponsive]: k
           }),
-          children: (0, i.jsx)(C.Z, {
+          children: (0, i.jsx)(S.Z, {
             guildId: t,
             signed: b,
             setSigned: k ? void 0 : y,
@@ -225,7 +225,7 @@ function O(e) {
           "aria-label": null != q ? Z.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
           shouldShow: null != q,
           forceOpen: null != q,
-          children: e => (0, i.jsx)(N.Z, {
+          children: e => (0, i.jsx)(T.Z, {
             ...e,
             themeColor: R.brandPrimaryColor,
             disabled: !b || K,

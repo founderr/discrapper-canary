@@ -77,7 +77,7 @@ let g = {
     }
   };
 
-function T(e) {
+function N(e) {
   let {
     item: t,
     state: n,
@@ -104,12 +104,12 @@ function T(e) {
   })
 }
 
-function N(e) {
+function T(e) {
   return e
 }
 
-function S(e, t, n, s) {
-  return (0, i.jsx)(T, {
+function C(e, t, n, s) {
+  return (0, i.jsx)(N, {
     item: t,
     state: n,
     cleanUp: s
@@ -121,7 +121,7 @@ t.Z = s.memo(function(e) {
   } = e, n = s.useMemo(() => null != p[t] ? [t] : [], [t]);
   return (0, i.jsx)(o.TransitionGroup, {
     items: n,
-    renderItem: S,
-    getItemKey: N
+    renderItem: C,
+    getItemKey: T
   })
 })

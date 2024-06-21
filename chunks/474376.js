@@ -1,6 +1,6 @@
 n.d(t, {
   g: function() {
-    return T
+    return N
   }
 }), n(653041);
 var i = n(735250);
@@ -21,20 +21,20 @@ var s = n(442837),
   g = n(689938),
   p = n(886085);
 
-function T() {
+function N() {
   let e = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
     t = (0, s.e7)([o.Z], () => o.Z.hidePersonalInformation),
     {
       multiAccountUsers: n
     } = (0, _.L)(),
-    T = t => {
+    N = t => {
       if (t !== (null == e ? void 0 : e.id)) u.default.track(m.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
         location: {
           section: m.jXE.PROFILE_POPOUT
         }
       }), E.yD(t)
     },
-    N = n.map(n => {
+    T = n.map(n => {
       let s = new r.Z(n),
         o = s.id === (null == e ? void 0 : e.id),
         c = n.tokenStatus === h.q.INVALID,
@@ -80,15 +80,15 @@ function T() {
           })
         },
         action: () => {
-          c ? (0, I.Z)() : T(s.id)
+          c ? (0, I.Z)() : N(s.id)
         }
       }, s.id)
     });
-  return N.push((0, i.jsxs)(i.Fragment, {
+  return T.push((0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(l.MenuSeparator, {}), (0, i.jsx)(l.MenuItem, {
       id: "manage-accounts",
       label: g.Z.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
       action: I.Z
     })]
-  })), N
+  })), T
 }

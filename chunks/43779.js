@@ -24,12 +24,12 @@ function I(e) {
   } = e, m = c.r.build(t.config).defaultReward.messages.name, g = (0, a.Rf)({
     quest: t,
     location: n
-  }), p = g.percentComplete > 0, T = (0, o.pG)({
+  }), p = g.percentComplete > 0, N = (0, o.pG)({
     quest: t,
     location: n,
     useV2Variants: !0,
     taskDetails: g
-  }), N = !(0, o.zi)(t), S = s.useCallback(() => (0, i.jsx)(l.Text, {
+  }), T = !(0, o.zi)(t), C = s.useCallback(() => (0, i.jsx)(l.Text, {
     variant: "text-md/semibold",
     color: "text-brand",
     tag: "span",
@@ -67,17 +67,17 @@ function I(e) {
             color: "header-primary",
             className: _.header,
             children: h.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
-              rewardHook: S
+              rewardHook: C
             })
           })
-        }), null != T ? (0, i.jsx)(l.Text, {
+        }), null != N ? (0, i.jsx)(l.Text, {
           variant: "text-sm/medium",
           color: "text-muted",
           className: _.description,
-          children: T
+          children: N
         }) : null]
       })]
-    }), N ? (0, i.jsx)(E.Z, {
+    }), T ? (0, i.jsx)(E.Z, {
       quest: t
     }) : null]
   })

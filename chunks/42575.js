@@ -24,9 +24,9 @@ function g(e) {
     nickname: n,
     status: g,
     isFocused: p
-  } = e, T = s.useContext(u.AnalyticsContext), {
-    analyticsLocations: N
-  } = (0, r.ZP)(), S = e => {
+  } = e, N = s.useContext(u.AnalyticsContext), {
+    analyticsLocations: T
+  } = (0, r.ZP)(), C = e => {
     null == e || e.stopPropagation(), a.Z.addRelationship({
       userId: t.id,
       context: {
@@ -36,7 +36,7 @@ function g(e) {
       friendToken: void 0,
       fromFriendSuggestion: !0
     })
-  }, C = e => {
+  }, S = e => {
     null == e || e.stopPropagation(), o.Z.ignore(t.id)
   }, A = g === _.Skl.OFFLINE ? _.Skl.UNKNOWN : g;
   return (0, i.jsx)(E.Z, {
@@ -44,8 +44,8 @@ function g(e) {
     user: t,
     onClick: () => (0, c.openUserProfileModal)({
       userId: t.id,
-      sourceAnalyticsLocations: N,
-      analyticsLocation: T.location
+      sourceAnalyticsLocations: T,
+      analyticsLocation: N.location
     }),
     children: e => {
       let s = (0, i.jsxs)(i.Fragment, {
@@ -53,13 +53,13 @@ function g(e) {
           icon: l.CheckmarkLargeIcon,
           actionType: d.Z.ActionTypes.ACCEPT,
           tooltip: I.Z.Messages.FRIEND_REQUEST_ACCEPT,
-          onClick: S,
+          onClick: C,
           shouldHighlight: e
         }), (0, i.jsx)(d.Z, {
           icon: l.CloseSmallIcon,
           actionType: d.Z.ActionTypes.DENY,
           tooltip: I.Z.Messages.FRIEND_REQUEST_IGNORE,
-          onClick: C,
+          onClick: S,
           shouldHighlight: e
         })]
       });

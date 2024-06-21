@@ -19,10 +19,10 @@ var i = n(735250),
   m = n(918854),
   g = n(279240),
   p = n(765717),
-  T = n(358221),
-  N = n(823748),
-  S = n(626421),
-  C = n(118379),
+  N = n(358221),
+  T = n(823748),
+  C = n(626421),
+  S = n(118379),
   A = n(652515),
   f = n(544978),
   Z = n(194729),
@@ -86,25 +86,25 @@ let em = () => (0, i.jsx)("div", {
     name: "GuildMemberApplicationReview",
     renderLoader: em
   }),
-  eT = (0, c.Un)({
+  eN = (0, c.Un)({
     createPromise: () => Promise.all([n.e("99387"), n.e("60493")]).then(n.bind(n, 231588)),
     webpackId: 231588,
     name: "GuildHomePage",
     renderLoader: em
   }),
-  eN = (0, c.Un)({
+  eT = (0, c.Un)({
     createPromise: () => Promise.all([n.e("99387"), n.e("85552"), n.e("44400")]).then(n.bind(n, 545918)),
     webpackId: 545918,
     name: "MemberSafetyPage",
     renderLoader: em
   }),
-  eS = (0, c.Un)({
+  eC = (0, c.Un)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("75475"), n.e("58227"), n.e("38359"), n.e("51199")]).then(n.bind(n, 603072)),
     webpackId: 603072,
     name: "ChannelsAndRolesPage",
     renderLoader: em
   }),
-  eC = (0, c.Un)({
+  eS = (0, c.Un)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("75475"), n.e("19878"), n.e("38359"), n.e("50498")]).then(n.bind(n, 599263)),
     webpackId: 599263,
     name: "GuildOnboardingPage",
@@ -151,25 +151,25 @@ let em = () => (0, i.jsx)("div", {
           guildId: s
         });
       case eE.oC.GUILD_HOME:
-        return (0, i.jsx)(eT, {
+        return (0, i.jsx)(eN, {
           guildId: s
         });
       case eE.oC.CHANNEL_BROWSER:
-        return (0, i.jsx)(eS, {
+        return (0, i.jsx)(eC, {
           guildId: s,
           selectedSection: eh.l7.BROWSE
         });
       case eE.oC.GUILD_ONBOARDING:
-        return (0, i.jsx)(eC, {
+        return (0, i.jsx)(eS, {
           guildId: s
         });
       case eE.oC.CUSTOMIZE_COMMUNITY:
-        return (0, i.jsx)(eS, {
+        return (0, i.jsx)(eC, {
           guildId: s,
           selectedSection: eh.l7.CUSTOMIZE
         });
       case eE.oC.MEMBER_SAFETY:
-        return (0, i.jsx)(eN, {
+        return (0, i.jsx)(eT, {
           guildId: s
         });
       default:
@@ -186,7 +186,7 @@ let em = () => (0, i.jsx)("div", {
         inputSkuId: e
       }, n.id)
     }
-    return (0, i.jsx)(N.Z, {})
+    return (0, i.jsx)(T.Z, {})
   },
   ef = s.memo(function() {
     let {
@@ -245,7 +245,7 @@ let ev = e => (0, i.jsx)(eA, {
   eP = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return function(t) {
-      return (0, i.jsx)(C.Z, {
+      return (0, i.jsx)(S.Z, {
         isFullScreen: e,
         ...t
       })
@@ -316,7 +316,7 @@ function ew(e) {
   }), h.R6.trackExposure({
     location: l
   });
-  let r = (0, d.e7)([T.Z], () => T.Z.isFullscreenInContext());
+  let r = (0, d.e7)([N.Z], () => N.Z.isFullscreenInContext());
   return s ? null : (0, i.jsxs)("div", {
     className: a()(eI.sidebar, (0, ei.Q)(n), {
       [eI.hasNotice]: t,
@@ -384,7 +384,7 @@ function ek() {
           className: eI.base,
           children: [u.tq ? null : (0, i.jsx)(ea.Z, {}), (0, i.jsxs)("div", {
             className: eI.content,
-            children: [(0, i.jsx)(S.Z, {}), (0, i.jsx)(ew, {
+            children: [(0, i.jsx)(C.Z, {}), (0, i.jsx)(ew, {
               hasNotice: t,
               sidebarTheme: n,
               hideSidebar: l || a || c || E || m || !h

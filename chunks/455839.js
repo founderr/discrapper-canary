@@ -31,13 +31,13 @@ function _(e) {
     label: h.Z.Messages.COPY_ID_GUILD,
     shiftId: n,
     onSuccess: I
-  }), p = (0, s.e7)([c.Z], () => c.Z.getGuild(t.id), [t.id]), T = (0, s.e7)([u.Z], () => u.Z.can(E.Plq.ADMINISTRATOR, p)), {
-    canSeeInAppReportingButtons: N
+  }), p = (0, s.e7)([c.Z], () => c.Z.getGuild(t.id), [t.id]), N = (0, s.e7)([u.Z], () => u.Z.can(E.Plq.ADMINISTRATOR, p)), {
+    canSeeInAppReportingButtons: T
   } = d.N.useExperiment({
     location: "0e35b9_1"
   }, {
     autoTrackExposure: !1
-  }), S = () => {
+  }), C = () => {
     (0, a.Zy)(), null == I || I()
   };
   return (0, i.jsxs)(l.Menu, {
@@ -46,11 +46,11 @@ function _(e) {
     "aria-label": null != m ? m : h.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
     onClose: a.Zy,
     children: [(0, i.jsx)(l.MenuGroup, {
-      children: !T && N ? (0, i.jsx)(l.MenuItem, {
+      children: !N && T ? (0, i.jsx)(l.MenuItem, {
         id: "report-guild-discovery-listing",
         label: h.Z.Messages.REPORT_SERVER_NO_NAME,
         action: () => {
-          (0, o.lt)(t), S()
+          (0, o.lt)(t), C()
         },
         icon: l.FlagIcon,
         color: "danger"

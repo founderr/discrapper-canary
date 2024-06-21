@@ -22,10 +22,10 @@ let I = a().debounce(o.ZP.trackWithMetadata, 500),
       imageMarginTop: m,
       trackingSource: g,
       undismissable: p,
-      onDismissed: T,
-      onClick: N,
-      cta: S,
-      ctaColor: C
+      onDismissed: N,
+      onClick: T,
+      cta: C,
+      ctaColor: S
     } = e;
     s.useEffect(() => {
       I(E.rMx.CHANNEL_NOTICE_VIEWED, {
@@ -34,7 +34,7 @@ let I = a().debounce(o.ZP.trackWithMetadata, 500),
       })
     }, [t.id, u]);
     let A = null;
-    "function" == typeof S ? A = S() : null != S && (A = (0, i.jsx)(r.Button, {
+    "function" == typeof C ? A = C() : null != C && (A = (0, i.jsx)(r.Button, {
       className: _.btn,
       size: r.Button.Sizes.SMALL,
       onClick: () => {
@@ -42,11 +42,11 @@ let I = a().debounce(o.ZP.trackWithMetadata, 500),
           source: g,
           guild_id: t.id,
           notice_type: u
-        }), null == N || N()
+        }), null == T || T()
       },
       fullWidth: !0,
-      color: C,
-      children: S
+      color: S,
+      children: C
     }));
     let f = null != d ? "".concat(d, "px") : "16px";
     return (0, i.jsxs)("div", {
@@ -55,7 +55,7 @@ let I = a().debounce(o.ZP.trackWithMetadata, 500),
         onClick: () => {
           o.ZP.trackWithMetadata(E.rMx.CHANNEL_NOTICE_CLOSED, {
             notice_type: u
-          }), null == T || T()
+          }), null == N || N()
         },
         className: _.close,
         "aria-label": h.Z.Messages.DISMISS,

@@ -15,10 +15,10 @@ var i = n(913527),
   m = n(430824),
   g = n(131951),
   p = n(292959),
-  T = n(699516),
-  N = n(944486),
-  S = n(9156),
-  C = n(594174),
+  N = n(699516),
+  T = n(944486),
+  C = n(9156),
+  S = n(594174),
   A = n(51144),
   f = n(196051),
   Z = n(441729),
@@ -35,7 +35,7 @@ function b(e, t, n, i) {
   let l = m.Z.getGuild(n),
     a = e.replace(D, O.Z.Messages.SPOILER).replace(/<@!?(\d+)>/g, (e, t) => {
       var i;
-      let s = C.default.getUser(t);
+      let s = S.default.getUser(t);
       if (null == s) return e;
       return null !== (i = I.ZP.getNick(n, s.id)) && void 0 !== i ? i : A.ZP.getName(s)
     }).replace(/<@&?(\d+)>/g, (e, t) => {
@@ -43,7 +43,7 @@ function b(e, t, n, i) {
       return null != n && null != n.name ? n.name : O.Z.Messages.MESSAGE_TTS_DELETED_ROLE
     }).replace(/<#(\d+)>/g, (e, t) => {
       let n = _.Z.getChannel(t);
-      return null == n ? e : (0, r.F6)(n, C.default, T.Z)
+      return null == n ? e : (0, r.F6)(n, S.default, N.Z)
     }).replace(/<a?:(\w+):(\d+)>/g, (e, t) => "".concat(O.Z.Messages.EMOJI, " ").concat(t)).replace(/<\/([^\s]+?):(\d+)>/g, (e, t) => "/".concat(t)).replace(/<t:(\d+):([A-Z]|[a-z])>/g, (e, t, n) => {
       let i = o.Qh[n],
         l = 1e3 * parseInt(t, 10),
@@ -115,17 +115,17 @@ function B(e) {
   if (c || g.Z.isSelfDeaf()) return !1;
   let u = _.Z.getChannel(r);
   if (null == u) return !1;
-  let m = N.Z.getChannelId(),
-    C = h.ZP.getCurrentSidebarChannelId(m),
-    f = r === m || r === C,
+  let m = T.Z.getChannelId(),
+    S = h.ZP.getCurrentSidebarChannelId(m),
+    f = r === m || r === S,
     Z = d.OW.getSetting() && o.tts && f,
     O = p.Z.getTTSType(),
     x = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== E.default.getId() && (O === L.PrB.ALL_CHANNELS || O === L.PrB.SELECTED_CHANNEL && f);
-  if ((Z || x) && !T.Z.isBlockedForMessage(o)) {
+  if ((Z || x) && !N.Z.isBlockedForMessage(o)) {
     if (R.indexOf(o.id) >= 0) return !1;
     R.unshift(o.id) > 10 && R.pop();
     let e = u.getGuildId();
-    if (null != e && S.ZP.getMutedChannels(e).has(r)) return !1;
+    if (null != e && C.ZP.getMutedChannels(e).has(r)) return !1;
     let t = null !== (l = null !== (s = I.ZP.getNick(e, null === (n = o.author) || void 0 === n ? void 0 : n.id)) && void 0 !== s ? s : A.ZP.getName(o.author)) && void 0 !== l ? l : "",
       c = o.type === L.uaV.REPLY ? null === (i = o.referenced_message) || void 0 === i ? void 0 : i.author : null,
       d = null != c ? null !== (a = I.ZP.getNick(e, null == c ? void 0 : c.id)) && void 0 !== a ? a : A.ZP.getName(c) : null;

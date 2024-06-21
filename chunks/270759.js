@@ -15,10 +15,10 @@ var i = n(735250),
   m = n(984370),
   g = n(518311),
   p = n(199104),
-  T = n(108427),
-  N = n(210887),
-  S = n(974042),
-  C = n(153124),
+  N = n(108427),
+  T = n(210887),
+  C = n(974042),
+  S = n(153124),
   A = n(792125),
   f = n(666286),
   Z = n(596957),
@@ -47,18 +47,18 @@ t.Z = function(e) {
       l.replace(v.Z5c.ME)
     })
   }, [l, n]), s.useEffect(() => {
-    E.Y(v.Z5c.FRIENDS), (0, T.e)("friends")
+    E.Y(v.Z5c.FRIENDS), (0, N.e)("friends")
   }, []), s.useEffect(() => {
     null != t && h.Z.setInitialSection(t)
   }, [t]);
-  let g = (0, c.e7)([N.Z], () => N.Z.theme),
+  let g = (0, c.e7)([T.Z], () => T.Z.theme),
     {
       section: M,
       pendingCount: P
-    } = (0, c.cj)([S.ZP], () => S.ZP.getState()),
+    } = (0, c.cj)([C.ZP], () => C.ZP.getState()),
     D = (0, c.cj)([I.Z], () => I.Z.getSuggestionCount()),
-    b = (0, C.Dt)(),
-    y = (0, C.Dt)();
+    b = (0, S.Dt)(),
+    y = (0, S.Dt)();
   return (0, i.jsxs)("main", {
     className: R.container,
     "aria-label": O.Z.Messages.FRIENDS,

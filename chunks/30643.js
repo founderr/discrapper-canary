@@ -15,10 +15,10 @@ var i = n(237997),
   m = n(111097),
   g = n(908711),
   p = n(197941),
-  T = n(462414),
-  N = n(662194),
-  S = n(188861);
-let C = {
+  N = n(462414),
+  T = n(662194),
+  C = n(188861);
+let S = {
     ...l.A,
     ...u.Z,
     ...d.Z,
@@ -27,8 +27,8 @@ let C = {
     ...I.Z,
     ...m.Z,
     ...p.Z,
-    ...N.Z,
     ...T.Z,
+    ...N.Z,
     ...E.Z,
     ...g.Z
   },
@@ -39,10 +39,10 @@ let C = {
   };
 t.Z = {
   server: r.Z,
-  commands: C,
+  commands: S,
   events: A,
   stores: [i.Z],
-  transports: [S.Z],
+  transports: [C.Z],
   registerTransportsForEmbeddedPlatform: function() {
     s.ZP.ensureModule("discord_rpc").then(() => {
       for (let e of [n(178318).Z, n(967351).Z]) r.Z.registerTransport(e)

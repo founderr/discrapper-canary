@@ -31,9 +31,9 @@ function p(e) {
   return new Promise((t, n) => {
     "string" == typeof e && (e = h.net.createConnection(e)), e.pause(), e.on("readable", () => {
       try {
-        N(e)
+        T(e)
       } catch (t) {
-        e.end(T(I.CLOSE, {
+        e.end(N(I.CLOSE, {
           code: 1003,
           message: t.message
         })), e.destroy()
@@ -53,11 +53,11 @@ function p(e) {
       }, e => {
         throw i(), e
       });
-    return e.write(T(I.PING, a().uniqueId())), s.then(t, n)
+    return e.write(N(I.PING, a().uniqueId())), s.then(t, n)
   })
 }
 
-function T(e, t) {
+function N(e, t) {
   var n;
   t = JSON.stringify(t);
   let s = i.Buffer.byteLength(t),
@@ -65,7 +65,7 @@ function T(e, t) {
   return l.writeInt32LE(e, 0), l.writeInt32LE(s, 4), l.write(t, 8, s), (n = l).buffer.slice(n.byteOffset, n.byteOffset + n.byteLength)
 }
 
-function N(e) {
+function T(e) {
   let t = e.read(8);
   if (null == t) return;
   let n = i.Buffer.from(t),
@@ -76,7 +76,7 @@ function N(e) {
   let a = JSON.parse((n = i.Buffer.from(t)).toString());
   switch (s) {
     case I.PING:
-      e.emit("ping", a), e.write(T(I.PONG, a));
+      e.emit("ping", a), e.write(N(I.PONG, a));
       break;
     case I.PONG:
       e.emit("pong", a);
@@ -92,14 +92,14 @@ function N(e) {
     case I.CLOSE:
       e.end(), e.destroy()
   }
-  N(e)
+  T(e)
 }
-class S extends u.Z {
+class C extends u.Z {
   send(e) {
-    _.info("Socket Emit: ".concat(this.id), (0, c.Z)(e)), this.socket.write(T(I.FRAME, e))
+    _.info("Socket Emit: ".concat(this.id), (0, c.Z)(e)), this.socket.write(N(I.FRAME, e))
   }
   close(e, t) {
-    this.socket.end(T(I.CLOSE, {
+    this.socket.end(N(I.CLOSE, {
       code: e,
       message: t
     })), this.socket.destroy()
@@ -114,13 +114,13 @@ class S extends u.Z {
     }) : i[s] = l, this.socket = e
   }
 }
-class C extends s.EventEmitter {
+class S extends s.EventEmitter {
   handleConnection(e) {
     m(e, !1), e.pause(), e.on("readable", () => {
       try {
-        N(e)
+        T(e)
       } catch (t) {
-        e.end(T(I.CLOSE, {
+        e.end(N(I.CLOSE, {
           code: E.$VG.CLOSE_UNSUPPORTED,
           message: t.message
         })), e.destroy()
@@ -130,9 +130,9 @@ class C extends s.EventEmitter {
       let i = t.client_id,
         s = +t.v;
       try {
-        n = new S(e, s, "json")
+        n = new C(e, s, "json")
       } catch (t) {
-        e.end(T(I.CLOSE, {
+        e.end(N(I.CLOSE, {
           code: t.code,
           message: t.message
         })), e.destroy();
@@ -163,4 +163,4 @@ class C extends s.EventEmitter {
     })
   }
 }
-t.Z = new C
+t.Z = new S

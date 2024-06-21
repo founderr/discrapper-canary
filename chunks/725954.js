@@ -1,67 +1,67 @@
-i.d(n, {
+s.d(i, {
   Z: function() {
-    return Z
+    return f
   }
 });
-var l = i(735250);
-i(470079);
-var s = i(120356),
-  t = i.n(s),
-  o = i(442837),
-  a = i(481060),
-  r = i(129861),
-  d = i(427217),
-  u = i(158776),
-  c = i(51144),
-  I = i(981631),
-  E = i(689938),
-  f = i(300139);
+var n = s(735250);
+s(470079);
+var l = s(120356),
+  t = s.n(l),
+  o = s(442837),
+  r = s(481060),
+  a = s(129861),
+  d = s(427217),
+  c = s(158776),
+  u = s(51144),
+  I = s(981631),
+  E = s(689938),
+  Z = s(300139);
 
-function Z(e) {
+function f(e) {
   let {
-    user: n,
-    displayProfile: i
-  } = e, s = (0, o.e7)([u.Z], () => u.Z.findActivity(n.id, e => e.type === I.IIU.CUSTOM_STATUS)), Z = c.ZP.getName(n);
-  return (0, l.jsxs)("div", {
-    className: f.container,
-    children: [null == Z && (0, l.jsx)(r.Z, {
-      user: n,
-      className: f.nameTag,
-      usernameClass: f.username,
-      discriminatorClass: f.discriminator
-    }), null != Z && (0, l.jsxs)("div", {
-      children: [(0, l.jsx)(a.Text, {
+    user: i,
+    displayProfile: s
+  } = e, l = (0, o.e7)([c.Z], () => c.Z.findActivity(i.id, e => e.type === I.IIU.CUSTOM_STATUS)), f = u.ZP.getName(i);
+  return (0, n.jsxs)("div", {
+    className: Z.container,
+    children: [null == f && (0, n.jsx)(a.Z, {
+      user: i,
+      className: Z.nameTag,
+      usernameClass: Z.username,
+      discriminatorClass: Z.discriminator
+    }), null != f && (0, n.jsxs)("div", {
+      children: [(0, n.jsx)(r.Text, {
         variant: "text-lg/semibold",
         style: {
           marginRight: "12px"
         },
-        children: Z
-      }), (0, l.jsx)(r.Z, {
-        user: n,
+        children: f
+      }), (0, n.jsx)(a.Z, {
+        user: i,
         forceUsername: !0,
-        usernameClass: f.discriminator,
-        discriminatorClass: f.discriminator,
-        className: t()(f.nameTag, f.nameTagSmall)
+        usernameClass: Z.discriminator,
+        discriminatorClass: Z.discriminator,
+        className: t()(Z.nameTag, Z.nameTagSmall)
       })]
-    }), (null == i ? void 0 : i.pronouns) != null && (null == i ? void 0 : i.pronouns) !== "" && (0, l.jsx)(a.Tooltip, {
+    }), (null == s ? void 0 : s.pronouns) != null && (null == s ? void 0 : s.pronouns) !== "" && (0, n.jsx)(r.Tooltip, {
       text: E.Z.Messages.USER_PROFILE_PRONOUNS,
-      children: e => (0, l.jsx)(a.Text, {
+      children: e => (0, n.jsx)(r.Text, {
         ...e,
         variant: "text-sm/normal",
-        className: t()(f.pronouns, f.nameTagSmall),
-        children: i.pronouns
+        className: t()(Z.pronouns, Z.nameTagSmall),
+        children: s.pronouns
       })
-    }), null != s ? (0, l.jsx)("div", {
-      className: f.__invalid_customStatusActivity,
-      children: (0, l.jsx)(a.Text, {
+    }), null != l ? (0, n.jsx)("div", {
+      className: Z.__invalid_customStatusActivity,
+      children: (0, n.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
-        className: f.customStatusText,
-        children: (0, l.jsx)(d.Z, {
-          activity: s,
-          className: f.customStatus,
-          emojiClassName: f.customStatusEmoji,
-          soloEmojiClassName: f.customStatusSoloEmoji
+        className: Z.customStatusText,
+        children: (0, n.jsx)(d.Z, {
+          activity: l,
+          className: Z.customStatus,
+          emojiClassName: Z.customStatusEmoji,
+          soloEmojiClassName: Z.customStatusSoloEmoji
         })
       })
     }) : null]

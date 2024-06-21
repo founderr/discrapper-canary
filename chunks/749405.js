@@ -27,10 +27,10 @@ function _(e) {
   }, []), p = s.useCallback(() => {
     r.Z.closeChannelSidebar(o.uZ), I && (0, a.Kh)(_.id)
   }, [_.id, I]), {
-    acceptMessageRequest: T,
-    rejectMessageRequest: N,
-    isAcceptLoading: S,
-    isRejectLoading: C,
+    acceptMessageRequest: N,
+    rejectMessageRequest: T,
+    isAcceptLoading: C,
+    isRejectLoading: S,
     isUserProfileLoading: A,
     isOptimisticAccepted: f,
     isOptimisticRejected: Z
@@ -39,7 +39,7 @@ function _(e) {
     onAcceptSuccess: p,
     onRejectSuccess: g,
     onError: m
-  }), v = S || C || A || f || Z;
+  }), v = C || S || A || f || Z;
   return (0, i.jsxs)("div", {
     className: h.container,
     children: [(0, i.jsx)(d.Z, {
@@ -53,20 +53,20 @@ function _(e) {
         color: l.ButtonColors.PRIMARY,
         size: l.Button.Sizes.SMALL,
         onClick: e => {
-          e.stopPropagation(), N(_.id)
+          e.stopPropagation(), T(_.id)
         },
         disabled: v,
-        submitting: C || Z,
+        submitting: S || Z,
         children: E.Z.Messages.MESSAGE_REQUEST_IGNORE
       }), (0, i.jsx)(l.Button, {
         className: h.button,
         color: l.ButtonColors.BRAND,
         size: l.Button.Sizes.SMALL,
         onClick: e => {
-          e.stopPropagation(), T(_.id)
+          e.stopPropagation(), N(_.id)
         },
         disabled: v,
-        submitting: S || A || f,
+        submitting: C || A || f,
         children: E.Z.Messages.MESSAGE_REQUEST_ACCEPT
       })]
     })]

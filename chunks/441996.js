@@ -85,15 +85,15 @@ class d extends(i = l.PureComponent) {
       let g = s.length >= r ? r : s.length;
       h.setTransform(1, 0, 0, -1, 0, i.height), h.clearRect(0, 0, i.width, i.height), h.translate(0, .5 * h.lineWidth);
       let p = Math.floor(i.width / (g - 3)),
-        T = .5 * p;
+        N = .5 * p;
       h.translate(p - p * E, 0), h.beginPath();
-      let N = -p;
+      let T = -p;
       s.forEach((e, i) => {
         t = {
-          x: N,
+          x: T,
           y: I * e / _
-        }, 0 === i ? h.moveTo(t.x, t.y) : h.bezierCurveTo(n.x + T, n.y, t.x - T, t.y, t.x, t.y), n = t, N += p
-      }), h.stroke(), h.lineTo(N - p, 0), h.lineTo(0, 0), h.fill(), u && E < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation))
+        }, 0 === i ? h.moveTo(t.x, t.y) : h.bezierCurveTo(n.x + N, n.y, t.x - N, t.y, t.x, t.y), n = t, T += p
+      }), h.stroke(), h.lineTo(T - p, 0), h.lineTo(0, 0), h.fill(), u && E < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation))
     })
   }
 }

@@ -19,10 +19,10 @@ var i = n(735250),
   m = n(131951),
   g = n(459273),
   p = n(242291),
-  T = n(458263),
-  N = n(603074),
-  S = n(981631),
-  C = n(921944),
+  N = n(458263),
+  T = n(603074),
+  C = n(981631),
+  S = n(921944),
   A = n(689938),
   f = n(707747);
 
@@ -68,11 +68,11 @@ function Z(e) {
       let {
         closePopout: n
       } = e;
-      return (0, i.jsx)(N.Z, {
+      return (0, i.jsx)(T.Z, {
         guildId: b,
         channel: t,
         onClose: n,
-        gridNotice: j === o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, i.jsx)(T.o, {
+        gridNotice: j === o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, i.jsx)(N.o, {
           onClose: n,
           markAsDismissed: U
         }),
@@ -92,7 +92,7 @@ function Z(e) {
         disabled: M,
         onClick: () => {
           var t, n;
-          null != j && j !== o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && U(C.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!P), B()
+          null != j && j !== o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && U(S.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!P), B()
         },
         onMouseEnter: t => {
           var n, i;
@@ -117,7 +117,7 @@ function Z(e) {
     !M && D(!P)
   }, [M, P]);
   return (0, g.yp)({
-    event: S.CkL.TOGGLE_SOUNDBOARD,
+    event: C.CkL.TOGGLE_SOUNDBOARD,
     handler: Y
   }), (0, i.jsx)(h.Gt, {
     value: G,

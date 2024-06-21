@@ -23,10 +23,10 @@ var i, s, l = n(735250),
   m = n(565799),
   g = n(501655),
   p = n(192079),
-  T = n(427679),
-  N = n(448206),
-  S = n(496675),
-  C = n(938475),
+  N = n(427679),
+  T = n(448206),
+  C = n(496675),
+  S = n(938475),
   A = n(602623),
   f = n(626135),
   Z = n(823379),
@@ -116,7 +116,7 @@ function V(e) {
   let {
     guildEvent: t,
     channel: n
-  } = e, i = (0, c.Wu)([C.ZP], () => C.ZP.getVoiceStatesForChannel(n).map(e => {
+  } = e, i = (0, c.Wu)([S.ZP], () => S.ZP.getVoiceStatesForChannel(n).map(e => {
     let {
       user: t
     } = e;
@@ -367,7 +367,7 @@ function Q(e) {
     channel: t,
     speakers: n,
     voiceType: i
-  } = e, s = t.getGuildId(), r = a.useMemo(() => n.slice(0, 3), [n]), d = (0, c.e7)([S.Z], () => S.Z.can(w.Plq.CONNECT, t)), E = (0, N.Z)(t.id), h = k.Z.Messages.JOIN;
+  } = e, s = t.getGuildId(), r = a.useMemo(() => n.slice(0, 3), [n]), d = (0, c.e7)([C.Z], () => C.Z.can(w.Plq.CONNECT, t)), E = (0, T.Z)(t.id), h = k.Z.Messages.JOIN;
   switch (i) {
     case 1:
       h = k.Z.Messages.JOIN;
@@ -405,7 +405,7 @@ function Q(e) {
     guild: t
   } = e, {
     showRedesignedLiveChannelNotice: n
-  } = (0, E.o)(!0), i = (0, P.y)(t.id), s = (0, b.k5)(t.id), a = (0, b.Vm)(t.id), r = (0, c.e7)([T.Z], () => T.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]), {
+  } = (0, E.o)(!0), i = (0, P.y)(t.id), s = (0, b.k5)(t.id), a = (0, b.Vm)(t.id), r = (0, c.e7)([N.Z], () => N.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]), {
     isStageNoticeHidden: o,
     isEventNoticeHidden: u
   } = (0, c.cj)([R.Z], () => ({

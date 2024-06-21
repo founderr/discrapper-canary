@@ -9,28 +9,28 @@ var a, r, o, c, u = n(392711),
   m = n(430824),
   g = n(496675),
   p = n(855674),
-  T = n(981631);
-let N = [],
-  S = null,
-  C = !1,
-  A = T.QZA.CLOSED,
+  N = n(981631);
+let T = [],
+  C = null,
+  S = !1,
+  A = N.QZA.CLOSED,
   f = {},
   Z = !1,
   v = null;
 
 function L() {
-  if (i = null != (s = I.Z.getChannel()) ? m.Z.getGuild(s.guild_id) : null, N = null != s && null != i && g.Z.can(T.Plq.MANAGE_WEBHOOKS, s) ? p.Z.getWebhooksForChannel(i.id, s.id) : [], null != S) {
-    let e = R(S.id);
-    null != e && (S = e)
+  if (i = null != (s = I.Z.getChannel()) ? m.Z.getGuild(s.guild_id) : null, T = null != s && null != i && g.Z.can(N.Plq.MANAGE_WEBHOOKS, s) ? p.Z.getWebhooksForChannel(i.id, s.id) : [], null != C) {
+    let e = R(C.id);
+    null != e && (C = e)
   }
-  A = T.QZA.OPEN, f = {}, Z = !1
+  A = N.QZA.OPEN, f = {}, Z = !1
 }
 let O = d().debounce(() => {
-  Z && ((null == S || d().isEqual(S, R(S.id))) && (Z = !1), !Z && M.emitChange())
+  Z && ((null == C || d().isEqual(C, R(C.id))) && (Z = !1), !Z && M.emitChange())
 }, 500);
 
 function R(e) {
-  return N.find(t => {
+  return T.find(t => {
     let {
       id: n
     } = t;
@@ -45,10 +45,10 @@ class x extends(a = E.ZP.Store) {
     return Z
   }
   get webhooks() {
-    return N
+    return T
   }
   get editedWebhook() {
-    return S
+    return C
   }
   get formState() {
     return A
@@ -61,13 +61,13 @@ class x extends(a = E.ZP.Store) {
   }
   getProps() {
     return {
-      submitting: A === T.QZA.SUBMITTING,
-      webhooks: N,
-      editedWebhook: S,
+      submitting: A === N.QZA.SUBMITTING,
+      webhooks: T,
+      editedWebhook: C,
       section: l,
       sectionId: v,
       hasChanges: this.hasChanges(),
-      isFetching: C,
+      isFetching: S,
       errors: f
     }
   }
@@ -85,11 +85,11 @@ let M = new x(h.Z, __OVERLAY__ ? {} : {
     let {
       section: t
     } = e;
-    if (t !== T.CoT.INTEGRATIONS) return !1;
-    if (l = T.b4C.OVERVIEW, null == i) {
+    if (t !== N.CoT.INTEGRATIONS) return !1;
+    if (l = N.b4C.OVERVIEW, null == i) {
       let e = I.Z.getChannel(),
         t = null == e ? void 0 : e.getGuildId();
-      null != e && null != t && (_.Z.fetchForChannel(t, e.id), C = !0), L()
+      null != e && null != t && (_.Z.fetchForChannel(t, e.id), S = !0), L()
     }
   },
   INTEGRATION_SETTINGS_SET_SECTION: function(e) {
@@ -104,22 +104,22 @@ let M = new x(h.Z, __OVERLAY__ ? {} : {
       webhookId: t
     } = e, n = R(t);
     if (null == n) return !1;
-    S = n, f = {}, Z = !1
+    C = n, f = {}, Z = !1
   },
   INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function() {
-    S = null, f = {}, Z = !1
+    C = null, f = {}, Z = !1
   },
   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function(e) {
     let {
       settings: t
     } = e;
-    if (null == S) return !1;
-    S = {
-      ...S
-    }, null != t.name && S.name !== t.name && (S.name = t.name, Z = !0), void 0 !== t.avatar && S.avatar !== t.avatar && (S.avatar = t.avatar, Z = !0), null != t.channelId && S.channel_id !== t.channelId && (S.channel_id = t.channelId, Z = !0), Z && O()
+    if (null == C) return !1;
+    C = {
+      ...C
+    }, null != t.name && C.name !== t.name && (C.name = t.name, Z = !0), void 0 !== t.avatar && C.avatar !== t.avatar && (C.avatar = t.avatar, Z = !0), null != t.channelId && C.channel_id !== t.channelId && (C.channel_id = t.channelId, Z = !0), Z && O()
   },
   CHANNEL_SETTINGS_CLOSE: function() {
-    s = null, i = null, N = [], S = null, A = T.QZA.CLOSED
+    s = null, i = null, T = [], C = null, A = N.QZA.CLOSED
   },
   WEBHOOKS_UPDATE: function(e) {
     let {
@@ -127,10 +127,10 @@ let M = new x(h.Z, __OVERLAY__ ? {} : {
       channelId: n,
       webhooks: l
     } = e;
-    if (null == i || t !== i.id || null == s || n !== s.id || null == l || A === T.QZA.SUBMITTING) return !1;
-    C = !1;
-    for (let e = N.length - 1; e >= 0; e--) {
-      let t = N[e];
+    if (null == i || t !== i.id || null == s || n !== s.id || null == l || A === N.QZA.SUBMITTING) return !1;
+    S = !1;
+    for (let e = T.length - 1; e >= 0; e--) {
+      let t = T[e];
       if (null != n && (null == t ? void 0 : t.channel_id) !== n) continue;
       let i = l.find(e => {
         let {
@@ -143,24 +143,24 @@ let M = new x(h.Z, __OVERLAY__ ? {} : {
           ...t,
           ...i
         };
-        N[e] = n, !Z && (null == S ? void 0 : S.id) === n.id && (S = n)
-      } else(null == S ? void 0 : S.id) === t.id && (S = null), N.splice(e, 1)
+        T[e] = n, !Z && (null == C ? void 0 : C.id) === n.id && (C = n)
+      } else(null == C ? void 0 : C.id) === t.id && (C = null), T.splice(e, 1)
     }
-    for (let e of l) null == N.find(t => {
+    for (let e of l) null == T.find(t => {
       let {
         id: n
       } = t;
       if (n === e.id) return !0
-    }) && N.push(e);
-    N = [...N], O()
+    }) && T.push(e);
+    T = [...T], O()
   },
   INTEGRATION_SETTINGS_SUBMITTING: function() {
-    A = T.QZA.SUBMITTING, f = {}
+    A = N.QZA.SUBMITTING, f = {}
   },
   INTEGRATION_SETTINGS_SAVE_FAILURE: function(e) {
     var t;
-    if (A !== T.QZA.SUBMITTING) return !1;
-    A = T.QZA.OPEN, f = null !== (t = e.errors) && void 0 !== t ? t : {}
+    if (A !== N.QZA.SUBMITTING) return !1;
+    A = N.QZA.OPEN, f = null !== (t = e.errors) && void 0 !== t ? t : {}
   }
 });
 t.Z = M

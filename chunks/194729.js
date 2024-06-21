@@ -15,10 +15,10 @@ var i = n(735250),
   m = n(827837),
   g = n(785570),
   p = n(100527),
-  T = n(963202),
-  N = n(252618),
-  S = n(440190),
-  C = n(5955),
+  N = n(963202),
+  T = n(252618),
+  C = n(440190),
+  S = n(5955),
   A = n(121711),
   f = n(709158),
   Z = n(703656),
@@ -290,7 +290,7 @@ class X extends s.PureComponent {
     }, {
       autoTrackExposure: !1
     }), _ = r === F.Hk ? null === (e = c[Y.Lcj.FEATURED]) || void 0 === e ? void 0 : e.guilds : null === (t = c[r]) || void 0 === t ? void 0 : t.guilds;
-    if (r === F.U) return (0, i.jsx)(C.Z, {
+    if (r === F.U) return (0, i.jsx)(S.Z, {
       loadId: this.loadId
     });
     let I = r === F.Hk ? z.Z.Messages.GUILD_DISCOVERY_HOME_TITLE : z.Z.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
@@ -298,7 +298,7 @@ class X extends s.PureComponent {
     });
     return (0, i.jsxs)("div", {
       className: W.pageWrapper,
-      children: [(0, i.jsx)(N.yY, {
+      children: [(0, i.jsx)(T.yY, {
         subsection: u ? l : void 0,
         location: I
       }), (0, i.jsx)("div", {
@@ -476,10 +476,10 @@ function $(e) {
     fetching: n,
     loadId: s,
     recommendedGuilds: l
-  } = (0, E.cj)([S.Z], () => ({
-    recommendedGuilds: S.Z.getRecommendedGuilds(),
-    loadId: S.Z.getLoadId(),
-    fetching: S.Z.isFetching()
+  } = (0, E.cj)([C.Z], () => ({
+    recommendedGuilds: C.Z.getRecommendedGuilds(),
+    loadId: C.Z.getLoadId(),
+    fetching: C.Z.isFetching()
   }));
   return (0, i.jsx)(J, {
     searchRoute: t,
@@ -494,12 +494,12 @@ t.Z = function(e) {
     searchRoute: t
   } = e, {
     guilds: n
-  } = (0, T.C3)({
+  } = (0, N.C3)({
     location: "guild_discovery",
     includeConverted: !0
   }), s = n.length > 0, {
     clanDiscoveryEnabled: l
-  } = (0, T.nk)("guild_discovery"), a = (0, E.e7)([x.ZP], () => x.ZP.getCurrentCategoryId()), r = (0, E.e7)([x.ZP], () => x.ZP.getIsReady()), o = (0, f.Z)(p.Z.QUEST_HOME_PAGE);
+  } = (0, N.nk)("guild_discovery"), a = (0, E.e7)([x.ZP], () => x.ZP.getCurrentCategoryId()), r = (0, E.e7)([x.ZP], () => x.ZP.getIsReady()), o = (0, f.Z)(p.Z.QUEST_HOME_PAGE);
   return (s || l) && (!r || a === F.Gj.Clans) ? (0, i.jsx)(w.Z, {}) : o && a === F.Gj.Quests ? (0, i.jsx)(A.Z, {}) : (0, i.jsx)($, {
     searchRoute: t
   })

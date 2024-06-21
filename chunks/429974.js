@@ -17,10 +17,10 @@ async function g(e) {
   var t, l, a, g;
   let {
     userId: p,
-    section: T,
-    subsection: N,
-    guildId: S = _.ME,
-    channelId: C,
+    section: N,
+    subsection: T,
+    guildId: C = _.ME,
+    channelId: S,
     friendToken: A,
     analyticsLocation: f,
     ...Z
@@ -45,18 +45,18 @@ async function g(e) {
     return t => (0, i.jsx)(e, {
       location: "handleOpenUserProfileModal",
       user: v,
-      guildId: S,
+      guildId: C,
       friendToken: A,
-      initialSection: T,
-      initialSubsection: N,
-      channelId: C,
+      initialSection: N,
+      initialSubsection: T,
+      channelId: S,
       ...t,
       ...Z
     })
   }), E.default.track(_.rMx.OPEN_MODAL, {
     type: "Profile Modal",
-    guild_id: S !== _.ME ? S : null,
-    channel_id: C,
+    guild_id: C !== _.ME ? C : null,
+    channel_id: S,
     other_user_id: p,
     application_id: null !== (l = null == O ? void 0 : O.application_id) && void 0 !== l ? l : null,
     application_name: null == O ? void 0 : O.name,
@@ -77,7 +77,7 @@ async function g(e) {
 function p() {
   null != m && (0, s.closeModal)(m), m = null
 }
-class T extends a.Z {
+class N extends a.Z {
   _initialize() {
     l.Z.subscribe("USER_PROFILE_MODAL_OPEN", g), l.Z.subscribe("USER_PROFILE_MODAL_CLOSE", p)
   }
@@ -85,4 +85,4 @@ class T extends a.Z {
     l.Z.unsubscribe("USER_PROFILE_MODAL_OPEN", g), l.Z.unsubscribe("USER_PROFILE_MODAL_CLOSE", p)
   }
 }
-t.Z = new T
+t.Z = new N

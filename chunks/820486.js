@@ -26,13 +26,13 @@ let I = {},
   m = I,
   g = !1,
   p = {},
-  T = {},
   N = {},
-  S = {
+  T = {},
+  C = {
     id: null,
     justChanged: !1
   },
-  C = {
+  S = {
     id: null,
     justChanged: !1
   },
@@ -66,19 +66,19 @@ class v extends(i = a.ZP.DeviceSettingsStore) {
     return g
   }
   get lastDeviceConnected() {
-    return N
+    return T
   }
   get inputDevices() {
     return p
   }
   get lastInputSystemDevice() {
-    return S
+    return C
   }
   get outputDevices() {
-    return T
+    return N
   }
   get lastOutputSystemDevice() {
-    return C
+    return S
   }
 }
 _(v, "displayName", "ConnectedDeviceStore"), _(v, "persistKey", "ConnectedDeviceStore"), t.Z = new v(r.Z, {
@@ -87,35 +87,35 @@ _(v, "displayName", "ConnectedDeviceStore"), _(v, "persistKey", "ConnectedDevice
       inputDevices: t,
       outputDevices: n
     } = e, i = {};
-    S.justChanged = !1, t.forEach(e => {
+    C.justChanged = !1, t.forEach(e => {
       if (i[f(e)] = e.id, e.id === h.w5) {
         var t;
         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-        n !== S.id && (S.justChanged = !0), S.id = n
+        n !== C.id && (C.justChanged = !0), C.id = n
       }
     });
     let s = {};
-    if (C.justChanged = !1, n.forEach(e => {
+    if (S.justChanged = !1, n.forEach(e => {
         if (s[f(e)] = e.id, e.id === h.w5) {
           var t;
           let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-          n !== C.id && (C.justChanged = !0), C.id = n
+          n !== S.id && (S.justChanged = !0), S.id = n
         }
       }), !g) {
-      p = i, T = s, g = !0;
+      p = i, N = s, g = !0;
       return
     }
     let a = Object.keys(p),
       r = Object.keys(i),
-      o = Object.keys(T),
+      o = Object.keys(N),
       c = Object.keys(s),
       u = l().difference(a, r),
       d = l().difference(o, c);
-    return u.length > 0 || d.length > 0 ? N = {} : (l().difference(r, a).forEach(e => {
-      N[e] = Z(N[e], e, E.QyF.INPUT)
+    return u.length > 0 || d.length > 0 ? T = {} : (l().difference(r, a).forEach(e => {
+      T[e] = Z(T[e], e, E.QyF.INPUT)
     }), l().difference(c, o).forEach(e => {
-      N[e] = Z(N[e], e, E.QyF.OUTPUT)
-    })), !(l().isEqual(a, r) && l().isEqual(o, c)) && (p = i, T = s, !0)
+      T[e] = Z(T[e], e, E.QyF.OUTPUT)
+    })), !(l().isEqual(a, r) && l().isEqual(o, c)) && (p = i, N = s, !0)
   },
   CONNECTED_DEVICE_SET: function(e) {
     let {
@@ -129,19 +129,19 @@ _(v, "displayName", "ConnectedDeviceStore"), _(v, "persistKey", "ConnectedDevice
         null != t && r.Z.wait(() => o.Z.setInputDevice(t, n))
       }
       if (t === E.aVf.OUTPUT || t === E.aVf.INPUT_AND_OUTPUT) {
-        let t = T[e];
+        let t = N[e];
         r.Z.wait(() => o.Z.setOutputDevice(t, n))
       }
-    }(t, n, i), delete N[t]
+    }(t, n, i), delete T[t]
   },
   CONNECTED_DEVICE_IGNORE: function(e) {
     let {
       displayName: t
     } = e;
-    delete N[t]
+    delete T[t]
   },
   CONNECTED_DEVICE_NEVER_SHOW_MODAL: function() {
-    N = {}, m = {
+    T = {}, m = {
       neverShowModal: !0
     }
   }

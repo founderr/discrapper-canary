@@ -32,7 +32,7 @@ t.Z = function(e) {
     t.scrollToBottom({
       callback: () => requestAnimationFrame(() => e())
     })
-  }), []), T = s.useCallback(e => {
+  }), []), N = s.useCallback(e => {
     let t = document.querySelector(e),
       n = m.current;
     null != t && null != n && n.scrollIntoViewNode({
@@ -40,15 +40,15 @@ t.Z = function(e) {
       padding: 8,
       callback: () => null == t ? void 0 : t.focus()
     })
-  }, []), N = (0, l.ZP)({
+  }, []), T = (0, l.ZP)({
     id: "people-list",
     isEnabled: I,
     scrollToStart: g,
     scrollToEnd: p,
-    setFocus: T
+    setFocus: N
   });
   return (0, i.jsx)(a.bG, {
-    navigator: N,
+    navigator: T,
     children: (0, i.jsx)(a.SJ, {
       children: e => {
         let {

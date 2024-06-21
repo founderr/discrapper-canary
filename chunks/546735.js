@@ -40,12 +40,12 @@ function a(e) {
       default:
         return !1
     }
-  }, [a, u.length, r.size, h, _.length, o, d.length]), T = 0 === a;
+  }, [a, u.length, r.size, h, _.length, o, d.length]), N = 0 === a;
   return i.useMemo(() => ({
     onStepClick: g,
     onNextClick: I,
     onBackClick: m,
     isNextDisabled: p,
-    isBackDisabled: T
-  }), [T, p, m, I, g])
+    isBackDisabled: N
+  }), [N, p, m, I, g])
 }

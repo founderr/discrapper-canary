@@ -19,10 +19,10 @@ var i = n(735250),
   m = n(594174),
   g = n(801077),
   p = n(626135),
-  T = n(70956),
-  N = n(225559),
-  S = n(910436),
-  C = n(203028),
+  N = n(70956),
+  T = n(225559),
+  C = n(910436),
+  S = n(203028),
   A = n(358924),
   f = n(292140),
   Z = n(525296),
@@ -30,17 +30,17 @@ var i = n(735250),
   L = n(674563),
   O = n(689938),
   R = n(519851);
-let x = 15 * T.Z.Millis.MINUTE,
+let x = 15 * N.Z.Millis.MINUTE,
   M = (0, Z.Z)(function(e) {
     let {
       party: t,
       onUserContextMenu: n,
       onChannelContextMenu: l,
       quest: a
-    } = e, r = (0, i.jsx)(C.Z, {
+    } = e, r = (0, i.jsx)(S.Z, {
       party: t,
       onUserContextMenu: n
-    }), c = (0, i.jsx)(S.Z, {
+    }), c = (0, i.jsx)(C.Z, {
       party: t,
       onChannelContextMenu: l,
       quest: a
@@ -49,7 +49,7 @@ let x = 15 * T.Z.Millis.MINUTE,
       applicationStreams: E,
       currentActivities: h,
       voiceChannels: _
-    } = t, I = d.length, m = E.length, g = h.length, T = _.length > 0, N = s.useCallback(() => {
+    } = t, I = d.length, m = E.length, g = h.length, N = _.length > 0, T = s.useCallback(() => {
       let e = h.filter(e => {
         var t, n;
         return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === L.wW.GAME
@@ -58,10 +58,10 @@ let x = 15 * T.Z.Millis.MINUTE,
         num_users: I,
         num_streams: m,
         num_activities: g,
-        in_voice_channel: T,
+        in_voice_channel: N,
         games_detected: e
       })
-    }, [I, m, g, T, h]), Z = o()(N, x);
+    }, [I, m, g, N, h]), Z = o()(T, x);
     return null != r || null != c ? (0, i.jsx)(u.Popout, {
       position: "left",
       renderPopout: e => {
@@ -107,7 +107,7 @@ function D() {
     fetching: I.Z.getFetching(),
     currentUser: m.default.getCurrentUser()
   })), r = (0, c.e7)([E.Z], () => E.Z.quests);
-  s.useEffect(() => (d.Z.wait(() => N.L()), () => d.Z.wait(() => N.v())), [null == a ? void 0 : a.id]), s.useEffect(() => {
+  s.useEffect(() => (d.Z.wait(() => T.L()), () => d.Z.wait(() => T.v())), [null == a ? void 0 : a.id]), s.useEffect(() => {
     n && !l && P()
   }, [n, l]);
   let o = s.useMemo(() => {

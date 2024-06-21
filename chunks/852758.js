@@ -25,10 +25,10 @@ var i = n(735250),
   m = n(210887),
   g = n(23434),
   p = n(610001),
-  T = n(78415),
-  N = n(1964),
-  S = n(981631),
-  C = n(815660),
+  N = n(78415),
+  T = n(1964),
+  C = n(981631),
+  S = n(815660),
   A = n(689938);
 let f = "Email Verification",
   Z = "PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY";
@@ -40,7 +40,7 @@ function v() {
   } = (0, a.cj)([g.Z, m.Z], () => ({
     action: g.Z.getAction(),
     theme: m.Z.theme
-  })), v = N.Z.getVerificationTypes(e), [L, O] = s.useState(0), R = (0, E.Z)(v);
+  })), v = T.Z.getVerificationTypes(e), [L, O] = s.useState(0), R = (0, E.Z)(v);
   (0, _.Z)({
     type: l.ImpressionTypes.MODAL,
     name: l.ImpressionNames.USER_ACTION_REQUIRED,
@@ -59,7 +59,7 @@ function v() {
         })
       }, {
         modalKey: f,
-        Layer: T.ZP
+        Layer: N.ZP
       })
     },
     M = () => {
@@ -72,14 +72,14 @@ function v() {
           ...t
         })
       }, {
-        modalKey: C.M,
-        Layer: T.ZP
+        modalKey: S.M,
+        Layer: N.ZP
       })
     };
   return s.useEffect(() => (h.Z.disable(), () => {
     h.Z.enable()
   }), []), s.useEffect(() => {
-    (null == R ? void 0 : R[0]) === S.PUi.PHONE && (null == v ? void 0 : v[0]) === S.PUi.EMAIL && (0, o.openModalLazy)(async () => {
+    (null == R ? void 0 : R[0]) === C.PUi.PHONE && (null == v ? void 0 : v[0]) === C.PUi.EMAIL && (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.resolve().then(n.bind(n, 468026));
@@ -91,7 +91,7 @@ function v() {
       })
     }, {
       modalKey: Z,
-      Layer: T.ZP,
+      Layer: N.ZP,
       onCloseCallback: x
     })
   }, [v, R]), (0, i.jsx)(p.Z, {
@@ -99,7 +99,7 @@ function v() {
     captchaKey: L,
     onCaptchaVerify: e => {
       r.tn.post({
-        url: S.ANM.CAPTCHA,
+        url: C.ANM.CAPTCHA,
         body: {
           captcha_key: e
         },
@@ -110,7 +110,7 @@ function v() {
     },
     theme: t,
     onClick: e => {
-      e === S.PUi.EMAIL_OR_PHONE || e === S.PUi.EMAIL || e === S.PUi.REVERIFY_EMAIL ? x() : M()
+      e === C.PUi.EMAIL_OR_PHONE || e === C.PUi.EMAIL || e === C.PUi.REVERIFY_EMAIL ? x() : M()
     },
     onLogout: () => {
       (0, o.openModalLazy)(async () => {
@@ -130,7 +130,7 @@ function v() {
           })
         })
       }, {
-        Layer: T.ZP
+        Layer: N.ZP
       })
     }
   })

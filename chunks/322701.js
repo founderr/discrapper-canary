@@ -20,7 +20,7 @@ t.Z = function(e) {
     isEnabled: I,
     async scrollToStart() {},
     async scrollToEnd() {}
-  }), g = h !== u.pJs.ONLINE && h !== u.pJs.ALL, p = _ || "" !== E || g, T = t.map((e, t) => p ? (0, i.jsx)("div", {
+  }), g = h !== u.pJs.ONLINE && h !== u.pJs.ALL, p = _ || "" !== E || g, N = t.map((e, t) => p ? (0, i.jsx)("div", {
     children: e.map(n)
   }, t) : (0, i.jsx)(r.W, {
     transitionAppear: !1,
@@ -39,7 +39,7 @@ t.Z = function(e) {
           ref: t,
           className: d.peopleList,
           ...n,
-          children: T
+          children: N
         })
       }
     })

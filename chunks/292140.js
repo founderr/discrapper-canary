@@ -22,7 +22,7 @@ function m(e) {
     party: t,
     close: n,
     onSelect: m
-  } = e, g = (0, c.Z)(t), p = (0, E.Z)(t), T = (0, d.Z)(t), N = (0, u.Z)(t), S = (0, r.Z)(t), C = (0, o.Z)(t);
+  } = e, g = (0, c.Z)(t), p = (0, E.Z)(t), N = (0, d.Z)(t), T = (0, u.Z)(t), C = (0, r.Z)(t), S = (0, o.Z)(t);
   return s.useEffect(() => {
     let e = t.currentActivities.filter(e => {
       var t, n;
@@ -38,11 +38,11 @@ function m(e) {
     "aria-label": I.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
     onSelect: m,
     children: [g, (0, i.jsxs)(l.MenuGroup, {
-      children: [p, T]
+      children: [p, N]
     }), (0, i.jsx)(l.MenuGroup, {
-      children: N
+      children: T
     }), (0, i.jsx)(l.MenuGroup, {
-      children: S
-    }), C]
+      children: C
+    }), S]
   })
 }

@@ -19,10 +19,10 @@ var i = n(392711),
   m = n(944486),
   g = n(594174),
   p = n(979651),
-  T = n(626135),
-  N = n(823379),
-  S = n(358085),
-  C = n(914946),
+  N = n(626135),
+  T = n(823379),
+  C = n(358085),
+  S = n(914946),
   A = n(238679),
   f = n(863141),
   Z = n(981631),
@@ -39,7 +39,7 @@ function O(e, t, n) {
 }
 class R {
   loadServer() {
-    for (let e of (S.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
+    for (let e of (C.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
     for (let [e, t] of Object.entries(this.rpcCommandHandlers)) this.rpcServer.setCommandHandler(e, t);
     for (let [e, t] of Object.entries(this.rpcEventHandlers)) this.rpcServer.setEventHandler(e, t)
   }
@@ -49,7 +49,7 @@ class R {
         type: "RPC_APP_CONNECTED",
         socketId: e.id,
         application: e.application
-      }), T.default.track(Z.rMx.AUTHORIZED_APP_CONNECTED, {
+      }), N.default.track(Z.rMx.AUTHORIZED_APP_CONNECTED, {
         app_id: e.application.id,
         transport: e.transport
       })
@@ -83,13 +83,13 @@ class R {
         }, s = "".concat(t).concat(e.id);
         break;
       default:
-        return (0, N.vE)(e)
+        return (0, T.vE)(e)
     }
     null != n && this.rpcServer.dispatchToSubscriptions(t, {
       channel_id: n
     }, {
       channel_id: n,
-      message: (0, C.Xb)(i)
+      message: (0, S.Xb)(i)
     }, s)
   }
   handleSpeaking(e) {
@@ -131,8 +131,8 @@ class R {
     } = e;
     if (0 !== this.rpcServer.subscriptions.length) this.rpcServer.dispatchToSubscriptions(Z.zMe.NOTIFICATION_CREATE, {}, {
       channel_id: t,
-      message: (0, C.Xb)(n),
-      icon_url: null != i ? (0, C.RE)(i) : null,
+      message: (0, S.Xb)(n),
+      icon_url: null != i ? (0, S.RE)(i) : null,
       title: s,
       body: l
     })
@@ -261,7 +261,7 @@ class R {
         type: n
       }
     } = e;
-    if (0 !== this.rpcServer.subscriptions.length) this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(n, t))
+    if (0 !== this.rpcServer.subscriptions.length) this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, S.cD)(n, t))
   }
   handleRelationshipRemove(e) {
     let {
@@ -269,7 +269,7 @@ class R {
         id: t
       }
     } = e;
-    if (0 !== this.rpcServer.subscriptions.length) this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(Z.OGo.NONE, t))
+    if (0 !== this.rpcServer.subscriptions.length) this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, S.cD)(Z.OGo.NONE, t))
   }
   handlePresenceUpdate(e) {
     let {
@@ -284,12 +284,12 @@ class R {
       } = e;
       if (null != t) return;
       let i = I.Z.getRelationshipType(n);
-      i === Z.OGo.NONE && o.Z.getUserAffinitiesUserIds().has(n) && (i = Z.OGo.IMPLICIT), i !== Z.OGo.NONE && this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(i, n))
+      i === Z.OGo.NONE && o.Z.getUserAffinitiesUserIds().has(n) && (i = Z.OGo.IMPLICIT), i !== Z.OGo.NONE && this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, S.cD)(i, n))
     })
   }
   handlePresencesReplace() {
     if (0 !== this.rpcServer.subscriptions.length) s().forEach(I.Z.getRelationships(), (e, t) => {
-      this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(e, t))
+      this.rpcServer.dispatchToSubscriptions(Z.zMe.RELATIONSHIP_UPDATE, {}, (0, S.cD)(e, t))
     })
   }
   handleEntitlementCreate(e) {

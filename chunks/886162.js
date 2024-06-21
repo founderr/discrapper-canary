@@ -20,7 +20,7 @@ function I(e) {
   let {
     transitionState: t
   } = e, I = (0, a.e7)([u.Z], () => u.Z.getAction()), [m, g] = s.useState(!1), p = (0, d.Dt)();
-  async function T() {
+  async function N() {
     return g(!0), I === E.c2C.AGREEMENTS && g(await (0, o.Lr)()), null
   }
   return (0, c.Z)({
@@ -78,7 +78,7 @@ function I(e) {
     }), (0, i.jsx)(r.ModalFooter, {
       children: (0, i.jsx)(r.Button, {
         submitting: m,
-        onClick: T,
+        onClick: N,
         color: r.Button.Colors.GREEN,
         children: h.Z.Messages.AGREE
       })

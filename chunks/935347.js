@@ -15,10 +15,10 @@ var i = n(735250),
   m = n(197344),
   g = n(474873),
   p = n(706454),
-  T = n(215427),
-  N = n(820254),
-  S = n(838949),
-  C = n(70956),
+  N = n(215427),
+  T = n(820254),
+  C = n(838949),
+  S = n(70956),
   A = n(358085),
   f = n(557177),
   Z = n(998502),
@@ -57,7 +57,7 @@ class x extends s.PureComponent {
     } = this.props, u = a && n && !i && !s;
     if (e.soundpack !== r && (this._connectedSound = this.createSound()), e.connected !== a || u) {
       if (a && null != this.videoRef) {
-        let e = Math.max(Math.ceil((this.videoRef.duration - this.videoRef.currentTime) * C.Z.Millis.SECOND), 600);
+        let e = Math.max(Math.ceil((this.videoRef.duration - this.videoRef.currentTime) * S.Z.Millis.SECOND), 600);
         clearTimeout(this._noProblemsTimeout), d.K.get(v.wli) && this._connectedSound.play(), o ? this.setState({
           problems: !1,
           hide: a
@@ -99,7 +99,7 @@ class x extends s.PureComponent {
         },
         children: [(0, i.jsxs)("div", {
           className: O.content,
-          children: [(0, i.jsx)(S.Z, {
+          children: [(0, i.jsx)(C.Z, {
             autoPlay: !0,
             loop: !e,
             setRef: this.setVideoRef,
@@ -139,7 +139,7 @@ class x extends s.PureComponent {
               className: O.statusLink,
               href: v.yXt.STATUS,
               target: "_blank",
-              children: [(0, i.jsx)(N.Z, {
+              children: [(0, i.jsx)(T.Z, {
                 className: O.icon
               }), L.Z.Messages.SERVER_STATUS]
             })]
@@ -240,10 +240,10 @@ class x extends s.PureComponent {
     }, this._connectedSound.volume = 1
   }
 }
-t.Z = u.ZP.connectStores([I.Z, T.Z, g.Z, _.Z], () => ({
+t.Z = u.ZP.connectStores([I.Z, N.Z, g.Z, _.Z], () => ({
   isTryingToConnect: I.Z.isTryingToConnect(),
   connected: I.Z.isConnected(),
-  incident: T.Z.getIncident(),
+  incident: N.Z.getIncident(),
   soundpack: g.Z.getSoundpack(),
   reducedMotion: _.Z.useReducedMotion
 }))(e => {

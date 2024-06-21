@@ -19,10 +19,10 @@ var i = n(735250),
   m = n(900849),
   g = n(556017),
   p = n(879484),
-  T = n(26580),
-  N = n(206887),
-  S = n(981631),
-  C = n(689938),
+  N = n(26580),
+  T = n(206887),
+  C = n(981631),
+  S = n(689938),
   A = n(565001),
   f = n(129512),
   Z = n(330065);
@@ -53,9 +53,9 @@ t.Z = e => {
     size: 240 * (0, u.x_)()
   }), V = null != H ? H : function(e) {
     switch (e) {
-      case S.BRd.DARK:
+      case C.BRd.DARK:
         return f;
-      case S.BRd.LIGHT:
+      case C.BRd.LIGHT:
         return Z
     }
   }(v), F = null !== (t = I.ZP.getGuildIconURL({
@@ -70,11 +70,11 @@ t.Z = e => {
       if ((0, d.yU)()) {
         (0, E.Z)({
           analyticsSource: {
-            page: S.ZY5.GUILD_DISCOVERY
+            page: C.ZY5.GUILD_DISCOVERY
           },
           analyticsLocation: {
-            page: S.ZY5.GUILD_DISCOVERY,
-            section: S.jXE.GUILD_CAP_UPSELL_MODAL
+            page: C.ZY5.GUILD_DISCOVERY,
+            section: C.jXE.GUILD_CAP_UPSELL_MODAL
           },
           analyticsLocations: B
         });
@@ -166,9 +166,9 @@ t.Z = e => {
             className: A.description,
             variant: "text-sm/normal",
             children: D
-          }), z && null != j && null != O && (0, i.jsx)(T.F, {
+          }), z && null != j && null != O && (0, i.jsx)(N.F, {
             guildId: l.id,
-            discoveryTagStyle: T.B.ALT,
+            discoveryTagStyle: N.B.ALT,
             onTagClick: e => O(e, l.id),
             tags: j,
             section: m.P1.SEARCH
@@ -179,7 +179,7 @@ t.Z = e => {
               children: (0, i.jsx)(r.Text, {
                 variant: "text-xs/normal",
                 color: "header-secondary",
-                children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+                children: S.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
                   membersOnline: b
                 })
               })
@@ -191,7 +191,7 @@ t.Z = e => {
                 children: (0, i.jsx)(r.Text, {
                   variant: "text-xs/normal",
                   color: "header-secondary",
-                  children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+                  children: S.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                     count: y
                   })
                 })
@@ -200,7 +200,7 @@ t.Z = e => {
           })]
         }), W ? (0, i.jsx)("div", {
           className: A.actionButtons,
-          children: (0, i.jsx)(N.Z, {
+          children: (0, i.jsx)(T.Z, {
             guild: l
           })
         }) : null]

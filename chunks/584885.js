@@ -28,17 +28,17 @@ t.Z = e => {
     subtitle: m,
     guildsData: g,
     analyticsContext: p,
-    theme: T,
-    onViewGuild: N,
-    fetchGuilds: S,
-    onGuildCardSeen: C,
+    theme: N,
+    onViewGuild: T,
+    fetchGuilds: C,
+    onGuildCardSeen: S,
     currentCategoryId: A,
     loadId: f,
     onTagClick: Z,
     showMoreCards: v = !1
   } = e;
   s.useEffect(() => {
-    a.Z.wait(() => S())
+    a.Z.wait(() => C())
   }, [A]);
   let L = (0, d.Z)(v ? I : _),
     {
@@ -63,7 +63,7 @@ t.Z = e => {
     });
     else {
       let t = R.findIndex(t => t.id === e);
-      await N(e, t, p, f)
+      await T(e, t, p, f)
     }
   };
   if (x || null == R) {
@@ -74,8 +74,8 @@ t.Z = e => {
     className: h.__invalid_guildCard,
     guild: e,
     onView: P,
-    theme: T,
-    onGuildCardSeen: C,
+    theme: N,
+    onGuildCardSeen: S,
     onTagClick: Z
   }, e.id));
   return (0, i.jsx)("section", {

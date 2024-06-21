@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return S
+    return C
   }
 }), n(47120);
 var i = n(735250),
@@ -20,7 +20,7 @@ var i = n(735250),
   g = n(689938),
   p = n(518494);
 
-function T(e, t, n) {
+function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -28,7 +28,7 @@ function T(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class N extends s.Component {
+class T extends s.Component {
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyDown)
   }
@@ -85,11 +85,11 @@ class N extends s.Component {
     })
   }
   constructor(...e) {
-    super(...e), T(this, "searchBarRef", null), T(this, "state", {
+    super(...e), N(this, "searchBarRef", null), N(this, "state", {
       focused: !1
-    }), T(this, "setRef", e => {
+    }), N(this, "setRef", e => {
       this.searchBarRef = e
-    }), T(this, "handleKeyDown", e => {
+    }), N(this, "handleKeyDown", e => {
       var t;
       let {
         activeRowKey: n,
@@ -133,10 +133,10 @@ class N extends s.Component {
   }
 }
 
-function S() {
+function C() {
   let e = (0, r.e7)([d.Z], () => d.Z.hasLayers()),
     t = (0, o.useModalsStore)(o.hasAnyModalOpenSelector);
-  return (0, i.jsx)(N, {
+  return (0, i.jsx)(T, {
     activeRowKey: (0, r.e7)([h.Z], () => h.Z.activeRowKey),
     hasModalOpen: t || e,
     filterQuery: (0, r.e7)([E.Z], () => E.Z.applicationFilterQuery),

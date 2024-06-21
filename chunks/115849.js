@@ -24,11 +24,11 @@ let p = {
     success: null,
     error: null
   },
-  T = (0, d.hQ)(),
-  N = "".concat(T, "-decription"),
-  S = "".concat(T, "-error");
+  N = (0, d.hQ)(),
+  T = "".concat(N, "-decription"),
+  C = "".concat(N, "-error");
 
-function C(e, t) {
+function S(e, t) {
   switch (t.type) {
     case "RESET":
       return p;
@@ -50,7 +50,7 @@ function C(e, t) {
 function A() {
   let e = s.createRef(),
     t = s.createRef(),
-    [n, l] = s.useReducer(C, p),
+    [n, l] = s.useReducer(S, p),
     {
       canSend: r,
       hint: d,
@@ -92,7 +92,7 @@ function A() {
     },
     autoComplete: "off",
     children: [(0, i.jsx)(c.FormText, {
-      id: N,
+      id: T,
       type: c.FormText.Types.DESCRIPTION,
       children: I.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION
     }), (0, i.jsx)(c.FocusRing, {
@@ -106,7 +106,7 @@ function A() {
           [m.error]: f
         }),
         children: [(0, i.jsx)(c.TextInput, {
-          id: T,
+          id: N,
           inputRef: e,
           className: m.addFriendInput,
           inputClassName: m.input,
@@ -145,7 +145,7 @@ function A() {
           placeholder: I.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
           "aria-label": I.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
           "aria-invalid": null != f || void 0,
-          "aria-describedby": null != f ? S : N
+          "aria-describedby": null != f ? C : T
         }), null != d && (0, i.jsx)("div", {
           className: m.addFriendHint,
           "aria-hidden": !0,
@@ -159,7 +159,7 @@ function A() {
       })
     }), null != f && (0, i.jsx)(c.FormText, {
       role: "alert",
-      id: S,
+      id: C,
       type: c.FormText.Types.ERROR,
       className: g.marginTop8,
       children: f

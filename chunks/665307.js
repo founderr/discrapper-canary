@@ -18,10 +18,10 @@ var i, s = n(735250),
   m = n(785547),
   g = n(490983),
   p = n(799777),
-  T = n(285952),
-  N = n(366695),
-  S = n(366966),
-  C = n(151011),
+  N = n(285952),
+  T = n(366695),
+  C = n(366966),
+  S = n(151011),
   A = n(626135),
   f = n(780570),
   Z = n(624138),
@@ -68,11 +68,11 @@ let M = (0, Z.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
     sort: !0,
     cellClassName: R.nameCell,
     bodyCellClassName: R.nameBodyCell,
-    render: e => (0, s.jsxs)(T.Z, {
-      align: T.Z.Align.CENTER,
-      children: [(0, s.jsx)(N.Z, {
+    render: e => (0, s.jsxs)(N.Z, {
+      align: N.Z.Align.CENTER,
+      children: [(0, s.jsx)(T.Z, {
         game: e.application,
-        size: N.Z.Sizes.SMALL,
+        size: T.Z.Sizes.SMALL,
         className: R.gameIcon
       }), (0, s.jsxs)("div", {
         className: R.nameCellInfo,
@@ -98,8 +98,8 @@ let M = (0, Z.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
     bodyCellClassName: R.textCell,
     render(e) {
       let t = e.libraryApplication.getDistributor();
-      return (0, s.jsx)(T.Z, {
-        align: T.Z.Align.CENTER,
+      return (0, s.jsx)(N.Z, {
+        align: N.Z.Align.CENTER,
         children: null != t ? L.EOG[t] : O.Z.Messages.GAME_LIBRARY_NOT_APPLICABLE
       })
     }
@@ -111,11 +111,11 @@ let M = (0, Z.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
     bodyCellClassName: R.textCell,
     render(e) {
       let t;
-      return t = e.isRunning ? O.Z.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? O.Z.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, s.jsx)(S.ZP, {
+      return t = e.isRunning ? O.Z.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? O.Z.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, s.jsx)(C.ZP, {
         end: e.lastPlayed,
-        location: S.ZP.Locations.GAME_LIBRARY_LAST_PLAYED
-      }) : O.Z.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, s.jsx)(T.Z, {
-        align: T.Z.Align.CENTER,
+        location: C.ZP.Locations.GAME_LIBRARY_LAST_PLAYED
+      }) : O.Z.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, s.jsx)(N.Z, {
+        align: N.Z.Align.CENTER,
         className: r()({
           [R.lastPlayedCellNew]: e.isNew
         }),
@@ -285,10 +285,10 @@ class U extends(i = l.PureComponent) {
       className: i ? R.emptyStateSmall : R.emptyStateLarge,
       children: [(0, s.jsx)("div", {
         className: R.emptyWumpus
-      }), (0, s.jsx)(T.Z, {
+      }), (0, s.jsx)(N.Z, {
         grow: 0,
         shrink: i ? 1 : 0,
-        direction: T.Z.Direction.VERTICAL,
+        direction: N.Z.Direction.VERTICAL,
         children: (0, s.jsxs)("div", {
           className: R.emptyStateText,
           children: [(0, s.jsx)("div", {
@@ -314,7 +314,7 @@ class U extends(i = l.PureComponent) {
       highlightedApplicationKey: o
     } = this.state;
     return (0, s.jsxs)(l.Fragment, {
-      children: [n.length > 0 ? (0, s.jsx)(C.Z, {
+      children: [n.length > 0 ? (0, s.jsx)(S.Z, {
         columns: y,
         data: n,
         sortData: !1,

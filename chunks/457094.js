@@ -15,10 +15,10 @@ var i = n(735250),
   m = n(627845),
   g = n(185666),
   p = n(503737),
-  T = n(513202),
-  N = n(318891),
-  S = n(687751),
-  C = n(912471),
+  N = n(513202),
+  T = n(318891),
+  C = n(687751),
+  S = n(912471),
   A = n(100527),
   f = n(838134),
   Z = n(77987),
@@ -69,10 +69,10 @@ var i = n(735250),
   em = n(6025),
   eg = n(897473),
   ep = n(377368),
-  eT = n(262702),
-  eN = n(639033),
-  eS = n(479313),
-  eC = n(911560),
+  eN = n(262702),
+  eT = n(639033),
+  eC = n(479313),
+  eS = n(911560),
   eA = n(703016),
   ef = n(171368),
   eZ = n(429974),
@@ -112,7 +112,7 @@ function eX(e, t, n) {
 }
 n(117240), n(801077), n(967368), n(272053), n(974180), n(574254), n(551428), n(55563), n(455173), n(882029), n(959457), n(653255), n(663389), n(25990), n(778825), n(999382), n(388610), n(533947), n(277053), n(371398), n(141233), n(471073), n(628566);
 let eJ = !1;
-(0, C.DL)(), r.ZP.initialize(), e_.Z.loadServer(), eY.isPlatformEmbedded && (ez.ZP.on("USER_SETTINGS_OPEN", () => {
+(0, S.DL)(), r.ZP.initialize(), e_.Z.loadServer(), eY.isPlatformEmbedded && (ez.ZP.on("USER_SETTINGS_OPEN", () => {
   !ej.Z.getLayers().includes(eK.S9g.USER_SETTINGS) && _.Z.open(eK.oAB.ACCOUNT)
 }), ez.ZP.on("LAUNCH_APPLICATION", (e, t) => {
   let n = eU.Z.getActiveLibraryApplication(t);
@@ -423,7 +423,7 @@ function e2(e) {
 }
 class e9 extends s.PureComponent {
   componentDidMount() {
-    ez.ZP.setZoomFactor(I.Z.zoom), e_.Z.init(), v.Z.initialize(), ea.Z.initialize(), j.Z.initialize(), ex.Z.initialize(), U.Z.initialize(), eo.Z.initialize(), Q.Z.initialize(), m.Z.init(), w.Z.init(), G.Z.init(), et.Z.initialize(), S.Z.initialize(), b.Z.initialize(), ec.Z.initialize(), N.ZP.initialize(), eR.Z.initialize(), el.Z.initialize(), T.Z.initialize(), H.Z.init(), K.Z.init(), eH.Z.init(), eF.Z.init(), p.Z.initialize(), eA.Z.init(), eB.Z.init(), ev.Z.init(), eT.Z.initialize(), eN.Z.initialize(), eZ.Z.initialize(), eL.Z.init(), D.Z.initialize(), g.Z.initialize(), eI.Z.initialize(), ep.Z.initialize(), ei.Z.initialize(), en.Z.initialize(), es.Z.initialize(), O.Z.initialize(), q.Z.init({
+    ez.ZP.setZoomFactor(I.Z.zoom), e_.Z.init(), v.Z.initialize(), ea.Z.initialize(), j.Z.initialize(), ex.Z.initialize(), U.Z.initialize(), eo.Z.initialize(), Q.Z.initialize(), m.Z.init(), w.Z.init(), G.Z.init(), et.Z.initialize(), C.Z.initialize(), b.Z.initialize(), ec.Z.initialize(), T.ZP.initialize(), eR.Z.initialize(), el.Z.initialize(), N.Z.initialize(), H.Z.init(), K.Z.init(), eH.Z.init(), eF.Z.init(), p.Z.initialize(), eA.Z.init(), eB.Z.init(), ev.Z.init(), eN.Z.initialize(), eT.Z.initialize(), eZ.Z.initialize(), eL.Z.init(), D.Z.initialize(), g.Z.initialize(), eI.Z.initialize(), ep.Z.initialize(), ei.Z.initialize(), en.Z.initialize(), es.Z.initialize(), O.Z.initialize(), q.Z.init({
       hasModalOpen: o.hasAnyModalOpen,
       openModal: () => (0, o.openModalLazy)(async () => {
         let {
@@ -436,7 +436,7 @@ class e9 extends s.PureComponent {
     }), P.Z.init(), X.Z.initialize(), eu.Z.initialize(), er.Z.initialize(), M.Z.initialize(), this.rewriterUnlisten = ed.Z.addRouteRewriter(this.ensureChannelMatchesGuild), this.historyUnlisten = ed.Z.addRouteChangeListener(this.handleHistoryChange)
   }
   componentWillUnmount() {
-    ex.Z.terminate(), eo.Z.terminate(), ea.Z.terminate(), v.Z.terminate(), N.ZP.terminate(), eR.Z.terminate(), T.Z.terminate(), ec.Z.terminate(), el.Z.terminate(), eZ.Z.terminate(), p.Z.terminate(), D.Z.terminate(), X.Z.terminate(), g.Z.terminate(), eu.Z.terminate(), eI.Z.terminate(), ep.Z.terminate(), ei.Z.terminate(), en.Z.terminate(), es.Z.terminate(), O.Z.terminate(), er.Z.terminate(), M.Z.terminate(), y.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
+    ex.Z.terminate(), eo.Z.terminate(), ea.Z.terminate(), v.Z.terminate(), T.ZP.terminate(), eR.Z.terminate(), N.Z.terminate(), ec.Z.terminate(), el.Z.terminate(), eZ.Z.terminate(), p.Z.terminate(), D.Z.terminate(), X.Z.terminate(), g.Z.terminate(), eu.Z.terminate(), eI.Z.terminate(), ep.Z.terminate(), ei.Z.terminate(), en.Z.terminate(), es.Z.terminate(), O.Z.terminate(), er.Z.terminate(), M.Z.terminate(), y.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
   }
   handleHistoryChange(e) {
     let {
@@ -481,7 +481,7 @@ class e9 extends s.PureComponent {
           let {
             summaryId: e
           } = (0, l.parse)(t);
-          null != e && eS.ZP.setSelectedSummary(s, e)
+          null != e && eC.ZP.setSelectedSummary(s, e)
         }
         if (null != o && h) {
           let e = eP.ZP.getCurrentSidebarChannelId(n) !== o,
@@ -530,7 +530,7 @@ class e9 extends s.PureComponent {
     } = e4(n), a = (0, eE.S)(i) && i !== eK.ME && i !== eK.I_8;
     if (null != s && (0, eE.c)(s) && !(0, eq.AB)(s) && a) {
       let n = eD.Z.getChannel(s);
-      if (null == n) eC.Z.loadThread(s).then(() => e2({
+      if (null == n) eS.Z.loadThread(s).then(() => e2({
         channelId: s,
         guildId: i,
         pathname: t
@@ -542,7 +542,7 @@ class e9 extends s.PureComponent {
       if (null != l) {
         if (!((0, eE.c)(l) && !(0, eq.AB)(s))) return null;
         let n = eD.Z.getChannel(l);
-        if (null == n) eC.Z.loadThread(l).then(() => e2({
+        if (null == n) eS.Z.loadThread(l).then(() => e2({
           channelId: l,
           guildId: i,
           pathname: t

@@ -20,10 +20,10 @@ var i, s, l = n(470079),
   m = n(899667),
   g = n(496675),
   p = n(541566),
-  T = n(192513),
-  N = n(255791),
-  S = n(70956),
-  C = n(267642),
+  N = n(192513),
+  T = n(255791),
+  C = n(70956),
+  S = n(267642),
   A = n(981631);
 
 function f(e) {
@@ -43,15 +43,15 @@ function f(e) {
       isGracePeriodVisible: p.Z.isVisible(n)
     })),
     Z = (0, a.e7)([_.Z], () => _.Z.isVisible(e)),
-    v = (0, a.e7)([N.Z], () => N.Z.isVisible(e)),
+    v = (0, a.e7)([T.Z], () => T.Z.isVisible(e)),
     L = (0, a.e7)([g.Z], () => g.Z.can(A.Plq.ADMINISTRATOR, e)),
     O = null != s && Date.now() - s <= A.Dge,
     R = null != e ? e.premiumSubscriberCount : 0,
-    x = (0, C.rF)(R, n) !== A.Eu4.NONE,
+    x = (0, S.rF)(R, n) !== A.Eu4.NONE,
     M = null != i && Date.now() - i <= 432e5,
     P = !M && !O && L && x,
     D = (0, c.m)(n),
-    b = (0, a.e7)([T.Z], () => T.Z.isVisible(e)),
+    b = (0, a.e7)([N.Z], () => N.Z.isVisible(e)),
     y = E.Z.useShouldShowChannelNotice(n),
     j = (0, h.h6)(e),
     {
@@ -67,7 +67,7 @@ function f(e) {
       let e = -1;
       return P && (e = window.setTimeout(() => {
         null != n && (0, r.C0)(n)
-      }, 30 * Math.random() * S.Z.Millis.SECOND)), () => {
+      }, 30 * Math.random() * C.Z.Millis.SECOND)), () => {
         window.clearTimeout(e)
       }
     }, [n, P]), Z) return 0;

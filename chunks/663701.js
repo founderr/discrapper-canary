@@ -19,10 +19,10 @@ var i = n(735250),
   m = n(257968),
   g = n(367907),
   p = n(770471),
-  T = n(158631),
-  N = n(143614),
-  S = n(463119),
-  C = n(377171),
+  N = n(158631),
+  T = n(143614),
+  C = n(463119),
+  S = n(377171),
   A = n(243778),
   f = n(922409),
   Z = n(899740),
@@ -53,11 +53,11 @@ let q = e => {
     let {
       selected: t,
       ...n
-    } = e, s = (0, o.JA)("friends"), l = (0, u.e7)([j.Z], () => j.Z.getPendingCount()), a = (0, N.Z)(), {
+    } = e, s = (0, o.JA)("friends"), l = (0, u.e7)([j.Z], () => j.Z.getPendingCount()), a = (0, T.Z)(), {
       canViewBroadcasts: r
     } = p.Z.useExperiment({
       location: "friends_tab_no_track"
-    }), c = (0, T.ZP)();
+    }), c = (0, N.ZP)();
     return (0, i.jsxs)(V.Qj, {
       selected: t,
       route: z.Z5c.FRIENDS,
@@ -73,7 +73,7 @@ let q = e => {
       ...n,
       ...s,
       children: [a.length > 0 && r && (0, i.jsx)(h.TextBadge, {
-        color: C.Z.BG_BRAND,
+        color: S.Z.BG_BRAND,
         text: (0, i.jsxs)("div", {
           className: K.broadcastingBadge,
           children: [(0, i.jsx)(B.Z, {
@@ -137,7 +137,7 @@ let q = e => {
       t = (0, Z.T)();
     return e > 0 ? (0, i.jsx)(h.NumberBadge, {
       count: e,
-      color: 0 === t ? C.Z.ICON_MUTED : void 0
+      color: 0 === t ? S.Z.ICON_MUTED : void 0
     }) : null
   },
   $ = e => {
@@ -209,7 +209,7 @@ let q = e => {
         } = e;
         return t === d.z.FAMILY_CENTER_NEW_BADGE ? (0, i.jsx)(h.TextBadge, {
           text: W.Z.Messages.NEW,
-          color: C.Z.BG_BRAND
+          color: S.Z.BG_BRAND
         }) : null
       }
     })
@@ -300,7 +300,7 @@ let es = e => {
         }
       }, "activities") : null, (0, i.jsx)($, {
         selected: null == d ? null != s && s.startsWith(z.Z5c.MESSAGE_REQUESTS) : d === z.Z5c.MESSAGE_REQUESTS
-      }, "message-requests"), (0, i.jsx)(S.i, {
+      }, "message-requests"), (0, i.jsx)(C.i, {
         selected: d === z.Z5c.COLLECTIBLES_SHOP || (null == s ? void 0 : s.startsWith(z.Z5c.COLLECTIBLES_SHOP)),
         locationState: {
           analyticsSource: {

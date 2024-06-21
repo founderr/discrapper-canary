@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return C
+    return S
   }
 });
 var i = n(735250);
@@ -21,11 +21,11 @@ var s = n(120356),
   g = n(689938),
   p = n(585233);
 
-function T(e) {
+function N(e) {
   (0, o.Z)(m.Z.CLIPS), (0, h.UW)(e)
 }
 
-function N() {
+function T() {
   let e = (0, a.e7)([c.Z], () => c.Z.getKeybindForAction(I.kg4.SAVE_CLIP));
   if (null == e) return (0, i.jsx)(i.Fragment, {
     children: g.Z.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY_NO_KEYBIND
@@ -43,7 +43,7 @@ function N() {
     })
   })
 }
-let S = {
+let C = {
   [_.D5.Error]: {
     textColor: "text-primary",
     buttonLook: r.Button.Looks.FILLED,
@@ -67,21 +67,21 @@ let S = {
     buttonColor: r.Button.Colors.BRAND,
     bodyCopy: () => g.Z.Messages.CLIPS_USER_EDUCATION_DISABLED_BODY,
     buttonCopy: () => g.Z.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-    ctaOnClick: () => T(_.D5.Disabled),
+    ctaOnClick: () => N(_.D5.Disabled),
     containerClass: p.container
   },
   [_.D5.Enabled]: {
     textColor: "always-white",
     buttonLook: r.Button.Looks.FILLED,
     buttonColor: r.Button.Colors.BRAND_INVERTED,
-    bodyCopy: () => (0, i.jsx)(N, {}),
+    bodyCopy: () => (0, i.jsx)(T, {}),
     buttonCopy: () => g.Z.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-    ctaOnClick: () => T(_.D5.Enabled),
+    ctaOnClick: () => N(_.D5.Enabled),
     containerClass: l()(p.container, p.containerEnabled)
   }
 };
 
-function C() {
+function S() {
   var e;
   let {
     decoupledClipsEnabled: t,
@@ -99,7 +99,7 @@ function C() {
       buttonColor: d,
       buttonLook: I,
       containerClass: m
-    } = S[s];
+    } = C[s];
   return (0, i.jsxs)("div", {
     className: m,
     children: [(0, i.jsx)(r.Text, {

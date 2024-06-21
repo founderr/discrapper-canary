@@ -15,10 +15,10 @@ var i = n(735250),
   m = n(699516),
   g = n(974042),
   p = n(451478),
-  T = n(390697),
-  N = n(434184),
-  S = n(701861),
-  C = n(437314),
+  N = n(390697),
+  T = n(434184),
+  C = n(701861),
+  S = n(437314),
   A = n(696577),
   f = n(163417),
   Z = n(492347),
@@ -36,7 +36,7 @@ t.Z = function(e) {
   } = (0, _.ZP)(h.Z.FRIENDS_LIST), {
     rows: M,
     section: P
-  } = (0, r.cj)([g.ZP], () => g.ZP.getState()), D = (0, r.e7)([p.Z], () => p.Z.isFocused()), b = (0, r.e7)([m.Z], () => m.Z.getRelationshipCount()), y = (0, T.T)(), [j, U] = s.useState(() => {
+  } = (0, r.cj)([g.ZP], () => g.ZP.getState()), D = (0, r.e7)([p.Z], () => p.Z.isFocused()), b = (0, r.e7)([m.Z], () => m.Z.getRelationshipCount()), y = (0, N.T)(), [j, U] = s.useState(() => {
     let e = {};
     for (let t of Object.values(O.pJs)) e[t] = "";
     return e
@@ -53,7 +53,7 @@ t.Z = function(e) {
   }, [j, t]), k = M.filter(t, j[t]);
   if (0 === k.length && "" === j[t]) return (0, i.jsxs)("div", {
     className: x.emptyStateContainer,
-    children: [t === O.pJs.ONLINE && (0, i.jsx)(I.Z, {}), (0, i.jsx)(C.Z, {
+    children: [t === O.pJs.ONLINE && (0, i.jsx)(I.Z, {}), (0, i.jsx)(S.Z, {
       type: t,
       onClick: () => {
         c.Z.setSection(O.pJs.ADD_FRIEND)
@@ -115,8 +115,8 @@ t.Z = function(e) {
         })]
       }), H ? (0, i.jsx)("div", {
         className: x.emptyStateContainer,
-        children: (0, i.jsx)(C.Z, {
-          type: C.j.SECTION_NO_RESULTS
+        children: (0, i.jsx)(S.Z, {
+          type: S.j.SECTION_NO_RESULTS
         }, P)
       }) : (0, i.jsx)(f.Z, {
         relationshipCount: b,
@@ -124,7 +124,7 @@ t.Z = function(e) {
         renderRow: function(e) {
           switch (t) {
             case O.pJs.BLOCKED:
-              return (0, i.jsx)(N.Z, {
+              return (0, i.jsx)(T.Z, {
                 ...e,
                 isFocused: D
               });
@@ -141,7 +141,7 @@ t.Z = function(e) {
             case O.pJs.ONLINE:
             case O.pJs.ALL:
             default:
-              return (0, i.jsx)(S.Z, {
+              return (0, i.jsx)(C.Z, {
                 ...e,
                 isFocused: D
               })

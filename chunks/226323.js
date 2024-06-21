@@ -19,11 +19,11 @@ var i = n(735250),
   m = n(51144),
   g = n(524484),
   p = n(689938),
-  T = n(258720);
-let N = {
+  N = n(258720);
+let T = {
     offset: 2
   },
-  S = {
+  C = {
     serverDeaf: {
       icon: o.HeadphonesDenyIcon,
       colorize: !0,
@@ -51,12 +51,12 @@ let N = {
     }
   };
 
-function C(e) {
+function S(e) {
   var t, s;
   let {
     channel: l,
     user: _,
-    nick: C,
+    nick: S,
     mute: A,
     deaf: f,
     serverMute: Z,
@@ -64,7 +64,7 @@ function C(e) {
   } = e, L = (0, r.e7)([I.Z], () => I.Z.isLocalMute(_.id)), O = (0, u.Z)({
     userId: _.id,
     checkSoundSharing: !0
-  }), R = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, x = _.getAvatarURL(l.guild_id, 24), M = null != C ? C : m.ZP.getName(_), {
+  }), R = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, x = _.getAvatarURL(l.guild_id, 24), M = null != S ? S : m.ZP.getName(_), {
     icon: P,
     colorize: D,
     getStatus: b
@@ -76,11 +76,11 @@ function C(e) {
       mute: s,
       localMute: l
     } = e;
-    if (t) return S.serverDeaf;
-    if (n) return S.deaf;
-    if (i) return S.serverMute;
-    else if (l) return S.localMute;
-    else if (s) return S.mute
+    if (t) return C.serverDeaf;
+    if (n) return C.deaf;
+    if (i) return C.serverMute;
+    else if (l) return C.localMute;
+    else if (s) return C.mute
   }({
     serverDeaf: v,
     deaf: f,
@@ -133,22 +133,22 @@ function C(e) {
       children: t => (0, i.jsx)(o.Clickable, {
         ...t,
         ...e,
-        className: T.avatarContainer,
+        className: N.avatarContainer,
         onContextMenu: j,
-        focusProps: N,
+        focusProps: T,
         children: (0, i.jsx)(d.Z, {
           shakeLocation: g.oZ.VOICE_USER,
           isShaking: O,
           children: (0, i.jsx)("div", {
-            className: a()(T.avatar, {
-              [T.speaking]: O
+            className: a()(N.avatar, {
+              [N.speaking]: O
             }),
             style: {
               backgroundImage: "url(".concat(x, ")")
             },
             children: null != P ? (0, i.jsx)(P, {
-              className: a()(T.avatarIconOverlay, {
-                [T.avatarIconRed]: D
+              className: a()(N.avatarIconOverlay, {
+                [N.avatarIconRed]: D
               }),
               color: "currentColor",
               size: "xs"
@@ -166,7 +166,7 @@ function A(e) {
     channel: n,
     className: l
   } = e, [c, u] = s.useState(!1), d = c ? o.MinusIcon : o.PlusSmallIcon, E = (0, i.jsx)(o.CircleIconButton, {
-    className: T.expandButton,
+    className: N.expandButton,
     onClick: () => u(!c),
     color: o.CircleIconButtonColors.PRIMARY,
     size: o.CircleIconButtonSizes.SIZE_24,
@@ -175,7 +175,7 @@ function A(e) {
       size: "xs",
       color: "currentColor"
     }),
-    focusProps: N
+    focusProps: T
   }), h = (0, r.e7)([_.default], () => _.default.getId(), []), [I, m] = function(e, t) {
     let n = [];
     for (let i of e) {
@@ -187,10 +187,10 @@ function A(e) {
     return [n, !1]
   }(t, h), g = m && c ? t : I;
   return g.length <= 0 ? null : (0, i.jsx)(o.ScrollerThin, {
-    className: a()(T.scroller, l),
+    className: a()(N.scroller, l),
     fade: !0,
     children: (0, i.jsxs)("div", {
-      className: T.voiceUsers,
+      className: N.voiceUsers,
       role: "group",
       "aria-label": p.Z.Messages.VOICE_PANEL_USERS_A11Y_LABEL,
       children: [g.map(e => {
@@ -199,7 +199,7 @@ function A(e) {
           nick: s,
           voiceState: l
         } = e;
-        return t.id !== h ? (0, i.jsx)(C, {
+        return t.id !== h ? (0, i.jsx)(S, {
           channel: n,
           user: t,
           nick: s,

@@ -20,7 +20,7 @@ let p = {
   friction: 60
 };
 
-function T(e) {
+function N(e) {
   let {
     selectedGame: t
   } = e, n = (0, _.GN)(e => e.selectedGames, a.Z), l = s.useMemo(() => new Set(n), [n]), r = (0, I.J)({
@@ -35,7 +35,7 @@ function T(e) {
   })
 }
 
-function N() {
+function T() {
   let e = (0, _.GN)(e => e.selectedPlaystyle, a.Z),
     t = s.useCallback(e => _.GN.getState().setSelectedPlaystyle(e), []);
   return (0, i.jsx)(u.Z, {
@@ -46,7 +46,7 @@ function N() {
   })
 }
 
-function S(e) {
+function C(e) {
   let {
     selectedGame: t
   } = e, n = (0, I.J)({
@@ -62,7 +62,7 @@ function S(e) {
   })
 }
 
-function C(e) {
+function S(e) {
   return e.toString()
 }
 t.Z = s.memo(function(e) {
@@ -121,13 +121,13 @@ t.Z = s.memo(function(e) {
     G = s.useCallback(e => {
       switch (e) {
         case 0:
-          return (0, i.jsx)(T, {
+          return (0, i.jsx)(N, {
             selectedGame: t
           });
         case 1:
-          return (0, i.jsx)(N, {});
+          return (0, i.jsx)(T, {});
         case 2:
-          return (0, i.jsx)(S, {
+          return (0, i.jsx)(C, {
             selectedGame: t
           })
       }
@@ -142,7 +142,7 @@ t.Z = s.memo(function(e) {
         currentStep: A,
         items: U,
         renderItem: G,
-        getItemKey: C
+        getItemKey: S
       })
     }), (0, i.jsxs)(l.animated.div, {
       className: g.footer,

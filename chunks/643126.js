@@ -15,11 +15,11 @@ var i = n(735250),
   m = n(976401),
   g = n(333454),
   p = n(864441),
-  T = n(981631),
-  N = n(689938),
-  S = n(15245);
+  N = n(981631),
+  T = n(689938),
+  C = n(15245);
 
-function C(e, t, n) {
+function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -42,11 +42,11 @@ class f extends s.PureComponent {
   renderTitle() {
     return (0, i.jsxs)("div", {
       children: [(0, i.jsx)(p.Z, {
-        children: this.isHost() ? N.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({
+        children: this.isHost() ? T.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({
           count: this.props.party.length
-        }) : N.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER
+        }) : T.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER
       }), (0, i.jsx)(g.Z, {
-        children: N.Z.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER
+        children: T.Z.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER
       })]
     })
   }
@@ -55,26 +55,26 @@ class f extends s.PureComponent {
       onStopListening: e
     } = this.props;
     return this.isHost() ? null : (0, i.jsx)(m.Z, {
-      tooltipText: N.Z.Messages.SPOTIFY_LISTEN_ALONG_STOP,
+      tooltipText: T.Z.Messages.SPOTIFY_LISTEN_ALONG_STOP,
       onClick: e,
       icon: c.CloseSmallIcon
     })
   }
   renderHelpIcon() {
     return this.isHost() ? (0, i.jsx)(m.Z, {
-      tooltipText: N.Z.Messages.SPOTIFY_LISTEN_ALONG_INFO,
+      tooltipText: T.Z.Messages.SPOTIFY_LISTEN_ALONG_INFO,
       onClick: () => {
-        window.open(I.Z.getArticleURL(T.BhN.SPOTIFY_CONNECTION), "_blank")
+        window.open(I.Z.getArticleURL(N.BhN.SPOTIFY_CONNECTION), "_blank")
       },
       icon: c.CircleInformationIcon
     }) : null
   }
   render() {
     return (0, i.jsxs)("div", {
-      className: S.listeningAlong,
+      className: C.listeningAlong,
       children: [this.renderTitle(), (0, i.jsx)(h.Z, {
         justify: h.Z.Justify.END,
-        className: S.party,
+        className: C.party,
         children: (0, i.jsx)(_.Z, {
           users: this.props.party,
           max: this.isHost() ? A.HOST : A.LISTENER,
@@ -82,20 +82,20 @@ class f extends s.PureComponent {
           renderMoreUsers: this.renderPartyMemberOverflow
         })
       }), (0, i.jsxs)("div", {
-        className: S.icons,
+        className: C.icons,
         children: [this.renderHelpIcon(), this.renderStopListeningButton()]
       })]
     })
   }
   constructor(...e) {
-    super(...e), C(this, "renderPartyMember", (e, t) => {
+    super(...e), S(this, "renderPartyMember", (e, t) => {
       let n;
       if (null == e) return null;
       let {
         host: l,
         onUserContextMenu: r
       } = this.props;
-      return n = (null == l ? void 0 : l.id) === e.id ? N.Z.Messages.SPOTIFY_LISTEN_ALONG_HOST : N.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, i.jsx)(c.Popout, {
+      return n = (null == l ? void 0 : l.id) === e.id ? T.Z.Messages.SPOTIFY_LISTEN_ALONG_HOST : T.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, i.jsx)(c.Popout, {
         preload: () => (0, d.W)(e.id, e.getAvatarURL(void 0, 80)),
         renderPopout: t => (o()(null != e, ""), (0, i.jsx)(E.Z, {
           ...t,
@@ -117,7 +117,7 @@ class f extends s.PureComponent {
               key: e.id,
               src: e.getAvatarURL(void 0, 24),
               size: c.AvatarSizes.SIZE_24,
-              className: a()(S.avatar, t),
+              className: a()(C.avatar, t),
               "aria-label": e.username,
               onMouseEnter: i,
               onMouseLeave: o,
@@ -126,16 +126,16 @@ class f extends s.PureComponent {
           }
         })
       }, e.id)
-    }), C(this, "renderPartyMemberOverflow", (e, t, n) => {
+    }), S(this, "renderPartyMemberOverflow", (e, t, n) => {
       let {
         renderOverflowPopout: s
       } = this.props;
       return (0, i.jsx)(c.Popout, {
         renderPopout: s,
         children: n => (0, i.jsx)(c.Tooltip, {
-          text: N.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENERS,
+          text: T.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENERS,
           children: s => (0, i.jsx)("div", {
-            className: a()(S.overflow, t),
+            className: a()(C.overflow, t),
             ...s,
             ...n,
             children: e

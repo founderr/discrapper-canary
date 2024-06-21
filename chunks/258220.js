@@ -24,13 +24,13 @@ function I(e) {
   let {
     applicationId: n,
     ...I
-  } = e, [m, g] = s.useState(!1), [p] = (0, r.Z)([n]), T = null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : "This Activity";
+  } = e, [m, g] = s.useState(!1), [p] = (0, r.Z)([n]), N = null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : "This Activity";
   s.useEffect(() => {
     c.default.track(d.rMx.OPEN_MODAL, {
       type: _
     })
   }, []);
-  let N = () => {
+  let T = () => {
     let e = "temporary";
     m && (e = "permanent", a.ZP.updatedUnsyncedSettings({
       disableActivityHardwareAccelerationPrompt: !0
@@ -50,7 +50,7 @@ function I(e) {
         variant: "text-lg/normal",
         children: E.Z.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_TITLE
       }), (0, i.jsx)(l.ModalCloseButton, {
-        onClick: N,
+        onClick: T,
         className: h.closeButton
       })]
     }), (0, i.jsx)(l.ModalContent, {
@@ -59,7 +59,7 @@ function I(e) {
         variant: "text-md/normal",
         className: h.__invalid_ratingBody,
         children: E.Z.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_BODY.format({
-          applicationName: T
+          applicationName: N
         })
       })
     }), (0, i.jsxs)(l.ModalFooter, {
@@ -76,7 +76,7 @@ function I(e) {
         })
       }), (0, i.jsx)(l.Button, {
         color: l.Button.Colors.PRIMARY,
-        onClick: N,
+        onClick: T,
         children: E.Z.Messages.ACTIVITY_HARDWARE_ACCELERATION_NO_THANKS
       }), (0, i.jsx)(l.Button, {
         color: l.Button.Colors.BRAND,

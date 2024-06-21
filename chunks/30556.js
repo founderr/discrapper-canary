@@ -1,31 +1,31 @@
-i.d(n, {
+s.d(i, {
   Z: function() {
     return d
   }
 });
-var l = i(735250);
-i(470079);
-var s = i(481060),
-  t = i(493683),
-  o = i(785717),
-  a = i(993409),
-  r = i(689938);
+var n = s(735250);
+s(470079);
+var l = s(481060),
+  t = s(493683),
+  o = s(785717),
+  r = s(993409),
+  a = s(689938);
 
 function d(e) {
   let {
-    user: n,
-    onClose: i
+    user: i,
+    onClose: s
   } = e, {
     trackUserProfileAction: d
   } = (0, o.KZ)();
-  return (0, l.jsx)(a.Z, {
+  return (0, n.jsx)(r.Z, {
     variant: "text",
-    icon: s.ChatIcon,
-    text: r.Z.Messages.USER_PROFILE_MESSAGE,
+    icon: l.ChatIcon,
+    text: a.Z.Messages.USER_PROFILE_MESSAGE,
     onClick: () => {
       d({
         action: "SEND_MESSAGE"
-      }), t.Z.openPrivateChannel(n.id), null == i || i()
+      }), t.Z.openPrivateChannel(i.id), null == s || s()
     }
   })
 }

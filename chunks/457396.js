@@ -18,10 +18,10 @@ var a = n(91192),
   m = n(74538),
   g = n(502087),
   p = n(647265),
-  T = n(650032),
-  N = n(104494),
-  S = n(639119),
-  C = n(655525),
+  N = n(650032),
+  T = n(104494),
+  C = n(639119),
+  S = n(655525),
   A = n(314684),
   f = n(52188),
   Z = n(248042),
@@ -49,8 +49,8 @@ let G = e => {
     H = (0, r.e7)([_.ZP], () => _.ZP.getPremiumTypeSubscription()),
     V = (0, m.Qo)(B, H),
     F = (0, a.JA)("nitro"),
-    Y = (0, S.N)(),
-    z = (0, N.Ng)(),
+    Y = (0, C.N)(),
+    z = (0, T.Ng)(),
     W = (0, r.e7)([h.Z], () => h.Z.isLocalizedPromoEnabled) && null == Y,
     K = (0, Z.Vi)(),
     q = (0, O.ZP)(),
@@ -62,7 +62,7 @@ let G = e => {
     et = s || null != Y || null != z || K || q || Q || null != X || V,
     {
       enabled: en
-    } = T._.useExperiment({
+    } = N._.useExperiment({
       location: U
     }, {
       autoTrackExposure: !1
@@ -73,7 +73,7 @@ let G = e => {
       showTabForOtherReasons: et
     });
   if (!(et = et || null != B && null != ee && Date.now() - ee.getTime() > es)) return null;
-  Q ? (n = (0, l.jsx)(x.g, {}), i = 2) : K ? (n = (0, l.jsx)(C.Z, {
+  Q ? (n = (0, l.jsx)(x.g, {}), i = 2) : K ? (n = (0, l.jsx)(S.Z, {
     isNitroTab: !0
   }), i = 0) : null != X ? (n = (0, l.jsx)(x.Z, {
     copy: X

@@ -15,8 +15,8 @@ var s = n(442837),
   m = n(488905),
   g = n(347137),
   p = n(731455),
-  T = n(689938);
-let N = e => {
+  N = n(689938);
+let T = e => {
     switch (e) {
       case p.Gj.Activity:
         return p.fW.Activity;
@@ -32,7 +32,7 @@ let N = e => {
         return p.fW.Discover
     }
   },
-  S = () => {
+  C = () => {
     let {
       currentCategoryId: e,
       isViewingSearchResults: t
@@ -41,24 +41,24 @@ let N = e => {
       isViewingSearchResults: h.ZP.getMostRecentQuery().length > 0
     })), n = (0, E.Z)(r.Z.QUEST_HOME_PAGE), o = (0, s.e7)([_.Z], () => _.Z.getDiscoveryCategories(), [], _.j), g = null == o ? void 0 : o.map(e => ({
       ...e,
-      icon: N(e.categoryId)
-    })), S = e => {
+      icon: T(e.categoryId)
+    })), C = e => {
       (0, a.uY)(e, !0), u.Z.closeSidebar(), t && (0, a.AQ)()
     };
     return (0, i.jsxs)(l.Scroller, {
       children: [(0, i.jsx)(m.V, {
-        text: T.Z.Messages.DISCOVER
+        text: N.Z.Messages.DISCOVER
       }), (0, i.jsx)(I.Z, {
         categories: g,
-        handleCategorySelect: S,
+        handleCategorySelect: C,
         currentCategoryId: e,
         shouldDisplaySelectedCategory: !t
       }), (0, i.jsx)(c.Z, {
-        handleCategorySelect: S,
+        handleCategorySelect: C,
         currentCategoryId: e,
         shouldDisplaySelectedCategory: !t
       }), n && (0, i.jsx)(d.Z, {
-        onClick: () => S(p.Gj.Quests),
+        onClick: () => C(p.Gj.Quests),
         isSelected: e === p.Gj.Quests
       })]
     })
@@ -72,5 +72,5 @@ t.Z = function() {
   }), t = e.length > 0, {
     clanDiscoveryEnabled: n
   } = (0, o.nk)("guild_discovery_sidebar");
-  return t || n ? (0, i.jsx)(g.Z, {}) : (0, i.jsx)(S, {})
+  return t || n ? (0, i.jsx)(g.Z, {}) : (0, i.jsx)(C, {})
 }

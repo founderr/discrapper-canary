@@ -25,29 +25,29 @@ t.Z = e => {
     relevantSubscriptionListingIds: null == p ? void 0 : p.subscription_listings_ids
   });
   let {
-    activeSubscription: T
-  } = (0, r.Z)(null == p ? void 0 : p.id), N = (0, l.YB)(g.id), S = null == N ? void 0 : N.description, {
-    editStateIds: C
+    activeSubscription: N
+  } = (0, r.Z)(null == p ? void 0 : p.id), T = (0, l.YB)(g.id), C = null == T ? void 0 : T.description, {
+    editStateIds: S
   } = a.B7(null !== (t = null == p ? void 0 : p.id) && void 0 !== t ? t : null, g.id);
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsxs)(h.Z, {
       title: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_PAGE_GROUP_CTA.format({
         serverName: g.toString()
       }),
-      description: null != S ? S : null,
-      coverImageAsset: null !== (n = null == N ? void 0 : N.cover_image_asset) && void 0 !== n ? n : null,
+      description: null != C ? C : null,
+      coverImageAsset: null !== (n = null == T ? void 0 : T.cover_image_asset) && void 0 !== n ? n : null,
       guild: g,
       children: [null != p ? (0, i.jsx)(c.Z, {
         className: m.pendingPlanChangeNotice,
         groupListingId: p.id,
-        subscription: T
+        subscription: N
       }) : null, (0, i.jsx)(u.Z, {
-        subscription: T
+        subscription: N
       })]
     }), (0, i.jsx)(s.HeadingLevel, {
       children: (0, i.jsx)(d.Z, {
         guildId: g.id,
-        children: C.map(e => {
+        children: S.map(e => {
           var t;
           return (0, i.jsx)(E.Z, {
             guildId: g.id,

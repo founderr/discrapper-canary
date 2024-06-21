@@ -19,10 +19,10 @@ var i = n(735250),
   m = n(486622),
   g = n(922409),
   p = n(727813),
-  T = n(355350),
-  N = n(307947),
-  S = n(125855),
-  C = n(687683),
+  N = n(355350),
+  T = n(307947),
+  C = n(125855),
+  S = n(687683),
   A = n(981631),
   f = n(689938),
   Z = n(964058);
@@ -30,7 +30,7 @@ var i = n(735250),
 function v() {
   let e = s.useRef(null),
     t = (0, p.Z)(),
-    n = (0, T.w)(),
+    n = (0, N.w)(),
     l = (0, I.V)(),
     v = (0, u.N)(),
     L = (0, d.Z)("message-requests-spam-list"),
@@ -60,7 +60,7 @@ function v() {
       let {
         row: r
       } = e, o = t[r], c = null === (s = t[r + 1]) || void 0 === s ? void 0 : null === (n = s.channel) || void 0 === n ? void 0 : n.id, u = o.channel.id;
-      return (0, i.jsx)(S.Z, {
+      return (0, i.jsx)(C.Z, {
         index: r,
         className: a()({
           [Z.selected]: null != O && O === u,
@@ -93,8 +93,8 @@ function v() {
         })]
       }) : null]
     }, "message-requests-spam-title"), [n, M, v]);
-  return 0 === t.length ? (0, i.jsx)(N.Z, {
-    section: C.pS.SPAM
+  return 0 === t.length ? (0, i.jsx)(T.Z, {
+    section: S.pS.SPAM
   }) : (0, i.jsx)(r.bG, {
     navigator: L,
     children: (0, i.jsx)(r.SJ, {
@@ -114,8 +114,8 @@ function v() {
           },
           paddingTop: 24,
           paddingBottom: 24,
-          sectionHeight: C.oi,
-          rowHeight: C.WN,
+          sectionHeight: S.oi,
+          rowHeight: S.WN,
           renderSection: D,
           renderRow: P,
           sections: [t.length],

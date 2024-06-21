@@ -23,24 +23,24 @@ function g(e) {
     active: t,
     user: n,
     channel: g
-  } = e, p = (0, d.V)(), T = s.useCallback(() => {
+  } = e, p = (0, d.V)(), N = s.useCallback(() => {
     (0, a.showToast)((0, a.createToast)(I.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, a.ToastType.FAILURE)), r.Z.increment({
       name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW
     })
-  }, []), N = s.useCallback(() => {
+  }, []), T = s.useCallback(() => {
     c.Z.closeChannelSidebar(u.uZ)
-  }, []), S = s.useCallback(() => {
+  }, []), C = s.useCallback(() => {
     c.Z.closeChannelSidebar(u.uZ), p && (0, o.Kh)(g.id)
   }, [g.id, p]), {
-    acceptMessageRequest: C,
+    acceptMessageRequest: S,
     isAcceptLoading: A,
     isUserProfileLoading: f,
     isOptimisticAccepted: Z
   } = (0, E.m)({
     user: n,
-    onAcceptSuccess: S,
-    onRejectSuccess: N,
-    onError: T
+    onAcceptSuccess: C,
+    onRejectSuccess: T,
+    onError: N
   }), v = A || f, L = v || Z;
   return (0, i.jsxs)("div", {
     className: m.container,
@@ -55,7 +55,7 @@ function g(e) {
         color: a.ButtonColors.PRIMARY,
         size: a.Button.Sizes.SMALL,
         onClick: e => {
-          C(g.id), e.stopPropagation()
+          S(g.id), e.stopPropagation()
         },
         disabled: L,
         submitting: v,

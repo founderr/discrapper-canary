@@ -20,11 +20,11 @@ var i, s, l = n(735250),
   m = n(626135),
   g = n(981631),
   p = n(921944),
-  T = n(689938),
-  N = n(372064);
+  N = n(689938),
+  T = n(372064);
 (i = s || (s = {})).BOOSTING = "BOOSTING", i.NITRO = "NITRO", i.BASH_OUT = "BASH_OUT", i.GAME_NIGHT = "GAME_NIGHT";
-let S = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4",
-  C = "https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png",
+let C = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4",
+  S = "https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png",
   A = e => {
     let {
       channelId: t,
@@ -45,19 +45,19 @@ let S = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       switch (e) {
         case "BOOSTING":
           return {
-            analyticsLocation: E.Z.ACTIVITY_COACH_MARK_BOOSTING, analyticsType: "embedded_activity_discovery_tutorial", description: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION, learnMore: !0, title: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE, videoPosterUrl: C, videoUrl: S, ctaText: T.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: T.Z.Messages.DISMISS
+            analyticsLocation: E.Z.ACTIVITY_COACH_MARK_BOOSTING, analyticsType: "embedded_activity_discovery_tutorial", description: N.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION, learnMore: !0, title: N.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE, videoPosterUrl: S, videoUrl: C, ctaText: N.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: N.Z.Messages.DISMISS
           };
         case "NITRO":
           return {
-            analyticsLocation: E.Z.ACTIVITY_COACH_MARK_NITRO, analyticsType: "embedded_activity_nitro_discovery_tutorial", description: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION, learnMore: !0, title: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE, videoPosterUrl: C, videoUrl: S, ctaText: T.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: T.Z.Messages.DISMISS
+            analyticsLocation: E.Z.ACTIVITY_COACH_MARK_NITRO, analyticsType: "embedded_activity_nitro_discovery_tutorial", description: N.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION, learnMore: !0, title: N.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE, videoPosterUrl: S, videoUrl: C, ctaText: N.Z.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: N.Z.Messages.DISMISS
           };
         case "BASH_OUT":
           return {
-            analyticsLocation: E.Z.ACTIVITY_COACH_MARK_BASH_OUT, analyticsType: "embedded_activity_bash_out_tutorial", description: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_BASH_OUT_DESCRIPTION, learnMore: !1, title: T.Z.Messages.EMBEDDED_ACTIVITIES_AVAILABLE_NOW, videoPosterUrl: "https://cdn.discordapp.com/attachments/860252504826445825/1037963592227635230/bash_out.jpg", videoUrl: "https://cdn.discordapp.com/attachments/860252504826445825/1037967755955146762/bash_out.mp4", ctaText: T.Z.Messages.PLAY, dismissText: T.Z.Messages.DISMISS
+            analyticsLocation: E.Z.ACTIVITY_COACH_MARK_BASH_OUT, analyticsType: "embedded_activity_bash_out_tutorial", description: N.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_BASH_OUT_DESCRIPTION, learnMore: !1, title: N.Z.Messages.EMBEDDED_ACTIVITIES_AVAILABLE_NOW, videoPosterUrl: "https://cdn.discordapp.com/attachments/860252504826445825/1037963592227635230/bash_out.jpg", videoUrl: "https://cdn.discordapp.com/attachments/860252504826445825/1037967755955146762/bash_out.mp4", ctaText: N.Z.Messages.PLAY, dismissText: N.Z.Messages.DISMISS
           };
         case "GAME_NIGHT":
           return {
-            analyticsLocation: E.Z.ACTIVITIES_COACH_MARK_GAME_NIGHT, analyticsType: "embedded_activity_game_night_tutorial", description: T.Z.Messages.EMBEDDED_ACTIVITIES_GAME_NIGHT_BODY, learnMore: !1, title: T.Z.Messages.EMBEDDED_ACTIVITIES_GAME_NIGHT_HEADING, videoPosterUrl: "https://cdn.discordapp.com/attachments/860252504826445825/1093287297950175272/game_night_desktop.jpg", videoUrl: "https://cdn.discordapp.com/attachments/860252504826445825/1093286971708813382/game_night_desktop.mp4", ctaText: T.Z.Messages.PLAY_NOW, dismissText: T.Z.Messages.MAYBE_LATER
+            analyticsLocation: E.Z.ACTIVITIES_COACH_MARK_GAME_NIGHT, analyticsType: "embedded_activity_game_night_tutorial", description: N.Z.Messages.EMBEDDED_ACTIVITIES_GAME_NIGHT_BODY, learnMore: !1, title: N.Z.Messages.EMBEDDED_ACTIVITIES_GAME_NIGHT_HEADING, videoPosterUrl: "https://cdn.discordapp.com/attachments/860252504826445825/1093287297950175272/game_night_desktop.jpg", videoUrl: "https://cdn.discordapp.com/attachments/860252504826445825/1093286971708813382/game_night_desktop.mp4", ctaText: N.Z.Messages.PLAY_NOW, dismissText: N.Z.Messages.MAYBE_LATER
           };
         default:
           return {
@@ -77,13 +77,13 @@ let S = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
     return (0, l.jsx)(h.Gt, {
       value: P,
       children: (0, l.jsx)("div", {
-        className: N.wrapper,
+        className: T.wrapper,
         children: (0, l.jsx)("div", {
-          className: N.container,
+          className: T.container,
           children: (0, l.jsxs)("div", {
-            className: N.content,
+            className: T.content,
             children: [(0, l.jsx)(I.Z, {
-              className: N.video,
+              className: T.video,
               src: x,
               poster: R,
               width: 224,
@@ -92,26 +92,26 @@ let S = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
               muted: !0,
               autoPlay: !0
             }), (0, l.jsx)("div", {
-              className: N.header,
+              className: T.header,
               children: (0, l.jsx)(o.Heading, {
-                className: N.__invalid_headerText,
+                className: T.__invalid_headerText,
                 variant: "text-sm/bold",
                 color: "always-white",
                 children: O
               })
             }), (0, l.jsxs)(o.Text, {
-              className: N.subheaderText,
+              className: T.subheaderText,
               variant: "text-xs/normal",
               color: "always-white",
               children: [v, L ? (0, l.jsxs)(l.Fragment, {
                 children: [" ", (0, l.jsx)(o.Anchor, {
-                  className: N.learnMoreLink,
+                  className: T.learnMoreLink,
                   href: "https://support.discord.com/hc/articles/4422142836759",
-                  children: T.Z.Messages.LEARN_MORE
+                  children: N.Z.Messages.LEARN_MORE
                 })]
               }) : null]
             }), (0, l.jsxs)("div", {
-              className: N.ctaActionWrapper,
+              className: T.ctaActionWrapper,
               children: [(0, l.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 onClick: () => {

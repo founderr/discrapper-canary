@@ -15,10 +15,10 @@ var i = n(735250),
   m = n(497505),
   g = n(918701),
   p = n(566078),
-  T = n(602667),
-  N = n(611855),
-  S = n(670638),
-  C = n(667105),
+  N = n(602667),
+  T = n(611855),
+  C = n(670638),
+  S = n(667105),
   A = n(860151),
   f = n(46140),
   Z = n(981631),
@@ -79,11 +79,11 @@ t.Z = function(e) {
       questContent: m.jn.ACTIVITY_PANEL,
       questContentCTA: E.jZ.LEARN_MORE
     }), u.Z.open(Z.oAB.INVENTORY)
-  }, [o]), j = (0, C.hf)({
+  }, [o]), j = (0, S.hf)({
     quest: o,
     location: m.jn.ACTIVITY_PANEL
   }), U = (0, _.tP)(o), G = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, w = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, k = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
-  return (null == o ? void 0 : o.userStatus) == null || (0, g.zE)(o.userStatus, m.jn.ACTIVITY_PANEL) || U || k || !(0, g.dl)(o) ? null : (0, i.jsx)(T.A, {
+  return (null == o ? void 0 : o.userStatus) == null || (0, g.zE)(o.userStatus, m.jn.ACTIVITY_PANEL) || U || k || !(0, g.dl)(o) ? null : (0, i.jsx)(N.A, {
     questOrQuests: o,
     questContent: m.jn.ACTIVITY_PANEL,
     children: e => {
@@ -105,9 +105,9 @@ t.Z = function(e) {
           className: L.utils,
           children: [G ? (0, i.jsx)(O, {
             quest: o
-          }) : (0, i.jsx)(N.Z, {
+          }) : (0, i.jsx)(T.Z, {
             textOpacity: .5
-          }), (0, i.jsx)(S.r, {
+          }), (0, i.jsx)(C.r, {
             quest: o,
             questContent: m.jn.ACTIVITY_PANEL,
             shouldShowDisclosure: (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,

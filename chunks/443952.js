@@ -16,10 +16,10 @@ var s = n(243814),
   m = n(928518),
   g = n(592125),
   p = n(293273),
-  T = n(885110),
-  N = n(451478),
-  S = n(630388),
-  C = n(823379),
+  N = n(885110),
+  T = n(451478),
+  C = n(630388),
+  S = n(823379),
   A = n(591759),
   f = n(228488),
   Z = n(996106),
@@ -36,7 +36,7 @@ async function D(e, t, n, i) {
   if (null == l || null == l.secrets || !(0, v.t9)(i, l.party, l.secrets)) throw new Z.Z({
     errorCode: P.lTL.NO_ELIGIBLE_ACTIVITY
   }, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
-  let a = (0, _.Z)(l, T.Z);
+  let a = (0, _.Z)(l, N.Z);
   if (a) {
     let {
       lock: t
@@ -202,7 +202,7 @@ t.Z = {
       return new Promise((e, t) => {
         ! function(e, t) {
           var n;
-          let i = N.Z.getLastFocusedWindowId(),
+          let i = T.Z.getLastFocusedWindowId(),
             s = null == i ? null : null === (n = (0, E.g0)(i)) || void 0 === n ? void 0 : n.renderWindow;
           if (null == s) throw new Z.Z({
             errorCode: P.lTL.UNKNOWN_ERROR
@@ -215,13 +215,13 @@ t.Z = {
             }, 1e3)
           };
           l.addEventListener("change", () => {
-            (0, C.lm)(l.files) && e(l.files[0]), a()
+            (0, S.lm)(l.files) && e(l.files[0]), a()
           }), l.addEventListener("cancel", () => {
             a()
           }), s.document.body.addEventListener("focus", a, !0), s.document.body.appendChild(l), l.click()
         }(async n => {
           let l = await (0, h.kv)(i, s, n);
-          (0, C.lm)(l) && (0, C.lm)(l.url) && !(l instanceof d.Z) ? e({
+          (0, S.lm)(l) && (0, S.lm)(l.url) && !(l instanceof d.Z) ? e({
             image_url: l.url
           }): t(l)
         }, () => t(Error("Upload canceled")))
@@ -250,7 +250,7 @@ t.Z = {
       if (null == s) throw new Z.Z({
         errorCode: P.lTL.INVALID_COMMAND
       }, "No application.");
-      if (!(0, S.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, P.udG.EMBEDDED)) throw new Z.Z({
+      if (!(0, C.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, P.udG.EMBEDDED)) throw new Z.Z({
         errorCode: P.lTL.INVALID_COMMAND
       }, "This application cannot access this API");
       let l = (0, O.Z)();

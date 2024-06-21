@@ -19,16 +19,16 @@ var i = n(664751),
   m = n(594174),
   g = n(630388),
   p = n(700785),
-  T = n(996106),
-  N = n(186901),
-  S = n(981631);
-let C = "CachedTokens";
+  N = n(996106),
+  T = n(186901),
+  C = n(981631);
+let S = "CachedTokens";
 async function A(e, t, n) {
   var i;
   let l;
   let r, o, c, u, {
-    client_id: N,
-    response_type: C = "code",
+    client_id: T,
+    response_type: S = "code",
     redirect_uri: A,
     code_challenge: f,
     code_challenge_method: Z,
@@ -42,24 +42,24 @@ async function A(e, t, n) {
     disable_guild_select: D,
     integration_type: b
   } = e;
-  if (null == N) throw new T.Z({
-    errorCode: S.lTL.OAUTH2_ERROR
+  if (null == T) throw new N.Z({
+    errorCode: C.lTL.OAUTH2_ERROR
   }, "No Client ID provided");
-  if (null != A) throw new T.Z({
-    errorCode: S.lTL.OAUTH2_ERROR
+  if (null != A) throw new N.Z({
+    errorCode: C.lTL.OAUTH2_ERROR
   }, "Redirect URI cannot be used in the RPC OAuth2 Authorization flow");
   let y = [];
-  if ("string" == typeof O ? y = O.split(" ").filter(e => e.length > 0) : Array.isArray(O) && (y = O), null == m.default.getCurrentUser()) throw new T.Z({
-    errorCode: S.lTL.OAUTH2_ERROR
+  if ("string" == typeof O ? y = O.split(" ").filter(e => e.length > 0) : Array.isArray(O) && (y = O), null == m.default.getCurrentUser()) throw new N.Z({
+    errorCode: C.lTL.OAUTH2_ERROR
   }, "Client is not logged in");
-  let j = I.Z.createFromServer(await (0, _.UM)(N)),
-    U = null != j && (0, g.yE)(j.flags, S.udG.EMBEDDED) && (null === (i = j.integrationTypesConfig) || void 0 === i ? void 0 : i[s.Y.USER_INSTALL]) != null;
+  let j = I.Z.createFromServer(await (0, _.UM)(T)),
+    U = null != j && (0, g.yE)(j.flags, C.udG.EMBEDDED) && (null === (i = j.integrationTypesConfig) || void 0 === i ? void 0 : i[s.Y.USER_INSTALL]) != null;
   r = null == b ? U ? s.Y.USER_INSTALL : s.Y.GUILD_INSTALL : Number(b);
   try {
     o = await (0, E.Ww)({
-      clientId: N,
+      clientId: T,
       scopes: y,
-      responseType: C,
+      responseType: S,
       redirectUri: A,
       codeChallenge: f,
       codeChallengeMethod: Z,
@@ -70,8 +70,8 @@ async function A(e, t, n) {
     let {
       body: e
     } = t;
-    throw new T.Z({
-      errorCode: S.lTL.OAUTH2_ERROR
+    throw new N.Z({
+      errorCode: C.lTL.OAUTH2_ERROR
     }, "OAuth2 Authorization Error: ".concat(e.message || "Unknown Error"))
   }
   try {
@@ -83,16 +83,16 @@ async function A(e, t, n) {
     let {
       body: e
     } = t;
-    throw new T.Z({
-      errorCode: S.lTL.OAUTH2_ERROR
+    throw new N.Z({
+      errorCode: C.lTL.OAUTH2_ERROR
     }, "OAuth2 Authorization Error: ".concat(e.message || "Unknown Error"))
   }
   if (P === h.s.NONE && null != o && o.authorized && u) try {
     return (await (0, E.Iq)({
       authorize: !0,
-      clientId: N,
+      clientId: T,
       scopes: y,
-      responseType: C,
+      responseType: S,
       redirectUri: A,
       codeChallenge: f,
       codeChallengeMethod: Z,
@@ -104,8 +104,8 @@ async function A(e, t, n) {
     let {
       body: e
     } = t;
-    throw new T.Z({
-      errorCode: S.lTL.OAUTH2_ERROR
+    throw new N.Z({
+      errorCode: C.lTL.OAUTH2_ERROR
     }, "OAuth2 Authorize Error: ".concat(e.message || "Unknown Error"))
   }
   null == n || n(o.application, M);
@@ -114,11 +114,11 @@ async function A(e, t, n) {
     G = a.vB(null != R ? R : 0)
   } catch (e) {}
   return null != o.integration_type && Object.values(s.Y).includes(o.integration_type) && (l = new Map).set(o.integration_type, o), t({
-    clientId: N,
+    clientId: T,
     authorizations: l,
     scopes: y,
     parsedPermissions: G,
-    responseType: C,
+    responseType: S,
     redirectUri: A,
     codeChallenge: f,
     codeChallengeMethod: Z,
@@ -133,14 +133,14 @@ async function A(e, t, n) {
 }
 
 function f(e, t) {
-  if (e.authorization.accessToken) throw new T.Z({
-    errorCode: S.lTL.INVALID_COMMAND
+  if (e.authorization.accessToken) throw new N.Z({
+    errorCode: C.lTL.INVALID_COMMAND
   }, "Already authenticated");
-  if (e.authorization.authing) throw new T.Z({
-    errorCode: S.lTL.INVALID_COMMAND
+  if (e.authorization.authing) throw new N.Z({
+    errorCode: C.lTL.INVALID_COMMAND
   }, "Already authenticating");
   return e.authorization.authing = !0, r.tn.get({
-    url: S.ANM.OAUTH2_CURRENT_AUTH,
+    url: C.ANM.OAUTH2_CURRENT_AUTH,
     headers: {
       Authorization: "Bearer ".concat(t)
     },
@@ -153,14 +153,14 @@ function f(e, t) {
       scopes: l,
       expires: a
     } = n.body;
-    if (e.application.id !== i.id) throw new T.Z({
-      errorCode: S.lTL.INVALID_CLIENTID
+    if (e.application.id !== i.id) throw new N.Z({
+      errorCode: C.lTL.INVALID_CLIENTID
     }, "Application does not match the connection's");
     let r = m.default.getCurrentUser();
-    if (null == r || !s || r.id !== s.id) throw new T.Z({
-      errorCode: S.lTL.INVALID_TOKEN
+    if (null == r || !s || r.id !== s.id) throw new N.Z({
+      errorCode: C.lTL.INVALID_TOKEN
     }, "Token does not match current user");
-    return e.authorization.scopes = [...e.authorization.scopes, ...l, N.wE], e.authorization.accessToken = t, e.authorization.expires = new Date(a), u.Z.dispatch({
+    return e.authorization.scopes = [...e.authorization.scopes, ...l, T.wE], e.authorization.accessToken = t, e.authorization.expires = new Date(a), u.Z.dispatch({
       type: "RPC_APP_AUTHENTICATED",
       socketId: e.id,
       application: e.application
@@ -169,8 +169,8 @@ function f(e, t) {
       access_token: t
     }
   }, () => {
-    throw new T.Z({
-      errorCode: S.lTL.INVALID_TOKEN
+    throw new N.Z({
+      errorCode: C.lTL.INVALID_TOKEN
     }, "Invalid access token: ".concat(t))
   }).catch(t => {
     throw e.authorization.authing = !1, t
@@ -179,7 +179,7 @@ function f(e, t) {
 
 function Z(e, t) {
   return {
-    [S.Etm.AUTHENTICATE]: (0, o.S)(S.Etm.AUTHENTICATE, {
+    [C.Etm.AUTHENTICATE]: (0, o.S)(C.Etm.AUTHENTICATE, {
       handler(n) {
         let {
           socket: s,
@@ -187,10 +187,10 @@ function Z(e, t) {
             access_token: a
           }
         } = n;
-        if (null == a && s.transport === N.He.IPC) {
+        if (null == a && s.transport === T.He.IPC) {
           let n = s.application.id;
-          if (null == n) throw new T.Z({
-            errorCode: S.lTL.INVALID_COMMAND
+          if (null == n) throw new N.Z({
+            errorCode: C.lTL.INVALID_COMMAND
           }, "No application.");
           let r = l.x.IDENTIFY,
             o = () => A({
@@ -198,68 +198,68 @@ function Z(e, t) {
               scope: r,
               response_type: "token"
             }, e, t).then(e => {
-              if (null == e) throw new T.Z({
-                errorCode: S.lTL.UNKNOWN_ERROR
+              if (null == e) throw new N.Z({
+                errorCode: C.lTL.UNKNOWN_ERROR
               }, "Unknown error occurred");
               let t = e.split(/#|\?/),
                 l = i.parse(t[t.length - 1]);
               if (null != l.error) {
                 var a;
-                throw new T.Z({
-                  errorCode: S.lTL.OAUTH2_ERROR
+                throw new N.Z({
+                  errorCode: C.lTL.OAUTH2_ERROR
                 }, "OAuth2 Error: ".concat(l.error, ": ").concat(null !== (a = l.error_description) && void 0 !== a ? a : "unknown error"))
               }
               return ! function(e, t, n, i) {
                 var s;
-                let l = null !== (s = c.K.get(C)) && void 0 !== s ? s : {};
+                let l = null !== (s = c.K.get(S)) && void 0 !== s ? s : {};
                 l[e] = {
                   accessToken: t,
                   scope: n,
                   expires: Date.now() + i
-                }, c.K.set(C, l)
+                }, c.K.set(S, l)
               }(n, l.access_token, l.scope, l.expires_in), f(s, l.access_token)
             });
           return null != (a = function(e, t) {
-            let n = c.K.get(C);
+            let n = c.K.get(S);
             if (null != n && null != n[e]) {
               let i = n[e];
               if (!(i.scope !== t || i.expires <= Date.now())) return i.accessToken;
-              delete n[e], c.K.set(C, n)
+              delete n[e], c.K.set(S, n)
             }
           }(n, r)) ? f(s, a).catch(() => (! function(e) {
             var t;
-            let n = null !== (t = c.K.get(C)) && void 0 !== t ? t : {};
-            delete n[e], c.K.set(C, n)
+            let n = null !== (t = c.K.get(S)) && void 0 !== t ? t : {};
+            delete n[e], c.K.set(S, n)
           }(n), o())) : o()
         }
-        if (null == a) throw new T.Z({
-          errorCode: S.lTL.INVALID_TOKEN
+        if (null == a) throw new N.Z({
+          errorCode: C.lTL.INVALID_TOKEN
         }, "No access token provided");
         return f(s, a)
       }
     }),
-    [S.Etm.AUTHORIZE]: {
+    [C.Etm.AUTHORIZE]: {
       handler(n) {
         let {
           socket: s,
           args: l
         } = n, a = l.client_id;
-        if (!a) throw new T.Z({
-          errorCode: S.lTL.INVALID_CLIENTID
+        if (!a) throw new N.Z({
+          errorCode: C.lTL.INVALID_CLIENTID
         }, "No client id provided");
-        if (null != s.authorization.accessToken) throw new T.Z({
-          errorCode: S.lTL.INVALID_COMMAND
+        if (null != s.authorization.accessToken) throw new N.Z({
+          errorCode: C.lTL.INVALID_COMMAND
         }, "Already authenticated");
-        if (s.authorization.authing) throw new T.Z({
-          errorCode: S.lTL.INVALID_COMMAND
+        if (s.authorization.authing) throw new N.Z({
+          errorCode: C.lTL.INVALID_COMMAND
         }, "Already authing");
         return s.authorization.authing = !0, r.tn.get({
-          url: S.ANM.APPLICATION_RPC(a),
+          url: C.ANM.APPLICATION_RPC(a),
           oldFormErrors: !0
         }).then(n => {
           let i = n.body;
-          if (s.application.id !== i.id) throw new T.Z({
-            errorCode: S.lTL.INVALID_CLIENTID
+          if (s.application.id !== i.id) throw new N.Z({
+            errorCode: C.lTL.INVALID_CLIENTID
           }, "Application does not match the connection's");
           let a = l.scopes || l.scope;
           return delete l.scopes, A({
@@ -267,18 +267,18 @@ function Z(e, t) {
             scope: a
           }, e, t)
         }, () => {
-          throw new T.Z({
-            errorCode: S.lTL.INVALID_CLIENTID
+          throw new N.Z({
+            errorCode: C.lTL.INVALID_CLIENTID
           }, "Invalid client id: ".concat(a))
         }).then(e => {
-          if (s.authorization.authing = !1, null == e) throw new T.Z({
-            errorCode: S.lTL.UNKNOWN_ERROR
+          if (s.authorization.authing = !1, null == e) throw new N.Z({
+            errorCode: C.lTL.UNKNOWN_ERROR
           }, "Unknown error occurred");
           let t = i.parse(e.split("?")[1].split("#")[0]);
           if (null != t.error) {
             var n;
-            throw new T.Z({
-              errorCode: S.lTL.OAUTH2_ERROR
+            throw new N.Z({
+              errorCode: C.lTL.OAUTH2_ERROR
             }, "OAuth2 Error: ".concat(t.error, ": ").concat(null !== (n = t.error_description) && void 0 !== n ? n : "unknown error"))
           }
           return {

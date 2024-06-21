@@ -10,10 +10,10 @@ var l, a, r, o, c = n(392711),
   m = n(592125),
   g = n(981631),
   p = n(71080);
-let T = new Set,
-  N = g.QZA.CLOSED,
-  S = !1,
-  C = null,
+let N = new Set,
+  T = g.QZA.CLOSED,
+  C = !1,
+  S = null,
   A = null,
   f = null,
   Z = null,
@@ -32,32 +32,32 @@ function R(e) {
 function x() {
   if (f = I.Z.getChannel(), Z = I.Z.getCategory(), null == f) return !1;
   let e = f.getGuildId();
-  A = C = R(f), null == C[v] && (v = e), s = null != Z, i = _.o4(f, Z), L = null, S = !1, N = g.QZA.CLOSED, T.clear()
+  A = S = R(f), null == S[v] && (v = e), s = null != Z, i = _.o4(f, Z), L = null, C = !1, T = g.QZA.CLOSED, N.clear()
 }
 class M extends(l = d.ZP.Store) {
   initialize() {
     this.waitFor(I.Z, m.Z)
   }
   hasChanges() {
-    return S
+    return C
   }
   showNotice() {
     return this.hasChanges()
   }
   getPermissionOverwrite(e) {
-    return null == C ? void 0 : C[e]
+    return null == S ? void 0 : S[e]
   }
   get editedPermissionIds() {
-    return Array.from(T)
+    return Array.from(N)
   }
   get permissionOverwrites() {
-    return C
+    return S
   }
   get selectedOverwriteId() {
     return v
   }
   get formState() {
-    return N
+    return T
   }
   get isLockable() {
     return s
@@ -94,29 +94,29 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(a = M) ? Object.de
       id: t,
       allow: n,
       deny: s
-    } = e, l = null == C ? void 0 : C[t];
+    } = e, l = null == S ? void 0 : S[t];
     if (null == l || null == f) return !1;
     l = {
       ...l,
       allow: n,
       deny: s
-    }, C = {
-      ...C,
+    }, S = {
+      ...S,
       [t]: l
-    }, T.add(t), N = g.QZA.OPEN, S = !u().isEqual(C, A), i = _.o4(f, Z)
+    }, N.add(t), T = g.QZA.OPEN, C = !u().isEqual(S, A), i = _.o4(f, Z)
   },
   CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function(e) {
     let {
       id: t
     } = e;
-    if (null != C && null != C[t]) v = t;
+    if (null != S && null != S[t]) v = t;
     else {
       if (null == f) return !1;
       L = t
     }
   },
   CHANNEL_SETTINGS_CLOSE: function() {
-    N = g.QZA.CLOSED, C = null, A = null, f = null, Z = null, S = !1, T.clear(), v = null, L = null
+    T = g.QZA.CLOSED, S = null, A = null, f = null, Z = null, C = !1, N.clear(), v = null, L = null
   },
   CHANNEL_UPDATES: function(e) {
     let {
@@ -131,23 +131,23 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(a = M) ? Object.de
       if (null == t) return !1;
       A = R(f);
       let n = {};
-      return T.forEach(e => {
-        null != C && (n[e] = C[e])
-      }), null == n[t] && null == f.permissionOverwrites[t] && (n[t] = _.we(t)), null == (C = {
+      return N.forEach(e => {
+        null != S && (n[e] = S[e])
+      }), null == n[t] && null == f.permissionOverwrites[t] && (n[t] = _.we(t)), null == (S = {
         ...f.permissionOverwrites,
         ...n
-      })[v] ? v = t : null != L && null != C[L] && (v = L, L = null), i = _.o4(f, Z), !0
+      })[v] ? v = t : null != L && null != S[L] && (v = L, L = null), i = _.o4(f, Z), !0
     }(e.id) && (n = !0);
     return n
   },
   CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING: function() {
-    N = g.QZA.SUBMITTING
+    T = g.QZA.SUBMITTING
   },
   CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS: function(e) {
     let {
       silent: t
     } = e;
-    t ? N = g.QZA.OPEN : (N = g.QZA.CLOSED, x())
+    t ? T = g.QZA.OPEN : (T = g.QZA.CLOSED, x())
   },
   CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function(e) {
     let {

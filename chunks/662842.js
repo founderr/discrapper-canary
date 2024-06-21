@@ -17,10 +17,10 @@ var i, s, l = n(735250),
   m = n(924301),
   g = n(504160),
   p = n(151864),
-  T = n(725436),
-  N = n(497656),
-  S = n(554747),
-  C = n(230900),
+  N = n(725436),
+  T = n(497656),
+  C = n(554747),
+  S = n(230900),
   A = n(854698),
   f = n(703656),
   Z = n(922482),
@@ -43,7 +43,7 @@ function w(e) {
   let {
     guild: t,
     isStudyRoomNotice: n = !1
-  } = e, i = (0, N.y)(t.id), s = (0, S.k5)(t.id), r = (0, c.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]), {
+  } = e, i = (0, T.y)(t.id), s = (0, C.k5)(t.id), r = (0, c.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]), {
     isStageNoticeHidden: w,
     isEventNoticeHidden: k
   } = (0, c.cj)([p.Z], () => ({
@@ -173,7 +173,7 @@ function w(e) {
         }
       }
       if (t.entity_type === j.WX.EXTERNAL) {
-        let e = (0, C.cS)(t);
+        let e = (0, S.cS)(t);
         if (null == e) return {
           noticeType: null
         };
@@ -181,7 +181,7 @@ function w(e) {
         return {
           noticeType: 1,
           title: t.name,
-          location: (0, T.m)(e, !0),
+          location: (0, N.m)(e, !0),
           locationIcon: (0, l.jsx)(d.LocationIcon, {
             size: "custom",
             color: "currentColor",

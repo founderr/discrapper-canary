@@ -18,10 +18,10 @@ var i, s = n(735250),
   m = n(900849),
   g = n(878727),
   p = n(117496),
-  T = n(150192),
-  N = n(731455),
-  S = n(981631),
-  C = n(689938),
+  N = n(150192),
+  T = n(731455),
+  C = n(981631),
+  S = n(689938),
   A = n(627716);
 
 function f(e, t, n) {
@@ -67,8 +67,8 @@ class L extends(i = l.PureComponent) {
       query: s,
       isHandlingTagSearch: l
     } = this.state, a = this.context;
-    if (null == h.ZP.getSearchIndex() && E.Ue(), I.S.subscribe(S.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.subscribe(S.CkL.TEXTAREA_FOCUS, this.focusInput), s.length > 0) {
-      let r = n !== N.Hk ? n : null;
+    if (null == h.ZP.getSearchIndex() && E.Ue(), I.S.subscribe(C.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.subscribe(C.CkL.TEXTAREA_FOCUS, this.focusInput), s.length > 0) {
+      let r = n !== T.Hk ? n : null;
       Z({
         loadId: e,
         searchId: i,
@@ -92,7 +92,7 @@ class L extends(i = l.PureComponent) {
       searchId: o,
       query: c,
       isHandlingTagSearch: u
-    } = this.state, d = this.context, E = e.isFetchingSearch && !i, h = l !== N.Hk ? l : null;
+    } = this.state, d = this.context, E = e.isFetchingSearch && !i, h = l !== T.Hk ? l : null;
     (r || u) && E && (Z({
       loadId: n,
       searchId: o,
@@ -110,7 +110,7 @@ class L extends(i = l.PureComponent) {
     })
   }
   componentWillUnmount() {
-    I.S.unsubscribe(S.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.unsubscribe(S.CkL.TEXTAREA_FOCUS, this.focusInput)
+    I.S.unsubscribe(C.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.unsubscribe(C.CkL.TEXTAREA_FOCUS, this.focusInput)
   }
   renderSearchOptions() {
     var e;
@@ -148,7 +148,7 @@ class L extends(i = l.PureComponent) {
         let [n, i] = t;
         return (0, s.jsx)(v, {
           categoryId: n,
-          name: n === N.Hk ? C.Z.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : T.Z.getCategoryName(n),
+          name: n === T.Hk ? S.Z.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : N.Z.getCategoryName(n),
           onCategoryChange: this.handleCategoryChange,
           isSelected: e === n,
           count: i
@@ -178,7 +178,7 @@ class L extends(i = l.PureComponent) {
             inputClassName: i ? void 0 : A.searchBoxInput,
             closeIconClassName: i ? void 0 : A.closeIcon,
             searchIconClassName: i ? void 0 : A.searchIcon,
-            label: C.Z.Messages.GUILD_DISCOVERY_SEARCH_LABEL,
+            label: S.Z.Messages.GUILD_DISCOVERY_SEARCH_LABEL,
             placeholder: n,
             onChange: this.handleQueryChanged,
             onClear: this.handleQueryCleared,
@@ -186,7 +186,7 @@ class L extends(i = l.PureComponent) {
             onBlur: this.handleSearchBlurred,
             onKeyPress: this.handleSearchKeyPress,
             autoFocus: !i,
-            cta: t && null != e && e.length > 1 ? C.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
+            cta: t && null != e && e.length > 1 ? S.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
           })
         }), i ? this.renderSearchOptions() : null]
       }), i ? this.renderCategories() : null]
@@ -229,8 +229,8 @@ class L extends(i = l.PureComponent) {
       } = this.state, {
         loadId: i,
         currentCategoryId: s
-      } = this.props, l = s !== N.Hk ? s : null;
-      this.canSearch(t) && n && e.charCode === S.yXg.ENTER ? (m.tI(i, l), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === S.yXg.ENTER && this.setState({
+      } = this.props, l = s !== T.Hk ? s : null;
+      this.canSearch(t) && n && e.charCode === C.yXg.ENTER ? (m.tI(i, l), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === C.yXg.ENTER && this.setState({
         isSearching: !1
       })
     }), f(this, "handleQueryChanged", e => {
@@ -282,7 +282,7 @@ class L extends(i = l.PureComponent) {
 }
 
 function O(e) {
-  let t = (0, u.e7)([T.Z], () => T.Z.getDiscoveryCategories(), [], T.j),
+  let t = (0, u.e7)([N.Z], () => N.Z.getDiscoveryCategories(), [], N.j),
     n = (0, u.e7)([h.ZP], () => h.ZP.getTopCategoryCounts(e.mostRecentQuery));
   return (0, s.jsx)(L, {
     ...e,

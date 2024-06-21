@@ -10,10 +10,10 @@ var i, s, l, a, r, o = n(442837),
   m = n(70956),
   g = n(780570),
   p = n(314897),
-  T = n(77498),
-  N = n(283595),
-  S = n(19780),
-  C = n(944486),
+  N = n(77498),
+  T = n(283595),
+  C = n(19780),
+  S = n(944486),
   A = n(981631);
 let f = "ActivityTrackingStore",
   Z = 30 * m.Z.Millis.MINUTE,
@@ -34,10 +34,10 @@ function M(e) {
     n = Date.now(),
     i = null != e.updatedAt ? n - e.updatedAt : 0;
   i > Z + v && (i = 0);
-  let s = (0, g.OT)(e.applicationId, N.Z),
-    l = C.Z.getVoiceChannelId(),
+  let s = (0, g.OT)(e.applicationId, T.Z),
+    l = S.Z.getVoiceChannelId(),
     a = p.default.getSessionId(),
-    r = S.Z.getMediaSessionId();
+    r = C.Z.getMediaSessionId();
   E.Z.updateActivity({
     applicationId: e.applicationId,
     distributor: e.isDiscordApplication ? A.GQo.DISCORD : e.distributor,
@@ -64,7 +64,7 @@ function P() {
       exePath: s
     }
     of t) {
-    let t = T.Z.getGameByName(e);
+    let t = N.Z.getGameByName(e);
     if (null != t) n.add(t.id), !(t.id in L) && M({
       applicationId: t.id,
       updatedAt: Date.now(),
@@ -81,7 +81,7 @@ function D() {
 }
 class b extends(s = o.ZP.Store) {
   initialize() {
-    this.waitFor(_.ZP, I.Z, N.Z), this.syncWith([I.Z], P)
+    this.waitFor(_.ZP, I.Z, T.Z), this.syncWith([I.Z], P)
   }
   getActivities() {
     return L

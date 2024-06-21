@@ -23,7 +23,7 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class T extends s.PureComponent {
+class N extends s.PureComponent {
   hasParty(e) {
     return e.length > 1
   }
@@ -84,4 +84,4 @@ t.Z = r.ZP.connectStores([d.Z, _.default, h.Z, E.Z], () => {
     host: e,
     party: l
   }
-})(T)
+})(N)

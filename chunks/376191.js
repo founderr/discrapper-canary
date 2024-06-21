@@ -20,30 +20,30 @@ var s = n(442837),
   m = n(998502),
   g = n(620924),
   p = n(332712),
-  T = n(81471),
-  N = n(689938),
-  S = n(272e3);
-let C = e => {
+  N = n(81471),
+  T = n(689938),
+  C = n(272e3);
+let S = e => {
     let {
       userId: t
     } = e, n = (0, p._)(t);
     return null == n || 0 === n.length ? (0, i.jsx)(l.Text, {
-      className: S.mutualGuilds,
+      className: C.mutualGuilds,
       variant: "text-sm/normal",
       color: "text-muted",
-      children: N.Z.Messages.USER_PROFILE_NO_MUTUAL_SERVERS
+      children: T.Z.Messages.USER_PROFILE_NO_MUTUAL_SERVERS
     }) : (0, i.jsxs)("div", {
-      className: S.mutualGuildsContainer,
+      className: C.mutualGuildsContainer,
       children: [(0, i.jsx)(E.Z, {
         guilds: n,
         maxGuilds: 3,
         size: o.Vj.Sizes.SMOL,
         hideOverflowCount: !0
       }), (0, i.jsx)(l.Text, {
-        className: S.mutualGuilds,
+        className: C.mutualGuilds,
         variant: "text-sm/normal",
         color: "text-muted",
-        children: N.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
+        children: T.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
           count: n.length
         })
       })]
@@ -66,34 +66,34 @@ function f(e) {
   });
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(A, {
-      className: S.avatar,
+      className: C.avatar,
       src: (0, d.x)(n, 40, f),
       avatarDecoration: v,
       size: l.AvatarSizes.SIZE_40,
-      "aria-label": null !== (t = null == o ? void 0 : o.username) && void 0 !== t ? t : N.Z.Messages.UNKNOWN_USER
+      "aria-label": null !== (t = null == o ? void 0 : o.username) && void 0 !== t ? t : T.Z.Messages.UNKNOWN_USER
     }), (0, i.jsxs)("div", {
-      className: S.userPreview,
+      className: C.userPreview,
       children: [(0, i.jsxs)("div", {
-        className: S.userContainerWithPreview,
+        className: C.userContainerWithPreview,
         children: [(0, i.jsx)(a.Z, {
           nick: p,
           user: o,
           showAccountIdentifier: !0,
-          className: S.tagContainer,
-          usernameClass: S.username,
-          discriminatorClass: null != I.ZP.getGlobalName(o) ? S.globalName : S.discriminator
+          className: C.tagContainer,
+          usernameClass: C.username,
+          discriminatorClass: null != I.ZP.getGlobalName(o) ? C.globalName : C.discriminator
         }), (0, i.jsx)(l.Text, {
-          className: S.timestampWithPreview,
+          className: C.timestampWithPreview,
           color: "text-muted",
           variant: "text-xs/normal",
           children: Z
         })]
       }), (0, i.jsx)(_.Z, {
-        hoverText: (0, i.jsx)(T.Z, {
+        hoverText: (0, i.jsx)(N.Z, {
           channel: n
         }),
         forceHover: E,
-        children: (0, i.jsx)(C, {
+        children: (0, i.jsx)(S, {
           userId: o.id
         })
       })]

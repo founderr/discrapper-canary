@@ -13,10 +13,10 @@ var i, s, l = n(735250),
   m = n(605236),
   g = n(931515),
   p = n(807933),
-  T = n(702646),
-  N = n(207796),
-  S = n(543550),
-  C = n(895068),
+  N = n(702646),
+  T = n(207796),
+  C = n(543550),
+  S = n(895068),
   A = n(921944),
   f = n(528021);
 (s = i || (i = {})).TOP_PICKS = "top_picks", s.OTHER_GUILDS = "other_guilds";
@@ -28,18 +28,18 @@ let Z = {
   v = a.memo(function(e) {
     let {
       width: t
-    } = e, n = (0, d.e7)([h.Z], () => h.Z.useReducedMotion), i = (0, N.GN)(e => e.mode, o.Z), [s, u] = a.useState(!0), E = (0, r.useSpring)({
+    } = e, n = (0, d.e7)([h.Z], () => h.Z.useReducedMotion), i = (0, T.GN)(e => e.mode, o.Z), [s, u] = a.useState(!0), E = (0, r.useSpring)({
       from: {
         opacity: 0
       },
       to: {
-        opacity: i === N.v0.GET_STARTED ? 0 : 1
+        opacity: i === T.v0.GET_STARTED ? 0 : 1
       },
       config: Z,
       delay: 500,
       immediate: n,
       onRest: () => u(!1)
-    }), g = (0, N.GN)(e => e.userUpsellScreen, o.Z), v = (0, N.GN)(e => e.started, o.Z), {
+    }), g = (0, T.GN)(e => e.userUpsellScreen, o.Z), v = (0, T.GN)(e => e.started, o.Z), {
       guilds: L
     } = (0, _.C3)({
       location: "ClanDiscoveryAdminContainer",
@@ -54,27 +54,27 @@ let Z = {
         })
       }, [x]), a.useEffect(() => {
         let e = L.length > 0;
-        if (e && !R && g === N.o2.USER_UPSELL) {
-          (0, N.fH)(N.v0.ADMIN_UPSELL);
+        if (e && !R && g === T.o2.USER_UPSELL) {
+          (0, T.fH)(T.v0.ADMIN_UPSELL);
           return
         }
         if (!e && R && !v) {
-          (0, N.fH)(N.v0.GET_STARTED);
+          (0, T.fH)(T.v0.GET_STARTED);
           return
         }
-        if (R && i === N.v0.ADMIN_UPSELL && 0 === O.length) {
-          (0, N.fH)(N.v0.GET_STARTED), N.GN.getState().setUserUpsellScreen(N.o2.USER_UPSELL);
+        if (R && i === T.v0.ADMIN_UPSELL && 0 === O.length) {
+          (0, T.fH)(T.v0.GET_STARTED), T.GN.getState().setUserUpsellScreen(T.o2.USER_UPSELL);
           return
         }
       }, [O.length, L.length, v, R, i, g]), i) {
-      case N.v0.ADMIN_UPSELL:
-        return (0, l.jsx)(S.$, {});
-      case N.v0.GET_STARTED:
-        return (0, l.jsx)(S.J, {});
-      case N.v0.DISCOVERY:
-      case N.v0.GAMES:
-      case N.v0.PLAYSTYLE:
-      case N.v0.TRAITS:
+      case T.v0.ADMIN_UPSELL:
+        return (0, l.jsx)(C.$, {});
+      case T.v0.GET_STARTED:
+        return (0, l.jsx)(C.J, {});
+      case T.v0.DISCOVERY:
+      case T.v0.GAMES:
+      case T.v0.PLAYSTYLE:
+      case T.v0.TRAITS:
         return (0, l.jsxs)("div", {
           className: f.discoveryContainer,
           children: [(0, l.jsx)(r.animated.div, {
@@ -84,14 +84,14 @@ let Z = {
               transform: E.opacity.to([0, 1], [-40, 0]).to(e => "translateY(".concat(e, "px)")),
               borderBottom: "1px solid var(--bg-mod-strong)"
             },
-            children: (0, l.jsx)(T.Z, {})
+            children: (0, l.jsx)(N.Z, {})
           }), (0, l.jsx)(r.animated.div, {
             className: f.content,
             style: {
               opacity: E.opacity,
               transform: E.opacity.to([0, 1], [40, 0]).to(e => "translateY(".concat(e, "px)"))
             },
-            children: (0, l.jsx)(C.ZP, {
+            children: (0, l.jsx)(S.ZP, {
               width: t,
               isAnimating: s
             })

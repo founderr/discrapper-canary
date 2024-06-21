@@ -25,7 +25,7 @@ function m(e) {
   } = e, {
     priorityMembers: m,
     guildContext: g
-  } = t, p = m[0], T = function(e) {
+  } = t, p = m[0], N = function(e) {
     let {
       priorityMembers: t,
       partiedMembers: n
@@ -51,8 +51,8 @@ function m(e) {
         })
     }
   }(t), {
-    subtitle: N,
-    icon: S
+    subtitle: T,
+    icon: C
   } = function(e) {
     var t;
     let {
@@ -60,30 +60,30 @@ function m(e) {
       partiedMembers: u,
       voiceChannels: m,
       currentActivities: g
-    } = e, p = s.length, T = u.length - p, N = g[0], S = null == N ? void 0 : N.activity, C = null == N ? void 0 : N.startedPlayingTime, A = {
-      name: null !== (t = null == S ? void 0 : S.name) && void 0 !== t ? t : ""
+    } = e, p = s.length, N = u.length - p, T = g[0], C = null == T ? void 0 : T.activity, S = null == T ? void 0 : T.startedPlayingTime, A = {
+      name: null !== (t = null == C ? void 0 : C.name) && void 0 !== t ? t : ""
     };
-    if ((0, a.Z)(S) && null != S) return {
+    if ((0, a.Z)(C) && null != C) return {
       subtitle: (0, i.jsx)(c.ZP, {
-        start: C,
+        start: S,
         location: c.ZP.Locations.ACTIVITY_FEED_NEW,
         messageProps: A
       }),
       icon: null
     };
-    if (p + T === 1 && null != N) {
+    if (p + N === 1 && null != T) {
       let {
         game: e
-      } = N;
-      if (null == S) return {
+      } = T;
+      if (null == C) return {
         subtitle: null,
         icon: null
       };
-      let t = d.dc(S);
+      let t = d.dc(C);
       if (null != t) return t;
-      switch (S.type) {
+      switch (C.type) {
         case _.IIU.PLAYING:
-          if ((0, o.Z)(S)) return {
+          if ((0, o.Z)(C)) return {
             subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_XBOX,
             icon: (0, i.jsx)(E.Z.Header.Icon, {
               src: E.Z.Header.Icon.Src.XBOX
@@ -91,7 +91,7 @@ function m(e) {
           };
           return {
             subtitle: (0, i.jsx)(c.ZP, {
-              start: C,
+              start: S,
               location: c.ZP.Locations.ACTIVITY_FEED_NEW,
               messageProps: A
             }), icon: null != e ? (0, i.jsx)(E.Z.Header.Icon, {
@@ -106,7 +106,7 @@ function m(e) {
           };
         case _.IIU.LISTENING:
           let s;
-          return s = (0, r.Z)(S) ? (0, i.jsx)(E.Z.Header.Icon, {
+          return s = (0, r.Z)(C) ? (0, i.jsx)(E.Z.Header.Icon, {
             src: E.Z.Header.Icon.Src.SPOTIFY
           }) : null != e.getIconURL(h.Z) ? (0, i.jsx)(E.Z.Header.Icon, {
             src: e.getIconURL(h.Z)
@@ -114,7 +114,7 @@ function m(e) {
             src: n(211827)
           }), {
             subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_LISTENING.format({
-              name: S.name
+              name: C.name
             }),
             icon: s
           };
@@ -183,9 +183,9 @@ function m(e) {
   return (0, i.jsx)(E.Z.Header, {
     priorityUser: p,
     guildId: null == g ? void 0 : g.id,
-    title: T,
-    subtitle: N,
-    icon: S,
+    title: N,
+    subtitle: T,
+    icon: C,
     onContextMenu: e => s(e, p.user)
   })
 }

@@ -66,10 +66,10 @@ var i, s = n(729594),
   m = n(592125),
   g = n(430824),
   p = n(131951),
-  T = n(375954),
-  N = n(158776),
-  S = n(594174),
-  C = n(979651),
+  N = n(375954),
+  T = n(158776),
+  C = n(594174),
+  S = n(979651),
   A = n(70956),
   f = n(5192),
   Z = n(226951),
@@ -106,14 +106,14 @@ function G(e, t) {
   let n = [],
     i = e.getGuildId();
   return ![R.d4z.GUILD_CATEGORY, ..._.tx].includes(e.type) && n.push(new Promise(t => {
-    T.Z.whenReady(e.id, () => t()), c.Z.fetchMessages({
+    N.Z.whenReady(e.id, () => t()), c.Z.fetchMessages({
       channelId: e.id,
       limit: R.AQB
     })
   })), Promise.all(n).then(() => {
     var n;
-    let s = (!e.isNSFW() || (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(w) : [],
-      l = Object.values(C.Z.getVoiceStatesForChannel(e.id)).map(t => k(i, e.id, t));
+    let s = (!e.isNSFW() || (null === (n = C.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? N.Z.getMessages(e.id).toArray().map(w) : [],
+      l = Object.values(S.Z.getVoiceStatesForChannel(e.id)).map(t => k(i, e.id, t));
     return {
       id: e.id,
       name: e.name,
@@ -165,7 +165,7 @@ function k(e, t, n) {
     selfDeaf: a,
     suppress: r,
     userId: o
-  } = n, c = S.default.getUser(o);
+  } = n, c = C.default.getUser(o);
   if (null == c) throw Error("Invalid user id: ".concat(o));
   return {
     nick: f.ZP.getName(e, t, c),
@@ -184,13 +184,13 @@ function k(e, t, n) {
 }
 
 function B(e, t, n) {
-  let i = S.default.getUser(t);
+  let i = C.default.getUser(t);
   return {
     type: e,
     user: null != i ? (0, L.Z)(i) : null,
     presence: {
-      status: N.Z.getStatus(t),
-      activity: null != n ? N.Z.getApplicationActivity(t, n) : N.Z.getPrimaryActivity(t)
+      status: T.Z.getStatus(t),
+      activity: null != n ? T.Z.getApplicationActivity(t, n) : T.Z.getPrimaryActivity(t)
     }
   }
 }

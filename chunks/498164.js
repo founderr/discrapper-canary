@@ -13,10 +13,10 @@ var a = n(756647),
   m = n(314897),
   g = n(594174),
   p = n(626135),
-  T = n(585483),
-  N = n(591759),
-  S = n(998502),
-  C = n(996106),
+  N = n(585483),
+  T = n(591759),
+  C = n(998502),
+  S = n(996106),
   A = n(186901),
   f = n(981631);
 
@@ -39,7 +39,7 @@ function Z(e, t) {
       } = e, {
         invite: n
       } = await h.Z.resolveInvite(t, "Desktop Modal");
-      if (null == n) throw new C.Z({
+      if (null == n) throw new S.Z({
         errorCode: f.lTL.INVALID_INVITE
       }, "Invalid invite id: ".concat(t));
       return m.default.isAuthenticated() ? o.Z.dispatch({
@@ -65,10 +65,10 @@ function Z(e, t) {
       let {
         guildTemplate: i
       } = await _.Z.resolveGuildTemplate(t);
-      if (null == i) throw new C.Z({
+      if (null == i) throw new S.Z({
         errorCode: f.lTL.INVALID_GUILD_TEMPLATE
       }, "Invalid guild template id: ".concat(t));
-      return S.ZP.focus(), (0, r.openModalLazy)(async () => {
+      return C.ZP.focus(), (0, r.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("10778"), n.e("90424")]).then(n.bind(n, 766775));
@@ -96,7 +96,7 @@ function Z(e, t) {
             let {
               giftCode: s
             } = i;
-            S.ZP.focus(), p.default.track(f.rMx.OPEN_MODAL, {
+            C.ZP.focus(), p.default.track(f.rMx.OPEN_MODAL, {
               type: "gift_accept",
               location: f.SaU
             }), (0, r.openModalLazy)(async () => {
@@ -110,7 +110,7 @@ function Z(e, t) {
             }), e({
               giftCode: s
             })
-          }).catch(() => i(new C.Z({
+          }).catch(() => i(new S.Z({
             errorCode: f.lTL.INVALID_GIFT_CODE
           }, "Invalid gift code: ".concat(t))))
         })
@@ -126,12 +126,12 @@ function Z(e, t) {
           params: n
         }
       } = e;
-      switch (S.ZP.focus(), t) {
+      switch (C.ZP.focus(), t) {
         case A.jE.USER_SETTINGS:
           null != n && ((0, I.dL)(f.Z5c.SETTINGS(n.section, n.subsection)), Z(n.fingerprint, "settings"));
           break;
         case A.jE.CHANGELOG:
-          null != n && ((0, I.dL)(N.Z.formatPathWithQuery(f.Z5c.CHANGELOGS(n.date), n.query)), Z(n.fingerprint, "changelog"));
+          null != n && ((0, I.dL)(T.Z.formatPathWithQuery(f.Z5c.CHANGELOGS(n.date), n.query)), Z(n.fingerprint, "changelog"));
           break;
         case A.jE.LIBRARY:
           (0, I.dL)(f.Z5c.APPLICATION_LIBRARY), null != n && Z(n.fingerprint, "library");
@@ -165,7 +165,7 @@ function Z(e, t) {
           fingerprint: n
         }
       } = e;
-      S.ZP.focus(null, !0), (0, u.lx)(t, n)
+      C.ZP.focus(null, !0), (0, u.lx)(t, n)
     }
   },
   [f.Etm.CONNECTIONS_CALLBACK]: {
@@ -186,7 +186,7 @@ function Z(e, t) {
           state: s
         })
       } catch (e) {
-        throw T.S.dispatch(f.CkL.CONNECTIONS_CALLBACK_ERROR), e
+        throw N.S.dispatch(f.CkL.CONNECTIONS_CALLBACK_ERROR), e
       }
     }
   },

@@ -16,10 +16,10 @@ var l = n(481060),
   m = n(430824),
   g = n(914010),
   p = n(594174),
-  T = n(823379),
-  N = n(358085),
-  S = n(929809),
-  C = n(179645),
+  N = n(823379),
+  T = n(358085),
+  C = n(929809),
+  S = n(179645),
   A = n(701476),
   f = n(785997),
   Z = n(981631),
@@ -38,7 +38,7 @@ class R extends r.Z {
   }
   handleConnectionOpen() {
     var e;
-    let t, a = C.Z.getType();
+    let t, a = S.Z.getType();
     if (null == a) return;
     switch (a) {
       case A.M5.INVITE_UNCLAIMED:
@@ -56,7 +56,7 @@ class R extends r.Z {
       let e = m.Z.getGuild(O);
       (null == e ? void 0 : e.hasVerificationGate()) && (r = !0, (0, h.RM)(e.id))
     }
-    let R = () => 0 === I.Z.totalGuilds && !N.isPlatformEmbedded,
+    let R = () => 0 === I.Z.totalGuilds && !T.isPlatformEmbedded,
       x = o.b();
     e = [{
       key: "Unified NUF Modal",
@@ -87,7 +87,7 @@ class R extends r.Z {
             case null:
               break;
             default:
-              T.vE(e)
+              N.vE(e)
           }
         };
         i = await (0, l.openModalLazy)(async () => {
@@ -111,7 +111,7 @@ class R extends r.Z {
       predicate: () => x && !R() && !v.a
     }, {
       key: "Claim Account Modal",
-      open: e => c.j(N.isPlatformEmbedded, e),
+      open: e => c.j(T.isPlatformEmbedded, e),
       predicate: () => {
         var e;
         return !r && null != p.default.getCurrentUser() && !(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !v.a && !(0, d.g)("new_user_manager")
@@ -138,7 +138,7 @@ class R extends r.Z {
       }),
       predicate: () => null != O && null != _.Z.get(O) && _.Z.get(O) !== _.a
     }], t = () => {
-      S.H(), E.Z.flowStep(L.MK.ANY, L.EW.NUF_COMPLETE, !0)
+      C.H(), E.Z.flowStep(L.MK.ANY, L.EW.NUF_COMPLETE, !0)
     }, [...e].reverse().forEach(e => {
       let n = t;
       t = () => {

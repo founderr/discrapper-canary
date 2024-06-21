@@ -22,17 +22,17 @@ var i = n(735250),
   m = n(207796),
   g = n(497189),
   p = n(304231),
-  T = n(895068),
-  N = n(490610),
-  S = n(981631),
-  C = n(689938),
+  N = n(895068),
+  T = n(490610),
+  C = n(981631),
+  S = n(689938),
   A = n(698829);
 let f = (e, t) => {
   switch (e) {
     case m.hz.GENSHIN:
-      return t === S.BRd.DARK ? A.genshinUpsellBackgroundImageDark : A.genshinUpsellBackgroundImageLight;
+      return t === C.BRd.DARK ? A.genshinUpsellBackgroundImageDark : A.genshinUpsellBackgroundImageLight;
     case m.hz.VALORANT:
-      return t === S.BRd.DARK ? A.valorantUpsellBackgroundImageDark : A.valorantUpsellBackgroundImageLight
+      return t === C.BRd.DARK ? A.valorantUpsellBackgroundImageDark : A.valorantUpsellBackgroundImageLight
   }
 };
 
@@ -53,19 +53,19 @@ function Z() {
         scrollHeight: h
       }
     }),
-    N = (0, E.ZP)(),
-    C = s.useMemo(() => f(e, N), [e, N]),
+    T = (0, E.ZP)(),
+    S = s.useMemo(() => f(e, T), [e, T]),
     Z = s.useCallback(e => {
       _(e.currentTarget.scrollTop)
     }, [_]),
     v = s.useMemo(() => {
       switch (e) {
         case m.hz.GENSHIN:
-          return N === S.BRd.DARK ? A.genshinOnboardingBackgroundImageDark : A.genshinOnboardingBackgroundImageLight;
+          return T === C.BRd.DARK ? A.genshinOnboardingBackgroundImageDark : A.genshinOnboardingBackgroundImageLight;
         case m.hz.VALORANT:
-          return N === S.BRd.DARK ? A.valorantOnboardingBackgroundImageDark : A.valorantOnboardingBackgroundImageLight
+          return T === C.BRd.DARK ? A.valorantOnboardingBackgroundImageDark : A.valorantOnboardingBackgroundImageLight
       }
-    }, [e, N]),
+    }, [e, T]),
     L = (0, u.useToken)(u.tokens.colors.BG_MOD_STRONG);
   switch (t) {
     case m.o2.USER_UPSELL:
@@ -95,17 +95,17 @@ function Z() {
               opacity: g.scrollHeight.to([100, 364], [1, 0])
             },
             children: [(0, i.jsx)("div", {
-              className: C
+              className: S
             }), (0, i.jsx)("div", {
               className: A.backgroundImageBlur
             })]
           }), (0, i.jsx)("div", {
             className: a()(A.backgroundImageContent, A.userUpsell),
-            children: (0, i.jsx)(T.ZP, {
+            children: (0, i.jsx)(N.ZP, {
               onScroll: Z,
               width: null != c ? c : 0,
               isAnimating: !1,
-              variant: T.Bj.UPSELL
+              variant: N.Bj.UPSELL
             })
           })]
         })]
@@ -163,9 +163,9 @@ function v() {
             eligibleGuildsIncludingConverted: l
           })
         })]
-      }), (0, i.jsx)(N.Z, {
-        title: C.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE,
-        subtitle: I ? C.Z.Messages.CLAN_DISCOVERY_PILOT_SUBTITLE.format() : void 0
+      }), (0, i.jsx)(T.Z, {
+        title: S.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE,
+        subtitle: I ? S.Z.Messages.CLAN_DISCOVERY_PILOT_SUBTITLE.format() : void 0
       })]
     })
   })

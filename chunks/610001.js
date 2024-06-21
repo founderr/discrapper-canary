@@ -22,8 +22,8 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let T = d.Z.getArticleURL(_.BhN.VERIFICATION_FAQ);
-class N extends(i = l.PureComponent) {
+let N = d.Z.getArticleURL(_.BhN.VERIFICATION_FAQ);
+class T extends(i = l.PureComponent) {
   renderFields() {
     let {
       types: e,
@@ -62,7 +62,7 @@ class N extends(i = l.PureComponent) {
         }), (0, s.jsx)("div", {
           className: r()(m.body, g.marginTop4, g.marginBottom20),
           children: I.Z.Messages.VERIFICATION_BODY_WITH_HELP_LINK.format({
-            helpCenterURL: T
+            helpCenterURL: N
           })
         }), (0, s.jsx)(E.Z, {
           grow: 0,
@@ -102,8 +102,8 @@ class N extends(i = l.PureComponent) {
     })
   }
 }
-p(N, "defaultProps", {
+p(T, "defaultProps", {
   types: [_.PUi.CAPTCHA],
   onCaptchaVerify: _.dG4,
   onLogout: _.dG4
-}), t.Z = N
+}), t.Z = T

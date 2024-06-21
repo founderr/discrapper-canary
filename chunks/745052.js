@@ -15,10 +15,10 @@ var i = n(735250),
   m = n(183126),
   g = n(607070),
   p = n(209613),
-  T = n(325708),
-  N = n(320149),
-  S = n(252618),
-  C = n(605236),
+  N = n(325708),
+  T = n(320149),
+  C = n(252618),
+  S = n(605236),
   A = n(243778),
   f = n(984370),
   Z = n(797614),
@@ -78,12 +78,12 @@ function es() {
     }),
     g = (0, p.Z)("message-requests-list"),
     {
-      channelId: T
+      channelId: N
     } = (0, F._)(),
-    N = s.useCallback(() => {
+    T = s.useCallback(() => {
       I(n.map(e => e.channel.id))
     }, [n, I]),
-    S = s.useCallback(e => {
+    C = s.useCallback(e => {
       var t, s;
       let {
         row: r
@@ -91,15 +91,15 @@ function es() {
       return (0, i.jsx)(q.Z, {
         index: r,
         className: a()({
-          [en.selected]: null != T && T === u,
-          [en.siblingSelected]: null != T && T === c
+          [en.selected]: null != N && N === u,
+          [en.siblingSelected]: null != N && N === c
         }),
         channel: o.channel,
         user: o.user,
         hasSingleMessageRequest: l
       }, u)
-    }, [l, n, T]),
-    C = s.useCallback(() => (0, i.jsxs)(y.Z, {
+    }, [l, n, N]),
+    S = s.useCallback(() => (0, i.jsxs)(y.Z, {
       className: en.sectionTitle,
       children: [t > 0 ? et.Z.Messages.MESSAGE_REQUESTS_PAGE_TITLE_WITH_COUNT.format({
         count: t
@@ -111,7 +111,7 @@ function es() {
           tag: "span",
           children: "•"
         }), (0, i.jsx)(d.Button, {
-          onClick: N,
+          onClick: T,
           look: d.ButtonLooks.LINK,
           color: d.ButtonColors.LINK,
           size: d.ButtonSizes.SMALL,
@@ -120,7 +120,7 @@ function es() {
           children: et.Z.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })]
       }) : null]
-    }, "title"), [t, N, c]);
+    }, "title"), [t, T, c]);
   return (n.length !== t && Z.Z.increment({
     name: o.V.MESSAGE_REQUEST_COUNT_DRIFT
   }), 0 === n.length) ? (0, i.jsx)(K.Z, {
@@ -146,8 +146,8 @@ function es() {
           paddingBottom: 24,
           sectionHeight: X.oi,
           rowHeight: X.WN,
-          renderSection: C,
-          renderRow: S,
+          renderSection: S,
+          renderRow: C,
           sections: [n.length],
           chunkSize: 30,
           fade: !0,
@@ -165,11 +165,11 @@ function el(e) {
   } = e, s = (0, c.e7)([P.ZP], () => P.ZP.getSidebarState(P.uZ)), l = (0, c.e7)([D.Z], () => D.Z.getChannel(null == s ? void 0 : s.channelId));
   if (null == s || s.type !== O.tI.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
   let a = t - J.R7I;
-  return (0, i.jsx)(T.Z, {
-    sidebarType: T.y.MessageRequestSidebar,
+  return (0, i.jsx)(N.Z, {
+    sidebarType: N.y.MessageRequestSidebar,
     maxWidth: a,
     onWidthChange: n,
-    children: (0, i.jsx)(N.Z, {
+    children: (0, i.jsx)(T.Z, {
       channel: l,
       baseChannelId: P.uZ
     })
@@ -195,7 +195,7 @@ let ea = function(e) {
       n = () => b.Z.hasLayers() || (0, d.hasAnyModalOpen)(),
       l = (0, c.e7)([g.Z], () => g.Z.useReducedMotion);
     return s.useEffect(() => {
-      (0, C.kk)(u.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
+      (0, S.kk)(u.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
     }, []), (0, i.jsx)(A.Z, {
       contentTypes: [u.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
       children: s => {
@@ -264,8 +264,8 @@ let ec = (0, I.Z)(function(e) {
   s.useEffect(() => {
     null != I && !g && p && m && ((0, v.Kh)(I), L.Z.closeChannelSidebar(P.uZ))
   }, [I, p, m, g]);
-  let [T, N] = s.useState(X.pS.REQUESTS);
-  return (0, S.Tt)({
+  let [N, T] = s.useState(X.pS.REQUESTS);
+  return (0, C.Tt)({
     location: et.Z.Messages.MESSAGE_REQUESTS
   }), (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsxs)("div", {
@@ -285,10 +285,10 @@ let ec = (0, I.Z)(function(e) {
           })
         }), (0, i.jsx)(f.Z.Divider, {}), (0, i.jsxs)(d.TabBar, {
           "aria-label": et.Z.Messages.MESSAGE_REQUESTS,
-          selectedItem: T,
+          selectedItem: N,
           type: "top-pill",
           onItemSelect: e => {
-            N(e)
+            T(e)
           },
           className: en.__invalid_tabBar,
           children: [(0, i.jsx)(d.TabBar.Item, {
@@ -306,7 +306,7 @@ let ec = (0, I.Z)(function(e) {
       }), (0, i.jsx)("div", {
         className: ei.content,
         children: (0, i.jsx)(eo, {
-          section: T
+          section: N
         })
       })]
     }), m && (0, i.jsx)(el, {
