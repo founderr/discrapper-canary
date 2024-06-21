@@ -1,51 +1,56 @@
-n.r(i), n.d(i, {
+s.r(i), s.d(i, {
   default: function() {
-    return Z
+    return f
   }
 });
-var s = n(735250);
-n(470079);
-var l = n(512722),
-  t = n.n(l),
-  o = n(442837),
-  r = n(594174),
-  a = n(786874),
-  d = n(447452),
-  u = n(877485),
-  c = n(910364),
-  I = n(107889),
-  E = n(397185);
+var n = s(735250);
+s(470079);
+var l = s(512722),
+  t = s.n(l),
+  o = s(442837),
+  r = s(594174),
+  a = s(786874),
+  d = s(447452),
+  c = s(877485),
+  u = s(910364),
+  I = s(853825),
+  E = s(41527),
+  Z = s(107889);
 
-function Z(e) {
+function f(e) {
   let {
     location: i,
-    user: n,
+    user: s,
     ...l
   } = e, {
-    basicsEnabled: Z
+    basicsEnabled: f
   } = (0, d.t)({
     location: i
   }), {
     originalFriendingEnabled: _,
-    improvedFriendingEnabled: f
-  } = (0, u.V)({
+    improvedFriendingEnabled: S
+  } = (0, c.V)({
     location: i
   }), {
-    botProfilesEnabled: S
+    botProfilesEnabled: v
   } = (0, a.J)({
     location: i
-  }), v = Z || _ || f, m = (0, o.e7)([r.default], () => r.default.getCurrentUser());
-  return (t()(null != m, "UserProfileModalExperimentWrapper: currentUser cannot be undefined"), v && S && n.bot && !n.isNonUserBot()) ? (0, s.jsx)(E.Z, {
+  }), m = f || _ || S, x = (0, o.e7)([r.default], () => r.default.getCurrentUser());
+  return (t()(null != x, "UserProfileModalExperimentWrapper: currentUser cannot be undefined"), m && v && s.isNonUserBot()) ? (0, n.jsx)(I.Z, {
     ...l,
-    user: n,
-    currentUser: m
-  }) : !v || n.bot || n.isNonUserBot() || n.isClyde() ? (0, s.jsx)(c.Z, {
+    user: s,
+    currentUser: x
+  }) : m && v && s.bot ? (0, n.jsx)(E.Z, {
     ...l,
-    user: n,
-    currentUser: m
-  }) : (0, s.jsx)(I.Z, {
+    user: s,
+    currentUser: x
+  }) : !m || s.bot || s.isNonUserBot() || s.isClyde() ? (0, n.jsx)(u.Z, {
     ...l,
-    user: n,
-    currentUser: m
+    user: s,
+    currentUser: x
+  }) : (0, n.jsx)(Z.Z, {
+    ...l,
+    user: s,
+    currentUser: x
   })
 }
