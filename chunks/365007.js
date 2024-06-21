@@ -40,9 +40,7 @@ async function a() {
 }
 
 function l() {
-  r.Z.dispatch({
-    type: "MFA_WEBAUTHN_CREDENTIALS_LOADING"
-  }), i.tn.get(s.ANM.MFA_WEBAUTHN_CREDENTIALS).then(e => {
+  i.tn.get(s.ANM.MFA_WEBAUTHN_CREDENTIALS).then(e => {
     r.Z.dispatch({
       type: "MFA_WEBAUTHN_CREDENTIALS_LOADED",
       credentials: e.body

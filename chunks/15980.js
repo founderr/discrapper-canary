@@ -21,8 +21,9 @@ l = "WebAuthnStore", (a = "displayName") in(i = _) ? Object.defineProperty(i, a,
   LOGOUT: function() {
     d = [], E = !1
   },
-  MFA_WEBAUTHN_CREDENTIALS_LOADING: () => (E = !0, !0),
-  MFA_WEBAUTHN_CREDENTIALS_LOADED: e => (d = e.credentials, !0),
+  MFA_WEBAUTHN_CREDENTIALS_LOADED(e) {
+    d = e.credentials, E = !0
+  },
   AUTHENTICATOR_CREATE(e) {
     let {
       credential: s
