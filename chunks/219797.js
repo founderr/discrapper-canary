@@ -1,24 +1,24 @@
 t.d(n, {
   L9: function() {
-    return D
+    return x
   },
   ZK: function() {
-    return N
+    return D
   },
   d4: function() {
-    return L
+    return N
   },
   dS: function() {
-    return C
+    return g
   },
   jY: function() {
-    return A
+    return L
   },
   q7: function() {
-    return v
+    return A
   },
   vZ: function() {
-    return g
+    return v
   }
 }), t(789020);
 var i = t(735250),
@@ -34,14 +34,15 @@ var i = t(735250),
   f = t(52824),
   m = t(630388),
   E = t(591759),
-  S = t(524444),
-  h = t(981631),
-  p = t(689938),
-  I = t(559266);
+  S = t(850908),
+  h = t(524444),
+  p = t(981631),
+  I = t(689938),
+  C = t(559266);
 
-function C(e) {
+function g(e) {
   let n = e.item.originalItem;
-  return (0, S.Yi)({
+  return (0, h.Yi)({
     ...e,
     alt: n.description,
     src: (0, f.q)({
@@ -58,30 +59,30 @@ function C(e) {
   })
 }
 
-function g(e) {
+function v(e) {
   let n = e.item.originalItem,
     t = r.useCallback(() => {
       var e;
-      return (0, m.yE)(null !== (e = n.flags) && void 0 !== e ? e : 0, h.J0y.IS_CLIP) ? (0, i.jsxs)(u.DY, {
-        text: p.Z.Messages.CLIPS_BETA_TAG_HOVER,
-        className: I.clipPill,
+      return (0, m.yE)(null !== (e = n.flags) && void 0 !== e ? e : 0, p.J0y.IS_CLIP) ? (0, i.jsxs)(u.DY, {
+        text: I.Z.Messages.CLIPS_BETA_TAG_HOVER,
+        className: C.clipPill,
         children: [(0, i.jsx)(o.ClipsIcon, {
           size: "xs",
           color: "currentColor"
         }), (0, i.jsx)(a.x, {
           variant: "text-xs/semibold",
           color: "always-white",
-          children: p.Z.Messages.CLIP_TAG
+          children: I.Z.Messages.CLIP_TAG
         })]
       }) : null
     }, [n]),
     l = E.Z.toURLSafe(n.proxy_url);
-  return null == l ? null : (l.searchParams.append("format", "jpeg"), (0, S.lV)({
+  return null == l ? null : (l.searchParams.append("format", "jpeg"), (0, h.lV)({
     ...e,
     alt: n.description,
     poster: l.toString(),
     fileSize: n.size,
-    fileName: n.filename,
+    fileName: (0, S.Z)(n),
     src: n.url,
     placeholder: n.placeholder,
     placeholderVersion: n.placeholder_version,
@@ -93,17 +94,17 @@ function g(e) {
   }))
 }
 
-function v(e) {
+function A(e) {
   let n = e.item.originalItem;
-  return (0, S.hX)({
+  return (0, h.hX)({
     ...e,
     fileSize: n.size,
-    fileName: n.filename,
+    fileName: (0, S.Z)(n),
     src: n.url
   })
 }
 
-function A(e) {
+function L(e) {
   let {
     message: n,
     item: t
@@ -117,10 +118,10 @@ function A(e) {
     var t;
     (0, d.Np)(n.id, null !== (t = null == e ? void 0 : e.message) && void 0 !== t ? t : null)
   }, [n]);
-  return (0, S.wj)({
+  return (0, h.wj)({
     ...e,
     fileSize: i.size,
-    fileName: i.filename,
+    fileName: (0, S.Z)(i),
     src: i.url,
     durationSecs: i.duration_secs,
     waveform: i.waveform,
@@ -130,28 +131,28 @@ function A(e) {
   })
 }
 
-function L(e) {
+function N(e) {
   let n = e.item.originalItem;
-  return (0, S.xi)({
+  return (0, h.xi)({
     ...e,
     url: n.url,
-    fileName: n.filename,
+    fileName: (0, S.Z)(n),
     fileSize: n.size,
     contentType: n.content_type
   })
 }
 
-function N(e) {
+function D(e) {
   let n = e.item.originalItem;
-  return (0, S.ur)({
+  return (0, h.ur)({
     ...e,
     url: n.url,
-    fileName: n.filename,
+    fileName: (0, S.Z)(n),
     fileSize: n.size
   })
 }
 
-function D(e) {
+function x(e) {
   if ("CLIP" === e.item.type) return (0, i.jsx)(y, {
     attachment: e.item.originalItem,
     message: e.message
