@@ -15,10 +15,10 @@ var l = n(735250),
   h = n(693912),
   m = n(869765),
   p = n(699516),
-  E = n(512665),
-  g = n(352736),
-  f = n(937889),
-  C = n(739566),
+  E = n(352736),
+  g = n(937889),
+  f = n(739566),
+  C = n(267128),
   _ = n(507418),
   I = n(348238),
   x = n(981631),
@@ -33,12 +33,12 @@ let N = i.memo(function(e) {
     referencedUsernameProfile: v,
     referencedAvatarProfile: A,
     setPopout: M
-  } = e, R = N.state === m.Y.LOADED ? N.message : void 0, j = (0, C.Uj)(R), L = (0, c.p)(), O = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = i.useMemo(() => {
+  } = e, R = N.state === m.Y.LOADED ? N.message : void 0, j = (0, f.Uj)(R), L = (0, c.p)(), O = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = i.useMemo(() => {
     if (null == R) return null;
     let e = (0, r.Z)(R);
     if (e.type === x.uaV.USER_JOIN) {
-      let t = g.Z.getWelcomeMessageKind(Z.guild_id);
-      return (0, a.Rp)(g.Z.getSystemMessageUserJoin(e.id, t).astFormat({
+      let t = E.Z.getWelcomeMessageKind(Z.guild_id);
+      return (0, a.Rp)(E.Z.getSystemMessageUserJoin(e.id, t).astFormat({
         username: null != j ? j.nick : e.author.username,
         usernameHook: e => e
       }))
@@ -78,14 +78,14 @@ let N = i.memo(function(e) {
           allowHeading: O,
           allowList: O
         };
-      return (0, f.ZP)(e, n).content
+      return (0, g.ZP)(e, n).content
     }
     return null
   }, [R, j, Z, O, L]), y = (0, s.e7)([p.Z], () => null != R && p.Z.isBlockedForMessage(R), [R]), b = (0, I.wq)(null == R ? void 0 : R.author.id, Z.id), D = (0, I.$3)(n, R, y), U = (0, I.Wl)(R, Z, v, M), k = (0, I.rY)(A, M), w = i.useCallback(() => M({
     referencedUsernameProfile: !1,
     referencedAvatarProfile: !1
-  }), [M]), H = (0, C.Uj)(n);
-  return (0, l.jsx)(E.Z, {
+  }), [M]), H = (0, f.Uj)(n);
+  return (0, l.jsx)(C.Z, {
     repliedAuthor: j,
     baseMessage: n,
     channel: Z,

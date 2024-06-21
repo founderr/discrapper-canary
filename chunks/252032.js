@@ -14,11 +14,11 @@ var l = n(735250),
   d = n(323873),
   h = n(430824),
   m = n(496675),
-  p = n(113039),
-  E = n(703316),
-  g = n(585483),
-  f = n(630388),
-  C = n(838440),
+  p = n(585483),
+  E = n(630388),
+  g = n(838440),
+  f = n(930282),
+  C = n(955384),
   _ = n(981631),
   I = n(105461);
 
@@ -27,7 +27,7 @@ function x(e) {
     value: t,
     channel: n
   } = e;
-  return (0, C.v)({
+  return (0, g.v)({
     type: o.I.EDIT,
     content: t,
     channel: n,
@@ -44,7 +44,7 @@ function T(e) {
     id: o
   } = t, {
     id: c
-  } = n, p = t.getGuildId(), g = (0, s.e7)([h.Z], () => h.Z.getGuild(p), [p]), C = t.type === _.d4z.GUILD_ANNOUNCEMENT, T = null != g && g.hasFeature(_.oNc.NEWS), Z = C && T, {
+  } = n, p = t.getGuildId(), g = (0, s.e7)([h.Z], () => h.Z.getGuild(p), [p]), f = t.type === _.d4z.GUILD_ANNOUNCEMENT, T = null != g && g.hasFeature(_.oNc.NEWS), Z = f && T, {
     editingMessage: S,
     editingTextValue: v,
     editingRichValue: A
@@ -56,7 +56,7 @@ function T(e) {
     let {
       content: i
     } = l, s = m.Z.can(_.Plq.MANAGE_MESSAGES, t), o = null != S && null != S.author ? S.author.id : null;
-    return Z && (o === M || s) && null != S && (0, f.yE)(S.flags, _.iLy.CROSSPOSTED) ? r.Z.confirmEdit(e, n, i) : a.Z.editMessage(e, n, {
+    return Z && (o === M || s) && null != S && (0, E.yE)(S.flags, _.iLy.CROSSPOSTED) ? r.Z.confirmEdit(e, n, i) : a.Z.editMessage(e, n, {
       content: i
     }), Promise.resolve()
   }, [S, Z, M, t]), j = i.useCallback(e => (0, i.createElement)(N, {
@@ -64,7 +64,7 @@ function T(e) {
     className: I.channelTextArea,
     key: c
   }), [c]);
-  return null != v && null != A ? (0, l.jsx)(E.Z, {
+  return null != v && null != A ? (0, l.jsx)(C.Z, {
     ref: void 0,
     channel: t,
     message: n,
@@ -88,10 +88,10 @@ function N(e) {
     onChange: r,
     onSubmit: u,
     onKeyDown: d
-  } = e, [h, m] = i.useState(!0), p = i.useCallback(() => m(!0), []), E = i.useCallback(() => m(!1), []);
-  return i.useEffect(() => (g.S.subscribe(_.CkL.TEXTAREA_FOCUS, p), g.S.subscribe(_.CkL.TEXTAREA_BLUR, E), () => {
-    g.S.unsubscribe(_.CkL.TEXTAREA_FOCUS, p), g.S.unsubscribe(_.CkL.TEXTAREA_BLUR, E)
-  }), [p, E]), (0, l.jsx)(c.Z, {
+  } = e, [h, m] = i.useState(!0), E = i.useCallback(() => m(!0), []), g = i.useCallback(() => m(!1), []);
+  return i.useEffect(() => (p.S.subscribe(_.CkL.TEXTAREA_FOCUS, E), p.S.subscribe(_.CkL.TEXTAREA_BLUR, g), () => {
+    p.S.unsubscribe(_.CkL.TEXTAREA_FOCUS, E), p.S.unsubscribe(_.CkL.TEXTAREA_BLUR, g)
+  }), [E, g]), (0, l.jsx)(c.Z, {
     className: I.channelTextArea,
     textValue: t,
     richValue: n,
@@ -106,8 +106,8 @@ function N(e) {
     },
     onKeyDown: d,
     focused: h,
-    onFocus: p,
-    onBlur: E
+    onFocus: E,
+    onBlur: g
   }, s.id)
 }
 
@@ -119,7 +119,7 @@ function Z(e, t, n) {
   return n ? (0, l.jsx)(T, {
     channel: s,
     message: i
-  }) : (0, l.jsx)(p.ZP, {
+  }) : (0, l.jsx)(f.ZP, {
     message: i,
     content: t
   })

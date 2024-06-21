@@ -1,6 +1,6 @@
 t.d(n, {
   w: function() {
-    return c
+    return a
   }
 });
 var r = t(470079),
@@ -10,9 +10,9 @@ var r = t(470079),
   u = t(979651),
   i = t(441894);
 
-function c(e, n) {
-  var t, c;
-  let a = function(e) {
+function a(e, n) {
+  var t, a;
+  let c = function(e) {
     let n = (0, o.e7)([u.Z], () => u.Z.getVoiceStatesForChannel(e)),
       t = r.useMemo(() => Object.keys(n), [n]);
     return (0, s.Yp)(e, t)
@@ -24,5 +24,5 @@ function c(e, n) {
         return (null === (n = l.Z.getChannel(e)) || void 0 === n ? void 0 : n.isGuildStageVoice()) === !0
       });
     return n && !t
-  }(n) && a.has(e) && (t = 0, c = 0, !1)
+  }(n) && c.has(e) && (t = 0, a = 0, !1)
 }

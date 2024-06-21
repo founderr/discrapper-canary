@@ -9,9 +9,9 @@ var t = a(735250),
   i = a(399606),
   l = a(481060),
   r = a(92114),
-  c = a(797614),
-  d = a(9156),
-  E = a(132338),
+  c = a(661824),
+  d = a(797614),
+  E = a(9156),
   N = a(621600),
   R = a(359119),
   _ = a(473092),
@@ -38,11 +38,11 @@ function m(e) {
       warningId: h,
       senderId: G,
       warningType: R.pj.STRANGER_DANGER
-    }), c.Z.increment({
+    }), d.Z.increment({
       name: o.V.SAFETY_WARNING_MODAL_VIEW
     })
   }, [S, h, G]);
-  let D = (0, i.e7)([d.ZP], () => d.ZP.isChannelMuted(null, S));
+  let D = (0, i.e7)([E.ZP], () => E.ZP.isChannelMuted(null, S));
   return (0, t.jsx)(l.ModalRoot, {
     transitionState: s,
     children: (0, t.jsxs)(l.Scroller, {
@@ -140,7 +140,7 @@ function m(e) {
                 },
                 children: D ? x.Z.Messages.STRANGER_DANGER_MORE_UNMUTE : x.Z.Messages.STRANGER_DANGER_MORE_MUTE
               })]
-            }), (0, t.jsx)(E.Z, {}), (0, t.jsxs)("div", {
+            }), (0, t.jsx)(c.Z, {}), (0, t.jsxs)("div", {
               className: M.safetyAction,
               children: [(0, t.jsxs)("div", {
                 className: M.safetyActionText,

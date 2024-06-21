@@ -21,17 +21,17 @@ var l = n(735250),
   E = n(905405),
   g = n(937889),
   f = n(739566),
-  C = n(378233),
-  _ = n(419922),
-  I = n(375954),
-  x = n(699516),
-  T = n(512665),
+  C = n(267128),
+  _ = n(378233),
+  I = n(419922),
+  x = n(375954),
+  T = n(699516),
   N = n(768581),
   Z = n(70956),
   S = n(823379),
   v = n(792125),
   A = n(981631),
-  M = n(768760),
+  M = n(217702),
   R = n(275953);
 let j = 10 * Z.Z.Millis.SECOND;
 
@@ -39,7 +39,7 @@ function L(e) {
   var t;
   let {
     message: n
-  } = e, s = (0, c.e7)([x.Z], () => x.Z.isBlockedForMessage(n)), r = (0, f.Uj)(n), o = i.useContext(p.Z), [d, I] = i.useState(!1), Z = (0, E.p)(), S = i.useCallback(e => {
+  } = e, s = (0, c.e7)([T.Z], () => T.Z.isBlockedForMessage(n)), r = (0, f.Uj)(n), o = i.useContext(p.Z), [d, x] = i.useState(!1), Z = (0, E.p)(), S = i.useCallback(e => {
     if ("A" !== e.target.nodeName) h.Z.updateChatOpen(n.channel_id, !0), m.Z.jumpToMessage({
       channelId: n.channel_id,
       messageId: n.id,
@@ -53,11 +53,11 @@ function L(e) {
     renderedContent: j,
     trailingIcon: L,
     leadingIcon: O
-  } = (0, T.f)(n, v, s, R.messageContent, {
+  } = (0, C.f)(n, v, s, R.messageContent, {
     trailingIconClass: R.messageContentTrailingIcon,
     leadingIconClass: R.messageContentLeadingIcon,
     iconSize: M.WW
-  }), P = (0, C.cv)(n), y = P.length > 0 ? P.map(e => (0, l.jsx)(_.ZP, {
+  }), P = (0, _.cv)(n), y = P.length > 0 ? P.map(e => (0, l.jsx)(I.ZP, {
     className: R.sticker,
     size: 128,
     sticker: e,
@@ -66,10 +66,10 @@ function L(e) {
   return (0, l.jsxs)(u.Clickable, {
     className: R.toast,
     onMouseEnter: () => {
-      I(!0)
+      x(!0)
     },
     onMouseLeave: () => {
-      I(!1)
+      x(!1)
     },
     onClick: S,
     children: [(0, l.jsxs)("div", {
@@ -130,7 +130,7 @@ function O(e) {
     let g = null !== (t = m.current) && void 0 !== t ? t : r;
     return {
       toastsHidden: u,
-      toastMessages: (0, c.Wu)([I.Z], () => g.map(e => I.Z.getMessage(n, e)), [n, g]).filter(S.lm)
+      toastMessages: (0, c.Wu)([x.Z], () => g.map(e => x.Z.getMessage(n, e)), [n, g]).filter(S.lm)
     }
   }({
     channelId: t,

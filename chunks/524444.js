@@ -86,10 +86,10 @@ var i, r, s = n(735250),
   w = n(823379),
   B = n(589530),
   k = n(709054),
-  x = n(981631),
-  V = n(420212),
-  Z = n(814249),
-  H = n(768760),
+  x = n(217702),
+  V = n(981631),
+  Z = n(420212),
+  H = n(814249),
   F = n(689938),
   Y = n(304714);
 let j = {
@@ -178,7 +178,7 @@ function Q(e) {
     mediaLayoutType: _,
     imageContainerStyle: c,
     renderForwardComponent: d
-  } = e, I = _ === H.hV.MOSAIC, T = !u && p.H1.getSetting() && null != t && "" !== t && !0 !== n, S = e => {
+  } = e, I = _ === x.hV.MOSAIC, T = !u && p.H1.getSetting() && null != t && "" !== t && !0 !== n, S = e => {
     let {
       altText: t
     } = e;
@@ -186,7 +186,7 @@ function Q(e) {
       "aria-label": F.Z.Messages.MEDIA_MOSAIC_ALT_TEXT_POPOUT_TITLE,
       className: Y.mediaMosaicAltTextPopout,
       onKeyDown: e => {
-        e.key === V.mR.Escape && setTimeout(() => {
+        e.key === Z.mR.Escape && setTimeout(() => {
           var e;
           return null === (e = f.current) || void 0 === e ? void 0 : e.focus()
         }, 0)
@@ -208,7 +208,7 @@ function Q(e) {
       children: [(0, s.jsx)(h.Z, {
         ...e,
         renderLinkComponent: J,
-        renderForwardComponent: null != d ? d : x.VqG
+        renderForwardComponent: null != d ? d : V.VqG
       }), null != i && i()]
     }), I && T && (0, s.jsx)("div", {
       className: Y.mediaMosaicAltTextContainer,
@@ -412,7 +412,7 @@ function er(e) {
     return null !== (e = O.Z.summaries(r.id)) && void 0 !== e ? e : []
   }, [r]), y = (0, N.Z)(P);
   o.useEffect(() => {
-    !_().isEqual(y, P) && G.default.track(x.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
+    !_().isEqual(y, P) && G.default.track(V.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
       num_summaries: P.length,
       message_counts: P.map(e => e.count),
       start_message_ids: P.map(e => e.startId),
@@ -433,9 +433,9 @@ function er(e) {
         }).filter(w.lm)
       })) && void 0 !== e ? e : []
     }, [P], es),
-    V = null !== (n = (0, d.e7)([O.Z], () => O.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
-    H = null == P ? void 0 : null === (t = P[V]) || void 0 === t ? void 0 : t.topic;
-  null == H && null == S && (null == P ? void 0 : P.length) >= 1 && (H = null === (i = P[0]) || void 0 === i ? void 0 : i.topic);
+    x = null !== (n = (0, d.e7)([O.Z], () => O.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
+    Z = null == P ? void 0 : null === (t = P[x]) || void 0 === t ? void 0 : t.topic;
+  null == Z && null == S && (null == P ? void 0 : P.length) >= 1 && (Z = null === (i = P[0]) || void 0 === i ? void 0 : i.topic);
   let j = o.useMemo(() => _().debounce(e => {
       var t;
       p(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
@@ -450,7 +450,7 @@ function er(e) {
     }, [j, W]),
     [z, q] = o.useState(!1),
     X = o.useCallback(() => {
-      G.default.track(x.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+      G.default.track(V.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
         topics_dropdown_open: !z,
         num_summaries: P.length,
         message_counts: P.map(e => e.count),
@@ -463,7 +463,7 @@ function er(e) {
       }), q(!z)
     }, [z, P, q, r]),
     Q = o.useCallback(function(e) {
-      let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Z.DZ.PILL_DROPDOWN,
+      let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : H.DZ.PILL_DROPDOWN,
         n = P[e];
       if (null == n) return;
       (0, m.wv)(r.id, n.id), (0, m.yK)(r.id, n.id);
@@ -472,7 +472,7 @@ function er(e) {
           u.addAutomaticAnchorCallback(K, !1)
         }, 100)
       };
-      u.removeAutomaticAnchorCallback(K), u.addScrollCompleteCallback(i), G.default.track(x.rMx.SUMMARIES_TOPIC_CLICKED, {
+      u.removeAutomaticAnchorCallback(K), u.addScrollCompleteCallback(i), G.default.track(V.rMx.SUMMARIES_TOPIC_CLICKED, {
         source: t,
         message_id: n.startId,
         guild_id: r.guild_id,
@@ -503,7 +503,7 @@ function er(e) {
   }, [L, z]);
   let $ = o.useCallback(e => {
     var t;
-    if (!((0, c.k)(e.target) && (null === (t = g.current) || void 0 === t ? void 0 : t.contains(e.target)))) z && G.default.track(x.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+    if (!((0, c.k)(e.target) && (null === (t = g.current) || void 0 === t ? void 0 : t.contains(e.target)))) z && G.default.track(V.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
       topics_dropdown_open: !1,
       num_summaries: P.length,
       message_counts: P.map(e => e.count),
@@ -547,7 +547,7 @@ function er(e) {
       (0, T.In)(r.id)
     }, [r.id]),
     ei = F.Z.Messages.SUMMARIES_NO_SUMMARIES;
-  return P.length > 0 && (ei = "" === H || null == H ? F.Z.Messages.SUMMARIES_VIEW_ALL : H), h ? null : (0, s.jsxs)("div", {
+  return P.length > 0 && (ei = "" === Z || null == Z ? F.Z.Messages.SUMMARIES_VIEW_ALL : Z), h ? null : (0, s.jsxs)("div", {
     ref: g,
     className: l()(Y.newTopicsBarContainer, Y.containerMarginTop),
     children: [(0, s.jsx)("div", {
@@ -650,7 +650,7 @@ function eo(e) {
     return null !== (e = O.Z.summaries(r.id)) && void 0 !== e ? e : []
   }, [r]), D = (0, N.Z)(L);
   o.useEffect(() => {
-    !_().isEqual(D, L) && G.default.track(x.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
+    !_().isEqual(D, L) && G.default.track(V.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
       num_summaries: L.length,
       message_counts: L.map(e => e.count),
       start_message_ids: L.map(e => e.startId),
@@ -676,21 +676,21 @@ function eo(e) {
   null == y && null == T && (null == L ? void 0 : L.length) >= 1 && (y = null === (i = L[0]) || void 0 === i ? void 0 : i.topic);
   let B = o.useMemo(() => _().get(L, P - 1), [P, L]),
     k = o.useMemo(() => _().get(L, P + 1), [P, L]),
-    V = o.useMemo(() => _().debounce(e => {
+    x = o.useMemo(() => _().debounce(e => {
       var t;
       h(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
     }, 64), [h]),
-    H = o.useMemo(() => _().throttle(() => {
+    Z = o.useMemo(() => _().throttle(() => {
       (0, m.yK)(null)
     }, 1200, {
       trailing: !1
     }), []),
     j = o.useCallback(e => {
-      H(), V(e)
-    }, [V, H]),
+      Z(), x(e)
+    }, [x, Z]),
     [W, K] = o.useState(!1),
     z = o.useCallback(() => {
-      G.default.track(x.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+      G.default.track(V.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
         topics_dropdown_open: !W,
         num_summaries: L.length,
         message_counts: L.map(e => e.count),
@@ -703,7 +703,7 @@ function eo(e) {
       }), K(!W)
     }, [W, L, K, r]),
     q = o.useCallback(function(e) {
-      let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Z.DZ.PILL_DROPDOWN,
+      let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : H.DZ.PILL_DROPDOWN,
         n = L[e];
       if (null == n) return;
       (0, m.wv)(r.id, n.id), (0, m.yK)(r.id, n.id);
@@ -712,7 +712,7 @@ function eo(e) {
           a.addAutomaticAnchorCallback(j, !1)
         }, 100)
       };
-      a.removeAutomaticAnchorCallback(j), a.addScrollCompleteCallback(i), G.default.track(x.rMx.SUMMARIES_TOPIC_CLICKED, {
+      a.removeAutomaticAnchorCallback(j), a.addScrollCompleteCallback(i), G.default.track(V.rMx.SUMMARIES_TOPIC_CLICKED, {
         source: t,
         message_id: n.startId,
         guild_id: r.guild_id,
@@ -728,10 +728,10 @@ function eo(e) {
       })
     }, [L, r, j, a]),
     X = o.useCallback(() => {
-      q(P - 1, Z.DZ.PILL_NEXT_ARROW)
+      q(P - 1, H.DZ.PILL_NEXT_ARROW)
     }, [q, P]),
     Q = o.useCallback(() => {
-      q(P + 1, Z.DZ.PILL_PREVIOUS_ARROW)
+      q(P + 1, H.DZ.PILL_PREVIOUS_ARROW)
     }, [P, q]),
     J = o.useCallback(e => {
       var t;
@@ -749,7 +749,7 @@ function eo(e) {
   }, [p, W]);
   let $ = o.useCallback(e => {
     var t;
-    if (!((0, c.k)(e.target) && (null === (t = S.current) || void 0 === t ? void 0 : t.contains(e.target)))) W && G.default.track(x.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+    if (!((0, c.k)(e.target) && (null === (t = S.current) || void 0 === t ? void 0 : t.contains(e.target)))) W && G.default.track(V.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
       topics_dropdown_open: !1,
       num_summaries: L.length,
       message_counts: L.map(e => e.count),

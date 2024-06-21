@@ -11,10 +11,10 @@ var t = s(735250),
   r = s(481060),
   d = s(706371),
   u = s(563115),
-  c = s(984933),
-  N = s(430824),
-  m = s(153124),
-  O = s(132338),
+  c = s(661824),
+  N = s(984933),
+  m = s(430824),
+  O = s(153124),
   E = s(823379),
   _ = s(402148),
   h = s(570961),
@@ -29,12 +29,12 @@ function P(e) {
     transitionState: n,
     onClose: s,
     onSave: o,
-    onDelete: N,
+    onDelete: m,
     option: E,
     guild: _,
     prompt: P,
     index: T
-  } = e, g = (0, m.Dt)(), A = (0, i.e7)([c.ZP], () => c.ZP.getDefaultChannel(_.id)), [C, L] = l.useState(() => {
+  } = e, g = (0, O.Dt)(), A = (0, i.e7)([N.ZP], () => N.ZP.getDefaultChannel(_.id)), [C, L] = l.useState(() => {
     var e;
     return null !== (e = null == E ? void 0 : E.emoji) && void 0 !== e ? e : null
   }), [p, Z] = l.useState(() => {
@@ -92,7 +92,7 @@ function P(e) {
         value: D,
         onChange: e => B(e),
         maxLength: v.NO
-      }), (0, t.jsx)(O.Z, {
+      }), (0, t.jsx)(c.Z, {
         className: j.divider
       }), (0, t.jsx)(r.Heading, {
         className: j.rolesHeader,
@@ -118,7 +118,7 @@ function P(e) {
       }), (0, t.jsx)(M, {
         guild: _,
         roleIds: H
-      }), (0, t.jsx)(O.Z, {
+      }), (0, t.jsx)(c.Z, {
         className: j.divider
       }), (0, t.jsxs)("div", {
         className: j.emojiQuestionContainer,
@@ -148,7 +148,7 @@ function P(e) {
             look: r.Button.Looks.LINK,
             color: r.Button.Colors.RED,
             onClick: () => {
-              N(), s()
+              m(), s()
             },
             children: R.Z.Messages.REMOVE
           })
@@ -191,7 +191,7 @@ function M(e) {
   let {
     guild: n,
     roleIds: s
-  } = e, l = (0, i.e7)([N.Z], () => N.Z.getRoles(n.id)), o = Array.from(s).map(e => l[e]).filter(E.lm).find(_.F);
+  } = e, l = (0, i.e7)([m.Z], () => m.Z.getRoles(n.id)), o = Array.from(s).map(e => l[e]).filter(E.lm).find(_.F);
   return null == o ? null : (0, t.jsx)("div", {
     className: j.notice,
     children: (0, t.jsxs)("div", {

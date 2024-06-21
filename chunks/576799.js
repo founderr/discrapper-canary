@@ -9,17 +9,17 @@ var s = n(735250),
   a = n(58540),
   r = n(905405),
   o = n(937889),
-  c = n(123145),
-  u = n(699516),
-  d = n(512665),
-  E = n(768760),
-  _ = n(250050);
+  c = n(267128),
+  u = n(123145),
+  d = n(699516),
+  E = n(217702),
+  _ = n(425577);
 
 function I(e) {
   let {
     message: t,
     channel: n
-  } = e, I = (0, l.e7)([u.Z], () => u.Z.isBlockedForMessage(t)), T = (0, r.p)(), N = i.useMemo(() => ({
+  } = e, I = (0, l.e7)([d.Z], () => d.Z.isBlockedForMessage(t)), T = (0, r.p)(), N = i.useMemo(() => ({
     [n.guild_id]: [t.author.id]
   }), [n.guild_id, t.author.id]);
   (0, a.$)(N);
@@ -33,7 +33,7 @@ function I(e) {
       alt: "",
       src: t.author.getAvatarURL(n.guild_id, 16),
       className: _.threadMessageAccessoryAvatar
-    }), (0, s.jsx)(c.Z, {
+    }), (0, s.jsx)(u.Z, {
       message: t,
       channel: n,
       compact: !0
@@ -45,7 +45,7 @@ function I(e) {
           renderedContent: l,
           leadingIcon: a,
           trailingIcon: r
-        } = (0, d.f)(e, t, n, _.threadMessageAccessoryContent, {
+        } = (0, c.f)(e, t, n, _.threadMessageAccessoryContent, {
           trailingIconClass: _.threadMessageAccessoryContentTrailingIcon,
           leadingIconClass: _.threadMessageAccessoryContentLeadingIcon,
           iconSize: E.WW

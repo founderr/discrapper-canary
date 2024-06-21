@@ -12,16 +12,16 @@ var s = n(735250),
   c = n(481060),
   u = n(356264),
   d = n(628238),
-  E = n(25015),
-  _ = n(438075),
-  I = n(695346),
-  T = n(592125),
-  N = n(906467),
-  m = n(430824),
-  h = n(496675),
-  C = n(699516),
-  S = n(594174),
-  A = n(113039),
+  E = n(930282),
+  _ = n(25015),
+  I = n(438075),
+  T = n(695346),
+  N = n(592125),
+  m = n(906467),
+  h = n(430824),
+  C = n(496675),
+  S = n(699516),
+  A = n(594174),
   p = n(100604),
   g = n(694784),
   f = n(39154),
@@ -49,7 +49,7 @@ function x(e) {
     message: t,
     snapshot: n,
     index: d
-  } = e, E = i.useMemo(() => new p.r(t, n, d), [t, n, d]), _ = (0, a.e7)([T.Z, S.default, C.Z, h.Z, m.Z, u.Z], () => E.getForwardInfo(T.Z, S.default, C.Z, h.Z, m.Z, u.Z).footerInfo, [E], r.Z), I = i.useCallback(() => {
+  } = e, E = i.useMemo(() => new p.r(t, n, d), [t, n, d]), _ = (0, a.e7)([N.Z, A.default, S.Z, C.Z, h.Z, u.Z], () => E.getForwardInfo(N.Z, A.default, S.Z, C.Z, h.Z, u.Z).footerInfo, [E], r.Z), I = i.useCallback(() => {
     (0, g.Z)(t)
   }, [t]);
   return null == _ ? null : (0, s.jsxs)(c.Clickable, {
@@ -77,35 +77,35 @@ function v(e) {
     message: n,
     snapshot: l,
     index: r
-  } = e, o = i.useMemo(() => (0, f.Z)(n, l), [n, l]), c = I.RS.useSetting(), u = I.NA.useSetting(), m = (0, a.e7)([N.Z], () => N.Z.isDeveloper), h = (0, d.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
-    content: C,
-    hasSpoilerEmbeds: S
-  } = (0, E.Z)(o, {
+  } = e, o = i.useMemo(() => (0, f.Z)(n, l), [n, l]), c = T.RS.useSetting(), u = T.NA.useSetting(), h = (0, a.e7)([m.Z], () => m.Z.isDeveloper), C = (0, d.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
+    content: S,
+    hasSpoilerEmbeds: A
+  } = (0, _.Z)(o, {
     hideSimpleEmbedContent: c && u,
     isInteracting: !1,
     formatInline: !1,
-    allowList: h,
-    allowHeading: h,
+    allowList: C,
+    allowHeading: C,
     allowLinks: !0,
-    allowDevLinks: m,
+    allowDevLinks: h,
     previewLinkTarget: !0
-  }), p = (0, a.e7)([T.Z], () => T.Z.getChannel(n.channel_id)), g = I.jU.useSetting();
+  }), p = (0, a.e7)([N.Z], () => N.Z.getChannel(n.channel_id)), g = T.jU.useSetting();
   return null == p ? null : (0, s.jsxs)("div", {
     className: R.container,
     children: [(0, s.jsx)("div", {
       className: R.quote
     }), (0, s.jsxs)("div", {
       className: R.content,
-      children: [(0, s.jsx)(M, {}), (0, s.jsx)(A.ZP, {
+      children: [(0, s.jsx)(M, {}), (0, s.jsx)(E.ZP, {
         message: o,
-        content: C
-      }), (0, _.Z)({
+        content: S
+      }), (0, I.Z)({
         channelMessageProps: {
           message: o,
           channel: p,
           compact: g
         },
-        hasSpoilerEmbeds: S,
+        hasSpoilerEmbeds: A,
         isInteracting: !1,
         isMessageSnapshot: !0
       }), (0, s.jsx)(x, {
