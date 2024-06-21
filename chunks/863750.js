@@ -26,7 +26,8 @@ let a = {
     nav_experiment_you_bar_large_messages: "[NavI] Large avatars in messages",
     force_channel_list_v2: "Force channel list V2",
     shop_include_unpublished: "[Shop] show unpublished items in shop",
-    disable_channel_list: "Disable channel list -- for performance testing. You probably don't want to turn this on, lol"
+    disable_channel_list: "Disable channel list -- for performance testing. You probably don't want to turn this on, lol",
+    show_icymi_debug_scores: "Show ICYMI debug scores"
   },
   d = {};
 class o extends(i = s.ZP.DeviceSettingsStore) {

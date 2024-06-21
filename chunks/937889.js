@@ -63,7 +63,8 @@ function d(e) {
     mentionChannels: [],
     muted: !1,
     unknownUserMentionPlaceholder: !0,
-    viewingChannelId: i.viewingChannelId
+    viewingChannelId: i.viewingChannelId,
+    forceWhite: !!i.forceWhite
   }
 }
 
