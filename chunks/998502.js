@@ -308,6 +308,14 @@ function P(e) {
   setBackgroundThrottling(e) {
     null != m.window.setBackgroundThrottling ? m.window.setBackgroundThrottling(e) : m.window.webContents.setBackgroundThrottling(e)
   },
+  pauseFrameEvictor() {
+    var e, t;
+    null === (e = (t = m.app).pauseFrameEvictor) || void 0 === e || e.call(t)
+  },
+  unpauseFrameEvictor() {
+    var e, t;
+    null === (e = (t = m.app).pauseFrameEvictor) || void 0 === e || e.call(t)
+  },
   getPidFromDesktopSource(e) {
     if (!((0, S.isWindows)() || (0, S.isMac)()) || null == this.getDiscordUtils().getPidFromWindowHandle) return null;
     let t = null == e ? void 0 : e.split(":"),
