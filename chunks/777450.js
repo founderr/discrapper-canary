@@ -1,6 +1,7 @@
 e.exports = {
   profileEntryCard: "profileEntryCard_f1257c",
   messageButton: "messageButton_f1257c",
+  avatar: "avatar_f1257c",
   playerInfo: "playerInfo_f1257c",
   inputWrapper: "inputWrapper_f1257c",
   input: "input_f1257c",

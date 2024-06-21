@@ -17,52 +17,51 @@ var s = n(735250),
   v = n(594174),
   j = n(5192),
   A = n(689938),
-  O = n(777450);
+  N = n(777450),
+  p = n(997844);
 l.Z = e => {
   let {
     entry: l,
     channel: n,
     style: a = {},
     onClose: r
-  } = e, N = v.default.getUser(l.author_id), T = j.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, N), p = null == N ? void 0 : N.getAvatarURL(null == n ? void 0 : n.guild_id, 48, !1), [M, _] = t.useState(null), [S, f] = t.useState(!1);
+  } = e, O = v.default.getUser(l.author_id), T = j.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, O), M = null == O ? void 0 : O.getAvatarURL(null == n ? void 0 : n.guild_id, 48, !1), [_, S] = t.useState(null), [f, C] = t.useState(!1);
   return (0, s.jsxs)("div", {
-    className: O.profileEntryCard,
+    className: N.profileEntryCard,
     style: a,
     children: [(0, s.jsx)("img", {
-      src: p,
-      style: {
-        height: 24,
-        width: 24,
-        borderRadius: 12,
-        marginRight: 8
-      },
+      className: N.avatar,
+      src: M,
       alt: "TODO"
-    }), (0, s.jsxs)("div", {
-      className: i()(O.collapsableRow, O.playerInfo, {
-        [O.open]: !S,
-        [O.closed]: S
+    }), (0, s.jsx)("div", {
+      className: i()(N.collapsableRow, N.playerInfo, {
+        [N.open]: !f,
+        [N.closed]: f
       }),
-      children: [(0, s.jsxs)(c.Text, {
-        variant: "text-sm/bold",
-        color: "text-normal",
-        lineClamp: 1,
-        children: [T.slice(0, 18), " ", T.length > 18 ? "..." : ""]
-      }), (0, s.jsx)(g.Gk, {
-        location: g.Gt.CARD,
-        children: x.W.slice(0, 1).map((e, n) => (0, s.jsx)(e, {
-          entry: l
-        }, n))
-      })]
+      children: (0, s.jsxs)("div", {
+        className: i()(p.column, p.gapNone),
+        children: [(0, s.jsxs)(c.Text, {
+          variant: "text-sm/bold",
+          color: "text-normal",
+          lineClamp: 1,
+          children: [T.slice(0, 18), " ", T.length > 18 ? "..." : ""]
+        }), (0, s.jsx)(g.Gk, {
+          location: g.Gt.CARD,
+          children: x.W.slice(0, 2).map((e, n) => (0, s.jsx)(e, {
+            entry: l
+          }, n))
+        })]
+      })
     }), (0, s.jsxs)("div", {
-      className: i()(O.collapsableRow, O.inputWrapper, {
-        [O.open]: S,
-        [O.closed]: !S
+      className: i()(N.collapsableRow, N.inputWrapper, {
+        [N.open]: f,
+        [N.closed]: !f
       }),
       children: [(0, s.jsx)("div", {
-        className: O.input,
+        className: N.input,
         children: (0, s.jsx)(u.A7, {
           autoFocus: !1,
-          setEditorRef: e => _(e),
+          setEditorRef: e => S(e),
           onEnter: async e => {
             let n = await d.Z.getOrEnsurePrivateChannel(l.author_id),
               s = E.Z.getChannel(n);
@@ -79,10 +78,10 @@ l.Z = e => {
       }), (0, s.jsx)(c.CircleIconButton, {
         size: c.CircleIconButtonSizes.SIZE_24,
         color: c.CircleIconButtonColors.PRIMARY,
-        className: O.actionButton,
+        className: N.actionButton,
         tooltip: A.Z.Messages.CLOSE,
         onClick: () => {
-          f(!1)
+          C(!1)
         },
         icon: (0, s.jsx)(c.CloseSmallIcon, {}),
         focusProps: {
@@ -93,17 +92,17 @@ l.Z = e => {
       style: {
         justifyContent: "flex-end"
       },
-      className: i()(O.collapsableRow, {
-        [O.open]: !S,
-        [O.closed]: S
+      className: i()(N.collapsableRow, {
+        [N.open]: !f,
+        [N.closed]: f
       }),
       children: (0, s.jsx)(c.CircleIconButton, {
         size: c.CircleIconButtonSizes.SIZE_24,
         color: c.CircleIconButtonColors.SECONDARY,
-        className: i()(O.actionButton, O.messageButton),
+        className: i()(N.actionButton, N.messageButton),
         tooltip: A.Z.Messages.COMMAND_MSG_DESCRIPTION,
         onClick: () => {
-          !S && (null == M || M.focus(), f(!0))
+          !f && (null == _ || _.focus(), C(!0))
         },
         icon: (0, s.jsx)(c.ChatIcon, {})
       })
