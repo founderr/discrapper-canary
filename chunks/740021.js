@@ -1,98 +1,98 @@
-i.d(n, {
+n.d(i, {
   Z: function() {
-    return R
+    return A
   }
-}), i(47120);
-var l = i(735250);
-i(470079);
-var s = i(442837),
-  t = i(974674),
-  o = i(696826),
-  a = i(420660),
-  r = i(233440),
-  d = i(314897),
-  u = i(158776),
-  c = i(699516),
-  I = i(998502),
-  E = i(877485),
-  f = i(505737),
-  Z = i(204197),
-  _ = i(78675),
-  S = i(438163),
-  m = i(652853),
-  v = i(900687),
-  N = i(228168),
-  x = i(182294),
-  h = i(602091),
-  g = i(231338),
-  C = i(586940);
-let T = I.ZP.getEnableHardwareAcceleration() ? t.Xo : t.qE;
+}), n(47120);
+var s = n(735250);
+n(470079);
+var l = n(442837),
+  t = n(974674),
+  o = n(696826),
+  r = n(420660),
+  a = n(233440),
+  d = n(314897),
+  u = n(158776),
+  c = n(699516),
+  I = n(998502),
+  E = n(877485),
+  Z = n(505737),
+  _ = n(204197),
+  f = n(78675),
+  S = n(438163),
+  v = n(652853),
+  m = n(900687),
+  x = n(228168),
+  N = n(182294),
+  h = n(602091),
+  g = n(231338),
+  T = n(327570);
+let C = I.ZP.getEnableHardwareAcceleration() ? t.Xo : t.qE;
 
-function R(e) {
+function A(e) {
   let {
-    user: n,
-    displayProfile: i,
+    user: i,
+    displayProfile: n,
     activity: t,
     customStatusActivity: I,
-    guildId: R,
-    channelId: A,
+    guildId: A,
+    channelId: R,
     transitionState: M,
-    viewProfileItem: j,
-    onClose: p
+    viewProfileItem: U,
+    onClose: j
   } = e, {
-    theme: U
-  } = (0, m.z)(), O = (0, f.Z)(n.id, R), {
+    theme: p
+  } = (0, v.z)(), O = (0, Z.Z)(i.id, A), {
     avatarSrc: P,
     eventHandlers: L,
-    avatarDecorationSrc: D
-  } = (0, Z.Z)({
-    user: n,
-    guildId: null == i ? void 0 : i.guildId,
-    size: x.EF.SIZE_120
+    avatarDecorationSrc: y
+  } = (0, _.Z)({
+    user: i,
+    guildId: null == n ? void 0 : n.guildId,
+    size: N.EF.SIZE_120
   }), {
-    originalFriendingEnabled: y,
+    originalFriendingEnabled: D,
     improvedFriendingEnabled: F
   } = (0, E.V)({
     location: "SimplifiedUserProfileModalHeader"
-  }), b = (0, s.e7)([c.Z], () => c.Z.getRelationshipType(n.id)), G = (0, s.e7)([d.default], () => d.default.getId() === n.id), [B, k] = (0, s.Wu)([u.Z], () => {
-    let e = u.Z.isMobileOnline(n.id);
-    return (0, r.W)(n, A) ? [g.Sk.UNKNOWN, e] : (0, a.Z)(t) ? [g.Sk.STREAMING, e] : [u.Z.getStatus(n.id), e]
+  }), b = (0, l.e7)([c.Z], () => c.Z.getRelationshipType(i.id)), G = (0, l.e7)([d.default], () => d.default.getId() === i.id), [B, w] = (0, l.Wu)([u.Z], () => {
+    let e = u.Z.isMobileOnline(i.id);
+    return (0, a.W)(i, R) ? [g.Sk.UNKNOWN, e] : (0, r.Z)(t) ? [g.Sk.STREAMING, e] : [u.Z.getStatus(i.id), e]
   });
-  return (0, l.jsxs)("header", {
-    children: [(0, l.jsx)(_.Z, {
-      user: n,
-      displayProfile: i,
-      profileType: N.y0.FULL_SIZE,
-      hasProfileEffect: (null == i ? void 0 : i.profileEffectId) != null
-    }), (0, l.jsxs)("div", {
-      className: C.inner,
-      children: [(0, l.jsx)("div", {
+  return (0, s.jsxs)("header", {
+    children: [(0, s.jsx)(f.Z, {
+      user: i,
+      displayProfile: n,
+      profileType: x.y0.FULL_SIZE,
+      hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null
+    }), (0, s.jsxs)("div", {
+      className: T.headerInner,
+      children: [(0, s.jsx)("div", {
         ...L,
-        children: (0, l.jsx)(T, {
+        children: (0, s.jsx)(C, {
           src: P,
-          avatarDecoration: D,
-          size: x.EF.SIZE_120,
-          className: C.avatar,
+          avatarDecoration: y,
+          size: N.EF.SIZE_120,
+          className: T.avatar,
           status: B,
-          statusBackdropColor: (0, o.QF)(U),
-          "aria-label": n.username,
-          isMobile: k,
+          statusBackdropColor: (0, o.QF)(p),
+          "aria-label": i.username,
+          isMobile: w,
           statusTooltip: !0,
-          statusTooltipDelay: N.vB
+          statusTooltipDelay: x.vB
         })
-      }), (0, l.jsx)(v.Z, {
-        user: n,
+      }), (0, s.jsx)(m.Z, {
+        user: i,
         isCurrentUser: G,
-        guildId: R,
+        guildId: A,
         canDM: O,
         relationshipType: b,
-        originalFriendingEnabled: y,
+        originalFriendingEnabled: D,
         improvedFriendingEnabled: F,
-        viewProfileItem: j,
-        onClose: p
-      }), (0, l.jsx)(S.J, {
+        viewProfileItem: U,
+        onClose: j
+      }), (0, s.jsx)(S.J, {
         statusActivity: I,
-        profileType: N.y0.FULL_SIZE,
+        profileType: x.y0.FULL_SIZE,
         hasEntered: M === h.Dv.ENTERED
       })]
     })]
