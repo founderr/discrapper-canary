@@ -5,8 +5,8 @@ n.d(t, {
 }), n(47120);
 var s = n(735250),
   o = n(470079),
-  r = n(722770),
-  a = n(846519),
+  a = n(722770),
+  r = n(846519),
   l = n(481060),
   i = n(617136),
   c = n(113434),
@@ -23,7 +23,7 @@ let S = e => {
       quest: t,
       isExpanded: n,
       hidePlayGameButton: c = !1
-    } = e, [p, x] = o.useState(!1), [m, g] = o.useState(!1), S = o.useRef(new a.V7), E = o.useRef(new a.V7);
+    } = e, [p, x] = o.useState(!1), [m, g] = o.useState(!1), S = o.useRef(new r.V7), E = o.useRef(new r.V7);
     o.useEffect(() => {
       let e = E.current,
         t = S.current;
@@ -38,7 +38,7 @@ let S = e => {
           className: c ? h.copyIcon : void 0,
           width: e,
           height: e,
-          color: p ? r.Z.GREEN_360 : "currentColor"
+          color: p ? a.Z.GREEN_360 : "currentColor"
         })
       },
       N = () => {
@@ -101,10 +101,10 @@ let S = e => {
       isExpanded: n
     } = e, {
       xboxAndPlaystationAccounts: o
-    } = (0, c.z6)(), r = 0 === o.length, a = (0, p.P)({
+    } = (0, c.z6)(), a = 0 === o.length, r = (0, p.P)({
       location: g.dr.QUESTS_BAR
-    }), l = !r && (0, d.Bz)(t) || (0, d.zK)(t, g.S7.IN_HOUSE_CONSOLE_QUEST);
-    return r && !a ? (0, s.jsx)(E, {}) : (0, s.jsx)(S, {
+    }), l = !a && (0, d.Bz)(t) || (0, d.zK)(t, g.S7.IN_HOUSE_CONSOLE_QUEST);
+    return a && !r ? (0, s.jsx)(E, {}) : (0, s.jsx)(S, {
       quest: t,
       isExpanded: n,
       hidePlayGameButton: l
@@ -115,7 +115,7 @@ let S = e => {
       quest: t,
       useReducedMotion: n,
       isExpanded: o
-    } = e, r = (0, x.hf)({
+    } = e, a = (0, x.hf)({
       quest: t,
       location: u.jn.QUEST_BAR_V2
     });
@@ -124,7 +124,7 @@ let S = e => {
       children: (0, s.jsx)(l.ShinyButton, {
         fullWidth: !0,
         size: l.Button.Sizes.SMALL,
-        onClick: r,
+        onClick: a,
         pauseAnimation: n || !o,
         buttonShineClassName: h.shine,
         children: C.Z.Messages.QUESTS_CLAIM_REWARD
@@ -135,22 +135,20 @@ let S = e => {
     var t;
     let {
       quest: n,
-      useReducedMotion: r,
-      isExpanded: a,
+      useReducedMotion: a,
+      isExpanded: r,
       hasMadeProgress: l
     } = e, i = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, c = o.useMemo(() => (0, d.$J)(n), [n]);
-    if (i) return (0, s.jsx)(N, {
+    return i ? (0, s.jsx)(N, {
       quest: n,
-      useReducedMotion: r,
-      isExpanded: a
-    });
-    if (!l && c) return (0, s.jsx)(f, {
+      useReducedMotion: a,
+      isExpanded: r
+    }) : !l && c ? (0, s.jsx)(f, {
       quest: n,
-      isExpanded: a
-    });
-    if (!l) return (0, s.jsx)(S, {
+      isExpanded: r
+    }) : (0, s.jsx)(S, {
       quest: n,
-      isExpanded: a
-    });
-    return null
+      isExpanded: r,
+      hidePlayGameButton: l
+    })
   }
