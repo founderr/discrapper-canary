@@ -548,7 +548,7 @@ function eu(e) {
   } = e, {
     entry: E,
     channel: g
-  } = p, f = (0, V.d)(E), C = (0, Z.Z)({
+  } = p, f = (0, V.d)(E), C = (0, Z.ZP)({
     location: "ContentPopout",
     applicationId: f ? null === (t = E.extra) || void 0 === t ? void 0 : t.application_id : void 0
   }) && f ? () => {
