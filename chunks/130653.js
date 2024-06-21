@@ -3,13 +3,13 @@ n.d(t, {
     return o
   },
   Z: function() {
-    return r
+    return a
   }
 });
 var s = n(735250);
 let o = n(470079).createContext(!1);
 
-function r(e) {
+function a(e) {
   return (0, s.jsx)(o.Provider, {
     value: !0,
     children: e.children

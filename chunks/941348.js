@@ -1,7 +1,7 @@
 var s = n(735250),
   o = n(470079),
-  r = n(308069),
-  a = n(613087),
+  a = n(308069),
+  r = n(613087),
   l = n(457153),
   i = n(254197),
   c = n(321025),
@@ -20,12 +20,12 @@ t.Z = function(e) {
     quest: S,
     useReducedMotion: E
   } = e, f = o.useRef(null), N = (null === (t = S.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null;
-  return (0, s.jsxs)(a.p, {
+  return (0, s.jsxs)(r.p, {
     expandedContentRef: n,
     collapsedContentRef: f,
     expansionSpring: d,
     isExpansionAnimationComplete: x,
-    children: [!N && (0, s.jsx)(r.Z, {
+    children: [!N && (0, s.jsx)(a.Z, {
       quest: S,
       expansionSpring: d,
       useReducedMotion: E,

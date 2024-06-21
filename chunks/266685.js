@@ -1,7 +1,7 @@
 var s = n(735250),
   o = n(470079),
-  r = n(120356),
-  a = n.n(r),
+  a = n(120356),
+  r = n.n(a),
   l = n(442837),
   i = n(950104),
   c = n(780384),
@@ -26,7 +26,7 @@ var s = n(735250),
   R = n(689938),
   M = n(51283);
 let y = o.forwardRef(function(e, t) {
-  var n, r;
+  var n, a;
   let {
     className: E,
     isExpanded: y,
@@ -52,7 +52,7 @@ let y = o.forwardRef(function(e, t) {
   }, [I]), G = q.features.has(B.S7.POST_ENROLLMENT_CTA), K = (0, g.Rf)({
     quest: I,
     location: B.dr.QUESTS_BAR
-  }), Y = K.progressSeconds > 0, F = (null === (n = I.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, X = (null === (r = I.userStatus) || void 0 === r ? void 0 : r.completedAt) != null, $ = o.useMemo(() => (0, S.Xv)(I.config), [I.config]), J = y && U, ee = (0, S.ph)(I), et = (0, S.pG)({
+  }), Y = K.progressSeconds > 0, F = (null === (n = I.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, X = (null === (a = I.userStatus) || void 0 === a ? void 0 : a.completedAt) != null, $ = o.useMemo(() => (0, S.Xv)(I.config), [I.config]), J = y && U, ee = (0, S.ph)(I), et = (0, S.pG)({
     quest: I,
     location: B.dr.QUESTS_BAR,
     taskDetails: K
@@ -69,7 +69,7 @@ let y = o.forwardRef(function(e, t) {
   }, [I.config.colors.primary]);
   return (0, s.jsx)("div", {
     "aria-hidden": !J,
-    className: a()(E, M.contentExpanded, {
+    className: r()(E, M.contentExpanded, {
       [M.contentInteractable]: J
     }),
     children: F ? (0, s.jsxs)("div", {
@@ -123,7 +123,7 @@ let y = o.forwardRef(function(e, t) {
           })
         })]
       }), X ? (0, s.jsx)(u.Button, {
-        className: a()(M.cta, M.ctaClaimReward),
+        className: r()(M.cta, M.ctaClaimReward),
         style: $ ? es : void 0,
         color: u.Button.Colors.CUSTOM,
         fullWidth: !0,

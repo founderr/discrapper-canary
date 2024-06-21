@@ -1,8 +1,8 @@
 var s = n(735250);
 n(470079);
 var o = n(481060),
-  r = n(113434),
-  a = n(497505),
+  a = n(113434),
+  r = n(497505),
   l = n(644646),
   i = n(613087),
   c = n(472144),
@@ -16,7 +16,7 @@ t.Z = e => {
     isExpanded: x
   } = e, {
     percentComplete: m
-  } = (0, r.Rf)({
+  } = (0, a.Rf)({
     quest: t,
     location: d.dr.QUESTS_BAR
   }), g = (0, u.eQ)(t), C = (0, u.vf)(t, x), h = x ? "expanded" : "collapsed";
@@ -34,7 +34,7 @@ t.Z = e => {
         children: (0, s.jsx)(l.Z, {
           className: p.questProgressRewardTile,
           quest: t,
-          questContent: a.jn.QUEST_BAR_V2,
+          questContent: r.jn.QUEST_BAR_V2,
           autoplay: !1
         })
       })

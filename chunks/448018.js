@@ -5,12 +5,12 @@ n.d(t, {
 });
 var s = n(497505),
   o = n(988303),
-  r = n(909389),
-  a = n(941348),
+  a = n(909389),
+  r = n(941348),
   l = n(658590),
   i = n(743294);
 let c = {
-    component: r.Z,
+    component: a.Z,
     getCollapsedHeight: () => 40,
     getPreEnrollmentExpandedHeight: () => 240,
     getPostEnrollmentBackgroundImage: e => "linear-gradient(90deg, ".concat(e.config.colors.primary, ", ").concat(e.config.colors.secondary, ")"),
@@ -24,7 +24,7 @@ let c = {
   },
   u = i.Li,
   d = {
-    component: a.Z,
+    component: r.Z,
     getCollapsedHeight: e => {
       var t;
       return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null ? 66 : 40
@@ -37,9 +37,9 @@ let c = {
     getVerticalPadding: () => u
   },
   p = (e, t, n) => {
-    var r;
-    let a = (null === (r = e.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null,
-      i = !a && t === o.P.V2 || a && n === o.P.V2 || (0, l.a)(e),
+    var a;
+    let r = (null === (a = e.userStatus) || void 0 === a ? void 0 : a.enrolledAt) != null,
+      i = !r && t === o.P.V2 || r && n === o.P.V2 || (0, l.a)(e),
       u = i ? d : c;
     return {
       component: u.component,

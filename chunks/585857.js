@@ -6,8 +6,8 @@ n.d(t, {
 var s = n(735250);
 n(470079);
 var o = n(120356),
-  r = n.n(o),
-  a = n(533627),
+  a = n.n(o),
+  r = n(533627),
   l = n(432594),
   i = n(481060),
   c = n(230711),
@@ -26,11 +26,11 @@ function C(e) {
   return (0, s.jsx)(i.Clickable, {
     className: g.connectConsoleButtonWrapper,
     onClick: () => (0, u.q)(n),
-    children: n === x.ABu.PLAYSTATION ? (0, s.jsx)(a.K, {
-      colorClass: r()(g.connectConsoleButton, t ? g.playstationButtonConnected : g.connectConsoleButtonUnconnected),
+    children: n === x.ABu.PLAYSTATION ? (0, s.jsx)(r.K, {
+      colorClass: a()(g.connectConsoleButton, t ? g.playstationButtonConnected : g.connectConsoleButtonUnconnected),
       size: "sm"
     }) : (0, s.jsx)(l.a, {
-      colorClass: r()(g.connectConsoleButton, t ? g.xboxButtonConnected : g.connectConsoleButtonUnconnected),
+      colorClass: a()(g.connectConsoleButton, t ? g.xboxButtonConnected : g.connectConsoleButtonUnconnected),
       size: "sm"
     })
   })
@@ -57,7 +57,7 @@ function S(e) {
     xboxAccounts: t,
     playstationAccounts: n,
     xboxAndPlaystationAccounts: o
-  } = e, a = o.slice(0, 2), l = o.length > 0, c = t.length > 0, u = n.length > 0;
+  } = e, r = o.slice(0, 2), l = o.length > 0, c = t.length > 0, u = n.length > 0;
   return (0, s.jsxs)("div", {
     className: g.inlineConsoleConnectionDetails,
     children: [(0, s.jsxs)("div", {
@@ -80,8 +80,8 @@ function S(e) {
       })]
     }), l && (0, s.jsxs)("div", {
       className: g.inlineConsoleConnectionDetailsLower,
-      children: [a.map((e, t) => (0, s.jsxs)("div", {
-        className: r()(g.inlineConsoleConnectionDetailsLowerItem, t > 0 ? g.marginTop4px : void 0),
+      children: [r.map((e, t) => (0, s.jsxs)("div", {
+        className: a()(g.inlineConsoleConnectionDetailsLowerItem, t > 0 ? g.marginTop4px : void 0),
         children: [(0, s.jsx)(i.Text, {
           color: "header-secondary",
           variant: "text-xxs/normal",

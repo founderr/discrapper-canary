@@ -5,8 +5,8 @@ n.d(t, {
 });
 var s = n(735250),
   o = n(470079),
-  r = n(920906),
-  a = n(130653),
+  a = n(920906),
+  r = n(130653),
   l = n(613087);
 
 function i(e) {
@@ -16,7 +16,7 @@ function i(e) {
   } = e, {
     animatedComponentProps: i,
     recalculateAnimationPositions: c
-  } = o.useContext(l.B$), u = o.useContext(a.T);
+  } = o.useContext(l.B$), u = o.useContext(r.T);
   return o.useEffect(() => {
     c()
   }, [c, n]), (0, s.jsx)("div", {
@@ -32,13 +32,13 @@ function i(e) {
       let {
         id: n,
         collapsedLeft: o,
-        expandedLeft: a,
+        expandedLeft: r,
         collapsedTop: l,
         expandedTop: i,
         collapsedRight: c,
         expandedRight: d
       } = e;
-      return (0, s.jsx)(r.animated.div, {
+      return (0, s.jsx)(a.animated.div, {
         id: u ? "quest-bar-v2-preview-" + n : "quest-bar-v2-" + n,
         style: {
           zIndex: 2,
@@ -50,7 +50,7 @@ function i(e) {
           right: Math.min(c, d),
           left: t.to({
             range: [0, 1],
-            output: [o, a]
+            output: [o, r]
           })
         }
       }, n)

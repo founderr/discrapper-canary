@@ -11,8 +11,8 @@ n.d(t, {
 }), n(47120), n(653041);
 var s = n(735250),
   o = n(470079),
-  r = n(699581),
-  a = n(920906),
+  a = n(699581),
+  r = n(920906),
   l = n(130653),
   i = n(743294);
 let c = o.createContext({
@@ -50,7 +50,7 @@ let c = o.createContext({
     let f = document.getElementById(E ? "quest-bar-v2-preview-" + i : "quest-bar-v2-" + i),
       N = null;
     return null == f ? N = null : d && null != C ? N = (0, s.jsxs)(s.Fragment, {
-      children: ["collapsed" === u && (0, r.createPortal)((0, s.jsx)(a.animated.div, {
+      children: ["collapsed" === u && (0, a.createPortal)((0, s.jsx)(r.animated.div, {
         style: {
           position: "absolute",
           opacity: C.to({
@@ -59,7 +59,7 @@ let c = o.createContext({
           })
         },
         children: n(S)
-      }), f), "expanded" === u && (0, r.createPortal)((0, s.jsx)(a.animated.div, {
+      }), f), "expanded" === u && (0, a.createPortal)((0, s.jsx)(r.animated.div, {
         style: {
           position: "absolute",
           opacity: C.to({
@@ -69,7 +69,7 @@ let c = o.createContext({
         },
         children: n(S)
       }), f)]
-    }) : "collapsed" === u && (N = (0, r.createPortal)(n(S), f)), (0, s.jsxs)("div", {
+    }) : "collapsed" === u && (N = (0, a.createPortal)(n(S), f)), (0, s.jsxs)("div", {
       style: {
         opacity: null == f || p ? 1 : 0
       },
@@ -81,20 +81,20 @@ let c = o.createContext({
     let {
       children: t,
       expandedContentRef: n,
-      collapsedContentRef: r,
-      expansionSpring: a,
+      collapsedContentRef: a,
+      expansionSpring: r,
       isExpansionAnimationComplete: l
     } = e, [u, d] = o.useState({}), [p, x] = o.useState([]), m = o.useCallback((e, t, n) => {
       d(s => {
         var o;
-        let r = null !== (o = s[t]) && void 0 !== o ? o : {
+        let a = null !== (o = s[t]) && void 0 !== o ? o : {
           expanded: null,
           collapsed: null
         };
         return {
           ...s,
           [t]: {
-            ...r,
+            ...a,
             [n]: e
           }
         }
@@ -114,16 +114,16 @@ let c = o.createContext({
     }, []), C = o.useCallback(() => {
       let e = [];
       for (let t in u) {
-        if (null == u[t] || null == n.current || null == r.current) continue;
+        if (null == u[t] || null == n.current || null == a.current) continue;
         let s = u[t].collapsed,
           o = u[t].expanded;
         if (null == s || null == o) continue;
-        let a = o.getBoundingClientRect().top - n.current.getBoundingClientRect().top + i.Li,
-          l = s.getBoundingClientRect().top - r.current.getBoundingClientRect().top,
+        let r = o.getBoundingClientRect().top - n.current.getBoundingClientRect().top + i.Li,
+          l = s.getBoundingClientRect().top - a.current.getBoundingClientRect().top,
           c = o.getBoundingClientRect().left - n.current.getBoundingClientRect().left + i.Li,
-          d = s.getBoundingClientRect().left - r.current.getBoundingClientRect().left,
+          d = s.getBoundingClientRect().left - a.current.getBoundingClientRect().left,
           p = -o.getBoundingClientRect().right + n.current.getBoundingClientRect().right + i.Li,
-          x = -s.getBoundingClientRect().right + r.current.getBoundingClientRect().right;
+          x = -s.getBoundingClientRect().right + a.current.getBoundingClientRect().right;
         e.push({
           id: t,
           collapsedLeft: d,
@@ -131,11 +131,11 @@ let c = o.createContext({
           collapsedRight: x,
           expandedRight: p,
           collapsedTop: l,
-          expandedTop: a
+          expandedTop: r
         })
       }
       x(e)
-    }, [u, n, r, x]);
+    }, [u, n, a, x]);
     return (0, s.jsx)(c.Provider, {
       value: {
         isExpansionAnimationComplete: l,
@@ -143,10 +143,10 @@ let c = o.createContext({
         unregisterComponent: g,
         animatedComponents: u,
         expandedContentRef: n,
-        collapsedContentRef: r,
+        collapsedContentRef: a,
         recalculateAnimationPositions: C,
         animatedComponentProps: p,
-        expansionSpring: a
+        expansionSpring: r
       },
       children: t
     })

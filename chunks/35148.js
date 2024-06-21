@@ -1,8 +1,8 @@
 var s = n(735250);
 n(470079);
 var o = n(120356),
-  r = n.n(o),
-  a = n(920906),
+  a = n.n(o),
+  r = n(920906),
   l = n(481060),
   i = n(113434),
   c = n(497505),
@@ -28,9 +28,9 @@ t.Z = function(e) {
     quest: E,
     location: m.dr.QUESTS_BAR
   });
-  return (0, s.jsxs)(a.animated.div, {
+  return (0, s.jsxs)(r.animated.div, {
     "aria-hidden": h && S,
-    className: r()(n, C.contentCollapsed, {
+    className: a()(n, C.contentCollapsed, {
       [C.contentCollapsedExpanded]: h,
       [C.contentCollapsedAccepted]: N
     }),

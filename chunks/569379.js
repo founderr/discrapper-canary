@@ -14,8 +14,8 @@ n.d(t, {
 }), n(47120);
 var s = n(470079),
   o = n(920906),
-  r = n(442837),
-  a = n(410030),
+  a = n(442837),
+  r = n(410030),
   l = n(706454),
   i = n(930153),
   c = n(113434),
@@ -26,7 +26,7 @@ var s = n(470079),
 
 function m(e) {
   var t, n;
-  let s = (0, r.e7)([l.default], () => l.default.locale),
+  let s = (0, a.e7)([l.default], () => l.default.locale),
     {
       percentComplete: o
     } = (0, c.Rf)({
@@ -86,12 +86,12 @@ function C() {
 
 function h(e) {
   var t;
-  let n = null !== (t = (0, a.i6)()) && void 0 !== t ? t : 0,
+  let n = null !== (t = (0, r.i6)()) && void 0 !== t ? t : 0,
     s = "var(--green-330)",
     o = ["var(--background-tertiary)", "var(--interactive-normal)"],
-    r = e ? o[n] : ["#828288", "#CBCDD4"][n];
+    a = e ? o[n] : ["#828288", "#CBCDD4"][n];
   return {
-    backgroundTop: r,
+    backgroundTop: a,
     backgroundBottom: e ? o[n] : ["#535356", "#8B8C95"][n],
     foreground: s,
     glow: e ? s : "#C4C1D66E"

@@ -1,8 +1,8 @@
 n(47120);
 var s = n(735250),
   o = n(470079),
-  r = n(887024),
-  a = n(920906),
+  a = n(887024),
+  r = n(920906),
   l = n(442837),
   i = n(110924),
   c = n(607070),
@@ -21,23 +21,23 @@ t.Z = e => {
   } = e, {
     completionSpring: S,
     startCompletionAnimation: E
-  } = (0, d.GX)(), f = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, N = o.useRef(!1), T = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), v = o.useRef(null), j = (0, l.e7)([u.Z], () => u.Z.hasLayers()), _ = (0, i.Z)(j), [A, B] = o.useState(null), [R, M] = o.useState(null), y = o.useRef(new r.qA({
+  } = (0, d.GX)(), f = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, N = o.useRef(!1), T = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), v = o.useRef(null), j = (0, l.e7)([u.Z], () => u.Z.hasLayers()), _ = (0, i.Z)(j), [A, B] = o.useState(null), [R, M] = o.useState(null), y = o.useRef(new a.qA({
     gravity: 0,
     wind: 0
-  })), O = (0, r.uR)(A, R), U = o.useCallback(() => {
+  })), O = (0, a.uR)(A, R), U = o.useCallback(() => {
     if (T) return;
     let e = C.current,
       t = v.current;
     if (null != t && null != e && O.isReady) {
-      var n, s, o, r;
+      var n, s, o, a;
       let {
-        x: a,
+        x: r,
         y: l
       } = e.getBoundingClientRect(), {
         x: i,
         y: c
       } = t.getBoundingClientRect();
-      O.createMultipleConfetti((n = a - i, s = l - c, o = e.clientHeight, r = e.clientWidth, {
+      O.createMultipleConfetti((n = r - i, s = l - c, o = e.clientHeight, a = e.clientWidth, {
         ...p.We,
         position: {
           type: "static-random",
@@ -47,7 +47,7 @@ t.Z = e => {
           },
           maxValue: {
             x: n + o,
-            y: s + r
+            y: s + a
           }
         },
         velocity: {
@@ -90,16 +90,16 @@ t.Z = e => {
     className: x.wrapper,
     "aria-hidden": "true",
     ref: v,
-    children: [(0, s.jsx)(a.animated.div, {
+    children: [(0, s.jsx)(r.animated.div, {
       className: x.background,
       style: {
         opacity: S
       }
-    }), (0, s.jsx)(r.O_, {
+    }), (0, s.jsx)(a.O_, {
       ref: B,
       className: x.confetti,
       environment: y.current
-    }), (0, s.jsx)(r.Ji, {
+    }), (0, s.jsx)(a.Ji, {
       ref: M,
       sprites: [m],
       colors: g,

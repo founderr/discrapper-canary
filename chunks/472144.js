@@ -1,7 +1,7 @@
 var s = n(735250),
   o = n(470079),
-  r = n(569379),
-  a = n(581292);
+  a = n(569379),
+  r = n(581292);
 t.Z = o.forwardRef((e, t) => {
   let {
     percentComplete: n,
@@ -9,7 +9,7 @@ t.Z = o.forwardRef((e, t) => {
     strokeWidth: l = 3,
     glowBlur: i = .4,
     children: c
-  } = e, u = (0, r.EK)(n > 0), d = o / 2, p = o / 2 - l / 2, x = 2 * Math.PI * p, m = x - n * x, g = {
+  } = e, u = (0, a.EK)(n > 0), d = o / 2, p = o / 2 - l / 2, x = 2 * Math.PI * p, m = x - n * x, g = {
     strokeDasharray: "".concat(x, " ").concat(x),
     strokeDashoffset: m
   }, C = {
@@ -19,14 +19,14 @@ t.Z = o.forwardRef((e, t) => {
     boxShadow: "0 0 30px 0px ".concat(u.glow)
   };
   return (0, s.jsxs)("div", {
-    className: a.outer,
+    className: r.outer,
     ref: t,
     children: [(0, s.jsx)("div", {
-      className: a.inner,
+      className: r.inner,
       style: h,
       children: c
     }), (0, s.jsxs)("svg", {
-      className: a.progressBar,
+      className: r.progressBar,
       height: o,
       width: o,
       children: [(0, s.jsxs)("defs", {
@@ -61,7 +61,7 @@ t.Z = o.forwardRef((e, t) => {
           })]
         })]
       }), (0, s.jsx)("circle", {
-        className: a.progress,
+        className: r.progress,
         strokeWidth: l,
         fill: "transparent",
         r: p,
@@ -70,7 +70,7 @@ t.Z = o.forwardRef((e, t) => {
         stroke: "url(#linear)",
         style: C
       }), (0, s.jsx)("circle", {
-        className: a.progress,
+        className: r.progress,
         strokeWidth: l,
         fill: "transparent",
         r: p,

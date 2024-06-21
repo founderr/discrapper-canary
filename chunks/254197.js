@@ -1,7 +1,7 @@
 var s = n(735250),
   o = n(470079),
-  r = n(120356),
-  a = n.n(r),
+  a = n(120356),
+  r = n.n(a),
   l = n(920906),
   i = n(442837),
   c = n(481060),
@@ -30,7 +30,7 @@ var s = n(735250),
 let U = o.forwardRef(function(e, t) {
   var n;
   let {
-    className: r,
+    className: a,
     isExpanded: U,
     isExpansionAnimationComplete: Z,
     expansionSpring: b,
@@ -62,7 +62,7 @@ let U = o.forwardRef(function(e, t) {
   });
   return (0, s.jsx)("div", {
     "aria-hidden": !F,
-    className: a()(r, O.contentExpanded, {
+    className: r()(a, O.contentExpanded, {
       [O.contentInteractable]: F,
       [O.contentExpandedAccepted]: G
     }),
@@ -75,7 +75,7 @@ let U = o.forwardRef(function(e, t) {
           className: O.questAcceptedHeader,
           children: [(0, s.jsx)(c.Text, {
             variant: "text-xxs/medium",
-            className: a()(O.flex, O.headerText),
+            className: r()(O.flex, O.headerText),
             children: y.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
               expirationDate: H
             })
@@ -94,7 +94,7 @@ let U = o.forwardRef(function(e, t) {
               children: (0, s.jsx)(c.MoreHorizontalIcon, {
                 size: "md",
                 color: "currentColor",
-                className: a()(O.submenuIcon, O.interactiveNormal)
+                className: r()(O.submenuIcon, O.interactiveNormal)
               })
             })
           })]

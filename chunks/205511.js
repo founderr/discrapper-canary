@@ -1,8 +1,8 @@
 n(47120);
 var s = n(735250),
   o = n(470079),
-  r = n(120356),
-  a = n.n(r),
+  a = n(120356),
+  r = n.n(a),
   l = n(442837),
   i = n(481060),
   c = n(607070),
@@ -23,7 +23,7 @@ function E(e) {
     hasNextStep: o
   } = e;
   return (0, s.jsxs)("li", {
-    className: a()(S.stepWrapper, {
+    className: r()(S.stepWrapper, {
       [S.stepWrapperComplete]: n
     }, {
       [S.stepWrapperWithNextStep]: o
@@ -50,18 +50,18 @@ function f(e) {
   let {
     quest: t,
     useReducedMotion: n
-  } = e, [r, a] = o.useState([]), l = (0, m.g2)({
+  } = e, [a, r] = o.useState([]), l = (0, m.g2)({
     useReducedMotion: n,
     className: S.microphoneUnitRefreshIcon
   }), c = async () => {
-    l.startAnimation(), a((await (0, u.CS)(t.id)).errorHints), l.stopAnimation()
+    l.startAnimation(), r((await (0, u.CS)(t.id)).errorHints), l.stopAnimation()
   }, {
     header: d,
     renderBody: g
   } = o.useMemo(() => {
-    let e = r.length > 0,
+    let e = a.length > 0,
       n = () => (0, s.jsx)("div", {
-        children: r.map((e, t) => (0, s.jsx)(i.Text, {
+        children: a.map((e, t) => (0, s.jsx)(i.Text, {
           className: S.microphoneUnitBodyText,
           color: "text-muted",
           variant: "text-xxs/normal",
@@ -93,7 +93,7 @@ function f(e) {
         })
       })
     }
-  }, [t, r]);
+  }, [t, a]);
   return (0, s.jsxs)("div", {
     className: S.microphoneUnit,
     children: [(0, s.jsxs)("div", {
@@ -101,7 +101,7 @@ function f(e) {
       children: [(0, s.jsx)(i.CircleExclamationPointIcon, {
         size: "custom",
         color: "currentColor",
-        className: 0 === r.length ? S.warningCircle : S.errorCircle,
+        className: 0 === a.length ? S.warningCircle : S.errorCircle,
         width: 16,
         height: 16
       }), (0, s.jsx)(i.Text, {
@@ -129,17 +129,17 @@ function N(e) {
 t.Z = function(e) {
   let {
     quest: t
-  } = e, n = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), r = (0, d.Rf)({
+  } = e, n = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), a = (0, d.Rf)({
     quest: t,
     location: C.dr.QUESTS_BAR
-  }), a = (0, d.z6)(), {
+  }), r = (0, d.z6)(), {
     steps: u,
     hasConnectedAccounts: m,
     isProgressingQuestForLaunchedGame: T,
     isQuestComplete: v
   } = o.useMemo(() => {
     var e;
-    let n = a.xboxAndPlaystationAccounts.length > 0,
+    let n = r.xboxAndPlaystationAccounts.length > 0,
       o = n && (0, p.Bz)(t),
       l = (0, p.zK)(t, C.S7.IN_HOUSE_CONSOLE_QUEST),
       i = x.r.build(t.config).application.name,
@@ -147,7 +147,7 @@ t.Z = function(e) {
     return {
       steps: [{
         renderContent: () => (0, s.jsx)(g.Q, {
-          ...a
+          ...r
         }),
         isComplete: n || o || c
       }, {
@@ -160,7 +160,7 @@ t.Z = function(e) {
       }, {
         renderContent: () => (0, s.jsx)(N, {
           text: h.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_PLAYTIME.format({
-            numMinutes: r.targetMinutes
+            numMinutes: a.targetMinutes
           })
         }),
         isComplete: c
@@ -169,7 +169,7 @@ t.Z = function(e) {
       isProgressingQuestForLaunchedGame: o,
       isQuestComplete: c
     }
-  }, [a, t, r]);
+  }, [r, t, a]);
   return (0, s.jsxs)("div", {
     className: S.wrapper,
     children: [(0, s.jsx)("div", {
