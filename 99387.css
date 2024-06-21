@@ -50771,8 +50771,8 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
 
 .message_b6cd66 {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -124029,7 +124029,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-sm\/normal_c23051 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     line-height: 1.2857142857142858;
     font-weight: 400
 }
@@ -124040,7 +124040,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-sm\/medium_c23051 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     line-height: 1.2857142857142858;
     font-weight: 500
 }
@@ -124051,7 +124051,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-sm\/semibold_c23051 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     line-height: 1.2857142857142858;
     font-weight: 600
 }
@@ -124062,7 +124062,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-sm\/bold_c23051 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     line-height: 1.2857142857142858;
     font-weight: 700
 }
@@ -124073,7 +124073,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-sm\/extrabold_c23051 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     line-height: 1.2857142857142858;
     font-weight: 800
 }
@@ -124084,7 +124084,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-md\/normal_c23051 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.25;
     font-weight: 400
 }
@@ -124095,7 +124095,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-md\/medium_c23051 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.25;
     font-weight: 500
 }
@@ -124106,7 +124106,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-md\/semibold_c23051 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.25;
     font-weight: 600
 }
@@ -124117,7 +124117,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-md\/bold_c23051 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.25;
     font-weight: 700
 }
@@ -124128,7 +124128,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-md\/extrabold_c23051 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.25;
     font-weight: 800
 }
@@ -124139,7 +124139,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-lg\/normal_c23051 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     line-height: 1.2;
     font-weight: 400
 }
@@ -124150,7 +124150,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-lg\/medium_c23051 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     line-height: 1.2;
     font-weight: 500
 }
@@ -124161,7 +124161,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-lg\/semibold_c23051 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     line-height: 1.2;
     font-weight: 600
 }
@@ -124172,7 +124172,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-lg\/bold_c23051 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     line-height: 1.2;
     font-weight: 700
 }
@@ -124183,7 +124183,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-lg\/extrabold_c23051 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     line-height: 1.2;
     font-weight: 800
 }
@@ -124194,7 +124194,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-xl\/normal_c23051 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     line-height: 1.25;
     font-weight: 400
 }
@@ -124205,7 +124205,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-xl\/medium_c23051 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     line-height: 1.25;
     font-weight: 500
 }
@@ -124216,7 +124216,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-xl\/semibold_c23051 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     line-height: 1.25;
     font-weight: 600
 }
@@ -124227,7 +124227,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-xl\/bold_c23051 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     line-height: 1.25;
     font-weight: 700
 }
@@ -124238,7 +124238,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-xl\/extrabold_c23051 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     line-height: 1.25;
     font-weight: 800
 }
@@ -124249,7 +124249,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-xxl\/normal_c23051 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     line-height: 1.25;
     font-weight: 400
 }
@@ -124260,7 +124260,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-xxl\/medium_c23051 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     line-height: 1.25;
     font-weight: 500
 }
@@ -124271,7 +124271,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-xxl\/semibold_c23051 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     line-height: 1.25;
     font-weight: 600
 }
@@ -124282,7 +124282,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-xxl\/bold_c23051 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     line-height: 1.25;
     font-weight: 700
 }
@@ -124293,7 +124293,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-xxl\/extrabold_c23051 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     line-height: 1.25;
     font-weight: 800
 }
@@ -124304,7 +124304,7 @@ div:has(>div>.container_d99f08) {
 
 .eyebrow_c23051 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     line-height: 1.3333333333333333;
     font-weight: 700;
     text-transform: uppercase;
@@ -124317,7 +124317,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-deprecated-12\/normal_c23051 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     line-height: 1.3333333333333333;
     font-weight: 400
 }
@@ -124328,7 +124328,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-deprecated-12\/medium_c23051 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     line-height: 1.3333333333333333;
     font-weight: 500
 }
@@ -124339,7 +124339,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-deprecated-12\/semibold_c23051 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     line-height: 1.3333333333333333;
     font-weight: 600
 }
@@ -124350,7 +124350,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-deprecated-12\/bold_c23051 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     line-height: 1.3333333333333333;
     font-weight: 700
 }
@@ -124361,7 +124361,7 @@ div:has(>div>.container_d99f08) {
 
 .heading-deprecated-12\/extrabold_c23051 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     line-height: 1.3333333333333333;
     font-weight: 800
 }
@@ -124372,7 +124372,7 @@ div:has(>div>.container_d99f08) {
 
 .redesign\/heading-18\/bold_c23051 {
     font-family: var(--font-display);
-    font-size: 1.125rem;
+    font-size: 18px;
     line-height: 1.3333333333333333;
     font-weight: 700
 }
@@ -124383,7 +124383,7 @@ div:has(>div>.container_d99f08) {
 
 .text-xxs\/normal_c23051 {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     line-height: 1.2;
     font-weight: 400
 }
@@ -124394,7 +124394,7 @@ div:has(>div>.container_d99f08) {
 
 .text-xxs\/medium_c23051 {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     line-height: 1.2;
     font-weight: 500
 }
@@ -124405,7 +124405,7 @@ div:has(>div>.container_d99f08) {
 
 .text-xxs\/semibold_c23051 {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     line-height: 1.2;
     font-weight: 600
 }
@@ -124416,7 +124416,7 @@ div:has(>div>.container_d99f08) {
 
 .text-xxs\/bold_c23051 {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     line-height: 1.2;
     font-weight: 700
 }
@@ -124427,7 +124427,7 @@ div:has(>div>.container_d99f08) {
 
 .text-xs\/normal_c23051 {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     line-height: 1.3333333333333333;
     font-weight: 400
 }
@@ -124438,7 +124438,7 @@ div:has(>div>.container_d99f08) {
 
 .text-xs\/medium_c23051 {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     line-height: 1.3333333333333333;
     font-weight: 500
 }
@@ -124449,7 +124449,7 @@ div:has(>div>.container_d99f08) {
 
 .text-xs\/semibold_c23051 {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     line-height: 1.3333333333333333;
     font-weight: 600
 }
@@ -124460,7 +124460,7 @@ div:has(>div>.container_d99f08) {
 
 .text-xs\/bold_c23051 {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     line-height: 1.3333333333333333;
     font-weight: 700
 }
@@ -124471,7 +124471,7 @@ div:has(>div>.container_d99f08) {
 
 .text-sm\/normal_c23051 {
     font-family: var(--font-primary);
-    font-size: .875rem;
+    font-size: 14px;
     line-height: 1.2857142857142858;
     font-weight: 400
 }
@@ -124482,7 +124482,7 @@ div:has(>div>.container_d99f08) {
 
 .text-sm\/medium_c23051 {
     font-family: var(--font-primary);
-    font-size: .875rem;
+    font-size: 14px;
     line-height: 1.2857142857142858;
     font-weight: 500
 }
@@ -124493,7 +124493,7 @@ div:has(>div>.container_d99f08) {
 
 .text-sm\/semibold_c23051 {
     font-family: var(--font-primary);
-    font-size: .875rem;
+    font-size: 14px;
     line-height: 1.2857142857142858;
     font-weight: 600
 }
@@ -124504,7 +124504,7 @@ div:has(>div>.container_d99f08) {
 
 .text-sm\/bold_c23051 {
     font-family: var(--font-primary);
-    font-size: .875rem;
+    font-size: 14px;
     line-height: 1.2857142857142858;
     font-weight: 700
 }
@@ -124515,7 +124515,7 @@ div:has(>div>.container_d99f08) {
 
 .text-md\/normal_c23051 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.25;
     font-weight: 400
 }
@@ -124526,7 +124526,7 @@ div:has(>div>.container_d99f08) {
 
 .text-md\/medium_c23051 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.25;
     font-weight: 500
 }
@@ -124537,7 +124537,7 @@ div:has(>div>.container_d99f08) {
 
 .text-md\/semibold_c23051 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.25;
     font-weight: 600
 }
@@ -124548,7 +124548,7 @@ div:has(>div>.container_d99f08) {
 
 .text-md\/bold_c23051 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.25;
     font-weight: 700
 }
@@ -124559,7 +124559,7 @@ div:has(>div>.container_d99f08) {
 
 .text-lg\/normal_c23051 {
     font-family: var(--font-primary);
-    font-size: 1.25rem;
+    font-size: 20px;
     line-height: 1.2;
     font-weight: 400
 }
@@ -124570,7 +124570,7 @@ div:has(>div>.container_d99f08) {
 
 .text-lg\/medium_c23051 {
     font-family: var(--font-primary);
-    font-size: 1.25rem;
+    font-size: 20px;
     line-height: 1.2;
     font-weight: 500
 }
@@ -124581,7 +124581,7 @@ div:has(>div>.container_d99f08) {
 
 .text-lg\/semibold_c23051 {
     font-family: var(--font-primary);
-    font-size: 1.25rem;
+    font-size: 20px;
     line-height: 1.2;
     font-weight: 600
 }
@@ -124592,7 +124592,7 @@ div:has(>div>.container_d99f08) {
 
 .text-lg\/bold_c23051 {
     font-family: var(--font-primary);
-    font-size: 1.25rem;
+    font-size: 20px;
     line-height: 1.2;
     font-weight: 700
 }
@@ -124603,7 +124603,7 @@ div:has(>div>.container_d99f08) {
 
 .redesign\/message-preview\/normal_c23051 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     line-height: 1.3333333333333333;
     font-weight: 400
 }
@@ -124614,7 +124614,7 @@ div:has(>div>.container_d99f08) {
 
 .redesign\/message-preview\/medium_c23051 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     line-height: 1.3333333333333333;
     font-weight: 500
 }
@@ -124625,7 +124625,7 @@ div:has(>div>.container_d99f08) {
 
 .redesign\/message-preview\/semibold_c23051 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     line-height: 1.3333333333333333;
     font-weight: 600
 }
@@ -124636,7 +124636,7 @@ div:has(>div>.container_d99f08) {
 
 .redesign\/message-preview\/bold_c23051 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     line-height: 1.3333333333333333;
     font-weight: 700
 }
@@ -124647,7 +124647,7 @@ div:has(>div>.container_d99f08) {
 
 .redesign\/channel-title\/normal_c23051 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.375;
     font-weight: 400
 }
@@ -124658,7 +124658,7 @@ div:has(>div>.container_d99f08) {
 
 .redesign\/channel-title\/medium_c23051 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.375;
     font-weight: 500
 }
@@ -124669,7 +124669,7 @@ div:has(>div>.container_d99f08) {
 
 .redesign\/channel-title\/semibold_c23051 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.375;
     font-weight: 600
 }
@@ -124680,7 +124680,7 @@ div:has(>div>.container_d99f08) {
 
 .redesign\/channel-title\/bold_c23051 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.375;
     font-weight: 700
 }
@@ -124691,7 +124691,7 @@ div:has(>div>.container_d99f08) {
 
 .display-sm_c23051 {
     font-family: var(--font-headline);
-    font-size: 1.25rem;
+    font-size: 20px;
     line-height: 1;
     font-weight: 800
 }
@@ -124702,7 +124702,7 @@ div:has(>div>.container_d99f08) {
 
 .display-md_c23051 {
     font-family: var(--font-headline);
-    font-size: 2.125rem;
+    font-size: 34px;
     line-height: 1.0588235294117647;
     font-weight: 800
 }
@@ -124713,7 +124713,7 @@ div:has(>div>.container_d99f08) {
 
 .display-lg_c23051 {
     font-family: var(--font-headline);
-    font-size: 2.75rem;
+    font-size: 44px;
     line-height: .9545454545454546;
     font-weight: 800
 }
@@ -124724,7 +124724,7 @@ div:has(>div>.container_d99f08) {
 
 .code_c23051 {
     font-family: var(--font-code);
-    font-size: .75rem;
+    font-size: 12px;
     line-height: 1.3333333333333333;
     font-weight: 700
 }
