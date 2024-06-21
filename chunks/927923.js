@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   KL: function() {
-    return I
+    return E
   },
   Lc: function() {
     return T
@@ -31,7 +31,7 @@ n.d(t, {
     return d
   },
   uu: function() {
-    return E
+    return I
   },
   zM: function() {
     return c
@@ -42,9 +42,9 @@ var i, r, s, o, a = n(243814),
 let u = "xbox://communitylinking/donut/audio",
   _ = "https://www.xbox.com/en-US/apps/xbox-app-for-mobile",
   c = "https://login.live.com",
-  d = [a.x.VOICE, a.x.DM_CHANNELS_READ, a.x.GUILDS, a.x.GUILDS_MEMBERS_READ, a.x.IDENTIFY, a.x.CONNECTIONS],
-  E = "https://my.account.sony.com",
-  I = d,
+  d = [a.x.VOICE, a.x.DM_CHANNELS_READ, a.x.GUILDS, a.x.GUILDS_MEMBERS_READ, a.x.IDENTIFY, a.x.CONNECTIONS, a.x.ACTIVITIES_READ],
+  E = [a.x.VOICE, a.x.DM_CHANNELS_READ, a.x.GUILDS, a.x.GUILDS_MEMBERS_READ, a.x.IDENTIFY, a.x.CONNECTIONS],
+  I = "https://my.account.sony.com",
   T = e => {
     let {
       guildId: t,
