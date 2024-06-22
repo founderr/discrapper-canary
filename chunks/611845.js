@@ -67,6 +67,8 @@ function h(e) {
 function m(e) {
   return (0, l.jsx)(o.h, {
     ...e,
-    Component: h
+    renderComponent: e => (0, l.jsx)(h, {
+      ...e
+    })
   })
 }

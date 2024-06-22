@@ -1,6 +1,6 @@
 n.d(t, {
   h: function() {
-    return c
+    return u
   }
 }), n(47120);
 var l = n(735250),
@@ -8,37 +8,49 @@ var l = n(735250),
   s = n(481060),
   a = n(570140),
   r = n(937995),
-  o = n(153850);
+  o = n(618158),
+  c = n(153850);
 
-function c(e) {
+function u(e) {
   let {
     buttonRef: t,
     dismissed: n,
-    onDismiss: c,
-    Component: u
-  } = e, d = i.useContext(r.h9), [h, m] = i.useState(""), [p, E] = i.useState(!1);
+    onDismiss: u,
+    renderComponent: d
+  } = e, h = i.useContext(r.h9), [m, p] = i.useState(""), [E, g] = i.useState(!1);
 
-  function g(e) {
+  function f(e) {
     var t;
     let {
       settings: n
     } = e, l = n.callHeaderHeight;
-    m(null !== (t = null == l ? void 0 : l.toString()) && void 0 !== t ? t : ""), E(void 0 !== l && l < 300)
+    p(null !== (t = null == l ? void 0 : l.toString()) && void 0 !== t ? t : ""), g(void 0 !== l && l < 300)
   }
-  return (i.useEffect(() => (a.Z.subscribe("UNSYNCED_USER_SETTINGS_UPDATE", g), () => {
-    a.Z.unsubscribe("UNSYNCED_USER_SETTINGS_UPDATE", g)
-  }), []), (null == t ? void 0 : t.current) == null) ? null : (0, l.jsx)(s.Layer, {
-    layerContext: o.nz,
+  i.useEffect(() => (a.Z.subscribe("UNSYNCED_USER_SETTINGS_UPDATE", f), () => {
+    a.Z.unsubscribe("UNSYNCED_USER_SETTINGS_UPDATE", f)
+  }), []);
+  let {
+    preventIdle: C,
+    allowIdle: _
+  } = (0, o.Y)("popup");
+  return (null == t ? void 0 : t.current) == null ? null : (0, l.jsx)(s.Layer, {
+    layerContext: c.nz,
     children: (0, l.jsx)(s.ReferencePositionLayer, {
       targetRef: t,
       position: "top",
       align: "center",
       spacing: 0,
       nudgeAlignIntoViewport: !1,
-      positionKey: h,
-      children: () => (0, l.jsx)(u, {
-        hidden: p || d || n,
-        onDismiss: c
+      positionKey: m,
+      children: () => (0, l.jsx)("div", {
+        onMouseOver: C,
+        onFocus: C,
+        onBlur: _,
+        onMouseLeave: _,
+        children: d({
+          hidden: E || h || n,
+          onDismiss: u
+        })
       })
     })
   })
