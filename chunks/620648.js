@@ -31,8 +31,8 @@ function N(e) {
     autoFocusNote: g = !1,
     scrollToConnections: T = !1
   } = e, {
-    trackUserProfileAction: R
-  } = (0, E.KZ)(), C = (0, t.e7)([I.Z], () => I.Z.hidePersonalInformation), {
+    trackUserProfileAction: C
+  } = (0, E.KZ)(), R = (0, t.e7)([I.Z], () => I.Z.hidePersonalInformation), {
     theme: A
   } = (0, S.z)(), M = (0, t.e7)([u.default], () => u.default.locale), p = (0, d.Z)("user_profile"), j = (null == N ? void 0 : N.bio) != null && (null == N ? void 0 : N.bio) !== "" || (0, a.Z)(s.id), U = (0, Z.Z)(s.id), L = l.useRef(null);
   return (l.useLayoutEffect(() => {
@@ -40,7 +40,7 @@ function N(e) {
       var e;
       null == L || null === (e = L.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [T]), C) ? (0, n.jsx)(m.Z, {}) : (0, n.jsxs)(o.ScrollerThin, {
+  }, [T]), R) ? (0, n.jsx)(m.Z, {}) : (0, n.jsxs)(o.ScrollerThin, {
     fade: !0,
     className: h.infoScroller,
     children: [(0, n.jsxs)("div", {
@@ -81,7 +81,7 @@ function N(e) {
           userId: s.id,
           autoFocus: g,
           className: h.note,
-          onUpdate: () => R({
+          onUpdate: () => C({
             action: "SET_NOTE"
           })
         })]

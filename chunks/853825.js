@@ -25,8 +25,8 @@ var n = s(735250),
   N = s(530),
   g = s(228168),
   T = s(981631),
-  R = s(689938),
-  C = s(327570),
+  C = s(689938),
+  R = s(327570),
   A = s(143599),
   M = s(784204);
 let p = u.ZP.getEnableHardwareAcceleration() ? t.AnimatedAvatar : t.Avatar;
@@ -69,9 +69,9 @@ function j(e) {
       showGuildProfile: !0,
       children: (0, n.jsxs)(t.ModalRoot, {
         transitionState: L,
-        className: C.root,
+        className: R.root,
         hideShadow: !0,
-        "aria-label": R.Z.Messages.USER_PROFILE_MODAL,
+        "aria-label": C.Z.Messages.USER_PROFILE_MODAL,
         children: [(0, n.jsxs)(h.Z, {
           user: i,
           displayProfile: F,
@@ -84,14 +84,14 @@ function j(e) {
               profileType: g.y0.FULL_SIZE,
               hasProfileEffect: (null == F ? void 0 : F.profileEffectId) != null
             }), (0, n.jsx)("div", {
-              className: C.headerInner,
+              className: R.headerInner,
               children: (0, n.jsx)("div", {
                 ...G,
                 children: (0, n.jsx)(p, {
                   src: B,
                   avatarDecoration: k,
                   size: t.AvatarSizes.SIZE_120,
-                  className: C.avatar,
+                  className: R.avatar,
                   status: void 0,
                   statusBackdropColor: (0, t.getStatusBackdropColor)(b),
                   "aria-label": i.username,
@@ -102,7 +102,7 @@ function j(e) {
               })
             })]
           }), (0, n.jsxs)("div", {
-            className: C.body,
+            className: R.body,
             children: [(0, n.jsx)(N.Z, {
               user: i,
               profileType: g.y0.FULL_SIZE,
@@ -115,7 +115,7 @@ function j(e) {
                 onClose: O
               })
             }), (0, n.jsx)(h.Z.Overlay, {
-              className: C.overlay,
+              className: R.overlay,
               children: (0, n.jsxs)("div", {
                 className: M.container,
                 children: [(0, n.jsx)(t.TabBar, {
@@ -126,10 +126,10 @@ function j(e) {
                   children: (0, n.jsx)(t.TabBar.Item, {
                     className: M.tabBarItem,
                     id: g.oh.USER_INFO,
-                    "aria-label": R.Z.Messages.USER_PROFILE_ABOUT_ME,
+                    "aria-label": C.Z.Messages.USER_PROFILE_ABOUT_ME,
                     children: (0, n.jsx)(t.Text, {
                       variant: "text-sm/normal",
-                      children: R.Z.Messages.USER_PROFILE_ABOUT_ME
+                      children: C.Z.Messages.USER_PROFILE_ABOUT_ME
                     })
                   }, g.oh.USER_INFO)
                 }), (0, n.jsxs)(t.ScrollerThin, {
@@ -140,7 +140,7 @@ function j(e) {
                     userBio: null == F ? void 0 : F.bio,
                     setLineClamp: !1
                   }), (0, n.jsx)(x.Z, {
-                    title: R.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+                    title: C.Z.Messages.USER_PROFILE_MEMBER_SINCE,
                     children: (0, n.jsx)(m.Z, {
                       userId: i.id,
                       guildId: D,

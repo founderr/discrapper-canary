@@ -1,6 +1,6 @@
 s.d(i, {
   Z: function() {
-    return R
+    return C
   }
 }), s(47120);
 var n = s(735250);
@@ -27,12 +27,12 @@ var l = s(442837),
   g = s(689938),
   T = s(327570);
 
-function R(e) {
+function C(e) {
   let {
     user: i,
     currentUser: s,
-    guildId: R,
-    channelId: C,
+    guildId: C,
+    channelId: R,
     messageId: A,
     roleId: M,
     initialSection: p,
@@ -40,7 +40,7 @@ function R(e) {
     transitionState: U,
     onClose: L,
     sourceAnalyticsLocations: O = []
-  } = e, P = R === N.ME ? void 0 : R, y = (0, u.ZP)(i.id, P), {
+  } = e, P = C === N.ME ? void 0 : C, y = (0, u.ZP)(i.id, P), {
     analyticsLocations: D
   } = (0, r.ZP)([...O, o.Z.SIMPLIFIED_PROFILE_MODAL]), F = (0, l.e7)([a.Z], () => a.Z.findActivity(i.id, e => {
     let {
@@ -54,7 +54,7 @@ function R(e) {
       layout: "SIMPLIFIED_MODAL",
       userId: i.id,
       guildId: P,
-      channelId: C,
+      channelId: R,
       messageId: A,
       roleId: M,
       showGuildProfile: !0,
@@ -78,7 +78,7 @@ function R(e) {
             user: i,
             displayProfile: y,
             guildId: P,
-            channelId: C,
+            channelId: R,
             activity: void 0,
             customStatusActivity: F,
             transitionState: U,
@@ -88,7 +88,7 @@ function R(e) {
             children: [(0, n.jsx)(f.Z, {
               user: i,
               profileType: h.y0.FULL_SIZE,
-              nickname: d.ZP.getName(P, C, i),
+              nickname: d.ZP.getName(P, R, i),
               pronouns: null == y ? void 0 : y.pronouns,
               nicknameVariant: "heading-xl/bold",
               nicknameIcons: (0, n.jsx)(E.Z, {

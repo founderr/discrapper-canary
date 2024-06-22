@@ -27,8 +27,8 @@ function m(e) {
     showActions: t,
     onClose: m
   } = e, x = (0, r.e7)([u.Z], () => null != u.Z.getAnyStreamForUser(i.id)), h = (0, r.e7)([I.Z], () => I.Z.getActivities(i.id)), N = l.useMemo(() => h.filter(e => e.type !== _.IIU.CUSTOM_STATUS), [h]), g = l.useMemo(() => x ? N.find(e => e.type === _.IIU.PLAYING) : null, [N, x]), T = l.useMemo(() => N.filter(e => e !== g), [g, N]), {
-    analyticsLocations: R,
-    newestAnalyticsLocation: C
+    analyticsLocations: C,
+    newestAnalyticsLocation: R
   } = (0, c.ZP)(), {
     trackUserProfileAction: A,
     ...M
@@ -44,7 +44,7 @@ function m(e) {
     children: [x ? (0, n.jsx)(d.Z, {
       type: s,
       user: i,
-      source: C,
+      source: R,
       className: S.userProfileActivity,
       showChannelDetails: s === E.Y.SIMPLIFIED_PROFILE,
       activity: g,
@@ -61,7 +61,7 @@ function m(e) {
           activityPlatform: null == g ? void 0 : g.platform,
           activitySessionId: null == g ? void 0 : g.session_id,
           applicationId: null == g ? void 0 : g.application_id,
-          analyticsLocations: R,
+          analyticsLocations: C,
           ...M
         })
       }
@@ -70,7 +70,7 @@ function m(e) {
       activity: e,
       user: i,
       useStoreStream: !1,
-      source: C,
+      source: R,
       className: o()(S.userProfileActivity, s === E.Y.SIMPLIFIED_PROFILE && S.simplifiedProfileActivity),
       showChannelDetails: s === E.Y.SIMPLIFIED_PROFILE,
       actionColor: S.actionColor,
@@ -86,7 +86,7 @@ function m(e) {
           activityPlatform: e.platform,
           activitySessionId: e.session_id,
           applicationId: e.application_id,
-          analyticsLocations: R,
+          analyticsLocations: C,
           ...M
         })
       }

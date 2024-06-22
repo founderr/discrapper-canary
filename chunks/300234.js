@@ -47,7 +47,7 @@ n.Z = s.memo(function(e) {
     onContextMenu: e => (0, i.jW)(e, async () => {
       let {
         default: e
-      } = await Promise.all([t.e("99387"), t.e("39285"), t.e("48800"), t.e("78650")]).then(t.bind(t, 422200));
+      } = await Promise.all([t.e("99387"), t.e("39285"), t.e("48800"), t.e("40157")]).then(t.bind(t, 422200));
       return n => (0, a.jsx)(e, {
         ...n,
         channel: d

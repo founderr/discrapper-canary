@@ -25,8 +25,8 @@ var n = s(735250),
   N = s(228168),
   g = s(231338),
   T = s(689938),
-  R = s(258125);
-let C = r.AvatarSizes.SIZE_120,
+  C = s(258125);
+let R = r.AvatarSizes.SIZE_120,
   A = E.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
 
 function M(e) {
@@ -50,7 +50,7 @@ function M(e) {
     avatarDecorationSrc: V
   } = (0, _.Z)({
     user: E,
-    size: C
+    size: R
   }), W = l.useMemo(() => (0, d.W)(E, p), [E, p]);
   return (0, n.jsxs)("header", {
     className: U,
@@ -61,14 +61,14 @@ function M(e) {
       profileType: N.y0.MODAL,
       hasProfileEffect: O
     }), (0, n.jsxs)("div", {
-      className: R.header,
+      className: C.header,
       children: [(0, n.jsx)("div", {
         ...Y,
         children: (0, n.jsx)(A, {
           src: w,
           avatarDecoration: V,
-          size: C,
-          className: R.avatar,
+          size: R,
+          className: C.avatar,
           status: W ? g.Sk.UNKNOWN : L ? g.Sk.STREAMING : F,
           statusBackdropColor: (0, r.getStatusBackdropColor)(G),
           isMobile: D,
@@ -76,7 +76,7 @@ function M(e) {
           "aria-label": E.username
         })
       }), (0, n.jsxs)("div", {
-        className: R.headerTop,
+        className: C.headerTop,
         children: [(null == b ? void 0 : b.profileFetchFailed) && !E.isClyde() ? (0, n.jsx)(r.Tooltip, {
           text: T.Z.Messages.USER_PROFILE_LOAD_ERROR,
           spacing: 20,
@@ -85,21 +85,21 @@ function M(e) {
             width: 20,
             height: 20,
             ...e,
-            className: R.warningCircleIcon,
+            className: C.warningCircleIcon,
             color: o.Z.unsafe_rawColors.YELLOW_300.css
           })
         }) : (0, n.jsx)(m.Z, {
           user: E,
-          className: R.badgeList,
+          className: C.badgeList,
           guildId: M,
           size: m.V.SIZE_24,
           shrinkAtCount: 8,
           shrinkToSize: m.V.SIZE_18,
           onBadgeClick: P
         }), (0, n.jsxs)("div", {
-          className: R.relationshipButtons,
+          className: C.relationshipButtons,
           children: [(null == b ? void 0 : b.application) != null && (0, n.jsx)(v.Z, {
-            className: R.applicationInstallButton,
+            className: C.applicationInstallButton,
             application: b.application
           }), (0, n.jsx)(h.Z, {
             user: E,
@@ -134,7 +134,7 @@ function M(e) {
             children: (0, n.jsx)(r.MoreVerticalIcon, {
               size: "md",
               color: "currentColor",
-              className: R.additionalActionsIcon
+              className: C.additionalActionsIcon
             })
           })]
         })]

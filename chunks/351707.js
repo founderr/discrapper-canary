@@ -39,8 +39,8 @@ function N(e) {
     let l = (null === (s = e.tags) || void 0 === s ? void 0 : s.guild_connections) !== null,
       t = (null === (n = i.tags) || void 0 === n ? void 0 : n.guild_connections) !== null;
     return l && !t ? 1 : !l && t ? -1 : 0
-  }), [g, u]), R = f && null != c, C = l.useMemo(() => "roles-".concat((0, t.Z)()), []), A = (0, o.ZP)({
-    id: C,
+  }), [g, u]), C = f && null != c, R = l.useMemo(() => "roles-".concat((0, t.Z)()), []), A = (0, o.ZP)({
+    id: R,
     isEnabled: !0,
     scrollToStart: m.Cyb,
     scrollToEnd: m.Cyb,
@@ -70,7 +70,7 @@ function N(e) {
           "aria-label": p,
           ref: i,
           ...s,
-          children: [j, R && (0, n.jsx)(v.Z, {
+          children: [j, C && (0, n.jsx)(v.Z, {
             variant: T.length > 0 ? "icon" : "text",
             guild: d,
             guildMember: c,
@@ -98,7 +98,7 @@ function g(e) {
     });
     let l = null !== (n = null == _ ? void 0 : _.filter(i => i !== e.id)) && void 0 !== n ? n : [];
     (null === (s = e.tags) || void 0 === s ? void 0 : s.guild_connections) === null ? d.Z.unassignGuildRoleConnection(t.id, e.id) : c.Z.updateMemberRoles(t.id, i.id, l, [], [e.id])
-  }, [_, t.id, i.id, r]), R = l.useCallback(e => {
+  }, [_, t.id, i.id, r]), C = l.useCallback(e => {
     r({
       action: "ADD_ROLE"
     });
@@ -115,7 +115,7 @@ function g(e) {
       userRoles: null != _ ? _ : [],
       highestRole: h,
       canManageRoles: g,
-      onAddRole: R,
+      onAddRole: C,
       onRemoveRole: T
     })
   })

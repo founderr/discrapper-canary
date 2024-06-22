@@ -25,8 +25,8 @@ var n = s(735250),
   N = s(726059),
   g = s(162267),
   T = s(502762),
-  R = s(62154),
-  C = s(293259),
+  C = s(62154),
+  R = s(293259),
   A = s(725954),
   M = s(228168),
   p = s(981631),
@@ -148,7 +148,7 @@ function O(e) {
             displayProfile: w,
             profileType: M.y0.MODAL,
             ref: ee,
-            children: [(0, n.jsx)(C.Z, {
+            children: [(0, n.jsx)(R.Z, {
               className: U.topSection,
               displayProfile: w,
               user: k,
@@ -173,7 +173,7 @@ function O(e) {
                   isCurrentUser: q
                 }) : (0, n.jsx)("div", {
                   className: U.divider
-                }), (0, n.jsx)(R.Z, {
+                }), (0, n.jsx)(C.Z, {
                   displayProfile: w,
                   user: k,
                   autoFocusNote: F === M.Tb.NOTE && !z,

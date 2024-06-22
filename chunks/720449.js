@@ -6,9 +6,9 @@ s.d(t, {
 var a = s(913527),
   n = s.n(a),
   l = s(695346),
-  r = s(626135),
-  o = s(337953),
-  i = s(981631);
+  o = s(626135),
+  i = s(337953),
+  r = s(981631);
 
 function u(e, t, s, a) {
   let u = e.trim();
@@ -16,10 +16,10 @@ function u(e, t, s, a) {
     var c;
     l.Ok.updateSetting({
       text: u.length > 0 ? u : "",
-      expiresAtMs: null != s ? String(n()().add((0, o.Z)(s), "ms").toDate().getTime()) : "0",
+      expiresAtMs: null != s ? String(n()().add((0, i.Z)(s), "ms").toDate().getTime()) : "0",
       emojiId: null != t && null != t.id ? t.id : "0",
       emojiName: null != t ? t.name : ""
-    }), r.default.track(i.rMx.CUSTOM_STATUS_UPDATED, {
+    }), o.default.track(r.rMx.CUSTOM_STATUS_UPDATED, {
       location: null != a ? a.location : null,
       emoji_type: null == (c = t) ? null : null != c.id ? "custom" : "unicode",
       text_len: u.length,
