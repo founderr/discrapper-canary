@@ -691,39 +691,39 @@ class H extends(n = i.PureComponent) {
       footer: d
     }
   }
-  getMaxWidth() {
+  getMaxWidth(e) {
     let {
       embed: {
-        image: e,
-        images: l,
-        video: t,
-        type: n,
-        thumbnail: r
+        image: l,
+        images: t,
+        video: n,
+        type: r,
+        thumbnail: i
       }
     } = this.props, {
-      maxMediaWidth: i,
-      maxMediaHeight: s
-    } = this.state, a = null != e ? e : t;
-    if (null == a) return;
+      maxMediaWidth: s,
+      maxMediaHeight: a
+    } = this.state, o = null != l ? l : n;
+    if (null == o) return;
     let {
-      width: o
+      width: d
     } = (0, p.Tj)({
-      width: a.width,
-      height: a.height,
-      maxWidth: i,
-      maxHeight: s
+      width: o.width,
+      height: o.height,
+      maxWidth: s,
+      maxHeight: a
     });
-    if (n === T.hBH.VIDEO || o >= 300) return o + 32;
-    if (n === T.hBH.RICH && void 0 !== l) return 520;
-    if (n === T.hBH.GIFV) {
-      var d, u, h, c;
+    if (!e && (r === T.hBH.VIDEO || d >= 300)) return d + 32;
+    if (r === T.hBH.RICH && void 0 !== t) return 520;
+    if (r === T.hBH.GIFV) {
+      var u, h, c, m;
       let {
         width: e
       } = (0, p.Tj)({
-        width: Math.max(null !== (d = null == r ? void 0 : r.width) && void 0 !== d ? d : 0, null !== (u = null == t ? void 0 : t.width) && void 0 !== u ? u : 0),
-        height: Math.max(null !== (h = null == r ? void 0 : r.height) && void 0 !== h ? h : 0, null !== (c = null == t ? void 0 : t.height) && void 0 !== c ? c : 0),
-        maxWidth: i,
-        maxHeight: s
+        width: Math.max(null !== (u = null == i ? void 0 : i.width) && void 0 !== u ? u : 0, null !== (h = null == n ? void 0 : n.width) && void 0 !== h ? h : 0),
+        height: Math.max(null !== (c = null == i ? void 0 : i.height) && void 0 !== c ? c : 0, null !== (m = null == n ? void 0 : n.height) && void 0 !== m ? m : 0),
+        maxWidth: s,
+        maxHeight: a
       });
       return e
     }
@@ -776,7 +776,7 @@ class H extends(n = i.PureComponent) {
       maxMediaHeight: s
     } = this.state;
     if (!this.usesJustifiedAutoStyle()) return;
-    let a = e ? void 0 : this.getMaxWidth();
+    let a = e ? void 0 : this.getMaxWidth(!1);
     if (void 0 === a && void 0 === t && r !== T.hBH.RICH) {
       let e = null != l ? l : n;
       if (void 0 !== e) {
@@ -853,7 +853,7 @@ class H extends(n = i.PureComponent) {
           obscureReason: t,
           className: n
         } = l.props,
-        i = l.getMaxWidth();
+        i = l.getMaxWidth(!0);
       return (0, r.jsx)("div", {
         "aria-hidden": e,
         className: a()(k.inlineMediaEmbed, n, {
@@ -895,7 +895,7 @@ class H extends(n = i.PureComponent) {
         "aria-hidden": e,
         style: {
           borderColor: l.getEmbedColor(e),
-          maxWidth: l.getMaxWidth()
+          maxWidth: l.getMaxWidth(!1)
         },
         children: (0, r.jsx)("div", {
           className: k.gridContainer,
