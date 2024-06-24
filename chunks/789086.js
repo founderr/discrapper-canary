@@ -25,7 +25,7 @@ function d() {
         loading: !1
       }
     }),
-    d = (0, n.e7)([o.Z], () => o.Z.getLastFeedFetchDate());
+    d = (0, n.e7)([o.Z], () => o.Z.getLastFeedFetchDate(s.YN.GLOBAL_FEED));
   return (0, a.jsxs)("div", {
     children: [r ? (0, a.jsx)(i.Text, {
       variant: "text-md/normal",

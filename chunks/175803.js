@@ -18,5 +18,6 @@ e.exports = {
   guildBreadcrumbIcon: "guildBreadcrumbIcon_a7d72e",
   loader: "loader_a7d72e",
   forumPostTitle: "forumPostTitle_a7d72e",
-  subtitleContainer: "subtitleContainer_a7d72e"
+  subtitleContainer: "subtitleContainer_a7d72e",
+  secureFramesIcon: "secureFramesIcon_a7d72e"
 }

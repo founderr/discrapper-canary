@@ -1,49 +1,58 @@
 n.d(t, {
   Z: function() {
-    return m
+    return p
   }
 });
 var l = n(735250);
 n(470079);
 var i = n(399606),
   s = n(481060),
-  a = n(158776),
-  r = n(699516),
-  o = n(594174),
-  c = n(51144),
-  u = n(984370),
-  d = n(689938),
-  h = n(175803);
+  a = n(210975),
+  r = n(158776),
+  o = n(699516),
+  c = n(594174),
+  u = n(51144),
+  d = n(984370),
+  h = n(689938),
+  m = n(175803);
 
-function m(e) {
+function p(e) {
   let t = e.channel.getRecipientId(),
     n = e.channel.isSystemDM(),
-    m = (0, i.e7)([o.default], () => o.default.getUser(t)),
-    p = (0, i.e7)([a.Z], () => a.Z.getStatus(t)),
-    E = (0, i.e7)([a.Z], () => a.Z.isMobileOnline(t)),
-    g = (0, i.e7)([r.Z], () => r.Z.getNickname(t)),
-    f = c.ZP.useUserTag(m);
+    p = (0, i.e7)([c.default], () => c.default.getUser(t)),
+    E = (0, i.e7)([r.Z], () => r.Z.getStatus(t)),
+    g = (0, i.e7)([r.Z], () => r.Z.isMobileOnline(t)),
+    f = (0, i.e7)([o.Z], () => o.Z.getNickname(t)),
+    C = u.ZP.useUserTag(p),
+    _ = (0, a.m$)(e.channel.id);
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(s.HiddenVisually, {
-      children: d.Z.Messages.DIRECT_MESSAGE
-    }), null != m && !n && (0, l.jsx)("div", {
+      children: h.Z.Messages.DIRECT_MESSAGE
+    }), null != p && !n && (0, l.jsx)("div", {
       children: (0, l.jsx)(s.Avatar, {
-        status: p,
-        isMobile: E,
-        className: h.avatar,
+        status: E,
+        isMobile: g,
+        className: m.avatar,
         size: s.AvatarSizes.SIZE_24,
-        "aria-label": c.ZP.getName(m),
-        src: m.getAvatarURL(void 0, 24)
+        "aria-label": u.ZP.getName(p),
+        src: p.getAvatarURL(void 0, 24)
       })
-    }), (0, l.jsx)(u.Z.Title, {
+    }), (0, l.jsx)(d.Z.Title, {
       level: e.level,
       onClick: e.handleClick,
       onContextMenu: e.handleContextMenu,
-      className: null != e.handleClick ? h.cursorPointer : null,
-      children: (0, l.jsx)(s.TooltipContainer, {
-        text: f,
-        position: "bottom",
-        children: null != g ? g : c.ZP.getName(m)
+      className: null != e.handleClick ? m.cursorPointer : null,
+      children: (0, l.jsxs)(l.Fragment, {
+        children: [(0, l.jsx)(s.TooltipContainer, {
+          text: C,
+          position: "bottom",
+          children: null != f ? f : u.ZP.getName(p)
+        }), _ && (0, l.jsx)(s.ShieldLockIcon, {
+          size: "xxs",
+          "aria-label": h.Z.Messages.E2EE_CALL_VERIFIED_A11Y,
+          color: s.tokens.colors.INTERACTIVE_NORMAL,
+          className: m.secureFramesIcon
+        })]
       })
     })]
   })

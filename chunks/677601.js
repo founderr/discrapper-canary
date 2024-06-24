@@ -372,7 +372,7 @@ class ek extends i.PureComponent {
               return (0, E.jW)(t, async () => {
                 let {
                   default: e
-                } = await Promise.all([n.e("99387"), n.e("79695"), n.e("32006"), n.e("22036"), n.e("56826"), n.e("80131")]).then(n.bind(n, 131404));
+                } = await Promise.all([n.e("99387"), n.e("79695"), n.e("32006"), n.e("22036"), n.e("56826")]).then(n.bind(n, 131404));
                 return t => (0, l.jsx)(e, {
                   ...t,
                   showChannelCallItems: !0,

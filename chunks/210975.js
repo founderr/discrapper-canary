@@ -1,28 +1,52 @@
-t.d(n, {
-  w: function() {
-    return a
+n.d(t, {
+  m$: function() {
+    return p
+  },
+  wV: function() {
+    return m
   }
 });
-var r = t(470079),
-  o = t(442837),
-  s = t(470956),
-  l = t(592125),
-  u = t(979651),
-  i = t(441894);
+var l = n(470079),
+  i = n(442837),
+  s = n(470956),
+  a = n(314897),
+  r = n(592125),
+  o = n(979651),
+  c = n(441894);
 
-function a(e, n) {
-  var t, a;
-  let c = function(e) {
-    let n = (0, o.e7)([u.Z], () => u.Z.getVoiceStatesForChannel(e)),
-      t = r.useMemo(() => Object.keys(n), [n]);
-    return (0, s.Yp)(e, t)
-  }(n);
-  return function(e) {
-    let n = (0, i.J)(e),
-      t = (0, o.e7)([l.Z], () => {
-        var n;
-        return (null === (n = l.Z.getChannel(e)) || void 0 === n ? void 0 : n.isGuildStageVoice()) === !0
-      });
-    return n && !t
-  }(n) && c.has(e) && (t = 0, a = 0, !1)
+function u(e) {
+  let t = (0, i.e7)([o.Z], () => o.Z.getVoiceStatesForChannel(e)),
+    n = l.useMemo(() => Object.keys(t), [t]);
+  return (0, s.Yp)(e, n)
+}
+
+function d(e) {
+  let t = (0, c.J)(e),
+    n = (0, i.e7)([r.Z], () => {
+      var t;
+      return (null === (t = r.Z.getChannel(e)) || void 0 === t ? void 0 : t.isGuildStageVoice()) === !0
+    });
+  return t && !n
+}
+
+function h(e, t) {
+  return !1
+}
+
+function m(e, t) {
+  var n, l;
+  let s = u(t),
+    r = d(t),
+    o = (0, i.e7)([a.default], () => a.default.getId());
+  return r && s.has(o) && null != e && s.has(e) && (n = 0, l = 0, !1)
+}
+
+function p(e) {
+  let t = u(e),
+    n = d(e),
+    s = (0, i.e7)([a.default], () => a.default.getId());
+  return l.useMemo(() => !!(n && t.has(s)) && Array.from(t).every(e => {
+    var t, n;
+    return t = 0, n = 0, e === s
+  }), [e, s, n, t])
 }

@@ -1,31 +1,32 @@
 "use strict";
-let i, r;
+let i;
 n(47120);
-var s, o, a, l, u = n(442837),
-  _ = n(570140);
-let c = new Map,
+var r, s, o, a, l = n(442837),
+  u = n(570140);
+let _ = new Map,
+  c = new Map,
   d = new Map,
   E = !1,
   I = !1;
 
 function T(e) {
-  e(c), c = new Map(c)
+  e(_), _ = new Map(_)
 }
-class h extends(s = u.ZP.Store) {
+class h extends(r = l.ZP.Store) {
   getFeeds() {
-    return c
+    return _
   }
   getFeed(e) {
-    return c.get(e)
+    return _.get(e)
   }
   getFeedState(e) {
+    return c.get(e)
+  }
+  getLastFeedFetchDate(e) {
     return d.get(e)
   }
-  getLastFeedFetchDate() {
-    return i
-  }
   getFilters() {
-    return r
+    return i
   }
   getFeedRequestId(e) {
     var t;
@@ -38,40 +39,40 @@ class h extends(s = u.ZP.Store) {
     return E
   }
 }
-l = "ContentInventoryStore", (a = "displayName") in(o = h) ? Object.defineProperty(o, a, {
-  value: l,
+a = "ContentInventoryStore", (o = "displayName") in(s = h) ? Object.defineProperty(s, o, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[a] = l, t.Z = new h(_.Z, {
+}) : s[o] = a, t.Z = new h(u.Z, {
   CONNECTION_OPEN: function() {
-    c = new Map, E = !1
+    _ = new Map, E = !1
   },
   CONTENT_INVENTORY_SET_FEED: function(e) {
     let {
       feedId: t,
       feed: n
     } = e;
-    T(e => e.set(t, n)), i = new Date
+    T(e => e.set(t, n)), d.set(t, new Date)
   },
   CONTENT_INVENTORY_SET_FEED_STATE: function(e) {
     let {
       feedId: t,
       state: n
     } = e;
-    d.set(t, n)
+    c.set(t, n)
   },
   CONTENT_INVENTORY_SET_FILTERS: function(e) {
     let {
       filters: t
     } = e;
-    r = t
+    i = t
   },
   CONTENT_INVENTORY_CLEAR_FEED: function(e) {
     let {
       feedId: t
     } = e;
-    if (!c.has(t)) return !1;
+    if (!_.has(t)) return !1;
     T(e => e.delete(t))
   },
   CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: function() {

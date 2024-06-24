@@ -5,9 +5,9 @@ t.r(n), t.d(n, {
 }), t(642549);
 var r = t(735250),
   o = t(470079),
-  s = t(442837),
-  l = t(481060),
-  u = t(377171),
+  u = t(442837),
+  s = t(481060),
+  l = t(377171),
   i = t(592125),
   a = t(594174),
   c = t(153124),
@@ -17,8 +17,8 @@ var r = t(735250),
   I = t(436055),
   _ = t(785792),
   C = t(190054),
-  S = t(760373),
-  h = t(689938),
+  h = t(760373),
+  S = t(689938),
   g = t(963779);
 
 function m(e) {
@@ -27,89 +27,89 @@ function m(e) {
     userId: t,
     channelId: m,
     onClose: Z
-  } = e, N = (0, c.Dt)(), R = (0, s.e7)([a.default], () => a.default.getUser(t)), T = (0, s.e7)([i.Z], () => {
+  } = e, N = (0, c.Dt)(), R = (0, u.e7)([a.default], () => a.default.getUser(t)), T = (0, u.e7)([i.Z], () => {
     var e;
     return null === (e = i.Z.getChannel(m)) || void 0 === e ? void 0 : e.getGuildId()
-  }), M = d.ZP.useName(T, null, R), D = btoa("12345".repeat(12)), O = (0, I.E)({
+  }), M = d.ZP.useName(T, null, R), D = btoa("12345".repeat(12)), A = (0, I.E)({
     codeBase64: btoa("12345".repeat(12)),
-    chunkSize: S.iQ,
-    desiredLength: S.KN
-  }), A = o.useCallback(() => {
+    chunkSize: h.iQ,
+    desiredLength: h.KN
+  }), O = o.useCallback(() => {
     (0, E.TQ)(t, D), Z()
   }, [Z, D, t]), x = o.useCallback(() => {
     (0, E.KF)(t, D), Z()
-  }, [Z, D, t]), v = (0, f.w)(t, m);
-  return (0, r.jsxs)(l.ModalRoot, {
+  }, [Z, D, t]), v = (0, f.wV)(t, m);
+  return (0, r.jsxs)(s.ModalRoot, {
     transitionState: n,
     "aria-labelledby": N,
     children: [(0, r.jsx)("div", {
       className: g.shieldIconContainer,
       children: (0, r.jsx)("div", {
         className: g.shieldIcon,
-        children: (0, r.jsx)(l.ShieldLockIcon, {
+        children: (0, r.jsx)(s.ShieldLockIcon, {
           size: "custom",
           width: 55,
           height: 55,
-          color: l.tokens.colors.HEADER_SECONDARY
+          color: s.tokens.colors.HEADER_SECONDARY
         })
       })
-    }), (0, r.jsxs)(l.ModalContent, {
+    }), (0, r.jsxs)(s.ModalContent, {
       className: g.content,
-      children: [(0, r.jsx)(l.Heading, {
+      children: [(0, r.jsx)(s.Heading, {
         className: g.title,
         variant: "heading-lg/bold",
         color: "header-primary",
-        children: h.Z.Messages.E2EE_VERIFICATION_CODE
-      }), (0, r.jsx)(l.Text, {
+        children: S.Z.Messages.E2EE_VERIFICATION_CODE
+      }), (0, r.jsx)(s.Text, {
         className: g.subtitle,
         variant: "text-md/normal",
         color: "header-secondary",
-        children: h.Z.Messages.E2EE_USER_VERIFICATION_SUBTITLE.format({
+        children: S.Z.Messages.E2EE_USER_VERIFICATION_SUBTITLE.format({
           username: M
         })
       }), (0, r.jsxs)("div", {
         className: g.verification,
         children: [(0, r.jsxs)("div", {
           className: g.header,
-          children: [(0, r.jsx)(l.Heading, {
+          children: [(0, r.jsx)(s.Heading, {
             variant: "text-sm/bold",
             color: "header-primary",
-            children: h.Z.Messages.E2EE_VOICE_PRIVACY_CODE
-          }), null != O && (0, r.jsx)(C.H, {
+            children: S.Z.Messages.E2EE_VOICE_PRIVACY_CODE
+          }), null != A && (0, r.jsx)(C.H, {
             className: g.copyIcon,
-            chunks: O,
-            color: l.tokens.colors.INTERACTIVE_NORMAL
-          }), (0, r.jsx)(l.TextBadge, {
-            text: h.Z.Messages.NEW,
-            color: u.Z.STATUS_DANGER
+            chunks: A,
+            color: s.tokens.colors.INTERACTIVE_NORMAL
+          }), (0, r.jsx)(s.TextBadge, {
+            text: S.Z.Messages.NEW,
+            color: l.Z.STATUS_DANGER
           })]
-        }), null != O && (0, r.jsx)(_.b, {
+        }), null != A && (0, r.jsx)(_.b, {
           className: g.code,
-          chunks: O,
-          columns: S.ak
+          chunks: A,
+          columns: h.ak
         })]
-      }), (0, r.jsx)(l.Text, {
+      }), (0, r.jsx)(s.Text, {
         className: g.details,
         variant: "text-sm/normal",
         color: "text-muted",
-        children: h.Z.Messages.E2EE_USER_VERIFICATION_FOOTER_TEXT.format({
-          helpArticle: S.l4
+        children: S.Z.Messages.E2EE_USER_VERIFICATION_FOOTER_TEXT.format({
+          helpArticle: h.l4
         })
-      }), (0, r.jsx)(l.Button, {
+      }), (0, r.jsx)(s.Button, {
         fullWidth: !0,
         className: g.verifiedButton,
-        color: v ? l.ButtonColors.RED : l.ButtonColors.BRAND,
-        size: l.ButtonSizes.MEDIUM,
-        look: l.ButtonLooks.FILLED,
-        onClick: v ? x : A,
-        children: v ? h.Z.Messages.E2EE_CLEAR_VERIFICATION : h.Z.Messages.E2EE_MARK_AS_VERIFIED
-      }), (0, r.jsx)(l.Button, {
+        color: v ? s.ButtonColors.RED : s.ButtonColors.BRAND,
+        size: s.ButtonSizes.MEDIUM,
+        look: s.ButtonLooks.FILLED,
+        onClick: v ? x : O,
+        children: v ? S.Z.Messages.E2EE_CLEAR_VERIFICATION : S.Z.Messages.E2EE_MARK_AS_VERIFIED
+      }), (0, r.jsx)(s.Button, {
         fullWidth: !0,
-        color: l.ButtonColors.PRIMARY,
-        size: l.ButtonSizes.MEDIUM,
-        look: l.ButtonLooks.FILLED,
+        color: s.ButtonColors.PRIMARY,
+        size: s.ButtonSizes.MEDIUM,
+        look: s.ButtonLooks.FILLED,
         onClick: Z,
-        children: h.Z.Messages.CANCEL
+        children: S.Z.Messages.CANCEL
       })]
     })]
   })

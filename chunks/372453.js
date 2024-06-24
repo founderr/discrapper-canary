@@ -15,6 +15,7 @@ e.exports = {
   overlayTitle: "overlayTitle_ba4b17",
   overlayTitleText: "overlayTitleText_ba4b17",
   titleIcon: "titleIcon_ba4b17",
+  secureFramesIcon: "secureFramesIcon_ba4b17",
   statusContainer: "statusContainer_ba4b17",
   status: "status_ba4b17",
   interactive: "interactive_ba4b17",

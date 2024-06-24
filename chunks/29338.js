@@ -117,7 +117,8 @@ function j() {
           fullWidth: !0,
           onClick: function() {
             u.Z.dispatch({
-              type: "CONTENT_INVENTORY_MANUAL_REFRESH"
+              type: "CONTENT_INVENTORY_MANUAL_REFRESH",
+              feedId: y.YN.GLOBAL_FEED
             })
           },
           submitting: c,
