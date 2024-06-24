@@ -66,8 +66,8 @@ function E(e, t) {
   let n = (0, d.M)(),
     [i, a] = l.useState(!1),
     o = (0, s.e7)([r.default], () => r.default.getId() === t),
-    h = (0, s.e7)([c.Z, u.Z], () => null != t && c.Z.getChannelId() === e && null != u.Z.isInChannel(e, t) && c.Z.isUserConnected(t)),
-    m = (0, s.e7)([c.Z, u.Z], () => null != t && c.Z.getChannelId() === e && null != u.Z.isInChannel(e, t) && !c.Z.isUserConnected(t));
+    h = (0, s.e7)([c.Z, u.Z], () => null != t && null != e && c.Z.getChannelId() === e && null != u.Z.isInChannel(e, t) && c.Z.isUserConnected(t)),
+    m = (0, s.e7)([c.Z, u.Z], () => null != t && null != e && c.Z.getChannelId() === e && null != u.Z.isInChannel(e, t) && !c.Z.isUserConnected(t));
   return l.useEffect(() => {
     h && a(!0)
   }, [h]), n && !o && i && m
