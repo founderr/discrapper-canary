@@ -2,7 +2,6 @@ e.exports = {
   container: "container_adcaac",
   inner: "inner_adcaac",
   channel: "channel_adcaac",
-  statusWithPopout: "statusWithPopout_adcaac",
   noiseCancellationPopout: "noiseCancellationPopout_adcaac",
   noiseCancellationTooltip: "noiseCancellationTooltip_adcaac",
   krispLogo: "krispLogo_adcaac",

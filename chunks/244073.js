@@ -14,9 +14,9 @@ var i = n(735250),
   d = n(846027),
   u = n(925549),
   h = n(287734),
-  p = n(324315),
-  f = n(933557),
-  E = n(873596),
+  p = n(933557),
+  f = n(873596),
+  E = n(917405),
   g = n(430824),
   m = n(131951),
   Z = n(699516),
@@ -47,7 +47,7 @@ class M extends s.PureComponent {
   renderChannelLink(e) {
     let {
       guild: t
-    } = this.props, n = (0, f.F6)(e, I.default, Z.Z), s = null != t ? "".concat(n, " / ").concat(t.name) : n, l = null != t ? t.id : T.ME;
+    } = this.props, n = (0, p.F6)(e, I.default, Z.Z), s = null != t ? "".concat(n, " / ").concat(t.name) : n, l = null != t ? t.id : T.ME;
     return (0, i.jsx)(a.rU, {
       to: T.Z5c.CHANNEL(l),
       onClick: t => {
@@ -71,7 +71,7 @@ class M extends s.PureComponent {
       hasVideo: d,
       connectionState: u,
       deaf: h,
-      mute: f
+      mute: p
     } = this.props;
     return null == l ? null : (0, i.jsx)(v.ZP.Bar, {
       className: o()(e, A.controls, {
@@ -87,9 +87,8 @@ class M extends s.PureComponent {
             position: "top",
             children: e => (0, i.jsx)(c.Clickable, {
               ...e,
-              children: (0, i.jsx)(p.Z, {
+              children: (0, i.jsx)(E.Z, {
                 channelId: l.id,
-                statusTextClassName: y.statusWithPopout,
                 quality: a,
                 lastPing: r,
                 hasVideo: d,
@@ -101,9 +100,9 @@ class M extends s.PureComponent {
         }), (0, i.jsxs)(C.Z, {
           grow: 0,
           children: [(0, i.jsx)(x.Z, {
-            tooltipText: f ? O.Z.Messages.UNMUTE : O.Z.Messages.MUTE,
-            icon: f ? c.MicrophoneSlashIcon : c.MicrophoneIcon,
-            iconForeground: f ? A.strikethrough : null,
+            tooltipText: p ? O.Z.Messages.UNMUTE : O.Z.Messages.MUTE,
+            icon: p ? c.MicrophoneSlashIcon : c.MicrophoneIcon,
+            iconForeground: p ? A.strikethrough : null,
             onClick: this.handleToggleSelfMute
           }), (0, i.jsx)(x.Z, {
             tooltipText: h ? O.Z.Messages.UNDEAFEN : O.Z.Messages.DEAFEN,
@@ -138,7 +137,7 @@ class M extends s.PureComponent {
       let {
         lobbyId: t
       } = this.props;
-      return (0, i.jsx)(E.Z, {
+      return (0, i.jsx)(f.Z, {
         channelId: e,
         lobbyId: t,
         isOverlay: !0
