@@ -108,7 +108,7 @@ let P = i.memo(function() {
       tooltipDirection: S = "right"
     } = e, {
       isSubscriptionGated: B
-    } = (0, m.Z)(n.id), D = (0, j.Mf)(s.id, n.id, i.id), w = (0, j.t4)(s.id, n.id, i.id), H = (0, j.EH)(s.id, i.id), y = (0, r.e7)([Z.Z], () => Z.Z.getActiveThreadCount(s.id, n.id)), U = (0, r.e7)([g.Z], () => g.Z.shouldIndicateNewChannel(s.id, n.id)), k = e => {
+    } = (0, m.Z)(n.id), D = (0, j.Mf)(s.id, n.id, i.id), w = (0, j.t4)(s.id, n.id, i.id), y = (0, j.EH)(s.id, i.id), H = (0, r.e7)([Z.Z], () => Z.Z.getActiveThreadCount(s.id, n.id)), U = (0, r.e7)([g.Z], () => g.Z.shouldIndicateNewChannel(s.id, n.id)), k = e => {
       if (!w) return e.stopPropagation(), v(s.id, n.id, i.id), !0
     }, W = e => {
       n.isGuildVocal() ? (0, u.jW)(e, async () => {
@@ -153,7 +153,7 @@ let P = i.memo(function() {
       }, "topic")), [l.map((e, n) => [e, (0, t.jsx)(b, {
         index: n
       }, "subtitle-separator-".concat(n))])].flat(2).slice(0, -1)
-    }(n, y), F = e => (e.stopPropagation(), L.has(n.type) || e.shiftKey) ? ((0, E.XU)(s.id, n.id), !0) : n.isGuildStageVoice() || n.isGuildVoice() ? ((0, f.Cq)(n), !0) : (p.Z.openChannelAsSidebar({
+    }(n, H), F = e => (e.stopPropagation(), L.has(n.type) || e.shiftKey) ? ((0, E.XU)(s.id, n.id), !0) : n.isGuildStageVoice() || n.isGuildVoice() ? ((0, f.Cq)(n), !0) : (p.Z.openChannelAsSidebar({
       guildId: n.guild_id,
       channelId: n.id,
       baseChannelId: T.oC.CHANNEL_BROWSER
@@ -163,7 +163,7 @@ let P = i.memo(function() {
       V = (0, c.useToken)(w ? o.Z.colors.TEXT_MUTED : o.Z.colors.TEXT_NORMAL).hex();
     return (0, t.jsxs)(t.Fragment, {
       children: [(0, t.jsx)(c.Tooltip, {
-        text: H,
+        text: y,
         delay: 500,
         position: S,
         children: e => (0, t.jsxs)(c.Clickable, {
