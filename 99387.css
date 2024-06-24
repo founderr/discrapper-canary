@@ -103393,7 +103393,8 @@ div:has(>div>.container_d99f08) {
 }
 
 .emptyFriendsWhoPlay_e881fc {
-    text-align: center
+    text-align: center;
+    padding: var(--custom-spacing)0 var(--custom-spacing)
 }
 
 .imageScroller_e881fc {

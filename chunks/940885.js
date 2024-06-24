@@ -34,7 +34,7 @@ function C(e) {
   } = (0, o.Z)(t.id, !t.bot), {
     mutualGuilds: N,
     isFetching: Z
-  } = (0, c.Z)(t.id, !t.bot), S = !t.bot && null != x && x.length > 0, v = !t.bot && null != N && N.length > 0;
+  } = (0, c.Z)(t.id, !0), S = !t.bot && null != x && x.length > 0, v = null != N && N.length > 0;
   return S || v ? (0, l.jsxs)(d.Z.Overlay, {
     className: f.overlay,
     children: [v && (0, l.jsx)(E.Z, {
