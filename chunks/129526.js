@@ -17,7 +17,7 @@ function d(e, n) {
         entityType: n,
         channelId: l
       } = e, s = (0, t.xV)(e);
-      return null == n ? "An event type must be specified." : (null == s || "" === s.trim()) && null == l ? "Either a location or channel must be specified." : void 0
+      return null == n || n === r.WX.NONE ? "An event type must be specified." : (null == s || "" === s.trim()) && null == l ? "Either a location or channel must be specified." : void 0
     }(e),
     schedule: function(e, n) {
       let l = (0, i.v1)(e),
