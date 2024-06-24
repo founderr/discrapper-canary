@@ -27,10 +27,11 @@ var s, i, l = n(735250),
   L = n(46140),
   Z = n(981631),
   P = n(689938),
-  D = n(504321);
-let j = (e, t, n) => (0, x.uq)(e) && !n && "lg" === t ? "text-lg/medium" : "lg" === t ? "text-md/medium" : "sm" === t ? "text-sm/medium" : "text-xs/medium";
+  D = n(504321),
+  j = n(789002);
+let U = (e, t, n) => (0, x.uq)(e) && !n && "lg" === t ? "text-lg/medium" : "lg" === t ? "text-md/medium" : "sm" === t ? "text-sm/medium" : "text-xs/medium";
 
-function U(e) {
+function y(e) {
   let {
     containerSize: t,
     onClick: n,
@@ -56,7 +57,7 @@ function U(e) {
   })
 }(i = s || (s = {}))[i.UNACCEPTED = 0] = "UNACCEPTED", i[i.ACCEPTED = 1] = "ACCEPTED", i[i.IN_PROGRESS = 2] = "IN_PROGRESS", i[i.COMPLETED = 3] = "COMPLETED", i[i.CLAIMED = 4] = "CLAIMED";
 
-function y(e) {
+function b(e) {
   let {
     quest: t,
     useReducedMotion: n
@@ -115,7 +116,7 @@ function y(e) {
   }, E)
 }
 
-function b(e) {
+function B(e) {
   let {
     isQuestComplete: t,
     useReducedMotion: n,
@@ -136,12 +137,10 @@ function b(e) {
     onClick: o,
     children: (0, l.jsxs)("div", {
       className: D.ctaButtonInner,
-      children: [E && (0, l.jsx)(u.GameControllerIcon, {
-        size: "custom",
-        width: 20,
-        height: 20,
-        className: D.inHouseIcon,
-        color: "white"
+      children: [E && (0, l.jsx)("img", {
+        src: j,
+        alt: "",
+        className: D.inHouseIcon
       }), c]
     })
   })
@@ -153,7 +152,7 @@ t.Z = e => {
     size: s,
     isFocused: i,
     isQuestExpired: r,
-    isExpanded: B,
+    isExpanded: j,
     isAnimating: k,
     contentPosition: G
   } = e, F = function(e) {
@@ -170,7 +169,7 @@ t.Z = e => {
     if (r) return 2;
     else if (i) return 1;
     else return 0
-  }(t), V = F >= 1, w = F >= 3, H = F >= 4, Y = (0, A.Xv)(t.config), K = (0, A.zK)(t, L.S7.IN_HOUSE_CONSOLE_QUEST), W = (0, A.$J)(t), z = (0, x.uq)(n), Q = n === S.jn.QUESTS_EMBED, X = B || k, {
+  }(t), V = F >= 1, w = F >= 3, H = F >= 4, Y = (0, A.Xv)(t.config), K = (0, A.zK)(t, L.S7.IN_HOUSE_CONSOLE_QUEST), W = (0, A.$J)(t), z = (0, x.uq)(n), Q = n === S.jn.QUESTS_EMBED, X = j || k, {
     xboxAndPlaystationAccounts: q
   } = (0, h.z6)(), J = (0, h.t5)(t, L.dr.QUESTS_CARD), $ = V && !H && z, ee = q.length > 0, et = (0, A.Bz)(t), en = V && W && !ee, es = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), ei = function(e) {
     let {
@@ -264,7 +263,7 @@ t.Z = e => {
     }), (0, l.jsxs)("div", {
       className: o()(D.gridText, D.taskDetails),
       children: [(0, l.jsx)(u.Text, {
-        variant: j(n, s, V),
+        variant: U(n, s, V),
         className: D.taskInstructions,
         children: r ? P.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_HEADING.format({
           questName: t.config.messages.questName
@@ -357,7 +356,7 @@ t.Z = e => {
       })]
     }), (0, l.jsxs)("div", {
       className: o()(D.ctaButtonContainer, D.gridCtaButtons),
-      children: [!z && (0, l.jsx)(U, {
+      children: [!z && (0, l.jsx)(y, {
         containerSize: s,
         onClick: () => {
           d.Z.open(Z.oAB.INVENTORY), (0, N._3)({
@@ -368,14 +367,14 @@ t.Z = e => {
           })
         },
         children: P.Z.Messages.QUESTS_LEARN_MORE_V2
-      }), r && !w ? null : W && z && V && ee && !et && !w ? (0, l.jsx)(y, {
+      }), r && !w ? null : W && z && V && ee && !et && !w ? (0, l.jsx)(b, {
         quest: t,
         useReducedMotion: es
       }) : (0, l.jsx)(u.Tooltip, {
         text: el,
         tooltipContentClassName: D.ctaTooltipText,
         shouldShow: !w || w && W && z,
-        children: e => (0, l.jsx)(b, {
+        children: e => (0, l.jsx)(B, {
           ...e,
           isQuestComplete: w,
           useReducedMotion: es,

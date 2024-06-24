@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return U
+    return b
   },
   openCollectibleRewardModal: function() {
-    return b
+    return G
   }
 }), n(773603), n(47120);
 var i = n(735250),
@@ -33,15 +33,16 @@ var i = n(735250),
   C = n(46140),
   v = n(675654),
   L = n(689938),
-  D = n(659325);
+  D = n(659325),
+  M = n(789002);
 
-function M() {
+function P() {
   let e = f.Z.getAllPending(),
     t = (0, h.ED)(e);
   return (0, u.Mn)(t).finally(u.si)
 }
 
-function P(e) {
+function y(e) {
   var t;
   let {
     transitionState: n,
@@ -51,9 +52,9 @@ function P(e) {
     reward: d,
     decoration: E,
     onUseNow: T
-  } = e, h = r.useRef(null), [S, f] = r.useState(null), A = r.useRef(new s.qA), p = (0, a.e7)([_.Z], () => _.Z.useReducedMotion), C = (0, a.e7)([N.default], () => N.default.getCurrentUser()), L = (0, R.j8)(u), M = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, [P, U] = r.useState(M ? "claimed" : "loading");
+  } = e, h = r.useRef(null), [S, f] = r.useState(null), A = r.useRef(new s.qA), p = (0, a.e7)([_.Z], () => _.Z.useReducedMotion), C = (0, a.e7)([N.default], () => N.default.getCurrentUser()), L = (0, R.j8)(u), M = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, [P, y] = r.useState(M ? "claimed" : "loading");
   r.useEffect(() => {
-    !M && (0, m.QB)(u.id, O.y$.CROSS_PLATFORM, c).then(() => U("claimed")).catch(() => U("error"))
+    !M && (0, m.QB)(u.id, O.y$.CROSS_PLATFORM, c).then(() => y("claimed")).catch(() => y("error"))
   }, [u, c, M]);
   let b = null == C || null == E || "loading" === P;
   return (0, i.jsxs)(i.Fragment, {
@@ -76,7 +77,7 @@ function P(e) {
           })
         }) : "error" === P ? (0, i.jsx)(g.Z, {
           onClose: o
-        }) : (0, i.jsx)(y, {
+        }) : (0, i.jsx)(U, {
           quest: u,
           user: C,
           primaryColor: u.config.colors.primary,
@@ -87,7 +88,7 @@ function P(e) {
           isSaving: "applying" === P,
           onClose: o,
           onConfirm: () => {
-            U("applying"), T().finally(o)
+            y("applying"), T().finally(o)
           }
         })
       })
@@ -100,7 +101,7 @@ function P(e) {
   })
 }
 
-function y(e) {
+function U(e) {
   let {
     quest: t,
     user: n,
@@ -169,12 +170,10 @@ function y(e) {
           children: L.Z.Messages.COLLECTIBLES_USE_NOW
         }), I && (0, i.jsxs)("div", {
           className: D.additionalRedemptionInstructions,
-          children: [(0, i.jsx)(l.GameControllerIcon, {
-            size: "custom",
-            width: 28,
-            height: 28,
-            className: D.sponsorLogo,
-            color: "white"
+          children: [(0, i.jsx)("img", {
+            src: M,
+            alt: "",
+            className: D.sponsorLogo
           }), (0, i.jsx)(l.Text, {
             variant: "text-xs/normal",
             className: D.sponsoredBy,
@@ -194,7 +193,7 @@ function y(e) {
   })
 }
 
-function U(e) {
+function b(e) {
   var t, n;
   let {
     quest: s,
@@ -210,11 +209,11 @@ function U(e) {
       let e = t.items.find(e => e.type === o.Z.AVATAR_DECORATION);
       return null == e ? null : e
     }, [t, n]);
-    return [i, () => null == i ? Promise.reject() : ((0, u.cV)(i), M())]
+    return [i, () => null == i ? Promise.reject() : ((0, u.cV)(i), P())]
   }(null !== (n = null == d ? void 0 : d.skuId) && void 0 !== n ? n : null);
   if (null == d) return null;
   let h = (0, R.zK)(s, C.S7.IN_HOUSE_CONSOLE_QUEST);
-  return (null === (t = s.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null || h ? (0, i.jsx)(P, {
+  return (null === (t = s.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null || h ? (0, i.jsx)(y, {
     onClose: l,
     transitionState: _,
     quest: s,
@@ -224,14 +223,14 @@ function U(e) {
     onUseNow: T
   }) : (0, i.jsx)(c.default, {
     transitionState: _,
-    onCloseModal: M,
+    onCloseModal: P,
     onClose: l,
     analyticsLocations: [],
     initialSelectedDecoration: I
   })
 }
 
-function b(e, t) {
+function G(e, t) {
   (0, l.openModalLazy)(async () => {
     let {
       default: r
