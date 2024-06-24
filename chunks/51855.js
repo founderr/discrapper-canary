@@ -1,14 +1,14 @@
 "use strict";
-t.d(s, {
+s.d(t, {
   Q: function() {
     return o
   }
 });
-var n = t(470079),
-  a = t(100527),
-  r = t(818083),
-  i = t(329067);
-let l = (0, r.B)({
+var n = s(470079),
+  r = s(100527),
+  a = s(818083),
+  i = s(329067);
+let l = (0, a.B)({
     kind: "user",
     id: "2024-04_lightning_checkout",
     label: "Lightning Checkout Experiment",
@@ -25,16 +25,16 @@ let l = (0, r.B)({
   }),
   o = () => {
     let e = l.useExperiment({
-        location: a.Z.COLLECTIBLES_SHOP
+        location: r.Z.COLLECTIBLES_SHOP
       }, {
         autoTrackExposure: !1
       }),
       {
-        userIsEligible: s
+        userIsEligible: t
       } = (0, i.N)();
     return n.useEffect(() => {
-      s && l.trackExposure({
-        location: a.Z.COLLECTIBLES_SHOP
+      t && l.trackExposure({
+        location: r.Z.COLLECTIBLES_SHOP
       })
-    }, [s]), e.enabled && s
+    }, [t]), e.enabled && t
   }

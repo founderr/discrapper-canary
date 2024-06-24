@@ -3,16 +3,16 @@ t.d(s, {
     return g
   },
   e0: function() {
-    return O
+    return f
   },
   i3: function() {
-    return P
+    return O
   },
   l_: function() {
     return m
   },
   ph: function() {
-    return f
+    return P
   }
 });
 var n = t(442837),
@@ -25,14 +25,14 @@ var n = t(442837),
   c = t(528865),
   E = t(650032),
   u = t(781922),
-  d = t(885462),
-  R = t(474936),
+  R = t(885462),
+  d = t(474936),
   I = t(921944);
 let T = "getWhatsNewBadgeCount",
   A = "useShouldShowWhatsNewBadge",
   M = () => {
     let e = (0, n.e7)([i.default], () => i.default.getCurrentUser()),
-      s = l.ZP.isPremiumExactly(e, R.p9.TIER_2),
+      s = l.ZP.isPremiumExactly(e, d.p9.TIER_2),
       {
         enabled: t
       } = E._.useExperiment({
@@ -59,7 +59,7 @@ let T = "getWhatsNewBadgeCount",
   S = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
       s = i.default.getCurrentUser(),
-      t = l.ZP.isPremiumExactly(s, R.p9.TIER_2),
+      t = l.ZP.isPremiumExactly(s, d.p9.TIER_2),
       {
         enabled: n
       } = E._.getCurrentConfig({
@@ -106,7 +106,7 @@ let T = "getWhatsNewBadgeCount",
   m = () => {
     let {
       canFlipCard: e
-    } = d.e.useExperiment({
+    } = R.e.useExperiment({
       location: T
     }, {
       autoTrackExposure: !1
@@ -116,7 +116,7 @@ let T = "getWhatsNewBadgeCount",
   C = () => {
     let {
       canFlipCard: e
-    } = d.e.getCurrentConfig({
+    } = R.e.getCurrentConfig({
       location: T
     }, {
       autoTrackExposure: !1
@@ -126,7 +126,7 @@ let T = "getWhatsNewBadgeCount",
   g = () => {
     let e = N(),
       s = m();
-    return s ? (d.e.trackExposure({
+    return s ? (R.e.trackExposure({
       location: A
     }), c.W.trackExposure({
       location: A
@@ -134,7 +134,7 @@ let T = "getWhatsNewBadgeCount",
       location: A
     }), e || s
   },
-  f = () => {
+  P = () => {
     let e = N(),
       s = m();
     e && (0, r.EW)(a.z.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE, {
@@ -143,12 +143,12 @@ let T = "getWhatsNewBadgeCount",
       dismissAction: I.L.TAKE_ACTION
     })
   },
-  P = () => {
+  O = () => {
     let e = p(),
       s = C();
     return e || s
   },
-  O = () => {
+  f = () => {
     let {
       canFlipCard: e
     } = u.X.getCurrentConfig({

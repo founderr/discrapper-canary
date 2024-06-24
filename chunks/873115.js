@@ -1,15 +1,15 @@
 t.d(a, {
   Dz: function() {
-    return E
+    return d
   },
   Nj: function() {
-    return N
-  },
-  RS: function() {
     return m
   },
-  by: function() {
+  RS: function() {
     return p
+  },
+  by: function() {
+    return _
   },
   eI: function() {
     return u
@@ -24,7 +24,7 @@ t.d(a, {
     return T
   },
   ib: function() {
-    return d
+    return E
   },
   og: function() {
     return C
@@ -46,14 +46,14 @@ function u() {
       s.Z.dispatch({
         type: "BRAINTREE_CREATE_CLIENT_SUCCESS",
         client: e
-      }), E(), d()
+      }), d(), E()
     }).catch(() => s.Z.dispatch({
       type: "BRAINTREE_CREATE_CLIENT_FAIL"
     }))
   })
 }
 
-function d() {
+function E() {
   let e = l.Z.getClient();
   if (null == e) throw Error("Braintree client must be initialized before creating Venmo client.");
   (0, r.S)().then(a => {
@@ -74,7 +74,7 @@ function d() {
   })
 }
 
-function E() {
+function d() {
   let e = l.Z.getClient();
   if (null == e) throw Error("braintree client must be initialized before calling this");
   (0, r.S)().then(a => {
@@ -157,7 +157,7 @@ function A() {
   })
 }
 
-function p() {
+function _() {
   let e = l.Z.getVenmoClient();
   if (null == e) throw Error("Braintree Venmo client must be initialized before calling tokenize.");
   s.Z.dispatch({
@@ -186,7 +186,7 @@ function p() {
   })
 }
 
-function _(e, a) {
+function N(e, a) {
   if (null == e) return Promise.resolve();
   s.Z.dispatch(a);
   try {
@@ -196,20 +196,20 @@ function _(e, a) {
   }
 }
 
-function N() {
-  return _(l.Z.getPayPalClient(), {
+function m() {
+  return N(l.Z.getPayPalClient(), {
     type: "BRAINTREE_TEARDOWN_PAYPAL_CLIENT"
   })
 }
 
-function m() {
-  return _(l.Z.getVenmoClient(), {
+function p() {
+  return N(l.Z.getVenmoClient(), {
     type: "BRAINTREE_TEARDOWN_VENMO_CLIENT"
   })
 }
 
 function h() {
-  return Promise.all([N(), m()])
+  return Promise.all([m(), p()])
 }
 
 function T() {
@@ -220,5 +220,5 @@ function T() {
 }
 
 function C() {
-  p()
+  _()
 }

@@ -3,7 +3,7 @@ t.d(a, {
     return u
   },
   b: function() {
-    return d
+    return E
   }
 });
 var n = t(735250);
@@ -26,7 +26,7 @@ let u = e => {
   })
 };
 
-function d(e) {
+function E(e) {
   let {
     steps: a,
     currentStep: t,
@@ -34,10 +34,10 @@ function d(e) {
     className: r
   } = e, {
     steps: c,
-    step: d,
-    paymentError: E
+    step: E,
+    paymentError: d
   } = (0, o.usePaymentContext)();
-  return a = null != a ? a : c, null == t && null != d && (t = d), l()(t, "step should be set"), l()(a, "step should be set"), s = null != s ? s : E, (0, n.jsx)(i.Z, {
+  return a = null != a ? a : c, null == t && null != E && (t = E), l()(t, "step should be set"), l()(a, "step should be set"), s = null != s ? s : d, (0, n.jsx)(i.Z, {
     steps: a,
     currentStep: t,
     paymentError: s,

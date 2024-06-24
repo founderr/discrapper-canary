@@ -18,7 +18,7 @@ let u = e => {
     stripePaymentMethod: s
   } = e, {
     card: u
-  } = null != s ? s : {}, d = null != u ? o.ZP.getType(u.brand) : o.ZP.Types.UNKNOWN;
+  } = null != s ? s : {}, E = null != u ? o.ZP.getType(u.brand) : o.ZP.Types.UNKNOWN;
   return (0, n.jsx)(r.FormSection, {
     className: a,
     title: i.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_TITLE,
@@ -28,7 +28,7 @@ let u = e => {
         className: l()(c.cardIcon, {
           [c.submitting]: t
         }),
-        type: d
+        type: E
       }), (0, n.jsx)(r.TextInput, {
         value: t && null != u ? i.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_CREATING.format(u) : void 0,
         editable: !1,

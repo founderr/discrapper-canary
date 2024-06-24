@@ -9,8 +9,8 @@ var a = t(120356),
   c = t(639119),
   E = t(318747),
   u = t(409100),
-  d = t(474936),
-  R = t(981631),
+  R = t(474936),
+  d = t(981631),
   I = t(528973);
 s.Z = function(e) {
   var s, t;
@@ -18,7 +18,7 @@ s.Z = function(e) {
     isVisible: a,
     isFullscreen: T,
     subscriptionTier: A
-  } = e, M = null === (s = (0, c.N)()) || void 0 === s ? void 0 : s.subscription_trial, S = (0, _.Ng)(), N = (0, _.Wp)(S, d.Si.TIER_2) ? d.Si.TIER_2 : void 0, p = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), m = (0, i.useSpring)({
+  } = e, M = null === (s = (0, c.N)()) || void 0 === s ? void 0 : s.subscription_trial, S = (0, _.Ng)(), N = (0, _.Wp)(S, R.Si.TIER_2) ? R.Si.TIER_2 : void 0, p = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), m = (0, i.useSpring)({
     transform: a ? "translateY(-100%)" : "translateY(0%)",
     opacity: a ? 1 : 0,
     config: {
@@ -27,7 +27,7 @@ s.Z = function(e) {
     },
     immediate: p
   }), C = {
-    section: R.jXE.MARKETING_FLOATING_CTA
+    section: d.jXE.MARKETING_FLOATING_CTA
   };
   return (0, n.jsx)(i.animated.div, {
     className: r()(I.wrapper, {

@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return p
+    return D
   }
 });
 var n = t(735250),
@@ -27,7 +27,7 @@ var n = t(735250),
   R = t(981631),
   M = t(689938),
   x = t(265891);
-class D extends i.PureComponent {
+class p extends i.PureComponent {
   componentDidMount() {
     c.Z.wait(() => {
       E.tZ(), E.jg()
@@ -87,7 +87,7 @@ class D extends i.PureComponent {
   }
 }
 
-function p() {
+function D() {
   let e = (0, r.cj)([h.default, C.Z, O.Z, A.default, N.Z, m.ZP], () => {
     let e = m.ZP.getPremiumTypeSubscription(),
       s = A.default.getCurrentUser();
@@ -104,7 +104,7 @@ function p() {
       isUpdatingPaymentSource: C.Z.isUpdatingPaymentSource
     }
   });
-  return (0, n.jsx)(D, {
+  return (0, n.jsx)(p, {
     ...e
   })
 }

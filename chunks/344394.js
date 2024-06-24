@@ -1,5 +1,5 @@
 var a = t(319301);
-let i = {
+let n = {
   figma: {
     category: "chat"
   }
@@ -9,13 +9,13 @@ r.Z = (0, a.a)({
     dark: "primary.430",
     light: "primary.400",
     midnight: "primary.400",
-    meta: i
+    meta: n
   },
   "channeltextarea-background": {
     dark: "primary.560",
     light: "primary.160",
     midnight: "primary.800",
-    meta: i
+    meta: n
   },
   "text-message-preview-low-sat": {
     dark: "primary.360",

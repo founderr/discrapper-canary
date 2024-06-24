@@ -8,8 +8,8 @@ t(470079);
 var r = t(249849),
   s = t(907561),
   i = t(689938),
-  o = t(136050);
-let l = ["#7185f6", "#7799f3", "#7eb2eb", "#85d5e0", "#89e6dd", "#8cefda", "#68eacb"],
+  l = t(136050);
+let o = ["#7185f6", "#7799f3", "#7eb2eb", "#85d5e0", "#89e6dd", "#8cefda", "#68eacb"],
   c = ["#ffffff", "#f0f0f0"],
   d = [.15, .23, .32, .45, .57, .62, .7],
   u = [{
@@ -54,7 +54,7 @@ function C(e) {
     primaryColorsTransformed: E,
     secondaryColorsTransformed: T
   } = (0, r.s)({
-    primaryBaseColors: l,
+    primaryBaseColors: o,
     primaryTintColor: C,
     primaryTintLuminances: d,
     primaryLuminanceWeights: u,
@@ -93,10 +93,10 @@ function C(e) {
         children: _
       })]
     }), (0, a.jsx)("use", {
-      href: "".concat(o, "#wrapper-layer"),
+      href: "".concat(l, "#wrapper-layer"),
       id: I
     }), (0, a.jsx)("use", {
-      href: "".concat(o, "#foam"),
+      href: "".concat(l, "#foam"),
       style: {
         fill: "url(#foam-gradient)"
       }

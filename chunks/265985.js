@@ -1,9 +1,9 @@
 t.d(n, {
   h: function() {
-    return R
+    return h
   },
   x: function() {
-    return h
+    return R
   }
 });
 var i = t(735250);
@@ -21,17 +21,17 @@ var l = t(120356),
   E = t(584825),
   C = t(570533),
   m = t(629262),
-  N = t(575460),
-  S = t(293810),
+  S = t(575460),
+  N = t(293810),
   T = t(689938),
   L = t(538568);
-let R = e => {
+let h = e => {
     let {
       onClose: n,
       listing: t,
       step: l,
       guildId: r
-    } = e, o = (0, E.YB)(r), d = (0, u.Z)(S.Xy), I = (() => {
+    } = e, o = (0, E.YB)(r), d = (0, u.Z)(N.Xy), I = (() => {
       var e;
       if (d) return null;
       let n = (null == o ? void 0 : null === (e = o.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null ? (0, _._W)(o.cover_image_asset.application_id, o.cover_image_asset, 440) : void 0;
@@ -70,7 +70,7 @@ let R = e => {
       })]
     })
   },
-  h = e => {
+  R = e => {
     let {
       onClose: n,
       listing: t,
@@ -100,7 +100,7 @@ let R = e => {
           children: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_CHANNEL_PREVIEW
         }), (0, i.jsx)("div", {
           className: L.confirmationBenefits,
-          children: _.map(e => (0, i.jsx)(N.Z, {
+          children: _.map(e => (0, i.jsx)(S.Z, {
             benefit: e,
             guildId: l,
             onClick: () => n(!0)

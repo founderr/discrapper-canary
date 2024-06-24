@@ -6,19 +6,19 @@ t.d(e, {
     return o
   }
 });
-var i = t(442837),
-  l = t(430824),
-  a = t(938475),
-  u = t(981631);
+var l = t(442837),
+  i = t(430824),
+  u = t(938475),
+  a = t(981631);
 
 function r(n) {
-  return (0, i.cj)([a.ZP, l.Z], () => {
-    let e = a.ZP.countVoiceStatesForChannel(n.id),
-      t = l.Z.getGuild(n.getGuildId());
+  return (0, l.cj)([u.ZP, i.Z], () => {
+    let e = u.ZP.countVoiceStatesForChannel(n.id),
+      t = i.Z.getGuild(n.getGuildId());
     return null == t ? {
       reachedLimit: !1,
       limit: -1
-    } : n.type === u.d4z.GUILD_STAGE_VOICE ? {
+    } : n.type === a.d4z.GUILD_STAGE_VOICE ? {
       reachedLimit: e > t.maxStageVideoChannelUsers,
       limit: t.maxStageVideoChannelUsers
     } : {
@@ -29,12 +29,12 @@ function r(n) {
 }
 
 function o(n) {
-  let e = a.ZP.countVoiceStatesForChannel(n.id),
-    t = l.Z.getGuild(n.getGuildId());
+  let e = u.ZP.countVoiceStatesForChannel(n.id),
+    t = i.Z.getGuild(n.getGuildId());
   return null == t ? {
     reachedLimit: !1,
     limit: -1
-  } : n.type === u.d4z.GUILD_STAGE_VOICE ? {
+  } : n.type === a.d4z.GUILD_STAGE_VOICE ? {
     reachedLimit: e > t.maxStageVideoChannelUsers,
     limit: t.maxStageVideoChannelUsers
   } : {

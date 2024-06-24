@@ -21,7 +21,7 @@ var r = n(470079),
   s = n(273504),
   l = n(981631);
 let o = {},
-  T = e => {
+  I = e => {
     let t = {
       [s.fX.KEYWORD]: [],
       [s.fX.ML_SPAM]: [],
@@ -38,7 +38,7 @@ let o = {},
       null === (n = t[r]) || void 0 === n || n.push(e)
     }), t
   },
-  I = (0, a.Z)((e, t) => ({
+  T = (0, a.Z)((e, t) => ({
     rules: {},
     fetching: !1,
     error: null,
@@ -50,7 +50,7 @@ let o = {},
         triggerType: _
       } = n, {
         rules: s
-      } = t(), l = null !== (r = s[i]) && void 0 !== r ? r : {}, o = null !== (a = l[_]) && void 0 !== a ? a : [], T = o.some(e => e.id === E), I = o.filter(e => (!(0, u.U)(e.id) || e.triggerType !== _) && !0), O = T ? I.map(e => e.id === E ? n : e) : [...I, n];
+      } = t(), l = null !== (r = s[i]) && void 0 !== r ? r : {}, o = null !== (a = l[_]) && void 0 !== a ? a : [], I = o.some(e => e.id === E), T = o.filter(e => (!(0, u.U)(e.id) || e.triggerType !== _) && !0), O = I ? T.map(e => e.id === E ? n : e) : [...T, n];
       e({
         rules: {
           ...s,
@@ -89,7 +89,7 @@ let o = {},
         o[n] = Date.now();
         try {
           let r = await (0, _.$Y)(n),
-            a = T(r),
+            a = I(r),
             i = t().rules;
           e({
             rules: {
@@ -108,11 +108,11 @@ let o = {},
   })),
   O = (e, t) => {
     var n, r;
-    return (null !== (r = null === (n = I.getState().rules[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : []).length
+    return (null !== (r = null === (n = T.getState().rules[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : []).length
   };
 
 function A(e) {
-  let [t, n] = r.useState(!1), [a, E] = I(e => [e.syncRules, e.fetching], i.Z);
+  let [t, n] = r.useState(!1), [a, E] = T(e => [e.syncRules, e.fetching], i.Z);
   return [t, r.useCallback(async () => {
     if (!E && null != e) try {
       n(!0), await a(e)
@@ -132,7 +132,7 @@ function N(e) {
 }
 
 function S(e) {
-  return I(t => {
+  return T(t => {
     var n;
     return {
       rulesByTriggerType: null !== (n = t.rules[null != e ? e : l.lds]) && void 0 !== n ? n : {},

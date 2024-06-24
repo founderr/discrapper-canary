@@ -13,8 +13,8 @@ var n = t(399606),
   c = t(526761),
   E = t(689938),
   u = t(323780),
-  d = t(101732),
-  R = t(450598),
+  R = t(101732),
+  d = t(450598),
   I = t(633030),
   T = t(97942),
   A = t(269987),
@@ -25,12 +25,12 @@ var n = t(399606),
   m = t(302036),
   C = t(994554),
   g = t(1549),
-  f = t(13327),
-  P = t(59137),
-  O = t(405991),
+  P = t(13327),
+  O = t(59137),
+  f = t(405991),
   x = t(24615),
-  h = t(193943),
-  L = t(334347),
+  L = t(193943),
+  h = t(334347),
   b = t(943734),
   v = t(603076),
   Z = t(472656),
@@ -49,13 +49,13 @@ let j = (e, s, t) => (0, a.wj)(e) ? s : t,
       badge: {
         title: E.Z.Messages.PREMIUM_MARKETING_BADGE_PERK_TITLE,
         description: E.Z.Messages.PREMIUM_MARKETING_BADGE_PERK_DESCRIPTION,
-        imageSource: R,
+        imageSource: d,
         imageClassName: s.badgeImage
       },
       badgeAlt: {
         title: E.Z.Messages.PREMIUM_MARKETING_PERK_GRID_ITEM_HEADING_PREMIUM_SUBSCRIPTION_BADGE,
         description: E.Z.Messages.PREMIUM_MARKETING_FEATURE_PREMIUM_BADGE_DESCRIPTION_VARIANT_1,
-        imageSource: j(t, u, d),
+        imageSource: j(t, u, R),
         imageClassName: s.badgeNewImage
       },
       clientThemes: {
@@ -68,13 +68,13 @@ let j = (e, s, t) => (0, a.wj)(e) ? s : t,
       customAppIcons: {
         title: E.Z.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE,
         description: E.Z.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION,
-        imageSource: h,
+        imageSource: L,
         imageClassName: s.customAppIconImage
       },
       emoji: {
         title: E.Z.Messages.PREMIUM_MARKETING_FEATURE_EMOJI_TITLE,
         description: E.Z.Messages.PREMIUM_MARKETING_EMOJI_PERK_TITLE,
-        imageSource: L,
+        imageSource: h,
         imageClassName: s.emojiImage
       },
       guildProfile: {
@@ -153,7 +153,7 @@ let j = (e, s, t) => (0, a.wj)(e) ? s : t,
       superReactions: {
         title: E.Z.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_V2,
         description: E.Z.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION_V2,
-        imageSource: j(t, g, f),
+        imageSource: j(t, g, P),
         imageClassName: s.superReactionsImage
       },
       upload: {
@@ -169,7 +169,7 @@ let j = (e, s, t) => (0, a.wj)(e) ? s : t,
       videoBackground: {
         title: E.Z.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_TITLE,
         description: E.Z.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_DESCRIPTION,
-        imageSource: j(t, P, O),
+        imageSource: j(t, O, f),
         imageClassName: s.videoBackgroundImage
       }
     }

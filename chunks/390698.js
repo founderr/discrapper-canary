@@ -1,28 +1,28 @@
 "use strict";
-t.d(s, {
+s.d(t, {
   U: function() {
     return c
   }
 });
-var n = t(735250);
-t(470079);
-var a = t(120356),
-  r = t.n(a),
-  i = t(481060),
-  l = t(689938),
-  o = t(219199);
+var n = s(735250);
+s(470079);
+var r = s(120356),
+  a = s.n(r),
+  i = s(481060),
+  l = s(689938),
+  o = s(219199);
 let c = e => {
   let {
-    className: s,
-    isPartiallyPurchased: t
+    className: t,
+    isPartiallyPurchased: s
   } = e;
-  return t ? (0, n.jsx)(i.Tooltip, {
+  return s ? (0, n.jsx)(i.Tooltip, {
     tooltipClassName: o.partiallyOwnedDisclaimer,
     position: "top",
     align: "left",
     text: l.Z.Messages.COLLECTIBLES_PARTIALLY_OWNED_DISCLAIMER,
     children: e => (0, n.jsxs)("div", {
-      className: r()(o.partialOwnStateContainer, s),
+      className: a()(o.partialOwnStateContainer, t),
       ...e,
       children: [(0, n.jsx)("span", {
         className: o.iconWrapper,
@@ -38,7 +38,7 @@ let c = e => {
     })
   }) : (0, n.jsx)(i.Text, {
     variant: "text-md/semibold",
-    className: s,
+    className: t,
     children: l.Z.Messages.COLLECTIBLES_ALREADY_OWNED
   })
 }

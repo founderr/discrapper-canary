@@ -18,8 +18,8 @@ var l = t(442837),
   E = t(981631),
   C = t(921944),
   m = t(474936),
-  N = t(526761),
-  S = t(689938),
+  S = t(526761),
+  N = t(689938),
   T = t(695983);
 
 function L(e) {
@@ -27,9 +27,9 @@ function L(e) {
   let {
     onClose: t,
     markAsDismissed: L
-  } = e, R = (0, l.e7)([_.default], () => _.default.getCurrentUser());
-  let h = (n = null == R ? void 0 : R.premiumType) === m.p9.TIER_2 ? S.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_TIER_2 : null == n ? S.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB : S.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_TIER_2,
-    f = I.ZP.canUseCustomCallSounds(R);
+  } = e, h = (0, l.e7)([_.default], () => _.default.getCurrentUser());
+  let R = (n = null == h ? void 0 : h.premiumType) === m.p9.TIER_2 ? N.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_TIER_2 : null == n ? N.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB : N.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_TIER_2,
+    g = I.ZP.canUseCustomCallSounds(h);
   return (0, i.jsxs)(d.Z, {
     isShown: !0,
     type: d.Y.PREMIUM,
@@ -38,7 +38,7 @@ function L(e) {
     children: [null != L ? (0, i.jsx)(o.Clickable, {
       className: T.close,
       onClick: () => null == L ? void 0 : L(C.L.DISMISS),
-      "aria-label": S.Z.Messages.CLOSE,
+      "aria-label": N.Z.Messages.CLOSE,
       children: (0, i.jsx)(o.CloseSmallIcon, {
         size: "xs",
         color: "currentColor",
@@ -52,18 +52,18 @@ function L(e) {
         className: T.nitroWheel
       }), (0, i.jsx)(r.X, {
         variant: "heading-sm/bold",
-        children: S.Z.Messages.CALL_SOUNDS_UPSELL_TITLE_NON_SUB
+        children: N.Z.Messages.CALL_SOUNDS_UPSELL_TITLE_NON_SUB
       })]
     }), (0, i.jsx)(a.x, {
       variant: "text-sm/normal",
-      children: h
-    }), f ? (0, i.jsx)(s.zx, {
+      children: R
+    }), g ? (0, i.jsx)(s.zx, {
       onClick: function() {
-        u.Z.open(E.oAB.VOICE, N.GA), null == t || t(), null == L || L(C.L.PRIMARY)
+        u.Z.open(E.oAB.VOICE, S.GA), null == t || t(), null == L || L(C.L.PRIMARY)
       },
-      children: S.Z.Messages.CHECK_IT_OUT
+      children: N.Z.Messages.CHECK_IT_OUT
     }) : (0, i.jsx)(c.Z, {
-      buttonText: S.Z.Messages.PREMIUM_UPSELL_GET_NITRO,
+      buttonText: N.Z.Messages.PREMIUM_UPSELL_GET_NITRO,
       subscriptionTier: m.Si.TIER_2,
       premiumModalAnalyticsLocation: {
         section: E.jXE.SOUNDBOARD_SOUND_PICKER,

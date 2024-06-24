@@ -13,7 +13,7 @@ t.Z = e => {
     location: t
   } = e, {
     verifyFailed: _,
-    verifySucceeded: h
+    verifySucceeded: I
   } = (0, i.cj)([u.default], () => ({
     verifyFailed: u.default.didVerifyFail(),
     verifySucceeded: u.default.didVerifySucceed()
@@ -33,7 +33,7 @@ t.Z = e => {
       className: E.marginBottom40,
       children: d.Z.Messages.PAYMENT_AUTH_EXPIRED_SUGGESTION
     })]
-  }) : h ? (0, s.jsxs)(o.ZP, {
+  }) : I ? (0, s.jsxs)(o.ZP, {
     children: [(0, s.jsx)("img", {
       alt: "",
       src: n(73962),

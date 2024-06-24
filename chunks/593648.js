@@ -27,14 +27,14 @@ var n = t(735250),
   R = t(392888),
   M = t(921801),
   x = t(657254),
-  D = t(470647),
-  p = t(292959),
+  p = t(470647),
+  D = t(292959),
   L = t(9156),
   P = t(626135),
   Z = t(912101),
   f = t(358085),
-  v = t(709054),
-  j = t(557177),
+  j = t(709054),
+  v = t(557177),
   U = t(695346),
   B = t(675478),
   b = t(33656),
@@ -109,7 +109,7 @@ function W(e) {
   let c = i.useRef(),
     d = (0, O.p)(),
     T = i.useCallback((e, s) => {
-      s.stopPropagation(), s.preventDefault(), null != c.current && c.current.stop(), c.current = j.GN(e)
+      s.stopPropagation(), s.preventDefault(), null != c.current && c.current.stop(), c.current = v.GN(e)
     }, []),
     S = i.useCallback((e, t) => {
       let n = s.filter(s => s !== e);
@@ -203,7 +203,7 @@ function W(e) {
         children: [(0, n.jsx)(E.FormTitle, {
           className: H.marginBottom20,
           children: y.Z.Messages.SOUNDPACK_LABEL
-        }), (0, n.jsx)(D.Z, {
+        }), (0, n.jsx)(p.Z, {
           className: l()(Y.soundpackSelect, H.marginBottom40)
         })]
       }) : null, (0, n.jsx)(E.FormSwitch, {
@@ -239,7 +239,7 @@ function W(e) {
 function K() {
   let e = (0, c.e7)([N.Z], () => N.Z.getGuildAlertSettings()),
     [s, t] = i.useState(null),
-    a = v.default.keys(e).map(s => {
+    a = j.default.keys(e).map(s => {
       let t = e[s];
       return {
         label: t.guildName,
@@ -571,14 +571,14 @@ function $(e) {
 }
 
 function ee() {
-  let e = (0, c.cj)([p.Z], () => ({
-    disableUnreadBadge: p.Z.getDisableUnreadBadge(),
-    taskbarFlash: p.Z.taskbarFlash,
-    disabledSounds: p.Z.getDisabledSounds(),
-    disableAllSounds: p.Z.getDisableAllSounds(),
-    desktopType: p.Z.getDesktopType(),
-    ttsType: p.Z.getTTSType(),
-    notifyMessagesInSelectedChannel: p.Z.getNotifyMessagesInSelectedChannel()
+  let e = (0, c.cj)([D.Z], () => ({
+    disableUnreadBadge: D.Z.getDisableUnreadBadge(),
+    taskbarFlash: D.Z.taskbarFlash,
+    disabledSounds: D.Z.getDisabledSounds(),
+    disableAllSounds: D.Z.getDisableAllSounds(),
+    desktopType: D.Z.getDesktopType(),
+    ttsType: D.Z.getTTSType(),
+    notifyMessagesInSelectedChannel: D.Z.getNotifyMessagesInSelectedChannel()
   }));
   return (0, n.jsx)($, {
     ...e,

@@ -3,16 +3,16 @@ t.d(s, {
     return C
   },
   Op: function() {
-    return h
+    return L
   },
   gx: function() {
-    return f
+    return P
   },
   k3: function() {
     return p
   },
   mN: function() {
-    return L
+    return h
   },
   sP: function() {
     return x
@@ -34,8 +34,8 @@ var n = t(278074),
   c = t(331119),
   E = t(575595),
   u = t(528865),
-  d = t(915296),
-  R = t(650032),
+  R = t(915296),
+  d = t(650032),
   I = t(781922),
   T = t(885462),
   A = t(391110),
@@ -93,9 +93,9 @@ function g(e, s) {
       return ""
   }
 }
-let f = (e, s, t) => (0, r.wj)(e) ? s : t,
-  P = "getWhatsNewRow",
-  O = e => {
+let P = (e, s, t) => (0, r.wj)(e) ? s : t,
+  O = "getWhatsNewRow",
+  f = e => {
     let {
       cards: s,
       perksCards: t,
@@ -114,49 +114,49 @@ let f = (e, s, t) => (0, r.wj)(e) ? s : t,
         card: t.specialMemberPricing
       })
     }, {
-      shouldShowCard: d
+      shouldShowCard: R
     } = u.W.getCurrentConfig({
-      location: P
+      location: O
     }, {
       autoTrackExposure: !1
     }), {
       shouldShowCard: A
     } = T.e.getCurrentConfig({
-      location: P
+      location: O
     }, {
       autoTrackExposure: !1
     }), {
       shouldShowCard: M
     } = I.X.getCurrentConfig({
-      location: P
+      location: O
     }, {
       autoTrackExposure: !1
     }), {
       enabled: S
-    } = R._.getCurrentConfig({
-      location: P
+    } = d._.getCurrentConfig({
+      location: O
     }, {
       autoTrackExposure: !1
     }), {
       enabled: N
     } = E.r.getCurrentConfig({
-      location: P
+      location: O
     }, {
       autoTrackExposure: !1
     }), {
       enabled: p
     } = c.C.getCurrentConfig({
-      location: P
+      location: O
     }, {
       autoTrackExposure: !1
     }), m = b();
     return null != t.freeBoost && !0 === a && o({
       card: t.freeBoost
-    }), n && m && d && A ? (0 === s.length && _(), o({
+    }), n && m && R && A ? (0 === s.length && _(), o({
       card: t.newAppStylesUpdateJune2024
     }), o({
       card: t.serverProfiles
-    })) : n && !m && d && A && (M && S && !N && !p ? o({
+    })) : n && !m && R && A && (M && S && !N && !p ? o({
       card: t.referralProgram
     }) : _(), o({
       card: t.newAppStylesUpdateJune2024
@@ -184,15 +184,15 @@ let f = (e, s, t) => (0, r.wj)(e) ? s : t,
           tileOrderVariant: l,
           isPremiumSubscriber: o
         }).with({
-          tileOrderVariant: d.mJ.VARIANT_1,
+          tileOrderVariant: R.mJ.VARIANT_1,
           isPremiumSubscriber: !1
         }, () => [s.profiles, s.moreEmojiPower, s.largeUploads]).with({
-          tileOrderVariant: d.mJ.VARIANT_2,
+          tileOrderVariant: R.mJ.VARIANT_2,
           isPremiumSubscriber: !1
         }, () => [s.profiles, s.moreEmojiPower, s.largeUploads, s.hdVideo, s.clientThemes, s.customAppIcons]).otherwise(() => [s.profiles, s.clientThemes, s.serverBoosts]);
         break;
       case A.R0.WHATS_NEW:
-        _ = O({
+        _ = f({
           cards: _,
           perksCards: s,
           isFullScreen: r,
@@ -205,10 +205,10 @@ let f = (e, s, t) => (0, r.wj)(e) ? s : t,
           tileOrderVariant: l,
           isPremiumSubscriber: o
         }).with({
-          tileOrderVariant: d.mJ.VARIANT_1,
+          tileOrderVariant: R.mJ.VARIANT_1,
           isPremiumSubscriber: !1
         }, () => [s.hdVideo, s.serverBoosts, s.superReactions, s.earlyAccessSeeAllVariant, s.specialShopPerks]).with({
-          tileOrderVariant: d.mJ.VARIANT_2,
+          tileOrderVariant: R.mJ.VARIANT_2,
           isPremiumSubscriber: !1
         }, () => [s.serverBoosts, s.superReactions, s.earlyAccessSeeAllVariant, s.specialShopPerks]).otherwise(() => [s.customAppIcons, s.moreEmojiPower, s.customSoundsEverywhere, s.specialStickerAccess]);
         break;
@@ -217,10 +217,10 @@ let f = (e, s, t) => (0, r.wj)(e) ? s : t,
           tileOrderVariant: l,
           isPremiumSubscriber: o
         }).with({
-          tileOrderVariant: d.mJ.VARIANT_1,
+          tileOrderVariant: R.mJ.VARIANT_1,
           isPremiumSubscriber: !1
         }, () => [s.clientThemes, s.customAppIcons, s.customSoundsEverywhere, s.specialStickerAccess]).with({
-          tileOrderVariant: d.mJ.VARIANT_2,
+          tileOrderVariant: R.mJ.VARIANT_2,
           isPremiumSubscriber: !1
         }, () => [s.customSoundsEverywhere, s.specialStickerAccess]).otherwise(() => [s.earlyAccessSeeAllVariant, s.specialMemberPricingSeeAllVariant, s.largeUploads, s.hdVideo, s.superReactions]);
         break;
@@ -229,7 +229,7 @@ let f = (e, s, t) => (0, r.wj)(e) ? s : t,
     }
     return !r && (_ = _.filter(e => !e.hideOnNarrowScreen)), _
   },
-  h = e => {
+  L = e => {
     let s = (0, a.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription()),
       t = null != s ? _.ZP.getPremiumPlanItem(s) : null,
       n = (null != t ? _.ZP.getSkuIdForPlan(t.planId) : null) === M.Si.TIER_2;
@@ -245,7 +245,7 @@ let f = (e, s, t) => (0, r.wj)(e) ? s : t,
       subtitle: N.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_SUBTITLE
     }
   },
-  L = () => {
+  h = () => {
     let e = (0, a.e7)([l.default], () => l.default.getCurrentUser());
     return (0, _.I5)(e)
   },

@@ -1,8 +1,8 @@
 n(47120);
 var s = n(735250),
-  a = n(470079),
-  i = n(120356),
-  l = n.n(i),
+  i = n(470079),
+  a = n(120356),
+  l = n.n(a),
   r = n(789978),
   c = n(748780),
   o = n(91192),
@@ -14,11 +14,11 @@ t.Z = e => {
   let {
     userId: t,
     children: n,
-    isLast: i,
+    isLast: a,
     className: h
-  } = e, [T, I] = a.useState(!1), {
+  } = e, [T, I] = i.useState(!1), {
     analyticsLocations: C
-  } = (0, d.ZP)(), N = a.useCallback(() => {
+  } = (0, d.ZP)(), N = i.useCallback(() => {
     (0, u.openUserProfileModal)({
       userId: t,
       sourceAnalyticsLocations: C,
@@ -43,7 +43,7 @@ t.Z = e => {
           opacity: 1
         },
         className: l()(_.rowItem, h, {
-          [_.last]: i,
+          [_.last]: a,
           [_.active]: T
         }),
         onMouseEnter: g,

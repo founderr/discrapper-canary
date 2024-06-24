@@ -4,9 +4,9 @@ n.d(t, {
   }
 });
 var s = n(735250),
-  a = n(470079),
-  i = n(512722),
-  l = n.n(i),
+  i = n(470079),
+  a = n(512722),
+  l = n.n(a),
   r = n(399606),
   c = n(481060),
   o = n(594174),
@@ -21,7 +21,7 @@ var s = n(735250),
 function C(e) {
   let {
     user: t
-  } = e, i = (0, d.Z)(), C = (0, u.VM)(), N = (0, r.e7)([o.default], () => o.default.getCurrentUser()), g = a.useCallback(() => {
+  } = e, a = (0, d.Z)(), C = (0, u.VM)(), N = (0, r.e7)([o.default], () => o.default.getCurrentUser()), g = i.useCallback(() => {
     l()(void 0 !== N, "User must be logged in to accept a link request"), (0, c.openModalLazy)(async () => {
       let {
         default: e
@@ -32,7 +32,7 @@ function C(e) {
         otherUser: t
       })
     })
-  }, [N, t]), A = a.useCallback(() => {
+  }, [N, t]), A = i.useCallback(() => {
     l()(void 0 !== N, "User must be logged in to decline a link request"), (0, c.openModalLazy)(async () => {
       let {
         default: e
@@ -43,7 +43,7 @@ function C(e) {
         otherUser: t
       })
     })
-  }, [N, t]), m = a.useCallback(() => {
+  }, [N, t]), m = i.useCallback(() => {
     l()(void 0 !== N, "User must be logged in to decline a link request"), (0, c.openModalLazy)(async () => {
       let {
         default: e
@@ -65,7 +65,7 @@ function C(e) {
       })
     }), (0, s.jsx)("div", {
       className: I.actions,
-      children: i ? (0, s.jsx)(E.Z, {
+      children: a ? (0, s.jsx)(E.Z, {
         icon: c.CloseSmallIcon,
         className: I.__invalid_actionDeny,
         tooltip: T.Z.Messages.FAMILY_CENTER_LINK_ACTION_CANCEL,

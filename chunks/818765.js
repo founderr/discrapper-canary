@@ -1,7 +1,7 @@
 n(47120), n(653041);
 var s = n(570140),
-  a = n(317770),
-  i = n(474873),
+  i = n(317770),
+  a = n(474873),
   l = n(314897),
   r = n(19780),
   c = n(944486),
@@ -10,7 +10,7 @@ var s = n(570140),
   u = n(351780),
   E = n(843693),
   _ = n(981631);
-let h = (0, d.uk)("poggermode_applause", i.Z.getSoundpack()),
+let h = (0, d.uk)("poggermode_applause", a.Z.getSoundpack()),
   T = !1,
   I = !1,
   C = [],
@@ -40,7 +40,7 @@ let h = (0, d.uk)("poggermode_applause", i.Z.getSoundpack()),
       n = r.Z.isConnected();
     C.push([e, t * (n ? .1 : 1)]), f()
   };
-class M extends a.Z {
+class M extends i.Z {
   _initialize() {
     E.ZP.addChangeListener(this.startAudio), s.Z.subscribe("RTC_CONNECTION_STATE", this.setVolume), s.Z.subscribe("TYPING_STOP", this.stopAudio), s.Z.subscribe("TYPING_STOP_LOCAL", this.stopAudio), s.Z.subscribe("CHANNEL_SELECT", this.stopAudio), s.Z.subscribe("POGGERMODE_SETTINGS_UPDATE", this.stopAudio)
   }
@@ -69,9 +69,9 @@ class M extends a.Z {
     if (null == t) return;
     let n = l.default.getId(),
       s = o.Z.isTyping(t, n),
-      a = E.ZP.getUserCombo(n, t),
-      i = null !== (e = null == a ? void 0 : a.multiplier) && void 0 !== e ? e : 1;
-    s && i >= 7 ? g() : A()
+      i = E.ZP.getUserCombo(n, t),
+      a = null !== (e = null == i ? void 0 : i.multiplier) && void 0 !== e ? e : 1;
+    s && a >= 7 ? g() : A()
   }
   playAchievementUnlockSound() {
     if (!!m()) R("poggermode_achievement_unlock")

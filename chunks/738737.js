@@ -22,8 +22,8 @@ function a(e) {
     analyticsSubscriptionType: E,
     renderHeader: C,
     renderPurchaseConfirmation: m,
-    planGroup: N,
-    reviewWarningMessage: S,
+    planGroup: S,
+    reviewWarningMessage: N,
     skuId: T
   } = e;
   (0, l.openModalLazy)(async () => {
@@ -33,11 +33,11 @@ function a(e) {
       PaymentModal: l
     } = await Promise.all([t.e("49237"), t.e("99387"), t.e("15972"), t.e("6416"), t.e("32776"), t.e("23952")]).then(t.bind(t, 791785)), {
       STEPS: r
-    } = await Promise.all([t.e("49237"), t.e("99387"), t.e("96427"), t.e("77298"), t.e("23357"), t.e("15972"), t.e("12013"), t.e("6416"), t.e("43906"), t.e("32776"), t.e("95900"), t.e("8016"), t.e("68136"), t.e("29625"), t.e("55632")]).then(t.bind(t, 7305));
+    } = await Promise.all([t.e("49237"), t.e("99387"), t.e("96427"), t.e("77298"), t.e("23357"), t.e("15972"), t.e("12013"), t.e("6416"), t.e("43906"), t.e("32776"), t.e("95900"), t.e("8016"), t.e("68136"), t.e("64012"), t.e("27891")]).then(t.bind(t, 7305));
     return t => {
       let {
         onClose: L,
-        ...R
+        ...h
       } = t;
       return (0, i.jsx)(e, {
         activeSubscription: a,
@@ -45,7 +45,7 @@ function a(e) {
         skuIDs: [T],
         children: (0, i.jsx)(s.KB, {
           children: (0, i.jsx)(l, {
-            ...R,
+            ...h,
             initialPlanId: n,
             onClose: e => {
               L(), null == c || c(e)
@@ -57,10 +57,10 @@ function a(e) {
             skuId: T,
             renderHeader: C,
             renderPurchaseConfirmation: m,
-            planGroup: N,
+            planGroup: S,
             trialId: o,
             trialFooterMessageOverride: u,
-            reviewWarningMessage: S
+            reviewWarningMessage: N
           })
         })
       })

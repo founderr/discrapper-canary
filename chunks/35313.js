@@ -1,6 +1,6 @@
 t.d(n, {
   f: function() {
-    return o
+    return l
   }
 });
 var a = t(920906),
@@ -8,7 +8,7 @@ var a = t(920906),
   s = t(442837),
   i = t(607070);
 
-function o() {
+function l() {
   let e = (0, s.e7)([i.Z], () => i.Z.useReducedMotion);
   return (0, a.useSpring)({
     from: {

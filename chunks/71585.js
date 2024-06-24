@@ -1,46 +1,46 @@
-t(47120), t(653041);
-var i, l = t(442837),
-  s = t(570140);
+n(47120), n(653041);
+var l, i = n(442837),
+  s = n(570140);
 
-function r(e, n, t) {
-  return n in e ? Object.defineProperty(e, n, {
-    value: t,
+function a(e, t, n) {
+  return t in e ? Object.defineProperty(e, t, {
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[n] = t, e
+  }) : e[t] = n, e
 }
-let a = () => ({
+let r = () => ({
     itemImpressions: []
   }),
-  o = a(),
-  u = new Set,
+  o = r(),
   c = new Set,
+  u = new Set,
   d = 0,
-  _ = !1,
-  I = !1;
+  h = !1,
+  m = !1;
 
-function E() {
+function p() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
   if (!e && Date.now() < d) return;
   o.itemImpressions.length > 1e3 && (o.itemImpressions = []);
-  let n = 0,
-    t = Date.now() - 2592e5;
+  let t = 0,
+    n = Date.now() - 2592e5;
   for (let e = 0; e < o.itemImpressions.length; e++) {
-    let [i, l] = o.itemImpressions[e];
-    if (l < t) n = e + 1;
+    let [l, i] = o.itemImpressions[e];
+    if (i < n) t = e + 1;
     else break
   }
-  n > 0 && (o.itemImpressions = o.itemImpressions.slice(n));
-  let i = I ? 1e3 : 576e5,
-    l = new Set,
+  t > 0 && (o.itemImpressions = o.itemImpressions.slice(t));
+  let l = m ? 1e3 : 576e5,
+    i = new Set,
     s = new Set,
-    r = Date.now() - i,
-    a = null;
-  for (let [e, n] of o.itemImpressions) n < r ? l.add(e) : null == a && (a = n + i), s.add(e);
-  u = l, c = s, d = null != a ? a : 1 / 0, _ = !0
+    a = Date.now() - l,
+    r = null;
+  for (let [e, t] of o.itemImpressions) t < a ? i.add(e) : null == r && (r = t + l), s.add(e);
+  c = i, u = s, d = null != r ? r : 1 / 0, h = !0
 }
-class C extends(i = l.ZP.PersistedStore) {
+class E extends(l = i.ZP.PersistedStore) {
   initialize(e) {
     o = {
       ...o,
@@ -51,33 +51,33 @@ class C extends(i = l.ZP.PersistedStore) {
     return o
   }
   getImpressionCappedItemIds() {
-    return E(), u
+    return p(), c
   }
   getDebugFastImpressionCappingEnabled() {
-    return I
+    return m
   }
   reset() {
-    o = a()
+    o = r()
   }
 }
-r(C, "displayName", "ContentInventoryPersistedStore"), r(C, "persistKey", "ContentInventoryPersistedStore"), n.Z = new C(s.Z, {
+a(E, "displayName", "ContentInventoryPersistedStore"), a(E, "persistKey", "ContentInventoryPersistedStore"), t.Z = new E(s.Z, {
   CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS: function(e) {
     let {
-      itemIds: n
+      itemIds: t
     } = e;
-    !_ && E();
-    let t = Date.now(),
-      i = !1;
-    for (let e of n) !c.has(e) && (o.itemImpressions.push([e, t]), i = !0);
-    return E(i), i
+    !h && p();
+    let n = Date.now(),
+      l = !1;
+    for (let e of t) !u.has(e) && (o.itemImpressions.push([e, n]), l = !0);
+    return p(l), l
   },
   CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS: function() {
-    o.itemImpressions = [], E(!0)
+    o.itemImpressions = [], p(!0)
   },
   CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS: function() {
     return console.log("Item impressions:", o.itemImpressions), !1
   },
   CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING: function() {
-    I = !I
+    m = !m
   }
 })

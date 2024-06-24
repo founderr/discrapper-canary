@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return p
+    return D
   }
 });
 var n = t(735250),
@@ -27,9 +27,9 @@ var n = t(735250),
   R = t(74538),
   M = t(695346),
   x = t(265159),
-  D = t(532495);
+  p = t(532495);
 
-function p() {
+function D() {
   let e = (0, r.e7)([g.default], () => {
     let e = g.default.getCurrentUser();
     return l()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e
@@ -41,13 +41,13 @@ function p() {
     {
       pendingAvatar: t,
       pendingBanner: a,
-      pendingBio: p,
+      pendingBio: D,
       pendingPronouns: L,
       pendingGlobalName: P,
       pendingAccentColor: Z,
       pendingAvatarDecoration: f,
-      pendingThemeColors: v,
-      pendingProfileEffectId: j
+      pendingThemeColors: j,
+      pendingProfileEffectId: v
     } = (0, r.cj)([h.Z], () => {
       let e = h.Z.getAllPending(),
         s = h.Z.getErrors();
@@ -56,7 +56,7 @@ function p() {
         errors: s
       }
     }),
-    U = M.dN.useSetting() && null != p ? I.ZP.parse(void 0, p).content : p,
+    U = M.dN.useSetting() && null != D ? I.ZP.parse(void 0, D).content : D,
     B = R.ZP.canUsePremiumProfileCustomization(e),
     {
       analyticsLocations: b
@@ -73,7 +73,7 @@ function p() {
       pendingAvatar: t,
       pendingGlobalName: P,
       pendingAvatarDecoration: f,
-      pendingProfileEffectId: j
+      pendingProfileEffectId: v
     };
   i.useEffect(() => () => o.Z.wait(E.W3), []);
   let F = "UserSettingsProfileCustomization";
@@ -90,10 +90,10 @@ function p() {
         profilePreview: (0, n.jsx)(N.Z, {
           ...G,
           location: "UserSettingsProfileCustomization",
-          pendingThemeColors: v,
+          pendingThemeColors: j,
           pendingAccentColor: Z
         }),
-        children: (0, n.jsx)(D.Z, {})
+        children: (0, n.jsx)(p.Z, {})
       }), !R.ZP.canUsePremiumProfileCustomization(e) && (0, n.jsx)(C.Z, {
         user: e
       })]

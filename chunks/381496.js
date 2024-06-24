@@ -4,10 +4,10 @@ n.d(t, {
   }
 });
 var s = n(544891),
-  a = n(570140),
-  i = n(981631);
+  i = n(570140),
+  a = n(981631);
 let l = () => s.tn.get({
-  url: i.ANM.GUILD_AFFINITIES,
+  url: a.ANM.GUILD_AFFINITIES,
   oldFormErrors: !0
 }).then(e => {
   let {
@@ -15,12 +15,12 @@ let l = () => s.tn.get({
       guild_affinities: t
     }
   } = e;
-  a.Z.dispatch({
+  i.Z.dispatch({
     type: "LOAD_GUILD_AFFINITIES_SUCCESS",
     guildAffinities: t
   })
 }, () => {
-  a.Z.dispatch({
+  i.Z.dispatch({
     type: "LOAD_GUILD_AFFINITIES_FAILURE"
   })
 })

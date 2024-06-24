@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return p
+    return D
   }
 });
 var n = t(735250);
@@ -47,7 +47,7 @@ function x(e) {
   }
 }
 
-function D(e) {
+function p(e) {
   let {
     children: s,
     title: t
@@ -59,7 +59,7 @@ function D(e) {
   })
 }
 
-function p(e) {
+function D(e) {
   let {
     className: s,
     showHeader: t = !0
@@ -71,7 +71,7 @@ function p(e) {
     legacyEnabled: N.Z.legacyEnabled
   })), {
     avatarSizeMode: m,
-    displayNameMode: p,
+    displayNameMode: D,
     displayUserMode: L,
     notificationPositionMode: P,
     textChatNotificationMode: Z,
@@ -83,8 +83,8 @@ function p(e) {
     notificationPositionMode: A.Z.getNotificationPositionMode(),
     textChatNotificationMode: A.Z.getTextChatNotificationMode(),
     shouldShowKeybindIndicators: A.Z.showKeybindIndicators
-  })), v = (0, o.e7)([I.Z], () => I.Z.getOverlayKeybind()), {
-    showKeybindIndicators: j
+  })), j = (0, o.e7)([I.Z], () => I.Z.getOverlayKeybind()), {
+    showKeybindIndicators: v
   } = u.Z.useExperiment({
     location: "overlay_user_settings"
   }), U = (0, T.$1)();
@@ -147,16 +147,16 @@ function p(e) {
           className: R.enableOverlayItem,
           children: (0, n.jsx)(_.Z, {
             disabled: !i,
-            defaultValue: null != v ? v.shortcut : [],
+            defaultValue: null != j ? j.shortcut : [],
             onChange: function(e) {
-              a()(null != v, "Keybind should never be undefined"), E.Z.setKeybind({
-                ...v,
+              a()(null != j, "Keybind should never be undefined"), E.Z.setKeybind({
+                ...j,
                 shortcut: e
               })
             }
           })
         })]
-      }), (0, n.jsx)(D, {
+      }), (0, n.jsx)(p, {
         title: g.Z.Messages.FORM_LABEL_AVATAR_SIZE,
         children: (0, n.jsx)(c.RadioGroup, {
           options: [{
@@ -174,7 +174,7 @@ function p(e) {
           },
           value: m
         })
-      }), (0, n.jsx)(D, {
+      }), (0, n.jsx)(p, {
         title: g.Z.Messages.FORM_LABEL_DISPLAY_NAMES,
         children: (0, n.jsx)(c.RadioGroup, {
           options: [{
@@ -193,9 +193,9 @@ function p(e) {
             } = e;
             return d.Z.setDisplayNameMode(s)
           },
-          value: p
+          value: D
         })
-      }), (0, n.jsx)(D, {
+      }), (0, n.jsx)(p, {
         title: g.Z.Messages.FORM_LABEL_DISPLAY_USERS,
         children: (0, n.jsx)(c.RadioGroup, {
           options: [{
@@ -213,7 +213,7 @@ function p(e) {
           },
           value: L
         })
-      }), j && (0, n.jsx)(D, {
+      }), v && (0, n.jsx)(p, {
         children: (0, n.jsx)(c.FormSwitch, {
           value: f,
           onChange: e => d.Z.setShowKeybindIndicators(e),
@@ -225,7 +225,7 @@ function p(e) {
       tag: c.FormTitleTags.H1,
       title: g.Z.Messages.OVERLAY_NOTIFICATIONS_SETTINGS,
       className: R.notificationSection,
-      children: [(0, n.jsx)(D, {
+      children: [(0, n.jsx)(p, {
         title: g.Z.Messages.FORM_LABEL_NOTIFICATION_POSITION,
         children: (0, n.jsx)("div", {
           className: R.notificationSettings,
@@ -234,7 +234,7 @@ function p(e) {
             onChange: (e, s) => d.Z.setNotificationPositionMode(s)
           })
         })
-      }), (0, n.jsx)(D, {
+      }), (0, n.jsx)(p, {
         children: (0, n.jsx)(c.FormSwitch, {
           value: P !== h._vf.DISABLED && Z === h.Ypu.ENABLED,
           disabled: P === h._vf.DISABLED,

@@ -4,9 +4,9 @@ n.d(t, {
   }
 });
 var s = n(735250),
-  a = n(470079),
-  i = n(120356),
-  l = n.n(i),
+  i = n(470079),
+  a = n(120356),
+  l = n.n(a),
   r = n(481060),
   c = n(955204),
   o = n(818765),
@@ -69,7 +69,7 @@ function _(e) {
     achievement: t,
     unlocked: n
   } = e, {
-    name: i,
+    name: a,
     description: _,
     rarity: h,
     hideDescriptionUntilUnlock: T,
@@ -77,7 +77,7 @@ function _(e) {
   } = t, {
     color: C
   } = (0, c.F7)(h);
-  a.useEffect(() => {
+  i.useEffect(() => {
     let e = setTimeout(() => {
       o.Z.playAchievementUnlockSound()
     }, 50);
@@ -104,7 +104,7 @@ function _(e) {
       children: [(0, s.jsx)(r.Text, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: i()
+        children: a()
       }), (0, s.jsx)(r.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",

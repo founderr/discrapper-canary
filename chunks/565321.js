@@ -3,8 +3,8 @@ var a = t(735250),
   r = t(470079),
   s = t(481060),
   i = t(881052),
-  o = t(484455),
-  l = t(592286),
+  l = t(484455),
+  o = t(592286),
   c = t(689938),
   d = t(237261);
 n.Z = function(e) {
@@ -30,11 +30,11 @@ n.Z = function(e) {
       }
     }
   }, [C, n, t]);
-  return (0, a.jsxs)(o.Z, {
+  return (0, a.jsxs)(l.Z, {
     title: c.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_TITLE,
     children: [(0, a.jsx)(s.TextArea, {
       className: d.fieldBackground,
-      maxLength: l.Us,
+      maxLength: o.Us,
       value: null != C ? C : "",
       placeholder: c.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_PLACEHOLDER,
       onChange: e => {

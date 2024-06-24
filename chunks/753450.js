@@ -25,39 +25,39 @@ var t = i(735250),
   h = i(477690),
   g = i(481060),
   E = i(995648),
-  v = i(445986),
-  A = i(9807),
+  A = i(445986),
+  v = i(9807),
   R = i(911969),
   P = i(330726),
   C = i(782568),
   T = i(607070),
-  x = i(581364),
-  N = i(970321),
+  N = i(581364),
+  x = i(970321),
   f = i(283836),
   S = i(220082),
   O = i(252618),
   L = i(299206),
   j = i(422559),
-  Z = i(270144),
-  D = i(864843),
+  D = i(270144),
+  Z = i(864843),
   y = i(703656),
   M = i(588822),
   b = i(706454),
   k = i(314897),
-  F = i(451478),
-  U = i(729035),
+  U = i(451478),
+  F = i(729035),
   G = i(626135),
-  B = i(768581),
-  Y = i(572004),
-  w = i(823379),
-  H = i(900849),
+  Y = i(768581),
+  B = i(572004),
+  H = i(823379),
+  w = i(900849),
   V = i(674588),
   W = i(264043),
   K = i(303383),
   z = i(887706),
   q = i(738130),
-  Q = i(4461),
-  J = i(34674),
+  J = i(4461),
+  Q = i(34674),
   X = i(576958),
   $ = i(924489),
   ee = i(125909),
@@ -79,8 +79,8 @@ var t = i(735250),
   eh = i(902294);
 let eg = d().parserFor(eo.Z),
   eE = d().reactFor(d().ruleOutput(eo.Z, "react")),
-  ev = (0, _.Mg)(h.Z.APPLICATION_DIRECTORY_PROFILE_ICON_SIZE),
-  eA = "redirect_to_support_server",
+  eA = (0, _.Mg)(h.Z.APPLICATION_DIRECTORY_PROFILE_ICON_SIZE),
+  ev = "redirect_to_support_server",
   eR = "start_application_install",
   eP = e => "".concat(location.protocol, "//").concat(location.host).concat(ep.Z5c.APPLICATION_DIRECTORY_PROFILE(e)),
   eC = e => {
@@ -134,8 +134,8 @@ function eT(e) {
         }(0, et.replaceAppDirectoryURLWith)(ep.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(_, e))
       }
     }, [_]),
-    eZ = (0, m.e7)([F.Z], () => F.Z.isFocused()),
-    eD = (0, m.e7)([b.default], () => b.default.locale),
+    eD = (0, m.e7)([U.Z], () => U.Z.isFocused()),
+    eZ = (0, m.e7)([b.default], () => b.default.locale),
     ey = l.useRef(_),
     eM = (0, m.e7)([W.Z], () => {
       let e = W.Z.getApplication(_);
@@ -148,7 +148,7 @@ function eT(e) {
   (0, O.Tt)({
     location: null == eM ? void 0 : eM.name
   });
-  let eF = l.useCallback(async () => {
+  let eU = l.useCallback(async () => {
     try {
       var e;
       let n = null == eM ? void 0 : null === (e = eM.guild) || void 0 === e ? void 0 : e.id;
@@ -160,7 +160,7 @@ function eT(e) {
         let e = {
           page: ep.ZY5.APPLICATION_DIRECTORY
         };
-        await (0, H.Ub)(n, e, {
+        await (0, w.Ub)(n, e, {
           setsHistorySnapshot: !1
         })
       }
@@ -169,18 +169,18 @@ function eT(e) {
   l.useEffect(() => {
     if (null == eM) return;
     let e = new URL(location.href);
-    if (R && null != ek && "true" === e.searchParams.get(eA)) {
-      e.searchParams.delete(eA);
+    if (R && null != ek && "true" === e.searchParams.get(ev)) {
+      e.searchParams.delete(ev);
       let n = e.pathname + e.search;
-      (0, y.dL)(n), eF()
+      (0, y.dL)(n), eU()
     }
-  }, [R, eF, ek, eM]);
-  let eU = l.useCallback(() => {
+  }, [R, eU, ek, eM]);
+  let eF = l.useCallback(() => {
       var e;
-      null != (null == eM ? void 0 : null === (e = eM.guild) || void 0 === e ? void 0 : e.id) && (R ? eF() : (0, J.rf)({
-        [eA]: "true"
+      null != (null == eM ? void 0 : null === (e = eM.guild) || void 0 === e ? void 0 : e.id) && (R ? eU() : (0, Q.rf)({
+        [ev]: "true"
       }))
-    }, [eM, R, eF]),
+    }, [eM, R, eU]),
     eG = l.useCallback(() => {
       (0, et.replaceAppDirectoryURLWith)("".concat(ep.Z5c.APPLICATION_DIRECTORY_PROFILE(_)).concat(location.search))
     }, [_]);
@@ -192,26 +192,26 @@ function eT(e) {
     if ((null == eM ? void 0 : eM.directory_entry) != null) {
       let e = eM.directory_entry,
         n = null == e ? void 0 : e.popular_application_commands;
-      null != n ? eL(n.map(e => (0, x.Z8)({
+      null != n ? eL(n.map(e => (0, N.Z8)({
         rootCommand: e,
         command: e,
         applicationId: e.application_id
       }))) : eL(void 0)
     }
   }, [eM]);
-  let eB = B.ZP.getApplicationIconURL({
+  let eY = Y.ZP.getApplicationIconURL({
       id: null !== (r = null == eM ? void 0 : eM.id) && void 0 !== r ? r : "-1",
       icon: null == eM ? void 0 : eM.icon,
-      size: ev
+      size: eA
     }),
-    eY = (0, L.Z)({
+    eB = (0, L.Z)({
       id: null !== (c = null == eM ? void 0 : eM.id) && void 0 !== c ? c : "",
       label: em.Z.Messages.COPY_ID_APPLICATION
     }),
     {
-      canInstall: ew,
-      install: eH
-    } = (0, Q.P)(eM, h),
+      canInstall: eH,
+      install: ew
+    } = (0, J.P)(eM, h),
     eV = null === (n = (0, ei.getPreviousView)()) || void 0 === n ? void 0 : n.type;
   l.useEffect(() => {
     (null == eM ? void 0 : eM.id) != null && G.default.track(ep.rMx.APP_DIRECTORY_PAGE_VIEWED, {
@@ -238,7 +238,7 @@ function eT(e) {
     }, [null == eM ? void 0 : eM.id, h, ej]),
     ez = l.useMemo(() => {
       var e, n, i;
-      return null !== (i = (null !== (n = null == eM ? void 0 : null === (e = eM.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== n ? n : []).map(ex).filter(w.lm)) && void 0 !== i ? i : []
+      return null !== (i = (null !== (n = null == eM ? void 0 : null === (e = eM.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== n ? n : []).map(eN).filter(H.lm)) && void 0 !== i ? i : []
     }, [eM]),
     eq = l.useCallback((e, n) => {
       if (e.type === ep.s9s.IMG) {
@@ -246,7 +246,7 @@ function eT(e) {
           l = n.findIndex(n => n === e);
         if (l < 0) return;
         let a = n.map(e => ({
-          src: (0, v.Q)(e.src),
+          src: (0, A.Q)(e.src),
           width: e.width,
           height: e.height
         }));
@@ -268,7 +268,7 @@ function eT(e) {
         })
       }
     }, [ez]),
-    eQ = l.useCallback(e => {
+    eJ = l.useCallback(e => {
       (null == eM ? void 0 : eM.id) != null && G.default.track(ep.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
         current_page: "product",
         category: e.name,
@@ -285,7 +285,7 @@ function eT(e) {
       guildId: h
     })
   }, [_, h]);
-  let eJ = l.useCallback(e => {
+  let eQ = l.useCallback(e => {
       let {
         application: n,
         mutualGuilds: i
@@ -306,8 +306,8 @@ function eT(e) {
         let i = "https://".concat(ep.xr4, "/hc/").concat(e.toLowerCase(), "/requests/new"),
           t = new URLSearchParams;
         return t.append("tf_12275088515223", "field_value_dc_category_report_an_app_bot"), t.append("tf_12276208289431", "field_value_dc_reported_action_app_directory"), t.append("tf_12094971213335", n.id), t.append("ticket_form_id", "12275528604823"), t.append("tf_subject", "App Directory Report ".concat(n.name, " ").concat(n.id)), "".concat(i, "?").concat(t.toString())
-      }(eD, eM))
-    }, [eD, eM]),
+      }(eZ, eM))
+    }, [eZ, eM]),
     e$ = l.useCallback(e => (0, t.jsxs)(g.Menu, {
       navId: "application-directory-profile",
       "aria-label": em.Z.Messages.APP_DIRECTORY_PROFILE_UTILITIES_A11Y_LABEL,
@@ -320,54 +320,54 @@ function eT(e) {
           color: "danger",
           action: eX
         })
-      }), null != eY ? (0, t.jsx)(g.MenuGroup, {
-        children: eY
+      }), null != eB ? (0, t.jsx)(g.MenuGroup, {
+        children: eB
       }) : null]
-    }), [eY, eX]),
+    }), [eB, eX]),
     [e0, e4] = (0, P.Z)(!1, 1e3),
     e1 = l.useCallback(() => {
       if (null != eM) G.default.track(ep.rMx.APP_SHARE_BUTTON_CLICKED, {
         source: "product_page",
         application_id: eM.id,
         guild_id: h
-      }), (0, Y.JG)(eP(eM.id)), e4(!0)
+      }), (0, B.JG)(eP(eM.id)), e4(!0)
     }, [eM, e4, h]);
   l.useEffect(() => {
     let e = new URL(location.href);
     if (R && "true" === e.searchParams.get(eR)) {
       e.searchParams.delete(eR);
       let n = e.pathname + e.search;
-      (0, y.dL)(n), eH("product_page")
+      (0, y.dL)(n), ew("product_page")
     }
-  }, [R, eH]);
+  }, [R, ew]);
   let e7 = l.useCallback(() => {
-      null != eM && (R ? eH("product_page") : (G.default.track(ep.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
+      null != eM && (R ? ew("product_page") : (G.default.track(ep.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
         application_id: _,
         guild_id: h,
         auth_type: null != eM.custom_install_url ? "custom_url" : "in_app",
         source: "product_page",
         device_platform: u.tq ? "mobile_web" : "desktop_web"
-      }), (0, J.rf)({
+      }), (0, Q.rf)({
         [eR]: "true"
       })))
-    }, [eM, R, eH, _, h]),
+    }, [eM, R, ew, _, h]),
     {
       applicationSubscriptionListingsShown: e5
-    } = (0, Z.ZP)({
+    } = (0, D.ZP)({
       applicationId: null == eM ? void 0 : eM.id,
       groupListingId: null == eM ? void 0 : eM.primary_sku_id,
       guildId: h
     }),
-    e6 = (null == eM ? void 0 : eM.id) === e_.g,
-    [e9, e2] = l.useState(!1),
-    [e3, e8] = l.useState(!1),
+    e9 = (null == eM ? void 0 : eM.id) === e_.g,
+    [e6, e8] = l.useState(!1),
+    [e2, e3] = l.useState(!1),
     [ne, nn] = l.useState(!0),
     ni = e => {
-      null != e && e2(e.scrollHeight > e.clientHeight)
+      null != e && e8(e.scrollHeight > e.clientHeight)
     },
     nt = null != eW && eW.length > 0,
     nl = (null == eM ? void 0 : eM.flags) != null,
-    na = (0, N.R)(null != _ ? _ : "");
+    na = (0, x.R)(null != _ ? _ : "");
   l.useEffect(() => {
     na && null != _ && (0, f.Z)(_)
   }, [na, _]);
@@ -386,10 +386,10 @@ function eT(e) {
             }), (0, t.jsx)("div", {
               ref: ni,
               className: s()({
-                [eI.descriptionClamp]: !e3,
-                [eI.descriptionClampSafari]: !e3 && "Safari" === o().name
+                [eI.descriptionClamp]: !e2,
+                [eI.descriptionClampSafari]: !e2 && "Safari" === o().name
               }),
-              children: (0, t.jsx)(U.Z, {
+              children: (0, t.jsx)(F.Z, {
                 className: eI.detailedDescription,
                 parser: eg,
                 output: eE,
@@ -398,10 +398,10 @@ function eT(e) {
                 },
                 children: a
               })
-            }), (e9 || e3) && (0, t.jsx)(eN, {
-              isViewAll: e3,
+            }), (e6 || e2) && (0, t.jsx)(ex, {
+              isViewAll: e2,
               onToggle: () => {
-                e8(e => !e)
+                e3(e => !e)
               }
             })]
           })), n = !1) : (null == eM ? void 0 : null === (l = eM.directory_entry) || void 0 === l ? void 0 : l.short_description) !== void 0 ? e.push((0, t.jsxs)(t.Fragment, {
@@ -446,12 +446,12 @@ function eT(e) {
               totalImages: ez.length,
               name: eM.name
             }) : e.alt = em.Z.Messages.APP_DIRECTORY_PROFILE_IMAGE_DEFAULT_ALT
-          }), e.push((0, t.jsx)(A.Z, {
+          }), e.push((0, t.jsx)(v.Z, {
             className: eI.carousel,
             themedPagination: !0,
             items: ez,
             autoplayInterval: 8e3,
-            paused: !eZ,
+            paused: !eD,
             videoAutoPlay: !0,
             onCurrentItemClick: eq,
             errorComponent: n,
@@ -476,7 +476,7 @@ function eT(e) {
           }));
           break;
         case eu.ApplicationDirectoryProfileSections.PREMIUM:
-          e5 && (null == eM ? void 0 : eM.primary_sku_id) != null && e.push((0, t.jsx)(D.Z, {
+          e5 && (null == eM ? void 0 : eM.primary_sku_id) != null && e.push((0, t.jsx)(Z.Z, {
             applicationId: eM.id,
             applicationPrimarySkuId: null == eM ? void 0 : eM.primary_sku_id,
             analyticsLocation: ep.Sbl.APP_DIRECTORY_PROFILE,
@@ -508,7 +508,7 @@ function eT(e) {
         className: eI.section,
         children: e
       }, n))
-    }, [I, eG, eM, eO, e3, e9, ez, eZ, eq, na, _, h, e5, nt, nl, eW]),
+    }, [I, eG, eM, eO, e2, e6, ez, eD, eq, na, _, h, e5, nt, nl, eW]),
     nr = l.useMemo(() => {
       let e = [{
         name: eu.ApplicationDirectoryProfileSections.GENERAL,
@@ -552,7 +552,7 @@ function eT(e) {
     loading: ef === W.M.FETCHING,
     children: [(0, t.jsx)(eS, {
       app: eM,
-      iconSrc: eB
+      iconSrc: eY
     }), (0, t.jsxs)("div", {
       className: eI.__invalid_page,
       children: [(0, t.jsxs)("div", {
@@ -563,9 +563,9 @@ function eT(e) {
             className: eI.headerIcon,
             alt: "",
             "aria-hidden": !0,
-            src: eB,
-            width: ev,
-            height: ev
+            src: eY,
+            width: eA,
+            height: eA
           }), (0, t.jsx)($.Z, {
             application: eM,
             mutualGuilds: eb,
@@ -591,7 +591,7 @@ function eT(e) {
                   className: eI.premiumIcon,
                   src: i(744050)
                 })
-              }), e6 && (0, t.jsx)(en.Z, {
+              }), e9 && (0, t.jsx)(en.Z, {
                 className: eI.partnerBadge
               })]
             }), (0, t.jsxs)("div", {
@@ -603,7 +603,7 @@ function eT(e) {
               }), (0, t.jsx)(g.Button, {
                 color: g.Button.Colors.BRAND,
                 onClick: e7,
-                disabled: !ew,
+                disabled: !eH,
                 children: em.Z.Messages.APPLICATION_ADD_BUTTON
               }), (0, t.jsx)(g.Popout, {
                 renderPopout: e => {
@@ -651,7 +651,7 @@ function eT(e) {
                 loading: T,
                 children: (0, t.jsx)(X.Z, {
                   applications: eT,
-                  onViewOne: eJ
+                  onViewOne: eQ
                 })
               })]
             })]
@@ -660,8 +660,8 @@ function eT(e) {
           className: eI.sidebar,
           application: eM,
           guildId: h,
-          onViewCategory: eQ,
-          onClickGuildWidget: eU
+          onViewCategory: eJ,
+          onClickGuildWidget: eF
         })]
       })]
     })]
@@ -670,7 +670,7 @@ function eT(e) {
   })
 }
 
-function ex(e) {
+function eN(e) {
   switch (e.type) {
     case R.ee.MEDIA_PROXY:
       var n;
@@ -687,7 +687,7 @@ function ex(e) {
   }
   return console.warn("Unsupported carousel item", e), null
 }
-let eN = e => {
+let ex = e => {
     let n, {
       onToggle: i,
       isViewAll: l
@@ -756,14 +756,14 @@ function eS(e) {
       backgroundColor: a
     };
     if (null != s) {
-      let n = (0, B.aN)({
+      let n = (0, Y.aN)({
         id: s.id,
         banner: s.banner,
         size: 1024,
         canAnimate: !1
       });
       if (null != n && (e["--custom-background-static"] = "url(".concat(n), e.height = "212px"), !r) {
-        let n = (0, B.aN)({
+        let n = (0, Y.aN)({
           id: s.id,
           banner: s.banner,
           size: 1024,

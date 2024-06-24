@@ -4,19 +4,19 @@ n.d(t, {
   }
 });
 var s = n(544891),
-  a = n(570140),
-  i = n(230307),
+  i = n(570140),
+  a = n(230307),
   l = n(70956),
   r = n(981631);
 let c = 6 * l.Z.Millis.HOUR;
 async function o() {
-  let e = i.Z.lastFetched;
+  let e = a.Z.lastFetched;
   if (!(null != e && Date.now() - e < c)) try {
     let e = await s.tn.get({
       url: r.ANM.USER_ACTIVITY_STATISTICS,
       oldFormErrors: !0
     });
-    a.Z.dispatch({
+    i.Z.dispatch({
       type: "USER_ACTIVITY_STATISTICS_FETCH_SUCCESS",
       statistics: e.body
     })

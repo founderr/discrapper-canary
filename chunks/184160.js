@@ -30,17 +30,17 @@ function I(e) {
     startedPaymentFlowWithPaymentSourcesRef: f
   } = (0, u.usePaymentContext)(), {
     isGift: M
-  } = (0, _.wD)(), N = null != I ? (0, d.Af)(I) : null, T = null != N ? (0, d.gq)(N.planId) : null, j = null != N ? (0, d.Rd)(N.planId) : null, A = (0, p.Kp)({
+  } = (0, _.wD)(), N = null != I ? (0, d.Af)(I) : null, j = null != N ? (0, d.gq)(N.planId) : null, T = null != N ? (0, d.Rd)(N.planId) : null, A = (0, p.Kp)({
     isTrial: !1,
     isGift: M,
     selectedSkuId: E,
     startedPaymentFlowWithPaymentSources: f.current
   });
-  return l()(null != j, "Expected premium type"), (0, t.jsx)(o.Z, {
-    premiumType: j,
+  return l()(null != T, "Expected premium type"), (0, t.jsx)(o.Z, {
+    premiumType: T,
     titleText: x.Z.Messages.PREMIUM_DOWNGRADE_WHAT_YOU_LOSE_TITLE,
     subtitleText: x.Z.Messages.PREMIUM_DOWNGRADE_WHAT_YOU_LOSE_SUBTITLE.format({
-      subscriptionName: T
+      subscriptionName: j
     }),
     footer: (0, t.jsxs)("div", {
       className: L.whatYouLoseButtonContainer,

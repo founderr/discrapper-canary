@@ -3,32 +3,32 @@ n.d(t, {
     return a
   }
 });
-var r = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(120356),
-  o = n.n(s),
+var r = n(120356),
+  o = n.n(r),
   i = n(354676),
-  l = n(854055);
+  c = n(854055);
 
 function a(e) {
   let {
     copy: t,
     className: n
   } = e;
-  return (0, r.jsxs)("div", {
-    className: o()(l.badgeContainer, n),
-    children: [(0, r.jsx)("div", {
-      className: l.newBadge,
+  return (0, s.jsxs)("div", {
+    className: o()(c.badgeContainer, n),
+    children: [(0, s.jsx)("div", {
+      className: c.newBadge,
       children: t
-    }), (0, r.jsx)("span", {
-      className: o()(l.star, l.starLeft),
-      children: (0, r.jsx)(i.Z, {
+    }), (0, s.jsx)("span", {
+      className: o()(c.star, c.starLeft),
+      children: (0, s.jsx)(i.Z, {
         width: "10",
         height: "10"
       })
-    }), (0, r.jsx)("span", {
-      className: o()(l.star, l.starRight),
-      children: (0, r.jsx)(i.Z, {
+    }), (0, s.jsx)("span", {
+      className: o()(c.star, c.starRight),
+      children: (0, s.jsx)(i.Z, {
         width: "13",
         height: "13"
       })

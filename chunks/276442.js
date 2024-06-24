@@ -30,28 +30,28 @@ function E(e) {
     step: x,
     paymentSources: h,
     paymentSourceId: P,
-    setPaymentSourceId: v,
-    purchaseError: A,
+    setPaymentSourceId: A,
+    purchaseError: v,
     setPurchaseError: f,
     purchaseErrorBlockRef: M,
     paymentAuthenticationState: g,
     selectedSkuId: C,
-    activeSubscription: L,
-    previousStepRef: R
+    activeSubscription: R,
+    previousStepRef: O
   } = (0, u.usePaymentContext)(), {
-    isGift: O
+    isGift: L
   } = (0, o.wD)(), j = {
     ...(0, a.fL)(),
     paymentSources: h,
     paymentSourceId: P,
-    setPaymentSourceId: v,
-    purchaseError: A,
+    setPaymentSourceId: A,
+    purchaseError: v,
     setPurchaseError: f,
     purchaseErrorBlockRef: M,
     paymentAuthenticationState: g,
     selectedSkuId: C,
-    isGift: O
-  }, y = (0, r.N)(p), Z = !O && null != y && null != C && I.nG[y.trial_id].skus.includes(C), b = null != N ? N : () => {
+    isGift: L
+  }, y = (0, r.N)(p), Z = !L && null != y && null != C && I.nG[y.trial_id].skus.includes(C), b = null != N ? N : () => {
     E(Object.values(h).length < 1 && null == s ? d.h8.PLAN_SELECT : d.h8.REVIEW, {
       trackedFromStep: d.h8.PAYMENT_TYPE
     })
@@ -60,7 +60,7 @@ function E(e) {
   let D = (0, i.Z)(() => Date.now(), [x]);
   return (0, a.vP)({
     paymentModalArgs: j,
-    initialStep: T && null == R.current ? d.h8.CREDIT_CARD_INFORMATION : d.h8.PAYMENT_TYPE,
+    initialStep: T && null == O.current ? d.h8.CREDIT_CARD_INFORMATION : d.h8.PAYMENT_TYPE,
     prependSteps: [d.h8.PROMOTION_INFO],
     appendSteps: [d.h8.REVIEW, d.h8.CONFIRM],
     breadcrumpSteps: l,
@@ -88,6 +88,6 @@ function E(e) {
       })
     },
     isEligibleForTrial: Z,
-    allowDesktopRedirectPurchase: (0, _.tr)(C, O, L)
+    allowDesktopRedirectPurchase: (0, _.tr)(C, L, R)
   })
 }

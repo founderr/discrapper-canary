@@ -3,7 +3,7 @@ t.d(n, {
     return s
   },
   bC: function() {
-    return o
+    return l
   },
   md: function() {
     return i
@@ -14,7 +14,7 @@ var a = t(470079),
 let s = 262,
   i = 100;
 
-function o(e, n) {
+function l(e, n) {
   let t = a.useMemo(() => "clan-banner-container-".concat((0, r.Z)()), []);
   return {
     styleContent: a.useMemo(() => {

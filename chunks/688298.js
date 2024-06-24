@@ -7,29 +7,29 @@ var a = t(735250),
   r = t(470079),
   s = t(481060),
   i = t(689938),
-  o = t(318145);
+  l = t(318145);
 
-function l(e) {
+function o(e) {
   let {
     showSecondaryColor: n,
     palette: t,
-    onPrimaryColorChange: l,
+    onPrimaryColorChange: o,
     onSecondaryColorChange: c
   } = e, d = r.useRef(null);
   return (0, s.useFocusLock)(d), (0, a.jsxs)("div", {
-    className: o.popoutContainer,
+    className: l.popoutContainer,
     children: [(0, a.jsx)(s.Text, {
       variant: "text-xs/semibold",
       color: "header-secondary",
-      className: o.customColorsHeader,
+      className: l.customColorsHeader,
       children: i.Z.Messages.CLAN_PALETTE_PICKER_CUSTOM_COLORS
     }), (0, a.jsxs)("div", {
       ref: d,
-      className: o.colorPickersContainer,
+      className: l.colorPickersContainer,
       children: [(0, a.jsxs)("div", {
-        className: o.colorColumn,
+        className: l.colorColumn,
         children: [(0, a.jsx)("div", {
-          className: o.colorSwatch,
+          className: l.colorSwatch,
           style: {
             backgroundColor: t.primary
           }
@@ -38,17 +38,17 @@ function l(e) {
           color: "text-normal",
           children: i.Z.Messages.USER_SETTINGS_PROFILE_THEME_PRIMARY
         }), (0, a.jsx)(s.CustomColorPicker, {
-          className: o.colorPicker,
+          className: l.colorPicker,
           value: t.primary,
           eagerUpdate: !0,
           wrapperComponentType: "div",
           showEyeDropper: !0,
-          onChange: l
+          onChange: o
         })]
       }), n && (0, a.jsxs)("div", {
-        className: o.colorColumn,
+        className: l.colorColumn,
         children: [(0, a.jsx)("div", {
-          className: o.colorSwatch,
+          className: l.colorSwatch,
           style: {
             backgroundColor: t.secondary
           }
@@ -57,7 +57,7 @@ function l(e) {
           color: "text-normal",
           children: i.Z.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
         }), (0, a.jsx)(s.CustomColorPicker, {
-          className: o.colorPicker,
+          className: l.colorPicker,
           value: t.secondary,
           eagerUpdate: !0,
           wrapperComponentType: "div",
@@ -75,14 +75,14 @@ function c(e) {
     showSecondaryColor: t,
     onRequestClose: r,
     children: i,
-    palette: o,
+    palette: l,
     onPrimaryColorChange: c,
     onSecondaryColorChange: d
   } = e;
   return (0, a.jsx)(s.Popout, {
-    renderPopout: () => (0, a.jsx)(l, {
+    renderPopout: () => (0, a.jsx)(o, {
       showSecondaryColor: t,
-      palette: o,
+      palette: l,
       onPrimaryColorChange: c,
       onSecondaryColorChange: d
     }),

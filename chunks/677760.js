@@ -12,27 +12,27 @@ var s, r, i = n(735250),
   d = n(587444),
   E = n(393238),
   _ = n(388905),
-  h = n(108427),
-  I = n(314897),
-  p = n(701190),
-  N = n(626135),
+  I = n(108427),
+  h = n(314897),
+  N = n(701190),
+  p = n(626135),
   g = n(768581),
   m = n(823379),
   T = n(264229),
-  f = n(230224),
-  Z = n(617730),
-  A = n(258356),
+  Z = n(230224),
+  A = n(617730),
+  f = n(258356),
   x = n(981631),
-  v = n(689938),
-  O = n(125739);
+  O = n(689938),
+  S = n(125739);
 
-function S() {
+function v() {
   return (0, i.jsx)("div", {
-    className: O.centerFlex,
+    className: S.centerFlex,
     children: (0, i.jsx)(c.Spinner, {})
   })
 }(r = s || (s = {}))[r.LOADING = 0] = "LOADING", r[r.DETAILS = 1] = "DETAILS", r[r.ERROR = 2] = "ERROR";
-let C = e => {
+let D = e => {
   let t = (null == e ? void 0 : e.state) == null && (null == e ? void 0 : e.channel) == null;
   if (null == e || null == e.state || t) return 0;
   let n = e.state;
@@ -55,24 +55,24 @@ let C = e => {
   }
 };
 
-function D(e) {
+function P(e) {
   let {
     invite: t,
     onAcceptInvite: n
   } = e;
   if ((null == t ? void 0 : t.state) === x.r2o.BANNED) return (0, i.jsx)(d.u, {
-    text: v.Z.Messages.AUTH_BANNED_INVITE_BODY,
-    buttonCta: v.Z.Messages.INVITE_INVALID_CTA,
+    text: O.Z.Messages.AUTH_BANNED_INVITE_BODY,
+    buttonCta: O.Z.Messages.INVITE_INVALID_CTA,
     onClick: n
   });
   return (0, i.jsx)(d.u, {
-    text: v.Z.Messages.INVITE_INVALID_ERROR,
-    buttonCta: v.Z.Messages.INVITE_INVALID_CTA,
+    text: O.Z.Messages.INVITE_INVALID_ERROR,
+    buttonCta: O.Z.Messages.INVITE_INVALID_CTA,
     onClick: n
   })
 }
 
-function P(e) {
+function C(e) {
   let {
     children: t,
     cardChildren: n,
@@ -81,22 +81,22 @@ function P(e) {
     ...o
   } = e, {
     invite: c
-  } = o, [u, d] = l.useState(C(c)), {
+  } = o, [u, d] = l.useState(D(c)), {
     ref: _,
-    height: h
-  } = (0, E.Z)(), I = (0, a.useSpring)({
-    height: null != h && 0 !== h ? "".concat(h, "px") : "".concat(s, "px"),
+    height: I
+  } = (0, E.Z)(), h = (0, a.useSpring)({
+    height: null != I && 0 !== I ? "".concat(I, "px") : "".concat(s, "px"),
     config: a.config.stiff
   });
   return l.useEffect(() => {
-    let e = C(c);
+    let e = D(c);
     e !== u && d(e)
   }, [c, u]), (0, i.jsxs)(a.animated.div, {
-    className: O.inviteCard,
-    style: I,
+    className: S.inviteCard,
+    style: h,
     children: [(0, i.jsx)(a.animated.div, {
-      className: O.inviteChildContainer,
-      style: I,
+      className: S.inviteChildContainer,
+      style: h,
       children: (0, i.jsx)("section", {
         ref: _,
         className: null == r ? void 0 : r(u),
@@ -110,17 +110,17 @@ function R(e) {
   let {
     invite: t
   } = e;
-  if (null == t || !(0, f.JI)(t)) return null;
+  if (null == t || !(0, Z.JI)(t)) return null;
   let n = e => {
     if (null == t) return null;
-    if (1 === e) return (0, i.jsx)(A.X, {
+    if (1 === e) return (0, i.jsx)(f.X, {
       invite: t
     });
     return null
   };
-  return (0, i.jsx)(P, {
+  return (0, i.jsx)(C, {
     startAnimHeightPx: 0,
-    innerStyle: () => O.guildInfoInner,
+    innerStyle: () => S.guildInfoInner,
     ...e,
     children: e => n(e)
   })
@@ -130,27 +130,27 @@ function M(e) {
   let {
     invite: t
   } = e, n = n => {
-    if (null == t) return (0, i.jsx)(S, {});
+    if (null == t) return (0, i.jsx)(v, {});
     switch (n) {
       case 1:
-        return (0, i.jsx)(Z.Z, {
+        return (0, i.jsx)(A.Z, {
           ...e,
           invite: t
         });
       case 2:
-        return (0, i.jsx)(D, {
+        return (0, i.jsx)(P, {
           ...e,
           invite: t
         });
       default:
-        return (0, i.jsx)(S, {})
+        return (0, i.jsx)(v, {})
     }
   }, s = {
-    1: O.inviteCardInner,
-    2: O.inviteCardInnerError,
-    0: O.inviteCardInnerLoading
+    1: S.inviteCardInner,
+    2: S.inviteCardInnerError,
+    0: S.inviteCardInnerLoading
   };
-  return (0, i.jsx)(P, {
+  return (0, i.jsx)(C, {
     startAnimHeightPx: 200,
     innerStyle: e => s[e],
     ...e,
@@ -174,9 +174,9 @@ function L(e) {
   }
   return (0, i.jsxs)(_.ZP, {
     theme: x.BRd.DARK,
-    className: O.splashBackground,
+    className: S.splashBackground,
     style: r,
-    contentClassName: O.centerAuthBoxContent,
+    contentClassName: S.centerAuthBoxContent,
     children: [(0, i.jsx)(M, {
       ...e,
       onAcceptInvite: n
@@ -190,11 +190,11 @@ function j(e) {
   let {
     inviteKey: t,
     transitionTo: n
-  } = e, s = (0, o.e7)([p.Z], () => p.Z.getInvite(t));
+  } = e, s = (0, o.e7)([N.Z], () => N.Z.getInvite(t));
   return l.useEffect(() => {
-    (0, h.e)("invite_mobile")
+    (0, I.e)("invite_mobile")
   }, []), l.useEffect(() => {
-    null != s && s.state === x.r2o.RESOLVED && N.default.track(x.rMx.INVITE_VIEWED, {
+    null != s && s.state === x.r2o.RESOLVED && p.default.track(x.rMx.INVITE_VIEWED, {
       invite_code: t,
       friends_count: null == s ? void 0 : s.friends_count
     }, {
@@ -205,15 +205,15 @@ function j(e) {
     onAcceptInvite: e => {
       ! function(e, t, n) {
         var s, r, i;
-        null == e || e.preventDefault(), N.default.track(x.rMx.INVITE_APP_OPENED, {
+        null == e || e.preventDefault(), p.default.track(x.rMx.INVITE_APP_OPENED, {
           invite_code: (0, T.jX)(t),
           guild_id: null == n ? void 0 : null === (s = n.guild) || void 0 === s ? void 0 : s.id,
           channel_id: null == n ? void 0 : null === (r = n.channel) || void 0 === r ? void 0 : r.id,
           inviter_id: null == n ? void 0 : null === (i = n.inviter) || void 0 === i ? void 0 : i.id
         });
         let l = null != n && n.state !== x.r2o.EXPIRED && n.state !== x.r2o.BANNED ? t : void 0,
-          a = I.default.getFingerprint(),
-          o = null != a ? a : I.default.getId(),
+          a = h.default.getFingerprint(),
+          o = null != a ? a : h.default.getId(),
           c = null != n && (null == n ? void 0 : n.type) != null ? Number(null == n ? void 0 : n.type) : void 0;
         u.Z.openApp(l, void 0, o, void 0, c)
       }(e, t, s)

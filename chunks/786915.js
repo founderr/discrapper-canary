@@ -44,7 +44,7 @@ function p(e) {
         null == c || c(), (0, r.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("99387"), n.e("7654"), n.e("9785")]).then(n.bind(n, 560114));
+          } = await Promise.all([n.e("99387"), n.e("7654"), n.e("1425")]).then(n.bind(n, 560114));
           return n => (0, l.jsx)(e, {
             ...n,
             guild: t,

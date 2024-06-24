@@ -1,10 +1,10 @@
-var _ = S(442837),
-  t = S(339085);
-e.Z = function(E, e) {
-  return (0, _.e7)([t.Z], () => {
-    var S;
-    if (null == e) return null;
-    let _ = t.Z.getDisambiguatedEmojiContext(E);
-    return null !== (S = _.getById(e)) && void 0 !== S ? S : _.getByName(e)
-  }, [E, e])
+var i = t(442837),
+  l = t(339085);
+n.Z = function(e, n) {
+  return (0, i.e7)([l.Z], () => {
+    var t;
+    if (null == n) return null;
+    let i = l.Z.getDisambiguatedEmojiContext(e);
+    return null !== (t = i.getById(n)) && void 0 !== t ? t : i.getByName(n)
+  }, [e, n])
 }

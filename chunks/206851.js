@@ -8,8 +8,8 @@ t(470079);
 var r = t(249849),
   s = t(907561),
   i = t(689938),
-  o = t(924936);
-let l = ["#1e349e", "#4d61de", "#7887e2", "#92a6e4"],
+  l = t(924936);
+let o = ["#1e349e", "#4d61de", "#7887e2", "#92a6e4"],
   c = ["#fc6e4e"],
   d = [.05, .15, .26, .4],
   u = [{
@@ -42,7 +42,7 @@ function C(e) {
     primaryColorsTransformed: E,
     secondaryColorsTransformed: T
   } = (0, r.s)({
-    primaryBaseColors: l,
+    primaryBaseColors: o,
     primaryTintColor: C,
     primaryTintLuminances: d,
     primaryLuminanceWeights: u,
@@ -65,7 +65,7 @@ function C(e) {
         children: _
       })
     }), (0, a.jsx)("use", {
-      href: "".concat(o, "#wrapper-layer"),
+      href: "".concat(l, "#wrapper-layer"),
       id: I
     })]
   })

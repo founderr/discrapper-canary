@@ -45,7 +45,7 @@ let E = e => {
   let {
     listingId: n,
     isListingPublished: t
-  } = e, E = (0, u.Z)(), [C] = o._T(n), [m] = o.d9(n, E), [N] = o.H9(n);
+  } = e, E = (0, u.Z)(), [C] = o._T(n), [m] = o.d9(n, E), [S] = o.H9(n);
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(_, {
       listingName: C
@@ -58,15 +58,15 @@ let E = e => {
       variant: "heading-xl/semibold",
       className: d.tierPrice,
       tag: "div",
-      children: (0, r.T4)(N.price, N.currency)
+      children: (0, r.T4)(S.price, S.currency)
     }), (0, i.jsx)(l.Text, {
       variant: "text-xs/normal",
       color: "interactive-normal",
       className: d.tierPeriod,
       children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_AMOUNT_PER_PERIOD.format({
         period: (0, a.JE)({
-          interval: N.interval,
-          interval_count: N.interval_count
+          interval: S.interval,
+          interval_count: S.interval_count
         })
       })
     })]

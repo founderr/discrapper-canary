@@ -9,8 +9,8 @@ var n = t(735250),
   c = t(906732),
   E = t(626135),
   u = t(314684),
-  d = t(794484),
-  R = t(347475),
+  R = t(794484),
+  d = t(347475),
   I = t(342414),
   T = t(487980),
   A = t(391110),
@@ -27,7 +27,7 @@ s.Z = () => {
     } = (0, c.ZP)(_.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
     [C, g] = a.useState(!1);
   (0, u.FM)();
-  let f = (0, T.b)("SubscriberNitroHome");
+  let P = (0, T.b)("SubscriberNitroHome");
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(o.AdvancedScrollerAuto, {
       className: p.mainPageScroller,
@@ -39,14 +39,14 @@ s.Z = () => {
           children: [(0, n.jsx)(I.Z, {
             className: p.heroHeading,
             location: A.MQ.HOME
-          }), (0, n.jsx)(d.Z, {
+          }), (0, n.jsx)(R.Z, {
             variant: A.R0.WHATS_NEW,
             className: i()(p.whatsNew, {
-              [p.whatsNewWithOriginalHeroHeading]: !f
+              [p.whatsNewWithOriginalHeroHeading]: !P
             }),
             noBackground: !0,
             leftAlignHeaders: !0
-          }), (0, n.jsx)(d.Z, {
+          }), (0, n.jsx)(R.Z, {
             className: p.perksDiscoverability,
             noBackground: !0,
             leftAlignHeaders: !0,
@@ -54,7 +54,7 @@ s.Z = () => {
               setIsAllPerksVisible: t,
               previousComponent: A.MQ.HOME
             })
-          }), (0, n.jsx)(R.Z, {
+          }), (0, n.jsx)(d.Z, {
             className: p.giftNitro,
             location: _.Z.PREMIUM_MARKETING_GIFT_SECTION,
             analyticsLocation: {

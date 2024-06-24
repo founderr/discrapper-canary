@@ -3,8 +3,8 @@ var a = t(735250),
   r = t(470079),
   s = t(481060),
   i = t(467138),
-  o = t(246364),
-  l = t(983736),
+  l = t(246364),
+  o = t(983736),
   c = t(5056),
   d = t(565321),
   u = t(297619),
@@ -23,15 +23,15 @@ n.Z = function(e) {
     formDescription: I,
     onFieldsSave: g,
     onDescriptionSave: p
-  } = e, N = r.useRef(!1), [v, y] = r.useState(null), [A, S] = r.useState(e.formFields);
-  r.useEffect(() => S(e.formFields), [e.formFields]);
+  } = e, N = r.useRef(!1), [v, y] = r.useState(null), [S, A] = r.useState(e.formFields);
+  r.useEffect(() => A(e.formFields), [e.formFields]);
   let M = r.useRef(e.formFields),
-    j = r.useMemo(() => A.filter(l.kT), [A]),
-    b = r.useMemo(() => A.filter(l._C), [A]),
-    R = b.length,
-    L = r.useMemo(() => A.length === x.nx, [A]),
-    O = r.useMemo(() => A.some(o.J), [A]),
-    Z = r.useMemo(() => A.some(e => !(0, o.J)(e)), [A]),
+    b = r.useMemo(() => S.filter(o.kT), [S]),
+    j = r.useMemo(() => S.filter(o._C), [S]),
+    R = j.length,
+    L = r.useMemo(() => S.length === x.nx, [S]),
+    O = r.useMemo(() => S.some(l.J), [S]),
+    Z = r.useMemo(() => S.some(e => !(0, l.J)(e)), [S]),
     D = R > 0,
     P = (0, i.e)(n.id) || _,
     F = r.useCallback(() => {
@@ -39,41 +39,41 @@ n.Z = function(e) {
     }, []),
     w = r.useCallback(async e => {
       if (!N.current) {
-        N.current = !0, _ && (e = e.filter(e => e.field_type !== o.QJ.TERMS));
+        N.current = !0, _ && (e = e.filter(e => e.field_type !== l.QJ.TERMS));
         try {
-          await g(n.id, e), E(), S(e), M.current = e
+          await g(n.id, e), E(), A(e), M.current = e
         } catch (e) {
-          throw S(M.current), e
+          throw A(M.current), e
         } finally {
           null != v && y(null), N.current = !1
         }
       }
     }, [v, n.id, E, g, _]),
     k = r.useCallback(async e => {
-      let n = e.field_type === o.QJ.TERMS ? [e, ...A] : [...A, e];
+      let n = e.field_type === l.QJ.TERMS ? [e, ...S] : [...S, e];
       await w(n)
-    }, [A, w]),
-    U = r.useCallback(async (e, n) => {
-      if (A[e] === n) return;
-      let t = [...A];
+    }, [S, w]),
+    G = r.useCallback(async (e, n) => {
+      if (S[e] === n) return;
+      let t = [...S];
       t[e] = n, await w(t)
-    }, [A, w]),
-    G = r.useCallback(async (e, n, t) => {
-      let a = A.indexOf(e),
-        r = [...A];
-      if (null != n && n !== a && (r.splice(a, 1), r.splice(n, 0, e), S(r)), t) try {
+    }, [S, w]),
+    U = r.useCallback(async (e, n, t) => {
+      let a = S.indexOf(e),
+        r = [...S];
+      if (null != n && n !== a && (r.splice(a, 1), r.splice(n, 0, e), A(r)), t) try {
         await w(r), null !== v && y(null)
       } catch (e) {
         F()
       } else v !== n && y(n)
-    }, [v, A, w, F]),
+    }, [v, S, w, F]),
     B = r.useCallback(async e => {
       try {
-        await w([...A.slice(0, e), ...A.slice(e + 1)])
+        await w([...S.slice(0, e), ...S.slice(e + 1)])
       } catch (e) {
         F()
       }
-    }, [A, w, F]),
+    }, [S, w, F]),
     H = (0, a.jsxs)(a.Fragment, {
       children: [!T && (0, a.jsx)(m.ZP, {
         guild: n
@@ -84,16 +84,16 @@ n.Z = function(e) {
       }), !O && !L && (0, a.jsx)(u.Z, {
         addFormField: k,
         guild: n
-      }), j.map(e => (0, C.a0)({
+      }), b.map(e => (0, C.a0)({
         dropHoveredIndex: v,
         formField: e,
         guild: n,
-        index: A.indexOf(e),
+        index: S.indexOf(e),
         isDragEnabled: !1,
         submittedGuildJoinRequestsCount: t,
         removeFormField: B,
-        updateFormField: U,
-        updateFormFieldOrder: G,
+        updateFormField: G,
+        updateFormFieldOrder: U,
         canRemove: !0,
         actionsLocation: _ ? "side" : "footer"
       }))]
@@ -104,17 +104,17 @@ n.Z = function(e) {
       showManualApprovalWarning: !_ && !D,
       guild: n,
       showHeader: !_
-    }), b.map(e => (0, C.a0)({
+    }), j.map(e => (0, C.a0)({
       dropHoveredIndex: v,
       formField: e,
       guild: n,
-      index: A.indexOf(e),
+      index: S.indexOf(e),
       isDragEnabled: D,
       submittedGuildJoinRequestsCount: t,
       removeFormField: B,
-      updateFormField: U,
-      updateFormFieldOrder: G,
-      canRemove: !(_ && b.length <= 1),
+      updateFormField: G,
+      updateFormFieldOrder: U,
+      canRemove: !(_ && j.length <= 1),
       actionsLocation: _ ? "side" : "footer"
     })), Z && !L && (0, a.jsx)(h.Z, {
       addFormField: k,

@@ -8,8 +8,8 @@ t(470079);
 var r = t(249849),
   s = t(907561),
   i = t(689938),
-  o = t(585025);
-let l = ["#0fa3dd", "#a7e4e4", "#a2ccdd"],
+  l = t(585025);
+let o = ["#0fa3dd", "#a7e4e4", "#a2ccdd"],
   c = ["#0b3215", "#a6b51a", "#35748a", "#65a88f", "#621c12", "#f96748", "#ffbbbb"],
   d = [.25, .9, .9],
   u = [{
@@ -57,7 +57,7 @@ function C(e) {
     primaryColorsTransformed: E,
     secondaryColorsTransformed: T
   } = (0, r.s)({
-    primaryBaseColors: l,
+    primaryBaseColors: o,
     primaryTintColor: C,
     primaryTintLuminances: d,
     primaryLuminanceWeights: u,
@@ -95,12 +95,12 @@ function C(e) {
         children: _
       })]
     }), (0, a.jsx)("use", {
-      href: "".concat(o, "#sky"),
+      href: "".concat(l, "#sky"),
       style: {
         fill: "url(#sky-gradient)"
       }
     }), (0, a.jsx)("use", {
-      href: "".concat(o, "#wrapper-layer"),
+      href: "".concat(l, "#wrapper-layer"),
       id: I
     })]
   })

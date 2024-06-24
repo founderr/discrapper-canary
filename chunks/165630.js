@@ -1,6 +1,6 @@
 n(653041);
-var s, a = n(442837),
-  i = n(570140),
+var s, i = n(442837),
+  a = n(570140),
   l = n(381496),
   r = n(430824);
 
@@ -21,7 +21,7 @@ let o = {},
     }
   };
 d();
-class u extends(s = a.ZP.PersistedStore) {
+class u extends(s = i.ZP.PersistedStore) {
   initialize(e) {
     null != e && (o = e), this.waitFor(r.Z)
   }
@@ -38,7 +38,7 @@ class u extends(s = a.ZP.PersistedStore) {
     return 0 !== o.lastFetched
   }
 }
-c(u, "displayName", "GuildAffinitiesStore"), c(u, "persistKey", "GuildAffinitiesStore"), t.Z = new u(i.Z, {
+c(u, "displayName", "GuildAffinitiesStore"), c(u, "persistKey", "GuildAffinitiesStore"), t.Z = new u(a.Z, {
   CONNECTION_OPEN: function() {
     return Date.now() - o.lastFetched > 864e5 && (0, l.j)(), !1
   },
@@ -50,12 +50,12 @@ c(u, "displayName", "GuildAffinitiesStore"), c(u, "persistKey", "GuildAffinities
       let {
         affinity: n,
         guild_id: s
-      } = e, a = {
+      } = e, i = {
         score: n,
         guildId: s,
         index: t
       };
-      o.guildAffinitiesByGuildId[s] = a, o.guildAffinities.push(a)
+      o.guildAffinitiesByGuildId[s] = i, o.guildAffinities.push(i)
     })
   },
   LOGOUT: function() {

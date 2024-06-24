@@ -1,4 +1,4 @@
-n.d(t, {
+t.d(s, {
   T: function() {
     return o
   },
@@ -6,20 +6,20 @@ n.d(t, {
     return c
   }
 });
-var s = n(536285),
-  r = n(703656),
-  i = n(314897),
-  l = n(358085),
-  a = n(981631);
-let o = l.isPlatformEmbedded ? a.dG4 : (e, t) => {
-    if (!(0, r.DB)()) return s.default.request(a.Etm.DEEP_LINK, {
+var n = t(536285),
+  r = t(703656),
+  i = t(314897),
+  a = t(358085),
+  l = t(981631);
+let o = a.isPlatformEmbedded ? l.dG4 : (e, s) => {
+    if (!(0, r.DB)()) return n.default.request(l.Etm.DEEP_LINK, {
       type: e,
-      params: t
+      params: s
     })
   },
-  c = l.isPlatformEmbedded ? a.dG4 : (e, t) => {
+  c = a.isPlatformEmbedded ? l.dG4 : (e, s) => {
     if (!i.default.isAuthenticated()) return o(e, {
-      ...t || {},
+      ...s || {},
       fingerprint: i.default.getFingerprint()
     })
   }

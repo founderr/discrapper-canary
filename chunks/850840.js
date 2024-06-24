@@ -1,9 +1,9 @@
 let r;
 n(653041);
-var u, i = n(442837),
-  s = n(570140);
+var a, s = n(442837),
+  l = n(570140);
 
-function l(e, t, n) {
+function i(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -15,7 +15,7 @@ let o = {
   hasAcceptedStoreTerms: !1,
   hasAcceptedEulaIds: []
 };
-class c extends(u = i.ZP.PersistedStore) {
+class u extends(a = s.ZP.PersistedStore) {
   initialize(e) {
     r = null != e ? e : o
   }
@@ -29,10 +29,10 @@ class c extends(u = i.ZP.PersistedStore) {
     return r.hasAcceptedEulaIds.includes(e)
   }
 }
-l(c, "displayName", "ApplicationStoreUserSettingsStore"), l(c, "persistKey", "ApplicationStoreUserSettingsStore"), l(c, "migrations", [e => null == e.hasAcceptedEulaIds ? {
+i(u, "displayName", "ApplicationStoreUserSettingsStore"), i(u, "persistKey", "ApplicationStoreUserSettingsStore"), i(u, "migrations", [e => null == e.hasAcceptedEulaIds ? {
   ...e,
   hasAcceptedEulaIds: []
-} : e]), t.Z = new c(s.Z, {
+} : e]), t.Z = new u(l.Z, {
   APPLICATION_STORE_ACCEPT_STORE_TERMS: function() {
     r.hasAcceptedStoreTerms = !0
   },

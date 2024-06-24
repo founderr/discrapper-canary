@@ -1,4 +1,4 @@
-E.d(n, {
+t.d(n, {
   ER: function() {
     return l
   },
@@ -8,38 +8,38 @@ E.d(n, {
   s$: function() {
     return N
   }
-}), E(724458), E(47120), E(392711);
-var t = E(19780),
-  _ = E(5192),
-  s = E(700785),
-  a = E(427679),
-  r = E(157925),
-  u = E(981631),
-  M = E(71080),
-  i = E(689938);
+}), t(724458), t(47120), t(392711);
+var E = t(19780),
+  _ = t(5192),
+  s = t(700785),
+  a = t(427679),
+  u = t(157925),
+  r = t(981631),
+  i = t(71080),
+  M = t(689938);
 
-function l(e, n, E, t) {
+function l(e, n, t, E) {
   let s = n[0],
-    a = _.ZP.getName(e, E, s),
-    r = null != t ? t : n.length;
-  return 1 === r && null != s ? a : null == s ? i.Z.Messages.SPEAKING_COUNT.format({
-    count: r
-  }) : i.Z.Messages.USER_SUMMARY_WITH_OTHERS.format({
+    a = _.ZP.getName(e, t, s),
+    u = null != E ? E : n.length;
+  return 1 === u && null != s ? a : null == s ? M.Z.Messages.SPEAKING_COUNT.format({
+    count: u
+  }) : M.Z.Messages.USER_SUMMARY_WITH_OTHERS.format({
     name: a,
-    count: r - 1
+    count: u - 1
   })
 }
 
 function S(e, n) {
   switch (e) {
-    case M.aC.OWNER:
-      return i.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
-    case M.aC.ADMINISTRATOR:
-      return i.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
-    case M.aC.MEMBER:
-    case M.aC.ROLE:
-      return n ? i.Z.Messages.CHANNEL_PERMISSIONS_CANNOT_REMOVE_PERMISSIONS : i.Z.Messages.CHANNEL_PERMISSIONS_REMOVE_MODERATOR_TOOLTIP;
-    case M.aC.EMPTY_STATE:
+    case i.aC.OWNER:
+      return M.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
+    case i.aC.ADMINISTRATOR:
+      return M.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
+    case i.aC.MEMBER:
+    case i.aC.ROLE:
+      return n ? M.Z.Messages.CHANNEL_PERMISSIONS_CANNOT_REMOVE_PERMISSIONS : M.Z.Messages.CHANNEL_PERMISSIONS_REMOVE_MODERATOR_TOOLTIP;
+    case i.aC.EMPTY_STATE:
   }
   return null
 }
@@ -50,8 +50,8 @@ function N(e) {
     channel_id: e.id,
     guild_id: e.guild_id,
     topic: null == n ? void 0 : n.topic,
-    media_session_id: t.Z.getMediaSessionId(),
-    request_to_speak_state: s.Uu(u.Plq.REQUEST_TO_SPEAK, e) ? r.BM.EVERYONE : r.BM.NO_ONE,
+    media_session_id: E.Z.getMediaSessionId(),
+    request_to_speak_state: s.Uu(r.Plq.REQUEST_TO_SPEAK, e) ? u.BM.EVERYONE : u.BM.NO_ONE,
     stage_instance_id: null == n ? void 0 : n.id
   }
 }

@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return v
+    return j
   }
 });
 var n = t(735250),
@@ -27,8 +27,8 @@ var n = t(735250),
   R = t(18438),
   M = t(778825),
   x = t(856607),
-  D = t(594496),
-  p = t(856768),
+  p = t(594496),
+  D = t(856768),
   L = t(981631),
   P = t(689938);
 
@@ -54,7 +54,7 @@ function f(e) {
   })
 }
 
-function v(e) {
+function j(e) {
   let {
     selectedGuild: s
   } = e, {
@@ -63,8 +63,8 @@ function v(e) {
     let e = O.default.getCurrentUser();
     return l()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e
   }), E = (0, r.e7)([A.Z], () => !A.Z.isFetchingProfile(a.id)), m = (0, r.e7)([C.Z], () => C.Z.hidePersonalInformation), {
-    pendingAvatar: v,
-    pendingAvatarDecoration: j,
+    pendingAvatar: j,
+    pendingAvatarDecoration: v,
     pendingProfileEffectId: U,
     pendingNickname: B,
     pendingBanner: b,
@@ -92,8 +92,8 @@ function v(e) {
       onAvatarChange: R.I5,
       onBannerChange: R.g_,
       onUpsellClick: f,
-      pendingAvatar: v,
-      pendingAvatarDecoration: j,
+      pendingAvatar: j,
+      pendingAvatarDecoration: v,
       pendingProfileEffectId: U,
       pendingBanner: b,
       pendingBio: G,
@@ -111,7 +111,7 @@ function v(e) {
         helpCenterLink: h.Z.getArticleURL(L.BhN.GUILD_PROFILES)
       })
     }), null != s ? (0, n.jsxs)(n.Fragment, {
-      children: [(0, n.jsx)(p.Z, {
+      children: [(0, n.jsx)(D.Z, {
         guildId: s.id,
         onChange: e => {
           null != e && (0, R.HP)(e)
@@ -125,7 +125,7 @@ function v(e) {
           location: "GuildIdentitySettingsPage",
           pendingThemeColors: V
         }),
-        children: (0, n.jsx)(D.Z, {})
+        children: (0, n.jsx)(p.Z, {})
       })]
     }) : (0, n.jsx)(x.Z, {})]
   })

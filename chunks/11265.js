@@ -3,8 +3,8 @@ var a = t(735250),
   r = t(470079),
   s = t(120356),
   i = t.n(s),
-  o = t(920906),
-  l = t(442837),
+  l = t(920906),
+  o = t(442837),
   c = t(481060),
   d = t(393238),
   u = t(607070),
@@ -19,17 +19,17 @@ n.Z = r.memo(function(e) {
     onExpand: x,
     disableAnimation: f,
     disableBackground: E
-  } = e, T = (0, l.e7)([u.Z], () => u.Z.useReducedMotion), [_, I] = r.useState(!0), [g, p] = r.useState(!1), {
+  } = e, T = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), [_, I] = r.useState(!0), [g, p] = r.useState(!1), {
     ref: N,
     height: v = 0
   } = (0, d.Z)(), {
     ref: y,
-    height: A = 0
-  } = (0, d.Z)(), [S, M] = r.useState(s), j = (0, o.useSpring)({
-    height: S ? A + v : v,
+    height: S = 0
+  } = (0, d.Z)(), [A, M] = r.useState(s), b = (0, l.useSpring)({
+    height: A ? S + v : v,
     immediate: _ || T || f,
     config: {
-      ...o.config.stiff,
+      ...l.config.stiff,
       clamp: !0
     },
     onStart: () => {
@@ -51,11 +51,11 @@ n.Z = r.memo(function(e) {
       [h.toggled]: s,
       [h.noBackground]: E
     }),
-    children: (0, a.jsxs)(o.animated.div, {
+    children: (0, a.jsxs)(l.animated.div, {
       className: i()(h.contentExpandContainer, {
         [h.showOverflow]: s && g
       }),
-      style: j,
+      style: b,
       children: [(0, a.jsx)(c.Clickable, {
         innerRef: N,
         onClick: C ? void 0 : x,

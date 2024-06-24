@@ -4,10 +4,10 @@ t.d(r, {
   }
 }), t(47120);
 var a = t(735250),
-  i = t(470079),
-  n = t(120356),
-  o = t.n(n),
-  l = t(442837),
+  n = t(470079),
+  i = t(120356),
+  l = t.n(i),
+  o = t(442837),
   c = t(481060),
   s = t(98357),
   d = t(432877),
@@ -17,20 +17,20 @@ var a = t(735250),
 function m(e) {
   let {
     devSettingsCategory: r
-  } = e, t = (0, l.e7)([d.ZP], () => d.ZP.allByCategory(r), [r], l.pF), n = i.useMemo(() => t.map(e => {
+  } = e, t = (0, o.e7)([d.ZP], () => d.ZP.allByCategory(r), [r], o.pF), i = n.useMemo(() => t.map(e => {
     let [r, t, {
-      label: i
+      label: n
     }] = e;
     return (0, a.jsx)(c.FormSwitch, {
       value: t,
       onChange: e => (0, s.Z)(r, e),
       hideBorder: !0,
       className: u.switch,
-      children: i
+      children: n
     }, r)
   }), [t]);
   return (0, a.jsx)("div", {
-    className: o()(h.panel, u.panel),
-    children: n
+    className: l()(h.panel, u.panel),
+    children: i
   })
 }

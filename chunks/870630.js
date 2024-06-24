@@ -7,13 +7,13 @@ var n = t(735250),
   i = t(410030),
   c = t(231338),
   u = t(689938),
-  d = t(528241),
-  E = t(744481),
+  E = t(528241),
+  d = t(744481),
   A = t(724641),
-  p = t(811974),
-  _ = t(212545),
-  N = t(184229),
-  m = t(504309);
+  _ = t(811974),
+  N = t(212545),
+  m = t(184229),
+  p = t(504309);
 a.Z = function(e) {
   let a = (0, i.ZP)(),
     t = s.useRef(null),
@@ -44,16 +44,16 @@ a.Z = function(e) {
       })
     }, [t]), e.type) {
     case c.He.PRZELEWY24: {
-      let s = (0, r.wj)(a) ? N : m,
+      let s = (0, r.wj)(a) ? m : p,
         {
           onNameChange: i,
           onEmailChange: c,
-          onP24BankChange: E,
+          onP24BankChange: d,
           p24BankValue: A,
-          billingAddressInfo: p
+          billingAddressInfo: _
         } = e;
       return (0, n.jsxs)("div", {
-        className: d.body,
+        className: E.body,
         children: [(0, n.jsx)(o.FormSection, {
           title: u.Z.Messages.EMAIL,
           children: (0, n.jsx)(o.TextInput, {
@@ -61,28 +61,28 @@ a.Z = function(e) {
             name: u.Z.Messages.EMAIL,
             placeholder: u.Z.Messages.EMAIL,
             onChange: e => c(e),
-            value: p.email
+            value: _.email
           })
         }), (0, n.jsx)(o.FormSection, {
-          className: d.nonTopInputWrapper,
+          className: E.nonTopInputWrapper,
           title: u.Z.Messages.CREDIT_CARD_NAME,
           children: (0, n.jsx)(o.TextInput, {
             name: u.Z.Messages.CREDIT_CARD_NAME,
             placeholder: u.Z.Messages.CREDIT_CARD_NAME,
             onChange: e => i(e),
-            value: p.name
+            value: _.name
           })
         }), (0, n.jsxs)(o.FormSection, {
-          className: d.nonTopInputWrapper,
+          className: E.nonTopInputWrapper,
           title: u.Z.Messages.PAYMENT_SOURCE_PRZELEWY24_BANK_LABEL,
           children: [(0, n.jsx)(l.P24BankElement, {
             options: {
               value: A,
               style: h
             },
-            onChange: e => E(e.value)
+            onChange: e => d(e.value)
           }), (0, n.jsx)("div", {
-            className: d.bankSelectionStub,
+            className: E.bankSelectionStub,
             children: (0, n.jsx)("img", {
               src: s,
               alt: "Przelewy24"
@@ -96,10 +96,10 @@ a.Z = function(e) {
         onAccountHolderNameChange: s,
         onEPSBankChange: i,
         epsBankValue: c,
-        billingAddressInfo: p
-      } = e, _ = (0, r.wj)(a) ? E : A;
+        billingAddressInfo: _
+      } = e, N = (0, r.wj)(a) ? d : A;
       return (0, n.jsxs)("div", {
-        className: d.body,
+        className: E.body,
         children: [(0, n.jsx)(o.FormSection, {
           title: u.Z.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
           children: (0, n.jsx)(o.TextInput, {
@@ -107,10 +107,10 @@ a.Z = function(e) {
             name: u.Z.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
             placeholder: u.Z.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
             onChange: e => s(e),
-            value: p.name
+            value: _.name
           })
         }), (0, n.jsxs)(o.FormSection, {
-          className: d.nonTopInputWrapper,
+          className: E.nonTopInputWrapper,
           title: u.Z.Messages.PAYMENT_SOURCE_EPS_BANK_LABEL,
           children: [(0, n.jsx)(l.EpsBankElement, {
             options: {
@@ -119,9 +119,9 @@ a.Z = function(e) {
             },
             onChange: e => i(e.value)
           }), (0, n.jsx)("div", {
-            className: d.bankSelectionStub,
+            className: E.bankSelectionStub,
             children: (0, n.jsx)("img", {
-              src: _,
+              src: N,
               alt: "EPS"
             })
           })]
@@ -133,10 +133,10 @@ a.Z = function(e) {
         onAccountHolderNameChange: s,
         onIdealBankChange: i,
         idealBankValue: c,
-        billingAddressInfo: E
-      } = e, A = (0, r.wj)(a) ? p : _;
+        billingAddressInfo: d
+      } = e, A = (0, r.wj)(a) ? _ : N;
       return (0, n.jsxs)("div", {
-        className: d.body,
+        className: E.body,
         children: [(0, n.jsx)(o.FormSection, {
           title: u.Z.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
           children: (0, n.jsx)(o.TextInput, {
@@ -144,10 +144,10 @@ a.Z = function(e) {
             name: u.Z.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
             placeholder: u.Z.Messages.PAYMENT_SOURCE_ACCOUNT_HOLDER_NAME,
             onChange: e => s(e),
-            value: E.name
+            value: d.name
           })
         }), (0, n.jsxs)(o.FormSection, {
-          className: d.nonTopInputWrapper,
+          className: E.nonTopInputWrapper,
           title: u.Z.Messages.PAYMENT_SOURCE_IDEAL_BANK_LABEL,
           children: [(0, n.jsx)(l.IdealBankElement, {
             options: {
@@ -156,7 +156,7 @@ a.Z = function(e) {
             },
             onChange: e => i(e.value)
           }), (0, n.jsx)("div", {
-            className: d.bankSelectionStub,
+            className: E.bankSelectionStub,
             children: (0, n.jsx)("img", {
               src: A,
               alt: "iDeal"

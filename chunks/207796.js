@@ -3,29 +3,29 @@ n.d(t, {
     return E
   },
   PJ: function() {
-    return h
+    return _
   },
   fH: function() {
-    return _
+    return h
   },
   hz: function() {
     return r
   },
   o2: function() {
-    return c
+    return o
   },
   t1: function() {
-    return T
+    return I
   },
   v0: function() {
-    return l
+    return a
   }
 });
-var s, a, i, l, r, c, o = n(652874),
-  d = n(868888),
-  u = n(433517);
-(s = l || (l = {})).ADMIN_UPSELL = "admin_upsell", s.GET_STARTED = "get_started", s.DISCOVERY = "discovery", s.PLAYSTYLE = "playstyle", s.TRAITS = "traits", s.GAMES = "games", (a = r || (r = {})).VALORANT = "valorant", a.GENSHIN = "genshin", (i = c || (c = {})).USER_UPSELL = "user_upsell", i.USER_ONBOARDING = "user_onboarding";
-let E = (0, o.Z)((0, d.tJ)(e => ({
+var i, s, l, a, r, o, c = n(652874),
+  u = n(868888),
+  d = n(433517);
+(i = a || (a = {})).ADMIN_UPSELL = "admin_upsell", i.GET_STARTED = "get_started", i.DISCOVERY = "discovery", i.PLAYSTYLE = "playstyle", i.TRAITS = "traits", i.GAMES = "games", (s = r || (r = {})).VALORANT = "valorant", s.GENSHIN = "genshin", (l = o || (o = {})).USER_UPSELL = "user_upsell", l.USER_ONBOARDING = "user_onboarding";
+let E = (0, c.Z)((0, u.tJ)(e => ({
   mode: "admin_upsell",
   previousMode: "admin_upsell",
   game: "valorant",
@@ -56,10 +56,10 @@ let E = (0, o.Z)((0, d.tJ)(e => ({
   getStorage: () => ({
     getItem: e => {
       var t;
-      return null !== (t = u.K.get(e)) && void 0 !== t ? t : null
+      return null !== (t = d.K.get(e)) && void 0 !== t ? t : null
     },
-    setItem: (e, t) => u.K.set(e, t),
-    removeItem: e => u.K.remove(e)
+    setItem: (e, t) => d.K.set(e, t),
+    removeItem: e => d.K.remove(e)
   }),
   partialize: e => ({
     mode: e.mode,
@@ -71,18 +71,18 @@ let E = (0, o.Z)((0, d.tJ)(e => ({
   })
 }));
 
-function _(e) {
+function h(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = E.getState().mode,
-    s = E.getState().started;
+    i = E.getState().started;
   E.setState({
     mode: e,
     previousMode: n,
-    started: t || s
+    started: t || i
   })
 }
 
-function h() {
+function _() {
   E.setState({
     started: !1,
     mode: "admin_upsell",
@@ -95,13 +95,13 @@ function h() {
   })
 }
 
-function T(e) {
+function I(e) {
   var t;
   let n = e.selectedGames,
-    s = null !== (t = e.selectedPlaystyle) && void 0 !== t ? t : void 0;
+    i = null !== (t = e.selectedPlaystyle) && void 0 !== t ? t : void 0;
   return {
     games: n,
-    playstyle: s,
+    playstyle: i,
     traits: e.selectedTraits
   }
 }

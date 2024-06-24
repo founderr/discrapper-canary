@@ -16,7 +16,7 @@ let u = {
   tension: 40,
   clamp: !0
 };
-class d extends i.PureComponent {
+class R extends i.PureComponent {
   componentWillEnter(e) {
     this._animated.setValue(-this.props.direction), _.Z.spring(this._animated, {
       toValue: 0,
@@ -75,7 +75,7 @@ s.Z = e => {
   return (0, r.jsx)(c.W, {
     component: "div",
     className: o()(E.animator, a),
-    children: (0, r.jsx)(d, {
+    children: (0, r.jsx)(R, {
       direction: n,
       springSettings: i,
       fadeInOut: l,

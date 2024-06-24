@@ -8,8 +8,8 @@ t(470079);
 var r = t(249849),
   s = t(907561),
   i = t(689938),
-  o = t(408263);
-let l = ["#00ff00"],
+  l = t(408263);
+let o = ["#00ff00"],
   c = ["#000000", "#ed1c24"],
   d = [.7],
   u = [{
@@ -36,7 +36,7 @@ function C(e) {
     primaryColorsTransformed: E,
     secondaryColorsTransformed: T
   } = (0, r.s)({
-    primaryBaseColors: l,
+    primaryBaseColors: o,
     primaryTintColor: C,
     primaryTintLuminances: d,
     primaryLuminanceWeights: u,
@@ -80,20 +80,20 @@ function C(e) {
         children: _
       })]
     }), (0, a.jsx)("use", {
-      href: "".concat(o, "#wrapper-layer"),
+      href: "".concat(l, "#wrapper-layer"),
       id: I
     }), (0, a.jsx)("use", {
-      href: "".concat(o, "#heightmap-lines-0"),
+      href: "".concat(l, "#heightmap-lines-0"),
       style: {
         fill: "url(#line-gradient)"
       }
     }), (0, a.jsx)("use", {
-      href: "".concat(o, "#heightmap-lines-1"),
+      href: "".concat(l, "#heightmap-lines-1"),
       style: {
         fill: "url(#line-gradient)"
       }
     }), (0, a.jsx)("use", {
-      href: "".concat(o, "#heightmap-lines-2"),
+      href: "".concat(l, "#heightmap-lines-2"),
       style: {
         fill: "url(#line-gradient)"
       }

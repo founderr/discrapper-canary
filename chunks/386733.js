@@ -9,8 +9,8 @@ var n = t(735250),
   c = t(100527),
   E = t(906732),
   u = t(204197),
-  d = t(598077),
-  R = t(594174),
+  R = t(598077),
+  d = t(594174),
   I = t(626135),
   T = t(63063),
   A = t(276444),
@@ -21,7 +21,7 @@ var n = t(735250),
   m = t(689938),
   C = t(695314),
   g = t(691766);
-let f = e => {
+let P = e => {
     let {
       userRecord: s,
       placement: t
@@ -53,7 +53,7 @@ let f = e => {
       })
     })
   },
-  P = e => {
+  O = e => {
     let {
       numSentReferrals: s,
       placement: t
@@ -70,25 +70,25 @@ let f = e => {
       })]
     })
   },
-  O = e => {
+  f = e => {
     let {
       userRecords: s
     } = e, t = s.length, a = t < 1 ? null : s[0], r = t < 2 ? null : s[1], i = t < 3 ? null : s[2];
     return (0, n.jsxs)("div", {
       className: C.userAvatarProgressBarContainer,
-      children: [(0, n.jsx)(f, {
+      children: [(0, n.jsx)(P, {
         userRecord: a,
         placement: 1
-      }), (0, n.jsx)(P, {
+      }), (0, n.jsx)(O, {
         numSentReferrals: t,
         placement: 1
-      }), (0, n.jsx)(f, {
+      }), (0, n.jsx)(P, {
         userRecord: r,
         placement: 2
-      }), (0, n.jsx)(P, {
+      }), (0, n.jsx)(O, {
         numSentReferrals: t,
         placement: 2
-      }), (0, n.jsx)(f, {
+      }), (0, n.jsx)(P, {
         userRecord: i,
         placement: 3
       })]
@@ -106,20 +106,20 @@ let f = e => {
 s.Z = e => {
   let {
     isInSettings: s = !1
-  } = e, r = (0, l.Wu)([A.Z], () => A.Z.getSentUserIds()), u = (0, l.Wu)([R.default], () => r.map(e => R.default.getUser(e)).filter(e => null != e)), f = a.useMemo(() => u.map(e => new d.Z(e)), [u]), {
-    subscriberHomeVariant: P
+  } = e, r = (0, l.Wu)([A.Z], () => A.Z.getSentUserIds()), u = (0, l.Wu)([d.default], () => r.map(e => d.default.getUser(e)).filter(e => null != e)), P = a.useMemo(() => u.map(e => new R.Z(e)), [u]), {
+    subscriberHomeVariant: O
   } = M.g.useExperiment({
     location: "ReferralProgramProgressBar"
   }, {
     autoTrackExposure: !1
-  }), h = P === M.p.VARIANT_2;
+  }), L = O === M.p.VARIANT_2;
   a.useEffect(() => {
     r.forEach(e => {
       (0, _.PR)(e)
     })
   }, [r]);
-  let L = r.length,
-    b = 3 === L,
+  let h = r.length,
+    b = 3 === h,
     v = T.Z.getArticleURL(p.BhN.REFERRAL_PROGRAM),
     Z = b ? m.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : m.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
     {
@@ -138,9 +138,9 @@ s.Z = e => {
   a.useEffect(() => (G(), window.addEventListener("resize", G), () => {
     window.removeEventListener("resize", G)
   }), []);
-  let H = (0, n.jsxs)(n.Fragment, {
+  let W = (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(N.Z, {
-      percentage: L / 3 * 100,
+      percentage: h / 3 * 100,
       progressCircleVariation: N.Q.NITRO_LOGO,
       iconClassName: i()({
         [C.referralProgressBarIcon]: !s,
@@ -152,17 +152,17 @@ s.Z = e => {
         variant: s ? "heading-xl/extrabold" : "heading-xxl/extrabold",
         className: C.expandedProgressBarHeader,
         children: Z
-      }), (0, n.jsx)(O, {
-        userRecords: f
+      }), (0, n.jsx)(f, {
+        userRecords: P
       }), (0, n.jsx)(o.Text, {
         variant: s ? "text-sm/normal" : "text-lg/medium",
-        children: x(b, L > 0, r.length, v)
+        children: x(b, h > 0, r.length, v)
       }), (0, n.jsxs)("div", {
         className: i()(C.expandedProgressBarButtonContainer, {
           [C.expandedProgressBarButtonContainerMinLayout]: B && !s,
           [C.expandedProgressBarButtonContainerLayout]: !B && !s
         }),
-        children: [!s && !h && (0, n.jsx)(S.Z, {
+        children: [!s && !L && (0, n.jsx)(S.Z, {
           color: o.ButtonColors.CUSTOM,
           buttonText: m.Z.Messages.GIFT_NITRO,
           className: i()(C.expandedProgressBarGiftingCTA, {
@@ -207,11 +207,11 @@ s.Z = e => {
       className: i()({
         [C.expandedProgressBarContainer]: !s,
         [C.expandedProgressBarContainerSettingsPage]: s,
-        [C.expandedProgressBarContainerVariant1]: !h && !s,
-        [C.expandedProgressBarContainerVariant2]: h && !s,
+        [C.expandedProgressBarContainerVariant1]: !L && !s,
+        [C.expandedProgressBarContainerVariant2]: L && !s,
         [C.allReferralsSentBorder]: 3 === r.length
       }),
-      children: H
+      children: W
     })
   })
 }

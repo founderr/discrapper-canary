@@ -7,8 +7,8 @@ var n = t(735250),
   i = t(912454),
   c = t(358085),
   u = t(622999),
-  d = t(981631),
-  E = t(689938);
+  E = t(981631),
+  d = t(689938);
 
 function A(e, a, t) {
   return a in e ? Object.defineProperty(e, a, {
@@ -18,8 +18,8 @@ function A(e, a, t) {
     writable: !0
   }) : e[a] = t, e
 }
-let p = new r.Z("PaymentRequest");
-class _ extends s.Component {
+let _ = new r.Z("PaymentRequest");
+class N extends s.Component {
   componentDidMount() {
     (0, u.d2)().then(e => {
       this.initPaymentRequest(e)
@@ -36,10 +36,10 @@ class _ extends s.Component {
     if (!1 === e) return (0, n.jsx)(l.Button, {
       disabled: !0,
       look: l.Button.Looks.FILLED,
-      children: E.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_UNSUPPORTED
+      children: d.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_UNSUPPORTED
     });
     let a = (0, c.isAndroidChrome)(),
-      t = a ? E.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GPAY : E.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GENERIC,
+      t = a ? d.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GPAY : d.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GENERIC,
       s = a ? i.ZP.Types.G_PAY : i.ZP.Types.PAYMENT_REQUEST,
       {
         className: r,
@@ -55,7 +55,7 @@ class _ extends s.Component {
           type: s
         }), t]
       })
-    }, d.HeQ.PAYMENT_REQUEST)
+    }, E.HeQ.PAYMENT_REQUEST)
   }
   constructor(...e) {
     super(...e), A(this, "state", {}), A(this, "initPaymentRequest", async e => {
@@ -83,7 +83,7 @@ class _ extends s.Component {
         t(null)
       });
       let n = await a.canMakePayment();
-      p.info("PaymentRequest availablity check", n), this.setState({
+      _.info("PaymentRequest availablity check", n), this.setState({
         canMakePayment: !!n,
         paymentRequest: a
       })
@@ -91,7 +91,7 @@ class _ extends s.Component {
       let {
         onChooseType: e
       } = this.props;
-      e(d.HeQ.PAYMENT_REQUEST);
+      e(E.HeQ.PAYMENT_REQUEST);
       let {
         paymentRequest: a
       } = this.state;
@@ -99,4 +99,4 @@ class _ extends s.Component {
     })
   }
 }
-a.Z = _
+a.Z = N

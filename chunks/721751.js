@@ -13,11 +13,11 @@ var r = n(735250),
   _ = n(568154),
   m = n(353926),
   g = n(703656),
-  f = n(981631),
-  p = n(453931);
+  p = n(981631),
+  f = n(453931);
 let I = n(575703),
   N = n(2984),
-  A = [f.Z5c.LOGIN, f.Z5c.LOGIN_HANDOFF, f.Z5c.REGISTER, f.Z5c.INVITE(""), f.Z5c.GIFT_CODE(""), f.Z5c.GUILD_TEMPLATE_LOGIN(""), f.Z5c.GUILD_TEMPLATE(""), f.Z5c.DISABLE_EMAIL_NOTIFICATIONS, f.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, f.Z5c.BILLING_PREMIUM_SUBSCRIBE, f.Z5c.BILLING_PAYMENT_SOURCES_CREATE, f.Z5c.BILLING_PAYMENTS, f.Z5c.BILLING_PREMIUM_SWITCH_PLAN, f.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, f.Z5c.VERIFY, f.Z5c.VERIFY_HUB_EMAIL, f.Z5c.REJECT_IP, f.Z5c.REJECT_MFA, f.Z5c.AUTHORIZE_IP, f.Z5c.AUTHORIZE_PAYMENT, f.Z5c.RESET, f.Z5c.HANDOFF, f.Z5c.REPORT, f.Z5c.REPORT_SECOND_LOOK];
+  A = [p.Z5c.LOGIN, p.Z5c.LOGIN_HANDOFF, p.Z5c.REGISTER, p.Z5c.INVITE(""), p.Z5c.GIFT_CODE(""), p.Z5c.GUILD_TEMPLATE_LOGIN(""), p.Z5c.GUILD_TEMPLATE(""), p.Z5c.DISABLE_EMAIL_NOTIFICATIONS, p.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, p.Z5c.BILLING_PREMIUM_SUBSCRIBE, p.Z5c.BILLING_PAYMENT_SOURCES_CREATE, p.Z5c.BILLING_PAYMENTS, p.Z5c.BILLING_PREMIUM_SWITCH_PLAN, p.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, p.Z5c.VERIFY, p.Z5c.VERIFY_HUB_EMAIL, p.Z5c.REJECT_IP, p.Z5c.REJECT_MFA, p.Z5c.AUTHORIZE_IP, p.Z5c.AUTHORIZE_PAYMENT, p.Z5c.RESET, p.Z5c.HANDOFF, p.Z5c.REPORT, p.Z5c.REPORT_SECOND_LOOK];
 
 function T(e) {
   return A.some(t => e.startsWith(t))
@@ -39,11 +39,11 @@ function S(e) {
     case "default":
       return (0, r.jsxs)(r.Fragment, {
         children: [(0, r.jsx)("img", {
-          className: p.artwork,
+          className: f.artwork,
           src: I,
           alt: ""
         }), (0, r.jsx)("img", {
-          className: p.logoWithText,
+          className: f.logoWithText,
           src: N,
           alt: ""
         }), t]
@@ -81,13 +81,13 @@ class C extends i.Component {
       }))
     });
     return (0, r.jsx)("div", {
-      className: p.characterBackground,
+      className: f.characterBackground,
       children: (0, r.jsx)(c.HeadingLevel, {
         forceLevel: 1,
         children: null != e ? (0, r.jsxs)(r.Fragment, {
           children: [(0, r.jsx)(E.Z, {
             show: !0,
-            className: l()(p.logo)
+            className: l()(f.logo)
           }), (0, r.jsx)(_.h, {
             splash: e,
             children: t

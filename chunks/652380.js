@@ -52,7 +52,7 @@ function x() {
     progress: {}
   }
 }
-let D = {
+let p = {
   id: "1193992107035983872",
   preview: !0,
   config: {
@@ -102,9 +102,9 @@ let D = {
   targetedContent: []
 };
 
-function p() {
+function D() {
   var e, s, t;
-  let [h, p] = i.useState(D), [L, P] = i.useState(O.a.UNENROLLED), [Z, f] = i.useState([]), [v, j] = i.useState(!1), [U, B] = i.useState(null);
+  let [h, D] = i.useState(p), [L, P] = i.useState(O.a.UNENROLLED), [Z, f] = i.useState([]), [j, v] = i.useState(!1), [U, B] = i.useState(null);
   let b = (t = h.config, (0, a.EQ)(t).with({
     configVersion: 1
   }, e => ({
@@ -132,7 +132,7 @@ function p() {
 
   function G(e, s) {
     var t, n;
-    if ("hero" === e || "questBarHero" === e || "gameTile" === e || "logotype" === e) p({
+    if ("hero" === e || "questBarHero" === e || "gameTile" === e || "logotype" === e) D({
       ...h,
       config: (t = h.config, n = {
         [e]: s
@@ -158,7 +158,7 @@ function p() {
 
   function F(e, s) {
     var t, n;
-    if ("questName" === e || "gameTitle" === e || "gamePublisher" === e) p({
+    if ("questName" === e || "gameTitle" === e || "gamePublisher" === e) D({
       ...h,
       config: (t = h.config, n = {
         [e]: s
@@ -184,7 +184,7 @@ function p() {
 
   function V(e, s) {
     var t, n;
-    if ("rewardName" === e || "rewardNameWithArticle" === e) p({
+    if ("rewardName" === e || "rewardNameWithArticle" === e) D({
       ...h,
       config: (t = h.config, n = {
         [e]: s
@@ -215,7 +215,7 @@ function p() {
   }
 
   function y(e, s) {
-    p({
+    D({
       ...h,
       config: {
         ...h.config,
@@ -235,7 +235,7 @@ function p() {
       className: m.fields,
       children: (0, n.jsx)(A.Z, {
         onSelect: function(e) {
-          if (B(e), null != e) p(e)
+          if (B(e), null != e) D(e)
         },
         quest: U
       })
@@ -295,7 +295,7 @@ function p() {
         assetKey: "rewardTile",
         onFileChange: function(e, s) {
           var t, n;
-          if ("rewardTile" === e) p({
+          if ("rewardTile" === e) D({
             ...h,
             config: (t = h.config, n = {
               [e]: s
@@ -341,7 +341,7 @@ function p() {
         children: (0, n.jsx)(C.Z, {
           onChange: function(e) {
             var s, t;
-            p({
+            D({
               ...h,
               config: (s = h.config, t = e, (0, a.EQ)(s).with({
                 configVersion: 1
@@ -385,13 +385,13 @@ function p() {
         onChange: function(e) {
           switch (P(e), e) {
             case O.a.UNENROLLED:
-              p({
+              D({
                 ...h,
                 userStatus: null
               });
               break;
             case O.a.ENROLLED:
-              p({
+              D({
                 ...h,
                 userStatus: x({
                   enrolledAt: new Date().toISOString()
@@ -399,7 +399,7 @@ function p() {
               });
               break;
             case O.a.COMPLETED_25:
-              p({
+              D({
                 ...h,
                 userStatus: x({
                   enrolledAt: new Date().toISOString(),
@@ -408,7 +408,7 @@ function p() {
               });
               break;
             case O.a.COMPLETED_50:
-              p({
+              D({
                 ...h,
                 userStatus: x({
                   enrolledAt: new Date().toISOString(),
@@ -417,7 +417,7 @@ function p() {
               });
               break;
             case O.a.COMPLETED_75:
-              p({
+              D({
                 ...h,
                 userStatus: x({
                   enrolledAt: new Date().toISOString(),
@@ -426,7 +426,7 @@ function p() {
               });
               break;
             case O.a.COMPLETED_100:
-              p({
+              D({
                 ...h,
                 userStatus: x({
                   completedAt: new Date().toISOString(),
@@ -436,7 +436,7 @@ function p() {
               });
               break;
             case O.a.CLAIMED:
-              p({
+              D({
                 ...h,
                 userStatus: x({
                   claimedAt: new Date().toISOString(),
@@ -504,7 +504,7 @@ function p() {
               children: (0, n.jsx)(T.Z, {
                 channelId: "123",
                 previewQuest: h,
-                isParticipatingOverride: v
+                isParticipatingOverride: j
               })
             })
           })
@@ -513,9 +513,9 @@ function p() {
         className: m.channelCallParticipationToggle,
         children: (0, n.jsx)(l.FormItem, {
           children: (0, n.jsx)(l.FormSwitch, {
-            value: v,
+            value: j,
             onChange: function(e) {
-              j(e)
+              v(e)
             },
             hideBorder: !0,
             children: "Is Participating:"
@@ -554,7 +554,7 @@ class L extends i.Component {
           children: e.message
         })
       })]
-    }) : (0, n.jsx)(p, {}, s)
+    }) : (0, n.jsx)(D, {}, s)
   }
   constructor(...e) {
     super(...e), h(this, "state", {

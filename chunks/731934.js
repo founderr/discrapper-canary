@@ -1,7 +1,7 @@
 var s = n(735250),
-  a = n(470079),
-  i = n(120356),
-  l = n.n(i),
+  i = n(470079),
+  a = n(120356),
+  l = n.n(a),
   r = n(91192),
   c = n(481060),
   o = n(209613),
@@ -25,7 +25,7 @@ function M(e) {
   let {
     header: t,
     description: n,
-    stepNumber: a
+    stepNumber: i
   } = e;
   return (0, s.jsxs)("div", {
     className: f.step,
@@ -35,7 +35,7 @@ function M(e) {
         variant: "heading-md/semibold",
         color: "text-brand",
         children: (0, s.jsx)(c.HeadingLevel, {
-          children: a
+          children: i
         })
       })
     }), (0, s.jsxs)("div", {
@@ -127,12 +127,12 @@ function L(e) {
   let {
     sectionType: t,
     sectionTitle: n,
-    requests: i
-  } = e, l = a.useRef(null), u = "".concat(t, "-list"), E = (0, o.Z)(u), _ = a.useCallback(e => {
+    requests: a
+  } = e, l = i.useRef(null), u = "".concat(t, "-list"), E = (0, o.Z)(u), _ = i.useCallback(e => {
     let {
       row: n,
-      listIndex: a
-    } = e, l = i[n], r = a === i.length;
+      listIndex: i
+    } = e, l = a[n], r = i === a.length;
     return null == l ? null : (0, s.jsx)(g.Z, {
       userId: l.id,
       isLast: r,
@@ -142,7 +142,7 @@ function L(e) {
         user: l
       })
     }, l.id)
-  }, [i, t]), h = a.useCallback(() => (0, s.jsx)(d.Z, {
+  }, [a, t]), h = i.useCallback(() => (0, s.jsx)(d.Z, {
     className: f.__invalid_sectionTitle,
     children: (0, s.jsx)(c.Text, {
       className: p.marginBottom8,
@@ -159,12 +159,12 @@ function L(e) {
         children: e => {
           let {
             ref: t,
-            role: a,
+            role: i,
             ...r
           } = e;
           return (0, s.jsx)(c.List, {
             className: f.__invalid_list,
-            innerRole: a,
+            innerRole: i,
             innerAriaLabel: n,
             ref: e => {
               var n;
@@ -174,7 +174,7 @@ function L(e) {
             rowHeight: A.ip,
             renderSection: h,
             renderRow: _,
-            sections: [i.length],
+            sections: [a.length],
             chunkSize: 30,
             fade: !0,
             ...r
@@ -188,15 +188,15 @@ let v = () => {
     let e = (0, _.Z)(),
       t = (0, h.mq)(A.ne.ACTIVE),
       n = e ? A.AG : A.i0,
-      a = {
+      i = {
         count: t.length,
         max: n
       },
-      i = (0, u.o)(m.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(a), m.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(a));
+      a = (0, u.o)(m.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(i), m.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(i));
     return (0, s.jsx)(s.Fragment, {
       children: t.length > 0 ? (0, s.jsx)(L, {
         sectionType: A.ne.ACTIVE,
-        sectionTitle: i,
+        sectionTitle: a,
         requests: t
       }) : (0, s.jsxs)("div", {
         className: f.section,
@@ -204,7 +204,7 @@ let v = () => {
           className: p.marginBottom8,
           variant: "eyebrow",
           color: "header-secondary",
-          children: i
+          children: a
         }), (0, s.jsx)("div", {
           className: f.box,
           children: (0, s.jsx)(T.Z, {

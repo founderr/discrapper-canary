@@ -20,11 +20,11 @@ let I = e => {
     isListingPublished: t,
     expanded: I,
     onToggleExpanded: E
-  } = e, C = (0, u.Z)(), [m] = o._T(n), [N] = o.d9(n, C), [S] = o.H9(n);
+  } = e, C = (0, u.Z)(), [m] = o._T(n), [S] = o.d9(n, C), [N] = o.H9(n);
   return (0, i.jsxs)("div", {
     className: _.container,
     children: [(0, i.jsx)(c.BM, {
-      image: N
+      image: S
     }), (0, i.jsxs)("div", {
       className: _.tierTextInfoContainer,
       children: [(0, i.jsx)(c.Ey, {
@@ -34,10 +34,10 @@ let I = e => {
         children: [!t && (0, i.jsx)(s.v, {}), (0, i.jsxs)(l.Text, {
           variant: "text-xs/normal",
           className: _.tierPrice,
-          children: [(0, r.T4)(S.price, S.currency), " ", d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_AMOUNT_PER_PERIOD.format({
+          children: [(0, r.T4)(N.price, N.currency), " ", d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_AMOUNT_PER_PERIOD.format({
             period: (0, a.JE)({
-              interval: S.interval,
-              interval_count: S.interval_count
+              interval: N.interval,
+              interval_count: N.interval_count
             })
           })]
         })]

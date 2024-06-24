@@ -12,8 +12,8 @@ var i = t(399606),
   c = t(100527),
   E = t(906732),
   u = t(779618),
-  d = t(300284),
-  R = t(703656),
+  R = t(300284),
+  d = t(703656),
   I = t(547972),
   T = t(131951),
   A = t(78839),
@@ -24,12 +24,12 @@ var i = t(399606),
   m = t(885462),
   C = t(494127),
   g = t(314684),
-  f = t(687362),
-  P = t(119269),
-  O = t(391110),
+  P = t(687362),
+  O = t(119269),
+  f = t(391110),
   x = t(75077),
-  h = t(474936),
-  L = t(981631),
+  L = t(474936),
+  h = t(981631),
   b = t(526761),
   v = t(332325),
   Z = t(689938),
@@ -38,8 +38,8 @@ var i = t(399606),
   B = t(302036),
   j = t(994554),
   G = t(704565),
-  H = t(393305),
-  W = t(338879),
+  W = t(393305),
+  H = t(338879),
   k = t(203302),
   K = t(766491),
   F = t(193943),
@@ -66,13 +66,13 @@ let eo = "usePerksDiscoverabilityCards";
 s.Z = () => {
   let {
     analyticsLocations: e
-  } = (0, E.ZP)(c.Z.PREMIUM_MARKETING_PERK_CARD), s = (0, _.ZP)(), t = Z.Z.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, n = (0, i.e7)([A.ZP], () => A.ZP.getPremiumTypeSubscription()), a = null != n ? S.ZP.getPremiumPlanItem(n) : null, e_ = null != a ? S.ZP.getSkuIdForPlan(a.planId) : null, ec = e_ === h.Si.TIER_2, eE = e_ === h.Si.TIER_0, {
+  } = (0, E.ZP)(c.Z.PREMIUM_MARKETING_PERK_CARD), s = (0, _.ZP)(), t = Z.Z.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, n = (0, i.e7)([A.ZP], () => A.ZP.getPremiumTypeSubscription()), a = null != n ? S.ZP.getPremiumPlanItem(n) : null, e_ = null != a ? S.ZP.getSkuIdForPlan(a.planId) : null, ec = e_ === L.Si.TIER_2, eE = e_ === L.Si.TIER_0, {
     flipped: eu
   } = (0, C.JP)(), {
-    flipped: ed
-  } = (0, C.as)(), eR = (0, g.nY)({
+    flipped: eR
+  } = (0, C.as)(), ed = (0, g.nY)({
     showAnimations: !0
-  }), eI = null != eR ? eR.initialPercentage : void 0, eT = null != eR ? eR.percentage : void 0, eA = (0, u.Z)(T.Z), eM = (0, f.Z)(), {
+  }), eI = null != ed ? ed.initialPercentage : void 0, eT = null != ed ? ed.percentage : void 0, eA = (0, u.Z)(T.Z), eM = (0, P.Z)(), {
     canFlipCard: eS
   } = p.X.useExperiment({
     location: eo
@@ -90,21 +90,21 @@ s.Z = () => {
     location: eo
   }, {
     autoTrackExposure: !1
-  }), em = (0, d.Z)({
+  }), em = (0, R.Z)({
     scrollPosition: b.Y_.TRY_IT_OUT,
     analyticsLocations: e
   }), eC = () => {
-    o.Z.open(L.oAB.VOICE, b.GA, {
+    o.Z.open(h.oAB.VOICE, b.GA, {
       openWithoutBackstack: !0,
       analyticsLocations: e
     })
   }, eg = () => {
-    (0, R.uL)(L.Z5c.COLLECTIBLES_SHOP)
-  }, ef = () => {
-    o.Z.open(L.oAB.APPEARANCE, null, {
+    (0, d.uL)(h.Z5c.COLLECTIBLES_SHOP)
+  }, eP = () => {
+    o.Z.open(h.oAB.APPEARANCE, null, {
       scrollPosition: b.h1.CUSTOM_APP_ICONS
     })
-  }, eP = {
+  }, eO = {
     avatarDecorations: ec ? {
       name: "avatarDecorations",
       title: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
@@ -133,7 +133,7 @@ s.Z = () => {
       description: Z.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_DESCRIPTION,
       descriptionCta: Z.Z.Messages.TAKE_ME_THERE,
       onCtaClick: () => {
-        o.Z.open(L.oAB.APPEARANCE, null, {
+        o.Z.open(h.oAB.APPEARANCE, null, {
           openWithoutBackstack: !0,
           analyticsLocations: e
         })
@@ -153,7 +153,7 @@ s.Z = () => {
           analyticsLocations: e
         })
       } : () => {
-        window.open(M.Z.getArticleURL(L.BhN.CLIPS), "_blank")
+        window.open(M.Z.getArticleURL(h.BhN.CLIPS), "_blank")
       },
       perkImage: K
     } : {
@@ -231,7 +231,7 @@ s.Z = () => {
       onCtaClick: eg,
       pillText: Z.Z.Messages.EARLY_ACCESS,
       perkImage: J,
-      canReveal: ed,
+      canReveal: eR,
       dismissibleContentType: l.z.WHATS_NEW_PROFILE_EFFECTS_FLIP
     } : {
       name: "profileEffects",
@@ -240,7 +240,7 @@ s.Z = () => {
       description: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_NON_SUB,
       pillText: Z.Z.Messages.EARLY_ACCESS,
       perkImage: J,
-      canReveal: ed,
+      canReveal: eR,
       dismissibleContentType: l.z.WHATS_NEW_PROFILE_EFFECTS_FLIP
     },
     profiles: {
@@ -250,7 +250,7 @@ s.Z = () => {
       description: Z.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_DESCRIPTION,
       descriptionCta: Z.Z.Messages.TAKE_ME_THERE,
       onCtaClick: em,
-      perkImage: H
+      perkImage: W
     },
     remixing: ec ? {
       name: "remixing",
@@ -274,12 +274,12 @@ s.Z = () => {
       description: Z.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_DESCRIPTION,
       descriptionCta: Z.Z.Messages.TAKE_ME_THERE,
       onCtaClick: () => {
-        o.Z.open(L.oAB.GUILD_BOOSTING, null, {
+        o.Z.open(h.oAB.GUILD_BOOSTING, null, {
           openWithoutBackstack: !0,
           analyticsLocations: e
         })
       },
-      perkImage: W,
+      perkImage: H,
       hideOnNarrowScreen: !0
     },
     specialMemberPricing: ec ? {
@@ -374,7 +374,7 @@ s.Z = () => {
       perkImage: F,
       description: Z.Z.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO,
       descriptionCta: Z.Z.Messages.TAKE_ME_THERE,
-      onCtaClick: ef
+      onCtaClick: eP
     },
     moreEmojiPower: {
       name: "moreEmojiPower",
@@ -420,7 +420,7 @@ s.Z = () => {
       description: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NEW_APP_STYLES_DESCRIPTION,
       descriptionCta: ec || eE ? Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NITRO_NEW_APP_STYLES : Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NON_NITRO_NEW_APP_STYLES,
       isPremiumGetCta: !(ec || eE),
-      onCtaClick: ec || eE ? ef : void 0,
+      onCtaClick: ec || eE ? eP : void 0,
       perkImage: Q,
       canReveal: eN,
       dismissibleContentType: l.z.WHATS_NEW_APP_STYLES_JUNE_2024_FLIP
@@ -430,7 +430,7 @@ s.Z = () => {
       title: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_TITLE,
       subtitle: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_SUBTITLE,
       description: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_DESCRIPTION.format({
-        helpdeskArticle: M.Z.getArticleURL(L.BhN.REFERRAL_PROGRAM)
+        helpdeskArticle: M.Z.getArticleURL(h.BhN.REFERRAL_PROGRAM)
       }),
       descriptionCta: Z.Z.Messages.MARKETING_PAGE_CTA_GET_NITRO,
       isPremiumGetCta: !ec || void 0,
@@ -458,12 +458,12 @@ s.Z = () => {
       pillText: a,
       ctaDescription: i,
       dismissibleContentType: l
-    } = eM, _ = (0, r.jsx)(P.Z, {
+    } = eM, _ = (0, r.jsx)(O.Z, {
       showAnimations: !0,
       percentage: eT,
       initialPercentage: eI
     });
-    eP.freeBoost = {
+    eO.freeBoost = {
       name: "freeBoost",
       title: s,
       subtitle: t,
@@ -471,14 +471,14 @@ s.Z = () => {
       perkComponent: _,
       descriptionCta: i,
       onCtaClick: () => {
-        o.Z.open(L.oAB.GUILD_BOOSTING, null, {
+        o.Z.open(h.oAB.GUILD_BOOSTING, null, {
           analyticsLocations: e
         })
       },
-      cardVariant: O.zW.REWARD,
+      cardVariant: f.zW.REWARD,
       pillText: a,
       dismissibleContentType: l
     }
   }
-  return eP
+  return eO
 }

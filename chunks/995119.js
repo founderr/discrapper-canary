@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-    return o
+    return l
   }
 });
 var a = t(735250);
@@ -9,7 +9,7 @@ var r = t(481060),
   s = t(689938),
   i = t(684201);
 
-function o(e) {
+function l(e) {
   let {
     onClick: n
   } = e;

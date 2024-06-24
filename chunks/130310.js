@@ -1,7 +1,7 @@
 var s = n(735250);
 n(470079);
-var a = n(120356),
-  i = n.n(a),
+var i = n(120356),
+  a = n.n(i),
   l = n(481060),
   r = n(785681),
   c = n(231994),
@@ -12,16 +12,16 @@ let E = e => {
   let {
     header: t,
     description: n,
-    icon: a,
+    icon: i,
     inModal: r
   } = e;
   return (0, s.jsxs)("div", {
-    className: i()(d.row, u.marginBottom8, {
+    className: a()(d.row, u.marginBottom8, {
       [d.inModal]: r
     }),
     children: [(0, s.jsx)("div", {
       className: d.iconContainer,
-      children: a
+      children: i
     }), (0, s.jsxs)("div", {
       children: [(0, s.jsx)(l.Text, {
         className: d.header,
@@ -39,7 +39,7 @@ let E = e => {
 t.Z = e => {
   let {
     inModal: t
-  } = e, n = (0, r.o)(o.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_INCLUDED_HEADER_TEEN, o.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_INCLUDED_HEADER_PARENT), a = (0, r.o)(o.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_HEADER_TEEN, o.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_HEADER_PARENT), i = (0, r.o)(o.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_HEADER_TEEN, o.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_HEADER_PARENT), u = (0, r.o)(o.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_DESCRIPTION_TEEN, o.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_DESCRIPTION_PARENT);
+  } = e, n = (0, r.o)(o.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_INCLUDED_HEADER_TEEN, o.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_INCLUDED_HEADER_PARENT), i = (0, r.o)(o.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_HEADER_TEEN, o.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_HEADER_PARENT), a = (0, r.o)(o.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_HEADER_TEEN, o.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_HEADER_PARENT), u = (0, r.o)(o.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_DESCRIPTION_TEEN, o.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_DESCRIPTION_PARENT);
   return (0, s.jsxs)("div", {
     children: [(0, s.jsx)(l.Text, {
       className: d.groupHeader,
@@ -79,9 +79,9 @@ t.Z = e => {
       className: d.groupHeader,
       variant: "text-xxs/bold",
       color: "header-secondary",
-      children: a
+      children: i
     }), (0, s.jsx)(E, {
-      header: i,
+      header: a,
       description: u,
       icon: (0, s.jsx)(l.CloseSmallIcon, {
         size: "custom",

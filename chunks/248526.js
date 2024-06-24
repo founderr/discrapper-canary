@@ -4,10 +4,10 @@ t.d(r, {
   }
 }), t(47120);
 var a = t(735250),
-  i = t(470079),
-  n = t(848246),
-  o = t(442837),
-  l = t(481060),
+  n = t(470079),
+  i = t(848246),
+  l = t(442837),
+  o = t(481060),
   c = t(570140),
   s = t(485731),
   d = t(594174),
@@ -29,16 +29,16 @@ let m = [{
   }];
 
 function p() {
-  let e = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
-    [r, t] = i.useState(!1),
-    [p, b] = i.useState(!1);
+  let e = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
+    [r, t] = n.useState(!1),
+    [p, b] = n.useState(!1);
   return (0, a.jsxs)("div", {
     className: h.container,
-    children: [(0, a.jsx)(l.FormSection, {
+    children: [(0, a.jsx)(o.FormSection, {
       title: "Override HQ Streaming: Available",
       className: h.formElement,
-      tag: l.FormTitleTags.H3,
-      children: (0, a.jsx)(l.SingleSelect, {
+      tag: o.FormTitleTags.H3,
+      children: (0, a.jsx)(o.SingleSelect, {
         options: m,
         value: r,
         onChange: e => {
@@ -46,11 +46,11 @@ function p() {
         },
         popoutLayerContext: u.O$
       })
-    }), (0, a.jsx)(l.FormSection, {
+    }), (0, a.jsx)(o.FormSection, {
       title: "Override HQ Streaming: Activate",
       className: h.formElement,
-      tag: l.FormTitleTags.H3,
-      children: (0, a.jsx)(l.SingleSelect, {
+      tag: o.FormTitleTags.H3,
+      children: (0, a.jsx)(o.SingleSelect, {
         options: g,
         value: p,
         onChange: e => {
@@ -58,10 +58,10 @@ function p() {
         },
         popoutLayerContext: u.O$
       })
-    }), (0, a.jsx)(l.Button, {
+    }), (0, a.jsx)(o.Button, {
       onClick: () => void(c.Z.dispatch({
         type: "PREMIUM_PERKS_DEMO_OVERRIDE",
-        perkType: n.q.STREAM_HIGH_QUALITY,
+        perkType: i.q.STREAM_HIGH_QUALITY,
         user: e,
         available: r,
         activateSuccess: p

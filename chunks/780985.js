@@ -7,18 +7,18 @@ n.d(t, {
   }
 });
 var s = n(399606),
-  a = n(594174),
-  i = n(914788),
+  i = n(594174),
+  a = n(914788),
   l = n(880257);
 let r = () => {
     let e = (0, l.Z)();
-    return (0, s.e7)([i.Z, a.default], () => {
-      if (!e) return a.default.getCurrentUser();
-      let t = i.Z.getSelectedTeenId();
-      if (null !== t) return a.default.getUser(t)
+    return (0, s.e7)([a.Z, i.default], () => {
+      if (!e) return i.default.getCurrentUser();
+      let t = a.Z.getSelectedTeenId();
+      if (null !== t) return i.default.getUser(t)
     })
   },
-  c = e => (0, s.e7)([a.default], () => {
-    let t = a.default.getUser(e);
+  c = e => (0, s.e7)([i.default], () => {
+    let t = i.default.getUser(e);
     if (null != t) return t
   })

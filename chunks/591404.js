@@ -1,5 +1,5 @@
 var a = t(319301);
-let i = {
+let n = {
   figma: {
     category: "feedback"
   }
@@ -14,17 +14,17 @@ r.Z = (0, a.a)({
       color: "green.400",
       opacity: .05
     },
-    meta: i
+    meta: n
   },
   "info-positive-foreground": {
     dark: "green.360",
     light: "green.400",
-    meta: i
+    meta: n
   },
   "info-positive-text": {
     dark: "white.500",
     light: "black.500",
-    meta: i
+    meta: n
   },
   "info-warning-background": {
     dark: {
@@ -35,17 +35,17 @@ r.Z = (0, a.a)({
       color: "yellow.400",
       opacity: .1
     },
-    meta: i
+    meta: n
   },
   "info-warning-foreground": {
     dark: "yellow.300",
     light: "yellow.400",
-    meta: i
+    meta: n
   },
   "info-warning-text": {
     dark: "white.500",
     light: "black.500",
-    meta: i
+    meta: n
   },
   "info-danger-background": {
     dark: {
@@ -56,17 +56,17 @@ r.Z = (0, a.a)({
       color: "red.430",
       opacity: .1
     },
-    meta: i
+    meta: n
   },
   "info-danger-foreground": {
     dark: "red.400",
     light: "red.430",
-    meta: i
+    meta: n
   },
   "info-danger-text": {
     dark: "white.500",
     light: "black.500",
-    meta: i
+    meta: n
   },
   "info-help-background": {
     dark: {
@@ -77,16 +77,16 @@ r.Z = (0, a.a)({
       color: "blue.430",
       opacity: .1
     },
-    meta: i
+    meta: n
   },
   "info-help-foreground": {
     dark: "blue.345",
     light: "blue.430",
-    meta: i
+    meta: n
   },
   "info-help-text": {
     dark: "white.500",
     light: "black.500",
-    meta: i
+    meta: n
   }
 })

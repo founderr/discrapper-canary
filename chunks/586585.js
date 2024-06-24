@@ -1,74 +1,74 @@
 t.d(n, {
   g: function() {
-    return s
+    return l
   }
 });
-var r, s, l = t(735250);
+var r, l, i = t(735250);
 t(470079);
-var o = t(481060),
+var s = t(481060),
   a = t(285952),
-  i = t(612853),
+  o = t(612853),
   u = t(689938),
   c = t(568071);
-(r = s || (s = {}))[r.CONTINUE = 0] = "CONTINUE", r[r.UPGRADE = 1] = "UPGRADE", r[r.PURCHASE = 2] = "PURCHASE";
+(r = l || (l = {}))[r.CONTINUE = 0] = "CONTINUE", r[r.UPGRADE = 1] = "UPGRADE", r[r.PURCHASE = 2] = "PURCHASE";
 let d = e => {
   let {
     onBack: n,
     backText: t,
     primaryIcon: r,
-    primaryCTA: s,
+    primaryCTA: l,
     primaryType: d,
-    primaryText: E,
-    primaryTooltip: C,
-    primaryDisabled: N,
-    primarySubmitting: _,
-    onPrimary: A,
-    secondaryText: O,
-    onSecondary: f
+    primaryText: m,
+    primaryTooltip: f,
+    primaryDisabled: x,
+    primarySubmitting: h,
+    onPrimary: C,
+    secondaryText: N,
+    onSecondary: v
   } = e;
-  return (0, l.jsxs)(o.ModalFooter, {
+  return (0, i.jsxs)(s.ModalFooter, {
     justify: a.Z.Justify.BETWEEN,
     align: a.Z.Align.CENTER,
     children: [(() => {
-      if (null == s || null == E) return null;
-      let e = 2 === s ? o.ShinyButton : o.Button,
+      if (null == l || null == m) return null;
+      let e = 2 === l ? s.ShinyButton : s.Button,
         n = {
           innerClassName: c.button,
           type: d,
-          disabled: N,
-          submitting: _,
-          color: 0 === s ? o.Button.Colors.BRAND : o.Button.Colors.GREEN,
-          onClick: A
+          disabled: x,
+          submitting: h,
+          color: 0 === l ? s.Button.Colors.BRAND : s.Button.Colors.GREEN,
+          onClick: C
         };
-      return null != C ? (0, l.jsx)(o.Tooltip, {
-        text: C,
-        children: t => (0, l.jsxs)(e, {
+      return null != f ? (0, i.jsx)(s.Tooltip, {
+        text: f,
+        children: t => (0, i.jsxs)(e, {
           ...t,
           ...n,
-          children: [null == r ? null : (0, l.jsx)(r, {
+          children: [null == r ? null : (0, i.jsx)(r, {
             color: "currentColor",
             className: c.primaryIcon
-          }), E]
+          }), m]
         })
-      }) : (0, l.jsxs)(e, {
+      }) : (0, i.jsxs)(e, {
         ...n,
-        children: [null == r ? null : (0, l.jsx)(r, {
+        children: [null == r ? null : (0, i.jsx)(r, {
           color: "currentColor",
           className: c.primaryIcon
-        }), E]
+        }), m]
       })
-    })(), null == O ? null : (0, l.jsx)(o.Button, {
-      color: o.Button.Colors.PRIMARY,
-      look: o.Button.Looks.LINK,
-      onClick: f,
-      children: O
-    }), (0, l.jsx)(i.Z, {}), null == n ? null : (0, l.jsx)(o.Button, {
+    })(), null == N ? null : (0, i.jsx)(s.Button, {
+      color: s.Button.Colors.PRIMARY,
+      look: s.Button.Looks.LINK,
+      onClick: v,
+      children: N
+    }), (0, i.jsx)(o.Z, {}), null == n ? null : (0, i.jsx)(s.Button, {
       className: c.back,
-      color: o.Button.Colors.PRIMARY,
-      look: o.Button.Looks.LINK,
+      color: s.Button.Colors.PRIMARY,
+      look: s.Button.Looks.LINK,
       onClick: n,
       children: null != t ? t : u.Z.Messages.BACK
     })]
   })
 };
-d.CTAType = s, n.Z = d
+d.CTAType = l, n.Z = d

@@ -4,9 +4,9 @@ n.d(t, {
   }
 });
 var s = n(735250),
-  a = n(470079),
-  i = n(512722),
-  l = n.n(i),
+  i = n(470079),
+  a = n(512722),
+  l = n.n(a),
   r = n(399606),
   c = n(481060),
   o = n(594174),
@@ -19,18 +19,18 @@ var s = n(735250),
 function T(e) {
   let {
     user: t
-  } = e, i = (0, r.e7)([o.default], () => o.default.getCurrentUser()), T = a.useCallback(() => {
-    l()(void 0 !== i, "User must be logged in to accept a link request"), (0, c.openModalLazy)(async () => {
+  } = e, a = (0, r.e7)([o.default], () => o.default.getCurrentUser()), T = i.useCallback(() => {
+    l()(void 0 !== a, "User must be logged in to accept a link request"), (0, c.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("50872")]).then(n.bind(n, 442673));
       return n => (0, s.jsx)(e, {
         ...n,
-        currentUser: i,
+        currentUser: a,
         otherUser: t
       })
     })
-  }, [i, t]);
+  }, [a, t]);
   return (0, s.jsxs)("div", {
     className: h.container,
     children: [(0, s.jsx)("div", {

@@ -9,8 +9,8 @@ var n = t(735250),
   c = t(607070),
   E = t(100527),
   u = t(906732),
-  d = t(410154),
-  R = t(626135),
+  R = t(410154),
+  d = t(626135),
   I = t(915296),
   T = t(103433),
   A = t(166021),
@@ -24,26 +24,26 @@ var n = t(735250),
 s.Z = e => {
   let s, t, {
       isAllPerksVisible: r,
-      setIsAllPerksVisible: f,
-      previousComponent: P,
-      isFullScreen: O
+      setIsAllPerksVisible: P,
+      previousComponent: O,
+      isFullScreen: f
     } = e,
     x = a.useRef(null),
-    h = Object.entries((0, M.Z)()).reduce((e, s) => {
+    L = Object.entries((0, M.Z)()).reduce((e, s) => {
       let [t, n] = s;
       return !1 !== n.canReveal && "upcomingDropUntimed" !== n.name && (e[t] = n), e
     }, {}),
-    L = (0, I.HI)({
+    h = (0, I.HI)({
       location: S.MQ.SEE_ALL
     }),
     {
       analyticsLocations: b
     } = (0, u.ZP)(E.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
     [v, Z] = a.useState(!1),
-    D = (0, d.ZP)("perks-discoverability"),
+    D = (0, R.ZP)("perks-discoverability"),
     U = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
     B = (0, N.mN)();
-  return L === I.mJ.DEFAULT ? (s = m.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE, t = m.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD) : (s = m.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD, t = m.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (0, n.jsx)(_.AdvancedScrollerAuto, {
+  return h === I.mJ.DEFAULT ? (s = m.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE, t = m.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD) : (s = m.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD, t = m.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (0, n.jsx)(_.AdvancedScrollerAuto, {
     className: i()(C.allPerksScroller, {
       [C.open]: r,
       [C.openCloseReduceMotion]: U
@@ -56,9 +56,9 @@ s.Z = e => {
         children: [(0, n.jsx)(T.Z, {
           className: C.heroHeading,
           onBackClick: () => {
-            f(!1), R.default.track(p.rMx.NITRO_HOME_NAVIGATION, {
+            P(!1), d.default.track(p.rMx.NITRO_HOME_NAVIGATION, {
               current_component: S.MQ.SEE_ALL,
-              next_component: P,
+              next_component: O,
               interaction_component: "Back Button"
             })
           }
@@ -72,12 +72,12 @@ s.Z = e => {
           }), (0, n.jsx)(A.Z, {
             className: C.cardCarousel,
             cards: (0, N.sP)({
-              perksCards: h,
+              perksCards: L,
               variant: S.R0.CARD_CAROUSEL_FIRST_ROW,
               shopMarketingVariation: D,
-              tileOrderVariant: L,
+              tileOrderVariant: h,
               isPremiumSubscriber: B,
-              isFullScreen: O
+              isFullScreen: f
             }),
             cardType: S.R0.CARD_CAROUSEL_FIRST_ROW
           }), (0, n.jsx)(_.Heading, {
@@ -88,12 +88,12 @@ s.Z = e => {
           }), (0, n.jsx)(A.Z, {
             className: C.cardCarousel,
             cards: (0, N.sP)({
-              perksCards: h,
+              perksCards: L,
               variant: S.R0.CARD_CAROUSEL_SECOND_ROW,
               shopMarketingVariation: D,
-              tileOrderVariant: L,
+              tileOrderVariant: h,
               isPremiumSubscriber: B,
-              isFullScreen: O
+              isFullScreen: f
             }),
             cardType: S.R0.CARD_CAROUSEL_SECOND_ROW
           }), (0, n.jsx)(_.Heading, {
@@ -104,12 +104,12 @@ s.Z = e => {
           }), (0, n.jsx)(A.Z, {
             className: C.cardCarousel,
             cards: (0, N.sP)({
-              perksCards: h,
+              perksCards: L,
               variant: S.R0.CARD_CAROUSEL_THIRD_ROW,
               shopMarketingVariation: D,
-              tileOrderVariant: L,
+              tileOrderVariant: h,
               isPremiumSubscriber: B,
-              isFullScreen: O
+              isFullScreen: f
             }),
             cardType: S.R0.CARD_CAROUSEL_THIRD_ROW
           })]
@@ -117,7 +117,7 @@ s.Z = e => {
           className: C.footerSpacing
         }), (0, n.jsx)(o.$, {
           onChange: e => {
-            e && !v && (R.default.track(p.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+            e && !v && (d.default.track(p.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
               location_stack: b
             }), Z(!0))
           },

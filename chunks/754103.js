@@ -15,7 +15,7 @@ function u(e, a, t) {
     writable: !0
   }) : e[a] = t, e
 }
-class d extends s.PureComponent {
+class E extends s.PureComponent {
   componentDidUpdate(e) {
     if (this.props.formError !== e.formError) this.setState({
       changedSinceError: new Set
@@ -67,29 +67,29 @@ class d extends s.PureComponent {
         ...c
       } = this.props, {
         getClassNameForLayout: u,
-        renderInput: d,
-        title: E,
+        renderInput: E,
+        title: d,
         name: A,
-        id: p,
-        placeholder: _,
-        ...N
-      } = e, m = {
-        ...N,
-        placeholder: null == _ ? void 0 : _(),
+        id: _,
+        placeholder: N,
+        ...m
+      } = e, p = {
+        ...m,
+        placeholder: null == N ? void 0 : N(),
         layout: i,
         error: this.getError(A),
         value: a[A],
         name: A,
-        "aria-labelledby": p,
+        "aria-labelledby": _,
         onChange: t,
         onFocus: s,
         onBlur: l
       };
       return (0, n.jsx)(o.FormSection, {
         className: r()(null == u ? void 0 : u(i)),
-        title: E(),
-        titleId: p,
-        children: d(m, c)
+        title: d(),
+        titleId: _,
+        children: E(p, c)
       }, A)
     }), u(this, "renderFormRow", e => {
       let a = e.fields.map(this.renderFormSection);
@@ -100,4 +100,4 @@ class d extends s.PureComponent {
     })
   }
 }
-a.Z = d
+a.Z = E

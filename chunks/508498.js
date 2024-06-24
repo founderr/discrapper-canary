@@ -1,21 +1,21 @@
 "use strict";
-t.d(s, {
+s.d(t, {
   Db: function() {
     return u
   }
-}), t(610138), t(216116), t(78328), t(815648), t(47120);
-var n, a, r = t(470079),
-  i = t(266067),
-  l = t(37234),
-  o = t(703656),
-  c = t(981631);
+}), s(610138), s(216116), s(78328), s(815648), s(47120);
+var n, r, a = s(470079),
+  i = s(266067),
+  l = s(37234),
+  o = s(703656),
+  c = s(981631);
 
 function u() {
   let {
     search: e
-  } = (0, i.TH)(), s = (0, i.UO)(), t = r.useMemo(() => new URLSearchParams(e), [e]).get("source"), n = null != t ? parseInt(t, 10) : null;
+  } = (0, i.TH)(), t = (0, i.UO)(), s = a.useMemo(() => new URLSearchParams(e), [e]).get("source"), n = null != s ? parseInt(s, 10) : null;
   return {
-    onClose: r.useCallback(() => {
+    onClose: a.useCallback(() => {
       if (0 === n) {
         (0, o.op)(), (0, l.jN)(c.S9g.USER_SETTINGS);
         return
@@ -26,6 +26,6 @@ function u() {
       }(0, o.uL)(c.Z5c.APP)
     }, [n]),
     source: n,
-    ...s
+    ...t
   }
-}(a = n || (n = {}))[a.SETTINGS = 0] = "SETTINGS", a[a.CHANGELOG = 1] = "CHANGELOG", a[a.DM_LIST = 2] = "DM_LIST"
+}(r = n || (n = {}))[r.SETTINGS = 0] = "SETTINGS", r[r.CHANGELOG = 1] = "CHANGELOG", r[r.DM_LIST = 2] = "DM_LIST"

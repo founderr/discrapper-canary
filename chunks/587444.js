@@ -1,9 +1,9 @@
 n.d(t, {
   Z: function() {
-    return p
+    return N
   },
   u: function() {
-    return I
+    return h
   }
 });
 var s = n(735250);
@@ -18,9 +18,9 @@ var r = n(120356),
   d = n(689938),
   E = n(595927),
   _ = n(83922),
-  h = n(331651);
+  I = n(331651);
 
-function I(e) {
+function h(e) {
   let {
     text: t,
     buttonCta: r,
@@ -30,10 +30,10 @@ function I(e) {
     children: [(0, s.jsx)(o.Ee, {
       src: n(689411)
     }), (0, s.jsx)(o.Dx, {
-      className: i()(h.marginTop20, h.marginBottom8, _.flexCenter),
+      className: i()(I.marginTop20, I.marginBottom8, _.flexCenter),
       children: d.Z.Messages.DISCORD_DESC_SHORT
     }), (0, s.jsx)(o.DK, {
-      className: h.marginBottom40,
+      className: I.marginBottom40,
       children: d.Z.Messages.DISCORD_DESC_LONG
     }), (0, s.jsxs)(a.Card, {
       className: E.card,
@@ -69,7 +69,7 @@ function I(e) {
   })
 }
 
-function p(e) {
+function N(e) {
   let {
     text: t,
     buttonCta: n,
@@ -78,7 +78,7 @@ function p(e) {
   } = e;
   return (0, s.jsx)(o.ZP, {
     theme: r,
-    children: (0, s.jsx)(I, {
+    children: (0, s.jsx)(h, {
       text: t,
       buttonCta: n,
       onClick: i

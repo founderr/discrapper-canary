@@ -1,19 +1,19 @@
-E.d(n, {
+t.d(n, {
   i: function() {
     return _
   }
 });
-var t = E(689938);
+var E = t(689938);
 
 function _(e) {
   let {
     username: n,
-    usernameOnClickHandler: E,
+    usernameOnClickHandler: t,
     productName: _
   } = e;
-  return t.Z.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE_MOBILE.astFormat({
+  return E.Z.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE_MOBILE.astFormat({
     username: n,
-    usernameHook: E,
+    usernameHook: t,
     productName: _
   })
 }

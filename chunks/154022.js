@@ -27,14 +27,14 @@ var n = t(735250),
   R = t(285952),
   M = t(153124),
   x = t(626135),
-  D = t(63063),
-  p = t(695346),
+  p = t(63063),
+  D = t(695346),
   L = t(263937),
   P = t(996073),
   Z = t(526761),
   f = t(726985),
-  v = t(981631),
-  j = t(611480),
+  j = t(981631),
+  v = t(611480),
   U = t(653477),
   B = t(689938),
   b = t(542065),
@@ -92,7 +92,7 @@ function w(e) {
       variant: "text-md/normal",
       children: B.Z.Messages.ACCESSIBILITY_SETTINGS_APPEARANCE_LINK.format({
         onAppearanceClick() {
-          d.Z.open(v.oAB.APPEARANCE)
+          d.Z.open(j.oAB.APPEARANCE)
         }
       })
     })]
@@ -100,7 +100,7 @@ function w(e) {
 }
 
 function W() {
-  let e = p.jU.useSetting(),
+  let e = D.jU.useSetting(),
     [s] = i.useState(() => {
       let e = (0, I.e5)({
         ...(0, N.ZP)({
@@ -109,7 +109,7 @@ function W() {
             previewLink: "https://discord.com/accessibility"
           })
         }),
-        state: v.yb.SENT,
+        state: j.yb.SENT,
         id: "".concat(0)
       });
       return e.colorString = "green", e
@@ -126,7 +126,7 @@ function W() {
           children: B.Z.Messages.ACCESSIBILITY_EXAMPLE_BUTTON_LABEL
         }), (0, n.jsx)("div", {
           className: b.previewAvatars,
-          children: [v.Skl.ONLINE, v.Skl.DND, v.Skl.IDLE].map(e => (0, n.jsx)(E.AnimatedAvatar, {
+          children: [j.Skl.ONLINE, j.Skl.DND, j.Skl.IDLE].map(e => (0, n.jsx)(E.AnimatedAvatar, {
             "aria-label": B.Z.Messages.USER_SETTINGS_AVATAR,
             src: F,
             size: E.AvatarSizes.SIZE_32,
@@ -170,7 +170,7 @@ function K() {
     }), (0, n.jsx)(E.Slider, {
       "aria-labelledby": V,
       "aria-describedby": y,
-      markers: v.yqN.SATURATION_INCREMENTS,
+      markers: j.yqN.SATURATION_INCREMENTS,
       equidistant: !0,
       stickToMarkers: !0,
       maxValue: 1,
@@ -259,7 +259,7 @@ function q() {
     children: (0, n.jsx)(E.FormSwitch, {
       note: B.Z.Messages.ACCESSIBILITY_SETTINGS_PROFILE_THEMES_NOTE.format({
         onThemeClick() {
-          d.Z.open(v.oAB.APPEARANCE)
+          d.Z.open(j.oAB.APPEARANCE)
         }
       }),
       className: G.marginTop20,
@@ -280,7 +280,7 @@ function J() {
     null != a.current && (clearTimeout(a.current), a.current = null), s !== e && (a.current = setTimeout(() => (0, T.qz)(s), 150))
   }, [s, e]);
   let l = B.Z.Messages.ACCESSIBILITY_SETTINGS_SYNC_FORCED_COLORS_DESCRIPTION.format({
-    learnMoreLink: D.Z.getArticleURL(v.BhN.FORCED_COLORS)
+    learnMoreLink: p.Z.getArticleURL(j.BhN.FORCED_COLORS)
   });
   return (0, n.jsx)(E.FormItem, {
     title: B.Z.Messages.ACCESSIBILITY_SETTINGS_CONTRAST,
@@ -295,8 +295,8 @@ function J() {
 }
 
 function $() {
-  let e = p.QK.useSetting(),
-    s = p.Yk.useSetting(),
+  let e = D.QK.useSetting(),
+    s = D.Yk.useSetting(),
     {
       useReducedMotion: t,
       rawPrefersReducedMotion: a,
@@ -326,7 +326,7 @@ function $() {
       type: E.FormText.Types.DESCRIPTION,
       className: G.marginBottom8,
       children: B.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_DESCRIPTION.format({
-        helpdeskArticle: D.Z.getArticleURL(v.BhN.REDUCED_MOTION)
+        helpdeskArticle: p.Z.getArticleURL(j.BhN.REDUCED_MOTION)
       })
     }), (0, n.jsx)(E.Checkbox, {
       className: G.marginTop20,
@@ -347,23 +347,23 @@ function $() {
       className: G.marginBottom40,
       value: e,
       note: null != o ? (0, O.Z)(o) : void 0,
-      onChange: p.QK.updateSetting,
+      onChange: D.QK.updateSetting,
       children: B.Z.Messages.GIF_AUTO_PLAY_LABEL
     }), (0, n.jsx)(E.FormSwitch, {
       className: l()(G.marginTop8, G.marginBottom20),
       value: s,
       note: null != d ? (0, O.Z)(d) : void 0,
-      onChange: p.Yk.updateSetting,
+      onChange: D.Yk.updateSetting,
       children: B.Z.Messages.ANIMATE_EMOJI
     })]
   })
 }
 
 function ee() {
-  let e = p.Wp.useSetting(),
+  let e = D.Wp.useSetting(),
     s = (0, c.e7)([L.Z], () => L.Z.getAppliedOverrideReasonKey("animateStickers")),
     t = i.useCallback(e => {
-      p.Wp.updateSetting(e.value)
+      D.Wp.updateSetting(e.value)
     }, []);
   return (0, n.jsxs)(E.FormItem, {
     className: G.marginBottom40,
@@ -375,14 +375,14 @@ function ee() {
     }), (0, n.jsx)(E.RadioGroup, {
       options: [{
         name: B.Z.Messages.STICKERS_ALWAYS_ANIMATE,
-        value: j.yr.ALWAYS_ANIMATE
+        value: v.yr.ALWAYS_ANIMATE
       }, {
         name: B.Z.Messages.STICKERS_ANIMATE_ON_INTERACTION,
         desc: B.Z.Messages.STICKERS_ANIMATE_ON_INTERACTION_DESCRIPTION,
-        value: j.yr.ANIMATE_ON_INTERACTION
+        value: v.yr.ANIMATE_ON_INTERACTION
       }, {
         name: B.Z.Messages.STICKERS_NEVER_ANIMATE,
-        value: j.yr.NEVER_ANIMATE
+        value: v.yr.NEVER_ANIMATE
       }],
       onChange: t,
       value: e
@@ -392,7 +392,7 @@ function ee() {
 
 function es() {
   let e = (0, c.e7)([S.Z], () => S.Z.isSubmitButtonEnabled),
-    s = p.dN.useSetting(),
+    s = D.dN.useSetting(),
     t = i.useRef(null);
   return (0, P.Z)(t, Z.rP.LEGACY_CHAT_INPUT), (0, n.jsxs)(E.FormItem, {
     ref: t,
@@ -409,12 +409,12 @@ function es() {
       value: s,
       note: B.Z.Messages.LEGACY_CHAT_INPUT_DESCRIPTION,
       onChange: e => {
-        x.default.track(v.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
+        x.default.track(j.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
           enabled: e,
           location: {
-            section: v.jXE.SETTINGS_ACCESSIBILITY
+            section: j.jXE.SETTINGS_ACCESSIBILITY
           }
-        }), p.dN.updateSetting(e)
+        }), D.dN.updateSetting(e)
       },
       children: B.Z.Messages.LEGACY_CHAT_INPUT
     })]
@@ -422,7 +422,7 @@ function es() {
 }
 
 function et() {
-  let e = p.OW.useSetting(),
+  let e = D.OW.useSetting(),
     s = (0, c.e7)([g.Z], () => g.Z.speechRate),
     [t, a] = i.useState(!1);
   return _.Zh ? (0, n.jsxs)(n.Fragment, {
@@ -433,7 +433,7 @@ function et() {
       }), (0, n.jsx)(E.FormSwitch, {
         className: G.marginTop20,
         value: e,
-        onChange: p.OW.updateSetting,
+        onChange: D.OW.updateSetting,
         children: B.Z.Messages.ALLOW_TTS_COMMAND
       })]
     }), (0, n.jsxs)(E.FormItem, {

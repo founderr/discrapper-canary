@@ -1,48 +1,48 @@
-t.d(n, {
+n.d(t, {
   w: function() {
     return E
   }
 });
-var s = t(735250);
-t(470079);
-var a = t(512722),
-  l = t.n(a),
-  i = t(481060),
-  r = t(598),
-  o = t(698708),
-  d = t(614277),
-  c = t(689938),
-  u = t(474411);
+var r = n(735250);
+n(470079);
+var a = n(512722),
+  s = n.n(a),
+  l = n(481060),
+  i = n(598),
+  o = n(698708),
+  u = n(614277),
+  c = n(689938),
+  d = n(474411);
 
 function E(e) {
   let {
-    handleClose: n
+    handleClose: t
   } = e, {
-    skusById: t,
+    skusById: n,
     selectedSkuId: a,
     application: E
-  } = (0, r.usePaymentContext)();
-  l()(null != a, "Expected selectedSkuId"), l()(null != E, "Expected application");
-  let C = t[a];
-  l()(null != C, "Expected sku");
-  let f = c.Z.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
+  } = (0, i.usePaymentContext)();
+  s()(null != a, "Expected selectedSkuId"), s()(null != E, "Expected application");
+  let h = n[a];
+  s()(null != h, "Expected sku");
+  let p = c.Z.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
     applicationName: E.name,
-    itemName: C.name
+    itemName: h.name
   });
-  return (0, s.jsxs)(d.C3, {
-    children: [(0, s.jsx)(o.Z, {}), (0, s.jsxs)("div", {
-      className: u.confirmation,
-      children: [(0, s.jsx)(i.Heading, {
+  return (0, r.jsxs)(u.C3, {
+    children: [(0, r.jsx)(o.Z, {}), (0, r.jsxs)("div", {
+      className: d.confirmation,
+      children: [(0, r.jsx)(l.Heading, {
         variant: "heading-xxl/bold",
-        className: u.confirmationHeader,
+        className: d.confirmationHeader,
         children: "Success!"
-      }), (0, s.jsx)(i.Text, {
+      }), (0, r.jsx)(l.Text, {
         variant: "text-md/normal",
-        children: f
-      }), (0, s.jsx)("div", {
-        className: u.divider
-      }), (0, s.jsx)(i.Button, {
-        onClick: n,
+        children: p
+      }), (0, r.jsx)("div", {
+        className: d.divider
+      }), (0, r.jsx)(l.Button, {
+        onClick: t,
         children: c.Z.Messages.CLOSE
       })]
     })]

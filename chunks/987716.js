@@ -28,17 +28,17 @@ let N = e => {
     soundEffect: x,
     setEmojiConfetti: h,
     setSoundEffect: P
-  } = (0, r.wD)(), [v, A] = t.useState(!1), f = t.useRef(null), M = (0, i.useRadioGroup)({
+  } = (0, r.wD)(), [A, v] = t.useState(!1), f = t.useRef(null), M = (0, i.useRadioGroup)({
     orientation: "horizontal"
-  }), g = (0, c.MY)(s, n), C = g === c.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, L = g !== c.xr.DEFAULT, R = (0, u.rK)(), {
-    enabled: O
+  }), g = (0, c.MY)(s, n), C = g === c.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, R = g !== c.xr.DEFAULT, O = (0, u.rK)(), {
+    enabled: L
   } = u.ZP.useExperiment({
     location: "premiumGiftSelect_GiftAnimationOptions"
   }, {
-    autoTrackExposure: R
+    autoTrackExposure: O
   }), j = null;
-  return L && (j = R && O ? I.V4 : I.QI), (0, l.jsxs)("div", {
-    children: [L && (0, l.jsxs)("div", {
+  return R && (j = O && L ? I.V4 : I.QI), (0, l.jsxs)("div", {
+    children: [R && (0, l.jsxs)("div", {
       className: p.giftMainAnimation,
       children: [null != N ? (0, l.jsx)(d.Z, {
         giftStyle: N,
@@ -67,7 +67,7 @@ let N = e => {
         })]
       })]
     }), (0, l.jsx)("div", {
-      tabIndex: null != N || v ? void 0 : 0,
+      tabIndex: null != N || A ? void 0 : 0,
       onFocus: e => {
         var n;
         e.target === e.currentTarget && (null === (n = f.current) || void 0 === n || n.focus())
@@ -80,8 +80,8 @@ let N = e => {
         giftStyle: e,
         setSelectedGiftStyle: T,
         ref: 0 === n ? f : null,
-        onFocus: () => A(!0),
-        onBlur: () => A(!1)
+        onFocus: () => v(!0),
+        onBlur: () => v(!1)
       }, e))
     }), (0, l.jsx)("div", {
       className: p.__invalid_selectPlanDivider

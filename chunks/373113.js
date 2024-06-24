@@ -1,51 +1,51 @@
 "use strict";
-t.d(s, {
+s.d(t, {
   Z: function() {
-    return r
+    return a
   }
 });
-var n = t(735250);
-t(470079);
-var a = t(911946);
+var n = s(735250);
+s(470079);
+var r = s(911946);
 
-function r() {
+function a() {
   return (0, n.jsxs)("div", {
-    className: a.__invalid_snowflakes,
+    className: r.__invalid_snowflakes,
     children: [(0, n.jsx)("div", {
-      className: a.snowflake,
+      className: r.snowflake,
       children: "❅"
     }), (0, n.jsx)("div", {
-      className: a.snowflake,
+      className: r.snowflake,
       children: "❅"
     }), (0, n.jsx)("div", {
-      className: a.snowflake,
+      className: r.snowflake,
       children: "❅"
     }), (0, n.jsx)("div", {
-      className: a.snowflake,
+      className: r.snowflake,
       children: "❅"
     }), (0, n.jsx)("div", {
-      className: a.snowflake,
+      className: r.snowflake,
       children: "❅"
     }), (0, n.jsx)("div", {
-      className: a.snowflake,
+      className: r.snowflake,
       children: "❅"
     }), (0, n.jsx)("div", {
-      className: a.snowflake,
+      className: r.snowflake,
       children: "❅"
     }), (0, n.jsx)("div", {
-      className: a.snowflake,
+      className: r.snowflake,
       children: "❅"
     }), (0, n.jsx)("div", {
-      className: a.snowflake,
+      className: r.snowflake,
       children: "❅"
     }), (0, n.jsx)("div", {
-      className: a.snowflake,
+      className: r.snowflake,
       children: "❅"
     }), (0, n.jsx)("div", {
-      className: a.snowflake,
+      className: r.snowflake,
       children: "❅"
     }), (0, n.jsx)("div", {
-      className: a.snowflake,
+      className: r.snowflake,
       children: "❅"
     })]
   })

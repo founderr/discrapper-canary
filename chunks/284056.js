@@ -4,9 +4,9 @@ n.d(t, {
   }
 }), n(47120);
 var s = n(735250),
-  a = n(470079),
-  i = n(392711),
-  l = n.n(i),
+  i = n(470079),
+  a = n(392711),
+  l = n.n(a),
   r = n(442837),
   c = n(46973),
   o = n(846519),
@@ -28,7 +28,7 @@ function g(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class A extends a.PureComponent {
+class A extends i.PureComponent {
   componentDidMount() {
     this._initTimeout.start(1e3, this.setupVoiceActivity)
   }
@@ -41,8 +41,8 @@ class A extends a.PureComponent {
       inputDeviceName: t,
       inputVolume: n,
       outputDeviceName: s,
-      outputVolume: a,
-      inputMode: i,
+      outputVolume: i,
+      inputMode: a,
       vadAutoThreshold: l,
       vadThreshold: r,
       location: c,
@@ -56,8 +56,8 @@ class A extends a.PureComponent {
       input_device_name: t,
       input_device_volume: n,
       output_device_name: s,
-      output_device_volume: a,
-      input_mode: i,
+      output_device_volume: i,
+      input_mode: a,
       input_sensitivity_is_automatic: l,
       input_sensitivity_threshold: Math.round(r),
       location: c
@@ -85,12 +85,12 @@ class A extends a.PureComponent {
       captionNoVoice: t
     } = this.props, {
       isMicTesting: n,
-      isDetectingInput: a
+      isDetectingInput: i
     } = this.state;
     return (0, s.jsx)(d.FormText, {
       className: N.micTestCaption,
       type: d.FormText.Types.DESCRIPTION,
-      children: n ? a ? e : t : null
+      children: n ? i ? e : t : null
     })
   }
   render() {
@@ -98,8 +98,8 @@ class A extends a.PureComponent {
       isVoiceConnected: e,
       title: t,
       description: n,
-      notchBackground: a,
-      buttonTest: i,
+      notchBackground: i,
+      buttonTest: a,
       buttonStop: l,
       buttonClassName: r,
       buttonColor: c,
@@ -135,12 +135,12 @@ class A extends a.PureComponent {
               size: d.Button.Sizes.SMALL,
               className: r,
               color: c,
-              children: u ? l : i
+              children: u ? l : a
             })
           }
         }), (0, s.jsx)(h.Z, {
           progress: u ? E + 100 : 0,
-          notchBackground: a
+          notchBackground: i
         }), this.renderCaption()]
       })]
     })
@@ -186,8 +186,8 @@ t.Z = r.ZP.connectStores([_.Z, E.Z], () => {
       return n === e
     }),
     s = E.Z.getOutputDeviceId(),
-    a = E.Z.getOutputDevices(),
-    i = l().find(a, e => {
+    i = E.Z.getOutputDevices(),
+    a = l().find(i, e => {
       let {
         id: t
       } = e;
@@ -203,6 +203,6 @@ t.Z = r.ZP.connectStores([_.Z, E.Z], () => {
     isDeafened: E.Z.isSelfDeaf(),
     vadAutoThreshold: r.autoThreshold,
     inputDeviceName: null != n ? n.name : "",
-    outputDeviceName: null != i ? i.name : ""
+    outputDeviceName: null != a ? a.name : ""
   }
 })(A)

@@ -3,7 +3,7 @@ t.d(s, {
     return L
   },
   i: function() {
-    return p
+    return D
   }
 });
 var n = t(735250),
@@ -30,13 +30,13 @@ var n = t(735250),
   R = t(689938),
   M = t(610275),
   x = t(331651);
-let D = () => {
+let p = () => {
     (0, S.EW)(l.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
       dismissAction: h.L.PRIMARY,
       forceTrack: !0
     }), (0, d.bM)(), (0, o.xf)()
   },
-  p = () => {
+  D = () => {
     var e, s;
     let {
       analyticsLocations: t
@@ -61,7 +61,7 @@ let D = () => {
               className: M.tryItOutButtons,
               children: [(0, n.jsx)(r.Button, {
                 color: r.Button.Colors.PRIMARY,
-                onClick: () => D(),
+                onClick: () => p(),
                 children: R.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
               }), (0, n.jsx)(A.Z, {
                 subscriptionTier: g.Si.TIER_2,
@@ -75,7 +75,7 @@ let D = () => {
             children: [(0, n.jsx)(r.Button, {
               className: M.previewThemeButtonWide,
               color: r.Button.Colors.PRIMARY,
-              onClick: () => D(),
+              onClick: () => p(),
               children: R.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
             }), (0, n.jsx)("div", {
               className: M.premiumTier2Divider
@@ -92,6 +92,6 @@ let D = () => {
   },
   L = () => (0, a.e7)([_.Z], () => _.Z.isPreview) ? null : (0, n.jsx)(r.Button, {
     size: r.ButtonSizes.SMALL,
-    onClick: () => D(),
+    onClick: () => p(),
     children: R.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEMES_TITLE
   })

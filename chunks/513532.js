@@ -4,8 +4,8 @@ t(470079);
 var r = t(442837),
   s = t(481060),
   i = t(863249),
-  o = t(616230),
-  l = t(430824),
+  l = t(616230),
+  o = t(430824),
   c = t(389134),
   d = t(650461),
   u = t(689938),
@@ -15,7 +15,7 @@ n.Z = e => {
     guildId: n,
     error: t,
     inSettings: h = !1
-  } = e, C = (0, r.e7)([l.Z], () => l.Z.getGuild(n)), x = (0, r.e7)([c.Z, d.ZP], () => {
+  } = e, C = (0, r.e7)([o.Z], () => o.Z.getGuild(n)), x = (0, r.e7)([c.Z, d.ZP], () => {
     var e, t;
     return h ? c.Z.getState().settings.verificationForm : null === (t = d.ZP.getStateForGuild(n)) || void 0 === t ? void 0 : null === (e = t.progress) || void 0 === e ? void 0 : e.verificationForm
   });
@@ -37,7 +37,7 @@ n.Z = e => {
         color: "status-danger",
         className: m.errorText,
         children: t
-      }), (0, a.jsx)(o.Z, {
+      }), (0, a.jsx)(l.Z, {
         guild: C,
         isClanContext: !0,
         onFieldsSave: (e, n) => (i.Z.updateVerificationFormFieldsLocal(e, [...n]), Promise.resolve()),

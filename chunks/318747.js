@@ -14,9 +14,9 @@ s.Z = e => {
     className: s,
     forceWhite: t,
     giftMessage: a,
-    subscriptionTier: d,
-    ...R
-  } = e, I = (0, o.ZP)(), T = (0, i.wj)(I) || t, A = T ? l.ButtonColors.WHITE : l.ButtonColors.BRAND, M = d === c.Si.TIER_0 ? E.Z.Messages.GIFT_NITRO_TIER_0 : E.Z.Messages.GIFT_NITRO;
+    subscriptionTier: R,
+    ...d
+  } = e, I = (0, o.ZP)(), T = (0, i.wj)(I) || t, A = T ? l.ButtonColors.WHITE : l.ButtonColors.BRAND, M = R === c.Si.TIER_0 ? E.Z.Messages.GIFT_NITRO_TIER_0 : E.Z.Messages.GIFT_NITRO;
   return (0, n.jsx)(_.Z, {
     isGift: !0,
     color: A,
@@ -24,7 +24,7 @@ s.Z = e => {
     buttonText: M,
     giftMessage: a,
     className: r()(s, u.giftButton, T ? u.buttonWhite : u.buttonBrand),
-    subscriptionTier: d,
-    ...R
+    subscriptionTier: R,
+    ...d
   })
 }

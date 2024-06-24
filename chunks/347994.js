@@ -1,7 +1,7 @@
 n(47120);
 var s = n(392711),
-  a = n.n(s),
-  i = n(710845),
+  i = n.n(s),
+  a = n(710845),
   l = n(581883),
   r = n(314897),
   c = n(287328),
@@ -15,16 +15,16 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let u = new i.Z("UserSettingsProto");
+let u = new a.Z("UserSettingsProto");
 t.Z = new class e {
   async getAll(e) {
     let t = performance.now(),
       n = await c.Z.userSettings(e).getMany(),
       s = performance.now();
     u.verbose("loaded in ".concat(s - t, "ms (settings: ").concat(n.length, ")"));
-    let a = {};
-    for (let e of n) a[e.id] = e.value;
-    return a
+    let i = {};
+    for (let e of n) i[e.id] = e.value;
+    return i
   }
   resetInMemoryState() {}
   constructor() {
@@ -39,17 +39,17 @@ t.Z = new class e {
       null == t || t.transaction(e => {
         var t, n;
         let s = l.Z.computeState(),
-          a = c.Z.userSettingsTransaction(e);
-        for (let e in s) a.put({
+          i = c.Z.userSettingsTransaction(e);
+        for (let e in s) i.put({
           id: Number(e),
           value: s[e]
         });
-        let i = null !== (n = null === (t = l.Z.settings.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n ? n : -1;
+        let a = null !== (n = null === (t = l.Z.settings.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n ? n : -1;
         c.Z.nonGuildVersionsTransaction(e).put({
           id: "user_settings_version",
-          version: i
+          version: a
         })
       }, "handleUserSettingsProtoChange")
-    }), d(this, "throttledOnChange", a().debounce(this.handleUserSettingsProtoChange, 0))
+    }), d(this, "throttledOnChange", i().debounce(this.handleUserSettingsProtoChange, 0))
   }
 }

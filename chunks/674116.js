@@ -27,14 +27,14 @@ var n = t(735250),
   R = t(803567),
   M = t(269876),
   x = t(976758),
-  D = t(526761),
-  p = t(726985),
+  p = t(526761),
+  D = t(726985),
   L = t(981631),
   P = t(65154),
   Z = t(689938),
   f = t(331651);
-let v = (0, S.hQ)(),
-  j = "".concat(u.Z.getArticleURL(L.BhN.VOICE_VIDEO_TROUBLESHOOTING), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm");
+let j = (0, S.hQ)(),
+  v = "".concat(u.Z.getArticleURL(L.BhN.VOICE_VIDEO_TROUBLESHOOTING), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm");
 
 function U(e, s, t) {
   (0, o.openModal)(i => (0, n.jsx)(o.ConfirmModal, {
@@ -75,7 +75,7 @@ function B() {
     attenuationSupported: _.Z.supports(P.AN.ATTENUATION)
   })), G = (0, r.e7)([T.Z], () => T.Z.getSubsection()), F = i.createRef();
   return i.useEffect(() => {
-    if (G === D.GA) {
+    if (G === p.GA) {
       var e;
       null == F || null === (e = F.current) || void 0 === e || e.scrollIntoView(), E.Z.clearSubsection()
     }
@@ -83,32 +83,32 @@ function B() {
     tag: o.FormTitleTags.H1,
     title: Z.Z.Messages.VOICE_SETTINGS,
     children: [(0, n.jsx)(d.F, {
-      setting: p.s6.VOICE_AND_VIDEO_DEVICES,
+      setting: D.s6.VOICE_AND_VIDEO_DEVICES,
       children: (0, n.jsx)(C.Z, {})
     }), (0, n.jsx)(d.F, {
-      setting: p.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
+      setting: D.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
       children: (0, n.jsx)(x.Z, {})
     }), (0, n.jsxs)(d.F, {
-      setting: p.s6.VOICE_AND_VIDEO_MIC_TEST,
+      setting: D.s6.VOICE_AND_VIDEO_MIC_TEST,
       children: [(0, n.jsx)(m.Z, {}), (0, n.jsx)(o.FormText, {
         className: f.marginBottom20,
         type: o.FormText.Types.DESCRIPTION,
         children: Z.Z.Messages.FORM_HELP_VOICE_VIDEO_TROUBLESHOOTING_GUIDE.format({
-          guideURL: j
+          guideURL: v
         })
       }), (0, n.jsx)(o.FormDivider, {
         className: l()(f.marginBottom20)
       })]
     }), (0, n.jsx)(d.F, {
-      setting: p.s6.VOICE_AND_VIDEO_INPUT_MODE,
+      setting: D.s6.VOICE_AND_VIDEO_INPUT_MODE,
       children: (0, n.jsx)(O.Z, {})
     }), (0, n.jsxs)(d.F, {
-      setting: p.s6.VOICE_AND_VIDEO_SENSITIVITY,
+      setting: D.s6.VOICE_AND_VIDEO_SENSITIVITY,
       children: [e === P.pM.VOICE_ACTIVITY && (0, n.jsx)(M.Z, {}), (0, n.jsx)(o.FormDivider, {
         className: f.marginBottom40
       })]
     }), (0, n.jsx)(d.F, {
-      setting: p.s6.VOICE_AND_VIDEO_SOUNDBOARD,
+      setting: D.s6.VOICE_AND_VIDEO_SOUNDBOARD,
       children: (0, n.jsx)("div", {
         style: {
           scrollMarginTop: "48px"
@@ -116,13 +116,13 @@ function B() {
         ref: F
       })
     }), (0, n.jsx)(d.F, {
-      setting: p.s6.VOICE_AND_VIDEO_SOUNDS,
+      setting: D.s6.VOICE_AND_VIDEO_SOUNDS,
       children: (0, n.jsx)(I.Z, {})
     }), (0, n.jsx)(d.F, {
-      setting: p.s6.VOICE_AND_VIDEO_VIDEO,
+      setting: D.s6.VOICE_AND_VIDEO_VIDEO,
       children: (0, n.jsx)(g.Z, {})
     }), (0, n.jsx)(d.F, {
-      setting: p.s6.VOICE_AND_VIDEO_ADVANCED,
+      setting: D.s6.VOICE_AND_VIDEO_ADVANCED,
       children: (0, n.jsxs)(o.HeadingLevel, {
         component: (0, n.jsx)(o.FormTitle, {
           tag: o.FormTitleTags.H1,
@@ -130,13 +130,13 @@ function B() {
           children: Z.Z.Messages.SETTINGS_ADVANCED
         }),
         children: [(0, n.jsx)(d.F, {
-          setting: p.s6.VOICE_AND_VIDEO_ADVANCED_CODECS,
+          setting: D.s6.VOICE_AND_VIDEO_ADVANCED_CODECS,
           children: (0, n.jsx)(N.Z, {})
         }), (0, n.jsx)(d.F, {
-          setting: p.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
+          setting: D.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
           children: (0, n.jsx)(R.Z, {})
         }), (0, n.jsx)(d.F, {
-          setting: p.s6.VOICE_AND_VIDEO_ADVANCED_QOS,
+          setting: D.s6.VOICE_AND_VIDEO_ADVANCED_QOS,
           children: (0, n.jsx)(o.FormSection, {
             className: f.marginBottom20,
             title: Z.Z.Messages.FORM_LABEL_QOS,
@@ -148,11 +148,11 @@ function B() {
             })
           })
         }), (0, n.jsx)(d.F, {
-          setting: p.s6.VOICE_AND_VIDEO_ADVANCED_ATTENUATION,
+          setting: D.s6.VOICE_AND_VIDEO_ADVANCED_ATTENUATION,
           children: (0, n.jsxs)(o.FormSection, {
             className: f.marginBottom20,
             children: [(0, n.jsx)(o.FormTitle, {
-              id: v,
+              id: j,
               tag: o.FormTitleTags.H5,
               className: f.marginBottom8,
               children: Z.Z.Messages.FORM_LABEL_ATTENUATION
@@ -161,7 +161,7 @@ function B() {
               onValueChange: e => {
                 c.Z.setAttenuation(e, a, S)
               },
-              "aria-labelledby": v
+              "aria-labelledby": j
             }), (0, n.jsx)(o.FormText, {
               className: f.marginBottom20,
               type: o.FormText.Types.DESCRIPTION,
@@ -179,7 +179,7 @@ function B() {
             })]
           })
         }), (0, n.jsx)(d.F, {
-          setting: p.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM,
+          setting: D.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM,
           children: (0, n.jsxs)(o.FormSection, {
             className: f.marginBottom20,
             title: Z.Z.Messages.FORM_LABEL_SUBSYSTEM,
@@ -207,7 +207,7 @@ function B() {
             })]
           })
         }), (0, n.jsxs)(d.F, {
-          setting: p.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING,
+          setting: D.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING,
           children: [(0, n.jsx)(h.Z, {}), (0, n.jsx)(o.FormSection, {
             className: f.marginBottom20,
             title: Z.Z.Messages.FORM_LABEL_VOICE_DIAGNOSTICS,
@@ -218,10 +218,10 @@ function B() {
             })
           })]
         }), (0, n.jsx)(d.F, {
-          setting: p.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
+          setting: D.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
           children: (0, n.jsx)(A.Z, {})
         }), (0, n.jsx)(d.F, {
-          setting: p.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,
+          setting: D.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,
           children: (0, n.jsx)(o.FormItem, {
             children: (0, n.jsx)(o.Button, {
               look: o.Button.Looks.OUTLINED,

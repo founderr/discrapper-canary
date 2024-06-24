@@ -1,8 +1,8 @@
 t(411104);
-var i, l, o, r, E = t(442837),
+var i, l, o, E, r = t(442837),
   u = t(570140);
 let a = null;
-class s extends(i = E.ZP.Store) {
+class s extends(i = r.ZP.Store) {
   getCurrentPath() {
     return null != a ? a.pathname : null
   }
@@ -16,12 +16,12 @@ class s extends(i = E.ZP.Store) {
     throw Error("Should not reset the store this way outside of a test environment")
   }
 }
-r = "ApplicationStoreLocationStore", (o = "displayName") in(l = s) ? Object.defineProperty(l, o, {
-  value: r,
+E = "ApplicationStoreLocationStore", (o = "displayName") in(l = s) ? Object.defineProperty(l, o, {
+  value: E,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[o] = r, n.Z = new s(u.Z, {
+}) : l[o] = E, n.Z = new s(u.Z, {
   APPLICATION_STORE_LOCATION_CHANGE: function(e) {
     let {
       location: n

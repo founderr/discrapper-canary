@@ -1,27 +1,27 @@
-n.d(s, {
+t.d(n, {
   Z: function() {
     return o
   }
 });
-var t = n(735250),
-  a = n(470079);
-let l = e => s => {
-  null == s || s.stopPropagation(), e()
+var s = t(735250),
+  a = t(470079);
+let r = e => n => {
+  null == n || n.stopPropagation(), e()
 };
 
 function o(e) {
   let {
-    onClick: s,
-    className: n,
+    onClick: n,
+    className: t,
     children: o
-  } = e, i = a.useRef(null);
-  return (0, t.jsx)("div", {
-    onClick: s,
-    ref: i,
-    className: n,
+  } = e, l = a.useRef(null);
+  return (0, s.jsx)("div", {
+    onClick: n,
+    ref: l,
+    className: t,
     children: o({
-      areaRef: i,
-      handleStopPropagation: l
+      areaRef: l,
+      handleStopPropagation: r
     })
   })
 }

@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return p
+    return D
   }
 }), t(47120);
 var n = t(735250),
@@ -28,7 +28,7 @@ var n = t(735250),
   M = t(934025),
   x = t(331651);
 
-function D(e) {
+function p(e) {
   return (0, a.e7)([T.Z], () => {
     if (null == e) return null;
     let {
@@ -39,10 +39,10 @@ function D(e) {
   })
 }
 
-function p() {
+function D() {
   let {
     analyticsLocations: e
-  } = (0, o.ZP)(), [s, t] = i.useState(g.hY), r = (0, u.tT)(s), C = D(r), p = (0, a.e7)([T.Z], () => T.Z.hasFetchedAllSounds()), P = (null == r ? void 0 : r.type) === u.zx.GLOBAL, Z = p && null != r && null == C;
+  } = (0, o.ZP)(), [s, t] = i.useState(g.hY), r = (0, u.tT)(s), C = p(r), D = (0, a.e7)([T.Z], () => T.Z.hasFetchedAllSounds()), P = (null == r ? void 0 : r.type) === u.zx.GLOBAL, Z = D && null != r && null == C;
   i.useEffect(() => {
     Z && (0, S.tt)({
       location: e
@@ -123,7 +123,7 @@ function L(e) {
   } = e, t = (0, a.e7)([C.Z], () => {
     var e, t, n;
     return null === (n = C.Z.settings.guilds) || void 0 === n ? void 0 : null === (t = n.guilds) || void 0 === t ? void 0 : null === (e = t[s]) || void 0 === e ? void 0 : e.joinSound
-  }), i = D(t);
+  }), i = p(t);
   if (null == t || null == i) return null;
   let {
     emojiId: o,

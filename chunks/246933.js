@@ -8,8 +8,8 @@ t(470079);
 var r = t(249849),
   s = t(907561),
   i = t(689938),
-  o = t(409814);
-let l = ["#cc99ff", "#ffffff"],
+  l = t(409814);
+let o = ["#cc99ff", "#ffffff"],
   c = ["#2d3dee", "#ffffff"],
   d = [.3, 1],
   u = [{
@@ -39,7 +39,7 @@ function C(e) {
     primaryColorsTransformed: E,
     secondaryColorsTransformed: T
   } = (0, r.s)({
-    primaryBaseColors: l,
+    primaryBaseColors: o,
     primaryTintColor: C,
     primaryTintLuminances: d,
     primaryLuminanceWeights: u,
@@ -94,15 +94,15 @@ function C(e) {
         children: _
       })]
     }), (0, a.jsx)("use", {
-      href: "".concat(o, "#wrapper-layer"),
+      href: "".concat(l, "#wrapper-layer"),
       id: I
     }), (0, a.jsx)("use", {
-      href: "".concat(o, "#clan-banner-warp-tunnel-secondary"),
+      href: "".concat(l, "#clan-banner-warp-tunnel-secondary"),
       style: {
         fill: "url(#fog-gradient-secondary)"
       }
     }), (0, a.jsx)("use", {
-      href: "".concat(o, "#clan-banner-warp-tunnel-primary"),
+      href: "".concat(l, "#clan-banner-warp-tunnel-primary"),
       style: {
         fill: "url(#fog-gradient-primary)"
       }

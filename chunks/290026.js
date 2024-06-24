@@ -1,22 +1,22 @@
 "use strict";
-t.d(s, {
+s.d(t, {
   P: function() {
     return c
   }
-}), t(47120);
-var n = t(470079),
-  a = t(979554),
-  r = t(442837),
-  i = t(597688),
-  l = t(365943),
-  o = t(25251);
+}), s(47120);
+var n = s(470079),
+  r = s(979554),
+  a = s(442837),
+  i = s(597688),
+  l = s(365943),
+  o = s(25251);
 let c = () => {
-  let e = (0, r.e7)([i.Z], () => i.Z.products);
+  let e = (0, a.e7)([i.Z], () => i.Z.products);
   n.useEffect(() => {
-    let s = [...e.values()].filter(e => e.type === a.Z.PROFILE_EFFECT).some(e => {
-      let s = e.items[0].id;
-      return null != s && null == o.Z.getProfileEffectById(s)
+    let t = [...e.values()].filter(e => e.type === r.Z.PROFILE_EFFECT).some(e => {
+      let t = e.items[0].id;
+      return null != t && null == o.Z.getProfileEffectById(t)
     });
-    (0, l.z)(s)
+    (0, l.z)(t)
   }, [e])
 }

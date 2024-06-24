@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return p
+    return N
   }
 });
 var s = n(512722),
@@ -14,10 +14,10 @@ var s = n(512722),
   d = n(314897),
   E = n(896797),
   _ = n(626135),
-  h = n(954824),
-  I = n(981631);
+  I = n(954824),
+  h = n(981631);
 
-function p(e) {
+function N(e) {
   let t = function(e) {
       var t;
       let n = null === (t = l().os) || void 0 === t ? void 0 : t.family;
@@ -33,11 +33,11 @@ function p(e) {
       return "discord://"
     }(e),
     n = (0, o.zS)(t);
-  null != n && _.default.track(I.rMx.DEEP_LINK_CLICKED, {
+  null != n && _.default.track(h.rMx.DEEP_LINK_CLICKED, {
     fingerprint: (0, c.K)(n.fingerprint),
     attempt_id: n.attemptId,
     source: n.utmSource
-  }), h.Z.launch(t, e => {
+  }), I.Z.launch(t, e => {
     !e && (0, u.dL)(E.Z.fallbackRoute)
   })
 }

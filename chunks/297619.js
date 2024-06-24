@@ -3,8 +3,8 @@ t(470079);
 var r = t(120356),
   s = t.n(r),
   i = t(481060),
-  o = t(246364),
-  l = t(700833),
+  l = t(246364),
+  o = t(700833),
   c = t(689938),
   d = t(237261);
 n.Z = function(e) {
@@ -33,7 +33,7 @@ n.Z = function(e) {
         type: i.FormText.Types.DESCRIPTION,
         children: c.Z.Messages.MEMBER_VERIFICATION_GET_STARTED_DESCRIPTION
       }), (0, a.jsx)(i.Button, {
-        onClick: () => (0, l.Md)(o.QJ.TERMS, n, t),
+        onClick: () => (0, o.Md)(l.QJ.TERMS, n, t),
         children: c.Z.Messages.MEMBER_VERIFICATION_GET_STARTED_BUTTON
       })]
     })]

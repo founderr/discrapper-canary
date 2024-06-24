@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-    return l
+    return o
   }
 });
 var a = t(735250);
@@ -8,18 +8,18 @@ t(470079);
 var r = t(120356),
   s = t.n(r),
   i = t(481060),
-  o = t(237261);
+  l = t(237261);
 
-function l(e) {
+function o(e) {
   let {
     title: n,
     children: t
   } = e;
   return (0, a.jsxs)(i.FormSection, {
-    className: s()(o.backgroundContainer, o.spacingContainer, o.containerPadding),
+    className: s()(l.backgroundContainer, l.spacingContainer, l.containerPadding),
     children: [(0, a.jsx)(i.FormTitle, {
       tag: "h3",
-      className: o.containerTitle,
+      className: l.containerTitle,
       children: n
     }), t]
   })

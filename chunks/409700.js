@@ -7,12 +7,12 @@ n.d(t, {
   }
 }), n(411104);
 var s = n(544891),
-  a = n(570140),
-  i = n(981631),
+  i = n(570140),
+  a = n(981631),
   l = n(689938);
 
 function r(e) {
-  return null != e && null != e.body && a.Z.dispatch({
+  return null != e && null != e.body && i.Z.dispatch({
     type: "UPDATE_CONSENTS",
     consents: {
       ...e.body
@@ -27,14 +27,14 @@ function c(e) {
 
 function o() {
   return s.tn.get({
-    url: i.ANM.SETTINGS_CONSENT,
+    url: a.ANM.SETTINGS_CONSENT,
     oldFormErrors: !0
   }).then(r, e => Promise.reject(Error(e.body.message)))
 }
 
 function d(e, t) {
   return s.tn.post({
-    url: i.ANM.SETTINGS_CONSENT,
+    url: a.ANM.SETTINGS_CONSENT,
     body: {
       grant: e,
       revoke: t

@@ -13,8 +13,8 @@ var s, r, i, a, l = n(735250),
   _ = n(893776),
   m = n(99690),
   g = n(937154),
-  f = n(388905),
-  p = n(710845),
+  p = n(388905),
+  f = n(710845),
   I = n(314897),
   N = n(277390),
   A = n(585483),
@@ -24,42 +24,42 @@ var s, r, i, a, l = n(735250),
   C = n(998502),
   x = n(981631),
   O = n(231338),
-  Z = n(689938),
-  L = n(397195),
-  M = n(331651);
+  v = n(689938),
+  Z = n(397195),
+  L = n(331651);
 (i = s || (s = {}))[i.INITIALIZING = 0] = "INITIALIZING", i[i.PENDING_REMOTE_INIT = 1] = "PENDING_REMOTE_INIT", i[i.PENDING_FINISH = 2] = "PENDING_FINISH", i[i.PENDING_TICKET = 3] = "PENDING_TICKET", i[i.PENDING_LOGIN = 4] = "PENDING_LOGIN", i[i.FINISH = 5] = "FINISH", (a = r || (r = {}))[a.QR_CODE = 0] = "QR_CODE", a[a.CONFIRM = 1] = "CONFIRM";
-let v = n(515695),
-  D = new p.Z("LoginQRSocket");
+let M = n(515695),
+  b = new f.Z("LoginQRSocket");
 
-function b(e) {
+function D(e) {
   let {
     text: t = ""
   } = e, [n, s] = o.useState(!1);
   return o.useEffect(() => {
     let e = new Image;
-    e.src = v, e.onload = () => s(!0), e.onerror = () => s(!0)
-  }, [v]), o.useEffect(() => {
-    n && E.AccessibilityAnnouncer.announce(Z.Z.Messages.LOGIN_WITH_QR_LOADING_FINISHED_LABEL)
+    e.src = M, e.onload = () => s(!0), e.onerror = () => s(!0)
+  }, [M]), o.useEffect(() => {
+    n && E.AccessibilityAnnouncer.announce(v.Z.Messages.LOGIN_WITH_QR_LOADING_FINISHED_LABEL)
   }, [n]), (0, l.jsx)("div", {
-    className: L.qrCodeContainer,
+    className: Z.qrCodeContainer,
     children: "" !== t && n ? (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(N.ZP, {
-        className: L.qrCode,
+        className: Z.qrCode,
         size: 160,
         text: t
       }), (0, l.jsx)("div", {
-        className: L.qrCodeOverlay,
+        className: Z.qrCodeOverlay,
         children: (0, l.jsx)("img", {
-          src: v,
+          src: M,
           alt: ""
         })
       })]
     }) : (0, l.jsx)("div", {
-      className: L.qrCodeOverlay,
-      "aria-label": Z.Z.Messages.LOGIN_WITH_QR_LOADING_LABEL,
+      className: Z.qrCodeOverlay,
+      "aria-label": v.Z.Messages.LOGIN_WITH_QR_LOADING_LABEL,
       "aria-busy": !0,
       children: (0, l.jsx)(E.Spinner, {
-        className: L.qrCode,
+        className: Z.qrCode,
         type: E.Spinner.Type.WANDERING_CUBES,
         "aria-hidden": !0
       })
@@ -92,15 +92,15 @@ function j(e) {
     case 0:
     case 1:
       return (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(b, {
+        children: [(0, l.jsx)(D, {
           text: 1 === t.step ? "https://discord.com/ra/".concat(t.fingerprint) : ""
-        }), (0, l.jsx)(f.Dx, {
-          className: M.marginBottom8,
-          children: Z.Z.Messages.LOGIN_WITH_QR
+        }), (0, l.jsx)(p.Dx, {
+          className: L.marginBottom8,
+          children: v.Z.Messages.LOGIN_WITH_QR
         }), null != s ? (0, l.jsx)(y, {
           children: s
-        }) : (0, l.jsx)(f.DK, {
-          children: Z.Z.Messages.LOGIN_WITH_QR_DESCRIPTION.format()
+        }) : (0, l.jsx)(p.DK, {
+          children: v.Z.Messages.LOGIN_WITH_QR_DESCRIPTION.format()
         }), r && (0, l.jsx)(E.Button, {
           size: E.ButtonSizes.LARGE,
           look: E.ButtonLooks.LINK,
@@ -116,7 +116,7 @@ function j(e) {
               conditionalMediationAbortController: e
             }).catch(() => {})
           })(i),
-          children: Z.Z.Messages.SIGN_IN_WITH_PASSKEY
+          children: v.Z.Messages.SIGN_IN_WITH_PASSKEY
         })]
       });
     case 3:
@@ -126,16 +126,16 @@ function j(e) {
       } = t;
       return (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)(m.Z, {
-          className: L.qrAvatar,
+          className: Z.qrAvatar,
           user: e,
           size: E.AvatarSizes.SIZE_120,
           isMobile: !0,
           status: O.Sk.ONLINE
-        }), (0, l.jsx)(f.Dx, {
-          className: M.marginBottom8,
-          children: Z.Z.Messages.CONFIRM_QR_CHECK_YOUR_PHONE
-        }), (0, l.jsx)(f.DK, {
-          children: Z.Z.Messages.LOGIN_AS.format({
+        }), (0, l.jsx)(p.Dx, {
+          className: L.marginBottom8,
+          children: v.Z.Messages.CONFIRM_QR_CHECK_YOUR_PHONE
+        }), (0, l.jsx)(p.DK, {
+          children: v.Z.Messages.LOGIN_AS.format({
             username: "".concat(S.ZP.getUserTag(e))
           })
         }), (0, l.jsx)(E.Button, {
@@ -143,8 +143,8 @@ function j(e) {
           color: E.Button.Colors.LINK,
           size: E.Button.Sizes.MIN,
           onClick: n,
-          className: L.startOverButton,
-          children: Z.Z.Messages.QR_CODE_LOGIN_START_OVER
+          className: Z.startOverButton,
+          children: v.Z.Messages.QR_CODE_LOGIN_START_OVER
         })]
       })
     }
@@ -173,7 +173,7 @@ function P(e) {
     E.current = o.useCallback(() => {
       a({
         step: 0
-      }), d ? n(e => e + 1) : (D.info("document is not visible, will defer reconnection when document becomes visible."), r(!0))
+      }), d ? n(e => e + 1) : (b.info("document is not visible, will defer reconnection when document becomes visible."), r(!0))
     }, [d]);
     let _ = o.useCallback(() => {
         (function(e) {
@@ -185,19 +185,19 @@ function P(e) {
         })(E)()
       }, [E]),
       m = o.useCallback(() => {
-        D.error("Could not complete QR code login, trying to restart with a new QR code."), a({
+        b.error("Could not complete QR code login, trying to restart with a new QR code."), a({
           step: 0
         }), !h.pending && h.fail(_)
       }, [_, h]);
     return o.useEffect(() => {
-      d && s && 0 === i.step && (D.info("reconnecting, now that document is visible"), r(!1), n(e => e + 1))
+      d && s && 0 === i.step && (b.info("reconnecting, now that document is visible"), r(!1), n(e => e + 1))
     }, [i, d, s, r]), o.useEffect(() => {
       let t = Date.now(),
         n = () => "".concat(Date.now() - t, "ms"),
         s = "wss:".concat(window.GLOBAL_ENV.REMOTE_AUTH_ENDPOINT, "/?v=2"),
         r = new WebSocket(s);
-      D.info("[0ms] connecting to ".concat(s));
-      let i = e => D.info("[".concat(n(), "] ").concat(e)),
+      b.info("[0ms] connecting to ".concat(s));
+      let i = e => b.info("[".concat(n(), "] ").concat(e)),
         l = null,
         o = null,
         c = null,
@@ -208,7 +208,7 @@ function P(e) {
         if (null != l) return l;
         throw Error("No key pair set")
       }
-      let f = () => {
+      let p = () => {
         E ? (E = !1, r.send(JSON.stringify({
           op: "heartbeat"
         }))) : (i("heartbeat timeout, reconnecting."), r.close(), m())
@@ -278,7 +278,7 @@ function P(e) {
             i("got hello, auth timeout=".concat(s.timeout_ms, "ms"));
             let e = s.heartbeat_interval;
             d = setTimeout(() => {
-              d = null, f(), c = setInterval(f, e)
+              d = null, p(), c = setInterval(p, e)
             }, Math.floor(e * Math.random()));
             return
           }
@@ -336,14 +336,14 @@ function P(e) {
     })
   }, [i, t, a, _]), (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)("div", {
-      className: L.verticalSeparator
+      className: Z.verticalSeparator
     }), (0, l.jsx)(E.Sequencer, {
       fillParent: !0,
-      className: L.qrLogin,
+      className: Z.qrLogin,
       step: m,
       steps: [0, 1],
       children: (0, l.jsx)("div", {
-        className: L.qrLoginInner,
+        className: Z.qrLoginInner,
         children: (0, l.jsx)(j, {
           state: i,
           cancel: u,

@@ -1,33 +1,33 @@
-S.d(e, {
+t.d(n, {
   Z: function() {
-    return N
+    return _
   }
 });
-var _ = S(735250);
-S(470079);
-var t = S(120356),
-  n = S.n(t),
-  i = S(596454),
-  l = S(377171),
-  I = S(403910),
-  r = S(549631),
-  s = S(934241);
+var i = t(735250);
+t(470079);
+var l = t(120356),
+  r = t.n(l),
+  u = t(596454),
+  o = t(377171),
+  s = t(403910),
+  a = t(549631),
+  c = t(934241);
 
-function N(E) {
-  var e;
+function _(e) {
+  var n;
   let {
-    guildId: S,
-    emojiId: t,
-    emojiName: N,
-    className: o
-  } = E, A = (0, I.Z)(S, t);
-  return null != A || null != N ? (0, _.jsx)(i.Z, {
-    emojiId: null == A ? void 0 : A.id,
-    emojiName: null != N ? N : null == A ? void 0 : A.name,
-    animated: null !== (e = null == A ? void 0 : A.animated) && void 0 !== e && e,
-    className: n()(s.emojiIcon, o)
-  }) : (0, _.jsx)(r.Z, {
-    className: n()(s.emojiIcon, o),
-    color: l.Z.CREATOR_REVENUE_LOCKED_CHANNEL_ICON
+    guildId: t,
+    emojiId: l,
+    emojiName: _,
+    className: d
+  } = e, E = (0, s.Z)(t, l);
+  return null != E || null != _ ? (0, i.jsx)(u.Z, {
+    emojiId: null == E ? void 0 : E.id,
+    emojiName: null != _ ? _ : null == E ? void 0 : E.name,
+    animated: null !== (n = null == E ? void 0 : E.animated) && void 0 !== n && n,
+    className: r()(c.emojiIcon, d)
+  }) : (0, i.jsx)(a.Z, {
+    className: r()(c.emojiIcon, d),
+    color: o.Z.CREATOR_REVENUE_LOCKED_CHANNEL_ICON
   })
 }

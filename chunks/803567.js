@@ -27,12 +27,12 @@ let R = t(775322),
   M = t(853453),
   x = (0, I.hQ)();
 (i = n || (n = {}))[i.NONE = 0] = "NONE", i[i.STANDARD = 1] = "STANDARD", i[i.KRISP = 2] = "KRISP";
-let D = {
+let p = {
   page: m.ZY5.USER_SETTINGS,
   section: m.jXE.SETTINGS_VOICE_AND_VIDEO
 };
 
-function p(e) {
+function D(e) {
   let s = e.currentTarget;
   N.default.track(m.rMx.NOISE_CANCELLATION_LINK_CLICKED, {
     text: s.text,
@@ -82,7 +82,7 @@ function L() {
     }), (0, a.jsx)(E.RadioGroup, {
       options: l,
       onChange: e => {
-        d.Z.setNoiseCancellation(2 === e.value, D), d.Z.setNoiseSuppression(1 === e.value, D)
+        d.Z.setNoiseCancellation(2 === e.value, p), d.Z.setNoiseSuppression(1 === e.value, p)
       },
       value: s ? 2 : t ? 1 : 0
     }), i && (0, a.jsx)(E.FormNotice, {
@@ -96,7 +96,7 @@ function L() {
       align: u.Z.Align.CENTER,
       body: (0, a.jsx)(E.Anchor, {
         href: A.Z.getArticleURL(m.BhN.NOISE_SUPPRESSION),
-        onClick: p,
+        onClick: D,
         children: h.Z.Messages.LEARN_MORE
       })
     }), (0, a.jsx)(E.FormDivider, {})]

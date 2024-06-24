@@ -1,7 +1,7 @@
 var s = n(735250);
 n(470079);
-var a = n(120356),
-  i = n.n(a),
+var i = n(120356),
+  a = n.n(i),
   l = n(468194),
   r = n(399606),
   c = n(481060),
@@ -16,7 +16,7 @@ t.Z = e => {
     guildId: t
   } = e, n = (0, r.e7)([d.Z], () => d.Z.getGuild(t));
   if (void 0 === n) return null;
-  let a = n.hasFeature(u.oNc.VERIFIED) || n.hasFeature(u.oNc.PARTNERED),
+  let i = n.hasFeature(u.oNc.VERIFIED) || n.hasFeature(u.oNc.PARTNERED),
     T = n.toString(),
     I = n.getIconURL(40, !0),
     C = null,
@@ -32,7 +32,7 @@ t.Z = e => {
         fontSize: N
       },
       children: [null != C ? (0, s.jsx)("div", {
-        className: i()(_.childWrapper, _.acronym),
+        className: a()(_.childWrapper, _.acronym),
         "aria-hidden": !0,
         children: C
       }) : null, null != I ? (0, s.jsx)(c.Avatar, {
@@ -44,7 +44,7 @@ t.Z = e => {
       className: _.descriptors,
       children: [(0, s.jsxs)("div", {
         className: _.header,
-        children: [a ? (0, s.jsx)(o.Z, {
+        children: [i ? (0, s.jsx)(o.Z, {
           guild: n,
           tooltipPosition: "bottom",
           tooltipColor: c.Tooltip.Colors.PRIMARY,

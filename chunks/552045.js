@@ -1,7 +1,7 @@
 var s = n(735250);
 n(470079);
-var a = n(481060),
-  i = n(785681),
+var i = n(481060),
+  a = n(785681),
   l = n(841409),
   r = n(880257),
   c = n(631885),
@@ -19,9 +19,9 @@ let T = () => {
     } = (0, l.Z)();
   return (0, c.VM)() || t && e.length > 0 ? null : (0, s.jsx)("div", {
     className: E.button,
-    children: t ? (0, s.jsx)(a.Button, {
+    children: t ? (0, s.jsx)(i.Button, {
       fullWidth: !1,
-      size: a.ButtonSizes.LARGE,
+      size: i.ButtonSizes.LARGE,
       onClick: () => n(d.dG.REQUESTS),
       children: u.Z.Messages.GET_STARTED
     }) : (0, s.jsx)(o.Z, {})
@@ -29,8 +29,8 @@ let T = () => {
 };
 t.Z = () => {
   let e = (0, r.Z)(),
-    t = (0, i.o)(u.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_TEEN, u.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_PARENT),
-    n = (0, i.o)(u.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_DESCRIPTION_TEEN.format({
+    t = (0, a.o)(u.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_TEEN, u.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_PARENT),
+    n = (0, a.o)(u.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_DESCRIPTION_TEEN.format({
       articleLink: "https://support.discord.com/hc/articles/14155060633623"
     }), u.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_DESCRIPTION_PARENT.format({
       articleLink: "https://support.discord.com/hc/articles/14155043715735"
@@ -41,12 +41,12 @@ t.Z = () => {
       children: [(0, s.jsx)("div", {
         children: (0, s.jsxs)("div", {
           className: E.headerText,
-          children: [(0, s.jsx)(a.Heading, {
+          children: [(0, s.jsx)(i.Heading, {
             variant: "heading-xl/medium",
-            children: (0, s.jsx)(a.HeadingLevel, {
+            children: (0, s.jsx)(i.HeadingLevel, {
               children: t
             })
-          }), (0, s.jsx)(a.Text, {
+          }), (0, s.jsx)(i.Text, {
             variant: "text-sm/medium",
             color: "text-muted",
             children: n

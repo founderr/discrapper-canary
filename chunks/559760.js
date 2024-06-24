@@ -1,6 +1,6 @@
 t.d(r, {
   K: function() {
-    return n
+    return i
   }
 });
 let a = {
@@ -8,12 +8,12 @@ let a = {
       category: "chat"
     }
   },
-  i = {
+  n = {
     figma: {
       ignore: !0
     }
   },
-  n = {
+  i = {
     "background-accent": {
       dark: "primary.530",
       light: "primary.430"
@@ -185,7 +185,7 @@ let a = {
     black: {
       dark: "black.500",
       light: "black.500",
-      meta: i
+      meta: n
     },
     "border-strong": {
       meta: {
@@ -276,7 +276,7 @@ let a = {
     "control-brand-foreground-new": {
       dark: "brand.360",
       light: "brand.500",
-      meta: i
+      meta: n
     },
     "deprecated-card-bg": {
       dark: {
@@ -284,7 +284,7 @@ let a = {
         opacity: .6
       },
       light: "primary.100",
-      meta: i
+      meta: n
     },
     "deprecated-card-editable-bg": {
       dark: {
@@ -295,12 +295,12 @@ let a = {
         color: "primary.100",
         opacity: .6
       },
-      meta: i
+      meta: n
     },
     "deprecated-quickswitcher-input-background": {
       dark: "primary.400",
       light: "white.500",
-      meta: i
+      meta: n
     },
     "deprecated-quickswitcher-input-placeholder": {
       dark: {
@@ -311,17 +311,17 @@ let a = {
         color: "primary.500",
         opacity: .3
       },
-      meta: i
+      meta: n
     },
     "deprecated-store-bg": {
       dark: "primary.600",
       light: "primary.100",
-      meta: i
+      meta: n
     },
     "deprecated-text-input-bg": {
       dark: "primary.700",
       light: "primary.200",
-      meta: i
+      meta: n
     },
     "deprecated-text-input-border": {
       dark: {
@@ -332,22 +332,22 @@ let a = {
         color: "primary.500",
         opacity: .3
       },
-      meta: i
+      meta: n
     },
     "deprecated-text-input-border-disabled": {
       dark: "primary.700",
       light: "primary.200",
-      meta: i
+      meta: n
     },
     "deprecated-text-input-border-hover": {
       dark: "primary.900",
       light: "primary.300",
-      meta: i
+      meta: n
     },
     "deprecated-text-input-prefix": {
       dark: "primary.200",
       light: "primary.300",
-      meta: i
+      meta: n
     },
     "divider-strong": {
       dark: {
@@ -556,7 +556,7 @@ let a = {
     "text-link-low-saturation": {
       dark: "blue.330",
       light: "blue.430",
-      meta: i
+      meta: n
     },
     "text-low-contrast": {
       dark: "primary.360",
@@ -598,12 +598,12 @@ let a = {
     white: {
       dark: "white.500",
       light: "white.500",
-      meta: i
+      meta: n
     },
     "bg-brand": {
       dark: "brand.500",
       light: "brand.500",
-      meta: i
+      meta: n
     },
     "card-gradient-bg": {
       dark: {
@@ -614,7 +614,7 @@ let a = {
         color: "white.500",
         opacity: .7
       },
-      meta: i
+      meta: n
     },
     "card-gradient-pressed-bg": {
       dark: {
@@ -625,7 +625,7 @@ let a = {
         color: "white.500",
         opacity: .5
       },
-      meta: i
+      meta: n
     },
     "bg-backdrop-no-opacity": {
       light: {

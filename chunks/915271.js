@@ -6,8 +6,8 @@ var n = t(735250),
   i = t(618541),
   c = t(975060),
   u = t(912454),
-  d = t(689938),
-  E = t(981853);
+  E = t(689938),
+  d = t(981853);
 class A extends s.PureComponent {
   componentDidMount() {
     null != this.props.venmoClient && o.by()
@@ -26,23 +26,23 @@ class A extends s.PureComponent {
       children: [(0, n.jsx)(u.ZP, {
         type: u.ZP.Types.VENMO,
         size: u.Uy.MEDIUM,
-        className: E.venmoIcon
+        className: d.venmoIcon
       }), s ? (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(r.Heading, {
           variant: e.length < 25 ? "heading-xl/bold" : "heading-lg/bold",
-          className: E.connectionInstructions,
-          children: d.Z.Messages.PAYMENT_SOURCE_VENMO_CONNECTED_SUCCESS.format({
+          className: d.connectionInstructions,
+          children: E.Z.Messages.PAYMENT_SOURCE_VENMO_CONNECTED_SUCCESS.format({
             venmoUsername: e
           })
         }), (0, n.jsx)(r.Text, {
           variant: "text-md/medium",
-          className: E.connectionInstructions,
-          children: d.Z.Messages.PAYMENT_SOURCE_VENMO_CONNECTED_SUCCESS_INSTRUCTIONS
+          className: d.connectionInstructions,
+          children: E.Z.Messages.PAYMENT_SOURCE_VENMO_CONNECTED_SUCCESS_INSTRUCTIONS
         })]
       }) : (0, n.jsx)(r.Text, {
         variant: "text-md/medium",
-        className: E.connectionInstructions,
-        children: null == t ? d.Z.Messages.PAYMENT_SOURCE_VENMO_LOADING : d.Z.Messages.PAYMENT_SOURCE_VENMO_CONNECTION_INSTRUCTIONS
+        className: d.connectionInstructions,
+        children: null == t ? E.Z.Messages.PAYMENT_SOURCE_VENMO_LOADING : E.Z.Messages.PAYMENT_SOURCE_VENMO_CONNECTION_INSTRUCTIONS
       })]
     })
   }

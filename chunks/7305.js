@@ -6,7 +6,7 @@ n.r(s), n.d(s, {
     return y
   },
   default: function() {
-    return H
+    return v
   }
 }), n(411104), n(47120);
 var t = n(735250),
@@ -29,8 +29,8 @@ var t = n(735250),
   f = n(710094),
   M = n(293858),
   N = n(614223),
-  T = n(174827),
-  j = n(846464),
+  j = n(174827),
+  T = n(846464),
   A = n(184160),
   S = n(48175),
   g = n(981631),
@@ -51,8 +51,8 @@ function O(e) {
     trialId: f,
     trialFooterMessageOverride: M,
     reviewWarningMessage: N,
-    openInvoiceId: T,
-    onSubscriptionConfirmation: j,
+    openInvoiceId: j,
+    onSubscriptionConfirmation: T,
     renderPurchaseConfirmation: A,
     postSuccessGuild: S,
     followupSKUInfo: m,
@@ -61,8 +61,8 @@ function O(e) {
     guildId: Z,
     referralTrialOfferId: U,
     skuId: y,
-    returnRef: H,
-    skipConfirm: v = !1,
+    returnRef: v,
+    skipConfirm: H = !1,
     continueSession: b = !1
   } = e, {
     analyticsLocations: B
@@ -94,8 +94,8 @@ function O(e) {
     trialFooterMessageOverride: M,
     reviewWarningMessage: N,
     planGroup: R.Y1,
-    openInvoiceId: T,
-    onSubscriptionConfirmation: j,
+    openInvoiceId: j,
+    onSubscriptionConfirmation: T,
     renderPurchaseConfirmation: A,
     postSuccessGuild: S,
     followupSKUInfo: m,
@@ -106,8 +106,8 @@ function O(e) {
     skuId: y,
     shakeWhilePurchasing: !0,
     isLargeModal: D,
-    returnRef: H,
-    skipConfirm: v,
+    returnRef: v,
+    skipConfirm: H,
     continueSession: b
   })
 }
@@ -162,7 +162,7 @@ let y = [{
   })
 }, {
   key: x.h8.SKU_SELECT,
-  renderStep: e => (0, t.jsx)(j.q, {
+  renderStep: e => (0, t.jsx)(T.q, {
     ...e
   }),
   options: {
@@ -180,7 +180,7 @@ let y = [{
   }
 }, {
   key: x.h8.PLAN_SELECT,
-  renderStep: e => (0, t.jsx)(T.x, {
+  renderStep: e => (0, t.jsx)(j.x, {
     ...e
   }),
   options: {
@@ -220,7 +220,7 @@ let y = [{
   })
 }];
 
-function H(e) {
+function v(e) {
   let s = (0, l.e7)([_.ZP], () => _.ZP.getPremiumTypeSubscription()),
     {
       analyticsLocations: n

@@ -1,51 +1,51 @@
-S.d(e, {
+t.d(n, {
   Z: function() {
-    return A
+    return E
   }
 });
-var _ = S(735250);
-S(470079);
-var t = S(481060),
-  n = S(201895),
-  i = S(471445),
-  l = S(823379),
-  I = S(303737),
-  r = S(293810),
-  s = S(689938),
-  N = S(603463);
+var i = t(735250);
+t(470079);
+var l = t(481060),
+  r = t(201895),
+  u = t(471445),
+  o = t(823379),
+  s = t(303737),
+  a = t(293810),
+  c = t(689938),
+  _ = t(603463);
 
-function o(E) {
+function d(e) {
   let {
-    channelId: e
-  } = E, S = (0, I.m7)(e);
-  if (null == S) return (0, _.jsx)(_.Fragment, {
-    children: "[".concat(s.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETED_CHANNEL_LABEL, "]")
+    channelId: n
+  } = e, t = (0, s.m7)(n);
+  if (null == t) return (0, i.jsx)(i.Fragment, {
+    children: "[".concat(c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETED_CHANNEL_LABEL, "]")
   });
-  let l = S.isMediaChannel() ? t.ImageIcon : (0, i.Th)(S.type);
-  return (0, _.jsxs)(_.Fragment, {
-    children: [(0, _.jsx)(t.HiddenVisually, {
-      children: (0, n.ZP)({
-        channel: S
+  let o = t.isMediaChannel() ? l.ImageIcon : (0, u.Th)(t.type);
+  return (0, i.jsxs)(i.Fragment, {
+    children: [(0, i.jsx)(l.HiddenVisually, {
+      children: (0, r.ZP)({
+        channel: t
       })
-    }), (0, _.jsxs)("div", {
+    }), (0, i.jsxs)("div", {
       "aria-hidden": !0,
-      children: [null != l && (0, _.jsx)(l, {
-        className: N.icon,
+      children: [null != o && (0, i.jsx)(o, {
+        className: _.icon,
         "aria-hidden": !0
-      }), S.name]
+      }), t.name]
     })]
   })
 }
 
-function A(E) {
-  switch (E.ref_type) {
-    case r.Qs.CHANNEL:
-      return (0, _.jsx)(o, {
-        channelId: E.ref_id
+function E(e) {
+  switch (e.ref_type) {
+    case a.Qs.CHANNEL:
+      return (0, i.jsx)(d, {
+        channelId: e.ref_id
       });
-    case r.Qs.INTANGIBLE:
-      return E.name;
+    case a.Qs.INTANGIBLE:
+      return e.name;
     default:
-      (0, l.vE)(E)
+      (0, o.vE)(e)
   }
 }

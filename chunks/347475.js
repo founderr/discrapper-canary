@@ -9,17 +9,17 @@ var a = t(120356),
   c = t(689938),
   E = t(55420),
   u = t(568147),
-  d = t(332796);
+  R = t(332796);
 s.Z = e => {
   let {
     className: s,
     imageClassName: t,
     textContainerOverrideStyles: a,
-    location: R,
+    location: d,
     analyticsLocation: I
   } = e, {
     analyticsLocations: T
-  } = (0, l.ZP)(R), A = (0, o.rK)(), {
+  } = (0, l.ZP)(d), A = (0, o.rK)(), {
     enabled: M
   } = o.RO.useExperiment({
     location: "GiftNitro"
@@ -50,7 +50,7 @@ s.Z = e => {
           premiumModalAnalyticsLocation: I
         })]
       }), (0, n.jsx)("img", {
-        src: S ? d : u,
+        src: S ? R : u,
         className: r()(E.bannerImage, t),
         alt: "gift nitro banner"
       })]

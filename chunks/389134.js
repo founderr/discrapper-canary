@@ -1,6 +1,6 @@
 t(47120);
-var a, r, s, i, o = t(392711),
-  l = t.n(o),
+var a, r, s, i, l = t(392711),
+  o = t.n(l),
   c = t(906280),
   d = t.n(c),
   u = t(442837),
@@ -69,7 +69,7 @@ i = "ClanSettingsStore", (s = "displayName") in(r = p) ? Object.defineProperty(r
       }, n) delete g[e], g = {
       ...g
     };
-    _ = !l().isEqual(l().omit(T, "verificationForm"), l().omit(E, "verificationForm"))
+    _ = !o().isEqual(o().omit(T, "verificationForm"), o().omit(E, "verificationForm"))
   },
   CLAN_SETTINGS_SUBMIT: function() {
     I = !0, g = {}
@@ -105,7 +105,7 @@ i = "ClanSettingsStore", (s = "displayName") in(r = p) ? Object.defineProperty(r
         }
       }, t) {
       var a;
-      _ = !l().isEqual(T.verificationForm.formFields, null === (a = E.verificationForm) || void 0 === a ? void 0 : a.formFields)
+      _ = !o().isEqual(T.verificationForm.formFields, null === (a = E.verificationForm) || void 0 === a ? void 0 : a.formFields)
     } else _ = !1
   }
 })

@@ -23,14 +23,14 @@ var n = t(735250),
   R = t(325067),
   M = t(246946),
   x = t(594174),
-  D = t(285952),
-  p = t(474333),
+  p = t(285952),
+  D = t(474333),
   L = t(499150),
   P = t(709054),
   Z = t(706454),
   f = t(210887),
-  v = t(418632),
-  j = t(730820),
+  j = t(418632),
+  v = t(730820),
   U = t(888256),
   B = t(2719),
   b = t(194530),
@@ -85,7 +85,7 @@ class k extends i.PureComponent {
         children: [(0, n.jsx)("div", {
           className: Y.accountWarningBodyText,
           children: y.Z.Messages.USER_SETTINGS_UNVERIFIED_EMAIL_BODY
-        }), (0, n.jsx)(v.Z, {
+        }), (0, n.jsx)(j.Z, {
           size: d.ButtonSizes.SMALL,
           color: d.Button.Colors.PRIMARY
         })]
@@ -104,9 +104,9 @@ class k extends i.PureComponent {
     }
   }
   renderPomeloWarning() {
-    return this.props.shouldRenderPomeloWarning ? (0, n.jsxs)(p.Z, {
+    return this.props.shouldRenderPomeloWarning ? (0, n.jsxs)(D.Z, {
       className: Y.accountWarningBodyText,
-      messageType: p.Q.WARNING,
+      messageType: D.Q.WARNING,
       children: [this.props.forceMigrationExperiment ? y.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({
         date: (0, N.IE)(this.props.locale)
       }) : y.Z.Messages.POMELO_ACTION_NEEDED.format(), " ", "", (0, n.jsx)(L.Z, {
@@ -158,15 +158,15 @@ class k extends i.PureComponent {
         })
       }), (0, n.jsx)(m.F, {
         setting: G.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-        children: (0, n.jsxs)(D.Z, {
-          align: D.Z.Align.STRETCH,
-          children: [(0, n.jsx)(D.Z.Child, {
+        children: (0, n.jsxs)(p.Z, {
+          align: p.Z.Align.STRETCH,
+          children: [(0, n.jsx)(p.Z.Child, {
             wrap: !0,
-            children: (0, n.jsx)(j.Z, {
+            children: (0, n.jsx)(v.Z, {
               backupCodes: e
             })
-          }), s.mfaEnabled ? null : (0, n.jsx)(D.Z, {
-            align: D.Z.Align.CENTER,
+          }), s.mfaEnabled ? null : (0, n.jsx)(p.Z, {
+            align: p.Z.Align.CENTER,
             basis: "323px",
             grow: 0,
             children: (0, n.jsx)("img", {

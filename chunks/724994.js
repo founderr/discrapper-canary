@@ -1,5 +1,5 @@
 "use strict";
-t.d(s, {
+s.d(t, {
   L: function() {
     return o
   },
@@ -7,18 +7,18 @@ t.d(s, {
     return l
   }
 });
-var n = t(24217),
-  a = t.n(n),
-  r = t(442837),
-  i = t(1870);
-let l = (e, s) => {
-    var t;
-    let n = null != e.getPurchase(s.skuId),
-      r = null !== (t = s.items) && void 0 !== t ? t : [],
-      i = a()(r.map(s => e.getPurchase(s.skuId)));
+var n = s(24217),
+  r = s.n(n),
+  a = s(442837),
+  i = s(1870);
+let l = (e, t) => {
+    var s;
+    let n = null != e.getPurchase(t.skuId),
+      a = null !== (s = t.items) && void 0 !== s ? s : [],
+      i = r()(a.map(t => e.getPurchase(t.skuId)));
     return {
-      isPurchased: n || r.length > 0 && i.length === r.length,
-      isPartiallyPurchased: i.length > 0 && i.length < r.length
+      isPurchased: n || a.length > 0 && i.length === a.length,
+      isPartiallyPurchased: i.length > 0 && i.length < a.length
     }
   },
-  o = e => (0, r.cj)([i.Z], () => l(i.Z, e))
+  o = e => (0, a.cj)([i.Z], () => l(i.Z, e))

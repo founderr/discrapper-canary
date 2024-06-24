@@ -7,8 +7,8 @@ var a = t(470079),
   r = t(392711),
   s = t.n(r),
   i = t(442837),
-  o = t(846519),
-  l = t(224706),
+  l = t(846519),
+  o = t(224706),
   c = t(669764);
 
 function d(e, n, t) {
@@ -28,11 +28,11 @@ let u = new class e {
     this._pending.forEach(n => {
       this._fetched.add(n), e.push(n)
     }), s().chunk(e, 20).forEach(e => {
-      l.Z.getDetectableGamesSupplemental(e)
+      o.Z.getDetectableGamesSupplemental(e)
     })
   }
   constructor() {
-    d(this, "_fetched", new Set), d(this, "_pending", new Set), d(this, "_flushHandler", new o.sW(0, () => this._flush()))
+    d(this, "_fetched", new Set), d(this, "_pending", new Set), d(this, "_flushHandler", new l.sW(0, () => this._flush()))
   }
 };
 

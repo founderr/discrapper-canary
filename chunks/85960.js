@@ -1,6 +1,6 @@
 n.d(t, {
   I6: function() {
-    return T
+    return I
   },
   V9: function() {
     return A
@@ -30,7 +30,7 @@ var r, a, i, E, _ = n(470079),
   l = n(273504),
   o = n(689938);
 (i = r || (r = {})).NEW = "new", i.RECOMMENDED = "recommended", i.BETA = "beta", i.ALPHA = "alpha";
-let T = {
+let I = {
   [l.fX.SPAM_LINK]: {
     getDefaultRuleName: () => o.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_NAME,
     type: l.fX.SPAM_LINK,
@@ -96,14 +96,14 @@ let T = {
   }
 };
 (E = a || (a = {})).MEMBERS = "members", E.CONTENT = "content";
-let I = {
-    members: [T[l.fX.USER_PROFILE]],
-    content: [T[l.fX.SERVER_POLICY], T[l.fX.MENTION_SPAM], T[l.fX.ML_SPAM], T[l.fX.DEFAULT_KEYWORD_LIST], T[l.fX.KEYWORD]]
+let T = {
+    members: [I[l.fX.USER_PROFILE]],
+    content: [I[l.fX.SERVER_POLICY], I[l.fX.MENTION_SPAM], I[l.fX.ML_SPAM], I[l.fX.DEFAULT_KEYWORD_LIST], I[l.fX.KEYWORD]]
   },
-  O = (e, t) => T[e].flags.has(t);
+  O = (e, t) => I[e].flags.has(t);
 
 function A(e) {
-  return Array.from(T[e].availableActionTypes)
+  return Array.from(I[e].availableActionTypes)
 }
 
 function N(e, t) {
@@ -112,7 +112,7 @@ function N(e, t) {
     eventType: r,
     triggerType: a,
     actions: i
-  } = e, E = T[a];
+  } = e, E = I[a];
   if (t.filter(e => n !== e.id && e.triggerType === a).length > E.perGuildMaxCount) throw Error("You have exceeded the maximum number of rules of type ".concat(a));
   if (i.some(e => !E.availableActionTypes.has(e.type))) throw Error("You have provided an action that is not available for this trigger type");
   if (r !== E.eventType) throw Error("You have provided an event type that is not available for this trigger type")
@@ -120,8 +120,8 @@ function N(e, t) {
 
 function S(e) {
   let t = (0, s.oA)(e);
-  return _.useMemo(() => Object.keys(I).reduce((e, n) => {
-    let r = I[n].filter(e => e.type !== l.fX.SERVER_POLICY && (e.type !== l.fX.USER_PROFILE || !!t) && e.perGuildMaxCount > 0).map(e => e.type);
+  return _.useMemo(() => Object.keys(T).reduce((e, n) => {
+    let r = T[n].filter(e => e.type !== l.fX.SERVER_POLICY && (e.type !== l.fX.USER_PROFILE || !!t) && e.perGuildMaxCount > 0).map(e => e.type);
     return e[n] = r, e
   }, {
     members: [],

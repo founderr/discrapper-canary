@@ -1,6 +1,6 @@
 t.d(a, {
   w: function() {
-    return _
+    return N
   }
 }), t(47120);
 var n, s, l = t(735250),
@@ -9,40 +9,40 @@ var n, s, l = t(735250),
   i = t(987134),
   c = t(754103),
   u = t(689938),
-  d = t(538298),
-  E = t(449234);
+  E = t(538298),
+  d = t(449234);
 
 function A(e) {
   let {
     onChange: a,
     billingAddressInfo: t,
     error: n
-  } = e, [s, i] = r.useState({}), [E, A] = r.useState({}), p = {
+  } = e, [s, i] = r.useState({}), [d, A] = r.useState({}), _ = {
     name: "email",
     title: () => u.Z.Messages.EMAIL,
     autoComplete: "cc-name",
     placeholder: () => u.Z.Messages.EMAIL,
-    getClassNameForLayout: () => d.width100,
+    getClassNameForLayout: () => E.width100,
     renderInput: e => (0, l.jsx)(o.TextInput, {
       ...e
     })
-  }, _ = {
+  }, N = {
     name: "name",
     title: () => u.Z.Messages.CREDIT_CARD_NAME,
     autoComplete: "cc-name",
     placeholder: () => u.Z.Messages.CREDIT_CARD_NAME,
-    getClassNameForLayout: () => d.width100,
+    getClassNameForLayout: () => E.width100,
     renderInput: e => (0, l.jsx)(o.TextInput, {
       ...e
     })
   };
   return (0, l.jsx)(c.Z, {
     form: [{
-      fields: [p]
-    }, {
       fields: [_]
+    }, {
+      fields: [N]
     }],
-    errors: E,
+    errors: d,
     formError: n,
     values: {
       name: t.name,
@@ -57,7 +57,7 @@ function A(e) {
     }
   })
 }(s = n || (n = {})).EMAIL = "email", s.NAME = "name";
-let p = [{
+let _ = [{
   label: "Alior Bank",
   value: "alior_bank"
 }, {
@@ -134,29 +134,29 @@ let p = [{
   value: "volkswagen_bank"
 }];
 
-function _(e) {
+function N(e) {
   let {
     onDetailsChange: a,
     onP24BankChange: t,
     error: n,
     billingAddressInfo: s,
     p24BankValue: o
-  } = e, [_, N] = r.useState(o), m = "p24Bank", h = [{
+  } = e, [N, m] = r.useState(o), p = "p24Bank", h = [{
     fields: [{
-      name: m,
+      name: p,
       title: () => u.Z.Messages.PAYMENT_SOURCE_PRZELEWY24_BANK_LABEL,
-      getClassNameForLayout: () => d.width100,
+      getClassNameForLayout: () => E.width100,
       renderInput: e => (0, l.jsx)(i.Z, {
         maxMenuHeight: 190,
         menuPlacement: i.Z.MenuPlacements.TOP,
         clearable: !1,
-        options: p,
+        options: _,
         value: e.value,
         onChange: e => {
           let {
             value: a
           } = e;
-          t(a), N(a)
+          t(a), m(a)
         }
       })
     }]
@@ -167,12 +167,12 @@ function _(e) {
       billingAddressInfo: s,
       onChange: a
     }), (0, l.jsx)(c.Z, {
-      className: E.p24Form,
+      className: d.p24Form,
       form: h,
       errors: {},
       formError: n,
       values: {
-        [m]: _
+        [p]: N
       }
     })]
   })

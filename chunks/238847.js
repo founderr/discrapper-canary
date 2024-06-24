@@ -23,8 +23,8 @@ var n = t(735250),
   R = t(755596),
   M = t(153124),
   x = t(171246),
-  D = t(41959),
-  p = t(650919),
+  p = t(41959),
+  D = t(650919),
   L = t(981631),
   P = t(689938),
   Z = t(702606);
@@ -59,7 +59,7 @@ let f = e => {
       })]
     })
   },
-  v = e => {
+  j = e => {
     let {
       subscription: s,
       disabled: t
@@ -82,7 +82,7 @@ let f = e => {
       })]
     }) : (0, n.jsx)(d.Spinner, {})
   },
-  j = e => {
+  v = e => {
     let {
       isCancelled: s,
       onCancelSubscriptionClick: t,
@@ -116,7 +116,7 @@ s.Z = e => {
     handleToggleExpanded: A,
     subscriptionInfo: C,
     application: m
-  } = (0, p.Z)(s), R = (0, M.Dt)(), [U, B] = i.useState(!1), {
+  } = (0, D.Z)(s), R = (0, M.Dt)(), [U, B] = i.useState(!1), {
     analyticsLocations: b
   } = (0, S.ZP)();
   if (null == r || null == a || null == C) return null;
@@ -203,8 +203,8 @@ s.Z = e => {
           handleStopPropagation: t
         } = e;
         return (0, n.jsxs)(n.Fragment, {
-          children: [null != m && (0, n.jsx)(D.Z, {
-            size: D.H.SMALL,
+          children: [null != m && (0, n.jsx)(p.Z, {
+            size: p.H.SMALL,
             className: Z.applicationIcon,
             application: m,
             asset: null != a.image_asset ? (0, u.m)(a.image_asset) : null
@@ -266,10 +266,10 @@ s.Z = e => {
         })]
       }), (0, n.jsx)(d.Spacer, {
         size: 16
-      }), s.status === L.O0b.ACTIVE && (0, n.jsx)(v, {
+      }), s.status === L.O0b.ACTIVE && (0, n.jsx)(j, {
         subscription: s,
         disabled: y
-      }), !Q && (0, n.jsx)(j, {
+      }), !Q && (0, n.jsx)(v, {
         isCancelled: V,
         onCancelSubscriptionClick: G,
         isResubscribing: U,

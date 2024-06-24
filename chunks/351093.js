@@ -1,23 +1,23 @@
-n.d(l, {
+t.d(l, {
   Z: function() {
-    return d
+    return u
   }
 });
-var t = n(735250),
-  r = n(470079),
-  i = n(941797),
-  s = n(810090),
-  a = n(981631),
-  o = n(689938);
+var n = t(735250),
+  r = t(470079),
+  i = t(941797),
+  s = t(810090),
+  a = t(981631),
+  o = t(689938);
 
-function u(e) {
+function d(e) {
   let {
     poster: l,
-    src: n,
+    src: t,
     width: i,
     height: o,
-    naturalWidth: u,
-    naturalHeight: d,
+    naturalWidth: d,
+    naturalHeight: u,
     play: h = !0,
     className: c,
     alt: m,
@@ -28,11 +28,11 @@ function u(e) {
       current: e
     } = g;
     if (null != e) h ? e.play() : e.pause()
-  }, [h]), u <= a.N_j && d <= a.XKF || u <= a.XKF && d <= a.N_j) ? (0, t.jsx)(s.Z, {
+  }, [h]), d <= a.N_j && u <= a.XKF || d <= a.XKF && u <= a.N_j) ? (0, n.jsx)(s.Z, {
     ref: g,
     className: c,
     poster: l,
-    src: n,
+    src: t,
     width: i,
     height: o,
     responsive: p,
@@ -41,7 +41,7 @@ function u(e) {
     autoPlay: h,
     preload: "none",
     "aria-label": m
-  }) : (0, t.jsx)("img", {
+  }) : (0, n.jsx)("img", {
     alt: "",
     src: l,
     width: i,
@@ -49,14 +49,14 @@ function u(e) {
   })
 }
 
-function d(e) {
+function u(e) {
   let {
     src: l,
-    poster: n,
+    poster: t,
     naturalWidth: r,
     naturalHeight: s,
     responsive: a,
-    autoPlay: d,
+    autoPlay: u,
     className: h,
     playable: c = !0,
     renderImageComponent: m,
@@ -64,13 +64,13 @@ function d(e) {
     alt: g = o.Z.Messages.GIF,
     ...f
   } = e;
-  return (0, t.jsx)(i.h.Consumer, {
+  return (0, n.jsx)(i.h.Consumer, {
     children: e => m({
       ...f,
       alt: g,
-      src: n,
+      src: t,
       containerClassName: h,
-      autoPlay: d,
+      autoPlay: u,
       animated: c,
       responsive: a,
       renderAccessory: e,
@@ -78,15 +78,15 @@ function d(e) {
       tabIndex: c ? 0 : -1,
       children(e) {
         let {
-          src: n,
+          src: t,
           size: i,
           animating: o,
-          alt: d
+          alt: u
         } = e;
-        return (0, t.jsx)(u, {
-          alt: d,
+        return (0, n.jsx)(d, {
+          alt: u,
           className: h,
-          poster: n,
+          poster: t,
           src: l,
           width: i.width,
           height: i.height,

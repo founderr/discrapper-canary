@@ -9,8 +9,8 @@ var a = t(120356),
   c = t(735825),
   E = t(52689),
   u = t(721239),
-  d = t(557634),
-  R = t(992429);
+  R = t(557634),
+  d = t(992429);
 s.Z = e => {
   var s;
   let t, a, {
@@ -24,20 +24,20 @@ s.Z = e => {
       subtitle: m = "",
       descriptionCta: C = "",
       cardVariant: g,
-      subtitleClassName: f
+      subtitleClassName: P
     } = e,
-    P = (0, o._)(g),
-    O = (0, l.yQ)(),
-    x = (null == O ? void 0 : O.nitroTenureStatus) === c.EB.REDEEMABLE;
-  switch (null == O ? void 0 : O.nitroTenureStatus) {
+    O = (0, o._)(g),
+    f = (0, l.yQ)(),
+    x = (null == f ? void 0 : f.nitroTenureStatus) === c.EB.REDEEMABLE;
+  switch (null == f ? void 0 : f.nitroTenureStatus) {
     case c.EB.REDEEMABLE:
-      t = R, a = "unlocked icon";
+      t = d, a = "unlocked icon";
       break;
     case c.EB.PENDING:
       t = u, a = "locked icon";
       break;
     case c.EB.REDEEMED:
-      t = d, a = "thumbs up icon";
+      t = R, a = "thumbs up icon";
       break;
     default:
       t = void 0, a = ""
@@ -48,10 +48,10 @@ s.Z = e => {
     }), (0, n.jsx)(_.Z, {
       title: I,
       shouldShowElement: e => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
-      cardVariantStyleInfo: P,
+      cardVariantStyleInfo: O,
       titleClassName: T,
       subtitle: m,
-      subtitleClassName: f
+      subtitleClassName: P
     }), null != M && (0, n.jsx)("img", {
       src: M,
       alt: "",
@@ -71,7 +71,7 @@ s.Z = e => {
           fullWidth: !0,
           onClick: N,
           children: (0, n.jsxs)("div", {
-            className: null == P ? void 0 : null === (s = P.descriptionCta) || void 0 === s ? void 0 : s.className,
+            className: null == O ? void 0 : null === (s = O.descriptionCta) || void 0 === s ? void 0 : s.className,
             children: [(0, n.jsx)("img", {
               alt: a,
               src: t

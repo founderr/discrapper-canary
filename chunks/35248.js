@@ -14,13 +14,13 @@ var n = t(735250),
   i = t(355467),
   c = t(311821),
   u = t(285952),
-  d = t(591759),
-  E = t(987209),
+  E = t(591759),
+  d = t(987209),
   A = t(598),
-  p = t(737143),
-  _ = t(362755),
-  N = t(981631),
-  m = t(474936),
+  _ = t(737143),
+  N = t(362755),
+  m = t(981631),
+  p = t(474936),
   h = t(689938),
   T = t(168269);
 let C = e => {
@@ -34,16 +34,16 @@ let C = e => {
       contextMetadata: S
     } = (0, A.usePaymentContext)(), {
       isGift: I
-    } = (0, E.wD)(), [R, P] = s.useState(!1);
+    } = (0, d.wD)(), [R, P] = s.useState(!1);
     return s.useEffect(() => {
       let e = setTimeout(() => {
         var e;
         if (!R) P(!0), (0, i.r5)(S.loadId), ! function(e, a, t, n) {
-          let s = N.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, a, t),
-            o = new URL(d.Z.makeUrl(N.Z5c.BILLING_LOGIN_HANDOFF)),
+          let s = m.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, a, t),
+            o = new URL(E.Z.makeUrl(m.Z5c.BILLING_LOGIN_HANDOFF)),
             i = (0, l.Z)();
           o.searchParams.append("handoff_key", i), o.searchParams.append("redirect_to", s), r.tn.post({
-            url: N.ANM.HANDOFF,
+            url: m.ANM.HANDOFF,
             body: {
               key: i
             },
@@ -53,11 +53,11 @@ let C = e => {
           }, () => {
             n()
           })
-        }(null !== (e = null == c ? void 0 : c.id) && void 0 !== e ? e : m.Xh.PREMIUM_MONTH_TIER_2, I, S.loadId, t)
-      }, (0, p.q1)().delay ? 1e3 : 0);
+        }(null !== (e = null == c ? void 0 : c.id) && void 0 !== e ? e : p.Xh.PREMIUM_MONTH_TIER_2, I, S.loadId, t)
+      }, (0, _.q1)().delay ? 1e3 : 0);
       return () => clearTimeout(e)
     }, [c, I, S, t, P, R]), s.useEffect(() => {
-      C === S.loadId && u === _.Y.DONE && a()
+      C === S.loadId && u === N.Y.DONE && a()
     }, [u, C, S, a]), (0, n.jsxs)("div", {
       className: T.body,
       children: [(0, n.jsx)(o.Heading, {

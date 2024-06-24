@@ -4,31 +4,31 @@ t.d(r, {
   }
 }), t(47120);
 var a = t(735250),
-  i = t(470079),
-  n = t(442837),
-  o = t(481060),
-  l = t(581612),
+  n = t(470079),
+  i = t(442837),
+  l = t(481060),
+  o = t(581612),
   c = t(91311),
   s = t(133982);
 
 function d() {
-  let e = (0, n.e7)([c.Z], () => c.Z.allWithDescriptions(), [], n.pF),
-    r = i.useMemo(() => e.map(e => {
-      let [r, t, i] = e;
-      return (0, a.jsx)(o.FormItem, {
-        children: (0, a.jsx)(o.FormSwitch, {
+  let e = (0, i.e7)([c.Z], () => c.Z.allWithDescriptions(), [], i.pF),
+    r = n.useMemo(() => e.map(e => {
+      let [r, t, n] = e;
+      return (0, a.jsx)(l.FormItem, {
+        children: (0, a.jsx)(l.FormSwitch, {
           value: t,
           note: r,
-          onChange: e => (0, l.Z)(r, e),
+          onChange: e => (0, o.Z)(r, e),
           hideBorder: !0,
-          children: i
+          children: n
         })
       }, r)
     }), [e]);
   return (0, a.jsxs)("div", {
     className: s.container,
-    children: [(0, a.jsx)(o.Button, {
-      onClick: l.q,
+    children: [(0, a.jsx)(l.Button, {
+      onClick: o.q,
       className: s.button,
       fullWidth: !0,
       children: "Clear all"

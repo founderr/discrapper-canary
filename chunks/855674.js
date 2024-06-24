@@ -1,7 +1,7 @@
 let a;
 t(47120);
-var r, s, i, o, l = t(392711),
-  c = t.n(l),
+var r, s, i, l, o = t(392711),
+  c = t.n(o),
   d = t(442837),
   u = t(570140),
   m = t(308063);
@@ -37,12 +37,12 @@ class T extends(r = d.ZP.Store) {
     return a
   }
 }
-o = "WebhooksStore", (i = "displayName") in(s = T) ? Object.defineProperty(s, i, {
-  value: o,
+l = "WebhooksStore", (i = "displayName") in(s = T) ? Object.defineProperty(s, i, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[i] = o, n.Z = new T(u.Z, {
+}) : s[i] = l, n.Z = new T(u.Z, {
   WEBHOOKS_UPDATE: function(e) {
     let {
       guildId: n,
@@ -57,8 +57,8 @@ o = "WebhooksStore", (i = "displayName") in(s = T) ? Object.defineProperty(s, i,
     a = null;
     let i = [];
     null != t && (i = c()(f(n)).values().filter(e => e.channel_id !== t).value());
-    let o = h[n] = {};
-    i.concat(r).forEach(e => o[e.id] = e), delete C[x(n, t)]
+    let l = h[n] = {};
+    i.concat(r).forEach(e => l[e.id] = e), delete C[x(n, t)]
   },
   WEBHOOKS_FETCHING: function(e) {
     let {

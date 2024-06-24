@@ -1,28 +1,28 @@
-t.d(n, {
+r.d(n, {
   Z: function() {
     return c
   }
 });
-var r = t(470079),
-  s = t(512722),
-  l = t.n(s),
-  a = t(598),
-  o = t(390917),
-  i = t(464797);
+var t = r(470079),
+  o = r(512722),
+  a = r.n(o),
+  i = r(598),
+  l = r(390917),
+  s = r(464797);
 
 function c(e) {
   let {
     handleClose: n
   } = e, {
-    guildProductListing: t,
-    guildId: s
-  } = (0, i._)(), {
+    guildProductListing: r,
+    guildId: o
+  } = (0, s._)(), {
     selectedSkuPricePreview: c
-  } = (0, a.usePaymentContext)();
-  return r.useEffect(() => {
-    l()(null != c, "selectedSkuPricePreview cannot be null"), (0, o.u)({
-      guildId: s,
-      guildProductListingId: t.id,
+  } = (0, i.usePaymentContext)();
+  return t.useEffect(() => {
+    a()(null != c, "selectedSkuPricePreview cannot be null"), (0, l.u)({
+      guildId: o,
+      guildProductListingId: r.id,
       skuPricePreview: c
     }), n()
   }, []), null

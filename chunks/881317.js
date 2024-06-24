@@ -10,15 +10,15 @@ var s = n(735250),
   d = n(353926),
   E = n(82554),
   _ = n(726521),
-  h = n(185625),
-  I = n(314897),
-  p = n(63063),
-  N = n(981631),
+  I = n(185625),
+  h = n(314897),
+  N = n(63063),
+  p = n(981631),
   g = n(689938),
   m = n(102122),
   T = n(331651);
 l.ZP.initialize();
-let f = e => {
+let Z = e => {
   let {
     title: t,
     menuType: r
@@ -38,8 +38,8 @@ let f = e => {
     })
   }, o = e => {
     let t = async () => {
-      await (0, h.yL)(r, e)
-    }, l = async t => await (0, h.RV)(r, e, t), o = e => {
+      await (0, I.yL)(r, e)
+    }, l = async t => await (0, I.RV)(r, e, t), o = e => {
       let t = null == e ? void 0 : e.token;
       r === E.B.MESSAGE ? (0, _.eE)(t) : r === E.B.USER && (0, _.JM)(t)
     };
@@ -71,8 +71,8 @@ let f = e => {
   })
 };
 t.Z = () => {
-  let [e, t] = r.useState(!0), [n, i] = r.useState(!1), _ = (0, l.e7)([I.default], () => I.default.isAuthenticated()), Z = (0, l.e7)([d.Z], () => d.Z.hasLoadedExperiments), A = () => {
-    (0, h.qJ)().then(() => {
+  let [e, t] = r.useState(!0), [n, i] = r.useState(!1), _ = (0, l.e7)([h.default], () => h.default.isAuthenticated()), A = (0, l.e7)([d.Z], () => d.Z.hasLoadedExperiments), f = () => {
+    (0, I.qJ)().then(() => {
       t(!1), i(!0)
     }).catch(() => {
       t(!1), i(!1)
@@ -81,12 +81,12 @@ t.Z = () => {
   return r.useEffect(() => {
     _ ? (t(!0), c.k({
       withAnalyticsToken: !0
-    }).then(() => A()).catch(() => t(!1))) : A()
+    }).then(() => f()).catch(() => t(!1))) : f()
   }, [_]), r.useEffect(() => {
     (async () => {
-      !Z && (await o.Z.getLocationMetadata(), o.Z.getExperiments())
+      !A && (await o.Z.getLocationMetadata(), o.Z.getExperiments())
     })()
-  }, [Z]), e || !Z ? (0, s.jsx)(u.ZP, {
+  }, [A]), e || !A ? (0, s.jsx)(u.ZP, {
     children: (0, s.jsx)(a.Spinner, {})
   }) : n && (0, s.jsxs)(u.ZP, {
     children: [(0, s.jsx)(u.Dx, {
@@ -95,14 +95,14 @@ t.Z = () => {
     }), (0, s.jsx)(u.DK, {
       className: T.marginBottom8,
       children: g.Z.Messages.URF_LANDING_PAGE_SUBTITLE.format({
-        supportURL: p.Z.getArticleURL(N.BhN.COPYRIGHT_AND_IP_POLICY)
+        supportURL: N.Z.getArticleURL(p.BhN.COPYRIGHT_AND_IP_POLICY)
       })
     }), (0, s.jsxs)("div", {
       className: m.container,
-      children: [(0, s.jsx)(f, {
+      children: [(0, s.jsx)(Z, {
         title: g.Z.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
         menuType: E.B.MESSAGE
-      }), (0, s.jsx)(f, {
+      }), (0, s.jsx)(Z, {
         title: g.Z.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
         menuType: E.B.USER
       })]

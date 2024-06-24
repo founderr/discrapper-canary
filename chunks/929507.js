@@ -3,8 +3,8 @@ var a = t(470079),
   r = t(399606),
   s = t(544891),
   i = t(570140),
-  o = t(367907),
-  l = t(430824),
+  l = t(367907),
+  o = t(430824),
   c = t(496675),
   d = t(626135),
   u = t(70956),
@@ -14,8 +14,8 @@ let C = 1 * u.Z.Millis.DAY,
   x = new Map;
 n.Z = {
   useShouldShowChannelNotice(e) {
-    let n = (0, r.e7)([l.Z, c.Z], () => {
-      let n = l.Z.getGuild(e);
+    let n = (0, r.e7)([o.Z, c.Z], () => {
+      let n = o.Z.getGuild(e);
       return null != n && c.Z.can(h.Plq.ADMINISTRATOR, n)
     });
     a.useEffect(() => {
@@ -53,7 +53,7 @@ n.Z = {
       guildId: e,
       integrationId: n.id
     }), d.default.track(h.rMx.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
-      ...(0, o.hH)(e),
+      ...(0, l.hH)(e),
       application_id: null === (t = n.application) || void 0 === t ? void 0 : t.id,
       location: "overview"
     })
@@ -64,7 +64,7 @@ n.Z = {
       type: "COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED",
       integrationId: n.id
     }), d.default.track(h.rMx.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
-      ...(0, o.hH)(e),
+      ...(0, l.hH)(e),
       application_id: null === (t = n.application) || void 0 === t ? void 0 : t.id,
       location: "toggle"
     })

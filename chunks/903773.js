@@ -1,23 +1,23 @@
-n.d(s, {
+t.d(n, {
   Z: function() {
     return o
   }
 });
-var t = n(735250);
-n(470079);
-var a = n(481060),
-  l = n(696936);
+var s = t(735250);
+t(470079);
+var a = t(481060),
+  r = t(696936);
 
 function o(e) {
   let {
-    children: s,
-    className: n,
-    color: o = l.W.YELLOW
+    children: n,
+    className: t,
+    color: o = r.W.YELLOW
   } = e;
-  return (0, t.jsx)(l.Z, {
-    className: n,
+  return (0, s.jsx)(r.Z, {
+    className: t,
     color: o,
     icon: a.CircleExclamationPointIcon,
-    children: s
+    children: n
   })
 }

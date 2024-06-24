@@ -1,124 +1,124 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
     return E
   },
   x: function() {
-    return l
+    return i
   }
-}), t(653041);
-var l, i, r = t(735250),
-  s = t(470079),
-  o = t(120356),
-  a = t.n(o),
-  c = t(477690),
-  u = t(481060),
-  d = t(806519),
-  C = t(768581),
-  p = t(624138),
-  h = t(689938),
-  f = t(845511);
-(i = l || (l = {}))[i.SMALL = (0, p.Mg)(c.Z.GUILD_COUNT_SMALL_ICON_SIZE)] = "SMALL", i[i.LARGE = (0, p.Mg)(c.Z.GUILD_COUNT_LARGE_ICON_SIZE)] = "LARGE";
-let m = {
-    [l.SMALL]: f.moreGuildsSmall,
-    [l.LARGE]: f.moreGuildsLarge
+}), n(653041);
+var i, l, r = n(735250),
+  o = n(470079),
+  a = n(120356),
+  s = n.n(a),
+  c = n(477690),
+  u = n(481060),
+  d = n(806519),
+  C = n(768581),
+  p = n(624138),
+  h = n(689938),
+  f = n(845511);
+(l = i || (i = {}))[l.SMALL = (0, p.Mg)(c.Z.GUILD_COUNT_SMALL_ICON_SIZE)] = "SMALL", l[l.LARGE = (0, p.Mg)(c.Z.GUILD_COUNT_LARGE_ICON_SIZE)] = "LARGE";
+let _ = {
+    [i.SMALL]: f.moreGuildsSmall,
+    [i.LARGE]: f.moreGuildsLarge
   },
-  v = {
-    [l.SMALL]: f.iconSmall,
-    [l.LARGE]: f.iconLarge
+  m = {
+    [i.SMALL]: f.iconSmall,
+    [i.LARGE]: f.iconLarge
   };
 
 function E(e) {
-  var n, t, i;
+  var t, n, l;
   let {
-    application: o,
+    application: a,
     mutualGuilds: c,
     mutualGuildShownMax: p = 4,
     className: E,
-    textVariant: g = "text-sm/normal",
+    textVariant: v = "text-sm/normal",
     compact: A,
-    guildIconSize: Z = l.LARGE
-  } = e, _ = new Intl.ListFormat("en-US"), x = null !== (t = null === (n = o.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== t ? t : 0, M = null !== (i = null == c ? void 0 : c.length) && void 0 !== i ? i : 0, L = Math.max(0, x - M), {
-    shownMutualGuilds: N,
-    hiddenMutualGuilds: R
-  } = s.useMemo(() => {
+    guildIconSize: g = i.LARGE
+  } = e, Z = new Intl.ListFormat("en-US"), L = null !== (n = null === (t = a.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0, M = null !== (l = null == c ? void 0 : c.length) && void 0 !== l ? l : 0, N = Math.max(0, L - M), {
+    shownMutualGuilds: I,
+    hiddenMutualGuilds: S
+  } = o.useMemo(() => {
     let e = [],
-      n = [];
-    return null == c || c.forEach(t => {
-      e.length < p && null != t.icon ? e.push(t) : n.push(t)
-    }), e.length === p && n.length > 0 && (n.push(e[p - 1]), e = e.slice(0, p - 1)), {
+      t = [];
+    return null == c || c.forEach(n => {
+      e.length < p && null != n.icon ? e.push(n) : t.push(n)
+    }), e.length === p && t.length > 0 && (t.push(e[p - 1]), e = e.slice(0, p - 1)), {
       shownMutualGuilds: e,
-      hiddenMutualGuilds: n
+      hiddenMutualGuilds: t
     }
-  }, [c, p]), j = R.length, I = function(e, n, t, l) {
-    if (0 === n && 0 === e) return null;
-    if (n > 0 && 0 === t) return h.Z.Messages.APP_DIRECTORY_MUTUAL_GUILD_COUNT.format({
-      mutualGuildCount: n
+  }, [c, p]), T = S.length, x = function(e, t, n, i) {
+    if (0 === t && 0 === e) return null;
+    if (t > 0 && 0 === n) return h.Z.Messages.APP_DIRECTORY_MUTUAL_GUILD_COUNT.format({
+      mutualGuildCount: t
     });
-    let i = n > 0 ? h.Z.Messages.APP_DIRECTORY_GUILD_COUNT_WITH_MUTUALS : h.Z.Messages.APP_DIRECTORY_GUILD_COUNT,
+    let l = t > 0 ? h.Z.Messages.APP_DIRECTORY_GUILD_COUNT_WITH_MUTUALS : h.Z.Messages.APP_DIRECTORY_GUILD_COUNT,
       r = new Intl.NumberFormat("en-US", {
-        notation: l ? "compact" : "standard",
+        notation: i ? "compact" : "standard",
         compactDisplay: "short"
       });
-    return i.format({
+    return l.format({
       guildCount: r.format(e),
-      mutualGuildCount: n,
-      nonMutualGuildCount: r.format(t)
+      mutualGuildCount: t,
+      nonMutualGuildCount: r.format(n)
     })
-  }(x, M, L, A);
-  return 0 === N.length && null == I ? null : (0, r.jsxs)("div", {
-    className: a()(E, f.wrapper),
+  }(L, M, N, A);
+  return 0 === I.length && null == x ? null : (0, r.jsxs)("div", {
+    className: s()(E, f.wrapper),
     children: [(0, r.jsx)("div", {
       className: f.icons,
-      children: N.length > 0 ? (0, r.jsxs)(r.Fragment, {
-        children: [N.map((e, n) => {
-          let t = n === N.length - 1 && 0 === j,
-            l = C.ZP.getGuildIconURL({
+      children: I.length > 0 ? (0, r.jsxs)(r.Fragment, {
+        children: [I.map((e, t) => {
+          let n = t === I.length - 1 && 0 === T,
+            i = C.ZP.getGuildIconURL({
               id: e.id,
               icon: e.icon,
-              size: Z,
+              size: g,
               canAnimate: !1
             }),
-            i = (0, r.jsx)(u.Tooltip, {
+            l = (0, r.jsx)(u.Tooltip, {
               text: e.name,
               position: "top",
               children: e => (0, r.jsx)("img", {
                 ...e,
-                className: a()(f.icon, v[Z]),
-                src: l,
+                className: s()(f.icon, m[g]),
+                src: i,
                 alt: ""
               })
             });
-          return t ? (0, r.jsx)(s.Fragment, {
-            children: i
+          return n ? (0, r.jsx)(o.Fragment, {
+            children: l
           }, e.id) : (0, r.jsx)(d.ZP, {
             className: f.iconMask,
-            height: Z,
-            width: Z,
+            height: g,
+            width: g,
             mask: d.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
-            children: i
+            children: l
           }, e.id)
-        }), j > 0 ? (0, r.jsx)(u.Tooltip, {
+        }), T > 0 ? (0, r.jsx)(u.Tooltip, {
           text: h.Z.Messages.APP_DIRECTORY_GUILD_COUNT_PLUS_MUTUALS_TOOLTIP.format({
-            appNames: _.format(R.map(e => e.name))
+            appNames: Z.format(S.map(e => e.name))
           }),
           position: "top",
           children: e => (0, r.jsxs)("div", {
             ...e,
-            className: a()(f.moreGuilds, m[Z]),
-            children: ["+", j]
+            className: s()(f.moreGuilds, _[g]),
+            children: ["+", T]
           })
         }) : null]
       }) : (0, r.jsx)(u.CompassIcon, {
         size: "custom",
         color: "currentColor",
-        width: Z,
-        height: Z,
+        width: g,
+        height: g,
         className: f.defaultIcon
       })
-    }), null != I ? (0, r.jsx)(u.Text, {
-      variant: g,
+    }), null != x ? (0, r.jsx)(u.Text, {
+      variant: v,
       color: "header-secondary",
-      children: I
+      children: x
     }) : null]
   })
 }

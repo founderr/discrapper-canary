@@ -35,9 +35,9 @@ function x() {
     s = (0, C.Z)(),
     t = (0, a.e7)([d.Z, I.Z], () => d.Z.showNotice() || I.Z.showNotice()),
     x = null != e ? e : s,
-    D = (0, a.e7)([N.default], () => N.default.getCurrentUser()),
+    p = (0, a.e7)([N.default], () => N.default.getCurrentUser()),
     {
-      subsection: p,
+      subsection: D,
       setSubsection: L
     } = (0, O.Z)(),
     {
@@ -48,8 +48,8 @@ function x() {
       searchResults: f
     } = (0, u.E)();
 
-  function v(s) {
-    if (p !== s) {
+  function j(s) {
+    if (D !== s) {
       if (t) {
         A.S.dispatch(m.CkL.SHAKE_APP, {
           duration: 300,
@@ -61,13 +61,13 @@ function x() {
     }
   }
   i.useEffect(() => {
-    null != D && (0, T.Z)(D.id, D.getAvatarURL(null == x ? void 0 : x.id, 80), {
+    null != p && (0, T.Z)(p.id, p.getAvatarURL(null == x ? void 0 : x.id, 80), {
       guildId: null == x ? void 0 : x.id
     })
-  }, [null == x ? void 0 : x.id, D]);
-  let j = !0,
+  }, [null == x ? void 0 : x.id, p]);
+  let v = !0,
     U = !0;
-  return Z && 1 === f.length && (f.includes(g.s6.PROFILE_SERVER_PROFILES) ? (v(h.NB.GUILD), U = !1) : f.includes(g.s6.PROFILE_USER_PROFILE) && (v(h.NB.USER_PROFILE), j = !1)), (0, n.jsx)(o.Gt, {
+  return Z && 1 === f.length && (f.includes(g.s6.PROFILE_SERVER_PROFILES) ? (j(h.NB.GUILD), U = !1) : f.includes(g.s6.PROFILE_USER_PROFILE) && (j(h.NB.USER_PROFILE), v = !1)), (0, n.jsx)(o.Gt, {
     value: P,
     children: (0, n.jsxs)(l.HeadingLevel, {
       component: (0, n.jsx)(l.Heading, {
@@ -78,18 +78,18 @@ function x() {
         className: M.tabBar,
         type: "top",
         look: "brand",
-        selectedItem: p,
-        onItemSelect: v,
+        selectedItem: D,
+        onItemSelect: j,
         children: [U ? (0, n.jsx)(l.TabBar.Item, {
           className: M.tabBarItem,
           id: h.NB.USER_PROFILE,
           children: R.Z.Messages.EDIT_PROFILE_CATEGORY_USER_PROFILE
-        }, h.NB.USER_PROFILE) : null, j ? (0, n.jsx)(l.TabBar.Item, {
+        }, h.NB.USER_PROFILE) : null, v ? (0, n.jsx)(l.TabBar.Item, {
           className: M.tabBarItem,
           id: h.NB.GUILD,
           children: R.Z.Messages.EDIT_PROFILE_CATEGORY_GUILD_IDENTITY
         }, h.NB.GUILD) : null]
-      }), p === h.NB.GUILD ? (0, n.jsx)(_.Z, {
+      }), D === h.NB.GUILD ? (0, n.jsx)(_.Z, {
         selectedGuild: x
       }) : (0, n.jsx)(S.Z, {})]
     })

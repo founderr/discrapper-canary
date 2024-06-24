@@ -5,10 +5,10 @@ t.d(r, {
 });
 var a = t(735250);
 t(470079);
-var i = t(120356),
-  n = t.n(i),
-  o = t(481060),
-  l = t(45114),
+var n = t(120356),
+  i = t.n(n),
+  l = t(481060),
+  o = t(45114),
   c = t(423932),
   s = t(601948),
   d = t(737126),
@@ -38,26 +38,26 @@ let h = () => {
 function m() {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
-      className: n()(d.buttonsContainer, u.marginBottom20),
+      className: i()(d.buttonsContainer, u.marginBottom20),
       children: (0, a.jsx)(s.S, {
         isDevTools: !0
       })
     }), (0, a.jsx)("div", {
-      className: n()(d.buttonsContainer, u.marginBottom20),
-      children: (0, a.jsx)(o.Button, {
+      className: i()(d.buttonsContainer, u.marginBottom20),
+      children: (0, a.jsx)(l.Button, {
         onClick: h,
         children: "Launch MFA"
       })
     }), (0, a.jsx)("div", {
-      className: n()(d.buttonsContainer, u.marginBottom20),
-      children: (0, a.jsx)(o.Button, {
+      className: i()(d.buttonsContainer, u.marginBottom20),
+      children: (0, a.jsx)(l.Button, {
         onClick: () => (0, c.Z)(),
         children: "Launch Vibing Wumpus"
       })
     }), (0, a.jsx)("div", {
-      className: n()(d.buttonsContainer, u.marginBottom20),
-      children: (0, a.jsx)(o.Button, {
-        onClick: l.YJ,
+      className: i()(d.buttonsContainer, u.marginBottom20),
+      children: (0, a.jsx)(l.Button, {
+        onClick: o.YJ,
         children: "Clear Message Requests Read State"
       })
     })]

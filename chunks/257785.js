@@ -11,10 +11,10 @@ t.d(r, {
 });
 var a = t(735250);
 t(470079);
-var i = t(120356),
-  n = t.n(i),
-  o = t(481060),
-  l = t(719556);
+var n = t(120356),
+  i = t.n(n),
+  l = t(481060),
+  o = t(719556);
 
 function c(e) {
   let {
@@ -22,7 +22,7 @@ function c(e) {
     children: t
   } = e;
   return (0, a.jsx)("dl", {
-    className: n()(l.properties, r),
+    className: i()(o.properties, r),
     children: t
   })
 }
@@ -34,7 +34,7 @@ function s(e) {
   } = e;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("dt", {
-      className: l.propertyName,
+      className: o.propertyName,
       children: r
     }), (0, a.jsx)("dd", {
       children: t
@@ -46,10 +46,10 @@ function d(e) {
   let {
     value: r
   } = e;
-  return (0, a.jsx)(o.Checkbox, {
+  return (0, a.jsx)(l.Checkbox, {
     size: 16,
     value: r,
-    shape: o.Checkbox.Shapes.SMALL_BOX,
+    shape: l.Checkbox.Shapes.SMALL_BOX,
     displayOnly: !0
   })
 }

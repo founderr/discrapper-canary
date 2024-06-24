@@ -3,32 +3,32 @@ n.d(t, {
     return r
   },
   Zh: function() {
-    return a
+    return i
   },
   e6: function() {
-    return i
+    return a
   },
   iq: function() {
     return l
   }
 }), n(757143);
 var s = n(441729);
-let a = null != window.speechSynthesis;
+let i = null != window.speechSynthesis;
 
-function i(e, t) {
+function a(e, t) {
   let n = e.replace(/(https?:\/\/[^\s]+)/g, e => {
     let t = e.match(/^https?:\/\/(?:www\.)?([^/?#]+)(?:[/?#]|$)/i);
     return null != t ? t[1] : ""
   });
   null != t && n.length > t && (n = (n = n.substring(0, t)).substring(0, Math.min(n.length, n.lastIndexOf(" "))));
-  let a = new SpeechSynthesisUtterance(n);
-  return a.rate = s.Z.speechRate, a
+  let i = new SpeechSynthesisUtterance(n);
+  return i.rate = s.Z.speechRate, i
 }
 
 function l(e, t) {
-  a && (e.voice = t, speechSynthesis.speak(e))
+  i && (e.voice = t, speechSynthesis.speak(e))
 }
 
 function r() {
-  a && speechSynthesis.cancel()
+  i && speechSynthesis.cancel()
 }

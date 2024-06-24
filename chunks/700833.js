@@ -11,8 +11,8 @@ t(470079);
 var r = t(392711),
   s = t(481060),
   i = t(246364),
-  o = t(405545),
-  l = t(382574),
+  l = t(405545),
+  o = t(382574),
   c = t(279988),
   d = t(786127),
   u = t(981631),
@@ -37,11 +37,11 @@ function h(e) {
     await _(C, e)
   }, y = async (e, n, t) => {
     await I(e, n, t)
-  }, A = (0, r.uniqueId)(), S = n === C, M = {
-    key: A,
+  }, S = (0, r.uniqueId)(), A = n === C, M = {
+    key: S,
     index: C,
     isDragEnabled: f,
-    isDropHovered: S,
+    isDropHovered: A,
     onEdit: () => {
       0 === E ? x(u, v, h) : (0, s.openModalLazy)(async () => {
         let {
@@ -69,7 +69,7 @@ function h(e) {
         ...M
       });
     case i.QJ.PARAGRAPH:
-      return (0, a.jsx)(l.Z, {
+      return (0, a.jsx)(o.Z, {
         formField: u,
         ...M
       });
@@ -79,7 +79,7 @@ function h(e) {
         ...M
       });
     case i.QJ.MULTIPLE_CHOICE:
-      return (0, a.jsx)(o.Z, {
+      return (0, a.jsx)(l.Z, {
         formField: u,
         ...M
       });
@@ -89,7 +89,7 @@ function h(e) {
 }
 
 function C(e, n, r) {
-  let o = {
+  let l = {
     onCloseRequest: u.dG4
   };
   switch (e) {
@@ -104,7 +104,7 @@ function C(e, n, r) {
           onSave: n,
           guild: r
         })
-      }, o);
+      }, l);
     case i.QJ.PARAGRAPH:
       return (0, s.openModalLazy)(async () => {
         let {
@@ -115,7 +115,7 @@ function C(e, n, r) {
           field: void 0,
           onSave: n
         })
-      }, o);
+      }, l);
     case i.QJ.TEXT_INPUT:
       return (0, s.openModalLazy)(async () => {
         let {
@@ -126,7 +126,7 @@ function C(e, n, r) {
           field: void 0,
           onSave: n
         })
-      }, o);
+      }, l);
     case i.QJ.MULTIPLE_CHOICE:
       return (0, s.openModalLazy)(async () => {
         let {
@@ -137,12 +137,12 @@ function C(e, n, r) {
           field: void 0,
           onSave: n
         })
-      }, o)
+      }, l)
   }
 }
 
 function x(e, n, r) {
-  let o = {
+  let l = {
     onCloseRequest: u.dG4
   };
   switch (e.field_type) {
@@ -157,7 +157,7 @@ function x(e, n, r) {
           onSave: n,
           guild: r
         })
-      }, o);
+      }, l);
     case i.QJ.PARAGRAPH:
       return (0, s.openModalLazy)(async () => {
         let {
@@ -168,7 +168,7 @@ function x(e, n, r) {
           field: e,
           onSave: n
         })
-      }, o);
+      }, l);
     case i.QJ.TEXT_INPUT:
       return (0, s.openModalLazy)(async () => {
         let {
@@ -179,7 +179,7 @@ function x(e, n, r) {
           field: e,
           onSave: n
         })
-      }, o);
+      }, l);
     case i.QJ.MULTIPLE_CHOICE:
       return (0, s.openModalLazy)(async () => {
         let {
@@ -190,6 +190,6 @@ function x(e, n, r) {
           field: e,
           onSave: n
         })
-      }, o)
+      }, l)
   }
 }

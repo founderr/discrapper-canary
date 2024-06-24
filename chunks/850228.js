@@ -6,8 +6,8 @@ var n = t(735250),
   i = t(912454),
   c = t(559725),
   u = t(439041),
-  d = t(689938),
-  E = t(260628);
+  E = t(689938),
+  d = t(260628);
 class A extends s.PureComponent {
   componentDidMount() {
     null == this.props.adyenPaymentData && c.cp()
@@ -23,23 +23,23 @@ class A extends s.PureComponent {
       children: [(0, n.jsx)(i.ZP, {
         type: i.ZP.Types.CASH_APP,
         size: i.Uy.MEDIUM,
-        className: E.icon
+        className: d.icon
       }), c ? (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(r.Heading, {
           variant: o.length < 25 ? "heading-xl/bold" : "heading-lg/bold",
-          className: E.connectionInstructions,
-          children: d.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_CONNECTED_SUCCESS.format({
+          className: d.connectionInstructions,
+          children: E.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_CONNECTED_SUCCESS.format({
             cashtag: o
           })
         }), (0, n.jsx)(r.Text, {
           variant: "text-md/medium",
-          className: E.connectionInstructions,
-          children: d.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_CONNECTED_SUCCESS_INSTRUCTIONS
+          className: d.connectionInstructions,
+          children: E.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_CONNECTED_SUCCESS_INSTRUCTIONS
         })]
       }) : (0, n.jsx)(r.Text, {
         variant: "text-md/medium",
-        className: E.connectionInstructions,
-        children: null == s ? d.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_LOADING : d.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_CONNECTION_INSTRUCTIONS
+        className: d.connectionInstructions,
+        children: null == s ? E.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_LOADING : E.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_CONNECTION_INSTRUCTIONS
       })]
     })
   }

@@ -8,8 +8,8 @@ t(470079);
 var r = t(108930),
   s = t(86406),
   i = t(146068),
-  o = t(308545),
-  l = t(397697),
+  l = t(308545),
+  o = t(397697),
   c = t(129871),
   d = t(206851),
   u = t(246933),
@@ -23,7 +23,7 @@ function C(e) {
   } = e;
   switch (n) {
     case h.qC.NIGHT_SKY:
-      return (0, a.jsx)(l.Z, {
+      return (0, a.jsx)(o.Z, {
         ...t
       });
     case h.qC.CASTLE:
@@ -51,7 +51,7 @@ function C(e) {
         ...t
       });
     case h.qC.MESH:
-      return (0, a.jsx)(o.Z, {
+      return (0, a.jsx)(l.Z, {
         ...t
       });
     case h.qC.SPATTER:

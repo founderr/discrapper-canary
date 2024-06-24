@@ -1,4 +1,4 @@
-n.d(l, {
+t.d(l, {
   ZP: function() {
     return c
   },
@@ -6,23 +6,23 @@ n.d(l, {
     return r
   }
 });
-var t, r, i = n(735250),
-  s = n(470079),
-  a = n(729594),
-  o = n(140061);
+var n, r, i = t(735250),
+  s = t(470079),
+  a = t(729594),
+  o = t(140061);
 
-function u(e) {
+function d(e) {
   let {
     autoMute: l,
-    ...n
-  } = e, t = s.useRef(null), r = s.useCallback(e => {
+    ...t
+  } = e, n = s.useRef(null), r = s.useCallback(e => {
     if (!!e.data["x-tiktok-embed"] && "https://www.tiktok.com" === e.origin) {
       if ("onPlayerReady" === e.data.type) {
-        var n, r, i, s;
-        l && (null === (s = t.current) || void 0 === s || null === (i = s.contentWindow) || void 0 === i || i.postMessage({
+        var t, r, i, s;
+        l && (null === (s = n.current) || void 0 === s || null === (i = s.contentWindow) || void 0 === i || i.postMessage({
           type: "mute",
           "x-tiktok-embed": !0
-        }, e.origin)), null === (r = t.current) || void 0 === r || null === (n = r.contentWindow) || void 0 === n || n.postMessage({
+        }, e.origin)), null === (r = n.current) || void 0 === r || null === (t = r.contentWindow) || void 0 === t || t.postMessage({
           type: "play",
           "x-tiktok-embed": !0
         }, e.origin)
@@ -30,26 +30,26 @@ function u(e) {
     }
   }, [l]);
   return s.useEffect(() => (window.addEventListener("message", r), () => window.removeEventListener("message", r)), [r]), (0, i.jsx)(h, {
-    ref: t,
-    ...n
+    ref: n,
+    ...t
   })
 }
 
-function d(e) {
+function u(e) {
   let {
     src: l,
-    autoMute: n,
-    ...t
+    autoMute: t,
+    ...n
   } = e, r = a.parse(null != l ? l : "", !0);
   r.query = {
     ...r.query,
     autoplay: "1",
     auto_play: "1"
-  }, n && (r.query.mute = "1"), r.search = null;
+  }, t && (r.query.mute = "1"), r.search = null;
   let s = a.format(r);
   return (0, i.jsx)(h, {
     src: s,
-    ...t
+    ...n
   })
 }
 let h = s.forwardRef(function(e, l) {
@@ -67,11 +67,11 @@ let h = s.forwardRef(function(e, l) {
 function c(e) {
   switch (e.provider) {
     case "YouTube":
-      return (0, i.jsx)(d, {
+      return (0, i.jsx)(u, {
         ...e
       });
     case "TikTok":
-      return (0, i.jsx)(u, {
+      return (0, i.jsx)(d, {
         ...e
       });
     default:
@@ -79,4 +79,4 @@ function c(e) {
         ...e
       })
   }
-}(t = r || (r = {})).YOUTUBE = "YouTube", t.TIKTOK = "TikTok"
+}(n = r || (r = {})).YOUTUBE = "YouTube", n.TIKTOK = "TikTok"

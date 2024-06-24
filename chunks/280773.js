@@ -1,10 +1,10 @@
 "use strict";
-t.d(s, {
+s.d(t, {
   n: function() {
-    return a
+    return r
   }
 });
-let n = (0, t(818083).B)({
+let n = (0, s(818083).B)({
     kind: "user",
     id: "2024-04_collectibles_unified_product_catalog",
     label: "Collectibles Unified Product Catalog",
@@ -19,6 +19,6 @@ let n = (0, t(818083).B)({
       }
     }]
   }),
-  a = e => n.useExperiment({
+  r = e => n.useExperiment({
     location: e
   })

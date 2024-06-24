@@ -1,15 +1,15 @@
-S.d(e, {
+t.d(n, {
   Z: function() {
-    return I
+    return s
   }
 });
-var _ = S(470079),
-  t = S(442837),
-  n = S(339085),
-  i = S(889564);
-let l = [];
+var i = t(470079),
+  l = t(442837),
+  r = t(339085),
+  u = t(889564);
+let o = [];
 
-function I(E) {
-  let e = (0, t.e7)([n.Z], () => n.Z.getGuildEmoji(E), [E]);
-  return _.useMemo(() => null == e ? l : e.filter(e => (0, i.Kt)(e, E)), [e, E])
+function s(e) {
+  let n = (0, l.e7)([r.Z], () => r.Z.getGuildEmoji(e), [e]);
+  return i.useMemo(() => null == n ? o : n.filter(n => (0, u.Kt)(n, e)), [n, e])
 }

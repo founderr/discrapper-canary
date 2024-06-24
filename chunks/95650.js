@@ -19,8 +19,8 @@ var t = i(735250),
   h = i(55563),
   g = i(147890),
   E = i(272242),
-  v = i(981631),
-  A = i(689938),
+  A = i(981631),
+  v = i(689938),
   R = i(580954);
 
 function P(e) {
@@ -38,7 +38,7 @@ function P(e) {
       className: R.productSection,
       children: [(0, t.jsx)(o.Heading, {
         variant: "heading-lg/semibold",
-        children: A.Z.Messages.STOREFRONT_APP_SUBSCRIPTIONS
+        children: v.Z.Messages.STOREFRONT_APP_SUBSCRIPTIONS
       }), (0, t.jsx)("div", {
         className: s()(R.productList, R.subList),
         children: a.map(e => (0, t.jsx)(u.zz, {
@@ -59,7 +59,7 @@ function P(e) {
       className: R.productSection,
       children: [(0, t.jsx)(o.Heading, {
         variant: "heading-lg/semibold",
-        children: A.Z.Messages.STOREFRONT_APP_PRODUCTS
+        children: v.Z.Messages.STOREFRONT_APP_PRODUCTS
       }), (0, t.jsx)("div", {
         className: s()(R.productList, R.itemList),
         children: r.map(e => (0, t.jsx)(u.hd, {
@@ -74,7 +74,7 @@ function P(e) {
         }, e.id))
       })]
     }), (0, t.jsx)(c.Z, {
-      path: v.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(":applicationId", ":skuId"),
+      path: A.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(":applicationId", ":skuId"),
       exact: !0,
       render: e => (0, t.jsx)(C, {
         ...e,
@@ -96,8 +96,8 @@ function C(e) {
   } = e, s = (0, r.e7)([h.Z], () => h.Z.get(i), [i]), c = l.useId();
   return l.useLayoutEffect(() => {
     if (null != s) switch (s.type) {
-      case v.epS.CONSUMABLE:
-      case v.epS.DURABLE:
+      case A.epS.CONSUMABLE:
+      case A.epS.DURABLE:
         return function(e, n, i) {
           (0, o.openModal)(e => {
             let {
@@ -120,7 +120,7 @@ function C(e) {
             }
           })
         }(c, n, i);
-      case v.epS.SUBSCRIPTION: {
+      case A.epS.SUBSCRIPTION: {
         var e;
         if (null == a) return;
         let l = null === (e = a.subscription_listings) || void 0 === e ? void 0 : e.find(e => e.id === i);

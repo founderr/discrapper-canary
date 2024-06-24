@@ -3,8 +3,8 @@ n.d(t, {
     return T
   }
 }), n(47120);
-var s, a = n(735250),
-  i = n(470079),
+var s, i = n(735250),
+  a = n(470079),
   l = n(120356),
   r = n.n(l),
   c = n(692547),
@@ -26,7 +26,7 @@ let h = (0, d.Mg)(o.Z.GRADIENT_PROGRESS_NOTCH_WIDTH),
     BLACK: E.black,
     GRAY: E.gray
   });
-class I extends(s = i.Component) {
+class I extends(s = a.Component) {
   componentDidMount() {
     this.computeBars(), window.addEventListener("resize", this.computeBars)
   }
@@ -66,16 +66,16 @@ class I extends(s = i.Component) {
     } = this.props, {
       barWidth: n
     } = this.state;
-    return (0, a.jsx)("div", {
+    return (0, i.jsx)("div", {
       className: E.wrapper,
       ref: this.sizerRef,
-      children: (0, a.jsxs)("div", {
+      children: (0, i.jsxs)("div", {
         className: r()(E.container, e),
         style: this.getGradientStyles(),
-        children: [(0, a.jsx)("div", {
+        children: [(0, i.jsx)("div", {
           className: E.progress,
           style: this.getProgressStyles()
-        }), 0 !== n && (0, a.jsx)(u.Z, {
+        }), 0 !== n && (0, i.jsx)(u.Z, {
           width: n,
           className: r()(E.notches, t)
         })]
@@ -85,7 +85,7 @@ class I extends(s = i.Component) {
   constructor(...e) {
     super(...e), _(this, "state", {
       barWidth: 0
-    }), _(this, "sizerRef", i.createRef()), _(this, "computeBars", () => {
+    }), _(this, "sizerRef", a.createRef()), _(this, "computeBars", () => {
       let {
         current: e
       } = this.sizerRef;

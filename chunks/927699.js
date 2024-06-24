@@ -34,13 +34,13 @@ function T(e) {
     innerClassName: x,
     disabled: h = !1,
     disableThemedBackground: P = !1
-  } = e, [v, A] = t.useState(null != _ ? _ : T), [f, M] = t.useState((0, o.JM)(v)), g = t.useRef(!1);
+  } = e, [A, v] = t.useState(null != _ ? _ : T), [f, M] = t.useState((0, o.JM)(A)), g = t.useRef(!1);
   return t.useEffect(() => {
     g.current = !0
   }, []), t.useEffect(() => {
     if (void 0 === _) {
       let e = (0, o.JM)(T);
-      A(T), M(e)
+      v(T), M(e)
     }
   }, [_, T]), (0, l.jsx)("div", {
     className: r()(p.body, S),
@@ -53,11 +53,11 @@ function T(e) {
         editorClassName: p.editorTextArea,
         maxCharacterCount: m.$n,
         onChange: function(e, n, s) {
-          n !== v && (A(n), M(s), i(n))
+          n !== A && (v(n), M(s), i(n))
         },
         placeholder: I,
         channel: N,
-        textValue: v,
+        textValue: A,
         richValue: f,
         type: c.I.CUSTOM_GIFT,
         onBlur: () => {

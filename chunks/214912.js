@@ -1,6 +1,6 @@
 i.d(n, {
   Z: function() {
-    return v
+    return A
   }
 });
 var t = i(735250);
@@ -21,12 +21,12 @@ var l = i(120356),
   g = i(129512),
   E = i(330065);
 
-function v(e) {
+function A(e) {
   let {
     guild: n,
     className: i,
     onClick: l
-  } = e, v = (0, r.ZP)(), A = new c.ZP({
+  } = e, A = (0, r.ZP)(), v = new c.ZP({
     name: n.name,
     icon: n.icon
   }), R = _.ZP.getGuildDiscoverySplashURL({
@@ -40,7 +40,7 @@ function v(e) {
       case m.BRd.LIGHT:
         return E
     }
-  }(v), C = _.ZP.getGuildIconURL({
+  }(A), C = _.ZP.getGuildIconURL({
     id: n.id,
     icon: n.icon,
     size: 50
@@ -66,7 +66,7 @@ function v(e) {
             children: (0, t.jsx)(u.Z, {
               className: h.__invalid_icon,
               iconSrc: C,
-              guild: A,
+              guild: v,
               size: u.Z.Sizes.LARGE
             })
           })

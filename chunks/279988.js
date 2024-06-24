@@ -4,8 +4,8 @@ t(470079);
 var r = t(120356),
   s = t.n(r),
   i = t(692547),
-  o = t(481060),
-  l = t(259580),
+  l = t(481060),
+  o = t(259580),
   c = t(196345),
   d = t(137158),
   u = t(689938),
@@ -41,15 +41,15 @@ n.Z = function(e) {
       }),
       terms: p,
       channelId: n
-    }), 0 !== N && (0, a.jsxs)(o.Clickable, {
+    }), 0 !== N && (0, a.jsxs)(l.Clickable, {
       className: s()(m.fieldFooterContainer, m.clickable),
       onClick: f,
-      children: [(0, a.jsx)(o.FormText, {
+      children: [(0, a.jsx)(l.FormText, {
         className: m.clickable,
         children: u.Z.Messages.MEMBER_VERIFICATION_OTHER_RULES.format({
           count: N
         })
-      }), (0, a.jsx)(l.Z, {
+      }), (0, a.jsx)(o.Z, {
         className: m.termsFieldCaretIcon,
         height: 14,
         width: 14,

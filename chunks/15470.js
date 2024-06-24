@@ -64,8 +64,8 @@ let I = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
     }
   },
   x = o().parserFor(C),
-  N = o().reactFor(o().ruleOutput(C, "react"));
-class v extends i.PureComponent {
+  f = o().reactFor(o().ruleOutput(C, "react"));
+class N extends i.PureComponent {
   componentDidMount() {
     if (null != this._container) {
       let {
@@ -101,7 +101,7 @@ class v extends i.PureComponent {
           }), (0, n.jsx)(u.Z, {
             className: m.description,
             parser: x,
-            output: N,
+            output: f,
             state: {
               assets: a,
               applicationId: e
@@ -130,4 +130,4 @@ class v extends i.PureComponent {
     })
   }
 }
-t.Z = v
+t.Z = N

@@ -1,9 +1,9 @@
 n.d(t, {
   X: function() {
-    return h
+    return I
   },
   Z: function() {
-    return I
+    return h
   }
 });
 var s = n(735250);
@@ -52,7 +52,7 @@ function _(e) {
   })
 }
 
-function h(e) {
+function I(e) {
   var t;
   let {
     invite: n
@@ -100,7 +100,7 @@ function h(e) {
   })
 }
 
-function I(e) {
+function h(e) {
   let {
     invite: t,
     channel: n,

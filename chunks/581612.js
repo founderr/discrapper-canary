@@ -1,16 +1,16 @@
 t.d(r, {
   Z: function() {
-    return n
+    return i
   },
   q: function() {
-    return o
+    return l
   }
 });
 var a = t(570140),
-  i = t(91311);
+  n = t(91311);
 
-function n(e, r) {
-  let t = "boolean" == typeof r ? r : !i.Z.get(e);
+function i(e, r) {
+  let t = "boolean" == typeof r ? r : !n.Z.get(e);
   a.Z.dispatch({
     type: "DEV_TOOLS_DESIGN_TOGGLE_WEB_SET",
     toggle: e,
@@ -18,6 +18,6 @@ function n(e, r) {
   })
 }
 
-function o() {
-  for (let e in i.Z.all()) n(e, !1)
+function l() {
+  for (let e in n.Z.all()) i(e, !1)
 }

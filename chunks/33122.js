@@ -18,11 +18,11 @@ var n, i = s(735250),
   I = s(552253),
   C = s(261922),
   x = s(259773),
-  N = s(585483),
-  v = s(981631),
-  b = s(439334);
+  f = s(585483),
+  N = s(981631),
+  v = s(439334);
 
-function f(e, t, s) {
+function b(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -62,15 +62,15 @@ let S = {
     width: 1280,
     height: 720
   },
-  O = e => (0, u.lV)({
+  y = e => (0, u.lV)({
     ...e,
-    className: b.videoWrapper,
-    mediaPlayerClassName: b.mediaPlayer
+    className: v.videoWrapper,
+    mediaPlayerClassName: v.mediaPlayer
   }),
-  y = e => (0, i.jsx)(C.Z, {
+  O = e => (0, i.jsx)(C.Z, {
     ...e
   }),
-  M = e => {
+  j = e => {
     let t, s, n, {
       item: a,
       size: r,
@@ -83,11 +83,11 @@ let S = {
       onVolumeChange: C,
       onMute: x
     } = e;
-    if (a.type === v.s9s.YOUTUBE_VIDEO) t = {
-      url: (0, v.n8r)(a.youtubeVideoId),
+    if (a.type === N.s9s.YOUTUBE_VIDEO) t = {
+      url: (0, N.n8r)(a.youtubeVideoId),
       ...E
     }, s = {
-      url: "".concat((0, v.ivE)(a.youtubeVideoId), "?").concat("rel=0&iv_load_policy=3&showinfo=0&modestbranding=1"),
+      url: "".concat((0, N.ivE)(a.youtubeVideoId), "?").concat("rel=0&iv_load_policy=3&showinfo=0&modestbranding=1"),
       ...L
     }, n = g.pn.YOUTUBE;
     else {
@@ -104,7 +104,7 @@ let S = {
         height: n
       }
     }
-    let N = (0, i.jsx)(m.BC, {
+    let f = (0, i.jsx)(m.BC, {
       href: null,
       thumbnail: t,
       video: s,
@@ -115,36 +115,36 @@ let S = {
       onPlay: l,
       onEnded: o,
       playable: c,
-      className: b.video,
+      className: v.video,
       volume: p,
       onVolumeChange: C,
       autoMute: I,
       onMute: x,
       autoPlay: c,
-      renderVideoComponent: O,
-      renderImageComponent: y,
+      renderVideoComponent: y,
+      renderImageComponent: O,
       renderLinkComponent: u.iT
     });
-    return c ? N : (0, i.jsx)(h.Clickable, {
-      className: b.itemImageWrapper,
+    return c ? f : (0, i.jsx)(h.Clickable, {
+      className: v.itemImageWrapper,
       onClick: d,
-      children: N
+      children: f
     })
   },
-  j = () => (0, i.jsx)("div", {
-    className: b.paginationVideoOverlay,
+  k = () => (0, i.jsx)("div", {
+    className: v.paginationVideoOverlay,
     children: (0, i.jsx)(x.Z, {
       inactive: !0,
-      className: b.paginationVideoPlayPill,
+      className: v.paginationVideoPlayPill,
       renderLinkComponent: u.iT
     })
   });
-class T extends(n = a.PureComponent) {
+class M extends(n = a.PureComponent) {
   componentDidMount() {
-    N.S.subscribe(v.CkL.CAROUSEL_PREV, this.manualPrevious), N.S.subscribe(v.CkL.CAROUSEL_NEXT, this.manualNext)
+    f.S.subscribe(N.CkL.CAROUSEL_PREV, this.manualPrevious), f.S.subscribe(N.CkL.CAROUSEL_NEXT, this.manualNext)
   }
   componentWillUnmount() {
-    N.S.unsubscribe(v.CkL.CAROUSEL_PREV, this.manualPrevious), N.S.unsubscribe(v.CkL.CAROUSEL_NEXT, this.manualNext)
+    f.S.unsubscribe(N.CkL.CAROUSEL_PREV, this.manualPrevious), f.S.unsubscribe(N.CkL.CAROUSEL_NEXT, this.manualNext)
   }
   getStyle(e, t) {
     let s = t.interpolate({
@@ -196,22 +196,22 @@ class T extends(n = a.PureComponent) {
       edgeItems: 2
     });
     return e.length <= 1 ? r : (0, i.jsxs)("div", {
-      className: b.carouselButtonsContainer,
+      className: v.carouselButtonsContainer,
       children: [r, (0, i.jsx)(c.am, {
         onClick: this.manualPrevious,
-        className: l()(b.arrow, {
-          [b.arrowHovered]: n
+        className: l()(v.arrow, {
+          [v.arrowHovered]: n
         })
       }), (0, i.jsx)(c.Pz, {
         onClick: this.manualNext,
-        className: l()(b.arrow, {
-          [b.arrowHovered]: a
+        className: l()(v.arrow, {
+          [v.arrowHovered]: a
         })
       })]
     })
   }
   getPaginationSrc(e) {
-    return e.type === v.s9s.YOUTUBE_VIDEO ? (0, v.n8r)(e.youtubeVideoId) : e.type === v.s9s.IMG ? e.src : e.type === v.s9s.VIDEO ? e.thumbnailSrc : null
+    return e.type === N.s9s.YOUTUBE_VIDEO ? (0, N.n8r)(e.youtubeVideoId) : e.type === N.s9s.IMG ? e.src : e.type === N.s9s.VIDEO ? e.thumbnailSrc : null
   }
   render() {
     let {
@@ -231,21 +231,21 @@ class T extends(n = a.PureComponent) {
       className: t,
       disable: r || l || n,
       children: [this.renderCarousel(), (0, i.jsx)("div", {
-        className: b.pagination,
+        className: v.pagination,
         children: (0, i.jsx)(c.ZP, {
           renderItem: this.renderPaginationItem,
           scrollToPadding: 85,
           items: e,
           selectedIndex: a,
           onSetItem: e => this.setItem(e, !0),
-          paginationContainerClass: b.scroller,
+          paginationContainerClass: v.scroller,
           align: e.length < 6 ? c.ZP.Align.LEFT : c.ZP.Align.CENTER
         })
       })]
     })
   }
   constructor(...e) {
-    super(...e), f(this, "state", {
+    super(...e), b(this, "state", {
       currentIndex: 0,
       animate: !0,
       playingVideo: !1,
@@ -254,12 +254,12 @@ class T extends(n = a.PureComponent) {
       hoveringNextItem: !1,
       volume: 1,
       isMuted: !0
-    }), f(this, "getItemSize", () => {
+    }), b(this, "getItemSize", () => {
       let {
         width: e
       } = this.props, t = S.MEDIUM;
       return null != e && e < t.width && (t = S.SMALL), t
-    }), f(this, "setItem", (e, t) => {
+    }), b(this, "setItem", (e, t) => {
       let {
         props: {
           items: s,
@@ -275,65 +275,65 @@ class T extends(n = a.PureComponent) {
         animate: l,
         hasInteracted: t
       }), t && null != n && n(s[r], a, r)
-    }), f(this, "autoNext", () => {
+    }), b(this, "autoNext", () => {
       this.setItem(this.state.currentIndex + 1, !1)
-    }), f(this, "manualNext", () => {
+    }), b(this, "manualNext", () => {
       this.setItem(this.state.currentIndex + 1, !0)
-    }), f(this, "manualPrevious", () => {
+    }), b(this, "manualPrevious", () => {
       this.setItem(this.state.currentIndex - 1, !0)
-    }), f(this, "handlePlay", e => this.setState({
+    }), b(this, "handlePlay", e => this.setState({
       playingVideo: !0,
       hasInteracted: !e
-    })), f(this, "handleEnded", () => {
+    })), b(this, "handleEnded", () => {
       !this.state.hasInteracted && this.autoNext()
-    }), f(this, "handleVolumeChange", e => {
+    }), b(this, "handleVolumeChange", e => {
       this.setState({
         volume: e,
         hasInteracted: !0
       })
-    }), f(this, "handleMute", e => {
+    }), b(this, "handleMute", e => {
       this.setState({
         isMuted: e,
         hasInteracted: !0
       })
-    }), f(this, "handleVideoClick", e => {
+    }), b(this, "handleVideoClick", e => {
       this.setItem(e, !0)
-    }), f(this, "handleEdgeItemMouseLeave", () => {
+    }), b(this, "handleEdgeItemMouseLeave", () => {
       this.setState({
         hoveringPreviousItem: !1,
         hoveringNextItem: !1
       })
-    }), f(this, "renderCarouselImage", (e, t, s) => s ? (0, i.jsx)(h.Clickable, {
+    }), b(this, "renderCarouselImage", (e, t, s) => s ? (0, i.jsx)(h.Clickable, {
       onClick: () => this.handleCurrentItemClick(e, t),
-      className: b.itemImageWrapper,
+      className: v.itemImageWrapper,
       children: (0, i.jsx)("img", {
         src: e.src,
         alt: "",
-        className: b.currentImage
+        className: v.currentImage
       })
     }) : (0, i.jsx)(h.Clickable, {
       onClick: () => this.setItem(t, !0),
-      className: b.itemImageWrapper,
+      className: v.itemImageWrapper,
       children: (0, i.jsx)("img", {
         alt: "",
-        className: b.itemImage,
+        className: v.itemImage,
         src: e.src,
         draggable: !1
       })
-    })), f(this, "renderItem", (e, t, s) => {
+    })), b(this, "renderItem", (e, t, s) => {
       let {
         currentIndex: n,
         volume: a,
         isMuted: r
       } = this.state, h = t === (0, p.gN)(n, this.props.items.length);
       return (0, i.jsx)(o.Z.div, {
-        className: l()(b.item, {
-          [b.currentItem]: h
+        className: l()(v.item, {
+          [v.currentItem]: h
         }),
         style: null != s ? this.getStyle(t, s) : null,
         onMouseEnter: h ? null : () => this.handleEdgeItemMouseEnter(t),
         onMouseLeave: h ? null : this.handleEdgeItemMouseLeave,
-        children: e.type === v.s9s.VIDEO || e.type === v.s9s.YOUTUBE_VIDEO ? (0, i.jsx)(M, {
+        children: e.type === N.s9s.VIDEO || e.type === N.s9s.YOUTUBE_VIDEO ? (0, i.jsx)(j, {
           item: e,
           size: this.getItemSize(),
           onPlay: this.handlePlay,
@@ -346,25 +346,25 @@ class T extends(n = a.PureComponent) {
           onMute: this.handleMute
         }) : this.renderCarouselImage(e, t, h)
       })
-    }), f(this, "renderPaginationItem", (e, t) => {
+    }), b(this, "renderPaginationItem", (e, t) => {
       let {
         currentIndex: s
       } = this.state, n = s === t;
       return (0, i.jsxs)("div", {
-        className: l()(b.paginationItem, n ? b.selectedStorePaginationItem : b.unselectedStorePaginationItem),
+        className: l()(v.paginationItem, n ? v.selectedStorePaginationItem : v.unselectedStorePaginationItem),
         children: [(0, i.jsx)("img", {
           alt: null == e.alt ? t : e.alt,
-          className: b.storePaginationImg,
+          className: v.storePaginationImg,
           src: this.getPaginationSrc(e),
           draggable: !1
-        }), e.type === v.s9s.YOUTUBE_VIDEO || e.type === v.s9s.VIDEO ? (0, i.jsx)(j, {}) : null, n ? (0, i.jsx)("div", {
-          className: b.overlappingBorder
+        }), e.type === N.s9s.YOUTUBE_VIDEO || e.type === N.s9s.VIDEO ? (0, i.jsx)(k, {}) : null, n ? (0, i.jsx)("div", {
+          className: v.overlappingBorder
         }) : null]
       }, "page-".concat(t))
     })
   }
 }
-f(T, "defaultProps", {
+b(M, "defaultProps", {
   autoplayInterval: 8e3,
   paused: !1
-}), t.Z = (0, d.Z)(T)
+}), t.Z = (0, d.Z)(M)

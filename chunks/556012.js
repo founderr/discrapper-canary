@@ -15,7 +15,7 @@ let o = e => {
     if (e === u.jj.QUARANTINE_USER) return !1;
     return !0
   },
-  T = e => {
+  I = e => {
     switch (e) {
       case u.jj.BLOCK_MESSAGE:
       case u.jj.FLAG_TO_CHANNEL:
@@ -26,7 +26,7 @@ let o = e => {
         return !1
     }
   },
-  I = e => {
+  T = e => {
     switch (e) {
       case u.jj.BLOCK_MESSAGE:
         return l.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_NAME;
@@ -99,8 +99,8 @@ let o = e => {
 
 function S(e, t, n) {
   var a, i, E, _;
-  return T(e) ? {
-    headerText: null !== (a = I(e)) && void 0 !== a ? a : "",
+  return I(e) ? {
+    headerText: null !== (a = T(e)) && void 0 !== a ? a : "",
     descriptionText: null !== (i = O(e, n)) && void 0 !== i ? i : "",
     helperText: null !== (E = A(e, t)) && void 0 !== E ? E : null,
     icon: null !== (_ = N(e)) && void 0 !== _ ? _ : r.CircleXIcon,

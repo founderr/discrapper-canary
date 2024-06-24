@@ -9,8 +9,8 @@ var a = t(120356),
   c = t(276800),
   E = t(248042),
   u = t(409100),
-  d = t(725727),
-  R = t(474936),
+  R = t(725727),
+  d = t(474936),
   I = t(981631),
   T = t(689938),
   A = t(280881);
@@ -20,7 +20,7 @@ s.Z = function(e) {
     buttonClassName: t
   } = e, {
     promotion: a
-  } = (0, d.mq)(), M = (0, i.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription());
+  } = (0, R.mq)(), M = (0, i.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription());
   if (!(0, E.Vi)()) return null;
   let S = new Date(a.endDate);
   return (0, n.jsx)("div", {
@@ -52,7 +52,7 @@ s.Z = function(e) {
       }), (0, n.jsx)(u.Z, {
         buttonText: T.Z.Messages.BOGO_CLAIM_OFFER,
         buttonTextClassName: A.subscribeButtonText,
-        subscriptionTier: R.Si.TIER_2,
+        subscriptionTier: d.Si.TIER_2,
         className: null != t ? t : A.subscribeButton,
         forceInverted: !0
       })]

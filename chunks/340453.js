@@ -5,13 +5,13 @@ n.d(t, {
 });
 var s = n(735250);
 n(470079);
-var a = n(481060),
-  i = n(204197),
+var i = n(481060),
+  a = n(204197),
   l = n(998502),
   r = n(631885),
   c = n(329242),
   o = n(333545);
-let d = l.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
+let d = l.ZP.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
 
 function u(e) {
   let {
@@ -21,9 +21,9 @@ function u(e) {
     avatarSrc: u,
     avatarDecorationSrc: E,
     eventHandlers: _
-  } = (0, i.Z)({
+  } = (0, a.Z)({
     user: t,
-    size: a.AvatarSizes.SIZE_40,
+    size: i.AvatarSizes.SIZE_40,
     animateOnHover: !0
   });
   return (0, s.jsxs)(s.Fragment, {
@@ -33,7 +33,7 @@ function u(e) {
         className: o.avatar,
         src: u,
         avatarDecoration: E,
-        size: a.AvatarSizes.SIZE_40,
+        size: i.AvatarSizes.SIZE_40,
         "aria-label": t.username
       })
     }), (0, s.jsxs)("div", {
@@ -43,7 +43,7 @@ function u(e) {
         children: (0, s.jsx)(c.Z, {
           user: t
         })
-      }), (0, s.jsx)(a.Text, {
+      }), (0, s.jsx)(i.Text, {
         className: o.__invalid_timestamp,
         color: "text-muted",
         variant: "text-xs/normal",

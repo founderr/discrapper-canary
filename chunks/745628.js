@@ -4,8 +4,8 @@ t(470079);
 var r = t(120356),
   s = t.n(r),
   i = t(481060),
-  o = t(18100),
-  l = t(308083),
+  l = t(18100),
+  o = t(308083),
   c = t(689938),
   d = t(360884);
 n.Z = e => {
@@ -48,7 +48,7 @@ n.Z = e => {
           className: d.maxWidthContainer,
           children: (0, a.jsx)(i.TextArea, {
             className: d.input,
-            maxLength: l.Us,
+            maxLength: o.Us,
             onChange: e => m({
               description: e
             }),
@@ -79,25 +79,25 @@ n.Z = e => {
             inputClassName: s()(d.input, d.wildcardInput),
             value: null !== (n = x[0]) && void 0 !== n ? n : "",
             onChange: e => E(e, 0),
-            maxLength: l.TY,
-            placeholder: l.LK["0"]
+            maxLength: o.TY,
+            placeholder: o.LK["0"]
           }), (0, a.jsx)(i.TextInput, {
             inputClassName: s()(d.input, d.wildcardInput),
             value: null !== (t = x[1]) && void 0 !== t ? t : "",
             onChange: e => E(e, 1),
-            maxLength: l.TY,
-            placeholder: l.LK["1"]
+            maxLength: o.TY,
+            placeholder: o.LK["1"]
           }), (0, a.jsx)(i.TextInput, {
             inputClassName: s()(d.input, d.wildcardInput),
             value: null !== (r = x[2]) && void 0 !== r ? r : "",
             onChange: e => E(e, 2),
-            maxLength: l.TY,
-            placeholder: l.LK["2"]
+            maxLength: o.TY,
+            placeholder: o.LK["2"]
           })]
         })]
       }), (0, a.jsx)("div", {
         className: d.fixedWidthSidebar,
-        children: (0, a.jsx)(o.Z, {
+        children: (0, a.jsx)(l.Z, {
           guildId: u,
           progress: h,
           maskTraits: !0

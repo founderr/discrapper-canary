@@ -1,25 +1,25 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
-    return o
+    return a
   }
-}), t(653041), t(47120);
-var l = t(470079),
-  i = t(442837),
-  r = t(430824),
-  s = t(973001);
+}), n(653041), n(47120);
+var i = n(470079),
+  l = n(442837),
+  r = n(430824),
+  o = n(973001);
 
-function o(e) {
+function a(e) {
   let {
-    application: n,
-    showMutualGuilds: t = !0
-  } = e, o = (0, i.e7)([s.Z], () => s.Z.getGuildIdsForApplication(null == n ? void 0 : n.id), [n]), a = (0, i.e7)([r.Z], () => r.Z.isLoaded());
-  return l.useMemo(() => {
+    application: t,
+    showMutualGuilds: n = !0
+  } = e, a = (0, l.e7)([o.Z], () => o.Z.getGuildIdsForApplication(null == t ? void 0 : t.id), [t]), s = (0, l.e7)([r.Z], () => r.Z.isLoaded());
+  return i.useMemo(() => {
     let e = [];
-    if (!a || !t || null == o || null == n) return e;
-    for (let n of o) {
-      let t = r.Z.getGuild(n);
-      null != t && e.push(t)
+    if (!s || !n || null == a || null == t) return e;
+    for (let t of a) {
+      let n = r.Z.getGuild(t);
+      null != n && e.push(n)
     }
     return e
-  }, [a, o, n, t])
+  }, [s, a, t, n])
 }

@@ -5,21 +5,21 @@ n.d(t, {
 });
 var s = n(735250);
 n(470079);
-var a = n(481060),
-  i = n(204197),
+var i = n(481060),
+  a = n(204197),
   l = n(998502),
   r = n(689938),
   c = n(297676);
-let o = l.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar,
+let o = l.ZP.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar,
   d = e => {
     let {
       user: t,
-      avatarSize: n = a.AvatarSizes.SIZE_48
+      avatarSize: n = i.AvatarSizes.SIZE_48
     } = e, {
       avatarSrc: l,
       avatarDecorationSrc: d,
       eventHandlers: u
-    } = (0, i.Z)({
+    } = (0, a.Z)({
       user: t,
       size: n
     });
@@ -40,7 +40,7 @@ t.Z = e => {
   let {
     currentUser: t,
     otherUser: n,
-    children: a
+    children: i
   } = e;
   return (0, s.jsx)("div", {
     className: c.avatarPairContainer,
@@ -48,7 +48,7 @@ t.Z = e => {
       className: c.avatarPair,
       children: [(0, s.jsx)(d, {
         user: t
-      }), a, (0, s.jsx)(d, {
+      }), i, (0, s.jsx)(d, {
         user: n
       })]
     })

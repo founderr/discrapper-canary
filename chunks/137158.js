@@ -7,8 +7,8 @@ var a = t(735250),
   r = t(470079),
   s = t(120356),
   i = t.n(s),
-  o = t(392711),
-  l = t(225857),
+  l = t(392711),
+  o = t(225857),
   c = t(290843),
   d = t(692547),
   u = t(481060),
@@ -21,8 +21,8 @@ function C(e) {
     children: t,
     onEdit: r,
     onRemove: s,
-    canRemove: o,
-    actionsLocation: l
+    canRemove: l,
+    actionsLocation: o
   } = e;
   return (0, a.jsxs)("div", {
     className: h.backgroundContainer,
@@ -33,18 +33,18 @@ function C(e) {
         className: h.containerTitle,
         children: n
       }), t]
-    }), "footer" === l && (0, a.jsxs)(u.FormSection, {
+    }), "footer" === o && (0, a.jsxs)(u.FormSection, {
       className: h.containerFooter,
       children: [(0, a.jsx)(u.Tooltip, {
         text: m.Z.Messages.CLAN_APPLICATION_CANT_REMOVE_FIELD,
-        shouldShow: !o,
+        shouldShow: !l,
         children: e => (0, a.jsx)(u.Button, {
           ...e,
           className: i()(h.removeButton, h.button),
           size: u.Button.Sizes.SMALL,
           look: u.Button.Looks.BLANK,
           onClick: s,
-          disabled: !o,
+          disabled: !l,
           children: m.Z.Messages.REMOVE
         })
       }), (0, a.jsx)(u.Button, {
@@ -65,9 +65,9 @@ function f(e) {
     field: t,
     isDropHovered: s,
     onDrop: m
-  } = e, f = (0, o.debounce)(async (e, n, t) => {
+  } = e, f = (0, l.debounce)(async (e, n, t) => {
     await m(e, n, t)
-  }), E = r.useRef(null), [, T] = (0, l.c)({
+  }), E = r.useRef(null), [, T] = (0, o.c)({
     type: x,
     item: {
       index: n,
@@ -84,9 +84,9 @@ function f(e) {
         index: r
       } = e, s = null === (a = E.current) || void 0 === a ? void 0 : a.getBoundingClientRect(), i = t.getClientOffset();
       if (null == s || null == i) return;
-      let o = (s.bottom - s.top) / 2,
-        l = i.y - s.top;
-      (!(r < n) || !(l < o)) && (!(r > n) || !(l < o)) && r !== n && f(e.field, n, !1)
+      let l = (s.bottom - s.top) / 2,
+        o = i.y - s.top;
+      (!(r < n) || !(o < l)) && (!(r > n) || !(o < l)) && r !== n && f(e.field, n, !1)
     },
     drop: e => {
       f(e.field, n, !0)

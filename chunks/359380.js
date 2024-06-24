@@ -3,8 +3,8 @@ var a = t(735250),
   r = t(470079),
   s = t(481060),
   i = t(898543),
-  o = t(214715),
-  l = t(18100),
+  l = t(214715),
+  o = t(18100),
   c = t(308083),
   d = t(689938),
   u = t(360884);
@@ -13,16 +13,16 @@ let m = e => {
     title: n,
     icon: t,
     traits: i,
-    interests: l,
+    interests: o,
     handleUpdate: d
   } = e, m = r.useCallback(e => {
-    let n = new Set(l);
+    let n = new Set(o);
     n.delete(e), d(n)
-  }, [d, l]), h = r.useCallback(e => {
-    if (l.size === c.c4) return;
-    let n = new Set(l);
+  }, [d, o]), h = r.useCallback(e => {
+    if (o.size === c.c4) return;
+    let n = new Set(o);
     n.add(e), d(n)
-  }, [d, l]);
+  }, [d, o]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(s.Text, {
       className: u.interestsCategoryTitle,
@@ -32,8 +32,8 @@ let m = e => {
     }), (0, a.jsx)("div", {
       className: u.interestsCategory,
       children: i.map(e => {
-        let n = l.has(e);
-        return (0, a.jsx)(o.Z, {
+        let n = o.has(e);
+        return (0, a.jsx)(l.Z, {
           variant: "text-xs/semibold",
           color: "interactive-normal",
           icon: t,
@@ -49,7 +49,7 @@ n.Z = e => {
   let {
     guildId: n,
     title: t,
-    description: o,
+    description: l,
     handleUpdate: h,
     progress: C,
     interests: x,
@@ -86,7 +86,7 @@ n.Z = e => {
       variant: "text-md/normal",
       color: "header-secondary",
       className: u.subtitle,
-      children: o
+      children: l
     }), (0, a.jsxs)("div", {
       className: u.content,
       children: [(0, a.jsxs)("div", {
@@ -133,7 +133,7 @@ n.Z = e => {
         })]
       }), (0, a.jsx)("div", {
         className: u.fixedWidthSidebar,
-        children: null != C && g.length > 0 && !T && (0, a.jsx)(l.Z, {
+        children: null != C && g.length > 0 && !T && (0, a.jsx)(o.Z, {
           guildId: n,
           progress: C,
           traitsToHighlight: v,

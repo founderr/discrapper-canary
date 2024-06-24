@@ -1,6 +1,6 @@
 n.d(t, {
   I4: function() {
-    return T
+    return I
   },
   Sn: function() {
     return l
@@ -9,7 +9,7 @@ n.d(t, {
     return O
   },
   Ui: function() {
-    return I
+    return T
   },
   W4: function() {
     return s
@@ -83,14 +83,14 @@ async function o(e, t, n) {
   })
 }
 
-function T(e) {
+function I(e) {
   a.Z.dispatch({
     applicationId: e,
     type: "INTEGRATION_PERMISSION_SETTINGS_INIT"
   })
 }
 
-function I(e) {
+function T(e) {
   a.Z.dispatch({
     commandId: e,
     type: "INTEGRATION_PERMISSION_SETTINGS_RESET"

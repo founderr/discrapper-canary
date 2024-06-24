@@ -1,7 +1,7 @@
 var s = n(735250);
 n(470079);
-var a = n(120356),
-  i = n.n(a),
+var i = n(120356),
+  a = n.n(i),
   l = n(481060),
   r = n(934199),
   c = n(331651),
@@ -12,7 +12,7 @@ t.Z = e => {
     className: n
   } = e;
   return (0, s.jsxs)("div", {
-    className: i()(n, r.empty),
+    className: a()(n, r.empty),
     children: [(0, s.jsx)("img", {
       className: r.image,
       src: o,

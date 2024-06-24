@@ -1,38 +1,38 @@
-E.d(n, {
+t.d(n, {
   Dk: function() {
     return a
   },
   Ix: function() {
-    return r
+    return u
   },
   me: function() {
     return s
   }
 });
-var t = E(544891),
-  _ = E(981631);
-async function s(e, n, E, s, a) {
-  return (await t.tn.post({
+var E = t(544891),
+  _ = t(981631);
+async function s(e, n, t, s, a) {
+  return (await E.tn.post({
     url: _.ANM.STAGE_INSTANCES,
     body: {
       channel_id: e,
       topic: n,
-      privacy_level: E,
+      privacy_level: t,
       guild_scheduled_event_id: a,
       send_start_notification: s
     }
   })).body
 }
-async function a(e, n, E) {
-  return (await t.tn.patch({
+async function a(e, n, t) {
+  return (await E.tn.patch({
     url: _.ANM.STAGE_INSTANCE(e),
     body: {
       topic: n,
-      privacy_level: E
+      privacy_level: t
     }
   })).body
 }
 
-function r(e) {
-  return t.tn.del(_.ANM.STAGE_INSTANCE(e))
+function u(e) {
+  return E.tn.del(_.ANM.STAGE_INSTANCE(e))
 }

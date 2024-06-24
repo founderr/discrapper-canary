@@ -9,8 +9,8 @@ var a = t(120356),
   c = t(140465),
   E = t(474936),
   u = t(981631),
-  d = t(689938),
-  R = t(724991);
+  R = t(689938),
+  d = t(724991);
 s.Z = e => {
   let s, t, {
       premiumSubscription: a,
@@ -21,13 +21,13 @@ s.Z = e => {
     M = (0, c.Nx)();
   if (null == a) return null;
   let S = null != a ? _.ZP.getPremiumPlanItem(a) : null;
-  if (_.ZP.isBoostOnlySubscription(a) ? s = d.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != S && (s = _.ZP.getDisplayPremiumType(S.planId)), null == s) return null;
+  if (_.ZP.isBoostOnlySubscription(a) ? s = R.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != S && (s = _.ZP.getDisplayPremiumType(S.planId)), null == s) return null;
   let N = () => l.Z.open(u.oAB.SUBSCRIPTIONS),
     p = (null != S ? _.ZP.getSkuIdForPlan(S.planId) : null) === E.Si.TIER_1;
   return t = null != A ? A : M || T ? "always-white" : "text-normal", (0, n.jsxs)(i.Card, {
-    className: r()(R.container, I, {
-      [R.lightTextLink]: T,
-      [R.centerText]: M
+    className: r()(d.container, I, {
+      [d.lightTextLink]: T,
+      [d.centerText]: M
     }),
     type: i.Card.Types.CUSTOM,
     children: [(0, n.jsx)(i.CircleExclamationPointIcon, {
@@ -35,16 +35,16 @@ s.Z = e => {
       width: 20,
       height: 20,
       color: "currentColor",
-      className: r()(R.icon, {
-        [R.lightThemeColorOnly]: M || T
+      className: r()(d.icon, {
+        [d.lightThemeColorOnly]: M || T
       })
     }), (0, n.jsx)(i.Text, {
       variant: "text-sm/medium",
       color: t,
-      children: p ? d.Z.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
+      children: p ? R.Z.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
         helpdeskArticle: o.Z.getArticleURL(u.BhN.PREMIUM_DETAILS),
         onSubscriptionsClick: N
-      }) : d.Z.Messages.PREMIUM_SUBSCRIPTION_MANAGE_YOURS_LINK.format({
+      }) : R.Z.Messages.PREMIUM_SUBSCRIPTION_MANAGE_YOURS_LINK.format({
         subscriptionName: s,
         onSubscriptionsClick: N
       })

@@ -3,8 +3,8 @@ t.d(n, {
     return C
   }
 }), t(653041), t(47120);
-var a, r, s, i, o = t(392711),
-  l = t.n(o),
+var a, r, s, i, l = t(392711),
+  o = t.n(l),
   c = t(442837),
   d = t(570140),
   u = t(823379),
@@ -12,7 +12,7 @@ var a, r, s, i, o = t(392711),
   h = t(689938);
 
 function C(e, n) {
-  return l().isEqual(e.map(e => [e.categoryId, e.name]), n.map(e => [e.categoryId, e.name]))
+  return o().isEqual(e.map(e => [e.categoryId, e.name]), n.map(e => [e.categoryId, e.name]))
 }
 let x = null,
   f = [],

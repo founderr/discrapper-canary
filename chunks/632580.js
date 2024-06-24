@@ -28,15 +28,15 @@ async function p(e) {
     baseAnalyticsData: x,
     analyticsLocation: h,
     analyticsLocations: P,
-    flowStartTime: v,
-    subscriptionPlan: A,
+    flowStartTime: A,
+    subscriptionPlan: v,
     planGroup: f,
     trialId: M,
     priceOptions: g,
     paymentSource: C,
-    isPrepaidPaymentPastDue: L,
-    openInvoiceId: R,
-    premiumSubscription: O,
+    isPrepaidPaymentPastDue: R,
+    openInvoiceId: O,
+    premiumSubscription: L,
     onNext: j,
     metadata: y,
     sku: Z,
@@ -44,19 +44,19 @@ async function p(e) {
     purchaseType: D,
     referralCode: G,
     loadId: U,
-    giftInfoOptions: w,
-    invoicePreview: F
+    giftInfoOptions: F,
+    invoicePreview: w
   } = e;
   n(m.A.PURCHASING), s(!0), l(!0), i.Z.wait(a.fw), p(null);
   try {
     let e, s, l;
     if (d.default.track(I.rMx.PAYMENT_FLOW_COMPLETED, {
         ...x,
-        subtotal: null == F ? void 0 : F.subtotal,
-        tax: null == F ? void 0 : F.tax,
-        expected_amount: null == F ? void 0 : F.total,
-        expected_currency: null == F ? void 0 : F.currency,
-        duration_ms: Date.now() - v
+        subtotal: null == w ? void 0 : w.subtotal,
+        tax: null == w ? void 0 : w.tax,
+        expected_amount: null == w ? void 0 : w.total,
+        expected_currency: null == w ? void 0 : w.currency,
+        duration_ms: Date.now() - A
       }), N) return;
     if (D === I.GZQ.ONE_TIME) t()(null != Z, "SKU must exist and be fetched."), t()(null != b, "SKUPricePreview must exist."), e = await (0, o.ZZ)(Z.applicationId, Z.id, {
       expectedAmount: b.amount,
@@ -64,34 +64,34 @@ async function p(e) {
       isGift: S,
       paymentSource: C,
       loadId: U,
-      giftInfoOptions: w
+      giftInfoOptions: F
     });
-    else if (t()(null != A, "Missing subscriptionPlan"), S) {
-      t()(null != F, "Missing invoicePreview");
-      let n = F.total,
-        s = F.currency;
-      e = await (0, o.ZZ)(E.RQ, A.skuId, {
+    else if (t()(null != v, "Missing subscriptionPlan"), S) {
+      t()(null != w, "Missing invoicePreview");
+      let n = w.total,
+        s = w.currency;
+      e = await (0, o.ZZ)(E.RQ, v.skuId, {
         expectedAmount: n,
         expectedCurrency: s,
         paymentSource: C,
-        subscriptionPlanId: A.id,
+        subscriptionPlanId: v.id,
         isGift: !0,
         loadId: U,
-        giftInfoOptions: w
+        giftInfoOptions: F
       })
-    } else if (L && null != R && null != C && null != O) e = I.Uk1.has(C.type) ? await (0, r.G)(O, R, C, g.currency) : await (0, r.Mg)(O, {
+    } else if (R && null != O && null != C && null != L) e = I.Uk1.has(C.type) ? await (0, r.G)(L, O, C, g.currency) : await (0, r.Mg)(L, {
       paymentSource: C,
       currency: g.currency
     }, P, h, U);
-    else if (null != O) {
-      let n = (0, _.al)(O, A.id, 1, new Set(f)),
+    else if (null != L) {
+      let n = (0, _.al)(L, v.id, 1, new Set(f)),
         s = {
           paymentSource: C,
           currency: g.currency
         };
-      O.status === I.O0b.PAUSED ? s.status = I.O0b.ACTIVE : s.items = n, e = await (0, r.Mg)(O, s, P, h, U)
+      L.status === I.O0b.PAUSED ? s.status = I.O0b.ACTIVE : s.items = n, e = await (0, r.Mg)(L, s, P, h, U)
     } else e = await (0, c.Ld)({
-      planId: A.id,
+      planId: v.id,
       currency: g.currency,
       paymentSource: C,
       trialId: M,
@@ -110,7 +110,7 @@ async function p(e) {
       payment_error_code: null == e ? void 0 : e.code,
       payment_source_id: null == C ? void 0 : C.id,
       payment_source_type: null == C ? void 0 : C.type,
-      duration_ms: Date.now() - v
+      duration_ms: Date.now() - A
     })
   } finally {
     !N && l(!1)

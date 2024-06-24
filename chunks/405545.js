@@ -3,8 +3,8 @@ t(470079);
 var r = t(120356),
   s = t.n(r),
   i = t(186078),
-  o = t(137158),
-  l = t(237261);
+  l = t(137158),
+  o = t(237261);
 n.Z = function(e) {
   let {
     formField: n,
@@ -19,7 +19,7 @@ n.Z = function(e) {
   } = e, {
     label: x
   } = n;
-  return (0, a.jsx)(o.Z, {
+  return (0, a.jsx)(l.Z, {
     field: n,
     index: t,
     isDragEnabled: r,
@@ -33,7 +33,7 @@ n.Z = function(e) {
     children: (0, a.jsx)(i.BO, {
       field: n,
       value: void 0,
-      radioItemClassName: s()(l.fieldBackground, l.multipleChoiceFixedTextColor),
+      radioItemClassName: s()(o.fieldBackground, o.multipleChoiceFixedTextColor),
       disabled: !1
     })
   })

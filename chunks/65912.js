@@ -15,8 +15,8 @@ var r = n(392711),
   s = n(236413),
   l = n(85960),
   o = n(36459),
-  T = n(422303),
-  I = n(866894),
+  I = n(422303),
+  T = n(866894),
   O = n(981631),
   A = n(689938);
 let N = Object.freeze({
@@ -64,7 +64,7 @@ let N = Object.freeze({
       }), null;
       try {
         var r, a, i;
-        (0, s.DO)(t) && (t.triggerMetadata.keywordFilter = (0, T.cb)((0, T.Ze)(null !== (r = t.triggerMetadata.keywordFilter) && void 0 !== r ? r : [])), t.triggerMetadata.allowList = (0, T.cb)((0, T.Ze)(null !== (a = t.triggerMetadata.allowList) && void 0 !== a ? a : []))), (0, s.Fn)(t) && (t.triggerMetadata.allowList = (0, T.cb)((0, T.Ze)(null !== (i = t.triggerMetadata.allowList) && void 0 !== i ? i : []))), (0, l.yU)(t, n), (0, s.QO)(t)
+        (0, s.DO)(t) && (t.triggerMetadata.keywordFilter = (0, I.cb)((0, I.Ze)(null !== (r = t.triggerMetadata.keywordFilter) && void 0 !== r ? r : [])), t.triggerMetadata.allowList = (0, I.cb)((0, I.Ze)(null !== (a = t.triggerMetadata.allowList) && void 0 !== a ? a : []))), (0, s.Fn)(t) && (t.triggerMetadata.allowList = (0, I.cb)((0, I.Ze)(null !== (i = t.triggerMetadata.allowList) && void 0 !== i ? i : []))), (0, l.yU)(t, n), (0, s.QO)(t)
       } catch (t) {
         return t instanceof u.V6 ? e({
           errorMessage: A.Z.Messages.GUILD_AUTOMOD_KEYWORD_GENERIC_SAVE_ERROR,
@@ -82,7 +82,7 @@ let N = Object.freeze({
           isLoading: !0
         });
         let n = null;
-        return n = (0, s.Vb)(t) && !(0, I.U)(t.id) ? await (0, o.Je)(t) : await (0, o.JK)(t), e({
+        return n = (0, s.Vb)(t) && !(0, T.U)(t.id) ? await (0, o.Je)(t) : await (0, o.JK)(t), e({
           ...N
         }), n
       } catch (t) {

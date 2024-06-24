@@ -9,11 +9,11 @@ var s, r = n(735250),
   d = n(896797),
   E = n(129293),
   _ = n(388905),
-  h = n(981631),
-  I = n(689938),
-  p = n(331651);
+  I = n(981631),
+  h = n(689938),
+  N = n(331651);
 
-function N(e, t, n) {
+function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -27,7 +27,7 @@ class g extends(s = i.PureComponent) {
     let e = (0, E.Z)(this.props.location),
       t = (0, l.parse)(this.props.location.search);
     o.tn.post({
-      url: h.ANM.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
+      url: I.ANM.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
       body: {
         token: e,
         pixel_uuid: t.hash,
@@ -64,24 +64,24 @@ class g extends(s = i.PureComponent) {
     } = this.state;
     return (0, r.jsxs)(_.ZP, {
       children: [(0, r.jsx)(_.Dx, {
-        className: p.marginBottom8,
-        children: I.Z.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_HEADER
+        className: N.marginBottom8,
+        children: h.Z.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_HEADER
       }), (0, r.jsx)(_.DK, {
-        children: I.Z.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_BODY.format({
+        children: h.Z.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_BODY.format({
           guildName: n.name
         })
       }), (0, r.jsx)(_.zx, {
-        className: p.marginTop40,
+        className: N.marginTop40,
         onClick: () => t(e),
-        children: I.Z.Messages.CONTINUE_TO_WEBAPP
+        children: h.Z.Messages.CONTINUE_TO_WEBAPP
       }), (0, r.jsx)(_.zx, {
-        className: p.marginTop8,
+        className: N.marginTop8,
         color: _.zx.Colors.LINK,
         look: _.zx.Looks.LINK,
         onClick: () => {
-          t(h.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id))
+          t(I.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id))
         },
-        children: I.Z.Messages.SERVER_HIGHLIGHT_MANAGE_SETTINGS
+        children: h.Z.Messages.SERVER_HIGHLIGHT_MANAGE_SETTINGS
       })]
     })
   }
@@ -93,16 +93,16 @@ class g extends(s = i.PureComponent) {
     return (0, r.jsxs)(_.ZP, {
       children: [(0, r.jsx)(_.Ee, {
         src: n(105020),
-        className: p.marginBottom20
+        className: N.marginBottom20
       }), (0, r.jsx)(_.Dx, {
-        className: p.marginBottom8,
-        children: I.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
+        className: N.marginBottom8,
+        children: h.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
       }), (0, r.jsx)(_.DK, {
-        children: I.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY
+        children: h.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY
       }), (0, r.jsx)(_.zx, {
-        className: p.marginTop40,
+        className: N.marginTop40,
         onClick: () => t(e),
-        children: I.Z.Messages.CONTINUE_TO_WEBAPP
+        children: h.Z.Messages.CONTINUE_TO_WEBAPP
       })]
     })
   }
@@ -114,14 +114,14 @@ class g extends(s = i.PureComponent) {
     return e ? this.renderBusy() : t ? this.renderSuccess() : this.renderError()
   }
   constructor(...e) {
-    super(...e), N(this, "state", {
+    super(...e), p(this, "state", {
       busy: !0,
       success: !1,
       guild: null
     })
   }
 }
-N(g, "defaultProps", {
+p(g, "defaultProps", {
   transitionTo: e => n.g.location.assign(e)
 }), t.Z = a.ZP.connectStores([d.Z], () => ({
   defaultRoute: d.Z.defaultRoute

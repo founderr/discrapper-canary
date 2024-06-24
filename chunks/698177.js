@@ -10,26 +10,26 @@ var s = n(735250),
   d = n(541692),
   E = n(952802),
   _ = n(388905),
-  h = n(815660),
-  I = n(689938),
-  p = n(83922),
-  N = n(331651);
+  I = n(815660),
+  h = n(689938),
+  N = n(83922),
+  p = n(331651);
 t.Z = () => {
-  let [e, t] = r.useState(""), [i, g] = r.useState(""), [m, T] = r.useState(!1), [f, Z] = r.useState(!1), [A, x] = r.useState(null), [v, O] = r.useState(null), S = (0, a.e7)([d.Z], () => d.Z.getCountryCode()), C = S.code.split(" ")[0], D = async () => {
+  let [e, t] = r.useState(""), [i, g] = r.useState(""), [m, T] = r.useState(!1), [Z, A] = r.useState(!1), [f, x] = r.useState(null), [O, S] = r.useState(null), v = (0, a.e7)([d.Z], () => d.Z.getCountryCode()), D = v.code.split(" ")[0], P = async () => {
     try {
       await c.Z.resendCode(e)
     } catch (e) {
-      O(e.body.message)
+      S(e.body.message)
     }
-  }, P = async () => {
+  }, C = async () => {
     T(!0);
     try {
       let {
         token: t
-      } = await c.Z.verifyPhone(C + e, i);
-      x(null), O(null), Z(!0), c.Z.validatePhoneForSupport(t)
+      } = await c.Z.verifyPhone(D + e, i);
+      x(null), S(null), A(!0), c.Z.validatePhoneForSupport(t)
     } catch (e) {
-      e.body.message ? (x(null), O(e.body.message)) : (x(e.body.phone), O(e.body.code))
+      e.body.message ? (x(null), S(e.body.message)) : (x(e.body.phone), S(e.body.code))
     } finally {
       T(!1)
     }
@@ -37,49 +37,49 @@ t.Z = () => {
     children: [(0, s.jsx)(_.Ee, {
       src: n(292824)
     }), (0, s.jsxs)(_.Dx, {
-      className: l()(N.marginTop20, p.flex, p.justifyCenter, p.alignCenter),
-      children: [I.Z.Messages.MEMBER_VERIFICATION_PHONE_VERIFIED, (0, s.jsx)(o.CircleCheckIcon, {
+      className: l()(p.marginTop20, N.flex, N.justifyCenter, N.alignCenter),
+      children: [h.Z.Messages.MEMBER_VERIFICATION_PHONE_VERIFIED, (0, s.jsx)(o.CircleCheckIcon, {
         size: "md",
         color: "currentColor",
-        className: N.marginLeft8
+        className: p.marginLeft8
       })]
     })]
   });
-  return f ? R : (0, s.jsxs)(_.ZP, {
+  return Z ? R : (0, s.jsxs)(_.ZP, {
     children: [(0, s.jsx)(_.Dx, {
-      children: I.Z.Messages.ENTER_CODE
+      children: h.Z.Messages.ENTER_CODE
     }), (0, s.jsx)(_.DK, {
-      className: N.marginTop8,
-      children: I.Z.Messages.VERIFY_PHONE_FOR_SUPPORT
+      className: p.marginTop8,
+      children: h.Z.Messages.VERIFY_PHONE_FOR_SUPPORT
     }), (0, s.jsxs)(_.gO, {
-      className: N.marginTop20,
+      className: p.marginTop20,
       children: [(0, s.jsx)(E.Z, {
-        label: I.Z.Messages.FORM_LABEL_PHONE_NUMBER,
-        alpha2: S.alpha2,
-        countryCode: C,
+        label: h.Z.Messages.FORM_LABEL_PHONE_NUMBER,
+        alpha2: v.alpha2,
+        countryCode: D,
         value: e,
         autoComplete: "off",
         spellCheck: "false",
         onChange: t,
         forceMode: u.Nz.PHONE,
-        error: A
+        error: f
       }), (0, s.jsx)(_.II, {
-        className: N.marginTop20,
-        label: I.Z.Messages.CONFIRMATION_CODE,
+        className: p.marginTop20,
+        label: h.Z.Messages.CONFIRMATION_CODE,
         value: i,
         onChange: g,
-        maxLength: h.z,
-        error: v
+        maxLength: I.z,
+        error: O
       }), (0, s.jsx)(_.zx, {
         size: _.zx.Sizes.SMALL,
         look: _.zx.Looks.LINK,
-        onClick: D,
-        children: I.Z.Messages.RESEND_CODE
-      }), (0, s.jsx)(_.zx, {
-        className: N.marginTop20,
         onClick: P,
+        children: h.Z.Messages.RESEND_CODE
+      }), (0, s.jsx)(_.zx, {
+        className: p.marginTop20,
+        onClick: C,
         submitting: m,
-        children: I.Z.Messages.DONE
+        children: h.Z.Messages.DONE
       })]
     })]
   })

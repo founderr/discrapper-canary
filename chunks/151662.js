@@ -1,4 +1,4 @@
-var s, a, i, l, r = n(442837),
+var s, i, a, l, r = n(442837),
   c = n(570140);
 let o = {},
   d = null;
@@ -14,12 +14,12 @@ class E extends(l = r.ZP.Store) {
     }
   }
 }
-i = "EmailSettingsStore", (a = "displayName") in(s = E) ? Object.defineProperty(s, a, {
-  value: i,
+a = "EmailSettingsStore", (i = "displayName") in(s = E) ? Object.defineProperty(s, i, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = i, t.Z = new E(c.Z, {
+}) : s[i] = a, t.Z = new E(c.Z, {
   CONNECTION_OPEN: u,
   LOGOUT: u,
   EMAIL_SETTINGS_FETCH_SUCCESS: function(e) {

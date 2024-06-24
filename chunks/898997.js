@@ -16,15 +16,15 @@ let u = function(e) {
   let s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     t = (0, a.e7)([r.default], () => r.default.getCurrentUser()),
     u = (0, l.t7)(),
-    d = (0, o._O)(),
+    R = (0, o._O)(),
     {
-      eligibleToFetch: R
+      eligibleToFetch: d
     } = c.g.useExperiment({
       location: e
     }, {
       autoTrackExposure: !1
     }),
-    I = R && null != t && t.verified && (0, i.M5)(t, E.p9.TIER_2) && !u && !d;
+    I = d && null != t && t.verified && (0, i.M5)(t, E.p9.TIER_2) && !u && !R;
   n.useEffect(() => {
     I && !s && _.Z.checkAndFetchReferralsRemaining()
   }, [I, s])

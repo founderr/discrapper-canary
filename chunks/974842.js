@@ -3,8 +3,8 @@ var a = t(735250),
   r = t(470079),
   s = t(688619),
   i = t.n(s),
-  o = t(120356),
-  l = t.n(o),
+  l = t(120356),
+  o = t.n(l),
   c = t(866442),
   d = t(481060),
   u = t(550271),
@@ -21,7 +21,7 @@ n.Z = e => {
     handleUpdate: n,
     badge: t,
     primaryColor: s,
-    secondaryColor: o,
+    secondaryColor: l,
     tag: I,
     error: g,
     furthestStep: p,
@@ -30,21 +30,21 @@ n.Z = e => {
     let e = (0, C.yf)();
     return {
       primary: null != s ? s : e.primary,
-      secondary: null != o ? o : e.secondary
+      secondary: null != l ? l : e.secondary
     }
-  }, [s, o]);
+  }, [s, l]);
   r.useEffect(() => {
-    (null == s || null == o) && n({
+    (null == s || null == l) && n({
       badgePrimaryColor: v.primary,
       badgeSecondaryColor: v.secondary
     })
-  }, [v.primary, v.secondary, n, s, o]);
+  }, [v.primary, v.secondary, n, s, l]);
   let y = r.useMemo(() => {
       for (let e = 0; e < C.sg.length; e++)
         if (C.sg[e].primary === v.primary && C.sg[e].secondary === v.secondary) return 1 + e;
       return 0
     }, [v.primary, v.secondary]),
-    [A, S] = r.useState(!1),
+    [S, A] = r.useState(!1),
     M = r.useCallback(() => {
       let e = _[Math.floor(Math.random() * _.length)],
         t = i().random().hex();
@@ -59,7 +59,7 @@ n.Z = e => {
       brandPrimaryColor: v.primary,
       brandSecondaryColor: v.secondary
     })
-  }, [n, v.primary, v.secondary, p, s, o, N]), (0, a.jsxs)("div", {
+  }, [n, v.primary, v.secondary, p, s, l, N]), (0, a.jsxs)("div", {
     className: T.slideContent,
     children: [(0, a.jsx)(d.Heading, {
       variant: "heading-xxl/medium",
@@ -88,7 +88,7 @@ n.Z = e => {
               onClick: () => n({
                 badgeKind: e
               }),
-              className: l()(E.badgeAssetContainer, {
+              className: o()(E.badgeAssetContainer, {
                 [E.badgeAssetContainerSelected]: e === t
               }),
               children: (0, a.jsx)(u.A, {
@@ -119,14 +119,14 @@ n.Z = e => {
                   badgeSecondaryColor: (0, c.Rf)(e)
                 })
               },
-              shouldShow: A,
-              onRequestClose: () => S(!1),
+              shouldShow: S,
+              onRequestClose: () => A(!1),
               children: e => (0, a.jsx)(d.Clickable, {
                 ...e,
                 onClick: () => {
-                  S(e => !e)
+                  A(e => !e)
                 },
-                className: l()(E.badgeAssetContainer, {
+                className: o()(E.badgeAssetContainer, {
                   [E.badgeAssetContainerSelected]: 0 === y
                 }),
                 children: (0, a.jsx)(d.PaintPaletteIcon, {
@@ -142,7 +142,7 @@ n.Z = e => {
                   badgeSecondaryColor: C.sg[r].secondary
                 })
               },
-              className: l()(E.badgeAssetContainer, {
+              className: o()(E.badgeAssetContainer, {
                 [E.badgeAssetContainerSelected]: r + 1 === y
               }),
               children: (0, a.jsx)(u.A, {

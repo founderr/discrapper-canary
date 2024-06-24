@@ -2,101 +2,101 @@ t.r(e);
 var i = t(735250);
 t(470079);
 var l = t(481060),
-  a = t(239091),
-  u = t(883385),
+  u = t(239091),
+  o = t(883385),
   r = t(108843),
-  o = t(947440),
-  d = t(100527),
+  a = t(947440),
+  s = t(100527),
   c = t(299206),
-  s = t(916069),
-  h = t(895563),
-  p = t(212205),
-  f = t(478035),
-  _ = t(62420),
-  m = t(423589),
-  Z = t(398048),
-  C = t(109764),
-  E = t(3689),
-  x = t(323597),
-  g = t(852245),
-  I = t(367722),
-  O = t(461535),
-  L = t(776568),
-  M = t(218035),
-  S = t(775666),
-  N = t(593589),
-  P = t(442754),
-  A = t(981631),
-  T = t(689938);
+  d = t(916069),
+  Z = t(895563),
+  h = t(212205),
+  p = t(478035),
+  x = t(62420),
+  M = t(423589),
+  C = t(398048),
+  N = t(109764),
+  _ = t(3689),
+  j = t(323597),
+  E = t(852245),
+  f = t(367722),
+  b = t(461535),
+  P = t(776568),
+  G = t(218035),
+  A = t(775666),
+  L = t(593589),
+  T = t(442754),
+  v = t(981631),
+  O = t(689938);
 
-function v(n) {
+function m(n) {
   let {
     channel: e,
     onSelect: t
-  } = n, u = (0, O.Z)(e), r = (0, C.Z)(e), d = (0, h.l)(e), s = (0, h.P)(e), Z = (0, p.Z)(e), E = (0, f.Z)(e), x = (0, _.Z)(e), I = (0, L.ZP)(e), N = (0, M.Z)(e), P = (0, g.Z)(e), A = (0, c.Z)({
+  } = n, o = (0, b.Z)(e), r = (0, N.Z)(e), s = (0, Z.l)(e), d = (0, Z.P)(e), C = (0, h.Z)(e), _ = (0, p.Z)(e), j = (0, x.Z)(e), f = (0, P.ZP)(e), L = (0, G.Z)(e), T = (0, E.Z)(e), v = (0, c.Z)({
     id: e.id,
-    label: T.Z.Messages.COPY_ID_CHANNEL
-  }), v = (0, o.Z)(e), G = (0, S.ZP)(e), U = (0, m.Mn)("ChannelContextFavoritesMenu");
+    label: O.Z.Messages.COPY_ID_CHANNEL
+  }), m = (0, a.Z)(e), I = (0, A.ZP)(e), g = (0, M.Mn)("ChannelContextFavoritesMenu");
   return (0, i.jsxs)(l.Menu, {
     navId: "channel-context",
-    onClose: a.Zy,
-    "aria-label": T.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+    onClose: u.Zy,
+    "aria-label": O.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL,
     onSelect: t,
     children: [(0, i.jsx)(l.MenuGroup, {
-      children: u
+      children: o
     }), (0, i.jsxs)(l.MenuGroup, {
-      children: [E, x, Z, d]
+      children: [_, j, C, s]
     }), (0, i.jsxs)(l.MenuGroup, {
-      children: [I, U ? G : N]
+      children: [f, g ? I : L]
     }), (0, i.jsx)(l.MenuGroup, {
-      children: P
+      children: T
     }), (0, i.jsx)(l.MenuGroup, {
-      children: v
+      children: m
     }), (0, i.jsx)(l.MenuGroup, {
-      children: s
+      children: d
     }), (0, i.jsx)(l.MenuGroup, {
       children: r
     }), (0, i.jsx)(l.MenuGroup, {
-      children: A
+      children: v
     })]
   })
 }
 
-function G(n) {
+function I(n) {
   let {
     channel: e,
     guild: t,
-    onSelect: u
-  } = n, r = (0, O.Z)(e), o = (0, C.Z)(e), d = (0, h.l)(e), s = (0, h.P)(e), p = (0, P.Z)(e), f = (0, L.ZP)(e), _ = (0, g.Z)(e), A = (0, I.Z)(e, t), v = (0, Z.Z)(e, t), G = (0, E.Z)(e, t), U = (0, x.Z)(e), b = (0, c.Z)({
+    onSelect: o
+  } = n, r = (0, b.Z)(e), a = (0, N.Z)(e), s = (0, Z.l)(e), d = (0, Z.P)(e), h = (0, T.Z)(e), p = (0, P.ZP)(e), x = (0, E.Z)(e), v = (0, f.Z)(e, t), m = (0, C.Z)(e, t), I = (0, _.Z)(e, t), g = (0, j.Z)(e), k = (0, c.Z)({
     id: e.id,
-    label: T.Z.Messages.COPY_ID_CHANNEL
-  }), y = (0, N.Z)(e, "list_text_channel_context_menu"), j = (0, M.Z)(e), w = (0, S.ZP)(e), D = (0, m.Mn)("ChannelContextMenuNormal");
+    label: O.Z.Messages.COPY_ID_CHANNEL
+  }), H = (0, L.Z)(e, "list_text_channel_context_menu"), w = (0, G.Z)(e), U = (0, A.ZP)(e), y = (0, M.Mn)("ChannelContextMenuNormal");
   return (0, i.jsxs)(l.Menu, {
     navId: "channel-context",
-    onClose: a.Zy,
-    "aria-label": T.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-    onSelect: u,
+    onClose: u.Zy,
+    "aria-label": O.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+    onSelect: o,
     children: [(0, i.jsxs)(l.MenuGroup, {
-      children: [r, d]
+      children: [r, s]
     }, "mark-as-read-or-favorite"), (0, i.jsxs)(l.MenuGroup, {
-      children: [A, p, o, y]
+      children: [v, h, a, H]
     }, "channel-actions"), (0, i.jsxs)(l.MenuGroup, {
-      children: [f, D ? w : j]
+      children: [p, y ? U : w]
     }, "notifications"), (0, i.jsxs)(l.MenuGroup, {
-      children: [_, v, G, U]
+      children: [x, m, I, g]
     }, "admin-actions"), (0, i.jsx)(l.MenuGroup, {
-      children: s
+      children: d
     }), (0, i.jsx)(l.MenuGroup, {
-      children: b
+      children: k
     }, "developer-actions")]
   })
 }
-e.default = (0, r.Z)((0, u.Z)(function(n) {
-  return (0, s.Z)() ? (0, i.jsx)(v, {
+e.default = (0, r.Z)((0, o.Z)(function(n) {
+  return (0, d.Z)() ? (0, i.jsx)(m, {
     ...n
-  }) : (0, i.jsx)(G, {
+  }) : (0, i.jsx)(I, {
     ...n
   })
 }, {
-  object: A.qAy.CONTEXT_MENU
-}), [d.Z.CONTEXT_MENU, d.Z.CHANNEL_LIST_TEXT_CHANNEL_MENU])
+  object: v.qAy.CONTEXT_MENU
+}), [s.Z.CONTEXT_MENU, s.Z.CHANNEL_LIST_TEXT_CHANNEL_MENU])

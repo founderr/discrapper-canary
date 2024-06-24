@@ -28,16 +28,16 @@ var i = t(512722),
   R = t(350327),
   M = t(621853),
   x = t(318661),
-  D = t(25990),
-  p = t(594174),
+  p = t(25990),
+  D = t(594174),
   L = t(74538),
   P = t(689938),
   Z = t(141767);
 
 function f() {
-  var e, s, t, i, f, v, j, U;
-  let B = (0, l.e7)([p.default], () => {
-      let e = p.default.getCurrentUser();
+  var e, s, t, i, f, j, v, U;
+  let B = (0, l.e7)([D.default], () => {
+      let e = D.default.getCurrentUser();
       return a()(null != e, "DefaultCustomizationSections: user cannot be undefined"), e
     }),
     b = (0, l.e7)([M.Z], () => M.Z.getUserProfile(B.id)),
@@ -50,9 +50,9 @@ function f() {
       pendingAccentColor: H,
       pendingThemeColors: k,
       errors: w
-    } = (0, l.cj)([D.Z], () => {
-      let e = D.Z.getAllPending(),
-        s = D.Z.getErrors();
+    } = (0, l.cj)([p.Z], () => {
+      let e = p.Z.getAllPending(),
+        s = p.Z.getErrors();
       return {
         ...e,
         errors: s
@@ -73,7 +73,7 @@ function f() {
   let q = (0, x.ZP)(B.id),
     J = null == q ? void 0 : q.getLegacyUsername(),
     $ = (null !== (t = null === (e = w.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== t ? t : 0) > 0 ? w.global_name : null !== (i = null == W ? void 0 : W.nick) && void 0 !== i ? i : [],
-    ee = (null !== (f = null === (s = w.bio) || void 0 === s ? void 0 : s.length) && void 0 !== f ? f : 0) > 0 ? w.bio : null !== (v = null == W ? void 0 : W.bio) && void 0 !== v ? v : [],
+    ee = (null !== (f = null === (s = w.bio) || void 0 === s ? void 0 : s.length) && void 0 !== f ? f : 0) > 0 ? w.bio : null !== (j = null == W ? void 0 : W.bio) && void 0 !== j ? j : [],
     es = (0, c.Z)("user_profile"),
     et = (0, E.V)();
   return (0, n.jsxs)("div", {
@@ -89,7 +89,7 @@ function f() {
       errors: w.pronouns,
       onPronounsChange: R.ID,
       pendingPronouns: Y,
-      currentPronouns: null !== (j = null == b ? void 0 : b.pronouns) && void 0 !== j ? j : ""
+      currentPronouns: null !== (v = null == b ? void 0 : b.pronouns) && void 0 !== v ? v : ""
     }, "pronouns"), (0, n.jsx)(I.Z, {
       onAvatarChange: r.I5,
       showRemoveAvatarButton: z,

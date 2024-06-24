@@ -5,8 +5,8 @@ n.d(t, {
 });
 var s = n(735250);
 n(470079);
-var a = n(120356),
-  i = n.n(a),
+var i = n(120356),
+  a = n.n(i),
   l = n(481060),
   r = n(831489);
 
@@ -14,13 +14,13 @@ function c(e) {
   let {
     message: t,
     error: n,
-    onClick: a,
+    onClick: i,
     submitting: c,
     className: o,
     ctaMessage: d
   } = e;
   return (0, s.jsxs)("div", {
-    className: i()(r.container, o),
+    className: a()(r.container, o),
     children: [(0, s.jsxs)("div", {
       className: r.textContainer,
       children: [(0, s.jsx)(l.CircleExclamationPointIcon, {
@@ -40,7 +40,7 @@ function c(e) {
           variant: "text-sm/normal",
           children: t
         }), null != n && (0, s.jsx)(l.Text, {
-          className: i()(r.info, r.error),
+          className: a()(r.info, r.error),
           variant: "text-sm/normal",
           children: n
         })]
@@ -53,7 +53,7 @@ function c(e) {
       color: l.Button.Colors.LINK,
       look: l.Button.Looks.LINK,
       size: l.Button.Sizes.ICON,
-      onClick: a,
+      onClick: i,
       submitting: c,
       children: d
     })]

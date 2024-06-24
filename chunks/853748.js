@@ -1,38 +1,38 @@
 "use strict";
-t.d(s, {
+s.d(t, {
   $: function() {
     return g
   }
-}), t(653041);
-var n = t(735250),
-  a = t(470079),
-  r = t(120356),
-  i = t.n(r),
-  l = t(920906),
-  o = t(873546),
-  c = t(399606),
-  u = t(481060),
-  d = t(774078),
-  C = t(607070),
-  f = t(689938),
-  E = t(698032);
+}), s(653041);
+var n = s(735250),
+  r = s(470079),
+  a = s(120356),
+  i = s.n(a),
+  l = s(920906),
+  o = s(873546),
+  c = s(399606),
+  u = s(481060),
+  d = s(774078),
+  C = s(607070),
+  f = s(689938),
+  p = s(698032);
 
-function p(e) {
+function E(e) {
   let {
-    endDate: s
+    endDate: t
   } = e, {
-    days: t,
-    hours: a,
-    minutes: r,
+    days: s,
+    hours: r,
+    minutes: a,
     seconds: i
-  } = (0, d.Z)(s), l = function(e, s, t, n) {
-    let a = (e, s) => "".concat(e.toString().padStart(2, "0")).concat(s),
-      r = [];
-    return e > 0 && r.push(a(e, f.Z.Messages.COUNTDOWN_UNITS_DAYS)), (s > 0 || r.length > 0) && r.push(a(s, f.Z.Messages.COUNTDOWN_UNITS_HOURS)), (t > 0 || r.length > 0) && r.push(a(t, f.Z.Messages.COUNTDOWN_UNITS_MINUTES)), r.push(a(n, f.Z.Messages.COUNTDOWN_UNITS_SECONDS)), r.join(":")
-  }(t, a, r, i);
+  } = (0, d.Z)(t), l = function(e, t, s, n) {
+    let r = (e, t) => "".concat(e.toString().padStart(2, "0")).concat(t),
+      a = [];
+    return e > 0 && a.push(r(e, f.Z.Messages.COUNTDOWN_UNITS_DAYS)), (t > 0 || a.length > 0) && a.push(r(t, f.Z.Messages.COUNTDOWN_UNITS_HOURS)), (s > 0 || a.length > 0) && a.push(r(s, f.Z.Messages.COUNTDOWN_UNITS_MINUTES)), a.push(r(n, f.Z.Messages.COUNTDOWN_UNITS_SECONDS)), a.join(":")
+  }(s, r, a, i);
   return (0, n.jsx)(u.Text, {
     variant: "heading-md/medium",
-    className: E.countdown,
+    className: p.countdown,
     tag: "div",
     children: (0, n.jsx)("div", {
       role: "timer",
@@ -41,15 +41,15 @@ function p(e) {
     })
   })
 }
-let g = a.memo(function(e) {
+let g = r.memo(function(e) {
   let {
-    unpublishedAt: s,
-    isVisible: t,
-    displayOptions: a,
-    isFullScreen: r
+    unpublishedAt: t,
+    isVisible: s,
+    displayOptions: r,
+    isFullScreen: a
   } = e, d = (0, c.e7)([C.Z], () => C.Z.useReducedMotion), f = (0, l.useSpring)({
-    transform: "translateX(-50%) ".concat(t ? "translateY(-100%)" : "translateY(0%)"),
-    opacity: t ? 1 : 0,
+    transform: "translateX(-50%) ".concat(s ? "translateY(-100%)" : "translateY(0%)"),
+    opacity: s ? 1 : 0,
     config: {
       tension: 120,
       friction: 12
@@ -57,29 +57,29 @@ let g = a.memo(function(e) {
     immediate: d
   });
   return (0, n.jsxs)(l.animated.div, {
-    className: i()([E.countDownWrapper, r && E.fullScreenWrapper, o.tq && E.mobileWrapper]),
+    className: i()([p.countDownWrapper, a && p.fullScreenWrapper, o.tq && p.mobileWrapper]),
     role: "status",
     style: {
-      backgroundColor: a.backgroundColor,
-      boxShadow: a.boxShadow,
-      color: a.labelColor,
+      backgroundColor: r.backgroundColor,
+      boxShadow: r.boxShadow,
+      color: r.labelColor,
       ...f
     },
-    children: [null != a.iconSrc && (0, n.jsx)("img", {
-      src: a.iconSrc,
-      className: E.countdownIcon,
+    children: [null != r.iconSrc && (0, n.jsx)("img", {
+      src: r.iconSrc,
+      className: p.countdownIcon,
       alt: "",
       "aria-hidden": !0
     }), (0, n.jsx)(u.Heading, {
       variant: "heading-md/medium",
-      className: E.countdownLabel,
-      children: a.label()
+      className: p.countdownLabel,
+      children: r.label()
     }), (0, n.jsx)(u.Heading, {
       variant: "heading-md/medium",
-      className: E.countdown,
+      className: p.countdown,
       children: "—"
-    }), (0, n.jsx)(p, {
-      endDate: s
+    }), (0, n.jsx)(E, {
+      endDate: t
     })]
   })
 })

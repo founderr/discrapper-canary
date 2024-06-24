@@ -23,8 +23,8 @@ var n = t(735250),
   R = t(90197),
   M = t(972667),
   x = t(83922),
-  D = t(5973),
-  p = t(331651);
+  p = t(5973),
+  D = t(331651);
 let L = r.ZP.connectStores([m.Z], () => ({
     theme: m.Z.theme
   }))(c.EmptyState),
@@ -49,7 +49,7 @@ function Z(e) {
         o(e)
       }
     }), (0, n.jsx)(c.FormDivider, {
-      className: l()(p.marginTop8, p.marginBottom8)
+      className: l()(D.marginTop8, D.marginBottom8)
     }), (0, n.jsxs)("div", {
       className: l()(R.actions, x.horizontal),
       children: [(0, n.jsx)(c.Button, {
@@ -75,10 +75,10 @@ function f(e) {
     rawGame: t,
     nowPlaying: a = !1,
     isOverride: T
-  } = e, C = (0, r.cj)([S.Z, _.ZP, u.Z], () => (0, _.FZ)(t)), [O, m] = i.useState(!1), [M, p] = i.useState(null !== (s = C.name) && void 0 !== s ? s : "???"), L = l()(x.flexCenter, {
+  } = e, C = (0, r.cj)([S.Z, _.ZP, u.Z], () => (0, _.FZ)(t)), [O, m] = i.useState(!1), [M, D] = i.useState(null !== (s = C.name) && void 0 !== s ? s : "???"), L = l()(x.flexCenter, {
     [R.game]: !a,
     [R.activeGame]: a,
-    [D.card]: !a,
+    [p.card]: !a,
     [R.nowPlaying]: null != C && a
   });
 
@@ -90,11 +90,11 @@ function f(e) {
     C.name !== M && E.Z.editName(C, M)
   }
 
-  function v(e) {
+  function j(e) {
     13 === e.keyCode && (e.currentTarget.blur(), e.preventDefault())
   }
 
-  function j() {
+  function v() {
     E.Z.toggleDetection(C)
   }
 
@@ -138,8 +138,8 @@ function f(e) {
         maxLength: 128,
         value: M,
         onBlur: f,
-        onKeyDown: v,
-        onChange: e => p(e.target.value)
+        onKeyDown: j,
+        onChange: e => D(e.target.value)
       }), function() {
         let e;
         let {
@@ -206,7 +206,7 @@ function f(e) {
             return (0, n.jsx)(c.Clickable, {
               "aria-label": g.Z.Messages.SETTINGS_GAMES_TOGGLE_DETECTION,
               className: R.toggleIcon,
-              onClick: j,
+              onClick: v,
               onMouseEnter: t,
               onMouseLeave: i,
               children: s
@@ -266,7 +266,7 @@ function f(e) {
   })
 }
 
-function v() {
+function j() {
   return (0, n.jsx)("div", {
     className: l()(x.flexCenter, R.notDetected, R.activeGame),
     children: (0, n.jsxs)("div", {
@@ -282,12 +282,12 @@ function v() {
   })
 }
 
-function j(e) {
+function v(e) {
   let {
     children: s
   } = e;
   return (0, n.jsxs)(L, {
-    className: p.marginTop40,
+    className: D.marginTop40,
     children: [(0, n.jsx)(c.EmptyStateImage, {
       darkSrc: t(879601),
       lightSrc: t(889e3),
@@ -319,8 +319,8 @@ s.Z = function(e) {
       rawGame: o,
       isOverride: E.has(o.exePath),
       nowPlaying: !0
-    }, (0, _.rH)(o)) : (0, n.jsx)(v, {}), (0, n.jsxs)("div", {
-      className: l()(R.nowPlayingAdd, p.marginReset, p.marginTop8, p.marginBottom20),
+    }, (0, _.rH)(o)) : (0, n.jsx)(j, {}), (0, n.jsxs)("div", {
+      className: l()(R.nowPlayingAdd, D.marginReset, D.marginTop8, D.marginBottom20),
       children: [(0, n.jsx)("span", {
         children: g.Z.Messages.SETTINGS_GAMES_NOT_SEEING_GAME
       }), (0, n.jsx)(c.Popout, {
@@ -342,14 +342,14 @@ s.Z = function(e) {
           children: g.Z.Messages.SETTINGS_GAMES_ADD_GAME
         })
       })]
-    }), 0 === a.length ? (0, n.jsx)(j, {
+    }), 0 === a.length ? (0, n.jsx)(v, {
       children: (0, n.jsx)(c.EmptyStateText, {
         children: g.Z.Messages.SETTINGS_GAMES_NO_GAMES_HEADER
       })
     }) : (0, n.jsxs)(c.FormSection, {
-      className: p.marginTop40,
+      className: D.marginTop40,
       children: [(0, n.jsx)(c.FormTitle, {
-        className: p.marginBottom4,
+        className: D.marginBottom4,
         children: g.Z.Messages.SETTINGS_GAMES_ADDED_GAMES_LABEL
       }), (0, n.jsx)(c.FormText, {
         type: c.FormTextTypes.DESCRIPTION,

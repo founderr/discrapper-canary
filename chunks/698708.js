@@ -1,6 +1,6 @@
 t.d(a, {
   Z: function() {
-    return d
+    return E
   }
 });
 var n = t(735250);
@@ -13,22 +13,22 @@ var s = t(481060),
   c = t(981631),
   u = t(689938);
 
-function d(e) {
+function E(e) {
   let {
     planError: a,
     purchaseErrorBlockRef: t,
-    className: d
+    className: E
   } = e, {
-    currencies: E,
+    currencies: d,
     paymentError: A,
-    purchaseError: p,
-    purchasePreviewError: _
-  } = (0, o.usePaymentContext)(), N = null;
-  null != _ ? N = _ : null != A && null == (0, i.ly)(A) ? N = A : null != p ? N = p : null != a && (N = a);
-  let m = E.length > 1,
-    h = null != N ? N.message : "";
-  return (null != N && N instanceof l.HF && (N.code === r.SM.CARD_DECLINED && m && (h += " ".concat(u.Z.Messages.BILLING_ERROR_TRY_ANOTHER)), N.code === r.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (h = u.Z.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT), N.code === c.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (h = u.Z.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID)), null == N) ? null : (0, n.jsx)("div", {
-    className: d,
+    purchaseError: _,
+    purchasePreviewError: N
+  } = (0, o.usePaymentContext)(), m = null;
+  null != N ? m = N : null != A && null == (0, i.ly)(A) ? m = A : null != _ ? m = _ : null != a && (m = a);
+  let p = d.length > 1,
+    h = null != m ? m.message : "";
+  return (null != m && m instanceof l.HF && (m.code === r.SM.CARD_DECLINED && p && (h += " ".concat(u.Z.Messages.BILLING_ERROR_TRY_ANOTHER)), m.code === r.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (h = u.Z.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT), m.code === c.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (h = u.Z.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID)), null == m) ? null : (0, n.jsx)("div", {
+    className: E,
     children: (0, n.jsx)(s.FormErrorBlock, {
       ref: t,
       children: h

@@ -1,24 +1,24 @@
-E.d(n, {
+t.d(n, {
   Y: function() {
     return _
   }
 });
-var t = E(689938);
+var E = t(689938);
 
 function _(e) {
   let {
     application: n,
-    username: E,
+    username: t,
     usernameOnClick: _,
     medium: s
   } = e;
-  return null != n ? t.Z.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_MOBILE.astFormat({
-    username: E,
+  return null != n ? E.Z.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_MOBILE.astFormat({
+    username: t,
     applicationName: n.name,
     usernameOnClick: _,
     medium: s
-  }) : t.Z.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_FROM_DELETED_APPLICATION_MOBILE.astFormat({
-    username: E,
+  }) : E.Z.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_FROM_DELETED_APPLICATION_MOBILE.astFormat({
+    username: t,
     usernameOnClick: _,
     medium: s
   })

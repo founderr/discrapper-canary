@@ -1,5 +1,5 @@
 "use strict";
-t.d(s, {
+s.d(t, {
   E8: function() {
     return v
   },
@@ -7,29 +7,29 @@ t.d(s, {
     return b
   }
 });
-var n = t(180650),
-  a = t(44315),
-  r = t(981631),
-  i = t(689938),
-  l = t(994745),
-  o = t(341364),
-  c = t(763542),
-  u = t(354873),
-  d = t(525071),
-  C = t(737140),
-  f = t(194349),
-  E = t(523569),
-  p = t(55817),
-  g = t(696228),
-  m = t(202796),
-  x = t(570593),
-  h = t(199546),
-  I = t(613540),
-  _ = t(769411);
-let T = () => i.Z.Messages.MOST_POPULAR,
-  N = () => i.Z.Messages.APPLICATION_STORE_NEW_RELEASE,
-  L = () => i.Z.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
-  S = () => i.Z.Messages.TAKE_ME_THERE,
+var n = s(180650),
+  r = s(44315),
+  a = s(981631),
+  i = s(689938),
+  l = s(994745),
+  o = s(341364),
+  c = s(763542),
+  u = s(354873),
+  d = s(525071),
+  C = s(737140),
+  f = s(194349),
+  p = s(523569),
+  E = s(55817),
+  g = s(696228),
+  m = s(202796),
+  h = s(570593),
+  x = s(199546),
+  I = s(613540),
+  _ = s(769411);
+let L = () => i.Z.Messages.MOST_POPULAR,
+  T = () => i.Z.Messages.APPLICATION_STORE_NEW_RELEASE,
+  S = () => i.Z.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
+  N = () => i.Z.Messages.TAKE_ME_THERE,
   b = [{
     id: "category_anime",
     backgroundStaticSrc: C,
@@ -38,60 +38,60 @@ let T = () => i.Z.Messages.MOST_POPULAR,
     overflowSrcAnimatedBackground: u,
     overflowSrcAnimated: c,
     logoSrc: o,
-    textColor: (0, a.Lq)(r.Ilk.BLACK_500),
+    textColor: (0, r.Lq)(a.Ilk.BLACK_500),
     badge: {
-      label: T
+      label: L
     },
     cta: {
-      label: S,
+      label: N,
       categorySkuId: n.T.ANIME_V2
     }
   }, {
     id: "category_galaxy",
     backgroundStaticSrc: _,
-    backgroundVideoSrc: h,
+    backgroundVideoSrc: x,
     logoSrc: I,
-    textColor: (0, a.Lq)(r.Ilk.WHITE_100),
+    textColor: (0, r.Lq)(a.Ilk.WHITE_100),
     badge: {
-      label: N,
+      label: T,
       date: new Date
     },
     cta: {
-      label: S,
+      label: N,
       categorySkuId: n.T.GALAXY
     }
   }, {
     id: "category_disxcore",
-    backgroundStaticSrc: x,
+    backgroundStaticSrc: h,
     overflowSrcStatic: m,
     logoSrc: g,
-    textColor: (0, a.Lq)(r.Ilk.WHITE_100),
+    textColor: (0, r.Lq)(a.Ilk.WHITE_100),
     badge: {
-      label: L
+      label: S
     },
     cta: {
-      label: S,
+      label: N,
       categorySkuId: n.T.DISXCORE
     }
   }, {
     id: "category_cyberpunk",
-    backgroundStaticSrc: p,
+    backgroundStaticSrc: E,
     backgroundVideoSrc: f,
-    logoSrc: E,
-    textColor: (0, a.Lq)(r.Ilk.WHITE_100),
+    logoSrc: p,
+    textColor: (0, r.Lq)(a.Ilk.WHITE_100),
     badge: {
-      label: T
+      label: L
     },
     cta: {
-      label: S,
+      label: N,
       categorySkuId: n.T.CYBERPUNK
     }
   }],
-  v = (e, s) => {
+  v = (e, t) => {
     let {
-      overflowSrcStatic: t,
+      overflowSrcStatic: s,
       overflowSrcAnimated: n,
-      overflowSrcAnimatedBackground: a
+      overflowSrcAnimatedBackground: r
     } = e;
-    return null == t ? [] : s || null == n ? [t] : null == a ? [n] : [a, n]
+    return null == s ? [] : t || null == n ? [s] : null == r ? [n] : [r, n]
   }

@@ -3,8 +3,8 @@ var i = t(735250);
 t(470079);
 var l = t(392711),
   o = t.n(l),
-  r = t(481060),
-  E = t(718528),
+  E = t(481060),
+  r = t(718528),
   u = t(905423),
   a = t(984933),
   s = t(914010),
@@ -20,11 +20,11 @@ function S(e, n) {
   return [{
     resourceId: e,
     type: I.W.GUILD_EVENT
-  }, ...(t = e, i = n, t === A.ME ? _.Z.getPrivateChannelIds() : (0, E.Z)(t, i).map(e => e.id))]
+  }, ...(t = e, i = n, t === A.ME ? _.Z.getPrivateChannelIds() : (0, r.Z)(t, i).map(e => e.id))]
 }
 n.Z = o().throttle(function(e, n) {
   var l, o;
-  let E, {
+  let r, {
       channelPredicate: _ = (e, n) => !0,
       guildPredicate: I = e => !0,
       guildFeaturePredicate: T = (e, n) => !1,
@@ -37,15 +37,15 @@ n.Z = o().throttle(function(e, n) {
         i = t.indexOf(e);
       return n > 0 ? t.slice(i).concat(t.slice(0, i), e) : (t.splice(i, 0, e), t.slice(i + 1).concat(t.slice(0, i + 1)))
     }(N, e),
-    f = e > 0 ? 0 : D.length - 1,
-    g = S(N, L),
-    h = g.indexOf(O) + e;
+    g = e > 0 ? 0 : D.length - 1,
+    R = S(N, L),
+    f = R.indexOf(O) + e;
   for (; null != N && "" !== N;) {
-    if (E = g[h], I(N))
-      for (; null != E && "" !== E;) {
-        if ("string" == typeof E) {
-          if (_(N, E)) return (0, C.K)(N, E, !1, L)
-        } else if ("object" == typeof E && T(E.resourceId, E.type)) return N !== s.Z.getGuildId() && (0, C.K)(N, null === (o = a.ZP.getDefaultChannel(N)) || void 0 === o ? void 0 : o.id), (0, r.openModalLazy)(async () => {
+    if (r = R[f], I(N))
+      for (; null != r && "" !== r;) {
+        if ("string" == typeof r) {
+          if (_(N, r)) return (0, C.K)(N, r, !1, L)
+        } else if ("object" == typeof r && T(r.resourceId, r.type)) return N !== s.Z.getGuildId() && (0, C.K)(N, null === (o = a.ZP.getDefaultChannel(N)) || void 0 === o ? void 0 : o.id), (0, E.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([t.e("99387"), t.e("11250"), t.e("14262"), t.e("22347"), t.e("56236"), t.e("71088")]).then(t.bind(t, 17671));
@@ -54,10 +54,10 @@ n.Z = o().throttle(function(e, n) {
             guildId: N
           })
         });
-        h += e, E = g[h]
+        f += e, r = R[f]
       }
-    if (f += e, null == (N = D[f]) || "" === N) break;
-    g = S(N, L), h = e < 0 ? g.length - 1 : 0
+    if (g += e, null == (N = D[g]) || "" === N) break;
+    R = S(N, L), f = e < 0 ? R.length - 1 : 0
   }
   c.S.dispatch(A.CkL.SHAKE_APP, {
     duration: 200,

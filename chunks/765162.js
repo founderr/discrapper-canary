@@ -1,5 +1,5 @@
 var a = t(319301);
-let i = {
+let n = {
   figma: {
     category: "embeds"
   }
@@ -7,7 +7,7 @@ let i = {
 r.Z = (0, a.a)({
   "embed-title": {
     name: "header-primary",
-    meta: i
+    meta: n
   },
   "embed-background": {
     light: {
@@ -22,7 +22,7 @@ r.Z = (0, a.a)({
     midnight: {
       color: "plum.23"
     },
-    meta: i
+    meta: n
   },
   "embed-background-alternate": {
     dark: {
@@ -31,6 +31,6 @@ r.Z = (0, a.a)({
     light: {
       color: "primary.200"
     },
-    meta: i
+    meta: n
   }
 })

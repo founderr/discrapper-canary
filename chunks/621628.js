@@ -91,8 +91,8 @@ function g() {
       })
     },
     x = s.map(e => o.z[e]),
-    D = g.filter(e => e.toLowerCase().includes(S.toLowerCase())).filter(e => !x.includes(e)),
-    p = Object.keys(o.z).filter(e => !x.includes(e)).filter(e => !g.includes(e)).filter(e => e.toLowerCase().includes(S.toLowerCase())).sort((e, s) => e.localeCompare(s));
+    p = g.filter(e => e.toLowerCase().includes(S.toLowerCase())).filter(e => !x.includes(e)),
+    D = Object.keys(o.z).filter(e => !x.includes(e)).filter(e => !g.includes(e)).filter(e => e.toLowerCase().includes(S.toLowerCase())).sort((e, s) => e.localeCompare(s));
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)(E.FormSection, {
       title: "Dismissible Content Fatigue",
@@ -146,14 +146,14 @@ function g() {
           dismissedContents: m,
           handleChange: M
         })]
-      }) : null, D.length > 0 ? (0, n.jsxs)(n.Fragment, {
+      }) : null, p.length > 0 ? (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)("div", {
           className: O.marginBottom20,
           children: (0, n.jsx)(E.FormTitle, {
             children: "Recent Overrides"
           })
         }), (0, n.jsx)(h, {
-          items: D,
+          items: p,
           dismissedContents: m,
           handleChange: M
         })]
@@ -163,7 +163,7 @@ function g() {
           children: "Available Dismissible Contents"
         })
       }), (0, n.jsx)(h, {
-        items: p,
+        items: D,
         dismissedContents: m,
         handleChange: M
       })]

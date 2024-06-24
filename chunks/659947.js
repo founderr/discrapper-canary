@@ -89,7 +89,7 @@ function M(e) {
       align: T.Z.Align.STRETCH,
       children: [(0, n.jsx)("div", {
         className: N.selectedVoiceChannel,
-        children: (0, n.jsx)(D, {
+        children: (0, n.jsx)(p, {
           channelId: c
         })
       }), (0, n.jsx)(T.Z.Child, {
@@ -127,8 +127,8 @@ function x(e) {
       disableMouseFocus: t
     }
   }(), {
-    query: D,
-    updateQuery: p,
+    query: p,
+    updateQuery: D,
     queryResults: L
   } = (0, o.Z)({
     visible: !0,
@@ -147,7 +147,7 @@ function x(e) {
         return t
       }, [s]);
     return s ? null : t
-  }(D), {
+  }(p), {
     focusedIndex: Z,
     setFocusedIndex: f
   } = function(e) {
@@ -156,7 +156,7 @@ function x(e) {
       focusedIndex: s,
       setFocusedIndex: t
     }
-  }(D);
+  }(p);
   i.useEffect(() => {
     let {
       current: e
@@ -166,8 +166,8 @@ function x(e) {
       row: Z
     })
   }, [Z]);
-  let v = null != P ? P.length : L.length,
-    j = (() => {
+  let j = null != P ? P.length : L.length,
+    v = (() => {
       if (null != P) {
         var e;
         return null === (e = P[Z]) || void 0 === e ? void 0 : e.id
@@ -185,8 +185,8 @@ function x(e) {
       children: [(0, n.jsx)("div", {
         className: N.inputWrapper,
         children: (0, n.jsx)(l.TextInput, {
-          value: D,
-          onChange: p,
+          value: p,
+          onChange: D,
           onKeyDown: function(e) {
             x();
             let s = e.key.toLowerCase();
@@ -204,26 +204,26 @@ function x(e) {
                 break
               }
               case "arrowup":
-                0 === Z ? f(v - 1) : f(Z - 1);
+                0 === Z ? f(j - 1) : f(Z - 1);
                 break;
               case "arrowdown":
-                Z >= v - 1 ? f(0) : f(Z + 1)
+                Z >= j - 1 ? f(0) : f(Z + 1)
             }
           },
           placeholder: I.Z.Messages.USER_SETTINGS_KEYBINDS_SEARCH_VOICE,
           role: "combobox",
           "aria-controls": T,
-          "aria-expanded": v > 0,
-          "aria-activedescendant": v > 0 && null != j ? j : void 0,
+          "aria-expanded": j > 0,
+          "aria-activedescendant": j > 0 && null != v ? v : void 0,
           "aria-autocomplete": "list",
           spellCheck: !1
         })
-      }), 0 === v && "" !== D && (0, n.jsx)(R, {}), (v > 0 || "" === D) && (0, n.jsx)(l.ListThin, {
+      }), 0 === j && "" !== p && (0, n.jsx)(R, {}), (j > 0 || "" === p) && (0, n.jsx)(l.ListThin, {
         innerId: T,
         innerRole: "listbox",
         "aria-label": I.Z.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
         ref: A,
-        sections: [v],
+        sections: [j],
         renderRow: function(e) {
           let {
             row: s
@@ -263,7 +263,7 @@ function x(e) {
   })
 }
 
-function D(e) {
+function p(e) {
   let {
     channelId: s
   } = e, {

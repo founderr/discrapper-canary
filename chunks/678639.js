@@ -4,10 +4,10 @@ t.d(r, {
   }
 }), t(47120);
 var a = t(735250),
-  i = t(470079),
-  n = t(120356),
-  o = t.n(n),
-  l = t(442837),
+  n = t(470079),
+  i = t(120356),
+  l = t.n(i),
+  o = t(442837),
   c = t(481060),
   s = t(502568),
   d = t(428530),
@@ -25,20 +25,20 @@ function y(e) {
   let {
     store: r,
     dataGetter: t
-  } = e, [n, o] = i.useState(t(r));
-  return i.useEffect(() => {
-    let e = () => o(t(r));
+  } = e, [i, l] = n.useState(t(r));
+  return n.useEffect(() => {
+    let e = () => l(t(r));
     return e(), r.addChangeListener(e), () => {
       r.removeChangeListener(e)
     }
   }, [r, t]), (0, a.jsx)(c.ScrollerThin, {
     className: p.inspectorContainer,
     children: (0, a.jsx)(d.Z, {
-      data: n
+      data: i
     })
   })
 }
-let x = [{
+let f = [{
     key: "name",
     cellClassName: p.__invalid_eventColumn,
     render(e) {
@@ -48,7 +48,7 @@ let x = [{
       return r.getName()
     }
   }],
-  f = [{
+  x = [{
     id: "local",
     name: "Local Variables",
     render(e) {
@@ -84,47 +84,47 @@ function k(e) {
     store: r,
     initialHeight: t
   } = e, {
-    TabBar: i,
-    renderSelectedTab: n
+    TabBar: n,
+    renderSelectedTab: i
   } = (0, m.Z)({
-    tabs: f
+    tabs: x
   }, []);
   return (0, a.jsxs)(u.Z, {
     className: p.subPanel,
     minHeight: 100,
     initialHeight: t,
-    children: [(0, a.jsx)(i, {}), (0, a.jsxs)(s.ZP, {
-      className: o()(g.headerBar, p.subPanelHeaderBar),
+    children: [(0, a.jsx)(n, {}), (0, a.jsxs)(s.ZP, {
+      className: l()(g.headerBar, p.subPanelHeaderBar),
       children: [(0, a.jsx)(s.ZP.Icon, {
         icon: c.TagIcon,
         tooltip: r.getName()
       }), (0, a.jsx)(s.ZP.Title, {
         children: r.getName()
       })]
-    }), n({
+    }), i({
       store: r
     })]
   })
 }
 
 function v() {
-  let e = i.useRef(null),
-    [r, t] = i.useState(""),
-    n = l.yh.getAll(),
-    s = i.useMemo(() => n.map(e => ({
+  let e = n.useRef(null),
+    [r, t] = n.useState(""),
+    i = o.yh.getAll(),
+    s = n.useMemo(() => i.map(e => ({
       key: e._dispatchToken,
       store: e
-    })).sort(b), [n]).filter(e => (function(e, r) {
+    })).sort(b), [i]).filter(e => (function(e, r) {
       let {
         store: t
       } = e;
       return t.getName().toLowerCase().includes(r.toLowerCase())
     })(e, r)),
-    [d, u] = i.useState(),
-    m = n.find(e => e._dispatchToken === d);
+    [d, u] = n.useState(),
+    m = i.find(e => e._dispatchToken === d);
   return (0, a.jsxs)("div", {
     ref: e,
-    className: o()(g.panel, p.panel),
+    className: l()(g.panel, p.panel),
     children: [(0, a.jsx)("div", {
       className: p.toolbar,
       children: (0, a.jsx)(c.SearchBar, {
@@ -139,7 +139,7 @@ function v() {
     }), (0, a.jsx)(c.ScrollerThin, {
       className: p.tableContainer,
       children: (0, a.jsx)(h.Z, {
-        columns: x,
+        columns: f,
         data: s,
         selectedRowKey: d,
         onClickRow: u

@@ -12,16 +12,16 @@ var a = t(442837),
 s.Z = function(e) {
   let {
     localizedPricingPromo: s
-  } = e, t = s.countryCode, d = (0, a.e7)([i.default], () => i.default.locale);
+  } = e, t = s.countryCode, R = (0, a.e7)([i.default], () => i.default.locale);
   (0, _.U)(E.jXE.SETTINGS_PREMIUM_BANNER, t);
-  let R = (0, a.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
+  let d = (0, a.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
     {
       localizedPricingBannerBody: I
     } = (0, o.vB)({
       localizedPricingPromo: s,
-      subscription: R,
+      subscription: d,
       forceSingleLine: !0,
-      userLocale: d
+      userLocale: R
     });
   return (0, n.jsxs)("div", {
     className: u.bannerContainer,

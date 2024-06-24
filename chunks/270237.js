@@ -1,15 +1,15 @@
 n.d(t, {
   Z: function() {
-    return i
+    return a
   }
 });
 var s = n(470079),
-  a = n(661111);
+  i = n(661111);
 
-function i(e) {
+function a(e) {
   s.useEffect(() => {
-    if (null != e) return a.Z.lockChangeLog(e), () => {
-      a.Z.unlockChangeLog(e)
+    if (null != e) return i.Z.lockChangeLog(e), () => {
+      i.Z.unlockChangeLog(e)
     }
   }, [e])
 }

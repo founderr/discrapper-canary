@@ -5,8 +5,8 @@ n.d(t, {
 });
 var s = n(735250);
 n(470079);
-var a = n(120356),
-  i = n.n(a),
+var i = n(120356),
+  a = n.n(i),
   l = n(481060),
   r = n(542037);
 
@@ -14,10 +14,10 @@ function c(e) {
   let {
     icon: t,
     tooltip: n,
-    onClick: a,
+    onClick: i,
     className: c
   } = e, o = e => {
-    e.preventDefault(), e.stopPropagation(), a(e)
+    e.preventDefault(), e.stopPropagation(), i(e)
   };
   return (0, s.jsx)(l.Tooltip, {
     text: n,
@@ -25,7 +25,7 @@ function c(e) {
       ...e,
       "aria-label": n,
       onClick: o,
-      className: i()(r.actionButton, c),
+      className: a()(r.actionButton, c),
       children: (0, s.jsx)(t, {
         className: r.icon,
         color: "currentColor"

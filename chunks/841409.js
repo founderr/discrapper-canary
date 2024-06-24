@@ -1,6 +1,6 @@
 var s = n(399606),
-  a = n(626135),
-  i = n(280570),
+  i = n(626135),
+  a = n(280570),
   l = n(914788),
   r = n(292352),
   c = n(981631);
@@ -9,7 +9,7 @@ t.Z = () => {
   return {
     selectedTab: e,
     handleTabChange: e => {
-      i.ZP.selectTab(e), a.default.track(c.rMx.FAMILY_CENTER_ACTION, {
+      a.ZP.selectTab(e), i.default.track(c.rMx.FAMILY_CENTER_ACTION, {
         action: r.YC.TabChange,
         tab: e
       })

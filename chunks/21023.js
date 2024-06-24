@@ -12,8 +12,8 @@ var i = t(481060),
   c = t(734741),
   E = t(474936),
   u = t(981631),
-  d = t(689938),
-  R = t(544243);
+  R = t(689938),
+  d = t(544243);
 let I = e => {
     let {
       text: s,
@@ -45,19 +45,19 @@ let I = e => {
       children: [(0, r.jsx)(i.CheckmarkLargeIcon, {
         size: "md",
         color: "currentColor",
-        className: R.checkmarkIcon,
+        className: d.checkmarkIcon,
         "aria-hidden": !0
       }), (0, r.jsx)(i.HiddenVisually, {
-        children: d.Z.Messages.INCLUDED
+        children: R.Z.Messages.INCLUDED
       })]
     }) : (0, r.jsxs)(r.Fragment, {
       children: [(0, r.jsx)(i.CloseSmallIcon, {
         size: "md",
         color: "currentColor",
-        className: R.closeIcon,
+        className: d.closeIcon,
         "aria-hidden": !0
       }), (0, r.jsx)(i.HiddenVisually, {
-        children: d.Z.Messages.NOT_INCLUDED
+        children: R.Z.Messages.NOT_INCLUDED
       })]
     })
   };
@@ -66,7 +66,7 @@ let M = (e, s, t, n) => {
   let a = {
       0: {
         label: (0, r.jsx)(I, {
-          text: d.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PRICE
+          text: R.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PRICE
         }),
         column1: (0, r.jsx)(r.Fragment, {
           children: (0, r.jsx)(T, {
@@ -82,7 +82,7 @@ let M = (e, s, t, n) => {
       },
       1: {
         label: (0, r.jsx)(I, {
-          text: d.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_EMOJI
+          text: R.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_EMOJI
         }),
         column1: (0, r.jsx)(A, {
           includes: !0
@@ -93,7 +93,7 @@ let M = (e, s, t, n) => {
       },
       2: {
         label: (0, r.jsx)(I, {
-          text: d.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STICKER_V2
+          text: R.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STICKER_V2
         }),
         column1: (0, r.jsx)(A, {
           includes: !0
@@ -104,7 +104,7 @@ let M = (e, s, t, n) => {
       },
       3: {
         label: (0, r.jsx)(I, {
-          text: d.Z.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE
+          text: R.Z.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE
         }),
         column1: (0, r.jsx)(A, {
           includes: !0
@@ -115,7 +115,7 @@ let M = (e, s, t, n) => {
       },
       4: {
         label: (0, r.jsx)(I, {
-          text: d.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SUPER_REACTIONS
+          text: R.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SUPER_REACTIONS
         }),
         column1: (0, r.jsx)(A, {
           includes: !0
@@ -126,7 +126,7 @@ let M = (e, s, t, n) => {
       },
       5: {
         label: (0, r.jsx)(I, {
-          text: d.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_UPLOAD
+          text: R.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_UPLOAD
         }),
         column1: (0, r.jsx)(T, {
           text: (0, o.v9)(E.p9.TIER_0)
@@ -137,18 +137,18 @@ let M = (e, s, t, n) => {
       },
       6: {
         label: (0, r.jsx)(I, {
-          text: d.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STREAMING
+          text: R.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STREAMING
         }),
         column1: (0, r.jsx)(A, {
           includes: !1
         }),
         column2: (0, r.jsx)(T, {
-          text: d.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_STREAMING_DETAILS
+          text: R.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_STREAMING_DETAILS
         })
       },
       7: {
         label: (0, r.jsx)(I, {
-          text: d.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BOOSTS.format({
+          text: R.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BOOSTS.format({
             numBoosts: E.cb,
             percentageOff: (0, _.T3)(l.default.locale, E.Rr / 100)
           })
@@ -162,7 +162,7 @@ let M = (e, s, t, n) => {
       },
       8: {
         label: (0, r.jsx)(I, {
-          text: d.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PROFILE_THEMES
+          text: R.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PROFILE_THEMES
         }),
         column1: (0, r.jsx)(A, {
           includes: !1
@@ -173,7 +173,7 @@ let M = (e, s, t, n) => {
       },
       9: {
         label: (0, r.jsx)(I, {
-          text: d.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_PROFILE
+          text: R.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_PROFILE
         }),
         column1: (0, r.jsx)(A, {
           includes: !1
@@ -184,7 +184,7 @@ let M = (e, s, t, n) => {
       },
       10: {
         label: (0, r.jsx)(I, {
-          text: d.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SHOP_DISCOUNTS_GENERIC
+          text: R.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SHOP_DISCOUNTS_GENERIC
         }),
         column1: (0, r.jsx)(A, {
           includes: !1
@@ -195,7 +195,7 @@ let M = (e, s, t, n) => {
       },
       11: {
         label: (0, r.jsx)(I, {
-          text: d.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_CLIENT_THEME
+          text: R.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_CLIENT_THEME
         }),
         column1: (0, r.jsx)(A, {
           includes: !1
@@ -206,7 +206,7 @@ let M = (e, s, t, n) => {
       },
       12: {
         label: (0, r.jsx)(I, {
-          text: d.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BADGE
+          text: R.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BADGE
         }),
         column1: (0, r.jsx)(A, {
           includes: !0
@@ -217,7 +217,7 @@ let M = (e, s, t, n) => {
       },
       13: {
         label: (0, r.jsx)(I, {
-          text: d.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_VIDEO_BACKGROUND
+          text: R.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_VIDEO_BACKGROUND
         }),
         column1: (0, r.jsx)(A, {
           includes: !0
@@ -228,7 +228,7 @@ let M = (e, s, t, n) => {
       },
       14: {
         label: (0, r.jsx)(I, {
-          text: d.Z.Messages.SOUNDBOARD_MARKETING_CUSTOM_SOUNDS_ANYWHERE
+          text: R.Z.Messages.SOUNDBOARD_MARKETING_CUSTOM_SOUNDS_ANYWHERE
         }),
         column1: (0, r.jsx)(A, {
           includes: !1
@@ -240,7 +240,7 @@ let M = (e, s, t, n) => {
       },
       15: {
         label: (0, r.jsx)(I, {
-          text: d.Z.Messages.SOUNDBOARD_MARKETING_CUSTOM_ENTRY_SOUNDS_V2
+          text: R.Z.Messages.SOUNDBOARD_MARKETING_CUSTOM_ENTRY_SOUNDS_V2
         }),
         column1: (0, r.jsx)(A, {
           includes: !1
@@ -251,7 +251,7 @@ let M = (e, s, t, n) => {
       },
       21: {
         label: (0, r.jsx)(I, {
-          text: d.Z.Messages.AVATAR_PROFILE_BANNER_MARKETING
+          text: R.Z.Messages.AVATAR_PROFILE_BANNER_MARKETING
         }),
         column1: (0, r.jsx)(A, {
           includes: !1
@@ -262,7 +262,7 @@ let M = (e, s, t, n) => {
       },
       16: {
         label: (0, r.jsx)(I, {
-          text: d.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_LIMIT
+          text: R.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_LIMIT
         }),
         column1: (0, r.jsx)(A, {
           includes: !1
@@ -273,7 +273,7 @@ let M = (e, s, t, n) => {
       },
       17: {
         label: (0, r.jsx)(I, {
-          text: d.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_MESSAGE_LENGTH.format({
+          text: R.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_MESSAGE_LENGTH.format({
             maxChars: u.en1
           })
         }),
@@ -287,7 +287,7 @@ let M = (e, s, t, n) => {
       },
       18: {
         label: (0, r.jsx)(i.Heading, {
-          className: R.__invalid_textColor,
+          className: d.__invalid_textColor,
           variant: "display-sm",
           children: "Make Discord Yours"
         }),
@@ -297,7 +297,7 @@ let M = (e, s, t, n) => {
       },
       19: {
         label: (0, r.jsx)(i.Heading, {
-          className: R.__invalid_textColor,
+          className: d.__invalid_textColor,
           variant: "display-sm",
           children: "Enjoy an Upgraded Discord"
         }),
@@ -307,7 +307,7 @@ let M = (e, s, t, n) => {
       },
       20: {
         label: (0, r.jsx)(i.Heading, {
-          className: R.__invalid_textColor,
+          className: d.__invalid_textColor,
           variant: "display-sm",
           children: "Show Up the Way You Want"
         }),
@@ -317,7 +317,7 @@ let M = (e, s, t, n) => {
       },
       22: {
         label: (0, r.jsx)(I, {
-          text: d.Z.Messages.REFERRAL_PROGRAM_PLAN_COMPARISON_ROW
+          text: R.Z.Messages.REFERRAL_PROGRAM_PLAN_COMPARISON_ROW
         }),
         column1: (0, r.jsx)(A, {
           includes: !1

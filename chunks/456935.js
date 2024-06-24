@@ -7,8 +7,8 @@ var a = t(735250),
   r = t(470079),
   s = t(692547),
   i = t(481060),
-  o = t(496675),
-  l = t(484455),
+  l = t(496675),
+  o = t(484455),
   c = t(981631),
   d = t(689938),
   u = t(237261);
@@ -37,7 +37,7 @@ let h = {
 n.ZP = function(e) {
   let {
     guild: n
-  } = e, s = o.Z.can(c.Plq.MANAGE_GUILD, n), C = n.verificationLevel, x = C === c.sFg.VERY_HIGH ? i.MobilePhoneIcon : i.EnvelopeIcon, f = r.useMemo(() => m(C), [C]), E = h[C], T = (0, a.jsx)("div", {
+  } = e, s = l.Z.can(c.Plq.MANAGE_GUILD, n), C = n.verificationLevel, x = C === c.sFg.VERY_HIGH ? i.MobilePhoneIcon : i.EnvelopeIcon, f = r.useMemo(() => m(C), [C]), E = h[C], T = (0, a.jsx)("div", {
     className: u.verificationLevelTitle,
     children: d.Z.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
       verificationLevelHook: function() {
@@ -52,7 +52,7 @@ n.ZP = function(e) {
       }
     })
   }), _ = C === c.sFg.VERY_HIGH ? d.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : d.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
-  return (0, a.jsx)(l.Z, {
+  return (0, a.jsx)(o.Z, {
     title: T,
     children: (0, a.jsxs)("div", {
       className: u.verificationContainer,

@@ -123,7 +123,7 @@ function S(e) {
         }(0, r.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([l.e("49237"), l.e("99387"), l.e("7654"), l.e("1187"), l.e("53700")]).then(l.bind(l, 560114));
+          } = await Promise.all([l.e("49237"), l.e("99387"), l.e("7654"), l.e("1187"), l.e("30987")]).then(l.bind(l, 560114));
           return l => (0, t.jsx)(e, {
             ...l,
             guild: n,

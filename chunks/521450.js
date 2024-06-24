@@ -1,7 +1,7 @@
 var s = n(735250),
-  a = n(470079),
-  i = n(120356),
-  l = n.n(i),
+  i = n(470079),
+  a = n(120356),
+  l = n.n(a),
   r = n(613828),
   c = n(435935),
   o = n(442837),
@@ -21,7 +21,7 @@ t.Z = () => {
       categories: t,
       initialized: n
     } = (0, o.cj)([_.Z], () => _.Z.getEmailSettings());
-  return a.useEffect(() => {
+  return i.useEffect(() => {
     null == n && (0, E.Y7)()
   }, [n]), (0, s.jsxs)("div", {
     className: N.container,

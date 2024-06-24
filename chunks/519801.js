@@ -1,92 +1,92 @@
 n.d(t, {
   Z: function() {
-    return T
+    return h
   }
 }), n(789020);
 var r = n(735250),
-  s = n(470079),
-  a = n(131388),
+  a = n(470079),
+  s = n(131388),
   l = n(607070),
   i = n(745510),
-  u = n(171246),
-  o = n(689011),
+  o = n(171246),
+  u = n(689011),
   c = n(931905),
   d = n(598),
   I = n(409813),
   _ = n(586585),
   E = n(456251),
-  A = n(614277),
+  C = n(614277),
   N = n(698708),
-  C = n(750143),
+  A = n(750143),
   O = n(689938);
 
-function T(e) {
+function h(e) {
   var t, n;
-  let T, S, {
-      showBenefits: P,
+  let h, S, {
+      showBenefits: T,
       handleClose: f,
-      onSubscriptionConfirmation: h
+      onSubscriptionConfirmation: P
     } = e,
     {
-      updatedSubscription: R,
-      readySlideId: L,
+      updatedSubscription: p,
+      readySlideId: R,
       selectedSku: m,
-      selectedStoreListing: p,
-      application: M
+      selectedStoreListing: L,
+      application: g
     } = (0, d.usePaymentContext)(),
-    g = (0, a.Z)(C.i),
+    M = (0, s.Z)(A.i),
     {
-      createMultipleConfettiAt: Z
-    } = s.useContext(i.h),
-    U = null !== (t = null == m ? void 0 : m.name) && void 0 !== t ? t : "",
-    b = () => {
-      f(), null == h || h()
+      createMultipleConfettiAt: b
+    } = a.useContext(i.h),
+    v = null !== (t = null == m ? void 0 : m.name) && void 0 !== t ? t : "",
+    Z = () => {
+      f(), null == P || P()
     },
-    x = L === I.h8.CONFIRM,
-    B = (0, u.KW)(null !== (n = null == m ? void 0 : m.flags) && void 0 !== n ? n : 0),
-    D = null != p && p.benefits.length > 0 ? O.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_BENEFITS_SUBTITLE.format({
-      benefitCount: p.benefits.length
+    x = R === I.h8.CONFIRM,
+    U = (0, o.KW)(null !== (n = null == m ? void 0 : m.flags) && void 0 !== n ? n : 0),
+    B = null != L && L.benefits.length > 0 ? O.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_BENEFITS_SUBTITLE.format({
+      benefitCount: L.benefits.length
     }) : null;
-  return P ? g ? T = (0, r.jsx)(c.h, {
+  return T ? M ? h = (0, r.jsx)(c.h, {
     title: O.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_TITLE_V2.format({
-      tierName: U
+      tierName: v
     }),
-    subtitle: null != p && p.benefits.length > 0 ? O.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({
-      benefits: D
+    subtitle: null != L && L.benefits.length > 0 ? O.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({
+      benefits: B
     }) : null,
-    onConfirm: b,
+    onConfirm: Z,
     confirmCta: O.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON
-  }) : (T = null != p && null != M ? (0, r.jsx)(o.Oc, {
-    icon: p.thumbnail,
-    storeListingBenefits: p.benefits,
-    application: M,
+  }) : (h = null != L && null != g ? (0, r.jsx)(u.Oc, {
+    icon: L.thumbnail,
+    storeListingBenefits: L.benefits,
+    application: g,
     title: O.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_TITLE_V2.format({
-      tier: U
+      tier: v
     }),
     subtitle: O.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_BENEFITS_PREVIEW,
-    description: B ? O.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({
-      applicationName: null == M ? void 0 : M.name
+    description: U ? O.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({
+      applicationName: null == g ? void 0 : g.name
     }) : O.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({
-      tier: U
+      tier: v
     })
   }) : (0, r.jsx)(E.Z, {}), S = (0, r.jsx)(_.Z, {
-    onPrimary: b,
+    onPrimary: Z,
     primaryCTA: _.g.CONTINUE,
     primaryText: O.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_DONE_BUTTON
-  })) : T = g ? (0, r.jsx)(c.m, {
-    tierName: U,
-    onConfirm: b,
-    subscription: R
-  }) : (0, r.jsx)(o.xe, {
-    tierName: U,
-    onConfirm: b,
-    subscription: R
-  }), s.useEffect(() => {
-    l.Z.useReducedMotion && x && Z(window.innerWidth / 2, window.innerHeight / 2)
-  }, [Z, x]), (0, r.jsxs)(r.Fragment, {
-    children: [(0, r.jsxs)(A.C3, {
-      children: [(0, r.jsx)(N.Z, {}), T]
-    }), null != S && (0, r.jsx)(A.O3, {
+  })) : h = M ? (0, r.jsx)(c.m, {
+    tierName: v,
+    onConfirm: Z,
+    subscription: p
+  }) : (0, r.jsx)(u.xe, {
+    tierName: v,
+    onConfirm: Z,
+    subscription: p
+  }), a.useEffect(() => {
+    l.Z.useReducedMotion && x && b(window.innerWidth / 2, window.innerHeight / 2)
+  }, [b, x]), (0, r.jsxs)(r.Fragment, {
+    children: [(0, r.jsxs)(C.C3, {
+      children: [(0, r.jsx)(N.Z, {}), h]
+    }), null != S && (0, r.jsx)(C.O3, {
       children: S
     })]
   })

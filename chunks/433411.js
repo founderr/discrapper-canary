@@ -34,7 +34,7 @@ function N(e) {
     guildAvatarDecoration: R,
     pendingAvatarDecoration: M,
     pendingErrors: x
-  } = (0, T.$U)(s, t), D = (0, d.Z)("enable_avatar_decoration_uploads"), p = i.useCallback(() => (0, E.ps)({
+  } = (0, T.$U)(s, t), p = (0, d.Z)("enable_avatar_decoration_uploads"), D = i.useCallback(() => (0, E.ps)({
     analyticsLocations: m,
     isTryItOutFlow: O,
     guild: t
@@ -49,7 +49,7 @@ function N(e) {
       className: I.buttonsContainer,
       children: [(0, n.jsx)(P, {
         size: r.Button.Sizes.SMALL,
-        onClick: p,
+        onClick: D,
         className: l()({
           [I.buttonHighlighted]: C
         }),
@@ -64,7 +64,7 @@ function N(e) {
         },
         children: (0, c.ad)(s, t) ? u.Z.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : u.Z.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
       })]
-    }), s.isStaff() && D && (0, n.jsx)(A, {
+    }), s.isStaff() && p && (0, n.jsx)(A, {
       user: s
     })]
   })

@@ -1,6 +1,6 @@
 s.d(n, {
   Z: function() {
-    return A
+    return v
   }
 }), s(627341);
 var l = s(735250);
@@ -48,7 +48,7 @@ function P(e) {
   })
 }
 
-function v(e) {
+function A(e) {
   var n;
   let {
     id: s
@@ -69,7 +69,7 @@ function v(e) {
   })
 }
 
-function A(e) {
+function v(e) {
   let {
     sku: n
   } = e, {
@@ -82,7 +82,7 @@ function A(e) {
     avatarDecoration: e
   })).with({
     type: i.Z.PROFILE_EFFECT
-  }, e => (0, l.jsx)(v, {
+  }, e => (0, l.jsx)(A, {
     id: e.id
   })).otherwise(() => null);
   return null != s && null == c ? (0, l.jsx)("div", {

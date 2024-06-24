@@ -1,6 +1,6 @@
 t.d(s, {
   Ag: function() {
-    return R
+    return d
   },
   I2: function() {
     return I
@@ -16,12 +16,12 @@ var n = t(470079),
   c = t(494127),
   E = t(687362),
   u = t(526761);
-let d = [
+let R = [
     [r.z.WHATS_NEW_AVATAR_DECOS_NOTIF_BADGE, c.F_, r.z.WHATS_NEW_AVATAR_DECOS_FLIP],
     [r.z.WHATS_NEW_PROFILE_EFFECTS_NOTIF_BADGE, c.YQ, r.z.WHATS_NEW_PROFILE_EFFECTS_FLIP]
   ],
-  R = e => {
-    let s = d.some(e => {
+  d = e => {
+    let s = R.some(e => {
         let [s, t, n] = e, {
           flipped: a
         } = t.getCurrentConfig({
@@ -34,7 +34,7 @@ let d = [
   },
   I = () => {
     let e = (0, i.Q)(),
-      s = d.map(e => {
+      s = R.map(e => {
         let [s, t] = e, {
           flipped: n
         } = t.getCurrentConfig({
@@ -48,7 +48,7 @@ let d = [
 s.ZP = 12633 == t.j ? () => {
   let e = (0, i.Q)(),
     s = (0, a.e7)([_.Z], () => _.Z.hasLoaded(u.yP.PRELOADED_USER_SETTINGS)),
-    t = d.map(e => {
+    t = R.map(e => {
       let [s, t, n] = e, {
         flipped: a
       } = t.getCurrentConfig({
@@ -57,7 +57,7 @@ s.ZP = 12633 == t.j ? () => {
       return a && !r ? s : null
     }).filter(e => null != e);
   n.useEffect(() => {
-    s && d.forEach(e => {
+    s && R.forEach(e => {
       let [s, t, n] = e;
       if (null != n)(0, l.un)(n) && (0, l.EW)(s)
     })

@@ -3,7 +3,7 @@ t(47120), t(653041);
 var r, s = t(442837),
   i = t(570140);
 
-function o(e, n, t) {
+function l(e, n, t) {
   return n in e ? Object.defineProperty(e, n, {
     value: t,
     enumerable: !0,
@@ -11,14 +11,14 @@ function o(e, n, t) {
     writable: !0
   }) : e[n] = t, e
 }
-let l = {
+let o = {
     guildNoticeDismissed: []
   },
   c = new Map,
   d = new Set;
 class u extends(r = s.ZP.PersistedStore) {
   initialize() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l;
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o;
     a = e
   }
   getState() {
@@ -36,7 +36,7 @@ class u extends(r = s.ZP.PersistedStore) {
     return d.has(e)
   }
 }
-o(u, "displayName", "CommandsMigrationStore"), o(u, "persistKey", "CommandsMigrationStore"), n.Z = new u(i.Z, {
+l(u, "displayName", "CommandsMigrationStore"), l(u, "persistKey", "CommandsMigrationStore"), n.Z = new u(i.Z, {
   COMMANDS_MIGRATION_UPDATE_SUCCESS: function(e) {
     let {
       guildId: n,
