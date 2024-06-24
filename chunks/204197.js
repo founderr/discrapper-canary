@@ -40,7 +40,7 @@ function l(e) {
     guildId: null != n ? n : void 0,
     size: (0, s.y9)(l),
     showPending: u,
-    animateOnHover: c,
+    onlyAnimateOnHover: c,
     avatarDecorationOverride: d,
     showTryItOut: _
   }), A = i.useCallback(() => {

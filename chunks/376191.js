@@ -62,7 +62,7 @@ function f(e) {
   } = (0, u.Z)({
     user: o,
     size: (0, c.y9)(l.AvatarSizes.SIZE_40),
-    animateOnHover: !0
+    onlyAnimateOnHover: !0
   });
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(A, {

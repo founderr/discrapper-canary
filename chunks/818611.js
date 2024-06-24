@@ -50,7 +50,7 @@ let A = () => 80,
       user: t,
       avatarDecorationOverride: n,
       size: 80,
-      animateOnHover: !C
+      onlyAnimateOnHover: !C
     });
     return (0, i.jsxs)(m, {
       className: p ? N.decorationGridItemChurned : void 0,

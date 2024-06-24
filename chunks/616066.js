@@ -32,7 +32,7 @@ let g = d.ZP.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar,
       user: n,
       avatarDecorationOverride: (null == t ? void 0 : t.type) === l.Z.AVATAR_DECORATION ? t : void 0,
       size: h,
-      animateOnHover: !a
+      onlyAnimateOnHover: !a
     });
     return (0, r.jsx)(g, {
       ...m,

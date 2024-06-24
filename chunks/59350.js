@@ -38,8 +38,8 @@ var t = l(735250),
   b = l(745752),
   D = l(45966),
   w = l(637853),
-  H = l(905204),
-  y = l(968644),
+  y = l(905204),
+  H = l(968644),
   U = l(521941),
   k = l(614328),
   W = l(104265),
@@ -73,7 +73,7 @@ function ee(e) {
   } = (0, p.Z)({
     user: s,
     size: (0, E.y9)(J),
-    animateOnHover: !h
+    onlyAnimateOnHover: !h
   }), N = (0, u.e7)([R.ZP], () => R.ZP.getSelfMember(l.id)), C = (0, u.Wu)([R.ZP], () => R.ZP.getMemberRoleWithPendingUpdates(l.id, s.id)), g = (0, u.e7)([T.Z], () => T.Z.getRoles(l.id)), f = d()(C).filter(e => g.hasOwnProperty(e)).map(e => g[e]).orderBy("position", "desc").value(), Z = (0, j.ZP)(s.id, l.id);
   i.useEffect(() => {
     (0, v.Z)(s.id, s.getAvatarURL(l.id, (0, x.getAvatarSize)(J)), {
@@ -150,7 +150,7 @@ function en(e) {
   } = e, [r, d] = i.useState(null), [c, m] = i.useState(new Set), N = null == l ? void 0 : null === (n = l.options) || void 0 === n ? void 0 : n.filter(e => c.has(e.id)), C = (0, w.L6)(N), g = (0, w.dX)(N), E = (0, u.Wu)([D.Z], () => D.Z.getOnboardingResponsesForPrompt(s.id, l.id)), {
     helpText: p,
     helpTextAdditional: Z
-  } = (0, y.p)({
+  } = (0, H.p)({
     guild: s,
     prompt: l,
     selectedRoleIds: C,
@@ -162,7 +162,7 @@ function en(e) {
     }, n)
   }), {
     handleSelectOption: _
-  } = (0, H.Z)(s.id), I = (0, x.useToken)(h.Z.unsafe_rawColors.BRAND_500), v = (0, o.useSpring)({
+  } = (0, y.Z)(s.id), I = (0, x.useToken)(h.Z.unsafe_rawColors.BRAND_500), v = (0, o.useSpring)({
     from: {
       color: l.isNew ? I.hex({
         opacity: 1
@@ -242,7 +242,7 @@ function el(e) {
   } = e, [r, d] = i.useState(null), [c, m] = i.useState(new Set), N = null == l ? void 0 : null === (n = l.options) || void 0 === n ? void 0 : n.filter(e => c.has(e.id)), C = (0, w.L6)(N), g = (0, w.dX)(N), E = (0, u.Wu)([D.Z], () => D.Z.getOnboardingResponsesForPrompt(s.id, l.id)), {
     helpText: p,
     helpTextAdditional: Z
-  } = (0, y.p)({
+  } = (0, H.p)({
     guild: s,
     prompt: l,
     selectedRoleIds: C,
@@ -254,7 +254,7 @@ function el(e) {
     }, n)
   }), {
     handleSelectOption: _
-  } = (0, H.Z)(s.id), I = (e, n) => {
+  } = (0, y.Z)(s.id), I = (e, n) => {
     if (!n && 1 === E.length && l.required) {
       d({
         type: $
