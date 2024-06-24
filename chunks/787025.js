@@ -52,14 +52,20 @@ function S(e) {
 function f(e) {
   let {
     children: t,
-    transitionState: n,
-    ...r
+    footer: n,
+    transitionState: r,
+    ...s
   } = e;
-  return (0, i.jsx)(a.Y0, {
+  return (0, i.jsxs)(a.Y0, {
     size: a.Cg.DYNAMIC,
-    transitionState: n,
+    transitionState: r,
     className: h.oauth2Wrapper,
-    ...r,
-    children: t
+    ...s,
+    children: [(0, i.jsx)(a.hz, {
+      children: t
+    }), null != n && (0, i.jsx)(a.mz, {
+      className: h.footer,
+      children: n
+    })]
   })
 }
