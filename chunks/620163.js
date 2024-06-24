@@ -131,99 +131,99 @@ let eU = () => {
       },
       [eL.s6.ACCOUNT]: {
         section: eP.oAB.ACCOUNT,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_MY_ACCOUNT,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_MY_ACCOUNT],
         label: ej.Z.Messages.USER_SETTINGS_MY_ACCOUNT,
         ariaLabel: ej.Z.Messages.USER_SETTINGS_MY_ACCOUNT,
         element: J.Z
       },
       [eL.s6.ACCOUNT_PROFILE]: {
-        searchableTitle: ej.Z.Messages.PROFILE,
+        searchableTitles: [ej.Z.Messages.PROFILE],
         parent: eL.s6.ACCOUNT,
         section: eP.oAB.ACCOUNT
       },
       [eL.s6.ACCOUNT_DISPLAY_NAME]: {
-        searchableTitle: ej.Z.Messages.DISPLAY_NAME,
+        searchableTitles: [ej.Z.Messages.DISPLAY_NAME],
         section: eP.oAB.ACCOUNT,
         parent: eL.s6.ACCOUNT_PROFILE
       },
       [eL.s6.ACCOUNT_PHONE_NUMBER]: {
-        searchableTitle: ej.Z.Messages.CHANGE_PHONE_NUMBER,
+        searchableTitles: [ej.Z.Messages.CHANGE_PHONE_NUMBER],
         section: eP.oAB.ACCOUNT,
         parent: eL.s6.ACCOUNT_PROFILE
       },
       [eL.s6.ACCOUNT_USERNAME]: {
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_USERNAME_TITLE,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_USERNAME_TITLE],
         section: eP.oAB.ACCOUNT,
         parent: eL.s6.ACCOUNT_PROFILE
       },
       [eL.s6.ACCOUNT_EMAIL]: {
-        searchableTitle: ej.Z.Messages.CHANGE_EMAIL,
+        searchableTitles: [ej.Z.Messages.CHANGE_EMAIL],
         section: eP.oAB.ACCOUNT,
         parent: eL.s6.ACCOUNT_PROFILE
       },
       [eL.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION]: {
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_ACCOUNT_PASSWORD_AND_AUTHENTICATION],
         section: eP.oAB.ACCOUNT,
-        parent: eL.s6.ACCOUNT,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_ACCOUNT_PASSWORD_AND_AUTHENTICATION
+        parent: eL.s6.ACCOUNT
       },
       [eL.s6.ACCOUNT_CHANGE_PASSWORD]: {
-        searchableTitle: ej.Z.Messages.CHANGE_PASSWORD,
+        searchableTitles: [ej.Z.Messages.CHANGE_PASSWORD],
         section: eP.oAB.ACCOUNT,
         parent: eL.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION
       },
       [eL.s6.ACCOUNT_CONFIRM_PASSWORD]: {
-        searchableTitle: ej.Z.Messages.FORM_LABEL_CONFIRM_PASSWORD,
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_CONFIRM_PASSWORD],
         section: eP.oAB.ACCOUNT,
         parent: eL.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION
       },
       [eL.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION]: {
-        searchableTitle: ej.Z.Messages.SETTINGS_TWO_FA,
+        searchableTitles: [ej.Z.Messages.SETTINGS_TWO_FA],
         section: eP.oAB.ACCOUNT,
         parent: eL.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION
       },
       [eL.s6.ACCOUNT_ENABLE_2FA]: {
-        searchableTitle: ej.Z.Messages.TWO_FA_ENABLE,
+        searchableTitles: [ej.Z.Messages.TWO_FA_ENABLE],
         section: eP.oAB.ACCOUNT,
         parent: eL.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
       },
       [eL.s6.ACCOUNT_REMOVE_2FA]: {
-        searchableTitle: ej.Z.Messages.TWO_FA_REMOVE,
+        searchableTitles: [ej.Z.Messages.TWO_FA_REMOVE],
         section: eP.oAB.ACCOUNT,
         parent: eL.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
       },
       [eL.s6.ACCOUNT_VIEW_BACKUP_CODES]: {
-        searchableTitle: ej.Z.Messages.TWO_FA_BACKUP_CODE,
+        searchableTitles: [ej.Z.Messages.TWO_FA_BACKUP_CODE],
         section: eP.oAB.ACCOUNT,
         parent: eL.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
       },
       [eL.s6.ACCOUNT_SMS_BACKUP]: {
-        searchableTitle: ej.Z.Messages.MFA_SMS_AUTH,
+        searchableTitles: [ej.Z.Messages.MFA_SMS_AUTH],
         section: eP.oAB.ACCOUNT,
         parent: eL.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
       },
       [eL.s6.ACCOUNT_SECURITY_KEYS]: {
-        searchableTitle: ej.Z.Messages.TWO_FA_WEBAUTHN_REGISTER,
+        searchableTitles: [ej.Z.Messages.TWO_FA_WEBAUTHN_REGISTER],
         section: eP.oAB.ACCOUNT,
         parent: eL.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
       },
       [eL.s6.ACCOUNT_REMOVAL]: {
         section: eP.oAB.ACCOUNT,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVAL_SECTION,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVAL_SECTION],
         parent: eL.s6.ACCOUNT
       },
       [eL.s6.ACCOUNT_DISABLE_ACCOUNT]: {
         section: eP.oAB.ACCOUNT,
-        searchableTitle: ej.Z.Messages.DISABLE_ACCOUNT,
+        searchableTitles: [ej.Z.Messages.DISABLE_ACCOUNT],
         parent: eL.s6.ACCOUNT_REMOVAL
       },
       [eL.s6.ACCOUNT_DELETE_ACCOUNT]: {
         section: eP.oAB.ACCOUNT,
-        searchableTitle: ej.Z.Messages.DELETE_ACCOUNT,
+        searchableTitles: [ej.Z.Messages.DELETE_ACCOUNT],
         parent: eL.s6.ACCOUNT_DISABLE_ACCOUNT
       },
       [eL.s6.GAMES]: {
         section: eP.oAB.GAMES,
-        searchableTitle: ej.Z.Messages.GAMES,
+        searchableTitles: [ej.Z.Messages.GAMES],
         label: ej.Z.Messages.GAMES,
         ariaLabel: ej.Z.Messages.GAMES,
         element: ep.Z,
@@ -231,28 +231,28 @@ let eU = () => {
       },
       [eL.s6.GAMES_MY_GAMES]: {
         section: eP.oAB.GAMES,
-        searchableTitle: ej.Z.Messages.MY_GAMES,
+        searchableTitles: [ej.Z.Messages.MY_GAMES],
         parent: eL.s6.GAMES
       },
       [eL.s6.GAMES_CLIPS]: {
         section: eP.oAB.GAMES,
-        searchableTitle: ej.Z.Messages.CLIPS,
+        searchableTitles: [ej.Z.Messages.CLIPS],
         parent: eL.s6.GAMES
       },
       [eL.s6.GAMES_OVERLAY]: {
         section: eP.oAB.GAMES,
-        searchableTitle: ej.Z.Messages.OVERLAY,
+        searchableTitles: [ej.Z.Messages.OVERLAY],
         parent: eL.s6.GAMES
       },
       [eL.s6.GAMES_ACTIVITY_PRIVACY]: {
         section: eP.oAB.GAMES,
-        searchableTitle: ej.Z.Messages.ACTIVITY_PRIVACY,
+        searchableTitles: [ej.Z.Messages.ACTIVITY_PRIVACY],
         parent: eL.s6.GAMES
       },
       [eL.s6.PROFILE_CUSTOMIZATION]: {
         section: eP.oAB.PROFILE_CUSTOMIZATION,
         type: _.bT.WIDE,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_PROFILES,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_PROFILES],
         label: ej.Z.Messages.USER_SETTINGS_PROFILES,
         ariaLabel: ej.Z.Messages.USER_SETTINGS_PROFILES,
         element: P.Z,
@@ -271,65 +271,65 @@ let eU = () => {
       },
       [eL.s6.PROFILE_DISPLAY_NAME]: {
         section: eP.oAB.PROFILE_CUSTOMIZATION,
-        searchableTitle: ej.Z.Messages.DISPLAY_NAME,
+        searchableTitles: [ej.Z.Messages.DISPLAY_NAME],
         parent: eL.s6.PROFILE_CUSTOMIZATION
       },
       [eL.s6.PROFILE_USER_PROFILE]: {
         section: eP.oAB.PROFILE_CUSTOMIZATION,
-        searchableTitle: ej.Z.Messages.EDIT_PROFILE_CATEGORY_USER_PROFILE,
+        searchableTitles: [ej.Z.Messages.EDIT_PROFILE_CATEGORY_USER_PROFILE],
         parent: eL.s6.PROFILE_CUSTOMIZATION
       },
       [eL.s6.PROFILE_SERVER_PROFILES]: {
         section: eP.oAB.PROFILE_CUSTOMIZATION,
-        searchableTitle: ej.Z.Messages.EDIT_PROFILE_CATEGORY_GUILD_IDENTITY,
+        searchableTitles: [ej.Z.Messages.EDIT_PROFILE_CATEGORY_GUILD_IDENTITY],
         parent: eL.s6.PROFILE_CUSTOMIZATION
       },
       [eL.s6.PRIVACY_AND_SAFETY]: {
         section: eP.oAB.PRIVACY_AND_SAFETY,
         label: ej.Z.Messages.PRIVACY_AND_SAFETY,
-        searchableTitle: ej.Z.Messages.PRIVACY_AND_SAFETY,
+        searchableTitles: [ej.Z.Messages.PRIVACY_AND_SAFETY],
         ariaLabel: ej.Z.Messages.PRIVACY_AND_SAFETY,
         element: eN.Z
       },
       [eL.s6.PRIVACY_USER_SETTINGS]: {
         section: eP.oAB.PRIVACY_AND_SAFETY,
-        searchableTitle: ej.Z.Messages.PRIVACY_AND_SAFETY,
+        searchableTitles: [ej.Z.Messages.PRIVACY_AND_SAFETY],
         parent: eL.s6.PRIVACY_AND_SAFETY
       },
       [eL.s6.PRIVACY_SENSITIVE_MEDIA]: {
         section: eP.oAB.PRIVACY_AND_SAFETY,
-        searchableTitle: ej.Z.Messages.OBSCURED_CONTENT_SETTINGS_HEADER,
+        searchableTitles: [ej.Z.Messages.OBSCURED_CONTENT_SETTINGS_HEADER],
         parent: eL.s6.PRIVACY_USER_SETTINGS
       },
       [eL.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER]: {
         section: eP.oAB.PRIVACY_AND_SAFETY,
-        searchableTitle: ej.Z.Messages.SETTINGS_DM_SPAM_FILTER,
+        searchableTitles: [ej.Z.Messages.SETTINGS_DM_SPAM_FILTER],
         parent: eL.s6.PRIVACY_USER_SETTINGS
       },
       [eL.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS]: {
         section: eP.oAB.PRIVACY_AND_SAFETY,
-        searchableTitle: ej.Z.Messages.USER_DM_SETTINGS,
+        searchableTitles: [ej.Z.Messages.USER_DM_SETTINGS],
         parent: eL.s6.PRIVACY_USER_SETTINGS
       },
       [eL.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_DMS]: {
         section: eP.oAB.PRIVACY_AND_SAFETY,
-        searchableTitle: ej.Z.Messages.NEW_GUILDS_DM_ALLOWED,
+        searchableTitles: [ej.Z.Messages.NEW_GUILDS_DM_ALLOWED],
         parent: eL.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS
       },
       [eL.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_IOS]: {
         section: eP.oAB.PRIVACY_AND_SAFETY,
-        searchableTitle: ej.Z.Messages.NSFW_GUILDS_TOGGLE_HEADER,
+        searchableTitles: [ej.Z.Messages.NSFW_GUILDS_TOGGLE_HEADER],
         parent: eL.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS
       },
       [eL.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_MESSAGE_REQUESTS]: {
         section: eP.oAB.PRIVACY_AND_SAFETY,
-        searchableTitle: ej.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_HEADER,
+        searchableTitles: [ej.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_HEADER],
         parent: eL.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS,
         predicate: () => !ez
       },
       [eL.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_APPS]: {
         section: eP.oAB.PRIVACY_AND_SAFETY,
-        searchableTitle: ej.Z.Messages.NSFW_DM_COMMANDS_HEADER,
+        searchableTitles: [ej.Z.Messages.NSFW_DM_COMMANDS_HEADER],
         parent: eL.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS
       },
       [eL.s6.PRIVACY_SERVER_SPECIFIC_SETTINGS]: {
@@ -360,65 +360,65 @@ let eU = () => {
       },
       [eL.s6.PRIVACY_DATA_PRIVACY]: {
         section: eP.oAB.PRIVACY_AND_SAFETY,
-        searchableTitle: ej.Z.Messages.SETTINGS_DATA_PRIVACY_CONTROLS,
+        searchableTitles: [ej.Z.Messages.SETTINGS_DATA_PRIVACY_CONTROLS],
         parent: eL.s6.PRIVACY_USER_SETTINGS
       },
       [eL.s6.PRIVACY_DATA_IMPROVE_DISCORD]: {
         section: eP.oAB.PRIVACY_AND_SAFETY,
-        searchableTitle: ej.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE,
+        searchableTitles: [ej.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE],
         parent: eL.s6.PRIVACY_DATA_PRIVACY
       },
       [eL.s6.PRIVACY_DATA_PERSONALIZE]: {
         section: eP.oAB.PRIVACY_AND_SAFETY,
-        searchableTitle: ej.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE,
+        searchableTitles: [ej.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE],
         parent: eL.s6.PRIVACY_DATA_PRIVACY
       },
       [eL.s6.PRIVACY_DATA_QUESTS]: {
         section: eP.oAB.PRIVACY_AND_SAFETY,
-        searchableTitle: ej.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT,
+        searchableTitles: [ej.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT],
         parent: eL.s6.PRIVACY_DATA_PRIVACY
       },
       [eL.s6.PRIVACY_DATA_BASIC_SERVICE]: {
         section: eP.oAB.PRIVACY_AND_SAFETY,
         parent: eL.s6.PRIVACY_DATA_PRIVACY,
-        searchableTitle: eL.CF
+        searchableTitles: [eL.CF]
       },
       [eL.s6.PRIVACY_DATA_REQUEST]: {
         section: eP.oAB.PRIVACY_AND_SAFETY,
-        searchableTitle: ej.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_DOWNLOAD,
+        searchableTitles: [ej.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_DOWNLOAD],
         parent: eL.s6.PRIVACY_DATA_PRIVACY
       },
       [eL.s6.PRIVACY_STAFF_ONLY]: {
         section: eP.oAB.PRIVACY_AND_SAFETY,
-        searchableTitle: ej.Z.Messages.PRIVACY_SETTINGS_STAFF_ONLY_HEADER,
+        searchableTitles: [ej.Z.Messages.PRIVACY_SETTINGS_STAFF_ONLY_HEADER],
         parent: eL.s6.PRIVACY_USER_SETTINGS,
         predicate: () => eH
       },
       [eL.s6.PRIVACY_KEYWORD_FILTER]: {
         section: eP.oAB.PRIVACY_AND_SAFETY,
-        searchableTitle: ej.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_SEARCHABLE,
+        searchableTitles: [ej.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_SEARCHABLE],
         parent: eL.s6.PRIVACY_USER_SETTINGS,
         predicate: () => eY
       },
       [eL.s6.PRIVACY_TERMS_POLICY]: {
         section: eP.oAB.PRIVACY_AND_SAFETY,
         parent: eL.s6.PRIVACY_USER_SETTINGS,
-        searchableTitle: eL.CF
+        searchableTitles: [eL.CF]
       },
       [eL.s6.PRIVACY_SAFETY_ALERTS]: {
         section: eP.oAB.PRIVACY_AND_SAFETY,
-        searchableTitle: ej.Z.Messages.SAFETY_ALERTS_SETTING_TITLE,
+        searchableTitles: [ej.Z.Messages.SAFETY_ALERTS_SETTING_TITLE],
         parent: eL.s6.PRIVACY_USER_SETTINGS,
         predicate: () => ek
       },
       [eL.s6.PRIVACY_ACCOUNT_STANDING]: {
         section: eP.oAB.PRIVACY_AND_SAFETY,
-        searchableTitle: ej.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2,
+        searchableTitles: [ej.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2],
         parent: eL.s6.PRIVACY_AND_SAFETY
       },
       [eL.s6.PRIVACY_FAMILY_CENTER]: {
         section: eP.oAB.FAMILY_CENTER,
-        searchableTitle: ej.Z.Messages.FAMILY_CENTER_SETTINGS_TITLE,
+        searchableTitles: [ej.Z.Messages.FAMILY_CENTER_SETTINGS_TITLE],
         label: ej.Z.Messages.FAMILY_CENTER_SETTINGS_TITLE,
         ariaLabel: ej.Z.Messages.FAMILY_CENTER_SETTINGS_TITLE,
         element: er.Z,
@@ -431,13 +431,13 @@ let eU = () => {
       },
       [eL.s6.AUTHORIZED_APPS]: {
         section: eP.oAB.AUTHORIZED_APPS,
-        searchableTitle: ej.Z.Messages.AUTHORIZED_APPS,
+        searchableTitles: [ej.Z.Messages.AUTHORIZED_APPS],
         label: ej.Z.Messages.AUTHORIZED_APPS,
         element: et.Z
       },
       [eL.s6.SESSIONS]: {
         section: eP.oAB.SESSIONS,
-        searchableTitle: ej.Z.Messages.AUTH_SESSIONS,
+        searchableTitles: [ej.Z.Messages.AUTH_SESSIONS],
         label: ej.Z.Messages.AUTH_SESSIONS,
         ariaLabel: ej.Z.Messages.AUTH_SESSIONS,
         element: eO.Z,
@@ -450,7 +450,7 @@ let eU = () => {
       },
       [eL.s6.CONNECTIONS]: {
         section: eP.oAB.CONNECTIONS,
-        searchableTitle: ej.Z.Messages.CONNECTIONS,
+        searchableTitles: [ej.Z.Messages.CONNECTIONS],
         label: ej.Z.Messages.CONNECTIONS,
         ariaLabel: ej.Z.Messages.CONNECTIONS,
         element: ei.Z,
@@ -462,13 +462,13 @@ let eU = () => {
       },
       [eL.s6.CONNECTIONS_CONNECTED_ACCOUNTS]: {
         section: eP.oAB.CONNECTIONS,
-        searchableTitle: ej.Z.Messages.CONNECTED_ACCOUNTS,
+        searchableTitles: [ej.Z.Messages.CONNECTED_ACCOUNTS],
         parent: eL.s6.CONNECTIONS,
         element: ei.Z
       },
       [eL.s6.CLIPS]: {
         section: eP.oAB.CLIPS,
-        searchableTitle: ej.Z.Messages.CLIPS,
+        searchableTitles: [ej.Z.Messages.CLIPS],
         label: ej.Z.Messages.CLIPS,
         ariaLabel: ej.Z.Messages.CLIPS,
         icon: eF ? (0, n.jsx)(N.Z, {}) : void 0,
@@ -477,28 +477,28 @@ let eU = () => {
       },
       [eL.s6.FRIEND_REQUESTS]: {
         section: eP.oAB.FRIEND_REQUESTS,
-        searchableTitle: ej.Z.Messages.FRIEND_REQUESTS,
+        searchableTitles: [ej.Z.Messages.FRIEND_REQUESTS],
         label: ej.Z.Messages.FRIEND_REQUESTS,
         element: eo.Z
       },
       [eL.s6.PREMIUM]: {
         section: eP.oAB.PREMIUM,
         ariaLabel: ej.Z.Messages.PREMIUM,
-        searchableTitle: ej.Z.Messages.PREMIUM,
+        searchableTitles: [ej.Z.Messages.PREMIUM],
         label: ej.Z.Messages.PREMIUM,
         element: W.Z,
         className: ev.premiumTab
       },
       [eL.s6.GUILD_BOOSTING]: {
         section: eP.oAB.GUILD_BOOSTING,
-        searchableTitle: ej.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TITLE,
+        searchableTitles: [ej.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TITLE],
         label: ej.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TITLE,
         element: eI.Z
       },
       [eL.s6.SUBSCRIPTIONS]: {
         section: eP.oAB.SUBSCRIPTIONS,
         ariaLabel: ej.Z.Messages.SUBSCRIPTIONS_TITLE,
-        searchableTitle: ej.Z.Messages.SUBSCRIPTIONS_TITLE,
+        searchableTitles: [ej.Z.Messages.SUBSCRIPTIONS_TITLE],
         label: ej.Z.Messages.SUBSCRIPTIONS_TITLE,
         element: D.Z,
         icon: x ? (0, n.jsx)(r.CircleExclamationPointIcon, {
@@ -508,12 +508,12 @@ let eU = () => {
       },
       [eL.s6.SUBSCRIPTIONS_CREDITS]: {
         section: eP.oAB.SUBSCRIPTIONS,
-        searchableTitle: ej.Z.Messages.BILLING_SUBSCRIPTION_CREDIT,
+        searchableTitles: [ej.Z.Messages.BILLING_SUBSCRIPTION_CREDIT],
         parent: eL.s6.SUBSCRIPTIONS
       },
       [eL.s6.GIFT_INVENTORY]: {
         section: eP.oAB.INVENTORY,
-        searchableTitle: ej.Z.Messages.GIFT_INVENTORY,
+        searchableTitles: [ej.Z.Messages.GIFT_INVENTORY],
         label: ej.Z.Messages.GIFT_INVENTORY,
         element: ed.Z,
         ariaLabel: ej.Z.Messages.GIFT_INVENTORY,
@@ -521,54 +521,54 @@ let eU = () => {
       },
       [eL.s6.GIFT_NITRO]: {
         section: eP.oAB.INVENTORY,
-        searchableTitle: ej.Z.Messages.GIFT_NITRO,
+        searchableTitles: [ej.Z.Messages.GIFT_NITRO],
         parent: eL.s6.GIFT_INVENTORY,
         predicate: () => !ew && eK
       },
       [eL.s6.GIFT_CODE_REDEMPTION]: {
         section: eP.oAB.INVENTORY,
-        searchableTitle: ej.Z.Messages.GIFT_INVENTORY_REDEEM_CODES,
+        searchableTitles: [ej.Z.Messages.GIFT_INVENTORY_REDEEM_CODES],
         parent: eL.s6.GIFT_INVENTORY,
         predicate: () => !ew
       },
       [eL.s6.GIFT_INVENTORY_QUESTS]: {
         section: eP.oAB.INVENTORY,
-        searchableTitle: ej.Z.Messages.QUESTS,
+        searchableTitles: [ej.Z.Messages.QUESTS],
         parent: eL.s6.GIFT_INVENTORY,
         predicate: () => eW
       },
       [eL.s6.GIFT_INVENTORY_LIST]: {
         section: eP.oAB.INVENTORY,
-        searchableTitle: ej.Z.Messages.GIFT_INVENTORY_GIFTS_YOU_PURCHASED,
+        searchableTitles: [ej.Z.Messages.GIFT_INVENTORY_GIFTS_YOU_PURCHASED],
         parent: eL.s6.GIFT_INVENTORY,
         predicate: () => !ew
       },
       [eL.s6.GIFT_BLOCKED_PAYMENTS]: {
         section: eP.oAB.INVENTORY,
-        searchableTitle: ej.Z.Messages.REGION_BLOCKED_PAYMENTS_HEADER,
+        searchableTitles: [ej.Z.Messages.REGION_BLOCKED_PAYMENTS_HEADER],
         parent: eL.s6.GIFT_INVENTORY,
         predicate: () => ew
       },
       [eL.s6.BILLING]: {
         section: eP.oAB.BILLING,
-        searchableTitle: ej.Z.Messages.BILLING,
+        searchableTitles: [ej.Z.Messages.BILLING],
         label: ej.Z.Messages.BILLING,
         ariaLabel: ej.Z.Messages.BILLING,
         element: en.Z
       },
       [eL.s6.BILLING_PAYMENT_METHODS]: {
         section: eP.oAB.BILLING,
-        searchableTitle: ej.Z.Messages.BILLING_PAYMENT_SOURCES,
+        searchableTitles: [ej.Z.Messages.BILLING_PAYMENT_SOURCES],
         parent: eL.s6.BILLING
       },
       [eL.s6.BILLING_TRANSACTION_HISTORY]: {
         section: eP.oAB.BILLING,
-        searchableTitle: ej.Z.Messages.BILLING_PAYMENT_HISTORY,
+        searchableTitles: [ej.Z.Messages.BILLING_PAYMENT_HISTORY],
         parent: eL.s6.BILLING
       },
       [eL.s6.APPEARANCE]: {
         section: eP.oAB.APPEARANCE,
-        searchableTitle: ej.Z.Messages.APPEARANCE,
+        searchableTitles: [ej.Z.Messages.APPEARANCE],
         label: ej.Z.Messages.APPEARANCE,
         ariaLabel: ej.Z.Messages.APPEARANCE,
         element: es.Z,
@@ -579,89 +579,89 @@ let eU = () => {
       },
       [eL.s6.APPEARANCE_THEME]: {
         section: eP.oAB.APPEARANCE,
-        searchableTitle: ej.Z.Messages.THEME,
+        searchableTitles: [ej.Z.Messages.THEME],
         parent: eL.s6.APPEARANCE
       },
       [eL.s6.APPEARANCE_COLOR]: {
         section: eP.oAB.APPEARANCE,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_APPEARANCE_GRADIENT_THEME_TITLE,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_APPEARANCE_GRADIENT_THEME_TITLE],
         parent: eL.s6.APPEARANCE_THEME
       },
       [eL.s6.APPEARANCE_ICON]: {
         section: eP.oAB.APPEARANCE,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_APPEARANCE_IN_APP_ICON_TITLE,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_APPEARANCE_IN_APP_ICON_TITLE],
         parent: eL.s6.APPEARANCE_THEME
       },
       [eL.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT]: {
         section: eP.oAB.APPEARANCE,
-        searchableTitle: ej.Z.Messages.MESSAGE_DISPLAY_MODE_LABEL,
+        searchableTitles: [ej.Z.Messages.MESSAGE_DISPLAY_MODE_LABEL],
         parent: eL.s6.APPEARANCE
       },
       [eL.s6.APPEARANCE_SCALING_SPACING]: {
         section: eP.oAB.APPEARANCE,
-        searchableTitle: ej.Z.Messages.ACCESSIBILITY_FONT_SCALING_LABEL,
+        searchableTitles: [ej.Z.Messages.ACCESSIBILITY_FONT_SCALING_LABEL],
         parent: eL.s6.APPEARANCE
       },
       [eL.s6.ACCESSIBILITY]: {
         section: eP.oAB.ACCESSIBILITY,
-        searchableTitle: ej.Z.Messages.ACCESSIBILITY,
+        searchableTitles: [ej.Z.Messages.ACCESSIBILITY],
         label: ej.Z.Messages.ACCESSIBILITY,
         ariaLabel: ej.Z.Messages.ACCESSIBILITY,
         element: q.Z
       },
       [eL.s6.ACCESSIBILITY_SATURATION]: {
         section: eP.oAB.ACCESSIBILITY,
-        searchableTitle: ej.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_TITLE,
+        searchableTitles: [ej.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_TITLE],
         parent: eL.s6.ACCESSIBILITY
       },
       [eL.s6.ACCESSIBILITY_LINK_DECORATIONS]: {
         section: eP.oAB.ACCESSIBILITY,
-        searchableTitle: ej.Z.Messages.ACCESSIBILITY_SETTINGS_ALWAYS_SHOW_LINK_DECORATIONS_LABEL,
+        searchableTitles: [ej.Z.Messages.ACCESSIBILITY_SETTINGS_ALWAYS_SHOW_LINK_DECORATIONS_LABEL],
         parent: eL.s6.ACCESSIBILITY
       },
       [eL.s6.ACCESSIBILITY_ROLE_STYLE]: {
         section: eP.oAB.ACCESSIBILITY,
-        searchableTitle: ej.Z.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_TITLE,
+        searchableTitles: [ej.Z.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_TITLE],
         parent: eL.s6.ACCESSIBILITY
       },
       [eL.s6.ACCESSIBILITY_TAGS]: {
         section: eP.oAB.ACCESSIBILITY,
-        searchableTitle: ej.Z.Messages.ACCESSIBILITY_SETTINGS_TAGS_TITLE,
+        searchableTitles: [ej.Z.Messages.ACCESSIBILITY_SETTINGS_TAGS_TITLE],
         parent: eL.s6.ACCESSIBILITY
       },
       [eL.s6.ACCESSIBILITY_SYNC_PROFILE_THEME]: {
         section: eP.oAB.ACCESSIBILITY,
-        searchableTitle: ej.Z.Messages.ACCESSIBILITY_SETTINGS_PROFILE_COLORS_TITLE,
+        searchableTitles: [ej.Z.Messages.ACCESSIBILITY_SETTINGS_PROFILE_COLORS_TITLE],
         parent: eL.s6.ACCESSIBILITY
       },
       [eL.s6.ACCESSIBILITY_CONTRAST]: {
         section: eP.oAB.ACCESSIBILITY,
-        searchableTitle: ej.Z.Messages.ACCESSIBILITY_SETTINGS_CONTRAST,
+        searchableTitles: [ej.Z.Messages.ACCESSIBILITY_SETTINGS_CONTRAST],
         parent: eL.s6.ACCESSIBILITY
       },
       [eL.s6.ACCESSIBILITY_REDUCED_MOTION]: {
         section: eP.oAB.ACCESSIBILITY,
-        searchableTitle: ej.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION,
+        searchableTitles: [ej.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION],
         parent: eL.s6.ACCESSIBILITY
       },
       [eL.s6.ACCESSIBILITY_STICKERS]: {
         section: eP.oAB.ACCESSIBILITY,
-        searchableTitle: ej.Z.Messages.STICKERS_AUTO_PLAY_HEADING,
+        searchableTitles: [ej.Z.Messages.STICKERS_AUTO_PLAY_HEADING],
         parent: eL.s6.ACCESSIBILITY
       },
       [eL.s6.ACCESSIBILITY_MESSAGES]: {
         section: eP.oAB.ACCESSIBILITY,
-        searchableTitle: ej.Z.Messages.FORM_LABEL_ACCESSIBILITY_CHAT_INPUT,
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_ACCESSIBILITY_CHAT_INPUT],
         parent: eL.s6.ACCESSIBILITY
       },
       [eL.s6.ACCESSIBILITY_TEXT_TO_SPEECH]: {
         section: eP.oAB.ACCESSIBILITY,
-        searchableTitle: ej.Z.Messages.FORM_LABEL_TTS,
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_TTS],
         parent: eL.s6.ACCESSIBILITY
       },
       [eL.s6.VOICE_AND_VIDEO]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.VOICE_AND_VIDEO,
+        searchableTitles: [ej.Z.Messages.VOICE_AND_VIDEO],
         label: ej.Z.Messages.VOICE_AND_VIDEO,
         ariaLabel: ej.Z.Messages.VOICE_AND_VIDEO,
         element: eD.Z,
@@ -669,149 +669,149 @@ let eU = () => {
       },
       [eL.s6.VOICE_AND_VIDEO_DEVICES]: {
         section: eP.oAB.VOICE,
-        searchableTitle: "".concat(ej.Z.Messages.FORM_LABEL_INPUT_DEVICE, " ").concat(ej.Z.Messages.FORM_LABEL_OUTPUT_DEVICE),
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_INPUT_DEVICE, ej.Z.Messages.FORM_LABEL_OUTPUT_DEVICE],
         parent: eL.s6.VOICE_AND_VIDEO
       },
       [eL.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS]: {
         section: eP.oAB.VOICE,
-        searchableTitle: "".concat(ej.Z.Messages.FORM_LABEL_INPUT_VOLUME, " ").concat(ej.Z.Messages.FORM_LABEL_OUTPUT_VOLUME),
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_INPUT_VOLUME, ej.Z.Messages.FORM_LABEL_OUTPUT_VOLUME],
         parent: eL.s6.VOICE_AND_VIDEO
       },
       [eL.s6.VOICE_AND_VIDEO_MIC_TEST]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_TITLE,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_TITLE],
         parent: eL.s6.VOICE_AND_VIDEO
       },
       [eL.s6.VOICE_AND_VIDEO_INPUT_MODE]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.FORM_LABEL_INPUT_MODE,
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_INPUT_MODE],
         parent: eL.s6.VOICE_AND_VIDEO
       },
       [eL.s6.VOICE_AND_VIDEO_SENSITIVITY]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.FORM_LABEL_INPUT_SENSITIVTY,
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_INPUT_SENSITIVTY],
         parent: eL.s6.VOICE_AND_VIDEO
       },
       [eL.s6.VOICE_AND_VIDEO_SOUNDS]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.CALL_SOUNDS_SETTINGS,
+        searchableTitles: [ej.Z.Messages.CALL_SOUNDS_SETTINGS],
         parent: eL.s6.VOICE_AND_VIDEO
       },
       [eL.s6.VOICE_AND_VIDEO_SOUNDBOARD]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.SOUNDBOARD,
+        searchableTitles: [ej.Z.Messages.SOUNDBOARD],
         parent: eL.s6.VOICE_AND_VIDEO_SOUNDS
       },
       [eL.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.CALL_SOUNDS_SETTINGS,
+        searchableTitles: [ej.Z.Messages.CALL_SOUNDS_SETTINGS],
         parent: eL.s6.VOICE_AND_VIDEO_SOUNDS
       },
       [eL.s6.VOICE_AND_VIDEO_VIDEO]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.VIDEO_SETTINGS,
+        searchableTitles: [ej.Z.Messages.VIDEO_SETTINGS],
         parent: eL.s6.VOICE_AND_VIDEO
       },
       [eL.s6.VOICE_AND_VIDEO_VIDEO_CAMERA]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.FORM_LABEL_VIDEO_DEVICE,
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_VIDEO_DEVICE],
         parent: eL.s6.VOICE_AND_VIDEO_VIDEO,
         predicate: () => U.Z.supports(ef.AN.VIDEO)
       },
       [eL.s6.VOICE_AND_VIDEO_ADVANCED]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.SETTINGS_ADVANCED,
+        searchableTitles: [ej.Z.Messages.SETTINGS_ADVANCED],
         parent: eL.s6.VOICE_AND_VIDEO
       },
       [eL.s6.VOICE_AND_VIDEO_ADVANCED_CODECS]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_VOICE_VIDEO_CODEC_TITLE,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_VOICE_VIDEO_CODEC_TITLE],
         parent: eL.s6.VOICE_AND_VIDEO_ADVANCED
       },
       [eL.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.FORM_LABEL_VOICE_PROCESSING,
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_VOICE_PROCESSING],
         parent: eL.s6.VOICE_AND_VIDEO_ADVANCED
       },
       [eL.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.ECHO_CANCELLATION,
+        searchableTitles: [ej.Z.Messages.ECHO_CANCELLATION],
         parent: eL.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
         predicate: () => U.Z.getEchoCancellation()
       },
       [eL.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.NOISE_SUPPRESSION,
+        searchableTitles: [ej.Z.Messages.NOISE_SUPPRESSION],
         parent: eL.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
         predicate: () => U.Z.isNoiseSuppressionSupported()
       },
       [eL.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.ADVANCED_VOICE_ACTIVITY,
+        searchableTitles: [ej.Z.Messages.ADVANCED_VOICE_ACTIVITY],
         parent: eL.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
         predicate: () => U.Z.isAdvancedVoiceActivitySupported()
       },
       [eL.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.AUTOMATIC_GAIN_CONTROL,
+        searchableTitles: [ej.Z.Messages.AUTOMATIC_GAIN_CONTROL],
         parent: eL.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
         predicate: () => U.Z.isAutomaticGainControlSupported()
       },
       [eL.s6.VOICE_AND_VIDEO_ADVANCED_QOS]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.FORM_LABEL_QOS,
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_QOS],
         parent: eL.s6.VOICE_AND_VIDEO_ADVANCED,
         predicate: () => U.Z.supports(ef.AN.QOS)
       },
       [eL.s6.VOICE_AND_VIDEO_ADVANCED_ATTENUATION]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.FORM_LABEL_ATTENUATION,
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_ATTENUATION],
         parent: eL.s6.VOICE_AND_VIDEO_ADVANCED,
         predicate: () => U.Z.supports(ef.AN.ATTENUATION)
       },
       [eL.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.FORM_LABEL_SUBSYSTEM,
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_SUBSYSTEM],
         parent: eL.s6.VOICE_AND_VIDEO_ADVANCED,
         predicate: () => U.Z.supports(ef.AN.LEGACY_AUDIO_SUBSYSTEM) || U.Z.supports(ef.AN.EXPERIMENTAL_AUDIO_SUBSYSTEM)
       },
       [eL.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.FORM_LABEL_VOICE_DIAGNOSTICS,
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_VOICE_DIAGNOSTICS],
         parent: eL.s6.VOICE_AND_VIDEO_ADVANCED,
         predicate: () => F.isPlatformEmbedded
       },
       [eL.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.FORM_LABEL_DEBUG,
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_DEBUG],
         parent: eL.s6.VOICE_AND_VIDEO_ADVANCED,
         predicate: () => F.isPlatformEmbedded && U.Z.supports(ef.AN.DEBUG_LOGGING) && null != T.Z.fileManager.readLogFiles
       },
       [eL.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.FORM_CHECKBOX_AEC_DUMP,
+        searchableTitles: [ej.Z.Messages.FORM_CHECKBOX_AEC_DUMP],
         parent: eL.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
         predicate: () => U.Z.isAecDumpSupported()
       },
       [eL.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.FORM_CHECKBOX_CONNECTION_LOG,
+        searchableTitles: [ej.Z.Messages.FORM_CHECKBOX_CONNECTION_LOG],
         parent: eL.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
         predicate: () => ("canary" === V.ZP.releaseChannel || "development" === V.ZP.releaseChannel) && eH && U.Z.supports(ef.AN.CONNECTION_REPLAY)
       },
       [eL.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.FORM_CHECKBOX_DEBUG_LOGGING,
+        searchableTitles: [ej.Z.Messages.FORM_CHECKBOX_DEBUG_LOGGING],
         parent: eL.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING
       },
       [eL.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS]: {
         section: eP.oAB.VOICE,
-        searchableTitle: ej.Z.Messages.RESET_VOICE_SETTINGS,
+        searchableTitles: [ej.Z.Messages.RESET_VOICE_SETTINGS],
         parent: eL.s6.VOICE_AND_VIDEO_ADVANCED
       },
       [eL.s6.POGGERMODE]: {
         section: eP.oAB.POGGERMODE,
-        searchableTitle: ej.Z.Messages.POGGERMODE,
+        searchableTitles: [ej.Z.Messages.POGGERMODE],
         label: ej.Z.Messages.POGGERMODE,
         ariaLabel: ej.Z.Messages.POGGERMODE,
         element: M.Z,
@@ -824,284 +824,284 @@ let eU = () => {
       },
       [eL.s6.CHAT]: {
         section: eP.oAB.TEXT,
-        searchableTitle: ej.Z.Messages.CHAT,
+        searchableTitles: [ej.Z.Messages.CHAT],
         label: ej.Z.Messages.CHAT,
         ariaLabel: ej.Z.Messages.CHAT,
         element: eh.Z
       },
       [eL.s6.CHAT_INLINE_MEDIA]: {
         section: eP.oAB.TEXT,
-        searchableTitle: ej.Z.Messages.INLINE_MEDIA_LABEL,
+        searchableTitles: [ej.Z.Messages.INLINE_MEDIA_LABEL],
         parent: eL.s6.CHAT
       },
       [eL.s6.CHAT_INLINE_MEDIA_LINKS]: {
         section: eP.oAB.TEXT,
-        searchableTitle: ej.Z.Messages.INLINE_EMBED_MEDIA,
+        searchableTitles: [ej.Z.Messages.INLINE_EMBED_MEDIA],
         parent: eL.s6.CHAT_INLINE_MEDIA
       },
       [eL.s6.CHAT_INLINE_MEDIA_UPLOADS]: {
         section: eP.oAB.TEXT,
-        searchableTitle: ej.Z.Messages.INLINE_ATTACHMENT_MEDIA,
+        searchableTitles: [ej.Z.Messages.INLINE_ATTACHMENT_MEDIA],
         parent: eL.s6.CHAT_INLINE_MEDIA
       },
       [eL.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS]: {
         section: eP.oAB.TEXT,
-        searchableTitle: ej.Z.Messages.IMAGE_DESCRIPTION,
+        searchableTitles: [ej.Z.Messages.IMAGE_DESCRIPTION],
         parent: eL.s6.CHAT_INLINE_MEDIA
       },
       [eL.s6.CHAT_EMBEDS]: {
         section: eP.oAB.TEXT,
-        searchableTitle: ej.Z.Messages.RENDER_EMBEDS_LABEL,
+        searchableTitles: [ej.Z.Messages.RENDER_EMBEDS_LABEL],
         parent: eL.s6.CHAT
       },
       [eL.s6.CHAT_EMBEDS_LINK_PREVIEWS]: {
         section: eP.oAB.TEXT,
-        searchableTitle: ej.Z.Messages.RENDER_EMBEDS,
+        searchableTitles: [ej.Z.Messages.RENDER_EMBEDS],
         parent: eL.s6.CHAT_EMBEDS
       },
       [eL.s6.CHAT_EMOJI]: {
         section: eP.oAB.TEXT,
-        searchableTitle: ej.Z.Messages.EMOJI,
+        searchableTitles: [ej.Z.Messages.EMOJI],
         parent: eL.s6.CHAT
       },
       [eL.s6.CHAT_EMOJI_REACTIONS]: {
         section: eP.oAB.TEXT,
-        searchableTitle: ej.Z.Messages.RENDER_REACTIONS,
+        searchableTitles: [ej.Z.Messages.RENDER_REACTIONS],
         parent: eL.s6.CHAT_EMOJI
       },
       [eL.s6.CHAT_EMOJI_EMOTICONS]: {
         section: eP.oAB.TEXT,
-        searchableTitle: ej.Z.Messages.CONVERT_EMOTICONS,
+        searchableTitles: [ej.Z.Messages.CONVERT_EMOTICONS],
         parent: eL.s6.CHAT_EMOJI
       },
       [eL.s6.CHAT_STICKERS]: {
         section: eP.oAB.TEXT,
-        searchableTitle: ej.Z.Messages.STICKERS_AUTO_PLAY_HEADING,
+        searchableTitles: [ej.Z.Messages.STICKERS_AUTO_PLAY_HEADING],
         parent: eL.s6.CHAT
       },
       [eL.s6.CHAT_STICKERS_SUGGESTIONS]: {
         section: eP.oAB.TEXT,
-        searchableTitle: ej.Z.Messages.AUTO_SUGGEST_STICKERS,
+        searchableTitles: [ej.Z.Messages.AUTO_SUGGEST_STICKERS],
         parent: eL.s6.CHAT_STICKERS
       },
       [eL.s6.CHAT_STICKERS_AUTOCOMPLETE]: {
         section: eP.oAB.TEXT,
-        searchableTitle: ej.Z.Messages.STICKERS_IN_AUTOCOMPLETE,
+        searchableTitles: [ej.Z.Messages.STICKERS_IN_AUTOCOMPLETE],
         parent: eL.s6.CHAT_STICKERS
       },
       [eL.s6.CHAT_TEXT_BOX]: {
         section: eP.oAB.TEXT,
-        searchableTitle: ej.Z.Messages.FORM_LABEL_USE_RICH_CHAT_BOX,
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_USE_RICH_CHAT_BOX],
         parent: eL.s6.CHAT
       },
       [eL.s6.CHAT_TEXT_BOX_PREVIEW]: {
         section: eP.oAB.TEXT,
-        searchableTitle: ej.Z.Messages.PREVIEW_MARKDOWN_DESCRIPTION,
+        searchableTitles: [ej.Z.Messages.PREVIEW_MARKDOWN_DESCRIPTION],
         parent: eL.s6.CHAT_TEXT_BOX
       },
       [eL.s6.CHAT_THREADS]: {
         section: eP.oAB.TEXT,
-        searchableTitle: ej.Z.Messages.THREADS,
+        searchableTitles: [ej.Z.Messages.THREADS],
         parent: eL.s6.CHAT
       },
       [eL.s6.CHAT_THREADS_SPLIT_VIEW]: {
         section: eP.oAB.TEXT,
-        searchableTitle: ej.Z.Messages.USE_THREADS_SIDEBAR_DESCRIPTION,
+        searchableTitles: [ej.Z.Messages.USE_THREADS_SIDEBAR_DESCRIPTION],
         parent: eL.s6.CHAT_THREADS
       },
       [eL.s6.CHAT_SPOILERS]: {
         section: eP.oAB.TEXT,
-        searchableTitle: ej.Z.Messages.SHOW_SPOILER_CONTENT,
+        searchableTitles: [ej.Z.Messages.SHOW_SPOILER_CONTENT],
         parent: eL.s6.CHAT
       },
       [eL.s6.NOTIFICATIONS]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: ej.Z.Messages.NOTIFICATIONS,
+        searchableTitles: [ej.Z.Messages.NOTIFICATIONS],
         label: ej.Z.Messages.NOTIFICATIONS,
         ariaLabel: ej.Z.Messages.NOTIFICATIONS,
         element: eS.Z
       },
       [eL.s6.NOTIFICATIONS_ENABLE_DESKTOP]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: ej.Z.Messages.DESKTOP_NOTIFICATIONS_ENABLE,
+        searchableTitles: [ej.Z.Messages.DESKTOP_NOTIFICATIONS_ENABLE],
         parent: eL.s6.NOTIFICATIONS
       },
       [eL.s6.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: "Mention on all messages",
+        searchableTitles: ["Mention on all messages"],
         parent: eL.s6.NOTIFICATIONS
       },
       [eL.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_LABEL,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_LABEL],
         parent: eL.s6.NOTIFICATIONS
       },
       [eL.s6.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_FLASH_LABEL,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_FLASH_LABEL],
         parent: eL.s6.NOTIFICATIONS,
         predicate: () => (0, F.isWindows)()
       },
       [eL.s6.NOTIFICATIONS_UNREAD_SETTINGS]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: ej.Z.Messages.NOTIF_MIGRATION_SETTINGS_TITLE,
+        searchableTitles: [ej.Z.Messages.NOTIF_MIGRATION_SETTINGS_TITLE],
         parent: eL.s6.NOTIFICATIONS
       },
       [eL.s6.NOTIFICATIONS_NEW_SETTINGS]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: "New Notification Settings (Advancd, Staff Only)",
+        searchableTitles: ["New Notification Settings (Advancd, Staff Only)"],
         parent: eL.s6.NOTIFICATIONS,
         predicate: () => !1
       },
       [eL.s6.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: "Restore most recent snapshot",
+        searchableTitles: ["Restore most recent snapshot"],
         parent: eL.s6.NOTIFICATIONS_NEW_SETTINGS,
         predicate: () => !1
       },
       [eL.s6.NOTIFICATIONS_LAUNCH_MIGRATION]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: "Launch Migration",
+        searchableTitles: ["Launch Migration"],
         parent: eL.s6.NOTIFICATIONS_NEW_SETTINGS,
         predicate: () => !1
       },
       [eL.s6.NOTIFICATIONS_TOGGLE_NEW_SYSTEM]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: "Toggle new system on/off",
+        searchableTitles: ["Toggle new system on/off"],
         parent: eL.s6.NOTIFICATIONS_NEW_SETTINGS,
         predicate: () => !1
       },
       [eL.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: ej.Z.Messages.FORM_LABEL_PUSH_AFK_TIMEOUT,
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_PUSH_AFK_TIMEOUT],
         parent: eL.s6.NOTIFICATIONS
       },
       [eL.s6.NOTIFICATIONS_TEXT_TO_SPEECH]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: ej.Z.Messages.FORM_LABEL_TTS,
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_TTS],
         parent: eL.s6.NOTIFICATIONS
       },
       [eL.s6.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: ej.Z.Messages.GUILD_COMMUNITY_ALERTS_HEADER,
+        searchableTitles: [ej.Z.Messages.GUILD_COMMUNITY_ALERTS_HEADER],
         parent: eL.s6.NOTIFICATIONS
       },
       [eL.s6.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: ej.Z.Messages.GUILD_COMMUNITY_ALERTS_NAG_HEADER,
+        searchableTitles: [ej.Z.Messages.GUILD_COMMUNITY_ALERTS_NAG_HEADER],
         parent: eL.s6.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS
       },
       [eL.s6.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: ej.Z.Messages.GUILD_COMMUNITY_ALERTS_PUSH_HEADER,
+        searchableTitles: [ej.Z.Messages.GUILD_COMMUNITY_ALERTS_PUSH_HEADER],
         parent: eL.s6.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS
       },
       [eL.s6.NOTIFICATIONS_SOUNDS]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: ej.Z.Messages.SOUNDS,
+        searchableTitles: [ej.Z.Messages.SOUNDS],
         parent: eL.s6.NOTIFICATIONS
       },
       [eL.s6.NOTIFICATIONS_EMAILS]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS],
         parent: eL.s6.NOTIFICATIONS
       },
       [eL.s6.NOTIFICATIONS_EMAILS_COMMUNICATION]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_COMMUNICATION,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_COMMUNICATION],
         parent: eL.s6.NOTIFICATIONS_EMAILS
       },
       [eL.s6.NOTIFICATIONS_EMAILS_SOCIAL]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_SOCIAL,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_SOCIAL],
         parent: eL.s6.NOTIFICATIONS_EMAILS
       },
       [eL.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_UPDATES_AND_ANNOUNCEMENTS,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_UPDATES_AND_ANNOUNCEMENTS],
         parent: eL.s6.NOTIFICATIONS_EMAILS
       },
       [eL.s6.NOTIFICATIONS_EMAILS_TIPS]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_TIPS,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_TIPS],
         parent: eL.s6.NOTIFICATIONS_EMAILS
       },
       [eL.s6.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_RECOMMENDATIONS_AND_EVENTS,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_RECOMMENDATIONS_AND_EVENTS],
         parent: eL.s6.NOTIFICATIONS_EMAILS
       },
       [eL.s6.NOTIFICATIONS_EMAILS_UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS]: {
         section: eP.oAB.NOTIFICATIONS,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS_UNSUB_MARKETING,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS_UNSUB_MARKETING],
         parent: eL.s6.NOTIFICATIONS_EMAILS
       },
       [eL.s6.KEYBINDS]: {
         section: eP.oAB.KEYBINDS,
-        searchableTitle: ej.Z.Messages.KEYBINDS,
+        searchableTitles: [ej.Z.Messages.KEYBINDS],
         label: ej.Z.Messages.KEYBINDS,
         element: e_.Z
       },
       [eL.s6.LANGUAGE]: {
         section: eP.oAB.LOCALE,
-        searchableTitle: ej.Z.Messages.LANGUAGE,
+        searchableTitles: [ej.Z.Messages.LANGUAGE],
         label: ej.Z.Messages.LANGUAGE,
         element: eT.Z
       },
       [eL.s6.WINDOW_SETTINGS]: {
         section: eP.oAB.WINDOWS,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_WINDOWS_SETTINGS,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_WINDOWS_SETTINGS],
         label: ej.Z.Messages.USER_SETTINGS_WINDOWS_SETTINGS,
         element: eR.Z,
         predicate: () => F.isPlatformEmbedded && (0, F.isWindows)()
       },
       [eL.s6.LINUX_SETTINGS]: {
         section: eP.oAB.LINUX,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_LINUX_SETTINGS,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_LINUX_SETTINGS],
         label: ej.Z.Messages.USER_SETTINGS_LINUX_SETTINGS,
         element: eB,
         predicate: () => F.isPlatformEmbedded && (0, F.isLinux)()
       },
       [eL.s6.STREAMER_MODE]: {
         section: eP.oAB.STREAMER_MODE,
-        searchableTitle: ej.Z.Messages.STREAMER_MODE,
+        searchableTitles: [ej.Z.Messages.STREAMER_MODE],
         label: ej.Z.Messages.STREAMER_MODE,
         ariaLabel: ej.Z.Messages.STREAMER_MODE,
         element: em.Z
       },
       [eL.s6.STREAMER_MODE_INTEGRATIONS]: {
         section: eP.oAB.STREAMER_MODE,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_STREAMER_NOTICE_TITLE,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_STREAMER_NOTICE_TITLE],
         parent: eL.s6.STREAMER_MODE
       },
       [eL.s6.STREAMER_MODE_ENABLE]: {
         section: eP.oAB.STREAMER_MODE,
-        searchableTitle: ej.Z.Messages.ENABLE_STREAMER_MODE_LABEL,
+        searchableTitles: [ej.Z.Messages.ENABLE_STREAMER_MODE_LABEL],
         parent: eL.s6.STREAMER_MODE
       },
       [eL.s6.STREAMER_MODE_HIDE_PERSONAL_INFORMATION]: {
         section: eP.oAB.STREAMER_MODE,
-        searchableTitle: ej.Z.Messages.HIDE_PERSONAL_INFORMATION_LABEL,
+        searchableTitles: [ej.Z.Messages.HIDE_PERSONAL_INFORMATION_LABEL],
         parent: eL.s6.STREAMER_MODE
       },
       [eL.s6.STREAMER_MODE_HIDE_INVITE_LINKS]: {
         section: eP.oAB.STREAMER_MODE,
-        searchableTitle: ej.Z.Messages.HIDE_INSTANT_INVITES_LABEL,
+        searchableTitles: [ej.Z.Messages.HIDE_INSTANT_INVITES_LABEL],
         parent: eL.s6.STREAMER_MODE
       },
       [eL.s6.STREAMER_MODE_DISABLE_SOUNDS]: {
         section: eP.oAB.STREAMER_MODE,
-        searchableTitle: ej.Z.Messages.FORM_LABEL_MOBILE_NOTIFICATIONS_SOUND_DISABLE,
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_MOBILE_NOTIFICATIONS_SOUND_DISABLE],
         parent: eL.s6.STREAMER_MODE
       },
       [eL.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS]: {
         section: eP.oAB.STREAMER_MODE,
-        searchableTitle: ej.Z.Messages.DISABLE_NOTIFICATIONS_LABEL,
+        searchableTitles: [ej.Z.Messages.DISABLE_NOTIFICATIONS_LABEL],
         parent: eL.s6.STREAMER_MODE
       },
       [eL.s6.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE]: {
         section: eP.oAB.STREAMER_MODE,
-        searchableTitle: ej.Z.Messages.HIDE_WINDOW_FROM_STREAM_LABEL,
+        searchableTitles: [ej.Z.Messages.HIDE_WINDOW_FROM_STREAM_LABEL],
         parent: eL.s6.STREAMER_MODE,
         predicate: () => {
           var e, s, t;
@@ -1110,7 +1110,7 @@ let eU = () => {
       },
       [eL.s6.SPEED_TEST]: {
         section: eP.oAB.SPEED_TEST,
-        searchableTitle: "Speed Test",
+        searchableTitles: ["Speed Test"],
         label: "Speed Test",
         element: z.Z,
         predicate: () => j.Z.isSupported() && Y.Z.getCurrentConfig({
@@ -1119,40 +1119,40 @@ let eU = () => {
       },
       [eL.s6.SETTINGS_ADVANCED]: {
         section: eP.oAB.ADVANCED,
-        searchableTitle: ej.Z.Messages.SETTINGS_ADVANCED,
+        searchableTitles: [ej.Z.Messages.SETTINGS_ADVANCED],
         label: ej.Z.Messages.SETTINGS_ADVANCED,
         ariaLabel: ej.Z.Messages.SETTINGS_ADVANCED,
         element: ee.Z
       },
       [eL.s6.SETTINGS_ADVANCED_DEVELOPER_MODE]: {
         section: eP.oAB.ADVANCED,
-        searchableTitle: ej.Z.Messages.DEVELOPER_MODE,
+        searchableTitles: [ej.Z.Messages.DEVELOPER_MODE],
         parent: eL.s6.SETTINGS_ADVANCED
       },
       [eL.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION]: {
         section: eP.oAB.ADVANCED,
-        searchableTitle: ej.Z.Messages.HARDWARE_ACCELERATION,
+        searchableTitles: [ej.Z.Messages.HARDWARE_ACCELERATION],
         parent: eL.s6.SETTINGS_ADVANCED
       },
       [eL.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY]: {
         section: eP.oAB.ADVANCED,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_SHOW_LIBRARY,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_SHOW_LIBRARY],
         parent: eL.s6.SETTINGS_ADVANCED
       },
       [eL.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE]: {
         section: eP.oAB.ADVANCED,
-        searchableTitle: ej.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE,
+        searchableTitles: [ej.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE],
         parent: eL.s6.SETTINGS_ADVANCED,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.SETTINGS_ADVANCED_AUTO_NAVIGATE_TO_HOME]: {
         section: eP.oAB.ADVANCED,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_HOME_AUTO_NAV,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_HOME_AUTO_NAV],
         parent: eL.s6.SETTINGS_ADVANCED
       },
       [eL.s6.ACTIVITY_PRIVACY]: {
         section: eP.oAB.ACTIVITY_PRIVACY,
-        searchableTitle: ej.Z.Messages.ACTIVITY_PRIVACY,
+        searchableTitles: [ej.Z.Messages.ACTIVITY_PRIVACY],
         label: ej.Z.Messages.ACTIVITY_PRIVACY,
         ariaLabel: ej.Z.Messages.ACTIVITY_PRIVACY,
         element: $.Z,
@@ -1160,24 +1160,24 @@ let eU = () => {
       },
       [eL.s6.ACTIVITY_PRIVACY_STATUS]: {
         section: eV ? eP.oAB.GAMES : eP.oAB.ACTIVITY_PRIVACY,
-        searchableTitle: ej.Z.Messages.ACTIVITY_STATUS,
+        searchableTitles: [ej.Z.Messages.ACTIVITY_STATUS],
         parent: eV ? eL.s6.GAMES : eL.s6.ACTIVITY_PRIVACY
       },
       [eL.s6.ACTIVITY_PRIVACY_RICH_PRESENCE]: {
         section: eV ? eP.oAB.GAMES : eP.oAB.ACTIVITY_PRIVACY,
-        searchableTitle: ej.Z.Messages.ACTIVITY_PARTY_PRIVACY,
+        searchableTitles: [ej.Z.Messages.ACTIVITY_PARTY_PRIVACY],
         parent: eV ? eL.s6.GAMES : eL.s6.ACTIVITY_PRIVACY
       },
       [eL.s6.REGISTERED_GAMES]: {
         section: eP.oAB.REGISTERED_GAMES,
-        searchableTitle: ej.Z.Messages.REGISTERED_GAMES,
+        searchableTitles: [ej.Z.Messages.REGISTERED_GAMES],
         label: ej.Z.Messages.REGISTERED_GAMES,
         element: ec.Z,
         predicate: () => !eV && (0, ex.Jw)()
       },
       [eL.s6.OVERLAY]: {
         section: eP.oAB.OVERLAY,
-        searchableTitle: ej.Z.Messages.OVERLAY,
+        searchableTitles: [ej.Z.Messages.OVERLAY],
         label: ej.Z.Messages.OVERLAY,
         element: eu.Z,
         predicate: () => !eV && eG
@@ -1185,7 +1185,7 @@ let eU = () => {
       [eL.s6.CHANGELOG]: {
         section: "changelog",
         onClick: () => (0, I.Z)(!0),
-        searchableTitle: ej.Z.Messages.WHATS_NEW,
+        searchableTitles: [ej.Z.Messages.WHATS_NEW],
         label: ej.Z.Messages.WHATS_NEW
       },
       [eL.s6.MERCHANDISE]: {
@@ -1200,26 +1200,26 @@ let eU = () => {
             }
           })
         },
-        searchableTitle: ej.Z.Messages.MERCHANDISE,
+        searchableTitles: [ej.Z.Messages.MERCHANDISE],
         label: ej.Z.Messages.MERCHANDISE,
         ariaLabel: ej.Z.Messages.MERCHANDISE
       },
       [eL.s6.HYPESQUAD]: {
         section: eP.oAB.HYPESQUAD_ONLINE,
-        searchableTitle: ej.Z.Messages.USER_SETTINGS_HYPESQUAD,
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_HYPESQUAD],
         label: ej.Z.Messages.USER_SETTINGS_HYPESQUAD,
         element: eE.Z
       },
       [eL.s6.EXPERIMENTS]: {
         section: eP.oAB.EXPERIMENTS,
-        searchableTitle: "Experiments",
+        searchableTitles: ["Experiments"],
         label: "Experiments",
         element: eM.Z,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.DEVELOPER_OPTIONS]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Developer Options",
+        searchableTitles: ["Developer Options"],
         label: "Developer Options",
         ariaLabel: "Developer Options",
         element: el.Z,
@@ -1227,182 +1227,182 @@ let eU = () => {
       },
       [eL.s6.DEVELOPER_OPTIONS_FLAGS]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Developer Options Flags",
+        searchableTitles: ["Developer Options Flags"],
         parent: eL.s6.DEVELOPER_OPTIONS,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.DEVELOPER_OPTIONS_TRACING_REQUESTS]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Tracing Requests",
+        searchableTitles: ["Tracing Requests"],
         parent: eL.s6.DEVELOPER_OPTIONS_FLAGS,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.DEVELOPER_OPTIONS_FORCED_CANARY]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Forced Canary",
+        searchableTitles: ["Forced Canary"],
         parent: eL.s6.DEVELOPER_OPTIONS_FLAGS,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Gateway Events To Console",
+        searchableTitles: ["Gateway Events To Console"],
         parent: eL.s6.DEVELOPER_OPTIONS_FLAGS,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Rpc Events Commands",
+        searchableTitles: ["Rpc Events Commands"],
         parent: eL.s6.DEVELOPER_OPTIONS_FLAGS,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Analytics Events Logging",
+        searchableTitles: ["Analytics Events Logging"],
         parent: eL.s6.DEVELOPER_OPTIONS_FLAGS,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.DEVELOPER_OPTIONS_SOURCE_MAPS]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Source Maps",
+        searchableTitles: ["Source Maps"],
         parent: eL.s6.DEVELOPER_OPTIONS_FLAGS,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Analytics Debugger View",
+        searchableTitles: ["Analytics Debugger View"],
         parent: eL.s6.DEVELOPER_OPTIONS_FLAGS,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Idle Status Indicator",
+        searchableTitles: ["Idle Status Indicator"],
         parent: eL.s6.DEVELOPER_OPTIONS_FLAGS,
         predicate: () => eH && v.Z.isDeveloper
       },
       [eL.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Accessibility Auditing",
+        searchableTitles: ["Accessibility Auditing"],
         parent: eL.s6.DEVELOPER_OPTIONS_FLAGS,
         predicate: () => !1
       },
       [eL.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Preview Unpublished Collections",
+        searchableTitles: ["Preview Unpublished Collections"],
         parent: eL.s6.DEVELOPER_OPTIONS_FLAGS,
         predicate: () => eH && v.Z.isDeveloper
       },
       [eL.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Override Client Side",
+        searchableTitles: ["Override Client Side"],
         parent: eL.s6.DEVELOPER_OPTIONS_FLAGS,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE_PREMIUM_TYPE]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Override Client Side Premium Type",
+        searchableTitles: ["Override Client Side Premium Type"],
         parent: eL.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE_ACCOUNT_CREATED_DATA]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Override Client Side Account Created Data",
+        searchableTitles: ["Override Client Side Account Created Data"],
         parent: eL.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Open Overlay",
+        searchableTitles: ["Open Overlay"],
         parent: eL.s6.DEVELOPER_OPTIONS,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.DEVELOPER_OPTIONS_RESET_SOCKET]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Reset Socket",
+        searchableTitles: ["Reset Socket"],
         parent: eL.s6.DEVELOPER_OPTIONS,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.DEVELOPER_OPTIONS_CLEAR_CACHES]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Clear Caches",
+        searchableTitles: ["Clear Caches"],
         parent: eL.s6.DEVELOPER_OPTIONS,
         predicate: () => u.q && v.Z.isDeveloper
       },
       [eL.s6.DEVELOPER_OPTIONS_CRASHES]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Crashes",
+        searchableTitles: ["Crashes"],
         parent: eL.s6.DEVELOPER_OPTIONS,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.DEVELOPER_OPTIONS_SURVEY_OVERRIDE]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Survey Override",
+        searchableTitles: ["Survey Override"],
         parent: eL.s6.DEVELOPER_OPTIONS,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Changelog Override",
+        searchableTitles: ["Changelog Override"],
         parent: eL.s6.DEVELOPER_OPTIONS,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.DEVELOPER_OPTIONS_BUILD_OVERRIDE]: {
         section: eP.oAB.DEVELOPER_OPTIONS,
-        searchableTitle: "Build Override",
+        searchableTitles: ["Build Override"],
         parent: eL.s6.DEVELOPER_OPTIONS,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.HOTSPOT_OPTIONS]: {
         section: eP.oAB.HOTSPOT_OPTIONS,
-        searchableTitle: "Hotspot Options",
+        searchableTitles: ["Hotspot Options"],
         label: "Hotspot Options",
         element: k.Z,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.DISMISSIBLE_CONTENT_OPTIONS]: {
         section: eP.oAB.DISMISSIBLE_CONTENT_OPTIONS,
-        searchableTitle: "Dismissible Contents",
+        searchableTitles: ["Dismissible Contents"],
         label: "Dismissible Contents",
         element: m.Z,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.PAYMENT_FLOW_MODALS]: {
         section: eP.oAB.PAYMENT_FLOW_MODAL_TEST_PAGE,
-        searchableTitle: "Payment Flow Modals",
+        searchableTitles: ["Payment Flow Modals"],
         label: "Payment Flow Modals",
         element: w.Z,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.TEXT_PLAYGROUND]: {
         section: eP.oAB.TEXT_PLAYGROUND,
-        searchableTitle: "Text Playground",
+        searchableTitles: ["Text Playground"],
         label: "Text Playground",
         element: eg.Z,
         predicate: () => (0, X.D)() || v.Z.isDeveloper
       },
       [eL.s6.DESIGN_SYSTEMS]: {
         section: eP.oAB.DESIGN_SYSTEMS,
-        searchableTitle: "Design Systems",
+        searchableTitles: ["Design Systems"],
         label: "Design Systems",
         element: ea.Z,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.TEXT_COMPONENTS]: {
         section: eP.oAB.TEXT_COMPONENT,
-        searchableTitle: "Text Components",
+        searchableTitles: ["Text Components"],
         label: "Text Components",
         element: Q.Z,
         predicate: () => (0, X.D)() || v.Z.isDeveloper
       },
       [eL.s6.PROFILE_EFFECTS_PREVIEW_TOOL]: {
         section: eP.oAB.PROFILE_EFFECTS_PREVIEW_TOOL,
-        searchableTitle: "Profile Effects Preview Tool",
+        searchableTitles: ["Profile Effects Preview Tool"],
         label: "Profile Effects Preview Tool",
         element: C.Z,
         predicate: () => v.Z.isDeveloper
       },
       [eL.s6.QUEST_PREVIEW_TOOL]: {
         section: eP.oAB.QUEST_PREVIEW_TOOL,
-        searchableTitle: "Quest Preview Tool",
+        searchableTitles: ["Quest Preview Tool"],
         label: "Quest Preview Tool",
         element: f.Z,
         predicate: () => (0, Z.X7)({

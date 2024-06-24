@@ -252,13 +252,13 @@ function v(e) {
 function U(e) {
   return new Map(Object.entries(e).filter(e => {
     let [s, t] = e;
-    return t.section !== l.ID.CUSTOM && null != t.searchableTitle && (null == t.predicate || t.predicate())
+    return t.section !== l.ID.CUSTOM && null != t.searchableTitles && (null == t.predicate || t.predicate())
   }))
 }
 
 function B(e) {
   return Array.from(U(e).entries()).map(e => {
     let [s, t] = e;
-    return [s, t.searchableTitle]
+    return [s, t.searchableTitles]
   })
 }

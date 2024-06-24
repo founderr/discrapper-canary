@@ -27,7 +27,11 @@ class l {
       let s = [];
       return this.terms.forEach(t => {
         let [n, a] = t;
-        i()(e.toLowerCase(), a.toLowerCase()) && s.push(n)
+        for (let t of a)
+          if (i()(e.toLowerCase(), t.toLowerCase())) {
+            s.push(n);
+            break
+          }
       }), this.cache[e] = s, s
     }
   }
