@@ -20,7 +20,7 @@ function l(e, n, l) {
   l.isGroupDM() ? (0, i.jW)(e, async () => {
     let {
       default: e
-    } = await Promise.all([t.e("99387"), t.e("79695"), t.e("32006"), t.e("60677"), t.e("82882")]).then(t.bind(t, 354589));
+    } = await Promise.all([t.e("99387"), t.e("79695"), t.e("32006"), t.e("60677"), t.e("43966")]).then(t.bind(t, 354589));
     return t => (0, r.jsx)(e, {
       ...t,
       user: n,

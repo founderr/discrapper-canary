@@ -1,18 +1,18 @@
-a.d(n, {
+n.d(a, {
   Z: function() {
     return r
   }
 });
-var t = a(735250);
-a(470079);
-var i = a(481060),
-  l = a(689938),
-  s = a(482263);
+var t = n(735250);
+n(470079);
+var i = n(481060),
+  l = n(689938),
+  s = n(482263);
 
 function r(e) {
   let {
-    imageSrc: n,
-    header: a,
+    imageSrc: a,
+    header: n,
     description: r,
     secondaryInfo: c,
     mutualGuildCount: o,
@@ -27,7 +27,7 @@ function r(e) {
         children: (0, t.jsx)("img", {
           alt: "",
           className: s.image,
-          src: n
+          src: a
         })
       }), (0, t.jsxs)("div", {
         className: s.content,
@@ -38,7 +38,7 @@ function r(e) {
             children: [(0, t.jsx)(i.Heading, {
               className: s.name,
               variant: "heading-md/semibold",
-              children: a
+              children: n
             }), null != o ? o : (0, t.jsx)(t.Fragment, {
               children: (0, t.jsxs)("div", {
                 className: s.details,

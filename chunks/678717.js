@@ -31,8 +31,8 @@ var x = t(392750),
   T = t(246992),
   E = t(442954),
   _ = t(702904),
-  Z = t(178821),
-  I = t(248526),
+  I = t(178821),
+  Z = t(248526),
   R = t(958328),
   O = t(514866),
   A = t(678639),
@@ -89,7 +89,7 @@ function z() {
       }), e.push({
         id: "perks_demos",
         name: "Perks Demos",
-        render: () => (0, a.jsx)(I.Z, {})
+        render: () => (0, a.jsx)(Z.Z, {})
       })), m.Z.isDeveloper && (e.push({
         id: "clans",
         name: "Clans",
@@ -97,7 +97,7 @@ function z() {
       }), e.push({
         id: "performance",
         name: "Performance",
-        render: () => (0, a.jsx)(Z.Z, {})
+        render: () => (0, a.jsx)(I.Z, {})
       })), e.push({
         id: "colors",
         name: "Colors",

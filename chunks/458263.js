@@ -29,7 +29,7 @@ function L(e) {
     markAsDismissed: L
   } = e, h = (0, l.e7)([_.default], () => _.default.getCurrentUser());
   let R = (n = null == h ? void 0 : h.premiumType) === m.p9.TIER_2 ? N.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_TIER_2 : null == n ? N.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB : N.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_TIER_2,
-    g = I.ZP.canUseCustomCallSounds(h);
+    f = I.ZP.canUseCustomCallSounds(h);
   return (0, i.jsxs)(d.Z, {
     isShown: !0,
     type: d.Y.PREMIUM,
@@ -57,7 +57,7 @@ function L(e) {
     }), (0, i.jsx)(a.x, {
       variant: "text-sm/normal",
       children: R
-    }), g ? (0, i.jsx)(s.zx, {
+    }), f ? (0, i.jsx)(s.zx, {
       onClick: function() {
         u.Z.open(E.oAB.VOICE, S.GA), null == t || t(), null == L || L(C.L.PRIMARY)
       },

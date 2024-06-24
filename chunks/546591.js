@@ -1,14 +1,14 @@
-var r, t, i, a, l = s(735250),
-  c = s(470079),
-  o = s(120356),
-  d = s.n(o),
-  u = s(592804);
+var r, t, i, a, l = n(735250),
+  c = n(470079),
+  o = n(120356),
+  d = n.n(o),
+  u = n(592804);
 class h extends(a = c.PureComponent) {
   render() {
     let {
       tag: e,
-      children: n,
-      hoverText: s,
+      children: s,
+      hoverText: n,
       className: r,
       forceHover: t,
       ...i
@@ -16,15 +16,15 @@ class h extends(a = c.PureComponent) {
     return (0, l.jsxs)("div", {
       ...i,
       className: d()(r, u.hoverRoll, {
-        [u.disabled]: null == s,
+        [u.disabled]: null == n,
         [u.forceHover]: t
       }),
       children: [(0, l.jsx)(e, {
         className: u.hovered,
-        children: s
+        children: n
       }), (0, l.jsx)(e, {
         className: u.default,
-        children: n
+        children: s
       })]
     })
   }
@@ -37,4 +37,4 @@ i = {
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[t] = i, n.Z = h
+}) : r[t] = i, s.Z = h

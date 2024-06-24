@@ -1,44 +1,44 @@
-i.d(n, {
+t.d(n, {
   Z: function() {
-    return M
+    return T
   }
 });
-var r = i(735250);
-i(470079);
-var t = i(442837),
-  l = i(481060),
-  a = i(430824),
-  s = i(594174),
-  u = i(979651),
-  d = i(471253),
-  o = i(200498),
-  Z = i(88751),
-  c = i(267980),
-  E = i(623633),
-  _ = i(689938);
+var i = t(735250);
+t(470079);
+var l = t(442837),
+  r = t(481060),
+  u = t(430824),
+  a = t(594174),
+  o = t(979651),
+  s = t(471253),
+  d = t(200498),
+  c = t(88751),
+  E = t(267980),
+  _ = t(623633),
+  I = t(689938);
 
-function M(e) {
+function T(e) {
   var n;
-  let i = (0, E.Z)(),
-    M = null == i ? void 0 : i.id,
-    C = null == i ? void 0 : i.guild_id,
-    N = (0, t.e7)([a.Z], () => a.Z.getGuild(C), [C]),
-    f = (0, t.e7)([u.Z], () => null != M ? u.Z.getVoiceStateForChannel(M, e.id) : null, [M, e.id]),
-    A = (null === (n = s.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) === e.id,
-    I = (0, c.Z)(),
-    T = (0, t.e7)([Z.ZP], () => Z.ZP.getPermissionsForUser(e.id, M), [M, e.id]),
-    S = (0, o.B)(M);
-  if (null == i || null == N || null == f || T.speaker) return null;
-  let U = () => {
-    A ? (0, d.RK)(i, !1) : (0, d._0)(i, e.id)
+  let t = (0, _.Z)(),
+    T = null == t ? void 0 : t.id,
+    N = null == t ? void 0 : t.guild_id,
+    S = (0, l.e7)([u.Z], () => u.Z.getGuild(N), [N]),
+    A = (0, l.e7)([o.Z], () => null != T ? o.Z.getVoiceStateForChannel(T, e.id) : null, [T, e.id]),
+    O = (null === (n = a.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) === e.id,
+    p = (0, E.Z)(),
+    M = (0, l.e7)([c.ZP], () => c.ZP.getPermissionsForUser(e.id, T), [T, e.id]),
+    f = (0, d.B)(T);
+  if (null == t || null == S || null == A || M.speaker) return null;
+  let Z = () => {
+    O ? (0, s.RK)(t, !1) : (0, s._0)(t, e.id)
   };
-  return S ? (0, r.jsx)(l.MenuItem, {
+  return f ? (0, i.jsx)(r.MenuItem, {
     id: "invite-speaker",
-    label: A ? _.Z.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER : _.Z.Messages.STAGE_CHANNEL_USER_INVITE_TO_SPEAK,
-    action: U
-  }) : I && A ? (0, r.jsx)(l.MenuItem, {
+    label: O ? I.Z.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER : I.Z.Messages.STAGE_CHANNEL_USER_INVITE_TO_SPEAK,
+    action: Z
+  }) : p && O ? (0, i.jsx)(r.MenuItem, {
     id: "invite-speaker",
-    label: _.Z.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER,
-    action: U
+    label: I.Z.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER,
+    action: Z
   }) : null
 }

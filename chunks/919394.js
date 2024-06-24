@@ -1,6 +1,6 @@
 t.d(n, {
   QC: function() {
-    return S
+    return Z
   },
   SO: function() {
     return R
@@ -21,10 +21,10 @@ var l = t(512722),
   T = t(70956),
   m = t(709054),
   v = t(561308),
-  x = t(206295),
-  N = t(737583),
-  g = t(438226),
-  I = t(169040),
+  N = t(206295),
+  x = t(737583),
+  I = t(438226),
+  g = t(169040),
   h = t(689938);
 let M = (e, n) => ({
     AvatarImage1: e[0],
@@ -40,34 +40,34 @@ let M = (e, n) => ({
   }),
   A = (e, n) => {
     let t = [{
-        iconPath: I.NM,
+        iconPath: g.NM,
         text: n
       }],
       l = m.default.extractTimestamp(e.extra.application_id);
     if (7 >= o()().diff(o()(l), "days") && t.push({
-        iconPath: I.As,
+        iconPath: g.As,
         text: h.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
       }), (0, v.Ol)(e) && t.push({
-        iconPath: I.fO,
+        iconPath: g.fO,
         text: h.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
       }), (0, v.q_)(e)) {
       let n = (0, v.vU)(e);
       t.push({
-        iconPath: I.t1,
+        iconPath: g.t1,
         text: h.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
           days: n
         })
       })
     }(0, v.ig)(e) === i.o.GLOBAL && t.push({
-      iconPath: I.Op,
+      iconPath: g.Op,
       text: h.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
     });
     let a = (0, v.dw)(e);
     if (null != a && t.push({
-        iconPath: I.Z,
+        iconPath: g.Z,
         text: (0, v.GE)(a)
       }), (0, v.V5)(e) && t.push({
-        iconPath: I.Md,
+        iconPath: g.Md,
         text: (0, v.kr)(e) ? (0, v.z5)(e) : (0, v.nB)(e)
       }), (0, v.Jd)(e)) {
       let n = (0, v.yA)(e);
@@ -76,7 +76,7 @@ let M = (e, n) => ({
           hours: Math.round(n / T.Z.Seconds.HOUR)
         });
         return [{
-          iconPath: I.eF,
+          iconPath: g.eF,
           text: "".concat(h.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, " — ").concat(e)
         }]
       }
@@ -95,24 +95,24 @@ let M = (e, n) => ({
       stop: n
     }));
     e.setSize({
-      w: I.nx,
-      h: I.bg
+      w: g.nx,
+      h: g.bg
     }, 4), e.drawRoundedGradientRect(i, {
       x: 0,
-      y: I.bg
+      y: g.bg
     }, {
-      x: I.nx,
+      x: g.nx,
       y: 0
     }, {
       x: 0,
       y: 0,
-      h: I.bg,
-      w: I.nx
+      h: g.bg,
+      w: g.nx
     }, 8), e.setColor("rgba(108, 111, 124, 0.24)"), e.drawRoundedRect({
-      x: I.nx - I.sB - I.if,
-      y: I.sB,
-      w: I.if,
-      h: I.wI
+      x: g.nx - g.sB - g.if,
+      y: g.sB,
+      w: g.if,
+      h: g.wI
     }, 4, !0), e.setColor("rgba(255, 255, 255, 0.5)");
     e.setFont({
       size: 12,
@@ -120,41 +120,41 @@ let M = (e, n) => ({
       weight: 500,
       truncate: d.GX.None
     }), e.drawText(h.Z.Messages.BETA, {
-      x: I.nx - I.sB - 29,
-      y: I.sB + 12 + 2
+      x: g.nx - g.sB - 29,
+      y: g.sB + 12 + 2
     }, !0), e.setColor("white"), e.drawRoundedImage("ApplicationImage", {
-      x: I.sB,
-      y: I.sB
+      x: g.sB,
+      y: g.sB
     }, {
-      w: I.Pu,
-      h: I.Pu
+      w: g.Pu,
+      h: g.Pu
     }, 8) === d.vP.Failure && e.drawPath(s.Cv, {
-      x: I.sB,
-      y: I.sB
+      x: g.sB,
+      y: g.sB
     }, !0, 2 + 2 / 3);
-    (0, N.l)({
+    (0, x.l)({
       canvas: e,
       avatarSrcs: ["AvatarImage1", "AvatarImage2", "AvatarImage3"].slice(0, o),
       position: {
-        x: I.Iq,
-        y: I.sB
+        x: g.Iq,
+        y: g.sB
       },
-      avatarImageSize: I.$S
+      avatarImageSize: g.$S
     }), e.setColor("white"), e.setFont({
       size: 16,
       truncate: d.GX.Wrap
     }), e.drawText(a, {
-      x: I.Iq,
+      x: g.Iq,
       y: 64,
       h: 32,
-      w: I.kC
+      w: g.kC
     }, !0);
     let u = A(r, t);
-    (0, N.J)({
+    (0, x.J)({
       canvas: e,
       badges: u,
-      startPosition: I.Iq,
-      maxWidth: I.kC
+      startPosition: g.Iq,
+      maxWidth: g.kC
     })
   },
   R = async e => {
@@ -184,7 +184,7 @@ let M = (e, n) => ({
         channelId: i
       }
     })
-  }, S = async (e, n) => {
+  }, Z = async (e, n) => {
     let t = e.extra.game_name,
       l = u.Z.getApplication(e.extra.application_id),
       r = null == l ? void 0 : l.getIconURL(128),
@@ -195,15 +195,15 @@ let M = (e, n) => ({
       T = _.default.locale,
       m = (0, v.yh)(e, T),
       {
-        primaryColor: N,
-        secondaryColor: I
-      } = (0, x.w)(null != r ? r : ""),
-      h = (0, g.HV)(e, n, o);
+        primaryColor: x,
+        secondaryColor: g
+      } = (0, N.w)(null != r ? r : ""),
+      h = (0, I.HV)(e, n, o);
     return await (0, E.f)({
       assetsToLoad: s,
       drawImage: n => C(n, {
         timestamp: m,
-        colors: [N, I],
+        colors: [x, g],
         description: h,
         entry: e,
         numAvatars: i.length

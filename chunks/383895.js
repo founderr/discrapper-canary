@@ -12,11 +12,11 @@ var s = n(735250),
   h = n(919394),
   x = n(91140),
   g = n(297781),
-  v = n(359110),
+  E = n(359110),
   I = n(592125),
-  E = n(594174),
-  j = n(5192),
-  p = n(689938),
+  v = n(594174),
+  p = n(5192),
+  j = n(689938),
   N = n(777450),
   A = n(997844);
 l.Z = e => {
@@ -25,7 +25,7 @@ l.Z = e => {
     channel: n,
     style: t = {},
     onClose: r
-  } = e, O = E.default.getUser(l.author_id), M = j.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, O), T = null == O ? void 0 : O.getAvatarURL(null == n ? void 0 : n.guild_id, 48, !1), [f, _] = a.useState(null), [S, C] = a.useState(!1);
+  } = e, M = v.default.getUser(l.author_id), O = p.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, M), T = null == M ? void 0 : M.getAvatarURL(null == n ? void 0 : n.guild_id, 48, !1), [_, f] = a.useState(null), [S, C] = a.useState(!1);
   return (0, s.jsxs)("div", {
     className: N.profileEntryCard,
     style: t,
@@ -44,7 +44,7 @@ l.Z = e => {
           variant: "text-sm/bold",
           color: "text-normal",
           lineClamp: 1,
-          children: [M.slice(0, 18), " ", M.length > 18 ? "..." : ""]
+          children: [O.slice(0, 18), " ", O.length > 18 ? "..." : ""]
         }), (0, s.jsx)(g.Gk, {
           location: g.Gt.CARD,
           children: x.W.slice(0, 2).map((e, n) => (0, s.jsx)(e, {
@@ -61,7 +61,7 @@ l.Z = e => {
         className: N.input,
         children: (0, s.jsx)(u.A7, {
           autoFocus: !1,
-          setEditorRef: e => _(e),
+          setEditorRef: e => f(e),
           onEnter: async e => {
             let n = await d.Z.getOrEnsurePrivateChannel(l.author_id),
               s = I.Z.getChannel(n);
@@ -72,14 +72,14 @@ l.Z = e => {
               channel: s,
               altText: "",
               reply: e
-            }), r(), (0, v.Kh)(s.id)
+            }), r(), (0, E.Kh)(s.id)
           }
         })
       }), (0, s.jsx)(c.CircleIconButton, {
         size: c.CircleIconButtonSizes.SIZE_24,
         color: c.CircleIconButtonColors.PRIMARY,
         className: N.actionButton,
-        tooltip: p.Z.Messages.CLOSE,
+        tooltip: j.Z.Messages.CLOSE,
         onClick: () => {
           C(!1)
         },
@@ -100,9 +100,9 @@ l.Z = e => {
         size: c.CircleIconButtonSizes.SIZE_24,
         color: c.CircleIconButtonColors.SECONDARY,
         className: i()(N.actionButton, N.messageButton),
-        tooltip: p.Z.Messages.COMMAND_MSG_DESCRIPTION,
+        tooltip: j.Z.Messages.COMMAND_MSG_DESCRIPTION,
         onClick: () => {
-          !S && (null == f || f.focus(), C(!0))
+          !S && (null == _ || _.focus(), C(!0))
         },
         icon: (0, s.jsx)(c.ChatIcon, {})
       })

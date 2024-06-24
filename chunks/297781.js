@@ -1,12 +1,12 @@
 t.d(n, {
   Af: function() {
-    return S
+    return Z
   },
   An: function() {
     return w
   },
   E6: function() {
-    return y
+    return j
   },
   EE: function() {
     return p
@@ -18,22 +18,22 @@ t.d(n, {
     return a
   },
   OV: function() {
-    return Z
+    return S
   },
   Rg: function() {
-    return G
+    return U
   },
   U9: function() {
-    return U
+    return F
   },
   XF: function() {
     return O
   },
   Yl: function() {
-    return F
+    return G
   },
   f: function() {
-    return D
+    return y
   },
   gj: function() {
     return P
@@ -45,7 +45,7 @@ t.d(n, {
     return L
   },
   v1: function() {
-    return j
+    return D
   }
 });
 var l, a, r = t(735250),
@@ -61,10 +61,10 @@ var l, a, r = t(735250),
   T = t(70956),
   m = t(709054),
   v = t(719247),
-  x = t(22211),
-  N = t(561308),
-  g = t(265048),
-  I = t(371991),
+  N = t(22211),
+  x = t(561308),
+  I = t(265048),
+  g = t(371991),
   h = t(689938),
   M = t(757372);
 (l = a || (a = {}))[l.CARD = 0] = "CARD", l[l.POPOUT = 1] = "POPOUT";
@@ -104,12 +104,12 @@ function R(e) {
   })
 }
 
-function S(e) {
+function Z(e) {
   let {
     entry: n
   } = e, {
     channel: t
-  } = (0, x.Z)(n), {
+  } = (0, N.Z)(n), {
     location: l
   } = C();
   return null == t || 1 === l ? null : (0, r.jsx)(R, {
@@ -118,20 +118,20 @@ function S(e) {
   })
 }
 
-function Z(e) {
+function S(e) {
   let {
     entry: n
   } = e, {
     defaultTextColor: t,
     defaultIconColor: l,
     location: a
-  } = C(), o = 0 === a, i = (0, N.kr)(n), u = o && i ? f.tokens.colors.STATUS_POSITIVE : l, s = o && i ? "text-positive" : t;
+  } = C(), o = 0 === a, i = (0, x.kr)(n), u = o && i ? f.tokens.colors.STATUS_POSITIVE : l, s = o && i ? "text-positive" : t;
   return (0, r.jsxs)("div", {
     className: M.badgeContainer,
     children: [(0, r.jsx)(f.GameControllerIcon, {
       size: "xxs",
       color: u
-    }), (0, r.jsx)(I.ZP, {
+    }), (0, r.jsx)(g.ZP, {
       entry: n,
       textColor: s
     })]
@@ -149,7 +149,7 @@ function p(e) {
     state: s,
     party: c,
     inExperiment: d
-  } = (0, g.F)(o);
+  } = (0, I.F)(o);
   if (!d) return null;
   let E = null !== (l = null == c ? void 0 : null === (n = c.size) || void 0 === n ? void 0 : n[0]) && void 0 !== l ? l : void 0,
     _ = null !== (a = null == c ? void 0 : null === (t = c.size) || void 0 === t ? void 0 : t[1]) && void 0 !== a ? a : void 0,
@@ -189,7 +189,7 @@ function O(e) {
     children: [(0, r.jsx)(f.RecordPlayerIcon, {
       size: "xxs",
       color: s
-    }), (0, r.jsx)(I.x3, {
+    }), (0, r.jsx)(g.x3, {
       entry: null != c ? {
         start: c
       } : t,
@@ -204,7 +204,7 @@ function P(e) {
   } = e, {
     location: t
   } = C(), l = 0 === t ? f.tokens.colors.STATUS_POSITIVE : void 0;
-  return (0, N.Ol)(n) ? (0, r.jsx)(R, {
+  return (0, x.Ol)(n) ? (0, r.jsx)(R, {
     Icon: f.NewUserLargeIcon,
     text: h.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER,
     iconColor: l
@@ -217,31 +217,15 @@ function L(e) {
   } = e, {
     location: t
   } = C();
-  if (!(0, N.V5)(n)) return null;
-  let l = (0, N.kr)(n),
+  if (!(0, x.V5)(n)) return null;
+  let l = (0, x.kr)(n),
     a = 0 === t,
-    o = a || l ? (0, N.z5)(n) : (0, N.nB)(n);
+    o = a || l ? (0, x.z5)(n) : (0, x.nB)(n);
   return (0, r.jsx)(R, {
     Icon: f.TimerIcon,
     text: o,
-    tooltipText: (0, N.EX)(n),
+    tooltipText: (0, x.EX)(n),
     showTooltip: a && !l
-  })
-}
-
-function j(e) {
-  let {
-    entry: n
-  } = e, {
-    location: t
-  } = C(), l = (0, N.dw)(n);
-  if (null == l) return null;
-  let a = (0, N.GE)(l);
-  return (0, r.jsx)(R, {
-    Icon: f.RetryIcon,
-    showTooltip: 0 === t,
-    tooltipText: a,
-    text: 1 === t ? a : h.Z.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
   })
 }
 
@@ -250,8 +234,24 @@ function D(e) {
     entry: n
   } = e, {
     location: t
-  } = C(), l = (0, N.vU)(n);
-  return (0, N.q_)(n) ? (0, r.jsx)(R, {
+  } = C(), l = (0, x.dw)(n);
+  if (null == l) return null;
+  let a = (0, x.GE)(l);
+  return (0, r.jsx)(R, {
+    Icon: f.RetryIcon,
+    showTooltip: 0 === t,
+    tooltipText: a,
+    text: 1 === t ? a : h.Z.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
+  })
+}
+
+function y(e) {
+  let {
+    entry: n
+  } = e, {
+    location: t
+  } = C(), l = (0, x.vU)(n);
+  return (0, x.q_)(n) ? (0, r.jsx)(R, {
     Icon: f.FlashIcon,
     showTooltip: 0 === t,
     text: h.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
@@ -263,12 +263,12 @@ function D(e) {
   }) : null
 }
 
-function y(e) {
+function j(e) {
   let {
     entry: n
   } = e, {
     location: t
-  } = C(), l = (0, N.yA)(n);
+  } = C(), l = (0, x.yA)(n);
   if (null == l) return null;
   let a = 1 === t,
     o = a ? h.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK : h.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS;
@@ -288,7 +288,7 @@ function w(e) {
     entry: t
   } = e, {
     location: l
-  } = C(), a = null === (n = (0, N.PJ)(t, d.N.AGGREGATE_COUNT)) || void 0 === n ? void 0 : n.count;
+  } = C(), a = null === (n = (0, x.PJ)(t, d.N.AGGREGATE_COUNT)) || void 0 === n ? void 0 : n.count;
   if (null == a) return null;
   let o = 1 === l ? h.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({
     count: a
@@ -304,14 +304,14 @@ function w(e) {
 function B(e) {
   let {
     entry: n
-  } = e, t = (0, N.ig)(n);
+  } = e, t = (0, x.ig)(n);
   return null == t || t === E.o.TRENDING_TYPE_UNSPECIFIED ? null : (0, r.jsx)(R, {
     Icon: f.FireIcon,
     text: h.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
   })
 }
 
-function U(e) {
+function F(e) {
   let {
     entry: n
   } = e, t = m.default.extractTimestamp(n.extra.application_id);
@@ -321,7 +321,7 @@ function U(e) {
   })
 }
 
-function F(e) {
+function G(e) {
   let {
     entry: n
   } = e, {
@@ -333,14 +333,14 @@ function F(e) {
     children: [(0, r.jsx)(f.TvIcon, {
       size: "xxs",
       color: l
-    }), (0, r.jsx)(I.ZP, {
+    }), (0, r.jsx)(g.ZP, {
       entry: n,
       textColor: t
     })]
   })
 }
 
-function G(e) {
+function U(e) {
   var n;
   let {
     entry: t

@@ -1,24 +1,24 @@
-r.d(n, {
+i.d(n, {
   Z: function() {
     return o
   }
 });
-var i = r(735250);
-r(470079);
-var t = r(442837),
-  a = r(481060),
-  s = r(493683),
-  l = r(592125),
-  u = r(594174),
-  d = r(689938);
+var r = i(735250);
+i(470079);
+var s = i(442837),
+  a = i(481060),
+  t = i(493683),
+  l = i(592125),
+  d = i(594174),
+  u = i(689938);
 
 function o(e, n) {
-  let r = (0, t.e7)([u.default], () => u.default.getCurrentUser(), []),
-    o = (0, t.e7)([l.Z], () => l.Z.getChannel(n), [n]);
-  return null == o || o.isOwner(e) || null == r || !o.isOwner(r.id) ? null : (0, i.jsx)(a.MenuItem, {
+  let i = (0, s.e7)([d.default], () => d.default.getCurrentUser(), []),
+    o = (0, s.e7)([l.Z], () => l.Z.getChannel(n), [n]);
+  return null == o || o.isOwner(e) || null == i || !o.isOwner(i.id) ? null : (0, r.jsx)(a.MenuItem, {
     id: "remove",
-    label: d.Z.Messages.REMOVE_FROM_GROUP,
-    action: () => s.Z.removeRecipient(n, e),
+    label: u.Z.Messages.REMOVE_FROM_GROUP,
+    action: () => t.Z.removeRecipient(n, e),
     color: "danger"
   })
 }

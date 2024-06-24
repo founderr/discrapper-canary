@@ -26,28 +26,28 @@ let _ = (0, r.Z)(E),
   f = e => {
     var n, t, r, f, T, m;
     let v = (0, a.e7)([o.default], () => o.default.locale),
-      x = (0, a.e7)([i.default], () => i.default.getUser(e.author_id)),
+      N = (0, a.e7)([i.default], () => i.default.getUser(e.author_id)),
       {
-        activity: N,
-        activityApplication: g,
-        fallbackApplication: I
+        activity: x,
+        activityApplication: I,
+        fallbackApplication: g
       } = (0, c.qy)(e),
       h = (0, s.wh)("useGamingContentData"),
-      M = null !== (f = null === (n = null != I ? I : g) || void 0 === n ? void 0 : n.getIconURL(d.Si.LARGE)) && void 0 !== f ? f : void 0;
-    if (!h || null == N) return {
+      M = null !== (f = null === (n = null != g ? g : I) || void 0 === n ? void 0 : n.getIconURL(d.Si.LARGE)) && void 0 !== f ? f : void 0;
+    if (!h || null == x) return {
       iconUrl: M,
       gameTitle: e.extra.game_name,
-      user: x,
+      user: N,
       inExperiment: h
     };
-    let A = null != g && (null === (t = N.assets) || void 0 === t ? void 0 : t.large_image) != null ? (0, u.getAssetImage)(g.id, N.assets.large_image, [d.Si.LARGE, d.Si.LARGE]) : void 0,
-      C = null !== (T = null === (r = N.assets) || void 0 === r ? void 0 : r.large_text) && void 0 !== T ? T : void 0,
-      R = null !== (m = N.name) && void 0 !== m ? m : e.extra.game_name,
-      S = N.details,
-      Z = N.state,
-      p = N.party,
-      O = null != N.timestamps ? (0, l.jsx)(_, {
-        timestamps: N.timestamps
+    let A = null != I && (null === (t = x.assets) || void 0 === t ? void 0 : t.large_image) != null ? (0, u.getAssetImage)(I.id, x.assets.large_image, [d.Si.LARGE, d.Si.LARGE]) : void 0,
+      C = null !== (T = null === (r = x.assets) || void 0 === r ? void 0 : r.large_text) && void 0 !== T ? T : void 0,
+      R = null !== (m = x.name) && void 0 !== m ? m : e.extra.game_name,
+      Z = x.details,
+      S = x.state,
+      p = x.party,
+      O = null != x.timestamps ? (0, l.jsx)(_, {
+        timestamps: x.timestamps
       }) : (0, l.jsx)(E, {
         message: (0, c.yh)(e, v)
       });
@@ -55,10 +55,10 @@ let _ = (0, r.Z)(E),
       iconUrl: null != A ? A : M,
       iconFallbackUrl: null != A ? M : void 0,
       iconTitle: C,
-      user: x,
-      activity: N,
-      state: Z,
-      details: S,
+      user: N,
+      activity: x,
+      state: S,
+      details: Z,
       party: p,
       gameTitle: R,
       gameTime: O,

@@ -23,9 +23,9 @@ var i = t(735250),
   L = t(971792),
   h = t(629262),
   R = t(761966),
-  g = t(893729),
-  v = t(838940),
-  f = t(882101),
+  f = t(893729),
+  g = t(838940),
+  v = t(882101),
   x = t(11705),
   O = t(81273),
   A = t(293810),
@@ -54,7 +54,7 @@ let p = e => {
         className: Z.benefitsList,
         "aria-labelledby": C,
         children: u.map((e, n) => (0, i.jsx)("li", {
-          children: (0, i.jsx)(v.Z, {
+          children: (0, i.jsx)(g.Z, {
             guildId: s,
             benefit: e
           }, (0, E.ab)(e))
@@ -126,7 +126,7 @@ let p = e => {
         }),
         children: [(0, i.jsx)(o.Spacer, {
           size: 8
-        }), (0, i.jsx)(g.Z, {
+        }), (0, i.jsx)(f.Z, {
           role: d,
           guildId: t,
           className: Z.roleMessagePreview
@@ -182,8 +182,8 @@ n.Z = e => {
   } = e, T = (0, C.jO)(t), {
     openModal: L,
     canOpenModal: h,
-    cannotOpenReason: g,
-    isCheckingTrialEligibility: v
+    cannotOpenReason: f,
+    isCheckingTrialEligibility: g
   } = (0, O.Z)(T, s, _, I), p = (0, a.e7)([d.Z], () => d.Z.isSyncing), {
     activeSubscription: U,
     activeSubscriptionListing: D
@@ -222,7 +222,7 @@ n.Z = e => {
           isListingPublished: en,
           expanded: $,
           onToggleExpanded: () => X(e => !e)
-        }) : (0, i.jsx)(f.xv, {
+        }) : (0, i.jsx)(v.xv, {
           listingId: t,
           isListingPublished: en
         }), $ && (0, i.jsxs)(i.Fragment, {
@@ -235,13 +235,13 @@ n.Z = e => {
             disabled: !0,
             children: G ? j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBED_LABEL
           }) : (0, i.jsx)(o.Tooltip, {
-            text: h ? null : g,
-            "aria-label": null !== (n = h && g) && void 0 !== n && n,
+            text: h ? null : f,
+            "aria-label": null !== (n = h && f) && void 0 !== n && n,
             children: e => (0, i.jsx)(R.Z, {
               ...e,
               fullWidth: !0,
               disabled: !h || p,
-              submitting: v,
+              submitting: g,
               onClick: L,
               onlyShineOnHover: !0,
               children: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL

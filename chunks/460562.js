@@ -1,23 +1,23 @@
-s.d(n, {
+n.d(s, {
   Z: function() {
     return i
   }
 });
-var r = s(735250);
-s(470079);
-var t = s(325767);
+var r = n(735250);
+n(470079);
+var t = n(325767);
 
 function i(e) {
   let {
-    width: n = 32,
-    height: s = 32,
+    width: s = 32,
+    height: n = 32,
     color: i = "currentColor",
     ...a
   } = e;
   return (0, r.jsxs)("svg", {
     ...(0, t.Z)(a),
-    width: n,
-    height: s,
+    width: s,
+    height: n,
     viewBox: "0 0 12 12",
     fill: "none",
     children: [(0, r.jsx)("path", {

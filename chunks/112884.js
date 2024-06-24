@@ -1,13 +1,13 @@
-a.d(n, {
+n.d(a, {
   Z: function() {
     return r
   }
 });
-var t = a(735250);
-a(470079);
-var i = a(481060),
-  l = a(689938),
-  s = a(325650);
+var t = n(735250);
+n(470079);
+var i = n(481060),
+  l = n(689938),
+  s = n(325650);
 
 function r(e) {
   let {} = e;
@@ -30,7 +30,7 @@ function r(e) {
       className: s.imageContainer,
       children: (0, t.jsx)("img", {
         className: s.image,
-        src: a(723067),
+        src: n(723067),
         alt: ""
       })
     })]

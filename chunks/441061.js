@@ -1,22 +1,22 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
-    return s
+    return c
   }
 });
-var i = t(735250);
-t(470079);
-var l = t(442837),
-  r = t(481060),
-  a = t(475179),
-  u = t(358221),
-  o = t(689938);
+var l = n(735250);
+n(470079);
+var i = n(442837),
+  s = n(481060),
+  a = n(475179),
+  r = n(358221),
+  o = n(689938);
 
-function s(e) {
-  let n = (0, l.e7)([u.Z], () => u.Z.getVoiceParticipantsHidden(e));
-  return (0, i.jsx)(r.MenuCheckboxItem, {
+function c(e) {
+  let t = (0, i.e7)([r.Z], () => r.Z.getVoiceParticipantsHidden(e));
+  return (0, l.jsx)(s.MenuCheckboxItem, {
     id: "no-video-hide",
     label: o.Z.Messages.STREAM_SHOW_NON_VIDEO,
-    checked: !n,
-    action: () => a.Z.toggleVoiceParticipantsHidden(e, !n)
+    checked: !t,
+    action: () => a.Z.toggleVoiceParticipantsHidden(e, !t)
   })
 }

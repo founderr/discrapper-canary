@@ -1,21 +1,21 @@
-a.d(n, {
+n.d(a, {
   Z: function() {
     return u
   }
 });
-var t = a(735250),
-  i = a(470079),
-  l = a(120356),
-  s = a.n(l),
-  r = a(481060),
-  c = a(689938),
-  o = a(624792),
-  d = a(902294);
+var t = n(735250),
+  i = n(470079),
+  l = n(120356),
+  s = n.n(l),
+  r = n(481060),
+  c = n(689938),
+  o = n(624792),
+  d = n(902294);
 
 function u(e) {
   let {
-    heading: n = c.Z.Messages.APP_DIRECTORY_ERROR_HEADING,
-    body: a = c.Z.Messages.APP_DIRECTORY_ERROR_BODY,
+    heading: a = c.Z.Messages.APP_DIRECTORY_ERROR_HEADING,
+    body: n = c.Z.Messages.APP_DIRECTORY_ERROR_BODY,
     className: l
   } = e;
   return (0, t.jsxs)("div", {
@@ -28,10 +28,10 @@ function u(e) {
       children: [(0, t.jsx)(r.Heading, {
         className: o.header,
         variant: "heading-xl/semibold",
-        children: n
+        children: a
       }), (0, t.jsx)(r.Text, {
         variant: "text-md/normal",
-        children: a
+        children: n
       })]
     })]
   })

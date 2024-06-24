@@ -1,51 +1,51 @@
-a.d(n, {
+n.d(a, {
   Z: function() {
     return h
   }
-}), a(47120), a(610138), a(216116), a(78328), a(815648);
-var t = a(735250),
-  i = a(470079),
-  l = a(120356),
-  s = a.n(l),
-  r = a(399606),
-  c = a(481060),
-  o = a(626135),
-  d = a(463571),
-  u = a(894653),
-  g = a(34674),
-  m = a(132871),
-  _ = a(981631),
-  C = a(635463);
+}), n(47120), n(610138), n(216116), n(78328), n(815648);
+var t = n(735250),
+  i = n(470079),
+  l = n(120356),
+  s = n.n(l),
+  r = n(399606),
+  c = n(481060),
+  o = n(626135),
+  d = n(463571),
+  u = n(894653),
+  g = n(34674),
+  m = n(132871),
+  _ = n(981631),
+  C = n(635463);
 
 function h(e) {
   let {
-    currentCategoryId: n,
-    className: a,
+    currentCategoryId: a,
+    className: n,
     countsByCategory: l,
     onView: h
-  } = e, p = (0, m.useApplicationDirectoryHistory)(e => e.guildId), x = (0, r.e7)([u.Z], () => u.Z.getCategories()), I = i.useMemo(() => [(0, g.KQ)(), ...x], [x]), R = (0, m.getCurrentView)();
+  } = e, p = (0, m.useApplicationDirectoryHistory)(e => e.guildId), x = (0, r.e7)([u.Z], () => u.Z.getCategories()), R = i.useMemo(() => [(0, g.KQ)(), ...x], [x]), I = (0, m.getCurrentView)();
   return (0, t.jsx)(c.TabBar, {
-    className: s()(C.container, a),
-    selectedItem: n,
+    className: s()(C.container, n),
+    selectedItem: a,
     type: "top-pill",
     onItemSelect: e => {
-      if (e === n) return;
-      let a = I.find(n => n.id === e);
+      if (e === a) return;
+      let n = R.find(a => a.id === e);
       o.default.track(_.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
-        category: a.name,
-        category_id: a.id,
-        current_page: null == R ? void 0 : R.type,
+        category: n.name,
+        category_id: n.id,
+        current_page: null == I ? void 0 : I.type,
         guild_id: p
-      }), h(a)
+      }), h(n)
     },
     orientation: "vertical",
-    children: I.map(e => {
-      var a;
+    children: R.map(e => {
+      var n;
       let i = e.id,
         r = e.name,
         o = (0, g.tu)(e),
         u = s()(C.category, {
-          [C.activeCategory]: n === i
+          [C.activeCategory]: a === i
         }),
         m = new URLSearchParams;
       return m.set("category_id", i.toString()), (0, t.jsx)(c.TabBar.Item, {
@@ -65,7 +65,7 @@ function h(e) {
             className: C.count,
             variant: "text-md/normal",
             color: "text-muted",
-            children: null !== (a = null == l ? void 0 : l[i]) && void 0 !== a ? a : 0
+            children: null !== (n = null == l ? void 0 : l[i]) && void 0 !== n ? n : 0
           }) : null]
         })
       }, i)

@@ -1,27 +1,27 @@
-a(47120);
-var t = a(735250),
-  i = a(470079),
-  l = a(120356),
-  s = a.n(l),
-  r = a(481060),
-  c = a(981631),
-  o = a(689938),
-  d = a(870786);
-n.Z = i.forwardRef(function(e, n) {
+n(47120);
+var t = n(735250),
+  i = n(470079),
+  l = n(120356),
+  s = n.n(l),
+  r = n(481060),
+  c = n(981631),
+  o = n(689938),
+  d = n(870786);
+a.Z = i.forwardRef(function(e, a) {
   let {
-    query: a,
+    query: n,
     canShowCta: l = !1,
     onChange: u,
     onSubmit: g,
     className: m
   } = e, [_, C] = i.useState(!1);
   return (0, t.jsx)(r.SearchBox, {
-    ref: n,
+    ref: a,
     className: s()(d.search, m),
     label: o.Z.Messages.APP_DIRECTORY_SEARCH_PLACEHOLDER,
     placeholder: o.Z.Messages.APP_DIRECTORY_SEARCH_PLACEHOLDER,
-    searchTerm: a,
-    cta: l && _ && a.length > 0 ? o.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null,
+    searchTerm: n,
+    cta: l && _ && n.length > 0 ? o.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null,
     onChange: u,
     onClear: () => u(""),
     onFocus: () => C(!0),

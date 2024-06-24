@@ -1,6 +1,6 @@
 t.d(n, {
   F9: function() {
-    return N
+    return x
   },
   Zb: function() {
     return m
@@ -9,7 +9,7 @@ t.d(n, {
     return v
   },
   ll: function() {
-    return g
+    return I
   }
 });
 var l = t(735250);
@@ -64,7 +64,7 @@ function v(e) {
   })
 }
 
-function x(e) {
+function N(e) {
   let {
     users: n,
     guildId: t
@@ -91,7 +91,7 @@ function x(e) {
   })
 }
 
-function N(e) {
+function x(e) {
   let {
     guildId: n,
     channelId: t,
@@ -100,21 +100,21 @@ function N(e) {
   } = e, d = a.author_id, f = (0, o.e7)([c.default], () => c.default.getUser(d)), {
     displayParticipants: m,
     numOtherParticipants: v
-  } = (0, _.Z)(a, r), N = (0, o.e7)([u.ZP], () => u.ZP.getMember(n, d)), g = (0, o.e7)([s.Z], () => {
+  } = (0, _.Z)(a, r), x = (0, o.e7)([u.ZP], () => u.ZP.getMember(n, d)), I = (0, o.e7)([s.Z], () => {
     var e;
-    return (null == N ? void 0 : N.colorRoleId) != null ? null === (e = s.Z.getRole(n, N.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
-  }, [n, N]);
+    return (null == x ? void 0 : x.colorRoleId) != null ? null === (e = s.Z.getRole(n, x.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
+  }, [n, x]);
   if (null == f) return null;
-  let I = null == N ? void 0 : N.colorString,
+  let g = null == x ? void 0 : x.colorString,
     h = E.ZP.getName(n, t, f);
   return (0, l.jsxs)("div", {
     className: T.userSection,
-    children: [(0, l.jsx)(x, {
+    children: [(0, l.jsx)(N, {
       users: m,
       guildId: n
     }), (0, l.jsx)(i.NameWithRole, {
-      color: null != I ? I : void 0,
-      roleName: g,
+      color: null != g ? g : void 0,
+      roleName: I,
       name: h,
       className: T.userName
     }), v > 0 ? (0, l.jsx)("div", {
@@ -129,7 +129,7 @@ function N(e) {
   })
 }
 
-function g(e) {
+function I(e) {
   let {
     children: n
   } = e;

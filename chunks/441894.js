@@ -1,22 +1,22 @@
-t.d(n, {
+n.d(t, {
   J: function() {
-    return i
+    return a
   }
 });
-var r = t(442837),
-  u = t(19780),
-  l = t(977059);
+var l = n(442837),
+  i = n(19780),
+  s = n(977059);
 
-function i(e) {
+function a(e) {
   let {
-    enabled: n
-  } = l.c.useExperiment({
+    enabled: t
+  } = s.c.useExperiment({
     location: "useIsSecureFramesUIEnabled"
-  }), t = (0, r.e7)([u.Z], () => {
-    var n;
-    if (null == e || u.Z.getChannelId() !== e) return !1;
-    let t = null === (n = u.Z.getSecureFramesState()) || void 0 === n ? void 0 : n.version;
-    return null != t && t > 100
+  }), n = (0, l.e7)([i.Z], () => {
+    var t;
+    if (null == e || i.Z.getChannelId() !== e) return !1;
+    let n = null === (t = i.Z.getSecureFramesState()) || void 0 === t ? void 0 : t.version;
+    return null != n && n > 100
   });
-  return n && t
+  return t && n
 }

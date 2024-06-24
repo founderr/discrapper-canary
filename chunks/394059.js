@@ -1,6 +1,6 @@
-var i, l;
-t.d(n, {
+var l, i;
+n.d(t, {
   K: function() {
-    return i
+    return l
   }
-}), (l = i || (i = {}))[l.STREAM = 0] = "STREAM", l[l.VIDEO = 1] = "VIDEO"
+}), (i = l || (l = {}))[i.STREAM = 0] = "STREAM", i[i.VIDEO = 1] = "VIDEO"
