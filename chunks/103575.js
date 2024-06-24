@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return I
+    return T
   }
 });
 var i = n(735250);
@@ -13,43 +13,48 @@ var r = n(512722),
   l = n(786874),
   u = n(447452),
   _ = n(877485),
-  c = n(788197),
-  d = n(969835),
-  E = n(985237);
+  c = n(103113),
+  d = n(788197),
+  E = n(969835),
+  I = n(985237);
 
-function I(e) {
+function T(e) {
   let {
     location: t,
     userId: n,
     user: r,
-    ...I
+    ...T
   } = e, {
-    basicsEnabled: T
+    basicsEnabled: h
   } = (0, u.t)({
     location: t
   }), {
-    originalFriendingEnabled: h,
-    improvedFriendingEnabled: S
+    originalFriendingEnabled: S,
+    improvedFriendingEnabled: f
   } = (0, _.V)({
     location: t
   }), {
-    botProfilesEnabled: f
+    botProfilesEnabled: N
   } = (0, l.J)({
     location: t
-  }), N = T || h || S, A = (0, o.e7)([a.default], () => a.default.getUser(n), [n]), m = null != r ? r : A;
-  s()(null != m, "UserPopoutExperimentWrapper: user cannot be undefined");
-  let O = (0, o.e7)([a.default], () => a.default.getCurrentUser());
-  return (s()(null != O, "UserPopoutExperimentWrapper: currentUser cannot be undefined"), N && f && m.bot && !m.isNonUserBot() && !m.isClyde()) ? (0, i.jsx)(E.Z, {
-    ...I,
-    user: m,
-    currentUser: O
-  }) : !N || m.bot || m.isNonUserBot() || m.isClyde() ? (0, i.jsx)(c.Z, {
-    ...I,
-    user: m,
-    currentUser: O
-  }) : (0, i.jsx)(d.Z, {
-    ...I,
-    user: m,
-    currentUser: O
+  }), A = h || S || f, m = (0, o.e7)([a.default], () => a.default.getUser(n), [n]), O = null != r ? r : m;
+  s()(null != O, "UserPopoutExperimentWrapper: user cannot be undefined");
+  let R = (0, o.e7)([a.default], () => a.default.getCurrentUser());
+  return (s()(null != R, "UserPopoutExperimentWrapper: currentUser cannot be undefined"), A && N && O.isNonUserBot()) ? (0, i.jsx)(c.Z, {
+    ...T,
+    user: O,
+    currentUser: R
+  }) : A && N && O.bot ? (0, i.jsx)(I.Z, {
+    ...T,
+    user: O,
+    currentUser: R
+  }) : !A || O.bot || O.isNonUserBot() || O.isClyde() ? (0, i.jsx)(d.Z, {
+    ...T,
+    user: O,
+    currentUser: R
+  }) : (0, i.jsx)(E.Z, {
+    ...T,
+    user: O,
+    currentUser: R
   })
 }

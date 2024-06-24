@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return h
+    return E
   }
 });
 var i = n(735250),
@@ -9,62 +9,35 @@ var i = n(735250),
   s = n(120356),
   o = n.n(s),
   a = n(481060),
-  l = n(580552),
-  u = n(240991),
-  _ = n(278297),
-  c = n(626135),
-  d = n(981631),
-  E = n(596401),
-  I = n(689938),
-  T = n(622322);
+  l = n(40966),
+  u = n(580552),
+  _ = n(240991),
+  c = n(278297),
+  d = n(622322);
 
-function h(e) {
+function E(e) {
   let {
     userBio: t,
     className: n,
     animateOnHover: s = !1,
-    isHovering: h = !1,
-    lineClamp: S = 6,
-    setLineClamp: f = !0,
-    textColor: N,
-    userId: A
-  } = e, m = r.useMemo(() => null != t ? (0, u.YP)(t) : null, [t]);
-  if (null == t && null == A && !(0, l.Z)(A)) return null;
-  if ((0, l.Z)(A)) {
-    let e = () => {
-      c.default.track(d.rMx.CHANGE_LOG_CTA_CLICKED, {
-        cta_type: "profile_bio",
-        target: E.D2
-      })
-    };
-    m = (0, i.jsxs)(i.Fragment, {
-      children: [(0, i.jsx)("span", {
-        children: I.Z.Messages.SYSTEM_DM_CHANGELOG_BIO
-      }), (0, i.jsx)("br", {}), (0, i.jsx)("br", {}), (0, i.jsx)("span", {
-        children: I.Z.Messages.SYSTEM_DM_CHANGELOG_BIO_WITH_CTA.format({
-          blogHook: (t, n) => (0, i.jsx)(a.Anchor, {
-            onClick: e,
-            target: "_blank",
-            rel: "noreferrer noopener",
-            href: E.D2,
-            children: t
-          }, n)
-        })
-      })]
-    })
-  }
-  return (0, i.jsx)("div", {
-    className: o()(n, T.markup),
+    isHovering: E = !1,
+    lineClamp: I = 6,
+    setLineClamp: T = !0,
+    textColor: h,
+    userId: S
+  } = e, f = r.useMemo(() => (0, u.Z)(S) ? (0, i.jsx)(l.Z, {}) : null == t || "" === t ? null : (0, _.YP)(t), [S, t]);
+  return null == f ? null : (0, i.jsx)("div", {
+    className: o()(n, d.markup),
     children: (0, i.jsx)(a.Text, {
       variant: "text-sm/normal",
-      lineClamp: f ? S : void 0,
-      color: void 0 !== N ? N : void 0,
-      children: (0, i.jsx)(_.G.Provider, {
+      lineClamp: T ? I : void 0,
+      color: void 0 !== h ? h : void 0,
+      children: (0, i.jsx)(c.G.Provider, {
         value: {
-          disableAnimations: s && !h,
+          disableAnimations: s && !E,
           disableInteractions: !1
         },
-        children: m
+        children: f
       })
     })
   })

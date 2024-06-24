@@ -27,7 +27,7 @@ var i = n(735250),
   R = n(287612),
   p = n(228168),
   g = n(981631),
-  C = n(766346);
+  C = n(472375);
 
 function v(e) {
   let {
@@ -85,7 +85,7 @@ function v(e) {
         user: t,
         guildId: null == L ? void 0 : L.id,
         channelId: P,
-        className: C.banner
+        className: C.friendRequestBanner
       })
     }), t.id !== n.id && (0, i.jsx)(R.Z, {
       user: t,
