@@ -16,12 +16,20 @@ function o() {
     }, []),
     t = i.useCallback(() => {
       (0, l.QH)(!1), (0, l.yN)("")
-    }, []);
-  return (0, n.jsx)("div", {
+    }, []),
+    o = i.useRef(null);
+  return i.useEffect(() => {
+    let e = () => {
+      let e = o.current;
+      null == e || e.focus()
+    };
+    return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
+  }, []), (0, n.jsx)("div", {
     style: {
       marginBottom: "8px"
     },
     children: (0, n.jsx)(a.ZP, {
+      ref: o,
       size: a.ZP.Sizes.MEDIUM,
       query: e,
       onClear: t,
