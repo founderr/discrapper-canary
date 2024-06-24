@@ -6,16 +6,16 @@ t.d(n, {
 var i = t(735250);
 t(470079);
 var a = t(481060),
-  l = t(163268),
-  r = t(689938);
+  r = t(163268),
+  l = t(689938);
 
 function o(e, n) {
-  return null != n && (0, l.KP)({
-    type: l.lJ.GenericMedia,
+  return null != n && (0, r.KP)({
+    type: r.lJ.GenericMedia,
     media: n
-  }, (0, l.HH)(e)) ? (0, i.jsx)(a.MenuItem, {
+  }, (0, r.HH)(e)) ? (0, i.jsx)(a.MenuItem, {
     id: "report-image-false-positive",
-    label: r.Z.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE,
+    label: l.Z.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE,
     action: () => {
       (0, a.openModalLazy)(async () => {
         let {

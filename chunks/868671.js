@@ -73,25 +73,25 @@ function _(e) {
       [s, ...t],
       [...n, s, ...e], Math.random(), e
     ]
-  }, [_, Z, x, t, I, N, n, C, v, R]), b = l.useRef(0), y = l.useRef(Z), D = l.useRef(), U = l.useRef({
+  }, [_, Z, x, t, I, N, n, C, v, R]), y = l.useRef(0), b = l.useRef(Z), D = l.useRef(), U = l.useRef({
     impressionCappedEntryIds: S
   }), k = l.useCallback(e => {
     var t;
     let n = Math.floor(e / m.YN),
       l = Math.min(null !== (t = null == P ? void 0 : P.length) && void 0 !== t ? t : 0, n);
-    b.current = Math.max(b.current, l)
+    y.current = Math.max(y.current, l)
   }, [P]);
   return l.useEffect(() => {
-    y.current = Z
+    b.current = Z
   }, [Z]), l.useEffect(() => {
     U.current = {
       impressionCappedEntryIds: S
     }
-  }, [S]), l.useEffect(() => (b.current = 0, D.current = Date.now(), () => {
+  }, [S]), l.useEffect(() => (y.current = 0, D.current = Date.now(), () => {
     var e, t;
     if (null == N || null == D.current || Date.now() - D.current < 3e3) return;
-    let n = null !== (t = null === (e = y.current) || void 0 === e ? void 0 : e.map(e => e.id)) && void 0 !== t ? t : [],
-      l = n.slice(0, b.current);
+    let n = null !== (t = null === (e = b.current) || void 0 === e ? void 0 : e.map(e => e.id)) && void 0 !== t ? t : [],
+      l = n.slice(0, y.current);
     if (!v && !!A && !!R) c.default.track(g.rMx.RANKING_ITEMS_SEEN, {
       request_id: N,
       first_shown_at: D.current,

@@ -1,25 +1,25 @@
 t.d(n, {
   E: function() {
-    return s
+    return l
   }
 });
 var r = t(470079),
   o = t(250683),
   u = t(253135);
 
-function s(e) {
+function l(e) {
   let {
     codeBase64: n,
     chunkSize: t,
-    desiredLength: s
+    desiredLength: l
   } = e;
   return r.useMemo(() => {
     if (null == n) return null;
     let e = o.toByteArray(n),
-      r = (0, u.D)(e, s, t);
+      r = (0, u.D)(e, l, t);
     if (null == r) return null;
-    let l = RegExp(".{1,".concat(t, "}"), "g"),
-      i = r.match(l);
+    let s = RegExp(".{1,".concat(t, "}"), "g"),
+      i = r.match(s);
     return null == i ? null : Array.from(i)
-  }, [t, n, s])
+  }, [t, n, l])
 }

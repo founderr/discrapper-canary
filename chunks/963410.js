@@ -6,8 +6,8 @@ t.r(n), t.d(n, {
 var r = t(735250),
   o = t(470079),
   u = t(442837),
-  s = t(481060),
-  l = t(377171),
+  l = t(481060),
+  s = t(377171),
   i = t(592125),
   a = t(594174),
   c = t(153124),
@@ -39,28 +39,28 @@ function m(e) {
   }, [Z, D, t]), x = o.useCallback(() => {
     (0, E.KF)(t, D), Z()
   }, [Z, D, t]), v = (0, f.wV)(t, m);
-  return (0, r.jsxs)(s.ModalRoot, {
+  return (0, r.jsxs)(l.ModalRoot, {
     transitionState: n,
     "aria-labelledby": N,
     children: [(0, r.jsx)("div", {
       className: g.shieldIconContainer,
       children: (0, r.jsx)("div", {
         className: g.shieldIcon,
-        children: (0, r.jsx)(s.ShieldLockIcon, {
+        children: (0, r.jsx)(l.ShieldLockIcon, {
           size: "custom",
           width: 55,
           height: 55,
-          color: s.tokens.colors.HEADER_SECONDARY
+          color: l.tokens.colors.HEADER_SECONDARY
         })
       })
-    }), (0, r.jsxs)(s.ModalContent, {
+    }), (0, r.jsxs)(l.ModalContent, {
       className: g.content,
-      children: [(0, r.jsx)(s.Heading, {
+      children: [(0, r.jsx)(l.Heading, {
         className: g.title,
         variant: "heading-lg/bold",
         color: "header-primary",
         children: S.Z.Messages.E2EE_VERIFICATION_CODE
-      }), (0, r.jsx)(s.Text, {
+      }), (0, r.jsx)(l.Text, {
         className: g.subtitle,
         variant: "text-md/normal",
         color: "header-secondary",
@@ -71,43 +71,43 @@ function m(e) {
         className: g.verification,
         children: [(0, r.jsxs)("div", {
           className: g.header,
-          children: [(0, r.jsx)(s.Heading, {
+          children: [(0, r.jsx)(l.Heading, {
             variant: "text-sm/bold",
             color: "header-primary",
             children: S.Z.Messages.E2EE_VOICE_PRIVACY_CODE
           }), null != A && (0, r.jsx)(C.H, {
             className: g.copyIcon,
             chunks: A,
-            color: s.tokens.colors.INTERACTIVE_NORMAL
-          }), (0, r.jsx)(s.TextBadge, {
+            color: l.tokens.colors.INTERACTIVE_NORMAL
+          }), (0, r.jsx)(l.TextBadge, {
             text: S.Z.Messages.NEW,
-            color: l.Z.STATUS_DANGER
+            color: s.Z.STATUS_DANGER
           })]
         }), null != A && (0, r.jsx)(_.b, {
           className: g.code,
           chunks: A,
           columns: h.ak
         })]
-      }), (0, r.jsx)(s.Text, {
+      }), (0, r.jsx)(l.Text, {
         className: g.details,
         variant: "text-sm/normal",
         color: "text-muted",
         children: S.Z.Messages.E2EE_USER_VERIFICATION_FOOTER_TEXT.format({
           helpArticle: h.l4
         })
-      }), (0, r.jsx)(s.Button, {
+      }), (0, r.jsx)(l.Button, {
         fullWidth: !0,
         className: g.verifiedButton,
-        color: v ? s.ButtonColors.RED : s.ButtonColors.BRAND,
-        size: s.ButtonSizes.MEDIUM,
-        look: s.ButtonLooks.FILLED,
+        color: v ? l.ButtonColors.RED : l.ButtonColors.BRAND,
+        size: l.ButtonSizes.MEDIUM,
+        look: l.ButtonLooks.FILLED,
         onClick: v ? x : O,
         children: v ? S.Z.Messages.E2EE_CLEAR_VERIFICATION : S.Z.Messages.E2EE_MARK_AS_VERIFIED
-      }), (0, r.jsx)(s.Button, {
+      }), (0, r.jsx)(l.Button, {
         fullWidth: !0,
-        color: s.ButtonColors.PRIMARY,
-        size: s.ButtonSizes.MEDIUM,
-        look: s.ButtonLooks.FILLED,
+        color: l.ButtonColors.PRIMARY,
+        size: l.ButtonSizes.MEDIUM,
+        look: l.ButtonLooks.FILLED,
         onClick: Z,
         children: S.Z.Messages.CANCEL
       })]

@@ -165,8 +165,8 @@ class R extends(l = s.Component) {
       hangStatusActivity: R,
       showHangStatus: O,
       isSelf: P,
-      application: b,
-      guildId: y,
+      application: y,
+      guildId: b,
       channelId: D,
       user: U,
       handleHoverHangStatus: k,
@@ -239,7 +239,7 @@ class R extends(l = s.Component) {
         className: r()(S.icon, E)
       })
     }, "watch"));
-    let V = null != b && !(0, _.yE)(b.flags, x.udG.EMBEDDED),
+    let V = null != y && !(0, _.yE)(y.flags, x.udG.EMBEDDED),
       F = null == R && V;
     return 0 !== B.length || null != G || O || F ? (0, i.jsxs)("div", {
       className: S.icons,
@@ -253,9 +253,9 @@ class R extends(l = s.Component) {
         onMouseEnter: () => null == k ? void 0 : k(!0),
         onMouseLeave: () => null == k ? void 0 : k(!1),
         children: F ? (0, i.jsx)(j, {
-          application: b,
+          application: y,
           iconClassName: E,
-          guildId: y,
+          guildId: b,
           channelId: D,
           userId: U.id
         }, "".concat(U.id, "-game")) : (0, i.jsx)(M, {

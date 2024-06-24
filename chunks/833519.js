@@ -37,8 +37,8 @@ var l = n(735250),
   L = n(792517),
   O = n(979425),
   P = n(651183),
-  b = n(623825),
-  y = n(981631),
+  y = n(623825),
+  b = n(981631),
   D = n(354459),
   U = n(65154),
   k = n(689938),
@@ -53,11 +53,11 @@ function B(e) {
     idle: s,
     width: a,
     premiumIndicator: o
-  } = e, c = (0, r.e7)([_.Z], () => _.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)), u = (0, b.K)(a);
+  } = e, c = (0, r.e7)([_.Z], () => _.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)), u = (0, y.K)(a);
   return (0, l.jsxs)(l.Fragment, {
     children: [n ? null : (0, l.jsx)(P.Z, {
       participant: t
-    }), i || null == c || c.state === y.jm8.ENDED || c.state === y.jm8.FAILED ? null : (0, l.jsx)(g.Z, {
+    }), i || null == c || c.state === b.jm8.ENDED || c.state === b.jm8.FAILED ? null : (0, l.jsx)(g.Z, {
       size: S.ZP.Sizes.SMALL,
       className: w.liveIndicator,
       participant: t,
@@ -77,7 +77,7 @@ function G(e) {
     fit: g,
     inPopout: S,
     width: P,
-    focused: b
+    focused: y
   } = e, B = T.Z.getVideoComponent(), G = (0, r.e7)([I.default], () => I.default.getId()), V = (0, m.Z)(), {
     stream: F,
     user: z,
@@ -93,12 +93,12 @@ function G(e) {
     selected: n,
     isSelfStream: z.id === G
   });
-  if ((null == K ? void 0 : K.state) === y.jm8.ENDED) return (0, l.jsx)(R.Z, {
+  if ((null == K ? void 0 : K.state) === b.jm8.ENDED) return (0, l.jsx)(R.Z, {
     selected: n,
     stream: K,
     width: P
   });
-  if ((null == K ? void 0 : K.state) === y.jm8.FAILED) return (0, l.jsx)(j.Z, {
+  if ((null == K ? void 0 : K.state) === b.jm8.FAILED) return (0, l.jsx)(j.Z, {
     selected: n,
     stream: K,
     width: P
@@ -110,7 +110,7 @@ function G(e) {
   });
   else if (null != K && !n && null != B && T.Z.supports(U.AN.VIDEO)) return (0, l.jsxs)(l.Fragment, {
     children: [null != Y ? (0, l.jsx)(f.Z, {
-      focused: b,
+      focused: y,
       channelId: Y.id,
       guildId: Y.guild_id,
       streamerId: z.id,

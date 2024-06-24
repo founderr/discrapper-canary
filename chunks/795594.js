@@ -29,8 +29,8 @@ var n = t(735250),
   P = t(981631),
   Z = t(689938),
   f = t(661071),
-  j = t(331651);
-let v = E.ZP.connectStores([p.Z], () => ({
+  v = t(331651);
+let j = E.ZP.connectStores([p.Z], () => ({
   theme: p.Z.theme
 }))(T.EmptyState);
 
@@ -112,7 +112,7 @@ let B = e => {
       })
     }, d = (0, D.O)(t.id);
     return (0, n.jsx)(T.Card, {
-      className: l()(f.authedApp, j.marginBottom8),
+      className: l()(f.authedApp, v.marginBottom8),
       outline: !0,
       children: (0, n.jsxs)(T.HeadingLevel, {
         component: (() => {
@@ -129,7 +129,7 @@ let B = e => {
               })
             }) : null;
           return (0, n.jsxs)(R.Z, {
-            className: l()(f.__invalid_header, j.marginBottom20),
+            className: l()(f.__invalid_header, v.marginBottom20),
             children: [(0, n.jsxs)(R.Z, {
               className: f.headerInfo,
               children: [s, (0, n.jsx)(R.Z.Child, {
@@ -197,10 +197,10 @@ let B = e => {
           if (e.length > 0 || null != a && a.length > 0) return (0, n.jsx)(T.FormItem, {
             faded: !0,
             title: Z.Z.Messages.PERMISSIONS,
-            className: j.marginTop20,
+            className: v.marginTop20,
             children: (0, n.jsxs)("ul", {
               children: [e.map((e, s) => (0, n.jsxs)("li", {
-                className: l()(f.permission, j.marginTop8),
+                className: l()(f.permission, v.marginTop8),
                 children: [(0, n.jsx)("i", {
                   className: f.permissionCheckmark
                 }), (0, n.jsx)(T.FormText, {
@@ -209,7 +209,7 @@ let B = e => {
               }, s)), null == a ? void 0 : a.map((s, t) => {
                 let i = (0, O.PM)(s);
                 return null != i ? (0, n.jsxs)("li", {
-                  className: l()(f.permission, j.marginTop8),
+                  className: l()(f.permission, v.marginTop8),
                   children: [(0, n.jsx)(B, {
                     disclosure: s
                   }), (0, n.jsx)(T.FormText, {
@@ -262,7 +262,7 @@ s.Z = () => {
         "aria-label": Z.Z.Messages.INTEGRATIONS_SEARCH
       })
     }),
-    N = (e, s) => (0, n.jsxs)(v, {
+    N = (e, s) => (0, n.jsxs)(j, {
       className: f.__invalid_marginTop20,
       children: [(0, n.jsx)(T.EmptyStateImage, {
         darkSrc: t(701972),
@@ -283,13 +283,13 @@ s.Z = () => {
     title: Z.Z.Messages.AUTHORIZED_APPS,
     children: (0, n.jsx)(T.HeadingLevel, {
       component: (0, n.jsx)(T.FormNotice, {
-        className: j.marginBottom40,
+        className: v.marginBottom40,
         type: T.CardTypes.PRIMARY,
         title: Z.Z.Messages.APPLICATIONS_AND_CONNECTIONS,
         body: Z.Z.Messages.APPLICATIONS_AND_CONNECTIONS_BODY
       }),
       children: null == s || null == O ? (0, n.jsx)(T.Spinner, {
-        className: j.marginTop20,
+        className: v.marginTop20,
         type: T.Spinner.Type.SPINNING_CIRCLE
       }) : 0 === s.length ? N(Z.Z.Messages.NO_AUTHORIZED_APPS_NOTE, Z.Z.Messages.NO_AUTHORIZED_APPS) : 0 === O.length ? (0, n.jsxs)(n.Fragment, {
         children: [u(), N(null, Z.Z.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]

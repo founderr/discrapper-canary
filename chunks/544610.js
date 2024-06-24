@@ -87,13 +87,13 @@ function P(e) {
   }).filter(e => null != e.user), w.emitChange()
 }
 
-function b() {
+function y() {
   return null != l && (l.destroy(), l = null), h.Z.getSearchContext(P, 1e3)
 }
 
-function y(e) {
+function b(e) {
   if (e.key !== I.vTt) return !1;
-  x = !0, L(), l = b(), A = null, R("")
+  x = !0, L(), l = y(), A = null, R("")
 }
 
 function D(e) {
@@ -149,10 +149,10 @@ let w = new k(d.Z, {
     let l = x;
     return M(), x = l, A = n, j()
   },
-  MODAL_PUSH: y,
-  SHOW_ACTION_SHEET: y,
+  MODAL_PUSH: b,
+  SHOW_ACTION_SHEET: b,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function(e) {
-    x = !0, L(), l = b(), A = e.channelId, R("")
+    x = !0, L(), l = y(), A = e.channelId, R("")
   },
   MODAL_POP: D,
   HIDE_ACTION_SHEET: D,

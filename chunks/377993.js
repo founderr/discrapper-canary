@@ -34,8 +34,8 @@ var l = n(735250),
   L = n(689938),
   O = n(328e3),
   P = n(279691);
-let b = [],
-  y = M.ZP.getEnableHardwareAcceleration();
+let y = [],
+  b = M.ZP.getEnableHardwareAcceleration();
 
 function D(e) {
   let {
@@ -83,7 +83,7 @@ function D(e) {
       currentUser: I,
       isOwner: t.id === i.ownerId,
       ownerTooltipText: L.Z.Messages.GROUP_OWNER,
-      shouldAnimateStatus: y,
+      shouldAnimateStatus: b,
       isTyping: m,
       status: u,
       activities: d,
@@ -202,12 +202,12 @@ function w(e) {
             } = (0, m.$)(t);
           i[e.id] = {
             status: null !== (a = g.Z.getStatus(e.id)) && void 0 !== a ? a : j.Skl.OFFLINE,
-            activities: null !== (r = g.Z.getActivities(e.id)) && void 0 !== r ? r : b,
+            activities: null !== (r = g.Z.getActivities(e.id)) && void 0 !== r ? r : y,
             lastOnlineTimestamp: l ? t : void 0
           }, s && (n = !0)
         } else i[e.id] = {
           status: j.Skl.OFFLINE,
-          activities: b
+          activities: y
         }
       }
       let o = [];
@@ -261,7 +261,7 @@ function w(e) {
       guild_id: t.guild_id
     })
   }, [t.guild_id, t.id, t.type]);
-  let y = o && C.every(e => e.user.isStaff());
+  let b = o && C.every(e => e.user.isStaff());
   return (0, l.jsx)(d.Gt, {
     value: c,
     children: (0, l.jsx)("div", {
@@ -271,7 +271,7 @@ function w(e) {
         fade: !0,
         children: [(0, l.jsxs)(T.Z, {
           className: P.membersGroup,
-          children: ["".concat(L.Z.Messages.MEMBERS, "—").concat(C.length, " "), y ? (0, l.jsx)(I.Z, {
+          children: ["".concat(L.Z.Messages.MEMBERS, "—").concat(C.length, " "), b ? (0, l.jsx)(I.Z, {
             className: P.__invalid_decorator,
             type: I.Z.Types.STAFF_ONLY_DM
           }) : null]

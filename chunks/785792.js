@@ -6,8 +6,8 @@ t.d(n, {
 var r = t(735250),
   o = t(470079),
   u = t(120356),
-  s = t.n(u),
-  l = t(481060),
+  l = t.n(u),
+  s = t(481060),
   i = t(727857);
 
 function a(e) {
@@ -20,12 +20,12 @@ function a(e) {
   }), [t]);
   return (0, r.jsx)("div", {
     style: a,
-    className: s()(i.code, u),
+    className: l()(i.code, u),
     children: n.map((e, n) => (0, r.jsx)("div", {
-      className: s()(i.chunk, {
+      className: l()(i.chunk, {
         [i.divider]: n > t - 1
       }),
-      children: (0, r.jsx)(l.Text, {
+      children: (0, r.jsx)(s.Text, {
         className: i.codeText,
         variant: "code",
         color: "text-normal",

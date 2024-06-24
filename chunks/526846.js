@@ -1,6 +1,6 @@
 n.d(t, {
   m: function() {
-    return y
+    return b
   }
 }), n(47120);
 var l = n(735250),
@@ -34,13 +34,13 @@ var l = n(735250),
   L = n(587952),
   O = n(736733),
   P = n(102394);
-let b = "vc-activities-".concat((0, o.Z)()),
-  y = i.forwardRef(function(e, t) {
+let y = "vc-activities-".concat((0, o.Z)()),
+  b = i.forwardRef(function(e, t) {
     let {
       channel: n,
       isHovered: s,
       closePopout: o,
-      onMouseEnter: y,
+      onMouseEnter: b,
       onMouseLeave: D,
       onClick: U,
       className: k
@@ -97,11 +97,11 @@ let b = "vc-activities-".concat((0, o.Z)()),
         }), D(), U()
       }, [q, W, n, U, D, K]),
       J = i.useCallback(e => {
-        y(), _.default.track(M.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
+        b(), _.default.track(M.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
           channel_id: n.id,
           guild_id: n.getGuildId()
         })
-      }, [y, n]),
+      }, [b, n]),
       $ = w ? (0, l.jsxs)(r.rU, {
         to: M.Z5c.ACTIVITIES,
         children: [(0, l.jsx)("img", {
@@ -129,13 +129,13 @@ let b = "vc-activities-".concat((0, o.Z)()),
       children: (0, l.jsx)(C.Z, {
         children: (0, l.jsxs)(u.Dialog, {
           ref: t,
-          "aria-labelledby": b,
+          "aria-labelledby": y,
           className: k,
           children: [(0, l.jsx)(u.HeadingLevel, {
             forceLevel: 2,
             children: (0, l.jsx)(u.HiddenVisually, {
               children: (0, l.jsx)(u.H, {
-                id: b,
+                id: y,
                 children: R.Z.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
               })
             })

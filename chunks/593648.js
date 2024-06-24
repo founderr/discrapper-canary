@@ -33,8 +33,8 @@ var n = t(735250),
   P = t(626135),
   Z = t(912101),
   f = t(358085),
-  j = t(709054),
-  v = t(557177),
+  v = t(709054),
+  j = t(557177),
   U = t(695346),
   B = t(675478),
   b = t(33656),
@@ -109,7 +109,7 @@ function W(e) {
   let c = i.useRef(),
     d = (0, O.p)(),
     T = i.useCallback((e, s) => {
-      s.stopPropagation(), s.preventDefault(), null != c.current && c.current.stop(), c.current = v.GN(e)
+      s.stopPropagation(), s.preventDefault(), null != c.current && c.current.stop(), c.current = j.GN(e)
     }, []),
     S = i.useCallback((e, t) => {
       let n = s.filter(s => s !== e);
@@ -239,7 +239,7 @@ function W(e) {
 function K() {
   let e = (0, c.e7)([N.Z], () => N.Z.getGuildAlertSettings()),
     [s, t] = i.useState(null),
-    a = j.default.keys(e).map(s => {
+    a = v.default.keys(e).map(s => {
       let t = e[s];
       return {
         label: t.guildName,

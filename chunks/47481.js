@@ -87,23 +87,23 @@ function u(e) {
     }), _ = null);
     let P = (null == R ? void 0 : R.type) === c.ys_.MESSAGE ? u : R;
     (0, r.J)(d, P, e) && (n = e.id);
-    let b = {
+    let y = {
       type: e.type === c.uaV.THREAD_STARTER_MESSAGE ? c.ys_.THREAD_STARTER_MESSAGE : c.ys_.MESSAGE,
       content: e,
       groupId: n
     };
-    n === e.id && (u = b);
+    n === e.id && (u = y);
     let {
-      jumpSequenceId: y,
+      jumpSequenceId: b,
       jumpFlash: D,
       jumpTargetId: U
     } = h;
-    D && e.id === U && null != y && (b.flashKey = y), h.jumpTargetId === e.id && (b.jumpTarget = !0), null != g && e.id === g.startId && g.count > 1 && f.push({
+    D && e.id === U && null != b && (y.flashKey = b), h.jumpTargetId === e.id && (y.jumpTarget = !0), null != g && e.id === g.startId && g.count > 1 && f.push({
       type: c.ys_.DIVIDER,
       content: g.topic,
       contentKey: g.startId,
       isSummaryDivider: !0
-    }), null !== j ? (j.content.push(b), b.jumpTarget && (j.hasJumpTarget = !0)) : f.push(b), e.isFirstMessageInForumPost(d) && f.push({
+    }), null !== j ? (j.content.push(y), y.jumpTarget && (j.hasJumpTarget = !0)) : f.push(y), e.isFirstMessageInForumPost(d) && f.push({
       type: c.ys_.FORUM_POST_ACTION_BAR
     }), null != g && e.id === g.endId && g.count > 1 && f.push({
       type: c.ys_.DIVIDER,

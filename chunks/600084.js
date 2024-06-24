@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return b
+    return y
   }
 });
 var l = n(735250),
@@ -57,7 +57,7 @@ function P(e) {
   })
 }
 
-function b(e) {
+function y(e) {
   var t;
   let {
     channel: n,

@@ -119,16 +119,16 @@ function M(e) {
     intention: Z
   })).slice(0, I.e5);
   null != _ && _.length > 0 && P.splice(P.length - 1, 1, _[0]);
-  let b = e => {
+  let y = e => {
       L(e), null == p || p(e)
     },
-    y = (e, t) => {
+    b = (e, t) => {
       if (null == e && t) {
         s();
         return
       }
       null != e && u(e);
-      b(!t), t && E.kJ.setSearchPlaceholder(null)
+      y(!t), t && E.kJ.setSearchPlaceholder(null)
     };
   return (0, l.jsxs)(c.Dialog, {
     "aria-labelledby": R,
@@ -152,7 +152,7 @@ function M(e) {
           [N.emojiPickerHeaderExpanded]: j
         }),
         closePopout: s,
-        onSelectEmoji: j ? y : () => {},
+        onSelectEmoji: j ? b : () => {},
         shouldHidePickerActions: !j,
         wrapper: "div",
         pickerIntention: Z,
@@ -161,11 +161,11 @@ function M(e) {
           accessory: (0, l.jsx)(A, {
             otherAccessories: null == g ? void 0 : g.accessory,
             isEmojiPickerExpanded: j,
-            onSetExpanded: b,
+            onSetExpanded: y,
             onFocus: o
           }),
           onKeyDown: e => {
-            null != e && e.key !== T.vn.TAB && (e.key !== T.vn.ENTER || e.shiftKey ? b(!0) : b(!j))
+            null != e && e.key !== T.vn.TAB && (e.key !== T.vn.ENTER || e.shiftKey ? y(!0) : y(!j))
           }
         }
       }), (0, l.jsx)("div", {
@@ -190,7 +190,7 @@ function M(e) {
                   emoji: e,
                   isDisabled: n,
                   onClick: () => {
-                    n ? null == d || d(e) : y(e, !0)
+                    n ? null == d || d(e) : b(e, !0)
                   }
                 })
               })

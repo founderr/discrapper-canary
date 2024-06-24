@@ -6,16 +6,16 @@ t.d(n, {
 var i = t(735250);
 t(470079);
 var a = t(481060),
-  l = t(346610),
-  r = t(868643),
+  r = t(346610),
+  l = t(868643),
   o = t(996861),
   u = t(689938);
 
 function s(e, n) {
-  let t = (0, r.a)(e),
+  let t = (0, l.a)(e),
     {
       canForwardMessages: s
-    } = l.w.useExperiment({
+    } = r.w.useExperiment({
       location: "MessageActionsMenu"
     });
   return t && s ? (0, i.jsx)(a.MenuItem, {

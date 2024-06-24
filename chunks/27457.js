@@ -34,8 +34,8 @@ var l = n(735250),
   L = n(937995),
   O = n(456631),
   P = n(274459),
-  b = n(314897),
-  y = n(77498),
+  y = n(314897),
+  b = n(77498),
   D = n(131951),
   U = n(158776),
   k = n(594174),
@@ -81,11 +81,11 @@ let el = i.memo(e => {
     fit: ef = B.L.CONTAIN,
     paused: eC = !1,
     pulseSpeakingIndicator: e_ = !1
-  } = e, eI = i.useContext(L.h9), [ex, eT] = i.useState(!1), eN = (0, o.e7)([b.default], () => b.default.getId()), eZ = (0, o.e7)([k.default], () => k.default.getCurrentUser()), eS = I.type === J.fO.ACTIVITY ? null : null === (t = I.user) || void 0 === t ? void 0 : t.id, [ev] = (0, p.Z)(I.type === J.fO.ACTIVITY ? [I.id] : []), eA = (0, o.e7)([x.Z], () => x.Z.getEnabled()), eM = (0, o.e7)([D.Z], () => null != eS && D.Z.isLocalVideoDisabled(eS, (0, E.Z)(I.type)), [eS, I.type]), eR = (0, o.e7)([D.Z], () => null != eS ? D.Z.getVideoToggleState(eS, (0, E.Z)(I.type)) : Q.ZUi.NONE, [eS, I.type]), ej = eR === Q.ZUi.AUTO_PROBING, {
+  } = e, eI = i.useContext(L.h9), [ex, eT] = i.useState(!1), eN = (0, o.e7)([y.default], () => y.default.getId()), eZ = (0, o.e7)([k.default], () => k.default.getCurrentUser()), eS = I.type === J.fO.ACTIVITY ? null : null === (t = I.user) || void 0 === t ? void 0 : t.id, [ev] = (0, p.Z)(I.type === J.fO.ACTIVITY ? [I.id] : []), eA = (0, o.e7)([x.Z], () => x.Z.getEnabled()), eM = (0, o.e7)([D.Z], () => null != eS && D.Z.isLocalVideoDisabled(eS, (0, E.Z)(I.type)), [eS, I.type]), eR = (0, o.e7)([D.Z], () => null != eS ? D.Z.getVideoToggleState(eS, (0, E.Z)(I.type)) : Q.ZUi.NONE, [eS, I.type]), ej = eR === Q.ZUi.AUTO_PROBING, {
     speaking: eL,
     ringing: eO,
     hasVideo: eP
-  } = (0, X.Z)(I, eN), eb = function(e, t, n) {
+  } = (0, X.Z)(I, eN), ey = function(e, t, n) {
     var l, i, s, a;
     let r = (0, o.cj)([w.Z], () => {
         var e, l, i;
@@ -117,11 +117,11 @@ let el = i.memo(e => {
       muted: null !== (s = t.type === J.fO.USER && (null === (l = t.voiceState) || void 0 === l ? void 0 : l.isVoiceMuted())) && void 0 !== s && s,
       deafened: null !== (a = t.type === J.fO.USER && (null === (i = t.voiceState) || void 0 === i ? void 0 : i.isVoiceDeafened())) && void 0 !== a && a
     }
-  }(eN, I, er.getGuildId()), ey = I.type === J.fO.STREAM && eS === eN, {
+  }(eN, I, er.getGuildId()), eb = I.type === J.fO.STREAM && eS === eN, {
     available: eD,
     activated: eU,
     hqStreamingState: ek
-  } = (0, A.k)(r.q.STREAM_HIGH_QUALITY), ew = eD && eU && ek.hqStreamingIsEnabled && ey, eH = (0, v.o)(I, eZ), eB = (0, S.lL)("CallTile", !0, eZ, eH), eG = eB.persistentQualityIndicator && eB.enabled, eV = (0, o.e7)([O.Z], () => null != eS ? O.Z.getEffectForUserId(eS) : null), eF = (0, o.e7)([w.Z], () => w.Z.getVoicePlatformForChannel(er.id, null != eS ? eS : Q.lds)), {
+  } = (0, A.k)(r.q.STREAM_HIGH_QUALITY), ew = eD && eU && ek.hqStreamingIsEnabled && eb, eH = (0, v.o)(I, eZ), eB = (0, S.lL)("CallTile", !0, eZ, eH), eG = eB.persistentQualityIndicator && eB.enabled, eV = (0, o.e7)([O.Z], () => null != eS ? O.Z.getEffectForUserId(eS) : null), eF = (0, o.e7)([w.Z], () => w.Z.getVoicePlatformForChannel(er.id, null != eS ? eS : Q.lds)), {
     enableHangStatus: ez
   } = C.n.useExperiment({
     guildId: er.guild_id,
@@ -138,7 +138,7 @@ let el = i.memo(e => {
   } = (0, o.cj)([U.Z], () => ({
     hangStatusActivity: ez && null != eS ? U.Z.findActivity(eS, e => e.type === Q.IIU.HANG_STATUS) : null,
     gameActivity: eY && null != eS ? U.Z.findActivity(eS, e => null != e.application_id && e.type === Q.IIU.PLAYING) : null
-  }), [ez, eS, eY]), eX = (0, o.e7)([y.Z], () => (null == eq ? void 0 : eq.application_id) != null ? y.Z.getDetectableGame(eq.application_id) : null), eQ = (0, o.e7)([m.Z], () => null != eX && (null == eq ? void 0 : eq.application_id) != null ? m.Z.getApplication(null == eq ? void 0 : eq.application_id) : void 0), eJ = (0, j.wV)(eS, er.id);
+  }), [ez, eS, eY]), eX = (0, o.e7)([b.Z], () => (null == eq ? void 0 : eq.application_id) != null ? b.Z.getDetectableGame(eq.application_id) : null), eQ = (0, o.e7)([m.Z], () => null != eX && (null == eq ? void 0 : eq.application_id) != null ? m.Z.getApplication(null == eq ? void 0 : eq.application_id) : void 0), eJ = (0, j.wV)(eS, er.id);
   i.useEffect(() => {
     eT(eE)
   }, [eE]);
@@ -293,14 +293,14 @@ let el = i.memo(e => {
               inCall: ed,
               participantType: I.type,
               hasVideo: null != eP && eP,
-              ...eb,
+              ...ey,
               idle: eI,
               platform: eF,
               title: (0, F.Z)(er, I),
               blocked: eg,
               localVideoDisabled: eM,
               videoToggleState: eR,
-              hideAudioIcon: ey,
+              hideAudioIcon: eb,
               onContextMenu: e7,
               onToggleMute: e$,
               participantUserId: eS,
@@ -386,7 +386,7 @@ let es = i.memo(e => {
     application: j,
     speaking: L,
     secureFramesVerified: O
-  } = e, P = null, b = null, y = null, U = null, k = (0, q.K)(m), w = (0, q.N)(m), B = (0, o.e7)([D.Z], () => null != S && D.Z.isLocalVideoAutoDisabled(S, (0, E.Z)(Z)), [S, Z]), G = (0, u.useRedesignIconContext)().enabled;
+  } = e, P = null, y = null, b = null, U = null, k = (0, q.K)(m), w = (0, q.N)(m), B = (0, o.e7)([D.Z], () => null != S && D.Z.isLocalVideoAutoDisabled(S, (0, E.Z)(Z)), [S, Z]), G = (0, u.useRedesignIconContext)().enabled;
   if (!N) {
     if (i && Z === J.fO.STREAM && p && !x) P = (0, l.jsx)(u.Tooltip, {
       text: et.Z.Messages.UNMUTE,
@@ -441,14 +441,14 @@ let es = i.memo(e => {
       }
     })
   }
-  return g && D.Z.supports(ee.AN.VIDEO) || !p ? g && p && f && !B && (b = (0, l.jsx)(u.VideoSlashIcon, {
+  return g && D.Z.supports(ee.AN.VIDEO) || !p ? g && p && f && !B && (y = (0, l.jsx)(u.VideoSlashIcon, {
     size: "md",
     color: "currentColor",
     colorClass: en.localMuteStrikethrough
-  })) : b = (0, l.jsx)(u.VideoIcon, {
+  })) : y = (0, l.jsx)(u.VideoIcon, {
     size: "md",
     color: "currentColor"
-  }), Z === J.fO.STREAM && !x && p && (y = (0, l.jsx)(u.Tooltip, {
+  }), Z === J.fO.STREAM && !x && p && (b = (0, l.jsx)(u.Tooltip, {
     text: et.Z.Messages.OPTIONS,
     children: e => {
       let {
@@ -553,13 +553,13 @@ let es = i.memo(e => {
         })]
       }), (0, l.jsxs)("div", {
         className: en.statusContainer,
-        children: [null != b && (0, l.jsx)("div", {
+        children: [null != y && (0, l.jsx)("div", {
           className: en.status,
-          children: b
+          children: y
         }), null != P && (0, l.jsx)("div", {
           className: en.status,
           children: P
-        }), y, U]
+        }), b, U]
       })]
     })]
   })

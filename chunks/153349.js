@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return y
+    return b
   }
 }), n(47120);
 var l, i, s = n(735250),
@@ -181,7 +181,7 @@ let L = a.memo(function(e) {
       children: R.Z.Messages.MODERATOR_ALLOW_EVERYONE_RAISE_HAND
     })
   }),
-  b = a.memo(function() {
+  y = a.memo(function() {
     return (0, s.jsxs)("div", {
       className: j.emptyStateContainer,
       children: [(0, s.jsx)(A.Z, {}), (0, s.jsx)(h.Text, {
@@ -198,7 +198,7 @@ let L = a.memo(function(e) {
     })
   });
 
-function y(e) {
+function b(e) {
   let {
     channel: t,
     toggleRequestToSpeakSidebar: n,
@@ -239,7 +239,7 @@ function y(e) {
               channel: t
             }, "rts-toggle");
           case 1: {
-            if (0 === i.length) return (0, s.jsx)(b, {}, "participants-empty");
+            if (0 === i.length) return (0, s.jsx)(y, {}, "participants-empty");
             let e = i[l];
             return (0, s.jsx)(O, {
               channel: t,

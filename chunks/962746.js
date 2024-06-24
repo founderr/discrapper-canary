@@ -110,7 +110,7 @@ function ei(e) {
     pendingGlobalName: ef,
     user: G,
     guildMember: eW
-  }), [e8, e9] = (0, o.Wu)([O.Z], () => [O.Z.findActivity(G.id, e => e.type === K.IIU.CUSTOM_STATUS), O.Z.getStatus(G.id)]), e6 = (0, d.useStatusFillColor)(e9), e7 = (0, o.e7)([z.Z], () => z.Z.hidePersonalInformation), e2 = (null == eO ? void 0 : eO.canUsePremiumProfileCustomization) || en, e5 = l.useCallback(() => {
+  }), [e9, e7] = (0, o.Wu)([O.Z], () => [O.Z.findActivity(G.id, e => e.type === K.IIU.CUSTOM_STATUS), O.Z.getStatus(G.id)]), e8 = (0, d.useStatusFillColor)(e7), e6 = (0, o.e7)([z.Z], () => z.Z.hidePersonalInformation), e2 = (null == eO ? void 0 : eO.canUsePremiumProfileCustomization) || en, e5 = l.useCallback(() => {
     var e, a;
     null === (a = e_.current) || void 0 === a || null === (e = a.inputRef.current) || void 0 === e || e.activateUploadDialogue()
   }, []), e3 = l.useCallback((e, a) => {
@@ -162,15 +162,15 @@ function ei(e) {
         className: J.statusDotBackground,
         style: {
           backgroundColor: e,
-          opacity: (0, d.getStatusBackdropOpacity)(e9, e)
+          opacity: (0, d.getStatusBackdropOpacity)(e7, e)
         }
       }), (0, n.jsx)("svg", {
         className: J.statusDot,
         children: (0, n.jsx)("rect", {
           height: "100%",
           width: "100%",
-          fill: e6,
-          mask: "url(#".concat((0, d.getStatusMask)(e9, !1), ")")
+          fill: e8,
+          mask: "url(#".concat((0, d.getStatusMask)(e7, !1), ")")
         })
       })]
     })
@@ -361,12 +361,12 @@ function ei(e) {
               })
             })()
           }), !eA && (0, n.jsx)(b.Z, {
-            customStatusActivity: e8
+            customStatusActivity: e9
           }), (0, n.jsx)(C.Z, {}), !eE && (0, n.jsx)(_.Z, {
             isUsingGuildBio: null == e ? void 0 : e.isUsingGuildValue,
             guild: ei,
             bio: null == e ? void 0 : e.value,
-            hidePersonalInformation: e7,
+            hidePersonalInformation: e6,
             lastSection: eS,
             lineClamp: eN ? 3 : void 0
           }), !ej && (0, n.jsx)(w.Z, {

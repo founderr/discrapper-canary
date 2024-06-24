@@ -35,8 +35,8 @@ var i = n(120356),
   L = n(613548),
   O = n(221888),
   P = n(339340),
-  b = n(354459),
-  y = n(981631),
+  y = n(354459),
+  b = n(981631),
   D = n(231338),
   U = n(689938),
   k = n(254772),
@@ -54,7 +54,7 @@ function H(e) {
       maxVisibleUsers: 5,
       guildId: n.getGuildId(),
       channelId: n.id,
-      disableInteraction: i === y.IlC.POPOUT || s === y.AEg.FULL_SCREEN
+      disableInteraction: i === b.IlC.POPOUT || s === b.AEg.FULL_SCREEN
     })
   })
 }
@@ -91,7 +91,7 @@ function G(e) {
     o = (0, E.qY)(s.id),
     c = null != o ? (0, g.DK)(o) : null,
     d = null != o;
-  if ((null == i ? void 0 : i.type) === b.fO.ACTIVITY) null != n && (t = (0, l.jsxs)(l.Fragment, {
+  if ((null == i ? void 0 : i.type) === y.fO.ACTIVITY) null != n && (t = (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(v.ZP.Divider, {
       className: k.divider
     }), (0, l.jsx)(S.Z, {
@@ -107,7 +107,7 @@ function G(e) {
       focusedParticipant: i
     })]
   }));
-  else if ((null == i ? void 0 : i.type) === b.fO.STREAM) {
+  else if ((null == i ? void 0 : i.type) === y.fO.STREAM) {
     let e = i.user,
       n = i.stream;
     t = (0, l.jsxs)(l.Fragment, {
@@ -146,7 +146,7 @@ function V(e) {
   } = (0, a.cj)([M.Z], () => ({
     focusedParticipant: M.Z.getSelectedParticipant(t.id),
     participantsOpen: M.Z.getParticipantsOpen(t.id)
-  }), [t.id]), f = (0, m.ZP)(t), N = (0, p.Z)(t), [Z] = (0, d.Z)((null == g ? void 0 : g.type) === b.fO.ACTIVITY ? [g.id] : []), S = U.Z.Messages.VOICE_CHANNEL;
+  }), [t.id]), f = (0, m.ZP)(t), N = (0, p.Z)(t), [Z] = (0, d.Z)((null == g ? void 0 : g.type) === y.fO.ACTIVITY ? [g.id] : []), S = U.Z.Messages.VOICE_CHANNEL;
   t.isDM() ? S = U.Z.Messages.DM : t.isGroupDM() && (S = U.Z.Messages.GROUP_DM);
   let j = (0, a.e7)([h.Z], () => h.Z.getChannelStatus(t)),
     O = t.isGuildVoice() && c && null != j && j.length > 0,
@@ -202,7 +202,7 @@ function V(e) {
       className: (0, A.Q)(D.BR.DARK),
       childrenBottom: B,
       toolbar: (0, l.jsx)(L.Z, {
-        inPopout: o === y.IlC.POPOUT,
+        inPopout: o === b.IlC.POPOUT,
         channel: t,
         appContext: o,
         inCall: c,

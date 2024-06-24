@@ -15,15 +15,15 @@ t.d(n, {
 var r = t(913527),
   o = t.n(r),
   u = t(594174),
-  s = t(70956),
-  l = t(51144),
+  l = t(70956),
+  s = t(51144),
   i = t(352954),
   a = t(231338),
   c = t(689938);
 
 function d(e) {
   let n = u.default.getUser(e),
-    t = l.ZP.getName(n);
+    t = s.ZP.getName(n);
   i.Z.openSecureFramesUpdateConfirmation({
     title: c.Z.Messages.E2EE_CLEAR_USER_VERIFICATION_CONFIRM_TITLE.format({
       username: t
@@ -48,38 +48,38 @@ function f(e, n) {
 function I(e) {
   let n = o()(e),
     t = o()().diff(n, "s");
-  if (t > 12 * s.Z.Seconds.DAYS_30) {
-    let e = Math.round(t / (12 * s.Z.Seconds.DAYS_30));
+  if (t > 12 * l.Z.Seconds.DAYS_30) {
+    let e = Math.round(t / (12 * l.Z.Seconds.DAYS_30));
     return c.Z.Messages.E2EE_USER_VERIFIED_YEARS_AGO.format({
       count: e
     })
   }
-  if (t > s.Z.Seconds.DAYS_30) {
-    let e = Math.round(t / s.Z.Seconds.DAYS_30);
+  if (t > l.Z.Seconds.DAYS_30) {
+    let e = Math.round(t / l.Z.Seconds.DAYS_30);
     return c.Z.Messages.E2EE_USER_VERIFIED_MONTHS_AGO.format({
       count: e
     })
   }
-  if (t > 7 * s.Z.Seconds.DAY) {
-    let e = Math.round(t / (7 * s.Z.Seconds.DAY));
+  if (t > 7 * l.Z.Seconds.DAY) {
+    let e = Math.round(t / (7 * l.Z.Seconds.DAY));
     return c.Z.Messages.E2EE_USER_VERIFIED_WEEKS_AGO.format({
       count: e
     })
-  } else if (t > s.Z.Seconds.DAY) {
-    let e = Math.round(t / s.Z.Seconds.DAY);
+  } else if (t > l.Z.Seconds.DAY) {
+    let e = Math.round(t / l.Z.Seconds.DAY);
     return c.Z.Messages.E2EE_USER_VERIFIED_DAYS_AGO.format({
       count: e
     })
-  } else if (t > s.Z.Seconds.HOUR) {
-    let e = Math.round(t / s.Z.Seconds.HOUR);
+  } else if (t > l.Z.Seconds.HOUR) {
+    let e = Math.round(t / l.Z.Seconds.HOUR);
     return c.Z.Messages.E2EE_USER_VERIFIED_HOURS_AGO.format({
       count: e
     })
   } else {
-    if (!(t > s.Z.Seconds.MINUTE)) return c.Z.Messages.E2EE_USER_VERIFIED_SECONDS_AGO.format({
+    if (!(t > l.Z.Seconds.MINUTE)) return c.Z.Messages.E2EE_USER_VERIFIED_SECONDS_AGO.format({
       count: t
     });
-    let e = Math.round(t / s.Z.Seconds.MINUTE);
+    let e = Math.round(t / l.Z.Seconds.MINUTE);
     return c.Z.Messages.E2EE_USER_VERIFIED_MINUTES_AGO.format({
       count: e
     })

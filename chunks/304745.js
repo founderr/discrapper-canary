@@ -36,7 +36,7 @@ function S(e) {
     onMouseLeave: L
   } = (0, I.Z)(200, 300), O = (0, h.a)(), P = (0, d.Z)({
     channelId: t.id
-  }), b = !A, y = i.useCallback(e => {
+  }), y = !A, b = i.useCallback(e => {
     "focus" !== e.type && j()
   }, [j]), D = (0, o.O)(), U = (0, c.bp)() === T.IlC.POPOUT, {
     analyticsLocations: k
@@ -72,7 +72,7 @@ function S(e) {
             closePopout: n,
             setPopoutRef: s
           } = e;
-          return b ? (0, l.jsx)(E.m, {
+          return y ? (0, l.jsx)(E.m, {
             ref: s,
             channel: t,
             closePopout: n,
@@ -86,13 +86,13 @@ function S(e) {
           children: [(0, l.jsx)(x.Z, {
             disabled: A,
             "aria-label": v,
-            label: b ? void 0 : v,
+            label: y ? void 0 : v,
             isActivityActive: P || M,
             className: Z.controlButton,
             onClick: () => {
               w(), (n === a.z.ACTIVITIES_MINI_SHELF_SPARKLES || n === a.z.ACTIVITY_GDM_ROCKET_SPARKLE || n === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && i(N.L.UNKNOWN)
             },
-            onMouseEnter: y,
+            onMouseEnter: b,
             onMouseLeave: L
           }), O ? (0, l.jsx)(g.A, {
             top: 4,

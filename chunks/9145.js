@@ -34,8 +34,8 @@ var l = n(735250),
   L = n(719296),
   O = n(651612),
   P = n(918559),
-  b = n(981631),
-  y = n(689938),
+  y = n(981631),
+  b = n(689938),
   D = n(2314);
 let U = T.u.SIZE_32,
   k = {
@@ -134,7 +134,7 @@ function w(e) {
     }, e.id)
   };
   return (0, l.jsxs)("div", {
-    className: a()(D.wrapper, k[K], (0, Z.Q)(b.BRd.DARK)),
+    className: a()(D.wrapper, k[K], (0, Z.Q)(y.BRd.DARK)),
     ref: Y,
     style: eu,
     children: [null == H ? void 0 : H(), (0, l.jsxs)("div", {
@@ -186,7 +186,7 @@ function w(e) {
               className: D.leaveActivityButton
             })
           }), (0, l.jsx)(g.d, {
-            label: y.Z.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
+            label: b.Z.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
             onClick: W,
             iconComponent: c.MinimizeIcon,
             themeable: !0,
@@ -201,12 +201,12 @@ function w(e) {
       maxHeight: s,
       resizableNode: Y,
       onResize: e => {
-        N.S.dispatch(b.CkL.MANUAL_IFRAME_RESIZING, {
+        N.S.dispatch(y.CkL.MANUAL_IFRAME_RESIZING, {
           resizing: !0
         }), Q(e)
       },
       onResizeEnd: e => {
-        N.S.dispatch(b.CkL.MANUAL_IFRAME_RESIZING, {
+        N.S.dispatch(y.CkL.MANUAL_IFRAME_RESIZING, {
           resizing: !1
         }), J(e)
       }

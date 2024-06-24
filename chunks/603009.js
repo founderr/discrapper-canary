@@ -58,7 +58,7 @@ function R(e) {
     P = i.useCallback(e => {
       e.stopPropagation(), e.preventDefault(), o()
     }, [o]),
-    b = (0, r.useTransition)(s, {
+    y = (0, r.useTransition)(s, {
       from: {
         transform: S ? "translateY(0)" : "translateY(16px)",
         opacity: 0,
@@ -82,19 +82,19 @@ function R(e) {
       },
       delay: 200
     }),
-    y = (0, x.Zp)(n, L),
-    D = y ? A.Z.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_TITLE.format({
+    b = (0, x.Zp)(n, L),
+    D = b ? A.Z.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_TITLE.format({
       guildName: n.name
     }) : A.Z.Messages.CLAN_USER_ADOPT_TAG_UPSELL_TITLE.format({
       guildName: n.name
     }),
-    U = y ? A.Z.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_DESCRIPTION : A.Z.Messages.CLAN_USER_ADOPT_TAG_UPSELL_DESCRIPTION,
-    k = y ? A.Z.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_ARIA_LABEL.format({
+    U = b ? A.Z.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_DESCRIPTION : A.Z.Messages.CLAN_USER_ADOPT_TAG_UPSELL_DESCRIPTION,
+    k = b ? A.Z.Messages.CLAN_USER_ADOPT_TAG_NEW_IDENTITY_ARIA_LABEL.format({
       guildName: n.name
     }) : A.Z.Messages.CLAN_USER_ADOPT_TAG_UPSELL_ARIA_LABEL.format({
       guildName: n.name
     });
-  return b((e, t) => {
+  return y((e, t) => {
     var i, s;
     return t && (0, l.jsx)(r.animated.div, {
       onMouseEnter: () => E(!0),

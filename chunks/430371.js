@@ -39,8 +39,8 @@ function Z(e) {
       showParticipants: L = !0,
       className: O,
       paused: P,
-      width: b,
-      height: y,
+      width: y,
+      height: b,
       layout: D,
       idle: U
     } = e,
@@ -53,7 +53,7 @@ function Z(e) {
     Y = j.type === _.fO.ACTIVITY,
     K = !Y && null != j.streamId,
     q = K && null != B && B.width > 0 && B.height > 0 ? B.width / B.height : T,
-    X = y <= 2 * N + 144,
+    X = b <= 2 * N + 144,
     Q = L && !X,
     J = (0, o.Z)(Q),
     $ = D === C.AEg.MINIMUM || D === C.AEg.NORMAL,
@@ -61,11 +61,11 @@ function Z(e) {
     et = (0, m.Z)(ee, 100),
     en = 0;
   (Y || Q) && (en += 72), Y && !Q && (ee ? en += 48 : en += 8), Q && (en += .5 * N + 8);
-  let el = y - 2 * en,
+  let el = b - 2 * en,
     ei = el * q,
-    es = Math.floor(Math.min(b, ei) / q),
-    ea = y > b / q + 72 + N + 8;
-  t = Q || Y ? Q ? -16 : -8 : 40 + Math.max(0, 72 - (y - es) / 2), i.useEffect(() => {
+    es = Math.floor(Math.min(y, ei) / q),
+    ea = b > y / q + 72 + N + 8;
+  t = Q || Y ? Q ? -16 : -8 : 40 + Math.max(0, 72 - (b - es) / 2), i.useEffect(() => {
     let e = setTimeout(() => {
       F(!1)
     }, 250);
@@ -132,7 +132,7 @@ function Z(e) {
     {
       visibleParticipants: ep,
       participantTileWidth: eE
-    } = (0, f.ZB)(b, v);
+    } = (0, f.ZB)(y, v);
   return (0, l.jsxs)("div", {
     className: a()(x.root, I.flexCenter, O),
     children: [(0, l.jsxs)("div", {
@@ -164,12 +164,12 @@ function Z(e) {
                 style: e,
                 children: (0, l.jsx)(p.ZP, {
                   focused: !0,
-                  noBorder: ei >= b || el >= y,
+                  noBorder: ei >= y || el >= b,
                   channel: R,
                   className: I.focusedVideo,
                   videoComponent: w,
                   paused: P,
-                  width: b,
+                  width: y,
                   participant: t,
                   onClick: n,
                   onDoubleClick: Z,
@@ -216,8 +216,8 @@ function Z(e) {
       })]
     }), em.length > 0 ? (0, l.jsx)(E.Z, {
       onContextMenuParticipant: s,
-      width: b,
-      height: y,
+      width: y,
+      height: b,
       channel: R,
       participants: em
     }) : null]

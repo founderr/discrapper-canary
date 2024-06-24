@@ -35,14 +35,14 @@ t.Z = (0, r.Z)(e => {
     height: L,
     idle: O,
     mode: P,
-    popoutWindow: b,
-    awaitingRemoteSessionInfo: y
+    popoutWindow: y,
+    awaitingRemoteSessionInfo: b
   } = e;
   i.useEffect(() => {
     d.S.dispatch(f.CkL.REMEASURE_TARGET)
   }, [j, L]);
   let D = i.useMemo(() => n.filter(e => e.type !== C.fO.ACTIVITY || !e.participants.some(e => (0, o.J)(e))), [n, r]);
-  if ((null == y ? void 0 : y.channelId) === Z.id) return (0, l.jsx)(m.Z, {
+  if ((null == b ? void 0 : b.channelId) === Z.id) return (0, l.jsx)(m.Z, {
     height: L
   });
   if ((null == Z ? void 0 : Z.isGuildVocal()) && !A) return (0, l.jsx)(h.Z, {
@@ -84,7 +84,7 @@ t.Z = (0, r.Z)(e => {
     selectedParticipant: s,
     filteredParticipants: D,
     participants: t,
-    popoutWindow: b,
+    popoutWindow: y,
     className: v,
     idle: O,
     height: L,

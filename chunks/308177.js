@@ -47,14 +47,14 @@ t.Z = (0, o.Z)(e => {
     selectedParticipantId: c.Z.getSelectedParticipantId(l.id),
     largeStream: c.Z.getStageStreamSize(l.id),
     chatOpen: c.Z.getChatOpen(l.id)
-  }), [l.id]), M = (0, d.Io)(l.id), R = (0, d.Rk)(l.id, h.pV.AUDIENCE), j = (0, r.e7)([u.Z], () => null != x ? u.Z.getParticipant(l.id, x) : null), L = (0, d.w8)(l.id, h.pV.SPEAKER), O = L.filter(A), P = null != L.find(e => e.type === h.Ui.STREAM), b = v(i), y = S(i, N), D = {
-    [h.pV.SPEAKER]: y,
-    [h.pV.AUDIENCE]: b,
+  }), [l.id]), M = (0, d.Io)(l.id), R = (0, d.Rk)(l.id, h.pV.AUDIENCE), j = (0, r.e7)([u.Z], () => null != x ? u.Z.getParticipant(l.id, x) : null), L = (0, d.w8)(l.id, h.pV.SPEAKER), O = L.filter(A), P = null != L.find(e => e.type === h.Ui.STREAM), y = v(i), b = S(i, N), D = {
+    [h.pV.SPEAKER]: b,
+    [h.pV.AUDIENCE]: y,
     [h.pV.SELECTED]: 1
   }, U = (0, m.Dx)(l.id), [k, w] = (0, m.aP)(l.id, D, U), H = [Math.max(null !== (t = k[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = k[1]) && void 0 !== n ? n : 1, 1), k[2]], {
     speakerTileWidth: B,
     speakerTileHeight: G
-  } = Z(i, y), V = T ? i - 32 : Math.min(i - 64, 3 * B + 8), F = e => e === k.length - 1 || 0 === R && 1 === e, [z, W] = a.useState(!1), [Y, K] = a.useState(!1);
+  } = Z(i, b), V = T ? i - 32 : Math.min(i - 64, 3 * B + 8), F = e => e === k.length - 1 || 0 === R && 1 === e, [z, W] = a.useState(!1), [Y, K] = a.useState(!1);
   return (0, s.jsx)(E.Z, {
     sections: H,
     renderSection: e => {
@@ -114,7 +114,7 @@ t.Z = (0, o.Z)(e => {
           return (0, s.jsx)(p.Z, {
             channel: l,
             participants: i,
-            maxTiles: b
+            maxTiles: y
           }, "audience-".concat(t, "-").concat(n));
         default:
           return null

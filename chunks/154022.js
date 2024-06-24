@@ -33,8 +33,8 @@ var n = t(735250),
   P = t(996073),
   Z = t(526761),
   f = t(726985),
-  j = t(981631),
-  v = t(611480),
+  v = t(981631),
+  j = t(611480),
   U = t(653477),
   B = t(689938),
   b = t(542065),
@@ -92,7 +92,7 @@ function w(e) {
       variant: "text-md/normal",
       children: B.Z.Messages.ACCESSIBILITY_SETTINGS_APPEARANCE_LINK.format({
         onAppearanceClick() {
-          d.Z.open(j.oAB.APPEARANCE)
+          d.Z.open(v.oAB.APPEARANCE)
         }
       })
     })]
@@ -109,7 +109,7 @@ function W() {
             previewLink: "https://discord.com/accessibility"
           })
         }),
-        state: j.yb.SENT,
+        state: v.yb.SENT,
         id: "".concat(0)
       });
       return e.colorString = "green", e
@@ -126,7 +126,7 @@ function W() {
           children: B.Z.Messages.ACCESSIBILITY_EXAMPLE_BUTTON_LABEL
         }), (0, n.jsx)("div", {
           className: b.previewAvatars,
-          children: [j.Skl.ONLINE, j.Skl.DND, j.Skl.IDLE].map(e => (0, n.jsx)(E.AnimatedAvatar, {
+          children: [v.Skl.ONLINE, v.Skl.DND, v.Skl.IDLE].map(e => (0, n.jsx)(E.AnimatedAvatar, {
             "aria-label": B.Z.Messages.USER_SETTINGS_AVATAR,
             src: F,
             size: E.AvatarSizes.SIZE_32,
@@ -170,7 +170,7 @@ function K() {
     }), (0, n.jsx)(E.Slider, {
       "aria-labelledby": V,
       "aria-describedby": y,
-      markers: j.yqN.SATURATION_INCREMENTS,
+      markers: v.yqN.SATURATION_INCREMENTS,
       equidistant: !0,
       stickToMarkers: !0,
       maxValue: 1,
@@ -259,7 +259,7 @@ function q() {
     children: (0, n.jsx)(E.FormSwitch, {
       note: B.Z.Messages.ACCESSIBILITY_SETTINGS_PROFILE_THEMES_NOTE.format({
         onThemeClick() {
-          d.Z.open(j.oAB.APPEARANCE)
+          d.Z.open(v.oAB.APPEARANCE)
         }
       }),
       className: G.marginTop20,
@@ -280,7 +280,7 @@ function J() {
     null != a.current && (clearTimeout(a.current), a.current = null), s !== e && (a.current = setTimeout(() => (0, T.qz)(s), 150))
   }, [s, e]);
   let l = B.Z.Messages.ACCESSIBILITY_SETTINGS_SYNC_FORCED_COLORS_DESCRIPTION.format({
-    learnMoreLink: p.Z.getArticleURL(j.BhN.FORCED_COLORS)
+    learnMoreLink: p.Z.getArticleURL(v.BhN.FORCED_COLORS)
   });
   return (0, n.jsx)(E.FormItem, {
     title: B.Z.Messages.ACCESSIBILITY_SETTINGS_CONTRAST,
@@ -326,7 +326,7 @@ function $() {
       type: E.FormText.Types.DESCRIPTION,
       className: G.marginBottom8,
       children: B.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_DESCRIPTION.format({
-        helpdeskArticle: p.Z.getArticleURL(j.BhN.REDUCED_MOTION)
+        helpdeskArticle: p.Z.getArticleURL(v.BhN.REDUCED_MOTION)
       })
     }), (0, n.jsx)(E.Checkbox, {
       className: G.marginTop20,
@@ -375,14 +375,14 @@ function ee() {
     }), (0, n.jsx)(E.RadioGroup, {
       options: [{
         name: B.Z.Messages.STICKERS_ALWAYS_ANIMATE,
-        value: v.yr.ALWAYS_ANIMATE
+        value: j.yr.ALWAYS_ANIMATE
       }, {
         name: B.Z.Messages.STICKERS_ANIMATE_ON_INTERACTION,
         desc: B.Z.Messages.STICKERS_ANIMATE_ON_INTERACTION_DESCRIPTION,
-        value: v.yr.ANIMATE_ON_INTERACTION
+        value: j.yr.ANIMATE_ON_INTERACTION
       }, {
         name: B.Z.Messages.STICKERS_NEVER_ANIMATE,
-        value: v.yr.NEVER_ANIMATE
+        value: j.yr.NEVER_ANIMATE
       }],
       onChange: t,
       value: e
@@ -409,10 +409,10 @@ function es() {
       value: s,
       note: B.Z.Messages.LEGACY_CHAT_INPUT_DESCRIPTION,
       onChange: e => {
-        x.default.track(j.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
+        x.default.track(v.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
           enabled: e,
           location: {
-            section: j.jXE.SETTINGS_ACCESSIBILITY
+            section: v.jXE.SETTINGS_ACCESSIBILITY
           }
         }), D.dN.updateSetting(e)
       },

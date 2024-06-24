@@ -324,7 +324,7 @@ let l = [{
       darkSVG: n(678922),
       whiteSVG: n(752561)
     },
-    enabled: !1
+    enabled: !0
   }, {
     type: a.ABu.PAYPAL,
     name: "PayPal",

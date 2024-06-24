@@ -29,8 +29,8 @@ var n = t(735250),
   P = t(981631),
   Z = t(176505),
   f = t(526761),
-  j = t(689938),
-  v = t(550839);
+  v = t(689938),
+  j = t(550839);
 let U = e => {
     let {
       label: s,
@@ -39,12 +39,12 @@ let U = e => {
       infoIconTooltipText: a
     } = e;
     return (0, n.jsxs)("div", {
-      className: v.infoCard,
+      className: j.infoCard,
       children: [(0, n.jsxs)("div", {
-        className: v.infoCardLabelContainer,
+        className: j.infoCardLabelContainer,
         children: [(0, n.jsx)(c.Heading, {
           variant: "heading-deprecated-12/semibold",
-          className: v.infoCardLabel,
+          className: j.infoCardLabel,
           children: s
         }), i && (0, n.jsx)(c.Tooltip, {
           clickableOnMobile: !0,
@@ -53,12 +53,12 @@ let U = e => {
             size: "xs",
             color: "currentColor",
             ...e,
-            className: v.infoCardIcon
+            className: j.infoCardIcon
           })
         })]
       }), (0, n.jsx)(c.Heading, {
         variant: "heading-xl/semibold",
-        className: v.infoCardValue,
+        className: j.infoCardValue,
         children: t
       })]
     })
@@ -77,7 +77,7 @@ let U = e => {
     return null != i && a ? (0, n.jsx)(C.Z, {
       subscription: s,
       currentInvoicePreview: i,
-      dropdownClassName: v.paymentSourceDropdown
+      dropdownClassName: j.paymentSourceDropdown
     }) : (0, n.jsx)(c.Spinner, {})
   },
   b = e => {
@@ -92,19 +92,19 @@ let U = e => {
     } = e;
     return t && (s || a) ? null : (0, n.jsxs)("div", {
       children: [(0, n.jsx)(c.FormTitle, {
-        children: j.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_MANAGE_OPTIONS_LABEL
+        children: v.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_MANAGE_OPTIONS_LABEL
       }), (0, n.jsx)("div", {
-        className: v.__invalid_rowButtons,
+        className: j.__invalid_rowButtons,
         children: t ? (0, n.jsx)(c.Button, {
           onClick: r,
           submitting: i,
-          children: j.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_MANAGE_OPTIONS_RESTART_SUBSCRIPTION
+          children: v.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_MANAGE_OPTIONS_RESTART_SUBSCRIPTION
         }) : (0, n.jsxs)(n.Fragment, {
           children: [!s && !a && (0, n.jsx)(g.Z, {
-            label: j.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_MANAGE_OPTIONS_CHANGE_TIER,
+            label: v.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_MANAGE_OPTIONS_CHANGE_TIER,
             onClick: o
           }), (0, n.jsx)(g.Z, {
-            label: j.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_MANAGE_OPTIONS_CANCEL,
+            label: v.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_MANAGE_OPTIONS_CANCEL,
             onClick: l
           })]
         })
@@ -128,7 +128,7 @@ s.Z = e => {
   } = (0, N.uP)(null == o ? void 0 : o.id), y = (null == s ? void 0 : s.paymentGateway) === P.gg$.APPLE_PARTNER;
   if (null == a || null == t || null == C) return null;
   let Y = () => {
-      null != o && ((0, O.uL)(P.Z5c.CHANNEL(o.id, Z.oC.ROLE_SUBSCRIPTIONS)), (0, d.xf)(), _.Z.show(P.kVF.BACK_TO_PREVIOUS_SCREEN, void 0, j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_BACK_TO_SUBSCRIPTION_USER_SETTING_CTA, () => T.Z.open(P.oAB.SUBSCRIPTIONS, f.cP)))
+      null != o && ((0, O.uL)(P.Z5c.CHANNEL(o.id, Z.oC.ROLE_SUBSCRIPTIONS)), (0, d.xf)(), _.Z.show(P.kVF.BACK_TO_PREVIOUS_SCREEN, void 0, v.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_BACK_TO_SUBSCRIPTION_USER_SETTING_CTA, () => T.Z.open(P.oAB.SUBSCRIPTIONS, f.cP)))
     },
     H = () => {
       null != o && (0, D.h)({
@@ -154,39 +154,39 @@ s.Z = e => {
       isTrial: q
     } = C, J = t.soft_deleted || null == o || y, $ = () => {
       if (w) return (0, n.jsx)(c.TextBadge, {
-        text: j.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_CANCELLED
+        text: v.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_CANCELLED
       });
       if (q) return (0, n.jsx)(c.TextBadge, {
-        text: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_TITLE,
+        text: v.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_TITLE,
         color: r.Z.BRAND_500
       });
       if (W) return (0, n.jsx)(c.Tooltip, {
-        text: j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_USER_SUBSCRIPTION_PAST_DUE_WARNING,
+        text: v.Z.Messages.GUILD_ROLE_SUBSCRIPTION_USER_SUBSCRIPTION_PAST_DUE_WARNING,
         children: e => (0, n.jsx)("div", {
           ...e,
           children: (0, n.jsx)(c.TextBadge, {
-            className: v.paymentDueBadge,
-            text: j.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_PAST_DUE,
+            className: j.paymentDueBadge,
+            text: v.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_PAST_DUE,
             color: r.Z.YELLOW_300
           })
         })
       });
       else return null
     }, ee = () => y ? (0, n.jsx)(c.Tooltip, {
-      text: j.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_IOS_PLATFORM_TOOLTIP,
+      text: v.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_IOS_PLATFORM_TOOLTIP,
       children: e => (0, n.jsx)("div", {
         ...e,
         children: (0, n.jsx)(c.TextBadge, {
-          text: j.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_IOS_PLATFORM,
+          text: v.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_IOS_PLATFORM,
           color: I.Z.INTERACTIVE_MUTED
         })
       })
     }) : null;
   return (0, n.jsxs)("div", {
-    className: v.container,
+    className: j.container,
     children: [(0, n.jsx)(x.Z, {
       onClick: A,
-      className: v.headerContainer,
+      className: j.headerContainer,
       children: e => {
         let {
           areaRef: s,
@@ -198,22 +198,22 @@ s.Z = e => {
             active: !0,
             size: h.Z.Sizes.MEDIUM
           }), (0, n.jsxs)("div", {
-            className: v.headerTextContainer,
+            className: j.headerTextContainer,
             children: [(0, n.jsx)(c.Text, {
               variant: "text-md/medium",
-              className: v.guildName,
-              children: null != o ? o.name : j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SERVER_NAME_UNAVAILABLE
+              className: j.guildName,
+              children: null != o ? o.name : v.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SERVER_NAME_UNAVAILABLE
             }), (0, n.jsxs)("div", {
-              className: v.headerSubtitleContainer,
+              className: j.headerSubtitleContainer,
               children: [(0, n.jsx)(c.Text, {
                 variant: "text-sm/normal",
-                className: v.tierName,
+                className: j.tierName,
                 children: t.name
               }), $(), ee()]
             })]
           }), (0, n.jsx)(c.Clickable, {
             onClick: i(A),
-            "aria-label": j.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TOGGLE_SECTION_LABEL,
+            "aria-label": v.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TOGGLE_SECTION_LABEL,
             "aria-controls": G,
             "aria-expanded": S,
             focusProps: {
@@ -222,8 +222,8 @@ s.Z = e => {
             children: (0, n.jsx)(c.ChevronSmallDownIcon, {
               size: "md",
               color: "currentColor",
-              className: l()(v.arrowIcon, {
-                [v.arrowIconExpanded]: S
+              className: l()(j.arrowIcon, {
+                [j.arrowIconExpanded]: S
               })
             })
           })]
@@ -232,30 +232,30 @@ s.Z = e => {
     }), S ? (0, n.jsxs)("div", {
       id: G,
       children: [(0, n.jsx)("div", {
-        className: v.divider
+        className: j.divider
       }), (0, n.jsx)(p.Z, {
         groupListingId: a.id,
         subscription: s,
-        className: v.changePlanNotice
+        className: j.changePlanNotice
       }), (0, n.jsxs)("div", {
-        className: v.subscriptionInfoCards,
+        className: j.subscriptionInfoCards,
         children: [(0, n.jsx)(U, {
           label: X,
           value: Q
         }), (0, n.jsx)(U, {
-          label: j.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_INFO_PRICE,
+          label: v.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_INFO_PRICE,
           value: K,
           showInfoIcon: q,
-          infoIconTooltipText: q ? j.Z.Messages.GUILD_ROLE_SUBSCRIPTION_MANAGE_SUBSCRIPTION_PAGE_TRIAL_PRICE_INFO : void 0
+          infoIconTooltipText: q ? v.Z.Messages.GUILD_ROLE_SUBSCRIPTION_MANAGE_SUBSCRIPTION_PAGE_TRIAL_PRICE_INFO : void 0
         }), (0, n.jsx)(U, {
-          label: j.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_INFO_MEMBER_SINCE,
+          label: v.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_INFO_MEMBER_SINCE,
           value: z
         })]
       }), (0, n.jsx)(c.Spacer, {
         size: 16
       }), !w && !y && (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(c.FormTitle, {
-          children: j.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_PAYMENT_METHOD_LABEL
+          children: v.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_PAYMENT_METHOD_LABEL
         }), (0, n.jsx)(B, {
           subscription: s
         })]

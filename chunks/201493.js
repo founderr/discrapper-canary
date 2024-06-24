@@ -54,7 +54,7 @@ t.Z = e => {
     {
       mostRecentQuery: O,
       searchFetching: P,
-      searchResults: b
+      searchResults: y
     } = (0, s.cj)([p.Z], () => {
       let {
         mostRecentQuery: e,
@@ -66,7 +66,7 @@ t.Z = e => {
         searchResults: p.Z.getSearchResults(Z.id, e)
       }
     }),
-    [y, D] = i.useState(O),
+    [b, D] = i.useState(O),
     U = "" !== O,
     {
       showHubEventsList: k
@@ -100,7 +100,7 @@ t.Z = e => {
       })
     } : void 0,
     H = e => {
-      0 !== y.trim().length && e.charCode === T.yXg.ENTER && (m.Rq(Z.id, y), d.default.track(T.rMx.GUILD_DIRECTORY_SEARCH, {
+      0 !== b.trim().length && e.charCode === T.yXg.ENTER && (m.Rq(Z.id, b), d.default.track(T.rMx.GUILD_DIRECTORY_SEARCH, {
         directory_channel_id: Z.id,
         directory_guild_id: S.id
       }))
@@ -109,13 +109,13 @@ t.Z = e => {
       D(""), m.So(Z.id)
     };
   return U ? (0, l.jsx)(I.Z, {
-    searchQuery: y,
+    searchQuery: b,
     setSearchQuery: D,
     mostRecentQuery: O,
     handleSearchKeyPress: H,
     handleClearSearch: B,
     handleCreateOrAddGuild: w,
-    searchResults: b,
+    searchResults: y,
     searchFetching: P
   }) : null == L && null == v ? (0, l.jsx)("div", {
     className: N.pageContainer,
@@ -130,7 +130,7 @@ t.Z = e => {
     })
   }) : (0, l.jsx)(C.Z, {
     channel: Z,
-    searchQuery: y,
+    searchQuery: b,
     setSearchQuery: D,
     handleSearchKeyPress: H,
     handleClearSearch: B,

@@ -34,8 +34,8 @@ var l = n(735250),
   L = n(594174),
   O = n(502568),
   P = n(805009),
-  b = n(368666),
-  y = n(358221),
+  y = n(368666),
+  b = n(358221),
   D = n(887012),
   U = n(444253),
   k = n(355827),
@@ -48,7 +48,7 @@ function V(e) {
   let {
     channelId: t,
     guildId: n
-  } = e, i = Date.now(), s = (0, u.e7)([j.Z, y.Z], () => o()(j.Z.getSpeakers()).map(e => y.Z.getParticipant(t, e)).filter(e => null != e && e.type === w.fO.USER && e.speaking && !(0, I.ZP)(e)).sortBy(e => -j.Z.getSpeakingDuration(e.user.id, i)).slice(0, 3).value());
+  } = e, i = Date.now(), s = (0, u.e7)([j.Z, b.Z], () => o()(j.Z.getSpeakers()).map(e => b.Z.getParticipant(t, e)).filter(e => null != e && e.type === w.fO.USER && e.speaking && !(0, I.ZP)(e)).sortBy(e => -j.Z.getSpeakingDuration(e.user.id, i)).slice(0, 3).value());
   return 0 === s.length ? null : (0, l.jsx)(l.Fragment, {
     children: s.map((e, t) => (0, l.jsx)(d.Tooltip, {
       position: "bottom",
@@ -82,10 +82,10 @@ function F(e) {
     voiceParticipantsHidden: j,
     selectedParticipant: P,
     userParticipantCount: B
-  } = (0, u.cj)([y.Z], () => ({
-    selectedParticipant: y.Z.getSelectedParticipant(I),
-    voiceParticipantsHidden: y.Z.getVoiceParticipantsHidden(I),
-    userParticipantCount: y.Z.getUserParticipantCount(I)
+  } = (0, u.cj)([b.Z], () => ({
+    selectedParticipant: b.Z.getSelectedParticipant(I),
+    voiceParticipantsHidden: b.Z.getVoiceParticipantsHidden(I),
+    userParticipantCount: b.Z.getUserParticipantCount(I)
   }), [I]), F = (0, u.e7)([L.default], () => L.default.getCurrentUser()), z = (0, D.Z)(n), {
     available: W,
     activated: Y,
@@ -116,7 +116,7 @@ function F(e) {
     className: G.button,
     participant: P
   }, "warning")), ee.push((0, l.jsx)(E.Z, {
-    size: b.ZP.Sizes.LARGE,
+    size: y.ZP.Sizes.LARGE,
     className: G.button,
     participant: P,
     showQuality: !0,

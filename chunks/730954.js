@@ -1,31 +1,31 @@
 t.d(n, {
   Z: function() {
-    return l
+    return r
   }
 }), t(789020);
 var i = t(904245),
   a = t(667204);
 
-function l(e, n, t) {
-  let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+function r(e, n, t) {
+  let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
   if (i.Z.deleteMessage(e.id, n.id, !0), n.isCommandType()) {
-    null != n.interactionData && null != l.applicationId && (0, a.d)(n, e, l.applicationId);
+    null != n.interactionData && null != r.applicationId && (0, a.d)(n, e, r.applicationId);
     return
   }
   let {
-    content: r,
+    content: l,
     tts: o,
     flags: u,
     nonce: s
   } = n;
   i.Z.sendMessage(e.id, {
-    content: r,
+    content: l,
     tts: o,
     invalidEmojis: [],
     validNonShortcutEmojis: []
   }, void 0, {
     nonce: s,
     flags: u,
-    ...l
+    ...r
   })
 }

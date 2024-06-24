@@ -30,8 +30,8 @@ var l = n(735250),
   L = n(262317),
   O = n(981631),
   P = n(524484),
-  b = n(298332);
-let y = i.memo(e => {
+  y = n(298332);
+let b = i.memo(e => {
   var t;
   let {
     mute: n,
@@ -40,7 +40,7 @@ let y = i.memo(e => {
     channel: a,
     sessionId: o,
     nick: T
-  } = e, M = s.id, b = (0, r.e7)([_.default], () => _.default.getId() === M, [M]), [y, D, U] = (0, r.Wu)([x.Z], () => b ? [!x.Z.isSupported() || x.Z.isSelfMute() || x.Z.isSelfMutedTemporarily(), x.Z.isSelfDeaf(), !1] : [!x.Z.isSupported() || x.Z.isLocalMute(M), !1, x.Z.isLocalVideoDisabled(M)], [b, M]), k = (0, r.e7)([v.Z], () => v.Z.isPrioritySpeaker(M)), w = (0, c.Z)({
+  } = e, M = s.id, y = (0, r.e7)([_.default], () => _.default.getId() === M, [M]), [b, D, U] = (0, r.Wu)([x.Z], () => y ? [!x.Z.isSupported() || x.Z.isSelfMute() || x.Z.isSelfMutedTemporarily(), x.Z.isSelfDeaf(), !1] : [!x.Z.isSupported() || x.Z.isLocalMute(M), !1, x.Z.isLocalVideoDisabled(M)], [y, M]), k = (0, r.e7)([v.Z], () => v.Z.isPrioritySpeaker(M)), w = (0, c.Z)({
     userId: M,
     checkSoundSharing: !0
   }), H = (0, r.e7)([I.ZP], () => I.ZP.isGuestOrLurker(a.guild_id, M)), B = (0, r.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(a.id).find(e => {
@@ -48,7 +48,7 @@ let y = i.memo(e => {
       userIds: t
     } = e;
     return t.has(M)
-  }), [M, a.id]), G = (0, h.Z)(null != B ? [B.applicationId] : []), V = (0, j.Hr)("voice_users_eligibility_check", !1), F = (0, r.e7)([N.Z, Z.Z], () => b ? Z.Z.getActivities() : N.Z.getActivities(M, a.guild_id)).find(e => null != e.application_id && e.type === O.IIU.PLAYING), z = (0, r.e7)([d.Z], () => (null == F ? void 0 : F.application_id) != null ? d.Z.getApplication(null == F ? void 0 : F.application_id) : void 0);
+  }), [M, a.id]), G = (0, h.Z)(null != B ? [B.applicationId] : []), V = (0, j.Hr)("voice_users_eligibility_check", !1), F = (0, r.e7)([N.Z, Z.Z], () => y ? Z.Z.getActivities() : N.Z.getActivities(M, a.guild_id)).find(e => null != e.application_id && e.type === O.IIU.PLAYING), z = (0, r.e7)([d.Z], () => (null == F ? void 0 : F.application_id) != null ? d.Z.getApplication(null == F ? void 0 : F.application_id) : void 0);
   null != z && j.ZP.trackExposure({
     location: "voice_users"
   });
@@ -57,7 +57,7 @@ let y = i.memo(e => {
   } = p.n.useExperiment({
     guildId: a.guild_id,
     location: "VoiceUsers"
-  }), J = (0, m.Z)(a, !0, s), $ = (0, r.e7)([E.Z], () => b ? E.Z.getHangStatusActivity() : null, [b]), ee = (0, r.e7)([N.Z], () => N.Z.findActivity(M, e => e.type === O.IIU.HANG_STATUS), [M]), et = (0, f.Eu)(a.id, M);
+  }), J = (0, m.Z)(a, !0, s), $ = (0, r.e7)([E.Z], () => y ? E.Z.getHangStatusActivity() : null, [y]), ee = (0, r.e7)([N.Z], () => N.Z.findActivity(M, e => e.type === O.IIU.HANG_STATUS), [M]), et = (0, f.Eu)(a.id, M);
   return (0, l.jsx)(g.Z, {
     shakeLocation: P.oZ.VOICE_USER,
     isShaking: w,
@@ -67,9 +67,9 @@ let y = i.memo(e => {
       canDrag: e.canDrag && !H,
       otherClientSessionType: null == K ? void 0 : null === (t = K.clientInfo) || void 0 === t ? void 0 : t.os,
       voicePlatform: X,
-      localMute: y && !b,
+      localMute: b && !y,
       localVideoDisabled: U,
-      mute: n || y,
+      mute: n || b,
       deaf: i || D,
       speaking: w,
       disconnected: et,
@@ -79,13 +79,13 @@ let y = i.memo(e => {
       isWatching: null != Y && Y.state !== O.jm8.ENDED,
       isGuest: H,
       showHangStatus: J && Q && (_.default.getId() === s.id || null != ee),
-      hangStatusActivity: b ? $ : ee,
+      hangStatusActivity: y ? $ : ee,
       isSelf: _.default.getId() === s.id,
       application: Q || V ? z : void 0
     })
   })
 });
-y.displayName = "ConnectedVoiceUser";
+b.displayName = "ConnectedVoiceUser";
 let D = [];
 t.Z = function(e) {
   let {
@@ -131,7 +131,7 @@ t.Z = function(e) {
         nick: a,
         voiceState: r
       } = e;
-      return (0, l.jsx)(y, {
+      return (0, l.jsx)(b, {
         user: i,
         nick: a,
         isSelfOnOtherClient: _.default.getId() === i.id && r.sessionId !== _.default.getSessionId(),
@@ -160,9 +160,9 @@ t.Z = function(e) {
     })), e
   })();
   return null == H && null == I ? null : (0, l.jsxs)(M.e, {
-    className: a()(C, b.list, {
-      [b.collapsed]: u,
-      [b.withGuildIcon]: g
+    className: a()(C, y.list, {
+      [y.collapsed]: u,
+      [y.withGuildIcon]: g
     }),
     collapsed: u,
     children: [H, I]

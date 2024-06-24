@@ -30,8 +30,8 @@ var l = n(735250),
   L = n(358085),
   O = n(127654),
   P = n(316595),
-  b = n(193910),
-  y = n(951211),
+  y = n(193910),
+  b = n(951211),
   D = n(981631),
   U = n(356659),
   k = n(921944),
@@ -108,7 +108,7 @@ t.Z = i.memo(function(e) {
     e_ = (0, c.useRedesignIconContext)().enabled,
     eI = (0, m.qB)(V.id, "ChannelAttachButton"),
     ex = null !== (s = null == $ ? void 0 : $.length) && void 0 !== s ? s : 0,
-    eT = (0, y.Z)({
+    eT = (0, b.Z)({
       canAttachFiles: eu,
       canStartThreads: eE || eg,
       useSlate: ef,
@@ -170,7 +170,7 @@ t.Z = i.memo(function(e) {
             lastClipsSession: J
           });
         case "attachMenu":
-          return (0, l.jsx)(b.Z, {
+          return (0, l.jsx)(y.Z, {
             ...e,
             onClose: () => er(null),
             options: eT,

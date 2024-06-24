@@ -29,8 +29,8 @@ var l, i = n(735250),
   L = n(451478),
   O = n(153850),
   P = n(806519),
-  b = n(358085),
-  y = n(792125),
+  y = n(358085),
+  b = n(792125),
   D = n(998502),
   U = n(473159),
   k = n(928518),
@@ -138,7 +138,7 @@ class V extends(l = s.Component) {
       guestWindow: _,
       clientThemesClassName: I,
       contentClassName: x
-    } = this.props, S = (0, b.getPlatform)(), v = r()(E, {
+    } = this.props, S = (0, y.getPlatform)(), v = r()(E, {
       "mouse-mode": o,
       "reduce-motion": d,
       "full-motion": !d,
@@ -154,7 +154,7 @@ class V extends(l = s.Component) {
             children: (0, i.jsx)("div", {
               "data-popout-root": !0,
               ref: this.rootRef,
-              className: r()((0, y.Q)(e), (0, T.Z)(), v, I),
+              className: r()((0, b.Q)(e), (0, T.Z)(), v, I),
               children: (0, i.jsx)(h.FocusRingScope, {
                 containerRef: this.rootRef,
                 children: (0, i.jsx)(g.Z, {
@@ -189,8 +189,8 @@ class V extends(l = s.Component) {
   constructor(...e) {
     super(...e), G(this, "rootRef", s.createRef()), G(this, "_cleanupWindowActionCreators", void 0), G(this, "warnPopoutClose", e => {
       if (this.props.connectedToEmbeddedActivity && !j.ZP.disableEmbeddedActivityPopOutAlert) {
-        if (e.returnValue = H.Z.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, !!b.isPlatformEmbedded)(0, C.Z)(() => {
-          k.Z.unmountWindow(this.props.windowKey), b.isPlatformEmbedded && D.ZP.close(this.props.windowKey)
+        if (e.returnValue = H.Z.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, !!y.isPlatformEmbedded)(0, C.Z)(() => {
+          k.Z.unmountWindow(this.props.windowKey), y.isPlatformEmbedded && D.ZP.close(this.props.windowKey)
         })
       }
     }), G(this, "handleBlur", () => {

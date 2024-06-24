@@ -34,8 +34,8 @@ var l = n(735250),
   L = n(480384),
   O = n(155409),
   P = n(484459),
-  b = n(103575),
-  y = n(439170),
+  y = n(103575),
+  b = n(439170),
   D = n(430824),
   U = n(111583),
   k = n(594174),
@@ -171,7 +171,7 @@ class $ extends i.Component {
           object: W.qAy.BOOST_GEM_ICON
         }
       })
-    }), q(this, "renderUserPopout", e => (0, l.jsx)(b.Z, {
+    }), q(this, "renderUserPopout", e => (0, l.jsx)(y.Z, {
       ...e,
       location: "ChannelMembers",
       userId: this.props.user.id,
@@ -397,7 +397,7 @@ class el extends i.Component {
         isRecentlyOnlineEnabled: a
       } = this.props, r = this.getRowProps(e);
       if (null != r) {
-        if (r.type === y.so.MEMBER && "user" in r) {
+        if (r.type === b.so.MEMBER && "user" in r) {
           let {
             colorString: e,
             colorRoleId: t,
@@ -429,7 +429,7 @@ class el extends i.Component {
             isGuildEligibleForRecentlyOnline: this.props.isGuildEligibleForRecentlyOnline
           }, "member-".concat(r.user.id))
         }
-        if (r.type === y.so.CONTENT_INVENTORY) {
+        if (r.type === b.so.CONTENT_INVENTORY) {
           let e = "content-inventory-".concat(r.entry.id);
           return null != r.entry.original_id && (e += "-".concat(r.entry.original_id)), (0, l.jsx)(v.ZP, {
             ...r,
@@ -437,7 +437,7 @@ class el extends i.Component {
             index: i
           }, e)
         }
-        if (r.type === y.so.HIDDEN_CONTENT_INVENTORY) return (0, l.jsx)(S.Z, {}, "content-inventory-hidden-entry")
+        if (r.type === b.so.HIDDEN_CONTENT_INVENTORY) return (0, l.jsx)(S.Z, {}, "content-inventory-hidden-entry")
       }
       return (0, l.jsx)(en, {
         index: i
@@ -500,7 +500,7 @@ class el extends i.Component {
       this.hasContentFeed() && (t = t.filter(e => e.section !== A.T));
       let l = t.map(e => this.getRowProps(e)).slice(0, n + 1).filter(V.lm);
       if (0 === l.length) return;
-      let i = l.reduce((e, t) => t.type !== y.so.MEMBER ? e : (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some(e => e.type === W.IIU.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, e), {
+      let i = l.reduce((e, t) => t.type !== b.so.MEMBER ? e : (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some(e => e.type === W.IIU.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, e), {
         num_users_visible: 0,
         num_users_visible_with_mobile_indicator: 0,
         num_users_visible_with_game_activity: 0,
@@ -520,7 +520,7 @@ function ei(e) {
     className: n
   } = e, {
     analyticsLocations: s
-  } = (0, T.ZP)(I.Z.MEMBER_LIST), r = (0, h.e7)([_.Z], () => _.Z.keyboardModeEnabled), o = (0, h.cj)([y.ZP], () => y.ZP.getProps(t.guild_id, t.id)), {
+  } = (0, T.ZP)(I.Z.MEMBER_LIST), r = (0, h.e7)([_.Z], () => _.Z.keyboardModeEnabled), o = (0, h.cj)([b.ZP], () => b.ZP.getProps(t.guild_id, t.id)), {
     rows: d,
     groups: m,
     version: p,

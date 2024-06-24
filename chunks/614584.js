@@ -81,7 +81,7 @@ let N = i.memo(function(e) {
       return (0, f.ZP)(e, n).content
     }
     return null
-  }, [R, j, Z, O, L]), b = (0, s.e7)([p.Z], () => null != R && p.Z.isBlockedForMessage(R), [R]), y = (0, I.wq)(null == R ? void 0 : R.author.id, Z.id), D = (0, I.$3)(n, R, b), U = (0, I.Wl)(R, Z, v, M), k = (0, I.rY)(A, M), w = i.useCallback(() => M({
+  }, [R, j, Z, O, L]), y = (0, s.e7)([p.Z], () => null != R && p.Z.isBlockedForMessage(R), [R]), b = (0, I.wq)(null == R ? void 0 : R.author.id, Z.id), D = (0, I.$3)(n, R, y), U = (0, I.Wl)(R, Z, v, M), k = (0, I.rY)(A, M), w = i.useCallback(() => M({
     referencedUsernameProfile: !1,
     referencedAvatarProfile: !1
   }), [M]), H = (0, C.Uj)(n);
@@ -93,14 +93,14 @@ let N = i.memo(function(e) {
     referencedMessage: N,
     content: P,
     compact: S,
-    isReplyAuthorBlocked: b,
+    isReplyAuthorBlocked: y,
     showAvatarPopout: A,
     showUsernamePopout: v,
     renderPopout: _.Z,
     onClickAvatar: k,
     onClickUsername: U,
     onClickReply: D,
-    onContextMenu: y,
+    onContextMenu: b,
     onPopoutRequestClose: w
   })
 });

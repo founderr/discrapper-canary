@@ -89,8 +89,8 @@ function L(e) {
   var t, n, T;
   let A, L, O, {
       channel: P,
-      entry: b,
-      requestId: y,
+      entry: y,
+      requestId: b,
       closePopout: D
     } = e,
     {
@@ -100,7 +100,7 @@ function L(e) {
       imageUrl: H,
       title: B,
       user: G
-    } = (0, I.pi)(b),
+    } = (0, I.pi)(y),
     {
       primaryColor: V,
       secondaryColor: F
@@ -112,7 +112,7 @@ function L(e) {
       let t = null === (e = U.timestamps) || void 0 === e ? void 0 : e.start,
         n = (0, f.T_)(null != t ? {
           start: t
-        } : b, Date.now());
+        } : y, Date.now());
       return (0, C.CR)({
         user: G,
         channel: P,
@@ -127,7 +127,7 @@ function L(e) {
           timestamp: n
         })
       })
-    }, [U, w, P, b, H, V, F, B, G]);
+    }, [U, w, P, y, H, V, F, B, G]);
   if (null == U || null == k) return null;
   let Y = w,
     K = [];
@@ -153,13 +153,13 @@ function L(e) {
   let q = (0, l.jsx)(x.wG, {
     thumbnailSrc: H,
     channel: P,
-    entry: b,
+    entry: y,
     headerIcons: (0, l.jsx)(N.Z, {
       onClick: A,
       "aria-label": O,
       provider: k.media.provider
     }),
-    userDescription: (0, f.kr)(b) ? v.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING : v.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
+    userDescription: (0, f.kr)(y) ? v.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING : v.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
     title: B,
     onClickTitle: L,
     subtitle: Y,
@@ -179,8 +179,8 @@ function L(e) {
           username: T.username,
           activity: n
         })),
-        entry: b,
-        requestId: y,
+        entry: y,
+        requestId: b,
         buttons: K
       })
     })]

@@ -72,7 +72,7 @@ function v(e) {
   } = e, s = (0, c.Z)(t), T = (0, p.Z)(t), S = (0, f.Z)(t.id), v = (0, g.Z)(t), A = (0, _.Z)({
     id: t.id,
     label: Z.Z.Messages.COPY_ID_THREAD
-  }), M = (0, u.Z)(t), R = (0, d.Z)(t), j = (0, h.Z)(t, "Toolbar Overflow"), L = (0, E.Z)(t), O = (0, m.Z)(t), P = (0, C.Z)(t), b = I.vF.useSetting(), y = (0, r.e7)([x.Z], () => !a().isEmpty(x.Z.getVoiceStatesForChannel(t.id)));
+  }), M = (0, u.Z)(t), R = (0, d.Z)(t), j = (0, h.Z)(t, "Toolbar Overflow"), L = (0, E.Z)(t), O = (0, m.Z)(t), P = (0, C.Z)(t), y = I.vF.useSetting(), b = (0, r.e7)([x.Z], () => !a().isEmpty(x.Z.getVoiceStatesForChannel(t.id)));
   return (0, l.jsxs)(o.Menu, {
     navId: "thread-context",
     onClose: n,
@@ -81,7 +81,7 @@ function v(e) {
     children: [(0, l.jsxs)(o.MenuGroup, {
       children: [j, O]
     }), (0, l.jsxs)(o.MenuGroup, {
-      children: [v, L, S, b && !y ? (0, l.jsx)(o.MenuItem, {
+      children: [v, L, S, y && !b ? (0, l.jsx)(o.MenuItem, {
         id: "open",
         label: Z.Z.Messages.OPEN_IN_SPLIT_VIEW,
         action: function() {

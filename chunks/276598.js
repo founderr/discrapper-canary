@@ -47,9 +47,9 @@ function S(e) {
   } = e, S = (0, p.Z)(), v = (0, s.e7)([m.Z], () => {
     var e, t;
     return null === (e = m.Z.getSessionById(null !== (t = null == S ? void 0 : S.sessionId) && void 0 !== t ? t : "")) || void 0 === e ? void 0 : e.clientInfo.os
-  }), A = (0, s.e7)([h.Z], () => h.Z.hasLayers()), [M, R] = (0, s.Wu)([o.Z], () => [o.Z.getMode(t.id), o.Z.getLayout(t.id)]), j = (0, r.useModalsStore)(r.hasAnyModalOpenSelector), L = (0, E.Z)(), O = L.filter(e => e.twoWayLink), [P, b] = i.useState(!1);
+  }), A = (0, s.e7)([h.Z], () => h.Z.hasLayers()), [M, R] = (0, s.Wu)([o.Z], () => [o.Z.getMode(t.id), o.Z.getLayout(t.id)]), j = (0, r.useModalsStore)(r.hasAnyModalOpenSelector), L = (0, E.Z)(), O = L.filter(e => e.twoWayLink), [P, y] = i.useState(!1);
   if (null == S && 0 === L.length || t.isBroadcastChannel()) return null;
-  let y = I.WtW.VOICE !== M && [I.AEg.NO_CHAT, I.AEg.FULL_SCREEN].includes(R) ? "top" : "bottom",
+  let b = I.WtW.VOICE !== M && [I.AEg.NO_CHAT, I.AEg.FULL_SCREEN].includes(R) ? "top" : "bottom",
     D = [];
   return O.length > 0 && D.push(a.z.DONUT_DESKTOP_NUX), (0, l.jsx)(c.Z, {
     contentTypes: D,
@@ -62,10 +62,10 @@ function S(e) {
         children: [n ? (0, l.jsx)("div", {
           className: N.leftDivider
         }) : null, (0, l.jsx)(r.Popout, {
-          position: y,
+          position: b,
           spacing: o ? 16 : void 0,
           positionKey: "".concat(M, ":").concat(R),
-          onRequestClose: () => b(!1),
+          onRequestClose: () => y(!1),
           shouldShow: (o || P) && !A && !j,
           renderPopout: e => {
             let {
@@ -73,10 +73,10 @@ function S(e) {
             } = e;
             return (0, l.jsx)(u.Z, {
               children: o ? (0, l.jsx)(g.Z, {
-                popoutPosition: y,
+                popoutPosition: b,
                 onDismiss: () => s(x.L.UNKNOWN),
                 onAccept: () => {
-                  s(x.L.UNKNOWN), b(!0)
+                  s(x.L.UNKNOWN), y(!0)
                 },
                 gameConsoleAccounts: O
               }) : (0, l.jsx)(Z, {
@@ -92,7 +92,7 @@ function S(e) {
             return (0, l.jsx)(d.Z, {
               ...e,
               ...C,
-              onClick: () => b(!0),
+              onClick: () => y(!0),
               label: null != (t = v) ? t === _.YE.XBOX ? T.Z.Messages.XBOX_REMOTE_CONNECTED_RAW : T.Z.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW : T.Z.Messages.CONSOLE_TRANSFER,
               iconComponent: (0, f.Z)(v)
             })

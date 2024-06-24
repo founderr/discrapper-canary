@@ -30,8 +30,8 @@ var l = n(735250),
   L = n(314897),
   O = n(131951),
   P = n(496675),
-  b = n(944486),
-  y = n(594174),
+  y = n(944486),
+  b = n(594174),
   D = n(881824),
   U = n(471253),
   k = n(922482),
@@ -85,7 +85,7 @@ function et(e) {
 let en = i.memo(function(e) {
   let {
     channel: t
-  } = e, n = (0, r.e7)([b.Z], () => b.Z.getVoiceChannelId() === t.id, [t.id]);
+  } = e, n = (0, r.e7)([y.Z], () => y.Z.getVoiceChannelId() === t.id, [t.id]);
   return (0, l.jsxs)("div", {
     className: $.container,
     children: [(0, l.jsx)(ea, {
@@ -128,7 +128,7 @@ function ei(e) {
     onSelect: n
   } = e, i = (0, u.bp)(), {
     canManageGuildEvent: s
-  } = (0, I.XJ)(t), c = (0, r.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id), [t.id]), d = (0, r.e7)([f.ZP], () => f.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)), h = (0, r.e7)([b.Z], () => b.Z.getVoiceChannelId() === t.id, [t.id]), {
+  } = (0, I.XJ)(t), c = (0, r.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id), [t.id]), d = (0, r.e7)([f.ZP], () => f.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)), h = (0, r.e7)([y.Z], () => y.Z.getVoiceChannelId() === t.id, [t.id]), {
     suppress: m
   } = (0, Z.Z)(t), p = L.default.getId(), [E] = (0, X.Z)(t), g = B.ZP.isModerator(p, t.id), C = (0, w.B)(t.id), _ = s(d);
   return h ? (g || _) && null != c ? (0, l.jsx)(o.Popout, {
@@ -299,7 +299,7 @@ let er = i.memo(function(e) {
   } = (0, x.Z)(), _ = (0, N.Z)(t), {
     limit: I,
     reachedLimit: M
-  } = (0, T.Z)(t), L = (0, r.e7)([y.default], () => y.default.getCurrentUser()), P = (0, r.e7)([O.Z], () => (0, g.Z)(O.Z)), D = (0, r.e7)([b.Z], () => b.Z.getVoiceChannelId() === t.id, [t.id]), k = (0, r.e7)([d.Z], () => d.Z.getStreamParticipants(t.id)[0], [t.id]), H = (0, V.PK)(t.id), B = I > 0, G = M && !H || null != k && k.user.id !== (null == L ? void 0 : L.id);
+  } = (0, T.Z)(t), L = (0, r.e7)([b.default], () => b.default.getCurrentUser()), P = (0, r.e7)([O.Z], () => (0, g.Z)(O.Z)), D = (0, r.e7)([y.Z], () => y.Z.getVoiceChannelId() === t.id, [t.id]), k = (0, r.e7)([d.Z], () => d.Z.getStreamParticipants(t.id)[0], [t.id]), H = (0, V.PK)(t.id), B = I > 0, G = M && !H || null != k && k.user.id !== (null == L ? void 0 : L.id);
   if (null == L) return null;
   let F = (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(o.Popout, {

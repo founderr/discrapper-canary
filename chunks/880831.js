@@ -57,7 +57,7 @@ function L(e) {
     trailingIconClass: R.messageContentTrailingIcon,
     leadingIconClass: R.messageContentLeadingIcon,
     iconSize: M.WW
-  }), P = (0, C.cv)(n), b = P.length > 0 ? P.map(e => (0, l.jsx)(_.ZP, {
+  }), P = (0, C.cv)(n), y = P.length > 0 ? P.map(e => (0, l.jsx)(_.ZP, {
     className: R.sticker,
     size: 128,
     sticker: e,
@@ -76,9 +76,9 @@ function L(e) {
       className: a()(R.messageContentWrapper, {
         [R.mentioned]: n.mentioned
       }),
-      children: [null != b ? null : O, null !== (t = null != j ? j : b) && void 0 !== t ? t : (0, l.jsx)("span", {
+      children: [null != y ? null : O, null !== (t = null != j ? j : y) && void 0 !== t ? t : (0, l.jsx)("span", {
         children: A
-      }), null != b ? null : L]
+      }), null != y ? null : L]
     }), (0, l.jsx)("img", {
       alt: "",
       src: (null == r ? void 0 : r.guildMemberAvatar) != null && null != o ? (0, N.JM)({
