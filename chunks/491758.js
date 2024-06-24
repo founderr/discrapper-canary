@@ -41,8 +41,8 @@ function Z() {
       clipsLength: Z,
       clipsQuality: f
     } = (0, r.cj)([A.Z], () => A.Z.getSettings()),
-    v = (0, r.e7)([A.Z], () => A.Z.getHardwareClassification()),
-    j = (0, r.e7)([I.Z], () => I.Z.getKeybindForAction(R.kg4.SAVE_CLIP, !0)),
+    j = (0, r.e7)([A.Z], () => A.Z.getHardwareClassification()),
+    v = (0, r.e7)([I.Z], () => I.Z.getKeybindForAction(R.kg4.SAVE_CLIP, !0)),
     {
       enableDecoupledGameClipping: U
     } = _.Z.useExperiment({
@@ -58,7 +58,7 @@ function Z() {
     }, {
       autoTrackExposure: !1
     });
-  l()(null != j, "Save clip keybind unset");
+  l()(null != v, "Save clip keybind unset");
   let G = (0, r.e7)([T.default], () => T.default.locale),
     F = i.useMemo(() => [{
       value: g.OT.SECONDS_30,
@@ -118,10 +118,10 @@ function Z() {
     }], [G]),
     Y = i.useCallback(e => {
       c.Z.setKeybind({
-        ...j,
+        ...v,
         shortcut: e
       })
-    }, [j]);
+    }, [v]);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)(o.FormSection, {
       disabled: !e,
@@ -133,7 +133,7 @@ function Z() {
             scrollPosition: x.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION
           })
         })
-      }), v === C.x.BELOW_MINIMUM ? (0, n.jsx)(S.Z, {
+      }), j === C.x.BELOW_MINIMUM ? (0, n.jsx)(S.Z, {
         look: S.z.WARNING,
         className: L.formItem,
         children: p.Z.Messages.CLIPS_SETTINGS_UNDER_MIN_SPECS
@@ -217,7 +217,7 @@ function Z() {
         children: (0, n.jsx)("div", {
           className: D.keyRecorder,
           children: (0, n.jsx)(d.Z, {
-            defaultValue: j.shortcut,
+            defaultValue: v.shortcut,
             onChange: Y
           })
         })

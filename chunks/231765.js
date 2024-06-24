@@ -35,7 +35,7 @@ let D = {
   Z = (0, c.range)(1, 11),
   f = (0, c.range)(1, 26);
 (a = n || (n = {}))[a.CONFETTI = 0] = "CONFETTI", a[a.SHAKE = 1] = "SHAKE", (l = i || (i = {}))[l.USER_SETTINGS = 0] = "USER_SETTINGS", l[l.ACHIEVEMENT_LIST = 1] = "ACHIEVEMENT_LIST";
-let v = () => [{
+let j = () => [{
     location: R.Hn.CHAT_INPUT,
     title: x.Z.Messages.POGGERMODE_CONFETTI_LOCATION_CHAT_INPUT_ENABLED,
     description: x.Z.Messages.POGGERMODE_CONFETTI_LOCATION_CHAT_INPUT_ENABLED_DESCRIPTION
@@ -52,7 +52,7 @@ let v = () => [{
     title: x.Z.Messages.POGGERMODE_CONFETTI_LOCATION_CALL_TILE_ENABLED,
     description: x.Z.Messages.POGGERMODE_CONFETTI_LOCATION_CALL_TILE_ENABLED_DESCRIPTION
   }],
-  j = () => [{
+  v = () => [{
     location: R.oZ.CHAT_INPUT,
     title: x.Z.Messages.POGGERMODE_SCREENSHAKE_LOCATION_CHAT_INPUT_ENABLED,
     description: x.Z.Messages.POGGERMODE_SCREENSHAKE_LOCATION_CHAT_INPUT_ENABLED_DESCRIPTION
@@ -194,7 +194,7 @@ function G(e) {
       })]
     }), (0, r.jsx)(U, {
       disabled: o,
-      locations: v(),
+      locations: j(),
       settingsLocations: a,
       onChange: e => l({
         confettiEnabledLocations: e
@@ -301,7 +301,7 @@ function V(e) {
       })]
     }), (0, r.jsx)(U, {
       disabled: o,
-      locations: j(),
+      locations: v(),
       settingsLocations: i,
       onChange: e => a({
         screenshakeEnabledLocations: e

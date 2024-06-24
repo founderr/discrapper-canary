@@ -33,8 +33,8 @@ var n = t(735250),
   P = t(51144),
   Z = t(998502),
   f = t(695346),
-  v = t(461877),
-  j = t(726985),
+  j = t(461877),
+  v = t(726985),
   U = t(981631),
   B = t(815660),
   b = t(801461),
@@ -239,7 +239,7 @@ function w(e) {
         buttonColor: d.Button.Colors.PRIMARY,
         valueMessage: (0, n.jsx)(k, {
           text: e,
-          censor: v.E,
+          censor: j.E,
           revealLabel: F.Z.Messages.USER_SETTINGS_ACCOUNT_REVEAL_EMAIL_A11Y_LABEL,
           hideLabel: F.Z.Messages.USER_SETTINGS_ACCOUNT_HIDE_EMAIL_A11Y_LABEL
         }),
@@ -300,7 +300,7 @@ function W(e) {
   } = a, c = null != r;
   return s = c ? (0, n.jsx)(k, {
     text: r,
-    censor: v.n,
+    censor: j.n,
     revealLabel: F.Z.Messages.USER_SETTINGS_ACCOUNT_REVEAL_PHONE_A11Y_LABEL,
     hideLabel: F.Z.Messages.USER_SETTINGS_ACCOUNT_HIDE_PHONE_A11Y_LABEL
   }) : F.Z.Messages.USER_SETTINGS_NO_PHONE_PLACEHOLDER, (0, n.jsxs)("div", {
@@ -464,24 +464,24 @@ function Q() {
       }) : null, (0, n.jsxs)("div", {
         className: V.fieldList,
         children: [(0, n.jsx)(m.F, {
-          setting: j.s6.ACCOUNT_DISPLAY_NAME,
+          setting: v.s6.ACCOUNT_DISPLAY_NAME,
           children: (0, n.jsx)(H, {
             className: V.fieldSpacerBottom,
             user: s
           })
         }), (0, n.jsx)(m.F, {
-          setting: j.s6.ACCOUNT_USERNAME,
+          setting: v.s6.ACCOUNT_USERNAME,
           children: (0, n.jsx)(Y, {
             user: s
           })
         }), (0, n.jsx)(m.F, {
-          setting: j.s6.ACCOUNT_EMAIL,
+          setting: v.s6.ACCOUNT_EMAIL,
           children: (0, n.jsx)(w, {
             className: V.fieldSpacer,
             user: s
           })
         }), (0, n.jsx)(m.F, {
-          setting: j.s6.ACCOUNT_PHONE_NUMBER,
+          setting: v.s6.ACCOUNT_PHONE_NUMBER,
           children: (0, n.jsx)(W, {
             className: V.fieldSpacer,
             user: s

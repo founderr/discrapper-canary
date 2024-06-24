@@ -48,7 +48,7 @@ function x() {
       searchResults: f
     } = (0, u.E)();
 
-  function v(s) {
+  function j(s) {
     if (D !== s) {
       if (t) {
         A.S.dispatch(m.CkL.SHAKE_APP, {
@@ -65,9 +65,9 @@ function x() {
       guildId: null == x ? void 0 : x.id
     })
   }, [null == x ? void 0 : x.id, p]);
-  let j = !0,
+  let v = !0,
     U = !0;
-  return Z && 1 === f.length && (f.includes(g.s6.PROFILE_SERVER_PROFILES) ? (v(h.NB.GUILD), U = !1) : f.includes(g.s6.PROFILE_USER_PROFILE) && (v(h.NB.USER_PROFILE), j = !1)), (0, n.jsx)(o.Gt, {
+  return Z && 1 === f.length && (f.includes(g.s6.PROFILE_SERVER_PROFILES) ? (j(h.NB.GUILD), U = !1) : f.includes(g.s6.PROFILE_USER_PROFILE) && (j(h.NB.USER_PROFILE), v = !1)), (0, n.jsx)(o.Gt, {
     value: P,
     children: (0, n.jsxs)(l.HeadingLevel, {
       component: (0, n.jsx)(l.Heading, {
@@ -79,12 +79,12 @@ function x() {
         type: "top",
         look: "brand",
         selectedItem: D,
-        onItemSelect: v,
+        onItemSelect: j,
         children: [U ? (0, n.jsx)(l.TabBar.Item, {
           className: M.tabBarItem,
           id: h.NB.USER_PROFILE,
           children: R.Z.Messages.EDIT_PROFILE_CATEGORY_USER_PROFILE
-        }, h.NB.USER_PROFILE) : null, j ? (0, n.jsx)(l.TabBar.Item, {
+        }, h.NB.USER_PROFILE) : null, v ? (0, n.jsx)(l.TabBar.Item, {
           className: M.tabBarItem,
           id: h.NB.GUILD,
           children: R.Z.Messages.EDIT_PROFILE_CATEGORY_GUILD_IDENTITY

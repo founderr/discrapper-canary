@@ -83,8 +83,8 @@ function D(e) {
     notificationPositionMode: A.Z.getNotificationPositionMode(),
     textChatNotificationMode: A.Z.getTextChatNotificationMode(),
     shouldShowKeybindIndicators: A.Z.showKeybindIndicators
-  })), v = (0, o.e7)([I.Z], () => I.Z.getOverlayKeybind()), {
-    showKeybindIndicators: j
+  })), j = (0, o.e7)([I.Z], () => I.Z.getOverlayKeybind()), {
+    showKeybindIndicators: v
   } = u.Z.useExperiment({
     location: "overlay_user_settings"
   }), U = (0, T.$1)();
@@ -147,10 +147,10 @@ function D(e) {
           className: R.enableOverlayItem,
           children: (0, n.jsx)(_.Z, {
             disabled: !i,
-            defaultValue: null != v ? v.shortcut : [],
+            defaultValue: null != j ? j.shortcut : [],
             onChange: function(e) {
-              a()(null != v, "Keybind should never be undefined"), E.Z.setKeybind({
-                ...v,
+              a()(null != j, "Keybind should never be undefined"), E.Z.setKeybind({
+                ...j,
                 shortcut: e
               })
             }
@@ -213,7 +213,7 @@ function D(e) {
           },
           value: L
         })
-      }), j && (0, n.jsx)(p, {
+      }), v && (0, n.jsx)(p, {
         children: (0, n.jsx)(c.FormSwitch, {
           value: f,
           onChange: e => d.Z.setShowKeybindIndicators(e),

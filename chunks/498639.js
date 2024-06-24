@@ -48,7 +48,7 @@ s.Z = function() {
       label: e.name
     })),
     [Z, f] = i.useState(P.length > 0 ? P[0].value : null),
-    [v, j] = i.useState(""),
+    [j, v] = i.useState(""),
     [U, B] = i.useState({
       plan_id: x.Xh.PREMIUM_MONTH_TIER_2,
       gift: "true"
@@ -151,22 +151,22 @@ s.Z = function() {
         className: p.formItem,
         children: [(0, n.jsx)(r.TextInput, {
           placeholder: "Promotion Code",
-          value: v,
-          onChange: e => j(e)
+          value: j,
+          onChange: e => v(e)
         }), (0, n.jsx)(r.Tooltip, {
           text: "Need Promotion Code",
-          shouldShow: v.length < 1,
+          shouldShow: j.length < 1,
           children: e => {
             let {
               onMouseEnter: s,
               onMouseLeave: t
             } = e;
             return (0, n.jsx)(r.Button, {
-              disabled: v.length < 1,
+              disabled: j.length < 1,
               onMouseEnter: s,
               onMouseLeave: t,
               onClick: () => {
-                window.open(M.Z5c.BILLING_PROMOTION_REDEMPTION(v))
+                window.open(M.Z5c.BILLING_PROMOTION_REDEMPTION(j))
               },
               children: "Open Link"
             })

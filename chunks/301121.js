@@ -31,8 +31,8 @@ var n, i, a = t(735250),
   P = t(16703),
   Z = t(977059),
   f = t(236289),
-  v = t(518560),
-  j = t(237292),
+  j = t(518560),
+  v = t(237292),
   U = t(604849),
   B = t(278828),
   b = t(921801),
@@ -110,7 +110,7 @@ function ed() {
 function e_() {
   var e;
   let s = null === (e = (0, L.Z)()) || void 0 === e || e,
-    t = (0, j.y0)({
+    t = (0, v.y0)({
       location: "user_settings_web"
     }),
     n = (0, U.c)(),
@@ -860,7 +860,7 @@ class eC extends l.PureComponent {
   constructor(e) {
     super(e), eE(this, "SETTINGS_TABS", {
       [el.SU.SETTINGS]: () => this.renderSettingsBody(),
-      [el.SU.ACCOUNT_STANDING]: () => (0, a.jsx)(v.Z, {}),
+      [el.SU.ACCOUNT_STANDING]: () => (0, a.jsx)(j.Z, {}),
       [el.SU.GUILD_SETTINGS]: () => (0, a.jsx)(ed, {}),
       [el.SU.ENCRYPTION]: () => (0, a.jsx)($.Z, {})
     }), eE(this, "handleChangeDefaultGuildsRestricted", e => {

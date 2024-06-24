@@ -73,11 +73,11 @@ let h = [{
   };
 
 function M(e, s, t) {
-  e === O.hes.RTC_CONNECTED ? R.connected = !0 : (e === O.hes.DISCONNECTED || e === O.hes.RTC_DISCONNECTED) && (R.lifecycle === C.N7.TESTING && (R.failed = !0, j(), U()), R.connected = !1)
+  e === O.hes.RTC_CONNECTED ? R.connected = !0 : (e === O.hes.DISCONNECTED || e === O.hes.RTC_DISCONNECTED) && (R.lifecycle === C.N7.TESTING && (R.failed = !0, v(), U()), R.connected = !1)
 }
 
 function x() {
-  R.lifecycle === C.N7.TESTING && (R.failed = !0, j(), U())
+  R.lifecycle === C.N7.TESTING && (R.failed = !0, v(), U())
 }
 
 function p() {
@@ -92,7 +92,7 @@ function D(e, s) {
     if (!0 !== R.failed) R.currentTest = R.currentTest + 1, R.results.push({
       payload: e,
       summary: s
-    }), R.currentTest === g ? (f(C.N7.UPLOADING), U()) : v()
+    }), R.currentTest === g ? (f(C.N7.UPLOADING), U()) : j()
   }
 }
 
@@ -103,7 +103,7 @@ function L(e) {
 function P() {
   if (R.lifecycle === C.N7.PINGING && 10 === R.pings.length) {
     var e;
-    null === (e = R.connection) || void 0 === e || e.setPingInterval(5e3), R.currentTest = 0, v()
+    null === (e = R.connection) || void 0 === e || e.setPingInterval(5e3), R.currentTest = 0, j()
   }
 }
 
@@ -119,12 +119,12 @@ function f(e) {
   })
 }
 
-function v() {
+function j() {
   var e, s;
   null !== R.currentTest && (h[R.currentTest].direction === C.u_.CLIENT_TO_SERVER ? null === (e = R.connection) || void 0 === e || e.startClientToServerSpeedTest(h[R.currentTest]) : h[R.currentTest].direction === C.u_.SERVER_TO_CLIENT && (null === (s = R.connection) || void 0 === s || s.startServerToClientSpeedTest(h[R.currentTest])), f(C.N7.TESTING))
 }
 
-function j() {
+function v() {
   if (R.lifecycle === C.N7.TESTING && null != R.currentTest) {
     var e, s;
     h[R.currentTest].direction === C.u_.CLIENT_TO_SERVER ? null === (e = R.connection) || void 0 === e || e.stopClientToServerSpeedTest() : null === (s = R.connection) || void 0 === s || s.stopServerToClientSpeedTest()

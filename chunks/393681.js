@@ -29,8 +29,8 @@ var n = t(735250),
   P = t(709054),
   Z = t(706454),
   f = t(210887),
-  v = t(418632),
-  j = t(730820),
+  j = t(418632),
+  v = t(730820),
   U = t(888256),
   B = t(2719),
   b = t(194530),
@@ -85,7 +85,7 @@ class k extends i.PureComponent {
         children: [(0, n.jsx)("div", {
           className: Y.accountWarningBodyText,
           children: y.Z.Messages.USER_SETTINGS_UNVERIFIED_EMAIL_BODY
-        }), (0, n.jsx)(v.Z, {
+        }), (0, n.jsx)(j.Z, {
           size: d.ButtonSizes.SMALL,
           color: d.Button.Colors.PRIMARY
         })]
@@ -162,7 +162,7 @@ class k extends i.PureComponent {
           align: p.Z.Align.STRETCH,
           children: [(0, n.jsx)(p.Z.Child, {
             wrap: !0,
-            children: (0, n.jsx)(j.Z, {
+            children: (0, n.jsx)(v.Z, {
               backupCodes: e
             })
           }), s.mfaEnabled ? null : (0, n.jsx)(p.Z, {

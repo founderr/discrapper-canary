@@ -59,7 +59,7 @@ let f = e => {
       })]
     })
   },
-  v = e => {
+  j = e => {
     let {
       subscription: s,
       disabled: t
@@ -82,7 +82,7 @@ let f = e => {
       })]
     }) : (0, n.jsx)(d.Spinner, {})
   },
-  j = e => {
+  v = e => {
     let {
       isCancelled: s,
       onCancelSubscriptionClick: t,
@@ -266,10 +266,10 @@ s.Z = e => {
         })]
       }), (0, n.jsx)(d.Spacer, {
         size: 16
-      }), s.status === L.O0b.ACTIVE && (0, n.jsx)(v, {
+      }), s.status === L.O0b.ACTIVE && (0, n.jsx)(j, {
         subscription: s,
         disabled: y
-      }), !Q && (0, n.jsx)(j, {
+      }), !Q && (0, n.jsx)(v, {
         isCancelled: V,
         onCancelSubscriptionClick: G,
         isResubscribing: U,

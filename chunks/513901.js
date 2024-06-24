@@ -49,7 +49,7 @@ function C(e) {
   }, [x, p]);
   let Z = null != t,
     f = g || void 0 !== D ? null != D : null != M,
-    v = m ? r.ShinyButton : r.Button;
+    j = m ? r.ShinyButton : r.Button;
   return (0, n.jsx)(T.Z, {
     forcedDivider: O,
     borderType: S.Y.PREMIUM,
@@ -60,7 +60,7 @@ function C(e) {
     className: a,
     children: (0, n.jsxs)("div", {
       className: A.buttonsContainer,
-      children: [(0, n.jsx)(v, {
+      children: [(0, n.jsx)(j, {
         size: r.Button.Sizes.SMALL,
         onClick: P,
         className: l()({

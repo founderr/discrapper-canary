@@ -33,8 +33,8 @@ var n = t(735250),
   P = t(65154),
   Z = t(689938),
   f = t(331651);
-let v = (0, S.hQ)(),
-  j = "".concat(u.Z.getArticleURL(L.BhN.VOICE_VIDEO_TROUBLESHOOTING), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm");
+let j = (0, S.hQ)(),
+  v = "".concat(u.Z.getArticleURL(L.BhN.VOICE_VIDEO_TROUBLESHOOTING), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm");
 
 function U(e, s, t) {
   (0, o.openModal)(i => (0, n.jsx)(o.ConfirmModal, {
@@ -94,7 +94,7 @@ function B() {
         className: f.marginBottom20,
         type: o.FormText.Types.DESCRIPTION,
         children: Z.Z.Messages.FORM_HELP_VOICE_VIDEO_TROUBLESHOOTING_GUIDE.format({
-          guideURL: j
+          guideURL: v
         })
       }), (0, n.jsx)(o.FormDivider, {
         className: l()(f.marginBottom20)
@@ -152,7 +152,7 @@ function B() {
           children: (0, n.jsxs)(o.FormSection, {
             className: f.marginBottom20,
             children: [(0, n.jsx)(o.FormTitle, {
-              id: v,
+              id: j,
               tag: o.FormTitleTags.H5,
               className: f.marginBottom8,
               children: Z.Z.Messages.FORM_LABEL_ATTENUATION
@@ -161,7 +161,7 @@ function B() {
               onValueChange: e => {
                 c.Z.setAttenuation(e, a, S)
               },
-              "aria-labelledby": v
+              "aria-labelledby": j
             }), (0, n.jsx)(o.FormText, {
               className: f.marginBottom20,
               type: o.FormText.Types.DESCRIPTION,

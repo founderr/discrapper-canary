@@ -33,8 +33,8 @@ var n = t(735250),
   P = t(451392),
   Z = t(981631),
   f = t(474936),
-  v = t(526761),
-  j = t(689938),
+  j = t(526761),
+  v = t(689938),
   U = t(460247);
 
 function B(e) {
@@ -64,7 +64,7 @@ function B(e) {
       errors: s
     }
   }), q = (0, d.Z)(Q), J = (0, _.Z)(X), $ = i.useRef(null);
-  (0, C.Z)($, v.Y_.TRY_IT_OUT);
+  (0, C.Z)($, j.Y_.TRY_IT_OUT);
   let ee = (0, A.ZP)(G.id),
     es = null == ee ? void 0 : ee.getPreviewBio(w),
     {
@@ -105,7 +105,7 @@ function B(e) {
             size: "md",
             color: "currentColor",
             className: U.premiumIcon
-          }), j.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_PREVIEW]
+          }), v.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_PREVIEW]
         }),
         profilePreview: (0, n.jsx)(g.Z, {
           location: "TryOutPremiumSection",
@@ -130,11 +130,11 @@ function B(e) {
           children: [(0, n.jsxs)("div", {
             children: [(0, n.jsx)(l.Heading, {
               variant: "heading-xl/extrabold",
-              children: j.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_HEADER
+              children: v.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_HEADER
             }), (0, n.jsx)(l.Text, {
               className: U.description,
               variant: "text-sm/normal",
-              children: j.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_DESCRIPTION
+              children: v.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_DESCRIPTION
             })]
           }), (0, n.jsx)(P.Z, {
             className: U.customizationSection,
@@ -155,24 +155,24 @@ function B(e) {
             isTryItOutFlow: !0,
             onAvatarChange: N.c_,
             showRemoveAvatarButton: !1,
-            changeAvatarButtonText: j.Z.Messages.USER_SETTINGS_ADD_ANIMATED_AVATAR,
-            sectionTitle: j.Z.Messages.PREMIUM_TIER_0_FEATURE_AVATAR
+            changeAvatarButtonText: v.Z.Messages.USER_SETTINGS_ADD_ANIMATED_AVATAR,
+            sectionTitle: v.Z.Messages.PREMIUM_TIER_0_FEATURE_AVATAR
           }), (0, n.jsx)(M.Z, {
             isTryItOutFlow: !0,
             className: U.customizationSection,
             user: G,
-            sectionTitle: j.Z.Messages.USER_SETTINGS_AVATAR_DECORATION
+            sectionTitle: v.Z.Messages.USER_SETTINGS_AVATAR_DECORATION
           }, "decoration"), (0, n.jsx)(L.Z, {
             className: U.customizationSection,
             isTryItOutFlow: !0,
             initialSelectedEffectId: J,
             user: G,
-            sectionTitle: j.Z.Messages.USER_SETTINGS_PROFILE_EFFECT
+            sectionTitle: v.Z.Messages.USER_SETTINGS_PROFILE_EFFECT
           }, "effect"), !ei && (0, n.jsxs)(n.Fragment, {
             children: [(0, n.jsx)(l.Text, {
               variant: "text-sm/normal",
               className: U.premiumPerksListTitle,
-              children: j.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_ALSO_INCLUDES
+              children: v.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_ALSO_INCLUDES
             }), (0, n.jsx)(I.Z, {
               onSubscribeModalClose: e => {
                 e && ((0, r.I5)(K), (0, N.g_)(z), (0, N.z5)(W))
@@ -180,9 +180,9 @@ function B(e) {
               subscriptionTier: f.Si.TIER_2,
               className: U.premiumSubscribeButton,
               size: l.Button.Sizes.MEDIUM,
-              buttonText: V ? j.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : el ? j.Z.Messages.PREMIUM_DISCOUNT_CTA.format({
+              buttonText: V ? v.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : el ? v.Z.Messages.PREMIUM_DISCOUNT_CTA.format({
                 percent: null == ea ? void 0 : ea.discount.amount
-              }) : j.Z.Messages.PREMIUM_UPSELL_GET_NITRO
+              }) : v.Z.Messages.PREMIUM_UPSELL_GET_NITRO
             })]
           })]
         })

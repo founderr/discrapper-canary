@@ -6,7 +6,7 @@ t.d(s, {
     return Z
   },
   VO: function() {
-    return j
+    return v
   },
   ji: function() {
     return b
@@ -94,9 +94,9 @@ function Z() {
     shouldMergeGameSettings: f
   } = h.b.useExperiment({
     location: "settings"
-  }), v = (0, R.eA)({
+  }), j = (0, R.eA)({
     location: "settings"
-  }), j = (0, d.Xo)({
+  }), v = (0, d.Xo)({
     location: "settings"
   }), U = null !== (s = null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== s && s, B = (0, A.y0)({
     location: "settings"
@@ -117,8 +117,8 @@ function Z() {
     isOverlaySupported: p,
     isClipsBetaTagShowing: P === a.z.CLIPS_SETTINGS_BETA_TAG,
     shouldMergeGameSettings: f,
-    isUserSettingsSearchEnabled: v,
-    isKeywordFilteringEnabled: j,
+    isUserSettingsSearchEnabled: j,
+    isKeywordFilteringEnabled: v,
     isStaff: U,
     isInappropriateConversationWarningEnabled: B,
     paymentsBlocked: b,
@@ -180,7 +180,7 @@ function f(e) {
     } return l
 }
 
-function v(e, s) {
+function j(e, s) {
   let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     n = arguments.length > 3 ? arguments[3] : void 0,
     i = [],
@@ -216,7 +216,7 @@ function v(e, s) {
   }), i
 }
 
-function j() {
+function v() {
   let e = Z(),
     {
       shouldMergeGameSettings: s
@@ -224,7 +224,7 @@ function j() {
       location: "settings"
     }),
     t = n.useMemo(() => P(s), [s]);
-  return n.useMemo(() => v(t, e), [t, e])
+  return n.useMemo(() => j(t, e), [t, e])
 }
 
 function U(e) {
@@ -248,7 +248,7 @@ function U(e) {
     i = (0, R.c3)({
       location: "settings"
     });
-  return n.useMemo(() => v(t, s, i, new Set(e)), [t, s, i, e])
+  return n.useMemo(() => j(t, s, i, new Set(e)), [t, s, i, e])
 }
 
 function B(e) {
