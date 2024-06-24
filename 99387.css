@@ -14396,6 +14396,11 @@ html .progress_e5f4c6 {
     object-fit: contain
 }
 
+.interactionInfoMenuItem_df26f0 {
+    opacity: 1;
+    align-items: flex-start
+}
+
 .container_a3b500 {
     position: absolute;
     right: 0;
@@ -48194,8 +48199,8 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
 
 .message_b6cd66 {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
