@@ -24,7 +24,7 @@ function d(e) {
       null != e && ((0, i.openModalLazy)(async () => {
         let {
           default: t
-        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("7654"), n.e("1187"), n.e("57742")]).then(n.bind(n, 560114));
+        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("7654"), n.e("1187"), n.e("1425")]).then(n.bind(n, 560114));
         return n => (0, s.jsx)(t, {
           ...n,
           guild: e,

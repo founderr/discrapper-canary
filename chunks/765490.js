@@ -1,5 +1,6 @@
+"use strict";
 var t = "Invariant failed";
-n.exports = function(n, e) {
+e.exports = function(e, n) {
   var r;
-  if (!n) throw Error(t)
+  if (!e) throw Error(t)
 }

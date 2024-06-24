@@ -3,7 +3,7 @@ n.d(t, {
     return G
   },
   Go: function() {
-    return b
+    return y
   },
   NU: function() {
     return P
@@ -21,7 +21,7 @@ n.d(t, {
     return M
   },
   XO: function() {
-    return R
+    return O
   },
   Xn: function() {
     return F
@@ -36,7 +36,7 @@ n.d(t, {
     return Z
   },
   sR: function() {
-    return y
+    return b
   },
   tn: function() {
     return B
@@ -58,14 +58,14 @@ var s = n(735250),
   _ = n(594174),
   I = n(585483),
   T = n(5967),
-  N = n(630388),
-  m = n(358085),
+  m = n(630388),
+  N = n(358085),
   h = n(51144),
   C = n(91047),
   S = n(901461),
   A = n(50284),
-  p = n(981631),
-  g = n(689938);
+  g = n(981631),
+  p = n(689938);
 
 function f(e, t, n) {
   return i.useCallback(() => {
@@ -75,7 +75,7 @@ function f(e, t, n) {
   }, [e, n, t])
 }
 
-function O(e, t, n) {
+function R(e, t, n) {
   return i.useCallback(s => {
     let i = _.default.getUser(e);
     if (null == i) return;
@@ -87,26 +87,26 @@ function O(e, t, n) {
         decoration: "never"
       })),
       a = "<@".concat(e, ">");
-    I.S.dispatchToLastSubscribed(p.CkL.INSERT_TEXT, {
+    I.S.dispatchToLastSubscribed(g.CkL.INSERT_TEXT, {
       plainText: l,
       rawText: a
     }), o.Z.startTyping(t)
   }, [e, t, n])
 }
 
-function R(e, t, n, s) {
+function O(e, t, n, s) {
   let i = f("usernameProfile", n, s);
-  return O(e.author.id, t.id, i)
+  return R(e.author.id, t.id, i)
 }
 
 function M(e, t, n, s) {
   let i = f("referencedUsernameProfile", n, s);
-  return O(null == e ? void 0 : e.author.id, t.id, i)
+  return R(null == e ? void 0 : e.author.id, t.id, i)
 }
 
 function x(e, t, n, s) {
   let i = f("interactionUsernameProfile", n, s);
-  return O(null == e ? void 0 : e.user.id, t.id, i)
+  return R(null == e ? void 0 : e.user.id, t.id, i)
 }
 
 function v(e) {
@@ -133,10 +133,10 @@ function D(e, t, l, r) {
   } = t, {
     id: _,
     flags: I
-  } = e, T = (0, N.yE)(I, p.iLy.EPHEMERAL), h = (0, S.Z)(e), C = (0, c.bp)();
+  } = e, T = (0, m.yE)(I, g.iLy.EPHEMERAL), h = (0, S.Z)(e), C = (0, c.bp)();
   return i.useCallback((e, t) => {
     if (T) return;
-    if (!m.isPlatformEmbedded) {
+    if (!N.isPlatformEmbedded) {
       let t = e.target;
       if ("A" === t.tagName && "" !== t.textContent || null == window.getSelection) return;
       let n = window.getSelection();
@@ -161,7 +161,7 @@ function D(e, t, l, r) {
       } {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("47939"), n.e("37220"), n.e("92557"), n.e("92117")]).then(n.bind(n, 225138));
+        } = await Promise.all([n.e("99387"), n.e("47939"), n.e("37220"), n.e("92557")]).then(n.bind(n, 225138));
         return n => (0, s.jsx)(e, {
           ...n,
           message: c,
@@ -199,7 +199,7 @@ function U(e, t, n) {
   }, [e, t, n])
 }
 
-function y(e, t) {
+function b(e, t) {
   return i.useCallback(n => {
     let s = _.default.getUser(e),
       i = u.Z.getChannel(t);
@@ -207,7 +207,7 @@ function y(e, t) {
   }, [e, t])
 }
 
-function b(e, t) {
+function y(e, t) {
   let {
     id: n
   } = e, {
@@ -224,10 +224,10 @@ function B(e, t, n) {
     [a, r] = i.useState(n);
   l.current = a || l.current;
   let o = i.useCallback(() => {
-      !a && (I.S.dispatchKeyed(p.LPv.ANIMATE_CHAT_AVATAR, s, !0), r(!0))
+      !a && (I.S.dispatchKeyed(g.LPv.ANIMATE_CHAT_AVATAR, s, !0), r(!0))
     }, [a, s]),
     c = i.useCallback(() => {
-      I.S.dispatchKeyed(p.LPv.ANIMATE_CHAT_AVATAR, s, !1), r(!1)
+      I.S.dispatchKeyed(g.LPv.ANIMATE_CHAT_AVATAR, s, !1), r(!1)
     }, [s]);
   return {
     hasHovered: l.current,
@@ -259,11 +259,11 @@ function G(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   return i.useCallback(() => {
     null != t && (n ? l.Z.show({
-      title: g.Z.Messages.UNBLOCK_TO_JUMP_TITLE,
-      body: g.Z.Messages.UNBLOCK_TO_JUMP_BODY.format({
+      title: p.Z.Messages.UNBLOCK_TO_JUMP_TITLE,
+      body: p.Z.Messages.UNBLOCK_TO_JUMP_BODY.format({
         name: t.author.username
       }),
-      confirmText: g.Z.Messages.OKAY
+      confirmText: p.Z.Messages.OKAY
     }) : r.Z.jumpToMessage({
       channelId: t.channel_id,
       messageId: t.id,
