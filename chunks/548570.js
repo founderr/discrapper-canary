@@ -257,7 +257,7 @@ class W extends y.Z {
         code: t,
         reason: n
       }), 4004 === t) return this.connectionState = C.Z.CLOSED, k.warn("[WS CLOSED] because of authentication failure, marking as closed."), this._reset(e, t, n);
-    if (this._tryDetectInvalidIOSToken(t, n, e), 0 !== t && d.ZP.getSelfEmbeddedActivities().size > 0) {
+    if (this._tryDetectInvalidIOSToken(t, n, e), d.ZP.getSelfEmbeddedActivities().size > 0) {
       var i;
       let [r, s] = null !== (i = Array.from(d.ZP.getSelfEmbeddedActivities().entries())[0]) && void 0 !== i ? i : [];
       null != r && null != s && (g.Z.addBreadcrumb({
