@@ -3,7 +3,7 @@ n.d(t, {
   Z: function() {
     return P
   }
-}), n(47120), n(653041);
+}), n(653041), n(47120);
 var i = n(735250),
   r = n(470079),
   s = n(392711),
@@ -37,41 +37,43 @@ function P(e) {
   let {
     channel: t,
     entrypoint: n,
-    enableRecommendations: s,
-    enableRecents: o,
-    enableGlobalSearch: a
-  } = e, l = (0, d.NX)(t.id, !0, "AppLauncherHomeScreen"), u = n === m._.TEXT, c = n === m._.TEXT && s, I = n === m._.VOICE, T = c || u;
+    searchQuery: s,
+    setSearchQuery: o,
+    enableRecommendations: a,
+    enableRecents: l,
+    enableGlobalSearch: u
+  } = e, c = (0, d.NX)(t.id, !0, "AppLauncherHomeScreen"), I = n === m._.TEXT, T = n === m._.TEXT && a, h = n === m._.VOICE, S = T || I;
   r.useEffect(() => {
-    l && (0, E.w1)({
+    c && (0, E.w1)({
       guildId: t.getGuildId(),
       force: !0
     })
-  }, [l, t]);
-  let [h, S] = r.useState(""), f = h.length > 0;
+  }, [c, t]);
+  let f = s.length > 0;
   return (0, i.jsxs)("div", {
     className: D.container,
     children: [(0, i.jsx)(y, {
-      searchQuery: h,
-      setSearchQuery: S
+      searchQuery: s,
+      setSearchQuery: o
     }), (0, i.jsx)(_.Scroller, {
       className: D.scrollableContent,
       fade: !0,
       children: f ? (0, i.jsx)("div", {
         children: (0, i.jsx)(C.Z, {
           channel: t,
-          query: h,
+          query: s,
           entrypoint: n,
-          enableGlobalSearch: a,
-          enableActivitiesSearch: l
+          enableGlobalSearch: u,
+          enableActivitiesSearch: c
         })
       }) : (0, i.jsxs)("div", {
-        children: [o && (0, i.jsx)(U, {}), u && (0, i.jsx)(G, {
+        children: [l && (0, i.jsx)(U, {}), I && (0, i.jsx)(G, {
           channel: t
-        }), c && (0, i.jsx)(w, {
+        }), T && (0, i.jsx)(w, {
           channel: t
-        }), I && (0, i.jsx)(b, {
+        }), h && (0, i.jsx)(b, {
           channel: t
-        }), T && (0, i.jsx)(g.Z, {})]
+        }), S && (0, i.jsx)(g.Z, {})]
       })
     })]
   })
@@ -94,7 +96,8 @@ function y(e) {
       query: t,
       onChange: a,
       onClear: l,
-      size: _.SearchBar.Sizes.MEDIUM
+      size: _.SearchBar.Sizes.MEDIUM,
+      autoFocus: !0
     })
   })
 }

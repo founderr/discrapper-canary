@@ -3,26 +3,27 @@ n(47120);
 var i = n(735250),
   r = n(470079),
   s = n(566860),
-  o = n(695676),
-  a = n(173790),
-  l = n(361917),
-  u = n(684256),
-  _ = n(987421);
+  o = n(596359),
+  a = n(695676),
+  l = n(173790),
+  u = n(361917),
+  _ = n(684256),
+  c = n(987421);
 t.Z = r.memo(function(e) {
   let t, {
       drawerRef: n,
-      channel: c,
-      entrypoint: d
+      channel: d,
+      entrypoint: E
     } = e,
     {
-      history: E,
-      setHistory: I,
-      currentView: T,
-      pushHistory: h,
-      goBack: S
+      history: I,
+      setHistory: T,
+      currentView: h,
+      pushHistory: S,
+      goBack: f
     } = function() {
       let [e, t] = r.useState([{
-        type: o.gc.HOME
+        type: a.gc.HOME
       }]), n = e[e.length - 1];
       return {
         history: e,
@@ -38,51 +39,60 @@ t.Z = r.memo(function(e) {
         }
       }
     }(),
-    f = s.K.useExperiment({
+    [N, A] = r.useState(""),
+    m = s.K.useExperiment({
+      location: "App Launcher Root"
+    }, {
+      autoTrackExposure: !0
+    }),
+    O = o.$.useExperiment({
       location: "App Launcher Root"
     }, {
       autoTrackExposure: !0
     });
-  switch (null == T ? void 0 : T.type) {
-    case o.gc.HOME:
-      t = (0, i.jsx)(l.Z, {
-        channel: c,
-        entrypoint: d,
-        enableRecommendations: f.recommendationsEnabled,
-        enableRecents: f.recentsDropdownEnabled
-      });
-      break;
-    case o.gc.LIST:
+  switch (null == h ? void 0 : h.type) {
+    case a.gc.HOME:
       t = (0, i.jsx)(u.Z, {
-        channel: c,
-        entrypoint: d,
-        title: T.title,
-        look: T.look,
-        items: T.items
+        channel: d,
+        entrypoint: E,
+        searchQuery: N,
+        setSearchQuery: A,
+        enableRecommendations: m.recommendationsEnabled,
+        enableRecents: m.recentsDropdownEnabled,
+        enableGlobalSearch: O.enabled
       });
       break;
-    case o.gc.APPLICATION:
-      t = (0, i.jsx)(a.Z, {
-        channel: c,
-        application: T.application,
-        sectionName: T.sectionName
+    case a.gc.LIST:
+      t = (0, i.jsx)(_.Z, {
+        channel: d,
+        entrypoint: E,
+        title: h.title,
+        look: h.look,
+        items: h.items
+      });
+      break;
+    case a.gc.APPLICATION:
+      t = (0, i.jsx)(l.Z, {
+        channel: d,
+        application: h.application,
+        sectionName: h.sectionName
       });
       break;
     default:
       t = null
   }
   return (0, i.jsx)("div", {
-    className: _.drawerSizingWrapper,
+    className: c.drawerSizingWrapper,
     ref: n,
     children: (0, i.jsx)("div", {
-      className: _.contentWrapper,
-      children: (0, i.jsx)(o.uX.Provider, {
+      className: c.contentWrapper,
+      children: (0, i.jsx)(a.uX.Provider, {
         value: {
-          history: E,
-          setHistory: I,
-          currentView: T,
-          pushHistory: h,
-          goBack: S
+          history: I,
+          setHistory: T,
+          currentView: h,
+          pushHistory: S,
+          goBack: f
         },
         children: t
       })
