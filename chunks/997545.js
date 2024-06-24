@@ -246,7 +246,10 @@ class v extends E.Z {
     this.postponeDecodeLevel = e
   }
   setClipRecordUser(e, t, n) {
-    !this.destroyed && this.conn.setClipRecordUser(e, (this.context === R.Yn.STREAM ? "application" : "user").concat("audio" === t ? "Audio" : "Video"), n)
+    if (!this.destroyed) {
+      var i, r;
+      null === (i = (r = this.conn).setClipRecordUser) || void 0 === i || i.call(r, e, (this.context === R.Yn.STREAM ? "application" : "user").concat("audio" === t ? "Audio" : "Video"), n)
+    }
   }
   setClipsKeyFrameInterval(e) {
     this.context === R.Yn.STREAM && (this.clipsKeyFrameInterval = e, this.conn.setTransportOptions({
