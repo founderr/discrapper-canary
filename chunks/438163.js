@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   J: function() {
-    return O
+    return p
   }
 }), n(47120);
 var i = n(735250),
@@ -13,169 +13,176 @@ var i = n(735250),
   u = n(846519),
   _ = n(481060),
   c = n(788307),
-  d = n(607070),
-  E = n(100527),
-  I = n(906732),
-  T = n(594174),
-  h = n(751009),
-  S = n(785717),
-  f = n(228168),
-  N = n(689938),
-  A = n(739550);
-let m = "text-sm/medium";
+  d = n(727637),
+  E = n(607070),
+  I = n(100527),
+  T = n(906732),
+  h = n(594174),
+  S = n(751009),
+  f = n(785717),
+  N = n(825801),
+  A = n(228168),
+  m = n(689938),
+  O = n(739550);
+let R = "text-sm/medium";
 
-function O(e) {
+function p(e) {
   let {
     user: t,
     statusActivity: s,
-    profileType: O,
-    hasEntered: R = !0,
-    animate: p = !0,
-    onClose: g
+    profileType: p,
+    hasEntered: g = !0,
+    animate: C = !0,
+    onClose: v
   } = e, {
-    modifyStatusEnabled: C
-  } = (0, h.K)({
+    modifyStatusEnabled: L
+  } = (0, S.K)({
     location: "UserProfileCustomStatusBubble"
   }), {
-    analyticsLocations: v
-  } = (0, I.ZP)(E.Z.PROFILE_CUSTOM_STATUS), {
-    trackUserProfileAction: L
-  } = (0, S.KZ)(), D = (0, l.e7)([T.default], () => T.default.getCurrentUser()), M = t.id === (null == D ? void 0 : D.id), P = (0, l.e7)([d.Z], () => d.Z.useReducedMotion), [y, U] = r.useState(!0), [b] = r.useState(() => new u.V7), G = r.useRef(null), w = r.useRef(null), B = r.useRef(null), k = r.useRef(null), x = (null == s ? void 0 : s.state) != null && "" !== s.state ? s.state : null, V = null != x && x.length > 0, {
-    emoji: Z
-  } = null != s ? s : {}, H = null != Z, F = H && !V, Y = H || V, j = M && !Y && C, [W, K] = r.useState(F);
+    analyticsLocations: D
+  } = (0, T.ZP)(I.Z.PROFILE_CUSTOM_STATUS), {
+    trackUserProfileAction: M
+  } = (0, f.KZ)(), P = (0, l.e7)([h.default], () => h.default.getCurrentUser()), y = t.id === (null == P ? void 0 : P.id), U = (0, l.e7)([E.Z], () => E.Z.useReducedMotion), [b, G] = r.useState(!0), [w] = r.useState(() => new u.V7), B = r.useRef(null), k = r.useRef(null), x = r.useRef(null), V = r.useRef(null), Z = r.useRef(null), H = (0, d.Z)(Z), F = (null == s ? void 0 : s.state) != null && "" !== s.state ? s.state : null, Y = null != F && F.length > 0, {
+    emoji: j
+  } = null != s ? s : {}, W = null != j, K = W && !Y, z = W || Y, q = y && !z && L, [X, Q] = r.useState(K);
   r.useLayoutEffect(() => {
-    if (null == G.current || F) return;
-    let e = Math.floor(G.current.getBoundingClientRect().height);
-    if (K(F || e <= 18), R) {
+    if (null == B.current || K) return;
+    let e = Math.floor(B.current.getBoundingClientRect().height);
+    if (Q(K || e <= 18), g) {
       var t, n, i, r;
-      w.current = null !== (i = null === (t = G.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== i ? i : 144, k.current = null !== (r = null === (n = B.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== r ? r : 36
+      k.current = null !== (i = null === (t = B.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== i ? i : 144, V.current = null !== (r = null === (n = x.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== r ? r : 36
     }
-  }, [R, F]);
-  let [z, q] = (0, a.useSpring)(() => ({
+  }, [g, K]);
+  let [J, $] = (0, a.useSpring)(() => ({
     maxHeight: "".concat(36, "px"),
     config: {
       clamp: !0,
-      immediate: P,
+      immediate: U,
       duration: 150
     }
   }));
-  if (r.useEffect(() => () => b.stop(), [b]), !Y && !j) return null;
-  let X = e => {
+  if (r.useEffect(() => () => w.stop(), [w]), !z && !q) return null;
+  let ee = e => {
       var t, n;
-      if (!W) {
-        e ? q({
-          maxHeight: "".concat(Math.min(null !== (t = w.current) && void 0 !== t ? t : 144, 144), "px"),
+      if (!X) {
+        e ? $({
+          maxHeight: "".concat(Math.min(null !== (t = k.current) && void 0 !== t ? t : 144, 144), "px"),
           delay: 300
-        }) : q({
-          maxHeight: "".concat(Math.min(null !== (n = k.current) && void 0 !== n ? n : 36, 36), "px"),
+        }) : $({
+          maxHeight: "".concat(Math.min(null !== (n = V.current) && void 0 !== n ? n : 36, 36), "px"),
           delay: 0
         });
-        b.start(e ? 300 : 150, () => {
-          U(!e)
+        w.start(e ? 300 : 150, () => {
+          G(!e)
         })
       }
     },
-    Q = () => (0, i.jsxs)("div", {
-      className: A.content,
+    et = () => (0, i.jsxs)("div", {
+      className: O.content,
       children: [(0, i.jsx)(_.CirclePlusIcon, {
-        className: A.addStatusIcon,
-        colorClass: A.addStatusIconColor
+        className: O.addStatusIcon,
+        colorClass: O.addStatusIconColor
       }), (0, i.jsx)(_.Text, {
-        variant: m,
-        className: A.addStatusPrompt,
-        children: N.Z.Messages.USER_SETTINGS_ADD_STATUS
+        variant: R,
+        className: O.addStatusPrompt,
+        children: m.Z.Messages.USER_SETTINGS_ADD_STATUS
       })]
     }),
-    J = () => H ? (0, i.jsx)(c.I, {
-      className: V ? A.statusEmojiInline : A.statusEmojiOnly,
-      emoji: Z,
-      animate: p,
+    en = () => W ? (0, i.jsx)(c.I, {
+      className: Y ? O.statusEmojiInline : O.statusEmojiOnly,
+      emoji: j,
+      animate: C,
       hideTooltip: !1,
-      tooltipDelay: f.vB
+      tooltipDelay: A.vB
     }) : null,
-    $ = () => V ? (0, i.jsx)(_.Text, {
-      variant: m,
-      className: A.statusText,
-      children: x
+    ei = () => Y ? (0, i.jsx)(_.Text, {
+      variant: R,
+      className: O.statusText,
+      children: F
     }) : null,
-    ee = {
-      [A.biteSize]: O === f.y0.BITE_SIZE,
-      [A.fullSize]: O === f.y0.FULL_SIZE,
-      [A.panel]: O === f.y0.PANEL
+    er = {
+      [O.biteSize]: p === A.y0.BITE_SIZE,
+      [O.fullSize]: p === A.y0.FULL_SIZE,
+      [O.panel]: p === A.y0.PANEL
     },
-    et = o()(A.statusBubbleOuter, ee, {
-      [A.statusBubbleShape]: !V && H || !W,
-      [A.statusBubbleSingleLineWithTextShape]: W && V || j,
-      [A.statusBubbleOuterStatusCursor]: j
+    es = o()(O.statusBubbleOuter, er, {
+      [O.statusBubbleShape]: !Y && W || !X,
+      [O.statusBubbleSingleLineWithTextShape]: X && Y || q,
+      [O.statusBubbleOuterStatusCursor]: q
     }),
-    en = o()(A.statusBubble, {
-      [A.statusBubbleShape]: !V && H || !W,
-      [A.statusBubbleSingleLineWithTextShape]: W && V || j,
-      [A.statusBubbleEmojiOnlyPadding]: F,
-      [A.statusBubbleWithTextPadding]: V || j,
-      [A.statusBubbleWithTextMinWidth]: V,
-      [A.statusBubbleCopyStatusCursor]: Y
+    eo = o()(O.statusBubble, {
+      [O.statusBubbleShape]: !Y && W || !X,
+      [O.statusBubbleSingleLineWithTextShape]: X && Y || q,
+      [O.statusBubbleEmojiOnlyPadding]: K,
+      [O.statusBubbleWithTextPadding]: Y || q,
+      [O.statusBubbleWithTextMinWidth]: Y,
+      [O.statusBubbleCopyStatusCursor]: z
     });
   return (0, i.jsxs)("div", {
     children: [(0, i.jsx)("div", {
-      className: o()(A.invisibleContainer, ee),
+      className: o()(O.invisibleContainer, er),
       children: (0, i.jsx)("div", {
-        className: et,
+        className: es,
         children: (0, i.jsxs)("span", {
-          className: en,
-          children: [j && Q(), Y && (0, i.jsxs)("div", {
-            className: o()(A.content, A.clamp, A.placeholderWidth, {
-              [A.panel]: O === f.y0.PANEL
+          className: eo,
+          children: [q && et(), z && (0, i.jsxs)("div", {
+            className: o()(O.content, O.clamp, O.placeholderWidth, {
+              [O.panel]: p === A.y0.PANEL
+            }),
+            ref: x,
+            children: [en(), ei()]
+          }), z && (0, i.jsxs)("div", {
+            className: o()(O.content, O.unclamp, O.placeholderWidth, O.incorporeal, {
+              [O.panel]: p === A.y0.PANEL
             }),
             ref: B,
-            children: [J(), $()]
-          }), Y && (0, i.jsxs)("div", {
-            className: o()(A.content, A.unclamp, A.placeholderWidth, A.incorporeal, {
-              [A.panel]: O === f.y0.PANEL
-            }),
-            ref: G,
-            children: [J(), $()]
+            children: [en(), ei()]
           })]
         })
       })
-    }), (0, i.jsx)("div", {
-      className: o()(A.visibleContainer, ee),
-      children: (0, i.jsx)(_.Clickable, {
+    }), (0, i.jsxs)("div", {
+      className: o()(O.visibleContainer, er),
+      ref: Z,
+      children: [(0, i.jsx)(N.Z, {
+        isHovering: H,
+        location: "UserProfileCustomStatusBubble",
+        className: O.reactReplyBar
+      }), (0, i.jsx)(_.Clickable, {
         tabIndex: 0,
-        className: et,
-        onFocus: () => X(!0),
-        onBlur: () => X(!1),
-        onMouseEnter: () => X(!0),
-        onMouseLeave: () => X(!1),
-        onClick: j ? () => {
-          L({
+        className: es,
+        onFocus: () => ee(!0),
+        onBlur: () => ee(!1),
+        onMouseEnter: () => ee(!0),
+        onMouseLeave: () => ee(!1),
+        onClick: q ? () => {
+          M({
             action: "PRESS_SET_CUSTOM_STATUS"
-          }), null == g || g(), (0, _.openModalLazy)(async () => {
+          }), null == v || v(), (0, _.openModalLazy)(async () => {
             let {
               default: e
             } = await Promise.all([n.e("99387"), n.e("47484")]).then(n.bind(n, 211065));
             return t => (0, i.jsx)(e, {
               ...t,
-              sourceAnalyticsLocations: v
+              sourceAnalyticsLocations: D
             })
           })
         } : void 0,
         children: (0, i.jsxs)("span", {
-          className: en,
-          children: [j && Q(), Y && (() => {
-            let e = o()(A.content, {
-              [A.clamp]: y,
-              [A.unclamp]: !y,
-              [A.singleLineAlign]: W
+          className: eo,
+          children: [q && et(), z && (() => {
+            let e = o()(O.content, {
+              [O.clamp]: b,
+              [O.unclamp]: !b,
+              [O.singleLineAlign]: X
             });
             return (0, i.jsxs)(a.animated.div, {
-              style: z,
+              style: J,
               className: e,
-              children: [J(), $()]
+              children: [en(), ei()]
             })
           })()]
         })
-      })
+      })]
     })]
   })
 }
