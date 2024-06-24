@@ -17,15 +17,15 @@ var a = l(442837),
   _ = l(341165),
   I = l(626135),
   x = l(572004),
-  m = l(971130),
-  N = l(230900),
+  N = l(971130),
+  m = l(230900),
   T = l(981631),
   h = l(689938),
   g = l(878478);
 let {
   INVITE_OPTIONS_7_DAYS: v,
   INVITE_OPTIONS_UNLIMITED: S
-} = m.ZP;
+} = N.ZP;
 
 function C(e) {
   var n, l, C;
@@ -97,7 +97,7 @@ function C(e) {
         onCopy: e => {
           if (U) return;
           (0, x.JG)(e);
-          let n = (0, N.xC)(A.entity_type);
+          let n = (0, m.xC)(A.entity_type);
           I.default.track(T.rMx.COPY_INSTANT_INVITE, {
             server: A.guild_id,
             channel: p,
@@ -111,7 +111,7 @@ function C(e) {
         variant: "text-xs/normal",
         color: "header-secondary",
         className: g.inviteDetail,
-        children: (0, m.Vg)(b, B)
+        children: (0, N.Vg)(b, B)
       })]
     })]
   })

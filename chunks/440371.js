@@ -23,8 +23,8 @@ function u(e) {
     schedule: _,
     recurrenceRule: I,
     showEndDate: x = !1,
-    requireEndDate: m = !1,
-    disableStartDateTime: N = !1
+    requireEndDate: N = !1,
+    disableStartDateTime: m = !1
   } = e;
   if (null == _) return null;
   let T = null,
@@ -39,12 +39,12 @@ function u(e) {
       endDate: e
     })
   };
-  return x && (T = null != _.endDate || m ? (0, s.jsxs)(s.Fragment, {
+  return x && (T = null != _.endDate || N ? (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsxs)("div", {
       className: c.doubleInput,
       children: [(0, s.jsx)(i.FormItem, {
         title: d.Z.Messages.CREATE_EVENT_END_DATE_LABEL,
-        required: m,
+        required: N,
         children: (0, s.jsx)(i.DateInput, {
           value: _.endDate,
           onSelect: C,
@@ -53,13 +53,13 @@ function u(e) {
         })
       }), (0, s.jsx)(i.FormItem, {
         title: d.Z.Messages.CREATE_EVENT_END_TIME_LABEL,
-        required: m,
+        required: N,
         children: (0, s.jsx)(i.TimeInput, {
           value: _.endDate,
           onChange: C
         })
       })]
-    }), m ? null : (0, s.jsx)(i.Button, {
+    }), N ? null : (0, s.jsx)(i.Button, {
       onClick: () => {
         C(void 0)
       },
@@ -115,7 +115,7 @@ function u(e) {
           },
           minDate: g,
           maxDate: v,
-          disabled: N
+          disabled: m
         })
       }), (0, s.jsx)(i.FormItem, {
         title: d.Z.Messages.CREATE_EVENT_START_TIME_LABEL,
@@ -129,7 +129,7 @@ function u(e) {
             })
           },
           hideValue: !E,
-          disabled: N
+          disabled: m
         })
       })]
     }), T, null != h && null != a && (0, s.jsx)(o.Z, {

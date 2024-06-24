@@ -36,9 +36,9 @@ function M(e) {
   }), O = (0, C.Zy)({
     location: f.dr.QUESTS_BAR
   }), S = (0, c.e7)([d.Z], () => d.Z.useReducedMotion), L = (0, c.e7)([u.Z], () => u.Z.hasLayers()), v = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, Z = (0, o.Z)(v), x = (null === (n = h.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, D = (0, o.Z)(x), b = (null === (a = h.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, y = null != h.userStatus && (0, I.zE)(h.userStatus, T.jn.QUEST_BAR), P = (0, _.tP)(h), {
-    hasError: j,
-    isLoading: G
-  } = (0, A.d7)(), U = O && !y && !b && !P && !G, V = i.useRef(U), H = (0, m.B)(h, U && !j), w = i.useRef(-1), k = i.useRef(!1), [F, B] = i.useState(!1), [Y, z] = i.useState(!1), [Q, W] = i.useState(!0), [q, K] = i.useState(!0), [X, J] = i.useState(H.preEnrollmentExpandedHeight), $ = i.useRef(null), ee = i.useCallback(() => {
+    hasError: G,
+    isLoading: j
+  } = (0, A.d7)(), U = O && !y && !b && !P && !j, V = i.useRef(U), H = (0, m.B)(h, U && !G), w = i.useRef(-1), k = i.useRef(!1), [F, B] = i.useState(!1), [Y, z] = i.useState(!1), [Q, W] = i.useState(!0), [q, K] = i.useState(!0), [X, J] = i.useState(H.preEnrollmentExpandedHeight), $ = i.useRef(null), ee = i.useCallback(() => {
     var e, t;
     J((null !== (t = null === (e = $.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 2 * H.paddingVertical)
   }, [H.paddingVertical]), et = i.useCallback(() => {
@@ -124,7 +124,7 @@ function M(e) {
   });
   return (i.useLayoutEffect(() => {
     x && !D && H.canCollapseOnBlur && ee()
-  }, [x, et, H.canCollapseOnBlur, ee, D]), O && (U || !q || G) && !j) ? (0, s.jsx)(g.A, {
+  }, [x, et, H.canCollapseOnBlur, ee, D]), O && (U || !q || j) && !G) ? (0, s.jsx)(g.A, {
     questOrQuests: h,
     questContent: H.trackingCtx.content,
     overrideVisibility: !L && U,
@@ -179,7 +179,7 @@ function M(e) {
         })
       })
     }
-  }) : (j ? M.log("Not rendered due to asset error") : !O && M.log("Not rendered due to ineligibility"), null)
+  }) : (G ? M.log("Not rendered due to asset error") : !O && M.log("Not rendered due to ineligibility"), null)
 }
 t.Z = 12633 == n.j ? function(e) {
   let {

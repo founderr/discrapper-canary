@@ -23,10 +23,10 @@ function x(e) {
     imageClassName: l,
     iconWrapperClassName: a,
     ...u
-  } = e, x = (0, o.ZP)(), m = (0, i.wj)(x) ? _ : I, N = {
+  } = e, x = (0, o.ZP)(), N = (0, i.wj)(x) ? _ : I, m = {
     height: 18,
     width: 18,
-    color: (0, d.Lq)(m)
+    color: (0, d.Lq)(N)
   };
   return (0, s.jsx)(c.Z, {
     className: t()({
@@ -38,10 +38,10 @@ function x(e) {
     }),
     icon: null != u.image && "" !== u.image ? (0, s.jsx)(r.PencilIcon, {
       size: "custom",
-      ...N
+      ...m
     }) : (0, s.jsx)(r.ImagePlusIcon, {
       size: "custom",
-      ...N
+      ...m
     }),
     iconClassName: t()(E.avatarUploadIcon, E.hideDefaultIcon),
     iconWrapperClassName: a,

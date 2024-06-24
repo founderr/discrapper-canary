@@ -39,20 +39,20 @@ var s = n(735250),
   b = n(830746),
   y = n(731934),
   P = n(521450),
-  j = n(292352),
-  G = n(981631),
+  G = n(292352),
+  j = n(981631),
   U = n(723359),
   V = n(921944),
   H = n(689938),
   w = n(465801);
 let k = {
-    [j.dG.REQUESTS]: () => (0, s.jsx)(y.Z, {}),
-    [j.dG.ACTIVITY]: () => (0, s.jsx)(b.Z, {}),
-    [j.dG.SETTINGS]: () => (0, s.jsx)(P.Z, {})
+    [G.dG.REQUESTS]: () => (0, s.jsx)(y.Z, {}),
+    [G.dG.ACTIVITY]: () => (0, s.jsx)(b.Z, {}),
+    [G.dG.SETTINGS]: () => (0, s.jsx)(P.Z, {})
   },
   F = {
-    [j.dG.REQUESTS]: () => (0, s.jsx)(y.Z, {}),
-    [j.dG.ACTIVITY]: () => (0, s.jsx)(b.Z, {})
+    [G.dG.REQUESTS]: () => (0, s.jsx)(y.Z, {}),
+    [G.dG.ACTIVITY]: () => (0, s.jsx)(b.Z, {})
   };
 
 function B(e) {
@@ -69,11 +69,11 @@ function B(e) {
     onItemSelect: n,
     children: [(0, s.jsx)(u.TabBar.Item, {
       className: w.settingsTabBarItem,
-      id: j.dG.ACTIVITY,
+      id: G.dG.ACTIVITY,
       children: H.Z.Messages.FAMILY_CENTER_ACTIVITY_TAB
     }), (0, s.jsxs)(u.TabBar.Item, {
       className: w.settingsTabBarItem,
-      id: j.dG.REQUESTS,
+      id: G.dG.REQUESTS,
       "aria-label": H.Z.Messages.FAMILY_CENTER_REQUESTS_TAB,
       children: [H.Z.Messages.FAMILY_CENTER_REQUESTS_TAB, i > 0 ? (0, s.jsx)(u.NumberBadge, {
         className: w.badge,
@@ -81,7 +81,7 @@ function B(e) {
       }) : null]
     }), a ? (0, s.jsx)(u.TabBar.Item, {
       className: w.settingsTabBarItem,
-      id: j.dG.SETTINGS,
+      id: G.dG.SETTINGS,
       children: H.Z.Messages.SETTINGS
     }) : null]
   })
@@ -112,11 +112,11 @@ function Y(e) {
       onItemSelect: i,
       className: w.__invalid_tabBar,
       children: [(0, s.jsx)(u.TabBar.Item, {
-        id: j.dG.ACTIVITY,
+        id: G.dG.ACTIVITY,
         className: w.item,
         children: H.Z.Messages.FAMILY_CENTER_ACTIVITY_TAB
       }), (0, s.jsxs)(u.TabBar.Item, {
-        id: j.dG.REQUESTS,
+        id: G.dG.REQUESTS,
         className: w.item,
         "aria-label": H.Z.Messages.FAMILY_CENTER_REQUESTS_TAB,
         children: [H.Z.Messages.FAMILY_CENTER_REQUESTS_TAB, c > 0 ? (0, s.jsx)(u.NumberBadge, {
@@ -148,12 +148,12 @@ function z() {
       forceTrack: !0
     })
   }, []), i.useEffect(() => {
-    a && m && (M.default.track(G.rMx.FAMILY_CENTER_VIEWED, {
+    a && m && (M.default.track(j.rMx.FAMILY_CENTER_VIEWED, {
       is_considered_adult: e,
       num_of_accepted_links: t,
       selected_teen_id: r,
-      initial_page: j.QH[E],
-      source: j._6[j.Mu.SIDENAV]
+      initial_page: G.QH[E],
+      source: G._6[G.Mu.SIDENAV]
     }), g.Z.increment({
       name: c.V.FAMILY_CENTER_VIEW
     }))
@@ -186,17 +186,17 @@ function Q() {
     handleTabChange: y
   } = (0, v.Z)(), P = (0, R.Dt)(), k = p.default.getCurrentUser(), B = null != t, z = r && null != k && !B;
   if (i.useEffect(() => {
-      E.Y(G.Z5c.FAMILY_CENTER), (0, A.e)("family-center"), !L.Z.isLoading() && L.Z.canRefetch() && S.ZP.initialPageLoad(), !a && (0, C.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
+      E.Y(j.Z5c.FAMILY_CENTER), (0, A.e)("family-center"), !L.Z.isLoading() && L.Z.canRefetch() && S.ZP.initialPageLoad(), !a && (0, C.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
         dismissAction: V.L.AUTO,
         forceTrack: !0
       })
     }, []), i.useEffect(() => {
-      r && B && (M.default.track(G.rMx.FAMILY_CENTER_VIEWED, {
+      r && B && (M.default.track(j.rMx.FAMILY_CENTER_VIEWED, {
         is_considered_adult: t,
         num_of_accepted_links: n,
         selected_teen_id: N,
-        initial_page: j.QH[b],
-        source: j._6[j.Mu.SIDENAV]
+        initial_page: G.QH[b],
+        source: G._6[G.Mu.SIDENAV]
       }), g.Z.increment({
         name: c.V.FAMILY_CENTER_VIEW
       }))
@@ -204,7 +204,7 @@ function Q() {
       let e = f.Ex.getSetting();
       r && t && void 0 === e && f.Ex.updateSetting(!0)
     }, [r, t]), z) return (0, _.mN)(U.L0.FAMILY_CENTER), null;
-  let Q = b !== j.dG.SETTINGS ? b : j.dG.ACTIVITY,
+  let Q = b !== G.dG.SETTINGS ? b : G.dG.ACTIVITY,
     W = F[Q];
   return (0, s.jsx)(T.Gt, {
     value: e,

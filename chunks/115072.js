@@ -14,8 +14,8 @@ var a = n(735250),
   m = n(273031),
   d = n(898463),
   h = n(210887),
-  p = n(154921),
-  v = n(404975),
+  v = n(154921),
+  p = n(404975),
   x = n(768581),
   R = n(358085),
   _ = n(223356),
@@ -46,10 +46,10 @@ function O(e) {
     return ""
   }((0, R.getOS)())), [$, ee] = s.useState(""), [et, en] = s.useState(""), [ea, es] = s.useState(""), [el, ei] = s.useState(""), [er, eo] = s.useState(!1), [eu, ec] = s.useState(!1), [em, ed] = s.useState(!1), eh = () => {
     null == M || M()
-  }, ep = e => {
+  }, ev = e => {
     k(F.filter(t => t.id !== e))
   };
-  async function ev() {
+  async function ep() {
     var e;
     if (ed(!1), "" === b || null == y) {
       eo(!0);
@@ -119,10 +119,10 @@ function O(e) {
           forceLevel: 1,
           component: (0, a.jsx)("div", {
             className: f.sidebarContainer,
-            children: (0, a.jsx)(p.Z, {
+            children: (0, a.jsx)(v.Z, {
               strong: !0,
-              color: p.Z.Colors.HEADER_PRIMARY,
-              size: p.Z.Sizes.SIZE_24,
+              color: v.Z.Colors.HEADER_PRIMARY,
+              size: v.Z.Sizes.SIZE_24,
               children: (0, a.jsx)(o.H, {
                 children: T.Z.Messages.BUG_REPORT_TITLE
               })
@@ -136,7 +136,7 @@ function O(e) {
               src: eR
             }), (0, a.jsxs)("form", {
               className: f.form,
-              onSubmit: ev,
+              onSubmit: ep,
               children: [(0, a.jsx)(o.FormItem, {
                 error: er && "" === b ? T.Z.Messages.REQUIRED : null,
                 title: T.Z.Messages.BUG_REPORT_NAME,
@@ -323,10 +323,10 @@ function O(e) {
                         upload: e
                       }), (0, a.jsx)("div", {
                         className: f.toolBar,
-                        children: (0, a.jsx)(v.ZP, {
+                        children: (0, a.jsx)(p.ZP, {
                           children: (0, a.jsx)(m.Z, {
                             tooltip: T.Z.Messages.ATTACHMENT_UTILITIES_REMOVE,
-                            onClick: () => ep(e.id),
+                            onClick: () => ev(e.id),
                             dangerous: !0,
                             children: (0, a.jsx)(o.TrashIcon, {
                               size: "md",
@@ -356,7 +356,7 @@ function O(e) {
               }), (0, a.jsx)(o.Button, {
                 submitting: eu,
                 className: f.formButton,
-                onClick: ev,
+                onClick: ep,
                 children: "Submit and Open Report"
               })]
             })]

@@ -14,8 +14,8 @@ var s, a, t = l(735250),
   _ = l(433775),
   I = l(984933),
   x = l(430824),
-  m = l(47309),
-  N = l(153124),
+  N = l(47309),
+  m = l(153124),
   T = l(971130),
   h = l(981888),
   g = l(924301),
@@ -115,7 +115,7 @@ function P(e) {
     onSave: v,
     onClose: S,
     createdEvent: C
-  } = e, L = (0, N.Dt)(), A = i.useRef(l), Z = !(0, r.isEqual)(A.current, l), R = i.useMemo(() => [{
+  } = e, L = (0, m.Dt)(), A = i.useRef(l), Z = !(0, r.isEqual)(A.current, l), R = i.useMemo(() => [{
     slideId: 0,
     label: O.Z.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_1,
     valid: null == _.entity,
@@ -156,7 +156,7 @@ function P(e) {
       }) : null, (0, t.jsxs)(d.ModalContent, {
         className: U.content,
         scrollerRef: X,
-        children: [!w && (0, t.jsx)(m.Z, {
+        children: [!w && (0, t.jsx)(N.Z, {
           steps: R.map(e => e.label),
           stepIndex: b,
           onClick: e => {
@@ -238,10 +238,10 @@ function k(e) {
     guildScheduledEventId: s,
     transitionState: a,
     onClose: r
-  } = e, u = (0, o.e7)([x.Z], () => x.Z.getGuild(n)), E = (0, o.e7)([g.ZP], () => g.ZP.getGuildScheduledEvent(s), [s]), m = (0, o.e7)([I.ZP], () => I.ZP.getDefaultChannel(n), [n]), N = (0, L.j$)(E, m), [T, f] = i.useState(N), [j] = i.useState((0, L.Ql)(E)), [M, D] = i.useState(null), p = e => {
+  } = e, u = (0, o.e7)([x.Z], () => x.Z.getGuild(n)), E = (0, o.e7)([g.ZP], () => g.ZP.getGuildScheduledEvent(s), [s]), N = (0, o.e7)([I.ZP], () => I.ZP.getDefaultChannel(n), [n]), m = (0, L.j$)(E, N), [T, f] = i.useState(m), [j] = i.useState((0, L.Ql)(E)), [M, D] = i.useState(null), p = e => {
     var n;
     let l = (0, S.so)(e),
-      s = null !== (n = e.channel_id) && void 0 !== n ? n : null == m ? void 0 : m.id;
+      s = null !== (n = e.channel_id) && void 0 !== n ? n : null == N ? void 0 : N.id;
     null != s && c.Z.createInvite(s, {
       max_age: y.value,
       max_uses: b.value

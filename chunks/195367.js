@@ -16,8 +16,8 @@ var s = l(735250),
   _ = l(236373),
   I = l(854698),
   x = l(405613),
-  m = l(440371),
-  N = l(765305),
+  N = l(440371),
+  m = l(765305),
   T = l(486324),
   h = l(689938),
   g = l(685031);
@@ -139,7 +139,7 @@ function S(e) {
             })
           },
           placeholder: h.Z.Messages.GUILD_EVENT_CREATE_TOPIC_PLACEHOLDER,
-          maxLength: N.p,
+          maxLength: m.p,
           value: p,
           autoComplete: "off",
           inputRef: k
@@ -149,7 +149,7 @@ function S(e) {
           className: g.warning,
           children: L.getAnyErrorMessage()
         }) : null]
-      }), (0, s.jsx)(m.Z, {
+      }), (0, s.jsx)(N.Z, {
         className: g.formItem,
         onScheduleChange: e => {
           let {
@@ -169,8 +169,8 @@ function S(e) {
         },
         schedule: b,
         recurrenceRule: O,
-        showEndDate: j === N.WX.EXTERNAL,
-        requireEndDate: j === N.WX.EXTERNAL,
+        showEndDate: j === m.WX.EXTERNAL,
+        requireEndDate: j === m.WX.EXTERNAL,
         disableStartDateTime: y,
         guildId: S
       }), null != A ? (0, s.jsx)(r.Text, {
@@ -190,7 +190,7 @@ function S(e) {
               description: e
             })
           },
-          maxLength: N.wm,
+          maxLength: m.wm,
           autosize: !0
         })
       }), (0, s.jsxs)(r.FormItem, {

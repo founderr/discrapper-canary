@@ -1,40 +1,40 @@
-var s, i, a, l, r = n(735250),
-  c = n(470079),
-  o = n(120356),
-  d = n.n(o),
-  u = n(592804);
-class E extends(l = c.PureComponent) {
+var r, t, i, a, l = s(735250),
+  c = s(470079),
+  o = s(120356),
+  d = s.n(o),
+  u = s(592804);
+class h extends(a = c.PureComponent) {
   render() {
     let {
       tag: e,
-      children: t,
-      hoverText: n,
-      className: s,
-      forceHover: i,
-      ...a
+      children: n,
+      hoverText: s,
+      className: r,
+      forceHover: t,
+      ...i
     } = this.props;
-    return (0, r.jsxs)("div", {
-      ...a,
-      className: d()(s, u.hoverRoll, {
-        [u.disabled]: null == n,
-        [u.forceHover]: i
+    return (0, l.jsxs)("div", {
+      ...i,
+      className: d()(r, u.hoverRoll, {
+        [u.disabled]: null == s,
+        [u.forceHover]: t
       }),
-      children: [(0, r.jsx)(e, {
+      children: [(0, l.jsx)(e, {
         className: u.hovered,
-        children: n
-      }), (0, r.jsx)(e, {
+        children: s
+      }), (0, l.jsx)(e, {
         className: u.default,
-        children: t
+        children: n
       })]
     })
   }
 }
-a = {
+i = {
   tag: "div",
   forceHover: !1
-}, (i = "defaultProps") in(s = E) ? Object.defineProperty(s, i, {
-  value: a,
+}, (t = "defaultProps") in(r = h) ? Object.defineProperty(r, t, {
+  value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[i] = a, t.Z = E
+}) : r[t] = i, n.Z = h
