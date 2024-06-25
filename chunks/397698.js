@@ -15,22 +15,20 @@ var i = n(481060),
 function u(e) {
   let {
     channel: t,
-    openInPopout: u,
-    analyticsLocation: d
+    openInPopout: u
   } = e;
   u && (0, l.Z)(c.KJ3.CHANNEL_CALL_POPOUT);
-  let E = u ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
+  let d = u ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
   return (0, a.y)(), (0, a._)(r._.VOICE), (0, i.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([n.e("99387"), n.e("81056")]).then(n.bind(n, 743161));
     return n => (0, s.jsx)(e, {
       channel: t,
-      analyticsLocation: d,
       ...n
     })
   }, {
     modalKey: o.e9,
-    contextKey: E
+    contextKey: d
   })
 }

@@ -27,12 +27,13 @@ function u(e) {
     enabled: C
   } = l.m1.getCurrentConfig({
     location: h
+  }, {
+    autoTrackExposure: !1
   });
   if (N && C) {
     null != t && (0, a.Z)({
       openInPopout: E,
-      channel: t,
-      analyticsLocation: h
+      channel: t
     });
     return
   }
