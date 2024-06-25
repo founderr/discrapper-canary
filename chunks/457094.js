@@ -384,7 +384,7 @@ let e3 = [{
   isSessionRequired: !0,
   isChatRoute: !0
 }, {
-  path: [eK.Z5c.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), eK.Z5c.CHANNEL(":guildId", ":channelId?", ":messageId?"), eK.Z5c.ACTIVITY, eK.Z5c.ACTIVITIES, eK.Z5c.ACTIVITIES_HAPPENING_NOW, eK.Z5c.ACTIVITY_DETAILS(":applicationId"), eK.Z5c.APPLICATION_LIBRARY, eK.Z5c.APPLICATION_STORE, eK.Z5c.MESSAGE_REQUESTS, eK.Z5c.COLLECTIBLES_SHOP, eK.Z5c.COLLECTIBLES_SHOP_FULLSCREEN, eK.Z5c.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"), eK.Z5c.GUILD_DISCOVERY, eK.Z5c.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?"), eK.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode?"), eK.Z5c.GUILD_BOOSTING_MARKETING(":guildId"), eK.Z5c.FEATURE(":feature"), eK.Z5c.FAMILY_CENTER],
+  path: [eK.Z5c.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), eK.Z5c.CHANNEL(":guildId", ":channelId?", ":messageId?"), eK.Z5c.ACTIVITY, eK.Z5c.ACTIVITIES, eK.Z5c.ACTIVITIES_HAPPENING_NOW, eK.Z5c.ACTIVITY_DETAILS(":applicationId"), eK.Z5c.APPLICATION_LIBRARY, eK.Z5c.APPLICATION_STORE, eK.Z5c.MESSAGE_REQUESTS, eK.Z5c.COLLECTIBLES_SHOP, eK.Z5c.COLLECTIBLES_SHOP_FULLSCREEN, eK.Z5c.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"), eK.Z5c.GUILD_DISCOVERY, eK.Z5c.GLOBAL_DISCOVERY, eK.Z5c.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?"), eK.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode?"), eK.Z5c.GUILD_BOOSTING_MARKETING(":guildId"), eK.Z5c.FEATURE(":feature"), eK.Z5c.FAMILY_CENTER],
   render: e0,
   isSessionRequired: !0,
   isChatRoute: !0

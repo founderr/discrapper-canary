@@ -658,5 +658,10 @@ e.exports = Object.freeze({
   E2EE_CLEAR_USER_VERIFICATION_CONFIRM_TITLE: "Clear verification for {username}'s devices",
   E2EE_CLEAR_USER_VERIFICATION_CONFIRM_SUBTITLE: "To see a verified label, you will need to verify these devices again.",
   E2EE_DISABLE_PERSISTENT_KEYS_CONFIRM_TITLE: "Disable persistent keys?",
-  E2EE_DISABLE_PERSISTENT_KEYS_CONFIRM_SUBTITLE: "This will clear verification for all devices that you have verified."
+  E2EE_DISABLE_PERSISTENT_KEYS_CONFIRM_SUBTITLE: "This will clear verification for all devices that you have verified.",
+  GLOBAL_DISCOVERY_TITLE: "Discover",
+  GLOBAL_DISCOVERY_SERVERS_TITLE: "Servers",
+  GLOBAL_DISCOVERY_APPS_TITLE: "Apps",
+  GLOBAL_DISCOVERY_QUESTS_TITLE: "Quests",
+  GLOBAL_DISCOVERY_SHOP_TITLE: "Shop"
 })
