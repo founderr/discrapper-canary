@@ -1,59 +1,70 @@
 t.d(n, {
   Z: function() {
-    return E
+    return S
   }
 });
 var l = t(735250);
 t(470079);
 var s = t(120356),
   a = t.n(s),
-  i = t(481060),
-  r = t(197115),
-  o = t(672752),
-  u = t(981631),
-  c = t(474936),
-  d = t(689938),
-  m = t(323021);
+  i = t(848246),
+  r = t(481060),
+  o = t(386542),
+  u = t(197115),
+  c = t(672752),
+  d = t(981631),
+  m = t(474936),
+  E = t(689938),
+  _ = t(323021);
 
-function E(e) {
+function S(e) {
   let {
     message: n,
     onClose: t,
     openStreamUpsellModal: s,
-    glow: E = !1
-  } = e, _ = {
-    section: u.jXE.STREAM_SETTINGS,
-    object: u.qAy.PREMIUM_UPSELL_BANNER,
-    objectType: u.Qqv.BUY
-  };
+    glow: S = !1
+  } = e, h = {
+    section: d.jXE.STREAM_SETTINGS,
+    object: d.qAy.PREMIUM_UPSELL_BANNER,
+    objectType: d.Qqv.BUY
+  }, {
+    activated: g
+  } = (0, o.k)(i.q.STREAM_HIGH_QUALITY);
   return (0, l.jsxs)("div", {
-    className: a()(m.upsellBanner, m.enhancedBanner, {
-      [m.gradientGlow]: E
+    className: a()(_.upsellBanner, _.enhancedBanner, {
+      [_.gradientGlow]: S
     }),
     children: [(0, l.jsxs)("div", {
-      className: m.iconTextContainer,
-      children: [(0, l.jsx)(i.NitroWheelIcon, {
+      className: _.iconTextContainer,
+      children: [(0, l.jsx)(r.NitroWheelIcon, {
         size: "md",
-        color: o.JX.PREMIUM_TIER_2
-      }), (0, l.jsx)(i.Text, {
+        color: c.JX.PREMIUM_TIER_2
+      }), (0, l.jsx)(r.Text, {
         variant: "text-sm/medium",
-        className: a()(m.upsellText, m.enhancedUpsellText),
-        children: null != n ? n : d.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_LEARN_MORE_V3.format({
+        className: a()(_.upsellText, _.enhancedUpsellText),
+        children: null != n ? n : g ? (0, l.jsxs)(l.Fragment, {
+          children: [E.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_UPSELL_BODY, " ", E.Z.Messages.LEARN_MORE_CLICK.format({
+            onClick: () => s({
+              analyticsLocation: h,
+              onClose: t
+            })
+          })]
+        }) : E.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_LEARN_MORE_V3.format({
           onClick: () => s({
-            analyticsLocation: _,
+            analyticsLocation: h,
             onClose: t
           })
         })
       })]
     }), (0, l.jsx)("div", {
-      className: m.enhancedCTAs,
-      children: (0, l.jsx)(r.Z, {
-        className: a()(m.enhancedCTA, m.ctaGradientBackground),
-        iconClassName: m.premiumIcon,
-        subscriptionTier: c.Si.TIER_2,
-        buttonText: d.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA,
-        size: i.Button.Sizes.TINY,
-        premiumModalAnalyticsLocation: _
+      className: _.enhancedCTAs,
+      children: (0, l.jsx)(u.Z, {
+        className: a()(_.enhancedCTA, _.ctaGradientBackground),
+        iconClassName: _.premiumIcon,
+        subscriptionTier: m.Si.TIER_2,
+        buttonText: E.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA,
+        size: r.Button.Sizes.TINY,
+        premiumModalAnalyticsLocation: h
       })
     })]
   })
