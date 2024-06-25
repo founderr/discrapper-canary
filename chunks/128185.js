@@ -59,7 +59,7 @@ function h(e) {
             visibility: null != a.badge ? "visible" : "hidden"
           },
           children: null != a.badge && (0, n.jsx)(i.Text, {
-            variant: "text-xs/bold",
+            variant: "text-xs/semibold",
             className: m.badge,
             children: a.badge.label()
           })
@@ -70,7 +70,7 @@ function h(e) {
             alt: "",
             className: m.logo
           }), (null != a.description || null != c) && (0, n.jsx)(i.Text, {
-            variant: "text-md/medium",
+            variant: "text-md/normal",
             color: "currentColor",
             children: null !== (s = a.description) && void 0 !== s ? s : c
           })]
@@ -93,49 +93,49 @@ function x(e) {
   let {
     categories: t,
     handleScrollToCategory: s
-  } = e, {
-    analyticsLocations: i
-  } = (0, a.cj)([f.Z], () => f.Z.getAnalytics()), {
+  } = e, i = r.useMemo(() => (0, E.yc)(), []), {
     analyticsLocations: u
-  } = (0, c.ZP)([...i, o.Z.COLLECTIBLES_SHOP_HEADER_CAROUSEL]), d = r.useCallback((e, t) => {
+  } = (0, a.cj)([f.Z], () => f.Z.getAnalytics()), {
+    analyticsLocations: d
+  } = (0, c.ZP)([...u, o.Z.COLLECTIBLES_SHOP_HEADER_CAROUSEL]), x = r.useCallback((e, t) => {
     let n = e.cta;
     C.default.track(g.rMx.SHOP_HEADER_CAROUSEL_CTA_CLICKED, {
-      location_stack: u,
+      location_stack: d,
       slide_id: e.id,
       slide_index: t,
       sku_id: null == n ? void 0 : n.categorySkuId
     }), (null == n ? void 0 : n.categorySkuId) != null && s(n.categorySkuId)
-  }, [u, s]), x = (0, a.e7)([l.Z], () => l.Z.useReducedMotion), I = r.useMemo(() => {
+  }, [d, s]), I = (0, a.e7)([l.Z], () => l.Z.useReducedMotion), _ = r.useMemo(() => {
     let e = {};
     for (let s of t) e[s.skuId] = s.summary;
     return e
-  }, [t]), _ = r.useCallback((e, t) => {
+  }, [t]), T = r.useCallback((e, t) => {
     var s;
     let r = null === (s = e.cta) || void 0 === s ? void 0 : s.categorySkuId,
-      a = null != r ? I[r] : void 0;
+      a = null != r ? _[r] : void 0;
     return (0, n.jsx)(h, {
       config: e,
       text: a,
-      handleCTAClick: d,
-      reducedMotion: x,
+      handleCTAClick: x,
+      reducedMotion: I,
       index: t
     })
-  }, [I, d, x]), L = r.useCallback(e => {
+  }, [_, x, I]), S = r.useCallback(e => {
     var t;
-    return null === (t = E.T8[e]) || void 0 === t ? void 0 : t.id
-  }, []);
+    return null === (t = i[e]) || void 0 === t ? void 0 : t.id
+  }, [i]);
   return (0, n.jsx)("div", {
     className: m.carouselContainer,
     children: (0, n.jsx)(p.U, {
       carouselId: "collectibles_shop_header_carousel",
       className: m.carousel,
-      items: E.T8,
-      renderItem: _,
-      getItemId: L,
+      items: i,
+      renderItem: T,
+      getItemId: S,
       controlsClassName: m.paginationControls,
       paginationButtonClassName: m.paginationButton,
       delay: 6e3,
-      analyticsLocations: u,
+      analyticsLocations: d,
       unidirectional: !0
     })
   })

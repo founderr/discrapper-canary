@@ -1,10 +1,10 @@
 "use strict";
 s.d(t, {
   E8: function() {
-    return v
+    return j
   },
-  T8: function() {
-    return b
+  yc: function() {
+    return R
   }
 });
 var n = s(180650),
@@ -25,12 +25,31 @@ var n = s(180650),
   h = s(570593),
   x = s(199546),
   I = s(613540),
-  _ = s(769411);
-let L = () => i.Z.Messages.MOST_POPULAR,
-  T = () => i.Z.Messages.APPLICATION_STORE_NEW_RELEASE,
-  S = () => i.Z.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
-  N = () => i.Z.Messages.TAKE_ME_THERE,
-  b = [{
+  _ = s(769411),
+  T = s(125257),
+  S = s(6412),
+  L = s(238286);
+let N = () => i.Z.Messages.LIMITED_TIME,
+  b = () => i.Z.Messages.MOST_POPULAR,
+  v = () => i.Z.Messages.APPLICATION_STORE_NEW_RELEASE,
+  O = () => i.Z.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
+  Z = () => i.Z.Messages.TAKE_ME_THERE,
+  A = [{
+    id: "category_tide",
+    backgroundStaticSrc: L,
+    overflowSrcStatic: S,
+    logoSrc: T,
+    textColor: (0, r.Lq)(a.Ilk.WHITE_100),
+    badge: {
+      label: N
+    },
+    cta: {
+      label: Z,
+      categorySkuId: n.T.TIDE
+    },
+    start: new Date("2024-06-25T00:31:00Z"),
+    end: new Date("2024-07-27T03:59:00Z")
+  }, {
     id: "category_anime",
     backgroundStaticSrc: C,
     backgroundVideoSrc: l,
@@ -40,10 +59,10 @@ let L = () => i.Z.Messages.MOST_POPULAR,
     logoSrc: o,
     textColor: (0, r.Lq)(a.Ilk.BLACK_500),
     badge: {
-      label: L
+      label: b
     },
     cta: {
-      label: N,
+      label: Z,
       categorySkuId: n.T.ANIME_V2
     }
   }, {
@@ -53,11 +72,10 @@ let L = () => i.Z.Messages.MOST_POPULAR,
     logoSrc: I,
     textColor: (0, r.Lq)(a.Ilk.WHITE_100),
     badge: {
-      label: T,
-      date: new Date
+      label: v
     },
     cta: {
-      label: N,
+      label: Z,
       categorySkuId: n.T.GALAXY
     }
   }, {
@@ -67,10 +85,10 @@ let L = () => i.Z.Messages.MOST_POPULAR,
     logoSrc: g,
     textColor: (0, r.Lq)(a.Ilk.WHITE_100),
     badge: {
-      label: S
+      label: O
     },
     cta: {
-      label: N,
+      label: Z,
       categorySkuId: n.T.DISXCORE
     }
   }, {
@@ -80,14 +98,22 @@ let L = () => i.Z.Messages.MOST_POPULAR,
     logoSrc: p,
     textColor: (0, r.Lq)(a.Ilk.WHITE_100),
     badge: {
-      label: L
+      label: b
     },
     cta: {
-      label: N,
+      label: Z,
       categorySkuId: n.T.CYBERPUNK
     }
   }],
-  v = (e, t) => {
+  R = () => {
+    let e = new Date;
+    return A.filter(t => {
+      let s = null == t.start || e >= t.start,
+        n = null != t.end && e > t.end;
+      return s && !n
+    })
+  },
+  j = (e, t) => {
     let {
       overflowSrcStatic: s,
       overflowSrcAnimated: n,

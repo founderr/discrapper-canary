@@ -48167,8 +48167,8 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
 
 .message_b6cd66 {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -121650,6 +121650,12 @@ div:has(>div>.container_d99f08) {
 .overflowImageLeft_be5025 {
     left: 0;
     right: auto
+}
+
+.tideOverflowImage_be5025 {
+    top: auto;
+    bottom: 0;
+    height: 183px
 }
 
 .condensedCategoryLogo_be5025 {
