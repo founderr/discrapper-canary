@@ -15,8 +15,9 @@ function r(e, n, t) {
   let {
     content: l,
     tts: o,
-    flags: u,
-    nonce: s
+    messageReference: u,
+    flags: s,
+    nonce: c
   } = n;
   i.Z.sendMessage(e.id, {
     content: l,
@@ -24,8 +25,9 @@ function r(e, n, t) {
     invalidEmojis: [],
     validNonShortcutEmojis: []
   }, void 0, {
-    nonce: s,
-    flags: u,
+    nonce: c,
+    flags: s,
+    messageReference: null != u ? u : void 0,
     ...r
   })
 }
