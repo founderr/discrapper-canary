@@ -68,7 +68,7 @@ class E extends i.Z {
               secondsSinceLastUpdate: u,
               optimisticProgressValue: _,
               optimisticUpdatesMap: this.optimisticUpdatesMap
-            }), _ >= o) {
+            }), _ >= .995 * o) {
             this.optimisticUpdatesMap.delete(t);
             return
           }
