@@ -10,38 +10,33 @@ var i = t(442837),
   o = t(73346);
 
 function a(e) {
-  let n;
-  let t = (0, i.e7)([r.Z], () => r.Z.get(e), [e]),
-    a = (0, i.e7)([s.Z], () => s.Z.getForSKU(e), [e]),
-    c = (0, i.e7)([l.Z], () => l.Z.getForSKU(e), [e]);
-  if (null != t && null != a && null != c) {
-    if (null != a.thumbnail) {
-      var d, u;
-      n = {
-        id: a.thumbnail.id,
-        filename: a.thumbnail.filename,
-        size: a.thumbnail.size,
-        url: (0, o._W)(t.applicationId, a.thumbnail, 256),
-        mime_type: a.thumbnail.mimeType,
-        width: null !== (d = a.thumbnail.width) && void 0 !== d ? d : void 0,
-        height: null !== (u = a.thumbnail.height) && void 0 !== u ? u : void 0
-      }
-    }
-    return {
-      id: t.id,
-      name: t.name,
-      description: t.summary,
-      image_asset: n,
-      application_id: t.applicationId,
-      subscription_plans: c.map(e => e.toServerData()),
-      published: !!a.published,
-      soft_deleted: !!t.deleted,
-      store_listing_benefits: a.benefits,
-      sku_benefits: {
-        id: t.id,
-        benefits: []
-      },
-      sku_flags: t.flags
-    }
+  var n, t, a;
+  let c;
+  let d = (0, i.e7)([r.Z], () => r.Z.get(e), [e]),
+    u = (0, i.e7)([s.Z], () => s.Z.getForSKU(e), [e]),
+    m = (0, i.e7)([l.Z], () => l.Z.getForSKU(e), [e]);
+  if (null != d && null != u && null != m) return null != u.thumbnail && (c = {
+    id: u.thumbnail.id,
+    filename: u.thumbnail.filename,
+    size: u.thumbnail.size,
+    url: (0, o._W)(d.applicationId, u.thumbnail, 256),
+    mime_type: u.thumbnail.mimeType,
+    width: null !== (n = u.thumbnail.width) && void 0 !== n ? n : void 0,
+    height: null !== (t = u.thumbnail.height) && void 0 !== t ? t : void 0
+  }), {
+    id: d.id,
+    name: d.name,
+    description: null !== (a = u.description) && void 0 !== a ? a : "",
+    image_asset: c,
+    application_id: d.applicationId,
+    subscription_plans: m.map(e => e.toServerData()),
+    published: !!u.published,
+    soft_deleted: !!d.deleted,
+    store_listing_benefits: u.benefits,
+    sku_benefits: {
+      id: d.id,
+      benefits: []
+    },
+    sku_flags: d.flags
   }
 }

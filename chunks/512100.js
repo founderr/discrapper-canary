@@ -20,7 +20,7 @@ function a(e) {
     FallbackIcon: u
   } = e, m = null != a ? {
     "--custom-background-url": "url(".concat(a.toString(), ")")
-  } : void 0;
+  } : void 0, S = null != t && "" !== t, _ = S || null != n;
   return (0, i.jsxs)("div", {
     className: o.container,
     children: [(0, i.jsxs)("div", {
@@ -54,14 +54,14 @@ function a(e) {
           tag: "div",
           variant: "heading-xl/semibold",
           children: c
-        }), (null != t && "" !== t || null != n) && (0, i.jsxs)("div", {
+        }), _ && (0, i.jsxs)("div", {
           className: o.details,
           children: [(0, i.jsx)(l.x, {
             color: "header-primary",
             tag: "div",
             variant: "heading-lg/semibold",
             children: s.Z.Messages.Storefront.PRODUCT_DETAILS
-          }), (0, i.jsx)(l.x, {
+          }), S && (0, i.jsx)(l.x, {
             color: "text-muted",
             variant: "text-md/normal",
             className: o.description,

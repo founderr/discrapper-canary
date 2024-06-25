@@ -14925,7 +14925,8 @@ h6.title_f54cce {
 .benefits_e8df26 {
     display: flex;
     flex-direction: column;
-    gap: 16px
+    gap: 16px;
+    padding-top: 16px
 }
 
 .description_e8df26 {
