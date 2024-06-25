@@ -53,10 +53,8 @@ class d extends a.Z {
       let e = this.getQualityConfig();
       if (null === e) return;
       let [i, r, s, o] = e;
-      t[i] = r, t[s] = 0, n.push(i), this.hasEverReceivedFrame() && this.supportsSeamless && (-1 === this.pendingSSRC ? (this.pendingSSRC = i, n.push(s), t[s] = o) : this.pendingSSRC === i ? this.pendingSSRCReceived ? (this.pendingSSRC = -1, this.pendingSSRCReceived = !1) : (n.push(s), t[s] = o) : this.pendingSSRC === s && (this.pendingSSRC = -1))
-    } else t[this.videoStreams[0].ssrc] = 100, n.push(this.videoStreams[0].ssrc);
-    if (!l.Z.isIncomingVideoEnabled())
-      for (let e in t) "any" !== e && (t[e] = 0);
+      t[i] = r, t[s] = 0, n.push(i), this.hasEverReceivedFrame() && this.supportsSeamless && l.Z.isIncomingVideoEnabled() && (-1 === this.pendingSSRC ? (this.pendingSSRC = i, n.push(s), t[s] = o) : this.pendingSSRC === i ? this.pendingSSRCReceived ? (this.pendingSSRC = -1, this.pendingSSRCReceived = !1) : (n.push(s), t[s] = o) : this.pendingSSRC === s && (this.pendingSSRC = -1))
+    } else t[this.videoStreams[0].ssrc] = l.Z.isIncomingVideoEnabled() ? 100 : 0, n.push(this.videoStreams[0].ssrc);
     this.emit("requested-ssrcs-update", this.userId, this.audioSSRC, n), this.emit("requested-streams-update", t)
   }
   setStreamDowngradedInternal(e) {
@@ -66,9 +64,10 @@ class d extends a.Z {
     let e = o().minBy(this.videoStreams, e => e.quality),
       t = o().maxBy(this.videoStreams, e => e.quality);
     if (void 0 === e || void 0 === t) return null;
+    if (!l.Z.isIncomingVideoEnabled()) return [e.ssrc, 0, t.ssrc, 0];
     if (this.debugQualityOverride === _.Z.LOW) return [e.ssrc, 60, t.ssrc, 100];
     if (this.debugQualityOverride === _.Z.HIGH) return [t.ssrc, 100, e.ssrc, 60];
-    if (this.downgraded) return [e.ssrc, 60, t.ssrc, 100];
+    else if (this.downgraded) return [e.ssrc, 60, t.ssrc, 100];
     else return [t.ssrc, 100, e.ssrc, 60]
   }
   constructor(e) {
