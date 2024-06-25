@@ -1,7 +1,6 @@
 e.exports = {
   rootContainer: "rootContainer_b3552d",
-  spinnerContainer: "spinnerContainer_b3552d",
-  spinner: "spinner_b3552d",
+  rootContainerLoading: "rootContainerLoading_b3552d",
   claimedRootContainer: "claimedRootContainer_b3552d",
   headerContainer: "headerContainer_b3552d",
   headerBackground: "headerBackground_b3552d",

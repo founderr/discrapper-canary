@@ -8735,11 +8735,7 @@ html .progress_e5f4c6 {
 
 .refreshIcon_d7df05 {
     margin-left: 8px;
-    color: var(--interactive-normal)
-}
-
-.refreshIconErrorState_d7df05 {
-    color: white
+    color: var(--white-500)
 }
 
 .partnerBranding_fc6f68 {
@@ -72971,12 +72967,28 @@ html .invoiceCancelRow_b1a31b {
     margin-left: auto
 }
 
-.microphoneUnitRefreshIcon_f21e08 {
+.theme-light .microphoneUnitRefreshIcon_f21e08 {
+    color: hsl(var(--black-500-hsl)/.5)
+}
+
+.theme-light .microphoneUnitRefreshIcon_f21e08:hover {
+    color: var(--interactive-hover)
+}
+
+.theme-light .microphoneUnitRefreshIcon_f21e08:active {
+    color: var(--interactive-active)
+}
+
+.theme-dark .microphoneUnitRefreshIcon_f21e08 {
     color: var(--interactive-normal)
 }
 
-.microphoneUnitRefreshIcon_f21e08:hover {
+.theme-dark .microphoneUnitRefreshIcon_f21e08:hover {
     color: var(--interactive-hover)
+}
+
+.theme-dark .microphoneUnitRefreshIcon_f21e08:active {
+    color: var(--interactive-active)
 }
 
 .microphoneUnitBodyText_f21e08 {
