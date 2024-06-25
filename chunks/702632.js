@@ -158,5 +158,13 @@ r.Z = (0, a.a)({
       color: "primary.600",
       opacity: .85
     }
+  },
+  "premium-nitro-pink-text": {
+    dark: {
+      color: "premium-nitro-pink-light"
+    },
+    light: {
+      color: "premium-nitro-pink-dark"
+    }
   }
 })

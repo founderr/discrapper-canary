@@ -146,41 +146,42 @@ function Z(e) {
   let {
     config: a,
     category: o,
-    index: c
-  } = e, u = c % 2 == 1, d = null !== (r = u ? a.left() : a.right()) && void 0 !== r ? r : (0, g.uV)(o.banner, {
+    index: c,
+    hideLimitedTimeBadge: u = !1
+  } = e, d = c % 2 == 1, C = null !== (r = d ? a.left() : a.right()) && void 0 !== r ? r : (0, g.uV)(o.banner, {
     size: I.yV,
     format: "jpg"
-  }), C = u ? null === (t = a.leftOverflow) || void 0 === t ? void 0 : t.call(a) : null === (s = a.rightOverflow) || void 0 === s ? void 0 : s.call(a), f = u ? a.rightLogo() : a.leftLogo(), {
-    backgroundColors: p
-  } = (0, E.Z)(o.styles), m = {
-    objectPosition: u ? "left" : "right",
-    background: null != p ? "".concat((0, I.nH)(p), " border-box border-box") : void 0,
-    outlineColor: null != p ? p.border.toHslString() : void 0
+  }), f = d ? null === (t = a.leftOverflow) || void 0 === t ? void 0 : t.call(a) : null === (s = a.rightOverflow) || void 0 === s ? void 0 : s.call(a), p = d ? a.rightLogo() : a.leftLogo(), {
+    backgroundColors: m
+  } = (0, E.Z)(o.styles), x = {
+    objectPosition: d ? "left" : "right",
+    background: null != m ? "".concat((0, I.nH)(m), " border-box border-box") : void 0,
+    outlineColor: null != m ? m.border.toHslString() : void 0
   };
   return (0, n.jsxs)("div", {
     className: i()(S.condensedBannerContainer),
     children: [(0, n.jsx)("img", {
-      src: d,
-      style: m,
+      src: C,
+      style: x,
       className: S.condensedBannerImage,
       alt: ""
-    }), null != C && (0, n.jsx)("img", {
-      src: C,
+    }), null != f && (0, n.jsx)("img", {
+      src: f,
       className: i()(S.overflowImage, {
-        [S.overflowImageLeft]: u,
+        [S.overflowImageLeft]: d,
         [S.tideOverflowImage]: o.skuId === l.T.TIDE
       }),
       alt: ""
     }), (0, n.jsx)("img", {
       className: i()(S.condensedCategoryLogo, {
-        [S.condensedCategoryLogoLeft]: !u
+        [S.condensedCategoryLogoLeft]: !d
       }),
-      src: f,
+      src: p,
       alt: o.name
-    }), (0, n.jsx)(h.Z, {
+    }), !u && (0, n.jsx)(h.Z, {
       category: o,
       className: i()(S.limitedTimeBadge, {
-        [S.limitedTimeBadgeLeft]: u
+        [S.limitedTimeBadgeLeft]: d
       }),
       display: "banner"
     })]
@@ -206,7 +207,8 @@ function A(e) {
     if (null != e) return (0, n.jsx)(Z, {
       config: e,
       category: r,
-      index: u
+      index: u,
+      hideLimitedTimeBadge: o
     })
   }
   return r.skuId === l.T.TIDE ? (0, n.jsx)(x.G, {
