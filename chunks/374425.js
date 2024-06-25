@@ -12,13 +12,13 @@ var s = n(735250),
   _ = n(373228),
   I = n(419922),
   T = n(217588),
-  N = n(981631),
-  m = n(474936),
+  m = n(981631),
+  N = n(474936),
   h = n(120001);
 let C = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
   S = e => {
-    if (null != e) o.ZP.trackWithMetadata(N.rMx.EXPRESSION_TOOLTIP_VIEWED, {
-      type: m.cd.STICKER_IN_MESSAGE_HOVER,
+    if (null != e) o.ZP.trackWithMetadata(m.rMx.EXPRESSION_TOOLTIP_VIEWED, {
+      type: N.cd.STICKER_IN_MESSAGE_HOVER,
       expression_id: e.id,
       expression_name: e.name,
       is_animated: (0, _.aQ)(e.format_type),
@@ -30,15 +30,15 @@ t.Z = e => {
     renderableSticker: t,
     channel: n,
     isInteracting: l
-  } = e, [o, d] = i.useState(!0), [_, N] = i.useState(String(Date.now())), [m] = (0, E.XW)(t, l), {
+  } = e, [o, d] = i.useState(!0), [_, m] = i.useState(String(Date.now())), [N] = (0, E.XW)(t, l), {
     analyticsLocations: A
-  } = (0, c.ZP)(r.Z.STICKER_MESSAGE), p = (0, s.jsxs)("span", {
+  } = (0, c.ZP)(r.Z.STICKER_MESSAGE), g = (0, s.jsxs)("span", {
     className: h.stickerName,
     children: [(0, s.jsx)(a.StickerSmallIcon, {
       size: "xs",
       color: "currentColor",
       className: h.stickerIcon
-    }), (null != m ? m : t).name]
+    }), (null != N ? N : t).name]
   });
   return (0, s.jsx)(c.Gt, {
     value: A,
@@ -53,7 +53,7 @@ t.Z = e => {
         ...e,
         renderableSticker: t,
         channel: n,
-        refreshPositionKey: () => N(String(Date.now()))
+        refreshPositionKey: () => m(String(Date.now()))
       }),
       children: e => {
         let {
@@ -62,10 +62,10 @@ t.Z = e => {
         return (0, s.jsx)(a.Tooltip, {
           ...u.b_,
           shouldShow: o,
-          text: (0, u.Y)(p),
+          text: (0, u.Y)(g),
           "aria-label": !1,
           onTooltipShow: () => {
-            S(m)
+            S(N)
           },
           children: e => (0, s.jsx)(a.Clickable, {
             ...e,
@@ -77,7 +77,7 @@ t.Z = e => {
             children: (0, s.jsx)(I.ZP, {
               isInteracting: l,
               size: C,
-              sticker: null != m ? m : t
+              sticker: null != N ? N : t
             })
           })
         })

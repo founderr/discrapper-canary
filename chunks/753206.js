@@ -1,45 +1,45 @@
 var i = t(735250),
-  l = t(470079),
-  r = t(120356),
-  u = t.n(r),
-  o = t(628238),
+  r = t(470079),
+  l = t(120356),
+  o = t.n(l),
+  u = t(628238),
   s = t(998951),
   a = t(25015),
   c = t(963550),
-  _ = t(845080),
-  d = t(105461);
-n.Z = l.memo(function(e) {
+  d = t(845080),
+  _ = t(105461);
+n.Z = r.memo(function(e) {
   var n;
   let {
     message: t,
-    channel: l,
-    compact: r,
-    className: E,
-    isGroupStart: f,
-    hideSimpleEmbedContent: A = !0,
-    disableInteraction: I
-  } = e, L = (0, o.A)((null !== (n = t.editedTimestamp) && void 0 !== n ? n : t.timestamp).valueOf()), {
-    content: v
+    channel: r,
+    compact: l,
+    className: f,
+    isGroupStart: E,
+    hideSimpleEmbedContent: I = !0,
+    disableInteraction: g
+  } = e, S = (0, u.A)((null !== (n = t.editedTimestamp) && void 0 !== n ? n : t.timestamp).valueOf()), {
+    content: p
   } = (0, a.Z)(t, {
-    hideSimpleEmbedContent: A,
-    allowList: L,
-    allowHeading: L,
+    hideSimpleEmbedContent: I,
+    allowList: S,
+    allowHeading: S,
     allowLinks: !0,
     previewLinkTarget: !0
   });
   return (0, i.jsx)(s.Z, {
-    compact: r,
-    className: u()(E, {
-      [d.message]: !0,
-      [d.cozyMessage]: !r,
-      [d.groupStart]: f
+    compact: l,
+    className: o()(f, {
+      [_.message]: !0,
+      [_.cozyMessage]: !l,
+      [_.groupStart]: E
     }),
-    childrenHeader: (0, _.Z)({
+    childrenHeader: (0, d.Z)({
       ...e,
-      channel: l,
+      channel: r,
       guildId: void 0
     }),
-    childrenMessageContent: (0, c.Z)(e, v),
-    disableInteraction: I
+    childrenMessageContent: (0, c.Z)(e, p),
+    disableInteraction: g
   })
 })

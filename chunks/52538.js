@@ -1,6 +1,6 @@
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(704215),
+var i = n(704215),
   l = n(765585),
   a = n(16703),
   r = n(300284),
@@ -11,7 +11,7 @@ t.Z = () => {
     t = (0, r.Z)({
       guild: e
     });
-  return (0, i.jsx)(l.Z, {
+  return (0, s.jsx)(l.Z, {
     isPremiumFeature: !0,
     shouldUseHorizontalButtons: !0,
     artClassName: c.coachmarkArt,
@@ -20,7 +20,7 @@ t.Z = () => {
     tryItText: o.Z.Messages.CHECK_IT_OUT,
     header: o.Z.Messages.GUILD_IDENTITY_PFX_COACHMARK_TITLE,
     body: o.Z.Messages.GUILD_IDENTITY_PFX_COACHMARK_BODY,
-    dismissibleContent: s.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK,
+    dismissibleContent: i.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK,
     maxWidth: 320
   })
 }

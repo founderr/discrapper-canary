@@ -1,12 +1,12 @@
 t.d(n, {
   Z: function() {
-    return f
+    return _
   }
 });
-var r = t(735250);
+var i = t(735250);
 t(470079);
-var i = t(120356),
-  l = t.n(i),
+var r = t(120356),
+  l = t.n(r),
   o = t(797717),
   u = t(471885),
   s = t(981631),
@@ -24,19 +24,19 @@ let c = {
     [s.Eu4.TIER_3]: a.iconTierThree
   };
 
-function f(e) {
+function _(e) {
   let {
     premiumTier: n,
     iconBackgroundClassName: t,
-    iconClassName: i,
+    iconClassName: r,
     size: s
   } = e;
-  return (0, r.jsx)(o.Z, {
+  return (0, i.jsx)(o.Z, {
     className: l()(t, c[n]),
     size: s,
-    children: (0, r.jsx)(u.Z, {
+    children: (0, i.jsx)(u.Z, {
       tier: n,
-      className: l()(i, a.boostedGuildIconGem, d[n])
+      className: l()(r, a.boostedGuildIconGem, d[n])
     })
   })
 }

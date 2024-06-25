@@ -1,5 +1,5 @@
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(920906),
   a = n(442837),
   r = n(481060),
@@ -18,10 +18,10 @@ t.Z = function(e) {
   let {
     children: t,
     onClose: n
-  } = e, _ = s.useCallback(() => {
+  } = e, _ = i.useCallback(() => {
     (0, c.fH)(c.v0.DISCOVERY), null == n || n()
   }, [n]);
-  s.useEffect(() => {
+  i.useEffect(() => {
     let e = e => {
       e.key === u.vn.ESCAPE && _()
     };
@@ -39,23 +39,23 @@ t.Z = function(e) {
       delay: 500,
       immediate: I
     });
-  return (0, i.jsxs)("div", {
+  return (0, s.jsxs)("div", {
     className: E.container,
-    children: [(0, i.jsx)("div", {
+    children: [(0, s.jsx)("div", {
       className: E.saveContainer,
-      children: (0, i.jsx)(r.Button, {
+      children: (0, s.jsx)(r.Button, {
         onClick: _,
         look: r.ButtonLooks.OUTLINED,
         color: r.ButtonColors.PRIMARY,
         children: d.Z.Messages.SAVE
       })
-    }), (0, i.jsx)(l.animated.div, {
+    }), (0, s.jsx)(l.animated.div, {
       style: {
         opacity: m.opacity,
         transform: m.opacity.to([0, 1], [40, 0]).to(e => "translateY(".concat(e, "px)"))
       },
       className: E.contentWrapper,
-      children: (0, i.jsx)(r.Scroller, {
+      children: (0, s.jsx)(r.Scroller, {
         fade: !0,
         className: E.content,
         children: t

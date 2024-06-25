@@ -19,11 +19,11 @@ function I(e) {
   let {
     message: t,
     channel: n
-  } = e, I = (0, l.e7)([u.Z], () => u.Z.isBlockedForMessage(t)), T = (0, r.p)(), N = i.useMemo(() => ({
+  } = e, I = (0, l.e7)([u.Z], () => u.Z.isBlockedForMessage(t)), T = (0, r.p)(), m = i.useMemo(() => ({
     [n.guild_id]: [t.author.id]
   }), [n.guild_id, t.author.id]);
-  (0, a.$)(N);
-  let m = i.useMemo(() => null != t.content && "" !== t.content ? (0, o.ZP)(t, {
+  (0, a.$)(m);
+  let N = i.useMemo(() => null != t.content && "" !== t.content ? (0, o.ZP)(t, {
     formatInline: !0,
     shouldFilterKeywords: T
   }).content : null, [t, T]);
@@ -56,7 +56,7 @@ function I(e) {
             children: i
           }), r]
         })
-      }(t, m, I)
+      }(t, N, I)
     })]
   })
 }

@@ -1,6 +1,6 @@
 n(653041);
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(120356),
   a = n.n(l),
   r = n(392711),
@@ -13,18 +13,18 @@ var i = n(735250),
   _ = n(607070),
   I = n(38618),
   m = n(197344),
-  g = n(474873),
-  p = n(706454),
-  N = n(215427),
-  T = n(820254),
-  C = n(838949),
-  S = n(70956),
+  T = n(474873),
+  g = n(706454),
+  p = n(215427),
+  N = n(820254),
+  S = n(838949),
+  C = n(70956),
   A = n(358085),
   f = n(557177),
   Z = n(998502),
-  v = n(981631),
-  L = n(689938),
-  O = n(76410);
+  L = n(981631),
+  O = n(689938),
+  v = n(76410);
 
 function R(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function R(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class x extends s.PureComponent {
+class P extends i.PureComponent {
   createSound() {
     let {
       soundpack: e
@@ -47,18 +47,18 @@ class x extends s.PureComponent {
   componentDidUpdate(e, t) {
     let {
       ready: n,
-      hide: i,
-      problems: s,
+      hide: s,
+      problems: i,
       opacity: l
     } = this.state, {
       connected: a,
       soundpack: r,
       reducedMotion: o
-    } = this.props, u = a && n && !i && !s;
+    } = this.props, u = a && n && !s && !i;
     if (e.soundpack !== r && (this._connectedSound = this.createSound()), e.connected !== a || u) {
       if (a && null != this.videoRef) {
-        let e = Math.max(Math.ceil((this.videoRef.duration - this.videoRef.currentTime) * S.Z.Millis.SECOND), 600);
-        clearTimeout(this._noProblemsTimeout), d.K.get(v.wli) && this._connectedSound.play(), o ? this.setState({
+        let e = Math.max(Math.ceil((this.videoRef.duration - this.videoRef.currentTime) * C.Z.Millis.SECOND), 600);
+        clearTimeout(this._noProblemsTimeout), d.K.get(L.wli) && this._connectedSound.play(), o ? this.setState({
           problems: !1,
           hide: a
         }) : this._noProblemsTimeout = setTimeout(() => {
@@ -71,14 +71,14 @@ class x extends s.PureComponent {
         problems: !1,
         hide: a
       })
-    } else t.hide !== i ? (i ? this.clearProblemsTimeout() : this.setProblemsTimeout(), this.setState({
+    } else t.hide !== s ? (s ? this.clearProblemsTimeout() : this.setProblemsTimeout(), this.setState({
       shouldRender: !0
     }), c.Z.timing(l, {
-      toValue: i ? 0 : 1,
+      toValue: s ? 0 : 1,
       duration: 200
     }).start(() => this.setState({
-      shouldRender: !i
-    }))) : t.problems !== s && s && h.Z.checkIncidents()
+      shouldRender: !s
+    }))) : t.problems !== i && i && h.Z.checkIncidents()
   }
   componentWillUnmount() {
     this.clearProblemsTimeout(), clearTimeout(this._noProblemsTimeout)
@@ -91,57 +91,57 @@ class x extends s.PureComponent {
     if (!this.state.shouldRender) return null;
     {
       let n = this._loadingText,
-        s = null;
-      return null != this._eventLoadingText && (n = this._eventLoadingText), null != t && (n = t.name, s = t.incident_updates[0].body), (0, i.jsxs)(c.Z.div, {
-        className: O.container,
+        i = null;
+      return null != this._eventLoadingText && (n = this._eventLoadingText), null != t && (n = t.name, i = t.incident_updates[0].body), (0, s.jsxs)(c.Z.div, {
+        className: v.container,
         style: {
           opacity: this.state.opacity
         },
-        children: [(0, i.jsxs)("div", {
-          className: O.content,
-          children: [(0, i.jsx)(C.Z, {
+        children: [(0, s.jsxs)("div", {
+          className: v.content,
+          children: [(0, s.jsx)(S.Z, {
             autoPlay: !0,
             loop: !e,
             setRef: this.setVideoRef,
             onReady: this.handleReady,
-            className: this.state.ready ? O.ready : ""
-          }), (0, i.jsxs)("div", {
-            className: O.text,
-            children: [null != t ? null : (0, i.jsx)("div", {
-              className: O.tipTitle,
-              children: L.Z.Messages.LOADING_DID_YOU_KNOW
-            }), (0, i.jsx)("div", {
-              className: null != t ? O.title : O.tip,
+            className: this.state.ready ? v.ready : ""
+          }), (0, s.jsxs)("div", {
+            className: v.text,
+            children: [null != t ? null : (0, s.jsx)("div", {
+              className: v.tipTitle,
+              children: O.Z.Messages.LOADING_DID_YOU_KNOW
+            }), (0, s.jsx)("div", {
+              className: null != t ? v.title : v.tip,
               children: n
-            }), (0, i.jsx)("div", {
-              className: O.body,
-              children: s
+            }), (0, s.jsx)("div", {
+              className: v.body,
+              children: i
             })]
           })]
-        }), (0, i.jsxs)("div", {
-          className: a()(O.problems, {
-            [O.slideIn]: this.state.problems
+        }), (0, s.jsxs)("div", {
+          className: a()(v.problems, {
+            [v.slideIn]: this.state.problems
           }),
-          children: [(0, i.jsx)("div", {
-            className: O.problemsText,
-            children: L.Z.Messages.CONNECTING_PROBLEMS_CTA
-          }), (0, i.jsxs)("div", {
-            children: [(0, i.jsxs)(E.Anchor, {
-              className: O.twitterLink,
-              href: v.yXt.TWITTER_SUPPORT,
+          children: [(0, s.jsx)("div", {
+            className: v.problemsText,
+            children: O.Z.Messages.CONNECTING_PROBLEMS_CTA
+          }), (0, s.jsxs)("div", {
+            children: [(0, s.jsxs)(E.Anchor, {
+              className: v.twitterLink,
+              href: L.yXt.TWITTER_SUPPORT,
               target: "_blank",
-              children: [(0, i.jsx)(E.XNeutralIcon, {
+              children: [(0, s.jsx)(E.XNeutralIcon, {
                 size: "xs",
                 color: "currentColor",
-                className: O.icon
-              }), L.Z.Messages.TWEET_US]
-            }), (0, i.jsxs)(E.Anchor, {
-              className: O.statusLink,
-              href: v.yXt.STATUS,
+                className: v.icon
+              }), O.Z.Messages.TWEET_US]
+            }), (0, s.jsxs)(E.Anchor, {
+              className: v.statusLink,
+              href: L.yXt.STATUS,
               target: "_blank",
-              children: [(0, i.jsx)(T.Z, {
-                className: O.icon
-              }), L.Z.Messages.SERVER_STATUS]
+              children: [(0, s.jsx)(N.Z, {
+                className: v.icon
+              }), O.Z.Messages.SERVER_STATUS]
             })]
           })]
         })]
@@ -150,68 +150,68 @@ class x extends s.PureComponent {
   }
   constructor(e) {
     super(e), R(this, "videoRef", null), R(this, "_noProblemsTimeout", null), R(this, "_problemsTimeout", null), R(this, "_connectedSound", this.createSound()), R(this, "_loadingText", function() {
-      let e = [L.Z.Messages.ACCESSIBILITY_LOADING_TIP_1, L.Z.Messages.ACCESSIBILITY_LOADING_TIP_2, L.Z.Messages.ACCESSIBILITY_LOADING_TIP_3, L.Z.Messages.ACCESSIBILITY_LOADING_TIP_4, L.Z.Messages.ACCESSIBILITY_LOADING_TIP_5, L.Z.Messages.ACCESSIBILITY_LOADING_TIP_6.format({
-        tabHook: (e, t) => (0, i.jsx)(E.KeyCombo, {
+      let e = [O.Z.Messages.ACCESSIBILITY_LOADING_TIP_1, O.Z.Messages.ACCESSIBILITY_LOADING_TIP_2, O.Z.Messages.ACCESSIBILITY_LOADING_TIP_3, O.Z.Messages.ACCESSIBILITY_LOADING_TIP_4, O.Z.Messages.ACCESSIBILITY_LOADING_TIP_5, O.Z.Messages.ACCESSIBILITY_LOADING_TIP_6.format({
+        tabHook: (e, t) => (0, s.jsx)(E.KeyCombo, {
           shortcut: "tab",
-          className: O.keybind
+          className: v.keybind
         }, t)
-      }), L.Z.Messages.ACCESSIBILITY_LOADING_TIP_7, L.Z.Messages.ACCESSIBILITY_LOADING_TIP_8, L.Z.Messages.ACCESSIBILITY_LOADING_TIP_9, L.Z.Messages.ACCESSIBILITY_LOADING_TIP_10.format({
-        F6Hook: (e, t) => (0, i.jsx)(E.KeyCombo, {
+      }), O.Z.Messages.ACCESSIBILITY_LOADING_TIP_7, O.Z.Messages.ACCESSIBILITY_LOADING_TIP_8, O.Z.Messages.ACCESSIBILITY_LOADING_TIP_9, O.Z.Messages.ACCESSIBILITY_LOADING_TIP_10.format({
+        F6Hook: (e, t) => (0, s.jsx)(E.KeyCombo, {
           shortcut: "f6",
-          className: O.keybind
+          className: v.keybind
         }, t),
-        tabHook: (e, t) => (0, i.jsx)(E.KeyCombo, {
+        tabHook: (e, t) => (0, s.jsx)(E.KeyCombo, {
           shortcut: "tab",
-          className: O.keybind
+          className: v.keybind
         }, t)
-      }), L.Z.Messages.LOADING_LINE_1, L.Z.Messages.LOADING_LINE_2, L.Z.Messages.LOADING_LINE_4, L.Z.Messages.LOADING_LINE_5, L.Z.Messages.LOADING_LINE_6, L.Z.Messages.LOADING_LINE_7, L.Z.Messages.LOADING_LINE_8, L.Z.Messages.LOADING_LINE_9, L.Z.Messages.LOADING_LINE_10, L.Z.Messages.LOADING_LINE_11, L.Z.Messages.LOADING_LINE_12, L.Z.Messages.LOADING_LINE_13, L.Z.Messages.LOADING_LINE_14, L.Z.Messages.LOADING_LINE_15, L.Z.Messages.LOADING_TIP_1, L.Z.Messages.LOADING_TIP_2, L.Z.Messages.LOADING_TIP_3, L.Z.Messages.LOADING_TIP_4, L.Z.Messages.LOADING_TIP_5, L.Z.Messages.LOADING_TIP_6, L.Z.Messages.LOADING_TIP_7, L.Z.Messages.LOADING_TIP_8, L.Z.Messages.LOADING_TIP_9, L.Z.Messages.LOADING_TIP_10, L.Z.Messages.LOADING_TIP_11, L.Z.Messages.LOADING_TIP_12, L.Z.Messages.LOADING_TIP_13, L.Z.Messages.LOADING_TIP_14, L.Z.Messages.LOADING_TIP_15, L.Z.Messages.LOADING_TIP_16, L.Z.Messages.LOADING_TIP_17, L.Z.Messages.LOADING_TIP_18, L.Z.Messages.LOADING_TIP_19, L.Z.Messages.LOADING_TIP_20, L.Z.Messages.LOADING_TIP_21, L.Z.Messages.LOADING_TIP_22, L.Z.Messages.LOADING_TIP_23, L.Z.Messages.LOADING_TIP_24, L.Z.Messages.LOADING_TIP_25, L.Z.Messages.LOADING_TIP_26, L.Z.Messages.LOADING_TIP_27.format({
+      }), O.Z.Messages.LOADING_LINE_1, O.Z.Messages.LOADING_LINE_2, O.Z.Messages.LOADING_LINE_4, O.Z.Messages.LOADING_LINE_5, O.Z.Messages.LOADING_LINE_6, O.Z.Messages.LOADING_LINE_7, O.Z.Messages.LOADING_LINE_8, O.Z.Messages.LOADING_LINE_9, O.Z.Messages.LOADING_LINE_10, O.Z.Messages.LOADING_LINE_11, O.Z.Messages.LOADING_LINE_12, O.Z.Messages.LOADING_LINE_13, O.Z.Messages.LOADING_LINE_14, O.Z.Messages.LOADING_LINE_15, O.Z.Messages.LOADING_TIP_1, O.Z.Messages.LOADING_TIP_2, O.Z.Messages.LOADING_TIP_3, O.Z.Messages.LOADING_TIP_4, O.Z.Messages.LOADING_TIP_5, O.Z.Messages.LOADING_TIP_6, O.Z.Messages.LOADING_TIP_7, O.Z.Messages.LOADING_TIP_8, O.Z.Messages.LOADING_TIP_9, O.Z.Messages.LOADING_TIP_10, O.Z.Messages.LOADING_TIP_11, O.Z.Messages.LOADING_TIP_12, O.Z.Messages.LOADING_TIP_13, O.Z.Messages.LOADING_TIP_14, O.Z.Messages.LOADING_TIP_15, O.Z.Messages.LOADING_TIP_16, O.Z.Messages.LOADING_TIP_17, O.Z.Messages.LOADING_TIP_18, O.Z.Messages.LOADING_TIP_19, O.Z.Messages.LOADING_TIP_20, O.Z.Messages.LOADING_TIP_21, O.Z.Messages.LOADING_TIP_22, O.Z.Messages.LOADING_TIP_23, O.Z.Messages.LOADING_TIP_24, O.Z.Messages.LOADING_TIP_25, O.Z.Messages.LOADING_TIP_26, O.Z.Messages.LOADING_TIP_27.format({
         asterisks: "**"
-      }), L.Z.Messages.LOADING_KEYBIND_TIP_1.format({
-        quickSwitcherHook: (e, t) => (0, i.jsx)(E.KeyCombo, {
+      }), O.Z.Messages.LOADING_KEYBIND_TIP_1.format({
+        quickSwitcherHook: (e, t) => (0, s.jsx)(E.KeyCombo, {
           shortcut: "mod+k",
-          className: O.keybind
+          className: v.keybind
         }, t)
-      }), L.Z.Messages.LOADING_KEYBIND_TIP_2.format({
-        markUnreadHook: (e, t) => (0, i.jsx)(E.KeyCombo, {
+      }), O.Z.Messages.LOADING_KEYBIND_TIP_2.format({
+        markUnreadHook: (e, t) => (0, s.jsx)(E.KeyCombo, {
           shortcut: "alt+click",
-          className: O.keybind
+          className: v.keybind
         }, t)
-      }), L.Z.Messages.LOADING_KEYBIND_TIP_3.format({
-        markServerUnreadHook: (e, t) => (0, i.jsx)(E.KeyCombo, {
+      }), O.Z.Messages.LOADING_KEYBIND_TIP_3.format({
+        markServerUnreadHook: (e, t) => (0, s.jsx)(E.KeyCombo, {
           shortcut: "shift+esc",
-          className: O.keybind
+          className: v.keybind
         }, t)
-      }), L.Z.Messages.LOADING_KEYBIND_TIP_4.format({
-        navigateUnreadHook: (e, t) => (0, i.jsx)(E.KeyCombo, {
+      }), O.Z.Messages.LOADING_KEYBIND_TIP_4.format({
+        navigateUnreadHook: (e, t) => (0, s.jsx)(E.KeyCombo, {
           shortcut: "shift+alt+up",
-          className: O.keybind
+          className: v.keybind
         }, t),
-        downHook: (e, t) => (0, i.jsx)(E.KeyCombo, {
+        downHook: (e, t) => (0, s.jsx)(E.KeyCombo, {
           shortcut: "down",
-          className: O.keybind
+          className: v.keybind
         }, t)
-      }), L.Z.Messages.LOADING_KEYBIND_TIP_5.format({
-        keyboardShortcutsHook: (e, t) => (0, i.jsx)(E.KeyCombo, {
+      }), O.Z.Messages.LOADING_KEYBIND_TIP_5.format({
+        keyboardShortcutsHook: (e, t) => (0, s.jsx)(E.KeyCombo, {
           shortcut: "mod+/",
-          className: O.keybind
+          className: v.keybind
         }, t)
-      }), L.Z.Messages.LOADING_KEYBIND_TIP_6.format({
-        messageNewlineHook: (e, t) => (0, i.jsx)(E.KeyCombo, {
+      }), O.Z.Messages.LOADING_KEYBIND_TIP_6.format({
+        messageNewlineHook: (e, t) => (0, s.jsx)(E.KeyCombo, {
           shortcut: "shift+return",
-          className: O.keybind
+          className: v.keybind
         }, t)
-      }), L.Z.Messages.LOADING_KEYBIND_TIP_7.format({
-        shiftHook: (e, t) => (0, i.jsx)(E.KeyCombo, {
+      }), O.Z.Messages.LOADING_KEYBIND_TIP_7.format({
+        shiftHook: (e, t) => (0, s.jsx)(E.KeyCombo, {
           shortcut: "shift",
-          className: O.keybind
+          className: v.keybind
         }, t)
-      }), L.Z.Messages.LOADING_KEYBIND_TIP_8.format({
-        upHook: (e, t) => (0, i.jsx)(E.KeyCombo, {
+      }), O.Z.Messages.LOADING_KEYBIND_TIP_8.format({
+        upHook: (e, t) => (0, s.jsx)(E.KeyCombo, {
           shortcut: "up",
-          className: O.keybind
+          className: v.keybind
         }, t)
       })];
-      return p.default.locale.startsWith("en-") && e.push(L.Z.Messages.POLLS_MARKETING_EASTER_EGG_LOADING_LINE), e[o().random(e.length - 1)]
+      return g.default.locale.startsWith("en-") && e.push(O.Z.Messages.POLLS_MARKETING_EASTER_EGG_LOADING_LINE), e[o().random(e.length - 1)]
     }()), R(this, "_eventLoadingText", function() {
       let e = m.Z.getLoadingTips();
       if (null != e && e.length > 0) return e[o().random(e.length - 1)]
@@ -240,24 +240,24 @@ class x extends s.PureComponent {
     }, this._connectedSound.volume = 1
   }
 }
-t.Z = u.ZP.connectStores([I.Z, N.Z, g.Z, _.Z], () => ({
+t.Z = u.ZP.connectStores([I.Z, p.Z, T.Z, _.Z], () => ({
   isTryingToConnect: I.Z.isTryingToConnect(),
   connected: I.Z.isConnected(),
-  incident: N.Z.getIncident(),
-  soundpack: g.Z.getSoundpack(),
+  incident: p.Z.getIncident(),
+  soundpack: T.Z.getSoundpack(),
   reducedMotion: _.Z.useReducedMotion
 }))(e => {
   let {
     isTryingToConnect: t,
     connected: n,
-    incident: s,
+    incident: i,
     soundpack: l,
     reducedMotion: a
   } = e;
-  return t ? (0, i.jsx)(x, {
+  return t ? (0, s.jsx)(P, {
     reducedMotion: a,
     soundpack: l,
     connected: n,
-    incident: s
+    incident: i
   }) : null
 })

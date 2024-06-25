@@ -1,27 +1,27 @@
-var s, i, a, l, r = n(442837),
-  c = n(570140),
-  o = n(594174),
-  d = n(981631);
-let u = null;
-class E extends(l = r.ZP.Store) {
+var n, a, i, r, l = s(442837),
+  o = s(570140),
+  c = s(594174),
+  E = s(981631);
+let _ = null;
+class u extends(r = l.ZP.Store) {
   getHouseMembership() {
-    return u
+    return _
   }
 }
-a = "HypeSquadStore", (i = "displayName") in(s = E) ? Object.defineProperty(s, i, {
-  value: a,
+i = "HypeSquadStore", (a = "displayName") in(n = u) ? Object.defineProperty(n, a, {
+  value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[i] = a, t.Z = new E(c.Z, {
+}) : n[a] = i, t.Z = new u(o.Z, {
   CONNECTION_OPEN: function() {
-    let e = o.default.getCurrentUser();
-    null != e && (e.hasFlag(d.xW$.HYPESQUAD_ONLINE_HOUSE_1) ? u = d.gkr.HOUSE_1 : e.hasFlag(d.xW$.HYPESQUAD_ONLINE_HOUSE_2) ? u = d.gkr.HOUSE_2 : e.hasFlag(d.xW$.HYPESQUAD_ONLINE_HOUSE_3) && (u = d.gkr.HOUSE_3))
+    let e = c.default.getCurrentUser();
+    null != e && (e.hasFlag(E.xW$.HYPESQUAD_ONLINE_HOUSE_1) ? _ = E.gkr.HOUSE_1 : e.hasFlag(E.xW$.HYPESQUAD_ONLINE_HOUSE_2) ? _ = E.gkr.HOUSE_2 : e.hasFlag(E.xW$.HYPESQUAD_ONLINE_HOUSE_3) && (_ = E.gkr.HOUSE_3))
   },
   HYPESQUAD_ONLINE_MEMBERSHIP_LEAVE_SUCCESS: function() {
-    u = null
+    _ = null
   },
   HYPESQUAD_ONLINE_MEMBERSHIP_JOIN_SUCCESS: function(e) {
-    u = e.houseID
+    _ = e.houseID
   }
 })

@@ -66,7 +66,7 @@ t.Z = e => {
     disableCustomColor: h = !1
   } = e, {
     analyticsLocations: x
-  } = (0, l.ZP)(), I = r.useRef(null), _ = (0, i.Z)(I), L = h ? d.BR.DARK : d.BR.LIGHT;
+  } = (0, l.ZP)(), I = r.useRef(null), _ = (0, i.Z)(I), T = h ? d.BR.DARK : d.BR.LIGHT;
   return (0, u.x6)(t) ? null : (0, n.jsx)(a.Tooltip, {
     text: C.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
     delay: g,
@@ -93,7 +93,7 @@ t.Z = e => {
       children: m ? (0, n.jsx)(o.e, {
         hovered: _,
         isContentDismissed: !0,
-        themeOverride: L,
+        themeOverride: T,
         boxColors: p
       }) : (0, n.jsx)(a.GiftIcon, {
         size: "md",

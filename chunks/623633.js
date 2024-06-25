@@ -1,17 +1,17 @@
 t.d(n, {
   Z: function() {
-    return a
+    return u
   }
 });
-var E = t(442837),
-  _ = t(592125),
-  s = t(944486);
+var i = t(442837),
+  l = t(592125),
+  r = t(944486);
 
-function a() {
-  return (0, E.e7)([s.Z, _.Z], () => {
-    let e = s.Z.getVoiceChannelId();
+function u() {
+  return (0, i.e7)([r.Z, l.Z], () => {
+    let e = r.Z.getVoiceChannelId();
     if (null != e) {
-      let n = _.Z.getChannel(e);
+      let n = l.Z.getChannel(e);
       if (null == n ? void 0 : n.isGuildStageVoice()) return n
     }
     return null

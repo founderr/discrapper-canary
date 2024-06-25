@@ -3,9 +3,9 @@ n.d(t, {
     return _
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(990547),
+var i = n(990547),
   l = n(481060),
   a = n(230711),
   r = n(960359),
@@ -28,48 +28,48 @@ function _(e) {
     markAsDismissed: t,
     partnerGame: n
   } = e;
-  (0, o.hs)(n, s.ImpressionTypes.POPOUT, s.ImpressionNames.DROPS_QUEST_ENROLLMENT);
+  (0, o.hs)(n, i.ImpressionTypes.POPOUT, i.ImpressionNames.DROPS_QUEST_ENROLLMENT);
   let _ = (0, o.au)(n);
   if (null == _) return null;
   let {
     header: I,
     body: m,
-    imgSrc: g,
-    imgStyle: p
-  } = h(_.drop, _.config.streamLengthRequirement), N = () => {
+    imgSrc: T,
+    imgStyle: g
+  } = h(_.drop, _.config.streamLengthRequirement), p = () => {
     t(u.L.DISMISS)
   };
-  return (0, i.jsxs)("div", {
+  return (0, s.jsxs)("div", {
     className: E.container,
-    children: [(0, i.jsx)("img", {
-      src: g,
+    children: [(0, s.jsx)("img", {
+      src: T,
       alt: "",
-      className: p
-    }), (0, i.jsx)(l.Clickable, {
+      className: g
+    }), (0, s.jsx)(l.Clickable, {
       className: E.__invalid_buttonClose,
       "aria-label": d.Z.Messages.CLOSE,
-      onClick: N,
-      children: (0, i.jsx)(l.CloseSmallIcon, {
+      onClick: p,
+      children: (0, s.jsx)(l.CloseSmallIcon, {
         size: "xs",
         color: "currentColor",
         className: E.closeIcon
       })
-    }), (0, i.jsx)(l.Heading, {
+    }), (0, s.jsx)(l.Heading, {
       className: E.title,
       variant: "heading-md/extrabold",
       children: I
-    }), (0, i.jsx)(l.Text, {
+    }), (0, s.jsx)(l.Text, {
       variant: "text-sm/medium",
       className: E.subTitle,
       children: m
-    }), _.config.autoEnrollment ? (0, i.jsx)(l.Button, {
+    }), _.config.autoEnrollment ? (0, s.jsx)(l.Button, {
       color: l.Button.Colors.BRAND_INVERTED,
       fullWidth: !0,
       onClick: () => {
         a.Z.open(c.oAB.INVENTORY), t(u.L.PRIMARY)
       },
       children: d.Z.Messages.LEARN_MORE
-    }) : (0, i.jsx)(l.Button, {
+    }) : (0, s.jsx)(l.Button, {
       innerClassName: E.button,
       color: l.Button.Colors.BRAND_INVERTED,
       fullWidth: !0,
@@ -77,15 +77,15 @@ function _(e) {
         (0, r.RJ)(_.drop.dropsQuestId), a.Z.open(c.oAB.INVENTORY), t(u.L.PRIMARY)
       },
       children: d.Z.Messages.DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA
-    }), (0, i.jsx)(l.Button, {
+    }), (0, s.jsx)(l.Button, {
       className: E.linkButtonContainer,
       innerClassName: E.linkButton,
-      onClick: N,
+      onClick: p,
       look: l.Button.Looks.LINK,
       fullWidth: !0,
       color: l.Button.Colors.WHITE,
       children: d.Z.Messages.NOT_NOW
-    }), (0, i.jsx)("div", {
+    }), (0, s.jsx)("div", {
       className: E.pointer
     })]
   })

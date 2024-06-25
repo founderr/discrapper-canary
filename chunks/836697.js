@@ -13,8 +13,8 @@ var l = n(735250),
   c = n(937111),
   d = n(914010),
   h = n(289090),
-  g = n(727258),
-  p = n(234383),
+  p = n(727258),
+  g = n(234383),
   m = n(179809),
   C = n(773182),
   E = n(588275),
@@ -24,29 +24,29 @@ var l = n(735250),
 function I(e) {
   let {
     onActivate: t
-  } = e, [n, I] = i.useState(!1), N = (0, s.e7)([d.Z], () => d.Z.getGuildId()), Z = (0, s.e7)([c.Z], () => c.Z.hasFetchedRequestToJoinGuilds), S = (0, p.Z)(), x = (0, a.Z)(N), T = i.useMemo(() => {
-    let e = (0, g.qQ)({
+  } = e, [n, I] = i.useState(!1), N = (0, s.e7)([d.Z], () => d.Z.getGuildId()), Z = (0, s.e7)([c.Z], () => c.Z.hasFetchedRequestToJoinGuilds), S = (0, g.Z)(), x = (0, a.Z)(N), L = i.useMemo(() => {
+    let e = (0, p.qQ)({
       folderId: h.S.PENDING_JOIN_REQUESTS_FOLDER,
       folderName: f.Z.Messages.MEMBER_VERIFICATION_FOLDER_NAME,
       expanded: n,
       guildIds: []
     });
-    for (let t of S) e.children.push((0, g.Mg)(t, e.id));
+    for (let t of S) e.children.push((0, p.Mg)(t, e.id));
     return e
   }, [S, n]);
   i.useEffect(() => {
     n && !Z && o.Z.fetchRequestToJoinGuilds()
   }, [n, Z]);
-  let L = null != N && S.includes(N);
+  let T = null != N && S.includes(N);
   return (i.useEffect(() => {
-    !n && L && x !== N && I(!0)
-  }, [n, L, x, N]), 0 === S.length) ? null : (0, l.jsx)(C.TH, {
+    !n && T && x !== N && I(!0)
+  }, [n, T, x, N]), 0 === S.length) ? null : (0, l.jsx)(C.TH, {
     onActivate: t,
     children: (0, l.jsx)(m.Z, {
-      folderNode: T,
+      folderNode: L,
       expanded: n,
-      useCircleMask: !n && !L,
-      selected: L,
+      useCircleMask: !n && !T,
+      selected: T,
       draggable: !1,
       sorting: !1,
       onExpandCollapse: () => {
@@ -60,7 +60,7 @@ function I(e) {
         className: _.pendingIcon
       }),
       renderChildNode: function(e) {
-        return e.type !== g.eD.GUILD ? null : (0, l.jsx)(E.Z, {
+        return e.type !== p.eD.GUILD ? null : (0, l.jsx)(E.Z, {
           guildNode: e
         }, e.id)
       }

@@ -9,8 +9,8 @@ var l = n(735250),
   c = n(146773),
   d = n(201895),
   h = n(703656),
-  g = n(592125),
-  p = n(430824),
+  p = n(592125),
+  g = n(430824),
   m = n(496675),
   C = n(98597),
   E = n(473403),
@@ -67,7 +67,7 @@ class S extends C.ZP {
     super(...e), N(this, "handleContextMenu", e => {
       let {
         channel: t
-      } = this.props, i = p.Z.getGuild(t.getGuildId());
+      } = this.props, i = g.Z.getGuild(t.getGuildId());
       null != i && (0, u.jW)(e, async () => {
         let {
           default: e
@@ -101,8 +101,8 @@ t.Z = i.memo(function(e) {
     channel: t,
     guild: n,
     disableSorting: i
-  } = e, s = (0, a.cj)([g.Z, m.Z], () => {
-    let e = g.Z.getChannel(t.parent_id);
+  } = e, s = (0, a.cj)([p.Z, m.Z], () => {
+    let e = p.Z.getChannel(t.parent_id);
     return {
       canManageChannel: m.Z.can(f.Plq.MANAGE_CHANNELS, t),
       canReorderChannel: !0 !== i && null != e ? m.Z.can(f.Plq.MANAGE_CHANNELS, e) : m.Z.can(f.Plq.MANAGE_CHANNELS, n)

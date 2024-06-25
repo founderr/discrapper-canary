@@ -39,19 +39,19 @@ r.Z = new class e {
       location: "convertRouteToNavigation"
     });
     if (null == g || !g.isReady()) return;
-    let f = e.navigationReplace,
-      x = null !== (t = e.useScreen) && void 0 !== t && t;
+    let x = e.navigationReplace,
+      f = null !== (t = e.useScreen) && void 0 !== t && t;
     if (b && (0, u.x7)() && m === p.Z5c.ME) {
       (0, d.vp)({
         screen: "messages",
-        resetRoot: f
+        resetRoot: x
       });
       return
     }
     if (b && m === p.Z5c.NOTIFICATIONS) {
       (0, d.vp)({
         screen: "notifications",
-        resetRoot: f
+        resetRoot: x
       });
       return
     }
@@ -77,8 +77,8 @@ r.Z = new class e {
           channelId: t,
           guildId: e,
           messageId: a,
-          replaceChannelAndFixRoot: f,
-          useScreen: x
+          replaceChannelAndFixRoot: x,
+          useScreen: f
         });
         return
       }
@@ -92,7 +92,7 @@ r.Z = new class e {
           (0, d.vp)({
             screen: "guilds",
             guildId: t,
-            resetRoot: f
+            resetRoot: x
           });
           return
         }
@@ -100,20 +100,20 @@ r.Z = new class e {
           let [e, a] = (0, s.Z)(g.getCurrentRoute());
           if (e === t && a === r) return
         }
-        null == r || (0, u.Z0)(t) && !1 !== f ? t !== p.ME || y ? (0, d.vp)({
+        null == r || (0, u.Z0)(t) && !1 !== x ? t !== p.ME || y ? (0, d.vp)({
           screen: "guilds",
           guildId: t,
           channelId: (0, u.JH)() ? r : void 0,
-          resetRoot: f
+          resetRoot: x
         }) : (0, d.vp)({
           screen: "messages",
-          resetRoot: f
+          resetRoot: x
         }) : null != t && (0, d.k4)({
           channelId: r,
           guildId: t,
           messageId: a,
-          replaceChannelAndFixRoot: f,
-          useScreen: x
+          replaceChannelAndFixRoot: x,
+          useScreen: f
         })
       }
       return
@@ -138,7 +138,7 @@ r.Z = new class e {
     }
     b && (0, d.vp)({
       screen: "messages",
-      resetRoot: f
+      resetRoot: x
     })
   }
   executeRouteRewrites(e, r) {

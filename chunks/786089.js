@@ -3,10 +3,10 @@ n.d(t, {
     return d
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(120356),
-  l = n.n(s),
+var i = n(120356),
+  l = n.n(i),
   a = n(918701),
   r = n(566078),
   o = n(78826),
@@ -16,24 +16,24 @@ var s = n(120356),
 function d(e) {
   let {
     quest: t
-  } = e, n = (0, a.gO)(t), s = r.r.build(t.config).defaultReward.messages.name;
-  return (0, i.jsxs)("div", {
+  } = e, n = (0, a.gO)(t), i = r.r.build(t.config).defaultReward.messages.name;
+  return (0, s.jsxs)("div", {
     className: u.container,
-    children: [(0, i.jsx)(o.Fl, {
+    children: [(0, s.jsx)(o.Fl, {
       id: "QuestRewardTile_rewardTileStatic",
-      children: e => (0, i.jsx)("img", {
+      children: e => (0, s.jsx)("img", {
         ref: e,
-        alt: s,
+        alt: i,
         className: l()(u.image),
         src: n.url
       })
-    }), (0, i.jsx)("div", {
+    }), (0, s.jsx)("div", {
       className: u.overlay
-    }), (0, i.jsx)("div", {
+    }), (0, s.jsx)("div", {
       className: u.contents,
-      children: (0, i.jsx)(o.Fl, {
+      children: (0, s.jsx)(o.Fl, {
         id: "QuestPartnerBranding_gameLogotype",
-        children: e => (0, i.jsx)("img", {
+        children: e => (0, s.jsx)("img", {
           ref: e,
           className: u.partnerBranding,
           alt: t.config.messages.gameTitle,

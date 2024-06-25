@@ -3,8 +3,8 @@ n.d(t, {
     return u
   }
 }), n(47120);
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(481060),
   a = n(921944),
   r = n(689938),
@@ -14,23 +14,23 @@ function c(e) {
   let {
     markAsDismissed: t
   } = e;
-  return s.useEffect(() => {
+  return i.useEffect(() => {
     let e = setTimeout(() => {
       t(a.L.AUTO_DISMISS)
     }, 8e3);
     return () => {
       clearTimeout(e)
     }
-  }, [t]), (0, i.jsxs)(l.Clickable, {
+  }, [t]), (0, s.jsxs)(l.Clickable, {
     className: o.container,
     onClick: () => {
       t(a.L.USER_DISMISS)
     },
-    children: [(0, i.jsx)(l.Text, {
+    children: [(0, s.jsx)(l.Text, {
       variant: "text-sm/medium",
       color: "always-white",
       children: r.Z.Messages.PROFILE_LOOKING_GOOD_TOOLTIP_TEXT
-    }), (0, i.jsx)("div", {
+    }), (0, s.jsx)("div", {
       className: o.pointer
     })]
   })
@@ -40,19 +40,19 @@ function u(e) {
   let {
     children: t,
     markAsDismissed: n
-  } = e, [a, r] = s.useState(!1);
-  return s.useEffect(() => {
+  } = e, [a, r] = i.useState(!1);
+  return i.useEffect(() => {
     let e = setTimeout(() => {
       r(!0)
     }, 1e3);
     return () => {
       clearTimeout(e)
     }
-  }, [r]), (0, i.jsx)(l.Popout, {
+  }, [r]), (0, s.jsx)(l.Popout, {
     position: "top",
     align: "left",
     shouldShow: a,
-    renderPopout: () => (0, i.jsx)(c, {
+    renderPopout: () => (0, s.jsx)(c, {
       markAsDismissed: n
     }),
     children: t

@@ -1,5 +1,5 @@
-var i = n(230487),
-  s = n(998502),
+var s = n(230487),
+  i = n(998502),
   l = n(914946),
   a = n(452426),
   r = n(981631);
@@ -12,8 +12,8 @@ t.Z = {
       } = e;
       (0, l.bu)(t.transport);
       let n = t.application.id;
-      if (null != n) return (0, i.Z)(n), {
-        enabled: s.ZP.getEnableHardwareAcceleration()
+      if (null != n) return (0, s.Z)(n), {
+        enabled: i.ZP.getEnableHardwareAcceleration()
       }
     }
   }

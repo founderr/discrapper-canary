@@ -16,8 +16,8 @@ var l = n(735250),
   c = n(749210),
   d = n(626135),
   h = n(727258),
-  g = n(662146),
-  p = n(981631),
+  p = n(662146),
+  g = n(981631),
   m = n(689938),
   C = n(798314);
 
@@ -44,7 +44,7 @@ function f(e, t) {
       let {
         nodeId: i
       } = e;
-      l && t.type !== h.eD.FOLDER && d.default.track(p.rMx.GUILD_FOLDER_CREATED), c.Z.moveById(i, t.id, n, l)
+      l && t.type !== h.eD.FOLDER && d.default.track(g.rMx.GUILD_FOLDER_CREATED), c.Z.moveById(i, t.id, n, l)
     },
     collect: e => ({
       canDrop: e.canDrop(),
@@ -62,13 +62,13 @@ function _(e) {
   } = e, o = i.useMemo(() => f([h.eD.GUILD, h.eD.FOLDER], n, a, s), [n, a, s]), [{
     canDrop: c,
     isOver: d
-  }, g] = (0, u.L)(o), p = E([
+  }, p] = (0, u.L)(o), g = E([
     [c, C.autoPointerEvents],
     [d, C.dragOver]
   ]);
   return (0, l.jsx)("div", {
     ref: e => {
-      p.current = e, g(e)
+      g.current = e, p(e)
     },
     "data-dnd-name": m.Z.Messages.DND_DROP_ABOVE.format({
       itemName: t
@@ -93,7 +93,7 @@ function I(e) {
     [a, C.autoPointerEvents],
     [o, C.dragOver]
   ]);
-  return (0, l.jsx)(g.Z, {
+  return (0, l.jsx)(p.Z, {
     text: t,
     shouldShow: o,
     forceOpen: o,

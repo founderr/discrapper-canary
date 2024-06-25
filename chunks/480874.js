@@ -1,10 +1,10 @@
 n.d(t, {
   Z: function() {
-    return v
+    return L
   }
 });
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(120356),
   a = n.n(l),
   r = n(91192),
@@ -17,73 +17,73 @@ var i = n(735250),
   _ = n(626135),
   I = n(26373),
   m = n(486622),
-  g = n(922409),
-  p = n(727813),
-  N = n(355350),
-  T = n(307947),
-  C = n(125855),
-  S = n(687683),
+  T = n(922409),
+  g = n(727813),
+  p = n(355350),
+  N = n(307947),
+  S = n(125855),
+  C = n(687683),
   A = n(981631),
   f = n(689938),
   Z = n(964058);
 
-function v() {
-  let e = s.useRef(null),
-    t = (0, p.Z)(),
-    n = (0, N.w)(),
+function L() {
+  let e = i.useRef(null),
+    t = (0, g.Z)(),
+    n = (0, p.w)(),
     l = (0, I.V)(),
-    v = (0, u.N)(),
-    L = (0, d.Z)("message-requests-spam-list"),
+    L = (0, u.N)(),
+    O = (0, d.Z)("message-requests-spam-list"),
     {
-      channelId: O
-    } = (0, g._)(),
-    R = s.useCallback(() => {
+      channelId: v
+    } = (0, T._)(),
+    R = i.useCallback(() => {
       (0, c.showToast)((0, c.createToast)(f.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, c.ToastType.FAILURE))
     }, []),
     {
-      rejectAll: x
+      rejectAll: P
     } = (0, m.m)({
       onError: R
     }),
-    M = s.useCallback(() => {
-      x(t.map(e => e.channel.id))
-    }, [t, x]);
-  s.useEffect(() => {
+    x = i.useCallback(() => {
+      P(t.map(e => e.channel.id))
+    }, [t, P]);
+  i.useEffect(() => {
     _.default.track(A.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, {
       num_spam_message_requests: n
     }), E.Z.increment({
       name: o.V.SPAM_MESSAGE_REQUEST_VIEW
     })
   }, []);
-  let P = s.useCallback(e => {
-      var n, s;
+  let M = i.useCallback(e => {
+      var n, i;
       let {
         row: r
-      } = e, o = t[r], c = null === (s = t[r + 1]) || void 0 === s ? void 0 : null === (n = s.channel) || void 0 === n ? void 0 : n.id, u = o.channel.id;
-      return (0, i.jsx)(C.Z, {
+      } = e, o = t[r], c = null === (i = t[r + 1]) || void 0 === i ? void 0 : null === (n = i.channel) || void 0 === n ? void 0 : n.id, u = o.channel.id;
+      return (0, s.jsx)(S.Z, {
         index: r,
         className: a()({
-          [Z.selected]: null != O && O === u,
-          [Z.siblingSelected]: null != O && O === c
+          [Z.selected]: null != v && v === u,
+          [Z.siblingSelected]: null != v && v === c
         }),
         channel: o.channel,
         user: o.user,
         hasSingleMessageRequest: l
       }, u)
-    }, [t, l, O]),
-    D = s.useCallback(() => (0, i.jsxs)(h.Z, {
+    }, [t, l, v]),
+    D = i.useCallback(() => (0, s.jsxs)(h.Z, {
       className: Z.sectionTitle,
       children: [f.Z.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
         count: n
-      }), v && n > 0 ? (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(c.Text, {
+      }), L && n > 0 ? (0, s.jsxs)(s.Fragment, {
+        children: [(0, s.jsx)(c.Text, {
           className: Z.titleDivider,
           variant: "eyebrow",
           color: "header-secondary",
           tag: "span",
           children: "•"
-        }), (0, i.jsx)(c.Button, {
-          onClick: M,
+        }), (0, s.jsx)(c.Button, {
+          onClick: x,
           look: c.ButtonLooks.LINK,
           color: c.ButtonColors.LINK,
           size: c.ButtonSizes.SMALL,
@@ -92,32 +92,32 @@ function v() {
           children: f.Z.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })]
       }) : null]
-    }, "message-requests-spam-title"), [n, M, v]);
-  return 0 === t.length ? (0, i.jsx)(T.Z, {
-    section: S.pS.SPAM
-  }) : (0, i.jsx)(r.bG, {
-    navigator: L,
-    children: (0, i.jsx)(r.SJ, {
+    }, "message-requests-spam-title"), [n, x, L]);
+  return 0 === t.length ? (0, s.jsx)(N.Z, {
+    section: C.pS.SPAM
+  }) : (0, s.jsx)(r.bG, {
+    navigator: O,
+    children: (0, s.jsx)(r.SJ, {
       children: n => {
         let {
-          ref: s,
+          ref: i,
           role: l,
           ...a
         } = n;
-        return (0, i.jsx)(c.List, {
+        return (0, s.jsx)(c.List, {
           className: Z.list,
           innerRole: l,
           innerAriaLabel: f.Z.Messages.MESSAGE_REQUESTS,
           ref: t => {
             var n;
-            e.current = t, s.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null
+            e.current = t, i.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null
           },
           paddingTop: 24,
           paddingBottom: 24,
-          sectionHeight: S.oi,
-          rowHeight: S.WN,
+          sectionHeight: C.oi,
+          rowHeight: C.WN,
           renderSection: D,
-          renderRow: P,
+          renderRow: M,
           sections: [t.length],
           chunkSize: 30,
           fade: !0,

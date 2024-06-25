@@ -78,7 +78,7 @@ function R(e) {
           (0, c.jW)(e, async () => {
             let {
               default: e
-            } = await n.e("78650").then(n.bind(n, 422200));
+            } = await n.e("40157").then(n.bind(n, 422200));
             return t => (0, l.jsx)(e, {
               ...t,
               channel: j

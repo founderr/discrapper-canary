@@ -22,19 +22,19 @@ function _(e) {
     onSelect: _,
     navId: I,
     label: T,
-    location: N,
-    includeGuildMute: m
-  } = e, h = (0, r.c)(t), C = (0, o.EQ)(t), S = (0, i.e7)([E.Z], () => E.Z.getGuild(t.guild_id)), A = (0, c.Z)(S), p = (0, u.Mn)("ChannelNotificationSettingsPopoutMenu") && d.$N.has(t.type);
+    location: m,
+    includeGuildMute: N
+  } = e, h = (0, r.c)(t), C = (0, o.EQ)(t), S = (0, i.e7)([E.Z], () => E.Z.getGuild(t.guild_id)), A = (0, c.Z)(S), g = (0, u.Mn)("ChannelNotificationSettingsPopoutMenu") && d.$N.has(t.type);
   return (0, s.jsxs)(l.Menu, {
     navId: I,
     onClose: n,
     "aria-label": T,
     onSelect: _,
     children: [(0, s.jsx)(l.MenuGroup, {
-      children: (0, a.ZP)(t, N)
-    }), m ? (0, s.jsx)(l.MenuGroup, {
+      children: (0, a.ZP)(t, m)
+    }), N ? (0, s.jsx)(l.MenuGroup, {
       children: A
-    }) : null, p ? C : (0, s.jsx)(l.MenuGroup, {
+    }) : null, g ? C : (0, s.jsx)(l.MenuGroup, {
       children: h
     })]
   })

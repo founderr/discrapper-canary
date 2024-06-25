@@ -1,23 +1,23 @@
-var n = t(735250),
-  r = t(470079),
-  i = t(378720),
-  a = t(689938),
-  l = t(224853);
-class o extends r.PureComponent {
+var s = n(735250),
+  i = n(470079),
+  l = n(378720),
+  a = n(689938),
+  r = n(224853);
+class o extends i.PureComponent {
   render() {
     let {
       className: e,
-      sku: s
+      sku: t
     } = this.props;
-    return null == s.legalNotice ? null : (0, n.jsxs)("div", {
+    return null == t.legalNotice ? null : (0, s.jsxs)("div", {
       className: e,
-      children: [(0, n.jsx)(i.Z, {
+      children: [(0, s.jsx)(l.Z, {
         children: a.Z.Messages.APPLICATION_STORE_SECTION_TITLE_COPYRIGHT
-      }), (0, n.jsx)("div", {
-        className: l.content,
-        children: s.legalNotice
+      }), (0, s.jsx)("div", {
+        className: r.content,
+        children: t.legalNotice
       })]
     })
   }
 }
-s.Z = o
+t.Z = o

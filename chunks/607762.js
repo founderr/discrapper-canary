@@ -1,1 +1,1 @@
-e.exports = t.p + "c8f55fae4ed2ce66b4ce.png"
+e.exports = s.p + "c8f55fae4ed2ce66b4ce.png"

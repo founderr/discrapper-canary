@@ -1,6 +1,6 @@
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(82950),
+var i = n(82950),
   l = n(536442),
   a = n(703656),
   r = n(922482),
@@ -12,7 +12,7 @@ t.Z = e => {
     channel: t,
     guild: n
   } = e;
-  return (0, i.jsx)(s.Z, {
+  return (0, s.jsx)(i.Z, {
     guild: n,
     onDismissed: () => {
       (0, l.Kw)(l.v6.HUB_STUDY_ROOM_NOTICE)

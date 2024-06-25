@@ -1,33 +1,33 @@
-n.d(t, {
+t.d(n, {
   w: function() {
-    return E
+    return I
   }
 });
-var r = n(735250);
-n(470079);
-var a = n(512722),
-  s = n.n(a),
-  l = n(481060),
-  i = n(598),
-  o = n(698708),
-  u = n(614277),
-  c = n(689938),
-  d = n(474411);
+var r = t(735250);
+t(470079);
+var s = t(512722),
+  a = t.n(s),
+  l = t(481060),
+  i = t(598),
+  o = t(698708),
+  u = t(614277),
+  c = t(689938),
+  d = t(474411);
 
-function E(e) {
+function I(e) {
   let {
-    handleClose: t
+    handleClose: n
   } = e, {
-    skusById: n,
-    selectedSkuId: a,
-    application: E
+    skusById: t,
+    selectedSkuId: s,
+    application: I
   } = (0, i.usePaymentContext)();
-  s()(null != a, "Expected selectedSkuId"), s()(null != E, "Expected application");
-  let h = n[a];
-  s()(null != h, "Expected sku");
-  let p = c.Z.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
-    applicationName: E.name,
-    itemName: h.name
+  a()(null != s, "Expected selectedSkuId"), a()(null != I, "Expected application");
+  let _ = t[s];
+  a()(null != _, "Expected sku");
+  let T = c.Z.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
+    applicationName: I.name,
+    itemName: _.name
   });
   return (0, r.jsxs)(u.C3, {
     children: [(0, r.jsx)(o.Z, {}), (0, r.jsxs)("div", {
@@ -38,11 +38,11 @@ function E(e) {
         children: "Success!"
       }), (0, r.jsx)(l.Text, {
         variant: "text-md/normal",
-        children: p
+        children: T
       }), (0, r.jsx)("div", {
         className: d.divider
       }), (0, r.jsx)(l.Button, {
-        onClick: t,
+        onClick: n,
         children: c.Z.Messages.CLOSE
       })]
     })]

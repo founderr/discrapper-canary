@@ -17,8 +17,8 @@ var i = n(442837),
   _ = n(430824),
   I = n(699516),
   T = n(594174),
-  N = n(934415),
-  m = n(900849),
+  m = n(934415),
+  N = n(900849),
   h = n(981631);
 
 function C(e) {
@@ -28,9 +28,9 @@ function C(e) {
     beforeTransition: C,
     className: S,
     openChatWithoutConnecting: A
-  } = e, p = (0, i.e7)([T.default, I.Z], () => null == t ? "" : (0, o.F6)(t, T.default, I.Z), [t]);
+  } = e, g = (0, i.e7)([T.default, I.Z], () => null == t ? "" : (0, o.F6)(t, T.default, I.Z), [t]);
   return (0, s.jsx)(l.Tooltip, {
-    text: p,
+    text: g,
     position: "top",
     children: e => {
       let {
@@ -46,7 +46,7 @@ function C(e) {
             if (null == e || null == t) return;
             let s = _.Z.getGuild(e);
             if ((null == s ? void 0 : s.joinedAt) == null) {
-              m.Ub(e, {}, {
+              N.Ub(e, {}, {
                 channelId: t
               });
               return
@@ -64,8 +64,8 @@ function C(e) {
         },
         onMouseEnter: i,
         onMouseLeave: o,
-        iconType: (0, N.wl)(t),
-        children: p
+        iconType: (0, m.wl)(t),
+        children: g
       })
     }
   })

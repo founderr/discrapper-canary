@@ -1,5 +1,5 @@
 n(653041);
-var i, s = n(442837),
+var s, i = n(442837),
   l = n(570140),
   a = n(695346),
   r = n(885110),
@@ -20,7 +20,7 @@ let d = [],
 function h() {
   return d.length >= 4 && d.some(e => e < Date.now() - 3 * o.Z.Millis.DAY)
 }
-class _ extends(i = s.ZP.PersistedStore) {
+class _ extends(s = i.ZP.PersistedStore) {
   initialize(e) {
     null != e && Array.isArray(e.sessionStartsWithDND) && (d = e.sessionStartsWithDND)
   }

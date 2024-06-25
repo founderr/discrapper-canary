@@ -1,9 +1,9 @@
 n.d(t, {
   N: function() {
-    return s
+    return i
   }
 });
-let i = (0, n(818083).B)({
+let s = (0, n(818083).B)({
   kind: "user",
   id: "2023-01_clear_all_message_requests",
   label: "Safety Experience Reject All Message Requests",
@@ -19,8 +19,8 @@ let i = (0, n(818083).B)({
   }]
 });
 
-function s() {
-  return i.useExperiment({
+function i() {
+  return s.useExperiment({
     location: "c10bec_1"
   }, {
     autoTrackExposure: !0

@@ -24,8 +24,8 @@ function E(e, t, n) {
 let _ = 1 * o.Z.Millis.HOUR,
   I = 7 * o.Z.Millis.DAY,
   T = 1 * o.Z.Millis.DAY,
-  N = i.K.get("lastNonRequiredUpdateShown", Date.now()),
-  m = new r.Z("AutoUpdateManager");
+  m = i.K.get("lastNonRequiredUpdateShown", Date.now()),
+  N = new r.Z("AutoUpdateManager");
 class h {
   destroy() {
     clearInterval(this._checkInterval)
@@ -35,7 +35,7 @@ class h {
   }
   async _requestNewUpdaterBootstrap() {
     let e;
-    m.log("Bootstrapping new updater host...");
+    N.log("Bootstrapping new updater host...");
     try {
       await d.ZP.ensureModule("discord_updater_bootstrap"), e = d.ZP.requireModule("discord_updater_bootstrap"), this._bootstrapper = e
     } catch (e) {
@@ -45,7 +45,7 @@ class h {
     try {
       this._handleCheckingForUpdates(), await e.bootstrap(d.ZP.releaseChannel, "win"), this.updateAvailable = !0, this.hasNativeUpdate = !0, this._handleUpdateDownloaded(!0)
     } catch (e) {
-      m.log("Failed to bootstrap new updater:", e), this._handleNativeUpdateNotAvailable(), u.Z.captureException(e)
+      N.log("Failed to bootstrap new updater:", e), this._handleNativeUpdateNotAvailable(), u.Z.captureException(e)
     }
   }
   _emitCallbacks() {
@@ -70,10 +70,10 @@ class h {
         },
         oldFormErrors: !0
       }).then(e => {
-        if (null == e.body || "1803ffb0deb4aedbf854f7fc7a23111913e6ae20" === e.body.hash) return this._handleUpdateNotAvailable();
+        if (null == e.body || "8e44ab2e9e380ab37b98ef9ae7768eb4d6dbb9b4" === e.body.hash) return this._handleUpdateNotAvailable();
         if (e.body.required || (0, a.fD)()) return this._handleUpdateDownloaded(!1);
         let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? I : T;
-        if (Date.now() - N > t) return i.K.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
+        if (Date.now() - m > t) return i.K.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
       }, () => this._handleUpdateError())
     }), E(this, "_handleUpdateNotAvailable", () => {
       l.Z.dispatch({

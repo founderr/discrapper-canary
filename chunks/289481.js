@@ -12,14 +12,14 @@ var s = n(735250),
   _ = n(717680),
   I = n(703656),
   T = n(592125),
-  N = n(259580),
-  m = n(617379),
+  m = n(259580),
+  N = n(617379),
   h = n(324081),
   C = n(305248),
   S = n(520116),
   A = n(981631),
-  p = n(689938),
-  g = n(385190);
+  g = n(689938),
+  p = n(385190);
 let f = i.memo(function(e) {
   let {
     channel: t,
@@ -57,13 +57,13 @@ let f = i.memo(function(e) {
   return (0, s.jsx)(r.animated.div, {
     ref: l,
     style: _,
-    children: (0, s.jsx)(O, {
+    children: (0, s.jsx)(R, {
       ...e
     })
   })
 });
 t.Z = f;
-let O = i.memo(function(e) {
+let R = i.memo(function(e) {
   let {
     channel: t,
     onJump: n,
@@ -84,7 +84,7 @@ let O = i.memo(function(e) {
     (0, I.uL)(A.Z5c.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : i)), n(e)
   };
   return (0, s.jsx)("div", {
-    className: g.channel,
+    className: p.channel,
     children: (0, s.jsx)(c.HeadingLevel, {
       component: (0, s.jsxs)(h.Z, {
         channel: r,
@@ -92,9 +92,9 @@ let O = i.memo(function(e) {
         mentionCount: t.mentionCount,
         toggleCollapsed: a,
         channelState: t,
-        children: [(0, s.jsx)(m.Z, {
+        children: [(0, s.jsx)(N.Z, {
           channel: r
-        }), (0, s.jsx)(R, {
+        }), (0, s.jsx)(O, {
           ...e
         }), "nsfw" === t.type ? null : (0, s.jsx)(M, {
           ...e
@@ -113,7 +113,7 @@ let O = i.memo(function(e) {
   })
 });
 
-function R(e) {
+function O(e) {
   let {
     channel: t,
     markChannelRead: n,
@@ -121,8 +121,8 @@ function R(e) {
     getNumUnreadChannels: l
   } = e, a = (0, _.Z)() && null != t.guildId;
   return (0, s.jsx)(c.CircleIconButton, {
-    className: g.markReadButton,
-    tooltip: a ? p.Z.Messages.MARK_GUILD_AS_READ : p.Z.Messages.MARK_AS_READ,
+    className: p.markReadButton,
+    tooltip: a ? g.Z.Messages.MARK_GUILD_AS_READ : g.Z.Messages.MARK_AS_READ,
     color: c.CircleIconButtonColors.TERTIARY,
     icon: a ? (0, s.jsx)(c.DoubleCheckmarkLargeIcon, {
       size: "xs",
@@ -158,14 +158,14 @@ function M(e) {
     })
   }
   return (0, s.jsx)(c.Tooltip, {
-    text: p.Z.Messages.COLLAPSE,
+    text: g.Z.Messages.COLLAPSE,
     children: e => (0, s.jsx)(c.Clickable, {
       ...e,
-      className: a()(g.collapseButton, {
-        [g.collapsed]: t.collapsed
+      className: a()(p.collapseButton, {
+        [p.collapsed]: t.collapsed
       }),
       onClick: l,
-      children: (0, s.jsx)(N.Z, {
+      children: (0, s.jsx)(m.Z, {
         width: 16,
         height: 16
       })

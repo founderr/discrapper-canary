@@ -1,6 +1,6 @@
 n(411104), n(47120);
-var i = n(72924),
-  s = n(100527),
+var s = n(72924),
+  i = n(100527),
   l = n(367207),
   a = n(996106),
   r = n(452426),
@@ -10,7 +10,7 @@ var i = n(72924),
   d = n(186901),
   E = n(981631),
   h = n(474936);
-let _ = [s.Z.RPC];
+let _ = [i.Z.RPC];
 
 function I(e) {
   if (null == e) return {
@@ -51,7 +51,7 @@ t.Z = {
         socket: t,
         args: {
           sku_id: n,
-          pid: s
+          pid: i
         }
       } = e;
       (0, c.f)(t.transport);
@@ -62,7 +62,7 @@ t.Z = {
       let {
         lock: r,
         context: u
-      } = I(t.transport !== d.He.POST_MESSAGE ? s : null);
+      } = I(t.transport !== d.He.POST_MESSAGE ? i : null);
       if (null == (0, o.Z)()) throw new a.Z({
         errorCode: E.lTL.INVALID_CHANNEL
       }, "Invalid channel");
@@ -71,7 +71,7 @@ t.Z = {
       };
       return (async () => {
         try {
-          let e = await (0, i.S)({
+          let e = await (0, s.S)({
             applicationId: l,
             skuId: n,
             openPremiumPaymentModal: () => m(u, h),
@@ -110,15 +110,15 @@ t.Z = {
         errorCode: E.lTL.INVALID_COMMAND
       }, "No application.");
       let {
-        lock: i,
-        context: s
+        lock: s,
+        context: i
       } = I(t.transport !== d.He.POST_MESSAGE ? n : null);
-      return m(s, {
+      return m(i, {
         page: E.ZY5.IN_APP
       }).then(() => {
-        i()
+        s()
       }, e => {
-        if (i(), null != e) throw new a.Z({
+        if (s(), null != e) throw new a.Z({
           errorCode: E.lTL.PURCHASE_ERROR
         }, e);
         throw new a.Z({

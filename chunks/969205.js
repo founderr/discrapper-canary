@@ -3,9 +3,9 @@ n.d(t, {
     return c
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
   l = n(300284),
   a = n(785717),
   r = n(993409),
@@ -17,9 +17,9 @@ function c(e) {
   } = e, {
     trackUserProfileAction: n
   } = (0, a.KZ)(), c = (0, l.Z)();
-  return (0, i.jsx)(r.Z, {
+  return (0, s.jsx)(r.Z, {
     variant: "banner",
-    icon: s.PencilIcon,
+    icon: i.PencilIcon,
     text: o.Z.Messages.EDIT_PROFILE,
     onClick: () => {
       n({

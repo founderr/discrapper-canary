@@ -44,22 +44,22 @@ class T {
   getForwardInfo() {
     var e, t, n, u, _;
     let T = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.Z,
-      N = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
-      m = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Z,
+      m = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
+      N = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Z,
       h = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.Z,
       C = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : a.Z,
       S = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : i.Z,
       {
         snapshotIndex: A,
-        parentMessage: p,
-        messageSnapshot: g
+        parentMessage: g,
+        messageSnapshot: p
       } = this,
-      f = (0, d.Xf)(g.message.timestamp),
-      O = T.getChannel(this.parentMessage.channel_id);
-    if (null != O && O.guild_id === (null === (e = p.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
-      let e = T.getChannel(null === (u = p.messageReference) || void 0 === u ? void 0 : u.channel_id);
+      f = (0, d.Xf)(p.message.timestamp),
+      R = T.getChannel(this.parentMessage.channel_id);
+    if (null != R && R.guild_id === (null === (e = g.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
+      let e = T.getChannel(null === (u = g.messageReference) || void 0 === u ? void 0 : u.channel_id);
       if (null == e) {
-        let e = C.getGuild(O.guild_id);
+        let e = C.getGuild(R.guild_id);
         return null == e ? {
           snapshotIndex: A
         } : {
@@ -70,7 +70,7 @@ class T {
       if (!h.can(e.accessPermissions, e)) return {
         snapshotIndex: A
       };
-      let t = (0, s.F6)(e, N, m, !0);
+      let t = (0, s.F6)(e, m, N, !0);
       return {
         snapshotIndex: A,
         footerInfo: {
@@ -83,15 +83,15 @@ class T {
         }
       }
     }
-    let R = null === (t = p.messageReference) || void 0 === t ? void 0 : t.guild_id;
-    if (null == R) return {
+    let O = null === (t = g.messageReference) || void 0 === t ? void 0 : t.guild_id;
+    if (null == O) return {
       snapshotIndex: A
     };
-    let M = null !== (_ = C.getGuild(R)) && void 0 !== _ ? _ : S.getGuild(R);
+    let M = null !== (_ = C.getGuild(O)) && void 0 !== _ ? _ : S.getGuild(O);
     if (null == M) return {
       snapshotIndex: A
     };
-    let x = T.getChannel(null === (n = p.messageReference) || void 0 === n ? void 0 : n.channel_id);
+    let x = T.getChannel(null === (n = g.messageReference) || void 0 === n ? void 0 : n.channel_id);
     return null == x || h.can(x.accessPermissions, x) ? {
       snapshotIndex: A,
       footerInfo: I(M, f)

@@ -3,8 +3,8 @@ n.d(t, {
     return E
   }
 });
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(481060),
   a = n(617136),
   r = n(272008),
@@ -17,36 +17,36 @@ function E(e) {
   var t, n, E, h;
   let {
     quest: _
-  } = e, I = (null === (t = _.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, m = (null === (n = _.userStatus) || void 0 === n ? void 0 : n.completedAt) != null && (null === (E = _.userStatus) || void 0 === E ? void 0 : E.claimedAt) == null, g = (null === (h = _.userStatus) || void 0 === h ? void 0 : h.claimedAt) != null, p = (0, c.hf)({
+  } = e, I = (null === (t = _.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, m = (null === (n = _.userStatus) || void 0 === n ? void 0 : n.completedAt) != null && (null === (E = _.userStatus) || void 0 === E ? void 0 : E.claimedAt) == null, T = (null === (h = _.userStatus) || void 0 === h ? void 0 : h.claimedAt) != null, g = (0, c.hf)({
     quest: _,
     location: o.jn.QUEST_BAR
-  }), N = s.useCallback(() => {
+  }), p = i.useCallback(() => {
     (0, r.AH)(_.id, {
       questContent: o.jn.QUEST_HOME_DESKTOP,
       questContentCTA: a.jZ.ACCEPT_QUEST
     })
   }, [_]);
-  return m ? (0, i.jsx)("div", {
+  return m ? (0, s.jsx)("div", {
     className: d.container,
-    children: (0, i.jsx)(l.Button, {
+    children: (0, s.jsx)(l.Button, {
       color: l.ButtonColors.BRAND,
-      onClick: p,
+      onClick: g,
       className: d.button,
       children: u.Z.Messages.QUESTS_CLAIM_REWARD
     })
-  }) : I && !g ? (0, i.jsx)("div", {
+  }) : I && !T ? (0, s.jsx)("div", {
     className: d.container,
-    children: (0, i.jsx)(l.Button, {
+    children: (0, s.jsx)(l.Button, {
       color: l.ButtonColors.PRIMARY,
       disabled: !0,
       className: d.button,
       children: u.Z.Messages.QUEST_ACCEPTED
     })
-  }) : (0, i.jsx)("div", {
+  }) : (0, s.jsx)("div", {
     className: d.container,
-    children: (0, i.jsx)(l.Button, {
+    children: (0, s.jsx)(l.Button, {
       color: l.ButtonColors.BRAND,
-      onClick: N,
+      onClick: p,
       className: d.button,
       children: u.Z.Messages.QUESTS_ACCEPT
     })

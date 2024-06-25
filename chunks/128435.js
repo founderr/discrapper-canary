@@ -17,7 +17,7 @@ var s = n(735250),
   I = n(920557),
   T = n(355957);
 
-function N(e) {
+function m(e) {
   let {
     media: t
   } = e;
@@ -29,7 +29,7 @@ function N(e) {
   })
 }
 
-function m(e) {
+function N(e) {
   let {
     children: t,
     onClick: n,
@@ -63,7 +63,7 @@ function h(e) {
   } = e;
   return (0, s.jsxs)("div", {
     className: a()(T.detailsText, r),
-    children: [l ? (0, s.jsx)(m, {
+    children: [l ? (0, s.jsx)(N, {
       onClick: i,
       variant: "text-sm/normal",
       color: "none",
@@ -113,7 +113,7 @@ function C(e) {
       scaleFontToUserSetting: !0,
       children: t.label
     })
-  }, t.presentation) : "textButton" === t.presentation ? (0, s.jsx)(m, {
+  }, t.presentation) : "textButton" === t.presentation ? (0, s.jsx)(N, {
     buttonRef: d,
     onClick: I,
     className: o,
@@ -154,7 +154,7 @@ function S(e) {
     children: (0, s.jsxs)(c.HeadingLevel, {
       children: [(0, s.jsxs)("div", {
         className: T.header,
-        children: [(0, s.jsx)(N, {
+        children: [(0, s.jsx)(m, {
           media: n.question
         }), null != n.promptLabel && (0, s.jsx)(c.Text, {
           variant: "text-sm/normal",

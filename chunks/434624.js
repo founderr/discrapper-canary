@@ -1,6 +1,6 @@
 n.d(t, {
   l: function() {
-    return m
+    return N
   }
 }), n(47120);
 var s = n(735250),
@@ -16,28 +16,28 @@ var s = n(735250),
   _ = n(287151),
   I = n(704963),
   T = n(667671);
-let N = i.memo(function(e) {
+let m = i.memo(function(e) {
     let t, n, {
         useChatFontScaling: i,
         hideEmoji: l,
         emoji: c,
-        className: N,
-        count: m,
+        className: m,
+        count: N,
         me: h,
         me_burst: C,
         burst_count: S,
         burst_colors: A,
-        readOnly: p,
-        isLurking: g,
+        readOnly: g,
+        isLurking: p,
         isGuest: f,
-        isPendingMember: O,
-        type: R
+        isPendingMember: R,
+        type: O
       } = e,
-      M = R === E.O.BURST,
-      x = (0, _.y4)(h, C, R),
+      M = O === E.O.BURST,
+      x = (0, _.y4)(h, C, O),
       v = (0, u.v)(M && null != A ? A : []),
       L = i ? T : I,
-      Z = M ? S : m,
+      Z = M ? S : N,
       P = (0, d.y)(Z, _.aO),
       D = {};
     if (M && null != v) {
@@ -55,9 +55,9 @@ let N = i.memo(function(e) {
       borderColor: n
     };
     return (0, s.jsxs)("div", {
-      className: a()(L.reaction, L.reactionInner, N, {
+      className: a()(L.reaction, L.reactionInner, m, {
         [L.reactionMe]: x,
-        [L.reactionReadOnly]: p && !g && !O && !f
+        [L.reactionReadOnly]: g && !p && !R && !f
       }),
       style: D,
       children: [(0, s.jsx)(o.Z, {
@@ -75,7 +75,7 @@ let N = i.memo(function(e) {
       })]
     })
   }),
-  m = i.memo(function(e) {
+  N = i.memo(function(e) {
     let {
       showImmediate: t,
       reactions: n,
@@ -84,7 +84,7 @@ let N = i.memo(function(e) {
       e && !a && !o && u(() => {
         r(!0)
       })
-    }, [a, o]), I = (0, c.O)(d), T = a && !o || t ? _.le : N;
+    }, [a, o]), I = (0, c.O)(d), T = a && !o || t ? _.le : m;
     return (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)("div", {
         ref: I

@@ -1,10 +1,10 @@
 n.d(t, {
   Z: function() {
-    return g
+    return T
   }
 });
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(481060),
   a = n(194359),
   r = n(906732),
@@ -18,15 +18,15 @@ var i = n(735250),
   I = n(689938),
   m = n(208954);
 
-function g(e) {
+function T(e) {
   let {
     user: t,
     nickname: n,
-    status: g,
-    isFocused: p
-  } = e, N = s.useContext(u.AnalyticsContext), {
-    analyticsLocations: T
-  } = (0, r.ZP)(), C = e => {
+    status: T,
+    isFocused: g
+  } = e, p = i.useContext(u.AnalyticsContext), {
+    analyticsLocations: N
+  } = (0, r.ZP)(), S = e => {
     null == e || e.stopPropagation(), a.Z.addRelationship({
       userId: t.id,
       context: {
@@ -36,44 +36,44 @@ function g(e) {
       friendToken: void 0,
       fromFriendSuggestion: !0
     })
-  }, S = e => {
+  }, C = e => {
     null == e || e.stopPropagation(), o.Z.ignore(t.id)
-  }, A = g === _.Skl.OFFLINE ? _.Skl.UNKNOWN : g;
-  return (0, i.jsx)(E.Z, {
-    isFocused: p,
+  }, A = T === _.Skl.OFFLINE ? _.Skl.UNKNOWN : T;
+  return (0, s.jsx)(E.Z, {
+    isFocused: g,
     user: t,
     onClick: () => (0, c.openUserProfileModal)({
       userId: t.id,
-      sourceAnalyticsLocations: T,
-      analyticsLocation: N.location
+      sourceAnalyticsLocations: N,
+      analyticsLocation: p.location
     }),
     children: e => {
-      let s = (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(d.Z, {
+      let i = (0, s.jsxs)(s.Fragment, {
+        children: [(0, s.jsx)(d.Z, {
           icon: l.CheckmarkLargeIcon,
           actionType: d.Z.ActionTypes.ACCEPT,
           tooltip: I.Z.Messages.FRIEND_REQUEST_ACCEPT,
-          onClick: C,
+          onClick: S,
           shouldHighlight: e
-        }), (0, i.jsx)(d.Z, {
+        }), (0, s.jsx)(d.Z, {
           icon: l.CloseSmallIcon,
           actionType: d.Z.ActionTypes.DENY,
           tooltip: I.Z.Messages.FRIEND_REQUEST_IGNORE,
-          onClick: S,
+          onClick: C,
           shouldHighlight: e
         })]
       });
-      return (0, i.jsxs)("div", {
+      return (0, s.jsxs)("div", {
         className: m.listItemContents,
-        children: [(0, i.jsx)(h.Z, {
+        children: [(0, s.jsx)(h.Z, {
           user: t,
           hovered: e,
           status: A,
           subText: n,
           className: m.__invalid_userInfo
-        }), (0, i.jsx)("div", {
+        }), (0, s.jsx)("div", {
           className: m.actions,
-          children: s
+          children: i
         })]
       })
     }

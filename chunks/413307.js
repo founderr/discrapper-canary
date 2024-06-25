@@ -1,5 +1,5 @@
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(949389),
   a = n(82950),
   r = n(434404),
@@ -9,10 +9,10 @@ var i = n(735250),
 t.Z = e => {
   let {
     guild: t
-  } = e, n = s.useCallback(() => {
+  } = e, n = i.useCallback(() => {
     (0, l.K7)(t.id)
   }, [t.id]);
-  return (0, i.jsx)(a.Z, {
+  return (0, s.jsx)(a.Z, {
     guild: t,
     onDismissed: n,
     onClick: () => r.Z.open(t.id, o.pNK.COMMUNITY),

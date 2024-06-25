@@ -1,51 +1,51 @@
-n.d(t, {
+s.d(t, {
   u: function() {
-    return T
+    return I
   }
 });
-var s = n(735250),
-  i = n(470079),
-  a = n(512722),
-  l = n.n(a),
-  r = n(399606),
-  c = n(481060),
-  o = n(594174),
-  d = n(933970),
-  u = n(340453),
-  E = n(292352),
-  _ = n(689938),
-  h = n(88876);
+var n = s(735250),
+  a = s(470079),
+  i = s(512722),
+  r = s.n(i),
+  l = s(399606),
+  o = s(481060),
+  c = s(594174),
+  E = s(933970),
+  _ = s(340453),
+  u = s(292352),
+  d = s(689938),
+  T = s(88876);
 
-function T(e) {
+function I(e) {
   let {
     user: t
-  } = e, a = (0, r.e7)([o.default], () => o.default.getCurrentUser()), T = i.useCallback(() => {
-    l()(void 0 !== a, "User must be logged in to accept a link request"), (0, c.openModalLazy)(async () => {
+  } = e, i = (0, l.e7)([c.default], () => c.default.getCurrentUser()), I = a.useCallback(() => {
+    r()(void 0 !== i, "User must be logged in to accept a link request"), (0, o.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("50872")]).then(n.bind(n, 442673));
-      return n => (0, s.jsx)(e, {
-        ...n,
-        currentUser: a,
+      } = await Promise.all([s.e("99387"), s.e("50872")]).then(s.bind(s, 442673));
+      return s => (0, n.jsx)(e, {
+        ...s,
+        currentUser: i,
         otherUser: t
       })
     })
-  }, [a, t]);
-  return (0, s.jsxs)("div", {
-    className: h.container,
-    children: [(0, s.jsx)("div", {
-      className: h.details,
-      children: (0, s.jsx)(u.Z, {
+  }, [i, t]);
+  return (0, n.jsxs)("div", {
+    className: T.container,
+    children: [(0, n.jsx)("div", {
+      className: T.details,
+      children: (0, n.jsx)(_.Z, {
         otherUser: t,
-        status: E.ne.ACTIVE
+        status: u.ne.ACTIVE
       })
-    }), (0, s.jsx)("div", {
-      className: h.actions,
-      children: (0, s.jsx)(d.Z, {
-        icon: c.CloseSmallIcon,
-        className: h.__invalid_actionDeny,
-        tooltip: _.Z.Messages.FAMILY_CENTER_LINK_ACTION_DISCONNECT,
-        onClick: T
+    }), (0, n.jsx)("div", {
+      className: T.actions,
+      children: (0, n.jsx)(E.Z, {
+        icon: o.CloseSmallIcon,
+        className: T.__invalid_actionDeny,
+        tooltip: d.Z.Messages.FAMILY_CENTER_LINK_ACTION_DISCONNECT,
+        onClick: I
       })
     })]
   })

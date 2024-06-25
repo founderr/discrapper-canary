@@ -1,64 +1,64 @@
-n(653041);
-var s, i = n(442837),
-  a = n(570140),
-  l = n(381496),
-  r = n(430824);
+s(653041);
+var n, a = s(442837),
+  i = s(570140),
+  r = s(381496),
+  l = s(430824);
 
-function c(e, t, n) {
+function o(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: s,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = s, e
 }
-let o = {},
-  d = () => {
-    o = {
+let c = {},
+  E = () => {
+    c = {
       guildAffinitiesByGuildId: {},
       guildAffinities: [],
       lastFetched: 0
     }
   };
-d();
-class u extends(s = i.ZP.PersistedStore) {
+E();
+class _ extends(n = a.ZP.PersistedStore) {
   initialize(e) {
-    null != e && (o = e), this.waitFor(r.Z)
+    null != e && (c = e), this.waitFor(l.Z)
   }
   getState() {
-    return o
+    return c
   }
   getGuildAffinity(e) {
-    return o.guildAffinitiesByGuildId[e]
+    return c.guildAffinitiesByGuildId[e]
   }
   get affinities() {
-    return o.guildAffinities
+    return c.guildAffinities
   }
   get hasRequestResolved() {
-    return 0 !== o.lastFetched
+    return 0 !== c.lastFetched
   }
 }
-c(u, "displayName", "GuildAffinitiesStore"), c(u, "persistKey", "GuildAffinitiesStore"), t.Z = new u(a.Z, {
+o(_, "displayName", "GuildAffinitiesStore"), o(_, "persistKey", "GuildAffinitiesStore"), t.Z = new _(i.Z, {
   CONNECTION_OPEN: function() {
-    return Date.now() - o.lastFetched > 864e5 && (0, l.j)(), !1
+    return Date.now() - c.lastFetched > 864e5 && (0, r.j)(), !1
   },
   LOAD_GUILD_AFFINITIES_SUCCESS: function(e) {
     let {
       guildAffinities: t
     } = e;
-    o.guildAffinities = [], o.guildAffinitiesByGuildId = {}, o.lastFetched = Date.now(), t.forEach((e, t) => {
+    c.guildAffinities = [], c.guildAffinitiesByGuildId = {}, c.lastFetched = Date.now(), t.forEach((e, t) => {
       let {
-        affinity: n,
-        guild_id: s
-      } = e, i = {
-        score: n,
-        guildId: s,
+        affinity: s,
+        guild_id: n
+      } = e, a = {
+        score: s,
+        guildId: n,
         index: t
       };
-      o.guildAffinitiesByGuildId[s] = i, o.guildAffinities.push(i)
+      c.guildAffinitiesByGuildId[n] = a, c.guildAffinities.push(a)
     })
   },
   LOGOUT: function() {
-    d()
+    E()
   }
 })

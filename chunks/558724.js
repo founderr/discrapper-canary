@@ -15,7 +15,7 @@ var o = n(570140),
   I = n(594174),
   T = n(981631);
 
-function N(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -23,20 +23,20 @@ function N(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let m = {
+let N = {
     hiddenSurveys: {},
     surveyOverride: null,
     lastFetched: null,
     lastSeen: null
   },
-  h = m,
+  h = N,
   C = {},
   S = null,
   A = 864e5;
 (l = s || (s = {})).IS_OWNER = "is_owner", l.IS_ADMIN = "is_admin", l.IS_COMMUNITY = "is_community", l.GUILD_SIZE = "guild_size", l.IS_HUB = "is_hub", l.IS_VIEWING = "is_viewing", l.GUILD_PERMISSIONS = "guild_permissions", l.GUILD_SIZE_ALL = "guild_size_all";
-let p = new Set(Object.values(s));
+let g = new Set(Object.values(s));
 
-function g(e) {
+function p(e) {
   return function(e) {
     return !0
   }(e) && function(e) {
@@ -47,7 +47,7 @@ function g(e) {
     } = e;
     if (0 === t.length) return !0;
     for (let e of t)
-      if (!p.has(e)) return !1;
+      if (!g.has(e)) return !1;
     let i = t.includes("guild_size_all"),
       l = !0;
     for (let r of Object.values(d.Z.getGuilds())) {
@@ -76,9 +76,9 @@ function g(e) {
         d = E.Z.can(T.Plq.ADMINISTRATOR, r);
       if (t.includes("is_owner") && !c || t.includes("is_admin") && !d) continue;
       null == (C = null != C ? C : {})[e.key] && (C[e.key] = e);
-      let N = _.Z.getGuildId(),
-        m = null != N && N === r.id;
-      if (!t.includes("is_viewing") || !!m) {
+      let m = _.Z.getGuildId(),
+        N = null != m && m === r.id;
+      if (!t.includes("is_viewing") || !!N) {
         if (!i) return !0
       }
     }
@@ -91,16 +91,16 @@ function f(e) {
     survey: t
   } = e;
   if (h.lastFetched = Date.now(), null == h.hiddenSurveys && (h.hiddenSurveys = {}), null != t && null == h.hiddenSurveys[t.key]) {
-    if (!g(t)) return;
+    if (!p(t)) return;
     S = t
   }
 }
 
-function O() {
-  if (null != S && (g(S) || (S = null, 0))) return !1;
+function R() {
+  if (null != S && (p(S) || (S = null, 0))) return !1;
   ! function() {
     let e = Object.values(C = null != C ? C : {})[0];
-    if (null != e && g(e)) {
+    if (null != e && p(e)) {
       f({
         type: "SURVEY_FETCHED",
         survey: e
@@ -111,9 +111,9 @@ function O() {
     S = null
   }()
 }
-class R extends(i = r.ZP.PersistedStore) {
+class O extends(i = r.ZP.PersistedStore) {
   initialize(e) {
-    h = null != e ? e : m, this.syncWith([_.Z], O)
+    h = null != e ? e : N, this.syncWith([_.Z], R)
   }
   getState() {
     return h
@@ -128,7 +128,7 @@ class R extends(i = r.ZP.PersistedStore) {
     return h.lastSeen
   }
 }
-N(R, "displayName", "SurveyStore"), N(R, "persistKey", "SurveyStore"), N(R, "migrations", [e => {
+m(O, "displayName", "SurveyStore"), m(O, "persistKey", "SurveyStore"), m(O, "migrations", [e => {
   let t = {
     ...e
   };
@@ -145,7 +145,7 @@ N(R, "displayName", "SurveyStore"), N(R, "persistKey", "SurveyStore"), N(R, "mig
     ...e,
     hiddenSurveys: null !== (t = e.hiddenSurveys) && void 0 !== t ? t : {}
   }
-}]), t.Z = new R(o.Z, {
+}]), t.Z = new O(o.Z, {
   CONNECTION_OPEN: function() {
     var e;
     if (!(null != h.lastFetched && Date.now() - (null !== (e = h.lastFetched) && void 0 !== e ? e : 0) < A) || null != h.surveyOverride)(0, c.wk)(h.surveyOverride, !0)

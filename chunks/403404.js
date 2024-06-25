@@ -21,14 +21,14 @@ function u(e) {
     initialSelectedApplicationId: _,
     initialSlide: I = o.ag.DIRECTORY,
     enableSelectedTextChannelInvite: T = !1,
-    analyticsLocations: N,
-    opensAppLauncherModal: m = !1
-  } = e, h = N.length > 0 ? N[N.length - 1] : "open-activity-shelf", {
+    analyticsLocations: m,
+    opensAppLauncherModal: N = !1
+  } = e, h = m.length > 0 ? m[m.length - 1] : "open-activity-shelf", {
     enabled: C
   } = l.m1.getCurrentConfig({
     location: h
   });
-  if (m && C) {
+  if (N && C) {
     null != t && (0, a.Z)({
       openInPopout: E,
       channel: t,
@@ -50,7 +50,7 @@ function u(e) {
       initialSlide: I,
       initialSelectedApplicationId: _,
       enableSelectedTextChannelInvite: T,
-      analyticsLocations: N
+      analyticsLocations: m
     })
   }, {
     modalKey: o.AC,

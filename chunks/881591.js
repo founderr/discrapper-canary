@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return b
+    return y
   }
 }), n(47120);
 var s = n(735250),
@@ -16,17 +16,17 @@ var s = n(735250),
   _ = n(481060),
   I = n(239091),
   T = n(904245),
-  N = n(43267),
-  m = n(933557),
+  m = n(43267),
+  N = n(933557),
   h = n(822893),
   C = n(329461),
   S = n(831267),
   A = n(203965),
-  p = n(570907),
-  g = n(294218),
+  g = n(570907),
+  p = n(294218),
   f = n(703656),
-  O = n(695346),
-  R = n(592125),
+  R = n(695346),
+  O = n(592125),
   M = n(430824),
   x = n(375954),
   v = n(346656),
@@ -36,14 +36,14 @@ var s = n(735250),
   D = n(689938),
   j = n(111212),
   U = n(174766);
-let y = {
+let b = {
   offset: {
     left: 4,
     right: -12
   }
 };
 
-function b(e) {
+function y(e) {
   let {
     setTab: t,
     closePopout: n
@@ -96,12 +96,12 @@ function B(e) {
     {
       message: E,
       channel: S
-    } = (0, p.p)(l),
-    A = R.Z.getChannel(S.id),
-    L = (0, m.ZP)(A, !0),
+    } = (0, g.p)(l),
+    A = O.Z.getChannel(S.id),
+    L = (0, N.ZP)(A, !0),
     Z = null != L ? L : S.name,
-    b = (0, d.e7)([M.Z], () => M.Z.getGuild(null == S ? void 0 : S.guild_id)),
-    B = null != S ? (0, N.x)(S) : null,
+    y = (0, d.e7)([M.Z], () => M.Z.getGuild(null == S ? void 0 : S.guild_id)),
+    B = null != S ? (0, m.x)(S) : null,
     k = null;
   return null != l.dueAt && (l.dueAt > new Date ? (t = "text-muted", k = D.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({
     duration: u().duration(l.dueAt.getTime() - Date.now(), "millisecond").humanize()
@@ -114,9 +114,9 @@ function B(e) {
       children: [(0, s.jsxs)("div", {
         children: [(0, s.jsxs)("div", {
           className: j.messageInfo,
-          children: [null != b ? (0, s.jsx)(v.Z, {
+          children: [null != y ? (0, s.jsx)(v.Z, {
             className: j.guildIcon,
-            guild: b,
+            guild: y,
             size: v.Z.Sizes.SMALL,
             active: !0
           }) : (0, s.jsx)(_.Avatar, {
@@ -180,13 +180,13 @@ function B(e) {
       className: a()(U.messageContainer, j.unloadedMessage, {
         [j.disabledMessage]: r
       }),
-      children: [(0, s.jsx)(g.Z, {
+      children: [(0, s.jsx)(p.Z, {
         message: E,
         channel: S,
         className: U.message,
-        compact: O.jU.getSetting(),
+        compact: R.jU.getSetting(),
         animateAvatar: !1,
-        focusProps: y,
+        focusProps: b,
         trackAnnouncementViews: !0
       }, E.id), (0, s.jsxs)("div", {
         className: j.actions,

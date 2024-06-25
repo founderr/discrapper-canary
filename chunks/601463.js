@@ -3,8 +3,8 @@ n.d(t, {
     return d
   }
 });
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(920906),
   a = n(481060),
   r = n(532490),
@@ -21,33 +21,33 @@ function d(e) {
     windowWidth: h,
     transition: _,
     brandPrimaryColor: I
-  } = e, m = s.useMemo(() => (h - E) / 2, [E, h]);
-  return (0, i.jsxs)("div", {
+  } = e, m = i.useMemo(() => (h - E) / 2, [E, h]);
+  return (0, s.jsxs)("div", {
     className: u.sidebarContent,
-    children: [_((e, t) => t && (0, i.jsx)(l.animated.div, {
+    children: [_((e, t) => t && (0, s.jsx)(l.animated.div, {
       className: u.sidebarLeftDecorationContainer,
       style: {
         opacity: e.opacity,
         transform: e.opacity.to([0, 1], [40, 0]).to(e => "translateY(".concat(e, "px)")),
         width: m
       },
-      children: (0, i.jsxs)("div", {
+      children: (0, s.jsxs)("div", {
         className: u.sidebarLeftDecoration,
         style: {
           width: m
         },
-        children: [(0, i.jsx)(a.Heading, {
+        children: [(0, s.jsx)(a.Heading, {
           variant: "heading-xxl/medium",
           children: c.Z.Messages.CLAN_SETUP_SIGN_TITLE
-        }), (0, i.jsx)(a.Text, {
+        }), (0, s.jsx)(a.Text, {
           variant: "text-md/normal",
           color: "text-muted",
           children: c.Z.Messages.CLAN_SETUP_SIGN_SUBTITLE
         })]
       })
-    })), (0, i.jsx)("div", {
+    })), (0, s.jsx)("div", {
       className: u.charterScrollContainer,
-      children: (0, i.jsx)(o.Z, {
+      children: (0, s.jsx)(o.Z, {
         guildId: t,
         canSignCharter: null != d,
         onSignCharter: () => null == d ? void 0 : d(!n),

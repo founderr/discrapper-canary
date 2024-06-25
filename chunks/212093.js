@@ -18,7 +18,7 @@ n.d(t, {
     return function e(t, n) {
       let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         {
-          categoryId: i = p.Hk,
+          categoryId: i = g.Hk,
           preferredLocale: s,
           offset: d,
           length: m,
@@ -42,7 +42,7 @@ n.d(t, {
           categoryId: s,
           tag: a
         }), d = o.location.search;
-        (!(null != d && d.length > 0 && d.startsWith("?")) || d.startsWith("?") && d.split("?")[1] !== c) && (0, u.uL)(g.Z5c.GUILD_DISCOVERY, {
+        (!(null != d && d.length > 0 && d.startsWith("?")) || d.startsWith("?") && d.split("?")[1] !== c) && (0, u.uL)(p.Z5c.GUILD_DISCOVERY, {
           search: c
         })
       }({
@@ -54,13 +54,13 @@ n.d(t, {
         tag: C
       }), o.Z.dispatch({
         type: "GUILD_DISCOVERY_SEARCH_FETCH_START",
-        section: g.Lcj.SEARCH,
+        section: p.Lcj.SEARCH,
         query: t,
         categoryId: i
       });
       let _ = Object.assign({}, E, n.filters),
         I = Object.keys(_).map(e => "".concat(e).concat(_[e]));
-      i !== p.Hk && I.push("(primary_category_id=".concat(i, " OR categories.id=").concat(i, ")"));
+      i !== g.Hk && I.push("(primary_category_id=".concat(i, " OR categories.id=").concat(i, ")"));
       let N = I.join(" AND ");
       try {
         let r = f.search(t, {
@@ -71,7 +71,7 @@ n.d(t, {
             restrictSearchableAttributes: ["name", "description", "keywords", "categories.name", "categories.name_localizations.".concat(s), "primary_category.name", "primary_category.name_localizations.".concat(s), "vanity_url_code"]
           }),
           u = a.tn.get({
-            url: g.ANM.GUILD_DISCOVERY_VALID_TERM,
+            url: p.ANM.GUILD_DISCOVERY_VALID_TERM,
             query: {
               term: t
             },
@@ -88,7 +88,7 @@ n.d(t, {
           }] = e;
           o.Z.dispatch({
             type: "GUILD_DISCOVERY_SEARCH_FETCH_SUCCESS",
-            section: g.Lcj.SEARCH,
+            section: p.Lcj.SEARCH,
             query: t,
             categoryId: i,
             guilds: s ? [...n.map(e => ({
@@ -97,14 +97,14 @@ n.d(t, {
             }))] : [],
             offset: d,
             limit: m,
-            total: s ? Math.min(l, p.lA) : 0
+            total: s ? Math.min(l, g.lA) : 0
           })
         }).catch(s => {
           s.body.retry_after > 0 && f === c.ZP.getSearchIndex() ? setTimeout(() => {
             e(t, n, l)
           }, s.body.retry_after * h.Z.Millis.SECOND) : o.Z.dispatch({
             type: "GUILD_DISCOVERY_SEARCH_FETCH_FAILURE",
-            section: g.Lcj.SEARCH,
+            section: p.Lcj.SEARCH,
             categoryId: i,
             query: t
           })
@@ -112,7 +112,7 @@ n.d(t, {
       } catch (e) {
         o.Z.dispatch({
           type: "GUILD_DISCOVERY_SEARCH_FETCH_FAILURE",
-          section: g.Lcj.SEARCH,
+          section: p.Lcj.SEARCH,
           categoryId: i,
           query: t
         })
@@ -136,8 +136,8 @@ var l = n(807034),
   c = n(683301),
   d = n(230307),
   h = n(70956),
-  g = n(981631),
-  p = n(731455);
+  p = n(981631),
+  g = n(731455);
 let m = window.GLOBAL_ENV.ALGOLIA_KEY,
   C = "production" === window.GLOBAL_ENV.PROJECT_ENV ? "prod_discoverable_guilds" : "staging" === window.GLOBAL_ENV.PROJECT_ENV ? "stg_discoverable_guilds" : "dev_discoverable_guilds",
   E = {
@@ -168,7 +168,7 @@ function _(e, t) {
         facets: ["categories.id"]
       }),
       l = a.tn.get({
-        url: g.ANM.GUILD_DISCOVERY_VALID_TERM,
+        url: p.ANM.GUILD_DISCOVERY_VALID_TERM,
         query: {
           term: e
         },
@@ -206,7 +206,7 @@ async function I(e) {
     let {
       guilds: t
     } = (await a.tn.get({
-      url: g.ANM.GUILD_DISCOVERY,
+      url: p.ANM.GUILD_DISCOVERY,
       query: r.stringify({
         categories: [e]
       }),
@@ -227,22 +227,22 @@ async function I(e) {
 async function N(e, t) {
   o.Z.dispatch({
     type: "GUILD_DISCOVERY_FETCH_START",
-    section: g.Lcj.FEATURED
+    section: p.Lcj.FEATURED
   });
   try {
     let n = await a.tn.get({
-      url: g.ANM.GUILD_DISCOVERY,
+      url: p.ANM.GUILD_DISCOVERY,
       query: r.stringify({
         offset: e,
         limit: t
       }),
       oldFormErrors: !0
     });
-    T(n.body, g.Lcj.FEATURED)
+    L(n.body, p.Lcj.FEATURED)
   } catch (e) {
     o.Z.dispatch({
       type: "GUILD_DISCOVERY_FETCH_FAILURE",
-      section: g.Lcj.FEATURED
+      section: p.Lcj.FEATURED
     })
   }
 }
@@ -250,28 +250,28 @@ async function Z() {
   let e = Object.keys(d.Z.applicationStatistics);
   o.Z.dispatch({
     type: "GUILD_DISCOVERY_FETCH_START",
-    section: g.Lcj.GAMES_YOU_PLAY
+    section: p.Lcj.GAMES_YOU_PLAY
   });
   try {
     let t = await a.tn.get({
-      url: g.ANM.GUILD_DISCOVERY,
+      url: p.ANM.GUILD_DISCOVERY,
       query: r.stringify({
         application_ids: e
       }),
       oldFormErrors: !0
     });
-    T(t.body, g.Lcj.GAMES_YOU_PLAY)
+    L(t.body, p.Lcj.GAMES_YOU_PLAY)
   } catch (e) {
     o.Z.dispatch({
       type: "GUILD_DISCOVERY_FETCH_FAILURE",
-      section: g.Lcj.GAMES_YOU_PLAY
+      section: p.Lcj.GAMES_YOU_PLAY
     })
   }
 }
 
 function S() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  e && (0, u.uL)(g.Z5c.GUILD_DISCOVERY), o.Z.dispatch({
+  e && (0, u.uL)(p.Z5c.GUILD_DISCOVERY), o.Z.dispatch({
     type: "GUILD_DISCOVERY_CLEAR_SEARCH"
   })
 }
@@ -285,7 +285,7 @@ function x(e) {
   })
 }
 
-function T(e, t) {
+function L(e, t) {
   let {
     offset: n,
     limit: l,

@@ -1,12 +1,12 @@
 n.d(t, {
   Bj: function() {
-    return s
+    return i
   },
   ZP: function() {
-    return L
+    return O
   }
 }), n(47120);
-var i, s, l, a, r = n(735250),
+var s, i, l, a, r = n(735250),
   o = n(470079),
   c = n(920906),
   u = n(143927),
@@ -16,56 +16,56 @@ var i, s, l, a, r = n(735250),
   _ = n(638730),
   I = n(970606),
   m = n(945124),
-  g = n(231467),
-  p = n(931515),
-  N = n(207796),
-  T = n(526282),
-  C = n(777734),
-  S = n(976757),
+  T = n(231467),
+  g = n(931515),
+  p = n(207796),
+  N = n(526282),
+  S = n(777734),
+  C = n(976757),
   A = n(981631),
   f = n(689938),
   Z = n(920040);
-let v = 40;
+let L = 40;
 
-function L(e) {
+function O(e) {
   let {
     width: t,
     isAnimating: n,
-    variant: i = "default",
-    onScroll: s
+    variant: s = "default",
+    onScroll: i
   } = e, {
     loaded: l,
     clans: a,
-    searchResult: L,
-    searchCriteria: O
-  } = (0, p.Qc)(), R = (0, N.GN)(e => e.selectedTraits, u.Z), x = (0, E.Z)(L), [M, P] = o.useState(0), D = o.useMemo(() => ({
-    height: M
-  }), [M]), b = (0, c.useSpring)({
-    opacity: M > 0 ? 1 : 0,
+    searchResult: O,
+    searchCriteria: v
+  } = (0, g.Qc)(), R = (0, p.GN)(e => e.selectedTraits, u.Z), P = (0, E.Z)(O), [x, M] = o.useState(0), D = o.useMemo(() => ({
+    height: x
+  }), [x]), b = (0, c.useSpring)({
+    opacity: x > 0 ? 1 : 0,
     config: c.config.stiff
-  }), y = "upsell" === i, j = Math.min(null != t ? t : 1024, 2e3), U = o.useMemo(() => {
+  }), y = "upsell" === s, j = Math.min(null != t ? t : 1024, 2e3), U = o.useMemo(() => {
     let e = j / 256,
       t = j / 376,
       n = j / e,
-      i = j / t;
-    return i > 360 ? Math.floor(t - (t - e) / 2) : n < 240 ? Math.max(e, t) : e
+      s = j / t;
+    return s > 360 ? Math.floor(t - (t - e) / 2) : n < 240 ? Math.max(e, t) : e
   }, [j]), G = o.useCallback(e => {
     if (null == e) {
-      P(0);
+      M(0);
       return
     }
-    P(e.getBoundingClientRect().y + 8 + 400 + 64)
+    M(e.getBoundingClientRect().y + 8 + 400 + 64)
   }, []), w = (0, h.y)(G), k = o.useCallback(e => {
-    G(w.current), null != e && (null == s || s(e))
-  }, [G, w, s]), B = (0, _.h)(k, 10, [k], {
+    G(w.current), null != e && (null == i || i(e))
+  }, [G, w, i]), B = (0, _.h)(k, 10, [k], {
     leading: !0,
     trailing: !0
   });
   o.useEffect(() => {
-    if (null != L && !!(0, S.Pw)(L))(!(null != x && (0, S.Pw)(x)) || !(x.loadedAt >= L.loadedAt)) && (0, I.Oe)(L.items.map(e => e.id), "top_picks", O)
-  }, [O, L, x, k, n]), o.useEffect(() => {
-    !n && (0, S.Pw)(L) && setTimeout(() => k())
-  }, [k, n, L]);
+    if (null != O && !!(0, C.Pw)(O))(!(null != P && (0, C.Pw)(P)) || !(P.loadedAt >= O.loadedAt)) && (0, I.Oe)(O.items.map(e => e.id), "top_picks", v)
+  }, [v, O, P, k, n]), o.useEffect(() => {
+    !n && (0, C.Pw)(O) && setTimeout(() => k())
+  }, [k, n, O]);
   let H = o.useMemo(() => (function(e, t, n) {
       if (null == e) return [];
       switch (n) {
@@ -78,7 +78,7 @@ function L(e) {
           }, {
             section: "top_picks",
             items: e.slice(0, t),
-            sectionHeight: v,
+            sectionHeight: L,
             itemHeight: 400,
             props: {
               className: Z.glassBackgroundTop
@@ -98,52 +98,52 @@ function L(e) {
           return [{
             section: "top_picks",
             items: e.slice(0, t),
-            sectionHeight: v,
+            sectionHeight: L,
             itemHeight: 400,
             header: f.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
             subtitle: f.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
           }, {
             section: "other_guilds",
             items: e.slice(t),
-            sectionHeight: v,
+            sectionHeight: L,
             itemHeight: 400,
             header: f.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
           }];
         default:
           return []
       }
-    })(a, U, i), [a, U, i]),
-    V = o.useMemo(() => new Set(O.games), [O.games]),
-    F = o.useCallback((e, t, n, i) => {
-      var s;
+    })(a, U, s), [a, U, s]),
+    V = o.useMemo(() => new Set(v.games), [v.games]),
+    F = o.useCallback((e, t, n, s) => {
+      var i;
       let {
         items: l,
         section: a
       } = H[e];
       if ("upsell" === a) return null;
       let o = l[t];
-      return (0, r.jsx)(g.ZP, {
+      return (0, r.jsx)(T.ZP, {
         clan: o,
-        affinity: null !== (s = o.affininty) && void 0 !== s ? s : (0, m.y)(o, O),
+        affinity: null !== (i = o.affininty) && void 0 !== i ? i : (0, m.y)(o, v),
         traitsToHighlight: R,
         className: Z.card,
         style: n,
         source: A.jXE.DISCOVER_SEARCH,
         prioritizedGameIds: V,
         onlyAnimateIconOnHover: !0
-      }, i)
-    }, [O, H, R, V]),
+      }, s)
+    }, [v, H, R, V]),
     Y = o.useCallback((e, t) => {
       let {
         header: n,
-        subtitle: i,
-        section: s
+        subtitle: s,
+        section: i
       } = H[e];
-      switch (s) {
+      switch (i) {
         case "upsell":
-          return (0, r.jsx)(T.Z, {});
+          return (0, r.jsx)(N.Z, {});
         case "top_picks":
-          return (0, r.jsx)(C.Z, {
+          return (0, r.jsx)(S.Z, {
             ref: w,
             icon: (0, r.jsx)(d.TrophyIcon, {
               color: "currentColor"
@@ -154,13 +154,13 @@ function L(e) {
               position: "absolute"
             },
             title: n,
-            subtitle: i
+            subtitle: s
           });
         default:
           if (null === n) return null;
-          return (0, r.jsx)(C.Z, {
+          return (0, r.jsx)(S.Z, {
             title: n,
-            subtitle: i,
+            subtitle: s,
             style: {
               ...t,
               position: "absolute"
@@ -190,7 +190,7 @@ function L(e) {
         columns: U,
         itemGutter: 16,
         paddingHorizontal: 16,
-        paddingVertical: "upsell" === i ? 64 : 0,
+        paddingVertical: "upsell" === s ? 64 : 0,
         removeEdgeItemGutters: !0,
         renderItem: F,
         renderSection: Y,
@@ -207,4 +207,4 @@ function L(e) {
       })]
     })
   }) : null
-}(l = i || (i = {})).UPSELL = "upsell", l.TOP_PICKS = "top_picks", l.OTHER_GUILDS = "other_guilds", (a = s || (s = {})).DEFAULT = "default", a.UPSELL = "upsell"
+}(l = s || (s = {})).UPSELL = "upsell", l.TOP_PICKS = "top_picks", l.OTHER_GUILDS = "other_guilds", (a = i || (i = {})).DEFAULT = "default", a.UPSELL = "upsell"

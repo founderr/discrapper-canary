@@ -1,6 +1,6 @@
 n(47120);
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(120356),
   a = n.n(l),
   r = n(143927),
@@ -13,44 +13,44 @@ var i = n(735250),
   _ = n(777734),
   I = n(976757),
   m = n(981631),
-  g = n(920040);
-t.Z = s.memo(function(e) {
+  T = n(920040);
+t.Z = i.memo(function(e) {
   let {
     title: t,
     subtitle: n,
     className: l
   } = e, {
-    loaded: p,
-    clans: N,
-    searchResult: T,
-    searchCriteria: C
-  } = (0, E.Qc)(20), S = (0, h.GN)(e => e.selectedTraits, r.Z), A = s.useMemo(() => new Set(C.games), [C.games]), f = s.useCallback(e => {
+    loaded: g,
+    clans: p,
+    searchResult: N,
+    searchCriteria: S
+  } = (0, E.Qc)(20), C = (0, h.GN)(e => e.selectedTraits, r.Z), A = i.useMemo(() => new Set(S.games), [S.games]), f = i.useCallback(e => {
     var t;
-    return (0, i.jsx)(d.ZP, {
+    return (0, s.jsx)(d.ZP, {
       clan: e,
-      className: g.card,
-      affinity: null !== (t = e.affininty) && void 0 !== t ? t : (0, u.y)(e, C),
-      traitsToHighlight: S,
+      className: T.card,
+      affinity: null !== (t = e.affininty) && void 0 !== t ? t : (0, u.y)(e, S),
+      traitsToHighlight: C,
       source: m.jXE.DISCOVER_SEARCH,
       prioritizedGameIds: A,
       onlyAnimateIconOnHover: !0
     }, e.id)
-  }, [C, S, A]), Z = s.useMemo(() => null != T && (0, I.Pw)(T) ? N : [], [N, T]), v = s.useCallback(e => {
-    e && Z.length > 0 && (0, c.Oe)(Z.map(e => e.id), "top_picks", C)
-  }, [Z, C]);
-  return 0 !== N.length && p ? (0, i.jsx)(o.$, {
-    onChange: v,
+  }, [S, C, A]), Z = i.useMemo(() => null != N && (0, I.Pw)(N) ? p : [], [p, N]), L = i.useCallback(e => {
+    e && Z.length > 0 && (0, c.Oe)(Z.map(e => e.id), "top_picks", S)
+  }, [Z, S]);
+  return 0 !== p.length && g ? (0, s.jsx)(o.$, {
+    onChange: L,
     threshold: .25,
-    children: (0, i.jsxs)("div", {
-      className: a()(g.previewListContainer, l),
-      children: [(0, i.jsx)("div", {
-        className: g.previewListSection,
-        children: (0, i.jsx)(_.Z, {
+    children: (0, s.jsxs)("div", {
+      className: a()(T.previewListContainer, l),
+      children: [(0, s.jsx)("div", {
+        className: T.previewListSection,
+        children: (0, s.jsx)(_.Z, {
           title: t,
           subtitle: n
         })
-      }), (0, i.jsx)("div", {
-        className: g.previewList,
+      }), (0, s.jsx)("div", {
+        className: T.previewList,
         children: Z.map(e => f(e))
       })]
     })

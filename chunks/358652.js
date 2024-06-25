@@ -5,12 +5,12 @@ var l, i, s, r, a = n(442837),
   c = n(251625),
   d = n(592125),
   h = n(306680),
-  g = n(944486),
-  p = n(55589);
+  p = n(944486),
+  g = n(55589);
 let m = [];
 
 function C() {
-  let e = p.Z.getPrivateChannelIds().filter(e => h.ZP.getMentionCount(e) > 0);
+  let e = g.Z.getPrivateChannelIds().filter(e => h.ZP.getMentionCount(e) > 0);
   return e.length > 20 && (e.length = 20), !(0, c.EF)(e, m) && (m = e, !0)
 }
 
@@ -26,7 +26,7 @@ function f(e) {
 }
 class _ extends(l = a.ZP.Store) {
   initialize() {
-    this.waitFor(p.Z, d.Z, g.Z, h.ZP)
+    this.waitFor(g.Z, d.Z, p.Z, h.ZP)
   }
   getUnreadPrivateChannelIds() {
     return m
@@ -57,7 +57,7 @@ r = "PrivateChannelReadStateStore", (s = "displayName") in(i = _) ? Object.defin
     return !!(null != n && (0, u.hv)(n.type)) && C()
   },
   WINDOW_FOCUS: function() {
-    let e = d.Z.getChannel(g.Z.getChannelId());
+    let e = d.Z.getChannel(p.Z.getChannelId());
     return !!(null != e && (0, u.hv)(e.type)) && C()
   },
   CHANNEL_CREATE: function(e) {

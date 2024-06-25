@@ -1,5 +1,5 @@
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(949389),
   a = n(63063),
   r = n(82950),
@@ -9,10 +9,10 @@ var i = n(735250),
 t.Z = e => {
   let {
     guild: t
-  } = e, n = s.useCallback(() => {
+  } = e, n = i.useCallback(() => {
     (0, l.xm)(t.id)
   }, [t.id]);
-  return (0, i.jsx)(r.Z, {
+  return (0, s.jsx)(r.Z, {
     guild: t,
     onDismissed: n,
     message: c.Z.Messages.NOTICE_CHANNEL_MAX_MEMBERS_CAP_REACHED_MESSAGE.format({

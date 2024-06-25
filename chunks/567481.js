@@ -1,7 +1,7 @@
 n(47120);
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
   l = n(570140),
   a = n(988298),
   r = n(447543),
@@ -14,9 +14,9 @@ var s = n(481060),
   _ = n(452426),
   I = n(852926),
   m = n(186901),
-  g = n(981631);
+  T = n(981631);
 t.Z = {
-  [g.Etm.SET_OVERLAY_LOCKED]: {
+  [T.Etm.SET_OVERLAY_LOCKED]: {
     scope: m.lH,
     validation: e => (0, _.Z)(e).required().keys({
       locked: e.boolean().required(),
@@ -29,19 +29,19 @@ t.Z = {
           pid: n
         },
         socket: {
-          application: i
+          application: s
         }
       } = e;
-      if (null == i.id) throw new E.Z({
-        errorCode: g.lTL.INVALID_COMMAND
+      if (null == s.id) throw new E.Z({
+        errorCode: T.lTL.INVALID_COMMAND
       }, "No application.");
       o.Z.setLocked(t, n)
     }
   },
-  [g.Etm.OPEN_OVERLAY_ACTIVITY_INVITE]: {
+  [T.Etm.OPEN_OVERLAY_ACTIVITY_INVITE]: {
     scope: m.lH,
     validation: e => (0, _.Z)(e).required().keys({
-      type: e.number().required().valid([g.mFx.JOIN]),
+      type: e.number().required().valid([T.mFx.JOIN]),
       pid: e.number().min(0).required()
     }),
     handler(e) {
@@ -49,27 +49,27 @@ t.Z = {
         socket: t,
         args: {
           type: n,
-          pid: i
+          pid: s
         }
-      } = e, s = t.application.id;
-      if (null == s) throw new E.Z({
-        errorCode: g.lTL.INVALID_COMMAND
+      } = e, i = t.application.id;
+      if (null == i) throw new E.Z({
+        errorCode: T.lTL.INVALID_COMMAND
       }, "No application.");
-      let l = u.Z.getApplicationActivity(s);
+      let l = u.Z.getApplicationActivity(i);
       if (null == l || null == l.secrets || !(0, h.t9)(n, l.party, l.secrets)) throw new E.Z({
-        errorCode: g.lTL.NO_ELIGIBLE_ACTIVITY
+        errorCode: T.lTL.NO_ELIGIBLE_ACTIVITY
       }, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
       let {
         lock: r
-      } = (0, I.s0)(i), o = (0, c.Z)(l, d.Z);
+      } = (0, I.s0)(s), o = (0, c.Z)(l, d.Z);
       return (0, a.h7)(l, o).then(() => {
         if (r(), o) throw new E.Z({
-          errorCode: g.lTL.NO_ELIGIBLE_ACTIVITY
+          errorCode: T.lTL.NO_ELIGIBLE_ACTIVITY
         }, "No eligible activity for application. Ensure user does have have privacy enabled.")
       })
     }
   },
-  [g.Etm.OPEN_OVERLAY_GUILD_INVITE]: {
+  [T.Etm.OPEN_OVERLAY_GUILD_INVITE]: {
     scope: m.lH,
     validation: e => (0, _.Z)(e).required().keys({
       code: e.string().required(),
@@ -81,36 +81,36 @@ t.Z = {
           code: t,
           pid: n
         },
-        socket: i
+        socket: s
       } = e;
-      if (null == i.application.id) throw new E.Z({
-        errorCode: g.lTL.INVALID_COMMAND
+      if (null == s.application.id) throw new E.Z({
+        errorCode: T.lTL.INVALID_COMMAND
       }, "No application.");
       return r.Z.resolveInvite(t, "Game SDK").then(e => {
         let {
           invite: t,
-          code: i
+          code: s
         } = e;
         if (null == t) throw new E.Z({
-          errorCode: g.lTL.INVALID_INVITE
-        }, "Invalid invite id: ".concat(i));
+          errorCode: T.lTL.INVALID_INVITE
+        }, "Invalid invite id: ".concat(s));
         let {
-          context: s,
+          context: i,
           lock: a
         } = (0, I.s0)(n);
         return new Promise(e => {
           l.Z.dispatch({
             type: "INVITE_MODAL_OPEN",
             invite: t,
-            code: i,
-            context: s,
+            code: s,
+            context: i,
             resolve: e
           })
         }).then(a)
       })
     }
   },
-  [g.Etm.OPEN_OVERLAY_VOICE_SETTINGS]: {
+  [T.Etm.OPEN_OVERLAY_VOICE_SETTINGS]: {
     scope: m.lH,
     validation: e => (0, _.Z)(e).required().keys({
       pid: e.number().min(0).required()
@@ -123,17 +123,17 @@ t.Z = {
         socket: l
       } = e, a = l.application.id;
       if (null == a) throw new E.Z({
-        errorCode: g.lTL.INVALID_COMMAND
+        errorCode: T.lTL.INVALID_COMMAND
       }, "No application.");
       let {
         lock: r
       } = (0, I.s0)(t);
       return new Promise(e => {
-        (0, s.openModalLazy)(async () => {
+        (0, i.openModalLazy)(async () => {
           let {
             default: t
           } = await Promise.all([n.e("49237"), n.e("99387"), n.e("84518")]).then(n.bind(n, 344516));
-          return n => (0, i.jsx)(t, {
+          return n => (0, s.jsx)(t, {
             ...n,
             mediaEngineContext: a,
             title: l.application.name,

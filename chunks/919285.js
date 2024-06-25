@@ -3,9 +3,9 @@ n.d(t, {
     return u
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(82950),
+var i = n(82950),
   l = n(434404),
   a = n(929507),
   r = n(981631),
@@ -16,7 +16,7 @@ function u(e) {
   let {
     guild: t
   } = e, n = () => a.Z.dismissNotice(t.id);
-  return (0, i.jsx)(s.Z, {
+  return (0, s.jsx)(i.Z, {
     guild: t,
     onDismissed: n,
     cta: o.Z.Messages.CHECK_IT_OUT,

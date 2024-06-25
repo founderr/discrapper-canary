@@ -3,8 +3,8 @@ n.d(t, {
     return u
   }
 });
-var i = n(317381),
-  s = n(573979),
+var s = n(317381),
+  i = n(573979),
   l = n(42352),
   a = n(886355),
   r = n(238679),
@@ -15,14 +15,14 @@ async function u(e, t, n) {
   switch (t) {
     case o.zMe.ACTIVITY_PIP_MODE_UPDATE: {
       let t = null === (u = e.application) || void 0 === u ? void 0 : u.id,
-        n = null != t ? i.ZP.getLayoutModeForApp(t) : null;
+        n = null != t ? s.ZP.getLayoutModeForApp(t) : null;
       return null != n ? {
         is_pip_mode: n !== c.cE.FOCUSED
       } : null
     }
     case o.zMe.ACTIVITY_LAYOUT_MODE_UPDATE: {
       let t = null === (d = e.application) || void 0 === d ? void 0 : d.id,
-        n = null != t ? i.ZP.getLayoutModeForApp(t) : null;
+        n = null != t ? s.ZP.getLayoutModeForApp(t) : null;
       return null != n ? {
         layout_mode: n
       } : null
@@ -31,7 +31,7 @@ async function u(e, t, n) {
       let e = await (0, l.Z)();
       if (null == e) return null;
       return {
-        thermal_state: (0, s.Z)(e)
+        thermal_state: (0, i.Z)(e)
       }
     }
     case o.zMe.ORIENTATION_UPDATE: {

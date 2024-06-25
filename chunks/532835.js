@@ -1,9 +1,9 @@
 n.d(t, {
   t: function() {
-    return s
+    return i
   }
 });
-let i = (0, n(818083).B)({
+let s = (0, n(818083).B)({
   kind: "user",
   id: "2023-04_null_experiment",
   label: "Null Experiment",
@@ -19,9 +19,9 @@ let i = (0, n(818083).B)({
   }]
 });
 
-function s() {
+function i() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  return i.useExperiment({
+  return s.useExperiment({
     location: "a9e81b_1"
   }, {
     autoTrackExposure: e

@@ -1,6 +1,6 @@
 n.d(t, {
   O: function() {
-    return m
+    return N
   }
 }), n(536091);
 var s = n(904245),
@@ -17,19 +17,19 @@ var s = n(904245),
   I = n(981631),
   T = n(185923);
 
-function N(e) {
+function m(e) {
   let t = u.Z.getGuild(e);
   return null != t && (t.nsfwLevel === I.V_K.DEFAULT || t.nsfwLevel === I.V_K.SAFE)
 }
-async function m(e, t) {
-  var n, I, m;
+async function N(e, t) {
+  var n, I, N;
   let h = t.getGuildId();
   if (null == h || null == u.Z.getGuild(h)) return;
   let C = d.default.getCurrentUser();
   if (null == C) return;
   await (0, r.$p)();
   let S = Array.from(o.Z.getAllStickersIterator()),
-    A = S.filter(e => e.type === c.n0.GUILD).filter(e => N(e.guild_id) && (0, a.kl)(e, C, t)).sort((e, t) => -_.default.compare(e.id, t.id));
+    A = S.filter(e => e.type === c.n0.GUILD).filter(e => m(e.guild_id) && (0, a.kl)(e, C, t)).sort((e, t) => -_.default.compare(e.id, t.id));
   if (A.length > 5) {
     let i = [A[Math.floor(Math.pow(Math.random(), 2) * A.length)].id];
     s.Z.sendStickers(t.id, i, "", {
@@ -41,14 +41,14 @@ async function m(e, t) {
     });
     return
   }
-  let p = u.Z.getGuildIds().filter(N).map(e => i.Z.getUsableGuildEmoji(e)).flat().filter(e => null == E.ZP.getEmojiUnavailableReason({
+  let g = u.Z.getGuildIds().filter(m).map(e => i.Z.getUsableGuildEmoji(e)).flat().filter(e => null == E.ZP.getEmojiUnavailableReason({
     emoji: e,
     channel: t,
     guildId: h,
     intention: T.Hz.CHAT
   })).sort((e, t) => -_.default.compare(e.id, t.id));
-  if (p.length > 10) {
-    let n = p[Math.floor(Math.pow(Math.random(), 2) * p.length)];
+  if (g.length > 10) {
+    let n = g[Math.floor(Math.pow(Math.random(), 2) * g.length)];
     s.Z.sendMessage(t.id, l.ZP.parse(t, n.allNamesString), !1, {
       messageReference: {
         guild_id: null !== (I = t.getGuildId()) && void 0 !== I ? I : void 0,
@@ -58,11 +58,11 @@ async function m(e, t) {
     });
     return
   }
-  let g = S.filter(e => e.type === c.n0.STANDARD),
-    f = [g[Math.floor(Math.random() * g.length)].id];
+  let p = S.filter(e => e.type === c.n0.STANDARD),
+    f = [p[Math.floor(Math.random() * p.length)].id];
   s.Z.sendStickers(t.id, f, "", {
     messageReference: {
-      guild_id: null !== (m = t.getGuildId()) && void 0 !== m ? m : void 0,
+      guild_id: null !== (N = t.getGuildId()) && void 0 !== N ? N : void 0,
       channel_id: t.id,
       message_id: e
     }

@@ -8,9 +8,9 @@ var l = n(735250),
   c = n(306680),
   d = n(9156),
   h = n(451478),
-  g = n(816779);
+  p = n(816779);
 
-function p(e) {
+function g(e) {
   let t = u.Z.getChannel(e);
   return null != t && null != t.getGuildId() && !(t.isThread() ? o.Z.isMuted(t.id) : d.ZP.isChannelMuted(t.getGuildId(), t.id)) && (0, a.d)(t)
 }
@@ -33,10 +33,10 @@ t.Z = i.forwardRef(function(e, t) {
   } = e, u = (0, r.T)(n, i, a, !1, {
     ignoreRecents: !0
   }), c = (0, s.e7)([h.Z], () => h.Z.isFocused());
-  return (0, l.jsx)(g.Z, {
+  return (0, l.jsx)(p.Z, {
     ref: t,
     ...o,
-    isUnread: p,
+    isUnread: g,
     isMentioned: m,
     items: u,
     animate: c

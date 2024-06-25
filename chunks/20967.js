@@ -1,12 +1,12 @@
 n.d(t, {
   J: function() {
-    return s
+    return i
   },
   z: function() {
     return E
   }
 });
-var i, s, l = n(735250);
+var s, i, l = n(735250);
 n(470079);
 var a = n(990547),
   r = n(481060),
@@ -14,7 +14,7 @@ var a = n(990547),
   c = n(689938),
   u = n(936919),
   d = n(837753);
-(i = s || (s = {})).GUILD_NOT_ELIGIBLE = "guild_not_eligible", i.NOT_GUILD_MEMBER = "not_guild_member";
+(s = i || (i = {})).GUILD_NOT_ELIGIBLE = "guild_not_eligible", s.NOT_GUILD_MEMBER = "not_guild_member";
 let E = e => {
   let {
     errorType: t

@@ -26,9 +26,9 @@ var n = s(735250),
   x = s(333867),
   I = s(74179),
   _ = s(981631),
-  L = s(689938),
-  T = s(764578);
-let S = e => {
+  T = s(689938),
+  S = s(764578);
+let L = e => {
     let {
       children: t,
       style: s,
@@ -84,25 +84,25 @@ function v(e) {
     loadId: b,
     skuId: v,
     isGift: O = !1,
-    baseAnalyticsData: A
+    baseAnalyticsData: Z
   } = e, {
-    step: Z,
+    step: A,
     setStep: R,
     paymentError: j,
     paymentAuthenticationState: P,
     application: M,
     skuPricePreviewsById: k
   } = (0, m.usePaymentContext)(), {
-    analyticsLocations: B
-  } = (0, C.ZP)(), [y, F] = r.useState(!1), D = r.useRef(null), U = k[v], H = null != U ? U[I.id] : null, w = null != H ? (0, g.T4)(null == H ? void 0 : H.amount, null == H ? void 0 : H.currency) : null, G = r.useMemo(() => ({
-    ...A,
+    analyticsLocations: y
+  } = (0, C.ZP)(), [B, F] = r.useState(!1), D = r.useRef(null), U = k[v], H = null != U ? U[I.id] : null, w = null != H ? (0, g.T4)(null == H ? void 0 : H.amount, null == H ? void 0 : H.currency) : null, G = r.useMemo(() => ({
+    ...Z,
     load_id: b,
     payment_type: _.Zuq[_.GZQ.ONE_TIME],
     price: null == H ? void 0 : H.amount,
     currency: null == H ? void 0 : H.currency
-  }), [A, H, b]);
+  }), [Z, H, b]);
   r.useEffect(() => {
-    Z !== h.h8.REVIEW && R(h.h8.REVIEW)
+    A !== h.h8.REVIEW && R(h.h8.REVIEW)
   }), r.useEffect(() => {
     P === f.wr.ERROR && s(j)
   }, [s, j, P]);
@@ -126,8 +126,8 @@ function v(e) {
       to_step: e
     }), e === h.h8.CONFIRM && (F(!1), t()), R(e)
   }, [G, R, t]);
-  return (0, f.bp)(Z, P, V), (0, n.jsxs)("div", {
-    className: T.reviewContainer,
+  return (0, f.bp)(A, P, V), (0, n.jsxs)("div", {
+    className: S.reviewContainer,
     children: [(0, n.jsx)(l.FormSection, {
       children: (0, n.jsx)(l.FormItem, {
         children: (0, n.jsx)(c.Z, {
@@ -140,34 +140,34 @@ function v(e) {
         })
       })
     }), (0, n.jsx)("div", {
-      className: T.legalTerms,
+      className: S.legalTerms,
       children: (0, n.jsx)("p", {
-        children: L.Z.Messages.LIGHTNING_CHECKOUT_NON_REFUNDABLE_DISCLAIMER.format({
+        children: T.Z.Messages.LIGHTNING_CHECKOUT_NON_REFUNDABLE_DISCLAIMER.format({
           paidURL: E.Z.getArticleURL(_.BhN.PAID_TERMS)
         })
       })
-    }), (0, n.jsx)(S, {
-      className: T.buyButton,
-      submitting: y,
+    }), (0, n.jsx)(L, {
+      className: S.buyButton,
+      submitting: B,
       submittingStartedLabel: "Payment Processing",
       onClick: async () => {
         F(!0), await W()
       },
-      children: null !== w ? L.Z.Messages.LIGHTNING_CHECKOUT_PAY_CTA.format({
+      children: null !== w ? T.Z.Messages.LIGHTNING_CHECKOUT_PAY_CTA.format({
         price: w
       }) : (0, n.jsx)(l.Spinner, {
         type: l.Spinner.Type.PULSING_ELLIPSIS
       })
-    }), !y && (0, n.jsx)(N, {
-      className: T.reviewButton,
+    }), !B && (0, n.jsx)(N, {
+      className: S.reviewButton,
       onClick: () => {
         a(), (0, x.Z)({
           skuId: v,
-          analyticsLocations: B,
+          analyticsLocations: y,
           returnRef: D
         })
       },
-      children: L.Z.Messages.LIGHTNING_CHECKOUT_REVIEW_PURCHASE
+      children: T.Z.Messages.LIGHTNING_CHECKOUT_REVIEW_PURCHASE
     })]
   })
 }

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return p
+    return g
   }
 });
 var l = n(735250);
@@ -14,9 +14,9 @@ var i = n(442837),
   c = n(662146),
   d = n(981631),
   h = n(689938),
-  g = n(72766);
+  p = n(72766);
 
-function p() {
+function g() {
   let e = (0, i.e7)([a.Z, o.Z], () => a.Z.unavailableGuilds.filter(e => null == o.Z.getGuild(e)).length);
   return e <= 0 ? null : (0, l.jsx)(u.H, {
     children: (0, l.jsx)(c.Z, {
@@ -27,13 +27,13 @@ function p() {
       children: (0, l.jsx)(s.Anchor, {
         href: (0, r.Z)(d.RK.TWITTER),
         target: "_blank",
-        className: g.guildsError,
+        className: p.guildsError,
         "aria-label": h.Z.Messages.PARTIAL_OUTAGE_A11Y.format({
           count: e
         }),
         children: (0, l.jsx)("span", {
           "aria-hidden": !0,
-          className: g.errorInner,
+          className: p.errorInner,
           children: "!"
         })
       })

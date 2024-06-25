@@ -1,6 +1,6 @@
 n.d(t, {
   _g: function() {
-    return N
+    return m
   },
   au: function() {
     return T
@@ -9,7 +9,7 @@ n.d(t, {
     return C
   },
   dy: function() {
-    return m
+    return N
   },
   hs: function() {
     return S
@@ -48,7 +48,7 @@ function T(e) {
   }
 }
 
-function N(e) {
+function m(e) {
   var t;
   let n = (0, i.e7)([E.Z], () => E.Z.serverEligibleByQuestIds),
     a = T(e),
@@ -63,15 +63,15 @@ function N(e) {
   });
   let d = null == a ? void 0 : null === (t = a.config) || void 0 === t ? void 0 : t.dropsEnabled,
     I = null == a ? void 0 : a.drop,
-    N = null == I || (0, _.hM)(I);
+    m = null == I || (0, _.hM)(I);
   return s.useEffect(() => {
-    d && !N && r && null != I && l.Z.wait(() => {
+    d && !m && r && null != I && l.Z.wait(() => {
       null == o && (0, u.Vt)(I.dropsQuestId)
     })
-  }, [o, I, d, N, r]), null != I && !!d && !N && o && r
+  }, [o, I, d, m, r]), null != I && !!d && !m && o && r
 }
 
-function m() {
+function N() {
   let e = T(I.X2.FORTNITE);
   return null == e ? void 0 : e.config.dropsEnabled
 }
@@ -93,14 +93,14 @@ function C(e, t, n, s) {
     u = (0, i.e7)([E.Z], () => null != c && E.Z.serverEligibleByQuestIds[c.dropsQuestId]),
     d = (0, i.e7)([E.Z], () => E.Z.getIsPartnerGameQuestComplete(e)),
     I = (0, _.wj)(null == t ? void 0 : t.name, null !== (l = null == c ? void 0 : c.gameSearchTerm) && void 0 !== l ? l : []),
-    N = (0, r.ot)([n, s]),
-    m = (0, o.wE)(s),
+    m = (0, r.ot)([n, s]),
+    N = (0, o.wE)(s),
     h = null == c || (0, _.hM)(c),
     C = !!(null != c && !h && I && (null == a ? void 0 : a.config.dropsEnabled) && u);
   return {
     partnerGame: C ? e : null,
-    dropsActivityPanelExperienceBlocked: N,
-    showDropsSparkles: !d && !m
+    dropsActivityPanelExperienceBlocked: m,
+    showDropsSparkles: !d && !N
   }
 }
 

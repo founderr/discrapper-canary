@@ -3,10 +3,10 @@ n.d(t, {
     return E
   },
   BS: function() {
-    return p
+    return g
   },
   EW: function() {
-    return g
+    return p
   },
   FL: function() {
     return S
@@ -18,13 +18,13 @@ n.d(t, {
     return C
   },
   Un: function() {
-    return O
+    return R
   },
   Xt: function() {
-    return m
+    return N
   },
   YK: function() {
-    return N
+    return m
   },
   hM: function() {
     return A
@@ -50,7 +50,7 @@ var s = n(913527),
   d = n(689938);
 
 function E(e) {
-  let t = p(e);
+  let t = g(e);
   return null == t ? null : _(t)
 }
 
@@ -72,9 +72,9 @@ function T() {
   return Math.floor(Date.now() / 1e3) - u.kS
 }
 
-function N(e, t, n) {
+function m(e, t, n) {
   var s, i, l, a;
-  if (null == p(e)) return !1;
+  if (null == g(e)) return !1;
   let r = (s = t, i = u.RN[e], null !== (l = s.find(e => I(e.name, i))) && void 0 !== l ? l : null);
   if (null != r) {
     ;
@@ -84,8 +84,8 @@ function N(e, t, n) {
   return !1
 }
 
-function m(e) {
-  return N(e, l.ZP.getGamesSeen(!1), T())
+function N(e) {
+  return m(e, l.ZP.getGamesSeen(!1), T())
 }
 
 function h(e, t) {
@@ -97,7 +97,7 @@ function h(e, t) {
 
 function C(e) {
   var t;
-  let n = p(e);
+  let n = g(e);
   if (null == n || !(null === (t = E(e)) || void 0 === t ? void 0 : t.getCurrentConfig({
       location: "1"
     }, {
@@ -110,7 +110,7 @@ function C(e) {
 
 function S(e) {
   var t, n;
-  let s = p(e);
+  let s = g(e);
   if (null == s || !(null === (n = E(e)) || void 0 === n ? void 0 : null === (t = n.getCurrentConfig({
       location: "2"
     }, {
@@ -128,11 +128,11 @@ function A(e) {
   return i()() > n
 }
 
-function p(e) {
+function g(e) {
   return u.Zv[e]
 }
 
-function g(e) {
+function p(e) {
   return Object.values(u.Zv).find(t => t.dropsQuestId === e)
 }
 
@@ -140,7 +140,7 @@ function f(e) {
   return Object.keys(u.Zv).find(t => u.Zv[t].dropsQuestId === e)
 }
 
-function O(e) {
+function R(e) {
   switch (e) {
     case "SWITCH":
       return d.Z.Messages.DROPS_PLATFORM_SWITCH;

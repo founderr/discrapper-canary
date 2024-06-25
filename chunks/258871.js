@@ -8,8 +8,8 @@ var l = n(735250),
   c = n(703656),
   d = n(944486),
   h = n(147754),
-  g = n(688438),
-  p = n(981631),
+  p = n(688438),
+  g = n(981631),
   m = n(689938);
 let C = [{
   key: "EVENTS",
@@ -72,12 +72,12 @@ let C = [{
   handler: (e, t) => (0, r.openModalLazy)(async () => {
     let {
       default: i
-    } = await Promise.all([n.e("99387"), n.e("7654"), n.e("1425")]).then(n.bind(n, 560114));
+    } = await Promise.all([n.e("99387"), n.e("7654"), n.e("9785")]).then(n.bind(n, 560114));
     return n => (0, l.jsx)(i, {
       ...n,
       guild: e,
       channel: t,
-      source: p.t4x.HUB_SIDEBAR
+      source: g.t4x.HUB_SIDEBAR
     })
   })
 }];
@@ -99,9 +99,9 @@ t.Z = e => {
     location: "543af8_2"
   }, {
     autoTrackExposure: !1
-  }), p = (0, s.e7)([d.Z], () => null != n && d.Z.getChannelId() === n.id), m = i.useMemo(() => ({
+  }), g = (0, s.e7)([d.Z], () => null != n && d.Z.getChannelId() === n.id), m = i.useMemo(() => ({
     numEvents: r.length
-  }), [r.length]), E = (0, g.t)(n);
+  }), [r.length]), E = (0, p.t)(n);
   return (0, l.jsx)(l.Fragment, {
     children: C.map(e => {
       let {
@@ -116,7 +116,7 @@ t.Z = e => {
         id: d,
         renderIcon: a,
         text: s(m),
-        selected: p && "JOIN_SERVERS" === i,
+        selected: g && "JOIN_SERVERS" === i,
         onClick: null != n ? () => r(t, n) : void 0,
         trailing: "JOIN_SERVERS" === i && E > 0 ? (0, u.N)(E) : null
       }, d)

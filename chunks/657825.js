@@ -1,33 +1,33 @@
-var s = n(735250);
-n(470079);
-var i = n(399606),
-  a = n(481060),
-  l = n(594174),
-  r = n(51144),
-  c = n(546791),
-  o = n(198952),
-  d = n(202211);
+var n = s(735250);
+s(470079);
+var a = s(399606),
+  i = s(481060),
+  r = s(594174),
+  l = s(51144),
+  o = s(546791),
+  c = s(198952),
+  E = s(202211);
 t.Z = e => {
   let {
     userId: t,
-    timestamp: n,
-    timestampFormatter: u
-  } = e, E = (0, i.e7)([l.default], () => l.default.getUser(t));
-  return void 0 === E ? null : (0, s.jsxs)("div", {
-    className: d.container,
-    children: [(0, s.jsx)(o.r, {
-      user: E,
-      avatarSize: a.AvatarSizes.SIZE_40
-    }), (0, s.jsx)("div", {
-      children: (0, s.jsxs)("div", {
-        className: d.descriptors,
-        children: [(0, s.jsx)(a.Text, {
+    timestamp: s,
+    timestampFormatter: _
+  } = e, u = (0, a.e7)([r.default], () => r.default.getUser(t));
+  return void 0 === u ? null : (0, n.jsxs)("div", {
+    className: E.container,
+    children: [(0, n.jsx)(c.r, {
+      user: u,
+      avatarSize: i.AvatarSizes.SIZE_40
+    }), (0, n.jsx)("div", {
+      children: (0, n.jsxs)("div", {
+        className: E.descriptors,
+        children: [(0, n.jsx)(i.Text, {
           variant: "text-md/semibold",
-          children: r.ZP.getName(E)
-        }), (0, s.jsx)(a.Text, {
+          children: l.ZP.getName(u)
+        }), (0, n.jsx)(i.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
-          children: (0, c.LI)(new Date(n).getTime(), u)
+          children: (0, o.LI)(new Date(s).getTime(), _)
         })]
       })
     })]

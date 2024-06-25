@@ -1,12 +1,12 @@
-var i = n(570140);
+var s = n(570140);
 t.Z = {
   closeSidebar() {
-    i.Z.dispatch({
+    s.Z.dispatch({
       type: "MOBILE_WEB_SIDEBAR_CLOSE"
     })
   },
   openSidebar() {
-    i.Z.dispatch({
+    s.Z.dispatch({
       type: "MOBILE_WEB_SIDEBAR_OPEN"
     })
   }

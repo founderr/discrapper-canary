@@ -3,9 +3,9 @@ n.d(t, {
     return E
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(6025),
+var i = n(6025),
   l = n(433355),
   a = n(626135),
   r = n(585483),
@@ -24,14 +24,14 @@ function E(e) {
   } = e, {
     channelId: I
   } = (0, o._)();
-  return (0, i.jsx)(c.Z, {
+  return (0, s.jsx)(c.Z, {
     index: t,
     className: n,
     isFocused: I === E.id,
     channel: E,
     user: h,
     onClick: e => {
-      e.stopPropagation(), s.Z.openPrivateChannelAsSidebar({
+      e.stopPropagation(), i.Z.openPrivateChannelAsSidebar({
         channelId: E.id,
         baseChannelId: l.uZ,
         hasSingleMessageRequest: _
@@ -45,7 +45,7 @@ function E(e) {
         })
       }, 0)
     },
-    children: e => (0, i.jsx)(u.C, {
+    children: e => (0, s.jsx)(u.C, {
       active: e,
       user: h,
       channel: E

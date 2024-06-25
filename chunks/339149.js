@@ -12,8 +12,8 @@ var l, i = n(735250),
   c = n(692547),
   d = n(215569),
   h = n(481060),
-  g = n(812206),
-  p = n(703656),
+  p = n(812206),
+  g = n(703656),
   m = n(417363),
   C = n(941128),
   E = n(366966),
@@ -84,7 +84,7 @@ let x = {
     })
   }
 };
-class T extends s.PureComponent {
+class L extends s.PureComponent {
   renderText() {
     let {
       state: e,
@@ -122,17 +122,17 @@ class T extends s.PureComponent {
         d = null != c ? Object.keys(c) : [],
         {
           unit: h,
-          time: g
+          time: p
         } = (0, E.CI)(null != u ? u / 60 : null, d);
       if (null != c && null != h) {
         let e = c[h];
-        return null != e ? e(l.name, g) : null
+        return null != e ? e(l.name, p) : null
       }
       return null
     })
   }
 }
-class L extends(l = s.PureComponent) {
+class T extends(l = s.PureComponent) {
   componentWillAppear(e) {
     this.state.animationScale.setValue(1), e()
   }
@@ -154,7 +154,7 @@ class L extends(l = s.PureComponent) {
       firstState: t,
       isPaused: n
     } = this.props;
-    return null == e || null == t ? N.Z.Messages.LIBRARY : (0, i.jsx)(T, {
+    return null == e || null == t ? N.Z.Messages.LIBRARY : (0, i.jsx)(L, {
       application: e,
       state: t,
       isPaused: n
@@ -200,11 +200,11 @@ class L extends(l = s.PureComponent) {
       let {
         onClick: t
       } = this.props;
-      e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, p.uL)(I.Z5c.APPLICATION_LIBRARY)
+      e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, g.uL)(I.Z5c.APPLICATION_LIBRARY)
     })
   }
 }
-S(L, "defaultProps", {
+S(T, "defaultProps", {
   strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM
 });
 
@@ -217,7 +217,7 @@ function v(e, t) {
     return null != s && e.push(s), e
   }, [])
 }
-t.Z = u.ZP.connectStores([C.Z, m.Z, g.Z], () => {
+t.Z = u.ZP.connectStores([C.Z, m.Z, p.Z], () => {
   let e = C.Z.activeItems,
     t = v(e, m.Z),
     {
@@ -227,7 +227,7 @@ t.Z = u.ZP.connectStores([C.Z, m.Z, g.Z], () => {
   return {
     percent: f.xI(l, n),
     isPaused: C.Z.paused,
-    firstApplication: e.length > 0 ? g.Z.getApplication(e[0].applicationId) : null,
+    firstApplication: e.length > 0 ? p.Z.getApplication(e[0].applicationId) : null,
     firstState: t.length > 0 ? t[0] : null
   }
 })(e => {
@@ -237,10 +237,10 @@ t.Z = u.ZP.connectStores([C.Z, m.Z, g.Z], () => {
   } = e;
   return t ? (0, i.jsx)(d.W, {
     component: s.Fragment,
-    children: n.percent > 0 && n.percent < 100 ? (0, i.jsx)(L, {
+    children: n.percent > 0 && n.percent < 100 ? (0, i.jsx)(T, {
       ...n
     }) : null
-  }) : (0, i.jsx)(L, {
+  }) : (0, i.jsx)(T, {
     ...n
   })
 })

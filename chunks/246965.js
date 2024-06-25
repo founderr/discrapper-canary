@@ -27,8 +27,8 @@ t.Z = function(e) {
       default:
         throw Error("Unsupported subscription tier: ".concat(e))
     }
-  }(I)), N = (0, c.N)(), m = (0, l.Z)(null != N && null != N.expires_at ? Date.parse(N.expires_at) : 0);
-  return null == N || (null === (t = N.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== I || null == N.expires_at || Object.values(m).every(e => 0 === e) ? null : (0, s.jsxs)(i.Notice, {
+  }(I)), m = (0, c.N)(), N = (0, l.Z)(null != m && null != m.expires_at ? Date.parse(m.expires_at) : 0);
+  return null == m || (null === (t = m.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== I || null == m.expires_at || Object.values(N).every(e => 0 === e) ? null : (0, s.jsxs)(i.Notice, {
     color: function(e) {
       switch (e) {
         case u.Si.TIER_0:
@@ -66,10 +66,10 @@ t.Z = function(e) {
         default:
           throw Error("Unsupported subscription tier: ".concat(e))
       }
-    }(I, m), (0, s.jsx)(i.NoticeButton, {
+    }(I, N), (0, s.jsx)(i.NoticeButton, {
       onClick: () => {
         (0, o.Z)({
-          trialId: N.trial_id,
+          trialId: m.trial_id,
           subscriptionTier: I,
           analyticsLocations: T,
           analyticsObject: {

@@ -3,8 +3,8 @@ n.d(t, {
     return E
   }
 });
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(120356),
   a = n.n(l),
   r = n(481060),
@@ -15,11 +15,11 @@ var i = n(735250),
 let E = e => {
   let {
     children: t
-  } = e, n = (0, i.jsxs)("div", {
+  } = e, n = (0, s.jsxs)("div", {
     className: d.coachTipContainer,
-    children: [(0, i.jsx)("div", {
+    children: [(0, s.jsx)("div", {
       className: d.iconContainer,
-      children: (0, i.jsx)(c.Z, {
+      children: (0, s.jsx)(c.Z, {
         staticPercentage: 100,
         iconClassName: d.icon,
         showAnimations: !0,
@@ -28,12 +28,12 @@ let E = e => {
         customAnimationClassName: d.customCircleAnimation,
         circleColor: "url(#purple-gradient)"
       })
-    }), (0, i.jsxs)("div", {
+    }), (0, s.jsxs)("div", {
       className: d.coachtipContent,
-      children: [(0, i.jsx)(r.Heading, {
+      children: [(0, s.jsx)(r.Heading, {
         variant: "heading-sm/bold",
         children: u.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS
-      }), (0, i.jsx)(r.Text, {
+      }), (0, s.jsx)(r.Text, {
         variant: "text-xs/normal",
         children: u.Z.Messages.REFERRAL_PROGRAM_HOME_BADGE_SUBHEADER.format({
           numReferrals: 3
@@ -41,14 +41,14 @@ let E = e => {
       })]
     })]
   });
-  return (0, i.jsx)(r.Tooltip, {
+  return (0, s.jsx)(r.Tooltip, {
     text: n,
     position: "right",
     "aria-label": u.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
     tooltipClassName: d.marketingBadgeTooltip,
     allowOverflow: !0,
     tooltipContentClassName: d.tooltipContent,
-    children: e => (0, i.jsx)("div", {
+    children: e => (0, s.jsx)("div", {
       ...e,
       children: t
     })
@@ -59,22 +59,22 @@ t.Z = e => {
     isSelected: t,
     onSelect: n
   } = e;
-  return s.useEffect(() => {
+  return i.useEffect(() => {
     t && n()
-  }, [t, n]), (0, i.jsxs)("div", {
+  }, [t, n]), (0, s.jsxs)("div", {
     className: d.badgeContainer,
-    children: [(0, i.jsx)("div", {
+    children: [(0, s.jsx)("div", {
       className: d.newBadge,
       children: u.Z.Messages.NEW
-    }), (0, i.jsx)("span", {
+    }), (0, s.jsx)("span", {
       className: a()(d.star, d.starLeft),
-      children: (0, i.jsx)(o.Z, {
+      children: (0, s.jsx)(o.Z, {
         width: 8,
         height: 8
       })
-    }), (0, i.jsx)("span", {
+    }), (0, s.jsx)("span", {
       className: a()(d.star, d.starRight),
-      children: (0, i.jsx)(o.Z, {
+      children: (0, s.jsx)(o.Z, {
         width: 13,
         height: 13
       })

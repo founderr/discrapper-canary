@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return g
+    return p
   }
 }), n(47120), n(411104);
 var s, i = n(735250),
@@ -15,8 +15,8 @@ var s, i = n(735250),
   _ = n(592745),
   I = n(757266),
   T = n(417363),
-  N = n(358085),
-  m = n(346329),
+  m = n(358085),
+  N = n(346329),
   h = n(981631),
   C = n(689938),
   S = n(199623);
@@ -29,7 +29,7 @@ function A(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class p extends(s = l.PureComponent) {
+class g extends(s = l.PureComponent) {
   get analyticsLocation() {
     return {
       ...this.props.analyticsContext.location,
@@ -92,7 +92,7 @@ class p extends(s = l.PureComponent) {
       isShiny: u,
       hideNotLaunchable: d
     } = this.props;
-    if (!l) return d ? null : this.renderDisabledButton(C.Z.Messages.GAME_ACTION_BUTTON_PLAY, N.isPlatformEmbedded ? C.Z.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : C.Z.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
+    if (!l) return d ? null : this.renderDisabledButton(C.Z.Messages.GAME_ACTION_BUTTON_PLAY, m.isPlatformEmbedded ? C.Z.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : C.Z.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
     if (o) return this.renderDisabledButton(C.Z.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
     let E = u ? c.ShinyButton : c.Button;
     return (0, i.jsxs)(E, {
@@ -137,7 +137,7 @@ class p extends(s = l.PureComponent) {
         analyticsListSort: n,
         analyticsListIndex: s
       } = this.props;
-      m.playApplication(e, t, {
+      N.playApplication(e, t, {
         analyticsParams: {
           location: this.analyticsLocation,
           list_sort: n,
@@ -148,12 +148,12 @@ class p extends(s = l.PureComponent) {
   }
 }
 
-function g(e) {
+function p(e) {
   let {
     applicationId: t,
     libraryApplication: n
   } = e, s = (0, d.O)(), [l, a] = (0, o.Wu)([I.Z, _.Z, T.Z], () => [I.Z.isConnected(t) || _.Z.isLaunchable(t) || null != n && T.Z.isLaunchable(n.id, n.branchId), _.Z.launchingGames.has(t)], [t, n]), r = (0, o.e7)([E.ZP], () => new Set(E.ZP.getRunningVerifiedApplicationIds()).has(t), [t]), c = (0, o.e7)([T.Z], () => null != n ? T.Z.getState(n.id, n.branchId) : null, [n]);
-  return (0, i.jsx)(p, {
+  return (0, i.jsx)(g, {
     ...e,
     analyticsContext: s,
     isLaunchable: l,
@@ -162,7 +162,7 @@ function g(e) {
     dispatchState: c
   })
 }
-A(p, "defaultProps", {
+A(g, "defaultProps", {
   fullWidth: !1,
   size: c.Button.Sizes.LARGE,
   tooltipPosition: "top",

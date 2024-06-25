@@ -1,54 +1,54 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
     return d
   }
 });
-var i = t(735250);
-t(470079);
-var l = t(120356),
-  s = t.n(l),
-  r = t(481060),
-  a = t(528027),
-  o = t(686807),
-  u = t(113318),
-  c = t(240233);
+var s = n(735250);
+n(470079);
+var i = n(120356),
+  l = n.n(i),
+  a = n(481060),
+  r = n(528027),
+  o = n(686807),
+  c = n(113318),
+  u = n(240233);
 
 function d(e) {
   let {
-    benefit: n,
-    guildId: t
-  } = e, l = (0, u.Z)(t, n.ref_id), d = (0, i.jsx)(a.Z, {
-    guildId: t,
-    emojiId: n.emoji_id,
-    emojiName: n.emoji_name
-  }), _ = null != l ? (0, i.jsx)(r.Clickable, {
-    className: c.__invalid_channelLink,
-    onClick: l.navigateToChannel,
-    "aria-label": l.ariaLabel,
+    benefit: t,
+    guildId: n
+  } = e, i = (0, c.Z)(n, t.ref_id), d = (0, s.jsx)(r.Z, {
+    guildId: n,
+    emojiId: t.emoji_id,
+    emojiName: t.emoji_name
+  }), E = null != i ? (0, s.jsx)(a.Clickable, {
+    className: u.__invalid_channelLink,
+    onClick: i.navigateToChannel,
+    "aria-label": i.ariaLabel,
     role: "link",
-    children: (0, i.jsx)(r.Text, {
+    children: (0, s.jsx)(a.Text, {
       variant: "text-md/medium",
       color: "header-primary",
-      className: s()(c.name, c.linkedName),
-      children: (0, o.Z)(n)
+      className: l()(u.name, u.linkedName),
+      children: (0, o.Z)(t)
     })
-  }) : (0, i.jsx)(r.Text, {
+  }) : (0, s.jsx)(a.Text, {
     variant: "text-md/medium",
     color: "header-primary",
-    className: c.name,
-    children: (0, o.Z)(n)
+    className: u.name,
+    children: (0, o.Z)(t)
   });
-  return (0, i.jsxs)("div", {
-    className: c.container,
-    children: [(0, i.jsxs)("div", {
-      className: c.infoContainer,
-      children: [_, (0, i.jsx)(r.Text, {
+  return (0, s.jsxs)("div", {
+    className: u.container,
+    children: [(0, s.jsxs)("div", {
+      className: u.infoContainer,
+      children: [E, (0, s.jsx)(a.Text, {
         color: "interactive-normal",
         variant: "text-sm/normal",
-        children: n.description
+        children: t.description
       })]
-    }), (0, i.jsx)("div", {
-      className: c.emojiContainer,
+    }), (0, s.jsx)("div", {
+      className: u.emojiContainer,
       children: d
     })]
   })

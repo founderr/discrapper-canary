@@ -21,17 +21,17 @@ var s, i, l, a, r = n(470079),
   _ = n(570140),
   I = n(904245),
   T = n(45114),
-  N = n(607070),
-  m = n(853856),
+  m = n(607070),
+  N = n(853856),
   h = n(181945),
   C = n(220444),
   S = n(601070),
   A = n(344185),
-  p = n(569471),
-  g = n(723170),
+  g = n(569471),
+  p = n(723170),
   f = n(675478),
-  O = n(581883),
-  R = n(131704),
+  R = n(581883),
+  O = n(131704),
   M = n(592125),
   x = n(984933),
   v = n(731290),
@@ -41,8 +41,8 @@ var s, i, l, a, r = n(470079),
   D = n(306680),
   j = n(771845),
   U = n(9156),
-  y = n(70956),
-  b = n(823379),
+  b = n(70956),
+  y = n(823379),
   B = n(709054),
   k = n(981631),
   G = n(124368);
@@ -91,7 +91,7 @@ class w extends o.EventEmitter {
         isFullyLoaded: t,
         hasLoadedAnything: t
       }
-    } else(0, b.vE)(e)
+    } else(0, y.vE)(e)
   }
   clearScrollToChannelIndex() {
     this.setState({
@@ -178,7 +178,7 @@ class w extends o.EventEmitter {
           ...e,
           deleted: !0
         }))
-      }), N.Z.useReducedMotion && this.deleteChannel(t), this.maybeLoadMore()
+      }), m.Z.useReducedMotion && this.deleteChannel(t), this.maybeLoadMore()
     }, this.markGuildRead = e => {
       _.Z.wait(() => (0, h.Z)([e], k.jXE.INBOX)), this.setState({
         channels: this.state.channels.filter(t => t.guildId !== e)
@@ -221,7 +221,7 @@ class w extends o.EventEmitter {
         channels: e
       })
     }, this.handleJoinedThreadsStoreChange = () => {
-      let e = this.state.channels.filter(e => !p.Z.isMuted(e.channelId));
+      let e = this.state.channels.filter(e => !g.Z.isMuted(e.channelId));
       e.length !== this.state.channels.length && this.setState({
         channels: e
       })
@@ -266,7 +266,7 @@ function Y() {
   let e = function() {
       var e, t;
       let n = {},
-        s = null !== (t = null === (e = O.Z.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : {};
+        s = null !== (t = null === (e = R.Z.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : {};
       for (let e in s)
         for (let t in s[e].channels) {
           let i = M.Z.getChannel(t);
@@ -276,19 +276,19 @@ function Y() {
     }(),
     t = function(e) {
       let t = [];
-      return M.Z.getSortedPrivateChannels().forEach(n => K(e, t, null, n.id)), j.ZP.getFlattenedGuildIds().forEach(n => {
+      return M.Z.getSortedPrivateChannels().forEach(n => W(e, t, null, n.id)), j.ZP.getFlattenedGuildIds().forEach(n => {
         if (null == n) return;
         let s = x.ZP.getSelectableChannelIds(n),
           i = S.Z.getActiveJoinedUnreadThreadsForGuild(n);
         s.forEach(s => {
           var l;
-          K(e, t, n, s);
+          W(e, t, n, s);
           let a = null !== (l = i[s]) && void 0 !== l ? l : {};
-          for (let s in a) K(e, t, n, s)
+          for (let s in a) W(e, t, n, s)
         })
       }), E().sortBy(t, e => e.sortOrder)
     }(e),
-    n = E().uniq(t.map(e => e.guildId)).filter(b.lm);
+    n = E().uniq(t.map(e => e.guildId)).filter(y.lm);
   return _.Z.dispatch({
     type: "INBOX_OPEN",
     guildIds: n
@@ -300,10 +300,10 @@ function Y() {
   }
 }
 
-function K(e, t, n, s) {
+function W(e, t, n, s) {
   if (null == s) return;
   let i = M.Z.getChannel(s);
-  if (null == i || !R.Ec.has(i.type) && U.ZP.isGuildOrCategoryOrChannelMuted(n, i.id)) return;
+  if (null == i || !O.Ec.has(i.type) && U.ZP.isGuildOrCategoryOrChannelMuted(n, i.id)) return;
   if (i.isPrivate()) {
     if (0 === D.ZP.getMentionCount(s)) return
   } else if (!(0, C.d)(i) && 0 === D.ZP.getMentionCount(s)) return;
@@ -334,16 +334,16 @@ function K(e, t, n, s) {
     mentionCount: o,
     sortOrder: function(e, t, n) {
       let s = M.Z.getChannel(t);
-      if (m.Z.isFavorite(t)) return 0;
+      if (N.Z.isFavorite(t)) return 0;
       if (s.isPrivate()) return 1;
       if (D.ZP.getMentionCount(t) > 0) return 2;
       if (null != n) {
         let e = B.default.extractTimestamp(n);
-        if (Date.now() - e > z) return 7;
-        if (Date.now() - e > W) return 5
+        if (Date.now() - e > K) return 7;
+        if (Date.now() - e > z) return 5
       }
       if (s.isThread()) {
-        let e = (0, g.J)(s);
+        let e = (0, p.J)(s);
         return e === G.iN.ALL_MESSAGES ? 3 : e === G.iN.NO_MESSAGES ? 6 : 4
       } {
         let n = U.ZP.getChannelMessageNotifications(e, t),
@@ -364,8 +364,8 @@ function K(e, t, n, s) {
     messages: []
   })
 }
-let W = 2 * y.Z.Millis.DAY,
-  z = 10 * y.Z.Millis.DAY;
+let z = 2 * b.Z.Millis.DAY,
+  K = 10 * b.Z.Millis.DAY;
 
 function Q(e) {
   let [t, n] = r.useState(() => new w(Y(), e)), [s, i] = r.useState(!1), l = r.useRef(Date.now()), [a, o] = r.useState(() => Y());
@@ -378,6 +378,6 @@ function Q(e) {
     if (null == a || a.channels.length > 0 || s) return;
     let t = Date.now(),
       r = Y();
-    0 === r.channels.length || t - l.current < 10 * y.Z.Millis.SECOND ? i(!0) : (l.current = Date.now(), n(new w(r, e)))
-  }, [a, s, e]), r.useLayoutEffect(t.maybeLoadMore, [null == a ? void 0 : a.channels, null == a ? void 0 : a.loadState]), r.useEffect(() => (Z.Z.addChangeListener(t.reloadMessages), () => Z.Z.removeChangeListener(t.reloadMessages)), [t.reloadMessages]), r.useEffect(() => (U.ZP.addChangeListener(t.handleUserGuildSettingsStoreChange), () => U.ZP.removeChangeListener(t.handleUserGuildSettingsStoreChange)), [t]), r.useEffect(() => (p.Z.addChangeListener(t.handleJoinedThreadsStoreChange), () => p.Z.removeChangeListener(t.handleJoinedThreadsStoreChange)), [t]), r.useEffect(() => (A.Z.addChangeListener(t.handleActiveThreadsStoreChange), () => A.Z.removeChangeListener(t.handleActiveThreadsStoreChange)), [t]), [a, t]
+    0 === r.channels.length || t - l.current < 10 * b.Z.Millis.SECOND ? i(!0) : (l.current = Date.now(), n(new w(r, e)))
+  }, [a, s, e]), r.useLayoutEffect(t.maybeLoadMore, [null == a ? void 0 : a.channels, null == a ? void 0 : a.loadState]), r.useEffect(() => (Z.Z.addChangeListener(t.reloadMessages), () => Z.Z.removeChangeListener(t.reloadMessages)), [t.reloadMessages]), r.useEffect(() => (U.ZP.addChangeListener(t.handleUserGuildSettingsStoreChange), () => U.ZP.removeChangeListener(t.handleUserGuildSettingsStoreChange)), [t]), r.useEffect(() => (g.Z.addChangeListener(t.handleJoinedThreadsStoreChange), () => g.Z.removeChangeListener(t.handleJoinedThreadsStoreChange)), [t]), r.useEffect(() => (A.Z.addChangeListener(t.handleActiveThreadsStoreChange), () => A.Z.removeChangeListener(t.handleActiveThreadsStoreChange)), [t]), [a, t]
 }

@@ -1,6 +1,6 @@
 n(47120);
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(392711),
   a = n.n(l),
   r = n(442837),
@@ -13,12 +13,12 @@ var i = n(735250),
   _ = n(131951),
   I = n(51144),
   m = n(321488),
-  g = n(417183),
-  p = n(825682),
-  N = n(170245),
-  T = n(981631),
-  C = n(65154),
-  S = n(689938),
+  T = n(417183),
+  g = n(825682),
+  p = n(170245),
+  N = n(981631),
+  S = n(65154),
+  C = n(689938),
   A = n(53485);
 
 function f(e, t, n) {
@@ -34,43 +34,43 @@ function Z(e) {
   let {
     user: t,
     onSelect: n
-  } = e, s = () => {
+  } = e, i = () => {
     d.Z.removeFriend(t.id, {
       location: "Friends"
     })
-  }, l = (0, r.e7)([_.Z], () => _.Z.supports(C.AN.VIDEO));
-  return (0, i.jsxs)(o.Menu, {
+  }, l = (0, r.e7)([_.Z], () => _.Z.supports(S.AN.VIDEO));
+  return (0, s.jsxs)(o.Menu, {
     navId: "friend-row",
-    "aria-label": S.Z.Messages.USER_ACTIONS_MENU_LABEL,
+    "aria-label": C.Z.Messages.USER_ACTIONS_MENU_LABEL,
     onClose: u.Zy,
     onSelect: n,
-    children: [l ? (0, i.jsx)(o.MenuItem, {
+    children: [l ? (0, s.jsx)(o.MenuItem, {
       id: "start-video-call",
-      label: S.Z.Messages.START_VIDEO_CALL,
+      label: C.Z.Messages.START_VIDEO_CALL,
       action: function() {
         c.Z.openPrivateChannel(t.id, !0, !0)
       }
-    }) : null, (0, i.jsx)(o.MenuItem, {
+    }) : null, (0, s.jsx)(o.MenuItem, {
       id: "start-voice-call",
-      label: S.Z.Messages.START_VOICE_CALL,
+      label: C.Z.Messages.START_VOICE_CALL,
       action: () => {
         c.Z.openPrivateChannel(t.id, !0)
       }
-    }), (0, i.jsx)(o.MenuItem, {
+    }), (0, s.jsx)(o.MenuItem, {
       id: "remove-friend",
-      label: S.Z.Messages.REMOVE_FRIEND,
+      label: C.Z.Messages.REMOVE_FRIEND,
       action: () => {
-        (0, o.openModal)(e => (0, i.jsx)(o.ConfirmModal, {
-          header: S.Z.Messages.REMOVE_FRIEND_TITLE.format({
+        (0, o.openModal)(e => (0, s.jsx)(o.ConfirmModal, {
+          header: C.Z.Messages.REMOVE_FRIEND_TITLE.format({
             name: I.ZP.getName(t)
           }),
-          confirmText: S.Z.Messages.REMOVE_FRIEND,
-          cancelText: S.Z.Messages.CANCEL,
-          onConfirm: s,
+          confirmText: C.Z.Messages.REMOVE_FRIEND,
+          cancelText: C.Z.Messages.CANCEL,
+          onConfirm: i,
           ...e,
-          children: (0, i.jsx)(o.Text, {
+          children: (0, s.jsx)(o.Text, {
             variant: "text-md/normal",
-            children: S.Z.Messages.REMOVE_FRIEND_BODY.format({
+            children: C.Z.Messages.REMOVE_FRIEND_BODY.format({
               name: I.ZP.getName(t)
             })
           })
@@ -80,7 +80,7 @@ function Z(e) {
     })]
   })
 }
-class v extends s.PureComponent {
+class L extends i.PureComponent {
   componentWillLeave(e) {
     null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillLeave(e)
   }
@@ -92,30 +92,30 @@ class v extends s.PureComponent {
       user: e,
       isFocused: t,
       activities: n,
-      applicationStream: s,
+      applicationStream: i,
       status: l,
       lastOnlineTimestamp: a,
       isMobile: r
     } = this.props, {
       isActiveRow: c
     } = this.state;
-    return (0, i.jsx)(g.Z, {
+    return (0, s.jsx)(T.Z, {
       ref: this.peopleListItemRef,
       isFocused: t,
       isActive: c,
       user: e,
       onOtherHover: () => c ? null : (0, u.Zy)(),
       onClick: this.handleOpenPrivateChannel,
-      children: t => (0, i.jsxs)("div", {
+      children: t => (0, s.jsxs)("div", {
         className: A.listItemContents,
-        children: [(0, i.jsx)(N.Z, {
+        children: [(0, s.jsx)(p.Z, {
           user: e,
           status: l,
           isMobile: r,
-          subText: (0, i.jsx)(p.Z, {
+          subText: (0, s.jsx)(g.Z, {
             hovered: t,
             activities: n,
-            applicationStream: s,
+            applicationStream: i,
             status: l,
             user: e,
             lastOnlineTimestamp: a,
@@ -123,16 +123,16 @@ class v extends s.PureComponent {
           }),
           hovered: t,
           showAccountIdentifier: !0
-        }), (0, i.jsxs)("div", {
+        }), (0, s.jsxs)("div", {
           className: A.actions,
-          children: [(0, i.jsx)(m.Z, {
+          children: [(0, s.jsx)(m.Z, {
             icon: o.ChatIcon,
-            tooltip: S.Z.Messages.SEND_DM,
+            tooltip: C.Z.Messages.SEND_DM,
             onClick: this.handleOpenPrivateChannel,
             shouldHighlight: t
-          }), (0, i.jsx)(m.Z, {
+          }), (0, s.jsx)(m.Z, {
             icon: o.MoreVerticalIcon,
-            tooltip: S.Z.Messages.MORE,
+            tooltip: C.Z.Messages.MORE,
             onClick: this.handleOpenActionsMenu,
             shouldHighlight: t
           })]
@@ -141,20 +141,20 @@ class v extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), f(this, "peopleListItemRef", s.createRef()), f(this, "state", {
+    super(...e), f(this, "peopleListItemRef", i.createRef()), f(this, "state", {
       isActiveRow: !1
     }), f(this, "handleOpenPrivateChannel", e => {
       let {
         user: t
       } = this.props;
       e.stopPropagation();
-      let n = a().find(h.Z.getMutablePrivateChannels(), e => e.type === T.d4z.DM && e.getRecipientId() === t.id);
-      null != n ? (0, E.uL)(T.Z5c.CHANNEL(T.ME, n.id)) : c.Z.openPrivateChannel(t.id)
+      let n = a().find(h.Z.getMutablePrivateChannels(), e => e.type === N.d4z.DM && e.getRecipientId() === t.id);
+      null != n ? (0, E.uL)(N.Z5c.CHANNEL(N.ME, n.id)) : c.Z.openPrivateChannel(t.id)
     }), f(this, "handleOpenActionsMenu", e => {
       let {
         user: t
       } = this.props;
-      (0, u.vq)(e, e => (0, i.jsx)(Z, {
+      (0, u.vq)(e, e => (0, s.jsx)(Z, {
         ...e,
         user: t
       }), {
@@ -169,4 +169,4 @@ class v extends s.PureComponent {
     })
   }
 }
-t.Z = v
+t.Z = L

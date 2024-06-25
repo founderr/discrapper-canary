@@ -1,23 +1,23 @@
-var s = n(392711),
-  i = n.n(s),
-  l = n(723454),
-  a = n(428595),
-  r = n(454585);
-let o = i().omit(a.Z.RULES, ["codeBlock", "heading"]),
-  c = {
-    ...l.Z,
-    parse: function(e, t, n) {
-      var s;
-      let i = l.Z.parse(e, t, n),
-        a = Math.min(6, (null !== (s = n.initialHeaderLevel) && void 0 !== s ? s : 3) + i.level);
+var n = t(392711),
+  a = t.n(n),
+  s = t(723454),
+  r = t(428595),
+  l = t(454585);
+let o = a().omit(r.Z.RULES, ["codeBlock", "heading"]),
+  i = {
+    ...s.Z,
+    parse: function(e, A, t) {
+      var n;
+      let a = s.Z.parse(e, A, t),
+        r = Math.min(6, (null !== (n = t.initialHeaderLevel) && void 0 !== n ? n : 3) + a.level);
       return {
-        ...i,
-        level: a
+        ...a,
+        level: r
       }
     }
   },
-  u = r.Z.combineAndInjectMentionRule(o, [r.Z.createReactRules(r.Z.defaultReactRuleOptions), {
-    header: c
+  d = l.Z.combineAndInjectMentionRule(o, [l.Z.createReactRules(l.Z.defaultReactRuleOptions), {
+    header: i
   }]),
-  d = r.Z.reactParserFor(u);
-t.Z = d
+  c = l.Z.reactParserFor(d);
+A.Z = c

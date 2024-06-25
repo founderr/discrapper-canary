@@ -19,19 +19,19 @@ let _ = i.memo(function(e) {
     channel: n,
     referencedMessage: E,
     compact: _ = !1
-  } = e, I = E.state === r.Y.LOADED ? E.message : void 0, T = (0, a.p)(), N = i.useMemo(() => (null == I ? void 0 : I.content) != null && "" !== I.content ? (0, u.ZP)(I, {
+  } = e, I = E.state === r.Y.LOADED ? E.message : void 0, T = (0, a.p)(), m = i.useMemo(() => (null == I ? void 0 : I.content) != null && "" !== I.content ? (0, u.ZP)(I, {
     formatInline: !0,
     shouldFilterKeywords: T
-  }).content : null, [I, T]), m = (0, l.e7)([o.Z], () => null != I && o.Z.isBlockedForMessage(I), [I]), h = (0, d.Uj)(I), C = (0, d.Uj)(t);
+  }).content : null, [I, T]), N = (0, l.e7)([o.Z], () => null != I && o.Z.isBlockedForMessage(I), [I]), h = (0, d.Uj)(I), C = (0, d.Uj)(t);
   return (0, s.jsx)(c.Z, {
     repliedAuthor: h,
     baseAuthor: C,
     baseMessage: t,
     channel: n,
     referencedMessage: E,
-    content: N,
+    content: m,
     compact: _,
-    isReplyAuthorBlocked: m
+    isReplyAuthorBlocked: N
   })
 });
 

@@ -20,17 +20,17 @@ function c(e) {
     onJoinStream: d,
     usernameHook: E,
     compact: _
-  } = e, I = (0, l.ZP)(n), T = null === (t = n.call) || void 0 === t ? void 0 : t.duration, N = E(I), m = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
+  } = e, I = (0, l.ZP)(n), T = null === (t = n.call) || void 0 === t ? void 0 : t.duration, m = E(I), N = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
     username: I.nick,
     activityName: null != u ? u.name : "unknown",
     onJoinStream: d,
-    usernameHook: N
+    usernameHook: m
   });
-  return null != T && (m = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ENDED.format({
+  return null != T && (N = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ENDED.format({
     username: I.nick,
     duration: T.humanize(),
     channelName: c.name,
-    usernameHook: N
+    usernameHook: m
   })), (0, s.jsx)(a.Z, {
     iconNode: null != T ? (0, s.jsx)(i.ScreenXIcon, {
       size: "custom",
@@ -42,6 +42,6 @@ function c(e) {
     }),
     timestamp: n.timestamp,
     compact: _,
-    children: m
+    children: N
   })
 }

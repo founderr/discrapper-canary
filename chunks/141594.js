@@ -1,6 +1,6 @@
 n(47120);
-var i = n(470079),
-  s = n(442837),
+var s = n(470079),
+  i = n(442837),
   l = n(704215),
   a = n(243778),
   r = n(594174),
@@ -9,9 +9,9 @@ var i = n(470079),
   u = n(302800),
   d = n(921944);
 t.Z = () => {
-  let e = (0, s.e7)([r.default], () => r.default.getCurrentUser()),
+  let e = (0, i.e7)([r.default], () => r.default.getCurrentUser()),
     t = (0, c.I)("useCollectiblesShopTabNewBadge"),
-    n = i.useMemo(() => {
+    n = s.useMemo(() => {
       if ((0, o.Fc)(e)) {
         if (t === u.LM.ARCADE) return [l.z.COLLECTIBLES_SHOP_ARCADE_COACHTIP];
         if (t === u.LM.RETRO_AND_PIRATES) return [l.z.COLLECTIBLES_SHOP_RETRO_AND_PIRATES_COACHTIP];

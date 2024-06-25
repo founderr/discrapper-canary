@@ -12,7 +12,7 @@ var a, n, i = t(735250),
   b = t(755864),
   y = t(520076);
 
-function f(e, r, t) {
+function x(e, r, t) {
   return r in e ? Object.defineProperty(e, r, {
     value: t,
     enumerable: !0,
@@ -20,10 +20,10 @@ function f(e, r, t) {
     writable: !0
   }) : e[r] = t, e
 }
-let x = new RegExp("https?://".concat(null !== (a = window.GLOBAL_ENV.CDN_HOST) && void 0 !== a ? a : ""));
+let f = new RegExp("https?://".concat(null !== (a = window.GLOBAL_ENV.CDN_HOST) && void 0 !== a ? a : ""));
 
 function k(e) {
-  return "string" == typeof e.content ? e.content : N(e.content)
+  return "string" == typeof e.content ? e.content : w(e.content)
 }
 let v = {
     ...d().defaultRules,
@@ -83,7 +83,7 @@ let v = {
         let n = a.match(e, r, t);
         if (null != n && Array.isArray(n) && n.length >= 3) {
           let e = n[2];
-          if ("string" == typeof e) return null != e.match(x) ? n : null
+          if ("string" == typeof e) return null != e.match(f) ? n : null
         }
         return !1
       }
@@ -128,8 +128,8 @@ let v = {
     }
   },
   j = d().parserFor(v),
-  N = d().reactFor(d().ruleOutput(v, "react"));
-class w extends(n = l.PureComponent) {
+  w = d().reactFor(d().ruleOutput(v, "react"));
+class N extends(n = l.PureComponent) {
   render() {
     let {
       className: e,
@@ -147,7 +147,7 @@ class w extends(n = l.PureComponent) {
     })
   }
 }
-f(w, "rules", v), f(w, "defaultProps", {
+x(N, "rules", v), x(N, "defaultProps", {
   parser: j,
-  output: N
-}), r.Z = w
+  output: w
+}), r.Z = N

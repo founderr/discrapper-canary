@@ -13,8 +13,8 @@ var l = n(735250),
   c = n(451603),
   d = n(885714),
   h = n(155409),
-  g = n(430824),
-  p = n(594174),
+  p = n(430824),
+  g = n(594174),
   m = n(40153),
   C = n(603592),
   E = n(981631),
@@ -49,7 +49,7 @@ function S(e) {
   let {
     disableTooltip: t,
     lastTargetNode: n
-  } = e, a = (0, s.e7)([g.Z], () => g.Z.getGuilds()), S = i.useMemo(() => Object.values(a), [a]), x = (0, s.e7)([p.default], () => p.default.getCurrentUser()), T = i.useMemo(() => S.some(e => e.isOwner(x)), [S, x]), L = (0, r.useModalsStore)(e => (0, r.hasModalOpenSelector)(e, f.PU)), {
+  } = e, a = (0, s.e7)([p.Z], () => p.Z.getGuilds()), S = i.useMemo(() => Object.values(a), [a]), x = (0, s.e7)([g.default], () => g.default.getCurrentUser()), L = i.useMemo(() => S.some(e => e.isOwner(x)), [S, x]), T = (0, r.useModalsStore)(e => (0, r.hasModalOpenSelector)(e, f.PU)), {
     analyticsLocations: v
   } = (0, o.ZP)(), A = (0, r.useRedesignIconContext)().enabled, M = (0, l.jsx)(C.Z, {
     showPill: !1,
@@ -68,7 +68,7 @@ function S(e) {
         location: "Guild List"
       })
     },
-    selected: L,
+    selected: T,
     onContextMenu: Z,
     tooltip: _.Z.Messages.ADD_A_SERVER,
     icon: A ? r.PlusMediumIcon : r.PlusSmallIcon
@@ -76,7 +76,7 @@ function S(e) {
   return t ? M : (0, l.jsx)("div", {
     className: I.tutorialContainer,
     children: (0, l.jsxs)(h.Z, {
-      tutorialId: T ? "create-more-servers" : "create-first-server",
+      tutorialId: L ? "create-more-servers" : "create-first-server",
       inlineSpecs: N,
       position: "right",
       children: [M, null != n && (0, l.jsx)(m.ZP, {

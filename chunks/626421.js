@@ -3,8 +3,8 @@ n.d(t, {
     return _
   }
 }), n(47120);
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(120356),
   a = n.n(l),
   r = n(399606),
@@ -13,7 +13,7 @@ var i = n(735250),
   u = n(566840),
   d = n(921944),
   E = n(575174);
-let h = s.memo(function(e) {
+let h = i.memo(function(e) {
   var t, n, l;
   let {
     state: r,
@@ -22,11 +22,11 @@ let h = s.memo(function(e) {
     name: c,
     guildId: u,
     boundingRect: d
-  } = r, h = s.useMemo(() => (function(e, t, n) {
+  } = r, h = i.useMemo(() => (function(e, t, n) {
     return null
   })(c, 0, 0), [c, u, o]);
   if (null == h) return null;
-  return (0, i.jsx)("div", {
+  return (0, s.jsx)("div", {
     className: a()(E.upsell, !(null != (t = d) && !(t.y < 0)) && E.hidden),
     style: (n = c, null == (l = d) ? {} : {
       top: l.top,
@@ -39,7 +39,7 @@ let h = s.memo(function(e) {
 function _() {
   let e = (0, r.e7)([c.Z], () => c.Z.getGuildId()),
     t = (0, u.Eg)(e),
-    [n, s] = (0, o.U)(Object.values(t).filter(e => {
+    [n, i] = (0, o.U)(Object.values(t).filter(e => {
       let {
         disabled: t
       } = e;
@@ -52,11 +52,11 @@ function _() {
     }), d.R.SIDEBAR);
   if (null == n) return null;
   let l = t[n];
-  return null == l ? null : (0, i.jsx)("div", {
+  return null == l ? null : (0, s.jsx)("div", {
     className: E.container,
-    children: (0, i.jsx)(h, {
+    children: (0, s.jsx)(h, {
       state: l,
-      markAsDismissed: s
+      markAsDismissed: i
     })
   })
 }

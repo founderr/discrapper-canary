@@ -3,7 +3,7 @@ n.d(t, {
     return N
   },
   u: function() {
-    return h
+    return I
   }
 });
 var s = n(735250);
@@ -13,27 +13,27 @@ var r = n(120356),
   l = n(692547),
   a = n(481060),
   o = n(388905),
-  c = n(285952),
-  u = n(981631),
+  u = n(285952),
+  c = n(981631),
   d = n(689938),
   E = n(595927),
   _ = n(83922),
-  I = n(331651);
+  h = n(331651);
 
-function h(e) {
+function I(e) {
   let {
     text: t,
     buttonCta: r,
-    onClick: u
+    onClick: c
   } = e;
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(o.Ee, {
       src: n(689411)
     }), (0, s.jsx)(o.Dx, {
-      className: i()(I.marginTop20, I.marginBottom8, _.flexCenter),
+      className: i()(h.marginTop20, h.marginBottom8, _.flexCenter),
       children: d.Z.Messages.DISCORD_DESC_SHORT
     }), (0, s.jsx)(o.DK, {
-      className: I.marginBottom40,
+      className: h.marginBottom40,
       children: d.Z.Messages.DISCORD_DESC_LONG
     }), (0, s.jsxs)(a.Card, {
       className: E.card,
@@ -46,10 +46,10 @@ function h(e) {
         alt: "",
         className: E.cardAccentRight,
         src: n(806848)
-      }), (0, s.jsxs)(c.Z, {
+      }), (0, s.jsxs)(u.Z, {
         className: E.cardContents,
-        direction: c.Z.Direction.VERTICAL,
-        align: c.Z.Align.STRETCH,
+        direction: u.Z.Direction.VERTICAL,
+        align: u.Z.Align.STRETCH,
         grow: 0,
         children: [(0, s.jsx)(a.Text, {
           tag: "strong",
@@ -61,7 +61,7 @@ function h(e) {
           children: t
         }), (0, s.jsx)(o.zx, {
           className: E.button,
-          onClick: u,
+          onClick: c,
           children: r
         })]
       })]
@@ -73,12 +73,12 @@ function N(e) {
   let {
     text: t,
     buttonCta: n,
-    theme: r = u.BRd.DARK,
+    theme: r = c.BRd.DARK,
     onClick: i
   } = e;
   return (0, s.jsx)(o.ZP, {
     theme: r,
-    children: (0, s.jsx)(h, {
+    children: (0, s.jsx)(I, {
       text: t,
       buttonCta: n,
       onClick: i

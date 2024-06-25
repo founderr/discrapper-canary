@@ -22,8 +22,8 @@ function d(e) {
     customDisabledColor: _,
     hideNotLaunchable: I,
     tooltipPosition: T,
-    onClick: N,
-    className: m,
+    onClick: m,
+    className: N,
     source: h,
     hover: C,
     innerClassName: S
@@ -33,16 +33,16 @@ function d(e) {
     color: E,
     customDisabledColor: _,
     tooltipPosition: T,
-    onClick: N,
-    className: m,
+    onClick: m,
+    className: N,
     hover: C,
     innerClassName: S
-  }, p = (0, i.e7)([a.Z], () => a.Z.getActiveLibraryApplication(t.id)), g = null != p ? p.sku.id : null, f = null != g ? g : t.primarySkuId, O = (0, i.e7)([r.Z], () => null != f && !r.Z.didFetchingSkuFail(f));
-  return null != p && (0, o.Je)(p) ? (0, s.jsx)(u.Z, {
+  }, g = (0, i.e7)([a.Z], () => a.Z.getActiveLibraryApplication(t.id)), p = null != g ? g.sku.id : null, f = null != p ? p : t.primarySkuId, R = (0, i.e7)([r.Z], () => null != f && !r.Z.didFetchingSkuFail(f));
+  return null != g && (0, o.Je)(g) ? (0, s.jsx)(u.Z, {
     ...A,
-    libraryApplication: p,
+    libraryApplication: g,
     source: h
-  }) : O ? (0, s.jsx)("div", {
+  }) : R ? (0, s.jsx)("div", {
     children: "deprecated!"
   }) : (0, s.jsx)(c.Z, {
     ...A,

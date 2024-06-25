@@ -1,51 +1,51 @@
-t.d(n, {
+n.d(t, {
   m: function() {
     return d
   }
 });
-var i = t(735250);
-t(470079);
-var l = t(442837),
-  s = t(481060),
-  r = t(17894),
-  a = t(430824),
-  o = t(313550),
-  u = t(689938),
-  c = t(750231);
+var s = n(735250);
+n(470079);
+var i = n(442837),
+  l = n(481060),
+  a = n(17894),
+  r = n(430824),
+  o = n(313550),
+  c = n(689938),
+  u = n(750231);
 let d = e => {
   let {
-    onClose: n,
-    listing: t,
+    onClose: t,
+    listing: n,
     guildId: d
-  } = e, _ = (0, l.e7)([a.Z], () => a.Z.getGuild(d), [d]), I = (0, o.Z)({
-    listing: t,
+  } = e, E = (0, i.e7)([r.Z], () => r.Z.getGuild(d), [d]), _ = (0, o.Z)({
+    listing: n,
     guildId: d
   });
-  return (0, i.jsxs)("div", {
-    className: c.confirmationContainer,
-    children: [(0, i.jsx)(s.Heading, {
-      className: c.confirmationHeader,
+  return (0, s.jsxs)("div", {
+    className: u.confirmationContainer,
+    children: [(0, s.jsx)(l.Heading, {
+      className: u.confirmationHeader,
       variant: "heading-lg/extrabold",
-      children: u.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_TITLE.format({
-        serverName: null == _ ? void 0 : _.toString(),
-        tierName: t.name
+      children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_TITLE.format({
+        serverName: null == E ? void 0 : E.toString(),
+        tierName: n.name
       })
-    }), !I.isEmpty() && (0, i.jsx)(s.Text, {
-      className: c.confirmationSubtitle,
+    }), !_.isEmpty() && (0, s.jsx)(l.Text, {
+      className: u.confirmationSubtitle,
       variant: "text-sm/normal",
       color: "header-secondary",
-      children: u.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({
-        benefits: I.asString()
+      children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({
+        benefits: _.asString()
       })
-    }), (0, i.jsx)(s.Button, {
-      className: c.openDiscordButton,
-      onClick: () => (0, r.Z)("role_sub_mweb_success_modal"),
-      children: u.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_OPEN_DISCORD_BUTTON
-    }), (0, i.jsx)(s.Button, {
-      className: c.doneButton,
-      look: s.Button.Looks.BLANK,
-      onClick: () => n(!0),
-      children: u.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON
+    }), (0, s.jsx)(l.Button, {
+      className: u.openDiscordButton,
+      onClick: () => (0, a.Z)("role_sub_mweb_success_modal"),
+      children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_OPEN_DISCORD_BUTTON
+    }), (0, s.jsx)(l.Button, {
+      className: u.doneButton,
+      look: l.Button.Looks.BLANK,
+      onClick: () => t(!0),
+      children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON
     })]
   })
 }

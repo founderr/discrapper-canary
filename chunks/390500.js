@@ -1,5 +1,5 @@
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(481060),
   a = n(970606),
   r = n(346656),
@@ -11,33 +11,33 @@ t.Z = function(e) {
     onWithdrawApplication: t,
     guild: n = null
   } = e, d = null == n ? void 0 : n.id;
-  return s.useEffect(() => {
+  return i.useEffect(() => {
     null != d && (0, a.Pq)(d)
-  }, [d]), (0, i.jsxs)("div", {
+  }, [d]), (0, s.jsxs)("div", {
     className: c.confirmation,
-    children: [(0, i.jsxs)("div", {
+    children: [(0, s.jsxs)("div", {
       className: c.confirmationContent,
-      children: [null !== n ? (0, i.jsx)(r.Z, {
+      children: [null !== n ? (0, s.jsx)(r.Z, {
         size: r.Z.Sizes.LARGER,
         guild: n,
         className: c.guildIcon
-      }) : (0, i.jsx)("img", {
+      }) : (0, s.jsx)("img", {
         alt: o.Z.Messages.MEMBER_VERIFICATION_PENDING_APPLICATION_ICON,
         src: u
-      }), (0, i.jsx)(l.Heading, {
+      }), (0, s.jsx)(l.Heading, {
         variant: "heading-xl/semibold",
         className: c.header,
         children: (null == n ? void 0 : n.name) != null ? o.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE_WITH_GUILD_NAME.format({
           guildName: n.name
         }) : o.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE
-      }), (0, i.jsx)(l.Text, {
+      }), (0, s.jsx)(l.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
         children: o.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_SUBTITLE
       })]
-    }), (0, i.jsx)("div", {
+    }), (0, s.jsx)("div", {
       className: c.confirmationButtonColumn,
-      children: (0, i.jsx)(l.Button, {
+      children: (0, s.jsx)(l.Button, {
         onClick: t,
         look: l.Button.Looks.LINK,
         color: l.Button.Colors.LINK,

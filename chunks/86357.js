@@ -4,8 +4,8 @@ var s, i, l, a, r, o, c, u, d = n(735250),
   _ = n(120356),
   I = n.n(_),
   T = n(481060),
-  N = n(646288),
-  m = n(689938),
+  m = n(646288),
+  N = n(689938),
   h = n(162176);
 (a = s || (s = {}))[a.DIRECTORY_HERO = 1] = "DIRECTORY_HERO", a[a.DIRECTORY_TILE = 2] = "DIRECTORY_TILE", a[a.DIRECTORY_SEARCH = 3] = "DIRECTORY_SEARCH", a[a.LISTING = 4] = "LISTING", a[a.EMBED = 5] = "EMBED", (r = i || (i = {}))[r.IN_LIBRARY = 1] = "IN_LIBRARY", r[r.ON_SALE = 2] = "ON_SALE", r[r.PREMIUM = 3] = "PREMIUM", r[r.DEFAULT = 4] = "DEFAULT", r[r.ENTITLEMENT_BRANCH = 5] = "ENTITLEMENT_BRANCH";
 let C = e => {
@@ -18,7 +18,7 @@ let C = e => {
         size: "md",
         color: "currentColor",
         className: h.icon
-      }), m.Z.Messages.APPLICATION_STORE_IN_LIBRARY]
+      }), N.Z.Messages.APPLICATION_STORE_IN_LIBRARY]
     })
   },
   S = e => {
@@ -32,7 +32,7 @@ let C = e => {
         size: "md",
         color: "currentColor",
         className: h.icon
-      }), (0, N.Z)(t)]
+      }), (0, m.Z)(t)]
     })
   },
   A = e => {
@@ -45,24 +45,24 @@ let C = e => {
       children: t.getDisplaySalePercentage()
     })
   },
-  p = e => {
-    let {
-      sku: t,
-      className: n
-    } = e;
-    return (0, d.jsx)("div", {
-      className: I()(h.originalAmount, n),
-      children: (0, N.Z)(t, !1)
-    })
-  },
   g = e => {
     let {
       sku: t,
       className: n
     } = e;
     return (0, d.jsx)("div", {
+      className: I()(h.originalAmount, n),
+      children: (0, m.Z)(t, !1)
+    })
+  },
+  p = e => {
+    let {
+      sku: t,
+      className: n
+    } = e;
+    return (0, d.jsx)("div", {
       className: n,
-      children: (0, N.Z)(t)
+      children: (0, m.Z)(t)
     })
   },
   f = e => {
@@ -74,23 +74,23 @@ let C = e => {
       className: I()(h.row, n),
       children: [(0, d.jsx)(A, {
         sku: t
-      }), (0, d.jsx)(p, {
-        sku: t
       }), (0, d.jsx)(g, {
+        sku: t
+      }), (0, d.jsx)(p, {
         sku: t
       })]
     })
   },
-  O = e => {
+  R = e => {
     let {
       className: t
     } = e;
     return (0, d.jsx)("div", {
       className: t,
-      children: m.Z.Messages.APPLICATION_STORE_FREE
+      children: N.Z.Messages.APPLICATION_STORE_FREE
     })
   };
-class R extends(l = E.PureComponent) {
+class O extends(l = E.PureComponent) {
   getState() {
     let {
       inLibrary: e,
@@ -112,7 +112,7 @@ class R extends(l = E.PureComponent) {
     } = this.props;
     switch (e) {
       case 5:
-        return (0, d.jsx)(O, {
+        return (0, d.jsx)(R, {
           className: I()(t, n)
         });
       case 1:
@@ -130,7 +130,7 @@ class R extends(l = E.PureComponent) {
           className: I()(t, n)
         });
       default:
-        return (0, d.jsx)(g, {
+        return (0, d.jsx)(p, {
           className: I()(t, n),
           sku: s
         })
@@ -143,7 +143,7 @@ class R extends(l = E.PureComponent) {
     } = this.props;
     switch (e) {
       case 5:
-        return (0, d.jsx)(O, {
+        return (0, d.jsx)(R, {
           className: I()(t)
         });
       case 3:
@@ -157,7 +157,7 @@ class R extends(l = E.PureComponent) {
           className: I()(h.directoryHeroPrice, t)
         });
       default:
-        return (0, d.jsx)(g, {
+        return (0, d.jsx)(p, {
           className: I()(h.directoryHeroPrice, t),
           sku: n
         })
@@ -171,24 +171,24 @@ class R extends(l = E.PureComponent) {
     } = this.props;
     switch (e) {
       case 5:
-        t = (0, d.jsx)(O, {});
+        t = (0, d.jsx)(R, {});
         break;
       case 2:
         t = (0, d.jsxs)(E.Fragment, {
           children: [(0, d.jsxs)("div", {
             className: h.row,
-            children: [(0, d.jsx)(g, {
+            children: [(0, d.jsx)(p, {
               sku: s
             }), (0, d.jsx)(A, {
               sku: s
             })]
-          }), (0, d.jsx)(p, {
+          }), (0, d.jsx)(g, {
             sku: s
           })]
         });
         break;
       default:
-        t = (0, d.jsx)(g, {
+        t = (0, d.jsx)(p, {
           sku: s
         })
     }
@@ -216,9 +216,9 @@ class R extends(l = E.PureComponent) {
     }
   }
 }
-o = R, c = "Types", u = s, c in o ? Object.defineProperty(o, c, {
+o = O, c = "Types", u = s, c in o ? Object.defineProperty(o, c, {
   value: u,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[c] = u, t.Z = R
+}) : o[c] = u, t.Z = O

@@ -1,58 +1,58 @@
-var s, i = n(442837),
-  a = n(570140),
-  l = n(314897),
-  r = n(57562),
-  c = n(351780),
-  o = n(843693);
+var n, a = s(442837),
+  i = s(570140),
+  r = s(314897),
+  l = s(57562),
+  o = s(351780),
+  c = s(843693);
 
-function d(e, t, n) {
+function E(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: s,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = s, e
 }
-let u = {
+let _ = {
     unlockedAchievements: {}
   },
-  E = {
-    ...u
+  u = {
+    ..._
   };
-class _ extends(s = i.ZP.PersistedStore) {
+class d extends(n = a.ZP.PersistedStore) {
   initialize(e) {
-    this.waitFor(l.default, o.ZP);
+    this.waitFor(r.default, c.ZP);
     let t = null != e ? e : {
-      ...u
+      ..._
     };
-    for (let e in t) E[e] = t[e]
+    for (let e in t) u[e] = t[e]
   }
   getState() {
-    return E
+    return u
   }
   getAllUnlockedAchievements() {
-    return E.unlockedAchievements
+    return u.unlockedAchievements
   }
   getUnlocked(e) {
     var t;
-    return null !== (t = E.unlockedAchievements[e]) && void 0 !== t ? t : null
+    return null !== (t = u.unlockedAchievements[e]) && void 0 !== t ? t : null
   }
 }
-d(_, "displayName", "PoggermodeAchievementStore"), d(_, "persistKey", "PoggermodeAchievementStore"), t.Z = new _(a.Z, {
+E(d, "displayName", "PoggermodeAchievementStore"), E(d, "persistKey", "PoggermodeAchievementStore"), t.Z = new d(i.Z, {
   POGGERMODE_ACHIEVEMENT_UNLOCK: function(e) {
     var t;
     let {
-      achievementId: n
+      achievementId: s
     } = e;
-    if (!c.Z.isEnabled()) return !1;
-    t = n, null != E.unlockedAchievements[t] || (E.unlockedAchievements = {
-      ...E.unlockedAchievements,
+    if (!o.Z.isEnabled()) return !1;
+    t = s, null != u.unlockedAchievements[t] || (u.unlockedAchievements = {
+      ...u.unlockedAchievements,
       [t]: {
         achievementId: t,
         dateUnlocked: Date.now()
       }
     }, setTimeout(() => {
-      (0, r.D)(t, !0)
+      (0, l.D)(t, !0)
     }, 2e3))
   }
 })

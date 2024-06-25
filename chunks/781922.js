@@ -1,9 +1,9 @@
-t.d(s, {
+s.d(t, {
   X: function() {
     return n
   }
 });
-let n = (0, t(818083).B)({
+let n = (0, s(818083).B)({
   kind: "user",
   id: "2024-05_referral_program_whats_new_card",
   label: "Referral Program Whats New Card",

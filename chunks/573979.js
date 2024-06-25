@@ -3,7 +3,7 @@ n.d(t, {
     return o
   }
 });
-var i, s, l, a, r = n(358085);
+var s, i, l, a, r = n(358085);
 
 function o(e) {
   if ((0, r.isIOS)()) return e;
@@ -23,4 +23,4 @@ function o(e) {
     default:
       return -1
   }
-}(i = l || (l = {}))[i.UNHANDLED = -1] = "UNHANDLED", i[i.NOMINAL = 0] = "NOMINAL", i[i.FAIR = 1] = "FAIR", i[i.SERIOUS = 2] = "SERIOUS", i[i.CRITICAL = 3] = "CRITICAL", (s = a || (a = {}))[s.NONE = 0] = "NONE", s[s.LIGHT = 1] = "LIGHT", s[s.MODERATE = 2] = "MODERATE", s[s.SEVERE = 3] = "SEVERE", s[s.CRITICAL = 4] = "CRITICAL", s[s.EMERGENCY = 5] = "EMERGENCY", s[s.SHUTDOWN = 6] = "SHUTDOWN"
+}(s = l || (l = {}))[s.UNHANDLED = -1] = "UNHANDLED", s[s.NOMINAL = 0] = "NOMINAL", s[s.FAIR = 1] = "FAIR", s[s.SERIOUS = 2] = "SERIOUS", s[s.CRITICAL = 3] = "CRITICAL", (i = a || (a = {}))[i.NONE = 0] = "NONE", i[i.LIGHT = 1] = "LIGHT", i[i.MODERATE = 2] = "MODERATE", i[i.SEVERE = 3] = "SEVERE", i[i.CRITICAL = 4] = "CRITICAL", i[i.EMERGENCY = 5] = "EMERGENCY", i[i.SHUTDOWN = 6] = "SHUTDOWN"

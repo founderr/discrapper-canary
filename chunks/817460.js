@@ -1,9 +1,9 @@
 t.d(n, {
   JE: function() {
-    return o
+    return u
   },
   ab: function() {
-    return u
+    return o
   },
   iG: function() {
     return s
@@ -16,26 +16,26 @@ t.d(n, {
   }
 });
 var i = t(293810),
-  l = t(474936),
-  r = t(689938);
+  r = t(474936),
+  l = t(689938);
 
-function u(e) {
+function o(e) {
   return "roles" in e ? "emoji-".concat(e.id) : "".concat(e.ref_type, "-").concat(e.emoji_id, "-").concat(e.name, "-").concat(e.ref_id)
 }
 
-function o(e) {
+function u(e) {
   let {
     interval: n,
     interval_count: t
   } = e;
   return (function(e) {
     switch (e) {
-      case l.rV.DAY:
-        return r.Z.Messages.DAY;
-      case l.rV.MONTH:
-        return r.Z.Messages.MONTH;
-      case l.rV.YEAR:
-        return r.Z.Messages.YEAR
+      case r.rV.DAY:
+        return l.Z.Messages.DAY;
+      case r.rV.MONTH:
+        return l.Z.Messages.MONTH;
+      case r.rV.YEAR:
+        return l.Z.Messages.YEAR
     }
   })(n).format({
     count: t
@@ -48,19 +48,19 @@ function s(e) {
     interval_count: t
   } = e;
   switch (n) {
-    case l.rV.DAY:
-      if (t > 0 && t % 7 == 0) return r.Z.Messages.DURATION_WEEKS_CAPITALIZE.format({
+    case r.rV.DAY:
+      if (t > 0 && t % 7 == 0) return l.Z.Messages.DURATION_WEEKS_CAPITALIZE.format({
         weeks: t / 7
       });
-      return r.Z.Messages.DURATION_DAYS_CAPITALIZE.format({
+      return l.Z.Messages.DURATION_DAYS_CAPITALIZE.format({
         days: t
       });
-    case l.rV.MONTH:
-      return r.Z.Messages.DURATION_MONTHS_CAPITALIZE.format({
+    case r.rV.MONTH:
+      return l.Z.Messages.DURATION_MONTHS_CAPITALIZE.format({
         months: t
       });
-    case l.rV.YEAR:
-      return r.Z.Messages.DURATION_YEARS_CAPITALIZE.format({
+    case r.rV.YEAR:
+      return l.Z.Messages.DURATION_YEARS_CAPITALIZE.format({
         years: t
       })
   }

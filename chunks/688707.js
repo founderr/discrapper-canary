@@ -1,6 +1,6 @@
 n(47120);
-var i = n(243814),
-  s = n(920456),
+var s = n(243814),
+  i = n(920456),
   l = n(996106),
   a = n(452426),
   r = n(186901),
@@ -8,7 +8,7 @@ var i = n(243814),
 t.Z = {
   [o.Etm.SET_USER_ACHIEVEMENT]: {
     scope: {
-      [r.Gp.ANY]: [i.x.RPC, r.lH]
+      [r.Gp.ANY]: [s.x.RPC, r.lH]
     },
     validation: e => (0, a.Z)(e).required().keys({
       achievement_id: e.string().min(2).max(128),
@@ -19,13 +19,13 @@ t.Z = {
         socket: t,
         args: {
           achievement_id: n,
-          percent_complete: i
+          percent_complete: s
         }
       } = e, a = t.application.id;
       if (null == a) throw new l.Z({
         errorCode: o.lTL.INVALID_COMMAND
       }, "No application.");
-      return s.Z.setUserAchievement(a, n, i).catch(e => {
+      return i.Z.setUserAchievement(a, n, s).catch(e => {
         let {
           status: t,
           body: n
@@ -52,7 +52,7 @@ t.Z = {
   },
   [o.Etm.GET_USER_ACHIEVEMENTS]: {
     scope: {
-      [r.Gp.ANY]: [i.x.RPC, r.lH]
+      [r.Gp.ANY]: [s.x.RPC, r.lH]
     },
     handler(e) {
       let {
@@ -61,7 +61,7 @@ t.Z = {
       if (null == n) throw new l.Z({
         errorCode: o.lTL.INVALID_COMMAND
       }, "No application.");
-      return s.Z.fetchForApplication(n).then(e => e || [])
+      return i.Z.fetchForApplication(n).then(e => e || [])
     }
   }
 }

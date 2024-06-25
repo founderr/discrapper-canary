@@ -3,7 +3,7 @@ n.d(t, {
     return A
   },
   ZP: function() {
-    return b
+    return j
   },
   eP: function() {
     return O
@@ -21,8 +21,8 @@ var l, i, s, r, a = n(735250),
   c = n.n(u),
   d = n(442837),
   h = n(481060),
-  g = n(787014),
-  p = n(924301),
+  p = n(787014),
+  g = n(924301),
   m = n(159300),
   C = n(152376),
   E = n(427679),
@@ -33,8 +33,8 @@ var l, i, s, r, a = n(735250),
   Z = n(496675),
   S = n(914010),
   x = n(281029),
-  T = n(981631),
-  L = n(689938),
+  L = n(981631),
+  T = n(689938),
   v = n(47705);
 
 function A(e, t, n) {
@@ -53,13 +53,13 @@ function R(e) {
     forceShowButtons: i,
     hasChannelInfo: s = !1
   } = e;
-  if ((0, d.e7)([Z.Z, S.Z], () => n || S.Z.getGuildId() === T.I_8 || !Z.Z.can(T.Plq.MANAGE_CHANNELS, t) && !Z.Z.can(T.Plq.MANAGE_ROLES, t) && !Z.Z.can(T.Plq.MANAGE_WEBHOOKS, t) || (0, _.r8)(t.type) && !Z.Z.can(T.Plq.VIEW_CHANNEL, t) || t.isGuildVocal() && !Z.Z.can(T.Plq.CONNECT, t) || !_.dF.has(t.type))) return null;
+  if ((0, d.e7)([Z.Z, S.Z], () => n || S.Z.getGuildId() === L.I_8 || !Z.Z.can(L.Plq.MANAGE_CHANNELS, t) && !Z.Z.can(L.Plq.MANAGE_ROLES, t) && !Z.Z.can(L.Plq.MANAGE_WEBHOOKS, t) || (0, _.r8)(t.type) && !Z.Z.can(L.Plq.VIEW_CHANNEL, t) || t.isGuildVocal() && !Z.Z.can(L.Plq.CONNECT, t) || !_.dF.has(t.type))) return null;
 
   function r() {
-    g.ZP.open(t.id)
+    p.ZP.open(t.id)
   }
   return (0, a.jsx)(h.Tooltip, {
-    text: L.Z.Messages.EDIT_CHANNEL,
+    text: T.Z.Messages.EDIT_CHANNEL,
     children: e => {
       let {
         onMouseEnter: t,
@@ -71,7 +71,7 @@ function R(e) {
         className: c()(v.iconItem, i ? v.alwaysShown : void 0, s ? v.iconWithChannelInfo : v.iconNoChannelInfo),
         onClick: r,
         tabIndex: l,
-        "aria-label": L.Z.Messages.EDIT_CHANNEL,
+        "aria-label": T.Z.Messages.EDIT_CHANNEL,
         onMouseEnter: t,
         onMouseLeave: n,
         onFocus: o,
@@ -94,22 +94,22 @@ function O(e) {
     tabIndex: s,
     forceShowButtons: r,
     hasChannelInfo: o = !1
-  } = e, u = (0, d.e7)([N.Z], () => N.Z.getGuild(t.getGuildId())), g = (0, d.e7)([E.Z], () => E.Z.getStageInstanceByChannel(t.id), [t.id]), C = (0, d.e7)([p.ZP], () => p.ZP.getActiveEventByChannel(t.id), [t.id]), _ = (0, d.e7)([Z.Z], () => (0, m.b)(Z.Z, u, t, g)), S = (0, d.e7)([Z.Z], () => Z.Z.can(T.Plq.CREATE_INSTANT_INVITE, t) ? L.Z.Messages.CREATE_INSTANT_INVITE : L.Z.Messages.INVITE_TO_SERVER);
+  } = e, u = (0, d.e7)([N.Z], () => N.Z.getGuild(t.getGuildId())), p = (0, d.e7)([E.Z], () => E.Z.getStageInstanceByChannel(t.id), [t.id]), C = (0, d.e7)([g.ZP], () => g.ZP.getActiveEventByChannel(t.id), [t.id]), _ = (0, d.e7)([Z.Z], () => (0, m.b)(Z.Z, u, t, p)), S = (0, d.e7)([Z.Z], () => Z.Z.can(L.Plq.CREATE_INSTANT_INVITE, t) ? T.Z.Messages.CREATE_INSTANT_INVITE : T.Z.Messages.INVITE_TO_SERVER);
   if (i || !_) return null;
 
   function x() {
     if (null != u) {
-      let e = I.Z.getAllActiveStreams().filter(e => e.state !== T.jm8.ENDED && e.channelId === t.id);
+      let e = I.Z.getAllActiveStreams().filter(e => e.state !== L.jm8.ENDED && e.channelId === t.id);
       (0, h.openModalLazy)(async () => {
         let {
           default: l
-        } = await Promise.all([n.e("99387"), n.e("7654"), n.e("1425")]).then(n.bind(n, 560114));
+        } = await Promise.all([n.e("99387"), n.e("7654"), n.e("9785")]).then(n.bind(n, 560114));
         return n => (0, a.jsx)(l, {
           ...n,
           guild: u,
           channel: t,
           streamUserId: 1 === e.length ? e[0].ownerId : null,
-          source: T.t4x.GUILD_CHANNELS,
+          source: L.t4x.GUILD_CHANNELS,
           guildScheduledEvent: C
         })
       })
@@ -146,12 +146,12 @@ function P(e) {
     (0, C._U)(t.guild_id, t.id)
   };
   return (0, a.jsx)(h.Tooltip, {
-    text: L.Z.Messages.REMOVE_FAVORITE_SUGGESTION,
+    text: T.Z.Messages.REMOVE_FAVORITE_SUGGESTION,
     children: e => (0, a.jsx)(h.Clickable, {
       className: v.iconItem,
       ...e,
       onClick: n,
-      "aria-label": L.Z.Messages.REMOVE_FAVORITE_SUGGESTION,
+      "aria-label": T.Z.Messages.REMOVE_FAVORITE_SUGGESTION,
       children: (0, a.jsx)(h.CloseSmallIcon, {
         size: "xs",
         color: "currentColor",
@@ -161,21 +161,21 @@ function P(e) {
   })
 }
 
-function j(e) {
+function b(e) {
   let {
     channel: t
   } = e, n = () => {
     (0, C.dM)(t.guild_id, t.id, !0, {
-      section: T.jXE.CHANNEL_LIST
+      section: L.jXE.CHANNEL_LIST
     })
   };
   return (0, a.jsx)(h.Tooltip, {
-    text: L.Z.Messages.ADD_FAVORITE,
+    text: T.Z.Messages.ADD_FAVORITE,
     children: e => (0, a.jsx)(h.Clickable, {
       className: v.iconItem,
       ...e,
       onClick: n,
-      "aria-label": L.Z.Messages.ADD_FAVORITE,
+      "aria-label": T.Z.Messages.ADD_FAVORITE,
       children: (0, a.jsx)(h.CheckmarkLargeIcon, {
         size: "xs",
         color: "currentColor",
@@ -184,7 +184,7 @@ function j(e) {
     })
   })
 }
-class b extends(r = o.PureComponent) {
+class j extends(r = o.PureComponent) {
   renderEditButton() {
     return (0, a.jsx)(R, {
       ...this.props
@@ -201,7 +201,7 @@ class b extends(r = o.PureComponent) {
     })
   }
   renderAcceptSuggestionButton() {
-    return (0, a.jsx)(j, {
+    return (0, a.jsx)(b, {
       ...this.props
     })
   }
@@ -223,7 +223,7 @@ class b extends(r = o.PureComponent) {
 }
 s = {
   isDefaultChannel: !1
-}, (i = "defaultProps") in(l = b) ? Object.defineProperty(l, i, {
+}, (i = "defaultProps") in(l = j) ? Object.defineProperty(l, i, {
   value: s,
   enumerable: !0,
   configurable: !0,

@@ -17,8 +17,8 @@ var i = n(399606),
   _ = n(623488),
   I = n(942833),
   T = n(391181),
-  N = n(964793),
-  m = n(226060),
+  m = n(964793),
+  N = n(226060),
   h = n(981631);
 
 function C(e) {
@@ -28,11 +28,11 @@ function C(e) {
     location: C,
     shouldShowFullDescriptionButton: S = !0,
     hideRoleTag: A = !1,
-    lineClamp: p = 1,
-    cardWidth: g,
+    lineClamp: g = 1,
+    cardWidth: p,
     cardHeight: f,
-    thumbnailHeight: O,
-    descriptionTextVariant: R = "text-sm/normal",
+    thumbnailHeight: R,
+    descriptionTextVariant: O = "text-sm/normal",
     showOpaqueBackground: M = !1
   } = e, x = (0, i.e7)([o.Z], () => o.Z.getGuild(n), [n]), v = (0, i.e7)([o.Z], () => {
     var e;
@@ -41,12 +41,12 @@ function C(e) {
     shouldHideGuildPurchaseEntryPoints: D
   } = (0, r.uP)(n), j = (0, I.k)(t);
   if (null == x || D) return null;
-  let U = () => (0, N.e)({
+  let U = () => (0, m.e)({
       guildId: n,
       guildProductListingId: t.id,
       analyticsLocation: C
     }),
-    y = (0, s.jsx)(T.m, {
+    b = (0, s.jsx)(T.m, {
       product: t,
       guildId: n,
       showEditProduct: P,
@@ -76,7 +76,7 @@ function C(e) {
     description: t.description,
     formattedPrice: j,
     role: v,
-    ctaComponent: (0, s.jsx)(m.Z, {
+    ctaComponent: (0, s.jsx)(N.Z, {
       guildId: n,
       guildProductListingId: t.id,
       sourceAnalyticsLocations: C
@@ -85,14 +85,14 @@ function C(e) {
     shouldShowFullDescriptionButton: S,
     onShowFullDescription: U,
     onTapCard: U,
-    actionMenu: y,
+    actionMenu: b,
     showOpaqueBackground: M,
     hideRoleTag: A,
-    lineClamp: p,
-    cardWidth: g,
+    lineClamp: g,
+    cardWidth: p,
     cardHeight: f,
-    thumbnailHeight: O,
-    descriptionTextVariant: R,
+    thumbnailHeight: R,
+    descriptionTextVariant: O,
     isDraft: !t.published
   }, t.id)
 }

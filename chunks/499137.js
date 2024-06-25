@@ -3,10 +3,10 @@ n.d(t, {
     return r
   }
 });
-var i = n(470079),
-  s = n(818083),
+var s = n(470079),
+  i = n(818083),
   l = n(981631);
-let a = (0, s.B)({
+let a = (0, i.B)({
     kind: "guild",
     id: "2021-10_study_group",
     label: "Student hub study group",
@@ -23,7 +23,7 @@ let a = (0, s.B)({
   }),
   r = e => {
     var t;
-    return i.useEffect(() => {
+    return s.useEffect(() => {
       null != e && e.hasFeature(l.oNc.HUB) && a.trackExposure({
         guildId: e.id,
         location: "467c32_1"

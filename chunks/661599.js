@@ -1,13 +1,13 @@
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(230711),
   a = n(82950),
   r = n(981631),
   o = n(689938),
   c = n(510342);
-class u extends s.PureComponent {
+class u extends i.PureComponent {
   render() {
-    return (0, i.jsx)(a.Z, {
+    return (0, s.jsx)(a.Z, {
       guild: this.props.guild,
       onClick: () => l.Z.open(r.oAB.ACCOUNT),
       message: o.Z.Messages.TWO_FA_GUILD_MFA_WARNING_MESSAGE_WITH_SPACING.format(),

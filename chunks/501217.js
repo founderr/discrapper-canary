@@ -22,12 +22,12 @@ function d(e) {
     onClickThread: _,
     onClickViewThreads: I,
     onContextMenuThread: T
-  } = e, N = (0, a.ZP)(n), m = E(N), h = (0, i.e7)([r.Z], () => {
+  } = e, m = (0, a.ZP)(n), N = E(m), h = (0, i.e7)([r.Z], () => {
     var e;
     return r.Z.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id)
   }), C = c.Z.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
-    actorName: N.nick,
-    actorHook: m,
+    actorName: m.nick,
+    actorHook: N,
     threadName: null !== (t = null == h ? void 0 : h.name) && void 0 !== t ? t : n.content,
     threadOnClick: {
       onClick: _,

@@ -1,12 +1,12 @@
 n.d(t, {
   M: function() {
-    return s
+    return i
   }
 });
-var i = n(570140);
+var s = n(570140);
 
-function s(e) {
-  i.Z.dispatch({
+function i(e) {
+  s.Z.dispatch({
     type: "VIEW_HISTORY_MARK_VIEW",
     key: e
   })

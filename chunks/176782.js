@@ -1,13 +1,13 @@
-t.d(s, {
+s.d(t, {
   _: function() {
-    return _
+    return c
   }
 });
-var n = t(442837),
-  a = t(607070),
-  r = t(314684),
-  i = t(391110),
-  l = t(678081);
+var n = s(442837),
+  a = s(607070),
+  i = s(314684),
+  r = s(391110),
+  l = s(678081);
 let o = {
     subtitle: {
       onlyShowOnHover: !1
@@ -20,12 +20,12 @@ let o = {
       onlyShowOnHover: !0
     }
   },
-  _ = e => {
-    let s = (0, n.e7)([a.Z], () => a.Z.useReducedMotion),
-      t = (0, r.IB)() && !s,
-      _ = {
-        [i.zW.DEFAULT]: o,
-        [i.zW.REWARD]: {
+  c = e => {
+    let t = (0, n.e7)([a.Z], () => a.Z.useReducedMotion),
+      s = (0, i.IB)() && !t,
+      c = {
+        [r.zW.DEFAULT]: o,
+        [r.zW.REWARD]: {
           subtitle: {
             onlyShowOnHover: !0,
             textVariant: "text-sm/semibold"
@@ -40,9 +40,9 @@ let o = {
             className: l.descriptionCTATenureReward
           },
           cardContainer: {
-            className: t ? l.glowingCardContainer : void 0
+            className: s ? l.glowingCardContainer : void 0
           }
         }
       };
-    return null != e ? _[e] : _[i.zW.DEFAULT]
+    return null != e ? c[e] : c[r.zW.DEFAULT]
   }

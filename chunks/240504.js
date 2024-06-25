@@ -1,4 +1,4 @@
-var i, s = n(442837),
+var s, i = n(442837),
   l = n(570140);
 
 function a(e, t, n) {
@@ -19,7 +19,7 @@ let r = 12 * n(70956).Z.Millis.HOUR,
   },
   u = o,
   d = c;
-class E extends(i = s.ZP.PersistedStore) {
+class E extends(s = i.ZP.PersistedStore) {
   initialize(e) {
     d = c, u = o;
     let t = new Date;

@@ -3,8 +3,8 @@ n.d(t, {
     return h
   }
 });
-var i = n(442837),
-  s = n(594190),
+var s = n(442837),
+  i = n(594190),
   l = n(836157),
   a = n(480294),
   r = n(131951),
@@ -25,13 +25,13 @@ function h(e) {
     }, {
       autoTrackExposure: !1
     });
-  return (0, i.e7)([c.Z, s.ZP, a.Z, r.Z], () => {
+  return (0, s.e7)([c.Z, i.ZP, a.Z, r.Z], () => {
     if (!(0, u.Z)(r.Z) || !t || !n) return !1;
     if (null != c.Z.getLastClipsError()) return !0;
-    if (!a.Z.hasConsented(E.pjP.PERSONALIZATION) || null == s.ZP.getVisibleGame()) return !1;
+    if (!a.Z.hasConsented(E.pjP.PERSONALIZATION) || null == i.ZP.getVisibleGame()) return !1;
     let {
       clipsEducationState: {
-        dismissedAt: i,
+        dismissedAt: s,
         numberOfGamesLaunchedSinceDismissal: l,
         numberOfTimesDismissed: h
       },
@@ -40,11 +40,11 @@ function h(e) {
         clipsEnabled: I
       }
     } = c.Z.getState();
-    if (null === i) return !0;
+    if (null === s) return !0;
     if (!(null != e && (0, o.xt)(e))) return !1;
-    let m = Date.now() - i > d.xx,
-      g = l >= d._U,
-      p = I ? d.xd : d.A5;
-    return m && g && h < p && !_
+    let m = Date.now() - s > d.xx,
+      T = l >= d._U,
+      g = I ? d.xd : d.A5;
+    return m && T && h < g && !_
   })
 }

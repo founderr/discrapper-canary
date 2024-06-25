@@ -6,8 +6,8 @@ n.d(t, {
     return E
   }
 }), n(315314), n(610138), n(216116), n(78328), n(815648), n(47120);
-var i = n(108131),
-  s = n.n(i),
+var s = n(108131),
+  i = n.n(s),
   l = n(544891),
   a = n(570140),
   r = n(10473),
@@ -37,25 +37,25 @@ function d() {
   })
 }
 async function E(e) {
-  var t, n, i;
+  var t, n, s;
   if ("loaded" === r.Z.getSearchResult(e).status) return;
-  let l = s().v3(JSON.stringify(e)),
+  let l = i().v3(JSON.stringify(e)),
     o = r.Z.getStaticClans();
-  let c = await (t = o, n = l, i = e, new Promise(e => {
-      let s = t => {
+  let c = await (t = o, n = l, s = e, new Promise(e => {
+      let i = t => {
         let {
           data: {
-            id: i,
+            id: s,
             sortedClans: l
           }
         } = t;
-        n === i && e(l), null == u || u.removeEventListener("message", s)
+        n === s && e(l), null == u || u.removeEventListener("message", i)
       };
-      null == u || u.addEventListener("message", s);
+      null == u || u.addEventListener("message", i);
       null == u || u.postMessage({
         id: n,
         unsortedClans: t,
-        criteria: i
+        criteria: s
       })
     })),
     d = {

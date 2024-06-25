@@ -1,33 +1,33 @@
-n.d(t, {
+s.d(t, {
   Z: function() {
-    return c
+    return o
   }
 });
-var s = n(735250);
-n(470079);
-var i = n(120356),
-  a = n.n(i),
-  l = n(481060),
-  r = n(542037);
+var n = s(735250);
+s(470079);
+var a = s(120356),
+  i = s.n(a),
+  r = s(481060),
+  l = s(542037);
 
-function c(e) {
+function o(e) {
   let {
     icon: t,
-    tooltip: n,
-    onClick: i,
-    className: c
-  } = e, o = e => {
-    e.preventDefault(), e.stopPropagation(), i(e)
+    tooltip: s,
+    onClick: a,
+    className: o
+  } = e, c = e => {
+    e.preventDefault(), e.stopPropagation(), a(e)
   };
-  return (0, s.jsx)(l.Tooltip, {
-    text: n,
-    children: e => (0, s.jsx)(l.Clickable, {
+  return (0, n.jsx)(r.Tooltip, {
+    text: s,
+    children: e => (0, n.jsx)(r.Clickable, {
       ...e,
-      "aria-label": n,
-      onClick: o,
-      className: a()(r.actionButton, c),
-      children: (0, s.jsx)(t, {
-        className: r.icon,
+      "aria-label": s,
+      onClick: c,
+      className: i()(l.actionButton, o),
+      children: (0, n.jsx)(t, {
+        className: l.icon,
         color: "currentColor"
       })
     })

@@ -20,10 +20,10 @@ function a(e) {
     name: c,
     subText: d,
     avatarClassName: h,
-    innerClassName: g
+    innerClassName: p
   } = e;
   return (0, l.jsxs)("div", {
-    className: s()(g, r.layout, {
+    className: s()(p, r.layout, {
       [r.muted]: !t && n,
       [r.highlighted]: i,
       [r.wrappedLayout]: a

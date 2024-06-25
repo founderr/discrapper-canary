@@ -1,9 +1,9 @@
 n.d(t, {
   r: function() {
-    return l
+    return a
   }
 });
-let l = {
+let a = {
   ASSET_SOCIAL_TWITTER: n(647928),
   ASSET_SOCIAL_FACEBOOK: n(728372),
   ASSET_SOCIAL_INSTAGRAM: n(247479),

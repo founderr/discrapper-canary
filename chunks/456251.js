@@ -1,15 +1,15 @@
-t.d(e, {
+t.d(n, {
   Z: function() {
-    return r
+    return l
   }
 });
-var l = t(735250);
+var r = t(735250);
 t(470079);
-var u = t(481060),
-  i = t(780324);
+var s = t(481060),
+  a = t(780324);
 
-function r() {
-  return (0, l.jsx)(u.Spinner, {
-    className: i.spinner
+function l() {
+  return (0, r.jsx)(s.Spinner, {
+    className: a.spinner
   })
 }

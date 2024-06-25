@@ -1,6 +1,6 @@
 n.d(t, {
   v: function() {
-    return i
+    return s
   }
 });
-let i = "guild-role-subscription-overview-notice"
+let s = "guild-role-subscription-overview-notice"

@@ -12,17 +12,17 @@ var s = n(735250),
   _ = n(608787),
   I = n(442837),
   T = n(481060),
-  N = n(603263),
-  m = n(542051),
+  m = n(603263),
+  N = n(542051),
   h = n(349033),
   C = n(999650),
   S = n(933557),
   A = n(471445),
-  p = n(592125),
-  g = n(271383),
+  g = n(592125),
+  p = n(271383),
   f = n(699516),
-  O = n(250758),
-  R = n(944486),
+  R = n(250758),
+  O = n(944486),
   M = n(914010),
   x = n(246946),
   v = n(594174),
@@ -32,8 +32,8 @@ var s = n(735250),
   D = n(51144),
   j = n(854709),
   U = n(981631),
-  y = n(689938),
-  b = n(644058);
+  b = n(689938),
+  y = n(644058);
 
 function B(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -58,19 +58,19 @@ let k = E()("2015-05-15").local(),
       children: o
     });
     let c = v.default.getUser(r.id),
-      u = p.Z.getChannel(e),
+      u = g.Z.getChannel(e),
       d = (null == u ? void 0 : u.isPrivate()) ? f.Z.getNickname(r.id) : null,
-      E = null !== (l = null !== (i = g.ZP.getNick(e, r.id)) && void 0 !== i ? i : d) && void 0 !== l ? l : D.ZP.getName(r),
+      E = null !== (l = null !== (i = p.ZP.getNick(e, r.id)) && void 0 !== i ? i : d) && void 0 !== l ? l : D.ZP.getName(r),
       _ = null !== (a = null == c ? void 0 : c.getAvatarURL(e, 20)) && void 0 !== a ? a : r.getAvatarURL(null == u ? void 0 : u.guild_id, 20);
     return [(0, s.jsx)("img", {
       alt: "",
-      className: b.displayAvatar,
+      className: y.displayAvatar,
       src: _
     }, "avatar-".concat(t, "-").concat(r.id)), (0, s.jsx)("span", {
-      className: b.displayedNick,
+      className: y.displayedNick,
       children: E
     }, "display-nick-".concat(t, "-").concat(r.id)), (0, s.jsx)("span", {
-      className: b.displayUsername,
+      className: y.displayUsername,
       children: D.ZP.getUserTag(r, {
         identifiable: x.Z.enabled && x.Z.hidePersonalInformation ? "never" : "always"
       })
@@ -84,16 +84,16 @@ let k = E()("2015-05-15").local(),
     if (null == i) return (0, s.jsx)("strong", {
       children: l
     });
-    let a = p.Z.getChannel(i.parent_id),
+    let a = g.Z.getChannel(i.parent_id),
       r = (0, A.KS)(i);
     return (0, s.jsxs)("div", {
-      className: b.resultChannel,
+      className: y.resultChannel,
       children: [null != r ? (0, s.jsx)(r, {
-        className: b.searchResultChannelIcon
+        className: y.searchResultChannelIcon
       }) : null, (0, s.jsx)("strong", {
         children: (0, S.F6)(i, v.default, f.Z)
       }), null != a ? (0, s.jsx)("span", {
-        className: b.searchResultChannelCategory,
+        className: y.searchResultChannelCategory,
         children: (0, S.F6)(a, v.default, f.Z)
       }) : null]
     })
@@ -110,21 +110,21 @@ let k = E()("2015-05-15").local(),
       "aria-selected": E,
       onSelect: _,
       onFocus: I,
-      showFilter: N,
-      renderResult: m
+      showFilter: m,
+      renderResult: N
     } = e;
-    if (N) {
+    if (m) {
       var h, S;
       t = (0, s.jsx)("span", {
-        className: b.filter,
+        className: y.filter,
         children: null !== (S = null === (h = C.ZP[o]) || void 0 === h ? void 0 : h.key) && void 0 !== S ? S : "addme:"
       })
     }
-    return n = null != m ? m(l, o, r) : (0, s.jsx)("strong", {
+    return n = null != N ? N(l, o, r) : (0, s.jsx)("strong", {
       children: r.text
     }), (0, s.jsxs)(T.Clickable, {
       tag: "li",
-      className: a()(b.option, c),
+      className: a()(y.option, c),
       onClick: _,
       onFocus: I,
       id: i,
@@ -134,48 +134,48 @@ let k = E()("2015-05-15").local(),
       children: [t, n, (0, s.jsx)(T.PlusSmallIcon, {
         size: "sm",
         color: "currentColor",
-        className: b.plusIcon
+        className: y.plusIcon
       })]
     })
   },
   H = e => (0, s.jsx)(w, {
     ...e,
-    className: b.user,
+    className: y.user,
     renderResult: F
   }),
   Y = {
     [U.dCx.FILTER_FROM]: {
-      titleText: () => y.Z.Messages.SEARCH_GROUP_HEADER_FROM,
+      titleText: () => b.Z.Messages.SEARCH_GROUP_HEADER_FROM,
       component: H
     },
     [U.dCx.FILTER_MENTIONS]: {
-      titleText: () => y.Z.Messages.SEARCH_GROUP_HEADER_MENTIONS,
+      titleText: () => b.Z.Messages.SEARCH_GROUP_HEADER_MENTIONS,
       component: H
     },
     [U.dCx.FILTER_HAS]: {
-      titleText: () => y.Z.Messages.SEARCH_GROUP_HEADER_HAS
+      titleText: () => b.Z.Messages.SEARCH_GROUP_HEADER_HAS
     },
     [U.dCx.FILTER_FILE_TYPE]: {
-      titleText: () => y.Z.Messages.SEARCH_GROUP_HEADER_FILE_TYPE
+      titleText: () => b.Z.Messages.SEARCH_GROUP_HEADER_FILE_TYPE
     },
     [U.dCx.FILTER_IN]: {
-      titleText: () => y.Z.Messages.SEARCH_GROUP_HEADER_CHANNELS,
+      titleText: () => b.Z.Messages.SEARCH_GROUP_HEADER_CHANNELS,
       component: e => (0, s.jsx)(w, {
         ...e,
         renderResult: V
       })
     },
     [U.rtL.DATES]: {
-      titleText: () => y.Z.Messages.SEARCH_GROUP_HEADER_DATES
+      titleText: () => b.Z.Messages.SEARCH_GROUP_HEADER_DATES
     },
     [U.rtL.HISTORY]: {
-      titleText: () => y.Z.Messages.SEARCH_GROUP_HEADER_HISTORY,
+      titleText: () => b.Z.Messages.SEARCH_GROUP_HEADER_HISTORY,
       groupTip(e) {
         let {
           searchId: t
         } = e;
         return (0, s.jsx)(T.Tooltip, {
-          text: y.Z.Messages.SEARCH_CLEAR_HISTORY,
+          text: b.Z.Messages.SEARCH_CLEAR_HISTORY,
           position: "left",
           children: e => {
             let {
@@ -183,12 +183,12 @@ let k = E()("2015-05-15").local(),
               onMouseLeave: i
             } = e;
             return (0, s.jsx)(T.Clickable, {
-              onClick: () => (0, N.QQ)(t),
+              onClick: () => (0, m.QQ)(t),
               onMouseEnter: n,
               onMouseLeave: i,
-              className: b.searchClearHistory,
-              title: y.Z.Messages.SEARCH_CLEAR_HISTORY,
-              "aria-label": y.Z.Messages.SEARCH_CLEAR_HISTORY,
+              className: y.searchClearHistory,
+              title: b.Z.Messages.SEARCH_CLEAR_HISTORY,
+              "aria-label": b.Z.Messages.SEARCH_CLEAR_HISTORY,
               children: (0, s.jsx)(T.TrashIcon, {
                 size: "md",
                 color: "currentColor"
@@ -217,40 +217,40 @@ let k = E()("2015-05-15").local(),
             i = U.KA4.test(e.type);
           return E += t, (0, s.jsx)("span", {
             className: a()({
-              [b.filter]: n,
-              [b.answer]: i,
-              [b.nonText]: !n && !i
+              [y.filter]: n,
+              [y.answer]: i,
+              [y.nonText]: !n && !i
             }),
             children: t
           }, e.type + t)
         });
         return (0, s.jsxs)(T.Clickable, {
-          className: a()(b.option, b.__invalid_history),
+          className: a()(y.option, y.__invalid_history),
           onClick: t,
           onFocus: n,
           ...d,
-          "aria-label": y.Z.Messages.SEARCH_FROM_SUGGESTIONS.format({
+          "aria-label": b.Z.Messages.SEARCH_FROM_SUGGESTIONS.format({
             suggestion: E
           }),
           children: [_, (0, s.jsx)(T.PlusSmallIcon, {
             size: "sm",
             color: "currentColor",
-            className: b.plusIcon
+            className: y.plusIcon
           })]
         })
       }
     },
     [U.rtL.SEARCH_OPTIONS]: {
-      titleText: () => y.Z.Messages.SEARCH_GROUP_HEADER_SEARCH_OPTIONS,
+      titleText: () => b.Z.Messages.SEARCH_GROUP_HEADER_SEARCH_OPTIONS,
       groupTip: () => (0, s.jsx)(T.Tooltip, {
-        text: y.Z.Messages.LEARN_MORE,
+        text: b.Z.Messages.LEARN_MORE,
         position: "left",
         children: e => (0, s.jsx)("div", {
-          className: b.searchLearnMore,
+          className: y.searchLearnMore,
           ...e,
           children: (0, s.jsx)(T.Anchor, {
             href: Z.Z.getArticleURL(U.BhN.USING_SEARCH),
-            title: y.Z.Messages.LEARN_MORE,
+            title: b.Z.Messages.LEARN_MORE,
             children: (0, s.jsx)(T.CircleQuestionIcon, {
               size: "md",
               color: "currentColor"
@@ -269,28 +269,28 @@ let k = E()("2015-05-15").local(),
           ...c
         } = e, u = P.Ko(null !== (t = n.token) && void 0 !== t ? t : "");
         return (0, s.jsxs)(T.Clickable, {
-          className: a()(b.option, b.searchOption),
+          className: a()(y.option, y.searchOption),
           onClick: i,
           onFocus: l,
           ...c,
           children: [(0, s.jsx)("span", {
-            className: b.filter,
+            className: y.filter,
             children: n.text
           }), (0, s.jsx)("span", {
             className: a()({
-              [b.answer]: u
+              [y.answer]: u
             }),
             children: u
           }), (0, s.jsx)(T.PlusSmallIcon, {
             size: "sm",
             color: "currentColor",
-            className: b.plusIcon
+            className: y.plusIcon
           })]
         })
       }
     }
   };
-class K extends i.PureComponent {
+class W extends i.PureComponent {
   componentDidUpdate(e, t) {
     let {
       resultsState: n,
@@ -316,7 +316,7 @@ class K extends i.PureComponent {
       totalResults: i,
       searchId: l
     } = this.props;
-    return (0, s.jsx)(m.Z, {
+    return (0, s.jsx)(N.Z, {
       numResults: i,
       query: n.query,
       navId: t,
@@ -415,19 +415,19 @@ class K extends i.PureComponent {
       } = this.props.resultsState;
       return e.type !== U.Sap.FILTER && e.type !== U.Sap.EMPTY && !P.Fz(e.filter)
     }), B(this, "renderDatePicker", () => (0, s.jsxs)("div", {
-      className: b.datePicker,
+      className: y.datePicker,
       children: [(0, s.jsx)(G, {
         onSelect: this.handleDateChange,
         maxDate: E()().local(),
         minDate: k
       }), (0, s.jsxs)("div", {
-        className: b.datePickerHint,
+        className: y.datePickerHint,
         children: [(0, s.jsxs)("span", {
-          className: b.hint,
-          children: [y.Z.Messages.SEARCH_DATE_PICKER_HINT, "\xa0"]
+          className: y.hint,
+          children: [b.Z.Messages.SEARCH_DATE_PICKER_HINT, "\xa0"]
         }), (0, s.jsx)(T.Clickable, {
           tag: "span",
-          className: b.hintValue,
+          className: y.hintValue,
           onClick: this.handleHintClick,
           children: this.state.dateHint
         })]
@@ -455,7 +455,7 @@ class K extends i.PureComponent {
         let E = null !== (r = Y[i.group]) && void 0 !== r ? r : {};
         null != E.titleText && (d = "".concat(i.group, "-header"), u = (0, s.jsx)("div", {
           id: d,
-          className: b.header,
+          className: y.header,
           children: E.titleText()
         }));
         let _ = null !== (o = E.groupTip) && void 0 !== o ? o : null,
@@ -463,11 +463,11 @@ class K extends i.PureComponent {
             searchId: n
           }) : null,
           T = null !== (c = E.component) && void 0 !== c ? c : w,
-          N = l.type === U.Sap.FILTER_ALL;
+          m = l.type === U.Sap.FILTER_ALL;
         return (0, s.jsxs)("ul", {
           role: "group",
           "aria-labelledby": d,
-          className: b.resultsGroup,
+          className: y.resultsGroup,
           children: [u, I, i.results.map(l => {
             var r, o;
             if (null == l || null == i) return null;
@@ -476,10 +476,10 @@ class K extends i.PureComponent {
               searchId: n,
               group: null !== (r = l.group) && void 0 !== r ? r : i.group,
               result: l,
-              showFilter: N,
+              showFilter: m,
               onSelect: this.selectOption.bind(null, a),
               onFocus: this.focusOption.bind(null, a),
-              ...(0, m.M)(t, a, c)
+              ...(0, N.M)(t, a, c)
             }, "".concat(i.group, "-").concat(l.text, "-").concat(null !== (o = l.key) && void 0 !== o ? o : ""))
           })]
         }, i.group)
@@ -488,16 +488,16 @@ class K extends i.PureComponent {
   }
 }
 t.ZP = i.forwardRef((e, t) => {
-  let [n, i, l] = (0, I.Wu)([M.Z, R.Z, O.Z], () => {
+  let [n, i, l] = (0, I.Wu)([M.Z, O.Z, R.Z], () => {
     let e = M.Z.getGuildId(),
-      t = R.Z.getChannelId(),
+      t = O.Z.getChannelId(),
       n = null != e ? e : t;
     o()(null != n, "SearchPopout.getStateFromStores - invalid searchId");
-    let s = O.Z.getState(n),
+    let s = R.Z.getState(n),
       i = P.BU(s.autocompletes);
     return [n, s, i]
   });
-  return (0, s.jsx)(K, {
+  return (0, s.jsx)(W, {
     ...e,
     searchId: n,
     resultsState: i,

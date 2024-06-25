@@ -1,6 +1,6 @@
 t.d(r, {
   Z: function() {
-    return _
+    return E
   }
 }), t(47120);
 var a = t(735250),
@@ -18,13 +18,13 @@ var a = t(735250),
   p = t(120816),
   b = t(31336),
   y = t(257785),
-  f = t(484036),
-  x = t(681619),
+  x = t(484036),
+  f = t(681619),
   k = t(621060),
   v = t(689938),
   j = t(206884),
-  N = t(719556);
-let w = [{
+  w = t(719556);
+let N = [{
   key: "event",
   cellClassName: j.eventColumn,
   render(e) {
@@ -85,7 +85,7 @@ let T = [{
       } = e, o = h.default.getUser(i), s = c()(n);
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsxs)(m.ZP, {
-          className: l()(N.headerBar, j.subPanelHeaderBar),
+          className: l()(w.headerBar, j.subPanelHeaderBar),
           children: [(0, a.jsx)(m.ZP.Icon, {
             icon: d.AnalyticsIcon,
             tooltip: r
@@ -129,10 +129,10 @@ let T = [{
       })
     }
   }],
-  E = {
+  Z = {
     events: {
       label: "Events",
-      filter: e => Object.entries(E).filter(e => {
+      filter: e => Object.entries(Z).filter(e => {
         let [r] = e;
         return "events" !== r
       }).map(r => {
@@ -156,13 +156,13 @@ let T = [{
     }
   };
 
-function _() {
+function E() {
   let e = n.useRef(null),
     r = (0, s.e7)([p.Z], () => p.Z.loggedEvents),
-    [t, i] = n.useState(Object.keys(E)),
+    [t, i] = n.useState(Object.keys(Z)),
     o = r.filter(e => {
       for (let r of t)
-        if (E[r].filter(e)) return !0;
+        if (Z[r].filter(e)) return !0;
       return !1
     }),
     [c, u] = n.useState(void 0),
@@ -175,7 +175,7 @@ function _() {
     }, []);
   return (0, a.jsxs)("div", {
     ref: e,
-    className: l()(N.panel, j.panel),
+    className: l()(w.panel, j.panel),
     children: [(0, a.jsxs)("div", {
       className: j.toolbar,
       children: [(0, a.jsx)(d.Button, {
@@ -195,7 +195,7 @@ function _() {
         className: j.toolbarDivider
       }), (0, a.jsx)("div", {
         className: j.filters,
-        children: Object.entries(E).map(e => {
+        children: Object.entries(Z).map(e => {
           let [r, n] = e;
           return (0, a.jsx)(d.Clickable, {
             className: l()(j.filter, t.includes(r) && j.activeFilter),
@@ -209,13 +209,13 @@ function _() {
       })]
     }), (0, a.jsx)(d.ScrollerThin, {
       className: j.tableContainer,
-      children: (0, a.jsx)(x.Z, {
-        columns: w,
+      children: (0, a.jsx)(f.Z, {
+        columns: N,
         data: o,
         selectedRowKey: c,
         onClickRow: u
       })
-    }), null != h && (0, a.jsxs)(f.Z, {
+    }), null != h && (0, a.jsxs)(x.Z, {
       className: j.subPanel,
       minHeight: 100,
       initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,

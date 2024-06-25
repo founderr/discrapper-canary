@@ -5,8 +5,8 @@ var n = r(735250),
   l = r(410030),
   a = r(119269),
   o = r(10298);
-let d = "url(#gradient)",
-  c = (e, t) => {
+let c = "url(#gradient)",
+  u = (e, t) => {
     switch (e) {
       case a.Q.NITRO_LOGO:
         return t ? "0.3" : "0.2";
@@ -15,7 +15,7 @@ let d = "url(#gradient)",
         return
     }
   },
-  u = e => {
+  d = e => {
     switch (e) {
       case a.Q.NITRO_GEM:
         return "var(--background-primary)";
@@ -28,9 +28,9 @@ let d = "url(#gradient)",
   _ = (e, t) => {
     switch (t) {
       case a.Q.NITRO_GEM:
-        return d;
+        return c;
       case a.Q.NITRO_LOGO:
-        return e ? "url(#gradient_nitro_logo)" : d;
+        return e ? "url(#gradient_nitro_logo)" : c;
       default:
         return
     }
@@ -39,11 +39,11 @@ t.Z = e => {
   let {
     percentage: t = 0,
     children: r,
-    animationClassName: d,
+    animationClassName: c,
     initialPercentage: p = 0,
     progressCircleStrokeSize: f = 2,
     progressCircleVariation: C
-  } = e, x = 43 + f / 2, E = 2 * Math.PI * x, [h, m] = s.useState(p);
+  } = e, E = 43 + f / 2, x = 2 * Math.PI * E, [h, m] = s.useState(p);
   s.useEffect(() => {
     let e = setTimeout(() => {
       m(t)
@@ -52,8 +52,8 @@ t.Z = e => {
   }, [t]);
   let j = (0, l.ZP)(),
     R = (0, i.ap)(j),
-    g = u(C),
-    O = c(C, R),
+    g = d(C),
+    O = u(C, R),
     N = _(R, C);
   return (0, n.jsxs)("div", {
     className: o.circleContainer,
@@ -64,7 +64,7 @@ t.Z = e => {
         className: C === a.Q.NITRO_GEM ? o.baseProgressCircle : void 0,
         fill: "transparent",
         strokeWidth: f,
-        r: "".concat(x),
+        r: "".concat(E),
         cx: "50%",
         cy: "50%",
         stroke: g,
@@ -73,12 +73,12 @@ t.Z = e => {
         stroke: N,
         strokeWidth: f,
         strokeLinecap: "round",
-        strokeDasharray: "".concat(E, " ").concat(E),
-        className: d,
+        strokeDasharray: "".concat(x, " ").concat(x),
+        className: c,
         style: {
-          strokeDashoffset: (1 - h / 100) * E
+          strokeDashoffset: (1 - h / 100) * x
         },
-        r: "".concat(x),
+        r: "".concat(E),
         cx: "50%",
         cy: "50%"
       })]

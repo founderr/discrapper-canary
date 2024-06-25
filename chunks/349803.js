@@ -1,50 +1,50 @@
-var n = t(735250);
-t(470079);
-var a = t(120356),
-  r = t.n(a),
-  i = t(920906),
-  l = t(399606),
-  o = t(607070),
-  _ = t(104494),
-  c = t(639119),
-  E = t(318747),
-  u = t(409100),
-  R = t(474936),
-  d = t(981631),
-  I = t(528973);
-s.Z = function(e) {
-  var s, t;
+var n = s(735250);
+s(470079);
+var a = s(120356),
+  i = s.n(a),
+  r = s(920906),
+  l = s(399606),
+  o = s(607070),
+  c = s(104494),
+  E = s(639119),
+  _ = s(318747),
+  u = s(409100),
+  d = s(474936),
+  T = s(981631),
+  I = s(528973);
+t.Z = function(e) {
+  var t, s;
   let {
     isVisible: a,
-    isFullscreen: T,
+    isFullscreen: R,
     subscriptionTier: A
-  } = e, M = null === (s = (0, c.N)()) || void 0 === s ? void 0 : s.subscription_trial, S = (0, _.Ng)(), N = (0, _.Wp)(S, R.Si.TIER_2) ? R.Si.TIER_2 : void 0, p = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), m = (0, i.useSpring)({
+  } = e, N = null === (t = (0, E.N)()) || void 0 === t ? void 0 : t.subscription_trial, C = (0, c.Ng)(), g = (0, c.Wp)(C, d.Si.TIER_2) ? d.Si.TIER_2 : void 0, m = (0, l.e7)([o.Z], () => o.Z.useReducedMotion), M = (0, r.useSpring)({
     transform: a ? "translateY(-100%)" : "translateY(0%)",
     opacity: a ? 1 : 0,
     config: {
       tension: 120,
       friction: 12
     },
-    immediate: p
-  }), C = {
-    section: d.jXE.MARKETING_FLOATING_CTA
+    immediate: m
+  }), S = {
+    section: T.jXE.MARKETING_FLOATING_CTA
   };
-  return (0, n.jsx)(i.animated.div, {
-    className: r()(I.wrapper, {
-      [I.fullscreenWrapper]: T,
+  return (0, n.jsx)(r.animated.div, {
+    className: i()(I.wrapper, {
+      [I.fullscreenWrapper]: R,
       [I.invisible]: !a
     }),
-    style: m,
+    style: M,
     children: (0, n.jsxs)("div", {
       className: I.innerWrapper,
       children: [(0, n.jsx)(u.Z, {
         className: I.button,
-        subscriptionTier: null !== (t = null != A ? A : null == M ? void 0 : M.sku_id) && void 0 !== t ? t : N,
-        premiumModalAnalyticsLocation: C,
+        subscriptionTier: null !== (s = null != A ? A : null == N ? void 0 : N.sku_id) && void 0 !== s ? s : g,
+        premiumModalAnalyticsLocation: S,
         isPersistentCTA: !0
-      }), (0, n.jsx)(E.Z, {
+      }), (0, n.jsx)(_.Z, {
         className: I.button,
-        premiumModalAnalyticsLocation: C
+        premiumModalAnalyticsLocation: S
       })]
     })
   })

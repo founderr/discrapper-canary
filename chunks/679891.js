@@ -1,6 +1,6 @@
 n(47120);
-var i = n(570140),
-  s = n(846027),
+var s = n(570140),
+  i = n(846027),
   l = n(317770),
   a = n(594190),
   r = n(928518),
@@ -22,29 +22,29 @@ let h = new Set,
   I = null;
 
 function m() {
-  for (let e of h) s.Z.setDisableLocalVideo(e, u.ZUi.MANUAL_ENABLED, d.Yn.DEFAULT, !1);
+  for (let e of h) i.Z.setDisableLocalVideo(e, u.ZUi.MANUAL_ENABLED, d.Yn.DEFAULT, !1);
   _.clear(), h.clear()
 }
-class g extends l.Z {
+class T extends l.Z {
   _initialize() {
-    i.Z.subscribe("RTC_CONNECTION_VIDEO", this.handleIncomingVideo), i.Z.subscribe("AUDIO_SET_LOCAL_VIDEO_DISABLED", this.handleManualLocalVideoToggle), i.Z.subscribe("WINDOW_VISIBILITY_CHANGE", this.handleWindowVisibilityChange), i.Z.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect), r.Z.addChangeListener(this.handlePopoutChange)
+    s.Z.subscribe("RTC_CONNECTION_VIDEO", this.handleIncomingVideo), s.Z.subscribe("AUDIO_SET_LOCAL_VIDEO_DISABLED", this.handleManualLocalVideoToggle), s.Z.subscribe("WINDOW_VISIBILITY_CHANGE", this.handleWindowVisibilityChange), s.Z.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect), r.Z.addChangeListener(this.handlePopoutChange)
   }
   _terminate() {
-    i.Z.unsubscribe("RTC_CONNECTION_VIDEO", this.handleIncomingVideo), i.Z.unsubscribe("AUDIO_SET_LOCAL_VIDEO_DISABLED", this.handleManualLocalVideoToggle), i.Z.unsubscribe("WINDOW_VISIBILITY_CHANGE", this.handleWindowVisibilityChange), i.Z.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect), r.Z.removeChangeListener(this.handlePopoutChange), m(), I = null
+    s.Z.unsubscribe("RTC_CONNECTION_VIDEO", this.handleIncomingVideo), s.Z.unsubscribe("AUDIO_SET_LOCAL_VIDEO_DISABLED", this.handleManualLocalVideoToggle), s.Z.unsubscribe("WINDOW_VISIBILITY_CHANGE", this.handleWindowVisibilityChange), s.Z.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect), r.Z.removeChangeListener(this.handlePopoutChange), m(), I = null
   }
   handleIncomingVideo(e) {
     let {
       userId: t,
       context: n,
-      streamId: i
+      streamId: s
     } = e;
-    if (n !== d.Yn.DEFAULT || null == i) return;
+    if (n !== d.Yn.DEFAULT || null == s) return;
     let l = null != a.ZP.getVisibleGame(),
       E = c.Z.isVisible(),
       I = r.Z.getWindowVisible(u.KJ3.CHANNEL_CALL_POPOUT),
       m = o.Z.isLocalVideoDisabled(t, n),
-      g = _.has(t);
-    l && !E && !I && !m && !g && (h.add(t), s.Z.setDisableLocalVideo(t, u.ZUi.DISABLED, n, !1))
+      T = _.has(t);
+    l && !E && !I && !m && !T && (h.add(t), i.Z.setDisableLocalVideo(t, u.ZUi.DISABLED, n, !1))
   }
   handleManualLocalVideoToggle(e) {
     let {
@@ -69,4 +69,4 @@ class g extends l.Z {
     })
   }
 }
-t.Z = new g
+t.Z = new T

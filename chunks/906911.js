@@ -1,5 +1,5 @@
-var i = n(392711),
-  s = n.n(i),
+var s = n(392711),
+  i = n.n(s),
   l = n(243814),
   a = n(814443),
   r = n(699516),
@@ -16,7 +16,7 @@ t.Z = {
       return a.Z.getUserAffinitiesUserIds().forEach(t => {
         null == e[t] && null != o.default.getUser(t) && (e[t] = u.OGo.IMPLICIT)
       }), {
-        relationships: s().map(e, (e, t) => (0, c.cD)(e, t))
+        relationships: i().map(e, (e, t) => (0, c.cD)(e, t))
       }
     }
   }

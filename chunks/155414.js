@@ -3,12 +3,12 @@ t.d(n, {
     return o
   }
 });
-var r = t(544891),
-  i = t(881052),
+var i = t(544891),
+  r = t(881052),
   l = t(981631);
 let o = async (e, n) => {
   try {
-    return (await r.tn.get({
+    return (await i.tn.get({
       url: l.ANM.PRICE_TIERS,
       query: {
         price_tier_type: n,
@@ -16,6 +16,6 @@ let o = async (e, n) => {
       }
     })).body
   } catch (e) {
-    throw new i.Hx(e)
+    throw new r.Hx(e)
   }
 }

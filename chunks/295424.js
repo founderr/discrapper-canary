@@ -1,10 +1,10 @@
 n.d(t, {
   Z: function() {
-    return i
+    return s
   }
 });
 
-function i(e) {
+function s(e) {
   return {
     name: e.name,
     id: e.id,

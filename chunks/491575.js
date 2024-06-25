@@ -1,5 +1,5 @@
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(512722),
   a = n.n(l),
   r = n(481060),
@@ -12,32 +12,32 @@ var i = n(735250),
   _ = n(635395),
   I = n(5560),
   m = n(451478),
-  g = n(585483),
-  p = n(145604),
-  N = n(718813),
-  T = n(981631),
-  C = n(352867);
-t.Z = s.memo(function() {
-  let e = s.useRef(null),
-    t = s.useCallback(t => {
+  T = n(585483),
+  g = n(145604),
+  p = n(718813),
+  N = n(981631),
+  S = n(352867);
+t.Z = i.memo(function() {
+  let e = i.useRef(null),
+    t = i.useCallback(t => {
       let {
         duration: n,
-        intensity: i
+        intensity: s
       } = t;
       if (E.Z.useReducedMotion || !m.Z.isFocused()) return;
       let {
-        current: s
+        current: i
       } = e;
-      a()(null != s, "Shakeable is shaken when not mounted"), s.shake(n, i)
+      a()(null != i, "Shakeable is shaken when not mounted"), i.shake(n, s)
     }, []);
-  return s.useEffect(() => (d.Z.setLayout(u.ZP), d.Z.enable(), () => d.Z.disable()), []), s.useEffect(() => (g.S.subscribe(T.CkL.SHAKE_APP, t), () => {
-    g.S.unsubscribe(T.CkL.SHAKE_APP, t)
-  }), [t]), (0, h.Z)(), (0, i.jsxs)(r.Shakeable, {
+  return i.useEffect(() => (d.Z.setLayout(u.ZP), d.Z.enable(), () => d.Z.disable()), []), i.useEffect(() => (T.S.subscribe(N.CkL.SHAKE_APP, t), () => {
+    T.S.unsubscribe(N.CkL.SHAKE_APP, t)
+  }), [t]), (0, h.Z)(), (0, s.jsxs)(r.Shakeable, {
     ref: e,
-    className: C.app,
-    children: [(0, i.jsx)(N.Z, {
-      className: C.layers,
-      children: (0, i.jsx)(o.Z, {})
-    }), (0, i.jsx)(_.Z, {}), (0, i.jsx)(c.Z, {}), (0, i.jsx)(p.Z, {}), (0, i.jsx)(I.Z, {}), (0, i.jsx)(r.DnDKeyboardHelpBar, {})]
+    className: S.app,
+    children: [(0, s.jsx)(p.Z, {
+      className: S.layers,
+      children: (0, s.jsx)(o.Z, {})
+    }), (0, s.jsx)(_.Z, {}), (0, s.jsx)(c.Z, {}), (0, s.jsx)(g.Z, {}), (0, s.jsx)(I.Z, {}), (0, s.jsx)(r.DnDKeyboardHelpBar, {})]
   })
 })

@@ -3,9 +3,9 @@ n.d(t, {
     return r
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(447452),
+var i = n(447452),
   l = n(331541),
   a = n(543993);
 
@@ -15,12 +15,12 @@ function r(e) {
     ...n
   } = e, {
     updatedOnAllSurfaces: r
-  } = (0, s.t)({
+  } = (0, i.t)({
     location: t
   });
-  return r ? (0, i.jsx)(a.Z, {
+  return r ? (0, s.jsx)(a.Z, {
     ...n
-  }) : (0, i.jsx)(l.Z, {
+  }) : (0, s.jsx)(l.Z, {
     ...n
   })
 }

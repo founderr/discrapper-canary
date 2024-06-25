@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return N
+    return m
   }
 });
 var s = n(735250);
@@ -18,12 +18,12 @@ var i = n(120356),
   I = n(689938),
   T = n(923255);
 
-function N(e) {
+function m(e) {
   let {
     message: t,
     compact: n,
     usernameHook: i
-  } = e, N = (0, r.ZP)(t), m = i(N), {
+  } = e, m = (0, r.ZP)(t), N = i(m), {
     avatarSrc: h,
     eventHandlers: {
       onMouseEnter: C,
@@ -78,12 +78,12 @@ function N(e) {
             [T.compact]: n
           }),
           children: t.type === E.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED ? I.Z.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
-            username: N.nick,
-            usernameHook: m,
+            username: m.nick,
+            usernameHook: N,
             time: A
           }) : I.Z.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_SYSTEM_MESSAGE.format({
-            username: N.nick,
-            usernameHook: m
+            username: m.nick,
+            usernameHook: N
           })
         })]
       })

@@ -1,36 +1,36 @@
-n.d(t, {
+s.d(t, {
   r: function() {
-    return d
+    return E
   }
 });
-var s = n(735250);
-n(470079);
-var i = n(481060),
-  a = n(204197),
-  l = n(998502),
-  r = n(689938),
-  c = n(297676);
-let o = l.ZP.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar,
-  d = e => {
+var n = s(735250);
+s(470079);
+var a = s(481060),
+  i = s(204197),
+  r = s(998502),
+  l = s(689938),
+  o = s(297676);
+let c = r.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar,
+  E = e => {
     let {
       user: t,
-      avatarSize: n = i.AvatarSizes.SIZE_48
+      avatarSize: s = a.AvatarSizes.SIZE_48
     } = e, {
-      avatarSrc: l,
-      avatarDecorationSrc: d,
-      eventHandlers: u
-    } = (0, a.Z)({
+      avatarSrc: r,
+      avatarDecorationSrc: E,
+      eventHandlers: _
+    } = (0, i.Z)({
       user: t,
-      size: n
+      size: s
     });
-    return (0, s.jsx)("div", {
-      ...u,
-      children: (0, s.jsx)(o, {
-        className: c.__invalid_avatar,
-        src: l,
-        avatarDecoration: d,
-        size: n,
-        "aria-label": r.Z.Messages.FAMILY_CENTER_AVATAR_ARIA.format({
+    return (0, n.jsx)("div", {
+      ..._,
+      children: (0, n.jsx)(c, {
+        className: o.__invalid_avatar,
+        src: r,
+        avatarDecoration: E,
+        size: s,
+        "aria-label": l.Z.Messages.FAMILY_CENTER_AVATAR_ARIA.format({
           name: t.username
         })
       })
@@ -39,17 +39,17 @@ let o = l.ZP.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar,
 t.Z = e => {
   let {
     currentUser: t,
-    otherUser: n,
-    children: i
+    otherUser: s,
+    children: a
   } = e;
-  return (0, s.jsx)("div", {
-    className: c.avatarPairContainer,
-    children: (0, s.jsxs)("div", {
-      className: c.avatarPair,
-      children: [(0, s.jsx)(d, {
+  return (0, n.jsx)("div", {
+    className: o.avatarPairContainer,
+    children: (0, n.jsxs)("div", {
+      className: o.avatarPair,
+      children: [(0, n.jsx)(E, {
         user: t
-      }), i, (0, s.jsx)(d, {
-        user: n
+      }), a, (0, n.jsx)(E, {
+        user: s
       })]
     })
   })

@@ -1,6 +1,6 @@
 n(177593);
-var i = n(626135),
-  s = n(189800),
+var s = n(626135),
+  i = n(189800),
   l = n(996106),
   a = n(34954),
   r = n(986768),
@@ -20,9 +20,9 @@ t.Z = {
       if (!(0, a.Z)(n.authorization.scopes, d.scope)) throw new l.Z({
         errorCode: o.lTL.INVALID_PERMISSIONS
       }, "Not authenticated or invalid scope");
-      if (s.N.getCurrentConfig({
+      if (i.N.getCurrentConfig({
           location: "RPCServer"
-        }).enabled && i.default.track(o.rMx.RPC_SUBSCRIPTION_REQUESTED, {
+        }).enabled && s.default.track(o.rMx.RPC_SUBSCRIPTION_REQUESTED, {
           event: c,
           scope: "object" == typeof d.scope ? JSON.stringify(d.scope) : d.scope,
           application_id: n.application.id,
@@ -54,14 +54,14 @@ t.Z = {
       let {
         server: t,
         socket: n,
-        evt: i,
-        args: s
+        evt: s,
+        args: i
       } = e;
-      if (null == t.events[i]) throw new l.Z({
+      if (null == t.events[s]) throw new l.Z({
         errorCode: o.lTL.INVALID_EVENT
-      }, "Invalid event: ".concat(i));
-      return t.removeSubscription(n, i, s), {
-        evt: i
+      }, "Invalid event: ".concat(s));
+      return t.removeSubscription(n, s, i), {
+        evt: s
       }
     }
   }

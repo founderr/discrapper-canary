@@ -1,17 +1,17 @@
-var n = t(735250);
-t(470079);
-var r = t(266067),
-  i = t(730749),
-  a = t(928207),
-  l = t(981631);
-s.Z = (0, i.Z)(function() {
-  return (0, n.jsxs)(r.rs, {
-    children: [(0, n.jsx)(r.AW, {
-      path: l.Z5c.APPLICATION_STORE,
+var s = n(735250);
+n(470079);
+var i = n(266067),
+  l = n(730749),
+  a = n(928207),
+  r = n(981631);
+t.Z = (0, l.Z)(function() {
+  return (0, s.jsxs)(i.rs, {
+    children: [(0, s.jsx)(i.AW, {
+      path: r.Z5c.APPLICATION_STORE,
       exact: !0,
-      render: () => (0, n.jsx)(a.Z, {})
-    }), (0, n.jsx)(r.l_, {
-      to: l.Z5c.APP
+      render: () => (0, s.jsx)(a.Z, {})
+    }), (0, s.jsx)(i.l_, {
+      to: r.Z5c.APP
     })]
   })
 })

@@ -1,82 +1,82 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
     return U
   }
-}), t(47120);
-var n = t(735250);
-t(470079);
-var a = t(319147),
-  r = t(306276),
-  i = t(510236),
-  l = t(133398),
-  o = t(722283),
-  _ = t(298274),
-  c = t(569620),
-  E = t(16503),
-  u = t(64268),
-  R = t(697720),
-  d = t(578325),
-  I = t(56790),
-  T = t(90718),
-  A = t(897482),
-  M = t(4515),
-  S = t(474472),
-  N = t(156129),
-  p = t(799303),
-  m = t(245630),
-  C = t(842272),
-  g = t(486731),
-  P = t(346943),
-  O = t(55826),
-  f = t(218776),
-  x = t(414653),
-  L = t(297141),
-  h = t(26517),
-  b = t(93125),
-  v = t(278583),
-  Z = t(814437);
+}), s(47120);
+var n = s(735250);
+s(470079);
+var a = s(319147),
+  i = s(306276),
+  r = s(510236),
+  l = s(133398),
+  o = s(722283),
+  c = s(298274),
+  E = s(569620),
+  _ = s(16503),
+  u = s(64268),
+  d = s(697720),
+  T = s(578325),
+  I = s(56790),
+  R = s(90718),
+  A = s(897482),
+  N = s(4515),
+  C = s(474472),
+  g = s(156129),
+  m = s(799303),
+  M = s(245630),
+  S = s(842272),
+  p = s(486731),
+  h = s(346943),
+  f = s(55826),
+  O = s(218776),
+  x = s(414653),
+  L = s(297141),
+  P = s(26517),
+  v = s(93125),
+  Z = s(278583),
+  b = s(814437);
 let D = new Map([
-  ["BG", i],
-  ["CZ", _],
+  ["BG", r],
+  ["CZ", c],
   ["HU", A],
-  ["RO", h],
-  ["SE", b],
+  ["RO", P],
+  ["SE", v],
   ["CY", o],
-  ["EE", E],
-  ["IS", S],
-  ["IE", M],
-  ["LV", g],
-  ["LI", p],
-  ["LT", m],
-  ["LU", C],
-  ["MT", P],
-  ["SK", Z],
-  ["SI", v],
+  ["EE", _],
+  ["IS", C],
+  ["IE", N],
+  ["LV", p],
+  ["LI", m],
+  ["LT", M],
+  ["LU", S],
+  ["MT", h],
+  ["SK", b],
+  ["SI", Z],
   ["GR", I],
-  ["FI", R],
+  ["FI", d],
   ["PT", L],
-  ["NO", f],
-  ["BE", r],
+  ["NO", O],
+  ["BE", i],
   ["AT", a],
   ["CH", l],
-  ["FR", d],
-  ["DE", c],
+  ["FR", T],
+  ["DE", E],
   ["ES", u],
-  ["IT", N],
-  ["NL", O],
+  ["IT", g],
+  ["NL", f],
   ["PL", x],
-  ["HR", T]
+  ["HR", R]
 ]);
 
 function U(e) {
   let {
-    className: s,
-    countryCode: t
+    className: t,
+    countryCode: s
   } = e;
-  if (null == t || !D.has(t)) return null;
-  let a = D.get(t);
+  if (null == s || !D.has(s)) return null;
+  let a = D.get(s);
   return (0, n.jsx)("img", {
-    className: s,
+    className: t,
     "aria-hidden": !0,
     alt: "Wumpus holding a country-specific flag",
     src: a

@@ -17,15 +17,15 @@ t.Z = e => {
     message: I,
     hideParty: T
   } = e, {
-    analyticsLocations: N
-  } = (0, a.ZP)(), m = (0, i.e7)([c.default], () => c.default.getId()), h = (0, i.e7)([u.Z], () => {
+    analyticsLocations: m
+  } = (0, a.ZP)(), N = (0, i.e7)([c.default], () => c.default.getId()), h = (0, i.e7)([u.Z], () => {
     if (null == I.application) return u.Z.findActivity(I.author.id, e => e.type === d.IIU.LISTENING);
     {
       var e;
       let t = I.author.id;
-      return (null === (e = I.activity) || void 0 === e ? void 0 : e.type) === d.mFx.JOIN_REQUEST && (t = t === m && n.isPrivate() ? n.getRecipientId() : m), u.Z.getApplicationActivity(t, I.application.id)
+      return (null === (e = I.activity) || void 0 === e ? void 0 : e.type) === d.mFx.JOIN_REQUEST && (t = t === N && n.isPrivate() ? n.getRecipientId() : N), u.Z.getApplicationActivity(t, I.application.id)
     }
-  }, [I, n, m]);
+  }, [I, n, N]);
   return (0, s.jsx)(l.Z, {
     className: _.container,
     activity: h,
@@ -37,7 +37,7 @@ t.Z = e => {
     channelId: n.id,
     guildId: n.getGuildId(),
     hideParty: T,
-    isSender: I.author.id === m,
-    analyticsLocations: N
+    isSender: I.author.id === N,
+    analyticsLocations: m
   })
 }

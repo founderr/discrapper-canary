@@ -1,53 +1,53 @@
-n.d(t, {
+s.d(t, {
   Z: function() {
-    return u
+    return _
   }
 });
-var s = n(735250);
-n(470079);
-var i = n(481060),
-  a = n(204197),
-  l = n(998502),
-  r = n(631885),
-  c = n(329242),
-  o = n(333545);
-let d = l.ZP.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
+var n = s(735250);
+s(470079);
+var a = s(481060),
+  i = s(204197),
+  r = s(998502),
+  l = s(631885),
+  o = s(329242),
+  c = s(333545);
+let E = r.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
-function u(e) {
+function _(e) {
   let {
     otherUser: t,
-    status: n
-  } = e, l = (0, r.j_)(t.id, n), {
-    avatarSrc: u,
-    avatarDecorationSrc: E,
-    eventHandlers: _
-  } = (0, a.Z)({
+    status: s
+  } = e, r = (0, l.j_)(t.id, s), {
+    avatarSrc: _,
+    avatarDecorationSrc: u,
+    eventHandlers: d
+  } = (0, i.Z)({
     user: t,
-    size: i.AvatarSizes.SIZE_40,
+    size: a.AvatarSizes.SIZE_40,
     animateOnHover: !0
   });
-  return (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)("div", {
-      ..._,
-      children: (0, s.jsx)(d, {
-        className: o.avatar,
-        src: u,
-        avatarDecoration: E,
-        size: i.AvatarSizes.SIZE_40,
+  return (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsx)("div", {
+      ...d,
+      children: (0, n.jsx)(E, {
+        className: c.avatar,
+        src: _,
+        avatarDecoration: u,
+        size: a.AvatarSizes.SIZE_40,
         "aria-label": t.username
       })
-    }), (0, s.jsxs)("div", {
-      className: o.userPreview,
-      children: [(0, s.jsx)("div", {
-        className: o.userContainerWithTimestamp,
-        children: (0, s.jsx)(c.Z, {
+    }), (0, n.jsxs)("div", {
+      className: c.userPreview,
+      children: [(0, n.jsx)("div", {
+        className: c.userContainerWithTimestamp,
+        children: (0, n.jsx)(o.Z, {
           user: t
         })
-      }), (0, s.jsx)(i.Text, {
-        className: o.__invalid_timestamp,
+      }), (0, n.jsx)(a.Text, {
+        className: c.__invalid_timestamp,
         color: "text-muted",
         variant: "text-xs/normal",
-        children: l
+        children: r
       })]
     })]
   })

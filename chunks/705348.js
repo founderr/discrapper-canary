@@ -3,9 +3,9 @@ n.d(t, {
     return u
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(82950),
+var i = n(82950),
   l = n(63063),
   a = n(981631),
   r = n(921944),
@@ -17,7 +17,7 @@ function u(e) {
     guild: t,
     markAsDismissed: n
   } = e;
-  return (0, i.jsx)(s.Z, {
+  return (0, s.jsx)(i.Z, {
     image: c,
     guild: t,
     onDismissed: () => n(r.L.UNKNOWN),

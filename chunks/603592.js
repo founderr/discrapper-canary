@@ -9,12 +9,12 @@ var l = n(735250),
   c = n(682662),
   d = n(662146),
   h = n(516856);
-let g = i.forwardRef(function(e, t) {
+let p = i.forwardRef(function(e, t) {
   let {
     id: n,
     onClick: s,
-    onContextMenu: g,
-    icon: p,
+    onContextMenu: p,
+    icon: g,
     selected: m,
     tooltip: C,
     upperBadge: E,
@@ -25,8 +25,8 @@ let g = i.forwardRef(function(e, t) {
     "aria-label": Z,
     children: S,
     onMouseEnter: x,
-    onMouseLeave: T,
-    onMouseDown: L
+    onMouseLeave: L,
+    onMouseDown: T
   } = e, v = (0, a.Ie)(n), [A, M] = i.useState(!1), R = "string" == typeof C && null == Z ? C : Z;
   return (0, l.jsxs)(c.H, {
     children: [I ? (0, l.jsx)("div", {
@@ -50,20 +50,20 @@ let g = i.forwardRef(function(e, t) {
             null == x || x(), M(!0)
           },
           onMouseLeave: () => {
-            null == T || T(), M(!1)
+            null == L || L(), M(!1)
           },
-          onMouseDown: L,
+          onMouseDown: T,
           className: r()(h.circleIconButton, N, {
             [h.selected]: m || A
           }),
           onClick: s,
           "aria-label": R,
-          onContextMenu: g,
+          onContextMenu: p,
           focusProps: {
             enabled: !1
           },
           ...v,
-          children: null != p && (0, l.jsx)(p, {
+          children: null != g && (0, l.jsx)(g, {
             className: h.circleIcon,
             color: "currentColor"
           })
@@ -72,4 +72,4 @@ let g = i.forwardRef(function(e, t) {
     }), S]
   })
 });
-t.Z = g
+t.Z = p

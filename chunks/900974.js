@@ -1,6 +1,6 @@
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
   l = n(570140);
 let a = !1,
   r = null;
@@ -13,19 +13,19 @@ t.Z = {
       if (null != t && t.length > 0) {
         var l;
         if (r === t[0] || null == (r = t[0])) return;
-        l = r, a || (a = !0, (0, s.openModalLazy)(async () => {
+        l = r, a || (a = !0, (0, i.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([n.e("99387"), n.e("62903")]).then(n.bind(n, 645586));
           return t => {
             let {
               transitionState: n,
-              onClose: s
+              onClose: i
             } = t;
-            return (0, i.jsx)(e, {
+            return (0, s.jsx)(e, {
               pendingPayment: l,
               transitionState: n,
-              onClose: () => (a = !1, s())
+              onClose: () => (a = !1, i())
             })
           }
         }))

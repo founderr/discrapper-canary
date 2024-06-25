@@ -52,15 +52,15 @@ class h extends(n = a.PureComponent) {
       onChange: x,
       showIcon: I,
       showIconDisabled: _,
-      className: L,
-      imageClassName: T,
-      iconClassName: S,
+      className: T,
+      imageClassName: S,
+      iconClassName: L,
       iconWrapperClassName: N,
       icon: b,
       hideSize: v,
       imageStyle: O,
-      showRemoveButton: A,
-      maxFileSizeBytes: Z,
+      showRemoveButton: Z,
+      maxFileSizeBytes: A,
       onFileSizeError: R,
       onOpenImageSelectModal: j,
       "aria-label": P
@@ -69,15 +69,15 @@ class h extends(n = a.PureComponent) {
         className: E.imageUploaderAcronym,
         children: (0, d.Zg)(c)
       })), h) return (0, r.jsx)("div", {
-      className: l()(E.imageUploader, E.disabled, L),
+      className: l()(E.imageUploader, E.disabled, T),
       children: (0, r.jsxs)("div", {
-        className: l()(E.imageUploaderInner, T),
+        className: l()(E.imageUploaderInner, S),
         style: {
           ...O,
           backgroundImage: s
         },
         children: [n, _ && (0, r.jsx)("div", {
-          className: l()(E.imageUploaderIcon, E.imageUploaderIconDisabled, S),
+          className: l()(E.imageUploaderIcon, E.imageUploaderIconDisabled, L),
           children: b
         })]
       })
@@ -94,13 +94,13 @@ class h extends(n = a.PureComponent) {
     }));
     let M = null !== (e = null != P ? P : o) && void 0 !== e ? e : p.Z.Messages.CHANGE_AVATAR;
     return (0, r.jsxs)("div", {
-      className: l()(E.imageUploader, L),
+      className: l()(E.imageUploader, T),
       children: [(0, r.jsx)(u.FocusRing, {
         within: !0,
         children: (0, r.jsxs)("div", {
           className: I ? l()(E.imageUploaderIconWrapper, N) : void 0,
           children: [(0, r.jsxs)("div", {
-            className: l()(E.imageUploaderInner, T),
+            className: l()(E.imageUploaderInner, S),
             style: {
               ...O,
               backgroundImage: s
@@ -118,7 +118,7 @@ class h extends(n = a.PureComponent) {
               className: E.imageUploaderFileInput,
               "aria-label": M,
               tabIndex: 0,
-              maxFileSizeBytes: Z,
+              maxFileSizeBytes: A,
               onFileSizeError: R
             })]
           }), null != o && (0, r.jsx)("div", {
@@ -126,11 +126,11 @@ class h extends(n = a.PureComponent) {
             "aria-hidden": "true",
             children: o
           }), I && (0, r.jsx)(m, {
-            className: S,
+            className: L,
             icon: b
           })]
         })
-      }), A ? a : null]
+      }), Z ? a : null]
     })
   }
   constructor(...e) {

@@ -16,17 +16,17 @@ var s = n(735250),
   _ = n(659215),
   I = n(222677),
   T = n(995774),
-  N = n(931651),
-  m = n(594174),
+  m = n(931651),
+  N = n(594174),
   h = n(630388),
   C = n(74538),
   S = n(566006),
   A = n(981631),
-  p = n(185923),
-  g = n(474936),
+  g = n(185923),
+  p = n(474936),
   f = n(689938),
-  O = n(704963),
-  R = n(667671);
+  R = n(704963),
+  O = n(667671);
 
 function M(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -48,13 +48,13 @@ class x extends i.Component {
       isReactionPickerActive: r
     } = this.state, o = t.state === A.yb.SENDING, c = e === S.O.BURST;
     if (o || (0, h.yE)(t.flags, A.iLy.EPHEMERAL)) return null;
-    let _ = m.default.getCurrentUser(),
+    let _ = N.default.getCurrentUser(),
       I = (0, C.I5)(_),
       T = c ? f.Z.Messages.ADD_BURST_REACTION : f.Z.Messages.ADD_REACTION;
     !I && c && (T = (0, s.jsx)(E.X, {
       tooltipText: f.Z.Messages.ADD_BURST_REACTION
     }));
-    let N = l ? R : O;
+    let m = l ? O : R;
     return (0, s.jsx)(u.Popout, {
       shouldShow: r,
       onRequestClose: this.handleReactionPickerToggle,
@@ -68,28 +68,28 @@ class x extends i.Component {
           text: T,
           color: u.TooltipColors.PRIMARY,
           "aria-label": c ? f.Z.Messages.ADD_BURST_REACTION : f.Z.Messages.ADD_REACTION,
-          tooltipClassName: N.__invalid_addReactionTooltip,
+          tooltipClassName: m.__invalid_addReactionTooltip,
           children: (0, s.jsxs)(u.Clickable, {
             ...e,
             onClick: e => {
               this.handleAddReactionClick(e)
             },
-            onMouseEnter: () => (0, d.x)(p.qR.AddReactionPopoutMouseEntered),
-            onFocus: () => (0, d.x)(p.qR.AddReactionPopoutFocused),
-            className: a()(N.reactionBtn, {
-              [N.active]: l
+            onMouseEnter: () => (0, d.x)(g.qR.AddReactionPopoutMouseEntered),
+            onFocus: () => (0, d.x)(g.qR.AddReactionPopoutFocused),
+            className: a()(m.reactionBtn, {
+              [m.active]: l
             }, n),
             children: [c ? (0, s.jsx)(s.Fragment, {
               children: (0, s.jsx)(u.SuperReactionIcon, {
                 size: "sm",
                 color: "currentColor",
-                className: N.icon
+                className: m.icon
               })
             }) : (0, s.jsx)(s.Fragment, {
               children: (0, s.jsx)(u.ReactionIcon, {
                 size: "sm",
                 color: "currentColor",
-                className: N.icon
+                className: m.icon
               })
             }), i]
           })
@@ -120,10 +120,10 @@ class x extends i.Component {
         channel: n
       } = this.props;
       e.stopPropagation();
-      let s = m.default.getCurrentUser();
+      let s = N.default.getCurrentUser();
       t === S.O.BURST && !(0, C.I5)(s) && (0, _.openBurstReactionsUpsellModal)({
         analytics: {
-          type: g.cd.BURST_REACTION_UPSELL,
+          type: p.cd.BURST_REACTION_UPSELL,
           page: null != n.getGuildId() ? A.ZY5.GUILD_CHANNEL : A.ZY5.DM_CHANNEL,
           section: (0, T.s4)(n),
           object: A.qAy.INLINE_REACTION_PICKER_UPSELL
@@ -144,7 +144,7 @@ class x extends i.Component {
           section: (0, T.s4)(i),
           object: A.qAy.REACTION_RAIL
         }
-      }, r = (0, s.jsx)(N.$, {
+      }, r = (0, s.jsx)(m.$, {
         closePopout: t,
         channel: i,
         onSelectEmoji: (e, n, s) => {

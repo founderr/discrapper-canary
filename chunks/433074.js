@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return g
+    return p
   }
 }), n(47120);
 var s = n(735250),
@@ -16,46 +16,46 @@ var s = n(735250),
   _ = n(197409),
   I = n(626135),
   T = n(135431),
-  N = n(674588),
-  m = n(264043),
+  m = n(674588),
+  N = n(264043),
   h = n(132871),
   C = n(147890),
   S = n(981631),
   A = n(689938),
-  p = n(938979);
+  g = n(938979);
 
-function g(e) {
+function p(e) {
   var t, n;
   let {
-    code: g,
+    code: p,
     message: f
-  } = e, [O, R, M] = (0, a.Wu)([m.Z], () => [m.Z.getApplication(g), m.Z.isInvalidApplication(g), m.Z.getApplicationFetchState(g)], [g]), x = (0, a.e7)([c.default], () => c.default.locale), v = (0, a.e7)([d.Z], () => {
+  } = e, [R, O, M] = (0, a.Wu)([N.Z], () => [N.Z.getApplication(p), N.Z.isInvalidApplication(p), N.Z.getApplicationFetchState(p)], [p]), x = (0, a.e7)([c.default], () => c.default.locale), v = (0, a.e7)([d.Z], () => {
     var e;
     return null !== (e = d.Z.getGuildId()) && void 0 !== e ? e : void 0
   }), L = (0, a.e7)([E.default], () => E.default.getCurrentUser()), [Z, P] = i.useState(!1), D = i.useCallback(e => {
     e && P(!0)
   }, []), j = (0, o.O)(D);
   i.useEffect(() => {
-    (0, N.gZ)(g)
-  }, [g]), i.useEffect(() => {
-    Z && M === m.M.FETCHED && I.default.track(S.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
-      application_id: g,
+    (0, m.gZ)(p)
+  }, [p]), i.useEffect(() => {
+    Z && M === N.M.FETCHED && I.default.track(S.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
+      application_id: p,
       device_platform: l.tq ? "mobile_web" : "desktop_web",
       sender_user_id: f.author.id,
       guild_id: v,
       channel_id: f.channel_id
     })
-  }, [Z, g, null == L ? void 0 : L.id, f.channel_id, v, f.author.id, M]), i.useEffect(() => {
-    Z && R && I.default.track(S.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
+  }, [Z, p, null == L ? void 0 : L.id, f.channel_id, v, f.author.id, M]), i.useEffect(() => {
+    Z && O && I.default.track(S.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
       device_platform: l.tq ? "mobile_web" : "desktop_web",
       sender_user_id: f.author.id,
       guild_id: v,
       channel_id: f.channel_id
     })
-  }, [Z, v, R, f.author.id, f.channel_id]);
+  }, [Z, v, O, f.author.id, f.channel_id]);
   let U = e => {
     I.default.track(S.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
-      application_id: g,
+      application_id: p,
       device_platform: l.tq ? "mobile_web" : "desktop_web",
       clicked_section: e,
       guild_id: v,
@@ -63,19 +63,19 @@ function g(e) {
     }), (0, C.goToAppDirectory)({
       view: h.ApplicationDirectoryViews.APPLICATION,
       guildId: v,
-      applicationId: g,
+      applicationId: p,
       entrypoint: {
         name: h.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_PROFILE_EMBED
       }
     })
   };
-  if (R) return (0, s.jsxs)(_.Z, {
+  if (O) return (0, s.jsxs)(_.Z, {
     containerRef: j,
     children: [(0, s.jsx)(_.Z.Header, {
       text: A.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER
     }), (0, s.jsx)(_.Z.Body, {
       children: (0, s.jsxs)("div", {
-        className: p.invalidBody,
+        className: g.invalidBody,
         children: [(0, s.jsx)(_.Z.Icon, {
           expired: !0
         }), (0, s.jsx)(_.Z.Info, {
@@ -86,7 +86,7 @@ function g(e) {
       })
     })]
   });
-  if (null == O || M === m.M.FETCHING) return (0, s.jsxs)(_.Z, {
+  if (null == R || M === N.M.FETCHING) return (0, s.jsxs)(_.Z, {
     containerRef: j,
     children: [(0, s.jsx)(_.Z.Header, {
       text: A.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_RESOLVING_HEADER
@@ -94,47 +94,47 @@ function g(e) {
       resolving: !0
     })]
   });
-  let y = new Intl.NumberFormat(x, {
+  let b = new Intl.NumberFormat(x, {
     notation: "compact",
     compactDisplay: "short"
-  }).format(null !== (n = null === (t = O.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0);
+  }).format(null !== (n = null === (t = R.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0);
   return (0, s.jsxs)(_.Z, {
     containerRef: j,
     children: [(0, s.jsx)(_.Z.Header, {
       text: A.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_HEADER
     }), (0, s.jsxs)(_.Z.Body, {
       children: [(0, s.jsxs)("div", {
-        className: p.applicationInfoContainer,
+        className: g.applicationInfoContainer,
         children: [(0, s.jsx)(_.Z.Icon, {
-          application: u.Z.createFromServer(O),
-          className: p.applicationIcon,
+          application: u.Z.createFromServer(R),
+          className: g.applicationIcon,
           onClick: () => U("application_icon")
         }), (0, s.jsx)(_.Z.Info, {
           title: (0, s.jsx)(r.Clickable, {
             onClick: () => U("application_name"),
-            children: O.name
+            children: R.name
           }),
           children: (0, s.jsxs)(r.Clickable, {
-            className: p.guildCountContainer,
+            className: g.guildCountContainer,
             onClick: () => U("application_guild_count"),
             children: [(0, s.jsx)(r.CompassIcon, {
               size: "custom",
               color: "currentColor",
               width: 16,
               height: 16,
-              className: p.guildCountIcon
+              className: g.guildCountIcon
             }), A.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT.format({
-              guildCount: y
+              guildCount: b
             })]
           })
         })]
       }), (0, s.jsx)(_.Z.Button, {
         onClick: () => {
-          if (null != O)(0, T.L)({
-            applicationId: g,
-            customInstallUrl: O.custom_install_url,
-            installParams: O.install_params,
-            integrationTypesConfig: O.integration_types_config,
+          if (null != R)(0, T.L)({
+            applicationId: p,
+            customInstallUrl: R.custom_install_url,
+            installParams: R.install_params,
+            integrationTypesConfig: R.integration_types_config,
             guildId: v,
             source: "app_directory_profile_embed"
           })

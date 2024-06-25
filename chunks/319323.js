@@ -21,20 +21,20 @@ function _(e) {
     guildId: n
   } = e, _ = (0, a.IX)(t), {
     listingsLoaded: I
-  } = (0, a.FE)(t, null == _ ? void 0 : _.primarySkuId), T = (0, i.e7)([r.Z], () => r.Z.getSubscriptionGroupListingForApplication(t), [t]), N = null != T ? (0, o.Pw)(T) : null, {
-    openModal: m,
+  } = (0, a.FE)(t, null == _ ? void 0 : _.primarySkuId), T = (0, i.e7)([r.Z], () => r.Z.getSubscriptionGroupListingForApplication(t), [t]), m = null != T ? (0, o.Pw)(T) : null, {
+    openModal: N,
     canOpenModal: h
   } = (0, c.Z)({
     guildId: n,
     groupListingId: null == T ? void 0 : T.id,
     showBenefitsFirst: !0,
     analyticsLocation: u.Sbl.INTERACTION_RESPONSE,
-    skuId: null == N ? void 0 : N.id
+    skuId: null == m ? void 0 : m.id
   });
   return (0, s.jsx)(l.Button, {
     color: l.Button.Colors.BRAND,
     size: l.Button.Sizes.SMALL,
-    onClick: () => m(),
+    onClick: () => N(),
     disabled: !h || !I,
     children: (0, s.jsxs)("div", {
       className: E.button,

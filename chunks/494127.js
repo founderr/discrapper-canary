@@ -1,18 +1,18 @@
-t.d(s, {
+s.d(t, {
   F_: function() {
     return a
   },
   JP: function() {
-    return r
+    return i
   },
   YQ: function() {
-    return i
+    return r
   },
   as: function() {
     return l
   }
 });
-var n = t(818083);
+var n = s(818083);
 let a = (0, n.B)({
     kind: "user",
     id: "2023-09_whats_new_drop_1_flip",
@@ -28,10 +28,10 @@ let a = (0, n.B)({
       }
     }]
   }),
-  r = () => a.useExperiment({
+  i = () => a.useExperiment({
     location: "experiment_hook"
   }),
-  i = (0, n.B)({
+  r = (0, n.B)({
     kind: "user",
     id: "2023-09_whats_new_drop_2_flip",
     label: "What's New Drop 2",
@@ -46,6 +46,6 @@ let a = (0, n.B)({
       }
     }]
   }),
-  l = () => i.useExperiment({
+  l = () => r.useExperiment({
     location: "experiment_hook"
   })

@@ -1,6 +1,6 @@
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
   l = n(570140),
   a = n(317770),
   r = n(592125),
@@ -16,10 +16,10 @@ var s = n(481060),
 function m(e, t) {
   var n;
   if (null == e) return;
-  let i = u.default.getCurrentUser();
-  (null === (n = r.Z.getChannel(t)) || void 0 === n ? void 0 : n.isNSFW()) && null != i && null == i.nsfwAllowed && (0, d.mN)(_.L0.NSFW_CHANNEL)
+  let s = u.default.getCurrentUser();
+  (null === (n = r.Z.getChannel(t)) || void 0 === n ? void 0 : n.isNSFW()) && null != s && null == s.nsfwAllowed && (0, d.mN)(_.L0.NSFW_CHANNEL)
 }
-class g extends a.Z {
+class T extends a.Z {
   _initialize() {
     l.Z.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), l.Z.subscribe("CHANNEL_SELECT", this.handleChannelSelect), l.Z.subscribe("AGE_GATE_MODAL_OPEN", this.handleAgeGateModalOpen), l.Z.subscribe("AGE_GATE_MODAL_CLOSE", this.handleAgeGateModalClose), l.Z.subscribe("AGE_GATE_SUCCESS_MODAL_OPEN", this.handleAgeGateSuccess), l.Z.subscribe("AGE_GATE_FAILURE_MODAL_OPEN", this.handleAgeGateFailure)
   }
@@ -41,11 +41,11 @@ class g extends a.Z {
     let {
       source: t
     } = e;
-    (0, s.openModalLazy)(async () => {
+    (0, i.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("1716")]).then(n.bind(n, 746882));
-      return n => (0, i.jsx)(e, {
+      return n => (0, s.jsx)(e, {
         source: t,
         ...n
       })
@@ -55,7 +55,7 @@ class g extends a.Z {
     })
   }
   handleAgeGateSuccess() {
-    (0, s.updateModal)(_.dG, e => (0, i.jsx)(h.Z, {
+    (0, i.updateModal)(_.dG, e => (0, s.jsx)(h.Z, {
       ...e
     }))
   }
@@ -63,13 +63,13 @@ class g extends a.Z {
     let {
       underageMessage: t
     } = e;
-    (0, s.updateModal)(_.dG, e => (0, i.jsx)(E.Z, {
+    (0, i.updateModal)(_.dG, e => (0, s.jsx)(E.Z, {
       underageMessage: t,
       ...e
     }))
   }
   handleAgeGateModalClose() {
-    (0, s.closeModal)(_.dG)
+    (0, i.closeModal)(_.dG)
   }
 }
-t.Z = new g
+t.Z = new T

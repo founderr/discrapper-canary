@@ -1,5 +1,5 @@
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(120356),
   a = n.n(l),
   r = n(442837),
@@ -12,73 +12,73 @@ var i = n(735250),
   _ = n(699516),
   I = n(68588),
   m = n(512665),
-  g = n(868807),
-  p = n(981631),
-  N = n(768760),
-  T = n(689938),
-  C = n(608524),
-  S = n(622322);
-let A = s.memo(function(e) {
+  T = n(868807),
+  g = n(981631),
+  p = n(768760),
+  N = n(689938),
+  S = n(608524),
+  C = n(622322);
+let A = i.memo(function(e) {
   let {
     channel: t
   } = e, {
     loaded: n,
     error: l,
     message: A
-  } = (0, g.a)(t), f = (0, c.p)(), Z = (0, r.e7)([_.Z], () => null != A && _.Z.isBlockedForMessage(A), [A]), v = (0, r.e7)([h.Z], () => h.Z.can(p.Plq.MANAGE_MESSAGES, t)), L = E.cC.useSetting(), {
-    content: O
-  } = s.useMemo(() => (null == A ? void 0 : A.content) != null && "" !== A.content ? (0, d.ZP)(A, {
+  } = (0, T.a)(t), f = (0, c.p)(), Z = (0, r.e7)([_.Z], () => null != A && _.Z.isBlockedForMessage(A), [A]), L = (0, r.e7)([h.Z], () => h.Z.can(g.Plq.MANAGE_MESSAGES, t)), O = E.cC.useSetting(), {
+    content: v
+  } = i.useMemo(() => (null == A ? void 0 : A.content) != null && "" !== A.content ? (0, d.ZP)(A, {
     formatInline: !0,
     noStyleAndInteraction: !0,
     shouldFilterKeywords: f
   }) : {
     content: null
   }, [A, f]), R = null;
-  if (l) R = (0, i.jsx)(o.Text, {
-    className: C.messageReplacement,
+  if (l) R = (0, s.jsx)(o.Text, {
+    className: S.messageReplacement,
     variant: "text-sm/normal",
     color: "text-muted",
-    children: T.Z.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
+    children: N.Z.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
   });
   else if (n) {
-    if (null != A && Z) R = (0, i.jsx)(o.Text, {
-      className: C.messageReplacement,
+    if (null != A && Z) R = (0, s.jsx)(o.Text, {
+      className: S.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
-      children: T.Z.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
+      children: N.Z.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
     });
     else if (null != A) {
       let {
         contentPlaceholder: e,
         renderedContent: t
-      } = (0, m.f)(A, O, Z, a()(C.messageContent, S.inlineFormat), {
-        leadingIconClass: C.messageContentIcon,
-        trailingIconClass: C.messageContentIcon,
-        iconSize: N.WW
+      } = (0, m.f)(A, v, Z, a()(S.messageContent, C.inlineFormat), {
+        leadingIconClass: S.messageContentIcon,
+        trailingIconClass: S.messageContentIcon,
+        iconSize: p.WW
       });
-      R = null != t ? (0, i.jsx)(o.Text, {
+      R = null != t ? (0, s.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
-        className: C.messageContent,
+        className: S.messageContent,
         children: t
-      }) : (0, i.jsx)(o.Text, {
+      }) : (0, s.jsx)(o.Text, {
         tag: "span",
         variant: "text-sm/normal",
         color: "text-muted",
-        className: C.messageReplacement,
+        className: S.messageReplacement,
         children: e
       })
-    } else R = (0, i.jsx)(o.Text, {
-      className: C.messageReplacement,
+    } else R = (0, s.jsx)(o.Text, {
+      className: S.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
-      children: T.Z.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
+      children: N.Z.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
     })
   } else R = null;
-  return (0, i.jsx)(I.a.Provider, {
-    value: (0, u.Z)(L, v),
-    children: (0, i.jsx)(o.FocusBlock, {
-      className: C.messageFocusBlock,
+  return (0, s.jsx)(I.a.Provider, {
+    value: (0, u.Z)(O, L),
+    children: (0, s.jsx)(o.FocusBlock, {
+      className: S.messageFocusBlock,
       children: R
     })
   })

@@ -6,7 +6,7 @@ n.d(t, {
     return x
   },
   Zg: function() {
-    return T
+    return L
   }
 }), n(411104);
 var l = n(186070),
@@ -19,8 +19,8 @@ var l = n(186070),
   c = n(239748),
   d = n(337482),
   h = n(679080),
-  g = n(510761),
-  p = n(189509),
+  p = n(510761),
+  g = n(189509),
   m = n(673553),
   C = n(280492),
   E = n(746887),
@@ -38,8 +38,8 @@ function Z() {
   })
 }
 let S = {
-    [I.EkH.SERVER_NEXT]: g.nq,
-    [I.EkH.SERVER_PREV]: g.X3,
+    [I.EkH.SERVER_NEXT]: p.nq,
+    [I.EkH.SERVER_PREV]: p.X3,
     [I.EkH.CHANNEL_NEXT]: i.tQ,
     [I.EkH.CHANNEL_PREV]: i.x5,
     [I.EkH.NAVIGATE_BACK]: i.Nx,
@@ -50,7 +50,7 @@ let S = {
     [I.EkH.MENTION_CHANNEL_PREV]: _.uX,
     [I.EkH.TOGGLE_PREVIOUS_GUILD]: i.$c,
     [I.EkH.JUMP_TO_GUILD]: s.u,
-    [I.EkH.SUBMIT]: p.z,
+    [I.EkH.SUBMIT]: g.z,
     [I.EkH.TEXTAREA_FOCUS]: m.U,
     [I.EkH.MARK_CHANNEL_READ]: r.f,
     [I.EkH.MARK_SERVER_READ]: a.l,
@@ -71,7 +71,7 @@ let S = {
     [I.EkH.QUICKSWITCHER_SHOW]: u.$
   };
 
-function T() {
+function L() {
   return [{
     description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_SERVERS,
     binds: Z(I.EkH.SERVER_PREV, I.EkH.SERVER_NEXT)

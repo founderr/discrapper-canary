@@ -1,9 +1,9 @@
 n.d(t, {
   T: function() {
-    return s
+    return i
   }
 });
-let i = (0, n(818083).B)({
+let s = (0, n(818083).B)({
   kind: "user",
   id: "2023-05_clear_pending_incoming_friend_requests",
   label: "Enable ability to clear incoming friend requests",
@@ -19,8 +19,8 @@ let i = (0, n(818083).B)({
   }]
 });
 
-function s() {
-  return i.useExperiment({
+function i() {
+  return s.useExperiment({
     location: "ca2288_1"
   }, {
     autoTrackExposure: !0

@@ -9,8 +9,8 @@ var i = n(120356),
   c = n(850827),
   d = n(952164),
   h = n(131704),
-  g = n(314897),
-  p = n(594174),
+  p = n(314897),
+  g = n(594174),
   m = n(409216),
   C = n(768581),
   E = n(51144),
@@ -67,11 +67,11 @@ t.Z = e => {
     members: i,
     embeddedApp: s,
     onAction: a
-  } = e, m = null != s, C = m ? Array.from(s.embeddedActivity.userIds) : [], E = (0, r.e7)([p.default, g.default], () => {
-    if (m) return p.default.getUser(C[0]);
+  } = e, m = null != s, C = m ? Array.from(s.embeddedActivity.userIds) : [], E = (0, r.e7)([g.default, p.default], () => {
+    if (m) return g.default.getUser(C[0]);
     if (null != i) {
       var e, t;
-      return i.length <= 0 ? null : null !== (t = null === (e = i.find(e => e.user.id !== g.default.getId())) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : i[0].user
+      return i.length <= 0 ? null : null !== (t = null === (e = i.find(e => e.user.id !== p.default.getId())) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : i[0].user
     }
   });
   if (null == E) return null;

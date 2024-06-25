@@ -4,8 +4,8 @@ var s = n(735250),
   l = n(893776),
   a = n(129293),
   o = n(388905),
-  c = n(108427),
-  u = n(314897),
+  u = n(108427),
+  c = n(314897),
   d = n(689938),
   E = n(331651);
 t.Z = e => {
@@ -13,14 +13,14 @@ t.Z = e => {
     location: t
   } = e, {
     verifyFailed: _,
-    verifySucceeded: I
-  } = (0, i.cj)([u.default], () => ({
-    verifyFailed: u.default.didVerifyFail(),
-    verifySucceeded: u.default.didVerifySucceed()
+    verifySucceeded: h
+  } = (0, i.cj)([c.default], () => ({
+    verifyFailed: c.default.didVerifyFail(),
+    verifySucceeded: c.default.didVerifySucceed()
   }));
   return (r.useEffect(() => {
     let e = (0, a.Z)(t);
-    null != e && l.Z.authorizePayment(e), (0, c.e)("authorize_payment")
+    null != e && l.Z.authorizePayment(e), (0, u.e)("authorize_payment")
   }, [t]), _) ? (0, s.jsxs)(o.ZP, {
     children: [(0, s.jsx)("img", {
       alt: "",
@@ -33,7 +33,7 @@ t.Z = e => {
       className: E.marginBottom40,
       children: d.Z.Messages.PAYMENT_AUTH_EXPIRED_SUGGESTION
     })]
-  }) : I ? (0, s.jsxs)(o.ZP, {
+  }) : h ? (0, s.jsxs)(o.ZP, {
     children: [(0, s.jsx)("img", {
       alt: "",
       src: n(73962),

@@ -1,6 +1,6 @@
-var i = n(231338);
+var s = n(231338);
 t.Z = {
-  [i.Et.GET_PLATFORM_BEHAVIORS]: {
+  [s.Et.GET_PLATFORM_BEHAVIORS]: {
     handler: () => ({
       iosKeyboardResizesView: !0
     })

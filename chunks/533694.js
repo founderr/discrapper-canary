@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return N
+    return m
   }
 });
 var s = n(735250);
@@ -54,20 +54,20 @@ function T(e) {
   })
 }
 
-function N(e) {
+function m(e) {
   var t, i, l;
   let {
     channel: a,
     message: d,
     compact: I
-  } = e, N = (0, r.ZP)(d), m = (0, o.l)({
+  } = e, m = (0, r.ZP)(d), N = (0, o.l)({
     user: d.author,
     channelId: a.id,
     guildId: a.guild_id,
     messageId: d.id
-  })(N), h = _.Z.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE.format({
-    username: N.nick,
-    usernameHook: m,
+  })(m), h = _.Z.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE.format({
+    username: m.nick,
+    usernameHook: N,
     productName: null !== (l = null === (i = d.purchaseNotification) || void 0 === i ? void 0 : null === (t = i.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) && void 0 !== l ? l : "",
     handleProductListingClick: () => {
       var e, t, n;
@@ -81,7 +81,7 @@ function N(e) {
       compact: I,
       children: h
     }), (0, s.jsx)(T, {
-      username: N.nick,
+      username: m.nick,
       guildId: a.guild_id,
       user: d.author
     })]

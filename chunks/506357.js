@@ -16,8 +16,8 @@ var s = n(735250),
   _ = n(626135),
   I = n(528011),
   T = n(666657),
-  N = n(533244),
-  m = n(981631),
+  m = n(533244),
+  N = n(981631),
   h = n(176505),
   C = n(689938),
   S = n(928112);
@@ -25,47 +25,47 @@ var s = n(735250),
 function A(e) {
   var t, A;
   let {
-    onDismiss: p
-  } = e, g = (0, l.e7)([d.Z], () => d.Z.getGuildId()), f = (0, l.e7)([u.Z], () => null != g ? u.Z.getChannelId(g) : null, [g]), O = null != g ? g : null, R = (0, l.e7)([c.Z], () => null != O ? c.Z.getGuild(O) : null, [O]), {
+    onDismiss: g
+  } = e, p = (0, l.e7)([d.Z], () => d.Z.getGuildId()), f = (0, l.e7)([u.Z], () => null != p ? u.Z.getChannelId(p) : null, [p]), R = null != p ? p : null, O = (0, l.e7)([c.Z], () => null != R ? c.Z.getGuild(R) : null, [R]), {
     shouldShowIncidentActions: M,
     incidentData: x,
     isUnderLockdown: v
-  } = (0, I.mI)(O), L = (0, r.n2)(null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : m.lds), Z = i.useCallback(() => null != R && (0, o._X)(R.id), [R]);
-  if (null == R || null == x || !M) return null;
+  } = (0, I.mI)(R), L = (0, r.n2)(null !== (t = null == O ? void 0 : O.id) && void 0 !== t ? t : N.lds), Z = i.useCallback(() => null != O && (0, o._X)(O.id), [O]);
+  if (null == O || null == x || !M) return null;
   let P = e => {
       if (e && L && f !== h.oC.MEMBER_SAFETY && Z()) {
-        _.default.track(m.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
-          notice_type: m.kVF.GUILD_RAID_NOTIFICATION,
-          guild_id: R.id
+        _.default.track(N.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
+          notice_type: N.kVF.GUILD_RAID_NOTIFICATION,
+          guild_id: O.id
         });
         return
       }(0, a.openModalLazy)(async () => {
         let e = {
             source: T.Zu.NAGBAR,
-            alertType: (0, N.T1)(x)
+            alertType: (0, m.T1)(x)
           },
           {
             default: t
           } = await Promise.all([n.e("99387"), n.e("58175")]).then(n.bind(n, 664452));
         return n => (0, s.jsx)(t, {
           ...n,
-          guildId: R.id,
+          guildId: O.id,
           analyticsData: e
         })
       })
     },
     D = (0, s.jsx)(E.Z, {
       className: S.guildIcon,
-      guild: R,
+      guild: O,
       size: E.Z.Sizes.MINI
     }),
-    j = (0, N.OY)(x, R.name);
+    j = (0, m.OY)(x, O.name);
   if (null != (null !== (A = x.dmsDisabledUntil) && void 0 !== A ? A : x.invitesDisabledUntil) && v) return (0, s.jsxs)(a.Notice, {
     className: S.notice,
     color: a.NoticeColors.NEUTRAL,
     children: [(0, s.jsx)(a.NoticeCloseButton, {
-      onClick: p,
-      noticeType: m.kVF.GUILD_RAID_NOTIFICATION
+      onClick: g,
+      noticeType: N.kVF.GUILD_RAID_NOTIFICATION
     }), D, j, (0, s.jsx)(a.NoticeButton, {
       className: S.actionButton,
       onClick: () => P(!1),
@@ -80,21 +80,21 @@ function A(e) {
       })
     })]
   });
-  let U = (0, N.CG)(x) ? C.Z.Messages.GUILD_ANTIRAID_NAGBAR_RAID_MESSAGE_2_NEW.format({
-      guildName: R.name
-    }) : (0, N.kk)(x) ? C.Z.Messages.GUILD_ANTIRAID_NAGBAR_DM_RAID_MESSAGE_2_NEW.format({
-      guildName: R.name
+  let U = (0, m.CG)(x) ? C.Z.Messages.GUILD_ANTIRAID_NAGBAR_RAID_MESSAGE_2_NEW.format({
+      guildName: O.name
+    }) : (0, m.kk)(x) ? C.Z.Messages.GUILD_ANTIRAID_NAGBAR_DM_RAID_MESSAGE_2_NEW.format({
+      guildName: O.name
     }) : C.Z.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({
-      guildName: R.name
+      guildName: O.name
     }),
-    y = L && f === h.oC.MEMBER_SAFETY;
+    b = L && f === h.oC.MEMBER_SAFETY;
   return (0, s.jsxs)(a.Notice, {
     className: S.notice,
     color: a.NoticeColors.WARNING,
     children: [(0, s.jsx)(a.NoticeCloseButton, {
-      onClick: p,
-      noticeType: m.kVF.GUILD_RAID_NOTIFICATION
-    }), D, U, !y && (0, s.jsx)(a.NoticeButton, {
+      onClick: g,
+      noticeType: N.kVF.GUILD_RAID_NOTIFICATION
+    }), D, U, !b && (0, s.jsx)(a.NoticeButton, {
       className: S.actionButton,
       onClick: () => P(!0),
       children: (0, s.jsx)("div", {

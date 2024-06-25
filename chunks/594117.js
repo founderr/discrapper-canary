@@ -1,11 +1,11 @@
 n.d(t, {
   Z: function() {
-    return p
+    return g
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(685072),
+var i = n(685072),
   l = n(287734),
   a = n(67212),
   r = n(158631),
@@ -20,8 +20,8 @@ function _(e) {
   let {
     tooltipText: t,
     onClick: n
-  } = e, l = (0, s.K)();
-  return (0, i.jsx)(E.Z, {
+  } = e, l = (0, i.K)();
+  return (0, s.jsx)(E.Z, {
     tooltipText: t,
     onClick: n,
     ...l.events,
@@ -30,7 +30,7 @@ function _(e) {
 }
 
 function I() {
-  return (0, i.jsx)(_, {
+  return (0, s.jsx)(_, {
     tooltipText: h.Z.Messages.DISCONNECT_SELF,
     onClick: () => {
       (0, a.b_)(), l.default.disconnect()
@@ -42,7 +42,7 @@ function m(e) {
   let {
     channel: t
   } = e;
-  return (0, i.jsx)(_, {
+  return (0, s.jsx)(_, {
     tooltipText: h.Z.Messages.AUDIENCE_DISCONNECT,
     onClick: () => {
       if ((0, d.Z)(t)) {
@@ -54,11 +54,11 @@ function m(e) {
   })
 }
 
-function g(e) {
+function T(e) {
   let {
     channel: t
   } = e;
-  return (0, i.jsx)(_, {
+  return (0, s.jsx)(_, {
     tooltipText: h.Z.Messages.DISCONNECT_SELF,
     onClick: () => {
       if ((0, c.Z)(t)) {
@@ -70,13 +70,13 @@ function g(e) {
   })
 }
 
-function p(e) {
+function g(e) {
   let {
     channel: t
   } = e, n = (0, r.ZP)();
-  return t.isGuildStageVoice() ? (0, i.jsx)(m, {
+  return t.isGuildStageVoice() ? (0, s.jsx)(m, {
     channel: t
-  }) : n && t.isBroadcastChannel() ? (0, i.jsx)(I, {}) : (0, i.jsx)(g, {
+  }) : n && t.isBroadcastChannel() ? (0, s.jsx)(I, {}) : (0, s.jsx)(T, {
     channel: t
   })
 }

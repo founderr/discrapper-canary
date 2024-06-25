@@ -1,6 +1,6 @@
 n.d(t, {
   $: function() {
-    return p
+    return g
   },
   s: function() {
     return A
@@ -19,8 +19,8 @@ var s = n(735250),
   _ = n(810090),
   I = n(163268),
   T = n(719548),
-  N = n(689938),
-  m = n(344898);
+  m = n(689938),
+  N = n(344898);
 let h = e => {
     let {
       attachment: t
@@ -50,13 +50,13 @@ let h = e => {
       description: n
     } = e, i = (0, u.cb)(t);
     return (0, s.jsx)("div", {
-      className: m.mediaContainer,
+      className: N.mediaContainer,
       children: i ? (0, s.jsx)(_.Z, {
-        className: a()(m.video, m.media),
+        className: a()(N.video, N.media),
         controls: !0,
         src: t
       }) : (0, s.jsx)("img", {
-        className: a()(m.image, m.media),
+        className: a()(N.image, N.media),
         src: t,
         alt: n
       })
@@ -66,11 +66,11 @@ let h = e => {
 function A(e) {
   c.Z.pop(), (0, d.t)({
     id: "explicit-media-false-positive-modal",
-    text: N.Z.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS
+    text: m.Z.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS
   }), e()
 }
 
-function p(e) {
+function g(e) {
   let {
     channelId: t,
     messageId: n,
@@ -110,18 +110,18 @@ function p(e) {
     children: [(0, s.jsxs)(o.ModalContent, {
       children: [(0, s.jsx)(o.ModalCloseButton, {
         onClick: S,
-        className: m.closeButton
+        className: N.closeButton
       }), (0, s.jsx)(o.Heading, {
         id: T,
         variant: "heading-lg/semibold",
         color: "header-primary",
-        className: m.header,
-        children: N.Z.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER
+        className: N.header,
+        children: m.Z.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER
       }), (0, s.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
-        className: m.subheader,
-        children: N.Z.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_DESCRIPTION
+        className: N.subheader,
+        children: m.Z.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_DESCRIPTION
       }), null != r && (0, s.jsx)(h, {
         attachment: r
       }), null != c && (0, s.jsx)(C, {
@@ -129,20 +129,20 @@ function p(e) {
       })]
     }), (0, s.jsxs)(o.ModalFooter, {
       children: [(0, s.jsx)(o.Button, {
-        className: m.button,
+        className: N.button,
         disabled: l,
         submitting: l,
         size: o.Button.Sizes.MEDIUM,
         color: o.Button.Colors.BRAND,
         onClick: A,
-        children: N.Z.Messages.CONFIRM
+        children: m.Z.Messages.CONFIRM
       }), (0, s.jsx)(o.Button, {
-        className: m.button,
+        className: N.button,
         disabled: l,
         color: o.Button.Colors.TRANSPARENT,
         size: o.Button.Sizes.MEDIUM,
         onClick: S,
-        children: N.Z.Messages.CANCEL
+        children: m.Z.Messages.CANCEL
       })]
     })]
   })

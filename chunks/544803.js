@@ -13,8 +13,8 @@ var l = n(735250),
   c = n(835473),
   d = n(703656),
   h = n(594174),
-  g = n(366695),
-  p = n(436088),
+  p = n(366695),
+  g = n(436088),
   m = n(51144),
   C = n(158631),
   E = n(143614),
@@ -49,7 +49,7 @@ function Z(e) {
           name: u.name
         }) : I.Z.Messages.STREAMING_A_GAME
       })]
-    }), (0, l.jsx)(g.Z, {
+    }), (0, l.jsx)(p.Z, {
       game: u
     })]
   })
@@ -71,7 +71,7 @@ function S(e) {
       className: N.header,
       children: [(0, l.jsxs)("div", {
         className: N.inline,
-        children: [(0, l.jsx)(p.Z, {
+        children: [(0, l.jsx)(g.Z, {
           color: r.Z.colors.HEADER_PRIMARY.css,
           height: 16,
           width: 16

@@ -3,9 +3,9 @@ n.d(t, {
     return I
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(990547),
+var i = n(990547),
   l = n(399606),
   a = n(213609),
   r = n(434404),
@@ -27,20 +27,20 @@ function I(e) {
     return (null == n ? void 0 : n.isOwner(e)) === !0
   });
   return (0, a.Z)({
-    type: s.ImpressionTypes.POPOUT,
-    name: s.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
+    type: i.ImpressionTypes.POPOUT,
+    name: i.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
     properties: {
       guild_id: t,
       is_owner: I
     }
-  }), (0, i.jsx)("div", {
+  }), (0, s.jsx)("div", {
     className: h.container,
-    children: (0, i.jsx)(o.ZP, {
+    children: (0, s.jsx)(o.ZP, {
       header: E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_UPSELL_HEADER,
       content: E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_UPSELL_BODY,
-      asset: (0, i.jsx)("div", {
+      asset: (0, s.jsx)("div", {
         className: h.image,
-        children: (0, i.jsx)("img", {
+        children: (0, s.jsx)("img", {
           alt: E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_UPSELL_IMG_ALT,
           src: _,
           className: h.image

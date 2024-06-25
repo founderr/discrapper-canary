@@ -12,9 +12,9 @@ var s = n(735250),
   _ = n(287151),
   I = n(689938),
   T = n(704963),
-  N = n(667671);
-let m = (e, t) => null == e && null == t || e === t,
-  h = (e, t) => e.findIndex(e => m(e.emoji.id, null == t ? void 0 : t.id) && m(e.emoji.name, null == t ? void 0 : t.name)),
+  m = n(667671);
+let N = (e, t) => null == e && null == t || e === t,
+  h = (e, t) => e.findIndex(e => N(e.emoji.id, null == t ? void 0 : t.id) && N(e.emoji.name, null == t ? void 0 : t.name)),
   C = (e, t) => {
     if (null == t) return e;
     let n = h(e, t);
@@ -37,20 +37,20 @@ class S extends i.PureComponent {
       disableReactionUpdates: n,
       isLurking: i,
       isGuest: l,
-      isPendingMember: m,
+      isPendingMember: N,
       isForumToolbar: h,
       channel: C,
       className: S,
       forceAddReactions: A,
-      reactionClassName: p,
-      useChatFontScaling: g,
+      reactionClassName: g,
+      useChatFontScaling: p,
       forceHideReactionCreates: f,
-      remainingReactions: O,
-      combinedReactions: R,
+      remainingReactions: R,
+      combinedReactions: O,
       visibleReactionsCount: M
     } = this.props, {
       disableTransitionAppear: x
-    } = this.state, v = g ? N : T, L = M > 0;
+    } = this.state, v = p ? m : T, L = M > 0;
     return L || A ? (0, s.jsxs)(r.W, {
       component: "div",
       className: a()(v.reactions, S),
@@ -65,31 +65,31 @@ class S extends i.PureComponent {
         isHovered: !1
       }),
       children: [(0, s.jsx)(E.l, {
-        reactions: R,
+        reactions: O,
         message: e,
         readOnly: n,
         isLurking: i,
         isGuest: l,
-        isPendingMember: m,
+        isPendingMember: N,
         isForumToolbar: h,
-        useChatFontScaling: g,
-        className: p
-      }), O > 0 && (0, s.jsx)(o.Clickable, {
+        useChatFontScaling: p,
+        className: g
+      }), R > 0 && (0, s.jsx)(o.Clickable, {
         onClick: t => {
           t.stopPropagation(), (0, _.op)(C, e)
         },
-        className: a()(v.reaction, p, v.remainingReactions),
+        className: a()(v.reaction, g, v.remainingReactions),
         "aria-label": I.Z.Messages.ADD_REACTION,
         children: (0, s.jsxs)(o.Text, {
           className: v.reactionInner,
           variant: "text-sm/normal",
-          children: ["+", O]
+          children: ["+", R]
         })
       }), !t && !f && (0, s.jsx)(u.X, {
         type: c.O.NORMAL,
         message: e,
         channel: C,
-        useChatFontScaling: g,
+        useChatFontScaling: p,
         isHovered: this.state.isHovered,
         className: a()({
           [v.forceShow]: A && !L,

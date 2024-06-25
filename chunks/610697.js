@@ -1,22 +1,22 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
-    return u
+    return c
   }
-}), t(47120);
-var i = t(470079),
-  l = t(442837),
-  s = t(594174),
-  r = t(823162),
-  a = t(355298);
+}), n(47120);
+var s = n(470079),
+  i = n(442837),
+  l = n(594174),
+  a = n(823162),
+  r = n(355298);
 let o = new Set(["GB"]);
 
-function u() {
-  let e = (0, l.e7)([a.Z], () => a.Z.getUserCountryCode()),
-    n = !1 === (0, l.e7)([s.default], () => {
+function c() {
+  let e = (0, i.e7)([r.Z], () => r.Z.getUserCountryCode()),
+    t = !1 === (0, i.e7)([l.default], () => {
       var e;
-      return null === (e = s.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed
+      return null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed
     });
-  return i.useEffect(() => {
-    null == e && (0, r.hi)()
-  }, [e]), !!(null != e && o.has(e.alpha2)) && !!n || !1
+  return s.useEffect(() => {
+    null == e && (0, a.hi)()
+  }, [e]), !!(null != e && o.has(e.alpha2)) && !!t || !1
 }

@@ -13,8 +13,8 @@ var l = n(735250),
   c = n(100527),
   d = n(906732),
   h = n(388905),
-  g = n(792766),
-  p = n(451603),
+  p = n(792766),
+  g = n(451603),
   m = n(885714),
   C = n(973616),
   E = n(594174),
@@ -25,17 +25,17 @@ var l = n(735250),
   Z = n(55543),
   S = n(626135),
   x = n(768581),
-  T = n(358085),
-  L = n(998502),
+  L = n(358085),
+  T = n(998502),
   v = n(379164),
   A = n(590965),
   M = n(981631),
   R = n(474936),
   O = n(689938),
   P = n(71044),
-  j = n(331651);
+  b = n(331651);
 
-function b() {
+function j() {
   let {
     analyticsLocations: e,
     sourceAnalyticsLocations: t
@@ -74,7 +74,7 @@ function b() {
   })
 }
 
-function D(e) {
+function y(e) {
   let {
     className: t
   } = e;
@@ -95,7 +95,7 @@ function D(e) {
   })
 }
 
-function y(e) {
+function D(e) {
   let {
     transitionState: t
   } = e, n = (0, I.Dt)(), {
@@ -109,7 +109,7 @@ function y(e) {
       transitionState: t,
       children: (0, l.jsxs)(o.ModalContent, {
         className: P.errorContent,
-        children: [(0, l.jsx)(D, {
+        children: [(0, l.jsx)(y, {
           className: P.errorImage
         }), (0, l.jsx)(o.Heading, {
           id: n,
@@ -144,14 +144,14 @@ function U(e) {
     submitting: N
   } = (0, a.cj)([A.Z], () => A.Z.getProps());
   i.useEffect(() => {
-    !__OVERLAY__ && T.isPlatformEmbedded && ((0, T.isWindows)() ? L.ZP.minimize() : L.ZP.restore(), L.ZP.focus())
+    !__OVERLAY__ && L.isPlatformEmbedded && ((0, L.isWindows)() ? T.ZP.minimize() : T.ZP.restore(), T.ZP.focus())
   }, []);
   let Z = (0, I.Dt)(),
     {
       analyticsLocations: S
     } = (0, d.ZP)(c.Z.INVITE_MODAL);
   if (null == m) return null;
-  if (m.state === M.r2o.EXPIRED || m.state === M.r2o.BANNED || m.state === M.r2o.ERROR) return (0, l.jsx)(y, {
+  if (m.state === M.r2o.EXPIRED || m.state === M.r2o.BANNED || m.state === M.r2o.ERROR) return (0, l.jsx)(D, {
     transitionState: s
   });
   if (null == m.channel) return null;
@@ -160,18 +160,18 @@ function U(e) {
     null != m && v.Z.acceptInvite(m)
   }
   let {
-    guild: D,
+    guild: y,
     channel: U,
     inviter: G,
     target_application: w
-  } = m, k = null != D, B = null != m.stage_instance, V = null == m.guild && null == m.channel && null != m.inviter;
-  if (null != w) t = null == D ? void 0 : D.name, n = C.Z.createFromServer(w).getCoverImageURL(1024);
-  else if (null != D) t = D.name, n = x.ZP.getGuildSplashURL({
-    id: D.id,
-    splash: D.splash
+  } = m, k = null != y, B = null != m.stage_instance, V = null == m.guild && null == m.channel && null != m.inviter;
+  if (null != w) t = null == y ? void 0 : y.name, n = C.Z.createFromServer(w).getCoverImageURL(1024);
+  else if (null != y) t = y.name, n = x.ZP.getGuildSplashURL({
+    id: y.id,
+    splash: y.splash
   });
   else if ((null == (t = U.name) || "" === t) && null != G && (t = G.username), null == t) throw Error("no name for group DM invite");
-  let H = (0, p.yU)(),
+  let H = (0, g.yU)(),
     F = B ? O.Z.Messages.INSTANT_INVITE_ACCEPT_STAGE : O.Z.Messages.INVITE_MODAL_BUTTON.format({
       guildName: t
     });
@@ -192,21 +192,21 @@ function U(e) {
             justify: f.Z.Justify.BETWEEN,
             children: [(0, l.jsx)("div", {
               id: Z,
-              className: j.marginBottom20,
+              className: b.marginBottom20,
               children: (0, l.jsx)(u.Z, {
                 invite: m,
                 disableUser: k,
                 error: _
               })
-            }), B && null != D ? (0, l.jsx)("div", {
-              className: r()(j.marginBottom20, P.stage),
-              children: (0, l.jsx)(g.Z, {
+            }), B && null != y ? (0, l.jsx)("div", {
+              className: r()(b.marginBottom20, P.stage),
+              children: (0, l.jsx)(p.Z, {
                 isCard: !0,
                 stageInstance: m.stage_instance,
-                guild: D
+                guild: y
               })
             }) : null, (0, l.jsxs)("div", {
-              children: [H ? (0, l.jsx)(b, {}) : null, null == w ? (0, l.jsx)(o.Tooltip, {
+              children: [H ? (0, l.jsx)(j, {}) : null, null == w ? (0, l.jsx)(o.Tooltip, {
                 text: H ? O.Z.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION : null,
                 position: "bottom",
                 children: e => {
@@ -241,7 +241,7 @@ function U(e) {
                 })]
               }), (0, l.jsx)(f.Z, {
                 justify: f.Z.Justify.CENTER,
-                className: j.marginTop8,
+                className: b.marginTop8,
                 children: (0, l.jsx)(h.zx, {
                   look: h.zx.Looks.LINK,
                   className: P.noThanksButton,

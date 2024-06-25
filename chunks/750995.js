@@ -1,6 +1,6 @@
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(704215),
+var i = n(704215),
   l = n(481060),
   a = n(570140),
   r = n(317770),
@@ -14,11 +14,11 @@ var s = n(704215),
 let I = e => {
   var t;
   let n = u.Z.getGuild(e),
-    i = !!(null == n ? void 0 : n.hasFeature(h.oNc.COMMUNITY)),
+    s = !!(null == n ? void 0 : n.hasFeature(h.oNc.COMMUNITY)),
     l = d.Z.can(h.Plq.MANAGE_CHANNELS, n),
-    a = (0, o.un)(s.z.FORUM_CHANNEL_UPSELL_MODAL),
+    a = (0, o.un)(i.z.FORUM_CHANNEL_UPSELL_MODAL),
     r = null !== (t = c.Z.getMemberCount(e)) && void 0 !== t ? t : 0;
-  return i && l && !a && r >= 200
+  return s && l && !a && r >= 200
 };
 class m extends r.Z {
   _initialize() {
@@ -32,10 +32,10 @@ class m extends r.Z {
       guildId: t
     } = e;
     if (null == t || !I(t)) return;
-    (0, E.qz)(), (0, o.kk)(s.z.FORUM_CHANNEL_UPSELL_MODAL);
+    (0, E.qz)(), (0, o.kk)(i.z.FORUM_CHANNEL_UPSELL_MODAL);
     let a = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.L.DISMISS;
-      (0, o.EW)(s.z.FORUM_CHANNEL_UPSELL_MODAL, {
+      (0, o.EW)(i.z.FORUM_CHANNEL_UPSELL_MODAL, {
         dismissAction: e
       })
     };
@@ -43,7 +43,7 @@ class m extends r.Z {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("18417")]).then(n.bind(n, 740696));
-      return n => (0, i.jsx)(e, {
+      return n => (0, s.jsx)(e, {
         ...n,
         onClose: e => {
           a(e), n.onClose()
@@ -52,7 +52,7 @@ class m extends r.Z {
         shouldUpsellCreation: !0
       })
     }, {
-      onCloseCallback: () => (0, o.EW)(s.z.FORUM_CHANNEL_UPSELL_MODAL, {
+      onCloseCallback: () => (0, o.EW)(i.z.FORUM_CHANNEL_UPSELL_MODAL, {
         dismissAction: _.L.DISMISS
       }),
       onCloseRequest: h.VqG

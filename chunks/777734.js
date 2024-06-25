@@ -1,37 +1,37 @@
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(481060),
   a = n(920040);
-let r = s.forwardRef(function(e, t) {
+let r = i.forwardRef(function(e, t) {
   let {
     title: n,
-    subtitle: s,
+    subtitle: i,
     icon: r,
     style: o
   } = e;
-  return (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsxs)("div", {
+  return (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsxs)("div", {
       style: o,
       className: a.sectionHeader,
-      children: [(0, i.jsxs)("div", {
+      children: [(0, s.jsxs)("div", {
         className: a.sectionHeaderTitle,
-        children: [r, (0, i.jsx)(l.Heading, {
+        children: [r, (0, s.jsx)(l.Heading, {
           variant: "heading-md/medium",
           color: "header-primary",
           children: n
         })]
-      }), null != s && (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)("div", {
+      }), null != i && (0, s.jsxs)(s.Fragment, {
+        children: [(0, s.jsx)("div", {
           className: a.sectionHeaderSpacer
-        }), (0, i.jsx)(l.Text, {
+        }), (0, s.jsx)(l.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
-          children: s
+          children: i
         })]
       })]
-    }), (0, i.jsx)("div", {
+    }), (0, s.jsx)("div", {
       ref: t
     })]
   })
 });
-t.Z = s.memo(r)
+t.Z = i.memo(r)

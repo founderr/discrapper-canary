@@ -23,7 +23,7 @@ function T(e, t, n) {
     "aria-selected": n
   }
 }
-class N extends(s = o.PureComponent) {
+class m extends(s = o.PureComponent) {
   renderQuery(e) {
     let {
       query: t,
@@ -122,9 +122,9 @@ a = {
   renderInitialState: () => null,
   hideQuery: !1,
   width: 320
-}, (l = "defaultProps") in(i = N) ? Object.defineProperty(i, l, {
+}, (l = "defaultProps") in(i = m) ? Object.defineProperty(i, l, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[l] = a, t.Z = N
+}) : i[l] = a, t.Z = m

@@ -1,9 +1,9 @@
-n.d(t, {
+s.d(t, {
   Xi: function() {
-    return i
+    return a
   }
 });
-let s = (0, n(818083).B)({
+let n = (0, s(818083).B)({
   kind: "user",
   id: "2024-02_family_center_vc_join",
   label: "Family Center VC Join",
@@ -19,16 +19,16 @@ let s = (0, n(818083).B)({
   }]
 });
 
-function i(e) {
+function a(e) {
   let {
     location: t,
-    autoTrackExposure: n = !1
+    autoTrackExposure: s = !1
   } = e, {
-    enabled: i
-  } = s.useExperiment({
+    enabled: a
+  } = n.useExperiment({
     location: t
   }, {
-    autoTrackExposure: n
+    autoTrackExposure: s
   });
-  return i
+  return a
 }

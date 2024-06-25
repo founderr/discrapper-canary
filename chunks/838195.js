@@ -3,9 +3,9 @@ n.d(t, {
     return r
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
   l = n(522474),
   a = n(981631);
 
@@ -14,12 +14,12 @@ function r(e) {
     applicationId: t,
     channelId: r,
     mediaUrl: o
-  } = e, c = l.Z.getWindowOpen(a.KJ3.CHANNEL_CALL_POPOUT) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT;
-  (0, s.openModalLazy)(async () => {
+  } = e, c = l.Z.getWindowOpen(a.KJ3.CHANNEL_CALL_POPOUT) ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
+  (0, i.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([n.e("99387"), n.e("4530")]).then(n.bind(n, 899201));
-    return n => (0, i.jsx)(e, {
+    return n => (0, s.jsx)(e, {
       applicationId: t,
       channelId: r,
       mediaUrl: o,

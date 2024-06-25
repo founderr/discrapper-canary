@@ -1,9 +1,9 @@
 n.d(t, {
   q: function() {
-    return i
+    return s
   }
 });
-let i = (0, n(818083).B)({
+let s = (0, n(818083).B)({
   kind: "user",
   id: "2023-04_birthday_activities_whats_new_gdm_tile",
   label: "Birthday Activities Whats New GDM Tile",

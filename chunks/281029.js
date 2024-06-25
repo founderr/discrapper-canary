@@ -153,7 +153,7 @@ function h(e, t, n, r) {
   let a, o, c = [],
     d = [],
     h = r._categories,
-    g = t => {
+    p = t => {
       var n, l, i, r;
       let u;
       if (null == a || null == o || (n = e, l = a, i = o, r = t, null != l && null != i && null != r[l] && r[l].channel === n && null != r[i] ? 0 : 1)) u = [...t];
@@ -177,7 +177,7 @@ function h(e, t, n, r) {
     };
   if (e.isCategory()) {
     let n = [...h].slice(1);
-    a = u(e, n), o = u(t, n), (d = g(n)).unshift(h[0])
+    a = u(e, n), o = u(t, n), (d = p(n)).unshift(h[0])
   }
   if ((0, i.r8)(e.type) || e.isCategory()) {
     let n = (0, l.Z)(d.length > 0 ? d : h, r, e => {
@@ -188,7 +188,7 @@ function h(e, t, n, r) {
       } = e;
       return (0, i.r8)(t)
     });
-    a = u(e, n), o = u(t, n), g(n)
+    a = u(e, n), o = u(t, n), p(n)
   }
   if (e.isGuildVocal() || e.isCategory()) {
     let n = (0, l.Z)(d.length > 0 ? d : h, r, e => {
@@ -197,7 +197,7 @@ function h(e, t, n, r) {
       } = e;
       return t.isGuildVocal()
     });
-    a = u(e, n), o = u(t, n), g(n)
+    a = u(e, n), o = u(t, n), p(n)
   }
   if (e.parent_id !== n) {
     let t = !1;

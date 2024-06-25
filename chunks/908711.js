@@ -1,5 +1,5 @@
-var i = n(408841),
-  s = n(981631);
+var s = n(408841),
+  i = n(981631);
 t.Z = {
-  [s.Etm.SEND_GENERIC_EVENT]: i.n
+  [i.Etm.SEND_GENERIC_EVENT]: s.n
 }

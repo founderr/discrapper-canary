@@ -3,10 +3,10 @@ n.d(t, {
     return h
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(120356),
-  l = n.n(s),
+var i = n(120356),
+  l = n.n(i),
   a = n(481060),
   r = n(788307),
   o = n(2052),
@@ -16,7 +16,7 @@ var s = n(120356),
   E = n(701747);
 
 function h(e, t) {
-  let s = (0, o.O)(),
+  let i = (0, o.O)(),
     {
       trackUserProfileAction: h
     } = (0, c.KZ)();
@@ -32,8 +32,8 @@ function h(e, t) {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("47484")]).then(n.bind(n, 211065));
-      return t => (0, i.jsx)(e, {
-        sourceAnalyticsContext: s,
+      return t => (0, s.jsx)(e, {
+        sourceAnalyticsContext: i,
         ...t
       })
     })
@@ -43,24 +43,24 @@ function h(e, t) {
       let {
         className: n
       } = t;
-      return (0, i.jsx)(r.I, {
+      return (0, s.jsx)(r.I, {
         className: n,
         emoji: e.emoji,
         animate: !0,
         hideTooltip: !0
       })
     } : void 0;
-    return (0, i.jsx)(a.MenuItem, {
+    return (0, s.jsx)(a.MenuItem, {
       id: "edit-custom-status",
       label: d.Z.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
       icon: n,
       focusedClassName: t,
       showIconFirst: !0,
-      hint: e => (0, i.jsx)(a.Clickable, {
+      hint: e => (0, s.jsx)(a.Clickable, {
         ...e,
         onClick: _,
         tabIndex: -1,
-        children: (0, i.jsx)(a.CircleXIcon, {
+        children: (0, s.jsx)(a.CircleXIcon, {
           size: "sm",
           color: "currentColor"
         })
@@ -68,11 +68,11 @@ function h(e, t) {
       action: I
     })
   }
-  return (0, i.jsx)(a.MenuItem, {
+  return (0, s.jsx)(a.MenuItem, {
     id: "set-custom-status",
     focusedClassName: t,
     label: d.Z.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS_CTA,
-    icon: e => (0, i.jsx)("div", {
+    icon: e => (0, s.jsx)("div", {
       className: l()(E.customEmojiPlaceholder, e)
     }),
     action: I,

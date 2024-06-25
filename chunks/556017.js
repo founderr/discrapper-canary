@@ -6,10 +6,10 @@ n.d(t, {
     return a
   }
 });
-var i = n(470079),
-  s = n(818083),
+var s = n(470079),
+  i = n(818083),
   l = n(695346);
-let a = (0, s.B)({
+let a = (0, i.B)({
   kind: "user",
   id: "2022-01_discovery_iar",
   label: "Ability to report servers in Server Discovery",
@@ -33,7 +33,7 @@ function r() {
   }, {
     autoTrackExposure: !1
   }), t = l.Sb.useSetting();
-  return i.useEffect(() => {
+  return s.useEffect(() => {
     a.trackExposure({
       location: "7a11e2_2"
     })

@@ -15,13 +15,13 @@ var i = n(442837),
   d = n(441319);
 
 function h() {
-  let [e, t, n] = (0, i.Wu)([r.default, o.Z], () => [o.Z.getCurrentDesktopIcon(), o.Z.isEditorOpen, a.ZP.isPremium(r.default.getCurrentUser())]), h = d.QA[e], g = e !== u.aH.DEFAULT && (n || t), p = (0, s.useRedesignIconContext)().enabled, m = (0, l.jsx)(s.ClydeIcon, {
+  let [e, t, n] = (0, i.Wu)([r.default, o.Z], () => [o.Z.getCurrentDesktopIcon(), o.Z.isEditorOpen, a.ZP.isPremium(r.default.getCurrentUser())]), h = d.QA[e], p = e !== u.aH.DEFAULT && (n || t), g = (0, s.useRedesignIconContext)().enabled, m = (0, l.jsx)(s.ClydeIcon, {
     size: "custom",
     color: "currentColor",
     width: 30,
-    height: p ? 30 : 22
+    height: g ? 30 : 22
   });
-  return null != h && g ? (0, l.jsx)(c.Z, {
+  return null != h && p ? (0, l.jsx)(c.Z, {
     id: e,
     width: 48
   }) : m

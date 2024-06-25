@@ -1,5 +1,5 @@
 n(653041), n(47120), n(724458);
-var i, s, l, a, r = n(392711),
+var s, i, l, a, r = n(392711),
   o = n.n(r),
   c = n(442837),
   u = n(570140),
@@ -10,39 +10,39 @@ var E = n(709054),
 let _ = {},
   I = {},
   m = {},
-  g = {};
+  T = {};
 
-function p(e) {
+function g(e) {
   let t = I[e];
   if (null == t) return;
   let n = E.default.fromTimestamp(Date.now() - 9e5),
-    i = o().findIndex(t, e => E.default.compare(e.id, n) > 0);
-  if (-1 === i) I[e] = [];
+    s = o().findIndex(t, e => E.default.compare(e.id, n) > 0);
+  if (-1 === s) I[e] = [];
   else {
-    let n = Math.max(i, t.length - 26);
+    let n = Math.max(s, t.length - 26);
     I[e] = o().slice(t, n)
   }
   m[e] = Date.now()
 }
 
-function N(e, t, n, i) {
+function p(e, t, n, s) {
   _[e].add(t);
-  let s = m[t];
-  (null == s || s + 3e5 > Date.now()) && p(t), null == I[t] && (I[t] = []), I[t].push({
+  let i = m[t];
+  (null == i || i + 3e5 > Date.now()) && g(t), null == I[t] && (I[t] = []), I[t].push({
     id: n,
-    userId: i
+    userId: s
   })
 }
 
-function T(e) {
+function N(e) {
   let {
     channel: t
   } = e;
   delete I[t.id], delete m[t.id]
 }
-class C extends(i = c.ZP.Store) {
+class S extends(s = c.ZP.Store) {
   getActiveChannelsFetchStatus(e) {
-    return g[e]
+    return T[e]
   }
   getActiveChannelIds(e) {
     return _[e]
@@ -52,47 +52,47 @@ class C extends(i = c.ZP.Store) {
   }
   shouldFetch(e) {
     var t;
-    return null == _[e] && !(null === (t = g[e]) || void 0 === t ? void 0 : t.loading)
+    return null == _[e] && !(null === (t = T[e]) || void 0 === t ? void 0 : t.loading)
   }
 }
-a = "ActiveChannelsStore", (l = "displayName") in(s = C) ? Object.defineProperty(s, l, {
+a = "ActiveChannelsStore", (l = "displayName") in(i = S) ? Object.defineProperty(i, l, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = a, new C(u.Z, {
+}) : i[l] = a, new S(u.Z, {
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t,
       guildId: n
     } = e;
     if (!(0, h.ME)(t) || null == n) return !1;
-    let i = _[n];
-    if (null == i) return !1;
-    i.forEach(e => {
+    let s = _[n];
+    if (null == s) return !1;
+    s.forEach(e => {
       var t;
-      p(e), (null === (t = I[e]) || void 0 === t ? void 0 : t.length) === 0 && delete I[e]
+      g(e), (null === (t = I[e]) || void 0 === t ? void 0 : t.length) === 0 && delete I[e]
     });
-    let s = o().chain(Array.from(i)).filter(e => e in I).sortBy(e => {
+    let i = o().chain(Array.from(s)).filter(e => e in I).sortBy(e => {
       var t, n;
       return -(null !== (n = null === (t = I[e]) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0)
     }).value();
-    _[n] = new Set(s)
+    _[n] = new Set(i)
   },
   MESSAGE_CREATE: function(e) {
     var t;
     let {
       channelId: n,
-      message: i,
-      optimistic: s,
+      message: s,
+      optimistic: i,
       isPushNotification: l
     } = e;
-    if (s || l) return !1;
+    if (i || l) return !1;
     let a = d.Z.getChannel(n);
     if (null == a) return !1;
     let r = a.guild_id;
     if (null == r || null == _[r]) return !1;
-    N(r, n, i.id, null === (t = i.author) || void 0 === t ? void 0 : t.id)
+    p(r, n, s.id, null === (t = s.author) || void 0 === t ? void 0 : t.id)
   },
   GUILD_DELETE: function(e) {
     let {
@@ -100,13 +100,13 @@ a = "ActiveChannelsStore", (l = "displayName") in(s = C) ? Object.defineProperty
     } = e;
     delete _[t.id]
   },
-  CHANNEL_DELETE: T,
-  THREAD_DELETE: T,
+  CHANNEL_DELETE: N,
+  THREAD_DELETE: N,
   ACTIVE_CHANNELS_FETCH_START: function(e) {
     let {
       guildId: t
     } = e;
-    g[t] = {
+    T[t] = {
       loading: !0,
       error: null,
       fetchedAt: Date.now()
@@ -117,17 +117,17 @@ a = "ActiveChannelsStore", (l = "displayName") in(s = C) ? Object.defineProperty
       guildId: t,
       channels: n
     } = e;
-    g[t] = {
+    T[t] = {
       loading: !1,
       error: null,
       fetchedAt: Date.now()
     }, _[t] = new Set, n.forEach(e => {
       let {
         channel_id: n,
-        messages: i
+        messages: s
       } = e;
-      i.forEach(e => {
-        N(t, n, e.message_id, e.user_id)
+      s.forEach(e => {
+        p(t, n, e.message_id, e.user_id)
       })
     })
   },
@@ -136,7 +136,7 @@ a = "ActiveChannelsStore", (l = "displayName") in(s = C) ? Object.defineProperty
       guildId: t,
       error: n
     } = e;
-    g[t] = {
+    T[t] = {
       loading: !1,
       error: n,
       fetchedAt: null

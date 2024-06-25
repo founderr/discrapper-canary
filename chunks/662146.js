@@ -19,14 +19,14 @@ function u(e) {
     disabled: c = !1,
     hideOnClick: d = !0,
     shouldShow: h,
-    forceOpen: g,
-    selected: p = !1,
+    forceOpen: p,
+    selected: g = !1,
     tooltipClass: m,
     tooltipContentClass: C
   } = e;
   return (0, l.jsx)(a.Tooltip, {
     shouldShow: h,
-    forceOpen: g,
+    forceOpen: p,
     spacing: 20,
     hideOnClick: d,
     text: c ? null : n,
@@ -39,7 +39,7 @@ function u(e) {
       ...e
     }) : (0, l.jsx)("div", {
       className: r()(o.listItemWrapper, {
-        [o.selected]: p
+        [o.selected]: g
       }),
       ...e,
       children: t

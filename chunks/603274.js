@@ -14,8 +14,8 @@ var i = n(120356),
   c = n(317381),
   d = n(565799),
   h = n(501655),
-  g = n(199902),
-  p = n(592125),
+  p = n(199902),
+  g = n(592125),
   m = n(594174),
   C = n(938475),
   E = n(602623),
@@ -27,7 +27,7 @@ var i = n(120356),
   S = n(907934),
   x = n(721690);
 
-function T(e, t) {
+function L(e, t) {
   return 0 === t.length ? null : (0, l.jsxs)("div", {
     className: S.row,
     children: [(0, l.jsx)(e, {
@@ -41,9 +41,9 @@ function T(e, t) {
   })
 }
 
-function L() {
+function T() {
   var e, t;
-  let n = (0, o.Wu)([I.Z, p.Z], () => _.default.keys(I.Z.getFavoriteChannels()).map(e => p.Z.getChannel(e)).filter(f.lm)),
+  let n = (0, o.Wu)([I.Z, g.Z], () => _.default.keys(I.Z.getFavoriteChannels()).map(e => g.Z.getChannel(e)).filter(f.lm)),
     i = n.map(e => e.id),
     s = n.filter(e => e.type === N.d4z.GUILD_VOICE),
     r = n.filter(e => e.type === N.d4z.GUILD_STAGE_VOICE).map(e => e.id),
@@ -59,12 +59,12 @@ function L() {
       } = e;
       return t
     }))),
-    L = (0, o.e7)([d.Z], () => {
+    T = (0, o.e7)([d.Z], () => {
       let e = 0;
       for (let t of r) e += d.Z.getParticipantCount(t, h.pV.AUDIENCE);
       return e
     }),
-    v = (0, o.Wu)([g.Z], () => g.Z.getAllApplicationStreams().filter(e => i.includes(e.channelId)).map(e => e.ownerId), [i]),
+    v = (0, o.Wu)([p.Z], () => p.Z.getAllApplicationStreams().filter(e => i.includes(e.channelId)).map(e => e.ownerId), [i]),
     A = (0, o.Wu)([c.ZP], () => {
       let e = c.ZP.getEmbeddedActivitiesByChannel(),
         t = [];
@@ -76,8 +76,8 @@ function L() {
     }, [i]),
     M = (0, o.Wu)([m.default], () => A.map(e => m.default.getUser(e)), [A]),
     R = (0, o.Wu)([m.default], () => v.map(e => m.default.getUser(e)), [v]),
-    O = T(u.VoiceNormalIcon, Z.filter(e => !v.includes(e.id) && !A.includes(e.id)));
-  let P = (e = x, t = L, 0 === e.length ? null : (0, l.jsxs)("div", {
+    O = L(u.VoiceNormalIcon, Z.filter(e => !v.includes(e.id) && !A.includes(e.id)));
+  let P = (e = x, t = T, 0 === e.length ? null : (0, l.jsxs)("div", {
       className: S.row,
       children: [(0, l.jsx)(u.StageIcon, {
         size: "lg",
@@ -100,10 +100,10 @@ function L() {
         })]
       })]
     })),
-    j = T(u.ScreenArrowIcon, R.filter(e => null != e && !A.includes(e.id))),
-    b = T(u.ActivitiesIcon, M);
+    b = L(u.ScreenArrowIcon, R.filter(e => null != e && !A.includes(e.id))),
+    j = L(u.ActivitiesIcon, M);
   return (0, l.jsxs)(l.Fragment, {
-    children: [P, O, j, b]
+    children: [P, O, b, j]
   })
 }
 
@@ -115,7 +115,7 @@ function v() {
         className: s()(S.guildNameText, S.guildNameTextLimitedSize),
         children: Z.Z.Messages.FAVORITES_GUILD_NAME
       })
-    }), (0, l.jsx)(L, {})]
+    }), (0, l.jsx)(T, {})]
   })
 }
 

@@ -1,12 +1,12 @@
 var s, r, i, l, a = n(735250),
   o = n(470079),
-  c = n(525654),
-  u = n.n(c),
+  u = n(525654),
+  c = n.n(u),
   d = n(442837),
   E = n(893776),
   _ = n(129293),
-  I = n(388905),
-  h = n(108427),
+  h = n(388905),
+  I = n(108427),
   N = n(314897),
   p = n(981631),
   g = n(689938),
@@ -15,51 +15,51 @@ d.ZP.initialize();
 class T extends(l = o.PureComponent) {
   componentDidMount() {
     let e = (0, _.Z)(this.props.location);
-    null != e && E.Z.authorizeIPAddress(e), (0, h.e)("authorize_ip")
+    null != e && E.Z.authorizeIPAddress(e), (0, I.e)("authorize_ip")
   }
   renderLoginButton() {
-    if ("Android" === u().os.family || "iOS" === u().os.family) return null;
+    if ("Android" === c().os.family || "iOS" === c().os.family) return null;
     let {
       transitionTo: e
     } = this.props;
-    return (0, a.jsx)(I.zx, {
+    return (0, a.jsx)(h.zx, {
       onClick: () => e(p.Z5c.LOGIN),
       children: g.Z.Messages._LOGIN
     })
   }
   renderFailed() {
-    return (0, a.jsxs)(I.ZP, {
+    return (0, a.jsxs)(h.ZP, {
       children: [(0, a.jsx)("img", {
         alt: "",
         src: n(211095),
         className: m.marginBottom20
-      }), (0, a.jsx)(I.Dx, {
+      }), (0, a.jsx)(h.Dx, {
         className: m.marginBottom8,
         children: g.Z.Messages.AUTHORIZATION_EXPIRED
-      }), (0, a.jsx)(I.DK, {
+      }), (0, a.jsx)(h.DK, {
         className: m.marginBottom40,
         children: g.Z.Messages._AUTH_EXPIRED_SUGGESTION
       }), this.renderLoginButton()]
     })
   }
   renderSucceeded() {
-    return (0, a.jsxs)(I.ZP, {
+    return (0, a.jsxs)(h.ZP, {
       children: [(0, a.jsx)("img", {
         alt: "",
         src: n(640356),
         className: m.marginBottom20
-      }), (0, a.jsx)(I.Dx, {
+      }), (0, a.jsx)(h.Dx, {
         className: m.marginBottom8,
         children: g.Z.Messages.IP_AUTHORIZATION_SUCCEEDED
-      }), (0, a.jsx)(I.DK, {
+      }), (0, a.jsx)(h.DK, {
         className: m.marginBottom40,
         children: g.Z.Messages._AUTH_IP_AUTH_SUCCEEDED_SUGGESTION
       }), this.renderLoginButton()]
     })
   }
   renderDefault() {
-    return (0, a.jsxs)(I.ZP, {
-      children: [(0, a.jsx)(I.Hh, {}), (0, a.jsx)(I.Dx, {
+    return (0, a.jsxs)(h.ZP, {
+      children: [(0, a.jsx)(h.Hh, {}), (0, a.jsx)(h.Dx, {
         children: g.Z.Messages.AUTHORIZING
       })]
     })

@@ -3,9 +3,9 @@ n.d(t, {
     return r
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(145641),
+var i = n(145641),
   l = n(322701),
   a = n(617015);
 
@@ -18,11 +18,11 @@ function r(e) {
     sectionFilter: c,
     useReducedMotion: u
   } = e;
-  return t >= a.nG ? (0, i.jsx)(s.Z, {
+  return t >= a.nG ? (0, s.jsx)(i.Z, {
     statusSections: n,
     renderRow: r,
     searchQuery: o
-  }) : (0, i.jsx)(l.Z, {
+  }) : (0, s.jsx)(l.Z, {
     statusSections: n,
     renderRow: r,
     sectionFilter: c,

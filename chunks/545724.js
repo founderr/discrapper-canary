@@ -1,6 +1,6 @@
 n(47120);
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(120356),
   a = n.n(l),
   r = n(748780),
@@ -17,19 +17,19 @@ t.Z = function(e) {
     channel: _,
     onClick: I,
     isFocused: m,
-    isActive: g,
-    onOtherHover: p,
-    className: N
-  } = e, [T, C] = s.useState(!1), [S, A] = s.useState(!1), f = () => {
-    C(!0), m && !g && !S && (null == p || p())
+    isActive: T,
+    onOtherHover: g,
+    className: p
+  } = e, [N, S] = i.useState(!1), [C, A] = i.useState(!1), f = () => {
+    S(!0), m && !T && !C && (null == g || g())
   }, Z = () => {
-    C(!1)
-  }, v = (e, t) => {
+    S(!1)
+  }, L = (e, t) => {
     if (null != t) A(!0), (0, u.jW)(e, async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("79695"), n.e("32006"), n.e("69220")]).then(n.bind(n, 881351));
-      return n => (0, i.jsx)(e, {
+      return n => (0, s.jsx)(e, {
         ...n,
         user: t
       })
@@ -39,19 +39,19 @@ t.Z = function(e) {
       }
     })
   };
-  return (0, i.jsx)(o.mh, {
+  return (0, s.jsx)(o.mh, {
     id: _.id,
-    children: e => (0, i.jsx)(c.FocusRing, {
+    children: e => (0, s.jsx)(c.FocusRing, {
       offset: {
         left: -8,
         right: -8
       },
-      children: (0, i.jsx)(r.Z.div, {
-        className: a()(E.messageRequestItem, N, {
-          [E.active]: g || S,
+      children: (0, s.jsx)(r.Z.div, {
+        className: a()(E.messageRequestItem, p, {
+          [E.active]: T || C,
           [E.firstItem]: 0 === t
         }),
-        onContextMenu: e => v(e, h),
+        onContextMenu: e => L(e, h),
         onMouseEnter: f,
         onMouseLeave: Z,
         onClick: null != I ? I : void 0,
@@ -60,7 +60,7 @@ t.Z = function(e) {
           opacity: 1
         },
         ...e,
-        children: l(T || g || S)
+        children: l(N || T || C)
       })
     })
   })

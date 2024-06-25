@@ -1,6 +1,6 @@
 n(47120);
-var i = n(570140),
-  s = n(457330),
+var s = n(570140),
+  i = n(457330),
   l = n(726542),
   a = n(231757),
   r = n(553795),
@@ -49,9 +49,9 @@ t.Z = {
           function u(t) {
             var n;
             if (null == _) return;
-            let i = (null !== (n = t.accounts) && void 0 !== n ? n : []).find(e => e.type === _.type);
-            null != i && (e({
-              access_token: i.access_token
+            let s = (null !== (n = t.accounts) && void 0 !== n ? n : []).find(e => e.type === _.type);
+            null != s && (e({
+              access_token: s.access_token
             }), m())
           }
 
@@ -62,15 +62,15 @@ t.Z = {
           }
 
           function m() {
-            i.Z.unsubscribe("USER_CONNECTIONS_UPDATE", u), o.S.unsubscribe(h.CkL.CONNECTIONS_CALLBACK_ERROR, E)
+            s.Z.unsubscribe("USER_CONNECTIONS_UPDATE", u), o.S.unsubscribe(h.CkL.CONNECTIONS_CALLBACK_ERROR, E)
           }
-          i.Z.subscribe("USER_CONNECTIONS_UPDATE", u), o.S.subscribe(h.CkL.CONNECTIONS_CALLBACK_ERROR, E), (0, a.Z)({
+          s.Z.subscribe("USER_CONNECTIONS_UPDATE", u), o.S.subscribe(h.CkL.CONNECTIONS_CALLBACK_ERROR, E), (0, a.Z)({
             platformType: _.type,
             location: h.Sbl.ACTIVITY_RPC,
             successRedirect: d
           })
         } else try {
-          let t = await s.Z.refreshAccessToken(_.type, l.id);
+          let t = await i.Z.refreshAccessToken(_.type, l.id);
           if (null == t) throw new c.Z({
             errorCode: I.lT.OAUTH2_ERROR
           }, "Refreshing access token did not return a new access token");

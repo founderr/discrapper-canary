@@ -1,6 +1,6 @@
 n.d(t, {
   GO: function() {
-    return s
+    return i
   },
   K7: function() {
     return l
@@ -9,24 +9,24 @@ n.d(t, {
     return a
   }
 });
-var i = n(570140);
+var s = n(570140);
 
-function s(e) {
-  i.Z.dispatch({
+function i(e) {
+  s.Z.dispatch({
     type: "BOOSTED_GUILD_GRACE_PERIOD_NOTICE_DISMISS",
     guildId: e
   })
 }
 
 function l(e) {
-  i.Z.dispatch({
+  s.Z.dispatch({
     type: "PUBLIC_UPSELL_NOTICE_DISMISS",
     guildId: e
   })
 }
 
 function a(e) {
-  i.Z.dispatch({
+  s.Z.dispatch({
     type: "MAX_MEMBER_COUNT_NOTICE_DISMISS",
     guildId: e
   })

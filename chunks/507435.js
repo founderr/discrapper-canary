@@ -14,8 +14,8 @@ var s, i, l = n(735250),
   _ = n(377171),
   I = n(702346),
   T = n(809026),
-  N = n(139256),
-  m = n(489887),
+  m = n(139256),
+  N = n(489887),
   h = n(689938),
   C = n(872806);
 
@@ -55,7 +55,7 @@ function A(e) {
   }) : null
 }(s = i || (i = {})).NO_VOTES = "NO_VOTES", s.VICTOR = "VICTOR", s.TIE = "TIE";
 
-function p(e) {
+function g(e) {
   let t, {
     type: n,
     ...s
@@ -82,7 +82,7 @@ function p(e) {
             className: C.victorAnswerText,
             scaleFontToUserSetting: !0,
             children: i
-          }), (0, l.jsx)(N.ZY, {
+          }), (0, l.jsx)(m.ZY, {
             size: 16,
             className: C.victorIcon,
             isVictor: !0,
@@ -120,7 +120,7 @@ function p(e) {
   })
 }
 
-function g(e) {
+function p(e) {
   let {
     className: t,
     data: n,
@@ -145,7 +145,7 @@ function g(e) {
     children: [(0, l.jsx)(A, {
       hasNoVotes: "NO_VOTES" === i.type,
       victorEmoji: n.victorEmoji
-    }), (0, l.jsx)(p, {
+    }), (0, l.jsx)(g, {
       ...i
     }), (0, l.jsx)(u.Button, {
       className: C.button,
@@ -167,7 +167,7 @@ function f(e) {
   let {
     message: n,
     compact: s
-  } = e, i = n.embeds[0], r = a.useMemo(() => (0, T.Z)(i), [i]), o = (0, c.aF)(null !== (t = null == r ? void 0 : r.questionText) && void 0 !== t ? t : "", m.Dv), E = n.messageReference, _ = a.useCallback(() => {
+  } = e, i = n.embeds[0], r = a.useMemo(() => (0, T.Z)(i), [i]), o = (0, c.aF)(null !== (t = null == r ? void 0 : r.questionText) && void 0 !== t ? t : "", N.Dv), E = n.messageReference, _ = a.useCallback(() => {
     null != E && d.Z.jumpToMessage({
       channelId: E.channel_id,
       messageId: E.message_id,
@@ -186,7 +186,7 @@ function f(e) {
         title: o,
         titleOnClick: _
       })
-    }), (0, l.jsx)(g, {
+    }), (0, l.jsx)(p, {
       className: C.embed,
       data: r,
       onClickPollLink: _

@@ -1,20 +1,20 @@
-var n = t(735250),
-  r = t(470079),
-  i = t(378720),
-  a = t(232126),
-  l = t(285952),
-  o = t(981631),
-  c = t(689938),
-  u = t(17997);
-class I extends r.PureComponent {
+var s = n(735250),
+  i = n(470079),
+  l = n(378720),
+  a = n(232126),
+  r = n(285952),
+  o = n(981631),
+  c = n(689938),
+  u = n(17997);
+class d extends i.PureComponent {
   renderContentRatingImage() {
     let {
       contentRating: e,
-      contentRatingAgency: s
+      contentRatingAgency: t
     } = this.props.sku;
-    return null == e || null == s ? null : (0, n.jsx)(a.Z, {
+    return null == e || null == t ? null : (0, s.jsx)(a.Z, {
       className: u.rating,
-      agency: s,
+      agency: t,
       rating: e.rating
     })
   }
@@ -22,12 +22,12 @@ class I extends r.PureComponent {
     let {
       sku: {
         contentRating: e,
-        contentRatingAgency: s
+        contentRatingAgency: t
       },
-      className: t
+      className: n
     } = this.props;
-    if (null == e || null == s) return null;
-    let r = {
+    if (null == e || null == t) return null;
+    let i = {
         [o.aIt.ESRB]: {
           1: c.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_ALCOHOL_REFERENCE,
           2: c.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_ANIMATED_BLOOD,
@@ -83,14 +83,14 @@ class I extends r.PureComponent {
           7: c.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_PEGI_DISCRIMINATION
         }
       },
-      a = e.descriptors.map(e => r[s][e]).join(", ");
-    return (0, n.jsxs)("div", {
-      className: t,
-      children: [(0, n.jsx)(i.Z, {
+      a = e.descriptors.map(e => i[t][e]).join(", ");
+    return (0, s.jsxs)("div", {
+      className: n,
+      children: [(0, s.jsx)(l.Z, {
         children: c.Z.Messages.APPLICATION_STORE_SECTION_TITLE_RATINGS
-      }), (0, n.jsxs)(l.Z, {
+      }), (0, s.jsxs)(r.Z, {
         className: u.content,
-        children: [this.renderContentRatingImage(), (0, n.jsx)("div", {
+        children: [this.renderContentRatingImage(), (0, s.jsx)("div", {
           className: u.__invalid_info,
           children: a
         })]
@@ -98,4 +98,4 @@ class I extends r.PureComponent {
     })
   }
 }
-s.Z = I
+t.Z = d

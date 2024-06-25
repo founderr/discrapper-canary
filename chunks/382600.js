@@ -3,8 +3,8 @@ n.d(t, {
     return r
   }
 });
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(709014);
 let a = {
     disable: {
@@ -29,17 +29,17 @@ let a = {
     }
   },
   r = e => {
-    let t = s.useRef(null),
-      r = s.useRef(e),
-      o = s.useMemo(() => () => {
+    let t = i.useRef(null),
+      r = i.useRef(e),
+      o = i.useMemo(() => () => {
         null != t.current && t.current.play(e)
       }, [e]),
-      c = s.useCallback(() => {
+      c = i.useCallback(() => {
         if (null == t.current) return;
         let n = "enable" === e ? "hover_disabled" : "hover_enabled";
         t.current.play(n)
       }, [e]),
-      u = s.useCallback(() => {
+      u = i.useCallback(() => {
         if (null == t.current) return;
         let n = "enable" === e ? "hover_disabled" : "hover_enabled";
         t.current.stopIfPlaying(n)
@@ -51,7 +51,7 @@ let a = {
         onMouseLeave: u
       },
       play: o,
-      Component: s.useCallback(e => (0, i.jsx)(l.L, {
+      Component: i.useCallback(e => (0, s.jsx)(l.L, {
         ...e,
         src: () => n.e("7584").then(n.t.bind(n, 883488, 19)),
         ref: t,

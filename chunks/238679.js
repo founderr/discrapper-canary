@@ -12,8 +12,8 @@ n.d(t, {
     return _
   }
 });
-var i = n(392711),
-  s = n.n(i),
+var s = n(392711),
+  i = n.n(s),
   l = n(570140),
   a = n(317381),
   r = n(594174),
@@ -33,12 +33,12 @@ function E() {
   } = e;
   return {
     participants: Array.from(e.userIds, e => {
-      let i = r.default.getUser(e);
-      if (null == i) return;
-      let s = (0, c.y)(t, n, i);
+      let s = r.default.getUser(e);
+      if (null == s) return;
+      let i = (0, c.y)(t, n, s);
       return {
-        ...(0, u.Z)(i),
-        nickname: null != s ? s : void 0
+        ...(0, u.Z)(s),
+        nickname: null != i ? i : void 0
       }
     }).filter(o.lm)
   }
@@ -52,8 +52,8 @@ let h = {
       let {
         prevState: t,
         dispatch: n
-      } = e, i = E();
-      return !s().isEqual(i, t) && n(i), i
+      } = e, s = E();
+      return !i().isEqual(s, t) && n(s), s
     }
   };
 

@@ -156,7 +156,7 @@ class e6 extends i.PureComponent {
     o()(null != t, "Missing channel in Channel.openChannelContextMenu"), (0, f.jW)(e, async () => {
       let {
         default: e
-      } = await n.e("78650").then(n.bind(n, 422200));
+      } = await n.e("40157").then(n.bind(n, 422200));
       return n => (0, l.jsx)(e, {
         ...n,
         channel: t

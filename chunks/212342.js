@@ -8,12 +8,12 @@ var s, i, l, a, r = n(442837),
   _ = n(594174),
   I = n(630388),
   T = n(981631);
-let N = "ChannelFollowingBumpChannels",
-  m = new Set,
+let m = "ChannelFollowingBumpChannels",
+  N = new Set,
   h = new Set;
 class C extends(s = r.ZP.Store) {
   initialize() {
-    this.waitFor(u.default), m = new Set(o.K.get(N))
+    this.waitFor(u.default), N = new Set(o.K.get(m))
   }
   shouldShowBump(e) {
     return h.has(e)
@@ -32,7 +32,7 @@ a = "ChannelFollowingPublishBumpStore", (l = "displayName") in(i = C) ? Object.d
       message: s,
       optimistic: i
     } = e;
-    if (i || m.has(n)) return !1;
+    if (i || N.has(n)) return !1;
     let l = d.Z.getChannel(n),
       a = _.default.getCurrentUser();
     if (!(null != l && l.type === T.d4z.GUILD_ANNOUNCEMENT && s.type === T.uaV.DEFAULT && (null != a && (null === (t = s.author) || void 0 === t ? void 0 : t.id) === a.id ? E.Z.can(T.Plq.SEND_MESSAGES, l) : E.Z.can(T.Plq.MANAGE_MESSAGES, l)) && !I.yE(Number(s.flags), T.iLy.CROSSPOSTED))) return !1;
@@ -57,6 +57,6 @@ a = "ChannelFollowingPublishBumpStore", (l = "displayName") in(i = C) ? Object.d
     let {
       channelId: t
     } = e;
-    m.add(t), o.K.set(N, m), h.clear()
+    N.add(t), o.K.set(m, N), h.clear()
   }
 })

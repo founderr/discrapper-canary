@@ -19,22 +19,22 @@ var n = s(735250),
   x = s(51855),
   I = s(479446),
   _ = s(981632),
-  L = s(290026),
-  T = s(819640),
-  S = s(594174),
+  T = s(290026),
+  S = s(819640),
+  L = s(594174),
   N = s(626135),
   b = s(74538),
   v = s(335131),
   O = s(328347),
-  A = s(280773),
-  Z = s(884697),
+  Z = s(280773),
+  A = s(884697),
   R = s(617452),
   j = s(223143),
   P = s(298228),
   M = s(937510),
   k = s(853748),
-  B = s(426171),
-  y = s(823941),
+  y = s(426171),
+  B = s(823941),
   F = s(752053),
   D = s(963102),
   U = s(128185),
@@ -62,7 +62,7 @@ function et(e) {
     isPremiumUser: i,
     isGiftEasterEggEnabled: l,
     lightningCheckoutEnabled: o
-  } = e, u = (0, c.e7)([S.default], () => S.default.getCurrentUser());
+  } = e, u = (0, c.e7)([L.default], () => L.default.getCurrentUser());
   return null == u || 0 === t.length ? null : (0, n.jsxs)("div", {
     children: [null != r ? (0, n.jsx)(C.Text, {
       className: ee.itemTypeTitle,
@@ -75,7 +75,7 @@ function et(e) {
       className: ee.cardsContainer,
       children: t.map(e => {
         var t;
-        let r = (t = e, !o || (0, Z.x6)(t) ? W.Z : H.Z);
+        let r = (t = e, !o || (0, A.x6)(t) ? W.Z : H.Z);
         return (0, n.jsx)(r, {
           onMount: s(e),
           isPremiumUser: i,
@@ -99,7 +99,7 @@ function es(e) {
     e.skuId === d && (s.current = t.current)
   }, [d, s]), {
     unifiedProductCatalogEnabled: f
-  } = (0, A.n)("CollectiblesShop");
+  } = (0, Z.n)("CollectiblesShop");
   if (f || a) return (0, n.jsx)(et, {
     products: u,
     handleShopCardMount: C,
@@ -139,12 +139,12 @@ function en(e) {
     lightningCheckoutEnabled: d,
     index: f,
     includeBundles: E = !1
-  } = e, g = r.useRef(10 + 70 * Math.random()), [m, h] = r.useState(!1), x = (0, K.M7)(t.skuId), L = (0, p.O)(e => {
+  } = e, g = r.useRef(10 + 70 * Math.random()), [m, h] = r.useState(!1), x = (0, K.M7)(t.skuId), T = (0, p.O)(e => {
     h(e && null != x)
   }, u ? .13 : .15);
   return (0, n.jsxs)("div", {
     className: ee.categoryWrapper,
-    ref: L,
+    ref: T,
     children: [c && (0, n.jsx)(C.Clickable, {
       className: i()(ee.hiddenWumpus, {
         [ee.hiddenWumpusEnabled]: l
@@ -157,7 +157,7 @@ function en(e) {
         idleAnimationState: I.S.IDLE,
         giftStyle: $.Cj.BOX
       })
-    }), (0, n.jsx)(y.Z, {
+    }), (0, n.jsx)(B.Z, {
       category: t,
       hideLimitedTimeBadge: null != x,
       index: f
@@ -184,21 +184,21 @@ t.default = function(e) {
     analyticsLocations: a
   } = (0, c.cj)([O.Z], () => O.Z.getAnalytics()), {
     analyticsLocations: l
-  } = (0, g.ZP)([...a, E.Z.COLLECTIBLES_SHOP]), p = (0, c.e7)([T.Z], () => T.Z.getLayers().includes(X.S9g.COLLECTIBLES_SHOP)), I = (0, d.f9)(), {
+  } = (0, g.ZP)([...a, E.Z.COLLECTIBLES_SHOP]), p = (0, c.e7)([S.Z], () => S.Z.getLayers().includes(X.S9g.COLLECTIBLES_SHOP)), I = (0, d.f9)(), {
     onClose: _
-  } = (0, w.Db)(), A = (0, c.e7)([S.default], () => S.default.getCurrentUser()), Z = b.ZP.canUseCollectibles(A), {
+  } = (0, w.Db)(), Z = (0, c.e7)([L.default], () => L.default.getCurrentUser()), A = b.ZP.canUseCollectibles(Z), {
     categories: M,
     isFetchingCategories: k,
-    error: y,
+    error: B,
     refreshCategories: H
   } = (0, j.Z)();
-  (0, L.P)();
+  (0, T.P)();
   let W = (0, P.O)(M),
     K = (0, x.Q)(),
     J = (0, R.e)("CollectiblesShop"),
     et = r.useRef(null),
     [es, er] = r.useState(!1);
-  (0, B.Kp)({
+  (0, y.Kp)({
     categories: M,
     isFetchingCategories: k,
     isLayer: p,
@@ -214,11 +214,11 @@ t.default = function(e) {
       location_stack: l,
       source: s,
       page_session_id: ea
-    }), !Z && N.default.track(X.rMx.PREMIUM_UPSELL_VIEWED, {
+    }), !A && N.default.track(X.rMx.PREMIUM_UPSELL_VIEWED, {
       type: $.cd.COLLECTIBLES_SHOP,
       location_stack: l
     })
-  }, [Z, l, s, ea]);
+  }, [A, l, s, ea]);
   let {
     dismissCollectiblesShopTabNewBadge: eo
   } = (0, z.Z)();
@@ -259,7 +259,7 @@ t.default = function(e) {
     {
       setCategoryRef: ed,
       handleScrollToCategory: eC
-    } = (0, B.xV)(ei.current),
+    } = (0, y.xV)(ei.current),
     {
       condensedBannersAndDynamicHeadersEnabled: ef
     } = (0, Y.O)({
@@ -287,7 +287,7 @@ t.default = function(e) {
             children: [ef && (0, n.jsx)(U.h, {
               categories: W,
               handleScrollToCategory: eC
-            }), k ? (0, n.jsx)(G.Z, {}) : y ? (0, n.jsx)(F.Z, {
+            }), k ? (0, n.jsx)(G.Z, {}) : B ? (0, n.jsx)(F.Z, {
               onRetry: ec
             }) : (0, n.jsx)("div", {
               className: ee.categories,
@@ -299,7 +299,7 @@ t.default = function(e) {
               }).map((e, s) => (0, n.jsx)("div", {
                 ref: t => ed(e.skuId, t),
                 children: (0, n.jsx)(en, {
-                  isPremiumUser: Z,
+                  isPremiumUser: A,
                   category: e,
                   initialItemCardRef: et,
                   setIsGiftEasterEggEnabled: er,

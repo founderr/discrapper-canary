@@ -3,10 +3,10 @@ n.d(t, {
     return h
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(120356),
-  l = n.n(s),
+var i = n(120356),
+  l = n.n(i),
   a = n(481060),
   r = n(969832),
   o = n(572004),
@@ -20,9 +20,9 @@ function h(e) {
     user: t,
     isHovering: n
   } = e, {
-    trackUserProfileAction: s
+    trackUserProfileAction: i
   } = (0, u.KZ)();
-  return o.wS ? (0, i.jsx)(r.o, {
+  return o.wS ? (0, s.jsx)(r.o, {
     className: l()(E.copiable, {
       [E.visible]: n
     }),
@@ -35,10 +35,10 @@ function h(e) {
     copyTooltipDelay: 0,
     disableCopy: !1,
     showCopyIcon: !1,
-    onCopy: () => s({
+    onCopy: () => i({
       action: "COPY_USERNAME"
     }),
-    children: (0, i.jsx)(a.CopyIcon, {
+    children: (0, s.jsx)(a.CopyIcon, {
       size: "xs",
       color: "currentColor"
     })

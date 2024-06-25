@@ -3,9 +3,9 @@ n.d(t, {
     return _
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(990547),
+var i = n(990547),
   l = n(481060),
   a = n(703656),
   r = n(153124),
@@ -24,29 +24,29 @@ function _(e) {
     underageMessage: t,
     transitionState: a
   } = e, c = (0, r.Dt)();
-  return (0, i.jsxs)(l.ModalRoot, {
+  return (0, s.jsxs)(l.ModalRoot, {
     transitionState: a,
     size: l.ModalSize.SMALL,
     "aria-labelledby": c,
     impression: {
-      impressionName: s.ImpressionNames.USER_AGE_GATE_UNDERAGE,
+      impressionName: i.ImpressionNames.USER_AGE_GATE_UNDERAGE,
       impressionProperties: {
         existing_user: !0
       }
     },
-    children: [(0, i.jsx)(l.ModalContent, {
-      children: (0, i.jsxs)("div", {
+    children: [(0, s.jsx)(l.ModalContent, {
+      children: (0, s.jsxs)("div", {
         className: E.container,
-        children: [(0, i.jsx)("img", {
+        children: [(0, s.jsx)("img", {
           alt: "",
           src: n(231443),
           className: E.img
-        }), (0, i.jsx)(l.Heading, {
+        }), (0, s.jsx)(l.Heading, {
           variant: "heading-xl/semibold",
           className: E.title,
           id: c,
           children: d.Z.Messages.AGE_GATE_UNDERAGE_EXISTING_HEADER
-        }), (0, i.jsx)(l.Text, {
+        }), (0, s.jsx)(l.Text, {
           color: "header-secondary",
           className: E.subtitle,
           variant: "text-sm/normal",
@@ -54,7 +54,7 @@ function _(e) {
             underageMessage: null != t ? t : d.Z.Messages.AGE_GATE_UNDERAGE_BODY_DEFAULT_REG_MESSAGE,
             helpURL: o.Z.getArticleURL(u.BhN.AGE_GATE)
           })
-        }), (0, i.jsx)(l.Text, {
+        }), (0, s.jsx)(l.Text, {
           color: "header-secondary",
           className: E.subtitle,
           variant: "text-sm/normal",
@@ -63,8 +63,8 @@ function _(e) {
           })
         })]
       })
-    }), (0, i.jsx)(l.ModalFooter, {
-      children: (0, i.jsx)(l.Button, {
+    }), (0, s.jsx)(l.ModalFooter, {
+      children: (0, s.jsx)(l.Button, {
         size: l.ButtonSizes.SMALL,
         fullWidth: !0,
         onClick: h,

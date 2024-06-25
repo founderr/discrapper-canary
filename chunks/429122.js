@@ -1,9 +1,9 @@
 n.d(t, {
   dt: function() {
-    return g
+    return p
   },
   eo: function() {
-    return p
+    return g
   }
 });
 var l = n(735250),
@@ -25,7 +25,7 @@ let h = i.memo(function(e) {
   })
 });
 
-function g(e) {
+function p(e) {
   let {
     sectionIndex: t,
     guildChannels: n,
@@ -40,16 +40,16 @@ function g(e) {
     canHaveVoiceSummary: d
   } = (0, o.ie)(n, r, t), h = u ? c.QP : 0;
   if (!d || t === a.zm) return h;
-  let g = n.getNamedCategoryFromSection(t);
-  return null == g ? h : (0, o.V5)({
-    category: g,
+  let p = n.getNamedCategoryFromSection(t);
+  return null == p ? h : (0, o.V5)({
+    category: p,
     selectedChannelId: i,
     selectedVoiceChannelId: s,
     voiceStates: l
   }) ? c.Vf + h : h
 }
 
-function p(e, t, n) {
+function g(e, t, n) {
   if (e === t.voiceChannelsSectionNumber) return "voice-channels-button";
   let {
     hasDivider: l,
@@ -63,8 +63,8 @@ t.ZP = i.memo(function(e) {
     guildChannels: n,
     guildChannelsVersion: u,
     voiceStates: c,
-    guildId: g,
-    selectedChannelId: p,
+    guildId: p,
+    selectedChannelId: g,
     selectedVoiceChannelId: m,
     optInEnabled: C
   } = e, {
@@ -72,10 +72,10 @@ t.ZP = i.memo(function(e) {
     canHaveVoiceSummary: f
   } = i.useMemo(() => (0, o.ie)(n, C, t), [n, C, t, u]), _ = i.useMemo(() => t === a.zm ? null : n.getCategoryFromSection(t), [n, t, u]), I = i.useMemo(() => null != _ && _.isCollapsed ? (0, r.c4)({
     channels: _.getChannelRecords(),
-    selectedChannelId: p,
+    selectedChannelId: g,
     selectedVoiceChannelId: m,
     voiceStates: c
-  }) : [], [_, p, m, c]);
+  }) : [], [_, g, m, c]);
   if (t === n.voiceChannelsSectionNumber) return (0, l.jsx)(h, {
     guildChannels: n,
     guildChannelsVersion: u
@@ -91,7 +91,7 @@ t.ZP = i.memo(function(e) {
         users: I,
         max: 8,
         showUserPopout: !0,
-        guildId: g
+        guildId: p
       })
     }), N]
   }) : N

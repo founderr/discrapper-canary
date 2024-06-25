@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return g
+    return p
   }
 }), n(47120);
 var l = n(735250),
@@ -22,7 +22,7 @@ function h(e) {
   }(e) % d.length])
 }
 
-function g(e) {
+function p(e) {
   var t;
   let {
     title: n,

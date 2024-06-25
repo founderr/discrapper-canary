@@ -99,14 +99,14 @@ function y() {
         },
         variant: "text-md/normal",
         children: "Existing Payment Sources"
-      }), t.map(e => (0, a.jsx)(f, {
+      }), t.map(e => (0, a.jsx)(x, {
         paymentSource: e
       }, e.id))]
     })
   })
 }
 
-function f(e) {
+function x(e) {
   let {
     paymentSource: r
   } = e;
@@ -127,10 +127,10 @@ function f(e) {
     })]
   })
 }
-let x = ["AN", "MI", "TP"],
+let f = ["AN", "MI", "TP"],
   k = e => {
     if (null == e) return "";
-    if (x.includes(e)) return "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f30e.svg";
+    if (f.includes(e)) return "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f30e.svg";
     let r = e.toUpperCase().split("").map(e => (127397 + e.charCodeAt(0)).toString(16)).join("-");
     return "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/".concat(r, ".svg")
   }

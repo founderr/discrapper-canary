@@ -3,9 +3,9 @@ n.d(t, {
     return h
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
   l = n(230711),
   a = n(100527),
   r = n(906732),
@@ -21,48 +21,48 @@ function h(e) {
   } = e, {
     analyticsLocations: n
   } = (0, r.ZP)(a.Z.APP_ICON_NEW_STYLES_COACHMARK);
-  return (0, i.jsxs)("div", {
+  return (0, s.jsxs)("div", {
     className: E.container,
-    children: [(0, i.jsx)("div", {
+    children: [(0, s.jsx)("div", {
       className: E.banner
-    }), (0, i.jsx)(s.Button, {
+    }), (0, s.jsx)(i.Button, {
       "aria-label": d.Z.Messages.CLOSE,
-      look: s.Button.Looks.BLANK,
-      size: s.Button.Sizes.NONE,
+      look: i.Button.Looks.BLANK,
+      size: i.Button.Sizes.NONE,
       onClick: () => {
         t(u.L.USER_DISMISS)
       },
       className: E.closeButton,
-      children: (0, i.jsx)(s.CloseSmallIcon, {
+      children: (0, s.jsx)(i.CloseSmallIcon, {
         size: "xs",
         className: E.closeIcon,
         color: "white"
       })
-    }), (0, i.jsxs)("div", {
+    }), (0, s.jsxs)("div", {
       className: E.body,
-      children: [(0, i.jsx)(s.Heading, {
+      children: [(0, s.jsx)(i.Heading, {
         variant: "heading-md/extrabold",
         className: E.text,
         children: d.Z.Messages.APP_ICON_NEW_STYLES_HEADER
-      }), (0, i.jsxs)("div", {
+      }), (0, s.jsxs)("div", {
         className: E.poweredByNitroContainer,
-        children: [(0, i.jsx)(o.Z, {
+        children: [(0, s.jsx)(o.Z, {
           className: E.icon,
           isSelected: !0
-        }), (0, i.jsx)(s.Text, {
+        }), (0, s.jsx)(i.Text, {
           variant: "text-xxs/medium",
           className: E.text,
           children: d.Z.Messages.POWERED_BY_NITRO
         })]
-      }), (0, i.jsx)(s.Text, {
+      }), (0, s.jsx)(i.Text, {
         variant: "text-sm/medium",
         className: E.text,
         children: d.Z.Messages.APP_ICON_NEW_STYLES_BODY
       })]
-    }), (0, i.jsx)(s.Button, {
+    }), (0, s.jsx)(i.Button, {
       className: E.cta,
-      look: s.Button.Looks.FILLED,
-      color: s.Button.Colors.CUSTOM,
+      look: i.Button.Looks.FILLED,
+      color: i.Button.Colors.CUSTOM,
       onClick: () => {
         t(u.L.TAKE_ACTION), l.Z.open(c.oAB.APPEARANCE, null, {
           openWithoutBackstack: !0,
@@ -70,7 +70,7 @@ function h(e) {
         })
       },
       children: d.Z.Messages.APP_ICON_NEW_STYLES_CTA
-    }), (0, i.jsx)("div", {
+    }), (0, s.jsx)("div", {
       className: E.pointer
     })]
   })

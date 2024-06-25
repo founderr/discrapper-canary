@@ -19,13 +19,13 @@ function d(e) {
   let {
     guildId: t,
     guildJoinRequests: n
-  } = e, i = l.useRef(!1), [d, h] = l.useState(null), g = l.useRef(null), p = l.useRef(!1);
+  } = e, i = l.useRef(!1), [d, h] = l.useState(null), p = l.useRef(null), g = l.useRef(!1);
   return {
     fetchNextPage: l.useCallback(async (e, l) => {
       if (i.current) return;
       let m = "".concat(e, "-").concat(l),
         C = !1;
-      if (m !== g.current && (g.current = m, p.current = !1, C = !0), p.current) return;
+      if (m !== p.current && (p.current = m, g.current = !1, C = !0), g.current) return;
       null != d && h(null);
       let E = function(e, t, n, l) {
         let i = n === u.wB.SUBMITTED;
@@ -63,7 +63,7 @@ function d(e) {
           let {
             guild_join_requests: t
           } = e.body;
-          t.length < c && (p.current = !0)
+          t.length < c && (g.current = !0)
         }
       } catch (e) {
         h(new r.Hx(e).getAnyErrorMessage())

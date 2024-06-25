@@ -17,17 +17,17 @@ function u(e) {
     c = null != n && u.includes(n),
     d = !1,
     h = !1,
-    g = !1,
-    p = (0, i.e7)([a.Z], () => a.Z.getChannelId()),
+    p = !1,
+    g = (0, i.e7)([a.Z], () => a.Z.getChannelId()),
     m = null === (t = (0, s.Z)()) || void 0 === t ? void 0 : t.guild_id,
     C = null != m && u.includes(m),
-    E = (0, i.e7)([o.Z], () => null != p && o.Z.hasVideo(p), [p]),
+    E = (0, i.e7)([o.Z], () => null != g && o.Z.hasVideo(g), [g]),
     f = (0, i.e7)([r.Z], () => r.Z.getCurrentUserActiveStream());
-  return c && (d = !E, h = E, g = null != f && null != f.guildId && u.includes(f.guildId)), l.useMemo(() => ({
+  return c && (d = !E, h = E, p = null != f && null != f.guildId && u.includes(f.guildId)), l.useMemo(() => ({
     audio: d,
     video: h,
-    screenshare: g,
+    screenshare: p,
     liveStage: C,
     isCurrentUserConnected: c
-  }), [d, h, g, C, c])
+  }), [d, h, p, C, c])
 }

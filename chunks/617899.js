@@ -1,6 +1,6 @@
 n(47120);
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(481060),
   a = n(904245),
   r = n(944486),
@@ -18,10 +18,10 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class _ extends s.PureComponent {
+class _ extends i.PureComponent {
   render() {
     let e = "".concat(d.Z.Messages.INVITE_NOTICE_MESSAGE, "\n").concat(d.Z.Messages.INVITE_NOTICE_MESSAGE_PART_2);
-    return (0, i.jsx)(o.Z, {
+    return (0, s.jsx)(o.Z, {
       guild: this.props.guild,
       onDismissed: this.handleClose,
       onClick: this.handleInvite,
@@ -42,7 +42,7 @@ class _ extends s.PureComponent {
         let {
           default: t
         } = await Promise.all([n.e("99387"), n.e("7654")]).then(n.bind(n, 560114));
-        return n => (0, i.jsx)(t, {
+        return n => (0, s.jsx)(t, {
           ...n,
           guild: e,
           source: c.t4x.INVITE_NOTICE

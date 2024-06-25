@@ -24,18 +24,18 @@ function h() {
       selectedVoiceGuildId: c.Z.getGuildId(),
       selectedVoiceChannelId: c.Z.getChannelId()
     })),
-    g = t.map(t => {
+    p = t.map(t => {
       let n = e[t];
       return null == n || n.id === h || n.isBroadcastChannel() ? null : (0, l.jsx)(d.Z, {
         channel: n
       }, n.id)
     }),
-    p = null == n && null != h ? e[h] : null,
-    m = (0, a.Dd)(null == p ? void 0 : p.id);
-  return null != p && !m && g.unshift((0, l.jsx)(d.Z, {
-    channel: p
-  }, p.id)), (0, l.jsx)(r.W, {
+    g = null == n && null != h ? e[h] : null,
+    m = (0, a.Dd)(null == g ? void 0 : g.id);
+  return null != g && !m && p.unshift((0, l.jsx)(d.Z, {
+    channel: g
+  }, g.id)), (0, l.jsx)(r.W, {
     component: i.Fragment,
-    children: g
+    children: p
   })
 }

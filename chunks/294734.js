@@ -16,30 +16,30 @@ var s = n(735250),
   _ = n(438075),
   I = n(695346),
   T = n(592125),
-  N = n(906467),
-  m = n(430824),
+  m = n(906467),
+  N = n(430824),
   h = n(496675),
   C = n(699516),
   S = n(594174),
   A = n(113039),
-  p = n(100604),
-  g = n(694784),
+  g = n(100604),
+  p = n(694784),
   f = n(39154),
-  O = n(689938),
-  R = n(414700);
+  R = n(689938),
+  O = n(414700);
 
 function M() {
   return (0, s.jsxs)("div", {
-    className: R.headerContainer,
+    className: O.headerContainer,
     children: [(0, s.jsx)(c.ChatArrowRightIcon, {
       size: "xs",
-      className: R.headerIcon,
+      className: O.headerIcon,
       color: o.Z.colors.TEXT_LOW_CONTRAST
     }), (0, s.jsx)(l.x, {
-      className: R.headerText,
+      className: O.headerText,
       variant: "text-sm/semibold",
       color: "text-low-contrast",
-      children: O.Z.Messages.MESSAGE_FORWARDED
+      children: R.Z.Messages.MESSAGE_FORWARDED
     })]
   })
 }
@@ -49,18 +49,18 @@ function x(e) {
     message: t,
     snapshot: n,
     index: d
-  } = e, E = i.useMemo(() => new p.r(t, n, d), [t, n, d]), _ = (0, a.e7)([T.Z, S.default, C.Z, h.Z, m.Z, u.Z], () => E.getForwardInfo(T.Z, S.default, C.Z, h.Z, m.Z, u.Z).footerInfo, [E], r.Z), I = i.useCallback(() => {
-    (0, g.Z)(t)
+  } = e, E = i.useMemo(() => new g.r(t, n, d), [t, n, d]), _ = (0, a.e7)([T.Z, S.default, C.Z, h.Z, N.Z, u.Z], () => E.getForwardInfo(T.Z, S.default, C.Z, h.Z, N.Z, u.Z).footerInfo, [E], r.Z), I = i.useCallback(() => {
+    (0, p.Z)(t)
   }, [t]);
   return null == _ ? null : (0, s.jsxs)(c.Clickable, {
-    className: R.footerContainer,
+    className: O.footerContainer,
     onClick: I,
     children: [null != _.originIconUrl ? (0, s.jsx)("img", {
-      className: R.originIcon,
+      className: O.originIcon,
       src: _.originIconUrl,
       alt: ""
     }) : null, (0, s.jsx)(l.x, {
-      className: R.footerText,
+      className: O.footerText,
       variant: "text-sm/medium",
       color: "none",
       children: "".concat(_.originLabel, "  •  ").concat(_.timestampLabel)
@@ -77,7 +77,7 @@ function v(e) {
     message: n,
     snapshot: l,
     index: r
-  } = e, o = i.useMemo(() => (0, f.Z)(n, l), [n, l]), c = I.RS.useSetting(), u = I.NA.useSetting(), m = (0, a.e7)([N.Z], () => N.Z.isDeveloper), h = (0, d.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
+  } = e, o = i.useMemo(() => (0, f.Z)(n, l), [n, l]), c = I.RS.useSetting(), u = I.NA.useSetting(), N = (0, a.e7)([m.Z], () => m.Z.isDeveloper), h = (0, d.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()), {
     content: C,
     hasSpoilerEmbeds: S
   } = (0, E.Z)(o, {
@@ -87,23 +87,23 @@ function v(e) {
     allowList: h,
     allowHeading: h,
     allowLinks: !0,
-    allowDevLinks: m,
+    allowDevLinks: N,
     previewLinkTarget: !0
-  }), p = (0, a.e7)([T.Z], () => T.Z.getChannel(n.channel_id)), g = I.jU.useSetting();
-  return null == p ? null : (0, s.jsxs)("div", {
-    className: R.container,
+  }), g = (0, a.e7)([T.Z], () => T.Z.getChannel(n.channel_id)), p = I.jU.useSetting();
+  return null == g ? null : (0, s.jsxs)("div", {
+    className: O.container,
     children: [(0, s.jsx)("div", {
-      className: R.quote
+      className: O.quote
     }), (0, s.jsxs)("div", {
-      className: R.content,
+      className: O.content,
       children: [(0, s.jsx)(M, {}), (0, s.jsx)(A.ZP, {
         message: o,
         content: C
       }), (0, _.Z)({
         channelMessageProps: {
           message: o,
-          channel: p,
-          compact: g
+          channel: g,
+          compact: p
         },
         hasSpoilerEmbeds: S,
         isInteracting: !1,

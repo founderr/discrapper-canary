@@ -1,6 +1,6 @@
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
   l = n(813615),
   a = n(812206),
   r = n(69580),
@@ -20,49 +20,49 @@ t.Z = (0, d.Z)(e => {
     redirectUri: _,
     codeChallenge: I,
     codeChallengeMethod: m,
-    state: g,
-    guildId: p,
-    channelId: N,
-    prompt: T,
-    disableGuildSelect: C,
-    disclosures: S,
+    state: T,
+    guildId: g,
+    channelId: p,
+    prompt: N,
+    disableGuildSelect: S,
+    disclosures: C,
     integrationType: A
-  } = e, f = "OAuth2Authorize_".concat(n, "_").concat(p, "_").concat(N), Z = null != A ? null == o ? void 0 : o.get(A) : void 0, v = null !== (t = null == Z ? void 0 : Z.application) && void 0 !== t ? t : a.Z.getApplication(n);
+  } = e, f = "OAuth2Authorize_".concat(n, "_").concat(g, "_").concat(p), Z = null != A ? null == o ? void 0 : o.get(A) : void 0, L = null !== (t = null == Z ? void 0 : Z.application) && void 0 !== t ? t : a.Z.getApplication(n);
   return new Promise((e, t) => {
     let a = n => {
       let {
-        location: i
+        location: s
       } = n;
-      null != location ? e(i) : t(new u.Z({
+      null != location ? e(s) : t(new u.Z({
         errorCode: E.lTL.OAUTH2_ERROR
       }, "User cancelled authorization"))
     };
-    (0, s.openModal)(e => (0, i.jsx)(r.OAuth2AuthorizeModal, {
+    (0, i.openModal)(e => (0, s.jsx)(r.OAuth2AuthorizeModal, {
       ...e,
       authorizations: o,
       clientId: n,
       scopes: null != c ? c : [],
-      disclosures: null != S ? S : [],
+      disclosures: null != C ? C : [],
       callback: a,
       responseType: h,
       redirectUri: _,
       codeChallenge: I,
       codeChallengeMethod: m,
-      state: g,
+      state: T,
       permissions: d,
-      guildId: p,
-      channelId: N,
-      prompt: T,
-      disableGuildSelect: "boolean" == typeof C ? C : "true" === C,
+      guildId: g,
+      channelId: p,
+      prompt: N,
+      disableGuildSelect: "boolean" == typeof S ? S : "true" === S,
       integrationType: A
     }), {
       modalKey: f,
       onCloseRequest: () => {
-        (0, s.closeModal)(f), t(new u.Z({
+        (0, i.closeModal)(f), t(new u.Z({
           errorCode: E.lTL.OAUTH2_ERROR
         }, "User cancelled authorization"))
       }
-    }, null != v && (0, l.Z)(v, N) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT)
+    }, null != L && (0, l.Z)(L, p) ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT)
   })
 }, function(e, t) {
   if (o.isPlatformEmbedded) {

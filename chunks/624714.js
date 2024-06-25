@@ -1,6 +1,6 @@
 n(47120), n(789020);
-var i = n(544891),
-  s = n(115130),
+var s = n(544891),
+  i = n(115130),
   l = n(287545),
   a = n(812206),
   r = n(695103),
@@ -23,8 +23,8 @@ t.Z = {
       let {
         socket: n,
         args: {
-          event_name: i,
-          event_properties: s
+          event_name: s,
+          event_properties: i
         }
       } = e;
       (0, d.bu)(n.transport), (0, d._f)(n.application);
@@ -38,16 +38,16 @@ t.Z = {
       if (!(0, c.yE)(null !== (t = null == m ? void 0 : m.flags) && void 0 !== t ? t : 0, I.udG.EMBEDDED_FIRST_PARTY)) throw new u.Z({
         errorCode: I.lTL.INVALID_COMMAND
       }, "This application cannot access this API");
-      let g = (0, l.U)(r),
-        p = {
+      let T = (0, l.U)(r),
+        g = {
           activity_application_id: r,
           activity_channel_type: E.type,
           activity_guild_id: _,
-          activity_user_session_id: null == g ? void 0 : g.activityUserSessionId
+          activity_user_session_id: null == T ? void 0 : T.activityUserSessionId
         };
-      o.default.track(i, {
-        ...p,
-        ...s
+      o.default.track(s, {
+        ...g,
+        ...i
       })
     }
   },
@@ -60,10 +60,10 @@ t.Z = {
       if (null == n) throw new u.Z({
         errorCode: I.lTL.INVALID_COMMAND
       }, "No application.");
-      return i.tn.post({
+      return s.tn.post({
         url: I.ANM.APPLICATION_TICKET(n),
         body: {
-          test_mode: r.Z.inTestModeForApplication(n) || s.Z.inDevModeForApplication(n)
+          test_mode: r.Z.inTestModeForApplication(n) || i.Z.inDevModeForApplication(n)
         },
         retries: 3,
         oldFormErrors: !0

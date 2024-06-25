@@ -3,16 +3,16 @@ n.d(t, {
     return E
   },
   Pk: function() {
-    return o
+    return l
   },
   Rq: function() {
-    return m
+    return g
   },
   W_: function() {
     return a
   },
   dK: function() {
-    return l
+    return o
   },
   qd: function() {
     return _
@@ -30,22 +30,22 @@ function a() {
     hash: "SHA-256"
   }, !0, ["decrypt"])
 }
-async function l(e) {
+async function o(e) {
   return r()(null != e.publicKey, "public key cannot be null"), btoa(String.fromCharCode(...new Uint8Array(await window.crypto.subtle.exportKey("spki", e.publicKey))))
 }
-async function o(e) {
+async function l(e) {
   return r()(null != e.publicKey, "public key cannot be null"), d(await window.crypto.subtle.exportKey("spki", e.publicKey))
 }
 
-function u(e) {
+function c(e) {
   return btoa(String.fromCharCode(...new Uint8Array(e))).replace(/\//g, "_").replace(/\+/g, "-").replace(/={1,2}$/, "")
 }
 
-function c(e) {
+function u(e) {
   return Uint8Array.from(atob(e), e => e.charCodeAt(0))
 }
 async function d(e) {
-  return u(await window.crypto.subtle.digest({
+  return c(await window.crypto.subtle.digest({
     name: "SHA-256"
   }, e))
 }
@@ -58,21 +58,21 @@ function h(e, t) {
 }
 async function E(e, t) {
   let n = new TextDecoder,
-    s = await h(e, c(t));
+    s = await h(e, u(t));
   return n.decode(s)
 }
 async function _(e, t) {
-  return u(await h(e, c(t)))
+  return c(await h(e, u(t)))
 }
-async function m(e, t) {
+async function g(e, t) {
   t = await E(e, t);
   let n = t.match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
   if (null == n) throw Error("Invalid encoded user record.");
-  let [, s, r, a, l] = n;
+  let [, s, r, a, o] = n;
   return new i.Z({
     id: s,
     discriminator: r,
     avatar: "0" === a ? null : a,
-    username: l
+    username: o
   })
 }

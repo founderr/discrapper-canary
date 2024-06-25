@@ -13,8 +13,8 @@ var l = n(735250),
   c = n(605236),
   d = n(45966),
   h = n(31445),
-  g = n(22082),
-  p = n(703656),
+  p = n(22082),
+  g = n(703656),
   m = n(306680),
   C = n(709054),
   E = n(540126),
@@ -29,15 +29,15 @@ function x(e) {
   let {
     guild: t,
     selected: x
-  } = e, T = (0, h.Z)(t), L = (0, c.wE)(r.z.CHANNEL_BROWSER_NEW_BADGE_NUX), v = (0, s.Wu)([g.Z], () => Array.from(g.Z.getNewChannelIds(t.id)).filter(e => g.Z.shouldIndicateNewChannel(t.id, e))), A = (0, s.e7)([m.ZP], () => m.ZP.hasUnread(t.id, N.W.GUILD_ONBOARDING_QUESTION)), M = v.length > E.Cb, R = (0, s.e7)([d.Z, m.ZP], () => {
+  } = e, L = (0, h.Z)(t), T = (0, c.wE)(r.z.CHANNEL_BROWSER_NEW_BADGE_NUX), v = (0, s.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter(e => p.Z.shouldIndicateNewChannel(t.id, e))), A = (0, s.e7)([m.ZP], () => m.ZP.hasUnread(t.id, N.W.GUILD_ONBOARDING_QUESTION)), M = v.length > E.Cb, R = (0, s.e7)([d.Z, m.ZP], () => {
     let e = d.Z.lastFetchedAt(t.id),
       n = m.ZP.lastMessageId(t.id, N.W.GUILD_ONBOARDING_QUESTION);
     if (null == n) return !1;
     let l = C.default.extractTimestamp(n);
     return null != e && e > l
   }), O = i.useCallback(() => {
-    (0, p.uL)(_.Z5c.CHANNEL(t.id, T ? I.oC.CUSTOMIZE_COMMUNITY : I.oC.CHANNEL_BROWSER))
-  }, [t.id, T]), P = i.useCallback(e => {
+    (0, g.uL)(_.Z5c.CHANNEL(t.id, L ? I.oC.CUSTOMIZE_COMMUNITY : I.oC.CHANNEL_BROWSER))
+  }, [t.id, L]), P = i.useCallback(e => {
     (0, u.jW)(e, async () => {
       let {
         default: e
@@ -47,8 +47,8 @@ function x(e) {
         guild: t
       })
     })
-  }, [t]), j = null;
-  return (!L || A || M) && !x && !R && (j = (0, l.jsx)(o.TextBadge, {
+  }, [t]), b = null;
+  return (!T || A || M) && !x && !R && (b = (0, l.jsx)(o.TextBadge, {
     color: a.Z.unsafe_rawColors.BRAND_260.css,
     text: Z.Z.Messages.NEW,
     className: S.newChannel
@@ -59,10 +59,10 @@ function x(e) {
       color: "currentColor",
       className: e
     }),
-    text: T ? Z.Z.Messages.CHANNELS_AND_ROLES : Z.Z.Messages.CHANNEL_BROWSER_TITLE,
+    text: L ? Z.Z.Messages.CHANNELS_AND_ROLES : Z.Z.Messages.CHANNEL_BROWSER_TITLE,
     selected: x,
     onClick: O,
     onContextMenu: P,
-    trailing: j
+    trailing: b
   })
 }

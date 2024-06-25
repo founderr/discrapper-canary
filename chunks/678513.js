@@ -10,9 +10,9 @@ let c = {
   },
   d = null,
   h = {},
-  g = new Set;
+  p = new Set;
 
-function p() {
+function g() {
   for (let e in d = null, h) delete h[e]
 }
 class m extends(l = a.ZP.Store) {
@@ -24,7 +24,7 @@ class m extends(l = a.ZP.Store) {
     return null !== (t = h[e]) && void 0 !== t ? t : null
   }
   hasCompletedTarget(e) {
-    return g.has(e)
+    return p.has(e)
   }
 }
 r = "SignUpStore", (s = "displayName") in(i = m) ? Object.defineProperty(i, s, {
@@ -50,7 +50,7 @@ r = "SignUpStore", (s = "displayName") in(i = m) ? Object.defineProperty(i, s, {
     let {
       targetKey: t
     } = e;
-    g.add(t), p()
+    p.add(t), g()
   },
-  DISMISS_SIGN_UP: p
+  DISMISS_SIGN_UP: g
 })

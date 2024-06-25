@@ -1,13 +1,13 @@
-var i = n(570140),
-  s = n(142497),
+var s = n(570140),
+  i = n(142497),
   l = n(190378);
 t.Z = {
   init() {
-    i.Z.subscribe("VOICE_CHANNEL_SELECT", e => {
+    s.Z.subscribe("VOICE_CHANNEL_SELECT", e => {
       let {
         channelId: t
       } = e;
-      null == t && s.Kw(l.v.VOICE_PANEL_INTRODUCTION)
+      null == t && i.Kw(l.v.VOICE_PANEL_INTRODUCTION)
     })
   }
 }

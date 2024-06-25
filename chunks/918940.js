@@ -1,6 +1,6 @@
 n(47120);
-var i = n(570140),
-  s = n(996106),
+var s = n(570140),
+  i = n(996106),
   l = n(452426),
   a = n(701488),
   r = n(231338);
@@ -20,14 +20,14 @@ t.Z = {
           grid_lock_state: a
         }
       } = e, o = t.application.id;
-      if (null != o) i.Z.dispatch({
+      if (null != o) s.Z.dispatch({
         type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE",
         applicationId: o,
         lockState: n,
         pictureInPictureLockState: l,
         gridLockState: a
       });
-      else throw new s.Z({
+      else throw new i.Z({
         errorCode: r.lT.INVALID_COMMAND
       }, "No application.")
     }

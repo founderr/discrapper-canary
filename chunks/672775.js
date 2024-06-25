@@ -3,9 +3,9 @@ n.d(t, {
     return r
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(546735),
+var i = n(546735),
   l = n(754961),
   a = n(414868);
 
@@ -22,30 +22,30 @@ function r(e) {
     onBackClick: E,
     isNextDisabled: h,
     isBackDisabled: _
-  } = (0, s.Z)({
+  } = (0, i.Z)({
     progress: n,
     updateCurrentStep: r
   }), {
     currentStep: I,
     furthestStep: m,
-    brandPrimaryColor: g
+    brandPrimaryColor: T
   } = n;
-  return (0, i.jsxs)("div", {
+  return (0, s.jsxs)("div", {
     className: a.navigation,
-    children: [(0, i.jsx)(l.T, {
+    children: [(0, s.jsx)(l.T, {
       animationStyle: o,
       className: c,
       steps: t,
       currentStepIndex: I,
       furthestStepIndex: m,
       onStepClick: u,
-      stepFillColor: g
-    }), (0, i.jsx)(l.i, {
+      stepFillColor: T
+    }), (0, s.jsx)(l.i, {
       isBackDisabled: _,
       isNextDisabled: h,
       onNextClick: d,
       onBackClick: E,
-      nextButtonBackgroundColor: g,
+      nextButtonBackgroundColor: T,
       nextButtonClassName: c,
       nextButtonAnimationStyle: o
     })]

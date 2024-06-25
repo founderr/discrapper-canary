@@ -13,15 +13,15 @@ var l = n(735250),
   c = n(377171),
   d = n(682662),
   h = n(662146),
-  g = n(678513),
-  p = n(981631),
+  p = n(678513),
+  g = n(981631),
   m = n(689938),
   C = n(316148);
 
 function E(e) {
   let {
     target: t
-  } = e, a = (0, s.Ie)("fakedoor"), g = i.useCallback(() => {
+  } = e, a = (0, s.Ie)("fakedoor"), p = i.useCallback(() => {
     (0, r.openModalLazy)(async () => {
       let {
         default: e
@@ -58,7 +58,7 @@ function E(e) {
   }), I = (0, u.Fg)();
   return (0, l.jsxs)(d.H, {
     children: [(0, l.jsx)(r.ThemeContextProvider, {
-      theme: p.BRd.DARK,
+      theme: g.BRd.DARK,
       children: (0, l.jsx)(h.Z, {
         text: _,
         tooltipClass: C.tooltip,
@@ -72,7 +72,7 @@ function E(e) {
             }),
             children: (0, l.jsx)(r.NavItem, {
               ...a,
-              onClick: g,
+              onClick: p,
               onContextMenu: E,
               children: (0, l.jsx)(r.BellIcon, {
                 color: c.Z.TEXT_NORMAL
@@ -92,7 +92,7 @@ function E(e) {
 }
 
 function f() {
-  let e = (0, a.e7)([g.Z], () => g.Z.getActiveUserSignUp());
+  let e = (0, a.e7)([p.Z], () => p.Z.getActiveUserSignUp());
   return null == e ? null : (0, l.jsx)(E, {
     target: e
   })

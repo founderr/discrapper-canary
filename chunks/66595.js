@@ -1,22 +1,22 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
-    return _
+    return c
   }
 });
-var n = t(735250);
-t(470079);
-var a = t(120356),
-  r = t.n(a),
-  i = t(481060),
-  l = t(689938),
-  o = t(508987);
+var n = s(735250);
+s(470079);
+var a = s(120356),
+  i = s.n(a),
+  r = s(481060),
+  l = s(689938),
+  o = s(508987);
 
-function _(e) {
+function c(e) {
   let {
-    className: s
+    className: t
   } = e;
-  return (0, n.jsx)(i.TextBadge, {
-    className: r()(o.tag, s),
+  return (0, n.jsx)(r.TextBadge, {
+    className: i()(o.tag, t),
     text: l.Z.Messages.EARLY_ACCESS
   })
 }

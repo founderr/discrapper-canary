@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return O
+    return R
   }
 }), n(47120);
 var s = n(735250),
@@ -16,31 +16,31 @@ var s = n(735250),
   _ = n(267101),
   I = n(336197),
   T = n(430824),
-  N = n(346656),
-  m = n(132338),
+  m = n(346656),
+  N = n(132338),
   h = n(626135),
   C = n(76535),
   S = n(866104),
   A = n(886176),
-  p = n(981631),
-  g = n(689938),
+  g = n(981631),
+  p = n(689938),
   f = n(919455);
 
-function O(e) {
+function R(e) {
   var t;
   let {
     guildId: n
   } = e, l = (0, c.e7)([T.Z], () => T.Z.getGuild(n)), {
-    loading: O,
-    subscriptionsSettings: R
+    loading: R,
+    subscriptionsSettings: O
   } = (0, C.H)(n), {
     listingsLoaded: M
   } = (0, _.eD)(n), x = (0, _.ue)(n, {
     publishedOnly: !0
   }), v = i.useCallback(async () => {
-    h.default.track(p.rMx.GUILD_SHOP_EMBED_CLICKED, {
+    h.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, {
       ...(0, d.hH)(n)
-    }), await (0, I.Z)(p.Z5c.SERVER_SHOP(n))
+    }), await (0, I.Z)(g.Z5c.SERVER_SHOP(n))
   }, [n]);
   (0, E.Z)({
     type: r.ImpressionTypes.VIEW,
@@ -49,13 +49,13 @@ function O(e) {
     disableTrack: null == l
   });
   let L = x.length > 0 ? new Date(Math.min(...x.map(e => Date.parse(e.published_at)))) : void 0;
-  return O || !M ? (0, s.jsx)("div", {
+  return R || !M ? (0, s.jsx)("div", {
     className: a()(f.guildShopEmbed, f.spinnerContainer),
     children: (0, s.jsx)(u.Spinner, {})
-  }) : null == l || null == R ? null : (0, s.jsxs)("div", {
+  }) : null == l || null == O ? null : (0, s.jsxs)("div", {
     className: f.guildShopEmbed,
     children: [(0, s.jsx)(S.Z, {
-      coverImageAsset: null !== (t = R.cover_image_asset) && void 0 !== t ? t : null
+      coverImageAsset: null !== (t = O.cover_image_asset) && void 0 !== t ? t : null
     }), (0, s.jsx)(u.Spacer, {
       size: 16
     }), (0, s.jsxs)("div", {
@@ -68,14 +68,14 @@ function O(e) {
         variant: "heading-sm/semibold",
         color: "interactive-normal",
         className: f.serverShopLabelText,
-        children: g.Z.Messages.GUILD_SHOP_CHANNEL_LABEL
+        children: p.Z.Messages.GUILD_SHOP_CHANNEL_LABEL
       })]
     }), (0, s.jsx)(u.Spacer, {
       size: 16
     }), (0, s.jsx)(u.Heading, {
       variant: "heading-md/semibold",
       color: "text-normal",
-      children: g.Z.Messages.GUILD_STORE_HERO_TITLE.format({
+      children: p.Z.Messages.GUILD_STORE_HERO_TITLE.format({
         guildName: l.name
       })
     }), (0, s.jsx)(u.Spacer, {
@@ -84,14 +84,14 @@ function O(e) {
       variant: "text-sm/normal",
       color: "text-muted",
       lineClamp: 2,
-      children: R.description
+      children: O.description
     }), (0, s.jsx)(u.Spacer, {
       size: 16
-    }), (0, s.jsx)(m.Z, {}), (0, s.jsx)(u.Spacer, {
+    }), (0, s.jsx)(N.Z, {}), (0, s.jsx)(u.Spacer, {
       size: 16
     }), (0, s.jsxs)("div", {
       className: f.guildShopEmbedFooter,
-      children: [(0, s.jsx)(N.Z, {
+      children: [(0, s.jsx)(m.Z, {
         guild: l
       }), (0, s.jsxs)("ul", {
         className: f.guildShopSummary,
@@ -99,7 +99,7 @@ function O(e) {
           children: (0, s.jsx)(u.Text, {
             variant: "text-sm/normal",
             color: "text-muted",
-            children: g.Z.Messages.GUILD_SHOP_EMBED_LISTINGS_AVAILABLE.format({
+            children: p.Z.Messages.GUILD_SHOP_EMBED_LISTINGS_AVAILABLE.format({
               listingCount: x.length
             })
           })
@@ -107,7 +107,7 @@ function O(e) {
           children: (0, s.jsx)(u.Text, {
             variant: "text-sm/normal",
             color: "text-muted",
-            children: g.Z.Messages.GUILD_SHOP_EMBED_SHOP_AGE.format({
+            children: p.Z.Messages.GUILD_SHOP_EMBED_SHOP_AGE.format({
               createdYear: L.getFullYear()
             })
           })
@@ -123,7 +123,7 @@ function O(e) {
           }), (0, s.jsx)(u.Text, {
             variant: "text-sm/medium",
             color: "always-white",
-            children: g.Z.Messages.GUILD_SHOP_EMBED_CTA
+            children: p.Z.Messages.GUILD_SHOP_EMBED_CTA
           })]
         })
       })]

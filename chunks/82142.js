@@ -1,27 +1,27 @@
 n(47120);
-var s, i, l, r, a = n(392711),
-  o = n.n(a),
-  c = n(913527),
-  d = n.n(c),
-  u = n(442837),
+var i, s, r, l, o = n(392711),
+  a = n.n(o),
+  u = n(913527),
+  d = n.n(u),
+  c = n(442837),
   _ = n(846519),
   E = n(570140),
-  S = n(533307),
-  f = n(590783),
-  h = n(669079),
-  p = n(981631);
+  p = n(533307),
+  h = n(590783),
+  f = n(669079),
+  S = n(981631);
 let m = {},
   I = {},
-  C = [],
-  A = [],
   g = [],
-  R = new Set,
-  T = {},
+  A = [],
+  C = [],
+  v = new Set,
+  R = {},
   O = {},
-  v = new Set;
+  N = new Set;
 
-function N(e) {
-  let t = f.Z.createFromServer(e),
+function T(e) {
+  let t = h.Z.createFromServer(e),
     n = t.code;
   if (null != I[n]) I[n] = I[n].merge(t);
   else if (I[n] = t, null != t.expiresAt) {
@@ -30,12 +30,12 @@ function N(e) {
       function e(t) {
         let n = I[t];
         if (null == n || null == n.expiresAt) return;
-        let s = n.expiresAt.valueOf() - d()().valueOf();
-        if (s <= 0) delete I[t], delete m[t], F.emitChange();
+        let i = n.expiresAt.valueOf() - d()().valueOf();
+        if (i <= 0) delete I[t], delete m[t], F.emitChange();
         else {
           let n = m[t];
           if (null == n) return;
-          n.start(Math.min(2147483647, s), () => e(t))
+          n.start(Math.min(2147483647, i), () => e(t))
         }
       }(n)
   }
@@ -43,20 +43,20 @@ function N(e) {
 
 function y(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  if (t && !v.has(e.channel_id)) return !1;
-  let n = (0, h.Fp)(e) ? (0, h.Q_)((null == e ? void 0 : e.embeds) != null ? null == e ? void 0 : e.embeds[0].url : void 0) : (0, h.Q_)(e.content);
+  if (t && !N.has(e.channel_id)) return !1;
+  let n = (0, f.Fp)(e) ? (0, f.Q_)((null == e ? void 0 : e.embeds) != null ? null == e ? void 0 : e.embeds[0].url : void 0) : (0, f.Q_)(e.content);
   return 0 !== n.length && (n.forEach(e => {
-    !C.includes(e) && !g.includes(e) && (Z({
+    !g.includes(e) && !C.includes(e) && (b({
       code: e
-    }), E.Z.wait(() => S.Z.resolveGiftCode(e, !1, !0).catch(p.VqG)))
+    }), E.Z.wait(() => p.Z.resolveGiftCode(e, !1, !0).catch(S.VqG)))
   }), !1)
 }
 
-function Z(e) {
+function b(e) {
   let {
     code: t
   } = e;
-  !C.includes(t) && (C = [...C, t])
+  !g.includes(t) && (g = [...g, t])
 }
 
 function D(e) {
@@ -71,17 +71,17 @@ function L(e) {
     channelId: t,
     messages: n
   } = e;
-  v.add(t), n.forEach(e => y(e, !0))
+  N.add(t), n.forEach(e => y(e, !0))
 }
 
-function b(e) {
+function P(e) {
   let {
     firstMessages: t
   } = e;
   if (null == t) return !1;
   null == t || t.forEach(e => y(e))
 }
-class w extends(s = u.ZP.Store) {
+class Z extends(i = c.ZP.Store) {
   get(e) {
     let t = I[e];
     return null == t || t.isExpired() ? null : t
@@ -90,61 +90,61 @@ class w extends(s = u.ZP.Store) {
     return null != e ? O[e] : null
   }
   getForGifterSKUAndPlan(e, t, n) {
-    return o().values(I).filter(s => s.userId === e && s.skuId === t && (null == n || s.subscriptionPlanId === n) && !s.isExpired())
+    return a().values(I).filter(i => i.userId === e && i.skuId === t && (null == n || i.subscriptionPlanId === n) && !i.isExpired())
   }
   getIsResolving(e) {
-    return C.includes(e)
+    return g.includes(e)
   }
   getIsResolved(e) {
-    return g.includes(e)
+    return C.includes(e)
   }
   getIsAccepting(e) {
     return A.includes(e)
   }
   getUserGiftCodesFetchingForSKUAndPlan(e, t) {
-    return R.has((0, h.Bg)(e, t))
+    return v.has((0, f.Bg)(e, t))
   }
   getUserGiftCodesLoadedAtForSKUAndPlan(e, t) {
-    return T[(0, h.Bg)(e, t)]
+    return R[(0, f.Bg)(e, t)]
   }
   getResolvingCodes() {
-    return C
+    return g
   }
   getResolvedCodes() {
-    return g
+    return C
   }
   getAcceptingCodes() {
     return A
   }
 }
-r = "GiftCodeStore", (l = "displayName") in(i = w) ? Object.defineProperty(i, l, {
-  value: r,
+l = "GiftCodeStore", (r = "displayName") in(s = Z) ? Object.defineProperty(s, r, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[l] = r;
-let F = new w(E.Z, {
+}) : s[r] = l;
+let F = new Z(E.Z, {
   CONNECTION_OPEN: function() {
-    return v.clear(), !1
+    return N.clear(), !1
   },
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    return null != t && v.add(t), !1
+    return null != t && N.add(t), !1
   },
-  GIFT_CODE_RESOLVE: Z,
+  GIFT_CODE_RESOLVE: b,
   GIFT_CODE_RESOLVE_SUCCESS: function(e) {
     let {
       giftCode: t
     } = e;
-    return C = C.filter(e => e !== t.code), !g.includes(t.code) && (g = [...g, t.code]), N(t)
+    return g = g.filter(e => e !== t.code), !C.includes(t.code) && (C = [...C, t.code]), T(t)
   },
   GIFT_CODE_RESOLVE_FAILURE: function(e) {
     let {
       code: t
     } = e;
-    C = C.filter(e => e !== t), !g.includes(t) && (g = [...g, t])
+    g = g.filter(e => e !== t), !C.includes(t) && (C = [...C, t])
   },
   GIFT_CODE_REDEEM: function(e) {
     let {
@@ -169,13 +169,13 @@ let F = new w(E.Z, {
       error: n
     } = e;
     A = A.filter(e => e !== t);
-    let s = I[t];
-    if (O[t] = n, null != s) switch (n.code) {
-      case p.evJ.UNKNOWN_GIFT_CODE:
-        I[t] = s.set("revoked", !0);
+    let i = I[t];
+    if (O[t] = n, null != i) switch (n.code) {
+      case S.evJ.UNKNOWN_GIFT_CODE:
+        I[t] = i.set("revoked", !0);
         break;
-      case p.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED:
-        I[t] = s.set("uses", s.maxUses)
+      case S.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED:
+        I[t] = i.set("uses", i.maxUses)
     }
   },
   GIFT_CODE_REVOKE_SUCCESS: function(e) {
@@ -184,37 +184,37 @@ let F = new w(E.Z, {
     } = e;
     delete I[t];
     let n = m[t];
-    null != n && (n.stop(), delete m[t]), !g.includes(t) && (g = [...g, t])
+    null != n && (n.stop(), delete m[t]), !C.includes(t) && (C = [...C, t])
   },
   GIFT_CODE_CREATE_SUCCESS: function(e) {
     let {
       giftCode: t
     } = e;
-    N(t)
+    T(t)
   },
   GIFT_CODES_FETCH: function(e) {
     let {
       skuId: t,
       subscriptionPlanId: n
     } = e;
-    R.add((0, h.Bg)(t, n))
+    v.add((0, f.Bg)(t, n))
   },
   GIFT_CODES_FETCH_SUCCESS: function(e) {
     let {
       giftCodes: t,
       skuId: n,
-      subscriptionPlanId: s
+      subscriptionPlanId: i
     } = e;
-    t.forEach(N);
-    let i = (0, h.Bg)(n, s);
-    T[i] = Date.now(), R.delete(i)
+    t.forEach(T);
+    let s = (0, f.Bg)(n, i);
+    R[s] = Date.now(), v.delete(s)
   },
   GIFT_CODES_FETCH_FAILURE: function(e) {
     let {
       skuId: t,
       subscriptionPlanId: n
     } = e;
-    R.delete((0, h.Bg)(t, n))
+    v.delete((0, f.Bg)(t, n))
   },
   MESSAGE_CREATE: D,
   MESSAGE_UPDATE: D,
@@ -242,11 +242,11 @@ let F = new w(E.Z, {
     let {
       uses: t,
       code: n
-    } = e, s = I[n];
-    null != s && (I[n] = s.set("uses", Math.max(s.uses, t)))
+    } = e, i = I[n];
+    null != i && (I[n] = i.set("uses", Math.max(i.uses, t)))
   },
-  LOAD_THREADS_SUCCESS: b,
-  LOAD_ARCHIVED_THREADS_SUCCESS: b,
+  LOAD_THREADS_SUCCESS: P,
+  LOAD_ARCHIVED_THREADS_SUCCESS: P,
   LOAD_FORUM_POSTS: function(e) {
     let {
       threads: t

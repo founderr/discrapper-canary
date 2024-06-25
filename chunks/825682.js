@@ -1,5 +1,5 @@
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(788307),
   a = n(280234),
   r = n(509275),
@@ -16,13 +16,13 @@ t.Z = function(e) {
     experimentLocation: _ = "status_text"
   } = e, I = n.length > 0, {
     isRecentlyOnlineShowable: m,
-    isRecentlyOnlineTrackable: g
+    isRecentlyOnlineTrackable: T
   } = (0, a.$)(h);
-  if (s.useEffect(() => {
-      g && !I && a.Z.trackExposure({
+  if (i.useEffect(() => {
+      T && !I && a.Z.trackExposure({
         location: _
       })
-    }, [g, I, _]), I) return (0, i.jsx)(l.Z, {
+    }, [T, I, _]), I) return (0, s.jsx)(l.Z, {
     className: c.activity,
     textClassName: c.text,
     emojiClassName: c.customStatusEmoji,
@@ -31,13 +31,13 @@ t.Z = function(e) {
     animate: t,
     user: E
   });
-  if (!m) return (0, i.jsx)("div", {
+  if (!m) return (0, s.jsx)("div", {
     className: c.text,
     children: (0, o.u5)(d)
   });
   {
     let e = (0, r.H)(h);
-    return (0, i.jsx)("div", {
+    return (0, s.jsx)("div", {
       className: c.text,
       children: e
     })

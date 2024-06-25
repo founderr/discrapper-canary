@@ -1,6 +1,6 @@
 n(47120);
-var i = n(243814),
-  s = n(846027),
+var s = n(243814),
+  i = n(846027),
   l = n(131951),
   a = n(594174),
   r = n(996106),
@@ -11,7 +11,7 @@ var i = n(243814),
 t.Z = {
   [d.Etm.SET_USER_VOICE_SETTINGS]: {
     scope: {
-      [u.Gp.ANY]: [i.x.RPC, i.x.RPC_VOICE_WRITE]
+      [u.Gp.ANY]: [s.x.RPC, s.x.RPC_VOICE_WRITE]
     },
     validation: e => (0, o.Z)(e).required().keys({
       user_id: e.string().required(),
@@ -27,16 +27,16 @@ t.Z = {
         args: {
           user_id: t,
           pan: n,
-          volume: i,
+          volume: s,
           mute: o
         }
       } = e, c = a.default.getCurrentUser();
       if (null == a.default.getUser(t) || (null == c ? void 0 : c.id) === t) throw new r.Z({
         errorCode: d.lTL.INVALID_USER
       }, "Invalid user id: ".concat(t));
-      if (null != n && s.Z.setLocalPan(t, n.left, n.right), null != i && s.Z.setLocalVolume(t, i), null != o) {
+      if (null != n && i.Z.setLocalPan(t, n.left, n.right), null != s && i.Z.setLocalVolume(t, s), null != o) {
         let e = l.Z.isLocalMute(t);
-        (e && !o || !e && o) && s.Z.toggleLocalMute(t)
+        (e && !o || !e && o) && i.Z.toggleLocalMute(t)
       }
       return {
         user_id: t,
@@ -48,13 +48,13 @@ t.Z = {
   },
   [d.Etm.GET_VOICE_SETTINGS]: {
     scope: {
-      [u.Gp.ANY]: [i.x.RPC, i.x.RPC_VOICE_READ]
+      [u.Gp.ANY]: [s.x.RPC, s.x.RPC_VOICE_READ]
     },
     handler: () => (0, c._X)()
   },
   [d.Etm.SET_VOICE_SETTINGS]: {
     scope: {
-      [u.Gp.ANY]: [i.x.RPC, i.x.RPC_VOICE_WRITE]
+      [u.Gp.ANY]: [s.x.RPC, s.x.RPC_VOICE_WRITE]
     },
     validation: e => (0, o.Z)(e).required().keys({
       input: (0, o.Z)(e).keys({
@@ -89,7 +89,7 @@ t.Z = {
         args: {
           input: t,
           output: n,
-          mode: i,
+          mode: s,
           automatic_gain_control: a,
           echo_cancellation: r,
           noise_suppression: o,
@@ -99,18 +99,18 @@ t.Z = {
           mute: h
         }
       } = e;
-      if (t && (null != t.device_id && s.Z.setInputDevice(t.device_id), null != t.volume && s.Z.setInputVolume(t.volume)), n && (null != n.device_id && s.Z.setOutputDevice(n.device_id), null != n.volume && s.Z.setOutputVolume(n.volume)), i) {
+      if (t && (null != t.device_id && i.Z.setInputDevice(t.device_id), null != t.volume && i.Z.setInputVolume(t.volume)), n && (null != n.device_id && i.Z.setOutputDevice(n.device_id), null != n.volume && i.Z.setOutputVolume(n.volume)), s) {
         let e = l.Z.getMode(),
           t = l.Z.getModeOptions();
-        null != i.type && (e = i.type), null != i.auto_threshold && (t.autoThreshold = i.auto_threshold), null != i.threshold && (t.threshold = i.threshold), null != i.shortcut && (t.shortcut = i.shortcut.map(e => [e.type, e.code])), null != i.delay && (t.delay = i.delay), s.Z.setMode(e, t)
+        null != s.type && (e = s.type), null != s.auto_threshold && (t.autoThreshold = s.auto_threshold), null != s.threshold && (t.threshold = s.threshold), null != s.shortcut && (t.shortcut = s.shortcut.map(e => [e.type, e.code])), null != s.delay && (t.delay = s.delay), i.Z.setMode(e, t)
       }
-      if (null != a && s.Z.setAutomaticGainControl(a), null != r && s.Z.setEchoCancellation(r), null != o && s.Z.setNoiseSuppression(o), null != u && s.Z.setQoS(u), null != d && s.Z.setSilenceWarning(d), null != E) {
+      if (null != a && i.Z.setAutomaticGainControl(a), null != r && i.Z.setEchoCancellation(r), null != o && i.Z.setNoiseSuppression(o), null != u && i.Z.setQoS(u), null != d && i.Z.setSilenceWarning(d), null != E) {
         let e = l.Z.isSelfDeaf();
-        (e && !E || !e && E) && s.Z.toggleSelfDeaf()
+        (e && !E || !e && E) && i.Z.toggleSelfDeaf()
       }
       if (null != h) {
         let e = l.Z.isSelfMute();
-        (e && !h || !e && h) && s.Z.toggleSelfMute()
+        (e && !h || !e && h) && i.Z.toggleSelfMute()
       }
       return (0, c._X)()
     }

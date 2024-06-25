@@ -1,10 +1,10 @@
 n.d(t, {
   Z: function() {
-    return g
+    return T
   }
 });
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(286379),
   a = n(481060),
   r = n(797614),
@@ -18,51 +18,51 @@ var i = n(735250),
   I = n(689938),
   m = n(228255);
 
-function g(e) {
+function T(e) {
   let {
     active: t,
     user: n,
-    channel: g
-  } = e, p = (0, d.V)(), N = s.useCallback(() => {
+    channel: T
+  } = e, g = (0, d.V)(), p = i.useCallback(() => {
     (0, a.showToast)((0, a.createToast)(I.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, a.ToastType.FAILURE)), r.Z.increment({
       name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW
     })
-  }, []), T = s.useCallback(() => {
+  }, []), N = i.useCallback(() => {
     c.Z.closeChannelSidebar(u.uZ)
-  }, []), C = s.useCallback(() => {
-    c.Z.closeChannelSidebar(u.uZ), p && (0, o.Kh)(g.id)
-  }, [g.id, p]), {
-    acceptMessageRequest: S,
+  }, []), S = i.useCallback(() => {
+    c.Z.closeChannelSidebar(u.uZ), g && (0, o.Kh)(T.id)
+  }, [T.id, g]), {
+    acceptMessageRequest: C,
     isAcceptLoading: A,
     isUserProfileLoading: f,
     isOptimisticAccepted: Z
   } = (0, E.m)({
     user: n,
-    onAcceptSuccess: C,
-    onRejectSuccess: T,
-    onError: N
-  }), v = A || f, L = v || Z;
-  return (0, i.jsxs)("div", {
+    onAcceptSuccess: S,
+    onRejectSuccess: N,
+    onError: p
+  }), L = A || f, O = L || Z;
+  return (0, s.jsxs)("div", {
     className: m.container,
-    children: [(0, i.jsx)(h.Z, {
+    children: [(0, s.jsx)(h.Z, {
       otherUser: n,
-      channel: g,
+      channel: T,
       active: t
-    }), (0, i.jsxs)("div", {
+    }), (0, s.jsxs)("div", {
       className: m.actions,
-      children: [(0, i.jsx)(a.Button, {
+      children: [(0, s.jsx)(a.Button, {
         className: m.button,
         color: a.ButtonColors.PRIMARY,
         size: a.Button.Sizes.SMALL,
         onClick: e => {
-          S(g.id), e.stopPropagation()
+          C(T.id), e.stopPropagation()
         },
-        disabled: L,
-        submitting: v,
+        disabled: O,
+        submitting: L,
         children: I.Z.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
-      }), (0, i.jsx)(_.Z, {
+      }), (0, s.jsx)(_.Z, {
         className: m.button,
-        channel: g,
+        channel: T,
         buttonSize: a.Button.Sizes.SMALL
       })]
     })]

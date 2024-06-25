@@ -1,11 +1,11 @@
-var n = t(735250);
-t(470079);
-var a = t(120356),
-  r = t.n(a),
-  i = t(969730);
-s.Z = e => {
+var n = s(735250);
+s(470079);
+var a = s(120356),
+  i = s.n(a),
+  r = s(969730);
+t.Z = e => {
   let {
-    lifted: s = !1
+    lifted: t = !1
   } = e;
   return (0, n.jsxs)("svg", {
     width: "100%",
@@ -14,8 +14,8 @@ s.Z = e => {
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg",
     preserveAspectRatio: "none",
-    className: r()(i.root, {
-      [i.lifted]: s
+    className: i()(r.root, {
+      [r.lifted]: t
     }),
     children: [(0, n.jsx)("path", {
       d: "M1175.02 650.847C567.943 650.847 449.538 793 0 793V0H2338V529.841C1912.54 529.841 1705.84 650.847 1175.02 650.847Z",
@@ -29,19 +29,19 @@ s.Z = e => {
         y2: "975.136",
         gradientUnits: "userSpaceOnUse",
         children: [(0, n.jsx)("stop", {
-          className: i.stop1
+          className: r.stop1
         }), (0, n.jsx)("stop", {
           offset: "0.339235",
-          className: i.stop2
+          className: r.stop2
         }), (0, n.jsx)("stop", {
           offset: "0.492065",
-          className: i.stop3
+          className: r.stop3
         }), (0, n.jsx)("stop", {
           offset: "0.823236",
-          className: i.stop4
+          className: r.stop4
         }), (0, n.jsx)("stop", {
           offset: "0.899558",
-          className: i.stop5
+          className: r.stop5
         })]
       })
     })]

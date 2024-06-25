@@ -1,57 +1,57 @@
-var n = t(735250);
-t(470079);
-var a = t(120356),
-  r = t.n(a),
-  i = t(481060),
-  l = t(906732),
-  o = t(646476),
-  _ = t(197115),
-  c = t(689938),
-  E = t(55420),
-  u = t(568147),
-  R = t(332796);
-s.Z = e => {
+var n = s(735250);
+s(470079);
+var a = s(120356),
+  i = s.n(a),
+  r = s(481060),
+  l = s(906732),
+  o = s(646476),
+  c = s(197115),
+  E = s(689938),
+  _ = s(55420),
+  u = s(568147),
+  d = s(332796);
+t.Z = e => {
   let {
-    className: s,
-    imageClassName: t,
+    className: t,
+    imageClassName: s,
     textContainerOverrideStyles: a,
-    location: d,
+    location: T,
     analyticsLocation: I
   } = e, {
-    analyticsLocations: T
-  } = (0, l.ZP)(d), A = (0, o.rK)(), {
-    enabled: M
+    analyticsLocations: R
+  } = (0, l.ZP)(T), A = (0, o.rK)(), {
+    enabled: N
   } = o.RO.useExperiment({
     location: "GiftNitro"
   }, {
     autoTrackExposure: A
-  }), S = M && A;
+  }), C = N && A;
   return (0, n.jsx)(l.Gt, {
-    value: T,
+    value: R,
     children: (0, n.jsxs)("div", {
-      className: r()(E.container, s),
+      className: i()(_.container, t),
       children: [(0, n.jsxs)("div", {
-        className: E.textContainer,
+        className: _.textContainer,
         style: a,
-        children: [(0, n.jsx)(i.Heading, {
+        children: [(0, n.jsx)(r.Heading, {
           variant: "heading-lg/extrabold",
-          className: E.heading,
-          children: S ? c.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : c.Z.Messages.GIFT_NITRO
-        }), (0, n.jsx)(i.Text, {
+          className: _.heading,
+          children: C ? E.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : E.Z.Messages.GIFT_NITRO
+        }), (0, n.jsx)(r.Text, {
           variant: "text-sm/medium",
-          children: S ? c.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : c.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
-        }), (0, n.jsx)(_.Z, {
+          children: C ? E.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : E.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
+        }), (0, n.jsx)(c.Z, {
           isGift: !0,
-          className: E.giftCardButton,
-          look: i.Button.Looks.OUTLINED,
-          buttonText: c.Z.Messages.GIFT_NITRO,
-          buttonTextClassName: E.giftButtonCTA,
-          color: i.Button.Colors.CUSTOM,
+          className: _.giftCardButton,
+          look: r.Button.Looks.OUTLINED,
+          buttonText: E.Z.Messages.GIFT_NITRO,
+          buttonTextClassName: _.giftButtonCTA,
+          color: r.Button.Colors.CUSTOM,
           premiumModalAnalyticsLocation: I
         })]
       }), (0, n.jsx)("img", {
-        src: S ? R : u,
-        className: r()(E.bannerImage, t),
+        src: C ? d : u,
+        className: i()(_.bannerImage, s),
         alt: "gift nitro banner"
       })]
     })

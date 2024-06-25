@@ -6,11 +6,11 @@ n.d(t, {
     return l
   }
 });
-var i = n(818083),
-  s = n(987338);
-let l = (0, i.B)({
+var s = n(818083),
+  i = n(987338);
+let l = (0, s.B)({
     kind: "user",
-    id: s.fL,
+    id: i.fL,
     label: "Trigger Debugging User AA Experiment",
     defaultConfig: {
       inUse: !1
@@ -23,9 +23,9 @@ let l = (0, i.B)({
       }
     }]
   }),
-  a = (0, i.B)({
+  a = (0, s.B)({
     kind: "guild",
-    id: s.nz,
+    id: i.nz,
     label: "Trigger Debugging Guild AA Experiment",
     defaultConfig: {
       inUse: !1

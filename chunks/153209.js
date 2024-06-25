@@ -16,8 +16,8 @@ var s = n(735250),
   _ = n(695346),
   I = n(626135),
   T = n(709054),
-  N = n(791914),
-  m = n(981631),
+  m = n(791914),
+  N = n(981631),
   h = n(689938),
   C = n(297783);
 
@@ -44,35 +44,35 @@ function A(e) {
   } = e, {
     initialized: h,
     items: A,
-    loading: p,
-    loadMore: g
-  } = (0, d.y6)(), f = (0, l.e7)([o.Z], () => o.Z.localItems), O = i.useMemo(() => [...[...A, ...f].sort((e, t) => -1 * T.default.compare(e.id, t.id))], [A, f]), R = A.length > 0 ? A[0] : null, M = _.d$.useSetting(), x = i.useMemo(() => {
-    if (null != R && 0 >= T.default.compare(R.id, M)) return !1;
-    for (let e of O) {
+    loading: g,
+    loadMore: p
+  } = (0, d.y6)(), f = (0, l.e7)([o.Z], () => o.Z.localItems), R = i.useMemo(() => [...[...A, ...f].sort((e, t) => -1 * T.default.compare(e.id, t.id))], [A, f]), O = A.length > 0 ? A[0] : null, M = _.d$.useSetting(), x = i.useMemo(() => {
+    if (null != O && 0 >= T.default.compare(O.id, M)) return !1;
+    for (let e of R) {
       if (0 >= T.default.compare(e.id, M)) break;
       if (!(0, u.r)(e, M)) return !0
     }
     return !1
-  }, [R, M, O]);
+  }, [O, M, R]);
   return (0, s.jsxs)("div", {
     className: C.container,
-    children: [(0, s.jsx)(N.Z, {
+    children: [(0, s.jsx)(m.Z, {
       tab: a.X.FOR_YOU,
       setTab: t,
       badgeState: n,
       closePopout: r,
       children: x ? (0, s.jsx)(S, {
         onClick: () => {
-          null != R && (_.d$.updateSetting(R.id), I.default.track(m.rMx.NOTIFICATION_CENTER_ACTION, {
+          null != O && (_.d$.updateSetting(O.id), I.default.track(N.rMx.NOTIFICATION_CENTER_ACTION, {
             action_type: c.ud.MARK_ALL_READ
           }))
         }
       }) : null
     }), (0, s.jsx)(E.Z, {
       initialized: h,
-      items: O,
-      loading: p,
-      loadMore: g
+      items: R,
+      loading: g,
+      loadMore: p
     })]
   })
 }

@@ -16,8 +16,8 @@ var s = n(735250),
   _ = n(626135),
   I = n(74538),
   T = n(163684),
-  N = n(748770),
-  m = n(474936),
+  m = n(748770),
+  N = n(474936),
   h = n(981631),
   C = n(689938),
   S = n(921186);
@@ -37,31 +37,31 @@ function A() {
       location: A
     } = (0, c.O)(),
     {
-      analyticsLocations: p
+      analyticsLocations: g
     } = (0, u.ZP)(),
-    g = i.useCallback(() => {
+    p = i.useCallback(() => {
       (0, d.Z)({
-        subscriptionTier: I.ZP.getSkuIdForPremiumType(m.p9.TIER_2),
-        analyticsLocations: p,
+        subscriptionTier: I.ZP.getSkuIdForPremiumType(N.p9.TIER_2),
+        analyticsLocations: g,
         analyticsObject: {
           ...A,
           object: h.qAy.BUTTON_CTA,
           objectType: h.Qqv.TIER_2
         }
       })
-    }, [p, A]),
+    }, [g, A]),
     f = i.useCallback(() => {
-      o.Z.open(h.oAB.INVENTORY), N.ZP.dismissOutboundPromotionNotice()
+      o.Z.open(h.oAB.INVENTORY), m.ZP.dismissOutboundPromotionNotice()
     }, []),
-    O = i.useCallback(() => {
-      _.default.track(h.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), n ? g() : f()
-    }, [n, g, f]);
+    R = i.useCallback(() => {
+      _.default.track(h.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), n ? p() : f()
+    }, [n, p, f]);
   return (0, s.jsxs)(r.Notice, {
     color: r.NoticeColors.PREMIUM_TIER_2,
     children: [(0, s.jsx)(r.NoticeCloseButton, {
       noticeType: h.kVF.OUTBOUND_PROMOTION,
       onClick: () => {
-        N.ZP.dismissOutboundPromotionNotice()
+        m.ZP.dismissOutboundPromotionNotice()
       }
     }), (0, s.jsx)(r.NitroWheelIcon, {
       size: "md",
@@ -75,7 +75,7 @@ function A() {
       })]
     }) : C.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE : C.Z.Messages.OUTBOUND_PROMOTION_NOTICE, (0, s.jsx)(r.PrimaryCTANoticeButton, {
       noticeType: h.kVF.OUTBOUND_PROMOTION,
-      onClick: O,
+      onClick: R,
       children: n ? C.Z.Messages.PREMIUM_UPSELL_GET_NITRO : C.Z.Messages.TAKE_ME_THERE
     })]
   })

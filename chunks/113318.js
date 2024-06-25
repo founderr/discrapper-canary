@@ -1,36 +1,36 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
     return d
   }
 });
-var i = t(442837),
-  l = t(201895),
-  s = t(557135),
-  r = t(703656),
-  a = t(592125),
-  o = t(979651),
-  u = t(66999),
-  c = t(981631);
+var s = n(442837),
+  i = n(201895),
+  l = n(557135),
+  a = n(703656),
+  r = n(592125),
+  o = n(979651),
+  c = n(66999),
+  u = n(981631);
 
-function d(e, n) {
-  let t = (0, i.e7)([a.Z], () => a.Z.getChannel(n)),
+function d(e, t) {
+  let n = (0, s.e7)([r.Z], () => r.Z.getChannel(t)),
     {
       needSubscriptionToAccess: d
-    } = (0, u.Z)(null == t ? void 0 : t.id);
-  if (null == t || d) return null;
-  let _ = t.isGuildVocal(),
-    I = (0, l.ZP)({
-      channel: t
+    } = (0, c.Z)(null == n ? void 0 : n.id);
+  if (null == n || d) return null;
+  let E = n.isGuildVocal(),
+    _ = (0, i.ZP)({
+      channel: n
     });
   return {
     navigateToChannel: () => {
-      _ ? s.Z.handleVoiceConnect({
-        channel: t,
-        connected: o.Z.isInChannel(t.id),
+      E ? l.Z.handleVoiceConnect({
+        channel: n,
+        connected: o.Z.isInChannel(n.id),
         needSubscriptionToAccess: !1,
         routeDirectlyToChannel: !0
-      }) : (0, r.uL)(c.Z5c.CHANNEL(e, t.id))
+      }) : (0, a.uL)(u.Z5c.CHANNEL(e, n.id))
     },
-    ariaLabel: I
+    ariaLabel: _
   }
 }

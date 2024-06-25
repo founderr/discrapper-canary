@@ -16,8 +16,8 @@ var l = n(735250),
   c = n(301342),
   d = n(327530),
   h = n(981631),
-  g = n(689938),
-  p = n(857100);
+  p = n(689938),
+  g = n(857100);
 
 function m(e, t, n) {
   if (e === u.zm) return d.$k;
@@ -85,11 +85,11 @@ t.ZP = i.memo(function(e) {
       });
     case u.p2:
       return (0, l.jsx)(c.P, {
-        name: _ ? g.Z.Messages.PINNED_CHANNELS : g.Z.Messages.FAVORITES
+        name: _ ? p.Z.Messages.PINNED_CHANNELS : p.Z.Messages.FAVORITES
       });
     case m.recentsSectionNumber:
       return (0, l.jsx)(c.P, {
-        name: g.Z.Messages.RECENTS_CATEGORY_HEADER,
+        name: p.Z.Messages.RECENTS_CATEGORY_HEADER,
         onDismiss: I
       });
     case m.voiceChannelsSectionNumber: {
@@ -99,7 +99,7 @@ t.ZP = i.memo(function(e) {
       let n = null === (N = m.getChannelFromSectionRow(t, 0)) || void 0 === N ? void 0 : N.channel;
       return (0, l.jsxs)(i.Fragment, {
         children: [(0, l.jsx)("div", {
-          className: p.sectionDivider
+          className: g.sectionDivider
         }), (0, l.jsx)(c.rj, {
           category: e,
           channel: n

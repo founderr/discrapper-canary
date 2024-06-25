@@ -9,22 +9,22 @@ var l = n(735250),
   c = n(873596),
   d = n(423516),
   h = n(981631),
-  g = n(202589);
-let p = {
+  p = n(202589);
+let g = {
     [h.IE4.UNKNOWN]: a.Tooltip.Colors.BLACK,
     [h.IE4.BAD]: a.Tooltip.Colors.RED,
     [h.IE4.AVERAGE]: a.Tooltip.Colors.YELLOW,
     [h.IE4.FINE]: a.Tooltip.Colors.GREEN
   },
   m = {
-    [h.QKv.CONNECTED]: g.rtcConnectionStatusConnected,
-    [h.QKv.CONNECTING]: g.rtcConnectionStatusConnecting,
-    [h.QKv.ERROR]: g.rtcConnectionStatusError
+    [h.QKv.CONNECTED]: p.rtcConnectionStatusConnected,
+    [h.QKv.CONNECTING]: p.rtcConnectionStatusConnecting,
+    [h.QKv.ERROR]: p.rtcConnectionStatusError
   },
   C = {
-    [h.IE4.FINE]: g.rtcConnectionQualityFine,
-    [h.IE4.AVERAGE]: g.rtcConnectionQualityAverage,
-    [h.IE4.BAD]: g.rtcConnectionQualityBad,
+    [h.IE4.FINE]: p.rtcConnectionQualityFine,
+    [h.IE4.AVERAGE]: p.rtcConnectionQualityAverage,
+    [h.IE4.BAD]: p.rtcConnectionQualityBad,
     [h.IE4.UNKNOWN]: null
   };
 class E extends i.PureComponent {
@@ -70,7 +70,7 @@ class E extends i.PureComponent {
     } = this.props;
     return s === h.hes.RTC_CONNECTED && (e = (0, l.jsx)(a.Tooltip, {
       text: t !== h.IE4.UNKNOWN && null != i ? "".concat(i.toFixed(0), " ms") : null,
-      color: p[t],
+      color: g[t],
       children: e => (0, l.jsx)(f, {
         quality: t,
         smallPing: n,
@@ -78,9 +78,9 @@ class E extends i.PureComponent {
       })
     })), (0, l.jsxs)("div", {
       children: [(0, l.jsxs)("div", {
-        className: r()(g.rtcConnectionStatus, C[t], o),
+        className: r()(p.rtcConnectionStatus, C[t], o),
         children: [e, (0, l.jsx)("div", {
-          className: g.labelWrapper,
+          className: p.labelWrapper,
           children: this.renderStatus()
         })]
       }), u]
@@ -107,10 +107,10 @@ function f(e) {
     ...i
   } = e;
   if (!(0, a.useRedesignIconContext)().enabled) return (0, l.jsx)(o.Z, {
-    className: r()(g.ping, {
-      [g.smallPing]: n
+    className: r()(p.ping, {
+      [p.smallPing]: n
     }),
-    foreground: g.pingForeground
+    foreground: p.pingForeground
   });
   {
     let e = {
@@ -120,8 +120,8 @@ function f(e) {
       [h.IE4.UNKNOWN]: a.ConnectionUnknownIcon
     } [t];
     return (0, l.jsx)(e, {
-      className: r()(g.ping, {
-        [g.smallPing]: n
+      className: r()(p.ping, {
+        [p.smallPing]: n
       }),
       ...i
     })

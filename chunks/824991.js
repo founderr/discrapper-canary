@@ -25,20 +25,20 @@ var l = n(735250),
   c = n(308083),
   d = n(981631),
   h = n(921944),
-  g = n(689938),
-  p = n(228741);
+  p = n(689938),
+  g = n(228741);
 
 function m() {
   return (0, l.jsxs)("div", {
-    className: p.inviteContainer,
+    className: g.inviteContainer,
     children: [(0, l.jsx)(s.EnvelopeIcon, {
       size: "xxs",
       color: "currentColor",
-      className: p.envelope
+      className: g.envelope
     }), (0, l.jsx)(s.Text, {
       variant: "text-xs/bold",
-      className: p.invite,
-      children: g.Z.Messages.CLAN_UPSELL_INVITE
+      className: g.invite,
+      children: p.Z.Messages.CLAN_UPSELL_INVITE
     })]
   })
 }
@@ -51,7 +51,7 @@ function C(e) {
     children: (0, l.jsx)(s.Heading, {
       variant: "heading-md/semibold",
       color: "header-primary",
-      className: p.title,
+      className: g.title,
       children: t
     })
   })
@@ -64,7 +64,7 @@ function E(e) {
   return (0, l.jsx)(s.Text, {
     variant: "text-xs/normal",
     color: "text-muted",
-    className: p.message,
+    className: g.message,
     children: t
   })
 }
@@ -78,12 +78,12 @@ function f(e) {
     look: s.ButtonLooks.FILLED,
     size: s.ButtonSizes.SMALL,
     color: s.ButtonColors.BRAND,
-    className: p.button,
+    className: g.button,
     onClick: t,
     children: (0, l.jsx)(s.Text, {
       variant: "text-sm/semibold",
       color: "always-white",
-      children: g.Z.Messages.CHECK_IT_OUT
+      children: p.Z.Messages.CHECK_IT_OUT
     })
   })
 }
@@ -100,9 +100,9 @@ function _(e) {
       location: r.Z.GUILD_CHANNEL_LIST
     })
   }, [t.id]);
-  let m = s === c.xn ? g.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : s === c.nJ ? g.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : g.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
+  let m = s === c.xn ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : s === c.nJ ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
     _ = i.useCallback(() => (0, l.jsx)(E, {
-      message: g.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE
+      message: p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE
     }), []),
     I = i.useCallback(() => (0, l.jsx)(C, {
       title: m
@@ -117,7 +117,7 @@ function _(e) {
       onClick: N
     }), [N]);
   return (0, l.jsx)(a.Z, {
-    className: p.notice,
+    className: g.notice,
     guild: t,
     onDismissed: () => n(h.L.DISMISS),
     title: I,

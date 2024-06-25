@@ -16,8 +16,8 @@ var s = n(735250),
   _ = n(594174),
   I = n(626135),
   T = n(709054),
-  N = n(838440),
-  m = n(981631),
+  m = n(838440),
+  N = n(981631),
   h = n(975113);
 
 function C(e) {
@@ -38,7 +38,7 @@ function S(e) {
     stickers: d,
     event: E,
     eventProperties: _
-  } = e, [T, m] = i.useState(!1), S = i.useMemo(() => C({
+  } = e, [T, N] = i.useState(!1), S = i.useMemo(() => C({
     assets: d,
     currentUser: t,
     message: l
@@ -46,10 +46,10 @@ function S(e) {
     assets: u,
     currentUser: t,
     message: l
-  }), [u, t, l]), p = i.useCallback(async () => {
+  }), [u, t, l]), g = i.useCallback(async () => {
     let {
       valid: e
-    } = await (0, N.v)({
+    } = await (0, m.v)({
       type: o.I.FORM,
       content: "",
       channel: n
@@ -90,9 +90,9 @@ function S(e) {
     className: h.CTAMessageButtonOuter,
     innerClassName: h.CTAMessageButton,
     color: a.ButtonColors.PRIMARY,
-    onMouseEnter: () => m(!0),
-    onMouseLeave: () => m(!1),
-    onClick: p,
+    onMouseEnter: () => N(!0),
+    onMouseLeave: () => N(!1),
+    onClick: g,
     children: [(0, s.jsx)(c.ZP, {
       className: h.CTAMessageSticker,
       isInteracting: T,
@@ -121,7 +121,7 @@ function A(e) {
       let i = t.guild_id;
       if (null == s || null == i) return !1;
       let l = (0, u.xl)(t),
-        a = E.Z.can(m.Plq.SEND_MESSAGES, t),
+        a = E.Z.can(N.Plq.SEND_MESSAGES, t),
         r = null === (e = d.ZP.getMember(i, s.id)) || void 0 === e ? void 0 : e.isPending,
         o = n.author.bot;
       return a && !l && !r && !o

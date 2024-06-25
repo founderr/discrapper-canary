@@ -1,57 +1,57 @@
-t.d(n, {
+t.d(e, {
   ER: function() {
-    return l
+    return d
   },
   kk: function() {
-    return S
+    return _
   },
   s$: function() {
-    return N
+    return E
   }
 }), t(724458), t(47120), t(392711);
-var E = t(19780),
-  _ = t(5192),
-  s = t(700785),
+var i = t(19780),
+  s = t(5192),
+  l = t(700785),
   a = t(427679),
-  u = t(157925),
-  r = t(981631),
-  i = t(71080),
-  M = t(689938);
+  r = t(157925),
+  u = t(981631),
+  o = t(71080),
+  c = t(689938);
 
-function l(e, n, t, E) {
-  let s = n[0],
-    a = _.ZP.getName(e, t, s),
-    u = null != E ? E : n.length;
-  return 1 === u && null != s ? a : null == s ? M.Z.Messages.SPEAKING_COUNT.format({
-    count: u
-  }) : M.Z.Messages.USER_SUMMARY_WITH_OTHERS.format({
+function d(n, e, t, i) {
+  let l = e[0],
+    a = s.ZP.getName(n, t, l),
+    r = null != i ? i : e.length;
+  return 1 === r && null != l ? a : null == l ? c.Z.Messages.SPEAKING_COUNT.format({
+    count: r
+  }) : c.Z.Messages.USER_SUMMARY_WITH_OTHERS.format({
     name: a,
-    count: u - 1
+    count: r - 1
   })
 }
 
-function S(e, n) {
-  switch (e) {
-    case i.aC.OWNER:
-      return M.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
-    case i.aC.ADMINISTRATOR:
-      return M.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
-    case i.aC.MEMBER:
-    case i.aC.ROLE:
-      return n ? M.Z.Messages.CHANNEL_PERMISSIONS_CANNOT_REMOVE_PERMISSIONS : M.Z.Messages.CHANNEL_PERMISSIONS_REMOVE_MODERATOR_TOOLTIP;
-    case i.aC.EMPTY_STATE:
+function _(n, e) {
+  switch (n) {
+    case o.aC.OWNER:
+      return c.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
+    case o.aC.ADMINISTRATOR:
+      return c.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
+    case o.aC.MEMBER:
+    case o.aC.ROLE:
+      return e ? c.Z.Messages.CHANNEL_PERMISSIONS_CANNOT_REMOVE_PERMISSIONS : c.Z.Messages.CHANNEL_PERMISSIONS_REMOVE_MODERATOR_TOOLTIP;
+    case o.aC.EMPTY_STATE:
   }
   return null
 }
 
-function N(e) {
-  let n = a.Z.getStageInstanceByChannel(e.id);
+function E(n) {
+  let e = a.Z.getStageInstanceByChannel(n.id);
   return {
-    channel_id: e.id,
-    guild_id: e.guild_id,
-    topic: null == n ? void 0 : n.topic,
-    media_session_id: E.Z.getMediaSessionId(),
-    request_to_speak_state: s.Uu(r.Plq.REQUEST_TO_SPEAK, e) ? u.BM.EVERYONE : u.BM.NO_ONE,
-    stage_instance_id: null == n ? void 0 : n.id
+    channel_id: n.id,
+    guild_id: n.guild_id,
+    topic: null == e ? void 0 : e.topic,
+    media_session_id: i.Z.getMediaSessionId(),
+    request_to_speak_state: l.Uu(u.Plq.REQUEST_TO_SPEAK, n) ? r.BM.EVERYONE : r.BM.NO_ONE,
+    stage_instance_id: null == e ? void 0 : e.id
   }
 }

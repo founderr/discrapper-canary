@@ -12,8 +12,8 @@ n.d(t, {
     return E
   }
 });
-var i = n(13245),
-  s = n(808506),
+var s = n(13245),
+  i = n(808506),
   l = n(998502),
   a = n(13140),
   r = n(996106),
@@ -23,9 +23,9 @@ var i = n(13245),
 let d = ["207646673902501888"];
 
 function E(e) {
-  return s.Z.isReady(e) ? (i.Z.setLocked(!1, e), {
+  return i.Z.isReady(e) ? (s.Z.setLocked(!1, e), {
     lock() {
-      i.Z.setLocked(!0, e)
+      s.Z.setLocked(!0, e)
     },
     context: u.IlC.OVERLAY
   }) : (l.ZP.focus(null, !0), {
@@ -40,8 +40,8 @@ let h = async (e, t, n) => {
   if (null == n || "" === n) return Promise.reject(new r.Z({
     closeCode: u.$VG.INVALID_CLIENTID
   }, "No Client ID Specified"));
-  let i = l.ZP.releaseChannel !== u.R5N.CANARY && !d.includes(n) && e.transport !== c.He.POST_MESSAGE;
-  return await (0, o.vv)(n, i), (0, o.fy)(e, n, t)
+  let s = l.ZP.releaseChannel !== u.R5N.CANARY && !d.includes(n) && e.transport !== c.He.POST_MESSAGE;
+  return await (0, o.vv)(n, s), (0, o.fy)(e, n, t)
 }, _ = () => (0, o.tr)(e => {
   let t = [];
   if (null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut)) t = e.modeOptions.shortcut.map(e => {

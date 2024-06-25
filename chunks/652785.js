@@ -9,8 +9,8 @@ n.d(t, {
     return h
   }
 });
-var i = n(704215),
-  s = n(823385),
+var s = n(704215),
+  i = n(823385),
   l = n(327689),
   a = n(421176),
   r = n(989695),
@@ -21,33 +21,33 @@ var i = n(704215),
 let E = "lastHiddenChannelNotice",
   h = [{
     type: d.vID.CLAN_ADMIN_UPSELL,
-    dismissibleContentType: i.z.CHANNEL_LIST_CLAN_ADMIN_UPSELL
+    dismissibleContentType: s.z.CHANNEL_LIST_CLAN_ADMIN_UPSELL
   }, {
     type: d.vID.GUILD_BOOSTING,
     store: a.Z,
-    dismissibleContentType: i.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION
+    dismissibleContentType: s.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION
   }, {
     type: d.vID.GUILD_BANNER,
     store: l.Z,
-    dismissibleContentType: i.z.CHANNEL_NOTICE_GUILD_BANNER
+    dismissibleContentType: s.z.CHANNEL_NOTICE_GUILD_BANNER
   }, {
     type: d.vID.INVITE,
     store: c.Z,
-    dismissibleContentType: i.z.CHANNEL_NOTICE_INVITE
+    dismissibleContentType: s.z.CHANNEL_NOTICE_INVITE
   }, {
     type: d.vID.HUB_LINK,
     store: o.Z,
-    dismissibleContentType: i.z.CHANNEL_NOTICE_HUBLINK
+    dismissibleContentType: s.z.CHANNEL_NOTICE_HUBLINK
   }, {
     type: d.vID.QUICKSWITCHER,
-    store: s.Z,
-    dismissibleContentType: i.z.CHANNEL_NOTICE_QUICKSWITCHER
+    store: i.Z,
+    dismissibleContentType: s.z.CHANNEL_NOTICE_QUICKSWITCHER
   }, {
     type: d.vID.GUILD_ONBOARDING_UPSELL,
     store: r.Z,
-    dismissibleContentType: i.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE
+    dismissibleContentType: s.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE
   }, {
     type: d.vID.LINKED_ROLES_ADMIN,
-    dismissibleContentType: i.z.LINKED_ROLE_ADMIN_GUILD
+    dismissibleContentType: s.z.LINKED_ROLE_ADMIN_GUILD
   }],
   _ = h.map(e => e.store).filter(u.lm)

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return m
+    return N
   }
 }), n(47120);
 var s = n(735250),
@@ -16,28 +16,28 @@ var s = n(735250),
   _ = n(791914),
   I = n(326838),
   T = n(689938),
-  N = n(277539);
+  m = n(277539);
 
-function m(e) {
+function N(e) {
   let {
     setTab: t,
     badgeState: l,
-    closePopout: m
-  } = e, C = (0, r.Wu)([u.Z], () => u.Z.getInvites()), S = (0, r.e7)([u.Z], () => u.Z.getInviteStatuses()), [A, p] = i.useMemo(() => a().partition(C, e => {
+    closePopout: N
+  } = e, C = (0, r.Wu)([u.Z], () => u.Z.getInvites()), S = (0, r.e7)([u.Z], () => u.Z.getInviteStatuses()), [A, g] = i.useMemo(() => a().partition(C, e => {
     var t;
     return (null === (t = S[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1e3 < e.ttl
   }), [C, S]);
   return (i.useEffect(() => {
     (0, d.sJ)()
   }), 0 === C.length) ? (0, s.jsxs)("div", {
-    className: N.container,
+    className: m.container,
     children: [(0, s.jsx)(_.Z, {
       tab: o.X.GAME_INVITES,
       setTab: t,
       badgeState: l,
-      closePopout: m
+      closePopout: N
     }), (0, s.jsx)("div", {
-      className: N.__invalid_emptyStateContainer,
+      className: m.__invalid_emptyStateContainer,
       children: (0, s.jsx)(E.Z, {
         Icon: c.GameControllerIcon,
         header: T.Z.Messages.GAME_INVITES_EMPTY_STATE_TITLE,
@@ -45,14 +45,14 @@ function m(e) {
       })
     })]
   }) : (0, s.jsxs)("div", {
-    className: N.container,
+    className: m.container,
     children: [(0, s.jsx)(_.Z, {
       tab: o.X.GAME_INVITES,
       setTab: t,
       badgeState: l,
-      closePopout: m,
+      closePopout: N,
       children: (0, s.jsx)(c.CircleIconButton, {
-        className: N.__invalid_deleteButton,
+        className: m.__invalid_deleteButton,
         tooltip: T.Z.Messages.GAME_INVITES_DELETE_ALL,
         color: c.CircleIconButtonColors.SECONDARY,
         icon: (0, s.jsx)(c.TrashIcon, {
@@ -74,7 +74,7 @@ function m(e) {
       })
     }), (0, s.jsx)(c.AdvancedScrollerThin, {
       children: (0, s.jsxs)("div", {
-        className: N.invitesContainer,
+        className: m.invitesContainer,
         children: [A.length > 0 && (0, s.jsxs)(s.Fragment, {
           children: [(0, s.jsx)(h, {
             title: T.Z.Messages.GAME_INVITES_RECENT_HEADER
@@ -84,11 +84,11 @@ function m(e) {
               expired: !1
             }, e.invite_id))
           })]
-        }), p.length > 0 && (0, s.jsxs)(s.Fragment, {
+        }), g.length > 0 && (0, s.jsxs)(s.Fragment, {
           children: [(0, s.jsx)(h, {
             title: T.Z.Messages.GAME_INVITES_EXPIRED_HEADER
           }), (0, s.jsx)(s.Fragment, {
-            children: p.map(e => (0, s.jsx)(I.Z, {
+            children: g.map(e => (0, s.jsx)(I.Z, {
               invite: e,
               expired: !0
             }, e.invite_id))
@@ -104,14 +104,14 @@ function h(e) {
     title: t
   } = e;
   return (0, s.jsxs)("div", {
-    className: N.headerContainer,
+    className: m.headerContainer,
     children: [(0, s.jsx)(c.Text, {
-      className: N.headerTitle,
+      className: m.headerTitle,
       variant: "text-xs/semibold",
       color: "interactive-normal",
       children: t
     }), (0, s.jsx)("div", {
-      className: N.headerDivider
+      className: m.headerDivider
     })]
   })
 }

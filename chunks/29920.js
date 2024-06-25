@@ -3,8 +3,8 @@ n.d(t, {
     return a
   }
 });
-var i = n(544891),
-  s = n(960048),
+var s = n(544891),
+  i = n(960048),
   l = n(981631);
 async function a(e) {
   let {
@@ -13,7 +13,7 @@ async function a(e) {
     userDiscountOffer: a
   } = e;
   try {
-    let e = await i.tn.post({
+    let e = await s.tn.post({
       url: l.ANM.PREMIUM_MARKETING,
       body: {
         user_trial_offer: t,
@@ -22,8 +22,8 @@ async function a(e) {
       }
     });
     if (e.ok) return e.body;
-    return s.Z.captureMessage("fetchPremiumMarketingContentWithUserOffer failed"), []
+    return i.Z.captureMessage("fetchPremiumMarketingContentWithUserOffer failed"), []
   } catch (e) {
-    return s.Z.captureException(e), []
+    return i.Z.captureException(e), []
   }
 }

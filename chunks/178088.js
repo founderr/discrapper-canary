@@ -16,22 +16,22 @@ var s = n(735250),
   _ = n(360629),
   I = n(675478),
   T = n(581883),
-  N = n(585483),
-  m = n(153209),
+  m = n(585483),
+  N = n(153209),
   h = n(881591),
   C = n(903672),
   S = n(946443),
   A = n(264233),
-  p = n(981631),
-  g = n(689938);
+  g = n(981631),
+  p = n(689938);
 
 function f(e) {
   let {
     onOpen: t,
     onClose: n,
     children: f,
-    badgeState: O,
-    popoutPosition: R,
+    badgeState: R,
+    popoutPosition: O,
     popoutAlign: M
   } = e, {
     analyticsLocations: x
@@ -65,12 +65,12 @@ function f(e) {
     }
   }(Z), U = i.useCallback(() => {
     L(!1), v && (null == n || n())
-  }, [n, v]), y = i.useCallback(() => {
+  }, [n, v]), b = i.useCallback(() => {
     L(!v), v ? null == n || n() : null == t || t()
-  }, [n, t, v]), b = i.useCallback(() => {
-    y(), P(r.X.UNREADS)
-  }, [P, y]);
-  i.useEffect(() => (N.S.subscribe(p.CkL.TOGGLE_INBOX_UNREADS_TAB, b), () => void N.S.unsubscribe(p.CkL.TOGGLE_INBOX_UNREADS_TAB, b)), [b]);
+  }, [n, t, v]), y = i.useCallback(() => {
+    b(), P(r.X.UNREADS)
+  }, [P, b]);
+  i.useEffect(() => (m.S.subscribe(g.CkL.TOGGLE_INBOX_UNREADS_TAB, y), () => void m.S.unsubscribe(g.CkL.TOGGLE_INBOX_UNREADS_TAB, y)), [y]);
   let {
     showReminders: B
   } = E.Z.useExperiment({
@@ -92,26 +92,26 @@ function f(e) {
     value: x,
     children: (0, s.jsx)(o.Popout, {
       animation: o.Popout.Animation.NONE,
-      position: R,
+      position: O,
       align: M,
       autoInvert: !1,
       shouldShow: v,
       onRequestClose: U,
       renderPopout: function() {
         return (0, s.jsx)(o.Dialog, {
-          "aria-label": g.Z.Messages.INBOX,
-          children: Z === r.X.FOR_YOU && k ? (0, s.jsx)(m.Z, {
+          "aria-label": p.Z.Messages.INBOX,
+          children: Z === r.X.FOR_YOU && k ? (0, s.jsx)(N.Z, {
             setTab: P,
-            badgeState: O,
+            badgeState: R,
             closePopout: U
           }) : Z === r.X.MENTIONS ? (0, s.jsx)(C.Z, {
             setTab: P,
             onJump: F,
-            badgeState: O,
+            badgeState: R,
             closePopout: U
           }) : G && Z === r.X.GAME_INVITES ? (0, s.jsx)(A.Z, {
             setTab: P,
-            badgeState: O,
+            badgeState: R,
             closePopout: U
           }) : B && Z === r.X.TODOS ? (0, s.jsx)(h.Z, {
             setTab: P,
@@ -121,7 +121,7 @@ function f(e) {
             fallback: (0, s.jsx)(S.h, {
               setTab: P,
               closePopout: U,
-              badgeState: O
+              badgeState: R
             }),
             children: (0, s.jsx)(S.Z, {
               setTab: P,
@@ -129,7 +129,7 @@ function f(e) {
               showTutorial: D,
               setSeenTutorial: j,
               closePopout: U,
-              badgeState: O
+              badgeState: R
             })
           })
         })
@@ -139,7 +139,7 @@ function f(e) {
         let {
           isShown: n
         } = t;
-        return f(y, n, e)
+        return f(b, n, e)
       }
     })
   })

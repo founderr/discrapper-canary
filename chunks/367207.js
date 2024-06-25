@@ -10,8 +10,8 @@ var i = n(392711),
   c = n(100527),
   d = n(358221),
   h = n(963249),
-  g = n(592125),
-  p = n(430824),
+  p = n(592125),
+  g = n(430824),
   m = n(594174),
   C = n(295226),
   E = n(626135),
@@ -22,18 +22,18 @@ var i = n(392711),
   Z = n(6242),
   S = n(757692),
   x = n(114064),
-  T = n(937579),
-  L = n(485731),
+  L = n(937579),
+  T = n(485731),
   v = n(1163),
   A = n(841174),
   M = n(11352),
   R = n(474936),
   O = n(981631),
   P = n(354459),
-  j = n(37113),
-  b = n(689938);
+  b = n(37113),
+  j = n(689938);
 
-function D(e, t, n) {
+function y(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -41,7 +41,7 @@ function D(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class y extends u.Z {
+class D extends u.Z {
   _initialize() {
     __OVERLAY__ ? a.Z.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen) : (a.Z.subscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose), a.Z.subscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell), a.Z.subscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer), a.Z.subscribe("POST_CONNECTION_OPEN", this._maybeFetchCheckoutRecovery), a.Z.subscribe("POST_CONNECTION_OPEN", this._trackCustomNotificationSoundsExposure), a.Z.subscribe("RTC_CONNECTION_STATE", this.maybeShowHDStreamingPerksDemoPostUpsellModal), a.Z.subscribe("MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED", this.maybeShowHDStreamingViewerUpsellMessage), a.Z.subscribe("VOICE_CHANNEL_SELECT", this.cleanupShowHDStreamingViewerUpsellMessage))
   }
@@ -109,32 +109,32 @@ class y extends u.Z {
       autoTrackExposure: !1
     });
     if (!n || !l || e.state !== O.hes.DISCONNECTED || e.willReconnect) return;
-    let i = g.Z.getChannel(e.channelId);
+    let i = p.Z.getChannel(e.channelId);
     if (null == i || !(null === (t = x.Z.getPerksDemos()) || void 0 === t ? void 0 : t[s.q.STREAM_HIGH_QUALITY])) return;
     let r = x.Z.getActivated()[s.q.STREAM_HIGH_QUALITY];
     if (r && a.Z.dispatch({
         type: "PREMIUM_PERKS_DEMO_COMPLETE",
         perkType: s.q.STREAM_HIGH_QUALITY
-      }), !!r && !!L.j$.getState().hqStreamingDidEnable)(0, A.Z)(i.guild_id)
+      }), !!r && !!T.j$.getState().hqStreamingDidEnable)(0, A.Z)(i.guild_id)
   }
   constructor(...e) {
-    super(...e), D(this, "_premiumPaymentModalCloseResolve", null), D(this, "_premiumPaymentModalCloseReject", null), D(this, "_lastStreamingChannelId", null), D(this, "_maybeFetchPremiumOffer", async () => {
+    super(...e), y(this, "_premiumPaymentModalCloseResolve", null), y(this, "_premiumPaymentModalCloseReject", null), y(this, "_lastStreamingChannelId", null), y(this, "_maybeFetchPremiumOffer", async () => {
       let e = m.default.getCurrentUser();
       if (null != e && e.verified) {
         let t = !(0, f.I5)(e) && C.Z.shouldFetchOffer();
-        await (0, T.Tf)(t)
+        await (0, L.Tf)(t)
       }
       a.Z.dispatch({
         type: "PREMIUM_MARKETING_DATA_READY"
       })
-    }), D(this, "_maybeFetchCheckoutRecovery", async () => {
+    }), y(this, "_maybeFetchCheckoutRecovery", async () => {
       let e = m.default.getCurrentUser();
       null != e && e.verified && !(0, f.I5)(e) && await (0, I.o)()
-    }), D(this, "_trackCustomNotificationSoundsExposure", () => {
+    }), y(this, "_trackCustomNotificationSoundsExposure", () => {
       M.Y.trackExposure({
         location: "PremiumManager"
       })
-    }), D(this, "_handlePremiumPaymentModalOpen", e => {
+    }), y(this, "_handlePremiumPaymentModalOpen", e => {
       (0, h.Z)({
         ...e,
         analyticsLocations: [c.Z.OVERLAY],
@@ -145,28 +145,28 @@ class y extends u.Z {
           })
         }
       })
-    }), D(this, "_handlePremiumPaymentModalClose", e => {
+    }), y(this, "_handlePremiumPaymentModalClose", e => {
       let {
         didSucceed: t
       } = e;
       t && null != this._premiumPaymentModalCloseResolve ? this._premiumPaymentModalCloseResolve() : null != this._premiumPaymentModalCloseReject && this._premiumPaymentModalCloseReject(), this._premiumPaymentModalCloseResolve = null, this._premiumPaymentModalCloseReject = null
-    }), D(this, "maybeShowHDStreamingViewerUpsellMessage", e => {
+    }), y(this, "maybeShowHDStreamingViewerUpsellMessage", e => {
       let t = m.default.getCurrentUser();
       (null == t ? void 0 : t.id) !== e.senderUserId && this._maybeSendViewerUpsellMessage(e.channelId, e.guildId, t)
-    }), D(this, "_maybeSendViewerUpsellMessage", (0, i.debounce)((e, t, n) => {
+    }), y(this, "_maybeSendViewerUpsellMessage", (0, i.debounce)((e, t, n) => {
       var l, i;
       let s = d.Z.getSelectedParticipant(e),
         r = (0, S.o)(s, n),
         {
           sendNitroMessage: a
         } = (0, Z.TD)(r),
-        u = null !== (i = null === (l = p.Z.getGuild(t)) || void 0 === l ? void 0 : l.premiumTier) && void 0 !== i ? i : O.Eu4.NONE;
+        u = null !== (i = null === (l = g.Z.getGuild(t)) || void 0 === l ? void 0 : l.premiumTier) && void 0 !== i ? i : O.Eu4.NONE;
       if (!!a && !(u >= O.Eu4.TIER_2) && (null == s ? void 0 : s.type) === P.fO.STREAM && (null == s ? void 0 : s.id) !== (null == n ? void 0 : n.id) && null != s.maxResolution && null != s.maxFrameRate) {
         if (e !== this._lastStreamingChannelId) {
           this._lastStreamingChannelId = e;
-          let n = b.Z.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({
+          let n = j.Z.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({
             nickname: s.userNick,
-            resolution: (0, j.o6)(s.maxResolution.height),
+            resolution: (0, b.o6)(s.maxResolution.height),
             fps: (0, _.bp)(s.maxFrameRate)
           });
           o.Z.sendNitroSystemMessage(e, n), E.default.track(O.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
@@ -177,9 +177,9 @@ class y extends u.Z {
           })
         }
       }
-    }, 200)), D(this, "cleanupShowHDStreamingViewerUpsellMessage", e => {
+    }, 200)), y(this, "cleanupShowHDStreamingViewerUpsellMessage", e => {
       null == e.channelId && (this._lastStreamingChannelId = null)
     })
   }
 }
-t.Z = new y
+t.Z = new D

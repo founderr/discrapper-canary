@@ -1,10 +1,10 @@
 n.d(t, {
   L: function() {
-    return a
+    return l
   }
 });
-var l = n(330711);
-let a = e => {
-  let t = l.Z.getLocale().toLowerCase();
+var a = n(330711);
+let l = e => {
+  let t = a.Z.getLocale().toLowerCase();
   return t in e ? e[t] : e.default
 }

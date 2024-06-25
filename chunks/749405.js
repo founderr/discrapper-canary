@@ -3,8 +3,8 @@ n.d(t, {
     return _
   }
 });
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(481060),
   a = n(359110),
   r = n(6025),
@@ -20,53 +20,53 @@ function _(e) {
     active: t,
     user: n,
     channel: _
-  } = e, I = (0, c.K)(), m = s.useCallback(() => {
+  } = e, I = (0, c.K)(), m = i.useCallback(() => {
     (0, l.showToast)((0, l.createToast)(E.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, l.ToastType.FAILURE))
-  }, []), g = s.useCallback(() => {
+  }, []), T = i.useCallback(() => {
     r.Z.closeChannelSidebar(o.uZ)
-  }, []), p = s.useCallback(() => {
+  }, []), g = i.useCallback(() => {
     r.Z.closeChannelSidebar(o.uZ), I && (0, a.Kh)(_.id)
   }, [_.id, I]), {
-    acceptMessageRequest: N,
-    rejectMessageRequest: T,
-    isAcceptLoading: C,
-    isRejectLoading: S,
+    acceptMessageRequest: p,
+    rejectMessageRequest: N,
+    isAcceptLoading: S,
+    isRejectLoading: C,
     isUserProfileLoading: A,
     isOptimisticAccepted: f,
     isOptimisticRejected: Z
   } = (0, u.m)({
     user: n,
-    onAcceptSuccess: p,
-    onRejectSuccess: g,
+    onAcceptSuccess: g,
+    onRejectSuccess: T,
     onError: m
-  }), v = C || S || A || f || Z;
-  return (0, i.jsxs)("div", {
+  }), L = S || C || A || f || Z;
+  return (0, s.jsxs)("div", {
     className: h.container,
-    children: [(0, i.jsx)(d.Z, {
+    children: [(0, s.jsx)(d.Z, {
       channel: _,
       otherUser: n,
       active: t
-    }), (0, i.jsxs)("div", {
+    }), (0, s.jsxs)("div", {
       className: h.actions,
-      children: [(0, i.jsx)(l.Button, {
+      children: [(0, s.jsx)(l.Button, {
         className: h.button,
         color: l.ButtonColors.PRIMARY,
         size: l.Button.Sizes.SMALL,
         onClick: e => {
-          e.stopPropagation(), T(_.id)
+          e.stopPropagation(), N(_.id)
         },
-        disabled: v,
-        submitting: S || Z,
+        disabled: L,
+        submitting: C || Z,
         children: E.Z.Messages.MESSAGE_REQUEST_IGNORE
-      }), (0, i.jsx)(l.Button, {
+      }), (0, s.jsx)(l.Button, {
         className: h.button,
         color: l.ButtonColors.BRAND,
         size: l.Button.Sizes.SMALL,
         onClick: e => {
-          e.stopPropagation(), N(_.id)
+          e.stopPropagation(), p(_.id)
         },
-        disabled: v,
-        submitting: C || A || f,
+        disabled: L,
+        submitting: S || A || f,
         children: E.Z.Messages.MESSAGE_REQUEST_ACCEPT
       })]
     })]

@@ -1,24 +1,24 @@
-let l;
+let a;
 n.d(t, {
   $: function() {
-    return O
+    return A
   }
 });
-var a, i = n(735250),
-  r = n(470079),
-  s = n(557533),
-  o = n.n(s),
+var l, i = n(735250),
+  s = n(470079),
+  r = n(557533),
+  o = n.n(r),
   c = n(622535),
-  u = n(213919),
-  d = n(982905),
+  d = n(213919),
+  u = n(982905),
   h = n(794010),
   p = n(66037),
   m = n(231338),
   N = n(436620),
   k = n(330711),
-  x = n(554190);
+  g = n(554190);
 
-function g(e, t, n) {
+function C(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -26,12 +26,12 @@ function g(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let f = "Footer Navigation",
-  C = {
+let x = "Footer Navigation",
+  I = {
     BLURPLE: "Blurple",
     PRIMARY: "Primary"
   },
-  A = e => [{
+  v = e => [{
     title: e.PRODUCT,
     routes: [{
       link: m.am.DOWNLOAD,
@@ -151,30 +151,30 @@ let f = "Footer Navigation",
       tracking: "open_source"
     }]
   }],
-  I = e => {
+  O = e => {
     let {
       colorVariant: t,
       animate: n
     } = e;
     return (0, i.jsx)("svg", {
-      className: (0, d.l)(x, "footerBackground", t),
+      className: (0, u.l)(g, "footerBackground", t),
       preserveAspectRatio: "none",
       width: "1920",
       height: "100%",
       viewBox: "0 0 1920 330",
       version: "1.1",
       children: (0, i.jsx)("path", {
-        className: (0, d.l)(x, "footerBackground", n ? "Play" : "Paused"),
+        className: (0, u.l)(g, "footerBackground", n ? "Play" : "Paused"),
         fill: "#1a1c1e",
         fillOpacity: "0.3",
         d: "M140.881198,194.260295 C257.600568,129.32862 342.939626,119.84993 418.009939,203.154617 C493.080251,286.459305 545.728689,70.9046172 636.439626,63.9593047 C727.150564,57.0139922 768.99822,139.670242 858.802907,119.431961 C948.607595,99.1936797 1071.91228,-32.9977266 1243.91228,7.75227342 C1415.91228,48.5022734 1404.10369,208.584305 1508.27166,178.709305 C1612.43963,148.834305 1633.73291,79.913472 1711.63588,98.8569055 C1776.28676,114.577866 1819.96778,221.391836 1889.37253,185.808108 C2017.32661,120.206212 2004.01952,336.769569 2004.01952,336.769569 L271.635881,337 L-149.063338,337 C-149.063338,337 -245.850307,175.637635 -58.0633382,228.867188 C33.8652851,254.92501 64.1722713,236.933925 140.881198,194.260295 Z"
       })
     })
   };
-class O extends(a = r.PureComponent) {
+class A extends(l = s.PureComponent) {
   componentDidMount() {
     this.setState({
-      token: (0, u.getToken)(),
+      token: (0, d.getToken)(),
       isAppCompatible: N.KO
     })
   }
@@ -183,50 +183,50 @@ class O extends(a = r.PureComponent) {
     let {
       downloadLink: t,
       isMobile: n,
-      mobileDownloadText: a,
-      platform: r,
-      variant: s,
+      mobileDownloadText: l,
+      platform: s,
+      variant: r,
       authRedirectTo: o
     } = this.props, {
       isAppCompatible: c
     } = this.state;
-    if (n) return (0, i.jsx)(l, {
+    if (n) return (0, i.jsx)(a, {
       eventName: "Download App",
       data: {
-        Platform: r,
+        Platform: s,
         PTB: !1,
         Released: !0,
         "Referring Location": "Footer"
       },
       alt: "Download Discord",
       target: "_blank",
-      className: (0, d.l)(x, "button", s),
+      className: (0, u.l)(g, "button", r),
       href: t,
-      children: a
+      children: l
     });
-    if (!c) return (0, i.jsx)(l, {
+    if (!c) return (0, i.jsx)(a, {
       eventName: "Download App",
       data: {
-        Platform: r,
+        Platform: s,
         PTB: !1,
         Released: !0,
         "Referring Location": "Footer"
       },
       alt: "Download Discord",
-      className: (0, d.l)(x, "button", s),
+      className: (0, u.l)(g, "button", r),
       href: m.am.DOWNLOAD,
       children: k.Z.Messages.Navigation.DOWNLOAD
     });
-    let u = null != o ? m.$w.REGISTER_WITH_REDIRECT(o) : m.$w.REGISTER,
+    let d = null != o ? m.$w.REGISTER_WITH_REDIRECT(o) : m.$w.REGISTER,
       h = k.Z.Messages.Common.SIGN_UP_NOW;
-    return e && (u = m.$w.ME, h = k.Z.Messages.Common.OPEN_DISCORD), (0, i.jsx)(l, {
-      eventName: f,
-      className: (0, d.l)(x, "button", this.props.variant),
+    return e && (d = m.$w.ME, h = k.Z.Messages.Common.OPEN_DISCORD), (0, i.jsx)(a, {
+      eventName: x,
+      className: (0, u.l)(g, "button", this.props.variant),
       data: {
         linkClicked: e ? "open" : "login",
         googleAnalytics: !0
       },
-      href: u,
+      href: d,
       children: h
     })
   }
@@ -234,29 +234,29 @@ class O extends(a = r.PureComponent) {
     let {
       variant: e,
       style: t,
-      className: a,
-      avoidRouter: r,
-      showWave: s
+      className: l,
+      avoidRouter: s,
+      showWave: r
     } = this.props, {
-      animateBackground: u,
+      animateBackground: d,
       token: h
-    } = this.state, N = A(k.Z.Messages.Navigation).map(e => {
-      let t = e.routes.map((e, t) => e.external ? (0, i.jsx)(l, {
-        className: x.route,
-        eventName: f,
+    } = this.state, N = v(k.Z.Messages.Navigation).map(e => {
+      let t = e.routes.map((e, t) => e.external ? (0, i.jsx)(a, {
+        className: g.route,
+        eventName: x,
         data: {
           linkClicked: e.tracking
         },
         href: e.link,
         children: e.title
       }, e.link || t) : (0, i.jsx)(p.Z, {
-        avoidRouter: r,
+        avoidRouter: s,
         to: e.link,
         from: "footer_navigation",
-        className: x.route,
-        children: (0, i.jsx)(l, {
+        className: g.route,
+        children: (0, i.jsx)(a, {
           tag: "span",
-          eventName: f,
+          eventName: x,
           data: {
             linkClicked: e.tracking
           },
@@ -264,9 +264,9 @@ class O extends(a = r.PureComponent) {
         })
       }, e.link));
       return (0, i.jsxs)("div", {
-        className: x.navigationSection,
+        className: g.navigationSection,
         children: [(0, i.jsx)("h3", {
-          className: x.navigationHeader,
+          className: g.navigationHeader,
           children: e.title
         }), t]
       }, e.title)
@@ -274,21 +274,21 @@ class O extends(a = r.PureComponent) {
     return (0, i.jsx)(c.$, {
       onChange: this.handleVisibility,
       children: (0, i.jsxs)("footer", {
-        className: o()((0, d.l)(x, "footer", e), a),
+        className: o()((0, u.l)(g, "footer", e), l),
         style: t,
-        children: [s ? (0, i.jsx)(I, {
+        children: [r ? (0, i.jsx)(O, {
           colorVariant: e,
-          animate: u
+          animate: d
         }) : null, (0, i.jsxs)("div", {
-          className: x.footerContent,
+          className: g.footerContent,
           children: [(0, i.jsxs)("div", {
-            className: x.navigation,
+            className: g.navigation,
             children: [(0, i.jsx)("div", {
-              className: x.logoWrap,
-              children: (0, i.jsx)(l, {
-                className: x.logo,
+              className: g.logoWrap,
+              children: (0, i.jsx)(a, {
+                className: g.logo,
                 href: m.am.INDEX,
-                eventName: f,
+                eventName: x,
                 data: {
                   linkClicked: "logo"
                 },
@@ -299,16 +299,16 @@ class O extends(a = r.PureComponent) {
               })
             }), N]
           }), (0, i.jsx)("div", {
-            className: x.separator
+            className: g.separator
           }), (0, i.jsxs)("div", {
-            className: x.joinDiscord,
+            className: g.joinDiscord,
             children: [(0, i.jsxs)("div", {
-              className: x.stats,
+              className: g.stats,
               children: [(0, i.jsx)("h2", {
-                className: x.readyToJoin,
+                className: g.readyToJoin,
                 children: k.Z.Messages.Footer.READY_TO_TRY_DISCORD
               }), (0, i.jsx)("h3", {
-                className: x.joinOtherPlayers,
+                className: g.joinOtherPlayers,
                 children: k.Z.Messages.Footer.JOIN_OVER_PLAYERS_TODAY.format({
                   num: m.vS
                 })
@@ -320,23 +320,23 @@ class O extends(a = r.PureComponent) {
     })
   }
   constructor(e) {
-    super(e), g(this, "state", {
+    super(e), C(this, "state", {
       animateBackground: !1,
       isMobile: null,
       token: null,
       isAppCompatible: !0
-    }), g(this, "handleVisibility", e => {
+    }), C(this, "handleVisibility", e => {
       this.setState({
         animateBackground: e
       })
-    }), null != e.locale && k.Z.setLocale(e.locale), l = t => (0, i.jsx)(h.Z, {
+    }), null != e.locale && k.Z.setLocale(e.locale), a = t => (0, i.jsx)(h.Z, {
       track: e.track,
       trackOutboundLink: e.trackOutboundLink,
       ...t
     })
   }
 }
-g(O, "Variants", C), g(O, "defaultProps", {
-  variant: C.PRIMARY,
+C(A, "Variants", I), C(A, "defaultProps", {
+  variant: I.PRIMARY,
   showWave: !0
 })

@@ -1,5 +1,5 @@
 n(47120);
-var i, s, l, a, r = n(392711),
+var s, i, l, a, r = n(392711),
   o = n.n(r),
   c = n(442837),
   u = n(570140),
@@ -9,9 +9,9 @@ var i, s, l, a, r = n(392711),
 let _ = {},
   I = 0,
   m = !1,
-  g = !1;
+  T = !1;
 
-function p(e) {
+function g(e) {
   var t;
   let n = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
   return {
@@ -22,7 +22,7 @@ function p(e) {
     contactNames: n
   }
 }
-class N extends(i = c.ZP.Store) {
+class p extends(s = c.ZP.Store) {
   initialize() {
     this.waitFor(E.default)
   }
@@ -39,17 +39,17 @@ class N extends(i = c.ZP.Store) {
     return _[e]
   }
 }
-a = "FriendSuggestionStore", (l = "displayName") in(s = N) ? Object.defineProperty(s, l, {
+a = "FriendSuggestionStore", (l = "displayName") in(i = p) ? Object.defineProperty(i, l, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = a, t.Z = new N(u.Z, {
+}) : i[l] = a, t.Z = new p(u.Z, {
   CONNECTION_OPEN: function(e) {
-    _ = {}, (I = e.friendSuggestionCount) > 0 && (g = !0, m || !g || (m = !0, g = !1, h.Z.fetch()))
+    _ = {}, (I = e.friendSuggestionCount) > 0 && (T = !0, m || !T || (m = !0, T = !1, h.Z.fetch()))
   },
   FRIEND_SUGGESTION_CREATE: function(e) {
-    let t = p(e.suggestion);
+    let t = g(e.suggestion);
     if (null != _[t.key]) return !1;
     I++, _ = {
       ..._,
@@ -61,7 +61,7 @@ a = "FriendSuggestionStore", (l = "displayName") in(s = N) ? Object.defineProper
   },
   LOAD_FRIEND_SUGGESTIONS_SUCCESS: function(e) {
     var t;
-    m = !1, t = e.suggestions, _ = o().chain(t).map(e => p(e)).keyBy(e => e.key).value(), I = o().keys(_).length
+    m = !1, t = e.suggestions, _ = o().chain(t).map(e => g(e)).keyBy(e => e.key).value(), I = o().keys(_).length
   },
   LOAD_FRIEND_SUGGESTIONS_FAILURE: function() {
     m = !1, _ = {}

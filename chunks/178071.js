@@ -1,42 +1,42 @@
-t.d(s, {
+n.d(t, {
   y: function() {
-    return T
+    return E
   }
-}), t(47120);
-var n = t(735250),
-  r = t(470079),
-  i = t(442837),
-  a = t(481060),
-  l = t(239091),
-  o = t(585237),
-  c = t(551428),
-  u = t(689938);
+}), n(47120);
+var s = n(735250),
+  i = n(470079),
+  l = n(442837),
+  a = n(481060),
+  r = n(239091),
+  o = n(585237),
+  c = n(551428),
+  u = n(689938);
 
-function I(e, s, t) {
-  return s in e ? Object.defineProperty(e, s, {
-    value: t,
+function d(e, t, n) {
+  return t in e ? Object.defineProperty(e, t, {
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[s] = t, e
+  }) : e[t] = n, e
 }
-let T = {
+let E = {
   DropdownSizes: o.Z.DropdownSizes,
   Sizes: o.Z.Sizes,
   Colors: o.Z.Colors,
   Looks: o.Z.Looks
 };
-class d extends r.PureComponent {
+class h extends i.PureComponent {
   render() {
     let {
       storeListings: e,
-      primaryStoreListing: s,
-      skuId: t,
-      onStoreListingSelect: r,
-      currentStoreListingId: i,
+      primaryStoreListing: t,
+      skuId: n,
+      onStoreListingSelect: i,
+      currentStoreListingId: l,
       ...a
-    } = this.props, l = null != s ? 1 : 0;
-    return (l += e.length) < 2 ? null : (0, n.jsx)(o.Z, {
+    } = this.props, r = null != t ? 1 : 0;
+    return (r += e.length) < 2 ? null : (0, s.jsx)(o.Z, {
       onClick: this.handleContextMenu,
       onDropdownClick: this.handleContextMenu,
       onContextMenu: this.handleContextMenu,
@@ -45,37 +45,37 @@ class d extends r.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), I(this, "renderContextMenu", () => {
+    super(...e), d(this, "renderContextMenu", () => {
       let {
         storeListings: e,
-        onStoreListingSelect: s,
-        currentStoreListingId: t,
-        onMenuSelect: r
-      } = this.props, i = e.map(e => e.id !== t ? (0, n.jsx)(a.MenuItem, {
+        onStoreListingSelect: t,
+        currentStoreListingId: n,
+        onMenuSelect: i
+      } = this.props, l = e.map(e => e.id !== n ? (0, s.jsx)(a.MenuItem, {
         id: "".concat(e.id),
         label: e.id,
         action: () => {
-          l.Zy(), null == s || s(e)
+          r.Zy(), null == t || t(e)
         }
       }) : null);
-      return (0, n.jsx)(a.Menu, {
-        onSelect: r,
+      return (0, s.jsx)(a.Menu, {
+        onSelect: i,
         navId: "test-store-listing",
         "aria-label": u.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
-        onClose: l.Zy,
-        children: i
+        onClose: r.Zy,
+        children: l
       })
-    }), I(this, "handleContextMenu", e => {
-      e.stopPropagation(), l.vq(e, this.renderContextMenu)
+    }), d(this, "handleContextMenu", e => {
+      e.stopPropagation(), r.vq(e, this.renderContextMenu)
     })
   }
 }
-s.Z = i.ZP.connectStores([c.Z], e => {
+t.Z = l.ZP.connectStores([c.Z], e => {
   let {
-    skuId: s
+    skuId: t
   } = e;
   return {
-    storeListings: c.Z.getUnpublishedForSKU(s),
-    primaryStoreListing: c.Z.getForSKU(s)
+    storeListings: c.Z.getUnpublishedForSKU(t),
+    primaryStoreListing: c.Z.getForSKU(t)
   }
-})(d)
+})(h)

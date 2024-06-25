@@ -1,4 +1,4 @@
-var i, s, l, a, r = n(442837),
+var s, i, l, a, r = n(442837),
   o = n(433517),
   c = n(570140);
 let u = "hasSeenGuildTemplatePromotionTooltip",
@@ -23,12 +23,12 @@ class _ extends(a = r.ZP.Store) {
     return !E
   }
 }
-l = "GuildTemplateTooltipStore", (s = "displayName") in(i = _) ? Object.defineProperty(i, s, {
+l = "GuildTemplateTooltipStore", (i = "displayName") in(s = _) ? Object.defineProperty(s, i, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = l, t.Z = new _(c.Z, {
+}) : s[i] = l, t.Z = new _(c.Z, {
   GUILD_TEMPLATE_DIRTY_TOOLTIP_REFRESH: function(e) {
     let {
       guildTemplate: t

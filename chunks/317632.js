@@ -28,7 +28,7 @@ function T(e) {
   }
   return null
 }
-class N extends(s = r.ZP.Store) {
+class m extends(s = r.ZP.Store) {
   getInvites() {
     return d
   }
@@ -50,12 +50,12 @@ class N extends(s = r.ZP.Store) {
     return I
   }
 }
-a = "GameInviteStore", (l = "displayName") in(i = N) ? Object.defineProperty(i, l, {
+a = "GameInviteStore", (l = "displayName") in(i = m) ? Object.defineProperty(i, l, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[l] = a, t.Z = new N(o.Z, {
+}) : i[l] = a, t.Z = new m(o.Z, {
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
     let {
       gameInvites: t

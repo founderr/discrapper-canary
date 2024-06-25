@@ -3,9 +3,9 @@ n.d(t, {
     return E
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(442837),
+var i = n(442837),
   l = n(481060),
   a = n(210887),
   r = n(687683),
@@ -17,16 +17,16 @@ var s = n(442837),
 function E(e) {
   let {
     section: t
-  } = e, n = (0, s.e7)([a.Z], () => a.Z.theme);
-  return (0, i.jsxs)(l.EmptyState, {
+  } = e, n = (0, i.e7)([a.Z], () => a.Z.theme);
+  return (0, s.jsxs)(l.EmptyState, {
     theme: n,
     className: c.emptyStateContainer,
-    children: [(0, i.jsx)(l.EmptyStateImage, {
+    children: [(0, s.jsx)(l.EmptyStateImage, {
       width: 415,
       height: 200,
       lightSrc: d,
       darkSrc: u
-    }), (0, i.jsx)(l.EmptyStateText, {
+    }), (0, s.jsx)(l.EmptyStateText, {
       note: t === r.pS.SPAM ? o.Z.Messages.MESSAGE_REQUESTS_SPAM_EMPTY_STATE_BODY : o.Z.Messages.MESSAGE_REQUESTS_EMPTY_STATE_BODY
     })]
   })

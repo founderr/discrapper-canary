@@ -19,13 +19,13 @@ var i = n(442837),
 function I(e) {
   let t, n, I, {
       author: T,
-      banned: N
+      banned: m
     } = e,
-    m = (0, i.e7)([a.default], () => a.default.getId()),
+    N = (0, i.e7)([a.default], () => a.default.getId()),
     h = (0, i.e7)([r.Z], () => r.Z.getChannelId()),
     C = u.ZP.useName(T),
-    S = m === T.id;
-  return S ? (t = E.Z.Messages.INVITE_BUTTON_INVALID_OWNER, I = E.Z.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID) : (I = E.Z.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID, N ? t = E.Z.Messages.INSTANT_INVITE_BANNED_INFO : null != C ? (t = E.Z.Messages.INSTANT_INVITE_ASK_USER_FOR_NEW_INVITE.format({
+    S = N === T.id;
+  return S ? (t = E.Z.Messages.INVITE_BUTTON_INVALID_OWNER, I = E.Z.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID) : (I = E.Z.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID, m ? t = E.Z.Messages.INSTANT_INVITE_BANNED_INFO : null != C ? (t = E.Z.Messages.INSTANT_INVITE_ASK_USER_FOR_NEW_INVITE.format({
     username: C
   }), n = (0, s.jsx)(o.Z.Button, {
     onClick: function() {

@@ -1,6 +1,6 @@
 n(47120);
-var i = n(243814),
-  s = n(846027),
+var s = n(243814),
+  i = n(846027),
   l = n(131951),
   a = n(13140),
   r = n(996106),
@@ -32,15 +32,15 @@ t.Z = {
         socket: t,
         args: {
           input_mode: n,
-          self_mute: i,
+          self_mute: s,
           self_deaf: r
         }
       } = e, o = E(t);
-      null != n && s.Z.setMode(n.type, {
+      null != n && i.Z.setMode(n.type, {
         shortcut: (0, a.Kd)(n.shortcut)
-      }, o), null != i && i !== l.Z.isSelfMute(o) && s.Z.toggleSelfMute({
+      }, o), null != s && s !== l.Z.isSelfMute(o) && i.Z.toggleSelfMute({
         context: o
-      }), null != r && r !== l.Z.isSelfDeaf(o) && s.Z.toggleSelfDeaf({
+      }), null != r && r !== l.Z.isSelfDeaf(o) && i.Z.toggleSelfDeaf({
         context: o
       })
     }
@@ -57,16 +57,16 @@ t.Z = {
         socket: t,
         args: {
           user_id: n,
-          mute: i,
+          mute: s,
           volume: a
         }
       } = e, r = E(t);
-      null != i && i !== l.Z.isLocalMute(n, r) && s.Z.toggleLocalMute(n, r), null != a && s.Z.setLocalVolume(n, a, r)
+      null != s && s !== l.Z.isLocalMute(n, r) && i.Z.toggleLocalMute(n, r), null != a && i.Z.setLocalVolume(n, a, r)
     }
   },
   [u.Etm.PUSH_TO_TALK]: {
     scope: {
-      [c.Gp.ALL]: [i.x.RPC, i.x.RPC_VOICE_WRITE]
+      [c.Gp.ALL]: [s.x.RPC, s.x.RPC_VOICE_WRITE]
     },
     validation: e => (0, o.Z)(e).required().keys({
       active: e.boolean()

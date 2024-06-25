@@ -1,4 +1,4 @@
-var i, s = n(442837),
+var s, i = n(442837),
   l = n(570140),
   a = n(267642),
   r = n(981631);
@@ -16,7 +16,7 @@ c = {
   lastDismissedGracePeriods: {},
   isVisible: {}
 };
-class u extends(i = s.ZP.PersistedStore) {
+class u extends(s = i.ZP.PersistedStore) {
   initialize(e) {
     null != e && (c = e)
   }
@@ -41,7 +41,7 @@ o(u, "displayName", "GuildBoostingGracePeriodNoticeStore"), o(u, "persistKey", "
     let {
       guildId: t,
       appliedBoosts: n
-    } = e, i = null != c.lastDismissedGracePeriods[t] ? c.lastDismissedGracePeriods[t] : null, s = null != i && Date.now() - i <= r.Dge, l = null != n && !s && (0, a.Vx)(n, t);
+    } = e, s = null != c.lastDismissedGracePeriods[t] ? c.lastDismissedGracePeriods[t] : null, i = null != s && Date.now() - s <= r.Dge, l = null != n && !i && (0, a.Vx)(n, t);
     c = {
       ...c,
       isVisible: {

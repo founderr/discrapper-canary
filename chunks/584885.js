@@ -1,6 +1,6 @@
 n(653041);
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(481060),
   a = n(570140),
   r = n(906732),
@@ -26,31 +26,31 @@ t.Z = e => {
   let t, {
     title: n,
     subtitle: m,
-    guildsData: g,
-    analyticsContext: p,
-    theme: N,
-    onViewGuild: T,
-    fetchGuilds: C,
-    onGuildCardSeen: S,
+    guildsData: T,
+    analyticsContext: g,
+    theme: p,
+    onViewGuild: N,
+    fetchGuilds: S,
+    onGuildCardSeen: C,
     currentCategoryId: A,
     loadId: f,
     onTagClick: Z,
-    showMoreCards: v = !1
+    showMoreCards: L = !1
   } = e;
-  s.useEffect(() => {
-    a.Z.wait(() => C())
+  i.useEffect(() => {
+    a.Z.wait(() => S())
   }, [A]);
-  let L = (0, d.Z)(v ? I : _),
+  let O = (0, d.Z)(L ? I : _),
     {
-      analyticsLocations: O
+      analyticsLocations: v
     } = (0, r.ZP)();
-  if (null == g) return null;
+  if (null == T) return null;
   let {
     guilds: R,
-    loading: x
-  } = g, M = null == R || 0 === R.length;
-  if (!x && M) return null;
-  let P = async e => {
+    loading: P
+  } = T, x = null == R || 0 === R.length;
+  if (!P && x) return null;
+  let M = async e => {
     if ((0, o.yU)())(0, c.Z)({
       analyticsSource: {
         page: E.ZY5.GUILD_DISCOVERY
@@ -59,39 +59,39 @@ t.Z = e => {
         page: E.ZY5.GUILD_DISCOVERY,
         section: E.jXE.GUILD_CAP_UPSELL_MODAL
       },
-      analyticsLocations: O
+      analyticsLocations: v
     });
     else {
       let t = R.findIndex(t => t.id === e);
-      await T(e, t, p, f)
+      await N(e, t, g, f)
     }
   };
-  if (x || null == R) {
+  if (P || null == R) {
     let e = [];
-    for (let t = 0; t < L; t++) e.push((0, i.jsx)(u.Z.Placeholder, {}, t));
+    for (let t = 0; t < O; t++) e.push((0, s.jsx)(u.Z.Placeholder, {}, t));
     t = e
-  } else t = R.slice(0, L).map(e => (0, i.jsx)(u.Z, {
+  } else t = R.slice(0, O).map(e => (0, s.jsx)(u.Z, {
     className: h.__invalid_guildCard,
     guild: e,
-    onView: P,
-    theme: N,
-    onGuildCardSeen: S,
+    onView: M,
+    theme: p,
+    onGuildCardSeen: C,
     onTagClick: Z
   }, e.id));
-  return (0, i.jsx)("section", {
+  return (0, s.jsx)("section", {
     className: h.guildListSection,
-    children: (0, i.jsxs)(l.HeadingLevel, {
-      component: (0, i.jsx)(l.Heading, {
+    children: (0, s.jsxs)(l.HeadingLevel, {
+      component: (0, s.jsx)(l.Heading, {
         className: h.__invalid_title,
         variant: "heading-lg/semibold",
         children: n
       }),
-      children: [null != m && (0, i.jsx)(l.Text, {
+      children: [null != m && (0, s.jsx)(l.Text, {
         className: h.subtitle,
         variant: "text-sm/normal",
         color: "header-secondary",
         children: m
-      }), (0, i.jsx)("div", {
+      }), (0, s.jsx)("div", {
         className: h.guildList,
         children: t
       })]

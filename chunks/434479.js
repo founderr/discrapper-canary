@@ -20,13 +20,13 @@ function h(e) {
     id: n,
     className: i,
     innerClassName: h,
-    renderIcon: g,
-    text: p,
+    renderIcon: p,
+    text: g,
     selected: m,
     trailing: C,
     showUnread: E = !1,
     ...f
-  } = e, _ = (0, r.JA)(n), I = null !== (t = (0, a.q)(p)) && void 0 !== t ? t : "";
+  } = e, _ = (0, r.JA)(n), I = null !== (t = (0, a.q)(g)) && void 0 !== t ? t : "";
   return (0, l.jsx)("li", {
     children: (0, l.jsxs)(o.ClickableContainer, {
       ...f,
@@ -58,11 +58,11 @@ function h(e) {
           className: u.content,
           children: [(0, l.jsx)("div", {
             className: d.iconContainer,
-            children: g(d.icon)
+            children: p(d.icon)
           }), (0, l.jsx)("div", {
             className: d.name,
             "aria-hidden": !0,
-            children: p
+            children: g
           }), C]
         })
       })]

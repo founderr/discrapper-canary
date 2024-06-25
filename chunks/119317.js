@@ -1,9 +1,9 @@
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(664751),
   a = n(481060),
   r = n(703656);
-class o extends s.PureComponent {
+class o extends i.PureComponent {
   componentDidUpdate(e) {
     let {
       resetCurrentPage: t
@@ -17,12 +17,12 @@ class o extends s.PureComponent {
       totalCount: e,
       pageSize: t,
       maxVisiblePages: n,
-      children: s
+      children: i
     } = this.props, {
       currentPage: l
     } = this.state;
-    return s({
-      controller: (0, i.jsx)(a.Paginator, {
+    return i({
+      controller: (0, s.jsx)(a.Paginator, {
         totalCount: e,
         pageSize: t,
         currentPage: l,
@@ -32,8 +32,8 @@ class o extends s.PureComponent {
     })
   }
   constructor(e) {
-    var t, n, i;
-    super(e), t = this, n = "handlePageChange", i = e => {
+    var t, n, s;
+    super(e), t = this, n = "handlePageChange", s = e => {
       let {
         onPageChange: t
       } = this.props;
@@ -41,15 +41,15 @@ class o extends s.PureComponent {
         currentPage: e
       }), null != t && t(e)
     }, n in t ? Object.defineProperty(t, n, {
-      value: i,
+      value: s,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : t[n] = i;
-    let s = (0, r.s1)().location.search,
+    }) : t[n] = s;
+    let i = (0, r.s1)().location.search,
       {
         offset: a
-      } = null != s && s.length > 0 && s.startsWith("?") ? l.parse(s) : {},
+      } = null != i && i.length > 0 && i.startsWith("?") ? l.parse(i) : {},
       o = null != a ? Math.floor(parseInt(a, 10) / e.pageSize) + 1 : 1;
     this.state = {
       currentPage: o

@@ -1,9 +1,9 @@
 n.d(t, {
   h: function() {
-    return s
+    return i
   }
 });
-let i = (0, n(818083).B)({
+let s = (0, n(818083).B)({
   kind: "user",
   id: "2023-04_consumer_education_launch__reporting",
   label: "Consumer Education Launch - Reporting",
@@ -21,8 +21,8 @@ let i = (0, n(818083).B)({
   }]
 });
 
-function s() {
-  return i.useExperiment({
+function i() {
+  return s.useExperiment({
     location: "183c74_1"
   }, {
     autoTrackExposure: !0

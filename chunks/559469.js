@@ -3,18 +3,18 @@ n.d(t, {
     return r
   }
 });
-var i = n(470079),
-  s = n(116175),
+var s = n(470079),
+  i = n(116175),
   l = n(308083);
 
 function a(e) {
   let {
     id: t,
     preset: n,
-    banner: i,
+    banner: s,
     bannerHash: a,
     ...r
-  } = e, o = (0, s.lP)();
+  } = e, o = (0, i.lP)();
   return {
     id: t,
     name: "",
@@ -25,7 +25,7 @@ function a(e) {
     tag: "",
     traits: [],
     games: [],
-    banner: i,
+    banner: s,
     bannerHash: a,
     badge: {
       badgeKind: o,
@@ -42,7 +42,7 @@ function a(e) {
 }
 
 function r(e) {
-  return i.useMemo(() => [a({
+  return s.useMemo(() => [a({
     id: "1239910082150400001",
     icon: "bea185f5c9dbde7ba2f0c50363c16ec6",
     games: [e, l.DA.AGE_OF_EMPIRES_2, l.DA.APEX],

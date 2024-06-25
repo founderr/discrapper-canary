@@ -3,8 +3,8 @@ n.d(t, {
     return E
   }
 });
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(481060),
   a = n(493683),
   r = n(367907),
@@ -19,7 +19,7 @@ function E(e) {
       priorityMembers: n,
       partiedMembers: E
     } = e,
-    h = s.useContext(c.AnalyticsContext),
+    h = i.useContext(c.AnalyticsContext),
     _ = n.map(e => {
       let {
         user: t
@@ -28,7 +28,7 @@ function E(e) {
     }),
     I = 1 === E.length && 1 === n.length,
     m = n.length - E.length > 0;
-  return (I || t) && !m && 0 !== _.length ? (0, i.jsx)(l.MenuItem, {
+  return (I || t) && !m && 0 !== _.length ? (0, s.jsx)(l.MenuItem, {
     id: "message",
     action: function() {
       a.Z.openPrivateChannel(_).then(t => r.ZP.trackWithMetadata(u.rMx.ACTIVITY_FEED_DM_VISITED, {

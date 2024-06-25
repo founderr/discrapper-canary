@@ -1,12 +1,12 @@
 n(47120);
-var i = n(544891),
-  s = n(626135),
+var s = n(544891),
+  i = n(626135),
   l = n(186901),
   a = n(981631);
 t.Z = {
   [a.Etm.GET_NETWORKING_CONFIG]: {
     scope: l.lH,
-    handler: () => Promise.all([i.tn.get({
+    handler: () => Promise.all([s.tn.get({
       url: location.protocol + window.GLOBAL_ENV.NETWORKING_ENDPOINT,
       retries: 3
     }).then(e => {
@@ -16,7 +16,7 @@ t.Z = {
         }
       } = e;
       return t
-    }), i.tn.post({
+    }), s.tn.post({
       url: a.ANM.NETWORKING_TOKEN,
       retries: 3,
       oldFormErrors: !0
@@ -42,7 +42,7 @@ t.Z = {
         socket: t,
         args: n
       } = e;
-      n.application_id = t.application.id, s.default.track(a.rMx.NETWORKING_SYSTEM_METRICS, n)
+      n.application_id = t.application.id, i.default.track(a.rMx.NETWORKING_SYSTEM_METRICS, n)
     }
   },
   [a.Etm.NETWORKING_PEER_METRICS]: {
@@ -52,12 +52,12 @@ t.Z = {
         socket: t,
         args: n
       } = e;
-      n.application_id = t.application.id, s.default.track(a.rMx.NETWORKING_PEER_METRICS, n)
+      n.application_id = t.application.id, i.default.track(a.rMx.NETWORKING_PEER_METRICS, n)
     }
   },
   [a.Etm.NETWORKING_CREATE_TOKEN]: {
     scope: l.lH,
-    handler: () => i.tn.post({
+    handler: () => s.tn.post({
       url: a.ANM.NETWORKING_TOKEN,
       retries: 1,
       oldFormErrors: !0

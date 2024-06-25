@@ -1,16 +1,16 @@
-n.d(t, {
+t.d(s, {
   D2: function() {
-    return o
+    return r
   },
   SE: function() {
     return c
   }
 });
-var i = n(442837),
-  s = n(818083),
-  l = n(496675),
-  a = n(981631);
-let r = (0, s.B)({
+var l = t(442837),
+  a = t(818083),
+  i = t(496675),
+  n = t(981631);
+let o = (0, a.B)({
   kind: "guild",
   id: "2022-11_default_disable_mass_mention",
   label: "Disable mass mentions for communities by default",
@@ -26,8 +26,8 @@ let r = (0, s.B)({
   }]
 });
 
-function o(e) {
-  return r.useExperiment({
+function r(e) {
+  return o.useExperiment({
     guildId: e,
     location: "dd4beb_1"
   }, {
@@ -36,17 +36,17 @@ function o(e) {
 }
 
 function c(e) {
-  var t;
-  let n = (0, i.e7)([l.Z], () => l.Z.can(a.Plq.MANAGE_GUILD, e)),
+  var s;
+  let t = (0, l.e7)([i.Z], () => i.Z.can(n.Plq.MANAGE_GUILD, e)),
     {
-      enabled: s
-    } = r.useExperiment({
-      guildId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : a.lds,
+      enabled: a
+    } = o.useExperiment({
+      guildId: null !== (s = null == e ? void 0 : e.id) && void 0 !== s ? s : n.lds,
       location: "dd4beb_3"
     }, {
       autoTrackExposure: !0
     });
   if (null == e) return !1;
-  let o = e.hasFeature(a.oNc.COMMUNITY);
-  return n && o && s
+  let r = e.hasFeature(n.oNc.COMMUNITY);
+  return t && r && a
 }

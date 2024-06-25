@@ -1,5 +1,5 @@
-let i;
-var s = n(570140),
+let s;
+var i = n(570140),
   l = n(519938),
   a = n(317770),
   r = n(317381),
@@ -12,49 +12,49 @@ var s = n(570140),
   _ = n(19780),
   I = n(944486),
   m = n(914010),
-  g = n(979651),
-  p = n(981631),
-  N = n(65154);
+  T = n(979651),
+  g = n(981631),
+  p = n(65154);
 
-function T() {
+function N() {
   var e;
-  let t = i;
+  let t = s;
   if (null == t || !h.Z.isOpen(t)) return !1;
-  s.Z.wait(() => l.xv(t)), null === (e = _.Z.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), i = null
+  i.Z.wait(() => l.xv(t)), null === (e = _.Z.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), s = null
 }
 
-function C() {
+function S() {
   let e = _.Z.getChannelId(),
-    t = i === e;
+    t = s === e;
   return function() {
     let e = _.Z.getChannelId(),
       t = I.Z.getChannelId();
-    if (!E.Z.supports(N.AN.VIDEO) || o.Z.getWindowOpen(p.KJ3.CHANNEL_CALL_POPOUT)) return !0;
+    if (!E.Z.supports(p.AN.VIDEO) || o.Z.getWindowOpen(g.KJ3.CHANNEL_CALL_POPOUT)) return !0;
     let n = c.Z.getAllActiveStreams().length > 0,
-      i = null != e && Object.values(g.Z.getVideoVoiceStatesForChannel(e)).some(e => {
+      s = null != e && Object.values(T.Z.getVideoVoiceStatesForChannel(e)).some(e => {
         let {
           userId: t
         } = e;
         return !E.Z.isLocalVideoDisabled(t)
       });
-    if (!(i || n)) return !0;
-    let s = d.Z.hasLayers();
-    return !(s && d.Z.getLayers().includes(p.S9g.RTC_DEBUG)) && (!!s || e === t || !1)
-  }() ? T() : (!t && T(), null != e && function(e) {
+    if (!(s || n)) return !0;
+    let i = d.Z.hasLayers();
+    return !(i && d.Z.getLayers().includes(g.S9g.RTC_DEBUG)) && (!!i || e === t || !1)
+  }() ? N() : (!t && N(), null != e && function(e) {
     var t;
     let n = u.Z.getChannel(e);
     if (null == n || h.Z.isOpen(e)) return !1;
-    s.Z.wait(() => l.bA(n.id, p.NYg.VIDEO, {
+    i.Z.wait(() => l.bA(n.id, g.NYg.VIDEO, {
       channel: n
-    })), null === (t = _.Z.getRTCConnection()) || void 0 === t || t.setPipOpen(!0), i = e
+    })), null === (t = _.Z.getRTCConnection()) || void 0 === t || t.setPipOpen(!0), s = e
   }(e))
 }
-class S extends a.Z {
+class C extends a.Z {
   _initialize() {
-    I.Z.addChangeListener(C), m.Z.addChangeListener(C), _.Z.addChangeListener(C), g.Z.addChangeListener(C), d.Z.addChangeListener(C), c.Z.addChangeListener(C), o.Z.addChangeListener(C), E.Z.addChangeListener(C), r.ZP.addChangeListener(C)
+    I.Z.addChangeListener(S), m.Z.addChangeListener(S), _.Z.addChangeListener(S), T.Z.addChangeListener(S), d.Z.addChangeListener(S), c.Z.addChangeListener(S), o.Z.addChangeListener(S), E.Z.addChangeListener(S), r.ZP.addChangeListener(S)
   }
   _terminate() {
-    I.Z.removeChangeListener(C), m.Z.removeChangeListener(C), _.Z.removeChangeListener(C), g.Z.removeChangeListener(C), d.Z.removeChangeListener(C), c.Z.removeChangeListener(C), o.Z.removeChangeListener(C), E.Z.removeChangeListener(C), r.ZP.removeChangeListener(C)
+    I.Z.removeChangeListener(S), m.Z.removeChangeListener(S), _.Z.removeChangeListener(S), T.Z.removeChangeListener(S), d.Z.removeChangeListener(S), c.Z.removeChangeListener(S), o.Z.removeChangeListener(S), E.Z.removeChangeListener(S), r.ZP.removeChangeListener(S)
   }
 }
-t.Z = new S
+t.Z = new C

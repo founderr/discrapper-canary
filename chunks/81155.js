@@ -1,17 +1,17 @@
-l.r(t), l.d(t, {
+o.r(t), o.d(t, {
   default: function() {
-    return f
+    return h
   }
 });
-var n = l(735250),
-  o = l(470079),
-  s = l(481060),
-  a = l(782568),
-  r = l(499150),
-  i = l(557177),
-  u = l(689938),
-  c = l(865685);
-let d = [{
+var l = o(735250),
+  n = o(470079),
+  s = o(481060),
+  a = o(782568),
+  r = o(499150),
+  i = o(557177),
+  d = o(689938),
+  c = o(865685);
+let u = [{
   preBold: "That's pretty...",
   bold: "fly!"
 }, {
@@ -28,49 +28,49 @@ function p(e) {
   let {
     punConfig: t
   } = e;
-  return (0, n.jsxs)(n.Fragment, {
-    children: [t.preBold, (0, n.jsx)("b", {
-      children: (0, n.jsx)("i", {
+  return (0, l.jsxs)(l.Fragment, {
+    children: [t.preBold, (0, l.jsx)("b", {
+      children: (0, l.jsx)("i", {
         children: t.bold
       })
     }), t.postBold]
   })
 }
 
-function f(e) {
+function h(e) {
   let {
     transitionState: t,
-    onClose: l,
-    asanaTask: f
+    onClose: o,
+    asanaTask: h
   } = e;
-  o.useEffect(() => {
+  n.useEffect(() => {
     (0, i.GN)("success", .1)
   }, []);
-  let h = o.useRef(d[Math.floor(Math.random() * d.length)]).current;
-  return (0, n.jsx)(s.ModalRoot, {
+  let b = n.useRef(u[Math.floor(Math.random() * u.length)]).current;
+  return (0, l.jsx)(s.ModalRoot, {
     className: c.bugReporterSubmitModalRoot,
     transitionState: t,
-    "aria-label": u.Z.Messages.SUBMIT_BUG,
-    children: (0, n.jsxs)(s.ModalContent, {
+    "aria-label": d.Z.Messages.SUBMIT_BUG,
+    children: (0, l.jsxs)(s.ModalContent, {
       style: {
         overflow: "hidden",
         paddingRight: "0px"
       },
       className: c.modalContent,
       paddingFix: !1,
-      children: [(0, n.jsx)(s.ModalCloseButton, {
+      children: [(0, l.jsx)(s.ModalCloseButton, {
         onClick: () => {
-          null == l || l()
+          null == o || o()
         },
         className: c.closeButton
-      }), (0, n.jsxs)(s.Text, {
+      }), (0, l.jsxs)(s.Text, {
         className: c.submitText,
         variant: "text-sm/normal",
-        children: ["Thanks for submitting a ", (0, n.jsx)(r.Z, {
-          onClick: () => (0, a.Z)(f.permalink_url),
+        children: ["Thanks for submitting a ", (0, l.jsx)(r.Z, {
+          onClick: () => (0, a.Z)(h.permalink_url),
           children: "bug"
-        }), "!", (0, n.jsx)("br", {}), (0, n.jsx)(p, {
-          punConfig: h
+        }), "!", (0, l.jsx)("br", {}), (0, l.jsx)(p, {
+          punConfig: b
         })]
       })]
     })

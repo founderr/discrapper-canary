@@ -14,30 +14,30 @@ var i = n(442837),
   c = n(524347),
   d = n(702512),
   h = n(981631),
-  g = n(689938),
-  p = n(201032);
+  p = n(689938),
+  g = n(201032);
 let m = (e, t, n) => {
   let l = t.assets.tooltipSrc;
   switch (e) {
     case d._e.STREAM_CTA:
       return {
-        header: g.Z.Messages.DROP_ENROLLMENT_CTA_TOOLTIP_HEADER.format({
+        header: p.Z.Messages.DROP_ENROLLMENT_CTA_TOOLTIP_HEADER.format({
           gameName: t.title
-        }), body: t.messages.enrollmentTooltip(n), imgSrc: l, imgStyle: p.dropImgPreStreamNotice
+        }), body: t.messages.enrollmentTooltip(n), imgSrc: l, imgStyle: g.dropImgPreStreamNotice
       };
     case d._e.TRACK_PROGRESS:
       return {
-        header: g.Z.Messages.DROP_ENROLLMENT_CTA_TOOLTIP_HEADER.format({
+        header: p.Z.Messages.DROP_ENROLLMENT_CTA_TOOLTIP_HEADER.format({
           gameName: t.title
-        }), body: "", imgSrc: l, imgStyle: p.dropImgProgressTracker
+        }), body: "", imgSrc: l, imgStyle: g.dropImgProgressTracker
       };
     case d._e.QUEST_COMPLETION:
       return {
-        header: g.Z.Messages.DROPS_QUEST_COMPLETION_TOOLTIP_HEADER, body: t.messages.completionTooltip(n), imgSrc: l, imgStyle: p.dropImgQuestCompletion
+        header: p.Z.Messages.DROPS_QUEST_COMPLETION_TOOLTIP_HEADER, body: t.messages.completionTooltip(n), imgSrc: l, imgStyle: g.dropImgQuestCompletion
       };
     case d._e.LOADING_INITIAL_PROGRESS:
       return {
-        header: "", body: "", imgSrc: l, imgStyle: p.dropImgPreStreamNotice
+        header: "", body: "", imgSrc: l, imgStyle: g.dropImgPreStreamNotice
       }
   }
 };
@@ -50,17 +50,17 @@ function C(e) {
   return (0, l.jsxs)("div", {
     children: [(0, l.jsx)(s.Text, {
       variant: "text-sm/bold",
-      className: p.progressBarCount,
-      children: g.Z.Messages.DROPS_STREAM_PROGRESS_INDICATOR.format({
+      className: g.progressBarCount,
+      children: p.Z.Messages.DROPS_STREAM_PROGRESS_INDICATOR.format({
         minutesStreamed: a,
         streamLengthRequirement: t
       })
     }), (0, l.jsx)("div", {
-      className: p.progressBarContainer,
+      className: g.progressBarContainer,
       children: (0, l.jsx)("div", {
-        className: p.progressBarOuter,
+        className: g.progressBarOuter,
         children: (0, l.jsx)("div", {
-          className: p.progressBarInner,
+          className: g.progressBarInner,
           style: {
             width: "".concat(r, "%")
           }
@@ -68,8 +68,8 @@ function C(e) {
       })
     }), (0, l.jsxs)(s.Text, {
       variant: "text-xs/medium",
-      className: p.viewerCount,
-      children: ["*", g.Z.Messages.DROPS_REQUIRE_NUM_VIEWERS.format({
+      className: g.viewerCount,
+      children: ["*", p.Z.Messages.DROPS_REQUIRE_NUM_VIEWERS.format({
         numViewers: n
       }), "*"]
     })]
@@ -92,8 +92,8 @@ function E(e) {
     header: Z,
     body: S,
     imgSrc: x,
-    imgStyle: T
-  } = m(n, N, _), L = () => {
+    imgStyle: L
+  } = m(n, N, _), T = () => {
     o.default.track(h.rMx.DROPS_ACTIVITY_PANEL_POPOVER_CTA_CLICK, {
       user_id: f,
       drops_quest_id: N.dropsQuestId,
@@ -105,24 +105,24 @@ function E(e) {
     t()
   };
   return (0, l.jsxs)("div", {
-    className: p.container,
+    className: g.container,
     children: [(0, l.jsx)("img", {
       src: x,
       alt: "",
-      className: T
+      className: L
     }), (0, l.jsx)(s.Clickable, {
-      className: p.__invalid_buttonClose,
-      "aria-label": g.Z.Messages.CLOSE,
+      className: g.__invalid_buttonClose,
+      "aria-label": p.Z.Messages.CLOSE,
       onClick: v,
       children: (0, l.jsx)(s.CloseSmallIcon, {
         size: "xs",
         color: "currentColor",
-        className: p.closeIcon
+        className: g.closeIcon
       })
     }), n === d._e.LOADING_INITIAL_PROGRESS ? (0, l.jsx)(s.Spinner, {
-      className: p.spinner
+      className: g.spinner
     }) : (0, l.jsx)(s.Heading, {
-      className: p.title,
+      className: g.title,
       variant: "heading-md/extrabold",
       children: Z
     }), n === d._e.TRACK_PROGRESS ? (0, l.jsx)(C, {
@@ -130,34 +130,34 @@ function E(e) {
       viewerCountRequirement: I
     }) : (0, l.jsx)(s.Text, {
       variant: "text-sm/medium",
-      className: p.subTitle,
+      className: g.subTitle,
       children: S
     }), n === d._e.QUEST_COMPLETION ? (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(s.Button, {
         color: s.Button.Colors.BRAND_INVERTED,
         fullWidth: !0,
         onClick: () => {
-          t(), r.Z.open(h.oAB.INVENTORY), L()
+          t(), r.Z.open(h.oAB.INVENTORY), T()
         },
-        children: g.Z.Messages.REDEEM
+        children: p.Z.Messages.REDEEM
       }), (0, l.jsx)(s.Button, {
-        className: p.linkButtonContainer,
-        innerClassName: p.linkButton,
+        className: g.linkButtonContainer,
+        innerClassName: g.linkButton,
         onClick: v,
         look: s.Button.Looks.LINK,
         fullWidth: !0,
         color: s.Button.Colors.WHITE,
-        children: g.Z.Messages.NOT_NOW
+        children: p.Z.Messages.NOT_NOW
       })]
     }) : (0, l.jsx)(s.Button, {
       color: s.Button.Colors.BRAND_INVERTED,
       fullWidth: !0,
       onClick: () => {
-        t(), r.Z.open(h.oAB.INVENTORY), L()
+        t(), r.Z.open(h.oAB.INVENTORY), T()
       },
-      children: g.Z.Messages.LEARN_MORE
+      children: p.Z.Messages.LEARN_MORE
     }), (0, l.jsx)("div", {
-      className: p.pointer
+      className: g.pointer
     })]
   })
 }

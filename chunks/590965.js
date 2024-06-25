@@ -5,8 +5,8 @@ var i, s, r, a, o = n(442837),
   c = n(413605),
   d = n(703656),
   h = n(131704),
-  g = n(601964),
-  p = n(592125),
+  p = n(601964),
+  g = n(592125),
   m = n(430824),
   C = n(701190),
   E = n(496675),
@@ -17,9 +17,9 @@ var i, s, r, a, o = n(442837),
 let Z = I.IlC.APP,
   S = !1,
   x = !1,
-  T = [];
+  L = [];
 
-function L() {
+function T() {
   S = !0
 }
 class v extends(i = o.ZP.Store) {
@@ -28,11 +28,11 @@ class v extends(i = o.ZP.Store) {
   }
   isOpen() {
     let e = __OVERLAY__ ? I.IlC.OVERLAY : I.IlC.APP;
-    return !!(S && T.length > 0 && Z === e)
+    return !!(S && L.length > 0 && Z === e)
   }
   getProps() {
     return {
-      invite: T.length > 0 ? T[0][0] : null,
+      invite: L.length > 0 ? L[0][0] : null,
       error: null != l && "" !== l ? l : null,
       submitting: x
     }
@@ -44,8 +44,8 @@ a = "InviteModalStore", (r = "displayName") in(s = v) ? Object.defineProperty(s,
   configurable: !0,
   writable: !0
 }) : s[r] = a, t.Z = new v(u.Z, {
-  OVERLAY_INITIALIZE: L,
-  CONNECTION_OPEN: L,
+  OVERLAY_INITIALIZE: T,
+  CONNECTION_OPEN: T,
   CONNECTION_CLOSED: function() {
     S = !1
   },
@@ -59,7 +59,7 @@ a = "InviteModalStore", (r = "displayName") in(s = v) ? Object.defineProperty(s,
       } = t;
       if (null == e) return !1;
       if ((0, h.bc)(e.type)) {
-        if (null != p.Z.getChannel(e.id)) return (0, d.XU)(I.ME, e.id), _.ZP.focus(), !1
+        if (null != g.Z.getChannel(e.id)) return (0, d.XU)(I.ME, e.id), _.ZP.focus(), !1
       } else {
         if (null == n) return !1;
         if (null != m.Z.getGuild(n.id) && !(0, c.TY)(t)) {
@@ -69,7 +69,7 @@ a = "InviteModalStore", (r = "displayName") in(s = v) ? Object.defineProperty(s,
               channel: t
             } = e;
             if (null != t) {
-              let e = p.Z.getChannel(t.id);
+              let e = g.Z.getChannel(t.id);
               if (E.Z.can(I.Plq.VIEW_CHANNEL, e)) return t.id
             }
             return null
@@ -78,7 +78,7 @@ a = "InviteModalStore", (r = "displayName") in(s = v) ? Object.defineProperty(s,
         }
       }
     }
-    if (T.some(e => {
+    if (L.some(e => {
         let [n] = e;
         return n.code === t.code
       })) return !1;
@@ -109,15 +109,15 @@ a = "InviteModalStore", (r = "displayName") in(s = v) ? Object.defineProperty(s,
       };
       return null != c && (h.channel = {
         ...c
-      }), null != d && (h.guild = new g.ZP(d)), null != e.inviter && (h.inviter = {
+      }), null != d && (h.guild = new p.ZP(d)), null != e.inviter && (h.inviter = {
         ...e.inviter
       }), h
     }(t);
-    T.push([n, e.resolve])
+    L.push([n, e.resolve])
   },
   INVITE_MODAL_CLOSE: function() {
-    if (l = null, x = !1, T.length > 0) {
-      let [, e] = T.shift();
+    if (l = null, x = !1, L.length > 0) {
+      let [, e] = L.shift();
       null != e && e()
     }
   },

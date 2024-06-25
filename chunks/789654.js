@@ -1,6 +1,6 @@
 t.d(r, {
   Z: function() {
-    return Z
+    return _
   }
 }), t(47120), t(724458), t(757143), t(390547), t(653041);
 var a = t(735250),
@@ -18,8 +18,8 @@ var a = t(735250),
   p = t(203165),
   b = t(559760),
   y = t(481060),
-  f = t(410030),
-  x = t(246992),
+  x = t(410030),
+  f = t(246992),
   k = t(719556);
 
 function v(e, r) {
@@ -37,20 +37,20 @@ function j() {
   }, e
 }
 
-function N() {
+function w() {
   let e = v(["\n      export const rawPalette = {\n        ", "\n      } as const;\n    "]);
-  return N = function() {
+  return w = function() {
     return e
   }, e
 }
-let w = {
+let N = {
     ...b.K,
     ...m.J,
     ...g.c
   },
   C = {
-    ..._(b.K),
-    ..._(m.J)
+    ...E(b.K),
+    ...E(m.J)
   },
   S = ["100", "130", "160", "200", "230", "260", "300", "330", "345", "360", "400", "430", "460", "500", "530", "560", "600", "630", "645", "660", "700", "730", "760", "800", "830", "860", "900"];
 
@@ -63,16 +63,16 @@ function T(e) {
   }
 }
 
-function E(e) {
+function Z(e) {
   return "name" in e
 }
 
-function _(e) {
+function E(e) {
   let r = {};
   return Object.keys(e).forEach(t => {
     let a = e[t];
     if ("name" in a) a = function e(r) {
-      let t = w[r.name];
+      let t = N[r.name];
       return "name" in t ? e(t) : t
     }(a);
     r[t] = {
@@ -94,8 +94,8 @@ function I(e, r) {
   }, [e, t]), [t, a]
 }
 
-function Z() {
-  let e = (0, f.Fg)(),
+function _() {
+  let e = (0, x.Fg)(),
     [{
       rawPalette: r,
       semanticTokens: t
@@ -113,13 +113,13 @@ function Z() {
       semanticTokens: C
     }),
     [g, b] = n.useState(""),
-    [v, w] = n.useState({}),
-    [T, E] = n.useState({}),
-    _ = n.useMemo(() => Object.keys(r).reduce((e, r) => [...e, {
+    [v, N] = n.useState({}),
+    [T, Z] = n.useState({}),
+    E = n.useMemo(() => Object.keys(r).reduce((e, r) => [...e, {
       value: r,
       label: r
     }], []), [r]),
-    Z = n.useCallback((e, a, n, l) => {
+    _ = n.useCallback((e, a, n, l) => {
       let o = d().cloneDeep(t);
       o[e][a] = {
         color: n,
@@ -182,8 +182,8 @@ function Z() {
         return "".concat(a ? "\n" : "").concat(u)
       }).join(",\n"))
     }, []),
-    A = n.useCallback(e => c()(N(), Object.keys(e).map(r => '"'.concat(r, '": {hex: "').concat(e[r].hex, '"}'))), []),
-    P = n.useCallback(e => {
+    L = n.useCallback(e => c()(w(), Object.keys(e).map(r => '"'.concat(r, '": {hex: "').concat(e[r].hex, '"}'))), []),
+    A = n.useCallback(e => {
       let r = {};
       Object.keys(e).forEach(t => {
         Object.keys(e[t]).map(a => {
@@ -233,14 +233,14 @@ function Z() {
           size: y.Button.Sizes.MIN,
           onClick: () => {
             navigator.clipboard.readText().then(e => {
-              P(JSON.parse(e))
+              A(JSON.parse(e))
             })
           },
           children: "Import"
         }), (0, a.jsx)(y.Button, {
           size: y.Button.Sizes.MIN,
           onClick: () => {
-            navigator.clipboard.writeText(A(r))
+            navigator.clipboard.writeText(L(r))
           },
           children: "Export"
         })]
@@ -309,13 +309,13 @@ function Z() {
           return (0, a.jsxs)(n.Fragment, {
             children: [(0, a.jsx)("div", {
               onMouseEnter: () => {
-                E(e => ({
+                Z(e => ({
                   ...e,
                   [r]: !0
                 }))
               },
               onMouseLeave: () => {
-                E(e => ({
+                Z(e => ({
                   ...e,
                   [r]: !1
                 }))
@@ -323,7 +323,7 @@ function Z() {
               children: (0, a.jsx)(y.Checkbox, {
                 value: v[r],
                 onChange: () => {
-                  w(e => ({
+                  N(e => ({
                     ...e,
                     [r]: !e[r]
                   }))
@@ -333,9 +333,9 @@ function Z() {
               children: r
             }), (0, a.jsx)(y.SearchableSelect, {
               value: o.color,
-              options: _,
+              options: E,
               onChange: t => {
-                Z(r, e, t, o.opacity)
+                _(r, e, t, o.opacity)
               },
               renderOptionPrefix: r => null == r ? null : (0, a.jsx)("div", {
                 style: {
@@ -346,7 +346,7 @@ function Z() {
                   border: "1px solid ".concat("dark" === e ? "white" : "black")
                 }
               }),
-              popoutLayerContext: x.O$
+              popoutLayerContext: f.O$
             }), (0, a.jsx)(y.TextInput, {
               type: "number",
               style: {
@@ -354,7 +354,7 @@ function Z() {
               },
               value: null === (i = o.opacity) || void 0 === i ? void 0 : i.toString(),
               onChange: t => {
-                "" !== t && Z(r, e, o.color, parseFloat(t))
+                "" !== t && _(r, e, o.color, parseFloat(t))
               }
             }), (0, a.jsx)(y.Clickable, {
               style: c ? {} : {
@@ -363,7 +363,7 @@ function Z() {
               },
               onClick: () => {
                 var t;
-                c && Z(r, e, l.color, null !== (t = l.opacity) && void 0 !== t ? t : 1)
+                c && _(r, e, l.color, null !== (t = l.opacity) && void 0 !== t ? t : 1)
               },
               children: (0, a.jsx)(y.CloseSmallIcon, {
                 size: "xs",

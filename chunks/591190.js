@@ -1,23 +1,23 @@
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(120356),
-  l = n.n(s),
+var i = n(120356),
+  l = n.n(i),
   a = n(145502);
-let r = () => (0, i.jsx)("div", {
+let r = () => (0, s.jsx)("div", {
     className: a.spacer
   }),
-  o = () => (0, i.jsx)("div", {
+  o = () => (0, s.jsx)("div", {
     className: a.category
   }),
   c = e => {
     let {
       width: t
     } = e;
-    return (0, i.jsxs)("div", {
+    return (0, s.jsxs)("div", {
       className: a.channel,
-      children: [(0, i.jsx)("div", {
+      children: [(0, s.jsx)("div", {
         className: a.channelIcon
-      }), (0, i.jsx)("div", {
+      }), (0, s.jsx)("div", {
         className: a.channelName,
         style: {
           width: "".concat(t, "px")
@@ -29,33 +29,33 @@ t.Z = e => {
   let {
     withBannerPadding: t
   } = e;
-  return (0, i.jsxs)("div", {
+  return (0, s.jsxs)("div", {
     className: l()(a.container, {
       [a.bannerPadding]: t
     }),
-    children: [(0, i.jsx)(o, {}), (0, i.jsx)(c, {
+    children: [(0, s.jsx)(o, {}), (0, s.jsx)(c, {
       width: 100
-    }), (0, i.jsx)(c, {
+    }), (0, s.jsx)(c, {
       width: 74
-    }), (0, i.jsx)(c, {
+    }), (0, s.jsx)(c, {
       width: 100
-    }), (0, i.jsx)(c, {
+    }), (0, s.jsx)(c, {
       width: 70
-    }), (0, i.jsx)(c, {
+    }), (0, s.jsx)(c, {
       width: 112
-    }), (0, i.jsx)(c, {
+    }), (0, s.jsx)(c, {
       width: 175
-    }), (0, i.jsx)(r, {}), (0, i.jsx)(o, {}), (0, i.jsx)(c, {
+    }), (0, s.jsx)(r, {}), (0, s.jsx)(o, {}), (0, s.jsx)(c, {
       width: 100
-    }), (0, i.jsx)(c, {
+    }), (0, s.jsx)(c, {
       width: 74
-    }), (0, i.jsx)(c, {
+    }), (0, s.jsx)(c, {
       width: 100
-    }), (0, i.jsx)(c, {
+    }), (0, s.jsx)(c, {
       width: 70
-    }), (0, i.jsx)(c, {
+    }), (0, s.jsx)(c, {
       width: 112
-    }), (0, i.jsx)(c, {
+    }), (0, s.jsx)(c, {
       width: 56
     })]
   })

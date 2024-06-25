@@ -1,6 +1,6 @@
 n(47120);
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(120356),
   a = n.n(l),
   r = n(748780),
@@ -18,7 +18,7 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class _ extends s.PureComponent {
+class _ extends i.PureComponent {
   componentWillLeave(e) {
     r.Z.parallel([r.Z.timing(this.state.opacity, {
       toValue: 0,
@@ -42,23 +42,23 @@ class _ extends s.PureComponent {
       height: e,
       opacity: t,
       hovered: n,
-      isContextMenuActive: s
+      isContextMenuActive: i
     } = this.state, {
       children: l,
       user: u,
       onClick: d,
       isActive: h
     } = this.props;
-    return (0, i.jsx)(o.mh, {
+    return (0, s.jsx)(o.mh, {
       id: u.id,
-      children: o => (0, i.jsx)(c.FocusRing, {
+      children: o => (0, s.jsx)(c.FocusRing, {
         offset: {
           left: -8,
           right: -8
         },
-        children: (0, i.jsx)(r.Z.div, {
+        children: (0, s.jsx)(r.Z.div, {
           className: a()(E.peopleListItem, {
-            [E.active]: h || s
+            [E.active]: h || i
           }),
           onContextMenu: e => this.handleContextMenu(e, u),
           onMouseEnter: this.handleMouseEnter,
@@ -69,7 +69,7 @@ class _ extends s.PureComponent {
             opacity: t
           },
           ...o,
-          children: l(n || h || s)
+          children: l(n || h || i)
         })
       })
     })
@@ -86,11 +86,11 @@ class _ extends s.PureComponent {
         isActive: t,
         onOtherHover: n
       } = this.props, {
-        isContextMenuActive: i
+        isContextMenuActive: s
       } = this.state;
       this.setState({
         hovered: e
-      }), e && !t && !i && (null == n || n())
+      }), e && !t && !s && (null == n || n())
     }), h(this, "handleMouseLeave", () => {
       this.setState({
         hovered: !1
@@ -102,7 +102,7 @@ class _ extends s.PureComponent {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("79695"), n.e("32006"), n.e("69220")]).then(n.bind(n, 881351));
-        return n => (0, i.jsx)(e, {
+        return n => (0, s.jsx)(e, {
           ...n,
           user: t
         })

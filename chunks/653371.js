@@ -1,24 +1,24 @@
 n.d(t, {
   a: function() {
-    return C
+    return I
   }
 }), n(47120), n(653041);
-var l = n(735250),
-  a = n(470079),
+var a = n(735250),
+  l = n(470079),
   i = n(557533),
-  r = n.n(i),
-  s = n(771950),
+  s = n.n(i),
+  r = n(771950),
   o = n(860911),
   c = n(66037),
-  u = n(787907),
-  d = n(643103),
+  d = n(787907),
+  u = n(643103),
   h = n(34211),
   p = n(231338),
   m = n(436620),
   N = n(431138),
   k = n(705478);
 
-function x(e, t, n) {
+function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -26,9 +26,9 @@ function x(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let g = p.j_.MAIN_NAVIGATION_MENU,
-  f = () => [{
-    route: (0, s.L)(p.RK.TWITTER),
+let C = p.j_.MAIN_NAVIGATION_MENU,
+  x = () => [{
+    route: (0, r.L)(p.RK.TWITTER),
     linkClicked: "twitter",
     alt: "Discord's Twitter",
     img: N.r.ASSET_SOCIAL_TWITTER
@@ -43,7 +43,7 @@ let g = p.j_.MAIN_NAVIGATION_MENU,
     alt: "Discord's Instagram",
     img: N.r.ASSET_SOCIAL_INSTAGRAM
   }];
-class C extends a.PureComponent {
+class I extends l.PureComponent {
   componentDidMount() {
     this.setState({
       isAppCompatible: m.KO
@@ -54,86 +54,86 @@ class C extends a.PureComponent {
       className: e,
       mainContentId: t,
       skipToContentLabel: n,
-      NavigationMessages: a,
+      NavigationMessages: l,
       onChangeLocale: i,
-      TrackClick: s,
+      TrackClick: r,
       avoidRouter: o
     } = this.props;
-    return (0, l.jsxs)("header", {
-      className: r()(k.header, e),
-      children: [(0, l.jsxs)("nav", {
+    return (0, a.jsxs)("header", {
+      className: s()(k.header, e),
+      children: [(0, a.jsxs)("nav", {
         className: k.headerInner,
-        children: [(0, l.jsxs)("div", {
+        children: [(0, a.jsxs)("div", {
           className: k.headerLogo,
-          children: [(0, l.jsx)(s, {
+          children: [(0, a.jsx)(r, {
             tag: "div",
-            eventName: g,
+            eventName: C,
             data: {
               linkClicked: "logo"
             },
-            children: (0, l.jsx)(c.Z, {
+            children: (0, a.jsx)(c.Z, {
               avoidRouter: o,
               to: p.am.INDEX,
               from: p.j_.MAIN_NAVIGATION_MENU,
-              children: (0, l.jsx)(u.O, {})
+              children: (0, a.jsx)(d.O, {})
             })
-          }), null != t ? (0, l.jsx)("a", {
+          }), null != t ? (0, a.jsx)("a", {
             className: k.skipToContent,
             href: "#".concat(t),
             children: n
           }) : null]
-        }), (0, l.jsx)("ul", {
+        }), (0, a.jsx)("ul", {
           className: k.headerNav,
-          children: (0, l.jsx)(h.o, {
+          children: (0, a.jsx)(h.o, {
             avoidRouter: o,
-            TrackClick: s,
+            TrackClick: r,
             styles: k,
-            NavigationMessages: a
+            NavigationMessages: l
           })
-        }), (0, l.jsxs)("ul", {
+        }), (0, a.jsxs)("ul", {
           className: k.headerNavRight,
-          children: [this.renderSocialMediaNav(), (0, l.jsx)(d.p, {
+          children: [this.renderSocialMediaNav(), (0, a.jsx)(u.p, {
             onChange: i
           })]
         })]
-      }), null != t && (0, l.jsx)("div", {
+      }), null != t && (0, a.jsx)("div", {
         id: t,
         tabIndex: -1
       })]
     })
   }
   constructor(...e) {
-    super(...e), x(this, "state", {
+    super(...e), g(this, "state", {
       isAppCompatible: !0
-    }), x(this, "getAppButton", () => {
+    }), g(this, "getAppButton", () => {
       let {
         token: e,
         NavigationMessages: t,
         TrackClick: n,
-        authRedirectTo: a
+        authRedirectTo: l
       } = this.props, {
         isAppCompatible: i
-      } = this.state, r = (0, o.U)(a), s = t.LOGIN;
-      return null != e && (r = p.$w.ME, s = t.OPEN), i ? (0, l.jsx)("li", {
+      } = this.state, s = (0, o.U)(l), r = t.LOGIN;
+      return null != e && (s = p.$w.ME, r = t.OPEN), i ? (0, a.jsx)("li", {
         className: k.listItemInactive,
-        children: (0, l.jsx)(n, {
-          eventName: g,
+        children: (0, a.jsx)(n, {
+          eventName: C,
           className: k.appButton,
           data: {
             linkClicked: e ? "open" : "login",
             googleAnalytics: !0
           },
-          href: r,
-          children: s
+          href: s,
+          children: r
         })
       }, "app-button") : null
-    }), x(this, "renderSocialMediaNav", () => {
+    }), g(this, "renderSocialMediaNav", () => {
       let {
         TrackClick: e
-      } = this.props, t = f().map(t => (0, l.jsx)("li", {
-        className: r()(k.listItemInactive, k.listItemSocialMedia),
-        children: (0, l.jsx)(e, {
-          eventName: g,
+      } = this.props, t = x().map(t => (0, a.jsx)("li", {
+        className: s()(k.listItemInactive, k.listItemSocialMedia),
+        children: (0, a.jsx)(e, {
+          eventName: C,
           className: k.rightNavLink,
           data: {
             linkClicked: t.linkClicked
@@ -141,7 +141,7 @@ class C extends a.PureComponent {
           href: t.route,
           rel: "me",
           target: "_blank",
-          children: (0, l.jsx)("img", {
+          children: (0, a.jsx)("img", {
             src: t.img,
             alt: t.alt
           })

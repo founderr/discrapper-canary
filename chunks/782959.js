@@ -3,9 +3,9 @@ n.d(t, {
     return h
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
   l = n(367907),
   a = n(970731),
   r = n(810090),
@@ -19,13 +19,13 @@ function h(e) {
   let {
     guildId: t,
     markAsDismissed: h
-  } = e, _ = (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(s.Text, {
+  } = e, _ = (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsx)(i.Text, {
       color: "always-white",
       variant: "text-sm/normal",
       className: E.upsellBody,
       children: d.Z.Messages.MEDIA_CHANNEL_UPSELL_BODY
-    }), (0, i.jsx)(s.Text, {
+    }), (0, s.jsx)(i.Text, {
       color: "always-white",
       variant: "text-sm/normal",
       children: d.Z.Messages.MEDIA_CHANNEL_LEARN_MORE.format({
@@ -33,10 +33,10 @@ function h(e) {
       })
     })]
   });
-  return (0, i.jsx)(a.ZP, {
+  return (0, s.jsx)(a.ZP, {
     header: d.Z.Messages.MEDIA_CHANNEL_UPSELL_TITLE,
     content: _,
-    asset: (0, i.jsx)(r.Z, {
+    asset: (0, s.jsx)(r.Z, {
       className: E.video,
       src: "https://cdn.discordapp.com/assets/media_channel/media_channel_upsell_demo.mp4",
       autoPlay: !0,
@@ -46,11 +46,11 @@ function h(e) {
     onClick: () => {
       o.default.track(u.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, {
         ...(0, l.hH)(t)
-      }), (0, s.openModalLazy)(async () => {
+      }), (0, i.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("45094")]).then(n.bind(n, 218613));
-        return n => (0, i.jsx)(e, {
+        return n => (0, s.jsx)(e, {
           ...n,
           channelType: u.d4z.GUILD_MEDIA,
           guildId: t

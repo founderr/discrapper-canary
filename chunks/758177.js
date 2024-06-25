@@ -1,6 +1,6 @@
 n(47120);
-var i = n(594174),
-  s = n(768581),
+var s = n(594174),
+  i = n(768581),
   l = n(956664),
   a = n(996106),
   r = n(452426),
@@ -25,9 +25,9 @@ t.Z = {
         }
       } = e;
       if ("user" === n) {
-        let e = i.default.getUser(r);
+        let e = s.default.getUser(r);
         if (null != e) {
-          t = s.ZP.getUserAvatarURL(e, !1, u, o);
+          t = i.ZP.getUserAvatarURL(e, !1, u, o);
           let n = window.GLOBAL_ENV.CDN_HOST;
           null != n && -1 !== t.indexOf(n) && (t += "&_=")
         } else throw new a.Z({

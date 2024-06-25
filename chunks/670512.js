@@ -10,7 +10,7 @@ var l = n(735250),
   d = n(689938),
   h = n(97124);
 
-function g(e, t, n) {
+function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -18,7 +18,7 @@ function g(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let p = {
+let g = {
   friction: 15,
   tension: 100
 };
@@ -40,7 +40,7 @@ class m extends i.PureComponent {
   springTo(e) {
     a.Z.spring(this.state.translateY, {
       toValue: Math.min(e, 250),
-      ...p
+      ...g
     }).start()
   }
   renderArrowGroup(e) {
@@ -111,10 +111,10 @@ class m extends i.PureComponent {
     }
   }
   constructor(...e) {
-    super(...e), g(this, "state", {
+    super(...e), p(this, "state", {
       shown: !1,
       translateY: new a.Z.Value(0)
-    }), g(this, "rootRef", i.createRef()), g(this, "focusTimeout", new o.V7), g(this, "handleResultFocus", e => {
+    }), p(this, "rootRef", i.createRef()), p(this, "focusTimeout", new o.V7), p(this, "handleResultFocus", e => {
       let {
         node: t
       } = e;

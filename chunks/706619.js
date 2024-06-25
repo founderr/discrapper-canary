@@ -16,7 +16,7 @@ function o(e) {
     c = (0, a.useToken)(r.Z.colors.BACKGROUND_PRIMARY).hsl(),
     d = (0, a.useToken)(r.Z.colors.TEXT_NORMAL).hsl(),
     h = (0, a.useToken)(r.Z.colors.BACKGROUND_ACCENT).hsl(),
-    g = (0, a.useToken)(r.Z.unsafe_rawColors.BRAND_500).hsl();
+    p = (0, a.useToken)(r.Z.unsafe_rawColors.BRAND_500).hsl();
   (0, i.useEffect)(() => {
     var e;
     let n = t.current;
@@ -24,14 +24,14 @@ function o(e) {
     let l = new s.TimelineGraphView(n, null !== (e = window.devicePixelRatio) && void 0 !== e ? e : 1);
     l.backgroundColor = c, l.textColor = d, l.gridColor = h, l.timeOptions = {
       timeStyle: "short"
-    }, l.fontFamily = "gg sans", l.fontSize = 11, u.setColor(g), l.addDataSeries(u), l.updateEndDate(), o(l)
-  }, [t, c, g, h, d, u]), u.setPoints(e.dataPoints), null == n || n.updateEndDate();
-  let p = {
+    }, l.fontFamily = "gg sans", l.fontSize = 11, u.setColor(p), l.addDataSeries(u), l.updateEndDate(), o(l)
+  }, [t, c, p, h, d, u]), u.setPoints(e.dataPoints), null == n || n.updateEndDate();
+  let g = {
     width: e.width,
     height: e.height
   };
   return (0, l.jsx)("canvas", {
-    style: p,
+    style: g,
     width: e.width,
     height: e.height,
     ref: t

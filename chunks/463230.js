@@ -16,8 +16,8 @@ t.Z = e => {
     dismissCurrentNotice: _
   } = e, I = (null == t ? void 0 : t.metadata.premiumSubscription) != null, T = (0, r.n)();
   if ((0, o.U)(c.jXE.NOTIFICATION_BAR, null == T ? void 0 : T.countryCode), null == T) return null;
-  let N = T.countryCode,
-    m = T.currency,
+  let m = T.countryCode,
+    N = T.currency,
     h = T.paymentSourceTypes.length > 0;
   return (0, s.jsxs)(i.Notice, {
     color: I ? i.NoticeColors.BRAND : i.NoticeColors.PREMIUM_TIER_2,
@@ -28,7 +28,7 @@ t.Z = e => {
       size: "md",
       color: "currentColor",
       className: E.premiumIcon
-    }), (0, a.Gv)(N, m, h, I), (0, s.jsx)(i.PrimaryCTANoticeButton, {
+    }), (0, a.Gv)(m, N, h, I), (0, s.jsx)(i.PrimaryCTANoticeButton, {
       onClick: () => {
         _(u.L.UNKNOWN), l.Z.open(c.oAB.PREMIUM)
       },

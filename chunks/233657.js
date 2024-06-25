@@ -14,8 +14,8 @@ var i = n(442837),
   c = n(306680),
   d = n(9156),
   h = n(434479),
-  g = n(490897),
-  p = n(689938),
+  p = n(490897),
+  g = n(689938),
   m = n(359123);
 
 function C(e) {
@@ -26,8 +26,8 @@ function C(e) {
     hasUnread: E,
     mentionCount: f
   } = (0, i.cj)([c.ZP], () => ({
-    hasUnread: c.ZP.hasUnread(t.id, g.W.GUILD_EVENT),
-    mentionCount: c.ZP.getMentionCount(t.id, g.W.GUILD_EVENT)
+    hasUnread: c.ZP.hasUnread(t.id, p.W.GUILD_EVENT),
+    mentionCount: c.ZP.getMentionCount(t.id, p.W.GUILD_EVENT)
   }), [t.id]), _ = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
   async function I() {
     await (0, r.openModalLazy)(async () => {
@@ -41,9 +41,9 @@ function C(e) {
     }), (0, o.EW)(s.z.GUILD_HEADER_EVENT_UPSELL)
   }
   let N = (0, u.ZP)(t.id),
-    Z = N.length > 0 ? p.Z.Messages.GUILD_EVENTS_PLURAL.format({
+    Z = N.length > 0 ? g.Z.Messages.GUILD_EVENTS_PLURAL.format({
       number: N.length
-    }) : p.Z.Messages.GUILD_EVENTS;
+    }) : g.Z.Messages.GUILD_EVENTS;
   return (0, l.jsx)(h.m, {
     id: "upcoming-events-".concat(t.id),
     renderIcon: e => (0, l.jsx)(r.CalendarIcon, {

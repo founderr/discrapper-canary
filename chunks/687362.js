@@ -1,32 +1,32 @@
-t.d(s, {
+s.d(t, {
   Z: function() {
-    return E
+    return _
   },
   v: function() {
     return u
   }
 });
-var n = t(704215),
-  a = t(605236),
-  r = t(391110),
-  i = t(75077),
-  l = t(595878),
-  o = t(314684),
-  _ = t(735825),
-  c = t(689938);
+var n = s(704215),
+  a = s(605236),
+  i = s(391110),
+  r = s(75077),
+  l = s(595878),
+  o = s(314684),
+  c = s(735825),
+  E = s(689938);
 
-function E() {
+function _() {
   let e = (0, o.yQ)(),
-    s = (0, l.c)({
-      location: r.MQ.HOME
+    t = (0, l.c)({
+      location: i.MQ.HOME
     });
-  if (null != e && !!s) return {
-    title: (0, i.k3)(e.nitroTenureStatus),
-    subtitle: (0, i.vZ)(e.nitroTenureStatus, null == e ? void 0 : e.tenureRewardSkuId),
-    description: (0, i.BS)(e.nitroTenureStatus),
-    ctaDescription: (0, i.t2)(e.nitroTenureStatus, e.redeemableInDays),
-    pillText: e.nitroTenureStatus === _.EB.PENDING ? c.Z.Messages.REWARD.toLocaleUpperCase() : void 0,
-    dismissibleContentType: e.nitroTenureStatus === _.EB.REDEEMABLE ? n.z.TENURE_REWARD_REDEEMABLE_CONFETTI : void 0
+  if (null != e && !!t) return {
+    title: (0, r.k3)(e.nitroTenureStatus),
+    subtitle: (0, r.vZ)(e.nitroTenureStatus, null == e ? void 0 : e.tenureRewardSkuId),
+    description: (0, r.BS)(e.nitroTenureStatus),
+    ctaDescription: (0, r.t2)(e.nitroTenureStatus, e.redeemableInDays),
+    pillText: e.nitroTenureStatus === c.EB.PENDING ? E.Z.Messages.REWARD.toLocaleUpperCase() : void 0,
+    dismissibleContentType: e.nitroTenureStatus === c.EB.REDEEMABLE ? n.z.TENURE_REWARD_REDEEMABLE_CONFETTI : void 0
   }
 }
 

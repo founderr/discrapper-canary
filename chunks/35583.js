@@ -20,7 +20,7 @@ function T(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class N extends i.PureComponent {
+class m extends i.PureComponent {
   static getDerivedStateFromProps(e, t) {
     return e.mode !== t.memoizedMode ? {
       memoizedMode: e.mode,
@@ -76,4 +76,4 @@ class N extends i.PureComponent {
 }
 t.Z = l.ZP.connectStores([c.Z], () => ({
   mode: c.Z.getState()
-}))(N)
+}))(m)

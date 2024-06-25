@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return L
+    return T
   }
 }), n(47120);
 var l = n(735250),
@@ -13,14 +13,14 @@ var l = n(735250),
   c = n(594174),
   d = n(672938),
   h = n(936195),
-  g = n(727218),
-  p = n(602623),
+  p = n(727218),
+  g = n(602623),
   m = n(81063),
   C = n(768581),
   E = n(823379),
   f = n(51144),
   _ = n(328979);
-let I = p.u.SIZE_24;
+let I = g.u.SIZE_24;
 
 function N(e) {
   var t, n;
@@ -46,15 +46,15 @@ function N(e) {
       })
     })
   }(a) : null;
-  let g = null !== (t = d.large_image) && void 0 !== t ? t : d.small_image,
-    p = (0, u.Z)(s),
-    E = p ? _.spotifyLargeImage : _.applicationLargeImage,
-    f = null != g ? (0, l.jsx)("img", {
+  let p = null !== (t = d.large_image) && void 0 !== t ? t : d.small_image,
+    g = (0, u.Z)(s),
+    E = g ? _.spotifyLargeImage : _.applicationLargeImage,
+    f = null != p ? (0, l.jsx)("img", {
       alt: null !== (n = d.large_text) && void 0 !== n ? n : "",
-      src: (0, m.getAssetImage)(h, g, [128, 128]),
+      src: (0, m.getAssetImage)(h, p, [128, 128]),
       className: E
     }) : null;
-  return p && null != c ? (f = (0, l.jsx)(o.Clickable, {
+  return g && null != c ? (f = (0, l.jsx)(o.Clickable, {
     className: _.clickable,
     onClick: () => {
       c(s, r.id)
@@ -90,7 +90,7 @@ function Z(e) {
       children: s
     })
   }
-  return (0, l.jsx)(g.Z, {
+  return (0, l.jsx)(p.Z, {
     title: r,
     className: _.header,
     children: a
@@ -126,7 +126,7 @@ function x(e) {
   })
 }
 
-function T(e) {
+function L(e) {
   let {
     activity: t
   } = e;
@@ -148,7 +148,7 @@ function T(e) {
   })
 }
 
-function L(e) {
+function T(e) {
   let {
     activity: t,
     embeddedApp: n,
@@ -156,11 +156,11 @@ function L(e) {
     channel: r,
     sortedVoiceStates: d,
     onOpenSpotifyTrack: h,
-    onOpenSpotifyArtist: g,
+    onOpenSpotifyArtist: p,
     onOpenSpotifyAlbum: m
   } = e, C = [];
   null != n ? C = Array.from(n.embeddedActivity.userIds) : (0, u.Z)(t) && null != d && (C = d.map(e => e.user.id));
-  let L = (0, a.Wu)([c.default], () => C.map(e => c.default.getUser(e)).filter(E.lm)),
+  let T = (0, a.Wu)([c.default], () => C.map(e => c.default.getUser(e)).filter(E.lm)),
     v = null != n || (0, u.Z)(t),
     A = i.useMemo(() => {
       let e = new Map;
@@ -187,13 +187,13 @@ function L(e) {
         }), (0, l.jsx)(S, {
           activity: t,
           user: s,
-          onOpenSpotifyArtist: g
+          onOpenSpotifyArtist: p
         }), (0, l.jsx)(x, {
           activity: t
-        }), C.length > 0 && (0, l.jsx)(p.Z, {
+        }), C.length > 0 && (0, l.jsx)(g.Z, {
           className: _.usersSummary,
           guildId: r.guild_id,
-          users: L,
+          users: T,
           size: I,
           max: 7,
           renderUser: e => {
@@ -213,7 +213,7 @@ function L(e) {
           }
         })]
       })]
-    }), (0, l.jsx)(T, {
+    }), (0, l.jsx)(L, {
       activity: t
     })]
   }) : null

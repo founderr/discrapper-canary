@@ -1,27 +1,27 @@
-r.d(n, {
+t.d(n, {
   L: function() {
     return c
   }
 });
-var t = r(735250);
-r(470079);
-var o = r(409813),
-  a = r(443650),
-  i = r(464797),
-  l = r(950806);
+var r = t(735250);
+t(470079);
+var o = t(409813),
+  a = t(443650),
+  l = t(464797),
+  s = t(950806);
 
-function s(e) {
+function i(e) {
   let {
     onClose: n
   } = e, {
-    guildProductListing: r
-  } = (0, i._)();
-  return (0, t.jsx)(a.Z, {
-    guildProductListing: r,
-    className: l.header,
+    guildProductListing: t
+  } = (0, l._)();
+  return (0, r.jsx)(a.Z, {
+    guildProductListing: t,
+    className: s.header,
     onClose: n
   })
 }
-let c = (e, n, r) => r === o.h8.CONFIRM ? null : (0, t.jsx)(s, {
+let c = (e, n, t) => t === o.h8.CONFIRM ? null : (0, r.jsx)(i, {
   onClose: () => n(!1)
 })

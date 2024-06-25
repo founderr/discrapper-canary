@@ -3,9 +3,9 @@ n.d(t, {
     return c
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
   l = n(287734),
   a = n(872810),
   r = n(51144),
@@ -20,7 +20,7 @@ function c(e) {
       stream: t,
       streamUser: n
     } = e;
-    return (0, i.jsx)(s.MenuItem, {
+    return (0, s.jsx)(i.MenuItem, {
       id: "spectate-".concat(t.ownerId),
       action: () => {
         l.default.selectVoiceChannel(t.channelId), (0, a.iV)(t)

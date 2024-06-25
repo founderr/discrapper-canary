@@ -1,100 +1,100 @@
-t.d(s, {
+n.d(t, {
   Z: function() {
     return _
   }
 });
-var n = t(735250),
-  r = t(470079),
-  i = t(120356),
-  a = t.n(i),
-  l = t(481060),
-  o = t(55935),
-  c = t(981631),
-  u = t(689938),
-  I = t(45154);
-let T = e => {
+var s = n(735250),
+  i = n(470079),
+  l = n(120356),
+  a = n.n(l),
+  r = n(481060),
+  o = n(55935),
+  c = n(981631),
+  u = n(689938),
+  d = n(45154);
+let E = e => {
     let {
-      IconComponent: s,
-      className: t
+      IconComponent: t,
+      className: n
     } = e;
-    return (0, n.jsx)("div", {
-      className: a()(I.iconCircle, t),
-      children: (0, n.jsx)(s, {
-        className: I.icon,
+    return (0, s.jsx)("div", {
+      className: a()(d.iconCircle, n),
+      children: (0, s.jsx)(t, {
+        className: d.icon,
         color: "currentColor"
       })
     })
   },
-  d = e => {
+  h = e => {
     let {
-      circle: s,
-      smallHeader: t,
-      text: r,
-      className: i
+      circle: t,
+      smallHeader: n,
+      text: i,
+      className: l
     } = e;
-    return (0, n.jsxs)("div", {
-      className: a()(I.recommendationReason, i),
-      children: [s, (0, n.jsxs)("div", {
-        className: I.description,
-        children: [null != t ? (0, n.jsx)("div", {
-          className: I.smallHeader,
-          children: t
-        }) : null, (0, n.jsx)("div", {
-          className: I.text,
-          children: r
+    return (0, s.jsxs)("div", {
+      className: a()(d.recommendationReason, l),
+      children: [t, (0, s.jsxs)("div", {
+        className: d.description,
+        children: [null != n ? (0, s.jsx)("div", {
+          className: d.smallHeader,
+          children: n
+        }) : null, (0, s.jsx)("div", {
+          className: d.text,
+          children: i
         })]
       })]
     })
   };
-class _ extends r.Component {
+class _ extends i.Component {
   render() {
     let {
       reason: e,
-      className: s
+      className: t
     } = this.props;
-    if (e.type === c.AzA.RECENT_RELEASE_DATE) return (0, n.jsx)(d, {
-      className: s,
-      circle: (0, n.jsx)(T, {
-        IconComponent: l.CalendarIcon
+    if (e.type === c.AzA.RECENT_RELEASE_DATE) return (0, s.jsx)(h, {
+      className: t,
+      circle: (0, s.jsx)(E, {
+        IconComponent: r.CalendarIcon
       }),
       smallHeader: u.Z.Messages.APPLICATION_STORE_NEW_RELEASE,
       text: (0, o.vc)(e.releaseDate, "LL")
     });
-    if (e.type === c.AzA.RELEASE_DATE) return (0, n.jsx)(d, {
-      className: s,
-      circle: (0, n.jsx)(T, {
-        IconComponent: l.CalendarIcon
+    if (e.type === c.AzA.RELEASE_DATE) return (0, s.jsx)(h, {
+      className: t,
+      circle: (0, s.jsx)(E, {
+        IconComponent: r.CalendarIcon
       }),
       smallHeader: u.Z.Messages.APPLICATION_STORE_DETAILS_RELEASE_DATE,
       text: (0, o.vc)(e.releaseDate, "LL")
     });
-    if (e.type === c.AzA.EARLY_ACCESS) return null != e.releaseDate ? (0, n.jsx)(d, {
-      className: s,
-      circle: (0, n.jsx)(T, {
-        IconComponent: l.LockUnlockedIcon,
-        className: I.earlyAccess
+    if (e.type === c.AzA.EARLY_ACCESS) return null != e.releaseDate ? (0, s.jsx)(h, {
+      className: t,
+      circle: (0, s.jsx)(E, {
+        IconComponent: r.LockUnlockedIcon,
+        className: d.earlyAccess
       }),
       smallHeader: u.Z.Messages.APPLICATION_STORE_EARLY_ACCESS,
       text: (0, o.vc)(e.releaseDate, "LL")
-    }) : (0, n.jsx)(d, {
-      className: s,
-      circle: (0, n.jsx)(T, {
-        IconComponent: l.LockUnlockedIcon,
-        className: I.earlyAccess
+    }) : (0, s.jsx)(h, {
+      className: t,
+      circle: (0, s.jsx)(E, {
+        IconComponent: r.LockUnlockedIcon,
+        className: d.earlyAccess
       }),
       text: u.Z.Messages.APPLICATION_STORE_EARLY_ACCESS
     });
-    return e.type === c.AzA.FLAVOR_TEXT ? (0, n.jsx)(d, {
-      circle: (0, n.jsx)(T, {
-        IconComponent: l.CheckmarkLargeIcon
+    return e.type === c.AzA.FLAVOR_TEXT ? (0, s.jsx)(h, {
+      circle: (0, s.jsx)(E, {
+        IconComponent: r.CheckmarkLargeIcon
       }),
       text: e.flavorText,
-      className: s
-    }) : e.type === c.AzA.HAS_FREE_PREMIUM_CONTENT ? (0, n.jsx)(d, {
-      className: s,
-      circle: (0, n.jsx)(T, {
-        IconComponent: l.NitroWheelIcon,
-        className: I.premiumCircle
+      className: t
+    }) : e.type === c.AzA.HAS_FREE_PREMIUM_CONTENT ? (0, s.jsx)(h, {
+      className: t,
+      circle: (0, s.jsx)(E, {
+        IconComponent: r.NitroWheelIcon,
+        className: d.premiumCircle
       }),
       text: u.Z.Messages.APPLICATION_STORE_FREE_PREMIUM_CONTENT
     }) : null

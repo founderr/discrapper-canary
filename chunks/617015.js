@@ -3,16 +3,16 @@ n.d(t, {
     return l
   },
   NV: function() {
-    return s
+    return i
   },
   nG: function() {
-    return i
+    return s
   },
   yf: function() {
     return a
   }
 });
-let i = 64,
-  s = 62,
+let s = 64,
+  i = 62,
   l = 24,
   a = 5

@@ -1,6 +1,6 @@
 n(47120);
-var i = n(392711),
-  s = n.n(i),
+var s = n(392711),
+  i = n.n(s),
   l = n(243814),
   a = n(430824),
   r = n(996106),
@@ -18,11 +18,11 @@ t.Z = {
         socket: t,
         server: n,
         args: {
-          guild_id: i,
-          timeout: s = 0
+          guild_id: s,
+          timeout: i = 0
         }
       } = e;
-      return n.storeWait(t, () => a.Z.getGuild(i), s).catch(() => {
+      return n.storeWait(t, () => a.Z.getGuild(s), i).catch(() => {
         throw new r.Z({
           errorCode: c.lTL.GET_GUILD_TIMED_OUT
         }, "Request to get guild timed out.")
@@ -30,7 +30,7 @@ t.Z = {
         var t;
         if (null == e) throw new r.Z({
           errorCode: c.lTL.INVALID_GUILD
-        }, "Invalid guild id: ".concat(i));
+        }, "Invalid guild id: ".concat(s));
         return {
           id: e.id,
           name: e.name,
@@ -46,7 +46,7 @@ t.Z = {
     handler() {
       let e = a.Z.getGuilds();
       return {
-        guilds: s().map(e, e => ({
+        guilds: i().map(e, e => ({
           id: e.id,
           name: e.name,
           icon_url: e.getIconURL(128)

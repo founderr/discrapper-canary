@@ -1,9 +1,9 @@
 n.d(t, {
   Z: function() {
-    return i
+    return s
   }
 });
 
-function i(e) {
+function s(e) {
   return e.object().unknown(!0)
 }

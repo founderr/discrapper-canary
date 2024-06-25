@@ -1,79 +1,79 @@
-var s = n(735250),
-  i = n(470079),
-  a = n(120356),
-  l = n.n(a),
-  r = n(613828),
-  c = n(435935),
-  o = n(442837),
-  d = n(481060),
-  u = n(37234),
-  E = n(960412),
-  _ = n(151662),
-  h = n(695346),
-  T = n(981631),
-  I = n(930441),
-  C = n(689938),
-  N = n(450470),
-  g = n(331651);
+var n = s(735250),
+  a = s(470079),
+  i = s(120356),
+  r = s.n(i),
+  l = s(613828),
+  o = s(435935),
+  c = s(442837),
+  E = s(481060),
+  _ = s(37234),
+  u = s(960412),
+  d = s(151662),
+  T = s(695346),
+  I = s(981631),
+  R = s(930441),
+  A = s(689938),
+  N = s(450470),
+  C = s(331651);
 t.Z = () => {
-  let e = h.Ex.useSetting(),
+  let e = T.Ex.useSetting(),
     {
       categories: t,
-      initialized: n
-    } = (0, o.cj)([_.Z], () => _.Z.getEmailSettings());
-  return i.useEffect(() => {
-    null == n && (0, E.Y7)()
-  }, [n]), (0, s.jsxs)("div", {
+      initialized: s
+    } = (0, c.cj)([d.Z], () => d.Z.getEmailSettings());
+  return a.useEffect(() => {
+    null == s && (0, u.Y7)()
+  }, [s]), (0, n.jsxs)("div", {
     className: N.container,
-    children: [(0, s.jsx)(d.Text, {
+    children: [(0, n.jsx)(E.Text, {
       variant: "eyebrow",
       color: "text-muted",
-      children: C.Z.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
-    }), (0, s.jsx)(d.FormSwitch, {
-      className: l()(g.marginTop8, g.marginBottom20),
+      children: A.Z.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
+    }), (0, n.jsx)(E.FormSwitch, {
+      className: r()(C.marginTop8, C.marginBottom20),
       value: e,
-      note: C.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
+      note: A.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
       hideBorder: !0,
-      onChange: h.Ex.updateSetting,
-      children: C.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH
-    }), e ? (0, s.jsx)(d.Card, {
+      onChange: T.Ex.updateSetting,
+      children: A.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH
+    }), e ? (0, n.jsx)(E.Card, {
       className: N.enableCard,
-      type: d.Card.Types.CUSTOM,
+      type: E.Card.Types.CUSTOM,
       outline: !0,
-      children: (0, s.jsxs)(c.k, {
-        justify: c.k.Justify.END,
-        children: [(0, s.jsx)(c.k.Child, {
-          children: (0, s.jsx)(d.Text, {
+      children: (0, n.jsxs)(o.k, {
+        justify: o.k.Justify.END,
+        children: [(0, n.jsx)(o.k.Child, {
+          children: (0, n.jsx)(E.Text, {
             variant: "text-sm/semibold",
             color: "text-normal",
-            children: C.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_PROMPT
+            children: A.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_PROMPT
           })
-        }), (0, s.jsx)(d.Clickable, {
-          children: (0, s.jsx)(r.rU, {
-            onClick: u.xf,
+        }), (0, n.jsx)(E.Clickable, {
+          children: (0, n.jsx)(l.rU, {
+            onClick: _.xf,
             to: {
-              pathname: T.Z5c.FAMILY_CENTER,
+              pathname: I.Z5c.FAMILY_CENTER,
               state: {
                 scrollRestoration: !1
               }
             },
-            children: C.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_CTA
+            children: A.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_CTA
           })
-        }), (0, s.jsx)(d.IconBadge, {
-          icon: d.ArrowSmallRightIcon,
+        }), (0, n.jsx)(E.IconBadge, {
+          icon: E.ArrowSmallRightIcon,
           className: N.arrow,
           disableColor: !0
         })]
       })
-    }) : null, (0, s.jsx)(d.FormSwitch, {
-      className: l()(g.marginTop20, g.marginBottom20),
-      value: !!t[I.$Z.FAMILY_CENTER_DIGEST],
-      note: C.Z.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
+    }) : null, (0, n.jsx)(E.FormSwitch, {
+      className: r()(C.marginTop20, C.marginBottom20),
+      value: !!t[R.$Z.FAMILY_CENTER_DIGEST],
+      note: A.Z.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
       hideBorder: !0,
       onChange: function(e) {
-        (0, E.pR)(I.$Z.FAMILY_CENTER_DIGEST, e)
+        (0, u.pR)(R.$Z.FAMILY_CENTER_DIGEST, e)
       },
-      children: C.Z.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH
+      children: A.Z.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH
     })]
   })
 }

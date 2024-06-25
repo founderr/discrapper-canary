@@ -1,5 +1,5 @@
-var i = n(570140),
-  s = n(317770),
+var s = n(570140),
+  i = n(317770),
   l = n(117984);
 
 function a(e) {
@@ -10,12 +10,12 @@ function a(e) {
   } = e;
   (0, l.oC)(t)
 }
-class r extends s.Z {
+class r extends i.Z {
   _initialize() {
-    i.Z.subscribe("CHANNEL_DELETE", a)
+    s.Z.subscribe("CHANNEL_DELETE", a)
   }
   _terminate() {
-    i.Z.unsubscribe("CHANNEL_DELETE", a)
+    s.Z.unsubscribe("CHANNEL_DELETE", a)
   }
 }
 t.Z = new r

@@ -1,10 +1,10 @@
 n.d(t, {
   Z: function() {
-    return S
+    return C
   }
 }), n(47120);
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(120356),
   a = n.n(l),
   r = n(481060),
@@ -17,12 +17,12 @@ var i = n(735250),
   _ = n(237919),
   I = n(957657),
   m = n(665307),
-  g = n(530151),
-  p = n(981631),
-  N = n(186901),
-  T = n(916518);
+  T = n(530151),
+  g = n(981631),
+  p = n(186901),
+  N = n(916518);
 
-function C(e, t, n) {
+function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -30,34 +30,34 @@ function C(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class S extends s.PureComponent {
+class C extends i.PureComponent {
   componentDidMount() {
-    c.Y(p.Z5c.APPLICATION_LIBRARY), (0, h.T)(N.jE.LIBRARY), o.Z.wait(() => (0, u.o)()), (0, d.N)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding)
+    c.Y(g.Z5c.APPLICATION_LIBRARY), (0, h.T)(p.jE.LIBRARY), o.Z.wait(() => (0, u.o)()), (0, d.N)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding)
   }
   renderToolbar() {
-    return (0, i.jsx)(_.Z, {})
+    return (0, s.jsx)(_.Z, {})
   }
   render() {
     let {
       includeUpdatesInScroller: e
-    } = this.state, t = (0, i.jsx)("div", {
-      children: (0, i.jsx)(E.Z, {
-        section: p.jXE.LIBRARY_INSTALL_MODULE,
-        children: (0, i.jsx)(g.Z, {
+    } = this.state, t = (0, s.jsx)("div", {
+      children: (0, s.jsx)(E.Z, {
+        section: g.jXE.LIBRARY_INSTALL_MODULE,
+        children: (0, s.jsx)(T.Z, {
           onHeightTallerThanHalfViewportChange: this.handleHeightTallerThanHalfViewportChange
         })
       })
     });
-    return (0, i.jsxs)(s.Fragment, {
-      children: [(0, i.jsx)(I.Z, {
-        currentRoute: p.Z5c.APPLICATION_LIBRARY,
+    return (0, s.jsxs)(i.Fragment, {
+      children: [(0, s.jsx)(I.Z, {
+        currentRoute: g.Z5c.APPLICATION_LIBRARY,
         renderToolbar: this.renderToolbar
-      }), e ? null : t, (0, i.jsxs)(r.AdvancedScrollerAuto, {
-        className: a()(T.container, T.scroller),
+      }), e ? null : t, (0, s.jsxs)(r.AdvancedScrollerAuto, {
+        className: a()(N.container, N.scroller),
         ref: this._scrollerRef,
-        children: [e ? t : null, (0, i.jsx)(E.Z, {
-          section: p.jXE.LIBRARY_APPLICATION_LIST,
-          children: (0, i.jsx)(m.Z, {
+        children: [e ? t : null, (0, s.jsx)(E.Z, {
+          section: g.jXE.LIBRARY_APPLICATION_LIST,
+          children: (0, s.jsx)(m.Z, {
             stickyHeader: !e,
             scrollToRow: this.scrollToRow
           })
@@ -66,13 +66,13 @@ class S extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), C(this, "_scrollerRef", s.createRef()), C(this, "_scrollToOnMount", void 0), C(this, "_scrollToPadding", 0), C(this, "state", {
+    super(...e), S(this, "_scrollerRef", i.createRef()), S(this, "_scrollToOnMount", void 0), S(this, "_scrollToPadding", 0), S(this, "state", {
       includeUpdatesInScroller: !1
-    }), C(this, "handleHeightTallerThanHalfViewportChange", e => {
+    }), S(this, "handleHeightTallerThanHalfViewportChange", e => {
       this.setState({
         includeUpdatesInScroller: e
       })
-    }), C(this, "scrollToRow", (e, t) => {
+    }), S(this, "scrollToRow", (e, t) => {
       let n = this._scrollerRef.current;
       null != n ? (e.focus(), n.scrollIntoViewRect({
         start: t,

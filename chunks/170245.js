@@ -1,7 +1,7 @@
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(120356),
-  l = n.n(s),
+var i = n(120356),
+  l = n.n(i),
   a = n(442837),
   r = n(129861),
   o = n(700582),
@@ -11,25 +11,25 @@ t.Z = function(e) {
   let {
     user: t,
     hovered: n,
-    subText: s,
+    subText: i,
     showAccountIdentifier: d,
     status: E,
     isMobile: h,
     className: _
   } = e, I = (0, a.e7)([c.Z], () => c.Z.getNickname(t.id));
-  return (0, i.jsxs)("div", {
+  return (0, s.jsxs)("div", {
     className: l()(u.userInfo, _, {
       [u.hovered]: n
     }),
-    children: [(0, i.jsx)(o.Z, {
+    children: [(0, s.jsx)(o.Z, {
       user: t,
       className: u.avatar,
       animate: n,
       status: E,
       isMobile: h
-    }), (0, i.jsxs)("div", {
+    }), (0, s.jsxs)("div", {
       className: u.text,
-      children: [(0, i.jsx)(r.Z, {
+      children: [(0, s.jsx)(r.Z, {
         user: t,
         nick: I,
         botClass: u.botTag,
@@ -39,9 +39,9 @@ t.Z = function(e) {
         usernameClass: u.username,
         discriminatorClass: u.discriminator,
         showAccountIdentifier: d
-      }), (0, i.jsx)("div", {
+      }), (0, s.jsx)("div", {
         className: u.subtext,
-        children: s
+        children: i
       })]
     })]
   })

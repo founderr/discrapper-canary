@@ -1,58 +1,58 @@
-n.d(t, {
+t.d(n, {
   Z: function() {
     return d
   }
-}), n(47120);
-var r = n(735250),
-  a = n(470079),
-  s = n(89057),
-  l = n(509545),
-  i = n(74538),
-  o = n(987209),
-  u = n(598),
-  c = n(456251);
+}), t(47120);
+var r = t(735250),
+  s = t(470079),
+  a = t(89057),
+  l = t(509545),
+  i = t(74538),
+  o = t(987209),
+  u = t(598),
+  c = t(456251);
 
 function d(e) {
   let {
-    initialStep: t,
-    initialPlanId: n,
+    initialStep: n,
+    initialPlanId: t,
     guildId: d,
     setAnalyticsData: I,
     handleClose: _
   } = e, {
-    blockedPayments: E,
-    setStep: C,
+    blockedPayments: T,
+    setStep: E,
     hasFetchedSubscriptions: N,
-    hasFetchedSubscriptionPlans: A,
-    currencyLoading: O,
-    selectedSkuId: h,
-    setSelectedSkuId: S,
-    setSelectedPlanId: T,
-    priceOptions: f,
-    setSubscriptionMetadataRequest: P
+    hasFetchedSubscriptionPlans: S,
+    currencyLoading: h,
+    selectedSkuId: p,
+    setSelectedSkuId: C,
+    setSelectedPlanId: A,
+    priceOptions: m,
+    setSubscriptionMetadataRequest: O
   } = (0, u.usePaymentContext)(), {
-    isGift: p
-  } = (0, o.wD)(), [R, m] = a.useState(!N || !A || O);
-  return (a.useEffect(() => {
-    m(!N || !A || O)
-  }, [O, A, N]), a.useEffect(() => {
-    null != d && P({
+    isGift: P
+  } = (0, o.wD)(), [f, g] = s.useState(!N || !S || h);
+  return (s.useEffect(() => {
+    g(!N || !S || h)
+  }, [h, S, N]), s.useEffect(() => {
+    null != d && O({
       guild_id: d
     })
-  }, [d, P]), a.useEffect(() => {
-    T(n);
-    let e = null != n ? l.Z.get(n) : null;
-    if (!R && !E) I(t => {
-      let n = null != e ? (0, i.aS)(e.id, !1, p, f) : void 0;
+  }, [d, O]), s.useEffect(() => {
+    A(t);
+    let e = null != t ? l.Z.get(t) : null;
+    if (!f && !T) I(n => {
+      let t = null != e ? (0, i.aS)(e.id, !1, P, m) : void 0;
       return {
-        ...t,
+        ...n,
         subscription_plan_id: null == e ? void 0 : e.id,
-        price: null == n ? void 0 : n.amount,
+        price: null == t ? void 0 : t.amount,
         regular_price: null == e ? void 0 : e.price,
-        currency: f.currency
+        currency: m.currency
       }
-    }), null != e && (S(null == e ? void 0 : e.skuId), C(t))
-  }, [E, n, p, R, f, h, I, T, S, C, t]), R) ? (0, r.jsx)(c.Z, {}) : E ? (0, r.jsx)(s.Vq, {
+    }), null != e && (C(null == e ? void 0 : e.skuId), E(n))
+  }, [T, t, P, f, m, p, I, A, C, E, n]), f) ? (0, r.jsx)(c.Z, {}) : T ? (0, r.jsx)(a.Vq, {
     onClose: _
   }) : null
 }

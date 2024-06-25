@@ -13,8 +13,8 @@ var l = n(735250),
   c = n(846121),
   d = n(703656),
   h = n(259580),
-  g = n(981631),
-  p = n(176505),
+  p = n(981631),
+  g = n(176505),
   m = n(689938),
   C = n(909398);
 
@@ -46,7 +46,7 @@ let f = i.memo(function(e) {
       },
       className: C.progressBarContainer,
       onClick: function() {
-        (0, d.uL)(g.Z5c.CHANNEL(t.id, p.oC.GUILD_HOME))
+        (0, d.uL)(p.Z5c.CHANNEL(t.id, g.oC.GUILD_HOME))
       },
       children: [(0, l.jsxs)("div", {
         className: C.progressBarText,
@@ -73,7 +73,7 @@ let f = i.memo(function(e) {
         })]
       }), (0, l.jsx)(a.Progress, {
         className: C.progressBar,
-        foregroundGradientColor: [(0, o.Lq)(g.Ilk.GREEN_300), (0, o.Lq)(g.Ilk.GREEN_230)],
+        foregroundGradientColor: [(0, o.Lq)(p.Ilk.GREEN_300), (0, o.Lq)(p.Ilk.GREEN_230)],
         percent: _ / I * 100 + 3,
         animate: !0
       })]

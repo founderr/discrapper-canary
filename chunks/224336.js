@@ -1,14 +1,14 @@
-t.d(s, {
+n.d(t, {
   Z: function() {
-    return i
+    return l
   }
 });
-var n = t(735250);
-t(470079);
-var r = t(862645);
+var s = n(735250);
+n(470079);
+var i = n(862645);
 
-function i() {
-  return (0, n.jsx)("div", {
-    className: r.divider
+function l() {
+  return (0, s.jsx)("div", {
+    className: i.divider
   })
 }

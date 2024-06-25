@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return g
+    return p
   }
 }), n(47120);
 var l = n(106351),
@@ -14,10 +14,10 @@ var l = n(106351),
   d = n(823379),
   h = n(981631);
 
-function g(e) {
+function p(e) {
   let t = (0, i.e7)([a.Z], () => a.Z.getGuild(e)),
     n = null == t ? void 0 : t.afkChannelId,
-    g = (0, i.Wu)([c.Z, u.Z, r.Z, o.Z], () => {
+    p = (0, i.Wu)([c.Z, u.Z, r.Z, o.Z], () => {
       let t = new Set,
         i = c.Z.getVoiceStates(e);
       for (let s in i) {
@@ -30,5 +30,5 @@ function g(e) {
       }
       return [...t]
     }, [n, e]);
-  return (0, s.Z)([...g]).filter(d.lm).length > 0
+  return (0, s.Z)([...p]).filter(d.lm).length > 0
 }

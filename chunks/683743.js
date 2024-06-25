@@ -1,4 +1,4 @@
-var i, s, l, a, r = n(442837),
+var s, i, l, a, r = n(442837),
   o = n(570140),
   c = n(496675),
   u = n(981631);
@@ -14,9 +14,9 @@ class E extends(a = r.ZP.Store) {
     return Date.now() - t >= u.Hqc && c.Z.can(u.Plq.ADMINISTRATOR, e)
   }
 }
-l = "InviteNoticeStore", (s = "displayName") in(i = E) ? Object.defineProperty(i, s, {
+l = "InviteNoticeStore", (i = "displayName") in(s = E) ? Object.defineProperty(s, i, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = l, t.Z = new E(o.Z)
+}) : s[i] = l, t.Z = new E(o.Z)

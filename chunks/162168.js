@@ -1,36 +1,36 @@
-n.d(t, {
+s.d(t, {
   Z: function() {
-    return a
+    return i
   }
 });
-var s = n(735250);
-n(470079);
-var i = n(325767);
+var n = s(735250);
+s(470079);
+var a = s(325767);
 
-function a(e) {
+function i(e) {
   let {
     width: t = 80,
-    height: n = 20,
-    color: a = "currentColor",
-    foreground: l,
-    ...r
+    height: s = 20,
+    color: i = "currentColor",
+    foreground: r,
+    ...l
   } = e;
-  return (0, s.jsxs)("svg", {
-    ...(0, i.Z)(r),
+  return (0, n.jsxs)("svg", {
+    ...(0, a.Z)(l),
     width: t,
-    height: n,
-    viewBox: "0 0 ".concat(t, " ").concat(n),
-    children: [(0, s.jsx)("pattern", {
+    height: s,
+    viewBox: "0 0 ".concat(t, " ").concat(s),
+    children: [(0, n.jsx)("pattern", {
       id: "pill-frame-pattern",
       width: 8 / t,
       height: "1",
-      children: (0, s.jsx)("path", {
+      children: (0, n.jsx)("path", {
         d: "m0 0h8v20h-8zm4 2c-1.1045695 0-2 .8954305-2 2v12c0 1.1045695.8954305 2 2 2s2-.8954305 2-2v-12c0-1.1045695-.8954305-2-2-2z",
         fillRule: "evenodd",
-        fill: a,
-        className: l
+        fill: i,
+        className: r
       })
-    }), (0, s.jsx)("rect", {
+    }), (0, n.jsx)("rect", {
       fill: "url(#pill-frame-pattern)",
       height: "100%",
       width: "100%"

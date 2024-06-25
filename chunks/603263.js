@@ -3,7 +3,7 @@ n.d(t, {
     return u
   },
   QQ: function() {
-    return N
+    return m
   },
   QY: function() {
     return S
@@ -12,7 +12,7 @@ n.d(t, {
     return c
   },
   j8: function() {
-    return m
+    return N
   },
   jn: function() {
     return E
@@ -117,14 +117,14 @@ function T(e, t) {
   })
 }
 
-function N(e) {
+function m(e) {
   s.Z.dispatch({
     type: "SEARCH_CLEAR_HISTORY",
     searchId: e
   })
 }
 
-function m(e, t) {
+function N(e, t) {
   null != e && s.Z.dispatch({
     type: "SEARCH_EDITOR_STATE_CHANGE",
     searchId: e,

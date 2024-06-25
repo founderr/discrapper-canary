@@ -9,7 +9,7 @@ n.d(t, {
     return d
   },
   JD: function() {
-    return p
+    return g
   },
   MF: function() {
     return C
@@ -21,7 +21,7 @@ n.d(t, {
     return s
   },
   Q0: function() {
-    return g
+    return p
   },
   Q1: function() {
     return i
@@ -52,8 +52,8 @@ let l = 8,
   c = 16,
   d = 32,
   h = 8,
-  g = 84,
-  p = 16,
+  p = 84,
+  g = 16,
   m = 5,
   C = {
     origin: {

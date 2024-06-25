@@ -1,5 +1,5 @@
 n(47120);
-var i, s = n(442837),
+var s, i = n(442837),
   l = n(570140),
   a = n(701488);
 
@@ -13,7 +13,7 @@ function r(e, t, n) {
 }
 let o = new Set,
   c = new Set([a.ES.DISCORD_TURNS_8]);
-class u extends(i = s.ZP.PersistedStore) {
+class u extends(s = i.ZP.PersistedStore) {
   initialize(e) {
     null != e && (Array.isArray(e.acknowledged) && (o = new Set(e.acknowledged)), Array.isArray(e.opened) && (c = new Set(e.opened)))
   }

@@ -1,92 +1,92 @@
-t(47120);
-var n = t(735250),
-  r = t(470079),
-  i = t(120356),
-  a = t.n(i),
-  l = t(481060),
-  o = t(100527),
-  c = t(484459),
-  u = t(103575),
-  I = t(366966),
-  T = t(409216),
-  d = t(51144),
-  _ = t(981631),
-  E = t(689938),
-  S = t(659342);
+n(47120);
+var s = n(735250),
+  i = n(470079),
+  l = n(120356),
+  a = n.n(l),
+  r = n(481060),
+  o = n(100527),
+  c = n(484459),
+  u = n(103575),
+  d = n(366966),
+  E = n(409216),
+  h = n(51144),
+  _ = n(981631),
+  I = n(689938),
+  m = n(659342);
 
-function O(e, s, t) {
-  return s in e ? Object.defineProperty(e, s, {
-    value: t,
+function T(e, t, n) {
+  return t in e ? Object.defineProperty(e, t, {
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[s] = t, e
+  }) : e[t] = n, e
 }
-let A = {
+let g = {
   [_.AzA.NOW_PLAYING]: {
-    single: (e, s) => E.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_SINGLE.format({
+    single: (e, t) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_SINGLE.format({
       user1: e.username,
-      user1Hook: () => s(e)
+      user1Hook: () => t(e)
     }),
-    double: (e, s, t) => E.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_DOUBLE.format({
+    double: (e, t, n) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_DOUBLE.format({
       user1: e.username,
-      user1Hook: () => t(e),
-      user2: s.username,
-      user2Hook: () => t(s)
+      user1Hook: () => n(e),
+      user2: t.username,
+      user2Hook: () => n(t)
     }),
-    other: e => E.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_OTHER.format({
+    other: e => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_OTHER.format({
       count: e
     })
   },
   [_.AzA.RECENTLY_PLAYED]: {
-    single: (e, s) => E.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_SINGLE.format({
+    single: (e, t) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_SINGLE.format({
       user1: e.username,
-      user1Hook: () => s(e)
+      user1Hook: () => t(e)
     }),
-    double: (e, s, t) => E.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_DOUBLE.format({
+    double: (e, t, n) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_DOUBLE.format({
       user1: e.username,
-      user1Hook: () => t(e),
-      user2: s.username,
-      user2Hook: () => t(s)
+      user1Hook: () => n(e),
+      user2: t.username,
+      user2Hook: () => n(t)
     }),
-    other: e => E.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_OTHER.format({
+    other: e => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_OTHER.format({
       count: e
     })
   },
   [_.AzA.EVER_PLAYED]: {
-    single: (e, s) => E.Z.Messages.APPLICATION_STORE_RECOMMENDATION_EVER_PLAYED_SINGLE.format({
+    single: (e, t) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_EVER_PLAYED_SINGLE.format({
       user1: e.username,
-      user1Hook: () => s(e)
+      user1Hook: () => t(e)
     }),
-    double: (e, s, t) => E.Z.Messages.APPLICATION_STORE_RECOMMENDATION_EVER_PLAYED_DOUBLE.format({
+    double: (e, t, n) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_EVER_PLAYED_DOUBLE.format({
       user1: e.username,
-      user1Hook: () => t(e),
-      user2: s.username,
-      user2Hook: () => t(s)
+      user1Hook: () => n(e),
+      user2: t.username,
+      user2Hook: () => n(t)
     }),
-    other: e => E.Z.Messages.APPLICATION_STORE_RECOMMENDATION_EVER_PLAYED_OTHER.format({
+    other: e => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_EVER_PLAYED_OTHER.format({
       count: e
     })
   }
 };
-class N extends r.PureComponent {
-  renderDescription(e, s) {
-    let t = A[e];
-    return 1 === s.length ? t.single(s[0].user, e => this.renderActivityDiscordTag(e)) : 2 === s.length ? t.double(s[0].user, s[1].user, e => this.renderActivityDiscordTag(e)) : t.other(s.length)
+class p extends i.PureComponent {
+  renderDescription(e, t) {
+    let n = g[e];
+    return 1 === t.length ? n.single(t[0].user, e => this.renderActivityDiscordTag(e)) : 2 === t.length ? n.double(t[0].user, t[1].user, e => this.renderActivityDiscordTag(e)) : n.other(t.length)
   }
   renderActivityDiscordTag(e) {
-    return (0, n.jsx)(l.Popout, {
+    return (0, s.jsx)(r.Popout, {
       preload: () => (0, c.W)(e),
-      renderPopout: s => (0, n.jsx)(u.Z, {
-        ...s,
+      renderPopout: t => (0, s.jsx)(u.Z, {
+        ...t,
         location: "ApplicationRecommendationActivity",
         userId: e.id,
         newAnalyticsLocations: [o.Z.USERNAME]
       }),
       position: "right",
-      children: s => (0, n.jsx)("span", {
-        className: S.username,
-        ...s,
+      children: t => (0, s.jsx)("span", {
+        className: m.username,
+        ...t,
         children: e.username
       })
     }, e.id)
@@ -94,74 +94,74 @@ class N extends r.PureComponent {
   render() {
     let {
       reason: e,
-      className: s
+      className: t
     } = this.props, {
-      type: t,
-      userInfo: r
+      type: n,
+      userInfo: i
     } = e;
-    return 0 === r.length ? null : (0, n.jsxs)("div", {
-      className: a()(S.recommendationActivity, s),
-      children: [(0, n.jsx)(T.Z, {
-        className: S.players,
-        users: r.map(e => {
+    return 0 === i.length ? null : (0, s.jsxs)("div", {
+      className: a()(m.recommendationActivity, t),
+      children: [(0, s.jsx)(E.Z, {
+        className: m.players,
+        users: i.map(e => {
           let {
-            user: s
+            user: t
           } = e;
-          return s
+          return t
         }),
         renderUser: this.renderPlayer,
         max: 4,
         renderMoreUsers: this.renderPlayerOverflow
-      }), (0, n.jsx)("div", {
-        className: S.description,
-        children: this.renderDescription(t, r)
+      }), (0, s.jsx)("div", {
+        className: m.description,
+        children: this.renderDescription(n, i)
       })]
     })
   }
   constructor(...e) {
-    super(...e), O(this, "renderUserTooltip", (e, s, t) => (0, n.jsxs)("div", {
-      className: S.tooltip,
-      children: [(0, n.jsx)("div", {
-        children: d.ZP.getUserTag(e)
-      }), (0, n.jsx)(I.ZP, {
-        className: S.tooltipTimestamp,
-        start: s,
-        end: t,
-        location: I.ZP.Locations.ACTIVITY_FEED
+    super(...e), T(this, "renderUserTooltip", (e, t, n) => (0, s.jsxs)("div", {
+      className: m.tooltip,
+      children: [(0, s.jsx)("div", {
+        children: h.ZP.getUserTag(e)
+      }), (0, s.jsx)(d.ZP, {
+        className: m.tooltipTimestamp,
+        start: t,
+        end: n,
+        location: d.ZP.Locations.ACTIVITY_FEED
       })]
-    })), O(this, "renderPlayer", (e, s, t, r) => {
+    })), T(this, "renderPlayer", (e, t, n, i) => {
       if (null == e) return null;
-      let i = this.props.reason.userInfo.find(s => s.user === e);
-      return null == i ? null : (0, n.jsx)(l.Popout, {
+      let l = this.props.reason.userInfo.find(t => t.user === e);
+      return null == l ? null : (0, s.jsx)(r.Popout, {
         preload: () => (0, c.W)(e),
-        renderPopout: s => (0, n.jsx)(u.Z, {
-          ...s,
+        renderPopout: t => (0, s.jsx)(u.Z, {
+          ...t,
           location: "ApplicationRecommendationActivity",
           userId: e.id,
           newAnalyticsLocations: [o.Z.AVATAR]
         }),
         position: "right",
-        children: s => (0, n.jsx)(l.Tooltip, {
-          text: this.renderUserTooltip(e, i.startTime, i.endTime),
-          "aria-label": (0, d.W5)(e, {
+        children: t => (0, s.jsx)(r.Tooltip, {
+          text: this.renderUserTooltip(e, l.startTime, l.endTime),
+          "aria-label": (0, h.W5)(e, {
             decoration: "never"
           }),
-          children: t => (0, n.jsx)(l.Avatar, {
-            className: a()(S.playerAvatar, {
-              [S.avatarMasked]: !r
+          children: n => (0, s.jsx)(r.Avatar, {
+            className: a()(m.playerAvatar, {
+              [m.avatarMasked]: !i
             }),
             src: e.getAvatarURL(void 0, 32),
             "aria-label": e.username,
-            size: l.AvatarSizes.SIZE_32,
-            ...t,
-            ...s
+            size: r.AvatarSizes.SIZE_32,
+            ...n,
+            ...t
           })
         })
       }, e.id)
-    }), O(this, "renderPlayerOverflow", (e, s, t) => (0, n.jsx)("div", {
-      className: S.playerOverflow,
+    }), T(this, "renderPlayerOverflow", (e, t, n) => (0, s.jsx)("div", {
+      className: m.playerOverflow,
       children: e
-    }, t))
+    }, n))
   }
 }
-s.Z = N
+t.Z = p

@@ -3,8 +3,8 @@ n.d(t, {
     return a
   }
 });
-var i = n(470079),
-  s = n(246364),
+var s = n(470079),
+  i = n(246364),
   l = n(308083);
 
 function a(e) {
@@ -19,11 +19,11 @@ function a(e) {
     description: u,
     tag: d,
     verificationForm: E
-  } = t, h = i.useMemo(() => null != E && E.formFields.some(e => !(0, s.J)(e)), [E]), _ = i.useMemo(() => Array.from(c).filter(e => !l.WZ.has(e) && !l.gh.has(e)), [c]), I = i.useCallback(() => {
+  } = t, h = s.useMemo(() => null != E && E.formFields.some(e => !(0, i.J)(e)), [E]), _ = s.useMemo(() => Array.from(c).filter(e => !l.WZ.has(e) && !l.gh.has(e)), [c]), I = s.useCallback(() => {
     n(a + 1)
-  }, [a, n]), m = i.useCallback(() => {
+  }, [a, n]), m = s.useCallback(() => {
     n(a - 1)
-  }, [a, n]), g = i.useCallback(e => n(e), [n]), p = i.useMemo(() => {
+  }, [a, n]), T = s.useCallback(e => n(e), [n]), g = s.useMemo(() => {
     switch (a) {
       case l.Wy.GAMES:
         return 0 === r.size;
@@ -40,12 +40,12 @@ function a(e) {
       default:
         return !1
     }
-  }, [a, u.length, r.size, h, _.length, o, d.length]), N = 0 === a;
-  return i.useMemo(() => ({
-    onStepClick: g,
+  }, [a, u.length, r.size, h, _.length, o, d.length]), p = 0 === a;
+  return s.useMemo(() => ({
+    onStepClick: T,
     onNextClick: I,
     onBackClick: m,
-    isNextDisabled: p,
-    isBackDisabled: N
-  }), [N, p, m, I, g])
+    isNextDisabled: g,
+    isBackDisabled: p
+  }), [p, g, m, I, T])
 }

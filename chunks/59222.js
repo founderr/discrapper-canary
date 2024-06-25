@@ -1,10 +1,10 @@
 n.d(t, {
   D: function() {
-    return C
+    return S
   }
 }), n(47120);
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(392711),
   a = n.n(l),
   r = n(664751),
@@ -17,12 +17,12 @@ var i = n(735250),
   _ = n(900849),
   I = n(119317),
   m = n(749436),
-  g = n(650394),
-  p = n(731455),
-  N = n(689938),
-  T = n(946496);
-let C = 12,
-  S = () => {
+  T = n(650394),
+  g = n(731455),
+  p = n(689938),
+  N = n(946496);
+let S = 12,
+  C = () => {
     let e = (0, d.s1)().location.search;
     return null != e && e.length > 0 && e.startsWith("?") ? r.parse(e) : {}
   },
@@ -30,36 +30,36 @@ let C = 12,
     let {
       categoryId: t,
       categoryName: n,
-      onClick: s
-    } = e, l = t === p.Hk, a = l ? N.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : N.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({
+      onClick: i
+    } = e, l = t === g.Hk, a = l ? p.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : p.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({
       categoryName: n
-    }), r = l ? N.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : N.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({
-      onClick: s
+    }), r = l ? p.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : p.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({
+      onClick: i
     });
-    return (0, i.jsxs)("div", {
-      className: T.emptyContainer,
-      children: [(0, i.jsx)("div", {
-        className: T.emptyImage
-      }), (0, i.jsx)(c.Heading, {
+    return (0, s.jsxs)("div", {
+      className: N.emptyContainer,
+      children: [(0, s.jsx)("div", {
+        className: N.emptyImage
+      }), (0, s.jsx)(c.Heading, {
         variant: "heading-xl/semibold",
-        className: T.emptyHeader,
+        className: N.emptyHeader,
         children: a
-      }), (0, i.jsx)(c.Text, {
+      }), (0, s.jsx)(c.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
         children: r
       })]
     })
   },
-  f = () => (0, i.jsxs)("div", {
-    className: T.emptyContainer,
-    children: [(0, i.jsx)("div", {
-      className: T.errorImage
-    }), (0, i.jsx)(c.Text, {
+  f = () => (0, s.jsxs)("div", {
+    className: N.emptyContainer,
+    children: [(0, s.jsx)("div", {
+      className: N.errorImage
+    }), (0, s.jsx)(c.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: T.emptyHeader,
-      children: N.Z.Messages.GUILD_DISCOVERY_SEARCH_ERROR
+      className: N.emptyHeader,
+      children: p.Z.Messages.GUILD_DISCOVERY_SEARCH_ERROR
     })]
   });
 t.Z = e => {
@@ -70,24 +70,24 @@ t.Z = e => {
     defaultLanguage: r,
     availableLanguages: d,
     isFetchingSearch: Z,
-    scroller: v,
-    loadingGuildId: L,
-    theme: O,
+    scroller: L,
+    loadingGuildId: O,
+    theme: v,
     currentCategoryId: R,
-    currentCategoryName: x,
-    onViewGuild: M,
-    onGuildCardSeen: P,
+    currentCategoryName: P,
+    onViewGuild: x,
+    onGuildCardSeen: M,
     placeholder: D,
     onTagClick: b
   } = e, y = a().uniqueId("GuildDiscovery"), {
     guilds: j,
     loading: U,
     total: G
-  } = n, [w, k] = s.useState(!1), {
+  } = n, [w, k] = i.useState(!1), {
     tag: B
-  } = S(), [H, V] = s.useState(B), F = (0, o.e7)([E.ZP], () => E.ZP.hasSearchError()), Y = (e, t, n) => {
+  } = C(), [H, V] = i.useState(B), F = (0, o.e7)([E.ZP], () => E.ZP.hasSearchError()), Y = (e, t, n) => {
     u.bR(l, {
-      categoryId: n ? p.Hk : R,
+      categoryId: n ? g.Hk : R,
       preferredLocale: r.code,
       offset: e,
       length: t,
@@ -96,44 +96,44 @@ t.Z = e => {
       }
     }), k(!1)
   }, z = () => {
-    null == v || v.scrollTo({
+    null == L || L.scrollTo({
       to: 0
     })
   };
-  s.useEffect(() => {
+  i.useEffect(() => {
     let {
       offset: e,
       tag: t
-    } = S(), n = null != e ? Math.floor(parseInt(e, 10) / C) + 1 : 1;
+    } = C(), n = null != e ? Math.floor(parseInt(e, 10) / S) + 1 : 1;
     V(!!t), 1 === n && k(!0)
   }, [l]);
-  let W = R === p.Hk ? N.Z.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
+  let W = R === g.Hk ? p.Z.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
     count: null != G ? G.toLocaleString() : "0",
     query: l
-  }) : N.Z.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_CATEGORY_HEADER.format({
+  }) : p.Z.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_CATEGORY_HEADER.format({
     count: null != G ? G.toLocaleString() : "0",
     query: l,
-    category: x
+    category: P
   });
-  return (0, i.jsxs)("div", {
-    className: T.container,
-    children: [(0, i.jsxs)("div", {
-      className: T.searchHeader,
-      children: [(0, i.jsx)(c.Clickable, {
+  return (0, s.jsxs)("div", {
+    className: N.container,
+    children: [(0, s.jsxs)("div", {
+      className: N.searchHeader,
+      children: [(0, s.jsx)(c.Clickable, {
         onClick: () => {
           u.AQ(), _.IZ(t)
         },
-        className: T.arrow,
-        "aria-label": N.Z.Messages.BACK,
-        children: (0, i.jsx)(h.Z, {
+        className: N.arrow,
+        "aria-label": p.Z.Messages.BACK,
+        children: (0, s.jsx)(h.Z, {
           direction: h.Z.Directions.LEFT
         })
-      }), (0, i.jsx)(c.Heading, {
+      }), (0, s.jsx)(c.Heading, {
         variant: "heading-xl/semibold",
-        className: T.header,
+        className: N.header,
         children: W
       })]
-    }), (0, i.jsx)(m.Z, {
+    }), (0, s.jsx)(m.Z, {
       loadId: t,
       searchResults: n,
       mostRecentQuery: l,
@@ -144,36 +144,36 @@ t.Z = e => {
       isSearchPage: !0,
       currentCategoryId: R,
       isTagSearch: H
-    }), F ? (0, i.jsx)(f, {}) : G <= 0 ? (0, i.jsx)(A, {
+    }), F ? (0, s.jsx)(f, {}) : G <= 0 ? (0, s.jsx)(A, {
       categoryId: R,
-      categoryName: x,
+      categoryName: P,
       onClick: () => {
-        u.uY(p.Hk), Y(0, C, !0)
+        u.uY(g.Hk), Y(0, S, !0)
       }
-    }) : (0, i.jsx)("div", {
-      className: T.results,
-      children: (0, i.jsx)(I.Z, {
-        pageSize: C,
+    }) : (0, s.jsx)("div", {
+      className: N.results,
+      children: (0, s.jsx)(I.Z, {
+        pageSize: S,
         totalCount: G,
         resetCurrentPage: w,
         onPageChange: e => {
-          Y((e - 1) * C, C), z()
+          Y((e - 1) * S, S), z()
         },
         children: e => {
           let {
             controller: t
           } = e;
-          return (0, i.jsxs)("section", {
+          return (0, s.jsxs)("section", {
             "aria-labelledby": y,
-            children: [(0, i.jsx)(g.Z, {
+            children: [(0, s.jsx)(T.Z, {
               guilds: j,
               loading: U,
-              loadingPlaceholderCount: C,
-              onViewGuild: M,
-              loadingGuildId: L,
-              theme: O,
+              loadingPlaceholderCount: S,
+              onViewGuild: x,
+              loadingGuildId: O,
+              theme: v,
               analyticsContext: _.P1.SEARCH,
-              onGuildCardSeen: P,
+              onGuildCardSeen: M,
               onTagClick: b
             }), t]
           })

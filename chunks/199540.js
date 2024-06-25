@@ -13,14 +13,14 @@ var l = n(735250),
   c = n(477690),
   d = n(481060),
   h = n(430824),
-  g = n(346656),
-  p = n(624138),
+  p = n(346656),
+  g = n(624138),
   m = n(674552),
   C = n(981631),
   E = n(689938),
   f = n(248699);
-let _ = (0, p.Mg)(c.Z.FOLDER_ITEM_ANIMATION_DURATION),
-  I = (0, p.Mg)(c.Z.FOLDER_ITEM_GUILD_ICON_SIZE);
+let _ = (0, g.Mg)(c.Z.FOLDER_ITEM_ANIMATION_DURATION),
+  I = (0, g.Mg)(c.Z.FOLDER_ITEM_GUILD_ICON_SIZE);
 
 function N(e) {
   let {
@@ -30,10 +30,10 @@ function N(e) {
   return null == i ? (0, l.jsx)("div", {
     className: f.guildIconUnavailable,
     children: "!"
-  }) : (0, l.jsx)(g.Z, {
+  }) : (0, l.jsx)(p.Z, {
     guild: i,
     animate: n,
-    size: g.Z.Sizes.SMOL,
+    size: p.Z.Sizes.SMOL,
     className: f.guildIcon,
     tabIndex: -1
   })
@@ -49,12 +49,12 @@ function Z(e) {
       color: c,
       children: h
     } = s,
-    g = null != c ? c : C.Wyy,
-    p = h.map(e => e.id),
+    p = null != c ? c : C.Wyy,
+    g = h.map(e => e.id),
     [m, E] = i.useState(!1),
     [Z, S] = i.useState(u),
     x = u ? 0 : -I,
-    T = (0, a.useSpring)({
+    L = (0, a.useSpring)({
       transform: "translate3d(0, ".concat(x, "px, 0)"),
       config: {
         duration: _
@@ -66,28 +66,28 @@ function Z(e) {
         E(!1), S(u)
       }
     }),
-    L = m ? T : void 0;
+    T = m ? L : void 0;
   return (m || Z) && (t = (0, l.jsx)(a.animated.div, {
-    style: L,
+    style: T,
     className: f.expandedFolderIconWrapper,
     children: (0, l.jsx)(d.FolderIcon, {
       size: "md",
       color: "currentColor",
       style: {
-        color: (0, o.Rf)(g)
+        color: (0, o.Rf)(p)
       }
     })
   })), (m || !Z) && (n = (0, l.jsx)(a.animated.div, {
-    style: L,
+    style: T,
     className: f.closedFolderIconWrapper,
-    children: p.slice(0, 4).map(e => (0, l.jsx)(N, {
+    children: g.slice(0, 4).map(e => (0, l.jsx)(N, {
       guildId: e,
       animate: r
     }, e))
   })), (0, l.jsxs)("div", {
     "aria-hidden": !0,
     style: u ? void 0 : {
-      backgroundColor: (0, o.br)(g, .4)
+      backgroundColor: (0, o.br)(p, .4)
     },
     className: f.folderIconWrapper,
     children: [t, n]
@@ -104,8 +104,8 @@ function S(e) {
     mentionCount: u = 0,
     tooltipName: c,
     folderGroupId: h,
-    folderIconContent: g,
-    onClick: p,
+    folderIconContent: p,
+    onClick: g,
     onContextMenu: C,
     onHoverChange: _,
     onKeyDown: I,
@@ -113,10 +113,10 @@ function S(e) {
       onFocus: N,
       ...S
     }
-  } = e, [x, T] = i.useState(!1), L = i.useCallback(() => {
-    a || T(!0), null == _ || _(!0)
+  } = e, [x, L] = i.useState(!1), T = i.useCallback(() => {
+    a || L(!0), null == _ || _(!0)
   }, [a, _]), v = i.useCallback(() => {
-    a || T(!1), null == _ || _(!1)
+    a || L(!1), null == _ || _(!1)
   }, [a, _]), A = s || null == o ? null : (0, m.Or)(o), M = !s && u > 0 ? (0, m.Ne)(u) : null;
   return (0, l.jsx)(d.BlobMask, {
     selected: !n,
@@ -129,9 +129,9 @@ function S(e) {
       className: r()(f.folder, {
         [f.hover]: x
       }),
-      onClick: p,
+      onClick: g,
       onContextMenu: C,
-      onMouseEnter: L,
+      onMouseEnter: T,
       onMouseLeave: v,
       onKeyDown: I,
       onFocus: N,
@@ -146,9 +146,9 @@ function S(e) {
       },
       ...S,
       role: "treeitem",
-      children: null != g ? (0, l.jsx)("div", {
+      children: null != p ? (0, l.jsx)("div", {
         className: f.expandedFolderIconWrapper,
-        children: g
+        children: p
       }) : (0, l.jsx)(Z, {
         folderNode: t,
         hovered: x,

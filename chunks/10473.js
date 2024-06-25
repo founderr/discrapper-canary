@@ -1,5 +1,5 @@
-var i, s = n(108131),
-  l = n.n(s),
+var s, i = n(108131),
+  l = n.n(i),
   a = n(442837),
   r = n(570140),
   o = n(70956);
@@ -19,7 +19,7 @@ let u = [],
     status: "unloaded"
   },
   _ = {};
-class I extends(i = a.ZP.Store) {
+class I extends(s = a.ZP.Store) {
   getSearchResult(e) {
     let t = _[l().v3(JSON.stringify(e))];
     return null == t || t.loadedAt < Date.now() - o.Z.Millis.HOUR ? h : t

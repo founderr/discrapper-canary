@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return g
+    return p
   }
 });
 var l = n(735250);
@@ -15,22 +15,22 @@ var i = n(266067),
   d = n(981631),
   h = n(689938);
 
-function g(e) {
+function p(e) {
   var t;
   let {
     isOnHubVerificationRoute: n
-  } = e, g = (0, i.LX)(null !== (t = window.location.pathname) && void 0 !== t ? t : "", {
+  } = e, p = (0, i.LX)(null !== (t = window.location.pathname) && void 0 !== t ? t : "", {
     path: d.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode")
-  }), p = (0, s.e7)([o.Z], () => {
-    if (null == g) return null;
+  }), g = (0, s.e7)([o.Z], () => {
+    if (null == p) return null;
     let {
       inviteCode: e
-    } = g.params;
+    } = p.params;
     return null != e ? o.Z.getInvite(e) : null
-  }), m = (null == p ? void 0 : p.guild) != null ? new a.ZP(null == p ? void 0 : p.guild) : null;
-  return n ? null != m && null != p ? (0, l.jsx)(u.Z, {
+  }), m = (null == g ? void 0 : g.guild) != null ? new a.ZP(null == g ? void 0 : g.guild) : null;
+  return n ? null != m && null != g ? (0, l.jsx)(u.Z, {
     guild: m,
-    invite: p
+    invite: g
   }) : (0, l.jsx)(c.Z, {
     tooltip: h.Z.Messages.HUB_DISCORD_HUBS,
     id: "guild-hub-button",

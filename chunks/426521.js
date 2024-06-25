@@ -16,17 +16,17 @@ var s = n(735250),
   _ = n(594174),
   I = n(626135),
   T = n(709054),
-  N = n(591759),
-  m = n(833592),
+  m = n(591759),
+  N = n(833592),
   h = n(497089),
   C = n(178480),
   S = n(418316),
   A = n(526146),
-  p = n(400565),
-  g = n(148789),
+  g = n(400565),
+  p = n(148789),
   f = n(11825),
-  O = n(981631),
-  R = n(689938),
+  R = n(981631),
+  O = n(689938),
   M = n(749967),
   x = n(756688),
   v = n(886765);
@@ -74,8 +74,8 @@ function Z(e) {
 function P(e) {
   let {
     item: t
-  } = e, n = v, i = R.Z.Messages.NOTIFICATION_CENTER_TODO;
-  return t.completed && (n = x, i = R.Z.Messages.NOTIFICATION_CENTER_DONE), (0, s.jsxs)("div", {
+  } = e, n = v, i = O.Z.Messages.NOTIFICATION_CENTER_TODO;
+  return t.completed && (n = x, i = O.Z.Messages.NOTIFICATION_CENTER_DONE), (0, s.jsxs)("div", {
     className: M.lifecycleContainer,
     children: [(0, s.jsx)("img", {
       className: M.checkbox,
@@ -96,8 +96,8 @@ let D = i.memo(function(e) {
       ackedBeforeId: d
     } = e, {
       analyticsLocations: E
-    } = (0, r.ZP)(), _ = (0, A.I)(a, d), R = i.useCallback(async () => {
-      if (!_ && (0, m.wt)(a), null != a.item_enum && a.item_enum === h.AM.FIND_FRIENDS) {
+    } = (0, r.ZP)(), _ = (0, A.I)(a, d), O = i.useCallback(async () => {
+      if (!_ && (0, N.wt)(a), null != a.item_enum && a.item_enum === h.AM.FIND_FRIENDS) {
         (0, l.openModalLazy)(async () => {
           let {
             default: e
@@ -110,12 +110,12 @@ let D = i.memo(function(e) {
         return
       }
       if (null != a.deeplink) {
-        let t = N.Z.safeParseWithQuery(a.deeplink);
+        let t = m.Z.safeParseWithQuery(a.deeplink);
         if (null == t) return;
         let n = t.hostname,
           s = t.path;
         if (null == n || null == s) return;
-        if (N.Z.isDiscordHostname(n)) {
+        if (m.Z.isDiscordHostname(n)) {
           let t = s.match("^/users/(\\d+)");
           if (null != t && 2 === t.length) {
             var e;
@@ -124,12 +124,12 @@ let D = i.memo(function(e) {
               messageId: null === (e = a.message) || void 0 === e ? void 0 : e.id,
               sourceAnalyticsLocations: E,
               analyticsLocation: {
-                section: O.jXE.NOTIFICATION_CENTER
+                section: R.jXE.NOTIFICATION_CENTER
               }
             })
           } else await (0, o.Z)(s)
         }
-        I.default.track(O.rMx.NOTIFICATION_CENTER_ACTION, {
+        I.default.track(R.rMx.NOTIFICATION_CENTER_ACTION, {
           action_type: h.ud.CLICKED,
           notification_center_id: a.id,
           item_type: a.type,
@@ -137,7 +137,7 @@ let D = i.memo(function(e) {
         })
       }
     }, [a, _, E]), x = null;
-    a.type === h.O7.INCOMING_FRIEND_REQUESTS && null != a.other_user && (x = (0, s.jsx)(g.Z, {
+    a.type === h.O7.INCOMING_FRIEND_REQUESTS && null != a.other_user && (x = (0, s.jsx)(p.Z, {
       userId: a.other_user.id
     }));
     let v = null != a.local_id,
@@ -150,10 +150,10 @@ let D = i.memo(function(e) {
           offset: 4
         },
         "aria-label": D,
-        onClick: R,
+        onClick: O,
         children: [_ ? null : (0, s.jsx)("div", {
           className: M.unread
-        }), (0, s.jsx)(p.U, {
+        }), (0, s.jsx)(g.U, {
           item: a
         }), (0, s.jsxs)("div", {
           className: M.body,

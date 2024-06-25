@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return p
+    return g
   }
 });
 var l = n(735250);
@@ -15,7 +15,7 @@ var i = n(442837),
   d = n(674552),
   h = n(981631);
 
-function g(e, t) {
+function p(e, t) {
   (0, s.jW)(e, async () => {
     let {
       default: e
@@ -27,18 +27,18 @@ function g(e, t) {
   })
 }
 
-function p(e) {
+function g(e) {
   let {
     guildNode: t
-  } = e, n = t.id, s = (0, i.e7)([a.Z], () => a.Z.getRequest(n)), p = (0, i.e7)([a.Z], () => a.Z.getJoinRequestGuild(n), [n]), m = (0, i.e7)([u.Z], () => u.Z.isFocused()), C = (0, i.e7)([o.Z], () => o.Z.getGuildId());
-  return null == p ? null : (0, l.jsx)(c.Z, {
+  } = e, n = t.id, s = (0, i.e7)([a.Z], () => a.Z.getRequest(n)), g = (0, i.e7)([a.Z], () => a.Z.getJoinRequestGuild(n), [n]), m = (0, i.e7)([u.Z], () => u.Z.isFocused()), C = (0, i.e7)([o.Z], () => o.Z.getGuildId());
+  return null == g ? null : (0, l.jsx)(c.Z, {
     guildNode: t,
-    guild: p,
+    guild: g,
     animatable: m,
     draggable: !1,
     selected: n === C,
     preloadOnClick: !1,
-    contextMenu: g,
+    contextMenu: p,
     lowerBadge: (null == s ? void 0 : s.applicationStatus) === r.wB.REJECTED ? (0, d.jt)({
       guildJoinRequestStatus: s.applicationStatus
     }) : void 0,

@@ -82,9 +82,9 @@ let h = [{
     x: .05,
     y: .2
   }],
-  g = h.length;
+  p = h.length;
 
-function p(e, t, n) {
+function g(e, t, n) {
   let l = e * t;
   return e > .5 ? l - n : e < .5 ? l : l - n / 2
 }
@@ -109,19 +109,19 @@ t.Z = i.memo(function(e) {
     onItemAction: N,
     interactive: Z = !0,
     children: S
-  } = e, x = i.useRef(null), T = i.useRef([]), L = i.useRef(!1), v = i.useRef(null), [A, M] = i.useState(0), [R, O] = i.useState({
+  } = e, x = i.useRef(null), L = i.useRef([]), T = i.useRef(!1), v = i.useRef(null), [A, M] = i.useState(0), [R, O] = i.useState({
     x: 0,
     y: 0
-  }), P = Math.abs(R.x) + Math.abs(R.y) > 0, j = i.useMemo(() => r().chunk(S, g), [S]), b = i.useCallback((e, t) => {
-    null == T.current[A] ? T.current[A] = [] : T.current[A][t] = e
-  }, [A]), D = i.useCallback((e, t) => {
-    v.current = t, I(g * e + t)
-  }, [I]), y = i.useCallback(() => {
+  }), P = Math.abs(R.x) + Math.abs(R.y) > 0, b = i.useMemo(() => r().chunk(S, p), [S]), j = i.useCallback((e, t) => {
+    null == L.current[A] ? L.current[A] = [] : L.current[A][t] = e
+  }, [A]), y = i.useCallback((e, t) => {
+    v.current = t, I(p * e + t)
+  }, [I]), D = i.useCallback(() => {
     v.current = null, I(null)
   }, [I]), U = i.useCallback(e => {
-    y(), L.current = e
-  }, [y]), G = i.useCallback((e, t, n) => {
-    if (L.current) {
+    D(), T.current = e
+  }, [D]), G = i.useCallback((e, t, n) => {
+    if (T.current) {
       O({
         x: 0,
         y: 0
@@ -141,7 +141,7 @@ t.Z = i.memo(function(e) {
       y: (s ? Math.max(l.y, -r.y) : Math.min(l.y, r.y)) / 2
     })
   }, []), w = i.useCallback(e => {
-    if (null != v.current) e.preventDefault(), e.stopPropagation(), null == N || N(g * A + v.current)
+    if (null != v.current) e.preventDefault(), e.stopPropagation(), null == N || N(p * A + v.current)
   }, [N, A]), k = i.useMemo(() => (0, s.throttle)(e => {
     if (null == x.current) return;
     let l = x.current.getBoundingClientRect(),
@@ -154,32 +154,32 @@ t.Z = i.memo(function(e) {
         x: e.clientX,
         y: e.clientY
       };
-    if (G(r, s, Math.max(t, n)), L.current) {
-      null != _ && y();
+    if (G(r, s, Math.max(t, n)), T.current) {
+      null != _ && D();
       return
     }
     let a = (0, o.ld)(s, r, Math.max(t, n));
-    for (let e = 0; e < T.current[A].length; e++) {
-      let t = T.current[A][e];
+    for (let e = 0; e < L.current[A].length; e++) {
+      let t = L.current[A][e];
       if (null == t) continue;
       let n = t.getBoundingClientRect();
       if ((0, o.Vr)(s, a, n)) {
-        D(A, e);
+        y(A, e);
         return
       }
     }
-    y()
-  }, 16), [_, G, y, D, A, n, t]), B = i.useCallback(e => {
+    D()
+  }, 16), [_, G, D, y, A, n, t]), B = i.useCallback(e => {
     if (!Z) return;
     let t = A + (e.deltaY > 0 ? 1 : -1);
-    t >= 0 && t < j.length && (null != v.current && (j[t].length > v.current ? D(t, v.current) : y()), M(t))
-  }, [Z, A, j, D, y]), V = i.useMemo(() => j[A].map((e, i) => {
+    t >= 0 && t < b.length && (null != v.current && (b[t].length > v.current ? y(t, v.current) : D()), M(t))
+  }, [Z, A, b, y, D]), V = i.useMemo(() => b[A].map((e, i) => {
     let s = h[i];
     if (null == s) throw Error("Too many items supplied ".concat(S.length, " expected max of ").concat(h.length));
-    let r = p(s.x, t, C),
-      a = p(s.y, n, E);
+    let r = g(s.x, t, C),
+      a = g(s.y, n, E);
     return (0, l.jsx)("div", {
-      ref: e => b(e, i),
+      ref: e => j(e, i),
       className: c.chatWheelItem,
       style: {
         left: r,
@@ -189,7 +189,7 @@ t.Z = i.memo(function(e) {
       },
       children: e
     }, i)
-  }), [j, A, t, C, n, E, S.length, b]);
+  }), [b, A, t, C, n, E, S.length, j]);
   return (0, l.jsx)(a.Clickable, {
     className: c.chatWheelMouseInput,
     onMouseMove: k,
@@ -269,7 +269,7 @@ t.Z = i.memo(function(e) {
         className: c.innerContent,
         children: [f && (0, l.jsx)(d, {
           className: c.chatWheelDeadZoneIcon
-        }), Z && j.length > 1 ? (0, l.jsx)("div", {
+        }), Z && b.length > 1 ? (0, l.jsx)("div", {
           className: c.paginationHint,
           children: u.Z.Messages.CHAT_WHEEL_PAGINATION_HINT
         }) : null]

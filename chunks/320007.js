@@ -16,8 +16,8 @@ var s = n(735250),
   _ = n(779618),
   I = n(175470),
   T = n(203259),
-  N = n(356659),
-  m = n(689938);
+  m = n(356659),
+  N = n(689938);
 
 function h(e) {
   let {
@@ -31,17 +31,17 @@ function h(e) {
     autoTrackExposure: !1
   }), {
     hasClips: A,
-    hasNewClips: p,
-    lastClipsSession: g,
+    hasNewClips: g,
+    lastClipsSession: p,
     remindersEnabled: f,
-    hasAnyClipAnimations: O
+    hasAnyClipAnimations: R
   } = (0, l.cj)([E.Z], () => ({
     hasClips: E.Z.hasClips(),
     hasNewClips: E.Z.getNewClipIds().length > 0,
     lastClipsSession: E.Z.getLastClipsSession(),
     remindersEnabled: E.Z.getSettings().remindersEnabled,
     hasAnyClipAnimations: E.Z.hasAnyClipAnimations()
-  })), R = null != g && g.newClipIds.length > 0, M = (0, I.n)(e => e.clipsButtonRef), x = (0, I.n)(e => e.setClipsButtonRef), v = (0, l.e7)([o.Z], () => o.Z.hasLayers()), {
+  })), O = null != p && p.newClipIds.length > 0, M = (0, I.n)(e => e.clipsButtonRef), x = (0, I.n)(e => e.setClipsButtonRef), v = (0, l.e7)([o.Z], () => o.Z.hasLayers()), {
     preventIdle: L,
     allowIdle: Z
   } = (0, r.Y)("animation");
@@ -55,21 +55,21 @@ function h(e) {
         ...t
       })
     }, {
-      modalKey: N.Qr
+      modalKey: m.Qr
     })
   }
-  return (i.useEffect(() => (O ? L() : Z(), () => Z()), [O, L, Z]), S && C && A) ? (0, s.jsxs)(s.Fragment, {
-    children: [null != M && t && f && R && !(0, a.hasAnyModalOpen)() && !v && (0, s.jsx)(T.Z, {
+  return (i.useEffect(() => (R ? L() : Z(), () => Z()), [R, L, Z]), S && C && A) ? (0, s.jsxs)(s.Fragment, {
+    children: [null != M && t && f && O && !(0, a.hasAnyModalOpen)() && !v && (0, s.jsx)(T.Z, {
       clipIconRef: M,
-      lastClipsSession: g,
+      lastClipsSession: p,
       onOpenClipsGallery: P
     }), (0, s.jsx)("div", {
       ref: x,
       children: (0, s.jsx)(u.JO, {
         className: h,
         icon: a.ClipsIcon,
-        showBadge: p,
-        tooltip: m.Z.Messages.CLIPS_GALLERY_TOOLTIP,
+        showBadge: g,
+        tooltip: N.Z.Messages.CLIPS_GALLERY_TOOLTIP,
         onClick: P
       })
     })]

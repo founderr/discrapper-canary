@@ -1,10 +1,10 @@
 n.d(t, {
   Z: function() {
-    return C
+    return S
   }
 }), n(47120);
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(120356),
   a = n.n(l),
   r = n(442837),
@@ -17,10 +17,10 @@ var i = n(735250),
   _ = n(5967),
   I = n(346329),
   m = n(981631),
-  g = n(689938),
-  p = n(518494);
+  T = n(689938),
+  g = n(518494);
 
-function N(e, t, n) {
+function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -28,7 +28,7 @@ function N(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class T extends s.Component {
+class N extends i.Component {
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyDown)
   }
@@ -48,9 +48,9 @@ class T extends s.Component {
     let {
       applicationViewItems: t,
       activeRowKey: n
-    } = this.props, i = t.findIndex(e => e.key === n), s = 0;
-    i >= 0 && (s = (i + e) % t.length) < 0 && (s = t.length - 1);
-    let l = t[s];
+    } = this.props, s = t.findIndex(e => e.key === n), i = 0;
+    s >= 0 && (i = (s + e) % t.length) < 0 && (i = t.length - 1);
+    let l = t[i];
     u.wX(null != l ? l.key : null, !0)
   }
   render() {
@@ -59,13 +59,13 @@ class T extends s.Component {
     } = this.props, {
       focused: t
     } = this.state;
-    return (0, i.jsx)("div", {
+    return (0, s.jsx)("div", {
       className: a()({
-        [p.libraryFilter]: !0,
-        [p.focused]: t
+        [g.libraryFilter]: !0,
+        [g.focused]: t
       }),
-      children: (0, i.jsx)(o.SearchBar, {
-        className: p.searchBar,
+      children: (0, s.jsx)(o.SearchBar, {
+        className: g.searchBar,
         ref: this.setRef,
         onChange: u.JZ,
         onFocus: () => this.setState({
@@ -80,25 +80,25 @@ class T extends s.Component {
         },
         maxLength: 100,
         query: e,
-        placeholder: g.Z.Messages.APPLICATION_LIBRARY_FILTER_PLACEHOLDER
+        placeholder: T.Z.Messages.APPLICATION_LIBRARY_FILTER_PLACEHOLDER
       })
     })
   }
   constructor(...e) {
-    super(...e), N(this, "searchBarRef", null), N(this, "state", {
+    super(...e), p(this, "searchBarRef", null), p(this, "state", {
       focused: !1
-    }), N(this, "setRef", e => {
+    }), p(this, "setRef", e => {
       this.searchBarRef = e
-    }), N(this, "handleKeyDown", e => {
+    }), p(this, "handleKeyDown", e => {
       var t;
       let {
         activeRowKey: n,
-        hasModalOpen: i,
-        applicationViewItems: s
+        hasModalOpen: s,
+        applicationViewItems: i
       } = this.props, {
         searchBarRef: l
       } = this;
-      if (i || e.ctrlKey || e.altKey || e.metaKey || null == l) return;
+      if (s || e.ctrlKey || e.altKey || e.metaKey || null == l) return;
       let a = null === (t = (0, _.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
       if (!(a !== l.inputRef.current && (0, _.VG)(a))) switch (e.which) {
         case m.yXg.ESCAPE:
@@ -107,10 +107,10 @@ class T extends s.Component {
         case m.yXg.ENTER:
           if (null != n) {
             e.preventDefault();
-            let t = s.find(e => e.key === n);
+            let t = i.find(e => e.key === n);
             if (null == t) return;
-            let i = t.libraryApplication;
-            I.performDefaultLibraryApplicationAction(i, {
+            let s = t.libraryApplication;
+            I.performDefaultLibraryApplicationAction(s, {
               analyticsParams: {
                 source: m.Sbl.APPLICATION_LIBRARY,
                 location: {
@@ -133,10 +133,10 @@ class T extends s.Component {
   }
 }
 
-function C() {
+function S() {
   let e = (0, r.e7)([d.Z], () => d.Z.hasLayers()),
     t = (0, o.useModalsStore)(o.hasAnyModalOpenSelector);
-  return (0, i.jsx)(T, {
+  return (0, s.jsx)(N, {
     activeRowKey: (0, r.e7)([h.Z], () => h.Z.activeRowKey),
     hasModalOpen: t || e,
     filterQuery: (0, r.e7)([E.Z], () => E.Z.applicationFilterQuery),

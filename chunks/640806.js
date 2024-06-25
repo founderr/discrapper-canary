@@ -3,9 +3,9 @@ n.d(t, {
     return d
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(704215),
+var i = n(704215),
   l = n(230711),
   a = n(765585),
   r = n(981631),
@@ -17,11 +17,11 @@ function d(e) {
   let {
     markAsDismissed: t
   } = e;
-  return (0, i.jsx)(a.Z, {
+  return (0, s.jsx)(a.Z, {
     header: c.Z.Messages.SOUNDBOARD_VOLUME_TOOLTIP_HEADER,
     body: c.Z.Messages.SOUNDBOARD_VOLUME_TOOLTIP_BODY,
     tryItText: c.Z.Messages.TAKE_ME_THERE,
-    dismissibleContent: s.z.SOUNDBOARD_VOLUME_EDUCATION,
+    dismissibleContent: i.z.SOUNDBOARD_VOLUME_EDUCATION,
     artClassName: u.art,
     onTryFeature: () => {
       l.Z.open(r.oAB.VOICE), t(o.L.UNKNOWN)

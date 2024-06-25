@@ -1,9 +1,9 @@
 n.d(t, {
   m: function() {
-    return i
+    return s
   }
 });
-let i = (0, n(818083).B)({
+let s = (0, n(818083).B)({
   kind: "user",
   id: "2023-05_birthday_activities_poker",
   label: "Birthday Activities Poker Tile",

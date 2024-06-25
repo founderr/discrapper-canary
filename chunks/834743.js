@@ -1,6 +1,6 @@
 n(47120);
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(442837),
   a = n(82950),
   r = n(623624),
@@ -9,14 +9,14 @@ var i = n(735250),
   u = n(921944),
   d = n(689938),
   E = n(241626);
-class h extends s.PureComponent {
+class h extends i.PureComponent {
   render() {
     let {
       guild: e,
       memberCount: t,
       markAsDismissed: n
     } = this.props;
-    return (0, i.jsx)(a.Z, {
+    return (0, s.jsx)(a.Z, {
       guild: e,
       onDismissed: () => n(u.L.UNKNOWN),
       onClick: this.handleButtonClick,
@@ -29,8 +29,8 @@ class h extends s.PureComponent {
     })
   }
   constructor(...e) {
-    var t, n, i;
-    super(...e), t = this, n = "handleButtonClick", i = () => {
+    var t, n, s;
+    super(...e), t = this, n = "handleButtonClick", s = () => {
       let {
         guild: e
       } = this.props;
@@ -42,11 +42,11 @@ class h extends s.PureComponent {
         }
       })
     }, n in t ? Object.defineProperty(t, n, {
-      value: i,
+      value: s,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : t[n] = i
+    }) : t[n] = s
   }
 }
 t.Z = l.ZP.connectStores([o.Z], e => {

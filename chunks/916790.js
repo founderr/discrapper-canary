@@ -18,8 +18,8 @@ var a = t(735250),
   p = t(257785),
   b = t(484036),
   y = t(681619),
-  f = t(621060),
-  x = t(205899),
+  x = t(621060),
+  f = t(205899),
   k = t(719556);
 
 function v(e) {
@@ -27,7 +27,7 @@ function v(e) {
 }
 let j = [{
   key: "store",
-  cellClassName: x.actionColumn,
+  cellClassName: f.actionColumn,
   render(e) {
     let {
       trace: r
@@ -36,7 +36,7 @@ let j = [{
   }
 }, {
   key: "time",
-  cellClassName: x.totalTimeColumn,
+  cellClassName: f.totalTimeColumn,
   render(e) {
     let {
       trace: r
@@ -45,7 +45,7 @@ let j = [{
   }
 }];
 
-function N(e) {
+function w(e) {
   let {
     actionLog: r
   } = e, t = n.useMemo(() => r.traces.map(e => ({
@@ -59,7 +59,7 @@ function N(e) {
     })
   })
 }
-let w = [{
+let N = [{
   id: "action",
   name: "Action",
   render(e) {
@@ -69,7 +69,7 @@ let w = [{
     } = e, n = c()(t.createdAt);
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)(p.E, {
-        className: x.actionProperties,
+        className: f.actionProperties,
         children: [(0, a.jsx)(p.Z9, {
           name: "Created at",
           children: (0, a.jsx)("time", {
@@ -82,7 +82,7 @@ let w = [{
           children: [v(t.totalTime), " ms"]
         })]
       }), (0, a.jsx)(s.ScrollerThin, {
-        className: x.inspectorContainer,
+        className: f.inspectorContainer,
         children: (0, a.jsx)(g.Z, {
           data: t.action
         })
@@ -96,7 +96,7 @@ let w = [{
     let {
       actionLog: r
     } = e;
-    return (0, a.jsx)(N, {
+    return (0, a.jsx)(w, {
       actionLog: r
     })
   }
@@ -106,11 +106,11 @@ function C(e) {
   let {
     actionLog: r,
     initialHeight: t
-  } = e, i = n.useMemo(() => r.error ? [...w, {
+  } = e, i = n.useMemo(() => r.error ? [...N, {
     id: "error",
     name: (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(u.Z, {
-        className: x.errorIcon
+        className: f.errorIcon
       }), "Error"]
     }),
     render(e) {
@@ -119,7 +119,7 @@ function C(e) {
       } = e;
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)("div", {
-          className: l()(x.errorToolbar, k.toolbar),
+          className: l()(f.errorToolbar, k.toolbar),
           children: (0, a.jsx)("div", {
             className: k.toolbarGroup,
             children: (0, a.jsx)(s.Button, {
@@ -130,25 +130,25 @@ function C(e) {
             })
           })
         }), (0, a.jsx)(s.ScrollerThin, {
-          className: x.inspectorContainer,
+          className: f.inspectorContainer,
           children: (0, a.jsx)(g.Z, {
             data: r.error
           })
         })]
       })
     }
-  }] : w, [r]), {
+  }] : N, [r]), {
     TabBar: o,
     renderSelectedTab: c
-  } = (0, f.Z)({
+  } = (0, x.Z)({
     tabs: i
   }, [i]);
   return (0, a.jsxs)(b.Z, {
-    className: x.subPanel,
+    className: f.subPanel,
     minHeight: 100,
     initialHeight: t,
     children: [(0, a.jsx)(o, {}), (0, a.jsxs)(h.ZP, {
-      className: l()(k.headerBar, x.subPanelHeaderBar),
+      className: l()(k.headerBar, f.subPanelHeaderBar),
       children: [(0, a.jsx)(h.ZP.Icon, {
         icon: s.ReceiptIcon,
         tooltip: r.name
@@ -162,20 +162,20 @@ function C(e) {
 }
 let S = [{
   key: "action",
-  cellClassName: x.actionColumn,
+  cellClassName: f.actionColumn,
   render(e) {
     let {
       actionLog: r
     } = e;
     return (0, a.jsxs)(a.Fragment, {
       children: [r.error && (0, a.jsx)(u.Z, {
-        className: x.errorIcon
+        className: f.errorIcon
       }), r.name]
     })
   }
 }, {
   key: "total time",
-  cellClassName: x.totalTimeColumn,
+  cellClassName: f.totalTimeColumn,
   render(e) {
     let {
       actionLog: r
@@ -200,9 +200,9 @@ function T() {
     c = r.find(e => e.id === i);
   return (0, a.jsxs)("div", {
     ref: e,
-    className: l()(k.panel, x.panel),
+    className: l()(k.panel, f.panel),
     children: [(0, a.jsx)(s.ScrollerThin, {
-      className: x.tableContainer,
+      className: f.tableContainer,
       children: (0, a.jsx)(y.Z, {
         columns: S,
         data: t,

@@ -21,13 +21,13 @@ function r(e) {
     _ = (0, i.ZP)(r),
     I = _.nick,
     T = o(_),
-    N = (0, i.Sw)(c, E);
-  if (null != N && null != u) {
-    let e = u(N);
+    m = (0, i.Sw)(c, E);
+  if (null != m && null != u) {
+    let e = u(m);
     t = a.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_HOOK.format({
       username: I,
       usernameHook: T,
-      otherUsername: N.nick,
+      otherUsername: m.nick,
       otherUsernameHook: e
     })
   } else t = a.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_SELF_HOOK.format({

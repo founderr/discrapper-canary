@@ -13,8 +13,8 @@ var l = n(470079),
   c = n(867176),
   d = n(317381),
   h = n(554747),
-  g = n(146085),
-  p = n(427679),
+  p = n(146085),
+  g = n(427679),
   m = n(131704),
   C = n(199902),
   E = n(314897),
@@ -25,8 +25,8 @@ var l = n(470079),
   Z = n(944486),
   S = n(9156),
   x = n(979651),
-  T = n(709054),
-  L = n(510601),
+  L = n(709054),
+  T = n(510601),
   v = n(901621),
   A = n(981631);
 let M = [];
@@ -45,7 +45,7 @@ function O(e) {
       i = l.useRef(new o.V7),
       {
         shouldSubscribeToGuildMemberUpdates: r
-      } = L.ZP.useExperiment({
+      } = T.ZP.useExperiment({
         location: "useGuildMediaState"
       }, {
         autoTrackExposure: !1
@@ -80,8 +80,8 @@ function O(e) {
     O = (0, c.NX)(null === (t = A[0]) || void 0 === t ? void 0 : t.channelId, !1, "GuildMediaState"),
     {
       guildHasVoice: P,
-      guildHasVideo: j,
-      selectedVoiceChannelHasVideo: b
+      guildHasVideo: b,
+      selectedVoiceChannelHasVideo: j
     } = (0, a.cj)([x.Z, f.Z, N.Z, I.Z, Z.Z], () => {
       var t;
       let l = Z.Z.getVoiceChannelId(),
@@ -105,8 +105,8 @@ function O(e) {
         selectedVoiceChannelHasVideo: null != l && x.Z.hasVideo(l)
       }
     }, [e, n]),
-    D = E.default.getId();
-  return (0, a.cj)([Z.Z, C.Z, p.Z, f.Z, N.Z, d.ZP], () => {
+    y = E.default.getId();
+  return (0, a.cj)([Z.Z, C.Z, g.Z, f.Z, N.Z, d.ZP], () => {
     var t, l, s;
     let a = Z.Z.getVoiceChannelId(),
       o = (null === (t = f.Z.getChannel(a)) || void 0 === t ? void 0 : t.guild_id) === e,
@@ -126,14 +126,14 @@ function O(e) {
       gaming: r,
       isCurrentUserConnected: !1
     };
-    let S = T.default.keys(p.Z.getStageInstancesByGuild(e)).some(e => {
+    let S = L.default.keys(g.Z.getStageInstancesByGuild(e)).some(e => {
         let t = f.Z.getChannel(e);
-        return null != t && N.Z.can(g.gl, t)
+        return null != t && N.Z.can(p.gl, t)
       }),
       x = o && null !== (s = null === (l = f.Z.getChannel(a)) || void 0 === l ? void 0 : l.isGuildStageVoice()) && void 0 !== s && s,
-      L = !!o && null != C.Z.getActiveStreamForUser(D, e),
+      T = !!o && null != C.Z.getActiveStreamForUser(y, e),
       v = C.Z.getAllApplicationStreams().some(t => t.guildId === e),
-      M = o && b,
+      M = o && j,
       R = (() => {
         if (O) return A.length > 0;
         for (let e of A) {
@@ -142,8 +142,8 @@ function O(e) {
         }
         return !1
       })(),
-      y = d.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
-    return o ? (u = !0, c = (null == i ? void 0 : i.channel_id) === a, h = x, E = M, _ = L, I = y) : (u = P, c = null != i, h = S, E = j, _ = v, I = R), {
+      D = d.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
+    return o ? (u = !0, c = (null == i ? void 0 : i.channel_id) === a, h = x, E = M, _ = T, I = D) : (u = P, c = null != i, h = S, E = b, _ = v, I = R), {
       audio: u,
       video: E,
       screenshare: _,
@@ -153,5 +153,5 @@ function O(e) {
       gaming: r,
       isCurrentUserConnected: o || x
     }
-  }, [D, A, r, i, e, O, n, j, P, b])
+  }, [y, A, r, i, e, O, n, b, P, j])
 }

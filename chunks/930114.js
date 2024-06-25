@@ -20,7 +20,7 @@ function E(e) {
     channelContext: E,
     customGiftMessage: _,
     giftInfo: I
-  } = e, T = !1, N = null, m = l.default.getCurrentUser(), h = (0, o.yd)(null == m ? void 0 : m.premiumType, u.p9.TIER_0);
+  } = e, T = !1, m = null, N = l.default.getCurrentUser(), h = (0, o.yd)(null == N ? void 0 : N.premiumType, u.p9.TIER_0);
   (0, i.openModalLazy)(async () => {
     let {
       default: e
@@ -34,7 +34,7 @@ function E(e) {
         emojiName: null == I ? void 0 : null === (i = I.emoji) || void 0 === i ? void 0 : i.name,
         soundId: null == I ? void 0 : null === (l = I.sound) || void 0 === l ? void 0 : l.id,
         onComplete: (e, t) => {
-          N = e, t && (T = t, e.isSubscription && null == a.ZP.getPremiumSubscription(!1) && (0, c.H)(!0))
+          m = e, t && (T = t, e.isSubscription && null == a.ZP.getPremiumSubscription(!1) && (0, c.H)(!0))
         },
         ...n
       })
@@ -42,7 +42,7 @@ function E(e) {
   }, {
     onCloseCallback: () => {
       var e;
-      T && null != N && !h && N.isSubscription && (null == N ? void 0 : null === (e = N.subscriptionPlan) || void 0 === e ? void 0 : e.premiumSubscriptionType) === u.p9.TIER_2 && r.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED)
+      T && null != m && !h && m.isSubscription && (null == m ? void 0 : null === (e = m.subscriptionPlan) || void 0 === e ? void 0 : e.premiumSubscriptionType) === u.p9.TIER_2 && r.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED)
     }
   })
 }

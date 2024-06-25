@@ -3,8 +3,8 @@ n.d(t, {
     return h
   }
 });
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(920906),
   a = n(442837),
   r = n(481060),
@@ -24,14 +24,14 @@ let u = {
   };
 
 function E(e) {
-  var t, n, s, E;
+  var t, n, i, E;
   let {
     state: h,
     direction: _,
     cleanUp: I,
     children: m
-  } = e, g = (0, a.e7)([o.Z], () => o.Z.useReducedMotion);
-  let p = (0, l.useSpring)((t = h, n = _, s = I, E = g, t === r.TransitionStates.MOUNTED ? {
+  } = e, T = (0, a.e7)([o.Z], () => o.Z.useReducedMotion);
+  let g = (0, l.useSpring)((t = h, n = _, i = I, E = T, t === r.TransitionStates.MOUNTED ? {
     from: {
       opacity: 0,
       transform: "translateY(40px) translateX(0px)"
@@ -67,13 +67,13 @@ function E(e) {
     config: d,
     immediate: E,
     onRest: () => {
-      s()
+      i()
     }
   }));
-  return (0, i.jsx)(l.animated.div, {
-    style: p,
+  return (0, s.jsx)(l.animated.div, {
+    style: g,
     className: c.step,
-    children: (0, i.jsx)(r.ScrollerThin, {
+    children: (0, s.jsx)(r.ScrollerThin, {
       className: c.scroller,
       children: m
     })
@@ -86,20 +86,20 @@ function h(e) {
     renderItem: n,
     items: l,
     getItemKey: a
-  } = e, o = s.useRef(t - 1);
-  s.useEffect(() => {
+  } = e, o = i.useRef(t - 1);
+  i.useEffect(() => {
     o.current = t
   }, [t]);
-  let u = s.useMemo(() => null == o.current || t === o.current ? 0 : o.current < t ? 1 : -1, [t]),
-    d = s.useCallback((e, t, s, l) => (0, i.jsx)(E, {
-      state: s,
+  let u = i.useMemo(() => null == o.current || t === o.current ? 0 : o.current < t ? 1 : -1, [t]),
+    d = i.useCallback((e, t, i, l) => (0, s.jsx)(E, {
+      state: i,
       cleanUp: l,
       direction: u,
       children: n(t)
     }, e), [u, n]);
-  return (0, i.jsx)("div", {
+  return (0, s.jsx)("div", {
     className: c.stepsTransitionGroup,
-    children: (0, i.jsx)(r.TransitionGroup, {
+    children: (0, s.jsx)(r.TransitionGroup, {
       items: l,
       renderItem: d,
       getItemKey: a

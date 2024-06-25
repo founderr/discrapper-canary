@@ -19,9 +19,9 @@ var n = t(120356),
   p = t(233608),
   b = t(71080),
   y = t(286770),
-  f = t(719556);
+  x = t(719556);
 
-function x(e) {
+function f(e) {
   let {
     title: r,
     can: t
@@ -51,30 +51,30 @@ function k() {
     k = (0, o.e7)([h.Z], () => h.Z.computePermissions(t)),
     v = (0, o.e7)([h.Z], () => h.Z.computePermissions(n)),
     j = (0, s.ZP)(t, !0),
-    N = null != t ? (0, b.IG)(t, !1, !0) : null,
-    w = null != n ? p.Z.getGuildPermissionSpecMap(n) : null,
-    C = Object.values(null != N ? N : {}).map(e => {
+    w = null != t ? (0, b.IG)(t, !1, !0) : null,
+    N = null != n ? p.Z.getGuildPermissionSpecMap(n) : null,
+    C = Object.values(null != w ? w : {}).map(e => {
       let {
         title: r,
         flag: t
       } = e, n = l.e$(k, t);
-      return (0, a.jsx)(x, {
+      return (0, a.jsx)(f, {
         title: r,
         can: n
       }, r)
     }),
-    S = Object.values(null != w ? w : {}).map(e => {
+    S = Object.values(null != N ? N : {}).map(e => {
       let {
         title: r,
         flag: t
       } = e, n = l.e$(v, t);
-      return (0, a.jsx)(x, {
+      return (0, a.jsx)(f, {
         title: r,
         can: n
       }, r)
     });
   return (0, a.jsx)("div", {
-    className: i()(f.panel, y.panel),
+    className: i()(x.panel, y.panel),
     children: (0, a.jsxs)("div", {
       className: y.panelInner,
       children: [(0, a.jsxs)("section", {

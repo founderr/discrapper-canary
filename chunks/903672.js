@@ -16,17 +16,17 @@ var s = n(735250),
   _ = n(294218),
   I = n(695346),
   T = n(592125),
-  N = n(731290),
-  m = n(944486),
+  m = n(731290),
+  N = n(944486),
   h = n(455199),
   C = n(655354),
   S = n(999671),
   A = n(324081),
-  p = n(240126),
-  g = n(791914),
+  g = n(240126),
+  p = n(791914),
   f = n(981631),
-  O = n(689938),
-  R = n(174766);
+  R = n(689938),
+  O = n(174766);
 let M = {
   offset: {
     left: 4,
@@ -48,11 +48,11 @@ function v(e) {
     onJump: n,
     badgeState: r,
     closePopout: _
-  } = e, I = (0, l.e7)([T.Z, m.Z], () => T.Z.getChannel(m.Z.getChannelId())), {
-    messages: N,
+  } = e, I = (0, l.e7)([T.Z, N.Z], () => T.Z.getChannel(N.Z.getChannelId())), {
+    messages: m,
     hasMore: C,
     loading: A,
-    guildFilter: p,
+    guildFilter: g,
     roleFilter: M,
     everyoneFilter: v
   } = (0, l.cj)([h.Z], () => ({
@@ -62,21 +62,21 @@ function v(e) {
     guildFilter: h.Z.guildFilter,
     roleFilter: h.Z.roleFilter,
     everyoneFilter: h.Z.everyoneFilter
-  })), L = (0, u.Z)(p), P = (0, u.Z)(M), j = (0, u.Z)(v);
+  })), L = (0, u.Z)(g), P = (0, u.Z)(M), j = (0, u.Z)(v);
   i.useEffect(() => {
     if (!h.Z.hasLoadedEver) {
       x(I, !0);
       return
-    }(null != L && p !== L || null != P && M !== P || null != j && v !== j) && x(I, !0)
-  }, [L, p, P, M, j, v, I, !0]);
+    }(null != L && g !== L || null != P && M !== P || null != j && v !== j) && x(I, !0)
+  }, [L, g, P, M, j, v, I, !0]);
   i.useEffect(() => {
     d.l.getCurrentConfig({
       location: "mentions"
-    }).enabled && (null == N ? void 0 : N.some(E.k5)) && (o.Z.clearMentions(), x(I, !0))
+    }).enabled && (null == m ? void 0 : m.some(E.k5)) && (o.Z.clearMentions(), x(I, !0))
   }, []), i.useEffect(() => () => {
     o.Z.truncateMentions(f.DJj)
   }, []);
-  let U = i.useCallback(() => (0, s.jsx)(g.Z, {
+  let U = i.useCallback(() => (0, s.jsx)(p.Z, {
     tab: a.X.MENTIONS,
     setTab: t,
     badgeState: r,
@@ -85,26 +85,26 @@ function v(e) {
   }), [!0, t, r, _]);
   return (0, s.jsx)(s.Fragment, {
     children: (0, s.jsx)(c.ZP, {
-      className: R.recentMentionsPopout,
-      scrollerClassName: R.scroller,
+      className: O.recentMentionsPopout,
+      scrollerClassName: O.scroller,
       onFetch: () => null,
       onJump: n,
       onCloseMessage: function(e) {
         o.Z.deleteRecentMention(e.id)
       },
       channel: I,
-      messages: N,
+      messages: m,
       loading: A,
       hasMore: C,
       analyticsName: "Recent Mentions",
       loadMore: function() {
-        x(I, !0, null != N && N.length > 0 ? N[N.length - 1].id : null)
+        x(I, !0, null != m && m.length > 0 ? m[m.length - 1].id : null)
       },
       canCloseAllMessages: !0,
       renderHeader: U,
       renderEmptyState: D,
       renderMessage: Z,
-      "aria-label": O.Z.Messages.RECENT_MENTIONS,
+      "aria-label": R.Z.Messages.RECENT_MENTIONS,
       listName: "recents"
     })
   })
@@ -134,16 +134,16 @@ function P(e) {
   if (null == t) return null;
   let l = T.Z.getChannel(t.channel_id);
   if (null == l) return null;
-  let a = N.Z.didAgree(l.getGuildId()),
+  let a = m.Z.didAgree(l.getGuildId()),
     c = !!l.isNSFW() && !a;
   return (0, s.jsxs)("div", {
-    className: R.container,
+    className: O.container,
     children: [(0, s.jsx)(A.Z, {
       channel: l,
       gotoChannel: n,
       children: null != i ? (0, s.jsx)(r.CircleIconButton, {
-        className: R.closeButton,
-        tooltip: O.Z.Messages.CLOSE,
+        className: O.closeButton,
+        tooltip: R.Z.Messages.CLOSE,
         color: r.CircleIconButtonColors.TERTIARY,
         icon: (0, s.jsx)(r.CloseSmallIcon, {
           size: "xs",
@@ -152,14 +152,14 @@ function P(e) {
         onClick: () => o.Z.deleteRecentMention(t.id)
       }) : null
     }), (0, s.jsxs)("div", {
-      className: R.messageContainer,
+      className: O.messageContainer,
       children: [(0, s.jsx)(C.Z, {
-        className: R.jumpMessageButton,
+        className: O.jumpMessageButton,
         onJump: n
       }), (0, s.jsx)(_.Z, {
         message: t,
         channel: l,
-        className: R.message,
+        className: O.message,
         hideAccessories: c,
         compact: I.jU.getSetting(),
         animateAvatar: !1,
@@ -171,9 +171,9 @@ function P(e) {
 }
 
 function D(e) {
-  return (0, s.jsx)(p.Z, {
+  return (0, s.jsx)(g.Z, {
     Icon: r.AtIcon,
-    header: O.Z.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,
-    tip: O.Z.Messages.RECENT_MENTIONS_EMPTY_STATE_TIP
+    header: R.Z.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,
+    tip: R.Z.Messages.RECENT_MENTIONS_EMPTY_STATE_TIP
   })
 }

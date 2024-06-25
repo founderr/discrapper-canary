@@ -19,24 +19,24 @@ var s = n(735250),
   _ = n(271383),
   I = n(594174),
   T = n(346656),
-  N = n(671533),
-  m = n(810090),
+  m = n(671533),
+  N = n(810090),
   h = n(51144),
   C = n(506071),
   S = n(696014),
   A = n(847033),
-  p = n(544978),
-  g = n(893182),
+  g = n(544978),
+  p = n(893182),
   f = n(689938),
-  O = n(828406);
+  R = n(828406);
 
-function R(e) {
+function O(e) {
   let {
     onClick: t
   } = e;
   return (0, s.jsxs)(o.Clickable, {
     onClick: t,
-    className: O.showMoreButton,
+    className: R.showMoreButton,
     children: [(0, s.jsx)(o.Text, {
       variant: "text-sm/medium",
       color: "header-primary",
@@ -44,9 +44,9 @@ function R(e) {
     }), (0, s.jsx)(o.Spacer, {
       size: 4,
       horizontal: !0
-    }), (0, s.jsx)(N.Z, {
-      direction: N.Z.Directions.RIGHT,
-      className: O.showMoreArrow
+    }), (0, s.jsx)(m.Z, {
+      direction: m.Z.Directions.RIGHT,
+      className: R.showMoreArrow
     })]
   })
 }
@@ -55,25 +55,25 @@ function M(e) {
   let {
     coverImageAsset: t,
     isPreview: n = !1
-  } = e, i = E.QK.useSetting(), l = (0, C.n)() && i, [a, r] = (0, d.Z)(t, l), o = l ? (0, s.jsx)(m.Z, {
+  } = e, i = E.QK.useSetting(), l = (0, C.n)() && i, [a, r] = (0, d.Z)(t, l), o = l ? (0, s.jsx)(N.Z, {
     autoPlay: !0,
     loop: !0,
-    className: O.coverImage,
+    className: R.coverImage,
     width: 655,
     poster: (0, u.b)("server_products/storefront/default-header.png"),
     src: (0, u.b)("server_products/storefront/default-header.mov")
   }) : (0, s.jsx)("img", {
     src: (0, u.b)("server_products/storefront/default-header.png"),
     alt: "",
-    className: O.coverImage
+    className: R.coverImage
   });
   return (0, s.jsx)("div", {
     ref: a,
-    className: O.coverImageContainer,
+    className: R.coverImageContainer,
     children: null == r || n ? o : (0, s.jsx)("img", {
       src: r,
       alt: "",
-      className: O.coverImage
+      className: R.coverImage
     })
   })
 }
@@ -83,11 +83,11 @@ function x(e) {
   let {
     guild: d,
     subscriptionsSettings: E
-  } = e, N = d.id;
+  } = e, m = d.id;
   let {
-    nickname: m,
+    nickname: N,
     nickcolor: C
-  } = (l = N, (0, r.cj)([_.ZP, I.default], () => {
+  } = (l = m, (0, r.cj)([_.ZP, I.default], () => {
     var e, t;
     let n = I.default.getCurrentUser();
     a()(null != n, "user cannot be null");
@@ -102,7 +102,7 @@ function x(e) {
   } = (0, S.s)(), L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [Z, P] = i.useState(1), D = (0, c.Z)("(max-width: 1439px)"), {
     selectedTab: j,
     isPhantomPreview: U
-  } = (0, A.m)(), y = j === p.y.GUILD_PRODUCTS_PREVIEW ? f.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : f.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, b = L ? (0, s.jsxs)(s.Fragment, {
+  } = (0, A.m)(), b = j === g.y.GUILD_PRODUCTS_PREVIEW ? f.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : f.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, y = L ? (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(v, {
       lineClamp: D || 2 === Z ? 2 : 3,
       children: (0, s.jsx)(o.Text, {
@@ -113,21 +113,21 @@ function x(e) {
     }), x && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(o.Spacer, {
         size: 4
-      }), (0, s.jsx)(R, {
-        onClick: () => (0, g.Z)({
-          guildId: N
+      }), (0, s.jsx)(O, {
+        onClick: () => (0, p.Z)({
+          guildId: m
         })
       })]
     })]
   }) : (0, s.jsx)(o.Text, {
     variant: "text-sm/normal",
     color: "text-normal",
-    children: U ? y : f.Z.Messages.GUILD_STORE_HERO_DEFAULT_DESCRIPTION
+    children: U ? b : f.Z.Messages.GUILD_STORE_HERO_DEFAULT_DESCRIPTION
   });
   return (0, s.jsxs)("div", {
-    className: O.container,
+    className: R.container,
     children: [(0, s.jsxs)("div", {
-      className: O.infoContainer,
+      className: R.infoContainer,
       children: [(0, s.jsx)("div", {
         children: (0, s.jsx)(T.Z, {
           guild: d,
@@ -157,7 +157,7 @@ function x(e) {
             variant: "text-md/normal",
             color: "text-normal",
             children: f.Z.Messages.GUILD_STORE_HERO_DESCRIPTION_GREETING.format({
-              username: m,
+              username: N,
               usernameHook: function(e, t) {
                 return (0, s.jsx)("span", {
                   style: {
@@ -169,7 +169,7 @@ function x(e) {
             })
           }), (0, s.jsx)(o.Spacer, {
             size: 9
-          }), b]
+          }), y]
         })]
       })]
     }), (0, s.jsx)(M, {

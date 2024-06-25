@@ -3,9 +3,9 @@ n.d(t, {
     return E
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
   l = n(740492),
   a = n(626135),
   r = n(358085),
@@ -15,11 +15,11 @@ var s = n(481060),
 let d = "activity-hardware-acceleration-modal";
 
 function E(e) {
-  !l.ZP.disableActivityHardwareAccelerationPrompt && r.isPlatformEmbedded && !o.ZP.getEnableHardwareAcceleration() && (0, s.openModalLazy)(async () => {
+  !l.ZP.disableActivityHardwareAccelerationPrompt && r.isPlatformEmbedded && !o.ZP.getEnableHardwareAcceleration() && (0, i.openModalLazy)(async () => {
     let {
       default: t
     } = await Promise.resolve().then(n.bind(n, 258220));
-    return n => (0, i.jsx)(t, {
+    return n => (0, s.jsx)(t, {
       applicationId: e,
       ...n
     })
@@ -28,7 +28,7 @@ function E(e) {
     onCloseRequest: () => {
       a.default.track(u.rMx.MODAL_DISMISSED, {
         type: c.ACTIVITY_ENCOURAGES_HW_ACCELERATION
-      }), (0, s.closeModal)(d)
+      }), (0, i.closeModal)(d)
     }
   })
 }

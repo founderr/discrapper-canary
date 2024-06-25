@@ -3,8 +3,8 @@ n.d(t, {
     return o
   }
 });
-var i = n(392711),
-  s = n.n(i),
+var s = n(392711),
+  i = n.n(s),
   l = n(996106),
   a = n(981631);
 
@@ -18,7 +18,7 @@ function r(e, t, n) {
 }
 class o {
   constructor(e, t, n) {
-    if (r(this, "transport", void 0), r(this, "version", void 0), r(this, "encoding", void 0), r(this, "id", void 0), r(this, "authorization", void 0), r(this, "application", void 0), this.transport = e, this.version = t, this.encoding = n, this.id = s().uniqueId(), this.authorization = {
+    if (r(this, "transport", void 0), r(this, "version", void 0), r(this, "encoding", void 0), r(this, "id", void 0), r(this, "authorization", void 0), r(this, "application", void 0), this.transport = e, this.version = t, this.encoding = n, this.id = i().uniqueId(), this.authorization = {
         authing: !1,
         scopes: [],
         accessToken: null,

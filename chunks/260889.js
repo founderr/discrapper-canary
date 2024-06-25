@@ -3,8 +3,8 @@ n.d(t, {
     return I
   }
 });
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(442837),
   a = n(481060),
   r = n(287734),
@@ -17,10 +17,10 @@ var i = n(735250),
   _ = n(689938);
 
 function I(e) {
-  let t = s.useContext(E.AnalyticsContext),
+  let t = i.useContext(E.AnalyticsContext),
     n = e.voiceChannels[0],
     I = (0, l.e7)([u.Z], () => null != n && u.Z.can(h.Plq.CONNECT, n.channel));
-  return null == n ? null : [(0, i.jsx)(a.MenuItem, {
+  return null == n ? null : [(0, s.jsx)(a.MenuItem, {
     id: "join-voice",
     action: function() {
       (0, c.X)(n.guild.id), r.default.selectVoiceChannel(n.channel.id), o.ZP.trackWithMetadata(h.rMx.ACTIVITY_FEED_VOICE_CHANNEL_VISITED, {
@@ -35,7 +35,7 @@ function I(e) {
     },
     label: _.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_JOIN_CHANNEL,
     disabled: !I
-  }, "join-voice"), (0, i.jsx)(a.MenuItem, {
+  }, "join-voice"), (0, s.jsx)(a.MenuItem, {
     id: "goto-server",
     action: function() {
       (0, c.X)(n.guild.id), o.ZP.trackWithMetadata(h.rMx.ACTIVITY_FEED_GUILD_VISITED, {

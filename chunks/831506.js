@@ -8,26 +8,26 @@ var s, i, l, a, r = n(392711),
   _ = n(885110),
   I = n(981631);
 let T = {},
-  N = {};
+  m = {};
 
-function m(e, t) {
+function N(e, t) {
   var n;
   return (null !== (n = T[e]) && void 0 !== n ? n : {})[t]
 }
 
 function h(e, t) {
-  let n = m(e, t);
+  let n = N(e, t);
   if (null == n) return;
   let s = T[e];
   delete s[t], o().isEmpty(s) && delete T[e];
-  let i = N[n];
-  null != i && (i.delete(e), 0 === i.size && delete N[n])
+  let i = m[n];
+  null != i && (i.delete(e), 0 === i.size && delete m[n])
 }
 
 function C(e, t, n, s) {
   let i = n.find(e => null != e.party && e.party.id),
     l = null != i && null != i.party ? i.party.id : null,
-    a = m(t, e);
+    a = N(t, e);
   if (null == l || s === I.Skl.OFFLINE) return null != a && (h(t, e), void 0);
   if (null != a) {
     if (a === l) return !1;
@@ -36,8 +36,8 @@ function C(e, t, n, s) {
     var s;
     let i = T[e];
     if (null == i && (i = T[e] = {}), i[t] = n, E.Z.isBlocked(e)) return;
-    let l = null !== (s = N[n]) && void 0 !== s ? s : new Set;
-    N[n] = l, l.add(e)
+    let l = null !== (s = m[n]) && void 0 !== s ? s : new Set;
+    m[n] = l, l.add(e)
   }(t, e, l)
 }
 
@@ -61,31 +61,31 @@ function A(e, t) {
   }), n
 }
 
-function p() {
+function g() {
   let e = d.default.getId(),
     t = _.Z.getActivities();
   return C(I.ME, e, t)
 }
-class g extends(s = c.ZP.Store) {
+class p extends(s = c.ZP.Store) {
   initialize() {
-    this.syncWith([_.Z], p), this.waitFor(_.Z, E.Z)
+    this.syncWith([_.Z], g), this.waitFor(_.Z, E.Z)
   }
   getParty(e) {
-    return null != e && null != N[e] ? N[e] : null
+    return null != e && null != m[e] ? m[e] : null
   }
   getUserParties() {
     return T
   }
   getParties() {
-    return N
+    return m
   }
 }
-a = "GamePartyStore", (l = "displayName") in(i = g) ? Object.defineProperty(i, l, {
+a = "GamePartyStore", (l = "displayName") in(i = p) ? Object.defineProperty(i, l, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[l] = a, t.Z = new g(u.Z, {
+}) : i[l] = a, t.Z = new p(u.Z, {
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
     let {
       guilds: t,
@@ -107,9 +107,9 @@ a = "GamePartyStore", (l = "displayName") in(i = g) ? Object.defineProperty(i, l
       parties: t,
       userParties: n
     } = e;
-    N = {}, T = {
+    m = {}, T = {
       ...n
-    }, Object.keys(t).forEach(e => N[e] = new Set(t[e]))
+    }, Object.keys(t).forEach(e => m[e] = new Set(t[e]))
   },
   GUILD_CREATE: S,
   PRESENCES_REPLACE: function(e) {
@@ -159,7 +159,7 @@ a = "GamePartyStore", (l = "displayName") in(i = g) ? Object.defineProperty(i, l
     let n = T[t.id];
     if (null == n) return !1;
     for (let e of o().values(n)) {
-      let n = N[e];
+      let n = m[e];
       null != n && n.delete(t.id)
     }
   },
@@ -169,7 +169,7 @@ a = "GamePartyStore", (l = "displayName") in(i = g) ? Object.defineProperty(i, l
     } = e, n = T[t.id];
     if (null == n) return !1;
     for (let e of o().values(n)) {
-      let n = N[e];
+      let n = m[e];
       null != n && n.add(t.id)
     }
   }

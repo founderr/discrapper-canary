@@ -84,8 +84,8 @@ t.Z = e => {
     empty: !0,
     guildId: r
   }, "empty-member-".concat(e)));
-  let N = Math.max(Math.min(c - d.length, 99), 0);
-  if (1 === N) {
+  let m = Math.max(Math.min(c - d.length, 99), 0);
+  if (1 === m) {
     let e = n[a];
     d.push((0, s.jsx)(T, {
       member: e,
@@ -96,9 +96,9 @@ t.Z = e => {
     className: I.wrapper,
     children: (0, s.jsxs)("div", {
       className: I.partyMembers,
-      children: [d, N > 1 ? (0, s.jsxs)("div", {
+      children: [d, m > 1 ? (0, s.jsxs)("div", {
         className: I.partyMemberOverflow,
-        children: ["+", N]
+        children: ["+", m]
       }) : null]
     })
   })

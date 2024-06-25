@@ -3,10 +3,10 @@ n.d(t, {
     return l
   }
 });
-var i = n(317381),
-  s = n(592125);
+var s = n(317381),
+  i = n(592125);
 
 function l() {
-  let e = i.ZP.getConnectedActivityChannelId();
-  return s.Z.getChannel(e)
+  let e = s.ZP.getConnectedActivityChannelId();
+  return i.Z.getChannel(e)
 }

@@ -8,9 +8,9 @@ var l, i = n(735250),
   c = n(748780),
   d = n(902704),
   h = n(481060),
-  g = n(740933);
+  p = n(740933);
 
-function p(e, t, n) {
+function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -79,12 +79,12 @@ class C extends s.Component {
       onClick: l
     } = this.props;
     return (0, i.jsx)(c.Z.div, {
-      className: a()(g.bar, e),
+      className: a()(p.bar, e),
       onClick: l,
       style: this.getAnimatedStyle(),
       "aria-hidden": n,
       children: (0, i.jsx)("span", {
-        className: g.text,
+        className: p.text,
         children: t
       })
     })
@@ -105,7 +105,7 @@ class C extends s.Component {
     }
   }
   constructor(e) {
-    super(e), p(this, "_timeout", void 0), this.state = {
+    super(e), g(this, "_timeout", void 0), this.state = {
       translateY: new c.Z.Value,
       reduceMotion: !1
     }
@@ -140,7 +140,7 @@ class E extends(l = s.PureComponent) {
       className: null != r ? r : void 0,
       children: (0, i.jsx)(C, {
         hide: !0 === u || null == e && null == t,
-        className: a()(o, null != t ? g.mention : g.unread),
+        className: a()(o, null != t ? p.mention : p.unread),
         text: null != t ? n : l,
         reverse: s,
         animate: c && !d.enabled,
@@ -149,10 +149,10 @@ class E extends(l = s.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), p(this, "state", {
+    super(...e), g(this, "state", {
       unread: null,
       mention: null
-    }), p(this, "calculateState", u()(() => {
+    }), g(this, "calculateState", u()(() => {
       let {
         items: e,
         expandedFolders: t,
@@ -191,7 +191,7 @@ class E extends(l = s.PureComponent) {
         mention: a,
         unread: o
       })
-    }, 200)), p(this, "handleClick", e => {
+    }, 200)), g(this, "handleClick", e => {
       e.preventDefault(), e.stopPropagation();
       let {
         unread: t,
@@ -203,8 +203,8 @@ class E extends(l = s.PureComponent) {
     })
   }
 }
-p(E, "contextType", h.AccessibilityPreferencesContext), p(E, "defaultProps", {
-  className: g.container,
+g(E, "contextType", h.AccessibilityPreferencesContext), g(E, "defaultProps", {
+  className: p.container,
   reverse: !1,
   hide: !1,
   animate: !0

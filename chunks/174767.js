@@ -29,7 +29,7 @@ async function o(e) {
       n = e.parsed_launch_parameters.inviteToken;
     if (!(0, a.isWindows)() || null == t || null == n) return;
     let s = await I(t, !1),
-      l = await N(n);
+      l = await m(n);
     i.Z.dispatch({
       type: "GAME_INVITE_UPDATE_STATUS",
       inviteId: e.invite_id,
@@ -48,7 +48,7 @@ async function c(e) {
 async function u(e) {
   if (e.platform_type === r.ABu.XBOX) {
     let t = e.parsed_launch_parameters.inviteToken;
-    return !!(0, a.isWindows)() && null != t && await m(t)
+    return !!(0, a.isWindows)() && null != t && await N(t)
   }
   throw Error("Unsupported invite platform " + e.platform_type)
 }
@@ -94,7 +94,7 @@ async function T(e) {
     })
   })
 }
-async function N(e) {
+async function m(e) {
   if (!(0, a.isWindows)()) return !1;
   let t = await (0, l.Z)();
   return new Promise((n, s) => {
@@ -107,7 +107,7 @@ async function N(e) {
     })
   })
 }
-async function m(e) {
+async function N(e) {
   if (!(0, a.isWindows)()) return !1;
   let t = await (0, l.Z)();
   return new Promise((n, s) => {

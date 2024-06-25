@@ -19,19 +19,19 @@ var s = n(735250),
   _ = n(768581),
   I = n(91047),
   T = n(628566),
-  N = n(693912),
-  m = n(981631);
+  m = n(693912),
+  N = n(981631);
 
 function h(e, t) {
   return i.useCallback(i => (r, o) => {
     var E;
-    let N = _.ZP.getApplicationIconURL({
+    let m = _.ZP.getApplicationIconURL({
         id: i.id,
         icon: i.icon,
         bot: i.bot,
         botIconFirst: !0
       }),
-      m = d.default.getUser(null === (E = i.bot) || void 0 === E ? void 0 : E.id),
+      N = d.default.getUser(null === (E = i.bot) || void 0 === E ? void 0 : E.id),
       h = T.Z.getIntegration(e.id, i.id),
       C = e.isPrivate() && null != h ? t => {
         (0, a.jW)(t, async () => {
@@ -44,13 +44,13 @@ function h(e, t) {
             integration: h
           })
         })
-      } : null != m ? t => (0, I.Pv)(t, m, e) : void 0,
+      } : null != N ? t => (0, I.Pv)(t, N, e) : void 0,
       {
         bot: S
       } = i;
     return null == S ? r : (0, s.jsx)(l.Popout, {
       position: "right",
-      preload: () => (0, c.W)(S.id, N, {
+      preload: () => (0, c.W)(S.id, m, {
         guildId: e.guild_id,
         channelId: e.id
       }),
@@ -86,11 +86,11 @@ function C(e) {
     icon: n(570111),
     timestamp: t.timestamp,
     compact: l,
-    children: (0, N.DS)({
+    children: (0, m.DS)({
       application: c,
       username: a.nick,
       usernameHook: u(a),
-      applicationNameHook: null != c ? d(c) : m.dG4
+      applicationNameHook: null != c ? d(c) : N.dG4
     })
   })
 }
@@ -110,11 +110,11 @@ function S(e) {
     icon: n(474019),
     timestamp: t.timestamp,
     compact: l,
-    children: (0, N.nh)({
+    children: (0, m.nh)({
       application: c,
       username: a.nick,
       usernameHook: u(a),
-      applicationNameHook: null != c ? d(c) : m.dG4
+      applicationNameHook: null != c ? d(c) : N.dG4
     })
   })
 }

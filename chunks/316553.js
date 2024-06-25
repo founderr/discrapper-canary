@@ -3,19 +3,19 @@ n.d(t, {
     return a
   }
 });
-var i = n(470079),
-  s = n(207796),
+var s = n(470079),
+  i = n(207796),
   l = n(308083);
 
 function a(e) {
   let {
     selectedGame: t
   } = e;
-  return i.useMemo(() => {
+  return s.useMemo(() => {
     switch (t) {
-      case s.hz.GENSHIN:
+      case i.hz.GENSHIN:
         return l.xn;
-      case s.hz.VALORANT:
+      case i.hz.VALORANT:
         return l.nJ
     }
   }, [t])

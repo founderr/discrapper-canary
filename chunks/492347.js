@@ -3,9 +3,9 @@ n.d(t, {
     return a
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(151827),
+var i = n(151827),
   l = n(171230);
 
 function a(e) {
@@ -13,7 +13,7 @@ function a(e) {
     title: t,
     id: n
   } = e;
-  return (0, i.jsx)(s.Z, {
+  return (0, s.jsx)(i.Z, {
     className: l.title,
     id: n,
     children: t

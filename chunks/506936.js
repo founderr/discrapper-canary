@@ -12,8 +12,8 @@ var r = n(442837),
   c = n(144114),
   d = n(607744),
   h = n(594174),
-  g = n(153124),
-  p = n(981631),
+  p = n(153124),
+  g = n(981631),
   m = n(815660),
   C = n(689938),
   E = n(319081);
@@ -23,18 +23,18 @@ t.Z = e => {
     type: t,
     guildId: l,
     closePopout: i
-  } = e, f = (0, g.Dt)(), {
+  } = e, f = (0, p.Dt)(), {
     notClaimed: _,
     notEmailVerified: I,
     notPhoneVerified: N,
     newAccount: Z,
     newMember: S
-  } = (0, r.e7)([d.Z], () => d.Z.getCheck(l), [l]), x = 0 === t ? C.Z.Messages.GUILD_VERIFICATION_VOICE_HEADER : null, T = null, L = null;
-  return (0 === t && (_ ? (T = C.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED, L = C.Z.Messages.CLAIM_ACCOUNT) : N ? (T = C.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED, L = C.Z.Messages.VERIFY_PHONE) : I ? (T = C.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED, L = C.Z.Messages.RESEND_VERIFICATION_EMAIL) : S ? (T = C.Z.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({
-    min: p.YeM.MEMBER_AGE
-  }), L = C.Z.Messages.OKAY) : Z && (T = C.Z.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({
-    min: p.YeM.ACCOUNT_AGE
-  }), L = C.Z.Messages.OKAY)), null == x || null == T) ? null : (0, s.jsxs)(a.Dialog, {
+  } = (0, r.e7)([d.Z], () => d.Z.getCheck(l), [l]), x = 0 === t ? C.Z.Messages.GUILD_VERIFICATION_VOICE_HEADER : null, L = null, T = null;
+  return (0 === t && (_ ? (L = C.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED, T = C.Z.Messages.CLAIM_ACCOUNT) : N ? (L = C.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED, T = C.Z.Messages.VERIFY_PHONE) : I ? (L = C.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED, T = C.Z.Messages.RESEND_VERIFICATION_EMAIL) : S ? (L = C.Z.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({
+    min: g.YeM.MEMBER_AGE
+  }), T = C.Z.Messages.OKAY) : Z && (L = C.Z.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({
+    min: g.YeM.ACCOUNT_AGE
+  }), T = C.Z.Messages.OKAY)), null == x || null == L) ? null : (0, s.jsxs)(a.Dialog, {
     className: E.container,
     "aria-labelledby": f,
     children: [(0, s.jsx)("img", {
@@ -50,10 +50,10 @@ t.Z = e => {
       }), (0, s.jsx)(a.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: T
+        children: L
       }), (0, s.jsxs)("div", {
         className: E.buttonContainer,
-        children: [null != L ? (0, s.jsx)(a.Button, {
+        children: [null != T ? (0, s.jsx)(a.Button, {
           onClick: () => {
             _ ? u.j() : N ? (0, a.openModalLazy)(async () => {
               let {
@@ -82,7 +82,7 @@ t.Z = e => {
             })), i()
           },
           className: E.primaryButton,
-          children: L
+          children: T
         }) : null, _ || N || I ? (0, s.jsx)(a.Button, {
           onClick: i,
           look: a.Button.Looks.BLANK,

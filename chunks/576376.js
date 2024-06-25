@@ -1,13 +1,13 @@
-function s(e) {
+function n(e) {
   let t;
-  let n = !1;
+  let s = !1;
   return function() {
-    for (var s = arguments.length, i = Array(s), a = 0; a < s; a++) i[a] = arguments[a];
-    return !n && (n = !0, t = e(...i)), t
+    for (var n = arguments.length, a = Array(n), i = 0; i < n; i++) a[i] = arguments[i];
+    return !s && (s = !0, t = e(...a)), t
   }
 }
-n.d(t, {
+s.d(t, {
   h: function() {
-    return s
+    return n
   }
-}), n(47120)
+}), s(47120)

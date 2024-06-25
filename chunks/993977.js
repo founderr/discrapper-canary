@@ -1,10 +1,10 @@
 n.d(t, {
   Z: function() {
-    return C
+    return S
   }
 }), n(47120);
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(442837),
   a = n(481060),
   r = n(58642),
@@ -17,49 +17,49 @@ var i = n(735250),
   _ = n(957657),
   I = n(34305),
   m = n(981631),
-  g = n(689938),
-  p = n(656505);
+  T = n(689938),
+  g = n(656505);
 
-function N(e) {
+function p(e) {
   let {
     applicationViewItems: t,
     restoreApplication: n
   } = e;
   if (0 === t.length) return null;
-  let s = t.map(e => {
+  let i = t.map(e => {
     let t = e.libraryApplication.getDistributor();
-    return (0, i.jsxs)("div", {
-      className: p.hiddenLibraryApplication,
-      children: [(0, i.jsxs)(u.Z, {
+    return (0, s.jsxs)("div", {
+      className: g.hiddenLibraryApplication,
+      children: [(0, s.jsxs)(u.Z, {
         direction: u.Z.Direction.VERTICAL,
-        className: p.hiddenLibraryApplicationContent,
-        children: [(0, i.jsx)("div", {
-          className: p.applicationName,
+        className: g.hiddenLibraryApplicationContent,
+        children: [(0, s.jsx)("div", {
+          className: g.applicationName,
           children: e.libraryApplication.getBranchedName(e.application)
-        }), null != t ? (0, i.jsx)("div", {
-          className: p.applicationSubText,
+        }), null != t ? (0, s.jsx)("div", {
+          className: g.applicationSubText,
           children: m.EOG[t]
         }) : null]
-      }), (0, i.jsx)(a.Clickable, {
-        className: p.restoreButton,
+      }), (0, s.jsx)(a.Clickable, {
+        className: g.restoreButton,
         onClick: () => n(e.libraryApplication),
-        children: (0, i.jsx)(a.CloseSmallIcon, {
+        children: (0, s.jsx)(a.CloseSmallIcon, {
           size: "md",
           color: "currentColor",
-          className: p.restoreIcon
+          className: g.restoreIcon
         })
       })]
     }, e.key)
   });
-  return (0, i.jsxs)(a.FormSection, {
-    className: p.hiddenLibraryApplications,
-    children: [(0, i.jsx)(a.FormTitle, {
-      className: p.hiddenLibraryApplicationsTitle,
-      children: g.Z.Messages.SETTINGS_GAMES_HIDDEN_LIBRARY_APPLICATIONS_LABEL
-    }), s]
+  return (0, s.jsxs)(a.FormSection, {
+    className: g.hiddenLibraryApplications,
+    children: [(0, s.jsx)(a.FormTitle, {
+      className: g.hiddenLibraryApplicationsTitle,
+      children: T.Z.Messages.SETTINGS_GAMES_HIDDEN_LIBRARY_APPLICATIONS_LABEL
+    }), i]
   })
 }
-class T extends s.PureComponent {
+class N extends i.PureComponent {
   handleToggleShortcutDesktop(e) {
     o.Xc.updateSetting(e)
   }
@@ -78,57 +78,57 @@ class T extends s.PureComponent {
       installShortcutDesktop: t,
       installShortcutStartMenu: n
     } = this.props;
-    return (0, i.jsxs)("div", {
-      className: p.body,
-      children: [(0, h.Q)() ? (0, i.jsxs)(s.Fragment, {
-        children: [(0, i.jsx)(a.FormSwitch, {
+    return (0, s.jsxs)("div", {
+      className: g.body,
+      children: [(0, h.Q)() ? (0, s.jsxs)(i.Fragment, {
+        children: [(0, s.jsx)(a.FormSwitch, {
           value: t,
           onChange: this.handleToggleShortcutDesktop,
-          note: g.Z.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP_NOTE,
-          children: g.Z.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP
-        }), (0, i.jsx)(a.FormSwitch, {
+          note: T.Z.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP_NOTE,
+          children: T.Z.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP
+        }), (0, s.jsx)(a.FormSwitch, {
           value: n,
           onChange: this.handleToggleShortcutStartMenu,
-          note: g.Z.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU_NOTE,
-          children: g.Z.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU
-        }), (0, i.jsx)(I.Z, {})]
-      }) : null, (0, i.jsx)(N, {
+          note: T.Z.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU_NOTE,
+          children: T.Z.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU
+        }), (0, s.jsx)(I.Z, {})]
+      }) : null, (0, s.jsx)(p, {
         restoreApplication: this.handleRestoreHiddenLibraryApplication,
         applicationViewItems: e
       })]
     })
   }
   render() {
-    return (0, i.jsxs)(i.Fragment, {
-      children: [(0, i.jsx)(_.Z, {
+    return (0, s.jsxs)(s.Fragment, {
+      children: [(0, s.jsx)(_.Z, {
         currentRoute: m.Z5c.APPLICATION_LIBRARY_SETTINGS
-      }), (0, i.jsx)(a.ScrollerAuto, {
-        className: p.scroller,
+      }), (0, s.jsx)(a.ScrollerAuto, {
+        className: g.scroller,
         children: this.renderBody()
       })]
     })
   }
   constructor(...e) {
-    var t, n, i;
-    super(...e), t = this, n = "handleRestoreHiddenLibraryApplication", i = e => {
+    var t, n, s;
+    super(...e), t = this, n = "handleRestoreHiddenLibraryApplication", s = e => {
       let t = E.x9(e.getFlags(), m.eHb.HIDDEN);
       r.h(e.id, e.branchId, t), this.trackRestoreApplication(e, E.yE(t, m.eHb.HIDDEN))
     }, n in t ? Object.defineProperty(t, n, {
-      value: i,
+      value: s,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : t[n] = i
+    }) : t[n] = s
   }
 }
 
-function C() {
+function S() {
   let e = {
     installShortcutDesktop: o.Xc.useSetting(),
     installShortcutStartMenu: o.Pe.useSetting(),
     hiddenLibraryApplicationViewItems: (0, l.e7)([c.Z], () => c.Z.hiddenLibraryApplicationViewItems)
   };
-  return (0, i.jsx)(T, {
+  return (0, s.jsx)(N, {
     ...e
   })
 }

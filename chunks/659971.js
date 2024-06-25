@@ -1,4 +1,4 @@
-var i, s, l, a, r = n(873546),
+var s, i, l, a, r = n(873546),
   o = n(442837),
   c = n(570140);
 let u = !1;
@@ -7,12 +7,12 @@ class d extends(a = o.ZP.Store) {
     return !r.tq || u
   }
 }
-l = "MobileWebSidebarStore", (s = "displayName") in(i = d) ? Object.defineProperty(i, s, {
+l = "MobileWebSidebarStore", (i = "displayName") in(s = d) ? Object.defineProperty(s, i, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = l, t.Z = new d(c.Z, {
+}) : s[i] = l, t.Z = new d(c.Z, {
   MOBILE_WEB_SIDEBAR_OPEN: function() {
     u = !0
   },

@@ -3,8 +3,8 @@ n.d(t, {
     return el
   }
 }), n(47120);
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(120356),
   a = n.n(l),
   r = n(143927),
@@ -17,22 +17,22 @@ var i = n(735250),
   _ = n(493683),
   I = n(348600),
   m = n(257968),
-  g = n(367907),
-  p = n(770471),
-  N = n(158631),
-  T = n(143614),
-  C = n(463119),
-  S = n(377171),
+  T = n(367907),
+  g = n(770471),
+  p = n(158631),
+  N = n(143614),
+  S = n(463119),
+  C = n(377171),
   A = n(243778),
   f = n(922409),
   Z = n(899740),
-  v = n(28476),
-  L = n(880257),
-  O = n(631885),
+  L = n(28476),
+  O = n(880257),
+  v = n(631885),
   R = n(457396),
-  x = n(51596),
-  M = n(905423),
-  P = n(155409),
+  P = n(51596),
+  x = n(905423),
+  M = n(155409),
   D = n(210887),
   b = n(695346),
   y = n(283595),
@@ -53,38 +53,38 @@ let q = e => {
     let {
       selected: t,
       ...n
-    } = e, s = (0, o.JA)("friends"), l = (0, u.e7)([j.Z], () => j.Z.getPendingCount()), a = (0, T.Z)(), {
+    } = e, i = (0, o.JA)("friends"), l = (0, u.e7)([j.Z], () => j.Z.getPendingCount()), a = (0, N.Z)(), {
       canViewBroadcasts: r
-    } = p.Z.useExperiment({
+    } = g.Z.useExperiment({
       location: "friends_tab_no_track"
-    }), c = (0, N.ZP)();
-    return (0, i.jsxs)(V.Qj, {
+    }), c = (0, p.ZP)();
+    return (0, s.jsxs)(V.Qj, {
       selected: t,
       route: z.Z5c.FRIENDS,
       icon: h.FriendsIcon,
       text: W.Z.Messages.FRIENDS,
       onClick: () => {
-        g.ZP.trackWithMetadata(z.rMx.BROADCAST_LIST_VISITED, {
+        T.ZP.trackWithMetadata(z.rMx.BROADCAST_LIST_VISITED, {
           num_active_broadcasts: a.length,
           friends_tab_clicked: !0,
           is_broadcasting: c
         })
       },
       ...n,
-      ...s,
-      children: [a.length > 0 && r && (0, i.jsx)(h.TextBadge, {
-        color: S.Z.BG_BRAND,
-        text: (0, i.jsxs)("div", {
+      ...i,
+      children: [a.length > 0 && r && (0, s.jsx)(h.TextBadge, {
+        color: C.Z.BG_BRAND,
+        text: (0, s.jsxs)("div", {
           className: K.broadcastingBadge,
-          children: [(0, i.jsx)(B.Z, {
+          children: [(0, s.jsx)(B.Z, {
             className: K.broadcastingIcon
-          }), (0, i.jsx)(h.Text, {
+          }), (0, s.jsx)(h.Text, {
             variant: "text-xs/semibold",
             color: "always-white",
             children: a.length.toLocaleString()
           })]
         })
-      }), l > 0 ? (0, i.jsx)(h.NumberBadge, {
+      }), l > 0 ? (0, s.jsx)(h.NumberBadge, {
         count: l
       }) : null]
     })
@@ -93,16 +93,16 @@ let q = e => {
     let {
       selected: t,
       hideGameUpdateProgressIndicator: n,
-      ...s
+      ...i
     } = e, l = (0, o.JA)("library");
-    return (0, i.jsx)(V.Qj, {
+    return (0, s.jsx)(V.Qj, {
       selected: t,
       route: z.Z5c.APPLICATION_LIBRARY,
       icon: h.InventoryIcon,
       text: W.Z.Messages.LIBRARY,
-      ...s,
+      ...i,
       ...l,
-      children: (0, i.jsx)(Y.Z, {
+      children: (0, s.jsx)(Y.Z, {
         className: a()(K.downloadProgressCircle, {
           [K.hideGameUpdateProgressIndicator]: n
         })
@@ -113,10 +113,10 @@ let q = e => {
     let {
       selected: t,
       route: n,
-      locationState: s,
+      locationState: i,
       ...l
     } = e, r = (0, o.JA)("activities"), c = (0, u.e7)([D.Z], () => D.Z.getState().theme), d = (0, m.p)();
-    return (0, i.jsx)(V.Qj, {
+    return (0, s.jsx)(V.Qj, {
       selected: t,
       route: n,
       icon: (0, h.makeIconCompat)(k.Z),
@@ -124,10 +124,10 @@ let q = e => {
         [K.activitiesBirthdayIconLight]: "light" === c
       }),
       text: W.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_TAB_TITLE,
-      locationState: s,
+      locationState: i,
       ...l,
       ...r,
-      children: d > 0 ? (0, i.jsx)(h.NumberBadge, {
+      children: d > 0 ? (0, s.jsx)(h.NumberBadge, {
         count: d
       }) : null
     })
@@ -135,34 +135,34 @@ let q = e => {
   J = () => {
     let e = (0, Z.q)(),
       t = (0, Z.T)();
-    return e > 0 ? (0, i.jsx)(h.NumberBadge, {
+    return e > 0 ? (0, s.jsx)(h.NumberBadge, {
       count: e,
-      color: 0 === t ? S.Z.ICON_MUTED : void 0
+      color: 0 === t ? C.Z.ICON_MUTED : void 0
     }) : null
   },
   $ = e => {
     let {
       selected: t
     } = e, n = (0, o.JA)("messageRequests"), {
-      channelId: s
+      channelId: i
     } = (0, f._)();
-    if (!(0, v.a)()) return null;
-    let l = null == s ? void 0 : () => _.Z.preload(z.ME, s);
-    return (0, i.jsx)(V.Qj, {
+    if (!(0, L.a)()) return null;
+    let l = null == i ? void 0 : () => _.Z.preload(z.ME, i);
+    return (0, s.jsx)(V.Qj, {
       selected: t,
       route: z.Z5c.MESSAGE_REQUESTS,
       icon: h.EnvelopeIcon,
       text: W.Z.Messages.MESSAGE_REQUESTS,
       onClick: l,
       ...n,
-      children: (0, i.jsx)(J, {})
+      children: (0, s.jsx)(J, {})
     })
   },
   ee = e => {
     let {
       selected: t
-    } = e, n = W.Z.Messages.FAMILY_CENTER_SIDEBAR_TITLE, l = (0, o.JA)("family-center"), a = b.Ex.useSetting(), r = (0, L.Z)(), [c, u] = s.useState(!0);
-    return a && r ? (0, i.jsx)(V.Qj, {
+    } = e, n = W.Z.Messages.FAMILY_CENTER_SIDEBAR_TITLE, l = (0, o.JA)("family-center"), a = b.Ex.useSetting(), r = (0, O.Z)(), [c, u] = i.useState(!0);
+    return a && r ? (0, s.jsx)(V.Qj, {
       selected: t,
       route: z.Z5c.FAMILY_CENTER,
       icon: h.GroupIcon,
@@ -175,7 +175,7 @@ let q = e => {
       },
       interactiveClassName: K.familyCenterLinkButton,
       ...l,
-      children: (0, i.jsx)(et, {
+      children: (0, s.jsx)(et, {
         isParentHovered: c
       })
     }) : null
@@ -183,40 +183,40 @@ let q = e => {
   et = e => {
     let {
       isParentHovered: t
-    } = e, s = (0, O.gU)();
-    return t ? (0, i.jsx)(V.PZ, {
+    } = e, i = (0, v.gU)();
+    return t ? (0, s.jsx)(V.PZ, {
       onClick: () => {
         (0, E.ZD)(async () => {
           let {
             default: e
           } = await Promise.all([n.e("99387"), n.e("44153")]).then(n.bind(n, 760949));
-          return t => (0, i.jsx)(e, {
+          return t => (0, s.jsx)(e, {
             ...t
           })
         })
       },
       "aria-label": W.Z.Messages.CLOSE
-    }) : s > 0 ? (0, i.jsx)("div", {
+    }) : i > 0 ? (0, s.jsx)("div", {
       className: K.familyCenterPendingBadge,
-      children: (0, i.jsx)(h.NumberBadge, {
-        count: s
+      children: (0, s.jsx)(h.NumberBadge, {
+        count: i
       })
-    }) : (0, i.jsx)(A.Z, {
+    }) : (0, s.jsx)(A.Z, {
       contentTypes: [d.z.FAMILY_CENTER_NEW_BADGE],
       children: e => {
         let {
           visibleContent: t
         } = e;
-        return t === d.z.FAMILY_CENTER_NEW_BADGE ? (0, i.jsx)(h.TextBadge, {
+        return t === d.z.FAMILY_CENTER_NEW_BADGE ? (0, s.jsx)(h.TextBadge, {
           text: W.Z.Messages.NEW,
-          color: S.Z.BG_BRAND
+          color: C.Z.BG_BRAND
         }) : null
       }
     })
   },
-  en = () => (0, x.$Z)("DM_SEARCH");
+  en = () => (0, P.$Z)("DM_SEARCH");
 
-function ei(e) {
+function es(e) {
   switch (e) {
     case z.Z5c.APPLICATION_LIBRARY:
       return z.ZY5.LIBRARY;
@@ -228,14 +228,14 @@ function ei(e) {
   if (e.startsWith(z.Z5c.APPLICATION_STORE)) return e === z.Z5c.APPLICATION_STORE ? z.ZY5.STORE_DIRECTORY_HOME : e.startsWith(z.Z5c.APPLICATION_STORE) ? z.ZY5.STORE_DIRECTORY_BROWSE : z.ZY5.STORE_LISTING;
   return z.ZY5.DM_CHANNEL
 }
-let es = e => {
+let ei = e => {
   let {
     showLibrary: t,
     hasLibraryApplication: n,
-    homeLink: s,
+    homeLink: i,
     storeLink: l,
     premiumTabSelected: o
-  } = e, [u, d] = (0, M.Z)(e => {
+  } = e, [u, d] = (0, x.Z)(e => {
     let {
       channelId: t,
       path: n
@@ -248,18 +248,18 @@ let es = e => {
   }, {
     autoTrackExposure: !0
   });
-  return (0, i.jsxs)("nav", {
+  return (0, s.jsxs)("nav", {
     className: K.privateChannels,
     "aria-label": W.Z.Messages.PRIVATE_CHANNELS_A11Y_LABEL,
-    children: [(0, i.jsx)(P.Z, {
+    children: [(0, s.jsx)(M.Z, {
       tutorialId: "direct-messages",
       position: "right",
       offsetX: -52,
-      children: (0, i.jsx)("div", {
+      children: (0, s.jsx)("div", {
         className: a()(K.searchBar, {
           [K.themedHeaderMobile]: c.tq
         }),
-        children: (0, i.jsx)("button", {
+        children: (0, s.jsx)("button", {
           type: "button",
           className: a()(K.searchBarComponent, {
             [K.themedSearchBarMobile]: c.tq
@@ -268,49 +268,49 @@ let es = e => {
           children: W.Z.Messages.DM_SEARCH_PLACEHOLDER
         })
       })
-    }), (0, i.jsxs)(F.Z, {
+    }), (0, s.jsxs)(F.Z, {
       ...e,
       version: d,
       selectedChannelId: u,
       showDMHeader: !0,
-      children: [(0, i.jsx)(q, {
-        selected: null != d ? d === z.Z5c.FRIENDS : s === z.Z5c.FRIENDS
-      }, "friends"), n && t ? (0, i.jsx)(Q, {
-        selected: null == d ? null != s && s.startsWith(z.Z5c.APPLICATION_LIBRARY) : d.startsWith(z.Z5c.APPLICATION_LIBRARY),
-        hideGameUpdateProgressIndicator: s === z.Z5c.APPLICATION_LIBRARY
-      }, "library") : null, (0, i.jsx)(R.g, {
+      children: [(0, s.jsx)(q, {
+        selected: null != d ? d === z.Z5c.FRIENDS : i === z.Z5c.FRIENDS
+      }, "friends"), n && t ? (0, s.jsx)(Q, {
+        selected: null == d ? null != i && i.startsWith(z.Z5c.APPLICATION_LIBRARY) : d.startsWith(z.Z5c.APPLICATION_LIBRARY),
+        hideGameUpdateProgressIndicator: i === z.Z5c.APPLICATION_LIBRARY
+      }, "library") : null, (0, s.jsx)(R.g, {
         selected: null == d ? o : d.startsWith(z.Z5c.APPLICATION_STORE),
         route: null == l || location.pathname.startsWith(z.Z5c.ACTIVITIES) || location.pathname.startsWith(z.Z5c.APPLICATION_STORE) ? z.Z5c.APPLICATION_STORE : l,
         locationState: {
           analyticsSource: {
-            page: ei(s),
+            page: es(i),
             section: z.jXE.NAVIGATION,
             object: z.qAy.NAVIGATION_LINK
           }
         }
-      }, "premium"), E ? (0, i.jsx)(X, {
-        selected: null != d && d.startsWith(z.Z5c.ACTIVITIES) || null != s && s.startsWith(z.Z5c.ACTIVITIES),
+      }, "premium"), E ? (0, s.jsx)(X, {
+        selected: null != d && d.startsWith(z.Z5c.ACTIVITIES) || null != i && i.startsWith(z.Z5c.ACTIVITIES),
         route: z.Z5c.ACTIVITIES,
         locationState: {
           analyticsSource: {
-            page: ei(s),
+            page: es(i),
             section: z.jXE.NAVIGATION,
             object: z.qAy.NAVIGATION_LINK
           }
         }
-      }, "activities") : null, (0, i.jsx)($, {
-        selected: null == d ? null != s && s.startsWith(z.Z5c.MESSAGE_REQUESTS) : d === z.Z5c.MESSAGE_REQUESTS
-      }, "message-requests"), (0, i.jsx)(C.i, {
-        selected: d === z.Z5c.COLLECTIBLES_SHOP || (null == s ? void 0 : s.startsWith(z.Z5c.COLLECTIBLES_SHOP)),
+      }, "activities") : null, (0, s.jsx)($, {
+        selected: null == d ? null != i && i.startsWith(z.Z5c.MESSAGE_REQUESTS) : d === z.Z5c.MESSAGE_REQUESTS
+      }, "message-requests"), (0, s.jsx)(S.i, {
+        selected: d === z.Z5c.COLLECTIBLES_SHOP || (null == i ? void 0 : i.startsWith(z.Z5c.COLLECTIBLES_SHOP)),
         locationState: {
           analyticsSource: {
-            page: ei(s),
+            page: es(i),
             section: z.jXE.NAVIGATION,
             object: z.qAy.NAVIGATION_LINK
           }
         }
-      }, "discord-shop"), (0, i.jsx)(ee, {
-        selected: null != s && s.startsWith(z.Z5c.FAMILY_CENTER) || null != d && d.startsWith(z.Z5c.FAMILY_CENTER)
+      }, "discord-shop"), (0, s.jsx)(ee, {
+        selected: null != i && i.startsWith(z.Z5c.FAMILY_CENTER) || null != d && d.startsWith(z.Z5c.FAMILY_CENTER)
       }, "family-center")]
     })]
   })
@@ -322,21 +322,21 @@ function el() {
       if (e === z.Z5c.APPLICATION_STORE) return !0;
       let t = (0, H.ZK)(e);
       if (null != t) {
-        var n, i;
-        return null !== (i = null === (n = G.Z.get(t)) || void 0 === n ? void 0 : n.premium) && void 0 !== i && i
+        var n, s;
+        return null !== (s = null === (n = G.Z.get(t)) || void 0 === n ? void 0 : n.premium) && void 0 !== s && s
       }
       return !1
     }, [e]),
     n = !b.bm.useSetting(),
     {
-      theme: s
+      theme: i
     } = (0, u.cj)([D.Z], () => ({
       theme: D.Z.theme
     })),
     l = (0, u.e7)([y.Z], () => y.Z.hasLibraryApplication()),
     a = (0, u.e7)([U.Z], () => U.Z.getCurrentPath());
-  return (0, i.jsx)(es, {
-    theme: s,
+  return (0, s.jsx)(ei, {
+    theme: i,
     showLibrary: n,
     hasLibraryApplication: l,
     storeLink: a,

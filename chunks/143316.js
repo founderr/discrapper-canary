@@ -21,7 +21,7 @@ function d(e) {
       marked_all_channels_as_read: !0,
       num_unread_channels_remaining: 0
     })
-  }, N = e => {
+  }, m = e => {
     e.shiftKey ? T() : _(!0)
   };
   return (0, s.jsxs)(s.Fragment, {
@@ -31,7 +31,7 @@ function d(e) {
     }) : null, "bottom-floating" === t ? (0, s.jsx)(o.a, {
       text: u.Z.Messages.MARK_ALL_AS_READ,
       icon: l.DoubleCheckmarkLargeIcon,
-      onClick: N
+      onClick: m
     }) : (0, s.jsx)(l.CircleIconButton, {
       tooltip: I ? u.Z.Messages.MARK_ALL_AS_READ : u.Z.Messages.UNREADS_MARK_READ,
       color: l.CircleIconButtonColors.SECONDARY,
@@ -39,7 +39,7 @@ function d(e) {
         size: "xs",
         color: "currentColor"
       }),
-      onClick: N
+      onClick: m
     })]
   })
 }

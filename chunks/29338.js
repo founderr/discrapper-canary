@@ -19,11 +19,11 @@ var n = t(120356),
   p = t(650613),
   b = t(789086),
   y = t(206583),
-  f = t(659247),
-  x = t(719556);
+  x = t(659247),
+  f = t(719556);
 let k = [{
   key: "type",
-  cellClassName: i()(f.cell, f.cellType),
+  cellClassName: i()(x.cell, x.cellType),
   render(e) {
     let {
       type: r
@@ -35,7 +35,7 @@ let k = [{
   }
 }, {
   key: "count",
-  cellClassName: i()(f.cell, f.cellCount),
+  cellClassName: i()(x.cell, x.cellCount),
   render(e) {
     let {
       entries: r
@@ -49,7 +49,7 @@ let k = [{
   }
 }, {
   key: "only?",
-  cellClassName: f.cell,
+  cellClassName: x.cell,
   render(e) {
     let {
       type: r
@@ -102,9 +102,9 @@ function j() {
       return (null === (e = g.Z.getFeedState(y.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0
     });
   return (0, a.jsx)("div", {
-    className: i()(x.panel),
+    className: i()(f.panel),
     children: (0, a.jsxs)(d.ScrollerThin, {
-      className: f.content,
+      className: x.content,
       children: [(0, a.jsxs)(d.FormSection, {
         children: [(0, a.jsx)(d.FormTitle, {
           children: "Inventory"

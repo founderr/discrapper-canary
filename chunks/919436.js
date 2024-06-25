@@ -8,8 +8,8 @@ var l, i = n(735250),
   c = n(239091),
   d = n(358221),
   h = n(43267),
-  g = n(933557),
-  p = n(93687),
+  p = n(933557),
+  g = n(93687),
   m = n(266076),
   C = n(199902),
   E = n(19780),
@@ -20,8 +20,8 @@ var l, i = n(735250),
   Z = n(880080),
   S = n(682662),
   x = n(662146),
-  T = n(674552),
-  L = n(981631),
+  L = n(674552),
+  T = n(981631),
   v = n(129061);
 
 function A(e, t, n) {
@@ -113,7 +113,7 @@ class O extends(l = s.PureComponent) {
   getChannelIcon() {
     let {
       channel: e
-    } = this.props, t = e.type === L.d4z.DM ? I.default.getUser(e.getRecipientId()) : null;
+    } = this.props, t = e.type === T.d4z.DM ? I.default.getUser(e.getRecipientId()) : null;
     return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, h.x)(e)
   }
   render() {
@@ -127,16 +127,16 @@ class O extends(l = s.PureComponent) {
       stream: c,
       isCurrentUserInThisDMCall: d,
       unread: h,
-      isGDMFacepileEnabled: g
+      isGDMFacepileEnabled: p
     } = this.props, {
-      hovered: p,
+      hovered: g,
       animating: C
-    } = this.state, E = e.isMultiUserDM() && null == e.icon && g;
+    } = this.state, E = e.isMultiUserDM() && null == e.icon && p;
     return (0, i.jsx)(r.animated.div, {
       style: this.getAnimatedStyle(),
       children: (0, i.jsxs)(S.H, {
         children: [(0, i.jsx)(Z.Z, {
-          hovered: !C && p,
+          hovered: !C && g,
           selected: !C && n,
           unread: !C && h,
           className: v.pill
@@ -144,9 +144,9 @@ class O extends(l = s.PureComponent) {
           text: null != t ? t : "",
           selected: n,
           children: (0, i.jsx)(u.BlobMask, {
-            selected: n || p,
-            lowerBadge: l > 0 ? (0, T.Ne)(l) : null,
-            upperBadge: (0, T.Or)({
+            selected: n || g,
+            lowerBadge: l > 0 ? (0, L.Ne)(l) : null,
+            upperBadge: (0, L.Or)({
               audio: s,
               video: o,
               screenshare: c,
@@ -158,14 +158,14 @@ class O extends(l = s.PureComponent) {
             children: (0, i.jsx)(a.mh, {
               id: e.id,
               children: l => (0, i.jsx)(u.NavItem, {
-                to: L.Z5c.CHANNEL(L.ME, e.id),
+                to: T.Z5c.CHANNEL(T.ME, e.id),
                 onMouseEnter: () => this.setState({
                   hovered: !0
                 }),
                 onMouseLeave: () => this.setState({
                   hovered: !1
                 }),
-                selected: n || p,
+                selected: n || g,
                 ariaLabel: null != t ? t : "",
                 onContextMenu: this.handleContextMenu,
                 icon: E ? void 0 : this.getChannelIcon(),
@@ -198,7 +198,7 @@ class O extends(l = s.PureComponent) {
     }), A(this, "handleContextMenu", e => {
       let {
         channel: t
-      } = this.props, l = t.type === L.d4z.DM ? I.default.getUser(t.getRecipientId()) : null;
+      } = this.props, l = t.type === T.d4z.DM ? I.default.getUser(t.getRecipientId()) : null;
       null != l ? (0, c.jW)(e, async () => {
         let {
           default: e
@@ -228,15 +228,15 @@ A(O, "defaultProps", {
   isCurrentUserInThisDMCall: !1
 }), t.Z = s.forwardRef(function(e, t) {
   let n = e.channel.id,
-    l = (0, g.ZP)(e.channel),
+    l = (0, p.ZP)(e.channel),
     s = (0, o.e7)([E.Z], () => E.Z.getChannelId(), []),
-    r = (0, o.e7)([d.Z], () => null != s ? d.Z.getMode(s) : L.WtW.VOICE, [s]),
+    r = (0, o.e7)([d.Z], () => null != s ? d.Z.getMode(s) : T.WtW.VOICE, [s]),
     a = (0, o.e7)([C.Z], () => C.Z.getAllApplicationStreamsForChannel(n).length > 0),
     u = (0, o.e7)([_.Z], () => _.Z.getChannelId(), []),
     c = (0, o.e7)([f.ZP], () => f.ZP.getMentionCount(n), [n]),
     {
       isFacepileEnabled: h
-    } = p.Z.useExperiment({
+    } = g.Z.useExperiment({
       location: "unread_direct_message"
     }, {
       autoTrackExposure: !1
@@ -244,7 +244,7 @@ A(O, "defaultProps", {
     m = s === n,
     I = !1,
     N = !1;
-  return m && (I = r === L.WtW.VOICE, N = r === L.WtW.VIDEO), (0, i.jsx)(O, {
+  return m && (I = r === T.WtW.VOICE, N = r === T.WtW.VIDEO), (0, i.jsx)(O, {
     ...e,
     ref: t,
     channelName: l,

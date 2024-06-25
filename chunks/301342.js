@@ -1,6 +1,6 @@
 n.d(t, {
   P: function() {
-    return L
+    return T
   },
   Qo: function() {
     return v
@@ -22,8 +22,8 @@ var l = n(735250),
   c = n(211739),
   d = n(239091),
   h = n(146773),
-  g = n(680089),
-  p = n(430824),
+  p = n(680089),
+  g = n(430824),
   m = n(496675),
   C = n(9156),
   E = n(514342),
@@ -37,27 +37,27 @@ var l = n(735250),
 function x(e) {
   e.stopPropagation()
 }
-let T = i.memo(function(e) {
+let L = i.memo(function(e) {
   let t, {
       channel: s,
       connectChannelDragSource: h,
       connectChannelDropTarget: _,
       disableManageChannels: I,
-      position: T,
-      sortingPosition: L,
+      position: L,
+      sortingPosition: T,
       hideIcon: v,
       children: A
     } = e,
     M = (0, o.e7)([C.ZP], () => C.ZP.isChannelMuted(s.getGuildId(), s.id)),
-    R = (0, o.e7)([g.Z], () => g.Z.isCollapsed(s.id)),
+    R = (0, o.e7)([p.Z], () => p.Z.isCollapsed(s.id)),
     O = (0, o.e7)([m.Z], () => m.Z.can(N.Plq.MANAGE_CHANNELS, s));
-  t = null != L ? T > L ? S.containerDragAfter : S.containerDragBefore : S.containerDefault;
+  t = null != T ? L > T ? S.containerDragAfter : S.containerDragBefore : S.containerDefault;
   let P = i.useCallback(() => {
       R ? (0, c.mJ)(s.id) : (0, c.c4)(s.id)
     }, [s.id, R]),
-    j = i.useCallback(e => {
+    b = i.useCallback(e => {
       if ("null" !== s.id) {
-        let t = p.Z.getGuild(s.getGuildId());
+        let t = g.Z.getGuild(s.getGuildId());
         null != t && (0, d.jW)(e, async () => {
           let {
             default: e
@@ -70,7 +70,7 @@ let T = i.memo(function(e) {
         })
       }
     }, [s]),
-    b = i.useCallback(() => {
+    j = i.useCallback(() => {
       let e = s.type === N.d4z.GUILD_CATEGORY ? null : s.type,
         t = s.getGuildId();
       null != t && (0, u.openModalLazy)(async () => {
@@ -86,8 +86,8 @@ let T = i.memo(function(e) {
       })
     }, [s]),
     {
-      role: D,
-      tabIndex: y,
+      role: y,
+      tabIndex: D,
       ...U
     } = (0, a.JA)(s.id),
     G = i.useRef(null),
@@ -109,11 +109,11 @@ let T = i.memo(function(e) {
             [S.muted]: M,
             [S.clickable]: !0
           }),
-          onContextMenu: j,
+          onContextMenu: b,
           children: [(0, l.jsxs)(u.Clickable, {
             innerRef: G,
             className: S.mainContent,
-            tabIndex: y,
+            tabIndex: D,
             ...U,
             onClick: P,
             "aria-label": Z.Z.Messages.CATEGORY_A11Y_LABEL.format({
@@ -148,10 +148,10 @@ let T = i.memo(function(e) {
                   look: u.Button.Looks.BLANK,
                   size: u.Button.Sizes.NONE,
                   className: r()(S.addButton, S.forceVisible),
-                  onClick: b,
+                  onClick: j,
                   onMouseEnter: t,
                   onMouseLeave: n,
-                  tabIndex: y,
+                  tabIndex: D,
                   focusProps: {
                     offset: {
                       top: -3,
@@ -174,8 +174,8 @@ let T = i.memo(function(e) {
     });
   return null != _ && null != h ? _(h(k)) : k
 });
-t.ZP = (0, h.B)(T);
-let L = i.memo(function(e) {
+t.ZP = (0, h.B)(L);
+let T = i.memo(function(e) {
     let {
       name: t,
       onDismiss: n,

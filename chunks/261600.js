@@ -1,6 +1,6 @@
 n.d(t, {
   U: function() {
-    return g
+    return p
   }
 });
 var l = n(735250),
@@ -18,11 +18,11 @@ function h(e) {
   let {
     activity: h
   } = e, {
-    channelId: g
-  } = null !== (t = (0, u.rq)(h)) && void 0 !== t ? t : {}, p = (0, s.e7)([c.Z], () => c.Z.getStageInstanceByChannel(g), [g]), m = i.useRef(null), C = i.useCallback(() => {
-    let e = a.Z.getChannel(g);
+    channelId: p
+  } = null !== (t = (0, u.rq)(h)) && void 0 !== t ? t : {}, g = (0, s.e7)([c.Z], () => c.Z.getStageInstanceByChannel(p), [p]), m = i.useRef(null), C = i.useCallback(() => {
+    let e = a.Z.getChannel(p);
     null != e && o.Cq(e)
-  }, [g]), E = null !== (n = null == p ? void 0 : p.topic) && void 0 !== n ? n : h.name, f = d.Z.Messages.STAGE_CHANNEL_ACTIVITY_FEED_JOIN.format({
+  }, [p]), E = null !== (n = null == g ? void 0 : g.topic) && void 0 !== n ? n : h.name, f = d.Z.Messages.STAGE_CHANNEL_ACTIVITY_FEED_JOIN.format({
     channel: E
   });
   return (0, l.jsx)("div", {
@@ -39,7 +39,7 @@ function h(e) {
     })
   })
 }
-class g {
+class p {
   shouldShow(e) {
     return (0, u.JE)(e)
   }

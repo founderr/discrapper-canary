@@ -16,8 +16,8 @@ var l = n(735250),
   c = n(91192),
   d = n(873546),
   h = n(442837),
-  g = n(481060),
-  p = n(493683),
+  p = n(481060),
+  g = n(493683),
   m = n(239091),
   C = n(420660),
   E = n(702321),
@@ -28,18 +28,18 @@ var l = n(735250),
   Z = n(853856),
   S = n(93687),
   x = n(785232),
-  T = n(280234),
-  L = n(509275),
+  L = n(280234),
+  T = n(509275),
   v = n(878857),
   A = n(204197),
   M = n(199902),
   R = n(158776),
   O = n(306680),
   P = n(111583),
-  j = n(9156),
-  b = n(594174),
-  D = n(467679),
-  y = n(514342),
+  b = n(9156),
+  j = n(594174),
+  y = n(467679),
+  D = n(514342),
   U = n(28718),
   G = n(733880),
   w = n(709054),
@@ -49,7 +49,7 @@ var l = n(735250),
   H = n(981631),
   F = n(689938),
   W = n(608418);
-let Y = k.ZP.getEnableHardwareAcceleration() ? g.AnimatedAvatar : g.Avatar,
+let Y = k.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
   z = {
     offset: {
       top: 2,
@@ -57,7 +57,7 @@ let Y = k.ZP.getEnableHardwareAcceleration() ? g.AnimatedAvatar : g.Avatar,
       right: 4
     }
   },
-  K = e => (0, l.jsx)(g.Clickable, {
+  K = e => (0, l.jsx)(p.Clickable, {
     className: W.closeButton,
     ...e,
     focusProps: {
@@ -68,13 +68,13 @@ let Y = k.ZP.getEnableHardwareAcceleration() ? g.AnimatedAvatar : g.Avatar,
         right: 6
       }
     },
-    children: (0, l.jsx)(g.CloseSmallIcon, {
+    children: (0, l.jsx)(p.CloseSmallIcon, {
       size: "md",
       color: "currentColor",
       className: W.closeIcon
     })
   }),
-  q = () => (0, l.jsx)(g.StarIcon, {
+  q = () => (0, l.jsx)(p.StarIcon, {
     size: "xs",
     color: "currentColor",
     className: W.favoriteIcon
@@ -91,7 +91,7 @@ class Q extends i.Component {
       children: o,
       locationState: c,
       onClick: h,
-      className: p,
+      className: g,
       role: m,
       "aria-posinset": C,
       "aria-setsize": E,
@@ -100,7 +100,7 @@ class Q extends i.Component {
     return (0, l.jsx)(G.Z, {
       className: r()(W.channel, {
         [W.fullWidth]: d.tq
-      }, p),
+      }, g),
       onClick: h,
       role: m,
       focusProps: {
@@ -109,7 +109,7 @@ class Q extends i.Component {
       },
       "aria-posinset": C,
       "aria-setsize": E,
-      children: (0, l.jsx)(g.Interactive, {
+      children: (0, l.jsx)(p.Interactive, {
         as: "div",
         selected: t,
         className: r()(s, W.interactive, W.linkButton, {
@@ -148,7 +148,7 @@ function J(e) {
     applicationStream: M,
     isTyping: R,
     status: P,
-    isMobile: b,
+    isMobile: j,
     lastOnlineTimestamp: w,
     "aria-posinset": k,
     "aria-setsize": Q
@@ -158,29 +158,29 @@ function J(e) {
     eventHandlers: el
   } = (0, A.Z)({
     user: d,
-    size: g.AvatarSizes.SIZE_32,
+    size: p.AvatarSizes.SIZE_32,
     animateOnHover: !(a || J)
-  }), ei = (0, h.e7)([j.ZP], () => j.ZP.isChannelMuted(t.getGuildId(), t.id)), es = (0, h.e7)([O.ZP], () => O.ZP.getMentionCount(t.id) > 0), er = (0, I.ZP)(t), ea = (0, h.e7)([Z.Z], () => Z.Z.isFavorite(t.id)), eo = null != S && S.length > 0, {
+  }), ei = (0, h.e7)([b.ZP], () => b.ZP.isChannelMuted(t.getGuildId(), t.id)), es = (0, h.e7)([O.ZP], () => O.ZP.getMentionCount(t.id) > 0), er = (0, I.ZP)(t), ea = (0, h.e7)([Z.Z], () => Z.Z.isFavorite(t.id)), eo = null != S && S.length > 0, {
     isRecentlyOnlineShowable: eu,
     isRecentlyOnlineTrackable: ec
-  } = (0, T.$)(w), ed = !eo && P === H.Skl.OFFLINE && null != w;
+  } = (0, L.$)(w), ed = !eo && P === H.Skl.OFFLINE && null != w;
   i.useEffect(() => {
-    ec && ed && T.Z.trackExposure({
+    ec && ed && L.Z.trackExposure({
       location: "private_channel"
     })
   }, [ec, ed]);
   let eh = () => {
       X(!0)
     },
-    eg = () => {
+    ep = () => {
       X(!1)
     },
-    ep = function(e) {
+    eg = function(e) {
       let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      null != e && (e.preventDefault(), e.stopPropagation()), p.Z.closePrivateChannel(t.id, a, n)
+      null != e && (e.preventDefault(), e.stopPropagation()), g.Z.closePrivateChannel(t.id, a, n)
     },
     em = () => {
-      p.Z.preload(H.ME, t.id)
+      g.Z.preload(H.ME, t.id)
     },
     eC = e => {
       e.stopPropagation()
@@ -227,10 +227,10 @@ function J(e) {
         name
       }), i = F.Z.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({
         name
-      })), (0, g.openModal)(e => (0, l.jsx)(V.Z, {
+      })), (0, p.openModal)(e => (0, l.jsx)(V.Z, {
         header: n,
         body: i,
-        onSubmit: ep,
+        onSubmit: eg,
         ...e
       }))
     },
@@ -259,7 +259,7 @@ function J(e) {
         user: d
       });
       if (ed && eu) {
-        let e = (0, L.H)(w);
+        let e = (0, T.H)(w);
         return (0, l.jsx)("div", {
           className: W.subtext,
           children: e
@@ -268,7 +268,7 @@ function J(e) {
       return null
     },
     eN = () => {
-      let e = g.AvatarSizes.SIZE_32;
+      let e = p.AvatarSizes.SIZE_32;
       if (t.isMultiUserDM()) return t.recipients.length >= 2 && s && null == t.icon ? (0, l.jsx)(x.Z, {
         "aria-hidden": !0,
         recipients: t.recipients,
@@ -287,11 +287,11 @@ function J(e) {
       let n = null;
       return !d.isSystemUser() && (n = (0, C.Z)(S) ? H.Skl.STREAMING : P), (0, l.jsx)(Y, {
         ...el,
-        size: g.AvatarSizes.SIZE_32,
+        size: p.AvatarSizes.SIZE_32,
         src: et,
         avatarDecoration: en,
         status: n,
-        isMobile: b,
+        isMobile: j,
         isTyping: R,
         "aria-label": d.username,
         statusTooltip: !0
@@ -300,7 +300,7 @@ function J(e) {
     eZ = t.isMultiUserDM(),
     eS = t.isSystemDM(),
     ex = (0, v.Q)(),
-    eT = eZ || eS || t.type !== H.d4z.DM || (null == d ? void 0 : d.clan) == null ? er : (0, l.jsxs)(l.Fragment, {
+    eL = eZ || eS || t.type !== H.d4z.DM || (null == d ? void 0 : d.clan) == null ? er : (0, l.jsxs)(l.Fragment, {
       children: [er, (0, l.jsx)(N.ZP, {
         clan: null == d ? void 0 : d.clan,
         userId: null == d ? void 0 : d.id,
@@ -326,12 +326,12 @@ function J(e) {
         },
         ref: ee,
         onMouseEnter: eh,
-        onMouseLeave: eg,
+        onMouseLeave: ep,
         onMouseDown: em,
         onContextMenu: ef,
         "aria-setsize": Q,
         "aria-posinset": k,
-        children: (0, l.jsxs)(g.Interactive, {
+        children: (0, l.jsxs)(p.Interactive, {
           className: r()(W.interactive, {
             [W.interactiveSystemDM]: ex && eS,
             [W.interactiveSelected]: a
@@ -355,19 +355,19 @@ function J(e) {
               highlighted: es,
               muted: null != ei && ei,
               subText: eI(),
-              name: (0, l.jsx)(y.Z, {
+              name: (0, l.jsx)(D.Z, {
                 tooltipClassName: W.overflowTooltip,
-                children: eT
+                children: eL
               }),
-              decorators: t.isSystemDM() ? (0, l.jsx)(D.Z, {
+              decorators: t.isSystemDM() ? (0, l.jsx)(y.Z, {
                 className: W.decorator,
-                type: D.Z.Types.SYSTEM_DM,
+                type: y.Z.Types.SYSTEM_DM,
                 verified: !0
               }) : null
             })
           }), ea ? (0, l.jsx)(q, {}) : null, (0, l.jsx)(K, {
             "aria-label": eZ ? F.Z.Messages.LEAVE_GROUP_DM : F.Z.Messages.CLOSE_DM,
-            onClick: eZ ? e_ : ep,
+            onClick: eZ ? e_ : eg,
             onMouseDown: eC
           })]
         })
@@ -380,7 +380,7 @@ t.ZP = e => {
     channel: t,
     selected: n,
     ...i
-  } = e, s = (0, h.e7)([b.default], () => b.default.getUser(t.getRecipientId())), {
+  } = e, s = (0, h.e7)([j.default], () => j.default.getUser(t.getRecipientId())), {
     isStatusIndicatorEnabled: r,
     isTypingIndicatorEnabled: a,
     isFacepileEnabled: o
@@ -390,7 +390,7 @@ t.ZP = e => {
     autoTrackExposure: !0
   }), {
     isRecentlyOnlineEnabled: u
-  } = T.Z.useExperiment({
+  } = L.Z.useExperiment({
     location: "private_channel"
   }, {
     autoTrackExposure: !1
@@ -410,10 +410,10 @@ t.ZP = e => {
       isMobile: null != c && R.Z.isMobileOnline(c),
       isRecentlyOnlineEnabled: u
     }
-  }, [t, c, r, u]), g = (0, h.e7)([b.default, P.Z], () => {
+  }, [t, c, r, u]), p = (0, h.e7)([j.default, P.Z], () => {
     if (t.isMultiUserDM()) return !!a && w.default.keys(P.Z.getTypingUsers(t.id)).some(e => {
       var t;
-      return e !== (null === (t = b.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
+      return e !== (null === (t = j.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
     });
     if (null != s) return P.Z.isTyping(t.id, t.getRecipientId());
     return !1
@@ -421,7 +421,7 @@ t.ZP = e => {
   return t.isMultiUserDM() ? (0, l.jsx)(J, {
     channel: t,
     selected: n,
-    isTyping: g,
+    isTyping: p,
     status: d.status === H.Skl.ONLINE ? H.Skl.ONLINE : void 0,
     isGDMFacepileEnabled: o,
     ...i
@@ -429,7 +429,7 @@ t.ZP = e => {
     channel: t,
     selected: n,
     user: s,
-    isTyping: g,
+    isTyping: p,
     ...i,
     ...d
   })

@@ -1,9 +1,9 @@
-t.d(s, {
+s.d(t, {
   r: function() {
     return n
   }
 });
-let n = (0, t(818083).B)({
+let n = (0, s(818083).B)({
   kind: "user",
   id: "2024-05_discount_model_data_collection",
   label: "Discount Model Data Collection",

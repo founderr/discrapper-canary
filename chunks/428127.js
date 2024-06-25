@@ -13,8 +13,8 @@ var l = n(735250),
   c = n(481060),
   d = n(607070),
   h = n(492162),
-  g = n(451478),
-  p = n(409216),
+  p = n(451478),
+  g = n(409216),
   m = n(934415),
   C = n(968847),
   E = n(689938),
@@ -31,8 +31,8 @@ function I(e) {
     jumpToVoiceChannels: s
   } = e, a = n.getCategoryFromSection(n.voiceChannelsSectionNumber), o = (0, h.Z)(n.id), d = i.useCallback(e => {
     e.preventDefault(), e.stopPropagation(), s()
-  }, [s]), g = null !== (t = null == a ? void 0 : a.getChannelRecords()) && void 0 !== t ? t : [], C = (0, m.c4)({
-    channels: g,
+  }, [s]), p = null !== (t = null == a ? void 0 : a.getChannelRecords()) && void 0 !== t ? t : [], C = (0, m.c4)({
+    channels: p,
     selectedChannelId: null,
     selectedVoiceChannelId: null,
     voiceStates: o
@@ -53,7 +53,7 @@ function I(e) {
       children: E.Z.Messages.VOICE_CHANNEL_BAR_ACTIVE.format({
         count: C.length
       })
-    }), (0, l.jsx)(p.Z, {
+    }), (0, l.jsx)(g.Z, {
       guildId: n.id,
       className: f.voiceChannelsUsers,
       users: C.slice(0, 4),
@@ -72,21 +72,21 @@ function N(e) {
     jumpToVoiceChannels: u,
     jumpToChannel: h
   } = e, {
-    bottomBar: p,
+    bottomBar: g,
     topBar: m
-  } = (0, o.cj)([C.Z], () => C.Z.getUnreadStateForGuildId(n.id)), N = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), Z = (0, o.e7)([g.Z], () => g.Z.isFocused()), {
+  } = (0, o.cj)([C.Z], () => C.Z.getUnreadStateForGuildId(n.id)), N = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), Z = (0, o.e7)([p.Z], () => p.Z.isFocused()), {
     mode: S,
     mentionCount: x,
-    targetChannelId: T
-  } = "bottom" === t ? p : m, L = S === C.x.HIDDEN, v = (0, a.useSpring)({
+    targetChannelId: L
+  } = "bottom" === t ? g : m, T = S === C.x.HIDDEN, v = (0, a.useSpring)({
     to: {
-      transform: L ? "bottom" === t ? "translateY(180%)" : "translateY(-180%)" : "translateY(0%)"
+      transform: T ? "bottom" === t ? "translateY(180%)" : "translateY(-180%)" : "translateY(0%)"
     },
     config: _,
     immediate: N || !Z
   }), A = i.useCallback(e => {
-    e.preventDefault(), e.stopPropagation(), null != T && h(T)
-  }, [h, T]);
+    e.preventDefault(), e.stopPropagation(), null != L && h(L)
+  }, [h, L]);
   return (0, l.jsx)("div", {
     className: r()(f.container, {
       [f.top]: "top" === t,
@@ -95,7 +95,7 @@ function N(e) {
     children: (0, l.jsx)(a.animated.div, {
       className: f.containerPadding,
       style: v,
-      "aria-hidden": L,
+      "aria-hidden": T,
       children: S === C.x.HIDDEN ? (0, l.jsx)("div", {
         className: r()(f.bar, f.emptyBar)
       }) : S === C.x.UNREAD ? (0, l.jsxs)(c.Clickable, {

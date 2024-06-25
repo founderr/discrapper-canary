@@ -1,9 +1,9 @@
 n.d(t, {
   X: function() {
-    return I
+    return h
   },
   Z: function() {
-    return h
+    return I
   }
 });
 var s = n(735250);
@@ -13,8 +13,8 @@ var r = n(481060),
   l = n(390072),
   a = n(601964),
   o = n(940627),
-  c = n(346656),
-  u = n(230224),
+  u = n(346656),
+  c = n(230224),
   d = n(689938),
   E = n(369912);
 
@@ -24,7 +24,7 @@ function _(e) {
     guildScheduledEvent: n,
     channel: a,
     onAcceptInvite: o,
-    isSubmitting: c
+    isSubmitting: u
   } = e;
   return (0, s.jsxs)("div", {
     className: E.guildEventCard,
@@ -46,13 +46,13 @@ function _(e) {
       className: E.acceptButton,
       color: r.Button.Colors.GREEN,
       onClick: o,
-      submitting: c,
+      submitting: u,
       children: d.Z.Messages.GUILD_PROFILE_JOIN_SERVER_BUTTON
     })]
   })
 }
 
-function I(e) {
+function h(e) {
   var t;
   let {
     invite: n
@@ -67,10 +67,10 @@ function I(e) {
       children: d.Z.Messages.STAGE_INVITE_GUILD_HEADER
     }), (0, s.jsxs)("div", {
       className: E.guildContainer,
-      children: [(0, s.jsx)(c.Z, {
+      children: [(0, s.jsx)(u.Z, {
         guild: i,
         active: !0,
-        size: c.Z.Sizes.MEDIUM
+        size: u.Z.Sizes.MEDIUM
       }), (0, s.jsxs)("div", {
         className: E.guildDetailsContanier,
         children: [(0, s.jsxs)(r.Text, {
@@ -83,7 +83,7 @@ function I(e) {
             className: E.guildBadge,
             tooltipPosition: "left"
           })]
-        }), (0, s.jsx)(u.V6, {
+        }), (0, s.jsx)(c.V6, {
           invite: n,
           textClassName: E.guildInfoMemberCountText,
           className: E.guildInfoMemberCount
@@ -100,7 +100,7 @@ function I(e) {
   })
 }
 
-function h(e) {
+function I(e) {
   let {
     invite: t,
     channel: n,

@@ -1,6 +1,6 @@
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(570140),
+var i = n(570140),
   l = n(317770),
   a = n(663993),
   r = n(788983),
@@ -23,19 +23,19 @@ let c = (0, a.Un)({
   });
 class E extends l.Z {
   _initialize() {
-    s.Z.subscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout), s.Z.subscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout)
+    i.Z.subscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout), i.Z.subscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout)
   }
   _terminate() {
-    s.Z.unsubscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout), s.Z.unsubscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout)
+    i.Z.unsubscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout), i.Z.unsubscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout)
   }
   handleOpenChannelCallPopout(e) {
     let {
       channel: t
     } = e;
-    r.bA(o.KJ3.CHANNEL_CALL_POPOUT, e => t.isGuildStageVoice() ? (0, i.jsx)(u, {
+    r.bA(o.KJ3.CHANNEL_CALL_POPOUT, e => t.isGuildStageVoice() ? (0, s.jsx)(u, {
       windowKey: e,
       channelId: t.id
-    }) : (0, i.jsx)(c, {
+    }) : (0, s.jsx)(c, {
       windowKey: e,
       channelId: t.id
     }), {
@@ -44,7 +44,7 @@ class E extends l.Z {
     })
   }
   handleOpenRTCDebugPopout() {
-    r.bA(o.KJ3.RTC_DEBUG_POPOUT, e => (0, i.jsx)(d, {
+    r.bA(o.KJ3.RTC_DEBUG_POPOUT, e => (0, s.jsx)(d, {
       windowKey: e
     }), {
       defaultWidth: 854,

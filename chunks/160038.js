@@ -9,8 +9,8 @@ var l = n(735250),
   c = n(706619),
   d = n(695346),
   h = n(131951),
-  g = n(626135),
-  p = n(572004),
+  p = n(626135),
+  g = n(572004),
   m = n(63063),
   C = n(476221),
   E = n(981631),
@@ -35,12 +35,12 @@ let N = () => {
       }
       return n
     }).filter(e => e.length > 0);
-    (0, p.JG)(JSON.stringify(t, null, 2)), (0, o.showToast)((0, o.createToast)(_.Z.Messages.COPIED, o.ToastType.SUCCESS))
+    (0, g.JG)(JSON.stringify(t, null, 2)), (0, o.showToast)((0, o.createToast)(_.Z.Messages.COPIED, o.ToastType.SUCCESS))
   })
 };
 t.Z = function(e) {
   (0, i.useEffect)(() => {
-    g.default.track(E.rMx.OPEN_POPOUT, {
+    p.default.track(E.rMx.OPEN_POPOUT, {
       type: "RTC Connection"
     })
   }, []);
@@ -102,7 +102,7 @@ t.Z = function(e) {
       connectionState: s,
       connectionTypeText: a
     } = e,
-    p = d.Sb.getSetting(),
+    g = d.Sb.getSetting(),
     Z = {
       [E.hes.AWAITING_ENDPOINT]: _.Z.Messages.RTC_CONNECTION_STATE_AWAITING_ENDPOINT.format({
         url: E.yXt.STATUS
@@ -138,7 +138,7 @@ t.Z = function(e) {
           color: o.tokens.colors.TEXT_POSITIVE.css,
           className: I.__invalid_icon
         }), a]
-      }), p && h.Z.supports(f.AN.DIAGNOSTICS) && !__OVERLAY__ && (0, l.jsxs)(l.Fragment, {
+      }), g && h.Z.supports(f.AN.DIAGNOSTICS) && !__OVERLAY__ && (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsxs)(o.Anchor, {
           className: r()(I.debugButton, I.textWithIcon),
           onClick: t,
@@ -157,7 +157,7 @@ t.Z = function(e) {
             className: I.__invalid_icon
           })]
         })]
-      }), !p && !__OVERLAY__ && (0, l.jsx)(o.Anchor, {
+      }), !g && !__OVERLAY__ && (0, l.jsx)(o.Anchor, {
         className: I.debugButton,
         href: m.Z.getArticleURL(E.BhN.VOICE_VIDEO_TROUBLESHOOTING),
         children: _.Z.Messages.LEARN_MORE

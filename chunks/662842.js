@@ -3,7 +3,7 @@ n.d(t, {
     return w
   }
 }), n(47120);
-var i, s, l = n(735250),
+var s, i, l = n(735250),
   a = n(470079),
   r = n(120356),
   o = n.n(r),
@@ -15,45 +15,45 @@ var i, s, l = n(735250),
   _ = n(471445),
   I = n(15274),
   m = n(924301),
-  g = n(504160),
-  p = n(151864),
-  N = n(725436),
-  T = n(497656),
-  C = n(554747),
-  S = n(230900),
+  T = n(504160),
+  g = n(151864),
+  p = n(725436),
+  N = n(497656),
+  S = n(554747),
+  C = n(230900),
   A = n(854698),
   f = n(703656),
   Z = n(922482),
-  v = n(565799),
-  L = n(501655),
-  O = n(427679),
+  L = n(565799),
+  O = n(501655),
+  v = n(427679),
   R = n(448206),
-  x = n(484459),
-  M = n(103575),
-  P = n(496675),
+  P = n(484459),
+  x = n(103575),
+  M = n(496675),
   D = n(594174),
   b = n(662868),
   y = n(981631),
   j = n(765305),
   U = n(689938),
   G = n(846756);
-(s = i || (i = {}))[s.STAGE = 0] = "STAGE", s[s.EVENT_EXTERNAL = 1] = "EVENT_EXTERNAL", s[s.EVENT_VOICE = 2] = "EVENT_VOICE", s[s.STUDY_ROOM = 3] = "STUDY_ROOM";
+(i = s || (s = {}))[i.STAGE = 0] = "STAGE", i[i.EVENT_EXTERNAL = 1] = "EVENT_EXTERNAL", i[i.EVENT_VOICE = 2] = "EVENT_VOICE", i[i.STUDY_ROOM = 3] = "STUDY_ROOM";
 
 function w(e) {
   let {
     guild: t,
     isStudyRoomNotice: n = !1
-  } = e, i = (0, T.y)(t.id), s = (0, C.k5)(t.id), r = (0, c.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]), {
+  } = e, s = (0, N.y)(t.id), i = (0, S.k5)(t.id), r = (0, c.e7)([v.Z], () => v.Z.getStageInstanceByChannel(null == s ? void 0 : s.id), [s]), {
     isStageNoticeHidden: w,
     isEventNoticeHidden: k
-  } = (0, c.cj)([p.Z], () => ({
-    isStageNoticeHidden: p.Z.isLiveChannelNoticeHidden({
+  } = (0, c.cj)([g.Z], () => ({
+    isStageNoticeHidden: g.Z.isLiveChannelNoticeHidden({
       stageId: null == r ? void 0 : r.id
     }),
-    isEventNoticeHidden: p.Z.isLiveChannelNoticeHidden({
-      eventId: null == s ? void 0 : s.id
+    isEventNoticeHidden: g.Z.isLiveChannelNoticeHidden({
+      eventId: null == i ? void 0 : i.id
     })
-  }), [r, s]), B = null == i ? void 0 : i.id, H = (0, c.Wu)([v.Z], () => [...new Set(v.Z.getMutableParticipants(B, L.pV.SPEAKER).map(e => e.user))], [B]), V = (0, c.e7)([v.Z], () => null != B ? v.Z.getParticipantCount(B, L.pV.AUDIENCE) : 0, [B]), F = (0, c.e7)([P.Z], () => P.Z.can(y.Plq.CONNECT, i)), Y = (0, R.Z)(null == i ? void 0 : i.id), z = null == s ? void 0 : s.creator_id, W = (0, c.e7)([D.default], () => D.default.getUser(z), [z]);
+  }), [r, i]), B = null == s ? void 0 : s.id, H = (0, c.Wu)([L.Z], () => [...new Set(L.Z.getMutableParticipants(B, O.pV.SPEAKER).map(e => e.user))], [B]), V = (0, c.e7)([L.Z], () => null != B ? L.Z.getParticipantCount(B, O.pV.AUDIENCE) : 0, [B]), F = (0, c.e7)([M.Z], () => M.Z.can(y.Plq.CONNECT, s)), Y = (0, R.Z)(null == s ? void 0 : s.id), z = null == i ? void 0 : i.creator_id, W = (0, c.e7)([D.default], () => D.default.getUser(z), [z]);
   a.useEffect(() => {
     null != z && (0, E.PR)(z)
   }, [z]);
@@ -71,8 +71,8 @@ function w(e) {
     let {
       guildEvent: t,
       stageInstance: n,
-      activeChannel: i,
-      canConnect: s,
+      activeChannel: s,
+      canConnect: i,
       myRole: a,
       eventCreator: r,
       speakers: o,
@@ -80,19 +80,19 @@ function w(e) {
       isEventNoticeHidden: u,
       isStageNoticeHidden: E,
       isStudyRoomNotice: h
-    } = e, I = null != n && null != i && !E, p = null != t ? (0, A.DK)(t) : null;
-    if (h && null != i) {
-      let e = (0, _.KS)(i);
+    } = e, I = null != n && null != s && !E, g = null != t ? (0, A.DK)(t) : null;
+    if (h && null != s) {
+      let e = (0, _.KS)(s);
       return {
         noticeType: 3,
-        title: "\uD83D\uDCDA☕ ".concat(i.name),
+        title: "\uD83D\uDCDA☕ ".concat(s.name),
         location: U.Z.Messages.HUB_STUDY_ROOM_VOICE_CHANNEL_TOOLTIP,
         locationIcon: null != e ? (0, l.jsx)(e, {
           size: "xs",
           color: "currentColor",
           className: G.locationIcon
         }) : null,
-        canListenIn: s,
+        canListenIn: i,
         buttonText: U.Z.Messages.HUB_STUDY_ROOM_NOTICE_VOICE_CTA,
         users: [],
         overflowUsers: null
@@ -104,7 +104,7 @@ function w(e) {
         return (null == a ? void 0 : a.speaker) ? e = U.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != a && (e = U.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
           noticeType: 0,
           title: n.topic,
-          location: i.name,
+          location: s.name,
           locationIcon: (0, l.jsx)(d.StageIcon, {
             size: "custom",
             color: "currentColor",
@@ -112,9 +112,9 @@ function w(e) {
             height: 16,
             className: G.locationIcon
           }),
-          canListenIn: s,
+          canListenIn: i,
           buttonText: e,
-          onClose: () => (0, g.ji)({
+          onClose: () => (0, T.ji)({
             stageId: null == n ? void 0 : n.id
           }),
           users: o.length > 5 ? o.slice(0, 5) : o,
@@ -141,7 +141,7 @@ function w(e) {
         return (null == a ? void 0 : a.speaker) ? e = U.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != a && (e = U.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
           noticeType: 0,
           title: n.topic,
-          location: i.name,
+          location: s.name,
           locationIcon: (0, l.jsx)(d.StageIcon, {
             size: "custom",
             color: "currentColor",
@@ -149,9 +149,9 @@ function w(e) {
             height: 16,
             className: G.locationIcon
           }),
-          canListenIn: s,
+          canListenIn: i,
           buttonText: e,
-          onClose: () => (0, g.ji)({
+          onClose: () => (0, T.ji)({
             stageId: null == n ? void 0 : n.id
           }),
           users: o.length > 5 ? o.slice(0, 5) : o,
@@ -173,15 +173,15 @@ function w(e) {
         }
       }
       if (t.entity_type === j.WX.EXTERNAL) {
-        let e = (0, S.cS)(t);
+        let e = (0, C.cS)(t);
         if (null == e) return {
           noticeType: null
         };
-        let n = m.ZP.getUserCount(t.id, p);
+        let n = m.ZP.getUserCount(t.id, g);
         return {
           noticeType: 1,
           title: t.name,
-          location: (0, N.m)(e, !0),
+          location: (0, p.m)(e, !0),
           locationIcon: (0, l.jsx)(d.LocationIcon, {
             size: "custom",
             color: "currentColor",
@@ -191,7 +191,7 @@ function w(e) {
           }),
           canListenIn: !1,
           buttonText: U.Z.Messages.GUILD_EVENT_DETAILS_INFO_TAB_TITLE,
-          onClose: () => (0, g.ji)({
+          onClose: () => (0, T.ji)({
             eventId: null == t ? void 0 : t.id
           }),
           users: null == r ? [] : [r],
@@ -211,21 +211,21 @@ function w(e) {
             })]
           })
         }
-      } else if (t.entity_type === j.WX.VOICE && null != i) {
-        let e = (0, _.KS)(i),
-          n = m.ZP.getUserCount(t.id, p);
+      } else if (t.entity_type === j.WX.VOICE && null != s) {
+        let e = (0, _.KS)(s),
+          n = m.ZP.getUserCount(t.id, g);
         return {
           noticeType: 2,
           title: t.name,
-          location: i.name,
+          location: s.name,
           locationIcon: null != e ? (0, l.jsx)(e, {
             size: "xs",
             color: "currentColor",
             className: G.locationIcon
           }) : null,
-          canListenIn: s,
+          canListenIn: i,
           buttonText: U.Z.Messages.GUILD_EVENT_JOIN,
-          onClose: () => (0, g.ji)({
+          onClose: () => (0, T.ji)({
             eventId: null == t ? void 0 : t.id
           }),
           users: null == r ? [] : [r],
@@ -251,9 +251,9 @@ function w(e) {
       noticeType: null
     }
   })({
-    guildEvent: s,
+    guildEvent: i,
     stageInstance: r,
-    activeChannel: i,
+    activeChannel: s,
     canConnect: F,
     myRole: Y,
     eventCreator: W,
@@ -262,7 +262,7 @@ function w(e) {
     isEventNoticeHidden: k,
     isStageNoticeHidden: w,
     isStudyRoomNotice: n
-  }), [s, r, i, F, Y, W, H, V, k, w, n]);
+  }), [i, r, s, F, Y, W, H, V, k, w, n]);
   return null == K ? null : (0, l.jsxs)("div", {
     className: G.container,
     children: [null != en ? (0, l.jsx)(d.Clickable, {
@@ -288,10 +288,10 @@ function w(e) {
     }), (ee.length > 0 || null != et) && (0, l.jsxs)("div", {
       className: G.participants,
       children: [ee.map(e => (0, l.jsx)(d.Popout, {
-        preload: () => (0, x.W)(e, {
+        preload: () => (0, P.W)(e, {
           guildId: t.id
         }),
-        renderPopout: n => (0, l.jsx)(M.Z, {
+        renderPopout: n => (0, l.jsx)(x.Z, {
           ...n,
           location: "LiveChannelNotice",
           userId: e.id,
@@ -324,11 +324,11 @@ function w(e) {
       size: d.Button.Sizes.SMALL,
       color: d.Button.Colors.GREEN,
       onClick: () => {
-        if (J) null != i && null != i.getGuildId() && ((0, Z.Cq)(i), (0, f.XU)(i.getGuildId(), i.id));
+        if (J) null != s && null != s.getGuildId() && ((0, Z.Cq)(s), (0, f.XU)(s.getGuildId(), s.id));
         else {
-          if (null == s) return;
+          if (null == i) return;
           (0, I.bO)({
-            eventId: s.id
+            eventId: i.id
           })
         }
       },

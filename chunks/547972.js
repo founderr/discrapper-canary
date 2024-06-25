@@ -1,32 +1,32 @@
-a.d(s, {
+s.d(t, {
   Z: function() {
-    return o
+    return l
   }
 });
-var t = a(230711),
-  n = a(202527),
-  r = a(332325),
-  i = a(981631);
+var n = s(230711),
+  a = s(202527),
+  i = s(332325),
+  r = s(981631);
 
-function o(e) {
-  let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+function l(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
     {
-      shouldMergeGameSettings: a
-    } = n.b.getCurrentConfig({
+      shouldMergeGameSettings: s
+    } = a.b.getCurrentConfig({
       location: "navigator"
     }, {
       autoTrackExposure: !1
     });
-  a ? t.Z.open(i.oAB.GAMES, e, s) : t.Z.open(function(e) {
+  s ? n.Z.open(r.oAB.GAMES, e, t) : n.Z.open(function(e) {
     switch (e) {
-      case r.Z.MY_GAMES:
-        return i.oAB.REGISTERED_GAMES;
-      case r.Z.CLIPS:
-        return i.oAB.CLIPS;
-      case r.Z.OVERLAY:
-        return i.oAB.OVERLAY;
-      case r.Z.ACTIVITY_PRIVACY:
-        return i.oAB.ACTIVITY_PRIVACY
+      case i.Z.MY_GAMES:
+        return r.oAB.REGISTERED_GAMES;
+      case i.Z.CLIPS:
+        return r.oAB.CLIPS;
+      case i.Z.OVERLAY:
+        return r.oAB.OVERLAY;
+      case i.Z.ACTIVITY_PRIVACY:
+        return r.oAB.ACTIVITY_PRIVACY
     }
-  }(e), null, s)
+  }(e), null, t)
 }

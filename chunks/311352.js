@@ -9,8 +9,8 @@ var i = n(399606),
   c = n(556296),
   d = n(976401),
   h = n(13140),
-  g = n(924557),
-  p = n(435064),
+  p = n(924557),
+  g = n(435064),
   m = n(39604),
   C = n(981631),
   E = n(689938),
@@ -89,13 +89,13 @@ let N = e => {
 };
 t.Z = () => {
   let e = (0, i.e7)([u.Z], () => u.Z.hasLayers()),
-    t = (0, g.Go)(),
+    t = (0, p.Go)(),
     {
       clipsEnabled: n,
       isAtMaxSavingClipsOperations: s
-    } = (0, i.cj)([p.Z], () => ({
-      clipsEnabled: p.Z.getSettings().clipsEnabled,
-      isAtMaxSavingClipsOperations: p.Z.getIsAtMaxSaveClipOperations()
+    } = (0, i.cj)([g.Z], () => ({
+      clipsEnabled: g.Z.getSettings().clipsEnabled,
+      isAtMaxSavingClipsOperations: g.Z.getIsAtMaxSaveClipOperations()
     })),
     a = (0, i.e7)([c.Z], () => c.Z.getKeybindForAction(C.kg4.SAVE_CLIP));
   if (!(t && n) || null == a || e) return null;

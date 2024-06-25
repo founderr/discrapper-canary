@@ -1,9 +1,9 @@
 t.d(n, {
   b: function() {
-    return r
+    return i
   }
 });
 
-function r(e) {
+function i(e) {
   return "".concat("https://cdn.discordapp.com/assets", "/").concat(e)
 }

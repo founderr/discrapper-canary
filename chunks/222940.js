@@ -18,7 +18,7 @@ function _(e) {
   let {
     inboxIconRef: t,
     recentsPopoutShown: n
-  } = e, [_, I] = i.useState(!1), T = (0, l.e7)([o.Z], () => o.Z.getLastUnseenInvite()), N = (0, l.e7)([u.default], () => null != T ? u.default.getUser(T.inviter_id) : null);
+  } = e, [_, I] = i.useState(!1), T = (0, l.e7)([o.Z], () => o.Z.getLastUnseenInvite()), m = (0, l.e7)([u.default], () => null != T ? u.default.getUser(T.inviter_id) : null);
   return (i.useEffect(() => {
     n && I(!1)
   }, [n]), i.useEffect(() => {
@@ -32,7 +32,7 @@ function _(e) {
     }), () => {
       e.stop()
     }
-  }, [T]), _ && null != T && null != N) ? (0, s.jsxs)(r.TooltipLayer, {
+  }, [T]), _ && null != T && null != m) ? (0, s.jsxs)(r.TooltipLayer, {
     tooltipClassName: E.tooltip,
     tooltipContentClassName: E.tooltipContent,
     targetElementRef: t,
@@ -49,7 +49,7 @@ function _(e) {
         children: (0, s.jsx)(r.Avatar, {
           "aria-label": "Inviter",
           className: E.inviterImage,
-          src: N.getAvatarURL(null, 24),
+          src: m.getAvatarURL(null, 24),
           size: r.AvatarSizes.SIZE_24
         })
       })]
@@ -59,7 +59,7 @@ function _(e) {
         className: E.__invalid_title,
         variant: "text-xs/semibold",
         children: d.Z.Messages.GAME_INVITES_INVITE_FROM.format({
-          username: N.username
+          username: m.username
         })
       }), (0, s.jsx)(r.Text, {
         className: E.__invalid_subtitle,

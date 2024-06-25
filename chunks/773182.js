@@ -22,8 +22,8 @@ var l = n(735250),
   c = n(481060),
   d = n(350810),
   h = n(110924),
-  g = n(100527),
-  p = n(970606),
+  p = n(100527),
+  g = n(970606),
   m = n(963202),
   C = n(824991),
   E = n(243778),
@@ -34,9 +34,9 @@ var l = n(735250),
   Z = n(308083),
   S = n(921944),
   x = n(689938),
-  T = n(210606);
+  L = n(210606);
 
-function L(e) {
+function T(e) {
   let {
     title: t,
     message: n,
@@ -45,18 +45,18 @@ function L(e) {
     onPopoutVisible: o,
     onClick: u,
     children: h,
-    isEligibleForUpsell: g = !0,
-    withInviteIcon: p = !0
-  } = e, m = (0, a.TH)(), [f, _] = (0, E.U)([s], S.R.SIDEBAR), x = f !== s, L = (0, d.Z)(), v = g && !L && !x && m.pathname !== N.Z5c.GUILD_DISCOVERY;
+    isEligibleForUpsell: p = !0,
+    withInviteIcon: g = !0
+  } = e, m = (0, a.TH)(), [f, _] = (0, E.U)([s], S.R.SIDEBAR), x = f !== s, T = (0, d.Z)(), v = p && !T && !x && m.pathname !== N.Z5c.GUILD_DISCOVERY;
   i.useEffect(() => {
     v && o()
   }, [v, o]);
   let A = i.useMemo(() => {
       switch (r) {
         case Z.nJ:
-          return T.valorantBackgroundImage;
+          return L.valorantBackgroundImage;
         case Z.xn:
-          return T.genshinBackgroundImage;
+          return L.genshinBackgroundImage;
         default:
           return
       }
@@ -68,7 +68,7 @@ function L(e) {
       e(), _(S.L.USER_DISMISS)
     }, [_]);
   return (0, l.jsxs)("div", {
-    className: T.container,
+    className: L.container,
     children: [(0, l.jsx)(c.Popout, {
       shouldShow: v,
       renderPopout: e => {
@@ -76,19 +76,19 @@ function L(e) {
           closePopout: i
         } = e;
         return (0, l.jsxs)("div", {
-          className: T.popoutContainer,
+          className: L.popoutContainer,
           children: [(0, l.jsx)("div", {
             className: A
           }), (0, l.jsx)(c.Clickable, {
             onClick: () => R(i),
-            className: T.close,
+            className: L.close,
             children: (0, l.jsx)(c.CloseSmallIcon, {
               size: "xs",
               color: c.tokens.colors.WHITE
             })
           }), (0, l.jsxs)("div", {
-            className: T.popoutContent,
-            children: [p && (0, l.jsx)(C.YV, {}), (0, l.jsx)(C.aF, {
+            className: L.popoutContent,
+            children: [g && (0, l.jsx)(C.YV, {}), (0, l.jsx)(C.aF, {
               title: t
             }), (0, l.jsx)(C.To, {
               message: n
@@ -96,7 +96,7 @@ function L(e) {
               onClick: M
             })]
           }), (0, l.jsx)("div", {
-            className: T.popoutCaret
+            className: L.popoutCaret
           })]
         })
       },
@@ -106,7 +106,7 @@ function L(e) {
       spacing: 16,
       children: e => (0, l.jsx)("div", {
         ...e,
-        className: T.popoutAnchor
+        className: L.popoutAnchor
       })
     }), h({
       onClick: M
@@ -119,12 +119,12 @@ function v(e) {
     defaultGameId: t,
     children: n
   } = e, s = i.useCallback(() => {
-    (0, p.tv)({
-      location: g.Z.GUILDS_LIST
+    (0, g.tv)({
+      location: p.Z.GUILDS_LIST
     })
   }, []), r = i.useCallback(() => {
-    (0, p.GS)({
-      location: g.Z.GUILDS_LIST
+    (0, g.GS)({
+      location: p.Z.GUILDS_LIST
     })
   }, []), [a, o] = i.useMemo(() => {
     switch (t) {
@@ -136,7 +136,7 @@ function v(e) {
         return [void 0, void 0]
     }
   }, [t]);
-  return (0, l.jsx)(L, {
+  return (0, l.jsx)(T, {
     title: a,
     message: o,
     dismissibleContent: u.z.GUILD_LIST_CLAN_USER_UPSELL,
@@ -158,12 +158,12 @@ function A(e) {
     location: "GuildsBarClanAdminUpsellPopout",
     includeConverted: !1
   }), r = s.length > 0, a = i.useCallback(() => {
-    (0, p.TE)({
-      location: g.Z.GUILDS_LIST
+    (0, g.TE)({
+      location: p.Z.GUILDS_LIST
     })
   }, []), o = i.useCallback(() => {
-    (0, p._9)({
-      location: g.Z.GUILDS_LIST
+    (0, g._9)({
+      location: p.Z.GUILDS_LIST
     })
   }, []), [c, d] = i.useMemo(() => {
     switch (t) {
@@ -175,7 +175,7 @@ function A(e) {
         return [void 0, void 0]
     }
   }, [t]);
-  return (0, l.jsx)(L, {
+  return (0, l.jsx)(T, {
     title: c,
     message: d,
     dismissibleContent: u.z.GUILD_LIST_CLAN_ADMIN_UPSELL,
@@ -200,16 +200,16 @@ function M(e) {
       t(), null === (r = u.current) || void 0 === r || null === (i = r.ref) || void 0 === i || null === (l = i.current) || void 0 === l || null === (n = l.layerRef) || void 0 === n || null === (e = n.current) || void 0 === e || e.updatePosition()
     }
   }, [u, s, a, t]), (0, l.jsxs)("div", {
-    className: T.container,
+    className: L.container,
     children: [(0, l.jsx)(c.Popout, {
       ref: u,
       shouldShow: s,
       renderPopout: () => (0, l.jsxs)("div", {
-        className: T.popoutContainer,
+        className: L.popoutContainer,
         children: [(0, l.jsxs)("div", {
-          className: T.popoutContent,
+          className: L.popoutContent,
           children: [(0, l.jsxs)("div", {
-            className: T.coachmarkTextContainer,
+            className: L.coachmarkTextContainer,
             children: [(0, l.jsx)(c.Heading, {
               variant: "heading-md/medium",
               children: x.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_TITLE
@@ -226,7 +226,7 @@ function M(e) {
             children: x.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_CTA
           })]
         }), (0, l.jsx)("div", {
-          className: T.popoutCaretLeft
+          className: L.popoutCaretLeft
         })]
       }),
       position: "right",
@@ -235,7 +235,7 @@ function M(e) {
       spacing: 16,
       children: e => (0, l.jsx)("div", {
         ...e,
-        className: T.popoutAnchor
+        className: L.popoutAnchor
       })
     }), n]
   })
@@ -247,10 +247,10 @@ function R(e) {
     children: n
   } = e;
   return (0, l.jsxs)("div", {
-    className: T.footer,
+    className: L.footer,
     children: [(0, l.jsx)("div", {
-      className: r()(T.gradient, {
-        [T.gradientHidden]: t
+      className: r()(L.gradient, {
+        [L.gradientHidden]: t
       })
     }), n]
   })

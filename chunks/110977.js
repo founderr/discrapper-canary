@@ -13,9 +13,9 @@ var l = n(735250),
   c = n(689938),
   d = n(279619),
   h = n(907934),
-  g = n(721690);
+  p = n(721690);
 
-function p() {
+function g() {
   return (0, l.jsx)("div", {
     className: r()(h.row, h.rowGuildName),
     children: (0, l.jsx)("span", {
@@ -51,9 +51,9 @@ let m = i.memo(function(e) {
     spacing: 20,
     position: "right",
     align: "center",
-    text: (0, l.jsx)(p, {}),
+    text: (0, l.jsx)(g, {}),
     "aria-label": t,
-    tooltipClassName: g.listItemTooltip,
+    tooltipClassName: p.listItemTooltip,
     children: e => (0, l.jsx)("div", {
       ...e,
       onMouseEnter: u.dG4,

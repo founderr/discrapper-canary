@@ -1,21 +1,21 @@
 n.d(t, {
   L: function() {
-    return s
+    return i
   },
   v: function() {
     return l
   }
 });
-var i = n(570140);
+var s = n(570140);
 
-function s() {
-  i.Z.dispatch({
+function i() {
+  s.Z.dispatch({
     type: "NOW_PLAYING_MOUNTED"
   })
 }
 
 function l() {
-  i.Z.dispatch({
+  s.Z.dispatch({
     type: "NOW_PLAYING_UNMOUNTED"
   })
 }

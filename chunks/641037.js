@@ -6,9 +6,9 @@ n.d(t, {
     return c
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
   l = n(931240),
   a = n(308083),
   r = n(689938);
@@ -58,11 +58,11 @@ async function c(e) {
   } catch (e) {
     return
   }
-  a(), (0, s.openModalLazy)(async () => {
+  a(), (0, i.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([n.e("99387"), n.e("63636")]).then(n.bind(n, 511385));
-    return n => (0, i.jsx)(e, {
+    return n => (0, s.jsx)(e, {
       guildId: t,
       tag: r.tag,
       brandPrimaryColor: r.brandPrimaryColor,

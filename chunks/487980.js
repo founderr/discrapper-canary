@@ -1,32 +1,32 @@
-t.d(s, {
+s.d(t, {
   K: function() {
-    return _
+    return c
   },
   b: function() {
-    return c
+    return E
   }
 });
-var n = t(442837),
-  a = t(704215),
-  r = t(605236),
-  i = t(276444),
-  l = t(520540),
-  o = t(898997);
-let _ = e => {
-    let s = c(e),
-      t = (0, r.wE)(a.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
-    return s && !t
+var n = s(442837),
+  a = s(704215),
+  i = s(605236),
+  r = s(276444),
+  l = s(520540),
+  o = s(898997);
+let c = e => {
+    let t = E(e),
+      s = (0, i.wE)(a.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
+    return t && !s
   },
-  c = e => {
+  E = e => {
     let {
-      enabled: s,
-      eligibleToFetch: t
+      enabled: t,
+      eligibleToFetch: s
     } = l.g.useExperiment({
       location: e
     }, {
       autoTrackExposure: !1
     });
-    (0, o.B)(e, !t);
-    let a = (0, n.e7)([i.Z], () => i.Z.getIsEligibleToSendReferrals());
-    return s && a
+    (0, o.B)(e, !s);
+    let a = (0, n.e7)([r.Z], () => r.Z.getIsEligibleToSendReferrals());
+    return t && a
   }

@@ -1,16 +1,16 @@
 t.d(n, {
   U: function() {
-    return r
+    return a
   }
 });
-var i = t(442837),
-  l = t(594174),
+var E = t(442837),
+  _ = t(594174),
   s = t(699816);
 
-function r(e) {
-  let n = (0, i.e7)([l.default], () => {
+function a(e) {
+  let n = (0, E.e7)([_.default], () => {
       var e;
-      return null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed
+      return null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed
     }),
     t = (0, s.zL)(e);
   return !1 === n || t

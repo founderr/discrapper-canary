@@ -1,6 +1,6 @@
 n(47120);
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(442837),
   a = n(846519),
   r = n(481060),
@@ -21,7 +21,7 @@ let h = (0, r.makeIconCompat)(c.Z),
     [d.TzF.CONFLICT]: h,
     [d.TzF.ERROR]: h
   });
-class g extends s.PureComponent {
+class T extends i.PureComponent {
   componentDidMount() {
     this.getIsRecentlySynced() && this.setRecentlySyncedTimeout()
   }
@@ -80,19 +80,19 @@ class g extends s.PureComponent {
       cloudSyncState: e,
       libraryApplication: t,
       className: n
-    } = this.props, s = null == e ? {
+    } = this.props, i = null == e ? {
       type: d.TzF.DONE
     } : e, l = this.getIsRecentlySynced(), a = {};
-    (I.has(s.type) || l) && (a.gradientConfig = {
+    (I.has(i.type) || l) && (a.gradientConfig = {
       id: t.id,
       startColor: "rgba(199, 208, 240, 1)",
       stopColor: "rgba(114, 137, 218, 1)",
-      stop: this.getStop(s, l)
+      stop: this.getStop(i, l)
     });
-    let o = l ? _ : m[s.type];
-    return (0, i.jsx)(r.Tooltip, {
-      text: this.getTooltip(s, l),
-      children: e => (0, i.jsx)(o, {
+    let o = l ? _ : m[i.type];
+    return (0, s.jsx)(r.Tooltip, {
+      text: this.getTooltip(i, l),
+      children: e => (0, s.jsx)(o, {
         className: n,
         ...a,
         ...e
@@ -100,13 +100,13 @@ class g extends s.PureComponent {
     })
   }
   constructor(...e) {
-    var t, n, i;
-    super(...e), t = this, n = "_doneTimer", i = new a.V7, n in t ? Object.defineProperty(t, n, {
-      value: i,
+    var t, n, s;
+    super(...e), t = this, n = "_doneTimer", s = new a.V7, n in t ? Object.defineProperty(t, n, {
+      value: s,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : t[n] = i
+    }) : t[n] = s
   }
 }
 t.Z = l.ZP.connectStores([o.Z], e => {
@@ -116,4 +116,4 @@ t.Z = l.ZP.connectStores([o.Z], e => {
   return {
     cloudSyncState: o.Z.getState(t.id, t.branchId)
   }
-})(g)
+})(T)

@@ -19,7 +19,7 @@ function h(e, t, n) {
   let l = c[e = null != e ? e : "null"];
   return null != l ? t(l) : n
 }
-class g extends(l = a.ZP.Store) {
+class p extends(l = a.ZP.Store) {
   getConnectionState(e) {
     return h(e, e => {
       let {
@@ -71,12 +71,12 @@ class g extends(l = a.ZP.Store) {
     }, null)
   }
 }
-r = "OverlayRTCConnectionStore", (s = "displayName") in(i = g) ? Object.defineProperty(i, s, {
+r = "OverlayRTCConnectionStore", (s = "displayName") in(i = p) ? Object.defineProperty(i, s, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = r, t.Z = new g(o.Z, {
+}) : i[s] = r, t.Z = new p(o.Z, {
   OVERLAY_INITIALIZE: function(e) {
     c = e.rtcConnectionStates
   },

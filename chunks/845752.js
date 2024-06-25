@@ -3,8 +3,8 @@ n.d(t, {
     return o
   }
 });
-var i = n(392711),
-  s = n.n(i),
+var s = n(392711),
+  i = n.n(s),
   l = n(243814),
   a = n(186901),
   r = n(981631);
@@ -18,9 +18,9 @@ function o(e, t) {
       handler: () => t => {
         let {
           prevState: n,
-          dispatch: i
+          dispatch: s
         } = t, l = e();
-        return !s().isEqual(l, n) && i(l), l
+        return !i().isEqual(l, n) && s(l), l
       }
     },
     [r.zMe.VOICE_SETTINGS_UPDATE_2]: {
@@ -31,12 +31,12 @@ function o(e, t) {
         } = e;
         return e => {
           let {
-            prevState: i,
+            prevState: s,
             dispatch: l
           } = e;
-          if (null == n.application.id) return i;
+          if (null == n.application.id) return s;
           let a = t(n.application.id);
-          return !s().isEqual(a, i) && l(a), a
+          return !i().isEqual(a, s) && l(a), a
         }
       }
     }

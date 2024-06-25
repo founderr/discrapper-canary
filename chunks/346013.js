@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return b
+    return y
   }
 }), n(47120);
 var s = n(735250),
@@ -16,17 +16,17 @@ var s = n(735250),
   _ = n(607070),
   I = n(100527),
   T = n(367907),
-  N = n(1585),
-  m = n(841762),
+  m = n(1585),
+  N = n(841762),
   h = n(336197),
   C = n(406432),
   S = n(348238),
   A = n(38267),
-  p = n(484459),
-  g = n(103575),
+  g = n(484459),
+  p = n(103575),
   f = n(695346),
-  O = n(271383),
-  R = n(594174),
+  R = n(271383),
+  O = n(594174),
   M = n(768581),
   x = n(900849),
   v = n(506071),
@@ -36,20 +36,20 @@ var s = n(735250),
   D = n(959517),
   j = n(689938),
   U = n(84427),
-  y = n(527455);
+  b = n(527455);
 
-function b(e) {
+function y(e) {
   var t, n, l;
   let {
     embedUrl: r,
-    message: b,
+    message: y,
     channel: B
-  } = e, k = (0, Z.J)(r, b), {
+  } = e, k = (0, Z.J)(r, y), {
     setPopout: G
-  } = (0, A.Z)(b.id, D.d$), F = (0, S.qo)(b, B, G, !0), V = f.QK.useSetting(), w = (0, v.n)(), [H, Y] = i.useState(!1), [K, W] = i.useState((null == k ? void 0 : k.coverImage) == null), z = (0, d.e7)([_.Z], () => _.Z.useReducedMotion), Q = (0, d.e7)([O.ZP, R.default], () => {
+  } = (0, A.Z)(y.id, D.d$), F = (0, S.qo)(y, B, G, !0), V = f.QK.useSetting(), w = (0, v.n)(), [H, Y] = i.useState(!1), [W, z] = i.useState((null == k ? void 0 : k.coverImage) == null), K = (0, d.e7)([_.Z], () => _.Z.useReducedMotion), Q = (0, d.e7)([R.ZP, O.default], () => {
     var e;
-    return O.ZP.isMember(null == k ? void 0 : k.guildId, null === (e = R.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
-  }, [k]), X = (0, d.e7)([O.ZP], () => (null == k ? void 0 : k.authorId) != null ? O.ZP.getMember(k.guildId, k.authorId) : null), [q, J] = i.useMemo(() => {
+    return R.ZP.isMember(null == k ? void 0 : k.guildId, null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
+  }, [k]), X = (0, d.e7)([R.ZP], () => (null == k ? void 0 : k.authorId) != null ? R.ZP.getMember(k.guildId, k.authorId) : null), [q, J] = i.useMemo(() => {
     var e;
     return [null !== (e = null == X ? void 0 : X.colorString) && void 0 !== e ? e : "inherit", null == X ? void 0 : X.colorRoleId]
   }, [X]), {
@@ -67,24 +67,24 @@ function b(e) {
     }), k.canAccess ? (0, h.Z)(P.Z5c.CHANNEL(k.guildId, k.threadId, k.messageId)) : Q ? (0, h.Z)(P.Z5c.CHANNEL(k.guildId, k.parentChannelId)) : await x.Ub(k.guildId, {}, {
       channelId: k.parentChannelId
     }))
-  }, [k, B, Q]), el = i.useCallback(() => (o()((null == k ? void 0 : k.authorId) != null, "Author Id cannot be null when loading user profile"), (0, p.W)(k.authorId, k.avatarUrl, {
+  }, [k, B, Q]), el = i.useCallback(() => (o()((null == k ? void 0 : k.authorId) != null, "Author Id cannot be null when loading user profile"), (0, g.W)(k.authorId, k.avatarUrl, {
     guildId: k.guildId,
     channelId: B.id
   })), [k, B]);
   if (null == k) return null;
-  let ea = (e, t) => (o()(null != k.authorId, "Author Id cannot be null when rendering user popout"), (0, s.jsx)(g.Z, {
+  let ea = (e, t) => (o()(null != k.authorId, "Author Id cannot be null when rendering user popout"), (0, s.jsx)(p.Z, {
       ...e,
       location: "MediaPostEmbed",
       userId: k.authorId,
       guildId: k.guildId,
       channelId: B.id,
-      messageId: b.id,
+      messageId: y.id,
       roleId: J,
       newAnalyticsLocations: t
     })),
     er = (0, M.NZ)({
       avatarDecoration: (null == X ? void 0 : X.avatarDecoration) != null ? null == X ? void 0 : X.avatarDecoration : null === (t = k.user) || void 0 === t ? void 0 : t.avatarDecoration,
-      size: (0, N.y9)(E.AvatarSizes.SIZE_40),
+      size: (0, m.y9)(E.AvatarSizes.SIZE_40),
       canAnimate: ee
     }),
     eo = null === (n = k.user) || void 0 === n ? void 0 : n.getAvatarURL(k.guildId, 40, ee),
@@ -99,15 +99,15 @@ function b(e) {
       className: U.thumbnailContainer,
       onMouseEnter: en,
       onMouseLeave: es,
-      children: [!K && (!0 === k.shouldShowBlurredThumbnailImage ? (0, s.jsx)("img", {
-        src: y,
+      children: [!W && (!0 === k.shouldShowBlurredThumbnailImage ? (0, s.jsx)("img", {
+        src: b,
         alt: j.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
         className: a()(U.thumbnail, {
           [U.spoiler]: k.shouldSpoiler
         }),
         onContextMenu: F,
-        onError: () => W(!0)
-      }) : (0, s.jsx)(m.Z, {
+        onError: () => z(!0)
+      }) : (0, s.jsx)(N.Z, {
         src: !(w && (V || H)) && ed ? "".concat(eu, "?format=png") : eu,
         backgroundSrc: "".concat(eu, "?format=png"),
         alt: j.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
@@ -117,7 +117,7 @@ function b(e) {
         }),
         imageChildClassName: U.thumbnailImage,
         onContextMenu: F,
-        onError: () => W(!0)
+        onError: () => z(!0)
       })), null != k.coverImageOverlayText && (0, s.jsx)(E.Clickable, {
         onClick: ei,
         children: (0, s.jsx)("div", {
@@ -212,7 +212,7 @@ function b(e) {
             children: k.ctaText
           })
         }) : (0, s.jsx)(E.ShinyButton, {
-          pauseAnimation: z,
+          pauseAnimation: K,
           onClick: ei,
           className: a()(U.__invalid_ctaButtonContent, U.subscribeButton),
           color: E.Button.Colors.CUSTOM,

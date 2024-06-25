@@ -1,4 +1,4 @@
-var i, s, l, a, r = n(442837),
+var s, i, l, a, r = n(442837),
   o = n(704215),
   c = n(570140),
   u = n(150340),
@@ -15,9 +15,9 @@ class h extends(a = r.ZP.Store) {
     return (0, u.S)(e.id, o.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE)
   }
 }
-l = "GuildOnboardingUpsellNoticeStore", (s = "displayName") in(i = h) ? Object.defineProperty(i, s, {
+l = "GuildOnboardingUpsellNoticeStore", (i = "displayName") in(s = h) ? Object.defineProperty(s, i, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = l, t.Z = new h(c.Z)
+}) : s[i] = l, t.Z = new h(c.Z)

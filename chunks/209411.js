@@ -1,30 +1,30 @@
 n.d(t, {
   Z: function() {
-    return g
+    return p
   }
 }), n(47120), n(773603);
 var s = n(735250),
   r = n(470079),
   i = n(593473),
   a = n(266067),
-  l = n(442837),
-  o = n(893776),
-  u = n(899742),
-  c = n(743142),
+  o = n(442837),
+  l = n(893776),
+  c = n(899742),
+  u = n(743142),
   d = n(703656),
   h = n(314897),
   E = n(781428),
   _ = n(981631),
-  m = n(176505);
+  g = n(176505);
 
-function g(e) {
+function p(e) {
   let t = r.useCallback(t => {
       if (function(e) {
           var t;
           let n = (0, a.LX)(e, {
             path: _.Z5c.CHANNEL(":guildId", ":channelId")
           });
-          return (null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.channelId) === m.oC.ROLE_SUBSCRIPTIONS || !1
+          return (null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.channelId) === g.oC.ROLE_SUBSCRIPTIONS || !1
         }(t)) d.dL(t);
       else {
         var n;
@@ -33,16 +33,16 @@ function g(e) {
     }, [e.transitionTo]),
     {
       isAuthenticated: n,
-      loginStatus: g
-    } = (0, l.cj)([h.default], () => ({
+      loginStatus: p
+    } = (0, o.cj)([h.default], () => ({
       isAuthenticated: h.default.isAuthenticated(),
       loginStatus: h.default.getLoginStatus()
     })),
     {
-      location: p,
-      redirectTo: f
+      location: f,
+      redirectTo: m
     } = e,
-    [I, N] = r.useState(n);
+    [N, I] = r.useState(n);
 
   function A(e) {
     let {
@@ -50,21 +50,21 @@ function g(e) {
       handoffToken: n,
       handoffSource: s
     } = e;
-    (0, u.Yz)({
+    (0, c.Yz)({
       handoffKey: t,
       handoffToken: n,
       handoffSource: s
-    }), N(!1)
+    }), I(!1)
   }
   return (r.useEffect(() => {
-    if (null != p) {
+    if (null != f) {
       let {
         handoff_key: e,
         handoff_token: t
-      } = (0, i.parse)(p.search);
+      } = (0, i.parse)(f.search);
       if (null != e && null != t) {
-        let n = null != f ? (0, c.L)(f) : void 0;
-        I ? o.Z.logout(null).finally(() => {
+        let n = null != m ? (0, u.L)(m) : void 0;
+        N ? l.Z.logout(null).finally(() => {
           A({
             handoffKey: e,
             handoffToken: t,
@@ -77,7 +77,7 @@ function g(e) {
         })
       }
     }
-  }, []), I || g === _.u34.LOGGING_IN) ? (0, s.jsx)(E.q, {}) : (0, s.jsx)(E.Z, {
+  }, []), N || p === _.u34.LOGGING_IN) ? (0, s.jsx)(E.q, {}) : (0, s.jsx)(E.Z, {
     ...e,
     transitionTo: t
   })

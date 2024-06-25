@@ -1,66 +1,66 @@
-n.d(t, {
+t.d(r, {
   DW: function() {
-    return d
+    return u
   },
   Gn: function() {
-    return p
-  },
-  t3: function() {
     return m
   },
+  t3: function() {
+    return h
+  },
   w4: function() {
-    return c
+    return s
   }
 });
-var s = n(525654),
-  r = n.n(s),
-  a = n(271579),
-  l = n(314897),
-  i = n(981631);
-let o = "linux";
+var a = t(525654),
+  n = t.n(a),
+  i = t(271579),
+  l = t(314897),
+  o = t(981631);
+let c = "linux";
 
-function c(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    n = arguments.length > 2 ? arguments[2] : void 0;
-  return "".concat(i.fzT.DESKTOP).concat(t ? "/ptb" : "", "?platform=").concat(e).concat(null != n ? "&format=".concat(n) : "")
+function s(e) {
+  let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+    t = arguments.length > 2 ? arguments[2] : void 0;
+  return "".concat(o.fzT.DESKTOP).concat(r ? "/ptb" : "", "?platform=").concat(e).concat(null != t ? "&format=".concat(t) : "")
 }
 
-function u() {
+function d() {
   var e;
-  let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null === (e = r().os) || void 0 === e ? void 0 : e.family;
-  return null == t ? "win" : -1 !== t.indexOf("Ubuntu") || -1 !== t.indexOf("Debian") || -1 !== t.indexOf("Fedora") || -1 !== t.indexOf("Red Hat") || -1 !== t.indexOf("SuSE") || -1 !== t.indexOf("Linux") ? o : -1 !== t.indexOf("OS X") ? "osx" : "win"
+  let r = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null === (e = n().os) || void 0 === e ? void 0 : e.family;
+  return null == r ? "win" : -1 !== r.indexOf("Ubuntu") || -1 !== r.indexOf("Debian") || -1 !== r.indexOf("Fedora") || -1 !== r.indexOf("Red Hat") || -1 !== r.indexOf("SuSE") || -1 !== r.indexOf("Linux") ? c : -1 !== r.indexOf("OS X") ? "osx" : "win"
 }
 
-function d(e) {
+function u(e) {
   return ({
     win: "Windows",
     osx: "Mac",
-    [o]: "Linux"
-  })[u(e)]
+    [c]: "Linux"
+  })[d(e)]
 }
 
-function m() {
-  let e = u();
-  return c(e, !1, e === o ? "tar.gz" : null)
+function h() {
+  let e = d();
+  return s(e, !1, e === c ? "tar.gz" : null)
 }
 
-function p(e, t, n) {
-  let s = null != n ? n.toString() : null;
-  switch (t) {
+function m(e, r, t) {
+  let a = null != t ? t.toString() : null;
+  switch (r) {
     case "iOS":
-      return (0, a.ZP)(null != s ? s : "https://itunes.apple.com/us/app/discord-chat-for-games/id985746746", {
+      return (0, i.ZP)(null != a ? a : "https://itunes.apple.com/us/app/discord-chat-for-games/id985746746", {
         utmSource: e,
         fingerprint: l.default.getFingerprint(),
-        attemptId: (0, a.WS)()
+        attemptId: (0, i.WS)()
       });
     case "Android":
-      return (0, a.ZP)(null != s ? s : "https://play.google.com/store/apps/details", {
+      return (0, i.ZP)(null != a ? a : "https://play.google.com/store/apps/details", {
         utmSource: e,
         id: "com.discord",
         fingerprint: l.default.getFingerprint(),
-        attemptId: (0, a.WS)()
+        attemptId: (0, i.WS)()
       });
     default:
-      return null != s ? s : "https://www.discord.com"
+      return null != a ? a : "https://www.discord.com"
   }
 }

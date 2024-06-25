@@ -3,8 +3,8 @@ n.d(t, {
     return l
   }
 });
-var i = n(603113),
-  s = n(122810);
+var s = n(603113),
+  i = n(122810);
 
 function l(e) {
   return {
@@ -14,8 +14,8 @@ function l(e) {
       let {
         activity: t
       } = e;
-      return (0, s.Z)(t)
+      return (0, i.Z)(t)
     }),
-    game_platform: e.currentActivities.length > 0 ? (0, i.Z)(e.currentActivities[0].activity) : null
+    game_platform: e.currentActivities.length > 0 ? (0, s.Z)(e.currentActivities[0].activity) : null
   }
 }

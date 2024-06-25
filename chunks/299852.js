@@ -4,13 +4,13 @@ var s, r = n(735250),
   l = n(593473),
   a = n(442837),
   o = n(544891),
-  c = n(481060),
-  u = n(129293),
+  u = n(481060),
+  c = n(129293),
   d = n(388905),
   E = n(108427),
   _ = n(598077),
-  I = n(896797),
-  h = n(981631),
+  h = n(896797),
+  I = n(981631),
   N = n(930441),
   p = n(689938),
   g = n(331651);
@@ -26,10 +26,10 @@ function m(e, t, n) {
 a.ZP.initialize();
 class T extends(s = i.PureComponent) {
   componentDidMount() {
-    let e = (0, u.Z)(this.props.location),
+    let e = (0, c.Z)(this.props.location),
       t = (0, l.parse)(this.props.location.search);
     o.tn.post({
-      url: h.ANM.DISABLE_EMAIL_NOTIFICATIONS,
+      url: I.ANM.DISABLE_EMAIL_NOTIFICATIONS,
       body: {
         token: e,
         pixel_uuid: t.hash,
@@ -80,7 +80,7 @@ class T extends(s = i.PureComponent) {
         className: g.marginTop8,
         color: d.zx.Colors.LINK,
         look: d.zx.Looks.LINK,
-        onClick: () => s(h.Z5c.SETTINGS("notifications", N.vG)),
+        onClick: () => s(I.Z5c.SETTINGS("notifications", N.vG)),
         children: p.Z.Messages.EMAIL_CATEGORY_MANAGE_SETTING_LABEL
       })]
     })
@@ -100,7 +100,7 @@ class T extends(s = i.PureComponent) {
     return (0, r.jsxs)(d.ZP, {
       children: [(0, r.jsx)(d.qE, {
         src: null == n ? void 0 : n.getAvatarURL(void 0, 100),
-        size: c.AvatarSizes.DEPRECATED_SIZE_100,
+        size: u.AvatarSizes.DEPRECATED_SIZE_100,
         className: g.marginBottom20
       }), (0, r.jsx)(d.Dx, {
         className: g.marginBottom8,
@@ -153,6 +153,6 @@ class T extends(s = i.PureComponent) {
 }
 m(T, "defaultProps", {
   transitionTo: e => n.g.location.assign(e)
-}), t.Z = a.ZP.connectStores([I.Z], () => ({
-  defaultRoute: I.Z.defaultRoute
+}), t.Z = a.ZP.connectStores([h.Z], () => ({
+  defaultRoute: h.Z.defaultRoute
 }))(T)

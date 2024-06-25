@@ -1,12 +1,12 @@
-n.d(t, {
+s.d(t, {
   Y: function() {
-    return i
+    return a
   }
 });
-var s = n(570140);
+var n = s(570140);
 
-function i(e) {
-  s.Z.dispatch({
+function a(e) {
+  n.Z.dispatch({
     type: "APP_VIEW_SET_HOME_LINK",
     link: e
   })

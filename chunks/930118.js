@@ -1,12 +1,12 @@
-t.d(s, {
+n.d(t, {
   Y: function() {
-    return r
+    return i
   }
 });
-var n = t(570140);
+var s = n(570140);
 
-function r(e) {
-  n.Z.wait(() => n.Z.dispatch({
+function i(e) {
+  s.Z.wait(() => s.Z.dispatch({
     type: "APPLICATION_STORE_LOCATION_CHANGE",
     location: e
   }))

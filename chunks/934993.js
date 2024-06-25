@@ -1,6 +1,6 @@
 n(47120);
-var i = n(570140),
-  s = n(996106),
+var s = n(570140),
+  i = n(996106),
   l = n(452426),
   a = n(186901),
   r = n(981631);
@@ -17,13 +17,13 @@ t.Z = {
           use_interactive_pip: n
         }
       } = e;
-      if (t.transport !== a.He.POST_MESSAGE) throw new s.Z({
+      if (t.transport !== a.He.POST_MESSAGE) throw new i.Z({
         errorCode: r.lTL.INVALID_COMMAND
       }, 'command not available from "'.concat(t.transport, " transport"));
-      if (null == t.application.id) throw new s.Z({
+      if (null == t.application.id) throw new i.Z({
         errorCode: r.lTL.INVALID_COMMAND
       }, "invalid application");
-      return i.Z.dispatch({
+      return s.Z.dispatch({
         type: "EMBEDDED_ACTIVITY_SET_CONFIG",
         applicationId: t.application.id,
         config: {

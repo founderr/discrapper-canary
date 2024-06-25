@@ -1,17 +1,17 @@
 n.d(t, {
   D: function() {
-    return g
+    return C
   }
 }), n(47120);
-var l = n(735250),
-  a = n(470079),
+var a = n(735250),
+  l = n(470079),
   i = n(557533),
-  r = n.n(i),
-  s = n(39383),
-  o = n.n(s),
+  s = n.n(i),
+  r = n(39383),
+  o = n.n(r),
   c = n(608863),
-  u = n(66037),
-  d = n(643103),
+  d = n(66037),
+  u = n(643103),
   h = n(34211),
   p = n(231338),
   m = n(431138),
@@ -25,8 +25,8 @@ function k(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let x = p.j_.MAIN_NAVIGATION_MENU;
-class g extends a.PureComponent {
+let g = p.j_.MAIN_NAVIGATION_MENU;
+class C extends l.PureComponent {
   componentDidMount() {
     window.addEventListener("keydown", this.handleKeyDown)
   }
@@ -38,62 +38,62 @@ class g extends a.PureComponent {
       className: e,
       NavigationMessages: t,
       TrackClick: n,
-      onChangeLocale: a,
+      onChangeLocale: l,
       avoidRouter: i,
-      openNavAriaLabel: s,
+      openNavAriaLabel: r,
       hideNavAriaLabel: o
     } = this.props, {
       menuOpen: k
     } = this.state;
-    return (0, l.jsx)("header", {
-      className: r()(N.header, e),
-      children: (0, l.jsxs)("nav", {
+    return (0, a.jsx)("header", {
+      className: s()(N.header, e),
+      children: (0, a.jsxs)("nav", {
         className: N.headerInner,
-        children: [(0, l.jsx)(n, {
+        children: [(0, a.jsx)(n, {
           tag: "div",
-          eventName: x,
+          eventName: g,
           className: N.headerLogo,
           data: {
             linkClicked: "logo"
           },
-          children: (0, l.jsx)(u.Z, {
+          children: (0, a.jsx)(d.Z, {
             avoidRouter: i,
             className: N.logoWrapper,
             to: p.am.INDEX,
             from: p.j_.MAIN_NAVIGATION_MENU,
-            children: (0, l.jsx)("img", {
+            children: (0, a.jsx)("img", {
               className: N.logo,
               src: m.r.ASSET_LOGO_DISCORD_SVG,
               alt: "Discord",
               itemProp: "logo"
             })
           })
-        }), (0, l.jsx)(n, {
+        }), (0, a.jsx)(n, {
           tag: "div",
           className: N.hamburgerButton,
-          eventName: x,
+          eventName: g,
           data: {
             linkClicked: "mobile-menu"
           },
-          children: (0, l.jsx)(c.r, {
+          children: (0, a.jsx)(c.r, {
             open: k,
             "aria-haspopup": "true",
-            "aria-label": k ? o : s,
+            "aria-label": k ? o : r,
             "aria-expanded": k,
             "aria-controls": this._mainNavId,
             onClick: this.toggleMenu
           })
-        }), (0, l.jsxs)("ul", {
+        }), (0, a.jsxs)("ul", {
           className: k ? N.headerNavOpen : N.headerNav,
-          children: [(0, l.jsx)(h.o, {
+          children: [(0, a.jsx)(h.o, {
             avoidRouter: i,
             TrackClick: n,
             styles: N,
             isMobile: !0,
             isVisible: k,
             NavigationMessages: t
-          }), (0, l.jsx)(d.p, {
-            onChange: a
+          }), (0, a.jsx)(u.p, {
+            onChange: l
           })]
         })]
       })

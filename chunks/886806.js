@@ -4,13 +4,13 @@ var s, r = n(735250),
   l = n(120356),
   a = n.n(l),
   o = n(442837),
-  c = n(893776),
-  u = n(129293),
+  u = n(893776),
+  c = n(129293),
   d = n(388905),
   E = n(17894),
   _ = n(108427),
-  I = n(314897),
-  h = n(626135),
+  h = n(314897),
+  I = n(626135),
   N = n(981631),
   p = n(689938),
   g = n(870941),
@@ -25,7 +25,7 @@ function T(e, t, n) {
   }) : e[t] = n, e
 }
 o.ZP.initialize();
-class Z extends(s = i.PureComponent) {
+class f extends(s = i.PureComponent) {
   componentDidMount() {
     this.handleVerify(), (0, _.e)("verify_email")
   }
@@ -86,8 +86,8 @@ class Z extends(s = i.PureComponent) {
   }
   constructor(...e) {
     super(...e), T(this, "handleVerify", () => {
-      let e = (0, u.Z)(this.props.location);
-      null != e && c.Z.verify(e)
+      let e = (0, c.Z)(this.props.location);
+      null != e && u.Z.verify(e)
     }), T(this, "handleLogin", () => {
       let {
         transitionTo: e
@@ -97,18 +97,18 @@ class Z extends(s = i.PureComponent) {
       let {
         verifyingUserId: e
       } = this.props;
-      h.default.track(N.rMx.VERIFY_ACCOUNT_APP_OPENED, {
+      I.default.track(N.rMx.VERIFY_ACCOUNT_APP_OPENED, {
         verifying_user_id: e
       }), (0, E.Z)("verify_email")
     })
   }
 }
-T(Z, "defaultProps", {
+T(f, "defaultProps", {
   transitionTo: e => n.g.location.assign(e)
-}), t.Z = o.ZP.connectStores([I.default], () => ({
-  verifyFailed: I.default.didVerifyFail(),
-  verifyErrors: I.default.getVerifyErrors(),
-  verifySucceeded: I.default.didVerifySucceed(),
-  fingerprint: I.default.getFingerprint(),
-  verifyingUserId: I.default.getVerifyingUserId()
-}))(Z)
+}), t.Z = o.ZP.connectStores([h.default], () => ({
+  verifyFailed: h.default.didVerifyFail(),
+  verifyErrors: h.default.getVerifyErrors(),
+  verifySucceeded: h.default.didVerifySucceed(),
+  fingerprint: h.default.getFingerprint(),
+  verifyingUserId: h.default.getVerifyingUserId()
+}))(f)

@@ -13,8 +13,8 @@ var l = n(735250),
   c = n(441894),
   d = n(160038),
   h = n(586646),
-  g = n(689938),
-  p = n(228233);
+  p = n(689938),
+  g = n(228233);
 
 function m(e) {
   let {
@@ -61,7 +61,7 @@ function E(e) {
     isOverlay: n,
     lobbyId: i,
     closePopout: s
-  } = e, r = (0, c.J)(t) ? g.Z.Messages.E2EE_END_TO_END_ENCRYPTED : g.Z.Messages.SECURE_CONNECTION;
+  } = e, r = (0, c.J)(t) ? p.Z.Messages.E2EE_END_TO_END_ENCRYPTED : p.Z.Messages.SECURE_CONNECTION;
   return n ? (0, l.jsx)(m, {
     lobbyId: i,
     closePopout: s,
@@ -84,26 +84,26 @@ function f(e) {
     }
   }, [e, t]);
   return (0, l.jsxs)("div", {
-    className: p.container,
+    className: g.container,
     children: [(0, l.jsx)(r.Heading, {
-      className: p.title,
+      className: g.title,
       variant: "heading-lg/bold",
       color: "header-primary",
-      children: g.Z.Messages.E2EE_VOICE_DETAILS
+      children: p.Z.Messages.E2EE_VOICE_DETAILS
     }), (0, l.jsxs)(r.TabBar, {
-      className: p.tabs,
+      className: g.tabs,
       selectedItem: t,
       type: "top",
       look: "brand",
       onItemSelect: n,
       children: [(0, l.jsx)(r.TabBar.Item, {
         id: "rtc_debug_panel",
-        className: p.tabBarItem,
-        children: g.Z.Messages.E2EE_CONNECTION
+        className: g.tabBarItem,
+        children: p.Z.Messages.E2EE_CONNECTION
       }), (0, l.jsx)(r.TabBar.Item, {
         id: "rtc_secure_frames",
-        className: p.tabBarItem,
-        children: g.Z.Messages.E2EE_PRIVACY
+        className: g.tabBarItem,
+        children: p.Z.Messages.E2EE_PRIVACY
       })]
     }), (0, l.jsx)(r.TabBar.Panel, {
       id: t,
@@ -117,9 +117,9 @@ function _(e) {
   return (0, c.J)(e.channelId) ? (0, l.jsx)(f, {
     ...e
   }) : (0, l.jsx)("div", {
-    className: p.debugPanelStandalone,
+    className: g.debugPanelStandalone,
     children: (0, l.jsx)("section", {
-      className: p.debugPanelSection,
+      className: g.debugPanelSection,
       children: (0, l.jsx)(E, {
         ...e
       })

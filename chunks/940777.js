@@ -13,8 +13,8 @@ var l = n(735250),
   c = n(493683),
   d = n(239091),
   h = n(317381),
-  g = n(682662),
-  p = n(674552),
+  p = n(682662),
+  g = n(674552),
   m = n(593364),
   C = n(905423),
   E = n(199902),
@@ -25,8 +25,8 @@ var l = n(735250),
   Z = n(709054),
   S = n(853856),
   x = n(593214),
-  T = n(919755),
-  L = n(110977),
+  L = n(919755),
+  T = n(110977),
   v = n(603274),
   A = n(981631),
   M = n(689938),
@@ -45,21 +45,21 @@ function P() {
       favoriteAdded: t,
       clearFavoriteAdded: s
     } = (0, x.up)(),
-    [P, j] = i.useState(!1),
+    [P, b] = i.useState(!1),
     {
-      favoriteServerMuted: b,
-      favoriteChannels: D
+      favoriteServerMuted: j,
+      favoriteChannels: y
     } = (0, o.cj)([S.Z], () => ({
       favoriteChannels: S.Z.getFavoriteChannels(),
       favoriteServerMuted: S.Z.favoriteServerMuted
     })),
-    y = (0, o.e7)([_.Z], () => _.Z.getChannelId(A.I_8)),
-    U = (0, o.e7)([f.Z], () => f.Z.getChannel(y)),
+    D = (0, o.e7)([_.Z], () => _.Z.getChannelId(A.I_8)),
+    U = (0, o.e7)([f.Z], () => f.Z.getChannel(D)),
     G = (0, C.Z)(e => e.guildId) === A.I_8,
     {
       badge: w,
       unread: k
-    } = (0, T.Z)(D),
+    } = (0, L.Z)(y),
     B = function(e) {
       let t = (0, o.e7)([_.Z], () => _.Z.getVoiceChannelId()),
         n = null != t && null != e[t],
@@ -80,30 +80,30 @@ function P() {
         u = r.length > 0,
         c = !1,
         d = !1,
-        g = !1,
+        p = !1,
         m = !1;
-      return n ? (c = !s, d = s, g = l, m = a) : (g = i, m = u), (0, p.Or)({
+      return n ? (c = !s, d = s, p = l, m = a) : (p = i, m = u), (0, g.Or)({
         audio: c,
         video: d,
-        screenshare: g,
+        screenshare: p,
         liveStage: !1,
         isCurrentUserConnected: n,
         activity: m
       })
-    }(D),
+    }(y),
     V = w > 0 ? (0, m.N)(w) : null,
     H = i.useCallback(() => {
       s()
     }, [s]);
-  return (0, l.jsxs)(g.H, {
+  return (0, l.jsxs)(p.H, {
     children: [(0, l.jsx)(N.Z, {
       selected: G,
       hovered: P,
-      unread: k && !b,
+      unread: k && !j,
       className: R.pill
     }), (0, l.jsx)(v.Z, {
       onShow: H,
-      children: (0, l.jsx)(L.S, {
+      children: (0, l.jsx)(T.S, {
         children: (0, l.jsx)(u.BlobMask, {
           selected: G || P,
           upperBadge: B,
@@ -115,12 +115,12 @@ function P() {
               mentions: w
             }),
             to: {
-              pathname: A.Z5c.CHANNEL(A.I_8, y),
+              pathname: A.Z5c.CHANNEL(A.I_8, D),
               state: O
             },
             selected: G || P,
-            onMouseEnter: () => j(!0),
-            onMouseLeave: () => j(!1),
+            onMouseEnter: () => b(!0),
+            onMouseLeave: () => b(!1),
             onMouseDown: function() {
               if (null != U) c.Z.preload(U.guild_id, U.id)
             },

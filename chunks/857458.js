@@ -1,21 +1,21 @@
 n.d(t, {
   M: function() {
-    return o
+    return u
   }
 });
-var i = n(735250);
+var a = n(735250);
 n(470079);
-var s = n(266067),
-  l = n(860911),
-  a = n(981631),
-  r = n(188785);
+var r = n(266067),
+  o = n(860911),
+  s = n(981631),
+  l = n(188785);
 
-function o() {
+function u() {
   let e = location.pathname + location.search;
-  return r.a ? a.Z5c.REGISTER : (0, l.U)(e, !1)
+  return l.a ? s.Z5c.REGISTER : (0, o.U)(e, !1)
 }
 t.Z = function() {
-  return (0, i.jsx)(s.l_, {
-    to: o()
+  return (0, a.jsx)(r.l_, {
+    to: u()
   })
 }

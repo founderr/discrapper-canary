@@ -19,12 +19,12 @@ let E = e => {
       isDesktop: E,
       withMentions: _ = !1,
       initialPageSize: I
-    } = e, T = (0, i.e7)([u.Z], () => u.Z.shouldReload()), N = s.useRef(!1), [m, h] = s.useState(!1), {
+    } = e, T = (0, i.e7)([u.Z], () => u.Z.shouldReload()), m = s.useRef(!1), [N, h] = s.useState(!1), {
       initialized: C,
       loading: S,
       items: A,
-      hasMore: p,
-      cursor: g,
+      hasMore: g,
+      cursor: p,
       errored: f
     } = (0, i.cj)([c.Z], () => ({
       initialized: c.Z.initialized,
@@ -34,8 +34,8 @@ let E = e => {
       cursor: c.Z.cursor,
       errored: c.Z.errored
     })), {
-      roleFilter: O,
-      everyoneFilter: R
+      roleFilter: R,
+      everyoneFilter: O
     } = (0, i.cj)([r.Z], () => ({
       everyoneFilter: r.Z.everyoneFilter,
       roleFilter: r.Z.roleFilter
@@ -51,28 +51,28 @@ let E = e => {
       (!C || e) && (0, o.jk)({
         limit: null != I ? I : _ ? 8 : 20,
         with_mentions: _,
-        roles_filter: O,
-        everyone_filter: R
+        roles_filter: R,
+        everyone_filter: O
       })
-    }, [C, T, t, _, O, R, I]);
+    }, [C, T, t, _, R, O, I]);
     let x = s.useCallback(async e => {
-      !N.current && C && p && null != g && (e || !f) && (N.current = !0, h(!0), await (0, o.jk)({
-        after: g,
+      !m.current && C && g && null != p && (e || !f) && (m.current = !0, h(!0), await (0, o.jk)({
+        after: p,
         with_mentions: _,
-        roles_filter: O,
-        everyone_filter: R,
+        roles_filter: R,
+        everyone_filter: O,
         limit: _ ? 8 : 20
       }, () => {
-        N.current = !1
+        m.current = !1
       }), h(!1))
-    }, [C, p, g, f, _, O, R]);
+    }, [C, g, p, f, _, R, O]);
     return {
       initialized: C,
       loading: S,
       items: A,
-      hasMore: p,
+      hasMore: g,
       loadMore: x,
-      loadingMore: m,
+      loadingMore: N,
       setReadNotifItemToAcked: e => {
         !e.acked && (e.acked = !0)
       },

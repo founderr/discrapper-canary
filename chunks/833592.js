@@ -3,7 +3,7 @@ n.d(t, {
     return E
   },
   g3: function() {
-    return m
+    return N
   },
   jF: function() {
     return _
@@ -87,9 +87,9 @@ function T(e) {
       optimistic: !0,
       ids: [e]
     })
-  }(e.id) : N(e.id)
+  }(e.id) : m(e.id)
 }
-async function N(e) {
+async function m(e) {
   try {
     a.Z.dispatch({
       type: "NOTIFICATION_CENTER_ITEMS_ACK",
@@ -105,7 +105,7 @@ async function N(e) {
     })
   }
 }
-async function m(e) {
+async function N(e) {
   let t = r.d$.getSetting();
   try {
     a.Z.dispatch({

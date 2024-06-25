@@ -1,6 +1,6 @@
-var i, l;
+var s, o;
 t.d(n, {
   h: function() {
-    return i
+    return s
   }
-}), (l = i || (i = {}))[l.UNSPECIFIED = 0] = "UNSPECIFIED", l[l.PENDING = 1] = "PENDING", l[l.ACCEPTED = 2] = "ACCEPTED", l[l.REJECTED = 3] = "REJECTED"
+}), (o = s || (s = {}))[o.UNSPECIFIED = 0] = "UNSPECIFIED", o[o.PENDING = 1] = "PENDING", o[o.ACCEPTED = 2] = "ACCEPTED", o[o.REJECTED = 3] = "REJECTED"

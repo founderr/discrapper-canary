@@ -3,12 +3,12 @@ n.d(t, {
     return a
   }
 });
-var i = n(996106),
-  s = n(186901),
+var s = n(996106),
+  i = n(186901),
   l = n(981631);
 
 function a(e) {
-  if (s.He.IPC !== e && s.He.POST_MESSAGE !== e) throw new i.Z({
+  if (i.He.IPC !== e && i.He.POST_MESSAGE !== e) throw new s.Z({
     errorCode: l.lTL.INVALID_COMMAND
   }, "Invalid transport.")
 }

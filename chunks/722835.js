@@ -3,8 +3,8 @@ n.d(t, {
     return I
   }
 });
-var i = n(872810),
-  s = n(594190),
+var s = n(872810),
+  i = n(594190),
   l = n(199902),
   a = n(592125),
   r = n(430824),
@@ -19,13 +19,13 @@ var i = n(872810),
 function I() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
   if (!(0, h.Z)(o.Z) || null != l.Z.getCurrentUserActiveStream()) return !1;
-  let t = (0, _.Z)(s.ZP, d.Z);
+  let t = (0, _.Z)(i.ZP, d.Z);
   if (null == t || t.isLauncher && !e) return !1;
   let n = u.Z.getVoiceChannelId(),
     I = a.Z.getChannel(n);
   if (null == I) return !1;
   let m = I.getGuildId();
-  return !!(0, E.JL)(I, r.Z, c.Z, !1) && ((0, i.WH)(m, I.id, {
+  return !!(0, E.JL)(I, r.Z, c.Z, !1) && ((0, s.WH)(m, I.id, {
     pid: t.pid
   }), !0)
 }

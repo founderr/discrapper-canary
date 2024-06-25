@@ -16,8 +16,8 @@ var s = n(735250),
   _ = n(594174),
   I = n(838440),
   T = n(779139),
-  N = n(981631),
-  m = n(689938),
+  m = n(981631),
+  N = n(689938),
   h = n(18716);
 let C = e => {
     let {
@@ -49,7 +49,7 @@ let C = e => {
           isInteracting: l,
           sticker: u,
           size: 28
-        }), m.Z.Messages.WELCOME_CTA_LABEL]
+        }), N.Z.Messages.WELCOME_CTA_LABEL]
       })
     })
   },
@@ -61,11 +61,11 @@ let C = e => {
       var e;
       let s = _.default.getCurrentUser(),
         l = (0, c.xl)(n),
-        a = E.Z.can(N.Plq.SEND_MESSAGES, n),
+        a = E.Z.can(m.Plq.SEND_MESSAGES, n),
         r = null != i && null != s && (null === (e = u.ZP.getMember(i, s.id)) || void 0 === e ? void 0 : e.isPending),
         o = t.author.bot,
         I = d.Z.getGuild(i),
-        T = null != I && (I.systemChannelFlags & N.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
+        T = null != I && (I.systemChannelFlags & m.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
       return a && !l && !r && !o && T
     });
     return null != i && a ? (0, s.jsx)(C, {

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return g
+    return p
   }
 });
 var l = n(735250);
@@ -15,7 +15,7 @@ var i = n(442837),
   d = n(689938),
   h = n(294903);
 
-function g() {
+function p() {
   let e = (0, i.e7)([r.Z], () => {
       var e;
       return null === (e = r.Z.getSecureFramesState()) || void 0 === e ? void 0 : e.epochAuthenticator

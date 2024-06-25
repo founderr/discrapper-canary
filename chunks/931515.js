@@ -6,9 +6,9 @@ n.d(t, {
     return m
   }
 });
-var i = n(470079),
-  s = n(348327),
-  l = n.n(s),
+var s = n(470079),
+  i = n(348327),
+  l = n.n(i),
   a = n(143927),
   r = n(442837),
   o = n(224706),
@@ -23,7 +23,7 @@ function I() {
   let e = (0, E.GN)(e => e.setGame, a.Z),
     t = (0, E.GN)(e => e.setSelectedGames, a.Z),
     n = (0, E.GN)(e => e.selectedGames, a.Z),
-    s = (0, E.GN)(E.t1, l()),
+    i = (0, E.GN)(E.t1, l()),
     h = (0, c.An)({
       location: "clan_discovery"
     }),
@@ -31,21 +31,21 @@ function I() {
       defaultGameId: I
     } = (0, c.nk)("clan_discovery"),
     m = null != h ? h : I,
-    g = function() {
+    T = function() {
       let e = (0, r.e7)([d.Z], () => d.Z.hasLoadedStaticClanDiscovery());
-      return i.useEffect(() => {
+      return s.useEffect(() => {
         !e && (0, u.X)()
       }, [e]), e
     }(),
-    p = (0, r.e7)([d.Z], () => d.Z.isLoading());
-  return i.useEffect(() => {
+    g = (0, r.e7)([d.Z], () => d.Z.isLoading());
+  return s.useEffect(() => {
     !(n.length > 0) && (m === _.nJ ? (e(E.hz.VALORANT), t([m])) : m === _.xn && (e(E.hz.GENSHIN), t([m])))
-  }, [e, t, m, n]), i.useEffect(() => {
-    g && (0, u.j)(s)
-  }, [s, g]), i.useEffect(() => {
+  }, [e, t, m, n]), s.useEffect(() => {
+    T && (0, u.j)(i)
+  }, [i, T]), s.useEffect(() => {
     o.Z.getDetectableGames()
   }, []), {
-    loading: p
+    loading: g
   }
 }
 
@@ -53,17 +53,17 @@ function m() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
     t = (0, E.GN)(E.t1, l()),
     n = (0, r.e7)([d.Z], () => d.Z.hasLoadedStaticClanDiscovery()),
-    s = (0, r.e7)([d.Z], () => d.Z.getSearchResult(t), [t]);
+    i = (0, r.e7)([d.Z], () => d.Z.getSearchResult(t), [t]);
   return {
     loaded: n,
-    clans: i.useMemo(() => {
-      if ((0, h.Pw)(s)) {
-        let t = s.items;
+    clans: s.useMemo(() => {
+      if ((0, h.Pw)(i)) {
+        let t = i.items;
         return null != e ? t.slice(0, e) : t
       }
       return []
-    }, [e, s]),
+    }, [e, i]),
     searchCriteria: t,
-    searchResult: s
+    searchResult: i
   }
 }

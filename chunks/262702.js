@@ -1,6 +1,6 @@
 n(47120);
-var i = n(570140),
-  s = n(846027),
+var s = n(570140),
+  i = n(846027),
   l = n(872810),
   a = n(317770),
   r = n(569545),
@@ -20,10 +20,10 @@ function h(e, t, n) {
 }
 class _ extends a.Z {
   _initialize() {
-    i.Z.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
+    s.Z.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
   }
   _terminate() {
-    i.Z.unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
+    s.Z.unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
   }
   constructor(...e) {
     super(...e), h(this, "handleVoiceStateUpdates", e => {
@@ -38,7 +38,7 @@ class _ extends a.Z {
       let t = o.Z.getActiveStreamForUser(e.userId, e.guildId);
       if (null != t)(0, l.g)((0, r.V9)(t), !1)
     }), h(this, "handleStopUserVideo", () => {
-      d.Z.isVideoEnabled() && s.Z.setVideoEnabled(!1)
+      d.Z.isVideoEnabled() && i.Z.setVideoEnabled(!1)
     })
   }
 }

@@ -1,5 +1,5 @@
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(703656),
   a = n(970731),
   r = n(626135),
@@ -13,11 +13,11 @@ t.Z = e => {
   let {
     markAsDismissed: t
   } = e;
-  return s.useEffect(() => {
+  return i.useEffect(() => {
     r.default.track(u.rMx.DM_SAFETY_COACHMARK_ACTION, {
       action: c.Rv.VIEW
     })
-  }, []), (0, i.jsx)(a.ZP, {
+  }, []), (0, s.jsx)(a.ZP, {
     header: E.Z.Messages.USER_EXPLICIT_CONTENT_FILTER_COACHMARK_HEADER_V2,
     content: E.Z.Messages.USER_EXPLICIT_CONTENT_FILTER_COACHMARK_CONTENT_V2.format({
       helpdeskArticle: o.Z.getArticleURL(u.BhN.SAFE_DIRECT_MESSAGING)

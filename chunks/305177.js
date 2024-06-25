@@ -20,7 +20,7 @@ function T(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class N extends i.Component {
+class m extends i.Component {
   renderMedia() {
     let {
       src: e,
@@ -92,7 +92,7 @@ class N extends i.Component {
     })
   }
 }
-class m extends i.Component {
+class N extends i.Component {
   componentWillUnmount() {
     this.videoTimeout.stop()
   }
@@ -120,7 +120,7 @@ class m extends i.Component {
       title: i,
       splashClassName: l
     } = this.props;
-    return null == t ? (0, s.jsx)(N, {
+    return null == t ? (0, s.jsx)(m, {
       className: a()(I.splash, l),
       src: n,
       title: i
@@ -182,7 +182,7 @@ class m extends i.Component {
         muted: c,
         splashClassName: E,
         splashPlaceholderClassName: T,
-        renderMediaOverlay: m
+        renderMediaOverlay: N
       } = this.props, h = c ? d.VoiceXIcon : d.VoiceNormalIcon;
       return (0, s.jsxs)(i.Fragment, {
         children: [o.tq ? null : (0, s.jsx)(_.Z, {
@@ -198,7 +198,7 @@ class m extends i.Component {
             type: "video/mp4"
           })
         }), (0, s.jsx)(u.W, {
-          children: r && e ? null : (0, s.jsx)(N, {
+          children: r && e ? null : (0, s.jsx)(m, {
             className: a()(I.splashPlaceholder, T),
             src: n,
             title: l
@@ -206,7 +206,7 @@ class m extends i.Component {
         }), (0, s.jsx)(d.Clickable, {
           className: a()(I.muteContainer, {
             [I.muteContainerPlaying]: r && e,
-            [I.muteContainerMediaOverlay]: null != m
+            [I.muteContainerMediaOverlay]: null != N
           }),
           onClick: this.handleToggleMute,
           children: r && e ? (0, s.jsx)(h, {
@@ -230,11 +230,11 @@ class m extends i.Component {
       } = this.props, {
         currentIndex: r
       } = this.state;
-      return i ? (0, s.jsx)(N, {
+      return i ? (0, s.jsx)(m, {
         className: a()(I.splash, l),
         src: e[r],
         title: n
-      }, r) : (0, s.jsx)(N, {
+      }, r) : (0, s.jsx)(m, {
         className: a()(I.splash, l),
         src: t,
         title: n
@@ -242,4 +242,4 @@ class m extends i.Component {
     })
   }
 }
-t.Z = m
+t.Z = N

@@ -1,52 +1,52 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
-    return c
+    return u
   }
 });
-var i = t(735250);
-t(470079);
-var l = t(481060),
-  s = t(259580),
-  r = t(528027),
-  a = t(686807),
-  o = t(113318),
-  u = t(121834);
+var s = n(735250);
+n(470079);
+var i = n(481060),
+  l = n(259580),
+  a = n(528027),
+  r = n(686807),
+  o = n(113318),
+  c = n(121834);
 
-function c(e) {
+function u(e) {
   let {
-    benefit: n,
-    guildId: t,
-    onClick: c
-  } = e, d = (0, o.Z)(t, n.ref_id), _ = (0, i.jsx)(r.Z, {
-    guildId: t,
-    emojiId: n.emoji_id,
-    emojiName: n.emoji_name
+    benefit: t,
+    guildId: n,
+    onClick: u
+  } = e, d = (0, o.Z)(n, t.ref_id), E = (0, s.jsx)(a.Z, {
+    guildId: n,
+    emojiId: t.emoji_id,
+    emojiName: t.emoji_name
   });
-  return (0, i.jsxs)(l.Clickable, {
-    className: u.container,
+  return (0, s.jsxs)(i.Clickable, {
+    className: c.container,
     onClick: () => {
-      null == d || d.navigateToChannel(), c()
+      null == d || d.navigateToChannel(), u()
     },
     "aria-label": null == d ? void 0 : d.ariaLabel,
     role: "link",
-    children: [(0, i.jsx)("div", {
-      className: u.emojiContainer,
-      children: _
-    }), (0, i.jsxs)("div", {
-      className: u.infoContainer,
-      children: [(0, i.jsx)(l.Text, {
+    children: [(0, s.jsx)("div", {
+      className: c.emojiContainer,
+      children: E
+    }), (0, s.jsxs)("div", {
+      className: c.infoContainer,
+      children: [(0, s.jsx)(i.Text, {
         variant: "text-md/medium",
         color: "header-primary",
-        className: u.name,
-        children: (0, a.Z)(n)
-      }), (0, i.jsx)(l.Text, {
+        className: c.name,
+        children: (0, r.Z)(t)
+      }), (0, s.jsx)(i.Text, {
         color: "interactive-normal",
         variant: "text-sm/normal",
-        children: n.description
+        children: t.description
       })]
-    }), (0, i.jsx)(s.Z, {
-      direction: s.Z.Directions.RIGHT,
-      className: u.caret
+    }), (0, s.jsx)(l.Z, {
+      direction: l.Z.Directions.RIGHT,
+      className: c.caret
     })]
   })
 }

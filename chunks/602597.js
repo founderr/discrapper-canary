@@ -1,6 +1,6 @@
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(442837),
+var i = n(442837),
   l = n(481060),
   a = n(749210),
   r = n(210887),
@@ -11,7 +11,7 @@ var s = n(442837),
 t.Z = e => {
   let {
     guilds: t
-  } = e, n = (0, s.e7)([r.Z], () => r.Z.theme), E = t.map(e => (0, i.jsx)(o.Z, {
+  } = e, n = (0, i.e7)([r.Z], () => r.Z.theme), E = t.map(e => (0, s.jsx)(o.Z, {
     className: d.__invalid_guildCard,
     onView: () => a.Z.transitionToGuildSync(e.id),
     guild: {
@@ -23,22 +23,22 @@ t.Z = e => {
     },
     theme: n
   }, e.id));
-  return (0, i.jsx)("section", {
+  return (0, s.jsx)("section", {
     className: d.guildListSection,
-    children: t.length > 0 ? (0, i.jsxs)("div", {
-      children: [(0, i.jsx)(l.Heading, {
+    children: t.length > 0 ? (0, s.jsxs)("div", {
+      children: [(0, s.jsx)(l.Heading, {
         className: d.__invalid_title,
         variant: "heading-lg/semibold",
         children: u.Z.Messages.YOUR_HUB
-      }), (0, i.jsxs)("div", {
+      }), (0, s.jsxs)("div", {
         className: d.guildList,
-        children: [E, (0, i.jsx)(c.Z, {
+        children: [E, (0, s.jsx)(c.Z, {
           hasHub: !0
         })]
       })]
-    }) : (0, i.jsx)("div", {
+    }) : (0, s.jsx)("div", {
       className: d.guildList,
-      children: (0, i.jsx)(c.Z, {
+      children: (0, s.jsx)(c.Z, {
         hasHub: !1
       })
     })

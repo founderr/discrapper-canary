@@ -3,8 +3,8 @@ n.d(t, {
     return h
   }
 });
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(120356),
   a = n.n(l),
   r = n(481060),
@@ -24,12 +24,12 @@ function h(e) {
   }, {
     id: c.W6.CLAIMED,
     label: d.Z.Messages.QUESTS_CLAIMED
-  }], h = s.useCallback(() => {
+  }], h = i.useCallback(() => {
     window.open(o.Z.getArticleURL(u.BhN.QUESTS_LEARN_MORE))
-  }, []), _ = s.useCallback(e => {
+  }, []), _ = i.useCallback(e => {
     t(e)
   }, [t]);
-  return (0, i.jsxs)(r.TabBar, {
+  return (0, s.jsxs)(r.TabBar, {
     className: a()(E.container),
     selectedItem: n,
     onItemSelect: e => _(e),
@@ -38,29 +38,29 @@ function h(e) {
     orientation: "horizontal",
     children: [l.map(e => {
       let t = e.id === n;
-      return (0, i.jsx)(r.TabBar.Item, {
+      return (0, s.jsx)(r.TabBar.Item, {
         id: e.id,
         className: a()(E.tab, {
           [E.selected]: t
         }),
         "aria-label": e.label,
         disableItemStyles: !0,
-        children: (0, i.jsx)(r.Text, {
+        children: (0, s.jsx)(r.Text, {
           variant: "text-md/semibold",
           color: t ? "text-brand" : "text-primary",
           children: e.label
         })
       }, e.id)
-    }), (0, i.jsxs)(r.Button, {
+    }), (0, s.jsxs)(r.Button, {
       onClick: h,
       className: E.button,
       innerClassName: E.innerButton,
-      children: [(0, i.jsx)(r.Text, {
+      children: [(0, s.jsx)(r.Text, {
         variant: "text-md/semibold",
         color: "text-muted",
         className: E.externalLinkText,
         children: d.Z.Messages.LEARN_MORE
-      }), (0, i.jsx)(r.LinkExternalSmallIcon, {
+      }), (0, s.jsx)(r.LinkExternalSmallIcon, {
         className: E.icon,
         color: "var(--text-muted)"
       })]

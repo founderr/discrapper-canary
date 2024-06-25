@@ -28,7 +28,7 @@ function c(e) {
       messageId: n,
       flash: !0
     })
-  }, N = (0, i.useRedesignIconContext)().enabled ? {
+  }, m = (0, i.useRedesignIconContext)().enabled ? {
     iconNode: (0, s.jsx)(i.PinIcon, {
       size: "sm",
       color: "currentColor"
@@ -37,7 +37,7 @@ function c(e) {
     icon: n(879066)
   };
   return (0, s.jsx)(r.Z, {
-    ...N,
+    ...m,
     timestamp: t.timestamp,
     compact: d,
     children: null != t.messageReference ? null == u ? o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_WITH_MESSAGE_HOOK.format({

@@ -1,63 +1,63 @@
-t(411104);
-var n, r, i = t(735250);
-t(470079);
-var a = t(120356),
-  l = t.n(a),
-  o = t(442837),
-  c = t(481060),
-  u = t(700582),
-  I = t(451478),
-  T = t(689938),
-  d = t(379555);
-(r = n || (n = {}))[r.STAFF_NOTES = 1] = "STAFF_NOTES";
-let _ = o.ZP.connectStores([I.Z], () => ({
-    animate: I.Z.isFocused()
+n(411104);
+var s, i, l = n(735250);
+n(470079);
+var a = n(120356),
+  r = n.n(a),
+  o = n(442837),
+  c = n(481060),
+  u = n(700582),
+  d = n(451478),
+  E = n(689938),
+  h = n(379555);
+(i = s || (s = {}))[i.STAFF_NOTES = 1] = "STAFF_NOTES";
+let _ = o.ZP.connectStores([d.Z], () => ({
+    animate: d.Z.isFocused()
   }))(e => {
     let {
-      user: s,
-      className: t,
-      animate: n
+      user: t,
+      className: n,
+      animate: s
     } = e;
-    return (0, i.jsxs)("div", {
-      className: l()(d.staffReviewHeader, t),
-      children: [(0, i.jsx)(u.Z, {
+    return (0, l.jsxs)("div", {
+      className: r()(h.staffReviewHeader, n),
+      children: [(0, l.jsx)(u.Z, {
         size: c.AvatarSizes.SIZE_32,
-        user: s,
-        animate: n
-      }), (0, i.jsxs)("div", {
-        className: d.headerText,
-        children: [(0, i.jsx)("div", {
-          className: d.label,
-          children: T.Z.Messages.APPLICATION_STORE_STAFF_PICK
-        }), (0, i.jsx)("div", {
-          className: d.username,
-          children: s.username
+        user: t,
+        animate: s
+      }), (0, l.jsxs)("div", {
+        className: h.headerText,
+        children: [(0, l.jsx)("div", {
+          className: h.label,
+          children: E.Z.Messages.APPLICATION_STORE_STAFF_PICK
+        }), (0, l.jsx)("div", {
+          className: h.username,
+          children: t.username
         })]
       })]
     })
   }),
-  E = e => {
+  I = e => {
     let {
-      data: s,
-      className: t
+      data: t,
+      className: n
     } = e;
-    if (1 === s.type) {
-      if (null == s.staffNotes) return null;
+    if (1 === t.type) {
+      if (null == t.staffNotes) return null;
       let {
         user: e,
-        content: n
-      } = s.staffNotes;
-      return null == e ? null : (0, i.jsxs)("div", {
-        className: t,
-        children: [(0, i.jsx)(_, {
+        content: s
+      } = t.staffNotes;
+      return null == e ? null : (0, l.jsxs)("div", {
+        className: n,
+        children: [(0, l.jsx)(_, {
           user: e,
-          className: d.header
-        }), (0, i.jsx)("div", {
-          className: d.notes,
-          children: n
+          className: h.header
+        }), (0, l.jsx)("div", {
+          className: h.notes,
+          children: s
         })]
       })
     }
     throw Error("Unknown type")
   };
-E.Types = n, s.Z = E
+I.Types = s, t.Z = I

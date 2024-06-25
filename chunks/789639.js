@@ -3,8 +3,8 @@ n.d(t, {
     return r
   }
 });
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(709014);
 let a = {
     all: {
@@ -14,14 +14,14 @@ let a = {
     }
   },
   r = () => {
-    let e = s.useRef(null),
-      t = s.useCallback(() => {
+    let e = i.useRef(null),
+      t = i.useCallback(() => {
         null != e.current && e.current.play("all")
       }, []),
-      r = s.useCallback(() => {
+      r = i.useCallback(() => {
         null != e.current && e.current.play("all")
       }, []),
-      o = s.useCallback(() => {
+      o = i.useCallback(() => {
         null != e.current && e.current.stopIfPlaying("all")
       }, []);
     return {
@@ -30,7 +30,7 @@ let a = {
         onMouseLeave: o
       },
       play: t,
-      Component: s.useCallback(t => (0, i.jsx)(l.L, {
+      Component: i.useCallback(t => (0, s.jsx)(l.L, {
         ...t,
         src: () => n.e("2199").then(n.t.bind(n, 71307, 19)),
         ref: e,

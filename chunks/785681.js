@@ -1,7 +1,7 @@
-n.d(t, {
+s.d(t, {
   o: function() {
-    return i
+    return a
   }
 });
-var s = n(880257);
-let i = (e, t) => (0, s.Z)() ? t : e
+var n = s(880257);
+let a = (e, t) => (0, n.Z)() ? t : e

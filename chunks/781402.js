@@ -1,32 +1,32 @@
-i.d(t, {
+n.d(t, {
   Z: function() {
     return r
   }
 });
-var n = i(470079);
+var i = n(470079);
 
 function r() {
-  let e = (0, n.createContext)(void 0);
+  let e = (0, i.createContext)(void 0);
   return {
     Provider: ({
       initialStore: t,
-      createStore: i,
+      createStore: n,
       children: r
     }) => {
-      let s = (0, n.useRef)();
-      return !s.current && (t && (console.warn("Provider initialStore is deprecated and will be removed in the next version."), !i && (i = () => t)), s.current = i()), (0, n.createElement)(e.Provider, {
+      let s = (0, i.useRef)();
+      return !s.current && (t && (console.warn("Provider initialStore is deprecated and will be removed in the next version."), !n && (n = () => t)), s.current = n()), (0, i.createElement)(e.Provider, {
         value: s.current
       }, r)
     },
-    useStore: (t, i = Object.is) => {
-      let r = (0, n.useContext)(e);
+    useStore: (t, n = Object.is) => {
+      let r = (0, i.useContext)(e);
       if (!r) throw Error("Seems like you have not used zustand provider as an ancestor.");
-      return r(t, i)
+      return r(t, n)
     },
     useStoreApi: () => {
-      let t = (0, n.useContext)(e);
+      let t = (0, i.useContext)(e);
       if (!t) throw Error("Seems like you have not used zustand provider as an ancestor.");
-      return (0, n.useMemo)(() => ({
+      return (0, i.useMemo)(() => ({
         getState: t.getState,
         setState: t.setState,
         subscribe: t.subscribe,

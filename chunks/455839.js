@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
     return _
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(442837),
+var i = n(442837),
   l = n(481060),
   a = n(239091),
   r = n(299206),
@@ -26,37 +26,37 @@ function _(e) {
     onSelect: _,
     closePopout: I,
     "aria-label": m
-  } = e, g = (0, r.Z)({
+  } = e, T = (0, r.Z)({
     id: t.id,
     label: h.Z.Messages.COPY_ID_GUILD,
     shiftId: n,
     onSuccess: I
-  }), p = (0, s.e7)([c.Z], () => c.Z.getGuild(t.id), [t.id]), N = (0, s.e7)([u.Z], () => u.Z.can(E.Plq.ADMINISTRATOR, p)), {
-    canSeeInAppReportingButtons: T
+  }), g = (0, i.e7)([c.Z], () => c.Z.getGuild(t.id), [t.id]), p = (0, i.e7)([u.Z], () => u.Z.can(E.Plq.ADMINISTRATOR, g)), {
+    canSeeInAppReportingButtons: N
   } = d.N.useExperiment({
     location: "0e35b9_1"
   }, {
     autoTrackExposure: !1
-  }), C = () => {
+  }), S = () => {
     (0, a.Zy)(), null == I || I()
   };
-  return (0, i.jsxs)(l.Menu, {
+  return (0, s.jsxs)(l.Menu, {
     onSelect: _,
     navId: "guild-discovery-context-menu",
     "aria-label": null != m ? m : h.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
     onClose: a.Zy,
-    children: [(0, i.jsx)(l.MenuGroup, {
-      children: !N && T ? (0, i.jsx)(l.MenuItem, {
+    children: [(0, s.jsx)(l.MenuGroup, {
+      children: !p && N ? (0, s.jsx)(l.MenuItem, {
         id: "report-guild-discovery-listing",
         label: h.Z.Messages.REPORT_SERVER_NO_NAME,
         action: () => {
-          (0, o.lt)(t), C()
+          (0, o.lt)(t), S()
         },
         icon: l.FlagIcon,
         color: "danger"
       }) : null
-    }), (0, i.jsx)(l.MenuGroup, {
-      children: g
+    }), (0, s.jsx)(l.MenuGroup, {
+      children: T
     })]
   })
 }
@@ -64,11 +64,11 @@ let I = e => {
   let {
     guild: t,
     children: n,
-    onRequestOpen: s,
+    onRequestOpen: i,
     onRequestClose: a
   } = e;
-  return (0, i.jsx)(l.Popout, {
-    onRequestOpen: s,
+  return (0, s.jsx)(l.Popout, {
+    onRequestOpen: i,
     onRequestClose: a,
     animation: l.Popout.Animation.NONE,
     position: "bottom",
@@ -78,7 +78,7 @@ let I = e => {
       let {
         closePopout: n
       } = e;
-      return (0, i.jsx)(_, {
+      return (0, s.jsx)(_, {
         guild: t,
         closePopout: n
       })

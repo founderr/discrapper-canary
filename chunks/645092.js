@@ -22,8 +22,8 @@ function T(e) {
     message: t,
     compact: n,
     usernameHook: i
-  } = e, T = (0, r.ZP)(t), N = i(T), {
-    avatarSrc: m,
+  } = e, T = (0, r.ZP)(t), m = i(T), {
+    avatarSrc: N,
     eventHandlers: {
       onMouseEnter: h,
       onMouseLeave: C
@@ -37,7 +37,7 @@ function T(e) {
         [I.compact]: n
       }),
       iconNode: n ? null : (0, s.jsx)(d.S, {
-        src: m
+        src: N
       }),
       iconContainerClassName: I.iconContainer,
       compact: n,
@@ -72,7 +72,7 @@ function T(e) {
           }),
           children: _.Z.Messages.GUILD_REPORT_FALSE_ALARM_SYSTEM_MESSAGE_SHORT.format({
             username: T.nick,
-            usernameHook: N
+            usernameHook: m
           })
         })]
       })

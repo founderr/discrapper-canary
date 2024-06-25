@@ -3,8 +3,8 @@ n.d(t, {
     return m
   }
 });
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(481060),
   a = n(194359),
   r = n(906732),
@@ -22,33 +22,33 @@ function m(e) {
     user: t,
     key: n,
     isFocused: m
-  } = e, g = s.useContext(c.AnalyticsContext), {
-    analyticsLocations: p
-  } = (0, r.ZP)(), N = e => {
+  } = e, T = i.useContext(c.AnalyticsContext), {
+    analyticsLocations: g
+  } = (0, r.ZP)(), p = e => {
     e.stopPropagation(), a.Z.unblockUser(t.id, {
       location: "Friends"
     })
   };
-  return (0, i.jsx)(d.Z, {
+  return (0, s.jsx)(d.Z, {
     isFocused: m,
     onClick: () => (0, o.openUserProfileModal)({
       userId: t.id,
-      sourceAnalyticsLocations: p,
-      analyticsLocation: g.location
+      sourceAnalyticsLocations: g,
+      analyticsLocation: T.location
     }),
     user: t,
-    children: e => (0, i.jsxs)("div", {
+    children: e => (0, s.jsxs)("div", {
       className: I.listItemContents,
-      children: [(0, i.jsx)(E.Z, {
+      children: [(0, s.jsx)(E.Z, {
         user: t,
         hovered: e,
         status: h.Skl.UNKNOWN,
         subText: _.Z.Messages.BLOCKED
-      }), (0, i.jsx)(u.Z, {
+      }), (0, s.jsx)(u.Z, {
         icon: l.UserMinusIcon,
         actionType: u.Z.ActionTypes.DENY,
         tooltip: _.Z.Messages.UNBLOCK,
-        onClick: N,
+        onClick: p,
         shouldHighlight: e
       })]
     })

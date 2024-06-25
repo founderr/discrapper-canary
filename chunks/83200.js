@@ -1,9 +1,9 @@
 n.d(t, {
   O: function() {
-    return s
+    return i
   }
 });
-let i = (0, n(818083).B)({
+let s = (0, n(818083).B)({
   kind: "user",
   id: "2023-04_dm_spam_filter_coachmark",
   label: "Safety DM Spam Filter Coachmark rollout",
@@ -19,8 +19,8 @@ let i = (0, n(818083).B)({
   }]
 });
 
-function s() {
-  return i.useExperiment({
+function i() {
+  return s.useExperiment({
     location: "acbeda_1"
   }, {
     autoTrackExposure: !1

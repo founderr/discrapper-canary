@@ -1,6 +1,6 @@
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
   l = n(360048),
   a = n(731455),
   r = n(689938),
@@ -11,8 +11,8 @@ t.Z = e => {
     shouldDisplaySelectedCategory: n,
     currentCategoryId: c
   } = e;
-  return (0, i.jsx)(l.Z, {
-    avatar: (0, i.jsx)(s.HubIcon, {
+  return (0, s.jsx)(l.Z, {
+    avatar: (0, s.jsx)(i.HubIcon, {
       size: "md",
       color: "currentColor"
     }),

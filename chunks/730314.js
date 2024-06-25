@@ -1,9 +1,9 @@
-r.d(t, {
+r.d(n, {
   wj: function() {
-    return s
+    return o
   }
 });
-let n = (0, r(818083).B)({
+let t = (0, r(818083).B)({
   kind: "user",
   id: "2024-05_premium_tier_cards_experiment",
   label: "Test tier card position and content modifications",
@@ -42,17 +42,17 @@ let n = (0, r(818083).B)({
   }]
 });
 
-function s(e) {
+function o(e) {
   let {
-    enabled: t,
+    enabled: n,
     bucket: r
-  } = n.useExperiment({
+  } = t.useExperiment({
     location: e
   }, {
     autoTrackExposure: !0
   });
   return {
-    enabled: t,
+    enabled: n,
     bucket: r
   }
 }

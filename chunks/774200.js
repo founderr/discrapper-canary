@@ -17,7 +17,7 @@ function r(e) {
     actorUsernameHook: c,
     targetUsernameHook: u,
     compact: d
-  } = e, E = (0, i.ZP)(t), _ = (0, i.Sw)(o, r), I = c(E), T = u(null != _ ? _ : void 0), N = a.Z.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_REMOVE.format({
+  } = e, E = (0, i.ZP)(t), _ = (0, i.Sw)(o, r), I = c(E), T = u(null != _ ? _ : void 0), m = a.Z.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_REMOVE.format({
     actorName: E.nick,
     actorHook: I,
     targetName: null == _ ? void 0 : _.nick,
@@ -27,6 +27,6 @@ function r(e) {
     icon: n(474019),
     timestamp: t.timestamp,
     compact: d,
-    children: N
+    children: m
   })
 }

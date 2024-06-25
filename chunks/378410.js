@@ -1,9 +1,9 @@
 n(47120);
-var i = n(710845),
-  s = n(914946),
+var s = n(710845),
+  i = n(914946),
   l = n(452426),
   a = n(981631);
-let r = new i.Z(a.BZL);
+let r = new s.Z(a.BZL);
 t.Z = {
   [a.Etm.CAPTURE_LOG]: {
     validation: e => (0, l.Z)(e).required().keys({
@@ -15,12 +15,12 @@ t.Z = {
         socket: t,
         args: {
           level: n,
-          message: i
+          message: s
         }
       } = e;
-      (0, s.bu)(t.transport);
+      (0, i.bu)(t.transport);
       let l = t.application.id,
-        a = "".concat(l, " - ").concat(i);
+        a = "".concat(l, " - ").concat(s);
       switch (n) {
         case "log":
           r.log(a);

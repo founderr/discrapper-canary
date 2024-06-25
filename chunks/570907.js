@@ -21,13 +21,13 @@ function d(e) {
       id: e.authorId,
       username: e.authorSummary
     }),
-    N = new l.ZP({
+    m = new l.ZP({
       id: e.messageId,
       channel_id: e.channelId,
       author: T,
       content: e.messageSummary
     }),
-    m = null == e.guildId ? new i.cE({
+    N = null == e.guildId ? new i.cE({
       id: e.channelId,
       type: s.d.DM,
       name: null !== (t = e.channelSummary) && void 0 !== t ? t : "",
@@ -40,7 +40,7 @@ function d(e) {
       guild_id: e.guildId
     });
   return {
-    channel: null != I ? I : m,
-    message: null != E ? E : N
+    channel: null != I ? I : N,
+    message: null != E ? E : m
   }
 }

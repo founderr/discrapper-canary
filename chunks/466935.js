@@ -13,8 +13,8 @@ var l = n(735250),
   c = n(246364),
   d = n(98493),
   h = n(703656),
-  g = n(669405),
-  p = n(434479),
+  p = n(669405),
+  g = n(434479),
   m = n(981631),
   C = n(176505),
   E = n(689938);
@@ -30,9 +30,9 @@ function f(e) {
       status: c.wB.SUBMITTED,
       limit: d.p
     })
-  }, [t.id]), (0, l.jsx)(p.m, {
+  }, [t.id]), (0, l.jsx)(g.m, {
     id: "application-review-".concat(t.id),
-    renderIcon: e => (0, l.jsx)(g.Z, {
+    renderIcon: e => (0, l.jsx)(p.Z, {
       className: e,
       width: 24,
       height: 24

@@ -3,48 +3,48 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  l = n.n(a),
-  o = n(873546),
-  u = n(442837),
-  c = n(481060),
+  o = n.n(a),
+  l = n(873546),
+  c = n(442837),
+  u = n(481060),
   d = n(980591),
   h = n(605782),
   E = n(133853),
   _ = n(568154),
-  m = n(353926),
-  g = n(703656),
-  p = n(981631),
-  f = n(453931);
-let I = n(575703),
-  N = n(2984),
-  A = [p.Z5c.LOGIN, p.Z5c.LOGIN_HANDOFF, p.Z5c.REGISTER, p.Z5c.INVITE(""), p.Z5c.GIFT_CODE(""), p.Z5c.GUILD_TEMPLATE_LOGIN(""), p.Z5c.GUILD_TEMPLATE(""), p.Z5c.DISABLE_EMAIL_NOTIFICATIONS, p.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, p.Z5c.BILLING_PREMIUM_SUBSCRIBE, p.Z5c.BILLING_PAYMENT_SOURCES_CREATE, p.Z5c.BILLING_PAYMENTS, p.Z5c.BILLING_PREMIUM_SWITCH_PLAN, p.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, p.Z5c.VERIFY, p.Z5c.VERIFY_HUB_EMAIL, p.Z5c.REJECT_IP, p.Z5c.REJECT_MFA, p.Z5c.AUTHORIZE_IP, p.Z5c.AUTHORIZE_PAYMENT, p.Z5c.RESET, p.Z5c.HANDOFF, p.Z5c.REPORT, p.Z5c.REPORT_SECOND_LOOK];
+  g = n(353926),
+  p = n(703656),
+  f = n(981631),
+  m = n(453931);
+let N = n(575703),
+  I = n(2984),
+  A = [f.Z5c.LOGIN, f.Z5c.LOGIN_HANDOFF, f.Z5c.REGISTER, f.Z5c.INVITE(""), f.Z5c.GIFT_CODE(""), f.Z5c.GUILD_TEMPLATE_LOGIN(""), f.Z5c.GUILD_TEMPLATE(""), f.Z5c.DISABLE_EMAIL_NOTIFICATIONS, f.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, f.Z5c.BILLING_PREMIUM_SUBSCRIBE, f.Z5c.BILLING_PAYMENT_SOURCES_CREATE, f.Z5c.BILLING_PAYMENTS, f.Z5c.BILLING_PREMIUM_SWITCH_PLAN, f.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, f.Z5c.VERIFY, f.Z5c.VERIFY_HUB_EMAIL, f.Z5c.REJECT_IP, f.Z5c.REJECT_MFA, f.Z5c.AUTHORIZE_IP, f.Z5c.AUTHORIZE_PAYMENT, f.Z5c.RESET, f.Z5c.HANDOFF, f.Z5c.REPORT, f.Z5c.REPORT_SECOND_LOOK];
 
-function T(e) {
+function R(e) {
   return A.some(t => e.startsWith(t))
 }
-let R = e => (s = e, e);
+let T = e => (s = e, e);
 
-function S(e) {
+function C(e) {
   let {
     children: t
   } = e;
   switch (function() {
       let [e, t] = i.useState(!1), [n, r] = i.useState(true), a = function() {
         return null
-      }(), l = (0, u.e7)([m.Z], () => m.Z.hasLoadedExperiments);
-      return ((0, d.Z)(() => {}, 300), void 0 !== s) ? s : !n && l ? (!e && t(!0), R(function(e) {
+      }(), o = (0, c.e7)([g.Z], () => g.Z.hasLoadedExperiments);
+      return ((0, d.Z)(() => {}, 300), void 0 !== s) ? s : !n && o ? (!e && t(!0), T(function(e) {
         return "default"
-      }(a))) : n ? R("default") : "loading"
+      }(a))) : n ? T("default") : "loading"
     }()) {
     case "default":
       return (0, r.jsxs)(r.Fragment, {
         children: [(0, r.jsx)("img", {
-          className: f.artwork,
-          src: I,
+          className: m.artwork,
+          src: N,
           alt: ""
         }), (0, r.jsx)("img", {
-          className: f.logoWithText,
-          src: N,
+          className: m.logoWithText,
+          src: I,
           alt: ""
         }), t]
       });
@@ -53,7 +53,7 @@ function S(e) {
       return null
   }
 }
-class C extends i.Component {
+class S extends i.Component {
   componentDidMount() {
     window.addEventListener("resize", this.handleResize)
   }
@@ -61,14 +61,14 @@ class C extends i.Component {
     window.removeEventListener("resize", this.handleResize)
   }
   mobileTransitionTo(e, t) {
-    if (T(e))(0, g.uL)(e, t);
+    if (R(e))(0, p.uL)(e, t);
     else {
       let n = null != t && null != t.search ? t.search : null;
       window.location = null == n ? e : "".concat(e, "?").concat(n)
     }
   }
   mobileReplaceWith(e) {
-    T(e) ? (0, g.dL)(e) : window.location = e
+    R(e) ? (0, p.dL)(e) : window.location = e
   }
   renderDefault() {
     let {
@@ -76,23 +76,23 @@ class C extends i.Component {
     } = this.props, t = (0, r.jsx)(h.Z, {
       component: i.Fragment,
       children: i.Children.map(this.props.children, e => i.cloneElement(e, {
-        transitionTo: g.uL,
-        replaceWith: g.dL
+        transitionTo: p.uL,
+        replaceWith: p.dL
       }))
     });
     return (0, r.jsx)("div", {
-      className: f.characterBackground,
-      children: (0, r.jsx)(c.HeadingLevel, {
+      className: m.characterBackground,
+      children: (0, r.jsx)(u.HeadingLevel, {
         forceLevel: 1,
         children: null != e ? (0, r.jsxs)(r.Fragment, {
           children: [(0, r.jsx)(E.Z, {
             show: !0,
-            className: l()(f.logo)
+            className: o()(m.logo)
           }), (0, r.jsx)(_.h, {
             splash: e,
             children: t
           })]
-        }) : (0, r.jsx)(S, {
+        }) : (0, r.jsx)(C, {
           children: t
         })
       })
@@ -111,7 +111,7 @@ class C extends i.Component {
     let {
       isMobileWidth: e
     } = this.state, t = navigator.userAgent.includes("GameLauncher");
-    return e || o.tq || o.Em || t ? this.renderMobile() : this.renderDefault()
+    return e || l.tq || l.Em || t ? this.renderMobile() : this.renderDefault()
   }
   constructor(e) {
     var t, n, s;
@@ -129,4 +129,4 @@ class C extends i.Component {
     }
   }
 }
-t.Z = C
+t.Z = S

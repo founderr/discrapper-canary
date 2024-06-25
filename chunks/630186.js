@@ -1,20 +1,20 @@
-i.d(t, {
+n.d(t, {
   Z: function() {
-    return l
+    return a
   },
   _: function() {
-    return o
+    return r
   }
 });
-var n = i(726542),
-  r = i(973616),
-  s = i(689938);
-let o = "twitch:";
-class l extends r.Z {
+var l = n(726542),
+  i = n(973616),
+  s = n(689938);
+let r = "twitch:";
+class a extends i.Z {
   getIconURL() {
-    return n.Z.get("twitch").icon.lightPNG
+    return l.Z.get("twitch").icon.lightPNG
   }
   constructor(e) {
-    super(e), this.id = "".concat(o).concat(e.url), this.name = s.Z.Messages.GAME_FEED_ACTIVITY_STREAMING_TWITCH
+    super(e), this.id = "".concat(r).concat(e.url), this.name = s.Z.Messages.GAME_FEED_ACTIVITY_STREAMING_TWITCH
   }
 }

@@ -1,6 +1,6 @@
 n(47120), n(653041);
-var i = n(392711),
-  s = n.n(i),
+var s = n(392711),
+  i = n.n(s),
   l = n(442837),
   a = n(377108),
   r = n(433517),
@@ -15,7 +15,7 @@ function h(e) {
   let n;
   (t = n || (n = {})).IMAGE = "IMAGE", t.VIDEO = "VIDEO";
   let {
-    state: i
+    state: s
   } = l.ZP.PersistedStore.migrateAndReadStoreState("GIFFavoritesStore", [e => null == e ? {
     favorites: [],
     timesFavorited: 0
@@ -26,11 +26,11 @@ function h(e) {
     favorites: [],
     timesFavorited: 0
   }]);
-  return null == i || 0 === i.favorites.length ? [] : i.favorites.map((t, n) => {
-    let s = a.JM.create();
-    return s.format = "IMAGE" === t.format ? a.EO.IMAGE : "VIDEO" === t.format ? a.EO.VIDEO : a.EO.NONE, s.src = t.src, s.width = t.width, s.height = t.height, s.order = i.favorites.length - n + e, {
+  return null == s || 0 === s.favorites.length ? [] : s.favorites.map((t, n) => {
+    let i = a.JM.create();
+    return i.format = "IMAGE" === t.format ? a.EO.IMAGE : "VIDEO" === t.format ? a.EO.VIDEO : a.EO.NONE, i.src = t.src, i.width = t.width, i.height = t.height, i.order = s.favorites.length - n + e, {
       url: t.url,
-      favorite: s
+      favorite: i
     }
   })
 }
@@ -41,9 +41,9 @@ let _ = [{
     if (0 === t.length) return !1;
     for (let {
         url: n,
-        favorite: i
+        favorite: s
       }
-      of(null == e.favoriteGifs && (e.favoriteGifs = a.wK.create()), e.favoriteGifs.gifs = {}, t)) e.favoriteGifs.gifs[n] = i;
+      of(null == e.favoriteGifs && (e.favoriteGifs = a.wK.create()), e.favoriteGifs.gifs = {}, t)) e.favoriteGifs.gifs[n] = s;
     return e.favoriteGifs.hideTooltip = t.length > 2, !0
   },
   cleanup() {}
@@ -60,8 +60,8 @@ let _ = [{
       state: n
     } = l.ZP.PersistedStore.migrateAndReadStoreState("StickersPersistedStore", [e => null == e || 0 === Object.keys(e).length ? t() : e, e => null == e || 0 === Object.keys(e).length ? t() : (null == e.favorites && (e.favorites = []), e)]);
     if (null == n) return !1;
-    let i = !1;
-    return n.favorites.length > 0 && (e.favoriteStickers = a.Lt.create(), e.favoriteStickers.stickerIds = s().uniq(n.favorites).slice(0, u.oX), i = !0), s().size(n.usageHistory) > 0 && (e.stickerFrecency = a.ls.create(), e.stickerFrecency.stickers = (0, c.tU)(n.usageHistory, 100), i = !0), i
+    let s = !1;
+    return n.favorites.length > 0 && (e.favoriteStickers = a.Lt.create(), e.favoriteStickers.stickerIds = i().uniq(n.favorites).slice(0, u.oX), s = !0), i().size(n.usageHistory) > 0 && (e.stickerFrecency = a.ls.create(), e.stickerFrecency.stickers = (0, c.tU)(n.usageHistory, 100), s = !0), s
   },
   cleanup() {
     r.K.remove("StickersPersistedStore")
@@ -76,7 +76,7 @@ let _ = [{
     })]);
     if (null == t) return !1;
     let n = !1;
-    return null != t.favorites && t.favorites.length > 0 && (e.favoriteEmojis = a.ND.create(), e.favoriteEmojis.emojis = s().uniq(t.favorites).slice(0, u.oX), n = !0), s().size(t.usageHistory) > 0 && (e.emojiFrecency = a.PL.create(), e.emojiFrecency.emojis = (0, c.tU)(t.usageHistory, 100), n = !0), n
+    return null != t.favorites && t.favorites.length > 0 && (e.favoriteEmojis = a.ND.create(), e.favoriteEmojis.emojis = i().uniq(t.favorites).slice(0, u.oX), n = !0), i().size(t.usageHistory) > 0 && (e.emojiFrecency = a.PL.create(), e.emojiFrecency.emojis = (0, c.tU)(t.usageHistory, 100), n = !0), n
   },
   cleanup() {
     r.K.remove("EmojiStore"), r.K.remove("EmojiUsageHistory"), r.K.remove("EmojiDiversitySurrogate")
@@ -87,20 +87,20 @@ let _ = [{
     null == e.favoriteGifs && (e.favoriteGifs = a.wK.create()), null == e.favoriteGifs.gifs && (e.favoriteGifs.gifs = {});
     let t = h(1);
     if (0 === t.length) return !1;
-    s()(e.favoriteGifs.gifs).values().sortBy("order").forEach((e, n) => e.order = t.length + 1 + n);
+    i()(e.favoriteGifs.gifs).values().sortBy("order").forEach((e, n) => e.order = t.length + 1 + n);
     let n = a.wK.toBinary(e.favoriteGifs).length,
-      i = 0;
+      s = 0;
     for (let {
-        url: s,
+        url: i,
         favorite: l
       }
       of t) {
-      if (l.order = t.length - i, i++, s in e.favoriteGifs.gifs) {
-        e.favoriteGifs.gifs[s].order = l.order;
+      if (l.order = t.length - s, s++, i in e.favoriteGifs.gifs) {
+        e.favoriteGifs.gifs[i].order = l.order;
         continue
       }
-      let r = a.JM.toBinary(l).length + s.length + 7;
-      !(n + r > u.vY) && (n += r, e.favoriteGifs.gifs[s] = l)
+      let r = a.JM.toBinary(l).length + i.length + 7;
+      !(n + r > u.vY) && (n += r, e.favoriteGifs.gifs[i] = l)
     }
     for (n = a.wK.toBinary(e.favoriteGifs).length; n > u.vY;) {
       let t = 0;
@@ -119,7 +119,7 @@ let _ = [{
     } = l.ZP.PersistedStore.migrateAndReadStoreState("ApplicationCommandFrecency", []);
     if (null == t) return !1;
     let n = !1;
-    return s().size(t.usageHistory) > 0 && (e.applicationCommandFrecency = a.YI.create(), e.applicationCommandFrecency.applicationCommands = (0, c.tU)(t.usageHistory, 500), n = !0), n
+    return i().size(t.usageHistory) > 0 && (e.applicationCommandFrecency = a.YI.create(), e.applicationCommandFrecency.applicationCommands = (0, c.tU)(t.usageHistory, 500), n = !0), n
   },
   cleanup() {
     r.K.remove("ApplicationCommandFrecency")
@@ -132,7 +132,7 @@ let _ = [{
     } = l.ZP.PersistedStore.migrateAndReadStoreState("SoundboardFavoriteStore", []);
     if (null == t) return !1;
     let n = !1;
-    return s().size(t.favoriteSounds) > 0 && (e.favoriteSoundboardSounds = a.h_.create(), o.default.keys(t.favoriteSounds).forEach(n => {
+    return i().size(t.favoriteSounds) > 0 && (e.favoriteSoundboardSounds = a.h_.create(), o.default.keys(t.favoriteSounds).forEach(n => {
       new Set(t.favoriteSounds[n]).forEach(t => {
         var n;
         null === (n = e.favoriteSoundboardSounds) || void 0 === n || n.soundIds.push(t)

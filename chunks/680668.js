@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return m
+    return N
   }
 }), n(789020);
 var s = n(735250);
@@ -17,19 +17,19 @@ var i = n(533800),
   _ = n(358595),
   I = n(981631),
   T = n(689938),
-  N = n(637091);
+  m = n(637091);
 
-function m(e) {
-  var t, m;
+function N(e) {
+  var t, N;
   let h, C, S, {
       onTransitionToInviteChannel: A,
-      onAcceptInstantInvite: p,
-      guild: g,
+      onAcceptInstantInvite: g,
+      guild: p,
       invite: f,
-      author: O,
-      currentUserId: R
+      author: R,
+      currentUserId: O
     } = e,
-    M = R === O.id,
+    M = O === R.id,
     {
       channel: x,
       approximate_member_count: v,
@@ -37,57 +37,57 @@ function m(e) {
     } = f,
     Z = f.state === I.r2o.ACCEPTING,
     P = null != x ? (0, r.jD)(x) : null,
-    D = null != g,
+    D = null != p,
     j = null != P,
     U = null != P && P.isGuildVocal(),
-    y = null != P && P.isGuildStageVoice(),
-    b = (0, c.yE)(null !== (t = f.flags) && void 0 !== t ? t : 0, i.$.IS_GUEST_INVITE),
-    B = null !== (m = null == g ? void 0 : g.hasFeature(I.oNc.HUB)) && void 0 !== m && m;
-  if (null == g) {
+    b = null != P && P.isGuildStageVoice(),
+    y = (0, c.yE)(null !== (t = f.flags) && void 0 !== t ? t : 0, i.$.IS_GUEST_INVITE),
+    B = null !== (N = null == p ? void 0 : p.hasFeature(I.oNc.HUB)) && void 0 !== N && N;
+  if (null == p) {
     if (null == f.guild) return (0, s.jsx)(_.Z, {});
-    g = d.Qs(f.guild);
+    p = d.Qs(f.guild);
     let e = (0, u.rF)(f.guild.premium_subscription_count, f.guild.id);
-    g.premiumTier = e
+    p.premiumTier = e
   }
-  let k = D ? A : p,
+  let k = D ? A : g,
     G = (0, E.e)({
       isVoiceChannel: U,
       isOwnInvite: M,
-      isGuest: b,
+      isGuest: y,
       isHubGuild: B,
-      isStage: y,
+      isStage: b,
       isStream: !1
     });
   return C = (0, s.jsxs)("span", {
-    className: N.infoTitle,
+    className: m.infoTitle,
     children: [(0, s.jsx)(o.Z.GuildName, {
-      guild: g
+      guild: p
     }), (0, s.jsx)("span", {
-      className: N.infoBadge,
+      className: m.infoBadge,
       children: (0, s.jsx)(a.Z, {
-        guild: g,
+        guild: p,
         isBannerVisible: !1,
         disableBoostClick: !0
       })
     })]
-  }), b && (S = (0, s.jsx)(l.TooltipContainer, {
-    className: N.tooltipContainer,
+  }), y && (S = (0, s.jsx)(l.TooltipContainer, {
+    className: m.tooltipContainer,
     text: T.Z.Messages.GUEST_MEMBERSHIP_EXPLANATION,
     children: (0, s.jsx)(l.CircleInformationIcon, {
       size: "md",
       color: "currentColor",
-      className: N.infoIcon
+      className: m.infoIcon
     })
   })), U ? (C = (0, s.jsx)(o.Z.Channel, {
     channel: P
   }), h = (0, s.jsxs)("span", {
-    className: N.infoTitle,
+    className: m.infoTitle,
     children: [T.Z.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({
-      guildName: g.name
+      guildName: p.name
     }), (0, s.jsx)("span", {
-      className: N.infoBadge,
+      className: m.infoBadge,
       children: (0, s.jsx)(a.Z, {
-        guild: g,
+        guild: p,
         isBannerVisible: !1
       })
     })]
@@ -96,18 +96,18 @@ function m(e) {
     membersOnline: L
   }) : j && (h = (0, s.jsx)(o.Z.Channel, {
     channel: P,
-    guild: g
+    guild: p
   })), (0, s.jsxs)(o.Z, {
     children: [(0, s.jsx)(o.Z.GuildSplash, {
-      guild: g
+      guild: p
     }), (0, s.jsx)(o.Z.Header, {
       text: G,
       extra: S
     }), (0, s.jsxs)(o.Z.Body, {
       children: [(0, s.jsxs)("div", {
-        className: N.headerLine,
+        className: m.headerLine,
         children: [(0, s.jsx)(o.Z.Icon, {
-          guild: g
+          guild: p
         }), (0, s.jsx)(o.Z.Info, {
           title: C,
           onClick: D ? k : null,
@@ -117,11 +117,11 @@ function m(e) {
         onClick: k,
         submitting: Z,
         color: o.Z.Button.Colors.GREEN,
-        children: U ? y ? T.Z.Messages.STAGE_CHANNEL_JOIN : T.Z.Messages.INVITE_VOICE_CHANNEL_JOIN : D ? T.Z.Messages.JOINED_GUILD : T.Z.Messages.JOIN_GUILD
+        children: U ? b ? T.Z.Messages.STAGE_CHANNEL_JOIN : T.Z.Messages.INVITE_VOICE_CHANNEL_JOIN : D ? T.Z.Messages.JOINED_GUILD : T.Z.Messages.JOIN_GUILD
       })]
-    }), g.hasFeature(I.oNc.HUB) && (0, s.jsxs)(s.Fragment, {
+    }), p.hasFeature(I.oNc.HUB) && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)("div", {
-        className: N.separator
+        className: m.separator
       }), (0, s.jsx)(l.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",

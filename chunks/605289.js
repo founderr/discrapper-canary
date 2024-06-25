@@ -1,63 +1,63 @@
-var n = t(735250);
-t(470079);
-var a = t(120356),
-  r = t.n(a),
-  i = t(442837),
-  l = t(481060),
-  o = t(706454),
-  _ = t(78839),
-  c = t(985754),
-  E = t(222727),
-  u = t(318747),
-  R = t(409100),
-  d = t(474936),
-  I = t(981631),
-  T = t(426228);
-s.Z = function(e) {
+var n = s(735250);
+s(470079);
+var a = s(120356),
+  i = s.n(a),
+  r = s(442837),
+  l = s(481060),
+  o = s(706454),
+  c = s(78839),
+  E = s(985754),
+  _ = s(222727),
+  u = s(318747),
+  d = s(409100),
+  T = s(474936),
+  I = s(981631),
+  R = s(426228);
+t.Z = function(e) {
   let {
-    localizedPricingPromo: s,
-    smallGap: t
-  } = e, a = s.countryCode, A = (0, i.e7)([o.default], () => o.default.locale);
-  (0, E.U)(I.jXE.SETTINGS_PREMIUM_BANNER, a);
-  let M = (0, i.e7)([_.ZP], () => _.ZP.getPremiumTypeSubscription()),
+    localizedPricingPromo: t,
+    smallGap: s
+  } = e, a = t.countryCode, A = (0, r.e7)([o.default], () => o.default.locale);
+  (0, _.U)(I.jXE.SETTINGS_PREMIUM_BANNER, a);
+  let N = (0, r.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
     {
-      localizedPricingBannerHeader: S,
-      localizedPricingBannerBody: N
-    } = (0, c.vB)({
-      localizedPricingPromo: s,
-      subscription: M,
+      localizedPricingBannerHeader: C,
+      localizedPricingBannerBody: g
+    } = (0, E.vB)({
+      localizedPricingPromo: t,
+      subscription: N,
       userLocale: A
     }),
-    p = a.toLowerCase() + "Banner";
+    m = a.toLowerCase() + "Banner";
   return (0, n.jsxs)("div", {
-    className: r()(T.bannerContainer, {
-      [T.smallGap]: t,
-      [T.bigGap]: !t
+    className: i()(R.bannerContainer, {
+      [R.smallGap]: s,
+      [R.bigGap]: !s
     }),
     children: [(0, n.jsx)("div", {
-      className: r()(T[p], T.bannerImageContainer)
+      className: i()(R[m], R.bannerImageContainer)
     }), (0, n.jsx)(l.Heading, {
-      className: T.bannerHeading,
+      className: R.bannerHeading,
       variant: "heading-xl/semibold",
-      children: S
+      children: C
     }), (0, n.jsx)("div", {
-      className: T.textContainer,
+      className: R.textContainer,
       children: (0, n.jsx)(l.Text, {
         color: "none",
         variant: "text-md/normal",
-        className: T.bannerBody,
-        children: N
+        className: R.bannerBody,
+        children: g
       })
     }), (0, n.jsxs)("div", {
-      className: T.ctaButtonContainer,
-      children: [(0, n.jsx)(R.Z, {
+      className: R.ctaButtonContainer,
+      children: [(0, n.jsx)(d.Z, {
         forceInverted: !0,
-        className: T.ctaButton,
-        subscriptionTier: d.Si.TIER_2
+        className: R.ctaButton,
+        subscriptionTier: T.Si.TIER_2
       }), (0, n.jsx)(u.Z, {
         forceWhite: !0,
-        subscriptionTier: d.Si.TIER_2,
-        className: T.ctaButton
+        subscriptionTier: T.Si.TIER_2,
+        className: R.ctaButton
       })]
     })]
   })

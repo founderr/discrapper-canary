@@ -1,7 +1,7 @@
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(120356),
-  l = n.n(s),
+var i = n(120356),
+  l = n.n(i),
   a = n(44315),
   r = n(285952),
   o = n(441996),
@@ -12,27 +12,27 @@ t.Z = function(e) {
   var t;
   let {
     title: n,
-    className: s,
+    className: i,
     color: E,
     animate: h,
     gradientStopColor: _,
     getHistoricalTotalBytes: I
-  } = e, m = (0, a.Sl)(E).hex, g = null === (t = (0, a.Sl)(_)) || void 0 === t ? void 0 : t.hex;
-  return (0, i.jsx)(c.Z, {
+  } = e, m = (0, a.Sl)(E).hex, T = null === (t = (0, a.Sl)(_)) || void 0 === t ? void 0 : t.hex;
+  return (0, s.jsx)(c.Z, {
     getHistoricalTotalBytes: I,
     children: (e, t, a) => {
       var c;
-      return (0, i.jsx)("div", {
-        className: l()(d.monitor, s),
-        children: (0, i.jsxs)(r.Z, {
+      return (0, s.jsx)("div", {
+        className: l()(d.monitor, i),
+        children: (0, s.jsxs)(r.Z, {
           align: r.Z.Align.CENTER,
-          children: [(0, i.jsxs)(r.Z, {
+          children: [(0, s.jsxs)(r.Z, {
             className: d.text,
             direction: r.Z.Direction.VERTICAL,
-            children: [(0, i.jsx)("div", {
+            children: [(0, s.jsx)("div", {
               className: d.title,
               children: n
-            }), (0, i.jsx)("div", {
+            }), (0, s.jsx)("div", {
               className: d.rate,
               children: (c = e[e.length - 1] / t * 1e3) > 1e3 ? u.Z.Messages.FILE_RATE_MB.format({
                 size: Math.round(c / 1e3)
@@ -40,15 +40,15 @@ t.Z = function(e) {
                 size: Math.round(c)
               })
             })]
-          }), (0, i.jsx)("div", {
+          }), (0, s.jsx)("div", {
             className: d.overflowContainer,
-            children: (0, i.jsx)(o.Z, {
+            children: (0, s.jsx)(o.Z, {
               data: e,
               maxValue: Math.max(Math.max.apply(null, e), 1e3),
               className: d.sparkChart,
               updateInterval: t,
               color: m,
-              gradientStopColor: g,
+              gradientStopColor: T,
               numUpdatesToShow: a,
               animate: h,
               pixelWidth: 600,

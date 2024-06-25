@@ -1,5 +1,5 @@
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(924826),
   a = n(91192),
   r = n(442837),
@@ -14,25 +14,25 @@ t.Z = function(e) {
     searchQuery: E
   } = e, h = e => 0 === t[e].length ? 0 : u.De + 16, _ = e => {
     let {
-      section: i,
-      row: s
-    } = e, l = t[i];
-    if (null == l || null == s) return null;
-    let a = l[s];
+      section: s,
+      row: i
+    } = e, l = t[s];
+    if (null == l || null == i) return null;
+    let a = l[i];
     return null == a ? null : n(a)
-  }, I = (0, r.e7)([c.Z], () => c.Z.keyboardModeEnabled), m = s.useRef(null), g = s.useCallback(() => new Promise(e => {
+  }, I = (0, r.e7)([c.Z], () => c.Z.keyboardModeEnabled), m = i.useRef(null), T = i.useCallback(() => new Promise(e => {
     let t = m.current;
     if (null == t) return e();
     t.scrollToTop({
       callback: () => requestAnimationFrame(() => e())
     })
-  }), []), p = s.useCallback(() => new Promise(e => {
+  }), []), g = i.useCallback(() => new Promise(e => {
     let t = m.current;
     if (null == t) return e();
     t.scrollToBottom({
       callback: () => requestAnimationFrame(() => e())
     })
-  }), []), N = s.useCallback(e => {
+  }), []), p = i.useCallback(e => {
     let t = document.querySelector(e),
       n = m.current;
     null != t && null != n && n.scrollIntoViewNode({
@@ -40,22 +40,22 @@ t.Z = function(e) {
       padding: 8,
       callback: () => null == t ? void 0 : t.focus()
     })
-  }, []), T = (0, l.ZP)({
+  }, []), N = (0, l.ZP)({
     id: "people-list",
     isEnabled: I,
-    scrollToStart: g,
-    scrollToEnd: p,
-    setFocus: N
+    scrollToStart: T,
+    scrollToEnd: g,
+    setFocus: p
   });
-  return (0, i.jsx)(a.bG, {
-    navigator: T,
-    children: (0, i.jsx)(a.SJ, {
+  return (0, s.jsx)(a.bG, {
+    navigator: N,
+    children: (0, s.jsx)(a.SJ, {
       children: e => {
         let {
           ref: n,
-          ...s
+          ...i
         } = e;
-        return (0, i.jsx)(o.ListAuto, {
+        return (0, s.jsx)(o.ListAuto, {
           ref: e => {
             var t;
             m.current = e, n.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
@@ -65,7 +65,7 @@ t.Z = function(e) {
           rowHeight: u.NV,
           sections: t.map(e => "" !== E && 0 === e.length ? e.length + 1 : e.length),
           className: d.peopleList,
-          ...s
+          ...i
         })
       }
     })

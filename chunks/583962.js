@@ -16,8 +16,8 @@ var l = n(735250),
   c = n(477690),
   d = n(481060),
   h = n(239091),
-  g = n(607070),
-  p = n(100527),
+  p = n(607070),
+  g = n(100527),
   m = n(367907),
   C = n(906732),
   E = n(434404),
@@ -28,8 +28,8 @@ var l = n(735250),
   Z = n(667815),
   S = n(531572),
   x = n(26323),
-  T = n(30513),
-  L = n(981631),
+  L = n(30513),
+  T = n(981631),
   v = n(689938),
   A = n(960600);
 let M = (0, N.Mg)(c.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
@@ -37,7 +37,7 @@ let M = (0, N.Mg)(c.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     let {
       guild: t,
       onSelect: n
-    } = e, [s, r] = i.useState(t.premiumProgressBarEnabled), [a, o] = i.useState(!1), c = (0, u.e7)([f.Z], () => f.Z.can(L.Plq.MANAGE_GUILD, t)), g = async () => {
+    } = e, [s, r] = i.useState(t.premiumProgressBarEnabled), [a, o] = i.useState(!1), c = (0, u.e7)([f.Z], () => f.Z.can(T.Plq.MANAGE_GUILD, t)), p = async () => {
       if (!!c) o(!0), await E.Z.saveGuild(t.id, {
         premiumProgressBarEnabled: !s
       }), r(!s), o(!1)
@@ -52,13 +52,13 @@ let M = (0, N.Mg)(c.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
         label: v.Z.Messages.GUILD_ENABLE_PROGRESS_BAR,
         checked: s,
         disabled: a,
-        action: g
+        action: p
       })
     })
   },
   O = 57,
   P = 57 + M,
-  j = {
+  b = {
     tension: 180,
     friction: 80
   };
@@ -68,47 +68,47 @@ t.ZP = e => {
     withMargin: n
   } = e, {
     analyticsLocations: s
-  } = (0, C.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY), {
+  } = (0, C.ZP)(g.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY), {
     premiumSubscriberCount: c,
     id: E
-  } = t, N = (0, I.rF)(c, E), M = (0, I.FZ)(N, t.id), O = null == M, P = null != M ? M : N, b = (0, u.e7)([S.Z], () => {
+  } = t, N = (0, I.rF)(c, E), M = (0, I.FZ)(N, t.id), O = null == M, P = null != M ? M : N, j = (0, u.e7)([S.Z], () => {
     var e;
     return null !== (e = S.Z.getCountForGuild(E)) && void 0 !== e ? e : 0
-  }), D = (0, u.e7)([g.Z], () => g.Z.useReducedMotion), y = (0, u.e7)([f.Z], () => f.Z.can(L.Plq.MANAGE_GUILD, t));
+  }), y = (0, u.e7)([p.Z], () => p.Z.useReducedMotion), D = (0, u.e7)([f.Z], () => f.Z.can(T.Plq.MANAGE_GUILD, t));
   i.useEffect(() => {
-    b !== c && (0, Z.v)(E, c)
-  }, [E, b, c]);
+    j !== c && (0, Z.v)(E, c)
+  }, [E, j, c]);
   let U = "".concat(Math.min(100, c / (0, I.vn)(t.id)[P] * 100), "%"),
     {
       current: G
     } = i.useRef(U),
     w = {
       from: {
-        width: b === c ? G : "0%"
+        width: j === c ? G : "0%"
       },
       to: {
         width: U
       },
-      config: j,
-      immediate: D
+      config: b,
+      immediate: y
     },
     [k, B] = (0, a.useSpring)(() => w),
     V = () => {
-      (0, m.yw)(L.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+      (0, m.yw)(T.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
         location: {
-          section: L.jXE.PREMIUM_GUILD_PROGRESS_BAR
+          section: T.jXE.PREMIUM_GUILD_PROGRESS_BAR
         },
         guild_id: E,
         location_stack: s
       }), (0, x.Z)({
         analyticsLocations: s,
         analyticsSourceLocation: {
-          page: L.ZY5.GUILD_CHANNEL,
-          section: L.jXE.PREMIUM_GUILD_PROGRESS_BAR,
-          object: L.qAy.TOOLTIP
+          page: T.ZY5.GUILD_CHANNEL,
+          section: T.jXE.PREMIUM_GUILD_PROGRESS_BAR,
+          object: T.qAy.TOOLTIP
         },
         guild: t,
-        perks: (0, T.VF)(),
+        perks: (0, L.VF)(),
         perkIntro: v.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_PROGRESS_BAR_HEADER
       })
     },
@@ -152,7 +152,7 @@ t.ZP = e => {
           [A.containerWithMargin]: n
         }),
         onContextMenu: e => {
-          y && (0, h.vq)(e, e => (0, l.jsx)(R, {
+          D && (0, h.vq)(e, e => (0, l.jsx)(R, {
             ...e,
             guild: t
           }))

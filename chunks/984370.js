@@ -1,6 +1,6 @@
 n.d(t, {
   O: function() {
-    return g
+    return p
   }
 });
 var s = n(735250);
@@ -17,18 +17,18 @@ var i = n(120356),
   _ = n(594174),
   I = n(502568),
   T = n(358085),
-  N = n(998502),
-  m = n(300986),
+  m = n(998502),
+  N = n(300986),
   h = n(314451),
   C = n(35583),
   S = n(981631),
   A = n(176505),
-  p = n(656847);
-async function g() {
+  g = n(656847);
+async function p() {
   if ((0, T.isMac)() && T.isPlatformEmbedded) {
     var e, t, n;
     let s = null !== (n = await (null === (e = (t = window.DiscordNative.remoteApp).getDefaultDoubleClickAction) || void 0 === e ? void 0 : e.call(t))) && void 0 !== n ? n : "Maximize";
-    "Minimize" === s ? N.ZP.minimize() : "Maximize" === s && N.ZP.maximize()
+    "Minimize" === s ? m.ZP.minimize() : "Maximize" === s && m.ZP.maximize()
   }
 }
 
@@ -41,12 +41,12 @@ function f(e) {
     innerClassname: o,
     transparent: c = !1,
     toolbar: T,
-    mobileToolbar: N,
+    mobileToolbar: m,
     "aria-label": S,
     "aria-labelledby": A,
     scrollable: f,
-    role: O,
-    hideSearch: R,
+    role: R,
+    hideSearch: O,
     showDivider: M
   } = e, x = (0, r.e7)([_.default], () => _.default.getCurrentUser()), v = (null == x ? void 0 : x.isStaff()) || (null == x ? void 0 : x.isStaffPersonal()) || !1;
   return (0, s.jsx)(I.ZP, {
@@ -54,26 +54,26 @@ function f(e) {
     innerClassName: o,
     toolbar: function() {
       if (null == T) return null;
-      let e = null != i && !R;
-      return a.tq ? N : (0, s.jsxs)(s.Fragment, {
+      let e = null != i && !O;
+      return a.tq ? m : (0, s.jsxs)(s.Fragment, {
         children: [T, e ? (0, s.jsx)(E.Z, {
-          className: p.search
+          className: g.search
         }, null != l ? l : i) : null, M && (0, s.jsx)(I.ZP.Divider, {}), (0, s.jsx)(C.Z, {}), (0, s.jsx)(u.Z, {
           canShowReminder: !0
-        }), (0, s.jsx)(d.Z, {}), v ? (0, s.jsx)(h.Z, {}) : (0, s.jsx)(m.Z, {})]
+        }), (0, s.jsx)(d.Z, {}), v ? (0, s.jsx)(h.Z, {}) : (0, s.jsx)(N.Z, {})]
       })
     }(),
     transparent: c,
-    onDoubleClick: g,
+    onDoubleClick: p,
     "aria-label": S,
     "aria-labelledby": A,
-    role: O,
+    role: R,
     scrollable: f,
     children: t
   })
 }
 
-function O(e) {
+function R(e) {
   let {
     children: t,
     className: n,
@@ -83,7 +83,7 @@ function O(e) {
   } = e;
   return (0, s.jsx)(I.ZP, {
     className: n,
-    onDoubleClick: g,
+    onDoubleClick: p,
     "aria-label": i,
     "aria-labelledby": l,
     role: a,
@@ -91,24 +91,24 @@ function O(e) {
   })
 }
 
-function R(e) {
+function O(e) {
   let {
     isAuthenticated: t = !0,
     ...n
   } = e, {
     analyticsLocations: i
   } = (0, c.ZP)(o.Z.HEADER_BAR), a = l()(n.className, {
-    [p.forumOrHome]: null != n.channelType && S.TPd.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === A.oC.GUILD_HOME
+    [g.forumOrHome]: null != n.channelType && S.TPd.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === A.oC.GUILD_HOME
   });
   return (0, s.jsx)(c.Gt, {
     value: i,
     children: t ? (0, s.jsx)(f, {
       ...n,
       className: a
-    }) : (0, s.jsx)(O, {
+    }) : (0, s.jsx)(R, {
       ...n,
       className: a
     })
   })
 }
-R.Title = I.ZP.Title, R.Icon = I.ZP.Icon, R.Divider = I.ZP.Divider, R.Caret = I.ZP.Caret, t.Z = R
+O.Title = I.ZP.Title, O.Icon = I.ZP.Icon, O.Divider = I.ZP.Divider, O.Caret = I.ZP.Caret, t.Z = O

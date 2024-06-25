@@ -12,17 +12,17 @@ var s = n(735250),
   _ = n(496675),
   I = n(998951),
   T = n(630388),
-  N = n(709054),
-  m = n(900164),
+  m = n(709054),
+  N = n(900164),
   h = n(739566),
   C = n(453687),
   S = n(25015),
   A = n(689674),
-  p = n(438075),
-  g = n(963550),
+  g = n(438075),
+  p = n(963550),
   f = n(845080),
-  O = n(295790),
-  R = n(145807),
+  R = n(295790),
+  O = n(145807),
   M = n(56744),
   x = n(981631),
   v = n(105461);
@@ -38,8 +38,8 @@ t.Z = i.memo(function(e) {
     hideSimpleEmbedContent: D = !0,
     channel: j,
     isGroupStart: U,
-    animateAvatar: y,
-    subscribeToComponentDispatch: b,
+    animateAvatar: b,
+    subscribeToComponentDispatch: y,
     renderThreadAccessory: B,
     trackAnnouncementViews: k = !1,
     ...G
@@ -52,15 +52,15 @@ t.Z = i.memo(function(e) {
     allowHeading: F || V,
     allowLinks: !0,
     previewLinkTarget: !0
-  }), Y = n.type === x.uaV.REPLY ? n.messageReference : void 0, K = (0, o.e7)([d.Z], () => d.Z.getMessageByReference(Y)), W = (0, r.JA)(n.id), z = (0, h.ZP)(n), Q = (0, o.e7)([E.Z], () => n.hasFlag(x.iLy.HAS_THREAD) && E.Z.getChannel(N.default.castMessageIdAsChannelId(n.id))), X = (0, c.p9)({
+  }), Y = n.type === x.uaV.REPLY ? n.messageReference : void 0, W = (0, o.e7)([d.Z], () => d.Z.getMessageByReference(Y)), z = (0, r.JA)(n.id), K = (0, h.ZP)(n), Q = (0, o.e7)([E.Z], () => n.hasFlag(x.iLy.HAS_THREAD) && E.Z.getChannel(m.default.castMessageIdAsChannelId(n.id))), X = (0, c.p9)({
     guildId: j.guild_id,
-    roleId: z.iconRoleId
+    roleId: K.iconRoleId
   }), q = (0, o.e7)([_.Z], () => _.Z.can(x.Plq.CREATE_INSTANT_INVITE, j)), J = (0, A.Z)({
     message: n,
     channel: j,
     enabled: k
   });
-  if ((0, m.Z)(n, q)) return null;
+  if ((0, N.Z)(n, q)) return null;
   let $ = (0, C.iG)(n),
     ee = (0, C.Gx)(n);
   return (0, s.jsx)(I.Z, {
@@ -70,17 +70,17 @@ t.Z = i.memo(function(e) {
       [v.disableInteraction]: P
     }),
     disableInteraction: P,
-    childrenRepliedMessage: (0, M.Z)(n, j, Y, K, i),
-    childrenExecutedCommand: (0, R.Z)(n, j, i),
+    childrenRepliedMessage: (0, M.Z)(n, j, Y, W, i),
+    childrenExecutedCommand: (0, O.Z)(n, j, i),
     childrenHeader: (0, f.Z)({
       ...e,
       guildId: j.guild_id,
-      author: z,
+      author: K,
       roleIcon: X
     }),
-    childrenAccessories: e.hideAccessories ? void 0 : (0, p.Q)(e, H),
-    childrenMessageContent: (0, g.Z)(e, w),
-    childrenSystemMessage: (0, O.Z)(e),
+    childrenAccessories: e.hideAccessories ? void 0 : (0, g.Q)(e, H),
+    childrenMessageContent: (0, p.Z)(e, w),
+    childrenSystemMessage: (0, R.Z)(e),
     onContextMenu: L,
     onClick: Z,
     hasThread: B && null != Q && n.hasFlag(x.iLy.HAS_THREAD),
@@ -88,7 +88,7 @@ t.Z = i.memo(function(e) {
     "aria-labelledby": $,
     "aria-describedby": ee,
     messageRef: J,
-    ...W,
+    ...z,
     ...G
   })
 })

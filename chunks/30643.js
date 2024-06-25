@@ -1,6 +1,6 @@
 n(47120);
-var i = n(237997),
-  s = n(998502),
+var s = n(237997),
+  i = n(998502),
   l = n(576027),
   a = n(13838),
   r = n(812967),
@@ -13,12 +13,12 @@ var i = n(237997),
   _ = n(567481),
   I = n(498164),
   m = n(111097),
-  g = n(908711),
-  p = n(197941),
-  N = n(462414),
-  T = n(662194),
-  C = n(188861);
-let S = {
+  T = n(908711),
+  g = n(197941),
+  p = n(462414),
+  N = n(662194),
+  S = n(188861);
+let C = {
     ...l.A,
     ...u.Z,
     ...d.Z,
@@ -26,11 +26,11 @@ let S = {
     ..._.Z,
     ...I.Z,
     ...m.Z,
-    ...p.Z,
-    ...T.Z,
+    ...g.Z,
     ...N.Z,
+    ...p.Z,
     ...E.Z,
-    ...g.Z
+    ...T.Z
   },
   A = {
     ...a.Z,
@@ -39,12 +39,12 @@ let S = {
   };
 t.Z = {
   server: r.Z,
-  commands: S,
+  commands: C,
   events: A,
-  stores: [i.Z],
-  transports: [C.Z],
+  stores: [s.Z],
+  transports: [S.Z],
   registerTransportsForEmbeddedPlatform: function() {
-    s.ZP.ensureModule("discord_rpc").then(() => {
+    i.ZP.ensureModule("discord_rpc").then(() => {
       for (let e of [n(178318).Z, n(967351).Z]) r.Z.registerTransport(e)
     })
   }

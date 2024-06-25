@@ -1,9 +1,9 @@
 n.d(t, {
   o: function() {
-    return s
+    return i
   }
 });
-let i = (0, n(818083).B)({
+let s = (0, n(818083).B)({
   kind: "user",
   id: "2022-12_channel_notice_redesign",
   label: "Channel Notice Redesign",
@@ -35,12 +35,12 @@ let i = (0, n(818083).B)({
   }]
 });
 
-function s() {
+function i() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     {
       showRedesignedChannelNotice: t,
       showRedesignedLiveChannelNotice: n
-    } = i.useExperiment({
+    } = s.useExperiment({
       location: "c0d6eb_1"
     }, {
       autoTrackExposure: e

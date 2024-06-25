@@ -1,24 +1,24 @@
 n.d(t, {
   Z: function() {
-    return s
+    return i
   }
 }), n(47120);
-var i = n(470079);
+var s = n(470079);
 
-function s(e) {
-  let [t, n] = i.useState(0), s = i.useCallback(() => {
+function i(e) {
+  let [t, n] = s.useState(0), i = s.useCallback(() => {
     let t = window.innerWidth;
-    for (let i of e) {
-      let [e, s] = i;
+    for (let s of e) {
+      let [e, i] = s;
       if (t >= e) {
-        n(s);
+        n(i);
         return
       }
     }
   }, [e]);
-  return i.useEffect(() => {
-    s()
-  }, [s]), i.useEffect(() => (window.addEventListener("resize", s), () => {
-    window.removeEventListener("resize", s)
+  return s.useEffect(() => {
+    i()
+  }, [i]), s.useEffect(() => (window.addEventListener("resize", i), () => {
+    window.removeEventListener("resize", i)
   })), t
 }

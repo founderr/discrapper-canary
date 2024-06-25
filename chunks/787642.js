@@ -1,10 +1,10 @@
 n.d(t, {
   Z: function() {
-    return g
+    return T
   }
 });
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(481060),
   a = n(212093),
   r = n(703656),
@@ -18,45 +18,45 @@ var i = n(735250),
   I = n(387259);
 
 function m(e, t, n) {
-  return (0, i.jsxs)("button", {
+  return (0, s.jsxs)("button", {
     className: I.container,
     onClick: n,
-    children: ["function" == typeof e ? (0, i.jsx)("div", {
+    children: ["function" == typeof e ? (0, s.jsx)("div", {
       className: I.icon,
-      children: (0, i.jsx)(e, {
+      children: (0, s.jsx)(e, {
         className: I.__invalid_iconInner,
         color: l.tokens.colors.WHITE.css
       })
-    }) : (0, i.jsx)("img", {
+    }) : (0, s.jsx)("img", {
       className: I.icon,
       alt: "",
       src: e
-    }), (0, i.jsx)(l.Text, {
+    }), (0, s.jsx)(l.Text, {
       className: I.text,
       variant: "text-md/medium",
       children: t
-    }), (0, i.jsx)(E.Z, {
+    }), (0, s.jsx)(E.Z, {
       className: I.arrow
     })]
   }, t)
 }
 
-function g() {
+function T() {
   let e = Object.values(c.Z.getGuilds()).filter(e => e.hasFeature(h.oNc.HUB)),
     t = e => {
       u.default.track(h.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, {
         guild_id: e
       }), (0, o.X)(e)
     };
-  return (0, i.jsxs)(s.Fragment, {
-    children: [(0, i.jsx)("header", {
+  return (0, s.jsxs)(i.Fragment, {
+    children: [(0, s.jsx)("header", {
       className: I.header,
-      children: (0, i.jsx)(l.FormTitle, {
+      children: (0, s.jsx)(l.FormTitle, {
         tag: "h2",
         className: I.title,
         children: _.Z.Messages.ADD_FRIEND_MAKE_FRIENDS
       })
-    }), (0, i.jsxs)("div", {
+    }), (0, s.jsxs)("div", {
       className: I.grid,
       children: [e.map(e => m(d.ZP.getGuildIconURL({
         id: e.id,

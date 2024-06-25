@@ -3,8 +3,8 @@ n.d(t, {
     return f
   }
 });
-var i, s = n(392711),
-  l = n.n(s),
+var s, i = n(392711),
+  l = n.n(i),
   a = n(442837),
   r = n(570140),
   o = n(846027),
@@ -24,15 +24,15 @@ function _(e, t, n) {
 }
 let I = {},
   m = I,
-  g = !1,
+  T = !1,
+  g = {},
   p = {},
   N = {},
-  T = {},
-  C = {
+  S = {
     id: null,
     justChanged: !1
   },
-  S = {
+  C = {
     id: null,
     justChanged: !1
   },
@@ -55,7 +55,7 @@ function Z(e, t, n) {
     type: E.QyF.INPUT_AND_OUTPUT
   } : e
 }
-class v extends(i = a.ZP.DeviceSettingsStore) {
+class L extends(s = a.ZP.DeviceSettingsStore) {
   initialize(e) {
     this.waitFor(d.Z, c.Z), m = null != e ? e : I
   }
@@ -63,85 +63,85 @@ class v extends(i = a.ZP.DeviceSettingsStore) {
     return m
   }
   get initialized() {
-    return g
-  }
-  get lastDeviceConnected() {
     return T
   }
-  get inputDevices() {
-    return p
-  }
-  get lastInputSystemDevice() {
-    return C
-  }
-  get outputDevices() {
+  get lastDeviceConnected() {
     return N
   }
-  get lastOutputSystemDevice() {
+  get inputDevices() {
+    return g
+  }
+  get lastInputSystemDevice() {
     return S
   }
+  get outputDevices() {
+    return p
+  }
+  get lastOutputSystemDevice() {
+    return C
+  }
 }
-_(v, "displayName", "ConnectedDeviceStore"), _(v, "persistKey", "ConnectedDeviceStore"), t.Z = new v(r.Z, {
+_(L, "displayName", "ConnectedDeviceStore"), _(L, "persistKey", "ConnectedDeviceStore"), t.Z = new L(r.Z, {
   MEDIA_ENGINE_DEVICES: function(e) {
     let {
       inputDevices: t,
       outputDevices: n
-    } = e, i = {};
-    C.justChanged = !1, t.forEach(e => {
-      if (i[f(e)] = e.id, e.id === h.w5) {
+    } = e, s = {};
+    S.justChanged = !1, t.forEach(e => {
+      if (s[f(e)] = e.id, e.id === h.w5) {
         var t;
         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-        n !== C.id && (C.justChanged = !0), C.id = n
+        n !== S.id && (S.justChanged = !0), S.id = n
       }
     });
-    let s = {};
-    if (S.justChanged = !1, n.forEach(e => {
-        if (s[f(e)] = e.id, e.id === h.w5) {
+    let i = {};
+    if (C.justChanged = !1, n.forEach(e => {
+        if (i[f(e)] = e.id, e.id === h.w5) {
           var t;
           let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-          n !== S.id && (S.justChanged = !0), S.id = n
+          n !== C.id && (C.justChanged = !0), C.id = n
         }
-      }), !g) {
-      p = i, N = s, g = !0;
+      }), !T) {
+      g = s, p = i, T = !0;
       return
     }
-    let a = Object.keys(p),
-      r = Object.keys(i),
-      o = Object.keys(N),
-      c = Object.keys(s),
+    let a = Object.keys(g),
+      r = Object.keys(s),
+      o = Object.keys(p),
+      c = Object.keys(i),
       u = l().difference(a, r),
       d = l().difference(o, c);
-    return u.length > 0 || d.length > 0 ? T = {} : (l().difference(r, a).forEach(e => {
-      T[e] = Z(T[e], e, E.QyF.INPUT)
+    return u.length > 0 || d.length > 0 ? N = {} : (l().difference(r, a).forEach(e => {
+      N[e] = Z(N[e], e, E.QyF.INPUT)
     }), l().difference(c, o).forEach(e => {
-      T[e] = Z(T[e], e, E.QyF.OUTPUT)
-    })), !(l().isEqual(a, r) && l().isEqual(o, c)) && (p = i, N = s, !0)
+      N[e] = Z(N[e], e, E.QyF.OUTPUT)
+    })), !(l().isEqual(a, r) && l().isEqual(o, c)) && (g = s, p = i, !0)
   },
   CONNECTED_DEVICE_SET: function(e) {
     let {
       displayName: t,
       connectedDevicePreference: n,
-      location: i
+      location: s
     } = e;
     ! function(e, t, n) {
       if (t === E.aVf.INPUT || t === E.aVf.INPUT_AND_OUTPUT) {
-        let t = p[e];
+        let t = g[e];
         null != t && r.Z.wait(() => o.Z.setInputDevice(t, n))
       }
       if (t === E.aVf.OUTPUT || t === E.aVf.INPUT_AND_OUTPUT) {
-        let t = N[e];
+        let t = p[e];
         r.Z.wait(() => o.Z.setOutputDevice(t, n))
       }
-    }(t, n, i), delete T[t]
+    }(t, n, s), delete N[t]
   },
   CONNECTED_DEVICE_IGNORE: function(e) {
     let {
       displayName: t
     } = e;
-    delete T[t]
+    delete N[t]
   },
   CONNECTED_DEVICE_NEVER_SHOW_MODAL: function() {
-    T = {}, m = {
+    N = {}, m = {
       neverShowModal: !0
     }
   }

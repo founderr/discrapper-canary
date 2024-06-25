@@ -1,75 +1,75 @@
 n(411104), n(47120);
-var l = n(735250),
-  a = n(470079),
+var a = n(735250),
+  l = n(470079),
   i = n(539528),
-  r = n(786876),
-  s = n(333032);
-class o extends a.Component {
+  s = n(786876),
+  r = n(333032);
+class o extends l.Component {
   render() {
     let {
       to: e,
       from: t,
       isNavLink: n,
-      children: a,
+      children: l,
       tabIndex: i = 0,
-      role: s,
+      role: r,
       className: o
     } = this.props;
     if (null == e) throw Error("Missing 'to' route prop in TrackLink component");
     let c = "string" == typeof e ? e : e.pathname,
-      u = "string" == typeof e ? "" : e.hash,
-      d = "string" == typeof e ? "" : e.search;
-    return n ? (0, l.jsx)(r.OL, {
+      d = "string" == typeof e ? "" : e.hash,
+      u = "string" == typeof e ? "" : e.search;
+    return n ? (0, a.jsx)(s.OL, {
       className: o,
       tabIndex: i,
       onClick: this.handleOnClick,
       to: {
         pathname: c,
-        hash: u,
-        search: d,
+        hash: d,
+        search: u,
         state: {
           previousLinkLocation: t
         }
       },
-      role: s,
-      children: a
-    }) : (0, l.jsx)(r.rU, {
+      role: r,
+      children: l
+    }) : (0, a.jsx)(s.rU, {
       className: o,
       tabIndex: i,
       onClick: this.handleOnClick,
       to: {
         pathname: c,
-        hash: u,
-        search: d,
+        hash: d,
+        search: u,
         state: {
           previousLinkLocation: t
         }
       },
-      role: s,
-      children: a
+      role: r,
+      children: l
     })
   }
   constructor(...e) {
-    var t, n, l;
-    super(...e), t = this, n = "handleOnClick", l = () => {
+    var t, n, a;
+    super(...e), t = this, n = "handleOnClick", a = () => {
       let {
         to: e,
         avoidRouter: t,
         onClick: n,
-        history: l
+        history: a
       } = this.props;
       if (null != n) n();
       else if (t) {
-        let t = "string" == typeof e ? (0, i.ob)(e, null, void 0, l.location) : e,
-          n = l.createHref(t);
+        let t = "string" == typeof e ? (0, i.ob)(e, null, void 0, a.location) : e,
+          n = a.createHref(t);
         window.location = n
       }
     }, n in t ? Object.defineProperty(t, n, {
-      value: l,
+      value: a,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : t[n] = l
+    }) : t[n] = a
   }
 }
-t.Z = (0, s.EN)(o)
+t.Z = (0, r.EN)(o)

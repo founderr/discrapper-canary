@@ -1,6 +1,6 @@
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
   l = n(570140),
   a = n(317770);
 let r = "CONNECTIONS_GRID_MODAL_KEY";
@@ -19,11 +19,11 @@ class o extends a.Z {
       integrations: o,
       onCompleteApplication: c
     } = e;
-    !(0, s.hasModalOpen)(r) && (0, s.openModalLazy)(async () => {
+    !(0, i.hasModalOpen)(r) && (0, i.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("28538")]).then(n.bind(n, 51299));
-      return n => (0, i.jsx)(e, {
+      return n => (0, s.jsx)(e, {
         onComplete: t,
         excludedPlatformTypes: l,
         includedPlatformTypes: a,
@@ -34,7 +34,7 @@ class o extends a.Z {
     })
   }
   handleHide() {
-    (0, s.closeModal)(r)
+    (0, i.closeModal)(r)
   }
 }
 t.Z = new o

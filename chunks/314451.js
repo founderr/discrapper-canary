@@ -18,14 +18,14 @@ function _() {
   let e = (0, l.e7)([c.Z], () => c.Z.isDeveloper),
     [t, _] = i.useState(!1),
     [I, T] = i.useState(0),
-    N = e => {
+    m = e => {
       clearTimeout(I), T(setTimeout(() => {
         _(e)
       }, 100))
     };
   return (0, s.jsx)("div", {
-    onMouseEnter: () => N(!0),
-    onMouseLeave: () => N(!1),
+    onMouseEnter: () => m(!0),
+    onMouseLeave: () => m(!1),
     children: (0, s.jsx)(a.Popout, {
       shouldShow: t,
       animation: a.Popout.Animation.NONE,

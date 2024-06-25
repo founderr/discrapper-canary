@@ -1,61 +1,61 @@
-n.d(t, {
+s.d(t, {
   Z: function() {
-    return c
+    return o
   }
 });
-var s = n(735250);
-n(470079);
-var i = n(120356),
-  a = n.n(i),
-  l = n(481060),
-  r = n(831489);
+var n = s(735250);
+s(470079);
+var a = s(120356),
+  i = s.n(a),
+  r = s(481060),
+  l = s(831489);
 
-function c(e) {
+function o(e) {
   let {
     message: t,
-    error: n,
-    onClick: i,
-    submitting: c,
-    className: o,
-    ctaMessage: d
+    error: s,
+    onClick: a,
+    submitting: o,
+    className: c,
+    ctaMessage: E
   } = e;
-  return (0, s.jsxs)("div", {
-    className: a()(r.container, o),
-    children: [(0, s.jsxs)("div", {
-      className: r.textContainer,
-      children: [(0, s.jsx)(l.CircleExclamationPointIcon, {
+  return (0, n.jsxs)("div", {
+    className: i()(l.container, c),
+    children: [(0, n.jsxs)("div", {
+      className: l.textContainer,
+      children: [(0, n.jsx)(r.CircleExclamationPointIcon, {
         size: "custom",
         width: 20,
         height: 20,
         color: "currentColor",
-        className: r.warningIcon
-      }), (0, s.jsx)(l.Spacer, {
+        className: l.warningIcon
+      }), (0, n.jsx)(r.Spacer, {
         size: 10,
         horizontal: !0
-      }), (0, s.jsxs)("div", {
-        children: [(0, s.jsx)(l.Spacer, {
+      }), (0, n.jsxs)("div", {
+        children: [(0, n.jsx)(r.Spacer, {
           size: 1
-        }), (0, s.jsx)(l.Text, {
-          className: r.info,
+        }), (0, n.jsx)(r.Text, {
+          className: l.info,
           variant: "text-sm/normal",
           children: t
-        }), null != n && (0, s.jsx)(l.Text, {
-          className: a()(r.info, r.error),
+        }), null != s && (0, n.jsx)(r.Text, {
+          className: i()(l.info, l.error),
           variant: "text-sm/normal",
-          children: n
+          children: s
         })]
       })]
-    }), (0, s.jsx)(l.Spacer, {
+    }), (0, n.jsx)(r.Spacer, {
       size: 16,
       horizontal: !0
-    }), (0, s.jsx)(l.Button, {
-      className: r.undoButton,
-      color: l.Button.Colors.LINK,
-      look: l.Button.Looks.LINK,
-      size: l.Button.Sizes.ICON,
-      onClick: i,
-      submitting: c,
-      children: d
+    }), (0, n.jsx)(r.Button, {
+      className: l.undoButton,
+      color: r.Button.Colors.LINK,
+      look: r.Button.Looks.LINK,
+      size: r.Button.Sizes.ICON,
+      onClick: a,
+      submitting: o,
+      children: E
     })]
   })
 }

@@ -21,18 +21,18 @@ function T(e) {
   let {
     guild: n,
     channel: T,
-    messageData: N
-  } = e, m = c.Z.getGuildId(), h = o.Z.getChannelId(m), C = i.useCallback(() => {
+    messageData: m
+  } = e, N = c.Z.getGuildId(), h = o.Z.getChannelId(N), C = i.useCallback(() => {
     var e;
     d.default.track(E.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
-      author_id: null === (e = N.author) || void 0 === e ? void 0 : e.id,
+      author_id: null === (e = m.author) || void 0 === e ? void 0 : e.id,
       link_guild_id: n.id,
       link_channel_id: T.id,
       link_channel_type: T.type,
-      guild_id: m,
+      guild_id: N,
       channel_id: h
     }), (0, a.K)(n.id, T.id), l.default.selectVoiceChannel(T.id)
-  }, [null === (t = N.author) || void 0 === t ? void 0 : t.id, n.id, T.id, T.type, m, h]), S = (0, s.jsx)(u.Z.Channel, {
+  }, [null === (t = m.author) || void 0 === t ? void 0 : t.id, n.id, T.id, T.type, N, h]), S = (0, s.jsx)(u.Z.Channel, {
     channel: T
   });
   return (0, s.jsx)(u.Z, {

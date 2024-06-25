@@ -1,17 +1,17 @@
-i.d(t, {
+n.d(t, {
   H: function() {
     return s
   },
   Z: function() {
-    return o
+    return r
   }
 });
-var n = i(726542),
-  r = i(973616);
+var l = n(726542),
+  i = n(973616);
 let s = "xbox:";
-class o extends r.Z {
+class r extends i.Z {
   getIconURL() {
-    return n.Z.get("xbox").icon.lightPNG
+    return l.Z.get("xbox").icon.lightPNG
   }
   constructor(e) {
     super(e), this.id = "".concat(s).concat(e.name), this.name = e.name

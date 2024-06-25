@@ -1,14 +1,14 @@
-t.d(s, {
+s.d(t, {
   g: function() {
-    return i
+    return r
   },
   p: function() {
     return a
   }
 });
-var n, a, r = t(818083);
+var n, a, i = s(818083);
 (n = a || (a = {}))[n.VARIANT_1 = 0] = "VARIANT_1", n[n.VARIANT_2 = 1] = "VARIANT_2";
-let i = (0, r.B)({
+let r = (0, i.B)({
   kind: "user",
   id: "2024-03_referral_program_sender",
   label: "Referral Program Sender Experience",

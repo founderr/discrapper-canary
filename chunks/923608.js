@@ -1,5 +1,5 @@
-var i = n(735250),
-  s = n(470079),
+var s = n(735250),
+  i = n(470079),
   l = n(704215),
   a = n(605236),
   r = n(150340),
@@ -14,10 +14,10 @@ t.Z = e => {
     guild: t,
     markAsDismissed: n
   } = e;
-  s.useEffect(() => {
+  i.useEffect(() => {
     (0, a.kk)(l.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE)
   }, []);
-  let _ = s.useCallback(() => {
+  let _ = i.useCallback(() => {
       o.Z.open(t.id, d.pNK.ONBOARDING), c.default.track(d.rMx.UPSELL_CLICKED, {
         type: l.z[l.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE],
         action: "primary"
@@ -25,13 +25,13 @@ t.Z = e => {
         dismissAction: E.L.PRIMARY
       }), (0, r.G)(t.id, l.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE)
     }, [t.id]),
-    I = s.useCallback(() => {
+    I = i.useCallback(() => {
       c.default.track(d.rMx.UPSELL_CLICKED, {
         type: l.z[l.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE],
         action: "dismiss"
       }), n(E.L.UNKNOWN), (0, r.G)(t.id, l.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE)
     }, [t.id, n]);
-  return (0, i.jsx)(u.Z, {
+  return (0, s.jsx)(u.Z, {
     guild: t,
     onDismissed: I,
     onClick: _,

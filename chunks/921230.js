@@ -16,7 +16,7 @@ var l = n(735250),
 function h(e) {
   let {
     guildId: t
-  } = e, n = i.useMemo(() => (0, u.Mg)(t), [t]), h = (0, s.e7)([a.Z], () => a.Z.getGuild(t)), g = (0, s.e7)([o.Z], () => o.Z.isFocused()), p = t === (0, r.Z)(e => {
+  } = e, n = i.useMemo(() => (0, u.Mg)(t), [t]), h = (0, s.e7)([a.Z], () => a.Z.getGuild(t)), p = (0, s.e7)([o.Z], () => o.Z.isFocused()), g = t === (0, r.Z)(e => {
     let {
       guildId: t
     } = e;
@@ -25,8 +25,8 @@ function h(e) {
   return null == h ? null : (0, l.jsx)(d.Z, {
     guildNode: n,
     guild: h,
-    animatable: g,
-    selected: p,
+    animatable: p,
+    selected: g,
     draggable: !1,
     mediaState: m
   })

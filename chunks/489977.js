@@ -1,6 +1,6 @@
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
   l = n(570140),
   a = n(809206),
   r = n(317770),
@@ -26,11 +26,11 @@ let h = e => {
       I(t);
       return
     }
-    if (null != _) return (0, s.openModalLazy)(async () => {
+    if (null != _) return (0, i.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("4934"), n.e("49838")]).then(n.bind(n, 844594));
-      return n => (0, i.jsx)(e, {
+      return n => (0, s.jsx)(e, {
         user: _,
         imageSrc: t,
         uploadType: E.pC.AVATAR,
@@ -55,11 +55,11 @@ let h = e => {
       h(t);
       return
     }
-    if (null != r) return (0, s.openModalLazy)(async () => {
+    if (null != r) return (0, i.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("4934"), n.e("49838")]).then(n.bind(n, 844594));
-      return n => (0, i.jsx)(e, {
+      return n => (0, s.jsx)(e, {
         user: r,
         imageSrc: t,
         uploadType: E.pC.BANNER,

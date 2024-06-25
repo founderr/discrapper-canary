@@ -1,5 +1,5 @@
-var i = n(857192),
-  s = n(901077),
+var s = n(857192),
+  i = n(901077),
   l = n(915357),
   a = n(981631);
 t.Z = e => {
@@ -21,7 +21,7 @@ t.Z = e => {
     logger: u,
     postClose: d,
     onSendingToRPCClient: (e, t) => {
-      (i.default.isLoggingOverlayEvents || e.cmd !== a.Etm.OVERLAY && e.evt !== a.zMe.OVERLAY) && u.info("Socket Emit: ".concat(t), (0, s.Z)(e))
+      (s.default.isLoggingOverlayEvents || e.cmd !== a.Etm.OVERLAY && e.evt !== a.zMe.OVERLAY) && u.info("Socket Emit: ".concat(t), (0, i.Z)(e))
     }
   })
 }

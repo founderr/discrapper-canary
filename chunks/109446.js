@@ -13,8 +13,8 @@ var l = n(735250),
   c = n(359110),
   d = n(601070),
   h = n(91159),
-  g = n(488131),
-  p = n(496675),
+  p = n(488131),
+  g = n(496675),
   m = n(306680),
   C = n(594174),
   E = n(768581),
@@ -27,9 +27,9 @@ var l = n(735250),
 function S(e) {
   let {
     channel: t
-  } = e, s = (0, a.Wu)([d.Z, m.ZP, p.Z], () => {
+  } = e, s = (0, a.Wu)([d.Z, m.ZP, g.Z], () => {
     let e = d.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
-    return r()(d.Z.getActiveJoinedThreadsForParent(t.guild_id, t.id)).values().map(e => e.channel).concat(r().values(d.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id))).filter(t => !(t.id in e) && p.Z.can(_.Plq.VIEW_CHANNEL, t)).sort((e, t) => {
+    return r()(d.Z.getActiveJoinedThreadsForParent(t.guild_id, t.id)).values().map(e => e.channel).concat(r().values(d.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id))).filter(t => !(t.id in e) && g.Z.can(_.Plq.VIEW_CHANNEL, t)).sort((e, t) => {
       let n = m.ZP.lastMessageId(e.id),
         l = m.ZP.lastMessageId(t.id);
       return f.default.compare(n, l)
@@ -75,7 +75,7 @@ function x(e) {
   return (0, l.jsxs)(o.Clickable, {
     className: Z.row,
     onClick: e => {
-      (0, g.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, I.on.POPOUT)
+      (0, p.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, I.on.POPOUT)
     },
     children: [null == n ? (0, l.jsx)("img", {
       className: Z.avatar,

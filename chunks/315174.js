@@ -9,8 +9,8 @@ var l = n(735250),
   c = n(666188),
   d = n(695346),
   h = n(768581),
-  g = n(358555),
-  p = n(981631),
+  p = n(358555),
+  g = n(981631),
   m = n(647086),
   C = n(689938),
   E = n(92617);
@@ -24,7 +24,7 @@ function f(e) {
     animate: u
   } = e, {
     value: c
-  } = i.springs, g = d.QK.getSetting();
+  } = i.springs, p = d.QK.getSetting();
   return (0, l.jsx)(a.animated.div, {
     className: E.animatedContainer,
     style: {
@@ -36,7 +36,7 @@ function f(e) {
         [E.bannerImgFullWidth]: o.tq
       }),
       style: {
-        transform: c.to(e => g ? "translateY(".concat((1 - e) * 60, "px) scale(").concat(1 + (1 - e) * .2, ")") : "translateY(".concat((1 - e) * 90, "px)"))
+        transform: c.to(e => p ? "translateY(".concat((1 - e) * 60, "px) scale(").concat(1 + (1 - e) * .2, ")") : "translateY(".concat((1 - e) * 90, "px)"))
       },
       children: (0, l.jsx)("img", {
         className: r()(E.bannerImg, {
@@ -63,7 +63,7 @@ function _(e) {
     hasSubheader: s
   } = e, {
     value: o
-  } = n.springs, c = t.hasFeature(p.oNc.DISCOVERABLE), d = (0, l.jsx)("div", {
+  } = n.springs, c = t.hasFeature(g.oNc.DISCOVERABLE), d = (0, l.jsx)("div", {
     className: E.communityInfo,
     children: c && (0, l.jsx)(u.Tooltip, {
       text: C.Z.Messages.DISCOVERABLE_GUILD_HEADER_PUBLIC_INFO,
@@ -118,16 +118,16 @@ t.ZP = i.memo(function(e) {
     onContextMenu: Z,
     onMouseDown: S,
     disableBannerAnimation: x,
-    "aria-expanded": T,
-    "aria-controls": L,
+    "aria-expanded": L,
+    "aria-controls": T,
     guild: v,
     guildBanner: A,
     animationOverlayHeight: M,
     children: R,
     headerClassName: O,
     communityInfoVisible: P,
-    hasSubheader: j
-  } = e, b = v.hasFeature(p.oNc.ANIMATED_BANNER), D = (0, c.Z)(v), y = !D && v.hasCommunityInfoSubheader(), U = (0, h.xR)(A) && b && !x, [G, w] = i.useState(!1), k = i.useRef(), B = i.useRef(null), V = i.useRef(), H = d.QK.getSetting();
+    hasSubheader: b
+  } = e, j = v.hasFeature(g.oNc.ANIMATED_BANNER), y = (0, c.Z)(v), D = !y && v.hasCommunityInfoSubheader(), U = (0, h.xR)(A) && j && !x, [G, w] = i.useState(!1), k = i.useRef(), B = i.useRef(null), V = i.useRef(), H = d.QK.getSetting();
   i.useEffect(() => {
     if (U && n && !k.current && H) return w(!0), V.current = setTimeout(() => {
       w(!1)
@@ -150,10 +150,10 @@ t.ZP = i.memo(function(e) {
       className: r()(a, {
         [E.container]: !0,
         [E.clickable]: null != N,
-        [E.selected]: null != N && T,
+        [E.selected]: null != N && L,
         [E.hasBanner]: F(),
         [E.bannerVisible]: n,
-        [E.communityInfoVisible]: !D && P || j && y
+        [E.communityInfoVisible]: !y && P || b && D
       }),
       onMouseDown: S,
       onContextMenu: Z,
@@ -164,7 +164,7 @@ t.ZP = i.memo(function(e) {
         }),
         children: [(0, l.jsxs)("div", {
           className: r()(E.headerContent, E.primaryInfo),
-          children: [(0, l.jsx)(g.Z, {
+          children: [(0, l.jsx)(p.Z, {
             guild: v,
             isBannerVisible: n
           }), v.id === m._ && (0, l.jsx)(I, {}), (0, l.jsx)(u.Heading, {
@@ -174,8 +174,8 @@ t.ZP = i.memo(function(e) {
             children: v.toString()
           }), null != N && (0, l.jsx)(u.Clickable, {
             className: E.headerButton,
-            "aria-controls": L,
-            "aria-expanded": T,
+            "aria-controls": T,
+            "aria-expanded": L,
             focusProps: {
               ringTarget: B,
               offset: 4
@@ -189,11 +189,11 @@ t.ZP = i.memo(function(e) {
             className: E.headerChildren,
             children: R
           })]
-        }), y && (0, l.jsx)(_, {
+        }), D && (0, l.jsx)(_, {
           guild: v,
           controller: s,
           hasBanner: null != A,
-          hasSubheader: null != j && j
+          hasSubheader: null != b && b
         })]
       }), null != A ? (0, l.jsx)(f, {
         guild: v,

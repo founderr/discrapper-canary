@@ -17,17 +17,17 @@ var i = n(613828),
   _ = n(522474),
   I = n(523746),
   T = n(592125),
-  N = n(594174),
-  m = n(602623),
+  m = n(594174),
+  N = n(602623),
   h = n(630388),
   C = n(823379),
   S = n(624138),
   A = n(317381),
-  p = n(638880),
-  g = n(146936),
+  g = n(638880),
+  p = n(146936),
   f = n(147865),
-  O = n(778569),
-  R = n(513202),
+  R = n(778569),
+  O = n(513202),
   M = n(403404),
   x = n(701488),
   v = n(981631),
@@ -42,28 +42,28 @@ function D(e) {
     message: j
   } = e, {
     analyticsLocations: U
-  } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK), y = (0, c.O)(), b = j.channel_id, B = (0, l.e7)([T.Z], () => T.Z.getChannel(b), [b]), k = null == B ? void 0 : B.guild_id, G = null != B && (B.isGuildVoice() || B.isPrivate()), F = (0, l.e7)([A.ZP], () => A.ZP.getSelfEmbeddedActivityForChannel(b)), V = (null == F ? void 0 : F.applicationId) === D, [w, H] = (0, E.Z)([D, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : ""]), Y = (0, f.Z)(null !== (a = null == w ? void 0 : w.maxParticipants) && void 0 !== a ? a : 0), [K] = (0, l.Wu)([A.ZP], () => G ? A.ZP.getEmbeddedActivitiesForChannel(b).filter(e => e.applicationId === D) : [], [D, b, G]), W = Array.from(null !== (S = null == K ? void 0 : K.userIds) && void 0 !== S ? S : []), z = (0, l.Wu)([N.default], () => W.map(e => N.default.getUser(e)).filter(C.lm), [W]), Q = (0, O.Z)({
+  } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK), b = (0, c.O)(), y = j.channel_id, B = (0, l.e7)([T.Z], () => T.Z.getChannel(y), [y]), k = null == B ? void 0 : B.guild_id, G = null != B && (B.isGuildVoice() || B.isPrivate()), F = (0, l.e7)([A.ZP], () => A.ZP.getSelfEmbeddedActivityForChannel(y)), V = (null == F ? void 0 : F.applicationId) === D, [w, H] = (0, E.Z)([D, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : ""]), Y = (0, f.Z)(null !== (a = null == w ? void 0 : w.maxParticipants) && void 0 !== a ? a : 0), [W] = (0, l.Wu)([A.ZP], () => G ? A.ZP.getEmbeddedActivitiesForChannel(y).filter(e => e.applicationId === D) : [], [D, y, G]), z = Array.from(null !== (S = null == W ? void 0 : W.userIds) && void 0 !== S ? S : []), K = (0, l.Wu)([m.default], () => z.map(e => m.default.getUser(e)).filter(C.lm), [z]), Q = (0, R.Z)({
     applicationId: D,
     size: P,
     names: ["embedded_cover"]
-  }), X = _.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT), q = z.length > 0 ? L.Z.Messages.JOIN : L.Z.Messages.START, J = async () => {
+  }), X = _.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT), q = K.length > 0 ? L.Z.Messages.JOIN : L.Z.Messages.START, J = async () => {
     if (G) {
-      if (null != K && z.length > 0) await (0, p.Z)({
-        applicationId: K.applicationId,
+      if (null != W && K.length > 0) await (0, g.Z)({
+        applicationId: W.applicationId,
         currentEmbeddedApplication: H,
-        activityChannelId: b,
-        embeddedActivitiesManager: R.Z,
-        locationObject: y.location,
+        activityChannelId: y,
+        embeddedActivitiesManager: O.Z,
+        locationObject: b.location,
         analyticsLocations: U
       });
       else {
-        let e = B.isPrivate() && !I.Z.isCallActive(b),
-          t = () => (0, g.Z)({
+        let e = B.isPrivate() && !I.Z.isCallActive(y),
+          t = () => (0, p.Z)({
             targetApplicationId: D,
             currentEmbeddedApplication: H,
-            channelId: b,
+            channelId: y,
             guildId: k,
-            embeddedActivitiesManager: R.Z,
+            embeddedActivitiesManager: O.Z,
             analyticsLocations: U
           });
         e ? o.Z.show({
@@ -76,7 +76,7 @@ function D(e) {
       }
     } else(0, M.Z)({
       guildId: k,
-      locationObject: y.location,
+      locationObject: b.location,
       openInPopout: X,
       initialSelectedApplicationId: D,
       initialSlide: x.ag.SELECT_CHANNEL,
@@ -113,11 +113,11 @@ function D(e) {
           })
         }), (0, s.jsxs)("div", {
           className: Z.cta,
-          children: [z.length > 0 ? (0, s.jsx)("div", {
+          children: [K.length > 0 ? (0, s.jsx)("div", {
             className: Z.avatars,
-            children: (0, s.jsx)(m.Z, {
+            children: (0, s.jsx)(N.Z, {
               guildId: k,
-              users: z,
+              users: K,
               max: 4
             })
           }) : (0, s.jsxs)("div", {

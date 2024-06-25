@@ -1,9 +1,9 @@
 n.d(t, {
   O: function() {
-    return s
+    return i
   }
 });
-let i = (0, n(818083).B)({
+let s = (0, n(818083).B)({
   kind: "user",
   id: "2023-03_mute_block_aa",
   label: "Safety Consumer Education Block/Mute - A/A",
@@ -28,8 +28,8 @@ let i = (0, n(818083).B)({
   }]
 });
 
-function s() {
-  return i.useExperiment({
+function i() {
+  return s.useExperiment({
     location: "34e1bc_1"
   }, {
     autoTrackExposure: !0

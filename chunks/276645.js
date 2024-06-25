@@ -3,9 +3,9 @@ n.d(t, {
     return o
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
   l = n(970731),
   a = n(689938),
   r = n(682894);
@@ -15,9 +15,9 @@ function o(e) {
     guildId: t,
     markAsDismissed: o
   } = e;
-  return (0, i.jsx)(l.ZP, {
+  return (0, s.jsx)(l.ZP, {
     className: r.container,
-    asset: (0, i.jsx)("img", {
+    asset: (0, s.jsx)("img", {
       className: r.image,
       src: n(297806),
       alt: ""
@@ -27,15 +27,15 @@ function o(e) {
     content: a.Z.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_COACHMARK_DESCRIPTION,
     buttonCTA: a.Z.Messages.CHECK_IT_OUT,
     buttonProps: {
-      color: s.ButtonColors.WHITE,
+      color: i.ButtonColors.WHITE,
       innerClassName: r.primaryButton
     },
     onClick: () => {
-      (0, s.openModalLazy)(async () => {
+      (0, i.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("5863"), n.e("53497")]).then(n.bind(n, 751212));
-        return n => (0, i.jsx)(e, {
+        return n => (0, s.jsx)(e, {
           ...n,
           guildId: t
         })
@@ -43,8 +43,8 @@ function o(e) {
     },
     secondaryButtonCTA: a.Z.Messages.MAYBE_LATER,
     secondaryButtonProps: {
-      look: s.ButtonLooks.LINK,
-      color: s.ButtonColors.WHITE
+      look: i.ButtonLooks.LINK,
+      color: i.ButtonColors.WHITE
     },
     markAsDismissed: o
   })

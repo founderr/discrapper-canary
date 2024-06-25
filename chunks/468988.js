@@ -1,21 +1,21 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
-    return a
+    return r
   }
 });
-var i = t(689938);
-let l = ["a", "b", "c", "d"],
-  s = e => e;
+var s = n(689938);
+let i = ["a", "b", "c", "d"],
+  l = e => e;
 
-function r(e, n) {
-  let t = {},
-    i = Math.min(e.length, l.length);
-  for (let s = 0; s < i; ++s) t[l[s]] = (t, i) => n(e[s], i);
-  return t
+function a(e, t) {
+  let n = {},
+    s = Math.min(e.length, i.length);
+  for (let l = 0; l < s; ++l) n[i[l]] = (n, s) => t(e[l], s);
+  return n
 }
-class a {
+class r {
   asString() {
-    return this.transformed(s)
+    return this.transformed(l)
   }
   isEmpty() {
     return 0 === this.items.length
@@ -27,20 +27,20 @@ class a {
       case 1:
         return e(this.items[0], "");
       case 2:
-        return i.Z.Messages.GENERIC_FORMATTED_LIST_TWO.format(r(this.items, e));
+        return s.Z.Messages.GENERIC_FORMATTED_LIST_TWO.format(a(this.items, e));
       case 3:
-        return i.Z.Messages.GENERIC_FORMATTED_LIST_THREE.format(r(this.items, e));
+        return s.Z.Messages.GENERIC_FORMATTED_LIST_THREE.format(a(this.items, e));
       default:
-        return i.Z.Messages.GENERIC_FORMATTED_LIST_FOUR.format(r(this.items, e))
+        return s.Z.Messages.GENERIC_FORMATTED_LIST_FOUR.format(a(this.items, e))
     }
   }
   constructor(e) {
-    var n, t, i;
-    n = this, i = void 0, (t = "items") in n ? Object.defineProperty(n, t, {
-      value: i,
+    var t, n, s;
+    t = this, s = void 0, (n = "items") in t ? Object.defineProperty(t, n, {
+      value: s,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : n[t] = i, this.items = e
+    }) : t[n] = s, this.items = e
   }
 }

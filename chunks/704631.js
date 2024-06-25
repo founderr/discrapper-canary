@@ -3,9 +3,9 @@ n.d(t, {
     return u
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
   l = n(82950),
   a = n(981631),
   r = n(921944),
@@ -17,15 +17,15 @@ function u(e) {
     guild: t,
     markAsDismissed: u
   } = e;
-  return (0, i.jsx)(l.Z, {
+  return (0, s.jsx)(l.Z, {
     guild: t,
     onDismissed: () => u(r.L.UNKNOWN),
     onClick: function() {
-      (0, s.openModalLazy)(async () => {
+      (0, i.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.resolve().then(n.bind(n, 650233));
-        return t => (0, i.jsx)(e, {
+        return t => (0, s.jsx)(e, {
           ...t
         })
       })

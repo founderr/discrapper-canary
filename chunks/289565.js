@@ -23,8 +23,8 @@ function d(e) {
     popoutProps: _,
     hideTimestamp: I = !1,
     withFooter: T = !1,
-    ...N
-  } = e, m = (0, a.ZP)(t);
+    ...m
+  } = e, N = (0, a.ZP)(t);
   return (0, s.jsx)("div", {
     className: l()({
       [u.withFooter]: T
@@ -32,7 +32,7 @@ function d(e) {
       [u.compact]: E
     }, d),
     children: (0, s.jsx)(r.Z, {
-      ...N,
+      ...m,
       className: l()(u.messageContainer, {
         [u.compact]: E
       }),
@@ -46,7 +46,7 @@ function d(e) {
       childrenHeader: (0, s.jsx)(c.ZP, {
         message: t,
         channel: n,
-        author: m,
+        author: N,
         guildId: null == n ? void 0 : n.guild_id,
         compact: E,
         hideTimestamp: I,

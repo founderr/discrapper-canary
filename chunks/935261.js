@@ -3,10 +3,10 @@ n.d(t, {
     return m
   }
 });
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(120356),
-  l = n.n(s),
+var i = n(120356),
+  l = n.n(i),
   a = n(442837),
   r = n(481060),
   o = n(797258),
@@ -21,9 +21,9 @@ function I(e) {
   let {
     platform: t
   } = e;
-  return t === E.YE.XBOX ? (0, i.jsx)(u.Z, {
+  return t === E.YE.XBOX ? (0, s.jsx)(u.Z, {
     className: _.icon
-  }) : t === E.YE.PLAYSTATION ? (0, i.jsx)(c.Z, {
+  }) : t === E.YE.PLAYSTATION ? (0, s.jsx)(c.Z, {
     className: _.icon
   }) : null
 }
@@ -32,21 +32,21 @@ function m(e) {
   let {
     voiceState: t,
     awaitingRemoteSessionInfo: n
-  } = e, s = null != n ? (0, d.y)(n.type) : null, c = (0, a.e7)([o.Z], () => {
+  } = e, i = null != n ? (0, d.y)(n.type) : null, c = (0, a.e7)([o.Z], () => {
     var e, n;
     return null === (e = o.Z.getSessionById(null !== (n = null == t ? void 0 : t.sessionId) && void 0 !== n ? n : "")) || void 0 === e ? void 0 : e.clientInfo.os
-  }), u = null != s ? s : c;
+  }), u = null != i ? i : c;
   if (null == u || !E.al.has(u)) return null;
   let m = null != n,
-    g = m ? u === E.YE.XBOX ? h.Z.Messages.XBOX_TRANSFERRING_ELLIPSIS : h.Z.Messages.PLAYSTATION_TRANSFERRING_ELLIPSIS : u === E.YE.XBOX ? h.Z.Messages.XBOX_REMOTE_CONNECTED.format() : h.Z.Messages.PLAYSTATION_REMOTE_CONNECTED.format();
-  return (0, i.jsxs)("div", {
+    T = m ? u === E.YE.XBOX ? h.Z.Messages.XBOX_TRANSFERRING_ELLIPSIS : h.Z.Messages.PLAYSTATION_TRANSFERRING_ELLIPSIS : u === E.YE.XBOX ? h.Z.Messages.XBOX_REMOTE_CONNECTED.format() : h.Z.Messages.PLAYSTATION_REMOTE_CONNECTED.format();
+  return (0, s.jsxs)("div", {
     className: l()(_.root, m ? _.connecting : _.connected),
-    children: [(0, i.jsx)(I, {
+    children: [(0, s.jsx)(I, {
       platform: u
-    }), (0, i.jsx)(r.Text, {
+    }), (0, s.jsx)(r.Text, {
       color: m ? "header-primary" : "always-white",
       variant: "text-xs/medium",
-      children: g
+      children: T
     })]
   })
 }

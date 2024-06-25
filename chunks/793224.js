@@ -14,8 +14,8 @@ var i = n(442837),
   c = n(770471),
   d = n(757454),
   h = n(286328),
-  g = n(493355),
-  p = n(134598),
+  p = n(493355),
+  g = n(134598),
   m = n(243778),
   C = n(594190),
   E = n(569545),
@@ -26,8 +26,8 @@ var i = n(442837),
   Z = n(885110),
   S = n(449224),
   x = n(436088),
-  T = n(976401),
-  L = n(981631),
+  L = n(976401),
+  T = n(981631),
   v = n(921944),
   A = n(689938);
 
@@ -49,17 +49,17 @@ function M() {
   if (c.Z.trackExposure({
       location: "broadcast_button_rtc_panel"
     }), !M) return null;
-  let j = [];
-  R && j.push(s.z.BROADCASTING_BROADCASTER_TOOLTIP);
-  let b = () => {
-      o.ZP.trackWithMetadata(L.rMx.BROADCAST_START_BUTTON_HOVERED, {
+  let b = [];
+  R && b.push(s.z.BROADCASTING_BROADCASTER_TOOLTIP);
+  let j = () => {
+      o.ZP.trackWithMetadata(T.rMx.BROADCAST_START_BUTTON_HOVERED, {
         game_id: null == n ? void 0 : n.id
       })
     },
-    D = () => {
+    y = () => {
       if (R) {
         let l = P.find(e => e.ownerId === t);
-        null == l ? (0, p.X)(A.Z.Messages.START_BROADCASTING, A.Z.Messages.START_BROADCASTING_CTA, () => {
+        null == l ? (0, g.X)(A.Z.Messages.START_BROADCASTING, A.Z.Messages.START_BROADCASTING_CTA, () => {
           (0, a.tE)({
             pid: null == n ? void 0 : n.pid,
             channelId: e
@@ -67,13 +67,13 @@ function M() {
         }) : (0, u.v$)((0, E.V9)(l), null == n ? void 0 : n.pid)
       } else(0, u.b_)()
     },
-    y = e => (0, l.jsx)(T.Z, {
+    D = e => (0, l.jsx)(L.Z, {
       tooltipText: R ? A.Z.Messages.START_BROADCASTING : A.Z.Messages.STOP_BROADCASTING,
       onClick: () => {
-        D(), null == e || e(v.L.UNKNOWN)
+        y(), null == e || e(v.L.UNKNOWN)
       },
-      onMouseEnter: b,
-      icon: R ? (0, r.makeIconCompat)(x.Z) : () => (0, l.jsx)(g.Z, {
+      onMouseEnter: j,
+      icon: R ? (0, r.makeIconCompat)(x.Z) : () => (0, l.jsx)(p.Z, {
         width: 20,
         height: 20
       })
@@ -82,7 +82,7 @@ function M() {
       markAsDismissed: e
     });
   return (0, l.jsx)(m.Z, {
-    contentTypes: j,
+    contentTypes: b,
     bypassAutoDismiss: !0,
     children: e => {
       let {
@@ -94,8 +94,8 @@ function M() {
         align: "center",
         renderPopout: () => U(n),
         shouldShow: !0,
-        children: () => y(n)
-      }) : y()
+        children: () => D(n)
+      }) : D()
     }
   })
 }

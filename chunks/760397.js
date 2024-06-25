@@ -1,82 +1,82 @@
-t(411104);
-var n, r, i, a, l, o, c, u, I, T = t(735250),
-  d = t(470079);
+n(411104);
+var s, i, l, a, r, o, c, u, d, E = n(735250),
+  h = n(470079);
 
-function _(e, s, t) {
-  return s in e ? Object.defineProperty(e, s, {
-    value: t,
+function _(e, t, n) {
+  return t in e ? Object.defineProperty(e, t, {
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[s] = t, e
-}(o = n || (n = {})).THING = "Thing", o.PERSON = "Person", o.PRODUCT = "Product", o.OFFER = "Offer", o.AGGREGATE_OFFER = "AggregateOffer", o.RATING = "Rating", o.AGGREGATE_RATING = "AggregateRating", o.ORGANIZATION = "Organization", o.ITEM_PAGE = "ItemPage", o.UNIT_PRICE_SPECIFICATION = "UnitPriceSpecification", o.QUANTITATIVE_VALUE = "QuantitativeValue";
+  }) : e[t] = n, e
+}(o = s || (s = {})).THING = "Thing", o.PERSON = "Person", o.PRODUCT = "Product", o.OFFER = "Offer", o.AGGREGATE_OFFER = "AggregateOffer", o.RATING = "Rating", o.AGGREGATE_RATING = "AggregateRating", o.ORGANIZATION = "Organization", o.ITEM_PAGE = "ItemPage", o.UNIT_PRICE_SPECIFICATION = "UnitPriceSpecification", o.QUANTITATIVE_VALUE = "QuantitativeValue";
 
-function E(e, s) {
+function I(e, t) {
   return {
     "@type": e,
-    ... function e(s) {
-      return Object.keys(s).forEach(t => {
-        null == s[t] ? delete s[t] : "object" == typeof s[t] && (s[t] = e(s[t]))
-      }), s
+    ... function e(t) {
+      return Object.keys(t).forEach(n => {
+        null == t[n] ? delete t[n] : "object" == typeof t[n] && (t[n] = e(t[n]))
+      }), t
     }(function(e) {
-      let s;
+      let t;
       try {
-        s = JSON.parse(JSON.stringify(e))
+        t = JSON.parse(JSON.stringify(e))
       } catch (e) {
         throw Error("[JSONLD] Invalid object format")
       }
-      return s
-    }(s))
+      return t
+    }(t))
   }
 }
 
-function S(e) {
-  return E("Thing", e)
+function m(e) {
+  return I("Thing", e)
 }
 
-function O(e) {
-  return E("Product", e)
+function T(e) {
+  return I("Product", e)
 }
-O.Image = function(e) {
+T.Image = function(e) {
   if (null == e) return null;
-  let s = e.filter(e => null != e && "" !== e);
-  return 0 === s.length ? null : 1 === s.length ? s[0] : s
+  let t = e.filter(e => null != e && "" !== e);
+  return 0 === t.length ? null : 1 === t.length ? t[0] : t
 };
 
-function A(e) {
-  return E("Offer", e)
+function g(e) {
+  return I("Offer", e)
 }
 
-function N(e) {
-  return E("QuantitativeValue", e)
-}(c = r || (r = {})).DAMAGED = "http://schema.org/DamagedCondition", c.NEW = "http://schema.org/NewCondition", c.REFURBISHED = "http://schema.org/RefurbishedCondition", c.USED = "http://schema.org/UsedCondition", (u = i || (i = {})).DISCONTINUED = "http://schema.org/Discontinued", u.IN_STOCK = "http://schema.org/InStock", u.IN_STORE_ONLY = "http://schema.org/InStoreOnly", u.LIMITED_AVAILABILITY = "http://schema.org/LimitedAvailability", u.ONLINE_ONLY = "http://schema.org/OnlineOnly", u.OUT_OF_STOCK = "http://schema.org/OutOfStock", u.PREORDER = "http://schema.org/PreOrder", u.PRESALE = "http://schema.org/PreSale", u.SOLD_OUT = "http://schema.org/SoldOut", A.ItemConditions = r, A.ItemAvailability = i, (I = a || (a = {})).YEARLY = "ANN", I.MONTHLY = "MON", N.UnitCodes = a;
-class R extends(l = d.Component) {
+function p(e) {
+  return I("QuantitativeValue", e)
+}(c = i || (i = {})).DAMAGED = "http://schema.org/DamagedCondition", c.NEW = "http://schema.org/NewCondition", c.REFURBISHED = "http://schema.org/RefurbishedCondition", c.USED = "http://schema.org/UsedCondition", (u = l || (l = {})).DISCONTINUED = "http://schema.org/Discontinued", u.IN_STOCK = "http://schema.org/InStock", u.IN_STORE_ONLY = "http://schema.org/InStoreOnly", u.LIMITED_AVAILABILITY = "http://schema.org/LimitedAvailability", u.ONLINE_ONLY = "http://schema.org/OnlineOnly", u.OUT_OF_STOCK = "http://schema.org/OutOfStock", u.PREORDER = "http://schema.org/PreOrder", u.PRESALE = "http://schema.org/PreSale", u.SOLD_OUT = "http://schema.org/SoldOut", g.ItemConditions = i, g.ItemAvailability = l, (d = a || (a = {})).YEARLY = "ANN", d.MONTHLY = "MON", p.UnitCodes = a;
+class N extends(r = h.Component) {
   render() {
     let {
       debug: e,
-      data: s
-    } = this.props, t = JSON.stringify({
+      data: t
+    } = this.props, n = JSON.stringify({
       "@context": "http://schema.org",
-      ...s
+      ...t
     });
-    return (0, T.jsx)("script", {
+    return (0, E.jsx)("script", {
       type: "application/ld+json",
-      children: t
+      children: n
     })
   }
 }
-_(R, "Thing", S), _(R, "Brand", S), _(R, "Person", function(e) {
-  return E("Person", e)
-}), _(R, "Organization", function(e) {
-  return E("Organization", e)
-}), _(R, "ItemPage", function(e) {
-  return E("ItemPage", e)
-}), _(R, "Product", O), _(R, "Offer", A), _(R, "Rating", function(e) {
-  return E("Rating", e)
-}), _(R, "AggregateRating", function(e) {
-  return E("AggregateRating", e)
-}), _(R, "AggregateOffer", function(e) {
-  return E("AggregateOffer", e)
-}), _(R, "QuantitativeValue", N), _(R, "UnitPriceSpecification", function(e) {
-  return E("UnitPriceSpecification", e)
-}), s.Z = R
+_(N, "Thing", m), _(N, "Brand", m), _(N, "Person", function(e) {
+  return I("Person", e)
+}), _(N, "Organization", function(e) {
+  return I("Organization", e)
+}), _(N, "ItemPage", function(e) {
+  return I("ItemPage", e)
+}), _(N, "Product", T), _(N, "Offer", g), _(N, "Rating", function(e) {
+  return I("Rating", e)
+}), _(N, "AggregateRating", function(e) {
+  return I("AggregateRating", e)
+}), _(N, "AggregateOffer", function(e) {
+  return I("AggregateOffer", e)
+}), _(N, "QuantitativeValue", p), _(N, "UnitPriceSpecification", function(e) {
+  return I("UnitPriceSpecification", e)
+}), t.Z = N

@@ -20,8 +20,8 @@ function u(e) {
     disabled: c,
     icon: d,
     iconForeground: h,
-    innerClassName: g,
-    tooltipClassName: p,
+    innerClassName: p,
+    tooltipClassName: g,
     onMouseEnter: m,
     onMouseLeave: C,
     "aria-label": E,
@@ -36,7 +36,7 @@ function u(e) {
     color: null != h ? h : "currentColor"
   }) : d;
   return (0, l.jsx)(r.Tooltip, {
-    tooltipClassName: p,
+    tooltipClassName: g,
     text: t,
     "aria-label": E,
     color: I,
@@ -46,14 +46,14 @@ function u(e) {
         onClick: t,
         onMouseEnter: d,
         onMouseLeave: h,
-        ...p
+        ...g
       } = e;
       return (0, l.jsxs)(r.Button, {
-        ...p,
+        ...g,
         look: r.Button.Looks.BLANK,
         size: r.Button.Sizes.NONE,
         disabled: c,
-        innerClassName: g,
+        innerClassName: p,
         wrapperClassName: o.button,
         className: s()(o.button, {
           [o.disabled]: c,

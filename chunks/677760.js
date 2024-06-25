@@ -7,21 +7,21 @@ var s, r, i = n(735250),
   l = n(470079),
   a = n(920906),
   o = n(442837),
-  c = n(481060),
-  u = n(447543),
+  u = n(481060),
+  c = n(447543),
   d = n(587444),
   E = n(393238),
   _ = n(388905),
-  I = n(108427),
-  h = n(314897),
+  h = n(108427),
+  I = n(314897),
   N = n(701190),
   p = n(626135),
   g = n(768581),
   m = n(823379),
   T = n(264229),
-  Z = n(230224),
+  f = n(230224),
   A = n(617730),
-  f = n(258356),
+  Z = n(258356),
   x = n(981631),
   O = n(689938),
   S = n(125739);
@@ -29,10 +29,10 @@ var s, r, i = n(735250),
 function v() {
   return (0, i.jsx)("div", {
     className: S.centerFlex,
-    children: (0, i.jsx)(c.Spinner, {})
+    children: (0, i.jsx)(u.Spinner, {})
   })
 }(r = s || (s = {}))[r.LOADING = 0] = "LOADING", r[r.DETAILS = 1] = "DETAILS", r[r.ERROR = 2] = "ERROR";
-let D = e => {
+let P = e => {
   let t = (null == e ? void 0 : e.state) == null && (null == e ? void 0 : e.channel) == null;
   if (null == e || null == e.state || t) return 0;
   let n = e.state;
@@ -55,7 +55,7 @@ let D = e => {
   }
 };
 
-function P(e) {
+function D(e) {
   let {
     invite: t,
     onAcceptInvite: n
@@ -80,27 +80,27 @@ function C(e) {
     innerStyle: r,
     ...o
   } = e, {
-    invite: c
-  } = o, [u, d] = l.useState(D(c)), {
+    invite: u
+  } = o, [c, d] = l.useState(P(u)), {
     ref: _,
-    height: I
-  } = (0, E.Z)(), h = (0, a.useSpring)({
-    height: null != I && 0 !== I ? "".concat(I, "px") : "".concat(s, "px"),
+    height: h
+  } = (0, E.Z)(), I = (0, a.useSpring)({
+    height: null != h && 0 !== h ? "".concat(h, "px") : "".concat(s, "px"),
     config: a.config.stiff
   });
   return l.useEffect(() => {
-    let e = D(c);
-    e !== u && d(e)
-  }, [c, u]), (0, i.jsxs)(a.animated.div, {
+    let e = P(u);
+    e !== c && d(e)
+  }, [u, c]), (0, i.jsxs)(a.animated.div, {
     className: S.inviteCard,
-    style: h,
+    style: I,
     children: [(0, i.jsx)(a.animated.div, {
       className: S.inviteChildContainer,
-      style: h,
+      style: I,
       children: (0, i.jsx)("section", {
         ref: _,
-        className: null == r ? void 0 : r(u),
-        children: t(u)
+        className: null == r ? void 0 : r(c),
+        children: t(c)
       })
     }), n]
   })
@@ -110,10 +110,10 @@ function R(e) {
   let {
     invite: t
   } = e;
-  if (null == t || !(0, Z.JI)(t)) return null;
+  if (null == t || !(0, f.JI)(t)) return null;
   let n = e => {
     if (null == t) return null;
-    if (1 === e) return (0, i.jsx)(f.X, {
+    if (1 === e) return (0, i.jsx)(Z.X, {
       invite: t
     });
     return null
@@ -126,7 +126,7 @@ function R(e) {
   })
 }
 
-function M(e) {
+function L(e) {
   let {
     invite: t
   } = e, n = n => {
@@ -138,7 +138,7 @@ function M(e) {
           invite: t
         });
       case 2:
-        return (0, i.jsx)(P, {
+        return (0, i.jsx)(D, {
           ...e,
           invite: t
         });
@@ -158,7 +158,7 @@ function M(e) {
   })
 }
 
-function L(e) {
+function M(e) {
   let {
     invite: t,
     onAcceptInvite: n
@@ -177,7 +177,7 @@ function L(e) {
     className: S.splashBackground,
     style: r,
     contentClassName: S.centerAuthBoxContent,
-    children: [(0, i.jsx)(M, {
+    children: [(0, i.jsx)(L, {
       ...e,
       onAcceptInvite: n
     }), (0, i.jsx)(R, {
@@ -192,7 +192,7 @@ function j(e) {
     transitionTo: n
   } = e, s = (0, o.e7)([N.Z], () => N.Z.getInvite(t));
   return l.useEffect(() => {
-    (0, I.e)("invite_mobile")
+    (0, h.e)("invite_mobile")
   }, []), l.useEffect(() => {
     null != s && s.state === x.r2o.RESOLVED && p.default.track(x.rMx.INVITE_VIEWED, {
       invite_code: t,
@@ -200,7 +200,7 @@ function j(e) {
     }, {
       flush: !0
     })
-  }, [s, t]), (0, i.jsx)(L, {
+  }, [s, t]), (0, i.jsx)(M, {
     invite: s,
     onAcceptInvite: e => {
       ! function(e, t, n) {
@@ -212,10 +212,10 @@ function j(e) {
           inviter_id: null == n ? void 0 : null === (i = n.inviter) || void 0 === i ? void 0 : i.id
         });
         let l = null != n && n.state !== x.r2o.EXPIRED && n.state !== x.r2o.BANNED ? t : void 0,
-          a = h.default.getFingerprint(),
-          o = null != a ? a : h.default.getId(),
-          c = null != n && (null == n ? void 0 : n.type) != null ? Number(null == n ? void 0 : n.type) : void 0;
-        u.Z.openApp(l, void 0, o, void 0, c)
+          a = I.default.getFingerprint(),
+          o = null != a ? a : I.default.getId(),
+          u = null != n && (null == n ? void 0 : n.type) != null ? Number(null == n ? void 0 : n.type) : void 0;
+        c.Z.openApp(l, void 0, o, void 0, u)
       }(e, t, s)
     },
     transitionTo: n

@@ -1,7 +1,7 @@
 n(47120);
-var i = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(481060),
+var i = n(481060),
   l = n(570140),
   a = n(317770),
   r = n(314897),
@@ -27,19 +27,19 @@ class h extends a.Z {
       if (null == _) return;
       let I = _.channelId;
       if (null == I) {
-        (0, s.hasModalOpen)(E) && (0, s.closeModal)(E);
+        (0, i.hasModalOpen)(E) && (0, i.closeModal)(E);
         return
       }
       let m = o.Z.getChannel(I);
       if (!(null == m ? void 0 : m.isGuildStageVoice())) return;
-      let g = (0, u.gf)(_) === u.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-      if (null != m && g) {
-        if ((0, s.hasModalOpen)(E)) return;
-        (0, s.openModalLazy)(async () => {
+      let T = (0, u.gf)(_) === u.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+      if (null != m && T) {
+        if ((0, i.hasModalOpen)(E)) return;
+        (0, i.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([n.e("99387"), n.e("13878")]).then(n.bind(n, 113140));
-          return t => (0, i.jsx)(e, {
+          return t => (0, s.jsx)(e, {
             ...t,
             channel: m
           })

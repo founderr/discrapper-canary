@@ -1,5 +1,5 @@
 n(653041);
-var i, s = n(442837),
+var s, i = n(442837),
   l = n(570140),
   a = n(765305);
 
@@ -14,7 +14,7 @@ function r(e, t, n) {
 let o = {
   hiddenEventsAndStages: []
 };
-class c extends(i = s.ZP.PersistedStore) {
+class c extends(s = i.ZP.PersistedStore) {
   initialize(e) {
     null != e && null != e.hiddenEventsAndStages && (o = e)
   }

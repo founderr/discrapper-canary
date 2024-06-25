@@ -1,6 +1,6 @@
 n(47120);
-var i = n(243814),
-  s = n(120960),
+var s = n(243814),
+  i = n(120960),
   l = n(996106),
   a = n(452426),
   r = n(186901),
@@ -9,7 +9,7 @@ var i = n(243814),
 t.Z = {
   [o.Etm.SET_CERTIFIED_DEVICES]: {
     scope: {
-      [r.Gp.ANY]: [i.x.RPC, r.lH]
+      [r.Gp.ANY]: [s.x.RPC, r.lH]
     },
     validation: e => (0, a.Z)(e).required().keys({
       devices: e.array().items((0, a.Z)(e).keys({
@@ -40,7 +40,7 @@ t.Z = {
       if (null == t.application.id) throw new l.Z({
         errorCode: o.lTL.INVALID_COMMAND
       }, "No application.");
-      (0, s.N)(t.application.id, n.map(e => ({
+      (0, i.N)(t.application.id, n.map(e => ({
         type: e.type,
         id: e.id,
         vendor: e.vendor,

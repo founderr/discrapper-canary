@@ -3,11 +3,11 @@ n.d(t, {
     return a
   }
 });
-var i = n(594174),
-  s = n(709054);
+var s = n(594174),
+  i = n(709054);
 let l = new Date("06/16/2020");
 
 function a() {
-  let e = i.default.getCurrentUser();
-  return null != e && s.default.extractTimestamp(e.id) > l.getTime() && !e.isClaimed() && null == e.nsfwAllowed
+  let e = s.default.getCurrentUser();
+  return null != e && i.default.extractTimestamp(e.id) > l.getTime() && !e.isClaimed() && null == e.nsfwAllowed
 }

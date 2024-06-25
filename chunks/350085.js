@@ -3,8 +3,8 @@ n.d(t, {
     return u
   }
 });
-var i = n(392711),
-  s = n.n(i),
+var s = n(392711),
+  i = n.n(s),
   l = n(283595),
   a = n(808506),
   r = n(996106),
@@ -25,7 +25,7 @@ let u = {
       }, "Invalid pid");
       return e => {
         let {
-          prevState: i,
+          prevState: s,
           dispatch: r
         } = e, o = a.Z.enabled, c = !0, u = n.application.id;
         if (null != u) {
@@ -36,7 +36,7 @@ let u = {
           enabled: o,
           locked: c
         };
-        return !s().isEqual(d, i) && r(d), d
+        return !i().isEqual(d, s) && r(d), d
       }
     }
   }

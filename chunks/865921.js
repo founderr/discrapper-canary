@@ -1,51 +1,51 @@
-n.d(t, {
+t.d(n, {
   v: function() {
-    return h
+    return p
   }
-}), n(47120);
-var r = n(735250),
-  a = n(470079),
-  s = n(512722),
-  l = n.n(s),
-  i = n(89057),
-  o = n(987209),
-  u = n(598),
-  c = n(409813),
-  d = n(456251),
-  E = n(981631);
+}), t(47120);
+var r = t(735250),
+  o = t(470079),
+  a = t(512722),
+  l = t.n(a),
+  s = t(89057),
+  i = t(987209),
+  c = t(598),
+  u = t(409813),
+  d = t(456251),
+  h = t(981631);
 
-function h(e) {
+function p(e) {
   let {
-    handleStepChange: t,
-    handleClose: n
+    handleStepChange: n,
+    handleClose: t
   } = e, {
-    blockedPayments: s,
-    hasFetchedSkus: h,
-    paymentSources: p,
+    blockedPayments: a,
+    hasFetchedSkus: p,
+    paymentSources: v,
     hasFetchedPaymentSources: f,
-    application: C,
-    skusById: _,
-    selectedSkuId: A
-  } = (0, u.usePaymentContext)(), {
-    isGift: O
-  } = (0, o.wD)(), [N, I] = a.useState(!0);
-  return (a.useEffect(() => {
-    let e = null != C;
-    if (!!h && !!f && !!e) I(!1)
-  }, [h, f, C]), a.useEffect(() => {
-    if (N || s) return;
-    l()(null != A, "Expected selectedSkuId");
-    let e = _[A];
-    if (O && (null == e ? void 0 : e.productLine) === E.POd.COLLECTIBLES) {
-      t(c.h8.GIFT_CUSTOMIZATION);
+    application: x,
+    skusById: g,
+    selectedSkuId: m
+  } = (0, c.usePaymentContext)(), {
+    isGift: C
+  } = (0, i.wD)(), [b, j] = o.useState(!0);
+  return (o.useEffect(() => {
+    let e = null != x;
+    if (!!p && !!f && !!e) j(!1)
+  }, [p, f, x]), o.useEffect(() => {
+    if (b || a) return;
+    l()(null != m, "Expected selectedSkuId");
+    let e = g[m];
+    if (C && (null == e ? void 0 : e.productLine) === h.POd.COLLECTIBLES) {
+      n(u.h8.GIFT_CUSTOMIZATION);
       return
     }
-    if (0 === Object.keys(p).length) {
-      t(c.h8.ADD_PAYMENT_STEPS);
+    if (0 === Object.keys(v).length) {
+      n(u.h8.ADD_PAYMENT_STEPS);
       return
     }
-    t(c.h8.REVIEW)
-  }, [N, s, t, p, O, _, A]), N) ? (0, r.jsx)(d.Z, {}) : s ? (0, r.jsx)(i.Vq, {
-    onClose: n
+    n(u.h8.REVIEW)
+  }, [b, a, n, v, C, g, m]), b) ? (0, r.jsx)(d.Z, {}) : a ? (0, r.jsx)(s.Vq, {
+    onClose: t
   }) : null
 }

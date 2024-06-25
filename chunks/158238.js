@@ -1,9 +1,9 @@
 n.d(t, {
   e: function() {
-    return i
+    return s
   }
 });
-let i = (0, n(818083).B)({
+let s = (0, n(818083).B)({
   kind: "user",
   id: "2024-01_quiet_mode",
   label: "Quiet Mode (dnd-equivalent) Experiment ",
