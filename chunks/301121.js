@@ -25,8 +25,8 @@ var n, i, a = t(735250),
   R = t(294602),
   M = t(778825),
   x = t(856768),
-  p = t(592204),
-  D = t(712950),
+  D = t(592204),
+  p = t(712950),
   L = t(880257),
   P = t(16703),
   Z = t(977059),
@@ -481,9 +481,9 @@ class eC extends l.PureComponent {
         children: [(0, a.jsx)(b.F, {
           setting: ei.s6.PRIVACY_SENSITIVE_MEDIA,
           children: (0, a.jsx)(eu, {})
-        }), (0, a.jsx)(b.F, {
+        }), (0, a.jsxs)(b.F, {
           setting: ei.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER,
-          children: (0, a.jsxs)(u.FormItem, {
+          children: [(0, a.jsxs)(u.FormItem, {
             tag: u.FormTitleTags.H5,
             className: ec.marginBottom4,
             title: er.Z.Messages.USER_DM_SPAM_FILTER,
@@ -503,10 +503,10 @@ class eC extends l.PureComponent {
                 return X.Xr.updateSetting(s)
               }
             })]
-          })
+          }), (0, a.jsx)(u.FormDivider, {
+            className: o()(ec.marginTop20, ec.marginBottom8)
+          })]
         })]
-      }), (0, a.jsx)(u.FormDivider, {
-        className: ec.marginBottom20
       }), (0, a.jsx)(e_, {})]
     }) : (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)(u.FormSection, {
@@ -952,14 +952,14 @@ function eO() {
     t = (0, T.e7)([f.Z], () => f.Z.getFetchError()),
     n = (0, T.e7)([V.Z], () => V.Z.getSubsection()),
     i = (0, h.yh)(),
-    l = (0, p.Xo)({
+    l = (0, D.Xo)({
       location: "web_user_privacy_and_safety_settings"
     }),
     {
       hasSearchResults: r,
       searchResults: o
     } = (0, ee.E)(),
-    c = (0, D.p)(),
+    c = (0, p.p)(),
     d = (0, L.Z)(),
     _ = (0, Q.H)({
       location: "user_settings_privacy_safety"

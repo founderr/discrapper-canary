@@ -28,8 +28,8 @@ var i = t(990547),
   R = t(351780),
   M = t(231765),
   x = t(837741),
-  p = t(804545),
-  D = t(813732),
+  D = t(804545),
+  p = t(813732),
   L = t(398140),
   P = t(564344),
   Z = t(977156),
@@ -82,8 +82,8 @@ var i = t(990547),
   eR = t(554042),
   eM = t(200645),
   ex = t(287490),
-  ep = t(168308),
-  eD = t(277329),
+  eD = t(168308),
+  ep = t(277329),
   eL = t(674116),
   eP = t(726985),
   eZ = t(981631),
@@ -96,7 +96,7 @@ let eB = () => {
       s = [a.z.CLIENT_THEMES_SETTINGS_BADGE, a.z.DEKSTOP_CUSTOM_APP_ICON_BADGE];
     return x.F.getCurrentConfig({
       location: e
-    }).enabled && s.push(a.z.BRAND_REFRESH_NEW_BADGE), p.n.getCurrentConfig({
+    }).enabled && s.push(a.z.BRAND_REFRESH_NEW_BADGE), D.n.getCurrentConfig({
       location: e
     }).enabled && s.push(a.z.PRIDE_ICONS_APPEARANCE_BADGE), s
   },
@@ -105,7 +105,7 @@ let eB = () => {
     let {
       unseenGiftCount: s,
       showPrepaidPaymentPastDueWarning: x,
-      impressionSource: p,
+      impressionSource: D,
       numOfPendingFamilyRequests: eG,
       isOverlaySupported: eF,
       isClipsBetaTagShowing: eV = !1,
@@ -228,7 +228,7 @@ let eB = () => {
         searchableTitles: [ej.Z.Messages.GAMES],
         label: ej.Z.Messages.GAMES,
         ariaLabel: ej.Z.Messages.GAMES,
-        element: eD.Z,
+        element: ep.Z,
         predicate: () => ey
       },
       [eP.s6.GAMES_MY_GAMES]: {
@@ -300,17 +300,17 @@ let eB = () => {
       },
       [eP.s6.PRIVACY_SENSITIVE_MEDIA]: {
         section: eZ.oAB.PRIVACY_AND_SAFETY,
-        searchableTitles: [ej.Z.Messages.OBSCURED_CONTENT_SETTINGS_HEADER],
+        searchableTitles: [ej.Z.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, ej.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_FILTER, ej.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_BLUR, ej.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_SENSITIVE_CONTENT, ej.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_EXPLICIT],
         parent: eP.s6.PRIVACY_USER_SETTINGS
       },
       [eP.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER]: {
         section: eZ.oAB.PRIVACY_AND_SAFETY,
-        searchableTitles: [ej.Z.Messages.SETTINGS_DM_SPAM_FILTER],
+        searchableTitles: [ej.Z.Messages.SETTINGS_DM_SPAM_FILTER, ej.Z.Messages.SETTINGS_DM_SPAM_FILTER_SEARCH_TERM_MESSAGES, ej.Z.Messages.SETTINGS_DM_SPAM_FILTER_SEARCH_TERM_INBOX],
         parent: eP.s6.PRIVACY_USER_SETTINGS
       },
       [eP.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS]: {
         section: eZ.oAB.PRIVACY_AND_SAFETY,
-        searchableTitles: [ej.Z.Messages.USER_DM_SETTINGS],
+        searchableTitles: [ej.Z.Messages.USER_DM_SETTINGS, ej.Z.Messages.USER_DM_SEARCH_TERM_DIRECT_MESSAGES, ej.Z.Messages.USER_DM_SEARCH_TERM_DM],
         parent: eP.s6.PRIVACY_USER_SETTINGS
       },
       [eP.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_DMS]: {
@@ -398,7 +398,7 @@ let eB = () => {
       },
       [eP.s6.PRIVACY_KEYWORD_FILTER]: {
         section: eZ.oAB.PRIVACY_AND_SAFETY,
-        searchableTitles: [ej.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_SEARCHABLE],
+        searchableTitles: [ej.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_SEARCHABLE, ej.Z.Messages.USER_KEYWORD_FILTERS_SEARCH_TERM_KEYWORD],
         parent: eP.s6.PRIVACY_USER_SETTINGS,
         predicate: () => eH
       },
@@ -458,7 +458,7 @@ let eB = () => {
         element: ea.Z,
         impressionName: i.ImpressionNames.USER_SETTINGS_CONNECTIONS,
         impressionProperties: {
-          source: p
+          source: D
         },
         newIndicatorDismissibleContentTypes: [a.z.NEW_CRUNCHYROLL_CONNECTION]
       },
@@ -502,7 +502,7 @@ let eB = () => {
         ariaLabel: ej.Z.Messages.SUBSCRIPTIONS_TITLE,
         searchableTitles: [ej.Z.Messages.SUBSCRIPTIONS_TITLE],
         label: ej.Z.Messages.SUBSCRIPTIONS_TITLE,
-        element: D.Z,
+        element: p.Z,
         icon: x ? (0, n.jsx)(r.CircleExclamationPointIcon, {
           size: "xs",
           color: l.Z.unsafe_rawColors.YELLOW_300.css
@@ -671,27 +671,27 @@ let eB = () => {
       },
       [eP.s6.VOICE_AND_VIDEO_DEVICES]: {
         section: eZ.oAB.VOICE,
-        searchableTitles: [ej.Z.Messages.FORM_LABEL_INPUT_DEVICE, ej.Z.Messages.FORM_LABEL_OUTPUT_DEVICE],
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_INPUT_DEVICE, ej.Z.Messages.FORM_LABEL_OUTPUT_DEVICE, ej.Z.Messages.INPUT_SEARCH_TERM_MICROPHONE, ej.Z.Messages.OUTPUT_SEARCH_TERM_SPEAKERS, ej.Z.Messages.OUTPUT_SEARCH_TERM_HEADPHONES],
         parent: eP.s6.VOICE_AND_VIDEO
       },
       [eP.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS]: {
         section: eZ.oAB.VOICE,
-        searchableTitles: [ej.Z.Messages.FORM_LABEL_INPUT_VOLUME, ej.Z.Messages.FORM_LABEL_OUTPUT_VOLUME],
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_INPUT_VOLUME, ej.Z.Messages.FORM_LABEL_OUTPUT_VOLUME, ej.Z.Messages.INPUT_SEARCH_TERM_MICROPHONE, ej.Z.Messages.OUTPUT_SEARCH_TERM_SPEAKERS, ej.Z.Messages.OUTPUT_SEARCH_TERM_HEADPHONES],
         parent: eP.s6.VOICE_AND_VIDEO
       },
       [eP.s6.VOICE_AND_VIDEO_MIC_TEST]: {
         section: eZ.oAB.VOICE,
-        searchableTitles: [ej.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_TITLE],
+        searchableTitles: [ej.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_TITLE, ej.Z.Messages.INPUT_SEARCH_TERM_MICROPHONE],
         parent: eP.s6.VOICE_AND_VIDEO
       },
       [eP.s6.VOICE_AND_VIDEO_INPUT_MODE]: {
         section: eZ.oAB.VOICE,
-        searchableTitles: [ej.Z.Messages.FORM_LABEL_INPUT_MODE],
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_INPUT_MODE, ej.Z.Messages.INPUT_SEARCH_TERM_MICROPHONE],
         parent: eP.s6.VOICE_AND_VIDEO
       },
       [eP.s6.VOICE_AND_VIDEO_SENSITIVITY]: {
         section: eZ.oAB.VOICE,
-        searchableTitles: [ej.Z.Messages.FORM_LABEL_INPUT_SENSITIVTY],
+        searchableTitles: [ej.Z.Messages.FORM_LABEL_INPUT_SENSITIVTY, ej.Z.Messages.INPUT_SEARCH_TERM_MICROPHONE],
         parent: eP.s6.VOICE_AND_VIDEO
       },
       [eP.s6.VOICE_AND_VIDEO_SOUNDS]: {
@@ -742,7 +742,7 @@ let eB = () => {
       },
       [eP.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION]: {
         section: eZ.oAB.VOICE,
-        searchableTitles: [ej.Z.Messages.NOISE_SUPPRESSION],
+        searchableTitles: [ej.Z.Messages.NOISE_SUPPRESSION, ej.Z.Messages.NOISE_CANCELLATION_SEARCH_TERM_KRISP],
         parent: eP.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
         predicate: () => U.Z.isNoiseSuppressionSupported()
       },
@@ -1177,7 +1177,7 @@ let eB = () => {
         searchableTitles: [ej.Z.Messages.REGISTERED_GAMES],
         label: ej.Z.Messages.REGISTERED_GAMES,
         element: eE.Z,
-        predicate: () => !ey && (0, ep.Jw)()
+        predicate: () => !ey && (0, eD.Jw)()
       },
       [eP.s6.OVERLAY]: {
         section: eZ.oAB.OVERLAY,
