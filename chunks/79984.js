@@ -35,7 +35,7 @@ function c() {
     }), (0, i.jsxs)("div", {
       className: _.textContainer,
       children: [(0, i.jsx)("div", {
-        className: _.textLargePlaceholder,
+        className: _.textPlaceholder,
         style: t,
         children: (0, i.jsx)(l.Heading, {
           className: _.hidden,
@@ -45,7 +45,7 @@ function c() {
           children: "_"
         })
       }), (0, i.jsx)("div", {
-        className: _.textSmallPlaceholder,
+        className: _.textPlaceholder,
         style: n,
         children: (0, i.jsx)(l.Text, {
           className: _.hidden,

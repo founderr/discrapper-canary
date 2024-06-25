@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   Z: function() {
-    return P
+    return b
   }
 }), n(653041), n(47120);
 var i = n(735250),
@@ -25,15 +25,27 @@ var i = n(735250),
   m = n(827498),
   O = n(695676),
   R = n(98880),
-  p = n(41558),
-  g = n(105862),
-  C = n(28147),
-  v = n(689079),
-  L = n(689938),
-  D = n(584915);
-let M = [];
+  p = n(804307),
+  g = n(41558),
+  C = n(105862),
+  v = n(28147),
+  L = n(689079),
+  D = n(689938),
+  M = n(584915);
+let P = [],
+  y = Array(8).fill(0).map((e, t) => t),
+  U = [{
+    cards: [, , , , ].fill(0).map((e, t) => t),
+    look: R.U4.LARGE_BANNER
+  }, {
+    cards: Array(8).fill(0).map((e, t) => t),
+    look: R.U4.NO_BANNER
+  }, {
+    cards: [, , , , ].fill(0).map((e, t) => t),
+    look: R.U4.NO_BANNER
+  }];
 
-function P(e) {
+function b(e) {
   let {
     channel: t,
     entrypoint: n,
@@ -51,15 +63,15 @@ function P(e) {
   }, [c, t]);
   let f = s.length > 0;
   return (0, i.jsxs)("div", {
-    className: D.container,
-    children: [(0, i.jsx)(y, {
+    className: M.container,
+    children: [(0, i.jsx)(G, {
       searchQuery: s,
       setSearchQuery: o
     }), (0, i.jsx)(_.Scroller, {
-      className: D.scrollableContent,
+      className: M.scrollableContent,
       fade: !0,
       children: f ? (0, i.jsx)("div", {
-        children: (0, i.jsx)(C.Z, {
+        children: (0, i.jsx)(v.Z, {
           channel: t,
           query: s,
           entrypoint: n,
@@ -67,19 +79,19 @@ function P(e) {
           enableActivitiesSearch: c
         })
       }) : (0, i.jsxs)("div", {
-        children: [l && (0, i.jsx)(U, {}), I && (0, i.jsx)(G, {
+        children: [l && (0, i.jsx)(w, {}), I && (0, i.jsx)(x, {
           channel: t
-        }), T && (0, i.jsx)(w, {
+        }), T && (0, i.jsx)(k, {
           channel: t
-        }), h && (0, i.jsx)(b, {
+        }), h && (0, i.jsx)(B, {
           channel: t
-        }), S && (0, i.jsx)(g.Z, {})]
+        }), S && (0, i.jsx)(C.Z, {})]
       })
     })]
   })
 }
 
-function y(e) {
+function G(e) {
   let {
     searchQuery: t,
     setSearchQuery: n
@@ -90,9 +102,9 @@ function y(e) {
     n(e), s(e)
   }, [n, s]), l = r.useCallback(() => n(""), [n]);
   return (0, i.jsx)("div", {
-    className: D.searchBarContainer,
+    className: M.searchBarContainer,
     children: (0, i.jsx)(_.SearchBar, {
-      placeholder: L.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER,
+      placeholder: D.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER,
       query: t,
       onChange: a,
       onClear: l,
@@ -102,11 +114,11 @@ function y(e) {
   })
 }
 
-function U() {
+function w() {
   return null
 }
 
-function b(e) {
+function B(e) {
   let {
     channel: t
   } = e;
@@ -125,10 +137,10 @@ function b(e) {
     }),
     a = r.useMemo(() => o ? R.kA : R.qR, [o]);
   return (0, i.jsxs)("div", {
-    children: [(0, i.jsx)(p.Z, {
-      title: L.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE
+    children: [(0, i.jsx)(g.Z, {
+      title: D.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE
     }), (0, i.jsx)("div", {
-      className: D.sectionContentContainer,
+      className: M.sectionContentContainer,
       children: n.map(e => {
         let {
           application: n
@@ -144,43 +156,46 @@ function b(e) {
   })
 }
 
-function G(e) {
+function x(e) {
   let {
     channel: t
   } = e, {
     sectionDescriptors: n,
-    filterSection: s
+    filterSection: s,
+    loading: a
   } = f.wi(t, {
     commandType: c.yU.CHAT
   }, {
     placeholderCount: 0,
-    limit: v.tn,
+    limit: L.tn,
     includeFrecency: !0
   });
   r.useEffect(() => {
-    s(v.bi.FRECENCY)
+    s(L.bi.FRECENCY)
   }, [s]);
-  let a = r.useMemo(() => n.filter(e => e.id !== v.bi.FRECENCY && e.id !== v.bi.BUILT_IN), [n]),
-    l = (0, N.h)(a),
-    u = r.useMemo(() => o().compact(l.map(e => {
+  let l = r.useMemo(() => n.filter(e => e.id !== L.bi.FRECENCY && e.id !== L.bi.BUILT_IN), [n]),
+    u = (0, N.h)(l),
+    _ = r.useMemo(() => o().compact(u.map(e => {
       let {
         application: t
       } = e;
       return t
     })).map(e => ({
       application: e
-    })), [l]),
+    })), [u]),
     {
-      items: _,
-      handleViewMore: d
-    } = x(L.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, R.U4.NO_BANNER, u, 8);
+      items: d,
+      handleViewMore: E
+    } = Z(D.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, R.U4.NO_BANNER, _, 8);
   return (0, i.jsxs)("div", {
-    children: [(0, i.jsx)(p.Z, {
-      title: L.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER,
-      onClickViewMore: d
+    children: [(0, i.jsx)(g.Z, {
+      title: D.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER,
+      onClickViewMore: E
     }), (0, i.jsx)("div", {
-      className: D.sectionContentContainer,
-      children: _.map(e => {
+      className: M.sectionContentContainer,
+      children: a.current ? y.map(e => (0, i.jsx)(p.Z, {
+        look: R.U4.NO_BANNER
+      }, e)) : d.map(e => {
         let {
           application: n,
           isPartner: r
@@ -197,27 +212,38 @@ function G(e) {
   })
 }
 
-function w(e) {
+function k(e) {
   let {
     channel: t
-  } = e, n = function(e) {
+  } = e, {
+    fetchState: n,
+    recommendationsSections: s
+  } = function(e) {
     let {
       channelId: t,
       location: n
     } = e;
-    return r.useEffect(() => {
+    r.useEffect(() => {
       (0, h.$)({
         channelId: t,
         location: n
       })
-    }, [t, n]), (0, u.Wu)([S.Z], () => S.Z.getRecommendations({
+    }, [t, n]);
+    let [i, s] = (0, u.Wu)([S.Z], () => [S.Z.getFetchState({
       channelId: t,
       location: n
-    }))
+    }), S.Z.getRecommendations({
+      channelId: t,
+      location: n
+    })]);
+    return {
+      fetchState: i,
+      recommendationsSections: s
+    }
   }({
     channelId: t.id,
     location: a.I.APP_LAUNCHER_TEXT
-  }), s = function(e) {
+  }), o = function(e) {
     let {
       channel: t,
       recommendationsSections: n
@@ -228,7 +254,7 @@ function w(e) {
       channel: t
     });
     return r.useMemo(() => {
-      if (!n.some(e => e.appends_remaining_activities)) return M;
+      if (!n.some(e => e.appends_remaining_activities)) return P;
       let e = new Set;
       return n.forEach(t => {
         t.items.forEach(t => {
@@ -238,18 +264,31 @@ function w(e) {
     }, [n, i])
   }({
     channel: t,
-    recommendationsSections: n
+    recommendationsSections: s
   });
   return (0, i.jsx)(i.Fragment, {
-    children: n.map(e => (0, i.jsx)(B, {
+    children: n === S.M.FETCHING ? U.map((e, t) => {
+      let {
+        cards: n,
+        look: r
+      } = e;
+      return (0, i.jsxs)("div", {
+        children: [(0, i.jsx)(g.Z.Loading, {}), (0, i.jsx)("div", {
+          className: M.sectionContentContainer,
+          children: n.map(e => (0, i.jsx)(p.Z, {
+            look: r
+          }, e))
+        })]
+      }, t)
+    }) : s.map(e => (0, i.jsx)(V, {
       channel: t,
       recommendationsSection: e,
-      remainingActivities: s
+      remainingActivities: o
     }, e.key))
   })
 }
 
-function B(e) {
+function V(e) {
   let {
     channel: t,
     recommendationsSection: n,
@@ -257,7 +296,7 @@ function B(e) {
   } = e, o = n.section_title, a = n.type === l.i.BANNER_CARDS ? R.U4.LARGE_BANNER : R.U4.NO_BANNER, {
     items: u,
     handleViewMore: _
-  } = x(o, a, r.useMemo(() => {
+  } = Z(o, a, r.useMemo(() => {
     let e = n.items.map(e => {
       let {
         application: t,
@@ -278,11 +317,11 @@ function B(e) {
     })), e
   }, [n.items, n.appends_remaining_activities, s]), 8);
   return (0, i.jsxs)("div", {
-    children: [(0, i.jsx)(p.Z, {
+    children: [(0, i.jsx)(g.Z, {
       title: n.section_title,
       onClickViewMore: _
     }), (0, i.jsx)("div", {
-      className: D.sectionContentContainer,
+      className: M.sectionContentContainer,
       children: u.map(e => {
         let {
           application: r,
@@ -300,7 +339,7 @@ function B(e) {
   })
 }
 
-function x(e, t, n, i) {
+function Z(e, t, n, i) {
   let {
     pushHistory: s
   } = (0, O.hH)();
