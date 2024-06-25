@@ -84,7 +84,8 @@ function P(e) {
     }))]
   }, [s, N, I]);
   return u ? (0, i.jsx)(G, {}) : _ ? (0, i.jsx)(w, {
-    searchQuery: n
+    searchQuery: n,
+    textContent: s === h._.TEXT ? p.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : p.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
   }) : (0, i.jsxs)("div", {
     children: [d && (0, i.jsx)(U, {
       channel: t,
@@ -121,7 +122,8 @@ function y(e) {
     installOnDemand: !1
   })), [c]);
   return a ? (0, i.jsx)(G, {}) : l ? (0, i.jsx)(w, {
-    searchQuery: n
+    searchQuery: n,
+    textContent: s === h._.TEXT ? p.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : p.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
   }) : (0, i.jsxs)("div", {
     children: [_ && (0, i.jsx)(U, {
       channel: t,
@@ -217,18 +219,19 @@ function G() {
 }
 
 function w(e) {
-  let t = (0, _.ZP)(),
-    n = (0, l.ap)(t) ? v : C;
+  let {
+    textContent: t
+  } = e, n = (0, _.ZP)(), r = (0, l.ap)(n) ? v : C;
   return (0, i.jsxs)("div", {
     className: g.emptyStateContainer,
     children: [(0, i.jsx)("img", {
       className: g.emptyStateImage,
-      src: n,
+      src: r,
       alt: ""
     }), (0, i.jsx)(u.Text, {
       variant: "text-md/medium",
       color: "text-muted",
-      children: p.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY
+      children: t
     })]
   })
 }

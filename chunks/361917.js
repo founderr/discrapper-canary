@@ -54,23 +54,24 @@ function b(e) {
     enableRecommendations: a,
     enableRecents: l,
     enableGlobalSearch: u
-  } = e, c = (0, d.NX)(t.id, !0, "AppLauncherHomeScreen"), I = n === m._.TEXT, T = n === m._.TEXT && a, h = n === m._.VOICE, S = T || I;
+  } = e, c = (0, d.NX)(t.id, !0, "AppLauncherHomeScreen"), I = n === m._.TEXT, T = n === m._.TEXT && a, h = n === m._.VOICE, S = T || I, f = n === m._.TEXT;
   r.useEffect(() => {
     c && (0, E.w1)({
       guildId: t.getGuildId(),
       force: !0
     })
   }, [c, t]);
-  let f = s.length > 0;
+  let N = s.length > 0;
   return (0, i.jsxs)("div", {
     className: M.container,
     children: [(0, i.jsx)(G, {
       searchQuery: s,
-      setSearchQuery: o
+      setSearchQuery: o,
+      placeholder: f ? D.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER : D.Z.Messages.APP_LAUNCHER_SEARCH_ACTIVITIES_PLACEHOLDER
     }), (0, i.jsx)(_.Scroller, {
       className: M.scrollableContent,
       fade: !0,
-      children: f ? (0, i.jsx)("div", {
+      children: N ? (0, i.jsx)("div", {
         children: (0, i.jsx)(v.Z, {
           channel: t,
           query: s,
@@ -94,20 +95,21 @@ function b(e) {
 function G(e) {
   let {
     searchQuery: t,
-    setSearchQuery: n
-  } = e, s = r.useMemo(() => o().debounce(e => {}, 400, {
+    setSearchQuery: n,
+    placeholder: s
+  } = e, a = r.useMemo(() => o().debounce(e => {}, 400, {
     leading: !1,
     trailing: !0
-  }), []), a = r.useCallback(e => {
-    n(e), s(e)
-  }, [n, s]), l = r.useCallback(() => n(""), [n]);
+  }), []), l = r.useCallback(e => {
+    n(e), a(e)
+  }, [n, a]), u = r.useCallback(() => n(""), [n]);
   return (0, i.jsx)("div", {
     className: M.searchBarContainer,
     children: (0, i.jsx)(_.SearchBar, {
-      placeholder: D.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER,
+      placeholder: s,
       query: t,
-      onChange: a,
-      onClear: l,
+      onChange: l,
+      onClear: u,
       size: _.SearchBar.Sizes.MEDIUM,
       autoFocus: !0
     })
