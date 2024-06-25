@@ -56,11 +56,17 @@ function c(e, t) {
   })
 }
 
-function d(e) {
+function d(e, t) {
   let {
-    showInline: t
+    quest: n,
+    showInline: i
   } = e;
-  !t && o.Z.open(u.oAB.CONNECTIONS), s.Z.dispatch({
+  (0, l._3)({
+    questId: n.id,
+    questContent: t.content,
+    questContentPosition: t.position,
+    questContentCTA: t.ctaContent
+  }), !i && o.Z.open(u.oAB.CONNECTIONS), s.Z.dispatch({
     type: "CONNECTIONS_GRID_MODAL_SHOW",
     onComplete: a.q,
     includedPlatformTypes: new Set([u.ABu.XBOX, u.ABu.PLAYSTATION])

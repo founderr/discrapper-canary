@@ -67,7 +67,11 @@ function y(e) {
   }), c = async () => {
     r.startAnimation(), i((await (0, N.CS)(t.id)).errorHints), r.stopAnimation()
   }, d = () => {
-    c()
+    (0, m._3)({
+      questId: t.id,
+      questContent: S.jn.GIFT_INVENTORY_FOR_YOU,
+      questContentCTA: m.jZ.DEFIBRILLATOR
+    }), c()
   }, {
     rawTooltipText: E,
     renderTooltipText: _,
@@ -157,9 +161,13 @@ function B(e) {
             text: P.Z.Messages.QUESTS_CONNECT_CONSOLE,
             tooltipText: null,
             onClick: () => (0, M.gI)({
+              quest: t,
               showInline: (0, g.i)({
                 location: L.dr.QUESTS_CARD
               })
+            }, {
+              content: i,
+              ctaContent: m.jZ.CONNECT_CONSOLE
             })
           };
           return {
@@ -186,7 +194,7 @@ function B(e) {
             ...e, text: P.Z.Messages.QUESTS_SEE_CODE
           }
       }
-    }, [s, o, i, u, n, t.id, l, r, c])
+    }, [t, s, o, i, u, n, l, r, c])
   }({
     progressState: n,
     quest: t,
