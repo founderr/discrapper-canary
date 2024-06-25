@@ -14,21 +14,21 @@ var l = n(735250),
   d = n(110924),
   h = n(607070),
   m = n(900211),
-  p = n(580747),
-  E = n(740492),
-  g = n(871499),
-  f = n(402113),
-  C = n(592125),
-  _ = n(271383),
-  I = n(944486),
-  x = n(594174),
-  T = n(602623),
-  N = n(585483),
-  Z = n(792125),
-  S = n(51144),
-  v = n(566620),
-  A = n(317381),
-  M = n(619915),
+  p = n(740492),
+  E = n(871499),
+  g = n(402113),
+  f = n(592125),
+  C = n(271383),
+  _ = n(944486),
+  I = n(594174),
+  x = n(602623),
+  T = n(585483),
+  N = n(792125),
+  Z = n(51144),
+  S = n(566620),
+  v = n(317381),
+  A = n(619915),
+  M = n(988980),
   R = n(952561),
   j = n(563218),
   L = n(719296),
@@ -37,7 +37,7 @@ var l = n(735250),
   y = n(981631),
   b = n(689938),
   D = n(2314);
-let U = T.u.SIZE_32,
+let U = x.u.SIZE_32,
   k = {
     [P.MI.NO_CHAT]: D.noChat,
     [P.MI.RESIZABLE]: D.resizable
@@ -49,9 +49,9 @@ function w(e) {
     maxHeight: s,
     connectedChannelId: w,
     renderExternalHeader: H
-  } = e, B = (0, R.Z)(), G = (0, r.Wu)([A.ZP], () => null != w ? A.ZP.getEmbeddedActivitiesForChannel(w) : [], [w]), V = (0, r.e7)([C.Z], () => C.Z.getChannel(w)), F = (0, M.gb)(G), z = (0, M.uF)(F), W = i.useCallback(() => {
-    (0, v.tg)(P.Ez.PIP)
-  }, []), Y = i.useRef(null), K = (0, r.e7)([A.ZP], () => A.ZP.getFocusedLayout()), q = K !== P.MI.NO_CHAT, [X, Q] = i.useState(null !== (t = E.ZP.activityPanelHeight) && void 0 !== t ? t : s), J = i.useCallback(e => {
+  } = e, G = (0, R.Z)(), B = (0, r.Wu)([v.ZP], () => null != w ? v.ZP.getEmbeddedActivitiesForChannel(w) : [], [w]), V = (0, r.e7)([f.Z], () => f.Z.getChannel(w)), F = (0, A.gb)(B), z = (0, A.uF)(F), W = i.useCallback(() => {
+    (0, S.tg)(P.Ez.PIP)
+  }, []), Y = i.useRef(null), K = (0, r.e7)([v.ZP], () => v.ZP.getFocusedLayout()), q = K !== P.MI.NO_CHAT, [X, Q] = i.useState(null !== (t = p.ZP.activityPanelHeight) && void 0 !== t ? t : s), J = i.useCallback(e => {
     u.ZP.updatedUnsyncedSettings({
       activityPanelHeight: e
     })
@@ -73,17 +73,17 @@ function w(e) {
   let en = ee.width / Math.max(ee.height, 1) < P.I0,
     el = 0,
     ei = 0,
-    es = (0, p.Z)("activity_panel_iframe_fills_container");
+    es = (0, M.Z)(null == G ? void 0 : G.id);
   if (!es) {
     let e = ee.width,
       t = ee.height;
     en ? ((t = ee.width / P.I0) > ee.height && (e = (t = ee.height) * P.I0), ei = (ee.height - t) / 2) : ((e = Math.min(ee.height * P.I0)) > ee.width && (t = (e = ee.width) / P.I0), el = (ee.width - e) / 2)
   }
-  let ea = z.get(null !== (n = null == B ? void 0 : B.id) && void 0 !== n ? n : ""),
-    er = (0, r.e7)([I.Z], () => I.Z.getChannelId()),
-    eo = (0, r.Wu)([_.ZP], () => {
+  let ea = z.get(null !== (n = null == G ? void 0 : G.id) && void 0 !== n ? n : ""),
+    er = (0, r.e7)([_.Z], () => _.Z.getChannelId()),
+    eo = (0, r.Wu)([C.ZP], () => {
       var e;
-      return null == V ? [] : Array.from(null !== (e = null == ea ? void 0 : ea.embeddedActivity.userIds) && void 0 !== e ? e : []).map(e => _.ZP.getMember(V.guild_id, e))
+      return null == V ? [] : Array.from(null !== (e = null == ea ? void 0 : ea.embeddedActivity.userIds) && void 0 !== e ? e : []).map(e => C.ZP.getMember(V.guild_id, e))
     }, [ea, V]),
     ec = i.useMemo(() => {
       let e = new Map;
@@ -115,14 +115,14 @@ function w(e) {
         } : l
       }, [o, e, n, t])
     }(q, X, s);
-  if (null == B) return null;
+  if (null == G) return null;
   let ed = [];
-  null != ea && (ed = Array.from(ea.embeddedActivity.userIds).map(e => x.default.getUser(e)).filter(e => null != e && void 0 !== e));
+  null != ea && (ed = Array.from(ea.embeddedActivity.userIds).map(e => I.default.getUser(e)).filter(e => null != e && void 0 !== e));
   let eh = (e, t) => {
     var n;
     if (null == e || void 0 === e || void 0 === t) return null;
     let i = ec.get(e.id),
-      s = null !== (n = null == i ? void 0 : i.nick) && void 0 !== n ? n : S.ZP.getName(e);
+      s = null !== (n = null == i ? void 0 : i.nick) && void 0 !== n ? n : Z.ZP.getName(e);
     return (0, l.jsx)(c.TooltipContainer, {
       text: s,
       position: "bottom",
@@ -134,7 +134,7 @@ function w(e) {
     }, e.id)
   };
   return (0, l.jsxs)("div", {
-    className: a()(D.wrapper, k[K], (0, Z.Q)(y.BRd.DARK)),
+    className: a()(D.wrapper, k[K], (0, N.Q)(y.BRd.DARK)),
     ref: Y,
     style: eu,
     children: [null == H ? void 0 : H(), (0, l.jsxs)("div", {
@@ -145,7 +145,7 @@ function w(e) {
           color: "header-primary",
           variant: "text-md/semibold",
           className: D.headerTitle,
-          children: null == B ? void 0 : B.name
+          children: null == G ? void 0 : G.name
         })
       }), (0, l.jsx)("div", {
         className: a()(D.activityContainer, {
@@ -160,11 +160,11 @@ function w(e) {
         ref: $,
         children: (0, l.jsx)(j.Z, {
           className: D.iframe,
-          embedId: (0, L.Z)(w, B.id)
+          embedId: (0, L.Z)(w, G.id)
         })
       }), null != er ? (0, l.jsxs)("div", {
         className: D.footer,
-        children: [(0, l.jsx)(T.Z, {
+        children: [(0, l.jsx)(x.Z, {
           renderIcon: !1,
           users: ed,
           size: U,
@@ -178,14 +178,14 @@ function w(e) {
             className: D.circularButton
           }), (0, l.jsx)("div", {
             className: D.leaveButtonContainer,
-            children: (0, l.jsx)(f.Z, {
-              applicationId: B.id,
+            children: (0, l.jsx)(g.Z, {
+              applicationId: G.id,
               channelId: w,
               centerButton: !0,
               color: "red",
               className: D.leaveActivityButton
             })
-          }), (0, l.jsx)(g.d, {
+          }), (0, l.jsx)(E.d, {
             label: b.Z.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
             onClick: W,
             iconComponent: c.MinimizeIcon,
@@ -201,12 +201,12 @@ function w(e) {
       maxHeight: s,
       resizableNode: Y,
       onResize: e => {
-        N.S.dispatch(y.CkL.MANUAL_IFRAME_RESIZING, {
+        T.S.dispatch(y.CkL.MANUAL_IFRAME_RESIZING, {
           resizing: !0
         }), Q(e)
       },
       onResizeEnd: e => {
-        N.S.dispatch(y.CkL.MANUAL_IFRAME_RESIZING, {
+        T.S.dispatch(y.CkL.MANUAL_IFRAME_RESIZING, {
           resizing: !1
         }), J(e)
       }

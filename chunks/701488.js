@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   AC: function() {
-    return ei
+    return er
   },
   ES: function() {
     return _
@@ -46,13 +46,16 @@ n.d(t, {
     return $
   },
   OF: function() {
-    return eu
+    return e_
+  },
+  P9: function() {
+    return ei
   },
   PD: function() {
     return x
   },
   Pc: function() {
-    return er
+    return es
   },
   S4: function() {
     return s
@@ -124,13 +127,13 @@ n.d(t, {
     return L
   },
   um: function() {
-    return es
+    return eo
   },
   wP: function() {
-    return el
+    return eu
   },
   wT: function() {
-    return ea
+    return el
   },
   xK: function() {
     return l
@@ -172,30 +175,31 @@ let g = 160,
     SMALL: 64,
     LARGE: 160
   },
-  en = ["in_development", "activities_team", "employee_release"];
+  en = ["in_development", "activities_team", "employee_release"],
+  ei = [H, q, V, z];
 (E = i || (i = {})).ADS = "ADS", E.FAILED_LOAD = "FAILED_LOAD", E.LAGGING = "LAGGING", E.CONFUSING = "CONFUSING", E.NOT_FUN = "NOT_FUN", E.OTHER = "OTHER", (I = r || (r = {}))[I.PLAY = 0] = "PLAY", I[I.SPECTATE = 1] = "SPECTATE", (T = s || (s = {})).DESKTOP = "desktop", T.MOBILE = "mobile", (h = o || (o = {})).BETRAYAL_MARKETING_TOOLTIP = "BETRAYAL_MARKETING_TOOLTIP", h.FISHINGTON_MARKETING_TOOLTIP = "FISHINGTON_MARKETING_TOOLTIP", h.POKER_MARKETING_TOOLTIP = "POKER_MARKETING_TOOLTIP", h.YOUTUBE_MARKETING_TOOLTIP = "YOUTUBE_MARKETING_TOOLTIP", (S = a || (a = {}))[S.NO_UPDATE = 0] = "NO_UPDATE", S[S.ACTIVITY_STATE_UPDATE = 1] = "ACTIVITY_STATE_UPDATE", S[S.ACTIVITY_STARTED = 2] = "ACTIVITY_STARTED", S[S.ACTIVITY_ENDED = 3] = "ACTIVITY_ENDED", S[S.USER_JOINED = 4] = "USER_JOINED", S[S.USER_LEFT = 5] = "USER_LEFT", S[S.ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST = 6] = "ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST", (f = l || (l = {}))[f.UNLOCKED = 1] = "UNLOCKED", f[f.PORTRAIT = 2] = "PORTRAIT", f[f.LANDSCAPE = 3] = "LANDSCAPE", (N = u || (u = {}))[N.DIRECTORY = 0] = "DIRECTORY", N[N.SELECT_CHANNEL = 1] = "SELECT_CHANNEL", N[N.DETAIL_PAGE = 2] = "DETAIL_PAGE";
-let ei = "activity-shelf",
-  er = new Set(["755600276941176913", D, M, k]),
-  es = new Set([D, M, k]);
+let er = "activity-shelf",
+  es = new Set(["755600276941176913", D, M, k]),
+  eo = new Set([D, M, k]);
 (A = _ || (_ = {})).DISCORD_TURNS_8 = "DISCORD_TURNS_8", A.GDM_ACTIVITIES = "GDM_ACTIVITIES", A.PUTT_PARTY = "PUTT_PARTY", A.JAMSPACE_OLD = "JAMSPACE", A.JAMSPACE = "JAMSPACE2", A.POKER = "POKER", A.FREE = "FREE", (m = c || (c = {}))[m.PORTRAIT = 0] = "PORTRAIT", m[m.LANDSCAPE = 1] = "LANDSCAPE", (O = d || (d = {}))[O.FOCUSED = 0] = "FOCUSED", O[O.PIP = 1] = "PIP", O[O.GRID = 2] = "GRID";
-let eo = {
+let ea = {
     label_type: R.ww.NONE,
     release_phase: "",
     label_until: null
   },
-  ea = {
+  el = {
     application_id: "",
     requires_age_gate: !1,
     default_orientation_lock_state: 1,
     tablet_default_orientation_lock_state: 1,
     supported_platforms: [R.C3.WEB],
     client_platform_config: {
-      [R.C3.WEB]: eo,
-      [R.C3.IOS]: eo,
-      [R.C3.ANDROID]: eo
+      [R.C3.WEB]: ea,
+      [R.C3.IOS]: ea,
+      [R.C3.ANDROID]: ea
     },
     has_csp_exception: !1,
     displays_advertisements: !1
   },
-  el = [p.d4z.GUILD_TEXT, p.d4z.DM, p.d4z.GROUP_DM],
-  eu = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety"
+  eu = [p.d4z.GUILD_TEXT, p.d4z.DM, p.d4z.GROUP_DM],
+  e_ = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety"
