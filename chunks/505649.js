@@ -93,7 +93,5 @@ l = "PaymentAuthenticationStore", (u = "displayName") in(i = f) ? Object.defineP
     C = t, I = !1
   },
   PAYMENT_UPDATE: P,
-  BILLING_PAYMENT_FETCH_SUCCESS: P,
-  LIGHTNING_CHECKOUT_OPEN: R,
-  LIGHTNING_CHECKOUT_CLOSE: R
+  BILLING_PAYMENT_FETCH_SUCCESS: P
 })

@@ -56,7 +56,5 @@ l = "PurchaseTokenAuthStore", (u = "displayName") in(i = C) ? Object.definePrope
   SKU_PURCHASE_MODAL_CLOSE: d,
   SKU_PURCHASE_MODAL_OPEN: d,
   SKU_PURCHASE_START: d,
-  SKU_PURCHASE_SUCCESS: d,
-  LIGHTNING_CHECKOUT_OPEN: d,
-  LIGHTNING_CHECKOUT_CLOSE: d
+  SKU_PURCHASE_SUCCESS: d
 })
