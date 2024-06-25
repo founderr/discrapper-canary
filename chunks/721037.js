@@ -7,22 +7,24 @@ var i = n(735250),
   a = n(317381),
   l = n(917107),
   u = n(866885),
-  _ = n(928518),
-  c = n(210887),
-  d = n(442917),
-  E = n(592125),
-  I = n(366050),
-  T = n(944486),
-  h = n(451478),
+  _ = n(358221),
+  c = n(928518),
+  d = n(210887),
+  E = n(442917),
+  I = n(592125),
+  T = n(366050),
+  h = n(944486),
+  f = n(451478),
   S = n(518774),
-  f = n(823379),
+  A = n(823379),
   N = n(981631),
-  A = n(918559);
-let m = {
-  [N.NYg.VIDEO]: d.Z,
+  m = n(918559),
+  O = n(354459);
+let p = {
+  [N.NYg.VIDEO]: E.Z,
   [N.NYg.EMBED_IFRAME]: u.Z
 };
-class O extends r.PureComponent {
+class R extends r.PureComponent {
   render() {
     let {
       selectedPIPWindow: e,
@@ -35,7 +37,7 @@ class O extends r.PureComponent {
       roundCorners: l
     } = this.props;
     return (0, i.jsx)(S.Z, {
-      pictureInPictureComponents: m,
+      pictureInPictureComponents: p,
       selectedPIPWindow: e,
       pipWindows: t,
       maxX: n,
@@ -59,36 +61,37 @@ class O extends r.PureComponent {
     }) : t[n] = i
   }
 }
-t.Z = s.ZP.connectStores([_.Z, a.ZP, h.Z, c.Z, E.Z, I.Z, T.Z], e => {
-  var t, n, i;
-  let r;
-  let s, {
-      showInPopoutWindow: o = !1,
-      disallowTextActivity: u = !1
+t.Z = s.ZP.connectStores([c.Z, a.ZP, f.Z, d.Z, I.Z, h.Z, T.Z, _.Z], e => {
+  var t, n, i, r;
+  let s;
+  let o, {
+      showInPopoutWindow: u = !1,
+      disallowTextActivity: E = !1
     } = e,
-    d = _.Z.getWindowOpen(N.KJ3.CHANNEL_CALL_POPOUT),
-    S = a.ZP.getCurrentEmbeddedActivity(),
-    m = null != S && !(0, l.Z)(S.channelId, E.Z, T.Z),
-    O = a.ZP.getActivityPanelMode(),
-    R = null != S && m && O === A.Ez.PANEL,
-    p = h.Z.windowSize();
-  if (d && (u && R || !R)) {
-    let e = _.Z.getWindow(N.KJ3.CHANNEL_CALL_POPOUT);
-    p = null == e ? p : {
+    S = c.Z.getWindowOpen(N.KJ3.CHANNEL_CALL_POPOUT),
+    p = a.ZP.getCurrentEmbeddedActivity(),
+    R = null != p && !(0, l.Z)(p.channelId, I.Z, h.Z),
+    g = a.ZP.getActivityPanelMode(),
+    C = null != p && R && g === m.Ez.PANEL,
+    v = null != p && (null === (t = _.Z.getSelectedParticipant(p.channelId)) || void 0 === t ? void 0 : t.type) === O.fO.ACTIVITY,
+    L = f.Z.windowSize();
+  if (S && (E && C || !C)) {
+    let e = c.Z.getWindow(N.KJ3.CHANNEL_CALL_POPOUT);
+    L = null == e ? L : {
       width: e.innerWidth,
       height: e.innerHeight
     }
-  }!u && R ? r = N.IlC.APP : o && (r = N.IlC.POPOUT), s = u && m ? null : m || !d || o ? null != S && O === A.Ez.PANEL && m ? null !== (t = I.Z.pipActivityWindow) && void 0 !== t ? t : I.Z.pipVideoWindow : null !== (n = I.Z.pipVideoWindow) && void 0 !== n ? n : I.Z.pipActivityWindow : null;
-  let g = Array.from(I.Z.pipWindows.values()),
-    C = g.find(e => e.component === N.NYg.VIDEO);
+  }!E && C ? s = N.IlC.APP : u && (s = N.IlC.POPOUT), o = E && R ? null : R || !S || u ? null != p && g === m.Ez.PANEL && R ? null !== (n = T.Z.pipActivityWindow) && void 0 !== n ? n : T.Z.pipVideoWindow : null !== (i = T.Z.pipVideoWindow) && void 0 !== i ? i : T.Z.pipActivityWindow : null;
+  let D = Array.from(T.Z.pipWindows.values()),
+    M = D.find(e => e.component === N.NYg.VIDEO);
   return {
-    selectedPIPWindow: s,
-    pipWindows: [C, g.find(e => e.component === N.NYg.EMBED_IFRAME)].filter(f.lm),
-    maxX: p.width,
-    maxY: p.height,
-    theme: c.Z.theme,
-    dockedRect: I.Z.getDockedRect(null !== (i = null == s ? void 0 : s.id) && void 0 !== i ? i : ""),
-    appContext: r,
-    roundCorners: !0
+    selectedPIPWindow: o,
+    pipWindows: [M, D.find(e => e.component === N.NYg.EMBED_IFRAME)].filter(A.lm),
+    maxX: L.width,
+    maxY: L.height,
+    theme: d.Z.theme,
+    dockedRect: T.Z.getDockedRect(null !== (r = null == o ? void 0 : o.id) && void 0 !== r ? r : ""),
+    appContext: s,
+    roundCorners: !v
   }
-})(O)
+})(R)
