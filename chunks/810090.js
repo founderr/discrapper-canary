@@ -49,7 +49,7 @@ let u = e => {
       width: "100%",
       height: "100%",
       maxHeight: "inherit",
-      objectFit: "cover"
+      objectFit: "contain"
     } : _ ? function() {
       return {
         maxWidth: d.width,
