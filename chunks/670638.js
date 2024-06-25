@@ -20,13 +20,13 @@ var s = n(735250),
   _ = n(46140),
   T = n(981631),
   q = n(231338),
-  h = n(689938);
+  S = n(689938);
 
-function S(e) {
+function h(e) {
   var t;
   let n = (0, i.e7)([E.Z], () => E.Z.questDeliveryOverride, []),
     c = (0, p.GN)(e.questContent),
-    S = (0, p.zK)(e.quest, _.S7.IN_HOUSE_CONSOLE_QUEST),
+    h = (0, p.zK)(e.quest, _.S7.IN_HOUSE_CONSOLE_QUEST),
     {
       handleComplete: f,
       handleResetDismissibilityClick: N,
@@ -53,24 +53,24 @@ function S(e) {
       null != e.onSelect ? e.onSelect() : (0, l.Zy)()
     },
     navId: "quests-entry",
-    "aria-label": h.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
+    "aria-label": S.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
     onClose: null !== (t = null == e ? void 0 : e.onClose) && void 0 !== t ? t : q.dG,
     children: [(0, s.jsxs)(a.MenuGroup, {
-      children: [!1 === S && (0, s.jsx)(a.MenuItem, {
+      children: [!1 === h && (0, s.jsx)(a.MenuItem, {
         id: "play-game",
-        label: h.Z.Messages.QUESTS_PLAY_GAME,
+        label: S.Z.Messages.QUESTS_GET_THIS_GAME,
         action: I,
         icon: a.LinkExternalMediumIcon
       }), !0 === e.showShareLink && (0, s.jsx)(a.MenuItem, {
         id: "share-link",
-        label: h.Z.Messages.COPY_LINK,
+        label: S.Z.Messages.COPY_LINK,
         action: g,
         icon: a.CopyIcon
       })]
     }, "major-actions"), (0, s.jsxs)(a.MenuGroup, {
       children: [!e.hideLearnMore && (0, s.jsx)(a.MenuItem, {
         id: "learn-more",
-        label: h.Z.Messages.QUESTS_LEARN_MORE_V2,
+        label: S.Z.Messages.QUESTS_LEARN_MORE_V2,
         action: () => {
           (0, d._3)({
             questId: e.quest.id,
@@ -81,7 +81,7 @@ function S(e) {
         }
       }), e.shouldShowDisclosure && (0, s.jsx)(a.MenuItem, {
         id: "display-disclosure",
-        label: h.Z.Messages.QUESTS_DISCLOSURE_LABEL,
+        label: S.Z.Messages.QUESTS_DISCLOSURE_LABEL,
         action: () => {
           (0, x.az)(e.quest, {
             content: e.questContent,
@@ -91,7 +91,7 @@ function S(e) {
         }
       }), c && (0, s.jsx)(a.MenuItem, {
         id: "hide-entrypoint",
-        label: h.Z.Messages.QUESTS_HIDE_THIS,
+        label: S.Z.Messages.QUESTS_HIDE_THIS,
         action: () => {
           (0, d._3)({
             questId: e.quest.id,
@@ -100,7 +100,7 @@ function S(e) {
             questContentCTA: d.jZ.CONTEXT_MENU_HIDE_CONTENT
           }), (0, p.GN)(e.questContent) && (0, C.gl)(e.quest.id, e.questContent)
         },
-        subtext: h.Z.Messages.QUESTS_FIND_QUEST
+        subtext: S.Z.Messages.QUESTS_FIND_QUEST
       })]
     }, "minor-actions"), e.quest.preview && (0, s.jsxs)(a.MenuGroup, {
       label: "Preview Controls",
@@ -168,14 +168,14 @@ function f(e) {
         closePopout: t
       } = e;
       return l ? (0, s.jsx)(c.Z, {
-        children: (0, s.jsx)(S, {
+        children: (0, s.jsx)(h, {
           ...m,
           quest: r,
           questContent: u,
           questContentPosition: C,
           onClose: t
         })
-      }) : (0, s.jsx)(S, {
+      }) : (0, s.jsx)(h, {
         ...m,
         quest: r,
         questContent: u,
