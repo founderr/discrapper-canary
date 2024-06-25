@@ -180,7 +180,7 @@ function W(e) {
   }
 }
 
-function z(e) {
+function K(e) {
   let {
     alertActionsExecution: t,
     guildId: n
@@ -193,7 +193,7 @@ function z(e) {
     }, e.actionType))
   })
 }
-let K = i.memo(function(e) {
+let z = i.memo(function(e) {
   let t, {
       message: n,
       channel: i,
@@ -318,7 +318,7 @@ function Q(e) {
             }), (0, s.jsx)(M.Z, {
               type: b.Hb.SYSTEM_DM,
               className: G.systemTag
-            }), (0, s.jsx)(K, {
+            }), (0, s.jsx)(z, {
               message: l,
               channel: r,
               embedChannel: Y,
@@ -467,7 +467,7 @@ function Q(e) {
                   })
                 })
               })]
-            }) : null, null != et ? (0, s.jsx)(z, {
+            }) : null, null != et ? (0, s.jsx)(K, {
               alertActionsExecution: et,
               guildId: r.guild_id
             }) : null]

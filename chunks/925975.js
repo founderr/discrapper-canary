@@ -14,8 +14,8 @@ var l = n(302454),
   d = n(695346),
   h = n(375954),
   m = n(981631);
-let p = /\\([*?+/])/g,
-  E = {
+let E = /\\([*?+/])/g,
+  p = {
     tts: {
       action: () => ({
         tts: d.OW.getSetting()
@@ -81,7 +81,7 @@ let p = /\\([*?+/])/g,
           content: ""
         };
         let [, r, o] = Array.from(null !== (n = e.match(this.match.regex)) && void 0 !== n ? n : []);
-        r = r.replace(p, (e, t) => t), o = o.replace(p, (e, t) => t);
+        r = r.replace(E, (e, t) => t), o = o.replace(E, (e, t) => t);
         let c = s.content.replace(r, o);
         return (null == c || "" === c) && 0 === s.attachments.length ? a.Z.deleteMessage(i.id, s.id) : e !== s.content && a.Z.editMessage(i.id, s.id, {
           content: c
@@ -104,8 +104,8 @@ function g(e, t, n, l) {
 }
 
 function f(e, t) {
-  for (let l in E) {
-    let i = E[l];
+  for (let l in p) {
+    let i = p[l];
     if (null != i.match) {
       var n;
       if (null === (n = i.match.regex) || void 0 === n ? void 0 : n.test(e)) return g(l, i, e, t);
@@ -117,4 +117,4 @@ function f(e, t) {
     }
   }
 }
-Object.setPrototypeOf(E, null)
+Object.setPrototypeOf(p, null)

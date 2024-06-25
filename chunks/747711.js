@@ -15,15 +15,15 @@ t.Z = e => {
     displayProfile: n,
     channel: h,
     animateAssets: m,
-    forceShowPremiumBadge: p
-  } = e, E = t.isNonUserBot(), [g, f] = (0, i.Wu)([a.Z], () => [E ? null : a.Z.getStatus(t.id), a.Z.isMobileOnline(t.id)]), C = null == n ? void 0 : n.profileEffectId;
+    forceShowPremiumBadge: E
+  } = e, p = t.isNonUserBot(), [g, f] = (0, i.Wu)([a.Z], () => [p ? null : a.Z.getStatus(t.id), a.Z.isMobileOnline(t.id)]), C = null == n ? void 0 : n.profileEffectId;
   return (0, l.jsxs)("div", {
     children: [(0, l.jsx)(r.Z, {
       user: t,
       displayProfile: n,
       profileType: u.y0.PANEL,
       showPremiumBadgeUpsell: !0,
-      isHovering: p,
+      isHovering: E,
       animateOnHover: !m
     }), (0, l.jsx)(c.tZ, {
       user: t,
@@ -46,7 +46,7 @@ t.Z = e => {
       profileEffectId: C,
       maxLoops: 0,
       resetOnHover: !0,
-      isHovering: p,
+      isHovering: E,
       urlQueryString: "dm-view",
       noBorderRadius: !0
     })]

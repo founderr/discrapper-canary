@@ -76,13 +76,13 @@ t.Z = i.memo(function e(t) {
     disableInteraction: F = !1,
     hasThread: V,
     treatSpam: w
-  } = t, H = j.OBS.has(o.type) ? o.messageReference : void 0, Y = (0, r.e7)([I.Z], () => I.Z.getMessageByReference(H)), W = (0, r.e7)([m.Z], () => o.type === j.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED ? m.Z.getChannel(Y.message.channel_id) : null), z = T.x4.useSetting(), K = T.RS.useSetting(), Q = T.NA.useSetting(), X = T.QK.useSetting(), q = (0, d.A)((null !== (n = o.editedTimestamp) && void 0 !== n ? n : o.timestamp).valueOf()), J = (0, E.Z)(null == l ? void 0 : l.id), {
+  } = t, H = j.OBS.has(o.type) ? o.messageReference : void 0, Y = (0, r.e7)([I.Z], () => I.Z.getMessageByReference(H)), W = (0, r.e7)([m.Z], () => o.type === j.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED ? m.Z.getChannel(Y.message.channel_id) : null), K = T.x4.useSetting(), z = T.RS.useSetting(), Q = T.NA.useSetting(), X = T.QK.useSetting(), q = (0, d.A)((null !== (n = o.editedTimestamp) && void 0 !== n ? n : o.timestamp).valueOf()), J = (0, E.Z)(null == l ? void 0 : l.id), {
     disableReactionCreates: $
   } = (0, R.Z)(l), {
     content: ee,
     hasSpoilerEmbeds: et
   } = (0, M.Z)(o, {
-    hideSimpleEmbedContent: K && Q,
+    hideSimpleEmbedContent: z && Q,
     allowList: q,
     allowHeading: q,
     allowLinks: !0,
@@ -127,8 +127,8 @@ t.Z = i.memo(function e(t) {
       disableReactionUpdates: !1,
       renderThreadAccessory: V,
       renderComponentAccessory: !1,
-      inlineAttachmentMedia: z,
-      inlineEmbedMedia: K,
+      inlineAttachmentMedia: K,
+      inlineEmbedMedia: z,
       renderEmbeds: Q,
       gifAutoPlay: X,
       poll: ec,

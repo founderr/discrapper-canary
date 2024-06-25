@@ -18,10 +18,10 @@ function h(e) {
   let n = (0, l.e7)([i.Z], () => i.Z.getStageVideoLimitBoostUpsellDismissed(e.id), [e.id]),
     h = (0, r.Io)(e.id),
     m = (0, r.Rk)(e.id, o.pV.AUDIENCE),
-    p = (0, u.PK)(e.id),
-    E = (0, l.e7)([s.Z], () => s.Z.getGuild(e.guild_id), [e.guild_id]),
+    E = (0, u.PK)(e.id),
+    p = (0, l.e7)([s.Z], () => s.Z.getGuild(e.guild_id), [e.guild_id]),
     g = (0, l.e7)([a.Z], () => a.Z.can(c.yP, e), [e]),
-    f = null !== (t = null == E ? void 0 : E.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
-    C = !(null == E ? void 0 : E.isCommunity()) && f > d.RcX;
-  return p && !n && g && !C && h + m >= f
+    f = null !== (t = null == p ? void 0 : p.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
+    C = !(null == p ? void 0 : p.isCommunity()) && f > d.RcX;
+  return E && !n && g && !C && h + m >= f
 }

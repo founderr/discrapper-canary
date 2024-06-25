@@ -9,8 +9,8 @@ var l = n(735250),
   d = n(27457),
   h = n(823379),
   m = n(5192),
-  p = n(501655),
-  E = n(689938),
+  E = n(501655),
+  p = n(689938),
   g = n(679386);
 let f = (e, t) => m.ZP.getName(e.getGuildId(), e.id, t.user);
 t.Z = function(e) {
@@ -21,7 +21,7 @@ t.Z = function(e) {
     hasConnectPermission: _
   } = e, I = (0, u.J)(C.guild_id), x = i.useCallback(() => {
     I ? (0, c.hk)(C.guild_id, () => r.default.selectVoiceChannel(C.id)) : r.default.selectVoiceChannel(C.id)
-  }, [C.id, C.guild_id, I]), T = m.filter(e => e.type === p.Ui.VOICE), N = 4 === T.length ? 2 : 3, Z = (0, s.Wu)([o.Z], () => T.map(e => o.Z.getParticipant(C.id, e.id)).filter(h.lm), [C.id, T]);
+  }, [C.id, C.guild_id, I]), T = m.filter(e => e.type === E.Ui.VOICE), N = 4 === T.length ? 2 : 3, Z = (0, s.Wu)([o.Z], () => T.map(e => o.Z.getParticipant(C.id, e.id)).filter(h.lm), [C.id, T]);
   return (0, l.jsxs)("div", {
     className: g.container,
     children: [(0, l.jsx)("div", {
@@ -48,12 +48,12 @@ t.Z = function(e) {
       children: (0, l.jsx)(a.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: (t = C, 0 === (n = T).length ? E.Z.Messages.CURRENTLY_IN_STAGE_EMPTY : 1 === n.length ? E.Z.Messages.CURRENTLY_IN_STAGE_1.format({
+        children: (t = C, 0 === (n = T).length ? p.Z.Messages.CURRENTLY_IN_STAGE_EMPTY : 1 === n.length ? p.Z.Messages.CURRENTLY_IN_STAGE_1.format({
           a: f(t, n[0])
-        }) : 2 === n.length ? E.Z.Messages.CURRENTLY_IN_STAGE_2.format({
+        }) : 2 === n.length ? p.Z.Messages.CURRENTLY_IN_STAGE_2.format({
           a: f(t, n[0]),
           b: f(t, n[1])
-        }) : n.length > 2 ? E.Z.Messages.CURRENTLY_IN_STAGE_2_N.format({
+        }) : n.length > 2 ? p.Z.Messages.CURRENTLY_IN_STAGE_2_N.format({
           a: f(t, n[0]),
           b: f(t, n[1]),
           n: n.length - 2
@@ -65,7 +65,7 @@ t.Z = function(e) {
       color: _ ? a.Button.Colors.GREEN : a.Button.Colors.PRIMARY,
       onClick: x,
       size: a.Button.Sizes.MEDIUM,
-      children: _ ? E.Z.Messages.STAGE_CHANNEL_JOIN : E.Z.Messages.CHANNEL_LOCKED_SHORT
+      children: _ ? p.Z.Messages.STAGE_CHANNEL_JOIN : p.Z.Messages.CHANNEL_LOCKED_SHORT
     })]
   })
 }

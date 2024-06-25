@@ -21,16 +21,16 @@ t.Z = e => {
   if (null == t.unpublishedAt) return null;
   let i = (0, C.OT)(t.unpublishedAt);
 
-  function g(e) {
+  function E(e) {
     return (0, a.jsx)(u.TextBadge, {
       disableColor: !0,
       text: e,
       className: l()((0, c.wj)(r) ? p.badgeDark : p.badgeLight, n)
     })
   }
-  return (0, o.EQ)([s, i > 1]).with(["card", !0], () => null).with(["banner", !0], () => g(f.Z.Messages.COLLECTIBLES_DAYS_LEFT_IN_SHOP.format({
+  return (0, o.EQ)([s, i > 1]).with(["card", !0], () => null).with(["banner", !0], () => E(f.Z.Messages.COLLECTIBLES_DAYS_LEFT_IN_SHOP.format({
     days: i
-  }))).with(["modal", !0], () => g(f.Z.Messages.COLLECTIBLES_DAYS_LEFT.format({
+  }))).with(["modal", !0], () => E(f.Z.Messages.COLLECTIBLES_DAYS_LEFT.format({
     days: i
-  }))).otherwise(() => g(f.Z.Messages.COLLECTIBLES_LAST_DAY))
+  }))).otherwise(() => E(f.Z.Messages.COLLECTIBLES_LAST_DAY))
 }

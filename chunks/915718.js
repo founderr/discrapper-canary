@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(607070),
   h = n(451576),
   m = n(358221),
-  p = n(605236),
-  E = n(243778),
+  E = n(605236),
+  p = n(243778),
   g = n(590293),
   f = n(970731),
   C = n(560688),
@@ -88,17 +88,17 @@ class D extends i.PureComponent {
     } = this.props;
     if (t) return null;
     let m = c.isManaged(),
-      p = "",
+      E = "",
       g = !1;
-    s ? (p = m ? P.Z.Messages.VOICE_UNAVAILABLE : P.Z.Messages.CALL_UNAVAILABLE, e = r.Tooltip.Colors.RED, g = !0) : o ? (p = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, g = !0) : p = i ? m ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VOICE_CALL : m ? P.Z.Messages.CONNECT : P.Z.Messages.START_VOICE_CALL;
+    s ? (E = m ? P.Z.Messages.VOICE_UNAVAILABLE : P.Z.Messages.CALL_UNAVAILABLE, e = r.Tooltip.Colors.RED, g = !0) : o ? (E = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, g = !0) : E = i ? m ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VOICE_CALL : m ? P.Z.Messages.CONNECT : P.Z.Messages.START_VOICE_CALL;
     let C = (0, l.jsx)(v.ZP.Icon, {
       icon: r.PhoneCallIcon,
       onClick: this.handleVoiceClick,
       disabled: g,
-      tooltip: p,
+      tooltip: E,
       tooltipColor: e
     });
-    return (0, l.jsx)(E.Z, {
+    return (0, l.jsx)(p.Z, {
       contentTypes: d,
       children: e => {
         let {
@@ -174,7 +174,7 @@ class D extends i.PureComponent {
         callActive: n,
         canShowActivityGdmTooltip: l
       } = this.props;
-      if (l && (0, p.EW)(a.z.ACTIVITY_GDM_CALL_TOOLTIP, {
+      if (l && (0, E.EW)(a.z.ACTIVITY_GDM_CALL_TOOLTIP, {
           dismissAction: L.L.AUTO
         }), t);
       else if (n) return this.handleJoinCall(!1);
@@ -196,8 +196,8 @@ function U(e) {
   let {
     channel: t
   } = e, n = (0, g.Z)(), r = (0, s.e7)([m.Z], () => m.Z.getMode(t.id)), o = (0, s.e7)([S.Z], () => S.Z.isInChannel(t.id)), c = (0, s.e7)([d.Z], () => d.Z.useReducedMotion), {
-    callActive: p,
-    callUnavailable: E
+    callActive: E,
+    callUnavailable: p
   } = (0, s.cj)([I.Z], () => ({
     callActive: I.Z.isCallActive(t.id),
     callUnavailable: I.Z.isCallUnavailable(t.id)
@@ -219,8 +219,8 @@ function U(e) {
     channel: t,
     mode: r,
     inCall: o,
-    callActive: p,
-    callUnavailable: E,
+    callActive: E,
+    callUnavailable: p,
     notFriend: C,
     isBlocked: _,
     appContext: v,

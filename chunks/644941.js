@@ -18,14 +18,14 @@ var s = n(735250),
   N = n(962250),
   p = n(768581),
   j = n(814225),
-  A = n(567409),
-  M = n(774073),
+  M = n(567409),
+  A = n(774073),
   _ = n(383895),
   O = n(183391),
   T = n(689938),
   f = n(997844);
 let L = "GameProfileModal",
-  S = function() {
+  P = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
       l = arguments.length > 1 ? arguments[1] : void 0;
     if (null == e) return [];
@@ -36,7 +36,7 @@ let L = "GameProfileModal",
       s !== l && (null == n[s] && (n[s] = 0), n[s] += 1)
     }), Object.keys(n).sort((e, l) => n[l] - n[e])
   },
-  C = e => {
+  S = e => {
     var l;
     let {
       applicationId: n,
@@ -63,13 +63,13 @@ let L = "GameProfileModal",
       })
     })
   },
-  P = [c.z.DESKTOP, c.z.XBOX, c.z.PLAYSTATION, c.z.NINTENDO],
+  C = [c.z.DESKTOP, c.z.XBOX, c.z.PLAYSTATION, c.z.NINTENDO],
   R = e => {
     let {
       platforms: l
     } = e, n = [...new Set(l)];
     !n.includes(c.z.DESKTOP) && (n.includes(c.z.MACOS) || n.includes(c.z.LINUX)) && n.push(c.z.DESKTOP);
-    let t = (n = n.filter(e => P.includes(e))).map(e => {
+    let t = (n = n.filter(e => C.includes(e))).map(e => {
       switch (e) {
         case c.z.DESKTOP:
           return (0, s.jsx)(m.ScreenIcon, {}, e);
@@ -92,7 +92,7 @@ let L = "GameProfileModal",
     var l, a, r;
     let {
       applicationId: c,
-      channel: P,
+      channel: C,
       transitionState: Z,
       onClose: G
     } = e, {
@@ -109,10 +109,10 @@ let L = "GameProfileModal",
     }, []);
     let {
       entries: H
-    } = (0, A.Z)(), Y = t.useMemo(() => {
+    } = (0, M.Z)(), Y = t.useMemo(() => {
       var e;
       return null !== (e = null == H ? void 0 : H.filter(e => (0, E.d)(e) && e.extra.application_id === c)) && void 0 !== e ? e : []
-    }, [H, c]), K = t.useMemo(() => S(H, c), [H, c]);
+    }, [H, c]), K = t.useMemo(() => P(H, c), [H, c]);
     t.useEffect(() => {
       h.Z.getDetectableGamesSupplemental([c, ...K])
     }, [c, K]);
@@ -144,7 +144,7 @@ let L = "GameProfileModal",
           src: e
         }))]
       }, [null == q ? void 0 : q.artwork, null == q ? void 0 : q.screenshots]),
-      $ = (0, M.ZP)({
+      $ = (0, A.ZP)({
         location: "GameProfileModal",
         applicationId: c
       });
@@ -242,7 +242,7 @@ let L = "GameProfileModal",
                 className: i()(f.column, f.gapNone),
                 children: null == Y ? void 0 : Y.map(e => (0, s.jsx)(_.Z, {
                   entry: e,
-                  channel: P,
+                  channel: C,
                   onClose: G
                 }, e.id))
               })]
@@ -291,9 +291,9 @@ let L = "GameProfileModal",
             }), (0, s.jsx)("div", {
               className: f.row,
               style: {},
-              children: K.filter(M.z6).slice(0, 5).map(e => (0, s.jsx)(C, {
+              children: K.filter(A.z6).slice(0, 5).map(e => (0, s.jsx)(S, {
                 applicationId: e,
-                channel: P,
+                channel: C,
                 onClose: G
               }, e))
             })]

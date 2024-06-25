@@ -15,8 +15,8 @@ var i = n(512722),
   d = n(167675),
   h = n(418469),
   m = n(673539),
-  p = n(218035),
-  E = n(775666),
+  E = n(218035),
+  p = n(775666),
   g = n(423589),
   f = n(592125),
   C = n(496675),
@@ -57,8 +57,8 @@ function Z(e) {
       let t = (0, a.e7)([f.Z], () => f.Z.getChannel(e), [e]);
       s()(null != t, "useNotificationSettingsItem: channel cannot be undefined");
       let n = (0, g.Mn)("StageChannelCallOverflowMenu"),
-        l = (0, E.ZP)(t),
-        i = (0, p.Z)(t);
+        l = (0, p.ZP)(t),
+        i = (0, E.Z)(t);
       return n ? l : i
     }(t), (0, d.Z)(), (0, u.Z)(t), A, (0, h.Z)(v, i)]
   })

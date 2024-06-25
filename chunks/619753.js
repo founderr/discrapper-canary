@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(607070),
   h = n(933557),
   m = n(995123),
-  p = n(905405),
-  E = n(255269),
+  E = n(905405),
+  p = n(255269),
   g = n(937889),
   f = n(703656),
   C = n(359110),
@@ -40,8 +40,8 @@ function P(e) {
     search: n,
     searchId: h,
     renderEmbeds: m,
-    scrollTo: p,
-    searchResults: E,
+    scrollTo: E,
+    searchResults: p,
     blockCount: g,
     onChangePage: C
   } = e, {
@@ -70,9 +70,9 @@ function P(e) {
     }
   }, [h]), R = i.useMemo(() => {
     let e;
-    if (null == E) return [];
+    if (null == p) return [];
     let t = 0;
-    return E.reduce((n, l) => {
+    return p.reduce((n, l) => {
       let i = l.find(e => e.isSearchHit);
       if (!S && null != i && N.Z.isBlockedForMessage(i)) return n;
       let s = I.Z.getChannel(l[0].channel_id);
@@ -82,17 +82,17 @@ function P(e) {
         startIndex: t
       }), t += 1, n[n.length - 1].results.push(l), e = null == s ? void 0 : s.id, n)
     }, [])
-  }, [E, S]), P = i.useRef([]), b = R.reduce((e, t) => e + 1 + t.results.length, 0), D = i.useCallback((e, t) => {
+  }, [p, S]), P = i.useRef([]), b = R.reduce((e, t) => e + 1 + t.results.length, 0), D = i.useCallback((e, t) => {
     if (!d.Z.keyboardModeEnabled) return;
     let n = P.current,
       l = null != t ? n[t] : void 0;
     if (null == l || null == l.hitRef.current) return;
     let i = l.hitRef.current.getClientRects()[0];
-    p(i.top - .5 * i.height, !1, () => {
+    E(i.top - .5 * i.height, !1, () => {
       var t;
       null === (t = document.getElementById(e)) || void 0 === t || t.focus()
     })
-  }, [p]), U = i.useCallback(e => {
+  }, [E]), U = i.useCallback(e => {
     let t = P.current[e];
     null == t || t.jumpTo()
   }, []), k = (0, s.ZP)({
@@ -101,7 +101,7 @@ function P(e) {
     focusedIndex: 0,
     setFocus: D,
     onSelect: U
-  }), w = Z.Z.getQuery(h), H = Z.Z.getSearchType(h) === j.aib.FAVORITES, B = (0, u.nC)(null !== (t = null == w ? void 0 : w.content) && void 0 !== t ? t : ""), G = R.map(e => {
+  }), w = Z.Z.getQuery(h), H = Z.Z.getSearchType(h) === j.aib.FAVORITES, G = (0, u.nC)(null !== (t = null == w ? void 0 : w.content) && void 0 !== t ? t : ""), B = R.map(e => {
     let {
       channel: t,
       results: n,
@@ -110,11 +110,11 @@ function P(e) {
     return (0, l.jsx)(y, {
       channel: t,
       results: n,
-      highlighter: B,
+      highlighter: G,
       startIndex: i,
       resultRefs: P,
       totalResults: x,
-      scrollTo: p,
+      scrollTo: E,
       searchId: h,
       renderEmbeds: m,
       offset: _,
@@ -123,12 +123,12 @@ function P(e) {
       favoriteSearch: H
     }, "".concat(t.id, "-").concat(i))
   });
-  G.push();
+  B.push();
   let V = i.useRef(null);
   i.useLayoutEffect(() => {
     var e;
     null === (e = V.current) || void 0 === e || e.focus()
-  }, [E]);
+  }, [p]);
   let F = (0, a.useFocusJumpSection)();
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)("div", {
@@ -136,7 +136,7 @@ function P(e) {
       ...k.getContainerProps(),
       ...F,
       "aria-busy": T,
-      children: G
+      children: B
     }), g > 0 ? (0, l.jsxs)(a.Clickable, {
       tag: "div",
       className: O.resultsBlocked,
@@ -176,11 +176,11 @@ function y(e) {
     jumpToMessage: P,
     listNavigator: y,
     favoriteSearch: b
-  } = e, D = _.cC.useSetting(), U = (0, p.p)(), k = i.useCallback(e => {
+  } = e, D = _.cC.useSetting(), U = (0, E.p)(), k = i.useCallback(e => {
     if (e === S.Z.getChannelId()) return;
     let t = I.Z.getChannel(e);
     if (null != t && !!T.Z.can(j.Plq.VIEW_CHANNEL, t))(0, C.Kh)(t.id)
-  }, []), w = null != s ? (0, h.F6)(s, v.default, N.Z, !1) : "???", H = b && null != s.guild_id ? null === (t = x.Z.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, B = (null == s ? void 0 : s.parent_id) != null ? I.Z.getChannel(s.parent_id) : null, G = null != B ? B.name : null, V = null !== (n = (0, m.Z)(s)) && void 0 !== n ? n : a.TextIcon, F = null != B ? (0, m.Z)(B) : null, z = T.Z.can(j.Plq.MANAGE_MESSAGES, s), {
+  }, []), w = null != s ? (0, h.F6)(s, v.default, N.Z, !1) : "???", H = b && null != s.guild_id ? null === (t = x.Z.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, G = (null == s ? void 0 : s.parent_id) != null ? I.Z.getChannel(s.parent_id) : null, B = null != G ? G.name : null, V = null !== (n = (0, m.Z)(s)) && void 0 !== n ? n : a.TextIcon, F = null != G ? (0, m.Z)(G) : null, z = T.Z.can(j.Plq.MANAGE_MESSAGES, s), {
     content: W
   } = (0, g.ZP)({
     content: w,
@@ -193,9 +193,9 @@ function y(e) {
     let e = Y.current;
     null != e && null != e.offsetWidth && null != e.scrollWidth && q(e.offsetWidth < e.scrollWidth)
   }, []);
-  let X = [w, G, H].filter(e => null != e).join(", ");
+  let X = [w, B, H].filter(e => null != e).join(", ");
   return (0, l.jsx)(A.a.Provider, {
-    value: (0, E.Z)(D, z),
+    value: (0, p.Z)(D, z),
     children: (0, l.jsxs)("ul", {
       role: "group",
       className: O.searchResultGroup,
@@ -217,10 +217,10 @@ function y(e) {
               className: O.channelNameText,
               children: [b && null !== H && "".concat(H, " : "), W]
             })
-          }), null != B && null != G && null != F ? (0, l.jsxs)(a.Clickable, {
+          }), null != G && null != B && null != F ? (0, l.jsxs)(a.Clickable, {
             className: O.parentChannelNameClickable,
             onClick: e => {
-              e.stopPropagation(), k(B.id)
+              e.stopPropagation(), k(G.id)
             },
             children: [(0, l.jsx)(F, {
               className: O.parentChannelNameIcon,
@@ -230,7 +230,7 @@ function y(e) {
               className: O.parentChannelNameText,
               variant: "text-xs/medium",
               color: "header-secondary",
-              children: G
+              children: B
             })]
           }) : null]
         })

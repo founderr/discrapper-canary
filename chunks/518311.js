@@ -13,8 +13,8 @@ var l, i = n(735250),
   d = n.n(u),
   h = n(873546),
   m = n(442837),
-  p = n(481060),
-  E = n(570140),
+  E = n(481060),
+  p = n(570140),
   g = n(26151),
   f = n(493683),
   C = n(758059),
@@ -40,8 +40,8 @@ var l, i = n(735250),
   k = n(246946),
   w = n(594174),
   H = n(285952),
-  B = n(153124),
-  G = n(502568),
+  G = n(153124),
+  B = n(502568),
   V = n(626135),
   F = n(572004),
   z = n(585483),
@@ -64,8 +64,8 @@ function en(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let el = (0, B.hQ)(),
-  ei = (0, B.hQ)();
+let el = (0, G.hQ)(),
+  ei = (0, G.hQ)();
 
 function es(e) {
   let {
@@ -91,15 +91,15 @@ let ea = e => {
       var e;
       return null !== (e = D.ZP.lastMessageId(n.id)) && void 0 !== e ? e : n.id
     });
-    return (0, i.jsx)(p.Clickable, {
+    return (0, i.jsx)(E.Clickable, {
       onClick: () => {
         (0, j.XU)(Q.ME, n.id), l()
       },
       children: (0, i.jsxs)("div", {
         className: $.confirmChannelItemContainer,
-        children: [(0, i.jsx)(p.Avatar, {
+        children: [(0, i.jsx)(E.Avatar, {
           src: (0, A.x)(n),
-          size: p.AvatarSizes.SIZE_24,
+          size: E.AvatarSizes.SIZE_24,
           "aria-label": s
         }), (0, i.jsx)("span", {
           className: $.confirmChannelName,
@@ -117,20 +117,20 @@ let ea = e => {
       channelIds: n,
       ...l
     } = e, s = (0, m.Wu)([O.Z], () => Array.from(n).map(O.Z.getChannel), [n]);
-    return (0, i.jsxs)(p.ConfirmModal, {
+    return (0, i.jsxs)(E.ConfirmModal, {
       header: J.Z.Messages.GROUP_DM_INVITE_CONFIRM,
       confirmText: J.Z.Messages.GROUP_DM_INVITE_CONFIRM_BUTTON,
       cancelText: J.Z.Messages.CANCEL,
       onConfirm: t,
-      confirmButtonColor: p.Button.Colors.BRAND,
+      confirmButtonColor: E.Button.Colors.BRAND,
       ...l,
-      children: [(0, i.jsx)(p.Text, {
+      children: [(0, i.jsx)(E.Text, {
         variant: "text-md/normal",
         children: J.Z.Messages.GROUP_DM_INVITE_CONFIRM_DESCRIPTION
-      }), (0, i.jsx)(p.FormTitle, {
+      }), (0, i.jsx)(E.FormTitle, {
         className: $.selectExistingFormHeader,
         children: J.Z.Messages.GROUP_DM_INVITE_SELECT_EXISTING
-      }), (0, i.jsx)(p.Scroller, {
+      }), (0, i.jsx)(E.Scroller, {
         className: $.confirmInviteScroller,
         children: s.filter(W.lm).sort((e, t) => {
           var n, l;
@@ -149,7 +149,7 @@ class eo extends(l = s.PureComponent) {
     let {
       channel: e
     } = this.props;
-    E.Z.wait(() => I.Z.open(null == e ? void 0 : e.id));
+    p.Z.wait(() => I.Z.open(null == e ? void 0 : e.id));
     let t = (0, S.v_)(e);
     null != e ? e.isDM() ? V.default.track(Q.rMx.OPEN_POPOUT, {
       ...t,
@@ -167,7 +167,7 @@ class eo extends(l = s.PureComponent) {
     }), z.S.subscribe(Q.CkL.SCROLL_PAGE_UP, this.scrollPageUp), z.S.subscribe(Q.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown)
   }
   componentWillUnmount() {
-    z.S.unsubscribe(Q.CkL.SCROLL_PAGE_UP, this.scrollPageUp), z.S.unsubscribe(Q.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), E.Z.wait(() => I.Z.close())
+    z.S.unsubscribe(Q.CkL.SCROLL_PAGE_UP, this.scrollPageUp), z.S.unsubscribe(Q.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), p.Z.wait(() => I.Z.close())
   }
   isNotFriends() {
     let {
@@ -218,7 +218,7 @@ class eo extends(l = s.PureComponent) {
       channel: e,
       selectedUsers: t
     } = this.props, n = this.getRemaining(), l = null != e && 0 === t.size || n < 0, s = t.size > 1 ? J.Z.Messages.CREATE_GROUP_DM : J.Z.Messages.CREATE_DM;
-    return (0, i.jsx)(p.Button, {
+    return (0, i.jsx)(E.Button, {
       fullWidth: !0,
       disabled: l,
       onClick: this.handleInviteUsers,
@@ -235,8 +235,8 @@ class eo extends(l = s.PureComponent) {
       l = 0 === t.size || n < 0;
     return (0, i.jsx)("div", {
       className: $.addButton,
-      children: (0, i.jsx)(p.Button, {
-        size: p.Button.Sizes.SMALL,
+      children: (0, i.jsx)(E.Button, {
+        size: E.Button.Sizes.SMALL,
         disabled: l,
         onClick: this.handleInviteUsers,
         children: J.Z.Messages.ADD
@@ -251,7 +251,7 @@ class eo extends(l = s.PureComponent) {
       }) : J.Z.Messages.GROUP_DM_INVITE_REMAINING.format({
         number: e
       });
-    return (0, i.jsx)(p.Text, {
+    return (0, i.jsx)(E.Text, {
       variant: "text-xs/normal",
       className: r()($.subtitle, {
         [$.subtitleWarning]: e < 0
@@ -302,12 +302,12 @@ class eo extends(l = s.PureComponent) {
   renderHeader() {
     let e = null != this.scrollerRef.current && this.state.separator,
       t = this.isNotFriends() ? J.Z.Messages.GROUP_DM_ADD_FRIENDS : J.Z.Messages.GROUP_DM_HEADER;
-    return (0, i.jsxs)(p.ModalHeader, {
+    return (0, i.jsxs)(E.ModalHeader, {
       direction: H.Z.Direction.VERTICAL,
       align: H.Z.Align.STRETCH,
       className: $.__invalid_header,
       separator: e,
-      children: [h.tq ? this.renderMobileCloseButton() : null, (0, i.jsx)(p.Heading, {
+      children: [h.tq ? this.renderMobileCloseButton() : null, (0, i.jsx)(E.Heading, {
         id: el,
         variant: "heading-lg/semibold",
         children: t
@@ -332,9 +332,9 @@ class eo extends(l = s.PureComponent) {
           children: J.Z.Messages.GROUP_DM_INVITE_NOT_FRIENDS.format({
             username: l
           })
-        }), (0, i.jsx)(p.Button, {
+        }), (0, i.jsx)(E.Button, {
           disabled: s,
-          size: p.Button.Sizes.SMALL,
+          size: E.Button.Sizes.SMALL,
           onClick: () => null != n ? this.handleAddFriend(n) : null,
           className: et.marginTop20,
           children: s ? J.Z.Messages.ADD_FRIEND_BUTTON_AFTER : J.Z.Messages.ADD_FRIEND_BUTTON
@@ -355,7 +355,7 @@ class eo extends(l = s.PureComponent) {
       children: (0, i.jsx)("div", {
         children: J.Z.Messages.GROUP_DM_INVITE_EMPTY
       })
-    }) : (0, i.jsx)(p.List, {
+    }) : (0, i.jsx)(E.List, {
       ref: this.scrollerRef,
       sections: [n.length],
       className: $.scroller,
@@ -376,11 +376,11 @@ class eo extends(l = s.PureComponent) {
       className: $.noFriends,
       children: [(0, i.jsx)("div", {
         children: J.Z.Messages.GROUP_DM_INVITE_NO_FRIENDS
-      }), (0, i.jsx)(p.Button, {
+      }), (0, i.jsx)(E.Button, {
         autoFocus: !0,
-        color: p.Button.Colors.GREEN,
+        color: E.Button.Colors.GREEN,
         fullWidth: !0,
-        size: p.Button.Sizes.SMALL,
+        size: E.Button.Sizes.SMALL,
         onClick: this.handleAddFriendNavigation,
         className: et.marginTop20,
         children: J.Z.Messages.ADD_FRIEND
@@ -401,7 +401,7 @@ class eo extends(l = s.PureComponent) {
     if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return null;
     let a = null != t ? (0, R.Z)(t.code) : "";
     return (0, i.jsxs)(s.Fragment, {
-      children: [(0, i.jsx)(p.FormTitle, {
+      children: [(0, i.jsx)(E.FormTitle, {
         tag: "h5",
         className: et.marginBottom8,
         children: J.Z.Messages.GROUP_DM_INVITE_LINK_TITLE
@@ -411,7 +411,7 @@ class eo extends(l = s.PureComponent) {
         }),
         justify: H.Z.Justify.BETWEEN,
         align: H.Z.Align.CENTER,
-        children: [a.length > 0 ? (0, i.jsx)(p.TextInput, {
+        children: [a.length > 0 ? (0, i.jsx)(E.TextInput, {
           className: $.copyInput,
           name: "invite",
           value: n ? J.Z.Messages.INSTANT_INVITE_HIDDEN : a,
@@ -419,7 +419,7 @@ class eo extends(l = s.PureComponent) {
           inputClassName: $.input,
           spellCheck: "false",
           onClick: e => e.currentTarget.select()
-        }) : (0, i.jsx)(p.TextInput, {
+        }) : (0, i.jsx)(E.TextInput, {
           className: $.copyInput,
           name: "invite",
           value: a,
@@ -428,20 +428,20 @@ class eo extends(l = s.PureComponent) {
           inputClassName: $.input,
           spellCheck: "false",
           onClick: () => this.createInvite()
-        }), F.wS && a.length > 0 ? (0, i.jsx)(p.Button, {
-          size: p.Button.Sizes.SMALL,
-          color: l ? p.Button.Colors.GREEN : p.Button.Colors.BRAND,
+        }), F.wS && a.length > 0 ? (0, i.jsx)(E.Button, {
+          size: E.Button.Sizes.SMALL,
+          color: l ? E.Button.Colors.GREEN : E.Button.Colors.BRAND,
           className: $.copyButton,
           onClick: () => this.handleCopyInvite(a),
           children: l ? J.Z.Messages.INVITE_COPIED : J.Z.Messages.COPY
-        }) : null, 0 === a.length ? (0, i.jsx)(p.Button, {
-          size: p.Button.Sizes.SMALL,
-          color: p.Button.Colors.BRAND,
+        }) : null, 0 === a.length ? (0, i.jsx)(E.Button, {
+          size: E.Button.Sizes.SMALL,
+          color: E.Button.Colors.BRAND,
           className: $.copyButton,
           onClick: () => this.createInvite(),
           children: J.Z.Messages.GROUP_DM_INVITE_LINK_CREATE
         }) : null]
-      }), a.length > 0 ? (0, i.jsx)(p.Text, {
+      }), a.length > 0 ? (0, i.jsx)(E.Text, {
         variant: "text-xs/normal",
         className: r()(et.marginTop8, $.footerText),
         children: J.Z.Messages.INVITE_EXPIRES_HOURS.format({
@@ -471,8 +471,8 @@ class eo extends(l = s.PureComponent) {
     let {
       transitionState: e
     } = this.props;
-    return (0, i.jsxs)(p.ModalRoot, {
-      transitionState: null != e ? e : p.ModalTransitionState.ENTERED,
+    return (0, i.jsxs)(E.ModalRoot, {
+      transitionState: null != e ? e : E.ModalTransitionState.ENTERED,
       className: $.popout,
       children: [this.renderHeader(), this.renderBody(), this.renderFooter()]
     })
@@ -504,7 +504,7 @@ class eo extends(l = s.PureComponent) {
     }), en(this, "renderMobileCloseButton", () => (0, i.jsx)("div", {
       className: r()($.mobileToolsContainer),
       ref: this._mobileCloseRef,
-      children: (0, i.jsx)(p.FocusRingScope, {
+      children: (0, i.jsx)(E.FocusRingScope, {
         containerRef: this._mobileCloseRef,
         children: (0, i.jsx)("div", {
           children: (0, i.jsx)(T.Z, {
@@ -611,18 +611,18 @@ class eo extends(l = s.PureComponent) {
       } = this.props, l = Array.from(t);
       if (null != e) {
         let t = ed(Array.from(new Set([...e.recipients, ...l])));
-        t.size > 0 ? (0, p.openModal)(n => (0, i.jsx)(er, {
+        t.size > 0 ? (0, E.openModal)(n => (0, i.jsx)(er, {
           ...n,
           onConfirm: () => this.pushToExistingDM(e, l),
           channelIds: t
-        }), {}, (0, p.modalContextFromAppContext)(this.context.appContext)) : this.pushToExistingDM(e, l)
+        }), {}, (0, E.modalContextFromAppContext)(this.context.appContext)) : this.pushToExistingDM(e, l)
       } else {
         let e = ed(l);
-        l.length > 1 && e.size > 0 ? (0, p.openModal)(t => (0, i.jsx)(er, {
+        l.length > 1 && e.size > 0 ? (0, E.openModal)(t => (0, i.jsx)(er, {
           ...t,
           onConfirm: () => this.createNewDM(l),
           channelIds: e
-        }), {}, (0, p.modalContextFromAppContext)(this.context.appContext)) : this.createNewDM(l)
+        }), {}, (0, E.modalContextFromAppContext)(this.context.appContext)) : this.createNewDM(l)
       }
       n()
     }), en(this, "handleCopyInvite", e => {
@@ -669,10 +669,10 @@ function eu(e) {
     popoutPosition: o = "bottom",
     popoutAlign: c = "right",
     subscribeToGlobalHotkey: u = !1
-  } = e, [d, h] = s.useState(null != t && t.isGroupDM() && 0 === t.recipients.length), m = (0, v.Dd)(null == t ? void 0 : t.id), E = s.useCallback(() => h(e => !e), []);
-  return (s.useEffect(() => (u && z.S.subscribe(Q.CkL.TOGGLE_DM_CREATE, E), () => {
-    z.S.unsubscribe(Q.CkL.TOGGLE_DM_CREATE, E)
-  }), [u, E]), m) ? null : (0, i.jsx)(p.Popout, {
+  } = e, [d, h] = s.useState(null != t && t.isGroupDM() && 0 === t.recipients.length), m = (0, v.Dd)(null == t ? void 0 : t.id), p = s.useCallback(() => h(e => !e), []);
+  return (s.useEffect(() => (u && z.S.subscribe(Q.CkL.TOGGLE_DM_CREATE, p), () => {
+    z.S.unsubscribe(Q.CkL.TOGGLE_DM_CREATE, p)
+  }), [u, p]), m) ? null : (0, i.jsx)(E.Popout, {
     renderPopout: e => (0, i.jsx)(ec, {
       ...e,
       onClose: e.closePopout,
@@ -682,11 +682,11 @@ function eu(e) {
     shouldShow: d,
     align: c,
     onRequestClose: () => h(!1),
-    animation: p.Popout.Animation.NONE,
-    children: e => (0, i.jsx)(G.ZP.Icon, {
+    animation: E.Popout.Animation.NONE,
+    children: e => (0, i.jsx)(B.ZP.Icon, {
       ...e,
-      onClick: E,
-      icon: null != l ? l : null == t ? p.ChatPlusIcon : p.GroupPlusIcon,
+      onClick: p,
+      icon: null != l ? l : null == t ? E.ChatPlusIcon : E.GroupPlusIcon,
       className: n,
       iconClassName: n,
       tooltip: a,

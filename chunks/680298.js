@@ -4,8 +4,8 @@ t.d(n, {
   }
 });
 var i = t(735250),
-  s = t(470079),
-  l = t(481060),
+  l = t(470079),
+  s = t(481060),
   a = t(239091),
   r = t(911969),
   o = t(399860),
@@ -19,11 +19,11 @@ function u(e) {
     canNavigate: I,
     command: N,
     guildId: E
-  } = e, T = s.useMemo(() => {
+  } = e, T = l.useMemo(() => {
     var e;
     return 0 !== Object.keys(null !== (e = N.permissions) && void 0 !== e ? e : {}).length
-  }, [N.permissions]), m = s.useCallback(() => {
-    null != N && I() && (0, l.openModalLazy)(async () => {
+  }, [N.permissions]), m = l.useCallback(() => {
+    null != N && I() && (0, s.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([t.e("99387"), t.e("78786")]).then(t.bind(t, 50474));
@@ -36,7 +36,7 @@ function u(e) {
         ...t
       })
     })
-  }, [n, u, I, N, E]), _ = s.useCallback(e => {
+  }, [n, u, I, N, E]), _ = l.useCallback(e => {
     (0, a.jW)(e, async () => {
       let {
         default: e
@@ -47,8 +47,8 @@ function u(e) {
         label: c.Z.Messages.COPY_ID_COMMAND
       })
     })
-  }, [N]), h = N.type === r.yU.CHAT ? l.SlashBoxIcon : l.PaperIcon, O = (0, o.gw)(N.type, N.displayName);
-  return (0, i.jsxs)(l.Clickable, {
+  }, [N]), h = N.type === r.yU.CHAT ? s.SlashBoxIcon : s.PaperIcon, g = (0, o.gw)(N.type, N.displayName);
+  return (0, i.jsxs)(s.Clickable, {
     onClick: m,
     className: d.item,
     onContextMenu: _,
@@ -58,18 +58,18 @@ function u(e) {
         className: d.icon,
         size: "md",
         color: "currentColor"
-      }), (0, i.jsx)(l.Text, {
+      }), (0, i.jsx)(s.Text, {
         variant: "text-md/normal",
-        children: O
+        children: g
       })]
     }), (0, i.jsx)("div", {
       className: d.statusContainer,
       children: T ? (0, i.jsxs)("div", {
         className: d.statusLine,
-        children: [(0, i.jsx)(l.Text, {
+        children: [(0, i.jsx)(s.Text, {
           variant: "text-md/normal",
           children: c.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_STATUS_HAS_OVERRIDES
-        }), (0, i.jsx)(l.CircleInformationIcon, {
+        }), (0, i.jsx)(s.CircleInformationIcon, {
           size: "sm",
           color: "currentColor",
           className: d.statusIcon

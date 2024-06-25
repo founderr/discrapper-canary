@@ -10,8 +10,8 @@ var l = n(735250),
   d = n(499371),
   h = n(63063),
   m = n(981631),
-  p = n(689938),
-  E = n(120841);
+  E = n(689938),
+  p = n(120841);
 
 function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -31,31 +31,31 @@ class f extends i.PureComponent {
   render() {
     let {
       nsfwDisallowed: e
-    } = this.props, t = p.Z.Messages.NSFW_DESCRIPTION;
-    t = e ? p.Z.Messages.AGE_GATE_NSFW_UNDERAGE_BODY.format({
+    } = this.props, t = E.Z.Messages.NSFW_DESCRIPTION;
+    t = e ? E.Z.Messages.AGE_GATE_NSFW_UNDERAGE_BODY.format({
       helpURL: h.Z.getArticleURL(m.BhN.NSFW_AGE_GATING)
-    }) : p.Z.Messages.AGE_GATE_NSFW_DESCRIPTION;
+    }) : E.Z.Messages.AGE_GATE_NSFW_DESCRIPTION;
     let n = e ? (0, l.jsx)(d.Z, {
       onAgree: this.handleAgree,
       onDisagree: this.handleDisagree,
-      title: p.Z.Messages.AGE_GATE_NSFW_UNDERAGE_HEADER,
+      title: E.Z.Messages.AGE_GATE_NSFW_UNDERAGE_HEADER,
       description: t,
       agreement: null,
-      disagreement: p.Z.Messages.BACK,
-      imageClassName: E.ageGatedImage
+      disagreement: E.Z.Messages.BACK,
+      imageClassName: p.ageGatedImage
     }) : (0, l.jsx)(d.Z, {
       onAgree: this.handleAgree,
       onDisagree: this.handleDisagree,
-      title: p.Z.Messages.NSFW_TITLE,
+      title: E.Z.Messages.NSFW_TITLE,
       description: t,
-      agreement: p.Z.Messages.NSFW_ACCEPT,
-      disagreement: p.Z.Messages.NSFW_DECLINE
+      agreement: E.Z.Messages.NSFW_ACCEPT,
+      disagreement: E.Z.Messages.NSFW_DECLINE
     });
     return (0, l.jsx)(o.AdvancedScroller, {
       ref: this.scroller,
-      className: E.scroller,
+      className: p.scroller,
       children: (0, l.jsx)("div", {
-        className: a()(this.props.className, E.wrapper),
+        className: a()(this.props.className, p.wrapper),
         children: n
       })
     })

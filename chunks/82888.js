@@ -20,8 +20,8 @@ function m(e) {
     renderExternalHeader: n
   } = e, {
     connectedChannelId: m,
-    connectedActivity: p,
-    activityPanelMode: E
+    connectedActivity: E,
+    activityPanelMode: p
   } = (0, s.cj)([c.ZP], () => {
     var e;
     let t = c.ZP.getConnectedActivityChannelId();
@@ -34,8 +34,8 @@ function m(e) {
   if (i.useEffect(() => {
       null != m && null == f && (0, o.gC)(h.MI.RESIZABLE)
     }, [m, f]), !g) return null;
-  let C = null == p ? void 0 : p.applicationId;
-  return E !== h.Ez.PANEL || null == C ? null : null == m || null == p || (0, u.Z)(m) || null == C ? null : (0, l.jsx)(d.Z, {
+  let C = null == E ? void 0 : E.applicationId;
+  return p !== h.Ez.PANEL || null == C ? null : null == m || null == E || (0, u.Z)(m) || null == C ? null : (0, l.jsx)(d.Z, {
     maxHeight: t,
     connectedChannelId: m,
     renderExternalHeader: n

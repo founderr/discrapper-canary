@@ -54,16 +54,16 @@ function E(e) {
     role: a,
     guild: c,
     children: E,
-    isDragging: N,
-    selectedItem: T,
-    onItemSelect: p,
-    itemType: S,
+    isDragging: T,
+    selectedItem: N,
+    onItemSelect: S,
+    itemType: p,
     locked: x,
     lockTooltip: M,
     showContextMenu: C,
-    theme: I,
+    theme: _,
     roleStyle: R,
-    "aria-label": _
+    "aria-label": I
   } = e, Z = n.useCallback(e => {
     (0, d.jW)(e, async () => {
       let {
@@ -76,15 +76,15 @@ function E(e) {
       })
     })
   }, [i]);
-  return N ? (0, l.jsx)("div", {
+  return T ? (0, l.jsx)("div", {
     className: m.dragged
   }) : (0, l.jsx)(o.TabBar.Item, {
     className: m.role,
     id: i,
-    selectedItem: T,
-    onItemSelect: p,
-    itemType: S,
-    "aria-label": null != M ? "".concat(_, ", ").concat(M) : _,
+    selectedItem: N,
+    onItemSelect: S,
+    itemType: p,
+    "aria-label": null != M ? "".concat(I, ", ").concat(M) : I,
     children: (0, l.jsxs)("div", {
       className: m.roleContent,
       children: ["dot" === R ? (0, l.jsx)(o.RoleDot, {
@@ -97,7 +97,7 @@ function E(e) {
         className: m.roleCircle
       }), function() {
         if (!x) return null;
-        let e = (0, r.wj)(I) ? t(27377) : t(514811);
+        let e = (0, r.wj)(_) ? t(27377) : t(514811);
         return (0, l.jsx)(o.Tooltip, {
           text: M,
           color: o.Tooltip.Colors.RED,

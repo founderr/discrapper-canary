@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(442837),
   h = n(481060),
   m = n(260300),
-  p = n(819640),
-  E = n(451478),
+  E = n(819640),
+  p = n(451478),
   g = n(486458),
   f = n(21825),
   C = n(232495),
@@ -98,12 +98,12 @@ class T extends i.PureComponent {
       highPriority: u,
       spacing: d,
       arrowAlignment: m = g.cy.TOP,
-      popoutPosition: p
+      popoutPosition: E
     } = s, {
-      offsetX: E,
+      offsetX: p,
       offsetY: C
     } = this.state, _ = {
-      left: null != E ? i.x + E : void 0,
+      left: null != p ? i.x + p : void 0,
       top: null != C ? i.y + C : void 0
     }, x = e => {
       let t = n && !e;
@@ -129,7 +129,7 @@ class T extends i.PureComponent {
       }
     }, N = this.getTutorialPopoutText();
     return (0, l.jsx)(g.ZP, {
-      position: p,
+      position: E,
       renderMedia: r,
       textAlign: o,
       spacing: d,
@@ -175,11 +175,11 @@ t.Z = 12633 == n.j ? function() {
     tutorialData: t,
     windowFocused: n,
     shouldShowAny: i
-  } = (0, d.cj)([_.Z, E.Z, p.Z], () => ({
+  } = (0, d.cj)([_.Z, p.Z, E.Z], () => ({
     indicators: _.Z.getIndicators(),
     tutorialData: _.Z.getData(),
-    shouldShowAny: _.Z.shouldShowAnyIndicators() && !p.Z.hasLayers(),
-    windowFocused: E.Z.isFocused()
+    shouldShowAny: _.Z.shouldShowAnyIndicators() && !E.Z.hasLayers(),
+    windowFocused: p.Z.isFocused()
   }));
   return i ? (0, l.jsx)(l.Fragment, {
     children: Object.entries(e).map(e => {

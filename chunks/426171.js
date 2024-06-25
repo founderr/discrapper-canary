@@ -4,7 +4,7 @@ s.d(t, {
     return m
   },
   u9: function() {
-    return g
+    return E
   },
   xV: function() {
     return h
@@ -22,7 +22,7 @@ var n = s(470079),
 let C = "".concat("#").concat("itemSkuId", "="),
   f = new RegExp("^".concat(C, "(\\d+)$")),
   p = [d.Z5c.COLLECTIBLES_SHOP, d.Z5c.COLLECTIBLES_SHOP_FULLSCREEN],
-  g = e => {
+  E = e => {
     let t = (0, r.TH)();
     n.useEffect(() => {
       if (null != e && p.includes(t.pathname)) return window.location.replace("".concat(C).concat(e.skuId)), () => {
@@ -30,7 +30,7 @@ let C = "".concat("#").concat("itemSkuId", "="),
       }
     }, [])
   },
-  E = e => {
+  g = e => {
     let {
       categories: t,
       productSkuId: s,
@@ -69,7 +69,7 @@ let C = "".concat("#").concat("itemSkuId", "="),
       isFetchingCategories: s,
       isLayer: u,
       initialItemCardRef: C
-    } = e, p = (0, a.e7)([i.Z], () => i.Z.useReducedMotion), g = n.useRef(null), m = (0, r.TH)(), h = m.pathname === d.Z5c.COLLECTIBLES_SHOP ? l.Z.HOME_PAGE_SHOP_TAB : m.pathname === d.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? l.Z.COLLECTIBLES_SHOP_FULLSCREEN : l.Z.COLLECTIBLES_SHOP, {
+    } = e, p = (0, a.e7)([i.Z], () => i.Z.useReducedMotion), E = n.useRef(null), m = (0, r.TH)(), h = m.pathname === d.Z5c.COLLECTIBLES_SHOP ? l.Z.HOME_PAGE_SHOP_TAB : m.pathname === d.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? l.Z.COLLECTIBLES_SHOP_FULLSCREEN : l.Z.COLLECTIBLES_SHOP, {
       analyticsLocations: x
     } = (0, o.ZP)(h);
     n.useEffect(() => {
@@ -77,17 +77,17 @@ let C = "".concat("#").concat("itemSkuId", "="),
       let e = f.exec(m.hash);
       if (null != e) {
         let t = e[1];
-        g.current = t
+        E.current = t
       }
     }, []);
     let I = (0, a.e7)([c.Z], () => c.Z.initialProductSkuId);
     n.useEffect(() => {
       if (s) return;
       let e = null;
-      if (u && null != I && (e = I), !u && null != g.current && (e = g.current), null != e) {
+      if (u && null != I && (e = I), !u && null != E.current && (e = E.current), null != e) {
         let s = [],
           n = setTimeout(() => {
-            let n = E({
+            let n = g({
               categories: t,
               productSkuId: e,
               analyticsLocations: x,

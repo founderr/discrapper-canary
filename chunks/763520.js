@@ -16,7 +16,7 @@ var l, i, s = n(259443),
   h = n(626135),
   m = n(981631);
 
-function p(e, t, n) {
+function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -24,7 +24,7 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(i = l || (l = {})).SELF_VIDEO = "self_video", i.SELF_STREAM = "self_stream", i.REMOTE_VIDEO = "remote_video", i.REMOTE_STREAM = "remote_stream", i.CHANGE_VIDEO_BACKGROUND = "change_video_background", i.VIDEO_PLAYER = "video_player", i.REPLAY_VIDEO_STREAM = "replay_video_stream";
-let E = new Map;
+let p = new Map;
 class g {
   onSpinnerStarted() {
     null == this.spinnerVisibleStart && (this.spinnerVisibleStart = (0, a.zO)())
@@ -33,8 +33,8 @@ class g {
     if (null == this.spinnerVisibleStart) return;
     let l = function(e) {
         var t;
-        let n = (null !== (t = E.get(e)) && void 0 !== t ? t : 0) + 1;
-        return E.set(e, n), n
+        let n = (null !== (t = p.get(e)) && void 0 !== t ? t : 0) + 1;
+        return p.set(e, n), n
       }(n),
       i = (0, a.zO)() - this.spinnerVisibleStart;
     if (this.spinnerVisibleStart = null, i < 0) {
@@ -43,7 +43,7 @@ class g {
     }
     this.logger.info("spinner visible for ".concat(i, " ms\n      [").concat(e, ", count for stream: ").concat(l, "]"));
     let s = u.Z.getGuildId(),
-      p = d.Z.getUserVoiceChannelId(s, r.default.getId()),
+      E = d.Z.getUserVoiceChannelId(s, r.default.getId()),
       g = function(e) {
         if (null != e) {
           if (e.isGuildVoice()) return "guild_voice";
@@ -52,7 +52,7 @@ class g {
           if (e.isGroupDM()) return "group_dm"
         }
         return null
-      }(o.Z.getChannel(p));
+      }(o.Z.getChannel(E));
     h.default.track(m.rMx.VIDEO_SPINNER_SHOWN_V2, {
       video_spinner_context: e,
       duration_video_spinner_visible_ms: i,
@@ -60,7 +60,7 @@ class g {
       media_session_id: u.Z.getMediaSessionId(),
       event_count_for_stream: l,
       guild_id: s,
-      channel_id: p,
+      channel_id: E,
       channel_type: g,
       spinning_user_id: t,
       connection_type: c.Z.getType(),
@@ -69,6 +69,6 @@ class g {
     })
   }
   constructor(e) {
-    p(this, "logger", void 0), p(this, "spinnerVisibleStart", null), this.logger = new s.Y(e)
+    E(this, "logger", void 0), E(this, "spinnerVisibleStart", null), this.logger = new s.Y(e)
   }
 }

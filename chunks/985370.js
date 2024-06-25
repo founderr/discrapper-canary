@@ -10,8 +10,8 @@ var l = n(735250),
   d = n(272929),
   h = n(456631),
   m = n(643720),
-  p = n(981631),
-  E = n(559820);
+  E = n(981631),
+  p = n(559820);
 t.Z = e => {
   let {
     channel: t,
@@ -62,10 +62,10 @@ t.Z = e => {
         isCenterButton: !0,
         totalCooldownSeconds: N,
         remainingCooldownSeconds: Z,
-        className: a()(E.controlButton, n),
+        className: a()(p.controlButton, n),
         onKeyDown: e => {
           var t, n;
-          return t = e, n = i, void(t.keyCode === p.yXg.ENTER && t.keyCode === p.yXg.SPACE && M(t, n))
+          return t = e, n = i, void(t.keyCode === E.yXg.ENTER && t.keyCode === E.yXg.SPACE && M(t, n))
         },
         onClick: e => {
           M(e, t)

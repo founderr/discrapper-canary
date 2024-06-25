@@ -10,8 +10,8 @@ var i = t(735250),
   o = t(543241),
   u = t(222677),
   s = t(995774),
-  d = t(665906),
-  c = t(695346),
+  c = t(665906),
+  d = t(695346),
   E = t(496675),
   f = t(768581),
   I = t(585483),
@@ -23,17 +23,17 @@ var i = t(735250),
 function _(e, n) {
   let {
     reducedMotion: t
-  } = a.useContext(l.AccessibilityPreferencesContext), _ = (0, d.$R)(n), v = (0, r.e7)([E.Z], () => (n.isPrivate() || E.Z.can(g.Plq.ADD_REACTIONS, n)) && _, [n, _]), S = (0, o.MZ)(n.getGuildId());
-  if (!c.nc.getSetting() || !v || e.type === g.uaV.GUILD_INVITE_REMINDER) return null;
+  } = a.useContext(l.AccessibilityPreferencesContext), _ = (0, c.$R)(n), v = (0, r.e7)([E.Z], () => (n.isPrivate() || E.Z.can(g.Plq.ADD_REACTIONS, n)) && _, [n, _]), S = (0, o.MZ)(n.getGuildId());
+  if (!d.nc.getSetting() || !v || e.type === g.uaV.GUILD_INVITE_REMINDER) return null;
   let A = S.filter(e => !M.ZP.isEmojiFilteredOrLocked({
     emoji: e,
     channel: n,
     intention: m.Hz.REACTION
   })).slice(0, 12).map((a, r) => {
-    var o, d, c;
+    var o, c, d;
     return (0, i.jsx)(l.MenuItem, {
       color: "default",
-      id: null !== (c = null !== (d = null !== (o = a.id) && void 0 !== o ? o : a.optionallyDiverseSequence) && void 0 !== d ? d : a.name) && void 0 !== c ? c : ":".concat(a.name, ":"),
+      id: null !== (d = null !== (c = null !== (o = a.id) && void 0 !== o ? o : a.optionallyDiverseSequence) && void 0 !== c ? c : a.name) && void 0 !== d ? d : ":".concat(a.name, ":"),
       label: null == a.id ? a.name : ":".concat(a.name, ":"),
       imageUrl: e => {
         var n;

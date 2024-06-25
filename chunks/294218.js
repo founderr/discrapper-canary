@@ -52,9 +52,9 @@ t.Z = i.memo(function(e) {
     allowHeading: F || V,
     allowLinks: !0,
     previewLinkTarget: !0
-  }), Y = n.type === x.uaV.REPLY ? n.messageReference : void 0, W = (0, o.e7)([d.Z], () => d.Z.getMessageByReference(Y)), z = (0, r.JA)(n.id), K = (0, h.ZP)(n), Q = (0, o.e7)([E.Z], () => n.hasFlag(x.iLy.HAS_THREAD) && E.Z.getChannel(m.default.castMessageIdAsChannelId(n.id))), X = (0, c.p9)({
+  }), Y = n.type === x.uaV.REPLY ? n.messageReference : void 0, W = (0, o.e7)([d.Z], () => d.Z.getMessageByReference(Y)), K = (0, r.JA)(n.id), z = (0, h.ZP)(n), Q = (0, o.e7)([E.Z], () => n.hasFlag(x.iLy.HAS_THREAD) && E.Z.getChannel(m.default.castMessageIdAsChannelId(n.id))), X = (0, c.p9)({
     guildId: j.guild_id,
-    roleId: K.iconRoleId
+    roleId: z.iconRoleId
   }), q = (0, o.e7)([_.Z], () => _.Z.can(x.Plq.CREATE_INSTANT_INVITE, j)), J = (0, A.Z)({
     message: n,
     channel: j,
@@ -75,7 +75,7 @@ t.Z = i.memo(function(e) {
     childrenHeader: (0, f.Z)({
       ...e,
       guildId: j.guild_id,
-      author: K,
+      author: z,
       roleIcon: X
     }),
     childrenAccessories: e.hideAccessories ? void 0 : (0, g.Q)(e, H),
@@ -88,7 +88,7 @@ t.Z = i.memo(function(e) {
     "aria-labelledby": $,
     "aria-describedby": ee,
     messageRef: J,
-    ...z,
+    ...K,
     ...G
   })
 })

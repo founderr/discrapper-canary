@@ -5,7 +5,7 @@ var l, i, s, a, r = n(392711),
   d = n(430824);
 let h = null,
   m = {};
-class p extends(a = c.ZP.Store) {
+class E extends(a = c.ZP.Store) {
   initialize() {
     this.waitFor(d.Z)
   }
@@ -39,12 +39,12 @@ class p extends(a = c.ZP.Store) {
     return null != e ? m[e] : h
   }
 }
-s = "RegionStore", (i = "displayName") in(l = p) ? Object.defineProperty(l, i, {
+s = "RegionStore", (i = "displayName") in(l = E) ? Object.defineProperty(l, i, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[i] = s, t.Z = new p(u.Z, {
+}) : l[i] = s, t.Z = new E(u.Z, {
   LOAD_REGIONS: function(e) {
     let t = o().sortBy(e.regions, e => e.name);
     null != e.guildId ? m[e.guildId] = t : h = t

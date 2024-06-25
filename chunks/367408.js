@@ -26,6 +26,6 @@ function d(e) {
       let n = new Date(e).getTime() + (t ? c : u);
       return new Date().getTime() >= n
     }(m[0].dismiss_timestamp, h)) return;
-  let p = l.filter(e => null == e.dismiss_timestamp);
-  return null !== (t = p.findLast(e => e.type === i.pj.INAPPROPRIATE_CONVERSATION_TIER_1)) && void 0 !== t ? t : p.findLast(e => e.type === i.pj.INAPPROPRIATE_CONVERSATION_TIER_2)
+  let E = l.filter(e => null == e.dismiss_timestamp);
+  return null !== (t = E.findLast(e => e.type === i.pj.INAPPROPRIATE_CONVERSATION_TIER_1)) && void 0 !== t ? t : E.findLast(e => e.type === i.pj.INAPPROPRIATE_CONVERSATION_TIER_2)
 }

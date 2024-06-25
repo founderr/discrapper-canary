@@ -16,8 +16,8 @@ var l, i = n(735250),
   d = n(475179),
   h = n(239091),
   m = n(287734),
-  p = n(872810),
-  E = n(888651),
+  E = n(872810),
+  p = n(888651),
   g = n(100527),
   f = n(258609),
   C = n(257115),
@@ -180,7 +180,7 @@ class w extends(l = s.PureComponent) {
         channelId: t.id,
         guildId: t.guild_id
       };
-      v.default.getId() !== e.id && m.default.selectVoiceChannel(t.id), n ? ((0, x.Z)(i), d.Z.selectParticipant(i.channelId, (0, _.V9)(i))) : (0, p.iV)(i), null == l || l(e.id)
+      v.default.getId() !== e.id && m.default.selectVoiceChannel(t.id), n ? ((0, x.Z)(i), d.Z.selectParticipant(i.channelId, (0, _.V9)(i))) : (0, E.iV)(i), null == l || l(e.id)
     }), D(this, "handleJoinVoice", () => {
       let {
         user: e,
@@ -258,8 +258,8 @@ class w extends(l = s.PureComponent) {
         speaking: d,
         disconnected: h,
         user: m,
-        deaf: p,
-        priority: E,
+        deaf: E,
+        priority: p,
         collapsed: g,
         isStreaming: f,
         isGuest: _,
@@ -287,8 +287,8 @@ class w extends(l = s.PureComponent) {
         isStreaming: f,
         isGuest: _,
         video: x,
-        priority: E,
-        deaf: p,
+        priority: p,
+        deaf: E,
         nick: I,
         collapsed: g,
         overlap: g,
@@ -349,4 +349,4 @@ class w extends(l = s.PureComponent) {
 }
 D(w, "defaultProps", {
   isSelfOnOtherClient: !1
-}), t.ZP = (0, E.$)(w)
+}), t.ZP = (0, p.$)(w)

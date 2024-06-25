@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(850827),
   h = n(258609),
   m = n(199902),
-  p = n(314897),
-  E = n(430824),
+  E = n(314897),
+  p = n(430824),
   g = n(496675),
   f = n(158776),
   C = n(979651),
@@ -120,7 +120,7 @@ function R(e) {
     user: t,
     channel: n,
     ...s
-  } = e, [a, o] = (0, r.Wu)([C.Z, E.Z, g.Z, h.Z], () => (0, x.p9)(n, C.Z, E.Z, g.Z, h.Z)), c = (0, r.e7)([m.Z], () => m.Z.getStreamForUser(t.id, n.getGuildId())), d = (0, r.e7)([m.Z], () => m.Z.getActiveStreamForApplicationStream(c)), _ = (0, r.e7)([p.default], () => p.default.getId()), I = (0, T.Cf)(c), N = (0, r.e7)([f.Z], () => (0, T.Um)(c, f.Z)), Z = i.useMemo(() => ({
+  } = e, [a, o] = (0, r.Wu)([C.Z, p.Z, g.Z, h.Z], () => (0, x.p9)(n, C.Z, p.Z, g.Z, h.Z)), c = (0, r.e7)([m.Z], () => m.Z.getStreamForUser(t.id, n.getGuildId())), d = (0, r.e7)([m.Z], () => m.Z.getActiveStreamForApplicationStream(c)), _ = (0, r.e7)([E.default], () => E.default.getId()), I = (0, T.Cf)(c), N = (0, r.e7)([f.Z], () => (0, T.Um)(c, f.Z)), Z = i.useMemo(() => ({
     [n.guild_id]: [t.id]
   }), [n.guild_id, t.id]);
   return (0, u.$)(Z), (0, l.jsx)(M, {

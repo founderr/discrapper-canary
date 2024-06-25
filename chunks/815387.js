@@ -43,8 +43,8 @@ var s = n(735250),
   H = n(676751),
   Y = n(662147),
   W = n(900316),
-  z = n(493829),
-  K = n(65667),
+  K = n(493829),
+  z = n(65667),
   Q = n(36664),
   X = n(645092),
   q = n(464139),
@@ -119,7 +119,7 @@ function eR(e) {
     guildId: i.guild_id,
     messageId: t.id
   });
-  return (0, s.jsx)(K.Z, {
+  return (0, s.jsx)(z.Z, {
     message: t,
     compact: n,
     usernameHook: l
@@ -282,7 +282,7 @@ let eO = Object.freeze({
       guildId: l.guild_id,
       messageId: t.id
     });
-    return (0, s.jsx)(z.Z, {
+    return (0, s.jsx)(K.Z, {
       message: t,
       compact: n,
       usernameHook: c,

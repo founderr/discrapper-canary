@@ -26,8 +26,8 @@ t.Z = a.ZP.connectStores([o.Z], e => {
     sliderClassName: i,
     userId: a,
     currentVolume: o,
-    muted: p,
-    context: E,
+    muted: E,
+    context: p,
     currentWindow: g = window
   } = e;
   return (0, l.jsx)(h.Z, {
@@ -37,15 +37,15 @@ t.Z = a.ZP.connectStores([o.Z], e => {
       sliderClassName: i,
       className: t,
       value: (0, u.P)(o),
-      muted: p,
+      muted: E,
       maxValue: d.isPlatformEmbedded ? 200 : 100,
       onValueChange: e => {
         var t, n, l, i;
-        return t = e, n = a, l = p, i = E, void(t > 0 && l && r.Z.toggleLocalMute(n, i), r.Z.setLocalVolume(n, (0, u.A)(t), i))
+        return t = e, n = a, l = E, i = p, void(t > 0 && l && r.Z.toggleLocalMute(n, i), r.Z.setLocalVolume(n, (0, u.A)(t), i))
       },
       onToggleMute: () => {
         var e, t;
-        return e = a, t = E, void r.Z.toggleLocalMute(e, t)
+        return e = a, t = p, void r.Z.toggleLocalMute(e, t)
       }
     })
   })

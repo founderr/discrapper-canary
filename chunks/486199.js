@@ -5,8 +5,8 @@ t.d(n, {
 });
 var i = t(735250);
 t(470079);
-var s = t(120356),
-  l = t.n(s),
+var l = t(120356),
+  s = t.n(l),
   a = t(481060),
   r = t(285952),
   o = t(727218),
@@ -17,7 +17,7 @@ function u(e) {
   let {
     name: n,
     description: t,
-    icon: s,
+    icon: l,
     imageSrc: u,
     iconBackgroundColor: I,
     iconClassName: N,
@@ -29,22 +29,22 @@ function u(e) {
   return (0, i.jsxs)(r.Z, {
     justify: r.Z.Justify.CENTER,
     className: d.wrapper,
-    children: [null != s || null != u ? (0, i.jsx)(r.Z.Child, {
+    children: [null != l || null != u ? (0, i.jsx)(r.Z.Child, {
       shrink: 0,
       grow: 0,
-      children: function(e, n, t, s) {
+      children: function(e, n, t, l) {
         if (null != n) return (0, i.jsx)("img", {
           alt: "",
           src: n,
-          className: l()(d.iconWrapper, s)
+          className: s()(d.iconWrapper, l)
         });
         let a = null;
         return null != e && (a = "string" == typeof e ? (0, i.jsx)("img", {
           alt: "",
           src: e,
-          className: l()(d.icon, s)
+          className: s()(d.icon, l)
         }) : (0, i.jsx)(e, {
-          className: l()(d.icon, s),
+          className: s()(d.icon, l),
           color: "currentColor"
         })), (0, i.jsx)(r.Z, {
           align: r.Z.Align.CENTER,
@@ -55,22 +55,22 @@ function u(e) {
           className: d.iconWrapper,
           children: a
         })
-      }(s, u, I, N)
+      }(l, u, I, N)
     }) : null, function(e) {
       let {
         name: n,
         description: t,
-        details: s,
+        details: l,
         detailsClassName: u,
         isHeader: I,
         isPremium: N
-      } = e, E = null == s ? void 0 : s.map((e, n) => {
+      } = e, E = null == l ? void 0 : l.map((e, n) => {
         let {
           icon: t,
-          text: s
+          text: l
         } = e;
         return (0, i.jsxs)("div", {
-          className: l()(d.detailsWrapper, I ? d.headerDetailsWrapper : null),
+          className: s()(d.detailsWrapper, I ? d.headerDetailsWrapper : null),
           children: [null != t ? (0, i.jsx)(t, {
             size: "xs",
             color: "currentColor",
@@ -79,7 +79,7 @@ function u(e) {
             variant: "text-xs/normal",
             color: "header-secondary",
             className: u,
-            children: s
+            children: l
           })]
         }, n)
       });

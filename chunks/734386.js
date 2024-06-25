@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(442837),
   h = n(481060),
   m = n(787014),
-  p = n(911969),
-  E = n(933557),
+  E = n(911969),
+  p = n(933557),
   g = n(605436),
   f = n(185413),
   C = n(434404),
@@ -37,7 +37,7 @@ var l = n(735250),
 function P(e) {
   let {
     channel: t
-  } = e, [n, s] = i.useState(!1), r = (0, E.ZP)(t, !0), P = t.guild_id, y = (0, d.e7)([I.Z], () => null != P ? I.Z.getRoles(P) : void 0), b = (0, d.e7)([T.default, I.Z], () => {
+  } = e, [n, s] = i.useState(!1), r = (0, p.ZP)(t, !0), P = t.guild_id, y = (0, d.e7)([I.Z], () => null != P ? I.Z.getRoles(P) : void 0), b = (0, d.e7)([T.default, I.Z], () => {
     var e;
     return T.default.getUser(null === (e = I.Z.getGuild(P)) || void 0 === e ? void 0 : e.ownerId)
   }), D = i.useMemo(() => null != P ? o()(y).sortBy(e => -e.position).filter(e => !(0, g.pM)(P, e.id)).value() : [], [P, y]), U = i.useMemo(() => o()(D).filter(e => {
@@ -52,7 +52,7 @@ function P(e) {
   }).value(), [t, P, D]), k = (0, d.Wu)([T.default], () => {
     let e = {};
     for (let n of (null != b && (e[b.id] = b), Object.values(t.permissionOverwrites))) {
-      if (n.type !== p.BN.MEMBER || null != e[n.id]) continue;
+      if (n.type !== E.BN.MEMBER || null != e[n.id]) continue;
       let t = T.default.getUser(n.id);
       null != t && (e[t.id] = t)
     }
@@ -72,7 +72,7 @@ function P(e) {
   function H() {
     m.ZP.open(t.id)
   }
-  let B = i.useCallback(() => s(!1), []);
+  let G = i.useCallback(() => s(!1), []);
   return (0, l.jsxs)(M.ZP, {
     channelId: t.id,
     children: [(0, l.jsx)(M.Kq, {
@@ -162,7 +162,7 @@ function P(e) {
     }), n ? (0, l.jsx)(h.Modal, {
       renderModal: e => (0, l.jsx)(f.default, {
         ...e,
-        onClose: () => (B(), e.onClose()),
+        onClose: () => (G(), e.onClose()),
         channelId: t.id
       }),
       onCloseRequest: () => s(!1)

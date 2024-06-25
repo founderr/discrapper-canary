@@ -150,7 +150,7 @@ let e$ = r.ZP.connectStores([k.Z, eb.Z, ex.default], () => ({
         to: eK.Z5c.DEFAULT_LOGGED_OUT
       });
       if (e) {
-        let e = e5(t);
+        let e = e3(t);
         return null == e || (e.params.guildId === eK.ME || null != ey.Z.getGuild(e.params.guildId)) && null != eD.Z.getChannel(e.params.channelId) ? (0, s.jsx)(a.l_, {
           to: t
         }) : (0, s.jsx)(a.l_, {
@@ -182,7 +182,7 @@ function e7(e) {
     threadId: i
   }
 }
-let e3 = [{
+let e5 = [{
   path: [eK.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode")],
   render(e) {
     let {
@@ -394,12 +394,12 @@ let e3 = [{
   isSessionRequired: !0
 }];
 
-function e5(e) {
+function e3(e) {
   for (let {
       path: t,
       isChatRoute: n
     }
-    of e3) {
+    of e5) {
     if (!n) continue;
     let s = (0, a.LX)(e, {
       path: t
@@ -451,7 +451,7 @@ class e9 extends i.PureComponent {
             path: t,
             isSessionRequired: n
           }
-          of e3) {
+          of e5) {
           if (!n) continue;
           let s = (0, a.LX)(e, {
             path: t
@@ -461,7 +461,7 @@ class e9 extends i.PureComponent {
         return null
       }(e) && c.Z.startSession(t)
     }(t), ! function(e, t) {
-      let n = e5(e);
+      let n = e3(e);
       if (null == n) return;
       let {
         guildId: s,
@@ -521,7 +521,7 @@ class e9 extends i.PureComponent {
     if (!k.Z.isConnected()) return null;
     let {
       pathname: t
-    } = e, n = e5(t);
+    } = e, n = e3(t);
     if (null == n) return null;
     let {
       guildId: s,
@@ -562,7 +562,7 @@ class e9 extends i.PureComponent {
           exact: !0,
           from: "/channels",
           to: "/"
-        }), e3.map(e => {
+        }), e5.map(e => {
           let {
             path: t,
             render: n

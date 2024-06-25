@@ -9,13 +9,13 @@ var l = n(735250),
   d = n(689938),
   h = n(574827),
   m = n(66737),
-  p = n(525377);
+  E = n(525377);
 t.Z = () => {
   let e = (0, r.ZP)();
   i.useEffect(() => {
     o.ZP.trackWithMetadata(u.rMx.GUILD_OUTAGE_VIEWED, {})
   }, []);
-  let t = (0, s.wj)(e) ? m : p;
+  let t = (0, s.wj)(e) ? m : E;
   return (0, l.jsxs)("div", {
     className: h.container,
     children: [(0, l.jsxs)(c.Z, {

@@ -1,11 +1,11 @@
 s.d(n, {
   T: function() {
-    return t
+    return i
   }
 });
 var l = s(689938);
 
-function t(e) {
+function i(e) {
   switch (e) {
     case "brl":
       return l.Z.Messages.BRL_NAME;

@@ -10,8 +10,8 @@ var l = n(735250),
   d = n(256726),
   h = n(206295),
   m = n(278399),
-  p = n(297781),
-  E = n(591853),
+  E = n(297781),
+  p = n(591853),
   g = n(410441),
   f = n(689938);
 let C = (e, t, n, l) => {
@@ -55,8 +55,8 @@ t.Z = e => {
       badges: (0, d.UU)(n)
     })
   }, [T, N, t, n, S, A, v, Z]);
-  return null != Z && (0, o.Hi)(A, m.y9) ? (0, l.jsxs)(E.yR, {
-    children: [(0, l.jsx)(E.wG, {
+  return null != Z && (0, o.Hi)(A, m.y9) ? (0, l.jsxs)(p.yR, {
+    children: [(0, l.jsx)(p.wG, {
       thumbnailSrc: T,
       channel: t,
       entry: n,
@@ -66,14 +66,14 @@ t.Z = e => {
       userDescription: f.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
       title: I,
       subtitle: N,
-      badges: (0, l.jsx)(p.Gk, {
-        location: p.Gt.POPOUT,
+      badges: (0, l.jsx)(E.Gk, {
+        location: E.Gt.POPOUT,
         children: m.Ho.map((e, t) => (0, l.jsx)(e, {
           entry: n
         }, t))
       })
-    }), (0, l.jsx)(E.St, {
-      children: (0, l.jsx)(E.WT, {
+    }), (0, l.jsx)(p.St, {
+      children: (0, l.jsx)(p.WT, {
         closePopout: c,
         user: Z,
         channel: t,

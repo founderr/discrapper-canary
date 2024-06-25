@@ -1,105 +1,105 @@
 t.d(n, {
   Z: function() {
-    return _
+    return A
   }
 }), t(47120);
-var s = t(735250),
-  a = t(470079),
-  l = t(120356),
-  i = t.n(l),
+var a = t(735250),
+  s = t(470079),
+  i = t(120356),
+  l = t.n(i),
   r = t(887024),
   o = t(100527),
   d = t(906732),
   c = t(987209),
   u = t(598),
   E = t(409813),
-  C = t(791785),
-  f = t(961830),
-  h = t(742956),
-  p = t(346790),
-  x = t(49308),
-  T = t(117652),
-  m = t(126982),
+  f = t(791785),
+  h = t(961830),
+  m = t(742956),
+  v = t(346790),
+  p = t(49308),
+  C = t(117652),
+  x = t(126982),
   I = t(981631),
-  v = t(302800),
-  S = t(231338),
-  g = t(99178);
+  T = t(302800),
+  g = t(231338),
+  S = t(99178);
 
-function _(e) {
+function A(e) {
   let {
     onClose: n,
     onComplete: t,
-    onStepChange: l,
-    transitionState: _,
+    onStepChange: i,
+    transitionState: A,
     loadId: N,
-    skuId: A,
-    isGift: j = !1,
-    giftRecipient: O,
-    giftMessage: Z,
-    analyticsLocations: M,
-    returnRef: P
+    skuId: _,
+    isGift: Z = !1,
+    giftRecipient: j,
+    giftMessage: P,
+    analyticsLocations: y,
+    returnRef: O
   } = e, {
-    analyticsLocations: L
-  } = (0, d.ZP)([...M, o.Z.COLLECTIBLES_PAYMENT_MODAL]), y = a.useRef(new r.qA), [R, D] = a.useState(null), [F, k] = a.useState(!1), b = a.useMemo(() => (0, v.UY)(A), [A]), w = a.useCallback(() => {
-    k(!0), null == t || t()
-  }, [t]), G = a.useCallback(e => {
-    k(!1), n(e)
-  }, [n]), B = a.useMemo(() => [f.WA, T.Dd, p.n, ...f.yp, f.wo, {
+    analyticsLocations: M
+  } = (0, d.ZP)([...y, o.Z.COLLECTIBLES_PAYMENT_MODAL]), R = s.useRef(new r.qA), [L, k] = s.useState(null), [b, D] = s.useState(!1), w = s.useMemo(() => (0, T.UY)(_), [_]), B = s.useCallback(() => {
+    D(!0), null == t || t()
+  }, [t]), F = s.useCallback(e => {
+    D(!1), n(e)
+  }, [n]), G = s.useMemo(() => [h.WA, C.Dd, v.n, ...h.yp, h.wo, {
     key: E.h8.CONFIRM,
-    renderStep: e => (0, s.jsx)(x.x, {
+    renderStep: e => (0, a.jsx)(p.x, {
       ...e,
-      confettiCanvas: R,
-      analyticsLocations: L,
-      hideConfetti: null != b
+      confettiCanvas: L,
+      analyticsLocations: M,
+      hideConfetti: null != w
     }),
     options: {
-      bodyClassName: g.modalOverrideBody,
-      sliderBodyClassName: g.modalOverrideSliderBody
+      bodyClassName: S.modalOverrideBody,
+      sliderBodyClassName: S.modalOverrideSliderBody
     }
-  }], [L, R, b]);
-  return (0, s.jsxs)(d.Gt, {
-    value: L,
-    children: [(0, s.jsx)(r.O_, {
-      ref: D,
-      className: g.confettiCanvas,
-      environment: y.current
-    }), null != b && (0, s.jsx)("img", {
-      src: b.confettiAssetSrc,
-      className: i()(g.customConfetti, {
-        [g.hidden]: !F
+  }], [M, L, w]);
+  return (0, a.jsxs)(d.Gt, {
+    value: M,
+    children: [(0, a.jsx)(r.O_, {
+      ref: k,
+      className: S.confettiCanvas,
+      environment: R.current
+    }), null != w && (0, a.jsx)("img", {
+      src: w.confettiAssetSrc,
+      className: l()(S.customConfetti, {
+        [S.hidden]: !b
       }),
-      style: b.style,
+      style: w.style,
       alt: "",
       "aria-hidden": !0
-    }), (0, s.jsx)(u.PaymentContextProvider, {
+    }), (0, a.jsx)(u.PaymentContextProvider, {
       loadId: N,
-      stepConfigs: B,
+      stepConfigs: G,
       applicationId: I.XAJ,
-      skuIDs: [A],
-      isGift: j,
+      skuIDs: [_],
+      isGift: Z,
       activeSubscription: null,
-      purchaseType: S.GZ.ONE_TIME,
-      children: (0, s.jsx)(c.KB, {
-        isGift: j,
-        giftRecipient: O,
-        giftMessage: Z,
-        children: (0, s.jsx)(C.PaymentModal, {
-          onClose: G,
-          onComplete: w,
+      purchaseType: g.GZ.ONE_TIME,
+      children: (0, a.jsx)(c.KB, {
+        isGift: Z,
+        giftRecipient: j,
+        giftMessage: P,
+        children: (0, a.jsx)(f.PaymentModal, {
+          onClose: F,
+          onComplete: B,
           applicationId: I.XAJ,
-          skuId: A,
+          skuId: _,
           initialPlanId: null,
-          analyticsLocations: L,
-          transitionState: _,
-          renderHeader: (e, n, t) => j ? (0, s.jsx)(h.Z, {
+          analyticsLocations: M,
+          transitionState: A,
+          renderHeader: (e, n, t) => Z ? (0, a.jsx)(m.Z, {
             step: t,
             onClose: () => n(!1)
-          }) : (0, s.jsx)(m.Z, {
+          }) : (0, a.jsx)(x.Z, {
             step: t,
             onClose: () => n(!1)
           }),
-          returnRef: P,
-          onStepChange: l,
+          returnRef: O,
+          onStepChange: i,
           hideShadow: !0
         })
       })

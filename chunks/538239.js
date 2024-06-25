@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(744061),
   h = n(367907),
   m = n(728345),
-  p = n(812206),
-  E = n(541716),
+  E = n(812206),
+  p = n(541716),
   g = n(752305),
   f = n(893718),
   C = n(957730),
@@ -77,7 +77,7 @@ class A extends i.PureComponent {
       channel: c,
       activityActionType: h,
       cooldown: m,
-      application: p,
+      application: E,
       transitionState: g,
       onClose: C
     } = this.props, _ = m > 0, I = _ ? N.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
@@ -101,7 +101,7 @@ class A extends i.PureComponent {
           activityActionType: h,
           activity: s,
           className: Z.preview,
-          application: p,
+          application: E,
           partyId: null != s.party ? s.party.id : null,
           isPreview: !0,
           analyticsLocations: r
@@ -134,7 +134,7 @@ class A extends i.PureComponent {
             channel: c,
             onChange: this.handleTextChange,
             onSubmit: this.handleShare,
-            type: E.I.FORM,
+            type: p.I.FORM,
             parentModalKey: v,
             disableThemedBackground: !0
           })
@@ -226,7 +226,7 @@ class A extends i.PureComponent {
         openWarningPopout: e => this.setState({
           contentWarningProps: e
         }),
-        type: E.I.FORM,
+        type: p.I.FORM,
         content: s,
         channel: e
       }).then(t => {
@@ -246,13 +246,13 @@ class A extends i.PureComponent {
     })
   }
 }
-t.default = r.ZP.connectStores([I.Z, p.Z], e => {
+t.default = r.ZP.connectStores([I.Z, E.Z], e => {
   let {
     channel: t,
     activity: n
   } = e;
   return {
     cooldown: I.Z.getSlowmodeCooldownGuess(t.id),
-    application: null != n.application_id ? p.Z.getApplication(n.application_id) : _.r9
+    application: null != n.application_id ? E.Z.getApplication(n.application_id) : _.r9
   }
 })(A)

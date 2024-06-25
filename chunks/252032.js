@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(323873),
   h = n(430824),
   m = n(496675),
-  p = n(113039),
-  E = n(703316),
+  E = n(113039),
+  p = n(703316),
   g = n(585483),
   f = n(630388),
   C = n(838440),
@@ -44,7 +44,7 @@ function T(e) {
     id: o
   } = t, {
     id: c
-  } = n, p = t.getGuildId(), g = (0, s.e7)([h.Z], () => h.Z.getGuild(p), [p]), C = t.type === _.d4z.GUILD_ANNOUNCEMENT, T = null != g && g.hasFeature(_.oNc.NEWS), Z = C && T, {
+  } = n, E = t.getGuildId(), g = (0, s.e7)([h.Z], () => h.Z.getGuild(E), [E]), C = t.type === _.d4z.GUILD_ANNOUNCEMENT, T = null != g && g.hasFeature(_.oNc.NEWS), Z = C && T, {
     editingMessage: S,
     editingTextValue: v,
     editingRichValue: A
@@ -64,7 +64,7 @@ function T(e) {
     className: I.channelTextArea,
     key: c
   }), [c]);
-  return null != v && null != A ? (0, l.jsx)(E.Z, {
+  return null != v && null != A ? (0, l.jsx)(p.Z, {
     ref: void 0,
     channel: t,
     message: n,
@@ -88,10 +88,10 @@ function N(e) {
     onChange: r,
     onSubmit: u,
     onKeyDown: d
-  } = e, [h, m] = i.useState(!0), p = i.useCallback(() => m(!0), []), E = i.useCallback(() => m(!1), []);
-  return i.useEffect(() => (g.S.subscribe(_.CkL.TEXTAREA_FOCUS, p), g.S.subscribe(_.CkL.TEXTAREA_BLUR, E), () => {
-    g.S.unsubscribe(_.CkL.TEXTAREA_FOCUS, p), g.S.unsubscribe(_.CkL.TEXTAREA_BLUR, E)
-  }), [p, E]), (0, l.jsx)(c.Z, {
+  } = e, [h, m] = i.useState(!0), E = i.useCallback(() => m(!0), []), p = i.useCallback(() => m(!1), []);
+  return i.useEffect(() => (g.S.subscribe(_.CkL.TEXTAREA_FOCUS, E), g.S.subscribe(_.CkL.TEXTAREA_BLUR, p), () => {
+    g.S.unsubscribe(_.CkL.TEXTAREA_FOCUS, E), g.S.unsubscribe(_.CkL.TEXTAREA_BLUR, p)
+  }), [E, p]), (0, l.jsx)(c.Z, {
     className: I.channelTextArea,
     textValue: t,
     richValue: n,
@@ -106,8 +106,8 @@ function N(e) {
     },
     onKeyDown: d,
     focused: h,
-    onFocus: p,
-    onBlur: E
+    onFocus: E,
+    onBlur: p
   }, s.id)
 }
 
@@ -119,7 +119,7 @@ function Z(e, t, n) {
   return n ? (0, l.jsx)(T, {
     channel: s,
     message: i
-  }) : (0, l.jsx)(p.ZP, {
+  }) : (0, l.jsx)(E.ZP, {
     message: i,
     content: t
   })

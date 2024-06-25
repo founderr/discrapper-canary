@@ -22,8 +22,8 @@ function m(e) {
     useSlate: l,
     canUseApplicationCommands: i,
     hasClips: m,
-    channel: p,
-    activities: E,
+    channel: E,
+    activities: p,
     newClipsCount: g,
     canPostPolls: f,
     canLaunchActivities: C,
@@ -59,12 +59,12 @@ function m(e) {
     type: "ACTIVITY",
     icon: s.ActivitiesIcon,
     display: h.Z.Messages.EMBEDDED_ACTIVITIES_START_ACTIVITY_LABEL
-  }), E.forEach(e => {
+  }), p.forEach(e => {
     if (!(0, a.Z)(e, d.xjy.EMBEDDED)) e.type === d.IIU.PLAYING && (0, a.Z)(e, d.xjy.JOIN) && I.push({
       type: "INVITE_TO_GAME",
       icon: s.DpadIcon,
       display: h.Z.Messages.CHAT_ATTACH_INVITE_TO_PLAY_GAME.format({
-        channel: (0, r.F6)(p, u.default, c.Z, !0),
+        channel: (0, r.F6)(E, u.default, c.Z, !0),
         game: null != e ? e.name : ""
       }),
       activity: e
@@ -72,7 +72,7 @@ function m(e) {
       type: "INVITE_TO_LISTEN",
       icon: s.UserPlayIcon,
       display: h.Z.Messages.CHAT_ATTACH_INVITE_TO_LISTEN.format({
-        channel: (0, r.F6)(p, u.default, c.Z, !0),
+        channel: (0, r.F6)(E, u.default, c.Z, !0),
         name: null != e ? e.name : ""
       }),
       activity: e
@@ -80,7 +80,7 @@ function m(e) {
       type: "INVITE_TO_WATCH",
       icon: s.EyeIcon,
       display: h.Z.Messages.CHAT_ATTACH_INVITE_TO_WATCH.format({
-        channel: (0, r.F6)(p, u.default, c.Z, !0),
+        channel: (0, r.F6)(E, u.default, c.Z, !0),
         name: null != e ? e.name : ""
       }),
       activity: e

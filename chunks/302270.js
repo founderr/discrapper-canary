@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return B
+    return G
   }
 });
 var l = n(735250),
@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(40851),
   h = n(358221),
   m = n(933557),
-  p = n(320007),
-  E = n(236091),
+  E = n(320007),
+  p = n(236091),
   g = n(623624),
   f = n(984370),
   C = n(141321),
@@ -52,7 +52,7 @@ function H(e) {
     allowIdle: S
   } = (0, _.Y)("popup");
   return (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)(E.Z, {
+    children: [(0, l.jsx)(p.Z, {
       channelId: n.id
     }, "clips-enabled-indicator"), (0, l.jsx)(c.Popout, {
       position: "bottom",
@@ -78,7 +78,7 @@ function H(e) {
           iconClassName: w.buttonIcon
         })
       }
-    }, "more-options-popout"), !t && (0, l.jsx)(p.Z, {
+    }, "more-options-popout"), !t && (0, l.jsx)(E.Z, {
       className: w.button
     }, "clips"), (0, l.jsx)(C.Z, {
       onOpen: Z,
@@ -107,14 +107,14 @@ function H(e) {
   })
 }
 
-function B(e) {
+function G(e) {
   var t, n;
   let {
     inPopout: s,
     channel: d,
     toggleRequestToSpeakSidebar: h,
-    showRequestToSpeakSidebar: p
-  } = e, E = (0, m.ZP)(d), C = (0, r.e7)([O.Z], () => O.Z.getStageInstanceByChannel(d.id)), _ = (0, M.Io)(d.id), I = (0, M.Rk)(d.id, R.pV.AUDIENCE), x = (0, r.e7)([N.Z], () => N.Z.getGuild(d.guild_id), [d.guild_id]), T = null !== (t = null == x ? void 0 : x.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, j = (null == x ? void 0 : x.isCommunity()) ? T < D.TU7 : (null == x ? void 0 : x.premiumTier) !== D.Eu4.TIER_3 && T <= D.eez, P = (0, b.Z)(d), y = (0, r.e7)([Z.Z], () => Z.Z.can(L.yP, d)), B = () => {
+    showRequestToSpeakSidebar: E
+  } = e, p = (0, m.ZP)(d), C = (0, r.e7)([O.Z], () => O.Z.getStageInstanceByChannel(d.id)), _ = (0, M.Io)(d.id), I = (0, M.Rk)(d.id, R.pV.AUDIENCE), x = (0, r.e7)([N.Z], () => N.Z.getGuild(d.guild_id), [d.guild_id]), T = null !== (t = null == x ? void 0 : x.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, j = (null == x ? void 0 : x.isCommunity()) ? T < D.TU7 : (null == x ? void 0 : x.premiumTier) !== D.Eu4.TIER_3 && T <= D.eez, P = (0, b.Z)(d), y = (0, r.e7)([Z.Z], () => Z.Z.can(L.yP, d)), G = () => {
     u.Z.updateStageVideoLimitBoostUpsellDismissed(d.id, !0), v.default.track(D.rMx.BOOSTING_UPSELL_CLICKED, {
       guild_id: d.guild_id,
       type: U.cd.VIDEO_STAGE_LIMIT,
@@ -134,7 +134,7 @@ function B(e) {
     toolbar: (0, l.jsx)(H, {
       inPopout: s,
       toggleRequestToSpeakSidebar: h,
-      showRequestToSpeakSidebar: p,
+      showRequestToSpeakSidebar: E,
       channel: d
     }),
     onDoubleClick: f.O,
@@ -149,7 +149,7 @@ function B(e) {
     }), (0, l.jsx)(S.ZP.Title, {
       className: w.channelName,
       wrapperClassName: w.channelNameWrapper,
-      children: null !== (n = null == C ? void 0 : C.topic) && void 0 !== n ? n : E
+      children: null !== (n = null == C ? void 0 : C.topic) && void 0 !== n ? n : p
     }), (0, l.jsx)(S.ZP.Divider, {
       className: w.divider
     }), (0, l.jsxs)(S.ZP.Title, {
@@ -179,7 +179,7 @@ function B(e) {
   return P ? (0, l.jsxs)("div", {
     children: [V, (0, l.jsxs)("div", {
       className: w.boostUpsell,
-      children: [(0, l.jsx)(G, {}), (0, l.jsxs)("div", {
+      children: [(0, l.jsx)(B, {}), (0, l.jsxs)("div", {
         className: w.text,
         children: [(0, l.jsx)(c.Text, {
           variant: "text-md/medium",
@@ -195,7 +195,7 @@ function B(e) {
         children: j ? (0, l.jsxs)(l.Fragment, {
           children: [(0, l.jsx)(c.Button, {
             className: w.notNowButton,
-            onClick: B,
+            onClick: G,
             look: c.Button.Looks.BLANK,
             size: c.Button.Sizes.SMALL,
             children: k.Z.Messages.NOT_NOW
@@ -219,7 +219,7 @@ function B(e) {
           })]
         }) : (0, l.jsx)(c.Button, {
           className: w.notNowButton,
-          onClick: B,
+          onClick: G,
           look: c.Button.Looks.BLANK,
           size: c.Button.Sizes.SMALL,
           children: k.Z.Messages.DISMISS
@@ -229,7 +229,7 @@ function B(e) {
   }) : V
 }
 
-function G() {
+function B() {
   return (0, l.jsxs)("svg", {
     width: "36",
     height: "36",

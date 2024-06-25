@@ -9,8 +9,8 @@ var l, i = n(735250),
   d = n(442837),
   h = n(481060),
   m = n(490173),
-  p = n(40851),
-  E = n(607070),
+  E = n(40851),
+  p = n(607070),
   g = n(899663),
   f = n(317381),
   C = n(496616),
@@ -36,9 +36,9 @@ var l, i = n(735250),
   k = n(928518),
   w = n(981631),
   H = n(689938),
-  B = n(559286);
+  G = n(559286);
 
-function G(e, t, n) {
+function B(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -132,13 +132,13 @@ class V extends(l = s.Component) {
       mouseModeEnabled: o,
       keyboardModeEnabled: c,
       reducedMotionEnabled: d,
-      fontScaleClass: E,
+      fontScaleClass: p,
       saturation: f,
       withTitleBar: C,
       guestWindow: _,
       clientThemesClassName: I,
       contentClassName: x
-    } = this.props, S = (0, y.getPlatform)(), v = r()(E, {
+    } = this.props, S = (0, y.getPlatform)(), v = r()(p, {
       "mouse-mode": o,
       "reduce-motion": d,
       "full-motion": !d,
@@ -159,19 +159,19 @@ class V extends(l = s.Component) {
                 containerRef: this.rootRef,
                 children: (0, i.jsx)(g.Z, {
                   children: (0, i.jsxs)(N.Z, {
-                    children: [(0, i.jsx)(P.Co, {}), (0, i.jsx)(p.Wu, {
+                    children: [(0, i.jsx)(P.Co, {}), (0, i.jsx)(E.Wu, {
                       appContext: w.IlC.POPOUT,
                       renderWindow: _,
                       children: (0, i.jsxs)(O.yP, {
                         children: [(0, i.jsxs)("div", {
-                          className: B.popout,
+                          className: G.popout,
                           children: [C && null != S ? (0, i.jsx)(Z.Z, {
                             focused: n,
                             type: S,
                             windowKey: a,
                             macOSFrame: !0
                           }) : null, (0, i.jsx)("div", {
-                            className: r()(B.content, x),
+                            className: r()(G.content, x),
                             children: s
                           })]
                         }), (0, i.jsx)(h.Modals, {}), (0, i.jsx)(m.Z, {}), (0, i.jsx)(O.Un, {})]
@@ -187,21 +187,21 @@ class V extends(l = s.Component) {
     })
   }
   constructor(...e) {
-    super(...e), G(this, "rootRef", s.createRef()), G(this, "_cleanupWindowActionCreators", void 0), G(this, "warnPopoutClose", e => {
+    super(...e), B(this, "rootRef", s.createRef()), B(this, "_cleanupWindowActionCreators", void 0), B(this, "warnPopoutClose", e => {
       if (this.props.connectedToEmbeddedActivity && !j.ZP.disableEmbeddedActivityPopOutAlert) {
         if (e.returnValue = H.Z.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, !!y.isPlatformEmbedded)(0, C.Z)(() => {
           k.Z.unmountWindow(this.props.windowKey), y.isPlatformEmbedded && D.ZP.close(this.props.windowKey)
         })
       }
-    }), G(this, "handleBlur", () => {
+    }), B(this, "handleBlur", () => {
       var e, t;
       null === (e = (t = this.props).onBlur) || void 0 === e || e.call(t)
-    }), G(this, "handleContextMenu", e => {
+    }), B(this, "handleContextMenu", e => {
       e.preventDefault()
     })
   }
 }
-G(V, "defaultProps", {
+B(V, "defaultProps", {
   withTitleBar: !0
 });
 let F = s.forwardRef(function(e, t) {
@@ -221,23 +221,23 @@ let F = s.forwardRef(function(e, t) {
       locale: M.default.locale,
       theme: R.Z.theme
     })),
-    o = (0, d.e7)([E.Z], () => E.Z.useForcedColors ? "yes" : "no"),
+    o = (0, d.e7)([p.Z], () => p.Z.useForcedColors ? "yes" : "no"),
     {
       fontScale: u,
       keyboardModeEnabled: m,
-      reducedMotionEnabled: p,
+      reducedMotionEnabled: E,
       fontScaleClass: g,
       saturation: C,
       systemForcedColors: T,
       useForcedColors: N
-    } = (0, d.cj)([E.Z], () => ({
-      fontScale: E.Z.fontScale,
-      keyboardModeEnabled: E.Z.keyboardModeEnabled,
-      reducedMotionEnabled: E.Z.useReducedMotion,
-      fontScaleClass: E.Z.fontScaleClass,
-      saturation: E.Z.saturation,
-      systemForcedColors: E.Z.systemForcedColors,
-      useForcedColors: E.Z.useForcedColors
+    } = (0, d.cj)([p.Z], () => ({
+      fontScale: p.Z.fontScale,
+      keyboardModeEnabled: p.Z.keyboardModeEnabled,
+      reducedMotionEnabled: p.Z.useReducedMotion,
+      fontScaleClass: p.Z.fontScaleClass,
+      saturation: p.Z.saturation,
+      systemForcedColors: p.Z.systemForcedColors,
+      useForcedColors: p.Z.useForcedColors
     })),
     Z = (0, d.e7)([f.ZP], () => null != e.channelId && null !== f.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
   (0, S.Z)(n, !1);
@@ -266,7 +266,7 @@ let F = s.forwardRef(function(e, t) {
         fontScale: u,
         keyboardModeEnabled: m,
         mouseModeEnabled: A,
-        reducedMotionEnabled: p,
+        reducedMotionEnabled: E,
         connectedToEmbeddedActivity: Z,
         fontScaleClass: g,
         saturation: C,

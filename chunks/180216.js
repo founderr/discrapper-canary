@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(660196),
   h = n(36246),
   m = n(305342),
-  p = n(981631),
-  E = n(689938),
+  E = n(981631),
+  p = n(689938),
   g = n(212017);
 
 function f(e) {
@@ -33,7 +33,7 @@ function f(e) {
   }, [C]);
   return ((0, d.Z)({
     guildId: t,
-    location: p.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
+    location: E.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
     relevantSubscriptionListingIds: f.map(e => e.id)
   }), null == I) ? (0, l.jsx)("div", {
     className: g.__invalid_spinnerContainer,
@@ -45,7 +45,7 @@ function f(e) {
     children: [(0, l.jsx)(a.Heading, {
       variant: "heading-xl/semibold",
       className: g.joinCtaTitle,
-      children: E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_UPSELL_PAGE_CTA.format({
+      children: p.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_UPSELL_PAGE_CTA.format({
         serverName: x,
         channelName: null == T ? void 0 : T.name
       })
@@ -60,7 +60,7 @@ function f(e) {
         guildId: t,
         listingId: e.id,
         groupListingId: N[e.id],
-        analyticsLocation: p.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL
+        analyticsLocation: E.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL
       }, e.id))
     })]
   })

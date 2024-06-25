@@ -11,8 +11,8 @@ var a = t(481060),
   o = t(976853),
   u = t(626135),
   s = t(358085),
-  d = t(960048),
-  c = t(591759),
+  c = t(960048),
+  d = t(591759),
   E = t(998502),
   f = t(36998),
   I = t(981631),
@@ -25,28 +25,28 @@ let g = "https://media.discordapp.net",
   S = new Set(["jpg", "jpeg", "png"]),
   A = e => {
     var n, t, i, a;
-    return null === (a = c.Z.toURLSafe(e)) || void 0 === a ? void 0 : null === (i = a.pathname) || void 0 === i ? void 0 : null === (t = i.split(".")) || void 0 === t ? void 0 : null === (n = t.pop()) || void 0 === n ? void 0 : n.toLowerCase()
+    return null === (a = d.Z.toURLSafe(e)) || void 0 === a ? void 0 : null === (i = a.pathname) || void 0 === i ? void 0 : null === (t = i.split(".")) || void 0 === t ? void 0 : null === (n = t.pop()) || void 0 === n ? void 0 : n.toLowerCase()
   };
 
 function T(e, n) {
   r.Z.show({
     title: M.Z.Messages.ERROR,
     body: e
-  }), d.Z.captureException(n)
+  }), c.Z.captureException(n)
 }
 
 function h(e, n, t) {
   if ((0, o.Z)(null == n ? void 0 : n.getChannelId()) || (null == t ? void 0 : t.shouldHideMediaOptions) === !0 || !s.isPlatformEmbedded || null == e || ! function(e) {
-      let n = c.Z.toURLSafe(e);
+      let n = d.Z.toURLSafe(e);
       if (null == n) return !1;
       let t = A(e);
       return (m.test(n.hostname) || n.host === Z) && !e.startsWith(_) && !(0, l.zt)(e) && null != t && v.has(t)
     }(e)) return null;
   let r = function(e) {
-      let n = c.Z.toURLSafe(e);
+      let n = d.Z.toURLSafe(e);
       return null == n || n.host === Z ? e : n.origin === g ? (n.host = Z, n.searchParams.delete("size"), n.searchParams.delete("width"), n.searchParams.delete("height"), n.searchParams.delete("quality"), n.searchParams.delete("format"), n.toString()) : (n.searchParams.delete("width"), n.searchParams.delete("height"), n.searchParams.set("quality", "lossless"), n.toString())
     }(e),
-    d = async () => {
+    c = async () => {
       try {
         await E.ZP.saveImage(r), u.default.track(I.rMx.CONTEXT_MENU_IMAGE_SAVED, {
           ...(0, f.v)()
@@ -77,6 +77,6 @@ function h(e, n, t) {
   }, "copy-image") : null, (0, i.jsx)(a.MenuItem, {
     id: "save-image",
     label: M.Z.Messages.SAVE_IMAGE_MENU_ITEM,
-    action: d
+    action: c
   }, "save-image")]
 }

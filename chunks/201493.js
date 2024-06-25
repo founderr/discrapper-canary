@@ -10,8 +10,8 @@ var l = n(735250),
   d = n(626135),
   h = n(597),
   m = n(99325),
-  p = n(866112),
-  E = n(273387),
+  E = n(866112),
+  p = n(273387),
   g = n(683818),
   f = n(102888),
   C = n(65839),
@@ -31,17 +31,17 @@ t.Z = e => {
     categoryCounts: M,
     allEntriesCount: R,
     isLoading: j
-  } = (0, s.cj)([E.Z], () => {
-    let e = E.Z.getCurrentCategoryId(Z.id),
-      t = E.Z.getDirectoryEntries(Z.id, e === x.AR.ALL ? null : e),
-      n = E.Z.getDirectoryCategoryCounts(Z.id),
-      l = E.Z.getDirectoryAllEntriesCount(Z.id);
+  } = (0, s.cj)([p.Z], () => {
+    let e = p.Z.getCurrentCategoryId(Z.id),
+      t = p.Z.getDirectoryEntries(Z.id, e === x.AR.ALL ? null : e),
+      n = p.Z.getDirectoryCategoryCounts(Z.id),
+      l = p.Z.getDirectoryAllEntriesCount(Z.id);
     return {
       currentCategoryId: e,
       directoryEntries: t,
       categoryCounts: n,
       allEntriesCount: l,
-      isLoading: E.Z.isFetching()
+      isLoading: p.Z.isFetching()
     }
   });
   i.useEffect(() => () => {
@@ -55,15 +55,15 @@ t.Z = e => {
       mostRecentQuery: O,
       searchFetching: P,
       searchResults: y
-    } = (0, s.cj)([p.Z], () => {
+    } = (0, s.cj)([E.Z], () => {
       let {
         mostRecentQuery: e,
         fetching: t
-      } = p.Z.getSearchState(Z.id);
+      } = E.Z.getSearchState(Z.id);
       return {
         mostRecentQuery: e,
         searchFetching: t,
-        searchResults: p.Z.getSearchResults(Z.id, e)
+        searchResults: E.Z.getSearchResults(Z.id, e)
       }
     }),
     [b, D] = i.useState(O),
@@ -105,7 +105,7 @@ t.Z = e => {
         directory_guild_id: S.id
       }))
     },
-    B = () => {
+    G = () => {
       D(""), m.So(Z.id)
     };
   return U ? (0, l.jsx)(I.Z, {
@@ -113,7 +113,7 @@ t.Z = e => {
     setSearchQuery: D,
     mostRecentQuery: O,
     handleSearchKeyPress: H,
-    handleClearSearch: B,
+    handleClearSearch: G,
     handleCreateOrAddGuild: w,
     searchResults: y,
     searchFetching: P
@@ -133,7 +133,7 @@ t.Z = e => {
     searchQuery: b,
     setSearchQuery: D,
     handleSearchKeyPress: H,
-    handleClearSearch: B,
+    handleClearSearch: G,
     handleCreateOrAddGuild: w,
     currentCategoryId: v,
     handleSelectCategory: e => {

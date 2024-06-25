@@ -1,6 +1,6 @@
 n.d(t, {
   Li: function() {
-    return a
+    return r
   },
   aY: function() {
     return s
@@ -11,4 +11,4 @@ n.d(t, {
 });
 let s = "#00000000",
   o = "#CDD8FF1A",
-  a = 12
+  r = 12

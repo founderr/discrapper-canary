@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(481060),
   h = n(410030),
   m = n(451478),
-  p = n(421600),
-  E = n(354459),
+  E = n(421600),
+  p = n(354459),
   g = n(330280),
   f = n(83922),
   C = n(120393);
@@ -165,7 +165,7 @@ function S(e) {
     x = (0, o.e7)([m.Z], () => m.Z.isFocused()),
     T = i.map(e => {
       var t, n;
-      if (e.type !== E.fO.USER) return null;
+      if (e.type !== p.fO.USER) return null;
       let {
         user: i,
         voiceState: a,
@@ -176,7 +176,7 @@ function S(e) {
         className: g.participant,
         width: (0, d.getAvatarSize)(I),
         theme: _,
-        children: (0, l.jsx)(p.Z, {
+        children: (0, l.jsx)(E.Z, {
           src: i.getAvatarURL(C, (0, d.getAvatarSize)(I), r && x),
           size: I,
           muted: null !== (t = null == a ? void 0 : a.isVoiceMuted()) && void 0 !== t && t,

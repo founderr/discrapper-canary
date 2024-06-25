@@ -14,8 +14,8 @@ var l = n(470079),
   d = n(292793),
   h = n(88315),
   m = n(262433),
-  p = n(400321),
-  E = n(813900);
+  E = n(400321),
+  p = n(813900);
 let g = 1e3 / 60;
 
 function f(e, t, n, f) {
@@ -40,8 +40,8 @@ function f(e, t, n, f) {
         if (0 === n.length) return;
         let h = t.current;
         if (null == h) return;
-        let E = h.getContext("2d");
-        if (null == E) return;
+        let p = h.getContext("2d");
+        if (null == p) return;
         let {
           width: g,
           height: f
@@ -65,7 +65,7 @@ function f(e, t, n, f) {
             } = e;
             switch (t.type) {
               case d.W.LINE:
-                return (0, p.Z)({
+                return (0, E.Z)({
                   line: t,
                   context: n,
                   canvasWidth: l,
@@ -91,7 +91,7 @@ function f(e, t, n, f) {
             }
           }({
             drawable: e,
-            context: E,
+            context: p,
             canvasWidth: g,
             canvasHeight: f,
             fallbackColor: l,
@@ -133,7 +133,7 @@ function f(e, t, n, f) {
   }, [e, N, n]);
   l.useEffect(() => {
     let e = T.current;
-    return u.Z.addChangeListener(Z), Z(), (0, r.vM)(t.getAvatarURL(null, E.Ks)), () => {
+    return u.Z.addChangeListener(Z), Z(), (0, r.vM)(t.getAvatarURL(null, p.Ks)), () => {
       u.Z.removeChangeListener(Z), e.stop()
     }
   })

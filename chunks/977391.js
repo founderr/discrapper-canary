@@ -28,21 +28,21 @@ function u(e) {
     d = t ? r.iv : r.pk,
     h = t ? r.Pb : r.XX,
     m = 0,
-    p = Array(n).fill(null).map(() => {
+    E = Array(n).fill(null).map(() => {
       let e = a().random(1, l);
       return m += c * u + d * u + (e - 1) * h * u, e
     }),
-    E = p.map((e, t) => t),
+    p = E.map((e, t) => t),
     g = [];
   for (; g.length < i;) {
     let e = {
       width: a().random(140, 400),
       height: a().random(100, 320)
     };
-    g.push([E.splice(a().random(0, E.length - 1), 1)[0], e]), m += e.height + r.M9 * u
+    g.push([p.splice(a().random(0, p.length - 1), 1)[0], e]), m += e.height + r.M9 * u
   }
   return {
-    messages: p,
+    messages: E,
     attachmentSpecs: g,
     totalHeight: m,
     groupSpacing: c

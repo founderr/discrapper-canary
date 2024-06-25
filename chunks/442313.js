@@ -1,4 +1,4 @@
-var i, s, l = t(735250),
+var i, l, s = t(735250),
   a = t(470079),
   r = t(120356),
   o = t.n(r),
@@ -20,17 +20,17 @@ class N extends(i = a.PureComponent) {
       scrollable: e,
       ...n
     } = this.props;
-    return e ? (0, l.jsx)("aside", {
+    return e ? (0, s.jsx)("aside", {
       className: u.sidebarScrollable,
-      children: (0, l.jsx)(c.Scroller, {
+      children: (0, s.jsx)(c.Scroller, {
         fade: !0,
         className: u.scroller,
-        children: (0, l.jsx)(d.Z.Child, {
+        children: (0, s.jsx)(d.Z.Child, {
           ...n,
           wrap: !0
         })
       })
-    }) : (0, l.jsx)(d.Z.Child, {
+    }) : (0, s.jsx)(d.Z.Child, {
       ...n,
       wrap: !0
     })
@@ -48,16 +48,16 @@ class E extends a.PureComponent {
       className: e,
       ...n
     } = this.props;
-    return (0, l.jsx)(d.Z.Child, {
+    return (0, s.jsx)(d.Z.Child, {
       className: o()(u.content, e),
       wrap: !0,
       ...n
     })
   }
 }
-class T extends(s = a.PureComponent) {
+class T extends(l = a.PureComponent) {
   render() {
-    return (0, l.jsx)(d.Z, {
+    return (0, s.jsx)(d.Z, {
       ...this.props
     })
   }

@@ -48,9 +48,9 @@ t.Z = (e, t, n, l) => {
     }).map(e => e.subscription_plans[0].id),
     Y = (0, f.V)(F),
     W = null != Y,
-    z = (null == F ? void 0 : F.trialId) != null,
+    K = (null == F ? void 0 : F.trialId) != null,
     {
-      loading: K,
+      loading: z,
       getTrialPurchaseEligibility: Q
     } = (0, O.F)(),
     X = (0, p.oC)(null == e ? void 0 : e.id),
@@ -60,7 +60,7 @@ t.Z = (e, t, n, l) => {
     J = (null == F ? void 0 : F.paymentGateway) === L.gg$.APPLE_PARTNER;
   U ? r = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : P && !D ? r = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : Y === y ? r = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({
     changeDate: null != F ? o()(F.currentPeriodEnd).format("MMM DD, YYYY") : ""
-  }) : W ? r = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION : z ? r = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL : J && (r = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
+  }) : W ? r = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION : K ? r = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL : J && (r = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
   let $ = (0, E.Z)(v.iP);
   i.useEffect(() => {
     B && null != k && u.Z.wait(() => {
@@ -117,8 +117,8 @@ t.Z = (e, t, n, l) => {
     }, [t]);
   return {
     openModal: D ? et : ee,
-    canOpenModal: !P && null != G && w && !U && !W && !z && !J,
+    canOpenModal: !P && null != G && w && !U && !W && !K && !J,
     cannotOpenReason: r,
-    isCheckingTrialEligibility: K
+    isCheckingTrialEligibility: z
   }
 }

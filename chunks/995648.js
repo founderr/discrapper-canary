@@ -5,8 +5,8 @@ t.d(n, {
 });
 var i = t(735250);
 t(470079);
-var s = t(120356),
-  l = t.n(s),
+var l = t(120356),
+  s = t.n(l),
   a = t(481060),
   r = t(422559),
   o = t(209945);
@@ -15,16 +15,16 @@ function c(e) {
   let {
     grantedPermissions: n,
     disabledPermissions: t,
-    grantedPermissionsHeader: s,
+    grantedPermissionsHeader: l,
     disabledPermissionsHeader: c,
     className: d
   } = e;
   return (0, i.jsxs)("div", {
-    className: l()(o.list, d),
+    className: s()(o.list, d),
     children: [null != n && n.length > 0 ? (0, i.jsxs)(i.Fragment, {
-      children: [null != s ? (0, i.jsx)(a.FormTitle, {
+      children: [null != l ? (0, i.jsx)(a.FormTitle, {
         className: o.permissionHeader,
-        children: s
+        children: l
       }) : null, (0, i.jsx)("div", {
         className: o.container,
         children: n.map(e => (0, i.jsxs)("div", {

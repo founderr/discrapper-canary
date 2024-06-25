@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(430824),
   h = n(650461),
   m = n(353093),
-  p = n(105671),
-  E = n(532490),
+  E = n(105671),
+  p = n(532490),
   g = n(979264),
   f = n(570938),
   C = n(550271),
@@ -61,7 +61,7 @@ function Z(e) {
     applicationIds: t,
     playstyle: n,
     className: s
-  } = e, r = i.useMemo(() => Array.from(t), [t]), o = (0, p.i)(r), c = i.useMemo(() => {
+  } = e, r = i.useMemo(() => Array.from(t), [t]), o = (0, E.i)(r), c = i.useMemo(() => {
     if (null == o) return null;
     let e = (0, I.mv)(n);
     return null == e ? x.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES.format({
@@ -87,7 +87,7 @@ t.Z = 12633 == n.j ? e => {
   }), {
     gameApplicationIds: a,
     playstyle: r,
-    interests: p,
+    interests: E,
     tag: g,
     badgeKind: f,
     badgePrimaryColor: C,
@@ -95,8 +95,8 @@ t.Z = 12633 == n.j ? e => {
   } = (0, c.cj)([h.ZP], () => {
     var e;
     return null !== (e = h.ZP.getStateForGuild(t).progress) && void 0 !== e ? e : n
-  }), v = i.useMemo(() => (null == p ? void 0 : p.size) > 0 ? (0, m.f6)(Array.from(p), I.nt) : null, [p]);
-  return (0, l.jsxs)(E.Z, {
+  }), v = i.useMemo(() => (null == E ? void 0 : E.size) > 0 ? (0, m.f6)(Array.from(E), I.nt) : null, [E]);
+  return (0, l.jsxs)(p.Z, {
     ...e,
     children: [(0, l.jsx)(N, {
       guildId: t,

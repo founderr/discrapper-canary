@@ -12,22 +12,22 @@ var l = t(735250),
   m = t(911969),
   g = t(134433),
   E = t(156699),
-  N = t(693196),
-  T = t(434404),
-  p = t(200498),
-  S = t(146085),
+  T = t(693196),
+  N = t(434404),
+  S = t(200498),
+  p = t(146085),
   x = t(192079),
   M = t(277053),
   C = t(271383),
-  I = t(430824),
+  _ = t(430824),
   R = t(496675),
-  _ = t(594174),
+  I = t(594174),
   Z = t(467679),
   f = t(285952),
-  v = t(474333),
-  j = t(903386),
-  O = t(700785),
-  A = t(605436),
+  O = t(474333),
+  v = t(903386),
+  A = t(700785),
+  j = t(605436),
   L = t(27544),
   b = t(415236),
   D = t(182905),
@@ -49,15 +49,15 @@ function U(e) {
     className: B.roleMemberList,
     sections: [t.length, n.length],
     renderRow: function(e) {
-      let u, E, N, {
-          section: T,
-          row: S
+      let u, E, T, {
+          section: N,
+          row: p
         } = e,
         x = !1;
-      switch (T) {
+      switch (N) {
         case y.m$.ROLES:
           var M;
-          N = (E = t[S]).rowType === y.aC.ROLE && (null === (M = E.tags) || void 0 === M ? void 0 : M.guild_connections) === null ? (0, l.jsx)(g.Z, {
+          T = (E = t[p]).rowType === y.aC.ROLE && (null === (M = E.tags) || void 0 === M ? void 0 : M.guild_connections) === null ? (0, l.jsx)(g.Z, {
             className: B.shield,
             color: E.colorString,
             size: 20
@@ -69,7 +69,7 @@ function U(e) {
           }), u = (0, l.jsxs)(l.Fragment, {
             children: [(0, l.jsx)("div", {
               className: B.rowHeight,
-              children: N
+              children: T
             }), (0, l.jsx)(o.Text, {
               variant: "text-sm/normal",
               className: B.rowLabel,
@@ -79,7 +79,7 @@ function U(e) {
           }), x = E.disabled;
           break;
         case y.m$.MEMBERS:
-          E = n[S], u = (0, l.jsxs)(l.Fragment, {
+          E = n[p], u = (0, l.jsxs)(l.Fragment, {
             children: [(0, l.jsx)(o.Avatar, {
               src: E.avatarURL,
               size: o.AvatarSizes.SIZE_24,
@@ -116,7 +116,7 @@ function U(e) {
         }), (0, l.jsx)(o.Text, {
           color: "text-muted",
           variant: "text-xs/normal",
-          children: A.zB(E.rowType)
+          children: j.zB(E.rowType)
         }), E.rowType !== y.aC.EMPTY_STATE && (0, l.jsx)(o.TooltipContainer, {
           className: B.removeIconContainer,
           text: null != i ? i : r(E.rowType, E.disabled),
@@ -131,8 +131,8 @@ function U(e) {
                 cancelText: w.Z.Messages.CANCEL,
                 onConfirm: () => (function(e, t) {
                   if (s.isGuildStageVoice()) {
-                    let l = (0, p._L)(e, t === y.aC.ROLE ? m.BN.ROLE : m.BN.MEMBER, s);
-                    (0, p.Os)(l) ? c.Z.clearPermissionOverwrite(s.id, l.id): (0, h.hw)(s.id, [l])
+                    let l = (0, S._L)(e, t === y.aC.ROLE ? m.BN.ROLE : m.BN.MEMBER, s);
+                    (0, S.Os)(l) ? c.Z.clearPermissionOverwrite(s.id, l.id): (0, h.hw)(s.id, [l])
                   } else c.Z.clearPermissionOverwrite(s.id, e)
                 })(e, l)
               }))
@@ -175,7 +175,7 @@ function H(e) {
     guild: s,
     channel: n,
     permissionUpdates: i
-  } = e, d = (0, r.e7)([I.Z], () => I.Z.getRoles(s.id)), c = A.RZ(s, d, n, S.yP, i), u = (0, r.e7)([C.ZP], () => A.cR(C.ZP.getMemberIds(s.id), n, s, S.yP, i)), h = (0, p.nG)(n.id);
+  } = e, d = (0, r.e7)([_.Z], () => _.Z.getRoles(s.id)), c = j.RZ(s, d, n, p.yP, i), u = (0, r.e7)([C.ZP], () => j.cR(C.ZP.getMemberIds(s.id), n, s, p.yP, i)), h = (0, S.nG)(n.id);
 
   function m() {
     (0, o.openModalLazy)(async () => {
@@ -241,11 +241,11 @@ function G(e) {
     isPrivateGuildChannel: i,
     roles: d,
     members: c
-  } = e, u = (0, r.e7)([R.Z], () => R.Z.can(F.Pl.ADMINISTRATOR, s)), h = O.Uu(F.Pl.VIEW_CHANNEL, s), m = O.Uu(F.Pl.ADMINISTRATOR, s);
+  } = e, u = (0, r.e7)([R.Z], () => R.Z.can(F.Pl.ADMINISTRATOR, s)), h = A.Uu(F.Pl.VIEW_CHANNEL, s), m = A.Uu(F.Pl.ADMINISTRATOR, s);
   async function g() {
     let e = n.accessPermissions,
-      a = _.default.getCurrentUser();
-    if (!i && null != await (0, N.T)(s.id, n.id)) {
+      a = I.default.getCurrentUser();
+    if (!i && null != await (0, T.T)(s.id, n.id)) {
       (0, o.openModalLazy)(async () => {
         let {
           ConfirmModal: e
@@ -259,7 +259,7 @@ function G(e) {
             variant: "text-md/normal",
             children: w.Z.Messages.DESIGNATE_OTHER_CHANNEL_ONBOARDING_PRIVATE.format({
               onClick: () => {
-                T.Z.open(s.id, P.pNK.ONBOARDING), t.onClose()
+                N.Z.open(s.id, P.pNK.ONBOARDING), t.onClose()
               }
             })
           })
@@ -267,7 +267,7 @@ function G(e) {
       });
       return
     }
-    A.$e(n, e, i), !i && null != a && !u && A.Yh(n, e)
+    j.$e(n, e, i), !i && null != a && !u && j.Yh(n, e)
   }
   let E = {
     title: w.Z.Messages.PRIVATE_CHANNEL,
@@ -295,14 +295,14 @@ function G(e) {
       className: B.cardFolder,
       children: [m && (0, l.jsx)("div", {
         className: B.adminWarning,
-        children: (0, l.jsx)(v.Z, {
-          messageType: v.Q.WARNING,
+        children: (0, l.jsx)(O.Z, {
+          messageType: O.Q.WARNING,
           children: w.Z.Messages.CHANNEL_PERMISSIONS_EVERYONE_IS_ADMIN_WARNING
         })
       }), !h && !m && !i && (0, l.jsx)("div", {
         className: B.adminWarning,
-        children: (0, l.jsx)(v.Z, {
-          messageType: v.Q.WARNING,
+        children: (0, l.jsx)(O.Z, {
+          messageType: O.Q.WARNING,
           children: w.Z.Messages.CHANNEL_PERMISSIONS_EVERYONE_CAN_NOT_VIEW_WARNING
         })
       }), i && (0, l.jsxs)(l.Fragment, {
@@ -335,7 +335,7 @@ function G(e) {
           channel: n,
           roles: d,
           members: c,
-          getRemoveTooltipHint: A.yv
+          getRemoveTooltipHint: j.yv
         })]
       })]
     })]
@@ -356,7 +356,7 @@ function k(e) {
     })]
   })
 }
-s.Z = r.ZP.connectStores([M.Z, R.Z, C.ZP, I.Z], () => {
+s.Z = r.ZP.connectStores([M.Z, R.Z, C.ZP, _.Z], () => {
   let e;
   let s = M.Z.channel,
     t = M.Z.category,
@@ -365,14 +365,14 @@ s.Z = r.ZP.connectStores([M.Z, R.Z, C.ZP, I.Z], () => {
     i = {},
     a = !1;
   if (null != s) {
-    e = I.Z.getGuild(s.getGuildId());
+    e = _.Z.getGuild(s.getGuildId());
     let t = C.ZP.getMemberIds(null == e ? void 0 : e.id);
     if (null != e) {
-      let r = I.Z.getRoles(e.id);
+      let r = _.Z.getRoles(e.id);
       i = M.Z.editedPermissionIds.reduce((e, s) => {
         let t = M.Z.getPermissionOverwrite(s);
         return null != t && (e[s] = t), e
-      }, {}), l = A.kA(e, r, s, s.accessPermissions, i), n = A.cR(t, s, e, s.accessPermissions, i), a = A.Yk(s, i)
+      }, {}), l = j.kA(e, r, s, s.accessPermissions, i), n = j.cR(t, s, e, s.accessPermissions, i), a = j.Yk(s, i)
     }
   }
   return {
@@ -397,14 +397,14 @@ s.Z = r.ZP.connectStores([M.Z, R.Z, C.ZP, I.Z], () => {
     isPrivateGuildChannel: h,
     locked: m,
     permissionUpdates: g
-  } = e, [N, T] = n.useState(!O.Uu(F.Pl.SEND_MESSAGES, a));
+  } = e, [T, N] = n.useState(!A.Uu(F.Pl.SEND_MESSAGES, a));
   if (null == a || null == c) return null;
 
-  function p() {
-    A.$e(a, F.Pl.SEND_MESSAGES, N), T(!N)
+  function S() {
+    j.$e(a, F.Pl.SEND_MESSAGES, T), N(!T)
   }
 
-  function S() {
+  function p() {
     if (null != i)(0, o.openModalLazy)(async () => {
       let {
         default: e
@@ -419,7 +419,7 @@ s.Z = r.ZP.connectStores([M.Z, R.Z, C.ZP, I.Z], () => {
           } = i, s = {
             ...i.permissionOverwrites
           };
-          null != e && null == s[e] && (s[e] = O.we(e)), await (0, E.u)(a, s[e].deny, s[e].allow) && (0, u.wk)(a.id, {
+          null != e && null == s[e] && (s[e] = A.we(e)), await (0, E.u)(a, s[e].deny, s[e].allow) && (0, u.wk)(a.id, {
             permissionOverwrites: Object.values(s)
           })
         }
@@ -445,11 +445,11 @@ s.Z = r.ZP.connectStores([M.Z, R.Z, C.ZP, I.Z], () => {
     }) : (0, l.jsx)(D.Z, {
       buttonText: w.Z.Messages.SYNC_NOW,
       canSync: !0,
-      icon: (0, o.makeIconCompat)(j.Z),
+      icon: (0, o.makeIconCompat)(v.Z),
       noticeText: w.Z.Messages.PERMISSIONS_UNSYNCED.format({
         categoryName: i.name
       }),
-      onClick: S
+      onClick: p
     }) : null, a.isGuildStageVoice() ? (0, l.jsx)(H, {
       guild: c,
       channel: a,

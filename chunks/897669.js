@@ -20,13 +20,13 @@ function h(e) {
     recurrenceId: n
   } = e, h = (0, r.ZP)(t, n), m = (0, a.Z)(n, t.id);
   if (null == t) return null;
-  let p = (null == t ? void 0 : t.scheduled_start_time) != null ? (0, o.lh)(m, h.startTime, new Date(null == t ? void 0 : t.scheduled_start_time)) : null;
+  let E = (null == t ? void 0 : t.scheduled_start_time) != null ? (0, o.lh)(m, h.startTime, new Date(null == t ? void 0 : t.scheduled_start_time)) : null;
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(s.ZP.Divider, {
       className: d.divider
     }), (0, l.jsx)(c.z, {
       startTime: h.startTime.toISOString(),
-      status: null != p ? p : t.status,
+      status: null != E ? E : t.status,
       liveText: u.Z.Messages.LIVE_EVENT,
       className: d.eventSchedule,
       textVariant: "text-lg/semibold",

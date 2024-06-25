@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(410030),
   h = n(271383),
   m = n(430824),
-  p = n(594174),
-  E = n(153124),
+  E = n(594174),
+  p = n(153124),
   g = n(709054),
   f = n(931240),
   C = n(645896),
@@ -94,7 +94,7 @@ function j(e) {
     onClose: s,
     onAccept: r,
     ...o
-  } = e, g = (0, E.Dt)(), I = (0, C.Cc)(n), T = (0, C.E8)(), [N, S] = i.useState(!0), [j, L] = i.useState(!1), O = i.useCallback(() => {
+  } = e, g = (0, p.Dt)(), I = (0, C.Cc)(n), T = (0, C.E8)(), [N, S] = i.useState(!0), [j, L] = i.useState(!1), O = i.useCallback(() => {
     r(), s()
   }, [r, s]);
   i.useEffect(() => {
@@ -107,7 +107,7 @@ function j(e) {
       L(!0)
     }, []),
     b = (0, c.e7)([m.Z], () => m.Z.getGuild(n)),
-    D = (0, c.e7)([p.default], () => p.default.getCurrentUser()),
+    D = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
     U = (0, c.e7)([h.ZP], () => null != D ? h.ZP.getMember(n, D.id) : null),
     k = (0, d.ZP)(),
     w = (0, _.nP)(null == I ? void 0 : null === (t = I.branding) || void 0 === t ? void 0 : t.primaryColor, [u.tokens.colors.BG_BRAND, .7]),
@@ -115,7 +115,7 @@ function j(e) {
       theme: k,
       saturation: 1
     }).hex(),
-    B = (0, _.nj)(w, H, "top center");
+    G = (0, _.nj)(w, H, "top center");
   return null == b || null == D || null == U || null == I ? null : (0, l.jsx)(u.ModalRoot, {
     ...o,
     transitionState: o.transitionState,
@@ -124,7 +124,7 @@ function j(e) {
     size: u.ModalSize.DYNAMIC,
     children: (0, l.jsxs)(u.ModalContent, {
       className: M.content,
-      style: B,
+      style: G,
       children: [(0, l.jsxs)("div", {
         className: M.infoSide,
         children: [(0, l.jsxs)("div", {

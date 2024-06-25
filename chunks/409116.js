@@ -24,18 +24,18 @@ let u = e => e.length > 5 ? e.replace(/\.00$/, "") : e,
       icon: C,
       className: f,
       discount: p = o.f_,
-      variant: g = "heading-md/semibold"
-    } = e, E = u((0, l.T4)(s, r)), m = p !== o.f_ && p.discountPercentage >= 5 ? (0, n.jsxs)(n.Fragment, {
-      children: [E, (0, n.jsx)(i.Heading, {
-        variant: g,
+      variant: E = "heading-md/semibold"
+    } = e, g = u((0, l.T4)(s, r)), m = p !== o.f_ && p.discountPercentage >= 5 ? (0, n.jsxs)(n.Fragment, {
+      children: [g, (0, n.jsx)(i.Heading, {
+        variant: E,
         color: "text-positive",
         className: c.discount,
         children: " (-".concat(p.discountPercentage, "%)")
       })]
-    }) : E;
+    }) : g;
     return (0, n.jsx)(n.Fragment, {
       children: (0, n.jsxs)(i.Heading, {
-        variant: g,
+        variant: E,
         className: a()(c.container, f),
         children: [C, null !== (t = null == d ? void 0 : d(m)) && void 0 !== t ? t : m]
       })

@@ -41,7 +41,7 @@ t.Z = function(e) {
     channelId: k,
     previewQuest: G,
     isParticipatingOverride: F
-  } = e, [V, w] = i.useState(!1), H = i.useCallback(() => w(!0), []), Y = i.useCallback(() => w(!1), []), W = i.useContext(T.h9), z = (0, r.e7)([N.default], () => N.default.getCurrentUser()), K = (0, r.e7)([I.Z], () => I.Z.getState().theme), Q = (0, o.wj)(K) ? U.BRd.DARK : U.BRd.LIGHT, {
+  } = e, [V, w] = i.useState(!1), H = i.useCallback(() => w(!0), []), Y = i.useCallback(() => w(!1), []), W = i.useContext(T.h9), K = (0, r.e7)([N.default], () => N.default.getCurrentUser()), z = (0, r.e7)([I.Z], () => I.Z.getState().theme), Q = (0, o.wj)(z) ? U.BRd.DARK : U.BRd.LIGHT, {
     isCurrentUserStreamingQuestApplication: X,
     quest: q
   } = (0, r.cj)([m.Z, d.Z, A.Z], () => {
@@ -69,22 +69,22 @@ t.Z = function(e) {
         return null
       }(e, A.Z.quests, m.Z);
     return {
-      isCurrentUserStreamingQuestApplication: null != t && null != z && function(e, t, n, s) {
+      isCurrentUserStreamingQuestApplication: null != t && null != K && function(e, t, n, s) {
         for (let l of e) {
           var i;
           if (l.type === b.fO.STREAM && l.user.id === n.id && O.r.build(t.config).application.id === (null === (i = (0, _.L2)(l.stream, s)) || void 0 === i ? void 0 : i.id)) return !0
         }
         return !1
-      }(e, t, z, m.Z),
+      }(e, t, K, m.Z),
       quest: t
     }
-  }, [k, z, G]), J = null != q ? O.r.build(q.config) : null, $ = null == J ? void 0 : J.application.id, ee = (0, r.cj)([E.ZP], () => {
+  }, [k, K, G]), J = null != q ? O.r.build(q.config) : null, $ = null == J ? void 0 : J.application.id, ee = (0, r.cj)([E.ZP], () => {
     let e = E.ZP.getRunningGames().map(e => e.id);
     return (0, p.$H)({
       quest: q,
       location: j.dr.QUEST_CHANNEL_CALL_HEADER
     }) && e.includes($)
-  }, [q, $]), et = !0 === F || X || ee, en = (0, r.e7)([A.Z], () => null != q && A.Z.isEnrolling(q.id), [q]), es = (0, r.e7)([d.Z], () => ((null == z ? void 0 : z.id) == null ? null : d.Z.getParticipant(k, z.id)) != null, [k, z]), ei = (0, S.B6)(null == q ? void 0 : q.config.expiresAt), el = (0, S.B6)(null == J ? void 0 : J.rewardsExpireAt), ea = i.useCallback(() => {
+  }, [q, $]), et = !0 === F || X || ee, en = (0, r.e7)([A.Z], () => null != q && A.Z.isEnrolling(q.id), [q]), es = (0, r.e7)([d.Z], () => ((null == K ? void 0 : K.id) == null ? null : d.Z.getParticipant(k, K.id)) != null, [k, K]), ei = (0, S.B6)(null == q ? void 0 : q.config.expiresAt), el = (0, S.B6)(null == J ? void 0 : J.rewardsExpireAt), ea = i.useCallback(() => {
     null != q && (0, C.AH)(q.id, {
       questContent: g.jn.QUEST_LIVE_STREAM,
       questContentCTA: h.jZ.ACCEPT_QUEST

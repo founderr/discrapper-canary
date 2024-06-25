@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(481060),
   h = n(788307),
   m = n(605236),
-  p = n(594174),
-  E = n(768581),
+  E = n(594174),
+  p = n(768581),
   g = n(906605),
   f = n(106301),
   C = n(833858),
@@ -44,7 +44,7 @@ let Z = e => {
   S = e => {
     let {
       currentStatus: t
-    } = e, s = i.useRef(f.Z.getRecentCustomStatuses()), r = i.useRef((0, m.un)(u.z.HANG_STATUS_NEW_BADGE)).current, S = (0, C.V)(), [v, A] = i.useState(null != t ? t : null), M = (0, c.e7)([p.default], () => p.default.getCurrentUser()), R = () => {
+    } = e, s = i.useRef(f.Z.getRecentCustomStatuses()), r = i.useRef((0, m.un)(u.z.HANG_STATUS_NEW_BADGE)).current, S = (0, C.V)(), [v, A] = i.useState(null != t ? t : null), M = (0, c.e7)([E.default], () => E.default.getCurrentUser()), R = () => {
       !r && (0, m.EW)(u.z.HANG_STATUS_NEW_BADGE)
     }, j = (e, t) => {
       e.stopPropagation(), (0, g.Zx)(t, !0), R()
@@ -106,7 +106,7 @@ let Z = e => {
               children: [(0, l.jsx)(d.Avatar, {
                 className: N.avatar,
                 size: d.AvatarSizes.SIZE_40,
-                src: (0, E.ov)(M),
+                src: (0, p.ov)(M),
                 "aria-hidden": !0
               }), (0, l.jsx)("div", {
                 className: N.outline

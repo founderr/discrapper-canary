@@ -36,27 +36,27 @@ let U = o.forwardRef(function(e, t) {
     expansionSpring: b,
     onCtxMenuOpen: Q,
     onCtxMenuClose: I,
-    onCtxMenuSelect: P,
-    quest: k,
+    onCtxMenuSelect: k,
+    quest: P,
     useReducedMotion: L
-  } = e, q = o.useRef(null), w = (0, i.e7)([m.Z], () => m.Z.isEnrolling(k.id), [k]), H = (0, x.B6)(k.config.expiresAt), V = o.useMemo(() => (0, h.nP)(k.config.assets.questBarHero), [k]), D = o.useCallback(() => {
-    (0, p.AH)(k.id, {
+  } = e, q = o.useRef(null), w = (0, i.e7)([m.Z], () => m.Z.isEnrolling(P.id), [P]), H = (0, x.B6)(P.config.expiresAt), V = o.useMemo(() => (0, h.nP)(P.config.assets.questBarHero), [P]), D = o.useCallback(() => {
+    (0, p.AH)(P.id, {
       questContent: g.jn.QUEST_BAR_V2,
       questContentCTA: d.jZ.ACCEPT_QUEST
     })
-  }, [k]), {
+  }, [P]), {
     primaryVariant: W
   } = C.u.useExperiment({
     location: y.dr.QUESTS_BAR
   }, {
     autoTrackExposure: !1
-  }), z = (null === (n = k.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, G = (0, x.Rf)({
-    quest: k,
+  }), z = (null === (n = P.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, G = (0, x.Rf)({
+    quest: P,
     location: y.dr.QUESTS_BAR
-  }), F = G.percentComplete > 0, K = U && Z, Y = o.useMemo(() => (0, h.$J)(k), [k]), X = (0, h.ph)(k), $ = (0, h.pG)({
-    quest: k,
+  }), F = G.percentComplete > 0, K = U && Z, Y = o.useMemo(() => (0, h.$J)(P), [P]), X = (0, h.ph)(P), $ = (0, h.pG)({
+    quest: P,
     location: y.dr.QUESTS_BAR,
-    useV2Variants: W === C.P.V2 || (0, R.a)(k),
+    useV2Variants: W === C.P.V2 || (0, R.a)(P),
     taskDetails: G
   });
   return (0, s.jsx)("div", {
@@ -79,9 +79,9 @@ let U = o.forwardRef(function(e, t) {
         }), (0, s.jsx)(S.r, {
           onOpen: Q,
           onClose: I,
-          onSelect: P,
+          onSelect: k,
           questContent: g.jn.QUEST_BAR_V2,
-          quest: k,
+          quest: P,
           shouldShowDisclosure: !1,
           showShareLink: !0,
           children: e => (0, s.jsx)(c.Clickable, {
@@ -99,21 +99,21 @@ let U = o.forwardRef(function(e, t) {
         className: O.divider
       }), (0, s.jsx)(_.Z, {
         progressBarRef: q,
-        quest: k,
+        quest: P,
         isExpanded: U
       }), (0, s.jsx)(B.Z, {
-        quest: k,
+        quest: P,
         progressBarRef: q,
         isExpanded: !0
-      }), (0, j.r)(k) && (0, s.jsx)(v.Z, {
+      }), (0, j.r)(P) && (0, s.jsx)(v.Z, {
         style: {
           marginTop: 8
         }
       }), Y && (0, s.jsx)(A.Z, {
-        quest: k
+        quest: P
       }), (0, s.jsx)(T.n, {
         children: (0, s.jsx)(N.y, {
-          quest: k,
+          quest: P,
           useReducedMotion: L,
           isExpanded: U,
           hasMadeProgress: F
@@ -128,13 +128,13 @@ let U = o.forwardRef(function(e, t) {
           children: [(0, s.jsx)(f.Z, {
             className: O.rewardTile,
             learnMoreStyle: "text",
-            quest: k,
+            quest: P,
             questContent: g.jn.QUEST_BAR_V2
           }), (0, s.jsx)(c.Heading, {
             className: O.title,
             variant: "heading-md/medium",
             children: M.Z.Messages.QUESTS_TITLE.format({
-              questName: k.config.messages.questName
+              questName: P.config.messages.questName
             })
           }), (0, s.jsx)(c.Text, {
             className: O.description,
@@ -164,7 +164,7 @@ let U = o.forwardRef(function(e, t) {
         }), (0, s.jsx)(l.animated.div, {
           className: O.heroAssetTint,
           style: {
-            backgroundColor: k.config.colors.primary,
+            backgroundColor: P.config.colors.primary,
             opacity: b.to([0, 1], [1, 0])
           }
         }), V ? (0, s.jsx)(E.Fl, {

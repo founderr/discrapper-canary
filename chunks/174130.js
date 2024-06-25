@@ -21,17 +21,17 @@ function m(e) {
   } = e, {
     isFavoritesPerk: n
   } = (0, u.z)("ChannelFavoritesHeaderButton"), m = (0, d.Z)(), {
-    notifyFavoriteAdded: p
-  } = (0, c.up)(), E = (0, i.e7)([r.Z], () => r.Z.isFavorite(t.id));
+    notifyFavoriteAdded: E
+  } = (0, c.up)(), p = (0, i.e7)([r.Z], () => r.Z.isFavorite(t.id));
   if (!n || m) return null;
-  let g = E ? s.StarIcon : s.StarOutlineIcon,
-    f = E ? h.Z.Messages.UNFAVORITE_CHANNEL : h.Z.Messages.FAVORITE_CHANNEL;
+  let g = p ? s.StarIcon : s.StarOutlineIcon,
+    f = p ? h.Z.Messages.UNFAVORITE_CHANNEL : h.Z.Messages.FAVORITE_CHANNEL;
   return (0, l.jsx)(a.ZP.Icon, {
     icon: g,
     tooltip: f,
     "aria-label": f,
     onClick: () => {
-      E ? (0, o.oC)(t.id) : (p(), (0, o.kj)(t.id))
+      p ? (0, o.oC)(t.id) : (E(), (0, o.kj)(t.id))
     }
   })
 }

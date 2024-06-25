@@ -53,8 +53,8 @@ var i = t(332148),
   u = t(434404);
 t(726521);
 var s = t(822893),
-  d = t(623292),
-  c = t(488131),
+  c = t(623292),
+  d = t(488131),
   E = t(314897),
   f = t(592125),
   I = t(626135),
@@ -114,7 +114,7 @@ function j(e, n) {
 function P(e, n, t) {
   let i = e.isPrivate(),
     a = n.author.id === E.default.getId();
-  (0, d.fE)({
+  (0, c.fE)({
     channel: e,
     message: n,
     shouldMention: !t.shiftKey && !a,
@@ -123,12 +123,12 @@ function P(e, n, t) {
 }
 
 function b(e, n) {
-  (0, c.R6)(e, n, "Message")
+  (0, d.R6)(e, n, "Message")
 }
 
 function L(e, n) {
   let t = f.Z.getChannel(Z.default.castMessageIdAsChannelId(n.id));
-  null != t && (0, c.ok)(t)
+  null != t && (0, d.ok)(t)
 }
 
 function y(e, n) {

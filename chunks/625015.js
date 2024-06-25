@@ -10,8 +10,8 @@ var l = n(735250),
   d = n(703656),
   h = n(594174),
   m = n(626135),
-  p = n(74538),
-  E = n(204197),
+  E = n(74538),
+  p = n(204197),
   g = n(502762),
   f = n(981631),
   C = n(921944),
@@ -161,10 +161,10 @@ let A = i.memo(function(e) {
     displayProfile: n
   } = e, {
     avatarSrc: i
-  } = (0, E.Z)({
+  } = (0, p.Z)({
     user: t,
     size: r.AvatarSizes.SIZE_32
-  }), s = h.default.getCurrentUser(), a = p.ZP.isPremium(s) || null == n || !p.ZP.isPremiumAtLeast(n.premiumType, _.p9.TIER_2), {
+  }), s = h.default.getCurrentUser(), a = E.ZP.isPremium(s) || null == n || !E.ZP.isPremiumAtLeast(n.premiumType, _.p9.TIER_2), {
     enabled: o,
     variant: u
   } = c.f.useExperiment({

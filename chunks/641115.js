@@ -29,9 +29,9 @@ var l = t(735250),
   R = t(689938),
   v = t(278768),
   L = t(665375),
-  p = t(331651);
+  M = t(331651);
 
-function M(e) {
+function p(e) {
   let {
     analyticsLocation: n,
     onClose: s
@@ -107,7 +107,7 @@ function j(e) {
         children: h
       })
     })
-  }), t = () => M({
+  }), t = () => p({
     analyticsLocation: u,
     onClose: E
   })) : (n = (0, l.jsx)("div", {
@@ -214,7 +214,7 @@ function P(e) {
     }), H ? (0, l.jsx)(x.Z, {
       message: R.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_PRESET_DOCUMENTS,
       onClose: n,
-      openStreamUpsellModal: M
+      openStreamUpsellModal: p
     }) : null]
   }) : (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)(Z.Z, {
@@ -231,7 +231,7 @@ function P(e) {
       })]
     }), H ? (0, l.jsx)(x.Z, {
       onClose: n,
-      openStreamUpsellModal: M,
+      openStreamUpsellModal: p,
       glow: W
     }) : null]
   });
@@ -245,7 +245,7 @@ function P(e) {
         className: L.qualitySettingsContainer,
         children: [(0, l.jsx)(d.SingleSelect, {
           value: t,
-          className: p.marginTop8,
+          className: M.marginTop8,
           options: q,
           onChange: e => P(e)
         }), J]

@@ -12,8 +12,8 @@ var l, i, s = n(735250),
   d = n(607070),
   h = n(605236),
   m = n(175355),
-  p = n(160683),
-  E = n(921944),
+  E = n(160683),
+  p = n(921944),
   g = n(627952);
 
 function f(e) {
@@ -42,7 +42,7 @@ function C() {
 
 function _() {
   return (0, s.jsx)("div", {
-    ref: f(i || (i = n.t(p, 2))),
+    ref: f(i || (i = n.t(E, 2))),
     className: g.trinkets
   })
 }
@@ -52,7 +52,7 @@ let I = e => {
   } = e;
   return a.useEffect(() => {
     setTimeout(() => (0, h.EW)(u.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, {
-      dismissAction: E.L.AUTO_DISMISS
+      dismissAction: p.L.AUTO_DISMISS
     }), 1e4)
   }, []), (0, s.jsxs)("div", {
     className: g.animation,

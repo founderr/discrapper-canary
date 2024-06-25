@@ -32,14 +32,14 @@ function h(e) {
     children: s,
     keyExtractor: h,
     paddingTop: m = 0,
-    paddingBottom: p = 0
-  } = e, [E, g] = i.useState({
+    paddingBottom: E = 0
+  } = e, [p, g] = i.useState({
     width: 0,
     height: 0
   }), {
     width: f,
     height: C
-  } = E, _ = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0, I = f - 16, x = C - (m + p), {
+  } = p, _ = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0, I = f - 16, x = C - (m + E), {
     tileStyle: T,
     tileWidth: N,
     rows: Z,
@@ -87,7 +87,7 @@ function h(e) {
   return (0, l.jsx)(r.Z, {
     fade: !0,
     className: n,
-    listPadding: [m + R, 0, p + R - 8, 8],
+    listPadding: [m + R, 0, E + R - 8, 8],
     renderRow: function(e) {
       var t;
       let n = e * S;

@@ -4,9 +4,9 @@ s.d(n, {
   }
 }), s(47120);
 var l = s(735250),
-  t = s(470079),
-  i = s(512722),
-  r = s.n(i),
+  i = s(470079),
+  t = s(512722),
+  r = s.n(t),
   a = s(442837),
   c = s(481060),
   o = s(355467),
@@ -35,7 +35,7 @@ function O(e) {
   let {
     premiumSubscription: n,
     setPurchaseState: s,
-    onBack: i,
+    onBack: t,
     onNext: O,
     legalTermsNodeRef: L,
     flashLegalTerms: j,
@@ -65,8 +65,8 @@ function O(e) {
     skusById: en,
     skuPricePreviewsById: es,
     referralCode: el,
-    contextMetadata: et,
-    invoicePreview: ei
+    contextMetadata: ei,
+    invoicePreview: et
   } = (0, A.usePaymentContext)(), {
     isGift: er,
     selectedGiftStyle: ea,
@@ -83,8 +83,8 @@ function O(e) {
       analyticsLocations: eN
     } = (0, u.ZP)(),
     eT = null != Q ? $[Q] : null,
-    [eS, ex] = t.useState(eE),
-    [eh, eP] = t.useState(!1),
+    [eS, ex] = i.useState(eE),
+    [eh, eP] = i.useState(!1),
     {
       hasEntitlements: eA
     } = (0, m.H)(eI, er),
@@ -127,12 +127,12 @@ function O(e) {
       skuPricePreview: eC,
       purchaseType: q,
       referralCode: el,
-      loadId: et.loadId,
+      loadId: ei.loadId,
       giftInfoOptions: em,
-      invoicePreview: ei
+      invoicePreview: et
     })
   };
-  t.useEffect(() => {
+  i.useEffect(() => {
     (async () => {
       if (!0 === ep) try {
         if (null == E.Z.redirectedPaymentId) return;
@@ -149,7 +149,7 @@ function O(e) {
         ex(!1), (0, o.K2)()
       } else B === p.I.SUCCESS && await eO()
     })()
-  }, [ep]), t.useEffect(() => {
+  }, [ep]), i.useEffect(() => {
     eE && !er && null == n && eO()
   }, [eE, er, n]);
   let eL = null != H || q === C.GZQ.ONE_TIME && !er;
@@ -172,7 +172,7 @@ function O(e) {
     }), (0, l.jsx)(g.Z, {}), W && !eL ? (0, l.jsx)("div", {
       className: R.back,
       children: (0, l.jsx)(_.Z, {
-        onClick: i
+        onClick: t
       })
     }) : null]
   })

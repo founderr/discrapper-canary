@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(458263),
   h = n(603074),
   m = n(294629),
-  p = n(390322),
-  E = n(871499),
+  E = n(390322),
+  p = n(871499),
   g = n(131951),
   f = n(459273),
   C = n(304388),
@@ -58,7 +58,7 @@ function x(e) {
       let {
         closePopout: n
       } = e;
-      return (0, l.jsx)(p.Z, {
+      return (0, l.jsx)(E.Z, {
         children: (0, l.jsx)(h.Z, {
           guildId: T,
           channel: t,
@@ -71,7 +71,7 @@ function x(e) {
         })
       })
     },
-    children: e => (0, l.jsx)(E.Z, {
+    children: e => (0, l.jsx)(p.Z, {
       themeable: x,
       label: function() {
         if (N) return I.Z.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;

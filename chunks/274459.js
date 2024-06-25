@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(70956),
   h = n(456631),
   m = n(978417);
-let p = 6 * d.Z.Millis.SECOND,
-  E = 2 * d.Z.Millis.SECOND,
+let E = 6 * d.Z.Millis.SECOND,
+  p = 2 * d.Z.Millis.SECOND,
   g = 2 * d.Z.Millis.SECOND,
   f = e => "scale(".concat(1 - -(e / 120), ") rotate(").concat(e, "deg)");
 
@@ -50,7 +50,7 @@ function C(e) {
     let e;
     return Date.now() - C >= g ? (0, h.H)(t) : e = setTimeout(() => {
       x(!1), T && (0, h.H)(t)
-    }, T ? E : p), () => {
+    }, T ? p : E), () => {
       null != e && clearTimeout(e)
     }
   }, [C, t, T]), T) ? null : N((e, t) => {

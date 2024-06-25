@@ -12,7 +12,7 @@ var l, n = t(735250),
   g = t(689938),
   E = t(258534);
 
-function N(e, s, t) {
+function T(e, s, t) {
   return s in e ? Object.defineProperty(e, s, {
     value: t,
     enumerable: !0,
@@ -20,7 +20,7 @@ function N(e, s, t) {
     writable: !0
   }) : e[s] = t, e
 }
-class T extends(l = i.Component) {
+class N extends(l = i.Component) {
   getSelectedSection(e) {
     let {
       selectedSection: s
@@ -86,15 +86,15 @@ class T extends(l = i.Component) {
     null != this.inputRef.current && this.inputRef.current.focus()
   }
   constructor(...e) {
-    super(...e), N(this, "inputRef", i.createRef()), N(this, "state", {
+    super(...e), T(this, "inputRef", i.createRef()), T(this, "state", {
       query: null,
       selectedSection: null,
       selectedRow: 0
-    }), N(this, "memoizedGetRows", (0, u.oH)((e, s, t) => {
+    }), T(this, "memoizedGetRows", (0, u.oH)((e, s, t) => {
       let l = RegExp("^".concat(h.Z.escape(null != e ? e.trim() : "")), "i"),
         n = e => l.test(e);
       return t.map((e, t) => s(n, t))
-    })), N(this, "getRows", () => {
+    })), T(this, "getRows", () => {
       let {
         onFilterResults: e,
         sections: s
@@ -102,7 +102,7 @@ class T extends(l = i.Component) {
         query: t
       } = this.state;
       return this.memoizedGetRows(t, e, s)
-    }), N(this, "handleChange", e => {
+    }), T(this, "handleChange", e => {
       var s, t;
       let l = e.target.value;
       null === (s = (t = this.props).onQueryChange) || void 0 === s || s.call(t, l), this.setState({
@@ -110,15 +110,15 @@ class T extends(l = i.Component) {
         selectedSection: null,
         selectedRow: 0
       })
-    }), N(this, "handleMouseEnter", (e, s) => {
+    }), T(this, "handleMouseEnter", (e, s) => {
       this.setState({
         selectedSection: e,
         selectedRow: s
       })
-    }), N(this, "handleClick", (e, s) => {
+    }), T(this, "handleClick", (e, s) => {
       let t = this.getRows();
       this.props.onSelect(t[e][s], e), this.props.onClose()
-    }), N(this, "handleKeyDown", e => {
+    }), T(this, "handleKeyDown", e => {
       let {
         keyboardModeEnabled: s
       } = this.props, {
@@ -145,10 +145,10 @@ class T extends(l = i.Component) {
         case m.yXg.ESCAPE:
           e.preventDefault(), this.props.onSelect(null, null), this.props.onClose()
       }
-    }), N(this, "isEmpty", () => 0 === this.getRows().reduce((e, s) => e + s.length, 0)), N(this, "getSectionHeight", e => {
+    }), T(this, "isEmpty", () => 0 === this.getRows().reduce((e, s) => e + s.length, 0)), T(this, "getSectionHeight", e => {
       let s = this.props.sections[e];
       return this.isEmpty() || null == s ? 0 : 44
-    }), N(this, "renderSection", e => {
+    }), T(this, "renderSection", e => {
       let {
         section: s
       } = e, t = this.props.sections[s];
@@ -156,7 +156,7 @@ class T extends(l = i.Component) {
         className: E.section,
         children: t
       }, s)
-    }), N(this, "renderRow", e => {
+    }), T(this, "renderRow", e => {
       var s;
       let {
         section: t,
@@ -190,8 +190,8 @@ class T extends(l = i.Component) {
     })
   }
 }
-N(T, "defaultProps", {
+T(N, "defaultProps", {
   sections: [null]
 }), s.Z = o.ZP.connectStores([c.Z], () => ({
   keyboardModeEnabled: c.Z.keyboardModeEnabled
-}))(T)
+}))(N)

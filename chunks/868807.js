@@ -1,6 +1,6 @@
 n.d(t, {
   a: function() {
-    return p
+    return E
   }
 }), n(47120);
 var l = n(392711),
@@ -15,7 +15,7 @@ var l = n(392711),
 let h = new Set,
   m = null;
 
-function p(e) {
+function E(e) {
   let {
     id: t
   } = e, {
@@ -36,14 +36,14 @@ function p(e) {
     return n
   }, [t]), a = (0, s.e7)([u.Z], () => u.Z.shouldLoadMessageRequestPreview(t), [t]);
   return !n && null == l && a && function(e) {
-    h.add(e), null == m && (m = setTimeout(E, 0))
+    h.add(e), null == m && (m = setTimeout(p, 0))
   }(t), {
     loaded: n,
     error: i,
     message: l
   }
 }
-async function E() {
+async function p() {
   try {
     for (; !i().isEmpty(h);) await g()
   } finally {

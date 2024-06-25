@@ -1,33 +1,33 @@
-i.d(a, {
+s.d(n, {
   Z: function() {
     return o
   }
 });
-var n = i(735250);
-i(470079);
-var l = i(993409),
-  r = i(901952),
-  t = i(689938),
-  s = i(472375);
+var l = s(735250);
+s(470079);
+var t = s(993409),
+  i = s(901952),
+  r = s(689938),
+  a = s(472375);
 
 function o(e) {
   let {
-    user: a,
-    hideMessageInput: i,
+    user: n,
+    hideMessageInput: s,
     hideExampleButton: o
   } = e;
-  return i ? (0, n.jsx)("footer", {
-    className: s.footer,
-    children: !o && (0, n.jsx)(l.Z, {
+  return s ? (0, l.jsx)("footer", {
+    className: a.footer,
+    children: !o && (0, l.jsx)(t.Z, {
       variant: "text",
-      text: t.Z.Messages.USER_SETTINGS_CUSTOMIZE_PROFILE_EXAMPLE_BUTTON,
+      text: r.Z.Messages.USER_SETTINGS_CUSTOMIZE_PROFILE_EXAMPLE_BUTTON,
       fullWidth: !0
     })
-  }) : (0, n.jsx)("footer", {
+  }) : (0, l.jsx)("footer", {
     inert: "",
-    className: s.footer,
-    children: (0, n.jsx)(r.Z, {
-      user: a
+    className: a.footer,
+    children: (0, l.jsx)(i.Z, {
+      user: n
     })
   })
 }

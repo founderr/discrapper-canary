@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return E
+    return p
   }
 });
 var l = n(735250),
@@ -15,14 +15,14 @@ var l = n(735250),
   h = n(610947),
   m = n(260788);
 
-function p(e) {
+function E(e) {
   let {
     focused: t,
     channelId: n,
     streamerId: s,
     stream: u
-  } = e, p = i.useRef(null), E = (0, r.e7)([c.default], () => c.default.getCurrentUser());
-  a()(null != E, "user cannot be null"), (0, h.Z)(p, E, s, n);
+  } = e, E = i.useRef(null), p = (0, r.e7)([c.default], () => c.default.getCurrentUser());
+  a()(null != p, "user cannot be null"), (0, h.Z)(E, p, s, n);
   let {
     handleClick: g,
     handleMouseDown: f,
@@ -30,16 +30,16 @@ function p(e) {
     handleMouseMove: _,
     handleMouseUp: I
   } = (0, d.Z)({
-    user: E,
+    user: p,
     channelId: n,
     streamerId: s,
     stream: u,
     focused: t,
-    canvas: p.current
+    canvas: E.current
   });
   return (0, l.jsx)(o.Z, {
     children: (0, l.jsx)("canvas", {
-      ref: p,
+      ref: E,
       onClick: g,
       onMouseDown: f,
       onMouseEnter: C,
@@ -50,7 +50,7 @@ function p(e) {
   })
 }
 
-function E(e) {
+function p(e) {
   let {
     isSharedCanvasEnabled: t
   } = u.Z.useExperiment({
@@ -59,7 +59,7 @@ function E(e) {
   }, {
     autoTrackExposure: !0
   });
-  return !t || e.hasScreenMessage ? null : (0, l.jsx)(p, {
+  return !t || e.hasScreenMessage ? null : (0, l.jsx)(E, {
     ...e
   })
 }

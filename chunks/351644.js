@@ -4,9 +4,9 @@ t.d(n, {
   }
 }), t(653041), t(47120);
 var i = t(735250),
-  s = t(470079),
-  l = t(120356),
-  a = t.n(l),
+  l = t(470079),
+  s = t(120356),
+  a = t.n(s),
   r = t(658722),
   o = t.n(r),
   c = t(442837),
@@ -19,12 +19,12 @@ var i = t(735250),
   m = t(147890),
   _ = t(231757),
   h = t(553795),
-  O = t(496675),
-  g = t(285952),
+  g = t(496675),
+  O = t(285952),
   A = t(626135),
-  C = t(768581),
-  S = t(63063),
-  x = t(709054),
+  x = t(768581),
+  C = t(63063),
+  S = t(709054),
   p = t(51144),
   R = t(585835),
   Z = t(997787),
@@ -35,15 +35,15 @@ var i = t(735250),
   j = t(790904),
   b = t(609182);
 
-function D(e, n) {
+function P(e, n) {
   return n.includes(e)
 }
 
-function P(e) {
+function D(e) {
   let {
     query: n,
     setQuery: t
-  } = e, l = s.useCallback(e => {
+  } = e, s = l.useCallback(e => {
     t(e)
   }, [t]);
   return (0, i.jsx)("div", {
@@ -51,7 +51,7 @@ function P(e) {
     children: (0, i.jsx)(u.SearchBar, {
       size: u.SearchBar.Sizes.MEDIUM,
       query: n,
-      onChange: l,
+      onChange: s,
       onClear: () => t(""),
       placeholder: M.Z.Messages.INTEGRATIONS_SEARCH,
       "aria-label": M.Z.Messages.INTEGRATIONS_SEARCH
@@ -63,7 +63,7 @@ function B(e) {
   let {
     guild: n,
     channel: t,
-    applicationIntegrations: l,
+    applicationIntegrations: s,
     builtInIntegrations: r,
     customWebhooks: B,
     followedChannelWebhooks: G,
@@ -73,7 +73,7 @@ function B(e) {
     onManageCustomWebhooks: H,
     onManageFollowedChannels: W,
     onManageApplication: w
-  } = e, F = (0, N.ZP)(), [V, K] = s.useState(""), {
+  } = e, F = (0, N.ZP)(), [V, K] = l.useState(""), {
     isFetchingConnections: Y,
     accounts: z
   } = (0, c.cj)([h.Z], () => ({
@@ -82,26 +82,26 @@ function B(e) {
   }), []), {
     canManageWebhooks: q,
     canManageGuild: J
-  } = (0, c.cj)([O.Z], () => ({
-    canManageWebhooks: null != n && O.Z.can(f.Plq.MANAGE_WEBHOOKS, n) || null != t && O.Z.can(f.Plq.MANAGE_WEBHOOKS, t),
-    canManageGuild: null != n && null == t && O.Z.can(f.Plq.MANAGE_GUILD, n)
+  } = (0, c.cj)([g.Z], () => ({
+    canManageWebhooks: null != n && g.Z.can(f.Plq.MANAGE_WEBHOOKS, n) || null != t && g.Z.can(f.Plq.MANAGE_WEBHOOKS, t),
+    canManageGuild: null != n && null == t && g.Z.can(f.Plq.MANAGE_GUILD, n)
   }), [n, t]), {
     availableTwitchIntegrations: X,
     availableYoutubeIntegrations: Q,
     guildTwitchIntegrations: $,
     guildYoutubeIntegrations: ee
-  } = s.useMemo(() => {
-    var e, n, t, i, s, l, a, o;
+  } = l.useMemo(() => {
+    var e, n, t, i, l, s, a, o;
     return {
-      availableTwitchIntegrations: null !== (s = null === (e = r.twitch) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0,
-      availableYoutubeIntegrations: null !== (l = null === (n = r.youtube) || void 0 === n ? void 0 : n.length) && void 0 !== l ? l : 0,
+      availableTwitchIntegrations: null !== (l = null === (e = r.twitch) || void 0 === e ? void 0 : e.length) && void 0 !== l ? l : 0,
+      availableYoutubeIntegrations: null !== (s = null === (n = r.youtube) || void 0 === n ? void 0 : n.length) && void 0 !== s ? s : 0,
       guildTwitchIntegrations: null !== (a = null === (t = r.twitch) || void 0 === t ? void 0 : t.filter(e => e.enabled).length) && void 0 !== a ? a : 0,
       guildYoutubeIntegrations: null !== (o = null === (i = r.youtube) || void 0 === i ? void 0 : i.filter(e => e.enabled).length) && void 0 !== o ? o : 0
     }
   }, [r.twitch, r.youtube]), {
     showTwitchCard: en,
     showYoutubeCard: et
-  } = s.useMemo(() => {
+  } = l.useMemo(() => {
     if (Y || !J) return {
       showTwitchCard: !1,
       showYoutubeCard: !1
@@ -113,26 +113,26 @@ function B(e) {
       showTwitchCard: X > 0 || !t && e,
       showYoutubeCard: Q > 0 || !i && e
     }
-  }, [Y, J, n, z, X, Q]), ei = Object.values(l).length, es = s.useMemo(() => {
-    let e = ei > 100 ? D : o();
-    return Object.values(l).filter(n => {
-      var t, i, s;
+  }, [Y, J, n, z, X, Q]), ei = Object.values(s).length, el = l.useMemo(() => {
+    let e = ei > 100 ? P : o();
+    return Object.values(s).filter(n => {
+      var t, i, l;
       let {
-        application: l
+        application: s
       } = n;
-      return t = l, i = V, s = e, !!("" === (i = i.trim().toLowerCase()) || t.id === i || s(i, t.name.toLowerCase()) || null != t.bot && s(i, t.bot.username.toLowerCase())) || !1
+      return t = s, i = V, l = e, !!("" === (i = i.trim().toLowerCase()) || t.id === i || l(i, t.name.toLowerCase()) || null != t.bot && l(i, t.bot.username.toLowerCase())) || !1
     })
-  }, [l, ei, V]), el = (0, c.e7)([Z.Z], () => {
-    if (null != n) return es.find(e => Z.Z.canShowOverviewTooltip(n.id, e.integration.id))
-  }, [es, n]), ea = s.useMemo(() => void 0 !== el ? [el, ...es.filter(e => e.integration.id !== el.integration.id)] : es, [es, el]), er = (0, u.useModalsStore)(u.hasAnyModalOpenSelector), [eo, ec] = s.useState(!1), ed = s.useRef(0), eu = () => {
+  }, [s, ei, V]), es = (0, c.e7)([Z.Z], () => {
+    if (null != n) return el.find(e => Z.Z.canShowOverviewTooltip(n.id, e.integration.id))
+  }, [el, n]), ea = l.useMemo(() => void 0 !== es ? [es, ...el.filter(e => e.integration.id !== es.integration.id)] : el, [el, es]), er = (0, u.useModalsStore)(u.hasAnyModalOpenSelector), [eo, ec] = l.useState(!1), ed = l.useRef(0), eu = () => {
     ec(!0), clearTimeout(ed.current), ed.current = setTimeout(() => {
       ec(!1)
     }, 200)
   };
-  s.useEffect(() => (window.addEventListener("scroll", eu, !0), () => window.removeEventListener("scroll", eu)));
+  l.useEffect(() => (window.addEventListener("scroll", eu, !0), () => window.removeEventListener("scroll", eu)));
   let eI = ea.map(e => {
-      let t = !er && e.integration.id === (null == el ? void 0 : el.integration.id);
-      return function(e, n, t, s, l) {
+      let t = !er && e.integration.id === (null == es ? void 0 : es.integration.id);
+      return function(e, n, t, l, s) {
         var a;
         let {
           application: r,
@@ -141,17 +141,17 @@ function B(e) {
         return null != o.user ? c.push({
           icon: u.ClockIcon,
           text: M.Z.Messages.INTEGRATION_ADDED_USER_DATE.format({
-            timestamp: x.default.extractTimestamp(o.id),
+            timestamp: S.default.extractTimestamp(o.id),
             user: p.ZP.getUserTag(o.user)
           })
         }) : c.push({
           icon: u.ClockIcon,
           text: M.Z.Messages.INTEGRATION_ADDED_DATE.format({
-            timestamp: x.default.extractTimestamp(o.id)
+            timestamp: S.default.extractTimestamp(o.id)
           })
         }), (0, i.jsx)(R.Z, {
           name: r.name,
-          imageSrc: null !== (a = r.getIconURL(48)) && void 0 !== a ? a : C.pK["0"],
+          imageSrc: null !== (a = r.getIconURL(48)) && void 0 !== a ? a : x.pK["0"],
           integration: n,
           buttonText: M.Z.Messages.INTEGRATIONS_APPLICATION_BUTTON,
           hasNextSection: !0,
@@ -159,13 +159,13 @@ function B(e) {
             t(r.id), A.default.track(f.rMx.APP_MANAGE_CTA_CLICKED, {
               application_id: r.id,
               guild_id: null == e ? void 0 : e.id,
-              is_admin: null != e ? O.Z.can(f.Plq.ADMINISTRATOR, e) : void 0
+              is_admin: null != e ? g.Z.can(f.Plq.ADMINISTRATOR, e) : void 0
             })
           },
           details: c,
           guildId: null == e ? void 0 : e.id,
-          isScrolling: s,
-          canShowMigrationTooltip: l
+          isScrolling: l,
+          canShowMigrationTooltip: s
         }, "integration-".concat(o.id))
       }(n, e, w, eo, t)
     }),
@@ -173,14 +173,14 @@ function B(e) {
       className: L.footerImage
     });
   0 === eI.length && J && (eI = function(e, n, t) {
-    let s = (0, d.wj)(e) ? j : b,
-      l = (0, i.jsxs)(g.Z, {
-        direction: g.Z.Direction.VERTICAL,
-        align: g.Z.Align.CENTER,
+    let l = (0, d.wj)(e) ? j : b,
+      s = (0, i.jsxs)(O.Z, {
+        direction: O.Z.Direction.VERTICAL,
+        align: O.Z.Align.CENTER,
         className: L.emptyStateWrapper,
         children: [(0, i.jsx)("img", {
           alt: "",
-          src: s,
+          src: l,
           className: L.emptyStateSearchImage
         }), (0, i.jsx)(u.Card, {
           editable: !0,
@@ -221,20 +221,20 @@ function B(e) {
           })]
         })
       });
-    return n > 0 ? l : a
+    return n > 0 ? s : a
   }(F, ei, null == n ? void 0 : n.id), eN = null);
-  let eE = S.Z.getArticleURL(f.BhN.INTEGRATIONS),
+  let eE = C.Z.getArticleURL(f.BhN.INTEGRATIONS),
     eT = null != t ? M.Z.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_CHANNEL : M.Z.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_GUILD,
     em = [];
   if (q) {
-    var e_, eh, eO, eg, eA;
+    var e_, eh, eg, eO, eA;
     let e;
-    if (em.push((e_ = B.length, eh = k, eO = H, e = e_ > 0 ? M.Z.Messages.INTEGRATIONS_WEBHOOKS_BUTTON : M.Z.Messages.INTEGRATIONS_WEBHOOKS_EMPTY_BUTTON, (0, i.jsx)(R.Z, {
+    if (em.push((e_ = B.length, eh = k, eg = H, e = e_ > 0 ? M.Z.Messages.INTEGRATIONS_WEBHOOKS_BUTTON : M.Z.Messages.INTEGRATIONS_WEBHOOKS_EMPTY_BUTTON, (0, i.jsx)(R.Z, {
         name: M.Z.Messages.INTEGRATIONS_WEBHOOKS,
         icon: u.WebhookIcon,
         buttonText: e,
         buttonDisabled: !eh,
-        onButtonClick: eO,
+        onButtonClick: eg,
         hasNextSection: e_ > 0,
         details: [{
           text: M.Z.Messages.INTEGRATIONS_WEBHOOKS_SUMMARY.format({
@@ -244,26 +244,26 @@ function B(e) {
       }, "webhooks"))), (null == t ? void 0 : t.type) !== f.d4z.GUILD_VOICE && ((null == t ? void 0 : t.type) == null || !f.TPd.GUILD_THREADS_ONLY.has(t.type))) {
       ;
       let e, n;
-      em.push((eg = G.length, eA = W, eg > 0 ? (e = M.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_BUTTON, n = eA) : (e = M.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_EMPTY_BUTTON, n = () => open(S.Z.getArticleURL(f.BhN.CHANNEL_FOLLOWING))), (0, i.jsx)(R.Z, {
+      em.push((eO = G.length, eA = W, eO > 0 ? (e = M.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_BUTTON, n = eA) : (e = M.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_EMPTY_BUTTON, n = () => open(C.Z.getArticleURL(f.BhN.CHANNEL_FOLLOWING))), (0, i.jsx)(R.Z, {
         name: M.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING,
         icon: u.ChannelsFollowedIcon,
         buttonText: e,
         onButtonClick: n,
-        hasNextSection: eg > 0,
+        hasNextSection: eO > 0,
         details: [{
           text: M.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_SUMMARY.format({
-            count: eg
+            count: eO
           })
         }]
       }, "channels-followed")))
     }
   }
   return en && em.push(function(e, n, t) {
-    let s, l, a;
+    let l, s, a;
     let r = E.Z.get(f.ABu.TWITCH);
-    return e > 0 ? (s = M.Z.Messages.INTEGRATIONS_TWITCH_BUTTON, l = M.Z.Messages.INTEGRATIONS_TWITCH_SUMMARY.format({
+    return e > 0 ? (l = M.Z.Messages.INTEGRATIONS_TWITCH_BUTTON, s = M.Z.Messages.INTEGRATIONS_TWITCH_SUMMARY.format({
       count: n
-    }), a = () => t(f.ABu.TWITCH)) : (s = M.Z.Messages.INTEGRATIONS_TWITCH_EMPTY_BUTTON, l = M.Z.Messages.INTEGRATIONS_TWITCH_EMPTY_SUMMARY, a = () => (0, _.Z)({
+    }), a = () => t(f.ABu.TWITCH)) : (l = M.Z.Messages.INTEGRATIONS_TWITCH_EMPTY_BUTTON, s = M.Z.Messages.INTEGRATIONS_TWITCH_EMPTY_SUMMARY, a = () => (0, _.Z)({
       platformType: f.ABu.TWITCH,
       location: "Integration Settings"
     })), (0, i.jsx)(R.Z, {
@@ -271,19 +271,19 @@ function B(e) {
       icon: r.icon.whiteSVG,
       iconBackgroundColor: r.color,
       iconClassName: L.platformIcon,
-      buttonText: s,
+      buttonText: l,
       onButtonClick: a,
       hasNextSection: e > 0,
       details: [{
-        text: l
+        text: s
       }]
     }, "integrations-twitch")
   }(X, $, U)), et && em.push(function(e, n, t) {
-    let s, l, a;
+    let l, s, a;
     let r = E.Z.get(f.ABu.YOUTUBE);
-    return e > 0 ? (s = M.Z.Messages.INTEGRATIONS_YOUTUBE_BUTTON, l = M.Z.Messages.INTEGRATIONS_YOUTUBE_SUMMARY.format({
+    return e > 0 ? (l = M.Z.Messages.INTEGRATIONS_YOUTUBE_BUTTON, s = M.Z.Messages.INTEGRATIONS_YOUTUBE_SUMMARY.format({
       count: n
-    }), a = () => t(f.ABu.YOUTUBE)) : (s = M.Z.Messages.INTEGRATIONS_YOUTUBE_EMPTY_BUTTON, l = M.Z.Messages.INTEGRATIONS_YOUTUBE_EMPTY_SUMMARY, a = () => (0, _.Z)({
+    }), a = () => t(f.ABu.YOUTUBE)) : (l = M.Z.Messages.INTEGRATIONS_YOUTUBE_EMPTY_BUTTON, s = M.Z.Messages.INTEGRATIONS_YOUTUBE_EMPTY_SUMMARY, a = () => (0, _.Z)({
       platformType: f.ABu.YOUTUBE,
       location: "Integration Settings"
     })), (0, i.jsx)(R.Z, {
@@ -291,11 +291,11 @@ function B(e) {
       icon: r.icon.whiteSVG,
       iconBackgroundColor: r.color,
       iconClassName: L.platformIcon,
-      buttonText: s,
+      buttonText: l,
       onButtonClick: a,
       hasNextSection: e > 0,
       details: [{
-        text: l
+        text: s
       }]
     }, "integrations-youtube")
   }(Q, ee, U)), (0, i.jsxs)(u.FormSection, {
@@ -318,7 +318,7 @@ function B(e) {
           variant: "heading-md/semibold",
           className: L.sectionHeader,
           children: M.Z.Messages.INTEGRATIONS_APPLICATION_SECTION
-        }), ei > 4 ? (0, i.jsx)(P, {
+        }), ei > 4 ? (0, i.jsx)(D, {
           query: V,
           setQuery: K
         }) : null, eI]

@@ -30,8 +30,8 @@ var c = n(442837),
   d = n(692547),
   h = n(481060),
   m = n(493683),
-  p = n(475179),
-  E = n(287734),
+  E = n(475179),
+  p = n(287734),
   g = n(872810),
   f = n(607070),
   C = n(220779),
@@ -57,8 +57,8 @@ var c = n(442837),
   k = n(409216),
   w = n(368666),
   H = n(626135),
-  B = n(768581),
-  G = n(5192),
+  G = n(768581),
+  B = n(5192),
   V = n(26033),
   F = n(192918),
   z = n(22211),
@@ -131,13 +131,13 @@ function ea(e) {
     generateReactionImage: s,
     reactionImageAltText: a,
     closePopout: r,
-    entry: E,
+    entry: p,
     requestId: g,
     buttons: f = [],
     header: x
   } = e, [T, N] = i.useState(!1), [Z, S] = i.useState(null), v = (0, c.e7)([O.Z], () => O.Z.can($.Plq.SEND_MESSAGES, t)), M = (0, W.a)({
     location: "PopoutReactor"
-  }), [R, b] = i.useState(!1), [w, B] = i.useState(!1), {
+  }), [R, b] = i.useState(!1), [w, G] = i.useState(!1), {
     voiceBar: V,
     joinVoiceButton: F
   } = function(e) {
@@ -161,9 +161,9 @@ function ea(e) {
       voiceBar: void 0,
       joinVoiceButton: void 0
     };
-    let E = null != a,
+    let p = null != a,
       g = () => {
-        p.Z.updateChatOpen(r.id, !0), (0, A.Kh)(r.id), (0, Y.L)(J.xP.VOICE_CHANNEL_PREVIEWED, {
+        E.Z.updateChatOpen(r.id, !0), (0, A.Kh)(r.id), (0, Y.L)(J.xP.VOICE_CHANNEL_PREVIEWED, {
           entry: n,
           channelId: t.id,
           guildId: t.guild_id,
@@ -248,16 +248,16 @@ function ea(e) {
           ...e,
           color: h.Button.Colors.GREEN,
           onClick: g,
-          IconComponent: E ? h.ScreenIcon : h.VoiceNormalIcon,
+          IconComponent: p ? h.ScreenIcon : h.VoiceNormalIcon,
           children: ee.Z.Messages.PREVIEW
         })
       })
     }
   }({
     channel: t,
-    entry: E,
+    entry: p,
     requestId: g
-  }), K = null != F && 0 === f.length ? [F] : f, X = K.length > 0, en = K.length >= 2, [el, ei] = i.useState(!X), es = "#".concat(t.name), ea = G.ZP.getName(t.guild_id, t.id, n), eo = T ? ee.Z.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : ee.Z.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, ec = async e => {
+  }), K = null != F && 0 === f.length ? [F] : f, X = K.length > 0, en = K.length >= 2, [el, ei] = i.useState(!X), es = "#".concat(t.name), ea = B.ZP.getName(t.guild_id, t.id, n), eo = T ? ee.Z.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : ee.Z.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, ec = async e => {
     if (null != e) {
       if (H.default.track($.rMx.CONTENT_POPOUT_EMOJI_CLICKED, {
           surface_type: J.Kd.GUILD_MEMBER_LIST,
@@ -265,7 +265,7 @@ function ea(e) {
           guild_id: t.guild_id
         }), M) {
         let i;
-        if ((0, I.EW)(u.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), b(!0), B(!1), T) i = t;
+        if ((0, I.EW)(u.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), b(!0), G(!1), T) i = t;
         else {
           var l;
           let e = await m.Z.getOrEnsurePrivateChannel(n.id);
@@ -275,7 +275,7 @@ function ea(e) {
           reply: ":".concat(e.name, ":"),
           sendToChannel: i,
           onComplete: () => {
-            B(!0), setTimeout(() => {
+            G(!0), setTimeout(() => {
               b(!1), r()
             }, 600)
           },
@@ -321,7 +321,7 @@ function ea(e) {
       altText: a,
       reply: l
     }), (0, Y.L)(c, {
-      entry: E,
+      entry: p,
       channelId: t.id,
       guildId: t.guild_id,
       requestId: g,
@@ -429,7 +429,7 @@ let er = e => {
       url: e.url
     } : {
       emoji: e,
-      url: (0, B.gT)({
+      url: (0, G.gT)({
         id: e.id,
         animated: e.animated,
         size: 58
@@ -494,8 +494,8 @@ function eo(e) {
         variant: "heading-sm/normal",
         className: et.popoutTextSecondary,
         children: n.format({
-          user1: G.ZP.getName(r, t.id, m[0]),
-          user2: G.ZP.getName(r, t.id, m[1]),
+          user1: B.ZP.getName(r, t.id, m[0]),
+          user2: B.ZP.getName(r, t.id, m[1]),
           countOthers: d,
           nameHook: (e, t) => (0, l.jsx)(h.Clickable, {
             tag: "span",
@@ -544,20 +544,20 @@ function eu(e) {
     children: u,
     onClickTitle: d,
     onClickSubtitle: m,
-    ...p
+    ...E
   } = e, {
-    entry: E,
+    entry: p,
     channel: g
-  } = p, f = (0, V.d)(E), C = (0, Z.ZP)({
+  } = E, f = (0, V.d)(p), C = (0, Z.ZP)({
     location: "ContentPopout",
-    applicationId: f ? null === (t = E.extra) || void 0 === t ? void 0 : t.application_id : void 0
+    applicationId: f ? null === (t = p.extra) || void 0 === t ? void 0 : t.application_id : void 0
   }) && f ? () => {
     (0, h.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("7613")]).then(n.bind(n, 644941));
       return t => (0, l.jsx)(e, {
-        applicationId: E.extra.application_id,
+        applicationId: p.extra.application_id,
         channel: g,
         ...t
       })
@@ -566,7 +566,7 @@ function eu(e) {
   return (0, l.jsxs)(el, {
     backgroundImgSrc: i,
     children: [(0, l.jsx)(eo, {
-      ...p
+      ...E
     }), (0, l.jsxs)("div", {
       className: et.popoutContentBody,
       children: [(0, l.jsx)("div", {
@@ -626,7 +626,7 @@ function ed(e) {
       size: 16
     }), (0, l.jsx)(ec, {
       onClick: o ? () => {
-        E.default.selectVoiceChannel(s.channelId), (0, g.iV)(s)
+        p.default.selectVoiceChannel(s.channelId), (0, g.iV)(s)
       } : void 0,
       children: (0, l.jsxs)("div", {
         style: {

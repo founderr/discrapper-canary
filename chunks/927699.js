@@ -4,9 +4,9 @@ s.d(n, {
   }
 }), s(47120);
 var l = s(735250),
-  t = s(470079),
-  i = s(120356),
-  r = s.n(i),
+  i = s(470079),
+  t = s(120356),
+  r = s.n(t),
   a = s(481060),
   c = s(541716),
   o = s(752305),
@@ -26,7 +26,7 @@ function T(e) {
   let {
     sectionTitle: n,
     errors: s,
-    onTextChange: i,
+    onTextChange: t,
     pendingText: _,
     placeholder: I,
     currentText: T,
@@ -34,10 +34,10 @@ function T(e) {
     innerClassName: x,
     disabled: h = !1,
     disableThemedBackground: P = !1
-  } = e, [A, v] = t.useState(null != _ ? _ : T), [f, M] = t.useState((0, o.JM)(A)), g = t.useRef(!1);
-  return t.useEffect(() => {
+  } = e, [A, v] = i.useState(null != _ ? _ : T), [f, M] = i.useState((0, o.JM)(A)), g = i.useRef(!1);
+  return i.useEffect(() => {
     g.current = !0
-  }, []), t.useEffect(() => {
+  }, []), i.useEffect(() => {
     if (void 0 === _) {
       let e = (0, o.JM)(T);
       v(T), M(e)
@@ -53,7 +53,7 @@ function T(e) {
         editorClassName: p.editorTextArea,
         maxCharacterCount: m.$n,
         onChange: function(e, n, s) {
-          n !== A && (v(n), M(s), i(n))
+          n !== A && (v(n), M(s), t(n))
         },
         placeholder: I,
         channel: N,

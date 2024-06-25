@@ -85,7 +85,7 @@ t.Z = e => {
     ref: F,
     width: V,
     scrollWidth: w
-  } = (0, E.Z)(), H = (0, c.e7)([I.Z], () => I.Z.getState().theme), Y = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), W = i.useMemo(() => (0, S.nP)(u.config.assets.hero), [u]), z = i.useRef(null), K = (0, O.uq)(T), Q = T === C.jn.QUESTS_EMBED, X = (0, h.t5)(u, M.dr.QUESTS_CARD), q = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, h.B6)(u.config.expiresAt, {
+  } = (0, E.Z)(), H = (0, c.e7)([I.Z], () => I.Z.getState().theme), Y = (0, c.e7)([_.Z], () => _.Z.useReducedMotion), W = i.useMemo(() => (0, S.nP)(u.config.assets.hero), [u]), K = i.useRef(null), z = (0, O.uq)(T), Q = T === C.jn.QUESTS_EMBED, X = (0, h.t5)(u, M.dr.QUESTS_CARD), q = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, h.B6)(u.config.expiresAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
@@ -102,18 +102,18 @@ t.Z = e => {
     })
   };
   i.useEffect(() => {
-    W && null != z.current && (n ? z.current.play() : !n && (z.current.pause(), z.current.currentTime = 0))
+    W && null != K.current && (n ? K.current.play() : !n && (K.current.pause(), K.current.currentTime = 0))
   }, [n, W]);
   let et = (0, S.j8)(u);
   return (0, s.jsxs)("div", {
     className: a()(v.outerContainer, {
-      [v.outerContainerGiftInventory]: K,
+      [v.outerContainerGiftInventory]: z,
       [v.outerContainerEmbed]: Q,
       [v.outerContainerXs]: "xs" === m
     }),
     "aria-label": x.Z.Messages.EXPAND,
     style: {
-      height: K ? G : void 0
+      height: z ? G : void 0
     },
     children: [(0, s.jsx)(Z, {
       style: {
@@ -129,7 +129,7 @@ t.Z = e => {
       className: v.questSplash,
       controls: !1,
       poster: et,
-      ref: z,
+      ref: K,
       children: !Y && W && (0, s.jsx)("source", {
         src: et,
         type: (0, S.mN)(et)
@@ -142,12 +142,12 @@ t.Z = e => {
           [v.headerContentEmbed]: Q
         }),
         style: {
-          y: K ? D.to({
+          y: z ? D.to({
             range: [0, 1],
             output: [O.DJ, 0]
           }) : void 0
         },
-        children: [K && (0, s.jsx)(r.animated.div, {
+        children: [z && (0, s.jsx)(r.animated.div, {
           className: v.headerCollapsedContent,
           style: {
             opacity: D.to({
@@ -191,7 +191,7 @@ t.Z = e => {
             k.current = e
           },
           className: a()(v.headerExpandedContent, {
-            [v.outerContainerGiftInventory]: K,
+            [v.outerContainerGiftInventory]: z,
             [v.outerContainerEmbed]: Q
           }),
           style: {
@@ -239,7 +239,7 @@ t.Z = e => {
                 })
               })]
             })]
-          }), !l && K && (0, s.jsx)(P, {
+          }), !l && z && (0, s.jsx)(P, {
             quest: u,
             location: T,
             questContentPosition: y
@@ -248,7 +248,7 @@ t.Z = e => {
       }), (0, s.jsxs)(r.animated.div, {
         className: v.iconsContainer,
         style: {
-          top: K ? D.to({
+          top: z ? D.to({
             range: [0, 1],
             output: [O.DJ / 2 - O.Z$ / 2, O.jc]
           }) : O.jc
@@ -258,7 +258,7 @@ t.Z = e => {
           quest: u,
           questContentPosition: y,
           shouldShowDisclosure: !0,
-          hideLearnMore: K,
+          hideLearnMore: z,
           showShareLink: !l && Q,
           children: e => (0, s.jsx)(r.animated.div, {
             style: {

@@ -4,8 +4,8 @@ t.d(n, {
   }
 }), t(653041), t(47120);
 var i = t(735250),
-  s = t(470079),
-  l = t(481060),
+  l = t(470079),
+  s = t(481060),
   a = t(139387),
   r = t(933557),
   o = t(699516),
@@ -24,10 +24,10 @@ function T(e) {
     editedWebhook: m,
     errors: _,
     canNavigate: h
-  } = e, O = s.useMemo(() => Object.values(t).map(e => ({
+  } = e, g = l.useMemo(() => Object.values(t).map(e => ({
     value: e.id,
     label: (0, r.F6)(e, c.default, o.Z, !0)
-  })), [t]), g = s.useMemo(() => {
+  })), [t]), O = l.useMemo(() => {
     let e = {};
     for (let i of n)
       if (i.channel_id in e) e[i.channel_id].webhooks.push(i);
@@ -38,12 +38,12 @@ function T(e) {
           webhooks: [i]
         })
       } return Object.values(e).sort((e, n) => e.channel.name.localeCompare(n.channel.name))
-  }, [t, n]), A = s.useCallback(e => {
+  }, [t, n]), A = l.useCallback(e => {
     h() && (e === (null == m ? void 0 : m.id) ? a.Z.stopEditingWebhook() : a.Z.startEditingWebhook(e))
   }, [h, m]);
   return (0, i.jsx)("div", {
     className: E.__invalid_list,
-    children: g.map(e => {
+    children: O.map(e => {
       let {
         channel: n,
         webhooks: t
@@ -52,14 +52,14 @@ function T(e) {
         let {
           channel: n,
           webhooks: t,
-          channelOptions: s,
+          channelOptions: l,
           lastCreatedWebhookId: a,
           editedWebhook: T,
           errors: m,
           toggleWebhookExpand: _
         } = e;
         return (0, i.jsxs)("div", {
-          children: [(0, i.jsx)(l.FormTitle, {
+          children: [(0, i.jsx)(s.FormTitle, {
             className: E.groupHeader,
             children: N.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_SECTION.format({
               channelHook: () => (0, i.jsx)("span", {
@@ -72,7 +72,7 @@ function T(e) {
             if (e.type === I.ylB.CHANNEL_FOLLOWER) return (0, i.jsx)(d.Z, {
               webhook: e,
               editedWebhook: T,
-              channelOptions: s,
+              channelOptions: l,
               isExpanded: (null == T ? void 0 : T.id) === e.id,
               onToggleExpand: () => _(e.id),
               errors: m
@@ -81,7 +81,7 @@ function T(e) {
               id: (n = e.id, "settings-integrations-webhook-".concat(n)),
               webhook: e,
               editedWebhook: T,
-              channelOptions: s,
+              channelOptions: l,
               isExpanded: (null == T ? void 0 : T.id) === e.id,
               isNew: a === e.id,
               onToggleExpand: () => _(e.id),
@@ -92,7 +92,7 @@ function T(e) {
       }({
         channel: n,
         webhooks: t,
-        channelOptions: O,
+        channelOptions: g,
         lastCreatedWebhookId: T,
         editedWebhook: m,
         errors: _,

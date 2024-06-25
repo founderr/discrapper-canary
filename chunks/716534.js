@@ -4,9 +4,9 @@ s.d(n, {
   }
 }), s(47120);
 var l = s(735250),
-  t = s(470079),
-  i = s(512722),
-  r = s.n(i),
+  i = s(470079),
+  t = s(512722),
+  r = s.n(t),
   a = s(742280),
   c = s(442837),
   o = s(692547),
@@ -46,7 +46,7 @@ var l = s(735250),
   k = s(473571);
 
 function W(e) {
-  var n, s, i, W;
+  var n, s, t, W;
   let Y, K, V, {
       selectedPlanId: z,
       paymentSources: X,
@@ -58,8 +58,8 @@ function W(e) {
       setHasAcceptedTerms: en,
       legalTermsNodeRef: es,
       hasLegalTermsFlash: el,
-      trialId: et,
-      trialFooterMessageOverride: ei,
+      trialId: ei,
+      trialFooterMessageOverride: et,
       reviewWarningMessage: er,
       metadata: ea,
       purchaseState: ec,
@@ -104,14 +104,14 @@ function W(e) {
       applyEntitlements: !0,
       paymentSourceId: J.paymentSourceId,
       currency: J.currency,
-      trialId: et,
+      trialId: ei,
       metadata: ea
     }),
     [eb, eD] = (0, C.ED)({
       items: eO,
       renewal: !0,
       preventFetch: ej,
-      trialId: et,
+      trialId: ei,
       paymentSourceId: J.paymentSourceId,
       currency: J.currency,
       metadata: ea
@@ -123,7 +123,7 @@ function W(e) {
       }],
       renewal: !0,
       preventFetch: !eC,
-      trialId: et,
+      trialId: ei,
       paymentSourceId: J.paymentSourceId,
       currency: J.currency,
       metadata: ea
@@ -136,11 +136,11 @@ function W(e) {
       preventFetch: !eP || eL,
       loadId: eh.loadId
     });
-  t.useEffect(() => {
+  i.useEffect(() => {
     ex(eF)
   }, [ex, eF]);
   let eB = eP && (0, v.pO)(eA),
-    eH = null !== (W = null !== (i = null != eZ ? eZ : eD) && void 0 !== i ? i : eU) && void 0 !== W ? W : ew,
+    eH = null !== (W = null !== (t = null != eZ ? eZ : eD) && void 0 !== t ? t : eU) && void 0 !== W ? W : ew,
     ek = (0, c.e7)([h.Z], () => h.Z.enabled),
     eW = J.paymentSourceId,
     {
@@ -148,18 +148,18 @@ function W(e) {
       entitlements: eK
     } = (0, G.H)(eR.id, eP),
     eV = (0, f.Ap)(J.paymentSourceId),
-    ez = (0, S.sE)(et, eW, z),
+    ez = (0, S.sE)(ei, eW, z),
     eX = (0, x.Kp)({
       isTrial: ed,
       isGift: eP,
       selectedSkuId: ep,
       startedPaymentFlowWithPaymentSources: eS.current
     }),
-    [eJ, eq] = t.useState(null == ey ? void 0 : ey.subscriptionPeriodEnd);
-  t.useEffect(() => {
+    [eJ, eq] = i.useState(null == ey ? void 0 : ey.subscriptionPeriodEnd);
+  i.useEffect(() => {
     null == eJ && eq(null == ey ? void 0 : ey.subscriptionPeriodEnd)
   }, [null == ey ? void 0 : ey.subscriptionPeriodEnd, eJ]);
-  let eQ = t.useMemo(() => (0, f.V7)({
+  let eQ = i.useMemo(() => (0, f.V7)({
       skuId: ep,
       isPremium: eT,
       multiMonthPlans: [],
@@ -228,7 +228,7 @@ function W(e) {
         isTrial: ed,
         priceOptions: J,
         overrideRenewalDate: Y,
-        trialFooterMessageOverride: ei,
+        trialFooterMessageOverride: et,
         hideSubscriptionDetails: eo
       })]
     })
@@ -236,12 +236,12 @@ function W(e) {
   let e0 = a.M.EEA_COUNTRIES.has(P.Z.ipCountryCodeWithFallback),
     {
       checkboxLabel: e1,
-      checkboxClassname: e4,
-      checkboxLabelClassname: e7
+      checkboxClassname: e9,
+      checkboxLabelClassname: e4
     } = function(e, n, s) {
       let l = null,
-        t = null,
-        i = null;
+        i = null,
+        t = null;
       if (e && null != n) {
         let {
           intervalType: e,
@@ -252,18 +252,18 @@ function W(e) {
           paidURL: w.EYA.PAID_TERMS,
           rate: a,
           renewalDate: c
-        }), t = k.trialCheckbox, i = k.trialCheckboxLabel
+        }), i = k.trialCheckbox, t = k.trialCheckboxLabel
       }
       return {
         checkboxLabel: l,
-        checkboxClassname: t,
-        checkboxLabelClassname: i
+        checkboxClassname: i,
+        checkboxLabelClassname: t
       }
     }(null != ed && ed, eb, Y),
-    e9 = H.Z.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({
+    e7 = H.Z.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({
       planName: eR.name
     });
-  return eP && !eB ? e9 = H.Z.Messages.PAYMENT_MODAL_SUBTITLE_PREMIUM_GIFT : eP && eB ? e9 = "" : (0, f.PV)(eR.id) && (e9 = f.ZP.getBillingReviewSubheader(null, eR)), ez ? null : (0, l.jsxs)("div", {
+  return eP && !eB ? e7 = H.Z.Messages.PAYMENT_MODAL_SUBTITLE_PREMIUM_GIFT : eP && eB ? e7 = "" : (0, f.PV)(eR.id) && (e7 = f.ZP.getBillingReviewSubheader(null, eR)), ez ? null : (0, l.jsxs)("div", {
     className: k.stepBody,
     children: [null != er && (0, l.jsxs)("div", {
       className: k.reviewWarningMessageContainer,
@@ -293,7 +293,7 @@ function W(e) {
       }), (0, l.jsx)(j.KU, {})]
     }), !ed && (0, l.jsx)(u.FormTitle, {
       tag: u.FormTitleTags.H5,
-      children: e9
+      children: e7
     }), eB && null != ev && (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(Z.Z, {
         defaultAnimationState: g.S.LOOP,
@@ -347,9 +347,9 @@ function W(e) {
         onChange: en,
         forceShow: !0,
         checkboxLabel: e1,
-        checkboxClassname: e4,
-        checkboxLabelClassname: e7,
-        finePrint: null != ei ? ei : (0, l.jsx)(_.Z, {
+        checkboxClassname: e9,
+        checkboxLabelClassname: e4,
+        finePrint: null != et ? et : (0, l.jsx)(_.Z, {
           hide: ed || e_,
           subscriptionPlan: eR,
           renewalInvoice: eb,
@@ -361,7 +361,7 @@ function W(e) {
         showPricingLink: eR.currency !== B.pK.USD,
         showWithdrawalWaiver: e0,
         disabled: eL,
-        isTrial: ed && null == ei,
+        isTrial: ed && null == et,
         isDiscount: e_,
         subscriptionPlan: eR,
         isGift: eP

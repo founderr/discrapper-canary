@@ -66,7 +66,7 @@ function x(e) {
   } = (0, c.KZ)(), N = (0, t.e7)([a.Z], () => a.Z.hidePersonalInformation), [{
     section: g,
     subsection: T
-  }, C] = l.useState({
+  }, R] = l.useState({
     section: null !== (s = null === (i = E.find(e => {
       let {
         section: i
@@ -74,15 +74,15 @@ function x(e) {
       return i === Z
     })) || void 0 === i ? void 0 : i.section) && void 0 !== s ? s : S.oh.USER_INFO,
     subsection: _
-  }), R = l.useCallback(e => {
+  }), C = l.useCallback(e => {
     h({
       action: "PRESS_SECTION",
       section: e
-    }), C({
+    }), R({
       section: e,
       subsection: void 0
     })
-  }, [h, C]);
+  }, [h, R]);
   return N ? (0, n.jsx)("div", {
     className: v.container,
     children: (0, n.jsx)(f.Z, {})
@@ -92,7 +92,7 @@ function x(e) {
       className: v.tabBar,
       type: "top",
       selectedItem: g,
-      onItemSelect: R,
+      onItemSelect: C,
       children: E.map(e => {
         let {
           section: i,

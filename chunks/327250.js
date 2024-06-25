@@ -15,8 +15,8 @@ var i = n(120356),
   d = n(251794),
   h = n(386696),
   m = n(910693),
-  p = n(314897),
-  E = n(271383),
+  E = n(314897),
+  p = n(271383),
   g = n(430824),
   f = n(496675),
   C = n(158776),
@@ -36,7 +36,7 @@ function M(e) {
     backgroundColor: n,
     guildId: i,
     onClose: s
-  } = e, o = t.id, c = (0, a.e7)([_.Z, C.Z, p.default], () => o === p.default.getId() ? _.Z.getStatus() : C.Z.getStatus(o, i), [o, i]);
+  } = e, o = t.id, c = (0, a.e7)([_.Z, C.Z, E.default], () => o === E.default.getId() ? _.Z.getStatus() : C.Z.getStatus(o, i), [o, i]);
   return (0, l.jsxs)("div", {
     className: A.topRow,
     style: {
@@ -114,19 +114,19 @@ function j(e) {
     backgroundColor: t,
     user: i,
     member: s,
-    guildId: p
-  } = e, E = (0, a.e7)([g.Z], () => g.Z.getGuild(p)), {
+    guildId: E
+  } = e, p = (0, a.e7)([g.Z], () => g.Z.getGuild(E)), {
     canKickUser: C,
     canBanUser: _,
     canModerateMembers: T
   } = (0, a.cj)([f.Z, I.default, g.Z], () => ({
-    canKickUser: null != E && f.Z.canManageUser(S.Plq.KICK_MEMBERS, i, E),
-    canBanUser: null != E && f.Z.canManageUser(S.Plq.BAN_MEMBERS, i, E),
-    canModerateMembers: null != E && (0, h.F)(E.id, i.id, [I.default, g.Z, f.Z])
-  }), [i, E]), N = (0, u.b)(s), {
+    canKickUser: null != p && f.Z.canManageUser(S.Plq.KICK_MEMBERS, i, p),
+    canBanUser: null != p && f.Z.canManageUser(S.Plq.BAN_MEMBERS, i, p),
+    canModerateMembers: null != p && (0, h.F)(p.id, i.id, [I.default, g.Z, f.Z])
+  }), [i, p]), N = (0, u.b)(s), {
     analyticsLocations: Z,
     newestAnalyticsLocation: M
-  } = (0, c.ZP)(), j = (0, m.sE)(p, {
+  } = (0, c.ZP)(), j = (0, m.sE)(E, {
     targetUserId: i.id,
     location: M,
     locations: Z
@@ -165,7 +165,7 @@ function j(e) {
           return t => (0, l.jsx)(e, {
             ...t,
             location: M,
-            guildId: p,
+            guildId: E,
             user: i
           })
         })
@@ -194,7 +194,7 @@ function j(e) {
           return t => (0, l.jsx)(e, {
             ...t,
             location: M,
-            guildId: p,
+            guildId: E,
             user: i
           })
         })
@@ -256,7 +256,7 @@ function L(e) {
     userId: t,
     guildId: n,
     onClose: i
-  } = e, s = (0, a.e7)([I.default], () => I.default.getUser(t), [t]), o = (0, a.e7)([E.ZP], () => E.ZP.getMember(n, t), [n, t]), c = (0, Z.f)(t, n, .8, r.tokens.colors.BACKGROUND_SECONDARY);
+  } = e, s = (0, a.e7)([I.default], () => I.default.getUser(t), [t]), o = (0, a.e7)([p.ZP], () => p.ZP.getMember(n, t), [n, t]), c = (0, Z.f)(t, n, .8, r.tokens.colors.BACKGROUND_SECONDARY);
   return null == s || null == o ? null : (0, l.jsxs)("div", {
     className: A.container,
     children: [(0, l.jsx)(M, {

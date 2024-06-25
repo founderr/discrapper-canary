@@ -5,9 +5,9 @@ t.d(n, {
 });
 var s = t(735250);
 t(470079);
-var a = t(120356),
-  r = t.n(a),
-  o = t(950919),
+var o = t(120356),
+  r = t.n(o),
+  a = t(950919),
   l = t(189003),
   i = t(277138);
 
@@ -17,15 +17,15 @@ function c(e) {
     className: t
   } = e;
   return (0, s.jsx)("div", {
-    className: r()(o.container, t),
+    className: r()(a.container, t),
     children: (0, s.jsxs)("div", {
-      className: o.innerContainer,
+      className: a.innerContainer,
       children: [(0, s.jsx)("img", {
         src: i,
         alt: "",
-        className: o.star
+        className: a.star
       }), (0, s.jsx)("div", {
-        className: o.iconWrapper,
+        className: a.iconWrapper,
         children: (0, s.jsx)(n, {
           width: 40,
           height: 40
@@ -33,7 +33,7 @@ function c(e) {
       }), (0, s.jsx)("img", {
         src: l,
         alt: "",
-        className: o.sparkle
+        className: a.sparkle
       })]
     })
   })

@@ -28,9 +28,9 @@ function h(e, t) {
         h = null != d && Date.now() - d.getTime() > 2592e5,
         {
           identityGuildId: m,
-          identityEnabled: p
+          identityEnabled: E
         } = s.clan;
-      return null != m && null == p ? e === m : null == m && null == p ? h : (m !== e || !1 !== p) && null != m && !1 === p && h
+      return null != m && null == E ? e === m : null == m && null == E ? h : (m !== e || !1 !== E) && null != m && !1 === E && h
     })(e, [o.default, r.Z, a.ZP]), [e]),
     m = (0, s.FT)(l.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : d.lds);
   return n && h && !m

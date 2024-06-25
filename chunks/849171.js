@@ -15,8 +15,8 @@ var l, i, s = n(735250),
   d = n(2052),
   h = n(317381),
   m = n(638880),
-  p = n(613611),
-  E = n(527805),
+  E = n(613611),
+  p = n(527805),
   g = n(716600),
   f = n(952561),
   C = n(778569),
@@ -78,13 +78,13 @@ function k(e) {
     width: C
   } = e;
   let _ = (l = C) > 400 ? 2 : l > 300 ? 1 : 0;
-  let [x] = (i = C) > 400 ? [u.AvatarSizes.SIZE_56, 56] : i > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24], T = (0, c.Wu)([j.default, M.default], () => Array.from(a).map(e => (0, p.J)(e, M.default) ? null : j.default.getUser(e.userId)).filter(O.lm)), N = (0, c.e7)([h.ZP], () => h.ZP.getEmbeddedActivitiesForChannel(f.id).find(e => e.applicationId === r.id)), {
+  let [x] = (i = C) > 400 ? [u.AvatarSizes.SIZE_56, 56] : i > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24], T = (0, c.Wu)([j.default, M.default], () => Array.from(a).map(e => (0, E.J)(e, M.default) ? null : j.default.getUser(e.userId)).filter(O.lm)), N = (0, c.e7)([h.ZP], () => h.ZP.getEmbeddedActivitiesForChannel(f.id).find(e => e.applicationId === r.id)), {
     analyticsLocations: Z
-  } = (0, S.ZP)(), v = (0, d.O)(), A = P.ZP.getName(f.getGuildId(), f.id, null == T ? void 0 : T[0]), R = (0, E.s5)({
+  } = (0, S.ZP)(), v = (0, d.O)(), A = P.ZP.getName(f.getGuildId(), f.id, null == T ? void 0 : T[0]), R = (0, p.s5)({
     userId: null === (t = j.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
     channelId: f.id,
     application: r
-  }) === E.Fw.CAN_JOIN, L = null !== (n = f.getGuildId()) && void 0 !== n ? n : void 0;
+  }) === p.Fw.CAN_JOIN, L = null !== (n = f.getGuildId()) && void 0 !== n ? n : void 0;
   return (0, s.jsxs)("div", {
     className: b.splash,
     children: [(0, s.jsx)(U, {
@@ -153,8 +153,8 @@ function w(e) {
     analyticsLocations: o
   } = (0, S.ZP)(Z.Z.ACTIVITY_TILE), {
     id: u
-  } = t, d = (0, g.Z)(), h = (null == d ? void 0 : d.channelId) === r.id && d.applicationId === u, m = (0, f.Z)(), [p] = (0, v.Z)([u]), {
-    url: E
+  } = t, d = (0, g.Z)(), h = (null == d ? void 0 : d.channelId) === r.id && d.applicationId === u, m = (0, f.Z)(), [E] = (0, v.Z)([u]), {
+    url: p
   } = (0, C.Z)({
     applicationId: u,
     names: D,
@@ -176,15 +176,15 @@ function w(e) {
         children: [I && (0, s.jsx)(_.Z, {
           className: b.iframe,
           embedId: (0, T.Z)(r.id, u)
-        }), M && null != p && null != E && "" !== E ? (0, s.jsx)("img", {
+        }), M && null != E && null != p && "" !== p ? (0, s.jsx)("img", {
           className: b.splashImage,
-          alt: p.name,
-          src: E
-        }) : null, j && null != p && (0, s.jsx)(k, {
+          alt: E.name,
+          src: p
+        }) : null, j && null != E && (0, s.jsx)(k, {
           width: n,
           channel: r,
           participants: t.participants,
-          application: p,
+          application: E,
           currentEmbeddedApplication: m
         }), i || M ? null : (0, s.jsx)("div", {
           className: b.clickShield

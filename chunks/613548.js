@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(481060),
   h = n(320007),
   m = n(236091),
-  p = n(569545),
-  E = n(517525),
+  E = n(569545),
+  p = n(517525),
   g = n(6242),
   f = n(757692),
   C = n(386542),
@@ -41,8 +41,8 @@ var l = n(735250),
   k = n(355827),
   w = n(354459),
   H = n(981631),
-  B = n(689938),
-  G = n(605130);
+  G = n(689938),
+  B = n(605130);
 
 function V(e) {
   let {
@@ -53,13 +53,13 @@ function V(e) {
     children: s.map((e, t) => (0, l.jsx)(d.Tooltip, {
       position: "bottom",
       color: d.Tooltip.Colors.GREY,
-      text: B.Z.Messages.CHANNEL_CALL_CURRENT_SPEAKER.format({
+      text: G.Z.Messages.CHANNEL_CALL_CURRENT_SPEAKER.format({
         username: e.user.username
       }),
       children: i => (0, l.jsx)(P.Z, {
         ...i,
-        className: a()(G.speaker, {
-          [G.last]: t === s.length - 1
+        className: a()(B.speaker, {
+          [B.last]: t === s.length - 1
         }),
         user: e.user,
         speaking: !0,
@@ -81,7 +81,7 @@ function F(e) {
   } = e, I = n.id, {
     voiceParticipantsHidden: j,
     selectedParticipant: P,
-    userParticipantCount: B
+    userParticipantCount: G
   } = (0, u.cj)([b.Z], () => ({
     selectedParticipant: b.Z.getSelectedParticipant(I),
     voiceParticipantsHidden: b.Z.getVoiceParticipantsHidden(I),
@@ -95,10 +95,10 @@ function F(e) {
     allowIdle: $
   } = (0, T.Y)("popup"), ee = [];
   if (z) {
-    let e = (null == P ? void 0 : P.type) === w.fO.STREAM ? (0, p.my)(P.id) : void 0,
+    let e = (null == P ? void 0 : P.type) === w.fO.STREAM ? (0, E.my)(P.id) : void 0,
       t = (null == P ? void 0 : P.type) === w.fO.ACTIVITY ? P.id : void 0;
     ee.push((0, l.jsx)(A.Z, {
-      className: G.button,
+      className: B.button,
       channel: n,
       applicationId: t,
       stream: e,
@@ -110,14 +110,14 @@ function F(e) {
     channelId: I,
     guildId: n.guild_id
   }, "current-speaker")), ee.push((0, l.jsx)(m.Z, {
-    className: G.button,
+    className: B.button,
     channelId: I
   }, "clips-enabled-indicator")), (null == P ? void 0 : P.type) === w.fO.STREAM && (ee.push((0, l.jsx)(x.Z, {
-    className: G.button,
+    className: B.button,
     participant: P
-  }, "warning")), ee.push((0, l.jsx)(E.Z, {
+  }, "warning")), ee.push((0, l.jsx)(p.Z, {
     size: y.ZP.Sizes.LARGE,
-    className: G.button,
+    className: B.button,
     participant: P,
     showQuality: !0,
     premiumIndicator: q || Q.enabled
@@ -135,24 +135,24 @@ function F(e) {
       return (0, i.createElement)(M.Z, {
         ...e,
         isActive: n,
-        count: B,
+        count: G,
         key: "call-members",
-        className: G.button
+        className: B.button
       })
     }
   }, "call-members-popout")), a && ee.push(null != P ? (0, l.jsx)(v.Z, {
-    className: G.button,
+    className: B.button,
     channelId: I
   }, "deselect-participant") : (0, l.jsx)(R.Z, {
-    className: G.button,
+    className: B.button,
     channelId: I,
     isHorizontal: !0
   }, "select-participant")), !t && ee.push((0, l.jsx)(h.Z, {
-    className: G.button
+    className: B.button
   }, "clips")), ee.push((0, l.jsx)(_.Z, {
     onOpen: J,
     onClose: $,
-    className: G.button
+    className: B.button
   }, "recents")), ee.push((0, l.jsx)(d.Popout, {
     position: "bottom",
     renderPopout: e => {
@@ -176,14 +176,14 @@ function F(e) {
         ...e,
         key: "more-options",
         isActive: n,
-        className: G.lastButton
+        className: B.lastButton
       })
     }
   }, "more-options-popout")), !r && (ee.push((0, l.jsx)(O.ZP.Divider, {
-    className: G.divider
+    className: B.divider
   }, "divider")), ee.push((0, l.jsx)(Z.T, {
     channelId: n.id,
-    className: G.chatButtonSpacer,
+    className: B.chatButtonSpacer,
     disabled: !0
   }, "chat-spacer"))), (0, l.jsx)(l.Fragment, {
     children: ee

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return E
+    return p
   }
 });
 var l = n(735250);
@@ -15,22 +15,22 @@ var i = n(442837),
   d = n(432771),
   h = n(920303),
   m = n(502568),
-  p = n(689938);
+  E = n(689938);
 
-function E(e) {
+function p(e) {
   var t, n;
   let {
-    channel: E
-  } = e, g = (0, u.r_)(E), f = (0, i.e7)([a.Z], () => a.Z.hasHidden(E.id)), C = (0, d.c)(E.id), {
+    channel: p
+  } = e, g = (0, u.r_)(p), f = (0, i.e7)([a.Z], () => a.Z.hasHidden(p.id)), C = (0, d.c)(p.id), {
     sortOrder: _,
     tagFilter: I
-  } = (0, c.H)(E.id), x = (0, i.e7)([o.Z, h.Z], () => !!(o.Z.getThreadIds(E.id, _, I).length > 0) || !!(h.Z.getThreads(E.id, _, I).length > 0) || !1, [E.id, _, I]), T = E.isMediaChannel();
+  } = (0, c.H)(p.id), x = (0, i.e7)([o.Z, h.Z], () => !!(o.Z.getThreadIds(p.id, _, I).length > 0) || !!(h.Z.getThreads(p.id, _, I).length > 0) || !1, [p.id, _, I]), T = p.isMediaChannel();
   if (!g || C || T && x) return null;
-  let N = (t = f, n = T, t ? n ? p.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_SHOW : p.Z.Messages.FORUM_CHANNEL_ONBOARDING_SHOW : n ? p.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_HIDE : p.Z.Messages.FORUM_CHANNEL_ONBOARDING_HIDE);
+  let N = (t = f, n = T, t ? n ? E.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_SHOW : E.Z.Messages.FORUM_CHANNEL_ONBOARDING_SHOW : n ? E.Z.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_HIDE : E.Z.Messages.FORUM_CHANNEL_ONBOARDING_HIDE);
   return (0, l.jsx)(m.JO, {
     tooltip: N,
     icon: s.CircleInformationIcon,
-    onClick: () => r.Z.hideAdminOnboarding(E.id, !f),
+    onClick: () => r.Z.hideAdminOnboarding(p.id, !f),
     selected: !f
   })
 }

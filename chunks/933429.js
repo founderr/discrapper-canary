@@ -43,8 +43,8 @@ var s, i, l, a, r = n(913527),
   H = n(523255),
   Y = n(768419),
   W = n(590415),
-  z = n(581883),
-  K = n(199902),
+  K = n(581883),
+  z = n(199902),
   Q = n(314897),
   X = n(881998),
   q = n(463395),
@@ -627,14 +627,14 @@ let ew = [eM.kVF.QUARANTINED, eM.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eM.kVF.VI
     },
     [eM.kVF.QUESTS_PROGRESS_INTERRUPTION]: {
       predicate: () => {
-        let e = K.Z.getCurrentUserActiveStream();
+        let e = z.Z.getCurrentUserActiveStream();
         if (null == e) return !1;
         let t = (0, R.V9)(e),
           n = w.Z.getStreamHeartbeatFailure(t);
         return null != n && Date.now() - n.firstFailedAt >= eZ.Ot
       },
       metadata: () => {
-        let e = K.Z.getCurrentUserActiveStream();
+        let e = z.Z.getCurrentUserActiveStream();
         return {
           streamKey: null != e ? (0, R.V9)(e) : null
         }
@@ -683,12 +683,12 @@ function eW() {
   null != ek && eV(ek.type) && (ek = null)
 }
 
-function ez() {
+function eK() {
   return !ed.Z.enabled && delete ey[eM.kVF.STREAMER_MODE], eW()
 }
-class eK extends(s = c.ZP.Store) {
+class ez extends(s = c.ZP.Store) {
   initialize() {
-    this.syncWith([eE.Z, ea.Z, ee.Z, ec.Z, G.Z, eC.Z, X.Z, $.Z, z.Z, x.Z, w.Z, K.Z], eW), this.waitFor(eI.default, eu.Z, en.Z, et.ZP, er.Z, es.Z, ed.Z, g.Z, ec.Z, e_.Z, Y.Z, p.ZP, ea.Z, ef.Z, eR.Z, eA.Z, ei.Z, eh.ZP, eO.Z, ee.Z, eN.Z, el.Z, G.Z, eS.Z, eC.Z, $.Z, D.Z, S.Z, h.Z, V.Z, w.Z, K.Z)
+    this.syncWith([eE.Z, ea.Z, ee.Z, ec.Z, G.Z, eC.Z, X.Z, $.Z, K.Z, x.Z, w.Z, z.Z], eW), this.waitFor(eI.default, eu.Z, en.Z, et.ZP, er.Z, es.Z, ed.Z, g.Z, ec.Z, e_.Z, Y.Z, p.ZP, ea.Z, ef.Z, eR.Z, eA.Z, ei.Z, eh.ZP, eO.Z, ee.Z, eN.Z, el.Z, G.Z, eS.Z, eC.Z, $.Z, D.Z, S.Z, h.Z, V.Z, w.Z, z.Z)
   }
   hasNotice() {
     return null != ek && null != ek.type
@@ -700,12 +700,12 @@ class eK extends(s = c.ZP.Store) {
     return eV(e)
   }
 }
-a = "NoticeStore", (l = "displayName") in(i = eK) ? Object.defineProperty(i, l, {
+a = "NoticeStore", (l = "displayName") in(i = ez) ? Object.defineProperty(i, l, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[l] = a, t.Z = new eK(_.Z, {
+}) : i[l] = a, t.Z = new ez(_.Z, {
   CURRENT_USER_UPDATE: eW,
   MEDIA_ENGINE_SET_AUDIO_ENABLED: eW,
   CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: eW,
@@ -758,8 +758,8 @@ a = "NoticeStore", (l = "displayName") in(i = eK) ? Object.defineProperty(i, l, 
       return t !== Q.default.getId()
     }) && eW()
   },
-  STREAMER_MODE_UPDATE: ez,
-  RUNNING_STREAMER_TOOLS_CHANGE: ez,
+  STREAMER_MODE_UPDATE: eK,
+  RUNNING_STREAMER_TOOLS_CHANGE: eK,
   DISPATCH_APPLICATION_ERROR: function() {
     return delete ey[eM.kVF.DISPATCH_ERROR], eW()
   },

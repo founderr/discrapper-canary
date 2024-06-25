@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return p
+    return E
   }
 }), n(47120);
 var l = n(735250),
@@ -15,16 +15,16 @@ var l = n(735250),
   h = n(689938),
   m = n(603066);
 
-function p(e) {
+function E(e) {
   let {
     channel: t
-  } = e, [n, p] = i.useState(!1), E = (0, s.e7)([r.Z, o.default], () => {
+  } = e, [n, E] = i.useState(!1), p = (0, s.e7)([r.Z, o.default], () => {
     let e = o.default.getCurrentUser();
     return null == e || t.isNSFW() && (!e.nsfwAllowed || !r.Z.didAgree(t.getGuildId()))
   }, [t]), g = i.useCallback(() => {
-    p(!1)
+    E(!1)
   }, []), f = i.useCallback(() => {
-    !n && (0, u.U4)("Popout"), p(!n)
+    !n && (0, u.U4)("Popout"), E(!n)
   }, [n]);
   return (0, l.jsx)(a.Popout, {
     animation: a.Popout.Animation.NONE,
@@ -53,7 +53,7 @@ function p(e) {
         icon: a.ThreadIcon,
         "aria-label": h.Z.Messages.THREADS,
         tooltip: n ? null : h.Z.Messages.THREADS,
-        disabled: E,
+        disabled: p,
         selected: n
       })
     }

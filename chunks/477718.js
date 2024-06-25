@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(480137),
   h = n(906732),
   m = n(884737),
-  p = n(376923),
-  E = n(472596),
+  E = n(376923),
+  p = n(472596),
   g = n(987707),
   f = n(501801),
   C = n(271383),
@@ -35,8 +35,8 @@ function A(e) {
     guild: s
   } = e, {
     analyticsLocations: r
-  } = (0, h.ZP)(), d = m.nm(t), g = m.QM(t), _ = m.of(t), I = m.J5(t), T = (0, p.LJ)(t.id), v = (0, c.e7)([C.ZP], () => null != t.userId ? C.ZP.getMember(n.guildId, t.userId) : null, [n.guildId, t.userId]), A = i.useCallback(e => t => {
-    t.preventDefault(), t.stopPropagation(), null != e && (0, E.RE)(e, r)
+  } = (0, h.ZP)(), d = m.nm(t), g = m.QM(t), _ = m.of(t), I = m.J5(t), T = (0, E.LJ)(t.id), v = (0, c.e7)([C.ZP], () => null != t.userId ? C.ZP.getMember(n.guildId, t.userId) : null, [n.guildId, t.userId]), A = i.useCallback(e => t => {
+    t.preventDefault(), t.stopPropagation(), null != e && (0, p.RE)(e, r)
   }, [r]), M = i.useCallback(() => null == t.user ? null : (0, l.jsx)(u.Tooltip, {
     text: N.Z.Messages.GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER,
     children: e => {

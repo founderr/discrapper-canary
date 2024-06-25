@@ -17,14 +17,14 @@ function u(e) {
     dismissed: n,
     onDismiss: u,
     renderComponent: d
-  } = e, h = i.useContext(r.h9), [m, p] = i.useState(""), [E, g] = i.useState(!1);
+  } = e, h = i.useContext(r.h9), [m, E] = i.useState(""), [p, g] = i.useState(!1);
 
   function f(e) {
     var t;
     let {
       settings: n
     } = e, l = n.callHeaderHeight;
-    p(null !== (t = null == l ? void 0 : l.toString()) && void 0 !== t ? t : ""), g(void 0 !== l && l < 300)
+    E(null !== (t = null == l ? void 0 : l.toString()) && void 0 !== t ? t : ""), g(void 0 !== l && l < 300)
   }
   i.useEffect(() => (a.Z.subscribe("UNSYNCED_USER_SETTINGS_UPDATE", f), () => {
     a.Z.unsubscribe("UNSYNCED_USER_SETTINGS_UPDATE", f)
@@ -48,7 +48,7 @@ function u(e) {
         onBlur: _,
         onMouseLeave: _,
         children: d({
-          hidden: E || h || n,
+          hidden: p || h || n,
           onDismiss: u
         })
       })

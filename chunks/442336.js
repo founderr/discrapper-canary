@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(621600),
   h = n(110255),
   m = n(981631),
-  p = n(689938),
-  E = n(777794);
+  E = n(689938),
+  p = n(777794);
 
 function g(e) {
   let {
@@ -32,7 +32,7 @@ function g(e) {
         muted: !g
       }, d.UE.muted(!g)) : _(e => !e)
     },
-    x = p.Z.Messages.NOTIFICATION_SETTINGS;
+    x = E.Z.Messages.NOTIFICATION_SETTINGS;
   return (0, l.jsx)(a.Popout, {
     shouldShow: C,
     animation: a.Popout.Animation.NONE,
@@ -44,7 +44,7 @@ function g(e) {
       ...e,
       channel: t,
       navId: "channel-context",
-      label: p.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL
+      label: E.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL
     }),
     children: (e, t) => {
       let {
@@ -55,7 +55,7 @@ function g(e) {
         onClick: I,
         tooltip: i ? null : x,
         icon: g || f !== m.bL.ALL_MESSAGES ? a.BellSlashIcon : a.BellIcon,
-        foreground: g && !n ? E.strikethrough : null,
+        foreground: g && !n ? p.strikethrough : null,
         "aria-label": x,
         selected: i
       })

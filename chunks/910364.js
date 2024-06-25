@@ -25,8 +25,8 @@ var n = s(735250),
   N = s(726059),
   g = s(162267),
   T = s(502762),
-  C = s(62154),
-  R = s(293259),
+  R = s(62154),
+  C = s(293259),
   A = s(725954),
   M = s(228168),
   p = s(981631),
@@ -112,18 +112,18 @@ function O(e) {
   let W = (0, t.e7)([f.Z], () => null != f.Z.getAnyStreamForUser(k.id)),
     H = (0, t.e7)([S.Z], () => S.Z.findActivity(k.id, e => e.type !== p.IIU.CUSTOM_STATUS)),
     [z, K] = l.useState(!1),
-    [Q, J] = l.useState(!k.isNonUserBot() || k.isClyde() || (0, E.Z)(k.id) ? D : M.oh.MUTUAL_GUILDS),
-    q = (0, t.e7)([_.default], () => _.default.getId() === k.id),
+    [Q, q] = l.useState(!k.isNonUserBot() || k.isClyde() || (0, E.Z)(k.id) ? D : M.oh.MUTUAL_GUILDS),
+    J = (0, t.e7)([_.default], () => _.default.getId() === k.id),
     X = null != H || W,
-    $ = !q || X,
+    $ = !J || X,
     ee = l.createRef(),
     ei = (0, a.Z)(ee);
-  !X && Q === M.oh.ACTIVITY && J(M.oh.USER_INFO);
+  !X && Q === M.oh.ACTIVITY && q(M.oh.USER_INFO);
   let es = l.useCallback(e => {
       V({
         action: "PRESS_SECTION",
         analyticsLocations: Y
-      }), K(!0), J(e)
+      }), K(!0), q(e)
     }, [V, Y]),
     en = null == w ? void 0 : w.profileEffectId;
   return (0, n.jsx)(I.Gt, {
@@ -148,7 +148,7 @@ function O(e) {
             displayProfile: w,
             profileType: M.y0.MODAL,
             ref: ee,
-            children: [(0, n.jsx)(R.Z, {
+            children: [(0, n.jsx)(C.Z, {
               className: U.topSection,
               displayProfile: w,
               user: k,
@@ -170,10 +170,10 @@ function O(e) {
                   section: Q === M.oh.USER_INFO_CONNECTIONS ? M.oh.USER_INFO : Q,
                   setSection: es,
                   hasActivity: X,
-                  isCurrentUser: q
+                  isCurrentUser: J
                 }) : (0, n.jsx)("div", {
                   className: U.divider
-                }), (0, n.jsx)(C.Z, {
+                }), (0, n.jsx)(R.Z, {
                   displayProfile: w,
                   user: k,
                   autoFocusNote: F === M.Tb.NOTE && !z,

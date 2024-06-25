@@ -20,12 +20,12 @@ function u(e) {
     onReportClick: d,
     onReportSubmit: h,
     onMouseEnter: m,
-    onMouseLeave: p
+    onMouseLeave: E
   } = e, {
-    error: E,
+    error: p,
     loaded: g
   } = (0, o.a)(t), f = t.isDM() ? t.getRecipientId() : null, C = (0, r.V)(t.id, f);
-  if (null == C && (g || E)) return null;
+  if (null == C && (g || p)) return null;
   let _ = () => {
     null == h || h(), s.Z.closePrivateChannel(t.id)
   };
@@ -38,7 +38,7 @@ function u(e) {
       e.stopPropagation(), null == d || d(), null != C && (0, a.WL)(C, _)
     },
     onMouseEnter: m,
-    onMouseLeave: p,
+    onMouseLeave: E,
     children: c.Z.Messages.REPORT
   })
 }

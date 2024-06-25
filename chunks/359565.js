@@ -3,7 +3,7 @@ n.d(t, {
     return g
   },
   s: function() {
-    return E
+    return p
   }
 });
 var l = n(735250),
@@ -17,9 +17,9 @@ var l = n(735250),
   d = n(665906),
   h = n(981631),
   m = n(689938),
-  p = n(127747);
+  E = n(127747);
 
-function E(e) {
+function p(e) {
   let {
     channel: t,
     narrow: n
@@ -31,17 +31,17 @@ function E(e) {
       banner_type: "thread"
     })
   }, [t]), (0, l.jsxs)("div", {
-    className: a()(p.chatHeaderBar, {
-      [p.narrow]: n
+    className: a()(E.chatHeaderBar, {
+      [E.narrow]: n
     }),
     children: [(0, l.jsx)(r.Text, {
-      className: p.chatHeaderBarText,
+      className: E.chatHeaderBarText,
       variant: "text-sm/normal",
       color: "header-secondary",
       children: t.isForumPost() ? m.Z.Messages.FORUM_POST_HEADER_NOTICE_LOCKED : m.Z.Messages.THREAD_HEADER_NOTICE_LOCKED
     }), s ? (0, l.jsx)(r.Button, {
       size: n ? r.Button.Sizes.SMALL : r.Button.Sizes.TINY,
-      className: p.chatHeaderBarButton,
+      className: E.chatHeaderBarButton,
       color: r.Button.Colors.PRIMARY,
       onClick: () => {
         c.default.track(h.rMx.CHANNEL_BANNER_CTA_CLICKED, {
@@ -68,17 +68,17 @@ function g(e) {
       banner_type: "thread"
     })
   }, [t]), (0, l.jsxs)("div", {
-    className: a()(p.chatHeaderBar, {
-      [p.narrow]: n
+    className: a()(E.chatHeaderBar, {
+      [E.narrow]: n
     }),
     children: [(0, l.jsx)(r.Text, {
-      className: p.chatHeaderBarText,
+      className: E.chatHeaderBarText,
       variant: "text-sm/normal",
       color: "header-secondary",
       children: t.isForumPost() ? m.Z.Messages.FORUM_POST_HEADER_NOTICE_ACTIVE_LOCKED : m.Z.Messages.THREAD_HEADER_NOTICE_ACTIVE_LOCKED
     }), s ? (0, l.jsx)(r.Button, {
       size: n ? r.Button.Sizes.SMALL : r.Button.Sizes.TINY,
-      className: p.chatHeaderBarButton,
+      className: E.chatHeaderBarButton,
       color: r.Button.Colors.PRIMARY,
       onClick: () => {
         c.default.track(h.rMx.CHANNEL_BANNER_CTA_CLICKED, {

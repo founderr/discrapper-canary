@@ -41,7 +41,7 @@ function u(e) {
     }))
   }, [n.keyboardModeEnabled]), m = l.useCallback(() => {
     !n.hasMoreAfter && a.S.dispatchToLastSubscribed(c.CkL.TEXTAREA_FOCUS)
-  }, [n.hasMoreAfter]), p = (0, i.ZP)({
+  }, [n.hasMoreAfter]), E = (0, i.ZP)({
     id: r.W,
     preserveFocusPosition: !1,
     setFocus: h,
@@ -49,14 +49,14 @@ function u(e) {
     scrollToStart: d,
     scrollToEnd: u,
     onNavigateNextAtEnd: m
-  }), E = l.useCallback(e => {
+  }), p = l.useCallback(e => {
     let {
       atEnd: t = !1
     } = e;
-    t ? p.focusLastVisibleItem() : p.focusFirstVisibleItem()
-  }, [p]);
+    t ? E.focusLastVisibleItem() : E.focusFirstVisibleItem()
+  }, [E]);
   return (0, s.yp)({
     event: c.CkL.FOCUS_MESSAGES,
-    handler: E
-  }), p
+    handler: p
+  }), E
 }

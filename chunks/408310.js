@@ -13,8 +13,8 @@ t.Z = e => {
     setSearchQuery: d,
     mostRecentQuery: h,
     handleClearSearch: m,
-    handleSearchKeyPress: p,
-    handleCreateOrAddGuild: E,
+    handleSearchKeyPress: E,
+    handleCreateOrAddGuild: p,
     searchResults: g,
     searchFetching: f
   } = e;
@@ -25,10 +25,10 @@ t.Z = e => {
     })
   });
   else if (0 === g.length) {
-    let e = null != E ? r.Z.Messages.DIRECTORY_SEARCH_NO_RESULTS_SUBTITLE.format({
+    let e = null != p ? r.Z.Messages.DIRECTORY_SEARCH_NO_RESULTS_SUBTITLE.format({
       addServerHook: function(e, t) {
         return (0, l.jsx)(i.Anchor, {
-          onClick: E,
+          onClick: p,
           children: e
         }, t)
       }
@@ -87,7 +87,7 @@ t.Z = e => {
           placeholder: r.Z.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
           onChange: d,
           onClear: m,
-          onKeyPress: p,
+          onKeyPress: E,
           cta: null != n && n.length > 0 ? r.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
         })]
       }), t]

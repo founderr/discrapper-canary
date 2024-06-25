@@ -35,14 +35,14 @@ let c = (e, t, n) => ({
       avatarSrc: d,
       description: h,
       timestamp: m,
-      episodeDescription: p,
-      colors: E,
+      episodeDescription: E,
+      colors: p,
       channelId: g
     } = e, f = n.extra.media_title, C = c(d, t);
     return await (0, s.f)({
       assetsToLoad: C,
       drawImage: e => {
-        let t = E.map((e, t) => ({
+        let t = p.map((e, t) => ({
           color: e,
           stop: t
         }));
@@ -107,7 +107,7 @@ let c = (e, t, n) => ({
           h: 32,
           w: r.kC
         }, !0);
-        let s = u(m, p);
+        let s = u(m, E);
         (0, a.J)({
           canvas: e,
           badges: s,

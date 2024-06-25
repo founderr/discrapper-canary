@@ -10,8 +10,8 @@ t.d(n, {
   }
 });
 var i = t(544891),
-  s = t(570140),
-  l = t(480608),
+  l = t(570140),
+  s = t(480608),
   a = t(981631);
 
 function r(e, n) {
@@ -25,7 +25,7 @@ function r(e, n) {
       applicationId: e.application_id,
       operator: e.operator,
       value: e.value
-    })))), s.Z.dispatch({
+    })))), l.Z.dispatch({
       type: "GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS",
       roleId: n,
       roleConnectionConfigurations: t
@@ -54,13 +54,13 @@ async function o(e, n, t) {
         value: e.value
       })))), n
     }),
-    c = await (0, l.H)(e, n, !1);
-  null != c && s.Z.dispatch({
+    c = await (0, s.H)(e, n, !1);
+  null != c && l.Z.dispatch({
     type: "GUILD_ROLE_MEMBER_COUNT_UPDATE",
     guildId: e,
     roleId: n,
     count: c
-  }), s.Z.dispatch({
+  }), l.Z.dispatch({
     type: "GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS",
     roleId: n,
     roleConnectionConfigurations: o

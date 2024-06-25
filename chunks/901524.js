@@ -1,39 +1,39 @@
 t.d(n, {
   y: function() {
-    return s
+    return l
   }
 });
-var i, s, l = t(735250);
+var i, l, s = t(735250);
 t(470079);
 var a = t(120356),
   r = t.n(a),
   o = t(481060),
   c = t(689938),
   d = t(585069);
-(i = s || (s = {})).DENY = "DENY", i.PASSTHROUGH = "PASSTHROUGH", i.ALLOW = "ALLOW";
-let u = Object.keys(s);
+(i = l || (l = {})).DENY = "DENY", i.PASSTHROUGH = "PASSTHROUGH", i.ALLOW = "ALLOW";
+let u = Object.keys(l);
 
 function I(e) {
   let {
     value: n = "PASSTHROUGH",
     onChange: t,
     labelledBy: i,
-    disabled: s = !1
+    disabled: l = !1
   } = e, a = (0, o.useRadioGroup)({
     orientation: "horizontal",
-    isDisabled: s,
+    isDisabled: l,
     labelledBy: i
   });
-  return (0, l.jsx)("div", {
+  return (0, s.jsx)("div", {
     className: r()(d.group, {
-      [d.disabled]: s
+      [d.disabled]: l
     }),
     ...a,
-    children: u.map(e => (0, l.jsx)(N, {
+    children: u.map(e => (0, s.jsx)(N, {
       type: e,
       isSelected: n === e,
       onSelect: e => {
-        n !== e && !s && t(e)
+        n !== e && !l && t(e)
       }
     }, e))
   })
@@ -41,11 +41,11 @@ function I(e) {
 
 function N(e) {
   let n, t, i, {
-    type: s,
+    type: l,
     onSelect: a,
     isSelected: u
   } = e;
-  switch (s) {
+  switch (l) {
     case "DENY":
       i = c.Z.Messages.PERMISSION_OVERRIDE_DENY, n = o.CloseSmallIcon, t = d.deny;
       break;
@@ -59,16 +59,16 @@ function N(e) {
     isSelected: u,
     label: i
   });
-  return (0, l.jsx)(o.Clickable, {
+  return (0, s.jsx)(o.Clickable, {
     className: r()(d.item, t, {
       [d.selected]: u
     }),
-    onClick: () => a(s),
+    onClick: () => a(l),
     ...I,
-    children: (0, l.jsx)(n, {
+    children: (0, s.jsx)(n, {
       color: "currentColor",
       size: "xs"
     })
   })
 }
-I.Types = s, n.Z = I
+I.Types = l, n.Z = I

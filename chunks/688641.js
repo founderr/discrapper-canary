@@ -21,11 +21,11 @@ function c(e) {
     description: d,
     userCount: h,
     onClick: m,
-    highlight: p
+    highlight: E
   } = e;
   return (0, l.jsxs)(a.Clickable, {
-    className: s()(o.container, t, null != p && {
-      [o.pulse]: p
+    className: s()(o.container, t, null != E && {
+      [o.pulse]: E
     }),
     onClick: m,
     children: [(0, l.jsx)("div", {

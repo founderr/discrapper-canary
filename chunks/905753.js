@@ -1,4 +1,4 @@
-let i, s, l;
+let i, l, s;
 t(47120);
 var a, r, o, c, d = t(442837),
   u = t(570140),
@@ -9,7 +9,7 @@ let E = {},
   m = !1;
 
 function _() {
-  i = void 0, E = {}, T = {}, s = void 0, l = void 0, m = !1
+  i = void 0, E = {}, T = {}, l = void 0, s = void 0, m = !1
 }
 class h extends(a = d.ZP.Store) {
   getApplicationPermissions() {
@@ -22,10 +22,10 @@ class h extends(a = d.ZP.Store) {
     return null == T ? void 0 : T[e]
   }
   getEditedApplication() {
-    return s
+    return l
   }
   getEditedCommand() {
-    return l
+    return s
   }
   isUnavailable() {
     return m
@@ -59,18 +59,18 @@ c = "IntegrationPermissionStore", (o = "displayName") in(r = h) ? Object.defineP
     let {
       applicationId: n,
       commandId: t,
-      permissions: s
+      permissions: l
     } = e;
     if (n !== i) return !1;
     if (t === i) {
-      E = (0, N.tk)(s);
+      E = (0, N.tk)(l);
       return
     }
-    let l = T[t];
-    if (null == l) return !1;
+    let s = T[t];
+    if (null == s) return !1;
     T[t] = {
-      ...l,
-      permissions: (0, N.tk)(s)
+      ...s,
+      permissions: (0, N.tk)(l)
     }
   },
   INTEGRATION_PERMISSION_SETTINGS_EDIT: function(e) {
@@ -80,7 +80,7 @@ c = "IntegrationPermissionStore", (o = "displayName") in(r = h) ? Object.defineP
       permissions: a
     } = e;
     if (n !== i) return !1;
-    t === i ? s = a : l = {
+    t === i ? l = a : s = {
       commandId: t,
       permissions: a
     }
@@ -89,7 +89,7 @@ c = "IntegrationPermissionStore", (o = "displayName") in(r = h) ? Object.defineP
     let {
       commandId: n
     } = e;
-    null == n ? s = void 0 : l = void 0
+    null == n ? l = void 0 : s = void 0
   },
   INTEGRATION_PERMISSION_SETTINGS_COMMANDS_FETCH_FAILURE: function(e) {
     let {
@@ -102,10 +102,10 @@ c = "IntegrationPermissionStore", (o = "displayName") in(r = h) ? Object.defineP
     let {
       applicationId: n,
       commands: t,
-      permissions: s
+      permissions: l
     } = e;
     if (n !== i) return !1;
-    let l = Object.fromEntries(s.map(e => [e.id, e.permissions])),
+    let s = Object.fromEntries(l.map(e => [e.id, e.permissions])),
       a = {};
     for (let e of t)
       if (e.application_id === i) {
@@ -114,7 +114,7 @@ c = "IntegrationPermissionStore", (o = "displayName") in(r = h) ? Object.defineP
             command: e,
             applicationId: e.application_id
           }),
-          t = l[e.id];
+          t = s[e.id];
         null != t && (n.permissions = (0, N.tk)(t)), a[e.id] = n
       } T = a
   }

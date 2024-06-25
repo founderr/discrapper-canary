@@ -8,8 +8,8 @@ t.r(n), t.d(n, {
 });
 var i = t(735250);
 t(470079);
-var s = t(481060),
-  l = t(239091),
+var l = t(481060),
+  s = t(239091),
   a = t(241635),
   r = t(689938);
 
@@ -23,10 +23,10 @@ function c(e) {
     guild: t,
     onSelect: o
   } = e, c = (0, a.Z)(t, n);
-  return 0 === c.length ? null : (0, i.jsx)(s.Menu, {
+  return 0 === c.length ? null : (0, i.jsx)(l.Menu, {
     navId: "guild-settings-role-context",
     "aria-label": r.Z.Messages.GUILD_ROLE_ACTIONS_MENU_LABEL,
-    onClose: l.Zy,
+    onClose: s.Zy,
     onSelect: o,
     children: c
   })

@@ -149,8 +149,8 @@ function k(e) {
     }
   }, [F, w, Y]);
   let W = (0, c.e7)([g.Z], () => null != u.guild ? g.Z.getGuild(u.guild.id) : null, [u]),
-    z = (0, h.Z)([G.id])[0],
-    K = (0, c.e7)([_.ZP], () => {
+    K = (0, h.Z)([G.id])[0],
+    z = (0, c.e7)([_.ZP], () => {
       var e;
       return (null == u ? void 0 : u.channel) != null && (null === (e = _.ZP.getSelfEmbeddedActivityForChannel(u.channel.id)) || void 0 === e ? void 0 : e.applicationId) === G.id
     }),
@@ -181,7 +181,7 @@ function k(e) {
     if (null == u.guild) return (0, s.jsx)(v.Z, {});
     W = new S.ZP(u.guild)
   }
-  let ei = es && !q || es && K,
+  let ei = es && !q || es && z,
     el = () => {
       E.Z.acceptInviteAndTransitionToInviteChannel({
         inviteKey: u.code,
@@ -189,7 +189,7 @@ function k(e) {
         analyticsLocations: J
       })
     };
-  return (es && K && (l = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !q && (l = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = K ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !es ? P.Z.Messages.JOIN : P.Z.Messages.START, null == u.code || "" === u.code) ? null : (0, s.jsxs)("div", {
+  return (es && z && (l = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !q && (l = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = z ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !es ? P.Z.Messages.JOIN : P.Z.Messages.START, null == u.code || "" === u.code) ? null : (0, s.jsxs)("div", {
     className: D.container,
     ref: F,
     children: [(0, s.jsx)("div", {
@@ -199,7 +199,7 @@ function k(e) {
       }),
       children: (0, s.jsx)(T.Z, {
         imageBackground: $,
-        applicationName: null !== (n = null == z ? void 0 : z.name) && void 0 !== n ? n : "",
+        applicationName: null !== (n = null == K ? void 0 : K.name) && void 0 !== n ? n : "",
         imageClassName: a()(D.img, {
           [D.large]: V,
           [D.stacked]: H
@@ -221,7 +221,7 @@ function k(e) {
         }), (0, s.jsx)(d.Heading, {
           className: D.heading,
           variant: "heading-xl/semibold",
-          children: null == z ? void 0 : z.name
+          children: null == K ? void 0 : K.name
         }), (0, s.jsx)(B, {
           channel: X,
           guild: W,

@@ -14,9 +14,9 @@ var l = n(735250),
   d = n(496675),
   h = n(981631),
   m = n(689938),
-  p = n(654984);
+  E = n(654984);
 
-function E(e) {
+function p(e) {
   let {
     isLoading: t,
     noText: n,
@@ -24,14 +24,14 @@ function E(e) {
     className: s
   } = e;
   return (0, l.jsx)("div", {
-    className: a()(p.emptyPreviewContainer, s),
+    className: a()(E.emptyPreviewContainer, s),
     children: t ? (0, l.jsx)(o.Spinner, {}) : (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("div", {
-        className: p.emptyPreviewImage
+        className: E.emptyPreviewImage
       }), n ? null : (0, l.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "none",
-        className: p.emptyPreviewText,
+        className: E.emptyPreviewText,
         children: null != i ? i : m.Z.Messages.STREAM_NO_PREVIEW
       })]
     })
@@ -54,17 +54,17 @@ function g(e) {
     !C && (_.current = f)
   }, [f, C]);
   let I = null == f || C ? _.current : f;
-  return null == I ? (0, l.jsx)(E, {
+  return null == I ? (0, l.jsx)(p, {
     className: n,
     isLoading: C,
     noText: s,
     previewText: g ? void 0 : m.Z.Messages.STREAM_NO_PERMISSION_CTA
   }) : (0, l.jsx)("div", {
-    className: a()(n, p.root),
+    className: a()(n, E.root),
     children: (0, l.jsx)("img", {
       src: I,
       alt: "",
-      className: p.image
+      className: E.image
     })
   })
 }

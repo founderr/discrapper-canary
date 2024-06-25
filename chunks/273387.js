@@ -6,8 +6,8 @@ var l, i, s, a, r = n(442837),
 let d = Object.freeze({}),
   h = !1,
   m = {},
-  p = {},
   E = {},
+  p = {},
   g = {},
   f = {};
 class C extends(l = r.ZP.Store) {
@@ -16,11 +16,11 @@ class C extends(l = r.ZP.Store) {
   }
   getCurrentCategoryId(e) {
     var t;
-    return null !== (t = p[e]) && void 0 !== t ? t : u.AR.ALL
+    return null !== (t = E[e]) && void 0 !== t ? t : u.AR.ALL
   }
   getDirectoryEntries(e, t) {
     var n;
-    return null != t ? null === (n = E[e]) || void 0 === n ? void 0 : n[t] : m[e]
+    return null != t ? null === (n = p[e]) || void 0 === n ? void 0 : n[t] : m[e]
   }
   getDirectoryEntry(e, t) {
     var n;
@@ -60,7 +60,7 @@ a = "GuildDirectoryStore", (s = "displayName") in(i = C) ? Object.defineProperty
       l[t.guildId] = t, null != i[t.primaryCategoryId] ? i[t.primaryCategoryId][t.guildId] = t : i[t.primaryCategoryId] = {
         [t.guildId]: t
       }
-    }), m[t] = l, E[t] = i
+    }), m[t] = l, p[t] = i
   },
   GUILD_DIRECTORY_FETCH_FAILURE: function() {
     h = !1
@@ -77,10 +77,10 @@ a = "GuildDirectoryStore", (s = "displayName") in(i = C) ? Object.defineProperty
       [o.guildId]: o
     };
     let d = null !== (l = o.primaryCategoryId) && void 0 !== l ? l : u.AR.UNCATEGORIZED;
-    if (E[a] = {
-        ...E[a],
+    if (p[a] = {
+        ...p[a],
         [d]: {
-          ...null === (n = E[a]) || void 0 === n ? void 0 : n[d],
+          ...null === (n = p[a]) || void 0 === n ? void 0 : n[d],
           [o.guildId]: o
         }
       }, null != g[a]) {
@@ -101,9 +101,9 @@ a = "GuildDirectoryStore", (s = "displayName") in(i = C) ? Object.defineProperty
     let a = s.primaryCategoryId,
       r = Object.assign({}, m[l]);
     delete r[i], null === (n = f[l]) || void 0 === n || n.delete(i), f[l] = new Set(f[l]), m[l] = r;
-    let o = Object.assign({}, E[l][a]);
-    if (delete o[i], E[l] = {
-        ...E[l],
+    let o = Object.assign({}, p[l][a]);
+    if (delete o[i], p[l] = {
+        ...p[l],
         [a]: o
       }, null != g[l]) {
       let e = g[l][a] - 1;
@@ -117,8 +117,8 @@ a = "GuildDirectoryStore", (s = "displayName") in(i = C) ? Object.defineProperty
     var t, n, l, i, s, a, r, o, d;
     let {
       channelId: h,
-      entry: p
-    } = e, f = (0, c.MQ)(p), C = null === (t = m[h]) || void 0 === t ? void 0 : t[f.guildId];
+      entry: E
+    } = e, f = (0, c.MQ)(E), C = null === (t = m[h]) || void 0 === t ? void 0 : t[f.guildId];
     m[h] = {
       ...m[h],
       [f.guildId]: {
@@ -128,12 +128,12 @@ a = "GuildDirectoryStore", (s = "displayName") in(i = C) ? Object.defineProperty
     };
     let _ = null !== (i = null == C ? void 0 : C.primaryCategoryId) && void 0 !== i ? i : u.AR.UNCATEGORIZED,
       I = null !== (s = f.primaryCategoryId) && void 0 !== s ? s : u.AR.UNCATEGORIZED,
-      x = Object.assign({}, null === (n = E[h]) || void 0 === n ? void 0 : n[_]);
-    null != C && _ !== I && delete x[f.guildId], E[h] = {
-      ...E[h],
+      x = Object.assign({}, null === (n = p[h]) || void 0 === n ? void 0 : n[_]);
+    null != C && _ !== I && delete x[f.guildId], p[h] = {
+      ...p[h],
       [_]: x,
       [I]: {
-        ...null === (l = E[h]) || void 0 === l ? void 0 : l[I],
+        ...null === (l = p[h]) || void 0 === l ? void 0 : l[I],
         [f.guildId]: {
           ...C,
           ...f
@@ -150,7 +150,7 @@ a = "GuildDirectoryStore", (s = "displayName") in(i = C) ? Object.defineProperty
       channelId: t,
       categoryId: n
     } = e;
-    p[t] = n
+    E[t] = n
   },
   GUILD_DIRECTORY_COUNTS_FETCH_SUCCESS: function(e) {
     let {

@@ -15,15 +15,15 @@ var i = n(442837),
   d = n(15274),
   h = n(482241),
   m = n(389303),
-  p = n(554747),
-  E = n(689938),
+  E = n(554747),
+  p = n(689938),
   g = n(791671);
 
 function f(e) {
   let {
     channelId: t,
     onClick: n
-  } = e, f = (0, a.bp)(), C = (0, p.qY)(t), _ = (0, i.e7)([u.Z], () => u.Z.getChannel(t), [t]), {
+  } = e, f = (0, a.bp)(), C = (0, E.qY)(t), _ = (0, i.e7)([u.Z], () => u.Z.getChannel(t), [t]), {
     canManageGuildEvent: I
   } = (0, r.XJ)(_), x = I(C);
   if (null == C) return null;
@@ -46,13 +46,13 @@ function f(e) {
         children: (0, l.jsx)(s.Menu, {
           navId: "exit-options",
           onSelect: () => {},
-          "aria-label": E.Z.Messages.DISCONNECT_MENU,
+          "aria-label": p.Z.Messages.DISCONNECT_MENU,
           onClose: t,
           children: (0, l.jsx)(s.MenuItem, {
             id: "end-voice-event",
             color: "danger",
             action: N,
-            label: E.Z.Messages.END_EVENT,
+            label: p.Z.Messages.END_EVENT,
             icon: s.CircleXIcon
           })
         })
@@ -66,7 +66,7 @@ function f(e) {
         onClick: t
       } = e;
       return (0, l.jsx)(c.d, {
-        label: E.Z.Messages.DISCONNECT_SELF,
+        label: p.Z.Messages.DISCONNECT_SELF,
         color: "red",
         iconComponent: s.PhoneHangUpIcon,
         onClick: T,
@@ -76,7 +76,7 @@ function f(e) {
     }
   }) : (0, l.jsx)(c.d, {
     className: g.buttonSpacing,
-    label: E.Z.Messages.DISCONNECT_SELF,
+    label: p.Z.Messages.DISCONNECT_SELF,
     color: "red",
     iconComponent: s.PhoneHangUpIcon,
     onClick: n

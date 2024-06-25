@@ -17,8 +17,8 @@ var l = n(735250),
   d = n(481060),
   h = n(699682),
   m = n(367907),
-  p = n(812206),
-  E = n(644914),
+  E = n(812206),
+  p = n(644914),
   g = n(434404),
   f = n(330010),
   C = n(314897),
@@ -43,10 +43,10 @@ function L(e) {
     header: r,
     completed: o,
     onClick: c
-  } = e, [u, m] = i.useState(!1), p = (0, h.Z)(o);
+  } = e, [u, m] = i.useState(!1), E = (0, h.Z)(o);
   return i.useEffect(() => {
-    null != p && o !== p && (m(!0), setTimeout(() => m(!1), 1e3))
-  }, [o, p]), (0, l.jsxs)(d.Clickable, {
+    null != E && o !== E && (m(!0), setTimeout(() => m(!1), 1e3))
+  }, [o, E]), (0, l.jsxs)(d.Clickable, {
     className: a()(t, j.card, {
       [j.completed]: o
     }),
@@ -81,18 +81,18 @@ function O(e) {
     canInvite: O,
     canManageGuild: P,
     canMessage: y
-  } = (0, E.TE)(t, s), b = (0, c.e7)([I.default], () => {
+  } = (0, p.TE)(t, s), b = (0, c.e7)([I.default], () => {
     var e, t;
     return (null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0
   }), {
     guildPopulated: D,
     guildMessaged: U,
     guildPersonalized: k
-  } = (0, E.h_)(s), {
+  } = (0, p.h_)(s), {
     handleInvite: w,
     handleMessage: H,
-    handlePersonalize: B,
-    handleDownload: G,
+    handlePersonalize: G,
+    handleDownload: B,
     handleAddApplication: V
   } = function(e) {
     let t = i.useCallback(() => {
@@ -207,7 +207,7 @@ function O(e) {
       } : {},
       opacities: l
     }
-  }(F), Y = (0, c.e7)([p.Z], () => p.Z.getGuildApplicationIds(null == s ? void 0 : s.id)).length > 0;
+  }(F), Y = (0, c.e7)([E.Z], () => E.Z.getGuildApplicationIds(null == s ? void 0 : s.id)).length > 0;
   if (i.useEffect(() => {
       var e;
       (0, f.i)(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : A.lds)
@@ -233,7 +233,7 @@ function O(e) {
       iconUrl: n(753033),
       header: R.Z.Messages.WELCOME_CTA_PERSONALIZE_TITLE,
       completed: k,
-      onClick: B
+      onClick: G
     })
   }, "customize")), y && K.push((0, l.jsx)(o.Z.div, {
     className: j.cardWrapper,
@@ -255,7 +255,7 @@ function O(e) {
       iconUrl: n(435921),
       header: R.Z.Messages.WELCOME_CTA_DOWNLOAD_TITLE,
       completed: b,
-      onClick: G
+      onClick: B
     })
   }, "download")), K.push((0, l.jsx)(o.Z.div, {
     className: j.cardWrapper,

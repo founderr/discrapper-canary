@@ -6,15 +6,15 @@ var l, i, s, a, r = n(442837),
   d = n(355298),
   h = n(333984);
 let m = {},
-  p = new Set;
+  E = new Set;
 
-function E(e) {
+function p(e) {
   return d.Z.isMessageRequest(e) || h.Z.isSpam(e)
 }
 
 function g(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  if (!E(e) || null != t && e !== (null == t ? void 0 : t.channel_id)) return;
+  if (!p(e) || null != t && e !== (null == t ? void 0 : t.channel_id)) return;
   let l = null == t ? null : (0, c.e5)(t);
   m[e] = {
     loaded: !0,
@@ -27,7 +27,7 @@ class f extends(l = r.ZP.Store) {
     this.waitFor(d.Z, h.Z, u.default)
   }
   shouldLoadMessageRequestPreview(e) {
-    return !p.has(e)
+    return !E.has(e)
   }
   getMessageRequestPreview(e) {
     return !(e in m) && (m[e] = {
@@ -44,25 +44,25 @@ a = "MessageRequestPreviewStore", (s = "displayName") in(i = f) ? Object.defineP
   writable: !0
 }) : i[s] = a, t.Z = new f(o.Z, {
   CONNECTION_OPEN: function() {
-    m = {}, p.clear()
+    m = {}, E.clear()
   },
   CHANNEL_CREATE: function(e) {
     let {
       channel: t
     } = e;
-    E(t.id) && p.add(t.id)
+    p(t.id) && E.add(t.id)
   },
   CHANNEL_UPDATES: function(e) {
     let {
       channels: t
     } = e;
-    for (let e of t) !E(e.id) && (p.delete(e.id), delete m[e.id])
+    for (let e of t) !p(e.id) && (E.delete(e.id), delete m[e.id])
   },
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    p.delete(t.id), delete m[t.id]
+    E.delete(t.id), delete m[t.id]
   },
   MESSAGE_CREATE: function(e) {
     if (e.isPushNotification) return !1;
@@ -79,7 +79,7 @@ a = "MessageRequestPreviewStore", (s = "displayName") in(i = f) ? Object.defineP
     }
   },
   MESSAGE_DELETE: function(e) {
-    if (!E(e.channelId)) return !1;
+    if (!p(e.channelId)) return !1;
     m[e.channelId] = {
       loaded: !0,
       error: !1,

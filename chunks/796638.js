@@ -20,8 +20,8 @@ var l = n(735250),
   d = n(354459),
   h = n(16734);
 let m = 112,
-  p = 16 / 9 * m + 8,
-  E = 10 * o.Z.Millis.SECOND;
+  E = 16 / 9 * m + 8,
+  p = 10 * o.Z.Millis.SECOND;
 
 function g(e) {
   var t;
@@ -34,7 +34,7 @@ function f(e, t) {
   i.useEffect(() => {
     let e = setTimeout(() => {
       l(Date.now())
-    }, E);
+    }, p);
     return () => {
       clearTimeout(e)
     }
@@ -56,7 +56,7 @@ function f(e, t) {
             case d.fO.USER:
               var n;
               let l = "\x05";
-              return e.speaking ? l = "\x02" : t - e.lastSpoke < E ? l = "\x03" : (null === (n = e.voiceState) || void 0 === n ? void 0 : n.selfVideo) && (l = "\x04"), "".concat(l).concat(function(e) {
+              return e.speaking ? l = "\x02" : t - e.lastSpoke < p ? l = "\x03" : (null === (n = e.voiceState) || void 0 === n ? void 0 : n.selfVideo) && (l = "\x04"), "".concat(l).concat(function(e) {
                 let t = String(864e13).length;
                 return String(864e13 - e).padStart(t, "0")
               }(e.lastSpoke)).concat((0, a.Z)(e.userNick, e.user))
@@ -65,9 +65,9 @@ function f(e, t) {
         [i, o] = (0, s.partition)(l, d.Io),
         u = i.findIndex(g),
         h = null; - 1 !== u && (h = i[u], i.splice(u, 1));
-      let m = null != h ? e - p - 8 : e,
+      let m = null != h ? e - E - 8 : e,
         f = Math.max(0, Math.min(Math.floor((m - 8) / 132), 12, t.length)),
-        C = Math.min((m - 8) / f - 8, p),
+        C = Math.min((m - 8) / f - 8, E),
         _ = Math.max(0, f - o.length),
         I = o.slice(0, f),
         x = i.slice(0, _),
@@ -112,7 +112,7 @@ function C(e) {
     inCall: c,
     popoutWindow: d,
     paused: m = !1
-  } = e, E = null != d;
+  } = e, p = null != d;
   return (0, l.jsx)("div", {
     className: h.root,
     children: t.map(e => {
@@ -132,10 +132,10 @@ function C(e) {
           onClick: r,
           onDoubleClick: s,
           onContextMenu: a,
-          width: t ? p : n,
+          width: t ? E : n,
           inCall: c,
           paused: m,
-          inPopout: E
+          inPopout: p
         })
       }, e.id)
     })

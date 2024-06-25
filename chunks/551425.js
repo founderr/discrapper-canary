@@ -8,9 +8,9 @@ var n = s(979554),
   d = s(876917),
   u = s(594174),
   c = s(597688),
-  p = s(5975);
-let h = a.AvatarSizes.SIZE_152,
-  f = (0, r.y9)(h),
+  h = s(5975);
+let p = a.AvatarSizes.SIZE_152,
+  f = (0, r.y9)(p),
   m = e => {
     let {
       item: t
@@ -24,13 +24,13 @@ let h = a.AvatarSizes.SIZE_152,
       size: f
     });
     return (0, i.jsx)("div", {
-      className: p.avatarDecorationPreview,
+      className: h.avatarDecorationPreview,
       children: (0, i.jsx)(a.Avatar, {
         ...d,
         "aria-label": t.label,
         src: r,
         avatarDecoration: n,
-        size: h
+        size: p
       })
     })
   },
@@ -39,7 +39,7 @@ let h = a.AvatarSizes.SIZE_152,
       item: t
     } = e;
     return (0, i.jsx)("div", {
-      className: p.profileEffectPreview,
+      className: h.profileEffectPreview,
       children: (0, i.jsx)(d.Z, {
         isHovering: !0,
         profileEffectId: null == t ? void 0 : t.id

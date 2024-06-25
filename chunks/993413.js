@@ -5,8 +5,8 @@ s.d(n, {
 }), s(757143);
 var l = s(735250);
 s(470079);
-var t = s(120356),
-  i = s.n(t),
+var i = s(120356),
+  t = s.n(i),
   r = s(481060),
   a = s(403182),
   c = s(587446),
@@ -34,7 +34,7 @@ function _(e) {
   let {
     title: n,
     titleIcon: s,
-    titleId: t,
+    titleId: i,
     description: a,
     children: _,
     className: m,
@@ -48,7 +48,7 @@ function _(e) {
     showPremiumIcon: h = !1
   } = e;
   return (0, l.jsx)("div", {
-    className: i()(u.customizationSection, m, {
+    className: t()(u.customizationSection, m, {
       [u.disabled]: E,
       [u.hideDivider]: p,
       [u.showBorder]: N,
@@ -62,7 +62,7 @@ function _(e) {
       hasBackground: S,
       children: [(0, l.jsxs)(r.FormTitle, {
         className: u.title,
-        id: t,
+        id: i,
         children: [n, h && (0, l.jsx)(c.Z, {}), s]
       }), null != a ? (0, l.jsx)(r.FormText, {
         type: r.FormText.Types.DESCRIPTION,

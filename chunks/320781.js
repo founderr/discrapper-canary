@@ -20,8 +20,8 @@ function m(e) {
   let {
     channel: n
   } = e, m = (0, r.eV)(n), {
-    firstMessage: p
-  } = (0, i.cj)([o.Z], () => o.Z.getMessage(n.id)), E = new Set((0, r.kn)(n, m)), g = null !== (t = (0, a.Z)(n)) && void 0 !== t ? t : s.ChatIcon;
+    firstMessage: E
+  } = (0, i.cj)([o.Z], () => o.Z.getMessage(n.id)), p = new Set((0, r.kn)(n, m)), g = null !== (t = (0, a.Z)(n)) && void 0 !== t ? t : s.ChatIcon;
   return (0, l.jsxs)(u.ZP, {
     channelId: n.id,
     className: h.container,
@@ -34,12 +34,12 @@ function m(e) {
     }), (0, l.jsx)(u.Ot, {
       className: h.header,
       children: n.name
-    }), null == p && (0, l.jsx)(s.Text, {
+    }), null == E && (0, l.jsx)(s.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       children: d.Z.Messages.REPLY_QUOTE_MESSAGE_DELETED
     }), (0, l.jsx)(c.Z, {
-      appliedTags: E
+      appliedTags: p
     })]
   })
 }

@@ -15,8 +15,8 @@ var i = n(442837),
   d = n(396769),
   h = n(967128),
   m = n(981631),
-  p = n(689938),
-  E = n(193308);
+  E = n(689938),
+  p = n(193308);
 
 function g(e) {
   let {
@@ -27,20 +27,20 @@ function g(e) {
     children: [(0, l.jsx)(h.Kq, {
       channelType: t.type
     }), (0, l.jsx)(h.Ot, {
-      children: p.Z.Messages.BEGINNING_CHANNEL_WELCOME.format({
+      children: E.Z.Messages.BEGINNING_CHANNEL_WELCOME.format({
         channelName: n
       })
     }), (0, l.jsx)(h.jz, {
-      children: p.Z.Messages.BEGINNING_CHANNEL_DESCRIPTION.format({
+      children: E.Z.Messages.BEGINNING_CHANNEL_DESCRIPTION.format({
         channelName: n,
         topicHook: () => o.Z.parseTopic(t.topic, !0, {
           channelId: t.id
         })
       })
     }), g ? (0, l.jsx)("div", {
-      className: E.buttonContainer,
+      className: p.buttonContainer,
       children: (0, l.jsx)(d.Z, {
-        label: p.Z.Messages.EDIT_CHANNEL,
+        label: E.Z.Messages.EDIT_CHANNEL,
         onClick: () => {
           a.ZP.open(t.id)
         },

@@ -1,6 +1,6 @@
 n.d(t, {
   P7: function() {
-    return p
+    return E
   },
   RR: function() {
     return m
@@ -9,7 +9,7 @@ n.d(t, {
     return u
   },
   bg: function() {
-    return E
+    return p
   },
   hn: function() {
     return d
@@ -57,11 +57,11 @@ function m(e, t, n) {
   }
 }
 
-function p(e) {
+function E(e) {
   return e.type === o.W.LINE
 }
 
-function E(e, t, n, l) {
+function p(e, t, n, l) {
   var o;
   let u = r.default.getUser(e),
     d = null == u ? void 0 : u.getAvatarURL(null, c.Ks),
@@ -71,9 +71,9 @@ function E(e, t, n, l) {
       g: h[1],
       b: h[2]
     }).toHex()) : l,
-    p = (0, s.Bd)((0, s._i)(m)) > .5 ? n : t;
+    E = (0, s.Bd)((0, s._i)(m)) > .5 ? n : t;
   return {
     fillColor: m,
-    outlineColor: p
+    outlineColor: E
   }
 }

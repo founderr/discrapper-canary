@@ -19,13 +19,13 @@ function o(e) {
     onMouseEnter: d,
     onMouseLeave: h,
     ...m
-  } = e, p = t || n || o, E = c ? r.d : r.Z, g = (0, a.Z)(t, n, o, u), {
+  } = e, E = t || n || o, p = c ? r.d : r.Z, g = (0, a.Z)(t, n, o, u), {
     Component: f,
     play: C,
     events: _
-  } = (0, s.O)(p ? "unmute" : "mute");
-  return i.useEffect(() => () => C(), [C, p]), (0, l.jsx)(E, {
-    isActive: !p,
+  } = (0, s.O)(E ? "unmute" : "mute");
+  return i.useEffect(() => () => C(), [C, E]), (0, l.jsx)(p, {
+    isActive: !E,
     iconComponent: f,
     label: g,
     onMouseEnter: e => {

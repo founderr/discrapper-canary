@@ -15,8 +15,8 @@ var i = n(120356),
   d = n(835473),
   h = n(12498),
   m = n(933557),
-  p = n(995123),
-  E = n(554747),
+  E = n(995123),
+  p = n(554747),
   g = n(854698),
   f = n(897669),
   C = n(984370),
@@ -59,7 +59,7 @@ function H(e) {
   })
 }
 
-function B(e) {
+function G(e) {
   let {
     user: t,
     channel: n,
@@ -81,14 +81,14 @@ function B(e) {
   })
 }
 
-function G(e) {
+function B(e) {
   let t, {
       focusedApplication: n,
       focusedParticipant: i,
       channel: s
     } = e,
     a = (0, j.Z)(s, !0),
-    o = (0, E.qY)(s.id),
+    o = (0, p.qY)(s.id),
     c = null != o ? (0, g.DK)(o) : null,
     d = null != o;
   if ((null == i ? void 0 : i.type) === y.fO.ACTIVITY) null != n && (t = (0, l.jsxs)(l.Fragment, {
@@ -113,7 +113,7 @@ function G(e) {
     t = (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(v.ZP.Divider, {
         className: k.divider
-      }), (0, l.jsx)(B, {
+      }), (0, l.jsx)(G, {
         user: e,
         channel: s,
         stream: n,
@@ -140,18 +140,18 @@ function V(e) {
     appContext: o,
     inCall: c,
     isChatOpen: u,
-    exitFullScreen: E
+    exitFullScreen: p
   } = e, {
     focusedParticipant: g
   } = (0, a.cj)([M.Z], () => ({
     focusedParticipant: M.Z.getSelectedParticipant(t.id),
     participantsOpen: M.Z.getParticipantsOpen(t.id)
-  }), [t.id]), f = (0, m.ZP)(t), N = (0, p.Z)(t), [Z] = (0, d.Z)((null == g ? void 0 : g.type) === y.fO.ACTIVITY ? [g.id] : []), S = U.Z.Messages.VOICE_CHANNEL;
+  }), [t.id]), f = (0, m.ZP)(t), N = (0, E.Z)(t), [Z] = (0, d.Z)((null == g ? void 0 : g.type) === y.fO.ACTIVITY ? [g.id] : []), S = U.Z.Messages.VOICE_CHANNEL;
   t.isDM() ? S = U.Z.Messages.DM : t.isGroupDM() && (S = U.Z.Messages.GROUP_DM);
   let j = (0, a.e7)([h.Z], () => h.Z.getChannelStatus(t)),
     O = t.isGuildVoice() && c && null != j && j.length > 0,
     H = (0, R.Z)(t),
-    B = O ? (0, l.jsx)(r.Tooltip, {
+    G = O ? (0, l.jsx)(r.Tooltip, {
       text: U.Z.Messages.VOICE_CHANNEL_SET_STATUS,
       delay: 500,
       position: "bottom",
@@ -200,14 +200,14 @@ function V(e) {
       onDoubleClick: C.O,
       transparent: !0,
       className: (0, A.Q)(D.BR.DARK),
-      childrenBottom: B,
+      childrenBottom: G,
       toolbar: (0, l.jsx)(L.Z, {
         inPopout: o === b.IlC.POPOUT,
         channel: t,
         appContext: o,
         inCall: c,
         isChatOpen: u,
-        exitFullScreen: E
+        exitFullScreen: p
       }),
       children: [null != N ? (0, l.jsx)(v.ZP.Icon, {
         icon: N,
@@ -225,7 +225,7 @@ function V(e) {
       }), (0, l.jsx)(_.TS, {
         channel: t,
         guild: i
-      }), (0, l.jsx)(G, {
+      }), (0, l.jsx)(B, {
         focusedApplication: Z,
         focusedParticipant: g,
         channel: t

@@ -6,7 +6,7 @@ n.d(t, {
     return f
   },
   XX: function() {
-    return E
+    return p
   },
   ZP: function() {
     return _
@@ -18,7 +18,7 @@ n.d(t, {
     return g
   },
   pk: function() {
-    return p
+    return E
   }
 });
 var l = n(735250);
@@ -67,8 +67,8 @@ function m(e) {
       attachmentSpecs: a,
       usernameWidth: u,
       usernameOpacity: m,
-      className: p,
-      style: E
+      className: E,
+      style: p
     } = e,
     g = i ? 50 : r().random(40, 50);
   return !i && n ? t = (0, l.jsxs)(l.Fragment, {
@@ -96,12 +96,12 @@ function m(e) {
     })]
   })), (0, l.jsxs)("div", {
     "aria-hidden": !0,
-    className: s()(p, {
+    className: s()(E, {
       [c.wrapper]: !0,
       [c.compact]: i,
       [c.cozy]: !i
     }),
-    style: E,
+    style: p,
     children: [(0, l.jsxs)("div", {
       className: c.contents,
       children: [t, (0, l.jsx)("div", {
@@ -123,8 +123,8 @@ function m(e) {
     })]
   })
 }
-let p = 44,
-  E = 22,
+let E = 44,
+  p = 22,
   g = 26,
   f = 26,
   C = 6;

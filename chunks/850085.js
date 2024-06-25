@@ -1,69 +1,69 @@
-n.r(t), n(47120), n(411104);
+n.r(e), n(47120), n(411104);
 var r = n(735250),
   i = n(470079),
-  s = n(392711),
-  a = n(481060),
+  a = n(392711),
+  s = n(481060),
   l = n(100527),
-  o = n(906732),
+  u = n(906732),
   c = n(488499),
-  u = n(626135),
-  d = n(197712),
-  h = n(511004),
+  o = n(626135),
+  h = n(197712),
+  d = n(511004),
   A = n(486324),
-  E = n(981631),
-  g = n(678916),
+  g = n(981631),
+  E = n(678916),
   m = n(689938),
-  R = n(745217);
-t.default = e => {
+  p = n(745217);
+e.default = t => {
   let {
-    file: t,
+    file: e,
     imgURI: n,
-    transitionState: f,
-    allowSkip: _ = !1,
-    onCrop: N,
-    onClose: I,
+    transitionState: w,
+    allowSkip: C = !1,
+    onCrop: f,
+    onClose: R,
     uploadType: M = A.pC.AVATAR,
-    showUpsellHeader: x = !1,
+    showUpsellHeader: _ = !1,
     analyticsPage: L
-  } = e, [C, p] = i.useState({
+  } = t, [N, v] = i.useState({
     width: 0,
     height: 0
-  }), [P, Z] = i.useState({
+  }), [x, I] = i.useState({
     top: 0,
     bottom: 0,
     left: 0,
     right: 0
-  }), [S, v] = i.useState(!1), [w, j] = i.useState(1), [B, T] = i.useState({
+  }), [D, y] = i.useState(!1), [O, T] = i.useState(1), [B, b] = i.useState({
     x: 0,
     y: 0
-  }), [y, D] = i.useState(null), [b, U] = i.useState(!1), {
-    analyticsLocations: k
-  } = (0, o.ZP)(l.Z.IMAGE_CROPPING_MODAL), O = i.useRef({
+  }), [P, S] = i.useState(null), [V, j] = i.useState(!1), {
+    analyticsLocations: G
+  } = (0, u.ZP)(l.Z.IMAGE_CROPPING_MODAL), U = i.useRef({
     x: 0,
     y: 0
-  }), V = i.useRef(null), z = i.useRef(null), G = "image/gif" === t.type;
+  }), k = i.useRef(null), H = i.useRef(null), F = "image/gif" === e.type;
   i.useEffect(() => {
-    (0, h.Z)()
+    (0, d.Z)()
   }, []), i.useEffect(() => {
-    G && x && u.default.track(E.rMx.OPEN_MODAL, {
-      type: E.jXE.CROP_GIF_MODAL,
+    F && _ && o.default.track(g.rMx.OPEN_MODAL, {
+      type: g.jXE.CROP_GIF_MODAL,
       location: {
         page: L
       }
     })
-  }, [x, L, G]);
-  let F = () => {
+  }, [_, L, F]);
+  let z = () => {
       switch (M) {
         case A.pC.BANNER:
           return {
             height: A.f, width: A.L0
           };
         case A.pC.VIDEO_BACKGROUND:
-          return g.HE;
+          return E.HE;
         case A.pC.AVATAR:
         case A.pC.AVATAR_DECORATION:
           return {
-            height: E.dGM, width: E.dGM
+            height: g.dGM, width: g.dGM
           };
         case A.pC.GUILD_BANNER:
           return {
@@ -79,185 +79,185 @@ t.default = e => {
           }
       }
     },
-    H = i.useCallback((e, t, n) => {
-      O.current = (0, d.U$)(e, t, n), null != V.current && (V.current.style.transform = "translate3d(".concat(O.current.x, "px, ").concat(O.current.y, "px, 0)"))
-    }, [V]),
-    K = i.useCallback(() => {
-      if (null == V.current || w > 1) return;
+    Z = i.useCallback((t, e, n) => {
+      U.current = (0, h.U$)(t, e, n), null != k.current && (k.current.style.transform = "translate3d(".concat(U.current.x, "px, ").concat(U.current.y, "px, 0)"))
+    }, [k]),
+    Y = i.useCallback(() => {
+      if (null == k.current || O > 1) return;
       let {
-        width: e,
-        height: t
-      } = V.current.getBoundingClientRect(), {
+        width: t,
+        height: e
+      } = k.current.getBoundingClientRect(), {
         width: n,
         height: r
-      } = (0, d.Es)(M, e, t), i = (0, d.AK)(M, n, r, t);
-      D({
+      } = (0, h.Es)(M, t, e), i = (0, h.AK)(M, n, r, e);
+      S({
         width: n,
         height: r
-      }), p(i), Z((0, d.kH)(n, r, i))
-    }, [M, w]),
-    W = i.useCallback(e => {
+      }), v(i), I((0, h.kH)(n, r, i))
+    }, [M, O]),
+    J = i.useCallback(t => {
       let {
-        x: t,
+        x: e,
         y: n
-      } = O.current;
-      if (!S || e.clientX === t && e.clientY === n) return;
-      let r = e.clientX - B.x;
-      H(r, e.clientY - B.y, P)
-    }, [P, S, B, H]),
+      } = U.current;
+      if (!D || t.clientX === e && t.clientY === n) return;
+      let r = t.clientX - B.x;
+      Z(r, t.clientY - B.y, x)
+    }, [x, D, B, Z]),
+    K = () => {
+      y(!1)
+    },
     X = () => {
-      v(!1)
+      let t = z();
+      return t.width !== t.height
     },
-    Y = () => {
-      let e = F();
-      return e.width !== e.height
-    },
-    q = async () => {
-      let e;
-      if (null == V.current) return;
-      U(!0);
-      let n = V.current,
-        r = F();
-      if (G) try {
+    W = async () => {
+      let t;
+      if (null == k.current) return;
+      j(!0);
+      let n = k.current,
+        r = z();
+      if (F) try {
         let {
           result: i,
-          cancelFn: s
-        } = await (0, d.$p)(t, n, C, O.current, r);
-        z.current = s, e = await i, z.current = null
-      } catch (e) {
+          cancelFn: a
+        } = await (0, h.$p)(e, n, N, U.current, r);
+        H.current = a, t = await i, H.current = null
+      } catch (t) {
         var i;
-        throw null === (i = z.current) || void 0 === i || i.call(z), z.current = null, Error("Error cropping GIF")
-      } else e = (0, d.PT)(n, C, O.current, r);
-      await N(e, t), U(!1), I()
+        throw null === (i = H.current) || void 0 === i || i.call(H), H.current = null, Error("Error cropping GIF")
+      } else t = (0, h.PT)(n, N, U.current, r);
+      await f(t, e), j(!1), R()
     };
-  return i.useEffect(() => (window.addEventListener("mouseup", X), window.addEventListener("resize", K), () => {
-    window.removeEventListener("mouseup", X), window.removeEventListener("resize", K)
-  }), [K]), i.useEffect(() => () => {
-    null != z.current && z.current()
+  return i.useEffect(() => (window.addEventListener("mouseup", K), window.addEventListener("resize", Y), () => {
+    window.removeEventListener("mouseup", K), window.removeEventListener("resize", Y)
+  }), [Y]), i.useEffect(() => () => {
+    null != H.current && H.current()
   }, []), i.useEffect(() => {
-    if (S) return window.addEventListener("mousemove", W), () => window.removeEventListener("mousemove", W)
-  }, [W, S]), (0, r.jsx)(o.Gt, {
-    value: k,
-    children: (0, r.jsxs)(a.ModalRoot, {
-      onAnimationEnd: K,
-      transitionState: f,
-      size: a.ModalSize.MEDIUM,
-      children: [x && (0, r.jsx)(c.Z, {
+    if (D) return window.addEventListener("mousemove", J), () => window.removeEventListener("mousemove", J)
+  }, [J, D]), (0, r.jsx)(u.Gt, {
+    value: G,
+    children: (0, r.jsxs)(s.ModalRoot, {
+      onAnimationEnd: Y,
+      transitionState: w,
+      size: s.ModalSize.MEDIUM,
+      children: [_ && (0, r.jsx)(c.Z, {
         type: M,
         analyticsPage: L,
-        analyticsSection: E.jXE.CROP_GIF_MODAL,
-        isGIF: G,
+        analyticsSection: g.jXE.CROP_GIF_MODAL,
+        isGIF: F,
         banner: n
-      }), (0, r.jsx)(a.ModalHeader, {
+      }), (0, r.jsx)(s.ModalHeader, {
         separator: !1,
-        children: (0, r.jsx)(a.FormTitle, {
-          className: R.titleCase,
-          tag: a.FormTitleTags.H1,
+        children: (0, r.jsx)(s.FormTitle, {
+          className: p.titleCase,
+          tag: s.FormTitleTags.H1,
           children: m.Z.Messages.AVATAR_UPLOAD_EDIT_MEDIA
         })
-      }), (0, r.jsxs)(a.ModalContent, {
-        className: R.modalContent,
+      }), (0, r.jsxs)(s.ModalContent, {
+        className: p.modalContent,
         children: [(0, r.jsxs)("div", {
-          className: R.editingContainer,
+          className: p.editingContainer,
           children: [(0, r.jsx)("img", {
             style: {
-              opacity: null == y ? 0 : 1,
-              transform: "translate3d(".concat(O.current.x, "px, ").concat(O.current.y, "px, 0px)"),
+              opacity: null == P ? 0 : 1,
+              transform: "translate3d(".concat(U.current.x, "px, ").concat(U.current.y, "px, 0px)"),
               ...(() => {
-                if (null == y) return {};
-                let e = y.width / y.height,
-                  t = Y() && e > A.MY ? C.height / y.height : 1;
+                if (null == P) return {};
+                let t = P.width / P.height,
+                  e = X() && t > A.MY ? N.height / P.height : 1;
                 return {
-                  width: y.width * w * t,
-                  minWidth: y.width * w * t,
-                  height: y.height * w * t
+                  width: P.width * O * e,
+                  minWidth: P.width * O * e,
+                  height: P.height * O * e
                 }
               })()
             },
-            className: b ? R.imageDisabled : R.imageEnabled,
+            className: V ? p.imageDisabled : p.imageEnabled,
             src: n,
             alt: "avatar",
-            ref: V,
-            onMouseDown: e => {
-              let t = e.clientX - O.current.x;
-              T({
-                x: t,
-                y: e.clientY - O.current.y
-              }), v(!0)
+            ref: k,
+            onMouseDown: t => {
+              let e = t.clientX - U.current.x;
+              b({
+                x: e,
+                y: t.clientY - U.current.y
+              }), y(!0)
             },
             draggable: !1
           }), (0, r.jsx)("div", {
-            className: M === A.pC.AVATAR ? R.overlayAvatar : R.overlayBanner,
+            className: M === A.pC.AVATAR ? p.overlayAvatar : p.overlayBanner,
             style: {
-              opacity: null == y ? 0 : 1,
-              width: C.width,
-              height: C.height
+              opacity: null == P ? 0 : 1,
+              width: N.width,
+              height: N.height
             }
           })]
         }), (0, r.jsxs)("div", {
-          className: R.sliderContainer,
-          children: [(0, r.jsx)(a.ImageIcon, {
+          className: p.sliderContainer,
+          children: [(0, r.jsx)(s.ImageIcon, {
             size: "md",
             color: "currentColor",
-            className: R.icon
-          }), (0, r.jsx)(a.Slider, {
+            className: p.icon
+          }), (0, r.jsx)(s.Slider, {
             initialValue: 1,
             minValue: 1,
             maxValue: 2,
             keyboardStep: .025,
-            asValueChanges: e => {
-              if (null == y) return;
+            asValueChanges: t => {
+              if (null == P) return;
               let {
-                width: t,
+                width: e,
                 height: n
-              } = y, r = (0, d.kH)(t * e, n * e, C), {
+              } = P, r = (0, h.kH)(e * t, n * t, N), {
                 x: i,
-                y: a
-              } = O.current;
-              (!(0, s.inRange)(i, r.right, r.left) || !(0, s.inRange)(a, r.top, r.bottom)) && H(i, a, r), j(e), Z(r)
+                y: s
+              } = U.current;
+              (!(0, a.inRange)(i, r.right, r.left) || !(0, a.inRange)(s, r.top, r.bottom)) && Z(i, s, r), T(t), I(r)
             },
-            disabled: b,
+            disabled: V,
             equidistant: !0,
             hideBubble: !0,
             "aria-label": m.Z.Messages.FORM_LABEL_AVATAR_SIZE
-          }), (0, r.jsx)(a.ImageIcon, {
+          }), (0, r.jsx)(s.ImageIcon, {
             size: "custom",
             color: "currentColor",
-            className: R.icon,
+            className: p.icon,
             width: 48,
             height: 48
           })]
         })]
-      }), (0, r.jsxs)(a.ModalFooter, {
-        className: R.modalFooter,
-        children: [_ ? (0, r.jsx)(a.Button, {
-          className: R.cancelButton,
-          look: a.Button.Looks.LINK,
-          color: a.Button.Colors.PRIMARY,
-          size: a.ButtonSizes.SMALL,
+      }), (0, r.jsxs)(s.ModalFooter, {
+        className: p.modalFooter,
+        children: [C ? (0, r.jsx)(s.Button, {
+          className: p.cancelButton,
+          look: s.Button.Looks.LINK,
+          color: s.Button.Colors.PRIMARY,
+          size: s.ButtonSizes.SMALL,
           onClick: () => {
-            _ && (N(n, t), I())
+            C && (f(n, e), R())
           },
           children: m.Z.Messages.AVATAR_UPLOAD_SKIP
         }) : null, (0, r.jsxs)("div", {
-          className: R.buttonsRight,
-          children: [(0, r.jsx)(a.Button, {
-            className: R.cancelButton,
-            look: a.Button.Looks.LINK,
-            color: a.Button.Colors.PRIMARY,
-            size: a.ButtonSizes.SMALL,
+          className: p.buttonsRight,
+          children: [(0, r.jsx)(s.Button, {
+            className: p.cancelButton,
+            look: s.Button.Looks.LINK,
+            color: s.Button.Colors.PRIMARY,
+            size: s.ButtonSizes.SMALL,
             onClick: () => {
-              if (null != z.current) {
-                z.current(), z.current = null, U(!1);
+              if (null != H.current) {
+                H.current(), H.current = null, j(!1);
                 return
               }
-              I()
+              R()
             },
             children: m.Z.Messages.AVATAR_UPLOAD_CANCEL
-          }), (0, r.jsx)(a.Button, {
-            submitting: b,
-            size: a.ButtonSizes.SMALL,
-            onClick: q,
+          }), (0, r.jsx)(s.Button, {
+            submitting: V,
+            size: s.ButtonSizes.SMALL,
+            onClick: W,
             children: m.Z.Messages.AVATAR_UPLOAD_APPLY
           })]
         })]

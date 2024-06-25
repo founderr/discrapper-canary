@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(403404),
   h = n(906732),
   m = n(605236),
-  p = n(706140),
-  E = n(243778),
+  E = n(706140),
+  p = n(243778),
   g = n(488131),
   f = n(375954),
   C = n(626135),
@@ -52,12 +52,12 @@ function L() {
   let e = (0, a.e7)([f.Z], () => f.Z.hasCurrentUserSentMessageSinceAppStart()),
     t = [];
   e && t.push(r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
-  let [n] = (0, p.c)(t);
+  let [n] = (0, E.c)(t);
   return i.useEffect(() => () => {
     n === r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, m.EW)(r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
       dismissAction: S.L.TAKE_ACTION
     })
-  }, [n]), (0, l.jsx)(E.Z, {
+  }, [n]), (0, l.jsx)(p.Z, {
     contentTypes: t,
     children: e => {
       let {
@@ -76,8 +76,8 @@ function O(e) {
     channel: t,
     options: a,
     onFileUpload: c,
-    onClose: p,
-    onSelect: E,
+    onClose: E,
+    onSelect: p,
     draftType: f,
     editorTextContent: O,
     setValue: P,
@@ -143,7 +143,7 @@ function O(e) {
     })
   }
 
-  function B() {
+  function G() {
     let e = O,
       n = "txt",
       l = "",
@@ -155,9 +155,9 @@ function O(e) {
     })
   }
   return (0, l.jsx)(o.Menu, {
-    onSelect: E,
+    onSelect: p,
     navId: "channel-attach",
-    onClose: p,
+    onClose: E,
     "aria-label": A.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL,
     className: M.menu,
     children: a.map(function(e) {
@@ -188,7 +188,7 @@ function O(e) {
           return (0, l.jsx)(o.MenuItem, {
             id: "upload-text-as-file",
             label: i,
-            action: B
+            action: G
           }, "upload-text-as-file");
         case N.r.CLIPS:
           return (0, l.jsx)(o.MenuItem, {

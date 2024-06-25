@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(484459),
   h = n(103575),
   m = n(409216),
-  p = n(768581),
-  E = n(887853);
+  E = n(768581),
+  p = n(887853);
 
 function g(e) {
   let {
@@ -26,7 +26,7 @@ function g(e) {
     reducedMotion: f
   } = i.useContext(r.AccessibilityPreferencesContext), C = (0, c.Z)({
     userId: s.id
-  }), _ = null != s.member ? (0, p.CA)(s.member) : null, I = e => {
+  }), _ = null != s.member ? (0, E.CA)(s.member) : null, I = e => {
     (0, o.jW)(e, async () => {
       let {
         default: e
@@ -71,7 +71,7 @@ function g(e) {
         children: (0, l.jsx)(r.Avatar, {
           src: null != _ ? _ : s.user.getAvatarURL(t.guild_id, 24),
           size: r.AvatarSizes.SIZE_24,
-          className: a()(E.avatar, m),
+          className: a()(p.avatar, m),
           "aria-label": s.userNick,
           isSpeaking: C && !f.enabled
         })
@@ -86,7 +86,7 @@ function f(e) {
     channel: n
   } = e;
   return (0, l.jsx)(m.Z, {
-    className: E.summary,
+    className: p.summary,
     guildId: n.guild_id,
     users: t,
     max: 10,
@@ -96,7 +96,7 @@ function f(e) {
       className: t
     }, i),
     renderMoreUsers: (e, t, n) => (0, l.jsx)("div", {
-      className: a()(E.speakers, t),
+      className: a()(p.speakers, t),
       children: e
     }, n)
   })

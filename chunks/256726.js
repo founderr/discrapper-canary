@@ -1,6 +1,6 @@
 n.d(t, {
   CR: function() {
-    return p
+    return E
   },
   UU: function() {
     return h
@@ -48,7 +48,7 @@ let d = e => {
       }
     }
   },
-  p = async e => {
+  E = async e => {
     let {
       user: t,
       channel: n,
@@ -56,13 +56,13 @@ let d = e => {
       artist: r,
       description: d,
       colors: h,
-      badges: p
-    } = e, E = m({
+      badges: E
+    } = e, p = m({
       avatarSrc: t.getAvatarURL(n.guild_id, 128),
       mediaImageSrc: l
     }), g = r.replaceAll(/[^a-zA-Z0-9 ]/g, "").replaceAll(" ", "-");
     return await (0, a.f)({
-      assetsToLoad: E,
+      assetsToLoad: p,
       drawImage: e => {
         (function(e, t) {
           let n = t.map((e, t) => ({
@@ -136,7 +136,7 @@ let d = e => {
           }, !0)
         }(e, d), (0, o.J)({
           canvas: e,
-          badges: p,
+          badges: E,
           startPosition: c.Iq,
           maxWidth: c.kC
         })

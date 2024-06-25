@@ -6,8 +6,8 @@ var l, i, s, a, r = n(442837),
   d = n(5192),
   h = n(594174),
   m = n(979651),
-  p = n(938475),
-  E = n(981631),
+  E = n(938475),
+  p = n(981631),
   g = n(354459);
 let f = [],
   C = [],
@@ -52,7 +52,7 @@ a = "RTCConnectionDesyncStore", (s = "displayName") in(i = Z) ? Object.definePro
       state: t,
       channelId: n
     } = e;
-    if (t !== E.hes.DISCONNECTED && T === n) return !1;
+    if (t !== p.hes.DISCONNECTED && T === n) return !1;
     T = n, I.clear(), x.clear()
   },
   VOICE_STATE_UPDATES: function(e) {
@@ -82,7 +82,7 @@ a = "RTCConnectionDesyncStore", (s = "displayName") in(i = Z) ? Object.definePro
           userId: t,
           channelId: l
         }),
-        r = (0, p.PH)(a, null != n ? n : E.ME, t);
+        r = (0, E.PH)(a, null != n ? n : p.ME, t);
       I.set(t, r);
       let o = {
         type: g.fO.USER,

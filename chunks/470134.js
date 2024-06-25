@@ -37,11 +37,11 @@ function d(e) {
 
 function h(e) {
   let [t, n] = i.useState(), [s, a] = i.useState(), [r, u] = i.useState(!1), [h, m] = i.useState(!1), {
-    enabled: p
+    enabled: E
   } = (0, o.s1)(e);
   return i.useEffect(() => {
-    p && null != t && null != s ? u(t < s) : u(!1)
-  }, [p, t, s]), {
+    E && null != t && null != s ? u(t < s) : u(!1)
+  }, [E, t, s]), {
     horizontalScrollNotice: i.useMemo(() => r ? (0, l.jsx)(d, {
       text: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_LISTINGS_SCROLLABLE_NOTICE,
       hasScrolled: h

@@ -5,8 +5,8 @@ t.d(n, {
 }), t(653041);
 var i = t(735250);
 t(470079);
-var s = t(442837),
-  l = t(481060),
+var l = t(442837),
+  s = t(481060),
   a = t(749210),
   r = t(240872),
   o = t(605436),
@@ -18,7 +18,7 @@ var s = t(442837),
 
 function E(e, n) {
   var t;
-  let E = (0, s.e7)([u.Z], () => {
+  let E = (0, l.e7)([u.Z], () => {
       let t = u.Z.getHighestRole(e);
       return !u.Z.isRoleHigher(e, t, n)
     }),
@@ -31,14 +31,14 @@ function E(e, n) {
   });
   null != _ && T.push(_);
   let h = (null === (t = n.tags) || void 0 === t ? void 0 : t.guild_connections) === null,
-    O = n.managed && !h,
-    g = null != n && (0, o.pM)(e.id, n.id);
-  return !E && !O && !g && T.push((0, i.jsx)(l.MenuGroup, {
-    children: (0, i.jsx)(l.MenuItem, {
+    g = n.managed && !h,
+    O = null != n && (0, o.pM)(e.id, n.id);
+  return !E && !g && !O && T.push((0, i.jsx)(s.MenuGroup, {
+    children: (0, i.jsx)(s.MenuItem, {
       id: "delete-role",
       label: N.Z.Messages.DELETE,
       color: "danger",
-      icon: l.TrashIcon,
+      icon: s.TrashIcon,
       action: () => {
         r.Z.show({
           title: N.Z.Messages.SETTINGS_ROLES_DELETE_TITLE,

@@ -10,8 +10,8 @@ var l = n(735250),
   d = n(511010),
   h = n(981631),
   m = n(689938),
-  p = n(429759),
-  E = n(105461);
+  E = n(429759),
+  p = n(105461);
 
 function g(e) {
   let {
@@ -26,20 +26,20 @@ function g(e) {
     role: "group",
     childrenMessageContent: (0, l.jsx)(c.Z, {
       compact: s,
-      className: p.blockedSystemMessage,
+      className: E.blockedSystemMessage,
       iconNode: (0, l.jsx)(r.CloseSmallIcon, {
         size: "md",
         color: "currentColor",
-        className: p.blockedIcon
+        className: E.blockedIcon
       }),
       children: (0, l.jsxs)("div", {
-        className: p.blockedMessageText,
+        className: E.blockedMessageText,
         children: [a.format({
           count: i
         }), " —", " ", (0, l.jsx)(r.Clickable, {
           tag: "span",
           onClick: n,
-          className: p.blockedAction,
+          className: E.blockedAction,
           children: t ? m.Z.Messages.BLOCKED_MESSAGES_HIDE.format({
             count: i
           }) : m.Z.Messages.BLOCKED_MESSAGES_SHOW.format({
@@ -63,8 +63,8 @@ t.Z = i.memo(function(e) {
   } = n, [f, C] = i.useState(m), _ = i.useCallback(() => C(e => !e), []), I = n.hasUnread ? n.content.length - 1 : n.content.length;
   return (0, l.jsxs)("div", {
     className: a()({
-      [E.groupStart]: !0,
-      [p.expanded]: f
+      [p.groupStart]: !0,
+      [E.expanded]: f
     }),
     children: [n.hasUnread && (!f || (null === (t = n.content[0]) || void 0 === t ? void 0 : t.type) === h.ys_.DIVIDER) ? (0, l.jsx)(d.Z, {
       isUnread: !0,
@@ -88,7 +88,7 @@ t.Z = i.memo(function(e) {
       if (e.type === h.ys_.MESSAGE || e.type === h.ys_.THREAD_STARTER_MESSAGE) {
         let t = e.type === h.ys_.THREAD_STARTER_MESSAGE ? u.Ru : u.ZP;
         return (0, l.jsx)(t, {
-          className: p.__invalid_blocked,
+          className: E.__invalid_blocked,
           compact: r,
           channel: s,
           message: e.content,

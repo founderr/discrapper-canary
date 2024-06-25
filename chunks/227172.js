@@ -9,8 +9,8 @@ var l = n(735250),
   d = n(429589),
   h = n(757182),
   m = n(706454),
-  p = n(374129),
-  E = n(639351),
+  E = n(374129),
+  p = n(639351),
   g = n(823379),
   f = n(192918),
   C = n(22211),
@@ -31,17 +31,17 @@ let R = {
   [s.z.NINTENDO]: null,
   [s.z.IOS]: null,
   [s.z.ANDROID]: null,
-  [s.z.XBOX]: E.Z,
-  [s.z.PLAYSTATION]: p.Z
+  [s.z.XBOX]: p.Z,
+  [s.z.PLAYSTATION]: E.Z
 };
 t.Z = e => {
   let {
     channel: t,
     entry: n,
     requestId: s,
-    closePopout: p
+    closePopout: E
   } = e, {
-    iconUrl: E,
+    iconUrl: p,
     iconTitle: j,
     user: L,
     details: O,
@@ -50,32 +50,32 @@ t.Z = e => {
   } = (0, v.F)(n), {
     primaryColor: b,
     secondaryColor: D
-  } = (0, T.Z)(E), U = (0, a.e7)([m.default], () => m.default.locale), {
+  } = (0, T.Z)(p), U = (0, a.e7)([m.default], () => m.default.locale), {
     streamPreviewUrl: k,
     stream: w
   } = (0, C.Z)(n), {
     displayParticipants: H,
-    participant1: B,
-    participant2: G,
+    participant1: G,
+    participant2: B,
     numOtherParticipants: V
   } = (0, f.Z)(n, 3), F = (0, r.useToken)(r.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY), z = i.useCallback(e => {
-    if (null == E || null == t || null == L) return;
+    if (null == p || null == t || null == L) return;
     let l = V > 0 ? (0, x.VY)({
       entry: n,
       channel: t,
-      users: [B, G],
+      users: [G, B],
       countOthers: V
     }) : (0, x.HV)(n, t, L);
     return (0, I.SO)({
       entry: n,
-      applicationImageSrc: E,
+      applicationImageSrc: p,
       avatarSrcs: H.map(e => e.getAvatarURL(t.guild_id, 128)),
       description: l,
       timestamp: (0, _.yh)(n, U),
       colors: [b, D],
       channelId: e
     })
-  }, [E, t, H, n, U, V, B, G, b, D, L]);
+  }, [p, t, H, n, U, V, G, B, b, D, L]);
   if (null == L) return null;
   let W = null != n.extra.platform ? R[n.extra.platform] : null,
     Y = (0, l.jsx)(Z.Gk, {
@@ -85,7 +85,7 @@ t.Z = e => {
       }, t))
     }),
     K = null == k ? (0, l.jsx)(S.wG, {
-      thumbnailSrc: E,
+      thumbnailSrc: p,
       thumbnailTitle: j,
       channel: t,
       headerIcons: null != W ? (0, l.jsx)(W, {
@@ -125,7 +125,7 @@ t.Z = e => {
   return (0, l.jsxs)(S.yR, {
     children: [K, (0, l.jsx)(S.St, {
       children: (0, l.jsx)(S.WT, {
-        closePopout: p,
+        closePopout: E,
         user: L,
         channel: t,
         generateReactionImage: z,

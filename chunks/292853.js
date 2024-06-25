@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return p
+    return E
   }
 });
 var l = n(735250),
@@ -15,7 +15,7 @@ var l = n(735250),
   h = n(689938),
   m = n(399636);
 
-function p(e) {
+function E(e) {
   let {
     channel: t,
     narrow: n

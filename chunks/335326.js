@@ -3,7 +3,7 @@ n.d(t, {
     return g
   },
   td: function() {
-    return E
+    return p
   }
 });
 var l = n(735250),
@@ -17,8 +17,8 @@ var l = n(735250),
   d = n(43205),
   h = n(701488),
   m = n(689938),
-  p = n(41899);
-let E = [c.Yl, c.Rg],
+  E = n(41899);
+let p = [c.Yl, c.Rg],
   g = e => {
     var t;
     let n = (0, a.q)(e.extra.application_id),
@@ -56,14 +56,14 @@ t.ZP = i.memo(e => {
         })
       }), (0, l.jsx)(c.Gk, {
         location: c.Gt.CARD,
-        children: E.map((e, n) => (0, l.jsx)(e, {
+        children: p.map((e, n) => (0, l.jsx)(e, {
           entry: t
         }, n))
       })]
     }), (0, l.jsx)(d.f, {
       src: s,
       size: 48,
-      className: p.thumbnail,
+      className: E.thumbnail,
       alt: t.extra.media_title
     })]
   })

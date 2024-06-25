@@ -4,9 +4,9 @@ s.d(n, {
   }
 });
 var l = s(735250),
-  t = s(470079),
-  i = s(512722),
-  r = s.n(i),
+  i = s(470079),
+  t = s(512722),
+  r = s.n(t),
   a = s(742280),
   c = s(399606),
   o = s(481060),
@@ -40,12 +40,12 @@ function y(e) {
     skuPricePreview: s
   } = e;
   r()(null != s.amount, "SKU must have a price set.");
-  let t = s.amount - s.tax;
+  let i = s.amount - s.tax;
   return !s.tax_inclusive && s.tax > 0 ? (0, l.jsxs)(E.PO, {
     className: j.invoice,
     children: [(0, l.jsx)(E.R$, {
       label: n.name,
-      value: (0, f.T4)(t, s.currency),
+      value: (0, f.T4)(i, s.currency),
       className: j.subscriptionCostRow
     }), (0, l.jsx)(E.R$, {
       label: L.Z.Messages.PURCHASE_REVIEW_TAX_LABEL,
@@ -70,9 +70,9 @@ function Z(e) {
   let {
     application: n,
     sku: s,
-    isEmbeddedIAP: t
+    isEmbeddedIAP: i
   } = e;
-  return !0 !== t ? null : (0, l.jsxs)("div", {
+  return !0 !== i ? null : (0, l.jsxs)("div", {
     className: j.skuHeading,
     children: [(0, l.jsx)(P.Z, {
       game: n
@@ -88,7 +88,7 @@ function b(e) {
   let {
     hasLegalTermsFlash: n,
     legalTermsNodeRef: s,
-    onPaymentSourceChange: i,
+    onPaymentSourceChange: t,
     handlePaymentSourceAdd: P
   } = e, {
     application: f,
@@ -117,7 +117,7 @@ function b(e) {
     ee = a.M.EEA_COUNTRIES.has(S.Z.ipCountryCodeWithFallback),
     en = b === C.A.PURCHASING || b === C.A.COMPLETED,
     es = null != G ? D[G].type : null,
-    el = t.useMemo(() => null != q ? (0, l.jsx)(y, {
+    el = i.useMemo(() => null != q ? (0, l.jsx)(y, {
       sku: z,
       skuPricePreview: q
     }) : null == W ? (0, l.jsx)(o.Spinner, {
@@ -158,7 +158,7 @@ function b(e) {
       }), (0, l.jsx)(_.Z, {
         paymentSources: Object.values(D),
         selectedPaymentSourceId: G,
-        onChange: i,
+        onChange: t,
         onPaymentSourceAdd: P,
         hidePersonalInformation: $
       })]

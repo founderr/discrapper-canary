@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return p
+    return E
   }
 });
 var l = n(735250),
@@ -15,22 +15,22 @@ var l = n(735250),
   h = n(689938),
   m = n(332513);
 
-function p(e) {
+function E(e) {
   let {
     userId: t,
     guildId: n
-  } = e, p = (0, s.e7)([r.ZP], () => r.ZP.getGuildSidebarState(n), [n]), {
-    messagesCount: E,
+  } = e, E = (0, s.e7)([r.ZP], () => r.ZP.getGuildSidebarState(n), [n]), {
+    messagesCount: p,
     linksCount: g,
     mediaCount: f
-  } = (0, c.P2)(t, n), C = new Intl.NumberFormat(h.Z.getLocale()).format(E), _ = new Intl.NumberFormat(h.Z.getLocale()).format(g), I = new Intl.NumberFormat(h.Z.getLocale()).format(f), x = i.useCallback(async e => {
-    if (null == p) return;
+  } = (0, c.P2)(t, n), C = new Intl.NumberFormat(h.Z.getLocale()).format(p), _ = new Intl.NumberFormat(h.Z.getLocale()).format(g), I = new Intl.NumberFormat(h.Z.getLocale()).format(f), x = i.useCallback(async e => {
+    if (null == E) return;
     let l = (0, c.Ow)(t, e);
-    await (0, o.r)(n, t, p.baseChannelId, {
+    await (0, o.r)(n, t, E.baseChannelId, {
       modViewPanel: d.k.MESSAGE_HISTORY,
       additionalSearchQuery: l
     })
-  }, [n, p, t]);
+  }, [n, E, t]);
   return (0, l.jsx)(a.FormItem, {
     title: h.Z.Messages.GUILD_MEMBER_MOD_VIEW_GUILD_MESSAGE_ACTIVITY_TITLE,
     titleClassName: m.infoTitle,
@@ -47,7 +47,7 @@ function p(e) {
           color: "text-normal",
           children: h.Z.Messages.MESSAGES
         }),
-        description: E === c.II ? (0, l.jsx)(a.Spinner, {
+        description: p === c.II ? (0, l.jsx)(a.Spinner, {
           type: a.SpinnerTypes.SPINNING_CIRCLE,
           className: m.loadingSpinner
         }) : (0, l.jsx)(a.Text, {
@@ -55,7 +55,7 @@ function p(e) {
           color: "interactive-normal",
           children: C
         }),
-        onNavigate: E > 0 ? () => x(c.mw.MESSAGES) : void 0
+        onNavigate: p > 0 ? () => x(c.mw.MESSAGES) : void 0
       }), (0, l.jsx)(u._2, {
         icon: (0, l.jsx)(a.LinkIcon, {
           size: "custom",

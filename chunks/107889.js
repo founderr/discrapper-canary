@@ -25,8 +25,8 @@ var n = s(735250),
   N = s(806926),
   g = s(740021),
   T = s(228168),
-  C = s(981631),
-  R = s(689938),
+  R = s(981631),
+  C = s(689938),
   A = s(327570);
 
 function M(e) {
@@ -44,7 +44,7 @@ function M(e) {
     onClose: D,
     showGuildProfile: F = !0,
     sourceAnalyticsLocations: b = []
-  } = e, B = M === C.ME ? void 0 : M, {
+  } = e, B = M === R.ME ? void 0 : M, {
     analyticsLocations: G
   } = (0, d.ZP)([...b, a.Z.SIMPLIFIED_PROFILE_MODAL]), {
     originalFriendingEnabled: k
@@ -66,18 +66,18 @@ function M(e) {
       let {
         type: i
       } = e;
-      return i !== C.IIU.CUSTOM_STATUS
+      return i !== R.IIU.CUSTOM_STATUS
     }),
     customStatusActivity: u.Z.findActivity(i.id, e => {
       let {
         type: i
       } = e;
-      return i === C.IIU.CUSTOM_STATUS
+      return i === R.IIU.CUSTOM_STATUS
     })
   })), z = l.createRef(), K = (0, r.Z)(z), Q = () => (null == V ? void 0 : V.guildId) == null ? null : (null == Y ? void 0 : Y.guildId) != null ? (0, n.jsx)(o.MenuItem, {
     id: "view-main-profile",
-    label: R.Z.Messages.VIEW_MAIN_PROFILE,
-    subtext: R.Z.Messages.AKA_DISPLAY_NAME.format({
+    label: C.Z.Messages.VIEW_MAIN_PROFILE,
+    subtext: C.Z.Messages.AKA_DISPLAY_NAME.format({
       displayName: I.ZP.getName(void 0, void 0, i)
     }),
     action: () => {
@@ -97,8 +97,8 @@ function M(e) {
     }
   }) : (0, n.jsx)(o.MenuItem, {
     id: "view-server-profile",
-    label: R.Z.Messages.VIEW_SERVER_PROFILE,
-    subtext: R.Z.Messages.AKA_DISPLAY_NAME.format({
+    label: C.Z.Messages.VIEW_SERVER_PROFILE,
+    subtext: C.Z.Messages.AKA_DISPLAY_NAME.format({
       displayName: I.ZP.getName(B, p, i)
     }),
     action: () => {
@@ -131,7 +131,7 @@ function M(e) {
         transitionState: y,
         className: A.root,
         hideShadow: !0,
-        "aria-label": R.Z.Messages.USER_PROFILE_MODAL,
+        "aria-label": C.Z.Messages.USER_PROFILE_MODAL,
         children: [(0, n.jsxs)(_.Z, {
           user: i,
           displayProfile: Y,

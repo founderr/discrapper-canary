@@ -377,7 +377,7 @@ class ep extends i.PureComponent {
       null != t && (0, h.jW)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("33053"), n.e("19464"), n.e("7654"), n.e("44156"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("33213")]).then(n.bind(n, 545135));
+        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("33053"), n.e("50654"), n.e("7654"), n.e("44156"), n.e("70161"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("33213")]).then(n.bind(n, 545135));
         return n => (0, s.jsx)(e, {
           ...n,
           guild: t

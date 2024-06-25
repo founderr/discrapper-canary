@@ -17,8 +17,8 @@ var l = n(735250),
   d = n(239091),
   h = n(607070),
   m = n(439170),
-  p = n(594174),
-  E = n(687694),
+  E = n(594174),
+  p = n(687694),
   g = n(69259),
   f = n(91140),
   C = n(227172),
@@ -117,14 +117,14 @@ t.ZP = i.memo(e => {
   let {
     index: s,
     ...a
-  } = e, [o, m] = i.useState("default"), f = (0, r.JA)("".concat(s)), C = null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(), _ = {
+  } = e, [o, m] = i.useState("default"), f = (0, r.JA)("".concat(s)), C = null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(), _ = {
     entry: a.entry,
     channelId: a.channel.id,
     guildId: a.channel.guild_id,
     requestId: a.requestId
   }, {
     openOnHover: I
-  } = (0, E.C)({
+  } = (0, p.C)({
     location: "MemberListContentRow"
   }), x = i.useRef(!1), [T, N] = i.useState(!1), [Z, S] = i.useState(!1), [v, M] = i.useState(!1), R = (0, c.e7)([h.Z], () => h.Z.keyboardModeEnabled);
   i.useEffect(() => {

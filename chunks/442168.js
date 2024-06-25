@@ -14,10 +14,10 @@ var l = n(735250),
   d = n(569545),
   h = n(153850),
   m = n(385608);
-let p = {
+let E = {
     visibility: "hidden"
   },
-  E = {
+  p = {
     precision: 1e-4,
     duration: 300
   },
@@ -44,7 +44,7 @@ function C(e) {
   let S = () => {
       var e;
       let t = null === (e = _.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
-      return null == t || n ? p : {
+      return null == t || n ? E : {
         width: t.width,
         height: t.height,
         top: t.top,
@@ -53,7 +53,7 @@ function C(e) {
     },
     v = e => {
       let t = null == I ? void 0 : I.getBoundingClientRect();
-      if (Z.current = t, e.timestamp !== T || null == t || n) return p;
+      if (Z.current = t, e.timestamp !== T || null == t || n) return E;
       let {
         top: l,
         left: i
@@ -75,7 +75,7 @@ function C(e) {
       enter: {
         opacity: 0
       },
-      config: E
+      config: p
     }),
     R = (0, i.useRef)(null),
     j = (0, s.useTransition)(N, {

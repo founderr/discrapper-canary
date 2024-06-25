@@ -11,24 +11,24 @@ var a = t(442837),
   o = t(257559),
   u = t(496675),
   s = t(151007),
-  d = t(981631),
-  c = t(689938);
+  c = t(981631),
+  d = t(689938);
 
 function E(e, n) {
-  let t = (0, a.e7)([u.Z], () => u.Z.can(d.Plq.MANAGE_MESSAGES, n), [n]);
-  return e.state !== d.yb.SEND_FAILED && (0, s.Z)(e, n, t) ? !1 === e.pinned ? (0, i.jsx)(r.MenuItem, {
+  let t = (0, a.e7)([u.Z], () => u.Z.can(c.Plq.MANAGE_MESSAGES, n), [n]);
+  return e.state !== c.yb.SEND_FAILED && (0, s.Z)(e, n, t) ? !1 === e.pinned ? (0, i.jsx)(r.MenuItem, {
     id: "pin",
     action: function(t) {
       t.shiftKey ? l.Z.pinMessage(n, e.id) : o.Z.confirmPin(n, e)
     },
-    label: c.Z.Messages.PIN_MESSAGE,
+    label: d.Z.Messages.PIN_MESSAGE,
     icon: r.PinIcon
   }) : (0, i.jsx)(r.MenuItem, {
     id: "unpin",
     action: function(t) {
       t.shiftKey ? l.Z.unpinMessage(n, e.id) : o.Z.confirmUnpin(n, e)
     },
-    label: c.Z.Messages.UNPIN_MESSAGE,
+    label: d.Z.Messages.UNPIN_MESSAGE,
     icon: r.PinIcon
   }) : null
 }

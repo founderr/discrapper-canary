@@ -18,17 +18,17 @@ let c = i.memo(function(e) {
     interactionUsernameProfile: d,
     interactionAvatarProfile: h,
     interactionData: m,
-    setPopout: p
-  } = e, E = (0, s.e7)([a.Z], () => a.Z.isBlockedForMessage(n), [n]), g = (0, o.wq)(null === (t = n.interaction) || void 0 === t ? void 0 : t.user.id, c.id), f = (0, o.Nk)(n.interaction, c, d, p), C = (0, o.NU)(h, p), _ = (0, o.Xn)(m, p), I = i.useCallback(() => p({
+    setPopout: E
+  } = e, p = (0, s.e7)([a.Z], () => a.Z.isBlockedForMessage(n), [n]), g = (0, o.wq)(null === (t = n.interaction) || void 0 === t ? void 0 : t.user.id, c.id), f = (0, o.Nk)(n.interaction, c, d, E), C = (0, o.NU)(h, E), _ = (0, o.Xn)(m, E), I = i.useCallback(() => E({
     interactionUsernameProfile: !1,
     interactionAvatarProfile: !1,
     interactionData: !1
-  }), [p]);
+  }), [E]);
   return (0, l.jsx)(r.Z, {
     message: n,
     channel: c,
     compact: u,
-    isInteractionUserBlocked: E,
+    isInteractionUserBlocked: p,
     showAvatarPopout: h,
     showUsernamePopout: d,
     showDataPopout: m,

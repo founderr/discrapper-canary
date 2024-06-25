@@ -17,8 +17,8 @@ var l = n(735250),
   d = n(570140),
   h = n(475179),
   m = n(904245),
-  p = n(372900),
-  E = n(905405),
+  E = n(372900),
+  p = n(905405),
   g = n(937889),
   f = n(739566),
   C = n(378233),
@@ -39,7 +39,7 @@ function L(e) {
   var t;
   let {
     message: n
-  } = e, s = (0, c.e7)([x.Z], () => x.Z.isBlockedForMessage(n)), r = (0, f.Uj)(n), o = i.useContext(p.Z), [d, I] = i.useState(!1), Z = (0, E.p)(), S = i.useCallback(e => {
+  } = e, s = (0, c.e7)([x.Z], () => x.Z.isBlockedForMessage(n)), r = (0, f.Uj)(n), o = i.useContext(E.Z), [d, I] = i.useState(!1), Z = (0, p.p)(), S = i.useCallback(e => {
     if ("A" !== e.target.nodeName) h.Z.updateChatOpen(n.channel_id, !0), m.Z.jumpToMessage({
       channelId: n.channel_id,
       messageId: n.id,
@@ -105,7 +105,7 @@ function O(e) {
       isFrozen: l,
       count: s,
       lingerMs: a
-    } = e, [r, o] = i.useState([]), [u, h] = i.useState(!1), m = i.useRef(null), p = i.useRef(), E = i.useCallback(() => {
+    } = e, [r, o] = i.useState([]), [u, h] = i.useState(!1), m = i.useRef(null), E = i.useRef(), p = i.useCallback(() => {
       o([]), h(!0)
     }, []);
     i.useEffect(() => {
@@ -114,13 +114,13 @@ function O(e) {
           channelId: t,
           message: l
         } = e;
-        if (t === n && l.type !== A.uaV.STAGE_START && l.type !== A.uaV.STAGE_END && l.type !== A.uaV.STAGE_TOPIC && l.type !== A.uaV.STAGE_SPEAKER && l.type !== A.uaV.STAGE_RAISE_HAND) clearTimeout(p.current), p.current = setTimeout(E, a), o(e => [...e, l.id])
+        if (t === n && l.type !== A.uaV.STAGE_START && l.type !== A.uaV.STAGE_END && l.type !== A.uaV.STAGE_TOPIC && l.type !== A.uaV.STAGE_SPEAKER && l.type !== A.uaV.STAGE_RAISE_HAND) clearTimeout(E.current), E.current = setTimeout(p, a), o(e => [...e, l.id])
       }
       return d.Z.subscribe("MESSAGE_CREATE", e), () => {
         d.Z.unsubscribe("MESSAGE_CREATE", e)
       }
-    }, [n, E, s, a]), i.useEffect(() => () => {
-      clearTimeout(p.current)
+    }, [n, p, s, a]), i.useEffect(() => () => {
+      clearTimeout(E.current)
     }, []), i.useEffect(() => {
       r.length > 3 && o(e => {
         let t = e.length - 3;
@@ -137,22 +137,22 @@ function O(e) {
     isFrozen: s,
     count: 3,
     lingerMs: j
-  }), p = i.useRef({}), [E, g] = i.useState({}), f = i.useCallback((e, t) => {
-    null == t ? delete p.current[e] : p.current[e] = t
+  }), E = i.useRef({}), [p, g] = i.useState({}), f = i.useCallback((e, t) => {
+    null == t ? delete E.current[e] : E.current[e] = t
   }, []);
   i.useLayoutEffect(() => {
     let e = {},
       t = 0;
     for (let l of m) {
       var n;
-      let i = null !== (n = p.current[l.id]) && void 0 !== n ? n : 0;
+      let i = null !== (n = E.current[l.id]) && void 0 !== n ? n : 0;
       e[l.id] = t, t += i + 8
-    }!(0, r.isEqual)(e, E) && g(e)
+    }!(0, r.isEqual)(e, p) && g(e)
   }, [m]);
   let C = m.map(e => ({
       message: e,
-      height: p.current[e.id],
-      y: E[e.id]
+      height: E.current[e.id],
+      y: p[e.id]
     })),
     _ = (0, o.useTransition)(C, {
       keys: e => e.message.id,

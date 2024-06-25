@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(127255),
   h = n(5200),
   m = n(403404),
-  p = n(100527),
-  E = n(906732),
+  E = n(100527),
+  p = n(906732),
   g = n(605236),
   f = n(448239),
   C = n(626135),
@@ -65,7 +65,7 @@ function A(e) {
     handleClose: i
   } = e, {
     analyticsLocations: s
-  } = (0, E.ZP)(p.Z.VC_TILE_ACTIVITY_SHELF_BUTTON), r = (0, u.O)(), d = () => {
+  } = (0, p.ZP)(E.Z.VC_TILE_ACTIVITY_SHELF_BUTTON), r = (0, u.O)(), d = () => {
     (0, m.Z)({
       channel: t,
       guildId: t.guild_id,
@@ -74,7 +74,7 @@ function A(e) {
       analyticsLocations: s
     })
   };
-  return (0, l.jsx)(E.Gt, {
+  return (0, l.jsx)(p.Gt, {
     value: s,
     children: (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(c.Tooltip, {
@@ -134,8 +134,8 @@ function M(e) {
   let o = (0, u.O)(),
     {
       analyticsLocations: d
-    } = (0, E.ZP)(p.Z.VC_TILE_ACTIVITY_INVITE);
-  return (0, l.jsx)(E.Gt, {
+    } = (0, p.ZP)(E.Z.VC_TILE_ACTIVITY_INVITE);
+  return (0, l.jsx)(p.Gt, {
     value: d,
     children: (0, l.jsxs)(I.Z, {
       className: Z.root,
@@ -239,8 +239,8 @@ function j(e) {
     }),
     {
       analyticsLocations: m
-    } = (0, E.ZP)(p.Z.VC_TILE_ACTIVITY_SUGGESTION);
-  return (0, l.jsx)(E.Gt, {
+    } = (0, p.ZP)(E.Z.VC_TILE_ACTIVITY_SUGGESTION);
+  return (0, l.jsx)(p.Gt, {
     value: m,
     children: (0, l.jsxs)(I.Z, {
       className: Z.root,

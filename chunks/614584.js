@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(499401),
   h = n(693912),
   m = n(869765),
-  p = n(699516),
-  E = n(512665),
+  E = n(699516),
+  p = n(512665),
   g = n(352736),
   f = n(937889),
   C = n(739566),
@@ -81,11 +81,11 @@ let N = i.memo(function(e) {
       return (0, f.ZP)(e, n).content
     }
     return null
-  }, [R, j, Z, O, L]), y = (0, s.e7)([p.Z], () => null != R && p.Z.isBlockedForMessage(R), [R]), b = (0, I.wq)(null == R ? void 0 : R.author.id, Z.id), D = (0, I.$3)(n, R, y), U = (0, I.Wl)(R, Z, v, M), k = (0, I.rY)(A, M), w = i.useCallback(() => M({
+  }, [R, j, Z, O, L]), y = (0, s.e7)([E.Z], () => null != R && E.Z.isBlockedForMessage(R), [R]), b = (0, I.wq)(null == R ? void 0 : R.author.id, Z.id), D = (0, I.$3)(n, R, y), U = (0, I.Wl)(R, Z, v, M), k = (0, I.rY)(A, M), w = i.useCallback(() => M({
     referencedUsernameProfile: !1,
     referencedAvatarProfile: !1
   }), [M]), H = (0, C.Uj)(n);
-  return (0, l.jsx)(E.Z, {
+  return (0, l.jsx)(p.Z, {
     repliedAuthor: j,
     baseMessage: n,
     channel: Z,

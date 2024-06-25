@@ -20,7 +20,7 @@ function h(e) {
     channel: n,
     children: h,
     user: m
-  } = e, p = (0, i.e7)([a.Z], () => a.Z.useReducedMotion), E = null !== (t = (0, o.ZP)(n)) && void 0 !== t ? t : "", {
+  } = e, E = (0, i.e7)([a.Z], () => a.Z.useReducedMotion), p = null !== (t = (0, o.ZP)(n)) && void 0 !== t ? t : "", {
     avatarDecorationSrc: g,
     eventHandlers: f,
     isAnimating: C
@@ -33,21 +33,21 @@ function h(e) {
     channelId: n.id,
     ...f,
     children: [(() => {
-      let e = !p && C;
+      let e = !E && C;
       return n.isMultiUserDM() ? (0, l.jsx)(c.Z, {
         channel: n,
         size: s.AvatarSizes.SIZE_80,
         experimentLocation: "empty_messages",
         animated: e,
-        "aria-label": E
+        "aria-label": p
       }) : (0, l.jsx)(s.Avatar, {
-        "aria-label": E,
+        "aria-label": p,
         size: s.AvatarSizes.SIZE_80,
         src: (0, r.x)(n, 80, e),
         avatarDecoration: g
       })
     })(), (0, l.jsx)(d.Ot, {
-      children: E
+      children: p
     }), (0, l.jsx)(d.jz, {
       children: h
     })]

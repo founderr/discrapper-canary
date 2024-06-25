@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(910611),
   h = n(703656),
   m = n(664342),
-  p = n(592125),
-  E = n(703558),
+  E = n(592125),
+  p = n(703558),
   g = n(430824),
   f = n(502568),
   C = n(228392),
@@ -25,7 +25,7 @@ var l = n(735250),
 function x(e) {
   let {
     channelId: t
-  } = e, x = (0, s.e7)([p.Z], () => p.Z.getChannel(t)), T = (0, s.e7)([p.Z], () => p.Z.getChannel(null == x ? void 0 : x.parent_id)), N = (0, s.e7)([g.Z], () => g.Z.getGuild(null == x ? void 0 : x.getGuildId())), Z = (0, o.ZP)(x), S = i.useRef(!1);
+  } = e, x = (0, s.e7)([E.Z], () => E.Z.getChannel(t)), T = (0, s.e7)([E.Z], () => E.Z.getChannel(null == x ? void 0 : x.parent_id)), N = (0, s.e7)([g.Z], () => g.Z.getGuild(null == x ? void 0 : x.getGuildId())), Z = (0, o.ZP)(x), S = i.useRef(!1);
   if (i.useEffect(() => {
       null != x && !S.current && (S.current = !0, (0, C.lN)(x))
     }, [x]), null == x || null == N) return null;
@@ -35,7 +35,7 @@ function x(e) {
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(r.Z, {
       channel: x,
-      draftType: E.d.ChannelMessage
+      draftType: p.d.ChannelMessage
     }), (0, l.jsx)(f.ZP, {
       toolbar: v,
       "aria-label": _.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,

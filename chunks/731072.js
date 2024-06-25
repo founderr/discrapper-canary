@@ -4,8 +4,8 @@ t.d(n, {
   }
 });
 var i = t(735250),
-  s = t(470079),
-  l = t(481060),
+  l = t(470079),
+  s = t(481060),
   a = t(139387),
   r = t(726542),
   o = t(434404),
@@ -23,11 +23,11 @@ function I(e) {
     descriptionText: T,
     helpText: m,
     canNavigate: _
-  } = e, h = r.Z.get(N), O = s.useCallback(async e => {
+  } = e, h = r.Z.get(N), g = l.useCallback(async e => {
     _() && (await o.Z.enableIntegration(I.id, e.type, e.id), a.Z.startEditingIntegration(e.id))
-  }, [_, I.id]), g = s.useCallback(e => {
+  }, [_, I.id]), O = l.useCallback(e => {
     _() && (e.id === (null == t ? void 0 : t.id) && a.Z.stopEditingIntegration(), o.Z.disableIntegration(I.id, e.id))
-  }, [_, t, I.id]), A = s.useCallback(e => {
+  }, [_, t, I.id]), A = l.useCallback(e => {
     _() && (e === (null == t ? void 0 : t.id) ? a.Z.stopEditingIntegration() : a.Z.startEditingIntegration(e))
   }, [_, t]);
   return (0, i.jsxs)(i.Fragment, {
@@ -38,17 +38,17 @@ function I(e) {
       iconClassName: u.platformIcon,
       description: T,
       isHeader: !0
-    }), (0, i.jsx)(l.FormDivider, {
+    }), (0, i.jsx)(s.FormDivider, {
       className: u.headerDivider
     }), n.map(e => (0, i.jsx)(d.Z, {
       integration: e,
       editedIntegration: t,
       guild: I,
       isExpanded: (null == t ? void 0 : t.id) === e.id,
-      onEnable: O,
-      onDisable: g,
+      onEnable: g,
+      onDisable: O,
       onToggleExpand: () => A(e.id)
-    }, e.id)), (0, i.jsx)(l.Text, {
+    }, e.id)), (0, i.jsx)(s.Text, {
       className: u.helpText,
       color: "text-muted",
       variant: "text-sm/normal",

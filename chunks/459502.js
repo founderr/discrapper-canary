@@ -15,8 +15,8 @@ var i = n(442837),
   d = n(554747),
   h = n(854698),
   m = n(688641),
-  p = n(689938),
-  E = n(769129);
+  E = n(689938),
+  p = n(769129);
 
 function g(e) {
   let {
@@ -33,10 +33,10 @@ function g(e) {
         width: 20
       }),
       color: s.Z.unsafe_rawColors.GREEN_360.css,
-      title: (_(e) ? p.Z.Messages.GUILD_EVENT_START_PROMPT : p.Z.Messages.GUILD_EVENT_UPCOMING_PROMPT).format({
+      title: (_(e) ? E.Z.Messages.GUILD_EVENT_START_PROMPT : E.Z.Messages.GUILD_EVENT_UPCOMING_PROMPT).format({
         eventName: e.name
       }),
-      description: p.Z.Messages.GUILD_EVENT_START_PROMPT_DESCRIPTION.format({
+      description: E.Z.Messages.GUILD_EVENT_START_PROMPT_DESCRIPTION.format({
         startTime: (0, h.ub)(e.scheduled_start_time).startDateTimeString
       }),
       onClick: () => {
@@ -55,7 +55,7 @@ function g(e) {
         })
       },
       userCount: I[e.id],
-      className: E.eventPrompt
+      className: p.eventPrompt
     }, e.id))
   })
 }

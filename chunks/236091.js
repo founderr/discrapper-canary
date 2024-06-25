@@ -10,8 +10,8 @@ var i = n(120356),
   d = n(836157),
   h = n(199902),
   m = n(924557),
-  p = n(435064),
-  E = n(354459),
+  E = n(435064),
+  p = n(354459),
   g = n(689938),
   f = n(66824);
 t.Z = e => {
@@ -25,12 +25,12 @@ t.Z = e => {
   }, {
     autoTrackExposure: !1
   });
-  return (0, a.e7)([h.Z, c.Z, p.Z, u.ZP], () => {
+  return (0, a.e7)([h.Z, c.Z, E.Z, u.ZP], () => {
     var e;
     if (null == n) return !1;
     let t = h.Z.getCurrentUserActiveStream(),
       l = null === (e = u.ZP.getVisibleGame()) || void 0 === e ? void 0 : e.windowHandle;
-    return null != t && !!p.Z.getSettings().clipsEnabled && !!i || null != l && !!p.Z.getSettings().decoupledClipsEnabled && !!C || c.Z.getParticipants(n).some(e => e.type === E.fO.USER && p.Z.isClipsEnabledForUser(e.user.id))
+    return null != t && !!E.Z.getSettings().clipsEnabled && !!i || null != l && !!E.Z.getSettings().decoupledClipsEnabled && !!C || c.Z.getParticipants(n).some(e => e.type === p.fO.USER && E.Z.isClipsEnabledForUser(e.user.id))
   }) ? (0, l.jsxs)(o.TooltipContainer, {
     text: g.Z.Messages.CLIPS_ENABLED_VIEWER_TOOLTIP,
     color: o.TooltipColors.GREY,

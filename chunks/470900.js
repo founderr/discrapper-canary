@@ -18,8 +18,8 @@ var i = n(120356),
   d = n(44315),
   h = n(769654),
   m = n(346656),
-  p = n(51144),
-  E = n(162267),
+  E = n(51144),
+  p = n(162267),
   g = n(228168),
   f = n(981631),
   C = n(689938),
@@ -34,7 +34,7 @@ function T(e) {
     nick: c,
     theme: u,
     onSelect: h
-  } = e, E = t.hasAvatarForGuild(i.id);
+  } = e, p = t.hasAvatarForGuild(i.id);
   return (0, l.jsxs)(r.Clickable, {
     focusProps: {
       offset: {
@@ -47,7 +47,7 @@ function T(e) {
       (0, o.jW)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("33053"), n.e("19464"), n.e("7654"), n.e("41662"), n.e("44156"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("22036"), n.e("27577"), n.e("33213"), n.e("95308")]).then(n.bind(n, 545135));
+        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("33053"), n.e("50654"), n.e("7654"), n.e("41662"), n.e("44156"), n.e("70161"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("22036"), n.e("27577"), n.e("33213"), n.e("95308")]).then(n.bind(n, 545135));
         return t => (0, l.jsx)(e, {
           ...t,
           guild: i
@@ -69,14 +69,14 @@ function T(e) {
       children: [(0, l.jsx)("div", {
         className: _.listName,
         children: i.toString()
-      }), E || null != c ? (0, l.jsxs)("div", {
+      }), p || null != c ? (0, l.jsxs)("div", {
         className: I.guildNick,
-        children: [E && (0, l.jsx)(r.Avatar, {
+        children: [p && (0, l.jsx)(r.Avatar, {
           src: t.getAvatarURL(i.id, x),
           size: r.AvatarSizes.SIZE_16,
           className: I.guildAvatar,
           "aria-hidden": !0
-        }), null != c ? c : p.ZP.getName(t)]
+        }), null != c ? c : E.ZP.getName(t)]
       }) : null]
     })]
   })
@@ -88,7 +88,7 @@ function N(e) {
     onClose: n
   } = e, {
     mutualGuilds: i
-  } = (0, E.Z)(t.id), s = (0, u.ZP)(), a = e => {
+  } = (0, p.Z)(t.id), s = (0, u.ZP)(), a = e => {
     (0, h.X)(e), n(), (0, c.xf)()
   };
   return (0, l.jsx)(r.ScrollerThin, {

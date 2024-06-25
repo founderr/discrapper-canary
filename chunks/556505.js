@@ -16,24 +16,24 @@ function c(e) {
     labelType: n,
     collapsed: c = !1,
     showTooltip: u = !1
-  } = e, d = n === a.ww.NEW ? r.Z.Messages.NEW : r.Z.Messages.UPDATED, h = n === a.ww.NEW ? o.activityNewBadge : o.activityUpdatedBadge, [m, p] = i.useState(c ? "" : d);
+  } = e, d = n === a.ww.NEW ? r.Z.Messages.NEW : r.Z.Messages.UPDATED, h = n === a.ww.NEW ? o.activityNewBadge : o.activityUpdatedBadge, [m, E] = i.useState(c ? "" : d);
   if (i.useEffect(() => {
-      c ? p("") : n === a.ww.NEW ? p(r.Z.Messages.NEW) : n === a.ww.UPDATED && p(r.Z.Messages.UPDATED)
+      c ? E("") : n === a.ww.NEW ? E(r.Z.Messages.NEW) : n === a.ww.UPDATED && E(r.Z.Messages.UPDATED)
     }, [c, n]), n === a.ww.NONE) return null;
-  let E = (0, l.jsx)(s.TextBadge, {
+  let p = (0, l.jsx)(s.TextBadge, {
     className: h,
     disableColor: !0,
     text: (0, l.jsx)("span", {
       children: m
     })
   });
-  if (!u) return E;
+  if (!u) return p;
   let g = r.Z.Messages.EMBEDDED_ACTIVITIES_FREE_PREVIEW_TOOLTIP.format({
     activity: t
   });
   return (0, l.jsx)(s.TooltipContainer, {
     text: g,
     tooltipContentClassName: o.tooltip,
-    children: E
+    children: p
   })
 }

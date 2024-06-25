@@ -11,7 +11,7 @@ var l = n(735250),
   h = n(689938),
   m = n(46319);
 
-function p(e, t, n) {
+function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -19,7 +19,7 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let E = {
+let p = {
     position: "bottom",
     autoInvert: !1
   },
@@ -78,15 +78,15 @@ class C extends i.PureComponent {
       value: n,
       onChange: this.handleChangeVoiceRegion,
       renderOption: this.renderOption,
-      popoutProps: E,
+      popoutProps: p,
       popoutClassName: m.regionSelectPopout
     })
   }
   constructor(...e) {
-    super(...e), p(this, "renderOption", (e, t) => (0, l.jsx)(f, {
+    super(...e), E(this, "renderOption", (e, t) => (0, l.jsx)(f, {
       region: e.value,
       selected: t
-    }, e.value.id)), p(this, "getSelectedRegion", () => {
+    }, e.value.id)), E(this, "getSelectedRegion", () => {
       var e;
       let {
         regions: t,
@@ -107,7 +107,7 @@ class C extends i.PureComponent {
         deprecated: !1,
         hidden: !1
       }
-    }), p(this, "handleChangeVoiceRegion", e => {
+    }), E(this, "handleChangeVoiceRegion", e => {
       let {
         value: t
       } = e, {

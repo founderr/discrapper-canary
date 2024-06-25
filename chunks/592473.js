@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return p
+    return E
   }
 }), n(47120);
 var l = n(735250),
@@ -67,7 +67,7 @@ function m(e) {
   })
 }
 
-function p(e) {
+function E(e) {
   let {
     toggleRequestToSpeakSidebar: t,
     showRequestToSpeakSidebar: n,

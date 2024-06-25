@@ -65,15 +65,15 @@ function h(e) {
     children: o,
     renderChatButton: h,
     renderChatToasts: m,
-    renderVoiceChannelEffects: p,
-    style: E,
+    renderVoiceChannelEffects: E,
+    style: p,
     ...g
   } = e;
   return (0, s.jsxs)("div", {
     className: r()(u.root, {
       [u.idle]: a
     }),
-    style: E,
+    style: p,
     onMouseMove: l,
     onMouseDown: l,
     onMouseLeave: i,
@@ -86,6 +86,6 @@ function h(e) {
     }), null == h ? void 0 : h({
       className: u.chatButton,
       showingClassName: u.chatButtonShowing
-    }), null == m ? void 0 : m(), null == p ? void 0 : p()]
+    }), null == m ? void 0 : m(), null == E ? void 0 : E()]
   })
 }(l = i || (i = {}))[l.TOP = 0] = "TOP", l[l.BOTTOM = 1] = "BOTTOM"

@@ -6,8 +6,8 @@ var i, s, a, r, o = n(392711),
   d = n(570140),
   h = n(279779),
   m = n(131704),
-  p = n(624138),
-  E = n(51144),
+  E = n(624138),
+  p = n(51144),
   g = n(592125),
   f = n(580005),
   C = n(699516),
@@ -70,7 +70,7 @@ function L() {
 }
 
 function O(e, t) {
-  return (0, p._I)(E.ZP.getName(e.user).toLocaleLowerCase()).localeCompare((0, p._I)(E.ZP.getName(t.user).toLocaleLowerCase()))
+  return (0, E._I)(p.ZP.getName(e.user).toLocaleLowerCase()).localeCompare((0, E._I)(p.ZP.getName(t.user).toLocaleLowerCase()))
 }
 
 function P(e) {

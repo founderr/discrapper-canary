@@ -5,8 +5,8 @@ s.d(n, {
 });
 var l = s(735250);
 s(470079);
-var t = s(120356),
-  i = s.n(t),
+var i = s(120356),
+  t = s.n(i),
   r = s(512722),
   a = s.n(r),
   c = s(442837),
@@ -28,7 +28,7 @@ function P(e) {
   let {
     premiumSubscription: n,
     planId: s,
-    selectPlan: t,
+    selectPlan: i,
     selected: r,
     priceOptions: P,
     shouldShowUpdatedPaymentModal: A,
@@ -77,13 +77,13 @@ function P(e) {
         bottom: 0
       }
     },
-    onClick: b ? void 0 : () => t(s),
-    className: i()(h.planOptionClickableContainer, {
+    onClick: b ? void 0 : () => i(s),
+    className: t()(h.planOptionClickableContainer, {
       [h.selectedPlan]: y && r,
       [h.selectionBox]: y
     }),
     children: [(0, l.jsxs)("div", {
-      className: i()(h.planOption, {
+      className: t()(h.planOption, {
         [h.planOptionDisabled]: b
       }),
       children: [(0, l.jsxs)("div", {
@@ -98,7 +98,7 @@ function P(e) {
           className: h.planOptionCheckbox
         }), (0, l.jsxs)("div", {
           children: [(0, l.jsxs)("div", {
-            className: i()(h.planOptionInterval, {
+            className: t()(h.planOptionInterval, {
               [h.optionSelected]: r || y,
               [h.updatedOptionSelected]: A && (r || y)
             }),
@@ -114,7 +114,7 @@ function P(e) {
           children: ["(", x.Z.Messages.BILLING_SWITCH_PLAN_CURRENT_PLAN, ")"]
         }), !y && Y()]
       }), A ? (0, l.jsx)("div", {
-        className: i()({
+        className: t()({
           [h.optionPriceSelected]: r
         }),
         children: H ? (() => {
@@ -146,7 +146,7 @@ function P(e) {
           }) : (0, N.T4)(G.amount, G.currency)
         })
       }) : (0, l.jsx)("div", {
-        className: i()({
+        className: t()({
           [h.optionSelected]: r || y
         }),
         children: (0, N.T4)(G.amount, G.currency)
@@ -156,7 +156,7 @@ function P(e) {
       children: (0, l.jsx)(u.Text, {
         variant: "text-md/normal",
         color: r ? "text-normal" : "interactive-normal",
-        className: i()(h.planOptionSubtext, {
+        className: t()(h.planOptionSubtext, {
           [h.discountPlanOptionSubtext]: v || M
         }),
         children: (() => {

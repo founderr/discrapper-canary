@@ -10,8 +10,8 @@ var l = n(735250),
   d = n(430824),
   h = n(233608),
   m = n(776767),
-  p = n(351127),
-  E = n(50493),
+  E = n(351127),
+  p = n(50493),
   g = n(981631),
   f = n(689938),
   C = n(926452);
@@ -23,7 +23,7 @@ function _(e) {
     roleIds: s,
     guild: h,
     specMap: m
-  } = e, E = g.Plq[i], _ = null !== (n = null === (t = m[E.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, u.wt)(E), I = p._o.has(E), x = (0, r.e7)([d.Z], () => d.Z.getRoles(h.id));
+  } = e, p = g.Plq[i], _ = null !== (n = null === (t = m[p.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, u.wt)(p), I = E._o.has(p), x = (0, r.e7)([d.Z], () => d.Z.getRoles(h.id));
   return (0, l.jsx)(o.Tooltip, {
     "aria-label": f.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL,
     tooltipClassName: C.roleTooltipContainer,
@@ -70,7 +70,7 @@ t.Z = i.memo(function(e) {
   let {
     member: t,
     onNavigate: n
-  } = e, s = (0, r.e7)([d.Z], () => d.Z.getGuild(t.guildId), [t.guildId]), c = (0, p.B2)(t.userId, t.guildId, p.Qn), u = (0, p.B2)(t.userId, t.guildId, p.pd), I = Object.keys(c).length, x = Object.keys(u).length, T = i.useMemo(() => null != s ? h.Z.getGuildPermissionSpecMap(s) : null, [s]), N = i.useMemo(() => null != s ? h.Z.generateGuildPermissionSpec(s) : null, [s]), Z = i.useMemo(() => {
+  } = e, s = (0, r.e7)([d.Z], () => d.Z.getGuild(t.guildId), [t.guildId]), c = (0, E.B2)(t.userId, t.guildId, E.Qn), u = (0, E.B2)(t.userId, t.guildId, E.pd), I = Object.keys(c).length, x = Object.keys(u).length, T = i.useMemo(() => null != s ? h.Z.getGuildPermissionSpecMap(s) : null, [s]), N = i.useMemo(() => null != s ? h.Z.generateGuildPermissionSpec(s) : null, [s]), Z = i.useMemo(() => {
     if (null == s || null == T) return null;
     if (0 === I) return (0, l.jsx)("div", {
       className: a()(C.permissionChiplet, C.noModPerms),
@@ -84,7 +84,7 @@ t.Z = i.memo(function(e) {
     return null == N || N.forEach(t => {
       t.permissions.forEach(t => {
         let n = t.flag,
-          i = p.pd.find(e => g.Plq[e] === n);
+          i = E.pd.find(e => g.Plq[e] === n);
         if (null == i) return;
         let a = c[i];
         if (null != a) e.push((0, l.jsx)(_, {
@@ -105,7 +105,7 @@ t.Z = i.memo(function(e) {
         children: f.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE
       }), (0, l.jsxs)(o.Clickable, {
         className: C.viewAllPermissions,
-        onClick: () => n(E.k.PERMISSIONS),
+        onClick: () => n(p.k.PERMISSIONS),
         children: [(0, l.jsx)(o.Text, {
           variant: "eyebrow",
           color: "interactive-normal",

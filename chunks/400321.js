@@ -21,10 +21,10 @@ function a(e) {
   } = e;
   null == d.current[t.id] && (d.current[t.id] = Date.now()), n.lineCap = "round", n.lineJoin = "round";
   let m = t.points.map(e => (0, l.RR)(e, a, r)),
-    p = d.current[t.id],
-    E = e => p + e.deltaTime,
-    g = e => E(e) + 1500 >= Date.now(),
-    f = e => E(e) <= Date.now() && g(e),
+    E = d.current[t.id],
+    p = e => E + e.deltaTime,
+    g = e => p(e) + 1500 >= Date.now(),
+    f = e => p(e) <= Date.now() && g(e),
     C = m.find(f);
   if (null == C) {
     !g(t.points[t.points.length - 1]) && h.push(t);

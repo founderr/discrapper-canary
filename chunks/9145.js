@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(110924),
   h = n(607070),
   m = n(900211),
-  p = n(740492),
-  E = n(871499),
+  E = n(740492),
+  p = n(871499),
   g = n(402113),
   f = n(592125),
   C = n(271383),
@@ -51,7 +51,7 @@ function w(e) {
     renderExternalHeader: H
   } = e, G = (0, R.Z)(), B = (0, r.Wu)([v.ZP], () => null != w ? v.ZP.getEmbeddedActivitiesForChannel(w) : [], [w]), V = (0, r.e7)([f.Z], () => f.Z.getChannel(w)), F = (0, A.gb)(B), z = (0, A.uF)(F), W = i.useCallback(() => {
     (0, S.tg)(P.Ez.PIP)
-  }, []), Y = i.useRef(null), K = (0, r.e7)([v.ZP], () => v.ZP.getFocusedLayout()), q = K !== P.MI.NO_CHAT, [X, Q] = i.useState(null !== (t = p.ZP.activityPanelHeight) && void 0 !== t ? t : s), J = i.useCallback(e => {
+  }, []), Y = i.useRef(null), K = (0, r.e7)([v.ZP], () => v.ZP.getFocusedLayout()), q = K !== P.MI.NO_CHAT, [X, Q] = i.useState(null !== (t = E.ZP.activityPanelHeight) && void 0 !== t ? t : s), J = i.useCallback(e => {
     u.ZP.updatedUnsyncedSettings({
       activityPanelHeight: e
     })
@@ -185,7 +185,7 @@ function w(e) {
               color: "red",
               className: D.leaveActivityButton
             })
-          }), (0, l.jsx)(E.d, {
+          }), (0, l.jsx)(p.d, {
             label: b.Z.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
             onClick: W,
             iconComponent: c.MinimizeIcon,

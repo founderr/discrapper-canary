@@ -1,6 +1,6 @@
 n.d(t, {
   U: function() {
-    return p
+    return E
   },
   Z: function() {
     return g
@@ -28,14 +28,14 @@ let m = {
     SIZE_MIN: h.qh / 2,
     SIZE_MAX: h.qh
   },
-  p = (0, a.Z)(() => ({
+  E = (0, a.Z)(() => ({
     particles: {},
     lastSpawned: {}
   }));
 
-function E(e, t) {
+function p(e, t) {
   var n;
-  i()(null !== (n = p.getState().particles[e.id]) && void 0 !== n ? n : {}).forEach(t)
+  i()(null !== (n = E.getState().particles[e.id]) && void 0 !== n ? n : {}).forEach(t)
 }
 
 function g(e) {
@@ -58,14 +58,14 @@ function g(e) {
     {
       outlineColor: M
     } = (0, u.bg)(g.userId, x, T, I);
-  if (E(g, e => {
+  if (p(g, e => {
       var t, n;
-      return t = g, n = e, void(n.x += n.xSpeed * window.devicePixelRatio, n.y += n.ySpeed * window.devicePixelRatio, n.opacity -= n.opacitySpeed, n.opacity <= 0 && p.setState(e => (delete e.particles[t.id][n.id], 0 === Object.keys(e.particles[t.id]).length && delete e.particles[t.id], e)))
+      return t = g, n = e, void(n.x += n.xSpeed * window.devicePixelRatio, n.y += n.ySpeed * window.devicePixelRatio, n.opacity -= n.opacitySpeed, n.opacity <= 0 && E.setState(e => (delete e.particles[t.id][n.id], 0 === Object.keys(e.particles[t.id]).length && delete e.particles[t.id], e)))
     }), ! function(e, t, n) {
       var l;
-      let a = null !== (l = p.getState().lastSpawned[e.id]) && void 0 !== l ? l : 0,
+      let a = null !== (l = E.getState().lastSpawned[e.id]) && void 0 !== l ? l : 0,
         r = Date.now();
-      if (!(a + 100 > r) && e.state !== c.f.STOP && !!(.8 >= Math.random() || a + 300 < r)) p.setState(l => {
+      if (!(a + 100 > r) && e.state !== c.f.STOP && !!(.8 >= Math.random() || a + 300 < r)) E.setState(l => {
         var a, r, o;
         let c = null !== (a = l.particles[e.id]) && void 0 !== a ? a : {},
           u = i().random(1, 2);
@@ -85,12 +85,12 @@ function g(e) {
         }
         return l.particles[e.id] = c, l.lastSpawned[e.id] = Date.now(), l
       })
-    }(g, v, A), (0, d.I)(f, v, A, M, h.q2), (0, d.T)(f, v, A, g.userId), E(g, e => (function(e, t, n) {
+    }(g, v, A), (0, d.I)(f, v, A, M, h.q2), (0, d.T)(f, v, A, g.userId), p(g, e => (function(e, t, n) {
       if (null == t) return;
       let l = n.size * window.devicePixelRatio,
         i = n.x - l / 2 * window.devicePixelRatio,
         s = n.y - 1.2 * l * window.devicePixelRatio;
       e.globalAlpha = n.opacity, e.drawImage(t, l / 2 + i, l / 2 + s, l, l)
-    })(f, S, e)), g.lastUpdatedAt + h.FO < Date.now() && (0, r.ZZ)(N, g), g.state === c.f.STOP && (l = g, !(Object.keys(null !== (a = p.getState().particles[l.id]) && void 0 !== a ? a : {}).length > 0))) Z.push(g);
+    })(f, S, e)), g.lastUpdatedAt + h.FO < Date.now() && (0, r.ZZ)(N, g), g.state === c.f.STOP && (l = g, !(Object.keys(null !== (a = E.getState().particles[l.id]) && void 0 !== a ? a : {}).length > 0))) Z.push(g);
   f.restore()
 }

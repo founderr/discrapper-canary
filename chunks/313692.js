@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(735020),
   h = n(786761),
   m = n(937889),
-  p = n(619753),
-  E = n(433355),
+  E = n(619753),
+  p = n(433355),
   g = n(271383),
   f = n(594174),
   C = n(189432),
@@ -34,7 +34,7 @@ function S(e) {
     location: v,
     className: A,
     onNavigate: M
-  } = e, R = i.useRef(null), j = (0, o.e7)([E.ZP], () => E.ZP.getGuildSidebarState(S), [S]), L = i.useRef(0), [O, P] = i.useState(null !== (t = null == j ? void 0 : j.details.additionalSearchQuery) && void 0 !== t ? t : {}), y = (0, _.z0)(s, S, {
+  } = e, R = i.useRef(null), j = (0, o.e7)([p.ZP], () => p.ZP.getGuildSidebarState(S), [S]), L = i.useRef(0), [O, P] = i.useState(null !== (t = null == j ? void 0 : j.details.additionalSearchQuery) && void 0 !== t ? t : {}), y = (0, _.z0)(s, S, {
     addtionalQuery: O,
     shouldDispatch: !0
   }), b = (0, o.e7)([f.default], () => f.default.getUser(s), [s]), D = (0, o.e7)([g.ZP], () => g.ZP.getMember(S, s), [S, s]), U = (0, x.f)(s, S);
@@ -70,8 +70,8 @@ function S(e) {
         scrollOffset: L.current
       })
     }, [S, s, j, O]),
-    B = null !== (n = null == O ? void 0 : O.offset) && void 0 !== n ? n : 0,
-    G = (0, o.e7)([d.Z], () => {
+    G = null !== (n = null == O ? void 0 : O.offset) && void 0 !== n ? n : 0,
+    B = (0, o.e7)([d.Z], () => {
       if (null == y.result) return [];
       let e = y.result.messages,
         t = (0, u.nC)("");
@@ -95,7 +95,7 @@ function S(e) {
         isSearching: !0,
         isIndexing: !1,
         isHistoricalIndexing: !1,
-        offset: B,
+        offset: G,
         totalResults: 0,
         hasError: !1,
         showBlockedResults: !1,
@@ -105,13 +105,13 @@ function S(e) {
         isSearching: !1,
         isIndexing: null !== (t = y.result.doing_deep_historical_index) && void 0 !== t && t,
         isHistoricalIndexing: null !== (n = y.result.doing_deep_historical_index) && void 0 !== n && n,
-        offset: B,
+        offset: G,
         totalResults: null !== (l = y.result.total_results) && void 0 !== l ? l : 0,
         hasError: !1,
         showBlockedResults: !1,
         showNoResultsAlt: !1
       }
-    }, [y.result, B]);
+    }, [y.result, G]);
   return null == b || null == D || null == V ? null : (0, l.jsxs)("div", {
     className: a()(N.container, A),
     style: {
@@ -125,8 +125,8 @@ function S(e) {
       className: a()(Z.innerContainer),
       ref: R,
       onScroll: w,
-      children: (0, l.jsx)(p.Z, {
-        searchResults: G,
+      children: (0, l.jsx)(E.Z, {
+        searchResults: B,
         search: V,
         searchId: s,
         renderEmbeds: !0,

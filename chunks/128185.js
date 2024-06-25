@@ -16,8 +16,8 @@ var n = s(735250),
   C = s(626135),
   f = s(328347),
   p = s(530915),
-  g = s(948625),
-  E = s(981631),
+  E = s(948625),
+  g = s(981631),
   m = s(421812);
 
 function h(e) {
@@ -28,7 +28,7 @@ function h(e) {
     handleCTAClick: o,
     text: c,
     reducedMotion: C = !1
-  } = e, f = r.useMemo(() => (0, g.E8)(a, C), [a, C]);
+  } = e, f = r.useMemo(() => (0, E.E8)(a, C), [a, C]);
   return (0, n.jsxs)("div", {
     className: m.headerContainer,
     children: [(0, n.jsxs)("div", {
@@ -51,7 +51,7 @@ function h(e) {
       }), (0, n.jsxs)("div", {
         className: m.headerContent,
         style: {
-          color: null !== (t = a.textColor) && void 0 !== t ? t : (0, u.Lq)(E.Ilk.WHITE_100)
+          color: null !== (t = a.textColor) && void 0 !== t ? t : (0, u.Lq)(g.Ilk.WHITE_100)
         },
         children: [(0, n.jsx)("div", {
           className: m.badgeContainer,
@@ -93,13 +93,13 @@ function x(e) {
   let {
     categories: t,
     handleScrollToCategory: s
-  } = e, i = r.useMemo(() => (0, g.yc)(), []), {
+  } = e, i = r.useMemo(() => (0, E.yc)(), []), {
     analyticsLocations: u
   } = (0, a.cj)([f.Z], () => f.Z.getAnalytics()), {
     analyticsLocations: d
   } = (0, c.ZP)([...u, o.Z.COLLECTIBLES_SHOP_HEADER_CAROUSEL]), x = r.useCallback((e, t) => {
     let n = e.cta;
-    C.default.track(E.rMx.SHOP_HEADER_CAROUSEL_CTA_CLICKED, {
+    C.default.track(g.rMx.SHOP_HEADER_CAROUSEL_CTA_CLICKED, {
       location_stack: d,
       slide_id: e.id,
       slide_index: t,

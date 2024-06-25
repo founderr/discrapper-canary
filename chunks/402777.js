@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(785717),
   h = n(318661),
   m = n(502762),
-  p = n(544989),
-  E = n(481932),
+  E = n(544989),
+  p = n(481932),
   g = n(272510),
   f = n(171368),
   C = n(926150),
@@ -54,9 +54,9 @@ function S(e) {
         themeOverride: A,
         className: Z.container,
         children: [(0, l.jsxs)(s.u2, {
-          children: [(0, l.jsxs)(p.Z, {
+          children: [(0, l.jsxs)(E.Z, {
             profileType: N.y0.PANEL,
-            children: [(0, l.jsx)(E.Z, {
+            children: [(0, l.jsx)(p.Z, {
               user: t,
               profileType: N.y0.PANEL
             }), (0, l.jsx)(g.Z, {

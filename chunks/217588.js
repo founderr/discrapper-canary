@@ -162,19 +162,19 @@ let y = e => {
     }, [n.id, B]);
     let Y = n.guild_id === l.getGuildId(),
       W = null != p,
-      z = !1,
-      K = "Custom Sticker Popout";
-    j ? t = B ? Y ? L.Z.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : W ? L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : B ? (Y ? t = L.Z.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = L.Z.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, z = !0, K = "Custom Sticker Popout (Upsell)") : W ? (t = L.Z.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, z = !0, K = "Custom Sticker Popout (Upsell)") : (t = L.Z.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
+      K = !1,
+      z = "Custom Sticker Popout";
+    j ? t = B ? Y ? L.Z.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : W ? L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : B ? (Y ? t = L.Z.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = L.Z.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, K = !0, z = "Custom Sticker Popout (Upsell)") : W ? (t = L.Z.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, K = !0, z = "Custom Sticker Popout (Upsell)") : (t = L.Z.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
       openPremiumSettings: () => {
         U(l), T()
       }
-    }), K = "Custom Sticker Popout (Soft Upsell)");
-    let Q = !z && !B && W && j;
+    }), z = "Custom Sticker Popout (Soft Upsell)");
+    let Q = !K && !B && W && j;
     return (i.useEffect(() => {
       S()
     }, [R, p]), i.useEffect(() => {
       A.default.track(x.rMx.OPEN_POPOUT, {
-        type: K,
+        type: z,
         ...H
       })
     }, []), R) ? (0, s.jsxs)(I.W_, {
@@ -193,7 +193,7 @@ let y = e => {
           children: [(0, s.jsx)(b, {
             description: t,
             sticker: n
-          }), z && (0, s.jsx)(m.Z, {
+          }), K && (0, s.jsx)(m.Z, {
             className: P.ctaButton,
             subscriptionTier: v.Si.TIER_2,
             size: o.Button.Sizes.SMALL,

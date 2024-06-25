@@ -9,8 +9,8 @@ var l = n(735250),
   d = n(922409),
   h = n(86203),
   m = n(6025),
-  p = n(621853),
-  E = n(171368),
+  E = n(621853),
+  p = n(171368),
   g = n(433355),
   f = n(699516),
   C = n(594174),
@@ -26,7 +26,7 @@ let A = e => {
     let {
       userId: t,
       channelId: n
-    } = e, s = (0, a.e7)([p.Z], () => p.Z.getMutualGuilds(t), [t]), o = i.useMemo(() => null != s ? s.slice(0, 3).map((e, t) => {
+    } = e, s = (0, a.e7)([E.Z], () => E.Z.getMutualGuilds(t), [t]), o = i.useMemo(() => null != s ? s.slice(0, 3).map((e, t) => {
       let {
         guild: n
       } = e, i = null != n ? I.ZP.getGuildIconURL({
@@ -59,7 +59,7 @@ let A = e => {
         children: o
       }), (0, l.jsx)(r.Clickable, {
         onClick: () => {
-          (0, E.openUserProfileModal)({
+          (0, p.openUserProfileModal)({
             userId: t,
             channelId: n,
             section: Z.oh.MUTUAL_GUILDS,
@@ -193,15 +193,15 @@ let A = e => {
       acceptMessageRequest: c,
       rejectMessageRequest: d,
       isAcceptLoading: h,
-      isRejectLoading: p,
-      isOptimisticAccepted: E,
+      isRejectLoading: E,
+      isOptimisticAccepted: p,
       isOptimisticRejected: f
     } = (0, u.m)({
       user: C.default.getUser(n),
       onError: s,
       onAcceptSuccess: o,
       onRejectSuccess: a
-    }), _ = h || p || E || f;
+    }), _ = h || E || p || f;
     return (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(r.Button, {
         className: v.action,
@@ -216,7 +216,7 @@ let A = e => {
         onClick: () => d(t),
         color: r.Button.Colors.PRIMARY,
         disabled: _,
-        submitting: p,
+        submitting: E,
         children: S.Z.Messages.MESSAGE_REQUEST_IGNORE
       })]
     })

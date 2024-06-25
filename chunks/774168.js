@@ -70,13 +70,13 @@ function m(e) {
     mentionCount: s,
     isTyping: r,
     canBadge: o
-  } = e, c = null != s && s > 0, m = null !== (t = c ? s : i) && void 0 !== t ? t : 0, p = o && null != i && i > 0;
+  } = e, c = null != s && s > 0, m = null !== (t = c ? s : i) && void 0 !== t ? t : 0, E = o && null != i && i > 0;
   return (0, l.jsxs)("div", {
     className: a()(d.chatIcon, n),
     children: [(0, l.jsx)(h, {
-      isBadged: p,
+      isBadged: E,
       isTyping: r
-    }), p && (0, l.jsx)(u.Z, {
+    }), E && (0, l.jsx)(u.Z, {
       hasMentions: c,
       truncatedCount: m > 99 ? "99+" : m,
       className: d.badge

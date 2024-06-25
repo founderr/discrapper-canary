@@ -15,8 +15,8 @@ var i = n(442837),
   d = n(709054),
   h = n(826581),
   m = n(246364),
-  p = n(360328),
-  E = n(981631),
+  E = n(360328),
+  p = n(981631),
   g = n(689938),
   f = n(695572);
 
@@ -35,7 +35,7 @@ function C(e) {
       t = o.Z.getGuild(null == e ? void 0 : e.guildId);
     return {
       joinRequest: e,
-      isModmin: null != t && c.Z.can(E.Plq.KICK_MEMBERS, t),
+      isModmin: null != t && c.Z.can(p.Plq.KICK_MEMBERS, t),
       guildId: null == t ? void 0 : t.id,
       maxMembers: null == t ? void 0 : t.maxMembers
     }
@@ -43,7 +43,7 @@ function C(e) {
     approveRequest: v,
     rejectRequest: A,
     submitting: M
-  } = (0, p.s)(null == I ? void 0 : I.guildId, null == I ? void 0 : I.userId);
+  } = (0, E.s)(null == I ? void 0 : I.guildId, null == I ? void 0 : I.userId);
   return null != I && I.applicationStatus === m.wB.SUBMITTED && x ? (0, l.jsxs)("div", {
     className: f.buttons,
     children: [(0, l.jsx)(s.Tooltip, {
@@ -71,8 +71,8 @@ function C(e) {
           userId: I.userId,
           guildId: I.guildId,
           analyticsLocation: {
-            section: E.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
-            object: E.qAy.JOIN_REQUEST
+            section: p.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
+            object: p.qAy.JOIN_REQUEST
           }
         })
       },

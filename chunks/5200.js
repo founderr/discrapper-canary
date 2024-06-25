@@ -12,8 +12,8 @@ var l, i, s = n(735250),
   d = n(792125),
   h = n(542094),
   m = n(182906),
-  p = n(556505),
-  E = n(513202),
+  E = n(556505),
+  p = n(513202),
   g = n(981631),
   f = n(689938),
   C = n(107667);
@@ -42,7 +42,7 @@ function x(e) {
     guildId: null !== (t = n.getGuildId()) && void 0 !== t ? t : void 0,
     locationObject: {},
     onActivityItemSelected: i,
-    embeddedActivitiesManager: E.Z,
+    embeddedActivitiesManager: p.Z,
     assetNames: _
   }), [v, A] = a.useState(!1), M = a.useCallback(() => {
     A(!0)
@@ -52,7 +52,7 @@ function x(e) {
     className: C.overlayBadge,
     children: (0, s.jsx)("div", {
       className: C.badgeContainer,
-      children: (0, s.jsx)(p.Z, {
+      children: (0, s.jsx)(E.Z, {
         name: l.application.name,
         labelType: S
       })

@@ -10,8 +10,8 @@ var l = n(735250),
   d = n(933557),
   h = n(454585),
   m = n(984370),
-  p = n(981631),
-  E = n(689938),
+  E = n(981631),
+  p = n(689938),
   g = n(504273);
 
 function f(e, t, n) {
@@ -31,7 +31,7 @@ function C(e) {
   } = e, s = (0, d.ZP)(t, !0);
   return (0, l.jsx)(o.ModalRoot, {
     transitionState: i,
-    "aria-label": E.Z.Messages.FORM_LABEL_CHANNEL_TOPIC,
+    "aria-label": p.Z.Messages.FORM_LABEL_CHANNEL_TOPIC,
     children: (0, l.jsx)(o.ModalContent, {
       children: (0, l.jsx)(u.Z, {
         selectable: !0,
@@ -71,7 +71,7 @@ class I extends i.Component {
         onClick: this.handleClick,
         children: [(0, l.jsx)(o.Clickable, {
           onClick: this.handleClick,
-          "aria-label": E.Z.Messages.OPEN_CHANNEL_TOPIC,
+          "aria-label": p.Z.Messages.OPEN_CHANNEL_TOPIC,
           className: g.topicClickTarget
         }), h.Z.parseTopic(e.topic, !0, {
           channelId: e.id,
@@ -96,7 +96,7 @@ class I extends i.Component {
     }), f(this, "onMouseMove", () => {
       this._mouseDown && (this._mouseDown = !1)
     }), f(this, "onMouseUp", e => {
-      this._mouseDown && e.button !== p.AeJ.SECONDARY && this.handleOpenTopic(e), this._mouseUp = !0, this._mouseDown = !1
+      this._mouseDown && e.button !== E.AeJ.SECONDARY && this.handleOpenTopic(e), this._mouseUp = !0, this._mouseDown = !1
     }), f(this, "handleContextMenu", e => {
       let {
         channel: t,

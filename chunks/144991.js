@@ -1,8 +1,8 @@
 t(411104);
 var i = t(735250),
-  s = t(470079),
-  l = t(120356),
-  a = t.n(l),
+  l = t(470079),
+  s = t(120356),
+  a = t.n(s),
   r = t(149765),
   o = t(253923),
   c = t(481060),
@@ -10,7 +10,7 @@ var i = t(735250),
   u = t(291913),
   I = t(185402),
   N = t(331651);
-class E extends s.PureComponent {
+class E extends l.PureComponent {
   getOverwriteValue(e) {
     let {
       allow: n,
@@ -47,35 +47,35 @@ class E extends s.PureComponent {
     let {
       title: n,
       description: t,
-      helpdeskArticleId: s,
-      flag: l
+      helpdeskArticleId: l,
+      flag: s
     } = e, {
       permissions: r,
       locked: d,
       permissionRender: N
-    } = this.props, E = null == N ? void 0 : N(l), T = !!(d || E), m = "string" == typeof E ? this.renderDisabledIndicator(E) : null, _ = a()({
+    } = this.props, E = null == N ? void 0 : N(s), T = !!(d || E), m = "string" == typeof E ? this.renderDisabledIndicator(E) : null, _ = a()({
       [I.title]: null != m
     });
     return null == r ? (0, i.jsxs)(u.Z, {
       disabled: T,
-      value: this.getOverwriteValue(l),
-      onChange: e => this.handleChange(l, e),
+      value: this.getOverwriteValue(s),
+      onChange: e => this.handleChange(s, e),
       note: (0, o._u)(t),
-      helpdeskArticleId: s,
+      helpdeskArticleId: l,
       children: [m, (0, i.jsx)("span", {
         className: _,
         children: n
       })]
-    }, String(l)) : (0, i.jsxs)(c.FormSwitch, {
+    }, String(s)) : (0, i.jsxs)(c.FormSwitch, {
       disabled: T,
-      value: this.getPermissionValue(l, r),
-      onChange: e => this.handleChange(l, e),
+      value: this.getPermissionValue(s, r),
+      onChange: e => this.handleChange(s, e),
       note: (0, o._u)(t),
       children: [m, (0, i.jsx)("span", {
         className: _,
         children: n
       })]
-    }, String(l))
+    }, String(s))
   }
   render() {
     let {

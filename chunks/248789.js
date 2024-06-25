@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(359119),
   h = n(473092),
   m = n(177342),
-  p = n(134612),
-  E = n(689938);
+  E = n(134612),
+  p = n(689938);
 
 function g(e) {
   let {
@@ -64,7 +64,7 @@ function g(e) {
           })
         }
       }, {
-        modalKey: p.X_
+        modalKey: E.X_
       }), x(h.NM.USER_BANNER_OPEN_SAFETY_TOOLS)
     }, [t, f, g, x]),
     N = i.useCallback(() => {
@@ -102,15 +102,15 @@ function g(e) {
     warningId: g,
     senderId: f,
     warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
-    header: E.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_HEADER,
-    description: E.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_DESCRIPTION,
+    header: p.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_HEADER,
+    description: p.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_DESCRIPTION,
     onDismiss: C,
     buttons: [{
-      text: E.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_OPEN_SAFETY_TOOLS_BUTTON,
+      text: p.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_OPEN_SAFETY_TOOLS_BUTTON,
       color: r.Button.Colors.BRAND,
       onclick: T
     }, ..._ ? [] : [{
-      text: E.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_BLOCK_BUTTON,
+      text: p.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_BLOCK_BUTTON,
       color: r.Button.Colors.PRIMARY,
       onclick: S
     }]]

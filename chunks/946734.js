@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(150039),
   h = n(171368),
   m = n(271383),
-  p = n(430824),
-  E = n(594174),
+  E = n(430824),
+  p = n(594174),
   g = n(514342),
   f = n(502568),
   C = n(602623),
@@ -76,7 +76,7 @@ class v {
         let [t, n] = e;
         return [t, n.map(e => {
           var t;
-          return null === (t = p.Z.getGuild(e)) || void 0 === t ? void 0 : t.name
+          return null === (t = E.Z.getGuild(e)) || void 0 === t ? void 0 : t.name
         }).filter(I.lm)]
       }).value()
     })), S(this, "renderMoreAvatars", () => (0, l.jsx)(o.TooltipContainer, {
@@ -115,7 +115,7 @@ function A(e) {
       userId: t,
       channelId: n,
       analyticsLocations: l
-    } = e, s = (0, r.e7)([E.default], () => E.default.getUser(t), [t]), [a] = i.useState(() => new v({
+    } = e, s = (0, r.e7)([p.default], () => p.default.getUser(t), [t]), [a] = i.useState(() => new v({
       user: s,
       userId: t,
       channelId: n,
@@ -149,7 +149,7 @@ function A(e) {
         let a = m.user,
           r = s[n];
         return null == r || null == a ? null : (0, l.jsx)(o.TooltipContainer, {
-          text: null === (i = p.Z.getGuild(r)) || void 0 === i ? void 0 : i.name,
+          text: null === (i = E.Z.getGuild(r)) || void 0 === i ? void 0 : i.name,
           position: "bottom",
           children: (0, l.jsx)("img", {
             alt: "",

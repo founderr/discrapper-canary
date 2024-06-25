@@ -18,8 +18,8 @@ var i = n(442837),
   d = n(726059),
   h = n(171368),
   m = n(981631),
-  p = n(689938),
-  E = n(667589);
+  E = n(689938),
+  p = n(667589);
 let g = (0, s.getAvatarSize)(s.AvatarSizes.SIZE_40);
 
 function f(e) {
@@ -29,7 +29,7 @@ function f(e) {
     onSelect: u
   } = e, d = (0, i.e7)([c.Z], () => c.Z.isMobileOnline(t.id));
   return (0, l.jsxs)(s.Clickable, {
-    className: E.listRow,
+    className: p.listRow,
     onClick: u,
     onContextMenu: e => {
       (0, a.jW)(e, async () => {
@@ -48,11 +48,11 @@ function f(e) {
       size: s.AvatarSizes.SIZE_40,
       status: o,
       isMobile: d,
-      className: E.listAvatar
+      className: p.listAvatar
     }), (0, l.jsx)(r.Z, {
       user: t,
-      className: E.listName,
-      discriminatorClass: E.listDiscriminator
+      className: p.listName,
+      discriminatorClass: p.listDiscriminator
     })]
   })
 }
@@ -84,18 +84,18 @@ function C(e) {
     })
   };
   return (0, l.jsx)(s.ScrollerThin, {
-    className: E.listScroller,
+    className: p.listScroller,
     fade: !0,
     children: null == i ? (0, l.jsx)("div", {
-      className: E.empty,
+      className: p.empty,
       children: (0, l.jsx)(s.Spinner, {})
     }) : 0 === i.length ? (0, l.jsxs)("div", {
-      className: E.empty,
+      className: p.empty,
       children: [(0, l.jsx)("div", {
-        className: E.emptyIconFriends
+        className: p.emptyIconFriends
       }), (0, l.jsx)("div", {
-        className: E.emptyText,
-        children: p.Z.Messages.NO_MUTUAL_FRIENDS
+        className: p.emptyText,
+        children: E.Z.Messages.NO_MUTUAL_FRIENDS
       })]
     }) : i.map(e => {
       let {

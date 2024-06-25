@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return E
+    return p
   }
 });
 var l = n(735250);
@@ -15,29 +15,29 @@ var i = n(512722),
   d = n(623829),
   h = n(480032),
   m = n(699352);
-let p = null;
+let E = null;
 
-function E(e) {
+function p(e) {
   let {
     onDismiss: t,
     onAccept: n,
     popoutPosition: i,
     gameConsoleAccounts: a
   } = e;
-  s()(a.length > 0, "Rendering ConsoleNUXTooltip without a game console account"), (null == p || null == a.find(e => e.type === p)) && (p = r().shuffle(a)[0].type);
-  let E = null,
+  s()(a.length > 0, "Rendering ConsoleNUXTooltip without a game console account"), (null == E || null == a.find(e => e.type === E)) && (E = r().shuffle(a)[0].type);
+  let p = null,
     g = null;
-  switch (p) {
+  switch (E) {
     case c.ABu.XBOX:
-      E = u.Z.Messages.CONSOLE_NUX_TOOLTIP_BODY_XBOX, g = m;
+      p = u.Z.Messages.CONSOLE_NUX_TOOLTIP_BODY_XBOX, g = m;
       break;
     case c.ABu.PLAYSTATION:
     case c.ABu.PLAYSTATION_STAGING:
-      E = u.Z.Messages.CONSOLE_NUX_TOOLTIP_BODY_PS5, g = h
+      p = u.Z.Messages.CONSOLE_NUX_TOOLTIP_BODY_PS5, g = h
   }
   return (0, l.jsx)(o.ZP, {
     header: u.Z.Messages.CONSOLE_NUX_TOOLTIP_HEADER,
-    content: E,
+    content: p,
     asset: (0, l.jsx)("img", {
       src: g,
       alt: "",

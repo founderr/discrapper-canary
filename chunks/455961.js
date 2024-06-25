@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(481060),
   h = n(846027),
   m = n(607070),
-  p = n(361291),
-  E = n(131951),
+  E = n(361291),
+  p = n(131951),
   g = n(626135),
   f = n(120522),
   C = n(386542),
@@ -60,7 +60,7 @@ function L(e) {
     channel: t
   } = e, n = (0, c.e7)([m.Z], () => m.Z.useReducedMotion), [s, a] = i.useState(!1), {
     preset: o
-  } = (0, c.cj)([p.Z], () => p.Z.getState()), C = (0, c.e7)([E.Z], () => E.Z.getGoLiveSource()), x = i.useCallback(() => {
+  } = (0, c.cj)([E.Z], () => E.Z.getState()), C = (0, c.e7)([p.Z], () => p.Z.getGoLiveSource()), x = i.useCallback(() => {
     a(!0), (0, f.S)(r.q.STREAM_HIGH_QUALITY).then(e => {
       if (e) {
         if ((0, I.J1)(!(0, _.mc)(R, j)), g.default.track(N.rMx.PERK_DEMO_OFFER_ACCEPTED, {

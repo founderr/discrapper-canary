@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(749210),
   h = n(607070),
   m = n(391650),
-  p = n(645896),
-  E = n(353093),
+  E = n(645896),
+  p = n(353093),
   g = n(717057),
   f = n(693546),
   C = n(881952),
@@ -41,9 +41,9 @@ var l = n(735250),
   k = n(981631),
   w = n(815660),
   H = n(689938),
-  B = n(796340);
+  G = n(796340);
 
-function G(e, t, n) {
+function B(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -68,7 +68,7 @@ class V extends i.PureComponent {
       clanInfo: i
     } = this.props;
     if (!l && !e.shouldShowLurkerModeSuccessPopout && t && null != n) {
-      if ((0, E.EJ)(n) && null == i) return;
+      if ((0, p.EJ)(n) && null == i) return;
       this.setState({
         shouldShowLurkerModeSuccessPopout: !0
       })
@@ -86,8 +86,8 @@ class V extends i.PureComponent {
       newAccount: d,
       accountDeadline: h,
       theme: m,
-      children: p,
-      canSendMessages: E,
+      children: E,
+      canSendMessages: p,
       channelFollowingUsersSeen: g,
       showLurkerModeUpsellPopout: f,
       showMemberVerificationModal: C,
@@ -101,7 +101,7 @@ class V extends i.PureComponent {
       theme: m,
       useReducedMotion: _
     };
-    if (e && !E) {
+    if (e && !p) {
       if (S.message = H.Z.Messages.FOLLOW_NEWS_CHAT_INPUT_MESSAGE, null != g && g >= 1e3) {
         let e = 1e3 * Math.floor(g / 1e3);
         S.subtitle = H.Z.Messages.FOLLOW_NEWS_CHAT_INPUT_SUBTITLE.format({
@@ -147,21 +147,21 @@ class V extends i.PureComponent {
             position: "top",
             children: e => (0, l.jsx)(o.Clickable, {
               ...e,
-              className: B.clickableChannelTextArea,
+              className: G.clickableChannelTextArea,
               onClick: this.handleTextAreaClick,
-              children: p
+              children: E
             })
-          }) : p]
+          }) : E]
         })
       })
     })
   }
   constructor(...e) {
-    super(...e), G(this, "state", {
+    super(...e), B(this, "state", {
       submitting: !1,
       shouldShowLurkerModeUpsellPopout: !1,
       shouldShowLurkerModeSuccessPopout: !1
-    }), G(this, "renderSuccessPopout", e => {
+    }), B(this, "renderSuccessPopout", e => {
       let {
         closePopout: t
       } = e, {
@@ -171,7 +171,7 @@ class V extends i.PureComponent {
         onClose: t,
         guild: n
       })
-    }), G(this, "handleCancelApplication", () => {
+    }), B(this, "handleCancelApplication", () => {
       let {
         guild: e
       } = this.props;
@@ -187,7 +187,7 @@ class V extends i.PureComponent {
           children: H.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION_SUBTITLE
         })
       }))
-    }), G(this, "handleViewApplicationRejection", () => {
+    }), B(this, "handleViewApplicationRejection", () => {
       let {
         guild: e
       } = this.props;
@@ -200,14 +200,14 @@ class V extends i.PureComponent {
           ...n
         })
       })
-    }), G(this, "handleShowMemberVerification", () => {
+    }), B(this, "handleShowMemberVerification", () => {
       let {
         guild: e
       } = this.props;
       null != e && (0, _.hk)(e.id)
-    }), G(this, "handleClaimAccount", () => {
+    }), B(this, "handleClaimAccount", () => {
       m.j()
-    }), G(this, "handleVerifyPhone", () => {
+    }), B(this, "handleVerifyPhone", () => {
       (0, o.openModalLazy)(async () => {
         let {
           default: e
@@ -219,7 +219,7 @@ class V extends i.PureComponent {
       }, {
         modalKey: w.M
       })
-    }), G(this, "handleResendVerification", () => {
+    }), B(this, "handleResendVerification", () => {
       var e;
       c.Z.verifyResend();
       let t = null === (e = b.default.getCurrentUser()) || void 0 === e ? void 0 : e.email;
@@ -235,14 +235,14 @@ class V extends i.PureComponent {
           })
         })
       }))
-    }), G(this, "handleTextAreaClick", () => {
+    }), B(this, "handleTextAreaClick", () => {
       let {
         showLurkerModeUpsellPopout: e
       } = this.props;
       this.setState({
         shouldShowLurkerModeUpsellPopout: e
       })
-    }), G(this, "handleJoinServer", async () => {
+    }), B(this, "handleJoinServer", async () => {
       this.setState({
         submitting: !0
       });
@@ -256,11 +256,11 @@ class V extends i.PureComponent {
           submitting: !1
         })
       }
-    }), G(this, "handleGoBack", () => {
+    }), B(this, "handleGoBack", () => {
       this.setState({
         submitting: !0
       }), (0, M.s1)().goBack()
-    }), G(this, "handleFollowAnnouncement", () => {
+    }), B(this, "handleFollowAnnouncement", () => {
       let {
         channel: e
       } = this.props;
@@ -273,11 +273,11 @@ class V extends i.PureComponent {
           ...n
         })
       })
-    }), G(this, "closeLurkerModeUpsellPopout", () => {
+    }), B(this, "closeLurkerModeUpsellPopout", () => {
       this.setState({
         shouldShowLurkerModeUpsellPopout: !1
       })
-    }), G(this, "renderLurkerModeUpsellPopout", () => {
+    }), B(this, "renderLurkerModeUpsellPopout", () => {
       let {
         guild: e
       } = this.props;
@@ -286,7 +286,7 @@ class V extends i.PureComponent {
         guild: e,
         closePopout: this.closeLurkerModeUpsellPopout
       })
-    }), G(this, "renderMemberVerificationSuccessModal", () => {
+    }), B(this, "renderMemberVerificationSuccessModal", () => {
       let {
         guild: e,
         guildJoinRequest: t
@@ -295,7 +295,7 @@ class V extends i.PureComponent {
       let i = () => {
         f.Z.ackUserGuildJoinRequest(e.id, t.joinRequestId)
       };
-      return (0, E.EJ)(e) ? (0, l.jsx)(o.Modal, {
+      return (0, p.EJ)(e) ? (0, l.jsx)(o.Modal, {
         renderModal: t => (0, l.jsx)(g.Z, {
           ...t,
           onAccept: i,
@@ -322,10 +322,10 @@ function F(e) {
   } = e, o = s.getGuildId(), c = (0, r.e7)([O.Z], () => O.Z.getGuild(o)), u = (0, r.e7)([P.Z], () => P.Z.getCheck(o)), d = s.type === k.d4z.GUILD_ANNOUNCEMENT && null != c && c.hasFeature(k.oNc.NEWS), m = (0, r.e7)([j.Z], () => d ? j.Z.getFollowerStatsForChannel(s.id) : null), g = (0, r.e7)([Z.Z], () => Z.Z.isLurking(o)), f = (0, r.e7)([b.default], () => b.default.getCurrentUser()), _ = null !== (t = null == f ? void 0 : f.isStaff()) && void 0 !== t && t, T = (0, r.e7)([L.ZP], () => {
     var e, t;
     return null != f && null !== (t = null === (e = L.ZP.getMember(o, f.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t
-  }), S = !!(null == c ? void 0 : c.hasVerificationGate()), v = (T || u.notClaimed) && S, A = (0, r.e7)([N.Z], () => N.Z.shouldShowPopout(o)), M = (0, r.e7)([y.Z], () => y.Z.can(k.Plq.SEND_MESSAGES, s)), U = (0, r.e7)([x.Z], () => x.Z.getRequest(o)), [w, H] = (0, p.L_)(o), B = (0, p.Cc)(o), G = (null == U ? void 0 : U.applicationStatus) === I.wB.APPROVED;
+  }), S = !!(null == c ? void 0 : c.hasVerificationGate()), v = (T || u.notClaimed) && S, A = (0, r.e7)([N.Z], () => N.Z.shouldShowPopout(o)), M = (0, r.e7)([y.Z], () => y.Z.can(k.Plq.SEND_MESSAGES, s)), U = (0, r.e7)([x.Z], () => x.Z.getRequest(o)), [w, H] = (0, E.L_)(o), G = (0, E.Cc)(o), B = (null == U ? void 0 : U.applicationStatus) === I.wB.APPROVED;
   i.useEffect(() => {
-    if (!(!(0, E.EJ)(c) || !G || (0, C.d3)(U)) && null == B) H()
-  }, [c, G, U, B]);
+    if (!(!(0, p.EJ)(c) || !B || (0, C.d3)(U)) && null == G) H()
+  }, [c, B, U, G]);
   let F = {
     ...u,
     guild: c,
@@ -343,7 +343,7 @@ function F(e) {
     useReducedMotion: h.Z.useReducedMotion,
     isStaff: _,
     isLoading: w,
-    clanInfo: B
+    clanInfo: G
   };
   return (0, l.jsx)(V, {
     ...F,

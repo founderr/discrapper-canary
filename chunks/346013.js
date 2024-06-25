@@ -46,7 +46,7 @@ function y(e) {
     channel: B
   } = e, k = (0, Z.J)(r, y), {
     setPopout: G
-  } = (0, A.Z)(y.id, D.d$), F = (0, S.qo)(y, B, G, !0), V = f.QK.useSetting(), w = (0, v.n)(), [H, Y] = i.useState(!1), [W, z] = i.useState((null == k ? void 0 : k.coverImage) == null), K = (0, d.e7)([_.Z], () => _.Z.useReducedMotion), Q = (0, d.e7)([R.ZP, O.default], () => {
+  } = (0, A.Z)(y.id, D.d$), F = (0, S.qo)(y, B, G, !0), V = f.QK.useSetting(), w = (0, v.n)(), [H, Y] = i.useState(!1), [W, K] = i.useState((null == k ? void 0 : k.coverImage) == null), z = (0, d.e7)([_.Z], () => _.Z.useReducedMotion), Q = (0, d.e7)([R.ZP, O.default], () => {
     var e;
     return R.ZP.isMember(null == k ? void 0 : k.guildId, null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
   }, [k]), X = (0, d.e7)([R.ZP], () => (null == k ? void 0 : k.authorId) != null ? R.ZP.getMember(k.guildId, k.authorId) : null), [q, J] = i.useMemo(() => {
@@ -106,7 +106,7 @@ function y(e) {
           [U.spoiler]: k.shouldSpoiler
         }),
         onContextMenu: F,
-        onError: () => z(!0)
+        onError: () => K(!0)
       }) : (0, s.jsx)(N.Z, {
         src: !(w && (V || H)) && ed ? "".concat(eu, "?format=png") : eu,
         backgroundSrc: "".concat(eu, "?format=png"),
@@ -117,7 +117,7 @@ function y(e) {
         }),
         imageChildClassName: U.thumbnailImage,
         onContextMenu: F,
-        onError: () => z(!0)
+        onError: () => K(!0)
       })), null != k.coverImageOverlayText && (0, s.jsx)(E.Clickable, {
         onClick: ei,
         children: (0, s.jsx)("div", {
@@ -212,7 +212,7 @@ function y(e) {
             children: k.ctaText
           })
         }) : (0, s.jsx)(E.ShinyButton, {
-          pauseAnimation: K,
+          pauseAnimation: z,
           onClick: ei,
           className: a()(U.__invalid_ctaButtonContent, U.subscribeButton),
           color: E.Button.Colors.CUSTOM,

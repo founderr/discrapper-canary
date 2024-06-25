@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(873546),
   h = n(442837),
   m = n(902704),
-  p = n(481060),
-  E = n(239091),
+  E = n(481060),
+  p = n(239091),
   g = n(941028),
   f = n(144144),
   C = n(276264),
@@ -41,8 +41,8 @@ var l = n(735250),
   k = n(594174),
   w = n(153124),
   H = n(151827),
-  B = n(176278),
-  G = n(585483),
+  G = n(176278),
+  B = n(585483),
   V = n(823379),
   F = n(51144),
   z = n(998502),
@@ -90,12 +90,12 @@ class $ extends i.Component {
       channel: u,
       guildId: h,
       isTyping: m,
-      isMobileOnline: E,
+      isMobileOnline: p,
       lastOnlineTimestamp: g,
       premiumSince: f,
       ..._
     } = this.props, I = null != f ? new Date(f) : null;
-    return (0, l.jsx)(p.Popout, {
+    return (0, l.jsx)(E.Popout, {
       preload: () => (0, P.W)(s, {
         channelId: u.id,
         guildId: h
@@ -104,10 +104,10 @@ class $ extends i.Component {
       position: d.tq ? "window_center" : "left",
       spacing: 16,
       onShiftClick: this.handleShiftClick,
-      children: (d, p) => {
+      children: (d, E) => {
         let {
           isShown: f
-        } = p;
+        } = E;
         return (0, l.jsx)(C.Z, {
           className: K.member,
           onContextMenu: this.renderUserContextMenu,
@@ -125,7 +125,7 @@ class $ extends i.Component {
           isTyping: m,
           channel: u,
           guildId: h,
-          isMobile: E,
+          isMobile: p,
           onClickPremiumGuildIcon: this.openGuildSubscriptionModal,
           selected: f,
           itemProps: _,
@@ -137,7 +137,7 @@ class $ extends i.Component {
   }
   constructor(...e) {
     super(...e), q(this, "renderUserContextMenu", e => {
-      (0, E.jW)(e, async () => {
+      (0, p.jW)(e, async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("79695"), n.e("32006"), n.e("12435"), n.e("7717")]).then(n.bind(n, 757387));
@@ -156,7 +156,7 @@ class $ extends i.Component {
       } = this.props, n = "@".concat(F.ZP.getUserTag(e, {
         decoration: "never"
       })), l = "<@".concat(e.id, ">");
-      G.S.dispatchToLastSubscribed(W.CkL.INSERT_TEXT, {
+      B.S.dispatchToLastSubscribed(W.CkL.INSERT_TEXT, {
         plainText: n,
         rawText: l
       }), f.Z.startTyping(t.id)
@@ -197,7 +197,7 @@ let ee = i.memo(e => {
       status: r,
       isGuildEligibleForRecentlyOnline: o,
       index: u
-    } = e, d = (0, c.JA)("".concat(u)), m = (0, h.e7)([U.Z], () => U.Z.isTyping(s.id, a.id)), p = (0, h.e7)([k.default], () => k.default.getCurrentUser()), E = (0, h.e7)([D.Z], () => {
+    } = e, d = (0, c.JA)("".concat(u)), m = (0, h.e7)([U.Z], () => U.Z.isTyping(s.id, a.id)), E = (0, h.e7)([k.default], () => k.default.getCurrentUser()), p = (0, h.e7)([D.Z], () => {
       var e;
       return null != t ? null === (e = D.Z.getRole(s.guild_id, t)) || void 0 === e ? void 0 : e.name : void 0
     }, [s, t]);
@@ -209,8 +209,8 @@ let ee = i.memo(e => {
       ...n,
       ...d,
       isTyping: m,
-      currentUser: p,
-      colorRoleName: E
+      currentUser: E,
+      colorRoleName: p
     })
   }),
   et = i.memo(function(e) {
@@ -231,14 +231,14 @@ let ee = i.memo(e => {
       })
     }) : (0, l.jsxs)(H.Z, {
       className: K.membersGroup,
-      children: [(0, l.jsx)(p.HiddenVisually, {
+      children: [(0, l.jsx)(E.HiddenVisually, {
         children: Y.Z.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
           title: n,
           count: i
         })
       }), (0, l.jsxs)("span", {
         "aria-hidden": !0,
-        children: [null != a ? (0, l.jsx)(B.Z, {
+        children: [null != a ? (0, l.jsx)(G.Z, {
           className: K.roleIcon,
           ...a
         }) : null, n, " — ", i]
@@ -301,14 +301,14 @@ class el extends i.Component {
       listId: t,
       channel: n
     } = this.props;
-    return (0, l.jsx)(p.FocusJumpSection, {
+    return (0, l.jsx)(E.FocusJumpSection, {
       children: i => (0, l.jsx)(w.FG, {
         children: s => (0, l.jsx)("aside", {
           className: a()(K.membersWrap, K.hiddenMembers),
           "aria-labelledby": s,
-          children: (0, l.jsx)(p.HeadingLevel, {
-            component: (0, l.jsx)(p.HiddenVisually, {
-              children: (0, l.jsx)(p.H, {
+          children: (0, l.jsx)(E.HeadingLevel, {
+            component: (0, l.jsx)(E.HiddenVisually, {
+              children: (0, l.jsx)(E.H, {
                 id: s,
                 children: Y.Z.Messages.MEMBERS_LIST_LANDMARK_LABEL.format({
                   channel: n.name
@@ -322,7 +322,7 @@ class el extends i.Component {
                   role: r,
                   ...o
                 } = n;
-                return (0, l.jsx)(p.List, {
+                return (0, l.jsx)(E.List, {
                   innerRole: r,
                   innerAriaLabel: Y.Z.Messages.MEMBERS,
                   ref: e => {
@@ -408,8 +408,8 @@ class el extends i.Component {
             nick: d,
             activities: h,
             applicationStream: m,
-            premiumSince: p,
-            lastOnlineTimestamp: E
+            premiumSince: E,
+            lastOnlineTimestamp: p
           } = r;
           return (0, l.jsx)(ee, {
             colorString: e,
@@ -422,10 +422,10 @@ class el extends i.Component {
             applicationStream: m,
             channel: s,
             guildId: s.guild_id,
-            premiumSince: p,
+            premiumSince: E,
             isMobileOnline: u,
             index: i,
-            lastOnlineTimestamp: a ? E : void 0,
+            lastOnlineTimestamp: a ? p : void 0,
             isGuildEligibleForRecentlyOnline: this.props.isGuildEligibleForRecentlyOnline
           }, "member-".concat(r.user.id))
         }
@@ -523,8 +523,8 @@ function ei(e) {
   } = (0, T.ZP)(I.Z.MEMBER_LIST), r = (0, h.e7)([_.Z], () => _.Z.keyboardModeEnabled), o = (0, h.cj)([b.ZP], () => b.ZP.getProps(t.guild_id, t.id)), {
     rows: d,
     groups: m,
-    version: p,
-    updateMaxRowSeen: E
+    version: E,
+    updateMaxRowSeen: p
   } = (0, A.H)({
     memberStoreProps: o,
     channelId: t.id,
@@ -578,12 +578,12 @@ function ei(e) {
         children: (0, l.jsx)(el, {
           ...e,
           ...o,
-          version: p,
+          version: E,
           groups: m,
           rows: d,
           listRef: g,
           isGuildEligibleForRecentlyOnline: Z,
-          updateMaxContentFeedRowSeen: E
+          updateMaxContentFeedRowSeen: p
         })
       })
     })

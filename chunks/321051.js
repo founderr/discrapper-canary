@@ -4,8 +4,8 @@ s.d(n, {
   }
 }), s(47120);
 var l = s(735250),
-  t = s(470079),
-  i = s(692547),
+  i = s(470079),
+  t = s(692547),
   r = s(481060),
   a = s(697426),
   c = s(603074),
@@ -17,7 +17,7 @@ function _(e) {
   let {
     onSelect: n,
     sound: s
-  } = e, [_, m] = t.useState(!1);
+  } = e, [_, m] = i.useState(!1);
 
   function I(e) {
     m(!1), null == n || n(e)
@@ -69,7 +69,7 @@ function _(e) {
       children: null == s ? (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)(r.SoundboardIcon, {
           size: "custom",
-          color: i.Z.colors.WHITE,
+          color: t.Z.colors.WHITE,
           className: u.soundIcon,
           width: 14,
           height: 14

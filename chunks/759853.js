@@ -1,8 +1,8 @@
 n(47120);
 var s = n(735250),
   o = n(470079),
-  a = n(887024),
-  r = n(920906),
+  r = n(887024),
+  a = n(920906),
   l = n(442837),
   i = n(110924),
   c = n(607070),
@@ -16,28 +16,28 @@ t.Z = e => {
   var t;
   let {
     quest: n,
-    progressBarRef: C,
-    isExpanded: h
+    progressBarRef: h,
+    isExpanded: C
   } = e, {
-    completionSpring: S,
+    completionSpring: f,
     startCompletionAnimation: E
-  } = (0, d.GX)(), f = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, v = o.useRef(!1), T = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), N = o.useRef(null), j = (0, l.e7)([u.Z], () => u.Z.hasLayers()), _ = (0, i.Z)(j), [A, B] = o.useState(null), [R, M] = o.useState(null), y = o.useRef(new a.qA({
+  } = (0, d.GX)(), S = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, v = o.useRef(!1), T = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), j = o.useRef(null), N = (0, l.e7)([u.Z], () => u.Z.hasLayers()), _ = (0, i.Z)(N), [A, B] = o.useState(null), [R, y] = o.useState(null), M = o.useRef(new r.qA({
     gravity: 0,
     wind: 0
-  })), O = (0, a.uR)(A, R), U = o.useCallback(() => {
+  })), O = (0, r.uR)(A, R), U = o.useCallback(() => {
     if (T) return;
-    let e = C.current,
-      t = N.current;
+    let e = h.current,
+      t = j.current;
     if (null != t && null != e && O.isReady) {
-      var n, s, o, a;
+      var n, s, o, r;
       let {
-        x: r,
+        x: a,
         y: l
       } = e.getBoundingClientRect(), {
         x: i,
         y: c
       } = t.getBoundingClientRect();
-      O.createMultipleConfetti((n = r - i, s = l - c, o = e.clientHeight, a = e.clientWidth, {
+      O.createMultipleConfetti((n = a - i, s = l - c, o = e.clientHeight, r = e.clientWidth, {
         ...p.We,
         position: {
           type: "static-random",
@@ -47,7 +47,7 @@ t.Z = e => {
           },
           maxValue: {
             x: n + o,
-            y: s + a
+            y: s + r
           }
         },
         velocity: {
@@ -77,30 +77,30 @@ t.Z = e => {
         }
       }), 100)
     }
-  }, [C, N, O, T]), b = (0, i.Z)(h);
+  }, [h, j, O, T]), Z = (0, i.Z)(C);
   return (o.useEffect(() => {
-    f && h && !b && (E(), U())
-  }, [h, f, E, U, b]), o.useEffect(() => {
-    f && !j && _ && setTimeout(() => {
+    S && C && !Z && (E(), U())
+  }, [C, S, E, U, Z]), o.useEffect(() => {
+    S && !N && _ && setTimeout(() => {
       E(), U()
     }, 200)
-  }, [f, _, j, E, U]), o.useEffect(() => {
-    if (!!O.isReady) !v.current && f && (E(), U()), v.current = f
-  }, [f, v, U, E, O]), T) ? null : (0, s.jsxs)("div", {
+  }, [S, _, N, E, U]), o.useEffect(() => {
+    if (!!O.isReady) !v.current && S && (E(), U()), v.current = S
+  }, [S, v, U, E, O]), T) ? null : (0, s.jsxs)("div", {
     className: x.wrapper,
     "aria-hidden": "true",
-    ref: N,
-    children: [(0, s.jsx)(r.animated.div, {
+    ref: j,
+    children: [(0, s.jsx)(a.animated.div, {
       className: x.background,
       style: {
-        opacity: S
+        opacity: f
       }
-    }), (0, s.jsx)(a.O_, {
+    }), (0, s.jsx)(r.O_, {
       ref: B,
       className: x.confetti,
-      environment: y.current
-    }), (0, s.jsx)(a.Ji, {
-      ref: M,
+      environment: M.current
+    }), (0, s.jsx)(r.Ji, {
+      ref: y,
       sprites: [m],
       colors: g,
       spriteWidth: p.Ko,

@@ -10,8 +10,8 @@ var l = n(735250),
   d = n(644810),
   h = n(206295),
   m = n(335326),
-  p = n(297781),
-  E = n(591853),
+  E = n(297781),
+  p = n(591853),
   g = n(689938);
 let f = (e, t, n) => {
     let l = g.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
@@ -52,8 +52,8 @@ t.Z = e => {
       channelId: e
     })
   }, [t, n, T, S, x, N, Z, I]);
-  return null == I ? null : (0, l.jsxs)(E.yR, {
-    children: [(0, l.jsx)(E.wG, {
+  return null == I ? null : (0, l.jsxs)(p.yR, {
+    children: [(0, l.jsx)(p.wG, {
       thumbnailSrc: x,
       channel: t,
       entry: n,
@@ -64,14 +64,14 @@ t.Z = e => {
         size: "xs",
         color: a.Z.colors.CONTENT_INVENTORY_OVERLAY_UI_MOD
       }),
-      badges: (0, l.jsx)(p.Gk, {
-        location: p.Gt.POPOUT,
+      badges: (0, l.jsx)(E.Gk, {
+        location: E.Gt.POPOUT,
         children: m.td.map((e, t) => (0, l.jsx)(e, {
           entry: n
         }, t))
       })
-    }), (0, l.jsx)(E.St, {
-      children: (0, l.jsx)(E.WT, {
+    }), (0, l.jsx)(p.St, {
+      children: (0, l.jsx)(p.WT, {
         closePopout: _,
         user: I,
         channel: t,

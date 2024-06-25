@@ -22,24 +22,24 @@ function u(e) {
     handleScroll: d,
     handleSetScrollerRef: h,
     handleSetContainerRef: m
-  } = (0, o.Z)(t), p = (0, l.jsx)("div", {
+  } = (0, o.Z)(t), E = (0, l.jsx)("div", {
     className: c.tierPreviewsContainer,
     children: (0, l.jsx)("div", {
       className: s()(c.tierPreviews, i),
       children: n
     })
   });
-  return !a.tq && (p = (0, l.jsxs)(l.Fragment, {
+  return !a.tq && (E = (0, l.jsxs)(l.Fragment, {
     children: [u, (0, l.jsx)(r.AdvancedScroller, {
       className: c.scroller,
       orientation: "horizontal",
       ref: h,
       onScroll: d,
-      children: p
+      children: E
     })]
   })), (0, l.jsx)("div", {
     className: c.carouselMaxWidth,
     ref: m,
-    children: p
+    children: E
   })
 }

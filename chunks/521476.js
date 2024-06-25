@@ -20,11 +20,11 @@ function h(e) {
     guild: h
   } = e, {
     analyticsLocations: m
-  } = (0, a.ZP)(s.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT), [p, E] = (0, o.ww)({
+  } = (0, a.ZP)(s.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT), [E, p] = (0, o.ww)({
     guildId: null !== (t = null == h ? void 0 : h.id) && void 0 !== t ? t : c.lds,
     analyticsLocations: m,
     openWithoutBackstack: !0
-  }), g = E ? u.Z.Messages.GUILD_AUTOMOD_PROFILE_INVALID_DESCRIPTION : u.Z.Messages.GUILD_AUTOMOD_PROFILE_INVALID_NO_PERMS_DESCRIPTION, f = E ? u.Z.Messages.GUILD_AUTOMOD_UPDATE_PROFILE_CTA : u.Z.Messages.GUILD_AUTOMOD_UPDATE_ACCOUNT_USERNAME_CTA;
+  }), g = p ? u.Z.Messages.GUILD_AUTOMOD_PROFILE_INVALID_DESCRIPTION : u.Z.Messages.GUILD_AUTOMOD_PROFILE_INVALID_NO_PERMS_DESCRIPTION, f = p ? u.Z.Messages.GUILD_AUTOMOD_UPDATE_PROFILE_CTA : u.Z.Messages.GUILD_AUTOMOD_UPDATE_ACCOUNT_USERNAME_CTA;
   return (0, l.jsx)("div", {
     children: (0, l.jsx)(r.i, {
       bannerIcon: (0, l.jsx)(i.ChatXIcon, {
@@ -40,7 +40,7 @@ function h(e) {
       headerStyles: d.bannerHeader,
       children: (0, l.jsx)(i.Button, {
         onClick: () => {
-          p()
+          E()
         },
         size: i.Button.Sizes.SMALL,
         children: f

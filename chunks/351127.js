@@ -3,13 +3,13 @@ n.d(t, {
     return g
   },
   Ov: function() {
-    return E
+    return p
   },
   Qn: function() {
     return m
   },
   _o: function() {
-    return p
+    return E
   },
   pd: function() {
     return h
@@ -30,9 +30,9 @@ let d = [c.Plq.USE_CLYDE_AI],
     if (null == t) throw Error("Permission ".concat(e, " not found in Permissions"));
     return t
   }),
-  p = new Set(c.yYS);
+  E = new Set(c.yYS);
 
-function E(e, t) {
+function p(e, t) {
   return e === t
 }
 
@@ -44,13 +44,13 @@ function g(e, t, n) {
       h = r.default.getUser(e);
     if (null == u || null == d || null == h) return i;
     let m = a.Z.getRole(u.id, u.getEveryoneRoleId()),
-      p = o.uB({
+      E = o.uB({
         user: h,
         context: u
       });
     for (let e of n) {
       let t = c.Plq[e];
-      if (!!l.e$(p, t)) {
+      if (!!l.e$(E, t)) {
         for (let n of (i[e] = [], d.roles)) {
           let s = a.Z.getRole(u.id, n);
           if (null != s)(l.e$(s.permissions, c.Plq.ADMINISTRATOR) || l.Db(s.permissions, t)) && i[e].push(s.id)

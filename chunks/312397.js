@@ -734,7 +734,7 @@ class em extends i.PureComponent {
       (0, I.openModalLazy)(async () => {
         let {
           default: i
-        } = await Promise.all([t.e("99387"), t.e("75409")]).then(t.bind(t, 850085));
+        } = await Promise.all([t.e("99387"), t.e("22872")]).then(t.bind(t, 850085));
         return t => (0, n.jsx)(i, {
           onCrop: this.handleIconChange,
           imgURI: e,
@@ -762,7 +762,7 @@ class em extends i.PureComponent {
       }(0, I.openModalLazy)(async () => {
         let {
           default: i
-        } = await Promise.all([t.e("99387"), t.e("75409")]).then(t.bind(t, 850085));
+        } = await Promise.all([t.e("99387"), t.e("22872")]).then(t.bind(t, 850085));
         return t => (0, n.jsx)(i, {
           imgURI: e,
           file: s,

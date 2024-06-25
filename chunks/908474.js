@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return p
+    return E
   }
 });
 var l = n(735250),
@@ -15,10 +15,10 @@ var l = n(735250),
   h = n(689938),
   m = n(332513);
 
-function p(e) {
+function E(e) {
   let {
     member: t
-  } = e, n = t.userId, p = t.guildId, E = (0, s.e7)([c.Z], () => c.Z.getEnhancedMember(p, n), [n, p]), g = (null != E ? E : t).unusualDMActivityUntil, f = i.useCallback(e => {
+  } = e, n = t.userId, E = t.guildId, p = (0, s.e7)([c.Z], () => c.Z.getEnhancedMember(E, n), [n, E]), g = (null != p ? p : t).unusualDMActivityUntil, f = i.useCallback(e => {
     if (null == e) return null;
     let t = new Date(e).getTime();
     return (0, o.fv)(t, o.jq.JOINED_AT)

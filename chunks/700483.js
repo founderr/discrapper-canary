@@ -10,8 +10,8 @@ var l = n(735250),
   d = n(358221),
   h = n(659580),
   m = n(793865),
-  p = n(575175),
-  E = n(258609),
+  E = n(575175),
+  p = n(258609),
   g = n(74299),
   f = n(924301),
   C = n(459502),
@@ -37,8 +37,8 @@ var l = n(735250),
   k = n(922482),
   w = n(200498),
   H = n(146085),
-  B = n(88751),
-  G = n(427679),
+  G = n(88751),
+  B = n(427679),
   V = n(71275),
   F = n(600518),
   z = n(485287),
@@ -128,9 +128,9 @@ function ei(e) {
     onSelect: n
   } = e, i = (0, u.bp)(), {
     canManageGuildEvent: s
-  } = (0, I.XJ)(t), c = (0, r.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id), [t.id]), d = (0, r.e7)([f.ZP], () => f.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)), h = (0, r.e7)([y.Z], () => y.Z.getVoiceChannelId() === t.id, [t.id]), {
+  } = (0, I.XJ)(t), c = (0, r.e7)([B.Z], () => B.Z.getStageInstanceByChannel(t.id), [t.id]), d = (0, r.e7)([f.ZP], () => f.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)), h = (0, r.e7)([y.Z], () => y.Z.getVoiceChannelId() === t.id, [t.id]), {
     suppress: m
-  } = (0, Z.Z)(t), p = L.default.getId(), [E] = (0, X.Z)(t), g = B.ZP.isModerator(p, t.id), C = (0, w.B)(t.id), _ = s(d);
+  } = (0, Z.Z)(t), E = L.default.getId(), [p] = (0, X.Z)(t), g = G.ZP.isModerator(E, t.id), C = (0, w.B)(t.id), _ = s(d);
   return h ? (g || _) && null != c ? (0, l.jsx)(o.Popout, {
     renderPopout: e => {
       let {
@@ -177,7 +177,7 @@ function ei(e) {
         popoutOpen: a
       })
     }
-  }) : m && !C || E ? (0, l.jsx)(o.Button, {
+  }) : m && !C || p ? (0, l.jsx)(o.Button, {
     size: o.Button.Sizes.MEDIUM,
     color: o.Button.Colors.RED,
     className: a()($.buttonSpacing, $.buttonWithTextButton),
@@ -293,13 +293,13 @@ let er = i.memo(function(e) {
     suppress: n,
     selfMute: i,
     mute: s
-  } = (0, Z.Z)(t), c = (0, w.B)(t.id), u = (0, r.e7)([E.Z], () => null != E.Z.getAwaitingRemoteSessionInfo()), {
+  } = (0, Z.Z)(t), c = (0, w.B)(t.id), u = (0, r.e7)([p.Z], () => null != p.Z.getAwaitingRemoteSessionInfo()), {
     cameraUnavailable: f,
     enabled: C
   } = (0, x.Z)(), _ = (0, N.Z)(t), {
     limit: I,
     reachedLimit: M
-  } = (0, T.Z)(t), L = (0, r.e7)([b.default], () => b.default.getCurrentUser()), P = (0, r.e7)([O.Z], () => (0, g.Z)(O.Z)), D = (0, r.e7)([y.Z], () => y.Z.getVoiceChannelId() === t.id, [t.id]), k = (0, r.e7)([d.Z], () => d.Z.getStreamParticipants(t.id)[0], [t.id]), H = (0, V.PK)(t.id), B = I > 0, G = M && !H || null != k && k.user.id !== (null == L ? void 0 : L.id);
+  } = (0, T.Z)(t), L = (0, r.e7)([b.default], () => b.default.getCurrentUser()), P = (0, r.e7)([O.Z], () => (0, g.Z)(O.Z)), D = (0, r.e7)([y.Z], () => y.Z.getVoiceChannelId() === t.id, [t.id]), k = (0, r.e7)([d.Z], () => d.Z.getStreamParticipants(t.id)[0], [t.id]), H = (0, V.PK)(t.id), G = I > 0, B = M && !H || null != k && k.user.id !== (null == L ? void 0 : L.id);
   if (null == L) return null;
   let F = (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(o.Popout, {
@@ -341,7 +341,7 @@ let er = i.memo(function(e) {
       exitFullScreen: () => null,
       canGoLive: P,
       hasPermission: _,
-      disabled: G
+      disabled: B
     })]
   });
   return (0, l.jsxs)("div", {
@@ -352,7 +352,7 @@ let er = i.memo(function(e) {
       channel: t
     }), D && !n ? (0, l.jsxs)("div", {
       className: a()($.avControls, $.buttonSpacing),
-      children: [B && I > 0 && F, (0, l.jsx)(o.Popout, {
+      children: [G && I > 0 && F, (0, l.jsx)(o.Popout, {
         renderPopout: e => {
           let {
             closePopout: t
@@ -381,7 +381,7 @@ let er = i.memo(function(e) {
             serverMute: s,
             suppress: n,
             popoutOpen: r,
-            onClick: () => (0, p.Z)(s, n),
+            onClick: () => (0, E.Z)(s, n),
             awaitingRemote: u
           })
         }

@@ -14,8 +14,8 @@ var a = t(913527),
   o = t(481060),
   u = t(822893),
   s = t(641051),
-  d = t(329461),
-  c = t(831267),
+  c = t(329461),
+  d = t(831267),
   E = t(448239),
   f = t(689938);
 
@@ -26,7 +26,7 @@ function I(e) {
     location: "a65531_1"
   }, {
     autoTrackExposure: !1
-  }), t = (0, l.e7)([d.Z], () => null != d.Z.getMessageReminders().find(n => n.messageId === e.id)), a = M(e, n => (0, u.BW)(e, r()().add(n, "millisecond").toDate()));
+  }), t = (0, l.e7)([c.Z], () => null != c.Z.getMessageReminders().find(n => n.messageId === e.id)), a = M(e, n => (0, u.BW)(e, r()().add(n, "millisecond").toDate()));
   return n ? (0, i.jsx)(o.MenuItem, {
     id: "mark-todo",
     label: t ? f.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : f.Z.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
@@ -37,7 +37,7 @@ function I(e) {
 }
 
 function M(e, n) {
-  return c.BS.map(e => {
+  return d.BS.map(e => {
     let {
       duration: t,
       getLabel: a

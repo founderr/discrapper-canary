@@ -8,9 +8,9 @@ t.d(n, {
 });
 var s = t(735250);
 t(470079);
-var a = t(120356),
-  r = t.n(a),
-  o = t(481060),
+var o = t(120356),
+  r = t.n(o),
+  a = t(481060),
   l = t(26866);
 let i = {
   RED: l.redMessageBlock,
@@ -22,10 +22,10 @@ function c(e) {
   let {
     color: n,
     icon: t,
-    children: a,
+    children: o,
     className: i
   } = e;
-  return (0, s.jsx)(o.FormErrorBlock, {
+  return (0, s.jsx)(a.FormErrorBlock, {
     icon: e => (0, s.jsx)(t, {
       height: 20,
       width: 20,
@@ -33,6 +33,6 @@ function c(e) {
     }),
     iconClassName: l.messageBlockIcon,
     className: r()(n, i),
-    children: a
+    children: o
   })
 }

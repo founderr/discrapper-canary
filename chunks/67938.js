@@ -17,9 +17,9 @@ var r = s(120356),
   C = s(872044),
   f = s(671581),
   p = s(830487),
-  g = s(602476);
+  E = s(602476);
 
-function E() {
+function g() {
   return (0, n.jsxs)("div", {
     className: c.attributionLogos,
     "aria-label": "Discord x Pocketpair",
@@ -54,7 +54,7 @@ function m(e) {
         className: c.bannerImage,
         alt: t.name,
         "aria-hidden": !0
-      }), (0, n.jsx)(E, {}), (0, n.jsx)("img", {
+      }), (0, n.jsx)(g, {}), (0, n.jsx)("img", {
         src: f,
         className: c.categoryLogo,
         alt: t.name,
@@ -70,7 +70,7 @@ function m(e) {
         children: t.summary
       })]
     }), (0, n.jsx)("img", {
-      src: g,
+      src: E,
       className: a()(c.overflowImage, c.overflowRight),
       alt: "",
       "aria-hidden": !0

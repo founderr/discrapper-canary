@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(863840),
   h = n(189432),
   m = n(727381),
-  p = n(313692),
-  E = n(596443),
+  E = n(313692),
+  p = n(596443),
   g = n(50493),
   f = n(981631);
 
@@ -109,14 +109,14 @@ function _(e) {
                 className: N
               });
             case g.k.MESSAGE_HISTORY:
-              return (0, l.jsx)(p.Z, {
+              return (0, l.jsx)(E.Z, {
                 userId: _,
                 guildId: I,
                 onNavigate: () => j(g.k.INFO),
                 className: N
               });
             case g.k.PERMISSIONS:
-              return (0, l.jsx)(E.Z, {
+              return (0, l.jsx)(p.Z, {
                 userId: _,
                 guildId: I,
                 onNavigate: () => j(g.k.INFO),

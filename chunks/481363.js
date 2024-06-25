@@ -23,14 +23,14 @@ function c(e) {
     buttonProps: {
       message: h,
       channel: m,
-      groupId: p,
-      compact: E = !1
+      groupId: E,
+      compact: p = !1
     }
-  } = e, g = h.state === r.yb.SENDING, f = h.id === p, C = (0, i.yE)(h.flags, r.iLy.EPHEMERAL), _ = h.state === r.yb.SEND_FAILED;
+  } = e, g = h.state === r.yb.SENDING, f = h.id === E, C = (0, i.yE)(h.flags, r.iLy.EPHEMERAL), _ = h.state === r.yb.SEND_FAILED;
   return g || C && !_ ? null : (0, l.jsx)(a.Z, {
     className: o.buttons,
     innerClassName: o.buttonsInner,
-    isHeader: !E && f && !(0, s.Z)(h),
+    isHeader: !p && f && !(0, s.Z)(h),
     channel: m,
     message: h,
     setPopout: t,

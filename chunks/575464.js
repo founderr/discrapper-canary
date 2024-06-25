@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return E
+    return p
   }
 });
 var l = n(735250);
@@ -15,14 +15,14 @@ var i = n(120356),
   d = n(158776),
   h = n(285952),
   m = n(51144),
-  p = n(864731);
+  E = n(864731);
 
-function E(e) {
+function p(e) {
   let {
     user: t,
     row: n,
     hideDiscriminator: i,
-    comparator: E,
+    comparator: p,
     selected: g,
     checked: f,
     onClick: C,
@@ -32,7 +32,7 @@ function E(e) {
   } = e, T = (0, r.e7)([d.Z], () => d.Z.getStatus(t.id)), N = (0, a.JA)(String(t.id));
   return (0, l.jsx)(o.Clickable, {
     id: "user-row-".concat(n),
-    className: p.friendWrapper,
+    className: E.friendWrapper,
     onClick: () => {
       null != C && C(t.id)
     },
@@ -46,35 +46,35 @@ function E(e) {
     "aria-posinset": x,
     children: (0, l.jsxs)(h.Z, {
       align: h.Z.Align.CENTER,
-      className: s()(p.friend, {
-        [p.friendSelected]: g
+      className: s()(E.friend, {
+        [E.friendSelected]: g
       }),
       children: [(0, l.jsx)(u.Z, {
         user: t,
         status: T,
-        className: p.avatar
+        className: E.avatar
       }), (0, l.jsxs)(h.Z, {
-        className: p.match,
+        className: E.match,
         align: h.Z.Align.BASELINE,
         children: [(0, l.jsx)(o.Text, {
           tag: "strong",
-          className: p.nickname,
+          className: E.nickname,
           "aria-hidden": !0,
           variant: "text-md/medium",
-          children: null != E && E === t.tag ? m.ZP.getName(t) : null != E && "" !== E ? E : m.ZP.getName(t)
+          children: null != p && p === t.tag ? m.ZP.getName(t) : null != p && "" !== p ? p : m.ZP.getName(t)
         }), (0, l.jsx)(c.Z, {
           user: t,
           hideDiscriminator: i,
-          className: p.discordTag,
-          usernameClass: p.__invalid_weightMedium,
-          discriminatorClass: p.__invalid_weightMedium,
+          className: E.discordTag,
+          usernameClass: E.__invalid_weightMedium,
+          discriminatorClass: E.__invalid_weightMedium,
           forceUsername: !0
         })]
       }), (0, l.jsx)(o.Checkbox, {
         displayOnly: !0,
         size: 22,
         value: f,
-        className: p.checkbox
+        className: E.checkbox
       })]
     })
   })

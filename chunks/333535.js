@@ -14,15 +14,15 @@ var l = n(735250),
   d = n(63063),
   h = n(158222),
   m = n(410992),
-  p = n(981631),
-  E = n(689938),
+  E = n(981631),
+  p = n(689938),
   g = n(263924);
 
 function f(e) {
   let {
     threadId: t
   } = e, n = (0, a.e7)([c.Z], () => c.Z.getChannel(t)), f = (0, a.e7)([c.Z], () => c.Z.getChannel(null == n ? void 0 : n.parent_id)), C = i.useCallback(() => {
-    null != n && null != f && ((0, o.yw)(p.rMx.MEDIA_POST_SHARE_PROMPT_CLICKED, {
+    null != n && null != f && ((0, o.yw)(E.rMx.MEDIA_POST_SHARE_PROMPT_CLICKED, {
       media_post_id: n.id
     }), (0, s.J)((0, u.EO)(n, f)))
   }, [n, f]);
@@ -33,12 +33,12 @@ function f(e) {
       children: [(0, l.jsx)(r.Text, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: E.Z.Messages.MEDIA_POST_SHARE_PROMPT_TITLE
+        children: p.Z.Messages.MEDIA_POST_SHARE_PROMPT_TITLE
       }), (0, l.jsx)(r.Text, {
         variant: "text-sm/medium",
         color: "text-normal",
-        children: E.Z.Messages.MEDIA_POST_SHARE_PROMPT_SUBTITLE.format({
-          helpArticleUrl: d.Z.getCreatorSupportArticleURL(p.BhN.MEDIA_CHANNEL)
+        children: p.Z.Messages.MEDIA_POST_SHARE_PROMPT_SUBTITLE.format({
+          helpArticleUrl: d.Z.getCreatorSupportArticleURL(E.BhN.MEDIA_CHANNEL)
         })
       }), (0, l.jsx)(r.Spacer, {
         size: 4
@@ -52,7 +52,7 @@ function f(e) {
         }), (0, l.jsx)(r.Text, {
           variant: "text-sm/medium",
           color: "always-white",
-          children: E.Z.Messages.MEDIA_POST_SHARE_PROMPT_CTA
+          children: p.Z.Messages.MEDIA_POST_SHARE_PROMPT_CTA
         })]
       })]
     }), (0, l.jsx)(r.Clickable, {
@@ -60,7 +60,7 @@ function f(e) {
       onClick: () => {
         (0, h.fn)(t)
       },
-      "aria-label": E.Z.Messages.REMOVE_MESSAGE_ATTACHMENT,
+      "aria-label": p.Z.Messages.REMOVE_MESSAGE_ATTACHMENT,
       children: (0, l.jsx)(r.CloseSmallIcon, {
         color: "currentColor",
         size: "xs"

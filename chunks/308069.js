@@ -1,7 +1,7 @@
 var s = n(735250),
   o = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  r = n(120356),
+  a = n.n(r),
   l = n(920906),
   i = n(481060),
   c = n(617136),
@@ -11,19 +11,19 @@ var s = n(735250),
   x = n(670638),
   m = n(341907),
   g = n(898170),
-  C = n(689938),
-  h = n(247192);
+  h = n(689938),
+  C = n(247192);
 t.Z = e => {
   let {
     quest: t,
-    expansionSpring: a,
-    onCtxMenuSelect: S,
+    expansionSpring: r,
+    onCtxMenuSelect: f,
     onCtxMenuOpen: E,
-    onCtxMenuClose: f,
+    onCtxMenuClose: S,
     useReducedMotion: v,
     isExpanded: T,
-    isExpansionAnimationComplete: N
-  } = e, j = o.useCallback(() => {
+    isExpansionAnimationComplete: j
+  } = e, N = o.useCallback(() => {
     (0, m.az)(t, {
       content: u.jn.QUEST_BAR_V2,
       ctaContent: c.jZ.OPEN_DISCLOSURE
@@ -33,69 +33,69 @@ t.Z = e => {
       content: u.jn.QUEST_BAR_V2,
       ctaContent: c.jZ.OPEN_GAME_LINK
     })
-  }, [t]), A = T && N;
+  }, [t]), A = T && j;
   return (0, s.jsxs)(l.animated.div, {
-    className: r()(h.wrapper, {
-      [h.interactable]: A
+    className: a()(C.wrapper, {
+      [C.interactable]: A
     }),
     style: {
-      margin: a.to({
+      margin: r.to({
         range: [0, 1],
         output: [0, 8]
       }),
-      borderBottomLeftRadius: a.to({
+      borderBottomLeftRadius: r.to({
         range: [0, 1],
         output: [0, 8]
       }),
-      borderBottomRightRadius: a.to({
+      borderBottomRightRadius: r.to({
         range: [0, 1],
         output: [0, 8]
       }),
-      paddingLeft: a.to({
+      paddingLeft: r.to({
         range: [0, 1],
         output: [12, 8]
       }),
-      paddingRight: a.to({
+      paddingRight: r.to({
         range: [0, 1],
         output: [12, 8]
       }),
-      paddingTop: a.to({
+      paddingTop: r.to({
         range: [0, 1],
         output: [8, 4]
       }),
-      paddingBottom: a.to({
+      paddingBottom: r.to({
         range: [0, 1],
         output: [8, 4]
       }),
-      backdropFilter: a.to([0, 1], [0, 1]).to(e => "blur(".concat(10 * e, "px) brightness(").concat(1 - e / 5, ")"))
+      backdropFilter: r.to([0, 1], [0, 1]).to(e => "blur(".concat(10 * e, "px) brightness(").concat(1 - e / 5, ")"))
     },
     children: [(0, s.jsx)(l.animated.div, {
-      className: h.backgroundWrapper,
+      className: C.backgroundWrapper,
       style: {
-        opacity: a.to({
+        opacity: r.to({
           range: [0, 1],
           output: [.5, 0]
         }),
-        borderBottomLeftRadius: a.to({
+        borderBottomLeftRadius: r.to({
           range: [0, 1],
           output: [0, 8]
         }),
-        borderBottomRightRadius: a.to({
+        borderBottomRightRadius: r.to({
           range: [0, 1],
           output: [0, 8]
         })
       },
       children: (0, s.jsx)(g.Z, {
-        className: h.background,
-        animationClassName: h.backgroundAnimation,
+        className: C.background,
+        animationClassName: C.backgroundAnimation,
         quest: t,
         useReducedMotion: v
       })
     }), (0, s.jsx)(l.animated.img, {
       alt: "",
-      className: h.wreathIcon,
+      className: C.wreathIcon,
       style: {
-        opacity: a.to({
+        opacity: r.to({
           range: [0, 1],
           output: [1, 0]
         })
@@ -103,19 +103,19 @@ t.Z = e => {
       src: n(858595)
     }), (0, s.jsx)(l.animated.div, {
       style: {
-        opacity: a.to({
+        opacity: r.to({
           range: [0, 1],
           output: [1, A ? 1 : .8]
         }),
-        x: a.to({
+        x: r.to({
           range: [0, 1],
           output: [0, -24]
         })
       },
       children: (0, s.jsx)(i.Clickable, {
         onClick: _,
-        className: r()({
-          [h.logo]: A
+        className: a()({
+          [C.logo]: A
         }),
         children: (0, s.jsx)(p.Z, {
           quest: t,
@@ -123,13 +123,13 @@ t.Z = e => {
         })
       })
     }), (0, s.jsx)(l.animated.div, {
-      className: h.questAvailable,
+      className: C.questAvailable,
       style: {
-        opacity: a.to({
+        opacity: r.to({
           range: [0, 1],
           output: [.7, 0]
         }),
-        x: a.to({
+        x: r.to({
           range: [0, 1],
           output: [0, -20]
         })
@@ -137,44 +137,44 @@ t.Z = e => {
       children: (0, s.jsx)(i.Text, {
         color: "always-white",
         variant: "text-xs/medium",
-        className: h.questAvailableText,
-        children: C.Z.Messages.QUEST_AVAILABLE
+        className: C.questAvailableText,
+        children: h.Z.Messages.QUEST_AVAILABLE
       })
     }), (0, s.jsxs)(l.animated.div, {
-      className: h.promotedBadgeWrapper,
+      className: C.promotedBadgeWrapper,
       style: {
-        opacity: a.to({
+        opacity: r.to({
           range: [0, 1],
           output: [0, 1]
         })
       },
       children: [(0, s.jsxs)(i.Clickable, {
-        className: h.promotedBadge,
-        onClick: j,
+        className: C.promotedBadge,
+        onClick: N,
         children: [(0, s.jsx)(i.Text, {
           color: "always-white",
           variant: "text-xs/normal",
-          children: C.Z.Messages.QUESTS_PROMOTED
+          children: h.Z.Messages.QUESTS_PROMOTED
         }), (0, s.jsx)(i.CircleQuestionIcon, {
           color: i.tokens.colors.WHITE,
-          className: h.promotedBadgeIcon
+          className: C.promotedBadgeIcon
         })]
       }), (0, s.jsx)(x.r, {
         onOpen: E,
-        onClose: f,
-        onSelect: S,
+        onClose: S,
+        onSelect: f,
         questContent: u.jn.QUEST_BAR_V2,
         quest: t,
         shouldShowDisclosure: !0,
         showShareLink: !0,
         children: e => (0, s.jsx)(i.Clickable, {
           ...e,
-          className: h.submenuWrapper,
-          "aria-label": C.Z.Messages.ACTIONS,
+          className: C.submenuWrapper,
+          "aria-label": h.Z.Messages.ACTIONS,
           children: (0, s.jsx)(i.MoreHorizontalIcon, {
             size: "md",
             color: "currentColor",
-            className: r()(h.submenuIcon, h.white)
+            className: a()(C.submenuIcon, C.white)
           })
         })
       })]

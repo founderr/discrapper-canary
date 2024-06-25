@@ -4,8 +4,8 @@ s.d(n, {
   }
 });
 var l = s(512722),
-  t = s.n(l),
-  i = s(792986),
+  i = s.n(l),
+  t = s(792986),
   r = s(639119),
   a = s(3409),
   c = s(626135),
@@ -56,8 +56,8 @@ function E(e) {
       trackedFromStep: d.h8.PAYMENT_TYPE
     })
   };
-  t()(x, "Step should be set here");
-  let D = (0, i.Z)(() => Date.now(), [x]);
+  i()(x, "Step should be set here");
+  let D = (0, t.Z)(() => Date.now(), [x]);
   return (0, a.vP)({
     paymentModalArgs: j,
     initialStep: T && null == O.current ? d.h8.CREDIT_CARD_INFORMATION : d.h8.PAYMENT_TYPE,
@@ -78,13 +78,13 @@ function E(e) {
       let {
         currentStep: s,
         toStep: l
-      } = e, t = Date.now();
+      } = e, i = Date.now();
       c.default.track(m.rMx.PAYMENT_FLOW_STEP, {
         ...n,
         from_step: s,
         to_step: l,
-        step_duration_ms: t - D,
-        flow_duration_ms: t - S.startTime
+        step_duration_ms: i - D,
+        flow_duration_ms: i - S.startTime
       })
     },
     isEligibleForTrial: Z,

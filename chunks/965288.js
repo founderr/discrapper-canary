@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(481060),
   h = n(239091),
   m = n(40851),
-  p = n(484459),
-  E = n(103575),
+  E = n(484459),
+  p = n(103575),
   g = n(271383),
   f = n(709586),
   C = n(5192),
@@ -117,7 +117,7 @@ t.Z = i.memo(function(e) {
         context: C
       })
     }, [r, f, s, C]),
-    N = i.useCallback(e => (0, l.jsx)(E.Z, {
+    N = i.useCallback(e => (0, l.jsx)(p.Z, {
       ...e,
       location: "AudienceTile",
       guildId: f,
@@ -125,7 +125,7 @@ t.Z = i.memo(function(e) {
       userId: r.id
     }), [s.id, f, r.id]);
   return (0, l.jsx)(d.Popout, {
-    preload: () => (0, p.W)(r, {
+    preload: () => (0, E.W)(r, {
       guildId: s.guild_id,
       channelId: s.id
     }),

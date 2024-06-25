@@ -1,9 +1,9 @@
 n.d(t, {
   Ho: function() {
-    return p
+    return E
   },
   y9: function() {
-    return E
+    return p
   }
 });
 var l = n(735250),
@@ -17,8 +17,8 @@ var l = n(735250),
   d = n(43205),
   h = n(689938),
   m = n(41899);
-let p = [c.An],
-  E = [s._.WEEK];
+let E = [c.An],
+  p = [s._.WEEK];
 t.ZP = i.memo(e => {
   let {
     entry: t,
@@ -27,7 +27,7 @@ t.ZP = i.memo(e => {
   } = e;
   if (!(0, r.Rg)("MemberListTopArtistContent")) return null;
   let s = (0, o.Nq)(t);
-  return null != s && (0, a.Hi)(s, E) ? (0, l.jsxs)(u.Zb, {
+  return null != s && (0, a.Hi)(s, p) ? (0, l.jsxs)(u.Zb, {
     selected: i,
     children: [(0, l.jsxs)(u.e$, {
       children: [(0, l.jsx)(u.F9, {
@@ -40,7 +40,7 @@ t.ZP = i.memo(e => {
         })
       }), (0, l.jsx)(c.Gk, {
         location: c.Gt.CARD,
-        children: p.map((e, n) => (0, l.jsx)(e, {
+        children: E.map((e, n) => (0, l.jsx)(e, {
           entry: t
         }, n))
       })]

@@ -4,9 +4,9 @@ t.d(n, {
   }
 }), t(47120), t(315314), t(610138), t(216116), t(78328), t(815648);
 var i = t(735250),
-  s = t(470079),
-  l = t(120356),
-  a = t.n(l),
+  l = t(470079),
+  s = t(120356),
+  a = t.n(s),
   r = t(913527),
   o = t.n(r),
   c = t(442837),
@@ -19,12 +19,12 @@ var i = t(735250),
   m = t(430824),
   _ = t(246946),
   h = t(285952),
-  O = t(259580),
-  g = t(531087),
+  g = t(259580),
+  O = t(531087),
   A = t(768581),
-  C = t(709054),
-  S = t(486199),
-  x = t(981631),
+  x = t(709054),
+  C = t(486199),
+  S = t(981631),
   p = t(689938),
   R = t(573138),
   Z = t(331651);
@@ -32,7 +32,7 @@ var i = t(735250),
 function f(e) {
   let n, {
       guild: t,
-      integration: l,
+      integration: s,
       editedIntegration: r,
       isExpanded: f,
       onToggleExpand: M,
@@ -40,93 +40,93 @@ function f(e) {
       onEnable: v
     } = e,
     j = (0, c.e7)([m.Z], () => m.Z.getRoles(t.id)),
-    [b, D] = s.useState(!1),
-    P = (0, c.e7)([_.Z], () => _.Z.hidePersonalInformation),
-    B = s.useCallback(() => {
-      D(!0), v(l)
-    }, [l, v]),
-    G = s.useCallback(() => {
-      !l.syncing && (0, d.openModal)(e => {
-        let n = 0 === l.expire_behavior ? p.Z.Messages.REMOVE_SYNCED_ROLE : p.Z.Messages.KICK_FROM_SERVER;
+    [b, P] = l.useState(!1),
+    D = (0, c.e7)([_.Z], () => _.Z.hidePersonalInformation),
+    B = l.useCallback(() => {
+      P(!0), v(s)
+    }, [s, v]),
+    G = l.useCallback(() => {
+      !s.syncing && (0, d.openModal)(e => {
+        let n = 0 === s.expire_behavior ? p.Z.Messages.REMOVE_SYNCED_ROLE : p.Z.Messages.KICK_FROM_SERVER;
         return (0, i.jsx)(d.ConfirmModal, {
           ...e,
           header: p.Z.Messages.DISABLE_INTEGRATION_TITLE,
           confirmText: n,
           cancelText: p.Z.Messages.CANCEL,
-          onConfirm: () => L(l),
+          onConfirm: () => L(s),
           children: (0, i.jsx)(d.Text, {
             variant: "text-md/normal",
-            children: l.type === x.ABu.YOUTUBE ? p.Z.Messages.DISABLE_INTEGRATION_YOUTUBE_BODY : p.Z.Messages.DISABLE_INTEGRATION_TWITCH_BODY
+            children: s.type === S.ABu.YOUTUBE ? p.Z.Messages.DISABLE_INTEGRATION_YOUTUBE_BODY : p.Z.Messages.DISABLE_INTEGRATION_TWITCH_BODY
           })
         })
       })
-    }, [l, L]),
-    y = s.useCallback(() => {
-      E.Z.syncIntegration(t.id, l.id)
-    }, [t.id, l.id]),
-    k = s.useCallback(() => {
-      null != l.role_id && (E.Z.setSection(x.pNK.ROLES), E.Z.selectRole(l.role_id))
-    }, [l.role_id]),
+    }, [s, L]),
+    y = l.useCallback(() => {
+      E.Z.syncIntegration(t.id, s.id)
+    }, [t.id, s.id]),
+    k = l.useCallback(() => {
+      null != s.role_id && (E.Z.setSection(S.pNK.ROLES), E.Z.selectRole(s.role_id))
+    }, [s.role_id]),
     {
       serviceName: U,
       channelURL: H,
       expireBehaviorLabel: W,
       syncLabel: w,
       subscribersText: F
-    } = s.useMemo(() => {
-      var e, n, t, i, s;
-      let a = null !== (t = null === (n = I.Z.get(l.type)) || void 0 === n ? void 0 : null === (e = n.getPlatformUserUrl) || void 0 === e ? void 0 : e.call(n, l.account)) && void 0 !== t ? t : "";
-      switch (l.type) {
-        case x.ABu.YOUTUBE:
+    } = l.useMemo(() => {
+      var e, n, t, i, l;
+      let a = null !== (t = null === (n = I.Z.get(s.type)) || void 0 === n ? void 0 : null === (e = n.getPlatformUserUrl) || void 0 === e ? void 0 : e.call(n, s.account)) && void 0 !== t ? t : "";
+      switch (s.type) {
+        case S.ABu.YOUTUBE:
           return {
             serviceName: p.Z.Messages.INTEGRATIONS_YOUTUBE, expireBehaviorLabel: p.Z.Messages.FORM_LABEL_MEMBERSHIP_EXPIRE_BEHAVIOR, syncLabel: p.Z.Messages.FORM_LABEL_SYNCED_MEMBERS, subscribersText: p.Z.Messages.NUM_MEMBERS.format({
-              subscribers: null !== (i = l.subscriber_count) && void 0 !== i ? i : 0
+              subscribers: null !== (i = s.subscriber_count) && void 0 !== i ? i : 0
             }), channelURL: a
           };
-        case x.ABu.TWITCH:
+        case S.ABu.TWITCH:
         default:
           return {
             serviceName: p.Z.Messages.INTEGRATIONS_TWITCH, expireBehaviorLabel: p.Z.Messages.FORM_LABEL_SUB_EXPIRE_BEHAVIOR, syncLabel: p.Z.Messages.FORM_LABEL_SYNCED_SUBS, subscribersText: p.Z.Messages.NUM_SUBSCRIBERS.format({
-              subscribers: null !== (s = l.subscriber_count) && void 0 !== s ? s : 0
+              subscribers: null !== (l = s.subscriber_count) && void 0 !== l ? l : 0
             }), channelURL: a
           }
       }
-    }, [l.account, l.subscriber_count, l.type]),
+    }, [s.account, s.subscriber_count, s.type]),
     {
       roleLink: V,
       syncDescriptionText: K
-    } = s.useMemo(() => {
+    } = l.useMemo(() => {
       let e, n;
-      let t = null != l.role_id ? j[l.role_id] : null;
+      let t = null != s.role_id ? j[s.role_id] : null;
       e = null != t ? (0, i.jsx)(d.Anchor, {
         onClick: k,
         children: t.name
       }) : p.Z.Messages.NONE;
-      let s = I.Z.get(l.type);
+      let l = I.Z.get(s.type);
       return {
         roleLink: e,
-        syncDescriptionText: n = l.revoked && null != s ? p.Z.Messages.SYNC_REVOKED.format({
-          user: l.user,
-          platformName: s.name
+        syncDescriptionText: n = s.revoked && null != l ? p.Z.Messages.SYNC_REVOKED.format({
+          user: s.user,
+          platformName: l.name
         }) : p.Z.Messages.INTEGRATIONS_LAST_SYNC.format({
-          datetime: o()(l.synced_at).calendar()
+          datetime: o()(s.synced_at).calendar()
         })
       }
-    }, [j, k, l.revoked, l.role_id, l.synced_at, l.type, l.user]),
-    Y = s.useMemo(() => {
+    }, [j, k, s.revoked, s.role_id, s.synced_at, s.type, s.user]),
+    Y = l.useMemo(() => {
       let e = N.Z.getGuildEmoji(t.id),
-        n = Object.values(j).filter(e => null != e.tags && e.tags.integration_id === l.id).map(e => e.id);
-      return l.enable_emoticons ? e.sort((e, n) => e.name.localeCompare(n.name)).filter(e => null != l.role_id && (null == e ? void 0 : e.roles.some(e => n.includes(e)))) : []
-    }, [t.id, j, l.enable_emoticons, l.id, l.role_id]);
-  if (s.useEffect(() => {
-      (null == r ? void 0 : r.id) === l.id && (null == r ? void 0 : r.enabled) === !0 && D(!1)
-    }, [r, l.id]), l.enabled && null != l.user) n = [{
+        n = Object.values(j).filter(e => null != e.tags && e.tags.integration_id === s.id).map(e => e.id);
+      return s.enable_emoticons ? e.sort((e, n) => e.name.localeCompare(n.name)).filter(e => null != s.role_id && (null == e ? void 0 : e.roles.some(e => n.includes(e)))) : []
+    }, [t.id, j, s.enable_emoticons, s.id, s.role_id]);
+  if (l.useEffect(() => {
+      (null == r ? void 0 : r.id) === s.id && (null == r ? void 0 : r.enabled) === !0 && P(!1)
+    }, [r, s.id]), s.enabled && null != s.user) n = [{
     icon: d.ClockIcon,
-    text: P ? p.Z.Messages.INTEGRATION_ADDED_DATE.format({
-      timestamp: C.default.extractTimestamp(l.id)
+    text: D ? p.Z.Messages.INTEGRATION_ADDED_DATE.format({
+      timestamp: x.default.extractTimestamp(s.id)
     }) : p.Z.Messages.INTEGRATION_ADDED_USER_DATE.format({
-      user: null != l.user ? new T.Z(l.user).tag : null,
-      timestamp: C.default.extractTimestamp(l.id)
+      user: null != s.user ? new T.Z(s.user).tag : null,
+      timestamp: x.default.extractTimestamp(s.id)
     })
   }];
   else {
@@ -142,14 +142,14 @@ function f(e) {
   let z = (0, i.jsxs)(h.Z, {
       className: R.header,
       align: h.Z.Align.CENTER,
-      children: [(0, i.jsx)(S.Z, {
-        name: "".concat(l.name),
+      children: [(0, i.jsx)(C.Z, {
+        name: "".concat(s.name),
         detailsClassName: R.description,
         details: n
-      }), l.enabled ? (0, i.jsx)(h.Z.Child, {
+      }), s.enabled ? (0, i.jsx)(h.Z.Child, {
         shrink: 0,
         grow: 0,
-        children: (0, i.jsx)(O.Z, {
+        children: (0, i.jsx)(g.Z, {
           className: R.expandIcon,
           expanded: f && !b,
           "aria-hidden": !0
@@ -162,7 +162,7 @@ function f(e) {
           color: d.Button.Colors.PRIMARY,
           onClick: B,
           disabled: b,
-          children: b ? (0, i.jsx)(g.Z, {
+          children: b ? (0, i.jsx)(O.Z, {
             width: 24,
             height: 24
           }) : (0, i.jsx)(i.Fragment, {
@@ -181,8 +181,8 @@ function f(e) {
       let {
         integration: n,
         labelText: t,
-        subscribersText: s,
-        descriptionText: l,
+        subscribersText: l,
+        descriptionText: s,
         roleLink: a,
         onSync: r
       } = e;
@@ -210,11 +210,11 @@ function f(e) {
               children: [(0, i.jsx)(d.Text, {
                 color: "header-primary",
                 variant: "text-sm/normal",
-                children: s
+                children: l
               }), (0, i.jsx)(d.Text, {
                 color: "header-secondary",
                 variant: "text-xs/normal",
-                children: l
+                children: s
               })]
             }), (0, i.jsx)(d.Button, {
               size: d.Button.Sizes.SMALL,
@@ -222,7 +222,7 @@ function f(e) {
               color: d.Button.Colors.PRIMARY,
               disabled: n.syncing || n.revoked,
               onClick: r,
-              children: n.syncing ? (0, i.jsx)(g.Z, {
+              children: n.syncing ? (0, i.jsx)(O.Z, {
                 width: 24,
                 height: 24
               }) : (0, i.jsx)(i.Fragment, {
@@ -245,8 +245,8 @@ function f(e) {
       let {
         integration: n,
         labelText: t,
-        onBehaviorChange: s,
-        onGracePeriodChange: l
+        onBehaviorChange: l,
+        onGracePeriodChange: s
       } = e;
       return (0, i.jsxs)(h.Z, {
         children: [(0, i.jsxs)(h.Z.Child, {
@@ -265,7 +265,7 @@ function f(e) {
               label: p.Z.Messages.KICK_FROM_SERVER
             }],
             isDisabled: n.syncing,
-            onChange: e => s(parseInt(e))
+            onChange: e => l(parseInt(e))
           })]
         }), (0, i.jsxs)(h.Z.Child, {
           basis: "50%",
@@ -282,7 +282,7 @@ function f(e) {
                 days: e
               })
             })),
-            onChange: e => l(parseInt(e)),
+            onChange: e => s(parseInt(e)),
             isDisabled: n.syncing
           })]
         })]
@@ -300,11 +300,11 @@ function f(e) {
           expireGracePeriod: e
         })
       }
-    }), l.type === x.ABu.TWITCH ? function(e) {
+    }), s.type === S.ABu.TWITCH ? function(e) {
       let {
         integration: n,
         emojis: t,
-        onToggle: s
+        onToggle: l
       } = e;
       return (0, i.jsxs)(h.Z, {
         direction: h.Z.Direction.VERTICAL,
@@ -317,7 +317,7 @@ function f(e) {
             let {
               currentTarget: n
             } = e;
-            return s(n.checked)
+            return l(n.checked)
           },
           children: (0, i.jsx)(d.FormText, {
             children: p.Z.Messages.ENABLE_TWITCH_EMOJI_SYNC
@@ -368,7 +368,7 @@ function f(e) {
     className: R.card,
     children: (0, i.jsxs)(h.Z, {
       direction: h.Z.Direction.VERTICAL,
-      children: [l.enabled ? (0, i.jsx)(d.Clickable, {
+      children: [s.enabled ? (0, i.jsx)(d.Clickable, {
         className: R.expandableHeader,
         "aria-expanded": f && !b,
         onClick: M,

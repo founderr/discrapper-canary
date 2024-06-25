@@ -10,8 +10,8 @@ var l = n(735250),
   d = n(306680),
   h = n(594174),
   m = n(502568),
-  p = n(585483),
-  E = n(981631),
+  E = n(585483),
+  p = n(981631),
   g = n(689938);
 t.Z = function(e) {
   let {
@@ -24,10 +24,10 @@ t.Z = function(e) {
   }, [n]);
 
   function N(e) {
-    !(null == e ? void 0 : e.shiftKey) && I.dispatch(E.CkL.POPOUT_CLOSE)
+    !(null == e ? void 0 : e.shiftKey) && I.dispatch(p.CkL.POPOUT_CLOSE)
   }
-  return (i.useEffect(() => (p.S.subscribe(E.CkL.TOGGLE_CHANNEL_PINS, T), () => {
-    p.S.unsubscribe(E.CkL.TOGGLE_CHANNEL_PINS, T)
+  return (i.useEffect(() => (E.S.subscribe(p.CkL.TOGGLE_CHANNEL_PINS, T), () => {
+    E.S.unsubscribe(p.CkL.TOGGLE_CHANNEL_PINS, T)
   }), [T]), x) ? null : (0, l.jsx)(a.Popout, {
     shouldShow: f,
     animation: a.Popout.Animation.NONE,

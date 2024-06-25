@@ -13,7 +13,7 @@ t.Z = i.memo(function(e) {
     narrow: n
   } = e, i = (0, o.Z)(t), h = (0, s.Z)(), {
     canRenderNotice: m,
-    recordNoticeRender: p
+    recordNoticeRender: E
   } = (0, a.Z)(t);
   return t.isArchivedLockedThread() ? (0, l.jsx)(u.s, {
     channel: t,
@@ -26,6 +26,6 @@ t.Z = i.memo(function(e) {
     narrow: n
   }) : m ? (0, l.jsx)(r.Z, {
     channel: t,
-    onChannelChange: p
+    onChannelChange: E
   }) : null
 })

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return E
+    return p
   }
 });
 var l = n(735250);
@@ -15,9 +15,9 @@ var i = n(143927),
   d = n(594174),
   h = n(346656),
   m = n(768581),
-  p = n(70762);
+  E = n(70762);
 
-function E() {
+function p() {
   let {
     guildId: e,
     channelId: t
@@ -30,11 +30,11 @@ function E() {
       guildId: t,
       channelId: n
     }
-  }, i.Z), n = (0, s.e7)([u.Z], () => u.Z.getGuild(e)), E = (0, s.e7)([c.Z], () => null == n ? c.Z.getChannel(t) : null), g = (0, s.e7)([d.default], () => d.default.getCurrentUser()), f = null != E ? (0, r.x)(E) : null, C = null != g ? g.getAvatarURL(e, 80) : m.pK["0"], _ = (0, l.jsx)(a.Avatar, {
+  }, i.Z), n = (0, s.e7)([u.Z], () => u.Z.getGuild(e)), p = (0, s.e7)([c.Z], () => null == n ? c.Z.getChannel(t) : null), g = (0, s.e7)([d.default], () => d.default.getCurrentUser()), f = null != p ? (0, r.x)(p) : null, C = null != g ? g.getAvatarURL(e, 80) : m.pK["0"], _ = (0, l.jsx)(a.Avatar, {
     src: C,
     "aria-hidden": !0,
     size: a.AvatarSizes.SIZE_80,
-    className: p.avatarSizeOverride
+    className: E.avatarSizeOverride
   }), I = null;
   return I = null != n ? (0, l.jsx)(h.Z, {
     guild: n
@@ -42,17 +42,17 @@ function E() {
     "aria-hidden": !0,
     src: f,
     size: a.AvatarSizes.SIZE_80,
-    className: p.avatarSizeOverride
+    className: E.avatarSizeOverride
   }) : _, (0, l.jsxs)("div", {
-    className: p.container,
+    className: E.container,
     children: [(0, l.jsx)("div", {
-      className: p.personAvatar,
+      className: E.personAvatar,
       children: _
     }), (0, l.jsx)("div", {
-      className: p.guildAvatar,
+      className: E.guildAvatar,
       children: I
     }), (0, l.jsx)("svg", {
-      className: p.illustration,
+      className: E.illustration,
       xmlns: "http://www.w3.org/2000/svg",
       width: "156",
       height: "70",

@@ -1,6 +1,6 @@
 s.d(i, {
   Z: function() {
-    return R
+    return C
   }
 }), s(47120);
 var n = s(735250);
@@ -26,22 +26,22 @@ var l = s(442837),
   N = s(602091),
   g = s(231338),
   T = s(327570);
-let C = I.ZP.getEnableHardwareAcceleration() ? t.Xo : t.qE;
+let R = I.ZP.getEnableHardwareAcceleration() ? t.Xo : t.qE;
 
-function R(e) {
+function C(e) {
   let {
     user: i,
     displayProfile: s,
     activity: t,
     customStatusActivity: I,
-    guildId: R,
+    guildId: C,
     channelId: A,
     transitionState: M,
     viewProfileItem: p,
     onClose: j
   } = e, {
     theme: U
-  } = (0, v.z)(), L = (0, Z.Z)(i.id, R), {
+  } = (0, v.z)(), L = (0, Z.Z)(i.id, C), {
     avatarSrc: O,
     eventHandlers: P,
     avatarDecorationSrc: y
@@ -68,7 +68,7 @@ function R(e) {
       className: T.headerInner,
       children: [(0, n.jsx)("div", {
         ...P,
-        children: (0, n.jsx)(C, {
+        children: (0, n.jsx)(R, {
           src: O,
           avatarDecoration: y,
           size: h.EF.SIZE_120,
@@ -83,7 +83,7 @@ function R(e) {
       }), (0, n.jsx)(m.Z, {
         user: i,
         isCurrentUser: B,
-        guildId: R,
+        guildId: C,
         canDM: L,
         relationshipType: b,
         originalFriendingEnabled: D,

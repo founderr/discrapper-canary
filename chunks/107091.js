@@ -16,8 +16,8 @@ var n = s(735250),
   C = s(906732),
   f = s(1585),
   p = s(624377),
-  g = s(372654),
-  E = s(715627),
+  E = s(372654),
+  g = s(715627),
   m = s(300284),
   h = s(642619),
   x = s(598),
@@ -25,8 +25,8 @@ var n = s(735250),
   _ = s(329067),
   T = s(981631),
   L = s(302800),
-  N = s(689938),
-  S = s(53585);
+  S = s(689938),
+  N = s(53585);
 let b = {
     xMin: -100,
     xMax: 100,
@@ -65,15 +65,15 @@ function O(e) {
       analyticsLocations: B
     } = (0, C.ZP)(d.Z.COLLECTIBLES_SHOP_CARD, d.Z.COLLECTIBLES_LIGHTNING_CHECKOUT),
     {
-      buttonColors: F
+      buttonColors: D
     } = (0, p.Z)(t.styles),
-    D = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
+    F = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
     U = (0, L.UY)(t.skuId),
     [H, w] = r.useState(!1),
     [G, W] = r.useState(!1),
-    V = null != F ? {
-      background: (0, g.nH)(F, 90),
-      color: F.text.toHslString()
+    V = null != D ? {
+      background: (0, E.nH)(D, 90),
+      color: D.text.toHslString()
     } : void 0,
     Y = (0, m.Z)({
       analyticsLocations: B
@@ -93,19 +93,19 @@ function O(e) {
     };
   return (0, n.jsxs)("div", {
     ref: k,
-    className: S.container,
+    className: N.container,
     children: [G && (0, n.jsxs)("div", {
-      className: S.cardDetails,
+      className: N.cardDetails,
       children: [(0, n.jsx)(o.Text, {
         variant: "text-lg/bold",
-        className: S.productName,
-        children: N.Z.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_TITLE
+        className: N.productName,
+        children: S.Z.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_TITLE
       }), (0, n.jsx)("div", {
-        className: S.innerBlur,
+        className: N.innerBlur,
         children: (0, n.jsx)(o.Text, {
-          className: S.description,
+          className: N.description,
           variant: "text-md/normal",
-          children: N.Z.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_DESCRIPTION
+          children: S.Z.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_DESCRIPTION
         })
       }), (0, n.jsx)(o.Button, {
         onClick: () => {
@@ -115,22 +115,22 @@ function O(e) {
             returnRef: k
           })
         },
-        children: N.Z.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_CTA
+        children: S.Z.Messages.LIGHTNING_CHECKOUT_GENERIC_ERROR_CTA
       })]
     }), !G && (H ? (0, n.jsxs)("div", {
-      className: S.cardDetails,
+      className: N.cardDetails,
       children: [(0, n.jsx)(o.Text, {
         variant: "text-lg/bold",
-        className: S.productName,
-        children: N.Z.Messages.COLLECTIBLES_YOU_COLLECTED.format({
+        className: N.productName,
+        children: S.Z.Messages.COLLECTIBLES_YOU_COLLECTED.format({
           itemName: t.name
         })
       }), (0, n.jsx)("div", {
-        className: S.innerBlur,
+        className: N.innerBlur,
         children: (0, n.jsx)(o.Text, {
-          className: S.description,
+          className: N.description,
           variant: "text-xs/normal",
-          children: N.Z.Messages.COLLECTIBLES_PERMANENT_COLLECTION
+          children: S.Z.Messages.COLLECTIBLES_PERMANENT_COLLECTION
         })
       }), (0, n.jsx)(v, {
         style: V,
@@ -146,13 +146,13 @@ function O(e) {
             analyticsLocations: B
           })
         },
-        children: N.Z.Messages.COLLECTIBLES_USE_NOW
+        children: S.Z.Messages.COLLECTIBLES_USE_NOW
       })]
     }) : (0, n.jsxs)("div", {
-      className: S.cardDetails,
+      className: N.cardDetails,
       children: [(0, n.jsx)(o.Text, {
         variant: "text-lg/bold",
-        className: S.productName,
+        className: N.productName,
         children: t.name
       }), (0, n.jsx)(x.PaymentContextProvider, {
         loadId: j,
@@ -166,7 +166,7 @@ function O(e) {
           ...z
         })
       })]
-    })), !G && H && !(null != U) && !D && (0, n.jsx)(E.Z, {
+    })), !G && H && !(null != U) && !F && (0, n.jsx)(g.Z, {
       confettiTarget: k.current,
       customConfettiCanvas: M,
       speedValues: b,

@@ -42,13 +42,13 @@ function D(e) {
     message: j
   } = e, {
     analyticsLocations: U
-  } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK), b = (0, c.O)(), y = j.channel_id, B = (0, l.e7)([T.Z], () => T.Z.getChannel(y), [y]), k = null == B ? void 0 : B.guild_id, G = null != B && (B.isGuildVoice() || B.isPrivate()), F = (0, l.e7)([A.ZP], () => A.ZP.getSelfEmbeddedActivityForChannel(y)), V = (null == F ? void 0 : F.applicationId) === D, [w, H] = (0, E.Z)([D, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : ""]), Y = (0, f.Z)(null !== (a = null == w ? void 0 : w.maxParticipants) && void 0 !== a ? a : 0), [W] = (0, l.Wu)([A.ZP], () => G ? A.ZP.getEmbeddedActivitiesForChannel(y).filter(e => e.applicationId === D) : [], [D, y, G]), z = Array.from(null !== (S = null == W ? void 0 : W.userIds) && void 0 !== S ? S : []), K = (0, l.Wu)([m.default], () => z.map(e => m.default.getUser(e)).filter(C.lm), [z]), Q = (0, R.Z)({
+  } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK), b = (0, c.O)(), y = j.channel_id, B = (0, l.e7)([T.Z], () => T.Z.getChannel(y), [y]), k = null == B ? void 0 : B.guild_id, G = null != B && (B.isGuildVoice() || B.isPrivate()), F = (0, l.e7)([A.ZP], () => A.ZP.getSelfEmbeddedActivityForChannel(y)), V = (null == F ? void 0 : F.applicationId) === D, [w, H] = (0, E.Z)([D, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : ""]), Y = (0, f.Z)(null !== (a = null == w ? void 0 : w.maxParticipants) && void 0 !== a ? a : 0), [W] = (0, l.Wu)([A.ZP], () => G ? A.ZP.getEmbeddedActivitiesForChannel(y).filter(e => e.applicationId === D) : [], [D, y, G]), K = Array.from(null !== (S = null == W ? void 0 : W.userIds) && void 0 !== S ? S : []), z = (0, l.Wu)([m.default], () => K.map(e => m.default.getUser(e)).filter(C.lm), [K]), Q = (0, R.Z)({
     applicationId: D,
     size: P,
     names: ["embedded_cover"]
-  }), X = _.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT), q = K.length > 0 ? L.Z.Messages.JOIN : L.Z.Messages.START, J = async () => {
+  }), X = _.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT), q = z.length > 0 ? L.Z.Messages.JOIN : L.Z.Messages.START, J = async () => {
     if (G) {
-      if (null != W && K.length > 0) await (0, g.Z)({
+      if (null != W && z.length > 0) await (0, g.Z)({
         applicationId: W.applicationId,
         currentEmbeddedApplication: H,
         activityChannelId: y,
@@ -113,11 +113,11 @@ function D(e) {
           })
         }), (0, s.jsxs)("div", {
           className: Z.cta,
-          children: [K.length > 0 ? (0, s.jsx)("div", {
+          children: [z.length > 0 ? (0, s.jsx)("div", {
             className: Z.avatars,
             children: (0, s.jsx)(N.Z, {
               guildId: k,
-              users: K,
+              users: z,
               max: 4
             })
           }) : (0, s.jsxs)("div", {

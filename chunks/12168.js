@@ -17,8 +17,8 @@ var l = n(735250),
   d = n(727637),
   h = n(543241),
   m = n(907040),
-  p = n(633302),
-  E = n(806966),
+  E = n(633302),
+  p = n(806966),
   g = n(401227),
   f = n(153124),
   C = n(176354),
@@ -28,7 +28,7 @@ var l = n(735250),
   T = n(420212),
   N = n(61798);
 let Z = x.Hz.CHAT,
-  S = [p.ZP.getByName("thumbsup"), p.ZP.getByName("eyes"), p.ZP.getByName("laughing"), p.ZP.getByName("watermelon"), p.ZP.getByName("fork_and_knife"), p.ZP.getByName("yum")].filter(_.lm);
+  S = [E.ZP.getByName("thumbsup"), E.ZP.getByName("eyes"), E.ZP.getByName("laughing"), E.ZP.getByName("watermelon"), E.ZP.getByName("fork_and_knife"), E.ZP.getByName("yum")].filter(_.lm);
 
 function v(e) {
   let {
@@ -109,7 +109,7 @@ function M(e) {
     onFocus: o,
     onSelectEmoji: u,
     onSelectDisabledEmoji: d,
-    onExpandedToggle: p,
+    onExpandedToggle: E,
     emojiSearchProps: g,
     recentlyUsedEmojis: _,
     analyticsOverride: M
@@ -120,7 +120,7 @@ function M(e) {
   })).slice(0, I.e5);
   null != _ && _.length > 0 && P.splice(P.length - 1, 1, _[0]);
   let y = e => {
-      L(e), null == p || p(e)
+      L(e), null == E || E(e)
     },
     b = (e, t) => {
       if (null == e && t) {
@@ -128,7 +128,7 @@ function M(e) {
         return
       }
       null != e && u(e);
-      y(!t), t && E.kJ.setSearchPlaceholder(null)
+      y(!t), t && p.kJ.setSearchPlaceholder(null)
     };
   return (0, l.jsxs)(c.Dialog, {
     "aria-labelledby": R,

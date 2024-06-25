@@ -10,11 +10,11 @@ var l = n(735250),
   d = n(555672),
   h = n(297781),
   m = n(591853),
-  p = n(265048),
-  E = n(689938);
+  E = n(265048),
+  p = n(689938);
 let g = (e, t, n, l) => {
     let i = function(e) {
-        if (e === s._.WEEK) return E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT
+        if (e === s._.WEEK) return p.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT
       }(l),
       a = r.ZP.getName(t.guild_id, t.id, n),
       o = e.extra.game_name;
@@ -23,7 +23,7 @@ let g = (e, t, n, l) => {
       userName: a
     }).replaceAll("*", "")
   },
-  f = (e, t) => E.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+  f = (e, t) => p.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
     username: t.username,
     activity: e.extra.game_name
   });
@@ -39,7 +39,7 @@ t.Z = e => {
     user: I,
     details: x,
     gameTitle: T
-  } = (0, p.F)(n), {
+  } = (0, E.F)(n), {
     primaryColor: N,
     secondaryColor: Z
   } = (0, u.Z)(C), S = (0, o.yA)(n), v = (0, o.Nq)(n), A = i.useCallback(e => {
@@ -48,7 +48,7 @@ t.Z = e => {
       applicationImageSrc: C,
       avatarSrcs: [I.getAvatarURL(t.guild_id, 128)],
       description: g(n, t, I, v),
-      timestamp: E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({
+      timestamp: p.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({
         hours: Math.round(S / a.Z.Seconds.HOUR)
       }),
       colors: [N, Z],
@@ -61,7 +61,7 @@ t.Z = e => {
       thumbnailTitle: _,
       channel: t,
       entry: n,
-      userDescription: E.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
+      userDescription: p.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
       title: T,
       subtitle: x,
       badges: (0, l.jsx)(h.Gk, {

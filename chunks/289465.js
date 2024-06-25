@@ -5,8 +5,8 @@ t.d(n, {
 });
 var i = t(735250);
 t(470079);
-var s = t(120356),
-  l = t.n(s),
+var l = t(120356),
+  s = t.n(l),
   a = t(481060),
   r = t(967669);
 
@@ -14,17 +14,17 @@ function o(e) {
   let {
     bar: n,
     children: t,
-    className: s,
+    className: l,
     inModal: o,
     title: c
   } = e;
   return (0, i.jsxs)(a.Card, {
     editable: !0,
-    className: l()(r.card, s, {
+    className: s()(r.card, l, {
       [r.inModal]: o
     }),
     children: [(0, i.jsxs)("div", {
-      className: l()(r.cardHeader, {
+      className: s()(r.cardHeader, {
         [r.inModal]: o
       }),
       children: [(0, i.jsx)(a.Text, {

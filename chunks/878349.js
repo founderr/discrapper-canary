@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(410030),
   h = n(607070),
   m = n(466794),
-  p = n(213833),
-  E = n(546240),
+  E = n(213833),
+  p = n(546240),
   g = n(952009);
 
 function f(e) {
@@ -32,7 +32,7 @@ function f(e) {
     collapseWhenChecked: N = !0,
     onClick: Z,
     disabled: S
-  } = e, v = (0, r.e7)([h.Z], () => h.Z.useReducedMotion), [A, M] = i.useState(!1), R = (0, d.ZP)(), j = (0, o.wj)(R) || t ? g : E, {
+  } = e, v = (0, r.e7)([h.Z], () => h.Z.useReducedMotion), [A, M] = i.useState(!1), R = (0, d.ZP)(), j = (0, o.wj)(R) || t ? g : p, {
     width: L = 0,
     ref: O
   } = (0, u.Z)(), {
@@ -47,10 +47,10 @@ function f(e) {
     position: "top",
     color: null != I ? I : S ? c.Tooltip.Colors.BLACK : c.Tooltip.Colors.BRAND,
     "aria-label": s,
-    tooltipClassName: p.tooltip,
-    className: p.tooltipContainer,
+    tooltipClassName: E.tooltip,
+    className: E.tooltipContainer,
     children: [(0, l.jsx)("input", {
-      className: p.visuallyHidden,
+      className: E.visuallyHidden,
       checked: t,
       onChange: function() {
         if (f) {
@@ -64,16 +64,16 @@ function f(e) {
       disabled: S
     }), (0, l.jsxs)("label", {
       htmlFor: T,
-      className: a()(p.label, x, {
-        [p.transition]: A,
-        [p.labelChecked]: t,
-        [p.labelUnchecked]: !t && !f
+      className: a()(E.label, x, {
+        [E.transition]: A,
+        [E.labelChecked]: t,
+        [E.labelUnchecked]: !t && !f
       }),
       style: N ? {
         width: t ? L : L + P
       } : void 0,
       children: [t ? (0, l.jsx)(c.Shine, {
-        className: p.shine,
+        className: E.shine,
         shinePaused: v
       }) : null, (0, l.jsx)("img", {
         ref: O,
@@ -82,9 +82,9 @@ function f(e) {
       }), (0, l.jsx)("span", {
         ref: y,
         children: (0, l.jsx)(c.Text, {
-          className: a()(p.burstText, {
-            [p.visuallyHidden]: t && N,
-            [p.burstTextChecked]: t
+          className: a()(E.burstText, {
+            [E.visuallyHidden]: t && N,
+            [E.burstTextChecked]: t
           }),
           variant: "text-sm/semibold",
           children: n

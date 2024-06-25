@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return p
+    return E
   }
 }), n(47120), n(653041);
 var l = n(470079),
@@ -15,36 +15,36 @@ var l = n(470079),
 let h = [],
   m = new Set;
 
-function p(e) {
+function E(e) {
   let {
     entries: t,
     channelId: n
-  } = e, p = (0, s.e7)([r.Z], () => r.Z.getChannel(n)), E = null == p ? void 0 : p.guild_id, g = l.useRef(new Set), f = l.useMemo(() => {
+  } = e, E = (0, s.e7)([r.Z], () => r.Z.getChannel(n)), p = null == E ? void 0 : E.guild_id, g = l.useRef(new Set), f = l.useMemo(() => {
     let e = new Set(null == t ? void 0 : t.map(e => e.author_id));
     return !(0, a.E)([...g.current], [...e]) && (g.current = e), g.current
   }, [t]);
   l.useEffect(() => {
-    if (null != E) Array.from(f).forEach(e => {
-      o.Z.requestMember(E, e)
+    if (null != p) Array.from(f).forEach(e => {
+      o.Z.requestMember(p, e)
     })
-  }, [f, E]);
+  }, [f, p]);
   let C = (0, s.Wu)([c.ZP], () => {
-      if (null == E) return h;
+      if (null == p) return h;
       let e = [];
-      for (let t of f) c.ZP.isMember(E, t) && e.push(t);
+      for (let t of f) c.ZP.isMember(p, t) && e.push(t);
       return e
-    }, [f, E]),
+    }, [f, p]),
     _ = l.useMemo(() => {
-      if (null == p || 0 === C.length) return m;
+      if (null == E || 0 === C.length) return m;
       let e = new Set;
       for (let t of C) {
         let n = u.uB({
           user: t,
-          context: p
+          context: E
         });
         i.e$(n, d.Pl.VIEW_CHANNEL) && e.add(t)
       }
       return e
-    }, [C, p]);
+    }, [C, E]);
   return l.useMemo(() => null == t ? void 0 : t.filter(e => _.has(e.author_id)), [t, _])
 }

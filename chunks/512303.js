@@ -11,8 +11,8 @@ var a = t(373793),
   o = t(592180),
   u = t(430824),
   s = t(594174),
-  d = t(346656),
-  c = t(689938),
+  c = t(346656),
+  d = t(689938),
   E = t(890001);
 
 function f(e) {
@@ -27,14 +27,14 @@ function f(e) {
   return null != m ? _ = (0, i.jsx)(r.MenuItem, {
     className: E.interactionInfoMenuItem,
     disabled: !0,
-    icon: () => (0, i.jsx)(d.Z, {
+    icon: () => (0, i.jsx)(c.Z, {
       guild: m,
-      size: d.Z.Sizes.MINI
+      size: c.Z.Sizes.MINI
     }),
     id: "integration-owner",
     label: m.name,
     showIconFirst: !0,
-    subtext: c.Z.Messages.INTERACTION_RESPONSE_CONTEXT_INSTALLED_BY.format({
+    subtext: d.Z.Messages.INTERACTION_RESPONSE_CONTEXT_INSTALLED_BY.format({
       application: e.author.username
     })
   }) : null != g && (_ = (0, i.jsx)(r.MenuItem, {
@@ -47,12 +47,12 @@ function f(e) {
     id: "integration-owner",
     label: g.username,
     showIconFirst: !0,
-    subtext: c.Z.Messages.INTERACTION_RESPONSE_CONTEXT_INSTALLED_BY.format({
+    subtext: d.Z.Messages.INTERACTION_RESPONSE_CONTEXT_INSTALLED_BY.format({
       application: e.author.username
     })
   })), (0, i.jsxs)(r.MenuItem, {
     id: "view-interaction-info",
-    label: c.Z.Messages.VIEW_INTERACTION_INFO,
+    label: d.Z.Messages.VIEW_INTERACTION_INFO,
     children: [_, null != Z ? (0, i.jsx)(r.MenuItem, {
       className: E.interactionInfoMenuItem,
       disabled: !0,
@@ -63,7 +63,7 @@ function f(e) {
       id: "interaction-user",
       label: Z.username,
       showIconFirst: !0,
-      subtext: c.Z.Messages.INTERACTION_RESPONSE_CONTEXT_TRIGGERED_BY
+      subtext: d.Z.Messages.INTERACTION_RESPONSE_CONTEXT_TRIGGERED_BY
     }) : null]
   })
 }

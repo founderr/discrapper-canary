@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return E
+    return p
   }
 }), n(47120);
 var l = n(735250),
@@ -15,7 +15,7 @@ var l = n(735250),
   h = n(689938),
   m = n(932688);
 
-function p(e, t, n) {
+function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -23,7 +23,7 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class E extends i.PureComponent {
+class p extends i.PureComponent {
   render() {
     let {
       result: e,
@@ -35,7 +35,7 @@ class E extends i.PureComponent {
     if (null == r) return null;
     let c = d.Z.getChannel(r.channel_id);
     if (null == c) return null;
-    let p = "search-result-".concat(r.id);
+    let E = "search-result-".concat(r.id);
     return (0, l.jsx)(o.FocusRing, {
       ringTarget: this.hitRef,
       ringClassName: m.__invalid_searchResultFocusRing,
@@ -45,7 +45,7 @@ class E extends i.PureComponent {
         ...t,
         "aria-posinset": 1 + n + i,
         "aria-setsize": s,
-        "aria-labelledby": p,
+        "aria-labelledby": E,
         children: [(0, l.jsx)(o.Clickable, {
           tabIndex: -1,
           onClick: this.handleMessageClick,
@@ -58,7 +58,7 @@ class E extends i.PureComponent {
             ref: this.hitRef,
             className: m.message,
             children: (0, l.jsx)(u.Z, {
-              id: p,
+              id: E,
               message: r,
               channel: c,
               onContextMenu: e => this.handleContextMenu(e, r),
@@ -80,7 +80,7 @@ class E extends i.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), p(this, "containerRef", i.createRef()), p(this, "hitRef", i.createRef()), p(this, "handleContextMenu", (e, t) => {
+    super(...e), E(this, "containerRef", i.createRef()), E(this, "hitRef", i.createRef()), E(this, "handleContextMenu", (e, t) => {
       let i = d.Z.getChannel(t.channel_id);
       if (null != i) e.stopPropagation(), (0, c.jW)(e, async () => {
         let {
@@ -92,14 +92,14 @@ class E extends i.PureComponent {
           channel: i
         })
       })
-    }), p(this, "jumpTo", e => {
+    }), E(this, "jumpTo", e => {
       null != e && (e.preventDefault(), e.stopPropagation());
       let {
         onJump: t,
         result: n
       } = this.props, l = n.find(e => e.isSearchHit);
       null != l && t(l)
-    }), p(this, "handleMessageClick", e => {
+    }), E(this, "handleMessageClick", e => {
       if (function(e, t) {
           var n;
           let l = null === (n = window) || void 0 === n ? void 0 : n.getSelection();

@@ -37,7 +37,7 @@ function h(e, t) {
         (0, a.jW)(t, async () => {
           let {
             default: t
-          } = await n.e("37969").then(n.bind(n, 496281));
+          } = await n.e("30887").then(n.bind(n, 496281));
           return n => (0, s.jsx)(t, {
             ...n,
             channel: e,

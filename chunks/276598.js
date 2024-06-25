@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(871499),
   h = n(819640),
   m = n(797258),
-  p = n(446226),
-  E = n(937393),
+  E = n(446226),
+  p = n(937393),
   g = n(43982),
   f = n(721351),
   C = n(420529),
@@ -44,10 +44,10 @@ function S(e) {
     channel: t,
     showLeftDivider: n = !1,
     ...C
-  } = e, S = (0, p.Z)(), v = (0, s.e7)([m.Z], () => {
+  } = e, S = (0, E.Z)(), v = (0, s.e7)([m.Z], () => {
     var e, t;
     return null === (e = m.Z.getSessionById(null !== (t = null == S ? void 0 : S.sessionId) && void 0 !== t ? t : "")) || void 0 === e ? void 0 : e.clientInfo.os
-  }), A = (0, s.e7)([h.Z], () => h.Z.hasLayers()), [M, R] = (0, s.Wu)([o.Z], () => [o.Z.getMode(t.id), o.Z.getLayout(t.id)]), j = (0, r.useModalsStore)(r.hasAnyModalOpenSelector), L = (0, E.Z)(), O = L.filter(e => e.twoWayLink), [P, y] = i.useState(!1);
+  }), A = (0, s.e7)([h.Z], () => h.Z.hasLayers()), [M, R] = (0, s.Wu)([o.Z], () => [o.Z.getMode(t.id), o.Z.getLayout(t.id)]), j = (0, r.useModalsStore)(r.hasAnyModalOpenSelector), L = (0, p.Z)(), O = L.filter(e => e.twoWayLink), [P, y] = i.useState(!1);
   if (null == S && 0 === L.length || t.isBroadcastChannel()) return null;
   let b = I.WtW.VOICE !== M && [I.AEg.NO_CHAT, I.AEg.FULL_SCREEN].includes(R) ? "top" : "bottom",
     D = [];

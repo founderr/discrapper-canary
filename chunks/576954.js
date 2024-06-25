@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(473092),
   h = n(177342),
   m = n(134612),
-  p = n(981631),
-  E = n(689938);
+  E = n(981631),
+  p = n(689938);
 
 function g(e) {
   let {
@@ -30,8 +30,8 @@ function g(e) {
       context: {
         location: m.zr
       },
-      type: p.OGo.BLOCKED
-    }), C(), (0, a.showToast)((0, a.createToast)(E.Z.Messages.STRANGER_DANGER_BLOCK_CONFIRM, a.ToastType.SUCCESS)), (0, d.qc)({
+      type: E.OGo.BLOCKED
+    }), C(), (0, a.showToast)((0, a.createToast)(p.Z.Messages.STRANGER_DANGER_BLOCK_CONFIRM, a.ToastType.SUCCESS)), (0, d.qc)({
       channelId: t,
       warningId: g,
       senderId: f,
@@ -40,7 +40,7 @@ function g(e) {
     })
   }, [C, t, g, f]);
   i.useEffect(() => {
-    (0, d.MC)(p.rMx.SAFETY_WARNING_VIEWED, {
+    (0, d.MC)(E.rMx.SAFETY_WARNING_VIEWED, {
       channelId: t,
       warningId: g,
       senderId: f,
@@ -98,11 +98,11 @@ function g(e) {
     warningId: g,
     senderId: f,
     warningType: u.pj.STRANGER_DANGER,
-    header: E.Z.Messages.STRANGER_DANGER_BANNER_HEADER,
-    description: E.Z.Messages.STRANGER_DANGER_BANNER_DESCRIPTION,
+    header: p.Z.Messages.STRANGER_DANGER_BANNER_HEADER,
+    description: p.Z.Messages.STRANGER_DANGER_BANNER_DESCRIPTION,
     onDismiss: C,
     buttons: [{
-      text: E.Z.Messages.STRANGER_DANGER_BANNER_MORE_TIPS,
+      text: p.Z.Messages.STRANGER_DANGER_BANNER_MORE_TIPS,
       color: a.Button.Colors.BRAND,
       onclick: () => {
         I(), (0, d.qc)({
@@ -114,7 +114,7 @@ function g(e) {
         })
       }
     }, {
-      text: E.Z.Messages.STRANGER_DANGER_BANNER_BLOCK,
+      text: p.Z.Messages.STRANGER_DANGER_BANNER_BLOCK,
       color: a.Button.Colors.RED,
       onclick: () => x(d.NM.USER_BANNER_BLOCK_CONFIRM, d.NM.USER_BANNER_BLOCK_CANCEL)
     }]

@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(367907),
   h = n(731429),
   m = n(188471),
-  p = n(933557),
-  E = n(287746),
+  E = n(933557),
+  p = n(287746),
   g = n(541716),
   f = n(910611),
   C = n(359110),
@@ -35,7 +35,7 @@ function R(e) {
     channelId: t,
     baseChannelId: s,
     channelViewSource: R = "Split View"
-  } = e, j = (0, r.e7)([_.Z], () => _.Z.getChannel(t)), L = (0, r.e7)([x.Z], () => x.Z.getGuild(null == j ? void 0 : j.getGuildId())), O = (0, p.ZP)(j);
+  } = e, j = (0, r.e7)([_.Z], () => _.Z.getChannel(t)), L = (0, r.e7)([x.Z], () => x.Z.getGuild(null == j ? void 0 : j.getGuildId())), O = (0, E.ZP)(j);
   (function(e) {
     let t = (0, r.e7)([T.Z], () => null != e && !a().isEmpty(T.Z.getVoiceStatesForChannel(e.id)));
     i.useEffect(() => {
@@ -91,7 +91,7 @@ function R(e) {
       })
     }), (0, l.jsx)("div", {
       className: M.chat,
-      children: (0, l.jsx)(E.Z, {
+      children: (0, l.jsx)(p.Z, {
         channel: j,
         guild: L,
         chatInputType: g.I.SIDEBAR

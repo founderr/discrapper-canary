@@ -9,8 +9,8 @@ var l = n(735250),
   d = n(904245),
   h = n(232961),
   m = n(223606),
-  p = n(453687),
-  E = n(63063),
+  E = n(453687),
+  p = n(63063),
   g = n(727779),
   f = n(113039),
   C = n(534761),
@@ -59,7 +59,7 @@ let Z = i.memo(function(e) {
           tag: "span",
           className: x.learnMore,
           children: I.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_LEARN_MORE.format({
-            helpUrl: E.Z.getArticleURL(_.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE)
+            helpUrl: p.Z.getArticleURL(_.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE)
           })
         })
       })
@@ -72,7 +72,7 @@ t.Z = i.memo(function(e) {
     className: s,
     compact: r,
     message: u,
-    children: E,
+    children: p,
     content: g,
     onUpdate: _
   } = e, S = null === (t = u.editedTimestamp) || void 0 === t ? void 0 : t.toString(), v = i.useRef(!1), A = (0, c.e7)([m.Z], () => m.Z.getMessage(u.id), [u.id]), M = i.useCallback(() => {
@@ -80,15 +80,15 @@ t.Z = i.memo(function(e) {
   }, [u, A]);
   return i.useLayoutEffect(() => {
     v.current ? null != _ && _() : v.current = !0
-  }, [_, u.content, g, S, E]), (0, l.jsxs)("div", {
-    id: (0, p.ut)(u),
+  }, [_, u.content, g, S, p]), (0, l.jsxs)("div", {
+    id: (0, E.ut)(u),
     className: a()(s, T.markup, {
       [N.messageContent]: !0,
       [N.markupRtl]: "rtl" === o()(u.content),
       [x.blockedEdit]: null == A ? void 0 : A.isBlockedEdit,
       [x.blockedSend]: !(null == A ? void 0 : A.isBlockedEdit)
     }),
-    children: [null != E ? E : (0, f.L5)(u, g), (null == A ? void 0 : A.isBlockedEdit) && null != u.timestamp && (0, l.jsxs)(l.Fragment, {
+    children: [null != p ? p : (0, f.L5)(u, g), (null == A ? void 0 : A.isBlockedEdit) && null != u.timestamp && (0, l.jsxs)(l.Fragment, {
       children: [" ", (0, l.jsx)(C.Z, {
         timestamp: u.timestamp,
         isEdited: !0,

@@ -14,8 +14,8 @@ var l = n(470079),
   d = n(626135),
   h = n(823162),
   m = n(268699),
-  p = n(9389),
-  E = n(687683),
+  E = n(9389),
+  p = n(687683),
   g = n(981631);
 
 function f(e) {
@@ -24,7 +24,7 @@ function f(e) {
     onAcceptSuccess: n,
     onRejectSuccess: i,
     onError: f
-  } = e, C = (0, p.Z)(), [_, I] = l.useState(!1), [x, T] = l.useState(!1), [N, Z] = l.useState(!1), [S, v] = l.useState(!1), [A, M] = l.useState(!1), R = _ || x || N, j = l.useCallback(async e => {
+  } = e, C = (0, E.Z)(), [_, I] = l.useState(!1), [x, T] = l.useState(!1), [N, Z] = l.useState(!1), [S, v] = l.useState(!1), [A, M] = l.useState(!1), R = _ || x || N, j = l.useCallback(async e => {
     if (!R) {
       I(!0);
       try {
@@ -51,7 +51,7 @@ function f(e) {
   }, [R, i, f]), O = l.useCallback(async e => {
     if (R) return;
     T(!0);
-    let t = s()(e, E.t$);
+    let t = s()(e, p.t$);
     try {
       for (let e of t) await (0, h.r_)(e);
       M(!0), null == i || i()
@@ -78,7 +78,7 @@ function f(e) {
       var n;
       let l = null != t ? null === (n = o.Z.getMutualGuilds(t.id)) || void 0 === n ? void 0 : n.map(e => e.guild.id) : [];
       d.default.track(g.rMx.MESSAGE_REQUEST_ACTION, {
-        action: E.cl.ACCEPT_CONFIRMATION_PROMPT,
+        action: p.cl.ACCEPT_CONFIRMATION_PROMPT,
         channel_id: e,
         mutual_guild_ids: null != l ? l : [],
         other_user_id: null == t ? void 0 : t.id
@@ -91,7 +91,7 @@ function f(e) {
         var n;
         let l = null != t ? null === (n = o.Z.getMutualGuilds(t.id)) || void 0 === n ? void 0 : n.map(e => e.guild.id) : [];
         d.default.track(g.rMx.MESSAGE_REQUEST_ACTION, {
-          action: E.cl.DISMISS_CONFIRMATION_PROMPT,
+          action: p.cl.DISMISS_CONFIRMATION_PROMPT,
           channel_id: e,
           mutual_guild_ids: null != l ? l : [],
           other_user_id: null == t ? void 0 : t.id
@@ -101,7 +101,7 @@ function f(e) {
   }, [j, R, t]), y = l.useCallback((e, t, n) => {
     let l = (l, i) => {
         i && u.kJ.updateSetting(l), l && null != t && (0, r.zd)(t), j(e.id), d.default.track(g.rMx.MESSAGE_REQUEST_ACTION, {
-          action: E.cl.ACCEPT_HAM_CONFIRMATION_PROMPT,
+          action: p.cl.ACCEPT_HAM_CONFIRMATION_PROMPT,
           channel_id: e.id,
           is_dont_show_again_checked: i,
           non_spam_retraining_opt_in: l
@@ -113,7 +113,7 @@ function f(e) {
       onConfirm: l,
       onCancel: () => {
         d.default.track(g.rMx.MESSAGE_REQUEST_ACTION, {
-          action: E.cl.DISMISS_HAM_CONFIRMATION_PROMPT,
+          action: p.cl.DISMISS_HAM_CONFIRMATION_PROMPT,
           channel_id: e.id
         })
       }

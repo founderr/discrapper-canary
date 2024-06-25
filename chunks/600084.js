@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(878857),
   h = n(621853),
   m = n(484459),
-  p = n(131704),
-  E = n(984933),
+  E = n(131704),
+  p = n(984933),
   g = n(496675),
   f = n(594174),
   C = n(51144),
@@ -38,12 +38,12 @@ function P(e) {
   let {
     canManageRoles: t,
     channel: n
-  } = e, i = t && (0, c.Yk)(n), a = (0, s.e7)([E.ZP], () => null != n.guild_id && n === E.ZP.getDefaultChannel(n.guild_id), [n]);
+  } = e, i = t && (0, c.Yk)(n), a = (0, s.e7)([p.ZP], () => null != n.guild_id && n === p.ZP.getDefaultChannel(n.guild_id), [n]);
   if ((0, u.Z)(n.id)) return null;
   if (n.isForumPost()) return (0, l.jsx)(x.Z, {
     channel: n
   });
-  if (p.Ec.has(n.type)) return (0, l.jsx)(A.Z, {
+  if (E.Ec.has(n.type)) return (0, l.jsx)(A.Z, {
     channel: n
   });
   else if (a) return (0, l.jsx)(M.Z, {
@@ -63,14 +63,14 @@ function y(e) {
     channel: n,
     showingBanner: c
   } = e, u = (0, o.ZP)(n), {
-    type: p
-  } = n, E = (0, s.e7)([f.default], () => n.isPrivate() ? f.default.getUser(n.getRecipientId()) : null), x = C.ZP.useUserTag(E), {
+    type: E
+  } = n, p = (0, s.e7)([f.default], () => n.isPrivate() ? f.default.getUser(n.getRecipientId()) : null), x = C.ZP.useUserTag(p), {
     canManageRoles: Z,
     canReadMessageHistory: v
   } = (0, s.cj)([g.Z], () => ({
     canManageRoles: g.Z.can(R.Plq.MANAGE_ROLES, n),
     canReadMessageHistory: g.Z.can(R.Plq.READ_MESSAGE_HISTORY, n)
-  })), A = (0, s.e7)([h.Z], () => p === R.d4z.DM ? h.Z.getMutualGuilds(n.getRecipientId()) : null, [n, p]), {
+  })), A = (0, s.e7)([h.Z], () => E === R.d4z.DM ? h.Z.getMutualGuilds(n.getRecipientId()) : null, [n, E]), {
     systemDMRedesignEnabled: M
   } = d.Z.useExperiment({
     location: "bf1a4f_1"
@@ -78,19 +78,19 @@ function y(e) {
     autoTrackExposure: null !== (t = n.isSystemDM()) && void 0 !== t && t
   });
   if (i.useEffect(() => {
-      p === R.d4z.DM && null == A && null != E && r.Z.wait(() => (0, m.Z)(n.getRecipientId(), E.getAvatarURL(null, 80), {
+      E === R.d4z.DM && null == A && null != p && r.Z.wait(() => (0, m.Z)(n.getRecipientId(), p.getAvatarURL(null, 80), {
         withMutualGuilds: !0
       }))
-    }, [A, p, n, E]), n.isSystemDM()) return M ? (0, l.jsx)(S.Z, {
+    }, [A, E, n, p]), n.isSystemDM()) return M ? (0, l.jsx)(S.Z, {
     channel: n
   }) : (0, l.jsx)(N.Z, {
     channel: n,
     children: L.Z.Messages.SYSTEM_DM_EMPTY_MESSAGE
   });
-  if (p === R.d4z.DM) return (0, l.jsxs)(N.Z, {
+  if (E === R.d4z.DM) return (0, l.jsxs)(N.Z, {
     channel: n,
-    user: E,
-    children: [null != E && (0, l.jsx)(a.Heading, {
+    user: p,
+    children: [null != p && (0, l.jsx)(a.Heading, {
       variant: "heading-xl/medium",
       className: O.marginBottom20,
       children: x

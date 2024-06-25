@@ -16,8 +16,8 @@ function u(e) {
       channel: d,
       messages: h,
       oldestUnreadMessageId: m,
-      treatSpam: p,
-      summaries: E,
+      treatSpam: E,
+      summaries: p,
       selectedSummary: g
     } = e,
     f = [],
@@ -26,20 +26,20 @@ function u(e) {
     I = null;
   return h.forEach(e => {
     var i, x, T, N, Z, S, v, A;
-    if (null != E && E.length > 0) {
+    if (null != p && p.length > 0) {
       ;
       let t = a.default.extractTimestamp(e.id);
-      for (let e = 0; i = e < (null == E ? void 0 : E.length), i; e++) {
-        if (null == E[e]) continue;
-        let n = a.default.extractTimestamp(E[e].startId),
-          l = a.default.extractTimestamp(E[e].endId);
+      for (let e = 0; i = e < (null == p ? void 0 : p.length), i; e++) {
+        if (null == p[e]) continue;
+        let n = a.default.extractTimestamp(p[e].startId),
+          l = a.default.extractTimestamp(p[e].endId);
         if (t >= n && t <= l) {
-          if (I === E[e].id) break;
+          if (I === p[e].id) break;
           f.push({
             type: c.ys_.DIVIDER,
-            content: E[e].topic,
-            contentKey: E[e].id
-          }), I = E[e].id;
+            content: p[e].topic,
+            contentKey: p[e].id
+          }), I = p[e].id;
           break
         }
       }
@@ -59,7 +59,7 @@ function u(e) {
       else if (t.blocked) return c.ys_.MESSAGE_GROUP_BLOCKED;
       else if ((0, o.P1)(e) && n) return c.ys_.MESSAGE_GROUP_SPAMMER;
       return null
-    }(d, e, L && p);
+    }(d, e, L && E);
     if (null !== O) {
       ;
       let t, n;

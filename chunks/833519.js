@@ -1,9 +1,9 @@
 n.d(t, {
   Z: function() {
-    return G
+    return B
   },
   _: function() {
-    return B
+    return G
   }
 });
 var l = n(735250),
@@ -17,8 +17,8 @@ var l = n(735250),
   d = n(763520),
   h = n(710845),
   m = n(590293),
-  p = n(863908),
-  E = n(871118),
+  E = n(863908),
+  p = n(871118),
   g = n(517525),
   f = n(590076),
   C = n(507675),
@@ -45,7 +45,7 @@ var l = n(735250),
   w = n(372453);
 let H = new h.Z("StreamTile");
 
-function B(e) {
+function G(e) {
   let {
     participant: t,
     selected: n,
@@ -68,7 +68,7 @@ function B(e) {
   })
 }
 
-function G(e) {
+function B(e) {
   let {
     participant: t,
     selected: n,
@@ -78,20 +78,20 @@ function G(e) {
     inPopout: S,
     width: P,
     focused: y
-  } = e, B = T.Z.getVideoComponent(), G = (0, r.e7)([I.default], () => I.default.getId()), V = (0, m.Z)(), {
+  } = e, G = T.Z.getVideoComponent(), B = (0, r.e7)([I.default], () => I.default.getId()), V = (0, m.Z)(), {
     stream: F,
     user: z,
     streamId: W
-  } = t, Y = (0, r.e7)([x.Z], () => x.Z.getChannel(F.channelId)), K = (0, r.e7)([_.Z], () => _.Z.getActiveStreamForUser(z.id, F.guildId), [z.id, F.guildId]), q = (0, r.e7)([_.Z], () => _.Z.getAllActiveStreams().length > 0), X = (0, r.e7)([N.Z], () => N.Z.isFocused()), Q = (null == K ? void 0 : K.ownerId) === G, J = Q && !X && !S, $ = null != K ? (0, p.Z)(K, z, z.id === G, J) : null, ee = P < 195;
+  } = t, Y = (0, r.e7)([x.Z], () => x.Z.getChannel(F.channelId)), K = (0, r.e7)([_.Z], () => _.Z.getActiveStreamForUser(z.id, F.guildId), [z.id, F.guildId]), q = (0, r.e7)([_.Z], () => _.Z.getAllActiveStreams().length > 0), X = (0, r.e7)([N.Z], () => N.Z.isFocused()), Q = (null == K ? void 0 : K.ownerId) === B, J = Q && !X && !S, $ = null != K ? (0, E.Z)(K, z, z.id === B, J) : null, ee = P < 195;
   if (i.useEffect(() => {
       !q && (null == Y ? void 0 : Y.isGuildStageVoice()) && !Q && ((0, u.rn)(F), c.Z.updateStageStreamSize(F.channelId, !1))
     }, []), i.useEffect(() => {
-      H.info("Stream Tile State - activeStream: ".concat(null != K, " | selected: ").concat(n, " | Video: ").concat(null != B, " | MediaEngine: ").concat(T.Z.supports(U.AN.VIDEO)))
-    }, [B, K, n]), V) return (0, l.jsx)(O.Z, {
+      H.info("Stream Tile State - activeStream: ".concat(null != K, " | selected: ").concat(n, " | Video: ").concat(null != G, " | MediaEngine: ").concat(T.Z.supports(U.AN.VIDEO)))
+    }, [G, K, n]), V) return (0, l.jsx)(O.Z, {
     stream: t.stream,
     isSmall: ee,
     selected: n,
-    isSelfStream: z.id === G
+    isSelfStream: z.id === B
   });
   if ((null == K ? void 0 : K.state) === b.jm8.ENDED) return (0, l.jsx)(R.Z, {
     selected: n,
@@ -108,7 +108,7 @@ function G(e) {
     participant: t,
     width: P
   });
-  else if (null != K && !n && null != B && T.Z.supports(U.AN.VIDEO)) return (0, l.jsxs)(l.Fragment, {
+  else if (null != K && !n && null != G && T.Z.supports(U.AN.VIDEO)) return (0, l.jsxs)(l.Fragment, {
     children: [null != Y ? (0, l.jsx)(f.Z, {
       focused: y,
       channelId: Y.id,
@@ -121,7 +121,7 @@ function G(e) {
       wrapperClassName: w.videoWrapper,
       className: w.content,
       streamId: W,
-      videoComponent: B,
+      videoComponent: G,
       fit: g,
       paused: h || J,
       videoSpinnerContext: Q ? d.m.SELF_STREAM : d.m.REMOTE_STREAM,
@@ -138,7 +138,7 @@ function G(e) {
     className: a()(w.content, w.streamPreview, {
       [w.small]: ee
     }),
-    children: [(0, l.jsx)(E.Z, {
+    children: [(0, l.jsx)(p.Z, {
       noText: !0,
       className: a()(w.absoluteFill, {
         [w.streamPreviewOpacity]: null == K

@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(233440),
   h = n(199902),
   m = n(158776),
-  p = n(998502),
-  E = n(785717),
+  E = n(998502),
+  p = n(785717),
   g = n(204197),
   f = n(78675),
   C = n(438163),
@@ -23,7 +23,7 @@ var l = n(735250),
   I = n(228168),
   x = n(981631),
   T = n(775784);
-let N = p.ZP.getEnableHardwareAcceleration() ? a.Xo : a.qE,
+let N = E.ZP.getEnableHardwareAcceleration() ? a.Xo : a.qE,
   Z = r.AvatarSizes.SIZE_80;
 
 function S(e) {
@@ -31,7 +31,7 @@ function S(e) {
     user: t,
     displayProfile: n,
     channel: a,
-    isHovering: p,
+    isHovering: E,
     onOpenProfile: S
   } = e, {
     theme: v
@@ -39,14 +39,14 @@ function S(e) {
     analyticsLocations: A
   } = (0, u.ZP)(c.Z.AVATAR), {
     trackUserProfileAction: M
-  } = (0, E.KZ)(), R = null == n ? void 0 : n.canUsePremiumProfileCustomization, {
+  } = (0, p.KZ)(), R = null == n ? void 0 : n.canUsePremiumProfileCustomization, {
     avatarSrc: j,
     eventHandlers: L,
     avatarDecorationSrc: O
   } = (0, g.Z)({
     user: t,
     size: Z,
-    animateOnHover: !p
+    animateOnHover: !E
   }), P = i.useMemo(() => (0, d.W)(t, a.id), [t, a.id]), {
     status: y,
     customStatusActivity: b,
@@ -76,7 +76,7 @@ function S(e) {
       user: t,
       displayProfile: n,
       profileType: I.y0.PANEL,
-      animateOnHover: !p
+      animateOnHover: !E
     }), (0, l.jsx)(r.Clickable, {
       ...L,
       className: T.clickable,

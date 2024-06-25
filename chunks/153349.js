@@ -12,8 +12,8 @@ var l, i, s = n(735250),
   d = n(442837),
   h = n(481060),
   m = n(239091),
-  p = n(99690),
-  E = n(58540),
+  E = n(99690),
+  p = n(58540),
   g = n(484459),
   f = n(103575),
   C = n(271383),
@@ -74,7 +74,7 @@ let L = a.memo(function(e) {
     })), v = (0, d.e7)([C.ZP], () => C.ZP.getMember(_, l.user.id)), A = a.useMemo(() => ({
       [_]: [l.user.id]
     }), [_, l.user.id]);
-    (0, E.$)(A);
+    (0, p.$)(A);
     let M = l.rtsState === S.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 
     function L() {
@@ -120,7 +120,7 @@ let L = a.memo(function(e) {
             className: j.participantMemberContainer,
             onContextMenu: P,
             ...e,
-            children: [(0, s.jsx)(p.Z, {
+            children: [(0, s.jsx)(E.Z, {
               size: h.AvatarSizes.SIZE_40,
               className: j.participantAvatar,
               user: l.user,

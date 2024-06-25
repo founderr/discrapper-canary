@@ -4,8 +4,8 @@ s.d(n, {
   }
 });
 var l = s(735250),
-  t = s(470079),
-  i = s(481060),
+  i = s(470079),
+  t = s(481060),
   r = s(474936),
   a = s(273912),
   c = s(426831),
@@ -29,17 +29,17 @@ let p = {
     [r.Cj.SEASONAL_COFFEE]: d,
     [r.Cj.SEASONAL_STANDARD_BOX]: c
   },
-  N = t.forwardRef(function(e, n) {
+  N = i.forwardRef(function(e, n) {
     let {
       isSelected: s,
-      giftStyle: t,
+      giftStyle: i,
       setSelectedGiftStyle: r,
       onFocus: c,
       onBlur: o
     } = e;
-    return (0, l.jsx)(i.Clickable, {
+    return (0, l.jsx)(t.Clickable, {
       innerRef: n,
-      onClick: () => r(t),
+      onClick: () => r(i),
       onFocus: c,
       onBlur: o,
       children: (0, l.jsx)("img", {
@@ -48,7 +48,7 @@ let p = {
           height: "100%"
         },
         alt: "",
-        src: p[t],
+        src: p[i],
         className: s ? a.customGiftBoxHighlighted : a.customGiftBox
       })
     })

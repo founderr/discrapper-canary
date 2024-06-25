@@ -17,8 +17,8 @@ var l = n(470079),
   d = n(984933),
   h = n(650774),
   m = n(430824),
-  p = n(819640),
-  E = n(375954),
+  E = n(819640),
+  p = n(375954),
   g = n(496675),
   f = n(709054),
   C = n(981631);
@@ -37,7 +37,7 @@ function I(e) {
   return {
     guildPopulated: function(e) {
       let t = (0, a.e7)([u.Z], () => u.Z.getChannel(null == e ? void 0 : e.systemChannelId)),
-        n = (0, a.Wu)([E.Z], () => null != t ? E.Z.getMessages(t.id).toArray() : []);
+        n = (0, a.Wu)([p.Z], () => null != t ? p.Z.getMessages(t.id).toArray() : []);
       return (0, a.e7)([h.Z], () => {
         var t;
         let l = null !== (t = h.Z.getMemberCount(null == e ? void 0 : e.id)) && void 0 !== t ? t : 0,
@@ -49,14 +49,14 @@ function I(e) {
       let t = (0, a.e7)([u.Z], () => null != e ? u.Z.getMutableBasicGuildChannelsForGuild(e.id) : null);
       return function(e) {
         let t = (0, a.e7)([c.default], () => c.default.getId());
-        return (0, a.e7)([E.Z], () => s().some(e, e => {
-          let n = E.Z.getMessages(e.id).toArray();
+        return (0, a.e7)([p.Z], () => s().some(e, e => {
+          let n = p.Z.getMessages(e.id).toArray();
           return s().some(n, e => e.author.id === t && !(0, o.Z)(e))
         }))
       }(l.useMemo(() => null == t ? [] : s().values(t), [t]))
     }(e),
     guildPersonalized: function(e) {
-      let t = (0, a.e7)([p.Z], () => p.Z.hasLayers()),
+      let t = (0, a.e7)([E.Z], () => E.Z.hasLayers()),
         n = (0, a.e7)([m.Z], () => m.Z.getGuild(null == e ? void 0 : e.id));
       return (null == n ? void 0 : n.icon) != null && !t
     }(e),

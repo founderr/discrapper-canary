@@ -339,8 +339,8 @@ function W(e, t, n, s) {
       if (D.ZP.getMentionCount(t) > 0) return 2;
       if (null != n) {
         let e = B.default.extractTimestamp(n);
-        if (Date.now() - e > K) return 7;
-        if (Date.now() - e > z) return 5
+        if (Date.now() - e > z) return 7;
+        if (Date.now() - e > K) return 5
       }
       if (s.isThread()) {
         let e = (0, p.J)(s);
@@ -364,8 +364,8 @@ function W(e, t, n, s) {
     messages: []
   })
 }
-let z = 2 * b.Z.Millis.DAY,
-  K = 10 * b.Z.Millis.DAY;
+let K = 2 * b.Z.Millis.DAY,
+  z = 10 * b.Z.Millis.DAY;
 
 function Q(e) {
   let [t, n] = r.useState(() => new w(Y(), e)), [s, i] = r.useState(!1), l = r.useRef(Date.now()), [a, o] = r.useState(() => Y());

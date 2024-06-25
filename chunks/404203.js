@@ -1,25 +1,25 @@
 t.d(n, {
   Z: function() {
-    return o
+    return a
   }
 });
 var s = t(735250),
-  a = t(470079);
+  o = t(470079);
 let r = e => n => {
   null == n || n.stopPropagation(), e()
 };
 
-function o(e) {
+function a(e) {
   let {
     onClick: n,
     className: t,
-    children: o
-  } = e, l = a.useRef(null);
+    children: a
+  } = e, l = o.useRef(null);
   return (0, s.jsx)("div", {
     onClick: n,
     ref: l,
     className: t,
-    children: o({
+    children: a({
       areaRef: l,
       handleStopPropagation: r
     })

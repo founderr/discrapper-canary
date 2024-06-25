@@ -10,8 +10,8 @@ var l = n(735250),
   d = n(607070),
   h = n(44315),
   m = n(314897),
-  p = n(111583),
-  E = n(889901),
+  E = n(111583),
+  p = n(889901),
   g = n(64078),
   f = n(351780),
   C = n(843693),
@@ -35,7 +35,7 @@ let N = i.memo(function(e) {
       return () => clearTimeout(e)
     }, [a]);
     let m = null != a ? "100%" : "200%",
-      p = (0, r.useSpring)({
+      E = (0, r.useSpring)({
         opacity: u ? 1 : 0,
         translateY: u ? "0" : m,
         pointerEvents: "none",
@@ -45,7 +45,7 @@ let N = i.memo(function(e) {
     return (0, l.jsx)(l.Fragment, {
       children: null != a && (0, l.jsx)(r.animated.div, {
         className: T.messageComboScore,
-        style: p,
+        style: E,
         children: (0, l.jsx)(c.Text, {
           className: T.comboScore,
           variant: "text-sm/bold",
@@ -97,13 +97,13 @@ let N = i.memo(function(e) {
         }), o && (0, l.jsxs)(l.Fragment, {
           children: [(0, l.jsx)("div", {
             className: a()(T.confettiIcon, T.left),
-            children: (0, l.jsx)(E.Z, {
+            children: (0, l.jsx)(p.Z, {
               width: 24,
               height: 24
             })
           }), (0, l.jsx)("div", {
             className: a()(T.confettiIcon, T.right),
-            children: (0, l.jsx)(E.Z, {
+            children: (0, l.jsx)(p.Z, {
               width: 24,
               height: 24
             })
@@ -119,9 +119,9 @@ let N = i.memo(function(e) {
 t.Z = i.memo(function(e) {
   let {
     channelId: t
-  } = e, n = (0, o.e7)([m.default], () => m.default.getId()), s = (0, o.e7)([p.Z], () => p.Z.isTyping(t, n), [t, n]), a = (0, o.e7)([f.Z], () => f.Z.isEnabled()), c = (0, o.e7)([C.ZP], () => C.ZP.isComboing(n, t), [t, n]), {
+  } = e, n = (0, o.e7)([m.default], () => m.default.getId()), s = (0, o.e7)([E.Z], () => E.Z.isTyping(t, n), [t, n]), a = (0, o.e7)([f.Z], () => f.Z.isEnabled()), c = (0, o.e7)([C.ZP], () => C.ZP.isComboing(n, t), [t, n]), {
     ref: h,
-    width: E = 0
+    width: p = 0
   } = (0, u.Z)(), g = (0, o.e7)([d.Z], () => d.Z.useReducedMotion), [_, x] = i.useState(!1), S = (0, I.Z)(t), v = a && c && s;
   i.useEffect(() => {
     v && x(!0);
@@ -153,7 +153,7 @@ t.Z = i.memo(function(e) {
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(N, {
       channelId: t,
-      width: E
+      width: p
     }), (0, l.jsx)(r.animated.div, {
       ref: h,
       className: T.combo,

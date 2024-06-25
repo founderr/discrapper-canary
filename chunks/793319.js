@@ -15,8 +15,8 @@ var l, i, s = n(735250),
   d = n(920906),
   h = n(848246),
   m = n(442837),
-  p = n(481060),
-  E = n(846027),
+  E = n(481060),
+  p = n(846027),
   g = n(287734),
   f = n(872810),
   C = n(410575),
@@ -69,8 +69,8 @@ var l, i, s = n(735250),
   ed = n(829750),
   eh = n(189771),
   em = n(294629),
-  ep = n(304745),
-  eE = n(985370),
+  eE = n(304745),
+  ep = n(985370),
   eg = n(544384),
   ef = n(560688),
   eC = n(127608),
@@ -82,7 +82,7 @@ var l, i, s = n(735250),
 
 function eZ(e, t) {
   if (es.Z.isVideoEnabled() === e) return;
-  let n = () => E.Z.setVideoEnabled(e);
+  let n = () => p.Z.setVideoEnabled(e);
   e ? (0, eI.Z)(n, t) : n()
 }
 
@@ -96,9 +96,9 @@ function eS(e) {
     disabled: o
   } = e, c = (0, _.bp)(), u = (0, m.Wu)([el.Z], () => el.Z.getAllActiveStreams()).find(e => e.ownerId === n.id), {
     available: d,
-    activated: E,
+    activated: p,
     hqStreamingState: g
-  } = (0, F.k)(h.q.STREAM_HIGH_QUALITY), C = null != u && d && E, I = a.useRef(null), x = t.getGuildId(), T = a.useCallback(() => {
+  } = (0, F.k)(h.q.STREAM_HIGH_QUALITY), C = null != u && d && p, I = a.useRef(null), x = t.getGuildId(), T = a.useCallback(() => {
     if (null == l || l(), !i) return (0, eC.Z)();
     (0, e_.Z)(x, t.id, ex.ZY5.GUILD_CHANNEL)
   }, [x, t.id, i, l]), N = (0, m.e7)([D.ZP, eo.Z], () => (0, w.Z)(D.ZP, eo.Z)), A = (0, v.ZP)(), R = (0, S.Z)() && null != N, j = () => {
@@ -160,7 +160,7 @@ function eS(e) {
         (0, z.qA)(!0)
       }
     }), (0, s.jsx)(K.Z, {
-      children: (0, s.jsx)(p.Popout, {
+      children: (0, s.jsx)(E.Popout, {
         renderPopout: e => {
           let {
             closePopout: l
@@ -178,7 +178,7 @@ function eS(e) {
         },
         position: "top",
         align: "center",
-        animation: p.Popout.Animation.FADE,
+        animation: E.Popout.Animation.FADE,
         children: (e, t) => {
           let {
             ...n
@@ -200,7 +200,7 @@ function ev(e) {
   } = e, n = t.getGuildId();
   return (0, x.Z)(n, t.id) ? (0, s.jsx)("div", {
     className: eN.buttonContainer,
-    children: (0, s.jsx)(ep.M, {
+    children: (0, s.jsx)(eE.M, {
       channel: t
     })
   }) : null
@@ -213,7 +213,7 @@ let eA = a.memo(function(e) {
     channel: i
   } = e, r = (0, m.e7)([R.Z], () => R.Z.getSelectedParticipant(i.id)), {
     reducedMotion: o
-  } = a.useContext(p.AccessibilityPreferencesContext), [c, u] = a.useState(!1), h = null == r ? void 0 : r.id, E = (0, m.e7)([el.Z], () => null != h ? el.Z.getActiveStreamForStreamKey(h) : null, [h]), C = (null == r ? void 0 : r.type) === eT.fO.STREAM && null != E && E.ownerId !== (null == n ? void 0 : n.id), _ = (0, m.Wu)([el.Z], () => el.Z.getAllActiveStreamsForChannel(i.id).filter(e => {
+  } = a.useContext(E.AccessibilityPreferencesContext), [c, u] = a.useState(!1), h = null == r ? void 0 : r.id, p = (0, m.e7)([el.Z], () => null != h ? el.Z.getActiveStreamForStreamKey(h) : null, [h]), C = (null == r ? void 0 : r.type) === eT.fO.STREAM && null != p && p.ownerId !== (null == n ? void 0 : n.id), _ = (0, m.Wu)([el.Z], () => el.Z.getAllActiveStreamsForChannel(i.id).filter(e => {
     let {
       ownerId: t
     } = e;
@@ -241,10 +241,10 @@ let eA = a.memo(function(e) {
     T() !== N && u(!0)
   }, [N, T]);
   let M = a.useCallback(() => {
-      if (null != E)(0, f.g)((0, U.V9)(E));
+      if (null != p)(0, f.g)((0, U.V9)(p));
       else
         for (let e of _)(0, f.g)((0, U.V9)(e))
-    }, [_, E]),
+    }, [_, p]),
     j = (e, t) => {
       let a = {
         centerButton: !0,
@@ -288,7 +288,7 @@ let eA = a.memo(function(e) {
           })
       }
     };
-  return (0, s.jsx)(p.Popout, {
+  return (0, s.jsx)(E.Popout, {
     renderPopout: e => {
       let {
         closePopout: t
@@ -306,7 +306,7 @@ let eA = a.memo(function(e) {
     },
     position: "top",
     align: "center",
-    animation: p.Popout.Animation.FADE,
+    animation: E.Popout.Animation.FADE,
     children: (e, t) => {
       let {
         onClick: n
@@ -334,7 +334,7 @@ function eM(e) {
     (0, eI.Z)(() => g.default.selectVoiceChannel(t.id, !0), r)
   }, [t.id, r]), h = a.useCallback(() => {
     n ? (0, ef.Z)() : d()
-  }, [n, d]), p = (0, m.e7)([ei.Z], () => {
+  }, [n, d]), E = (0, m.e7)([ei.Z], () => {
     let e = ei.Z.getCall(t.id);
     return (null == e ? void 0 : e.ringing.includes(i.id)) === !0
   });
@@ -358,7 +358,7 @@ function eM(e) {
       color: "green",
       channel: t,
       className: o()(eN.controlButton, eN.__invalid_lastButton)
-    }), p ? (0, s.jsx)(X.Z, {
+    }), E ? (0, s.jsx)(X.Z, {
       color: "red",
       channel: t,
       className: eN.controlButton
@@ -379,7 +379,7 @@ t.ZP = function(e) {
     enabled: c
   } = (0, eu.Z)(), d = (0, eh.Z)(t), {
     suppress: h,
-    selfMute: E,
+    selfMute: p,
     mute: g
   } = (0, em.Z)(t), {
     canGoLive: f
@@ -422,7 +422,7 @@ t.ZP = function(e) {
         })
       }), (0, s.jsxs)("div", {
         className: o()(eN.wrapper, n),
-        children: [!Z && (0, s.jsx)(p.Popout, {
+        children: [!Z && (0, s.jsx)(E.Popout, {
           renderPopout: e => {
             let {
               closePopout: t
@@ -435,7 +435,7 @@ t.ZP = function(e) {
           },
           position: "top",
           align: "center",
-          animation: p.Popout.Animation.FADE,
+          animation: E.Popout.Animation.FADE,
           children: (e, t) => {
             let {
               onClick: n
@@ -464,7 +464,7 @@ t.ZP = function(e) {
           exitFullScreen: i,
           canGoLive: f,
           hasPermission: d
-        }), (0, s.jsx)(p.Popout, {
+        }), (0, s.jsx)(E.Popout, {
           renderPopout: e => {
             let {
               closePopout: t
@@ -480,7 +480,7 @@ t.ZP = function(e) {
           },
           align: "center",
           position: "top",
-          animation: p.Popout.Animation.FADE,
+          animation: E.Popout.Animation.FADE,
           children: (e, t) => {
             let {
               onClick: n
@@ -491,7 +491,7 @@ t.ZP = function(e) {
               centerButton: !0,
               onPopoutClick: Z ? null : n,
               className: eN.controlButton,
-              selfMute: E,
+              selfMute: p,
               serverMute: g,
               suppress: h,
               popoutOpen: l,
@@ -501,7 +501,7 @@ t.ZP = function(e) {
           }
         }), U && !Z ? (0, s.jsx)("div", {
           className: eN.buttonContainer,
-          children: (0, s.jsx)(eE.Z, {
+          children: (0, s.jsx)(ep.Z, {
             channel: t
           })
         }) : null, (0, s.jsx)(eA, {

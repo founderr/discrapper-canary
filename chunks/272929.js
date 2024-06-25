@@ -42,8 +42,8 @@ function u(e) {
     onKeyDown: d,
     onMouseEnter: h,
     onMouseLeave: m,
-    isActive: p = !1,
-    isCenterButton: E = !1,
+    isActive: E = !1,
+    isCenterButton: p = !1,
     ...g
   } = e, f = n > 0, C = (0, i.useSpring)({
     percentComplete: 0 !== n ? (t - n) / t : 0,
@@ -53,7 +53,7 @@ function u(e) {
     }
   }), _ = f ? r.Z.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({
     seconds: n
-  }) : void 0, I = E ? a.d : a.Z;
+  }) : void 0, I = p ? a.d : a.Z;
   return (0, l.jsxs)("div", {
     className: o.container,
     children: [f ? (0, l.jsx)(c, {
@@ -67,7 +67,7 @@ function u(e) {
       onKeyDown: d,
       onMouseEnter: h,
       onMouseLeave: m,
-      isActive: p,
+      isActive: E,
       grow: !1
     })]
   })

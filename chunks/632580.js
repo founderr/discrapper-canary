@@ -4,8 +4,8 @@ s.d(n, {
   }
 }), s(47120);
 var l = s(512722),
-  t = s.n(l),
-  i = s(570140),
+  i = s.n(l),
+  t = s(570140),
   r = s(355467),
   a = s(976255),
   c = s(366939),
@@ -47,7 +47,7 @@ async function p(e) {
     giftInfoOptions: F,
     invoicePreview: w
   } = e;
-  n(m.A.PURCHASING), s(!0), l(!0), i.Z.wait(a.fw), p(null);
+  n(m.A.PURCHASING), s(!0), l(!0), t.Z.wait(a.fw), p(null);
   try {
     let e, s, l;
     if (d.default.track(I.rMx.PAYMENT_FLOW_COMPLETED, {
@@ -58,7 +58,7 @@ async function p(e) {
         expected_currency: null == w ? void 0 : w.currency,
         duration_ms: Date.now() - A
       }), N) return;
-    if (D === I.GZQ.ONE_TIME) t()(null != Z, "SKU must exist and be fetched."), t()(null != b, "SKUPricePreview must exist."), e = await (0, o.ZZ)(Z.applicationId, Z.id, {
+    if (D === I.GZQ.ONE_TIME) i()(null != Z, "SKU must exist and be fetched."), i()(null != b, "SKUPricePreview must exist."), e = await (0, o.ZZ)(Z.applicationId, Z.id, {
       expectedAmount: b.amount,
       expectedCurrency: b.currency,
       isGift: S,
@@ -66,8 +66,8 @@ async function p(e) {
       loadId: U,
       giftInfoOptions: F
     });
-    else if (t()(null != v, "Missing subscriptionPlan"), S) {
-      t()(null != w, "Missing invoicePreview");
+    else if (i()(null != v, "Missing subscriptionPlan"), S) {
+      i()(null != w, "Missing invoicePreview");
       let n = w.total,
         s = w.currency;
       e = await (0, o.ZZ)(E.RQ, v.skuId, {

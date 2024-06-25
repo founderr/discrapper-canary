@@ -15,8 +15,8 @@ var l, i, s = n(735250),
   d = n(153867),
   h = n(347469),
   m = n(740492),
-  p = n(36645),
-  E = n(923756);
+  E = n(36645),
+  p = n(923756);
 (i = l || (l = {}))[i.PostSidebar = 0] = "PostSidebar", i[i.ThreadSidebar = 1] = "ThreadSidebar", i[i.CallChatSidebar = 2] = "CallChatSidebar", i[i.MessageRequestSidebar = 3] = "MessageRequestSidebar", i[i.HomeSidebar = 4] = "HomeSidebar";
 
 function g(e) {
@@ -26,7 +26,7 @@ function g(e) {
     onResizeEnd: l,
     maxWidth: i
   } = e, a = (0, h.Z)({
-    minDimension: p.C,
+    minDimension: E.C,
     maxDimension: i,
     resizableDomNodeRef: t,
     onElementResize: n,
@@ -35,7 +35,7 @@ function g(e) {
   });
   return (0, s.jsx)("div", {
     onMouseDown: a,
-    className: E.resizeHandle
+    className: p.resizeHandle
   })
 }
 
@@ -63,17 +63,17 @@ function f(e) {
     d.ZP.updatedUnsyncedSettings({
       [f]: e
     })
-  }, [f]), x = (0, p.W)({
+  }, [f]), x = (0, E.W)({
     maxWidth: n
-  }), T = (0, c.clamp)(C, p.C, n), N = x ? T : T + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
+  }), T = (0, c.clamp)(C, E.C, n), N = x ? T : T + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
   a.useEffect(() => {
     null == l || l(T, x)
   }, [T, l, x]);
   let Z = (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)("div", {
-      className: o()(E.chatTarget, {
-        [E.floating]: x,
-        [E.notFloating]: !x
+      className: o()(p.chatTarget, {
+        [p.floating]: x,
+        [p.notFloating]: !x
       }),
       style: {
         width: N
@@ -85,8 +85,8 @@ function f(e) {
       onResizeEnd: I
     }), (0, s.jsx)("div", {
       ref: h,
-      className: o()(E.container, {
-        [E.floating]: x
+      className: o()(p.container, {
+        [p.floating]: x
       }),
       style: {
         width: T
@@ -98,7 +98,7 @@ function f(e) {
     let e = null != r ? r : a.Fragment;
     return (0, s.jsx)(e, {
       children: (0, s.jsx)("div", {
-        className: E.chatLayerWrapper,
+        className: p.chatLayerWrapper,
         children: Z
       })
     })

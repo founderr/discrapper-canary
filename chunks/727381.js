@@ -15,8 +15,8 @@ var i = n(120356),
   d = n(991570),
   h = n(753042),
   m = n(787469),
-  p = n(477718),
-  E = n(791176),
+  E = n(477718),
+  p = n(791176),
   g = n(908474),
   f = n(467014),
   C = n(689938),
@@ -74,14 +74,14 @@ function x(e) {
       }), (0, l.jsx)(f.Z, {
         userId: t,
         guildId: n
-      }), (0, l.jsx)(E.Z, {
+      }), (0, l.jsx)(p.Z, {
         member: T,
         onNavigate: C
       }), (0, l.jsx)(m.Z, {
         member: T
       }), (0, l.jsx)(h.Z, {
         member: T
-      }), (0, l.jsx)(p.Z, {
+      }), (0, l.jsx)(E.Z, {
         member: T
       })]
     })]

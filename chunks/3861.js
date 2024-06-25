@@ -9,8 +9,8 @@ var l = n(735250),
   d = n(585483),
   h = n(340295),
   m = n(171277),
-  p = n(677845),
-  E = n(430371),
+  E = n(677845),
+  p = n(430371),
   g = n(236564),
   f = n(981631),
   C = n(354459),
@@ -65,7 +65,7 @@ t.Z = (0, r.Z)(e => {
     className: _.videoGridWrapper,
     justify: u.Z.Justify.CENTER,
     align: u.Z.Align.CENTER,
-    children: (0, l.jsx)(p.Z, {
+    children: (0, l.jsx)(E.Z, {
       channel: Z,
       className: _.videoGrid,
       participants: D,
@@ -77,7 +77,7 @@ t.Z = (0, r.Z)(e => {
       inCall: A
     })
   });
-  return (0, l.jsx)(E.Z, {
+  return (0, l.jsx)(p.Z, {
     onFullscreenParticipant: N,
     onContextMenuParticipant: T,
     onSelectParticipant: x,

@@ -5,8 +5,8 @@ t.d(n, {
 });
 var i = t(735250);
 t(470079);
-var s = t(864843),
-  l = t(981631);
+var l = t(864843),
+  s = t(981631);
 
 function a(e) {
   let {
@@ -14,10 +14,10 @@ function a(e) {
     applicationId: t,
     applicationPrimarySkuId: a
   } = e;
-  return (0, i.jsx)(s.Z, {
+  return (0, i.jsx)(l.Z, {
     guildId: n,
     applicationId: t,
     applicationPrimarySkuId: a,
-    analyticsLocation: l.Sbl.GUILD_INTEGRATION_SETTINGS
+    analyticsLocation: s.Sbl.GUILD_INTEGRATION_SETTINGS
   })
 }

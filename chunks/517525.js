@@ -10,8 +10,8 @@ var l = n(735250),
   d = n(477690),
   h = n(481060),
   m = n(2052),
-  p = n(906732),
-  E = n(484459),
+  E = n(906732),
+  p = n(484459),
   g = n(594174),
   f = n(368666),
   C = n(626135),
@@ -54,7 +54,7 @@ let v = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         participant: r,
         isUpsellEnabled: o,
         shape: d,
-        size: E,
+        size: p,
         didTrackUpsellViewed: v,
         setDidTrackUpsellViewed: A,
         className: M,
@@ -63,7 +63,7 @@ let v = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
       j = (0, I.Wc)(r),
       {
         analyticsLocations: L
-      } = (0, p.ZP)(),
+      } = (0, E.ZP)(),
       O = null != (0, x.Z)(r);
     try {
       t = (0, I.nG)(j)
@@ -107,7 +107,7 @@ let v = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
       children: e => (0, l.jsxs)(h.Clickable, {
         ...e,
         onClick: U,
-        className: a()(S.qualityIndicator, E, f.eE[d], O ? S.qualityIndicatorLowQuality : S.qualityIndicatorFullQuality, {
+        className: a()(S.qualityIndicator, p, f.eE[d], O ? S.qualityIndicatorLowQuality : S.qualityIndicatorFullQuality, {
           [S.clickable]: D && P
         }),
         children: [P ? (0, l.jsx)(h.NitroWheelIcon, {
@@ -139,11 +139,11 @@ t.Z = e => {
     size: o,
     className: c,
     premiumIndicator: u
-  } = e, [d, m] = i.useState(!1), p = (0, I.Wc)(t), {
+  } = e, [d, m] = i.useState(!1), E = (0, I.Wc)(t), {
     reducedMotion: g
-  } = i.useContext(h.AccessibilityPreferencesContext), C = n && null != p;
+  } = i.useContext(h.AccessibilityPreferencesContext), C = n && null != E;
   i.useEffect(() => {
-    (0, E.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), {
+    (0, p.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), {
       dispatchWait: !0
     })
   }, [t]);

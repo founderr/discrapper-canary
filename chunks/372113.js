@@ -262,7 +262,7 @@ t.Z = e => {
     else return 0
   }(t), g = C >= 1, O = C >= 3, M = C >= 4, j = (0, A.Xv)(t.config), y = (0, x.uq)(n), k = n === S.jn.QUESTS_EMBED, G = r || E, {
     xboxAndPlaystationAccounts: F
-  } = (0, h.z6)(), V = (0, h.t5)(t, L.dr.QUESTS_CARD), w = g && !M && y, H = F.length > 0, Y = (0, c.e7)([_.default], () => _.default.locale), W = y && j, z = a && !O, K = (0, l.jsx)(R.Z, {
+  } = (0, h.z6)(), V = (0, h.t5)(t, L.dr.QUESTS_CARD), w = g && !M && y, H = F.length > 0, Y = (0, c.e7)([_.default], () => _.default.locale), W = y && j, K = a && !O, z = (0, l.jsx)(R.Z, {
     autoplay: i,
     className: o()(D.gridImg, {
       [D.questRewardGiftInventory]: y && "lg" === s,
@@ -286,9 +286,9 @@ t.Z = e => {
     },
     "aria-hidden": !G,
     children: [(0, l.jsx)(u.Tooltip, {
-      text: z ? P.Z.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
+      text: K ? P.Z.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
       tooltipContentClassName: D.rewardTileExpirationTooltip,
-      shouldShow: z,
+      shouldShow: K,
       children: e => (0, l.jsxs)("div", {
         className: D.rewardTileWrapper,
         ...e,
@@ -299,9 +299,9 @@ t.Z = e => {
           })
         }), W ? (0, l.jsx)(v.Z, {
           questConfig: t.config,
-          fallback: K,
+          fallback: z,
           isFocused: i
-        }) : K]
+        }) : z]
       })
     }), (0, l.jsxs)("div", {
       className: o()(D.gridText, D.taskDetails),

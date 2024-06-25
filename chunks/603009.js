@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(410030),
   h = n(607070),
   m = n(645041),
-  p = n(430824),
-  E = n(914010),
+  E = n(430824),
+  p = n(914010),
   g = n(594174),
   f = n(626135),
   C = n(645896),
@@ -37,7 +37,7 @@ function R(e) {
     showToast: s,
     onConfirm: o,
     onDismiss: m
-  } = e, [p, E] = i.useState(!1), f = i.useRef(null), _ = (0, C.Cc)(n.id), T = (0, d.ZP)(), S = (0, u.e7)([h.Z], () => h.Z.useReducedMotion), v = (0, I.nP)(null == _ ? void 0 : null === (t = _.branding) || void 0 === t ? void 0 : t.primaryColor, [c.tokens.colors.BG_BRAND, .5]), R = c.tokens.colors.BG_SURFACE_OVERLAY.resolve({
+  } = e, [E, p] = i.useState(!1), f = i.useRef(null), _ = (0, C.Cc)(n.id), T = (0, d.ZP)(), S = (0, u.e7)([h.Z], () => h.Z.useReducedMotion), v = (0, I.nP)(null == _ ? void 0 : null === (t = _.branding) || void 0 === t ? void 0 : t.primaryColor, [c.tokens.colors.BG_BRAND, .5]), R = c.tokens.colors.BG_SURFACE_OVERLAY.resolve({
     theme: T,
     saturation: 1
   }).hex(), j = (0, I.nj)(v, R, "top left", .3, "30%"), L = (0, u.e7)([g.default], () => {
@@ -97,8 +97,8 @@ function R(e) {
   return y((e, t) => {
     var i, s;
     return t && (0, l.jsx)(r.animated.div, {
-      onMouseEnter: () => E(!0),
-      onMouseLeave: () => E(!1),
+      onMouseEnter: () => p(!0),
+      onMouseLeave: () => p(!1),
       className: a()(M.wrapper),
       style: {
         ...e,
@@ -109,7 +109,7 @@ function R(e) {
         "aria-label": k,
         onClick: P,
         children: (0, l.jsxs)("div", {
-          className: a()(M.toastContainerInner, p ? M.hovered : null),
+          className: a()(M.toastContainerInner, E ? M.hovered : null),
           children: [(0, l.jsxs)("div", {
             className: M.guildIconContainer,
             children: [(0, l.jsx)(N.Z, {
@@ -157,7 +157,7 @@ function R(e) {
 }
 
 function j(e) {
-  let {} = e, t = (0, u.e7)([E.Z], () => E.Z.getGuildId()), n = (0, T.h)(t, "clan_tag_upsell_toast"), s = (0, u.e7)([p.Z], () => p.Z.getGuild(t), [t]), [a, r] = i.useState(!1), c = i.useRef(null);
+  let {} = e, t = (0, u.e7)([p.Z], () => p.Z.getGuildId()), n = (0, T.h)(t, "clan_tag_upsell_toast"), s = (0, u.e7)([E.Z], () => E.Z.getGuild(t), [t]), [a, r] = i.useState(!1), c = i.useRef(null);
   i.useEffect(() => (n && (c.current = window.setTimeout(() => {
     r(!0), f.default.track(S.rMx.DISMISSIBLE_CONTENT_SHOWN, {
       type: o.C[o.C.ADOPT_CLAN_IDENTITY_NOTICE],

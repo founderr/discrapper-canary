@@ -1,9 +1,9 @@
 n.d(t, {
   Dx: function() {
-    return p
+    return E
   },
   aP: function() {
-    return E
+    return p
   }
 }), n(653041), n(47120);
 var l, i, s = n(470079),
@@ -16,7 +16,7 @@ var l, i, s = n(470079),
   h = n(431328),
   m = n(501655);
 
-function p(e) {
+function E(e) {
   let t = (0, h.Rk)(e, m.pV.AUDIENCE),
     [n, l] = s.useState(!1);
   return s.useEffect(() => {
@@ -24,7 +24,7 @@ function p(e) {
   }, [t]), n ? 5e3 : 0
 }
 
-function E(e, t, n) {
+function p(e, t, n) {
   let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     i = function(e, t, n) {
       let l = (0, r.e7)([d.Z], () => [e, d.Z.getParticipantsVersion(e)], [e], u.Q),
@@ -49,8 +49,8 @@ function E(e, t, n) {
         }), u(c, 1, !1), [s, r]
       }, [l, t, i, n, e])
     }(e, t, l),
-    [h, p] = i,
-    [E, g] = (0, o.T)(i, n, [t[m.pV.AUDIENCE]]),
-    f = [h[l ? 3 : 0], h[1], E[2]];
-  return [f, [p[l ? 3 : 0], p[1], g[2]]]
+    [h, E] = i,
+    [p, g] = (0, o.T)(i, n, [t[m.pV.AUDIENCE]]),
+    f = [h[l ? 3 : 0], h[1], p[2]];
+  return [f, [E[l ? 3 : 0], E[1], g[2]]]
 }(i = l || (l = {}))[i.SELECTED = 0] = "SELECTED", i[i.SPEAKER = 1] = "SPEAKER", i[i.AUDIENCE = 2] = "AUDIENCE", i[i.MEDIA = 3] = "MEDIA"

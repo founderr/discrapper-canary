@@ -4,8 +4,8 @@ t.d(n, {
   }
 }), t(47120);
 var i = t(470079),
-  s = t(225857),
-  l = t(290843);
+  l = t(225857),
+  s = t(290843);
 
 function a(e) {
   let {
@@ -15,7 +15,7 @@ function a(e) {
     onDragStart: r,
     onDragComplete: o,
     onDragReset: c
-  } = e, [d, u] = i.useState(!1), [, I] = (0, s.c)({
+  } = e, [d, u] = i.useState(!1), [, I] = (0, l.c)({
     type: n,
     item: () => (r(a), {
       id: a,
@@ -35,7 +35,7 @@ function a(e) {
     }
   }), [{
     dragSourcePosition: N
-  }, E] = (0, l.L)({
+  }, E] = (0, s.L)({
     accept: n,
     canDrop: () => !0,
     collect: e => {

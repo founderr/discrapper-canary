@@ -3,10 +3,10 @@ n.d(t, {
     return h
   },
   Eu: function() {
-    return E
+    return p
   },
   Yp: function() {
-    return p
+    return E
   },
   bt: function() {
     return m
@@ -53,7 +53,7 @@ function m(e, t) {
   })(n, t), [n, t])
 }
 
-function p(e, t) {
+function E(e, t) {
   let n = (0, d.M)(),
     i = (0, s.e7)([o.Z], () => n ? o.Z.getDesyncedUserIds(e) : null);
   return l.useMemo(() => {
@@ -62,7 +62,7 @@ function p(e, t) {
   }, [i, t])
 }
 
-function E(e, t) {
+function p(e, t) {
   let n = (0, d.M)(),
     [i, a] = l.useState(!1),
     o = (0, s.e7)([r.default], () => r.default.getId() === t),

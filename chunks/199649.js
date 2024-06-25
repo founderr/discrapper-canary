@@ -15,8 +15,8 @@ var i = n(442837),
   d = n(626135),
   h = n(63063),
   m = n(862679),
-  p = n(981631),
-  E = n(596401),
+  E = n(981631),
+  p = n(596401),
   g = n(689938);
 
 function f(e) {
@@ -38,13 +38,13 @@ function f(e) {
     }) : g.Z.Messages.LEARN_MORE;
     T.message = g.Z.Messages.SYSTEM_DM_CHANNEL_DESCRIPTION, T.subtitle = g.Z.Messages.SYSTEM_DM_CHANNEL_DESCRIPTION_SUBTEXT, T.buttonText = e, T.onButtonClick = () => {
       if (_) {
-        open(E.D2), d.default.track(p.rMx.CHANGE_LOG_CTA_CLICKED, {
+        open(p.D2), d.default.track(E.rMx.CHANGE_LOG_CTA_CLICKED, {
           cta_type: "chat_blocker",
-          target: E.D2
+          target: p.D2
         });
         return
       }
-      open(h.Z.getArticleURL(p.BhN.SYSTEM_DMS))
+      open(h.Z.getArticleURL(E.BhN.SYSTEM_DMS))
     }, T.imageSrc = n(780961)
   } else x && (T.message = g.Z.Messages.DM_VERIFICATION_TEXT_BLOCKED, T.buttonText = g.Z.Messages.UNBLOCK, T.onButtonClick = () => {
     a.Z.unblockUser(t.getRecipientId())

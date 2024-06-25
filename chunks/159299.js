@@ -9,8 +9,8 @@ var l, i = n(392711),
   d = n(158776),
   h = n(885110),
   m = n(594174),
-  p = n(823379),
-  E = n(700785),
+  E = n(823379),
+  p = n(700785),
   g = n(709054),
   f = n(51144),
   C = n(981631);
@@ -115,14 +115,14 @@ class x {
       s = m.default.getUser(e),
       a = m.default.getCurrentUser(),
       r = (null == s ? void 0 : s.id) === (null == a ? void 0 : a.id) ? h.Z.getStatus() : d.Z.getStatus(e, this.guildId),
-      o = null != s && null != t && E.BT({
+      o = null != s && null != t && p.BT({
         permission: C.Plq.VIEW_CHANNEL,
         user: s,
         context: t
       }),
       u = r !== C.Skl.OFFLINE && r !== C.Skl.INVISIBLE && r !== C.Skl.UNKNOWN ? null !== (n = null == i ? void 0 : i.hoistRoleId) && void 0 !== n ? n : "online" : "offline",
-      p = null !== (l = null == i ? void 0 : i.nick) && void 0 !== l ? l : f.ZP.getName(s);
-    return [u, null == p ? void 0 : p.toLowerCase(), o]
+      E = null !== (l = null == i ? void 0 : i.nick) && void 0 !== l ? l : f.ZP.getName(s);
+    return [u, null == E ? void 0 : E.toLowerCase(), o]
   }
   constructor(e, t, n) {
     _(this, "guildId", void 0), _(this, "parentId", void 0), _(this, "threadId", void 0), _(this, "version", void 0), _(this, "sections", void 0), _(this, "allUserIds", void 0), this.guildId = e, this.parentId = t, this.threadId = n, this.version = 0, this.sections = {}, this.allUserIds = new Set
@@ -240,7 +240,7 @@ _(S, "displayName", "ThreadMemberListStore"), t.Z = new S(r.Z, {
     } = e, n = s()(t).map(e => {
       var t;
       return null === (t = e.user) || void 0 === t ? void 0 : t.id
-    }).filter(p.lm).uniq().value(), l = !1;
+    }).filter(E.lm).uniq().value(), l = !1;
     for (let e in I) I[e].updateMultipleUserIds(n) && (l = !0);
     return l
   },

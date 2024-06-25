@@ -8,8 +8,8 @@ var i = s(735250),
   d = s(780384),
   u = s(481060),
   c = s(533307),
-  p = s(410030),
-  h = s(607070),
+  h = s(410030),
+  p = s(607070),
   f = s(100527),
   m = s(906732),
   g = s(728345),
@@ -29,10 +29,10 @@ var i = s(735250),
   y = s(366695),
   j = s(153124),
   b = s(626135),
-  P = s(176354),
-  M = s(669079),
-  w = s(296848),
-  L = s(51144),
+  M = s(176354),
+  P = s(669079),
+  L = s(296848),
+  w = s(51144),
   F = s(902653),
   G = s(479446),
   D = s(715627),
@@ -86,7 +86,7 @@ class q extends n.Component {
     null == e && null != t && g.Z.fetchApplication(t.applicationId);
     let l = null != s || null != i.giftStyle,
       a = (0, Z.mO)(i),
-      r = null != n ? P.ZP.getURL(n) : void 0;
+      r = null != n ? M.ZP.getURL(n) : void 0;
     this.setState({
       isCustomGift: l,
       isCollectiblesGift: a,
@@ -105,10 +105,10 @@ class q extends n.Component {
       opened: l,
       isCustomGift: a
     } = this.state;
-    return (0, M.TO)(e, s, i, n, t, l, a)
+    return (0, P.TO)(e, s, i, n, t, l, a)
   }
   get buttonText() {
-    return (0, M.L2)(this.step, this.props.giftCode, this.state.isCustomGift)
+    return (0, P.L2)(this.step, this.props.giftCode, this.state.isCustomGift)
   }
   get firstHeaderText() {
     let {
@@ -123,11 +123,11 @@ class q extends n.Component {
     if (e && this.step === H.wZ8.ERROR) return B.Z.Messages.GIFT_CONFIRMATION_HEADER_FAIL;
     if (e && !s) {
       if (!t) return B.Z.Messages.GIFT_RECIPIENT_INFO.format({
-        recipientDisplayName: L.ZP.getName(A.default.getCurrentUser())
+        recipientDisplayName: w.ZP.getName(A.default.getCurrentUser())
       });
       {
         let e = A.default.getUser(i.userId),
-          t = L.ZP.getName(e);
+          t = w.ZP.getName(e);
         return l === r.Z.AVATAR_DECORATION ? B.Z.Messages.COLLECTIBLES_SENDER_GIFTED_YOU_DECORATION.format({
           sender: t
         }) : l === r.Z.PROFILE_EFFECT ? B.Z.Messages.COLLECTIBLES_SENDER_GIFTED_YOU_EFFECT.format({
@@ -138,13 +138,13 @@ class q extends n.Component {
         })
       }
     }
-    return null == this.props.sku ? null : (0, M.dQ)(this.step, this.props.giftCode, this.props.sku)
+    return null == this.props.sku ? null : (0, P.dQ)(this.step, this.props.giftCode, this.props.sku)
   }
   get secondHeaderText() {
     if (!this.state.isCustomGift || this.state.opened || this.state.accepted) return null;
     let e = A.default.getUser(this.props.giftCode.userId);
     return B.Z.Messages.GIFT_SENDER_INFO.format({
-      sender: L.ZP.getName(e)
+      sender: w.ZP.getName(e)
     })
   }
   get bodyText() {
@@ -161,7 +161,7 @@ class q extends n.Component {
       isCustomGift: a,
       opened: r
     } = this.state;
-    return !r && a ? null : (0, M.iM)({
+    return !r && a ? null : (0, P.iM)({
       step: this.step,
       sku: e,
       libraryApplication: s,
@@ -180,7 +180,7 @@ class q extends n.Component {
       error: s,
       accepted: i
     } = this.state;
-    return (0, M.e$)(e, s, i, t, this.handleGoToLibrary)
+    return (0, P.e$)(e, s, i, t, this.handleGoToLibrary)
   }
   get handleClick() {
     let {
@@ -230,8 +230,8 @@ class q extends n.Component {
       useReducedMotion: o,
       onComplete: d,
       customGiftMessage: c,
-      emojiName: p,
-      soundId: h,
+      emojiName: h,
+      soundId: p,
       isThemeDark: f
     } = this.props, m = A.default.getUser(n.userId), {
       isCustomGift: g,
@@ -309,7 +309,7 @@ class q extends n.Component {
           }), g && this.state.opened && !this.state.accepted && !C && null != c && "" !== c && !x && (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(u.FormTitle, {
               children: B.Z.Messages.GIFT_SENDER_INFO.format({
-                sender: L.ZP.getName(m)
+                sender: w.ZP.getName(m)
               })
             }), (0, i.jsx)(u.Heading, {
               id: l,
@@ -326,14 +326,14 @@ class q extends n.Component {
           })]
         })]
       }), null != n.giftStyle && !o && this.step !== H.wZ8.ERROR && (0, i.jsx)(i.Fragment, {
-        children: !Z && !t && S && (null == p || null == v ? (0, i.jsx)(W, {
+        children: !Z && !t && S && (null == h || null == v ? (0, i.jsx)(W, {
           openedGift: S && !Z && !t
         }) : (0, i.jsx)(D.Z, {
           confettiTarget: this.modalRef.current,
           emojiURL: v
         }))
-      }), !Z && !t && S && null != h && (0, i.jsx)($, {
-        soundId: h,
+      }), !Z && !t && S && null != p && (0, i.jsx)($, {
+        soundId: p,
         step: this.step
       })]
     })
@@ -390,15 +390,15 @@ class q extends n.Component {
     })
   }
 }
-let J = o.ZP.connectStores([R.Z, O.Z, I.Z, _.Z, N.Z, h.Z], e => {
+let J = o.ZP.connectStores([R.Z, O.Z, I.Z, _.Z, N.Z, p.Z], e => {
   let {
     giftCode: t
-  } = e, s = O.Z.get(t.skuId), i = null != s ? I.Z.getApplication(s.applicationId) : null, n = h.Z.useReducedMotion;
+  } = e, s = O.Z.get(t.skuId), i = null != s ? I.Z.getApplication(s.applicationId) : null, n = p.Z.useReducedMotion;
   return {
     sku: s,
-    libraryApplication: null != s && (null == t ? void 0 : t.entitlementBranches) != null ? (0, M.z2)(t.entitlementBranches, s, R.Z) : null,
+    libraryApplication: null != s && (null == t ? void 0 : t.entitlementBranches) != null ? (0, P.z2)(t.entitlementBranches, s, R.Z) : null,
     application: i,
-    subscriptionPlan: null != t.subscriptionPlanId ? (0, w.oE)(t.subscriptionPlanId) : null,
+    subscriptionPlan: null != t.subscriptionPlanId ? (0, L.oE)(t.subscriptionPlanId) : null,
     accepting: _.Z.getIsAccepting(t.code),
     useReducedMotion: n
   }
@@ -413,7 +413,7 @@ t.default = e => {
     soundId: r,
     onClose: u,
     ...c
-  } = e, h = (0, j.Dt)(), g = (0, o.e7)([_.Z], () => _.Z.get(n)), I = (0, p.ZP)(), {
+  } = e, p = (0, j.Dt)(), g = (0, o.e7)([_.Z], () => _.Z.get(n)), I = (0, h.ZP)(), {
     analyticsLocations: Z
   } = (0, m.ZP)(f.Z.GIFT_CODE_MODAL), {
     product: E
@@ -423,7 +423,7 @@ t.default = e => {
     customGiftMessage: l,
     channelContext: s,
     giftCode: g,
-    headerId: h,
+    headerId: p,
     emojiName: a,
     soundId: r,
     analyticsLocations: Z,

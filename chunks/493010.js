@@ -9,8 +9,8 @@ var l = n(735250),
   d = n(541716),
   h = n(605236),
   m = n(703558),
-  p = n(502568),
-  E = n(585483),
+  E = n(502568),
+  p = n(585483),
   g = n(909820),
   f = n(981631),
   C = n(921944),
@@ -28,9 +28,9 @@ t.Z = function(e) {
     })
   }, []);
   let T = i.useCallback(() => {
-      r.Z.updateChatOpen(t.id, !1), E.S.safeDispatch(f.CkL.FOCUS_CHAT_BUTTON)
+      r.Z.updateChatOpen(t.id, !1), p.S.safeDispatch(f.CkL.FOCUS_CHAT_BUTTON)
     }, [t.id]),
-    N = (0, l.jsx)(p.ZP.Icon, {
+    N = (0, l.jsx)(E.ZP.Icon, {
       icon: a.CloseSmallIcon,
       tooltip: _.Z.Messages.CLOSE,
       onClick: T
@@ -42,14 +42,14 @@ t.Z = function(e) {
     children: [(0, l.jsx)(o.Z, {
       channel: t,
       draftType: m.d.ChannelMessage
-    }), (0, l.jsxs)(p.ZP, {
+    }), (0, l.jsxs)(E.ZP, {
       toolbar: N,
       "aria-label": _.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
-      children: [(0, l.jsx)(p.ZP.Icon, {
+      children: [(0, l.jsx)(E.ZP.Icon, {
         icon: a.ChatIcon,
         disabled: !0,
         "aria-label": _.Z.Messages.VOICE_CHAT_TEXT_CHANNEL
-      }), (0, l.jsx)(p.ZP.Title, {
+      }), (0, l.jsx)(E.ZP.Title, {
         children: t.name
       })]
     }), (0, l.jsx)("div", {

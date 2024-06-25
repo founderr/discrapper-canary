@@ -12,8 +12,8 @@ var l, i, s = n(735250),
   d = n(481060),
   h = n(393238),
   m = n(434650),
-  p = n(607070),
-  E = n(594174),
+  E = n(607070),
+  p = n(594174),
   g = n(5192),
   f = n(603368),
   C = n(856682),
@@ -40,7 +40,7 @@ t.Z = a.memo(function(e) {
     e && (D.current = setTimeout(() => {
       b(!0)
     }, T))
-  }, [T]), k = (0, m.O)(U), w = (0, u.e7)([p.Z], () => p.Z.useReducedMotion), H = (0, u.e7)([E.default], () => E.default.getCurrentUser()), [B, G] = (0, c.useSpring)(() => {
+  }, [T]), k = (0, m.O)(U), w = (0, u.e7)([E.Z], () => E.Z.useReducedMotion), H = (0, u.e7)([p.default], () => p.default.getCurrentUser()), [G, B] = (0, c.useSpring)(() => {
     var e, t;
     return e = S, t = w, "left" === e ? {
       right: t ? 68 : 0,
@@ -57,7 +57,7 @@ t.Z = a.memo(function(e) {
     }
   }));
   a.useEffect(() => {
-    if (y) G({
+    if (y) B({
       ..."left" === S ? {
         right: 68,
         config: c.config.stiff
@@ -127,7 +127,7 @@ t.Z = a.memo(function(e) {
                 children: (0, s.jsxs)(c.animated.div, {
                   className: z,
                   style: {
-                    ...B,
+                    ...G,
                     ...V
                   },
                   children: [(0, s.jsx)("div", {

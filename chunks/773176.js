@@ -9,8 +9,8 @@ var l = n(735250),
   d = n(607070),
   h = n(346610),
   m = n(868643),
-  p = n(223606),
-  E = n(188597),
+  E = n(223606),
+  p = n(188597),
   g = n(41776),
   f = n(641051),
   C = n(329461),
@@ -86,8 +86,8 @@ function K(e) {
     onClick: d,
     key: h,
     disabled: m,
-    dangerous: p,
-    separator: E,
+    dangerous: E,
+    separator: p,
     sparkle: g,
     ...f
   } = e;
@@ -112,14 +112,14 @@ function K(e) {
           },
           "aria-label": null != n ? n : t,
           disabled: m,
-          dangerous: p,
+          dangerous: E,
           ...f,
           children: [(0, l.jsx)(a, {
             className: z.icon,
             color: "currentColor",
             ...r
           }), g && (0, l.jsx)(u.LottieSparkle, {})]
-        }), E && (0, l.jsx)(O.Z0, {})]
+        }), p && (0, l.jsx)(O.Z0, {})]
       })
     }
   }, h)
@@ -133,8 +133,8 @@ function q(e) {
     canPin: a,
     canDelete: r,
     canReport: o,
-    canEdit: p,
-    canPublish: E,
+    canEdit: E,
+    canPublish: p,
     canReact: _,
     canConfigureJoin: I,
     canReply: x,
@@ -161,17 +161,17 @@ function q(e) {
       isFocused: r
     } = e, {
       author: o
-    } = n, u = (0, c.e7)([M.Z], () => M.Z.getGuild(t.guild_id), [t.guild_id]), p = (0, c.e7)([S.default], () => S.default.getId()), E = (0, N.$R)(t), _ = (0, N.Gu)(t), I = Z.nc.useSetting(), x = Z.Sb.useSetting(), v = (0, c.e7)([R.Z], () => null == t.guild_id || R.Z.canChatInGuild(t.guild_id), [t]), {
+    } = n, u = (0, c.e7)([M.Z], () => M.Z.getGuild(t.guild_id), [t.guild_id]), E = (0, c.e7)([S.default], () => S.default.getId()), p = (0, N.$R)(t), _ = (0, N.Gu)(t), I = Z.nc.useSetting(), x = Z.Sb.useSetting(), v = (0, c.e7)([R.Z], () => null == t.guild_id || R.Z.canChatInGuild(t.guild_id), [t]), {
       canManageMessages: L,
       canAddNewReactions: O
     } = (0, c.cj)([j.Z], () => ({
       canAddNewReactions: v && j.Z.can(V.Plq.ADD_REACTIONS, t),
       canManageMessages: j.Z.can(V.Plq.MANAGE_MESSAGES, t)
-    }), [t, v]), P = (0, T.U)(t, n), w = (0, N.NE)(t, n), H = (0, N.Ek)(n), G = (0, c.e7)([g.Z], () => null != t.guild_id && g.Z.isLurking(t.guild_id), [t]), F = (0, c.e7)([A.ZP], () => null != t.guild_id && A.ZP.isCurrentUserGuest(t.guild_id), [t]), z = o.id === p, W = (L || n.canDeleteOwnMessage(p)) && E && !V.V$x.UNDELETABLE.has(n.type);
+    }), [t, v]), P = (0, T.U)(t, n), w = (0, N.NE)(t, n), H = (0, N.Ek)(n), G = (0, c.e7)([g.Z], () => null != t.guild_id && g.Z.isLurking(t.guild_id), [t]), F = (0, c.e7)([A.ZP], () => null != t.guild_id && A.ZP.isCurrentUserGuest(t.guild_id), [t]), z = o.id === E, W = (L || n.canDeleteOwnMessage(E)) && p && !V.V$x.UNDELETABLE.has(n.type);
     n.type === V.uaV.AUTO_MODERATION_ACTION && (W = W && L);
     let Y = (0, b.a4)(n),
       K = (0, U.Z)(n, t, L),
-      q = !t.isSystemDM() && (0, D.Z)(n, p) && E && !_,
+      q = !t.isSystemDM() && (0, D.Z)(n, E) && p && !_,
       {
         disableReactionCreates: X
       } = (0, k.Z)({
@@ -181,7 +181,7 @@ function q(e) {
         canAddNewReactions: O,
         isLurking: G,
         isGuest: F,
-        isActiveChannelOrUnarchivableThread: E
+        isActiveChannelOrUnarchivableThread: p
       }),
       Q = t.type === V.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(V.oNc.NEWS) && (z || L) && n.type === V.uaV.DEFAULT && !n.isPoll(),
       J = t.getGuildId(),
@@ -295,7 +295,7 @@ function q(e) {
         label: F.Z.Messages.CREATE_THREAD,
         icon: u.ThreadIcon,
         onClick: w.gK
-      }) : null, x && p ? K({
+      }) : null, x && E ? K({
         key: "reply-self",
         channel: t,
         message: n,
@@ -310,14 +310,14 @@ function q(e) {
       renderEmojiPicker: Q,
       shouldShow: q,
       isFocused: en
-    }) : null, x && !p ? K({
+    }) : null, x && !E ? K({
       key: "reply-other",
       channel: t,
       message: n,
       label: F.Z.Messages.MESSAGE_ACTION_REPLY,
       icon: u.ArrowAngleLeftUpIcon,
       onClick: w.HH
-    }) : null, p ? K({
+    }) : null, E ? K({
       key: "edit",
       channel: t,
       message: n,
@@ -345,7 +345,7 @@ function q(e) {
       label: F.Z.Messages.VIEW_THREAD,
       icon: u.ThreadIcon,
       onClick: w.qe
-    }) : null, E ? K({
+    }) : null, p ? K({
       key: "publish",
       channel: t,
       message: n,
@@ -407,7 +407,7 @@ function X(e) {
   let {
     channel: t,
     message: n
-  } = e, i = (0, c.e7)([p.Z], () => null != p.Z.getMessage(n.id), [n.id]), s = null == n.interaction || null != n.interactionData && (0, E.$s)(n.interactionData);
+  } = e, i = (0, c.e7)([E.Z], () => null != E.Z.getMessage(n.id), [n.id]), s = null == n.interaction || null != n.interactionData && (0, p.$s)(n.interactionData);
   return (0, l.jsxs)(l.Fragment, {
     children: [!i && s && K({
       key: "retry",

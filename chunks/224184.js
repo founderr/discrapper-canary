@@ -9,8 +9,8 @@ var l = n(735250),
   d = n(314897),
   h = n(271383),
   m = n(496675),
-  p = n(19780),
-  E = n(594174),
+  E = n(19780),
+  p = n(594174),
   g = n(626135),
   f = n(906605),
   C = n(574176),
@@ -31,7 +31,7 @@ t.Z = e => {
   } = C.n.useExperiment({
     guildId: S.guild_id,
     location: "HangStatusPopout"
-  }), M = (0, r.e7)([d.default], () => d.default.getId()), R = (0, r.e7)([E.default], () => E.default.getUser(s)), j = (0, r.e7)([p.Z], () => p.Z.getChannelId() === S.id), L = (0, r.e7)([m.Z], () => m.Z.can(T.Plq.CONNECT, S)), O = (0, r.e7)([h.ZP], () => null != S.guild_id && null != R ? h.ZP.getMember(S.guild_id, s) : null), P = i.useMemo(() => null != R ? (0, u.SG)(void 0, O, R, {
+  }), M = (0, r.e7)([d.default], () => d.default.getId()), R = (0, r.e7)([p.default], () => p.default.getUser(s)), j = (0, r.e7)([E.Z], () => E.Z.getChannelId() === S.id), L = (0, r.e7)([m.Z], () => m.Z.can(T.Plq.CONNECT, S)), O = (0, r.e7)([h.ZP], () => null != S.guild_id && null != R ? h.ZP.getMember(S.guild_id, s) : null), P = i.useMemo(() => null != R ? (0, u.SG)(void 0, O, R, {
     size: 40
   }) : void 0, [O, R]);
   return (i.useEffect(() => {
@@ -112,7 +112,7 @@ t.Z = e => {
           }) : (0, f.Zx)(e, !0), g.default.track(T.rMx.SWIPE_HANG_STATUS, {
             guild_id: S.guild_id,
             channel_id: S.id,
-            media_session_id: p.Z.getMediaSessionId()
+            media_session_id: E.Z.getMediaSessionId()
           })
         },
         children: N.Z.Messages.CUSTOM_HANGS_STATUS_COPY_CTA

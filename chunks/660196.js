@@ -19,14 +19,14 @@ function m(e) {
   let {
     guildId: n,
     groupListingId: m,
-    location: p,
-    relevantSubscriptionListingIds: E
+    location: E,
+    relevantSubscriptionListingIds: p
   } = e, g = (0, c.f)("useTrackRoleSubscriptionUpsellAnalytics"), {
     activeSubscription: f
-  } = (0, d.Z)(m), C = null != f, _ = (0, i.Wu)([u.Z], () => (null != E ? E : []).filter(e => {
+  } = (0, d.Z)(m), C = null != f, _ = (0, i.Wu)([u.Z], () => (null != p ? p : []).filter(e => {
     var t;
     return (null === (t = u.Z.getSubscriptionListing(e)) || void 0 === t ? void 0 : t.published) === !0
-  }), [E]), {
+  }), [p]), {
     analyticsLocations: I
   } = (0, a.ZP)(null !== (t = (0, r.DR)()) && void 0 !== t ? t : []), x = l.useRef(!1);
   l.useEffect(() => {
@@ -35,8 +35,8 @@ function m(e) {
       role_subscription_listing_ids: _,
       is_premium_member: C,
       location_stack: I,
-      location: p,
+      location: E,
       ...(0, s.hH)(n)
     }))
-  }, [n, m, g, p, _, C, I])
+  }, [n, m, g, E, _, C, I])
 }

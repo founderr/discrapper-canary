@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(314897),
   h = n(131951),
   m = n(585483),
-  p = n(807705),
-  E = n(27457),
+  E = n(807705),
+  p = n(27457),
   g = n(111248),
   f = n(312703),
   C = n(796638),
@@ -59,7 +59,7 @@ function S(e) {
     $ = (0, o.Z)(J),
     ee = U === _.AEg.MINIMUM || U === _.AEg.NORMAL,
     et = !Q && (!ee || K),
-    en = (0, p.Z)(et, 100),
+    en = (0, E.Z)(et, 100),
     el = 0;
   (K || J) && (el += 72), K && !J && (et ? el += 48 : el += 8), J && (el += .5 * Z + 8);
   let ei = i.useMemo(() => K && q ? b / (D - 2 * el) : X && null != B && B.width > 0 && B.height > 0 ? B.width / B.height : N, [X, B, K, b, D, el, q]),
@@ -127,10 +127,10 @@ function S(e) {
         opacity: 0
       }
     }),
-    ep = i.useCallback(e => {
+    eE = i.useCallback(e => {
       V(e), z(!1)
     }, []),
-    eE = J || y ? [] : (0, f.n3)(v, L, G),
+    ep = J || y ? [] : (0, f.n3)(v, L, G),
     {
       visibleParticipants: eg,
       participantTileWidth: ef
@@ -164,7 +164,7 @@ function S(e) {
               return null != t ? (0, l.jsx)(r.animated.div, {
                 className: x.videoWrapperAnimated,
                 style: e,
-                children: (0, l.jsx)(E.ZP, {
+                children: (0, l.jsx)(p.ZP, {
                   focused: !0,
                   noBorder: ea >= b || es >= D,
                   channel: j,
@@ -176,7 +176,7 @@ function S(e) {
                   onClick: n,
                   onDoubleClick: S,
                   onContextMenu: s,
-                  onVideoResize: ep,
+                  onVideoResize: eE,
                   inCall: R,
                   inPopout: w
                 })
@@ -216,12 +216,12 @@ function S(e) {
           popoutWindow: M
         })
       })]
-    }), eE.length > 0 ? (0, l.jsx)(g.Z, {
+    }), ep.length > 0 ? (0, l.jsx)(g.Z, {
       onContextMenuParticipant: s,
       width: b,
       height: D,
       channel: j,
-      participants: eE
+      participants: ep
     }) : null]
   })
 }

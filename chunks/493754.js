@@ -15,8 +15,8 @@ var i = n(120356),
   d = n(786915),
   h = n(430824),
   m = n(496675),
-  p = n(981631),
-  E = n(689938),
+  E = n(981631),
+  p = n(689938),
   g = n(967928);
 
 function f(e) {
@@ -31,9 +31,9 @@ function f(e) {
     className: T,
     ...N
   } = e, Z = null == C ? void 0 : C.getGuildId(), S = null == C ? void 0 : C.id, v = (0, o.e7)([h.Z], () => null != Z ? h.Z.getGuild(Z) : null, [Z]), A = (0, o.e7)([u.ZP], () => u.ZP.getActiveEventByChannel(S), [S]);
-  if (t = v, i = C, !(null != t && null != i && m.Z.can(p.Plq.CREATE_INSTANT_INVITE, i))) return null;
-  let M = E.Z.Messages.INSTANT_INVITE;
-  return null != a ? M = E.Z.Messages.INVITE_STREAM_HEADER : null != f && (M = E.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY), (0, l.jsxs)(l.Fragment, {
+  if (t = v, i = C, !(null != t && null != i && m.Z.can(E.Plq.CREATE_INSTANT_INVITE, i))) return null;
+  let M = p.Z.Messages.INSTANT_INVITE;
+  return null != a ? M = p.Z.Messages.INVITE_STREAM_HEADER : null != f && (M = p.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY), (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(c.Button, {
       size: c.Button.Sizes.SMALL,
       color: g.buttonColor,
@@ -60,12 +60,12 @@ function f(e) {
               streamUserId: s,
               applicationId: a,
               analyticsLocation: u,
-              source: i.isGuildStageVoice() ? p.t4x.STAGE_CHANNEL : p.t4x.STREAM_INVITE,
+              source: i.isGuildStageVoice() ? E.t4x.STAGE_CHANNEL : E.t4x.STREAM_INVITE,
               guildScheduledEvent: d
             })
           }, {
             modalKey: "stream-invite-modal",
-            contextKey: r === p.IlC.POPOUT ? c.POPOUT_MODAL_CONTEXT : c.DEFAULT_MODAL_CONTEXT
+            contextKey: r === E.IlC.POPOUT ? c.POPOUT_MODAL_CONTEXT : c.DEFAULT_MODAL_CONTEXT
           })
         }({
           guild: v,

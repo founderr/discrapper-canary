@@ -29,8 +29,8 @@ function d(e) {
     focusedIndex: d = 0,
     onSelect: h,
     setFocus: m,
-    getNewFocusIndex: p,
-    maintainFocusPosition: E = !0,
+    getNewFocusIndex: E,
+    maintainFocusPosition: p = !0,
     includeSetSizes: g = !0,
     focusOnMount: f = !0,
     enabled: C = !0,
@@ -58,8 +58,8 @@ function d(e) {
         focusedIndex: d,
         onSelect: h,
         setFocus: m = u,
-        getNewFocusIndex: p,
-        dispatch: E,
+        getNewFocusIndex: E,
+        dispatch: p,
         maintainFocusPosition: g,
         includeSetSizes: f,
         focusOnMount: C,
@@ -74,7 +74,7 @@ function d(e) {
       }, [_]);
       let [S, v] = l.useState(!1), [A] = l.useState(() => new a.$o(e => () => {
         let t = null != N.current && "string" == typeof e ? N.current(e) : e;
-        "number" == typeof t && !(t < 0) && E({
+        "number" == typeof t && !(t < 0) && p({
           type: i.G.SET_FOCUSED_INDEX,
           index: t
         })
@@ -93,12 +93,12 @@ function d(e) {
       }, [d]);
       let L = l.useCallback(function() {
           let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-            n = null != p ? p(d) : d;
-          n !== d && E({
+            n = null != E ? E(d) : d;
+          n !== d && p({
             type: i.G.SET_FOCUSED_INDEX,
             index: n
           }), e && M(I(t, n), n)
-        }, [I, d, p, E, t, M]),
+        }, [I, d, E, p, t, M]),
         O = l.useCallback(e => {
           if (!Z.current) return;
           if (r.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
@@ -125,7 +125,7 @@ function d(e) {
             case s.Us.NAVIGATE_DOWN:
             case s.Us.NAVIGATE_START:
             case s.Us.NAVIGATE_END:
-              e.preventDefault(), e.stopPropagation(), E({
+              e.preventDefault(), e.stopPropagation(), p({
                 type: n
               });
               return;
@@ -133,7 +133,7 @@ function d(e) {
               var l;
               let i = c(o(I, t, d));
               if ((null == (l = i) ? void 0 : l.ownerDocument.activeElement) !== l || e.repeat) return;
-              if (e.preventDefault(), e.stopPropagation(), E({
+              if (e.preventDefault(), e.stopPropagation(), p({
                   type: n
                 }), null != h) {
                 h(d);
@@ -141,7 +141,7 @@ function d(e) {
               }
               null == i || i.click()
           }
-        }, [I, t, E, d, L, h]),
+        }, [I, t, p, d, L, h]),
         P = l.useCallback(() => {
           S || v(!0)
         }, [S]),
@@ -185,10 +185,10 @@ function d(e) {
           }
         }, [I, t, d, g, A, f]);
       return l.useMemo(() => ({
-        dispatch: E,
+        dispatch: p,
         getContainerProps: U,
         getItemProps: k
-      }), [E, U, k])
+      }), [p, U, k])
     }({
       navId: t,
       itemCount: N,
@@ -196,8 +196,8 @@ function d(e) {
       dispatch: S,
       onSelect: h,
       setFocus: m,
-      getNewFocusIndex: p,
-      maintainFocusPosition: E,
+      getNewFocusIndex: E,
+      maintainFocusPosition: p,
       includeSetSizes: g,
       focusOnMount: f,
       enabled: C

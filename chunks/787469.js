@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(285173),
   h = n(430824),
   m = n(496675),
-  p = n(776767),
-  E = n(981631),
+  E = n(776767),
+  p = n(981631),
   g = n(689938),
   f = n(332513);
 
@@ -25,12 +25,12 @@ function C(e) {
   } = e, n = (0, r.e7)([h.Z], () => h.Z.getGuild(t.guildId)), s = (0, r.e7)([h.Z], () => h.Z.getRoles(t.guildId)), C = i.useMemo(() => null == n ? [] : null == t.highestRoleId ? t.roles : t.roles.filter(e => null != e && e !== t.highestRoleId).sort((e, t) => {
     var n, l, i, a;
     return null !== (a = null !== (i = null === (n = s[t]) || void 0 === n ? void 0 : n.position) && void 0 !== i ? i : 0 - (null === (l = s[e]) || void 0 === l ? void 0 : l.position)) && void 0 !== a ? a : 0
-  }), [t.roles, t.highestRoleId, n, s]), _ = (0, r.e7)([c.Z], () => c.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]), I = (0, u.zq)(_), x = (0, u.qr)(t), T = (0, r.e7)([m.Z], () => m.Z.can(E.Plq.MANAGE_ROLES, n), [n]);
+  }), [t.roles, t.highestRoleId, n, s]), _ = (0, r.e7)([c.Z], () => c.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]), I = (0, u.zq)(_), x = (0, u.qr)(t), T = (0, r.e7)([m.Z], () => m.Z.can(p.Plq.MANAGE_ROLES, n), [n]);
   return null == n ? null : (0, l.jsx)(o.FormItem, {
     title: g.Z.Messages.ROLES,
     titleClassName: f.infoTitle,
-    children: (0, l.jsx)(p.WM, {
-      children: (0, l.jsx)(p._2, {
+    children: (0, l.jsx)(E.WM, {
+      children: (0, l.jsx)(E._2, {
         description: (0, l.jsxs)("div", {
           className: f.roleContainer,
           children: [(0, l.jsx)(o.Tooltip, {

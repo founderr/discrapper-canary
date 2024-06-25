@@ -14,12 +14,12 @@ var l = n(470079),
   d = n(981631);
 
 function h(e) {
-  let [t, n] = l.useState(!1), [h, m] = l.useState(!1), p = u.default.cast(e), {
-    joinRequest: E,
+  let [t, n] = l.useState(!1), [h, m] = l.useState(!1), E = u.default.cast(e), {
+    joinRequest: p,
     guild: g
   } = (0, i.cj)([a.Z, r.Z, o.Z, c.Z], () => {
     var e;
-    let t = a.Z.getRequest(p);
+    let t = a.Z.getRequest(E);
     if (null == t) return {
       joinRequest: null,
       isModmin: !1,
@@ -35,12 +35,12 @@ function h(e) {
   return l.useEffect(() => {
     null == g && !h && (m(!0), s.Z.fetchRequestToJoinGuilds())
   }, [g, h]), l.useEffect(() => {
-    null == E && (n(!0), s.Z.fetchGuildJoinRequest(p).finally(() => {
+    null == p && (n(!0), s.Z.fetchGuildJoinRequest(E).finally(() => {
       n(!1)
     }))
-  }, [E, p]), {
+  }, [p, E]), {
     loading: t,
-    joinRequest: E,
+    joinRequest: p,
     joinRequestGuild: g
   }
 }

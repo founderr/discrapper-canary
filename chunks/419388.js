@@ -14,8 +14,8 @@ var l = n(470079),
   d = n(607070),
   h = n(703656),
   m = n(479313),
-  p = n(796974),
-  E = n(709054),
+  E = n(796974),
+  p = n(709054),
   g = n(534469),
   f = n(173033),
   C = n(959517),
@@ -37,7 +37,7 @@ function x(e) {
     jumpTargetId: l,
     jumpTargetOffset: i
   } = e;
-  if (e.has(l) || !e.hasMoreBefore && l === E.default.castChannelIdAsMessageId(e.channelId)) {
+  if (e.has(l) || !e.hasMoreBefore && l === p.default.castChannelIdAsMessageId(e.channelId)) {
     if (0 === i) return l;
     let n = e.getByIndex(e.indexOf(l) + i);
     return null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : l
@@ -47,7 +47,7 @@ function x(e) {
         id: t
       } = e;
       return t
-    })].sort(E.default.compare),
+    })].sort(p.default.compare),
     a = s.indexOf(l),
     r = null !== (n = s[a + (Math.abs(i) > 0 ? i : 1)]) && void 0 !== n ? n : s[a - 1];
   return null != r ? r : null
@@ -136,7 +136,7 @@ class N {
       } else {
         let l;
         let i = t.first();
-        null != i && e.messages.last() !== t.last() && e.messages.first() !== t.first() && (l = E.default.extractTimestamp(i.id)), this.scrollToMessage(n, !0, l);
+        null != i && e.messages.last() !== t.last() && e.messages.first() !== t.first() && (l = p.default.extractTimestamp(i.id)), this.scrollToMessage(n, !0, l);
         return
       }
     }
@@ -198,7 +198,7 @@ class N {
       scrollTop: i
     } = l, s = t && i >= this.newMessageBarBuffer() ? this.newMessageBarBuffer() : 0, a = null, r = t => {
       var l;
-      return -1 === t ? E.default.castChannelIdAsMessageId(n.id) : null === (l = e._array[t]) || void 0 === l ? void 0 : l.id
+      return -1 === t ? p.default.castChannelIdAsMessageId(n.id) : null === (l = e._array[t]) || void 0 === l ? void 0 : l.id
     }, o = -1, c = !1;
     for (;;) {
       let t = r(o);
@@ -460,7 +460,7 @@ class N {
       return
     }
     let l = this.getElementFromMessageId(e);
-    !this.isJumping() && t && null != n && !d.Z.useReducedMotion && (E.default.extractTimestamp(e) > n ? this.scrollTo(0) : this.scrollTo(Number.MAX_SAFE_INTEGER)), this.pinned = !1, this.jumping = !0;
+    !this.isJumping() && t && null != n && !d.Z.useReducedMotion && (p.default.extractTimestamp(e) > n ? this.scrollTo(0) : this.scrollTo(Number.MAX_SAFE_INTEGER)), this.pinned = !1, this.jumping = !0;
     let i = () => {
       this.jumping = !1, (0, a.k)(l) && d.Z.keyboardModeEnabled && l.focus({
         preventScroll: !0
@@ -564,7 +564,7 @@ class N {
         truncate: !0
       })
     }), I(this, "updateStoreDimensionsDebounced", s().debounce(this.updateStoreDimensions, 200)), this.props = e, this.loading = e.messages.loadingMore;
-    let i = p.Z.getChannelDimensions(e.channel.id);
+    let i = E.Z.getChannelDimensions(e.channel.id);
     null != e.messages.jumpTargetId ? this.pinned = !1 : (this.initialScrollTop = null !== (t = null == i ? void 0 : i.scrollTop) && void 0 !== t ? t : null, this.pinned = null == i)
   }
 }

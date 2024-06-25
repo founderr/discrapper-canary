@@ -13,8 +13,8 @@ var l, i = n(735250),
   d = n(367907),
   h = n(282256),
   m = n(833858),
-  p = n(223135),
-  E = n(366695),
+  E = n(223135),
+  p = n(366695),
   g = n(374129),
   f = n(639351),
   C = n(368666),
@@ -61,7 +61,7 @@ let A = e => {
     }, "add-status") : (0, i.jsx)(o.TooltipContainer, {
       className: S.iconSpacing,
       text: (0, m.O8)(t),
-      children: (0, i.jsx)(p.Z, {
+      children: (0, i.jsx)(E.Z, {
         hangStatusActivity: t,
         className: r()(S.hangStatusIcon, n)
       })
@@ -126,7 +126,7 @@ class R extends(l = s.Component) {
         className: S.guestSuffix,
         children: ["\xa0", Z.Z.Messages.GUEST_NAME_SUFFIX]
       }) : ""]
-    }), p = {
+    }), E = {
       clan: t.clan,
       userId: t.id,
       contextGuildId: d,
@@ -140,7 +140,7 @@ class R extends(l = s.Component) {
     };
     return !n || u ? (0, i.jsx)(i.Fragment, {
       children: (0, i.jsx)(h.Z, {
-        ...p,
+        ...E,
         children: m
       })
     }) : null
@@ -157,8 +157,8 @@ class R extends(l = s.Component) {
       video: d,
       isStreaming: h,
       disabled: m,
-      isWatching: p,
-      iconClassName: E,
+      isWatching: E,
+      iconClassName: p,
       embeddedApplication: I,
       otherClientSessionType: v,
       voicePlatform: A,
@@ -174,93 +174,93 @@ class R extends(l = s.Component) {
       disconnected: H
     } = this.props;
     if (c || m) return null;
-    let B = [],
-      G = (0, i.jsx)(L, {
-        iconClassName: E,
+    let G = [],
+      B = (0, i.jsx)(L, {
+        iconClassName: p,
         mute: e,
         localMute: t,
         serverMute: l,
         deaf: s,
         serverDeaf: a
       });
-    d && (n ? B.push((0, i.jsx)(o.TooltipContainer, {
+    d && (n ? G.push((0, i.jsx)(o.TooltipContainer, {
       className: S.iconSpacing,
       text: Z.Z.Messages.LOCAL_VIDEO_DISABLED,
       children: (0, i.jsx)(o.VideoSlashIcon, {
         size: "md",
         color: "currentColor",
-        className: r()(S.icon, E),
+        className: r()(S.icon, p),
         colorClass: S.strikethrough
       })
-    }, "video")) : B.push((0, i.jsx)(o.TooltipContainer, {
+    }, "video")) : G.push((0, i.jsx)(o.TooltipContainer, {
       className: S.iconSpacing,
       text: Z.Z.Messages.VIDEO,
       children: (0, i.jsx)(o.VideoIcon, {
         size: "md",
         color: "currentColor",
-        className: r()(S.icon, E)
+        className: r()(S.icon, p)
       })
-    }, "video"))), H && B.push((0, i.jsx)(o.TooltipContainer, {
+    }, "video"))), H && G.push((0, i.jsx)(o.TooltipContainer, {
       className: S.iconSpacing,
       text: Z.Z.Messages.NOTICE_USER_DISCONNECTED,
       children: (0, i.jsx)(o.CircleExclamationPointIcon, {
-        className: r()(S.icon, E),
+        className: r()(S.icon, p),
         color: o.tokens.colors.STATUS_WARNING_BACKGROUND
       })
-    }, "disconnected")), null != I && B.push((0, i.jsx)(o.TooltipContainer, {
+    }, "disconnected")), null != I && G.push((0, i.jsx)(o.TooltipContainer, {
       text: (0, u.Z)(I.name),
       className: S.iconSpacing,
       children: (0, i.jsx)(o.ActivitiesIcon, {
         size: "md",
         color: "currentColor",
-        className: r()(S.icon, E)
+        className: r()(S.icon, p)
       })
-    }, "activity")), v === N.YE.XBOX || A === T.wR.XBOX ? B.push((0, i.jsx)("div", {
+    }, "activity")), v === N.YE.XBOX || A === T.wR.XBOX ? G.push((0, i.jsx)("div", {
       className: r()(S.iconSpacing),
       children: (0, i.jsx)(f.Z, {
-        className: r()(S.icon, E)
+        className: r()(S.icon, p)
       })
-    }, "xbox")) : (v === N.YE.PLAYSTATION || A === T.wR.PLAYSTATION) && B.push((0, i.jsx)("div", {
+    }, "xbox")) : (v === N.YE.PLAYSTATION || A === T.wR.PLAYSTATION) && G.push((0, i.jsx)("div", {
       className: r()(S.iconSpacing),
       children: (0, i.jsx)(g.Z, {
-        className: r()(S.icon, E)
+        className: r()(S.icon, p)
       })
-    }, "playstation")), h ? B.push((0, i.jsx)("div", {
+    }, "playstation")), h ? G.push((0, i.jsx)("div", {
       className: r()(S.iconSpacing, S.liveIconSpacing),
       children: (0, i.jsx)(C.ZP, {
         size: C.ZP.Sizes.SMALL
       })
-    }, "stream")) : p && B.push((0, i.jsx)(o.TooltipContainer, {
+    }, "stream")) : E && G.push((0, i.jsx)(o.TooltipContainer, {
       className: S.iconSpacing,
       text: Z.Z.Messages.WATCH_STREAM_WATCHING,
       children: (0, i.jsx)(o.EyeIcon, {
         size: "xs",
         color: "currentColor",
-        className: r()(S.icon, E)
+        className: r()(S.icon, p)
       })
     }, "watch"));
     let V = null != y && !(0, _.yE)(y.flags, x.udG.EMBEDDED),
       F = null == R && V;
-    return 0 !== B.length || null != G || O || F ? (0, i.jsxs)("div", {
+    return 0 !== G.length || null != B || O || F ? (0, i.jsxs)("div", {
       className: S.icons,
       children: [(0, i.jsxs)("div", {
         className: S.iconGroup,
         onMouseEnter: () => null == w ? void 0 : w(!0),
         onMouseLeave: () => null == w ? void 0 : w(!1),
-        children: [G, B]
+        children: [B, G]
       }), O || F ? (0, i.jsx)("div", {
         className: S.iconGroup,
         onMouseEnter: () => null == k ? void 0 : k(!0),
         onMouseLeave: () => null == k ? void 0 : k(!1),
         children: F ? (0, i.jsx)(j, {
           application: y,
-          iconClassName: E,
+          iconClassName: p,
           guildId: b,
           channelId: D,
           userId: U.id
         }, "".concat(U.id, "-game")) : (0, i.jsx)(M, {
           hangStatusActivity: R,
-          iconClassName: E,
+          iconClassName: p,
           isSelf: P
         })
       }) : null]
@@ -354,7 +354,7 @@ function j(e) {
     guildId: l,
     channelId: a,
     userId: u
-  } = e, [h, m] = s.useState(!1), p = (0, c.O)(e => m(e));
+  } = e, [h, m] = s.useState(!1), E = (0, c.O)(e => m(e));
   return s.useEffect(() => {
     h && d.ZP.trackWithMetadata(x.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
       channel_id: a,
@@ -370,11 +370,11 @@ function j(e) {
     }),
     className: S.iconSpacing,
     children: (0, i.jsx)("div", {
-      ref: p,
-      children: (0, i.jsx)(E.Z, {
+      ref: E,
+      children: (0, i.jsx)(p.Z, {
         className: r()(S.icon, n),
         game: t,
-        size: E.Z.Sizes.XSMALL,
+        size: p.Z.Sizes.XSMALL,
         onMouseEnter: () => {
           d.ZP.trackWithMetadata(x.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
             channel_id: a,

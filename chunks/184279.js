@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return p
+    return E
   }
 });
 var l = n(735250);
@@ -25,11 +25,11 @@ let m = () => (0, l.jsx)("svg", {
   })
 });
 
-function p(e) {
+function E(e) {
   var t;
   let {
     channel: n
-  } = e, p = null !== (t = (0, a.ZP)(n)) && void 0 !== t ? t : "";
+  } = e, E = null !== (t = (0, a.ZP)(n)) && void 0 !== t ? t : "";
   return (0, l.jsxs)("div", {
     id: (0, r.p)(n.id, n.id),
     className: d.headerContainer,
@@ -42,12 +42,12 @@ function p(e) {
       children: [(0, l.jsx)(m, {}), (0, l.jsxs)("div", {
         className: d.chatBubble,
         children: [(0, l.jsx)(i.Avatar, {
-          "aria-label": p,
+          "aria-label": E,
           size: i.AvatarSizes.SIZE_80,
           src: (0, s.x)(n, 80, !1)
         }), (0, l.jsxs)(c.Ot, {
           className: d.emptyMessageHeader,
-          children: [p, (0, l.jsx)(o.Z, {
+          children: [E, (0, l.jsx)(o.Z, {
             className: d.flowerStar,
             size: 24,
             children: (0, l.jsx)(i.CheckmarkSmallIcon, {

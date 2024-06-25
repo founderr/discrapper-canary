@@ -17,8 +17,8 @@ var l = n(470079),
   d = n(146282),
   h = n(590026),
   m = n(178762),
-  p = n(206583),
-  E = n(809017),
+  E = n(206583),
+  p = n(809017),
   g = n(981631),
   f = n(689938);
 let C = 0;
@@ -49,9 +49,9 @@ function _(e) {
       requestId: N
     }));
     let s = {
-      id: E.G,
+      id: p.G,
       type: a.so.CONTENT_INVENTORY_GROUP,
-      key: E.G,
+      key: p.G,
       count: e.length,
       index: n.length,
       title: f.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE,
@@ -96,7 +96,7 @@ function _(e) {
       request_id: N,
       first_shown_at: D.current,
       item_ids: l,
-      surface_type: p.Kd.GUILD_MEMBER_LIST,
+      surface_type: E.Kd.GUILD_MEMBER_LIST,
       channel_id: _,
       guild_id: I,
       all_item_ids: n,

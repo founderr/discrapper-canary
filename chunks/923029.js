@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return E
+    return p
   }
 });
 var l = n(735250),
@@ -14,27 +14,27 @@ var l = n(735250),
   d = n(502568),
   h = n(981631),
   m = n(689938),
-  p = n(676821);
+  E = n(676821);
 
-function E(e) {
+function p(e) {
   let t, {
-    channelId: E
+    channelId: p
   } = e;
   i.useEffect(() => {
-    o.Z.loadThread(E)
+    o.Z.loadThread(p)
   });
   let g = (0, a.e7)([u.Z], () => u.Z.getGuildId()) === h.I_8,
     f = (0, a.e7)([c.Z], () => c.Z.theme);
   return t = g ? (0, l.jsx)(r.EmptyStateText, {
     note: m.Z.Messages.FAVORITES_EMPTY_BODY,
     children: m.Z.Messages.FAVORITES_EMPTY_TITLE
-  }) : null != E ? (0, l.jsx)(r.Spinner, {
+  }) : null != p ? (0, l.jsx)(r.Spinner, {
     type: r.Spinner.Type.SPINNING_CIRCLE
   }) : (0, l.jsx)(r.EmptyStateText, {
     note: m.Z.Messages.CHANNELS_UNAVAILABLE_BODY,
     children: m.Z.Messages.CHANNELS_UNAVAILABLE_TITLE
   }), (0, l.jsxs)("div", {
-    className: p.noChannel,
+    className: E.noChannel,
     children: [s.tq && (0, l.jsx)(d.ZP, {
       children: (0, l.jsx)(i.Fragment, {})
     }), (0, l.jsxs)(r.EmptyState, {

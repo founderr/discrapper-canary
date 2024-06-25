@@ -15,8 +15,8 @@ var i = n(442837),
   d = n(889161),
   h = n(496675),
   m = n(602623),
-  p = n(146085),
-  E = n(979339),
+  E = n(146085),
+  p = n(979339),
   g = n(643632),
   f = n(939863),
   C = n(689938),
@@ -48,7 +48,7 @@ function x(e) {
   } = e, {
     participants: n,
     usersInSummary: i
-  } = (0, E.Z)(t.id);
+  } = (0, p.Z)(t.id);
   return (0, l.jsxs)("div", {
     className: _.audienceSummary,
     children: [(0, l.jsx)(m.Z, {
@@ -83,11 +83,11 @@ function T(e) {
   let {
     channel: t,
     onContinueClick: n
-  } = e, s = (0, i.e7)([h.Z], () => h.Z.can(p.yP, t), [t]), r = t.guild_id, {
+  } = e, s = (0, i.e7)([h.Z], () => h.Z.can(E.yP, t), [t]), r = t.guild_id, {
     canCreateGuildEvent: m
   } = (0, d.XJ)(t), T = (0, g.Z)(t.id), {
     usersInSummary: N
-  } = (0, E.Z)(t.id);
+  } = (0, p.Z)(t.id);
   return (0, l.jsxs)("div", {
     children: [(0, l.jsx)(f.Z, {
       children: (0, l.jsx)("div", {

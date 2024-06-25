@@ -18,26 +18,26 @@ function m(e) {
   let t = (0, u.Z)(e),
     n = (0, i.e7)([a.default], () => a.default.locale),
     m = (0, i.e7)([c.Z], () => c.Z.getChangelog(null != t ? t : "", n), [t, n]),
-    p = (0, d.Z)(e),
-    E = l.useRef(p ? Date.now() : null),
+    E = (0, d.Z)(e),
+    p = l.useRef(E ? Date.now() : null),
     g = (0, i.e7)([r.ZP], () => r.ZP.getUnreadCount(e), [e]);
   l.useEffect(() => {
-    E.current = Date.now()
-  }, [p]), l.useEffect(() => {
-    p && null != t && s.Z.fetchChangelog(t, n, !0)
-  }, [t, n, p]), l.useEffect(() => {
-    p && null != m && o.default.track(h.rMx.CHANGE_LOG_OPENED, {
+    p.current = Date.now()
+  }, [E]), l.useEffect(() => {
+    E && null != t && s.Z.fetchChangelog(t, n, !0)
+  }, [t, n, E]), l.useEffect(() => {
+    E && null != m && o.default.track(h.rMx.CHANGE_LOG_OPENED, {
       change_log_id: "".concat(m.date, ":").concat(m.revision),
       unread_count: g
     })
-  }, [p, m]), l.useEffect(() => {
-    let e = E.current;
+  }, [E, m]), l.useEffect(() => {
+    let e = p.current;
     return () => {
-      p && null != m && null != e && (o.default.track(h.rMx.CHANGE_LOG_CLOSED, {
+      E && null != m && null != e && (o.default.track(h.rMx.CHANGE_LOG_CLOSED, {
         seconds_open: Math.round((Date.now() - e) / 1e3),
         change_log_id: "".concat(m.date, ":").concat(m.revision),
         unread_count: g
-      }), E.current = 0)
+      }), p.current = 0)
     }
-  }, [p, m])
+  }, [E, m])
 }

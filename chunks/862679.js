@@ -13,8 +13,8 @@ t.Z = i.memo(function(e) {
     countdown: d,
     buttonText: h,
     buttonColor: m,
-    buttonSubmitting: p,
-    onButtonClick: E,
+    buttonSubmitting: E,
+    onButtonClick: p,
     imageSrc: g,
     animationSrc: f,
     secondaryButtonText: C,
@@ -59,14 +59,14 @@ t.Z = i.memo(function(e) {
         onClick: _,
         look: r.Button.Looks.LINK,
         color: r.Button.Colors.PRIMARY,
-        submitting: p,
+        submitting: E,
         children: C
       }), null != h && (0, l.jsx)(r.Button, {
         className: u.button,
         innerClassName: u.innerButton,
         size: r.Button.Sizes.SMALL,
-        onClick: E,
-        submitting: p,
+        onClick: p,
+        submitting: E,
         color: null != m ? m : r.Button.Colors.PRIMARY,
         children: h
       })]

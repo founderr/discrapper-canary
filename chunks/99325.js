@@ -18,13 +18,13 @@ n.d(t, {
     return I
   },
   bF: function() {
-    return p
+    return E
   },
   c$: function() {
     return h
   },
   kx: function() {
-    return E
+    return p
   }
 });
 var l = n(954955),
@@ -70,7 +70,7 @@ let h = i()(async (e, t) => {
       })
     } catch (e) {}
   }, 200);
-async function p(e, t, n) {
+async function E(e, t, n) {
   let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : u.AR.UNCATEGORIZED,
     i = await o.Z.post({
       url: d.ANM.DIRECTORY_CHANNEL_ENTRY(e, t),
@@ -94,7 +94,7 @@ async function p(e, t, n) {
   })
 }
 
-function E(e, t) {
+function p(e, t) {
   o.Z.delete({
     url: d.ANM.DIRECTORY_CHANNEL_ENTRY(e, t),
     trackedActionData: {

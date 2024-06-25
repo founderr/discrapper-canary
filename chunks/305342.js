@@ -190,7 +190,7 @@ t.Z = e => {
   } = (0, N.Z)(E), y = (null == b ? void 0 : b.id) === n, B = (null == D ? void 0 : D.status) === v.O0b.CANCELED, [k, G] = i.useState(!1), [F, V] = i.useState(!1), w = i.useCallback(e => {
     let t = !1;
     null != e && (t = e.scrollHeight - e.clientHeight > 1), V(t)
-  }, []), [H] = m._T(n), [Y] = m.PK(n), [W] = m.TT(n), [z] = m.F2(n), K = (0, h.Z)(l, n), Q = null != W && null == D && K, X = (0, c.Z)(x.iP), [q, J] = i.useState(!1), $ = q || !X, ee = (0, r.e7)([u.Z], () => u.Z.isViewingServerShop(l)), et = (null == C ? void 0 : C.published) === !0, en = (null == C ? void 0 : C.soft_deleted) === !0, es = L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
+  }, []), [H] = m._T(n), [Y] = m.PK(n), [W] = m.TT(n), [K] = m.F2(n), z = (0, h.Z)(l, n), Q = null != W && null == D && z, X = (0, c.Z)(x.iP), [q, J] = i.useState(!1), $ = q || !X, ee = (0, r.e7)([u.Z], () => u.Z.isViewingServerShop(l)), et = (null == C ? void 0 : C.published) === !0, en = (null == C ? void 0 : C.soft_deleted) === !0, es = L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
   return (et || ee) && !en ? (0, s.jsxs)("article", {
     className: Z.container,
     "aria-label": H,
@@ -204,7 +204,7 @@ t.Z = e => {
       }), (0, s.jsx)(o.Tooltip, {
         clickableOnMobile: !0,
         text: L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_DISCLAIMER.format({
-          activeTrialUserLimit: null != z ? z : 0
+          activeTrialUserLimit: null != K ? K : 0
         }),
         children: e => (0, s.jsx)(o.CircleInformationIcon, {
           size: "xs",

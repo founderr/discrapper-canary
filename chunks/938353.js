@@ -52,8 +52,8 @@ var s, i = n(735250),
   H = n(768494),
   Y = n(976853),
   W = n(346013),
-  z = n(977683),
-  K = n(128435),
+  K = n(977683),
+  z = n(128435),
   Q = n(98278),
   X = n(614825),
   q = n(265299),
@@ -106,9 +106,9 @@ var s, i = n(735250),
   eH = n(689938),
   eY = n(105461),
   eW = n(928959),
-  ez = n(680674);
+  eK = n(680674);
 
-function eK(e, t, n) {
+function ez(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -121,7 +121,7 @@ function eQ() {
   return (0, i.jsxs)("div", {
     className: eW.nitroFileSizeUpsell,
     children: [(0, i.jsx)("img", {
-      src: ez,
+      src: eK,
       className: eW.nitroBadgeSvg,
       alt: ""
     }), (0, i.jsx)(E.Text, {
@@ -632,7 +632,7 @@ class e0 extends(s = l.Component) {
     })
   }
   renderPoll(e, t) {
-    if (null != t) return (0, i.jsx)(K.Z, {
+    if (null != t) return (0, i.jsx)(z.Z, {
       message: e,
       poll: t,
       className: eW.pollContainer
@@ -660,11 +660,11 @@ class e0 extends(s = l.Component) {
     })
   }
   constructor(...e) {
-    super(...e), eK(this, "state", {
+    super(...e), ez(this, "state", {
       showSuppressModal: !1,
       showRemoveAttachmentModal: !1,
       attachmentToDelete: null
-    }), eK(this, "getAcceptInviteContext", e => {
+    }), ez(this, "getAcceptInviteContext", e => {
       let {
         channel: t,
         message: n
@@ -676,7 +676,7 @@ class e0 extends(s = l.Component) {
         location_channel_type: t.type,
         location_message_id: n.id
       }
-    }), eK(this, "renderEmbed", (e, t, n, s, l) => {
+    }), ez(this, "renderEmbed", (e, t, n, s, l) => {
       let {
         gifAutoPlay: a,
         inlineEmbedMedia: r,
@@ -712,16 +712,16 @@ class e0 extends(s = l.Component) {
           embedIndex: t
         })]
       }) : _
-    }), eK(this, "renderEmbedTitle", (e, t) => e.type === eV.hBH.RICH ? w.Z.parseEmbedTitle(t, !0, {
+    }), ez(this, "renderEmbedTitle", (e, t) => e.type === eV.hBH.RICH ? w.Z.parseEmbedTitle(t, !0, {
       channelId: this.props.channel.id
-    }) : t), eK(this, "renderEmbedDescription", (e, t, n) => e.type === eV.hBH.RICH ? w.Z.parse(t, !0, {
+    }) : t), ez(this, "renderEmbedDescription", (e, t, n) => e.type === eV.hBH.RICH ? w.Z.parse(t, !0, {
       channelId: this.props.channel.id,
       allowLinks: !0,
       allowEmojiLinks: !0,
       allowList: this.props.showListsAndHeaders,
       allowHeading: !n && this.props.showListsAndHeaders,
       previewLinkTarget: this.props.showMaskedLinks
-    }) : t), eK(this, "handleEmbedSuppressed", e => {
+    }) : t), ez(this, "handleEmbedSuppressed", e => {
       let {
         channel: t,
         message: n
@@ -729,7 +729,7 @@ class e0 extends(s = l.Component) {
       e.shiftKey ? _.Z.suppressEmbeds(t.id, n.id) : this.setState({
         showSuppressModal: !0
       })
-    }), eK(this, "handleRemoveAttachment", e => {
+    }), ez(this, "handleRemoveAttachment", e => {
       let t = e.originalItem;
       this.setState({
         showRemoveAttachmentModal: !0,
@@ -766,7 +766,7 @@ function e1(e) {
     communicationDisabled: A,
     isActiveChannelOrUnarchivableThread: g,
     isAutomodQuarantined: S
-  }), P = (0, V.A)((null !== (t = s.editedTimestamp) && void 0 !== t ? t : s.timestamp).valueOf()), D = (0, Y.Z)(null == n ? void 0 : n.id), b = (0, z.Z)(s), y = (0, R.V)(n.id, s.author.id), B = (0, O.r)(s.id), {
+  }), P = (0, V.A)((null !== (t = s.editedTimestamp) && void 0 !== t ? t : s.timestamp).valueOf()), D = (0, Y.Z)(null == n ? void 0 : n.id), b = (0, K.Z)(s), y = (0, R.V)(n.id, s.author.id), B = (0, O.r)(s.id), {
     hasInlineForwardButton: k
   } = v.w.useExperiment({
     location: "MessageAccessories"
@@ -795,7 +795,7 @@ function e1(e) {
     hasInlineForwardButton: G
   })
 }
-eK(e0, "defaultProps", {
+ez(e0, "defaultProps", {
   renderEmbeds: !0,
   compact: !1
 });
@@ -810,7 +810,7 @@ let e7 = e => {
     disableReactionCreates: o = !0,
     disableReactionUpdates: c = !0,
     ...u
-  } = e, d = ei.x4.useSetting(), E = ei.RS.useSetting(), _ = ei.NA.useSetting(), I = ei.QK.useSetting(), T = (0, V.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), m = (0, Y.Z)(null == s ? void 0 : s.id), N = (0, R.V)(s.id, n.author.id), h = (0, O.r)(n.id), C = (0, z.Z)(n);
+  } = e, d = ei.x4.useSetting(), E = ei.RS.useSetting(), _ = ei.NA.useSetting(), I = ei.QK.useSetting(), T = (0, V.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), m = (0, Y.Z)(null == s ? void 0 : s.id), N = (0, R.V)(s.id, n.author.id), h = (0, O.r)(n.id), C = (0, K.Z)(n);
   return (0, i.jsx)(e0, {
     ...u,
     message: n,

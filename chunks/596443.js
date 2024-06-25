@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(605436),
   h = n(79712),
   m = n(285173),
-  p = n(434404),
-  E = n(422559),
+  E = n(434404),
+  p = n(422559),
   g = n(271383),
   f = n(430824),
   C = n(496675),
@@ -37,8 +37,8 @@ function M(e) {
     guild: _,
     specMap: I,
     categoryTitle: x
-  } = e, T = (0, c.e7)([f.Z], () => f.Z.getRoles(_.id)), v = Z.Plq[o], M = null !== (s = null === (t = I[v.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s ? s : (0, E.wt)(v), R = null !== (r = null === (n = I[v.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : "", j = N._o.has(v), L = N.Qn.includes(o), O = g.length, P = (0, c.e7)([C.Z], () => C.Z.can(Z.Plq.MANAGE_ROLES, _), [_]), y = i.useCallback(async e => {
-    if (!!P) await p.Z.open(_.id, Z.pNK.ROLES), await p.Z.selectRole(e)
+  } = e, T = (0, c.e7)([f.Z], () => f.Z.getRoles(_.id)), v = Z.Plq[o], M = null !== (s = null === (t = I[v.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s ? s : (0, p.wt)(v), R = null !== (r = null === (n = I[v.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : "", j = N._o.has(v), L = N.Qn.includes(o), O = g.length, P = (0, c.e7)([C.Z], () => C.Z.can(Z.Plq.MANAGE_ROLES, _), [_]), y = i.useCallback(async e => {
+    if (!!P) await E.Z.open(_.id, Z.pNK.ROLES), await E.Z.selectRole(e)
   }, [P, _.id]);
   return (0, l.jsxs)("div", {
     className: a()(A.permissionItemContainer, {
@@ -146,12 +146,12 @@ function j(e) {
     location: s,
     className: r,
     onNavigate: d
-  } = e, h = (0, c.e7)([_.default], () => _.default.getUser(t), [t]), m = (0, c.e7)([f.Z], () => f.Z.getGuild(n), [n]), p = (0, c.e7)([g.ZP], () => g.ZP.getMember(n, t), [n, t]), C = (0, T.f)(t, n), j = (0, N.B2)(t, n, N.pd), L = Object.keys(j).length, O = i.useMemo(() => null != m ? I.Z.getGuildPermissionSpecMap(m) : null, [m]), P = i.useMemo(() => null != m ? I.Z.generateGuildPermissionSpec(m) : null, [m]), [y, b] = i.useState(""), [D, U] = i.useState(""), k = i.useCallback(o()(U, 300), []), w = i.useCallback(e => {
+  } = e, h = (0, c.e7)([_.default], () => _.default.getUser(t), [t]), m = (0, c.e7)([f.Z], () => f.Z.getGuild(n), [n]), E = (0, c.e7)([g.ZP], () => g.ZP.getMember(n, t), [n, t]), C = (0, T.f)(t, n), j = (0, N.B2)(t, n, N.pd), L = Object.keys(j).length, O = i.useMemo(() => null != m ? I.Z.getGuildPermissionSpecMap(m) : null, [m]), P = i.useMemo(() => null != m ? I.Z.generateGuildPermissionSpec(m) : null, [m]), [y, b] = i.useState(""), [D, U] = i.useState(""), k = i.useCallback(o()(U, 300), []), w = i.useCallback(e => {
     b(e), k(e)
   }, [k]), H = i.useCallback(() => {
     b(""), U("")
-  }, []), B = i.useMemo(() => {
-    if (null == m || null == O || null == p) return null;
+  }, []), G = i.useMemo(() => {
+    if (null == m || null == O || null == E) return null;
     if (0 === L) return (0, l.jsx)("div", {
       className: a()(A.__invalid_permissionChiplet, A.__invalid_noModPerms),
       children: (0, l.jsx)(u.Text, {
@@ -170,17 +170,17 @@ function j(e) {
         if (null != a) {
           if (D.length > 0) {
             var r, o, c, u, d;
-            let e = null !== (u = null === (r = O[i.toString()]) || void 0 === r ? void 0 : r.title) && void 0 !== u ? u : (0, E.wt)(i),
+            let e = null !== (u = null === (r = O[i.toString()]) || void 0 === r ? void 0 : r.title) && void 0 !== u ? u : (0, p.wt)(i),
               n = null !== (d = null === (c = O[i.toString()]) || void 0 === c ? void 0 : null === (o = c.description) || void 0 === o ? void 0 : o.toString()) && void 0 !== d ? d : "",
               l = t.title,
               a = N._o.has(i),
               h = N.Qn.includes(s),
               m = a ? S.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION : h ? S.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION : null,
-              p = R(D, e),
+              E = R(D, e),
               g = R(D, n),
               f = R(D, l),
               C = null != m && R(D, m);
-            if (!p && !g && !f && !C) return
+            if (!E && !g && !f && !C) return
           }
           e.push((0, l.jsx)(M, {
             permission: s,
@@ -192,8 +192,8 @@ function j(e) {
         }
       })
     }), e
-  }, [m, O, p, L, P, j, D]);
-  return null == h || null == p ? null : (0, l.jsxs)("div", {
+  }, [m, O, E, L, P, j, D]);
+  return null == h || null == E ? null : (0, l.jsxs)("div", {
     className: a()(v.container, r),
     style: {
       backgroundColor: C
@@ -221,7 +221,7 @@ function j(e) {
               autoCorrect: "off",
               spellCheck: "false"
             }
-          }), B]
+          }), G]
         })
       })
     })]

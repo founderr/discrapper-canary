@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(268353),
   h = n(944486),
   m = n(626135),
-  p = n(585483),
-  E = n(358085),
+  E = n(585483),
+  p = n(358085),
   g = n(228488),
   f = n(981631),
   C = n(607176);
@@ -62,7 +62,7 @@ function I(e) {
     R = a && !x,
     j = Z === f.WtW.VIDEO && S && !R,
     L = i.useCallback((e, l) => {
-      l !== e && (r.Z.updateLayout(t.id, l, n), l === f.AEg.FULL_SCREEN && t.isPrivate() && p.S.dispatch(f.CkL.TEXTAREA_BLUR))
+      l !== e && (r.Z.updateLayout(t.id, l, n), l === f.AEg.FULL_SCREEN && t.isPrivate() && E.S.dispatch(f.CkL.TEXTAREA_BLUR))
     }, [n, t]),
     O = i.useCallback(e => {
       if (null != M) e === f.AEg.FULL_SCREEN && (L(e, v.current), (0, g.Pr)(e => {
@@ -83,7 +83,7 @@ function I(e) {
     video_layout: x ? "popout" : N,
     ...(0, o.AB)(t.id)
   }), () => {
-    !(x && (0, E.isMac)()) && O(N)
+    !(x && (0, p.isMac)()) && O(N)
   }), [N, x]), i.useEffect(() => {
     null != M && T.current === f.WtW.VIDEO && Z === f.WtW.VOICE && (0, g.Pr)(M, A)
   }, [A, Z, T, M]), i.useEffect(() => {

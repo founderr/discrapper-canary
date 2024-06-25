@@ -4,9 +4,9 @@ t.d(n, {
   }
 }), t(47120);
 var i = t(735250),
-  s = t(470079),
-  l = t(120356),
-  a = t.n(l),
+  l = t(470079),
+  s = t(120356),
+  a = t.n(s),
   r = t(831209),
   o = t(481060),
   c = t(367907),
@@ -19,8 +19,8 @@ function E(e) {
   let {
     guildId: n,
     transitionState: t,
-    onClose: l
-  } = e, [E, T] = s.useState([]), [m, _] = s.useState(), h = [{
+    onClose: s
+  } = e, [E, T] = l.useState([]), [m, _] = l.useState(), h = [{
     text: I.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_FEEDBACK_DM_SPAM,
     value: d.C2.DM_SPAM
   }, {
@@ -40,10 +40,10 @@ function E(e) {
     value: d.C2.OTHER
   }];
 
-  function O(e) {
+  function g(e) {
     E.includes(e) ? T(n => n.filter(n => n !== e)) : T(n => [...n, e])
   }
-  return null == n ? (l(), null) : (0, i.jsxs)(o.ModalRoot, {
+  return null == n ? (s(), null) : (0, i.jsxs)(o.ModalRoot, {
     transitionState: t,
     size: o.ModalSize.MEDIUM,
     children: [(0, i.jsx)(o.ModalHeader, {
@@ -61,7 +61,7 @@ function E(e) {
             children: I.Z.Messages.GUILD_SERVER_LOCKDOWN_FEEDBACK_DESCRIPTION
           })]
         }), (0, i.jsx)(o.Clickable, {
-          onClick: l,
+          onClick: s,
           children: (0, i.jsx)(o.CloseSmallIcon, {
             size: "xs",
             color: "currentColor",
@@ -83,13 +83,13 @@ function E(e) {
             }),
             children: [(0, i.jsxs)(o.Clickable, {
               className: N.optionText,
-              onClick: () => O(t),
+              onClick: () => g(t),
               children: [(0, i.jsx)("div", {
                 children: (0, i.jsx)(o.Checkbox, {
                   type: o.Checkbox.Types.INVERTED,
                   size: 20,
                   value: E.includes(t),
-                  onChange: () => O(t)
+                  onChange: () => g(t)
                 })
               }), (0, i.jsx)(o.Text, {
                 variant: "text-md/medium",
@@ -118,7 +118,7 @@ function E(e) {
             raid_lockdown_feedback_type: E,
             raid_lockdown_feedback_other_reason: m,
             guild_id: n
-          }), l()
+          }), s()
         },
         color: o.Button.Colors.BRAND,
         look: o.Button.Looks.FILLED,

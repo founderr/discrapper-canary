@@ -21,10 +21,10 @@ n.d(t, {
     return u
   },
   fW: function() {
-    return E
+    return p
   },
   gr: function() {
-    return p
+    return E
   },
   oW: function() {
     return o
@@ -92,7 +92,7 @@ function m(e, t) {
   })
 }
 
-function p(e, t, n) {
+function E(e, t, n) {
   s.Z.dispatch({
     type: "SHARED_CANVAS_UPDATE_EMOJI_HOSE",
     emojiHose: e,
@@ -101,7 +101,7 @@ function p(e, t, n) {
   })
 }
 
-function E(e, t) {
+function p(e, t) {
   s.Z.dispatch({
     type: "SHARED_CANVAS_CLEAR_DRAWABLES",
     drawables: e,

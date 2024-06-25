@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(213609),
   h = n(358221),
   m = n(381586),
-  p = n(159300),
-  E = n(470956),
+  E = n(159300),
+  p = n(470956),
   g = n(430824),
   f = n(496675),
   C = n(199052),
@@ -39,7 +39,7 @@ function S(e) {
     paused: L = !1
   } = e, O = (0, o.bp)() === N.IlC.POPOUT, P = (0, a.e7)([g.Z], () => g.Z.getGuild(A.guild_id), [A.guild_id]), {
     dismissedActivityEntryPointTileChannel: y
-  } = (0, x.d)(), b = (0, a.e7)([h.Z], () => h.Z.getUserParticipantCount(A.id), [A]), D = (0, E.bt)(A.id, t), U = i.useCallback(() => {
+  } = (0, x.d)(), b = (0, a.e7)([h.Z], () => h.Z.getUserParticipantCount(A.id), [A]), D = (0, p.bt)(A.id, t), U = i.useCallback(() => {
     x.d.setState({
       dismissedActivityEntryPointTileChannel: A.id
     })
@@ -49,11 +49,11 @@ function S(e) {
       dismissedActivityEntryPointTileChannel: null
     })
   }, [A.id, y]);
-  let k = (0, a.e7)([f.Z], () => A.isPrivate() || (0, p.b)(f.Z, P, A), [P, A]),
+  let k = (0, a.e7)([f.Z], () => A.isPrivate() || (0, E.b)(f.Z, P, A), [P, A]),
     w = (null == P ? void 0 : P.afkChannelId) === A.id,
     H = A.userLimit <= 0 || A.userLimit > 1,
-    B = (0, a.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(A.id).length <= 0),
-    G = (0, m.N)(r.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
+    G = (0, a.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(A.id).length <= 0),
+    B = (0, m.N)(r.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
     V = (0, u.KF)(A.id) !== u.jy.CAN_LAUNCH,
     F = null != y && y === A.id,
     z = D.map(e => t => (0, l.jsx)(I.ZP, {
@@ -79,7 +79,7 @@ function S(e) {
     }
   }, {
     trackOnInitialLoad: !0
-  }, []), null != P && !w && (!(b >= 2) || !B || V || G || F ? H && 1 === b && k && (B && !V ? z.push(e => (0, l.jsx)(_.h, {
+  }, []), null != P && !w && (!(b >= 2) || !G || V || B || F ? H && 1 === b && k && (G && !V ? z.push(e => (0, l.jsx)(_.h, {
     channel: A,
     guild: P,
     width: e,

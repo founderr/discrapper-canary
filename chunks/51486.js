@@ -16,15 +16,15 @@ function m(e) {
 t.Z = i.memo(function() {
   return ! function() {
     let e = (0, s.e7)([u.Z], () => u.Z.isConnected()) ? [] : [],
-      [t, p] = (0, c.U)(e, h.R.GUILD_TAKEOVER_MODAL),
-      E = (0, r.f9)(),
+      [t, E] = (0, c.U)(e, h.R.GUILD_TAKEOVER_MODAL),
+      p = (0, r.f9)(),
       g = i.useRef(null);
     i.useEffect(() => {
       if (null == t) {
         g.current = null;
         return
       }
-      if (!E && g.current !== t) ! function(e) {
+      if (!p && g.current !== t) ! function(e) {
         let {
           dismissibleContent: t,
           markAsDismissed: i
@@ -44,9 +44,9 @@ t.Z = i.memo(function() {
         }, s)
       }({
         dismissibleContent: t,
-        markAsDismissed: p
+        markAsDismissed: E
       }), g.current = t
-    }, [t, E, p]), i.useEffect(() => () => {
+    }, [t, p, E]), i.useEffect(() => () => {
       null != t && (0, r.Mr)(m(t))
     }, [t])
   }(), null

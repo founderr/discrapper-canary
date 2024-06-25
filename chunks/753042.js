@@ -15,8 +15,8 @@ var i = n(120356),
   d = n(430824),
   h = n(944486),
   m = n(189432),
-  p = n(776767),
-  E = n(981631),
+  E = n(776767),
+  p = n(981631),
   g = n(689938),
   f = n(332513);
 
@@ -29,12 +29,12 @@ function C(e) {
     children: (0, l.jsx)(r.FormItem, {
       title: g.Z.Messages.ACCOUNT,
       titleClassName: f.infoTitle,
-      children: (0, l.jsxs)(p.WM, {
-        children: [(0, l.jsx)(p._2, {
+      children: (0, l.jsxs)(E.WM, {
+        children: [(0, l.jsx)(E._2, {
           icon: (0, l.jsx)(r.ShieldUserIcon, {
             size: "custom",
-            width: p.Mn,
-            height: p.Mn,
+            width: E.Mn,
+            height: E.Mn,
             className: f.__invalid_unusualDMLabelIcon
           }),
           name: (0, l.jsx)(r.Text, {
@@ -44,20 +44,20 @@ function C(e) {
           }),
           description: i ? (0, l.jsx)(r.CheckmarkBoldIcon, {
             size: "custom",
-            width: p.Mn,
-            height: p.Mn,
+            width: E.Mn,
+            height: E.Mn,
             color: r.tokens.colors.INFO_POSITIVE_FOREGROUND
           }) : (0, l.jsx)(r.CloseLargeBoldIcon, {
             size: "custom",
-            width: p.Mn,
-            height: p.Mn,
+            width: E.Mn,
+            height: E.Mn,
             color: r.tokens.colors.INFO_DANGER_FOREGROUND
           })
-        }), C !== c.qc.NO_GATE && (0, l.jsx)(p._2, {
+        }), C !== c.qc.NO_GATE && (0, l.jsx)(E._2, {
           icon: (0, l.jsx)(r.BookCheckIcon, {
             size: "custom",
-            width: p.Mn,
-            height: p.Mn,
+            width: E.Mn,
+            height: E.Mn,
             className: f.__invalid_unusualDMLabelIcon
           }),
           name: (0, l.jsx)(r.Text, {
@@ -67,21 +67,21 @@ function C(e) {
           }),
           description: C === c.qc.AGREED ? (0, l.jsx)(r.CheckmarkBoldIcon, {
             size: "custom",
-            width: p.Mn,
-            height: p.Mn,
+            width: E.Mn,
+            height: E.Mn,
             color: r.tokens.colors.INFO_POSITIVE_FOREGROUND
           }) : (0, l.jsx)(r.CloseLargeBoldIcon, {
             size: "custom",
-            width: p.Mn,
-            height: p.Mn,
+            width: E.Mn,
+            height: E.Mn,
             color: r.tokens.colors.INFO_DANGER_FOREGROUND
           })
-        }), (0, l.jsx)(p._2, {
+        }), (0, l.jsx)(E._2, {
           icon: (0, l.jsx)(r.ClydeIcon, {
             size: "custom",
             color: "currentColor",
-            width: p.Mn,
-            height: p.Mn
+            width: E.Mn,
+            height: E.Mn
           }),
           name: (0, l.jsx)(r.Text, {
             variant: "text-sm/medium",
@@ -93,7 +93,7 @@ function C(e) {
             color: "text-normal",
             children: _
           })
-        }), (0, l.jsx)(p._2, {
+        }), (0, l.jsx)(E._2, {
           icon: (0, l.jsx)(o.Vj, {
             guild: n,
             size: o.Vj.Sizes.SMOL,
@@ -110,11 +110,11 @@ function C(e) {
             color: "text-normal",
             children: I
           })
-        }), (0, l.jsx)(p._2, {
+        }), (0, l.jsx)(E._2, {
           icon: (0, l.jsx)(r.GroupPlusIcon, {
             size: "custom",
-            width: p.Mn,
-            height: p.Mn
+            width: E.Mn,
+            height: E.Mn
           }),
           name: (0, l.jsx)(r.Text, {
             variant: "text-sm/medium",
@@ -130,7 +130,7 @@ function C(e) {
               showInviterAsFooter: !0,
               onClickInviter: e => {
                 let n = h.Z.getChannelId();
-                (0, m.r)(t.guildId, e.id, null != n ? n : E.lds)
+                (0, m.r)(t.guildId, e.id, null != n ? n : p.lds)
               }
             })
           })

@@ -15,8 +15,8 @@ var i = n(410030),
   d = n(502762),
   h = n(171368),
   m = n(944546),
-  p = n(470900),
-  E = n(772056),
+  E = n(470900),
+  p = n(772056),
   g = n(689938),
   f = n(440431);
 
@@ -37,14 +37,14 @@ function C(e) {
   } = (0, c.Z)(t.id, !0), S = !t.bot && null != x && x.length > 0, v = null != N && N.length > 0;
   return S || v ? (0, l.jsxs)(d.Z.Overlay, {
     className: f.overlay,
-    children: [v && (0, l.jsx)(E.Z, {
+    children: [v && (0, l.jsx)(p.Z, {
       className: f.list,
       header: g.Z.Messages.MUTUAL_GUILDS_COUNT.format({
         count: N.length
       }),
       isLoadingHeader: Z,
       loadingContentsCount: N.length,
-      itemType: E.R.MutualGuildList,
+      itemType: p.R.MutualGuildList,
       onExpand: () => _({
         action: "PRESS_SECTION",
         section: "MUTUAL_GUILDS"
@@ -54,7 +54,7 @@ function C(e) {
           guild: n,
           nick: i
         } = e;
-        return (0, l.jsx)(p.D, {
+        return (0, l.jsx)(E.D, {
           user: t,
           guild: n,
           nick: i,
@@ -64,14 +64,14 @@ function C(e) {
       })
     }), v && S && (0, l.jsx)(u.Z, {
       className: f.divider
-    }), S && (0, l.jsx)(E.Z, {
+    }), S && (0, l.jsx)(p.Z, {
       className: f.list,
       header: g.Z.Messages.MUTUAL_FRIENDS_COUNT.format({
         count: x.length
       }),
       isLoadingHeader: T,
       loadingContentsCount: x.length,
-      itemType: E.R.MutualFriendsList,
+      itemType: p.R.MutualFriendsList,
       onExpand: () => _({
         action: "PRESS_SECTION",
         section: "MUTUAL_FRIENDS"

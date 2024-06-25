@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return p
+    return E
   }
 });
 var l = n(735250);
@@ -16,12 +16,12 @@ var i = n(442837),
   h = n(354459),
   m = n(689938);
 
-function p(e) {
+function E(e) {
   let {
     channelId: t,
     onClose: n,
-    appContext: p,
-    exitFullScreen: E,
+    appContext: E,
+    exitFullScreen: p,
     onSelect: g
   } = e, f = (0, i.e7)([a.Z], () => a.Z.getSelectedParticipant(t)), C = (null == f ? void 0 : f.type) === h.fO.STREAM ? f.stream : null, _ = (0, r.Z)(t), I = (0, c.Z)(), x = (0, o.Z)(t), T = (0, d.Z)(t);
   return (0, l.jsxs)(s.Menu, {
@@ -29,6 +29,6 @@ function p(e) {
     onClose: n,
     "aria-label": m.Z.Messages.CHANNEL_CALL_OVERFLOW_MENU_LABEL,
     onSelect: g,
-    children: [_, I, x, T, (0, u.Z)(C, p, E)]
+    children: [_, I, x, T, (0, u.Z)(C, E, p)]
   })
 }

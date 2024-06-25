@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(624453),
   h = n(306680),
   m = n(494404),
-  p = n(257559),
-  E = n(689938);
+  E = n(257559),
+  p = n(689938);
 let g = [];
 
 function f(e) {
@@ -40,7 +40,7 @@ function f(e) {
   }, []), i.useEffect(() => {
     I && o.Z.ackPins(t.id)
   }, [I, t.id]), (0, l.jsx)(r.Dialog, {
-    "aria-label": E.Z.Messages.PINNED_MESSAGES,
+    "aria-label": p.Z.Messages.PINNED_MESSAGES,
     children: (0, l.jsx)(m.ZP, {
       onFetch: function() {
         o.Z.ackPins(t.id), o.Z.fetchPins(t.id)
@@ -50,18 +50,18 @@ function f(e) {
       loading: _,
       analyticsName: "Channel Pins",
       onCloseMessage: function(e, n) {
-        null != e && (n.shiftKey ? o.Z.unpinMessage(t, e.id) : p.Z.confirmUnpin(t, e))
+        null != e && (n.shiftKey ? o.Z.unpinMessage(t, e.id) : E.Z.confirmUnpin(t, e))
       },
       onJump: f,
       getProTip: function() {
-        return t.isPrivate() ? E.Z.Messages.PINNED_MESSAGES_PRO_TIP_BODY_DMS : E.Z.Messages.PINNED_MESSAGES_PRO_TIP_BODY_CHANNEL
+        return t.isPrivate() ? p.Z.Messages.PINNED_MESSAGES_PRO_TIP_BODY_DMS : p.Z.Messages.PINNED_MESSAGES_PRO_TIP_BODY_CHANNEL
       },
       renderHeader: () => (0, l.jsx)(m.h4, {
-        title: E.Z.Messages.PINNED_MESSAGES
+        title: p.Z.Messages.PINNED_MESSAGES
       }),
       renderEmptyState: function(e) {
-        let i = E.Z.Messages.NO_PINS_IN_CHANNEL;
-        t.isPrivate() && (i = E.Z.Messages.NO_PINS_IN_DM);
+        let i = p.Z.Messages.NO_PINS_IN_CHANNEL;
+        t.isPrivate() && (i = p.Z.Messages.NO_PINS_IN_DM);
         let s = (0, a.ap)(e) ? n(306059) : n(281485);
         return (0, l.jsx)(m.nH, {
           msg: i,

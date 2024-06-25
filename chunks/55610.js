@@ -5,8 +5,8 @@ s.d(n, {
 });
 var l = s(735250);
 s(470079);
-var t = s(120356),
-  i = s.n(t),
+var i = s(120356),
+  t = s.n(i),
   r = s(512722),
   a = s.n(r),
   c = s(481060),
@@ -39,12 +39,12 @@ function p() {
 n.Z = e => {
   var n, s;
   let {
-    fromBoostCancelModal: t,
+    fromBoostCancelModal: i,
     className: r
   } = e, u = (0, _.Z)();
   if (!p()) return null;
   return a()(null != u, "Subscription billing country should not be null"), (0, l.jsxs)("div", {
-    className: i()(E.noticeRoot, r),
+    className: t()(E.noticeRoot, r),
     children: [(0, l.jsx)("div", {
       className: E.iconContainer,
       children: (0, l.jsx)(c.CircleExclamationPointIcon, {
@@ -56,7 +56,7 @@ n.Z = e => {
       })
     }), (0, l.jsx)("div", {
       className: E.text,
-      children: (n = u, s = t, "PL" === n ? s ? I.Z.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_BOOST_WARNING : I.Z.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_WARNING : "TR" === n ? s ? I.Z.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_BOOST_WARNING : I.Z.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_WARNING : s ? I.Z.Messages.LOCALIZED_PRICING_LEGACY_PRICING_BOOST_WARNING : I.Z.Messages.LOCALIZED_PRICING_LEGACY_PRICING_WARNING).format({
+      children: (n = u, s = i, "PL" === n ? s ? I.Z.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_BOOST_WARNING : I.Z.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_WARNING : "TR" === n ? s ? I.Z.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_BOOST_WARNING : I.Z.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_WARNING : s ? I.Z.Messages.LOCALIZED_PRICING_LEGACY_PRICING_BOOST_WARNING : I.Z.Messages.LOCALIZED_PRICING_LEGACY_PRICING_WARNING).format({
         helpCenterLink: o.Z.getArticleURL(m.BhN.LOCALIZED_PRICING)
       })
     })]

@@ -18,8 +18,8 @@ function h(e) {
     entry: t,
     onSelect: h,
     closePopout: m,
-    forceLightTheme: p,
-    hideEditButton: E = !1
+    forceLightTheme: E,
+    hideEditButton: p = !1
   } = e, {
     isEntryAdmin: g,
     canEdit: f,
@@ -40,13 +40,13 @@ function h(e) {
     (0, a.Zy)(), null == m || m()
   }
   return (0, l.jsxs)(s.Menu, {
-    className: p ? "theme-light" : null,
+    className: E ? "theme-light" : null,
     navId: "guild-entry-context",
     onClose: x,
     "aria-label": d.Z.Messages.GUILD_ACTIONS_MENU_LABEL,
     onSelect: h,
     children: [(0, l.jsxs)(s.MenuGroup, {
-      children: [f && !E ? (0, l.jsx)(s.MenuItem, {
+      children: [f && !p ? (0, l.jsx)(s.MenuItem, {
         id: "update-entry",
         label: d.Z.Messages.HUB_ENTRY_UPDATE,
         action: function() {

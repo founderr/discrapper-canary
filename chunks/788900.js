@@ -22,7 +22,7 @@ function l(e) {
         t = 128 & e[2],
         l = 128 & e[4];
       return (l ? t ? 5 : 7 : 7 & n) / (l ? 7 & n : t ? 5 : 7)
-    }(e), T = a(A > 1 ? 32 : 32 * A), R = a(A > 1 ? 32 / A : 32), v = new Uint8Array(T * R * 4), L = [], p = [];
+    }(e), T = a(A > 1 ? 32 : 32 * A), R = a(A > 1 ? 32 / A : 32), v = new Uint8Array(T * R * 4), L = [], M = [];
     for (let e = 0, a = 0; e < R; e++)
       for (let i = 0; i < T; i++, a += 4) {
         let r = o,
@@ -30,17 +30,17 @@ function l(e) {
           h = c,
           g = S;
         for (let e = 0, t = l(E, d ? 5 : 3); e < t; e++) L[e] = s(n / T * (i + .5) * e);
-        for (let t = 0, a = l(_, d ? 5 : 3); t < a; t++) p[t] = s(n / R * (e + .5) * t);
+        for (let t = 0, a = l(_, d ? 5 : 3); t < a; t++) M[t] = s(n / R * (e + .5) * t);
         for (let e = 0, n = 0; e < _; e++)
-          for (let t = e ? 0 : 1, l = 2 * p[e]; t * _ < E * (_ - e); t++, n++) r += N[n] * L[t] * l;
+          for (let t = e ? 0 : 1, l = 2 * M[e]; t * _ < E * (_ - e); t++, n++) r += N[n] * L[t] * l;
         for (let e = 0, n = 0; e < 3; e++)
-          for (let t = e ? 0 : 1, l = 2 * p[e]; t < 3 - e; t++, n++) {
+          for (let t = e ? 0 : 1, l = 2 * M[e]; t < 3 - e; t++, n++) {
             let e = L[t] * l;
             m += I[n] * e, h += x[n] * e
           }
         if (d)
           for (let e = 0, n = 0; e < 5; e++)
-            for (let t = e ? 0 : 1, l = 2 * p[e]; t < 5 - e; t++, n++) g += f[n] * L[t] * l;
+            for (let t = e ? 0 : 1, l = 2 * M[e]; t < 5 - e; t++, n++) g += f[n] * L[t] * l;
         let C = r - 2 / 3 * m,
           Z = (3 * r - C + h) / 2,
           A = Z - h;

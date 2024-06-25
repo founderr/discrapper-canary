@@ -10,8 +10,8 @@ var l, i, s, a, r = n(735250),
   d = n(442837),
   h = n(260300),
   m = n(451478),
-  p = n(5560),
-  E = n(10401);
+  E = n(5560),
+  p = n(10401);
 class g extends(a = o.Component) {
   componentDidMount() {
     let {
@@ -81,9 +81,9 @@ class g extends(a = o.Component) {
       windowFocused: i,
       position: s,
       autoInvert: a
-    } = this.props, c = E.Z.getData()[t];
+    } = this.props, c = p.Z.getData()[t];
     return null != e && null != c ? (0, r.jsxs)(r.Fragment, {
-      children: [n, l && (0, r.jsx)(p.V, {
+      children: [n, l && (0, r.jsx)(E.V, {
         autoInvert: a,
         position: s,
         tutorialId: t,
@@ -98,7 +98,7 @@ class g extends(a = o.Component) {
 function f(e) {
   let {
     tutorialId: t
-  } = e, n = (0, d.e7)([E.Z], () => E.Z.shouldShow(t), [t]), l = (0, d.e7)([m.Z], () => m.Z.isFocused()), i = (0, d.e7)([m.Z], () => m.Z.windowSize(), []);
+  } = e, n = (0, d.e7)([p.Z], () => p.Z.shouldShow(t), [t]), l = (0, d.e7)([m.Z], () => m.Z.isFocused()), i = (0, d.e7)([m.Z], () => m.Z.windowSize(), []);
   return (0, r.jsx)(g, {
     ...e,
     visible: n,

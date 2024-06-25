@@ -20,14 +20,14 @@ function u(e) {
     className: d,
     buttonText: h,
     navigateAwayOnReportSuccess: m = !0,
-    onReportClick: p,
-    onReportSubmit: E,
+    onReportClick: E,
+    onReportSubmit: p,
     onMouseEnter: g,
     onMouseLeave: f
   } = e, C = (0, r.Q)(t), _ = (0, o.V)(n.id, t);
   if (!C || null == _) return null;
   let I = () => {
-    null == E || E(), s.Z.closePrivateChannel(n.id, m)
+    null == p || p(), s.Z.closePrivateChannel(n.id, m)
   };
   return (0, l.jsx)(i.Button, {
     className: d,
@@ -35,7 +35,7 @@ function u(e) {
     color: i.Button.Colors.RED,
     disabled: null == _,
     onClick: () => {
-      null == p || p(), (0, a.WL)(_, I)
+      null == E || E(), (0, a.WL)(_, I)
     },
     onMouseEnter: g,
     onMouseLeave: f,

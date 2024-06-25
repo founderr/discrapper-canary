@@ -1,53 +1,53 @@
-i.d(a, {
+s.d(n, {
   Z: function() {
-    return c
+    return d
   }
 });
-var n = i(735250);
-i(470079);
-var l = i(481060),
-  r = i(78675),
-  t = i(654904),
-  s = i(486324),
-  o = i(228168),
-  u = i(689938),
-  d = i(81240);
+var l = s(735250);
+s(470079);
+var t = s(481060),
+  i = s(78675),
+  r = s(654904),
+  a = s(486324),
+  o = s(228168),
+  c = s(689938),
+  u = s(81240);
 
-function c(e) {
+function d(e) {
   let {
-    user: a,
-    displayProfile: i,
-    guildId: c,
-    canUsePremiumCustomization: v,
+    user: n,
+    displayProfile: s,
+    guildId: d,
+    canUsePremiumCustomization: E,
     pendingBanner: m,
     hasProfileEffect: f,
-    isTryItOutFlow: p,
-    disabledInputs: h,
-    onUpsellClick: g
-  } = e, I = v || (null == i ? void 0 : i.canUsePremiumProfileCustomization) || !1, Z = I ? l.PencilIcon : l.NitroWheelIcon;
-  return (0, n.jsx)(r.Z, {
-    user: a,
-    displayProfile: i,
-    guildId: c,
+    isTryItOutFlow: h,
+    disabledInputs: p,
+    onUpsellClick: v
+  } = e, I = E || (null == s ? void 0 : s.canUsePremiumProfileCustomization) || !1, g = I ? t.PencilIcon : t.NitroWheelIcon;
+  return (0, l.jsx)(i.Z, {
+    user: n,
+    displayProfile: s,
+    guildId: d,
     profileType: o.y0.BITE_SIZE,
     pendingBanner: m,
     hasProfileEffect: f,
-    canUsePremiumCustomization: v,
-    children: !h && (0, n.jsxs)(l.Clickable, {
+    canUsePremiumCustomization: E,
+    children: !p && (0, l.jsxs)(t.Clickable, {
       onClick: () => {
         if (!I) {
-          null == g || g();
+          null == v || v();
           return
-        }(0, t.$r)(s.pC.BANNER, c, p)
+        }(0, r.$r)(a.pC.BANNER, d, h)
       },
-      className: d.clickable,
-      children: [(0, n.jsx)(Z, {
+      className: u.clickable,
+      children: [(0, l.jsx)(g, {
         size: "xs",
         color: "white"
-      }), (0, n.jsx)(l.Heading, {
+      }), (0, l.jsx)(t.Heading, {
         variant: "text-sm/medium",
         color: "always-white",
-        children: I ? u.Z.Messages.CHANGE_BANNER : u.Z.Messages.USER_SETTINGS_UNLOCK_BANNER
+        children: I ? c.Z.Messages.CHANGE_BANNER : c.Z.Messages.USER_SETTINGS_UNLOCK_BANNER
       })]
     })
   })

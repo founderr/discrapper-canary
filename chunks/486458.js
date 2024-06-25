@@ -15,8 +15,8 @@ var l, i, s, a, r, o = n(735250),
   d = n.n(u),
   h = n(780384),
   m = n(481060),
-  p = n(626135),
-  E = n(792125),
+  E = n(626135),
+  p = n(792125),
   g = n(285952),
   f = n(981631),
   C = n(689938),
@@ -35,12 +35,12 @@ class x extends c.PureComponent {
     let {
       uniqueId: e
     } = this.props;
-    p.default.track(f.rMx.SHOW_TUTORIAL, {
+    E.default.track(f.rMx.SHOW_TUTORIAL, {
       tutorial: e
     })
   }
   componentWillUnmount() {
-    p.default.track(f.rMx.CLOSE_TUTORIAL, {
+    E.default.track(f.rMx.CLOSE_TUTORIAL, {
       tutorial: this.props.uniqueId,
       acknowledged: this.state.confirmed
     })
@@ -137,7 +137,7 @@ class T extends(s = c.PureComponent) {
         onSkipAll: t,
         uniqueId: n
       } = this.props;
-      e(), t(), p.default.track(f.rMx.DISMISS_ALL_TUTORIALS, {
+      e(), t(), E.default.track(f.rMx.DISMISS_ALL_TUTORIALS, {
         tutorial: n
       })
     }), I(this, "renderPopoutContent", e => {
@@ -164,7 +164,7 @@ class T extends(s = c.PureComponent) {
           [_.arrowAlignmentTop]: "top" === s,
           [_.arrowAlignmentMiddle]: "middle" === s,
           "force-theme": null != l
-        }, (0, E.Q)(l)),
+        }, (0, p.Q)(l)),
         onClickComplete: () => this.onClickComplete(t),
         onClickSkipAll: () => this.onClickSkipAll(t)
       })

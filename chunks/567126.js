@@ -29,8 +29,8 @@ var l = t(735250),
   R = t(989941),
   v = t(958707),
   L = t(133179),
-  p = t(46140),
-  M = t(65154),
+  M = t(46140),
+  p = t(65154),
   O = t(689938),
   j = t(946152);
 async function P() {
@@ -103,9 +103,9 @@ function U(e) {
     enableGoLiveCaptureCard: a
   } = A.Z.useExperiment({
     location: "GoLive_Source_Select"
-  }), r = Z.Z.supports(M.AN.GO_LIVE_HARDWARE), [c, E] = s.useState(null), [N, f] = s.useState(null), [R, D] = s.useState(null), U = null != R && R.length > 0, [b, w] = s.useState(o.vA.WINDOW), [B, y] = s.useState(!1), k = s.useRef(null), V = s.useRef(new d.Xp), H = (0, u.e7)([_.ZP], () => _.ZP.getRunningGames()), W = function(e, n, t) {
+  }), r = Z.Z.supports(p.AN.GO_LIVE_HARDWARE), [c, E] = s.useState(null), [N, f] = s.useState(null), [R, D] = s.useState(null), U = null != R && R.length > 0, [b, w] = s.useState(o.vA.WINDOW), [B, y] = s.useState(!1), k = s.useRef(null), V = s.useRef(new d.Xp), H = (0, u.e7)([_.ZP], () => _.ZP.getRunningGames()), W = function(e, n, t) {
     let l = (0, g.Zy)({
-      location: p.dr.STREAM_SOURCE_SELECT
+      location: M.dr.STREAM_SOURCE_SELECT
     });
     return s.useMemo(() => {
       if (null == t || !l) return null;

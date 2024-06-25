@@ -4,8 +4,8 @@ t.d(n, {
   }
 }), t(47120), t(653041);
 var i = t(735250),
-  s = t(470079),
-  l = t(442837),
+  l = t(470079),
+  s = t(442837),
   a = t(481060),
   r = t(668781),
   o = t(434404),
@@ -19,38 +19,38 @@ var i = t(735250),
   m = t(709054),
   _ = t(51144),
   h = t(486199),
-  O = t(366598),
-  g = t(125657),
+  g = t(366598),
+  O = t(125657),
   A = t(725875),
-  C = t(981631),
-  S = t(689938),
-  x = t(20943);
+  x = t(981631),
+  C = t(689938),
+  S = t(20943);
 
 function p(e) {
   let {
     application: n,
     guild: t,
-    integration: s,
-    ...l
+    integration: l,
+    ...s
   } = e;
   return (0, i.jsx)(a.ConfirmModal, {
-    ...l,
-    header: S.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_TITLE.format({
+    ...s,
+    header: C.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_TITLE.format({
       applicationName: n.name
     }),
-    confirmText: S.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE,
-    cancelText: S.Z.Messages.CANCEL,
+    confirmText: C.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE,
+    cancelText: C.Z.Messages.CANCEL,
     onConfirm: () => {
-      o.Z.disableIntegration(t.id, s.id).catch(() => {
+      o.Z.disableIntegration(t.id, l.id).catch(() => {
         r.Z.show({
-          title: S.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_ERROR_TITLE,
-          body: S.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_ERROR
+          title: C.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_ERROR_TITLE,
+          body: C.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_ERROR
         })
       })
     },
     children: (0, i.jsx)(a.Text, {
       variant: "text-md/normal",
-      children: S.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_BODY.format({
+      children: C.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_BODY.format({
         applicationName: n.name
       })
     })
@@ -70,36 +70,36 @@ function R(e) {
     application: M,
     integration: L,
     webhooks: v
-  } = r, [j, b] = (0, l.Wu)([N.Z], () => [N.Z.can(C.Plq.MANAGE_ROLES, t), null == M.bot || N.Z.canManageUser(C.Plq.MANAGE_GUILD, M.bot.id, t)], [M.bot, t]), D = (0, l.e7)([N.Z], () => N.Z.can(C.Plq.MANAGE_WEBHOOKS, t), [t]), P = s.useCallback(() => {
+  } = r, [j, b] = (0, s.Wu)([N.Z], () => [N.Z.can(x.Plq.MANAGE_ROLES, t), null == M.bot || N.Z.canManageUser(x.Plq.MANAGE_GUILD, M.bot.id, t)], [M.bot, t]), P = (0, s.e7)([N.Z], () => N.Z.can(x.Plq.MANAGE_WEBHOOKS, t), [t]), D = l.useCallback(() => {
     f() && (0, a.openModal)(e => (0, i.jsx)(p, {
       guild: t,
       application: M,
       integration: L,
       ...e
     }))
-  }, [M, f, t, L]), B = s.useMemo(() => {
+  }, [M, f, t, L]), B = l.useMemo(() => {
     let e = [{
       icon: a.ClockIcon,
-      text: S.Z.Messages.INTEGRATION_ADDED_DATE.format({
+      text: C.Z.Messages.INTEGRATION_ADDED_DATE.format({
         timestamp: m.default.extractTimestamp(L.id)
       })
     }];
     return null != L.user && e.push({
       icon: a.UserIcon,
-      text: S.Z.Messages.INTEGRATION_ADDED_USER.format({
+      text: C.Z.Messages.INTEGRATION_ADDED_USER.format({
         user: _.ZP.getUserTag(L.user)
       })
     }), e
-  }, [L.id, L.user]), G = s.useMemo(() => null != M.bot ? (0, i.jsx)(g.Z, {
+  }, [L.id, L.user]), G = l.useMemo(() => null != M.bot ? (0, i.jsx)(O.Z, {
     guild: t,
     applicationIntegration: r
   }) : (0, i.jsx)(a.Card, {
-    className: x.emptyCard,
+    className: S.emptyCard,
     editable: !0,
     children: (0, i.jsx)(a.Text, {
       color: "text-muted",
       variant: "text-sm/normal",
-      children: S.Z.Messages.INTEGRATIONS_APPLICATION_NO_BOT
+      children: C.Z.Messages.INTEGRATIONS_APPLICATION_NO_BOT
     })
   }), [M.bot, r, t]), {
     applicationSubscriptionListingsShown: y
@@ -116,43 +116,43 @@ function R(e) {
       isHeader: !0
     }), (null == M ? void 0 : M.description) != null ? (0, i.jsx)(I.Z, {
       userBio: M.description,
-      className: x.headerDescription
+      className: S.headerDescription
     }) : null, j ? (0, i.jsx)(c.Z, {
       application: M,
       canNavigate: f,
       guildId: t.id
     }) : null, (0, i.jsx)(a.FormDivider, {
-      className: x.headerDivider
+      className: S.headerDivider
     }), null != M.bot ? (0, i.jsxs)("div", {
-      className: x.section,
-      children: [(0, i.jsx)(O.Z, {
+      className: S.section,
+      children: [(0, i.jsx)(g.Z, {
         icon: (0, i.jsx)(a.RobotIcon, {
           size: "xs",
           color: "currentColor"
         }),
-        title: S.Z.Messages.INTEGRATIONS_APPLICATION_BOT
+        title: C.Z.Messages.INTEGRATIONS_APPLICATION_BOT
       }), G]
     }) : null, y && null != M.primarySkuId && (0, i.jsxs)("div", {
-      className: x.section,
-      children: [(0, i.jsx)(O.Z, {
+      className: S.section,
+      children: [(0, i.jsx)(g.Z, {
         icon: (0, i.jsx)(a.TicketIcon, {
           size: "md",
           color: "currentColor"
         }),
-        title: S.Z.Messages.INTEGRATIONS_APPLICATION_SUBSCRIPTION_TIERS
+        title: C.Z.Messages.INTEGRATIONS_APPLICATION_SUBSCRIPTION_TIERS
       }), (0, i.jsx)(u.Z, {
         applicationId: M.id,
         applicationPrimarySkuId: M.primarySkuId,
         guildId: t.id
       })]
     }), (0, i.jsxs)("div", {
-      className: x.section,
-      children: [(0, i.jsx)(O.Z, {
+      className: S.section,
+      children: [(0, i.jsx)(g.Z, {
         icon: (0, i.jsx)(a.WebhookIcon, {
           size: "md",
           color: "currentColor"
         }),
-        title: S.Z.Messages.INTEGRATIONS_APPLICATION_WEBHOOKS
+        title: C.Z.Messages.INTEGRATIONS_APPLICATION_WEBHOOKS
       }), v.length > 0 ? (0, i.jsx)(A.Z, {
         webhooks: v,
         editedWebhook: R,
@@ -160,24 +160,24 @@ function R(e) {
         errors: Z,
         canNavigate: f
       }) : (0, i.jsx)(a.Card, {
-        className: x.emptyCard,
+        className: S.emptyCard,
         editable: !0,
         children: (0, i.jsx)(a.Text, {
           color: "text-muted",
           variant: "text-sm/normal",
-          children: D ? S.Z.Messages.INTEGRATIONS_APPLICATION_NO_WEBHOOKS : S.Z.Messages.INTEGRATIONS_APPLICATION_APPLICATION_WEBHOOK_PERMISSIONS
+          children: P ? C.Z.Messages.INTEGRATIONS_APPLICATION_NO_WEBHOOKS : C.Z.Messages.INTEGRATIONS_APPLICATION_APPLICATION_WEBHOOK_PERMISSIONS
         })
       })]
     }), (0, i.jsx)(a.FormDivider, {
-      className: x.headerDivider
+      className: S.headerDivider
     }), (0, i.jsxs)(E.Z, {
-      className: x.section,
+      className: S.section,
       justify: E.Z.Justify.BETWEEN,
       align: E.Z.Align.CENTER,
       children: [(0, i.jsx)(a.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: b ? S.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_SUMMARY : S.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_NO_PERMISSIONS
+        children: b ? C.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_SUMMARY : C.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_NO_PERMISSIONS
       }), (0, i.jsx)(E.Z.Child, {
         grow: 0,
         shrink: 0,
@@ -186,8 +186,8 @@ function R(e) {
           color: a.Button.Colors.RED,
           look: a.Button.Looks.FILLED,
           disabled: !b,
-          onClick: P,
-          children: S.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE
+          onClick: D,
+          children: C.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE
         })
       })]
     })]

@@ -20,8 +20,8 @@ var l = n(735250),
   d = n(266076),
   h = n(703656),
   m = n(699516),
-  p = n(914010),
-  E = n(594174),
+  E = n(914010),
+  p = n(594174),
   g = n(467679),
   f = n(346656),
   C = n(946734),
@@ -40,7 +40,7 @@ function v(e) {
     parentChannel: s,
     guild: r,
     inSidebar: h = !1,
-    handleClick: p,
+    handleClick: E,
     handleContextMenu: g,
     handleParentClick: f,
     handleParentContextMenu: C,
@@ -93,7 +93,7 @@ function v(e) {
       return (0, l.jsx)(T.Z, {
         level: M,
         channel: t,
-        handleClick: p,
+        handleClick: E,
         handleContextMenu: g
       });
     case N.d4z.GROUP_DM:
@@ -122,7 +122,7 @@ function v(e) {
         children: [R(v, t.type === N.d4z.GUILD_ANNOUNCEMENT ? Z.Z.Messages.NEWS_CHANNEL : Z.Z.Messages.TEXT_CHANNEL), (0, l.jsx)(x.Z.Title, {
           level: M,
           onContextMenu: g,
-          onClick: p,
+          onClick: E,
           children: j
         }), null != I ? I() : null]
       });
@@ -131,7 +131,7 @@ function v(e) {
         children: [R(v, Z.Z.Messages.VOICE_CHANNEL), (0, l.jsx)(x.Z.Title, {
           level: M,
           onContextMenu: g,
-          onClick: p,
+          onClick: E,
           children: j
         })]
       });
@@ -140,7 +140,7 @@ function v(e) {
         children: [R(v, Z.Z.Messages.STAGE_CHANNEL), (0, l.jsx)(x.Z.Title, {
           level: M,
           onContextMenu: g,
-          onClick: p,
+          onClick: E,
           children: j
         })]
       });
@@ -156,7 +156,7 @@ function v(e) {
             onContextMenu: C,
             onClick: f,
             className: a()(S.parentChannelName, S.cursorPointer),
-            children: (0, c.F6)(s, E.default, m.Z)
+            children: (0, c.F6)(s, p.default, m.Z)
           }), (0, l.jsx)(x.Z.Caret, {})]
         })
       }
@@ -165,7 +165,7 @@ function v(e) {
         children: [L, R(O ? null : v, Z.Z.Messages.THREAD), (0, l.jsx)(x.Z.Title, {
           level: M,
           onContextMenu: g,
-          onClick: p,
+          onClick: E,
           className: a()({
             [S.cursorPointer]: h,
             [S.forumPostTitle]: O
@@ -185,7 +185,7 @@ function v(e) {
         }) : null, (0, l.jsxs)(x.Z.Title, {
           level: M,
           onContextMenu: g,
-          onClick: p,
+          onClick: E,
           children: [null != A ? (0, l.jsxs)(o.HiddenVisually, {
             children: [A, ":"]
           }) : null, " ", P]
@@ -198,7 +198,7 @@ function v(e) {
 let A = e => {
   let {
     channel: t
-  } = e, n = (0, r.e7)([E.default], () => E.default.getCurrentUser()), i = (0, r.e7)([E.default], () => E.default.getUser(t.getRecipientId()));
+  } = e, n = (0, r.e7)([p.default], () => p.default.getCurrentUser()), i = (0, r.e7)([p.default], () => p.default.getUser(t.getRecipientId()));
   return t.isDM() && (null == n ? void 0 : n.isStaff()) && (null == i ? void 0 : i.isStaff()) ? (0, l.jsx)(g.Z, {
     type: g.Z.Types.STAFF_ONLY_DM
   }) : null
@@ -246,7 +246,7 @@ function j(e) {
     channel: n,
     caretPosition: i = "left"
   } = e;
-  return (0, r.e7)([p.Z], () => p.Z.getGuildId()) !== N.I_8 || null == t ? null : (0, l.jsxs)("div", {
+  return (0, r.e7)([E.Z], () => E.Z.getGuildId()) !== N.I_8 || null == t ? null : (0, l.jsxs)("div", {
     className: S.guildBreadcrumbContainer,
     children: ["left" === i && (0, l.jsx)(x.Z.Caret, {
       direction: "left"

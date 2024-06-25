@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return p
+    return E
   }
 }), n(47120);
 var l = n(735250),
@@ -15,24 +15,24 @@ var l = n(735250),
   h = n(689938),
   m = n(502890);
 
-function p(e) {
+function E(e) {
   let {
     channel: t
-  } = e, n = (0, o.B)(t), [p, E] = i.useState(!1), g = (0, s.useRedesignIconContext)().enabled;
+  } = e, n = (0, o.B)(t), [E, p] = i.useState(!1), g = (0, s.useRedesignIconContext)().enabled;
   i.useEffect(() => {
-    let e = () => E(!0);
+    let e = () => p(!0);
     return r.S.subscribe(d.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
       r.S.unsubscribe(d.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e)
     }
   }, []);
   let f = h.Z.Messages.NOTIFICATION_SETTINGS;
   return (0, l.jsx)(s.Popout, {
-    shouldShow: p,
+    shouldShow: E,
     animation: s.Popout.Animation.NONE,
     position: "bottom",
     align: "right",
     autoInvert: !1,
-    onRequestClose: () => E(!1),
+    onRequestClose: () => p(!1),
     renderPopout: e => (0, l.jsx)(c.Z, {
       ...e,
       channel: t,
@@ -45,7 +45,7 @@ function p(e) {
       } = t;
       return (0, l.jsx)(a.ZP.Icon, {
         ...e,
-        onClick: () => E(e => !e),
+        onClick: () => p(e => !e),
         tooltip: i ? null : f,
         icon: n === u.iN.NO_MESSAGES ? s.BellSlashIcon : s.BellIcon,
         foreground: n !== u.iN.NO_MESSAGES || g ? null : m.strikethrough,

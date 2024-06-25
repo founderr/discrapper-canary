@@ -380,7 +380,7 @@ function J(e) {
       }(0, c.openModalLazy)(async () => {
         let {
           default: i
-        } = await Promise.all([t.e("99387"), t.e("75409")]).then(t.bind(t, 850085));
+        } = await Promise.all([t.e("99387"), t.e("22872")]).then(t.bind(t, 850085));
         return t => (0, n.jsx)(i, {
           imgURI: e,
           file: s,

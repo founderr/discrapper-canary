@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(134432),
   h = n(769654),
   m = n(601964),
-  p = n(430824),
-  E = n(940627),
+  E = n(430824),
+  p = n(940627),
   g = n(346656),
   f = n(806519),
   C = n(404975),
@@ -127,7 +127,7 @@ t.Z = e => {
   var t;
   let {
     entry: s
-  } = e, [a, C] = i.useState(!1), I = null != (0, r.e7)([p.Z], () => p.Z.getGuild(s.guildId)), x = async () => {
+  } = e, [a, C] = i.useState(!1), I = null != (0, r.e7)([E.Z], () => E.Z.getGuild(s.guildId)), x = async () => {
     C(!0);
     try {
       I ? (0, h.X)(s.guildId) : await u.Z.joinGuild(s.guildId, {
@@ -189,7 +189,7 @@ t.Z = e => {
       className: Z.guildInfo,
       children: [(0, l.jsxs)("div", {
         className: Z.title,
-        children: [(0, l.jsx)(E.Z, {
+        children: [(0, l.jsx)(p.Z, {
           className: Z.guildBadge,
           guild: s,
           tooltipColor: o.Tooltip.Colors.PRIMARY

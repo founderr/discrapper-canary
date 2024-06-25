@@ -14,8 +14,8 @@ var a = t(374470),
   o = t(911969),
   u = t(299206),
   s = t(26737),
-  d = t(29264),
-  c = t(905041),
+  c = t(29264),
+  d = t(905041),
   E = t(89013),
   f = t(988500),
   I = t(570870),
@@ -48,23 +48,23 @@ function w(e) {
   var n, t;
   let i, r, o, u, {
       channel: s,
-      message: d,
-      target: c,
+      message: c,
+      target: d,
       mediaItem: E,
       shouldHideMediaOptions: f,
       onSelect: I,
       onHeightUpdate: M
     } = e,
-    g = c,
-    m = c.getAttribute("data-type"),
-    Z = c.getAttribute("data-id"),
-    _ = c.getAttribute("data-name");
+    g = d,
+    m = d.getAttribute("data-type"),
+    Z = d.getAttribute("data-id"),
+    _ = d.getAttribute("data-name");
   if (null != E) r = i = o = E.url;
   else
     for (;
       (0, a.k)(g);)(0, a.k)(g, HTMLImageElement) && null != g.src && (r = g.src), (0, a.k)(g, HTMLAnchorElement) && null != g.href && (i = g.href, u = g.textContent, null == r && "img" === g.getAttribute("data-role") && (r = i, g.hasAttribute("data-safe-src") && "" !== g.getAttribute("data-safe-src") && (o = g.getAttribute("data-safe-src")))), g = g.parentNode;
   return F({
-    message: d,
+    message: c,
     channel: s,
     mediaItem: E,
     textSelection: null !== (t = null === (n = document.getSelection()) || void 0 === n ? void 0 : n.toString()) && void 0 !== t ? t : "",
@@ -109,9 +109,9 @@ function F(e) {
     type: w,
     id: F,
     name: k
-  }), el = (0, b.Z)(n, t), eo = (0, h.Z)(n, t), eu = (0, R.Z)(n), es = (0, m.Z)(n, t), ed = (0, Z.Z)(n, t), ec = (0, x.Z)(n, t), eE = (0, C.Z)(n, t), ef = (0, v.Z)(n, t), eI = (0, P.Z)(n), eM = (0, L.Z)(n, t), eg = (0, c.Z)(null != K ? K : V, X, n, {
+  }), el = (0, b.Z)(n, t), eo = (0, h.Z)(n, t), eu = (0, R.Z)(n), es = (0, m.Z)(n, t), ec = (0, Z.Z)(n, t), ed = (0, x.Z)(n, t), eE = (0, C.Z)(n, t), ef = (0, v.Z)(n, t), eI = (0, P.Z)(n), eM = (0, L.Z)(n, t), eg = (0, d.Z)(null != K ? K : V, X, n, {
     shouldHideMediaOptions: $
-  }), em = (0, d.Z)(H, n, {
+  }), em = (0, c.Z)(H, n, {
     shouldHideMediaOptions: $
   }), eZ = (0, G.Z)(n, a), e_ = (0, u.Z)({
     id: n.id,
@@ -134,7 +134,7 @@ function F(e) {
     }), (0, i.jsx)(r.MenuGroup, {
       children: ee
     }), (0, i.jsxs)(r.MenuGroup, {
-      children: ["" === l ? en : null, et, eu, ei, ea, er, ev, eS, eA, ep, eO, el, eo, eh, es, ed, eM, eN, eE, ec, eR, ef, z && eI]
+      children: ["" === l ? en : null, et, eu, ei, ea, er, ev, eS, eA, ep, eO, el, eo, eh, es, ec, eM, eN, eE, ed, eR, ef, z && eI]
     }), null != eT && (0, i.jsx)(r.MenuGroup, {
       children: eT
     }), (0, i.jsxs)(r.MenuGroup, {

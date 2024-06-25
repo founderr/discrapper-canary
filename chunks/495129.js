@@ -45,12 +45,12 @@ function p(e) {
       rawName: t
     } = e;
     return "voice_user_ids" === t
-  })) || void 0 === M ? void 0 : M.rawValue, Y = null != H ? H.split(",") : [], W = (0, a.Wu)([m.default], () => Y.map(e => m.default.getUser(e)).filter(Boolean)), z = y && null != k ? A.Z.Messages.WAVED_AT_USER.format({
+  })) || void 0 === M ? void 0 : M.rawValue, Y = null != H ? H.split(",") : [], W = (0, a.Wu)([m.default], () => Y.map(e => m.default.getUser(e)).filter(Boolean)), K = y && null != k ? A.Z.Messages.WAVED_AT_USER.format({
     username: F
   }) : A.Z.Messages.WAVED_AT_YOU.format({
     username: G.nick
-  }), K = null != j && null != U, Q = null;
-  Q = K ? y || w ? A.Z.Messages.YOU_ARE_IN_CHANNEL.format({
+  }), z = null != j && null != U, Q = null;
+  Q = z ? y || w ? A.Z.Messages.YOU_ARE_IN_CHANNEL.format({
     channelHook: (e, t) => (0, s.jsx)(h.Z, {
       channel: null != U ? U : void 0
     }, t)
@@ -66,7 +66,7 @@ function p(e) {
       children: [(0, s.jsx)(r.Text, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: z
+        children: K
       }), (0, s.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
@@ -105,7 +105,7 @@ function p(e) {
         },
         className: g.button,
         innerClassName: g.buttonInner,
-        disabled: w || !K,
+        disabled: w || !z,
         children: [(0, s.jsx)(r.VoiceNormalIcon, {
           size: "md",
           color: "currentColor"

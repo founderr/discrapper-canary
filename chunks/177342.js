@@ -19,8 +19,8 @@ function h(e) {
     warningId: n,
     senderId: h,
     warningType: m,
-    header: p,
-    description: E,
+    header: E,
+    description: p,
     onDismiss: g,
     buttons: f
   } = e;
@@ -50,11 +50,11 @@ function h(e) {
         children: [(0, l.jsx)(a.Heading, {
           variant: "heading-md/semibold",
           color: "text-primary",
-          children: p
+          children: E
         }), (0, l.jsx)(a.Text, {
           variant: "text-sm/normal",
           color: "text-primary",
-          children: E
+          children: p
         })]
       })]
     }), (0, l.jsx)("div", {

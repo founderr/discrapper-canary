@@ -1,181 +1,181 @@
-n.r(t), n.d(t, {
+n.r(a), n.d(a, {
   default: function() {
-    return N
+    return M
   }
 }), n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(729594),
-  a = n(243814),
-  r = n(481060),
-  o = n(367907),
-  c = n(906732),
-  u = n(240991),
-  d = n(69580),
-  h = n(484459),
-  m = n(171368),
-  p = n(768581),
-  E = n(63063),
-  g = n(591759),
-  f = n(556084),
-  C = n(981631),
-  _ = n(689938),
-  I = n(85809),
-  x = n(367424);
-let T = new Set(["Spacebar", " ", "Enter"]);
+var i = n(735250),
+  s = n(470079),
+  l = n(729594),
+  t = n(243814),
+  o = n(481060),
+  c = n(367907),
+  r = n(906732),
+  d = n(240991),
+  p = n(69580),
+  N = n(484459),
+  u = n(171368),
+  m = n(768581),
+  A = n(63063),
+  h = n(591759),
+  I = n(556084),
+  x = n(981631),
+  C = n(689938),
+  _ = n(85809),
+  E = n(367424);
+let R = new Set(["Spacebar", " ", "Enter"]);
 
-function N(e) {
+function M(e) {
   let {
-    channelId: t,
+    channelId: a,
     transitionState: n,
-    onClose: N
+    onClose: M
   } = e, {
-    analyticsLocations: Z
-  } = (0, c.ZP)(), {
-    fetched: S,
-    applicationsShelf: v,
-    installedIntegrations: A
-  } = (0, f.j)({
-    channelId: t
+    analyticsLocations: j
+  } = (0, r.ZP)(), {
+    fetched: L,
+    applicationsShelf: g,
+    installedIntegrations: T
+  } = (0, I.j)({
+    channelId: a
   });
-  i.useEffect(() => {
-    (0, o.yw)(C.rMx.GDM_STARTER_APPS_VIEWED)
+  s.useEffect(() => {
+    (0, c.yw)(x.rMx.GDM_STARTER_APPS_VIEWED)
   }, []);
-  let M = e => {
-      var t;
-      (0, h.Z)(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "", null == e ? void 0 : e.getAvatarURL(void 0, 80), {
+  let P = e => {
+      var a;
+      (0, N.Z)(null !== (a = null == e ? void 0 : e.id) && void 0 !== a ? a : "", null == e ? void 0 : e.getAvatarURL(void 0, 80), {
         dispatchWait: !0
       })
     },
-    R = (e, t) => {
-      T.has(e.key) && M(t)
+    D = (e, a) => {
+      R.has(e.key) && P(a)
     },
-    j = i.useCallback(e => {
+    v = s.useCallback(e => {
       let {
-        application: t,
+        application: a,
         location: n
       } = e;
       if (null == n) return !1;
       let {
-        host: l,
-        path: i
-      } = s.parse(n, !0);
-      return (!!g.Z.isDiscordHostname(l) || window.location.host === l) && i === C.Z5c.OAUTH2_AUTHORIZED && (null != t && N(), !0)
-    }, [N]);
-  return (0, l.jsxs)(r.ModalRoot, {
+        host: i,
+        path: s
+      } = l.parse(n, !0);
+      return (!!h.Z.isDiscordHostname(i) || window.location.host === i) && s === x.Z5c.OAUTH2_AUTHORIZED && (null != a && M(), !0)
+    }, [M]);
+  return (0, i.jsxs)(o.ModalRoot, {
     transitionState: n,
-    size: r.ModalSize.DYNAMIC,
-    className: I.modal,
-    children: [(0, l.jsx)(r.ModalContent, {
-      className: I.modalContent,
-      children: (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)("img", {
-          src: x,
+    size: o.ModalSize.DYNAMIC,
+    className: _.modal,
+    children: [(0, i.jsx)(o.ModalContent, {
+      className: _.modalContent,
+      children: (0, i.jsxs)(i.Fragment, {
+        children: [(0, i.jsx)("img", {
+          src: E,
           alt: "",
-          className: I.image
-        }), (0, l.jsxs)("div", {
-          className: I.headingContainer,
-          children: [(0, l.jsx)(r.Heading, {
+          className: _.image
+        }), (0, i.jsxs)("div", {
+          className: _.headingContainer,
+          children: [(0, i.jsx)(o.Heading, {
             variant: "heading-xl/bold",
-            className: I.modalHeader,
-            children: _.Z.Messages.PRIVATE_CHANNEL_AVAILABLE_APPS
-          }), (0, l.jsx)(r.Text, {
+            className: _.modalHeader,
+            children: C.Z.Messages.PRIVATE_CHANNEL_AVAILABLE_APPS
+          }), (0, i.jsx)(o.Text, {
             variant: "text-md/medium",
-            className: I.modalHeader,
-            children: _.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_MORE_APPS_INFO_LINKED.format({
-              helpCenterLink: E.Z.getArticleURL(C.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+            className: _.modalHeader,
+            children: C.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_MORE_APPS_INFO_LINKED.format({
+              helpCenterLink: A.Z.getArticleURL(x.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
             })
           })]
-        }), (0, l.jsx)("div", {
-          className: I.applicationRowContainer,
-          children: S ? v.map(e => {
-            if (null != A.find(t => t.application.id === e.id)) return null;
-            let n = null != e.description ? (0, u.YP)(e.description) : null,
-              i = p.ZP.getApplicationIconURL({
+        }), (0, i.jsx)("div", {
+          className: _.applicationRowContainer,
+          children: L ? g.map(e => {
+            if (null != T.find(a => a.application.id === e.id)) return null;
+            let n = null != e.description ? (0, d.YP)(e.description) : null,
+              s = m.ZP.getApplicationIconURL({
                 id: e.id,
                 icon: e.icon,
                 size: 40
               }),
-              s = (0, l.jsxs)(l.Fragment, {
-                children: [null != i && (0, l.jsx)("img", {
-                  className: I.applicationIcon,
+              l = (0, i.jsxs)(i.Fragment, {
+                children: [null != s && (0, i.jsx)("img", {
+                  className: _.applicationIcon,
                   alt: "",
                   "aria-hidden": !0,
-                  src: i,
+                  src: s,
                   width: 40,
                   height: 40
-                }), (0, l.jsxs)("div", {
-                  className: I.applicationRowContent,
-                  children: [(0, l.jsxs)("div", {
-                    className: I.applicationText,
-                    children: [(0, l.jsx)(r.Heading, {
+                }), (0, i.jsxs)("div", {
+                  className: _.applicationRowContent,
+                  children: [(0, i.jsxs)("div", {
+                    className: _.applicationText,
+                    children: [(0, i.jsx)(o.Heading, {
                       variant: "heading-md/medium",
                       children: e.name
-                    }), null != e.description && (0, l.jsx)(r.Text, {
+                    }), null != e.description && (0, i.jsx)(o.Text, {
                       variant: "text-sm/normal",
                       color: "text-muted",
                       lineClamp: 1,
                       children: n
                     })]
-                  }), (0, l.jsx)(r.Button, {
+                  }), (0, i.jsx)(o.Button, {
                     type: "button",
-                    innerClassName: I.applicationButtonHack,
+                    innerClassName: _.applicationButtonHack,
                     onClick: n => {
-                      n.stopPropagation(), (0, d.openOAuth2Modal)({
+                      n.stopPropagation(), (0, p.openOAuth2Modal)({
                         clientId: e.id,
-                        scopes: [a.x.APPLICATIONS_COMMANDS],
-                        channelId: t,
+                        scopes: [t.x.APPLICATIONS_COMMANDS],
+                        channelId: a,
                         disableGuildSelect: !0,
-                        callback: j
+                        callback: v
                       })
                     },
-                    size: r.Button.Sizes.SMALL,
-                    color: r.Button.Colors.PRIMARY,
-                    children: _.Z.Messages.ADD
+                    size: o.Button.Sizes.SMALL,
+                    color: o.Button.Colors.PRIMARY,
+                    children: C.Z.Messages.ADD
                   })]
                 })]
               }),
               {
-                bot: o
+                bot: c
               } = e;
-            return null != o ? (0, l.jsx)(r.ClickableContainer, {
-              onMouseDown: () => M(o),
-              onKeyDown: e => R(e, o),
-              className: I.applicationRow,
+            return null != c ? (0, i.jsx)(o.ClickableContainer, {
+              onMouseDown: () => P(c),
+              onKeyDown: e => D(e, c),
+              className: _.applicationRow,
               onClick: () => {
-                (0, m.openUserProfileModal)({
-                  channelId: t,
-                  userId: o.id,
-                  sourceAnalyticsLocations: Z,
+                (0, u.openUserProfileModal)({
+                  channelId: a,
+                  userId: c.id,
+                  sourceAnalyticsLocations: j,
                   analyticsLocation: {
-                    section: C.jXE.ADD_PRIVATE_CHANNEL_INTEGRATION_MODAL
+                    section: x.jXE.ADD_PRIVATE_CHANNEL_INTEGRATION_MODAL
                   }
                 })
               },
-              "aria-label": _.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADD_MODAL_ROW_INFO.format({
+              "aria-label": C.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADD_MODAL_ROW_INFO.format({
                 appName: e.name
               }),
-              children: s
-            }, e.id) : (0, l.jsx)("div", {
-              className: I.applicationRow,
-              children: s
+              children: l
+            }, e.id) : (0, i.jsx)("div", {
+              className: _.applicationRow,
+              children: l
             }, e.id)
-          }) : (0, l.jsx)(r.Spinner, {
-            className: I.spinner,
-            type: r.Spinner.Type.SPINNING_CIRCLE
+          }) : (0, i.jsx)(o.Spinner, {
+            className: _.spinner,
+            type: o.Spinner.Type.SPINNING_CIRCLE
           })
         })]
       })
-    }), (0, l.jsxs)(r.ModalFooter, {
-      className: I.modalFooter,
-      children: [(0, l.jsx)(r.Button, {
-        onClick: N,
-        children: _.Z.Messages.DONE
-      }), (0, l.jsx)(r.Button, {
-        look: r.Button.Looks.LINK,
-        onClick: N,
-        color: r.Button.Colors.PRIMARY,
-        children: _.Z.Messages.CANCEL
+    }), (0, i.jsxs)(o.ModalFooter, {
+      className: _.modalFooter,
+      children: [(0, i.jsx)(o.Button, {
+        onClick: M,
+        children: C.Z.Messages.DONE
+      }), (0, i.jsx)(o.Button, {
+        look: o.Button.Looks.LINK,
+        onClick: M,
+        color: o.Button.Colors.PRIMARY,
+        children: C.Z.Messages.CANCEL
       })]
     })]
   })

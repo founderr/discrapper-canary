@@ -17,8 +17,8 @@ var l = n(735250),
   d = n(358221),
   h = n(414910),
   m = n(928518),
-  p = n(204197),
-  E = n(470956),
+  E = n(204197),
+  p = n(470956),
   g = n(314897),
   f = n(271383),
   C = n(131951),
@@ -39,7 +39,7 @@ function j(e) {
     channelId: t,
     userId: n
   } = e;
-  return (0, E.Eu)(t, n) ? (0, l.jsx)(o.Tooltip, {
+  return (0, p.Eu)(t, n) ? (0, l.jsx)(o.Tooltip, {
     text: v.Z.Messages.NOTICE_USER_DISCONNECTED,
     position: "bottom",
     color: o.TooltipColors.GREY,
@@ -59,7 +59,7 @@ function L(e) {
     channel: n,
     inCall: s,
     width: o,
-    paused: E,
+    paused: p,
     selected: j,
     fit: L,
     onVideoResize: O,
@@ -70,26 +70,26 @@ function L(e) {
     user: k,
     streamId: w,
     speaking: H
-  } = t, B = k.id === U, G = (0, N.ZP)(t), V = (0, r.e7)([_.Z], () => _.Z.isFocused()), F = (0, r.e7)([m.Z], () => m.Z.getWindowFocused(Z.KJ3.CHANNEL_CALL_POPOUT)), z = (0, r.e7)([C.Z], () => null != k.id && C.Z.isLocalVideoDisabled(k.id, (0, h.Z)(t.type)), [k.id, t.type]), W = (0, r.e7)([f.ZP], () => f.ZP.isGuestOrLurker(n.guild_id, k.id)), Y = T.ZP.getName(n.getGuildId(), n.id, k) + (W ? " ".concat(v.Z.Messages.GUEST_NAME_SUFFIX) : ""), K = H && (F || V), q = o < 124 ? R : M, {
+  } = t, G = k.id === U, B = (0, N.ZP)(t), V = (0, r.e7)([_.Z], () => _.Z.isFocused()), F = (0, r.e7)([m.Z], () => m.Z.getWindowFocused(Z.KJ3.CHANNEL_CALL_POPOUT)), z = (0, r.e7)([C.Z], () => null != k.id && C.Z.isLocalVideoDisabled(k.id, (0, h.Z)(t.type)), [k.id, t.type]), W = (0, r.e7)([f.ZP], () => f.ZP.isGuestOrLurker(n.guild_id, k.id)), Y = T.ZP.getName(n.getGuildId(), n.id, k) + (W ? " ".concat(v.Z.Messages.GUEST_NAME_SUFFIX) : ""), K = H && (F || V), q = o < 124 ? R : M, {
     avatarSrc: X,
     avatarDecorationSrc: Q
-  } = (0, p.Z)({
+  } = (0, E.Z)({
     user: k,
     guildId: n.guild_id,
     size: q,
     animateOnHover: !K
   }), J = (0, r.e7)([d.Z], () => d.Z.getSelectedParticipant(n.id));
   return (i.useEffect(() => {
-    n.isGuildStageVoice() && !G && (null == J ? void 0 : J.id) === k.id && c.Z.selectParticipant(n.id, null)
-  }, [G]), s && !z && !y && G && !j && null != D && C.Z.supports(S.AN.VIDEO)) ? (0, l.jsx)(x.Z, {
+    n.isGuildStageVoice() && !B && (null == J ? void 0 : J.id) === k.id && c.Z.selectParticipant(n.id, null)
+  }, [B]), s && !z && !y && B && !j && null != D && C.Z.supports(S.AN.VIDEO)) ? (0, l.jsx)(x.Z, {
     onResize: O,
     wrapperClassName: A.videoWrapper,
     className: A.content,
-    mirror: B,
+    mirror: G,
     streamId: w,
     videoComponent: D,
     fit: L,
-    paused: E,
+    paused: p,
     videoSpinnerContext: k.id === U ? u.m.SELF_VIDEO : u.m.REMOTE_VIDEO,
     userId: k.id
   }, w) : (0, l.jsx)("div", {

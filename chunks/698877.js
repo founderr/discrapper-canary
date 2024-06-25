@@ -18,8 +18,8 @@ function o(e) {
       onMouseEnter: d,
       onMouseLeave: h,
       premiumGlow: m,
-      buttonRef: p,
-      ...E
+      buttonRef: E,
+      ...p
     } = e,
     g = u ? a.d : a.Z;
   t = o ? c ? r.Z.Messages.STOP_STREAMING : r.Z.Messages.STOP_WATCHING : n ? r.Z.Messages.SHARE_YOUR_SCREEN : r.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE;
@@ -29,7 +29,7 @@ function o(e) {
     play: _
   } = (0, s.P)(o ? "disable" : "enable");
   return i.useEffect(() => () => _(), [o, _]), (0, l.jsx)(g, {
-    buttonRef: p,
+    buttonRef: E,
     label: t,
     disabled: !n,
     iconComponent: f,
@@ -41,6 +41,6 @@ function o(e) {
       null == h || h(e), C.onMouseLeave()
     },
     premiumGlow: m,
-    ...E
+    ...p
   })
 }

@@ -26,13 +26,13 @@ var l, i, s = n(470079),
 let m = -1;
 (i = l || (l = {})).MESSAGES = "messages", i.LINKS = "links", i.MEDIA = "media", i.ALL_COUNTS = "all_counts";
 
-function p(e, t, n) {
+function E(e, t, n) {
   let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
     i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
     s = JSON.stringify(l);
   return i ? "guild_".concat(t, "_search_tab_").concat(n, "_for_").concat(e, "_with_additonal_").concat(s) : "guild_".concat(t, "_search_").concat(n, "_for_").concat(e, "_with_additonal_").concat(s)
 }
-let E = {
+let p = {
     searchFetcher: null,
     searchTabFetcher: null,
     result: null,
@@ -44,7 +44,7 @@ let E = {
     g.setState(n => {
       let l = n.get(e);
       return null == l ? n.set(e, {
-        ...E,
+        ...p,
         ...t
       }) : n.set(e, {
         ...l,
@@ -81,7 +81,7 @@ function I(e, t, n) {
     let {
       addtionalQuery: i,
       shouldDispatch: a = !1
-    } = l, r = s.useMemo(() => p(e, t, n, i), [e, t, n, i]), g = C(r), I = (0, c.Z)(r), [x, T] = s.useState({});
+    } = l, r = s.useMemo(() => E(e, t, n, i), [e, t, n, i]), g = C(r), I = (0, c.Z)(r), [x, T] = s.useState({});
     return s.useEffect(() => {
       if (I !== r) {
         let l = _(e, n, i),
@@ -125,12 +125,12 @@ function I(e, t, n) {
         })
       }
       return () => {}
-    }, [e, t, g, r, n, i]), null != g ? g : E
+    }, [e, t, g, r, n, i]), null != g ? g : p
   }(e, t, "messages", n)
 }
 
 function x(e, t, n, l) {
-  let i = s.useMemo(() => p(e, t, n, l, !0), [e, t, n, l]),
+  let i = s.useMemo(() => E(e, t, n, l, !0), [e, t, n, l]),
     a = C(i),
     r = (0, c.Z)(i);
   return {
@@ -149,8 +149,8 @@ function T(e, t, n) {
     key: c,
     state: d
   } = x(e, t, "links", n), {
-    key: p,
-    state: E
+    key: E,
+    state: p
   } = x(e, t, "media", n), g = s.useMemo(() => _(e, "all_counts", n), [e, n]), C = s.useMemo(() => ({
     tabs: {
       messages: _(e, "messages", g),
@@ -162,8 +162,8 @@ function T(e, t, n) {
     let t = e.messages,
       n = e.links,
       l = e.media;
-    f(r, t), f(c, n), f(p, l)
-  }, [c, p, r]), T = s.useCallback(e => {
+    f(r, t), f(c, n), f(E, l)
+  }, [c, E, r]), T = s.useCallback(e => {
     I({
       messages: e,
       links: e,
@@ -219,6 +219,6 @@ function T(e, t, n) {
   return {
     messagesCount: null !== (l = null == o ? void 0 : o.messageCount) && void 0 !== l ? l : m,
     linksCount: null !== (i = null == d ? void 0 : d.messageCount) && void 0 !== i ? i : m,
-    mediaCount: null !== (a = null == E ? void 0 : E.messageCount) && void 0 !== a ? a : m
+    mediaCount: null !== (a = null == p ? void 0 : p.messageCount) && void 0 !== a ? a : m
   }
 }

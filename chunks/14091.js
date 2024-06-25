@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(447543),
   h = n(603263),
   m = n(367907),
-  p = n(210887),
-  E = n(695346),
+  E = n(210887),
+  p = n(695346),
   g = n(768119),
   f = n(944486),
   C = n(693580),
@@ -283,12 +283,12 @@ function j(e) {
       searchType: g.Z.getSearchType()
     }), [t]),
     ...(0, I.Z)(t),
-    renderEmbeds: E.NA.useSetting(),
-    developerMode: E.Sb.useSetting(),
-    ...(0, c.cj)([p.Z], () => {
+    renderEmbeds: p.NA.useSetting(),
+    developerMode: p.Sb.useSetting(),
+    ...(0, c.cj)([E.Z], () => {
       let {
         theme: e
-      } = p.Z;
+      } = E.Z;
       return {
         theme: e
       }

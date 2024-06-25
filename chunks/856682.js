@@ -25,7 +25,7 @@ let h = {
     clamp: !0
   };
 
-function p(e) {
+function E(e) {
   let {
     paperColor: t,
     paperColorAlt: n,
@@ -86,7 +86,7 @@ function p(e) {
   })
 }
 
-function E(e) {
+function p(e) {
   let {
     paperColor: t,
     paperColorAlt: n
@@ -176,7 +176,7 @@ function g(e) {
         ...T,
         overflow: s ? "initial" : "hidden"
       },
-      children: [(0, l.jsx)(p, {
+      children: [(0, l.jsx)(E, {
         paperColor: S,
         paperColorAlt: v,
         axleColor: A
@@ -194,7 +194,7 @@ function g(e) {
             children: t
           })
         })
-      }), (0, l.jsx)(E, {
+      }), (0, l.jsx)(p, {
         paperColor: S,
         paperColorAlt: v
       })]

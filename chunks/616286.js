@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(306680),
   h = n(944486),
   m = n(111583),
-  p = n(459273),
-  E = n(880831),
+  E = n(459273),
+  p = n(880831),
   g = n(774168),
   f = n(871499),
   C = n(981631),
@@ -88,7 +88,7 @@ function T(e) {
         a(t > 0);
         let e = setTimeout(() => {
           a(!1)
-        }, E.z);
+        }, p.z);
         return () => {
           clearTimeout(e), a(!1)
         }
@@ -114,14 +114,14 @@ function T(e) {
       var e;
       null === (e = Z.current) || void 0 === e || e.focus()
     }, []);
-  (0, p.yp)({
+  (0, E.yp)({
     event: C.CkL.FOCUS_CHAT_BUTTON,
     handler: N ? null : L
   });
   let [O, P] = i.useState(!1), y = i.useCallback(() => {
     h && P(!0)
   }, [h]);
-  (0, p.yp)({
+  (0, E.yp)({
     event: C.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
     handler: y
   }), i.useEffect(() => {

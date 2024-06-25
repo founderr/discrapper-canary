@@ -11,8 +11,8 @@ var a = t(120356),
   o = t(481060),
   u = t(543241),
   s = t(222677),
-  d = t(995774),
-  c = t(665906),
+  c = t(995774),
+  d = t(665906),
   E = t(695346),
   f = t(496675),
   I = t(768581),
@@ -74,10 +74,10 @@ function A(e, n) {
   });
   t.length > 4 && (t.length = 4);
   let a = E.nc.useSetting(),
-    r = (0, c.$R)(n),
+    r = (0, d.$R)(n),
     I = (0, l.e7)([f.Z], () => a && r && (n.isPrivate() || f.Z.can(g.Plq.ADD_REACTIONS, n)), [n, r, a]),
     Z = t => {
-      (0, s.rU)(n.id, e.id, (0, d.g1)(t), void 0)
+      (0, s.rU)(n.id, e.id, (0, c.g1)(t), void 0)
     };
   return I && t.length > 0 ? (0, i.jsx)(o.MenuGroup, {
     className: _.wrapper,

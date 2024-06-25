@@ -10,8 +10,8 @@ var l = n(735250),
   d = n(110924),
   h = n(40851),
   m = n(867176),
-  p = n(620662),
-  E = n(924557),
+  E = n(620662),
+  p = n(924557),
   g = n(435064),
   f = n(712114),
   C = n(605236),
@@ -39,8 +39,8 @@ var l = n(735250),
   H = n(81023);
 t.Z = i.memo(function(e) {
   var t, s;
-  let B, {
-      className: G,
+  let G, {
+      className: B,
       channel: V,
       draftType: F,
       editorTextContent: z,
@@ -56,7 +56,7 @@ t.Z = i.memo(function(e) {
     ee = (0, r.e7)([N.ZP], () => null == N.ZP.getCurrentSidebarChannelId(V.id)),
     {
       showClipsHeaderEntrypoint: et
-    } = E.NV.useExperiment({
+    } = p.NV.useExperiment({
       location: "ChannelAttachButton"
     }, {
       autoTrackExposure: !1
@@ -66,7 +66,7 @@ t.Z = i.memo(function(e) {
     ei = (0, r.e7)([Z.Z], () => Z.Z.hasLayers()),
     es = (0, r.e7)([g.Z], () => g.Z.hasClips()),
     [ea, er] = i.useState(null),
-    eo = (0, E.Go)() && (Q || es),
+    eo = (0, p.Go)() && (Q || es),
     ec = V.isPrivate(),
     eu = (0, r.e7)([v.Z], () => ec || v.Z.can(D.Plq.ATTACH_FILES, V) && v.Z.can(D.Plq.SEND_MESSAGES, V)),
     ed = (0, d.Z)(J);
@@ -79,7 +79,7 @@ t.Z = i.memo(function(e) {
     },
     em = (0, r.e7)([S.Z], () => S.Z.hasCurrentUserSentMessageSinceAppStart());
 
-  function ep() {
+  function eE() {
     (0, c.openModalLazy)(async () => {
       let {
         default: e
@@ -101,7 +101,7 @@ t.Z = i.memo(function(e) {
       j.S.unsubscribe(D.CkL.UPLOAD_FILE, e)
     }
   });
-  let eE = (0, x.NE)(V),
+  let ep = (0, x.NE)(V),
     eg = (0, x.Xu)(V),
     ef = !T.dN.useSetting() && !(0, L.isAndroidWeb)() && null != window.ResizeObserver,
     eC = (0, I.UI)(null != V ? V : void 0),
@@ -110,7 +110,7 @@ t.Z = i.memo(function(e) {
     ex = null !== (s = null == $ ? void 0 : $.length) && void 0 !== s ? s : 0,
     eT = (0, b.Z)({
       canAttachFiles: eu,
-      canStartThreads: eE || eg,
+      canStartThreads: ep || eg,
       useSlate: ef,
       hasClips: eo,
       canUseApplicationCommands: !Y,
@@ -122,9 +122,9 @@ t.Z = i.memo(function(e) {
       appContext: K
     });
   if (0 === eT.length) return null;
-  let eN = X.some(e => (0, p.Z)(e, D.xjy.SYNC)),
-    eZ = X.some(e => (0, p.Z)(e, D.xjy.JOIN) && !(0, p.Z)(e, D.xjy.EMBEDDED)) || eN;
-  B = e_ ? (0, l.jsx)(c.CirclePlusIcon, {
+  let eN = X.some(e => (0, E.Z)(e, D.xjy.SYNC)),
+    eZ = X.some(e => (0, E.Z)(e, D.xjy.JOIN) && !(0, E.Z)(e, D.xjy.EMBEDDED)) || eN;
+  G = e_ ? (0, l.jsx)(c.CirclePlusIcon, {
     className: H.__invalid_attachButtonIcon,
     colorClass: H.attachButtonPlus
   }) : eZ ? (0, l.jsx)(R.Z, {
@@ -166,7 +166,7 @@ t.Z = i.memo(function(e) {
         case "recentClips":
           return (0, l.jsx)(f.Z, {
             ...e,
-            onOpenClips: ep,
+            onOpenClips: eE,
             lastClipsSession: J
           });
         case "attachMenu":
@@ -182,7 +182,7 @@ t.Z = i.memo(function(e) {
             draftType: F,
             editorTextContent: z,
             setValue: W,
-            openClips: ep
+            openClips: eE
           });
         default:
           throw Error("Invalid popout type provided")
@@ -191,7 +191,7 @@ t.Z = i.memo(function(e) {
     children: e => (0, l.jsx)(c.Button, {
       look: c.Button.Looks.BLANK,
       size: c.Button.Sizes.NONE,
-      className: a()(H.attachButton, G),
+      className: a()(H.attachButton, B),
       innerClassName: H.attachButtonInner,
       "aria-label": w.Z.Messages.CHAT_ATTACH_UPLOAD_OR_INVITE,
       onDoubleClick: eu ? () => {
@@ -199,7 +199,7 @@ t.Z = i.memo(function(e) {
         return null === (e = q.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
       } : void 0,
       ...e,
-      children: B
+      children: G
     })
   });
   return (0, l.jsxs)(l.Fragment, {

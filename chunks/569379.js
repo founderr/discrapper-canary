@@ -1,9 +1,9 @@
 n.d(t, {
   EK: function() {
-    return h
+    return C
   },
   GX: function() {
-    return C
+    return h
   },
   eQ: function() {
     return m
@@ -14,8 +14,8 @@ n.d(t, {
 }), n(47120);
 var s = n(470079),
   o = n(920906),
-  a = n(442837),
-  r = n(410030),
+  r = n(442837),
+  a = n(410030),
   l = n(706454),
   i = n(930153),
   c = n(113434),
@@ -26,7 +26,7 @@ var s = n(470079),
 
 function m(e) {
   var t, n;
-  let s = (0, a.e7)([l.default], () => l.default.locale),
+  let s = (0, r.e7)([l.default], () => l.default.locale),
     {
       percentComplete: o
     } = (0, c.Rf)({
@@ -65,7 +65,7 @@ function g(e, t) {
   }) : x.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED_SUBTITLE
 }
 
-function C() {
+function h() {
   let [{
     spring: e
   }, t] = (0, o.useSpring)(() => ({
@@ -84,14 +84,14 @@ function C() {
   }
 }
 
-function h(e) {
+function C(e) {
   var t;
-  let n = null !== (t = (0, r.i6)()) && void 0 !== t ? t : 0,
+  let n = null !== (t = (0, a.i6)()) && void 0 !== t ? t : 0,
     s = "var(--green-330)",
     o = ["var(--background-tertiary)", "var(--interactive-normal)"],
-    a = e ? o[n] : ["#828288", "#CBCDD4"][n];
+    r = e ? o[n] : ["#828288", "#CBCDD4"][n];
   return {
-    backgroundTop: a,
+    backgroundTop: r,
     backgroundBottom: e ? o[n] : ["#535356", "#8B8C95"][n],
     foreground: s,
     glow: e ? s : "#C4C1D66E"

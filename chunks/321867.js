@@ -1,41 +1,41 @@
 n.d(t, {
   Z: function() {
-    return N
+    return m
   }
 });
-var r = n(735250),
+var o = n(735250),
   i = n(470079),
   s = n(442837),
   a = n(481060),
   l = n(100527),
-  o = n(906732),
+  r = n(906732),
   c = n(411477),
   u = n(197115),
   d = n(594174),
-  h = n(154921),
-  A = n(626135),
-  E = n(74538),
-  g = n(981631),
-  m = n(486324),
+  E = n(154921),
+  _ = n(626135),
+  N = n(74538),
+  I = n(981631),
+  g = n(486324),
   R = n(474936),
   f = n(689938),
-  _ = n(5018);
+  p = n(5018);
 
-function N(e) {
+function m(e) {
   let {
     analyticsSection: t,
     type: n
-  } = e, N = (0, s.e7)([d.default], () => d.default.getCurrentUser()), I = E.ZP.canUseAnimatedAvatar(N), M = E.ZP.canUsePremiumProfileCustomization(N), x = n === m.pC.BANNER && M || n === m.pC.AVATAR && I, {
-    sourceAnalyticsLocations: L
-  } = (0, o.ZP)(l.Z.PREMIUM_PREVIEW_UPSELL_HEADER);
+  } = e, m = (0, s.e7)([d.default], () => d.default.getCurrentUser()), T = N.ZP.canUseAnimatedAvatar(m), h = N.ZP.canUsePremiumProfileCustomization(m), A = n === g.pC.BANNER && h || n === g.pC.AVATAR && T, {
+    sourceAnalyticsLocations: x
+  } = (0, r.ZP)(l.Z.PREMIUM_PREVIEW_UPSELL_HEADER);
   if (i.useEffect(() => {
-      !x && A.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, {
+      !A && _.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
         type: t,
-        location_stack: L
+        location_stack: x
       })
-    }, [x, t, L]), x) return null;
-  let C = (0, r.jsx)(u.Z, {
-    className: _.__invalid_getNitroLink,
+    }, [A, t, x]), A) return null;
+  let M = (0, o.jsx)(u.Z, {
+    className: p.__invalid_getNitroLink,
     size: a.Button.Sizes.SMALL,
     look: a.Button.Looks.LINK,
     color: a.Button.Colors.LINK,
@@ -44,16 +44,16 @@ function N(e) {
     showIcon: !1,
     premiumModalAnalyticsLocation: {
       section: t,
-      object: g.qAy.BUTTON_CTA
+      object: I.qAy.BUTTON_CTA
     },
     disableShine: !0
   });
-  return (0, r.jsx)(c.Z, {
+  return (0, o.jsx)(c.Z, {
     reducedRightPadding: !0,
-    className: _.nitroPreviewUpsell,
+    className: p.nitroPreviewUpsell,
     text: f.Z.Messages.PREMIUM_PREVIEW.format(),
-    textSize: h.Z.Sizes.SIZE_14,
-    textColor: h.Z.Colors.HEADER_PRIMARY,
-    button: C
+    textSize: E.Z.Sizes.SIZE_14,
+    textColor: E.Z.Colors.HEADER_PRIMARY,
+    button: M
   })
 }

@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(2052),
   h = n(40851),
   m = n(607070),
-  p = n(100527),
-  E = n(906732),
+  E = n(100527),
+  p = n(906732),
   g = n(703656),
   f = n(210887),
   C = n(390322),
@@ -54,7 +54,7 @@ let y = "vc-activities-".concat((0, o.Z)()),
       location: "ActivitiesMiniShelf"
     }, {
       autoTrackExposure: !0
-    }), B = (0, c.e7)([f.Z], () => f.Z.getState().theme), G = (0, c.e7)([m.Z], () => m.Z.useReducedMotion), {
+    }), G = (0, c.e7)([f.Z], () => f.Z.getState().theme), B = (0, c.e7)([m.Z], () => m.Z.useReducedMotion), {
       id: V,
       guild_id: F
     } = n;
@@ -69,10 +69,10 @@ let y = "vc-activities-".concat((0, o.Z)()),
     let z = (0, h.bp)(),
       {
         analyticsLocations: W
-      } = (0, E.ZP)(p.Z.ACTIVITIES_MINI_SHELF),
+      } = (0, p.ZP)(E.Z.ACTIVITIES_MINI_SHELF),
       {
         analyticsLocations: Y
-      } = (0, E.ZP)([...W, p.Z.ACTIVITIES_MINI_SHELF_BANNER]),
+      } = (0, p.ZP)([...W, E.Z.ACTIVITIES_MINI_SHELF_BANNER]),
       K = z === M.IlC.POPOUT,
       q = (0, d.O)(),
       X = function(e, t) {
@@ -106,7 +106,7 @@ let y = "vc-activities-".concat((0, o.Z)()),
         to: M.Z5c.ACTIVITIES,
         children: [(0, l.jsx)("img", {
           alt: R.Z.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT,
-          src: "light" === B ? L : O,
+          src: "light" === G ? L : O,
           className: j.poster
         }), (0, l.jsx)("div", {
           className: j.posterDivider
@@ -124,7 +124,7 @@ let y = "vc-activities-".concat((0, o.Z)()),
           className: j.posterDivider
         })]
       }) : null;
-    return (0, l.jsx)(E.Gt, {
+    return (0, l.jsx)(p.Gt, {
       value: W,
       children: (0, l.jsx)(C.Z, {
         children: (0, l.jsxs)(u.Dialog, {
@@ -169,7 +169,7 @@ let y = "vc-activities-".concat((0, o.Z)()),
                   className: j.titleRightIcon
                 })]
               })]
-            }), (0, l.jsx)(E.Gt, {
+            }), (0, l.jsx)(p.Gt, {
               value: Y,
               children: $
             }), (0, l.jsxs)("div", {
@@ -184,7 +184,7 @@ let y = "vc-activities-".concat((0, o.Z)()),
                 animatedDivClass: j.activitySuggestion
               }, e.application.id)), (0, l.jsx)("div", {
                 className: a()(j.wumpusRocketOuterContainer, {
-                  [j.wumpusReducedMotion]: G
+                  [j.wumpusReducedMotion]: B
                 }),
                 children: (0, l.jsx)("div", {
                   className: j.wumpusRocketInnerContainer,

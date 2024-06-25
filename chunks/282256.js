@@ -14,12 +14,12 @@ t.Z = i.memo(function(e) {
     isOverlay: n,
     contextGuildId: s,
     ...h
-  } = e, m = i.useRef(null), [p, E] = i.useState({
+  } = e, m = i.useRef(null), [E, p] = i.useState({
     maskImage: "none"
   }), g = i.useCallback(() => {
     var e, t;
     if (n) {
-      E({
+      p({
         maskImage: "none"
       });
       return
@@ -27,7 +27,7 @@ t.Z = i.memo(function(e) {
     let l = null === (e = f.current) || void 0 === e ? void 0 : e.getBoundingClientRect(),
       i = null === (t = m.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
     if (null == l || null == i) {
-      E({
+      p({
         maskImage: "none"
       });
       return
@@ -35,12 +35,12 @@ t.Z = i.memo(function(e) {
     let s = i.right - l.right,
       a = i.width - s;
     if (a > i.width) {
-      E({
+      p({
         maskImage: "none"
       });
       return
     }
-    E({
+    p({
       maskImage: "linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) ".concat(a, "px)")
     })
   }, []), f = (0, o.y)(g), C = (0, c.p0)(h.userId, s);
@@ -60,7 +60,7 @@ t.Z = i.memo(function(e) {
       children: (0, l.jsx)("span", {
         className: a()(d.chipletContainer, !C && n && d.noPadding),
         ref: m,
-        style: p,
+        style: E,
         children: (0, l.jsx)(u.ZP, {
           ...h,
           contextGuildId: s,

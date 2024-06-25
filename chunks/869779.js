@@ -16,22 +16,22 @@ var l = t(735250),
   m = t(933557),
   g = t(471445),
   E = t(351123),
-  N = t(665906),
-  T = t(210887),
-  p = t(131704),
-  S = t(533947),
+  T = t(665906),
+  N = t(210887),
+  S = t(131704),
+  p = t(533947),
   x = t(277053),
   M = t(388610),
   C = t(592125),
-  I = t(496675),
+  _ = t(496675),
   R = t(699516),
-  _ = t(594174),
+  I = t(594174),
   Z = t(585483),
   f = t(787263),
-  v = t(975316),
-  j = t(428813),
-  O = t(2147),
-  A = t(856606),
+  O = t(975316),
+  v = t(428813),
+  A = t(2147),
+  j = t(856606),
   L = t(981631),
   b = t(689938),
   D = t(242841);
@@ -75,8 +75,8 @@ class P extends n.PureComponent {
       category: i,
       canManageRoles: r,
       canManageChannels: h,
-      canDeleteChannels: N,
-      canManageWebhooks: T
+      canDeleteChannels: T,
+      canManageWebhooks: N
     } = this.props;
     return null == n ? null : (0, l.jsx)(c.ZP, {
       theme: e,
@@ -93,8 +93,8 @@ class P extends n.PureComponent {
           canDeleteChannels: r,
           canManageWebhooks: c
         } = e, h = (0, g.KS)(s), {
-          GUILD_CATEGORY: N
-        } = L.d4z, T = p.Ec.has(s.type), C = s.type === N ? b.Z.Messages.DELETE_CATEGORY : T ? s.isForumPost() ? b.Z.Messages.DELETE_FORUM_POST : b.Z.Messages.DELETE_THREAD : b.Z.Messages.DELETE_CHANNEL;
+          GUILD_CATEGORY: T
+        } = L.d4z, N = S.Ec.has(s.type), C = s.type === T ? b.Z.Messages.DELETE_CATEGORY : N ? s.isForumPost() ? b.Z.Messages.DELETE_FORUM_POST : b.Z.Messages.DELETE_THREAD : b.Z.Messages.DELETE_CHANNEL;
         return [{
           section: u.ID.HEADER,
           label: null != s ? (0, l.jsxs)(l.Fragment, {
@@ -102,22 +102,22 @@ class P extends n.PureComponent {
               size: "xxs",
               color: "currentColor",
               className: D.channelIcon
-            }) : null, (0, m.F6)(s, _.default, R.Z), null != t ? (0, l.jsx)(a.Text, {
+            }) : null, (0, m.F6)(s, I.default, R.Z), null != t ? (0, l.jsx)(a.Text, {
               tag: "span",
               variant: "text-xs/semibold",
               color: "header-secondary",
               lineClamp: 1,
               className: D.category,
-              children: (0, m.F6)(t, _.default, R.Z)
+              children: (0, m.F6)(t, I.default, R.Z)
             }) : null]
           }) : b.Z.Messages.CHANNEL_SETTINGS
         }, {
           section: L.CoT.OVERVIEW,
           label: b.Z.Messages.OVERVIEW,
           ariaLabel: b.Z.Messages.OVERVIEW,
-          element: O.Z,
+          element: A.Z,
           notice: {
-            element: O.G,
+            element: A.G,
             stores: [M.Z]
           }
         }, {
@@ -125,26 +125,26 @@ class P extends n.PureComponent {
           label: b.Z.Messages.PERMISSIONS,
           element: E.Z,
           notice: {
-            element: A.n,
+            element: j.n,
             stores: [x.Z]
           },
-          predicate: () => n && !T
+          predicate: () => n && !N
         }, {
           section: L.CoT.INSTANT_INVITES,
           label: b.Z.Messages.INVITES,
-          element: j.Z,
+          element: v.Z,
           type: u.bT.CUSTOM,
-          predicate: () => s.type !== N && i && !T
+          predicate: () => s.type !== T && i && !N
         }, {
           section: L.CoT.INTEGRATIONS,
           label: b.Z.Messages.INTEGRATIONS_OVERVIEW,
           ariaLabel: b.Z.Messages.INTEGRATIONS_OVERVIEW,
-          element: v.Z,
+          element: O.Z,
           notice: {
-            stores: [S.Z],
-            element: v.B
+            stores: [p.Z],
+            element: O.B
           },
-          predicate: () => !!c && p.Ti.has(s.type)
+          predicate: () => !!c && S.Ti.has(s.type)
         }, {
           section: u.ID.DIVIDER
         }, {
@@ -169,8 +169,8 @@ class P extends n.PureComponent {
         category: i,
         canManageRoles: r,
         canManageChannels: h,
-        canDeleteChannels: N,
-        canManageWebhooks: T
+        canDeleteChannels: T,
+        canManageWebhooks: N
       })
     })
   }
@@ -180,14 +180,14 @@ function F() {
   let {
     channel: e,
     analyticsLocation: s
-  } = (0, i.cj)([M.Z], () => M.Z.getProps()), t = (0, i.e7)([M.Z], () => M.Z.getFormState()), n = (0, i.e7)([M.Z], () => M.Z.getSection()), a = (0, i.e7)([T.Z], () => T.Z.theme), r = (0, i.e7)([T.Z], () => T.Z.darkSidebar ? L.BRd.DARK : void 0), o = (0, N.C7)(e), d = (0, N.Xb)(e), {
+  } = (0, i.cj)([M.Z], () => M.Z.getProps()), t = (0, i.e7)([M.Z], () => M.Z.getFormState()), n = (0, i.e7)([M.Z], () => M.Z.getSection()), a = (0, i.e7)([N.Z], () => N.Z.theme), r = (0, i.e7)([N.Z], () => N.Z.darkSidebar ? L.BRd.DARK : void 0), o = (0, T.C7)(e), d = (0, T.Xb)(e), {
     canManageChannels: c,
     canManageRoles: u,
     canManageWebhooks: h
-  } = (0, i.cj)([I.Z], () => ({
-    canManageChannels: I.Z.can(L.Plq.MANAGE_CHANNELS, e),
-    canManageRoles: null != e && I.Z.can(L.Plq.MANAGE_ROLES, e),
-    canManageWebhooks: null != e && I.Z.can(L.Plq.MANAGE_WEBHOOKS, e)
+  } = (0, i.cj)([_.Z], () => ({
+    canManageChannels: _.Z.can(L.Plq.MANAGE_CHANNELS, e),
+    canManageRoles: null != e && _.Z.can(L.Plq.MANAGE_ROLES, e),
+    canManageWebhooks: null != e && _.Z.can(L.Plq.MANAGE_WEBHOOKS, e)
   })), m = (0, i.e7)([C.Z], () => C.Z.getChannel(null == e ? void 0 : e.parent_id));
   return (0, l.jsx)(P, {
     channel: e,

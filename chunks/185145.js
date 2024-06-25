@@ -15,8 +15,8 @@ var i = n(442837),
   d = n(134049),
   h = n(893732),
   m = n(590433),
-  p = n(689938),
-  E = n(327820);
+  E = n(689938),
+  p = n(327820);
 
 function g(e) {
   let {
@@ -31,14 +31,14 @@ function g(e) {
       bannerIcon: (0, l.jsx)(s.ClockWarningIcon, {
         size: "md",
         color: "currentColor",
-        className: E.bannerIcon
+        className: p.bannerIcon
       }),
-      bannerHeader: p.Z.Messages.GUILD_COMMUNICATION_DISABLED_NOTICE_HEADER,
-      bannerSubtext: p.Z.Messages.GUILD_COMMUNICATION_DISABLED_CHAT_NOTICE_DESCRIPTION.format({
+      bannerHeader: E.Z.Messages.GUILD_COMMUNICATION_DISABLED_NOTICE_HEADER,
+      bannerSubtext: E.Z.Messages.GUILD_COMMUNICATION_DISABLED_CHAT_NOTICE_DESCRIPTION.format({
         link: m.cu
       }),
-      containerStyles: E.bannerContainer,
-      headerStyles: E.bannerHeader,
+      containerStyles: p.bannerContainer,
+      headerStyles: p.bannerHeader,
       children: (0, l.jsx)(s.Text, {
         variant: "text-sm/semibold",
         children: (0, l.jsx)(c.Z, {

@@ -6,8 +6,8 @@ var l, i, s, a, r = n(442837),
   d = n(176354),
   h = n(292793),
   m = n(88315),
-  p = n(813900);
-let E = {},
+  E = n(813900);
+let p = {},
   g = {},
   f = {},
   C = !0,
@@ -17,7 +17,7 @@ function I(e) {
   if (null == g[e]) {
     let t = u.default.getUser(e);
     if (null == t) return;
-    let n = t.getAvatarURL(null, p.Ks),
+    let n = t.getAvatarURL(null, E.Ks),
       l = new Image;
     l.src = n, g[e] = l
   }
@@ -27,7 +27,7 @@ class x extends(l = r.ZP.Store) {
     return C
   }
   getDrawables(e) {
-    return null != E[e] ? E[e] : []
+    return null != p[e] ? p[e] : []
   }
   getAvatarImage(e) {
     return g[e]
@@ -52,8 +52,8 @@ let T = new x(o.Z, {
       newPoints: n,
       userId: l,
       streamerId: i
-    } = e, s = E[i];
-    if (null == s) E[i] = [{
+    } = e, s = p[i];
+    if (null == s) p[i] = [{
       type: h.W.LINE,
       id: t,
       userId: l,
@@ -80,13 +80,13 @@ let T = new x(o.Z, {
       ...i,
       type: h.W.EMOJI_HOSE
     };
-    if (null == E[s]) E[s] = [r];
+    if (null == p[s]) p[s] = [r];
     else {
-      let e = E[s].findIndex(e => e.id === i.id);
-      e >= 0 ? E[s][e] = {
-        ...E[s][e],
+      let e = p[s].findIndex(e => e.id === i.id);
+      e >= 0 ? p[s][e] = {
+        ...p[s][e],
         ...r
-      } : E[s].push(r)
+      } : p[s].push(r)
     }
     let o = null !== (n = null !== (t = i.emojiId) && void 0 !== t ? t : i.emojiName) && void 0 !== n ? n : "";
     if (null == f[o]) {
@@ -95,7 +95,7 @@ let T = new x(o.Z, {
         id: i.emojiId,
         name: null !== (l = null != e ? e : i.emojiName) && void 0 !== l ? l : "",
         animated: !1
-      }, p.qh)
+      }, E.qh)
     }
     I(a)
   },
@@ -104,9 +104,9 @@ let T = new x(o.Z, {
       drawables: t,
       streamerId: n
     } = e;
-    if (null != E[n]) {
+    if (null != p[n]) {
       let e = new Set;
-      t.forEach(t => e.add(t.id)), E[n] = E[n].filter(t => !e.has(t.id))
+      t.forEach(t => e.add(t.id)), p[n] = p[n].filter(t => !e.has(t.id))
     }
   },
   SHARED_CANVAS_SET_DRAW_MODE: function(e) {

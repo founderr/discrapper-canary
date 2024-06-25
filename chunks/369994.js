@@ -16,8 +16,8 @@ t.d(n, {
   }
 }), t(47120);
 var i = t(913527),
-  s = t.n(i),
-  l = t(544891),
+  l = t.n(i),
+  s = t(544891),
   a = t(367907),
   r = t(434404),
   o = t(430824),
@@ -42,8 +42,8 @@ async function N(e, n) {
   })
 }
 async function E(e, n, t, i) {
-  let a = s()().add(i, "hours").toISOString();
-  return await l.tn.put({
+  let a = l()().add(i, "hours").toISOString();
+  return await s.tn.put({
     url: u.ANM.GUILD_INCIDENT_ACTIONS(e),
     body: {
       invites_disabled_until: n ? a : null,
@@ -54,8 +54,8 @@ async function E(e, n, t, i) {
 async function T(e, n, t) {
   let {
     showAlertMode: i
-  } = (0, d.jy)(e), s = o.Z.getGuild(e), a = null == s ? void 0 : s.getSafetyAlertsChannelId();
-  return i && null != a ? await l.tn.post({
+  } = (0, d.jy)(e), l = o.Z.getGuild(e), a = null == l ? void 0 : l.getSafetyAlertsChannelId();
+  return i && null != a ? await s.tn.post({
     url: u.ANM.GUILD_INCIDENT_REPORT_FALSE_ALARM(e),
     body: {
       alert_message_id: n,
@@ -67,7 +67,7 @@ async function m(e) {
   let {
     showAlertMode: n
   } = (0, d.jy)(e), t = o.Z.getGuild(e), i = null == t ? void 0 : t.getSafetyAlertsChannelId();
-  return n && null != i ? await l.tn.post({
+  return n && null != i ? await s.tn.post({
     url: u.ANM.GUILD_INCIDENT_REPORT_RAID(e)
   }) : null
 }

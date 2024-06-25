@@ -4,8 +4,8 @@ t.d(n, {
   }
 });
 var i = t(735250),
-  s = t(470079),
-  l = t(442837),
+  l = t(470079),
+  s = t(442837),
   a = t(481060),
   r = t(366598),
   o = t(821864),
@@ -21,10 +21,10 @@ function T(e) {
     application: n,
     canNavigate: t,
     guildId: d
-  } = e, I = (0, l.e7)([c.Z], () => c.Z.isUnavailable());
-  return (s.useEffect(() => (o.I4(n.id), o.kZ), [n.id]), s.useEffect(() => {
+  } = e, I = (0, s.e7)([c.Z], () => c.Z.isUnavailable());
+  return (l.useEffect(() => (o.I4(n.id), o.kZ), [n.id]), l.useEffect(() => {
     o.gq(n.id, d, n.id), o.Sn(d, n.id)
-  }, [n.id, d]), I) ? null : (0, i.jsxs)(s.Fragment, {
+  }, [n.id, d]), I) ? null : (0, i.jsxs)(l.Fragment, {
     children: [(0, i.jsx)(r.Z, {
       icon: (0, i.jsx)(a.SlashBoxIcon, {
         size: "md",
@@ -52,8 +52,8 @@ function m(e) {
     applicationId: n,
     guildId: t
   } = e, {
-    originalApplicationPermissions: s,
-    editedTargetPermissions: l,
+    originalApplicationPermissions: l,
+    editedTargetPermissions: s,
     selectedPermissionCount: a
   } = (0, d.Z)(t, n);
   return (0, i.jsx)("div", {
@@ -62,8 +62,8 @@ function m(e) {
       applicationId: n,
       guildId: t,
       inModal: !1,
-      editedTargetPermissions: l,
-      originalApplicationPermissions: s,
+      editedTargetPermissions: s,
+      originalApplicationPermissions: l,
       selectedPermissionCount: a
     })
   })

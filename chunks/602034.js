@@ -17,8 +17,8 @@ var l = n(735250),
   d = n(470623),
   h = n(957730),
   m = n(48854),
-  p = n(703558),
-  E = n(403182),
+  E = n(703558),
+  p = n(403182),
   g = n(928477),
   f = n(981631),
   C = n(689938);
@@ -36,7 +36,7 @@ function _(e) {
     c.Z.uploadFiles({
       channelId: e.id,
       uploads: t,
-      draftType: p.d.FirstThreadMessage,
+      draftType: E.d.FirstThreadMessage,
       options: {
         stickerIds: l
       },
@@ -97,11 +97,11 @@ function I(e) {
               })
             }))
           } else if (i === f.evJ.ENTITY_TOO_LARGE) {
-            let e = (0, E.dg)(t.getGuildId());
+            let e = (0, p.dg)(t.getGuildId());
             o.Z.show({
               title: C.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
               body: C.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
-                maxSize: (0, E.Ng)(e)
+                maxSize: (0, p.Ng)(e)
               })
             })
           } else i === f.evJ.TOO_MANY_ATTACHMENTS && o.Z.show({

@@ -15,7 +15,7 @@ t.Z = i.memo(function(e) {
     collapsed: d,
     speakers: h,
     channel: m,
-    isStreamLive: p
+    isStreamLive: E
   } = e;
   return (0, l.jsxs)(r.Clickable, {
     onClick: i,
@@ -41,7 +41,7 @@ t.Z = i.memo(function(e) {
       children: [(0, l.jsx)(c.Z, {
         channel: m,
         speakers: h
-      }), p && (0, l.jsx)(o.ZP, {})]
+      }), E && (0, l.jsx)(o.ZP, {})]
     }), (0, l.jsx)(r.ChevronSmallDownIcon, {
       size: "custom",
       color: "currentColor",

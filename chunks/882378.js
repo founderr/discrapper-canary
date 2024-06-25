@@ -10,8 +10,8 @@ var l = n(735250),
   d = n(367408),
   h = n(473092),
   m = n(819640),
-  p = n(502568),
-  E = n(134612),
+  E = n(502568),
+  p = n(134612),
   g = n(689938),
   f = n(286489);
 t.Z = i.memo(function(e) {
@@ -64,7 +64,7 @@ t.Z = i.memo(function(e) {
         })
       }
     }, {
-      modalKey: E.X_
+      modalKey: p.X_
     }), (0, h.qc)({
       channelId: t.id,
       senderId: t.getRecipientId(),
@@ -81,7 +81,7 @@ t.Z = i.memo(function(e) {
     position: "bottom",
     tooltipClassName: f.tooltip,
     tooltipContentClassName: f.tooltipContent,
-    children: () => (0, l.jsx)(p.ZP.Icon, {
+    children: () => (0, l.jsx)(E.ZP.Icon, {
       icon: r.ShieldIcon,
       onClick: A,
       tooltip: g.Z.Messages.SAFETY_TOOLS_BUTTON_LABEL,

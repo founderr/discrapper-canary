@@ -166,9 +166,9 @@ function L(e, t) {
     selectedAnswerIds: H,
     submitting: Y,
     tapShouldOpenVotersModal: W,
-    showResults: z
-  } = P, K = (0, h.cZ)(w), Q = f.Z.Messages.POLL_VOTES_COUNT.format({
-    count: K.toLocaleString()
+    showResults: K
+  } = P, z = (0, h.cZ)(w), Q = f.Z.Messages.POLL_VOTES_COUNT.format({
+    count: z.toLocaleString()
   }), X = Math.max(...L.map(e => {
     var t, n;
     let s = O(w, "".concat(e.answer_id));
@@ -178,7 +178,7 @@ function L(e, t) {
     let o = "".concat(e.answer_id),
       u = O(w, o),
       d = null !== (n = null == u ? void 0 : null === (t = u.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
-      E = 0 === K ? 0 : d / K,
+      E = 0 === z ? 0 : d / z,
       _ = H.has(o),
       m = d >= X && 0 !== d,
       N = k && null !== (l = null == u ? void 0 : u.me_vote) && void 0 !== l && l,
@@ -188,7 +188,7 @@ function L(e, t) {
         isExpired: F,
         isSelected: _,
         isLeader: m,
-        showResults: z
+        showResults: K
       });
     return {
       answerId: o,
@@ -240,7 +240,7 @@ function L(e, t) {
     isEditingVote: G,
     canRemoveVote: j,
     isInteractive: V,
-    showResults: z
+    showResults: K
   }).with({
     isInteractive: !1
   }, () => void 0).with({
@@ -297,7 +297,7 @@ function L(e, t) {
     presentation: "text",
     enabled: !0,
     type: "showVoterDetails"
-  })), et = !V || F || k || z ? void 0 : {
+  })), et = !V || F || k || K ? void 0 : {
     label: f.Z.Messages.POLL_SHOW_VOTES,
     presentation: "textButton",
     enabled: !0,

@@ -17,8 +17,8 @@ var l = n(475179),
   d = n(594174),
   h = n(626135),
   m = n(403182),
-  p = n(74538),
-  E = n(979956),
+  E = n(74538),
+  p = n(979956),
   g = n(981631),
   f = n(959517),
   C = n(474936),
@@ -46,8 +46,8 @@ function I(e, t) {
       attachment_mimetypes: h
     }), (0, a.openUploadError)({
       title: _.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-      help: (0, E.BK)(n, l),
-      showPremiumUpsell: !(0, p.M5)(n, C.p9.TIER_2),
+      help: (0, p.BK)(n, l),
+      showPremiumUpsell: !(0, E.M5)(n, C.p9.TIER_2),
       fileSize: c
     });
     return
@@ -64,12 +64,12 @@ function x(e, t, n) {
     filesMetadata: o,
     requireConfirm: d = !0,
     showLargeMessageDialog: m = !1,
-    isThumbnail: p = !1
+    isThumbnail: E = !1
   } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
   if (e.length < 1) return;
   if (null != o && o.length !== e.length) throw Error("Unexpected mismatch between files and file metadata");
   let f = t.getGuildId();
-  if ((0, E.Bf)(e, f)) {
+  if ((0, p.Bf)(e, f)) {
     I(t, e);
     return
   }
@@ -89,7 +89,7 @@ function x(e, t, n) {
     let l = Array.from(e).map((e, t) => ({
       file: e,
       platform: r.ow.WEB,
-      isThumbnail: p,
+      isThumbnail: E,
       ...null == o ? void 0 : o[t]
     }));
     i.Z.addFiles({
@@ -102,7 +102,7 @@ function x(e, t, n) {
     channelId: t.id,
     files: e,
     draftType: n,
-    isThumbnail: p,
+    isThumbnail: E,
     filesMetadata: o
   })
 }

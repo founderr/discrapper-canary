@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return E
+    return p
   }
 }), n(47120);
 var l = n(735250),
@@ -14,12 +14,12 @@ var l = n(735250),
   d = n(981631),
   h = n(689938),
   m = n(683993),
-  p = n(622322);
+  E = n(622322);
 
-function E(e) {
+function p(e) {
   let {
     onClose: t,
-    onConfirm: E,
+    onConfirm: p,
     onCancel: g,
     channel: f,
     analyticsType: C,
@@ -33,8 +33,8 @@ function E(e) {
     })
   }, [C, f]);
   let x = i.useCallback(() => {
-      null == E || E(), t()
-    }, [E, t]),
+      null == p || p(), t()
+    }, [p, t]),
     T = i.useCallback(() => {
       null == g || g(), t()
     }, [g, t]),
@@ -74,7 +74,7 @@ function E(e) {
             children: h.Z.Messages.SELF_XSS_HEADER
           }), (0, l.jsx)(r.Text, {
             id: "content-warning-popout-label",
-            className: p.markup,
+            className: E.markup,
             variant: "text-sm/normal",
             children: _.body
           }), (0, l.jsxs)("div", {

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return E
+    return p
   }
 });
 var l = n(735250);
@@ -16,7 +16,7 @@ var i = n(442837),
   h = n(689938),
   m = n(573475);
 
-function p(e) {
+function E(e) {
   var t;
   let {
     joinRequest: n,
@@ -67,7 +67,7 @@ function p(e) {
   })
 }
 
-function E(e) {
+function p(e) {
   let {
     channel: t
   } = e, {
@@ -82,7 +82,7 @@ function E(e) {
       children: null != i && null != i.formResponses ? (0, l.jsxs)("div", {
         className: m.formContainer,
         children: [(0, l.jsx)("div", {
-          children: (0, l.jsx)(p, {
+          children: (0, l.jsx)(E, {
             guild: r,
             joinRequest: i
           })

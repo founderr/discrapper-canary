@@ -1,9 +1,9 @@
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return E
   },
   openEffectsUpsellModal: function() {
-    return E
+    return p
   }
 });
 var l = n(735250);
@@ -19,12 +19,12 @@ var i = n(481060),
   h = n(603374),
   m = n(626065);
 
-function p(e) {
+function E(e) {
   let {
     onClose: t,
     analytics: n,
     ...i
-  } = e, p = d.Z.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_BODY_2.format({
+  } = e, E = d.Z.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_BODY_2.format({
     onPressMore: function() {
       (0, s.Z)(), t(), c.default.track(u.rMx.PREMIUM_PROMOTION_OPENED, {
         location_section: u.jXE.VOICE_CHANNEL_EFFECTS_UPSELL_MODAL,
@@ -34,8 +34,8 @@ function p(e) {
   });
   return (0, l.jsx)(r.Z, {
     title: d.Z.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_HEADER_2,
-    glowUp: p,
-    body: p,
+    glowUp: E,
+    body: E,
     artContainerClassName: h.artContainer,
     enableArtBoxShadow: !1,
     type: n.type,
@@ -59,7 +59,7 @@ function p(e) {
   })
 }
 
-function E(e) {
+function p(e) {
   let {
     analytics: t
   } = e;

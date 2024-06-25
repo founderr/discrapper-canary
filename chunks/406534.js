@@ -14,8 +14,8 @@ var l = n(735250),
   d = n(600084),
   h = n(62764),
   m = n(79712),
-  p = n(736052),
-  E = n(359110),
+  E = n(736052),
+  p = n(359110),
   g = n(359119),
   f = n(13279),
   C = n(248789),
@@ -41,8 +41,8 @@ var l = n(735250),
   k = n(294218),
   w = n(534469),
   H = n(993397),
-  B = n(511010),
-  G = n(524444),
+  G = n(511010),
+  B = n(524444),
   V = n(977391),
   F = n(921235),
   z = n(97352),
@@ -107,11 +107,11 @@ function $(e) {
     ed = (0, U.$)(R),
     eh = k.length > 0 && (null === (t = k.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(R)),
     em = (0, o.ts)(R),
-    ep = (0, s.e7)([x.Z], () => x.Z.shouldShowTopicsBar() && !eo),
-    eE = (0, _.P)(R.id, q.zr),
+    eE = (0, s.e7)([x.Z], () => x.Z.shouldShowTopicsBar() && !eo),
+    ep = (0, _.P)(R.id, q.zr),
     eg = (0, f.z)(R.id, q.zr),
     ef = (0, D.Z)(),
-    eC = null != eE ? eE : eg;
+    eC = null != ep ? ep : eg;
   R.isDM() && null != eC && (n = eC.type === g.pj.STRANGER_DANGER ? (0, l.jsx)(I.M, {
     channelId: R.id,
     warningId: eC.id,
@@ -124,7 +124,7 @@ function $(e) {
   let e_ = R.isForumPost() && !eh ? (0, l.jsx)(h.Z, {
       postId: R.id
     }) : null,
-    eI = (0, p.Z)(R.id);
+    eI = (0, E.Z)(R.id);
   (0, z.Z)();
   let ex = null,
     eT = [],
@@ -137,7 +137,7 @@ function $(e) {
           item: e,
           channel: R,
           isBeforeGroup: null == e.content && Q(en[t + 1])
-        }) : (0, l.jsx)(B.Z, {
+        }) : (0, l.jsx)(G.Z, {
           isUnread: s,
           isBeforeGroup: null == e.content && Q(en[t + 1]),
           id: s ? Y.j1 : void 0,
@@ -225,16 +225,16 @@ function $(e) {
           num_unread_summaries: a,
           num_unread_messages: $,
           last_ack_message_id: n,
-          summaries_enabled_by_user: ep,
+          summaries_enabled_by_user: eE,
           summaries_enabled_for_channel: (0, o.Lp)(R)
         }), (0, o.Lp)(R)) {
-        let n = ep ? t.format({
+        let n = eE ? t.format({
           count: $
         }) : e.format({
           count: $,
           timestamp: s
         });
-        if (ep) {
+        if (eE) {
           let e = a > 0 ? (0, l.jsxs)("div", {
             style: {
               display: "flex",
@@ -265,7 +265,7 @@ function $(e) {
             },
             children: n
           });
-          i = (0, l.jsx)(G.G5, {
+          i = (0, l.jsx)(B.G5, {
             scrollManager: ei,
             content: e,
             channel: R
@@ -294,13 +294,13 @@ function $(e) {
               children: n
             })
           });
-          i = (0, l.jsx)(G.LE, {
+          i = (0, l.jsx)(B.LE, {
             content: e,
             channelId: R.id
           })
         }
       }
-    } else ef.includes(W.E.NEW_MESSAGES) && (i = (0, l.jsx)(G.LE, {
+    } else ef.includes(W.E.NEW_MESSAGES) && (i = (0, l.jsx)(B.LE, {
       content: e.format({
         count: $,
         timestamp: s
@@ -308,10 +308,10 @@ function $(e) {
       channelId: R.id
     }))
   }
-  if (null == i && (0, o.Lp)(R) && ep && ef.includes(W.E.SUMMARIES) && (i = (0, l.jsx)(G.BO, {
+  if (null == i && (0, o.Lp)(R) && eE && ef.includes(W.E.SUMMARIES) && (i = (0, l.jsx)(B.BO, {
       channel: R,
       scrollManager: ei
-    })), k.error) r = (0, l.jsx)(G.Rp, {
+    })), k.error) r = (0, l.jsx)(B.Rp, {
     loading: k.loadingMore,
     onClick: () => {
       var e;
@@ -326,8 +326,8 @@ function $(e) {
     let {
       jumpReturnTargetId: e
     } = k;
-    r = k.loadingMore && k.jumpedToPresent ? (0, l.jsx)(G.DR, {}) : null != e ? (0, l.jsx)(G.DR, {
-      type: G.A7.REPLY,
+    r = k.loadingMore && k.jumpedToPresent ? (0, l.jsx)(B.DR, {}) : null != e ? (0, l.jsx)(B.DR, {
+      type: B.A7.REPLY,
       onClick: () => {
         var t, n;
         return t = R, n = e, void a.Z.jumpToMessage({
@@ -336,11 +336,11 @@ function $(e) {
           flash: !0
         })
       }
-    }) : (0, l.jsx)(G.DR, {
+    }) : (0, l.jsx)(B.DR, {
       onClick: () => (function(e) {
         a.Z.jumpToPresent(e.id, K.AQB);
         let t = A.Z.getChannelId();
-        e.id === t && (0, E.Kh)(e.id)
+        e.id === t && (0, p.Kh)(e.id)
       })(R)
     })
   }

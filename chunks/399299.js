@@ -29,8 +29,8 @@ var l = t(735250),
   R = t(366695),
   v = t(346656),
   L = t(626135),
-  p = t(823379),
-  M = t(63063),
+  M = t(823379),
+  p = t(63063),
   O = t(358085),
   j = t(653255),
   P = t(989941),
@@ -54,7 +54,7 @@ function K(e) {
     selectSource: t,
     sourceChanged: s,
     onChangeSource: a
-  } = e, i = (0, r.e7)([S.ZP, A.Z], () => (0, O.isWindows)() ? (0, P.Z)(S.ZP, A.Z) : null), u = (0, r.e7)([c.Z], () => (null == i ? void 0 : i.id) != null ? c.Z.getApplication(i.id) : null), d = (0, r.e7)([S.ZP], () => S.ZP.getRunningGames()), m = (0, r.Wu)([c.Z], () => d.map(e => null != e.id ? c.Z.getApplication(e.id) : null).filter(p.lm), [d]), E = null;
+  } = e, i = (0, r.e7)([S.ZP, A.Z], () => (0, O.isWindows)() ? (0, P.Z)(S.ZP, A.Z) : null), u = (0, r.e7)([c.Z], () => (null == i ? void 0 : i.id) != null ? c.Z.getApplication(i.id) : null), d = (0, r.e7)([S.ZP], () => S.ZP.getRunningGames()), m = (0, r.Wu)([c.Z], () => d.map(e => null != e.id ? c.Z.getApplication(e.id) : null).filter(M.lm), [d]), E = null;
   if (null != n ? E = n.name : null != i && (E = i.name), null == E) return null;
   let _ = (0, y.Z)(i, n, d),
     h = s ? m.find(e => {
@@ -202,7 +202,7 @@ function X(e) {
     onChangeSelectedFPS: R,
     onChangeSelectedResolution: v,
     onChangeSelectedPreset: L,
-    onChangeSelectedChannelId: p,
+    onChangeSelectedChannelId: M,
     onChangeSource: O,
     onChangeAudioDevice: P,
     onChangeGuild: w,
@@ -246,14 +246,14 @@ function X(e) {
     }) : (0, l.jsx)(U.Z, {
       guildId: S,
       selectedChannelId: a,
-      onChangeSelectedChannelId: p
+      onChangeSelectedChannelId: M
     }), null != S && ei && er ? (0, l.jsx)(q, {
       guildId: S
     }) : null, X ? (0, l.jsx)(Q, {
       text: W.Z.Messages.GO_LIVE_VIDEO_DRIVERS_OUTDATED
     }) : null, $ ? (0, l.jsx)(Q, {
       text: W.Z.Messages.PROBLEMATIC_GPU_DRIVER_DETECTED.format({
-        helpCenterLink: M.Z.getArticleURL(V.BhN.NVIDIA_DRIVER_ISSUES)
+        helpCenterLink: p.Z.getArticleURL(V.BhN.NVIDIA_DRIVER_ISSUES)
       })
     }) : null, eo && (0, l.jsx)(g.Z, {
       look: g.z.WARNING,

@@ -8,8 +8,8 @@ var l, i, s = n(735250),
   d = n(431328),
   h = n(501655),
   m = n(27931),
-  p = n(260979),
-  E = n(766015),
+  E = n(260979),
+  p = n(766015),
   g = n(401139),
   f = n(12779),
   C = n(450369),
@@ -52,10 +52,10 @@ t.Z = (0, o.Z)(e => {
     [h.pV.AUDIENCE]: y,
     [h.pV.SELECTED]: 1
   }, U = (0, m.Dx)(l.id), [k, w] = (0, m.aP)(l.id, D, U), H = [Math.max(null !== (t = k[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = k[1]) && void 0 !== n ? n : 1, 1), k[2]], {
-    speakerTileWidth: B,
-    speakerTileHeight: G
-  } = Z(i, b), V = T ? i - 32 : Math.min(i - 64, 3 * B + 8), F = e => e === k.length - 1 || 0 === R && 1 === e, [z, W] = a.useState(!1), [Y, K] = a.useState(!1);
-  return (0, s.jsx)(E.Z, {
+    speakerTileWidth: G,
+    speakerTileHeight: B
+  } = Z(i, b), V = T ? i - 32 : Math.min(i - 64, 3 * G + 8), F = e => e === k.length - 1 || 0 === R && 1 === e, [z, W] = a.useState(!1), [Y, K] = a.useState(!1);
+  return (0, s.jsx)(p.Z, {
     sections: H,
     renderSection: e => {
       let {
@@ -103,7 +103,7 @@ t.Z = (0, o.Z)(e => {
           if (z) return null;
           return (0, s.jsx)(a.Fragment, {
             children: (0, s.jsx)(g.Z, {
-              tileWidth: B,
+              tileWidth: G,
               channel: l,
               participants: i,
               selectedParticipant: j
@@ -111,7 +111,7 @@ t.Z = (0, o.Z)(e => {
           }, "speakers-".concat(t, "-").concat(n));
         case 2:
           if (Y) return null;
-          return (0, s.jsx)(p.Z, {
+          return (0, s.jsx)(E.Z, {
             channel: l,
             participants: i,
             maxTiles: y
@@ -120,7 +120,7 @@ t.Z = (0, o.Z)(e => {
           return null
       }
     },
-    rowHeight: e => null == w[e][0] ? 0 : 0 === e ? V / C.Q + 8 : 1 === e ? z ? 0 : G : Y ? 0 : 98,
+    rowHeight: e => null == w[e][0] ? 0 : 0 === e ? V / C.Q + 8 : 1 === e ? z ? 0 : B : Y ? 0 : 98,
     renderFooter: e => {
       let {
         section: t

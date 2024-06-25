@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-    return p
+    return E
   }
 });
 var l = n(735250);
@@ -16,11 +16,11 @@ var i = n(512722),
   h = n(981631),
   m = n(689938);
 
-function p(e) {
+function E(e) {
   var t, i;
   let {
-    applicationId: p,
-    stream: E,
+    applicationId: E,
+    stream: p,
     channel: g,
     exitFullScreen: f,
     appContext: C,
@@ -62,16 +62,16 @@ function p(e) {
       }({
         guild: Z,
         channel: g,
-        streamUserId: null == E ? void 0 : E.ownerId,
-        applicationId: p,
+        streamUserId: null == p ? void 0 : p.ownerId,
+        applicationId: E,
         appContext: null != C ? C : T,
         exitFullScreen: f,
         analyticsLocation: _,
         guildScheduledEvent: I
       })
     },
-    iconComponent: null != p ? r.ActivitiesPlusIcon : r.GroupPlusIcon,
-    label: null != p ? m.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY : m.Z.Messages.ACTIVITY_INVITE_MODAL_INVITE,
+    iconComponent: null != E ? r.ActivitiesPlusIcon : r.GroupPlusIcon,
+    label: null != E ? m.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY : m.Z.Messages.ACTIVITY_INVITE_MODAL_INVITE,
     ...x
   }) : null
 }

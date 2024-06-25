@@ -15,8 +15,8 @@ var i = n(512722),
   d = n(641015),
   h = n(131951),
   m = n(594174),
-  p = n(700785),
-  E = n(213652),
+  E = n(700785),
+  p = n(213652),
   g = n(320427),
   f = n(145010),
   C = n(933686),
@@ -47,7 +47,7 @@ function N(e) {
   }), A = (0, r.Z)(h.Z);
   if (null == t || null != Z) return null;
   let M = (0, d.Z)(t),
-    R = p.BT({
+    R = E.BT({
       permission: x.Plq.ADD_REACTIONS,
       user: N,
       context: t
@@ -59,7 +59,7 @@ function N(e) {
       themeable: i
     }), R && (0, l.jsx)(C.Z, {
       channel: t
-    }), v && A && (0, l.jsx)(E.Z, {
+    }), v && A && (0, l.jsx)(p.Z, {
       channel: t
     }), S && n && (0, l.jsx)(g.Z, {}), S && n && (0, l.jsx)(f.Z, {
       channel: t
