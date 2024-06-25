@@ -47,9 +47,10 @@ function E(e) {
           let t = null !== (i = e.scrollTop) && void 0 !== i ? i : 0,
             n = 0 !== e.scrollHeight ? e.scrollHeight : h + 20,
             E = 0 !== e.clientHeight ? e.clientHeight : h + 20,
-            T = Math.min(n - E, h + 20);
-          let S = (r = t, (o = h - I) === (a = T) ? 1 : (0, s.clamp)((r - o) / (a - o), 0, 1));
-          c.style.filter = "brightness(".concat(1 + (.6 - (l = 1)) * S, ")"), d.style.opacity = "".concat(0 + (1 - (u = 0)) * S), d.style.transform = "translateY(".concat((_ = I / 4) + (0 - _) * S, "px)")
+            T = h - I,
+            S = (0, s.clamp)(n - E, T + 1, h + 20);
+          let f = (r = t, (o = T) === (a = S) ? 1 : (0, s.clamp)((r - o) / (a - o), 0, 1));
+          c.style.filter = "brightness(".concat(1 + (.6 - (l = 1)) * f, ")"), d.style.opacity = "".concat(0 + (1 - (u = 0)) * f), d.style.transform = "translateY(".concat((_ = I / 4) + (0 - _) * f, "px)")
         }
       };
     return null == e || e.addEventListener("scroll", t), () => {
