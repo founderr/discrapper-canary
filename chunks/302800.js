@@ -1,18 +1,18 @@
 s.d(t, {
   GX: function() {
-    return h
+    return f
   },
   LM: function() {
     return a
   },
   M7: function() {
-    return M
+    return S
   },
   QQ: function() {
-    return m
+    return M
   },
   UY: function() {
-    return p
+    return h
   },
   k2: function() {
     return n
@@ -30,15 +30,16 @@ var n, a, i, r, l = s(278074),
   R = s(736088),
   A = s(782984),
   N = s(186077),
-  C = s(376477),
-  g = s(224941);
+  C = s(118810),
+  g = s(376477),
+  m = s(224941);
 (i = n || (n = {}))[i.NONE = 0] = "NONE", i[i.TOOLTIP = 1] = "TOOLTIP", i[i.COACHTIP = 2] = "COACHTIP", (r = a || (a = {})).NONE = "NONE", r.SHY = "SHY", r.LOFI_VIBES = "LOFI_VIBES", r.GALAXY = "GALAXY", r.RETRO_AND_PIRATES = "RETRO_AND_PIRATES", r.ARCADE = "ARCADE", r.TIDE = "TIDE";
-let m = {
+let M = {
     [c.z.COLLECTIBLES_SHOP_SHY_COACHTIP]: {
       type: 2,
       title: () => _.Z.Messages.COLLECTIBLES_SHY_COACHTIP_TITLE,
       body: () => _.Z.Messages.COLLECTIBLES_SHY_COACHTIP_DESCRIPTION,
-      imageSrc: C,
+      imageSrc: g,
       assetIds: ["a_98555e40cc6802bd3a4fed906af1d992", "a_09de63526a45be1ddac70e84718ee04a", "a_904b1989077c91fca1168d39bfcaa0a4"],
       entrypointDecorationAssets: {
         srcDark: d,
@@ -71,18 +72,26 @@ let m = {
       type: 2,
       title: () => _.Z.Messages.COLLECTIBLES_ARCADE_COACHTIP_TITLE,
       body: () => _.Z.Messages.COLLECTIBLES_ARCADE_COACHTIP_DESCRIPTION,
-      imageSrc: g,
+      imageSrc: m,
       assetIds: ["a_e72e44eeea89e92dc02c9bec8b02d158", "a_492f6b54b761c0a14d9dbc9c98aaa0f5", "a_46750412a18f4988de71f4cf14991b38"]
+    },
+    [c.z.COLLECTIBLES_SHOP_TIDE_COACHTIP]: {
+      type: 2,
+      title: () => _.Z.Messages.COLLECTIBLES_TIDE_COACHTIP_TITLE,
+      body: () => _.Z.Messages.COLLECTIBLES_TIDE_COACHTIP_DESCRIPTION,
+      imageSrc: C,
+      assetIds: ["a_48b8411feb1e80a69048fc65b3275b75", "a_0830085f29712a6f3a23a123302050b4", "a_949a575b693c81ced8f56a7579d0969f"],
+      entryPointClassName: "tideButton"
     }
   },
-  M = e => (0, l.EQ)(e).with(o.T.SHY, () => ({
+  S = e => (0, l.EQ)(e).with(o.T.SHY, () => ({
     label: () => _.Z.Messages.COLLECTIBLES_SHY_FOR_A_LIMITED_TIME,
     backgroundColor: "rgba(255, 70, 85, 1)",
     boxShadow: "0 0 12px 0 rgba(255, 70, 85, 0.5)",
     labelColor: "rgba(15, 25, 35, 1)",
     iconSrc: N
   })).otherwise(() => null),
-  S = {
+  p = {
     confettiAssetSrc: R,
     style: {
       position: "absolute",
@@ -90,8 +99,8 @@ let m = {
       zIndex: 10
     }
   },
-  p = e => (0, l.EQ)(e).with("1252405010608951358", () => S).with("1252405017688936508", () => S).otherwise(() => null),
-  h = {
+  h = e => (0, l.EQ)(e).with("1252405010608951358", () => p).with("1252405017688936508", () => p).otherwise(() => null),
+  f = {
     [E.C5.GALAXY]: {
       artSrc: s(161594)
     },

@@ -8,5 +8,6 @@ n.r(e.exports = {
   newBadge: "newBadge_a25714",
   marketingButtonImage: "marketingButtonImage_a25714",
   marketingButtonImageHovered: "marketingButtonImageHovered_a25714",
-  shyButton: "shyButton_a25714"
+  shyButton: "shyButton_a25714",
+  tideButton: "tideButton_a25714"
 })

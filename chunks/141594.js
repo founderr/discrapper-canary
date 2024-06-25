@@ -13,8 +13,9 @@ t.Z = () => {
     t = (0, c.I)("useCollectiblesShopTabNewBadge"),
     n = s.useMemo(() => {
       if ((0, o.Fc)(e)) {
+        if (t === u.LM.TIDE) return [l.z.COLLECTIBLES_SHOP_TIDE_COACHTIP];
         if (t === u.LM.ARCADE) return [l.z.COLLECTIBLES_SHOP_ARCADE_COACHTIP];
-        if (t === u.LM.RETRO_AND_PIRATES) return [l.z.COLLECTIBLES_SHOP_RETRO_AND_PIRATES_COACHTIP];
+        else if (t === u.LM.RETRO_AND_PIRATES) return [l.z.COLLECTIBLES_SHOP_RETRO_AND_PIRATES_COACHTIP];
         else if (t === u.LM.GALAXY) return [l.z.COLLECTIBLES_SHOP_GALAXY_COACHTIP]
       }
       return []

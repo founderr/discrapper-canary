@@ -48167,8 +48167,8 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
 
 .message_b6cd66 {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -96034,6 +96034,11 @@ input::-webkit-inner-spin-button {
 
 .shyButton_a25714 {
     background: radial-gradient(ellipse at 120%200%, #ff4655 10%, transparent 70%);
+    background-clip: content-box
+}
+
+.tideButton_a25714 {
+    background: linear-gradient(-8deg, rgba(13, 243, 243, .3)-15.16%, rgba(13, 174, 243, .5)9.84%, rgba(43, 45, 49, 0)50%);
     background-clip: content-box
 }
 
