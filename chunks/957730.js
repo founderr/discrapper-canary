@@ -104,8 +104,8 @@ let y = _.Z.RULES,
           })), "mention"))) return null;
         let s = x.exec(e);
         if (null != s && r[0].length <= s[0].length) return null;
-        if ("" === n && (0, d.BH)()) {
-          let t = d.vD.exec(e);
+        if ("" === n) {
+          let t = d.v.exec(e);
           if (null != t && r[0].length <= t[0].length) return null
         }
         return r

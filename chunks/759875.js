@@ -17,6 +17,8 @@ function s(e, n) {
       canForwardMessages: s
     } = r.w.useExperiment({
       location: "MessageActionsMenu"
+    }, {
+      autoTrackExposure: !1
     });
   return t && s ? (0, i.jsx)(a.MenuItem, {
     id: "forward",

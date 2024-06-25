@@ -48,7 +48,7 @@ async function M(e) {
       poll: null == U ? void 0 : U.poll
     };
   null != y && (B.content = null == y ? void 0 : y.content), null != O.Z.getPendingReply(d) && (B.type = L.uaV.REPLY, B.message_reference = U.messageReference, B.allowed_mentions = U.allowedMentions, (0, m.A6)(d));
-  let [x, k] = (0, R.ZP)(B.content);
+  let [x, k] = (0, R.Z)(B.content);
   x && (B.content = k, B.flags = (0, C.pj)(null !== (t = B.flags) && void 0 !== t ? t : 0, L.iLy.SUPPRESS_NOTIFICATIONS));
   let V = null !== (n = U.nonce) && void 0 !== n ? n : (0, f.r)(),
     Z = (0, S.ZP)({

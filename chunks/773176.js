@@ -36,8 +36,8 @@ var l = n(735250),
   k = n(432376),
   w = n(996861),
   H = n(603490),
-  B = n(225138),
-  G = n(717680),
+  G = n(225138),
+  B = n(717680),
   V = n(981631),
   F = n(689938),
   z = n(961864);
@@ -54,7 +54,7 @@ function Y(e) {
     onClose: i,
     updatePosition: s
   } = e;
-  return (0, B.useMessageMenu)({
+  return (0, G.useMessageMenu)({
     message: t,
     channel: n,
     textSelection: "",
@@ -140,7 +140,7 @@ function q(e) {
     canReply: x,
     canStartThread: v,
     canViewThread: O,
-    canForward: B,
+    canForward: G,
     isExpanded: z,
     showMoreUtilities: W,
     showEmojiPicker: q,
@@ -167,7 +167,7 @@ function q(e) {
     } = (0, c.cj)([j.Z], () => ({
       canAddNewReactions: v && j.Z.can(V.Plq.ADD_REACTIONS, t),
       canManageMessages: j.Z.can(V.Plq.MANAGE_MESSAGES, t)
-    }), [t, v]), P = (0, T.U)(t, n), w = (0, N.NE)(t, n), H = (0, N.Ek)(n), B = (0, c.e7)([g.Z], () => null != t.guild_id && g.Z.isLurking(t.guild_id), [t]), F = (0, c.e7)([A.ZP], () => null != t.guild_id && A.ZP.isCurrentUserGuest(t.guild_id), [t]), z = o.id === p, W = (L || n.canDeleteOwnMessage(p)) && E && !V.V$x.UNDELETABLE.has(n.type);
+    }), [t, v]), P = (0, T.U)(t, n), w = (0, N.NE)(t, n), H = (0, N.Ek)(n), G = (0, c.e7)([g.Z], () => null != t.guild_id && g.Z.isLurking(t.guild_id), [t]), F = (0, c.e7)([A.ZP], () => null != t.guild_id && A.ZP.isCurrentUserGuest(t.guild_id), [t]), z = o.id === p, W = (L || n.canDeleteOwnMessage(p)) && E && !V.V$x.UNDELETABLE.has(n.type);
     n.type === V.uaV.AUTO_MODERATION_ACTION && (W = W && L);
     let Y = (0, b.a4)(n),
       K = (0, U.Z)(n, t, L),
@@ -179,7 +179,7 @@ function q(e) {
         canChat: v,
         renderReactions: I,
         canAddNewReactions: O,
-        isLurking: B,
+        isLurking: G,
         isGuest: F,
         isActiveChannelOrUnarchivableThread: E
       }),
@@ -192,6 +192,8 @@ function q(e) {
         canForwardMessages: ee
       } = h.w.useExperiment({
         location: "useMessageUtilitiesProps"
+      }, {
+        autoTrackExposure: !1
       }),
       et = (0, m.a)(n),
       {
@@ -202,7 +204,7 @@ function q(e) {
         autoTrackExposure: !1
       }),
       el = (0, c.e7)([C.Z], () => null != C.Z.getMessageReminders().find(e => e.messageId === n.id)),
-      ei = (0, G.Z)(),
+      ei = (0, B.Z)(),
       es = (0, c.e7)([d.Z], () => d.Z.keyboardModeEnabled);
     return {
       channel: t,
@@ -286,7 +288,7 @@ function q(e) {
         label: n.pinned ? F.Z.Messages.UNPIN_MESSAGE : F.Z.Messages.PIN_MESSAGE,
         icon: u.PinIcon,
         onClick: w.rY
-      }) : null, v && B ? K({
+      }) : null, v && G ? K({
         key: "thread",
         channel: t,
         message: n,
@@ -322,14 +324,14 @@ function q(e) {
       label: F.Z.Messages.EDIT,
       icon: u.PencilIcon,
       onClick: w.Hd
-    }) : null, B ? K({
+    }) : null, G ? K({
       key: "forward",
       channel: t,
       message: n,
       label: F.Z.Messages.MESSAGE_ACTION_FORWARD,
       icon: u.ChatArrowRightIcon,
       onClick: w.ts
-    }) : null, v && !B ? K({
+    }) : null, v && !G ? K({
       key: "thread",
       channel: t,
       message: n,

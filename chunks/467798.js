@@ -1,27 +1,15 @@
 "use strict";
 n.d(t, {
-  BH: function() {
-    return o
-  },
-  ZP: function() {
-    return a
-  },
-  vD: function() {
+  Z: function() {
     return s
+  },
+  v: function() {
+    return r
   }
 });
-var i = n(528151);
-let r = "@silent",
-  s = new RegExp("^".concat(r, "(\\s|$)"));
+let i = "@silent",
+  r = new RegExp("^".concat(i, "(\\s|$)"));
 
-function o() {
-  return i.D.getCurrentConfig({
-    location: "456bd9_1"
-  }, {
-    autoTrackExposure: !1
-  }).allowSending
-}
-
-function a(e) {
-  return null == e ? [!1, ""] : o() && null != e.match(s) ? [!0, e.substring(r.length).trim()] : [!1, e]
+function s(e) {
+  return null == e ? [!1, ""] : null == e.match(r) ? [!1, e] : [!0, e.substring(i.length).trim()]
 }
