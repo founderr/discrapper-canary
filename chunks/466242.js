@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   body: "body_b225f6",
   publishListing: "publishListing_b225f6",

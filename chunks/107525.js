@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   wrapper: "wrapper_c51b4e",
   pointer: "pointer_c51b4e",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   previewContainer: "previewContainer_dcd39d",
   icon: "icon_dcd39d",

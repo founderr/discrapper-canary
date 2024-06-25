@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_e6ac5f",
   groupListings: "groupListings_e6ac5f",

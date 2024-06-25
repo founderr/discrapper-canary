@@ -6,11 +6,11 @@ n.d(t, {
     return c
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  s = n(626135),
-  a = n(687683),
+var a = n(481060),
+  l = n(626135),
+  s = n(687683),
   r = n(981631);
 
 function o(e) {
@@ -19,14 +19,14 @@ function o(e) {
     onConfirm: o,
     onCancel: c
   } = e;
-  s.default.track(r.rMx.OPEN_MODAL, {
-    type: a.t9,
+  l.default.track(r.rMx.OPEN_MODAL, {
+    type: s.t9,
     channel_id: t
-  }), (0, i.openModalLazy)(async () => {
+  }), (0, a.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("99387"), n.e("4117")]).then(n.bind(n, 217723));
-    return t => (0, l.jsx)(e, {
+    } = await n.e("4117").then(n.bind(n, 217723));
+    return t => (0, i.jsx)(e, {
       onConfirm: o,
       onDismiss: c,
       ...t
@@ -37,15 +37,15 @@ function o(e) {
 function c(e) {
   let {
     onConfirm: t,
-    onCancel: s
+    onCancel: l
   } = e;
-  (0, i.openModalLazy)(async () => {
+  (0, a.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("99387"), n.e("7649")]).then(n.bind(n, 797464));
-    return n => (0, l.jsx)(e, {
+    } = await n.e("7649").then(n.bind(n, 797464));
+    return n => (0, i.jsx)(e, {
       onConfirm: t,
-      onDismiss: s,
+      onDismiss: l,
       ...n
     })
   })

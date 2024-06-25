@@ -1,10 +1,9 @@
-"use strict";
-e.d(n, {
+n.d(t, {
   B: function() {
-    return u
+    return a
   }
 });
-let i = (0, e(818083).B)({
+let i = (0, n(818083).B)({
   kind: "user",
   id: "2024-01_safety_hub_display_guild_violations",
   label: "Safety Hub Display Guild Violations",
@@ -20,9 +19,9 @@ let i = (0, e(818083).B)({
   }]
 });
 
-function u(t) {
+function a(e) {
   return !!i.useExperiment({
-    location: t
+    location: e
   }, {
     autoTrackExposure: !0
   }).enabled

@@ -1,60 +1,60 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   Z: function() {
     return u
   }
 });
-var n = t(735250);
-t(470079);
-var i = t(239091),
-  l = t(592125),
-  a = t(430824),
-  r = t(594174),
-  o = t(909410),
-  c = t(981631),
-  d = t(689938);
+var s = n(735250);
+n(470079);
+var a = n(239091),
+  i = n(592125),
+  r = n(430824),
+  l = n(594174),
+  o = n(909410),
+  c = n(981631),
+  d = n(689938);
 
 function u(e) {
   let {
-    guildId: s,
+    guildId: t,
     log: u,
-    onHeaderClick: E,
-    className: _,
+    onHeaderClick: _,
+    className: E,
     expanded: I,
     onContentClick: T
   } = e;
-  return null == s ? null : (0, n.jsx)(o.Z, {
-    guildId: s,
+  return null == t ? null : (0, s.jsx)(o.Z, {
+    guildId: t,
     log: u,
-    className: _,
+    className: E,
     expanded: I,
     onContentClick: T,
     onHeaderClick: () => {
-      null == E || E(u)
+      null == _ || _(u)
     },
     onUserContextMenu: e => {
       let {
-        user: l
+        user: i
       } = u;
-      null != l && null != s && (0, i.jW)(e, async () => {
+      null != i && null != t && (0, a.jW)(e, async () => {
         let {
           default: e
-        } = await Promise.all([t.e("99387"), t.e("50929")]).then(t.bind(t, 595011));
-        return t => (0, n.jsx)(e, {
-          ...t,
-          guildId: s,
-          user: l
+        } = await n.e("50929").then(n.bind(n, 595011));
+        return n => (0, s.jsx)(e, {
+          ...n,
+          guildId: t,
+          user: i
         })
       })
     },
     onChannelContextMenu: e => {
-      let l = a.Z.getGuild(s);
-      null != u.options.channel && null != l && (0, i.jW)(e, async () => {
+      let i = r.Z.getGuild(t);
+      null != u.options.channel && null != i && (0, a.jW)(e, async () => {
         let {
           default: e
-        } = await t.e("51529").then(t.bind(t, 228620));
-        return s => (0, n.jsx)(e, {
-          ...s,
+        } = await n.e("51529").then(n.bind(n, 228620));
+        return t => (0, s.jsx)(e, {
+          ...t,
           channel: u.options.channel
         })
       })
@@ -63,37 +63,37 @@ function u(e) {
       switch (u.targetType) {
         case c.KFR.CHANNEL:
         case c.KFR.CHANNEL_OVERWRITE:
-          let o = l.Z.getChannel(u.targetId),
-            E = a.Z.getGuild(s);
-          if (null != o && null != E) return (0, i.jW)(e, async () => {
+          let o = i.Z.getChannel(u.targetId),
+            _ = r.Z.getGuild(t);
+          if (null != o && null != _) return (0, a.jW)(e, async () => {
             let {
               default: e
-            } = await t.e("51529").then(t.bind(t, 228620));
-            return s => (0, n.jsx)(e, {
-              ...s,
+            } = await n.e("51529").then(n.bind(n, 228620));
+            return t => (0, s.jsx)(e, {
+              ...t,
               channel: o
             })
           });
-          return (0, i.jW)(e, async () => {
+          return (0, a.jW)(e, async () => {
             let {
               default: e
-            } = await t.e("5396").then(t.bind(t, 731646));
-            return s => (0, n.jsx)(e, {
-              ...s,
+            } = await n.e("5396").then(n.bind(n, 731646));
+            return t => (0, s.jsx)(e, {
+              ...t,
               id: u.targetId,
               label: d.Z.Messages.COPY_ID_UNKNOWN
             })
           });
         case c.KFR.USER:
-          let _ = r.default.getUser(u.targetId);
-          if (null != _ && null != s) return (0, i.jW)(e, async () => {
+          let E = l.default.getUser(u.targetId);
+          if (null != E && null != t) return (0, a.jW)(e, async () => {
             let {
               default: e
-            } = await Promise.all([t.e("99387"), t.e("50929")]).then(t.bind(t, 595011));
-            return t => (0, n.jsx)(e, {
-              ...t,
-              guildId: s,
-              user: _
+            } = await n.e("50929").then(n.bind(n, 595011));
+            return n => (0, s.jsx)(e, {
+              ...n,
+              guildId: t,
+              user: E
             })
           })
       }

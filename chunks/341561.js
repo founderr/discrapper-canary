@@ -14,17 +14,17 @@ var r = n(952265),
   I = n(590921),
   T = n(665692),
   h = n(981631),
-  S = n(689938),
-  f = n(611032);
+  f = n(689938),
+  S = n(611032);
 
-function N(e, t) {
+function A(e, t) {
   return (0, i.jsx)(u.ZP, {
     sticker: e,
     isInteracting: t,
     size: 40
   })
 }
-let A = {
+let N = {
   sentinel: T.Iv,
   stores: [a.Z],
   matches: (e, t, n, i, r) => n.length > 1,
@@ -85,8 +85,8 @@ let A = {
         autocompletes: t,
         onHover: u,
         onClick: d,
-        titleWithQuery: S.Z.Messages.EMOJI_MATCHING,
-        titleWithoutQuery: S.Z.Messages.EMOJI,
+        titleWithQuery: f.Z.Messages.EMOJI_MATCHING,
+        titleWithoutQuery: f.Z.Messages.EMOJI,
         Component: c.ZP.Emoji,
         getProps: e => ({
           emoji: e,
@@ -105,14 +105,14 @@ let A = {
           (0, r.ZD)(async () => {
             let {
               default: e
-            } = await Promise.all([n.e("99387"), n.e("9766")]).then(n.bind(n, 889684));
+            } = await n.e("9766").then(n.bind(n, 889684));
             return t => (0, i.jsx)(e, {
               ...t
             })
           })
         },
-        titleWithQuery: 0 === t.length ? S.Z.Messages.EMOJI_MATCHING : null,
-        titleWithoutQuery: 0 === t.length ? S.Z.Messages.EMOJI : null,
+        titleWithQuery: 0 === t.length ? f.Z.Messages.EMOJI_MATCHING : null,
+        titleWithoutQuery: 0 === t.length ? f.Z.Messages.EMOJI : null,
         Component: c.ZP.EmojiUpsell,
         getProps: e => {
           let {
@@ -127,15 +127,15 @@ let A = {
         key: "emoji-upsell",
         indexOffset: t.length
       }) : null, (t.length > 0 || o.length > 0) && s.length > 0 && (0, i.jsx)(c.ZP.Divider, {
-        className: f.emojiStickersDivider
+        className: S.emojiStickersDivider
       }), (0, E.HI)({
         query: l,
         selectedIndex: a,
         autocompletes: s,
         onHover: u,
         onClick: d,
-        titleWithQuery: S.Z.Messages.STICKERS_MATCHING,
-        titleWithoutQuery: S.Z.Messages.STICKER,
+        titleWithQuery: f.Z.Messages.STICKERS_MATCHING,
+        titleWithoutQuery: f.Z.Messages.STICKER,
         Component: c.ZP.Sticker,
         getProps: e => {
           let {
@@ -143,7 +143,7 @@ let A = {
             sticker: n
           } = e;
           return {
-            renderSticker: N,
+            renderSticker: A,
             queryMatch: t !== n.name.toLocaleLowerCase() ? t : void 0,
             sticker: n,
             key: n.id
@@ -152,7 +152,7 @@ let A = {
         getQuery: e => e,
         key: "stickers",
         indexOffset: t.length + o.length,
-        headerClassName: t.length > 0 ? f.stickersHeaderWithEmojiResults : void 0
+        headerClassName: t.length > 0 ? S.stickersHeaderWithEmojiResults : void 0
       })]
     })
   },
@@ -205,4 +205,4 @@ let A = {
     }
   }
 };
-t.Z = A
+t.Z = N

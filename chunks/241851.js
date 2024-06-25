@@ -10,8 +10,8 @@ var l = t(120356),
   s = t(704215),
   o = t(481060),
   r = t(605236),
-  u = t(434404),
-  d = t(41776),
+  d = t(434404),
+  u = t(41776),
   c = t(703656),
   E = t(981631),
   I = t(689938),
@@ -20,11 +20,11 @@ let g = e => {
   let {
     guild: n
   } = e, l = n.id, g = async () => {
-    let e = d.Z.isLurking(l);
-    await u.Z.leaveGuild(l), e ? (0, c.uL)(E.Z5c.GUILD_DISCOVERY) : !(0, r.un)(s.z.GUILD_LEAVE_FEEDBACK) && (0, o.openModalLazy)(async () => {
+    let e = u.Z.isLurking(l);
+    await d.Z.leaveGuild(l), e ? (0, c.uL)(E.Z5c.GUILD_DISCOVERY) : !(0, r.un)(s.z.GUILD_LEAVE_FEEDBACK) && (0, o.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([t.e("49237"), t.e("99387"), t.e("41953")]).then(t.bind(t, 131102));
+      } = await t.e("74920").then(t.bind(t, 131102));
       return t => (0, a.jsx)(e, {
         ...t,
         guildId: l,

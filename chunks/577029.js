@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   icon: "icon_ad923e",
   emoji: "emoji_ad923e",

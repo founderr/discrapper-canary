@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   tabBarContainer: "tabBarContainer_f6df95",
   tabBar: "tabBar_f6df95",

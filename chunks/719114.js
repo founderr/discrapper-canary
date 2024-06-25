@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_ae96a9",
   verifiedRow: "verifiedRow_ae96a9",

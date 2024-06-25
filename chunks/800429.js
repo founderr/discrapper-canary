@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   assetWrapper: "assetWrapper_cb3343",
   assetWrapperMasked: "assetWrapperMasked_cb3343",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   sectionContainer: "sectionContainer_ca5acd",
   sectionHeader: "sectionHeader_ca5acd",

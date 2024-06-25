@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   listHeight: "listHeight_dcade6",
   listItems: "listItems_dcade6",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   categoryList: "categoryList_ceda83",
   category: "category_ceda83",

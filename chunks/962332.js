@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   analyticsCard: "analyticsCard_d4b8cc",
   analyticsCardTitle: "analyticsCardTitle_d4b8cc",

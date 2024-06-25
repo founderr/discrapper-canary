@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   mainChannelContainer: "mainChannelContainer_dc2d6e",
   enableAlertsContainer: "enableAlertsContainer_dc2d6e",

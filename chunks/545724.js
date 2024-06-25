@@ -1,66 +1,66 @@
 n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(120356),
-  a = n.n(l),
-  r = n(748780),
+var i = n(735250),
+  s = n(470079),
+  a = n(120356),
+  r = n.n(a),
+  l = n(748780),
   o = n(91192),
   c = n(481060),
-  u = n(239091),
-  d = n(687683),
-  E = n(957832);
+  d = n(239091),
+  u = n(687683),
+  _ = n(957832);
 t.Z = function(e) {
   let {
     index: t,
-    children: l,
-    user: h,
-    channel: _,
+    children: a,
+    user: E,
+    channel: h,
     onClick: I,
     isFocused: m,
-    isActive: T,
+    isActive: p,
     onOtherHover: g,
-    className: p
-  } = e, [N, S] = i.useState(!1), [C, A] = i.useState(!1), f = () => {
-    S(!0), m && !T && !C && (null == g || g())
+    className: T
+  } = e, [C, f] = s.useState(!1), [S, N] = s.useState(!1), A = () => {
+    f(!0), m && !p && !S && (null == g || g())
   }, Z = () => {
-    S(!1)
+    f(!1)
   }, L = (e, t) => {
-    if (null != t) A(!0), (0, u.jW)(e, async () => {
+    if (null != t) N(!0), (0, d.jW)(e, async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("32006"), n.e("69220")]).then(n.bind(n, 881351));
-      return n => (0, s.jsx)(e, {
+      } = await Promise.all([n.e("79695"), n.e("32006"), n.e("61035")]).then(n.bind(n, 881351));
+      return n => (0, i.jsx)(e, {
         ...n,
         user: t
       })
     }, {
       onClose: () => {
-        A(!1)
+        N(!1)
       }
     })
   };
-  return (0, s.jsx)(o.mh, {
-    id: _.id,
-    children: e => (0, s.jsx)(c.FocusRing, {
+  return (0, i.jsx)(o.mh, {
+    id: h.id,
+    children: e => (0, i.jsx)(c.FocusRing, {
       offset: {
         left: -8,
         right: -8
       },
-      children: (0, s.jsx)(r.Z.div, {
-        className: a()(E.messageRequestItem, p, {
-          [E.active]: T || C,
-          [E.firstItem]: 0 === t
+      children: (0, i.jsx)(l.Z.div, {
+        className: r()(_.messageRequestItem, T, {
+          [_.active]: p || S,
+          [_.firstItem]: 0 === t
         }),
-        onContextMenu: e => L(e, h),
-        onMouseEnter: f,
+        onContextMenu: e => L(e, E),
+        onMouseEnter: A,
         onMouseLeave: Z,
         onClick: null != I ? I : void 0,
         style: {
-          LIST_ROW_HEIGHT: d.WN,
+          LIST_ROW_HEIGHT: u.WN,
           opacity: 1
         },
         ...e,
-        children: l(N || T || C)
+        children: a(C || p || S)
       })
     })
   })

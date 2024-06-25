@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   popoutContainer: "popoutContainer_a3e60b",
   mainContent: "mainContent_a3e60b",

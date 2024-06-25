@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   skeleton: "skeleton_b0ceed",
   bannerBody: "bannerBody_b0ceed",

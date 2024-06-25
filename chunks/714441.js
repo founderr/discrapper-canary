@@ -1,26 +1,26 @@
 t.d(n, {
   i: function() {
-    return l
+    return r
   }
 });
 var i = t(735250);
 t(470079);
-var r = t(481060);
+var a = t(481060);
 
-function l(e) {
+function r(e) {
   let {
     applicationName: n,
-    onConfirm: l,
+    onConfirm: r,
     onCancel: o
   } = e;
-  return (0, r.openModalLazy)(async () => {
+  return (0, a.openModalLazy)(async () => {
     let {
       ConfirmNoSharedServerSubscribeWarningModal: e
-    } = await Promise.all([t.e("99387"), t.e("99809")]).then(t.bind(t, 525549));
+    } = await t.e("99809").then(t.bind(t, 525549));
     return t => (0, i.jsx)(e, {
       ...t,
       applicationName: n,
-      onConfirm: l,
+      onConfirm: r,
       onCancel: o
     })
   }, {

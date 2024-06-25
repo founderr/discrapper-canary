@@ -1,88 +1,88 @@
 n.d(t, {
   Z: function() {
-    return _
+    return E
   }
 }), n(47120);
-var s = n(735250),
-  i = n(470079),
-  l = n(442837),
-  a = n(481060),
+var i = n(735250),
+  a = n(470079),
+  s = n(442837),
+  l = n(481060),
   r = n(782568),
   o = n(31336),
   c = n(906467),
-  u = n(502568),
-  d = n(63063),
-  E = n(689938);
+  d = n(502568),
+  u = n(63063),
+  _ = n(689938);
 
-function _() {
-  let e = (0, l.e7)([c.Z], () => c.Z.isDeveloper),
-    [t, _] = i.useState(!1),
-    [I, T] = i.useState(0),
-    m = e => {
-      clearTimeout(I), T(setTimeout(() => {
-        _(e)
+function E() {
+  let e = (0, s.e7)([c.Z], () => c.Z.isDeveloper),
+    [t, E] = a.useState(!1),
+    [I, m] = a.useState(0),
+    T = e => {
+      clearTimeout(I), m(setTimeout(() => {
+        E(e)
       }, 100))
     };
-  return (0, s.jsx)("div", {
-    onMouseEnter: () => m(!0),
-    onMouseLeave: () => m(!1),
-    children: (0, s.jsx)(a.Popout, {
+  return (0, i.jsx)("div", {
+    onMouseEnter: () => T(!0),
+    onMouseLeave: () => T(!1),
+    children: (0, i.jsx)(l.Popout, {
       shouldShow: t,
-      animation: a.Popout.Animation.NONE,
+      animation: l.Popout.Animation.NONE,
       position: "bottom",
       align: "right",
       autoInvert: !1,
-      onRequestOpen: () => _(!0),
-      onRequestClose: () => _(!1),
+      onRequestOpen: () => E(!0),
+      onRequestClose: () => E(!1),
       renderPopout: () => (function(e) {
         let {
           onClose: t,
-          isDiscordDeveloper: i
+          isDiscordDeveloper: a
         } = e;
-        return (0, s.jsx)(a.Menu, {
+        return (0, i.jsx)(l.Menu, {
           onSelect: () => {},
           navId: "staff-help-popout",
           variant: "fixed",
           onClose: t,
-          "aria-label": E.Z.Messages.GUILD_ACTIONS_MENU_LABEL,
-          children: (0, s.jsxs)(a.MenuGroup, {
-            children: [(0, s.jsx)(a.MenuItem, {
+          "aria-label": _.Z.Messages.GUILD_ACTIONS_MENU_LABEL,
+          children: (0, i.jsxs)(l.MenuGroup, {
+            children: [(0, i.jsx)(l.MenuItem, {
               id: "staff-help-bug-reporter",
-              label: E.Z.Messages.BUG_REPORT_TITLE,
-              icon: a.BugIcon,
-              action: () => (0, a.openModalLazy)(async () => {
+              label: _.Z.Messages.BUG_REPORT_TITLE,
+              icon: l.BugIcon,
+              action: () => (0, l.openModalLazy)(async () => {
                 let {
                   default: e
-                } = await Promise.all([n.e("99387"), n.e("83051")]).then(n.bind(n, 115072));
-                return t => (0, s.jsx)(e, {
+                } = await n.e("83051").then(n.bind(n, 115072));
+                return t => (0, i.jsx)(e, {
                   ...t
                 })
               })
-            }), i && (0, s.jsx)(a.MenuItem, {
+            }), a && (0, i.jsx)(l.MenuItem, {
               id: "staff-devtools",
               label: "Toggle DevTools",
-              icon: a.StaffBadgeIcon,
+              icon: l.StaffBadgeIcon,
               action: () => (0, o.SO)()
-            }), (0, s.jsx)(a.MenuItem, {
+            }), (0, i.jsx)(l.MenuItem, {
               id: "staff-help-center",
               label: "Go to Help Center",
-              icon: a.WindowLaunchIcon,
-              action: () => (0, r.Z)(d.w)
+              icon: l.WindowLaunchIcon,
+              action: () => (0, r.Z)(u.w)
             })]
           })
         })
       })({
-        onClose: () => _(!1),
+        onClose: () => E(!1),
         isDiscordDeveloper: e
       }),
       children: (e, t) => {
         let {
           isShown: n
         } = t;
-        return (0, s.jsx)(u.JO, {
+        return (0, i.jsx)(d.JO, {
           ...e,
-          icon: a.BugIcon,
-          "aria-label": E.Z.Messages.HELP,
+          icon: l.BugIcon,
+          "aria-label": _.Z.Messages.HELP,
           selected: n
         })
       }

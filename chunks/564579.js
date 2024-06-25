@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   premiumCards: "premiumCards_c87d73",
   card: "card_c87d73",

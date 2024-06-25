@@ -10,7 +10,7 @@ i.Z = {
     }), (0, a.openModalLazy)(async () => {
       let {
         default: i
-      } = await Promise.all([n.e("99387"), n.e("65652")]).then(n.bind(n, 208265));
+      } = await n.e("65652").then(n.bind(n, 208265));
       return n => (0, t.jsx)(i, {
         classificationId: e,
         ...n

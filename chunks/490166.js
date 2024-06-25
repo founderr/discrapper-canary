@@ -1,91 +1,91 @@
-n.r(s), n.d(s, {
+t.r(n), t.d(n, {
   default: function() {
-    return d
+    return r
   }
 });
-var t = n(735250);
-n(470079);
-var o = n(481060),
-  a = n(536442),
-  i = n(13140),
-  l = n(487029),
-  c = n(689938),
-  r = n(838540);
+var s = t(735250);
+t(470079);
+var o = t(481060),
+  a = t(536442),
+  i = t(13140),
+  d = t(487029),
+  c = t(689938),
+  l = t(838540);
 
-function d(e) {
+function r(e) {
   let {
-    guildId: s,
-    channel: d,
-    keybind: D,
-    transitionState: O,
-    onClose: _
+    guildId: n,
+    channel: r,
+    keybind: _,
+    transitionState: u,
+    onClose: h
   } = e;
 
-  function h() {
-    (0, a.Kw)(a.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL), _()
+  function D() {
+    (0, a.Kw)(a.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL), h()
   }
 
-  function u() {
-    h(), (0, o.openModalLazy)(async () => {
+  function O() {
+    D(), (0, o.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("49237"), n.e("99387"), n.e("54626")]).then(n.bind(n, 355453));
-      return s => (0, t.jsx)(e, {
-        ...s
+      } = await t.e("58120").then(t.bind(t, 355453));
+      return n => (0, s.jsx)(e, {
+        ...n
       })
     })
   }
-  return (0, t.jsxs)(o.ModalRoot, {
-    transitionState: O,
+  return (0, s.jsxs)(o.ModalRoot, {
+    transitionState: u,
     "aria-label": c.Z.Messages.SOUNDBOARD_SOUND_WHEEL_EDUCATION_MODAL_HEADER,
-    children: [(0, t.jsxs)(o.ModalContent, {
-      className: r.content,
-      children: [(0, t.jsx)(o.Heading, {
+    children: [(0, s.jsxs)(o.ModalContent, {
+      className: l.content,
+      children: [(0, s.jsx)(o.Heading, {
         variant: "heading-xl/extrabold",
-        className: r.header,
+        className: l.header,
         children: c.Z.Messages.SOUNDBOARD_SOUND_WHEEL_EDUCATION_MODAL_HEADER
-      }), (0, t.jsx)(o.Text, {
+      }), (0, s.jsx)(o.Text, {
         variant: "text-md/normal",
         children: c.Z.Messages.SOUNDBOARD_SOUND_WHEEL_EDUCATION_MODAL_BODY.format({
-          keybind: (0, i.BB)(D.shortcut, !0).split(" + "),
-          keybindHook: (e, s) => (0, t.jsx)("span", {
-            className: r.keybindHintKeys,
-            children: (0, t.jsx)(o.KeyCombo, {
-              className: r.keybindShortcut,
-              shortcut: (0, i.BB)(D.shortcut, !1)
+          keybind: (0, i.BB)(_.shortcut, !0).split(" + "),
+          keybindHook: (e, n) => (0, s.jsx)("span", {
+            className: l.keybindHintKeys,
+            children: (0, s.jsx)(o.KeyCombo, {
+              className: l.keybindShortcut,
+              shortcut: (0, i.BB)(_.shortcut, !1)
             })
-          }, s),
-          openSettingsHook: (e, s) => (0, t.jsx)(o.Anchor, {
-            onClick: u,
+          }, n),
+          openSettingsHook: (e, n) => (0, s.jsx)(o.Anchor, {
+            onClick: O,
             children: e
-          }, s)
+          }, n)
         })
-      }), (0, t.jsx)("div", {
-        className: r.soundWheel,
-        children: (0, t.jsx)(l.Z, {
+      }), (0, s.jsx)("div", {
+        className: l.soundWheel,
+        children: (0, s.jsx)(d.Z, {
           width: 372,
           height: 316,
-          guildId: s,
-          channel: d,
+          guildId: n,
+          channel: r,
           interactive: !1,
           keepOpen: !0,
           onClose: () => {},
           analyticsSource: "education modal"
         })
       })]
-    }), (0, t.jsxs)(o.ModalFooter, {
-      children: [(0, t.jsx)(o.Button, {
-        onClick: h,
+    }), (0, s.jsxs)(o.ModalFooter, {
+      children: [(0, s.jsx)(o.Button, {
+        onClick: D,
         children: c.Z.Messages.SOUNDBOARD_SOUND_WHEEL_EDUCATION_MODAL_CONFIRM
-      }), (0, t.jsx)(o.Button, {
+      }), (0, s.jsx)(o.Button, {
         look: o.Button.Looks.LINK,
         color: o.Button.Colors.PRIMARY,
-        onClick: u,
+        onClick: O,
         children: c.Z.Messages.SOUNDBOARD_SOUND_WHEEL_EDUCATION_MODAL_EDIT_KEYBIND
       })]
-    }), (0, t.jsx)(o.ModalCloseButton, {
-      className: r.closeButton,
-      onClick: h
+    }), (0, s.jsx)(o.ModalCloseButton, {
+      className: l.closeButton,
+      onClick: D
     })]
   })
 }

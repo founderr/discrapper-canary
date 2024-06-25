@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   grid: "grid_f8c5e7",
   placeholderCard: "placeholderCard_f8c5e7",

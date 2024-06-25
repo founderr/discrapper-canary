@@ -45,7 +45,7 @@ async function C(e, t) {
   } else(0, l.openModalLazy)(async () => {
     let {
       default: t
-    } = await Promise.all([n.e("99387"), n.e("99617")]).then(n.bind(n, 502801));
+    } = await n.e("99617").then(n.bind(n, 502801));
     return n => (0, a.jsx)(t, {
       ...n,
       clip: e,

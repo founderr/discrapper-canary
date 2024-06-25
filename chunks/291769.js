@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   categoryList: "categoryList_a7a485",
   stickerCategory: "stickerCategory_a7a485",

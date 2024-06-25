@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_b1a8d5",
   banner: "banner_b1a8d5",

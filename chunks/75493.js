@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_b217c5",
   header: "header_b217c5",

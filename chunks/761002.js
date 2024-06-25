@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   categoryItemGuildCategory: "categoryItemGuildCategory_dfa278 categoryItem_dfa278",
   categoryItemDefaultCategory: "categoryItemDefaultCategory_dfa278 categoryItem_dfa278",

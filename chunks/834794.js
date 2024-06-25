@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   attachment: "attachment_a4623d",
   newMosaicStyle: "newMosaicStyle_a4623d",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   icon: "icon_be2720",
   textIcon: "textIcon_be2720",

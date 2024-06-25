@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   wrapper: "wrapper_adc107",
   heading: "heading_adc107",

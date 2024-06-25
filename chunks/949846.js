@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   memberSinceWrapper: "memberSinceWrapper_b06bc5",
   memberSince: "memberSince_b06bc5",

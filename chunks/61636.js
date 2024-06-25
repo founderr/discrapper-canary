@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_f7ea1b",
   profile: "profile_f7ea1b",

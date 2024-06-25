@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   formNotice: "formNotice_aae945",
   formNoticeTitle: "formNoticeTitle_aae945",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   changelog: "changelog_abe1fa",
   changelogImage: "changelogImage_abe1fa",

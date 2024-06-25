@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   chipletFlexContainer: "chipletFlexContainer_ef69fb",
   chipletContainer: "chipletContainer_ef69fb",

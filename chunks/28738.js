@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_c32acf",
   clickableUsername: "clickableUsername_c32acf",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   wrapper: "wrapper_cdbcb1",
   icon: "icon_cdbcb1",

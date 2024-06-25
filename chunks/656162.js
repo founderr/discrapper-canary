@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   reasonContainer: "reasonContainer_ad09cb",
   background: "background_ad09cb",

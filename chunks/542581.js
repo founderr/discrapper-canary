@@ -1,9 +1,9 @@
 "use strict";
 n(47120);
-var s = n(735250),
-  l = n(470079),
-  a = n(120356),
-  r = n.n(a),
+var a = n(735250),
+  s = n(470079),
+  r = n(120356),
+  l = n.n(r),
   i = n(920906),
   o = n(442837),
   c = n(481060),
@@ -11,34 +11,34 @@ var s = n(735250),
   u = n(607070),
   m = n(454585),
   h = n(456269),
-  g = n(470623),
-  x = n(981631),
-  _ = n(689938),
-  E = n(782197),
+  _ = n(470623),
+  g = n(981631),
+  x = n(689938),
+  C = n(782197),
   f = n(622322);
-t.Z = l.memo(function(e) {
+t.Z = s.memo(function(e) {
   let {
     channel: t,
-    onChange: a
-  } = e, C = (0, g.AF)(), {
+    onChange: r
+  } = e, p = (0, _.AF)(), {
     guidelinesOpen: T
-  } = (0, g.xH)(e => {
+  } = (0, _.xH)(e => {
     let {
       guidelinesOpen: t
     } = e;
     return {
       guidelinesOpen: t
     }
-  }), N = (0, h.r_)(t), [I, S] = l.useState(!1), p = l.useCallback(e => {
+  }), I = (0, h.r_)(t), [E, N] = s.useState(!1), b = s.useCallback(e => {
     if (null == e) return;
     let t = e.clientHeight >= 220;
-    t !== I && S(t)
-  }, [I]);
-  l.useLayoutEffect(() => {
-    setTimeout(a, 350)
-  }, [T, a]);
+    t !== E && N(t)
+  }, [E]);
+  s.useLayoutEffect(() => {
+    setTimeout(r, 350)
+  }, [T, r]);
   let v = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-    [M, j] = l.useState(!T),
+    [S, M] = s.useState(!T),
     A = (0, i.useSpring)({
       opacity: T ? 1 : 0,
       maxHeight: T ? 500 : 0,
@@ -46,90 +46,90 @@ t.Z = l.memo(function(e) {
         duration: 300
       },
       immediate: v,
-      onRest: () => j(!T)
+      onRest: () => M(!T)
     });
-  return null != t.topic && t.topic.length > 0 ? (0, s.jsx)(i.animated.div, {
+  return null != t.topic && t.topic.length > 0 ? (0, a.jsx)(i.animated.div, {
     style: A,
-    className: M ? E.hiddenVisually : void 0,
-    children: (0, s.jsxs)("div", {
-      className: E.container,
-      children: [(0, s.jsxs)("div", {
-        className: E.headerContainer,
-        children: [(0, s.jsxs)(c.Heading, {
+    className: S ? C.hiddenVisually : void 0,
+    children: (0, a.jsxs)("div", {
+      className: C.container,
+      children: [(0, a.jsxs)("div", {
+        className: C.headerContainer,
+        children: [(0, a.jsxs)(c.Heading, {
           variant: "heading-lg/semibold",
-          className: E.guidelinesHeader,
-          children: [(0, s.jsx)(c.BookCheckIcon, {
+          className: C.guidelinesHeader,
+          children: [(0, a.jsx)(c.BookCheckIcon, {
             size: "custom",
             color: "currentColor",
             width: 20,
             height: 20
-          }), _.Z.Messages.FORUM_POST_GUIDELINES_TITLE, N && (0, s.jsx)(c.Clickable, {
+          }), x.Z.Messages.FORUM_POST_GUIDELINES_TITLE, I && (0, a.jsx)(c.Clickable, {
             onClick: () => {
-              d.ZP.open(t.id, void 0, x.ZfP.TOPIC)
+              d.ZP.open(t.id, void 0, g.ZfP.TOPIC)
             },
             tag: "span",
-            className: E.clickable,
-            children: (0, s.jsx)(c.PencilIcon, {
+            className: C.clickable,
+            children: (0, a.jsx)(c.PencilIcon, {
               size: "xs",
               color: "currentColor"
             })
           })]
-        }), (0, s.jsx)(c.Clickable, {
-          "aria-label": _.Z.Messages.CLOSE,
-          className: E.clickable,
+        }), (0, a.jsx)(c.Clickable, {
+          "aria-label": x.Z.Messages.CLOSE,
+          className: C.clickable,
           onClick: () => {
-            C.getState().setGuidelinesOpen(!1)
+            p.getState().setGuidelinesOpen(!1)
           },
-          children: (0, s.jsx)(c.CloseSmallIcon, {
+          children: (0, a.jsx)(c.CloseSmallIcon, {
             size: "xs",
             color: "currentColor"
           })
         })]
-      }), (0, s.jsxs)("div", {
-        className: E.descriptionContainer,
-        children: [(0, s.jsx)(c.Text, {
+      }), (0, a.jsxs)("div", {
+        className: C.descriptionContainer,
+        children: [(0, a.jsx)(c.Text, {
           selectable: !0,
           variant: "text-sm/normal",
           color: "header-secondary",
           style: {
             maxHeight: 220
           },
-          className: r()(E.guidelines, f.markup),
-          children: (0, s.jsx)("div", {
-            ref: p,
+          className: l()(C.guidelines, f.markup),
+          children: (0, a.jsx)("div", {
+            ref: b,
             children: m.Z.parseForumPostGuidelines(t.topic, !0, {
               channelId: t.id,
               allowHeading: !0,
               allowList: !0
             })
           })
-        }), I && (0, s.jsxs)("div", {
-          className: E.showMore,
-          children: [(0, s.jsx)("div", {
-            className: E.gradient
-          }), (0, s.jsx)("div", {
-            className: E.linkContainer,
-            children: (0, s.jsx)(c.Clickable, {
-              className: E.showMoreLink,
+        }), E && (0, a.jsxs)("div", {
+          className: C.showMore,
+          children: [(0, a.jsx)("div", {
+            className: C.gradient
+          }), (0, a.jsx)("div", {
+            className: C.linkContainer,
+            children: (0, a.jsx)(c.Clickable, {
+              className: C.showMoreLink,
               onClick: () => {
                 (0, c.openModalLazy)(async () => {
                   let {
                     default: e
-                  } = await Promise.all([n.e("99387"), n.e("78712")]).then(n.bind(n, 223164));
-                  return n => (0, s.jsx)(e, {
+                  } = await n.e("78712").then(n.bind(n, 223164));
+                  return n => (0, a.jsx)(e, {
                     ...n,
                     channel: t
                   })
                 })
               },
-              children: (0, s.jsxs)(c.Text, {
+              children: (0, a.jsxs)(c.Text, {
                 variant: "text-sm/semibold",
                 color: "text-brand",
-                className: E.showMoreText,
-                children: [_.Z.Messages.FORUM_CHANNEL_TOPIC_VIEW_ALL, (0, s.jsx)(c.MaximizeIcon, {
+                className: C.showMoreText,
+                children: [x.Z.Messages.FORUM_CHANNEL_TOPIC_VIEW_ALL, (0, a.jsx)(c.MaximizeIcon, {
                   size: "xs",
                   color: "currentColor",
-                  className: E.showMoreIcon
+                  className: C.showMoreIcon
                 })]
               })
             })

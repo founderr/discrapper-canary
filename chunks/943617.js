@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   optionCard: "optionCard_b19204",
   singleColumn: "singleColumn_b19204",

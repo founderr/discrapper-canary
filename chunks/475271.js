@@ -14,7 +14,7 @@ e.default = {
     (0, n.openModalLazy)(async () => {
       let {
         default: a
-      } = await Promise.all([t.e("99387"), t.e("12192")]).then(t.bind(t, 718742));
+      } = await t.e("12192").then(t.bind(t, 718742));
       return t => (0, c.jsx)(a, {
         onCaptchaVerify: (a, t) => e({
           captcha_key: a,
@@ -41,7 +41,7 @@ e.default = {
       (0, n.openModalLazy)(async () => {
         let {
           default: n
-        } = await Promise.all([t.e("99387"), t.e("12192")]).then(t.bind(t, 718742));
+        } = await t.e("12192").then(t.bind(t, 718742));
         return t => (0, c.jsx)(n, {
           onCaptchaVerify: (e, t) => a({
             captcha_key: e,

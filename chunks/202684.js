@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   table: "table_edfdcc",
   tableContainer: "tableContainer_edfdcc",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   selectableItem: "selectableItem_d40acf",
   selected: "selected_d40acf",

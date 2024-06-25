@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   settingsColumn: "settingsColumn_fc6cb6 " + n("576107").customColumn,
   settingsContainer: "settingsContainer_fc6cb6 " + n("576107").customContainer,

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   messagePreviewContainer: "messagePreviewContainer_b06e1c",
   container: "container_b06e1c",

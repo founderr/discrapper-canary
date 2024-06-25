@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   presets: "presets_df4d02",
   header: "header_df4d02",

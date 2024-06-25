@@ -24,13 +24,13 @@ function g(e, n, g) {
   }), [n, e.id]);
   (0, u.$)(I), (0, a.e7)([E.Z], () => E.Z.getGuildVersion(n), [n]);
   let m = (0, a.e7)([c.Z], () => c.Z.getChannel(g)),
-    N = (0, a.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
-    R = (0, a.e7)([M.default], () => M.default.getCurrentUser()),
+    R = (0, a.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
+    N = (0, a.e7)([M.default], () => M.default.getCurrentUser()),
     C = (0, s.Z)(m, "Context Menu"),
     T = (0, o.Xb)(m);
-  if ((null == R ? void 0 : R.id) === e.id) return [C];
-  if (null == N || null == m || null == R) return [];
-  let v = T || m.ownerId === R.id && m.type === f.d4z.PRIVATE_THREAD;
+  if ((null == N ? void 0 : N.id) === e.id) return [C];
+  if (null == R || null == m || null == N) return [];
+  let v = T || m.ownerId === N.id && m.type === f.d4z.PRIVATE_THREAD;
   return [v ? (0, l.jsx)(r.MenuItem, {
     id: "remove",
     label: m.isForumPost() ? _.Z.Messages.REMOVE_USER_FROM_FORUM_POST.format({
@@ -40,7 +40,7 @@ function g(e, n, g) {
     }),
     color: "danger",
     action: () => d.Z.removeMember(m, e.id, "Context Menu")
-  }) : null, E.Z.canManageUser(f.Plq.KICK_MEMBERS, e, N) ? (0, l.jsx)(r.MenuItem, {
+  }) : null, E.Z.canManageUser(f.Plq.KICK_MEMBERS, e, R) ? (0, l.jsx)(r.MenuItem, {
     id: "kick",
     label: v ? _.Z.Messages.KICK_USER_FROM_SERVER.format({
       user: e.username
@@ -51,14 +51,14 @@ function g(e, n, g) {
     action: () => (0, r.openModalLazy)(async () => {
       let {
         default: n
-      } = await Promise.all([t.e("99387"), t.e("5454")]).then(t.bind(t, 854360));
+      } = await t.e("5454").then(t.bind(t, 854360));
       return t => (0, l.jsx)(n, {
         ...t,
-        guildId: N.id,
+        guildId: R.id,
         user: e
       })
     })
-  }) : null, E.Z.canManageUser(f.Plq.BAN_MEMBERS, e, N) ? (0, l.jsx)(r.MenuItem, {
+  }) : null, E.Z.canManageUser(f.Plq.BAN_MEMBERS, e, R) ? (0, l.jsx)(r.MenuItem, {
     id: "ban",
     label: v ? _.Z.Messages.BAN_USER_FROM_SERVER.format({
       user: e.username
@@ -69,10 +69,10 @@ function g(e, n, g) {
     action: () => (0, r.openModalLazy)(async () => {
       let {
         default: n
-      } = await Promise.all([t.e("99387"), t.e("43350")]).then(t.bind(t, 98746));
+      } = await t.e("43350").then(t.bind(t, 98746));
       return t => (0, l.jsx)(n, {
         ...t,
-        guildId: N.id,
+        guildId: R.id,
         user: e
       })
     })

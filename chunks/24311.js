@@ -31,7 +31,7 @@ function M(e, n) {
       (0, a.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([t.e("99387"), t.e("27157")]).then(t.bind(t, 736454));
+        } = await t.e("27157").then(t.bind(t, 736454));
         return n => (0, l.jsx)(e, {
           onSubmit: I,
           ...n

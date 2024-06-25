@@ -4,154 +4,154 @@ t.d(s, {
   }
 }), t(47120), t(773603);
 var n = t(735250),
-  i = t(470079),
-  a = t(849055),
-  l = t(442837),
-  r = t(481060),
-  o = t(239091),
+  a = t(470079),
+  i = t(849055),
+  r = t(442837),
+  o = t(481060),
+  l = t(239091),
   c = t(202858),
-  E = t(153124),
-  d = t(360048),
-  _ = t(287880),
-  T = t(358085),
-  S = t(960048),
-  u = t(998502),
+  d = t(153124),
+  _ = t(360048),
+  E = t(287880),
+  u = t(358085),
+  T = t(960048),
+  S = t(998502),
   I = t(365007),
   N = t(15980),
-  A = t(755733),
-  C = t(981631),
-  O = t(689938),
-  m = t(277605);
+  C = t(755733),
+  A = t(981631),
+  m = t(689938),
+  O = t(277605);
 
-function h(e) {
+function g(e) {
   let {
     transitionState: s,
-    onClose: l,
-    ticket: o,
-    challenge: d
-  } = e, _ = (0, E.Dt)(), [N, h] = i.useState(""), [g, R] = i.useState(!0), [M, x] = i.useState(A.x.INIT), [D, p] = i.useState(""), [L, P] = i.useState(null), Z = async () => {
+    onClose: r,
+    ticket: l,
+    challenge: _
+  } = e, E = (0, d.Dt)(), [N, g] = a.useState(""), [h, R] = a.useState(!0), [p, x] = a.useState(C.x.INIT), [M, D] = a.useState(""), [f, L] = a.useState(null), P = async () => {
     let e;
-    x(A.x.REGISTER);
-    let s = T.isPlatformEmbedded && u.ZP.supportsFeature(C.eRX.WEBAUTHN) ? u.ZP.webAuthnRegister(d) : a.Ue(JSON.parse(d)).then(e => JSON.stringify(e));
+    x(C.x.REGISTER);
+    let s = u.isPlatformEmbedded && S.ZP.supportsFeature(A.eRX.WEBAUTHN) ? S.ZP.webAuthnRegister(_) : i.Ue(JSON.parse(_)).then(e => JSON.stringify(e));
     try {
       e = await s
     } catch (e) {
-      S.Z.captureException(e), P(O.Z.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(A.x.INIT);
+      T.Z.captureException(e), L(m.Z.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(C.x.INIT);
       return
     }
-    p(e), x(A.x.NAME)
+    D(e), x(C.x.NAME)
   };
-  return (0, n.jsxs)(r.ModalRoot, {
+  return (0, n.jsxs)(o.ModalRoot, {
     transitionState: s,
-    "aria-labelledby": _,
-    children: [(0, n.jsxs)(r.ModalHeader, {
-      className: m.header,
+    "aria-labelledby": E,
+    children: [(0, n.jsxs)(o.ModalHeader, {
+      className: O.header,
       separator: !1,
-      children: [(0, n.jsxs)(r.Heading, {
-        id: _,
+      children: [(0, n.jsxs)(o.Heading, {
+        id: E,
         variant: "heading-lg/semibold",
-        children: [M === A.x.INIT && O.Z.Messages.TWO_FA_WEBAUTHN_REGISTER, M === A.x.REGISTER && O.Z.Messages.TWO_FA_WEBAUTHN_INTERACT, M === A.x.NAME && O.Z.Messages.TWO_FA_WEBAUTHN_NAME]
-      }), (0, n.jsx)(r.ModalCloseButton, {
-        onClick: l,
-        className: m.modalCloseButton
+        children: [p === C.x.INIT && m.Z.Messages.TWO_FA_WEBAUTHN_REGISTER, p === C.x.REGISTER && m.Z.Messages.TWO_FA_WEBAUTHN_INTERACT, p === C.x.NAME && m.Z.Messages.TWO_FA_WEBAUTHN_NAME]
+      }), (0, n.jsx)(o.ModalCloseButton, {
+        onClick: r,
+        className: O.modalCloseButton
       })]
-    }), (0, n.jsxs)(r.Slides, {
-      activeSlide: M,
+    }), (0, n.jsxs)(o.Slides, {
+      activeSlide: p,
       width: 440,
-      children: [(0, n.jsxs)(r.Slide, {
-        id: A.x.INIT,
-        children: [(0, n.jsxs)(r.ModalContent, {
-          className: m.content,
+      children: [(0, n.jsxs)(o.Slide, {
+        id: C.x.INIT,
+        children: [(0, n.jsxs)(o.ModalContent, {
+          className: O.content,
           children: [(0, n.jsx)("div", {
-            className: m.icon,
+            className: O.icon,
             children: (0, n.jsx)("img", {
               alt: "",
               src: t(773072)
             })
           }), (0, n.jsx)("div", {
-            children: null != L && (0, n.jsx)(r.Text, {
+            children: null != f && (0, n.jsx)(o.Text, {
               variant: "text-md/normal",
               color: "status-danger",
-              children: L
+              children: f
             })
           }), (0, n.jsx)("div", {
-            children: (0, n.jsx)(r.Text, {
+            children: (0, n.jsx)(o.Text, {
               variant: "text-md/normal",
-              children: O.Z.Messages.TWO_FA_WEBAUTHN_REGISTER_INSTRUCTIONS
+              children: m.Z.Messages.TWO_FA_WEBAUTHN_REGISTER_INSTRUCTIONS
             })
           })]
-        }), (0, n.jsx)(r.ModalFooter, {
-          children: (0, n.jsx)(r.Button, {
-            onClick: Z,
-            children: O.Z.Messages.TWO_FA_WEBAUTHN_REGISTER_CONFIRM
+        }), (0, n.jsx)(o.ModalFooter, {
+          children: (0, n.jsx)(o.Button, {
+            onClick: P,
+            children: m.Z.Messages.TWO_FA_WEBAUTHN_REGISTER_CONFIRM
           })
         })]
-      }), (0, n.jsxs)(r.Slide, {
-        id: A.x.REGISTER,
-        children: [(0, n.jsxs)(r.ModalContent, {
-          className: m.content,
+      }), (0, n.jsxs)(o.Slide, {
+        id: C.x.REGISTER,
+        children: [(0, n.jsxs)(o.ModalContent, {
+          className: O.content,
           children: [(0, n.jsx)("div", {
-            className: m.icon,
+            className: O.icon,
             children: (0, n.jsx)("img", {
               alt: "",
               src: t(773072)
             })
           }), (0, n.jsx)("div", {
-            children: (0, n.jsx)(r.Text, {
+            children: (0, n.jsx)(o.Text, {
               variant: "text-md/normal",
-              children: O.Z.Messages.TWO_FA_WEBAUTHN_INTERACT_INSTRUCTIONS
+              children: m.Z.Messages.TWO_FA_WEBAUTHN_INTERACT_INSTRUCTIONS
             })
           })]
-        }), (0, n.jsx)(r.ModalFooter, {
-          children: (0, n.jsx)(r.Button, {
+        }), (0, n.jsx)(o.ModalFooter, {
+          children: (0, n.jsx)(o.Button, {
             submitting: !0
           })
         })]
-      }), (0, n.jsx)(r.Slide, {
-        id: A.x.NAME,
+      }), (0, n.jsx)(o.Slide, {
+        id: C.x.NAME,
         children: (0, n.jsxs)("form", {
           onSubmit: e => {
-            e.preventDefault(), (0, I.Sr)(N, o, D).then(async () => {
+            e.preventDefault(), (0, I.Sr)(N, l, M).then(async () => {
               await (0, c.Yn)(!1)
-            }).then(() => l()).catch(() => {
-              P(O.Z.Messages.ERROR_OCCURRED_TRY_AGAIN), x(A.x.INIT)
+            }).then(() => r()).catch(() => {
+              L(m.Z.Messages.ERROR_OCCURRED_TRY_AGAIN), x(C.x.INIT)
             })
           },
-          children: [(0, n.jsxs)(r.ModalContent, {
-            className: m.content,
+          children: [(0, n.jsxs)(o.ModalContent, {
+            className: O.content,
             children: [(0, n.jsx)("div", {
-              className: m.icon,
+              className: O.icon,
               children: (0, n.jsx)("img", {
                 alt: "",
                 src: t(637163)
               })
             }), (0, n.jsxs)("div", {
-              children: [(0, n.jsx)(r.Text, {
+              children: [(0, n.jsx)(o.Text, {
                 variant: "text-md/normal",
-                children: O.Z.Messages.TWO_FA_WEBAUTHN_NAME_INSTRUCTIONS
-              }), (0, n.jsx)(r.TextInput, {
-                className: m.input,
+                children: m.Z.Messages.TWO_FA_WEBAUTHN_NAME_INSTRUCTIONS
+              }), (0, n.jsx)(o.TextInput, {
+                className: O.input,
                 value: N,
                 onChange: e => {
-                  h(e), R(0 === e.length)
+                  g(e), R(0 === e.length)
                 },
                 autoFocus: !0,
                 minLength: 1
               })]
             })]
-          }), (0, n.jsxs)(r.ModalFooter, {
-            className: m.footer,
-            children: [(0, n.jsx)(r.Button, {
+          }), (0, n.jsxs)(o.ModalFooter, {
+            className: O.footer,
+            children: [(0, n.jsx)(o.Button, {
               type: "submit",
-              disabled: g,
-              children: O.Z.Messages.TWO_FA_WEBAUTHN_REGISTER_FINISH
-            }), (0, n.jsx)(r.Button, {
-              look: r.Button.Looks.LINK,
-              color: r.Button.Colors.PRIMARY,
+              disabled: h,
+              children: m.Z.Messages.TWO_FA_WEBAUTHN_REGISTER_FINISH
+            }), (0, n.jsx)(o.Button, {
+              look: o.Button.Looks.LINK,
+              color: o.Button.Colors.PRIMARY,
               onClick: () => {
-                x(A.x.INIT)
+                x(C.x.INIT)
               },
-              children: O.Z.Messages.BACK
+              children: m.Z.Messages.BACK
             })]
           })]
         })
@@ -160,36 +160,36 @@ function h(e) {
   })
 }
 
-function g(e) {
+function h(e) {
   let {
     onSelect: s,
-    credential: i
+    credential: a
   } = e;
-  return (0, n.jsxs)(r.Menu, {
+  return (0, n.jsxs)(o.Menu, {
     navId: "webauthn-credential-actions",
-    onClose: o.Zy,
-    "aria-label": O.Z.Messages.TWO_FA_WEBAUTHN_CREDENTIAL_OPTIONS,
+    onClose: l.Zy,
+    "aria-label": m.Z.Messages.TWO_FA_WEBAUTHN_CREDENTIAL_OPTIONS,
     onSelect: s,
-    children: [(0, n.jsx)(r.MenuItem, {
-      id: "webauthn-edit-credential-".concat(i.id),
-      label: O.Z.Messages.EDIT,
+    children: [(0, n.jsx)(o.MenuItem, {
+      id: "webauthn-edit-credential-".concat(a.id),
+      label: m.Z.Messages.EDIT,
       action: () => {
-        (0, r.openModalLazy)(async () => {
+        (0, o.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([t.e("99387"), t.e("804")]).then(t.bind(t, 89616));
+          } = await t.e("804").then(t.bind(t, 89616));
           return s => (0, n.jsx)(e, {
-            credential: i,
+            credential: a,
             ...s
           })
         })
       }
-    }), (0, n.jsx)(r.MenuItem, {
-      id: "webauthn-delete-credential-".concat(i.id),
-      label: O.Z.Messages.TWO_FA_WEBAUTHN_DELETE_CREDENTIAL,
+    }), (0, n.jsx)(o.MenuItem, {
+      id: "webauthn-delete-credential-".concat(a.id),
+      label: m.Z.Messages.TWO_FA_WEBAUTHN_DELETE_CREDENTIAL,
       color: "danger",
       action: () => {
-        (0, I.cT)(i)
+        (0, I.cT)(a)
       }
     })]
   })
@@ -199,77 +199,77 @@ function R() {
   let {
     credentials: e,
     hasFetchedCredentials: s
-  } = (0, l.cj)([N.Z], () => ({
+  } = (0, r.cj)([N.Z], () => ({
     hasFetchedCredentials: N.Z.hasFetchedCredentials(),
     credentials: N.Z.getCredentials()
   }));
-  i.useEffect(() => {
+  a.useEffect(() => {
     !s && (0, I.hL)()
   }, [s]);
-  let [t, a] = i.useState(!1);
-  return (0, n.jsxs)(r.FormSection, {
-    title: O.Z.Messages.TWO_FA_WEBAUTHN_TITLE,
-    className: m.settings,
-    children: [(0, n.jsx)(r.FormText, {
-      type: r.FormText.Types.DESCRIPTION,
-      className: m.description,
-      children: O.Z.Messages.TWO_FA_WEBAUTHN_DESCRIPTION
+  let [t, i] = a.useState(!1);
+  return (0, n.jsxs)(o.FormSection, {
+    title: m.Z.Messages.TWO_FA_WEBAUTHN_TITLE,
+    className: O.settings,
+    children: [(0, n.jsx)(o.FormText, {
+      type: o.FormText.Types.DESCRIPTION,
+      className: O.description,
+      children: m.Z.Messages.TWO_FA_WEBAUTHN_DESCRIPTION
     }), e.length > 0 && (0, n.jsx)("div", {
-      className: m.credentialList,
-      children: e.map(e => (0, n.jsx)(d.Z, {
+      className: O.credentialList,
+      children: e.map(e => (0, n.jsx)(_.Z, {
         avatar: null,
         name: e.name,
-        className: m.credentialItem,
+        className: O.credentialItem,
         onContextMenu: s => {
-          (0, o.vq)(s, s => (0, n.jsx)(g, {
+          (0, l.vq)(s, s => (0, n.jsx)(h, {
             ...s,
             credential: e
           }))
         },
-        children: (0, n.jsx)(r.Button, {
-          look: r.Button.Looks.BLANK,
-          color: r.Button.Colors.TRANSPARENT,
-          size: r.Button.Sizes.ICON,
+        children: (0, n.jsx)(o.Button, {
+          look: o.Button.Looks.BLANK,
+          color: o.Button.Colors.TRANSPARENT,
+          size: o.Button.Sizes.ICON,
           onClick: s => {
-            (0, o.vq)(s, s => (0, n.jsx)(g, {
+            (0, l.vq)(s, s => (0, n.jsx)(h, {
               ...s,
               credential: e
             }))
           },
-          "aria-label": O.Z.Messages.TWO_FA_WEBAUTHN_CREDENTIAL_OPTIONS,
-          innerClassName: m.credentialOptions,
-          children: (0, n.jsx)(r.MoreVerticalIcon, {
+          "aria-label": m.Z.Messages.TWO_FA_WEBAUTHN_CREDENTIAL_OPTIONS,
+          innerClassName: O.credentialOptions,
+          children: (0, n.jsx)(o.MoreVerticalIcon, {
             size: "md",
             color: "currentColor",
-            className: m.__invalid_overflowIcon,
-            colorClass: m.__invalid_overflowIconFg,
+            className: O.__invalid_overflowIcon,
+            colorClass: O.__invalid_overflowIconFg,
             "aria-hidden": !0
           })
         })
       }, e.id))
     }), (0, n.jsx)("div", {
-      children: (0, n.jsx)(r.Button, {
+      children: (0, n.jsx)(o.Button, {
         onClick: () => {
-          a(!0), (0, I.L$)().then(e => {
+          i(!0), (0, I.L$)().then(e => {
             let {
               ticket: s,
               challenge: t
             } = e;
-            (0, r.openModal)(e => (0, n.jsx)(h, {
+            (0, o.openModal)(e => (0, n.jsx)(g, {
               ...e,
               ticket: s,
               challenge: t
             }))
           }).catch(e => {
-            e.message !== O.Z.Messages.MFA_V2_CANCELED && S.Z.captureException(e)
+            e.message !== m.Z.Messages.MFA_V2_CANCELED && T.Z.captureException(e)
           }).finally(() => {
-            a(!1)
+            i(!1)
           })
         },
         submitting: t,
-        disabled: !_.Ae,
-        size: r.Button.Sizes.SMALL,
-        children: O.Z.Messages.TWO_FA_WEBAUTHN_REGISTER
+        disabled: !E.Ae,
+        size: o.Button.Sizes.SMALL,
+        children: m.Z.Messages.TWO_FA_WEBAUTHN_REGISTER
       })
     })]
   })

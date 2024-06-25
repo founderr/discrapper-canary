@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   onboardingContainer: "onboardingContainer_a4e2c3",
   upsellOnTop: "upsellOnTop_a4e2c3",

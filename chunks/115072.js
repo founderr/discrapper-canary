@@ -1,40 +1,40 @@
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return C
   }
 }), n(47120);
 var a = n(735250),
-  s = n(470079),
-  l = n(772848),
-  i = n(442837),
-  r = n(780384),
-  o = n(481060),
-  u = n(53281),
-  c = n(476326),
-  m = n(273031),
+  r = n(470079),
+  i = n(772848),
+  o = n(442837),
+  s = n(780384),
+  l = n(481060),
+  c = n(53281),
+  m = n(476326),
+  u = n(273031),
   d = n(898463),
-  h = n(210887),
-  v = n(154921),
+  _ = n(210887),
+  h = n(154921),
   p = n(404975),
-  x = n(768581),
-  R = n(358085),
-  _ = n(223356),
-  I = n(225452),
-  T = n(689938),
-  f = n(803437),
-  E = n(289575),
-  g = n(371411);
+  v = n(768581),
+  I = n(358085),
+  R = n(223356),
+  x = n(225452),
+  f = n(689938),
+  T = n(803437),
+  g = n(289575),
+  E = n(371411);
 let j = ["Android", "iOS", "Windows Mobile", "Windows", "Linux", "Mac OS X"].map(e => ({
   label: e,
   value: e
 }));
 
-function O(e) {
-  var t, O, N, P, S;
+function C(e) {
+  var t, C, O, P, N;
   let {
-    transitionState: C,
-    onClose: M
-  } = e, B = s.useRef(null), Z = s.useRef(null), [b, U] = s.useState(""), [L, G] = s.useState(""), [y, A] = s.useState(), [w, D] = s.useState(""), [F, k] = s.useState([]), [V, Y] = s.useState(), [W, H] = s.useState(), [z, X] = s.useState(!1), [Q, q] = s.useState(""), [K, J] = s.useState(function(e) {
+    transitionState: S,
+    onClose: B
+  } = e, M = r.useRef(null), b = r.useRef(null), [Z, y] = r.useState(""), [G, U] = r.useState(""), [L, A] = r.useState(), [D, w] = r.useState(""), [F, k] = r.useState([]), [V, Y] = r.useState(), [W, H] = r.useState(), [z, X] = r.useState(!1), [Q, q] = r.useState(""), [K, J] = r.useState(function(e) {
     switch (e) {
       case "windows":
         return "Windows";
@@ -44,291 +44,291 @@ function O(e) {
         return "Linux"
     }
     return ""
-  }((0, R.getOS)())), [$, ee] = s.useState(""), [et, en] = s.useState(""), [ea, es] = s.useState(""), [el, ei] = s.useState(""), [er, eo] = s.useState(!1), [eu, ec] = s.useState(!1), [em, ed] = s.useState(!1), eh = () => {
-    null == M || M()
-  }, ev = e => {
+  }((0, I.getOS)())), [$, ee] = r.useState(""), [et, en] = r.useState(""), [ea, er] = r.useState(""), [ei, eo] = r.useState(""), [es, el] = r.useState(!1), [ec, em] = r.useState(!1), [eu, ed] = r.useState(!1), e_ = () => {
+    null == B || B()
+  }, eh = e => {
     k(F.filter(t => t.id !== e))
   };
   async function ep() {
     var e;
-    if (ed(!1), "" === b || null == y) {
-      eo(!0);
+    if (ed(!1), "" === Z || null == L) {
+      el(!0);
       return
     }
-    let t = null == V ? void 0 : null === (e = V.features) || void 0 === e ? void 0 : e.find(e => (0, _.pD)(e) === W);
-    ec(!0), eo(!1);
-    let s = (0, I.D)(F.map(e => {
+    let t = null == V ? void 0 : null === (e = V.features) || void 0 === e ? void 0 : e.find(e => (0, R.pD)(e) === W);
+    em(!0), el(!1);
+    let r = (0, x.D)(F.map(e => {
         let {
           item: t
         } = e;
         return t
       })),
-      l = !0 === z ? {
+      i = !0 === z ? {
         overridePlatformInformation: z,
         device: Q,
         operatingSystem: K,
         operatingSystemVersion: $,
         clientVersion: et,
         clientBuildNumber: ea,
-        locale: el
+        locale: ei
       } : {
         overridePlatformInformation: z
       },
-      i = await (0, _.ZD)({
-        name: b,
-        description: L,
-        priority: y,
+      o = await (0, R.ZD)({
+        name: Z,
+        description: G,
+        priority: L,
         feature: t,
-        url: w
-      }, l, s).catch(() => ed(!0));
-    ec(!1), null != i && i.ok ? (window.open(i.body.permalink_url, "_blank"), eh(), (0, o.openModalLazy)(async () => {
+        url: D
+      }, i, r).catch(() => ed(!0));
+    em(!1), null != o && o.ok ? (window.open(o.body.permalink_url, "_blank"), e_(), (0, l.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("24053")]).then(n.bind(n, 81155));
+      } = await n.e("64648").then(n.bind(n, 81155));
       return t => (0, a.jsx)(e, {
         ...t,
-        asanaTask: i.body
+        asanaTask: o.body
       })
     })) : ed(!0)
   }
-  s.useEffect(() => {
+  r.useEffect(() => {
     (async function e() {
-      Y(await (0, _.WG)())
+      Y(await (0, R.WG)())
     })()
-  }, []), s.useEffect(() => {
+  }, []), r.useEffect(() => {
     if (F.length > 0) {
       var e;
-      null === (e = Z.current) || void 0 === e || e.scrollIntoView({
+      null === (e = b.current) || void 0 === e || e.scrollIntoView({
         behavior: "smooth",
         block: "end"
       })
     }
   }, [F]);
-  let ex = (0, i.e7)([h.Z], () => h.Z.theme),
-    eR = (0, r.wj)(ex) ? E : g;
-  return (0, a.jsx)(o.ModalRoot, {
-    className: f.modalRoot,
-    transitionState: C,
-    "aria-label": T.Z.Messages.SUBMIT_BUG,
-    children: (0, a.jsx)(o.ModalContent, {
-      className: f.modalContent,
+  let ev = (0, o.e7)([_.Z], () => _.Z.theme),
+    eI = (0, s.wj)(ev) ? g : E;
+  return (0, a.jsx)(l.ModalRoot, {
+    className: T.modalRoot,
+    transitionState: S,
+    "aria-label": f.Z.Messages.SUBMIT_BUG,
+    children: (0, a.jsx)(l.ModalContent, {
+      className: T.modalContent,
       paddingFix: !1,
       children: (0, a.jsx)("div", {
-        className: f.container,
-        children: (0, a.jsx)(o.HeadingLevel, {
+        className: T.container,
+        children: (0, a.jsx)(l.HeadingLevel, {
           forceLevel: 1,
           component: (0, a.jsx)("div", {
-            className: f.sidebarContainer,
-            children: (0, a.jsx)(v.Z, {
+            className: T.sidebarContainer,
+            children: (0, a.jsx)(h.Z, {
               strong: !0,
-              color: v.Z.Colors.HEADER_PRIMARY,
-              size: v.Z.Sizes.SIZE_24,
-              children: (0, a.jsx)(o.H, {
-                children: T.Z.Messages.BUG_REPORT_TITLE
+              color: h.Z.Colors.HEADER_PRIMARY,
+              size: h.Z.Sizes.SIZE_24,
+              children: (0, a.jsx)(l.H, {
+                children: f.Z.Messages.BUG_REPORT_TITLE
               })
             })
           }),
           children: (0, a.jsxs)("div", {
-            className: f.contentContainer,
+            className: T.contentContainer,
             children: [(0, a.jsx)("img", {
-              className: f.contentIcon,
+              className: T.contentIcon,
               alt: "",
-              src: eR
+              src: eI
             }), (0, a.jsxs)("form", {
-              className: f.form,
+              className: T.form,
               onSubmit: ep,
-              children: [(0, a.jsx)(o.FormItem, {
-                error: er && "" === b ? T.Z.Messages.REQUIRED : null,
-                title: T.Z.Messages.BUG_REPORT_NAME,
-                className: f.formInput,
-                children: (0, a.jsx)(o.TextInput, {
+              children: [(0, a.jsx)(l.FormItem, {
+                error: es && "" === Z ? f.Z.Messages.REQUIRED : null,
+                title: f.Z.Messages.BUG_REPORT_NAME,
+                className: T.formInput,
+                children: (0, a.jsx)(l.TextInput, {
                   placeholder: "Something is broken on this screen.",
                   type: "text",
-                  value: b,
+                  value: Z,
                   maxLength: 100,
-                  onChange: U
+                  onChange: y
                 })
-              }), (0, a.jsxs)(o.FormItem, {
-                title: T.Z.Messages.BUG_REPORT_DESCRIPTION,
-                className: f.formInput,
-                children: [(0, a.jsx)(o.TextArea, {
+              }), (0, a.jsxs)(l.FormItem, {
+                title: f.Z.Messages.BUG_REPORT_DESCRIPTION,
+                className: T.formInput,
+                children: [(0, a.jsx)(l.TextArea, {
                   placeholder: "What did you expect to see?",
-                  value: L,
-                  onChange: G
-                }), (0, a.jsx)(o.Text, {
+                  value: G,
+                  onChange: U
+                }), (0, a.jsx)(l.Text, {
                   variant: "text-sm/normal",
                   color: "info-help-text",
                   children: "You can add additional information/media on the ticket after submitting"
                 })]
-              }), (0, a.jsx)(o.FormItem, {
-                error: er && void 0 === y ? T.Z.Messages.REQUIRED : null,
-                title: T.Z.Messages.BUG_REPORT_PRIORITY,
-                className: f.formInput,
-                children: (0, a.jsx)(o.SingleSelect, {
+              }), (0, a.jsx)(l.FormItem, {
+                error: es && void 0 === L ? f.Z.Messages.REQUIRED : null,
+                title: f.Z.Messages.BUG_REPORT_PRIORITY,
+                className: T.formInput,
+                children: (0, a.jsx)(l.SingleSelect, {
                   renderOptionLabel: e => (function(e) {
                     let t = e.priority;
                     return (0, a.jsxs)("div", {
-                      className: f.formPriorityImageContainer,
+                      className: T.formPriorityImageContainer,
                       children: [(0, a.jsxs)("div", {
-                        className: f.formPriorityTitleContainer,
+                        className: T.formPriorityTitleContainer,
                         children: [(0, a.jsx)("img", {
                           alt: "",
-                          className: f.formPriorityImage,
-                          src: (0, x.gT)({
+                          className: T.formPriorityImage,
+                          src: (0, v.gT)({
                             id: t.emoji,
                             animated: !0,
                             size: 48
                           })
-                        }), (0, a.jsx)(o.Text, {
+                        }), (0, a.jsx)(l.Text, {
                           color: "header-primary",
                           variant: "text-sm/semibold",
-                          className: f.formPriorityTitle,
+                          className: T.formPriorityTitle,
                           children: t.title
                         })]
-                      }), (0, a.jsx)(o.Text, {
+                      }), (0, a.jsx)(l.Text, {
                         color: "header-secondary",
                         variant: "text-xs/normal",
-                        className: f.formPriorityDescription,
+                        className: T.formPriorityDescription,
                         children: t.description
                       })]
                     })
                   })(e),
                   onChange: A,
-                  options: (0, _.Tj)().map(e => ({
+                  options: (0, R.Tj)().map(e => ({
                     priority: e,
                     value: e.value,
                     label: e.title
                   })),
-                  value: y,
+                  value: L,
                   maxVisibleItems: 3,
                   closeOnSelect: !0
                 })
-              }), (0, a.jsx)(o.FormItem, {
-                title: T.Z.Messages.BUG_REPORT_FEATURE_AREA,
-                className: f.formInput,
-                children: (0, a.jsx)(o.SearchableSelect, {
+              }), (0, a.jsx)(l.FormItem, {
+                title: f.Z.Messages.BUG_REPORT_FEATURE_AREA,
+                className: T.formInput,
+                children: (0, a.jsx)(l.SearchableSelect, {
                   value: W,
-                  options: null !== (S = null == (t = V) ? void 0 : null === (P = t.features) || void 0 === P ? void 0 : null === (N = P.filter(e => "" !== (0, _.pD)(e))) || void 0 === N ? void 0 : null === (O = N.map(e => {
+                  options: null !== (N = null == (t = V) ? void 0 : null === (P = t.features) || void 0 === P ? void 0 : null === (O = P.filter(e => "" !== (0, R.pD)(e))) || void 0 === O ? void 0 : null === (C = O.map(e => {
                     var t;
                     return {
                       label: null !== (t = e.name) && void 0 !== t ? t : "",
-                      value: (0, _.pD)(e)
+                      value: (0, R.pD)(e)
                     }
-                  })) || void 0 === O ? void 0 : O.sort((e, t) => e.label.localeCompare(t.label))) && void 0 !== S ? S : [],
+                  })) || void 0 === C ? void 0 : C.sort((e, t) => e.label.localeCompare(t.label))) && void 0 !== N ? N : [],
                   isDisabled: null == V,
                   onChange: e => H(e)
                 })
-              }), (0, a.jsx)(o.FormItem, {
-                title: T.Z.Messages.BUG_REPORT_URL,
-                className: f.formInput,
-                children: (0, a.jsx)(o.TextInput, {
-                  placeholder: T.Z.Messages.BUG_REPORT_EXTERNAL_SOURCE,
+              }), (0, a.jsx)(l.FormItem, {
+                title: f.Z.Messages.BUG_REPORT_URL,
+                className: T.formInput,
+                children: (0, a.jsx)(l.TextInput, {
+                  placeholder: f.Z.Messages.BUG_REPORT_EXTERNAL_SOURCE,
                   type: "text",
-                  value: w,
+                  value: D,
                   maxLength: 5e3,
-                  onChange: D
+                  onChange: w
                 })
-              }), (0, a.jsx)(o.FormItem, {
-                className: f.formInput,
-                children: (0, a.jsx)(o.Checkbox, {
+              }), (0, a.jsx)(l.FormItem, {
+                className: T.formInput,
+                children: (0, a.jsx)(l.Checkbox, {
                   value: z,
                   onChange: (e, t) => X(t),
-                  children: (0, a.jsx)(o.Text, {
+                  children: (0, a.jsx)(l.Text, {
                     variant: "text-sm/normal",
                     color: "info-help-text",
-                    children: T.Z.Messages.BUG_REPORT_OVERRIDE_PLATFORM_INFORMATION
+                    children: f.Z.Messages.BUG_REPORT_OVERRIDE_PLATFORM_INFORMATION
                   })
                 })
               }), z ? (0, a.jsxs)(a.Fragment, {
-                children: [(0, a.jsx)(o.FormItem, {
-                  title: T.Z.Messages.BUG_REPORT_DEVICE,
-                  className: f.formInput,
-                  children: (0, a.jsx)(o.TextInput, {
+                children: [(0, a.jsx)(l.FormItem, {
+                  title: f.Z.Messages.BUG_REPORT_DEVICE,
+                  className: T.formInput,
+                  children: (0, a.jsx)(l.TextInput, {
                     placeholder: "Device",
                     value: Q,
                     onChange: e => q(e)
                   })
-                }), (0, a.jsx)(o.FormItem, {
-                  title: T.Z.Messages.BUG_REPORT_OS,
-                  className: f.formInput,
-                  children: (0, a.jsx)(o.SingleSelect, {
+                }), (0, a.jsx)(l.FormItem, {
+                  title: f.Z.Messages.BUG_REPORT_OS,
+                  className: T.formInput,
+                  children: (0, a.jsx)(l.SingleSelect, {
                     value: K,
                     options: j,
                     onChange: e => J(e)
                   })
-                }), (0, a.jsx)(o.FormItem, {
-                  title: T.Z.Messages.BUG_REPORT_OS_VERSION,
-                  className: f.formInput,
-                  children: (0, a.jsx)(o.TextInput, {
+                }), (0, a.jsx)(l.FormItem, {
+                  title: f.Z.Messages.BUG_REPORT_OS_VERSION,
+                  className: T.formInput,
+                  children: (0, a.jsx)(l.TextInput, {
                     placeholder: "Operating System Version",
                     value: $,
                     onChange: e => ee(e)
                   })
-                }), (0, a.jsx)(o.FormItem, {
-                  title: T.Z.Messages.BUG_REPORT_CLIENT_VERSION,
-                  className: f.formInput,
-                  children: (0, a.jsx)(o.TextInput, {
+                }), (0, a.jsx)(l.FormItem, {
+                  title: f.Z.Messages.BUG_REPORT_CLIENT_VERSION,
+                  className: T.formInput,
+                  children: (0, a.jsx)(l.TextInput, {
                     placeholder: "Client Version",
                     value: et,
                     onChange: e => en(e)
                   })
-                }), (0, a.jsx)(o.FormItem, {
-                  title: T.Z.Messages.BUG_REPORT_CLIENT_BUILD_NUMBER,
-                  className: f.formInput,
-                  children: (0, a.jsx)(o.TextInput, {
+                }), (0, a.jsx)(l.FormItem, {
+                  title: f.Z.Messages.BUG_REPORT_CLIENT_BUILD_NUMBER,
+                  className: T.formInput,
+                  children: (0, a.jsx)(l.TextInput, {
                     placeholder: "Client Build Number",
                     value: ea,
-                    onChange: e => es(e)
+                    onChange: e => er(e)
                   })
-                }), (0, a.jsx)(o.FormItem, {
-                  title: T.Z.Messages.BUG_REPORT_LOCALE,
-                  className: f.formInput,
-                  children: (0, a.jsx)(o.TextInput, {
+                }), (0, a.jsx)(l.FormItem, {
+                  title: f.Z.Messages.BUG_REPORT_LOCALE,
+                  className: T.formInput,
+                  children: (0, a.jsx)(l.TextInput, {
                     placeholder: "Locale",
-                    value: el,
-                    onChange: e => ei(e)
+                    value: ei,
+                    onChange: e => eo(e)
                   })
                 })]
-              }) : null, (0, a.jsxs)(o.Button, {
-                className: f.uploadButton,
-                children: [T.Z.Messages.BUG_REPORT_ADD_ATTACHMENTS, (0, a.jsx)(u.Z, {
-                  ref: B,
+              }) : null, (0, a.jsxs)(l.Button, {
+                className: T.uploadButton,
+                children: [f.Z.Messages.BUG_REPORT_ADD_ATTACHMENTS, (0, a.jsx)(c.Z, {
+                  ref: M,
                   onChange: e => {
                     var t, n;
-                    (null === (n = e.currentTarget) || void 0 === n ? void 0 : null === (t = n.files) || void 0 === t ? void 0 : t[0]) != null && k([...F, ...Array.from(e.currentTarget.files).map(e => new c.ZP({
-                      id: (0, l.Z)(),
+                    (null === (n = e.currentTarget) || void 0 === n ? void 0 : null === (t = n.files) || void 0 === t ? void 0 : t[0]) != null && k([...F, ...Array.from(e.currentTarget.files).map(e => new m.ZP({
+                      id: (0, i.Z)(),
                       file: e,
-                      platform: c.ow.WEB
+                      platform: m.ow.WEB
                     }))])
                   },
                   multiple: !0
                 })]
               }), F.length > 0 ? (0, a.jsxs)(a.Fragment, {
                 children: [(0, a.jsx)("div", {
-                  className: f.imageOptionsContainer,
-                  children: (0, a.jsx)(o.FormTitle, {
+                  className: T.imageOptionsContainer,
+                  children: (0, a.jsx)(l.FormTitle, {
                     children: "Preview"
                   })
                 }), (0, a.jsx)("div", {
-                  ref: Z,
-                  className: f.attachmentsGrid,
+                  ref: b,
+                  className: T.attachmentsGrid,
                   children: F.length > 0 && F.map(e => (0, a.jsxs)("div", {
-                    className: f.attachmentsGridItem,
-                    children: [(0, a.jsx)(o.Text, {
+                    className: T.attachmentsGridItem,
+                    children: [(0, a.jsx)(l.Text, {
                       variant: "text-sm/normal",
                       children: e.filename
                     }), (0, a.jsxs)("div", {
-                      className: f.attachmentContainer,
+                      className: T.attachmentContainer,
                       children: [(0, a.jsx)(d.r, {
                         upload: e
                       }), (0, a.jsx)("div", {
-                        className: f.toolBar,
+                        className: T.toolBar,
                         children: (0, a.jsx)(p.ZP, {
-                          children: (0, a.jsx)(m.Z, {
-                            tooltip: T.Z.Messages.ATTACHMENT_UTILITIES_REMOVE,
-                            onClick: () => ev(e.id),
+                          children: (0, a.jsx)(u.Z, {
+                            tooltip: f.Z.Messages.ATTACHMENT_UTILITIES_REMOVE,
+                            onClick: () => eh(e.id),
                             dangerous: !0,
-                            children: (0, a.jsx)(o.TrashIcon, {
+                            children: (0, a.jsx)(l.TrashIcon, {
                               size: "md",
                               color: "currentColor"
                             })
@@ -338,24 +338,24 @@ function O(e) {
                     })]
                   }, e.id))
                 })]
-              }) : null, em ? (0, a.jsx)(o.Text, {
+              }) : null, eu ? (0, a.jsx)(l.Text, {
                 color: "text-danger",
                 variant: "text-sm/normal",
                 children: "Something went wrong, try again!"
               }) : null]
-            }), (0, a.jsxs)(o.ModalFooter, {
-              className: f.submitContainer,
-              children: [(0, a.jsx)(o.Button, {
-                className: f.formButton,
-                look: o.ButtonLooks.BLANK,
-                onClick: eh,
-                children: (0, a.jsx)(o.Text, {
+            }), (0, a.jsxs)(l.ModalFooter, {
+              className: T.submitContainer,
+              children: [(0, a.jsx)(l.Button, {
+                className: T.formButton,
+                look: l.ButtonLooks.BLANK,
+                onClick: e_,
+                children: (0, a.jsx)(l.Text, {
                   variant: "text-sm/normal",
-                  children: T.Z.Messages.CANCEL
+                  children: f.Z.Messages.CANCEL
                 })
-              }), (0, a.jsx)(o.Button, {
-                submitting: eu,
-                className: f.formButton,
+              }), (0, a.jsx)(l.Button, {
+                submitting: ec,
+                className: T.formButton,
                 onClick: ep,
                 children: "Submit and Open Report"
               })]

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   wrapper: "wrapper_ce1c1d",
   titleRegion: "titleRegion_ce1c1d",

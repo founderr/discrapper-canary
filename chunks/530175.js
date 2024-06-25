@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   popoutWrapper: "popoutWrapper_bc9592",
   scroller: "scroller_bc9592",

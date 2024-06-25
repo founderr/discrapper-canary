@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   emojiListRow: "emojiListRow_fbfedd",
   topEmojiSectionContainer: "topEmojiSectionContainer_fbfedd",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   creatorGuildCarousel: "creatorGuildCarousel_adff39",
   guildCard: "guildCard_adff39 " + n("293811").card,

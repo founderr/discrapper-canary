@@ -1,113 +1,113 @@
-a.r(s), a.d(s, {
+s.r(a), s.d(a, {
   default: function() {
-    return O
+    return u
   }
-}), a(47120);
-var t = a(735250),
-  n = a(470079),
-  r = a(442837),
-  _ = a(481060),
-  o = a(430824),
-  i = a(496675),
-  c = a(153124),
-  l = a(228392),
-  M = a(941848),
-  E = a(710352),
-  d = a(981631),
-  m = a(921944),
-  T = a(689938),
-  S = a(589233);
-let g = () => [{
+}), s(47120);
+var t = s(735250),
+  n = s(470079),
+  r = s(442837),
+  o = s(481060),
+  _ = s(430824),
+  i = s(496675),
+  c = s(153124),
+  l = s(228392),
+  d = s(941848),
+  M = s(710352),
+  E = s(981631),
+  m = s(921944),
+  g = s(689938),
+  T = s(589233);
+let S = () => [{
   id: 0,
-  name: T.Z.Messages.FORUM_UPSELL_DEMO_TAG_NAME_1
+  name: g.Z.Messages.FORUM_UPSELL_DEMO_TAG_NAME_1
 }, {
   id: 1,
-  name: T.Z.Messages.FORUM_UPSELL_DEMO_TAG_NAME_2
+  name: g.Z.Messages.FORUM_UPSELL_DEMO_TAG_NAME_2
 }, {
   id: 2,
-  name: T.Z.Messages.FORUM_UPSELL_DEMO_TAG_NAME_3
+  name: g.Z.Messages.FORUM_UPSELL_DEMO_TAG_NAME_3
 }];
 
-function O(e) {
+function u(e) {
   let {
-    guildId: s,
-    shouldUpsellCreation: O,
-    transitionState: u,
+    guildId: a,
+    shouldUpsellCreation: u,
+    transitionState: O,
     onClose: L
-  } = e, x = (0, r.e7)([o.Z], () => o.Z.getGuild(s), [s]), h = (0, r.e7)([i.Z], () => i.Z.can(d.Plq.MANAGE_CHANNELS, x)), A = g(), [R, N] = n.useState(0), U = (0, c.Dt)();
-  return (0, t.jsxs)(_.ModalRoot, {
-    transitionState: u,
-    "aria-labelledby": U,
-    size: _.ModalSize.LARGE,
-    children: [(0, t.jsxs)(_.ModalHeader, {
+  } = e, x = (0, r.e7)([_.Z], () => _.Z.getGuild(a), [a]), h = (0, r.e7)([i.Z], () => i.Z.can(E.Plq.MANAGE_CHANNELS, x)), R = S(), [A, p] = n.useState(0), N = (0, c.Dt)();
+  return (0, t.jsxs)(o.ModalRoot, {
+    transitionState: O,
+    "aria-labelledby": N,
+    size: o.ModalSize.LARGE,
+    children: [(0, t.jsxs)(o.ModalHeader, {
       separator: !1,
-      className: S.header,
-      children: [(0, t.jsx)(_.Heading, {
+      className: T.header,
+      children: [(0, t.jsx)(o.Heading, {
         variant: "heading-xl/semibold",
-        children: T.Z.Messages.FORUM_UPSELL_MODAL_HEADER
-      }), (0, t.jsx)(_.ModalCloseButton, {
+        children: g.Z.Messages.FORUM_UPSELL_MODAL_HEADER
+      }), (0, t.jsx)(o.ModalCloseButton, {
         onClick: () => L()
       })]
-    }), (0, t.jsx)(_.ModalContent, {
+    }), (0, t.jsx)(o.ModalContent, {
       children: (0, t.jsxs)("div", {
-        className: S.content,
-        children: [(0, t.jsx)(_.Text, {
+        className: T.content,
+        children: [(0, t.jsx)(o.Text, {
           color: "header-secondary",
           variant: "text-md/normal",
-          children: T.Z.Messages.FORUM_UPSELL_MODAL_BODY
+          children: g.Z.Messages.FORUM_UPSELL_MODAL_BODY
         }), (0, t.jsx)("div", {
-          className: S.tabBar,
-          children: (0, t.jsx)(_.TabBar, {
-            selectedItem: R,
+          className: T.tabBar,
+          children: (0, t.jsx)(o.TabBar, {
+            selectedItem: A,
             type: "top",
             onItemSelect: e => {
-              N(e), (0, l.ws)({
+              p(e), (0, l.ws)({
                 forumDemoId: e
               })
             },
-            className: S.tags,
-            children: A.map((e, s) => (0, t.jsx)(_.TabBar.Item, {
-              id: s,
+            className: T.tags,
+            children: R.map((e, a) => (0, t.jsx)(o.TabBar.Item, {
+              id: a,
               children: e.name
-            }, s))
+            }, a))
           })
-        }), (0, t.jsx)(M.Z, {
-          id: R
+        }), (0, t.jsx)(d.Z, {
+          id: A
         })]
       })
-    }), h && (0, t.jsxs)(_.ModalFooter, {
-      className: S.footer,
+    }), h && (0, t.jsxs)(o.ModalFooter, {
+      className: T.footer,
       children: [(0, t.jsxs)("div", {
-        className: S.buttons,
-        children: [(0, t.jsx)(_.Button, {
-          look: _.Button.Looks.BLANK,
-          color: _.Button.Colors.PRIMARY,
+        className: T.buttons,
+        children: [(0, t.jsx)(o.Button, {
+          look: o.Button.Looks.BLANK,
+          color: o.Button.Colors.PRIMARY,
           onClick: () => L(m.L.SECONDARY),
-          className: S.button,
-          children: O ? T.Z.Messages.MAYBE_LATER : T.Z.Messages.GOT_IT
-        }), O && (0, t.jsx)(_.Button, {
+          className: T.button,
+          children: u ? g.Z.Messages.MAYBE_LATER : g.Z.Messages.GOT_IT
+        }), u && (0, t.jsx)(o.Button, {
           onClick: () => {
-            (0, _.openModalLazy)(async () => {
+            (0, o.openModalLazy)(async () => {
               let {
                 default: e
-              } = await Promise.all([a.e("99387"), a.e("45094")]).then(a.bind(a, 218613));
-              return a => (0, t.jsx)(e, {
-                ...a,
-                channelType: d.d4z.GUILD_FORUM,
-                guildId: s,
-                prefillChannelName: O ? T.Z.Messages.FORUM_CHANNEL_NAME_PLACEHOLDER : void 0
+              } = await Promise.all([s.e("45094"), s.e("9458")]).then(s.bind(s, 218613));
+              return s => (0, t.jsx)(e, {
+                ...s,
+                channelType: E.d4z.GUILD_FORUM,
+                guildId: a,
+                prefillChannelName: u ? g.Z.Messages.FORUM_CHANNEL_NAME_PLACEHOLDER : void 0
               })
             }), L(m.L.PRIMARY)
           },
-          children: T.Z.Messages.CREATE_FORUM_CHANNEL
+          children: g.Z.Messages.CREATE_FORUM_CHANNEL
         })]
-      }), (0, t.jsx)(_.Button, {
-        look: _.Button.Looks.LINK,
-        color: _.Button.Colors.LINK,
+      }), (0, t.jsx)(o.Button, {
+        look: o.Button.Looks.LINK,
+        color: o.Button.Colors.LINK,
         onClick: () => {
-          open(E.V8)
+          open(M.V8)
         },
-        children: T.Z.Messages.LEARN_MORE
+        children: g.Z.Messages.LEARN_MORE
       })]
     })]
   })

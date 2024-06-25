@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   icon: "icon_f3112b",
   underline: "underline_f3112b",

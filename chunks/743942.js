@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   focusLock: "focusLock_f9a4c9",
   root: "root_f9a4c9",

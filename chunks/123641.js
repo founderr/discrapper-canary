@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   videoHeight: "videoHeight_c8484a",
   animated: "animated_c8484a",

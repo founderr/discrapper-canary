@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   userTooltip: "userTooltip_a0bdd1",
   avatar: "avatar_a0bdd1",

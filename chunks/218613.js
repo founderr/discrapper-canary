@@ -34,8 +34,8 @@ var n, a, r = s(735250),
   Z = s(703656),
   j = s(146085),
   v = s(60222),
-  P = s(388131),
-  b = s(131704),
+  b = s(388131),
+  P = s(131704),
   G = s(592125),
   f = s(271383),
   H = s(430824),
@@ -91,7 +91,7 @@ function ee(e) {
     children: (0, r.jsx)(O.AddMembersBody, {
       guild: d,
       channel: null,
-      permission: c ? j.yP : (0, b.CG)(n),
+      permission: c ? j.yP : (0, P.CG)(n),
       pendingAdditions: i,
       setPendingAdditions: o,
       isStageChannel: c,
@@ -161,7 +161,7 @@ class et extends l.PureComponent {
       case V.d4z.GUILD_STAGE_VOICE:
         return p.StageIcon;
       default:
-        return (0, b.zi)(t) ? p.TextIcon : X.Vq
+        return (0, P.zi)(t) ? p.TextIcon : X.Vq
     }
   }
   renderHeader() {
@@ -234,7 +234,7 @@ class et extends l.PureComponent {
             onClick: () => (0, p.openModalLazy)(async () => {
               let {
                 default: e
-              } = await Promise.all([s.e("99387"), s.e("18417")]).then(s.bind(s, 740696));
+              } = await s.e("18417").then(s.bind(s, 740696));
               return t => (0, r.jsx)(e, {
                 ...t,
                 guildId: n
@@ -707,7 +707,7 @@ class et extends l.PureComponent {
       let {
         channelType: t
       } = this.state;
-      b.xL.has(t) && (e = (0, w.Nj)(e)), this.setState({
+      P.xL.has(t) && (e = (0, w.Nj)(e)), this.setState({
         name: e
       })
     }), $(this, "handleTypeChange", e => {
@@ -716,7 +716,7 @@ class et extends l.PureComponent {
       } = e, {
         name: s
       } = this.state;
-      b.xL.has(t) && (s = (0, w.Nj)(s)), t === V.d4z.GUILD_STAGE_VOICE && this.setState({
+      P.xL.has(t) && (s = (0, w.Nj)(s)), t === V.d4z.GUILD_STAGE_VOICE && this.setState({
         isPrivate: !1
       }), this.setState({
         channelType: t,
@@ -781,7 +781,7 @@ class et extends l.PureComponent {
             let {
               row: s
             } = e;
-            null != s.id && "" !== s.id && (s.rowType === K.aC.ROLE ? t.push((0, P.createModeratorOverwrite)(s.id, I.BN.ROLE)) : s.rowType === K.aC.MEMBER && t.push((0, P.createModeratorOverwrite)(s.id, I.BN.MEMBER)))
+            null != s.id && "" !== s.id && (s.rowType === K.aC.ROLE ? t.push((0, b.createModeratorOverwrite)(s.id, I.BN.ROLE)) : s.rowType === K.aC.MEMBER && t.push((0, b.createModeratorOverwrite)(s.id, I.BN.MEMBER)))
           }))
         }
         this.setState({
@@ -801,7 +801,7 @@ class et extends l.PureComponent {
           });
           if (null == e || 201 !== e.status) return;
           let a = e.body;
-          b.xL.has(N) && (0, Z.XU)(a.guild_id, a.id), d()
+          P.xL.has(N) && (0, Z.XU)(a.guild_id, a.id), d()
         } catch (e) {
           null != e.body && "object" == typeof e.body ? this.setState({
             errors: e.body

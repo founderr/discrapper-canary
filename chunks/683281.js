@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_ad4d4c",
   author: "author_ad4d4c",

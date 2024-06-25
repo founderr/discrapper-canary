@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   spoilerContent: "spoilerContent_a3d0f7",
   hidden: "hidden_a3d0f7",

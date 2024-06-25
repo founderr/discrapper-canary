@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   transitionGroup: "transitionGroup_ae36eb",
   measurement: "measurement_ae36eb",

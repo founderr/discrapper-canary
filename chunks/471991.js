@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   characterCount: "characterCount_b82429",
   premiumFlair: "premiumFlair_b82429",

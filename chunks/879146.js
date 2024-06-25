@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   guildIcon: "guildIcon_bfabc4",
   mask: "mask_bfabc4",

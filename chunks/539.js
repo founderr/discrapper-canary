@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   profileEffects: "profileEffects_f867f9",
   hovered: "hovered_f867f9",

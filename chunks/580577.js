@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   search: "search_f6bef5",
   searchBar: "searchBar_f6bef5",

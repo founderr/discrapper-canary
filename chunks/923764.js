@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_c18ec9",
   inner: "inner_c18ec9",

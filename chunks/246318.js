@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   shopCard: "shopCard_c23530",
   shopCardAnimation: "shopCardAnimation_c23530",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   bar: "bar_d1cd43",
   closeButton: "closeButton_d1cd43",

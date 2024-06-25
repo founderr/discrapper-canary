@@ -1,4 +1,5 @@
-t.r(e.exports = {
+"use strict";
+n.r(e.exports = {
   slider: "slider_c7a159",
   mini: "mini_c7a159",
   bar: "bar_c7a159",

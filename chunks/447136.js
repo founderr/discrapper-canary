@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_d2672e",
   input: "input_d2672e",

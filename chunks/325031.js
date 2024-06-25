@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   animation: "animation_d652db",
   wumpus: "wumpus_d652db image_d652db",

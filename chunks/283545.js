@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   twoColumnFormSection: "twoColumnFormSection_e95c0f",
   formColumnLeft: "formColumnLeft_e95c0f",

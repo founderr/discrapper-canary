@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   contentWidth: "contentWidth_bd05f1",
   header: "header_bd05f1",

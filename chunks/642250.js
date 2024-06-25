@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   notAllowedIcon: "notAllowedIcon_b35b54 icon_b35b54",
   shopIcon: "shopIcon_b35b54 icon_b35b54",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   welcomeDescription: "welcomeDescription_e803f7",
   exampleContainer: "exampleContainer_e803f7",

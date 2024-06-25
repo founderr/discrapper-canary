@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   markup: "markup_d6076c",
   inlineFormat: "inlineFormat_d6076c",

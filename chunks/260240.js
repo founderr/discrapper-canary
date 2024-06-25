@@ -1,3 +1,4 @@
+"use strict";
 n.r(e.exports = {
   soundButtonWrapper: "soundButtonWrapper_f40049",
   soundButton: "soundButton_f40049",

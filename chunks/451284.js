@@ -1,12 +1,11 @@
-"use strict";
-e.d(n, {
+n.d(t, {
   P: function() {
-    return l
+    return s
   }
 });
-var i = e(442837),
-  u = e(236289);
+var i = n(442837),
+  a = n(236289);
 
-function l() {
-  return (0, i.e7)([u.Z], () => u.Z.getAccountStanding())
+function s() {
+  return (0, i.e7)([a.Z], () => a.Z.getAccountStanding())
 }

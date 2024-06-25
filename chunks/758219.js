@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   presets: "presets_f45ea6",
   header: "header_f45ea6",

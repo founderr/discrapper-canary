@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   helpText: "helpText_e72811",
   searchContainer: "searchContainer_e72811",

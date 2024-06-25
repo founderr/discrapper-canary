@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_ecc1b2",
   buttonContainer: "buttonContainer_ecc1b2",

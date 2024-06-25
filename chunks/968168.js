@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   mask: "mask_a69fe5",
   icon: "icon_a69fe5",

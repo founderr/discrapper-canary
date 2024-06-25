@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   gameIcon: "gameIcon_da2f83",
   gameMessageTooltip: "gameMessageTooltip_da2f83",

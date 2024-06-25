@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   paymentInfoGroup: "paymentInfoGroup_bf27f7",
   metricsContainer: "metricsContainer_bf27f7",

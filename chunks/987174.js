@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   icon: "icon_d0ade3",
   unlocked: "unlocked_d0ade3",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   textArea: "textArea_a2b402",
   resizeable: "resizeable_a2b402",

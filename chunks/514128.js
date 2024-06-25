@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   keywordsContainer: "keywordsContainer_e58e09",
   errorSpan: "errorSpan_e58e09",

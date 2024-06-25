@@ -1,39 +1,39 @@
 n.d(t, {
   Z: function() {
-    return f
+    return E
   }
 });
-var l = n(735250),
-  i = n(470079),
-  s = n(120356),
-  a = n.n(s),
+var i = n(735250),
+  a = n(470079),
+  l = n(120356),
+  s = n.n(l),
   r = n(481060),
   o = n(239091),
   c = n(586902),
   u = n(40851),
   d = n(484459),
   h = n(103575),
-  m = n(409216),
-  E = n(768581),
-  p = n(887853);
+  p = n(409216),
+  m = n(768581),
+  _ = n(887853);
 
-function g(e) {
+function f(e) {
   let {
     channel: t,
-    speaker: s,
-    className: m
-  } = e, g = (0, u.bp)(), {
-    reducedMotion: f
-  } = i.useContext(r.AccessibilityPreferencesContext), C = (0, c.Z)({
-    userId: s.id
-  }), _ = null != s.member ? (0, E.CA)(s.member) : null, I = e => {
+    speaker: l,
+    className: p
+  } = e, f = (0, u.bp)(), {
+    reducedMotion: E
+  } = a.useContext(r.AccessibilityPreferencesContext), g = (0, c.Z)({
+    userId: l.id
+  }), C = null != l.member ? (0, m.CA)(l.member) : null, I = e => {
     (0, o.jW)(e, async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("32006"), n.e("12435"), n.e("7717")]).then(n.bind(n, 757387));
-      return n => (0, l.jsx)(e, {
+      } = await Promise.all([n.e("79695"), n.e("32006"), n.e("12435"), n.e("47195")]).then(n.bind(n, 757387));
+      return n => (0, i.jsx)(e, {
         ...n,
-        user: s.user,
+        user: l.user,
         guildId: t.guild_id,
         channel: t,
         showMediaItems: !0,
@@ -41,62 +41,62 @@ function g(e) {
         showChatItems: !1
       })
     }, {
-      context: g
+      context: f
     })
   };
-  return (0, l.jsx)(r.Popout, {
-    preload: () => (0, d.W)(s.user, {
+  return (0, i.jsx)(r.Popout, {
+    preload: () => (0, d.W)(l.user, {
       guildId: t.guild_id,
       channelId: t.id
     }),
-    renderPopout: e => (0, l.jsx)(h.Z, {
+    renderPopout: e => (0, i.jsx)(h.Z, {
       ...e,
       location: "StageSpeakerSummary",
       guildId: t.guild_id,
       channelId: t.id,
-      userId: s.id
+      userId: l.id
     }),
     position: "right",
     spacing: 8,
-    children: e => (0, l.jsx)(r.Tooltip, {
-      text: s.userNick,
+    children: e => (0, i.jsx)(r.Tooltip, {
+      text: l.userNick,
       position: "bottom",
-      children: n => (0, l.jsx)(r.Clickable, {
+      children: n => (0, i.jsx)(r.Clickable, {
         ...n,
         ...e,
         onClick: t => {
           t.stopPropagation(), e.onClick(t)
         },
         onContextMenu: I,
-        children: (0, l.jsx)(r.Avatar, {
-          src: null != _ ? _ : s.user.getAvatarURL(t.guild_id, 24),
+        children: (0, i.jsx)(r.Avatar, {
+          src: null != C ? C : l.user.getAvatarURL(t.guild_id, 24),
           size: r.AvatarSizes.SIZE_24,
-          className: a()(p.avatar, m),
-          "aria-label": s.userNick,
-          isSpeaking: C && !f.enabled
+          className: s()(_.avatar, p),
+          "aria-label": l.userNick,
+          isSpeaking: g && !E.enabled
         })
       })
     })
   })
 }
 
-function f(e) {
+function E(e) {
   let {
     speakers: t,
     channel: n
   } = e;
-  return (0, l.jsx)(m.Z, {
-    className: p.summary,
+  return (0, i.jsx)(p.Z, {
+    className: _.summary,
     guildId: n.guild_id,
     users: t,
     max: 10,
-    renderUser: (e, t, i) => (0, l.jsx)(g, {
+    renderUser: (e, t, a) => (0, i.jsx)(f, {
       channel: n,
       speaker: e,
       className: t
-    }, i),
-    renderMoreUsers: (e, t, n) => (0, l.jsx)("div", {
-      className: a()(p.speakers, t),
+    }, a),
+    renderMoreUsers: (e, t, n) => (0, i.jsx)("div", {
+      className: s()(_.speakers, t),
       children: e
     }, n)
   })

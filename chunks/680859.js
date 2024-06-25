@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   participantsButton: "participantsButton_b83b18",
   rightCaret: "rightCaret_b83b18",

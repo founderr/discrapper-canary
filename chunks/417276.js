@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   connectContainer: "connectContainer_e2a436",
   connectHeader: "connectHeader_e2a436",

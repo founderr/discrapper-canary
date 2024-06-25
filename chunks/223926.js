@@ -1,6 +1,6 @@
 s.r(a), s(47120);
-var n, t, l = s(735250),
-  o = s(470079),
+var n, t, o = s(735250),
+  l = s(470079),
   i = s(442837),
   R = s(481060),
   E = s(496675),
@@ -18,9 +18,9 @@ a.default = function(e) {
     guild: a,
     guildJoinRequest: n,
     user: t,
-    transitionState: N,
-    onClose: O
-  } = e, c = (0, r.Dt)(), [I, h] = o.useState(null), [T, L] = o.useState(""), p = (0, i.e7)([E.Z], () => E.Z.canManageUser(d.Plq.BAN_MEMBERS, t, a)), [m, g] = o.useState(!1), x = o.useCallback(() => {
+    transitionState: c,
+    onClose: N
+  } = e, O = (0, r.Dt)(), [I, h] = l.useState(null), [T, p] = l.useState(""), L = (0, i.e7)([E.Z], () => E.Z.canManageUser(d.Plq.BAN_MEMBERS, t, a)), [m, g] = l.useState(!1), x = l.useCallback(() => {
     var e;
     u.Z.reportApplication({
       guild: a,
@@ -29,19 +29,19 @@ a.default = function(e) {
       reason: I,
       reasonOther: T,
       responses: JSON.stringify(null === (e = n.formResponses) || void 0 === e ? void 0 : e.map(e => e.response))
-    }), p && m && (_.Z.updateGuildJoinRequest(a.id, t.id, M.wB.REJECTED, ""), null == O || O(), (0, R.openModalLazy)(async () => {
+    }), L && m && (_.Z.updateGuildJoinRequest(a.id, t.id, M.wB.REJECTED, ""), null == N || N(), (0, R.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([s.e("99387"), s.e("43350")]).then(s.bind(s, 98746));
-      return s => (0, l.jsx)(e, {
+      } = await s.e("43350").then(s.bind(s, 98746));
+      return s => (0, o.jsx)(e, {
         ...s,
         guildId: a.id,
         user: t
       })
     }))
-  }, [a, n, t, I, T, p, m, O]), B = o.useCallback(e => {
+  }, [a, n, t, I, T, L, m, N]), B = l.useCallback(e => {
     h(e.value)
-  }, [h]), v = o.useMemo(() => [{
+  }, [h]), v = l.useMemo(() => [{
     value: "spam",
     name: P.Z.Messages.CLAN_MEMBER_APPLICATION_REPORT_REASON_SPAM
   }, {
@@ -57,50 +57,50 @@ a.default = function(e) {
     value: "other",
     name: P.Z.Messages.CLAN_MEMBER_APPLICATION_REPORT_REASON_OTHER
   }], []), S = A.ZP.getName(null, null, t);
-  return (0, l.jsxs)(R.ModalRoot, {
-    transitionState: N,
-    "aria-labelledby": c,
-    children: [(0, l.jsx)(R.ModalHeader, {
-      children: (0, l.jsx)(R.Heading, {
-        id: c,
+  return (0, o.jsxs)(R.ModalRoot, {
+    transitionState: c,
+    "aria-labelledby": O,
+    children: [(0, o.jsx)(R.ModalHeader, {
+      children: (0, o.jsx)(R.Heading, {
+        id: O,
         variant: "heading-md/semibold",
         children: P.Z.Messages.CLAN_MEMBER_APPLICATION_REPORT_MODAL_HEADER
       })
-    }), (0, l.jsxs)(R.ModalContent, {
+    }), (0, o.jsxs)(R.ModalContent, {
       className: C.content,
-      children: [(0, l.jsx)(R.Text, {
+      children: [(0, o.jsx)(R.Text, {
         variant: "text-md/normal",
         children: P.Z.Messages.CLAN_MEMBER_APPLICATION_REPORT_DESCRIPTION.format({
           username: S
         })
-      }), (0, l.jsx)(R.RadioGroup, {
+      }), (0, o.jsx)(R.RadioGroup, {
         options: v,
         value: I,
         onChange: B
-      }), "other" === I && (0, l.jsx)(R.TextArea, {
+      }), "other" === I && (0, o.jsx)(R.TextArea, {
         value: T,
-        onChange: L,
+        onChange: p,
         placeholder: P.Z.Messages.CLAN_MEMBER_APPLICATION_REPORT_REASON_OTHER_PLACEHOLDER,
         maxLength: 200
-      }), p && (0, l.jsx)(R.Checkbox, {
+      }), L && (0, o.jsx)(R.Checkbox, {
         type: R.Checkbox.Types.INVERTED,
         value: m,
         onChange: (e, a) => g(a),
-        children: (0, l.jsx)(R.Text, {
+        children: (0, o.jsx)(R.Text, {
           variant: "text-md/normal",
           children: P.Z.Messages.CLAN_MEMBER_APPLICATION_REPORT_BAN.format({
             username: S
           })
         })
       })]
-    }), (0, l.jsxs)(R.ModalFooter, {
-      children: [(0, l.jsx)(R.Button, {
+    }), (0, o.jsxs)(R.ModalFooter, {
+      children: [(0, o.jsx)(R.Button, {
         onClick: x,
         children: P.Z.Messages.REPORT
-      }), (0, l.jsx)(R.Button, {
+      }), (0, o.jsx)(R.Button, {
         look: R.ButtonLooks.LINK,
         color: R.ButtonColors.PRIMARY,
-        onClick: O,
+        onClick: N,
         children: P.Z.Messages.CANCEL
       })]
     })]

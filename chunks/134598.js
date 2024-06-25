@@ -12,7 +12,7 @@ function s(e, t, s) {
   (0, r.openModalLazy)(async () => {
     let {
       default: r
-    } = await Promise.all([n.e("99387"), n.e("10377")]).then(n.bind(n, 137167));
+    } = await n.e("9707").then(n.bind(n, 137167));
     return n => (0, i.jsx)(r, {
       headerText: e,
       buttonCTA: t,

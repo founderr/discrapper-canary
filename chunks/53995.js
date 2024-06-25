@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_af1167",
   categoryFade: "categoryFade_af1167",

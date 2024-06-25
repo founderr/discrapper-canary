@@ -1,24 +1,24 @@
 t.d(n, {
   h: function() {
-    return o
+    return l
   }
 });
 var i = t(735250);
 t(470079);
 var r = t(481060),
-  l = t(302463);
+  o = t(302463);
 
-function o(e, n) {
+function l(e, n) {
   (0, r.openModalLazy)(async () => {
     let {
       default: r
-    } = await Promise.all([t.e("49237"), t.e("99387"), t.e("47055")]).then(t.bind(t, 458961));
+    } = await t.e("73628").then(t.bind(t, 458961));
     return t => (0, i.jsx)(r, {
       guildId: e,
       productId: n,
       ...t
     })
   }, {
-    modalKey: l.Yz
+    modalKey: o.Yz
   })
 }

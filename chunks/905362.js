@@ -18,7 +18,7 @@ function l(e) {
   (0, s.openModalLazy)(async () => {
     let {
       default: t
-    } = await Promise.all([n.e("99387"), n.e("95883")]).then(n.bind(n, 83521));
+    } = await n.e("95883").then(n.bind(n, 83521));
     return n => (0, i.jsx)(t, {
       ...n,
       onClose: t => {
@@ -36,7 +36,7 @@ function u(e, t, r, o) {
   }), (0, s.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("99387"), n.e("80026"), n.e("78977")]).then(n.bind(n, 767593));
+    } = await Promise.all([n.e("80026"), n.e("84394")]).then(n.bind(n, 767593));
     return n => (0, i.jsx)(e, {
       ...n,
       clan: t,

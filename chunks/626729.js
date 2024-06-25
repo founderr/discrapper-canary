@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   wrapper: "wrapper_fb6520",
   videoWrapper: "videoWrapper_fb6520",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   items: "items_d1e805",
   itemMeasurements: "itemMeasurements_d1e805",

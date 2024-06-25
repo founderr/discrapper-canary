@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   bar: "bar_f60904",
   name: "name_f60904",

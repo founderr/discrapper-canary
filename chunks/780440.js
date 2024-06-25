@@ -1,4 +1,5 @@
-t.r(e.exports = {
+"use strict";
+n.r(e.exports = {
   content: "content_eb6bd1",
   staticSize: "staticSize_eb6bd1",
   widget: "widget_eb6bd1",

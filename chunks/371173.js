@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   root: "root_e4010c",
   role: "role_e4010c",

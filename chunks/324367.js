@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   sidebar: "sidebar_e87574",
   container: "container_e87574",

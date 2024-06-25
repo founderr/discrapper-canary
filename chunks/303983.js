@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   selectTeamContainer: "selectTeamContainer_a4eb46",
   teamSelect: "teamSelect_a4eb46",

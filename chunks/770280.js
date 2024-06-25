@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   serverBoostTabItem: "serverBoostTabItem_f7189e",
   icon: "icon_f7189e",

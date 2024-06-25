@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   uploadInput: "uploadInput_a15d29",
   uploadIcon: "uploadIcon_a15d29",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   px: "px_a02df3",
   rem: "rem_a02df3",

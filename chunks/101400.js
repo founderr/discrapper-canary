@@ -1,3 +1,4 @@
+"use strict";
 n.r(e.exports = {
   container: "container_a6d69a",
   uploadArea: "uploadArea_a6d69a",

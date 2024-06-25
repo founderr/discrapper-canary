@@ -1,73 +1,73 @@
 a.d(t, {
   Z: function() {
-    return L
+    return y
   }
 }), a(47120);
 var n = a(735250),
   l = a(470079),
-  r = a(120356),
-  i = a.n(r),
-  s = a(952265),
-  o = a(481060),
+  i = a(120356),
+  r = a.n(i),
+  o = a(952265),
+  s = a(481060),
   u = a(239091),
   d = a(579806),
   c = a(889161),
   m = a(592125),
-  v = a(430824),
-  f = a(496675),
-  p = a(594174),
-  h = a(709054),
-  x = a(39604),
-  g = a(680056),
-  j = a(678651),
+  p = a(430824),
+  v = a(496675),
+  f = a(594174),
+  b = a(709054),
+  h = a(39604),
+  x = a(680056),
+  g = a(678651),
   C = a(445229),
-  b = a(20437),
-  E = a(356659),
-  N = a(710111),
-  T = a(689938),
-  I = a(240356),
-  S = a(413135).Buffer;
+  _ = a(20437),
+  j = a(356659),
+  S = a(710111),
+  I = a(689938),
+  E = a(240356),
+  T = a(413135).Buffer;
 
-function L(e) {
+function y(e) {
   let {
     clip: t,
-    channelId: r,
-    clipName: L,
+    channelId: i,
+    clipName: y,
     onSetClipName: w,
-    onClose: y
+    onClose: N
   } = e, {
-    videoPlayerRef: k,
-    cropData: M,
+    videoPlayerRef: L,
+    cropData: k,
     voiceAudioEnabled: R,
-    setVoiceAudioEnabled: _,
-    applicationAudioEnabled: Z,
-    setApplicationAudioEnabled: D
-  } = (0, b.S)(), [P, A] = l.useState(null), {
-    onShareClick: O
-  } = (0, g.Z)({
-    channelId: r,
-    setExporting: e => A(null != e ? "share" : null)
+    setVoiceAudioEnabled: M,
+    applicationAudioEnabled: P,
+    setApplicationAudioEnabled: Z
+  } = (0, _.S)(), [A, F] = l.useState(null), {
+    onShareClick: D
+  } = (0, x.Z)({
+    channelId: i,
+    setExporting: e => F(null != e ? "share" : null)
   });
-  async function F() {
+  async function B() {
     var e;
-    let l = m.Z.getChannel(r);
-    A("export"), null === (e = k.current) || void 0 === e || e.pause();
+    let l = m.Z.getChannel(i);
+    F("export"), null === (e = L.current) || void 0 === e || e.pause();
     try {
-      let e = await (0, x.rO)(t, {
-        ...M,
-        applicationAudio: Z,
+      let e = await (0, h.rO)(t, {
+        ...k,
+        applicationAudio: P,
         voiceAudio: R
       });
-      (0, o.openModalLazy)(async () => {
+      (0, s.openModalLazy)(async () => {
         let {
-          default: r
-        } = await Promise.all([a.e("49237"), a.e("99387"), a.e("56035"), a.e("358")]).then(a.bind(a, 758961)), i = (null == l ? void 0 : l.guild_id) != null ? v.Z.getGuild(l.guild_id) : null, s = null != i && (0, c.Gw)(i, f.Z, p.default).canCreateExpressions, o = null == L || "" === L ? (0, E.yl)(h.default.extractTimestamp(t.id)) : L, u = o.slice(0, N.Ek);
-        return t => (0, n.jsx)(r, {
+          default: i
+        } = await Promise.all([a.e("56035"), a.e("4306")]).then(a.bind(a, 758961)), r = (null == l ? void 0 : l.guild_id) != null ? p.Z.getGuild(l.guild_id) : null, o = null != r && (0, c.Gw)(r, v.Z, f.default).canCreateExpressions, s = null == y || "" === y ? (0, j.yl)(b.default.extractTimestamp(t.id)) : y, u = s.slice(0, S.Ek);
+        return t => (0, n.jsx)(i, {
           ...t,
           showGuildPicker: !0,
-          guildId: s ? null == l ? void 0 : l.guild_id : void 0,
+          guildId: o ? null == l ? void 0 : l.guild_id : void 0,
           sourceFile: {
-            file: new File([e], "".concat(o, ".mp4"), {
+            file: new File([e], "".concat(s, ".mp4"), {
               type: "video/mp4"
             }),
             name: u
@@ -75,31 +75,31 @@ function L(e) {
         })
       })
     } catch (e) {} finally {
-      A(null)
+      F(null)
     }
   }
-  async function B() {
+  async function O() {
     var e;
-    A("export"), null === (e = k.current) || void 0 === e || e.pause();
+    F("export"), null === (e = L.current) || void 0 === e || e.pause();
     try {
-      let e = await (0, x.rO)(t, {
-          ...M,
-          applicationAudio: Z,
+      let e = await (0, h.rO)(t, {
+          ...k,
+          applicationAudio: P,
           voiceAudio: R
         }),
         a = await e.arrayBuffer();
-      await d.Z.fileManager.saveWithDialog(S.from(a), (0, E.EF)(t.id))
+      await d.Z.fileManager.saveWithDialog(T.from(a), (0, j.EF)(t.id))
     } catch (e) {} finally {
-      A(null)
+      F(null)
     }
   }
 
-  function U() {
+  function H() {
     var e;
-    null === (e = k.current) || void 0 === e || e.pause(), (0, o.openModalLazy)(async () => {
+    null === (e = L.current) || void 0 === e || e.pause(), (0, s.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([a.e("99387"), a.e("15915")]).then(a.bind(a, 799677));
+      } = await a.e("15915").then(a.bind(a, 799677));
       return a => (0, n.jsx)(e, {
         clip: t,
         ...a,
@@ -107,88 +107,88 @@ function L(e) {
           await a.onClose()
         },
         onAfterDelete: async () => {
-          await a.onClose(), y()
+          await a.onClose(), N()
         }
       })
     })
   }
   return (0, n.jsxs)("div", {
-    className: I.clipForm,
+    className: E.clipForm,
     children: [(0, n.jsxs)("div", {
-      className: i()(I.clipFormSection, I.editSection),
-      children: [(0, n.jsx)(o.FormItem, {
-        className: I.clipFormItem,
-        title: T.Z.Messages.CLIPS_EDIT_TITLE,
-        children: (0, n.jsx)(o.TextInput, {
+      className: r()(E.clipFormSection, E.editSection),
+      children: [(0, n.jsx)(s.FormItem, {
+        className: E.clipFormItem,
+        title: I.Z.Messages.CLIPS_EDIT_TITLE,
+        children: (0, n.jsx)(s.TextInput, {
           onChange: e => {
             "" === e ? w(void 0) : w(e)
           },
-          value: L,
-          minLength: E.XH,
-          maxLength: E.MG,
-          placeholder: T.Z.Messages.CLIPS_UNTITLED
+          value: y,
+          minLength: j.XH,
+          maxLength: j.MG,
+          placeholder: I.Z.Messages.CLIPS_UNTITLED
         })
       }), (0, n.jsxs)("div", {
-        className: I.clipFormSwitches,
-        children: [(0, n.jsx)(o.FormSwitch, {
-          onChange: D,
-          value: Z,
+        className: E.clipFormSwitches,
+        children: [(0, n.jsx)(s.FormSwitch, {
+          onChange: Z,
+          value: P,
           hideBorder: !0,
-          children: T.Z.Messages.CLIPS_EDIT_GAME_AUDIO
-        }), (0, n.jsx)(o.FormSwitch, {
-          onChange: _,
+          children: I.Z.Messages.CLIPS_EDIT_GAME_AUDIO
+        }), (0, n.jsx)(s.FormSwitch, {
+          onChange: M,
           value: R,
           hideBorder: !0,
-          children: T.Z.Messages.CLIPS_EDIT_VOICE_CHANNEL_AUDIO
+          children: I.Z.Messages.CLIPS_EDIT_VOICE_CHANNEL_AUDIO
         })]
       })]
     }), (0, n.jsxs)("div", {
-      className: i()(I.clipFormSection, I.metadataSection),
-      children: [(0, n.jsx)(j.Z, {
+      className: r()(E.clipFormSection, E.metadataSection),
+      children: [(0, n.jsx)(g.Z, {
         clip: t
       }), (0, n.jsx)(C.Z, {
-        className: I.userList,
+        className: E.userList,
         clip: t
       })]
     }), (0, n.jsxs)("div", {
-      className: I.clipFormFooter,
-      children: [(0, n.jsx)(o.Button, {
-        submitting: "share" === P,
-        disabled: null != P && "share" !== P,
-        color: o.Button.Colors.BRAND,
-        wrapperClassName: I.clipFormFooterButton,
-        onClick: () => O({
+      className: E.clipFormFooter,
+      children: [(0, n.jsx)(s.Button, {
+        submitting: "share" === A,
+        disabled: null != A && "share" !== A,
+        color: s.Button.Colors.BRAND,
+        wrapperClassName: E.clipFormFooterButton,
+        onClick: () => D({
           clip: {
             ...t,
-            name: L
+            name: y
           },
-          cropData: M,
-          applicationAudioEnabled: Z,
+          cropData: k,
+          applicationAudioEnabled: P,
           voiceAudioEnabled: R,
           onShareComplete: () => {
-            s.Mr(E.Ut), s.Mr(E.Qr)
+            o.Mr(j.Ut), o.Mr(j.Qr)
           }
         }),
-        children: T.Z.Messages.CLIPS_EDIT_SHARE_CLIP
-      }), (0, n.jsx)(o.Button, {
-        size: o.Button.Sizes.ICON,
-        className: I.clipFormFooterButton,
-        disabled: null != P,
-        wrapperClassName: i()(I.clipFormFooterButton, {
-          [I.submittingWrapperFix]: null != P
+        children: I.Z.Messages.CLIPS_EDIT_SHARE_CLIP
+      }), (0, n.jsx)(s.Button, {
+        size: s.Button.Sizes.ICON,
+        className: E.clipFormFooterButton,
+        disabled: null != A,
+        wrapperClassName: r()(E.clipFormFooterButton, {
+          [E.submittingWrapperFix]: null != A
         }),
-        color: o.Button.Colors.PRIMARY,
-        onClick: y,
-        children: T.Z.Messages.SAVE_CHANGES
-      }), (0, n.jsx)(o.Button, {
-        "aria-label": T.Z.Messages.MORE_OPTIONS,
-        size: o.Button.Sizes.ICON,
-        wrapperClassName: i()(I.clipFormFooterButton, {
-          [I.submittingWrapperFix]: null != P
+        color: s.Button.Colors.PRIMARY,
+        onClick: N,
+        children: I.Z.Messages.SAVE_CHANGES
+      }), (0, n.jsx)(s.Button, {
+        "aria-label": I.Z.Messages.MORE_OPTIONS,
+        size: s.Button.Sizes.ICON,
+        wrapperClassName: r()(E.clipFormFooterButton, {
+          [E.submittingWrapperFix]: null != A
         }),
-        submitting: "export" === P,
-        disabled: null != P && "export" !== P,
-        color: o.Button.Colors.PRIMARY,
+        submitting: "export" === A,
+        disabled: null != A && "export" !== A,
+        color: s.Button.Colors.PRIMARY,
         onClick: function(e) {
           (0, u.jW)(e, async () => {
             let {
@@ -196,14 +196,14 @@ function L(e) {
             } = await a.e("32157").then(a.bind(a, 151090));
             return t => (0, n.jsx)(e, {
               ...t,
-              onExportToSoundboard: F,
-              onExportToFile: B,
-              onDelete: U,
-              channelId: r
+              onExportToSoundboard: B,
+              onExportToFile: O,
+              onDelete: H,
+              channelId: i
             })
           })
         },
-        children: (0, n.jsx)(o.MoreHorizontalIcon, {
+        children: (0, n.jsx)(s.MoreHorizontalIcon, {
           size: "md",
           color: "currentColor"
         })

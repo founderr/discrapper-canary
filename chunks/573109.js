@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   verified: "verified_db1980 background_db1980",
   staff: "staff_db1980 background_db1980",

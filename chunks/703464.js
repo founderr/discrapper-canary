@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   button: "button_a80370",
   visible: "visible_a80370",

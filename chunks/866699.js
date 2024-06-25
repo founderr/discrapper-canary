@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   gameIcon: "gameIcon_f394e5",
   small: "small_f394e5",

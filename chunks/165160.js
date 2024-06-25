@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   artContainer: "artContainer_ecade5",
   updatedArtContainer: "updatedArtContainer_ecade5",

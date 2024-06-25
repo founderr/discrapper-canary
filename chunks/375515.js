@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_df5532",
   keybind: "keybind_df5532",

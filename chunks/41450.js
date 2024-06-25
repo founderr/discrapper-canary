@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   copiableWrapper: "copiableWrapper_e3203d",
   childWrapper: "childWrapper_e3203d",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   checkboxWrapper: "checkboxWrapper_f6cde8",
   row: "row_f6cde8",

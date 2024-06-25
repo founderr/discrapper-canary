@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   formSplit: "formSplit_fe8653",
   formSplitHalf: "formSplitHalf_fe8653",

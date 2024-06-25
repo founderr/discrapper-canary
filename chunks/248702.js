@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   footer: "footer_c5a065",
   authorize: "authorize_c5a065",

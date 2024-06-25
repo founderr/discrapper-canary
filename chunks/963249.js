@@ -23,14 +23,14 @@ function T(e) {
     initialPlanId: t,
     followupSKUInfo: T,
     onClose: h,
-    onComplete: S,
-    onSubscriptionConfirmation: f,
-    analyticsLocations: N,
-    analyticsObject: A,
+    onComplete: f,
+    onSubscriptionConfirmation: S,
+    analyticsLocations: A,
+    analyticsObject: N,
     analyticsLocation: m,
     analyticsSourceLocation: O,
-    isGift: R = !1,
-    giftMessage: p,
+    isGift: p = !1,
+    giftMessage: R,
     subscriptionTier: g,
     trialId: C,
     postSuccessGuild: v,
@@ -41,11 +41,11 @@ function T(e) {
     returnRef: y,
     subscription: U,
     skipConfirm: b
-  } = null != e ? e : {}, G = !1, w = (0, r.Z)(), B = u.default.getCurrentUser(), x = (0, d.M5)(B, I.p9.TIER_2);
+  } = null != e ? e : {}, G = !1, w = (0, r.Z)(), x = u.default.getCurrentUser(), B = (0, d.M5)(x, I.p9.TIER_2);
   (0, s.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("77298"), n.e("23357"), n.e("15972"), n.e("12013"), n.e("6416"), n.e("43906"), n.e("29549"), n.e("32776"), n.e("95900"), n.e("8016"), n.e("68136"), n.e("31605"), n.e("95854"), n.e("46524"), n.e("39559")]).then(n.bind(n, 7305));
+    } = await Promise.all([n.e("96427"), n.e("77298"), n.e("23357"), n.e("15972"), n.e("12013"), n.e("6416"), n.e("39612"), n.e("29549"), n.e("32776"), n.e("95900"), n.e("8016"), n.e("68136"), n.e("31605"), n.e("95854"), n.e("46524"), n.e("74876")]).then(n.bind(n, 7305));
     return n => {
       let {
         onClose: r,
@@ -56,20 +56,20 @@ function T(e) {
         loadId: w,
         subscriptionTier: g,
         skuId: (0, d.Wz)(g),
-        isGift: R,
-        giftMessage: p,
+        isGift: p,
+        giftMessage: R,
         giftRecipient: P,
         initialPlanId: t,
         followupSKUInfo: T,
         onClose: (e, t) => {
-          r(), null == h || h(e), e && (null == f || f(), !R && null != t && t === I.Si.TIER_2 && !x && c.S.dispatch(E.CkL.PREMIUM_SUBSCRIPTION_CREATED))
+          r(), null == h || h(e), e && (null == S || S(), !p && null != t && t === I.Si.TIER_2 && !B && c.S.dispatch(E.CkL.PREMIUM_SUBSCRIPTION_CREATED))
         },
         onComplete: () => {
-          G = !0, null == S || S(), !R && (0, l.H)(!0)
+          G = !0, null == f || f(), !p && (0, l.H)(!0)
         },
-        onSubscriptionConfirmation: f,
-        analyticsLocations: N,
-        analyticsObject: A,
+        onSubscriptionConfirmation: S,
+        analyticsLocations: A,
+        analyticsObject: N,
         analyticsLocation: m,
         analyticsSourceLocation: O,
         trialId: C,
@@ -89,14 +89,14 @@ function T(e) {
       !G && _.default.track(E.rMx.PAYMENT_FLOW_CANCELED, {
         load_id: w,
         payment_type: E.Zuq[E.GZQ.SUBSCRIPTION],
-        location: null != m ? m : A,
+        location: null != m ? m : N,
         source: O,
         subscription_type: E.NYc.PREMIUM,
-        is_gift: R,
+        is_gift: p,
         eligible_for_trial: null != C,
         application_id: D,
-        location_stack: N
-      }), (0, o.fw)(), (0, a.p)(), null == h || h(G), G && (null == f || f())
+        location_stack: A
+      }), (0, o.fw)(), (0, a.p)(), null == h || h(G), G && (null == S || S())
     }
   })
 }

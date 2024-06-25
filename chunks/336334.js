@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   progressBar: "progressBar_a4fd01",
   background: "background_a4fd01 bar_a4fd01",

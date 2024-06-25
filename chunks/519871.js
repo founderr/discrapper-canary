@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_a90bed",
   dragContainer: "dragContainer_a90bed",

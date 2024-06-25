@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   connectedAccountVanityMetadata: "connectedAccountVanityMetadata_a1f026",
   connectedAccountVanityMetadataTag: "connectedAccountVanityMetadataTag_a1f026",

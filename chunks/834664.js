@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   questRewardTile: "questRewardTile_cc6d33",
   questRewardTileInteractive: "questRewardTileInteractive_cc6d33",

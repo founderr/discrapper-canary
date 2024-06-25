@@ -1,78 +1,78 @@
 n(47120);
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(544891),
-  l = n(846519),
-  a = n(481060),
-  r = n(496929),
+var s = n(544891),
+  a = n(846519),
+  r = n(481060),
+  l = n(496929),
   o = n(115130),
   c = n(812206),
-  u = n(594174),
-  d = n(580130),
-  E = n(695103),
-  h = n(70956),
-  _ = n(998502),
+  d = n(594174),
+  u = n(580130),
+  _ = n(695103),
+  E = n(70956),
+  h = n(998502),
   I = n(996106),
   m = n(186901),
-  T = n(981631);
-let g = 10 * h.Z.Millis.SECOND;
+  p = n(981631);
+let g = 10 * E.Z.Millis.SECOND;
 t.Z = {
-  [T.Etm.VALIDATE_APPLICATION]: {
+  [p.Etm.VALIDATE_APPLICATION]: {
     scope: m.lH,
     handler(e) {
       let {
         socket: t
-      } = e, i = t.application.id;
+      } = e, s = t.application.id;
       try {
-        if (null == i) throw new I.Z({
-          errorCode: T.lTL.INVALID_COMMAND
+        if (null == s) throw new I.Z({
+          errorCode: p.lTL.INVALID_COMMAND
         }, "No application.");
-        let e = c.Z.getApplication(i);
+        let e = c.Z.getApplication(s);
         if (null == e) throw new I.Z({
-          errorCode: T.lTL.INVALID_ENTITLEMENT
+          errorCode: p.lTL.INVALID_ENTITLEMENT
         }, "SKU does not exist.");
         let t = e.primarySkuId;
         if (null == t) throw new I.Z({
-          errorCode: T.lTL.INVALID_ENTITLEMENT
+          errorCode: p.lTL.INVALID_ENTITLEMENT
         }, "SKU does not exist.");
         return Promise.race([(function(e, t) {
-          let n = d.Z.isEntitledToSku(u.default.getCurrentUser(), e, t);
-          return null != n ? Promise.resolve(n) : (0, r.yD)(t).then(() => !0 === d.Z.isEntitledToSku(u.default.getCurrentUser(), e, t))
+          let n = u.Z.isEntitledToSku(d.default.getCurrentUser(), e, t);
+          return null != n ? Promise.resolve(n) : (0, l.yD)(t).then(() => !0 === u.Z.isEntitledToSku(d.default.getCurrentUser(), e, t))
         })(t, e.id).then(e => {
           if (!e) throw new I.Z({
-            errorCode: T.lTL.INVALID_ENTITLEMENT
+            errorCode: p.lTL.INVALID_ENTITLEMENT
           }, "User does not have entitlement.")
-        }), (0, l.GR)(g).then(() => {
+        }), (0, a.GR)(g).then(() => {
           throw new I.Z({
-            errorCode: T.lTL.INVALID_ENTITLEMENT
+            errorCode: p.lTL.INVALID_ENTITLEMENT
           }, "Timed out fetching entitlement.")
         })])
       } catch (e) {
-        throw e.code === T.lTL.INVALID_ENTITLEMENT && (_.ZP.focus(null, !0), (0, a.openModalLazy)(async () => {
+        throw e.code === p.lTL.INVALID_ENTITLEMENT && (h.ZP.focus(null, !0), (0, r.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("99387"), n.e("48748")]).then(n.bind(n, 52004));
-          return t => (0, s.jsx)(e, {
+          } = await n.e("48748").then(n.bind(n, 52004));
+          return t => (0, i.jsx)(e, {
             ...t,
-            applicationId: i
+            applicationId: s
           })
         })), e
       }
     }
   },
-  [T.Etm.GET_ENTITLEMENT_TICKET]: {
+  [p.Etm.GET_ENTITLEMENT_TICKET]: {
     scope: m.lH,
     handler(e) {
       let {
         socket: t
-      } = e, l = t.application.id;
-      if (null == l) throw new I.Z({
-        errorCode: T.lTL.INVALID_COMMAND
+      } = e, a = t.application.id;
+      if (null == a) throw new I.Z({
+        errorCode: p.lTL.INVALID_COMMAND
       }, "No application.");
-      return i.tn.post({
-        url: T.ANM.ENTITLEMENT_TICKET(l),
+      return s.tn.post({
+        url: p.ANM.ENTITLEMENT_TICKET(a),
         body: {
-          test_mode: E.Z.inTestModeForApplication(l) || o.Z.inDevModeForApplication(l)
+          test_mode: _.Z.inTestModeForApplication(a) || o.Z.inDevModeForApplication(a)
         },
         retries: 3,
         oldFormErrors: !0
@@ -82,13 +82,13 @@ t.Z = {
         } = e;
         return t
       }).catch(e => {
-        throw _.ZP.focus(null, !0), (0, a.openModalLazy)(async () => {
+        throw h.ZP.focus(null, !0), (0, r.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("99387"), n.e("48748")]).then(n.bind(n, 52004));
-          return t => (0, s.jsx)(e, {
+          } = await n.e("48748").then(n.bind(n, 52004));
+          return t => (0, i.jsx)(e, {
             ...t,
-            applicationId: l
+            applicationId: a
           })
         }), e
       })

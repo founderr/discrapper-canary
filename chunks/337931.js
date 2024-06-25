@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_fb0b3c",
   row: "row_fb0b3c",

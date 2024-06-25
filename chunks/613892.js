@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   row: "row_a708c4",
   sticker: "sticker_a708c4",

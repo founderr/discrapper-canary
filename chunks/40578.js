@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   notice: "notice_be03aa",
   isMobile: "isMobile_be03aa",

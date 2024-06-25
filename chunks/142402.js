@@ -1,73 +1,73 @@
-a.r(n), a.d(n, {
+n.r(a), n.d(a, {
   default: function() {
-    return M
+    return b
   }
 });
-var s = a(735250),
-  l = a(470079),
-  t = a(481060),
-  r = a(332664),
-  i = a(538211),
-  o = a(698066),
-  c = a(142497),
-  u = a(626135),
-  d = a(981631),
-  E = a(70722),
-  R = a(190378),
-  _ = a(689938);
-let T = [E.kr.OTHER];
+var t = n(735250),
+  l = n(470079),
+  s = n(481060),
+  r = n(332664),
+  o = n(538211),
+  i = n(698066),
+  c = n(142497),
+  u = n(626135),
+  _ = n(981631),
+  d = n(70722),
+  E = n(190378),
+  R = n(689938);
+let m = [d.kr.OTHER];
 
-function M(e) {
+function b(e) {
   let {
-    isStreamer: n,
-    stream: M,
-    streamApplication: O,
-    onClose: m,
-    transitionState: S,
-    analyticsData: A
-  } = e, f = n ? _.Z.Messages.STREAM_REPORT_RATING_BODY_STREAMER : _.Z.Messages.STREAM_REPORT_RATING_BODY;
+    isStreamer: a,
+    stream: b,
+    streamApplication: T,
+    onClose: S,
+    transitionState: M,
+    analyticsData: O
+  } = e, f = a ? R.Z.Messages.STREAM_REPORT_RATING_BODY_STREAMER : R.Z.Messages.STREAM_REPORT_RATING_BODY;
   return l.useEffect(() => {
-    u.default.track(d.rMx.OPEN_MODAL, {
+    u.default.track(_.rMx.OPEN_MODAL, {
       type: "Stream Problem Report",
-      other_user_id: M.ownerId,
-      application_id: null != O ? O.id : null,
-      application_name: null != O ? O.name : null,
-      game_id: null != O ? O.id : null,
+      other_user_id: b.ownerId,
+      application_id: null != T ? T.id : null,
+      application_name: null != T ? T.name : null,
+      game_id: null != T ? T.id : null,
       source: "Stream End"
     })
-  }, [M.ownerId, O]), (0, s.jsx)(r.Z, {
-    header: _.Z.Messages.STREAM_REPORT_A_PROBLEM_POST_STREAM,
+  }, [b.ownerId, T]), (0, t.jsx)(r.Z, {
+    header: R.Z.Messages.STREAM_REPORT_A_PROBLEM_POST_STREAM,
     body: f,
-    problemTitle: _.Z.Messages.STREAM_REPORT_LABEL,
-    problems: (0, i.Z)(n, !0),
-    feedbackProblems: T,
+    problemTitle: R.Z.Messages.STREAM_REPORT_LABEL,
+    problems: (0, o.Z)(a, !0),
+    feedbackProblems: m,
     onSubmit: function(e) {
       let {
-        rating: n,
+        rating: a,
         problem: l,
         dontShowAgain: r,
-        feedback: i
+        feedback: o
       } = e;
-      if (r && (0, c.Kw)(R.v.REPORT_PROBLEM_POST_STREAM), null != n)(0, o.Z)({
+      if (r && (0, c.Kw)(E.v.REPORT_PROBLEM_POST_STREAM), null != a)(0, i.Z)({
         problem: l,
-        stream: M,
-        feedback: i,
-        streamApplication: O,
-        analyticsData: A,
+        stream: b,
+        feedback: o,
+        streamApplication: T,
+        analyticsData: O,
         location: "Stream End",
-        rating: n
-      }), null != l && (0, t.openModalLazy)(async () => {
+        rating: a
+      }), null != l && (0, s.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([a.e("99387"), a.e("14466")]).then(a.bind(a, 729328));
-        return n => (0, s.jsx)(e, {
-          body: _.Z.Messages.STREAM_REPORTED_BODY,
-          ...n
+        } = await n.e("14466").then(n.bind(n, 729328));
+        return a => (0, t.jsx)(e, {
+          body: R.Z.Messages.STREAM_REPORTED_BODY,
+          ...a
         })
       })
     },
-    onClose: m,
-    transitionState: S,
-    otherKey: E.kr.OTHER
+    onClose: S,
+    transitionState: M,
+    otherKey: d.kr.OTHER
   })
 }

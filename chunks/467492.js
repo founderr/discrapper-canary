@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   dropdown: "dropdown_f52ee7",
   header: "header_f52ee7",

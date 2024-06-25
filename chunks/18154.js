@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   selectable: "selectable_fbc755",
   strong: "strong_fbc755",

@@ -1,151 +1,151 @@
-l.d(n, {
+i.d(n, {
   Z: function() {
-    return S
+    return M
   }
 });
-var t = l(735250);
-l(470079);
-var i = l(442837),
-  r = l(481060),
-  s = l(239091),
-  a = l(749210),
-  o = l(305325),
-  u = l(281956),
-  c = l(889161),
-  d = l(703656),
-  v = l(922482),
-  h = l(984933),
-  E = l(430824),
-  g = l(496675),
-  f = l(626135),
-  m = l(572004),
-  x = l(482241),
-  _ = l(951539),
-  I = l(894017),
-  Z = l(274311),
-  N = l(854698),
-  T = l(118998),
-  j = l(139712),
-  C = l(765305),
-  p = l(981631),
-  L = l(689938);
+var l = i(735250);
+i(470079);
+var t = i(442837),
+  a = i(481060),
+  r = i(239091),
+  s = i(749210),
+  o = i(305325),
+  c = i(281956),
+  u = i(889161),
+  d = i(703656),
+  E = i(922482),
+  g = i(984933),
+  h = i(430824),
+  v = i(496675),
+  Z = i(626135),
+  C = i(572004),
+  m = i(482241),
+  N = i(951539),
+  x = i(894017),
+  f = i(274311),
+  _ = i(854698),
+  I = i(118998),
+  p = i(139712),
+  T = i(765305),
+  j = i(981631),
+  L = i(689938);
 
-function S(e) {
+function M(e) {
   let {
     guild: n,
-    channel: S,
-    guildScheduledEvent: M,
+    channel: M,
+    guildScheduledEvent: k,
     isActive: P,
-    recurrenceId: R,
-    onActionTaken: b
+    recurrenceId: G,
+    onActionTaken: D
   } = e, {
-    scheduled_start_time: y,
-    id: k,
-    entity_type: D,
-    guild_id: A
-  } = M, {
-    canManageGuildEvent: G
-  } = (0, c.XJ)(null != S ? S : n), U = G(M), O = (0, _.ZP)(M), V = (0, Z.T)(null == S ? void 0 : S.id, M.id), {
-    withinStartWindow: w
-  } = (0, N.ub)(y), B = (0, i.e7)([g.Z], () => (null == S ? !void 0 : !S.isGuildVocal()) || g.Z.can(p.Plq.CONNECT, S), [S]), F = (0, u.J)(A), H = (0, I.Z)(R, k);
+    scheduled_start_time: S,
+    id: y,
+    entity_type: A,
+    guild_id: R
+  } = k, {
+    canManageGuildEvent: U
+  } = (0, u.XJ)(null != M ? M : n), b = U(k), V = (0, N.ZP)(k), O = (0, f.T)(null == M ? void 0 : M.id, k.id), {
+    withinStartWindow: H
+  } = (0, _.ub)(S), w = (0, t.e7)([v.Z], () => (null == M ? !void 0 : !M.isGuildVocal()) || v.Z.can(j.Plq.CONNECT, M), [M]), z = (0, c.J)(R), B = (0, x.Z)(G, y);
 
-  function z(e) {
-    e.stopPropagation(), (0, j.Z)(k, R, A)
+  function J(e) {
+    e.stopPropagation(), (0, p.Z)(y, G, R)
   }
   async function X(e) {
-    e.stopPropagation(), await a.Z.joinGuild(A), E.Z.addConditionalChangeListener(() => null == E.Z.getGuild(A) || (!P && z(e), W(e), !1))
+    e.stopPropagation(), await s.Z.joinGuild(R), h.Z.addConditionalChangeListener(() => null == h.Z.getGuild(R) || (!P && J(e), W(e), !1))
   }
 
   function W(e) {
     e.stopPropagation();
-    let n = h.ZP.getDefaultChannel(A);
-    (0, r.closeAllModals)(), (0, d.XU)(A, null == n ? void 0 : n.id)
+    let n = g.ZP.getDefaultChannel(R);
+    (0, a.closeAllModals)(), (0, d.XU)(R, null == n ? void 0 : n.id)
   }
   return {
-    onDeleteClick: U ? function(e) {
-      if (e.stopPropagation(), !!U && !P)(0, r.openModal)(e => (0, t.jsx)(r.ConfirmModal, {
+    onDeleteClick: b ? function(e) {
+      if (e.stopPropagation(), !!b && !P)(0, a.openModal)(e => (0, l.jsx)(a.ConfirmModal, {
         ...e,
         header: L.Z.Messages.GUILD_EVENT_DELETE_CONFIRM_HEADER,
         confirmText: L.Z.Messages.DELETE,
         cancelText: L.Z.Messages.CANCEL,
-        onConfirm: () => x.Z.deleteGuildEvent(k, A),
-        children: (0, t.jsx)(r.Text, {
+        onConfirm: () => m.Z.deleteGuildEvent(y, R),
+        children: (0, l.jsx)(a.Text, {
           variant: "text-md/normal",
           children: L.Z.Messages.GUILD_EVENT_DELETE_CONFIRM_BODY
         })
       }))
     } : void 0,
     onContextMenu: function(e) {
-      e.stopPropagation(), null != n && (0, s.jW)(e, async () => {
+      e.stopPropagation(), null != n && (0, r.jW)(e, async () => {
         let {
           default: e
-        } = await Promise.all([l.e("15450"), l.e("37133")]).then(l.bind(l, 215269));
-        return l => (0, t.jsx)(e, {
-          guildEventId: k,
-          recurrenceId: R,
-          channel: S,
+        } = await Promise.all([i.e("15450"), i.e("37133")]).then(i.bind(i, 215269));
+        return i => (0, l.jsx)(e, {
+          guildEventId: y,
+          recurrenceId: G,
+          channel: M,
           guild: n,
-          ...l
+          ...i
         })
       })
     },
-    onJoinClick: B || F ? function(e) {
-      if (e.stopPropagation(), F) {
-        null == b || b(), (0, o.hk)(A);
+    onJoinClick: w || z ? function(e) {
+      if (e.stopPropagation(), z) {
+        null == D || D(), (0, o.hk)(R);
         return
-      }(null == S ? void 0 : S.isGuildStageVoice()) ? ((0, v.Cq)(S), null == b || b()) : (null == S ? void 0 : S.isGuildVoice()) && (x.Z.joinVoiceEvent(S.guild_id, S.id), null == b || b())
+      }(null == M ? void 0 : M.isGuildStageVoice()) ? ((0, E.Cq)(M), null == D || D()) : (null == M ? void 0 : M.isGuildVoice()) && (m.Z.joinVoiceEvent(M.guild_id, M.id), null == D || D())
     } : void 0,
-    onRsvpClick: z,
-    onStartClick: U && w && !(null == H ? void 0 : H.is_canceled) ? function(e) {
-      e.stopPropagation(), (0, r.openModalLazy)(async () => {
+    onRsvpClick: J,
+    onStartClick: b && H && !(null == B ? void 0 : B.is_canceled) ? function(e) {
+      e.stopPropagation(), (0, a.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([l.e("99387"), l.e("84722"), l.e("48526")]).then(l.bind(l, 296864));
-        return n => (0, t.jsx)(e, {
+        } = await Promise.all([i.e("84722"), i.e("72850")]).then(i.bind(i, 296864));
+        return n => (0, l.jsx)(e, {
           ...n,
-          event: M,
-          onSuccess: b
+          event: k,
+          onSuccess: D
         })
       })
     } : void 0,
     onInviteClick: function(e) {
       if (e.stopPropagation(), null != n) {
-        if (!O || !V) {
-          let e = (0, T.H)({
-            guildId: A,
-            guildEventId: k
+        if (!V || !O) {
+          let e = (0, I.H)({
+            guildId: R,
+            guildEventId: y
           });
-          (0, m.JG)(e), f.default.track(p.rMx.GUILD_SCHEDULED_EVENT_LINK_COPIED, {
-            guild_id: A,
-            guild_scheduled_event_id: k
+          (0, C.JG)(e), Z.default.track(j.rMx.GUILD_SCHEDULED_EVENT_LINK_COPIED, {
+            guild_id: R,
+            guild_scheduled_event_id: y
           });
           return
-        }(0, r.openModalLazy)(async () => {
+        }(0, a.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([l.e("49237"), l.e("99387"), l.e("7654"), l.e("1187"), l.e("30987")]).then(l.bind(l, 560114));
-          return l => (0, t.jsx)(e, {
-            ...l,
+          } = await Promise.all([i.e("7654"), i.e("1187"), i.e("18222")]).then(i.bind(i, 560114));
+          return i => (0, l.jsx)(e, {
+            ...i,
             guild: n,
-            channel: S,
-            guildScheduledEvent: M,
-            source: p.t4x.GUILD_EVENTS
+            channel: M,
+            guildScheduledEvent: k,
+            source: j.t4x.GUILD_EVENTS
           })
         })
       }
     },
-    onEndClick: U && D === C.WX.EXTERNAL && P ? function(e) {
-      if (e.stopPropagation(), !U) return;
+    onEndClick: b && A === T.WX.EXTERNAL && P ? function(e) {
+      if (e.stopPropagation(), !b) return;
       let n = () => {
-        x.Z.endEvent(k, A), (0, r.closeAllModals)()
+        m.Z.endEvent(y, R), (0, a.closeAllModals)()
       };
-      (0, r.openModal)(e => (0, t.jsx)(r.ConfirmModal, {
+      (0, a.openModal)(e => (0, l.jsx)(a.ConfirmModal, {
         ...e,
         header: L.Z.Messages.END_EVENT,
         confirmText: L.Z.Messages.GUILD_EVENT_END_PROMPT_CONFIRM,
         cancelText: L.Z.Messages.CANCEL,
         onConfirm: n,
-        children: (0, t.jsx)(r.Text, {
+        children: (0, l.jsx)(a.Text, {
           variant: "text-md/normal",
           children: L.Z.Messages.GUILD_EVENT_EXTERNAL_END_PROMPT_TITLE
         })

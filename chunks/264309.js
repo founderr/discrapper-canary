@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_e41913",
   column: "column_e41913",

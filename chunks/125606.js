@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   wrapper: "wrapper_cb78f1",
   biteSize: "biteSize_cb78f1",

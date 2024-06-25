@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   nitroTopDividerContainer: "nitroTopDividerContainer_e8f337",
   nitroTopDividerUpper: "nitroTopDividerUpper_e8f337",

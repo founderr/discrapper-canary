@@ -1,46 +1,46 @@
 "use strict";
-var n = t(735250);
-t(470079);
-var i = t(780384),
-  l = t(481060),
-  a = t(410030),
-  r = t(367907),
-  o = t(906732),
-  c = t(807582),
-  d = t(518738),
-  u = t(26323),
-  E = t(176278),
-  _ = t(764260),
-  I = t(981631),
-  T = t(30513),
-  N = t(689938),
-  m = t(176894);
-s.Z = function(e) {
+var s = n(735250);
+n(470079);
+var a = n(780384),
+  i = n(481060),
+  r = n(410030),
+  l = n(367907),
+  o = n(906732),
+  c = n(807582),
+  d = n(518738),
+  u = n(26323),
+  _ = n(176278),
+  E = n(764260),
+  I = n(981631),
+  T = n(30513),
+  m = n(689938),
+  N = n(176894);
+t.Z = function(e) {
   let {
-    guild: s,
+    guild: t,
     disabled: S,
     role: h
-  } = e, g = (0, a.ZP)(), C = (0, d.oC)(s.id, h), {
+  } = e, g = (0, r.ZP)(), C = (0, d.oC)(t.id, h), {
     analyticsLocations: x
-  } = (0, o.ZP)(), R = () => {
-    (0, l.openModalLazy)(async () => {
+  } = (0, o.ZP)(), p = () => {
+    (0, i.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([t.e("99387"), t.e("22942")]).then(t.bind(t, 660727));
-      return t => (0, n.jsx)(e, {
-        ...t,
-        guildId: s.id,
-        onUploadIcon: e => (0, _._l)(h.id, e, null),
-        onSelectUnicodeEmoji: e => (0, _._l)(h.id, null, e)
+      } = await n.e("22942").then(n.bind(n, 660727));
+      return n => (0, s.jsx)(e, {
+        ...n,
+        guildId: t.id,
+        onUploadIcon: e => (0, E._l)(h.id, e, null),
+        onSelectUnicodeEmoji: e => (0, E._l)(h.id, null, e)
       })
     })
-  }, L = s.features.has(I.oNc.ROLE_ICONS), O = e => {
-    !L && ((0, r.yw)(I.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+  }, R = t.features.has(I.oNc.ROLE_ICONS), f = e => {
+    !R && ((0, l.yw)(I.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
       location: {
         ...e,
         section: I.jXE.CUSTOM_ROLE_ICONS_TOOLTIP
       },
-      guild_id: null == s ? void 0 : s.id,
+      guild_id: null == t ? void 0 : t.id,
       location_stack: x
     }), (0, u.Z)({
       analyticsLocations: x,
@@ -49,63 +49,63 @@ s.Z = function(e) {
         section: I.jXE.GUILD_ROLE_EDIT_UPSELL_MODAL,
         object: I.qAy.BADGE
       },
-      guild: s,
+      guild: t,
       perks: (0, T.Yp)()
     }))
-  }, A = (0, n.jsx)(c.Z, {
-    className: m.availabilityIndicator,
-    guild: s,
+  }, L = (0, s.jsx)(c.Z, {
+    className: N.availabilityIndicator,
+    guild: t,
     guildFeature: I.oNc.ROLE_ICONS,
     tooltipPosition: "top",
-    hideTooltip: L,
-    onClick: () => O({
+    hideTooltip: R,
+    onClick: () => f({
       object: I.qAy.LEARN_MORE,
       objectType: I.Qqv.TIER_2
     })
   });
-  return (0, n.jsxs)(l.FormItem, {
-    className: m.container,
-    children: [(0, n.jsxs)(l.FormTitle, {
-      className: m.formTitle,
-      children: [(0, n.jsx)("div", {
-        children: N.Z.Messages.FORM_LABEL_ROLE_ICON
-      }), A]
-    }), (0, n.jsx)(l.FormText, {
-      className: m.description,
-      children: N.Z.Messages.ROLE_ICON_HELP
-    }), (0, n.jsxs)("div", {
-      className: m.rolePreviewArea,
-      children: [(0, n.jsx)("div", {
-        className: m.previewContainer,
-        children: null != C ? (0, n.jsx)(E.Z, {
+  return (0, s.jsxs)(i.FormItem, {
+    className: N.container,
+    children: [(0, s.jsxs)(i.FormTitle, {
+      className: N.formTitle,
+      children: [(0, s.jsx)("div", {
+        children: m.Z.Messages.FORM_LABEL_ROLE_ICON
+      }), L]
+    }), (0, s.jsx)(i.FormText, {
+      className: N.description,
+      children: m.Z.Messages.ROLE_ICON_HELP
+    }), (0, s.jsxs)("div", {
+      className: N.rolePreviewArea,
+      children: [(0, s.jsx)("div", {
+        className: N.previewContainer,
+        children: null != C ? (0, s.jsx)(_.Z, {
           ...C,
-          className: m.roleIconPreview,
+          className: N.roleIconPreview,
           enableTooltip: !1
-        }) : (0, n.jsx)(l.ImagePlusIcon, {
+        }) : (0, s.jsx)(i.ImagePlusIcon, {
           size: "custom",
           color: "currentColor",
           width: 24,
           height: 24,
-          className: m.preview
+          className: N.preview
         })
-      }), (0, n.jsx)(l.Button, {
-        className: m.button,
-        color: (0, i.ap)(g) ? l.Button.Colors.PRIMARY : l.Button.Colors.WHITE,
-        look: l.Button.Looks.OUTLINED,
-        onClick: () => s.hasFeature(I.oNc.ROLE_ICONS) ? R() : O({
+      }), (0, s.jsx)(i.Button, {
+        className: N.button,
+        color: (0, a.ap)(g) ? i.Button.Colors.PRIMARY : i.Button.Colors.WHITE,
+        look: i.Button.Looks.OUTLINED,
+        onClick: () => t.hasFeature(I.oNc.ROLE_ICONS) ? p() : f({
           object: I.qAy.UPLOAD_IMAGE
         }),
         disabled: S,
-        children: N.Z.Messages.ROLE_ICON_CHOOSE_IMAGE
-      }), null != C ? (0, n.jsx)(l.Button, {
-        className: m.button,
-        color: (0, i.ap)(g) ? l.Button.Colors.PRIMARY : l.Button.Colors.TRANSPARENT,
-        look: l.Button.Looks.BLANK,
+        children: m.Z.Messages.ROLE_ICON_CHOOSE_IMAGE
+      }), null != C ? (0, s.jsx)(i.Button, {
+        className: N.button,
+        color: (0, a.ap)(g) ? i.Button.Colors.PRIMARY : i.Button.Colors.TRANSPARENT,
+        look: i.Button.Looks.BLANK,
         onClick: () => {
-          (0, _._l)(h.id, null, null)
+          (0, E._l)(h.id, null, null)
         },
         disabled: S,
-        children: N.Z.Messages.REMOVE_ICON
+        children: m.Z.Messages.REMOVE_ICON
       }) : null]
     })]
   })

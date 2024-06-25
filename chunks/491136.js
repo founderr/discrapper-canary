@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   role: "role_f9575e pill_f9575e",
   roleFlowerStar: "roleFlowerStar_f9575e",

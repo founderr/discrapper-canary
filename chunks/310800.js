@@ -1,78 +1,78 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   Z: function() {
     return S
   }
 });
-var n = t(735250);
-t(470079);
-var i = t(852229),
-  l = t(481060),
-  a = t(724598),
-  r = t(674180),
-  o = t(495437),
-  c = t(267101),
-  d = t(863663),
-  u = t(676651),
-  E = t(613810),
-  _ = t(391181),
-  I = t(689938),
-  T = t(673817);
-let N = "guild-product-listings-header";
+var s = n(735250);
+n(470079);
+var a = n(852229),
+  i = n(481060),
+  r = n(724598),
+  l = n(674180),
+  o = n(495437),
+  c = n(267101),
+  d = n(863663),
+  u = n(676651),
+  _ = n(613810),
+  E = n(391181),
+  I = n(689938),
+  T = n(673817);
+let m = "guild-product-listings-header";
 
-function m(e) {
+function N(e) {
   let {
-    guildId: s,
+    guildId: t,
     handleCreateOrEditProduct: u
-  } = e, m = (0, c.ue)(s, {
+  } = e, N = (0, c.ue)(t, {
     publishedOnly: !1
   }), {
     shouldRestrictUpdatingCreatorMonetizationSettings: S
-  } = (0, r.gX)(s), h = e => {
-    (0, o.Je)(s, e, {
+  } = (0, l.gX)(t), h = e => {
+    (0, o.Je)(t, e, {
       published: !1
     })
-  }, g = (e, i) => {
-    (0, l.openModalLazy)(async () => {
+  }, g = (e, a) => {
+    (0, i.openModalLazy)(async () => {
       let {
-        default: l
-      } = await Promise.all([t.e("99387"), t.e("95925")]).then(t.bind(t, 673078));
-      return t => (0, n.jsx)(l, {
-        guildId: s,
+        default: i
+      } = await n.e("95925").then(n.bind(n, 673078));
+      return n => (0, s.jsx)(i, {
+        guildId: t,
         productId: e,
-        productName: i,
-        ...t
+        productName: a,
+        ...n
       })
     })
-  }, C = (e, s) => {
-    (0, i.J)((0, d.ar)(e, s))
-  }, x = m.length > 0;
-  return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)(l.FormTitle, {
+  }, C = (e, t) => {
+    (0, a.J)((0, d.ar)(e, t))
+  }, x = N.length > 0;
+  return (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsx)(i.FormTitle, {
       className: T.productListingsHeader,
-      id: N,
+      id: m,
       children: x ? I.Z.Messages.GUILD_PRODUCTS_YOUR_PRODUCTS_HEADER : I.Z.Messages.GUILD_PRODUCTS_NO_PRODUCTS_HEADER
-    }), x ? (0, n.jsx)("ul", {
+    }), x ? (0, s.jsx)("ul", {
       className: T.productListings,
-      "aria-labelledby": N,
-      children: m.map(e => (0, n.jsx)("li", {
-        children: (0, n.jsx)(_.Z, {
-          guildId: s,
+      "aria-labelledby": m,
+      children: N.map(e => (0, s.jsx)("li", {
+        children: (0, s.jsx)(E.Z, {
+          guildId: t,
           product: e,
           onEditProduct: () => u(e.id),
           onUnpublishProduct: () => h(e.id),
           onDeleteProduct: () => g(e.id, e.name),
-          onCopyProductLink: () => C(s, e.id),
-          onTestDownload: () => E.Z.open({
-            guildId: s,
+          onCopyProductLink: () => C(t, e.id),
+          onTestDownload: () => _.Z.open({
+            guildId: t,
             productId: e.id
           }),
           onReportProduct: () => {},
           disabled: S
         })
       }, e.id))
-    }) : (0, n.jsx)(a.Z, {
-      guildId: s,
+    }) : (0, s.jsx)(r.Z, {
+      guildId: t,
       showCTA: !1,
       responsive: !1
     })]
@@ -81,33 +81,33 @@ function m(e) {
 
 function S(e) {
   let {
-    guildId: s
+    guildId: t
   } = e, {
-    shouldRestrictUpdatingCreatorMonetizationSettings: t
-  } = (0, r.gX)(s), i = e => {
-    u.h(s, e)
+    shouldRestrictUpdatingCreatorMonetizationSettings: n
+  } = (0, l.gX)(t), a = e => {
+    u.h(t, e)
   };
-  return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsxs)(l.Button, {
+  return (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsxs)(i.Button, {
       className: T.addButton,
       innerClassName: T.addButtonInner,
-      onClick: () => i(null),
-      disabled: t,
-      children: [(0, n.jsx)(l.PlusSmallIcon, {
+      onClick: () => a(null),
+      disabled: n,
+      children: [(0, s.jsx)(i.PlusSmallIcon, {
         size: "custom",
         color: "currentColor",
         width: 20,
         height: 20,
         "aria-hidden": !0
-      }), (0, n.jsx)(l.Spacer, {
+      }), (0, s.jsx)(i.Spacer, {
         size: 6,
         horizontal: !0
       }), I.Z.Messages.GUILD_PRODUCTS_CREATE_PRODUCT_BUTTON]
-    }), (0, n.jsx)(l.Spacer, {
+    }), (0, s.jsx)(i.Spacer, {
       size: 24
-    }), (0, n.jsx)(m, {
-      guildId: s,
-      handleCreateOrEditProduct: i
+    }), (0, s.jsx)(N, {
+      guildId: t,
+      handleCreateOrEditProduct: a
     })]
   })
 }

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   results: "results_bad108",
   result: "result_bad108",

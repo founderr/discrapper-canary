@@ -1,110 +1,110 @@
 n(47120);
 var s = n(735250),
-  r = n(470079),
-  i = n(990547),
-  l = n(442837),
-  a = n(481060),
+  i = n(470079),
+  r = n(990547),
+  a = n(442837),
+  l = n(481060),
   o = n(893776),
-  u = n(232567),
-  c = n(388905),
+  c = n(232567),
+  u = n(388905),
   d = n(353926),
-  E = n(82554),
-  _ = n(726521),
-  h = n(185625),
-  I = n(314897),
-  N = n(63063),
-  p = n(981631),
-  g = n(689938),
-  m = n(102122),
-  T = n(331651);
-l.ZP.initialize();
-let f = e => {
+  _ = n(82554),
+  E = n(726521),
+  I = n(185625),
+  h = n(314897),
+  p = n(63063),
+  g = n(981631),
+  f = n(689938),
+  N = n(102122),
+  m = n(331651);
+a.ZP.initialize();
+let T = e => {
   let {
     title: t,
-    menuType: r
-  } = e, l = () => {
-    (0, a.openModalLazy)(async () => {
+    menuType: i
+  } = e, a = () => {
+    (0, l.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("93288")]).then(n.bind(n, 396410));
+      } = await n.e("93288").then(n.bind(n, 396410));
       return t => (0, s.jsx)(e, {
         ...t,
         onSuccess: o,
-        headerText: g.Z.Messages.ENTER_EMAIL,
-        confirmButtonText: g.Z.Messages.NEXT,
-        confirmButtonColor: a.Button.Colors.BRAND,
-        impressionName: i.ImpressionNames.URF_ENTER_EMAIL
+        headerText: f.Z.Messages.ENTER_EMAIL,
+        confirmButtonText: f.Z.Messages.NEXT,
+        confirmButtonColor: l.Button.Colors.BRAND,
+        impressionName: r.ImpressionNames.URF_ENTER_EMAIL
       })
     })
   }, o = e => {
     let t = async () => {
-      await (0, h.yL)(r, e)
-    }, l = async t => await (0, h.RV)(r, e, t), o = e => {
+      await (0, I.yL)(i, e)
+    }, a = async t => await (0, I.RV)(i, e, t), o = e => {
       let t = null == e ? void 0 : e.token;
-      r === E.B.MESSAGE ? (0, _.eE)(t) : r === E.B.USER && (0, _.JM)(t)
+      i === _.B.MESSAGE ? (0, E.eE)(t) : i === _.B.USER && (0, E.JM)(t)
     };
-    t(), (0, a.openModalLazy)(async () => {
+    t(), (0, l.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("94566")]).then(n.bind(n, 965072));
+      } = await n.e("94566").then(n.bind(n, 965072));
       return n => (0, s.jsx)(e, {
         ...n,
-        onFormSubmit: l,
+        onFormSubmit: a,
         onResend: t,
         onSuccess: o,
-        headerText: g.Z.Messages.MEMBER_VERIFICATION_EMAIL_VERIFICATION_EMAIL_SENT,
-        confirmButtonText: g.Z.Messages.VERIFY,
-        confirmButtonColor: a.Button.Colors.BRAND,
-        impressionName: i.ImpressionNames.URF_CONFIRM_EMAIL_CODE
+        headerText: f.Z.Messages.MEMBER_VERIFICATION_EMAIL_VERIFICATION_EMAIL_SENT,
+        confirmButtonText: f.Z.Messages.VERIFY,
+        confirmButtonColor: l.Button.Colors.BRAND,
+        impressionName: r.ImpressionNames.URF_CONFIRM_EMAIL_CODE
       })
     })
   };
   return (0, s.jsx)("div", {
-    className: m.buttonColumn,
-    children: (0, s.jsx)(a.Button, {
-      className: T.__invalid_reportButton,
+    className: N.buttonColumn,
+    children: (0, s.jsx)(l.Button, {
+      className: m.__invalid_reportButton,
       fullWidth: !0,
-      color: a.Button.Colors.BRAND,
-      onClick: () => l(),
+      color: l.Button.Colors.BRAND,
+      onClick: () => a(),
       children: t
     })
   })
 };
 t.Z = () => {
-  let [e, t] = r.useState(!0), [n, i] = r.useState(!1), _ = (0, l.e7)([I.default], () => I.default.isAuthenticated()), A = (0, l.e7)([d.Z], () => d.Z.hasLoadedExperiments), Z = () => {
-    (0, h.qJ)().then(() => {
-      t(!1), i(!0)
+  let [e, t] = i.useState(!0), [n, r] = i.useState(!1), E = (0, a.e7)([h.default], () => h.default.isAuthenticated()), A = (0, a.e7)([d.Z], () => d.Z.hasLoadedExperiments), Z = () => {
+    (0, I.qJ)().then(() => {
+      t(!1), r(!0)
     }).catch(() => {
-      t(!1), i(!1)
+      t(!1), r(!1)
     })
   };
-  return r.useEffect(() => {
-    _ ? (t(!0), u.k({
+  return i.useEffect(() => {
+    E ? (t(!0), c.k({
       withAnalyticsToken: !0
     }).then(() => Z()).catch(() => t(!1))) : Z()
-  }, [_]), r.useEffect(() => {
+  }, [E]), i.useEffect(() => {
     (async () => {
       !A && (await o.Z.getLocationMetadata(), o.Z.getExperiments())
     })()
-  }, [A]), e || !A ? (0, s.jsx)(c.ZP, {
-    children: (0, s.jsx)(a.Spinner, {})
-  }) : n && (0, s.jsxs)(c.ZP, {
-    children: [(0, s.jsx)(c.Dx, {
-      className: T.marginBottom8,
-      children: g.Z.Messages.URF_LANDING_PAGE_TITLE
-    }), (0, s.jsx)(c.DK, {
-      className: T.marginBottom8,
-      children: g.Z.Messages.URF_LANDING_PAGE_SUBTITLE.format({
-        supportURL: N.Z.getArticleURL(p.BhN.COPYRIGHT_AND_IP_POLICY)
+  }, [A]), e || !A ? (0, s.jsx)(u.ZP, {
+    children: (0, s.jsx)(l.Spinner, {})
+  }) : n && (0, s.jsxs)(u.ZP, {
+    children: [(0, s.jsx)(u.Dx, {
+      className: m.marginBottom8,
+      children: f.Z.Messages.URF_LANDING_PAGE_TITLE
+    }), (0, s.jsx)(u.DK, {
+      className: m.marginBottom8,
+      children: f.Z.Messages.URF_LANDING_PAGE_SUBTITLE.format({
+        supportURL: p.Z.getArticleURL(g.BhN.COPYRIGHT_AND_IP_POLICY)
       })
     }), (0, s.jsxs)("div", {
-      className: m.container,
-      children: [(0, s.jsx)(f, {
-        title: g.Z.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
-        menuType: E.B.MESSAGE
-      }), (0, s.jsx)(f, {
-        title: g.Z.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
-        menuType: E.B.USER
+      className: N.container,
+      children: [(0, s.jsx)(T, {
+        title: f.Z.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
+        menuType: _.B.MESSAGE
+      }), (0, s.jsx)(T, {
+        title: f.Z.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
+        menuType: _.B.USER
       })]
     })]
   })

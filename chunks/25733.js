@@ -16,7 +16,7 @@ t.Z = {
     null == t || u - t > l.k ? (r.K.set(l.G, u), (0, s.openModalLazy)(async () => {
       let {
         default: t
-      } = await Promise.all([n.e("99387"), n.e("35489")]).then(n.bind(n, 582712));
+      } = await n.e("35489").then(n.bind(n, 582712));
       return n => (0, i.jsx)(t, {
         ...n,
         guildId: e

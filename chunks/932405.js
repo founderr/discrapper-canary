@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_b6010f",
   labelContainer: "labelContainer_b6010f",

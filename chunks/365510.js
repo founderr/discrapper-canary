@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   wrapper: "wrapper_ef319f",
   button: "button_ef319f",

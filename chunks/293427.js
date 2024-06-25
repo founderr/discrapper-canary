@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   header: "header_ccf237",
   linkButton: "linkButton_ccf237",

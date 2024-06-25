@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   carouselContainer: "carouselContainer_b47201",
   carousel: "carousel_b47201",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   guildStatus: "guildStatus_cbe7a3",
   guildIcon: "guildIcon_cbe7a3",

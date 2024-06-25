@@ -1,3 +1,4 @@
+"use strict";
 n.r(e.exports = {
   container: "container_e5c5d5",
   clickableContainer: "clickableContainer_e5c5d5",

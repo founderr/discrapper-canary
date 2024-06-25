@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   typeMacOS: "typeMacOS_a934d8 titleBar_a934d8",
   macDragRegion: "macDragRegion_a934d8",

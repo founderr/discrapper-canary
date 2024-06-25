@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   overlay: "overlay_e17343",
   overlayBackground: "overlayBackground_e17343",

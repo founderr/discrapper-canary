@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   chipletContainerInner: "chipletContainerInner_d5cb59",
   chipletContainerInline: "chipletContainerInline_d5cb59",

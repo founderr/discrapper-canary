@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   spacing: "spacing_f7d416",
   headerSpacing: "headerSpacing_f7d416",

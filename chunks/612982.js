@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   textLeft: "textLeft_aa267a text_aa267a",
   textRight: "textRight_aa267a text_aa267a",

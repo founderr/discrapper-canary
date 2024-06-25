@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   focusTarget: "focusTarget_a57509",
   obscuredTagContainer: "obscuredTagContainer_a57509",

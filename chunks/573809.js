@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   channelTextAreaContainer: "channelTextAreaContainer_d0696b",
   channelTextArea: "channelTextArea_d0696b",

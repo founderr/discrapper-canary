@@ -25,7 +25,7 @@ var s = n(735250),
   T = n(689938),
   f = n(997844);
 let L = "GameProfileModal",
-  P = function() {
+  S = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
       l = arguments.length > 1 ? arguments[1] : void 0;
     if (null == e) return [];
@@ -36,7 +36,7 @@ let L = "GameProfileModal",
       s !== l && (null == n[s] && (n[s] = 0), n[s] += 1)
     }), Object.keys(n).sort((e, l) => n[l] - n[e])
   },
-  S = e => {
+  C = e => {
     var l;
     let {
       applicationId: n,
@@ -63,13 +63,13 @@ let L = "GameProfileModal",
       })
     })
   },
-  C = [c.z.DESKTOP, c.z.XBOX, c.z.PLAYSTATION, c.z.NINTENDO],
+  P = [c.z.DESKTOP, c.z.XBOX, c.z.PLAYSTATION, c.z.NINTENDO],
   R = e => {
     let {
       platforms: l
     } = e, n = [...new Set(l)];
     !n.includes(c.z.DESKTOP) && (n.includes(c.z.MACOS) || n.includes(c.z.LINUX)) && n.push(c.z.DESKTOP);
-    let t = (n = n.filter(e => C.includes(e))).map(e => {
+    let t = (n = n.filter(e => P.includes(e))).map(e => {
       switch (e) {
         case c.z.DESKTOP:
           return (0, s.jsx)(m.ScreenIcon, {}, e);
@@ -92,7 +92,7 @@ let L = "GameProfileModal",
     var l, a, r;
     let {
       applicationId: c,
-      channel: C,
+      channel: P,
       transitionState: Z,
       onClose: G
     } = e, {
@@ -112,7 +112,7 @@ let L = "GameProfileModal",
     } = (0, M.Z)(), Y = t.useMemo(() => {
       var e;
       return null !== (e = null == H ? void 0 : H.filter(e => (0, E.d)(e) && e.extra.application_id === c)) && void 0 !== e ? e : []
-    }, [H, c]), K = t.useMemo(() => P(H, c), [H, c]);
+    }, [H, c]), K = t.useMemo(() => S(H, c), [H, c]);
     t.useEffect(() => {
       h.Z.getDetectableGamesSupplemental([c, ...K])
     }, [c, K]);
@@ -242,7 +242,7 @@ let L = "GameProfileModal",
                 className: i()(f.column, f.gapNone),
                 children: null == Y ? void 0 : Y.map(e => (0, s.jsx)(_.Z, {
                   entry: e,
-                  channel: C,
+                  channel: P,
                   onClose: G
                 }, e.id))
               })]
@@ -262,7 +262,7 @@ let L = "GameProfileModal",
                     (0, m.openModalLazy)(async () => {
                       let {
                         default: e
-                      } = await Promise.all([n.e("49237"), n.e("99387"), n.e("99857")]).then(n.bind(n, 895023));
+                      } = await n.e("99857").then(n.bind(n, 895023));
                       return n => {
                         let {
                           ...t
@@ -291,9 +291,9 @@ let L = "GameProfileModal",
             }), (0, s.jsx)("div", {
               className: f.row,
               style: {},
-              children: K.filter(A.z6).slice(0, 5).map(e => (0, s.jsx)(S, {
+              children: K.filter(A.z6).slice(0, 5).map(e => (0, s.jsx)(C, {
                 applicationId: e,
-                channel: C,
+                channel: P,
                 onClose: G
               }, e))
             })]

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   appAsidePanelWrapper: "appAsidePanelWrapper_bd26cc",
   mobileAppAsidePanelWrapper: "mobileAppAsidePanelWrapper_bd26cc",

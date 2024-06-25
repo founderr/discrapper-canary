@@ -1,25 +1,25 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   q: function() {
-    return l
+    return i
   }
 });
-var n = t(735250);
-t(470079);
-var i = t(952265);
+var s = n(735250);
+n(470079);
+var a = n(952265);
 
-function l(e) {
+function i(e) {
   let {
-    demonetized: s = !1
+    demonetized: t = !1
   } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-  (0, i.ZD)(async () => {
+  (0, a.ZD)(async () => {
     let {
-      default: i
-    } = await Promise.all([t.e("99387"), t.e("90220")]).then(t.bind(t, 418225));
-    return t => (0, n.jsx)(i, {
+      default: a
+    } = await n.e("90220").then(n.bind(n, 418225));
+    return n => (0, s.jsx)(a, {
       guildId: e,
-      demonetized: s,
-      ...t
+      demonetized: t,
+      ...n
     })
   }, {
     onCloseRequest: () => {}

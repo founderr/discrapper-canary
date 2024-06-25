@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   size10: "size10_fb468f",
   size12: "size12_fb468f",

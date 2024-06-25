@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   left: "left_c48316",
   right: "right_c48316",

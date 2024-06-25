@@ -1,31 +1,32 @@
-t.d(n, {
+"use strict";
+n.d(t, {
   J: function() {
     return r
   },
   K: function() {
-    return u
+    return l
   }
 });
-var l = t(735250);
-t(470079);
-var a = t(481060),
-  i = t(866266);
+var s = n(735250);
+n(470079);
+var a = n(481060),
+  i = n(866266);
 
 function r(e) {
   (0, a.openModalLazy)(async () => {
     let {
-      default: n
-    } = await Promise.all([t.e("99387"), t.e("9354")]).then(t.bind(t, 461533));
-    return t => (0, l.jsx)(n, {
-      ...t,
+      default: t
+    } = await n.e("9354").then(n.bind(n, 461533));
+    return n => (0, s.jsx)(t, {
+      ...n,
       guildId: e
     })
   })
 }
 
-function u(e) {
-  (0, a.openModalLazy)(async () => n => (0, l.jsx)(i.Z, {
-    ...n,
+function l(e) {
+  (0, a.openModalLazy)(async () => t => (0, s.jsx)(i.Z, {
+    ...t,
     guildId: e
   }))
 }

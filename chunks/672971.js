@@ -80,7 +80,7 @@ class M extends s.Component {
               (0, u.openModalLazy)(async () => {
                 let {
                   default: n
-                } = await Promise.all([a.e("49237"), a.e("99387"), a.e("51868")]).then(a.bind(a, 796504));
+                } = await a.e("51868").then(a.bind(a, 796504));
                 return a => (0, t.jsx)(n, {
                   eulaId: e,
                   ...a

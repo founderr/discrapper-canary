@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   header: "header_addbba",
   subheader: "subheader_addbba",

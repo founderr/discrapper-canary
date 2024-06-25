@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   toolbar: "toolbar_de3e42",
   buttons: "buttons_de3e42",

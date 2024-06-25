@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_ff17b4",
   background: "background_ff17b4",

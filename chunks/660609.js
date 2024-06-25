@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   mediaBarInteraction: "mediaBarInteraction_d12f5a",
   mediaBarInteractionDragging: "mediaBarInteractionDragging_d12f5a",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   button: "button_e258f5",
   primary: "primary_e258f5",

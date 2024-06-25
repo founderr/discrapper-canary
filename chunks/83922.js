@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   flex: "flex_ec1a20",
   alignStart: "alignStart_ec1a20",

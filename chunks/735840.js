@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_b1a27b",
   rowHeader: "rowHeader_b1a27b",

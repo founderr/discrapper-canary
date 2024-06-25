@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_c2bdca",
   emojiRow: "emojiRow_c2bdca",

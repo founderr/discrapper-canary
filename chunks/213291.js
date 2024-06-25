@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   calendarContainer: "calendarContainer_f4830e",
   container: "container_f4830e",

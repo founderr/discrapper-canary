@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   streamIcon: "streamIcon_a2aefc",
   iconButton: "iconButton_a2aefc",

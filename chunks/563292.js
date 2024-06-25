@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   thumbnailContainer: "thumbnailContainer_dbcd8f",
   uploadThumbnailContainer: "uploadThumbnailContainer_dbcd8f",

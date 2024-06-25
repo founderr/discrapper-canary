@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_b64375",
   clydeBadgeList: "clydeBadgeList_b64375",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_d6d7a8",
   sparkles: "sparkles_d6d7a8",

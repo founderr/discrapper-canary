@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   cover: "cover_b26897",
   active: "active_b26897",

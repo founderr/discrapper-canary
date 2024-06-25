@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   gameImageContainer: "gameImageContainer_fda254",
   extraGameCount: "extraGameCount_fda254",

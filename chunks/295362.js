@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   card: "card_a298b8",
   outline: "outline_a298b8",

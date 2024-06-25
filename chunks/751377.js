@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   card: "card_b3f648",
   iconMask: "iconMask_b3f648",

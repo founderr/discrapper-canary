@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   emojiErrorItem: "emojiErrorItem_e52bf8",
   fileIcon: "fileIcon_e52bf8",

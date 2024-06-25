@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   avatarUploaderDisabled: "avatarUploaderDisabled_f0a9ff",
   iconError: "iconError_f0a9ff",

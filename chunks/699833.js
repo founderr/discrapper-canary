@@ -1,74 +1,74 @@
 n.d(t, {
   i: function() {
-    return E
+    return _
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(913527),
-  l = n.n(i),
-  a = n(692547),
+var a = n(913527),
+  s = n.n(a),
+  l = n(692547),
   r = n(481060),
   o = n(800530),
   c = n(689938),
-  u = n(530271);
-let d = e => l()().diff(l().unix(e), "days");
+  d = n(530271);
+let u = e => s()().diff(s().unix(e), "days");
 
-function E(e) {
-  var t, i, l, E, _;
+function _(e) {
+  var t, a, s, _, E;
   if (null == e.message.embeds || null == e.message.embeds[0].fields) return null;
   let I = e.message.embeds[0],
-    T = null !== (l = null === (t = I.fields) || void 0 === t ? void 0 : t.find(e => e.rawName === o.Cg.CLASSIFICATION_ID)) && void 0 !== l ? l : void 0,
-    m = null !== (E = null == T ? void 0 : T.rawValue) && void 0 !== E ? E : void 0,
-    N = null !== (_ = null === (i = I.fields) || void 0 === i ? void 0 : i.find(e => e.rawName === o.Cg.INCIDENT_TIMESTAMP)) && void 0 !== _ ? _ : void 0,
-    h = null == N || null == N.rawValue ? void 0 : parseFloat(N.rawValue);
-  return null == m || null == h ? null : (0, s.jsxs)(r.Clickable, {
+    m = null !== (s = null === (t = I.fields) || void 0 === t ? void 0 : t.find(e => e.rawName === o.Cg.CLASSIFICATION_ID)) && void 0 !== s ? s : void 0,
+    T = null !== (_ = null == m ? void 0 : m.rawValue) && void 0 !== _ ? _ : void 0,
+    h = null !== (E = null === (a = I.fields) || void 0 === a ? void 0 : a.find(e => e.rawName === o.Cg.INCIDENT_TIMESTAMP)) && void 0 !== E ? E : void 0,
+    N = null == h || null == h.rawValue ? void 0 : parseFloat(h.rawValue);
+  return null == T || null == N ? null : (0, i.jsxs)(r.Clickable, {
     onClick: () => {
       (0, r.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("18831"), n.e("34842")]).then(n.bind(n, 41164));
-        return t => (0, s.jsx)(e, {
-          classificationId: m,
+        } = await Promise.all([n.e("18831"), n.e("16397")]).then(n.bind(n, 41164));
+        return t => (0, i.jsx)(e, {
+          classificationId: T,
           source: o.s.SystemDM,
           transitionState: t.transitionState,
           onClose: t.onClose
         })
       })
     },
-    className: u.safetyPolicyNoticeContainer,
-    children: [(0, s.jsxs)("div", {
-      className: u.noticeContent,
-      children: [(0, s.jsxs)("div", {
-        className: u.headerRow,
-        children: [(0, s.jsx)(r.WarningIcon, {
-          className: u.warningIcon,
-          color: a.Z.colors.STATUS_DANGER
-        }), (0, s.jsx)(r.Text, {
+    className: d.safetyPolicyNoticeContainer,
+    children: [(0, i.jsxs)("div", {
+      className: d.noticeContent,
+      children: [(0, i.jsxs)("div", {
+        className: d.headerRow,
+        children: [(0, i.jsx)(r.WarningIcon, {
+          className: d.warningIcon,
+          color: l.Z.colors.STATUS_DANGER
+        }), (0, i.jsx)(r.Text, {
           variant: "text-md/semibold",
           children: c.Z.Messages.SAFETY_POLICY_NOTICE_HEADER
         })]
-      }), (0, s.jsx)("div", {
-        className: u.incidentTiming,
-        children: (0, s.jsx)(r.Text, {
+      }), (0, i.jsx)("div", {
+        className: d.incidentTiming,
+        children: (0, i.jsx)(r.Text, {
           variant: "text-xs/medium",
           children: c.Z.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({
-            daysAgo: d(h)
+            daysAgo: u(N)
           })
         })
-      }), (0, s.jsx)("div", {
-        className: u.noticeBody,
-        children: (0, s.jsx)(r.Text, {
+      }), (0, i.jsx)("div", {
+        className: d.noticeBody,
+        children: (0, i.jsx)(r.Text, {
           variant: "text-md/normal",
           color: "text-muted",
           children: c.Z.Messages.SAFETY_POLICY_NOTICE_BODY
         })
       })]
-    }), (0, s.jsx)("div", {
-      className: u.footerContainer,
-      children: (0, s.jsx)(r.Button, {
+    }), (0, i.jsx)("div", {
+      className: d.footerContainer,
+      children: (0, i.jsx)(r.Button, {
         look: r.Button.Looks.BLANK,
-        className: u.detailsButton,
+        className: d.detailsButton,
         color: r.Button.Colors.WHITE,
         children: c.Z.Messages.SAFETY_POLICY_NOTICE_BUTTON
       })

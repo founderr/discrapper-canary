@@ -1,71 +1,71 @@
-t.d(l, {
+l.d(t, {
   Z: function() {
-    return L
+    return T
   }
-}), t(47120);
-var n = t(735250),
-  s = t(470079),
-  a = t(692547),
-  o = t(215569),
-  i = t(180035),
-  r = t(481060),
-  C = t(749210),
-  c = t(852860),
-  d = t(367907),
-  u = t(314897),
-  E = t(626135),
-  m = t(910693),
-  _ = t(241559),
-  M = t(256003),
-  h = t(981631),
-  x = t(689938),
-  T = t(379081);
+}), l(47120);
+var n = l(735250),
+  a = l(470079),
+  o = l(692547),
+  s = l(215569),
+  i = l(180035),
+  r = l(481060),
+  C = l(749210),
+  c = l(852860),
+  d = l(367907),
+  u = l(314897),
+  m = l(626135),
+  _ = l(910693),
+  E = l(241559),
+  h = l(256003),
+  M = l(981631),
+  x = l(689938),
+  b = l(379081);
 
-function L(e) {
+function T(e) {
   let {
-    guildId: l
-  } = e, L = (0, _.xC)(l), {
-    selectedUserIds: H,
+    guildId: t
+  } = e, T = (0, E.xC)(t), {
+    selectedUserIds: L,
     clearSelection: g
-  } = (0, M.Z)(l), A = H.size > 0, I = async (e, l, t, n) => {
+  } = (0, h.Z)(t), I = L.size > 0, p = async (e, t, l, n) => {
     try {
-      let s = await C.Z.banMultipleUsers(e, l, t, n);
-      (0, r.showToast)((0, r.createToast)(x.Z.Messages.BAN_MULTIPLE_SUCCESS_TOAST, r.ToastType.SUCCESS)), E.default.track(h.rMx.BULK_MODERATION_ACTION_COMPLETED, {
+      let a = await C.Z.banMultipleUsers(e, t, l, n);
+      (0, r.showToast)((0, r.createToast)(x.Z.Messages.BAN_MULTIPLE_SUCCESS_TOAST, r.ToastType.SUCCESS)), m.default.track(M.rMx.BULK_MODERATION_ACTION_COMPLETED, {
         ...(0, d.hH)(e),
-        action_type: m.jQ.BAN,
-        target_user_ids: [...H],
+        action_type: _.jQ.BAN,
+        target_user_ids: [...L],
         mod_user_id: u.default.getId(),
-        successful_user_ids: s.body.banned_users,
+        successful_user_ids: a.body.banned_users,
         location
       })
     } catch (e) {
       (0, r.showToast)((0, r.createToast)(x.Z.Messages.BAN_MULTIPLE_FAILED_TOAST, r.ToastType.FAILURE))
     }
     g()
-  }, N = s.useCallback(() => {
+  }, H = a.useCallback(() => {
     g()
-  }, [g]), R = (0, n.jsxs)("span", {
-    className: T.messageContainer,
+  }, [g]), f = (0, n.jsxs)("span", {
+    className: b.messageContainer,
     children: [(0, n.jsx)(r.UserIcon, {
       size: "custom",
       width: 24,
       height: 24,
-      color: (0, i.d)(a.Z.unsafe_rawColors.PRIMARY_500).hex()
+      color: (0, i.d)(o.Z.unsafe_rawColors.PRIMARY_500).hex()
     }), (0, n.jsx)(r.Text, {
       variant: "heading-md/bold",
       color: "text-normal",
       children: x.Z.Messages.MEMBER_SAFETY_ACTION_NOTICE_SELECTED_MEMBERS_MESSAGE.format({
-        count: H.size
+        count: L.size
       })
     }), (0, n.jsx)(r.Button, {
       color: r.Button.Colors.LINK,
       look: r.Button.Looks.LINK,
-      onClick: N,
-      className: T.clearButton,
+      onClick: H,
+      className: b.clearButton,
       children: x.Z.Messages.MEMBER_SAFETY_ACTION_NOTICE_CLEAR_SELECTION
     })]
-  }), p = (0, n.jsxs)("span", {
-    className: T.buttonContainer,
+  }), A = (0, n.jsxs)("span", {
+    className: b.buttonContainer,
     children: [(0, n.jsx)(r.HammerIcon, {
       size: "custom",
       color: "currentColor",
@@ -76,34 +76,34 @@ function L(e) {
       children: x.Z.Messages.MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION
     })]
   });
-  return L ? (0, n.jsx)(o.W, {
+  return T ? (0, n.jsx)(s.W, {
     component: "div",
-    className: T.saveNoticeContainer,
-    children: A && (0, n.jsx)(r.SlideIn, {
+    className: b.saveNoticeContainer,
+    children: I && (0, n.jsx)(r.SlideIn, {
       children: (0, n.jsx)(c.Z, {
         onSave: () => {
-          E.default.track(h.rMx.BULK_MODERATION_ACTION_STARTED, {
-            ...(0, d.hH)(l),
-            action_type: m.jQ.BAN,
-            target_user_ids: [...H],
+          m.default.track(M.rMx.BULK_MODERATION_ACTION_STARTED, {
+            ...(0, d.hH)(t),
+            action_type: _.jQ.BAN,
+            target_user_ids: [...L],
             mod_user_id: u.default.getId(),
             location
           }), (0, r.openModalLazy)(async () => {
             let {
               default: e
-            } = await Promise.all([t.e("99387"), t.e("43350")]).then(t.bind(t, 98746));
-            return t => (0, n.jsx)(e, {
-              ...t,
-              guildId: l,
-              canBulkBan: L,
-              userIds: H,
-              onBanMultiple: I
+            } = await l.e("43350").then(l.bind(l, 98746));
+            return l => (0, n.jsx)(e, {
+              ...l,
+              guildId: t,
+              canBulkBan: T,
+              userIds: L,
+              onBanMultiple: p
             })
           })
         },
-        onSaveText: p,
+        onSaveText: A,
         onSaveButtonColor: r.ButtonColors.RED,
-        message: R
+        message: f
       })
     })
   }) : null

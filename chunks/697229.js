@@ -27,7 +27,7 @@ function o(e) {
       (0, s.openModalLazy)(async () => {
         let {
           default: n
-        } = await Promise.all([t.e("99387"), t.e("95257")]).then(t.bind(t, 178125));
+        } = await t.e("95257").then(t.bind(t, 178125));
         return t => (0, a.jsx)(n, {
           ...t,
           parentId: e.id

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   soundButtonWrapper: "soundButtonWrapper_c06ee5",
   soundAddButton: "soundAddButton_c06ee5 " + n("260240").soundButton,

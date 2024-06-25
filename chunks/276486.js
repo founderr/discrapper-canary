@@ -50,7 +50,7 @@ function u(e) {
           (0, t.openModalLazy)(async () => {
             let {
               default: e
-            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("76540"), n.e("33273")]).then(n.bind(n, 607018));
+            } = await Promise.all([n.e("76540"), n.e("7418")]).then(n.bind(n, 607018));
             return s => (0, l.jsx)(e, {
               reason: i.L.GUILD_PHONE_REQUIRED,
               ...s

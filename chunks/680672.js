@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   upsellContainer: "upsellContainer_bb33d5",
   upsellHeader: "upsellHeader_bb33d5",

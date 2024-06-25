@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
   b: function() {
-    return N
+    return A
   }
 });
 var i = n(735250);
@@ -19,15 +19,15 @@ let d = window.matchMedia("(prefers-reduced-motion: reduce)"),
   I = window.matchMedia("(prefers-contrast: less)"),
   T = window.matchMedia("(prefers-color-scheme: dark)"),
   h = window.matchMedia("(prefers-color-scheme: light)"),
-  S = window.matchMedia("(forced-colors: active)"),
-  f = 5;
+  f = window.matchMedia("(forced-colors: active)"),
+  S = 5;
 
-function N() {
+function A() {
   return "windows" === (0, l.getOS)()
 }
 t.Z = {
   initBasic() {
-    d.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(d), T.addListener(this.handleSystemColorPreferencesChanged), h.addListener(this.handleSystemColorPreferencesChanged), S.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), E.addListener(this.handleSystemPrefersContrastChanged), I.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged()
+    d.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(d), T.addListener(this.handleSystemColorPreferencesChanged), h.addListener(this.handleSystemColorPreferencesChanged), f.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), E.addListener(this.handleSystemPrefersContrastChanged), I.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged()
   },
   init() {
     this.initBasic(), s.Z.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
@@ -41,13 +41,13 @@ t.Z = {
     })
   },
   maybeShowKeyboardNavigationExplainerModal() {
-    f = Math.max(f - 1, 0), ! function() {
+    S = Math.max(S - 1, 0), ! function() {
       let e = o.default.getCurrentUser();
       return null == e || Date.now() - +e.createdAt < 864e5
-    }() && !_.Z.keyboardNavigationExplainerModalSeen && 0 === f && (0, r.openModalLazy)(async () => {
+    }() && !_.Z.keyboardNavigationExplainerModalSeen && 0 === S && (0, r.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("6380"), n.e("73872")]).then(n.bind(n, 461964));
+      } = await Promise.all([n.e("6380"), n.e("78906")]).then(n.bind(n, 461964));
       return t => (0, i.jsx)(e, {
         ...t
       })
@@ -61,7 +61,7 @@ t.Z = {
   handleSystemColorPreferencesChanged() {
     let e;
     T.matches ? e = c.BRd.DARK : h.matches && (e = c.BRd.LIGHT);
-    let t = (!l.isPlatformEmbedded || N()) && S.matches ? "active" : "none";
+    let t = (!l.isPlatformEmbedded || A()) && f.matches ? "active" : "none";
     s.Z.wait(() => {
       u.Ej(e, t)
     })

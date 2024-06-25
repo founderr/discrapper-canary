@@ -14,10 +14,10 @@ var r = n(392711),
   I = n(594174),
   T = n(449753),
   h = n(569545),
-  S = n(803647),
-  f = n(70722),
-  N = n(981631);
-let A = (0, r.debounce)(l.xc, 1e3);
+  f = n(803647),
+  S = n(70722),
+  A = n(981631);
+let N = (0, r.debounce)(l.xc, 1e3);
 t.Z = {
   init() {
     T.Z.init(), o.Z.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
@@ -25,14 +25,14 @@ t.Z = {
         videoState: t
       } = e, n = _.Z.getCurrentUserActiveStream();
       if (null != n) {
-        let e = t === N.FQ1.PAUSED;
+        let e = t === A.FQ1.PAUSED;
         (0, l.tK)(n, e)
       }
     }), o.Z.subscribe("STREAM_DELETE", e => {
-      e.reason === N.si2.STREAM_FULL && ((0, l.aP)(e.streamKey, !1), (0, s.openModalLazy)(async () => {
+      e.reason === A.si2.STREAM_FULL && ((0, l.aP)(e.streamKey, !1), (0, s.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("12222")]).then(n.bind(n, 309690));
+        } = await n.e("63757").then(n.bind(n, 309690));
         return t => (0, i.jsx)(e, {
           ...t
         })
@@ -59,7 +59,7 @@ t.Z = {
         let n = _.Z.getAllActiveStreams(),
           i = E.Z.getChannelId();
         n.forEach(e => {
-          e.channelId !== i && (0, S.Z)(e, !1)
+          e.channelId !== i && (0, f.Z)(e, !1)
         })
       })
     }), o.Z.subscribe("STREAM_CREATE", e => {
@@ -72,7 +72,7 @@ t.Z = {
       } = (0, h.my)(n);
       if (null == r || null == i || i !== (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return;
       let s = d.Z.getMemberCount(r);
-      if (null != s && !(s < 2) && !(s > f.tB)) u.eo.getSetting() && A(n)
+      if (null != s && !(s < 2) && !(s > S.tB)) u.eo.getSetting() && N(n)
     })
   }
 }

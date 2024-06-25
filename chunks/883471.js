@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   ctaContainer: "ctaContainer_f6ab4c " + n("293811").card,
   heroBanner: "heroBanner_f6ab4c",

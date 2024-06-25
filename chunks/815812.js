@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   enableSwitch: "enableSwitch_abfcad",
   divider: "divider_abfcad",

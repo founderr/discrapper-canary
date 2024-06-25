@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   mirror: "mirror_c11cdc",
   video: "video_c11cdc",

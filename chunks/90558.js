@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   autocomplete: "autocomplete_bea0d0",
   autocompleteAttached: "autocompleteAttached_bea0d0",

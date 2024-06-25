@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   wrapper: "wrapper_f07d2f",
   partyMembers: "partyMembers_f07d2f",

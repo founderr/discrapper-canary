@@ -1,55 +1,55 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   Q: function() {
-    return E
+    return _
   },
   Z: function() {
-    return N
+    return m
   }
-}), t(47120);
-var n = t(735250),
-  i = t(470079),
-  l = t(481060),
-  a = t(957011),
-  r = t(587431),
-  o = t(756066),
-  c = t(689938),
-  d = t(883471),
-  u = t(270395);
-let E = "role_subscriptions_eligibility_modal";
+}), n(47120);
+var s = n(735250),
+  a = n(470079),
+  i = n(481060),
+  r = n(957011),
+  l = n(587431),
+  o = n(756066),
+  c = n(689938),
+  d = n(883471),
+  u = n(270395);
+let _ = "role_subscriptions_eligibility_modal";
 
-function _(e) {
+function E(e) {
   let {
-    guild: s,
-    eligibility: i,
-    eligibilityLoading: a,
-    eligibilityError: r,
+    guild: t,
+    eligibility: a,
+    eligibilityLoading: r,
+    eligibilityError: l,
     refreshEligibility: o
   } = e;
-  return (0, n.jsxs)(l.Button, {
-    color: l.ButtonColors.CUSTOM,
+  return (0, s.jsxs)(i.Button, {
+    color: i.ButtonColors.CUSTOM,
     className: d.ineligibleButton,
     innerClassName: d.ineligibleButtonContent,
     grow: !0,
     onClick: function() {
-      (0, l.openModalLazy)(async () => {
+      (0, i.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([t.e("99387"), t.e("21863")]).then(t.bind(t, 466501));
-        return t => (0, n.jsx)(e, {
-          ...t,
-          eligibility: i,
-          eligibilityLoading: a,
-          eligibilityError: r,
+        } = await n.e("21863").then(n.bind(n, 466501));
+        return n => (0, s.jsx)(e, {
+          ...n,
+          eligibility: a,
+          eligibilityLoading: r,
+          eligibilityError: l,
           refreshEligibility: o,
-          guildId: s.id
+          guildId: t.id
         })
       }, {
-        modalKey: E
+        modalKey: _
       })
     },
-    size: l.Button.Sizes.LARGE,
-    children: [(0, n.jsx)(l.CircleExclamationPointIcon, {
+    size: i.Button.Sizes.LARGE,
+    children: [(0, s.jsx)(i.CircleExclamationPointIcon, {
       size: "xs",
       color: "currentColor"
     }), c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_START_EARNING_CTA]
@@ -58,41 +58,41 @@ function _(e) {
 
 function I(e) {
   let {
-    guild: s,
-    checkboxText: t
+    guild: t,
+    checkboxText: n
   } = e, {
     canSubmitAcceptance: o,
     error: u,
-    loading: E,
-    submitAcceptTermsRequest: _
-  } = (0, a.Z)(s.id), [I, T] = i.useState(!1);
-  return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)(l.Checkbox, {
+    loading: _,
+    submitAcceptTermsRequest: E
+  } = (0, r.Z)(t.id), [I, T] = a.useState(!1);
+  return (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsx)(i.Checkbox, {
       onChange: function() {
         T(e => !e)
       },
       size: 20,
-      type: l.Checkbox.Types.INVERTED,
+      type: i.Checkbox.Types.INVERTED,
       value: I,
-      children: (0, n.jsx)(l.Text, {
+      children: (0, s.jsx)(i.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: t
+        children: n
       })
-    }), (0, n.jsx)(l.Spacer, {
+    }), (0, s.jsx)(i.Spacer, {
       size: 24
-    }), (0, n.jsx)(l.Button, {
+    }), (0, s.jsx)(i.Button, {
       className: d.ctaButton,
       disabled: !I || !o,
       grow: !0,
-      onClick: _,
-      size: l.Button.Sizes.LARGE,
-      submitting: E,
+      onClick: E,
+      size: i.Button.Sizes.LARGE,
+      submitting: _,
       children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_START_EARNING_CTA
-    }), null != u && (0, n.jsxs)(n.Fragment, {
-      children: [(0, n.jsx)(l.Spacer, {
+    }), null != u && (0, s.jsxs)(s.Fragment, {
+      children: [(0, s.jsx)(i.Spacer, {
         size: 24
-      }), (0, n.jsx)(r.Z, {
+      }), (0, s.jsx)(l.Z, {
         children: u.getAnyErrorMessage()
       })]
     })]
@@ -101,59 +101,59 @@ function I(e) {
 
 function T(e) {
   let {
-    guild: s,
-    monetizationEligibility: t
+    guild: t,
+    monetizationEligibility: n
   } = e, {
-    eligibilityLoading: i,
-    eligibilityError: l,
-    refreshEligibility: a,
-    eligibility: r,
+    eligibilityLoading: a,
+    eligibilityError: i,
+    refreshEligibility: r,
+    eligibility: l,
     eligibleForMonetization: c,
     acceptTermsCheckboxText: d,
     wasRejectedInV1: u
-  } = t;
-  return c ? u ? (0, n.jsx)(o.Z, {
-    ...t
-  }) : (0, n.jsx)(I, {
-    guild: s,
+  } = n;
+  return c ? u ? (0, s.jsx)(o.Z, {
+    ...n
+  }) : (0, s.jsx)(I, {
+    guild: t,
     checkboxText: d
-  }) : (0, n.jsx)(_, {
-    guild: s,
-    eligibility: r,
-    eligibilityLoading: i,
-    eligibilityError: l,
-    refreshEligibility: a
+  }) : (0, s.jsx)(E, {
+    guild: t,
+    eligibility: l,
+    eligibilityLoading: a,
+    eligibilityError: i,
+    refreshEligibility: r
   })
 }
 
-function N(e) {
+function m(e) {
   let {
-    guild: s,
-    monetizationEligibility: t
+    guild: t,
+    monetizationEligibility: n
   } = e;
-  return (0, n.jsxs)("div", {
+  return (0, s.jsxs)("div", {
     className: d.ctaContainer,
-    children: [(0, n.jsx)("img", {
+    children: [(0, s.jsx)("img", {
       className: d.heroBanner,
       src: u,
       alt: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_HERO_BANNER_ALT
-    }), (0, n.jsxs)("div", {
+    }), (0, s.jsxs)("div", {
       className: d.ctaContent,
-      children: [(0, n.jsx)(l.Heading, {
+      children: [(0, s.jsx)(i.Heading, {
         variant: "heading-xl/semibold",
         color: "header-primary",
         children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_DESKTOP_V2_TITLE
-      }), (0, n.jsx)(l.Spacer, {
+      }), (0, s.jsx)(i.Spacer, {
         size: 12
-      }), (0, n.jsx)(l.Text, {
+      }), (0, s.jsx)(i.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
         children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_V2_SUBTITLE
-      }), (0, n.jsx)(l.Spacer, {
+      }), (0, s.jsx)(i.Spacer, {
         size: 24
-      }), (0, n.jsx)(T, {
-        guild: s,
-        monetizationEligibility: t
+      }), (0, s.jsx)(T, {
+        guild: t,
+        monetizationEligibility: n
       })]
     })]
   })

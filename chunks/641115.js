@@ -39,7 +39,7 @@ function p(e) {
   (0, d.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([t.e("99387"), t.e("28479")]).then(t.bind(t, 78865));
+    } = await t.e("28479").then(t.bind(t, 78865));
     return t => (0, l.jsx)(e, {
       ...t,
       onCloseParent: s,

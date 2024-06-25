@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   premiumSubscribeButton: "premiumSubscribeButton_af971d",
   premiumIcon: "premiumIcon_af971d",

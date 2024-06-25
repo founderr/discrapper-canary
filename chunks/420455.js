@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   thin: "thin_c49869 scrollerBase_c49869",
   auto: "auto_c49869 scrollerBase_c49869",

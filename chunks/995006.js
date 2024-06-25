@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_fcfd9f",
   body: "body_fcfd9f",

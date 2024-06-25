@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   prefixInput: "prefixInput_c29b00",
   prefixInputInput: "prefixInputInput_c29b00",

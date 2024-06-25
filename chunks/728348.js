@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   label: "label_e8e89d",
   createLabel: "createLabel_e8e89d",

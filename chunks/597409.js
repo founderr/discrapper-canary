@@ -3,10 +3,10 @@ var s = a(735250);
 a(470079);
 var l = a(442837),
   o = a(481060),
-  i = a(239091),
-  c = a(496675),
-  r = a(572004),
-  d = a(981631),
+  c = a(239091),
+  i = a(496675),
+  d = a(572004),
+  r = a(981631),
   t = a(689938),
   u = a(425415);
 n.default = function(e) {
@@ -15,11 +15,11 @@ n.default = function(e) {
     guild: I,
     user: p,
     onSelect: M
-  } = e, _ = null !== (n = null == I ? void 0 : I.id) && void 0 !== n ? n : d.lds, E = (0, l.e7)([c.Z], () => null != I && c.Z.canManageUser(d.Plq.BAN_MEMBERS, p, I), [I, p]);
+  } = e, _ = null !== (n = null == I ? void 0 : I.id) && void 0 !== n ? n : r.lds, E = (0, l.e7)([i.Z], () => null != I && i.Z.canManageUser(r.Plq.BAN_MEMBERS, p, I), [I, p]);
   return (0, s.jsx)(o.Menu, {
     navId: "member-application-context-menu",
     className: u.contextMenu,
-    onClose: i.Zy,
+    onClose: c.Zy,
     "aria-label": t.Z.Messages.USER_ACTIONS_MENU_LABEL,
     onSelect: M,
     children: (0, s.jsxs)(o.MenuGroup, {
@@ -31,7 +31,7 @@ n.default = function(e) {
         action: () => (0, o.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([a.e("99387"), a.e("43350")]).then(a.bind(a, 98746));
+          } = await a.e("43350").then(a.bind(a, 98746));
           return n => (0, s.jsx)(e, {
             ...n,
             guildId: _,
@@ -42,7 +42,7 @@ n.default = function(e) {
         id: "copyUserId",
         label: "Copy User ID",
         icon: o.IdIcon,
-        action: () => (0, r.JG)(p.id)
+        action: () => (0, d.JG)(p.id)
       }, "copyUserId")]
     })
   })

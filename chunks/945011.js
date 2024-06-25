@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   section: "section_f2c0a8",
   wumpusWrapper: "wumpusWrapper_f2c0a8",

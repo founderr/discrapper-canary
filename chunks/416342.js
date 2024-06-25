@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   applicationDetails: "applicationDetails_d6f023",
   entry: "entry_d6f023",

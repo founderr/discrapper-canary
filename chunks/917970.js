@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   spinner: "spinner_d9c03f",
   modal: "modal_d9c03f",

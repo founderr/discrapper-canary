@@ -7,10 +7,10 @@ n.d(t, {
 var i = n(735250);
 n(470079);
 var s = n(481060),
-  l = n(13245),
+  a = n(13245),
   o = n(454902),
-  a = n(312839),
-  r = n(981631),
+  r = n(312839),
+  l = n(981631),
   c = n(987650),
   d = n(689938),
   u = n(439063);
@@ -36,7 +36,7 @@ function p(e) {
       } = e, {
         trackView: p,
         trackClick: f
-      } = (0, a.R)(c.n0.GoLiveNudge, {
+      } = (0, r.R)(c.n0.GoLiveNudge, {
         notif_type: c.n0.GoLiveNudge
       });
       return {
@@ -53,15 +53,15 @@ function p(e) {
           p()
         },
         onNotificationClick: (e, t) => {
-          f("unlock"), l.Z.updateNotificationStatus(t), l.Z.setInstanceLocked(!1), (0, s.openModalLazy)(async () => {
+          f("unlock"), a.Z.updateNotificationStatus(t), a.Z.setInstanceLocked(!1), (0, s.openModalLazy)(async () => {
             let {
               default: e
-            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("79477"), n.e("33641")]).then(n.bind(n, 60594));
+            } = await Promise.all([n.e("79477"), n.e("39021")]).then(n.bind(n, 60594));
             return t => (0, i.jsx)(e, {
               ...t,
               selectSource: !1,
               guildId: u.id,
-              analyticsLocation: r.Sbl.OVERLAY_NUDGE
+              analyticsLocation: l.Sbl.OVERLAY_NUDGE
             })
           })
         },
@@ -76,7 +76,7 @@ function p(e) {
       } = e, {
         trackView: u,
         trackClick: p
-      } = (0, a.R)(c.n0.GoLiveNonVoiceNudge, {
+      } = (0, r.R)(c.n0.GoLiveNonVoiceNudge, {
         notif_type: c.n0.GoLiveNonVoiceNudge
       });
       return {
@@ -92,15 +92,15 @@ function p(e) {
           u()
         },
         onNotificationClick: (e, t) => {
-          p("unlock"), l.Z.updateNotificationStatus(t), l.Z.setInstanceLocked(!1), (0, s.openModalLazy)(async () => {
+          p("unlock"), a.Z.updateNotificationStatus(t), a.Z.setInstanceLocked(!1), (0, s.openModalLazy)(async () => {
             let {
               default: e
-            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("79477"), n.e("33641")]).then(n.bind(n, 60594));
+            } = await Promise.all([n.e("79477"), n.e("39021")]).then(n.bind(n, 60594));
             return t => (0, i.jsx)(e, {
               ...t,
               selectSource: !1,
               selectGuild: !0,
-              analyticsLocation: r.Sbl.OVERLAY_NUDGE
+              analyticsLocation: l.Sbl.OVERLAY_NUDGE
             })
           })
         },

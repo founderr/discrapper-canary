@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   header: "header_fdea3f",
   columns: "columns_fdea3f",

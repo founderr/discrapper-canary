@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_ce795d",
   containerMinimized: "containerMinimized_ce795d",

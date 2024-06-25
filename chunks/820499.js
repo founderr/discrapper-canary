@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   guildMemberProfileTooltip: "guildMemberProfileTooltip_d6668b",
   guildMemberProfileTooltipNitroWheel: "guildMemberProfileTooltipNitroWheel_d6668b",

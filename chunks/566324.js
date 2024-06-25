@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_c30bea",
   volumeButton: "volumeButton_c30bea",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   scroller: "scroller_d02bd8",
   headerHeading: "headerHeading_d02bd8",

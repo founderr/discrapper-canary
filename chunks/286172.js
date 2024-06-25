@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   disabled: "disabled_a06035",
   separator: "separator_a06035",

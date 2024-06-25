@@ -48,7 +48,7 @@ n.Z = o().throttle(function(e, n) {
         } else if ("object" == typeof r && T(r.resourceId, r.type)) return N !== s.Z.getGuildId() && (0, C.K)(N, null === (o = a.ZP.getDefaultChannel(N)) || void 0 === o ? void 0 : o.id), (0, E.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([t.e("99387"), t.e("11250"), t.e("14262"), t.e("22347"), t.e("56236"), t.e("71088")]).then(t.bind(t, 17671));
+          } = await Promise.all([t.e("11250"), t.e("14262"), t.e("22347"), t.e("56236"), t.e("25805")]).then(t.bind(t, 17671));
           return n => (0, i.jsx)(e, {
             ...n,
             guildId: N

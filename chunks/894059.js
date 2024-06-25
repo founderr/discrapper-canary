@@ -13,7 +13,7 @@ var l = t(481060),
 function r(e) {
   let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     r = (0, i.Z)(e),
-    u = (0, s.Z)();
+    d = (0, s.Z)();
   return r ? (0, a.jsx)(l.MenuItem, {
     id: "create-event",
     label: o.Z.Messages.SCHEDULE_EVENT,
@@ -22,12 +22,12 @@ function r(e) {
       (0, l.openModalLazy)(async () => {
         let {
           default: n
-        } = await Promise.all([t.e("49237"), t.e("99387"), t.e("22347"), t.e("58023"), t.e("99689")]).then(t.bind(t, 779250));
+        } = await Promise.all([t.e("22347"), t.e("58023"), t.e("36937")]).then(t.bind(t, 779250));
         return t => (0, a.jsx)(n, {
           ...t,
           guildId: e
         })
-      }, u)
+      }, d)
     }
   }) : null
 }

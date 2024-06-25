@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   placeholder: "placeholder_fb03e5",
   multiplePlaceholder: "multiplePlaceholder_fb03e5",

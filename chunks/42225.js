@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   wrapper: "wrapper_d864ab",
   actions: "actions_d864ab",

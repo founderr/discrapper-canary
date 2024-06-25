@@ -1,67 +1,67 @@
-t.d(n, {
+n.d(t, {
   Np: function() {
     return c
   },
   l8: function() {
-    return u
+    return r
   },
   mc: function() {
     return o
   }
 });
-var i = t(735250);
-t(470079);
-var r = t(481060),
-  l = t(822869);
-let a = "forward-modal";
+var i = n(735250);
+n(470079);
+var a = n(481060),
+  s = n(822869);
+let l = "forward-modal";
 
-function u(e) {
+function r(e) {
   let {
-    messageId: n,
-    channelId: u,
+    messageId: t,
+    channelId: r,
     source: o,
     initialSelectedDestinations: c = [],
-    forwardOptions: s,
-    onRequestSent: d
+    forwardOptions: d,
+    onRequestSent: u
   } = e;
-  (0, l.Lb)(u, n, o), (0, r.openModalLazy)(async () => {
+  (0, s.Lb)(r, t, o), (0, a.openModalLazy)(async () => {
     let {
       ForwardModal: e
-    } = await Promise.all([t.e("49237"), t.e("99387"), t.e("6380"), t.e("33648")]).then(t.bind(t, 930864));
-    return t => (0, i.jsx)(e, {
-      ...t,
-      channelId: u,
-      messageId: n,
+    } = await Promise.all([n.e("6380"), n.e("35494")]).then(n.bind(n, 930864));
+    return n => (0, i.jsx)(e, {
+      ...n,
+      channelId: r,
+      messageId: t,
       initialSelectedDestinations: c,
-      forwardOptions: s,
-      onRequestSent: d
+      forwardOptions: d,
+      onRequestSent: u
     })
   }, {
-    modalKey: a
+    modalKey: l
   })
 }
 
 function o() {
-  (0, r.closeModal)(a)
+  (0, a.closeModal)(l)
 }
 
 function c(e) {
   let {
-    messageId: n,
-    channelId: l,
-    failedDestinations: a,
-    forwardOptions: u
+    messageId: t,
+    channelId: s,
+    failedDestinations: l,
+    forwardOptions: r
   } = e;
-  (0, r.openModalLazy)(async () => {
+  (0, a.openModalLazy)(async () => {
     let {
       ForwardFailedAlertModal: e
-    } = await Promise.all([t.e("49237"), t.e("99387"), t.e("86590")]).then(t.bind(t, 384331));
-    return t => (0, i.jsx)(e, {
-      ...t,
-      messageId: n,
-      channelId: l,
-      failedDestinations: a,
-      forwardOptions: u
+    } = await n.e("86590").then(n.bind(n, 384331));
+    return n => (0, i.jsx)(e, {
+      ...n,
+      messageId: t,
+      channelId: s,
+      failedDestinations: l,
+      forwardOptions: r
     })
   })
 }

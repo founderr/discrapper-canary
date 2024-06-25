@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   emojiAliasPlaceholder: "emojiAliasPlaceholder_dc1809",
   title: "title_dc1809",

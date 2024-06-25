@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   option: "option_bea3ee",
   inline: "inline_bea3ee",

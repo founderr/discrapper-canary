@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   listWrapper: "listWrapper_a3bc57",
   list: "list_a3bc57",

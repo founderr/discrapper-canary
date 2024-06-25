@@ -24,7 +24,7 @@ function u(n) {
       (0, E.openModalLazy)(async () => {
         let {
           default: E
-        } = await Promise.all([t.e("99387"), t.e("94005")]).then(t.bind(t, 144462));
+        } = await t.e("94005").then(t.bind(t, 144462));
         return t => {
           var r;
           return (0, _.jsx)(E, {
@@ -42,7 +42,7 @@ function u(n) {
       (0, E.openModalLazy)(async () => {
         let {
           default: E
-        } = await Promise.all([t.e("99387"), t.e("74543")]).then(t.bind(t, 643611)), A = e.actions.find(n => n.type === r.jj.FLAG_TO_CHANNEL);
+        } = await t.e("74543").then(t.bind(t, 643611)), A = e.actions.find(n => n.type === r.jj.FLAG_TO_CHANNEL);
         return t => (0, _.jsx)(E, {
           action: i,
           isEdit: null != A,
@@ -60,7 +60,7 @@ function u(n) {
       (0, E.openModalLazy)(async () => {
         let {
           default: E
-        } = await Promise.all([t.e("99387"), t.e("78273")]).then(t.bind(t, 41767)), u = n.actions.find(n => n.type === r.jj.USER_COMMUNICATION_DISABLED);
+        } = await t.e("78273").then(t.bind(t, 41767)), u = n.actions.find(n => n.type === r.jj.USER_COMMUNICATION_DISABLED);
         return t => (0, _.jsx)(E, {
           action: e,
           isEdit: null != u,
@@ -80,7 +80,7 @@ function A(n, e, r, i) {
   (0, E.openModalLazy)(async () => {
     let {
       default: E
-    } = await Promise.all([t.e("99387"), t.e("37483")]).then(t.bind(t, 241046));
+    } = await t.e("37483").then(t.bind(t, 241046));
     return t => (0, _.jsx)(E, {
       ...t,
       automodDecision: {
@@ -97,7 +97,7 @@ function a(n, e) {
   (0, E.openModalLazy)(async () => {
     let {
       default: E
-    } = await Promise.all([t.e("99387"), t.e("28382")]).then(t.bind(t, 537623));
+    } = await t.e("28382").then(t.bind(t, 537623));
     return t => (0, _.jsx)(E, {
       ...t,
       messageId: n,

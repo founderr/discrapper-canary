@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   titleContainer: "titleContainer_c69589",
   titleText: "titleText_c69589",

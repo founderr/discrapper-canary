@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   elevationLow: "elevationLow_ff8688",
   elevationHigh: "elevationHigh_ff8688",

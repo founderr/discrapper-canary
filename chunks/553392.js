@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   tierCards: "tierCards_e3ebb9",
   tierCard: "tierCard_e3ebb9",

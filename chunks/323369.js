@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   controls: "controls_c5dd04",
   unpinned: "unpinned_c5dd04",

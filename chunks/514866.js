@@ -1,24 +1,24 @@
-t.d(r, {
+r.d(t, {
   Z: function() {
     return m
   }
 });
-var a = t(735250);
-t(470079);
-var n = t(120356),
-  i = t.n(n),
-  l = t(481060),
-  o = t(45114),
-  c = t(423932),
-  s = t(601948),
-  d = t(737126),
-  u = t(331651);
+var a = r(735250);
+r(470079);
+var n = r(120356),
+  i = r.n(n),
+  o = r(481060),
+  l = r(45114),
+  c = r(423932),
+  s = r(601948),
+  d = r(737126),
+  u = r(331651);
 let h = () => {
-  Promise.all([t.e("99387"), t.e("52030"), t.e("85281")]).then(t.bind(t, 24031)).then(e => {
+  Promise.all([r.e("52030"), r.e("58962")]).then(r.bind(r, 24031)).then(e => {
     let {
-      openMFAModal: r
+      openMFAModal: t
     } = e;
-    r({
+    t({
       ticket: "ticket",
       methods: [{
         type: "webauthn",
@@ -44,20 +44,20 @@ function m() {
       })
     }), (0, a.jsx)("div", {
       className: i()(d.buttonsContainer, u.marginBottom20),
-      children: (0, a.jsx)(l.Button, {
+      children: (0, a.jsx)(o.Button, {
         onClick: h,
         children: "Launch MFA"
       })
     }), (0, a.jsx)("div", {
       className: i()(d.buttonsContainer, u.marginBottom20),
-      children: (0, a.jsx)(l.Button, {
+      children: (0, a.jsx)(o.Button, {
         onClick: () => (0, c.Z)(),
         children: "Launch Vibing Wumpus"
       })
     }), (0, a.jsx)("div", {
       className: i()(d.buttonsContainer, u.marginBottom20),
-      children: (0, a.jsx)(l.Button, {
-        onClick: o.YJ,
+      children: (0, a.jsx)(o.Button, {
+        onClick: l.YJ,
         children: "Clear Message Requests Read State"
       })
     })]

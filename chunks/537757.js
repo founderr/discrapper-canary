@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   clickable: "clickable_a5cd29",
   wrapper: "wrapper_a5cd29",

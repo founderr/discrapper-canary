@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   divider: "divider_fc5f50",
   isUnread: "isUnread_fc5f50",

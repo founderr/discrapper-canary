@@ -3,78 +3,78 @@ n.d(t, {
     return N
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-  s = n.n(i),
-  a = n(442837),
+var a = n(120356),
+  l = n.n(a),
+  s = n(442837),
   r = n(481060),
   o = n(239091),
   c = n(100527),
   u = n(906732),
   d = n(995123),
   h = n(484459),
-  m = n(103575),
-  E = n(271383),
-  p = n(594174),
-  g = n(51144),
-  f = n(967128),
-  C = n(981631),
-  _ = n(689938),
+  p = n(103575),
+  m = n(271383),
+  _ = n(594174),
+  f = n(51144),
+  E = n(967128),
+  g = n(981631),
+  C = n(689938),
   I = n(971055);
 
 function x(e) {
-  var t, i;
+  var t, a;
   let {
     userId: d,
-    channel: f
+    channel: E
   } = e, {
-    analyticsLocations: C
-  } = (0, u.ZP)(c.Z.USERNAME), _ = (0, a.e7)([p.default], () => p.default.getUser(d)), x = (0, a.e7)([E.ZP], () => null != d ? E.ZP.getMember(f.guild_id, d) : null);
+    analyticsLocations: g
+  } = (0, u.ZP)(c.Z.USERNAME), C = (0, s.e7)([_.default], () => _.default.getUser(d)), x = (0, s.e7)([m.ZP], () => null != d ? m.ZP.getMember(E.guild_id, d) : null);
 
   function T(e) {
-    if (null == _) return null;
+    if (null == C) return null;
     (0, o.jW)(e, async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("70675")]).then(n.bind(n, 654663));
-      return t => (0, l.jsx)(e, {
+      } = await Promise.all([n.e("79695"), n.e("70675")]).then(n.bind(n, 654663));
+      return t => (0, i.jsx)(e, {
         ...t,
-        user: _,
-        guildId: f.guild_id,
-        channel: f
+        user: C,
+        guildId: E.guild_id,
+        channel: E
       })
     })
   }
-  let N = null !== (i = null !== (t = null == x ? void 0 : x.nick) && void 0 !== t ? t : g.ZP.getName(_)) && void 0 !== i ? i : "???",
-    Z = null == x ? void 0 : x.colorString;
-  return null == _ ? (0, l.jsx)("span", {
-    className: s()(I.threadCreatorName, I.unknownCreatorName),
+  let N = null !== (a = null !== (t = null == x ? void 0 : x.nick) && void 0 !== t ? t : f.ZP.getName(C)) && void 0 !== a ? a : "???",
+    v = null == x ? void 0 : x.colorString;
+  return null == C ? (0, i.jsx)("span", {
+    className: l()(I.threadCreatorName, I.unknownCreatorName),
     children: N
-  }) : (0, l.jsx)(u.Gt, {
-    value: C,
-    children: (0, l.jsx)(r.Popout, {
-      preload: () => (0, h.W)(_, {
-        guildId: f.guild_id,
-        channelId: f.id
+  }) : (0, i.jsx)(u.Gt, {
+    value: g,
+    children: (0, i.jsx)(r.Popout, {
+      preload: () => (0, h.W)(C, {
+        guildId: E.guild_id,
+        channelId: E.id
       }),
-      renderPopout: e => (0, l.jsx)(m.Z, {
+      renderPopout: e => (0, i.jsx)(p.Z, {
         location: "ThreadEmptyMessage",
-        userId: _.id,
-        guildId: f.guild_id,
-        channelId: f.id,
+        userId: C.id,
+        guildId: E.guild_id,
+        channelId: E.id,
         roleId: null == x ? void 0 : x.colorRoleId,
         ...e
       }),
       position: "right",
-      children: e => (0, l.jsx)(r.Clickable, {
+      children: e => (0, i.jsx)(r.Clickable, {
         ...e,
         tag: "span",
         className: I.threadCreatorName,
         onContextMenu: T,
-        children: (0, l.jsx)(r.NameWithRole, {
+        children: (0, i.jsx)(r.NameWithRole, {
           name: N,
-          color: null != Z ? Z : void 0
+          color: null != v ? v : void 0
         })
       })
     })
@@ -87,27 +87,27 @@ function T(e) {
   } = e, {
     threadMetadata: n
   } = t;
-  return null == n ? (0, l.jsx)("div", {
+  return null == n ? (0, i.jsx)("div", {
     style: {
       marginTop: -8
     }
-  }) : (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)(r.Text, {
+  }) : (0, i.jsxs)(i.Fragment, {
+    children: [(0, i.jsx)(r.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      children: (0, l.jsx)("div", {
+      children: (0, i.jsx)("div", {
         className: I.subtitle,
-        children: _.Z.Messages.THREAD_STARTED_BY.format({
-          usernameHook: (e, n) => (0, l.jsx)(x, {
+        children: C.Z.Messages.THREAD_STARTED_BY.format({
+          usernameHook: (e, n) => (0, i.jsx)(x, {
             userId: t.ownerId,
             channel: t
           }, n)
         })
       })
-    }), t.type === C.d4z.PRIVATE_THREAD ? (0, l.jsx)(r.Text, {
+    }), t.type === g.d4z.PRIVATE_THREAD ? (0, i.jsx)(r.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      children: _.Z.Messages.EMPTY_MESSAGE_PRIVATE_THREAD_INSTRUCTIONS
+      children: C.Z.Messages.EMPTY_MESSAGE_PRIVATE_THREAD_INSTRUCTIONS
     }) : null]
   })
 }
@@ -116,17 +116,17 @@ function N(e) {
   var t;
   let {
     channel: n
-  } = e, i = null !== (t = (0, d.Z)(n)) && void 0 !== t ? t : r.ThreadIcon;
-  return (0, l.jsxs)(f.ZP, {
+  } = e, a = null !== (t = (0, d.Z)(n)) && void 0 !== t ? t : r.ThreadIcon;
+  return (0, i.jsxs)(E.ZP, {
     channelId: n.id,
-    children: [(0, l.jsx)("div", {
+    children: [(0, i.jsx)("div", {
       className: I.iconWrapper,
-      children: (0, l.jsx)(i, {
+      children: (0, i.jsx)(a, {
         className: I.icon
       })
-    }), (0, l.jsx)(f.Ot, {
+    }), (0, i.jsx)(E.Ot, {
       children: n.name
-    }), (0, l.jsx)(T, {
+    }), (0, i.jsx)(T, {
       channel: n
     })]
   })

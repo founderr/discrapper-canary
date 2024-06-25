@@ -1,168 +1,168 @@
 n.d(t, {
   Z: function() {
-    return b
+    return y
   }
 }), n(47120);
-var l, i, s = n(735250),
-  a = n(470079),
+var i, a, l = n(735250),
+  s = n(470079),
   r = n(120356),
   o = n.n(r),
   c = n(512722),
   u = n.n(c),
   d = n(442837),
   h = n(481060),
-  m = n(239091),
-  E = n(99690),
-  p = n(58540),
-  g = n(484459),
-  f = n(103575),
-  C = n(271383),
-  _ = n(496675),
+  p = n(239091),
+  m = n(99690),
+  _ = n(58540),
+  f = n(484459),
+  E = n(103575),
+  g = n(271383),
+  C = n(496675),
   I = n(158776),
   x = n(502568),
   T = n(471253),
   N = n(431328),
-  Z = n(145834),
+  v = n(145834),
   S = n(590415),
-  v = n(614173),
+  Z = n(614173),
   A = n(618896),
   M = n(231338),
-  R = n(689938),
-  j = n(944759);
-let L = a.memo(function(e) {
+  b = n(689938),
+  R = n(944759);
+let j = s.memo(function(e) {
     let {
       toggleRequestToSpeakSidebar: t,
       chatOpen: n
-    } = e, l = (0, s.jsx)(x.ZP.Icon, {
+    } = e, i = (0, l.jsx)(x.ZP.Icon, {
       icon: h.CloseSmallIcon,
-      tooltip: R.Z.Messages.CLOSE,
+      tooltip: b.Z.Messages.CLOSE,
       onClick: t
     });
-    return (0, s.jsxs)(x.ZP, {
-      toolbar: l,
-      className: o()(j.headerContainer, {
-        [j.chatOpen]: n
+    return (0, l.jsxs)(x.ZP, {
+      toolbar: i,
+      className: o()(R.headerContainer, {
+        [R.chatOpen]: n
       }),
-      children: [(0, s.jsx)(x.ZP.Icon, {
+      children: [(0, l.jsx)(x.ZP.Icon, {
         icon: h.HandRequestSpeakIcon,
         disabled: !0,
-        "aria-label": R.Z.Messages.REQUEST_TO_SPEAK_AREA_TITLE
-      }), (0, s.jsx)(x.ZP.Title, {
-        children: R.Z.Messages.REQUEST_TO_SPEAK_AREA_TITLE
+        "aria-label": b.Z.Messages.REQUEST_TO_SPEAK_AREA_TITLE
+      }), (0, l.jsx)(x.ZP.Title, {
+        children: b.Z.Messages.REQUEST_TO_SPEAK_AREA_TITLE
       })]
     })
   }),
-  O = a.memo(function(e) {
+  L = s.memo(function(e) {
     let {
       channel: t,
-      participant: l,
-      tempDisableOnInit: i = !1
-    } = e, [r, c] = a.useState(i);
-    a.useEffect(() => {
+      participant: i,
+      tempDisableOnInit: a = !1
+    } = e, [r, c] = s.useState(a);
+    s.useEffect(() => {
       if (!r) return;
       let e = setTimeout(() => c(!1), 1e3);
       return () => clearTimeout(e)
     }, []);
-    let _ = t.getGuildId();
-    u()(null != _, "Channel cannot be guildless");
+    let C = t.getGuildId();
+    u()(null != C, "Channel cannot be guildless");
     let {
       isMobile: x,
       status: N
     } = (0, d.cj)([I.Z], () => ({
-      isMobile: I.Z.isMobileOnline(l.user.id),
-      status: I.Z.getStatus(l.user.id, _)
-    })), v = (0, d.e7)([C.ZP], () => C.ZP.getMember(_, l.user.id)), A = a.useMemo(() => ({
-      [_]: [l.user.id]
-    }), [_, l.user.id]);
-    (0, p.$)(A);
-    let M = l.rtsState === S.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+      isMobile: I.Z.isMobileOnline(i.user.id),
+      status: I.Z.getStatus(i.user.id, C)
+    })), Z = (0, d.e7)([g.ZP], () => g.ZP.getMember(C, i.user.id)), A = s.useMemo(() => ({
+      [C]: [i.user.id]
+    }), [C, i.user.id]);
+    (0, _.$)(A);
+    let M = i.rtsState === S.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+
+    function j() {
+      (0, T.DT)(t, i.user.id, !1)
+    }
 
     function L() {
-      (0, T.DT)(t, l.user.id, !1)
-    }
-
-    function O() {
-      (0, T.DT)(t, l.user.id, !0)
+      (0, T.DT)(t, i.user.id, !0)
     }
     let P = e => {
-      (0, m.jW)(e, async () => {
+      (0, p.jW)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("32006"), n.e("12435"), n.e("7717")]).then(n.bind(n, 757387));
-        return n => (0, s.jsx)(e, {
+        } = await Promise.all([n.e("79695"), n.e("32006"), n.e("12435"), n.e("47195")]).then(n.bind(n, 757387));
+        return n => (0, l.jsx)(e, {
           ...n,
-          user: l.user,
-          guildId: _,
+          user: i.user,
+          guildId: C,
           channel: t,
           showMediaItems: !0
         })
       })
     };
-    return (0, s.jsxs)("div", {
-      className: j.participantRowContainer,
-      children: [(0, s.jsx)(h.Popout, {
-        preload: () => (0, g.Z)(l.user.id, l.user.getAvatarURL(t.guild_id, 80), {
+    return (0, l.jsxs)("div", {
+      className: R.participantRowContainer,
+      children: [(0, l.jsx)(h.Popout, {
+        preload: () => (0, f.Z)(i.user.id, i.user.getAvatarURL(t.guild_id, 80), {
           guildId: t.guild_id,
           channelId: t.id
         }),
-        renderPopout: e => (0, s.jsx)(f.Z, {
+        renderPopout: e => (0, l.jsx)(E.Z, {
           ...e,
           location: "RequestToSpeakSidebar",
-          userId: l.user.id,
-          guildId: _,
+          userId: i.user.id,
+          guildId: C,
           channelId: t.id
         }),
         position: "left",
         spacing: 16,
         children: e => {
           var t;
-          return (0, s.jsxs)(h.Clickable, {
-            className: j.participantMemberContainer,
+          return (0, l.jsxs)(h.Clickable, {
+            className: R.participantMemberContainer,
             onContextMenu: P,
             ...e,
-            children: [(0, s.jsx)(E.Z, {
+            children: [(0, l.jsx)(m.Z, {
               size: h.AvatarSizes.SIZE_40,
-              className: j.participantAvatar,
-              user: l.user,
+              className: R.participantAvatar,
+              user: i.user,
               isMobile: x,
               status: N
-            }), (0, s.jsxs)("div", {
-              className: j.participantTextContainer,
-              children: [(0, s.jsx)(h.NameWithRole, {
-                name: l.userNick,
-                color: null !== (t = null == v ? void 0 : v.colorString) && void 0 !== t ? t : void 0,
-                className: j.participantName
-              }), (0, s.jsx)(h.Text, {
+            }), (0, l.jsxs)("div", {
+              className: R.participantTextContainer,
+              children: [(0, l.jsx)(h.NameWithRole, {
+                name: i.userNick,
+                color: null !== (t = null == Z ? void 0 : Z.colorString) && void 0 !== t ? t : void 0,
+                className: R.participantName
+              }), (0, l.jsx)(h.Text, {
                 variant: "text-xs/normal",
                 color: "header-secondary",
-                children: (0, Z.$)(l)
+                children: (0, v.$)(i)
               })]
             })]
           })
         }
-      }), (0, s.jsx)(h.Tooltip, {
-        text: M ? R.Z.Messages.REQUEST_TO_SPEAK_INVITATION_SEND : R.Z.Messages.REQUEST_TO_SPEAK_ACCEPT,
-        children: e => (0, s.jsx)(h.Button, {
+      }), (0, l.jsx)(h.Tooltip, {
+        text: M ? b.Z.Messages.REQUEST_TO_SPEAK_INVITATION_SEND : b.Z.Messages.REQUEST_TO_SPEAK_ACCEPT,
+        children: e => (0, l.jsx)(h.Button, {
           ...e,
-          innerClassName: j.buttonContainer,
+          innerClassName: R.buttonContainer,
           look: h.Button.Looks.BLANK,
           size: h.Button.Sizes.NONE,
-          onClick: L,
+          onClick: j,
           disabled: M || r,
-          children: (0, s.jsx)(h.MicrophoneArrowRightIcon, {
+          children: (0, l.jsx)(h.MicrophoneArrowRightIcon, {
             size: "xs",
             color: "currentColor"
           })
         })
-      }), (0, s.jsx)(h.Tooltip, {
-        text: R.Z.Messages.REQUEST_TO_SPEAK_DECLINE,
-        children: e => (0, s.jsx)(h.Button, {
+      }), (0, l.jsx)(h.Tooltip, {
+        text: b.Z.Messages.REQUEST_TO_SPEAK_DECLINE,
+        children: e => (0, l.jsx)(h.Button, {
           ...e,
-          innerClassName: o()(j.buttonContainer, j.buttonMargin),
+          innerClassName: o()(R.buttonContainer, R.buttonMargin),
           look: h.Button.Looks.BLANK,
           size: h.Button.Sizes.NONE,
-          onClick: O,
-          children: (0, s.jsx)(h.CloseSmallIcon, {
+          onClick: L,
+          children: (0, l.jsx)(h.CloseSmallIcon, {
             size: "xs",
             color: "currentColor"
           })
@@ -170,50 +170,50 @@ let L = a.memo(function(e) {
       })]
     })
   }),
-  P = a.memo(function(e) {
+  P = s.memo(function(e) {
     let {
       channel: t
-    } = e, [n, l] = (0, v.h)(t.id);
-    return (0, s.jsx)(h.FormSwitch, {
-      className: j.toggle,
-      onChange: l,
+    } = e, [n, i] = (0, Z.h)(t.id);
+    return (0, l.jsx)(h.FormSwitch, {
+      className: R.toggle,
+      onChange: i,
       value: n,
-      children: R.Z.Messages.MODERATOR_ALLOW_EVERYONE_RAISE_HAND
+      children: b.Z.Messages.MODERATOR_ALLOW_EVERYONE_RAISE_HAND
     })
   }),
-  y = a.memo(function() {
-    return (0, s.jsxs)("div", {
-      className: j.emptyStateContainer,
-      children: [(0, s.jsx)(A.Z, {}), (0, s.jsx)(h.Text, {
-        className: j.emptyStateTitle,
+  O = s.memo(function() {
+    return (0, l.jsxs)("div", {
+      className: R.emptyStateContainer,
+      children: [(0, l.jsx)(A.Z, {}), (0, l.jsx)(h.Text, {
+        className: R.emptyStateTitle,
         variant: "text-lg/semibold",
         color: "header-primary",
-        children: R.Z.Messages.REQUEST_TO_SPEAK_EMPTY_LIST_TITLE
-      }), (0, s.jsx)(h.Text, {
-        className: j.emptyStateBody,
+        children: b.Z.Messages.REQUEST_TO_SPEAK_EMPTY_LIST_TITLE
+      }), (0, l.jsx)(h.Text, {
+        className: R.emptyStateBody,
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: R.Z.Messages.REQUEST_TO_SPEAK_EMPTY_LIST_BODY
+        children: b.Z.Messages.REQUEST_TO_SPEAK_EMPTY_LIST_BODY
       })]
     })
   });
 
-function b(e) {
+function y(e) {
   let {
     channel: t,
     toggleRequestToSpeakSidebar: n,
-    chatOpen: l
-  } = e, i = (0, N.Fd)(t.id), a = [(0, d.e7)([_.Z], () => _.Z.can(M.Pl.MANAGE_CHANNELS, t) || _.Z.can(M.Pl.MANAGE_ROLES, t)) ? 1 : 0, Math.max(1, i.length)];
-  return (0, s.jsxs)("div", {
-    className: o()(j.container, {
-      [j.chatOpen]: l
+    chatOpen: i
+  } = e, a = (0, N.Fd)(t.id), s = [(0, d.e7)([C.Z], () => C.Z.can(M.Pl.MANAGE_CHANNELS, t) || C.Z.can(M.Pl.MANAGE_ROLES, t)) ? 1 : 0, Math.max(1, a.length)];
+  return (0, l.jsxs)("div", {
+    className: o()(R.container, {
+      [R.chatOpen]: i
     }),
-    children: [(0, s.jsx)(L, {
+    children: [(0, l.jsx)(j, {
       toggleRequestToSpeakSidebar: n,
-      chatOpen: l
-    }), (0, s.jsx)(h.List, {
-      className: j.contentContainer,
-      sections: a,
+      chatOpen: i
+    }), (0, l.jsx)(h.List, {
+      className: R.contentContainer,
+      sections: s,
       sectionHeight: function(e) {
         if (1 === e) return 40;
         return 0
@@ -223,7 +223,7 @@ function b(e) {
           case 0:
             return 66;
           case 1:
-            if (0 === i.length) return 178;
+            if (0 === a.length) return 178;
             return 48
         }
         return 0
@@ -231,17 +231,17 @@ function b(e) {
       renderRow: function(e) {
         let {
           section: n,
-          row: l
+          row: i
         } = e;
         switch (n) {
           case 0:
-            return (0, s.jsx)(P, {
+            return (0, l.jsx)(P, {
               channel: t
             }, "rts-toggle");
           case 1: {
-            if (0 === i.length) return (0, s.jsx)(y, {}, "participants-empty");
-            let e = i[l];
-            return (0, s.jsx)(O, {
+            if (0 === a.length) return (0, l.jsx)(O, {}, "participants-empty");
+            let e = a[i];
+            return (0, l.jsx)(L, {
               channel: t,
               participant: e,
               tempDisableOnInit: !0
@@ -254,16 +254,16 @@ function b(e) {
         let {
           section: t
         } = e;
-        if (1 === t) return (0, s.jsx)(h.Text, {
-          className: j.listTitle,
+        if (1 === t) return (0, l.jsx)(h.Text, {
+          className: R.listTitle,
           variant: "text-xs/bold",
           color: "header-secondary",
-          children: i.length > 0 ? R.Z.Messages.REQUEST_TO_SPEAK_LIST_TITLE.format({
-            numHands: i.length
-          }) : R.Z.Messages.REQUEST_TO_SPEAK_AREA_TITLE
+          children: a.length > 0 ? b.Z.Messages.REQUEST_TO_SPEAK_LIST_TITLE.format({
+            numHands: a.length
+          }) : b.Z.Messages.REQUEST_TO_SPEAK_AREA_TITLE
         }, "participants-section");
         return null
       }
     })]
   })
-}(i = l || (l = {}))[i.TOGGLE_REQUEST_TO_SPEAK = 0] = "TOGGLE_REQUEST_TO_SPEAK", i[i.PARTICIPANTS = 1] = "PARTICIPANTS"
+}(a = i || (i = {}))[a.TOGGLE_REQUEST_TO_SPEAK = 0] = "TOGGLE_REQUEST_TO_SPEAK", a[a.PARTICIPANTS = 1] = "PARTICIPANTS"

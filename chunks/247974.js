@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   outerContentWrapper: "outerContentWrapper_abbfdb",
   innerContentWrapper: "innerContentWrapper_abbfdb",

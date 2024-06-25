@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_c9ccf6",
   copiableField: "copiableField_c9ccf6",

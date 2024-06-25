@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   mainContainer: "mainContainer_bd9c39",
   textArea: "textArea_bd9c39",

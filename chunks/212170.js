@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   clickable: "clickable_c18810",
   trait: "trait_c18810",

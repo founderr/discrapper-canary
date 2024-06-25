@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   transition: "transition_f48d4e",
   directionDown: "directionDown_f48d4e",

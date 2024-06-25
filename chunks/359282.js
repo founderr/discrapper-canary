@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_e89716",
   remediationElementsHeader: "remediationElementsHeader_e89716",

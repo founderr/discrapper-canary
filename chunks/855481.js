@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   value: "value_cc6793",
   actions: "actions_cc6793",

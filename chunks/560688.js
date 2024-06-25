@@ -15,7 +15,7 @@ function l(e) {
   s.Z.supports(o.AN.VIDEO) ? (0, r.openModalLazy)(async () => {
     let {
       default: t
-    } = await Promise.all([n.e("99387"), n.e("67753")]).then(n.bind(n, 873809));
+    } = await n.e("67753").then(n.bind(n, 873809));
     return n => (0, i.jsx)(t, {
       ...n,
       header: a.Z.Messages.CAMERA_UNAVAILABLE,
@@ -26,7 +26,7 @@ function l(e) {
   }) : (0, r.openModalLazy)(async () => {
     let {
       default: t
-    } = await Promise.all([n.e("99387"), n.e("67753")]).then(n.bind(n, 873809));
+    } = await n.e("67753").then(n.bind(n, 873809));
     return s => (0, i.jsx)(t, {
       ...s,
       header: a.Z.Messages.VIDEO_UNSUPPORTED_BROWSER_TITLE,
@@ -36,7 +36,7 @@ function l(e) {
         null == e || e(), (0, r.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("99387"), n.e("61418")]).then(n.bind(n, 431583));
+          } = await n.e("82935").then(n.bind(n, 431583));
           return t => (0, i.jsx)(e, {
             source: "Video unsupported browser",
             ...t

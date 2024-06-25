@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   formTitle: "formTitle_b6c2d2",
   customHeader: "customHeader_b6c2d2",

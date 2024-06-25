@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   root: "root_d6170c",
   text: "text_d6170c",

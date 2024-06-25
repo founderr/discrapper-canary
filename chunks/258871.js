@@ -1,19 +1,19 @@
-var l = n(735250),
-  i = n(470079),
-  s = n(442837),
-  r = n(481060),
-  a = n(554747),
+var i = n(735250),
+  l = n(470079),
+  r = n(442837),
+  a = n(481060),
+  s = n(554747),
   o = n(434479),
-  u = n(593364),
-  c = n(703656),
+  c = n(593364),
+  u = n(703656),
   d = n(944486),
   h = n(147754),
   p = n(688438),
-  g = n(981631),
-  m = n(689938);
-let C = [{
+  f = n(981631),
+  _ = n(689938);
+let g = [{
   key: "EVENTS",
-  renderIcon: e => (0, l.jsx)(r.CalendarIcon, {
+  renderIcon: e => (0, i.jsx)(a.CalendarIcon, {
     size: "md",
     color: "currentColor",
     className: e
@@ -22,41 +22,41 @@ let C = [{
     let {
       numEvents: t
     } = e;
-    return t > 0 ? m.Z.Messages.GUILD_EVENTS_PLURAL.format({
+    return t > 0 ? _.Z.Messages.GUILD_EVENTS_PLURAL.format({
       number: t
-    }) : m.Z.Messages.GUILD_EVENTS
+    }) : _.Z.Messages.GUILD_EVENTS
   },
-  handler: e => (0, r.openModalLazy)(async () => {
+  handler: e => (0, a.openModalLazy)(async () => {
     let {
       default: t
-    } = await Promise.all([n.e("99387"), n.e("22347"), n.e("56236")]).then(n.bind(n, 17671));
-    return n => (0, l.jsx)(t, {
+    } = await Promise.all([n.e("22347"), n.e("56236"), n.e("56289")]).then(n.bind(n, 17671));
+    return n => (0, i.jsx)(t, {
       ...n,
       guildId: e.id
     })
   })
 }, {
   key: "JOIN_SERVERS",
-  renderIcon: e => (0, l.jsx)(r.CompassIcon, {
+  renderIcon: e => (0, i.jsx)(a.CompassIcon, {
     size: "md",
     color: "currentColor",
     className: e
   }),
-  getName: () => m.Z.Messages.HUB_SIDEBAR_JOIN_SERVERS,
-  handler: (e, t) => (0, c.XU)(e.id, t.id)
+  getName: () => _.Z.Messages.HUB_SIDEBAR_JOIN_SERVERS,
+  handler: (e, t) => (0, u.XU)(e.id, t.id)
 }, {
   key: "ADD_SERVERS",
-  renderIcon: e => (0, l.jsx)(r.PlusSmallIcon, {
+  renderIcon: e => (0, i.jsx)(a.PlusSmallIcon, {
     size: "md",
     color: "currentColor",
     className: e
   }),
-  getName: () => m.Z.Messages.HUB_SIDEBAR_ADD_SERVERS,
-  handler: (e, t) => (0, r.openModalLazy)(async () => {
+  getName: () => _.Z.Messages.HUB_SIDEBAR_ADD_SERVERS,
+  handler: (e, t) => (0, a.openModalLazy)(async () => {
     let {
-      default: i
-    } = await Promise.all([n.e("99387"), n.e("79764")]).then(n.bind(n, 533202));
-    return n => (0, l.jsx)(i, {
+      default: l
+    } = await n.e("79764").then(n.bind(n, 533202));
+    return n => (0, i.jsx)(l, {
       ...n,
       directoryGuildName: e.name,
       directoryGuildId: e.id,
@@ -65,19 +65,19 @@ let C = [{
   })
 }, {
   key: "INVITE_MEMBERS",
-  renderIcon: e => (0, l.jsx)(r.GroupPlusIcon, {
+  renderIcon: e => (0, i.jsx)(a.GroupPlusIcon, {
     className: e
   }),
-  getName: () => m.Z.Messages.HUB_SIDEBAR_INVITE_MEMBERS,
-  handler: (e, t) => (0, r.openModalLazy)(async () => {
+  getName: () => _.Z.Messages.HUB_SIDEBAR_INVITE_MEMBERS,
+  handler: (e, t) => (0, a.openModalLazy)(async () => {
     let {
-      default: i
-    } = await Promise.all([n.e("99387"), n.e("7654"), n.e("9785")]).then(n.bind(n, 560114));
-    return n => (0, l.jsx)(i, {
+      default: l
+    } = await Promise.all([n.e("7654"), n.e("17520")]).then(n.bind(n, 560114));
+    return n => (0, i.jsx)(l, {
       ...n,
       guild: e,
       channel: t,
-      source: g.t4x.HUB_SIDEBAR
+      source: f.t4x.HUB_SIDEBAR
     })
   })
 }];
@@ -85,40 +85,40 @@ t.Z = e => {
   let {
     guild: t,
     channel: n
-  } = e, r = (0, a.ZP)(t.id);
-  i.useEffect(() => {
+  } = e, a = (0, s.ZP)(t.id);
+  l.useEffect(() => {
     h.Z.trackExposure({
       guildId: t.id,
       location: "543af8_1"
     })
   }, [t.id]);
   let {
-    showHubEventsList: c
+    showHubEventsList: u
   } = h.Z.useExperiment({
     guildId: t.id,
     location: "543af8_2"
   }, {
     autoTrackExposure: !1
-  }), g = (0, s.e7)([d.Z], () => null != n && d.Z.getChannelId() === n.id), m = i.useMemo(() => ({
-    numEvents: r.length
-  }), [r.length]), E = (0, p.t)(n);
-  return (0, l.jsx)(l.Fragment, {
-    children: C.map(e => {
+  }), f = (0, r.e7)([d.Z], () => null != n && d.Z.getChannelId() === n.id), _ = l.useMemo(() => ({
+    numEvents: a.length
+  }), [a.length]), m = (0, p.t)(n);
+  return (0, i.jsx)(i.Fragment, {
+    children: g.map(e => {
       let {
-        key: i,
-        getName: s,
-        handler: r,
-        renderIcon: a
+        key: l,
+        getName: r,
+        handler: a,
+        renderIcon: s
       } = e;
-      if (!c && "EVENTS" === i) return null;
-      let d = "".concat(i, "-").concat(t.id);
-      return (0, l.jsx)(o.m, {
+      if (!u && "EVENTS" === l) return null;
+      let d = "".concat(l, "-").concat(t.id);
+      return (0, i.jsx)(o.m, {
         id: d,
-        renderIcon: a,
-        text: s(m),
-        selected: g && "JOIN_SERVERS" === i,
-        onClick: null != n ? () => r(t, n) : void 0,
-        trailing: "JOIN_SERVERS" === i && E > 0 ? (0, u.N)(E) : null
+        renderIcon: s,
+        text: r(_),
+        selected: f && "JOIN_SERVERS" === l,
+        onClick: null != n ? () => a(t, n) : void 0,
+        trailing: "JOIN_SERVERS" === l && m > 0 ? (0, c.N)(m) : null
       }, d)
     })
   })

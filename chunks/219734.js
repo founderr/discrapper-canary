@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   editorAnimate: "editorAnimate_c9dda6",
   themeEditor: "themeEditor_c9dda6",

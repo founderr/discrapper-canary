@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   childButton: "childButton_f45bfc",
   childText: "childText_f45bfc",

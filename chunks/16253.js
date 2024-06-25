@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   section: "section_a210a0",
   bannerContainer: "bannerContainer_a210a0",

@@ -3,63 +3,63 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(442837),
-  s = n(481060),
-  a = n(485267),
+var a = n(442837),
+  l = n(481060),
+  s = n(485267),
   r = n(146282),
   o = n(981631),
   c = n(689938);
 let u = e => {
   let {
     closePopout: t
-  } = e, u = (0, i.e7)([r.Z], () => r.Z.hidden);
-  return (0, l.jsx)(s.Menu, {
+  } = e, u = (0, a.e7)([r.Z], () => r.Z.hidden);
+  return (0, i.jsx)(l.Menu, {
     onSelect: () => {},
     navId: "member-list-settings-menu",
     variant: "fixed",
     onClose: null != t ? t : o.dG4,
     "aria-label": c.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_SETTINGS_ALT,
-    children: (0, l.jsxs)(s.MenuGroup, {
-      children: [(0, l.jsx)(s.MenuItem, {
+    children: (0, i.jsxs)(l.MenuGroup, {
+      children: [(0, i.jsx)(l.MenuItem, {
         id: "about",
         label: c.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_SETTINGS_ABOUT,
-        icon: s.CircleInformationIcon,
+        icon: l.CircleInformationIcon,
         action: () => {
-          (0, s.openModalLazy)(async () => {
+          (0, l.openModalLazy)(async () => {
             let {
               default: e
-            } = await Promise.all([n.e("99387"), n.e("71517")]).then(n.bind(n, 549505));
-            return t => (0, l.jsx)(e, {
+            } = await n.e("71517").then(n.bind(n, 549505));
+            return t => (0, i.jsx)(e, {
               ...t
             })
           }), null == t || t()
         }
-      }), (0, l.jsx)(s.MenuCheckboxItem, {
+      }), (0, i.jsx)(l.MenuCheckboxItem, {
         id: "hide",
         label: c.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_SETTINGS_HIDE,
         checked: u,
         action: () => {
-          (0, a.l)(), null == t || t()
+          (0, s.l)(), null == t || t()
         }
       })]
     })
   })
 };
-t.default = () => (0, l.jsx)(s.Popout, {
-  animation: s.Popout.Animation.NONE,
+t.default = () => (0, i.jsx)(l.Popout, {
+  animation: l.Popout.Animation.NONE,
   position: "bottom",
   align: "right",
   renderPopout: e => {
     let {
       closePopout: t
     } = e;
-    return (0, l.jsx)(u, {
+    return (0, i.jsx)(u, {
       closePopout: t
     })
   },
-  children: e => (0, l.jsx)(s.Clickable, {
+  children: e => (0, i.jsx)(l.Clickable, {
     ...e,
     onClick: t => {
       t.stopPropagation(), e.onClick(t)
@@ -68,7 +68,7 @@ t.default = () => (0, l.jsx)(s.Popout, {
       width: "12px",
       height: "12px"
     },
-    children: (0, l.jsx)(s.SettingsIcon, {
+    children: (0, i.jsx)(l.SettingsIcon, {
       size: "xxs"
     })
   })

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   flex: "flex_bba380",
   horizontal: "horizontal_bba380",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   creatorBenefitsContainer: "creatorBenefitsContainer_da92c3",
   earningBenefitCard: "earningBenefitCard_da92c3 creatorBenefitCard_da92c3 " + n("293811").card,

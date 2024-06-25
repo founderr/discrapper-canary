@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_c1668f",
   horizontalPadding: "horizontalPadding_c1668f",

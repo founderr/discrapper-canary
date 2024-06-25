@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_c45b04",
   status: "status_c45b04",

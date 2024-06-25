@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   modal: "modal_ec75c1",
   sizeSmall: "sizeSmall_ec75c1",

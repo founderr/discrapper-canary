@@ -28,7 +28,7 @@ let I = "GUILD_ONBOARDING_UPSELL_MODAL",
     (0, s.openModalLazy)(async () => {
       let {
         default: t
-      } = await Promise.all([n.e("99387"), n.e("93776")]).then(n.bind(n, 563288));
+      } = await n.e("93776").then(n.bind(n, 563288));
       return n => (0, i.jsx)(t, {
         ...n,
         guildId: e,

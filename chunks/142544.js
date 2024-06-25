@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   reactions: "reactions_d0fc0d",
   reply: "reply_d0fc0d",

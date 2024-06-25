@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   searchBar: "searchBar_c90ddb",
   settingsHeader: "settingsHeader_c90ddb",

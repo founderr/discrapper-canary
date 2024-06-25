@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   inspector: "inspector_c3120f",
   graphicPrimary: "graphicPrimary_c3120f",

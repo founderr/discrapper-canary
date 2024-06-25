@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   enable: function() {
-    return N
+    return A
   },
   isNotSupported: function() {
-    return S
+    return f
   },
   trackToggleSelfMute: function() {
-    return A
+    return N
   }
 });
 var i = n(735250);
@@ -29,7 +29,7 @@ function h() {
   (0, r.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("99387"), n.e("61418")]).then(n.bind(n, 431583));
+    } = await n.e("82935").then(n.bind(n, 431583));
     return t => (0, i.jsx)(e, {
       source: "Unsupported Browser",
       ...t
@@ -37,7 +37,7 @@ function h() {
   })
 }
 
-function S() {
+function f() {
   return !a.Z.isSupported() && ((0, r.openModal)(e => (0, i.jsx)(r.ConfirmModal, {
     header: I.Z.Messages.UNSUPPORTED_BROWSER,
     confirmText: I.Z.Messages.DOWNLOAD_APP,
@@ -52,41 +52,41 @@ function S() {
   })), !0)
 }
 
-function f(e) {
+function S(e) {
   _.default.track(d.rMx.PERMISSIONS_ACKED, {
     type: "audio",
     action: e
   })
 }
 
-function N() {
+function A() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  return S() ? Promise.resolve(!1) : (_.default.track(d.rMx.PERMISSIONS_REQUESTED, {
+  return f() ? Promise.resolve(!1) : (_.default.track(d.rMx.PERMISSIONS_REQUESTED, {
     type: "audio"
   }), a.Z.getMediaEngine().enable().then(() => {
     s.Z.dispatch({
       type: "MEDIA_ENGINE_SET_AUDIO_ENABLED",
       enabled: !0,
       unmute: e
-    }), f(E.PQ.ACCEPTED)
+    }), S(E.PQ.ACCEPTED)
   }, e => {
     switch (e) {
       case d.ETv.NO_DEVICES_FOUND:
-        f(E.PQ.NO_DEVICES);
+        S(E.PQ.NO_DEVICES);
         break;
       case d.ETv.PERMISSION_DENIED:
-        f(E.PQ.DENIED);
+        S(E.PQ.DENIED);
         break;
       case d.ETv.PERMISSION_DISMISSED:
-        f(E.PQ.DISMISSED);
+        S(E.PQ.DISMISSED);
         break;
       default:
-        f(E.PQ.ERROR), T.warn("unknown getUserMedia error: ".concat(e))
+        S(E.PQ.ERROR), T.warn("unknown getUserMedia error: ".concat(e))
     }
   }).then(() => !0))
 }
 
-function A(e) {
+function N(e) {
   let {
     usedKeybind: t = !1
   } = e, n = l.Z.getKeybindForAction(d.kg4.TOGGLE_MUTE, !1, !0);

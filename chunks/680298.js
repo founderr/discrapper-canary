@@ -4,11 +4,11 @@ t.d(n, {
   }
 });
 var i = t(735250),
-  l = t(470079),
+  a = t(470079),
   s = t(481060),
-  a = t(239091),
-  r = t(911969),
-  o = t(399860),
+  l = t(239091),
+  o = t(911969),
+  r = t(399860),
   c = t(689938),
   d = t(1924);
 
@@ -17,41 +17,41 @@ function u(e) {
     applicationIcon: n,
     applicationName: u,
     canNavigate: I,
-    command: N,
-    guildId: E
-  } = e, T = l.useMemo(() => {
+    command: m,
+    guildId: _
+  } = e, N = a.useMemo(() => {
     var e;
-    return 0 !== Object.keys(null !== (e = N.permissions) && void 0 !== e ? e : {}).length
-  }, [N.permissions]), m = l.useCallback(() => {
-    null != N && I() && (0, s.openModalLazy)(async () => {
+    return 0 !== Object.keys(null !== (e = m.permissions) && void 0 !== e ? e : {}).length
+  }, [m.permissions]), E = a.useCallback(() => {
+    null != m && I() && (0, s.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([t.e("99387"), t.e("78786")]).then(t.bind(t, 50474));
+      } = await t.e("78786").then(t.bind(t, 50474));
       return t => (0, i.jsx)(e, {
         applicationIcon: n,
-        applicationId: N.applicationId,
+        applicationId: m.applicationId,
         applicationName: u,
-        command: N,
-        guildId: E,
+        command: m,
+        guildId: _,
         ...t
       })
     })
-  }, [n, u, I, N, E]), _ = l.useCallback(e => {
-    (0, a.jW)(e, async () => {
+  }, [n, u, I, m, _]), T = a.useCallback(e => {
+    (0, l.jW)(e, async () => {
       let {
         default: e
       } = await t.e("5396").then(t.bind(t, 731646));
       return n => (0, i.jsx)(e, {
         ...n,
-        id: N.id,
+        id: m.id,
         label: c.Z.Messages.COPY_ID_COMMAND
       })
     })
-  }, [N]), h = N.type === r.yU.CHAT ? s.SlashBoxIcon : s.PaperIcon, g = (0, o.gw)(N.type, N.displayName);
+  }, [m]), h = m.type === o.yU.CHAT ? s.SlashBoxIcon : s.PaperIcon, p = (0, r.gw)(m.type, m.displayName);
   return (0, i.jsxs)(s.Clickable, {
-    onClick: m,
+    onClick: E,
     className: d.item,
-    onContextMenu: _,
+    onContextMenu: T,
     children: [(0, i.jsxs)("div", {
       className: d.identifier,
       children: [(0, i.jsx)(h, {
@@ -60,11 +60,11 @@ function u(e) {
         color: "currentColor"
       }), (0, i.jsx)(s.Text, {
         variant: "text-md/normal",
-        children: g
+        children: p
       })]
     }), (0, i.jsx)("div", {
       className: d.statusContainer,
-      children: T ? (0, i.jsxs)("div", {
+      children: N ? (0, i.jsxs)("div", {
         className: d.statusLine,
         children: [(0, i.jsx)(s.Text, {
           variant: "text-md/normal",

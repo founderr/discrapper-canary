@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   partialOwnStateContainer: "partialOwnStateContainer_c27df5",
   partiallyOwnedDisclaimer: "partiallyOwnedDisclaimer_c27df5",

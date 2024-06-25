@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   wrapper: "wrapper_c199cc",
   operation: "operation_c199cc",

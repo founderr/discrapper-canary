@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   content: "content_e145d9",
   streamHidden: "streamHidden_e145d9",

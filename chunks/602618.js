@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   quickSelect: "quickSelect_abbf45",
   quickSelectClick: "quickSelectClick_abbf45",

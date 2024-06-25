@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   wrapper: "wrapper_c5f96a",
   wrapperSimple: "wrapperSimple_c5f96a wrapper_c5f96a",

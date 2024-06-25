@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   metricsContainer: "metricsContainer_f0f3c8",
   totalMembersIcon: "totalMembersIcon_f0f3c8",

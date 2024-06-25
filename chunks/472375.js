@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   header: "header_b07019",
   body: "body_b07019",

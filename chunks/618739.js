@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   developerPortalCtaWrapper: "developerPortalCtaWrapper_cfaf72",
   developerPortalCta: "developerPortalCta_cfaf72",

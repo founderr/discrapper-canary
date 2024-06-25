@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   closeIconWrapper: "closeIconWrapper_a50853",
   closeIcon: "closeIcon_a50853",

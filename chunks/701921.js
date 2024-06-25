@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   emptyOption: "emptyOption_fff78a",
   emptyOptionActive: "emptyOptionActive_fff78a",

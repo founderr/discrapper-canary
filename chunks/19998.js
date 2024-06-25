@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   wrapper: "wrapper_e78f9e",
   sadImage: "sadImage_e78f9e",

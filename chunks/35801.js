@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   banner: "banner_c43059",
   hasTrialOffer: "hasTrialOffer_c43059",

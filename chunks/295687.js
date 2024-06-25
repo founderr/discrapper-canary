@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_b97933",
   clickBlocker: "clickBlocker_b97933",

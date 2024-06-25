@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   scroller: "scroller_da1bd9",
   colorPicker: "colorPicker_da1bd9",

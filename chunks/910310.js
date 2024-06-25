@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   pictureInPictureVideo: "pictureInPictureVideo_cadaa5",
   videoControls: "videoControls_cadaa5",

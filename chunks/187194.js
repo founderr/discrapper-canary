@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   closeButton: "closeButton_b186cb",
   modalContent: "modalContent_b186cb",

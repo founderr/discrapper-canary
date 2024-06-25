@@ -27,7 +27,7 @@ let a = r.forwardRef(function(e, t) {
         (0, s.ZD)(async () => {
           let {
             default: s
-          } = await Promise.all([n.e("99387"), n.e("48017")]).then(n.bind(n, 850085));
+          } = await n.e("48017").then(n.bind(n, 850085));
           return n => (0, i.jsx)(s, {
             imgURI: t,
             file: r,

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   banner: "banner_ad4cb5",
   ctaContainer: "ctaContainer_ad4cb5",

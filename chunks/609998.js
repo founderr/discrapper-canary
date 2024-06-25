@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   auditLog: "auditLog_f8e03e",
   headerDefault: "headerDefault_f8e03e header_f8e03e",

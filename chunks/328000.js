@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   member: "member_a31c43",
   memberInner: "memberInner_a31c43",

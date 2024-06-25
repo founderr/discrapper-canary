@@ -16,7 +16,7 @@ function r(t, e, r, c, d) {
   null == u || p ? (0, o.openModalLazy)(async () => {
     let {
       default: o
-    } = await Promise.all([n.e("99387"), n.e("226")]).then(n.bind(n, 472064));
+    } = await n.e("226").then(n.bind(n, 472064));
     return n => (0, i.jsx)(o, {
       ...n,
       applicationId: t.id,

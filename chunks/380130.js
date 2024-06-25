@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   translate: "translate_f88ae3",
   animatorTop: "animatorTop_f88ae3",

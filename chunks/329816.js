@@ -14,14 +14,14 @@ var i = n(735250),
   I = n(570140),
   T = n(721037),
   h = n(490173),
-  S = n(114250),
-  f = n(315263),
-  N = n(40851),
-  A = n(607070),
+  f = n(114250),
+  S = n(315263),
+  A = n(40851),
+  N = n(607070),
   m = n(899663),
   O = n(213609),
-  R = n(613413),
-  p = n(327943),
+  p = n(613413),
+  R = n(327943),
   g = n(907459),
   C = n(559407),
   v = n(556766),
@@ -34,8 +34,8 @@ var i = n(735250),
   b = n(892254),
   G = n(210887),
   w = n(819640),
-  B = n(594174),
-  x = n(451478),
+  x = n(594174),
+  B = n(451478),
   k = n(672752),
   V = n(812663),
   Z = n(153850),
@@ -55,20 +55,20 @@ var i = n(735250),
 n(792295), Promise.resolve().then(n.bind(n, 62883)).then(e => {
   j.isPlatformEmbedded ? window.addEventListener("contextmenu", e.contextMenuCallbackNative, !1) : window.addEventListener("contextmenu", e.contextMenuCallbackWeb, !1)
 }), (0, d.E)({
-  getDefaultLinkInterceptor: f.default
+  getDefaultLinkInterceptor: S.default
 }), (0, K.Un)({
-  createPromise: () => Promise.all([n.e("99387"), n.e("77298"), n.e("80451"), n.e("30634"), n.e("54343")]).then(n.bind(n, 849493)),
+  createPromise: () => Promise.all([n.e("77298"), n.e("80451"), n.e("30634"), n.e("54343")]).then(n.bind(n, 849493)),
   webpackId: 849493
 }), (0, K.Un)({
   createPromise: () => Promise.all([n.e("77298"), n.e("80451"), n.e("30634"), n.e("81811")]).then(n.bind(n, 80753)),
   webpackId: 80753
 });
 let et = (0, K.Un)({
-    createPromise: () => Promise.all([n.e("99387"), n.e("46369")]).then(n.bind(n, 177741)),
+    createPromise: () => n.e("46369").then(n.bind(n, 177741)),
     webpackId: 177741
   }),
   en = r.memo(function(e) {
-    let t = (0, _.e7)([x.Z], () => x.Z.isFocused());
+    let t = (0, _.e7)([B.Z], () => B.Z.isFocused());
     return (0, i.jsx)(Q.Z, {
       ...e,
       focused: t
@@ -80,7 +80,7 @@ t.Z = function(e) {
     skipsSettingDefaultPageTitle: n
   } = e, {
     pathname: s
-  } = (0, l.TH)(), d = (0, j.getPlatform)(), f = u.tq || u.Em, x = (0, _.e7)([G.Z], () => G.Z.darkSidebar ? J.BRd.DARK : void 0), K = (0, _.e7)([A.Z], () => A.Z.useForcedColors ? "yes" : "no"), [Q, ei] = (0, _.Wu)([L.Z], () => [L.Z.isEditorOpen, L.Z.isCoachmark]), er = (0, _.e7)([p.Z], () => p.Z.isEditorOpen), es = (0, _.e7)([w.Z], () => w.Z.getLayers().includes(J.S9g.USER_SETTINGS)), eo = (0, _.e7)([B.default], () => W.ZP.canUseClientThemes(B.default.getCurrentUser())), ea = Q && !es, el = [];
+  } = (0, l.TH)(), d = (0, j.getPlatform)(), S = u.tq || u.Em, B = (0, _.e7)([G.Z], () => G.Z.darkSidebar ? J.BRd.DARK : void 0), K = (0, _.e7)([N.Z], () => N.Z.useForcedColors ? "yes" : "no"), [Q, ei] = (0, _.Wu)([L.Z], () => [L.Z.isEditorOpen, L.Z.isCoachmark]), er = (0, _.e7)([R.Z], () => R.Z.isEditorOpen), es = (0, _.e7)([w.Z], () => w.Z.getLayers().includes(J.S9g.USER_SETTINGS)), eo = (0, _.e7)([x.default], () => W.ZP.canUseClientThemes(x.default.getCurrentUser())), ea = Q && !es, el = [];
   ea && ei && !eo && el.push(c.z.CLIENT_THEMES_COACHMARK);
   let [eu, e_] = (0, y.U)(el, $.R.SIDEBAR, !0);
   el.push(c.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
@@ -110,13 +110,13 @@ t.Z = function(e) {
               containerRef: eE,
               children: [(0, i.jsx)(Y.Co, {}), (0, i.jsx)(k.ZP, {}), (0, i.jsx)(a.OU, {}), null != d ? (0, i.jsx)(en, {
                 type: d,
-                themeOverride: x
-              }) : null, (0, i.jsx)(N.Wu, {
+                themeOverride: B
+              }) : null, (0, i.jsx)(A.Wu, {
                 appContext: J.IlC.APP,
                 renderWindow: window,
                 children: (0, i.jsxs)(Z.yP, {
                   children: [(0, i.jsxs)("div", {
-                    className: o()(ee.appAsidePanelWrapper, f && ee.mobileAppAsidePanelWrapper, {
+                    className: o()(ee.appAsidePanelWrapper, S && ee.mobileAppAsidePanelWrapper, {
                       [ee.allowsScrolling]: (() => {
                         let e = (0, l.LX)(s, {
                           path: J.Z5c.APPLICATION_DIRECTORY,
@@ -134,9 +134,9 @@ t.Z = function(e) {
                           children: (0, i.jsxs)(V.Z.Provider, {
                             value: O.Z,
                             children: [(0, i.jsx)("div", {
-                              className: o()(f ? ee.mobileApp : ee.app),
+                              className: o()(S ? ee.mobileApp : ee.app),
                               children: t
-                            }), (0, i.jsx)(C.Z, {}), (0, i.jsx)(h.Z, {}), (0, i.jsx)(E.Modals, {}), (0, i.jsx)(S.Z, {}), (0, i.jsx)(H.Ox, {}), (0, i.jsx)(Z.Un, {}), (0, i.jsx)(F.ot, {}), (0, i.jsx)(E.ToastContainer, {}), (0, i.jsx)(R.Z, {}), (0, i.jsx)(U.Z, {}), (0, i.jsx)(et, {})]
+                            }), (0, i.jsx)(C.Z, {}), (0, i.jsx)(h.Z, {}), (0, i.jsx)(E.Modals, {}), (0, i.jsx)(f.Z, {}), (0, i.jsx)(H.Ox, {}), (0, i.jsx)(Z.Un, {}), (0, i.jsx)(F.ot, {}), (0, i.jsx)(E.ToastContainer, {}), (0, i.jsx)(p.Z, {}), (0, i.jsx)(U.Z, {}), (0, i.jsx)(et, {})]
                           })
                         })
                       })
@@ -146,7 +146,7 @@ t.Z = function(e) {
                       isCoachmark: ec,
                       markAsDismissed: e_
                     }), (0, i.jsx)(P.Z, {
-                      mobile: f
+                      mobile: S
                     })]
                   }), !1]
                 })

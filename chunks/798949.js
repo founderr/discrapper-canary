@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   progressCircle: "progressCircle_d6931b",
   circle: "circle_d6931b",

@@ -111,7 +111,7 @@ function w(i, e) {
       }) : null != i && i.type === k.d4z.GUILD_VOICE ? (0, a.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("7654"), n.e("1187"), n.e("30987")]).then(n.bind(n, 560114));
+        } = await Promise.all([n.e("7654"), n.e("1187"), n.e("18222")]).then(n.bind(n, 560114));
         return n => (0, t.jsx)(e, {
           ...n,
           guild: s,

@@ -6,7 +6,7 @@ e.Z = {
     (0, u.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("53162")]).then(n.bind(n, 490576));
+      } = await n.e("53162").then(n.bind(n, 490576));
       return n => (0, r.jsx)(e, {
         ...t,
         ...n

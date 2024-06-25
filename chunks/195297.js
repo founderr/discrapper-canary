@@ -1,101 +1,101 @@
-n.r(t), n.d(t, {
+n.r(i), n.d(i, {
   default: function() {
-    return f
+    return I
   }
 }), n(47120);
 var o = n(735250),
-  i = n(470079),
-  s = n(120356),
-  a = n.n(s),
+  t = n(470079),
+  r = n(120356),
+  a = n.n(r),
   l = n(481060),
-  r = n(100527),
+  s = n(100527),
   c = n(906732),
-  u = n(455708),
-  d = n(153124),
-  E = n(626135),
-  _ = n(488499),
-  N = n(58384),
-  I = n(981631),
-  g = n(689938),
-  R = n(85618);
+  d = n(455708),
+  u = n(153124),
+  _ = n(626135),
+  g = n(488499),
+  E = n(58384),
+  f = n(981631),
+  T = n(689938),
+  N = n(85618);
 
-function f(e) {
+function I(e) {
   let {
-    transitionState: t,
-    onClose: s,
-    onComplete: f,
-    uploadType: p,
-    showUpsellHeader: m,
-    analyticsPage: T
-  } = e, [h, A] = i.useState(!1), x = (0, l.useModalContext)(), M = (0, d.Dt)(), {
-    analyticsLocations: j
-  } = (0, c.ZP)(r.Z.GIF_PICKER);
+    transitionState: i,
+    onClose: r,
+    onComplete: I,
+    uploadType: h,
+    showUpsellHeader: p,
+    analyticsPage: R
+  } = e, [m, x] = t.useState(!1), B = (0, l.useModalContext)(), b = (0, u.Dt)(), {
+    analyticsLocations: A
+  } = (0, c.ZP)(s.Z.GIF_PICKER);
   async function C(e) {
     let {
-      gifSrc: t
+      gifSrc: i
     } = e;
-    if (null == t || h) return;
-    A(!0);
-    let i = (0, N.Q)(t),
-      a = await fetch(i),
-      r = await a.blob();
-    s(), (0, l.openModalLazy)(async () => {
+    if (null == i || m) return;
+    x(!0);
+    let t = (0, E.Q)(i),
+      a = await fetch(t),
+      s = await a.blob();
+    r(), (0, l.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("75409")]).then(n.bind(n, 850085));
-      return t => (0, o.jsx)(e, {
-        imgURI: i,
-        file: new File([r], "tenor.gif", {
+      } = await n.e("75409").then(n.bind(n, 850085));
+      return i => (0, o.jsx)(e, {
+        imgURI: t,
+        file: new File([s], "tenor.gif", {
           type: "image/gif"
         }),
-        onCrop: f,
-        uploadType: p,
-        showUpsellHeader: m,
-        ...t
+        onCrop: I,
+        uploadType: h,
+        showUpsellHeader: p,
+        ...i
       })
     }, {
-      contextKey: x
+      contextKey: B
     })
   }
-  return i.useEffect(() => {
-    E.default.track(I.rMx.OPEN_MODAL, {
-      type: I.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+  return t.useEffect(() => {
+    _.default.track(f.rMx.OPEN_MODAL, {
+      type: f.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
       location: {
-        page: T
+        page: R
       }
     })
-  }, [T]), (0, o.jsx)(c.Gt, {
-    value: j,
+  }, [R]), (0, o.jsx)(c.Gt, {
+    value: A,
     children: (0, o.jsxs)(l.ModalRoot, {
-      className: R.__invalid_gifPickerCroppingModal,
-      "aria-labelledby": M,
-      transitionState: t,
+      className: N.__invalid_gifPickerCroppingModal,
+      "aria-labelledby": b,
+      transitionState: i,
       size: l.ModalSize.SMALL,
-      children: [m ? (0, o.jsx)(_.Z, {
-        type: p,
-        analyticsPage: T,
-        analyticsSection: I.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+      children: [p ? (0, o.jsx)(g.Z, {
+        type: h,
+        analyticsPage: R,
+        analyticsSection: f.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
         isGIF: !0
       }) : null, (0, o.jsxs)(l.ModalHeader, {
-        className: R.modalHeader,
+        className: N.modalHeader,
         separator: !1,
         children: [(0, o.jsx)(l.FormTitle, {
-          className: R.titleCase,
+          className: N.titleCase,
           tag: l.FormTitleTags.H1,
-          children: g.Z.Messages.SELECT_IMAGE_MODAL_CHOOSE_GIF
+          children: T.Z.Messages.SELECT_IMAGE_MODAL_CHOOSE_GIF
         }), (0, o.jsx)(l.ModalCloseButton, {
-          onClick: s,
-          className: R.modalCloseButton
+          onClick: r,
+          className: N.modalCloseButton
         })]
       }), (0, o.jsxs)("div", {
-        children: [(0, o.jsx)(u.Z, {
-          className: a()(R.gifPicker, {
-            [R.loadingOverlay]: h
+        children: [(0, o.jsx)(d.Z, {
+          className: a()(N.gifPicker, {
+            [N.loadingOverlay]: m
           }),
           onSelectGIF: C,
           hideFavorites: !0
-        }), h && (0, o.jsx)(l.Spinner, {
-          className: R.spinner
+        }), m && (0, o.jsx)(l.Spinner, {
+          className: N.spinner
         })]
       })]
     })

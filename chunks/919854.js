@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   wrapper: "wrapper_c6ee36",
   isBurstReactionPicker: "isBurstReactionPicker_c6ee36",

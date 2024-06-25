@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   groupContainer: "groupContainer_e286cd",
   avatarContainer: "avatarContainer_e286cd",

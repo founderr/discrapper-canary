@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   button: "button_f1cdcc",
   icon: "icon_f1cdcc",

@@ -38,7 +38,7 @@ function _(e) {
     n.type === f.ABu.XBOX ? (0, u.openModalLazy)(async () => {
       let {
         default: n
-      } = await Promise.all([t.e("49237"), t.e("99387"), t.e("49368"), t.e("522")]).then(t.bind(t, 200623));
+      } = await Promise.all([t.e("49368"), t.e("522")]).then(t.bind(t, 200623));
       return t => (0, l.jsx)(n, {
         ...t,
         channel: e
@@ -46,7 +46,7 @@ function _(e) {
     }) : (n.type === f.ABu.PLAYSTATION || n.type === f.ABu.PLAYSTATION_STAGING) && (0, u.openModalLazy)(async () => {
       let {
         default: i
-      } = await Promise.all([t.e("99387"), t.e("638")]).then(t.bind(t, 543974));
+      } = await t.e("638").then(t.bind(t, 543974));
       return t => (0, l.jsx)(i, {
         ...t,
         platform: n.type,

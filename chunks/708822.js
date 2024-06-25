@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   pageControlContainer: "pageControlContainer_b48941",
   pageControl: "pageControl_b48941",

@@ -1,146 +1,147 @@
-t.d(n, {
+"use strict";
+n.d(t, {
   Z: function() {
-    return D
+    return C
   }
-}), t(47120);
-var l = t(735250),
-  a = t(470079),
-  i = t(106351),
-  r = t(442837),
-  u = t(481060),
-  o = t(367907),
-  s = t(933557),
-  d = t(177862),
-  c = t(434404),
-  I = t(984933),
-  _ = t(430824),
-  E = t(699516),
-  A = t(594174),
-  T = t(369994),
-  N = t(162157),
-  M = t(981631),
-  f = t(689938),
-  S = t(463303);
+}), n(47120);
+var s = n(735250),
+  a = n(470079),
+  i = n(106351),
+  r = n(442837),
+  l = n(481060),
+  o = n(367907),
+  c = n(933557),
+  d = n(177862),
+  u = n(434404),
+  _ = n(984933),
+  E = n(430824),
+  I = n(699516),
+  T = n(594174),
+  m = n(369994),
+  N = n(162157),
+  S = n(981631),
+  h = n(689938),
+  g = n(463303);
 
-function D(e) {
-  var n, t;
+function C(e) {
+  var t, n;
   let {
-    guildId: D,
-    transitionState: R,
-    onClose: L
-  } = e, C = (0, r.e7)([_.Z], () => _.Z.getGuild(D), [D]), h = null !== (n = null == C ? void 0 : C.safetyAlertsChannelId) && void 0 !== n ? n : null, [O, v] = a.useState(!!(null == C ? void 0 : C.hasFeature(M.oNc.RAID_ALERTS_DISABLED))), Z = (0, N.BT)(C), [x, G] = a.useState(null != h ? h : null !== (t = null == C ? void 0 : C.publicUpdatesChannelId) && void 0 !== t ? t : null), [U, g] = a.useState(!1), y = (0, r.Wu)([I.ZP, A.default, E.Z], () => {
-    let e = I.ZP.getChannels(D)[I.sH].filter(e => {
+    guildId: C,
+    transitionState: x,
+    onClose: p
+  } = e, R = (0, r.e7)([E.Z], () => E.Z.getGuild(C), [C]), f = null !== (t = null == R ? void 0 : R.safetyAlertsChannelId) && void 0 !== t ? t : null, [L, O] = a.useState(!!(null == R ? void 0 : R.hasFeature(S.oNc.RAID_ALERTS_DISABLED))), A = (0, N.BT)(R), [M, v] = a.useState(null != f ? f : null !== (n = null == R ? void 0 : R.publicUpdatesChannelId) && void 0 !== n ? n : null), [D, j] = a.useState(!1), Z = (0, r.Wu)([_.ZP, T.default, I.Z], () => {
+    let e = _.ZP.getChannels(C)[_.sH].filter(e => {
       let {
-        channel: n
+        channel: t
       } = e;
-      return n.type === i.d.GUILD_TEXT
+      return t.type === i.d.GUILD_TEXT
     }).map(e => {
       let {
-        channel: n
+        channel: t
       } = e;
       return {
-        value: n.id,
-        label: (0, s.F6)(n, A.default, E.Z, !0)
+        value: t.id,
+        label: (0, c.F6)(t, T.default, I.Z, !0)
       }
     });
-    return null != h ? e : [...e]
-  }, [D, h]), b = async () => {
-    if (null == C) {
-      (0, u.showToast)((0, u.createToast)(f.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, u.ToastType.FAILURE));
+    return null != f ? e : [...e]
+  }, [C, f]), b = async () => {
+    if (null == R) {
+      (0, l.showToast)((0, l.createToast)(h.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, l.ToastType.FAILURE));
       return
     }
     try {
-      g(!0), O !== C.hasFeature(M.oNc.RAID_ALERTS_DISABLED) && await (0, T.f6)(C, !O), x !== h && (await c.Z.saveGuild(D, {
-        safetyAlertsChannelId: x
+      j(!0), L !== R.hasFeature(S.oNc.RAID_ALERTS_DISABLED) && await (0, m.f6)(R, !L), M !== f && (await u.Z.saveGuild(C, {
+        safetyAlertsChannelId: M
       }, {
         throwErr: !0
-      }), c.Z.updateGuild({
-        safetyAlertsChannelId: x
+      }), u.Z.updateGuild({
+        safetyAlertsChannelId: M
       }));
-      let e = null != x ? x : h;
+      let e = null != M ? M : f;
       if (null != e) {
-        let n = {
+        let t = {
           raid_alert_type: d.wR.JOIN_RAID,
-          enabled: O,
+          enabled: L,
           raid_alert_channel_id: e,
-          guild_id: D,
+          guild_id: C,
           channel_id: e
         };
-        (0, o.yw)(M.rMx.GUILD_RAID_ALERTS_SETUP, n)
+        (0, o.yw)(S.rMx.GUILD_RAID_ALERTS_SETUP, t)
       }
-      L()
+      p()
     } catch (e) {
-      (0, u.showToast)((0, u.createToast)(f.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, u.ToastType.FAILURE))
+      (0, l.showToast)((0, l.createToast)(h.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, l.ToastType.FAILURE))
     } finally {
-      g(!1)
+      j(!1)
     }
   };
-  return (0, l.jsxs)(u.ModalRoot, {
-    transitionState: R,
-    size: u.ModalSize.SMALL,
-    children: [(0, l.jsx)(u.ModalHeader, {
+  return (0, s.jsxs)(l.ModalRoot, {
+    transitionState: x,
+    size: l.ModalSize.SMALL,
+    children: [(0, s.jsx)(l.ModalHeader, {
       separator: !1,
-      children: (0, l.jsx)(u.Heading, {
+      children: (0, s.jsx)(l.Heading, {
         color: "header-primary",
         variant: "heading-md/semibold",
-        children: f.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_MODAL_TITLE
+        children: h.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_MODAL_TITLE
       })
-    }), (0, l.jsxs)(u.ModalContent, {
-      children: [(0, l.jsx)(u.Text, {
+    }), (0, s.jsxs)(l.ModalContent, {
+      children: [(0, s.jsx)(l.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: f.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_MODAL_DESCRIPTION
-      }), (0, l.jsx)("div", {
-        className: S.mainChannelContainer,
-        children: (0, l.jsxs)(u.Clickable, {
-          className: S.enableAlertsContainer,
+        children: h.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_MODAL_DESCRIPTION
+      }), (0, s.jsx)("div", {
+        className: g.mainChannelContainer,
+        children: (0, s.jsxs)(l.Clickable, {
+          className: g.enableAlertsContainer,
           onClick: () => {
-            if (!!Z) v(!O)
+            if (!!A) O(!L)
           },
-          children: [(0, l.jsx)(u.Text, {
+          children: [(0, s.jsx)(l.Text, {
             variant: "text-md/medium",
             color: "text-normal",
-            children: f.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_MODAL_ENABLE_ALERTS
-          }), (0, l.jsx)(u.Checkbox, {
-            value: !O,
-            className: S.enabledAlertsCheckbox,
-            type: u.Checkbox.Types.INVERTED,
-            disabled: !Z
+            children: h.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_MODAL_ENABLE_ALERTS
+          }), (0, s.jsx)(l.Checkbox, {
+            value: !L,
+            className: g.enabledAlertsCheckbox,
+            type: l.Checkbox.Types.INVERTED,
+            disabled: !A
           })]
         })
-      }), (0, l.jsxs)("div", {
-        className: S.mainChannelContainer,
-        children: [(0, l.jsx)(u.Text, {
+      }), (0, s.jsxs)("div", {
+        className: g.mainChannelContainer,
+        children: [(0, s.jsx)(l.Text, {
           variant: "eyebrow",
           color: "text-muted",
-          children: f.Z.Messages.GUILD_ANTIRAID_SAFETY_CHANNEL_TITLE
-        }), (0, l.jsx)(u.SearchableSelect, {
-          options: y,
+          children: h.Z.Messages.GUILD_ANTIRAID_SAFETY_CHANNEL_TITLE
+        }), (0, s.jsx)(l.SearchableSelect, {
+          options: Z,
           onChange: e => {
-            G(e)
+            v(e)
           },
-          value: x,
-          className: S.channelSelect,
+          value: M,
+          className: g.channelSelect,
           maxVisibleItems: 4
-        }), (0, l.jsx)(u.Text, {
+        }), (0, s.jsx)(l.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
-          children: f.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_MODAL_CHANNEL_PERMISSIONS_NOTICE
+          children: h.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_MODAL_CHANNEL_PERMISSIONS_NOTICE
         })]
       })]
-    }), (0, l.jsxs)(u.ModalFooter, {
-      children: [(0, l.jsx)(u.Button, {
+    }), (0, s.jsxs)(l.ModalFooter, {
+      children: [(0, s.jsx)(l.Button, {
         onClick: b,
-        color: u.Button.Colors.BRAND,
-        look: u.Button.Looks.FILLED,
-        submitting: U,
-        children: f.Z.Messages.SAVE
-      }), (0, l.jsx)(u.Button, {
-        onClick: L,
-        color: u.Button.Colors.PRIMARY,
-        look: u.Button.Looks.LINK,
-        disabled: U,
-        children: f.Z.Messages.CANCEL
+        color: l.Button.Colors.BRAND,
+        look: l.Button.Looks.FILLED,
+        submitting: D,
+        children: h.Z.Messages.SAVE
+      }), (0, s.jsx)(l.Button, {
+        onClick: p,
+        color: l.Button.Colors.PRIMARY,
+        look: l.Button.Looks.LINK,
+        disabled: D,
+        children: h.Z.Messages.CANCEL
       })]
     })]
   })

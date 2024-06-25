@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   wrapper: "wrapper_c8da25",
   iconWrapper: "iconWrapper_c8da25",

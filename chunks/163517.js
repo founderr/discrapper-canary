@@ -1,4 +1,5 @@
-t.r(e.exports = {
+"use strict";
+n.r(e.exports = {
   "heading-sm/normal": "heading-sm/normal_c46f6a",
   fontScaling: "fontScaling_c46f6a",
   "heading-sm/medium": "heading-sm/medium_c46f6a",

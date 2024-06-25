@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_db5049",
   avatar: "avatar_db5049",

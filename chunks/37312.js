@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   streamerModeEnabled: "streamerModeEnabled_c50c8b",
   streamerModeEnabledImage: "streamerModeEnabledImage_c50c8b",

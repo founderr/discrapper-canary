@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   priceTagsContainer: "priceTagsContainer_c72deb",
   price: "price_c72deb",

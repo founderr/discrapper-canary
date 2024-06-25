@@ -3,11 +3,11 @@ n.d(t, {
     return c
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(692547),
-  s = n(481060),
-  a = n(576749),
+var a = n(692547),
+  l = n(481060),
+  s = n(576749),
   r = n(688641),
   o = n(689938);
 
@@ -15,24 +15,24 @@ function c(e) {
   let {
     className: t,
     guildId: c
-  } = e, u = (0, a.Z)();
-  return (0, l.jsx)(r.Z, {
+  } = e, u = (0, s.Z)();
+  return (0, i.jsx)(r.Z, {
     className: t,
-    icon: (0, l.jsx)(s.CalendarIcon, {
+    icon: (0, i.jsx)(l.CalendarIcon, {
       size: "custom",
       color: "currentColor",
       height: 20,
       width: 20
     }),
-    color: i.Z.unsafe_rawColors.BRAND_500.css,
+    color: a.Z.unsafe_rawColors.BRAND_500.css,
     title: o.Z.Messages.SCHEDULE_EVENT,
     description: o.Z.Messages.SCHEDULE_EVENT_DESCRIPTION,
     onClick: function() {
-      (0, s.openModalLazy)(async () => {
+      (0, l.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("22347"), n.e("58023"), n.e("77745")]).then(n.bind(n, 779250));
-        return t => (0, l.jsx)(e, {
+        } = await Promise.all([n.e("22347"), n.e("58023"), n.e("35454")]).then(n.bind(n, 779250));
+        return t => (0, i.jsx)(e, {
           ...t,
           guildId: c
         })

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   statusBubble: "statusBubble_d0a252",
   statusBubbleOuter: "statusBubbleOuter_d0a252",

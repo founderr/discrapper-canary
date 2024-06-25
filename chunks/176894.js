@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_bdfce3",
   formTitle: "formTitle_bdfce3",

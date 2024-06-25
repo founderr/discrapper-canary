@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   drag: "drag_f906dd",
   root: "root_f906dd",

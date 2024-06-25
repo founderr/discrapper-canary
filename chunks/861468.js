@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   tabItem: "tabItem_a18ec1",
   tabContainer: "tabContainer_a18ec1",

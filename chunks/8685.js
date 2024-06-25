@@ -37,7 +37,7 @@ t.Z = () => {
     (0, o.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("41281")]).then(n.bind(n, 669732));
+      } = await n.e("41281").then(n.bind(n, 669732));
       return t => (0, i.jsx)(e, {
         ...t,
         showHideSuppressWarning: !0

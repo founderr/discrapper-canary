@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   avatar: "avatar_db70f7",
   memberListItem: "memberListItem_db70f7",

@@ -22,16 +22,16 @@ async function I(e) {
     analyticsLocation: I,
     analyticsSourceLocation: T,
     guildId: h,
-    closeLayer: S,
-    onCloseModal: f,
-    totalNumberOfSlotsToAssign: N = 1,
-    disablePremiumUpsell: A,
+    closeLayer: f,
+    onCloseModal: S,
+    totalNumberOfSlotsToAssign: A = 1,
+    disablePremiumUpsell: N,
     onSubscriptionConfirmation: m,
     inPopout: O,
-    applicationId: R
-  } = e, p = O ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT, g = l.ZP.getPremiumTypeSubscription();
+    applicationId: p
+  } = e, R = O ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT, g = l.ZP.getPremiumTypeSubscription();
   if (null != g && g.isPurchasedExternally && null != g.paymentGateway) {
-    null != S && S(), s.Z.show({
+    null != f && f(), s.Z.show({
       title: d.Z.Messages.BILLING_MANAGED_BY_PAYMENT_GATEWAY.format({
         paymentGatewayName: c.Vzj[g.paymentGateway]
       }),
@@ -46,7 +46,7 @@ async function I(e) {
   await (0, r.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("77298"), n.e("23357"), n.e("15972"), n.e("12013"), n.e("43906"), n.e("29549"), n.e("8016"), n.e("22646"), n.e("5349"), n.e("15837")]).then(n.bind(n, 343649));
+    } = await Promise.all([n.e("96427"), n.e("77298"), n.e("23357"), n.e("15972"), n.e("12013"), n.e("39612"), n.e("29549"), n.e("8016"), n.e("22646"), n.e("5349"), n.e("22755")]).then(n.bind(n, 343649));
     return n => {
       let {
         transitionState: r,
@@ -55,17 +55,17 @@ async function I(e) {
       return (0, i.jsx)(e, {
         transitionState: r,
         onClose: e => {
-          s(), null == f || f(e)
+          s(), null == S || S(e)
         },
         analyticsLocations: t,
         analyticsLocation: I,
         analyticsSourceLocation: null != T ? T : I,
         guildId: h,
-        totalNumberOfSlotsToAssign: N,
-        closeGuildPerksModal: S,
-        disablePremiumUpsell: A,
+        totalNumberOfSlotsToAssign: A,
+        closeGuildPerksModal: f,
+        disablePremiumUpsell: N,
         onSubscriptionConfirmation: m,
-        applicationId: R
+        applicationId: p
       })
     }
   }, {
@@ -77,8 +77,8 @@ async function I(e) {
       })
     },
     onCloseRequest: () => {
-      (0, r.closeModal)(E), null == f || f(!1)
+      (0, r.closeModal)(E), null == S || S(!1)
     },
-    contextKey: p
+    contextKey: R
   })
 }

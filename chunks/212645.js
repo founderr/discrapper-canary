@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   emojiSpriteImage: "emojiSpriteImage_bcf389",
   emojiLockIconContainer: "emojiLockIconContainer_bcf389",

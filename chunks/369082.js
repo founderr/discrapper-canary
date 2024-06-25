@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   modalPreview: "modalPreview_aba31b",
   smallDecorationPreview: "smallDecorationPreview_aba31b",

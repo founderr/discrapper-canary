@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   size: "size_c5e128",
   gifFavoriteButton: "gifFavoriteButton_c5e128",

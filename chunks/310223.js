@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   heading: "heading_ebd3d3",
   tableWrapper: "tableWrapper_ebd3d3",

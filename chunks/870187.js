@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   spinner: "spinner_ad9cbd",
   container: "container_ad9cbd",

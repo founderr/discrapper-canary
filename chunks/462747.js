@@ -1,91 +1,91 @@
-l.d(n, {
+t.d(n, {
   Z: function() {
-    return M
+    return L
   }
 });
-var t = l(735250);
-l(470079);
-var i = l(120356),
-  r = l.n(i),
-  s = l(442837),
-  a = l(481060),
-  o = l(239091),
-  u = l(129861),
-  c = l(939863),
-  d = l(484459),
-  v = l(103575),
-  h = l(314897),
-  E = l(158776),
-  g = l(885110),
-  f = l(594174),
-  m = l(315416),
-  x = l(765305),
-  _ = l(689938),
-  I = l(590311);
+var i = t(735250);
+t(470079);
+var l = t(120356),
+  a = t.n(l),
+  r = t(442837),
+  o = t(481060),
+  c = t(239091),
+  s = t(129861),
+  d = t(939863),
+  u = t(484459),
+  _ = t(103575),
+  f = t(314897),
+  g = t(158776),
+  v = t(885110),
+  h = t(594174),
+  b = t(315416),
+  I = t(765305),
+  m = t(689938),
+  p = t(590311);
 
-function Z(e) {
+function x(e) {
   let {
     children: n
   } = e;
-  return (0, t.jsxs)("div", {
-    className: I.emptyContainer,
-    children: [(0, t.jsx)(c.Z, {
-      children: (0, t.jsx)("div", {
-        className: I.circle,
-        children: (0, t.jsx)(a.GroupIcon, {
+  return (0, i.jsxs)("div", {
+    className: p.emptyContainer,
+    children: [(0, i.jsx)(d.Z, {
+      children: (0, i.jsx)("div", {
+        className: p.circle,
+        children: (0, i.jsx)(o.GroupIcon, {
           size: "custom",
           color: "currentColor",
           height: 40,
           width: 40,
-          className: I.icon
+          className: p.icon
         })
       })
     }), n]
   })
 }
 
-function N() {
-  return (0, t.jsx)(Z, {
-    children: (0, t.jsx)(a.Heading, {
+function E() {
+  return (0, i.jsx)(x, {
+    children: (0, i.jsx)(o.Heading, {
       color: "header-primary",
       variant: "heading-xl/semibold",
-      className: I.title,
-      children: _.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_EMPTY_TITLE
+      className: p.title,
+      children: m.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_EMPTY_TITLE
     })
   })
 }
 
-function T() {
-  return (0, t.jsx)(Z, {
-    children: (0, t.jsx)(a.Heading, {
+function N() {
+  return (0, i.jsx)(x, {
+    children: (0, i.jsx)(o.Heading, {
       color: "header-secondary",
       variant: "heading-md/semibold",
-      className: I.errorTitle,
-      children: _.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_FETCH_ERROR
+      className: p.errorTitle,
+      children: m.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_FETCH_ERROR
     })
   })
 }
 
-function j(e) {
+function C(e) {
   let {
     count: n
   } = e;
-  return (0, t.jsx)(t.Fragment, {
-    children: (0, t.jsxs)("div", {
-      className: I.listRow,
-      children: [(0, t.jsx)("div", {
-        className: r()(I.listRowCircle, I.listAvatar),
-        children: (0, t.jsx)(a.GroupIcon, {
+  return (0, i.jsx)(i.Fragment, {
+    children: (0, i.jsxs)("div", {
+      className: p.listRow,
+      children: [(0, i.jsx)("div", {
+        className: a()(p.listRowCircle, p.listAvatar),
+        children: (0, i.jsx)(o.GroupIcon, {
           size: "custom",
           color: "currentColor",
           height: 14,
           width: 14,
-          className: I.icon
+          className: p.icon
         })
-      }), (0, t.jsx)(a.Text, {
+      }), (0, i.jsx)(o.Text, {
         color: "text-normal",
         variant: "text-md/normal",
-        children: _.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_REMAINING.format({
+        children: m.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_REMAINING.format({
           userRemainCount: n
         })
       })]
@@ -93,79 +93,79 @@ function j(e) {
   })
 }
 
-function C(e) {
+function T(e) {
   let {
     eventUser: n,
-    guildId: l,
-    onContextMenu: i
-  } = e, o = (0, s.e7)([f.default], () => f.default.getUser(n.user_id)), c = (0, s.e7)([g.Z, E.Z, h.default], () => n.user_id === h.default.getId() ? g.Z.getStatus() : E.Z.getStatus(n.user_id, l), [n.user_id, l]);
-  return null == o ? null : (0, t.jsx)(a.Popout, {
-    preload: () => (0, d.W)(o.id, o.getAvatarURL(l, 80), {
-      guildId: l
+    guildId: t,
+    onContextMenu: l
+  } = e, c = (0, r.e7)([h.default], () => h.default.getUser(n.user_id)), d = (0, r.e7)([v.Z, g.Z, f.default], () => n.user_id === f.default.getId() ? v.Z.getStatus() : g.Z.getStatus(n.user_id, t), [n.user_id, t]);
+  return null == c ? null : (0, i.jsx)(o.Popout, {
+    preload: () => (0, u.W)(c.id, c.getAvatarURL(t, 80), {
+      guildId: t
     }),
-    renderPopout: e => (0, t.jsx)(v.Z, {
+    renderPopout: e => (0, i.jsx)(_.Z, {
       ...e,
       location: "EventDetailRsvpTab",
       userId: n.user_id,
-      guildId: l
+      guildId: t
     }),
     position: "left",
     spacing: 16,
-    children: (e, s) => {
-      var d;
+    children: (e, r) => {
+      var u;
       let {
-        isShown: v
-      } = s;
-      return (0, t.jsxs)(a.Clickable, {
-        className: r()(I.listRow, I.interactiveRow, {
-          [I.selected]: v
+        isShown: _
+      } = r;
+      return (0, i.jsxs)(o.Clickable, {
+        className: a()(p.listRow, p.interactiveRow, {
+          [p.selected]: _
         }),
-        onContextMenu: e => i(e, o),
+        onContextMenu: e => l(e, c),
         ...e,
-        children: [(0, t.jsx)(a.Avatar, {
-          src: o.getAvatarURL(l, 24),
-          "aria-label": o.username,
-          size: a.AvatarSizes.SIZE_24,
-          className: I.listAvatar,
-          status: c
-        }), (0, t.jsx)(u.Z, {
-          user: o,
-          className: I.listName,
-          discriminatorClass: I.listDiscriminator,
-          nick: null === (d = n.member) || void 0 === d ? void 0 : d.nick
+        children: [(0, i.jsx)(o.Avatar, {
+          src: c.getAvatarURL(t, 24),
+          "aria-label": c.username,
+          size: o.AvatarSizes.SIZE_24,
+          className: p.listAvatar,
+          status: d
+        }), (0, i.jsx)(s.Z, {
+          user: c,
+          className: p.listName,
+          discriminatorClass: p.listDiscriminator,
+          nick: null === (u = n.member) || void 0 === u ? void 0 : u.nick
         })]
       })
     }
   })
 }
 
-function p(e) {
+function Z(e) {
   let {
     eventUsers: n,
-    guildId: l,
-    usersNotShownCount: i = 0,
-    onContextMenu: r
+    guildId: t,
+    usersNotShownCount: l = 0,
+    onContextMenu: a
   } = e;
-  return (0, t.jsxs)(a.ScrollerThin, {
-    className: I.listScroller,
-    children: [n.map(e => (0, t.jsx)(C, {
-      guildId: l,
+  return (0, i.jsxs)(o.ScrollerThin, {
+    className: p.listScroller,
+    children: [n.map(e => (0, i.jsx)(T, {
+      guildId: t,
       eventUser: e,
-      onContextMenu: r
-    }, e.user_id)), i > 0 && (0, t.jsx)(j, {
-      count: i
+      onContextMenu: a
+    }, e.user_id)), l > 0 && (0, i.jsx)(C, {
+      count: l
     })]
   })
 }
 
-function L(e) {
+function j(e) {
   let {
     children: n,
-    style: l
+    style: t
   } = e;
-  return (0, t.jsx)("div", {
-    className: I.container,
-    style: null != l ? l : {},
+  return (0, i.jsx)("div", {
+    className: p.container,
+    style: null != t ? t : {},
     children: n
   })
 }
@@ -173,56 +173,56 @@ function L(e) {
 function S(e) {
   let {
     children: n,
-    height: l
+    height: t
   } = e;
-  return (0, t.jsx)(L, {
+  return (0, i.jsx)(j, {
     style: {
-      height: l
+      height: t
     },
     children: n
   })
 }
 
-function M(e) {
+function L(e) {
   let {
     guildEvent: n,
-    recurrenceId: i,
-    eventUsers: r,
-    loading: s,
-    error: u,
-    containerHeight: c
-  } = e, d = (0, m.Z)(n.guild_id, n.id, i);
-  if (s && 0 === r.length) return (0, t.jsx)(S, {
-    height: c,
-    children: (0, t.jsx)(a.Spinner, {
-      type: a.Spinner.Type.SPINNING_CIRCLE,
-      className: I.spinner
+    recurrenceId: l,
+    eventUsers: a,
+    loading: r,
+    error: s,
+    containerHeight: d
+  } = e, u = (0, b.Z)(n.guild_id, n.id, l);
+  if (r && 0 === a.length) return (0, i.jsx)(S, {
+    height: d,
+    children: (0, i.jsx)(o.Spinner, {
+      type: o.Spinner.Type.SPINNING_CIRCLE,
+      className: p.spinner
     })
   });
-  if (null != u && 0 === r.length) return (0, t.jsx)(S, {
-    height: c,
-    children: (0, t.jsx)(T, {})
+  if (null != s && 0 === a.length) return (0, i.jsx)(S, {
+    height: d,
+    children: (0, i.jsx)(N, {})
   });
-  let v = 0;
-  return r.length >= x.rC && d > x.rC && (v = Math.max(d - r.length, 0)), 0 === r.length ? (0, t.jsx)(S, {
-    height: c,
-    children: (0, t.jsx)(N, {})
-  }) : (0, t.jsx)(L, {
-    children: (0, t.jsx)(p, {
-      eventUsers: r,
+  let _ = 0;
+  return a.length >= I.rC && u > I.rC && (_ = Math.max(u - a.length, 0)), 0 === a.length ? (0, i.jsx)(S, {
+    height: d,
+    children: (0, i.jsx)(E, {})
+  }) : (0, i.jsx)(j, {
+    children: (0, i.jsx)(Z, {
+      eventUsers: a,
       guildId: n.guild_id,
       onContextMenu: function(e, n) {
-        (0, o.jW)(e, async () => {
+        (0, c.jW)(e, async () => {
           let {
             default: e
-          } = await Promise.all([l.e("99387"), l.e("79695"), l.e("32006"), l.e("64409")]).then(l.bind(l, 881351));
-          return l => (0, t.jsx)(e, {
-            ...l,
+          } = await Promise.all([t.e("79695"), t.e("32006"), t.e("13660")]).then(t.bind(t, 881351));
+          return t => (0, i.jsx)(e, {
+            ...t,
             user: n
           })
         })
       },
-      usersNotShownCount: v
+      usersNotShownCount: _
     })
   })
 }

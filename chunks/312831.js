@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   helpUrl: "helpUrl_a7a160",
   descriptionHeader: "descriptionHeader_a7a160",

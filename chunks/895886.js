@@ -12,7 +12,7 @@ function s() {
   (0, r.ZD)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("99387"), n.e("98137")]).then(n.bind(n, 397013));
+    } = await n.e("98137").then(n.bind(n, 397013));
     return t => (0, i.jsx)(e, {
       ...t
     })

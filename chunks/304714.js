@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   barButtonIcon: "barButtonIcon_cf58b5",
   jumpToPresentBar: "jumpToPresentBar_cf58b5 barBase_cf58b5",

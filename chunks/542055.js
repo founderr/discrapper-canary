@@ -31,7 +31,7 @@ function _(e) {
     channelId: t,
     onClose: i,
     transitionState: o
-  } = e, [_, N] = l.useState(""), [Z, T] = l.useState("descending"), [j, A] = l.useState(!0), [P, b] = l.useState(null), R = l.useDeferredValue(_), k = (0, d.e7)([h.Z], () => h.Z.getClips()), y = (0, d.e7)([h.Z], () => h.Z.getPendingClips()), B = (0, d.e7)([h.Z], () => h.Z.getSettings().storageLocation), D = (0, d.Wu)([h.Z], () => h.Z.getNewClipIds()), {
+  } = e, [_, N] = l.useState(""), [Z, T] = l.useState("descending"), [j, A] = l.useState(!0), [b, P] = l.useState(null), R = l.useDeferredValue(_), k = (0, d.e7)([h.Z], () => h.Z.getClips()), y = (0, d.e7)([h.Z], () => h.Z.getPendingClips()), B = (0, d.e7)([h.Z], () => h.Z.getSettings().storageLocation), D = (0, d.Wu)([h.Z], () => h.Z.getNewClipIds()), {
     analyticsLocations: H
   } = (0, C.ZP)(p.Z.CLIPS_GALLERY), V = l.useMemo(() => [...y, ...k], [k, y]);
   (0, v.Z)({
@@ -64,7 +64,7 @@ function _(e) {
       (0, m.openModalLazy)(async () => {
         let {
           default: l
-        } = await Promise.all([n.e("99387"), n.e("98920")]).then(n.bind(n, 22989));
+        } = await n.e("61526").then(n.bind(n, 22989));
         return n => (0, a.jsx)(l, {
           ...n,
           channelId: t,
@@ -78,13 +78,13 @@ function _(e) {
       onShareClick: G
     } = (0, E.Z)({
       channelId: t,
-      setExporting: b
+      setExporting: P
     }),
     O = l.useCallback((e, t) => {
       (0, m.openModalLazy)(async () => {
         let {
           default: l
-        } = await Promise.all([n.e("99387"), n.e("15915")]).then(n.bind(n, 799677));
+        } = await n.e("15915").then(n.bind(n, 799677));
         return n => (0, a.jsx)(l, {
           clip: e,
           ...n,
@@ -102,8 +102,8 @@ function _(e) {
         children: n.map(e => {
           let t = 0 === e.length;
           return (0, a.jsx)(f.Z, {
-            actionsDisabled: null != P || t,
-            exporting: P === e.id,
+            actionsDisabled: null != b || t,
+            exporting: b === e.id,
             isNew: D.includes(e.id),
             onDelete: O,
             onEdit: Y,
@@ -115,7 +115,7 @@ function _(e) {
           }, e.id)
         })
       }, "clips-gallery-".concat(t))
-    }, [w, D, P, G, O, Y]),
+    }, [w, D, b, G, O, Y]),
     F = j || 0 !== w.length ? j ? (0, a.jsx)("div", {
       className: M.spinnerContainer,
       children: (0, a.jsx)(m.Spinner, {})

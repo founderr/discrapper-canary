@@ -20,7 +20,7 @@ async function u(e, t, u) {
   (0, l.Z)(_) && null != c && null != c.sync_id && (await (0, o.KV)(), await (0, o.yp)().catch(e => ((0, r.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("99387"), n.e("58690")]).then(n.bind(n, 841178));
+    } = await n.e("46317").then(n.bind(n, 841178));
     return t => (0, i.jsx)(e, {
       ...t
     })

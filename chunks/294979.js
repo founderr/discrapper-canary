@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   toggleExpandColumn: "toggleExpandColumn_a01ffa",
   toggleExpandCell: "toggleExpandCell_a01ffa",

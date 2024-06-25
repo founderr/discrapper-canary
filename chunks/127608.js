@@ -14,7 +14,7 @@ function o() {
     (0, r.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("61418")]).then(n.bind(n, 431583));
+      } = await n.e("82935").then(n.bind(n, 431583));
       return t => (0, i.jsx)(e, {
         source: "Screenshare Unavailable",
         ...t
@@ -23,7 +23,7 @@ function o() {
   }(0, r.openModalLazy)(async () => {
     let {
       default: t
-    } = await Promise.all([n.e("99387"), n.e("67753")]).then(n.bind(n, 873809));
+    } = await n.e("67753").then(n.bind(n, 873809));
     return n => (0, i.jsx)(t, {
       ...n,
       header: s.Z.Messages.SCREENSHARE_UNAVAILABLE,

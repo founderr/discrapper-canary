@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   appIconSelectionContainer: "appIconSelectionContainer_e2863f",
   appIconSelection: "appIconSelection_e2863f",

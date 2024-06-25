@@ -3,8 +3,8 @@ s.d(n, {
     return C
   }
 }), s(47120);
-var a = s(735250),
-  t = s(470079),
+var t = s(735250),
+  a = s(470079),
   o = s(442837),
   l = s(481060),
   i = s(2052),
@@ -29,8 +29,8 @@ function C(e) {
     onSelectBackgroundOption: N,
     currentDeviceId: M,
     smallerBackgroundOptions: R
-  } = e, k = (0, o.e7)([c.default], () => c.default.getCurrentUser()), [D, j] = t.useState(null), T = (0, O.Z)(), h = r.ZP.canUseCustomBackgrounds(k), f = (0, o.cj)([u.Z], () => h ? u.Z.videoFilterAssets : {}), U = t.useMemo(() => Object.values(f).filter(e => e.type === m.xV.BACKGROUND), [f]), B = (0, i.O)();
-  t.useEffect(() => {
+  } = e, k = (0, o.e7)([c.default], () => c.default.getCurrentUser()), [D, j] = a.useState(null), T = (0, O.Z)(), h = r.ZP.canUseCustomBackgrounds(k), f = (0, o.cj)([u.Z], () => h ? u.Z.videoFilterAssets : {}), U = a.useMemo(() => Object.values(f).filter(e => e.type === m.xV.BACKGROUND), [f]), B = (0, i.O)();
+  a.useEffect(() => {
     T ? (0, E.FU)(C, M, {
       track: !1
     }).catch(() => N(null)) : null != C && N(null)
@@ -44,16 +44,16 @@ function C(e) {
       })
     })
   };
-  return T ? (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(l.Heading, {
+  return T ? (0, t.jsxs)(t.Fragment, {
+    children: [(0, t.jsx)(l.Heading, {
       className: A.spacingTop24,
       variant: "eyebrow",
       color: "header-secondary",
       children: x.Z.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND
-    }), null != D ? (0, a.jsx)(l.FormErrorBlock, {
+    }), null != D ? (0, t.jsx)(l.FormErrorBlock, {
       className: A.videoBackgroundError,
       children: D
-    }) : null, (0, a.jsx)(g.Z, {
+    }) : null, (0, t.jsx)(g.Z, {
       canUseCustomBackgrounds: h,
       customBackgroundOptions: U,
       selectedOption: C,
@@ -62,8 +62,8 @@ function C(e) {
         (0, l.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([s.e("99387"), s.e("87200")]).then(s.bind(s, 592163));
-          return s => (0, a.jsx)(e, {
+          } = await s.e("87200").then(s.bind(s, 592163));
+          return s => (0, t.jsx)(e, {
             ...s,
             onLearnMore: n,
             analyticsSource: {
@@ -75,14 +75,14 @@ function C(e) {
       },
       onAddBackgroundImage: function(e, n) {
         let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        return new Promise(async a => {
+        return new Promise(async t => {
           try {
-            let a = await (0, d.Ff)(e, m.xV.BACKGROUND);
-            v(a), (0, _.g5)(a, n.type === p.m.MP4, s), j(null)
+            let t = await (0, d.Ff)(e, m.xV.BACKGROUND);
+            v(t), (0, _.g5)(t, n.type === p.m.MP4, s), j(null)
           } catch (e) {
             j(e.message)
           }
-          a()
+          t()
         })
       },
       smallerOptions: R

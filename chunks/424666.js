@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   table: "table_d2aca9",
   tableWithoutSeparators: "tableWithoutSeparators_d2aca9",

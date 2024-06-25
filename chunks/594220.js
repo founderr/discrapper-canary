@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   editVanityUrlCard: "editVanityUrlCard_ceb0aa",
   removeVanityUrlButton: "removeVanityUrlButton_ceb0aa",

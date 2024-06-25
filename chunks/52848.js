@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   wrapper: "wrapper_efd8e6",
   list: "list_efd8e6",

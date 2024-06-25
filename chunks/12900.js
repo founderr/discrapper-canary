@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   shopBanner: "shopBanner_be5025",
   categoryLogo: "categoryLogo_be5025",

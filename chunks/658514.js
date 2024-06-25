@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   keywordTextAreaContainer: "keywordTextAreaContainer_a4df17",
   keywordTextArea: "keywordTextArea_a4df17",

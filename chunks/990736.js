@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_ac201b",
   scroller: "scroller_ac201b",

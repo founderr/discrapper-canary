@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   header: "header_ac2a99",
   label: "label_ac2a99",

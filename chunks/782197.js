@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_ddbb27",
   guidelines: "guidelines_ddbb27",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   headerBar: "headerBar_d8354c",
   fullscreenHeaderBar: "fullscreenHeaderBar_d8354c",

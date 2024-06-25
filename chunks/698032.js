@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   countDownWrapper: "countDownWrapper_cd5584",
   fullScreenWrapper: "fullScreenWrapper_cd5584",

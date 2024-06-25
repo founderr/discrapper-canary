@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   botPermissions: "botPermissions_a06cfc",
   permissionsList: "permissionsList_a06cfc",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   groupContainer: "groupContainer_f573e6",
   groupHeaderRow: "groupHeaderRow_f573e6",

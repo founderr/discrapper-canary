@@ -20,7 +20,7 @@ function c(e, t, c) {
     I = (0, r.e7)([l.default], () => l.default.getId()),
     T = null != e ? (0, o.V9)(e) : u.Z.getActiveStreamKey(),
     h = null !== (d = u.Z.getVideoStats(T)) && void 0 !== d ? d : {},
-    S = {
+    f = {
       media_session_id: u.Z.getMediaSessionId(T),
       rtc_connection_id: u.Z.getRtcConnectionId(T),
       stream_region: u.Z.getRegion(T),
@@ -34,12 +34,12 @@ function c(e, t, c) {
       null == c || c(), null != e && (0, s.openModalLazy)(async () => {
         let {
           default: t
-        } = await Promise.all([n.e("99387"), n.e("75994")]).then(n.bind(n, 340140));
+        } = await n.e("18912").then(n.bind(n, 340140));
         return n => (0, i.jsx)(t, {
           stream: e,
           streamApplication: E,
           isStreamer: I === (null == e ? void 0 : e.ownerId),
-          analyticsData: S,
+          analyticsData: f,
           ...n
         })
       })

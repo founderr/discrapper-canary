@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_df21b5",
   userContainer: "userContainer_df21b5",

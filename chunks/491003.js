@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   searchBar: "searchBar_a9f4e8",
   settingsHeader: "settingsHeader_a9f4e8",

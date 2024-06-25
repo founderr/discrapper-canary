@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   tooltip: "tooltip_b6c360",
   tooltipDisablePointerEvents: "tooltipDisablePointerEvents_b6c360",

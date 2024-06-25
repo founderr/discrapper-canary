@@ -1,4 +1,5 @@
-e.exports = {
+"use strict";
+t.exports = {
   image: "image_ceb0f1",
   modalRoot: "modalRoot_ceb0f1",
   modalContent: "modalContent_ceb0f1",

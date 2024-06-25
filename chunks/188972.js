@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   stickerPreviews: "stickerPreviews_ef287f",
   stickerPreviewContainer: "stickerPreviewContainer_ef287f",

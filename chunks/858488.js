@@ -27,7 +27,7 @@ function s(e) {
       null == s || s(), (0, a.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([t.e("99387"), t.e("25070")]).then(t.bind(t, 670794));
+        } = await t.e("25070").then(t.bind(t, 670794));
         return t => (0, l.jsx)(e, {
           user: n,
           nickname: c,

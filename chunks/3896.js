@@ -1,70 +1,70 @@
 "use strict";
-t.d(s, {
+n.d(t, {
   Z: function() {
-    return _
+    return E
   }
 });
-var n = t(735250),
-  i = t(470079),
-  l = t(120356),
-  a = t.n(l),
-  r = t(481060),
-  o = t(456935),
-  c = t(259580),
-  d = t(981631),
-  u = t(689938),
-  E = t(609191);
+var s = n(735250),
+  a = n(470079),
+  i = n(120356),
+  r = n.n(i),
+  l = n(481060),
+  o = n(456935),
+  c = n(259580),
+  d = n(981631),
+  u = n(689938),
+  _ = n(609191);
 
-function _(e) {
+function E(e) {
   let {
-    guild: s
-  } = e, l = s.verificationLevel, _ = i.useMemo(() => (0, o.I9)(l), [l]);
-  return (0, n.jsxs)(r.Clickable, {
-    onClick: () => (0, r.openModalLazy)(async () => {
+    guild: t
+  } = e, i = t.verificationLevel, E = a.useMemo(() => (0, o.I9)(i), [i]);
+  return (0, s.jsxs)(l.Clickable, {
+    onClick: () => (0, l.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([t.e("99387"), t.e("72458")]).then(t.bind(t, 694278));
-      return t => (0, n.jsx)(e, {
-        ...t,
-        guild: s,
+      } = await n.e("27933").then(n.bind(n, 694278));
+      return n => (0, s.jsx)(e, {
+        ...n,
+        guild: t,
         hideColors: !0
       })
     }),
-    className: a()(E.simpleItemWrapper, E.clickable),
-    children: [(0, n.jsxs)("div", {
-      className: E.itemContent,
-      children: [(0, n.jsx)(r.Heading, {
+    className: r()(_.simpleItemWrapper, _.clickable),
+    children: [(0, s.jsxs)("div", {
+      className: _.itemContent,
+      children: [(0, s.jsx)(l.Heading, {
         variant: "text-md/semibold",
         color: "header-primary",
         children: u.Z.Messages.FORM_LABEL_VERIFICATION_LEVEL
-      }), (0, n.jsx)(r.Text, {
+      }), (0, s.jsx)(l.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
         children: u.Z.Messages.GUILD_SETTINGS_SAFETY_VERIFICATION_DESCRIPTION
-      }), (0, n.jsx)("div", {
-        className: E.__invalid_pillRow,
-        children: (0, n.jsxs)(r.Text, {
+      }), (0, s.jsx)("div", {
+        className: _.__invalid_pillRow,
+        children: (0, s.jsxs)(l.Text, {
           variant: "text-xs/medium",
           color: "interactive-normal",
-          className: E.valuePill,
-          children: [l === d.sFg.VERY_HIGH ? (0, n.jsx)(r.MobilePhoneIcon, {
+          className: _.valuePill,
+          children: [i === d.sFg.VERY_HIGH ? (0, s.jsx)(l.MobilePhoneIcon, {
             size: "custom",
             color: "currentColor",
             width: 16,
             height: 16
-          }) : (0, n.jsx)(r.EnvelopeIcon, {
+          }) : (0, s.jsx)(l.EnvelopeIcon, {
             size: "custom",
             color: "currentColor",
             width: 16,
             height: 16
-          }), _]
+          }), E]
         })
       })]
-    }), (0, n.jsx)(c.Z, {
+    }), (0, s.jsx)(c.Z, {
       height: 24,
       width: 24,
       direction: c.Z.Directions.RIGHT,
-      className: E.caret
+      className: _.caret
     })]
   })
 }

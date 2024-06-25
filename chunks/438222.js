@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   clickableCard: "clickableCard_e0fe28",
   card: "card_e0fe28",

@@ -1,3 +1,4 @@
+"use strict";
 n.r(e.exports = {
   uploadIconAnimateInLeft: "uploadIconAnimateInLeft_f82cc7",
   uploadIconAnimateInMiddle: "uploadIconAnimateInMiddle_f82cc7",

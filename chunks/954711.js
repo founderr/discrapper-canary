@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   wrapper: "wrapper_a3747e",
   image: "image_a3747e",

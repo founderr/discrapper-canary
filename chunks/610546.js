@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   label: "label_cdb884",
   defaultMargin: "defaultMargin_cdb884",

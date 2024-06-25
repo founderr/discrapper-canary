@@ -30,7 +30,7 @@ function c(e) {
       (null == T || e) && !N ? (0, u.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([t.e("49237"), t.e("99387"), t.e("58023"), t.e("81533")]).then(t.bind(t, 779250));
+        } = await Promise.all([t.e("58023"), t.e("38751")]).then(t.bind(t, 779250));
         return t => (0, l.jsx)(e, {
           ...t,
           guildScheduledEventId: n,
@@ -39,7 +39,7 @@ function c(e) {
       }, g) : null != T && (0, u.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([t.e("99387"), t.e("27919")]).then(t.bind(t, 379038));
+        } = await t.e("27919").then(t.bind(t, 379038));
         return n => (0, l.jsx)(e, {
           ...n,
           guildEvent: Z,

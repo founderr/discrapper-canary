@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   generalHeading: "generalHeading_a2f60b",
   generalBodyCopy: "generalBodyCopy_a2f60b",

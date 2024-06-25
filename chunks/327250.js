@@ -1,83 +1,83 @@
 n.d(t, {
   Z: function() {
-    return L
+    return j
   }
 });
-var l = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-  s = n.n(i),
-  a = n(399606),
+var a = n(120356),
+  l = n.n(a),
+  s = n(399606),
   r = n(481060),
   o = n(493683),
   c = n(906732),
   u = n(69882),
   d = n(251794),
   h = n(386696),
-  m = n(910693),
-  E = n(314897),
-  p = n(271383),
-  g = n(430824),
-  f = n(496675),
-  C = n(158776),
-  _ = n(885110),
+  p = n(910693),
+  m = n(314897),
+  _ = n(271383),
+  f = n(430824),
+  E = n(496675),
+  g = n(158776),
+  C = n(885110),
   I = n(594174),
   x = n(572004),
   T = n(5192),
   N = n(51144),
-  Z = n(991570),
+  v = n(991570),
   S = n(981631),
-  v = n(689938),
+  Z = n(689938),
   A = n(342821);
 
 function M(e) {
   let {
     user: t,
     backgroundColor: n,
-    guildId: i,
-    onClose: s
-  } = e, o = t.id, c = (0, a.e7)([_.Z, C.Z, E.default], () => o === E.default.getId() ? _.Z.getStatus() : C.Z.getStatus(o, i), [o, i]);
-  return (0, l.jsxs)("div", {
+    guildId: a,
+    onClose: l
+  } = e, o = t.id, c = (0, s.e7)([C.Z, g.Z, m.default], () => o === m.default.getId() ? C.Z.getStatus() : g.Z.getStatus(o, a), [o, a]);
+  return (0, i.jsxs)("div", {
     className: A.topRow,
     style: {
       backgroundColor: n
     },
-    children: [(0, l.jsxs)("div", {
+    children: [(0, i.jsxs)("div", {
       className: A.memberNameContainer,
-      children: [(0, l.jsx)("div", {
+      children: [(0, i.jsx)("div", {
         className: A.memberAvatar,
-        children: (0, l.jsx)(r.Avatar, {
-          src: t.getAvatarURL(i, 48),
+        children: (0, i.jsx)(r.Avatar, {
+          src: t.getAvatarURL(a, 48),
           "aria-label": t.username,
           size: r.AvatarSizes.SIZE_48,
           status: c
         })
-      }), (0, l.jsx)("div", {
+      }), (0, i.jsx)("div", {
         className: A.memberName,
-        children: (0, l.jsx)(r.Text, {
+        children: (0, i.jsx)(r.Text, {
           variant: "text-lg/medium",
-          children: (0, l.jsx)(r.NameWithRole, {
-            name: T.ZP.getName(i, null, t),
+          children: (0, i.jsx)(r.NameWithRole, {
+            name: T.ZP.getName(a, null, t),
             color: r.tokens.colors.HEADER_PRIMARY.css
           })
         })
-      }), (0, l.jsx)("div", {
+      }), (0, i.jsx)("div", {
         className: A.__invalid_memberGlobalName,
-        children: (0, l.jsx)(r.Text, {
+        children: (0, i.jsx)(r.Text, {
           variant: "text-md/medium",
           color: "text-normal",
           children: N.ZP.getUserTag(t)
         })
       })]
-    }), (0, l.jsx)("div", {
+    }), (0, i.jsx)("div", {
       className: A.__invalid_close,
-      children: (0, l.jsx)(r.Text, {
+      children: (0, i.jsx)(r.Text, {
         variant: "text-md/medium",
         color: "text-normal",
-        children: (0, l.jsx)(r.Clickable, {
+        children: (0, i.jsx)(r.Clickable, {
           className: A.closeAction,
-          onClick: s,
-          children: (0, l.jsx)(r.CloseSmallIcon, {
+          onClick: l,
+          children: (0, i.jsx)(r.CloseSmallIcon, {
             size: "md",
             color: "currentColor"
           })
@@ -87,73 +87,102 @@ function M(e) {
   })
 }
 
-function R(e) {
+function b(e) {
   let {
     tag: t = "div",
     disabled: n,
-    children: i,
-    onClick: a,
+    children: a,
+    onClick: s,
     ...o
   } = e;
-  return (0, l.jsx)(r.Clickable, {
+  return (0, i.jsx)(r.Clickable, {
     ...o,
     tag: t,
-    className: s()(A.bottomRowAction, {
+    className: l()(A.bottomRowAction, {
       [A.bottomRowActionDisabled]: n
     }),
-    onClick: n ? void 0 : a,
-    children: (0, l.jsx)("div", {
+    onClick: n ? void 0 : s,
+    children: (0, i.jsx)("div", {
       className: A.innerBottomRowAction,
-      children: i
+      children: a
     })
   })
 }
 
-function j(e) {
+function R(e) {
   let {
     backgroundColor: t,
-    user: i,
-    member: s,
-    guildId: E
-  } = e, p = (0, a.e7)([g.Z], () => g.Z.getGuild(E)), {
-    canKickUser: C,
-    canBanUser: _,
+    user: a,
+    member: l,
+    guildId: m
+  } = e, _ = (0, s.e7)([f.Z], () => f.Z.getGuild(m)), {
+    canKickUser: g,
+    canBanUser: C,
     canModerateMembers: T
-  } = (0, a.cj)([f.Z, I.default, g.Z], () => ({
-    canKickUser: null != p && f.Z.canManageUser(S.Plq.KICK_MEMBERS, i, p),
-    canBanUser: null != p && f.Z.canManageUser(S.Plq.BAN_MEMBERS, i, p),
-    canModerateMembers: null != p && (0, h.F)(p.id, i.id, [I.default, g.Z, f.Z])
-  }), [i, p]), N = (0, u.b)(s), {
-    analyticsLocations: Z,
+  } = (0, s.cj)([E.Z, I.default, f.Z], () => ({
+    canKickUser: null != _ && E.Z.canManageUser(S.Plq.KICK_MEMBERS, a, _),
+    canBanUser: null != _ && E.Z.canManageUser(S.Plq.BAN_MEMBERS, a, _),
+    canModerateMembers: null != _ && (0, h.F)(_.id, a.id, [I.default, f.Z, E.Z])
+  }), [a, _]), N = (0, u.b)(l), {
+    analyticsLocations: v,
     newestAnalyticsLocation: M
-  } = (0, c.ZP)(), j = (0, m.sE)(E, {
-    targetUserId: i.id,
+  } = (0, c.ZP)(), R = (0, p.sE)(m, {
+    targetUserId: a.id,
     location: M,
-    locations: Z
+    locations: v
   });
-  return (0, l.jsxs)("div", {
+  return (0, i.jsxs)("div", {
     className: A.bottomRow,
-    children: [(0, l.jsxs)(R, {
-      "aria-label": v.Z.Messages.SEND_DM,
+    children: [(0, i.jsxs)(b, {
+      "aria-label": Z.Z.Messages.SEND_DM,
       style: {
         backgroundColor: t
       },
       onClick: () => {
-        o.Z.openPrivateChannel(i.id)
+        o.Z.openPrivateChannel(a.id)
       },
-      children: [(0, l.jsx)(r.ChatIcon, {
+      children: [(0, i.jsx)(r.ChatIcon, {
         size: "custom",
         color: "currentColor",
         width: 22,
         height: 22
-      }), (0, l.jsx)(r.Text, {
+      }), (0, i.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: v.Z.Messages.SEND_DM
+        children: Z.Z.Messages.SEND_DM
       })]
-    }), (0, l.jsxs)(R, {
+    }), (0, i.jsxs)(b, {
+      disabled: !g,
+      "aria-label": Z.Z.Messages.KICK,
+      style: {
+        backgroundColor: t
+      },
+      onClick: () => {
+        (0, r.openModalLazy)(async () => {
+          let {
+            default: e
+          } = await n.e("5454").then(n.bind(n, 854360));
+          return t => (0, i.jsx)(e, {
+            ...t,
+            location: M,
+            guildId: m,
+            user: a
+          })
+        })
+      },
+      children: [(0, i.jsx)(r.UserMinusIcon, {
+        size: "custom",
+        width: 22,
+        height: 22,
+        color: r.tokens.colors.TEXT_NORMAL.css
+      }), (0, i.jsx)(r.Text, {
+        variant: "text-sm/normal",
+        color: "none",
+        children: Z.Z.Messages.KICK
+      })]
+    }), (0, i.jsxs)(b, {
       disabled: !C,
-      "aria-label": v.Z.Messages.KICK,
+      "aria-label": Z.Z.Messages.BAN,
       style: {
         backgroundColor: t
       },
@@ -161,111 +190,82 @@ function j(e) {
         (0, r.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("99387"), n.e("5454")]).then(n.bind(n, 854360));
-          return t => (0, l.jsx)(e, {
+          } = await n.e("43350").then(n.bind(n, 98746));
+          return t => (0, i.jsx)(e, {
             ...t,
             location: M,
-            guildId: E,
-            user: i
+            guildId: m,
+            user: a
           })
         })
       },
-      children: [(0, l.jsx)(r.UserMinusIcon, {
+      children: [(0, i.jsx)(r.HammerIcon, {
         size: "custom",
         width: 22,
         height: 22,
         color: r.tokens.colors.TEXT_NORMAL.css
-      }), (0, l.jsx)(r.Text, {
+      }), (0, i.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: v.Z.Messages.KICK
+        children: Z.Z.Messages.BAN
       })]
-    }), (0, l.jsxs)(R, {
-      disabled: !_,
-      "aria-label": v.Z.Messages.BAN,
-      style: {
-        backgroundColor: t
-      },
-      onClick: () => {
-        (0, r.openModalLazy)(async () => {
-          let {
-            default: e
-          } = await Promise.all([n.e("99387"), n.e("43350")]).then(n.bind(n, 98746));
-          return t => (0, l.jsx)(e, {
-            ...t,
-            location: M,
-            guildId: E,
-            user: i
-          })
-        })
-      },
-      children: [(0, l.jsx)(r.HammerIcon, {
-        size: "custom",
-        width: 22,
-        height: 22,
-        color: r.tokens.colors.TEXT_NORMAL.css
-      }), (0, l.jsx)(r.Text, {
-        variant: "text-sm/normal",
-        color: "none",
-        children: v.Z.Messages.BAN
-      })]
-    }), (0, l.jsxs)(R, {
+    }), (0, i.jsxs)(b, {
       disabled: !T,
-      "aria-label": v.Z.Messages.TIMEOUT_USER,
+      "aria-label": Z.Z.Messages.TIMEOUT_USER,
       style: {
         backgroundColor: t
       },
       onClick: () => {
-        N ? (0, d.q)(s.guildId, s.userId, Z) : (0, d.z)(s.guildId, s.userId, Z)
+        N ? (0, d.q)(l.guildId, l.userId, v) : (0, d.z)(l.guildId, l.userId, v)
       },
-      children: [(0, l.jsx)(r.ClockWarningIcon, {
+      children: [(0, i.jsx)(r.ClockWarningIcon, {
         size: "custom",
         width: 22,
         height: 22,
         color: r.tokens.colors.TEXT_NORMAL.css
-      }), (0, l.jsx)(r.Text, {
+      }), (0, i.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: N ? v.Z.Messages.REMOVE : v.Z.Messages.TIMEOUT_USER
+        children: N ? Z.Z.Messages.REMOVE : Z.Z.Messages.TIMEOUT_USER
       })]
-    }), (0, l.jsxs)(R, {
-      "aria-label": v.Z.Messages.COPY_ID,
+    }), (0, i.jsxs)(b, {
+      "aria-label": Z.Z.Messages.COPY_ID,
       style: {
         backgroundColor: t
       },
       onClick: () => {
-        j(m.jQ.COPY_ID), (0, x.JG)(i.id)
+        R(p.jQ.COPY_ID), (0, x.JG)(a.id)
       },
       disabled: !x.wS,
-      children: [(0, l.jsx)(r.IdIcon, {
+      children: [(0, i.jsx)(r.IdIcon, {
         size: "custom",
         width: 22,
         height: 22,
         color: r.tokens.colors.TEXT_NORMAL.css
-      }), (0, l.jsx)(r.Text, {
+      }), (0, i.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: v.Z.Messages.COPY_ID
+        children: Z.Z.Messages.COPY_ID
       })]
     })]
   })
 }
 
-function L(e) {
+function j(e) {
   let {
     userId: t,
     guildId: n,
-    onClose: i
-  } = e, s = (0, a.e7)([I.default], () => I.default.getUser(t), [t]), o = (0, a.e7)([p.ZP], () => p.ZP.getMember(n, t), [n, t]), c = (0, Z.f)(t, n, .8, r.tokens.colors.BACKGROUND_SECONDARY);
-  return null == s || null == o ? null : (0, l.jsxs)("div", {
+    onClose: a
+  } = e, l = (0, s.e7)([I.default], () => I.default.getUser(t), [t]), o = (0, s.e7)([_.ZP], () => _.ZP.getMember(n, t), [n, t]), c = (0, v.f)(t, n, .8, r.tokens.colors.BACKGROUND_SECONDARY);
+  return null == l || null == o ? null : (0, i.jsxs)("div", {
     className: A.container,
-    children: [(0, l.jsx)(M, {
-      user: s,
+    children: [(0, i.jsx)(M, {
+      user: l,
       guildId: n,
-      onClose: i,
+      onClose: a,
       backgroundColor: c
-    }), (0, l.jsx)(j, {
-      user: s,
+    }), (0, i.jsx)(R, {
+      user: l,
       member: o,
       guildId: n,
       backgroundColor: c

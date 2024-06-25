@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   baseShapeRound: "baseShapeRound_df8943",
   baseShapeRoundLeft: "baseShapeRoundLeft_df8943",

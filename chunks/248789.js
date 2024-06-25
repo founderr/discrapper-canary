@@ -1,116 +1,116 @@
 n.d(t, {
   Y: function() {
-    return g
+    return f
   }
 }), n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(286379),
-  a = n(442837),
+var i = n(735250),
+  a = n(470079),
+  l = n(286379),
+  s = n(442837),
   r = n(481060),
   o = n(797614),
   c = n(699516),
   u = n(378298),
   d = n(359119),
   h = n(473092),
-  m = n(177342),
-  E = n(134612),
-  p = n(689938);
+  p = n(177342),
+  m = n(134612),
+  _ = n(689938);
 
-function g(e) {
+function f(e) {
   let {
     channelId: t,
-    warningId: g,
-    senderId: f
-  } = e, C = i.useCallback(() => {
-    (0, u.T)(t, [g])
-  }, [t, g]), _ = (0, a.e7)([c.Z], () => c.Z.isBlocked(f)), I = i.useMemo(() => ({
+    warningId: f,
+    senderId: E
+  } = e, g = a.useCallback(() => {
+    (0, u.T)(t, [f])
+  }, [t, f]), C = (0, s.e7)([c.Z], () => c.Z.isBlocked(E)), I = a.useMemo(() => ({
     channelId: t,
-    warningId: g,
-    senderId: f,
+    warningId: f,
+    senderId: E,
     warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2
-  }), [t, g, f]);
-  i.useEffect(() => {
+  }), [t, f, E]);
+  a.useEffect(() => {
     (0, h.KQ)({
       ...I,
       viewName: h.pb.SAFETY_WARNING_BANNER
     }), o.Z.increment({
-      name: s.V.SAFETY_WARNING_VIEW
+      name: l.V.SAFETY_WARNING_VIEW
     })
   }, [I]);
-  let x = i.useCallback(e => {
+  let x = a.useCallback(e => {
       (0, h.qc)({
         ...I,
         cta: e
       })
     }, [I]),
-    T = i.useCallback(() => {
+    T = a.useCallback(() => {
       (0, r.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("49237"), n.e("49508"), n.e("9738")]).then(n.bind(n, 611446));
+        } = await Promise.all([n.e("49508"), n.e("89650")]).then(n.bind(n, 611446));
         return n => {
           let {
-            transitionState: i,
-            onClose: s
+            transitionState: a,
+            onClose: l
           } = n;
-          return (0, l.jsx)(e, {
-            otherUserId: f,
+          return (0, i.jsx)(e, {
+            otherUserId: E,
             channelId: t,
-            warningId: g,
+            warningId: f,
             warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
-            transitionState: i,
-            onClose: s
+            transitionState: a,
+            onClose: l
           })
         }
       }, {
-        modalKey: E.X_
+        modalKey: m.X_
       }), x(h.NM.USER_BANNER_OPEN_SAFETY_TOOLS)
-    }, [t, f, g, x]),
-    N = i.useCallback(() => {
-      C(), x(h.NM.USER_BANNER_BLOCK_CONFIRM)
-    }, [C, x]),
-    Z = i.useCallback(() => {
-      C(), x(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM)
-    }, [C, x]),
-    S = i.useCallback(() => {
+    }, [t, E, f, x]),
+    N = a.useCallback(() => {
+      g(), x(h.NM.USER_BANNER_BLOCK_CONFIRM)
+    }, [g, x]),
+    v = a.useCallback(() => {
+      g(), x(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM)
+    }, [g, x]),
+    S = a.useCallback(() => {
       (0, r.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("19538")]).then(n.bind(n, 699783));
+        } = await n.e("19538").then(n.bind(n, 699783));
         return n => {
           let {
-            transitionState: i,
-            onClose: s
+            transitionState: a,
+            onClose: l
           } = n;
-          return (0, l.jsx)(e, {
-            transitionState: i,
+          return (0, i.jsx)(e, {
+            transitionState: a,
             onBlock: N,
-            onBlockAndReport: Z,
+            onBlockAndReport: v,
             onCancel: () => {
-              null == s || s(), x(h.NM.USER_BANNER_BLOCK_CANCEL)
+              null == l || l(), x(h.NM.USER_BANNER_BLOCK_CANCEL)
             },
-            onClose: s,
-            userId: f,
+            onClose: l,
+            userId: E,
             channelId: t
           })
         }
       })
-    }, [N, Z, f, t, x]);
-  return (0, l.jsx)(m.Q, {
+    }, [N, v, E, t, x]);
+  return (0, i.jsx)(p.Q, {
     channelId: t,
-    warningId: g,
-    senderId: f,
+    warningId: f,
+    senderId: E,
     warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
-    header: p.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_HEADER,
-    description: p.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_DESCRIPTION,
-    onDismiss: C,
+    header: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_HEADER,
+    description: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_DESCRIPTION,
+    onDismiss: g,
     buttons: [{
-      text: p.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_OPEN_SAFETY_TOOLS_BUTTON,
+      text: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_OPEN_SAFETY_TOOLS_BUTTON,
       color: r.Button.Colors.BRAND,
       onclick: T
-    }, ..._ ? [] : [{
-      text: p.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_BLOCK_BUTTON,
+    }, ...C ? [] : [{
+      text: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_BLOCK_BUTTON,
       color: r.Button.Colors.PRIMARY,
       onclick: S
     }]]

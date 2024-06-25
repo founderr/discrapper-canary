@@ -154,7 +154,7 @@ function A(e, l, A, h) {
     action: () => (0, r.openModalLazy)(async () => {
       let {
         default: a
-      } = await Promise.all([n.e("99387"), n.e("5454")]).then(n.bind(n, 854360));
+      } = await n.e("5454").then(n.bind(n, 854360));
       return n => (0, t.jsx)(a, {
         ...n,
         location: h,
@@ -171,7 +171,7 @@ function A(e, l, A, h) {
     action: () => (0, r.openModalLazy)(async () => {
       let {
         default: a
-      } = await Promise.all([n.e("99387"), n.e("43350")]).then(n.bind(n, 98746));
+      } = await n.e("43350").then(n.bind(n, 98746));
       return n => (0, t.jsx)(a, {
         ...n,
         location: h,

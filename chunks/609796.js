@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   betaTag: "betaTag_ebd904",
   headerContainer: "headerContainer_ebd904",

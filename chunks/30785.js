@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   upsellWrapper: "upsellWrapper_b8772d",
   unifyTrialUpsell: "unifyTrialUpsell_b8772d",

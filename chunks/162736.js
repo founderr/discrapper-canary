@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   controlIcon: "controlIcon_ef18ee",
   active: "active_ef18ee",

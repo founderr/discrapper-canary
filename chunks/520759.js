@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   clipContainer: "clipContainer_b11c5e",
   container: "container_b11c5e",

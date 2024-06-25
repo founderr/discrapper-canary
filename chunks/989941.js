@@ -1,19 +1,18 @@
-"use strict";
-let r;
-t.d(n, {
+let i;
+n.d(t, {
   Z: function() {
-    return i
+    return l
   }
 });
-var o = t(145597);
+var a = n(145597);
 
-function i(e, n) {
+function l(e, t) {
   if (__OVERLAY__) {
-    let e = n.getGame(),
-      t = (0, o.QF)();
-    return null == e || null == t ? null : (null == r ? void 0 : r.id) === e.id && (null == r ? void 0 : r.pid) === t ? r : r = {
+    let e = t.getGame(),
+      n = (0, a.QF)();
+    return null == e || null == n ? null : (null == i ? void 0 : i.id) === e.id && (null == i ? void 0 : i.pid) === n ? i : i = {
       id: e.id,
-      pid: t,
+      pid: n,
       pidPath: [],
       nativeProcessObserverId: 0,
       hidden: !1,

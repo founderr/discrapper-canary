@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   checklist: "checklist_dce733",
   container: "container_dce733",

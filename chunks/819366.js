@@ -18,14 +18,14 @@ var i = n(735250),
   I = n(927723),
   T = n(124072),
   h = n(484459),
-  S = n(103575),
-  f = n(592125),
-  N = n(271383),
-  A = n(430824),
+  f = n(103575),
+  S = n(592125),
+  A = n(271383),
+  N = n(430824),
   m = n(699516),
   O = n(594174),
-  R = n(5192),
-  p = n(51144),
+  p = n(5192),
+  R = n(51144),
   g = n(377668);
 
 function C(e) {
@@ -67,11 +67,11 @@ function v(e) {
     viewingChannelId: D
   } = e, {
     analyticsLocations: M
-  } = (0, d.ZP)(c.Z.USER_MENTION), P = (0, l.e7)([O.default], () => O.default.getUser(r)), y = (0, l.e7)([f.Z], () => f.Z.getChannel(s)), U = null != y ? y.getGuildId() : null, b = L || null == P || null == U || null == s ? void 0 : e => {
+  } = (0, d.ZP)(c.Z.USER_MENTION), P = (0, l.e7)([O.default], () => O.default.getUser(r)), y = (0, l.e7)([S.Z], () => S.Z.getChannel(s)), U = null != y ? y.getGuildId() : null, b = L || null == P || null == U || null == s ? void 0 : e => {
     null != y && (0, _.jW)(e, async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("32006"), n.e("12435"), n.e("71580")]).then(n.bind(n, 757387));
+      } = await Promise.all([n.e("79695"), n.e("32006"), n.e("12435"), n.e("69971")]).then(n.bind(n, 757387));
       return t => (0, i.jsx)(e, {
         ...t,
         viewingChannelId: D,
@@ -80,7 +80,7 @@ function v(e) {
         guildId: U
       })
     })
-  }, G = p.ZP.useName(P), w = (0, l.e7)([f.Z, N.ZP, m.Z], () => R.ZP.getNickname(U, s, P)), B = A.Z.getGuild(U), x = (0, E.Ib)(B, y) && r === g.fL ? g.jM : null;
+  }, G = R.ZP.useName(P), w = (0, l.e7)([S.Z, A.ZP, m.Z], () => p.ZP.getNickname(U, s, P)), x = N.Z.getGuild(U), B = (0, E.Ib)(x, y) && r === g.fL ? g.jM : null;
   if (null == P) return (0, i.jsx)(C, {
     userId: I,
     className: t,
@@ -89,7 +89,7 @@ function v(e) {
   let k = e => (0, i.jsx)(T.Z, {
     className: t,
     onContextMenu: b,
-    color: x,
+    color: B,
     ...e,
     children: "@".concat(null != w ? w : G)
   });
@@ -103,7 +103,7 @@ function v(e) {
         guildId: null != U ? U : void 0,
         channelId: null != s ? s : void 0
       }),
-      renderPopout: e => (o()(null != P, "Unexpected missing user"), (0, i.jsx)(S.Z, {
+      renderPopout: e => (o()(null != P, "Unexpected missing user"), (0, i.jsx)(f.Z, {
         location: "UserMention",
         userId: P.id,
         guildId: null != U ? U : void 0,

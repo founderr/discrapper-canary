@@ -15,9 +15,9 @@ var r = n(481060),
   I = n(959457),
   T = n(178635),
   h = n(531578),
-  S = n(981631);
+  f = n(981631);
 
-function f(e, t, n) {
+function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -25,18 +25,18 @@ function f(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class N extends T.Z {
+class A extends T.Z {
   _initialize() {
     l.Z.init()
   }
   constructor(...e) {
-    super(...e), f(this, "actions", {
+    super(...e), S(this, "actions", {
       VOICE_CHANNEL_SHOW_FEEDBACK: e => this.handleVoiceChannelFeedback(e),
       STREAM_CLOSE: e => this.handleStreamClose(e),
       VIDEO_BACKGROUND_SHOW_FEEDBACK: e => this.handleVideoBackgroundShowFeedback(e),
       EMBEDDED_ACTIVITY_CLOSE: e => this.handleActivityClose(e),
       IN_APP_REPORTS_SHOW_FEEDBACK: e => this.handleInAppReportsFeedback(e)
-    }), f(this, "handleVoiceChannelFeedback", e => {
+    }), S(this, "handleVoiceChannelFeedback", e => {
       let {
         analyticsData: t
       } = e;
@@ -44,14 +44,14 @@ class N extends T.Z {
         (0, r.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("49237"), n.e("99387"), n.e("821")]).then(n.bind(n, 988645));
+          } = await n.e("96888").then(n.bind(n, 988645));
           return n => (0, i.jsx)(e, {
             ...n,
             analyticsData: t
           })
         })
       })
-    }), f(this, "handleStreamClose", e => {
+    }), S(this, "handleStreamClose", e => {
       var t;
       let {
         streamKey: s,
@@ -67,7 +67,7 @@ class N extends T.Z {
         (0, r.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96307")]).then(n.bind(n, 142402));
+          } = await n.e("23657").then(n.bind(n, 142402));
           return t => (0, i.jsx)(e, {
             stream: u,
             streamApplication: c,
@@ -77,7 +77,7 @@ class N extends T.Z {
           })
         })
       })
-    }), f(this, "handleVideoBackgroundShowFeedback", e => {
+    }), S(this, "handleVideoBackgroundShowFeedback", e => {
       let {
         analyticsData: t
       } = e;
@@ -85,14 +85,14 @@ class N extends T.Z {
         (0, r.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("49237"), n.e("99387"), n.e("67920")]).then(n.bind(n, 801320));
+          } = await n.e("11495").then(n.bind(n, 801320));
           return n => (0, i.jsx)(e, {
             ...n,
             analyticsData: t
           })
         })
       })
-    }), f(this, "handleActivityClose", e => {
+    }), S(this, "handleActivityClose", e => {
       let {
         applicationId: t,
         channelId: o,
@@ -100,12 +100,12 @@ class N extends T.Z {
       } = e, l = s.Z.getApplication(t), _ = c.Z.getChannel(o), d = {
         rtc_connection_id: E.Z.getRTCConnectionId(),
         media_session_id: E.Z.getMediaSessionId()
-      }, I = u.Z.getWindowOpen(S.KJ3.CHANNEL_CALL_POPOUT) ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
+      }, I = u.Z.getWindowOpen(f.KJ3.CHANNEL_CALL_POPOUT) ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
       null != l && null != _ && a && this.possiblyShowFeedbackModal(h.nw.ACTIVITY, () => {
         (0, r.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("49237"), n.e("99387"), n.e("32627")]).then(n.bind(n, 450634));
+          } = await n.e("4413").then(n.bind(n, 450634));
           return t => (0, i.jsx)(e, {
             ...t,
             activityApplication: l,
@@ -116,7 +116,7 @@ class N extends T.Z {
           contextKey: I
         })
       })
-    }), f(this, "handleInAppReportsFeedback", e => {
+    }), S(this, "handleInAppReportsFeedback", e => {
       let {
         reportId: t,
         reportType: s
@@ -125,7 +125,7 @@ class N extends T.Z {
         (0, r.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("49237"), n.e("99387"), n.e("77927")]).then(n.bind(n, 442173));
+          } = await n.e("72135").then(n.bind(n, 442173));
           return n => (0, i.jsx)(e, {
             ...n,
             reportId: t,
@@ -136,4 +136,4 @@ class N extends T.Z {
     })
   }
 }
-t.Z = new N
+t.Z = new A

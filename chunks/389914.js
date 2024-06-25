@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   connectedAccounts: "connectedAccounts_f3eb60",
   connectedAccountsColumn: "connectedAccountsColumn_f3eb60",

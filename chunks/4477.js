@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   pageWrapper: "pageWrapper_e77fa3",
   page: "page_e77fa3",

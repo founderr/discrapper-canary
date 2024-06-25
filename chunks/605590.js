@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   upload: "upload_df1eaf",
   sizeClip: "sizeClip_df1eaf",

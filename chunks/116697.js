@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   page: "page_e88228",
   leftColumn: "leftColumn_e88228",

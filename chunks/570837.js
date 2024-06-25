@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   buttonsContainer: "buttonsContainer_c98499",
   colorSwatch: "colorSwatch_c98499",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   interactive: "interactive_f5eb4b",
   muted: "muted_f5eb4b",

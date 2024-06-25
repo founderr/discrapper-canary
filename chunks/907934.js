@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   row: "row_a6ae3c",
   rowGuildName: "rowGuildName_a6ae3c",

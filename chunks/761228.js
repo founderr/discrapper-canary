@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   badge: "badge_e17ac7",
   badgeVerifiedIcon: "badgeVerifiedIcon_e17ac7",

@@ -11,7 +11,7 @@ function r(e, t) {
   return (0, l.openModalLazy)(async () => {
     let {
       default: l
-    } = await Promise.all([n.e("99387"), n.e("14262"), n.e("79521")]).then(n.bind(n, 207540));
+    } = await Promise.all([n.e("14262"), n.e("79521")]).then(n.bind(n, 207540));
     return n => (0, i.jsx)(l, {
       ...n,
       onConfirm: () => {

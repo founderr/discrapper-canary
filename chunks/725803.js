@@ -1,38 +1,39 @@
-t.d(A, {
+"use strict";
+n.d(t, {
   Z: function() {
     return o
   }
-}), t(47120);
-var n = t(470079),
-  a = t(442837),
-  s = t(881052),
-  r = t(728345),
-  l = t(812206);
+}), n(47120);
+var s = n(470079),
+  a = n(442837),
+  i = n(881052),
+  r = n(728345),
+  l = n(812206);
 
-function o(e, A) {
-  let t = (0, a.e7)([l.Z], () => l.Z.getGuildApplication(e, A)),
-    [o, i] = n.useState(null == t),
-    [d, c] = n.useState(),
-    [u, C] = n.useState(!1),
-    g = n.useCallback(async () => {
-      if (null == t && null != e) {
-        C(!0), i(!0);
+function o(e, t) {
+  let n = (0, a.e7)([l.Z], () => l.Z.getGuildApplication(e, t)),
+    [o, c] = s.useState(null == n),
+    [d, u] = s.useState(),
+    [_, E] = s.useState(!1),
+    I = s.useCallback(async () => {
+      if (null == n && null != e) {
+        E(!0), c(!0);
         try {
           await r.Z.getApplicationsForGuild(e, {
-            type: A,
+            type: t,
             includeTeam: !0
           })
         } catch (e) {
-          c(new s.Hx(e))
+          u(new i.Hx(e))
         } finally {
-          i(!1)
+          c(!1)
         }
       }
-    }, [t, A, e]);
-  return n.useEffect(() => {
-    !u && g()
-  }, [u, g]), {
-    application: t,
+    }, [n, t, e]);
+  return s.useEffect(() => {
+    !_ && I()
+  }, [_, I]), {
+    application: n,
     error: d,
     loading: o
   }

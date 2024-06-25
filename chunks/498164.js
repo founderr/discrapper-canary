@@ -1,36 +1,36 @@
-var s, i, l = n(735250);
+var i, s, a = n(735250);
 n(470079);
-var a = n(756647),
-  r = n(481060),
+var r = n(756647),
+  l = n(481060),
   o = n(570140),
   c = n(355467),
-  u = n(899742),
-  d = n(457330),
-  E = n(533307),
-  h = n(447543),
-  _ = n(962220),
+  d = n(899742),
+  u = n(457330),
+  _ = n(533307),
+  E = n(447543),
+  h = n(962220),
   I = n(703656),
   m = n(314897),
-  T = n(594174),
+  p = n(594174),
   g = n(626135),
-  p = n(585483),
-  N = n(591759),
-  S = n(998502),
-  C = n(996106),
-  A = n(186901),
-  f = n(981631);
+  T = n(585483),
+  C = n(591759),
+  f = n(998502),
+  S = n(996106),
+  N = n(186901),
+  A = n(981631);
 
 function Z(e, t) {
-  if (null != e) g.default.track(f.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
+  if (null != e) g.default.track(A.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
     invite_code: null,
     has_auth_token: null,
     is_backgrounded: null,
-    fingerprint: (0, a.s)(e),
+    fingerprint: (0, r.s)(e),
     link_type: t
   })
-}(s = i || (i = {})).SETTINGS = "settings", s.CHANGELOG = "changelog", s.LIBRARY = "library", s.STORE = "store", s.INVITE = "invite", s.CHANNEL = "channel", s.GUILD_SETTINGS = "guild_settings", t.Z = {
-  [f.Etm.INVITE_BROWSER]: {
-    scope: A.cE,
+}(i = s || (s = {})).SETTINGS = "settings", i.CHANGELOG = "changelog", i.LIBRARY = "library", i.STORE = "store", i.INVITE = "invite", i.CHANNEL = "channel", i.GUILD_SETTINGS = "guild_settings", t.Z = {
+  [A.Etm.INVITE_BROWSER]: {
+    scope: N.cE,
     async handler(e) {
       let {
         args: {
@@ -38,87 +38,87 @@ function Z(e, t) {
         }
       } = e, {
         invite: n
-      } = await h.Z.resolveInvite(t, "Desktop Modal");
-      if (null == n) throw new C.Z({
-        errorCode: f.lTL.INVALID_INVITE
+      } = await E.Z.resolveInvite(t, "Desktop Modal");
+      if (null == n) throw new S.Z({
+        errorCode: A.lTL.INVALID_INVITE
       }, "Invalid invite id: ".concat(t));
       return m.default.isAuthenticated() ? o.Z.dispatch({
         type: "INVITE_MODAL_OPEN",
         invite: n,
         code: t,
-        context: f.IlC.APP
-      }) : (0, I.dL)(f.Z5c.INVITE(t)), {
+        context: A.IlC.APP
+      }) : (0, I.dL)(A.Z5c.INVITE(t)), {
         invite: n,
         code: t
       }
     }
   },
-  [f.Etm.GUILD_TEMPLATE_BROWSER]: {
-    scope: A.cE,
+  [A.Etm.GUILD_TEMPLATE_BROWSER]: {
+    scope: N.cE,
     async handler(e) {
       let {
         args: {
           code: t
         }
       } = e;
-      if (null == T.default.getCurrentUser()) return;
+      if (null == p.default.getCurrentUser()) return;
       let {
-        guildTemplate: s
-      } = await _.Z.resolveGuildTemplate(t);
-      if (null == s) throw new C.Z({
-        errorCode: f.lTL.INVALID_GUILD_TEMPLATE
+        guildTemplate: i
+      } = await h.Z.resolveGuildTemplate(t);
+      if (null == i) throw new S.Z({
+        errorCode: A.lTL.INVALID_GUILD_TEMPLATE
       }, "Invalid guild template id: ".concat(t));
-      return S.ZP.focus(), (0, r.openModalLazy)(async () => {
+      return f.ZP.focus(), (0, l.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("10778"), n.e("90424")]).then(n.bind(n, 766775));
-        return t => (0, l.jsx)(e, {
+        } = await Promise.all([n.e("10778"), n.e("62974")]).then(n.bind(n, 766775));
+        return t => (0, a.jsx)(e, {
           ...t,
-          guildTemplate: s
+          guildTemplate: i
         })
       }), {
-        guildTemplate: s,
+        guildTemplate: i,
         code: t
       }
     }
   },
-  [f.Etm.GIFT_CODE_BROWSER]: {
-    scope: A.cE,
+  [A.Etm.GIFT_CODE_BROWSER]: {
+    scope: N.cE,
     handler(e) {
       let {
         args: {
           code: t
         }
       } = e;
-      return new Promise((e, s) => {
+      return new Promise((e, i) => {
         o.Z.wait(() => {
-          E.Z.resolveGiftCode(t, !0, !0).then(s => {
+          _.Z.resolveGiftCode(t, !0, !0).then(i => {
             let {
-              giftCode: i
-            } = s;
-            S.ZP.focus(), g.default.track(f.rMx.OPEN_MODAL, {
+              giftCode: s
+            } = i;
+            f.ZP.focus(), g.default.track(A.rMx.OPEN_MODAL, {
               type: "gift_accept",
-              location: f.SaU
-            }), (0, r.openModalLazy)(async () => {
+              location: A.SaU
+            }), (0, l.openModalLazy)(async () => {
               let {
                 default: e
-              } = await Promise.all([n.e("99387"), n.e("92446")]).then(n.bind(n, 409858));
-              return n => (0, l.jsx)(e, {
+              } = await Promise.all([n.e("92446"), n.e("56257")]).then(n.bind(n, 409858));
+              return n => (0, a.jsx)(e, {
                 code: t,
                 ...n
               })
             }), e({
-              giftCode: i
+              giftCode: s
             })
-          }).catch(() => s(new C.Z({
-            errorCode: f.lTL.INVALID_GIFT_CODE
+          }).catch(() => i(new S.Z({
+            errorCode: A.lTL.INVALID_GIFT_CODE
           }, "Invalid gift code: ".concat(t))))
         })
       })
     }
   },
-  [f.Etm.DEEP_LINK]: {
-    scope: A.cE,
+  [A.Etm.DEEP_LINK]: {
+    scope: N.cE,
     handler(e) {
       let {
         args: {
@@ -126,38 +126,38 @@ function Z(e, t) {
           params: n
         }
       } = e;
-      switch (S.ZP.focus(), t) {
-        case A.jE.USER_SETTINGS:
-          null != n && ((0, I.dL)(f.Z5c.SETTINGS(n.section, n.subsection)), Z(n.fingerprint, "settings"));
+      switch (f.ZP.focus(), t) {
+        case N.jE.USER_SETTINGS:
+          null != n && ((0, I.dL)(A.Z5c.SETTINGS(n.section, n.subsection)), Z(n.fingerprint, "settings"));
           break;
-        case A.jE.CHANGELOG:
-          null != n && ((0, I.dL)(N.Z.formatPathWithQuery(f.Z5c.CHANGELOGS(n.date), n.query)), Z(n.fingerprint, "changelog"));
+        case N.jE.CHANGELOG:
+          null != n && ((0, I.dL)(C.Z.formatPathWithQuery(A.Z5c.CHANGELOGS(n.date), n.query)), Z(n.fingerprint, "changelog"));
           break;
-        case A.jE.LIBRARY:
-          (0, I.dL)(f.Z5c.APPLICATION_LIBRARY), null != n && Z(n.fingerprint, "library");
+        case N.jE.LIBRARY:
+          (0, I.dL)(A.Z5c.APPLICATION_LIBRARY), null != n && Z(n.fingerprint, "library");
           break;
-        case A.jE.STORE_HOME:
-          (0, I.dL)(f.Z5c.APPLICATION_STORE), null != n && Z(n.fingerprint, "store");
+        case N.jE.STORE_HOME:
+          (0, I.dL)(A.Z5c.APPLICATION_STORE), null != n && Z(n.fingerprint, "store");
           break;
-        case A.jE.STORE_LISTING:
-          null != n && ((0, I.dL)(f.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), Z(n.fingerprint, "store"));
+        case N.jE.STORE_LISTING:
+          null != n && ((0, I.dL)(A.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), Z(n.fingerprint, "store"));
           break;
-        case A.jE.PICK_GUILD_SETTINGS:
+        case N.jE.PICK_GUILD_SETTINGS:
           null != n && ((0, I.dL)({
-            pathname: f.Z5c.PICK_GUILD_SETTINGS(n.section, n.subsection),
+            pathname: A.Z5c.PICK_GUILD_SETTINGS(n.section, n.subsection),
             search: n.search
           }), Z(n.fingerprint, "guild_settings"));
           break;
-        case A.jE.CHANNEL:
+        case N.jE.CHANNEL:
           null != n && ((0, I.dL)({
-            pathname: f.Z5c.CHANNEL(n.guildId, n.channelId, n.messageId),
+            pathname: A.Z5c.CHANNEL(n.guildId, n.channelId, n.messageId),
             search: n.search
           }), Z(n.fingerprint, "channel"))
       }
     }
   },
-  [f.Etm.BROWSER_HANDOFF]: {
-    scope: A.CN,
+  [A.Etm.BROWSER_HANDOFF]: {
+    scope: N.CN,
     handler(e) {
       let {
         args: {
@@ -165,65 +165,65 @@ function Z(e, t) {
           fingerprint: n
         }
       } = e;
-      S.ZP.focus(null, !0), (0, u.lx)(t, n)
+      f.ZP.focus(null, !0), (0, d.lx)(t, n)
     }
   },
-  [f.Etm.CONNECTIONS_CALLBACK]: {
-    scope: A.cE,
+  [A.Etm.CONNECTIONS_CALLBACK]: {
+    scope: N.cE,
     handler: async e => {
       let {
         args: {
           providerType: t,
           code: n,
-          openid_params: s,
-          state: i
+          openid_params: i,
+          state: s
         }
       } = e;
       try {
-        return await d.Z.callback(t, {
+        return await u.Z.callback(t, {
           code: n,
-          openid_params: s,
-          state: i
+          openid_params: i,
+          state: s
         })
       } catch (e) {
-        throw p.S.dispatch(f.CkL.CONNECTIONS_CALLBACK_ERROR), e
+        throw T.S.dispatch(A.CkL.CONNECTIONS_CALLBACK_ERROR), e
       }
     }
   },
-  [f.Etm.BRAINTREE_POPUP_BRIDGE_CALLBACK]: {
-    scope: A.cE,
+  [A.Etm.BRAINTREE_POPUP_BRIDGE_CALLBACK]: {
+    scope: N.cE,
     handler(e) {
       let {
         args: {
           state: t,
           path: n,
-          query: s
+          query: i
         }
       } = e;
       return (0, c.rt)({
-        paymentSourceType: f.HeQ.PAYPAL,
+        paymentSourceType: A.HeQ.PAYPAL,
         state: t,
         path: n,
-        query: s
+        query: i
       })
     }
   },
-  [f.Etm.BILLING_POPUP_BRIDGE_CALLBACK]: {
-    scope: A.cE,
+  [A.Etm.BILLING_POPUP_BRIDGE_CALLBACK]: {
+    scope: N.cE,
     handler(e) {
       let {
         args: {
           state: t,
           path: n,
-          query: s,
-          payment_source_type: i
+          query: i,
+          payment_source_type: s
         }
       } = e;
       return (0, c.rt)({
-        paymentSourceType: i,
+        paymentSourceType: s,
         state: t,
         path: n,
-        query: s
+        query: i
       })
     }
   }

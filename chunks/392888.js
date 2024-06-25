@@ -45,7 +45,7 @@ class E extends a.Z {
       }
     } = await r.tn.get("/users/@me/notification-migration-data2"), l = (0, c._Y)(a), {
       default: u
-    } = await Promise.all([n.e("99387"), n.e("53512")]).then(n.bind(n, 753521));
+    } = await n.e("53512").then(n.bind(n, 753521));
     if ((0, o.hasAnyModalOpen)()) return;
     if (_.fs.trackExposure({
         location: "NotificationMigrationManager"
@@ -93,7 +93,7 @@ async function I(e) {
   (0, o.openModalLazy)(async () => {
     let {
       default: r
-    } = await Promise.all([n.e("99387"), n.e("53512")]).then(n.bind(n, 753521));
+    } = await n.e("53512").then(n.bind(n, 753521));
     return n => (0, i.jsx)(r, {
       ...n,
       dismissable: e,

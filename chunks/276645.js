@@ -3,48 +3,48 @@ n.d(t, {
     return o
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  l = n(970731),
-  a = n(689938),
-  r = n(682894);
+var s = n(481060),
+  a = n(970731),
+  r = n(689938),
+  l = n(682894);
 
 function o(e) {
   let {
     guildId: t,
     markAsDismissed: o
   } = e;
-  return (0, s.jsx)(l.ZP, {
-    className: r.container,
-    asset: (0, s.jsx)("img", {
-      className: r.image,
+  return (0, i.jsx)(a.ZP, {
+    className: l.container,
+    asset: (0, i.jsx)("img", {
+      className: l.image,
       src: n(297806),
       alt: ""
     }),
-    header: a.Z.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_COACHMARK_TITLE,
-    headerClassName: r.header,
-    content: a.Z.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_COACHMARK_DESCRIPTION,
-    buttonCTA: a.Z.Messages.CHECK_IT_OUT,
+    header: r.Z.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_COACHMARK_TITLE,
+    headerClassName: l.header,
+    content: r.Z.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_COACHMARK_DESCRIPTION,
+    buttonCTA: r.Z.Messages.CHECK_IT_OUT,
     buttonProps: {
-      color: i.ButtonColors.WHITE,
-      innerClassName: r.primaryButton
+      color: s.ButtonColors.WHITE,
+      innerClassName: l.primaryButton
     },
     onClick: () => {
-      (0, i.openModalLazy)(async () => {
+      (0, s.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("5863"), n.e("53497")]).then(n.bind(n, 751212));
-        return n => (0, s.jsx)(e, {
+        } = await Promise.all([n.e("5863"), n.e("32328")]).then(n.bind(n, 751212));
+        return n => (0, i.jsx)(e, {
           ...n,
           guildId: t
         })
       })
     },
-    secondaryButtonCTA: a.Z.Messages.MAYBE_LATER,
+    secondaryButtonCTA: r.Z.Messages.MAYBE_LATER,
     secondaryButtonProps: {
-      look: i.ButtonLooks.LINK,
-      color: i.ButtonColors.WHITE
+      look: s.ButtonLooks.LINK,
+      color: s.ButtonColors.WHITE
     },
     markAsDismissed: o
   })

@@ -1,32 +1,32 @@
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  l = n(570140),
-  a = n(317770);
-let r = "CONNECTIONS_GRID_MODAL_KEY";
-class o extends a.Z {
+var s = n(481060),
+  a = n(570140),
+  r = n(317770);
+let l = "CONNECTIONS_GRID_MODAL_KEY";
+class o extends r.Z {
   _initialize() {
-    l.Z.subscribe("CONNECTIONS_GRID_MODAL_SHOW", this.handleShow), l.Z.subscribe("CONNECTIONS_GRID_MODAL_HIDE", this.handleHide)
+    a.Z.subscribe("CONNECTIONS_GRID_MODAL_SHOW", this.handleShow), a.Z.subscribe("CONNECTIONS_GRID_MODAL_HIDE", this.handleHide)
   }
   _terminate() {
-    l.Z.unsubscribe("CONNECTIONS_GRID_MODAL_SHOW", this.handleShow), l.Z.unsubscribe("CONNECTIONS_GRID_MODAL_HIDE", this.handleHide)
+    a.Z.unsubscribe("CONNECTIONS_GRID_MODAL_SHOW", this.handleShow), a.Z.unsubscribe("CONNECTIONS_GRID_MODAL_HIDE", this.handleHide)
   }
   handleShow(e) {
     let {
       onComplete: t,
-      excludedPlatformTypes: l,
-      includedPlatformTypes: a,
+      excludedPlatformTypes: a,
+      includedPlatformTypes: r,
       integrations: o,
       onCompleteApplication: c
     } = e;
-    !(0, i.hasModalOpen)(r) && (0, i.openModalLazy)(async () => {
+    !(0, s.hasModalOpen)(l) && (0, s.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("28538")]).then(n.bind(n, 51299));
-      return n => (0, s.jsx)(e, {
+      } = await n.e("28538").then(n.bind(n, 51299));
+      return n => (0, i.jsx)(e, {
         onComplete: t,
-        excludedPlatformTypes: l,
-        includedPlatformTypes: a,
+        excludedPlatformTypes: a,
+        includedPlatformTypes: r,
         integrations: o,
         onCompleteApplication: c,
         ...n
@@ -34,7 +34,7 @@ class o extends a.Z {
     })
   }
   handleHide() {
-    (0, i.closeModal)(r)
+    (0, s.closeModal)(l)
   }
 }
 t.Z = new o

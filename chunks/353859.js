@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   errorContainer: "errorContainer_f89360",
   errorIcon: "errorIcon_f89360",

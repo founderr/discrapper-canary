@@ -1,4 +1,5 @@
-t.r(e.exports = {
+"use strict";
+n.r(e.exports = {
   "spinner-wandering-cubes": "spinner-wandering-cubes_b6db20",
   "spinner-chasing-dots-rotate": "spinner-chasing-dots-rotate_b6db20",
   "spinner-chasing-dots-bounce": "spinner-chasing-dots-bounce_b6db20",

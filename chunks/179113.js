@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   keywordsTextArea: "keywordsTextArea_bdc518",
   paddingTop: "paddingTop_bdc518",

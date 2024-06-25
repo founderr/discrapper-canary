@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_effbe2",
   inner: "inner_effbe2",

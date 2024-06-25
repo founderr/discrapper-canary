@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   avatarUploader: "avatarUploader_e9b3be",
   avatarUploaderDisabled: "avatarUploaderDisabled_e9b3be",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   mainContainer: "mainContainer_f005b2",
   compactItemContainer: "compactItemContainer_f005b2",

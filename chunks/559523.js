@@ -8,7 +8,7 @@ var r = n(481060),
 t.Z = new s.Z(() => (0, r.openModalLazy)(async () => {
   let {
     default: e
-  } = await Promise.all([n.e("99387"), n.e("67607")]).then(n.bind(n, 520615));
+  } = await n.e("96075").then(n.bind(n, 520615));
   return t => (0, i.jsx)(e, {
     ...t
   })

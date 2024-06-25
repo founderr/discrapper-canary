@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   breadcrumbs: "breadcrumbs_befa4a",
   breadcrumbWrapper: "breadcrumbWrapper_befa4a",

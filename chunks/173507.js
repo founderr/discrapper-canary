@@ -13,7 +13,7 @@ function s(e, n) {
   a.qF.getSetting() ? (0, r.openModalLazy)(async () => {
     let {
       default: n
-    } = await Promise.all([t.e("99387"), t.e("5528"), t.e("91018")]).then(t.bind(t, 601572));
+    } = await Promise.all([t.e("5528"), t.e("90723")]).then(t.bind(t, 601572));
     return t => (0, l.jsx)(n, {
       ...t,
       onEnable: e,

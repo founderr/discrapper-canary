@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   arrowIcon: "arrowIcon_d8c86c",
   arrowIconExpanded: "arrowIconExpanded_d8c86c",

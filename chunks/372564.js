@@ -1,20 +1,20 @@
 n(47120);
-var l = n(735250),
-  i = n(470079),
-  s = n(120356),
-  a = n.n(s),
+var i = n(735250),
+  a = n(470079),
+  l = n(120356),
+  s = n.n(l),
   r = n(374470),
   o = n(481060),
   c = n(239091),
   u = n(822951),
   d = n(933557),
   h = n(454585),
-  m = n(984370),
-  E = n(981631),
-  p = n(689938),
-  g = n(504273);
+  p = n(984370),
+  m = n(981631),
+  _ = n(689938),
+  f = n(504273);
 
-function f(e, t, n) {
+function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -23,27 +23,27 @@ function f(e, t, n) {
   }) : e[t] = n, e
 }
 
-function C(e) {
+function g(e) {
   let {
     channel: t,
     onClose: n,
-    transitionState: i
-  } = e, s = (0, d.ZP)(t, !0);
-  return (0, l.jsx)(o.ModalRoot, {
-    transitionState: i,
-    "aria-label": p.Z.Messages.FORM_LABEL_CHANNEL_TOPIC,
-    children: (0, l.jsx)(o.ModalContent, {
-      children: (0, l.jsx)(u.Z, {
+    transitionState: a
+  } = e, l = (0, d.ZP)(t, !0);
+  return (0, i.jsx)(o.ModalRoot, {
+    transitionState: a,
+    "aria-label": _.Z.Messages.FORM_LABEL_CHANNEL_TOPIC,
+    children: (0, i.jsx)(o.ModalContent, {
+      children: (0, i.jsx)(u.Z, {
         selectable: !0,
         onClose: n,
-        renderHeader: () => (0, l.jsx)(o.Heading, {
+        renderHeader: () => (0, i.jsx)(o.Heading, {
           variant: "heading-lg/semibold",
-          children: s
+          children: l
         }),
-        children: (0, l.jsx)(o.Text, {
+        children: (0, i.jsx)(o.Text, {
           selectable: !0,
           variant: "text-md/normal",
-          className: g.content,
+          className: f.content,
           children: h.Z.parseTopic(t.topic, !0, {
             channelId: t.id
           })
@@ -53,26 +53,26 @@ function C(e) {
   })
 }
 
-function _(e) {
+function C(e) {
   return e.matches("a") || "highlight" === e.className || e.className.includes("mention")
 }
-class I extends i.Component {
+class I extends a.Component {
   render() {
     let {
       channel: e
     } = this.props;
-    return e.isMultiUserDM() || null == e.topic || 0 === e.topic.length ? null : (0, l.jsxs)(i.Fragment, {
-      children: [(0, l.jsx)(m.Z.Divider, {}), (0, l.jsxs)("div", {
-        className: a()(g.topic, g.expandable),
+    return e.isMultiUserDM() || null == e.topic || 0 === e.topic.length ? null : (0, i.jsxs)(a.Fragment, {
+      children: [(0, i.jsx)(p.Z.Divider, {}), (0, i.jsxs)("div", {
+        className: s()(f.topic, f.expandable),
         onMouseDown: this.onMouseDown,
         onMouseMove: this.onMouseMove,
         onMouseUp: this.onMouseUp,
         onContextMenu: this.handleContextMenu,
         onClick: this.handleClick,
-        children: [(0, l.jsx)(o.Clickable, {
+        children: [(0, i.jsx)(o.Clickable, {
           onClick: this.handleClick,
-          "aria-label": p.Z.Messages.OPEN_CHANNEL_TOPIC,
-          className: g.topicClickTarget
+          "aria-label": _.Z.Messages.OPEN_CHANNEL_TOPIC,
+          className: f.topicClickTarget
         }), h.Z.parseTopic(e.topic, !0, {
           channelId: e.id,
           allowLinks: !0
@@ -81,39 +81,39 @@ class I extends i.Component {
     })
   }
   constructor(...e) {
-    super(...e), f(this, "_mouseDown", !1), f(this, "_mouseUp", !1), f(this, "handleOpenTopic", e => {
+    super(...e), E(this, "_mouseDown", !1), E(this, "_mouseUp", !1), E(this, "handleOpenTopic", e => {
       let t = e.target;
       if ((0, r.k)(t)) {
-        if (_(t)) return;
+        if (C(t)) return;
         let e = t.parentNode;
-        if ((0, r.k)(e) && _(e)) return
-      }(0, o.openModal)(e => (0, l.jsx)(C, {
+        if ((0, r.k)(e) && C(e)) return
+      }(0, o.openModal)(e => (0, i.jsx)(g, {
         ...e,
         ...this.props
       }))
-    }), f(this, "onMouseDown", () => {
+    }), E(this, "onMouseDown", () => {
       this._mouseDown = !0
-    }), f(this, "onMouseMove", () => {
+    }), E(this, "onMouseMove", () => {
       this._mouseDown && (this._mouseDown = !1)
-    }), f(this, "onMouseUp", e => {
-      this._mouseDown && e.button !== E.AeJ.SECONDARY && this.handleOpenTopic(e), this._mouseUp = !0, this._mouseDown = !1
-    }), f(this, "handleContextMenu", e => {
+    }), E(this, "onMouseUp", e => {
+      this._mouseDown && e.button !== m.AeJ.SECONDARY && this.handleOpenTopic(e), this._mouseUp = !0, this._mouseDown = !1
+    }), E(this, "handleContextMenu", e => {
       let {
         channel: t,
-        guild: i
+        guild: a
       } = this.props;
       (0, c.jW)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("24783")]).then(n.bind(n, 439635));
-        return n => (0, l.jsx)(e, {
+        } = await n.e("24783").then(n.bind(n, 439635));
+        return n => (0, i.jsx)(e, {
           ...n,
           channel: t,
-          guild: i,
+          guild: a,
           includeTopic: !0
         })
       })
-    }), f(this, "handleClick", e => {
+    }), E(this, "handleClick", e => {
       if (this._mouseUp) {
         this._mouseUp = !1;
         return

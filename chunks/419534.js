@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   headerImage: "headerImage_da4ae3",
   header: "header_da4ae3",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   tooltipBodyContainer: "tooltipBodyContainer_eeaea3",
   tooltipPremiumFooterContainer: "tooltipPremiumFooterContainer_eeaea3",

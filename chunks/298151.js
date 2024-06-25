@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   background: "background_bbfa4c",
   discoverySettings: "discoverySettings_bbfa4c",

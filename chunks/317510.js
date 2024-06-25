@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   emptyState: "emptyState_c96e35",
   unifyTrialUpsell: "unifyTrialUpsell_c96e35",

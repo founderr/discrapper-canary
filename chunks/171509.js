@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   playButtonInner: "playButtonInner_deca39",
   syncButton: "syncButton_deca39",

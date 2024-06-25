@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_c7c1c7",
   searchBarContainer: "searchBarContainer_c7c1c7",

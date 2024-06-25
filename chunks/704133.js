@@ -9,7 +9,7 @@ t.Z = {
     (0, s.openModalLazy)(async () => {
       let {
         default: t
-      } = await Promise.all([n.e("99387"), n.e("2435")]).then(n.bind(n, 821606));
+      } = await n.e("2435").then(n.bind(n, 821606));
       return n => (0, i.jsx)(t, {
         ...n,
         url: e

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   emptyRoles: "emptyRoles_a930f1",
   emptyRolesText: "emptyRolesText_a930f1",

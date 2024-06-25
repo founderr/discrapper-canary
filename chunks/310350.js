@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   customStatus: "customStatus_cb55fc",
   customStatusEmoji: "customStatusEmoji_cb55fc",

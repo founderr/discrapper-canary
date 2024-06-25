@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   row: "row_b10b92",
   soundEditContainer: "soundEditContainer_b10b92",

@@ -30,7 +30,7 @@ let d = (n, e, l) => (0, t.jsx)(u.MenuItem, {
     action: () => (0, u.openModalLazy)(async () => {
       let {
         default: u
-      } = await Promise.all([a.e("99387"), a.e("7654"), a.e("9785")]).then(a.bind(a, 560114));
+      } = await Promise.all([a.e("7654"), a.e("17520")]).then(a.bind(a, 560114));
       return a => (0, t.jsx)(u, {
         ...a,
         guild: e,
@@ -47,7 +47,7 @@ let d = (n, e, l) => (0, t.jsx)(u.MenuItem, {
     action: () => (0, u.openModalLazy)(async () => {
       let {
         default: n
-      } = await Promise.all([a.e("99387"), a.e("88358")]).then(a.bind(a, 598402));
+      } = await a.e("88358").then(a.bind(a, 598402));
       return e => (0, t.jsx)(n, {
         ...e
       })

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_f03c49",
   autoWidth: "autoWidth_f03c49",

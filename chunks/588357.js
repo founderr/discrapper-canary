@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   flowerStarContainer: "flowerStarContainer_ff7d90",
   flowerStar: "flowerStar_ff7d90",

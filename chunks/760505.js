@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   svgContentRight: "svgContentRight_ed3a34",
   svgContentLeft: "svgContentLeft_ed3a34",

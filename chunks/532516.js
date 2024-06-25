@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_c60574",
   guildContainer: "guildContainer_c60574",

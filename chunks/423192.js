@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   emojiSection: "emojiSection_e58351",
   primaryEmoji: "primaryEmoji_e58351",

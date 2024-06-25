@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   scopes: "scopes_cf14a8",
   scope: "scope_cf14a8",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   keybindIndicator: "keybindIndicator_a49331",
   keybindIcon: "keybindIcon_a49331",

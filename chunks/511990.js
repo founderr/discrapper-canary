@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   upsell: "upsell_d9155b",
   emojis: "emojis_d9155b",

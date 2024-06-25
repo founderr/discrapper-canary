@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   textAreaContainer: "textAreaContainer_a779c5",
   collapseable: "collapseable_a779c5",

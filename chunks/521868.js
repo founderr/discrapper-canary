@@ -1,39 +1,39 @@
 n.d(t, {
   o: function() {
-    return h
+    return E
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-  l = n.n(i),
-  a = n(481060),
-  r = n(788307),
+var s = n(120356),
+  a = n.n(s),
+  r = n(481060),
+  l = n(788307),
   o = n(2052),
   c = n(785717),
-  u = n(695346),
-  d = n(689938),
-  E = n(701747);
+  d = n(695346),
+  u = n(689938),
+  _ = n(701747);
 
-function h(e, t) {
-  let i = (0, o.O)(),
+function E(e, t) {
+  let s = (0, o.O)(),
     {
-      trackUserProfileAction: h
+      trackUserProfileAction: E
     } = (0, c.KZ)();
 
-  function _(e) {
-    e.stopPropagation(), u.Ok.updateSetting(void 0)
+  function h(e) {
+    e.stopPropagation(), d.Ok.updateSetting(void 0)
   }
 
   function I() {
-    h({
+    E({
       action: "PRESS_SET_CUSTOM_STATUS"
-    }), (0, a.openModalLazy)(async () => {
+    }), (0, r.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("47484")]).then(n.bind(n, 211065));
-      return t => (0, s.jsx)(e, {
-        sourceAnalyticsContext: i,
+      } = await n.e("51714").then(n.bind(n, 211065));
+      return t => (0, i.jsx)(e, {
+        sourceAnalyticsContext: s,
         ...t
       })
     })
@@ -43,24 +43,24 @@ function h(e, t) {
       let {
         className: n
       } = t;
-      return (0, s.jsx)(r.I, {
+      return (0, i.jsx)(l.I, {
         className: n,
         emoji: e.emoji,
         animate: !0,
         hideTooltip: !0
       })
     } : void 0;
-    return (0, s.jsx)(a.MenuItem, {
+    return (0, i.jsx)(r.MenuItem, {
       id: "edit-custom-status",
-      label: d.Z.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
+      label: u.Z.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
       icon: n,
       focusedClassName: t,
       showIconFirst: !0,
-      hint: e => (0, s.jsx)(a.Clickable, {
+      hint: e => (0, i.jsx)(r.Clickable, {
         ...e,
-        onClick: _,
+        onClick: h,
         tabIndex: -1,
-        children: (0, s.jsx)(a.CircleXIcon, {
+        children: (0, i.jsx)(r.CircleXIcon, {
           size: "sm",
           color: "currentColor"
         })
@@ -68,12 +68,12 @@ function h(e, t) {
       action: I
     })
   }
-  return (0, s.jsx)(a.MenuItem, {
+  return (0, i.jsx)(r.MenuItem, {
     id: "set-custom-status",
     focusedClassName: t,
-    label: d.Z.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS_CTA,
-    icon: e => (0, s.jsx)("div", {
-      className: l()(E.customEmojiPlaceholder, e)
+    label: u.Z.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS_CTA,
+    icon: e => (0, i.jsx)("div", {
+      className: a()(_.customEmojiPlaceholder, e)
     }),
     action: I,
     showIconFirst: !0

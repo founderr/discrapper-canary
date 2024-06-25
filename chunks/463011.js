@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   addAnotherRuleCardContainer: "addAnotherRuleCardContainer_a57b58",
   mainRuleContainer: "mainRuleContainer_a57b58",

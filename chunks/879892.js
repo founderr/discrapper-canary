@@ -22,14 +22,14 @@ async function h(e) {
   let {
     analyticsLocations: t,
     analyticsLocation: h,
-    analyticsSourceLocation: S,
-    numberOfBoostsToAdd: f,
-    onClose: N,
-    closeLayer: A,
+    analyticsSourceLocation: f,
+    numberOfBoostsToAdd: S,
+    onClose: A,
+    closeLayer: N,
     onSubscriptionConfirmation: m,
     guild: O,
-    handleSubscribeModalClose: R,
-    disablePremiumUpsell: p,
+    handleSubscribeModalClose: p,
+    disablePremiumUpsell: R,
     inPopout: g,
     applicationId: C
   } = e, v = g ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT, L = l.default.getCurrentUser();
@@ -38,7 +38,7 @@ async function h(e) {
     (0, r.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("35822")]).then(n.bind(n, 444688));
+      } = await n.e("20102").then(n.bind(n, 444688));
       return t => {
         let {
           onClose: n,
@@ -59,14 +59,14 @@ async function h(e) {
   let M = (0, d.vx)(u.Z.boostSlots),
     P = M.length,
     y = e => {
-      null == N || N(), null == R || R(e)
+      null == A || A(), null == p || p(e)
     };
-  if (P > 0 && (null == f || P >= f)) {
+  if (P > 0 && (null == S || P >= S)) {
     let e;
-    1 === P ? e = M.slice(0, 1) : null != f && (e = M.slice(0, f)), await (0, r.openModalLazy)(async () => {
+    1 === P ? e = M.slice(0, 1) : null != S && (e = M.slice(0, S)), await (0, r.openModalLazy)(async () => {
       let {
         default: t
-      } = await Promise.all([n.e("49237"), n.e("99387"), n.e("15972"), n.e("12013"), n.e("29549"), n.e("8016"), n.e("22646"), n.e("30419"), n.e("64643")]).then(n.bind(n, 760558));
+      } = await Promise.all([n.e("15972"), n.e("12013"), n.e("29549"), n.e("8016"), n.e("22646"), n.e("30419"), n.e("65455")]).then(n.bind(n, 760558));
       return n => {
         let {
           onClose: r,
@@ -92,17 +92,17 @@ async function h(e) {
   } else(0, E.Z)({
     analyticsLocations: t,
     analyticsLocation: h,
-    analyticsSourceLocation: S,
+    analyticsSourceLocation: f,
     guildId: O.id,
     closeLayer: () => {
-      null == N || N(), null == A || A(), c.default.track(I.rMx.MODAL_DISMISSED, {
+      null == A || A(), null == N || N(), c.default.track(I.rMx.MODAL_DISMISSED, {
         type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
         location_section: h.section
       })
     },
-    totalNumberOfSlotsToAssign: null != f ? f : 1,
+    totalNumberOfSlotsToAssign: null != S ? S : 1,
     onCloseModal: y,
-    disablePremiumUpsell: p,
+    disablePremiumUpsell: R,
     onSubscriptionConfirmation: m,
     inPopout: g,
     applicationId: C

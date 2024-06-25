@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   buttonSparkleStar1: "buttonSparkleStar1_c7ea1d",
   buttonSparkleStar2: "buttonSparkleStar2_c7ea1d",

@@ -3,16 +3,16 @@ t.d(n, {
     return a
   }
 });
-var r = t(735250);
+var o = t(735250);
 t(470079);
-var o = t(481060);
+var r = t(481060);
 
 function a(e) {
-  (0, o.openModalLazy)(async () => {
+  (0, r.openModalLazy)(async () => {
     let {
       default: n
-    } = await Promise.all([t.e("99387"), t.e("16359")]).then(t.bind(t, 588091));
-    return t => (0, r.jsx)(n, {
+    } = await t.e("16359").then(t.bind(t, 588091));
+    return t => (0, o.jsx)(n, {
       ...e,
       ...t
     })

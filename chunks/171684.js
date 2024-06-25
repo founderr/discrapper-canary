@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   mutuals: "mutuals_dc9488",
   section: "section_dc9488",

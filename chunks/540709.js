@@ -7,7 +7,7 @@ t.Z = {
     (0, r.ZD)(async () => {
       let {
         default: t
-      } = await Promise.all([n.e("99387"), n.e("27751")]).then(n.bind(n, 783576));
+      } = await n.e("27751").then(n.bind(n, 783576));
       return n => (0, i.jsx)(t, {
         ...n,
         href: e

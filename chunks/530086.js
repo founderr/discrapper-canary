@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   containerWrapper: "containerWrapper_e18107",
   animation: "animation_e18107",

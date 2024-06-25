@@ -1,139 +1,139 @@
-l.d(n, {
+n.d(t, {
   Z: function() {
-    return Z
+    return N
   }
-}), l(47120);
-var t = l(735250),
-  i = l(470079),
-  a = l(399606),
-  s = l(481060),
-  r = l(100527),
-  o = l(906732),
-  c = l(592125),
-  d = l(810090),
-  u = l(566620),
-  g = l(146936),
-  p = l(678173),
-  m = l(636508),
-  v = l(696068),
-  I = l(361213),
-  x = l(952561),
-  E = l(778569),
-  T = l(182906),
-  h = l(513202),
-  f = l(412019),
-  C = l(431136),
-  _ = l(226799),
-  S = l(689938),
-  j = l(123849);
+}), n(47120);
+var i = n(735250),
+  a = n(470079),
+  l = n(399606),
+  s = n(481060),
+  r = n(100527),
+  o = n(906732),
+  c = n(592125),
+  d = n(810090),
+  u = n(566620),
+  g = n(146936),
+  p = n(678173),
+  v = n(636508),
+  m = n(696068),
+  x = n(361213),
+  I = n(952561),
+  h = n(778569),
+  _ = n(182906),
+  f = n(513202),
+  T = n(412019),
+  C = n(431136),
+  E = n(226799),
+  S = n(689938),
+  j = n(123849);
 
-function Z(e) {
-  var n;
+function N(e) {
+  var t;
   let {
-    applicationId: l,
+    applicationId: n,
     guildId: g,
-    channelId: m,
-    onActivityLaunch: v
+    channelId: v,
+    onActivityLaunch: m
   } = e, {
-    analyticsLocations: x
+    analyticsLocations: I
   } = (0, o.ZP)(r.Z.ACTIVITY_SHELF_ACTIVITY_DETAILS);
-  i.useEffect(() => {
+  a.useEffect(() => {
     (0, u.w1)({
       guildId: g
     })
   }, [g]);
-  let T = (0, E.Z)({
-      applicationId: null != l ? l : "",
+  let _ = (0, h.Z)({
+      applicationId: null != n ? n : "",
       size: 2048
     }),
-    h = (0, a.e7)([c.Z], () => c.Z.getChannel(m)),
-    f = (0, p.T)(null != g ? g : null, l, h);
-  if (null == f) return null;
-  let C = null != f.activity.activity_preview_video_asset_id ? (0, I.Z)(l, f.activity.activity_preview_video_asset_id) : null,
-    Z = _.o[l],
-    M = (null == Z ? void 0 : Z.playersSuggestionMin) != null && (null == Z ? void 0 : Z.playersSuggestionMax) != null ? "".concat(Z.playersSuggestionMin, " - ").concat(Z.playersSuggestionMax) : void 0;
-  return (0, t.jsx)(o.Gt, {
-    value: x,
-    children: (0, t.jsx)("div", {
+    f = (0, l.e7)([c.Z], () => c.Z.getChannel(v)),
+    T = (0, p.T)(null != g ? g : null, n, f);
+  if (null == T) return null;
+  let C = null != T.activity.activity_preview_video_asset_id ? (0, x.Z)(n, T.activity.activity_preview_video_asset_id) : null,
+    N = E.o[n],
+    A = (null == N ? void 0 : N.playersSuggestionMin) != null && (null == N ? void 0 : N.playersSuggestionMax) != null ? "".concat(N.playersSuggestionMin, " - ").concat(N.playersSuggestionMax) : void 0;
+  return (0, i.jsx)(o.Gt, {
+    value: I,
+    children: (0, i.jsx)("div", {
       className: j.scrollContainer,
-      children: (0, t.jsxs)(s.Scroller, {
+      children: (0, i.jsxs)(s.Scroller, {
         className: j.scroller,
-        children: [(0, t.jsx)("div", {
+        children: [(0, i.jsx)("div", {
           className: j.launcherOuterContainer,
-          children: (0, t.jsx)(N, {
-            activityItem: f,
-            onLaunch: v,
-            channelId: m
+          children: (0, i.jsx)(M, {
+            activityItem: T,
+            onLaunch: m,
+            channelId: v
           })
-        }), (0, t.jsxs)("div", {
+        }), (0, i.jsxs)("div", {
           className: j.activityDetailsContainer,
-          children: [(0, t.jsxs)("div", {
-            children: [null != C ? (0, t.jsx)("div", {
+          children: [(0, i.jsxs)("div", {
+            children: [null != C ? (0, i.jsx)("div", {
               className: j.heroVideoContainer,
-              children: (0, t.jsx)(d.Z, {
+              children: (0, i.jsx)(d.Z, {
                 loop: !0,
                 autoPlay: !0,
                 muted: !0,
                 className: j.heroVideo,
                 src: C,
-                poster: T.url
+                poster: _.url
               })
-            }) : null, (0, t.jsx)("div", {
+            }) : null, (0, i.jsx)("div", {
               className: j.detailsTitle,
-              children: (0, t.jsx)(s.Heading, {
+              children: (0, i.jsx)(s.Heading, {
                 variant: "heading-xxl/bold",
-                children: f.application.name
+                children: T.application.name
               })
-            }), (0, t.jsxs)("div", {
+            }), (0, i.jsxs)("div", {
               className: j.detailsDetails,
-              children: [null != M ? (0, t.jsxs)("div", {
+              children: [null != A ? (0, i.jsxs)("div", {
                 className: j.detailItem,
-                children: [(0, t.jsx)(s.GroupIcon, {
+                children: [(0, i.jsx)(s.GroupIcon, {
                   size: "xs",
                   color: "currentColor"
-                }), (0, t.jsx)(s.Text, {
+                }), (0, i.jsx)(s.Text, {
                   variant: "text-xs/semibold",
                   className: j.detailItemText,
                   children: S.Z.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_PLAYERS.format({
-                    nPlayers: M
+                    nPlayers: A
                   })
                 })]
-              }) : null, (null == Z ? void 0 : Z.timeSuggestionMinutes) != null ? (0, t.jsxs)("div", {
+              }) : null, (null == N ? void 0 : N.timeSuggestionMinutes) != null ? (0, i.jsxs)("div", {
                 className: j.detailItem,
-                children: [(0, t.jsx)(s.HourglassIcon, {
+                children: [(0, i.jsx)(s.HourglassIcon, {
                   size: "xs",
                   color: "currentColor"
-                }), (0, t.jsx)(s.Text, {
+                }), (0, i.jsx)(s.Text, {
                   variant: "text-xs/semibold",
                   className: j.detailItemText,
                   children: S.Z.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_MINUTES.format({
-                    nMinutes: Z.timeSuggestionMinutes
+                    nMinutes: N.timeSuggestionMinutes
                   })
                 })]
-              }) : null, (0, t.jsxs)("div", {
+              }) : null, (0, i.jsxs)("div", {
                 className: j.detailItem,
-                children: [(0, t.jsx)(s.TagsIcon, {
+                children: [(0, i.jsx)(s.TagsIcon, {
                   size: "xs",
                   color: "currentColor"
-                }), (0, t.jsx)(s.Text, {
+                }), (0, i.jsx)(s.Text, {
                   variant: "text-xs/semibold",
                   className: j.detailItemText,
-                  children: f.application.tags.slice(0, 3).join(", ")
+                  children: T.application.tags.slice(0, 3).join(", ")
                 })]
               })]
             })]
-          }), (0, t.jsx)(s.Heading, {
+          }), (0, i.jsx)(s.Heading, {
             variant: "heading-lg/medium",
             className: j.detailsDescription,
-            children: f.application.description
-          }), (0, t.jsx)("div", {
+            children: T.application.description
+          }), (0, i.jsx)("div", {
             className: j.divider
-          }), (0, t.jsx)("div", {
+          }), (0, i.jsx)("div", {
             className: j.imagesContainer,
-            children: (null !== (n = null == Z ? void 0 : Z.gameplayImageUrls) && void 0 !== n ? n : []).map(e => (0, t.jsx)("img", {
+            children: (null !== (t = null == N ? void 0 : N.gameplayImageUrls) && void 0 !== t ? t : []).map(e => (0, i.jsx)("img", {
               src: e,
               alt: S.Z.Messages.EMBEDDED_ACTIVITIES_GAMEPLAY_ALT.format({
-                activityName: f.application.name
+                activityName: T.application.name
               }),
               className: j.activityImage
             }, e))
@@ -144,106 +144,106 @@ function Z(e) {
   })
 }
 
-function N(e) {
-  var n, r;
+function M(e) {
+  var t, r;
   let {
     activityItem: d,
     onLaunch: u,
     channelId: p
-  } = e, I = (0, E.Z)({
+  } = e, x = (0, h.Z)({
     applicationId: d.application.id,
     size: 2048
   }), {
-    analyticsLocations: _
-  } = (0, o.ZP)(), Z = (0, x.Z)(), [N, M] = i.useState(null !== (n = (0, m.$)({
+    analyticsLocations: E
+  } = (0, o.ZP)(), N = (0, I.Z)(), [M, A] = a.useState(null !== (t = (0, v.$)({
     allowGdmActivityChannelSuggestion: !0
-  })) && void 0 !== n ? n : void 0), [A, D] = i.useState(null !== (r = (0, v.d)({
-    guildId: N,
+  })) && void 0 !== t ? t : void 0), [Z, b] = a.useState(null !== (r = (0, m.d)({
+    guildId: M,
     allowGdmActivityChannelSuggestion: !0
-  })) && void 0 !== r ? r : void 0), y = (0, a.e7)([c.Z], () => c.Z.getChannel(A), [A]), b = (0, m.W)(), L = (0, v.F)(N), V = i.useCallback(() => {
+  })) && void 0 !== r ? r : void 0), y = (0, l.e7)([c.Z], () => c.Z.getChannel(Z), [Z]), D = (0, v.W)(), L = (0, m.F)(M), O = a.useCallback(() => {
     var e;
-    if (null != A)(0, g.Z)({
+    if (null != Z)(0, g.Z)({
       targetApplicationId: null == d ? void 0 : null === (e = d.application) || void 0 === e ? void 0 : e.id,
-      currentEmbeddedApplication: Z,
-      channelId: A,
-      guildId: N,
-      embeddedActivitiesManager: h.Z,
-      analyticsLocations: _
+      currentEmbeddedApplication: N,
+      channelId: Z,
+      guildId: M,
+      embeddedActivitiesManager: f.Z,
+      analyticsLocations: E
     }).then(u)
-  }, [d, _, Z, u, A, N]), R = i.useCallback(() => {
+  }, [d, E, N, u, Z, M]), B = a.useCallback(() => {
     (0, s.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([l.e("99387"), l.e("60133"), l.e("36925")]).then(l.bind(l, 827940));
-      return n => (0, t.jsx)(e, {
+      } = await Promise.all([n.e("60133"), n.e("28784")]).then(n.bind(n, 827940));
+      return t => (0, i.jsx)(e, {
         activityItem: d,
-        ...n,
-        analyticsLocations: _
+        ...t,
+        analyticsLocations: E
       })
     })
-  }, [d, _]), O = null == y || null != y.guild_id && !(null != N && null != A && b.some(e => e.value === N) && L.some(e => e.value.channel.id === A)) && !0;
-  return (0, t.jsxs)("div", {
+  }, [d, E]), V = null == y || null != y.guild_id && !(null != M && null != Z && D.some(e => e.value === M) && L.some(e => e.value.channel.id === Z)) && !0;
+  return (0, i.jsxs)("div", {
     className: j.launcherInnerContainer,
-    children: [(0, t.jsx)(T.Z, {
+    children: [(0, i.jsx)(_.Z, {
       applicationName: d.application.name,
-      imageBackground: I,
+      imageBackground: x,
       imageClassName: j.launchImage,
       imageNotFoundClassName: j.brokenLaunchImage
-    }), (0, t.jsx)(s.Text, {
+    }), (0, i.jsx)(s.Text, {
       variant: "text-md/medium",
       children: S.Z.Messages.EMBEDDED_ACTIVITIES_START_OR_SHARE
-    }), null == p ? (0, t.jsxs)(t.Fragment, {
-      children: [(0, t.jsx)(s.Select, {
+    }), null == p ? (0, i.jsxs)(i.Fragment, {
+      children: [(0, i.jsx)(s.Select, {
         placeholder: S.Z.Messages.GUILD_SELECT,
         optionClassName: j.__invalid_option,
-        options: b,
+        options: D,
         renderOptionValue: e => {
-          let n = e.find(e => e.value === N);
-          return null == n ? null : (0, t.jsx)(C.m, {
-            guildId: n.value
+          let t = e.find(e => e.value === M);
+          return null == t ? null : (0, i.jsx)(C.m, {
+            guildId: t.value
           })
         },
         renderOptionLabel: e => {
           let {
-            value: n
+            value: t
           } = e;
-          return (0, t.jsx)(C.m, {
-            guildId: n
+          return (0, i.jsx)(C.m, {
+            guildId: t
           })
         },
-        isSelected: e => e === N,
+        isSelected: e => e === M,
         select: e => {
-          var n;
-          M(e), D(null !== (n = (0, v.d)({
+          var t;
+          A(e), b(null !== (t = (0, m.d)({
             guildId: e
-          })) && void 0 !== n ? n : void 0)
+          })) && void 0 !== t ? t : void 0)
         },
         serialize: e => e
-      }), (0, t.jsx)(s.Select, {
+      }), (0, i.jsx)(s.Select, {
         placeholder: S.Z.Messages.EMBEDDED_ACTIVITIES_SELECT_VOICE_CHANNEL,
         optionClassName: j.__invalid_option,
         options: L,
         isSelected: e => {
           let {
-            channel: n
+            channel: t
           } = e;
-          return n.id === A
+          return t.id === Z
         },
         select: e => {
           let {
-            channel: n
+            channel: t
           } = e;
-          return D(n.id)
+          return b(t.id)
         },
         serialize: e => {
           let {
-            channel: n
+            channel: t
           } = e;
-          return n.id
+          return t.id
         },
         renderOptionValue: () => {
-          let e = L.find(e => e.value.channel.id === A);
-          return null == e ? null : (0, t.jsx)(f.O, {
+          let e = L.find(e => e.value.channel.id === Z);
+          return null == e ? null : (0, i.jsx)(T.O, {
             channel: e.value.channel,
             users: e.value.users
           })
@@ -251,40 +251,40 @@ function N(e) {
         renderOptionLabel: e => {
           let {
             value: {
-              channel: n,
-              users: l
+              channel: t,
+              users: n
             }
           } = e;
-          return (0, t.jsx)(f.O, {
-            channel: n,
-            users: l
+          return (0, i.jsx)(T.O, {
+            channel: t,
+            users: n
           })
         }
-      }), (0, t.jsx)(s.Button, {
+      }), (0, i.jsx)(s.Button, {
         fullWidth: !0,
-        disabled: O,
-        onClick: V,
+        disabled: V,
+        onClick: O,
         children: S.Z.Messages.START
-      }), (0, t.jsx)("div", {
+      }), (0, i.jsx)("div", {
         className: j.divider
-      }), (0, t.jsx)(s.Button, {
+      }), (0, i.jsx)(s.Button, {
         fullWidth: !0,
         color: s.Button.Colors.PRIMARY,
-        onClick: R,
+        onClick: B,
         children: S.Z.Messages.SHARE
       })]
-    }) : (0, t.jsxs)("div", {
+    }) : (0, i.jsxs)("div", {
       className: j.singleRowShareContainer,
-      children: [(0, t.jsx)(s.Button, {
+      children: [(0, i.jsx)(s.Button, {
         fullWidth: !0,
-        disabled: O,
-        onClick: V,
+        disabled: V,
+        onClick: O,
         children: S.Z.Messages.START
-      }), (0, t.jsx)(s.Button, {
+      }), (0, i.jsx)(s.Button, {
         className: j.shareIconButton,
         color: s.Button.Colors.PRIMARY,
-        onClick: R,
-        children: (0, t.jsx)(s.ArrowAngleLeftUpIcon, {
+        onClick: B,
+        children: (0, i.jsx)(s.ArrowAngleLeftUpIcon, {
           size: "md",
           color: "currentColor"
         })

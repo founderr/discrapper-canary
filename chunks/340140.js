@@ -1,115 +1,115 @@
-a.r(s), a(47120);
-var l = a(735250),
-  t = a(470079),
-  n = a(481060),
-  r = a(285952),
-  _ = a(538211),
-  o = a(698066),
-  E = a(111810),
-  R = a(689938),
-  i = a(190899),
-  u = a(425060);
+t.r(s), t(47120);
+var a = t(735250),
+  l = t(470079),
+  n = t(481060),
+  o = t(285952),
+  r = t(538211),
+  _ = t(698066),
+  i = t(111810),
+  E = t(689938),
+  R = t(190899),
+  u = t(425060);
 
-function M(e, s, a) {
+function c(e, s, t) {
   return s in e ? Object.defineProperty(e, s, {
-    value: a,
+    value: t,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[s] = a, e
+  }) : e[s] = t, e
 }
-class d extends t.PureComponent {
+class M extends l.PureComponent {
   render() {
     let {
       isStreamer: e,
       transitionState: s,
-      onClose: a
+      onClose: t
     } = this.props, {
-      problem: t
+      problem: l
     } = this.state;
-    return (0, l.jsxs)(n.ModalRoot, {
+    return (0, a.jsxs)(n.ModalRoot, {
       transitionState: s,
       size: n.ModalSize.SMALL,
-      "aria-label": R.Z.Messages.STREAM_REPORT_A_PROBLEM,
-      children: [(0, l.jsx)(E.Z, {}), (0, l.jsxs)(n.ModalHeader, {
+      "aria-label": E.Z.Messages.STREAM_REPORT_A_PROBLEM,
+      children: [(0, a.jsx)(i.Z, {}), (0, a.jsxs)(n.ModalHeader, {
         separator: !1,
-        children: [(0, l.jsx)(n.ModalCloseButton, {
+        children: [(0, a.jsx)(n.ModalCloseButton, {
           className: u.closeButton,
-          onClick: a
-        }), (0, l.jsx)(n.FormTitle, {
+          onClick: t
+        }), (0, a.jsx)(n.FormTitle, {
           tag: "h2",
           className: u.title,
-          children: R.Z.Messages.STREAM_REPORT_A_PROBLEM
+          children: E.Z.Messages.STREAM_REPORT_A_PROBLEM
         })]
-      }), (0, l.jsxs)(n.ModalContent, {
+      }), (0, a.jsxs)(n.ModalContent, {
         className: u.content,
-        children: [(0, l.jsx)(n.Text, {
+        children: [(0, a.jsx)(n.Text, {
           variant: "text-sm/normal",
-          children: R.Z.Messages.STREAM_REPORT_PROBLEM_BODY
-        }), (0, l.jsx)(n.FormItem, {
-          title: R.Z.Messages.STREAM_REPORT_LABEL,
-          children: (0, l.jsx)(n.SingleSelect, {
-            placeholder: R.Z.Messages.STREAM_REPORT_PLACEHOLDER,
-            options: (0, _.Z)(e, !1),
+          children: E.Z.Messages.STREAM_REPORT_PROBLEM_BODY
+        }), (0, a.jsx)(n.FormItem, {
+          title: E.Z.Messages.STREAM_REPORT_LABEL,
+          children: (0, a.jsx)(n.SingleSelect, {
+            placeholder: E.Z.Messages.STREAM_REPORT_PLACEHOLDER,
+            options: (0, r.Z)(e, !1),
             onChange: this.handleChanged,
-            value: t,
+            value: l,
             maxVisibleItems: 4
           })
-        }), (0, l.jsx)("div", {
-          className: i.art
+        }), (0, a.jsx)("div", {
+          className: R.art
         })]
-      }), (0, l.jsxs)(n.ModalFooter, {
+      }), (0, a.jsxs)(n.ModalFooter, {
         className: u.__invalid_footer,
-        children: [(0, l.jsx)(n.Button, {
+        children: [(0, a.jsx)(n.Button, {
           color: n.Button.Colors.BRAND,
-          disabled: null == t,
+          disabled: null == l,
           onClick: this.handleSubmit,
-          children: R.Z.Messages.STREAM_REPORT_SUBMIT
-        }), (0, l.jsx)(r.Z, {
-          children: (0, l.jsx)(n.Button, {
+          children: E.Z.Messages.STREAM_REPORT_SUBMIT
+        }), (0, a.jsx)(o.Z, {
+          children: (0, a.jsx)(n.Button, {
             look: n.Button.Looks.LINK,
             color: n.Button.Colors.PRIMARY,
             size: n.Button.Sizes.NONE,
-            onClick: a,
-            children: R.Z.Messages.CANCEL
+            onClick: t,
+            children: E.Z.Messages.CANCEL
           })
         })]
       })]
     })
   }
   constructor(...e) {
-    super(...e), M(this, "state", {
+    super(...e), c(this, "state", {
       problem: null
-    }), M(this, "handleChanged", e => {
+    }), c(this, "handleChanged", e => {
       this.setState({
         problem: null != e ? e : null
       })
-    }), M(this, "handleSubmit", () => {
+    }), c(this, "handleSubmit", () => {
       let {
         stream: e,
         streamApplication: s,
-        analyticsData: t,
-        onClose: r
+        analyticsData: l,
+        onClose: o
       } = this.props, {
-        problem: _
+        problem: r
       } = this.state;
-      (0, o.Z)({
-        problem: _,
+      (0, _.Z)({
+        problem: r,
         stream: e,
         feedback: "",
         streamApplication: s,
-        analyticsData: t,
+        analyticsData: l,
         location: "Stream"
-      }), r(), (0, n.openModalLazy)(async () => {
+      }), o(), (0, n.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([a.e("99387"), a.e("14466")]).then(a.bind(a, 729328));
-        return s => (0, l.jsx)(e, {
-          body: R.Z.Messages.STREAM_REPORTED_BODY,
+        } = await t.e("14466").then(t.bind(t, 729328));
+        return s => (0, a.jsx)(e, {
+          body: E.Z.Messages.STREAM_REPORTED_BODY,
           ...s
         })
       })
     })
   }
 }
-s.default = d
+s.default = M

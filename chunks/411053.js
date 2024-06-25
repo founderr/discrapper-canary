@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_b9f8a6",
   divider: "divider_b9f8a6",

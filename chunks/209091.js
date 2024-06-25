@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   wrapper: "wrapper_f90abb",
   childWrapper: "childWrapper_f90abb",

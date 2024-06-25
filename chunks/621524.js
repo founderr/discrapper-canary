@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   header: "header_df2e1e",
   prompts: "prompts_df2e1e",

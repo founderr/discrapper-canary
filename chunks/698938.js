@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   editorAnimate: "editorAnimate_bcfa1e",
   title: "title_bcfa1e",

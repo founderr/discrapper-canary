@@ -1,12 +1,12 @@
 var i = t(735250);
 t(470079);
-var l = t(481060),
-  r = t(689938);
+var r = t(481060),
+  l = t(689938);
 n.Z = {
   openSecureFramesUserVerificationModal: function(e, n) {
-    (0, l.openModalLazy)(async () => {
-      let l = (await Promise.all([t.e("99387"), t.e("33397")]).then(t.bind(t, 963410))).default;
-      return t => (0, i.jsx)(l, {
+    (0, r.openModalLazy)(async () => {
+      let r = (await t.e("33397").then(t.bind(t, 963410))).default;
+      return t => (0, i.jsx)(r, {
         userId: e,
         channelId: n,
         ...t
@@ -19,17 +19,17 @@ n.Z = {
       subtitle: u,
       onConfirm: a
     } = e;
-    (0, l.openModalLazy)(async () => {
+    (0, r.openModalLazy)(async () => {
       let {
         ConfirmModal: e
       } = await Promise.resolve().then(t.bind(t, 481060));
       return t => (0, i.jsx)(e, {
         header: n,
-        confirmText: r.Z.Messages.CONFIRM,
-        cancelText: r.Z.Messages.CANCEL,
+        confirmText: l.Z.Messages.CONFIRM,
+        cancelText: l.Z.Messages.CANCEL,
         onConfirm: a,
         ...t,
-        children: (0, i.jsx)(l.Text, {
+        children: (0, i.jsx)(r.Text, {
           variant: "text-sm/normal",
           color: "header-secondary",
           children: u

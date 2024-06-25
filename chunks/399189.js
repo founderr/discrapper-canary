@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   themed: "themed_a0",
   selected: "selected_a0",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   combobox: "combobox_eef3ef",
   list: "list_eef3ef",

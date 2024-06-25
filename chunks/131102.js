@@ -1,58 +1,58 @@
-s.r(n), s.d(n, {
+n.r(t), n.d(t, {
   default: function() {
-    return C
+    return I
   }
 });
-var t = s(735250),
-  a = s(470079),
-  l = s(77866),
-  o = s(704215),
-  r = s(481060),
-  E = s(605236),
-  i = s(624659),
-  u = s(626135),
-  c = s(263226),
-  d = s(225634),
-  I = s(981631),
-  _ = s(689938);
+var s = n(735250),
+  a = n(470079),
+  o = n(77866),
+  l = n(704215),
+  r = n(481060),
+  i = n(605236),
+  E = n(624659),
+  u = n(626135),
+  c = n(263226),
+  d = n(225634),
+  _ = n(981631),
+  b = n(689938);
 
-function C(e) {
+function I(e) {
   let {
-    transitionState: n,
-    onClose: C,
-    guildId: f,
-    guildName: A
-  } = e, T = (0, l.Z)(d.S);
+    transitionState: t,
+    onClose: I,
+    guildId: C,
+    guildName: f
+  } = e, m = (0, o.Z)(d.S);
   return a.useEffect(() => {
-    u.default.track(I.rMx.OPEN_MODAL, {
+    u.default.track(_.rMx.OPEN_MODAL, {
       type: "Guild Leave Report"
     })
-  }, []), (0, t.jsx)(i.Z, {
-    header: _.Z.Messages.GUILD_LEAVE_FEEDBACK_HEADER,
-    body: _.Z.Messages.GUILD_LEAVE_FEEDBACK_BODY.format({
-      server: A
+  }, []), (0, s.jsx)(E.Z, {
+    header: b.Z.Messages.GUILD_LEAVE_FEEDBACK_HEADER,
+    body: b.Z.Messages.GUILD_LEAVE_FEEDBACK_BODY.format({
+      server: f
     }),
-    problems: T,
+    problems: m,
     onSubmit: function(e) {
       let {
-        problem: n,
+        problem: t,
         dontShowAgain: a,
-        feedback: l
+        feedback: o
       } = e;
-      a && (0, E.EW)(o.z.GUILD_LEAVE_FEEDBACK);
-      let i = null == n;
-      (0, c.Z)(f, n, l, i), !i && (0, r.openModalLazy)(async () => {
+      a && (0, i.EW)(l.z.GUILD_LEAVE_FEEDBACK);
+      let E = null == t;
+      (0, c.Z)(C, t, o, E), !E && (0, r.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([s.e("99387"), s.e("14466")]).then(s.bind(s, 729328));
-        return n => (0, t.jsx)(e, {
-          body: _.Z.Messages.GUILD_LEAVE_FEEDBACK_REPORT,
-          ...n
+        } = await n.e("14466").then(n.bind(n, 729328));
+        return t => (0, s.jsx)(e, {
+          body: b.Z.Messages.GUILD_LEAVE_FEEDBACK_REPORT,
+          ...t
         })
       })
     },
-    onClose: C,
-    transitionState: n,
+    onClose: I,
+    transitionState: t,
     otherKey: d.G.OTHER,
     hasCloseButton: !0
   })

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   shinyButton: "shinyButton_a669f8",
   buttonShine: "buttonShine_a669f8",

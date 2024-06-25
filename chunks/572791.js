@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   searchBox: "searchBox_d83b4d",
   searchBoxInput: "searchBoxInput_d83b4d",

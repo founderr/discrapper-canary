@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_e44302",
   hamburger: "hamburger_e44302",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   root: "root_d5ef29",
   pipMode: "pipMode_d5ef29",

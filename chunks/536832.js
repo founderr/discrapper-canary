@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_dbc5a4",
   content: "content_dbc5a4",

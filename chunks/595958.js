@@ -1,4 +1,5 @@
-t.r(e.exports = {
+"use strict";
+n.r(e.exports = {
   emojiButton: "emojiButton_af14ca",
   emojiButtonNormal: "emojiButtonNormal_af14ca emojiButton_af14ca",
   emojiButtonHovered: "emojiButtonHovered_af14ca emojiButton_af14ca",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   pulseIcon: "pulseIcon_cecf00",
   pulseButton: "pulseButton_cecf00",

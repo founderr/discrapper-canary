@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   wrapper: "wrapper_bb3b80 " + n("520076").scrollbarGhost,
   rightSplit: "rightSplit_bb3b80",

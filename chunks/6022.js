@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   icon: "icon_cfed93",
   voiceIcon: "voiceIcon_cfed93",

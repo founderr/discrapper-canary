@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   modal: "modal_f2caa8",
   modalInner: "modalInner_f2caa8",

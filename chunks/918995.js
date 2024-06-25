@@ -1,62 +1,62 @@
-n.r(s), n(47120);
-var t = n(735250),
-  l = n(470079),
-  a = n(481060),
-  o = n(233787),
-  r = n(689938);
+s.r(n), s(47120);
+var a = s(735250),
+  c = s(470079),
+  t = s(481060),
+  i = s(233787),
+  l = s(689938);
 
-function c(e, s, n) {
-  return s in e ? Object.defineProperty(e, s, {
-    value: n,
+function o(e, n, s) {
+  return n in e ? Object.defineProperty(e, n, {
+    value: s,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[s] = n, e
+  }) : e[n] = s, e
 }
-class i extends l.Component {
+class r extends c.Component {
   render() {
     let {
       transitionState: e
     } = this.props;
-    return (0, t.jsxs)(o.Z, {
+    return (0, a.jsxs)(i.Z, {
       transitionState: e,
-      "aria-label": r.Z.Messages.PREMIUM_NOT_CLAIMED,
-      children: [(0, t.jsx)(o.Z.Header, {
-        children: r.Z.Messages.PREMIUM_NOT_CLAIMED
-      }), (0, t.jsx)(o.Z.Content, {
-        type: o.Z.Types.UNCLAIMED,
-        children: r.Z.Messages.PREMIUM_NOT_CLAIMED_BODY
-      }), (0, t.jsx)(o.Z.Footer, {
+      "aria-label": l.Z.Messages.PREMIUM_NOT_CLAIMED,
+      children: [(0, a.jsx)(i.Z.Header, {
+        children: l.Z.Messages.PREMIUM_NOT_CLAIMED
+      }), (0, a.jsx)(i.Z.Content, {
+        type: i.Z.Types.UNCLAIMED,
+        children: l.Z.Messages.PREMIUM_NOT_CLAIMED_BODY
+      }), (0, a.jsx)(i.Z.Footer, {
         secondary: {
           onClick: this.cancel,
-          label: r.Z.Messages.NEVERMIND
+          label: l.Z.Messages.NEVERMIND
         },
         primary: {
           onClick: this.claimAccount,
-          label: r.Z.Messages.CLAIM_ACCOUNT
+          label: l.Z.Messages.CLAIM_ACCOUNT
         }
       })]
     })
   }
   constructor(...e) {
-    super(...e), c(this, "cancel", () => {
+    super(...e), o(this, "cancel", () => {
       let {
         onClose: e
       } = this.props;
       null == e || e()
-    }), c(this, "claimAccount", () => {
+    }), o(this, "claimAccount", () => {
       let {
         onClose: e
       } = this.props;
-      null == e || e(), (0, a.openModalLazy)(async () => {
+      null == e || e(), (0, t.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("31093")]).then(n.bind(n, 324239));
-        return s => (0, t.jsx)(e, {
-          ...s
+        } = await s.e("60827").then(s.bind(s, 324239));
+        return n => (0, a.jsx)(e, {
+          ...n
         })
       })
     })
   }
 }
-s.default = i
+n.default = r

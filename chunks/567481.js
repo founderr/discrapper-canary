@@ -1,24 +1,24 @@
 n(47120);
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  l = n(570140),
-  a = n(988298),
-  r = n(447543),
+var s = n(481060),
+  a = n(570140),
+  r = n(988298),
+  l = n(447543),
   o = n(13245),
   c = n(596223),
-  u = n(293273),
-  d = n(885110),
-  E = n(996106),
-  h = n(914946),
-  _ = n(452426),
+  d = n(293273),
+  u = n(885110),
+  _ = n(996106),
+  E = n(914946),
+  h = n(452426),
   I = n(852926),
   m = n(186901),
-  T = n(981631);
+  p = n(981631);
 t.Z = {
-  [T.Etm.SET_OVERLAY_LOCKED]: {
+  [p.Etm.SET_OVERLAY_LOCKED]: {
     scope: m.lH,
-    validation: e => (0, _.Z)(e).required().keys({
+    validation: e => (0, h.Z)(e).required().keys({
       locked: e.boolean().required(),
       pid: e.number().min(0).required()
     }),
@@ -29,19 +29,19 @@ t.Z = {
           pid: n
         },
         socket: {
-          application: s
+          application: i
         }
       } = e;
-      if (null == s.id) throw new E.Z({
-        errorCode: T.lTL.INVALID_COMMAND
+      if (null == i.id) throw new _.Z({
+        errorCode: p.lTL.INVALID_COMMAND
       }, "No application.");
       o.Z.setLocked(t, n)
     }
   },
-  [T.Etm.OPEN_OVERLAY_ACTIVITY_INVITE]: {
+  [p.Etm.OPEN_OVERLAY_ACTIVITY_INVITE]: {
     scope: m.lH,
-    validation: e => (0, _.Z)(e).required().keys({
-      type: e.number().required().valid([T.mFx.JOIN]),
+    validation: e => (0, h.Z)(e).required().keys({
+      type: e.number().required().valid([p.mFx.JOIN]),
       pid: e.number().min(0).required()
     }),
     handler(e) {
@@ -49,29 +49,29 @@ t.Z = {
         socket: t,
         args: {
           type: n,
-          pid: s
+          pid: i
         }
-      } = e, i = t.application.id;
-      if (null == i) throw new E.Z({
-        errorCode: T.lTL.INVALID_COMMAND
+      } = e, s = t.application.id;
+      if (null == s) throw new _.Z({
+        errorCode: p.lTL.INVALID_COMMAND
       }, "No application.");
-      let l = u.Z.getApplicationActivity(i);
-      if (null == l || null == l.secrets || !(0, h.t9)(n, l.party, l.secrets)) throw new E.Z({
-        errorCode: T.lTL.NO_ELIGIBLE_ACTIVITY
+      let a = d.Z.getApplicationActivity(s);
+      if (null == a || null == a.secrets || !(0, E.t9)(n, a.party, a.secrets)) throw new _.Z({
+        errorCode: p.lTL.NO_ELIGIBLE_ACTIVITY
       }, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
       let {
-        lock: r
-      } = (0, I.s0)(s), o = (0, c.Z)(l, d.Z);
-      return (0, a.h7)(l, o).then(() => {
-        if (r(), o) throw new E.Z({
-          errorCode: T.lTL.NO_ELIGIBLE_ACTIVITY
+        lock: l
+      } = (0, I.s0)(i), o = (0, c.Z)(a, u.Z);
+      return (0, r.h7)(a, o).then(() => {
+        if (l(), o) throw new _.Z({
+          errorCode: p.lTL.NO_ELIGIBLE_ACTIVITY
         }, "No eligible activity for application. Ensure user does have have privacy enabled.")
       })
     }
   },
-  [T.Etm.OPEN_OVERLAY_GUILD_INVITE]: {
+  [p.Etm.OPEN_OVERLAY_GUILD_INVITE]: {
     scope: m.lH,
-    validation: e => (0, _.Z)(e).required().keys({
+    validation: e => (0, h.Z)(e).required().keys({
       code: e.string().required(),
       pid: e.number().min(0).required()
     }),
@@ -81,38 +81,38 @@ t.Z = {
           code: t,
           pid: n
         },
-        socket: s
+        socket: i
       } = e;
-      if (null == s.application.id) throw new E.Z({
-        errorCode: T.lTL.INVALID_COMMAND
+      if (null == i.application.id) throw new _.Z({
+        errorCode: p.lTL.INVALID_COMMAND
       }, "No application.");
-      return r.Z.resolveInvite(t, "Game SDK").then(e => {
+      return l.Z.resolveInvite(t, "Game SDK").then(e => {
         let {
           invite: t,
-          code: s
+          code: i
         } = e;
-        if (null == t) throw new E.Z({
-          errorCode: T.lTL.INVALID_INVITE
-        }, "Invalid invite id: ".concat(s));
+        if (null == t) throw new _.Z({
+          errorCode: p.lTL.INVALID_INVITE
+        }, "Invalid invite id: ".concat(i));
         let {
-          context: i,
-          lock: a
+          context: s,
+          lock: r
         } = (0, I.s0)(n);
         return new Promise(e => {
-          l.Z.dispatch({
+          a.Z.dispatch({
             type: "INVITE_MODAL_OPEN",
             invite: t,
-            code: s,
-            context: i,
+            code: i,
+            context: s,
             resolve: e
           })
-        }).then(a)
+        }).then(r)
       })
     }
   },
-  [T.Etm.OPEN_OVERLAY_VOICE_SETTINGS]: {
+  [p.Etm.OPEN_OVERLAY_VOICE_SETTINGS]: {
     scope: m.lH,
-    validation: e => (0, _.Z)(e).required().keys({
+    validation: e => (0, h.Z)(e).required().keys({
       pid: e.number().min(0).required()
     }),
     handler(e) {
@@ -120,25 +120,25 @@ t.Z = {
         args: {
           pid: t
         },
-        socket: l
-      } = e, a = l.application.id;
-      if (null == a) throw new E.Z({
-        errorCode: T.lTL.INVALID_COMMAND
+        socket: a
+      } = e, r = a.application.id;
+      if (null == r) throw new _.Z({
+        errorCode: p.lTL.INVALID_COMMAND
       }, "No application.");
       let {
-        lock: r
+        lock: l
       } = (0, I.s0)(t);
       return new Promise(e => {
-        (0, i.openModalLazy)(async () => {
+        (0, s.openModalLazy)(async () => {
           let {
             default: t
-          } = await Promise.all([n.e("49237"), n.e("99387"), n.e("84518")]).then(n.bind(n, 344516));
-          return n => (0, s.jsx)(t, {
+          } = await n.e("66063").then(n.bind(n, 344516));
+          return n => (0, i.jsx)(t, {
             ...n,
-            mediaEngineContext: a,
-            title: l.application.name,
+            mediaEngineContext: r,
+            title: a.application.name,
             onClose: () => {
-              n.onClose(), r(), e()
+              n.onClose(), l(), e()
             }
           })
         })

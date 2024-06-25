@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   usernameSection: "usernameSection_d2b491",
   customStatusSection: "customStatusSection_d2b491",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   toast: "toast_f42767",
   icon: "icon_f42767",

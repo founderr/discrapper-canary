@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   tierNameColumn: "tierNameColumn_c5ed9a",
   subscribersColumn: "subscribersColumn_c5ed9a",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   container: "container_e54bbe",
   content: "content_e54bbe",

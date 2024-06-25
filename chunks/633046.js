@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   content: "content_da77bd",
   progress: "progress_da77bd",

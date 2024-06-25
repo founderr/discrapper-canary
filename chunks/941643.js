@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   prompt: "prompt_ff74de",
   selectYourAnswer: "selectYourAnswer_ff74de",

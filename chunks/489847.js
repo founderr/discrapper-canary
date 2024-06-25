@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   triggerContainer: "triggerContainer_df95ff",
   triggerMainContainer: "triggerMainContainer_df95ff",

@@ -3,147 +3,147 @@ n.d(t, {
     return N
   }
 });
-var l = n(735250),
-  i = n(470079),
-  s = n(120356),
-  a = n.n(s),
+var i = n(735250),
+  a = n(470079),
+  l = n(120356),
+  s = n.n(l),
   r = n(512722),
   o = n.n(r),
   c = n(442837),
   u = n(692547),
   d = n(481060),
   h = n(239091),
-  m = n(40851),
-  E = n(484459),
-  p = n(103575),
-  g = n(271383),
-  f = n(709586),
-  C = n(5192),
-  _ = n(590415),
+  p = n(40851),
+  m = n(484459),
+  _ = n(103575),
+  f = n(271383),
+  E = n(709586),
+  g = n(5192),
+  C = n(590415),
   I = n(433534);
-let x = i.memo(function(e) {
+let x = a.memo(function(e) {
     let {
       guildId: t,
       channelId: n,
-      user: i,
-      isPremium: s,
-      isBlocked: a
+      user: a,
+      isPremium: l,
+      isBlocked: s
     } = e;
-    return (0, l.jsxs)("div", {
+    return (0, i.jsxs)("div", {
       className: I.textContainer,
-      children: [a ? (0, l.jsx)(d.DenyIcon, {
+      children: [s ? (0, i.jsx)(d.DenyIcon, {
         size: "lg",
         className: I.blockedIcon,
         color: u.Z.unsafe_rawColors.RED_400.css
-      }) : null, (0, l.jsx)(d.Text, {
+      }) : null, (0, i.jsx)(d.Text, {
         className: I.text,
         variant: "text-sm/normal",
         color: "header-primary",
-        children: C.ZP.getName(t, n, i)
-      }), s ? (0, l.jsx)(f.Z, {
+        children: g.ZP.getName(t, n, a)
+      }), l ? (0, i.jsx)(E.Z, {
         className: I.boost,
         color: u.Z.unsafe_rawColors.GUILD_BOOSTING_PINK.css
       }) : null]
     })
   }),
-  T = i.memo(function(e) {
+  T = a.memo(function(e) {
     var t;
     let {
       participant: n,
-      guildId: i,
-      channel: s,
+      guildId: a,
+      channel: l,
       isPremium: r
     } = e, {
       user: o,
       blocked: c,
       rtsState: u
-    } = n, h = u === _.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK, m = u === _.xO.REQUESTED_TO_SPEAK || h;
-    return (0, l.jsxs)(l.Fragment, {
-      children: [(0, l.jsxs)("div", {
+    } = n, h = u === C.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK, p = u === C.xO.REQUESTED_TO_SPEAK || h;
+    return (0, i.jsxs)(i.Fragment, {
+      children: [(0, i.jsxs)("div", {
         className: I.avatarContainer,
-        children: [m && (0, l.jsx)(d.HandRequestSpeakIcon, {
+        children: [p && (0, i.jsx)(d.HandRequestSpeakIcon, {
           size: "md",
           color: "currentColor",
-          className: a()(I.icon, {
+          className: s()(I.icon, {
             [I.invited]: h
           })
-        }), (0, l.jsx)("img", {
-          src: null !== (t = o.getAvatarURL(s.guild_id, 56, !1)) && void 0 !== t ? t : void 0,
+        }), (0, i.jsx)("img", {
+          src: null !== (t = o.getAvatarURL(l.guild_id, 56, !1)) && void 0 !== t ? t : void 0,
           alt: o.username,
           "aria-label": o.username,
-          className: a()(I.avatar, {
+          className: s()(I.avatar, {
             [I.faded]: c
           })
         })]
-      }), (0, l.jsx)(x, {
-        guildId: i,
-        channelId: s.id,
+      }), (0, i.jsx)(x, {
+        guildId: a,
+        channelId: l.id,
         user: o,
         isPremium: r,
         isBlocked: c
       })]
     })
   }),
-  N = () => (0, l.jsx)("div", {
+  N = () => (0, i.jsx)("div", {
     className: I.tileBaseContainer
   });
-t.Z = i.memo(function(e) {
+t.Z = a.memo(function(e) {
   let {
     participant: t,
-    channel: s
+    channel: l
   } = e, {
     user: r,
     blocked: u
-  } = t, f = s.getGuildId(), C = (0, m.bp)(), _ = (0, c.e7)([g.ZP], () => {
+  } = t, E = l.getGuildId(), g = (0, p.bp)(), C = (0, c.e7)([f.ZP], () => {
     var e;
-    return null != f && (null === (e = g.ZP.getMember(f, r.id)) || void 0 === e ? void 0 : e.premiumSince) != null
-  }, [f, r.id]);
-  o()(null != f, "Channel cannot be guildless");
-  let x = i.useCallback(e => {
+    return null != E && (null === (e = f.ZP.getMember(E, r.id)) || void 0 === e ? void 0 : e.premiumSince) != null
+  }, [E, r.id]);
+  o()(null != E, "Channel cannot be guildless");
+  let x = a.useCallback(e => {
       (0, h.jW)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("32006"), n.e("12435"), n.e("7717")]).then(n.bind(n, 757387));
-        return t => (0, l.jsx)(e, {
+        } = await Promise.all([n.e("79695"), n.e("32006"), n.e("12435"), n.e("47195")]).then(n.bind(n, 757387));
+        return t => (0, i.jsx)(e, {
           ...t,
           user: r,
-          guildId: f,
-          channel: s,
+          guildId: E,
+          channel: l,
           showMediaItems: !0,
           showStageChannelItems: !0,
           showChatItems: !1
         })
       }, {
-        context: C
+        context: g
       })
-    }, [r, f, s, C]),
-    N = i.useCallback(e => (0, l.jsx)(p.Z, {
+    }, [r, E, l, g]),
+    N = a.useCallback(e => (0, i.jsx)(_.Z, {
       ...e,
       location: "AudienceTile",
-      guildId: f,
-      channelId: s.id,
+      guildId: E,
+      channelId: l.id,
       userId: r.id
-    }), [s.id, f, r.id]);
-  return (0, l.jsx)(d.Popout, {
-    preload: () => (0, E.W)(r, {
-      guildId: s.guild_id,
-      channelId: s.id
+    }), [l.id, E, r.id]);
+  return (0, i.jsx)(d.Popout, {
+    preload: () => (0, m.W)(r, {
+      guildId: l.guild_id,
+      channelId: l.id
     }),
     renderPopout: N,
     position: "right",
     spacing: 8,
-    children: e => (0, l.jsx)(d.Clickable, {
-      className: a()(I.tileContainer, {
-        [I.singleIcon]: _ || u,
-        [I.doubleIcon]: _ && u
+    children: e => (0, i.jsx)(d.Clickable, {
+      className: s()(I.tileContainer, {
+        [I.singleIcon]: C || u,
+        [I.doubleIcon]: C && u
       }),
       onContextMenu: x,
       ...e,
-      children: (0, l.jsx)(T, {
+      children: (0, i.jsx)(T, {
         participant: t,
-        guildId: f,
-        channel: s,
-        isPremium: _
+        guildId: E,
+        channel: l,
+        isPremium: C
       })
     })
   })

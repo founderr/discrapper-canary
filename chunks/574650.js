@@ -1,83 +1,83 @@
 n(653041), n(47120);
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-  l = n.n(i),
-  a = n(266067),
+var a = n(120356),
+  s = n.n(a),
+  l = n(266067),
   r = n(442837),
   o = n(481060),
   c = n(430824),
-  u = n(914010),
-  d = n(693546),
-  E = n(305325),
-  _ = n(246364),
+  d = n(914010),
+  u = n(693546),
+  _ = n(305325),
+  E = n(246364),
   I = n(937111),
-  T = n(981631),
-  m = n(176505),
-  N = n(689938),
-  h = n(415706),
-  C = n(40578);
+  m = n(981631),
+  T = n(176505),
+  h = n(689938),
+  N = n(415706),
+  f = n(40578);
 t.Z = () => {
   var e, t;
-  let i = (0, r.e7)([u.Z], () => u.Z.getGuildId(), []),
-    S = (0, r.e7)([c.Z], () => c.Z.getGuild(i), [i]),
-    A = (0, r.e7)([I.Z], () => null != i ? I.Z.getRequest(i) : null, [i]),
-    g = (0, a.TH)(),
-    p = (null === (e = (0, a.LX)(g.pathname, T.Z5c.CHANNEL(null == S ? void 0 : S.id, m.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
-  if (null == S || !S.hasVerificationGate() || p) return null;
-  let f = null !== (t = null == A ? void 0 : A.applicationStatus) && void 0 !== t ? t : _.wB.STARTED,
+  let a = (0, r.e7)([d.Z], () => d.Z.getGuildId(), []),
+    p = (0, r.e7)([c.Z], () => c.Z.getGuild(a), [a]),
+    C = (0, r.e7)([I.Z], () => null != a ? I.Z.getRequest(a) : null, [a]),
+    g = (0, l.TH)(),
+    S = (null === (e = (0, l.LX)(g.pathname, m.Z5c.CHANNEL(null == p ? void 0 : p.id, T.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
+  if (null == p || !p.hasVerificationGate() || S) return null;
+  let A = null !== (t = null == C ? void 0 : C.applicationStatus) && void 0 !== t ? t : E.wB.STARTED,
     R = null,
+    x = null,
     O = null,
-    M = null,
-    x = [h.notice, C.notice];
-  switch (f) {
-    case _.wB.SUBMITTED:
-      R = N.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, O = N.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, M = () => {
-        (0, o.openModal)(e => (0, s.jsx)(o.ConfirmModal, {
-          header: N.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
-          confirmText: N.Z.Messages.CONFIRM,
-          cancelText: N.Z.Messages.CANCEL,
-          onConfirm: () => d.Z.removeGuildJoinRequest(S.id),
+    M = [N.notice, f.notice];
+  switch (A) {
+    case E.wB.SUBMITTED:
+      R = h.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, x = h.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, O = () => {
+        (0, o.openModal)(e => (0, i.jsx)(o.ConfirmModal, {
+          header: h.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
+          confirmText: h.Z.Messages.CONFIRM,
+          cancelText: h.Z.Messages.CANCEL,
+          onConfirm: () => u.Z.removeGuildJoinRequest(p.id),
           confirmButtonColor: o.Button.Colors.BRAND,
           ...e,
-          children: (0, s.jsx)(o.Text, {
+          children: (0, i.jsx)(o.Text, {
             variant: "text-md/normal",
-            children: N.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION_SUBTITLE
+            children: h.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION_SUBTITLE
           })
         }))
       };
       break;
-    case _.wB.REJECTED:
-      R = N.Z.Messages.MEMBER_VERIFICATION_REJECTED_TITLE, O = N.Z.Messages.MEMBER_VERIFICATION_LEARN_MORE, M = () => {
+    case E.wB.REJECTED:
+      R = h.Z.Messages.MEMBER_VERIFICATION_REJECTED_TITLE, x = h.Z.Messages.MEMBER_VERIFICATION_LEARN_MORE, O = () => {
         (0, o.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("99387"), n.e("3378")]).then(n.bind(n, 76075));
-          return t => (0, s.jsx)(e, {
-            guildId: S.id,
+          } = await n.e("3378").then(n.bind(n, 76075));
+          return t => (0, i.jsx)(e, {
+            guildId: p.id,
             ...t
           })
         })
-      }, x.push(h.error);
+      }, M.push(N.error);
       break;
     default:
-      R = N.Z.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, O = N.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA, M = () => {
-        (0, E.hk)(S.id)
+      R = h.Z.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, x = h.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA, O = () => {
+        (0, _.hk)(p.id)
       }
   }
-  return (0, s.jsxs)("div", {
-    className: l()(...x),
-    children: [(0, s.jsx)(o.Text, {
-      className: h.header,
+  return (0, i.jsxs)("div", {
+    className: s()(...M),
+    children: [(0, i.jsx)(o.Text, {
+      className: N.header,
       variant: "text-sm/normal",
       children: R
-    }), (0, s.jsx)(o.Button, {
-      className: h.button,
+    }), (0, i.jsx)(o.Button, {
+      className: N.button,
       look: o.Button.Looks.OUTLINED,
       color: o.Button.Colors.WHITE,
       size: o.Button.Sizes.NONE,
-      onClick: M,
-      children: O
+      onClick: O,
+      children: x
     })]
   })
 }

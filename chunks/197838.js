@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   progressBarMarker: "progressBarMarker_c29408",
   progressBarMarkerCurrent: "progressBarMarkerCurrent_c29408",

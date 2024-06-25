@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   productListingsHeader: "productListingsHeader_d3b294",
   productListings: "productListings_d3b294",

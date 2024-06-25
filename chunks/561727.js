@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   warningCircleIcon: "warningCircleIcon_f89da9",
   profileBadges: "profileBadges_f89da9",

@@ -1,22 +1,22 @@
-t.d(n, {
+s.d(t, {
   Z: function() {
-    return o
+    return n
   }
 });
-var i = t(735250);
-t(470079);
-var l = t(481060);
+var o = s(735250);
+s(470079);
+var T = s(481060);
 
-function o(e) {
-  (0, l.openModalLazy)(async () => {
+function n(e) {
+  (0, T.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([t.e("99387"), t.e("76815")]).then(t.bind(t, 336977));
-    return n => (0, i.jsx)(e, {
-      ...n
+    } = await s.e("76815").then(s.bind(s, 336977));
+    return t => (0, o.jsx)(e, {
+      ...t
     })
   }, {
     onCloseCallback: e,
-    backdropStyle: l.BackdropStyles.BLUR
+    backdropStyle: T.BackdropStyles.BLUR
   })
 }

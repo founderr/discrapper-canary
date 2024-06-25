@@ -1,4 +1,5 @@
-t.r(e.exports = {
+"use strict";
+n.r(e.exports = {
   icon: "icon_f11207",
   guildIconBadge: "guildIconBadge_f11207",
   iconInactive: "iconInactive_f11207",

@@ -1,89 +1,89 @@
 n.d(t, {
   U: function() {
-    return f
+    return C
   }
 });
-var l = n(735250),
-  i = n(470079),
-  s = n(91192),
-  r = n(481060),
-  a = n(442837),
+var i = n(735250),
+  l = n(470079),
+  r = n(91192),
+  a = n(481060),
+  s = n(442837),
   o = n(239091),
-  u = n(410030),
-  c = n(377171),
+  c = n(410030),
+  u = n(377171),
   d = n(682662),
   h = n(662146),
   p = n(678513),
-  g = n(981631),
-  m = n(689938),
-  C = n(316148);
+  f = n(981631),
+  _ = n(689938),
+  g = n(316148);
 
-function E(e) {
+function m(e) {
   let {
     target: t
-  } = e, a = (0, s.Ie)("fakedoor"), p = i.useCallback(() => {
-    (0, r.openModalLazy)(async () => {
+  } = e, s = (0, r.Ie)("fakedoor"), p = l.useCallback(() => {
+    (0, a.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("22862"), n.e("81847")]).then(n.bind(n, 646202));
-      return n => (0, l.jsx)(e, {
+      } = await Promise.all([n.e("22862"), n.e("47740")]).then(n.bind(n, 646202));
+      return n => (0, i.jsx)(e, {
         ...n,
         target: t
       })
     })
-  }, [t]), E = i.useCallback(e => {
+  }, [t]), m = l.useCallback(e => {
     (0, o.jW)(e, async () => {
       let {
         default: e
-      } = await n.e("39612").then(n.bind(n, 761624));
-      return n => (0, l.jsx)(e, {
+      } = await n.e("45355").then(n.bind(n, 761624));
+      return n => (0, i.jsx)(e, {
         ...n,
         signupTarget: t
       })
     })
-  }, [t]), f = "url(".concat(t.backgroundAssetUrl, ") black top / cover no-repeat"), _ = (0, l.jsxs)("div", {
-    className: C.tooltipContainer,
-    children: [(0, l.jsx)("div", {
-      className: C.tooltipBackground,
+  }, [t]), C = "url(".concat(t.backgroundAssetUrl, ") black top / cover no-repeat"), I = (0, i.jsxs)("div", {
+    className: g.tooltipContainer,
+    children: [(0, i.jsx)("div", {
+      className: g.tooltipBackground,
       style: {
-        background: f
+        background: C
       }
-    }), (0, l.jsx)(r.Heading, {
+    }), (0, i.jsx)(a.Heading, {
       variant: "heading-sm/medium",
       children: t.tooltipHeader
-    }), (0, l.jsx)(r.Text, {
+    }), (0, i.jsx)(a.Text, {
       variant: "text-xs/normal",
-      children: m.Z.Messages.SIGNUP_BUTTON_TOOLTIP_CTA
+      children: _.Z.Messages.SIGNUP_BUTTON_TOOLTIP_CTA
     })]
-  }), I = (0, u.Fg)();
-  return (0, l.jsxs)(d.H, {
-    children: [(0, l.jsx)(r.ThemeContextProvider, {
-      theme: g.BRd.DARK,
-      children: (0, l.jsx)(h.Z, {
-        text: _,
-        tooltipClass: C.tooltip,
-        tooltipContentClass: C.tooltipContent,
-        children: (0, l.jsx)(r.ThemeContextProvider, {
-          theme: I,
-          children: (0, l.jsx)(r.BlobMask, {
-            lowerBadge: (0, l.jsx)(r.NumberBadge, {
+  }), E = (0, c.Fg)();
+  return (0, i.jsxs)(d.H, {
+    children: [(0, i.jsx)(a.ThemeContextProvider, {
+      theme: f.BRd.DARK,
+      children: (0, i.jsx)(h.Z, {
+        text: I,
+        tooltipClass: g.tooltip,
+        tooltipContentClass: g.tooltipContent,
+        children: (0, i.jsx)(a.ThemeContextProvider, {
+          theme: E,
+          children: (0, i.jsx)(a.BlobMask, {
+            lowerBadge: (0, i.jsx)(a.NumberBadge, {
               count: 1,
-              color: c.Z.BG_BRAND
+              color: u.Z.BG_BRAND
             }),
-            children: (0, l.jsx)(r.NavItem, {
-              ...a,
+            children: (0, i.jsx)(a.NavItem, {
+              ...s,
               onClick: p,
-              onContextMenu: E,
-              children: (0, l.jsx)(r.BellIcon, {
-                color: c.Z.TEXT_NORMAL
+              onContextMenu: m,
+              children: (0, i.jsx)(a.BellIcon, {
+                color: u.Z.TEXT_NORMAL
               })
             })
           })
         })
       })
-    }), (0, l.jsx)("div", {
+    }), (0, i.jsx)("div", {
       style: {
-        background: f,
+        background: C,
         width: 0,
         height: 0
       }
@@ -91,9 +91,9 @@ function E(e) {
   })
 }
 
-function f() {
-  let e = (0, a.e7)([p.Z], () => p.Z.getActiveUserSignUp());
-  return null == e ? null : (0, l.jsx)(E, {
+function C() {
+  let e = (0, s.e7)([p.Z], () => p.Z.getActiveUserSignUp());
+  return null == e ? null : (0, i.jsx)(m, {
     target: e
   })
 }

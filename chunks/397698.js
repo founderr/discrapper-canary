@@ -1,34 +1,34 @@
 n.d(t, {
   Z: function() {
-    return u
+    return d
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  l = n(776862),
-  a = n(499254),
+var a = n(481060),
+  s = n(776862),
+  l = n(499254),
   r = n(827498),
   o = n(314734),
   c = n(981631);
 
-function u(e) {
+function d(e) {
   let {
     channel: t,
-    openInPopout: u
+    openInPopout: d
   } = e;
-  u && (0, l.Z)(c.KJ3.CHANNEL_CALL_POPOUT);
-  let d = u ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
-  return (0, a.y)(), (0, a._)(r._b.VOICE), (0, i.openModalLazy)(async () => {
+  d && (0, s.Z)(c.KJ3.CHANNEL_CALL_POPOUT);
+  let u = d ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
+  return (0, l.y)(), (0, l._)(r._b.VOICE), (0, a.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("99387"), n.e("81056")]).then(n.bind(n, 743161));
-    return n => (0, s.jsx)(e, {
+    } = await n.e("81056").then(n.bind(n, 743161));
+    return n => (0, i.jsx)(e, {
       channel: t,
       ...n
     })
   }, {
     modalKey: o.e9,
-    contextKey: d
+    contextKey: u
   })
 }

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   wrapper: "wrapper_ec86aa",
   compact: "compact_ec86aa",
@@ -18,7 +19,7 @@ e.exports = {
   userJoinSystemMessageIcon: "userJoinSystemMessageIcon_ec86aa",
   ticketIcon: "ticketIcon_ec86aa",
   commandIcon: "commandIcon_ec86aa",
-  username: "username_ec86aa " + t("788546").desaturateUserColors,
+  username: "username_ec86aa " + n("788546").desaturateUserColors,
   roleDot: "roleDot_ec86aa",
   commandName: "commandName_ec86aa",
   appsIcon: "appsIcon_ec86aa",

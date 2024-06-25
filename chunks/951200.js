@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   defaultColor: "defaultColor_a595eb",
   lineClamp1: "lineClamp1_a595eb",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   progressBar: "progressBar_e00a24",
   progressBarScrubber: "progressBarScrubber_e00a24",

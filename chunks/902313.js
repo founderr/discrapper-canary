@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   categoryRow: "categoryRow_a33fd3",
   uncategorized: "uncategorized_a33fd3",

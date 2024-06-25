@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   avatar: "avatar_cc54d6",
   clickable: "clickable_cc54d6",

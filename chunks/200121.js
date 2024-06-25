@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   inlineElement: "inlineElement_d4df8b",
   inlineVoid: "inlineVoid_d4df8b",

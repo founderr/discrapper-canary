@@ -33,7 +33,7 @@ function d(e, t, r, o) {
   (0, s.openModalLazy)(async () => {
     let {
       default: s
-    } = await Promise.all([n.e("99387"), n.e("82634")]).then(n.bind(n, 28130));
+    } = await n.e("82634").then(n.bind(n, 28130));
     return n => (0, i.jsx)(s, {
       filters: o,
       maxFileSizeBytes: u.B,

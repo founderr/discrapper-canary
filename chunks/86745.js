@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   descriptionBox: "descriptionBox_c38f8d",
   descriptionSection: "descriptionSection_c38f8d",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   error: "error_dd4615",
   icon: "icon_dd4615",

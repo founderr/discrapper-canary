@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
   marginReset: "marginReset_f7730b",
   marginTop4: "marginTop4_f7730b",

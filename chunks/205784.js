@@ -7,8 +7,8 @@ var n = t(735250);
 t(470079);
 var d = t(442837),
   i = t(481060),
-  a = t(239091),
-  u = t(749210),
+  u = t(239091),
+  a = t(749210),
   s = t(664915),
   r = t(771845),
   o = t(181945),
@@ -28,7 +28,7 @@ function _(e) {
   return (0, n.jsxs)(i.Menu, {
     navId: "guild-context",
     "aria-label": E.Z.Messages.GUILD_ACTIONS_MENU_LABEL,
-    onClose: a.Zy,
+    onClose: u.Zy,
     onSelect: b,
     children: [(0, n.jsx)(i.MenuGroup, {
       children: (0, n.jsx)(i.MenuItem, {
@@ -52,7 +52,7 @@ function _(e) {
         action: () => (0, i.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([t.e("99387"), t.e("66915")]).then(t.bind(t, 662708));
+          } = await t.e("66915").then(t.bind(t, 662708));
           return l => (0, n.jsx)(e, {
             ...l,
             folderId: _,
@@ -63,7 +63,7 @@ function _(e) {
       }), L && (0, n.jsx)(i.MenuItem, {
         id: "folder-collapse",
         label: E.Z.Messages.SERVER_FOLDER_COLLAPSE_ALL,
-        action: () => u.Z.collapseAllFolders()
+        action: () => a.Z.collapseAllFolders()
       })]
     })]
   })

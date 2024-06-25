@@ -19,7 +19,7 @@ function a(e) {
   return (0, r.openModalLazy)(async () => {
     let {
       ActivityAgeGateModal: e
-    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("43782")]).then(n.bind(n, 224604));
+    } = await n.e("57951").then(n.bind(n, 224604));
     return n => (0, i.jsx)(e, {
       ...n,
       application: t,

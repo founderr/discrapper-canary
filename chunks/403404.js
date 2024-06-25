@@ -1,60 +1,60 @@
 n.d(t, {
   Z: function() {
-    return u
+    return d
   }
 });
-var s = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-  l = n(424602),
-  a = n(397698),
+var a = n(481060),
+  s = n(424602),
+  l = n(397698),
   r = n(776862),
   o = n(701488),
   c = n(981631);
 
-function u(e) {
+function d(e) {
   let {
     channel: t,
-    guildId: u,
-    locationObject: d,
-    openInPopout: E,
-    initialSelectedApplicationId: _,
+    guildId: d,
+    locationObject: u,
+    openInPopout: _,
+    initialSelectedApplicationId: E,
     initialSlide: I = o.ag.DIRECTORY,
-    enableSelectedTextChannelInvite: T = !1,
-    analyticsLocations: m,
-    opensAppLauncherModal: N = !1
-  } = e, h = m.length > 0 ? m[m.length - 1] : "open-activity-shelf", {
-    enabled: C
-  } = l.m1.getCurrentConfig({
-    location: h
+    enableSelectedTextChannelInvite: m = !1,
+    analyticsLocations: T,
+    opensAppLauncherModal: h = !1
+  } = e, N = T.length > 0 ? T[T.length - 1] : "open-activity-shelf", {
+    enabled: f
+  } = s.m1.getCurrentConfig({
+    location: N
   }, {
     autoTrackExposure: !1
   });
-  if (N && C) {
-    null != t && (0, a.Z)({
-      openInPopout: E,
+  if (h && f) {
+    null != t && (0, l.Z)({
+      openInPopout: _,
       channel: t
     });
     return
   }
-  E && (0, r.Z)(c.KJ3.CHANNEL_CALL_POPOUT);
-  let S = E ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
-  return (0, i.openModalLazy)(async () => {
+  _ && (0, r.Z)(c.KJ3.CHANNEL_CALL_POPOUT);
+  let p = _ ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
+  return (0, a.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("19945")]).then(n.bind(n, 471840));
-    return n => (0, s.jsx)(e, {
+    } = await n.e("19945").then(n.bind(n, 471840));
+    return n => (0, i.jsx)(e, {
       ...n,
       channel: t,
-      guildId: u,
-      locationObject: d,
+      guildId: d,
+      locationObject: u,
       initialSlide: I,
-      initialSelectedApplicationId: _,
-      enableSelectedTextChannelInvite: T,
-      analyticsLocations: m
+      initialSelectedApplicationId: E,
+      enableSelectedTextChannelInvite: m,
+      analyticsLocations: T
     })
   }, {
     modalKey: o.AC,
-    contextKey: S
+    contextKey: p
   })
 }
