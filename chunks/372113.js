@@ -118,32 +118,115 @@ function y(e) {
 
 function B(e) {
   let {
-    isQuestComplete: t,
-    useReducedMotion: n,
-    isInHouseQuest: s,
-    inGiftInventory: i,
-    disabled: a,
-    isEnrolling: r,
-    onClick: o,
-    children: c,
-    ...d
-  } = e, E = s && i && t, _ = E ? D.inHouseButton : u.ButtonColors.BRAND, I = t && !n ? u.ShinyButton : u.Button;
-  return (0, l.jsx)(I, {
-    ...d,
-    wrapperClassName: D.ctaButtonWrapper,
-    color: _,
-    disabled: a,
-    submitting: r,
-    onClick: o,
-    children: (0, l.jsxs)("div", {
-      className: D.ctaButtonInner,
-      children: [E && (0, l.jsx)("img", {
-        src: j,
-        alt: "",
-        className: D.inHouseIcon
-      }), c]
-    })
-  })
+    quest: t,
+    progressState: n,
+    isCollectibleQuest: s,
+    location: i,
+    questContentPosition: r,
+    inGiftInventory: o
+  } = e, d = n >= 1, _ = n >= 3, I = (0, A.$J)(t), {
+    xboxAndPlaystationAccounts: T
+  } = (0, h.z6)(), S = T.length > 0, p = (0, A.Bz)(t), f = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), R = (0, c.e7)([C.Z], () => C.Z.isEnrolling(t.id)), x = (0, A.zK)(t, L.S7.IN_HOUSE_CONSOLE_QUEST), v = function(e) {
+    let {
+      quest: t,
+      progressState: n,
+      isCollectibleQuest: s,
+      location: i,
+      questContentPosition: l,
+      waitingForConsoleConnection: r,
+      isInHouseQuest: o,
+      inGiftInventory: c
+    } = e, u = (0, O.hf)({
+      quest: t,
+      location: i,
+      questContentPosition: l
+    });
+    return a.useMemo(() => {
+      switch (n) {
+        case 0:
+          return {
+            text: P.Z.Messages.QUESTS_ACCEPT, tooltipText: P.Z.Messages.QUESTS_ACCEPT_TOOLTIP, onClick: () => (0, N.AH)(t.id, {
+              questContent: i,
+              questContentCTA: m.jZ.ACCEPT_QUEST,
+              questContentPosition: l
+            })
+          };
+        case 1:
+        case 2:
+          if (r && c) return {
+            text: P.Z.Messages.QUESTS_CONNECT_CONSOLE,
+            tooltipText: null,
+            onClick: () => (0, M.gI)({
+              showInline: (0, g.i)({
+                location: L.dr.QUESTS_CARD
+              })
+            })
+          };
+          return {
+            text: P.Z.Messages.QUESTS_CLAIM_REWARD, tooltipText: P.Z.Messages.QUESTS_IN_PROGRESS_TOOLTIP, onClick: null
+          };
+        case 3:
+          return {
+            text: P.Z.Messages.QUESTS_CLAIM_REWARD, tooltipText: o ? P.Z.Messages.QUESTS_IN_HOUSE_REWARD_TOOLTIP : null, onClick: u
+          };
+        case 4:
+          let e = {
+            tooltipText: null,
+            onClick: u
+          };
+          if (o) return {
+            ...e,
+            text: P.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
+          };
+          if (s) return {
+            ...e,
+            text: P.Z.Messages.COLLECTIBLES_USE_NOW
+          };
+          return {
+            ...e, text: P.Z.Messages.QUESTS_SEE_CODE
+          }
+      }
+    }, [s, o, i, u, n, t.id, l, r, c])
+  }({
+    progressState: n,
+    quest: t,
+    isInHouseQuest: x,
+    location: i,
+    isCollectibleQuest: s,
+    waitingForConsoleConnection: d && I && !S,
+    questContentPosition: r,
+    inGiftInventory: o
+  });
+  if (I && d && S && !p && !_ && o) return (0, l.jsx)(y, {
+    quest: t,
+    useReducedMotion: f
+  });
+  let Z = x && o && _,
+    U = Z ? D.inHouseButton : u.ButtonColors.BRAND,
+    b = _ && !f ? u.ShinyButton : u.Button;
+  return (0, l.jsx)(u.Tooltip, {
+    text: v.tooltipText,
+    tooltipContentClassName: D.ctaTooltipText,
+    children: e => {
+      var t;
+      return (0, l.jsx)(b, {
+        ...e,
+        wrapperClassName: D.ctaButtonWrapper,
+        color: U,
+        disabled: null == v.onClick,
+        submitting: R,
+        onClick: null !== (t = v.onClick) && void 0 !== t ? t : () => {},
+        children: (0, l.jsxs)("div", {
+          className: D.ctaButtonInner,
+          children: [Z && (0, l.jsx)("img", {
+            src: j,
+            alt: "",
+            className: D.inHouseIcon
+          }), v.text]
+        })
+      })
+    }
+  }, v.tooltipText)
 }
 t.Z = e => {
   let {
@@ -151,11 +234,11 @@ t.Z = e => {
     location: n,
     size: s,
     isFocused: i,
-    isQuestExpired: r,
-    isExpanded: j,
-    isAnimating: k,
-    contentPosition: G
-  } = e, F = function(e) {
+    isQuestExpired: a,
+    isExpanded: r,
+    isAnimating: E,
+    contentPosition: N
+  } = e, C = function(e) {
     var t, n, s;
     let i = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
       l = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
@@ -169,105 +252,57 @@ t.Z = e => {
     if (r) return 2;
     else if (i) return 1;
     else return 0
-  }(t), V = F >= 1, w = F >= 3, H = F >= 4, Y = (0, A.Xv)(t.config), W = (0, A.zK)(t, L.S7.IN_HOUSE_CONSOLE_QUEST), z = (0, A.$J)(t), K = (0, x.uq)(n), Q = n === S.jn.QUESTS_EMBED, X = j || k, {
-    xboxAndPlaystationAccounts: q
-  } = (0, h.z6)(), J = (0, h.t5)(t, L.dr.QUESTS_CARD), $ = V && !H && K, ee = q.length > 0, et = (0, A.Bz)(t), en = V && z && !ee, es = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), ei = function(e) {
-    let {
-      progressState: t,
-      isCollectibleQuest: n,
-      isInHouseQuest: s,
-      inGiftInventory: i,
-      waitingForConsoleConnection: l
-    } = e;
-    switch (t) {
-      case 0:
-      default:
-        return P.Z.Messages.QUESTS_ACCEPT;
-      case 1:
-        if (l && i) return P.Z.Messages.QUESTS_CONNECT_CONSOLE;
-        return P.Z.Messages.QUESTS_CLAIM_REWARD;
-      case 2:
-      case 3:
-        return P.Z.Messages.QUESTS_CLAIM_REWARD;
-      case 4:
-        if (s && i) return P.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD;
-        if (n) return P.Z.Messages.COLLECTIBLES_USE_NOW;
-        return P.Z.Messages.QUESTS_SEE_CODE
-    }
-  }({
-    progressState: F,
-    isCollectibleQuest: Y,
-    isInHouseQuest: W,
-    inGiftInventory: K,
-    waitingForConsoleConnection: en
-  }), el = W && K && w ? P.Z.Messages.QUESTS_IN_HOUSE_REWARD_TOOLTIP : V ? P.Z.Messages.QUESTS_IN_PROGRESS_TOOLTIP : P.Z.Messages.QUESTS_ACCEPT_TOOLTIP, ea = (0, O.hf)({
-    quest: t,
-    location: n,
-    questContentPosition: G
-  }), er = a.useMemo(() => z && K && !ee ? 2 === F : V && !w, [z, K, V, w, F, ee]), eo = (0, c.e7)([C.Z], () => C.Z.isEnrolling(t.id)), ec = () => {
-    if (en && K) {
-      let e = (0, g.i)({
-        location: L.dr.QUESTS_CARD
-      });
-      return (0, M.gI)({
-        showInline: e
-      })
-    }
-    if (!V) return (0, N.AH)(t.id, {
-      questContent: n,
-      questContentCTA: m.jZ.ACCEPT_QUEST,
-      questContentPosition: G
-    });
-    ea()
-  }, eu = (0, c.e7)([_.default], () => _.default.locale), ed = K && Y, eE = r && !w, e_ = (0, l.jsx)(R.Z, {
+  }(t), g = C >= 1, O = C >= 3, M = C >= 4, j = (0, A.Xv)(t.config), y = (0, x.uq)(n), k = n === S.jn.QUESTS_EMBED, G = r || E, {
+    xboxAndPlaystationAccounts: F
+  } = (0, h.z6)(), V = (0, h.t5)(t, L.dr.QUESTS_CARD), w = g && !M && y, H = F.length > 0, Y = (0, c.e7)([_.default], () => _.default.locale), W = y && j, z = a && !O, K = (0, l.jsx)(R.Z, {
     autoplay: i,
     className: o()(D.gridImg, {
-      [D.questRewardGiftInventory]: K && "lg" === s,
-      [D.questRewardEmbed]: Q && "lg" === s,
+      [D.questRewardGiftInventory]: y && "lg" === s,
+      [D.questRewardEmbed]: k && "lg" === s,
       [D.questRewardEmbedSm]: "sm" === s,
       [D.questRewardEmbedXs]: "xs" === s
     }),
-    learnMoreStyle: K ? null : "text",
+    learnMoreStyle: y ? null : "text",
     quest: t,
     questContent: n,
-    questContentPosition: G
+    questContentPosition: N
   });
   return (0, l.jsxs)("div", {
     className: o()(D.outerContainer, {
       [D.outerContainerSm]: "sm" === s,
       [D.outerContainerXs]: "xs" === s,
-      [D.outerContainerNoProgress]: !$
+      [D.outerContainerNoProgress]: !w
     }),
     style: {
-      visibility: X ? "visible" : "hidden"
+      visibility: G ? "visible" : "hidden"
     },
-    "aria-hidden": !X,
+    "aria-hidden": !G,
     children: [(0, l.jsx)(u.Tooltip, {
-      text: eE ? P.Z.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
+      text: z ? P.Z.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
       tooltipContentClassName: D.rewardTileExpirationTooltip,
-      shouldShow: eE,
+      shouldShow: z,
       children: e => (0, l.jsxs)("div", {
         className: D.rewardTileWrapper,
         ...e,
-        children: [r && (0, l.jsx)("div", {
+        children: [a && (0, l.jsx)("div", {
           className: D.rewardTileExpired,
           children: (0, l.jsx)(u.CircleExclamationPointIcon, {
             color: u.tokens.colors.WHITE
           })
-        }), ed ? (0, l.jsx)(v.Z, {
+        }), W ? (0, l.jsx)(v.Z, {
           questConfig: t.config,
-          fallback: e_,
+          fallback: K,
           isFocused: i
-        }) : e_]
+        }) : K]
       })
     }), (0, l.jsxs)("div", {
       className: o()(D.gridText, D.taskDetails),
       children: [(0, l.jsx)(u.Text, {
-        variant: U(n, s, V),
+        variant: U(n, s, g),
         className: D.taskInstructions,
-        children: r ? P.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_HEADING.format({
+        children: a ? P.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_HEADING.format({
           questName: t.config.messages.questName
-        }) : J
+        }) : V
       }), (0, l.jsx)(u.Text, {
         variant: "lg" === s ? "text-sm/medium" : "text-xs/medium",
         color: "text-muted",
@@ -349,48 +384,36 @@ t.Z = e => {
         }({
           quest: t,
           location: n,
-          locale: eu,
-          isQuestExpired: r,
-          hasConsoleConnection: ee
+          locale: Y,
+          isQuestExpired: a,
+          hasConsoleConnection: H
         })
       })]
     }), (0, l.jsxs)("div", {
       className: o()(D.ctaButtonContainer, D.gridCtaButtons),
-      children: [!K && (0, l.jsx)(b, {
+      children: [!y && (0, l.jsx)(b, {
         containerSize: s,
         onClick: () => {
           d.Z.open(Z.oAB.INVENTORY), (0, m._3)({
             questId: t.id,
             questContent: n,
-            questContentPosition: G,
+            questContentPosition: N,
             questContentCTA: m.jZ.LEARN_MORE
           })
         },
         children: P.Z.Messages.QUESTS_LEARN_MORE_V2
-      }), r && !w ? null : z && K && V && ee && !et && !w ? (0, l.jsx)(y, {
+      }), a && !O ? null : (0, l.jsx)(B, {
         quest: t,
-        useReducedMotion: es
-      }) : (0, l.jsx)(u.Tooltip, {
-        text: el,
-        tooltipContentClassName: D.ctaTooltipText,
-        shouldShow: !w || w && z && K,
-        children: e => (0, l.jsx)(B, {
-          ...e,
-          isQuestComplete: w,
-          useReducedMotion: es,
-          isInHouseQuest: W,
-          inGiftInventory: K,
-          disabled: er,
-          isEnrolling: eo,
-          onClick: ec,
-          children: ei
-        })
-      }, el)]
-    }), $ && (0, l.jsx)(f.Z, {
+        progressState: C,
+        isCollectibleQuest: j,
+        location: n,
+        inGiftInventory: y
+      })]
+    }), w && (0, l.jsx)(f.Z, {
       className: D.gridProgressBar,
-      color: w ? u.tokens.colors.TEXT_POSITIVE : u.tokens.colors.BG_BRAND,
+      color: O ? u.tokens.colors.TEXT_POSITIVE : u.tokens.colors.BG_BRAND,
       quest: t,
-      isInventory: K
+      isInventory: y
     })]
   })
 }
