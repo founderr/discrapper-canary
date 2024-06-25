@@ -71563,7 +71563,15 @@ html .invoiceCancelRow_b1a31b {
     -o-object-fit: contain;
     object-fit: contain;
     width: 150px;
-    transform: translatey(-3px)
+    transform: translatey(-3px);
+    pointer-events: none
+}
+
+.tideArt_da1432 {
+    left: -28px;
+    bottom: -30px;
+    width: auto;
+    height: 142px
 }
 
 .tryItOutSection_eb2d2c {
