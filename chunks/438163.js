@@ -54,8 +54,12 @@ function g(e) {
       k.current = null !== (i = null === (t = x.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== i ? i : 144, Z.current = null !== (r = null === (n = V.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== r ? r : 36
     }
   }, [C, z]);
-  let [ee, et] = (0, a.useSpring)(() => ({
+  let [{
+    maxHeight: ee,
+    editIconOpacity: et
+  }, en] = (0, a.useSpring)(() => ({
     maxHeight: "".concat(36, "px"),
+    editIconOpacity: 0,
     config: {
       clamp: !0,
       immediate: b,
@@ -63,46 +67,55 @@ function g(e) {
     }
   }));
   if (r.useEffect(() => () => B.stop(), [B]), !q && !X) return null;
-  let en = e => {
+  let ei = e => {
       var t, n;
-      if (!J) {
-        e ? et({
-          maxHeight: "".concat(Math.min(null !== (t = k.current) && void 0 !== t ? t : 144, 144), "px"),
+      if (e) {
+        let e = Math.min(null !== (t = k.current) && void 0 !== t ? t : 144, 144);
+        en({
+          maxHeight: "".concat(e, "px"),
+          editIconOpacity: 1,
           delay: 300
-        }) : et({
-          maxHeight: "".concat(Math.min(null !== (n = Z.current) && void 0 !== n ? n : 36, 36), "px"),
+        })
+      } else {
+        let e = Math.min(null !== (n = Z.current) && void 0 !== n ? n : 36, 36);
+        en({
+          maxHeight: "".concat(e, "px"),
+          editIconOpacity: 0,
           delay: 0
-        });
-        B.start(e ? 300 : 150, () => {
-          w(!e)
         })
       }
+      B.start(e ? 300 : 150, () => {
+        w(!e)
+      })
     },
-    ei = () => Q ? (0, i.jsxs)("div", {
+    er = () => Q ? (0, i.jsxs)(a.animated.div, {
+      style: {
+        opacity: et
+      },
       className: R.editIcon,
       children: [(0, i.jsx)("div", {
         className: o()(R.editGradient, z && R.editGradientEmojiOnly)
       }), (0, i.jsx)(c.Clickable, {
         className: o()(R.editClickable, z && R.editClickableEmojiOnly),
-        onClick: ea,
+        onClick: el,
         children: (0, i.jsx)(_.v, {
           size: "xs"
         })
       })]
     }) : null,
-    er = () => K ? (0, i.jsx)(d.I, {
+    es = () => K ? (0, i.jsx)(d.I, {
       className: j ? R.statusEmojiInline : R.statusEmojiOnly,
       emoji: W,
       animate: v,
       hideTooltip: !1,
       tooltipDelay: m.vB
     }) : null,
-    es = () => j ? (0, i.jsx)(c.Text, {
+    eo = () => j ? (0, i.jsx)(c.Text, {
       variant: p,
       className: R.statusText,
       children: Y
     }) : null,
-    eo = () => (0, i.jsxs)("div", {
+    ea = () => (0, i.jsxs)("div", {
       className: R.content,
       children: [(0, i.jsx)(c.CirclePlusIcon, {
         className: R.addStatusIcon,
@@ -113,7 +126,7 @@ function g(e) {
         children: O.Z.Messages.USER_SETTINGS_ADD_STATUS
       })]
     }),
-    ea = () => {
+    el = () => {
       P({
         action: "PRESS_SET_CUSTOM_STATUS"
       }), null == L || L(), (0, c.openModalLazy)(async () => {
@@ -126,17 +139,17 @@ function g(e) {
         })
       })
     },
-    el = {
+    eu = {
       [R.biteSize]: g === m.y0.BITE_SIZE,
       [R.fullSize]: g === m.y0.FULL_SIZE,
       [R.panel]: g === m.y0.PANEL
     },
-    eu = o()(R.statusBubbleOuter, el, {
+    e_ = o()(R.statusBubbleOuter, eu, {
       [R.statusBubbleShape]: !j && K || !J,
       [R.statusBubbleSingleLineWithTextShape]: J && j || X,
       [R.statusBubbleOuterAddStatusCursor]: X
     }),
-    e_ = o()(R.statusBubble, {
+    ec = o()(R.statusBubble, {
       [R.statusBubbleShape]: !j && K || !J,
       [R.statusBubbleSingleLineWithTextShape]: J && j || X,
       [R.statusBubbleEmojiOnlyPadding]: z,
@@ -146,28 +159,28 @@ function g(e) {
     });
   return (0, i.jsxs)("div", {
     children: [(0, i.jsx)("div", {
-      className: o()(R.invisibleContainer, el),
+      className: o()(R.invisibleContainer, eu),
       children: (0, i.jsx)("div", {
-        className: eu,
+        className: e_,
         children: (0, i.jsxs)("span", {
-          className: e_,
-          children: [X && eo(), q && (0, i.jsxs)("div", {
+          className: ec,
+          children: [X && ea(), q && (0, i.jsxs)("div", {
             className: o()(R.content, R.clamp, R.placeholderWidth, {
               [R.panel]: g === m.y0.PANEL
             }),
             ref: V,
-            children: [er(), es()]
+            children: [es(), eo()]
           }), q && (0, i.jsxs)("div", {
             className: o()(R.content, R.unclamp, R.placeholderWidth, R.incorporeal, {
               [R.panel]: g === m.y0.PANEL
             }),
             ref: x,
-            children: [er(), es()]
+            children: [es(), eo()]
           })]
         })
       })
     }), (0, i.jsxs)("div", {
-      className: o()(R.visibleContainer, el),
+      className: o()(R.visibleContainer, eu),
       ref: H,
       children: [(0, i.jsx)(A.Z, {
         isHovering: F,
@@ -175,24 +188,28 @@ function g(e) {
         className: R.reactReplyBar
       }), (0, i.jsx)(c.Clickable, {
         tabIndex: 0,
-        className: eu,
-        onFocus: () => en(!0),
-        onBlur: () => en(!1),
-        onMouseEnter: () => en(!0),
-        onMouseLeave: () => en(!1),
-        onClick: X ? ea : void 0,
+        className: e_,
+        onFocus: () => ei(!0),
+        onBlur: e => {
+          !e.currentTarget.contains(e.relatedTarget) && ei(!1)
+        },
+        onMouseEnter: () => ei(!0),
+        onMouseLeave: () => ei(!1),
+        onClick: X ? el : void 0,
         children: (0, i.jsxs)("span", {
-          className: e_,
-          children: [X && eo(), q && (() => {
+          className: ec,
+          children: [X && ea(), q && (() => {
             let e = o()(R.content, {
               [R.clamp]: G,
               [R.unclamp]: !G,
               [R.singleLineAlign]: J
             });
             return (0, i.jsxs)(a.animated.div, {
-              style: ee,
+              style: {
+                maxHeight: ee
+              },
               className: e,
-              children: [ei(), er(), es()]
+              children: [er(), es(), eo()]
             })
           })()]
         })
