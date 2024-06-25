@@ -22,7 +22,7 @@ n.ZP = (0, t.B)({
     id: 1,
     label: "Regional Payment Method for Germany",
     config: {
-      enabledPaymentTypes: [s.HeQ.SOFORT, s.HeQ.GIROPAY],
+      enabledPaymentTypes: [s.HeQ.SOFORT],
       forceCountryCode: "DE",
       validCountryCodes: ["DE"]
     }
