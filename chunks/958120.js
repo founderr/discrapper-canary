@@ -84,8 +84,7 @@ function v(e) {
       children: (0, i.jsx)(T.Z, {
         user: t,
         guildId: null == L ? void 0 : L.id,
-        channelId: P,
-        className: C.friendRequestBanner
+        channelId: P
       })
     }), t.id !== n.id && (0, i.jsx)(R.Z, {
       user: t,

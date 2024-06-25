@@ -31,8 +31,8 @@ function v(e) {
     initialSubsection: N,
     friendToken: g,
     onClose: T
-  } = e, C = (0, l.e7)([t.Z], () => t.Z.getRelationshipType(s.id)), {
-    originalFriendingEnabled: R,
+  } = e, R = (0, l.e7)([t.Z], () => t.Z.getRelationshipType(s.id)), {
+    originalFriendingEnabled: C,
     improvedFriendingEnabled: A
   } = (0, r.V)({
     location: "SimplifiedUserProfileModalBody"
@@ -56,13 +56,14 @@ function v(e) {
         profileType: f.y0.FULL_SIZE,
         onClose: T
       })
-    }), (A || R) && C === _.OGo.PENDING_INCOMING && (0, n.jsx)(u.Z.Overlay, {
-      className: S.friendRequestBanner,
+    }), (A || C) && R === _.OGo.PENDING_INCOMING && (0, n.jsx)(u.Z.Overlay, {
+      className: S.friendRequestBannerOverlay,
       children: (0, n.jsx)(c.Z, {
         user: s,
         guildId: null !== (i = null == x ? void 0 : x.guildId) && void 0 !== i ? i : void 0,
         channelId: m,
-        friendToken: g
+        friendToken: g,
+        className: S.friendRequestBanner
       })
     }), (0, n.jsx)(u.Z.Overlay, {
       className: S.overlay,
