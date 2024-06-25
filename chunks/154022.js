@@ -27,8 +27,8 @@ var n = t(735250),
   R = t(285952),
   M = t(153124),
   x = t(626135),
-  p = t(63063),
-  D = t(695346),
+  D = t(63063),
+  p = t(695346),
   L = t(263937),
   P = t(996073),
   Z = t(526761),
@@ -100,7 +100,7 @@ function w(e) {
 }
 
 function W() {
-  let e = D.jU.useSetting(),
+  let e = p.jU.useSetting(),
     [s] = i.useState(() => {
       let e = (0, I.e5)({
         ...(0, N.ZP)({
@@ -280,7 +280,7 @@ function J() {
     null != a.current && (clearTimeout(a.current), a.current = null), s !== e && (a.current = setTimeout(() => (0, T.qz)(s), 150))
   }, [s, e]);
   let l = B.Z.Messages.ACCESSIBILITY_SETTINGS_SYNC_FORCED_COLORS_DESCRIPTION.format({
-    learnMoreLink: p.Z.getArticleURL(v.BhN.FORCED_COLORS)
+    learnMoreLink: D.Z.getArticleURL(v.BhN.FORCED_COLORS)
   });
   return (0, n.jsx)(E.FormItem, {
     title: B.Z.Messages.ACCESSIBILITY_SETTINGS_CONTRAST,
@@ -295,8 +295,8 @@ function J() {
 }
 
 function $() {
-  let e = D.QK.useSetting(),
-    s = D.Yk.useSetting(),
+  let e = p.QK.useSetting(),
+    s = p.Yk.useSetting(),
     {
       useReducedMotion: t,
       rawPrefersReducedMotion: a,
@@ -326,7 +326,7 @@ function $() {
       type: E.FormText.Types.DESCRIPTION,
       className: G.marginBottom8,
       children: B.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_DESCRIPTION.format({
-        helpdeskArticle: p.Z.getArticleURL(v.BhN.REDUCED_MOTION)
+        helpdeskArticle: D.Z.getArticleURL(v.BhN.REDUCED_MOTION)
       })
     }), (0, n.jsx)(E.Checkbox, {
       className: G.marginTop20,
@@ -347,23 +347,23 @@ function $() {
       className: G.marginBottom40,
       value: e,
       note: null != o ? (0, O.Z)(o) : void 0,
-      onChange: D.QK.updateSetting,
+      onChange: p.QK.updateSetting,
       children: B.Z.Messages.GIF_AUTO_PLAY_LABEL
     }), (0, n.jsx)(E.FormSwitch, {
       className: l()(G.marginTop8, G.marginBottom20),
       value: s,
       note: null != d ? (0, O.Z)(d) : void 0,
-      onChange: D.Yk.updateSetting,
+      onChange: p.Yk.updateSetting,
       children: B.Z.Messages.ANIMATE_EMOJI
     })]
   })
 }
 
 function ee() {
-  let e = D.Wp.useSetting(),
+  let e = p.Wp.useSetting(),
     s = (0, c.e7)([L.Z], () => L.Z.getAppliedOverrideReasonKey("animateStickers")),
     t = i.useCallback(e => {
-      D.Wp.updateSetting(e.value)
+      p.Wp.updateSetting(e.value)
     }, []);
   return (0, n.jsxs)(E.FormItem, {
     className: G.marginBottom40,
@@ -392,7 +392,7 @@ function ee() {
 
 function es() {
   let e = (0, c.e7)([S.Z], () => S.Z.isSubmitButtonEnabled),
-    s = D.dN.useSetting(),
+    s = p.dN.useSetting(),
     t = i.useRef(null);
   return (0, P.Z)(t, Z.rP.LEGACY_CHAT_INPUT), (0, n.jsxs)(E.FormItem, {
     ref: t,
@@ -414,7 +414,7 @@ function es() {
           location: {
             section: v.jXE.SETTINGS_ACCESSIBILITY
           }
-        }), D.dN.updateSetting(e)
+        }), p.dN.updateSetting(e)
       },
       children: B.Z.Messages.LEGACY_CHAT_INPUT
     })]
@@ -422,7 +422,7 @@ function es() {
 }
 
 function et() {
-  let e = D.OW.useSetting(),
+  let e = p.OW.useSetting(),
     s = (0, c.e7)([g.Z], () => g.Z.speechRate),
     [t, a] = i.useState(!1);
   return _.Zh ? (0, n.jsxs)(n.Fragment, {
@@ -433,7 +433,7 @@ function et() {
       }), (0, n.jsx)(E.FormSwitch, {
         className: G.marginTop20,
         value: e,
-        onChange: D.OW.updateSetting,
+        onChange: p.OW.updateSetting,
         children: B.Z.Messages.ALLOW_TTS_COMMAND
       })]
     }), (0, n.jsxs)(E.FormItem, {

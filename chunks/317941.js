@@ -23,9 +23,9 @@ var n = t(735250),
   R = t(296848),
   M = t(474936),
   x = t(689938),
-  p = t(756369);
+  D = t(756369);
 
-function D(e, s, t) {
+function p(e, s, t) {
   return s in e ? Object.defineProperty(e, s, {
     value: t,
     enumerable: !0,
@@ -59,9 +59,9 @@ class L extends i.PureComponent {
     } = this.state;
     return (0, n.jsxs)(C.Z, {
       direction: C.Z.Direction.VERTICAL,
-      className: p.giftCodeRow,
+      className: D.giftCodeRow,
       children: [(0, n.jsx)(c.CopyInput, {
-        className: p.codeText,
+        className: D.codeText,
         value: (0, g.Nz)(s.code),
         text: this.copyButtonText,
         mode: t,
@@ -71,7 +71,7 @@ class L extends i.PureComponent {
         buttonColor: c.ButtonColors.BRAND,
         buttonLook: c.ButtonLooks.FILLED
       }), (0, n.jsxs)("div", {
-        className: p.subTextRow,
+        className: D.subTextRow,
         children: [null != s.expiresAt ? (0, n.jsxs)(i.Fragment, {
           children: [x.Z.Messages.GIFT_INVENTORY_EXPIRES_IN.format({
             hours: s.expiresAt.diff(l()(), "h")
@@ -85,9 +85,9 @@ class L extends i.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), D(this, "_copyModeTimeout", new o.V7), D(this, "state", {
+    super(...e), p(this, "_copyModeTimeout", new o.V7), p(this, "state", {
       copyMode: c.CopyInputModes.DEFAULT
-    }), D(this, "handleCopy", e => {
+    }), p(this, "handleCopy", e => {
       let {
         giftCode: s,
         sku: t
@@ -128,7 +128,7 @@ class P extends i.PureComponent {
       skuName: s.name,
       intervalCount: t.intervalCount
     }), (0, n.jsx)("div", {
-      className: p.gameName,
+      className: D.gameName,
       children: e
     })
   }
@@ -136,9 +136,9 @@ class P extends i.PureComponent {
     return (0, n.jsxs)(C.Z, {
       justify: C.Z.Justify.BETWEEN,
       align: C.Z.Align.CENTER,
-      className: p.generateCodeRow,
+      className: D.generateCodeRow,
       children: [(0, n.jsx)("div", {
-        className: p.codeText,
+        className: D.codeText,
         children: x.Z.Messages.GIFT_INVENTORY_GENERATE_HELP
       }), (0, n.jsx)(c.Button, {
         submitting: this.state.isCreating,
@@ -171,27 +171,27 @@ class P extends i.PureComponent {
       className: a,
       children: [(0, n.jsx)(c.Clickable, {
         onClick: this.handleToggleOpen,
-        className: p.card,
+        className: D.card,
         onMouseEnter: () => this.setIsHovered(!0),
         onMouseLeave: () => this.setIsHovered(!1),
         children: (0, n.jsx)(A.Z.Header, {
           splashArtURL: s.getSplashURL(512),
           children: (0, n.jsxs)("div", {
-            className: p.cardHeader,
+            className: D.cardHeader,
             children: [(0, n.jsxs)(C.Z, {
               align: C.Z.Align.CENTER,
               children: [null != E ? (0, n.jsx)(_.Z, {
                 giftStyle: E,
-                className: p.seasonalGiftBox,
+                className: D.seasonalGiftBox,
                 shouldAnimate: this.state.isHovered
               }) : (0, n.jsx)(O.Z, {
                 game: s,
                 size: O.Z.Sizes.MEDIUM,
                 skuId: l.id
               }), (0, n.jsxs)("div", {
-                className: p.headerText,
+                className: D.headerText,
                 children: [this.renderTitle(), (0, n.jsx)("div", {
-                  className: p.subTextHeader,
+                  className: D.subTextHeader,
                   children: x.Z.Messages.GIFT_INVENTORY_COPIES.format({
                     copies: e.length
                   })
@@ -199,13 +199,13 @@ class P extends i.PureComponent {
               })]
             }), (0, n.jsx)(m.Z, {
               direction: d ? m.Z.Directions.UP : m.Z.Directions.DOWN,
-              className: p.expandIcon
+              className: D.expandIcon
             })]
           })
         })
       }), d ? (0, n.jsx)(A.Z.Body, {
         children: r ? (0, n.jsx)(c.Spinner, {
-          className: p.spinner
+          className: D.spinner
         }) : (0, n.jsxs)(i.Fragment, {
           children: [t.length < e.length ? this.renderGenerateGiftCodeRow() : null, t.map(e => (0, n.jsx)(L, {
             giftCode: e,
@@ -217,11 +217,11 @@ class P extends i.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), D(this, "_loadedAt", null), D(this, "state", {
+    super(...e), p(this, "_loadedAt", null), p(this, "state", {
       isOpen: !1,
       isCreating: !1,
       isHovered: !1
-    }), D(this, "handleGenerateGiftCode", async e => {
+    }), p(this, "handleGenerateGiftCode", async e => {
       e.stopPropagation();
       let {
         skuId: s,
@@ -234,7 +234,7 @@ class P extends i.PureComponent {
         isCreating: !1,
         isOpen: !0
       })
-    }), D(this, "handleToggleOpen", () => {
+    }), p(this, "handleToggleOpen", () => {
       let {
         skuId: e,
         subscriptionPlanId: s,

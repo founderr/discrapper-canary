@@ -80,14 +80,14 @@ function x() {
   R.lifecycle === C.N7.TESTING && (R.failed = !0, j(), U())
 }
 
-function p() {
+function D() {
   if (R.lifecycle === C.N7.CONNECTING) {
     var e;
     f(C.N7.PINGING), null === (e = R.connection) || void 0 === e || e.setPingInterval(500), P()
   }
 }
 
-function D(e, s) {
+function p(e, s) {
   if (null != R.currentTest) {
     if (!0 !== R.failed) R.currentTest = R.currentTest + 1, R.results.push({
       payload: e,
@@ -254,6 +254,6 @@ l = "RTCSpeedTestStore", (a = "displayName") in(i = B) ? Object.defineProperty(i
       rtcServerId: R.rtcServerId,
       endpoint: e.endpoint,
       token: e.token
-    }), R.connection.on("state", M), R.connection.on("resuming", x), R.connection.on("ready", p), R.connection.on("speed-test-completed", D), R.connection.on("ping", L), R.connection.on("ping-timeout", L), R.connection.connect(), f(C.N7.CONNECTING)
+    }), R.connection.on("state", M), R.connection.on("resuming", x), R.connection.on("ready", D), R.connection.on("speed-test-completed", p), R.connection.on("ping", L), R.connection.on("ping-timeout", L), R.connection.connect(), f(C.N7.CONNECTING)
   }
 })

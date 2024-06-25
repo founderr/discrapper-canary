@@ -37,26 +37,26 @@ function R(e) {
     autoTrackExposure: !1
   }), {
     analyticsLocations: x
-  } = (0, o.ZP)(), p = (0, T.Go)(), {
-    viewerClipsEnabled: D
+  } = (0, o.ZP)(), D = (0, T.Go)(), {
+    viewerClipsEnabled: p
   } = (0, a.cj)([S.Z], () => S.Z.getSettings()), L = (0, u.Z)(_.Z);
   return i.useEffect(() => {
     (0, c.EW)(l.z.CLIPS_SETTINGS_BETA_TAG)
   }), (0, n.jsxs)(o.Gt, {
     value: x,
-    children: [(p || t) && (0, n.jsx)(r.FormSection, {
+    children: [(D || t) && (0, n.jsx)(r.FormSection, {
       className: s,
       tag: r.FormTitleTags.H1,
       title: t ? (0, n.jsxs)("div", {
         className: m.headerContainer,
         children: [O.Z.Messages.CLIPS, (0, n.jsx)(N.Z, {})]
       }) : null,
-      children: p && (0, n.jsxs)("form", {
+      children: D && (0, n.jsxs)("form", {
         onSubmit: e => e.preventDefault(),
         children: [(0, n.jsx)(A.Z, {}), (0, n.jsx)(C.Z, {})]
       })
-    }), p && (0, n.jsx)(r.FormDivider, {}), (0, n.jsxs)(r.FormSection, {
-      className: t || p ? g.marginTop20 : s,
+    }), D && (0, n.jsx)(r.FormDivider, {}), (0, n.jsxs)(r.FormSection, {
+      className: t || D ? g.marginTop20 : s,
       children: [(0, n.jsx)(r.FormSwitch, {
         hideBorder: !0,
         className: h.formItem,
@@ -69,7 +69,7 @@ function R(e) {
       }), M && L && (0, n.jsx)(r.FormSwitch, {
         hideBorder: !0,
         className: h.formItem,
-        value: D,
+        value: p,
         note: O.Z.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
         onChange: e => I.yl({
           enabled: e,

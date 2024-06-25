@@ -52,8 +52,8 @@ function C() {
   }));
   let M = a()(g).values().first(),
     x = null != M ? M.disabled : null != e,
-    p = a()(R).values().first(),
-    D = null != p ? p.disabled : null != s;
+    D = a()(R).values().first(),
+    p = null != D ? D.disabled : null != s;
 
   function L(e) {
     let s, {
@@ -124,7 +124,7 @@ function C() {
             label: t
           }
         }),
-        isDisabled: D,
+        isDisabled: p,
         renderOptionValue: P,
         renderOptionLabel: L
       }), s]

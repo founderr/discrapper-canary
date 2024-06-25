@@ -23,8 +23,8 @@ var n = t(735250),
   R = t(454982),
   M = t(197115),
   x = t(504983),
-  p = t(703656),
-  D = t(594174),
+  D = t(703656),
+  p = t(594174),
   L = t(580130),
   P = t(669079),
   Z = t(74538),
@@ -67,7 +67,7 @@ function F(e) {
     M = i.useCallback(() => T(!1), []),
     {
       outboundTitle: x,
-      outboundTermsAndConditions: p
+      outboundTermsAndConditions: D
     } = t;
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {
@@ -106,7 +106,7 @@ function F(e) {
         className: G.promotionLegalese,
         variant: "text-xs/normal",
         color: "header-secondary",
-        children: C.Z.parse(p, !1, {
+        children: C.Z.parse(D, !1, {
           allowLinks: !0
         })
       })]
@@ -130,7 +130,7 @@ s.Z = function() {
       } = e;
       return null == s
     }),
-    a = (0, c.e7)([D.default], () => Z.ZP.isPremium(D.default.getCurrentUser())),
+    a = (0, c.e7)([p.default], () => Z.ZP.isPremium(p.default.getCurrentUser())),
     r = o().groupBy(s, e => (0, P.Bg)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
     [u, C] = i.useState(!1),
     m = (0, c.e7)([A.Z], () => A.Z.userStatus);
@@ -190,7 +190,7 @@ s.Z = function() {
               className: G.promoDescription,
               children: b.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_GIFTS_DESCRIPTION.format({
                 onClick: () => {
-                  (0, T.xf)(), (0, p.uL)(U.Z5c.APPLICATION_STORE)
+                  (0, T.xf)(), (0, D.uL)(U.Z5c.APPLICATION_STORE)
                 }
               })
             })]

@@ -23,8 +23,8 @@ var n = t(735250),
   R = t(90197),
   M = t(972667),
   x = t(83922),
-  p = t(5973),
-  D = t(331651);
+  D = t(5973),
+  p = t(331651);
 let L = r.ZP.connectStores([m.Z], () => ({
     theme: m.Z.theme
   }))(c.EmptyState),
@@ -49,7 +49,7 @@ function Z(e) {
         o(e)
       }
     }), (0, n.jsx)(c.FormDivider, {
-      className: l()(D.marginTop8, D.marginBottom8)
+      className: l()(p.marginTop8, p.marginBottom8)
     }), (0, n.jsxs)("div", {
       className: l()(R.actions, x.horizontal),
       children: [(0, n.jsx)(c.Button, {
@@ -75,10 +75,10 @@ function f(e) {
     rawGame: t,
     nowPlaying: a = !1,
     isOverride: T
-  } = e, C = (0, r.cj)([S.Z, _.ZP, u.Z], () => (0, _.FZ)(t)), [O, m] = i.useState(!1), [M, D] = i.useState(null !== (s = C.name) && void 0 !== s ? s : "???"), L = l()(x.flexCenter, {
+  } = e, C = (0, r.cj)([S.Z, _.ZP, u.Z], () => (0, _.FZ)(t)), [O, m] = i.useState(!1), [M, p] = i.useState(null !== (s = C.name) && void 0 !== s ? s : "???"), L = l()(x.flexCenter, {
     [R.game]: !a,
     [R.activeGame]: a,
-    [p.card]: !a,
+    [D.card]: !a,
     [R.nowPlaying]: null != C && a
   });
 
@@ -139,7 +139,7 @@ function f(e) {
         value: M,
         onBlur: f,
         onKeyDown: v,
-        onChange: e => D(e.target.value)
+        onChange: e => p(e.target.value)
       }), function() {
         let e;
         let {
@@ -287,7 +287,7 @@ function j(e) {
     children: s
   } = e;
   return (0, n.jsxs)(L, {
-    className: D.marginTop40,
+    className: p.marginTop40,
     children: [(0, n.jsx)(c.EmptyStateImage, {
       darkSrc: t(879601),
       lightSrc: t(889e3),
@@ -320,7 +320,7 @@ s.Z = function(e) {
       isOverride: E.has(o.exePath),
       nowPlaying: !0
     }, (0, _.rH)(o)) : (0, n.jsx)(v, {}), (0, n.jsxs)("div", {
-      className: l()(R.nowPlayingAdd, D.marginReset, D.marginTop8, D.marginBottom20),
+      className: l()(R.nowPlayingAdd, p.marginReset, p.marginTop8, p.marginBottom20),
       children: [(0, n.jsx)("span", {
         children: g.Z.Messages.SETTINGS_GAMES_NOT_SEEING_GAME
       }), (0, n.jsx)(c.Popout, {
@@ -347,9 +347,9 @@ s.Z = function(e) {
         children: g.Z.Messages.SETTINGS_GAMES_NO_GAMES_HEADER
       })
     }) : (0, n.jsxs)(c.FormSection, {
-      className: D.marginTop40,
+      className: p.marginTop40,
       children: [(0, n.jsx)(c.FormTitle, {
-        className: D.marginBottom4,
+        className: p.marginBottom4,
         children: g.Z.Messages.SETTINGS_GAMES_ADDED_GAMES_LABEL
       }), (0, n.jsx)(c.FormText, {
         type: c.FormTextTypes.DESCRIPTION,

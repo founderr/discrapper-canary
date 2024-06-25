@@ -23,8 +23,8 @@ var n = t(735250),
   R = t(325067),
   M = t(246946),
   x = t(594174),
-  p = t(285952),
-  D = t(474333),
+  D = t(285952),
+  p = t(474333),
   L = t(499150),
   P = t(709054),
   Z = t(706454),
@@ -104,9 +104,9 @@ class k extends i.PureComponent {
     }
   }
   renderPomeloWarning() {
-    return this.props.shouldRenderPomeloWarning ? (0, n.jsxs)(D.Z, {
+    return this.props.shouldRenderPomeloWarning ? (0, n.jsxs)(p.Z, {
       className: Y.accountWarningBodyText,
-      messageType: D.Q.WARNING,
+      messageType: p.Q.WARNING,
       children: [this.props.forceMigrationExperiment ? y.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({
         date: (0, N.IE)(this.props.locale)
       }) : y.Z.Messages.POMELO_ACTION_NEEDED.format(), " ", "", (0, n.jsx)(L.Z, {
@@ -158,15 +158,15 @@ class k extends i.PureComponent {
         })
       }), (0, n.jsx)(m.F, {
         setting: G.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-        children: (0, n.jsxs)(p.Z, {
-          align: p.Z.Align.STRETCH,
-          children: [(0, n.jsx)(p.Z.Child, {
+        children: (0, n.jsxs)(D.Z, {
+          align: D.Z.Align.STRETCH,
+          children: [(0, n.jsx)(D.Z.Child, {
             wrap: !0,
             children: (0, n.jsx)(j.Z, {
               backupCodes: e
             })
-          }), s.mfaEnabled ? null : (0, n.jsx)(p.Z, {
-            align: p.Z.Align.CENTER,
+          }), s.mfaEnabled ? null : (0, n.jsx)(D.Z, {
+            align: D.Z.Align.CENTER,
             basis: "323px",
             grow: 0,
             children: (0, n.jsx)("img", {

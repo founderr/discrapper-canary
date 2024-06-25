@@ -1,9 +1,9 @@
 t.d(s, {
   Z: function() {
-    return D
+    return p
   },
   r: function() {
-    return p
+    return D
   }
 }), t(653041), t(47120);
 var n = t(735250),
@@ -212,7 +212,7 @@ function x(e) {
   })
 }
 
-function p(e) {
+function D(e) {
   let {
     appliedGuildBoosts: s,
     premiumSubscription: t
@@ -238,7 +238,7 @@ function p(e) {
   })
 }
 
-function D(e) {
+function p(e) {
   let {
     guildBoostSlots: s,
     premiumSubscription: t

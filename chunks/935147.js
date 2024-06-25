@@ -27,8 +27,8 @@ var n = t(735250),
   R = t(433411),
   M = t(532432),
   x = t(504983),
-  p = t(134795),
-  D = t(513901),
+  D = t(134795),
+  p = t(513901),
   L = t(451392),
   P = t(981631),
   Z = t(474936),
@@ -137,7 +137,7 @@ function U(e) {
             onThemeColorsChange: N.rf,
             showPremiumIcon: !1,
             preventDisabled: !0
-          }), (0, n.jsx)(p.Z, {
+          }), (0, n.jsx)(D.Z, {
             className: j.customizationSection,
             isTryItOutFlow: !0,
             showRemoveBannerButton: null != K,
@@ -155,7 +155,7 @@ function U(e) {
             className: j.customizationSection,
             user: b,
             sectionTitle: v.Z.Messages.USER_SETTINGS_AVATAR_DECORATION
-          }, "decoration"), (0, n.jsx)(D.Z, {
+          }, "decoration"), (0, n.jsx)(p.Z, {
             className: j.customizationSection,
             isTryItOutFlow: !0,
             initialSelectedEffectId: q,

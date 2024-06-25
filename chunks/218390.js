@@ -23,8 +23,8 @@ var n = t(735250),
   R = t(15640),
   M = t(89057),
   x = t(703656),
-  p = t(246946),
-  D = t(78839),
+  D = t(246946),
+  p = t(78839),
   L = t(586576),
   P = t(483444),
   Z = t(626135),
@@ -50,7 +50,7 @@ var n = t(735250),
 
 function q() {
   var e, s, t;
-  let i = (0, c.e7)([D.ZP], () => D.ZP.getPremiumTypeSubscription()),
+  let i = (0, c.e7)([p.ZP], () => p.ZP.getPremiumTypeSubscription()),
     {
       bucket: a
     } = (0, U.wj)("PremiumMarketingHome"),
@@ -217,13 +217,13 @@ s.Z = function() {
     {
       analyticsLocations: s
     } = (0, h.ZP)(m.Z.PREMIUM_SETTINGS),
-    t = (0, c.e7)([D.ZP], () => D.ZP.getPremiumTypeSubscription()),
-    a = (0, c.e7)([D.ZP], () => D.ZP.hasFetchedSubscriptions()),
+    t = (0, c.e7)([p.ZP], () => p.ZP.getPremiumTypeSubscription()),
+    a = (0, c.e7)([p.ZP], () => p.ZP.hasFetchedSubscriptions()),
     l = (0, R.V)(),
     [r, o] = i.useState(!0),
     d = (0, B.n)(),
     u = null == d ? void 0 : d.countryCode,
-    N = (0, c.e7)([p.Z], () => p.Z.enabled),
+    N = (0, c.e7)([D.Z], () => D.Z.enabled),
     O = "PremiumManagementSettings";
   (0, C.j)({
     location: O + " auto on",

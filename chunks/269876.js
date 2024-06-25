@@ -40,7 +40,7 @@ function m() {
     s(e), a((t & u.Dg.VOICE) === u.Dg.VOICE)
   }
 
-  function p(e, s) {
+  function D(e, s) {
     _.Z.setMode(g, {
       threshold: e,
       autoThreshold: s
@@ -54,12 +54,12 @@ function m() {
       T.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, x), e.stop()
     }
   }, []);
-  let D = (0, n.jsx)("section", {
+  let p = (0, n.jsx)("section", {
     className: l()(N.inputSensitivityToggle, N.manual),
     children: (0, n.jsx)(d.Slider, {
       initialValue: m + 100,
       onValueRender: e => "".concat((-((100 - e) * 1)).toFixed(0), "dB"),
-      onValueChange: e => p(-((100 - e) * 1), h),
+      onValueChange: e => D(-((100 - e) * 1), h),
       barStyles: {
         background: E.Z.unsafe_rawColors.GREEN_360.css
       },
@@ -80,7 +80,7 @@ function m() {
       })
     })
   });
-  return h && (D = (0, n.jsxs)("section", {
+  return h && (p = (0, n.jsxs)("section", {
     className: N.inputSensitivityToggle,
     children: [(0, n.jsx)("div", {
       className: N.inputSensitivitySlider,
@@ -115,10 +115,10 @@ function m() {
           }), (0, n.jsx)(d.Switch, {
             id: e,
             checked: h,
-            onChange: e => p(m, e)
+            onChange: e => D(m, e)
           })]
         })
-      }), D]
+      }), p]
     }), !M && (0, n.jsx)(d.FormText, {
       type: d.FormText.Types.DESCRIPTION,
       className: l()(N.inputDisabledWarning, C.marginBottom8),

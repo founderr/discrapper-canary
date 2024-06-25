@@ -48,8 +48,8 @@ let A = e => {
     } = (0, E.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL), {
       cancelSubscription: M,
       error: x,
-      submitting: p
-    } = A(R), D = async () => {
+      submitting: D
+    } = A(R), p = async () => {
       await M(C.id) && O()
     }, L = o.role_benefits.benefits.filter(e => e.ref_type === u.Qs.CHANNEL), P = o.role_benefits.benefits.filter(e => e.ref_type === u.Qs.INTANGIBLE), Z = l()(C.currentPeriodEnd).format("MMMM Do, YYYY"), f = I.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_DESCRIPTION.format({
       numChannels: L.length,
@@ -92,8 +92,8 @@ let A = e => {
         className: N.footer,
         children: [(0, n.jsx)(r.Button, {
           color: r.Button.Colors.RED,
-          onClick: D,
-          submitting: p,
+          onClick: p,
+          submitting: D,
           children: I.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_CANCEL_CTA
         }), (0, n.jsx)(r.Button, {
           look: r.Button.Looks.LINK,

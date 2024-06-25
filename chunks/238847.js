@@ -23,8 +23,8 @@ var n = t(735250),
   R = t(755596),
   M = t(153124),
   x = t(171246),
-  p = t(41959),
-  D = t(650919),
+  D = t(41959),
+  p = t(650919),
   L = t(981631),
   P = t(689938),
   Z = t(702606);
@@ -116,7 +116,7 @@ s.Z = e => {
     handleToggleExpanded: A,
     subscriptionInfo: C,
     application: m
-  } = (0, D.Z)(s), R = (0, M.Dt)(), [U, B] = i.useState(!1), {
+  } = (0, p.Z)(s), R = (0, M.Dt)(), [U, B] = i.useState(!1), {
     analyticsLocations: b
   } = (0, S.ZP)();
   if (null == r || null == a || null == C) return null;
@@ -203,8 +203,8 @@ s.Z = e => {
           handleStopPropagation: t
         } = e;
         return (0, n.jsxs)(n.Fragment, {
-          children: [null != m && (0, n.jsx)(p.Z, {
-            size: p.H.SMALL,
+          children: [null != m && (0, n.jsx)(D.Z, {
+            size: D.H.SMALL,
             className: Z.applicationIcon,
             application: m,
             asset: null != a.image_asset ? (0, u.m)(a.image_asset) : null

@@ -32,23 +32,23 @@ function C(e) {
     isTryItOutFlow: g = !1,
     initialSelectedEffectId: R
   } = e, M = (0, _.Kg)(s, t), x = d.ZP.canUsePremiumProfileCustomization(s), {
-    analyticsLocations: p
+    analyticsLocations: D
   } = (0, o.ZP)(), {
-    pendingProfileEffectId: D,
+    pendingProfileEffectId: p,
     errors: L
   } = (0, _.bd)(t), P = i.useCallback(() => (0, c.H)({
-    analyticsLocations: p,
+    analyticsLocations: D,
     initialSelectedEffectId: R,
     guild: t
-  }), [p, R, t]);
+  }), [D, R, t]);
   i.useEffect(() => {
     x && E.default.track(u.rMx.PREMIUM_UPSELL_VIEWED, {
       type: I.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
-      location_stack: p
+      location_stack: D
     })
-  }, [x, p]);
+  }, [x, D]);
   let Z = null != t,
-    f = g || void 0 !== D ? null != D : null != M,
+    f = g || void 0 !== p ? null != p : null != M,
     v = m ? r.ShinyButton : r.Button;
   return (0, n.jsx)(T.Z, {
     forcedDivider: O,

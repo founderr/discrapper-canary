@@ -27,8 +27,8 @@ function C() {
     m = i.useRef(null),
     [h, g] = i.useState(!1),
     [R, M] = i.useState(!1),
-    [x, p] = i.useState(!1),
-    D = (0, r.wj)((0, E.ZP)());
+    [x, D] = i.useState(!1),
+    p = (0, r.wj)((0, E.ZP)());
   return null == e ? (0, n.jsx)("div", {}) : (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {
       className: I.root,
@@ -98,7 +98,7 @@ function C() {
         checked: x,
         className: I.checkBox,
         onChange: () => {
-          p(!x)
+          D(!x)
         }
       })]
     }), (0, n.jsxs)("div", {
@@ -128,7 +128,7 @@ function C() {
     }), C.map((e, s) => (0, n.jsxs)("div", {
       style: {
         marginBottom: 8,
-        color: D ? "white" : "black"
+        color: p ? "white" : "black"
       },
       children: [(0, n.jsxs)("div", {
         style: {

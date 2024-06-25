@@ -27,8 +27,8 @@ var n = t(735250),
   R = t(80132),
   M = t(735336),
   x = t(204197),
-  p = t(25990),
-  D = t(594174),
+  D = t(25990),
+  p = t(594174),
   L = t(572004),
   P = t(51144),
   Z = t(998502),
@@ -401,14 +401,14 @@ function z() {
 
 function Q() {
   var e;
-  let s = (0, c.e7)([D.default], () => {
-      let e = D.default.getCurrentUser();
+  let s = (0, c.e7)([p.default], () => {
+      let e = p.default.getCurrentUser();
       return o()(null != e, "UserSettingsAccountProfileCard: currentUser cannot be undefined"), e
     }),
     t = (0, g.ZP)(s.id),
     i = (0, h.Z)(t),
     a = f.co.useSetting(),
-    l = (0, c.e7)([p.Z], () => p.Z.getErrors()),
+    l = (0, c.e7)([D.Z], () => D.Z.getErrors()),
     r = null == l ? void 0 : null === (e = l.avatar) || void 0 === e ? void 0 : e[0],
     {
       avatarSrc: E,

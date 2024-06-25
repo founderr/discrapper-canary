@@ -27,8 +27,8 @@ var n = t(735250),
   R = t(392888),
   M = t(921801),
   x = t(657254),
-  p = t(470647),
-  D = t(292959),
+  D = t(470647),
+  p = t(292959),
   L = t(9156),
   P = t(626135),
   Z = t(912101),
@@ -203,7 +203,7 @@ function W(e) {
         children: [(0, n.jsx)(E.FormTitle, {
           className: H.marginBottom20,
           children: y.Z.Messages.SOUNDPACK_LABEL
-        }), (0, n.jsx)(p.Z, {
+        }), (0, n.jsx)(D.Z, {
           className: l()(Y.soundpackSelect, H.marginBottom40)
         })]
       }) : null, (0, n.jsx)(E.FormSwitch, {
@@ -571,14 +571,14 @@ function $(e) {
 }
 
 function ee() {
-  let e = (0, c.cj)([D.Z], () => ({
-    disableUnreadBadge: D.Z.getDisableUnreadBadge(),
-    taskbarFlash: D.Z.taskbarFlash,
-    disabledSounds: D.Z.getDisabledSounds(),
-    disableAllSounds: D.Z.getDisableAllSounds(),
-    desktopType: D.Z.getDesktopType(),
-    ttsType: D.Z.getTTSType(),
-    notifyMessagesInSelectedChannel: D.Z.getNotifyMessagesInSelectedChannel()
+  let e = (0, c.cj)([p.Z], () => ({
+    disableUnreadBadge: p.Z.getDisableUnreadBadge(),
+    taskbarFlash: p.Z.taskbarFlash,
+    disabledSounds: p.Z.getDisabledSounds(),
+    disableAllSounds: p.Z.getDisableAllSounds(),
+    desktopType: p.Z.getDesktopType(),
+    ttsType: p.Z.getTTSType(),
+    notifyMessagesInSelectedChannel: p.Z.getNotifyMessagesInSelectedChannel()
   }));
   return (0, n.jsx)($, {
     ...e,

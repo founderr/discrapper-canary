@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return p
+    return D
   }
 });
 var n = t(735250),
@@ -28,7 +28,7 @@ var n = t(735250),
   M = t(265159),
   x = t(532495);
 
-function p() {
+function D() {
   let e = (0, r.e7)([h.default], () => {
     let e = h.default.getCurrentUser();
     return l()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e
@@ -41,8 +41,8 @@ function p() {
       pendingBio: t,
       ...a
     } = (0, r.cj)([m.Z], () => m.Z.getAllPending()),
-    p = R.dN.useSetting() && null != t ? I.ZP.parse(void 0, t).content : t,
-    D = g.ZP.canUsePremiumProfileCustomization(e),
+    D = R.dN.useSetting() && null != t ? I.ZP.parse(void 0, t).content : t,
+    p = g.ZP.canUsePremiumProfileCustomization(e),
     {
       analyticsLocations: L
     } = (0, S.ZP)(T.Z.PROFILE);
@@ -59,13 +59,13 @@ function p() {
     children: [(0, n.jsx)(u.Z, {}), (0, n.jsx)(N.Z, {
       profilePreview: (0, n.jsx)(C.Z, {
         user: e,
-        canUsePremiumCustomization: D,
+        canUsePremiumCustomization: p,
         onUpsellClick: M.Z,
-        pendingBio: p,
+        pendingBio: D,
         ...a
       }),
       children: (0, n.jsx)(x.Z, {})
-    }), !D && (0, n.jsx)(A.Z, {
+    }), !p && (0, n.jsx)(A.Z, {
       user: e
     })]
   })

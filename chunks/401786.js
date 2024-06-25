@@ -25,8 +25,8 @@ var n, i, a = t(735250),
   R = t(285952),
   M = t(267642),
   x = t(74538),
-  p = t(937615),
-  D = t(518062),
+  D = t(937615),
+  p = t(518062),
   L = t(474936),
   P = t(231338),
   Z = t(689938),
@@ -158,7 +158,7 @@ function U(e) {
       intervalCount: H
     } = P;
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(D.Z, {
+    children: [(0, a.jsx)(p.Z, {
       onClose: _
     }), (0, a.jsxs)(E.ModalContent, {
       className: f.body,
@@ -174,7 +174,7 @@ function U(e) {
           label: Z.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_INVOICE_SUBSCRIPTION_CANCELLED.format({
             subscriptionCount: 1
           }),
-          value: (0, p.og)((0, p.T4)(y, i.currency), Y, H),
+          value: (0, D.og)((0, D.T4)(y, i.currency), Y, H),
           className: f.invoiceCancelRow
         }), null != b && b.length > 0 ? (0, a.jsxs)("div", {
           children: [(0, a.jsx)(A.KU, {}), (0, a.jsx)(O.nd, {

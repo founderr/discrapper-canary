@@ -89,7 +89,7 @@ function M(e) {
       align: T.Z.Align.STRETCH,
       children: [(0, n.jsx)("div", {
         className: N.selectedVoiceChannel,
-        children: (0, n.jsx)(p, {
+        children: (0, n.jsx)(D, {
           channelId: c
         })
       }), (0, n.jsx)(T.Z.Child, {
@@ -127,8 +127,8 @@ function x(e) {
       disableMouseFocus: t
     }
   }(), {
-    query: p,
-    updateQuery: D,
+    query: D,
+    updateQuery: p,
     queryResults: L
   } = (0, o.Z)({
     visible: !0,
@@ -147,7 +147,7 @@ function x(e) {
         return t
       }, [s]);
     return s ? null : t
-  }(p), {
+  }(D), {
     focusedIndex: Z,
     setFocusedIndex: f
   } = function(e) {
@@ -156,7 +156,7 @@ function x(e) {
       focusedIndex: s,
       setFocusedIndex: t
     }
-  }(p);
+  }(D);
   i.useEffect(() => {
     let {
       current: e
@@ -185,8 +185,8 @@ function x(e) {
       children: [(0, n.jsx)("div", {
         className: N.inputWrapper,
         children: (0, n.jsx)(l.TextInput, {
-          value: p,
-          onChange: D,
+          value: D,
+          onChange: p,
           onKeyDown: function(e) {
             x();
             let s = e.key.toLowerCase();
@@ -218,7 +218,7 @@ function x(e) {
           "aria-autocomplete": "list",
           spellCheck: !1
         })
-      }), 0 === v && "" !== p && (0, n.jsx)(R, {}), (v > 0 || "" === p) && (0, n.jsx)(l.ListThin, {
+      }), 0 === v && "" !== D && (0, n.jsx)(R, {}), (v > 0 || "" === D) && (0, n.jsx)(l.ListThin, {
         innerId: T,
         innerRole: "listbox",
         "aria-label": I.Z.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
@@ -263,7 +263,7 @@ function x(e) {
   })
 }
 
-function p(e) {
+function D(e) {
   let {
     channelId: s
   } = e, {

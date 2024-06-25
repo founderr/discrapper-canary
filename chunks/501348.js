@@ -27,8 +27,8 @@ var n = t(735250),
   R = t(804545),
   M = t(921801),
   x = t(594174),
-  p = t(285952),
-  D = t(153124),
+  D = t(285952),
+  p = t(153124),
   L = t(358085),
   P = t(210887),
   Z = t(740492),
@@ -55,9 +55,9 @@ let H = {
     COZY: "cozy",
     COMPACT: "compact"
   },
-  k = (0, D.hQ)(),
-  w = (0, D.hQ)(),
-  W = (0, D.hQ)(),
+  k = (0, p.hQ)(),
+  w = (0, p.hQ)(),
+  W = (0, p.hQ)(),
   K = "1337",
   z = e => {
     let s = 0;
@@ -132,8 +132,8 @@ class Q extends i.Component {
         tag: E.FormTitleTags.H5,
         className: y.marginBottom8,
         children: F.Z.Messages.ACCESSIBILITY_FONT_SCALING_LABEL
-      }), (0, n.jsx)(p.Z, {
-        align: p.Z.Align.CENTER,
+      }), (0, n.jsx)(D.Z, {
+        align: D.Z.Align.CENTER,
         children: (0, n.jsx)(E.Slider, {
           className: l()(y.marginTop20, y.marginBottom4),
           initialValue: this.props.fontSize,

@@ -45,7 +45,7 @@ function R() {
         url: O.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG
       })
     },
-    [R, p] = i.useState(new Set);
+    [R, D] = i.useState(new Set);
   return a ? (0, n.jsx)(_.Z, {}) : (e = null == s && 0 === t.length ? d ? (0, n.jsx)("div", {
     className: g.loading,
     children: (0, n.jsx)(E.Spinner, {})
@@ -71,7 +71,7 @@ function R() {
           checked: R.has(e.id_hash),
           setChecked: s => {
             let t = new Set(R);
-            s ? t.add(e.id_hash) : t.delete(e.id_hash), p(t)
+            s ? t.add(e.id_hash) : t.delete(e.id_hash), D(t)
           }
         }, e.id_hash)), (null == l ? void 0 : l.mfaEnabled) ? null : (0, n.jsx)(x, {})]
       })]

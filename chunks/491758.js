@@ -27,8 +27,8 @@ var n = t(735250),
   R = t(981631),
   M = t(37113),
   x = t(526761),
-  p = t(689938),
-  D = t(404007),
+  D = t(689938),
+  p = t(404007),
   L = t(655714),
   P = t(331651);
 
@@ -62,57 +62,57 @@ function Z() {
   let G = (0, r.e7)([T.default], () => T.default.locale),
     F = i.useMemo(() => [{
       value: g.OT.SECONDS_30,
-      label: p.Z.Messages.CLIPS_LENGTH_SECONDS.format({
+      label: D.Z.Messages.CLIPS_LENGTH_SECONDS.format({
         count: 30
       })
     }, {
       value: g.OT.MINUTES_1,
-      label: p.Z.Messages.CLIPS_LENGTH_MINUTES.format({
+      label: D.Z.Messages.CLIPS_LENGTH_MINUTES.format({
         count: 1
       })
     }, {
       value: g.OT.MINUTES_2,
-      label: p.Z.Messages.CLIPS_LENGTH_MINUTES.format({
+      label: D.Z.Messages.CLIPS_LENGTH_MINUTES.format({
         count: 2
       })
     }], [G]),
     V = i.useMemo(() => [{
       value: M.LY.RESOLUTION_480,
-      label: p.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
+      label: D.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
         resolution: M.LY.RESOLUTION_480
       })
     }, {
       value: M.LY.RESOLUTION_720,
-      label: p.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
+      label: D.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
         resolution: M.LY.RESOLUTION_720
       })
     }, {
       value: M.LY.RESOLUTION_1080,
-      label: p.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
+      label: D.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
         resolution: M.LY.RESOLUTION_1080
       })
     }, {
       value: M.LY.RESOLUTION_1440,
-      label: p.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
+      label: D.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
         resolution: M.LY.RESOLUTION_1440
       })
     }, {
       value: M.LY.RESOLUTION_SOURCE,
-      label: p.Z.Messages.SCREENSHARE_SOURCE
+      label: D.Z.Messages.SCREENSHARE_SOURCE
     }], [G]),
     y = i.useMemo(() => [{
       value: M.ws.FPS_15,
-      label: p.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
+      label: D.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
         fps: M.ws.FPS_15
       })
     }, {
       value: M.ws.FPS_30,
-      label: p.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
+      label: D.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
         fps: M.ws.FPS_30
       })
     }, {
       value: M.ws.FPS_60,
-      label: p.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
+      label: D.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
         fps: M.ws.FPS_60
       })
     }], [G]),
@@ -128,7 +128,7 @@ function Z() {
       children: [!e && (0, n.jsx)(S.Z, {
         look: S.z.WARNING,
         className: L.formItem,
-        children: p.Z.Messages.CLIPS_SETTINGS_HW_ENCODING_MUST_BE_ENABLED_INFOBOX.format({
+        children: D.Z.Messages.CLIPS_SETTINGS_HW_ENCODING_MUST_BE_ENABLED_INFOBOX.format({
           onClick: () => E.Z.open(R.oAB.VOICE, null, {
             scrollPosition: x.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION
           })
@@ -136,21 +136,21 @@ function Z() {
       }), v === C.x.BELOW_MINIMUM ? (0, n.jsx)(S.Z, {
         look: S.z.WARNING,
         className: L.formItem,
-        children: p.Z.Messages.CLIPS_SETTINGS_UNDER_MIN_SPECS
+        children: D.Z.Messages.CLIPS_SETTINGS_UNDER_MIN_SPECS
       }) : null, (0, n.jsx)(o.FormSwitch, {
         hideBorder: !0,
         disabled: !e,
         className: L.formItem,
         value: s,
-        note: p.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS_HELP,
+        note: D.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS_HELP,
         onChange: e => m.em({
           clipsEnabled: e,
           trackAnalytics: !0
         }),
-        children: p.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
+        children: D.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
       }), e && (0, n.jsx)(S.Z, {
         className: L.formItem,
-        children: p.Z.Messages.CLIPS_SETTINGS_QUALITY_INFOBOX
+        children: D.Z.Messages.CLIPS_SETTINGS_QUALITY_INFOBOX
       })]
     }), U && B && (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)(o.FormDivider, {}), (0, n.jsx)(o.FormSection, {
@@ -161,12 +161,12 @@ function Z() {
           disabled: !e,
           className: L.formItem,
           value: a,
-          note: p.Z.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS_HELP,
+          note: D.Z.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS_HELP,
           onChange: e => m._Q({
             enabled: e,
             trackAnalytics: !0
           }),
-          children: p.Z.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS
+          children: D.Z.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS
         })
       })]
     }), b && (0, n.jsxs)(n.Fragment, {
@@ -176,9 +176,9 @@ function Z() {
           hideBorder: !0,
           className: L.formItem,
           value: t,
-          note: p.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS_HELP,
+          note: D.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS_HELP,
           onChange: e => m.N0(e),
-          children: p.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS
+          children: D.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS
         })
       })]
     }), (0, n.jsx)(o.FormDivider, {}), (0, n.jsxs)(o.FormSection, {
@@ -186,8 +186,8 @@ function Z() {
       children: [(0, n.jsx)(h.Q, {
         className: L.formItem,
         select: m.eU,
-        title: p.Z.Messages.CLIPS_SETTINGS_LENGTH,
-        note: p.Z.Messages.CLIPS_SETTINGS_LENGTH_HELP,
+        title: D.Z.Messages.CLIPS_SETTINGS_LENGTH,
+        note: D.Z.Messages.CLIPS_SETTINGS_LENGTH_HELP,
         value: Z,
         options: F
       }), (0, n.jsx)(h.Q, {
@@ -196,8 +196,8 @@ function Z() {
           resolution: e,
           frameRate: f.frameRate
         }),
-        title: p.Z.Messages.CLIPS_SETTINGS_RESOLUTION,
-        note: p.Z.Messages.CLIPS_SETTINGS_RESOLUTION_NOTE,
+        title: D.Z.Messages.CLIPS_SETTINGS_RESOLUTION,
+        note: D.Z.Messages.CLIPS_SETTINGS_RESOLUTION_NOTE,
         value: f.resolution,
         options: V
       }), (0, n.jsx)(h.Q, {
@@ -206,16 +206,16 @@ function Z() {
           resolution: f.resolution,
           frameRate: e
         }),
-        title: p.Z.Messages.CLIPS_SETTINGS_FRAMERATE,
-        note: p.Z.Messages.CLIPS_SETTINGS_FRAMERATE_NOTE,
+        title: D.Z.Messages.CLIPS_SETTINGS_FRAMERATE,
+        note: D.Z.Messages.CLIPS_SETTINGS_FRAMERATE_NOTE,
         value: f.frameRate,
         options: y
       }), (0, n.jsx)(h.O, {
         className: L.formItem,
-        title: p.Z.Messages.CLIPS_SETTINGS_KEYBIND,
-        note: p.Z.Messages.CLIPS_SETTINGS_KEYBIND_HELP,
+        title: D.Z.Messages.CLIPS_SETTINGS_KEYBIND,
+        note: D.Z.Messages.CLIPS_SETTINGS_KEYBIND_HELP,
         children: (0, n.jsx)("div", {
-          className: D.keyRecorder,
+          className: p.keyRecorder,
           children: (0, n.jsx)(d.Z, {
             defaultValue: j.shortcut,
             onChange: Y

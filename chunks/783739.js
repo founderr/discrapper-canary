@@ -28,7 +28,7 @@ var n = t(735250),
 function R(e) {
   let {
     premiumSubscription: s
-  } = e, t = (0, a.e7)([S.Z], () => S.Z.boostSlots), R = i.useMemo(() => Object.values(t), [t]), M = (0, a.e7)([T.default], () => T.default.getCurrentUser()), x = u.ZP.isPremium(M, h.p9.TIER_2), p = (0, a.e7)([d.Z], () => d.Z.affinities), D = (0, a.e7)([_.ZP], () => _.ZP.getFlattenedGuildIds()), L = p.length > 0 || D.length > 0, P = R.length > 0, Z = i.useMemo(() => R.some(e => null != e.premiumGuildSubscription), [R]), f = (0, a.e7)([E.Z], () => E.Z.getCurrentUserAppliedBoosts()), v = (null == s ? void 0 : s.isPausedOrPausePending) === !0;
+  } = e, t = (0, a.e7)([S.Z], () => S.Z.boostSlots), R = i.useMemo(() => Object.values(t), [t]), M = (0, a.e7)([T.default], () => T.default.getCurrentUser()), x = u.ZP.isPremium(M, h.p9.TIER_2), D = (0, a.e7)([d.Z], () => d.Z.affinities), p = (0, a.e7)([_.ZP], () => _.ZP.getFlattenedGuildIds()), L = D.length > 0 || p.length > 0, P = R.length > 0, Z = i.useMemo(() => R.some(e => null != e.premiumGuildSubscription), [R]), f = (0, a.e7)([E.Z], () => E.Z.getCurrentUserAppliedBoosts()), v = (null == s ? void 0 : s.isPausedOrPausePending) === !0;
   return (0, n.jsxs)("div", {
     children: [(0, n.jsx)(l.oQ, {
       className: g.blockedPaymentsWarning

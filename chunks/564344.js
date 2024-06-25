@@ -35,9 +35,9 @@ function x() {
     s = (0, C.Z)(),
     t = (0, a.e7)([d.Z, I.Z], () => d.Z.showNotice() || I.Z.showNotice()),
     x = null != e ? e : s,
-    p = (0, a.e7)([N.default], () => N.default.getCurrentUser()),
+    D = (0, a.e7)([N.default], () => N.default.getCurrentUser()),
     {
-      subsection: D,
+      subsection: p,
       setSubsection: L
     } = (0, O.Z)(),
     {
@@ -49,7 +49,7 @@ function x() {
     } = (0, u.E)();
 
   function v(s) {
-    if (D !== s) {
+    if (p !== s) {
       if (t) {
         A.S.dispatch(m.CkL.SHAKE_APP, {
           duration: 300,
@@ -61,10 +61,10 @@ function x() {
     }
   }
   i.useEffect(() => {
-    null != p && (0, T.Z)(p.id, p.getAvatarURL(null == x ? void 0 : x.id, 80), {
+    null != D && (0, T.Z)(D.id, D.getAvatarURL(null == x ? void 0 : x.id, 80), {
       guildId: null == x ? void 0 : x.id
     })
-  }, [null == x ? void 0 : x.id, p]);
+  }, [null == x ? void 0 : x.id, D]);
   let j = !0,
     U = !0;
   return Z && 1 === f.length && (f.includes(g.s6.PROFILE_SERVER_PROFILES) ? (v(h.NB.GUILD), U = !1) : f.includes(g.s6.PROFILE_USER_PROFILE) && (v(h.NB.USER_PROFILE), j = !1)), (0, n.jsx)(o.Gt, {
@@ -78,7 +78,7 @@ function x() {
         className: M.tabBar,
         type: "top",
         look: "brand",
-        selectedItem: D,
+        selectedItem: p,
         onItemSelect: v,
         children: [U ? (0, n.jsx)(l.TabBar.Item, {
           className: M.tabBarItem,
@@ -89,7 +89,7 @@ function x() {
           id: h.NB.GUILD,
           children: R.Z.Messages.EDIT_PROFILE_CATEGORY_GUILD_IDENTITY
         }, h.NB.GUILD) : null]
-      }), D === h.NB.GUILD ? (0, n.jsx)(_.Z, {
+      }), p === h.NB.GUILD ? (0, n.jsx)(_.Z, {
         selectedGuild: x
       }) : (0, n.jsx)(S.Z, {})]
     })

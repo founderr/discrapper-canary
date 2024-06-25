@@ -24,7 +24,7 @@ var n = t(735250),
   M = t(689938),
   x = t(902671);
 
-function p(e) {
+function D(e) {
   let {
     guildBoostSlot: s,
     isCancellable: t,
@@ -77,7 +77,7 @@ function p(e) {
   }, s.id)
 }
 
-function D(e) {
+function p(e) {
   (0, o.openModalLazy)(async () => s => (0, n.jsx)(_.default, {
     ...s,
     guildBoostSlot: e
@@ -198,10 +198,10 @@ s.Z = function(e) {
         })]
       }), (!G || j) && (0, n.jsx)("ul", {
         className: x.unappliedBoostSlots,
-        children: f.map(e => (0, n.jsx)(p, {
+        children: f.map(e => (0, n.jsx)(D, {
           guildBoostSlot: e,
           isCancellable: b,
-          onCancel: D,
+          onCancel: p,
           onUncancel: L,
           premiumSubscription: _,
           useReducedMotion: m
