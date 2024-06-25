@@ -27,8 +27,8 @@ var n = t(735250),
   R = t(714565),
   M = t(202858),
   x = t(726985),
-  p = t(981631),
-  D = t(815660),
+  D = t(981631),
+  p = t(815660),
   L = t(689938),
   P = t(402669),
   Z = t(331651);
@@ -84,7 +84,7 @@ class j extends i.PureComponent {
     } = this.state, {
       currentUser: i,
       togglingSMS: a
-    } = this.props, l = null != i.phone, r = i.hasFlag(p.xW$.MFA_SMS);
+    } = this.props, l = null != i.phone, r = i.hasFlag(D.xW$.MFA_SMS);
     if (l || r) {
       let e = t ? i.phone : this.maskPhoneNumber(i.phone);
       s = (0, n.jsxs)(o.FormText, {
@@ -210,9 +210,9 @@ class j extends i.PureComponent {
           wrap: !0,
           grow: 0,
           children: t
-        }), (0, n.jsx)(m.Z.Child, {
+        }), (0, n.jsxs)(m.Z.Child, {
           wrap: !0,
-          children: this.props.hasTOTPEnabled ? (0, n.jsx)(u.F, {
+          children: [(0, n.jsx)(u.F, {
             setting: x.s6.ACCOUNT_REMOVE_2FA,
             children: (0, n.jsx)(o.Button, {
               onClick: this.handleDisableMFA,
@@ -221,14 +221,14 @@ class j extends i.PureComponent {
               look: o.ButtonLooks.OUTLINED,
               children: L.Z.Messages.TWO_FA_REMOVE
             })
-          }) : (0, n.jsx)(u.F, {
+          }), (0, n.jsx)(u.F, {
             setting: x.s6.ACCOUNT_ENABLE_2FA,
             children: (0, n.jsx)(o.Button, {
               onClick: M.ZP.enableMFA,
               size: o.ButtonSizes.SMALL,
               children: L.Z.Messages.TWO_FA_ENABLE
             })
-          })
+          })]
         })]
       }), e, this.renderMFASMS(), (0, n.jsx)(u.F, {
         setting: x.s6.ACCOUNT_SECURITY_KEYS,
@@ -277,7 +277,7 @@ class j extends i.PureComponent {
       ...s,
       ...e
     }), {
-      modalKey: D.M
+      modalKey: p.M
     })
   }
   constructor(...e) {

@@ -118,7 +118,8 @@ let eB = () => {
       isEligibleForQuests: eK,
       showGiftNitro: ez,
       isStricterMessageRequestsEnabled: eQ,
-      hasLibraryApplication: eX
+      hasLibraryApplication: eX,
+      hasTOTPEnabled: eq
     } = e;
     return Object.freeze({
       [eP.s6.SEARCH_BAR]: {
@@ -186,12 +187,14 @@ let eB = () => {
       [eP.s6.ACCOUNT_ENABLE_2FA]: {
         searchableTitles: [ej.Z.Messages.TWO_FA_ENABLE],
         section: eZ.oAB.ACCOUNT,
-        parent: eP.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
+        parent: eP.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
+        predicate: () => !eq
       },
       [eP.s6.ACCOUNT_REMOVE_2FA]: {
         searchableTitles: [ej.Z.Messages.TWO_FA_REMOVE],
         section: eZ.oAB.ACCOUNT,
-        parent: eP.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION
+        parent: eP.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
+        predicate: () => eq
       },
       [eP.s6.ACCOUNT_VIEW_BACKUP_CODES]: {
         searchableTitles: [ej.Z.Messages.TWO_FA_BACKUP_CODE],
