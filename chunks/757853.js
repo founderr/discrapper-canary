@@ -91,7 +91,7 @@ function P(e) {
     subLabel: n,
     ...a
   } = e, s = y.ZP.useName(t), i = y.ZP.useUserTag(t, {
-    decoration: "auto"
+    decoration: "never"
   }), r = (0, c.e7)([N.Z], () => N.Z.getNickname(t.id)), u = (0, c.e7)([C.Z], () => C.Z.getStatus(t.id));
   return (0, l.jsx)(M, {
     ...a,
