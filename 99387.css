@@ -48167,8 +48167,8 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
 
 .message_b6cd66 {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -103291,6 +103291,10 @@ div:has(>div>.container_d99f08) {
     gap: 4px
 }
 
+.gapMd_e881fc {
+    gap: 8px
+}
+
 .clickable_e881fc {
     cursor: pointer
 }
@@ -103374,6 +103378,12 @@ div:has(>div>.container_d99f08) {
 .logo_e881fc {
     width: 120px;
     height: 154px;
+    border-radius: 4px
+}
+
+.icon_e881fc {
+    width: 32px;
+    height: 32px;
     border-radius: 4px
 }
 
