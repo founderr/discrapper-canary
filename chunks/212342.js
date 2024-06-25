@@ -7,24 +7,25 @@ var s, i, l, a, r = n(442837),
   E = n(496675),
   _ = n(594174),
   I = n(630388),
-  T = n(981631);
-let m = "ChannelFollowingBumpChannels",
-  N = new Set,
-  h = new Set;
-class C extends(s = r.ZP.Store) {
+  T = n(110630),
+  m = n(981631);
+let N = "ChannelFollowingBumpChannels",
+  h = new Set,
+  C = new Set;
+class S extends(s = r.ZP.Store) {
   initialize() {
-    this.waitFor(u.default), N = new Set(o.K.get(m))
+    this.waitFor(u.default), h = new Set(o.K.get(N))
   }
   shouldShowBump(e) {
-    return h.has(e)
+    return C.has(e)
   }
 }
-a = "ChannelFollowingPublishBumpStore", (l = "displayName") in(i = C) ? Object.defineProperty(i, l, {
+a = "ChannelFollowingPublishBumpStore", (l = "displayName") in(i = S) ? Object.defineProperty(i, l, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[l] = a, t.Z = new C(c.Z, {
+}) : i[l] = a, t.Z = new S(c.Z, {
   MESSAGE_CREATE: function(e) {
     var t;
     let {
@@ -32,31 +33,31 @@ a = "ChannelFollowingPublishBumpStore", (l = "displayName") in(i = C) ? Object.d
       message: s,
       optimistic: i
     } = e;
-    if (i || N.has(n)) return !1;
+    if (i || h.has(n)) return !1;
     let l = d.Z.getChannel(n),
       a = _.default.getCurrentUser();
-    if (!(null != l && l.type === T.d4z.GUILD_ANNOUNCEMENT && s.type === T.uaV.DEFAULT && (null != a && (null === (t = s.author) || void 0 === t ? void 0 : t.id) === a.id ? E.Z.can(T.Plq.SEND_MESSAGES, l) : E.Z.can(T.Plq.MANAGE_MESSAGES, l)) && !I.yE(Number(s.flags), T.iLy.CROSSPOSTED))) return !1;
-    h.add(s.id)
+    if (!(null != l && l.type === m.d4z.GUILD_ANNOUNCEMENT && (0, T.Z)(s) && (null != a && (null === (t = s.author) || void 0 === t ? void 0 : t.id) === a.id ? E.Z.can(m.Plq.SEND_MESSAGES, l) : E.Z.can(m.Plq.MANAGE_MESSAGES, l)) && !I.yE(Number(s.flags), m.iLy.CROSSPOSTED))) return !1;
+    C.add(s.id)
   },
   MESSAGE_UPDATE: function(e) {
     let {
       message: t
     } = e;
-    h.has(t.id) && I.yE(Number(t.flags), T.iLy.CROSSPOSTED) && h.delete(t.id)
+    C.has(t.id) && I.yE(Number(t.flags), m.iLy.CROSSPOSTED) && C.delete(t.id)
   },
   CHANNEL_SELECT: function(e) {
-    h.clear()
+    C.clear()
   },
   CHANNEL_FOLLOWING_PUBLISH_BUMP_DISMISSED: function(e) {
     let {
       messageId: t
     } = e;
-    h.delete(t)
+    C.delete(t)
   },
   CHANNEL_FOLLOWING_PUBLISH_BUMP_HIDE_PERMANENTLY: function(e) {
     let {
       channelId: t
     } = e;
-    N.add(t), o.K.set(m, N), h.clear()
+    h.add(t), o.K.set(N, h), C.clear()
   }
 })

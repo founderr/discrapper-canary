@@ -470,10 +470,7 @@ class e0 extends(s = l.Component) {
     })
   }
   renderPublishBump(e) {
-    let {
-      channel: t
-    } = this.props;
-    return t.type !== eV.d4z.GUILD_ANNOUNCEMENT || (0, eA.yE)(e.flags, eV.iLy.EPHEMERAL) || e.isPoll() ? null : (0, i.jsx)(A.Z, {
+    return this.props.channel.type !== eV.d4z.GUILD_ANNOUNCEMENT || this.props.isMessageSnapshot ? null : (0, i.jsx)(A.Z, {
       channelId: e.channel_id,
       messageId: e.id
     })
