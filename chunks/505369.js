@@ -47,10 +47,10 @@ t.Z = {
   async getGuildChannelScores() {
     if (!!(0, o.rK)("guildChannelScores")) try {
       let e = await i.tn.get({
-        url: a.ANM.GRAVITY_CHANNEL_SCORES
+        url: a.ANM.GRAVITY_CUSTOM_SCORES
       });
       r.Z.dispatch({
-        type: "LOAD_GRAVITY_CUSTOM_CHANNEL_SCORES",
+        type: "LOAD_GRAVITY_CUSTOM_SCORES",
         scores: e.body
       })
     } catch (e) {

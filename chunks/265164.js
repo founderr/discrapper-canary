@@ -37,17 +37,18 @@ let R = [],
   M = {},
   P = {},
   y = {},
-  U = new Set,
-  b = !1,
-  G = 0,
-  w = !1,
-  B = 0;
+  U = {},
+  b = new Set,
+  G = !1,
+  w = 0,
+  B = !1,
+  x = 0;
 
-function x() {
-  R = g, g = [], G++, k(R)
+function k() {
+  R = g, g = [], w++, V(R)
 }
 
-function k(e) {
+function V(e) {
   let t = [],
     n = [];
   if (e.forEach(e => {
@@ -66,7 +67,7 @@ function k(e) {
   (0, A.es)(D, r)
 }
 
-function V(e) {
+function Z(e) {
   let {
     type: t,
     messageId: n,
@@ -78,7 +79,7 @@ function V(e) {
   let a = _.default.getId() === i;
   "MESSAGE_REACTION_ADD" === t ? o.message = o.message.addReaction(r, a, e.colors, s) : o.message = o.message.removeReaction(r, a, s)
 }
-class Z extends(i = o.ZP.PersistedStore) {
+class H extends(i = o.ZP.PersistedStore) {
   initialize(e) {
     if (this.waitFor(d.Z, c.Z, E.ZP, l.Z, I.ZP, _.default, N.Z), this.syncWith([E.ZP], () => (function() {
         if (!(0, A.rK)("GravityStore-recomputeMentionStates")) return !1;
@@ -86,31 +87,31 @@ class Z extends(i = o.ZP.PersistedStore) {
           if (e.type === f.Rr.MESSAGE) {
             if (e.data.has_mention) {
               if (0 !== E.ZP.getMentionCount(e.data.channel_id)) return;
-              delete y[e.data.channel_id]
+              delete U[e.data.channel_id]
             }
           }
         }), g.forEach(e => {
           if (e.type === f.Rr.MESSAGE) {
             if (e.data.has_mention) {
               if (0 !== E.ZP.getMentionCount(e.data.channel_id)) return;
-              delete y[e.data.channel_id]
+              delete U[e.data.channel_id]
             }
           }
         }), Object.values(v).forEach(e => {
           if (e.type === f.Rr.MESSAGE) {
             if (e.data.has_mention) {
               if (0 !== E.ZP.getMentionCount(e.data.channel_id)) return;
-              delete y[e.data.channel_id]
+              delete U[e.data.channel_id]
             }
           }
         })
       })()), null != e) {
       var t, n, i;
-      R = null !== (t = e.dehydratedItems) && void 0 !== t ? t : [], v = null !== (n = e.locallyAddedItems) && void 0 !== n ? n : {}, B = null !== (i = e.numOpens) && void 0 !== i ? i : 0
+      R = null !== (t = e.dehydratedItems) && void 0 !== t ? t : [], v = null !== (n = e.locallyAddedItems) && void 0 !== n ? n : {}, x = null !== (i = e.numOpens) && void 0 !== i ? i : 0
     }
   }
   getVersion() {
-    return G
+    return w
   }
   getDehydratedItems() {
     return R
@@ -136,7 +137,15 @@ class Z extends(i = o.ZP.PersistedStore) {
   getMissingItems() {
     return M
   }
-  getCustomChannelScore(e) {
+  getCustomChannelScore(e, t) {
+    var n;
+    return null == y[e] ? 0 : null !== (n = y[e][t]) && void 0 !== n ? n : 0
+  }
+  getCustomChannelScores(e) {
+    var t;
+    return null !== (t = y[e]) && void 0 !== t ? t : {}
+  }
+  getCustomGuildScore(e) {
     var t;
     return null !== (t = P[e]) && void 0 !== t ? t : 0
   }
@@ -145,15 +154,15 @@ class Z extends(i = o.ZP.PersistedStore) {
   }
   getMentionCount(e) {
     var t;
-    return (0, A.rK)("GravityStore-getMentionCount") ? null !== (t = y[e]) && void 0 !== t ? t : 0 : 0
+    return (0, A.rK)("GravityStore-getMentionCount") ? null !== (t = U[e]) && void 0 !== t ? t : 0 : 0
   }
   getMentionedGuilds() {
-    return U
+    return b
   }
   hasNewContent() {
-    let e = 1 === G && w,
+    let e = 1 === w && B,
       t = g.length > 0 && (0 === R.length || g[0].id !== R[0].id);
-    return b && (e || t)
+    return G && (e || t)
   }
   getActiveSummary() {
     return null
@@ -162,17 +171,17 @@ class Z extends(i = o.ZP.PersistedStore) {
     return p
   }
   hasOpenedEnoughTimes() {
-    return 5 === B
+    return 5 === x
   }
   getState() {
     return {
       dehydratedItems: R,
       locallyAddedItems: v,
-      numOpens: B
+      numOpens: x
     }
   }
 }
-O(Z, "displayName", "GravityStore"), O(Z, "persistKey", "GravityStore"), t.Z = new Z(a.Z, {
+O(H, "displayName", "GravityStore"), O(H, "persistKey", "GravityStore"), t.Z = new H(a.Z, {
   LOGOUT: function() {
     return !1
   },
@@ -202,7 +211,7 @@ O(Z, "displayName", "GravityStore"), O(Z, "persistKey", "GravityStore"), t.Z = n
         has_mention: a
       }
     };
-    a && (null == y[r] && (y[r] = 0), y[r]++, U.add(i)), null == (g = 0 === g.length ? [...R] : [...g]).find(e => e.id === n.id) && (g.unshift(l), v[n.id] = l), L[n.id] = l, D[n.id] = {
+    a && (null == U[r] && (U[r] = 0), U[r]++, b.add(i)), null == (g = 0 === g.length ? [...R] : [...g]).find(e => e.id === n.id) && (g.unshift(l), v[n.id] = l), L[n.id] = l, D[n.id] = {
       ...l,
       message: o
     }
@@ -273,13 +282,13 @@ O(Z, "displayName", "GravityStore"), O(Z, "persistKey", "GravityStore"), t.Z = n
       }), g.forEach(e => {
         L[e.id] = e
       })
-    }(), y = {}, g.forEach(e => {
-      e.type === f.Rr.MESSAGE && e.data.channel_type === m.d4z.GUILD_ANNOUNCEMENT && e.data.has_mention && 0 > S.default.compare(E.ZP.ackMessageId(e.data.channel_id), e.data.message_id) && (null == y[e.data.channel_id] && (y[e.data.channel_id] = 0), y[e.data.channel_id]++, U.add(e.data.guild_id))
-    }), b = !0, C = {
+    }(), U = {}, g.forEach(e => {
+      e.type === f.Rr.MESSAGE && e.data.channel_type === m.d4z.GUILD_ANNOUNCEMENT && e.data.has_mention && 0 > S.default.compare(E.ZP.ackMessageId(e.data.channel_id), e.data.message_id) && (null == U[e.data.channel_id] && (U[e.data.channel_id] = 0), U[e.data.channel_id]++, b.add(e.data.guild_id))
+    }), G = !0, C = {
       load_id: n,
       load_time_millis: Date.now() - i,
       feed_item_ids: g.map(e => e.id)
-    }, 0 === G && (g.length > 0 && (0 === R.length || R[0].id !== g[0].id) ? (w = !0, k(R), k(g)) : x())
+    }, 0 === w && (g.length > 0 && (0 === R.length || R[0].id !== g[0].id) ? (B = !0, V(R), V(g)) : k())
   },
   LOAD_GRAVITY_HYDRATED: function(e) {
     let {
@@ -331,38 +340,45 @@ O(Z, "displayName", "GravityStore"), O(Z, "persistKey", "GravityStore"), t.Z = n
       }
     })
   },
-  LOAD_GRAVITY_CUSTOM_CHANNEL_SCORES: function(e) {
+  LOAD_GRAVITY_CUSTOM_SCORES: function(e) {
     let {
       scores: t
     } = e;
     for (let e of t)
-      for (let t of Object.keys(e.custom_channel_scores)) P[t] = e.custom_channel_scores[t]
+      for (let t of (P[e.guild_id] = e.guild_score, Object.keys(e.custom_channel_scores))) null == y[e.guild_id] && (y[e.guild_id] = {}), y[e.guild_id][t] = e.custom_channel_scores[t]
   },
-  CUSTOM_CHANNEL_SCORE_UPDATED: function(e) {
+  GRAVITY_CUSTOM_SCORES_UPDATED: function(e) {
     let {
-      channelId: t,
-      score: n
+      channelScores: t,
+      guildId: n,
+      guildScore: i
     } = e;
-    P[t] = n
+    null != i && (P[n] = i), null == t || t.forEach(e => {
+      let {
+        channelId: t,
+        score: i
+      } = e;
+      null == y[n] && (y[n] = {}), y[n][t] = i
+    })
   },
   RELOAD_GRAVITY: function(e) {
     let {
       versionOnly: t
     } = e;
     if (t) {
-      G++;
+      w++;
       return
     }
     if (0 === g.length) return !1;
-    x()
+    k()
   },
   GRAVITY_TAB_OPENED: function() {
-    w && (x(), w = !1), B < 5 && B++
+    B && (k(), B = !1), x < 5 && x++
   },
   GRAVITY_FEEDBACK_GIVEN: function() {
-    B = 6
+    x = 6
   },
-  MESSAGE_REACTION_ADD: V,
+  MESSAGE_REACTION_ADD: Z,
   MESSAGE_REACTION_ADD_MANY: function(e) {
     let {
       messageId: t,
@@ -372,7 +388,7 @@ O(Z, "displayName", "GravityStore"), O(Z, "persistKey", "GravityStore"), t.Z = n
     let r = _.default.getId();
     i.message = i.message.addReactionBatch(n, r)
   },
-  MESSAGE_REACTION_REMOVE: V,
+  MESSAGE_REACTION_REMOVE: Z,
   MESSAGE_REACTION_REMOVE_ALL: function(e) {
     let {
       messageId: t
