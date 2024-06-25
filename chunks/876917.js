@@ -3,54 +3,48 @@ var i = s(735250),
   n = s(470079),
   l = s(120356),
   a = s.n(l),
-  r = s(447452),
-  o = s(802433),
-  d = s(680295),
-  u = s(895173),
-  c = s(241822),
-  p = s(500215);
+  r = s(802433),
+  o = s(680295),
+  d = s(895173),
+  u = s(241822);
 t.Z = e => {
   let {
     profileEffectId: t,
     isHovering: s,
     forCollectedModal: l = !1,
-    isPurchased: h,
-    removeSetHeight: f = !1
-  } = e, {
-    updatedOnAllSurfaces: m
-  } = (0, r.t)({
-    location: "ProfileEffectShopPreview"
-  }), g = l ? 250 : .1, [I, Z] = n.useState(!0);
+    isPurchased: c,
+    removeSetHeight: h = !1
+  } = e, p = l ? 250 : .1, [f, m] = n.useState(!0);
   return (n.useEffect(() => {
-    if (!0 !== l) Z(!1);
+    if (!0 !== l) m(!1);
     else {
       let e = setTimeout(() => {
-        Z(!1)
-      }, g);
+        m(!1)
+      }, p);
       return () => {
         clearTimeout(e)
       }
     }
-  }, [g, l]), null != t) ? (0, i.jsxs)("div", {
-    className: a()(u.previewContainer, {
-      [u.previewContainerAnimation]: l,
-      [u.previewContainerSetHeight]: !f
+  }, [p, l]), null != t) ? (0, i.jsxs)("div", {
+    className: a()(d.previewContainer, {
+      [d.previewContainerAnimation]: l,
+      [d.previewContainerSetHeight]: !h
     }),
     children: [(0, i.jsx)("img", {
-      src: m ? p : c,
+      src: u,
       alt: " ",
-      className: l ? u.previewForCollected : u.preview,
+      className: l ? d.previewForCollected : d.preview,
       "aria-hidden": !0
-    }), !I && (0, i.jsx)("div", {
-      className: h ? u.purchasedEffect : void 0,
-      children: (0, i.jsx)(d.Z, {
+    }), !f && (0, i.jsx)("div", {
+      className: c ? d.purchasedEffect : void 0,
+      children: (0, i.jsx)(o.Z, {
         profileEffectId: t,
         useThumbnail: !0,
         autoPlay: l,
-        restartMethod: o.j.FromStart,
+        restartMethod: r.j.FromStart,
         resetOnHover: !0,
         isHovering: s,
-        introDelay: g,
+        introDelay: p,
         useOpacityOnHover: !1,
         shopPreview: !0
       })

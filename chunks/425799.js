@@ -11,7 +11,7 @@ var n = t(735250),
   o = t(481060),
   c = t(53281),
   E = t(410030),
-  d = t(589266),
+  d = t(25373),
   _ = t(680295),
   T = t(594174),
   S = t(572004),
@@ -51,12 +51,9 @@ function C() {
     }), R && (0, n.jsxs)("div", {
       className: I.userProfilePreview,
       children: [(0, n.jsx)(d.Z, {
-        location: "ProfileEffectsPreviewToolPage",
         user: e,
         pendingAvatar: void 0,
         pendingProfileEffectId: null,
-        onAvatarChange: () => {},
-        onBannerChange: () => {},
         canUsePremiumCustomization: !0,
         isTryItOutFlow: !0
       }), (0, n.jsx)(_.n, {

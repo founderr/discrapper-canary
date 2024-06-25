@@ -27,7 +27,6 @@ e.exports = {
   button: "button_c5828f",
   disclaimer: "disclaimer_c5828f",
   disclaimerLight: "disclaimerLight_c5828f",
-  profileCustomizationBody: "profileCustomizationBody_c5828f",
   priceTag: "priceTag_c5828f",
   priceTagContainer: "priceTagContainer_c5828f",
   headingWithItemTypePill: "headingWithItemTypePill_c5828f",

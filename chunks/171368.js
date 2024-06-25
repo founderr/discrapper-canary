@@ -1,84 +1,75 @@
 "use strict";
 n.r(t), n.d(t, {
   closeUserProfileModal: function() {
-    return d
+    return u
   },
   openUserProfileModal: function() {
-    return c
+    return l
   }
 });
 var i = n(570140),
   r = n(232567),
   s = n(594174),
-  o = n(342656),
-  a = n(447452),
-  l = n(877485),
-  u = n(484459),
-  _ = n(981631);
+  o = n(484459),
+  a = n(981631);
 
-function c(e) {
+function l(e) {
   let {
     userId: t,
-    guildId: n = _.ME,
-    channelId: c,
-    messageId: d,
-    roleId: E,
-    section: I,
-    subsection: T,
-    friendToken: h,
-    showGuildProfile: S,
-    analyticsLocation: f,
-    sourceAnalyticsLocations: N
-  } = e, A = s.default.getUser(t), m = null != n && n !== _.ME ? n : void 0, O = (0, l.c)({
-    location: "openUserProfileModal",
-    autoTrackExposure: !1
-  }), R = (0, o.oU)().enabled || (0, a.T)({
-    location: "openUserProfileModal",
-    autoTrackExposure: !1
-  }).basicsEnabled || O.originalFriendingEnabled || O.improvedFriendingEnabled;
-  if (null == A) return (0, r.In)(t, {
-    guildId: S ? m : void 0,
+    guildId: n = a.ME,
+    channelId: l,
+    messageId: u,
+    roleId: _,
+    section: c,
+    subsection: d,
+    friendToken: E,
+    showGuildProfile: I,
+    analyticsLocation: T,
+    sourceAnalyticsLocations: h
+  } = e, S = s.default.getUser(t), f = null != n && n !== a.ME ? n : void 0;
+  if (null == S) return (0, r.In)(t, {
+    guildId: I ? f : void 0,
     withMutualGuilds: !0,
-    withMutualFriends: R,
-    friendToken: h
+    withMutualFriends: !0,
+    friendToken: E
   }).then(() => {
     i.Z.dispatch({
       type: "USER_PROFILE_MODAL_OPEN",
       userId: t,
       guildId: null != n ? n : void 0,
-      channelId: null != c ? c : void 0,
-      messageId: null != d ? d : void 0,
-      roleId: null != E ? E : void 0,
-      section: I,
-      subsection: T,
-      friendToken: h,
-      showGuildProfile: S,
-      analyticsLocation: f,
-      sourceAnalyticsLocations: N
+      channelId: null != l ? l : void 0,
+      messageId: null != u ? u : void 0,
+      roleId: null != _ ? _ : void 0,
+      section: c,
+      subsection: d,
+      friendToken: E,
+      showGuildProfile: I,
+      analyticsLocation: T,
+      sourceAnalyticsLocations: h
     })
   });
-  (0, u.W)(A, {
-    guildId: S ? m : void 0,
+  (0, o.W)(S, {
+    guildId: I ? f : void 0,
     withMutualGuilds: !0,
-    withMutualFriends: R,
-    friendToken: h
+    withMutualFriends: !0,
+    friendToken: E
   }), i.Z.dispatch({
     type: "USER_PROFILE_MODAL_OPEN",
     userId: t,
     guildId: null != n ? n : void 0,
-    channelId: null != c ? c : void 0,
-    messageId: null != d ? d : void 0,
-    roleId: null != E ? E : void 0,
-    section: I,
-    subsection: T,
-    friendToken: h,
-    showGuildProfile: S,
-    analyticsLocation: f,
-    sourceAnalyticsLocations: N
+    channelId: null != l ? l : void 0,
+    messageId: null != u ? u : void 0,
+    roleId: null != _ ? _ : void 0,
+    section: c,
+    subsection: d,
+    friendToken: E,
+    showGuildProfile: I,
+    analyticsLocation: T,
+    sourceAnalyticsLocations: h
   })
 }
 
-function d() {
+function u() {
   i.Z.dispatch({
     type: "USER_PROFILE_MODAL_CLOSE"
   })

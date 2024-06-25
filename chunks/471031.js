@@ -1,1 +1,0 @@
-e.exports = i.p + "9034a5632ebb44062867.svg"

@@ -29,7 +29,7 @@ let h = e => {
     if (null != _) return (0, i.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("4934"), n.e("49838")]).then(n.bind(n, 844594));
+      } = await Promise.all([n.e("99387"), n.e("12736")]).then(n.bind(n, 844594));
       return n => (0, s.jsx)(e, {
         user: _,
         imageSrc: t,
@@ -58,7 +58,7 @@ let h = e => {
     if (null != r) return (0, i.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("4934"), n.e("49838")]).then(n.bind(n, 844594));
+      } = await Promise.all([n.e("99387"), n.e("12736")]).then(n.bind(n, 844594));
       return n => (0, s.jsx)(e, {
         user: r,
         imageSrc: t,

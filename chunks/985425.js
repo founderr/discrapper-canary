@@ -1,90 +1,90 @@
-i.d(a, {
+s.d(n, {
   Z: function() {
-    return g
+    return v
   }
 });
-var n = i(735250);
-i(470079);
-var l = i(120356),
-  r = i.n(l),
-  t = i(442837),
-  s = i(481060),
-  o = i(906732),
-  u = i(1585),
-  d = i(158776),
-  c = i(998502),
-  v = i(445924),
-  m = i(654904),
-  f = i(486324),
-  p = i(982149);
-let h = c.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
+var l = s(735250);
+s(470079);
+var t = s(120356),
+  i = s.n(t),
+  r = s(442837),
+  a = s(481060),
+  o = s(906732),
+  c = s(1585),
+  u = s(158776),
+  d = s(998502),
+  E = s(445924),
+  m = s(654904),
+  f = s(486324),
+  h = s(982149);
+let p = d.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
-function g(e) {
+function v(e) {
   let {
-    user: a,
-    guild: i,
-    displayProfile: l,
-    canUsePremiumCustomization: c,
-    previewAvatar: g,
+    user: n,
+    guild: s,
+    displayProfile: t,
+    canUsePremiumCustomization: d,
+    previewAvatar: v,
     previewAvatarDecoration: I,
-    previewTheme: Z,
-    previewPrimaryColor: x,
-    className: P,
-    disabledInputs: T,
-    isTryItOutFlow: S,
-    onUpsellClick: A
+    previewTheme: g,
+    previewPrimaryColor: C,
+    className: _,
+    disabledInputs: Z,
+    isTryItOutFlow: P,
+    onUpsellClick: x
   } = e, {
-    analyticsLocations: E
-  } = (0, o.ZP)(), N = (0, t.e7)([d.Z], () => d.Z.getStatus(a.id)), j = null == i || (null == l ? void 0 : l.canUsePremiumProfileCustomization) || c, C = (0, n.jsx)(h, {
-    src: g,
+    analyticsLocations: A
+  } = (0, o.ZP)(), T = (0, r.e7)([u.Z], () => u.Z.getStatus(n.id)), S = null == s || (null == t ? void 0 : t.canUsePremiumProfileCustomization) || d, N = (0, l.jsx)(p, {
+    src: v,
     avatarDecoration: I,
-    imageClassName: r()(P, {
-      [p.overlay]: !T
+    imageClassName: i()(_, {
+      [h.overlay]: !Z
     }),
-    size: s.AvatarSizes.SIZE_80,
-    "aria-label": a.username,
-    status: N,
+    size: a.AvatarSizes.SIZE_80,
+    "aria-label": n.username,
+    status: T,
     statusTooltip: !1,
-    statusBackdropColor: null != x ? (0, s.getStatusBackdropColor)(Z) : void 0
+    statusBackdropColor: null != C ? (0, a.getStatusBackdropColor)(g) : void 0
   });
-  return T ? (0, n.jsx)("div", {
-    className: p.avatar,
-    children: C
-  }) : j ? (0, n.jsx)(s.Popout, {
+  return Z ? (0, l.jsx)("div", {
+    className: h.avatar,
+    children: N
+  }) : S ? (0, l.jsx)(a.Popout, {
     renderPopout: e => {
       let {
-        closePopout: a
+        closePopout: n
       } = e;
-      return (0, n.jsx)(v.default, {
-        className: p.menu,
-        onClose: a,
-        onChangeAvatar: () => (0, m.$r)(f.pC.AVATAR, null == i ? void 0 : i.id, S),
+      return (0, l.jsx)(E.Z, {
+        className: h.menu,
+        onClose: n,
+        onChangeAvatar: () => (0, m.$r)(f.pC.AVATAR, null == s ? void 0 : s.id, P),
         onChangeAvatarDecoration: () => {
-          (0, u.ps)({
-            guild: null == i ? void 0 : i,
-            analyticsLocations: E,
-            isTryItOutFlow: S
+          (0, c.ps)({
+            guild: null == s ? void 0 : s,
+            analyticsLocations: A,
+            isTryItOutFlow: P
           })
         }
       })
     },
-    children: e => (0, n.jsxs)(s.Clickable, {
+    children: e => (0, l.jsxs)(a.Clickable, {
       ...e,
-      className: r()(p.avatar, p.clickable),
-      children: [C, (0, n.jsx)(s.PencilIcon, {
+      className: i()(h.avatar, h.clickable),
+      children: [N, (0, l.jsx)(a.PencilIcon, {
         size: "custom",
-        className: p.overlayIcon,
+        className: h.overlayIcon,
         width: 20,
         height: 20,
         color: "white"
       })]
     })
-  }) : (0, n.jsxs)(s.Clickable, {
-    onClick: A,
-    className: r()(p.avatar, p.clickable),
-    children: [C, (0, n.jsx)(s.NitroWheelIcon, {
+  }) : (0, l.jsxs)(a.Clickable, {
+    onClick: x,
+    className: i()(h.avatar, h.clickable),
+    children: [N, (0, l.jsx)(a.NitroWheelIcon, {
       size: "custom",
-      className: p.overlayIcon,
+      className: h.overlayIcon,
       width: 20,
       height: 20,
       color: "white"

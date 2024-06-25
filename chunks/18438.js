@@ -1,65 +1,62 @@
 "use strict";
 n.d(t, {
   Cf: function() {
-    return h
-  },
-  Fq: function() {
-    return u
-  },
-  HP: function() {
-    return l
-  },
-  I5: function() {
-    return d
-  },
-  ID: function() {
-    return S
-  },
-  IO: function() {
-    return A
-  },
-  It: function() {
-    return c
-  },
-  W3: function() {
-    return O
-  },
-  b9: function() {
-    return R
-  },
-  cV: function() {
-    return E
-  },
-  g_: function() {
-    return T
-  },
-  iq: function() {
-    return a
-  },
-  jR: function() {
-    return _
-  },
-  pG: function() {
-    return m
-  },
-  sr: function() {
-    return f
-  },
-  xn: function() {
     return I
   },
-  z5: function() {
+  Fq: function() {
+    return l
+  },
+  HP: function() {
+    return a
+  },
+  I5: function() {
+    return _
+  },
+  ID: function() {
+    return T
+  },
+  IO: function() {
+    return f
+  },
+  It: function() {
+    return u
+  },
+  W3: function() {
+    return A
+  },
+  b9: function() {
+    return m
+  },
+  cV: function() {
+    return c
+  },
+  g_: function() {
+    return E
+  },
+  iq: function() {
+    return o
+  },
+  pG: function() {
     return N
+  },
+  sr: function() {
+    return h
+  },
+  xn: function() {
+    return d
+  },
+  z5: function() {
+    return S
   }
 }), n(411104);
 var i = n(544891),
-  r = n(570140),
-  s = n(37234),
-  o = n(981631);
-async function a(e, t) {
+  r = n(570140);
+n(37234);
+var s = n(981631);
+async function o(e, t) {
   let {
     nick: n,
-    avatar: s,
+    avatar: o,
     avatarDecoration: a
   } = t;
   if (null == e) throw Error("Need guildId");
@@ -68,13 +65,13 @@ async function a(e, t) {
   });
   let l = {
     nick: n,
-    avatar: s,
+    avatar: o,
     avatar_decoration_id: null === a ? null : null == a ? void 0 : a.id,
     avatar_decoration_sku_id: null === a ? null : null == a ? void 0 : a.skuId
   };
   try {
     let t = await i.tn.patch({
-      url: o.ANM.SET_GUILD_MEMBER(e),
+      url: s.ANM.SET_GUILD_MEMBER(e),
       body: l,
       oldFormErrors: !0
     });
@@ -94,14 +91,14 @@ async function a(e, t) {
   }
 }
 
-function l(e) {
+function a(e) {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_GUILD",
     guild: e
   })
 }
 
-function u(e, t) {
+function l(e, t) {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_INIT",
     guild: e,
@@ -109,93 +106,87 @@ function u(e, t) {
   })
 }
 
-function _() {
-  r.Z.dispatch({
-    type: "GUILD_IDENTITY_SETTINGS_CLOSE"
-  }), (0, s.xf)()
-}
-
-function c() {
+function u() {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM"
   })
 }
 
-function d(e) {
+function _(e) {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR",
     avatar: e
   })
 }
 
-function E(e) {
+function c(e) {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR_DECORATION",
     avatarDecoration: e
   })
 }
 
-function I(e) {
+function d(e) {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT_ID",
     profileEffectId: e
   })
 }
 
-function T(e) {
+function E(e) {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER",
     banner: e
   })
 }
 
-function h(e) {
+function I(e) {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO",
     bio: e
   })
 }
 
-function S(e) {
+function T(e) {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS",
     pronouns: e
   })
 }
 
-function f(e) {
+function h(e) {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME",
     nickname: e
   })
 }
 
-function N(e) {
+function S(e) {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS",
     themeColors: e
   })
 }
 
-function A() {
+function f() {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES"
   })
 }
 
-function m() {
+function N() {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES"
   })
 }
 
-function O() {
+function A() {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING"
   })
 }
 
-function R() {
+function m() {
   r.Z.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS"
   })

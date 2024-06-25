@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-    return D
+    return p
   }
 });
 var n = t(735250),
@@ -17,86 +17,56 @@ var n = t(735250),
   S = t(906732),
   u = t(475977),
   I = t(957730),
-  N = t(589266),
-  A = t(296810),
-  C = t(935147),
-  O = t(350327),
-  m = t(246946),
-  h = t(25990),
-  g = t(594174),
-  R = t(74538),
-  M = t(695346),
-  x = t(265159),
-  p = t(532495);
+  N = t(296810),
+  A = t(935147),
+  C = t(25373),
+  O = t(246946),
+  m = t(25990),
+  h = t(594174),
+  g = t(74538),
+  R = t(695346),
+  M = t(265159),
+  x = t(532495);
 
-function D() {
-  let e = (0, r.e7)([g.default], () => {
-    let e = g.default.getCurrentUser();
+function p() {
+  let e = (0, r.e7)([h.default], () => {
+    let e = h.default.getCurrentUser();
     return l()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e
   });
   i.useEffect(() => {
     (0, c.In)(e.id)
   }, [e.id]);
-  let s = (0, r.e7)([m.Z], () => m.Z.hidePersonalInformation),
+  let s = (0, r.e7)([O.Z], () => O.Z.hidePersonalInformation),
     {
-      pendingAvatar: t,
-      pendingBanner: a,
-      pendingBio: D,
-      pendingPronouns: L,
-      pendingGlobalName: P,
-      pendingAccentColor: Z,
-      pendingAvatarDecoration: f,
-      pendingThemeColors: v,
-      pendingProfileEffectId: j
-    } = (0, r.cj)([h.Z], () => {
-      let e = h.Z.getAllPending(),
-        s = h.Z.getErrors();
-      return {
-        ...e,
-        errors: s
-      }
-    }),
-    U = M.dN.useSetting() && null != D ? I.ZP.parse(void 0, D).content : D,
-    B = R.ZP.canUsePremiumProfileCustomization(e),
+      pendingBio: t,
+      ...a
+    } = (0, r.cj)([m.Z], () => m.Z.getAllPending()),
+    p = R.dN.useSetting() && null != t ? I.ZP.parse(void 0, t).content : t,
+    D = g.ZP.canUsePremiumProfileCustomization(e),
     {
-      analyticsLocations: b
-    } = (0, S.ZP)(T.Z.PROFILE),
-    G = {
-      user: e,
-      canUsePremiumCustomization: B,
-      onUpsellClick: x.Z,
-      onAvatarChange: E.I5,
-      onBannerChange: O.g_,
-      pendingBanner: a,
-      pendingBio: U,
-      pendingPronouns: L,
-      pendingAvatar: t,
-      pendingGlobalName: P,
-      pendingAvatarDecoration: f,
-      pendingProfileEffectId: j
-    };
+      analyticsLocations: L
+    } = (0, S.ZP)(T.Z.PROFILE);
   i.useEffect(() => () => o.Z.wait(E.W3), []);
-  let F = "UserSettingsProfileCustomization";
+  let P = "UserSettingsProfileCustomization";
   return ((0, _.j)({
-    location: F + " auto on",
+    location: P + " auto on",
     autoTrackExposure: !0
   }), (0, _.j)({
-    location: F + " auto off",
+    location: P + " auto off",
     autoTrackExposure: !1
-  }), s) ? (0, n.jsx)(d.Z, {}) : (0, n.jsx)(S.Gt, {
-    value: b,
-    children: (0, n.jsxs)(n.Fragment, {
-      children: [(0, n.jsx)(u.Z, {}), (0, n.jsx)(A.Z, {
-        profilePreview: (0, n.jsx)(N.Z, {
-          ...G,
-          location: "UserSettingsProfileCustomization",
-          pendingThemeColors: v,
-          pendingAccentColor: Z
-        }),
-        children: (0, n.jsx)(p.Z, {})
-      }), !R.ZP.canUsePremiumProfileCustomization(e) && (0, n.jsx)(C.Z, {
-        user: e
-      })]
-    })
+  }), s) ? (0, n.jsx)(d.Z, {}) : (0, n.jsxs)(S.Gt, {
+    value: L,
+    children: [(0, n.jsx)(u.Z, {}), (0, n.jsx)(N.Z, {
+      profilePreview: (0, n.jsx)(C.Z, {
+        user: e,
+        canUsePremiumCustomization: D,
+        onUpsellClick: M.Z,
+        pendingBio: p,
+        ...a
+      }),
+      children: (0, n.jsx)(x.Z, {})
+    }), !D && (0, n.jsx)(A.Z, {
+      user: e
+    })]
   })
 }

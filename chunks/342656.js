@@ -1,10 +1,7 @@
 "use strict";
 n.d(t, {
-  oU: function() {
-    return s
-  },
   qI: function() {
-    return o
+    return s
   }
 });
 var i = n(818083);
@@ -24,19 +21,6 @@ let r = (0, i.B)({
     }]
   }),
   s = function() {
-    let {
-      autoTrackExposure: e = !1,
-      disable: t = !1,
-      location: n = "24rt789ugh"
-    } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    return r.getCurrentConfig({
-      location: n
-    }, {
-      autoTrackExposure: e,
-      disable: t
-    })
-  },
-  o = function() {
     let {
       autoTrackExposure: e = !1,
       disable: t = !1,

@@ -7,21 +7,17 @@ let m = A.QZA.CLOSED,
   O = {};
 
 function R() {
-  m = A.QZA.CLOSED, O = {}, c = null, d = void 0, E = []
+  p(), g(), O = {}, m = A.QZA.OPEN
 }
 
 function p() {
-  g(), C(), O = {}, m = A.QZA.OPEN
-}
-
-function g() {
   i = void 0, u = void 0, r = void 0
 }
 
-function C() {
+function g() {
   o = void 0, a = void 0, l = void 0, _ = void 0, s = void 0
 }
-class v extends(S = f.ZP.Store) {
+class C extends(S = f.ZP.Store) {
   getFormState() {
     return m
   }
@@ -83,18 +79,17 @@ class v extends(S = f.ZP.Store) {
     return E
   }
 }
-h = "GuildIdentitySettingsStore", (T = "displayName") in(I = v) ? Object.defineProperty(I, T, {
+h = "GuildIdentitySettingsStore", (T = "displayName") in(I = C) ? Object.defineProperty(I, T, {
   value: h,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : I[T] = h, t.Z = new v(N.Z, {
+}) : I[T] = h, t.Z = new C(N.Z, {
   GUILD_IDENTITY_SETTINGS_INIT: function(e) {
     c = e.guild, m = A.QZA.OPEN, O = {}, d = e.source, E = e.analyticsLocations
   },
-  GUILD_IDENTITY_SETTINGS_CLOSE: R,
   GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: function() {
-    p(), R()
+    R(), m = A.QZA.CLOSED, O = {}, c = null, d = void 0, E = []
   },
   GUILD_IDENTITY_SETTINGS_SET_GUILD: function(e) {
     c = e.guild, O = {}
@@ -158,10 +153,10 @@ h = "GuildIdentitySettingsStore", (T = "displayName") in(I = v) ? Object.defineP
     } = e;
     _ = t
   },
-  GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: g,
-  GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: C,
-  GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: p,
-  GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: p,
+  GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: p,
+  GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: g,
+  GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: R,
+  GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: R,
   GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: function() {
     O = {}
   }
