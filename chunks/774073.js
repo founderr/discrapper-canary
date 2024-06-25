@@ -19,7 +19,7 @@ t.ZP = e => {
   let {
     location: t,
     applicationId: n = ""
-  } = e, r = (0, l.x)(t);
+  } = e, r = (0, l.xG)(t);
   i.useEffect(() => {
     r && null != n && "" !== n && o.Z.getDetectableGamesSupplemental([n])
   }, [n, r]);
