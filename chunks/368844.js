@@ -58,38 +58,40 @@ function A(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.x4.getSetting();
     if (!t) return [];
     let n = null == e ? void 0 : e.attachments;
-    return null == e || null == n ? [] : n.filter(N).map(e => {
+    return null == e || null == n ? [] : n.filter(N).map((e, t) => {
       let {
-        proxy_url: t,
-        url: n,
-        description: i,
-        spoiler: r,
-        flags: s,
-        width: a,
-        height: l,
-        filename: u,
-        content_scan_version: _
+        proxy_url: n,
+        url: i,
+        description: r,
+        spoiler: s,
+        flags: a,
+        width: l,
+        height: u,
+        filename: _,
+        content_scan_version: c
       } = e;
-      if (null == a || null == l) return null;
-      let c = (0, o.NU)(u),
-        E = null != e.flags && (0, d.yE)(e.flags, h.J0y.IS_THUMBNAIL),
-        I = null != t ? t : n;
-      if (c) {
-        let e = T.Z.toURLSafe(t);
+      if (null == l || null == u) return null;
+      let E = (0, o.NU)(_),
+        I = null != e.flags && (0, d.yE)(e.flags, h.J0y.IS_THUMBNAIL),
+        S = null != n ? n : i;
+      if (E) {
+        let e = T.Z.toURLSafe(n);
         if (null == e) return null;
-        e.searchParams.append("format", "jpeg"), I = e.toString()
+        e.searchParams.append("format", "jpeg"), S = e.toString()
       }
       return {
-        src: I,
-        width: a,
-        height: l,
-        spoiler: null != r && r,
-        flags: s,
-        contentScanVersion: _,
-        alt: i,
-        isVideo: c,
-        isThumbnail: E,
-        type: "attachment"
+        src: S,
+        width: l,
+        height: u,
+        spoiler: null != s && s,
+        flags: a,
+        contentScanVersion: c,
+        alt: r,
+        isVideo: E,
+        isThumbnail: I,
+        type: "attachment",
+        attachmentId: e.id,
+        mediaIndex: t
       }
     }).filter(E.lm)
   }(e, l.x4.useSetting())
@@ -100,25 +102,26 @@ function m(e, t) {
     i = l.NA.useSetting();
   if (null == e) return [];
   let r = e.embeds;
-  return n && i && null != r ? r.map(e => {
-    var n;
-    let i = null !== (n = e.image) && void 0 !== n ? n : e.thumbnail;
-    if (null == i && null != e.images && (i = e.images[0]), null != i && null != i.url) {
+  return n && i && null != r ? r.map((e, n) => {
+    var i;
+    let r = null !== (i = e.image) && void 0 !== i ? i : e.thumbnail;
+    if (null == r && null != e.images && (r = e.images[0]), null != r && null != r.url) {
       let {
-        height: n,
-        proxyURL: r,
-        url: s,
-        width: a
-      } = i, l = null != r && (0, o.cb)(r);
+        height: i,
+        proxyURL: s,
+        url: a,
+        width: l
+      } = r, u = null != s && (0, o.cb)(s);
       return {
-        src: null != r && "" !== r ? r : s,
-        height: n,
-        width: a,
+        src: null != s && "" !== s ? s : a,
+        height: i,
+        width: l,
         spoiler: t,
         flags: e.flags,
         contentScanVersion: e.contentScanVersion,
-        isVideo: l,
-        type: "embed"
+        isVideo: u,
+        type: "embed",
+        mediaIndex: n
       }
     }
   }).filter(E.lm) : []
