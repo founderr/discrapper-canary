@@ -48167,8 +48167,8 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
 
 .message_b6cd66 {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -74996,7 +74996,8 @@ html .invoiceCancelRow_b1a31b {
 
 .customConfetti_a0e502 {
     top: -120px;
-    right: -75px
+    right: -75px;
+    pointer-events: none
 }
 
 .bundlePreview_a0e502 {
@@ -75181,7 +75182,8 @@ html .invoiceCancelRow_b1a31b {
 
 .customConfetti_e84a32 {
     opacity: 1;
-    transition: opacity.5s ease-in-out
+    transition: opacity.5s ease-in-out;
+    pointer-events: none
 }
 
 .customConfetti_e84a32.hidden_e84a32 {

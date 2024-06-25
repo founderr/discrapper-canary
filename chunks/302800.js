@@ -22,8 +22,8 @@ var n, a, i, r, l = s(278074),
   _ = s(714953),
   u = s(160506),
   d = s(263660),
-  T = s(22344),
-  I = s(848359),
+  T = s(848359),
+  I = s(736088),
   R = s(782984),
   A = s(186077),
   N = s(376477),
@@ -53,7 +53,7 @@ let g = {
       type: 2,
       title: () => E.Z.Messages.COLLECTIBLES_GALAXY_COACHTIP_TITLE,
       body: () => E.Z.Messages.COLLECTIBLES_GALAXY_COACHTIP_DESCRIPTION,
-      imageSrc: I,
+      imageSrc: T,
       assetIds: ["a_a47890109a231f72dae7b17b27164676", "a_c9b84ee80a335a9d59b69352e34574f6", "a_9a6bf0ab30a6719d6eb09fa4996984ca"]
     },
     [c.z.COLLECTIBLES_SHOP_RETRO_AND_PIRATES_COACHTIP]: {
@@ -79,10 +79,11 @@ let g = {
     iconSrc: A
   })).otherwise(() => null),
   M = {
-    confettiAssetSrc: T,
+    confettiAssetSrc: I,
     style: {
       position: "absolute",
-      width: "600px"
+      width: "600px",
+      zIndex: 10
     }
   },
-  S = e => (0, l.EQ)(e).with("1220513977683935373", () => M).with("1220432647453409384", () => M).with("1220432697718083614", () => M).otherwise(() => null)
+  S = e => (0, l.EQ)(e).with("1252405010608951358", () => M).with("1252405017688936508", () => M).otherwise(() => null)

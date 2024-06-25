@@ -1,1 +1,0 @@
-e.exports = s.p + "2154082958ad53bc1295.png"
